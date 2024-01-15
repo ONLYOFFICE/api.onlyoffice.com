@@ -1,0 +1,278 @@
+LETTERS TO THE EDITOR 
+
+
+the 2Py: limit. Electrons excited to any of 
+these states are in the continuum of the lower 
+set of levels having the same quantum num- 
+bers and parity, but approaching the lower 
+limit. The result is, the ejection of an electron, 
+(i.e. auto-ionization) and the return of the 
+atom to the lower limit 2P43. 
+
+Three members of the *P* (3dmd) series in 
+calcium, made famous through the work of 
+Russell and Saunders, lie above the series 
+limit, 42,S1, of the four chief series of singlets 
+and triplets. The continuum above these four 
+chief series corresponds to even S and D terms 
+and to odd P and F terms. The mean-life of 
+the three negative °P® states is sufficiently 
+great therefore to combine normally with 
+lower odd terms and give respectable spec- 
+trum lines. The observed 383 term, attributed 
+
+
+1787 
+
+
+to (3d4d) by Russell, in combination with 
+other terms gives, as would be expected froma 
+short mean-life, diffuse lines. 
+
+In strontium a negative 3F° term (4d5p) 
+lies above the 52S; limit and in a continuum 
+of °F terms (554). These negative *F° (4d6p) 
+terms, because they are observed at all, would 
+be expected to havea very short mean-life and 
+should therefore give rise to diffuse lines, as 
+observed. These same *F° terms in barium lie 
+below the first limit 62S; and give rise to 
+sharp lines, as expected. 
+
+H. E. WHITE 
+
+Department of Physics, 
+
+University of California, 
+
+
+Berkeley, California, 
+September 9, 1931. 
+
+
+On the Range of Fast Electrons and Neutrons 
+
+
+Recent experiments on the stopping of 
+cosmic rays raise again the question of the 
+energy losses of electrons and protons with 
+velocity very close to that of light. On the one 
+hand we have a good deal of evidence that 
+there are, associated with the cosmic rays, 
+rays which are certainly not gamma-radia- 
+tion, and which behave in some respects like 
+beta-rays, since they produce a large number 
+of ions in their passage through matter. This 
+conclusion, which was reached originally by 
+experiments with Geiger counters in series, 
+-has been beautifully confirmed by Mott- 
+Smith,! who was able to show that the cosmic 
+rays are accompanied by particles which pro- 
+duce definite cloud-chamber tracks, tracks 
+rather thinner than those of an ordinary 
+radioactive beta-particle. These ionizing rays 
+are, according to Rossi, at least as penetrating 
+as the cosmic rays themselves, and perhaps 
+more so. On the other hand the independence 
+of cosmic-ray intensities of terrestrial latitude 
+makes it hard to believe that the rays enter 
+the earth’s atmosphere as charged particles. 
+We should then want to know the theoretical 
+answer to the question: Can a gamma-ray 
+produce secondary beta-particles more pene- 
+trating than itself? 
+
+Numerous calculations have been made of 
+the range of particles moving with velocities 
+not too near that of light. Thus quantum- 
+theoretical formulae have been obtained by 
+Gaunt and Bethe, which in essential points 
+confirm the classical formula of Bohr. But no 
+quantum theoretical calculations have been 
+made for particles of very high energy; and 
+
+
+the classical result of Bohr for this case is 
+based on a derivation which is not quite free 
+from objection. Now it would seem at first 
+that no adequate calculation could here be 
+made, since we have at present no complete 
+theory of the interaction of particles of very 
+high relative velocity. That such a calculation 
+is, nevertheless, possible rests on the fact that 
+the processes chiefly responsible for the stop- 
+ping of a beta-particle involve relatively in- 
+significant energy losses, and that the mean 
+energy loss of a beta-particle on collision with 
+an atom is very small. This preponderance of 
+relatively small energy losses becomes even 
+more marked for particles whose velocity ap- 
+proaches that of light, and makes it possible 
+to calculate the range of the particles without 
+neglecting the retardation of the forces be- 
+tween them and the atomic electrons. Such a 
+calculation has in fact been made by Mller 
+for the collision of two free electrons; we have 
+made it for the collision of electrons and pro- 
+tons with electrons bound in an atom. The re- 
+sults are very simple. If the energy of the par- 
+ticle (rest mass M, and charge £) is 
+eMc? 
+
+then for very large e the number of ions pro- 
+duced per cm path increases with Ine, and the 
+energy loss per cm path through a gas in 
+which there are N electrons per cc is 
+
+
+[4rre2E2N /me?|- In e. (1) 
+1 We want here to thank Dr. Mott-Smith 
+
+
+for telling us at a Berkeley seminar of his re- 
+cent very beautiful experiments. 
+
+
+1788 
+
+
+Here e and m are the electronic charge and 
+rest mass. For large but not very large e this 
+formula must be modified: to Ine must be 
+added 
+
+In me?/khv 
+
+
+where m is the electronic rest mass, v a mean 
+ionization frequency for the atomic electrons, 
+and 1.1k51.2. This term is just the one 
+found by Bethe for slow electrons, and in 
+every case reduces the range of the particle 
+below the value given by (2). The formula (1) 
+gives for the range FR of the particle 
+
+
+R = |mMct/4re2E2N | - [e/In e| (2). 
+
+
+This range is just twice that given by Bohr’s 
+relativistic formula. Our result gives equal 
+ranges to electrons and protons of equal en- 
+ergy, and makes this range just one fourth of 
+the mean distance, which, according to the 
+Klein-Nishina formula, a gamma-ray of this 
+same energy travels before its first Compton 
+scattering. | 
+
+The result (1) makes it hard to believe that 
+the particles observed with cosmic rays are 
+electrons or protons, since they are observed 
+
+
+to ionize less than slower beta-particles. And | 
+
+
+if we believe in the approximate validity of 
+the Klein-Nishina formula, then (2) shows 
+that the particles cannot be secondary elec- 
+trons. We have therefore thought it of inter- 
+est to investigate the ionizing power of the 
+neutrons, which were suggested by Pauli to 
+salvage the theory of the nucleus. These neu- 
+trons,” it will be remembered, are particles of 
+finite proper mass, carrying no charge, but 
+having a small magnetic moment. Although 
+the full calculations of the collision of such a 
+neutron with an electron have not yet been 
+completed, we have carried them far enough 
+to see that there are characteristic differences 
+between the ionizing power of a neutron and 
+that of an electron, differences which rest 
+
+
+LETTERS TO THE EDITOR 
+
+
+ultimately upon the fact that the field of the 
+neutron falls off more rapidly with distance 
+than the Coulomb field. (The field of a neu- 
+tron may, of course, be derived from its wave 
+equation; and this has been given by Pauli.) 
+In particular, the number of ions produced by 
+a neutron is, for energies large compared to 
+the electronic proper energy mc*, sensibly in- 
+dependent of the velocity of the neutron, and 
+of its mass, and does not increase, like (1), 
+with increasing velocity. Thus even a very 
+fast neutron would, if its magnetic moment 
+were of the order of that of the proton, pro- 
+duce ion tracks perceptibly thinner than those 
+of a beta-particle. It will be remembered that, 
+according to Pauli, it is one of the functions of 
+the neutron to carry off the apparently lost 
+energy in a radioactive beta-ray disintegra- 
+tion. It would be of extreme interest to see 
+whether, in such a disintegration, thin tracks, 
+of the kind observed by Mott-Smith, could be 
+found. If they were found, we should be cer- 
+tain that the neutrons not only played a part 
+in the building of nuclei, but that they also 
+formed the cosmic rays; if no such tracks 
+were found, we should know that the neu- 
+trons, if they exist at all, have nothing to do 
+with cosmic radiation. 
+
+The theory of the collision of neutrons and 
+electrons, and the detailed calculation of the 
+ranges of neutrons and fast electrons, will be 
+published very shortly. 
+
+J. F. CARLSON. 
+J. R. OPPENHEIMER 
+
+LeConte Hall, 
+
+Berkeley, California, 
+October 9, 1931. 
+
+
+2 We are much indebted to Dr. Pauli for 
+telling us, at a theoretical seminar in Ann 
+Arbor last summer, the elements of the theory 
+of the neutron, its functions and its properties, 
+
+
+The Calculation of the Characteristic Frequency from the Coefficient of Compressibility 
+
+
+A number of years ago Einstein! derived 
+an expression for the characteristic frequency 
+of a monatomic solid which is as follows 
+
+
+p= 2.8 X 107AU3p-16 4-1/2 (1) 
+
+
+where « is the coefficient of compressibility, 
+A is the atomic weight and p is the density of 
+the solid. This relation was derived from 
+dimensional considerations, and the constant 
+was evaluated by considering the effect on a 
+given atom of its 26 immediate neighbors in a 
+
+
+lattice which we now call the simple cubic or 
+rock salt type. The result must be regarded as 
+an approximation yet it is a useful one and 
+therefore deserves further consideration. A re- 
+examination of the derivation in the light of 
+present knowledge reveals that several am- 
+biguities and restrictions inherent in the origi- 
+nal work now may be removed. 
+
+
+1 Einstein, Ann. d. Physik 34, 170 (1911); 
+35, 879 (1911). 
+
+

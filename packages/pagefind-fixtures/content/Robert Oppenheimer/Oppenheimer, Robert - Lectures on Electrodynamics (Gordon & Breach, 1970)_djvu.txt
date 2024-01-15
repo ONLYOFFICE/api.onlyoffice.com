@@ -1,0 +1,10107 @@
+LECTURES ON 
+ELECTRO- 
+DYNAMICS 
+
+
+J. R. Oppenheimer 
+
+
+Lectures on Electrodynamics 
+
+
+Documents on Modern Physics 
+
+
+Edited by 
+
+
+ELLIOT W. MONTROLL, University of Rochester 
+GEORGE H. VINEYARD, Brookhaven National Laboratory 
+MAURICE LEVY, Université de Paris 
+
+
+A. ABRAGAM_ L’Effet Mossbauer 
+
+S.T.BELYAEV Collective Excitations in Nuclei 
+
+P. G. BERGMANN and A. YASPAN_ Physics of Sound in the Sea: Part I Trans- 
+mission 
+
+T.A.BRODY Symbol-manipulation Techniques for Physics 
+
+K.G.BUDDEN Lectures on Magnetoionic Theory 
+
+J. W. CHAMBERLAIN Motion of Charged Particles in the Earth’s Magnetic 
+Field 
+
+S. CHAPMAN Solar Plasma, Geomagnetism, and Aurora 
+
+H.-Y. CHIU Neutrino Astrophysics 
+
+A.H. COTTRELL Theory of Crystal Dislocations 
+
+J.DANON Lectures on the Mossbauer Effect 
+
+B.S. DEWITT Dynamical Theory of Groups and Fields 
+
+R.H.DICKE The Theoretical Significance of Experimental Relativity 
+
+P. FONG Statistical Theory of Nuclear Fission 
+
+E. GERJUOY, A. YASPAN and J.K.MAJOR Physics of Souund in the Sea: 
+Parts II and III Reverberation, and Reflection of Sound from Sub- 
+marines and Surface Vessels 
+
+M.GOURDIN Lagrangian Formalism and Symmetry Laws 
+
+D. HESTENES Space-Time Algebra 
+
+J. G. KIRKWOOD Dielectrics—Intermolecular Forces—Optical Rotation 
+
+. KIRKWOOD Macromolecules 
+
+. KIRKWOOD Proteins 
+
+.KIRKWOOD Quantum Statistics and Cooperative Phenomena 
+
+. KIRKWOOD Selected Topics in Statistical Mechanics 
+
+.KIRKWoOp Shock and Detonation Waves 
+
+
+eee Sethe ot Sent 
+Qaaagaagdaa4 
+
+
+J.G. KIRKWooD. Theory of Liquids 
+
+J.G. KIRKWoopD Theory of Solutions 
+
+V. KOURGANOFF Introduction to the General Theory of Particle Transfer 
+
+R. LATTES Methods of Resolution for Selected Boundary Problems in 
+Mathematical Physics 
+
+J. LEQUEUX Structure and Evolution of Galaxies 
+
+J.L. LOPES Lectures on Symmetries 
+
+F.E.LOW Symmetries and Elementary Particles 
+
+A. MARTIN and F. CHEUNG Analyticity Properties and the Bounds of the 
+Scattering Amplitudes 
+
+P.H.E. MEIJER Quantum Statistical Mechanics 
+
+M. MOSHINSKY Group Theory and the Many-body Problem 
+
+M. MOSHINSKY The Harmonic Oscillator in Modern Physics: From Atoms 
+to Quarks 
+
+M. NIKOLIC Analysis of Scattering and Decay 
+
+M. NIKOLIC Kinematics and Multiparticle Systems 
+
+J. R. OPPENHEIMER Lectures on Electrodynamics 
+
+A.B. PIPPARD The Dynamics of Conduction Electrons 
+
+H. REEVES Stellar Evolution and Nucleosynthesis 
+
+L.SCHWARTZ Application of Distributions to the Theory of Elementary 
+Particles in Quantum Mechanics 
+
+J. SCHWINGER Particles and Sources 
+
+J. SCHWINGER and D. S. SAXON Discontinuities in Waveguides 
+
+M. TINKHAM Superconductivity 
+
+R. WILDT Physics of Sound in the Sea: PartIV Acoustic Properties of 
+Wakes 
+
+
+Lectures on Electrodynamics 
+
+
+J. ROBERT OPPENHEIMER 
+
+
+Notes compiled at Berkeley, California 
+by S. Kusaka, with the collaboration of 
+S. Frankel and E. Nelson. Edited by B.S. DeWitt 
+
+
+GORDON AND BREACH Science Publishers 
+New York London Paris 
+
+
+Copyright © 1970 by GORDON AND BREACH, SCIENCE PUBLISHERS, INC. 
+150 Fifth Avenue, New York, N.Y. 10011 
+
+
+Library of Congress catalog card number: 72-975190 
+
+
+Editorial office for the United Kingdom: 
+
+
+Gordon and Breach, Science Publishers Ltd 
+12 Bloomsbury Way 
+London W.C.1 
+
+
+Editorial office for France: 
+
+
+Gordon & Breach 
+7-9 rue Emile Dubois 
+Paris 14° 
+
+
+All rights reserved. No part of this book may be reproduced or utilized in any 
+
+form or by any means, electronic or mechanical, including photocopying, record- 
+
+ing, or by any information storage and retrieval system, without permission in 
+writing from the publishers. Printed in east Germany 
+
+
+Preface 
+
+
+** His lectures were a great experience, for experimental as well as theoretical 
+physicists. In addition to a superb literary style, he brought to them a degree 
+of sophistication in physics previously unknown in the United States.”’ So 
+wrote Hans Bethe of Robert Oppenheimer’s qualities as a teacher during 
+the decade prior to World War II. It was an exciting decade for physics, 
+and Oppenheimer, holding a joint appointment at the University of Cali- 
+fornia and the California Institute of Technology, was attracting a group 
+of students destined to contribute to the great transformation which would 
+soon propel American physics into the front rank. One of these students, 
+Robert Serber, who followed Oppenheimer on his annual trek between 
+Berkeley and Pasadena, has said of one of his courses: “‘It was an in- 
+spirational as well as an educational achievement. He transmitted to his 
+students a feeling of the beauty of the logical structure of physics and an 
+excitement about the development of physics. Almost everyone listened to 
+the course more than once.”’ 
+
+Perhaps classical electrodynamics has by now lost some of the excitement 
+it had in the thirties, when it was still viewed as the primary foundation 
+and model for quantum electrodynamics. We have become so sophisticated 
+nowadays that the theorists among us, when we think of electrodynamics, 
+think of threshold theorems, off-shell amplitudes and dispersion relations— 
+almost never of little radiating balls of mass and charge. And yet classical 
+electrodynamics has a standard place in our curriculum. The lecture notes 
+which comprise this book have been reproduced in ditto-copy form three 
+times since they were first written down: in Berkeley in 1939, then at the 
+University of Chicago in 1947 and again at the University of Colorado in 
+1949. I am grateful to Dr. Richard Akerib for providing a personal copy 
+of the latter set from which the present, and first published edition, has 
+been prepared. I wish also to thank Mrs. Oppenheimer for granting the 
+publisher permission to bring these lectures to a wider audience. 
+
+Aside from some updatings of notation and corrections of obvious slips 
+of the pen, very little has been changed from the original notes. I have 
+improved the English in a number of places and rewritten occasional 
+
+Vil 
+
+
+Vili PREFACE 
+
+
+paragraphs for clarity. In chapter 1, sections 9 and 10, I have simplified 
+some derivations. There are also a few editorial remarks scattered through the 
+book. Only rarely does the text itself sound dated, such as at the end of the 
+paragraph preceding Eq.(11.8) and the brief excursion Into angle-and- 
+action-variable perturbation theory in chapter 1, section 17. I have let such 
+vignettes stand unimpaired. 
+
+The material is as relevant now as when the lectures were first given. 
+Problems are approached in a direct manner and the transition from theory 
+to application occurs quickly and repeatedly. Basic difficulties are not 
+avoided but are presented in a manner which is both rational and un- 
+complicated. The viewpoint is by no means confined to the purely classical 
+theory. Quantum ideas are introduced at every relevant occasion, and 
+relativity theory is developed in a delightfully revealing way. The prereq- 
+uisites for reading these notes are modest. The student should have had a 
+course in electromagnetic theory and some acquaintance with elementary 
+quantum theory. This will suffice to enable him to share some of the same 
+joys as an earlier generation of students. 
+
+
+Bryce S. DE WITT 
+
+
+University of North Carolina 
+
+
+Contents 
+
+
+Chapter 1 Maxwell’s Theory ; ; ‘ : , e dl 
+
+
+Chapter 2 
+
+
+1 
+
+
+Introduction: Definition of the Fields 1 
+
+
+2 Maxwell’s Equations 2 
+3 Solution of the Equations in Free Space 3 
+4 Applications to the Skin Effect and Metallic 
+Reflection 6 
+5 Energy and Momentum of an Electromagnetic Field 9 
+6 Radiation from a Charge and Current 
+Distribution 16 
+7 Solution of Maxwell’s Equations in Terms of 
+Retarded Potentials 27 
+8 Classification of Multipole Radiation 37 
+9 Energy of a Nearly Static Distribution of Charge 45 
+10 Lienard—Wiechert Point Potential 49 
+11 Field of a Uniformly Moving Point Charge 52 
+12 Field of an Accelerated Point Charge 59 
+13. Rate of Radiation of Energy from an Accelerated 
+Point Charge 63 
+14 Application to a Simple Theory of 
+Bremsstrahlung 67 
+15 Radiation Reaction 75 
+16 Self-energy of the Electron 85 
+17 Classical Theory of Scattering and Dispersion 89 
+18 Hamiltonian Theory for the Motion of a Charged 
+Particle in an Electromagnetic Field 100 
+Special Theory of Relativity . ; , ; : . 105 
+19 Transformation of Newton’s Equations 105 
+20 Michelson—Morley and Kennedy—Thorndyke 
+Experiments 108 
+21 Lorentz Transformation 111 
+
+
+ix 
+
+
+2 
+23 
+
+
+24 
+25 
+
+
+26 
+27 
+28 
+29 
+30 
+
+
+CONTENTS 
+
+
+Minkowski Diagram 118 
+
+Derivation of the Fresnel Coefficient and the 
+Aberration Formula 121 
+
+Covariance 122 
+
+Transformation Laws of the Electromagnetic 
+Quantities 127 
+
+Application to the Method of Virtual Quanta 133 
+Application to the Theory of the Cerenkov Effect 139 
+Transformation of Energy and Momentum 143 
+Inertia and Energy 154 
+
+Considerations Important for the Quantum 
+Theory 155 
+
+
+CHAPTER I 
+
+
+Maxwell’s Theory 
+
+
+1 INTRODUCTION: DEFINITION OF THE FIELDS 
+
+
+Electrodynamics is a field theory. It deals with the electric and magnetic 
+fields, supposed measurable at any point P(x,y,z) in space and at 
+any time, ¢. We shall be concerned with fields measured in the 
+absence of dielectrics and diamagnetics: the electric field E(x, y, z, t), the 
+magnetic field H(x, y, z, t): When we have to discuss dielectric effects we 
+shall try to understand them atomically; that is, in terms of the fields due 
+to the charges in the medium. Then we shall have to distinguish, by the 
+type of measurement involved, D from E, B from H. These are all vectors 
+and functions of x, y, z, and ¢. 
+
+Definition of the fields: We take a test body, of volume V, uniform 
+charge density @, and mass M. Let it be very nearly at rest, and let it occupy 
+the volume V about P for a time t about ¢. The electric field, averaged 
+over V and 7 is then defined by 
+
+
+p(t + t) — p(t) = VotE 
+
+
+where p = Mv is the momentum, v the velocity of the test body. If p is 
+to be measurable and v so small that magnetic forces can be neglected, M@ 
+must be large. The precautions to make the measurement valid are: 
+
+
+1) v—0O _ no magnetic forces. 
+
+
+ay eG to the time and point at which E was measured. 
+
+3) V0 
+
+4)o0V ->0 _ to eliminate electromagnetic self-action effects of the test 
+body. 
+
+
+In electron theory, eV cannot be less than the electronic charge e. In 
+quantum theory p cannot be measured without sacrificing the knowledge 
+of the test body’s position. When atomic and quantum effects are important, 
+
+
+1 Oppenheimer (4013) 1 
+
+
+2 LECTURES ON ELECTRODYNAMICS 
+
+
+difficulties in definition of the field arise. The quantum limitations are well 
+understood and form the physical basis of the breakdown of classical 
+electromagnetic theory. 
+
+The analogous definition of H would use a distribution uw of magnetic 
+
+
+poles: 
+p(t + 7) — p(t) = VutH 
+
+
+and the same precautions as for E. We have no single poles, but we use 
+the ends of long needles. The H so measured gives a force on a moving 
+charge e, the Lorentz law of force, 
+
+
+Fa P nek +i x} 
+dt c 
+
+
+We can use this to extend the definition of H. 
+
+
+2 MAXWELL’S EQUATIONS 
+
+
+In the Gaussian system of units, Maxwell’s equations are 
+
+
+V-E = 420 (2.1) 
+V-H=0 (2.2) 
+H 
+VxE=-—- neh (2.3) 
+c Ot 
+Vx H= ace + Anj (2.4) 
+c Ot 
+
+
+where 0 and j are the charge and current densities. The first three equations 
+are the expressions of experimental facts in differential form. (2.1) is 
+Coulomb’s law for electric charges; (2.2) is Coulomb’s law for magnetic 
+poles, supplemented by the fact that no free magnetic poles exist in nature; 
+(2.3) is Faraday’s law of induction. (2.4) is a generalization of Ampere’s 
+law 
+
+V x H = 4nj 
+
+
+10 
+by the addition of the term—— a which is called Maxwell’s displacement 
+
+
+current. Maxwell added this term since otherwise the equation leads to 
+
+
+V-j=0 
+
+
+MAXWELL’S THEORY 3 
+
+
+and this is not true for non-steady flow of current. When the term is in- 
+cluded, we get 
+
+
+V-j=-—— (2.5) 
+and if we write 
+oe | 
+j=—ve 
+c 
+we have the usual equation of continuity 
+
+
+é 
+V-(ov) + = 0 
+ot 
+
+
+Makxwell’s additional term is also necessary to have E and H satisfy the 
+wave equation in free space. If the term is not included, we get 
+
+
+AE =0 
+AH = 0 
+
+
+(4=V-V) 
+
+
+which do not admit plane wave solutions and hence contradict experience. 
+
+
+ExercisE 1 Describe an experiment whereby the existence of Maxwell’s displacement 
+current is verified directly. 
+EXERCISE 2 Show that the equation 
+
+V xX H= 4yj 
+follows directly from the equivalence between a current circuit and a suitable magnetic 
+shell. 
+
+
+3 SOLUTION OF THE EQUATIONS IN FREE SPACE 
+
+
+At first sight it may be thought that from Maxwell’s equations given above 
+and from the Lorentz force 
+f=eE+jxH (3.1) 
+
+
+(f = force density) we could compute the charge and current distribution o, 
+j and the fields E and H from given initial conditions. But besides the 
+mathematical difficulty, there is the yet unsolved problem of how the self- 
+field of a charge affects its motion. Hence, we have to limit ourselves to 
+the less ambitious problem of calculating the field produced by a given 
+charge and current distribution, and conversely the charge and current 
+from a given field. In this way we may approach the general solution by 
+successive approximation. 
+
+
+4 LECTURES ON ELECTRODYNAMICS 
+
+
+First we shall consider the solution of Maxwell’s equations in free space. 
+Putting 9 = 0, and j = 0, we have 
+
+
+V-E=0 (3.2) 
+V-H=0 (3.3) 
+vere eet (3.4) 
+c Ot 
+Vx fo (3.5) 
+c Ot 
+
+
+Taking the curl of the last two equations and noting that 
+
+
+VxVx=VV:-A (3.6) 
+we get 
+OE=0 (3.7) 
+OH=0 (3.8) 
+by using the first two equations. Here 
+1 6? 
+O = -—— +4 3.9 
+c? Gt? eo 
+
+
+and is known as the d’Alembertian operator. 
+Suppose each component of E, H is a function of z and ¢ only. Then 
+
+
+1 OE,  E, 
+
+
+are: a 0; (i = x, y, z) (3.10) 
+a set (3.11) 
+c? dt? dz? 
+The solutions of these equations are 
+E, =fi(z + ct) + F(z - ct) (3.12) 
+H, = gz + ct) + G,(z — ct) (3.13) 
+
+
+In order that they satisfy Maxwell’s equation, we have from (3.2) and (3.3) 
+
+
+MAXWELL’S THEORY 5 
+
+
+and hence from (3.12) and (3.13), E, = 0, H, = 0, apart from a constant 
+
+field which is of no interest here, which shows that electromagnetic waves 
+
+are transverse waves. In free space the direction of the electric and magnetic 
+
+vectors is always perpendicular to the direction of propagation of the wave. 
+
+Let E be along the x-axis; then E, = E, = 0. From (3.4) and (3.5) we get 
+OF, __ 1 OH, , OH, 1 OE, 
+
+
+3 
+
+
+Cz c ¢t oz c Ot 
+
+
+and H, = H, = 0. Thus E, H, z, where z is the direction of propagation, 
+form a right-handed orthogonal system of vectors, and we have 
+
+
+£, = f(z + ct) + F(z — ct) 
+HH, = —f(z + ct) + F(z — ct) 
+
+
+as solutions of Maxwell’s equations. 
+Let us consider the special case of monochromatic waves. Then 
+
+
+f(z + ct) = R{Ae*Et?} 
+
+
+where R{ } denotes the real part. If n is a unit vector in the direction of 
+propagation, then 
+
+
+ken ee nan 
+c A 
+
+
+is called the propagation vector. Let us introduce unit vectors &/, &? so that 
+e, e?, n form a right-handed system of orthogonal unit vectors. Then for 
+a monochromatic wave propagating in the direction n, 
+
+
+E = st{aielk-n - ot) 3 gie ik-n- ae 
+H = £7{b2ehK 8 - wt) Be b2e7 tka =n) 
+
+
+Here we have written w = kc. We can obtain the most general expression 
+for E and H in free space by superposition of plane waves, thus: 
+
+
+= Y | aeettatem® — of) se ae ken ON (3.14) 
+Aa 
+
+
+H = Y | ek eb {aje"™* - wt) ae bie~ ken — aw (3.15) 
+A 
+
+
+with 
+dk = dk,, dk, dk, 
+
+
+6 LECTURES ON ELECTRODYNAMICS 
+
+
+The constants bj, are simply related to aj since we have the relation (3.4) 
+
+
+VxE=-—- elt 
+c at 
+Now 
+V x (ete?) = ie Ik x ef] 
+Hence 
+
+
+VxE= iy | atk ee ie ee gig ees a 
+a 
+c oat Cou 
+
+
+_ 1 oH = a — ot) _ bie ik-a— ak 
+
+
+Remembering that 
+k x &, = key, 
+
+
+k x ef = —key, 
+we get 
+a, = by 
+eee (3.16) 
+
+
+and the complex conjugates of these equations. 
+
+The fields can be expanded in terms of any other complete set of ortho- 
+gonal functions, but the above Fourier expansion is convenient as it is 
+simple analytically and we shall see later that the energy and momentum 
+of radiation can be expressed simply in terms of the coefficients a. Also, 
+though the field near a radiating charge is very complicated, at large 
+distances away it can be expressed as a sum of plane waves and a coulomb 
+field. 
+
+
+4 APPLICATIONS TO THE SKIN EFFECT AND METALLIC REFLECTION 
+
+
+Consider a semi-infinite conductor. As long as the dimensions of the skin 
+are small compared to the radius of curvature of the wire, we can use the 
+result derived above to study the skin effect in wires. Inside the conductor 
+
+
+j=—oE (4.1) 
+c 
+
+
+where g is the conductivity. First let us consider copper since for this metal, 
+both the dielectric constant x and the permeability uw can be taken as unity. 
+
+
+MAXWELL’S THEORY 
+
+
+Maxwell’s equations inside the metal are then 
+
+
+V-E = 420 
+V-H=0 
+vxE=- 21 ot 
+c Ot 
+vxHa-LZ ano 5 
+c at c 
+
+
+(4.2) 
+(4.3) 
+
+
+(4.4) 
+
+
+(4.5) 
+
+
+Let us choose our axes so that the xy plane is parallel to the boundary 
+surface of the metal, and let radiation of frequency w and plane polarized 
+
+
+in the x direction be incident normally on the boundary. Then 
+
+
+E,(z, t) = f(z) e~ 
+H,(z, t) = g(z)e" ** 
+
+
+and we shall use the convention of taking the real part of E and H as the 
+
+
+actual field. Assume 
+0 = F(z) e- iwt 
+
+
+Then the conservation equation 
+
+
+and (4.1) give 
+
+
+~ —iwF(z) ee "+2 V-E=0 
+c c 
+
+
+and using (4.2) we have 
+
+
+= 10 F(z) eo any e t=O 
+c c 
+
+
+and hence 
+F(z) = 0 
+0 =0 
+and 
+V-E=0 
+
+
+Taking the curl of (4.4) and using (4.5) we have 
+
+
+1 GE 4x0 OE 
+
+
+(4.6) 
+
+
+8 LECTURES ON ELECTRODYNAMICS 
+
+
+and using (3.6) and (4.6) we get 
+
+
+1 @?E 420 GE 
++ 
+
+
+AE = — —— 
+c2 Of c* Ot 
+d’f w? 4nicw 
+dz? (- ee \s oe 
+Taking fa Adin 0 
+we have ‘ oe 
+ear - 2 (14 2) 
+Cc wo 
+— ofl 4no\?)1/? 4 7h? 
+x= —] — | + | — a 
+c|2 Ww 2 
+ofl Ano \?) 1/? Ly? 
+7 =—]—<1 + -— 
+c| 2 a) 2 
+which for 
+4no 
+> 1 
+wo 
+yields 
+ae f 220) 
+n & e 
+
+
+1/n is the distance from the boundary to the point in the metal where the 
+strength of the field drops to 1/e of the value at the boundary, and hence 
+it is a measure of the thickness of the skin when an alternating current of 
+frequency w/2z is flowing in the metal. 
+
+
+EXERCISE 3 Find the value of w for which 1/n = 10-3 cm in copper. 
+For ferromagnetics where # varies with w and is not unity, it is found that 
+
+
+nw 2now 
+— 1(w) 
+nes c 
+
+
+ExercisE 4 Describe an experiment whereby y can be measured as a function of w. 
+
+
+The reflecting power of metals can be found by solving a simple boundary 
+value problem. The procedure is to adjust the amplitude and phases of 
+the reflected and transmitted waves so that E and H are continuous at the 
+boundary. From (4.4) and (4.5) we see that H also satisfies Eq. (4.7) 
+so that 
+
+Hy = Be“'* — nz — lot 
+
+
+MAXWELL’S THEORY 9 
+
+
+and then (4.4) gives (with c replaced by c/u to take permeability into account) 
+
+
+Hy, eee (ix — n)c 
+jos lou 
+il Jano 
+[ee Ml 
+Let the incident beam be given by 
+
+
+E = fe tott-*/e) 
+x 
+
+H = Ae tote) 
+y= 
+
+
+Then the reflected beam will be given by 
+E = Ae” jw(t —7/,) 
+Hi = — Ale” '0t-"1e 
+and the transmitted beam by 
+oa _ Al ehi4 Mz — tot 
+HY = (ix ~ n) Cc Atelix— mt — tot 
+lop 
+The condition of continuity of E and H at the boundary (z = 0) gives 
+
+
+EXERCISE 5 Calculate r for copper (4 = 1) for the value of w such that 1/n = 10-3 cm. 
+
+
+5 ENERGY AND MOMENTUM OF AN ELECTROMAGNETIC FIELD 
+
+
+The energy and momentum of a test body are well defined. We consider 
+the changes in them caused by the interaction with an electromagnetic 
+field and assign such values of the energy and momentum to the electro- 
+magnetic field that the laws of conservation of energy and momentum will 
+
+
+10 LECTURES ON ELECTRODYNAMICS 
+
+
+be satisfied. From this we see that since only changes in the energy and 
+momentum of an electromagnetic field are defined, they are undetermined 
+by an additive constant. We shall see later that the theory of relativity 
+determines this constant. 
+
+First we shall consider the energy. If E and pare the energy and momentum 
+of a test body, we have 
+
+
+AE=F-dAr 
+= (F-v)4t 
+where 
+F =o0V{E+ 1yx H} 
+c 
+Therefore 1 AE 
+—— =oE-y 
+V At 
+= cE:j (5.1) 
+Similarly from 
+Ap =FAt 
+we get , 
+1- Ap 1 
+—_— =o/E+—vxH 5.2 
+oa of : } (5.2) 
+We shall require that 
+F ow 
+
+
+where 
+W = the energy density of the electromagnetic field 
+
+
+S = the flux of electromagnetic energy 
+
+
+and obtain an expression for W and S in terms of E and H. Equation (5.3) 
+is a statement of the law of conservation of energy. 
+Now from vector analysis we have 
+
+
+E-V x H—H-V x E= -V:(E x H) 
+Therefore using Maxwell’s Eqs. (2.3) and (2.4) we get 
+oE 1 cH 
+
+
++ 4n(E+j) + H-——— + V- [E x H] =0 
+Ct c Ot 
+
+
+EL 
+c 
+
+
+ y-fe x H+ cE-j) +e + 2) =0 
+4n 8a Ot 
+
+
+MAXWELL’S THEORY 11 
+
+
+Hence 
+W= ie) + H?) (5.4) 
+820 
+Cc 
+S =—ExH (5.5) 
+4n 
+
+
+We see that the formula for the energy density W is the same as that 
+in electro- and magnetostatics. On the other hand if we apply the formula 
+for energy flux to the case of uniform static fields, with E perpendicular 
+to H, we obtain a nonvanishing result. This seems strange, but as V:S = 0, 
+there is no difficulty. 
+
+
+EXERCISE 6 Consider the case where E is still perpendicular to H but they are not 
+uniform. It seems that €W/Cr does not vanish. Is Y - S equal to zero? 
+
+
+For the momentum, we shall require an equation of the form 
+
+
++ (E+ Gx HW} +V-T=0 (5.6) 
+
+
+which expresses the law of conservation of momentum. We shall obtain 
+the formula 
+
+
+G=—S (5.7) 
+
+
+for the momentum of the radiation, and shall obtain an expression for 
+Maxwell’s “‘stress tensor’ T. Using (2.3) and (2.4) we get 
+
+
+CO Ne ee a Ee eg Eee 
+Ot | 4ac 4ac | ot 4c Ot 
+1 : 1 
+= —(V x H) x H-j x H —-—E x (V x E) 
+4n 4a 
+-L{ee H+ @WE- Sve? + Ho} iH 
+4 
+
+
+From (2.1) and (2.2) we also get 
+
+
++ sav HY + E(V-E)} — Eo = 0 
+4a 
+
+
+12 LECTURES ON ELECTRODYNAMICS 
+
+
+Adding this to the above equation, we obtain 
+
+
+ban se ay +eoE+jxH 
+ot (4c 
+
+
+“EO +(E-V)E + H(V-H) + (H-V)H — VE? f yh 
+
+
+4x 
+Writing this in component form, we have 
+) 
+
+
+l ; 
+nares a + [j x H], 
+
+
+1 
+DE, VjE; + Ej VjE; + H,VjH; + A, ViHi — 5 Ve? + H?)} 
+J 
+
+
+> V, EE; +H,H; — Bae? + H?) with V, = ca 
+j 2 ox4 
+Thus we have (5.6), where 
+
+
+1 1 
+
+
+G =—S =—ExH (5.8) 
+c? 4nc 
+1 1 : 
+Ti; = — —E,E, — H,H; + —6,(E* + H?) (5.9) 
+4x 2 
+We note that for a plane electromagnetic wave we can write 
+|G] = pe 
+where 
+_W 
+= Gar 
+
+
+which is the first indication of the equivalence between mass and energy. 
+Further, in free space E is perpendicular to H and |E| = |H| so that 
+
+
+S = cnW 
+
+
+Exercise 7 Show that 
+
+
+MAXWELL’S THEORY 13 
+
+
+EXERCISE 8 1) Calculate the force on an antenna radiating 30 kW in a narrow beam. 
+2) Calculate the velocity of recoil of a Li® nucleus when it emits an 18 MV y-ray. Also 
+calculate the velocity of recoil of an electron if it emitted such a y-ray. 
+
+
+The diagonal components 7;, of the stress tensor T represent the pressure 
+exerted by the radiation. For radiation in a cavity 
+
+
+(Er) = (Ey) = (EZ) = 4 (E*) = CH?) = (H}> = (H?> = 4 (HY) 
+CE\E;> = 0, «HH,» = 0, for i+j 
+«Ti = 0 i+ J 
+1 
+
+T, aaNet 2 
+<T,1) on Le ey 
+
+(S>) = <G) =0 
+
+—~ 1 op 
+7 4n P22 
+<T;,> = pressure = 4+W 
+
+
+So far we have talked only about energy and momentum densities. 
+The total energy and momentum of a field is obtained by integration 
+
+
+2 2 
+pe | pee, Sapa (5.10) 
+82 
+p= [aa~e (5.11) 
+4c 
+
+
+If we write E and H as sums of terms, then £ and p will be double sums, 
+and in general there will be interference, and the expressions will be com- 
+plicated. However, if Fourier expansion is used, E and p can be written 
+simply as single sums. To show this, we have (3.14) 
+
+
+i(k-r- ot -A —i(k-r — wt 
+B= Y | chet {abet on 4 ge (k-r ide 
+a 
+Let 
+
+
+~ tut 
+at = aie 
+
+
+Then 
+E= 5 | ak eh{orelk-* 4 ae * 4 
+A 
+
+
+14 LECTURES ON ELECTRODYNAMICS 
+
+
+whence 
+iy 4 ). oA A’ —ik—-k’): 
+B=), y | ax f aw eh et ona e eTHOT 4 Glote : 
+A 2K 
+
+
+AWA’ (ik—-k’)- oA Wh’ -- ik + k’)- 
++ odgiiet kt 4 gigi’ " 
+
+
+[era = BD | ak | dk’ 
+A A, 
+x {lok + open) Ok — k’) + (ahah) + ae) O(k + k’)} 
+= 3 TY | di eh - eX (Giad’ + odat’) + ek - eX (ado, + ata" )} 
+A A 
+
+
+Now 
+Sek = dy 
+
+
+and we can choose e1, so that 
+
+
+Eng = ry 
+Then 
+2 
+e~ = —&, 
+
+
+Using these facts and replacing the «} by the a4, we obtain 
+i E? dr = 1623 | dk(G.a,,) + 8x3 { dk{(aji a1, — aga’, je~ 7" 
+Aa 
+
+
++ (G,d., — aa2,)e*7'} (5.12) 
+
+
+Since from (3.14) and (3.15) H can be obtained from E by replacing a} by 
+bi, we have 
+
+
+| H? dr = 1623 ¥ i dk(Bibi) + 823 | dk{(bib*, — byb2,) e772 
+a 
+
+
++ (byb1, — byb2.,) e*7!*} 
+Using (3.16) we get 
+
+
+| H? dr = 16x? ¥ | dk(Giat) + 8x3 | dk{(apa?.,, — aja.) e 7 
+A 
+
+
++ (aa2, — a.a',) e?!* (5.13) 
+
+
+MAXWELL’S THEORY 15 
+
+
+Hence, on adding (5.12) and (5.13), the oscillatory terms cancel, and 
+(5.10) gives 
+
+
+E=47n> | dk (aah) (5.14) 
+a 
+
+
+Now for the momentum, we take the vector product of (3.14) and (3.15) 
+after making the substitutions 
+
+
+a -i 
+a, = ae a 
+
+
+pane 
+We get 
+
+
+ExH=yY | dk | dk! [el x eh fad plete + kor 
+A A 
+4: eae —k’)-r fi Wipe —k’')-r 
++ mene + moor) 
+[Bx Har = 82° DY [ a fo x of Galt + off) 
+
+
++ fh x e (appt, + arp )} 
+We have 
+
+
+and the other products vanish. Hence 
+| E x Hr = 8x3 | ak = {(aubi + ayby — aby — ayy) 
+— (a,b? + apb',) ee 7 
+— (ab? + ayb*,) e7'"} 
+= 8x3 | dk = {2(ata4 + ajay, 
+—2iwt 
+
+
+11 7 ee 
+— (a,a_, — aya) e 
+
+
+=1 -1 =2 -2 2iwty 
+— (@ya-, — Aa) eo” 5 
+
+
+16 LECTURES ON ELECTRODYNAMICS 
+
+
+The integral of the oscillatory terms vanishes since this part of the integrand 
+changes sign when k is replaced by —k. Hence (5.11) becomes 
+
+
+2 
+p= ae 2 | dk = (aah) (5.15) 
+Cc A 
+
+
+6 RADIATION FROM A CHARGE AND CURRENT DISTRIBUTION 
+
+
+We shall first give a method of calculation which is most convenient when 
+only the rate of radiation of energy is required. We write E as the sum of 
+“transverse” and “‘longitudinal”’ fields E, and E, respectively, which are 
+defined as follows: V-E, =0 
+
+
+In other words, we break up E into its solenoidal and irrotational parts. 
+Maxwell’s Eqs. (2.3) and (2.1) then become 
+
+
+V x E, = _l oH 
+c Ot 
+We can write 
+E, = —Ve 
+Ay = —4z0 
+and 
+r’, t) dr’ 
+P(r, t) = eee (6.1) 
+r—r| 
+
+
+E, = ~V o(r’, t) dr 
+r—r 
+
+
+E,, is calculated by keeping ¢ constant. Maxwell’s equations can now be 
+written in the form 
+
+
+V-E, = (6.2) 
+V-H=0 (6.3) 
+vive, +i 2G (6.4) 
+c Ot 
+Vint age St (6.5) 
+
+
+c Ot c Ot 
+
+
+MAXWELL’S THEORY 17 
+
+
+2y 1 @ f eft, nar’ 
+ot c Ot lr—r'| 
+
+
+and using the equation of continuity (2.5) we obtain 
+
+
+1 dE, -v/ V’-j(r, dr’ 
+
+
+c ¢ét lr —r'| 
+Thus 
+1 a 
+v-(4aj 42 =4rxV-j+ | V’:jir’,t) dr’ A ! 
+c Ot jr—r 
+and since 
+| ea or 
+lIr—r' 
+it follows that, 
+V (+ spc en asG 
+c Ot 
+
+
+Thus E, takes out the longitudinal part from j. Hence E, and H can be 
+represented in terms of transverse waves. We shall write 
+1 GE 
+4nj, = 4nj + —- —1 
+
+* c ot 
+It means that only the component of j perpendicular to the propagation 
+vector excites transverse electric waves. For if we make a Fourier expansion 
+of j, 
+
+
+iao= Y i dk ek{e,(k, t)e™* + Bk, 1) e7*} 
+A=1,2, 
+
+
+3 
+
+
+where 
+k 
+fp. = k 
+and 
+gi(k, ) = | de (r,t) ee 
+JU 
+then 
+
+
+< 
+a 
+I 
+
+
+> | dk 2 -k{e,(k, t) e** — g(k, te} 
+
+
+if dk k{es(k, )e* — 24(k, 0) e-*7) 
+
+
+18 LECTURES ON ELECTRODYNAMICS 
+
+
+Thus the expansion of j, is 
+LE O=T [dkellede ne +20 ne} — 66) 
+A=1,2 
+
+
+This follows from the fact that, since V-j, = 0, j, cannot have any com- 
+ponent parallel to k. 
+
+We now introduce a vector potential A(r, ¢), which we define in this 
+case by the following equations: 
+
+
+H=VxA 
+
+1 GA 
+
+E, = —--_— 
+
+qi c ¢ét 
+V-A=0 
+
+
+Then Eqs. (6.2), (6.3) and (6.4) are automatically satisfied, and we are 
+left with just (6.5), which becomes 
+
+
+= 47j, (6.7) 
+
+
+Let us now make a Fourier expansion of A. Since V- A = 0, A has no 
+component parallel to k. Hence 
+
+
+A=y i dk el{n,(k, 1) e™*™ + A,(k, t) e~™"} (6.8) 
+A=1,2 
+where 1 
+nk, t) = —~ | dr A(r, t): ek e~ ™ 
+823 
+Substituting this expression for A into (6.7) and using (6.6) we find 
+
+
+3 | dk &, | {en t 5 ™a — sn) es 
+
+
+A=1,2 
+Ta: ; 
+A a eee eo ‘ze, e7'k ‘| =0 
+Cc 
+where a dot denotes partial differentiation with respect to t. Hence 
+", + c7k?n, = 4nc?g, 
+
+
+This is the differential equation of forced oscillation. Its complementary 
+solution, that is, the free vibration, is given by 
+
+
+th, = L,(k) e'** + M,(k) e7'** 
+
+
+MAXWELL’S THEORY 19 
+Putting this into (6.8) and calculating E , We get 
+E,=- uo y : | dk ej, ((L,e* — M,e7'**) e* 
+— (L,e7*** — Mye) a7 * 7] (6.9) 
+
+
+In free space E, = E, and comparing (6.¥) with (3.14) we find 
+
+
+I, = 0 
+1w 
+—M, = +a, 
+Cc 
+and hence 
+n= nares -iot 
+7) 
+
+
+If we consider the current to vary harmonically with the time and write 
+
+
+ivt 
+
+
+8, = Vie 
+then the particular integral is 
+4ac*y, et 
+w? — 9 
+and hence the general solution is 
+4nc?y, eit 
+
+
+y= L,e*™ + M,e i + 7 
+
+
+w* — »? 
+
+
+Let us choose the constants so that E, = 0 and H = 0 at t = 0. Then 
+
+
+from which we find 
+
+
+My 
+| 
+
+
+M, 
+
+
+—teue eivt e~ it 
+
+
+fy Ar pe 6.10 
+iu nfs —-v 2o(wot+r) 20(a— = om) 
+
+
+20 LECTURES ON ELECTRODYNAMICS 
+
+
+andforw ~ v Dmnc2y,e7 
+"1X -- Va {1 4, erie (6.11) 
+w(w — v) 
+
+
+The rate of radiation of energy is obtained by finding the part of 
+
+
+= 5, [Gta 
+82 
+1 2 2 
+=— | (E27 + E? + H2) dr 
+a | GE+ eit 
+
+
+which increases secularly with ¢. It is clear that E, does not contribute 
+to this energy since it is just the coulomb field of the charges. Thus we 
+need only consider the energy in the radiation field 
+
+
+I 2 
+Evaa = = { (E, + H’) dr 
+From (6.8) and the definition of A we have 
+
+
+£5, [aa [—Liet Liew 
+
+
+A=1,2 
+
+
+H = | dkn x & {iene - ine" ,na= = 
+A=1,2 
+
+Now the dominant contributions to these integrals come from the region 
+
+@ & v, where we have ; : 
+
+4, —10n, 
+
+so that, comparing these equations with (3.14) and (3.15), we can make 
+
+the correspondences 
+
+
+A ,—twt _ iw 
+a, e == 
+c 
+
+
+by et = —ikn 
+breW'* = ikn, 
+
+
+which satisfy the relations (3.16). Hence we can obtain the value of E in 
+terms of 7; by making these correspondences in (5.14). The result is 
+
+
+2 
+Evad => 4n? ¥ [e«(Sam) 
+
+
+A=1,2 
+
+
+MAXWELL’S THEORY 21 
+
+
+From (6.11) we have 
+
+
+_ _ 8nrc*i,y, 
+aN, = ACES — cos(w — ») t} 
+
+
+Thus 1 
+Ena = 32n4c? |] k2 dk dQ Hpata CON 2) 
+A=1,2 
+
+
+(@ — »)? 
+
+
+Since the integrand has a sharp maximum for w = », we can take k?y,y, 
+outside the & integral, which then becomes 
+
+
+dw {l—cos(w—v)t} ¢ sin? x 
+C (w — »)? c - 
+—yt/2 
+
+
+x 
+
+
+Since the integrand falls off very rapidly, for t > 1/v, we can take the lower 
+limit as — co. Therefore 
+
+
+integral et 
+c 
+and 
+3225 v7 t 
+Ena = | i074; 
+c A=1,2 
+
+
+Hence the rate of radiation of energy in the solid angle dQ is 
+
+
+3225 y2 
+
+
+c 
+
+
+dR = dQ 
+
+
+{lyil?_ + |yv21?} 
+
+
+2 v 
+=dQ-— > | farite eee? 
+27C A=1,2 
+
+
+2 , 
+= d2——| { a [j x njewte™ |” (6.12) 
+22c 
+
+
+EXERCISE 9 Show that for the case of zero total charge 
+
+
+—, 1 2 
+ie 
+
+
+82 re 
+— 1 2 2 1 
+Die rast a yor 3 
+and hence 
+° Wi 
+
+
+—-—-0 as r>oco 
+i 
+Also give an idea of the distance where Wi becomes negligible. 
+
+
+22 LECTURES ON ELECTRODYNAMICS 
+
+
+Let us apply (6.12) to calculate the radiation from an antenna. Consider 
+a current in a conductor whose breadth is very small compared to its length 
+L. Let the z axis be along the conductor. Then only the z-component of j 
+is different from zero; suppose it to be of the form 
+
+
+i= ie dx dy = + (sin) (e'* +e) 
+
+
+a —cV-j 
+Ot 
+
+
+Now 
+
+
+so that 
+acl mz. 
+A= dx dy = A,(z) — —— cos —Ssin vt 
+{Je a4 o(2Z) Ly L 
+
+
+Hence the current and charge distribution in the wire have the following 
+forms. 
+
+
+rel 
+I iy 
+/ A 
+e) L O L 
+2 el 
+L ly 
+
+
+It is clear that Ag cannot be a function of z for a uniform, straight iso- 
+lated wire in free space, and it may be taken as zero. 
+
+
+2c 
+
+
+v 
+
+
+Ifa = > L, then the integral 
+
+
+2ni 
+| dex mje a" 
+
+
+is easy to perform. Put r = ro + r,. Then the integral becomes 
+
+
+Sond one ) 
+e 4 | ae, fir,,)xnje* 
+
+
+and under our assumption we have 
+
+
+Ir,| 2a 
+<1 sothat e 4 ~ 1 
+
+
+MAXWELL’S THEORY 23 
+
+
+‘e) r, L 
+Lf 
+r 
+and hence 2 /Ey\2 
+dR = da—— (=) sin2 6 
+2ac \ x2 
+27272 
+gr ats 
+277c 
+
+
+Here 6 is the angle between the z-axis and n. 
+
+
+Exercise 10 Taking R = 10 watts, v = 10’ sec-', and L = 10cm, find the maximum 
+charge accumulated on one-half of the wire. 
+
+
+For the general case we have to evaluate the integral 
+
+
+2at 
+- UZ —-—Zzcos9 
+I= | dzsin—e 2 
+L 
+0 
+
+
+The integration can be carried out by writing the exponential factor as a 
+sum of cosine and sine terms; the resulting trigonometric integrals can be 
+evaluated by elementary means. The result is 
+
+
+ee a (1 &. == ee 
+(: _ Prd ) 
+Hence 
+ie Lew. L? , aL cos 6 
+2 2 2 
+a (: - 0s? ) A 
+and 
+aR = dQ v? I? DL? sin? 6 , L cos 6 
+
+
+24 LECTURES ON ELECTRODYNAMICS 
+
+
+We note that when n is perpendicular to r,(sin@ = 1) this result gives the 
+same value as the approximate expression obtained above for A > L. 
+Consider a spherically symmetric charge distribution which oscillates 
+radially. Such an oscillation of charge cannot give rise to any radiation, 
+for we have seen that only the part of the current perpendicular to the 
+propagation vector gives any radiation, and if we consider any plane through 
+the charge distribution, to any point P, then on the plane there is a point P’, 
+symmetrically placed with respect to it, where the value of the current is 
+equal and opposite to that at P. Thus the integral (6.12) vanishes, and 
+there is no radiation. Another proof can be given by using Gauss’s theorem, 
+
+
+which states that the field outside a spherically symmetric distribution of 
+charge is the same as that when all the charge is concentrated at the center. 
+It follows from this that with our distribution of charge the field is radial 
+and constant. Hence there is no radiation. 
+
+Let us now consider radiation from an atomic system. In nonrelativistic 
+theory, the expression for the matrix element of the current between two 
+stationary states m and n is 
+
+
+i 
+: —(Em-Ent_ [hh e 
+Jnl, t) = eh Un, | — —V Up, 
+m ic 
+
+
+This is obtained from Schrédinger’s equation and the condition of con- 
+tinuity. By analogy the rate of radiation from state n to m is 
+
+
+Ram = dQ (= a a hve? 
+mc? 
+
+
+2 
+2c h 6.19) 
+
+
+i 
+<7 (En-Em)mr _ 
+a ere nt X Vig 
+
+
+MAXWELL’S THEORY 25 
+
+
+Now 
+he =4 7 x 10-78 x 3 x 10!° 
+
+
+‘ne ae 8 x 10-22 ap em 
+
+
+and the size of the atom is d = 10-8 cm so that d/A < 1, and we may 
+neglect the exponential. We may make a rough estimate of (6.13) by 
+setting 
+
+
+~— 
+
+
+d2 
+
+
+fa (a, x Vu,) : 
+
+
+Introducing the partial line breadth I’,,,, we have, for the transition rate, 
+
+
+¥ aie i cee e* F,-E£, { ht \ 
+h £E,—E, he kh 
+
+
+mcd 
+
+
+hme? \? 
+aa OC: =) 
+
+
+2 
+
+
+T 3 
+ell ONE me eat fe 
+h 137 137 
+h2 
+
+
+where we have taken 
+
+
+Therefore 
+
+
+Or again, since p?d? ~ h?, d? ~ —_—. we have 
+ope 
+b? 
+med c? 
+A 5 
+— yy 
+h 137 
+
+
+The natural lifetime is the reciprocal of this. 
+
+
+EXERCISE 11 Considering the dipole term only, that is, neglecting the exponential in 
+the integrand, calculate the mean lifetime of the state u, where there is only the state u,, 
+
+
+below it, where 1 ; 
+Un = e~2"12@ cog 6 
+V2na? 4na 
+Um = ae e7tla 
+Va? 
+h2 
+a= 
+
+
+26 LECTURES ON ELECTRODYNAMICS 
+
+
+Also show that the transition from u,° to u,, where 
+1 1 r 
+me hg (tLe 
+Vina \2 4a 
+is completely forbidden. 
+
+
+Using Eq. (6.13), we can prove that a free electron does not radiate. 
+The wave function of a free electron can be taken as 
+
+
+u=e 
+and the energy £, corresponding to this state obtained from the relation 
+
+
+Hy = Ey 
+which for this case is 
+
+
+Paik | E,e*"* 
+2m 
+Now p= oy p? = —-h?A, which yields 
+i 
+h2k? otker E,e*"® 
+2m 
+2,2 
+ae h*k 
+
+2m 
+
+
+We want to show that the integral 
+timaEn (a-r) 
+| ae e he i,n x Vu, 
+
+
+vanishes for this case. Putting in the corresponding values, the integral is 
+
+
+jk? 2) 
+. ——n-r _g-. ; 
+if are 2me e*-'n x kelkF 
+
+
+2_ pr2 
+h(k k - 
+2mc 
+
+
+= ny 19/ ~K + k)m oc 
+
+
+Thus the integral is zero unless 
+h(k2 — k’2 
++ ee, . Me 
+2mc 
+hh(k2? — k’2 2(p-2 _ 1/22 
+(PA) eg RE - 
+mc 4m?c? 
+
+
+k'=k 
+
+
+that is, 
+kK’? = k? + 
+
+
+MAXWELL’S THEORY 27 
+
+
+The values of k? — k’? which satisfy this relation are zero and 
+
+
+2pn2 5 
+p22 = — Ame 14 Jak 
+h? mc 
+Now 
+im-k 2 et 
+mc mc 
+
+
+and since k? — k’? cannot be negative, the second solution is not good. 
+Hence k’ = k, and there is no radiation. 
+
+
+7 SOLUTION OF MAXWELL’S EQUATIONS IN TERMS OF RETARDED 
+POTENTIALS 
+
+
+We introduce the potentials y and w defined by the following equations: 
+
+
+E= gp ey (7.1) 
+c at 
+H=Vxw (7.2) 
+Vee (7.3) 
+c Ot 
+
+
+(7.3) is the Lorentz condition which restricts the gauge. That is, (7.1) and 
+(7.2) do not determine ¢y and completely, for if 
+
+
+1 aA 
+P — = es 
+
+c Ot (7.4) 
+W=0+VA 
+
+
+where A is any scalar point function, then gy’ and ’ give the same field as 
+gy and Ww. Thus there is a family of transformations generated by A which 
+give the same field. Suppose 
+
+
+28 LECTURES ON ELECTRODYNAMICS 
+
+
+Now with the above definition of g and we see that Maxwell’s Eqs. (2.2) 
+and (2.3) are automatically satisfied, and (2.1) and (2.4) give 
+
+
+hg Ne hale 
+c Ot 
+Op = —4x¢ (7.5) 
+and 
+
+1 a 1 o*y : 
+
+Vx(Vx W) +—— Vo + ———_ = 4a 
+
+( ¥) c Ot : c? at? , 
+
+1 dp 1 ay F 
+
+—-MW+ViV- w+ ———}5 + — = 47 
+
+¥ | ¥ c x} c? at? ; 
+Ow = —47j (7.6) 
+
+
+Thus we have to solve Eqs. (7.5) and (7.6) with the condition (7.3). These 
+equations are consistent since 
+
+
+O ee eal = —4n Bee er = 0 
+c Ot c Ot 
+
+
+We shall show that the solutions of (7.5) are 
+
+
+(" = aa 
+lrg ee 
+p(t, ee eed 
+
+
+lr —r' 
+
+
+where g_ and ¢, are called the retarded and advanced potentials respectively. 
+
+
+The general solution is 
+Pp =ap, + (1 — a) p- 
+
+
+where a is any real number. Similarly, the solutions of (7.6) are 
+
+
+of 7 _ |r-r' 
+r,t + ————— 
+c 
+
+
+r-r 
+
+
+W.(r,0 = | dr’ 
+
+
+To derive these solutions, make the Fourier expansions 
++0 
+
+
+o(r, t) = J o,(r) e'” dp 
+
+
+—-o 
+
+
++00 
+eee | olt, t) ede 
+2n 
+
+
+MAXWELL’S THEORY 29 
+
+
++00 
+wr) = | g(r) e do 
+
+
++0 
+1 
+g(r) = — | q(r, the‘ dt 
+27 
+
+
+Substituting these values in (7.5) we have 
+
+
++0 
+
+
+= —40, 
+
+
+N 
+= 
++ 
+| 
+= 
+| 
+
+
+We shall solve this equation by using a Green’s function, G(x, x’). It has 
+the property that if 
+Dy =f 
+2 
+
+
+where D is an operator, which in our case is 4 + ae , then 
+c 
+(x) = | f(x") G(x, x’) dx’ 
+Applying the operator D to this equation, we find 
+DG(x, x’) = 6(x — x’) 
+For our case, there are two different G’s 
+
+
++ ip-r"'| 
+e c 
+
+Gg aS 
+4x |r —r'| 
+
+
+Hence for large values of r, ye’ behaves like 
++icrtint 
+e c 
+r 
+
+
+so that the + sign gives incoming waves and the — sign gives outgoing 
+waves. In calculating the radiation from a charge, only the — sign should 
+be used. It is interesting to note that we can make an oscillating charge 
+stop radiating by sending in radiation of suitable amplitude and phase. 
+
+
+30 LECTURES ON ELECTRODYNAMICS 
+
+
+To verify the formula for the Green’s function, take r’ = 0. Then 
+
+
+-tir 
+Gens 
+4nr 
+-itr eo Sty -i—r 
+AG = d(r)e = Sx oe is 2 
+4ar \ Or? r Or 
+FOP NG OAs 
+4x \or\ r or 
+-i-r 2 -i~r 
+Sige a le aes 
+c? 4ar 
+
+
+whence 
+
+
+The exponential coefficient of d(r) is left out since d(r) vanishes everywhere 
+except at r = 0, and here the exponential is unity. 
+
+
+Thus we have 
+ater 
+dr o,(r’) ——___—. 
+lr —r'| 
+
+
+Py 
+
+
+8 
+Il 
+ue+, 
+> 
+oO 
+ue 
+> 
+© 
+= 
+— 
+| 
+ib 
+a 
+i 
+a 
+
+
+ee r—r'| 
++0 +00 
+” Par ee 1 
+= | dve™ | adr’ one on o(r’, t’) ee" at’ 
+- 0 a -o 
+
+
++00 
+1 mee, 
+. | dt’ or’, dtr — it’ — eat 
+r—r'| c 
+
+
+(" roel) 
+o(r’,t — 
+- Pes cia (7.7) 
+
+
+jr—r'| 
+
+
+Il 
+—— 
+> 
+
+
+MAXWELL’S THEORY 31 
+
+
+It can be shown in exactly the same way that 
+( lr—r ) 
+iY. 
+Y= | ir a (7.8) 
+Ir—r'| 
+
+
+It is not difficult to show that these solutions satisfy the Lorentz condition 
+
+
+Setting 
+Ir—r'| 
+t= 
+c 
+we have 
+Ue ee ee ee 
+c Ot r-—rlc et 
+Also 
+ow ) I 
+eee IR a NS Pd ee) 
+Ox | iz ae 
+ae! AT’, ro S 
++ [ae 5 re Sie ) on 
+
+
+7) ] 
+_ G0 da ie Ix’, t ~ t) 
+f ea 
+
+
+dr’ ) Ot 
+—- | —— —(j,(r’, t — t)) — 
+| lr ‘| Ot V ( ) ox’ 
+
+
+the last form following from 
+7) ) 
+-rj=-—)r-r' 
+C , 
+
+
+——|F 
+6 1 dr’ os 
+dr’ ¢<__. _____}j,(r’,f —1t) = — lea —— j,(r’, t — T) 
+| = lr — =| ir —r’| ex’ 
+Therefore 
+
+
+we 
+
+
+~  artae t= 9 — ae Mae} 
+
+
+aa [Er las had of 
+
+
+32 LECTURES ON ELECTRODYNAMICS 
+
+
+and hence 
+UY. Sigs 
+= “Ot 
+[2 Sate 2) + 9 ie 19] 
+Jy = 7 t'=t-r 
+q.e.d. 
+
+
+Let us now consider some particular cases of our solutions. Suppose 
+the charge and current distribution are confined to a region of dimension d, 
+and consider the radiation at a point P outside it. 
+
+
+P 
+
+
+For zi = r-rl small, the solutions reduce to 
+c c 
+rene |S 0" 
+weds |S ite 9 (79) 
+
+
+These solutions are good if, during a length of time R/c, 90 and j do not 
+change appreciably. (That is, 
+
+ee ag 
+
+c @ 
+where w is a typical frequency in the Fourier decompositions of 9 and j.) 
+They are called the quasi-static solutions and their fields are the ones 
+given by Coulomb’s and Ampere’s Laws. 
+
+For large values of R, the approximate solutions give the wavezone 
+
+field. The condition of validity cannot be given in a general way but only 
+for the Fourier components. It is 
+
+
+>1 
+c 
+
+
+MAXWELL’S THEORY 33 
+
+
+wR 
+
+
+We shall first show that for > landr>r’ 
+
+
+c 
+Y ~n'w, 
+
+
+where, under our second condition, 
+
+
+V Wt —P ax 
+Now 
+OY yx é a yt |e-r'| 
+Se ee ee: © © 
+Cx < | Ane 
+and 
+r’? 
+Ir—r’| =r—r'cos(r,r’) + o(—) =r—n'r’ 
+r 
+Therefore 
+re) ; l apts r-r’ 
+Pra x = | ae ia) (-i2)<e a 
+Ox r c/ r 
+
+
+where we have kept only the term with the lowest power of I/r. By a 
+similar approximation it follows that 
+
+
+OWyx ly 
+——— 2 — ps 
+Ox Cc 
+
+
+and hence 
+
+
+Vy,» —i—n-y, 
+c 
+
+
+The Lorentz condition then yields 
+gy ea, 
+
+
+In the following considerations, we shall restrict our attention to one 
+frequency » so that 
+i,t) =i.@e" +i@e"™ 
+
+
+34 LECTURES ON ELECTRODYNAMICS 
+
+
+Now ° 
+
+
+-t+ 
+
+
+v0) X= : | ae se eevr 
+
+
+iv 
+and E, = VG Ms 
+
+
+H,= V x Wy 
+
+
+First we shall show that E 1 H 1 n. In carrying out the differentiation of 
+the potentials, we shall keep only the terms which are proportional to 1/r 
+and neglect terms in higher powers of 1/r, since we are interested in the 
+value of the field far away from the charges. Let 
+
+
+T= | aie) en 
+
+
+Then iv v e 
+(V xW,)2 ~ i(- maa = (- =n) 7} 
+c Cc r 
+
+
+E,~ — = (¥,— m(a-W) 
+wa — ety — any} 
+cr 
+
+
+Now iy _, 
+n x H, > — nx [y x nje ¢ 
+rc 
+
+
+v 
+—tor 
+
+
+x yaa p}e 
+rc 
+
+
+= —E, 
+
+
+Hence E, H and n are perpendicular to each other and form a righthanded 
+system in this order. Also |E| = |H|. 
+
+
+MAXWELL’S THEORY 35 
+Next we shall show that the potentials 
+
+v, =v, — nf: W,) 
+
+7, =0 
+
+
+give the same field as W, and g, in the present approximation: 
+
+
+E, = -— — n(n: W,)} 
+
+
+ly 
+
+ae — {v, ans ng,} 
+c 
+
+~ E, 
+
+
+H, = V x {W, — na: W,)} 
+~Vxw, +nx VQ, 
+~ H, 
+ExercisE12 Taking o and j for the hydrogen atom given in Exercise 11, calculate to 
+
+
+what distance the quasi-static field and from what distance the wave zone field are good 
+to within 10 percent of the correct field. 
+
+
+Let us now consider the Poynting vector 
+
+
+S=2_ExH 
+4n 
+
+
+From the above considerations we have 
+
+
+=~ n|E/ 
+4n 
+where 
+
+
+E= E,e'” + E,e~'" 
+|E|? = E2e?"* Pe E2e77"" he 2\E, |? 
+
+
+On the average, the oscillating terms are zero, so that 
+
+
+c y2 
+ae a Gaye ly — n(n: y)|? 
+ty 
+= a Je {j(r’) a n(n -j@’))} gga) 2 
+
+
+36 LECTURES ON ELECTRODYNAMICS 
+
+
+Hence the rate of radiation in the solid angle dQ is given by 
+
+
+ly . 
+[a ieee” 
+
+
+2 
+
+
+y2 
+dR = res (7.10) 
+
+
+JTC 
+
+
+which is the same as (6.12) calculated in Section 6. 
+We shall finally consider the general case, and calculate the energy 
+radiated by a pulse of current. We have 
+
+
+S=“ExH 
+1 
++00 +o 
+agian dy dv'E x H, et 
+4x 
+fo) bop +a 
+| S dt => | dy | dv'E, x H,.d(v + »’) 
++00 
+=-*{ | wE,xH., 
+2 
+
+
+We have seen that in the wave zone field 
+
+
+ly 
+
+
+H,=—y, xne* 
+rc 
+where 
+i= i j(r'yer"? de’ 
+and 
+
+
+E,=H, xn, E, x H_, = nH,:H_, 
+
+
+Hence, restricting » to positive values 
+
+
+foe) fo @) 
+
+
+| Sane - n | dv v? |y, x nl? 
+c*r 
+
+
+— 00 1) 
+
+
+MAXWELL’S THEORY 37 
+
+
+and if Q, is the total radiation emitted per unit frequency range, then 
+
+
+joes (ae | dtr?S-n 
+
+
+=< [ae | avy x nl? 
+c 
+co) 
+
+
+2 
+dQ, dv = "dQ av \y, x nl? 
+Cc 
+
+
+Putting in the value for y, we have 
+
+
+2 
+
+
+y? ‘; ee +r) 
+dQ, dv = —dQ dv] | dr[n x j,@)]e* 
+c 
+
+
+ist —-"a-n 2 
+
+
+ja at x j(r, Dje ¢ 
+
+
+y2 
+
+
+4n?c 
+
+
+dQ. dv 
+
+
+(7.11) 
+
+
+8 CLASSIFICATION OF MULTIPOLE RADIATION 
+
+
+We have seen that 
+
+
+E,~ — = {H,- n(n: y,)} 
+
+
+H, = — “nx W, 
+Cc 
+where 
+rd | ie -r’ 
+Wy =- [a jr’) ee” 
+
+
+r 
+
+
+Now if d is the size of the charge distribution and 
+
+
+c 4 
+
+
+we can expand the exponential. This condition can also be stated in the 
+
+
+form 
+Ucharge 
+
+
+c 
+
+
+<1 
+
+
+38 LECTURES ON ELECTRODYNAMICS 
+
+
+since vd ~ Ucharge- Also for atoms, we have from the uncertainty principle 
+
+
+h 
+dw~ ae 
+ds/ p? can be greater than / but it will be of this order for the lower states. 
+Hence 
+
+
+Pp rad c vd 
+P. charge h/ d c 
+
+
+Hence another form of expressing the condition is 
+
+
+Prad < 1 
+
+
+Pp charge 
+
+
+Thus if any one of the three equivalent conditions obtain 
+Ijbd<a 
+2) Ucharge < c 
+
+
+3) Praa < Peharge 
+
+
+then it will be sufficient to expand the exponential and take the first few 
+terms. The condition holds for optical transitions in atoms, y-ray emission 
+from nuclei, and for some macroscopic systems. Taking just the first term 
+of the exponential, that is, replacing it by unity, corresponds to leaving 
+out the recoil of the charge since then the absolute values of E and H are 
+not changed by replacing n by —n. It also corresponds to leaving out the 
+magnetic field of the charge in motion since taking the exponent zero 
+means taking Ucnarge = 0. And finally it corresponds to neglecting the phase 
+difference between radiations emitted from different parts of the charge 
+distribution. 
+
+The usual procedure in making the calculation is to expand the ex- 
+
+
+ponential , : k 
+s—n-r’ ly 1 
+ec = —(n-r’)s — 
+x c : } a 
+
+
+and take the first non-vanishing term. An exception occurs in the nucleus 
+where there are approximately equal numbers of protons and neutrons. 
+It cannot oscillate as a whole and it cannot vary its charge distribution 
+
+
+MAXWELL’S THEORY 39 
+
+
+very much, so its dipolo moment is small. However, it can have a large 
+quadrupole moment by deforming its shape, and it turns out that the 
+quadrupole radiation is of the same order of magnitude as the dipole 
+radiation, although vd/c is quite small. 
+
+The classification of radiation is done in two ways: 
+
+1) by k, the power of the exponent, 
+
+2) by the angular distribution of the radiation. 
+
+
+a) Electric dipole radiation (k = 0) 
+
+
+For this case 
+
+
+= [ae {int nN Lid) n} 
+
+
+hy = | de’ (myiu(e’) — rai s)] (8.1) 
+
+
+where i, j, / form a cyclic permutation of x, y, z, and where 
+
+
+e=— reek, h= — ~ re FH, (8.2) 
+iv iv 
+
+
+Let us take the z-axis parallel to* 
+J= (| dr’ j,(r’) 
+
+
+J 
+
+
+* The relation of the vector J to the electric dipole moment may be made apparent 
+
+
+iy 
+by using the charge conservation law Y - j, + —e, = 0. From Gauss’ theorem we have 
+c 
+e iy e 
+0= Iv. G,r) dr = — = frode+ [gar 
+c 
+
+
+whence J=—P with P= | ro,dr. [Ed.] 
+
+
+40 LECTURES ON ELECTRODYNAMICS 
+
+
+Then 
+n, = sin ™ cos 
+
+
+n, = sin @ sin 9 
+
+
+n, = cos 6 
+
+J,=90 
+
+J, =0 
+
+J,=J 
+
+e, = —Jsin 6 cos 6 cos 
+e, = —Jsin 6 cos 6 sin p 
+
+
+e, = Jsin? 0 
+h, = Jsin 6 sin » 
+h, = —Jsin 6 cos 
+h, =0 
+and hence the angular distribution of the radiation is 
+
+
+S oc sin? 6 
+
+
+b) Magnetic dipole and electric quadrupole radiations (k = 1) 
+
+
+In this case 
+
+
+epee [a T ny! Linde) ES) n| (8.3) 
+Cc s Jj 
+
+
+iv [ , , aa ° , 
+h, = =| dr oy nls {n,j,(r’) ca nj, iF )} 
+
+
+MAXWELL’S THEORY 41 
+
+
+Let iv ee ae 
+Vis = =| ar Fit’) ry 
+c 
+
+
+Then 
+ey = > Visits — > yisMsMin; 
+Ss Js 
+
+
+(8.4) 
+h; = Y vist ee DY ists (i,j, l) | 
+Now y;, is a tensor, and it can be broken up into symmetric and anti- 
+symmetric parts: 
+Vis =4(Yis + Ysi) + 41s — si) 
+
+
+The symmetric part gives the electric quadrupole radiation, and the anti- 
+symmetric part the magnetic dipole radiation. 
+First let us consider the magnetic dipole radiation. Let 
+
+
+1 iv ¢., , : 
+my = 5(ie — Yad) = — | lip x Wh 
+
+
+where 1¢, 7, s form a cyclic permutation of x, y, z. We see that m is the 
+moment of the current. Replacing y;, by m, in (8.4) and using the anti- 
+symmetric properties, we get 
+
+
+e; = [n x m], 
+
+
+h; = n,(n * m) — Mm; 
+
+
+Comparing these equations with (8.1), we see that the field of the magnetic 
+dipole may be obtained from that of the electric dipole by making the 
+correspondences 
+
+h.>e,, @—2-—h,, J7m 
+
+
+Hence the angular distribution of the radiation is again given by 
+S oc sin? 6 
+
+
+d 2 
+However the magnitude of S is in general smaller by the factor (5) ; 
+Now 
+
+
+ic x r)d’ = = fel x ¥’] dr’ 
+c 
+
+
+and if the mass density wu is proportional to the charge density o, the magnetic 
+dipole moment is proportional to the moment of mementum 
+
+
+| ely x r’] dr’ 
+
+
+42 LECTURES ON ELECTRODYNAMICS 
+
+
+Since this is constant for an isolated system, it cannot have magnetic 
+dipole radiation. This would be true for electrons in atoms if the electron 
+did not have a spin with a g-factor of approximately 2 rather than unity. 
+A ring of current which varies harmonically with time has magnetic dipole 
+moment. However, such oscillation cannot occur in an isolated system if 
+H/o is constant, for the angular momentum of such a system cannot os- 
+cillate. 
+
+Let us now consider the electric quadrupole moment.* The symmetric 
+part of »;, has 6 components, but only 5 independent quantities determine 
+this radiation. This follows from the fact that the values of e and h are 
+unaltered by an addition of diagonal terms y 6,, to y;,, and this is related 
+to the fact that the radial component of the current does not give rise to 
+any radiation. 
+
+Consider the current distribution 
+
+
+zi. 24 
+i, == = sin 6(x) 60) 
+
+22 L 
+
+v4 
+O 2 
+=f 
+For this case : 
+iver. 
+Yor = O = —| j,.z dr 
+z c | z 
+* Again from Gauss’ theorem we have 0 = | V- Gyr) de = — kl | o,rr de +- 
+Cc 
+
+
+; , . 1 i /iv\? 
+i) (ir + rj,) dr whence it follows that jm al = Vick = 5 (=) Q;; where Q,, is 
+the quadrupole moment tensor: 
+
+
+1 
+Qi S [e (re, — 55) dr. (Ed.] 
+
+
+MAXWELL’S THEORY 43 
+
+
+and all other y,, = 0. If the polar axis is taken along the z-axis as usual, 
+we have 
+e, = —Qsin 6 cos? 6 cos p 
+
+
+® 
+lI 
+
+
+—Q sin 6 cos? 6 sin 
+e, = Q sin? 0 cos 
+
+
+h, = Q sin 6 cos 6 sin 
+
+
+h, = —Q sin 6 cos 6 cos » 
+h, =0Q 
+and the angular distribution is 
+S oc sin? 26 
+2 
+
+
+NZ 
+ONS 
+
+
+ExErRcIsE 13 Calculate the angular distribution of the radiation from the following 
+current system 
+
+
+zi Mz 54 
+= —— {sin — 6(x)d(’) — sin — Dod 
+i, aay: ars (x)d() — sin ; Hx +) | 
+This represents a harmonically oscillating current in two linear conductors of length L 
+parallel to the z axis and a small distance / apart. It will be found that only y,, is different 
+from zero. 
+
+
+ExercisE 14 In Exercise 10, the charge accumulated on one-half of the wire for the 
+case of dipole radiation was calculated. Make a similar calculation for the quadrupole 
+radiation using the same dimensions and numbers, and compare the two results. 
+
+
+44 LECTURES ON ELECTRODYNAMICS 
+
+
+If we can find the angular distribution of radiation from atoms, then we 
+can tell what kind of radiation it is and hence learn something about the 
+atom. However, we cannot find it by measuring the intensity of the radiation 
+at different directions since we have to have many atoms and these would 
+be oriented at random. The radiation from a single atom is coherent, 
+but radiations from different atoms are incoherent. It has been suggested 
+that the study of the interference properties of the radiation from atoms 
+would give the type of radiation. 
+
+The character of y-radiation from nuclei may be found by studying the 
+field at a distance r from the nucleus such that 
+
+
+r>d 
+r<d 
+
+
+This region is called the diffraction zone. Under these conditions, we can 
+still expand the exponential 
+
+
+t= |r-1"| 
+and we can also expand 
+
+
+1 
+lr —r'| 
+
+
+, 
+
+
+aD > (=) P, (cos (r, r’)) 
+r‘Ee\r 
+
+
+Thus the electric dipole field falls off as 1/r, the magnetic dipole and electric 
+quadrupole field as 1/r?, etc. Hence the fields of the higher multipoles 
+become relatively larger as we go nearer the nucleus. Now there are electrons 
+around the nucleus, and their reactions to the field tell us the character 
+of the radiation. In the actual calculation it is found more convenient to 
+use the expansion 
+
+Pr (n-r’) 
+
+
+= Y Pi(cos (a, r')) f,(r') 
+
+
+where 
+
+
+ty 7 vr yr \t 
+H or V2 c c 
+
+
+Cc 
+
+
+fir) = (22 + 1) 
+
+
+instead of the power-series expansion. 
+The fields of higher multipoles become increasingly more complicated, 
+and we shall not go into their calculation. 
+
+
+MAXWELL’S THEORY 
+
+
+45 
+
+
+9 ENERGY OF A NEARLY STATIC DISTRIBUTION OF CHARGE 
+
+
+In this calculation we take j to be static. If we took @ to be static also, 
+then we would just get the electrostatic formula. Hence we ease the condition 
+
+
+and say that 0 varies with ¢ but only in such a way that j is static. 
+
+
+to calculate 1 
+E= aa [ae + H?’) 
+82 
+
+
+under this condition. We take the potentials w, A such that 
+
+
+a 
+c ~at 
+H=VxA 
+V:-A=0 
+Then as in Section 6 we have 
+E, = —¥ o(r’) ar 
+lr—r’| 
+1 o?A 
+— — AA = 4nj 
+c? ar? _ 
+. . 1 V’ -j(r’) dr’ 
+j,. =j+—V ee 
+4n lr —r’| 
+
+
+Now since j is static, j, is also, and hence A must be static. That is, 
+
+
+and therefore ‘(r’) 
+A =| dr’ A) 
+lr —r'| 
+1 2 
+Ex = E ar 
+82 
+] 
+= ale Vo-V¢ 
+82 
+By partial integration we obtain 
+Ey = - : [dng 
+8it 
+
+
+We want 
+oA ‘ 
+| as 
+
+
+Soe) are C1 eae 
+820 jr—r'| lr—r’ 
+
+
+46 LECTURES ON ELECTRODYNAMICS 
+
+
+and since 1 
+—_—— = —4n 0(r — r’) 
+rear 
+we have finally 
+—r] —r| 
+
+
+Next 
+ee fie H? dr 
+8x 
+
+
+“(0 x A)<(V x A) dr 
+8x 
+2 
+Lede dt 0A, _ OA, a 0A, _ OA, a OA, _ OA, 
+82 oy oz Oz “Ox. Ox “Oy 
+If we expand the integrand and then integrate partially, we get 
+
+
+2 2 2 2 
+ry = - Efe] BPA, Bar _ 4 OA, , 4 Ody 
+
+
+820 * @y? ” @zdy “@zoy =” ':«z? 
+2 2 
+A, FAs 4, Phe 4 OAs yg OAs 
+oz? Ox Oz Ox 02 Ox? 
+2 2 2 2 
+iN yp Os OA og OAs 
+Ox? Oy Ox Oy Ox oy? 
+
+
+1 
+= ~ | tae -—-A-:V(V:A)] 
+a 
+Now V: A = 0, so 
+Ea= -]4({ dr’ j,(r') ) | A dr”’ j,(r’’) 
+8x jr—r'| lr—r’ 
+1 i,t’) -i,@ 
+=— ar ar’ Finds Cae AR Ooss 1 9.2 
+2 | | r—r'| G2) 
+Q 
+If a 0 so that V-j =0, then j, = j, and we obtain the familiar 
+expression for the energy of a magnetic field due to steady currents 
+
+
+By = [ae fae HOO i@) 
+
+
+r—r'| 
+
+
+MAXWELL’S THEORY 47 
+
+
+yo 
+However, if ~ + 0, then we get a more complicated expression. We 
+
+
+have 
+
+
+1 
+ji. =j+—v 
+i=it7 vx 
+
+
+=| de YI) 
+Ir—r”| 
+
+
+which by partial integration gives 
+
+
+where 
+
+
+y= - je j(r”) -V" 
+
+
+r—r"| 
+
+
+= dr’ (j(r’’) é Vv”) Vv" 
+jr—r"| 
+From (9.2) we get 
+
+
+By => | ae] ae — a [HO + gv ah fie +L vac} 
+4 4n 
+
+
+1 
+= —T/, wm ED 
+2 ere + aon? 
+where 
+n=fa a Oe 
+r-—r| 
+fa = | de de HED V x(r) 
+r—r'| 
+Is =| a a EO V' x’) 
+jr—r'| 
+Now 
+ta= {de et fae BEDE ey. ye — 
+ror r—r" 
+z | dr’ J dr" j(r’) - F(r’ — vr): j(r’”) 
+where 
+
+
+7a Va 1 
+“sa Ir _ r”| 
+
+
+r’ r’)= 
+
+
+48 LECTURES ON ELECTRODYNAMICS 
+
+
+This tensor function is the unique solution of the differential equation 
+
+
+AF(x) = —4n VV 
+
+
+which vanishes as r > oo. Introducing the unit tensor 
+
+
+we may reexpress the right hand side of this equation in the form 
+
+
+AF (r) = ~a[3— 2 
+
+
+the delta function term being included so that we obtain 
+
+
+AtrF = —4n 4+ = (—42)? 6) 
+r 
+
+
+We try a solution of the form 
+1 
+
+
+F(t) =a— +b 
+r r 
+
+
+By straightforward computation we find 
+
+
+AF(r) = —42a16(r) + 2b = 6b = = b16(r) 
+r 
+
+
+whence it follows that 
+a=-b=-— 
+and hence 
+
+
+= I = ~2n| de fer . ee i) _ji@)-@ - 
+| 
+
+
+2% 
+
+
+rie") wz} 
+
+
+I, may be written in the form 
+
+
+i, = ar dr’ dr" ptt de ha ee ja ee V jr -V ) 
+lIr—r'| 
+
+
+— [ ae” f l [ ae” jr”) . G(r" = r’’’) . j@’”) 
+
+
+where 
+
+
+G(r” ey r’’’) = ar dr’ Vv” vi" 1 
+jr—r'| 
+
+
+(v" 
+
+
+yv"” 
+
+
+l 
+
+
+lr — "| 
+
+
+r’ cs r’’|> 
+
+
+|r peers r”’| |r’ ae r’”’| 
+
+
+vy" 1 
+\r’ rm, r’”’| 
+
+
+MAXWELL’S THEORY 49 
+Now, applying the Laplacian operator and integrating by parts, we get 
+
+
+A” G(r’ = r’’”’) = Ae Vv" vi" (v" l te vi" 1 
+|r’ |r’ = r’”’| 
+
+
+= r’| 
+On VIGOR Via , ] I 
+[r’’ _ r’| ir’ me r’” 
+
+
+eh on 
+\r’’ = r’| Ir’ eet r”’| 
+
+
+— (4x)? wey I 
+
+
+\r’’ = r’”’| 
+
+
+= —40 A"F(r" = r'”) 
+Since both F(r) and G(r) vanish as r > © it follows that 
+
+
+G(r) = —47F(r) 
+and hence 
+I, = —4nxI, 
+
+
+Thus collecting terms we finally get 
+1 © r’ 7 LJ r”’ = r’ s r i r”’ © r’ r’ == r”’ 
+esl capo i( ) Be )-¢ ir) ( ) (9.3) 
+4 lr’ —r jr’ — rr’ [3 
+This expression applied to electrons is known as Breit’s Hamiltonian. 
+
+
+: : wl ¥ 
+For moving discrete charges, j ~ —o so that 
+C 
+
+
+and hence for slow electrons, the main part of the interaction is electrostatic. 
+
+
+10 LIENARD-WIECHERT POINT POTENTIALS 
+
+
+In Section 7 we saw how and w can be obtained from o and j. Suppose 
+the charge is concentrated in a domain of dimension d, small compared 
+to all other distances involved in the problem, and let the charge move 
+along a certain trajectory, r,(t). For such a case, the method developed so 
+far is clumsy, as integrations over all space are taken when the only part 
+
+
+50 LECTURES ON ELECTRODYNAMICS 
+
+
+which gives anything is concentrated in a small volume. We can represent 
+the charge and current densities by means of delta functions, thus 
+
+
+o(r, t) =e 6(r — r9(1)) 
+jr, ) = 0 a(n — 10) 
+c 
+
+
+where v(t) = F,(t), the dot denoting differentiation with respect to ¢. It 
+is easily verified that this representation satisfies the charge conservation 
+law: 
+
+
+— [v(t)- V d(r — ro(t)) — Vd(r — ro(t)) - ro(t)] 
+Ct Cc 
+
+
+=0 
+
+
+Substituting the expression for 9 into (7.7) we obtain 
+
+
+a(r — 1% (: aS =) 
+g(r, t) = ypu ae 7 
+
+
+r—r' 
+
+
+The integrand contributes to the integral only at 
+r’ = To(tret(F, t)) 
+where f,,, is the “retarded time,”’ defined implicitly by the equation 
+
+
+Ir a To(tret(F, t))| 
+
+
+c 
+
+
+bret(F, t) =t- 
+Therefore we may write 
+
+
+g(r, t) = a 
+
+
+lr iz ae ))| Jr " ae r’) 
+
+
+r—r’ 
+ene eee ore stot 
+c 
+
+
+In order to calculate the Jacobian O(r’)/d(r’’) we first compute the tensor 
+
+
+(r=) 
+Wig? ag a ok — 8 ey 
+
+
+Ir—r’| c 
+
+
+adr” 
+
+
+where 
+
+
+MAXWELL’S THEORY 5l 
+
+
+and then take its determinant. The result is 
+
+
+( lr —r'| 
+nt , Yee 
+Ls Ee Ser c 
+
+
+o(r’) lr — r’| c 
+
+
+ic) 
+
+
+where R = r — fry and vz is the component of velocity in the direction 
+of R: 
+
+
+whence finally 
+
+
+mo Biy 
+R 
+In exactly the same way we get 
+T v 
+e —> 
+or (10.2) 
+
+
+R(1—-22 
+- c ret 
+
+
+(10.1) and (10.2) are called the Lienard—Wichert potentials. They are 
+rigorous for idealized point charges. Their validity when the charge is 
+spread over a domain of dimension d may be determined as follows. The 
+retarded time for different points of the charge distribution now varies 
+by an amount 4t,,, ~ d/c. Also R varies by an amount AR ~ d. In order 
+that these variations have negligible effect on (10.1) and (10.2) we must 
+have 
+
+
+e eo 2 
+|¥| d 2 l¥| d 
+c? c 
+
+
+d<R, <1 
+
+
+etc. 
+
+As long as these conditions are satisfied, the above expressions for the 
+potentials hold. It is not necessary that the charge be microscopic as in the 
+case of electrons or nuclei; the formulae may be applied to macroscopic 
+charges, such as a charged pith ball. For electrons we usually consider 
+
+
+4* 
+
+
+52 LECTURES ON ELECTRODYNAMICS 
+
+
+We can see qualitatively why an approaching charge gives a larger 
+field than a receding one at the same distance. The retarded time at A is 
+later than that at B and so for the approaching charge, A is effectively 
+
+
+B oe? 
+
+
+er 
+e Fy 
+
+
+further away from B, while for the receding charge, A is effectively nearer B 
+than the actual distance. This means that the approaching charge has the 
+effect of a larger charge, and the receding charge a smaller one. Thus the 
+former gives a larger field at P than the latter. 
+
+If we apply this idea to nebulae, we must have more nebulae to give 
+the observed intensity when they are receding than when they are at rest 
+with respect to the earth. 
+
+
+11 FIELD OF A UNIFORMLY MOVING POINT CHARGE 
+
+
+Let a charge e move with uniform velocity, v, along the x axis. We want 
+to find the field produced by it at a point P at a perpendicular distance, b, 
+
+
+x-vt 
+é x! 
+Ar B 
+
+
+P 
+
+
+from the line of motion. Let us calculate the field at P at a time ¢ when the 
+charge is at A. We shall denote retarded quantities by a prime. Then 
+
+
+RP =cC(t—t)y? =x? +b? =v (ty — 0)? + B? (11.1) 
+
+
+MAXWELL’S THEORY 53 
+
+
+where f, is the time when the charge reaches B, and 
+
+
+UR 
+
+
+x’ 
+c R 
+
+
+v 
+_ (11.2) 
+c 
+By means of these equations, we can calculate the Lienard—Wiechert 
+potentials in terms of instantaneous quantities. From (11.1) we have 
+
+c*(t — t’)? = v?(t' — to)? + b? 
+The solution of this quadratic for f’ gives 
+
+
+C7t — v*tp VV c20*%(to — t)? + (c? — v7) b? 
+
+
+(c? — v?) 
+
+
+iS 
+
+
+where we must take the negative sign to obtain the retarded time. This 
+gives 
+
+
+x’ (ty — 1) + VJ c2v*(to — t)? + (c? — v?) b? 
+Dp (c2 — v2) 
+and 
+R’ _ v(to — th +V c707°(to — 1)? + (c? — 07) b? 
+~ (c? — v?) 
+Hence 
+R— 2 x = Re = VJ 0%t, — 1)? + (1 — v2 /c2) b? (11.3) 
+c 
+and 
+
+
+= e 
+R’ re 
+c 
+e 
+= (11.4) 
+y=— (11.5) 
+
+
+54 LECTURES ON ELECTRODYNAMICS 
+If x, y, z are the Cartesian coordinates of P, then 
+ee | 
+y? + 2? = B? 
+
+
+if we choose the origin of time so that the charge is at the origin when 
+t = 0. This gives 
+
+
+R* = V(x — vt)? + (1 — v?/c?) (y? + 27) 
+
+
+We can now obtain the fields by simple differentiation. 
+
+
+ev v e 
+se ee 
+
+
+v2 
++ ¢ - 5) (ya, + za;)} 
+
+
+where a,, ay, a, are unit vectors along the x,y,z directions respectively. 
+
+
+Thus 
+eR v? 
+E= ae (: = 5) (11.6) 
+Next 
+H=Vxv 
+yeas ey oe 
+c R* 
+Vv 
+=— xE (11.7) 
+c 
+‘ 1 ow bean ih 
+since — oe and v are parallel. We see that though the radiation is sent out 
+c 
+
+
+from the retarded position, due to interference, the lines of electric force 
+point from the instantaneous position of the charge. We also see that the 
+field is not spherically symmetric as in the static case, but is stronger in 
+the direction perpendicular to the line of motion than along it. In other 
+words, the lines of force are more dense in the equatorial plane than in 
+
+
+MAXWELL’S THEORY 55 
+
+
+the polar directions. In the equatorial plane 
+
+
+E ——_— << 
+a V1 =v?/c? (y? + 2?) 
+
+
+and in the polar direction (at t = 0) 
+
+
+|E| = <(! = 5) 
+x? c2 
+Thus vor v very close to c, almost all of the electric field is in the equatorial 
+plane, and E, H and v will be perpendicular to each other so that the effect 
+of the passage of a charge close by has practically the same effect as a 
+pulse of radiation. We shall apply this idea to find how the ionizing power 
+of particles varies with the velocity. Consider the case where a charged 
+particle such as an «-particle or an electron passes by an atom. Most of 
+the effect will be due to the transverse electric field and, of this, only the 
+
+
+Fourier component which is in resonance with the atomic electron will be 
+effective. Thus, taking the Fourier component, we have 
+
+
+Et = | Eyen™ de 
+ew dt 
+
+
+= — f*)b — 
+“en | ea 
+
+
+where f = v/c and 3b is the distance of the atom from the line of motion 
+of the ionizing particle. Let t = t — x/v. Then 
+
+
+Ey = el — B)be™ ae 
+= @ -— 
+° es ‘fete? + (1 — 2) b?}3? 
+yy. 1d e'" dt 
+= —ee v 
+ob {y21? es él me p?) b?}1/2 
+
+
+Let 
+uw /1 = B? by 
+J1— p26 v 
+
+
+=! 
+
+
+56 LECTURES ON ELECTRODYNAMICS 
+
+
+Then 
+
+
++0 
+e t=» re] cos lo da 
+
+
+e ——_ Sy 
+Uv ob a/ o2 + ] 
+—-eo 
+since the part with sin /o integrates to zero. Similarly, from 
+
+
+(x — vt)e"™ dt 
+
+
+Fiat | OOF 
+
+
+we get 
++00 
+e a oe cos lo 
+Ej = ——(1 -— f?)—e ° —————- do 
+B Ox Jo +1 
+Let 
++0 
+cos lo do 
+= = Fil) 
+: Jo? +1 
+
+
+This is actually a constant times the Hankel function of zero order, and 
+we have the asymptotic behaviour 
+
+
+ee for 1>1 
+Ti 
+
+
+FQ®~ Ini for 1l<€1 
+
+
+and hence 
+pel 
+IET I; Et for b> : 
+Ji vV1 — &? 
+. 1 
+yV 1 — 6? 
+
+
+Thus we see that most of the ionization occurs in the region / < 1, and we 
+may take / = | as the range within which the ionizations occur. Taking 
+y = 1015 Hz. we have, for typical «-particles, 
+
+
+v 10° 
+vVJl1 — Bp? 10° 
+
+
+~ 10-§°cm 
+
+
+MAXWELL’S THEORY 57 
+
+
+while for electrons of 10!° MeV 
+
+
+Gp 1 
+E 101° 2 x 10+ 
+and 
+v 3 x 10!° x 2 x 104 
+C—O SS eee CY 6 mm 
+vv] — p? 10**° 
+
+
+This is a very large value, but it is thought that electrons of such high 
+energies do not occur and that most of these high energy particles are 
+mesons. If this is the case, the range would be reduced by a factor of 
+about 200. 
+
+We shall now give a simpler derivation of the potentials of a uniformly 
+moving charged particle. To do this, we go back to the original differential 
+equations for the potentials 
+
+
+1 dp 
+sear are g (11.8) 
+1 ey y 
+Ay 2S Se 11.9 
+V 2 Op nO (11.9) 
+
+
+and make a transformation to a coordinate system (x’, y’, 2’) in which @ 
+
+is static. Let us again consider the particle to be moving along the x-axis. If 
+x =x-—vt, yoy, v=z, t'=t 
+
+then 
+
+
+0 ot’ oa re ox’ 0  O F 0 
+ot or ot’ ot ox’ ar’ Ox’ 
+and since if @ is static in the primed system, @ will also be static in this 
+
+
+system, (11.8) becomes 
+
+
+; ve Pp 
+anaes 
+or 
+- akg oe? 2 —— 
+c B*) x? * By? ate = —42g 
+
+Let 
+
+um x’ ” , ” , 
+
+x = =y, 2 =2 
+
+
+58 LECTURES ON ELECTRODYNAMICS 
+
+
+Then 
+
+
+2 2 2 ” 
+OO, NG ee (11.10) 
+ax’’2 y'’? 62''2 V1 aa B2 
+
+where 
+
+
+eo” = V1 — Bo 
+
+
+is the charge density in the new coordinates x’’, y”’, z’’. Similarly, (11.9) 
+can be transformed into 
+
+
+2 2 2 ” 
+LE a nc (11.11) 
+ax’? ay? az? JI-B ¢ 
+
+
+For a point charge, the solutions of these equations are, for the case of 
+charge e at the origin 
+
+
+e 
+a 
+4 — ps/x'?? + y'? + zf'2 
+e 
+
+
+V="¢ 
+
+
+Cc 
+
+
+and these are exactly the same as (11.4) and (11.5). 
+The transformation we used above is actually a part of the Lorentz 
+transformation 
+
+
+_ xu if te c? 
+ee Re a ees 
+V1 8 
+
+
+We did not use the transformation of the time but used instead 
+
+
+mr 
+
+
+x 
+
+
+v, 
+ed 
+oe" = = V/1 — Bo (sinces =e 
+1 — p? c 
+
+
+We shall consider these transformations more fully when we discuss the 
+special theory of relativity. 
+
+
+MAXWELL’S THEORY 59 
+
+
+12 FIELD OF AN ACCELERATED POINT CHARGE 
+
+
+Suppose a charged particle describes the trajectory AB. We want to find 
+the field due to it at point P(r) at time ¢. 
+
+
+P(r) 
+
+
+Let the charge be at rp at time ¢ and atr’ at the retarded time t’ = t — R'/c. 
+Also let n = R/R, and B = v/c. Then 
+
+
+ere ee 
+< Fr + alk 
+
+
+= eB 
+.* Fe + ale 
+and 1 ow 
+
+
+These differentiations are made complicated by the fact that the potentials 
+are retarded. We shall denote by primes all retarded quantities. We have 
+
+
+0 
+Vp = Vir =constP + Pye 
+ot’ 
+
+
+and ; 
+WS Se Vig owe 
+c c Ot’ 
+Now 1 
+Ver=constR’ = ST a = -n’ 
+R 
+OR’ fs 
+— = cf’'n 
+ot’ P 
+Therefore a 
+Vi’ = 
+
+
+60 LECTURES ON ELECTRODYNAMICS 
+
+
+Further P 
+V *=const? = V '=const — 
+t 7 t *R + Bp’: R’ 
+e(n’ + B’) 
+(R + p-R’)? 
+oy e . 
+a a cp’ -n’ + -R’ + cf’? 
+or’ (R’ + B’- R’)? { P B 
+where a dot denotes differentiation with respect to ¢’. Thus 
+ve2s en’ +B’) sen (B's n’ + (B'/c)-R’ + 8”) 
+(1 + B’-n’)? R”? (1 + Bp’: n’)? R”? 
+| 
+Bee Oy dw ar’ 
+ot ot’ ot 
+oo a _) _1 OR’ a 
+Ot c ot’ at 
+which yields 
+ot’ 1 
+ot U1 t+ Ben’ 
+and since 
+ow , ary a’ 
+= p’—- + 
+eo age 
+we have 
+
+
+a oe ee ee ae 
+Cc 
+
+
+ (R + BRS? 
+
+
+2 eB’ Jc : 
+R + BR’ 
+
+
+Thus, finally, on collecting the terms 
+
+
+c at (1+8'-n) 
+
+
+p=[-e}— n+B  _—n(B-n +6?) __B@-n +f?) 
+(1+B-m)?R? (1+B-n)?R? (1+ $-n)? R? 
+
+
+__@+B)o-B | BU +8-n) 
+(1+B-n?cR (1+ 68:n)* cR} |, 
+
+
+(1 +n: B)? R? (1 + n-B)3cR 
+
+
+~[-<{G Mes , itp a peep 
+
+
+i). 
+
+
+MAXWELL’S THEORY 61 
+
+
+Now to find H we have 
+
+
+Vix span eape wae” 
+or’ 
+where the subscript ¢t’ means that ?¢’ is to be kept constant for this differen- 
+
+
+tiation. 
+Now 
+
+
+V,, x (By) = —B’ x Ve D 
+= en’ x B’ 
+(1 + B’-n’)? R” 
+
+
+fein eo teats 
+
+
+or’ | cl +B nm) ar cll + f'n) 
+
+
+= Taree (? -n’ + p- R’ + Bp?) 4 en’ x p’ 
+
+
+(+ Ben’? R? C c(l + B’-n’)? R’ 
+Therefore 
+H=[e}-2* B] (1 — 8?) 2 [n x B] (1 + B-n) — [nx B]n-f 
+(1 + B-n)? R? (1 +n-B)>cR eee 
+
+
+and comparing this with E we see that 
+H = —{n x Eset 
+
+
+Thus H is always perpendicular to E and to n,,,. The first part of E is 
+nearly parallel to n’ for ordinary velocities, and the second part is exactly 
+perpendicular to n’ which can be seen immediately by taking a scalar 
+product with n’. The first term, which falls off as 1/R’?, gives the quasi- 
+static field, while the second falls off as 1/R’ and gives the wave zone field. 
+The ratio of the magnitudes of the two terms is 
+
+VR’ 
+2 
+
+
+c 
+
+
+and this has a simple meaning since 
+
+
+of 
+
+
+—r| 1 
+Ir ed eed a ee 
+c 
+
+
+t-—-t= 
+c 
+
+
+62 LECTURES ON ELECTRODYNAMICS 
+
+
+and the condition that this series converge rapidly is 
+
+
+VR’ 
+
+
+a 
+
+
+Thus if this condition holds, we have 
+
+
+E = bawneena | er 
+(1 +n: B)? R2 rope dtrrotvi(t—t’)| 
+
+
+c 
+
+
+We shall show that this expression is the same as (11.6) for the field ofa 
+uniformly moving charge. To the approximation we are making, 6 is 
+constant, and we have 
+
+
+R(p + 0’) = R= Ro 
+Thus our proof will be complete if we can show that 
+(1 + n’-B)? R’? = R*3 
+From the above relation we get 
+R'(p? + n’- B) = Rn-B 
+
+
+R’(1 + 0’: B) = Ro-B + R'(1 — 6?) 
+
+
+(R - B)? R-8B 2 1/2 
+Rt = R- 1 — p? 
+Bp +| (5 py | 
+
+
+=RV1 — f+ (ap)? 
+
+
+Now 
+
+
+and moreover 
+
+
+r—r =l|2_ pe 1 
+c 
+
+
+which may be solved to yield 
+
+
+r-v = -n- B+ Vo: 8)? + (1 — 62) 
+c 1 — p? 
+Therefore 
+= —R(n: B) + R* 
+
+
+1 — p? 
+
+
+R'(1 +n’: B) = R* 
+
+
+Hence 
+
+
+MAXWELL’S THEORY 63 
+
+
+and we have shown that 
+eR(1 — 87) 
+R*3 
+
+
+E= 
+
+
+We have seen that for the general case 
+H=-n’xE 
+This reduces to the expression 
+H=686xE 
+when the velocity is constant. The proof is left as an exercise. 
+
+
+EXERCISE 15 Show that for the case of uniform motion 
+n <¥R=-BXxR 
+
+
+13. RATE OF RADIATION OF ENERGY FROM AN ACCELERATED 
+POINT CHARGE 
+
+
+We have seen that the general expression of E for a charged particle can 
+be considered as a sum of two terms: The first, which is the same as that 
+for a uniform velocity, and the second, which depends on the acceleration. 
+For the latter part, E, H and h are perpendicular to each other, and 
+|E] = |H|, and this is the field of the electromagnetic waves radiated by 
+the particle. Thus 
+
+
+S=“°ExH=--4F 
+4n 4n 
+oe prea re ae 
+| 4ac3 (1 + n- B)® R? 
+oe 
+Bee bc aes I Te cet 
+if | (+n: per ot 
+
+
+At first sight it seems that the total rate of radiation may be obtained by 
+integrating S over a sphere with the center at the retarded position of the 
+charge. However, this procedure does not give the correct result. To see 
+why this is so, let us look at the problem in more detail. Suppose AB is 
+
+
+64 LECTURES ON ELECTRODYNAMICS 
+
+
+the trajectory of the particle. At time ¢, let its position be Q. The radiation 
+which arrives at P, at time t, came from the retarded position Q’ and the 
+radiation emitted at Q’ lies on the surface of the sphere, S,, with center 
+at Q’ andradius R, = Q’P,. If we consider another point, P2, the radiation 
+there at time ¢ came from Q” and the radiation emitted at Q”’ lies on the 
+
+
+surface of the sphere, S,, with center at Q’’ and radius R, = Q’’P,. It 
+is clear that in general the energy flowing across S, will not be equal to 
+that flowing across S,. This is why we cannot obtain the rate of radiation 
+by considering the flow of S energy across a fixed sphere. The correct 
+method is to consider the spheres S,; and S, to move outward with the 
+radiation at velocity c. Then the energy of radiation enclosed within S, 
+and S, will be constant, and the rate of radiation is this energy divided 
+by the time taken to radiate it. Now the energy within S, and S,, when 
+their radii differ by dR, is 
+
+
+dE = R* dR | dQ W(1 + B-n) 
+
+
+< - [Raa +B-nW 
+at 
+
+
+= [ R dQs-(-n)(1 +B-n) 
+
+
+MAXWELL’S THEORY 65 
+
+
+Since for |E] = |H| 
+W = le + H?) = Sue 
+87 c 
+
+
+Putting in the value for S, we have 
+
+
+FB oF, fan 20+ hae OG FG Y= FOF) 
+dt 4ac* (1 + n-B)5 
+(13.1) 
+
+
+This is the correct expression, since it agrees with the formula derived 
+from the method of special relativity. 
+
+
+EXERCISE 16 Show why the factor (1 + B-n) has to be included in the integral over 
+the angles of the rate of radiation. 
+Let us consider some special cases. First, if B is very small, then 
+dE 2 
+
+
+oo ee ey 
+at 4nc3 | GaN AN Gust 
+
+
+If we take the polar axis along n, then 
+
+
+dE 2 F 
+= ex | [ deatcose) cv? — cos? #v7) 
+t TEC 
+Jp2 
+i a5 (13.2) 
+3c3 
+
+
+We see that the angular distribution is sin? @ so that it is a dipole radiation. Thus, the 
+condition A > dfor the validity of dipole radiation is equivalent to the condition v € c. 
+For a charge, e, oscillating harmonically we have 
+
+
+x= —wx 
+= —w?acoswt 
+so that 
+dE 2w*e 2a? é 
+aoa cos? wt 
+dt 3c3 
+\ 42,2 
+BE, eee, (13.3) 
+dt } a 3c3 
+
+
+wa 1 ee al 
+ExercisE17 If —= ms thenv ~ c at thecenterof oscillation. Compare the average 
+c 
+
+
+rates of radiation calculated from the exact formula (13.1) and the approximate one 
+(13.3). 
+The total energy of the oscillator is 
+ma*o? 
+2 
+
+
+66 LECTURES ON ELECTRODYNAMICS 
+
+
+Hence the fraction of its energy radiated in one cycle is 
+
+
+T dE 2 22 wea? 
+H dt maw? wo 3c? 
+4ne*w 
+3mc3 
+2,52 
+= > (13.4) 
+
+
+where v = 1/7. This fraction is of order 1 for 
+
+
+mc? 
+vp~m~r~ 
+e2 
+for electrons 
+mc? 1, te 
+ym m-mec — 
+2 h e2 
+
+
+1 1 
+™-=-X =X 137 MeV 
+h 2 
+
+
+70 MeV 
+h 
+
+
+3mc> 
+
+
+Let Y= Raza? 
+
+
+vy 
+. Then for — < 1, the damping factor is negligible and the effect of 
+Yo 
+
+
+radiation need not be considered. We see that for electrons this condition is usually 
+
+
+satisfied. 
+Next consider the case v perpendicular to v . Let v be along the z axis and V along the 
+
+
+x axis. Then putting y = cos 6, we have 
+
+
+(13.5) 
+
+
+22 1 
+dE e? 4 r . {v7(1 — By)? — v7(l — y?) (1 — B?) cos? o} 
+dt 4nc? | o| “4 (1 — By)° 
+() -1 
+
+
+We see that there is a great concentration of radiation in the forward direction; the 
+ratio of energy radiated in the forward direction to that radiated backward is 
+
+
+3) 
+
+
+EXERCISE 18 Show that the rate of radiation from a charge e, moving in a circle of 
+radius a, with constant angular velocity w, is given by 
+
+
+dE 2e? a*w* 
+
+
+MAXWELL’S THEORY 67 
+
+
+14 APPLICATION TO A SIMPLE THEORY OF BREMSSTRAHLUNG 
+
+
+An electron moving with uniform velocity v comes near an atom and, 
+while it is within the field of force, the electron is accelerated, and it then 
+goes away with uniform velocity, v’. During the interval of time t when 
+
+
+v 
+
+
+es 
+
+
+a io 
+
+
+a 
+
+es ) 
+\ / 
+‘7 
+
+
+the electron is accelerated, it radiates electromagnetic waves, and we want 
+to calculate the amount of energy it radiates. Now 
+
+
+a 
+TT 
+v 
+
+
+where a is the size of the atom. From Thomas-Fermi model of the atom 
+
+
+2 
+HPO eee oe ape 
+
+
+me2Z1!3 
+
+
+Since v = 10° cm/sec, t ~ 10-18 sec. If vt < 1, where »y is the frequency 
+of the radiated wave, we can derive a simple, general result. We shall deal 
+only with this case. We can write 
+
+
+1.3h7y 
+aa me2Z/3p 
+
+
+68 LECTURES ON ELECTRODYNAMICS 
+
+
+Nee 2Qhy 
+mv 
+
+
+Hence, our condition is that the fraction of the energy radiated be small, 
+ot another way in which the condition may be satisfied is to have v < c. 
+We shall assume this condition to hold. We shall only consider the wave 
+zone field since this is the part which corresponds to the radiated wave. 
+Making a Fourier analysis we have 
+
+
+is the fraction of the energy radiated in a single quantum. 
+
+
++00 
+
+E= [ Ee" d 
+a 
+= | Be?" dt 
+
+
++o 
+
+
+= | dt{y — n(n-¥)}e 77" (14.1) 
+rc 
+
+
+Since V has non-zero value only in the short interval t, we can write 
+e 
+E, = —— {Av — n(n: Ay)} 
+Fer 
+
+
+when we take the collision to occur at t = 0. The total radiation, R, is 
+
+
+given by 
+r- jajne 
+
+
++ 00 +0 
+= fans | a | E,e?""" | | Ege av} 
+4x 
+
+
+The integral over ¢ gives a delta function, and therefore, since E_, = E,, 
+we have 
+
+
+R= i R, dv 
+(0) 
+where 
+
+
+cr? 
+Re jor [E,|* (14.2) 
+2% 
+
+
+MAXWELL’S THEORY 69 
+
+
+If we choose the polar axis along Av, we may write 
+
+
+|Av — n(n: Ay)| = |Av| sind 
+
+
+e2 
+
+
+22 
+ae | a | aeos 6) |Ay|? (1 — cos? 6) 
+AC 
+(0) 
+
+
+R, = 
+
+
+4e? 
+= —_|Ay|? 14.3 
+303 (14.3) 
+
+
+Thus in the region of applicability, the intensity distribution function is 
+. , mv? : ; : 
+constant, and since it must fall to zero for » ~ , the intensity dis- 
+
+
+tribution curve has the following shape 2h 
+
+
+The number of quanta emitted is given by 
+
+
+N, dv = ss dy 
+hy 
+_ 4e? | Ay ? dy 
+3hce}c? | » 
+
+
+Thus a large number of long wave-length quanta come off. 
+Bremsstrahlung may be looked upon as due to “shaking off” of quanta 
+
+from the field of an electron which is given a sudden jerk. The fields of 
+
+the electron before and after the acceleration are different, and, if this 
+
+
+70 LECTURES ON ELECTRODYNAMICS 
+
+
+change occurs in a time, t, the Fourier components of the original field 
+with 1/y < t, cannot adjust themselves to the change within this time, 
+and the difference in the components of the two fields comes off as radiation. 
+The vector potential of the particle before collision is 
+
+
+remembering that we are making the assumption v < c. After the collision, 
+it is 
+
+
+We make the assumption that the collision time is very short compared 
+to the period of the radiated wave. Then we can take r just before and 
+just after the collision to be the same. Thus the change in the vector 
+potential is 
+
+e Ay 
+
+
+cr 
+
+
+Ay = 
+
+
+Making a space Fourier analysis of this, we have 
+
+
+Ay = y i Ee * Ada dk 
+ry 
+where A goes from 1 to 3 and 
+
+
+Avia = Jay Sees oe" ae 
+
+
+. 
+
+
+ait 
+
+— 2: 
+| dove niet 
+c¢) 
+
+
+fo) + 
+
+
+1 
+e(Av : &,) 
+SS. ee dr d 
+Oo = 
+
+
+1 
+
+
+= 2e(AV * Ba) | sin (2zkr) dr 
+ck 
+Oo 
+
+
+efAV * Bx) sinx dx where x = 2xkr 
+zeck? 
+(0) 
+
+
+MAXWELL’S THEORY 71 
+
+
+The value of the integral in this form is indeterminate, but we can use a 
+damping factor e~™ since 
+
+
+e~™ sin x dx = I 
+a7+1 
+(0) 
+and take the limit a > 0. We get 
+| sinxadx=1 
+ce) 
+and hence 
+Migjie eAv:&, 
+mck? 
+and 
+
+
+The meaning of AW can be understood better by considering the follow- 
+ing analogy. A harmonic oscillator is undergoing forced oscillation with 
+an amplitude A. Suddenly the magnitude of the external force is altered 
+so that the amplitude of the forced oscillation is A’. The position of the 
+oscillator at the instant when the change occurs does not correspond to 
+that due to the new forced oscillation alone, and the difference is taken 
+care of by the excitation of free oscillation of amplitude equal to the 
+corresponding positions of the oscillator under the influence of the old 
+and new forced oscillations at the instant when the change occurs. 4 
+corresponds to the amplitude of the free oscillation, and to obtain the 
+vector potential of the radiation field, we must multiply each Fourier 
+component by the corresponding time factor which we may conveniently 
+take as 
+
+cos (27kct) 
+Thus 
+
+
+ger" AV fi cos (27kct) dk 
+a 2C k? 
+
+
+From this we can calculate the fields) Now we have seen in Section 7 
+that in the wave zone field, the contribution to E from ¢ is a component 
+parallel to the propagation vector which just cancels off the parallel part 
+
+
+72 LECTURES ON ELECTRODYNAMICS 
+
+
+coming from w and makes E perpendicular to k. Thus we need not calculate 
+this part; we can get E by taking just the part from which is perpendicular 
+to k. Thus 
+
+
+e @O Av: 
+E=-— — —| ¢,,e?7*'? —__™ cos (2kct) dk 
+a nc? ot] ~ k? 
+2 Ay: ’ 
+=) pea &,,¢770  Y Bka sin (22kct) dk 
+4=1,2 C k 
+
+
+Next 
+
+
+H=Vx Y — 6, e2mtk FAY 8h cos (Onket) dk 
+A=1,2,3 2C ie 
+
+
+2 A 
+= ee mall [k x e,,) eter Fk cos (2nket) dk 
+2 2 ¢ k? 
+Using the fact that 
+d Fk, = E28 1, 
+we now get a Ande 
+fe d= > “| a [ ex eee oe an Pkt sin (22k'ct) 
+a=1,2‘4’=1,2 k’ 
+
+
+ek RTE mies 
+x a Saye" ‘sin (22kct) 
+
+
+=e oa katara 
+Dele c? 
+
+
+, Av: zal Av: €_y, 
+
+
+sin (2:tk'ct) | dk 
+
+
+x sin (2tkct) One O(k + k’) 
+
+
+: [eS int (2xkct) 
+
+
+pe We Soe 
+AH 2242S 122 
+
+
+ra] e2tk’-r Av: Eneye 
+k pe: 
+
+
+x cos (27k'ct) 
+
+
+A 
+x | axtx x By] e272 "Hoos (2xkct) 
+
+
+4e? A 
+= [Sat cos? (27kct) 
+A=1,2 k2 
+
+
+MAXWELL’S THEORY 73 
+
+
+Hence the energy radiated is 
+
+
+1 
+R= | & + H*)dr 
+82 
+
+
+_ © y f pecs 
+
+
+2c? a=1,2 k? 
+
+
+2x 
+2 
+Spe lave | di | sin. sin? [ 
+2c? Cc 
+(0) 
+
+
+where polar coordinates with the polar axis along Av have been used. 
+This gives 
+
+
+2 
+Ri ie a 
+3c3 
+
+
+The integral over » appears to give an infinite result, but our method is 
+only valid for » < 1/t, where t is the collision time. Thus our method is 
+not valid to give the total energy radiated, but we can get the energy Ww 
+radiated at the frequency » in the range where » satisfies the above condition. 
+The result 
+
+
+4e? 
+R, = — (Av)? 
+3c3 ) 
+
+
+agrees with the value obtained from the first method. 
+
+If we consider the scatterer to be an impenetrable sphere of radius a, 
+the collision time is an instant, and so our calculation holds for all ». From 
+quantum theoretical arguments, R, = 0 for vy > Ey/h where Eis the initial 
+energy of the electron. Hence 
+
+
+2 
+Pea |v for 0<¥v< E,/h 
+v Cc 
+
+
+v 
+
+
+=0 for »>E£plh 
+
+
+Now the cross-section do for scattering in solid angle dQ is, for a solid 
+sphere, 
+
+
+By the term cross-section, we mean that if N electrons are incident on the 
+
+
+74 LECTURES ON ELECTRODYNAMICS 
+
+
+sphere per unit area (normal to the direction of the beam) per unit time, 
+then the number scattered per unit time into the solid angle dQ is N do. 
+
+
+Thus the number of particles arriving at an element of area a? sin 6 d6 dp dis 
+Na? sin 6 cos 6 d6 dp 
+and since we have the relation 
+
+
+y=n — 20 
+this number is equal to 
+
+
+ra sin y dy dp 
+
+
+These particles are scattered into the solid angle 
+dQ = sin y dy ap 
+
+
+and hence we have derived the relation 
+
+
+2 
+do = “_aQ 
+4 
+
+
+and 
+o = 2a’ 
+Now 
+(Av)? = v? + v’? — 2vv’ cosy 
+
+
+MAXWELL'S THEORY 15 
+
+
+which for elastic scattering reduces to 
+(Ay)? = 2v?(1 — cos y) 
+
+
+Let us introduce a quantity dw dy which is the cross-section do multiplied 
+by the energy radiated in frequency »; that is 
+
+
+a? 4e? 
+doo (Q, v) dv = — dQ — 2v(1 — cosy) dy 
+4 3c3 
+Integrating over Q we get 
+2 72452 
+o(v) dv = 8nera*y* ay 
+
+
+3c3 
+
+
+Let 
+
+
+Eo/h 
+| w(v) dy 
+
+
+6 
+Eo 
+
+
+82e7a7v? 
+3cth 
+8e2_ v? 
+
+
+= za? x — — 
+3he Cc? 
+
+
+3 gives a measure of the energy loss times its probability and is called the 
+cross-section for energy loss. The mean energy loss JE in time t is 
+
+
+AE = —NtQE 
+in our case 
+
+
+| 
+3x0 x — x f? 
+300 B 
+
+
+From this we can get a rough estimate of the efficiency of an X-ray tube. 
+Treating atoms as hard spheres is a very crude approximation, and better 
+results may be obtained by using a more refined model. 
+
+
+15 RADIATION REACTION 
+
+
+Let us now consider some effects of the radiation on the charge radiating 
+it. We shall restrict ourselves to the case v < c since we can always make a 
+Lorentz transformation to a system where this condition holds. From (13.2) 
+
+
+76 LECTURES ON ELECTRODYNAMICS 
+
+
+the energy radiated per unit time from a charge with acceleration V is 
+2e7¥? 
+
+
+3c3 
+
+
+The possible sources of this energy are 1) energy in the field, i.e. = (E? + H?) 
+70 
+
+
+and 2) energy of the charge, kinetic or potential. Now if the charge executes 
+periodic motion, the field energy may vary but in a periodic way so that 
+the energy of radiation must come from that of the charge. We shall find 
+that there is a force of radiation reaction, F which causes damping and 
+hence decreases the energy of the charge. Thus, strictly speaking, there is 
+no real harmonic oscillator in nature. The reaction does work atthe rate F-v 
+so that in order to conserve energy we would like to have 
+
+
+F-v + — 
+
+3). 362 
+zero. However, this condition is too stringent, and we actually have it 
+equal to 
+
+
+d 
+mI 
+
+
+so that the energy radiated over a certain interval of time is a constant 
+which does not depend on the length of the interval. In fact, it takes into 
+account the difference of the energies in the field at the initial and final 
+times. One possible expression for F is 
+
+
+2 e 
+=——y 15.1 
+F . (15.1) 
+for then 
+Viv+tv-v =—(v'v) 
+and bs ts 
+2e? 2e2_. fe 
+F-vdt + | —wvdt =| —(Wws-v 15.2 
+| ee E : | 
+ty ty 
+
+
+with the physical meaning that change in the energy of the charge + energy 
+radiated = difference of the energies in the field. 
+
+This ensures conservation of energy, but in the case V = const., we have 
+a paradox that energy is radiated though there is no radiation reaction. 
+Where does the energy of the radiation come from? 
+
+
+MAXWELL’S THEORY 77 
+
+
+The expression for F written above turns out to be the correct one as 
+we shall see when give a rigorous derivation of the formula. Before giving 
+this proof, let us make a few applications. 
+
+The equation of motion of an uncharged harmonic oscillator is 
+
+mx + mw*x = 0 
+and the solution such that at t = 0, x = a, and x = Ois 
+
+
+x =acosut 
+
+
+Now suppose the oscillator is suddenly charged, then it will start radiating, 
+and the equation of motion is now 
+2e7X 
+
+
+3mc3 
+
+
+X¥+0?x = 
+
+
+Let us assume the effect of the new term is small and try to get a solution 
+
+
+of the form z 
+x = ae~”!*cos wt 
+
+
+This will be valid if y < w. Putting this in the differential equation, we 
+have 
+
+
+ae —yt/2 
+
+
+2y0 : 
+£Y® ae7"!? sin ot + a 
+
+
+cos wt 
+
+
+2e? 
+
+
+_ . 3yw7a _., 
+= joree vtl2 sin ot 4 20% em ntl? 
+
+
+cos wt 
+
+
+3mc3 
+
+
+3y?wa : Pa _ 
+ee gen ug = e v2 Cos wt 
+
+
+4 
+The first approximation is 
+2 id 2 pene 
+— 2e*w = 820*e* (15.3) 
+3mc3 3mc> 
+
+
+3mc3 
+oO < 
+2e? 
+For electrons, this means 
+2 10 
+(pte es Get SIO rgiaage 
+e 2.8% 10-4" 
+
+
+Thus the condition holds for all radiation except for the very high energy 
+photons in cosmic rays. 
+
+
+78 LECTURES ON ELECTRODYNAMICS 
+
+
+The energy of the oscillator is 
+
+
+mx? mw?x? —_ ma?w? on? 
+2 2 2 
+so that the rate of decrease of energy is y and 
+decrease in energy percycle _2ny _ 827e7» 
+total energy @ 3mc3 
+
+
+We saw in (13.4) that 
+
+
+energy radiated per cycle _— 8?e?» 
+
+
+total energy 3mc? 
+so that energy is conserved over a complete cycle. 
+
+
+ExErcIsE 19 Calculate how much charge the earth must have in order that the radiation 
+reaction shorten the length of the year by a day per century. Assume v/c < 1 and that 
+the orbit of the earth is a circle. 
+
+
+Due to damping, the radiation from an oscillator is not strictly mono- 
+chromatic. Let us investigate the spectral distribution of the radiation. 
+We shall let » denote the frequency of the oscillator and f the frequency 
+of the radiation. From (14.2) we have 
+
+
+2 
+R= | a2." _1k,|? 
+27 
+and from (14.1) = 
+Epa | arse 
+ie) 
+
+
+if we start off the oscillator at t = 0. This yields 
+
+
+fo.0) 
+
+
+E,av? | dte”!* cos 2nvte~?7"* 
+
+
+co 
+2 
+es di{e vil? + 2a sx fe ge tae Ore 
+2 
+
+
+y 1 1 
+= ani(v — f) — y/2 : aani(v Eee 
+
+
+MAXWELL’S THEORY 79 
+
+
+Now », the frequency of the oscillator, is taken to be positive. Thus the 
+first term will be in resonance for f = » and the second for f = —y. This 
+gives for |f| ~ 7 
+eae cent 
+4n*(v — fy? + y?/4 
+x 
+
+
+OS? + plat 
+
+
+where f now takes on only positive values. For f = », Ry has the maximum 
+value 
+
+
+Ry (15.4) 
+
+
+1627 
+y? 
+Its value drops to half of this for f = f, such that 
+
+
+apa Pey 
+C27) (4) 
+
+
+A4ne?v? . 
+a * . This shows that 
+
+
+and hence the half-width of the line is y/2x = 
+the half-width of the line is proportional to v’. 
+
+
+3mc 
+
+
+The expression (15.4) for the spectral distribution of the energy is quite 
+general. With a slight modification in the interpretation of the symbols 
+according to the ideas of the quantum theory, it can be applied to the 
+breadth of lines in atomic spectra. Let us assume the distribution to be of 
+the form 
+
+x 
+
+
+Ry SF ae a ene 
+(v —f)? + (/4z)? 
+
+
+80 LECTURES ON ELECTRODYNAMICS 
+and try to find 6. Consider two excited states, | and 2. If A,, and A, are 
+the reciprocal mean lifetime of these states, so that 
+
+N, = —A4,N, 
+
+N, = N,()e7** 
+
+N, = N,(0) e-*?" 
+
+
+Ground 
+state 
+
+
+then by the uncertainty principle, the energies E, and £, of these two 
+states will have widths given by 
+AE, zh, 
+
+
+AE 2 ha, 
+
+
+and the width of the line corresponding to the transition from state 1 to 2 
+will be 
+
+
+Wijk AE, 4 AE, 
+h h 
+> A, +A, 
+21 
+Thus 
+= A, +4, 
+2 2 
+and 
+x 
+Ry = (15.5) 
+
+
+MAXWELL’S THEORY 8] 
+
+
+This formula was derived from very rough arguments, but it is correct. 
+A very striking illustration of the formula occurs in some lines of stellar 
+spectra. The center of a line may be absorbed out but the wings which 
+may be as much as 20 A apart are observed. 
+
+
+ExErRCISE 20 Calculate the line breadth for the transition 2p — Is in a hydrogen atom 
+by (15.5) using the data given in Exercise 11. Also calculate the classical value for the 
+frequency corresponding to that of the 2p — 1s transition, and compare the two values. 
+
+
+Next let us consider the force of radiation on a free particle. The equation 
+
+
+of motion is 
+
+
+. 2e? .. 
+mb = —_v 
+3c3 
+or 
+3mc3 . 
+x= 
+
+
+2e? 
+
+
+The solution consists of the usual part 
+
+
+x=artut 
+and another part. If we put 
+
+X = Ae™ 
+then 
+
+X = Axe™ 
+and for 
+
+_ 3mce? 
+2e? 
+we have a solution, 
+Peal Oe 1) + 0 
+(a4 
+
+
+= “\-@- D-d tort (15.6) 
+- (03 (04 
+
+
+Now for electrons, 1/« ~ 10-73 sec., so this equation says that if X = A + 0 
+at t = 0 then an electron will instantly acquire a very large velocity and 
+shoot off to infinity. Thus there is something drastically wrong. This shows 
+that we must be careful in using the radiation reaction force. We shall 
+derive the expression for the radiation reaction by considering the self- 
+force and give the conditions of validity of the expression. 
+
+
+82 LECTURES ON ELECTRODYNAMICS 
+
+
+The calculation of the self-force on an electron was first given by Lorentz. 
+We assume the charge distribution is rigid, so that at any instant each 
+element of charge will have the same velocity. We also assume v < c and 
+shall keep only the terms linear in v, V, ¥ etc. Since the magnetic field is 
+
+
+proportional to v and hence the self-force due to it to v?, we shall neglect 
+this force, and consider just the self-force due to the electric field. 
+The potentials at p due to the element of charge de’ is 
+
+
+dy = aos | 
+r(1 — URjc) bret 
+
+
+Ap de'y 
+rel — Uric) _\ret 
+
+
+We shall expand all retarded quantities in powers of t= t — ¢ = 14,,,/c. 
+Thus by Taylor’s expansion 
+
+
+‘2 ve3 
+haa ars a 
+6 
+co 2 La } 
+Sy as ee as 
+2 6 
+from which we get 
+ev 3 
+Peer —Uewyrt (eye —- CIT 
+3 
+. ~y 2 .% 3 
+Fem ee) ye OE 2 TT 
+r? or? 6r? 
+3 2 3 3 
+(T° V)ret = =(ps Sey eGo a EE 
+
+
+2 6 
+
+
+MAXWELL’S THEORY 83 
+
+
+To our present approximation we therefore have 
+
+
+ta et 7 _ @'v) de SA _ Pr in 
+c c c 2c? 6c3 
+
+
+ie (r-v) fs (r-V)r — (r-¥)r? as 
+
+
+Pret 
+Cc 2c? 603 
+_ Ope Ver iP DP 
+E : - ae beh 
+("- see Le qe Sstt 
+c ret 2c? 303 
+1 e z 
+| 16, @) or 
+r(1 = Up/c) ret r 2c2 303 
+and hence ; 
+pee ie Oe ET 
+r 2c? 3c3 
+Hee v—Vr shi Sere ee (rv) 
+cr 2 2 
+
+
+Since we are keeping only terms linear in v and its derivatives, the final 
+factor in the hast expression may be dropped, yielding 
+
+
+de’ r — Vr? 
+dw = —ldv —-v—+— - -- 
+aor an ae 
+
+
+From 1 2 
+c at 
+the + sign being used with the V symbol because the vector r points from 
+
+
+p to p’ rather than the other way around, we now get 
+
+
+ge (r Wr pe 
+
+
+dE = ~e =| 
+r3 
+
+
+2c? 3c3 
+paol{S ar (ee 
+r|2c? = 3c3 3c3r 
+2 
+— de’ —~¥ FL 47 i= 
+cr Cc 2c? 
+
+
+= dE' + dE’ + dE* + dE* 
+
+
+84 LECTURES ON ELECTRODYNAMICS 
+
+
+where 
+
+dE! = —de' 
+
+r 
+fe Se ee 
+
+2c?r r 
+dE? = de’ 24 
+
+3c3 
+dE* = de’ 0(%) 
+c* 
+
+
+(O(z) means of the order of z.) The force on the element of charge de 
+at P is 
+d¥ = dedE 
+
+
+and the total self-force is the double integral over de de’. The different 
+parts of E give the following forces 
+
+
+Fi = + | [ de dE! 
+
+
+= — | | dr dr’ 0’ (15.7) 
+r? 
+
+
+This is the force which tends to blow up the electron, but it gives no net 
+force since reversing the sign of r just changes the sign of the integrand 
+
+
+For a spherically symmetric distribution, the tensor rr may be replaced 
+
+
+1 
+by - r?- 1. Therefore 
+
+
+Vu (15.8) 
+
+
+MAXWELL’S THEORY 85 
+
+
+where U is the electrostatic self energy of the electron: 
+
+
+' 2 
+vee drar' SF =F 
+2 r a 
+
+
+where a is the classical radius of the electron. We shall return to the discus- 
+
+
+sion of U later. . 
+F = | | de dE? 
+
+
+= —e? (15.9) 
+This is the radiation reaction force, and, as it is the same as (15.1) we have 
+justified it. is 
+F* = 0 & cc) 
+ct 
+
+
+|¥| ae? 
+
+
+and for an electron 
+
+
+~ |¥] x 10-3 dynes 
+
+
+ct 
+
+
+so that in general this force is negligible. It is important to note that these 
+higher terms depend on the structure of the electron. 
+The force of radiation reaction acts not only on itself but on any charge 
+nearby ne <1. This condition is roughly equal to d < A since for a 
+vlc 
+
+
+. ‘ v ae : : 
+harmonic eT =. This is to be expected since if two charges 
+v 
+
+
+near together oscillate with amplitudes A and A’, the intensity of the radi- 
+ation varies as (A + A’)? and not as A? + A’?. Hence each oscillator 
+must damp the other in order to conserve energy. 
+
+
+ExERCISE 21 Calculate the force between two oscillators near together as a furction of 
+their phases and amplitudes. 
+
+
+16 SELF-ENERGY OF THE ELECTRON 
+
+
+We see from the expression (15.8) for F* that a charged body has more 
+inertia than an uncharged body. The total inertial force of a body is 
+
+
+F,, = —mv 
+
+
+86 LECTURES ON ELECTRODYNAMICS 
+
+
+where m is its experimental mass. The electromagnetic contribution to this 
+force is 
+
+
+4e? 
+Fen = — v 
+3c?a 
+We have 4 
+Pais e 
+~w 
+Fi, mc?a 
+
+
+For macroscopic problems F,,, < F;,and F,.,, may be neglected. However, 
+for the elementary particle, we cannot separate the two. Now F,,, cannot 
+be greater than F,,, and it seems a plausible assumption that the two are 
+of the same order of magnitude. This means 
+
+
+e2 
+
+
+Qw~ 
+
+
+mc? 
+= 2.8 x 10-13cm 
+
+
+for the electron. If the electron had only electromagnetic mass, the equation 
+of motion could be written 
+F=F,+F, =0 
+
+
+where F, is the self force and F, is the external force acting on the electron: 
+
+
+F, = eB in E x Ha. 
+c 
+
+
+In this case the whole idea of mass is unnecessary. This was Abraham’s 
+idea, but the theory does not work. There must be some non-electromagnetic 
+force to keep the electron from blowing up. The fact that a static distribution 
+of charge cannot be in equilibrium without any external force is Earnshaw’s 
+theorem. The theorem states that a charged body cannot rest in stable 
+equilibrium under the influence of electric fields alone. It might be thought 
+that a suitable distribution of current and charge in an electron would 
+keep it together, but a quite general proof can be given to show that this 
+is not possible. Consider 
+f=oeE+jxH 
+The equation of motion is 
+= 0 
+
+
+if E and H include both external and self fields. A solution of f = 0 for 
+E and H just external fields is possible since one solution is E = 0 and H 
+
+
+MAXWELL’S THEORY 87 
+
+
+parallel to j. However, there is no solution if E and H include the self 
+fields. For we can write 
+
+j x H= -oE 
+and the right side vanishes only if 9 = 0 since we have V- E = 9. Thus we 
+have three non-homogeneous linear equations for j,,j,, and j, with the 
+determinant of their coefficients 
+
+
+Ob . aie 2a 
+—H, 0 H,| =0 
+Hy —-H, 0 
+since it is a general theorem that the determinant of an antisymmetric 
+matrix of odd rank is zero. Hence there is no non-zero solution for j. 
+Thus a part my of the mass must be of non-electromagnetic origin, and 
+
+
+the equation of motion is 
+Mov = F, + F, 
+
+
+If the calculation of chapter 15 is valid, we have 
+
+
+2 Qe: 
+F324 4 4 0( 24 
+3c? oe: c* 
+
+
+aw 
+
+
+and if < 1, we have 
+
+
+4U\. Je”. 
+Mo + —]vV = F, + Vv 
+3c? 
+
+
+3c3 
+
+
+c 
+
+
+For macroscopic bodies, yy Q? 
+
+
+c*7M ~ c?Md 
+where Q is the charge, M the mass, and d the dimension of the body. For 
+a pith ball with Q = 5 e.s.u. and d = 1 cm this becomes 
+U__ (Qle? e? 
+c?M = (M/m)d mc? 
+
+
+(Q/e)? 
+(M|m) d 
+
+
+~ 3x 10-!3cm 
+
+
+~ 3 x 10-29 
+
+
+For the electron, however, U is not negligible. 
+In view of the instability of charges under the action of electromagnetic 
+forces alone, we are led to two possibilities: 1) Maxwell’s equations do 
+
+
+88 LECTURES ON ELECTRODYNAMICS 
+
+
+not hold in regions comparable to the size of the electron. Born has developed 
+a theory of this form, but it is not unique and there is as yet no evidence 
+that it describes reality. An acceptable theory would show that 
+
+
+which contains both # and c. Thus the theory must be both quantum 
+mechanical and relativistic. There is at present no satisfactory theory. 
+2) Accept the stability of the electron as a fact. The theory of relativity 
+shows that E = mc? so that the factor 4/3 multiplying U is a direct in- 
+dication of the fact that other forces are present. This force must necessarily 
+be attractive and hence give rise to negative mass. It is reasonable to assume 
+that it is equal to — 4 U/c? thus giving for the total mass just U/c?. 
+
+Since we do not know the distribution of the charge inside the electron, 
+the terms of higher order than the radiation reaction in the calculation of 
+chapter 15 cannot be calculated. Hence we can only treat the problem in 
+
+
+o<l where a > 3 x 10-1 cm, for the electron. 
+
+
+c 
+The solution of the paradox given in section 15 goes as follows: We 
+obtained the solution of 
+
+
+which 
+
+
+i eS x 
+mx — x =0 
+3c3 
+as 
+x =v +—(e* — 1) 
+a 
+where 
+3mc3 
+2e? 
+mc3 aw mc2a aw . 
+Thus @ ~ and —— ~ =~ If — is not small, the neglect of the 
+e c e Cc 
+higher order terms is not justified, and the solution is not good. i < l, 
+mc?a U : : q 
+then 5 <1, or —— m. This means that in order to keep the total 
+e Cc 
+
+
+mass of the electron equal to m, there must be a large amount of negative 
+non-electromagnetic mass. It is by increasing this negative mass that the 
+
+
+MAXWELL’S THEORY 89 
+
+
+kinetic energy of the electron can increase so explosively. Since we do not 
+actually observe an electron shooting off to infinity by itself, it means that 
+U ~ mce?. 
+
+Whether the electron theory is applicable to a particular problem requires 
+close analysis. Consider the Bremsstrahlung of very high energy electrons 
+with emission of hard y-rays which occurs in cosmic ray showers. It seems 
+at first that on account of the velocity of the electrons being very close 
+to c, and their very high energy, the problem cannot be treated. However, 
+on using the coordinates moving with the electron, the y-rays appear very 
+soft on account of the Doppler effect, and the problem can be treated. 
+
+
+The calculation has actually been verified by the observations on cascade 
+showers. 
+
+
+17 CLASSICAL THEORY OF SCATTERING AND DISPERSION 
+
+
+In this chapter we shall treat a few problems in the classical electron theory 
+of matter. For atomic electrons, v/c ~ 1/100, and, since optical light waves 
+do not give the electron much additional velocity, it is justified to neglect 
+relativistic effects. We shall consider matter to be composed of isotropic 
+oscillators. Then an external field induces a moment m in such a body 
+
+
+m = oE 
+For non-isotropic oscillators the expression is 
+m=a:E 
+
+
+where « is a tensor. For light waves, E is periodic, so the charges are 
+accelerated and hence radiate. This accounts for the phenomena of scattering 
+and dispersion. The two phenomena are related but are observed by two 
+independent experiments. 
+
+
+Let us first suppose that the oscillators are harmonic: then considering 
+just one dimension we have 
+
+
+mx + mw*x = eE, 
+with a correction for the radiation reaction. We shall write 
+
+
+E, -_ R Eve} 
+
+
+90 LECTURES ON ELECTRODYNAMICS 
+
+
+where & means the real part of. If a is the dimension of the oscillator, from 
+the uncertainty principle we have 
+
+
+h 
+an~—— 
+/ p” 
+and since je. 
+i Gg OE 
+v Lope 
+we have 
+
+
+We shall write 
+
+
+e e 
+¥ + w*x = —E,e™ 
+m 
+
+
+and take the real part of x in the solution. The solution is 
+
+
+x= Ae?” fe Be!” + Ce-it 
+
+
+where E 
+(-—»? +?) A = or 
+m 
+es AO 
+m(o? — v?) 
+
+
+If we include the radiation reaction, we have 
+
+
+oe : e 
+——Fx+X+w%x = —E el" 
+
+
+Vo m 
+where 
+1 2e? 
+Vo 3mc3 
+and this gives 
+eEo 
+
+
+We see that the phase relation changes continuously as » passes through 
+w. For light waves ¥) > v, so the correction is very small, and its effect is 
+only felt near resonance. 
+
+
+MAXWELL’S THEORY 9] 
+
+
+We see that the scattered light will consist only of frequencies » and w, 
+and this is a misleading result arising from the special model of oscillators 
+we chose. If they are not strictly harmonic, there would be frequencies of 
+vy + tw where t = 0, +1, +2,... This is the Raman effect and is not a 
+quantum mechanical effect. It arises from the fact that a general periodic 
+motion with period T is given by 
+
+
++= a p Age" 
+
+
+where t = 0, +1, +2,... and wT = 2a. In general A, will be large only 
+for low harmonics. A harmonic motion is a very special case where A, = 0 
+for all t except +1. In dispersion, we are only interested in the coherent 
+radiation, and the model of the harmonic oscillator is good. 
+
+We shall first consider scattered waves of the same frequency as the 
+incident wave. The induced moment is 
+
+
+2 lyt 
+e*/m)Eoe 
+pee i 
+_v 
+wo? — vy? + j— 
+Yo 
+and therefore 
+2 yt 
+“ e*/m)E,e 
+ope — ee imEe” 
+w? ve 
+— — 1+ i— 
+y? Vo 
+
+
+Remembering that the actual value is the real part, we have 
+
+
+w? vy, 
+; age ie cos vt + — sin vt 
+e 1 Y, 
+— Ey ae 2 1 
+m 
+ee he ee = 
+y? V9 
+
+
+Thus the rate of radiation is from (13.2) 
+
+
+er= _ (17.1) 
+
+
+2e? .. _ 2e*Eo 
+
+
+303 323 
+2 2 2 : ae ae 
+(= — 7 cos? vt + 22 (= - 1) sin ytcos vt + (=) sin? nt 
+y2 Vo y2 Vo 
+SS nee, Pe SAS ery Se eC ee ey 
+y? YO 
+
+
+92 LECTURES ON ELECTRODYNAMICS 
+
+
+and the average rate is 
+etE2 1 
+
+
+3m2c3 @? 2 yt 
+ET 
+v Vo 
+
+
+Now the flux of incident energy is 
+
+
+and the average flux is 
+
+
+Thus the total corss section for scattering with frequency v, which is the 
+radiation scattered per unit flux, is 
+
+
+4 
+se ae (17.2) 
+
+
+3m?2c* (4 ) “| 
+ae ees 
+
+y? y 
+
+10) 
+
+
+Since (13.2) is for dipole radiation, the angular distribution is sin? 6, where 
+6 is the angle between E and the direction of observation. The limit wm = 0 
+corresponds to scattering by free electrons, and in this case we have 
+
+
+8zre* 
+
+
+3m2c* 
+
+
+nN 
+
+
+‘ 2 bes 
+since we may neglect v?/v9 as there can be no resonance. This is the Thomson 
+formula. Near resonance we have 
+
+
+8zte* 1 
+Ps 2,4 2 2 
+me (2 z ) + “ 
+” vo 
+2ne* y2 
+
+
+MAXWELL’S THEORY 93 
+
+
+As stated earlier, the harmonic oscillator is a very specialized model, 
+so we Shall derive the induced moment for the general case. In terms of the 
+angle and action variables f and J, the coordinate x of the oscillator is 
+given by 
+
+
+x(t) = > Yaw errs 
+
+
+where t = 0, +1, +2,... 
+The radiation is considered as a perturbation 
+
+
+y= exE,e?""" =cU 
+
+
+where € = eE£, si small. It must be remembered that we are to take the 
+real part of the quantities involved. In our notation, @ is the natural funda- 
+mental frequency of the electron, and » is the frequency of incident light. 
+We make a contact transformation from the variables J, B to J, B by means 
+of a generating function S(J, 8) and we do this by expanding S in powers 
+of ¢ and, for the first order calculation, keeping only the terms linear in e. 
+Thus 
+S= So + eSy ++: 
+
+
+Since S = Sp for ¢ = 0, So must be the generating function for the identity 
+transformation, namely 
+
+
+So = JB 
+Hence ; 
+op cB 
+ey OS os, 
+= = + € ——_— 
+P 0 B oJ 
+Now 
+
+
+- Ox ~ Ox 2 
+x(J, B) = x(J, B) 3 ay —J)+ a? — p) 
+and therefore eas 
+6x = x(J, B) — x(VJ, B) 
+
+
+meal gee ee 
+a 
+
+
+ox dS, Ox 6S, 
+
+
+ar a a 
+= e(x, S;) 
+
+
+94 LECTURES ON ELECTRODYNAMICS 
+
+
+where (x, S;) is the Poisson bracket. To determine S, , we have the Hamilton- 
+Jacobi partial differential equation 
+
+
+Ct op 
+Expanding to first order in €, we get 
+So, , O81 4 ee Oo O51 | y= 0 
+ot ot oJ op 
+
+
+and since 0S)/dt + H,(J) = 0 
+OS; Fe OH, OS, 
+
+
+= = 0 
+Ot oJ op 
+With the explicit form for U inserted this gives 
+OS, +a 0S; Ae 5 Saye ee =0 
+ot op t 
+
+
+where w = wit + # is the usual angle variable and where we remember 
+that o(J) = 0H,/¢cJ..To solve this equation, we make the “‘ansatz”’ 
+
+
+2ni 
+Sy = Y o,e ni(rwt+vt) 
+
+
+Tt 
+
+
+Then the condition on g, is 
+
+
+at ce 
+: 4ni(tw + ¥) 
+which yields 
+S; sie ~ = y xX, e2iuwtr) 
+4ni + (tw + 7) 
+
+OS, ee ye eztitew— vt) 
+
+op 2 7 (to + rar 
+
+OS, eee its < Xr e27itew +0) 
+
+oJ 4ni 7 (tw + v) 
+
+
+the dependence of w on J being neglected in the last expression. We have 
+also 
+
+1 y Ox, e2zirw 
+
+oy 2: OJ 
+
+
+. 2nl 
+my rer 
+T 
+
+
+MAXWELL’S THEORY 95 
+
+
+Therefore 
+
+
+a yt xy e2ri((et rw tot) 
+4 «ut! ars a Twty 
+
+
+22! TX, Ox, e2{etr w+ vt} 
+(to +4) OJ 
+
+
+Remembering that we have to take the real part, the result is 
+
+
+ex = — a RYT, IS e tre} 
+
+
+t,t’ oJ TO +» 
+
+
+_ a oe Ox, | aoe (17.3) 
+
+
+totyv oJ 
+
+
+and hence the scattered radiation consists of frequencies » + nw, n = 0, 
++1, +2,... and it is an accident that all terms with t + t’ + O vanish in 
+the case of the harmonic oscillator. 
+
+In applying the formula to atomic problems, quantum mechanical ideas 
+must be used in the interpretation. An atom originally in state A may 
+
+
+undergo transitions some of which a reillustrated in the diagram. The fre- 
+quencies of the scattered radiations are 
+
+
+vy — Av 
+
+
+96 LECTURES ON ELECTRODYNAMICS 
+
+
+where 4» is the transition frequency from A to a higher level, and 
+y + Ar’ 
+
+
+where A’ is the transition frequency from A to a lower level. This explains 
+the Raman effect. 
+
+Let us now consider dispersion and absorption of radiation in a dielectric. 
+For these considerations we have a good model for the dielectric if we 
+assume it to consist of a large number of harmonic oscillators. We have 
+seen that for a single oscillator, the induced moment is 
+
+
+w? — y? + — 
+Vo 
+
+
+for an external field E = E,e’’*. We need not consider the terms arising 
+from the free vibration of the oscillator since by friction it is soon damped 
+out. Let N, be the number of oscillators of frequency m, in a unit volume. 
+Then the induced moment per unit volume is 
+
+
+2 iyt 
+e* Foe N;, 
+P=) Mex, = 
+k m ke? 9' iy 
+
+
+and hence the polarizability « is 
+
+
+«=5 
+
+
+k 
+
+
+(e7/m) N, 
+43 
+2 iy 
+Ox — v? +—— 
+Yo 
+
+
+(17.4) 
+
+
+For a static field, the polarizability ao is 
+
+
+e*N, 
+Xo => na : 
+kK MW, 
+We note that 
+ML*7T-7L-3 
+[x] = = 
+MT-? 
+
+
+Thus «@ is a pure number. 
+
+
+EXERCISE 22 Derive the formula for the polarizability in a static field by considering 
+the effect of a steady field on a collection of oscillators. 
+
+
+MAXWELL’S THEORY 97 
+
+
+The propation of electromagnetic waves in a dielectric may be treated 
+in either of two ways. The first method is to take Maxwell’s equation in a 
+material medium, and get 
+
+1 o?E 1 
+
+
+——AE=0 (17.5) 
+ce? ot? E 
+
+
+Then use the relation between «¢, the dielectric constant, and a 
+
+
+—1 41x, 
+é, +2 3 
+
+
+which holds for any frequency v. This equation is a consequence of the 
+well-known relation between polarization and the external field, 
+
+
+Pa a(E +32?) 
+
+
+The second method which leads to the same result is to take Maxwell’s 
+equation for a vacuum and introduce the charge and current due to the 
+oscillators. We have 
+
+
+V-E = 420 
+VRESe = 
+c Ct 
+Veh ae 
+c @t 
+
+
+Ve xD Ley eiso 
+c Ot 
+
+
+We shall consider a definite frequency v and write 
+E = Ee" (17.6) 
+
+
+Also, since most of the macroscopic properties of the body will depend 
+only on the space averages of the quantities, we shall take the average 
+
+
+98 LECTURES ON ELECTRODYNAMICS 
+over a volume containing a large numbers of oscillators, but with dimensions 
+small compared to the wavelength A. Then 
+
+
+2 2 
+ON elk 
+
+
+c? Ot? c? 
+AE = AE x AE 
+2 
+(ja) Beye Nx 
+c Ot k c c om 5 iv? 
+O, — vo +— 
+
+
+076=-V:P= -a,V-F, 
+4nVo74nVox4nVG = —4nx,VV-E, 
+
+
+The field E, is not the averaged field E. It is the average field which would 
+exist at the location of an oscillator if that oscillator were absent, and it 
+
+
+is given by 
+E,-£4 =P 
+
+
+whence it follows that 
+
+
+p=s,(E +p) sf 
+
+
+The differential equation for E is now 
+
+
+2 2 
+- GE ab= Sh _ (Se svv-e) 
+c 
+ie 
+
+
+In the case of free wave propagation E is transverse so that 
+V-E=0 
+and the differential equation simplifies to 
+
+
+2 
+AE + ~ Ts, 
+c 
+
+
+MAXWELL’S THEORY 99 
+
+
+The expression in curly brackets is equal to €,, so our result agrees with 
+that of the first method. The solution of this equation corresponding to 
+the propagation of a plane wave in the direction of a unit vector n is 
+
+
+E= Ae") A-n=0 
+
+
+where 
+1+ ony, 
+ry 3 
+“x=- i 
+1 peed ar 
+3 
+
+
+For away from resonance «, is practically real, but near resonance it has 
+an appreciable imaginary part which corresponds to absorption of the 
+radiation. For a single resonant frequency we have 
+
+
+l+ 82 e7N 
+yi y? 3. m(w? — v? + iv3/) 
+c? 4n e2N 
+
+
+3 m(w? — v? + iv3/r9) 
+
+
+7 2 
+Sipe we ipe se et] 
+y? 3 m 
+= — ane (17.7) 
+: pee cere ea g 
+3 om 
+We see that the resonance frequency is not at w but at @ where 
+= 4x e?N : y ; 
+@? = w* — — . If we write x = — (n — is) then we have 
+3 om c 
+2 —2 _ 2 
+FO On a | ee ea (17.8) 
+m — (@? — v)? + (99/%9)? 
+2 
+ee : (17.9) 
+
+
+mM Vo (@? — v?)? + (¥3/¥%)? 
+
+
+[n is the index of refraction of the dielectric, and c/(vs) is the penetration 
+depth. For vy > @ we enter a narrow region of anomalous dispersion where 
+the index of refraction is less than unity. This does not, however, mean 
+that a signal can be sent faster than light. Because of the strong absorption, 
+
+
+100 LECTURES ON ELECTRODYNAMICS 
+
+
+a pulse of radiation will disappear before it moves a distance equal to its 
+own width. Ed.] 
+
+
+EXERCISE 23 Calculate the value of the penetration depth at resonance. 
+
+
+Let us now interpret our result in the light of modern atomic theory. 
+Actually, a dielectric is composed not of harmonic oscillators but of atoms 
+in the normal state, and they have a set of excited states, and there is 
+resonance for each possible transition with frequency given by 
+
+
+E, — Eo 
+h 
+
+
+The scattered radiation may not be of the same frequency as the absorbed 
+frequency, and in this case we have the Raman effect, but this effect is 
+small, and, since it is incoherent, it does not affect the propagation of the 
+initial wave except that it gives a small absorption. In our model, this 
+effect is neglected. Aside from this, the atoms act like a collection of 
+oscillators. Each possible transition acts like an oscillator of frequency 
+
+
+v= = 
+
+
+E,— £ 
+oO, = ————- 
+h 
+and the number of oscillators with frequency «, in a unit volume is 
+M, = Nacine te 
+
+
+where f, is a proper fraction. In a single atom, each transition corresponds 
+to a fraction f, of an oscillator, and f, is called the oscillator strength of 
+the transition. If the values of f,, w, are found either empirically or by 
+quantum mechanical calculations and then put in (17.”) very good results 
+are obtained. The quantum mechanical calculation for f, and «, can only 
+be done for a few simple cases, and there is no general argument by which 
+we can find these values for complex atoms. For example, in one-valence- 
+electron atoms, H, Na, Cs, the f, corresponding to the transition from the 
+normal state to the first excited state are 0.35, 0.975, 0.98 respectively. 
+
+
+18 HAMILTONIAN THEORY FOR THE MOTION OF A CHARGED 
+PARTICLE IN AN ELECTROMAGNETIC FIELD 
+
+
+The equation of motion of a particle with mass m and charge e in an 
+non-electromagnetic potential field V is 
+
+
+mx = — VV (18.1) 
+
+
+MAXWELL’S THEORY 
+
+
+101 
+
+
+If there is in addition an external electromagnetic field E and H, the 
+
+
+equation is 
+
+
+(18.2) 
+
+
+(18.3) 
+
+
+mx = —VV + e{E + (v/c) x H} 
+We want to find a function H of the canonically conjugate variables p,, x; 
+such that . an 
+x= 
+CPi 
+pee oH 
+Ox, 
+
+
+are equivalent to the equations of motion. 
+In the absence of an electromagnetic field, the function is 
+
+
+1 
+H,(p, x) = ——p? + V(x) 
+2m 
+since then Eqs. (18.3) become 
+
+
+xX; = Pi 
+m 
+pee OV 
+Ox; 
+yielding 
+2 OV 
+mx, =~: a. 
+which is just (18.1). fe 
+When a field is present, we introduce the potentials defined by 
+c Ot 
+H=VxA 
+
+
+and the function H for this case is 
+
+
+H= H(P -<Ax) + ey 
+c 
+For then Eqs. (18.3) become 
+
+
+102 LECTURES ON ELECTRODYNAMICS 
+
+
+yielding 
+pi = mx, + —A, 
+oA 
+c dt Ox; Ox; cs Ox; 
+But since 
+dA, 0A; +3 Pye 
+dt ot i OX; 
+we have 
+és OV op (e CA, . (eA, 0A; 
+mx, = —- — — e—— — — —+—) x%[(— - 
+Ox; Ox, c ét C j#i Cx; Ox; 
+
+
+which is the same as (18.2). 
+
+This theory can be used to deduce Larmor’s theorem very simply. The 
+theorem states that the effect of a uniform magnetic field H on a charged 
+particle describing a closed orbit is to leave the form of the orbit, its in- 
+clination to the magnetic lines of force, and the motion in the orbit un- 
+altered, and merely leads to the addition of a uniform precession of the 
+orbit about the direction of the lines of force, the precession velocity being 
+
+
+Suppose the potential is radial so that V = V(r). Then 
+2 
+H, =2-+V() 
+2m 
+
+
+Let the external field be a uniform magnetic field H along the z-axis. Then 
+we can take 
+
+
+Sees 
+2 
+
+y mares 
+2 
+
+AZO 
+
+
+and 
+
+
+MAXWELL’S THEORY 103 
+
+
+This expression is the same as that obtained from Ho by transforming to 
+a coordinate system which rotates with angular velocity @ = eH/2mc about 
+the z-axis, for then 
+
+
+, °. e 
+
+x =Xt+ y 
+2mc 
+
+by eH 
+
+yproyr- ¥ 
+2mc 
+
+Z=2 
+
+ae 
+
+
+This takes into account both the coriolis and centrifugal forces. 
+
+
+EXERCISE 24 By considering the effect of the Larmor precession on the propagation of 
+the electromagnetic waves in a dielectric, give a theory of the Faraday effect. 
+
+
+CHAPTER 2 
+
+
+Special Theory of Relativity 
+
+
+19 TRANSFORMATION OF NEWTON’S EQUATIONS 
+
+
+Suppose we have two charges, e, one fixed at the origin, and the other at 
+the point (0, y, 0) of a coordinate system at rest with respect to us. The 
+equation of motion of the second charge is then 
+
+
+e2 
+yy? 
+Next consider the case when the charges are moving with velocity v, 
+
+
+(uniform) with respect to us. In section 11 we saw that the field in the equa- 
+torial plane of a uniformly moving point charge is 
+
+
+my = (19.1) 
+
+
+e 
+v2 
+1 — —(j? + 2?) 
+c2 
+
+
+Now the force on one due to the magnetic field of the other is 
+
+
+EE, = 
+
+
+.|~ x 4] = e[B x (B x B)] 
+by (11.7) and hence : 
+
+
+= e{(B - E) B — f’E} 
+
+
+Thus for two particles moving together in a direction perpendicular to 
+their line of centers, the magnetic force is 
+
+
+— eB Ey 
+Hence the total force acting on one particle is 
+
+
+F= el — BE, 
+eae ee 
+y 
+
+
+105 
+
+
+106 LECTURES ON ELECTRODYNAMICS 
+
+
+and the equation of motion is 
+e2 —————— 
+mp =—J/1— B (19.2) 
+y 
+
+
+Let us now follow the charges so that they seem to be at rest with respect 
+to us. We would expect to get the equations of motion in this new situation 
+by making the usual transformation 
+
+
+x’ =x -— ut 
+y=y 
+Z=2 
+on (19.2). The result is = : (19.3) 
+mm oats = (19.4) 
+
+
+This is different from (19.1) and it means that the phenomenon depends 
+on the state of motion of the system with respect to a certain fixed system. 
+It is important to note that the Eqs. (19.1) and (19.4) differ by terms in 
+the second order of 8 = v/c. Since in most natural phenomena v/c < 1, 
+it is useful to classify terms in the powers of v/c. 
+
+e 
+
+
+/e 
+
+
+é 
+
+
+Next suppose that the charges are staggered so that the line joining them 
+is not perpendicular to the line of motion. Then 
+
+
+E= e(l — B)r 
+r(1 — B? sin? 6)*/? 
+
+
+H=BxE 
+
+
+SPECIAL THEORY OF RELATIVITY 107 
+F = e{E + B x H} 
+
+
+pee Sal ee eee 
+= (1 = B2 ane 93/2 {r(1 B ) + (B r) B} 
+
+
+(19.5) 
+
+
+which shows that the direction of the force is not along the radius vector, 
+and for v > c, the direction approaches that of the velocity. Thus, if the 
+simple transformation laws are correct, we could find, by observing the 
+behavior of charges, how fast and in what direction we were moving with 
+respect to the preferred reference frame in which the phenomenon takes 
+a simple form. 
+
+Thus we are led to one of three possible conclusions: 
+
+
+1) The above prediction is correct, and we can find a system in which 
+the equation of motion takes a simple form. According to this theory 
+the earth cannot be moving with a very high velocity with respect to the 
+preferred system, since we do not observe the complications predicted 
+above. 
+
+2) There is something wrong in the calculation of the field made above. 
+This means that Maxwell’s equations hold only in a certain coordinate 
+system. 
+
+
+3) The transformation equations used in going from one coordinate 
+system to another moving with respect to it are not correct. 
+
+
+In considering the validity of Maxwell’s equations, we need not consider 
+the whole set but only the wave equation which E and H satisfy as a 
+consequence of Maxwell’s equations: 
+
+1 0?E 
+
+
+Cc Ce 
+
+
+—- AE=0 
+
+
+This equation does not transform to a similar equation in the primed 
+variables under the transformation (19.3), which is called the Galilean 
+transformation. It is due to the fact that the velocity of light, c, is not 
+constant for all systems under such a transformation. The reason for 
+choosing the Galilean transformation in the first place is that under such 
+a transformation Newton’s equation 
+
+
+mx =F 
+
+
+108 LECTURES ON ELECTRODYNAMICS 
+
+
+retains its form in all systems. Thus, if we rule out the first possibility, we 
+have to make a choice whether to keep Maxwell’s or Newton’s equations 
+as holding universally. We shall find that Newton’s equation has to be 
+modified. 
+
+
+20 MICHELSON-MORLEY AND KENNEDY-THORNDYKE 
+EXPERIMENTS 
+
+The possibility of the earth having an absolute motion with respect to the 
+rest system in which the equations describing natural phenomena take a 
+simple form was first tested experimentally by Michelson and Morley. 
+They argued that if the earth has an absolute motion, the velocity of light 
+would be different in different directions, and hence there should be a 
+shift in the fringes of an interferometer when it is rotated through 90°. 
+
+The figure shows the schematic layout of an interferometer. M, and M, 
+are mirrors at the ends of two arms, and M is a half-silvered mirror which 
+
+
+splits the light coming from S. Suppose the arm (1) is parallel to the direction 
+of the absolute velocity v; then the time taken for the light to go from 
+M to M, and back to M is 
+
+
+l 
+im a 1 ae h, 
+c—v c+o0 
+
+_ 2h | 
+Tee are in (20.1) 
+
+The corresponding time for the arm (2) is 
+
+21 
+1? = = (20.2) 
+
+
+: en er: 
+
+
+SPECIAL THEORY OF RELATIVITY 109 
+
+
+Now if the system is rotated through 90° so that arm (2) is parallel and 
+arm (1) is perpendicular to the absolute velocity, the corresponding times 
+are 
+
+
+21. 1 
+i = — ; (20.3) 
+c 1-8 
+21 1 
+= it —————————— 20.4 
+mn a res rr (20.4) 
+EISHee @) _ 4) dG) _ 4Q) 
+ATS = 1) = Gt), 9 
+_ ly be cs. 1 sé 2, ae I 
+c\l-f J/1— c\l-f J, p 
+2 
+_ 24 +h) I, 1 (20.5) 
+c a eee ee 
+For /, = 1, = land B « 1, we have 
+AT x 2! ge (20.6) 
+c 
+
+
+The experiment performed by Michelson and Morley was accurate enough 
+to detect a few tenths of a percent of the expected fringe shift if for v the 
+velocity of the earth in its orbit was taken. However no shift was observed. 
+
+To explain the null result, Fitzgerald and Lorentz advanced the con- 
+traction hypothesis which states that all lengths parallel to the direction 
+of the absolute velocity contract in the ratio 
+
+
+I, => va — Bl, 
+
+
+which is the same as a contraction in the ratio of 1: /1 — B? between the 
+length at rest and in motion. 
+If we put /, = /,/, =] + a, then including the contraction, we have 
+
+
+oP 2/ 
+| 
+ei B? 
+42) 2(/ + a) 
+(2) 
+eV 1 — B 
+PO He a (20.7) 
+
+
+110 LECTURES ON ELECTRODYNAMICS 
+
+
+Thus since the velocity of the earth in its orbit should make v vary with 
+time, we would expect a gradual shift during a year in the fringes of a 
+stationary interferometer. This experiment was done by Kennedy and 
+Thorndyke, and it also led to a null result. This observation can be explained, 
+if, in addition to the contraction in length, we have a dilation in time: 
+
+
+oe ale 
+
+V1 = 6? 
+where Ar is a time interval recorded by a clock which moves along with 
+the interferometer, and At is the corresponding interval recorded by a 
+clock which is at rest with respect to the absolute frame. Since the wavelength 
+of the light used in the interferometer is determined by atomic clocks 
+
+
+(i.e., excited atoms) which move with the interferometer, Eq. (20.7) should 
+under the time dilation hypothesis, be replaced by 
+
+
+At 
+
+
+ff oa, = eae independent of 
+c 
+
+[The length contraction hypothesis may be made plausible by refering 
+to Eq. (19.5) which gives the force between two moving charges. In this 
+equation r is the separation vector between the two charges as measured 
+in the absolute frame. If the length contraction hypothesis is correct then 
+the separation vector as measured in a frame (of actual physical meter sticks) 
+moving with the charges is given by 
+
+
+where 
+
+
+T? =1+ 
+1 
+
+
+The force measured in the moving frame may be determined by appeal 
+to the energy principle, which should remain valid. We must have 
+
+
+F’- dr’ = Far 
+
+
+SPECIAL THEORY OF RELATIVITY 111 
+
+
+dh 
+and hence poeticp 
+
+
+By direct substitution of expression (19.5) one finds 
+
+
+F = J/1 — fp? ad 
+
+r’3 
+
+which, except for the factor JI — f’, has the same form as the electrostatic 
+force between two charges at rest. This means that for every dynamical 
+configuration of a collection of slow-moving charges, the center of gravity 
+of which is at rest, there exists another physically realizable configuration 
+in which the center of gravity moves with (arbitrary) velocity v and the 
+configuration as a whole is contracted, in the direction of v, by the factor 
+e 1 — B*. Lorentz reasoned that since matter is made up of electric charges, 
+all bodies must show this contraction. 
+
+It will be noted that although the configuration suffers the Lorentz 
+contraction, the orbital motion is slowed down because of the factor 
+JI — B*? inthe expression for F’. This is in the right direction to produce 
+the time dilation effect, but does not account for all of it. The full effect 
+is obtained by postulating, in addition, an increase in all masses by the 
+factor 1/\/1 — B2. Ed.] 
+
+
+21 LORENTZ TRANSFORMATION 
+
+
+The time dilation can be shown to follow from the Lorentz contraction 
+and the principle of relativity. We shall assume not only that the length 
+of a rod in a moving system is contracted, but also that the length of a rod 
+in a rest system appears contracted to an observer in a moving system. 
+This assumption of the relativity of the Lorentz contraction has far reaching 
+consequences on our ideas of simultaneity. 
+
+The length of a rod is obtained by finding the coordinates of its end 
+points at a certain instant ¢. For a coordinate system in which the rod is 
+at rest we have ne en 
+
+
+For a system in which it is moving, 
+l= xi(t’') — x2(t') 
+
+
+rel 
+
+
+and 
+
+
+112 LECTURES ON ELECTRODYNAMICS 
+
+
+Suppose there is another parallel rod, of equal proper length, which is 
+at rest in the primed system. Consider the instant when the left hand ends 
+of the rods are in coincidence (see figure). Then the right hand ends will 
+not be in coincidence in either frame. An observer in the unprimed system 
+sees that the right end of the rod moving with respect to him gives a reading 
+of //1 — B?, as measured by his own rod, at the same instant that he 
+observes the left ends to be in coincidence. For an observer in the primed 
+system, however, these observations are not simultaneous since when he 
+left ends of the rods are in coincidence for him, the right end of his own 
+rod extends beyond the right end of the rod moving with respect to him. 
+
+
+Consider two coordinate systems, one moving with respect to the other 
+with velocity v along the x axis. From the Lorentz contraction we have 
+
+
+Jl — p2x' =x —vt (21.1) 
+and from the condition of relativity 
+
+
+V1 — px = x' + ot 
+
+
+Therefore 
+wi Bx = Fae oF 
+1 — 2 
+and P 
+v 
+t——vx 
+c? 
+
+
+(21.2) 
+
+
+The inverse transformation can be obtained simply by changing the sign 
+of v, as this is just the condition of relativity. Thus 
+
+
+v 
+f+—y,’ 
+c2 
+
+
+La 
+
+
+t 
+
+
+SPECIAL THEORY OF RELATIVITY 113 
+
+
+We can easily verify this by eliminating x in the first transformation 
+equation. Writing 
+1 
+
+
+OF ieee 
+
+
+we have 
+
+
+c= | — adel + w)| 
+
+
+This explains the null result in the Kennedy-Thorndyke experiment, since 
+for x’ =0 
+
+J1 — B 
+We have so far obtained the transformation equations for x and t. The 
+
+
+Michelson—Morley experiment also tells us that the length perpendicular 
+to the direction of motion must be unaltered. Hence 
+
+
+y=y (21.3) 
+
+
+vac (21.4) 
+
+
+t 
+
+
+The transformations (21.1) to (21.4) constitute the Lorentz transformation. 
+This transformation can be obtained from two general postulates: 
+
+
+1) complete relativity 
+
+
+2) constancy of the velocity of light 
+
+
+This method of derivation is first due to Poincaré. The second postulate 
+states that for two coordinate systems, one moving relative to the other 
+with uniform velocity vy, if 
+
+
+(x2 — x1)? + G2 — 1)? + (22 — 21)? = 72? 
+then 
+(x2 — x4)? + (2 — y1)? + (2) — 21)? = c7t”? 
+
+
+114 LECTURES ON ELECTRODYNAMICS 
+
+
+and vice versa. By a proper choice of the origins of the coordinate system, 
+we can write 
+Xo —X, HX 
+
+
+xX, — xX, =x’ 
+Thus we can write 
+
+
+x? + yp? + 2? — c7t? = K7(x’? + yp’? + 2’? — c7t'?) (21.5) 
+
+
+etc. We want to find the most general transformation satisfying (21.5) and 
+compatible with the first postulate. The transformation must be linear, 
+since if it were not, there would arise singularities in space and this is 
+not permissible; and also a uniform motion in one system would not 
+correspond to a uniform motion in another system. 
+
+
+EXERCISE 25 Prove that in order that a uniform motion in one system correspond to 
+a uniform motion in another, the transformation must be linear. 
+
+
+Further, for a linear function of x, y, z, t to correspond to a linear 
+function of x’, y’, 2’, t', K cannot be a function of x, y, z or t. If Kis a 
+function of v then due to the principle of relativity, it can only depend on 
+the absolute magnitude of v. Moreover, each transformation must have 
+an inverse. That is, the product of a transformation to a system with 
+velocity v and a transformation to a system with velocity —v must reduce 
+to the identity transformation. This implies 
+
+
+K?*(Iv¥]) K?(|—v|) = 1 
+whence 
+K? =1 
+
+
+For a relative velocity along the x axis, the most general transformation 
+possible under the above conditions is 
+
+
+x’ = Ax + Bt 
+
+t'=Cx + Dt (21.6) 
+y = Ey 
+
+z’ = Fz 
+
+
+Now if we take x = t = z = 0 in (21.5) then 
+
+
+y=y? 
+
+
+SPECIAL THEORY OF RELATIVITY 115 
+There is no reason why the direction perpendicular to the velocity should 
+change. If it did, the first postulate would be violated. Hence 
+
+
+E£= +1, andsimilarly F= +1 
+
+
+We shall take the positive signs, since the negative signs correspond to 
+reflection of the coordinate axes. Substituting in (21.5) we have 
+
+
+A*x? + 2ABxt + B?t? — c?(C?x? + 2CDxt + D?t?) = x?c?t? 
+A? — c?C? = 1 
+AB—c?CD=0 
+
+
+B? as c? D2 =a —¢? 
+and in addition we have 
+
+
+—=-v 
+
+
+if the primed coordinate is moving with velocity v along the positive x 
+disection of the unprimed coordinate. Thus we have four equations for 
+four unknowns and the solution of these equations is 
+
+
+A=y 
+
+
+Day 
+y= v1 —# 
+
+
+With these values, (21.6) are identical with the Eqs. (21.1) to (21.4). They 
+can be written in vector form thus: 
+
+
+where 
+
+
+r =y{(n-r)n — vt} + {(r —(n-r)p} 
+
+
+‘ vr 
+t=y ars 
+
+
+where n is a unit vector in the direction of v. 
+
+Einstein gave a physical interpretation of the Lorentz contraction by 
+studying the sychronization of clocks. Two clocks, A and B, at rest with 
+respect to each other and near together can be said to be synchronized if 
+
+
+116 LECTURES ON ELECTRODYNAMICS 
+
+
+they read the same. However, if they are not close together, the two clocks 
+cannot be observed at once. We must use some kind of a signal. Since the 
+velocity of light is constant in all frames, and hence reliable, we use light. 
+A signal sent from clock A, when A reads t; , reaches clock B when B reads 
+t,, whereupon it is partially reflected and returns to A when A reads f;. 
+The clocks are synchronized if 
+
+
+ts =, te = t, = ty 
+
+or 1 
+tz = —(t, + ts) 
+
+2 
+
+
+It is clear however, that due to the constancy of the velocity of light, two 
+clocks synchronized for an observer at rest with respect to them, will not 
+be synchronized for a moving observer. 
+
+The time dilation gives rise to a “‘paradox’’. Suppose we have a set of 
+identical twins A and B. B is taken on a long journey in a straight line with 
+uniform velocity (except for short intervals of time when he is accelerated 
+to attain this motion from rest, to reverse his velocity, and to return to 
+rest beside A). On return, B will be younger than A, since B’s clock has 
+been ticking more slowly than /’s. By relativity, B may be tempted to say 
+that it was A who has been in motion and not B so that A should be the 
+younger. However, relativity does not apply since there is an asymmetry 
+in the problem. B has undergone acceleration, whereas A has not. This 
+suffices to resolve the ‘‘ paradox,” although one should be cautioned not 
+to assume that the difference in their ages is a function solely of the duration 
+and magnitude of B’s acceleration. It depends also on the duration of the 
+trip. 
+
+Next let us consider the transformation of velocities. As before, let the 
+primed system move with velocity v along the x axis of the unprimed 
+system. We know that, if terms of the order v?/c? and higher are neglected, 
+we get 
+
+
+V. = Vito 
+where 
+Yee Ee,. eee 
+at dt’ 
+
+
+Now from (21.1) we have 
+dx’ = y(dx — vdt) 
+
+
+= (V, — v) dt 
+
+
+SPECIAL THEORY OF RELATIVITY 117 
+
+
+and from (21.2) 
+
+
+Therefore vy 
+[eS es (21.7) 
+vV,, 
+— 
+c? 
+and the equation for V, is Viap 
+oe (21.8) 
+vV. 
+1+ 
+c? 
+
+
+This shows that the sum of any two velocities is less than c unless either 
+one of them equals c. This is consistent with our postulate that the velocity 
+of light is c in all systems. 
+
+From (21.2) and (21.3) we also have 
+
+
+dt' = a _ <4) 
+c? 
+
+
+a Sore (21.9) 
+
+
+and the inverse transformation is 
+
+
+VY, = peas (21.10) 
+
+\ vV,. 
+
+yi i+ 2 
+
+Similarly from (21.2) and (21.4) we get 
+
+im ne (21.11) 
+
+1 vv, 
+
+yi 2 
+aes eae (21.12) 
+
+
+118 LECTURES ON ELECTRODYNAMICS 
+
+
+EXxeErcIsE 26 Suppose a meson with mass 200 m moving with velocity v = 0.95c breaks 
+up into two particles, each of mass m. By using the conservation laws of energy and 
+momentum, calculate the velocities of the two resultant particles and show that the 
+same values can be obtained by using a reference system in which the meson is originally 
+at rest and then using the transformation equations for the velocities. (Use the following 
+expressions for energy and momentum: 
+
+
+See section 28.) 
+
+
+22 MINKOWSKI DIAGRAM 
+
+
+It is possible to give a graphical representation of the length contraction 
+and the time dilation. Let / = ct; then the Lorentz transformation (21.1) 
+to (21.4) can be written 
+
+
+x’ =yx — Byl 
+l’ = yl — Byx 
+where 
+= 1 
+J 1 — p? 
+so that 
+= yp? +1 
+Hence if we let 
+y = cosh q 
+then 
+by = sinh q 
+6 = tanh q 
+and 
+
+
+x’ = x coshg — /sinhq 
+
+
+I’ = —xsinhqg + /coshq 
+
+
+SPECIAL THEORY OF RELATIVITY 119 
+
+
+Thus the axes x’ and /’ represented in the x, /-plane, have the following 
+shape: 
+
+
+ae \ 
+ae 
+
+
+The paths of light rays passing through the origin are the lines x = +/ 
+and these lines divide the plane into four regions which for an observer 
+at rest at the origin of the unprimed system represent future, past, and 
+elsewhere. The regions called elsewhere are so named since any disturbance 
+originating in these regions cannot affect the observer due to the fact that 
+no signal can travel faster than light. This representation is called the 
+Minkowski diagram. 
+
+It is interesting to compare the above transformation with that of the 
+rotation of space axes in a plane 
+
+
+yrzycod+z2 sind 
+
+
+zzysind+2zcosd 
+
+
+120 LECTURES ON ELECTRODYNAMICS 
+
+
+The Lorentz contraction can be represented in the Minkowski diagram. 
+As usual, let the primed system, C’, move with velocity v along the x axis 
+of the unprimed system, C. Suppose we have a measuring rod of unit 
+length at rest in C, with one end at the origin, and the other at A. The 
+
+
+Dr 
+
+
+O i 
+
+
+world line of the first end is the / axis, and that of the other and is a line 
+parallel to the / axis and cuts the x’ axis at A’. We want to show that 0/4’, 
+which is the length ‘of the rod as seen by an observer in C’, is of length 
+
+
+~ 1 — 6?. We cannot compare the lengths of the lines 0A and 0A’ in the 
+diagram, since the invariant in this case is 
+
+
+x? — |? 
+
+
+and not the sum of the squares of the coordinates, y? + z?, say, as in the 
+case of space rotation. We have to find the coordinate x’ of A’ in terms of 
+the coordinates x and / of C. 
+
+Now the equation of the x’ axis in C is 
+
+
+l= px 
+and hence for A’ we have l’ = 0, / = fx. The invariant relation 
+Ya Se 2 
+
+
+thus reduces to 
+
+
+and since we also have x = 1 for A and A’, we obtain 
+x = Ji =e p? 
+
+
+which is just the Lorentz contraction. 
+
+
+SPECIAL THEORY OF RELATIVITY 121 
+
+
+It can be shown similarly that a rod at rest in C’ appears contracted 
+in C. Let OB’ be the length of a unit rod at rest in C. Then the world line 
+
+
+of B’ will intersect the x axis at B, and we have for it / = 0, /’ = —fx’, 
+x’ = 1, so that the invariant gives 
+x2 =J—- p? 
+
+
+and hence the Lorentz contraction. 
+
+
+EXERCISE 27 Show how the time dilation can be illustrated in the Minkowski diagram. 
+
+
+23 DERIVATION OF THE FRESNEL COEFFICIENT AND THE 
+ABERRATION FORMULA 
+
+We shall give here two applications of the velocity addition formula to 
+the explanation of two experiments which were important in the develop- 
+ment of the theory of relativity. First let us consider Fizeau’s experiment. 
+Here the times required for light to travel through water with and against 
+its direction of motion are compared. If the water is at rest, the velocity 
+in it is simply c/n where n is the index of refraction of water. If the water 
+has velocity v, then by (21.8) the light travelling with it has the velocity 
+
+
+Cc nv 
+v+— 1+ — 
+N _ ¢ c 
+v n Vv 
+L-— b+ — 
+cn cn 
+
+
+- ak 3 *( 7 ~)| (23.1) 
+n c n 
+
+
+for v/c < 1. Thus relativity gives a simple explanation of the Fresnel dragging 
+coefficient. 
+
+Next let us consider aberration. Let the reference system C’ move with 
+velocity v along the x axis of system C. Suppose a particle has velocity V’ 
+making an angle with the x’ axis in C’. We want to calculate these quantities 
+in the unprimed system. From (21.8) we have 
+
+
+Viet v 
+(ogee. 
+
+
+V' cosa’ + v 
+
+
+vV' cos a’ 
+1 + ————_ 
+
+
+a 
+
+
+c 
+
+
+122 LECTURES ON ELECTRODYNAMICS 
+
+
+and from (21.10) Vy 
+Vy, = ——_—_——_—_ 
+; oV~, 
+ye) 
+= V’ sin x’ 
+vV’ cos «’ 
+r(1 + area a ) 
+c 
+Hence 
+Vy, V' sin a’ 
+tang = — = —— 
+V,. y(V' cos a’ + 1) 
+— f2 ’ 
+_ J1 B* tana (23.2) 
+v 
+1 + — seca’ 
+Vv’ 
+For the case of light we have V’ = c and 
+— 2 A 
+tana = V1 = 6? tana’ (23.3) 
+1+ £ sec a’ 
+c 
+
+
+This is the correct aberration formula which checks with all the experiments. 
+
+It seems a bit remarkable that we can obtain correct formulae by simple 
+Lorentz transformation when we consider the complexity of the problem, 
+as for instance if we try to obtain the dispersion formula when all the 
+electrons are moving uniformly in addition to their harmonic motion. The 
+reason we can derive a formula in a coordinate system which is most 
+convenient for the calculation and then make a Lorentz transformation to 
+get the result in the required system is due to the fact that true physical 
+equations hold in all systems. That is, the equations derived that describe 
+natural phenomena are invariant under Lorentz transformation. 
+
+
+24 COVARIANCE 
+
+
+Let g, stand for any one of the observables r, t, E, H, m, j, etc. in the co- 
+ordinate system C with which we are concerned. There is some relationship 
+of the form 
+
+
+A,(q) = 0 
+
+
+SPECIAL THEORY OF RELATIVITY 123 
+
+
+which expresses a physical law. Let the corresponding value of g in another 
+coordinate system C”’ be q’. C and C’ are connected by a Lorentz trans- 
+formation. The same law will be expressed in C’ by the equation 
+
+A,(q') = 0 
+In general 
+
+q +q 
+
+and J’ is a different function of g’ from A of g. The idea of covariance is 
+expressed in the relation 
+
+
+A,(q) = 0 = 4,(q’) = 0 
+This condition is equivalent to the relation 
+
+
+Ax = 2 Quis 
+
+
+where |Q,;| + 0, since the vanishing of one set implies the vanishing of 
+the other. If the above relation holds for a Lorentz transformation then the 
+equation 
+A,(q) = 0 
+is said to be Lorentz covariant. 
+As an illustration consider one of Maxwell’s equations 
+
+
+V:E —- 420 = 0 
+If we make a Lorentz transformation, we will not get 
+
+V-E’ — 4x0’ = 0 
+but some more complicated expression. This is because the equation is 
+only part of a general law. The other part is 
+
+
+V Se dept 
+c Ot 
+and the correct relation is 
+1 cE ‘ 
+V-E’ — 470" = 9,(V-E — 420) tra (¥ are a ‘i 
+c 
+where q, and p, are certain scalar and vector constants respectively. 
+We have seen that the Lorentz transformation mixes up the time and the 
+space coordinates. Thus 
+
+
+(x’, y’, 2’, ') = O(x, y, z, t) 
+
+
+124 LECTURES ON ELECTRODYNAMICS 
+
+
+and we found that Q, the matrix of the transformation can be written in 
+the form 
+
+
+xXx yz cet 
+v 
+
+
+10 0 
+
+
+0 
+
+(24.1) 
+z | 0 01 0 
+
+v 
+
+c 
+
+
+c’}—-—y 00 y 
+
+
+If we let x1, x?, x3, x* stand for x, y, z, ct, then 
+(x*)' = Q)x" 
+
+
+where yu stands for any one of 1, 2, 3, 4, and we are using the summation 
+convention that two repeated indices, one upper and one lower, on the 
+same side of the equation are to be summed from one to four. Q*% is the 
+element in the wth row and vth column of the matrix Q given above. 
+
+Any set of four quantities A” which transform according to the law 
+
+
+(A*)’ = QYA’ (24.2) 
+is called a contravariant 4-vector. If x, stands for x', x?, x3, —x*, for 
+
+
+uu = 1,2, 3,4, respectively, then x, is said to form a covariant 4-vector. 
+
+
+Now 
+MX Se ee Ose 
+
+
+invariant 
+
+
+An invariant is a scalar quantity which remains unaltered during any 
+transformation of the coordinate system. A set of 4 quantities B,, which 
+transform like x, is called a covariant 4-vector. It is clear that 
+
+
+A*B,, = invariant 
+The set of 16 quantities A*B” transform according to the law 
+(A“B’)’ = O40" A*B” (24.3) 
+
+
+and is said to form a tensor of second rank. In the same way, a tensor of 
+arbitrarily high rank can be formed by taking the product of vectors thus 
+
+
+A“BC,D" 
+
+
+SPECIAL THEORY OF RELATIVITY 125 
+
+
+and they transform according to the law 
+(A“B’C,D" ...)’ = Q%050%07 ... A*B°C,D? ... (24.4) 
+
+
+Such a complicated set of quantities does not usually occur in nature, but 
+symmetric and antisymmetric tensors of second rank are frequent. The 
+former is such that each element is unaltered by the interchange of the 
+indices x, v, and so has 10 independent components; the latter is such 
+that each element merely changes sign by the interchange of wu and » and 
+has 6 independent components. In classical mechanics, the Q* are uniquely 
+determined since they connect observable quantities; in quantum mechanics, 
+however, since the wave function y, is not an observable, but only the 
+square of its absolute value is, the sign of its transformation coefficients is 
+undetermined. 
+
+The values of Q% are greatly restricted since the Lorentz transformations 
+form a group. That is, the sucessive application of two transformations L 
+and L’ must be equivalent to another Lorentz transformation L’’. Thus 
+
+
+L" 
+(x)! = Q"x” 
+
+
+i 
+
+= O2(x*)' 
+
+L’ iL 
+
+= Of 0%" 
+
+ES , UAE 
+
+QO, = O29; (24.5) 
+It turns out that all quantities arising in electromagnetic theory transform 
+according to laws involving the matrix Q% or product of Q’s. A physical 
+law may be written in covariant form, but its validity must be tested by 
+experiment. 
+
+Consider a general tensor of second rank 
+
+
+and therefore 
+
+
+TP = ASB 
+We can write it as a sum of 3 parts which are themselves tensors. First 
+we can Separate it into the symmetric and antisymmetric components 
+
+
+1 
+
+
+TH! (r" 47) + rh Tey 
+
+
+cgi ye 
+
+
+126 LECTURES ON ELECTRODYNAMICS 
+
+
+S” has 10 and A” has 6 independent components. This separation is 
+preserved under a Lorentz transformation since the transformation matrix 
+
+
+O79; 
+is invariant under the simultaneous interchanges uw @v and «=f. We 
+can further write 
+
+
+se = —5ese + Se 
+
+
+plo 
+
+
+where 
+100 0 
+(6) =(6,,) = 4010 0 
+001 0O 
+000 -1 
+
+
+1000 
+(5,.5") = (6) = [0100 
+0010 
+0001 
+and 
+S® = 6,,S°° 
+
+
+This separation is also invariant under Lorentz transformations. Thus 
+py Guy uy 1 UY Oo 
+T => S + A + a 6 So 
+
+
+where S” has 9 independent components, A“” has 6, and 6”’S% has one. 
+The antisymmetric part A”” can be thought of as a 4-dimensional generaliza- 
+tion of the vector product since 4-vectors B“ and C* may always be found 
+such that 
+
+A’ = BEC” — C"B’ 
+
+
+It may also be regarded as a surface vector, since the six independent 
+components are the projections on the six coordinate planes of the area 
+determined by B*’ and C”. 
+
+Another type of tensor which occasionally occurs is a completely anti- 
+symmetrical tensor of the third rank, 7“”. The components of such a 
+tensor vanish unless all three indices are different. Therefore it has only 
+4 independent components, and they can be characterized by the missing 
+index. 
+
+
+SPECIAL THEORY OF RELATIVITY 127 
+
+
+We shall later make use of the operator 0, defined by 
+0 ) ) 1 o 
+(0,) = ee tiwag tes: SS a Ct bone nN 
+Ox oy O62 c @t 
+ExercIsE 28 Prove that 0, is a covariant 4-vector. The contravariant form of 0,, is 
+defined by 
+
+
+au — 5” 6, coy = ( 0 0d 0 1 oO 
+
+
+Ox’ Oy’ dz" cc OF 
+From the two together we can construct the following scalar operator: 
+0? o? 0? 1 0 
+ox? ay? rm 
+
+
+O=0,0"= 
+
+
+25 TRANSFORMATION LAWS OF ELECTROMAGNETIC 
+QUANTITIES 
+
+
+Let us now apply the ideas developed in the last section to write Maxwell’s 
+equations in covariant form and to see how the quantities which occur 
+in it transform under a Lorentz transformation. We have 
+
+
+V:-H=0 (25.1) 
+CELL ees eee (25.2) 
+c Ct 
+V-E = 4x0 (25.3) 
+1 cE 
+Vx H--— — =4aj 25. 
+c Ct : 4) 
+
+
+Let us first consider (25.3) and (25.4). We know that (0, /) must transform 
+to (9’, j’), and that they must do so in such a way that, if the charge is at 
+rest in the unprimed system (that is j = 0) then 
+
+
+Vv 
+
+« _, Go 
+
+J) ~ 
+Cc 
+
+
+to the first order in v/c. We are using the subscript 0 to indicate quantities 
+measured in the rest system. Now the total charge | o dV must also be an 
+
+
+invariant. We would meet with great difficulties if this were not so. Since 
+
+
+128 LECTURES ON ELECTRODYNAMICS 
+
+
+the volume contracts by the factor vi — v?/c?, we must have 
+' @ 
+oS 
+wi —v?|c? 
+
+
+Thus @ transforms like t, and so we are led to make the guess that (j, 0) 
+form a contravariant 4-vector j”. Then 
+
+
+(j*)’ = Gis)’ = viz + Bro 
+G7) =) =h4 
+
+(7*)’ = (i)! =i: 
+
+(i*)’ = 0' = yo + Brix 
+
+
+This transformation law guarantees both the invariance of the total charge 
+and the reduction to correct values for low velocities. 
+
+The same argument may be given in another way. (j,@) satisfy a con- 
+servation law 
+
+
+—-=4+V-j=0 (25.5) 
+
+
+which must be covariant under Lorentz transformations, and this is the 
+case if (j, 0) form a contravariant vector since then (25.5) can be written as 
+
+
+ej” = 0 (25.6) 
+
+
+Thus the right sides of (25.3) and (25.4) form a contravariant 4-vector. 
+The left sides have differential operators ¢@,, so that the simplest way of 
+writing the equations in covariant form is 
+
+
+be? 
+
+
+0,F!* = 4qj" (25.7) 
+
+
+Since only 6 quantities E, H occur on the left, we suspect F,, to be an 
+antisymmetric tensor. To find F,, in terms of E, H let us introduce the 
+potentials A and @ such that 
+
+H=VxA 
+
+
+Then (25.1) and (25.2) are satisfied identically. A, g are not uniquely 
+
+
+SPECIAL THEORY OF RELATIVITY 129 
+
+
+determined by these equations since 
+
+
+A’=A4+VA 
+rae _1 6A 
+c Ot 
+
+
+where A is any scalar function, give the same value of E and H. We guess 
+that A, » form a 4-vector, and from the fact that 
+
+
+A, =A,+0,A 
+p=p — O4,A 
+
+
+We see that they form a contravariant 4-vector, ¢“. It may be noted here 
+that when we obtain the transformation laws of the potentials, the whole 
+problem of finding the field of a moving charge reduces to that of finding 
+it for a static distribution, and then applying a Lorentz transformation. 
+
+
+Consider the equation 
+O,Pu — 99, = Fy, (25.8) 
+
+
+Replacing the derivatives of the potential by the field quantities, we get 
+Fy, = —F,, = A, 
+Fi; = —Fy, = —H, 
+Fy3 = —F32 = H, 
+Fy, = —Fig = —Ey 
+Fy, = —Fy4 = —E, 
+F43 = —Fy, = =r 
+and writing F,,, in matrix form we have 
+
+
+y= 
+“(0 oH =H, E 
+
+Rosle. FRE Ais (25.9) 
+ye H, -H. 0 E, 
+SF ok Beso 
+
+
+* 
+
+
+< 
+
+
+Raising both indices to F” gives the same matrix except that the signs 
+of E,, E,, E,, are altered. If we put this value of F* in (25.7) we obtain 
+
+
+130 LECTURES ON ELECTRODYNAMICS 
+
+
+Maxwell’s equation. For example for ~ = 1, we have 
+OF 32 OF!? 1 OF'* 
++ += 
+oy Oz c dt 
+
+
+= 47j, 
+
+
+which is just 
+
+
+oy oz c at 
+
+
+The other set of Maxwell’s Eqs. (25.1) and (25.2) can also be written in 
+covariant form. 
+V-H=0 
+written in terms of F,,, is 
+
+
+0, F23 + 02F3; + 03F,2 = 0 
+
+
+Note that the Index 4 is missing and that the indices 1, 2, 3 are cyclically 
+permuted. Let us write an analogous equation in which the index 1 is 
+missing. 
+02F 34 + 03F 42 + O4F23 = 0 
+This is the same as 
+CE, = Oky + L oH. = 
+oy Oz c at 
+
+
+(= F+vxe) =0 
+c Ot 2 
+
+
+0 
+
+
+which is just 
+
+
+Thus (25.1) and (25.2) may be written in the form 
+Y 6,Fiy = 0 (25.10) 
+
+
+cycl. perm. 
+where yp, A, v are all different. This is a completely antisymmetric tensor of 
+third rank and is equivalent to a 4 vector. We can write the equation as a 
+divergence of a tensor by introducing the dual of F,,. The dual G* of a 
+tensor F,,, is defined as 
+Cee aaa (25.11) 
+
+
+where e*“” is the antisymmetric unit tensor of the fourth rank. Its com- 
+ponents vanish unless all 4 indices are different, and the nonvanishing 
+components equal +1 or —1 according as «Buy form an even or an odd 
+permutation of 1, 2, 3, 4. In terms of G*? Maxwell’s Eqs. (25.1) and (25.2) 
+can be written 
+
+6,G* = 0 (25.12) 
+
+
+SPECIAL THEORY OF RELATIVITY 131 
+
+
+To see this we make use of the fact that 
+
+
+eobuy = grb aa errbu 
+
+
+and hence 
+4G" = ie” OF, 
+
+
+Buy "B B 
+(ere 4 oP + BPH) ALF, 
+
+
+so aE + 0,F 5, + 0,F.) 
+Each of the four independent values of « leads to one of the Eq. (25.10) 
+
+
+which have already been shown to be equivalent to (25.1) and (25.2). 
+If we introduce the complex tensor 
+
+
+K% = Fe ap G* 
+then the whole set of Maxwell’s equations can be written 
+0,K™ = 4nj" (25.13) 
+
+
+The real part gives (25.3) and (25.4), and the imaginary part gives (25.1) 
+
+
+and (25.2). 
+From the tensor equations we find the following transformation equations 
+
+
+for E and H: 
+
+
+E| = E, 
+
+H) = H, 
+
+E' = rf rae Ht (25.14) 
+c L 
+
+H, = 7H ee eh 
+c L 
+
+
+We have an indication here that the force on a moving charge is 
+
+
+edE+ A x HS 
+Cc 
+We shall see later that this Lorentz force can be obtained from the electro- 
+
+
+static force. To verify these formulae, we have 
+
+
+Ey = Fig = Of 04 F xp 
+
+
+132 LECTURES ON ELECTRODYNAMICS 
+
+
+and using the value of the matrix Q (24.1) obtained in section 24, we get 
+E, = yOLF 1, = yBO4F 4, 
+= Fig t yp? Fai 
+= E, 
+EXERCISE 29 Check the rest of the transformation formulae for E and H. 
+
+
+Let us now apply the above formulae to find the field of a uniformly 
+moving point charge, and check the results obtained in section 11. Let a 
+charged particle be at rest in the primed system, and denote its position 
+in this system by r, = (x, y,, 2). We shall denote the point where we 
+want the field by r; = (x‘, y’, 2’). Then 
+
+
+H’ = 0 
+EK’ = e(r, ae a) 
+Iro = F.|? 
+
+
+To find the field in the unprimed system, in which the particle is moving 
+with velocity v along the positive x axis, we transform the two sides of the 
+equation. For the right side, 
+
+x’ = y(x — vt) 
+
+
+you y 
+z=2 
+For the left side 
+H, = H' 
+Iro — rel? 
+Vv , 
+H,=+y-xE 
+c 
+* x (5 — 1) 
+= +ye é 
+Iro — rel? 
+E, = ve, 
+
+
+23 ey(To — Te), 
+Iro — rel? 
+
+
+SPECIAL THEORY OF RELATIVITY 133 
+
+
+Let ; 
+R* = - (To ae a) 
+Y 
+a ea HP oi)? Gy ~( é za} 
+Y 
+=. {(xo — Xe + vt), (Yo _ Ve)s (Zo = Ze)} 
+Then 
+_ eR _ eR : 
+
+Bape pe UP) (25.15) 
+and 
+
+H="xE (25.16) 
+
+c 
+
+
+These equations are seen to be identical with (11.6) and (11.7). We note 
+that E is perpendicular to H, and where v is close to c we have |H| ~ |E]. 
+Moreover, if E, is the magnitude of the electric field at a given distance 
+from the saiticles in the particle’s “equatorial plane” and E, is the magnitude 
+of the field at the same distance along the “polar axis” (i.e., the line of 
+motion) then 
+
+E, =(1- p?)3/2 E, 
+
+
+Therefore the electromagnetic field of the particle approaches more and 
+more to that of a radiation field as v approaches c. 
+
+
+26 APPLICATION TO THE METHOD OF VIRTUAL QUANTA 
+
+
+Consider an atomic system of dimension d, bombarded by a stream of 
+charged particles with velocity approaching that of light. When a particle 
+passes by, the effect is much the same as if a pulse of electromagnetic 
+radiation passed by. There is this difference, that in the case of particles 
+there is no phase relation between the effects of different particles while 
+there js a relation for the radiation field. But in such phenomena as ab- 
+sorption, this does not make any difference. Thus by making a Fourier 
+analysis of the perpendicular component of the particle field, we can find 
+what kind of electromagnetic waves it is equivalent to, and if we know what 
+happens when the atomic system is irradiated by electromagnetic radiation 
+of the corresponding frequencies, we can easily find what happens when 
+the same system is bombarded by high energy charged particles. 
+
+
+134 
+
+
+LECTURES ON ELECTRODYNAMICS 
+
+
+We shall proceed to derive a formula giving the number of quanta of 
+
+
+radiation equivalent to the passage of a single particle. From (25.15) we 
+have 
+
+
+eR, 
+L 
+
+
+ae 
+
+
+ac 
+
+
+when 0, stands for the derivative in the perpendicular direction. We may 
+therefore write 
+
+
+fo 0] 
+
+
+E, a | Ee" dy 
+
+
+where » 
+e —2nty 
+By = 8, |e ‘dt 
+an 2nt%{x9~¥,) Pai ad ‘) dt 
+Je('- A =) Pes 
+v 2 
+with 9? = y? +z? so that 0, = a 
+de 
+Leté = aay _ Soa) Then 
+v 
+y in —Hs 
+E,, a ar 5, e °a& (26.1) 
+G we (=) « 
+vv 
+Now =m 
+
+
+SPECIAL THEORY OF RELATIVITY 135 
+
+
+where Ky is the Hankel function of zero order. For small values of the 
+
+
+argument, 
+K,(z) x —In = 
+weet) 
+
+
+I 
+
+
+K0(z) ed Le ae 
+
+
+2z 
+
+
+and for large values of z, 
+
+
+Since we are only interested in the value of this function for small value 
+of o, we shall make the approximation 
+
+
+SK. ( zal e)s In (=e) 
+yv yv 
+
+
+This will be good up to distances such that 
+
+
+v 
+iol 
+A 
+
+
+and for o greater than this value, we take Ky to be zero. Thus we set 
+
+
+Fie in & e) 
+
+
+v do yu 
+2 Be patra) 1 (26.2) 
+v 0 
+
+
+fore up to x vv and £,, = Oforo = ee 
+TV atv 
+
+
+If J, denotes the amount of energy per frequency range, per area, when 
+a particle passes by at a distance g, then 
+
+
+J,(Q) dv = 2“ |E,,|? dv 
+4n 
+
+
+The factor 2 comes from the fact that in J,, v is considered to take only 
+positive values, while in E£,, it took both positive and negative values. 
+Putting in the value forE,, , we obtain 
+
+2e7c 
+
+mvp? 
+
+
+dy 
+
+
+J,(Q) dv = 
+
+
+136 LECTURES ON ELECTRODYNAMICS 
+
+
+Since our analysis holds only when v ~ c, we shall replace v by c. The 
+total energy in frequency » is 
+
+
+R, dv = 2ndy | J,(0) e do 
+
+
+2 
+54 Eg ho (26.3) 
+c d 
+
+
+We have taken the limits of the integration as d and kg, where 09 = ~ d 
+my 
+
+
+is either the size of the bombarding or the bombarded system, whichever 
+is larger, and k is a factor of order unity. Since these values are not known 
+exactly, they bring in an uncertainty which limits the accuracy of our 
+calculation. However since these quantities appear as the argument of a 
+logarithmic function, the result is rather insensitive to the error in them. 
+We can write 
+R, dv = hwN, dv 
+
+
+where N, is the number of quanta of frequency »v in the field of one particle. 
+
+
+Thus 
+N, dv = ae}, In doe dy (26.4) 
+athe v 2nd 
+
+since A = c/v. For most problems, N, is of the order of a per cent. This 
+means that about a hundred particles are required to give the same effect 
+as a pulse of light with one quantum in each frequency range, up to a 
+certain maximum, ?,,,x- 
+
+We will now give applications of the formula (26.4) to some specific 
+problems: 
+
+
+1) Photodisintegration of nuclei. The cross section for disintegration of 
+a beryllium nucleus by y-rays is zero for y-ray energies up to about [1.5 MeV 
+and above this it is about 3 x 10-78 cm?. For electrons with 2 MeV] 
+energy we have 
+
+yx5, dxh/me x 10-'°cm 
+
+
+Therefore \ 
+N, ~ 
+100v 
+yMev 
+ye f & 
+100 » 
+
+
+SPECIAL THEORY OF RELATIVITY 137 
+
+
+and a6 
+Setectron ~ 10- cm? 
+
+
+A closer estimate may be obtained if G,noton is known as a function of ». 
+Then 
+
+
+E/h 
+
+
+= y 
+Oetectron Sav | Ophoton@? N, 
+vo 
+
+
+Actually, ofnoton has the following general shape 
+
+
+v 
+photon 
+
+
+Vy Vv 
+
+
+2) Bremsstrahlung from very high energy electrons. This is the calculation 
+of the cross-section for radiation by an electron accelerated in the field 
+of a nucleus of charge Ze. The straightforward calculation is very difficult 
+if the electron has high energy, and we resort to a trick. We make a Lorentz 
+transformation to a system in which the electron is at rest. Then the nucleus 
+goes by the electron at a high velocity, and to the electron, the field of the 
+nucleus will appear as a highly contracted electromagnetic wave pulse. 
+This wave will be scattered by the electron, and the electron will suffer a 
+compton recoil. If we transform back to the system in which the nucleus 
+is at rest, the recoil of the electron becomes its deflection, and the scattered 
+pulse becomes the Bremsstrahlung. 
+
+Let » be the frequency of a virtual quantum, and » the frequency of 
+the corresponding scattered quantum. » is a function of v9 and the angle of 
+scattering 0. v,, the frequency of the radiated quantum, is the Lorentz 
+transform of ». If we let 
+
+
+hy hi 
+f=— 
+
+
+mc 
+
+
+II 
+— 
+| 
+fe) 
+io} 
+rn 
+S 
+
+
+y 
+
+
+x = cos6 
+
+
+138 LECTURES ON ELECTRODYNAMICS 
+
+
+then the formula of the Compton effect is 
+
+
+The cross section for scattering of photons by free electrons is given by the 
+Klein-Nishina formula 
+
+
+4 1 2452 
+We ee Leas TI 
+m*c* (1 + fy)? 1 + fy 
+
+
+It is uncertain as to what value should be taken for d, but it turns out that 
+the correct value is the Compton wave length A/mc. 
+
+
+Exercise 30 Assuming y < 1, calculate the cross section for Bremsstrahlurng by this 
+method, and show that it gives the Bethe—Heitler formula 
+
+
+4e? Ze* = 2y(1 — 5) 4i1-s d 
+Ge me Ss errs . 
+
+
+o= 
+
+
+Ss 
+where 
+
+
+3) Pair formation by y-rays in a nuclear field. As a consequency of Dirac’s 
+electron theory, an electron-positron pair can be produced when two 
+quanta of radiation collide. The cross section for pair formation when the 
+two photons have just enough energy to create a pair is 
+
+
+Using the method of virtual quanta, we can find the cross section for pair 
+formation when a very high energy y-ray passes near a nucleus. We trans- 
+form to a Lorentz frame in which the frequency of the y-ray is » = mc?/h. 
+The nucleus is then traveling with velocity v ~ c, and its field will contain 
+virtual quanta of frequency » = mc?/h. The interaction between the y-ray 
+and the virtual quanta will result in pair production. It is found by this 
+method that the probability of making pairs by a single y-ray of energy 
+about 10° e.v. in the field of a nucleus is a few per cent of that by two 
+y-rays of energy ~mc?. 
+
+
+SPECIAL THEORY OF RELATIVITY 139 
+
+
+27 APPLICATION TO THE THEORY OF THE CERENKOV EFFECT 
+
+
+We saw in the last section (26.1) that the Fourier component of the trans- 
+verse electric field of a charged particle moving along the x-axis has the 
+factor 
+
+
+2nirx 
+v 
+
+
+Thus it is equivalent to a wave motion with propagation vector 
+
+
+v v 
+
+
+k,=—-—> 
+
+
+v c 
+Hence 
+
+
+2 2 2 2 e 
+
+=ki+k+ki>— 
+
+c2 
+
+For an electromagnetic field in free space, k* = v?/c?, and this is the 
+
+reason no matter how large the energy, a particle moving uniformly in 
+
+free space cannot radiate. The field has too much momentum for its energy. 
+
+However, in a dielectric the propagation vector of an electromagnetic 
+wave Satisfies the relation 
+
+
+k? = » m= index of refraction 
+
+
+and this relation can be satisfied by high energy electrons. The radiation 
+
+
+from them has been observed by Cerenkov. 
+Let us consider an electron moving along the x-axis with velocity v. 
+Then the current j is parallel to v and is given by the relation 
+
+
+fe = (x — vt) (y) (2) (27.1) 
+c 
+
+
+In section 7 we derived the expression (7.11) for the total radiation emitted 
+in frequency range dv and in solid angle dQ. In this formula, » is the circular 
+frequency, and, if we write it in terms of the actual frequency, we get 
+
+
+{le dt {i x n] elt zea)? ogy 
+
+
+Qn 
+
+
+Bid 
+
+
+dQ, dv = dv dQ 
+
+
+The formula for the case where the system is immersed in a dielectric of 
+refractive index n is obtained by replacing c by c/n in the two places where 
+c occurs in the above formula. This follows from the fact that the wave 
+equation satisfied by E and H in a medium with dielectric constant « and 
+
+
+140 LECTURES ON ELECTRODYNAMICS 
+
+
+permeability 1, is 
+
+
+2 
+& OE og 4n Oj, 
+c2 Ot? c Ot 
+
+
+so that the velocity of the propagation is clV einstead of c, and from the 
+definition of n, this equals c/n. This justifies the substitution of c/n for c in 
+the exponential. Further, in the equation 
+
+1 oH 
+
+——+VxE=0 
+
+c Ot 
+the differentiation with respect to the space coordinates brings down a 
+factor n/c instead of 1/c so that 
+
+|H| = 7 |E| 
+Now the Poynting vector 
+S=—ExH 
+4n 
+is the same in a dielectric as in free space since the tangential components 
+of E and H are continuous at the boundary of a dielectric, and the normal 
+flow of energy at the boundary must be continuous. This means that n 
+must occut as a factor in (27.2), and so we replace c by c/n there. 
+Let us specify the direction of the radiation by the angles ¢, 6, with 
+
+respect to the x-axis. Then if « = cos 6, we have 
+
+
+. —2ai fy aoe 2 
+dQ,dv = dvdgdx id | drdt[j x nje - ( PTE ) 
+c 
+and using (27.1), we get 
+2 24,2 
+1Oae ana — (1 — a2) {J/? 
+c c 
+
+
+where 
+[= Atif dxdydzdt 6(x — vt) d(y) 6(z) pr 2 (t= Dx) 
+The y and z integrations can be carried out immediately to give 
+
+
+-—2ni (+«- ub xa) 
+c 
+
+
+I= {} dxdt0(x — vi)e 
+
+
+Then the x integration gives 
+
+
+r= [dre tele") 
+
+
+SPECIAL THEORY OF RELATIVITY 141 
+
+
+If we take the integral over ¢ from — © to oo, we would get 
+
+
+==9(! - 2a) 
+y c 
+
+
+and if this value is substituted in dQ, and the total radiation calculated, 
+we would get an infinite value. This is to be expected since it means that 
+the electron radiates for an infinite time. Instead we shall take the limits 
+of integration to be from —T to +T where T > 1/v. Then 
+
+
+T 
+ee | net (tm) 
+=T 
+
+
+where 
+nv 
+a= 2nv— 
+. . c 
+This gives 
+2sina{a— pis T 
+PS 
+c 
+Ga, 
+and ig 
+
+
+Pee sin? a(«— = T 
+dQ,dv = dvdpdx See (ig) Se 
+
+
+3 2 
+c c 
+a2 -_ 
+nv 
+
+
+Since aT > 1, this has a steep, narrow maximum at « = c/nv, and is 
+negligible everywhere else. Hence the radiation will be confined to the cone 
+a = c/nv. 
+
+The total radiation is given by 
+
+
+2n 1 
+
+
+Sse sin? aa — Sr 
+
+O,dv = dv | dg ji ea 
+zo 
+i a nv 
+
+
+2 24,2 2 2 sinta(a—<)r 
+=e 162 oi nv (: 20s ) iy nv 
+c 
+
+
+—-@ 
+
+
+142 LECTURES ON ELECTRODYNAMICS 
+
+
+since the integrand is only appreciable at « = c/nv. Now 
+
+
+ao 00 
+3 c 
+sin? a( « — — 7 = 
+nv sin? x 
+dx = d. : 
+5 oF aT x 
+a? | « — — 
+nv 
+-0 —o 
+=—2 
+a 
+
+
+Therefore 
+
+
+Q,dv = dy 
+
+
+16273 e20?nv? (: a c? ) T 
+c 
+
+
+Thus the rate of radiation of energy of frequency » is 
+
+
+22 2 
+R= SR c ) 
+a 2 
+
+
+and the number of quanta of frequency v emitted per unit path length is 
+
+
+_ 4n?e? 7 ce 
+c7h nr? 
+The number of quanta in the visible region (4 x 10!* Hz < » < 10° Hz) 
+emitted per unit length by an electron with v/c = 0.95 passing through 
+water (n = 1.3) is 
+dN 2n 6: vo! 1 ) 
+
+
+‘dl 1373-10!°\ (1.3)? - (0.95)? 
+
+
+~ 400 quanta per cm 
+
+
+SPECIAL THEORY OF RELATIVITY 143 
+
+
+28 TRANSFORMATION OF ENERGY AND MOMENTUM 
+
+
+We shall prove that if p is the momentum and E the energy of a charged 
+particle, then (p, £/c) form a 4 vector, and it will follow from this that 
+
+
+E? — c*p* = invariant 
+
+
+We shall also show that 
+
+
+E= Myc? 
+V1 - 
+MoV 
+
+
+J1 — B? 
+where mo is the rest mass of the particle. 
+
+
+We have seen in section 5 that for an electromagnetic field, we have the 
+conservation laws 
+
+
+OW aS soge (28.1) 
+dt 
++ divT = —{0E + jx (28.2) 
+t 
+where x : 
+wif tH 
+82 
+S=“ExH 
+4x 
+] 
+G = —_ExH 
+47c 
+] ] > % 
+Ty, = — — {E,E, + H,H, — —6,(E? + H?) 
+4a 2 
+
+
+It seems that (28.1) and (28.2) should be expressible in covariant form, 
+and we shall try to do this. We want to write the equations in terms of the 
+quantities 
+
+j* = Gj, 0) 
+
+
+F,, = (E, H) 
+f, = oF, + [j x Hi); 
+
+
+Let 
+
+
+144 LECTURES ON ELECTRODYNAMICS 
+
+
+and consider 
+Sa = Fol (28.3) 
+We have 
+Si = Hj, — A,j, + E,0 = fy 
+
+
+ta — — Hj, + Hj, of E,o =f, 
+ts = A, j, = Hj, + E.o =f, 
+Ss = — Ey). — £,j — £.j, ami —-E:-j 
+
+
+Next consider the equation 
+
+
+4nT* = F“F, — = oF Fp (28.4) 
+We have 
+4nT4 = Fury + F“-F,, + F*F,, — FYE 
+= —E? — E; — E? -5uP — E?) 
+a pe HH? 
+2 
+and hence 
+T, = -> W 
+Similarly 
+4nTY = F*?F,, + F¥F,, 
+= £,H, — E,H, 
+= [E x H], 
+whence 
+Ti = ay = cG, 
+c 
+Finally, 
+
+
+4aT} = FMF + FPR + PME LPR, 
+=H? +H} -E2 - uP — E?) 
+
+
+1 
+sick + Ey + E? — H? + H? + H2} 
+
+
+SPECIAL THEORY OF RELATIVITY 145 
+
+
+which gives 
+Ti = Tres 
+and 
+4nT? = F23F,, + FF, 
+
+
+= —H,H, — E,E, 
+which gives 
+Ti =T,x 
+
+
+etc. If the other components are calculated in a similar manner, we find 
+
+
+> 
+Ry 
+" | 4(e2 + H?)— F2— H? — E,E,—H,H, — E,E, — HH, — E,H, + E,H, 
+4nTeé =!) E,E, — HH, 4(E? + H?)— E?— HH? — E,E, —H,H, — E,H,+E,H, 
+ns 
+— E,E, — H,H, — E,E, — H,H, (Ee? + H?)— E2— HH? —E,H,+E,H, 
+E,H, — E,H, E,H, re EH, E,H,— E,H, rae 4(E? =F H?) 
+(28.5) 
+
+
+It can also be written in the form 
+
+
+v= 
+& | Txx Try Tix —cG, 
+T" = T xy Tyy Ty, —cGy (28.6) 
+y ae yas Ty —cG, 
+
+
+cG, cG, cG, —W 
+
+
+T® is traceless since 
+1 
+
+
+4nTl = FMF rs : 4F*F = 0 
+Hence for an isotropic distribution of radiation, 
+
+
+1 
+ee alee 
+
+
+146 LECTURES ON ELECTRODYNAMICS 
+
+
+It is now easy to see that the equation 
+0,7% = -f, (28.7) 
+is the covariant expression of (28.1) and (28.2). For » = 1 we have 
+
+
+arr, aG, 
+
+
+eels gre be 
+La tJ at Si 
+and for v = 4, 
+alee S. =E-j 
+c c Ot 
+
+
+Thus (28.7) is the covariant form of the conservation equations. 
+
+Let us suppose that we have some electromagnetic radiation in a finite 
+region of space so that E and H exist in this region but are zero everywhere 
+else. Then the integrals 
+
+
+E= | Tide 
+cp, = [ Tia 
+
+
+exist. We shall show that (p, E/c) = p, is a covariant 4-vector if there are 
+no charges in the region where the fields are not zero. 
+The proof is as follows: We have 
+
+
+6,7; = 
+everywhere, and 
+T’ =0 
+
+
+on the boundary of the region under consideration. Let A’ be a vector 
+such that 
+
+6,A" = 0 
+everywhere and 
+
+
+A* =0 
+
+
+on the boundary. Applying Gauss’s theorem to the 4-dimensional diver- 
+gence of a 4-vector, we obtain from 
+
+
+Tf [[ eA" dx! dx? dx? det = 0 
+
+
+[{f 4oormn &S = 0 
+
+
+that 
+
+
+SPECIAL THEORY OF RELATIVITY 147 
+
+
+where S is the 3-dimensional surface in the 4-dimensional volume. Let us 
+choose this volume to be a cylinder parallel to the x* axis. Then the base is 
+the 3-dimensional volume in ordinary space. The cylinder is to be bounded 
+by a section x* = constant and by another section x* = constant, where 
+x*’ denotes the time measured by an observer on a coordinate system 
+moving with respect to the original system. The normal components are 
+— A* and (A*)’ on these surfaces, and zero on the walls of the cylinder. 
+Hence we have 
+
+
+= iy A4 dx! dx? dx3 + fff (A4)' (dx!) (dx?)’ (dx3)' = 0 
+That is 
+If A* dx! dx? dx? = invariant 
+
+
+Now if we let 
+b’T? = A* 
+
+
+where Db” is an arbitrary, constant vector, we see that the conditions on A” 
+are satisfied, and hence 
+
+
+b’ if T¢ dr = invariant 
+
+
+and since b” is arbitrary, we may conclude that 
+
+
+[J [ra 
+form a 4-vector. 
+
+
+Let w and 9 denote the momentum and energy densities of a charged 
+body. We know that at low velocities, they satisfy the following equations 
+
+
+We shall generalize the meanings of w and 9 so that these equations hold 
+for all velocities. Let us integrate these equations over the whole body. 
+
+
+148 LECTURES ON ELECTRODYNAMICS 
+
+
+Then 
+
+
+On [tine 
+t 
+
+
+Es [end 
+dt 
+
+
+where p and E are the total momentum and energy of the body. Now 
+
+
+pee ee ee eee 
+y 
+aia 
+ai ds 
+
+
+where dro is the proper volume element and s is the proper time. Proper 
+quantities are quantities measured in the co-moving system, and hence are 
+invariants. Thus 
+
+
+Bm | tty =F 
+ds 
+dE 
+—= | (f-:v)dr 
+- J ) dry 
+
+
+We have seen that f and —(E- j) together form a covariant 4 vector, and 
+since 
+
+
+(E-)) ="(-¥) 
+c 
+
+
+we see that 
+d 
+“&P and u ca 
+ds c as 
+
+
+form a contravariant 4-vector F’. This means that, with a proper choice 
+of energy zero point, p and E/c vary contravariantly, and we can write 
+
+
+ro(ol) 
+c 
+as a contravariant 4-vector. 
+We have introduced 3 different forces and we shall summarize their 
+properties: 
+
+
+SPECIAL THEORY OF RELATIVITY 149 
+
+
+1) f*=(f, E-j), where f is the force density, is a contravariant 4-vector 
+and equals the time rate of change of momentum density for uw = 1, 2,3 
+and 1/c times the time rate of change of the energy density for u = 4. 
+
+
+2) F* =| f*"dro, where dry is an element of proper volume, is a con- 
+travariant 4-vector which equals the proper time rate of change of momen- 
+tum for « = 1, 2, 3 and |/c times the proper time rate of change of energy 
+for uw = 4. 
+
+
+3) ¥ =~/1 — f’F is the actual force and equals the time rate of change 
+of momentum. It is not a part of a 4-vector. 
+
+
+From the fact that p and E/c form a contravariant 4-vector it follows 
+that 
+P,P" = invariant 
+
+
+Now suppose we transform to a system such that p changes by Ap. Then 
+
+
+a relation which is also necessary for the wave-mechanical interpretation 
+of matter. Therefore 
+
+
+Now we know that for v/c small 
+
+
+Pi © Mo; 
+Hence 
+
+E 
+
+— Mp 
+
+c 
+and 
+
+2 
+Bl hip sone? (28.8) 
+
+
+150 LECTURES ON ELECTRODYNAMICS 
+
+
+Since the quantity in the final equation is an invariant we may now generalize 
+to arbitrary velocities: 
+
+
+ae = or v= Moc 
+moc? > 
+E => —____—____- = yYMoc (28.9) 
+V1 = v2/c? 
+V1 = v?{c? 
+Thus if e is the total charge of the particle, the equations of motion are 
+d 1 
+—(myv) = e<E+-vxH (28.11) 
+dat c 
+d 
+ao? =eE-y (28.12) 
+t 
+
+
+EXERCISE 31 In section 6 we found the rate of radiation from a charge in the proper 
+reference frame. That is: 
+
+
+dEo. i 2e? 5 
+> -— — Vo 
+dty 3 (ota 
+From the transformation properties of E and t, we see that dE/dr is an invariant. Hence 
+
+
+GED Dero s5 
+—— — — Vo 
+dt 3¢3 
+Calculate vZ in terms of the variables of the moving system, and show the rate of radiation 
+from a moving charge calculated in this way agrees with (13.1). 
+
+
+For a particle in a uniform magnetic field, y is constant and 
+
+
+e 
+vxH 
+
+
+Moyc 
+Thus for a plane motion, the trajectory is a circle of radius @ where 
+
+
+1 eH 
+
+
+Q Moycv 
+
+
+This relation may also be expressed in the useful form 
+
+
+Ho = 2 (28.13) 
+e 
+
+
+SPECIAL THEORY OF RELATIVITY 151 
+
+
+The transformation formulae for the mass and momentum of a particle 
+can also be obtained from purely kinematical reasoning. We consider the 
+collision of two particles, and demand that in the collision, both energy 
+and momentum be conserved for an observer in any system. The required 
+result can be obtained by considering the simple case of the head-on 
+collision of two perfectly elastic particles with equal rest mass. Then there 
+is one reference system in which the particles have equal and opposite 
+velocities, say u and —u before the collision, and after collision separate 
+with velocities —u and u. For an observer moving with velocity —V with 
+respect to this system and parallel to the direction of motions of the particles, 
+the initial velocities v, and v2 are given by 
+
+
+In the first reference frame, there is some instant during the collision 
+when the two particles are in contact and are at rest. Hence since the 
+effective (or inertial) mass m can depend only on the absolute value of the 
+velocity, we have 
+
+2m(u) = My 
+
+
+m(u) u + m(u)(—u) = 0 
+
+
+In the second reference frame, at some instant the two bodies are together 
+and have a common velocity V; hence 
+
+
+m(v,) + m(v,) = M 
+m(v,) 0, + m(v2) v2 = MV 
+
+
+In a sense, we are defining mass by these equations in such a way that it 
+is conserved. We are considering mass instead of energy as it is more 
+convenient to do so, and we shall show later the connection between mass 
+
+
+152 LECTURES ON ELECTRODYNAMICS 
+
+
+defined in this way, and energy. We now have 
+
+
+m(v;) 0, + m(v2) v2, = {m(v;) + m(v2)} V 
+
+
+fed _mled_) 4 [moo 
+Ja+e ood bie 
+c c c 
+
+
+= V{m(v,) + m(v2)} 
+
+
+This equation is satisfied by 
+
+
+uV 
+m(v,) _ c? 
+m(v2) 1 uV 
+_ ms 
+since if we write 
+m(v,) as m(v2) a 
+1+ uv 1 — uv 
+c? c? 
+
+
+and substitute in the equation, we get 
+
+
+uk —k)+V(kK+k) = re (1 le 1 =) 
+Cc 
+Or 
+2Vk = 2Vk 
+Now 
+jo age Vr 
+2 2 
+. a(i+ 2) 
+c? 
+c2 + 2Vut 
+
+
+SPECIAL THEORY OF RELATIVITY 153 
+
+
+Therefore sf? p2 
+Vu c? a) 
+
+
+Therefore 
+2 
+\i-3 
+
+
+le. | 
+— ——— Hox = ~— a (in) 
+
+
+Plate 
+
+
+perimentally by Bucheret. A combination of a uniform electric field E and 
+magnetic field H, which are perpendicular to each other and to the direction 
+of motion of the electrons, selects electrons with a definite velocity v given by 
+
+
+H 
+ee o 
+
+
+c 
+
+
+154 LECTURES ON ELECTRODYNAMICS 
+
+
+The momentum of these particles is then found by measuring the deflections 
+in the same magnetic field. We have from (28.13) 
+
+
+eHo = mvc 
+and therefore 
+eo H? 
+m= 
+CE 
+
+
+The difficulty in the experiment is to prevent electrons which are scattered 
+at the slits and in the condenser from coming to the plate. 
+
+
+29 INERTIA AND ENERGY 
+
+
+Let us now consider the relation between mass and energy. By mass here 
+we mean inertial mass. We shall show that for a consistent description, by 
+different observers, of an emission process, we must have 
+
+
+A 
+Age oe (29.1) 
+Cc? 
+The question whether we can write 
+no 
+n=— 
+Cc? 
+
+
+depends on whether we can convert the whole mass of a system into some 
+
+
+form of energy. 
+Consider some emission process, say the radiation from a hot body, or 
+the 6 emission from a radioactive nucleus. We shall assume isotropic 
+
+
+radiation in the rest system. Then 
+op = 0 
+If the process is observed from a moving system, we have 
+OE’ = y(6E + v dp) = y6E 
+
+
+dp’ = yop + ~ y 6E = $s OF” 
+Cc c? 
+
+
+The change in p’ means a change either in m or 2, but since v is constant, 
+m must change. 
+E' 
+
+
+6p’ = 6(m'v) = vb = pene 
+c2 
+
+
+and hence 
+
+
+, 
+
+
+sm’ = of 
+
+
+2 
+
+
+(29.1) 
+c 
+
+
+SPECIAL THEORY OF RELATIVITY 155 
+
+
+It must be pointed out here that the mass considered above is inertial 
+mass, and the mass usually measured is gravitational mass. However, the 
+EGtvés experiment has shown that these two masses are equivalent to a 
+very high degree of precision. 
+
+The relation (29.1) between energy and mass has been checked experi- 
+mentally in several cases. We know that positrons have the same rest mass 
+as electrons and at low velocities the former combine with electrons to 
+form y-rays. The energy of the y-rays have been measured and shown to 
+agree with the value predicted by the theory 
+
+
+MoC? 
+h 
+
+
+to about one per cent. There is no factor of 2 since two particles of mass mo 
+give rise to two quanta of this energy. This is necessary in order that 
+momentum be conserved. We note that in this process the whole mass is 
+converted to radiation energy. The inverse process does not give a good 
+check since the curve giving the relation between the y-ray energy and the 
+number of particles produced does not have a sharp threshold at the 
+minimum energy required for pair production. 
+The reaction 
+
+
+2 He (8 MeV) 
+y (17.6 MeV) + 2 He (100 KeV) 
+
+
+has given quite an accurate check of (29.1). 
+
+
+Li’ + Hi= 
+
+
+30 CONSIDERATIONS IMPORTANT FOR THE QUANTUM THEORY 
+
+
+In this section we shall give a few considerations to show how the classical 
+electromagnetic theory developed in this course has to be modified when 
+quantum mechanical effects are considered. 
+
+I We have seen in section 18 that if H(p, x) is the Hamiltonian function 
+for a particle with charge e when there is no external field acting on it, 
+then its expression when there is a field is given by 
+
+
+HW =p + H(p~ £4,3) 
+c 
+
+
+so that a 
+p=m+—A 
+c 
+
+
+156 LECTURES ON ELECTRODYNAMICS 
+
+
+and we have also 
+d,., 
+— (mk) = F 
+dt 
+
+
+where F is the Lorentz force. From relativistic considerations, we have 
+
+
+from (28.8) E=H= c./ mic? — p? 
+H’ = eg + cme am (» oa fa) 
+c 
+
+
+i,=—= 
+
+
+es 
+be — | 
+| 
+ala 
+> 
+“Siena 
+N 
+I} 
+53 
+On 
+e 
+= to 
+
+
+p= moyk + —A 
+¢ 
+
+
+Also 4 
+= (my) = F 
+dt 
+Now since p, E/c and A, y both form contravariant 4-vectors, any linear 
+combination of them also forms one, and hence 
+
+
+2 
+Ge (» st a) — (E — eg)? = invariant 
+c 
+
+
+SPECIAL THEORY OF RELATIVITY 157 
+
+
+We find the value of this invariant by setting £ = H’ and using the expression 
+for H’ above. This gives 
+
+
+es 
+c? (P - <a) — (E — eg)? = —mict 
+c 
+
+
+Now this equation has not only the solution 
+
+
+eg + c. mbe? + (» — <a) 
+c 
+
+2 é : 
+
+ep —c_| moc? + (» — <a) 
+é 
+
+
+and this Hamiltonian gives the same equation of motion as H’ if the signs 
+of e and p are changed. Thus H” corresponds to the Hamiltonian of a 
+particle with the opposite charge and negative mass. In classical physics 
+we can say that this does not correspond to any reality and throw this 
+solution away; in quantum mechanics, however, it is connected with the 
+theory of the positron. These anomalous solutions (H”) are the classical 
+origin of the phenomenon of pair production. 
+
+II The oscillations of a plane wave are given by the factor 
+
+
+E= H' 
+
+
+but also the solution 
+
+
+E=H" 
+
+
+e2mitk -r—vt) 
+
+
+Since the phase must be independent of the motion of the observer, we 
+
+
+have ; : 
+k-r — vt = invariant 
+
+
+and since r, ct form a contravariant 4-vector, k, »/c must also form a 
+contravariant 4-vector. Thus 
+
+
+p = const xk 
+are covariant relations. DeBroglie wrote 
+E=h, p = hk 
+
+
+According to the quantum theory any system with well-defined E and p 
+has connected with it well-defined values of » and k. This means that in 
+making a Lorentz transformation, we get the same result whether we use 
+the Doppler effect for » or the transformation formula for E. 
+
+
+158 LECTURES ON ELECTRODYNAMICS 
+
+
+III We know from section 3 that any radiation field may be expanded 
+in terms of plane waves. Planck showed that plane waves can only be 
+excited with integral multiples of a discrete energy. Thus 
+
+
+Ey. Pao Nhy 
+
+
+where N is an integral number. Moreover Compton showed that plane 
+waves have momentum 
+Prov = Nhk 
+
+
+The energy E, in the k'" Fourier component of a field oscillator is given by 
+
+
+1 
+E, = = (Ex + Hy) 
+
+
+IU 
+and if A, is this component of the vector potential, then since 
+
+
+H=VxA 
+we have \ 
+Ex = — (Eq + 407k? Ap) 
+82 
+Let us compare this expression with the corresponding expression for a 
+mechanical oscillator of unit mass 
+
+
+We can make the following correspondence 
+E;,< p 
+A,oq 
+21k > w 
+
+
+For the mechanical oscillator, no quantum mechanical effects are observed 
+when it is highly excited. Thus in any phenomenon where a large number 
+of quanta of radiation are present, we expect classical theory to hold. 
+Roughly, this means that classical electromagnetic theory holds for low 
+frequencies. 
+
+Let us see how the classical theory breaks down. In the quantum theory, 
+we have the complementary relation between position and momentum of a 
+
+
+ticl 
+particle Ap Nps 
+
+
+SPECIAL THEORY OF RELATIVITY 159 
+
+
+For a well defined p, q is spread out, and for well defined q, p is spread out. 
+Making the correspondences, we have the complementarity 
+
+
+AE, AA, = hie 
+
+
+where the factor c comes in from the consideration of units. Since A, 
+gives rise to a magnetic field H, to E,, this expresses a complementarity 
+between E and the component of H perpendicular to it. Also, if the energy E 
+of a harmonic oscillator is fixed, p and q fluctuate. Similarly, if £,, is 
+fixed, E and H fluctuate. 
+
+In classical theory, it is assumed that E and H can be measured with 
+arbitrary precision. This is not possible in quantum theory. In the actual 
+measurement of E, we have to take a certain volume and take a certain 
+interval of time 7 and take the average. Thus 
+
+
+f= al | de dt E(r, £) 
+VT 
+VT 
+
+
+One method is to take a charged body and measure its momentum at the 
+beginning and at the end of the time interval 7. Then 
+p(T) — p(0) = eVET 
+
+
+In order that the body stay near one position, we must take the mass large, 
+and in order that its own field not modify the external field which we want 
+to measure, we must take o very small. In classical theory these conditions 
+can be fulfilled, and we can make the test bodies so feeble that we can 
+measure E and H at neighboring points without disturbing each other. In 
+quantum theory, however, this is not possible since each momentum 
+measurement brings in an uncertainty in the position such that 
+
+
+Op = h/dx 
+oVOET 2 h/bx 
+VT OE 6x = h/o 
+
+
+and for V, T, 6£, 6x to be small, o must be large. In fact, if the measurement 
+is to have any meaning, we must have 
+
+
+dx < vil? 
+
+
+Thus 
+
+
+If @ is made large, then the self-field of the test body alters the external 
+field. However, we can compensate this effect by having a similar body 
+charged with equal and opposite charge, and fixed in space at the place 
+
+
+160 LECTURES ON ELECTRODYNAMICS 
+
+
+where the field is being measured. Since there is an uncertainty 6x in the 
+position of the test body, its field will not be entirely cancelled out, but 
+there will be a dipole moment proportional to 6x. Since 6x is unknown 
+the force on the test body which is proportional to 6x is also unknown. 
+However, the constant of proportionality can be calculated, and if the test 
+body is attached to the compensating body by a spring with an elastic 
+constant equal to this value, then the uncertainty in position will give no 
+net force on the test body, and the field can be measured to arbitrary 
+precision by using a high enough charge density. 
+
+The dipole moment disturbs the value of H nearby, and so gives com- 
+plementarity between E and H. Now a current in the x direction only 
+gives a magnetic field in the yz plane; thus the complementarity is between 
+the perpendicular components of E and H. The parallel components are 
+not complementary. It can also be shown that two measurements of the 
+field do not disturb each other if the one lies in the “‘absolute elsewhere”’ 
+(Minkowski diagram) of the other. This is to be expected since then no 
+electromagnetic disturbance which originates at the position and time of 
+the measurement can reach the place of the other measurement at the time 
+when this measurement is being made. Another result which can be proved 
+is that if there are a large number of quanta such that 
+
+1 
+k~V 33 yn T 
+then the fields due to these quanta of radiation can be measured to a 
+small fraction of their values. 
+
+As an illustration of the complementarity between E and energy, let us 
+consider the photoelectric effect. It is found that no matter how low the 
+intensiv of the radiation, the electrons are always ejected with energy 
+
+
+E,=hv -I 
+
+
+where / is the binding force of the electron to the atom. This ejection is 
+due to the force 
+eE 
+
+
+and we would expect classically that since E decreases with decreasing 
+intensity, we will get a smaller value of E,. However, due to complemen- 
+tarity, if the energy of the radiation is well defined, the field fluctuates 
+violently, and though it takes on large values less frequently for lower 
+intensities, the energy with which the electrons come out is the same, 
+though their number is proportional to the intensity. 
+
+
+Index 
+
+
+Aberration 121, 122 
+
+Accelerated point charge 59 
+
+Addition of velocities (relativistic) 117 
+
+Ampére’s law 2 
+
+Anomalous dispersion 99 
+
+Antenna 
+charge and current distribution in 22 
+radiation from 23, 43 
+
+
+Bethe-Heitler formula 138 
+Breit’s Hamiltonian 49 
+Bremsstrahlung 67, 69, 73 
+due to collision with impenetrable sphere 
+75 
+from high energy electrons 
+intensity distribution 69 
+
+
+137 
+
+
+Cerenkov radiation 139, 142 
+
+
+Charge 
+conservation of 3, 128 
+density 1,2 
+
+
+density for a point charge 50 
+Charge-current density 4-vector 128 
+Complementarity 
+
+between energy and field amplitude 160 
+Conductivity 6 
+Conservation 
+
+of charge 3, 128 
+
+of energy 10, 143, 146 
+
+of momentum 11, 143, 146 
+Continuity 
+
+equation of 3, 128 
+Contravariant 4-vector 124 
+Coulomb’s law 2 
+Covariance 122 
+Covariant 4-vector 
+Cross section 
+
+for scattering of radiation 92 
+
+of impenetrable sphere 74 
+
+
+124 
+
+
+161 
+
+
+Cross section (cont. ) 
+Thomson formula 92 
+Cross section for energy loss 75 
+Current 
+density 2 
+density for a point charge 50 
+displacement current 2, 3 
+matrix elements of 24 
+transverse current density 17 
+
+
+d’Alembertian operator 4 
+deBroglie waves 157 
+Density 
+of charge 1,2 
+of current 2 
+of force 3, 143, 144 
+Dielectric constant 97 
+Dipole moment 
+electric 39 
+magnetic 41 
+Dipole radiation 
+electric 39 
+magnetic 40 
+Dispersion of radiation in a dielectric 89, 
+99 
+Dispersion theory 89 
+Displacement current 
+Dualtensor 130 
+
+
+2, 3 
+
+
+Earnshaw’s theorem 86 
+Electric charge 
+
+conservation of 3 
+
+density 1,2 
+
+density for a point charge 50 
+Electric current 
+
+density 2 
+
+density for a point charge 50 
+
+matrix elements of 24 
+
+transverse current density 17 
+
+
+162 
+
+
+Electric dipole moment 39 
+Electric dipole radiation 39 
+Electric field 
+energy of 45, 56 
+Fourier decomposition of 5 
+longitudinal field 16 
+of accelerated point charge 59, 60 
+
+
+of uniformly moving point charge 52, 
+
+
+54, 55, 133 
+
+self-field 83, 84 
+
+transverse field 16 
+Electric quadrupole moment 42 
+Electric quadrupole radiation 40, 43 
+Electromagnetic field 
+
+energy density of 10, 11 
+
+energy of 9, 13, 15 
+
+Fourier decomposition of 5 
+
+measurement of 1, 159 
+
+momentum density of 11, 12 
+
+momentum of 9, 13, 16 
+
+of accelerated point charge 59, 60, 61 
+
+
+of uniformly moving point charge 52, 
+
+
+54, 55, 133 
+
+self-field 83, 84 
+
+tensor 129 
+
+transformation laws for 127, 131 
+
+uncertainty relations for 159, 160 
+Electromagnetic stress tensor 11, 12 
+Electromagnetic waves 5 
+
+incoming 29 
+
+monochromatic 5 
+
+outgoing 29 
+
+plane 5 
+Energy 
+
+conservation of 10, 143, 146 
+
+density 10, 11, 147 
+
+equivalence to mass 154 
+
+flux 10, 11 
+
+
+of a nearly static charge distribution 45, 
+
+
+49 
+of electromagnetic field 9, 13, 15 
+
+
+of magnetic field due to steady currents 
+
+
+46 
+self 85, 87 
+
+
+INDEX 
+
+
+Energy-momentum 4-vector 
+ofa body 148, 150 
+of electromagnetic field 146 
+Equation of continuity 3 
+Equations of motion 
+nonrelativistic 101, 102 
+relativistic 150 
+Equivalence of mass and energy 12 
+
+
+Faraday’s law of induction 2 
+
+
+Fizeau’s experiment 121 
+Force 
+
+
+between pair of charges in motion 107 
+
+
+density 4-vector 143, 144 
+Lorentz 2 
+self 84, 85 
+
+Fourier decomposition (expansion) 
+of current density 17 
+of electric field 5 
+of transverse current density 18 
+of vector potential 18 
+
+Fresnel dragging coefficient 121 
+
+
+Galilean transformation 106 
+
+
+Gauge transformation 27, 129 
+Green’s function 29 
+
+
+Hamiltonian of a charged particle 
+nonrelativistic 101 
+relativistic 156 
+
+Hamiltonian theory 
+nonrelativistic 100 
+relativistic 156, 157 
+
+
+Index of refraction 99 
+Invariant 124, 149 
+
+
+Kennedy-Thorndyke experiment 108,110 
+
+
+Klein—Nishina formula 138 
+
+
+Larmor precession 102, 103 
+Lienard—Wiechert potentials 49, 51 
+conditions for validity of 51 
+Line breadth 
+for resonance scattering 92 
+
+
+INDEX 
+
+
+Line breadth (cont.) 
+natural 79, 80 
+Lorentz condition 27, 31, 32 
+Lorentz—Fitzgerald contraction 109, 120 
+physical explanation of 111 
+Lorentz force 2 
+density 3 
+density 4-vector 143, 144 
+Lorentz transformation 58, 111, 112, 113, 
+115, 118, 124 
+
+
+Magnetic dipole moment 41 
+Magnetic dipole radiation 40 
+Magnetic field 
+
+energy of 46, 48 
+
+Fourier decomposition of 5 
+
+of accelerated point charge 59, 61 
+
+of uniformly moving point charge 52, 
+
+54, 133 
+
+Mass 
+
+equivalence to energy 154 
+
+experimental inertial 86 
+
+self 87, 88 
+
+transformation lawfor 153 
+Maxwell’s equations 2 
+
+approximate solutions of 34 
+
+covariant form of 128, 130, 131 
+
+infree space 4 
+
+quasi-static solutions of 32 
+
+solutions of 27 
+Maxwell’s stress tensor 
+Metallic reflection 6, 9 
+
+reflecting power 9 
+Michelson—Morley experiment 
+Minkowski diagram 118, 119 
+Momentum 
+
+conservation of 11, 143, 146 
+
+density 11, 12, 147 
+
+of electromagnetic field 9, 13, 16 
+Momentum-energy 4-vector 
+
+of a body 148, 150 
+
+of electromagnetic field 146 
+Multipole radiation 37 
+
+
+11, 12, 145 
+
+
+108, 109 
+
+
+Natural lifetime of atom 25 
+
+
+163 
+
+
+Natural line breadth 79, 80 
+
+
+Oscillator strength of a transition 100 
+
+
+Pair production 138 
+Particle in a uniform magnetic field 150 
+Penetration depth 99 
+Photodisintegration by electrons 136 
+Photoelectric effect 
+as an example of quantum fluctuations 
+160 
+Point charge 
+charge density of 50 
+current density of 50 
+field of accelerated point charge 59, 60, 
+61 
+field of uniformly moving point charge 
+52, 54, 55 
+in a uniform magnetic field 150 
+Lienard—Wiechert potentials for 49, 51 
+potentials of uniformly moving point 
+charge 53, 58 
+Polarizability of a dielectric 96 
+Potential 
+4-vector 129 
+Lienard—Wiechert 49, 51 
+of uniformly moving point charge 53, 
+58 
+retarded 27, 28, 30, 31 
+scalar 27 
+vector 18, 27 
+Poynting vector 11, 35 
+Quadrupole moment 42 
+Quadrupole radiation 40, 43 
+Quantum fluctuations in the electromag- 
+netic field 160 
+
+
+Radiation 
+absence of, fromafreeelectron 26, 139 
+Bremsstrahlung 67, 69, 73 
+electric dipole 39 
+electric quadrupole 40, 43 
+from a charge and current distribution 
+16, 21, 37 
+
+
+164 
+
+
+Radiation (cont.) 
+from a charge moving in acircle 66 
+from a harmonic oscillator 65 
+from an accelerated point charge 63, 65 
+from an antenna 22 
+from an atomic system 24, 25 
+from a spherical charge distribution 24 
+magnetic dipole 40 
+multipole 37 
+pressure of 13 
+Radiation damping 
+of a harmonic oscillator 77 
+Radiation reaction 75, 76, 85 
+Raman effect 96, 100 
+Relativity 
+special theory of 105 
+Retarded time 50 
+Retarded potentials 27, 28, 30, 31 
+Runaway solutions 81 
+
+
+Scalar potential 27 
+Scattering ; 
+by an impenetrable sphere 74 
+Klein-Nishina formula 138 
+of electromagnetic radiation 92 
+Self-energy 85, 87 
+Self-force 84, 85 
+Self-mass 87, 88 
+
+
+INDEX 
+
+
+Skin effect 6,8 
+Stress tensor 11, 12, 145 
+Synchronization of clocks 116 
+
+
+Tensors 
+antisymmetric 125, 126 
+decomposition of 125, 156 
+Makxwell’s stress tensor 11, 12 
+symmetric 125, 126 
+Thomson scattering cross section 92 
+Time dilation 110, 113 
+Transformation laws 
+
+
+for electromagnetic field 127, 131 
+
+
+for energy and momentum 143, 153 
+for mass 153 
+for vectors and tensors 124, 125 
+
+
+Twin “‘paradox” 116 
+
+
+Uncertainty relations 
+for electromagnetic field 159, 160 
+for momentum and position 158 
+Uniformly moving point charge 52 
+Vector potential 18, 27 
+Virtual quanta 
+in field of high energy electron 136 
+
+
+Wave zone 32 
+
+

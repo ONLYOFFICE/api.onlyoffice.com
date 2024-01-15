@@ -1,0 +1,260 @@
+MARCH 1, 1930 
+
+
+PHYSICAL REVIEW 
+
+
+VOLUME 35 
+
+
+LETTERS TO THE EDITOR 
+
+
+Prompt publication of brief reports of important discovertes in physics may 
+
+
+be secured by addressing them to this department. 
+
+
+Closing dates for this depart- 
+
+
+ment are, for the first issue of the month, the twenty-eighth of the preceding month; 
+for the second issue, the thirteenth of the month. The Board of Editors does not 
+hold itself responsible for the opinions expressed by the correspondents. 
+
+
+On the Theory of Electrons and Protons 
+
+
+Inarecent paper,! Dirac has suggested that 
+the reason why the transitions of an electron 
+to states of negative energy, which are pre- 
+dicted by his theory of the electron, do not 
+in fact occur is that nearly all of the states of 
+negative energy are already occupied. Dirac 
+has further shown that the unoccupied states 
+of negative energy have many of the proper- 
+ties of protons; that, for instance, they may 
+be represented by wave functions which 
+would be taken to correspond to a particle 
+of positive charge and positive mass. He has 
+further shown that the mass associated with 
+these gaps is not necessarily the same as that 
+of the electron, and he has suggested the 
+assumption that the gaps are protons. In 
+order to account for the fact that the diver- 
+gence of the electric field is not, in spite of the 
+infinite electron density, everywhere infinite, 
+Dirac further assumes that only the depar- 
+tures from the normal state in which all 
+negative states are filled are to be counted in 
+computing the charge density for Maxwell’s 
+fourth equation 
+
+div H=—Arnp. (1) 
+Finally, Dirac is able to account for the 
+validity of the Thomson formula for the 
+scattering of soft light by a free electron, in 
+spite of the fact that the derivation of this 
+formula on his theory of the electron—a 
+derivation which makes explicit use of the 
+transitions to states of negative energy which 
+are now forbidden, is invalid. According to 
+Dirac, the scattering takes place by a double 
+electron jump, in which a negative? electron 
+jumps up to some state of positive energy, 
+
+
+1P, Dirac, Roy. Soc. Proc. A126, 360 
+(1930). 
+
+2 By a negative electron we mean an elec- 
+tron of negative energy. 
+
+
+and the original positive electron falls down 
+into the gap left. 
+
+There are several grave difficulties which 
+arise when one tries to maintain the sugges- 
+tion that the protons are the gaps of negative 
+energy, and that there are no distinctive 
+particles of positive charge. In the first place, 
+we can easily see that Dirac’s theory requires 
+an infinite density of positive electricity; 
+and since we should expect the de Broglie 
+waves of this charge to be quantized, we 
+should expect some corpuscular properties 
+for the positive charges. The reason why the 
+theory requires an infinite positive charge is 
+this: If the explanation of the scattering of an 
+electron is to be tenable, a negative electron 
+must interact with the electromagnetic field 
+in the way predicted by Dirac’s theory of the 
+electron; for otherwise the scheme proposed 
+would not give the Thomson formula. But 
+this means that there must be a term involv- 
+ing the current and charge vector of the nega- 
+tive electrons in the total energy momentum 
+tensor for matter and radiation. Thus by (1), 
+the divergence of the electric field will be 
+everywhere infinite unless there is an infinite 
+density of positive electricity to compensate 
+the negative electrons. 
+
+A further difficulty appears when we try 
+to compute the scattering of soft light by a 
+proton. This difficulty is not unconnected 
+with the difference in mass between the elec- 
+tron and proton, and makes it seem im- 
+probable that this difference can be explained 
+on the basis suggested by Dirac. For the 
+scattering process must in this case be re- 
+garded as a double jump of a single electron, 
+in which a negative electron jumps to some 
+state of positive energy, and then falls back 
+into the hole that is the original proton. Now 
+it is easy to see that the probability of this 
+
+
+562 
+
+
+LETTERS TO THE EDITOR 
+
+
+scattering is determined by precisely the 
+same matrix components as those which give 
+the electron scattering, and that the present 
+theory gives equal scattering coefficients for 
+electron and proton. Of course, the interac- 
+tion between electrons is omitted in this 
+computation; but the difficulty is this, that 
+such interaction would affect electron scatter- 
+ing and proton scattering in precisely the 
+same way; whereas the Thomson formula 
+requires the latter to be smaller by a factor 
+proportional to the square of the ratio of the 
+masses. 
+
+
+Finally, there is a numerical discrepancy 
+to be noted. According to Dirac’s suggestions, 
+the filling of the proton gaps in the distribu- 
+tion of negative electrons should correspond 
+to the annihilation of an electron and a pro- 
+ton, and should thus, under all normal con- 
+ditions, be a very rare occurrence. Now if we 
+consider for definiteness a free electron in an 
+enclosure in which there are m, free protons 
+per unit volume, we may readily compute the 
+rate at which the electron should, by the 
+Dirac radiation theory, fall into one of the 
+corresponding gaps. The conservation laws 
+require that at least two quanta be emitted 
+in this process; and it is sufficient to consider 
+jumps in which no more than two quanta are 
+emitted. The details of the calculation will 
+be published elsewhere; if we neglect the 
+interaction of the electron with the negative 
+
+
+563 
+
+
+electrons we obtain for the mean life time of 
+the electron: 
+
+T=Gmcte*/np (2) 
+where G is a numerical constant of the order 
+of unity, e the charge, and m the mass of the 
+electron. Now again it is difficult to see what 
+large errors could be involved in the compu- 
+tation, since the matrix components which 
+give (2) are of precisely the same type as 
+those which give correctly the Thomson 
+formula and the optical transition probabili- 
+ties of the electron; and (2) gives a mean life 
+time for ordinary matter of the order of 1071 
+seconds. 
+
+Thus we should hardly expect any states of 
+negative energy to remain empty. If we re- 
+turn to the assumption of two independent 
+elementary particles, of opposite charge and 
+dissimilar mass, we can resolve all the diff- 
+culties raised in this note, and retain the 
+hypothesis that the reason why no transi- 
+tions to states of negative energy occur, either 
+for electrons or protons, is that all such states 
+are filled. In this way, we may accept Dirac’s 
+reconciliation of the absence of these tran- 
+sitions with the validity of the scattering for- 
+mulae. 
+
+J. R. OPPENHEIMER 
+
+The Norman Bridge Laboratory of Physics, 
+
+California Institute of Technology, 
+Pasadena, California, 
+February 14, 1930. 
+
+
+The Collision Diameter of the Hydrogen Atom 
+
+
+Harteck measured the viscosity of mona- 
+tomic hydrogen and calculated the collision 
+radius to be rg = 1.3 X 10-8 cm (ro of the first 
+Bohr orbit is 0.531078 cm). We have 
+measured the decrease of intensity of a fine 
+beam of monatomic hydrogen in passing 
+through 3.0 cm of mercury vapor at 0.000185 
+mm Hg and find the decrease of intensity to 
+be 23 percent. If the collisions are supposed 
+to be between elastic spheres the sum of their 
+radii is 6.2 X 1078 or assuming rp, =1.8 X 1078, 
+
+
+Excited Radicals in 
+
+
+The letter of Mr. D. H: Andrews in your 
+number of December 15th makes the im- 
+portant point it is possible to assign definite 
+frequencies to vibrating groups in the mole- 
+cule, and that these frequencies are constant, 
+to a first approximation, from molecule to 
+molecule e.g. the value of the vibration fre- 
+
+
+the radius of hydrogen atom is 4.4X107%. 
+This is larger than would be assumed even 
+on wave mechanics unless there is very con- 
+siderable resonance interaction between mer- 
+cury and hydrogen. 
+
+E. G. LUNN 
+
+F, R. BicHowskKY 
+
+
+U.S. Naval Research Laboratory, 
+Anacostia, D. C., 
+February 17, 1930. 
+
+
+Chemical Compounds 
+
+
+quency of C-H in any molecule will be of the 
+order of 3000 cm“, altering only slightly with 
+change of environment. Although some of 
+Mr. Andrews’ values are open to question, 
+there is a weight of evidence, both from the 
+Raman effect and from infra-red spectra, for 
+the essential correctness of his statement; 
+
+

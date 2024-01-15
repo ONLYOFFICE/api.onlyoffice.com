@@ -1,0 +1,1265 @@
+Electron theory: Description and analogy 
+J. Robert Oppenheimer 
+
+
+Citation: Phys. Today 10(7), 12 (1957); doi: 10.1063/1.3060427 
+
+View online: http://dx.doi.org/10.1063/1.3060427 
+
+View Table of Contents: http:/Awww.physicstoday.org/resource/1/PHT OAD/v1 0/i7 
+Published by the American Institute of Physics. 
+
+
+Additional resources for Physics Today 
+Homepage: http://www. physicstoday.org/ 
+
+Information: http:/Awww.physicstoday.org/about_us 
+Daily Edition: http:/www.physicstoday.org/daily_edition 
+
+
+ADVERTISEMENT 
+
+
+Custom Liquid Helium 
+Management Systems 
+
+
+Components include: Si - CRYOMECH 
+
+
+¢ Liquid Helium Plant 
+
+
+Downloaded 25 Aug 2012 to 136.159.235.223. Redistribution subject to AIP license or copyright; see http://www.physicstoday.org/about_us/terms 
+
+
+12 
+
+
+ELECTRON THEORY 
+
+
+Description and Analogy 
+
+
+By J. Robert Oppenheimer 
+
+
+THE FIRST JOHN FRANKLIN CARLSON 
+
+
+We are indebted to Dr. G. C. Danielson, Chairman of the John Franklin Carlson Lecture 
+Fund Committee, for having offered the text of the first Carlson Lecture for publication 
+in these pages. The lectures, which are held in memory of Frank Carlson (1898-1954), 
+professor of physics at Iowa State College, Ames, Iowa, from 1946 until his death, are 
+made possible under a fund established by his friends for the purpose of bringing to Iowa 
+State College each year an outstanding scholar to speak on some aspect of physical sci- 
+ence, its philosophical implications, and its relation to human affairs. J. Robert Oppen- 
+heimer, Director of the Institute for Advanced Study, Princeton, N. J., gave the present 
+lecture at the Ames campus on May 17, 1955. The second lecture was to have been given 
+last year by John von Neumann, but owing to his fatal illness it had to be cancelled. 
+This year’s lecture was given on May 1st by P. W. Bridgman. 
+
+
+| es is a very special sort of privilege to give this lec- 
+ture in honor and in memory of Carlson who was, 
+for many of us, both a friend and a colleague. It is cer- 
+tainly appropriate that, as we mourn his loss, we try, 
+as well as we can, to do the kind of thing that he did 
+when he was with us, that he would approve and did 
+approve in his life. It is, of course, also a great pleasure 
+for me to be here in Ames, at a growing and already 
+very famous center of study in many fields, including 
+physics, Carlson’s specialty. 
+
+Carlson was a student of mine in Berkeley. To those 
+in this audience who are graduate students I would re- 
+call the earnestness, the intensity, almost the terror 
+with which he underwent the rites of initiation in a 
+great science, and the seriousness with which he met it. 
+In those days, he used to say, “I have only one wish, 
+and that is to be a good physicist.” I think he lived to 
+see that wish abundantly fulfilled. I knew him, I was 
+fortunate to know him, as a colleague when he came 
+back to Berkeley; the two of us had a bit of luck and 
+did some work together that was fun and was success- 
+ful—something that does not often happen. I knew him 
+in Princeton at the Institute for Advanced Study—a 
+very sweet time. 
+
+His interests were extremely broad. He was profes- 
+
+
+Downloaded 25 Aug 2012 to 136.159.235.223. Redistribution subject to AIP license or copyright; see -http://www.physicstoday.org/aboul us/iermns: 
+
+
+LECTURE 
+
+
+John Franklin Carlson 
+
+
+sionally, primarily, and always a physicist, but his in- 
+terests in science were catholic. Many of you will know, 
+as I do, the fervor with which he taught men expert in 
+other fields. He loved the history of science; he was in- 
+terested in philosophy and in literature. He was con- 
+cerned and sensitive to all human problems, and yet 
+very balanced and unfanatic, a real scholar, one of the 
+most modest of men, a man with a great gift for teach- 
+ing, whether it was the young fellow whom he would 
+for the first time show a new subject, or whether ex- 
+plaining to rather highbrow characters what he had just 
+found out. He was loyalty itself and great friendliness, 
+and he was very funny. He had a wonderful sense of 
+humor which softened the sobriety, the depth, and the 
+sense of pathos and tragedy with which he looked at 
+human affairs. He exemplified and, with a kind of stead- 
+fastness which none of us will forget, he established 
+that being a scientist is harmonious with and continu- 
+ous with being a man. Being a man of heart, a man of 
+feeling, and a man of knowledge and wisdom, he re- 
+futed the notion that if you were a specialist you were 
+inhuman. He established the fact that if you were a 
+good specialist that makes you more human. He did 
+more than any number of symposia or elaborate and 
+sophisticated efforts to provide integration, to give a 
+
+
+PHYSICS TODAY 
+
+
+> 
+
+
+ee the unity of human knowledge—because he en- 
+joy | and knew 1 many things from many different fields 
+and, in his p person, proved that knowledge was integral 
+hat we were all brothers one with another even 
+could not always understand what we were 
+about. 
+‘would, I think, have liked the terms of these lec- 
+ures, he would have liked the thought that a man 
+Ecce here and tell about physical science and 
+in some way relate it to more general problems, be- 
+cause he believed in such relations. But he was not a 
+shallow man, and he knew that if there are things in 
+the history of physics or in the history of physical sci- 
+ence that bear on our lives in other respects, that bear 
+on ¢ other aspects of science, that bear on human rela- 
+tions, or knowledge in general, or what is right and 
+wrong, that then this would be a pretty subtle relation, 
+that there was no simple mechanical way in which you 
+could translate what you had learned in physics and 
+ce it applicable to the very different problems that 
+face in daily life or that you face in political life. 
+He would have thought, I think, that human affairs 
+c ald be illuminated, that they were illuminated, by the 
+experience in the cumulative sciences, in what we call 
+: ce today; but he would have known that human 
+life was far too broad, deep, subtle, and rich to be ex- 
+usted by anything that the scientist would find out 
+‘in his own field. 
+_ Carlson, himself, was an atomic physicist par excel- 
+lence. He worked during the war on problems of radia- 
+- tion, which were of pressing practical importance, as 
+“well as real theoretical interest, in connection with the 
+great establishment at MIT, the Radiation Laboratory. 
+But, when he was on his own, his interests were in 
+atomic physics. It turned out, as always, that the rela- 
+n tions between these two fields were formal and full of 
+‘great analogies and, when he returned to atomic phys- 
+ics, his work was enriched by the experience that he had 
+; acquired by studying microwaves, studying how radia- 
+tion behaves and how you may deal with it mathemati- 
+“cally. He worked on the theory of radiation and elec- 
+trons. He worked on the theory of collisions. I am not 
+‘go ig, at ‘this point, to give a scientific vita. It should 
+be known to you that he made contributions with which 
+we are living today, and with which our children will 
+‘be living, though they may have forgotten how they 
+came about. 
+-. "The work that he did, with which I was most closely 
+associated, had to do with the subject of the lecture to- 
+Iright-—electron Theory. I would like to tell the story, 
+or part of the story of this. The reason is that this is a 
+_ very odd piece of theory indeed. It is an almost perfect 
+ry, in many contexts. It makes it possible for us to 
+1 dict what we observe with an accuracy of one part 
+in a billion or better than that. It is a theory which is 
+almost closed, almost self-consistent and almost per- 
+fect. Yet it has one odd feature: if you try to make it 
+quite: pected, then it is nonsense; and this may have a 
+
+
+JULY 
+
+
+1957 
+
+
+13 
+
+
+I would like to tell this as a narrative. I cannot teach 
+electron theory; it is a very hard subject; it is a recon- 
+dite one. I cannot tell you in detail how one is sure 
+when one looks at the results of an experiment—one is 
+never sure, but how one is convinced—that this experi- 
+ment means what it says: how, when you see a certain 
+black line on a photographic plate, you know that it 
+was made by an electron; how when you hear a count 
+in a counter, or when you see a constellation of criss- 
+crosses in a photographic film under a microscope, you 
+say, yes, that was an electron that did it. This is part 
+of the cumulative character of science: these things 
+have been learned really over the centuries, and you 
+go to school and you find out what has been learned. 
+You find out that you can use a sort of shorthand, In- 
+stead of saying that curve (the set of drops that seems 
+to be distributed along a curved path whose picture you 
+have taken; it was formed in a gas which was super- 
+saturated, which was exposed to cosmic rays) repre- 
+sents a positive electron, you just say, that is a positive 
+electron, or positron. There is a lot of learning in that 
+and I am going to short-circuit it. 
+
+I am also going to have to short-circuit the mathe- 
+matical apparatus which we use, not always success- 
+fully, to decide what are the logical consequences of an 
+assertion, what is the content of the theory, because 
+this also is something which people will go to school 
+for many years to learn. So that my description is going 
+to be the kind of thing that you have to do in this 
+world. You have to say, “I will tell you a story about 
+it. I hope you believe me. If you do not believe me I 
+hope you will be interested enough to spend eight years 
+to find out whether I was telling the truth.” I know no 
+other way; and I have the conviction that Dr. Carlson 
+himself believed in these efforts to reach out a hand 
+and try to explain across the great gulf of different 
+experience, different language, different interests even, 
+what we were doing, to explain that to each other. But 
+I need to apologize to the many of you in the audience 
+who are professional physicists for lack of detail and 
+rigor, and to the probably rather more in the audience 
+who are not physicists for what may seem the profusion 
+of detail and rigor. I know no way to come around this. 
+I wish I did. 
+
+
+| Det electron is one of the fundamental particles of 
+physics. By that we mean only that it has not 
+proven possible, profitable, useful, to regard it as made 
+up of something else. It is only one of a rather large 
+number of such particles. My own count at the mo- 
+ment is 24; but physics is one of those subjects in 
+which you have to have a bit of a theory before you 
+can count, because you do not know what you are 
+identifying until you have a bit of a theory. The elec- 
+tron is the oldest (the first to be found), the best 
+studied, in many ways the simplest particle; it is one 
+of the very few particles which is stable, which does 
+not, that is, of itself, come apart and disappear into 
+something else. It was discovered at about the turn of 
+the century by J. J. Thompson. It is, as you know, 
+
+
+in subject tc AIP license or copyright; see http://www.physicstoday.org/about_us/terms 
+
+
+14 
+
+
+the ingredient which gives chemical and most physical 
+properties to ordinary atoms and molecules. It is very 
+light compared to a nucleus, being about 2000 times 
+lighter than the nucleus of hydrogen, the lightest one. 
+It is probably the only particle in nature of which we 
+have much understanding; I have to say that though 
+this is a great deal of understanding, it is far from a 
+complete one. 
+
+With Rutherford’s discovery of the atomic nucleus, 
+and Bohr’s invention, one had the familiar picture 
+(which is not right but which has been so useful): of 
+an atom consisting of a heavy nucleus, quite small 
+(about a thousand times smaller than atomic dimen- 
+sions), with almost all of the mass and a charge equal 
+to the atomic number, Around this nucleus is a constel- 
+lation of electrons which Bohr rather cautiously said 
+were in a certain set of stationary states and which he 
+pictured even rather more cautiously in terms of ellipti- 
+cal orbits. These orbits being very large compared to 
+the nucleus, their properties determine the chemistry 
+and the ordinary physics of matter. 
+
+Things were not, however, quite simple, because at 
+the time of the electron’s discovery there were two basic 
+theories into which to fit the electron’s behavior, One 
+was Newton’s mechanics, which said that a particle 
+moved so that the mass times the acceleration was equal 
+to the force; and the force on the electron was the elec- 
+tric force which acted directly on its charge, and the 
+magnetic force which acted if it were in motion. And 
+the other theory was that of Maxwell; which describes 
+how electric and magnetic fields are produced. They are 
+produced by charges and they propagate with the ve- 
+locity of light; Maxwell in his famous equations said 
+just how that was. So you had a theory that told you 
+how charge produces an electric field and how an elec- 
+tron should move in that electric field. This was all 
+fine; it had to be most radically modified. 
+
+But, even before coming to that modification, I 
+should recall an attempt, associated with Lorentz, to 
+see if one could understand the electron itself in terms 
+of these two theories, Newton’s equations of motion 
+and Maxwell’s theory about how charges make fields. 
+I will say a word about this, not because we are wor- 
+ried about it today—it is obsolete, it is wrong—but be- 
+cause it illustrates with peculiar and rather elementary 
+vividness something that has happened very recently 
+and that is so hard to explain that I can only say it 
+happened and cannot adequately explain it. 
+
+The old idea was this: If you have charge producing 
+field and field acting on charge, is it possible that the 
+electron itself is a structure whose own field explains 
+its existence? That is, the charge is accumulated in this 
+way and the forces that the charge produces keep the 
+electron intact. What else happens, when you have an 
+electron that is moving subject to an external force? It 
+is also charged; it must be producing a field; it will re- 
+spond to this field. The program then looks like this: 
+You say, “I have an electron and Newton’s law tells 
+me that the mass, m, times the acceleration, x”, which 
+is the second time derivative of the coordinate, is equal 
+
+
+Downloaded 25 Aug 2012 to 136.159.235.223. Redistribution subject to AIP license or copyright; see http://www.physicstoday.org/about 
+
+
+to the force exerted on it from the outside. mx” = F.” 
+Then, you try to ask, what kind of effects will the fact 
+that here is a bit of charge, what kind of effects will 
+that have on the behavior of the electron itself? 
+
+Well, you start out and say, “I do not know how big 
+the electron is but let me say it is about that big” 
+
+
+O 
+
+
+and then let me calculate. Then we find that there are 
+two kinds of effects the field makes. One is the build- 
+ing up of all the electric fields around here. 
+
+
+This gives energy and therefore inertia and mass to the 
+electron and you think you may be able to calculate 
+this out. 
+
+In the second place, we notice also that when the 
+electron is subject to nonuniform motion, then the fields 
+are altered and new forces are introduced which depend 
+on the motion. All of this, in general, depends on the 
+structure, and—as in some respects we shall rediscover 
+later—we find that as we make the electron smaller and 
+smaller, the energy of the field grows larger, and the 
+mass becomes infinite. The effect of the complicated 
+motion of the electron becomes simple and turns out 
+to be independent of the dimensions of the electron; 
+all structure dependent effects vanish. This equation, 
+mx’ =F, becomes complicated by the addition of a 
+term depending on the third derivative of x. The com- 
+plete equation is 
+
+
+2 x//"e2 
+30 
+
+
++ mx! =F 
+
+
+where e is the electron’s charge, and ¢ the velocity of 
+light. ; 
+
+Well, the physicists of this day (and this is a half 
+century ago) said, “The mass of the electron is known. 
+It is not infinite. I will put in the right mass.” This is 
+the term — 4x’’e2/c? which seems to be truly inde- 
+pendent of how this charge is distributed, if the dis- 
+tribution is small enough, This has the effect of slowing 
+up an electron which is accelerated, It turns out to have 
+just the effect of taking away from the motion of the 
+electron the energy which the electron must radiate 
+when it is in agitated motion, as an electron in any 
+radio antenna behaves, Now the only point that I want 
+to make about this equation—and believe me, though it 
+may look complicated, it is easy compared to what is 
+coming—the only point that I want to make is the fol- 
+lowing: If you forget this term, then there are solutions 
+
+
+PHYSICS TODAY — 
+
+
+: ll you that if there is a force, the object is ac- 
+ate if there is no ) Fore, then the only solu- 
+
+
+an sy and the electron does that. If you put this 
+term — $x’e2/c® in as a correction, there is no correc- 
+{ on, because the third derivative of the coordinate is 
+--zero for a body moving in a straight line. That is cor- 
+rect. But if you get smart and say, “I can solve this 
+quation,” then there are solutions of the form, 
+
+
+x=x9 exp(t/T). 
+
+
+So that means an electron will exponentially accelerate 
+- itself; T equals 2e*/3mec, It is a very short time, about 
+10-8 seconds. 
+
+People have coped with this paradox in a variety of 
+ways, but the obvious answer is that that equation was 
+‘not meant to be treated that way. If you treat this 
+as a correction, it never does you any harm; it is 
+all for most motions and it agrees with experiment 
+when you try it out. But if you take it completely seri- 
+ously you get an answer which permits a kind of mo- 
+' tion that does not appear in real life. This is a first 
+sign of the fact that the theory of the electron works 
+only when you regard the charge on the electron as it 
+isin fact, as a rather small quantity. I should just point 
+‘ ~ out that the denominator, 7, is proportional to e?, and 
+‘I will show you another one like that later. 
+
+__ In order to get on at all with the theory of the elec- 
+tron, great reforms had to be made, and were made, in 
+_ Newtonian-Maxwellian physics. The first of these was 
+the special theory of relativity which, starting with the 
+idea that signals cannot be transmitted faster than light, 
+redefined the notion of simultaneity and the measure- 
+ments of interval of space and time; showed that a 
+“moving object does its stuff more slowly than an ob- 
+ject at rest, merely by virtue of being in motion; 
+showed that the mass of a body, the inertia of a body, 
+increased with its energy content and so led to the 
+E=me? of Einstein; showed that the definitions of 
+‘simultaneity, length, ‘and interval all depend on rela- 
+tive uniform motion; and established the fact that the 
+Biiomens of nature are the same in (are uninfluenced 
+by) uniform motion, that they will be the same irre- 
+spective of whether you see something in uniform mo- 
+‘tion or not. The theory of relativity took over from 
+‘Newton most of his laws of motion, but with some 
+‘modification, 
+
+‘This is the first of those great conservative traits in 
+electron theory which I want to point out. The most 
+important of Newton’s laws—the conservation of mo- 
+by nentum, the fact that a body not acted on by a force 
+s its velocity and its momentum preserved, the fact 
+‘tha at action and reaction are equal and opposite—these 
+Mv ere: not altered by the special theory of relativity. 
+Only the connection between the acceleration and the 
+velo ocity, only the relations between mass and velocity, 
+y vere e altered. 
+
+
+JULY 1957 
+
+
+15 
+
+
+That was one great change in the earlier years of the 
+century. The other is harder to describe briefly. It is 
+much deeper; it is very important. This second great 
+change was the discovery of the true nature of atomic 
+mechanics, a discovery which, in some ways, shattered 
+both the Newtonian and Maxwellian framework very 
+much more deeply than relativity. This was the dis- 
+covery both of the quantum of action and the place of 
+the quantum in the description of atomic systems. The 
+history is a very long one; but we can summarize it by 
+reminding you that it was a resolution of the dual 
+character of light: the character of light as a wave 
+motion, as Maxwell said it was and as we know from 
+everyday experience, with interference on the radio and 
+all the rest of it; and the character of light as always 
+involving a corpuscular discrete exchange of energy and 
+momentum between light and matter in phenomena 
+where they interact. 
+
+
+INSTEIN discovered the light quanta in the same 
+
+year that he discovered the special theory of rela- 
+tivity; and twenty years later a way of reconciling this 
+duality was made, not only for light, but for all ob- 
+jects, for all matter, for electrons, for everything else. 
+It is a very practical thing, the wave character of the 
+electron. It is not only necessary for understanding 
+atoms, but it is directly related to the kind of bonding 
+that occurs in organic molecules which seems to us so 
+inescapable a precondition for life itself. The wave 
+character of the proton is what enables it to get into 
+nuclei in the sun and in the other stars and keeps them 
+shining. The wave character of the neutron is what 
+makes it possible to build reactors with materials avail- 
+able on earth and have them react. This pervades all 
+of nature as we know it. 
+
+Perhaps the simplest way to summarize what this 
+revolution was, is to say that on the one hand it estab- 
+lished a relation between the dynamical description of 
+objects, an electron you may think of, and the waves 
+associated with them. If you have any body—it might 
+be a house, but it should not be because it would not be 
+very interesting, but an electron is a good example—if 
+you have anything and it has an energy content £, then 
+this would be related to the frequency, y, of the wave 
+representing the situation by the relation of E = hy, 
+where / is Planck’s constant; and, if the momentum is 
+P, that will be related to the wave number, K, of the 
+wave by this simple relation, P=AK, where again h 
+is Planck’s constant. So you have a code of translation 
+from the description in terms of particles to the de- 
+scription in terms of waves. 
+
+This code leads to a very basic point: there are a va- 
+riety of ways of exploring and objectifying the state of 
+an electron in nature and some of them are exclusive 
+of others. An attempt to make a wave which is very 
+much localized (therefore to know that the electron is 
+in a small region of space) will interfere with the use 
+of limited ranges of wave numbers or momenta, For- 
+mally one gets that the lack of definition in the co- 
+ordinate of an electron Ax, and the lack of definition of 
+
+
+to AIP license or copyright; see http://www.physicstoday.org/about_us/terms 
+
+
+16 
+
+
+momentum AP, have a product which cannot be smaller 
+than this constant h. 
+
+
+AxAP2h. 
+
+
+The equation concerning energy we shall need to use 
+later, We may say that in a time interval, At, the en- 
+ergy of a system cannot be defined better than is given 
+by this relation: 
+
+
+AIAE2 h. 
+
+
+If you want a definition of energy better than this AZ 
+you must take the time longer than this At. 
+
+This is a very rough way of talking about the wave 
+mechanics, but it must suffice to get us on. I need to 
+remind you that on the basis of a little bit of relativity 
+and a lot of atomic mechanics most of the physical and 
+chemical properties of ordinary matter and a great deal 
+of the properties of nuclei too (composed of neutrons 
+and protons), have found an orderly explanation—not 
+always a complete one, because things can be too com- 
+plicated to work out, but one which we believe is, in 
+principle, adequate. So that the whole of physics for 
+the last 30 years has been directed towards questions 
+more or less exclusively evoked by doing abnormal 
+things with matter rather than by simply observing its 
+normal behavior. 
+
+And how is that? It is many different things. But, for 
+one thing, these relations AxAP 2 hk and AtAE 2 h, and 
+Einstein’s relation E = mc”, together give you another 
+code of translation; and that code says that there is a 
+relation between length and time on the one hand and 
+energy and momentum on the other. A time can be con- 
+nected with an energy by the relation T=A/E, and 
+with a mass by the relation T = h/E = h/me*. A length 
+can be connected with a mass by the relation L = h/P 
+=h/mc. And what that means is that if you wish to 
+study the finer structure, in space or in time, of matter, 
+you will be led to use very high energy or very massive 
+particles. But, if you wish to study very massive par- 
+ticles, you will need a lot of energy; if you want to ex- 
+plore smaller and smaller regions of space, you will have 
+high energies to deal with. And this is, of course, the 
+reason for the overwhelming importance of accelerators 
+and cosmic rays in this aspect of the progress of physics. 
+
+In all of this development of atomic mechanics, there 
+has been a trait of conservatism and a use of the idea 
+of analogy similar to those that I mentioned in rela- 
+tivity. Things like these—limits on the accuracy with 
+which you can define position or momentum of par- 
+ticles, dualisms between waves and particles and so on 
+—sound very radical. But, throughout, there has been 
+first a principle and then a discovery that in all situa- 
+tions in which it is all right to use a picture of waves, 
+the Maxwellian description of these waves (or what- 
+ever one had in classical physics) shall not be monkeyed 
+with. It is right. Wherever it is right to use a New- 
+tonian picture of an orbit, that orbit will be followed. 
+It is only when one has a situation where these ideas 
+
+
+Downloaded 25 Aug 2012 to 136.159.235.223. Redistribution subject to AIP license or copyright; see hitp://www.physicstoday.org/about us/terms 
+
+
+do not apply that one cannot use the classical formal 
+laws, And it is true that all the laws of quantum the- 
+ory, esthetically and in symbols, are very much like the 
+classical laws that they supersede. This trait of con- 
+servatism, this use of analogy, is what has made atomic 
+physics so rapidly a success. It is a revolutionary busi- 
+ness; I am not playing that down; but it is only revo- 
+lutionary at one point. It is revolutionary only at this 
+point regarding the duality of waves and particles. It 
+takes everything else more or less as it finds it and pre- 
+serves it, and it has led to some really astonishing suc- 
+cesses. 
+
+The question, then, is what happens when you take 
+this new machine, the quantum theory, the wave par- 
+ticle duality on the one hand and relativity on the 
+other, and you put some of the old questions about the 
+electron itself. You think that you would like to under- 
+stand the motion of electrons in external fields; you 
+would like to understand their behavior; you would like 
+to understand how they emit radiation and all the rest 
+of it. That is the electron theory, which has come to be 
+a great success, and of which I wanted to talk. 
+
+There are two basic processes. They do not always 
+occur, but given the right circumstances they will occur. 
+One of them is very familiar and one of them is very 
+unfamiliar. The familiar process is that by which an 
+electron, if it is not moving uniformly, will give out 
+some radiation. This is what happens to electrons in 
+antennae when you get radio waves; it is what happens 
+when electrons are stopped by the electric fields sur- 
+rounding the nuclei in the target of an x-ray tube, and 
+you get the x-rays from it; it is a very well studied 
+thing. I just have to indicate that there is something 
+(F) to accelerate the electron (e) or change its motion 
+in order to give the y-ray (y) 
+
+
+F+-e—+ (Process 1). 
+
+
+This is different from the electrodynamics of 1900 only 
+in that we know that these y-rays have their corpuscular 
+property, and some of the detailed rules for the rate at 
+which this process happens correspondingly change. 
+
+The other process was really a new one when it was 
+discovered twenty years ago; it is typical of the wave 
+character of electrons that it should occur. In this proc- 
+ess, we have a y-ray plus some kind of electromagnetic 
+field. They do something that was not anticipated, They 
+produce two things, an electron and a positive electron 
+or positron. The two are called a pair. 
+
+
+y+ F-e-+ e* (Process 2). 
+
+
+These particles (electron and positron) are identical ex- 
+cept in the sign of their charge. The fact that the laws 
+of physics should allow a positive electron is not new; 
+that is true of classical physics as it is of the physics 
+of this century. The fact that this will happen, this ma- 
+terialization process, is a pretty direct consequence of 
+rather general things, of relativity, and of the wave 
+particle duality of quantum theory, I know of no de- 
+
+
+PHYSICS TODAY 
+
+
+r scription which satisfies the requirements that nothing 
+t avels faster than light, which satisfies the rules of the 
+
+
+the t does not make this process a necessary thing. It has 
+not been proved that no such theory exists, because that 
+would be a kind of hard thing to prove, but I have 
+never seen one and it has been tried for a long time to 
+devise one. This pair production was a theoretical pre- 
+diction which the theorists who made it were somewhat 
+reluctant to believe until the positive electron was dis- 
+covered, It was discovered in the cosmic rays by An- 
+derson and immediately gave an immense stimulus to 
+electron theory. 
+
+_ These two processes, as they occur in nature, give rise 
+to one of the phenomena which Carlson studied with 
+‘success and great interest. The cosmic rays are many 
+_ things; they have a mysterious origin, and they are in- 
+teresting for all sorts of reasons; but a very great part 
+of their interest is that they are a wonderful source of 
+radiation of high energy, energy which may go up to a 
+hundred thousand times, or even a million times, the 
+energies now available in accelerators and may go even 
+_ higher than that. So that if a phenomenon depends on 
+having a lot of energy available, the cosmic rays are a 
+good place to look for it. 
+
+Now let us see what happens if we have an electron 
+and it comes somewhere near the nucleus of an atom 
+where there are strong electric fields. It will be ac- 
+1 -celerated, and in the course of that it will give off a 
+y-ray, and then the electron will go on with a little less 
+energy. But now if the y-ray comes near the nucleus of 
+another atom it will make a pair, an electron and posi- 
+tron pair; and one of these may come near another 
+atom and give off another y-ray. 
+
+
+fncident electron 
+
+
+this distance /s wy 
+about 4" in lead-y 
+
+
+Carlson and I worked on this a little and found that 
+this distance d is not very long. On the average it is 
+about a quarter of an inch of lead, something like that, 
+or only about a foot of water. Not very big distances 
+are involved. These multiplicative processes were found 
+in cosmic rays. In fact they had been there all along. 
+‘One was shy about saying what they were. They are 
+‘Teally i impressive. The very high-energy ones spread in 
+the air. There may be at one time a million of these 
+things i in one event. They may cover a part of a square 
+mile in distance while building up this enormous multi- 
+plicative event which is called a cascade or shower, 
+eee this is a kind of vivid demonstration of the ele- 
+
+
+1 ne - after the other, in different events. 
+
+
+JULY 1957 
+
+
+7 
+
+
+Part of the importance of this finding of Carlson’s 
+was that one saw these cascades in the cosmic rays and 
+was sure that this was largely a correct theory. Carlson 
+had worried a good deal about whether the quantum 
+theory of electrons in radiation was correct at all, be- 
+cause in the cosmic rays there are many particles that 
+do not radiate. They just go straight along and do not 
+multiply at all; they penetrate through lots of lead. 
+There are other particles that do quite different things. 
+So very grave doubt was cast on the correctness of 
+these theoretical ideas. But our doubts were largely re- 
+solved (and since have been even more resolved) when 
+we saw that there were things that behaved just this 
+way and really quantitatively just this way. 
+
+One of the important points, then, is that because of 
+that certitude and because, in the cosmic rays, there 
+were things which did not behave this way, which did 
+not multiply, which did not give cascades, one knew 
+that there were other particles in the cosmic rays than 
+the familiar ingredients of matter. And that started a 
+search and a period of discovery which has been ac- 
+celerating and has been of most extraordinary vigor in 
+the last years; so that, at the moment, we have some 
+two dozen elementary particles, most of them radio- 
+active and unstable, all of them transmuting one into 
+the other when they collide, though not without some 
+inhibitions. They all transmute into something, but they 
+do not all transmute into everything. These discoveries 
+appear to be taking us very close indeed to the elements 
+of the subatomic world, to the actual atoms of which 
+matter is made. This development is one of the by- 
+products of the theory of cascade showers. Some of 
+these objects, not electrons, are quite inert and are con- 
+nected with electrons only by incredibly weak forces so 
+that transitions occur very slowly indeed. Most of them, 
+on the other hand, have very strong interactions with 
+each other, which make the transitions occur rapidly 
+and make their production and their destruction very 
+common events. There are forces in nature enormously 
+weaker than electric forces and there are forces very 
+much stronger than electric forces. Electric forces and 
+electron theory appear to occupy a middle ground. 
+
+
+HE success of the theory of the electron, basing 
+
+itself on these elementary reactions, with a quanti- 
+tative and relatively straightforward way of describing 
+how often and under what conditions they happen, led 
+to at least two attempts at an analogous theory, One 
+was Fermi’s theory to describe the radioactivity of nu- 
+cleons. The simplest example, though it was not origi- 
+nally an example, is that the neutron is radioactive. It 
+produces a proton, an electron, and another little ob- 
+ject which is called a neutrino and is hard to find. Fermi 
+made the theory of this in exact analogy to the transi- 
+tion of an electron from one state to another, electrons 
+being accelerated and in the process a y-ray appearing. 
+Instead of the process 
+
+
+Estate 1—entate 2-7, 
+
+
+ition subject to AIP license or copyright; see http://www.physicstoday.org/about_us/terms 
+
+
+18 
+
+
+he said a neutron goes into a proton and in the process 
+an electron plus a neutrino appears: 
+
+
+N-P-+ (e+). 
+
+
+He initially made the theory formally yery similar. It 
+turned out, with rather minor modifications, that this 
+gives a powerful and helpful description of the phe- 
+nomena of radioactivity; its connection with many other 
+problems in physics has remained an indigestible ques- 
+tion. 
+
+The Japanese physicist Yukawa made an even more 
+daring and, as we shall see, not so totally successful 
+analogy to electron theory. He said, ‘There are these 
+strong forces, which hold nuclear matter together, forces 
+from neutrons interacting with protons, neutrons with 
+neutrons and so on. They are very strong; they have very 
+short range and, when momentum goes from one par- 
+ticle to the other, this very often involves an exchange 
+of charge between one particle and the other.” He said, 
+“T know that if this were electrodynamics there would 
+be a field of force stretching from one electron to the 
+other. This field would correspond to the wave aspect 
+of light quanta which go from one electron to the other. 
+The quanta that go from one nucleon to another may 
+be charged and that would account for this phenomenon 
+of charge exchange, If they were heavy, that would ex- 
+plain the fact that nuclear forces do not act over a big 
+distance but have a range.” Thus, he would point to 
+the formula AtAE 2 h, and he would say that an object 
+of mass M has an energy Mc? and can last a time cer- 
+tainly not greater than 4/Mc?, because that is the un- 
+certainty relation. It can travel certainly no greater dis- 
+tance than jic/Mc?. Then 
+
+
+R=he/Me=h/ Mc 
+
+
+should be the relation between the range (R) of the 
+forces and the mass of the particles that are associated 
+with the field. He did say this, and he said a few more 
+things, and some very great truths have been in this 
+theory; it has occupied physicists for a long time. In 
+this complex analogy that Yukawa made between the 
+forces between nucleons due to these new particles 
+(which are called mesons) and the forces between elec- 
+trons due to light quanta, Yukawa was trying to keep 
+the theories formally as similar as possible. 
+
+But before one can really get into that, we had bet- 
+ter say a few words about some of the things that have 
+happened to electron theory. Because, as of the turn 
+of the century, it was not free of some contradictions 
+and some troubles. If an electron can emit y-radiation, 
+then, when an electron is just standing around, it will 
+not free that y-radiation because there is no source for 
+the energy, It is not accelerated or anything. But it will 
+emit y-radiation and then reabsorb it, and the time will 
+just be about fA times the reciprocal of the energy of 
+the y-ray. If a y-ray can make pairs, it will not do so 
+when it is just traveling through free space and there 
+is nothing for it to hit. But part of the time it will exist 
+
+
+Downloaded 25 Aug 2012 to 136.159.235.223. Redistribution subject to AIP license or copyright; see http://www.physicstoday.org/about us/i 
+
+
+a 
+
+
+in the form, not of a y-ray but of a pair of electrons, 
+electron and positron. Those electrons, in turn, will 
+sometimes be accompanied by secondary y-rays and 
+those y-rays sometimes in turn by secondary pairs. This 
+sounds terrible; but fortunately each step in the process 
+is less and less probable and by about a factor of 1000, 
+because the number, e?/hc, which measures the relative 
+probability of these various steps in the sequence, is 
+about one-thousandth, That means that it is only one- 
+thousandth as probable that you find two y-rays around 
+an electron as that you find one, and it is only a thou- 
+sandth as probable that you will find one as you find 
+none. 
+
+Still, these complications have two kinds of conse- 
+quences. One is that, if you want to talk about the real 
+world, you ought to talk about the electron with its 
+family, all its y-rays and pairs and all the rest, and ask 
+what they do. And this turned out to be very impor- 
+tant since the family changes the properties of the elec- 
+trons a little. It changes its magnetic properties and 
+changes the energy levels of the simplest systems; such 
+as hydrogen (an electron in the field of a proton) or 
+positronium (the system made up of one positive and 
+one negative electron, twice the size of the hydrogen 
+atom, behaving very much like the hydrogen atom). 
+These changes were discovered experimentally in the 
+years after the war, and are just a description of the 
+altered character of the electron because of these virtual 
+cascades that go on all the time. So it is also with light. 
+The properties of light itself in the free world, when it 
+is all by itself, are not altered; but the properties of 
+light in its interaction with matter, with charges, the 
+properties of light which make it shake off pairs when 
+two light quanta collide, are altered. This is one reason 
+for wanting to give a description of these interactions. 
+The changes are, of course, small because the charge 
+is small. 
+
+The other reason is the following: we had made elec- 
+tron theory for a long time but we had always been 
+rather careful not to make it too well. We had calcu- 
+lated how often something would happen and we had 
+done it roughly, and then we had not made corrections 
+for all these complications that I have just outlined. 
+The reason we did not make corrections is that each 
+correction, though it had a small coefficient (e?/hc), 
+also had a large coefficient which was multiplied into it 
+and which was, in general, infinite. It was infinite, be- 
+cause, although the effects of y-rays on electrons and 
+of electrons on y-rays are small for any given y-ray, if 
+you go to y-rays of infinitely high frequency, if you 
+consider more and more small-scale disturbances, these 
+effects add up and accumulate to an infinite amount. 
+
+A discovery was made about eight years ago, a very 
+beautiful one, It was this: there are two kinds of phe- 
+nomena; the kind of phenomena which depend in a 
+sensitive way on the behavior of electrons and y-rays 
+for arbitrarily high frequency, arbitrarily small space- 
+time phenomena; and those which are relatively insensi- * 
+tive. The only two which depend on the high-frequency 
+behavior, which is the root behavior in the very small 
+
+
+PHYSICS TODAY 
+
+
+very short times, are the charge of the electron 
+ss; and these are the things that are infinitely 
+
+caffe ted by those phenomena, very much as in the clas- 
+sical theory of Lorentz. And physicists then said, “Good, 
+e will give up this attempt. We cannot calculate the 
+the electron, It would be meaningless anyway 
+theory in which there are no other particles, be- 
+e we could give meaning only to its ratio to the 
+f something else. We would’ like to calculate the 
+; we would like to calculate that number one in 
+jusand; but we will give that up too. These things 
+we will measure; then everything else will be given by 
+the theory i in a ‘finite way.” So they said; and this is 
+: hat is called the renormalization program. It has the 
+double. purpose of translating from a description of an 
+electron with none of its cloud and company of y-rays 
+pee electrons around it to the description of the elec- 
+on as it really is, and to do the same for the y-ray; 
+and, at the same time, of removing from the descrip- 
+tion those features (namely, the mass and charge) which 
+v would come out infinite and which are nonsensical. 
+_A basic idea behind renormalization is that electro- 
+dynamics cannot be the whole story. But if you try in- 
+‘stead to modify electrodynamics in other ways (and it 
+‘has been tried many different times and many different 
+ways), to say that for very small regions of space and 
+time things will be different, it is very hard to make such 
+a modification (lacking any real knowledge of the phys- 
+ics of that region) which is even formally consistent 
+with the requirements of good sense, of causality, of the 
+‘continued existence of matter, of complementarity, and 
+the rest of it. 
+: The renormalized theory has been very successful. It 
+is the theory which has made it possible to predict the 
+levels of hydrogen to a part in ten billion, to do very 
+well with the spectrum of positronium, and to give a 
+very accurate account of phenomena at ordinary ener- 
+gies. The reason for the success is that one can do the 
+corrections for the additional electrons and y-rays, step 
+by step, expanding always to take more and more com- 
+plicated situations; and each step is much smaller than 
+the one that came before, maybe some hundred times 
+smaller. 
+At very very high energies this convergence is not so 
+good any more and that has been known a long time. 
+People have had the curiosity, the morbidity, to ask, 
+“Well, suppose that I do not do this step by step, sup- 
+pose I try to do the whole thing. I might like to do that 
+because, if I could get rid of this expansion, I might 
+even get some insight into the value of the constant, 
+c. I could say how things would behave even if it 
+ere a large constant.” And there a very odd thing has 
+turned up. It has turned out that for ordinary phe- 
+
+mena one can probably get things accurate to one 
+in ten to the fiftieth or something like that, and at 
+Tgies as high as the highest cosmic-ray energies one 
+ae is almost certainly making no appreciable mistake 
+tc discussion of electrodynamic things with electron 
+th ay. Nevertheless, if one tries to do it just a little 
+better and get it exact, and get it so that it holds at 
+gy 
+
+
+je LY 1957 ; 
+
+
+19 
+
+
+all energies, then the theory seems to turn out to have 
+no meaning whatever. 
+
+In fact, in all efforts so far, it predicts something like 
+this: that the electron should have another state, an- 
+other configuration with a mass which is negative and 
+is enormously negative, 
+
+
+m'~—m exp(hc/2e*). 
+
+
+The exponent is about five hundred; you might say that 
+sounds pretty bad. But it is not only that the mass is 
+negative and enormous—this alone would be bother- 
+some; but whenever this state occurs, it occurs in such 
+a way that, if something goes into that state, it increases 
+the probability of things going into other states. So we 
+are producing more and more electrons and more and 
+more phenomena whenever we have a collision or when- 
+ever anything occurs. This is just another way of say- 
+ing utter nonsense; it is utter nonsense of rather the 
+same kind that we ran into with the Lorentz theory 
+(and the Dirac modification of the Lorentz theory) of 
+an electron. One has pushed the theory too far. One has 
+pushed it to the point where it is saying to us, “I am 
+not logically consistent.* You have left out something 
+and that has made a hole in me, which I show, although 
+I cannot say what belongs in the hole.” 
+
+What belongs in the hole, of course, is all the rest of 
+the world. It is those weak interactions which occur in 
+B decay, it is those strong interactions, and those 24 
+different kinds of particles which may some day be 30 
+or 40 or even an infinite number, which appear in the 
+great laboratory of the cosmic rays. It is all the rest of 
+physics, which is not very closely tied in, and which 
+leaves electrodynamics and electron theory an almost 
+perfect, but not a perfect subject. 
+
+The analogies, especially Yukawa’s analogy, have not 
+fared so well. The reason is not because his quanta have 
+a mass and his quanta have a charge. The primary rea- 
+son is that his analogue of the number e*/ic is not 
+small at all but very large; and therefore, in this situa- 
+tion, the nucleon is very often accompanied, not by one 
+meson but by several. These things cannot be treated as 
+corrections; and the fact that they cannot be summed, 
+that one cannot treat them in any other way than as 
+corrections, means that one does not have in a strict 
+sense much of a theory at all. However, it has been 
+possible, with a good deal of sophistication, to use this 
+analogy, together with a good deal of experimental in- 
+formation, to coordinate phenomena of scattering, of 
+meson production, and of nuclear interactions—those 
+phenomena which occur for mesons of rather low en- 
+ergy (comparable with the meson rest energy pc*) and 
+those phenomena which have to do with internuclear 
+forces at rather large distances (comparable with the 
+meson Compton wavelength, h/yc). 
+
+
+*“The question of the consistency of electrodynamics, or perhaps 
+more realistically, the nature of the inconsistency of electrodynamics, 
+has continued to occupy attention at the past two years. It is 
+not definitely or rigorously settled. (Ref: Killen, G., ‘On the Mathe- 
+
+matical Consistency of Quantum Electrodynamics’ Sheep 2m of the 
+CERN Symposium, 1956, Vol. 2)." J. R, O., Princeton, N. . J. April, 
+
+
+to AIP license or copyright; see http://www.physicstoday.org/about_us/terms 
+
+
+20 
+
+
+This is a first and a very modest step in the begin- 
+nings of sorting out the new physics. These 24 particles 
+are there, and, as I said, there are perhaps more. They 
+have very odd properties. They were wholly unexpected, 
+The theory of Yukawa, which was supposed to tie to- 
+gether a few of them—certain mesons and the nucleons 
+—would, if it were true, cover only a very small sub- 
+section of the field. It does not cover that except in a 
+more and more limited area. This subsection is not sepa- 
+rate from the rest of the field as electron theory is from 
+most things. It is clear that we are in for one of the 
+very difficult, probably very heroic, and at least thor- 
+oughly unpredictable revolutions in physical understand- 
+ing and physical theory. One of the great times in phys- 
+ics lies ahead; it is certainly something that will often 
+make us remember how much we miss the guidance and 
+the companionship that Carlson could have given us 
+had he lived. 
+
+
+UT BRCUGH all of this story there has gone a theme 
+of the use of analogy in building physical theory: 
+the analogy between Newton’s laws and the laws of 
+relativity, the analogy between Newton’s laws and the 
+laws of atomic physics, the analogy between Maxwell’s 
+waves and the waves of quantum physics, the analogy 
+between Fermi's theory of @ decay and the quantum 
+theory of radiation, between Yukawa’s theory of mesons 
+and nuclear forces and the quantum theory of the elec- 
+tron. 
+
+Over and over again, we have used formal analogies. 
+This is not strange. We are trying always to feel our 
+way into something new and unexperienced. We take 
+into it what we have, which is our own experience, in 
+this case of the physical world, and we seek a relevant 
+pattern of form and order. Number plays a part in the 
+expression of this, but is not essential to it; the no- 
+tion of analogy is deeper than the notion of formulae, 
+though not deeper perhaps than all parts of mathe- 
+matics. These analogies are sometimes right and some- 
+times wrong. Analysis, the confrontation of the full 
+logical consequences of what it is that we have asserted 
+with what we have learned to observe, is the final arbi- 
+ter of whether the analogy is right and how far it is 
+right. It determines the truth of the conjecture. But, 
+without the analogy, there would be no conjecture, no 
+way to go into a new field. 
+
+You have, in entering novelty, to use what you know. 
+You would not be able to make meaningful mistakes 
+without analogy. You would not be able to try things 
+out, the failure of which was interesting. You start 
+thinking by the use of analogy. Analogy is not the cri- 
+terion of truth; it is an instrument of creation, and the 
+sign of the effort of human minds to cope with some- 
+thing novel, something fresh, something unexpected. 
+Analogies play, in the relation between sciences, a very 
+great part, sometimes a harmful one; and they also play 
+a decisive part in what little there is that natural sci- 
+ence can teach of general use in general human experi- 
+ence. 
+
+One of the great things of this century is how illumi- 
+
+
+nating and relevant the experience of the quantum the- 
+ory, of complementarity, has been; how wide the scope 
+of those analogies; I think for our children it will be 
+better understood. What am I speaking of? The uncer- 
+tainty in the position of an electron can be very small, 
+the uncertainty in its momentum can be very small, 
+but no experiment, no situation, can be devised which 
+makes them both very small at the same time. This 
+means that the physicist, or anybody else, has some 
+choice as to what he is going to look at in a system, 
+what he is going to realize, Is he going to realize a po- 
+sitioned electron or an electron which has a well de- 
+fined velocity and wavelength? He can do one or the 
+other but they are complementary in the sense that 
+there is no piece of equipment which will do both for 
+him. He cannot realize them both together; one says 
+that they are complementary situations. 
+
+But life is full of that, of course. We all know it in 
+the relations between our acts and our introspection, 
+our thinking about our acts. Hamlet has said it better 
+than Planck’s constant. We know it in the difference 
+between, in the inherent inability fully to combine, the 
+ideals of love and the ideals of justice. They are just 
+about two different things; balance between them, yes, 
+but fulfillment of both simultaneously, I think we know 
+that that is not possible. We know it in the difference 
+between a piece of knowledge, a piece of equipment, or 
+a man regarded on the one hand as an instrument and 
+on the other hand as an end or a purpose or an object; 
+the difference between the inevitable and universal 
+transcience of events and their eternal and timeless 
+quality. This is part of life; and it is simply a rich set 
+of analogies to the rather sharply defined, nonambigu- 
+ous, straightforward complementarity that one found in 
+the heart of the atom. 
+
+So it is I think, also, for the electron theory, All of 
+life has both its aspects, being complete in itself and 
+referring outside itself. Closure and openness are with 
+us all the time. Here is this quite beautiful theory, per- 
+haps one of the most perfect, most accurate, and most 
+lovely that man has discovered. We have external proof, 
+but above all internal proof, that it has only a finite 
+range, that it does not describe everything that it pre- 
+tends to describe. The range is enormous, but internally 
+the theory is telling us, “Do not take me absolutely or 
+seriously, I have some relation to a world that you are 
+not talking about when you are talking about me.” This 
+is a kind of rebuke, of course, to anyone who believes 
+that any specialty can wholly exhaust life or its meaning. 
+
+Our knowledge is limited by the limits of our experi- 
+ence. It grows all the time. As we see more of the har- 
+mony, the order, and the beauty in the world, we take 
+great pride in sharing that knowledge. This knowledge is 
+the reward of the scientists. The power that comes with 
+it is for other people. But we can be reminded, at the 
+same time that we are aware of our knowledge and its 
+scope and its beauty, that built into it there are also 
+these perceived limitations. I think that is a lesson 
+that Frank Carlson never had to learn, because he was 
+a very modest man. 
+
+
+PHYSICS TODAY 
+
+
+Downloaded 25 Aug 2012 to 136.159.235.223. Redistribution subject to AIP license or copyright; see hitp://www.physicstoday.org/about_Us/ierms = 
+
+

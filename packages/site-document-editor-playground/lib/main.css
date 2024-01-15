@@ -1,0 +1,53 @@
+.de-playground {
+  display: block;
+}
+
+.de-playground form .content-tab-container {
+  margin-top: 0;
+}
+
+.de-playground .content {
+  max-width: 832px;
+  margin: 0 auto;
+}
+
+.de-playground .content-tab-container div[role="tabpanel"] {
+  display: grid;
+  grid-gap: 16px;
+  grid-template-columns: 1fr 1fr;
+  padding-bottom: 16px;
+  padding-top: 16px;
+}
+
+.de-playground document-editor-mirror {
+  display: block;
+  margin-top: 40px;
+}
+
+.de-playground document-editor-mirror + .content {
+  margin-top: 40px;
+}
+
+.de-playground document-editor {
+  border-radius: 6px;
+  display: block;
+  height: 720px;
+  overflow: hidden;
+}
+
+.de-playground__control-list {
+  display: flex;
+  justify-content: end;
+}
+
+.de-playground__control-list .button {
+  margin-left: 8px;
+}
+
+.de-playground__control-list .button:first-of-type {
+  margin-left: 0;
+}
+
+.de-playground__function-property {
+  grid-column: span 2;
+}

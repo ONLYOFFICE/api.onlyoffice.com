@@ -1,0 +1,799 @@
+NUCLEAR PHOTOEFFECT 
+
+
+(3) Evaluation of My.p. 
+
+
+ee b(8/2)? 
+P| Fea(B PAF 4g) [PA +8) 
+_(=1)"6'/2)"PU — 7g) 
+NTU ip. 
+AUGUST 15, 1937 
+
+
+PHYSICAL REVIEW 
+
+
+273 
+
+
+Cy Se In| Sinn | 
+n=0 m=0 I=0 
+
+_ (= 1)(8"/2)"0 (1 Fig) 
+
+m'T(m+1it+ig) ' 
+
+
+pt+ian+2m-+ig |’ 
+(—1)"(6/2)"rU+p) | 
+n!T(n+1+ ) 
+
+
+n= 
+
+
+VOLUME 52 
+
+
+Note on Nuclear Photoeffect at High Energies 
+
+
+F, Katcxar, J. R. OPPENHEIMER AND R. SERBER 
+University of California, Berkeley, California 
+
+
+(Received May 19, 1937) 
+
+
+In I we consider nuclear transmutations when the energy is so high that the levels of the 
+compound nuclei formed have a spacing smaller than their breadth, and investigate the rela- 
+tions between the cross sections for the various possible reactions and the decay constants 
+characteristic of the compound nuclei. When the collision may be treated as a resonance effect, 
+these relations take a simple form. In II we apply these considerations to the photoelectric 
+disintegration of nuclei of intermediate atomic weight by 17 Mev y-rays, and suggest that the 
+yields should show a marked increase for y-rays of somewhat lower energy. In III we study the 
+formal connection between the evaluation of transmutation probabilities here given and the 
+resonance formulae appropriate for lower excitation energies, and show that both Gesceiptlons 
+may be derived as limiting cases from the same formalism. 
+
+
+I 
+
+
+OHR’S analysis! of nuclear phenomena has 
+shown the great importance, for an under- 
+standing of the processes of nuclear disintegra- 
+tion, of the capture of the incident particle with 
+the formation of an intermediate nucleus having 
+a considerable excitation energy, and so long a 
+lifetime that the subsequent transformation of 
+this unstable structure by the emission of par- 
+ticles (or y-rays) may be treated as an inde- 
+pendent process. A formalism consistent with 
+these ideas, and especially appropriate to the 
+study of the behavior of slow neutrons, has been 
+developed by Breit and Wigner,? who have con- 
+sidered the case that the energy levels of the 
+compound nucleus lie far apart compared to their 
+breadth, and have applied the familiar quantum 
+mechanical dispersion formulae to this problem. 
+For sufficiently heavy nuclei and sufficiently high 
+excitation energies the intermediate nucleus will 
+however no longer have well-defined energy 
+levels; instead the states of the system, and even 
+the states of a particular kind, e.g., of a given 
+angular momentum, will form a continuum. One 
+
+
+1N, Bohr, Science, to be published. 
+2 Breit and Wigner, Phys. Rev. 49, 519 (1936). 
+
+
+might hope that the disappearance of any char- 
+acteristic level structure would lead to a simpli- 
+fication in the description of the probabilities of 
+nuclear disintegration, and that the only quan- 
+tities which then determine these probabilities 
+would be the rates at which a wave packet repre- 
+senting the intermediate nucleus comes apart 
+into the various possible residual nuclei and 
+emitted particles. 
+
+This expectation is not however in agreement 
+with the result given by a simple application of 
+the principle of detailed balancing to the 
+processes of formation and disintegration of the. 
+compound system. Thus we may divide the 
+states of the compound nucleus into sets (i) each 
+of which is characterized by decay constants 
+which in the limit of close lying levels may be 
+regarded as slowly varying functions of the 
+energy, and by a density of levels 1/s* per unit 
+energy. Then we obtain a relation between the 
+cross section o. for the capture of an incident 
+particle and the decay constants I'ao’/A for the 
+reemission of this particle with its original 
+energy: | 
+
+
+oe (N2/2w4) DP aoi/sé, (1) 
+
+
+274 F. KALCKAR, J. R. 
+where \=h/p is the wave-length of the incident 
+particle, and wa is the combined statistical 
+weight of the initial states of incident particle 
+and bombarded nucleus. If then I';,‘/f is the rate 
+of emission of a particle of type k, I'*/fA is the 
+total decay constant of a state (i), then the cross 
+sections for transmutation are just 
+2 Tool x! 
+0; = —-—_ = 
+
+
+2WA a s'T? 
+
+
+(2) 
+
+
+This formula can also be brought into connection 
+with the results derived by Breit and Wigner for 
+the case of well separated levels (I’<s*): 
+
+
+(E) ? 3 Peo es 
+o =——_—— ' 
+drwy, TF (E-E,) (0)? 
+
+
+hare G 
+
+
+Here F is the total energy of the system, and £,’ 
+the energy of one of its quasi-stationary states. 
+As Bethe and Placzek* have pointed out, from 
+(3) we can obtain a cross section, averaged over 
+a range of energy large compared to spacing of 
+the levels, which agrees with (2). One might 
+thus suppose that although for the derivation of 
+(3) the condition I’<s‘* is essential, no such 
+restriction limited the validity of (2). 
+
+Nevertheless, if one formulates the problem 
+for the case ['*>s* in terms of the same disper- 
+sion-theoretic formalism as leads in the other 
+limiting case to (3), and assumes as before that 
+the collision may be treated as a resonance 
+effect, one is led, not to (2), but to the radically 
+different 
+
+a Lele 
+
+
+Ces oa 
+Coos 
+
+
+TWA 1 
+where the summation >> is to be taken over all 
+4 
+
+
+sets of noncombining states of the compound 
+nucleus, and where, as before, the I’s for each 
+set are supposed to vary slowly with energy. 
+Since (4) differs from (2) by the substitution for 
+1/s* of 2/(mT*), and since I'*>s*, the cross 
+sections’ given by (4) are smaller than those 
+given by (2). As we shall see in III, the formal 
+reason for this, and the reason for the failure of 
+the statistical argument leading to (2), is that 
+the ‘‘combining”’ states of the compound nucleus 
+lying within a line breadth of each other do not 
+
+
+3 Bethe and Placzek, Phys. Rev. 51, 450 (1937). 
+
+
+(4) 
+
+
+OPPENHEIMER AND R. 
+
+
+SERBER 
+
+
+at all act independently, and that strong de- 
+structive interference is involved in the proba- 
+bility of their excitation [ cf. (12) ]. The coherence 
+of phases implied by this interference is itself a 
+consequence of the assumption that the processes 
+involved in the collision may be adequately 
+described in terms of resonance between states 
+representing the incident particle (which may be 
+elastically scattered at the surface of the nu- 
+cleus), and other states of the compound system 
+which have a very long life (~#/I"). This in turn 
+implies that it is not necessary to include in the 
+description those wave packets built up from 
+the long lived states of the compound system, 
+which represent short lived compound nuclei, and 
+which correspond physically, on the one hand, 
+to “surface effect’? inelastic scattering and 
+transmutation, and on the other to the possi- 
+bility of forming the intermediate nucleus by a 
+sequence of processes involving compound 
+systems of increasingly long life and more 
+complete energy degradation. 
+
+In the problem of the radiative capture of 
+slow neutrons to which the Breit-Wigner formula 
+was first applied, the characteristic energy de- 
+pendence of the observed cross sections itself 
+indicates the appropriateness of describing the 
+collision as a resonance effect. But in the other 
+limiting case, where I'>s*, neither (2) nor (4) 
+may be applied without a careful examination 
+of the physical problem. Since I increases, and 
+s* decreases, with the excitation energy, (2) and 
+(4) differ more and more as the energy of the 
+bombarding particle increases. It is in any case 
+clear that the factor I'ao*/T* which occurs in (4) 
+will fall off rapidly with energy because of the 
+increasing improbability of a complete concen- 
+tration of the excitation energy, and for suf- 
+ficiently high energies the description of the 
+collision as a resonance effect must in general be 
+completely inappropriate. 
+
+A striking illustration of this is afforded by the 
+impacts of quite fast neutrons on nuclei. In this 
+case, as one may see from the simple mechanical 
+model discussed by Bohr,! it will be extremely un- 
+likely that the energy of the incident neutron will 
+at once be divided among all the nuclear par- 
+ticles; rather the normal course of events will 
+involve an inelastic impact near the surface of 
+the nucleus, in some cases leading merely to the 
+
+
+NUCLEAR PHOTOEFFECT 
+
+
+ejection of a particle with reduced energy, but 
+quite often followed by a series of further impacts 
+which lead ultimately to the complete degrada- 
+tion of the energy and the formation of a com- 
+pound system of very long life. Such a situation 
+cannot be formally described in terms of a 
+simple resonance effect, nor can the formation of 
+the compound system be treated without con- 
+sidering the wave packets which represent the 
+surface disturbances and short lived intermediate 
+states. On the other hand just the complication 
+of the mechanisms actually involved in the 
+formation of the compound nucleus may offer 
+some justification, in this case, for the assump- 
+tion of random phases’ involved in the derivation 
+of (2). 
+
+A still more striking case of the inadequacy 
+of (4) to describe transmutations we find in 
+reactions initiated by bombardment with high 
+energy deuterons, where, in spite of the fact 
+that the emission of a deuteron of high energy 
+
+
+from a compound nucleus must be extremely 
+
+
+rare, the cross section for deuteron induced 
+transmutations can be of the order of magnitude 
+of the area of the nucleus. It is clear that here in 
+the course of the formation of the compound 
+nucleus, the original coupling between proton 
+and neutron will be completely dissolved, and 
+that the formation of the compound nucleus, 
+whether it involves the capture of proton or 
+neutron or both, may surely not be considered 
+as a single process. | 
+
+As an example of a problem to which we may 
+make a tentative application of (4), we may 
+consider the nuclear photoeffect in complex 
+nuclei, for y-ray energies high enough to make 
+I> s*, and yet low enough so that the absorption 
+
+
+of the radiation can be treated as a resonance 
+
+
+effect. That such a treatment can remain valid 
+for higher excitation energies for y-rays than for 
+neutrons depends upon the fact that the inter- 
+action between a y-ray and a nuclear particle is 
+smaller in order of magnitude than that between 
+the particles themselves: whereas the waves 
+representing incident neutrons of high energy 
+will be very rapidly damped out at the surface 
+of the nucleus, those representing y-rays will be 
+practically undamped, and therefore far more 
+
+
+4Compare the discussion of W. Pauli, Sommerfeld 
+Festschrift, p. 30, 1928. 
+
+
+275 
+
+
+effective in exciting oscillations of the nucleus as 
+a whole. Apart from a necessarily rough estimate 
+of the contribution of the nonresonance effects, 
+to which we shall refer again in II, and which 
+shows that it may well be smaller than that 
+given by (4), there is some experimental evidence 
+in favor of the applicability of (4) to this 
+problem, in that the smallness of the ratio of the 
+effects observed for light nuclei (N™, O18) to 
+those observed for nuclei of intermediate atomic 
+weight is most easily interpreted in terms of the 
+far shorter lifetime of the lighter compound 
+nuclei. 
+
+
+I] 
+
+
+It is, of course, not possible at present to 
+calculate the I'’s on the basis of any complete 
+nuclear theory; and, particularly in those 
+problems to which classical arguments cannot 
+be simply applied, one must resort to the trans- 
+mutation experiments themselves, and may hope 
+to use (4) and (2) in some cases to correlate the 
+values of the I'’s so obtained. It is from this 
+point of view that we shall discuss the photo- 
+disintegration of nuclei by high energy y-rays. 
+For nuclei of intermediate weight we would 
+expect that the compound nucleus formed by 
+absorption of the y-ray will ordinarily dissipate 
+its energy by the emission of neutrons, since the 
+emission of a charged particle would require a 
+much greater concentration of energy in the 
+escaping particle than is required by a neutron, 
+because of the necessity of its clearing the 
+Coulomb barrier. This argument may not how- 
+ever be applied to those nuclei, relatively 
+common for atomic weight below 20 and above 
+150, for which the emission of a charged particle 
+is energetically far more favorable than that of 
+a neutron... 
+
+Experiments on the capture of thermal energy 
+neutrons (nuclear excitation energy~8& Mev) 
+give neutron widths ,~10-‘v. As the excitation 
+energy is increased, the neutron width will at 
+first be proportional to the velocity of the 
+neutron; hence for an energy a million volts 
+higher we would estimate T',,~1v. For still larger 
+excitation energy the neutron width will increase 
+very rapidly, because of the rapidly increasing 
+number of probable modes of disintegration. For 
+several million volts additional excitation energy 
+
+
+276 F. KALCKAR, J. 
+we would therefore expect I, of the order of 
+some tens or hundreds of volts. The spacing 
+between levels is between 10 and 100 v for 8 Mev 
+excitation energy, decreases rapidly with in- 
+creasing energy, and should become less than IT, 
+for several million volts additional energy. Thus 
+when a nucleus is raised by absorption of a y-ray 
+to an excitation energy greater than this, the 
+level breadth will surely be wider than the 
+spacing between levels, and we may try to use 
+(4) to discuss the problem. Since in all probability 
+I'~T,>T,, the cross section for neutron emission 
+is | 
+n= (?/wat) LT y0%/Ta'. 
+
+
+We may expect that the number of noncombining 
+sets (i) which contribute appreciably would be 
+comparable with wy, and shall thus write 
+
+
+on~ (N/T) Py0/T ny (S) 
+
+
+where here the I's may be regarded as appropri- 
+ate averages over the contributing noncombining 
+sets (i). 
+
+The photoeffects produced in many nuclei by 
+the 17 Mev y-ray of Li7+H! have been studied 
+by Bothe and Gentner,® who do in fact find that 
+the typical reaction involves the ejection of a 
+neutron. Their estimate, o,~107?? cm’, gives 
+at once, since \?/7~10-% cm?, 
+
+
+Pyo/Tn~ 10-4, 
+
+
+If we combine with this the estimate of some 
+100 v for T, at these energies, we find that I'yo 
+must be of the order of 1/100 of a volt, about a 
+tenth of the total radiative breadth of the 
+resonances found in slow neutron capture. In 
+fact one might expect that [yo would not change 
+very much in going from excitations of 8 to 17 
+Mev; for, on the one hand, it will increase with 
+a high power (probaby the fifth power charac- 
+teristic of electric quadripole and magnetic 
+dipole radiation) of the frequency; on the other, 
+it will decrease exponentially very roughly with 
+the square root of the energy because of the 
+smaller probability of finding all the excitation 
+energy in a single mode of high frequency.® Thus 
+if one supposes that the electric moments asso- 
+
+
+5 Bothe and Gentner, Naturwiss. 25, 90, 126, 191 (1937). 
+6 A discussion of these questions is to be published by 
+Bohr and Kalckar, ; 
+
+
+R. OPPENHEIMER AND R. SERBER 
+
+
+ciated with these oscillations of varying frequency 
+are of the same type and order of magnitude at 
+8 and at 17 Mev, the variation of the two factors 
+on which I’, depends will tend to cancel. We 
+should then expect that in this range c, should 
+increase with decreasing y-ray energy, and 
+continue to increase until I, becomes equal to 
+the spacing between levels. At this point (y-ray 
+energy ~10-12 Mev). we should have I[',o/T, 
+~10-?—10-%, and a cross section, o,, between 
+10-% and 10-26 cm?. For still lower energies (5) 
+is no longer valid; we must then, as pointed out 
+by Bethe and Placzek, apply (2), ie., in (5) 
+replace T, by (2/7)s. In this range the cross 
+section will decrease with decreasing energy, as 
+s increases. 
+
+It would thus be interesting to see if such an 
+increase in yield occurs when photodisintegra- 
+tions are produced by y-rays of lower energy. 
+Two points must, however, be kept in mind. In 
+the first place there are in the Li spectrum’ 
+y-rays of about 14 Mev which may contribute 
+as much to the photoeffect as the 17 Mev line. 
+Moreover, since the yields from 10-12 Mev 
+radiation may be much larger than those at the 
+higher energies, the presence of any appreciable 
+contamination of such degraded radiation in the 
+experiments we have quoted would render their 
+interpretation uncertain, and the maximum 
+cross sections we suggest might be much too 
+large. 
+
+In the second place, our discussion has been 
+based on the use of (4); and we know that the 
+validity of this is conditioned by the possibility 
+of disregarding short-lived intermediate states 
+and their contribution to the formation of the 
+compound nucleus. It is clear that as the energy 
+of the y-ray is indefinitely increased, processes 
+of absorption involving the dipole moment 
+associated with the acceleration of a single par- 
+ticle, will be essential even for those impacts in 
+which a long lived compound nucleus is ulti- 
+mately formed. To estimate the order of magni- 
+tude of the relative contribution of these processes 
+compared to the resonance effects described by 
+(4), one may in (5) replace I'yo/% by the radiative 
+transition probability to the normal state for a 
+wave packet representing a concentration of all 
+
+
+7 Delsasso, Fowler and Lauritsen, Phys. Rev. 51, 391 
+
+
+(1937). 
+
+
+NUCLEAR PHOTOEFFECT 
+
+
+the excitation energy in one particle, and 
+further replace #4/T, by the nuclear collision 
+time, and must include a factor to take into 
+account the fact that several wave packets of 
+this type can take part in the absorption process. 
+It seems difficult to obtain a good enough evalu- 
+ation of the quantities involved to tell us for 
+‘what energies (4) will become inapplicable. As 
+already pointed out however, the fact that the 
+photoelectric yields for 17 Mev radiation from 
+O' and N" are only about one percent of those 
+from heavier nuclei’ is a strong indication that 
+resonance effects predominate at these energies, 
+since the lifetime of an intermediate state of a 
+light nucleus is so.much smaller than that of a 
+heavy nucleus with the same excitation energy 
+that on the basis of (4), and even allowing for a 
+considerable increase in I'yo, one would anticipate 
+much smaller photoelectric yields. 
+
+
+III 
+
+
+We want now to look more closely at the 
+formal derivation of the result (4), and at the 
+relation of our treatment to the more familiar 
+application of dispersion formulae to nuclear 
+problems. 
+
+According to Bohr’s picture the intermediate 
+nucleus lasts for a time long compared to the 
+mean time between collisions of particles in the 
+nucleus. In attempting to take this fact into 
+account in formulating a dispersion theoretic 
+treatment of collision problems, certain simpli- 
+fying assumptions must be introduced, which 
+state that the incident particle may only be 
+either elastically scattered at the surface of the 
+nucleus, or captured to form a compound system 
+of long life which subsequently disintegrates. 
+This can be so only when the short-lived com- 
+pound systems, which are characteristic of 
+surface effects, are not involved in the inelastic 
+scattering or transmutations. The formal con- 
+sequence of this simplification is that we can 
+then describe the collision in terms of resonance 
+between two quite distinct types of states, each 
+of which may be supposed to give an approxi- 
+mate description of a stationary state of the 
+whole system. One of these sets, w,, corresponds 
+
+8 We are indebted to Dr. Cockcroft for telling us of 
+
+
+these experiments carried out by Goldhaber and his 
+collaborators. 
+
+
+277 
+
+
+just to discrete excited states of the compound 
+nuclei; the other set, w., represents asymptoti- 
+cally a definite residual nucleus in a definite 
+state, and definite free particles of given energies. 
+In setting up these states, we may so choose the 
+y, and their energies E,, that the coupling be- 
+tween the various 7 states is as far as possible 
+eliminated, and the y, so that we may neglect 
+all terms in the Hamiltonian directly coupling 
+the s states with each other. The long life of the 
+compound nucleus now means that the coupling 
+between the 7 and s states is so small that the 
+decay time of the 7 states is very long compared 
+to the nuclear collision time: the condition that 
+in the description of the collision process short- 
+lived compound nuclei do not appear means that 
+the coupling between 7 and s states is effective 
+only near resonance, and that we need not con- 
+sider wave packets built up from the ¥, whose 
+lifetime is much smaller than that of the states 
+y, themselves. 
+
+If we now call the matrix elements of the total 
+Hamiltonian H,,, H,;, Hs, our conditions on 
+the y, mean that H,,- may be treated as a 
+diagonal matrix: 
+
+
+I... =E,6(s—s’). 
+
+
+The optimal elimination of the coupling between 
+the r states means, that not H,,-, but H,,- cor- 
+rected for the “‘line shifts’? due to the coupling 
+with the s states, is diagonal: 
+
+
+Hy +P ‘ dsH,,H/(E—E,) =E be, (6) 
+
+
+where £ is the total energy of the system. We 
+now try to find a wave function of the form 
+
+
+y os Yot Lobe t [scabs 
+
+
+where Wo is that one of the y, which represents 
+asymptotically the bombarding particle and the 
+bombarded nucleus, and is normalized so that 
+the incident flux is unity. The wave equation for 
+the c’s is then 
+
+
+Ec,= CHmcwt | dsHucet Hoo (7) 
+
+
+(E—E,)¢s= DH r€;. (8) 
+
+
+278 F, KALCKAR, J. 
+From this, substituting c, from (8) in (7), and 
+using (6), 
+
+
+4 yxy 
+Xr =/7 6 ie. a ee pe ee Re (9) 
+pi eee ee 
+
+
+where i re =D LT rH and the sum 2 is 
+
+
+mien over all ates with #,=£, and ieee we 
+have introduced 
+
+
+) Ca ie — FE, Ad ep, 
+
+
+which varies smoothly with £. 
+
+The assumption that no short-lived inter- 
+mediate nuclei contribute now means that we 
+may neglect the contribution to the sum in (9) 
+of all states 7’ for which |Z,,—E|>>T,.,.. When 
+the spacing of the levels, s,, is large compared to 
+I’., we then get at once 
+
+
+x¥,=H, when E,~E. (10) 
+
+
+In the other limiting case, with s,<«<TI;,,, many 
+terms in the sum contribute. We may then 
+suppose that the I'’s vary smoothly from level to 
+level. There may of course be various sets of 
+intermediate states, for example states of given 
+angular momentum, with quite different sets of 
+I’s; but in general one will expect this only when 
+the different sets of levels belong to different 
+representations of a group of transformations 
+which leave the Hamiltonian approximately 
+invariant, and in this case each such set (i) may 
+be considered separately ; there will be no inter- 
+ference between different sets and their con- 
+
+
+tributions to the cross section will be simply © 
+
+
+additive, so that from now on we shall consider 
+only a single such set. The summation in (9) 
+may thus be replaced by an integral 
+
+
+dE, Dy Xp 
+= H,.—- | ener see 
+Z Sp? (E — Fy + SUD ppt) 
+
+
+If then we neglect the contribution of levels 
+|E.—E|>T.,, and the variation over the line 
+breadth of the matrix elements of ZZ, we may 
+replace the integral by its residue. The solution 
+of (11) is then 
+
+
+(11) 
+
+
+TL ygld xo 
+Xr = Fo ae 
+2s,+arl rT 
+
+
+25,f1 +9 
+
+
+NS 
+
+
+(12) 
+
+
+R. OPPENHEIMER AND R. 
+
+
+SERBER 
+
+
+except when |£,—|>>I, and where £,~£ and 
+r=T,,. Because of the assumed asymptotic form 
+of y,, one sees from (8) that the cross section for 
+a process of type & involving the emission of a 
+given particle and leaving the nucleus in a given 
+state is 
+
+
+on = (20/h) Xu | LL encr|”, (13) 
+
+
+where > is to be taken over all states s, with 
+
+
+s=k 
+E,=E, and leading to a disintegration of type &. 
+From (10), (12) and (13), and treating the sum 
+over 7 as before, we then get 
+
+
+Qa | FZ 0| : Xe Lass? 
+ae r'>s, 
+h Tr 7 a 
+~f. (1 
+p 
+y) Patna De lg? 
+Tv s=k 
+’ r<s, 
+
+
+i (E—E,)?+31° 
+
+
+Because of the asymptotic form of y, and wo, 
+the matrix elements occurring in (14) are con- 
+nected with the decay constant I, for the disin- 
+tegration of type k, and the decay constant Tao 
+for the reemission of the incident particle with 
+its initial energy, by 
+
+
+T,=24 > Ws erate | er ee (4rwa/hd*) | H,o|?. 
+s=k 
+
+
+We thus have 
+
+
+Tool; 
+2 4 PSs, 
+TWA Tt? 
+Nes Pools 
+
+
+E,~E. 
+
+
+= = P< Ss: 
+Anwa (E—F,)?4+ 41" 
+
+
+By summing over all sets of intermediate states 
+(i) we get from this (3) and (4). It is clearly not 
+possible by formal arguments alone to decide 
+whether, in a given problem, the incisive con- 
+ditions necessary for the validity of (3) or (4) are 
+really fulfilled. For this, as in the case of the 
+nuclear photoeffect, a detailed discussion of the 
+physical problem is in general essential. 
+
+

@@ -1,0 +1,531 @@
+AUGUST 15, 1937 
+
+
+PHYSICAL REVIEW 
+
+
+VOLUME 52 
+
+
+Note on Resonances in Transmutations of Light Nuclei 
+
+
+F. Katcxar, J. R. OPPENHEIMER AND R. SERBER 
+California Institute of Technology, Pasadena, California 
+
+
+(Received May 19, 1937) 
+
+
+It is shown that the sharp resonance effects observed in many transmutations involving light 
+nuclei require the existence of fairly strict selection rules to limit the decay rates of the cor- 
+responding compound nuclei. Such selection rules in several cases follow from the slowness of 
+the interconversion of spin and orbital angular momentum. Some consequences of this are 
+discussed for the bombardment of B and F by protons. 
+
+
+HEN light nuclei are bombarded with 
+
+
+protons, the transmutation functions for 
+the various alternative reactions are often radi- 
+cally different. This suggests that, by bombard- 
+ment of a given nucleus, compound nuclei can be 
+formed which have quite different properties. 
+Thus in the reaction 
+
+
+Li?7+ H'!— (Bea*)—2He? (1a) 
+
+
+the yield of 8 cm a-particles increases steadily 
+with bombarding voltage, and for low energies, 
+where such considerations are applicable, follows 
+the course expected from the arguments of 
+Gamow on the penetration of the potential 
+barrier by the proton. On the other hand the 
+reaction in which high energy y-rays are emitted, 
+
+
+Li7+H!~>(Bez’)— Be’+y, (1b) 
+
+
+exhibits a pronounced and sharp resonance at a 
+bombarding energy of 440 kv.! 
+
+With the proton bombardment of fluorine, the 
+situation is similar but a little more complicated. 
+Here too the 6 cm a-particle yield from the 
+reaction 
+
+
+sarap New pO aie: (2a) 
+
+
+increases rapidly with bombarding energy,” but 
+the y-ray transmutation function! shows sharp 
+resonances of increasing magnitude at 330 kv, 
+890 kv, 940 kv. Two reactions have been pro- 
+posed to account for these y-rays, 
+
+
+F194. H (Neg?) (Oz!) + Het 
+
+
+—O'-+Het+y (2b) 
+1 Hafstad, Heydenburg and Tuve, Phys. Rev. 50, 504 
+(1936). 
+
+
+2 Henderson, Livingston and Lawrence, Phys. Rev. 46, 
+38 (1934). 
+
+
+Flt Hl (Ne;?)> (Nec?) +y 
+a Ol6+ Het+-+¥ 
+Net ysey 
+
+
+where again the parentheses indicate excited 
+nuclei. At least for low bombarding energies the 
+y-rays are approximately monochromatic,’ with 
+an energy ~6 Mev; the excitation energy of the 
+Nes” is more than twice this. 
+
+Still more complicated is the bombardment of 
+B" with protons. Here most of the a-particles are 
+to be ascribed‘ to the reaction 
+
+
+B'U+H"> (Cy) (Bes’) + He*+>3He}," 
+
+
+(2b’) 
+
+
+(3a) 
+
+
+where the Be,’ has an excitation of a few Mev. 
+The yield of these alpha-particles increases 
+smoothly®> and without marked evidence of 
+resonance for bombarding energies up to 600 kv. 
+On the other hand both the reactions 
+
+
+BU-+ H1> (Cz")— Be’+ Het 
+BU+tH' 9 (Cg2)-C8+y 
+
+
+(3b) 
+(3b) 
+
+
+show®: ® sharp resonance at 180 kv. The yield of 
+y-rays increases again markedly” at about 700 
+kv, suggesting the existence of a further reson- 
+ance level in this neighborhood. 
+
+Since in any case the sharpness of resonance 
+is a measure of the lifetime of the compound 
+nucleus formed by the capture of the bombarding 
+particle, the compound nuclei Bex®, Nes”, Cz” 
+must differ very radically from Bey’, Neg?®, Ca” 
+as to their possibilities and rates of disintegra- 
+tion. Now in each of the cases we are considering, 
+3 Delsasso, Fowler and Lauritsen, Phys. Rev. 51, 527, 
+ine and Gilbert, Proc. Roy. Soc. 154, 279 (1936). 
+ion Wells, Tate and Hill, Phys. Rev. 51, 434 
+
+
+6 Bothe and Gentner, Zeits. f. Physik 104, 685 (1937). 
+’ Fowler and Lauritsen, private communication. 
+
+
+279 
+
+
+280 F. KALCKAR, J. 
+
+
+there are just three energetically possible modes 
+
+of disintegration: 
+
+(1) Reemission of the bombarding proton, with decay 
+constant T,/h, 
+
+
+(2) emission of an a-particle, T,/h, 
+(3) y-radiation, Ty/h. 
+
+
+The decay constant of the compound nucleus 
+will be just T/ZA=(T,+T.4+1T,)/h. The absence 
+of marked resonance effects for the A-reactions 
+shows that I must be very large for the A nuclei; 
+I’, is always small, and I’, is surely small for low 
+bombarding energies because of the effect of 
+the barrier. Under these circumstances [~T,g, 
+T,>r,, Ta2>r,. Thus the sharp resonances 
+observed for the B-reactions show that the B 
+nuclei can disintegrate by a-emission, either not 
+at all, or very much more slowly than the A 
+nuclei. The reaction (3b) shows that in this case 
+at least we have to do with retarded but not 
+forbidden a-decay. What is then the distinction 
+between the A and B nuclei which brings about 
+this great difference in behavior? 
+
+For the case of Bes’, a satisfactory answer to 
+this question has already been given,! for since 
+two unexcited a-particles are necessarily de- 
+scribed by a wave function which is even with 
+respect to the mirroring of the coordinates of all 
+particles in the center of mass, a state of Be® 
+will not be able to decay into two such a-particles 
+at all if it is odd; we thus account qualitatively 
+for the facts if we say that Be,® is even, Bez® 
+odd. Analogous considerations of parity are 
+however inapplicable to C! and Ne?®, since the 
+disintegration products are not in these cases 
+identical nuclei. It is true that arguments of 
+parity may demand that the a-particle come off 
+with a relative angular momentum different from 
+zero; but the energy of the a-particle is so high 
+that this will not alter the order of magnitude of 
+the decay constant. We have thus to ask what 
+other selection rule can so markedly reduce the 
+a-decay rate of the two nuclei Cz”, Ne,”°. 
+
+Now there is one feature of nuclear forces 
+which follows quite generally from the fact that 
+the velocities of neutrons and protons are small 
+compared to c, that we have here an essentially 
+nonrelativistic problem. This is that the total 
+spin S of the neutrons and protons, and their 
+total orbital angular momentum JL, will vary 
+
+
+R. OPPENHEIMER AND R. SERBER 
+
+
+only very slowly with time; 8 for the coupling 
+between them which is responsible for their vari- 
+ation is of the order (v/c)?, and corresponds, 
+according to the suggestion of Inglis,® merely to 
+the Thomas precession of the spins in accelerated 
+motion (wr= —(vXv)/2c?). Thus the ideas of 
+Bohr on the ease of energy exchange between par- 
+ticles, and the fact that nuclear forces surely do 
+depend upon the relative spin orientations of the 
+particles, guarantee a rapid exchange on the one 
+hand of the orbital angular momentum among 
+the particles composing the nucleus, and on the 
+other of the individual particle spins, but do not 
+in any way alter the approximate constancy of 
+S and L. In fact, since the rate of conversion of 
+spin into orbital angular momentum should be 
+proportional to the square of the coupling energy, 
+this conversion should take a time larger than 
+the nucleus collision time by a factor of the order 
+(c/v)*~ 104,19 
+
+Now for the a-particle certainly S=0. More- 
+over, for the product nuclei Be’, O!® one would 
+expect from very general symmetry arguments 
+that the lowest states would have paired neutron 
+and proton spins and S=0. Thus the normal 
+
+
+-a-decay products will have vanishing spin, and 
+‘only when the intermediate nucleus too has S=0 
+
+
+will this normal a-decay be rapid; for compound 
+nuclei with S0, the possibility of such decay 
+will depend on the interconversion of spin and 
+orbital angular momentum, the decay time will 
+in any case be increased by a factor (c/v)*, and 
+marked resonance effects will appear. The 
+absence of such resonance for the A nuclei shows 
+that for them S=0; thus normal F!® and B!! 
+must have S=4, as indeed one would expect. 
+We then wish to suggest that Ne z?’, Cp” are 
+triplet states, with S=1. More generally, it 
+
+
+7a LZ and S would be constants of the motion for any 
+nuclear Hamiltonian which is invariant under a rotation 
+of the positional coordinates of all particles alone, and of 
+their spins alone. This condition is satisfied for all the 
+types of forces commonly considered in nonrelativistic 
+nuclear theory (Majorana, Heisenberg, Wigner, Bartlett 
+forces). . 
+
+8 The importance of the approximate constancy of S 
+for the interpretation of nuclear reactions was first recog- 
+nized by Goldhaber, Proc. Camb. Phil. Soc. 30, 361 (1934). 
+
+9D. R. Inglis, Phys. Rev. 50, 783 (1936). 
+
+10 This selection rule applies only to the interconversion 
+of spin and orbital momentum; in y-ray emission, where 
+magnetic dipole radiation can alter the spin, and probably 
+in @-ray emission, transitions involving a change of S by 
+one unit are hardly less probable than those leaving it 
+unaltered. | 
+
+
+RESONANCE IN TRANSMUTATIONS 
+
+
+seems not unlikely that for nuclei of odd atomic 
+weight the normal! states will have S=#, so that 
+when these are bombarded by protons or 
+neutrons, only singlet and triplet states of the 
+compound nucleus will be formed. If states of 
+even higher multiplicity were formed in such 
+reactions, they would be almost stable against 
+normal a-decay. 
+
+
+II 
+
+
+We shall now have to see in greater detail 
+whether this explanation is tenable, and what 
+implications it has for the pie pre ton of the 
+reactions in question. 
+
+The Ne?® formed by bombarding F!9 with 
+protons has an excitation energy of more than 
+12 Mev. We should thus expect the singlet states, 
+‘which can decay to O'%+He?’, to have a short 
+lifetime, since the a-particles emitted have so 
+great an energy that the effects of the potential 
+barrier will be negligible.!! Since, for instance, for 
+the heavier and less highly excited nucleus P*! 
+formed from Al?’?+ He’, the breadth of the levels 
+is ~ 10° v, we would expect for the singlet levels of 
+Ne®?, T~T.~105— 108 v. This breadth is so large 
+that from such states we should surely expect 
+no marked resonance in the yield of long range 
+a-particles. For triplet states of Ne? the long 
+range a-emission will be slowed up by (c/v)4, so 
+that here [,’~100 v. In order to account on 
+the basis of reaction (2b’) for the fact! that the 
+y-ray yields at ~1 Mev are at least ten times 
+the total long range a-particle yield, we should 
+thus have to assume a value of I’, ~1000 v. This 
+value is far larger than any which have been 
+found for nuclear y-rays, and at least 100 times 
+that necessary to account for the far more 
+energetic y-ray of the simpler nucleus Bez’. 
+Moreover, the fact that the y-ray spectrum 
+consists only of. radiation quite near 6 Mev 
+could on this basis be explained only quite arti- 
+ficially. We are thus led to consider the possi- 
+bility that O' has triplet states lying about 6 
+
+
+11 Since Po>>Tp, and Ty, varies slowly with bombarding 
+energy, the interpretation “of the rapid rise (faster than 1) 
+of the yield in this reaction given in reference (2) cannot 
+be right. If this more rapid rise should be confirmed, one 
+would have to understand it in terms of a residual structure 
+for the singlet levels, or a contribution from high-lying 
+triplet levels, of the compound nucleus. 
+
+2, McMillan, Phys. Rev. 46, 868 (1934). 
+
+
+281 
+
+
+Mev above ground, and that the reaction which 
+
+
+successfully competes with the emission of long 
+
+
+range a-particles is the emission of slow a-par- 
+ticles, without spin change, but with so low an 
+energy that the level breadth T’,”’, though larger 
+than I’, is still small enough to give sharp 
+resonances (100 v<I,’’<10,000 v). Experimen- 
+tally one knows that at bombarding energies 
+~ 400 kv there are no short range a-particles of 
+energy > 2 Mev emitted;’ and for this process to 
+compete successfully with the long range a-emis- 
+sion, the energy of the particles cannot be far 
+less than 1.5 Mev. A value in this neighborhood 
+is consistent with the energy balance. If this 
+suggestion is correct, one would expect the ratio 
+l,/’/T,’ to increase rapidly with energy; and 
+for the lowest resonance level (~330 kv) it 
+would seem possible that seme long range a- 
+particles could be observed. The absence of 
+
+
+_ other lines in the y-ray spectrum cculd then be 
+
+
+interpreted in a natural way because of the 
+absence of low-lying excited states in the ‘‘closed 
+shell”? nucleus O1. 
+
+In the case of the B!!+H! reactions, one will 
+again expect that the I. for C™ in singlet states 
+will be large, and that with an increase in bom- 
+barding energy the yield in (3a) will increase 
+smoothly with I,. Again one will make a triplet 
+C” responsible for the y-ray emission and the 
+long range a-particles which show marked reso- 
+nance. But here there is a point which calls for 
+further explanation: why is the ratio of long to 
+short range a-particles so much smaller for C4” 
+than for Cz’? Since for the low resonance energy 
+the reaction (3a) is far more probable than (3b), 
+and since the long range a-particles are not iso- 
+tropically distributed in direction," it seems 
+reasonable to assume that Cy” is formed by 
+capture of an s-proton, and is odd, and that 
+Cz" is formed by -capture, and is even. If the 
+normal state of B!! were a ?P state, C4” would 
+then be an odd !P state; and Cz” an even °D 
+state, so that both states could give both 
+a-particle reactions, and one could expect no 
+great difference in the relative yields. If however 
+normal B" is a 7D, then Cy” is an odd 'D, and 
+this cannot disintegrate into a normal Be%(1S) 
+and an unexcited a-particle at all, whereas Cz”, 
+
+
+13 Neuert, Physik. Zeits. 38, 122 (1937). 
+
+
+282 A. C. G. MITCHELL 
+in an even triplet state can. We wish therefore to 
+suggest this interpretation, which is hardly in 
+serious conflict with the calculations based on 
+a Hartree model, according to which the 2D of 
+B" is only ~2.5 mc? higher than the ?P. Accord- 
+ing to this view the resonance reaction may 
+contribute also to the short range a-particles, 
+and the small yield from this reaction must be 
+ascribed to the smallness of I’, for a p-proton at 
+these low energies. 
+
+With the Li reactions, one point remains a 
+little puzzling if one accepts the usual interpre- 
+tation: since normal Li’ is almost certainly odd, 
+the long range a-reaction must be ascribed to 
+the capture of a p-proton, the Be z® to that of an 
+s-proton. The fact that the long range a-reaction 
+
+
+14 Feenberg and Wigner, Phys. Rev. 51, 95 (1937); 
+Feenberg and Phillips, Phys. Rev. 51, 597 (1937). 
+
+
+AUGUST 15, 1937 
+
+
+PHYSICAL REVIEW 
+
+
+AND R. N. VARNEY 
+
+
+comes from p-capture may in part account! for 
+the smallness of the a-particle yield compared to 
+that of the reaction Li®+H!-He?+ He. One 
+would now expect that if the Be,4® could be 
+formed in a 1D state, the corresponding a-par- 
+ticles should be distributed in angle with marked 
+anisotropy; and the fact that the observed dis- 
+tribution'® seems to be isotropic suggests that 
+such states contribute little to Be,® in the range 
+of energies (~250 kv) investigated. This could 
+then only be understood if the spacing of levels 
+of different angular momentum in Be®, even at 
+the high excitation of 17 Mev, were still large 
+compared to the very considerable breadth of 
+these levels. 
+
+14 Compare M. Goldhaber, Proc. Camb. Phil. Soc. 30, 
+561 (1934). 
+
+
+16 Kirchner, Physik. Zeits. 34, 785 (1933); Giarratana 
+and Brennecke, Phys. Rev. 49, 35 (1936). 
+
+
+VOLUME 52 
+
+
+Neutron Scattering Cross Section as a Function of Energy 
+
+
+ALLAN C. G. MITCHELL AND R. N. VARNEY 
+Physics Department, New York University, University Heights, New York 
+
+
+(Received June 9, 1937) 
+
+
+The study of scattering of neutrons of energy range from 0.02 to 80 volts from Fe, Ni, and Pb 
+has been completed by measuring the activation of Ag, Rh, and CHI; detectors. The scattering 
+of C neutrons was determined indirectly by two methods, and the results agreed closely. The 
+scattering cross section for Ni fell off slowly with neutron velocity, that for Pb increased 
+slightly, while that for Fe remained constant over the range from 0.02 to 80 volts. The direc- 
+tional distribution of neutrons emerging from the top of a paraffin cylinder containing a Ra—Be 
+neutron source was investigated by placing detectors at various distances above the top of the 
+paraffin. The results agreed well with those calculated for a cosine distribution law. 
+
+
+PART I. SCATTERING Cross SECTION 
+
+
+CONSIDERABLE amount of work has 
+
+been done recently on the scattering of 
+neutrons from various materials. Mitchell and 
+Murphy! ? measured the scattering cross section 
+for a number of elements, while Pontecorvo and 
+Wick? measured the reflection of neutrons from 
+several substances and calculated scattering 
+cross sections for a few of these. Furthermore, 
+
+
+1A. C. G. Mitchell and E. J. Murphy, Phys. Rev. 48, 
+653 (1935); Mitchell, Murphy, and Langer, Phys. Rev. 
+49, 400 (1936). 
+
+2 oo Murphy, and Whitaker, Phys. Rev. 50, 133 
+1936). , 
+
+’B, Pontecorvo and G. C, Wick, Ricerca Scient. 1, 134, 
+
+220 (1936). 
+
+
+various materials sensitive to neutrons of differ- 
+ent energies have been used as detectors. We 
+have extended our experiments on the scattering 
+of slow neutrons using various detectors and 
+filter combinations so that we now have data on 
+the scattering cross section of neutrons of ener- 
+gies from 0.02 to 80 volts for several different 
+scattering materials. 
+
+The method used was that previously de- 
+scribed with certain modifications which we shall 
+show to be unessential. A cylindrical block of 
+paraffin, 15 cm in diameter and 17 cm high, con- 
+tained a source of neutrons located 6 cm from its 
+top surface. Ag, Rh, and CHI; were used as 
+detectors of the various groups of neutrons. 
+
+

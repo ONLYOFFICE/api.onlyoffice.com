@@ -1,0 +1,1646 @@
+1927 JN 20 
+
+
+ANNALEN DER PHYSIK 
+
+
+VIERTE FOLGE. BAND 84 
+
+
+1. Zur Quantentheorie der Molekeln; 
+von M. Born und R. Oppenheimer 
+
+
+Es wird gezeigt, daB die bekannten Anteile der Terme einer Molekel, 
+die der Energie der Elektronenbewegung, der Kernschwingungen und 
+der Rotationen entsprechen, systematisch als die Glieder einer Potenz- 
+entwicklung nach der vierten Wurze) des Verhiltnisses Elektronenmasse 
+zu (mittlerer) Kernmasse gewonnen werden kénnen. Das Verfahren 
+liefert u. a. eine Gleichung fir die Rotationen, die eine Verallgemeine- 
+rung des Ansatzes von Kramers und Pauli (Kreisel mit eingebautem 
+Schwungrad) darstellt. Ferner ergibt sich eine Rechtfertigung der von 
+Franck und Condon angestellten Betrachtungen iiber die Intensitit 
+von Bandenlinien. Die Verhaltnisse werden am Beispiel der zwei- 
+atomigen Molekeln erliutert. 
+
+
+Hinleitung 
+Die Terme der Molekelspektren setzen sich bekanntlich 
+aus Anteilen verschiedener GréBenordnung zusammen; der 
+gréBte Beitrag riihrt von der Elektronenbewegung um die 
+Kerne her, dann folgt ein Beitrag der Kernschwingungen, 
+endlich die von den Kernrotationen erzeugten Anteile. Der 
+Grund fiir die Méglichkeit einer solchen Ordnung liegt offen- 
+sichtlich in der GréBe der Masse der Kerne, verglichen mit 
+der der Elektronen. Vom Standpunkte der Alteren Quanten- 
+theorie, die die stationiren Zustiinde mit Hilfe der klassischen 
+Mechanik berechnet, ist dieser Gedanke von Born und 
+Heisenberg?) durchgefiihrt worden; es wurde gezeigt, daB 
+die aufgezihlten Energieanteile als die Glieder wachsender 
+Ordnung hinsichtlich des Verhiltnisses V 7 erscheinen, wo m 
+die Elektronenmasse, M eine mittlere Kernmasse ist. Dabei 
+traten aber Kernschwingungen und Rotationen in der gleichen 
+(zweiten) Ordnung auf, was dem empirischen Befund (bei kleinen 
+
+Rotationsquantenzahlen) widerspricht. 
+
+
+1) M. Born u. W. Heisenberg, Ann. d. Phys. 74. S. 1. 1924. 
+Annalen der Physik. IV. Folge. 84. 380 
+
+
+458 M. Born u. Rk. Oppenheimer 
+
+
+Hier soll die Frage vom Standpunkte der Quantenmechanik 
+neu avufgenommen werden.') Dabei stellt sich heraus, dab 
+
+
+mike as 
+man nicht nach Ve , sondern nach / entwickeln muf, 
+
+
+um die natiirliche Reihenfolge der Energieanteile zu bekommen. 
+Die Uberlegungen werden iiberdies viel einfacher und durch- 
+sichtiger als die der Alteren Theorie. Die Kernschwingungen 
+entsprechen den Gliedern 2. Ordnung, die Rotationen denen 
+4, Ordnung in der Entwicklung der Energie, wihrend die 
+Glieder 1. und 3. Ordnung verschwinden. Das Ausfallen der 
+Glieder 1. Ordnung hingt mit der Existenz einer ,,Gleich- 
+gewichtslage“ der Kerne zusammen, in der die Elektronen- 
+energie bei ruhenden Kernen ein Minimum ist. Die Terme 
+4, Ordnung ftir die Rotationsbewegungen stellen eine Verall- 
+gemeinerung des bekannten Ansatzes von Kramers und Pauli?) 
+dar, die das Verhalten einer Molekel durch das eines Kreisels 
+mit eingebautem Schwungrad wiedergegeben haben. Um die 
+Kigenfunktionen und damit die Ubergangswahrscheinlichkeiten 
+auch nur in nullter Niherung zu bestimmen, muB die Energie- 
+berechnung gerade bis zu den Gliedern 4. Ordnung (Rotationen) 
+getrieben werden. Man erhalt fiir die Wahrscheinlichkeiten 
+gleichzeitiger Spriinge von Elektronen-, Schwingungs- und 
+Rotationsquantenzahlen Ausdriicke, durch welche die von 
+Franck’) entwickelten, von Condon‘) ausgestalteten Vor- 
+stellungen eine prazise Fassung erhalten. 
+
+Die Niherungen von héherer als 4. Ordnung werden in 
+der vorliegenden Arbeit nicht behandelt; sie wiirden den Koppe- 
+lungen zwischen den drei Grundtypen der Bewegung ent- 
+sprechen. Kine Durchrechnung dieser Effekte hatte nur Sinn 
+bei gleichzeitiger Beriicksichtigung aller Entartungen der 
+Elektronenbewegung bei ruhenden Kernen, vor allem der 
+Heisenbergschen Resonanzentartung infolge der Gleichheit 
+
+
+1) Bei der Diskussion der Grundlagen dieser Arbeit hat uns Hr. 
+Dr, P. Jordan durch wertvolle Bemerkungen unterstiitzt, wofiir wir 
+ihm unsern Dank zum Ausdruck bringen michten. ; 
+
+2) H. A. Kramers, Zeitschr. f. Phys. 18. S. 348. 1928; H. A. 
+Kramers u. W, Pauli jr, 18. 8. 351. 1928. 
+
+3) J. Franck, Trans. Faraday Soc. 1925. 
+
+4) E. Condon, Phys. Rev. 28. 8. 1182. 1926; Proc. Nat. Acad. 13. 
+S. 462. 1927. 
+
+
+Zur Quantentheorie der Molekein 459 
+
+
+der Elektronen (gegebenenfalls auch einiger Kerne) und bei 
+zweiatomigen Molekeln der Entartung der Higenrotation um 
+die Kernverbindungslinie; auf diese verwickelten Betrachtungen 
+soll hier verzichtet werden. 
+
+Als Beispiel werden die zweiatomigen Molekeln niher 
+betrachtet, und zwar nicht nur nach der allgemeinen Methode, 
+sondern noch nach einer andern, bei der die Rotation durch 
+Separation der Variabeln bereits in nullter Naherung beriick- 
+sichtigt wird, abnlich, wie es Born und Hiickel}) in der 
+alteren Quantentheorie gemacht haben. 
+
+
+§ 1. Bezeichnungen und Definitionen 
+
+
+Die Masse und die rechtwinkligen Koordinaten der Elek- 
+tronen bezeichnen wir mit 
+Ms, Fey Yxs Zs 
+die der Kerne mit 
+dM, x, Y, Z,. 
+Ist M irgendein Mittelwert der JZ, so setzen wir 
+
+
+(1) eV 
+und 
+
+1 m . 
+(2) My MoS ay? 
+
+
+dann sind die w, reine Zahlen der GréSenordnung 1. Die 
+potentielle Energie des Systems sei 
+
+
+(3) pee 21) ar Yar 22, -23 Ay VY, 2, X,Y, 4,-.--) 
+= Ue, X); 
+
+hier, wie tiberall im folgenden, werden wir durch x die Ge- 
+samtheit der Hlektronenkoordinaten, durch X die der Kern- 
+koordinaten darstellen. Die Funktion UY hangt nur von der 
+relativen Lage der Partikeln ab; doch machen wir von ihrer 
+speziellen Formen (Coulombsches Gesetz) keinen Gebrauch. 
+Der kinetischen Energie der Elektronen entspricht der Operator 
+
+
+ne a 
+(4) la eee 6 x,2 ? 
+
+
+1) M. Born u. E. Hiickel, Phys. Ztachr. 24. 8, 1. 1923. 
+30* 
+
+
+460 M. Born u, R. Oppenheimer 
+
+
+wobei das Zeichen S) die Summe iiber Glieder bedeutet, die 
+
+
+aus dem angeschriebenen durch zyklische Vertauschung von 
+x, y, z hervorgehen. 
+Die kinetische Energie der Kerne ist 
+
+
+h? Co 
+eee | enna 
+(5) Tx im x 8n2m 2 2 by 6X? 
+
+
+Die Gesamtenergie entspricht dem Operator 
+
+
+(8) H=H, +H, 
+wo 
+Tet U= H, (2, 5254), 
+G nae 
+TH = AH (5) 
+
+
+gesetzt ist. 
+Wir fiihren nun statt der rechtwinkligen Kernkoordinaten 
+neue ein, nimlich 3N—6 Funktionen 
+
+
+(8) &, = &(4), 
+
+die die relative Lage der Kerne zueinander festlegen, und 
+6 Funktionen 
+
+(9) 3, = F(X), 
+
+die die Lage der Kernkonfiguration im Raume bestimmen. 
+Man kann das in symmetrischer Weise etwa so machen, daB 
+man die rechtwinkligen Koordinaten z,, ),, 3, der Kerne be- 
+ziglich der instantanen Haupttrigheitsachsen einfiihrt; zwischen 
+diesen bestehen dann die 6 Gleichungen 
+
+
+Pe ae Zh = 95... 
+
+
+Man kann die x,,... also durch 3V—6 unabhingige Parameter 
+&, &»---. ausdriicken: 
+
+b, = (8). ++ 
+Sodann bestehen zwischen den urspriinglichen und den neuen 
+Koordinaten Transformationsgleichungen der Form 
+
+
+(10) X, =X, + 2 %ny CF, p, w)h, (8); 
+
+
+X,, ¥,, 4% sind die Schwerpunktskoordinaten und die a,, die 
+Koeffizienten der orthogonalen Drehungsmatrix, also bekannte 
+Funktionen der Eulerschen Winkel 3, y, w. Die GréBen 
+
+
+Zur Quantentheorie der Molekeln 461 
+
+
+X,. %, A, F, yp, w sind die in (9) mit #, bezeichneten 
+Funktionen. Durch (10) sind die X, als Funktionen der %,, &, 
+bestimmt; durch Auflésen bekommt man die Ausdriicke (8) 
+und (9).4 
+
+Durch diese Transformation wird die Energie H natiirlich 
+nicht in Anteile der Translation, Rotation und Relativbewegung 
+der Kerne separiert. Wohl aber kann man H, in 3 Teile 
+spalten, die sich im folgenden charakteristisch verschieden 
+verhalten werden: 
+
+
+(11) A, = A,, a Hy» + Ass: 
+
+H,, ist homogen linear in den iBaE H,, enthalt die ii 
+H,, ist von allen Ableitungen nach den &, frei; Man kann 
+tiber diese Operatoren noch einige allgemeine Aussagen machen. 
+Wendet man den ganzen Operator H, auf irgendeine Funktion 
+7(§) der relativen Kernkoordinaten & an, so muB die ent- 
+stehende GréBe H, f(g) von der Lage im Raume, also von den 
+#,, unabhingig sein. Insbesondere kénnen in Hy, die Koeffi- 
+
+
+zienten der 9 = E nicht von den @, eer Dagegen 
+
+kommen in ee neben den =, die §, #, und = - y Anis 
+: é 
+
+neben den 5555; die 38,’ oe we, vor. 
+
+
+Fir zweiatomige Molekeln werden wir diese Operator- 
+funktionen explizite angeben. 
+Das zu lésende mechanische Problem lautet 
+
+
+(12) (H, + x4*H, — W)w =0. 
+
+
+Wir werden zeigen, daB diejenige Lésung, welche einer Ver- 
+einigung der Kerne und Elektronen zu einer stabilen Molekel 
+entspricht, durch Potenzentwicklung nach * gewonnen werden 
+kann. 
+§ 2. Blektronenbewegung bei festen Kernen 
+
+Setzt man in (12) %* = 0, so bekommt man eine Differen- 
+tialgleichung ftir die x, allein, in der die X, als Parameter 
+vorkommen: 
+
+
+1) Da8 diese Auflésung im allgemeinen auf mehrdeutige Funk- 
+tionen fahren wird, spielt hier keine Rolle, ist aber physikalisch von 
+Wichtigkeit; vgl. F. Hund, Ztschr. f. Phys. 48. 8. 805. 1927. 
+
+
+462 M. Born u. R. Oppenheimer 
+
+
+(13) (1, (2,553 x) — Wy =0. 
+
+
+Sie stellt offenbar die Bewegung der Elektronen bei fest- 
+gebhaltenen Kernen dar. Wir nehmen an, dai dieses Kigen- 
+wertproblem gelést sei. Die Eigenwerte hingen nur von den 
+Verbindungen & der X, ab; denn man kann das Koordinaten- 
+system mit dem System der Haupttrigheitsachsen zusammen- 
+fallen lassen, wobei die X, = x,() werden. In diesem Achsen- 
+system sind auch die Higenfunktionen auBer von den 2, nur 
+von den & abhingig; transformiert man aber auf beliebige 
+raumfeste Achsen zuriick, so treten daneben auch noch die 
+o, auf. 
+
+Wir bezeichnen den n-ten Eigenwert und die zugehdrige 
+normierte Higenfunktion mit 
+
+
+(14) W= V8), W = Op, (2; &,d), 
+so daB die Identitat 
+
+
+(18) {Hy (7 gas 89) — VO} pales & 9) = 0 
+
+
+gilt. Dabei nehmen wir an, daB V/V, ein einfacher Kigenwert 
+ist. T'atsichlich wird dies nie der Fall sein, weil wegen der 
+Gleichheit der Elektronen die von Heisenberg und Dirac 
+entdeckte Resonanzentartung eintritt, bei zweiatomigen Molekeln 
+iiberdies noch eine Entartung des Drehimpulses um die Achse. 
+Aber da es sich uns hier nur um die Systematik des Naherungs- 
+verfahrens handelt, wollen wir von diesen Entartungen absehen. 
+Thre Beriicksichtigung wirde auf Sakulargleichungen in den 
+héheren Niherungen fiihren. 
+
+Das wichtigste Ziel unserer Untersuchung ist der Nach- 
+weis, daB die Funktion 7, (&) bei Bewegungen der Kerne die 
+Rolle der potentiellen Energie spielt. Hierzu sind einige Hilfs- 
+formeln nétig, die wir jetzt ableiten wollen. Es handelt sich 
+darum, zu zeigen, daB die Matrix, die zu den Ableitungen des 
+
+
+Operators HH, (z, wi &, 5) nach den §, (also bei festgehaltenen 
+
+
+LQ; $s) gehort, auf die Ableitungen der Funktion /, (§) zuriick- 
+
+
+gefihrt werden kann. 
+Statt die Ableitungen nach den & direkt zu bilden, er- 
+setzen wir iiberall & durch & + *¢, und differenzieren nach x; 
+
+
+Zur Quantentheorie der Molehein 468 
+
+
+der Koeffizient einer Potenz von x ist dann ein homogenes 
+Polynom der ¢,, dessen Koeffizienten die Ableitungen nach 
+den & sind. So schreiben wir 
+
+(16) ViEtROQ HVOF KV OLE @®H.., 
+
+wo 
+
+: PO = V,(8), 
+
+
+) AS ee 5 
+
+
+7 (2) 1 o Vy, 
+VP = 4 Tent 
+
+
+(17) 
+
+
+und in entsprechender Weise 
+ie = Ho + «H+ WAL 
+fr za Pn? a= xo,» + a” ep, 58 eA tes 
+
+
+Man kann nun die Gréfen g,, gy,” nach den Kigenfunk- 
+tionen o,°(x; &, 3) pabraie! wir setzen: 
+
+
+() 
+= Du Can! Pr ? 
+
+
+nf 
+
+
+a) eres 
+
+
+(18) 
+
+
+ae 
+
+
+. 
+
+
+Dabei ist u“, ein homogenes are r-ten Grades in den 
+
+
+Sj) % B.?) 
+| te Db [as Ede, 
+ee ie ate 
+
+
+Die hier auftretenden tateseale, in denen dz das Volumen- 
+element im Konfigurationsraum der Elektronen bedeutet, sind 
+von der Orientierung des Kernsystems im Raume, also von 
+den #,, unabhingig; man kann sie etwa im System der Haupt- 
+tragheitsachsen auswerten. 
+
+
+Ist nun # irgendein auf die x, wirkender Operator, so 
+wollen wir 
+
+
+1) [RPG de = FO 
+
+
+1) % ist die zu x konjugiert komplexe Zahl. 
+
+
+(20) 
+
+
+464 M. Born u. R. Oppenheimer 
+
+
+das Matrixelement r-ter Ordnung von F nennen. Fir r = 0 
+geht es in das oe Matrixelement 
+
+
+(22) Po =F, = fp Fp, ede 
+liber. Allgemein ist nach (19): 
+
+(28) Fe = Sane Fors + 
+
+Nun folgt aus (15) fir « = 0 
+
+(24) (Ho? — F\ene = Yaa Fre — Va)» 
+
+
+Ferner ergeben sich durch Hinsetzen der Reihen (16) und (18) 
+in (15) zunachst die Identitaten: 
+
+
+a) (Hi? — 7,2), + (He — V2) 9,° = 9, 
+b) (H,° — Fp, + (Hy? — FV), 
+
+
+25 
+em) + (AZ? — F.) Gy = 9; 
+
+
+Multipliziert man diese mit y® und integriert tber die x, 80 
+erhalt man mit Ricksicht auf (24): 
+
+
+a) wu yu (Fo, — P,) + (Hy ant ay foe Onn = 0, 
+
+
+nn! 
+b) (2) (Fo — 7 ) + (H, — Var 
+
+
+(26) Cnn! 
++ (Han — FV San = 0, 
+
+
+Hieraus kann man der Reihe nach (A, nw, (Hyaw, ..- De- 
+; : aH, a? Hy 
+
+rechnen, d.h. die Matrixelemente (33 E, i laces EB = Va ire 
+
+Von diesen Formeln werden wir nachher Gebrauch machen. ) 
+
+
+§ 3. Aufstellung der Naherungsgleichungen 
+Kine beliebige Konfiguration von Hlektronen und Kernen 
+14Bt sich natiirlich nicht mit einem allgemeinen Naherungs- 
+verfahren behandeln. Wir wollen hier nur diejenigen Zustande 
+ins Auge fassen, die einer stabilen Molekel entsprechen. Daher 
+stellen wir folgende Frage an die Spitze: 
+
+
+1) Das klassische Anslogon zu der einfachsten Folgerung dieser 
+Formeln, namlich der aus (26a) fix 7 =m’ folgenden Identitat (H,™), .= Va 
+findet sich bei W. Pauli, Ann. d. Phys. 68. 8. 177, 1922; vgl. insbeson- 
+dere § 4, Forme! (11). 
+
+
+Zur Quantentheorie der Moleheln 465 
+
+
+Gibt es ein Wertsystem der relativen Kernkoordinaten &, 
+von der Art, daB die Higenfunktionen w, des Energieoperators (6), 
+soweit sie von den & abhingen, nur in einer kleinen Nachbar- 
+schaft dieses Wertsystems merklich von Null verschiedene 
+Werte haben? 
+
+Diese wellenmechanische Forderung entspricht offenbar der 
+klassischen Bedingung, daB die Kerne nur kleine Schwingungen 
+um eine Gleichgewichtslage ausfiihren; denn | w, |? ist die Wahr- 
+scheinlichkeit dafiir, bei gegebener Energie eine bestimmte 
+Konfiguration anzutreffen. 
+
+Als ungestértes System betrachten wir also die Elektronen- 
+bewegung fir eine zunichst beliebig, aber fest gewahlte Kern- 
+konfiguration §. Sodann entwickeln wir alle GréBen nach 
+kleinen Abweichungen von &,, die wir mit xf, bezeichnen; wir 
+setzen damit voraus, daB der ,,Schwingungsbereich mit x gegen 
+Null geht, eine Annahme, die erst durch den Erfolg gerecht- 
+fertigt werden kann. 
+
+Sodann haben wir wie in § 2, (18) die Entwicklung 
+
+
+(27) A, (23 S53 E+xf, 3) = Ayo + 4H +H +..., 
+
+
+wo ; a 
+a) H, = H, (225 é), 
+
+
+x, 
+b) Hy? = DSN SE 
+
+
+6? A 
+ae Tae he oi) DROS,” 
+
+
+wes LEO 
+~~ x 
+
+
+ag ae 
+
+
+é 1 1 
+af aH, (X, aig) = mt (Ge Hee + Hye + Hoo) 
+= 2H. + #8 (Hyy + Hy) + 4(H3, + Hy + He) +.. 
+
+
+0 a 
+a) He, = H,, (6 Wee)? 
+a Oye 
+b38 OE, ? 
+
+
+(28) 
+
+
+und nach (11) wegen a 
+Wo 
+
+
+(30) a 
+b) HD = 
+
+
+466 M. Born u. R. Oppenheimer 
+
+
+7° a] ] 
+a) ae 55s oe): 
+
+
+2 
+a) i, = a, OLE 
+
+
+(82) 
+
+
+Die Argumente &, sind von jetzt an als Konstante zu betrachten. 
+Der gesamte Energieoperator wird also: 
+
+
+= Hy + «Hi, + 2° (HU, + A;,) 
+(33) + x3 (H,® - H, Hs + Hy) 
++ x8 (HL? + we, + HY + HE) +. 
+Die folgenden Glieder haben alle dieselbe Form und entstehen 
+aus dem Gliede mit «#4 der Reihe nach durch Erhéhung der 
+oberen Indizes um 1. 
+
+
+Wir entwickeln nun auch die gesuchte Kigenfunktion und 
+den Energieparameter nach x: 
+
+
+Za cv 2 ay(2) 
+(34) Sie ds mye ee ast 
+Wa Wt nx WODt gr YWOr., 
+Dann erhalten wir folgende Naherungsgleichungen: 
+(a) (H,° — #7) yp? = 0, 
+b) (H,° soot PY) = (FV a A) y®, 
+c) (H,° — W°) yp = (VO — H,® i H,) we 
++(W® — Hw, 
+@) (H,° — Wy =(W® — H® — H,, = He) ye 
+(35) 4 (W@ — H® — Hy) wh + (WP — Hy) w®, 
+e) (Hy? — Wp = (We — H,® — Hp =, HO = HY) yp? 
++(W® — H® — Hy, a Hy?) yo 
++(W® — He — Hy) p? + (PO — Hi) y®, 
+
+
+Zur Quantentheorie der Molekeln 467 
+
+
+§ 4. Losung der N&herungsgleichungen nullter und 
+erster Ordnung: Kerngleichgewicht 
+Die Gleichung nullter Naherung (35a) stellt die in § 2 
+diskutierte Elektronenbewegung bei festen Kernen dar. Aus 
+der in § 2 eingefiihrten, zum Kigenwert 7,° = V, (§) gehorigen 
+normierten Kigenlésung o,°(x; &, ) erhalt man die allgemeine 
+Lésung in der Form 
+
+
+(38) Wn = ta (Ss FG, (2 € F), 
+
+wo z,° eine zunachst willkirliche Funktion der Argumente 
+
+¢,, %, ist; diese muB man zur Verfiigung haben, um die Lés- 
+
+barkeit der folgenden Naherungsgleichungen zu erreichen. 
+Die folgende Naherungsgleichung (35b) 
+
+(37) (® oe W,) apy = (WO = 7.) wy? 
+
+ist nimlich nur lésbar, wenn die rechte Seite auf y,° (beziig- 
+
+lich der Elektronenkoordinaten z,) orthogonal‘) ist. Das gibt 
+
+die Bedingung 
+
+(38) {(AO an = Aaa a (, t) = 0, 
+
+wo (H,),,, das Diagonalelement des Operators H, beziiglich 
+
+der z,, also nach (28b) eine homogene lineare Funktion der 
+
+g, ist. Diese soll nun nach (38) konstant sein, da 7,°(¢, i) 
+
+nicht identisch verschwinden kann, ohne daB dasselbe fiir w,° 
+
+gilt. Daraus folgt 
+
+
+(39) WO = 0, (Eo la = 0. 
+Nach (26a) und (17) ist aber 
+OV, 
+
+
+(Ao an = Va oe Bs c; 0g; : 
+Also erhilt man: 
+OV, _ 
+(40) ag = 9: 
+Die Fortsetzbarkeit unseres Naherungsverfahrens verlangt dem- 
+nach, daB die relativen Kernkoordinaten , nicht beliebig ge- 
+wihlt werden dirfen, sondern einem Extremwert der Elek- 
+tronenenergie 7, (&) entsprechen miissen. Die Hxistenz eines 
+solchen ist also die Bedingung fir die Moéglichkeit der Existenz 
+
+
+der Molekel, ein Satz, der gewdhnlich als selbstverstindlich 
+
+
+1) Wir definieren die Orthogonalitét zweier Funktionen f(a) und 
+g(a) durch fF (x) g (a) dx = 0. 
+
+
+468 M. Born u. RB. Oppenheimer 
+
+
+richtig angenommen wird. Wir werden nachher zeigen, daB es 
+sich notwendig um ein Minimum handeln muB. 
+Die suey “ °(6, 3) oe zunichst unbestimmt. Setzt 
+
+
+man in (37) W, V(é= W,=0 und w,°=7x,"9,° 
+ein, so erhilt man nm fi ap, - pita tie ala ie 
+(41) (H,° Pz Fo) Wy = i," Pn a 
+
+
+Hine Lésung dieser ist nach (25a) 
+
+
+Ww? = es Pn” , 
+wo g,'? die durch (18) definierte Funktion (19a) ist. Die all- 
+gemeine Lisung erhilt man daraus durch Addition einer 
+Lésung y,° der homogenen Gleichung mit dem zunichst un- 
+bestimmten Faktor 7,” (&, 3): 
+
+
+= 0 
+(42) apy, = x," Pi bh -+ 7 Ps PL, 
+§ 5. Losung der Niherungsgleichungen zweiter und 
+dritter Ordnung: Kernschwingungen 
+
+
+Wir gelangen nun zur Naherungsgleichung (35c), die nach 
+Einsetzen der bereits gefundenen Liésungen der niederen 
+Naherungen so lautet: 
+
+
+(43) (A, °— 7, py, = (WP — H,® — H;.) Ln Go 
+ae Hi,” (en° Pri 4 + te Pn) . 
+Damit diese lésbar ist, mu8 wiederum die rechte Seite auf 
+
+
+y,° orthogonal sein; das liefert mit den in § 2 eingefiihrten 
+Bezeichnungen wegen (39): 
+
+(Ho® + Hecho + (Ho, — WiPhx,? = 0. 
+Nun folgt aber aus (26b) fir 7, = 0: 
+(44) (Hy, + = 7: 
+Da ferner H nach (30a) von den x, gar nicht abhangt, so 
+erhalten wir: 
+(45) { ip +7 — W279 = 0. 
+Beachtet man hier die durch (17c), (30a) gegebene Bedeutung 
+von H, 7, und 7%, so sieht man, daB (45) die Gleichung der 
+
+
+n? 
+harmonischen Kernschwingungen darstellt: 
+
+
+(46) (Be ats sean) + +32 ibs seek, — W,°\ 2, = 0. 
+
+
+Zur Quantentheorie der Molehein 469 
+
+
+Diese Gleichung zeigt, daB die Funktion /,,(g) tatsaichlich bis 
+zu Gliedern 2. Ordnung die Rolle der potentiellen Energie der 
+Kerne spielt. Fiir die Existenz einer stabilen Molekel ergibt 
+sich nun die weitere Bedingung, da8 der durch (40) bestimmte 
+Extremalwert von V7, (&) ein Minimum sein mu8; denn die 
+quadratische Form 7,” mu8 positiv definit sein, damit alle 
+Freiheitsgrade ¢, stabil und Schwingungen um die Gleich- 
+gewichtslage mdglich sind. Bekanntlich ist die Schwingungs- 
+gleichung (46) durch eine lineare Transformation der ¢, auf 
+»Normalkoordinaten“ 7, separierbar. Ist on, (¢) die zum Higen- 
+wert Wo gehdrige normierte Higenlésung von (46), so ist die 
+allgemeine Lisung 
+
+
+, We =—- WW, yy, wo 
+
+
+ne? 
+
+
+b) y= One) O,5(0)- 
+
+Der Index s soll also die Quantenzahlen der Kernschwingungen 
+zusammenfassen. 0. () ist eine zundchst unbestimmte Funktion 
+der #,, deren Hinfiihrung fiir die Fortsetzbarkeit des Verfahrens 
+notwendig ist. 
+
+Bekanutlich ist a, (¢) eine lineare Kombination von Pro- 
+dukten Hermitescher Orthogonalfunktionen der einzelnen 
+Normalkoordinaten 7,; diese Funktionen haben die Eigenschaft, 
+auBerhalb des Gebietes der Librationsgrenzen der klassischen 
+Mechanik sehr schnell (exponentiell) gegen Null abzufallen. 
+Damit ist nachtraglich unser Ansatz (§ + *&) gerechtfertigt, 
+indem es sich zeigt, daB er tatsichlich auf Lésungen fihrt, 
+die in bezug auf die §-Oszillationen in Grenzen bleiben, die 
+mit x verschwinden. Wir benutzen von den Hermiteschen 
+Orthogonalfunktionen ferner die Higenschaft, daB sie entweder 
+gerade oder ungerade Funktionen ihres Arguments sind. 
+
+Ist © irgendein auf die ¢, wirkender Operator, so kénnen 
+wir die zugehérige Matrix 
+
+
+(47) 
+
+
+(48) ®,= [0 Bo dt 
+bilden, wo df das Volumeneloment im Raume der {, ist. 
+Um die Gleichung (43) zu lésen, setzen wir auf der rechten 
+Seite nach (45) 
+(we) _ AY a = Vy 
+
+
+470 M. Born u. BR. Oppenheimer 
+
+
+ein; dann lautet (43) 
+(A, o_ V4 Re 
+(49) : 2) " 9 0 ery pl Qo 0 
+= (FV, — H ) kus Pn AOL Pa +n Pn): 
+Thre aligemeine Losung ist 
+(50) W,, (2) _. = x Pn” + ra Pn o + ra P,° 3 
+
+
+wo x eine neue unbestimmte Funktion der C,, 2, bedeutet; 
+
+
+man tiberzeugt sich davon leicht auf Grund der Identitaten (25). 
+
+Nun gehen wir zur Untersuchung der Naherungsgleichung 
+3, Ordnung (35d) iiber, die nach Hinsetzen der bereits bestimmten 
+GréBen so lautet: 
+
+
+ie 0 7%) yO = (WO — Hi — He, _ Hy.) L, Pro 
+(1) + (We) — Hy? — HEH, Pr? +H Po!) 
+_ Hy (x. pe +4 go gp, 4 ra Ln 0), 
+
+
+Die rechte Seite kénnen wir uns nach den q,° entwickelt 
+denken; wir schreiben 
+
+
+(52) (H,° — V,°) wy, _ W® 0° —p,° _ > g, , 
+wo 
+(58) P= Be, 9) ~? + Feo xo + Pe” 03 
+
+
+dabei sind die # Operatoren nach ¢ und 7%, und zwar 
+
+
+a) PO”) = (H.”), 
+(64) @2 0 2 
+b) BR es = (H;, -_ A, @ — — We’ + (Hye, 
+waihrend wir von Fo? nur so viel auszusagen haben, daB es 
+eine homogene Funktion 8. Grades der ¢, und der $e ist. 
+Damit (52) losbar ist, mu8 
+W® __- &) 0 
+sein; wegen (53) und (54a) bedeutet das 
+(55) Fa 2) (0 = (Wo — Pe 2) yo x 
+
+
+wo nach (54b) und (44) 
+per _ rh -~f~ae yo 
+mn ce n ns 
+
+
+ns? 
+
+
+Zur Quantentheorie der Molekein 471 
+
+
+ist. (55) ist also die zur Schwingungsgleichung (45) gehérende 
+inhomogene Gleichung; da (45) die zum Kigenwert i ge- 
+horige normierte Lésung o° 
+
+
+ns 
+
+
+hat, so ist (55) nur lésbar, wenn 
+die mit o° multiplizierte rechte Seite ein verschwindendes 
+Integral iiber den epean hat. Das gibt wegen (47b) eine 
+Differentialgleichung fir a a P): 
+
+
+(Fen a 7) oo = 0. 
+nn Suns 
+ss 
+
+
+Aber da, wie wir sahen, 7°” ungerade in den ¢, und f. 
+
+
+ist, so muB das Diagonalelement der zugehérigen ¢-Matrix 
+verschwinden. Denn transformiert man auf die Normalkoordi- 
+naten 7,, 80 wird o° eine Summe von Produkten Hermite- 
+
+
+scher Orthogonalfunktionen, yi ein Polynom ungerader Ord- 
+nung in den 7; und 3, so daB jedes Glied mindestens eines 
+
+
+daher ver- 
+
+
+i 
+schwindet bei der ¢-Matrixbildung jedes Glied einzeln. Es 
+folgt also 
+
+
+(56) W® =, 
+und e., bleibt vorlaufig weiter unbestimmt. 
+Nunmehr 148t sich pe lésen: 
+
+
+(57) ne = Sno Ono 
+wo 8°? folgender Operator beziiglich der &, ist: 
+per 0 
+58) sg a , Hee ns 
+ne mo 2 w® _ p® 
+Endlich wird die Lésung von (52) 
+1 # as e., 
+59 @ — nan Pn = 
+(59) wr 2 woe 
+
+
+und das hat nach (53) die Form 
+2 3, 3,3) 0 
+(60) w= Sl (One Lae Pu + Onn Lae Gur + Fant Lae Por) 9 
+
+
+472 M. Born u. BR. Oppenheimer 
+wo 
+
+
+(61) Gg?) sc NH = 
+
+
+gesetzt ist. Nach (54) ist Ge) eine Zahl, ae ein Differential- 
+operator beziiglich der ¢,, Ge ein Operator begiiglich der ¢, 
+und %.. 
+) 
+Nach § 2, (26a) ist 
+
+
+A), es 
+S ge 38) ai y., 5 ae (Ba Pa 
+y = Xns 
+
+
+a 2» 
+ba Un Py t 
+(1) rom * 
+Pag Xe: ne? 
+also wird 
+
+
+3 M {© ’ gs 72), (1) (3,3) 0 
+(62) yo = Pn Une t DB (G nn’ Xns Py F G,, n’ Ln Pn): 
+
+
+§ 6. Lésung der Niherungsgleichungen 
+vierter und héherer Ordnung: Rotationen und Koppelungseffekte 
+
+
+Die Naherungsgleichungen 4. Ordnung (85e) lauten nach 
+Einsetzen der bereits bestimmten Gré8en: 
+
+
+(H,? — 7,2) y,® = 
+
+= (W® — ALY — H, _ Ay - ha ole Q. 
+
+(63)! — (A+ Aly + BE) (tes Pn + Lis Pn) 
++ (Wn, Hy” + Bee) (tne Pa + ee Pe Line Pee) 
+= HS {92+ 5 (OBA ge + Og) 
+
+Wir entwickeln wieder die rechte Seite nach den g,°: 
+
+64) (LFW = WOR, gh SFO gl, 
+
+wo 
+
+05) Om HEM 4 WEP 4 HOY 
+
+ae * po = ( Ep, — a? ra We) es ae ( Eh ee 
+
+
+mR n 
+
+
+Zur Quantentheorie der Molekeln 413, 
+
+
+und das ist mit FS Ce Nae identisch, wahrend Ho ungerader 
+Ordnung in den ¢,, e ist, sat aber gerader Ordnung. Die 
+Integrabilitatsbedingung von (64) lautet: 
+0 pe) : 
+WO Ne _ Pin = 0; 
+das bedeutet nach (65) 
+(4,2 2 (4,4) 0 (4.3) (1) 
+(67) Fun ee oF (ee - re ee ad Xns* 
+Die linke Seite stimmt wegen (66) wieder mit der der 
+
+
+Schwingungsgleichung (45) itberein. Die rechte Seite muf also 
+
+
+auf o normal sein. Setzt man die Werte von ae _ 
+
+
+aus (47b) und (57) ein und benutzt das Symbol 
+ye @ 
+
+i (DY = for Bw sde 
+
+ee 
+= oe ee 8 Bo 
+i ns 
+
+so erhalt man 
+
+(4,4) (4,3) \ (1) 0 
+(69) {Fan - (F. i = re Co 0. 
+
+8s 
+
+
+und 7, 
+
+
+Diese Gleichung bestimmt endlich die Funktion ¢) (3), also 
+die Bewegung des Systems der Haupttrigheitsachsen im 
+Raume, die Translationen und Rotationen. Das Hauptglied 
+des Operators in (69) ist dasjenige, welches die zweiten Ab- 
+leitungen nach den &, enthalt; ein Blick auf (63) zeigt, daB 
+es aus Hy , ee ¢., entsteht, ihm entspricht also in Fg das 
+Glied 
+
+(70) (Fe )n = J Fo Hon P,-+-)d2, 
+
+wo an die Stelle der Punkte die Funktion einzusetzen ist, auf 
+die der Operator wirkt. Da der Operator (70) von den ¢, un- 
+abhingig ist, so sind die Diagonalglieder der zugehirigen 
+s-Matrix mit ihm selbst identisch. Physikalisch bedeutet die 
+Tatsache, daB statt des einfachen Operators H, , ° der kompli- 
+ziertere (Ae, ah auftritt, eine Koppelung der Ricisiew oii 
+
+
+der Kerne mit der Elektronenbewegung. Es handelt sich, wie 
+wir nachher am Beispiel der zweiatomigen Molekel sehen 
+Annalen der Physik. IV. Folge, 84. 31 
+
+
+474 M. Born u. R. Oppenheimer 
+
+
+werden, um diejenigen Effekte, die Kramers und Pauli?) 
+durch die Annahme eines im Kreisel eingebauten ,Schwung- 
+rades“ darzustellen versucht haben. Sodann gibt es in (69) 
+Terme, die sich aus dem Operator Hf, ableiten; sie ent- 
+sprechen einer Koppelung der Kreiselbewegung mit Dreh- 
+impulsen, die infolge der Kernschwingungen entstehen. Endlich 
+sind Glieder da, die auf die #, nicht wirken; sie geben einen 
+Zusatz der Ordnung x4 zur Schwingungsenergie. 
+
+Da die Translationen sich immer in trivialer Weise ab- 
+separieren lassen, betrachten wir nun die Rotationen. Ist r 
+die zugehérige Quantenzahl, so hat man far die Lésung von (70) 
+(71) WOW Oa OO) 
+zu schreiben. Sodann kann man (67) lésen und schlieBlich 
+auch (64). Doch hat es keinen Sinn, die Formeln explizite 
+apzuschreiben. 
+
+Es ist klar, daB das Verfahren sich fortsetzen lat, ohne 
+das sich etwas prinzipiell Neues dabei ergibt. Die hdheren 
+N&aherungen beschreiben die Koppelungen zwischen Rotationen, 
+Schwingungen und Elektronenbewegungen. Neue Quantenzahlen 
+auBer den bereits eingefiihrten treten nicht mehr auf. 
+
+Wir fassen nun die charakteristischen Ziige der gefundenen 
+Lésung zusammen. Das augenfalligste Ergebnis ist, daB zur 
+volistindigen Bestimmung der Eigenfunktionen auch nur in 
+nullter Ordnung die Liésung der N&herungs-Differential- 
+gleichungen bis zur 4.Ordnung notwendig ist; man hat nimlich 
+
+
+(72) Waar (4, F) = (2,6, Ho? (HO, (HM +..., 
+
+
+wo g,° die Kigenfunktion der Elektronenbewegung bei fest- 
+gehaltenen Kernen, O°, die der Kernschwingungen und Or or 
+die der Rotationen sind. Dabei sind die Schwingungskoordi- 
+naten ¢, von einer Gleichgewichtslage €, aus zu zahlen, die 
+durch die Forderung bestimmt ist, daB in ihr die Energie der 
+Elektronenbewegung /;(£) ein Minimum ist. Die Bestimmung 
+der drei Funktionen o,°, o° , 0°  liefert zugleich die Energie 
+
+
+ne? Snsr 
+bis zur 4. Ordnung einschlieBlich: 
+
+
+(2) 7 (4) 
+(73) Wier = Vo +O W FHWA bas 
+
+
+ner 
+
+
+1) H. A. Kramers und W. Pauli, Ztschr. f. Phys. 18. 8. 343, 
+351. 1923. 
+
+
+Zur Quantentheorie der Molekein 475 
+
+
+dabei ist V,° der Minimalwert der Elektronenenergie, der die 
+betrachtete ruhende Moleke) kennzeichnet, W die Energie 
+der Kernschwingungen, We enthalt (neben Zusatzgliedern zur 
+Schwingungsenergie) die Energie der Rotationen. In dieser 
+Néhernng (bis x*) erscheinen also die drei Grundtypen der 
+Bewegung ,,separiert“; will man ihre Koppelungen untersuchen, 
+muB man héhere Potenzen von x beriicksichtigen. 
+
+Auf Grund von (72) lassen sich Aussagen iiber die Uber- 
+gangswahrscheinlichkeiten (Intensitéten von Bandenlinien) 
+machen. 
+
+Das elektrische Moment der Molekel IN setzt sich aus 
+einem Anteil der Kerne § und einem Anteil der Elektronen p 
+zusammen; eine Komponente sei 
+
+
+(= 2 e, &, 
+(74) M, = FL+ Pp.» |p =eSxr 
+we eet sag 
+
+k 
+
+
+Hieraus bilde man der Reihe nach die Matrixelemente beziig- 
+lich der z,, ¢;, o 53 zunachst ist 
+
+
+(75) Pala, = [Pe Pn Fu 22 
+
+eine Funktion der ¢,, ty sodann sind 
+
+(76) (alae = [Pan Tre Frees (Bn = [Be One Owe GE 
+nur noch Funktionen der %,, endlich 
+
+| (Pam o,7, = f Pens Onsr On er at, 
+
+| (B),n sr = [Bons Onor On sr dd 
+
+
+n' s'¢! 
+
+
+(77) 
+
+
+numerische Konstanten, die die Ausstrahlung und die Uber- 
+gangswahrscheinlichkeit fir nsr—>n’s’r’ bestimmen. Diese 
+schrittweise Bildung kann man so siteepreiaron! Za jedem Elek- 
+tronensprung n—»7n’ gehért ein virtueller Oszillator mit dem 
+Moment Pala i aus diesem gewinnt man die Matrix (p,)\, 183 die 
+
+
+einem System von Schwingungsbanden (Ubergange s—> s’) ent- 
+
+spricht, nach einer von der iiblichen etwas abweichenden Regel, 
+
+indem man eine Higenfunktion des untern, eine des obern 
+
+Elektronenniveaus benutzt [Formel (76)]. Das Entsprechende 
+31* 
+
+
+476 M. Born u. R. Oppenheimer 
+
+
+wiederholt sich bei den Linien einer Bande (Uberginge r—> r). 
+Darin sind die zuerst von Franck?) angegebenen, von Condon’ 
+weiter ausgefihrten Abschaitzungen der Intensitét von Schwin- 
+gungsbanden enthalten. Diese wird naimlich bestimmt durch 
+den Verlauf der Funktionen /,(&), Vy (§); nur in der Um- 
+gebung ihrer Minima sind die zugehdérigen Kigenfunktionen of ,, 
+o?,, merklich von Null verschieden, ihr Produkt also nur dann, 
+wenn diese Bereiche iibereinander greifen. Wenn die Funk- 
+tion 7,(§) bei einem Elektronensprung n—»>2n’ nur wenig in 
+ihrem Verlauf verindert wird, werden die Banden mit kleiner 
+Anderung von s intensiv sein; sobald aber /, (&) sich bei dem 
+Sprunge n—>- 7’ stark verlagert, wird ein Ubereinandergreifen 
+der Intervalle, in denen One und Org nicht verschwinden, nur 
+bei gréBeren Differenzen s — s’ méglich sein. Diese Verhilt- 
+nisse sind von Condon quantitativ diskutiert worden. Abnliche 
+Betrachtungen miissen sich mutatis mutandis auch fir die 
+Rotationen durchfihren lassen. 
+
+
+§ 7. Spezialfall der zweiatomigen Molekeln 
+
+
+Als Beispiel wollen wir die zweiatomigen Molekeln kurz 
+behandeln. Bei diesen hat man auBer der Resonanzentartung, 
+die von der Gleichheit der Elektronen herrithrt, noch eine 
+weitere Entartung, indem zu jedem Energiewert zwei Be- 
+wegungen gehéren, bei denen der Drehimpuls um die Kern- 
+verbindungslinie entgegengesetzt gleich ist. Da es sich uns 
+hier aber nicht um die wirkliche Diskussion der Feinstruktur 
+der Banden handelt, wollen wir auch von dieser Entartung 
+absehen; wir beschrinken also unsere Betrachtung auf Falle, 
+wo der Drehimpuls um die Achse verschwindet bzw. die 
+Energie der Elektronenbewegung nicht oder nur wenig von 
+ihm abhbingt. 
+
+Bei zwei Kernen haben wir nur eine § Koordinate, den 
+Kernabstand §, und 5 %-Koordinaten, namlich die Koordinaten 
+des Schwerpunktes X,, Y,, Z, und die Polarkoordinaten #, w 
+der Kernverbindungslinie (Achse). 
+
+
+1) J. Franck, Trans. Faraday Soc. (1925). 
+2) E. Condon, Phys. Rev. 28. S. 1182. 1926; Proc. Nat. Acad. 13. 
+8. 462. 1927. 
+
+
+Zur Quantentheorie der Molekeln ATT 
+
+
+Die kinetische Energie der Kerne wird 
+
+
+(8) Tra {[4+ 8 H(eA)+ £4); 
+
+
+(M, + UY 
+(79) eV : pe 
+
+
+oe eo? 6? 
+I 6 X,* + oY. + ER 
+
+
+Y Bee sates : 2 (sino 2 a5) 
+
+
+(80) 
+43 = sink? @ ow? ‘sind OG 
+gesetzt ist. 
+Wir haben also; 
+
+
+Wa 
+ss Batm | OR? 
+ht 2u 6 
+
+en Hea ~~ Gaim EOF? 
+
+
+hh? 
+Hyg =— garg (4 sit fr 4). 
+
+
+Ersetzt man hier & durch &-+«¢ und entwickelt nach x, so 
+erhalt man: 
+
+
+0 h? o 
+(82) Bee Salm BOR? 
+HY = 0, p=1,2,.. 
+OF ta a 2u 0 
+Hi,» Baim EF OC? 
+(83 ai aw, a 
+He, = 8Sni'm #8 7 Ae? 
+ee (4 ceil As) 
+OD 8x in 0 &2 8}? 
+84 (1) We Qu 
+ee Hea = Eatm eb 4o- 
+
+
+Der Kernabstand £ bestimmt sich durch die Gleichung 
+
+
+‘ dV, 
+(85) y= aé = 
+
+
+478 M. Born u. BR. Oppenheimer 
+
+
+Die Gleichung der Kernschwingungen (45) lautet hier: 
+
+
+h? ha 1 a 
+(86) \— sor Sr GON, © W2\ 2 =0. 
+Setzt man nun 
+
+
+a m (2) _ Sn® m pu 
+(87) Bg ge at OR eg tt 
+
+
+n= CY, 
+
+
+so hat man?) : 
+ae + Ge - 7) a= 
+
+
+Die Eigenwerte sind 
+
+
+die Kigenfunktionen 
+am. 
+Oo. me ® H, (1), 
+wo H, das s-te Hermitesche Polynom ist. 
+Die pee ce ist also: 
+
+
+ht 2 
+OO = a =2s+1)po2 x x 
+=(s+i)h aes a 
+oder 
+(88) 2 WO = (s+ Phy; 
+dabei ist 
+on ae ee 1 1\ 7" _ 
+(89) EV tle =a (sr as a Vi, aie, 
+
+
+die Frequenz des Oszillators. 
+
+Wir stellen nun die Gleichung (69) fiir die Rotationen 
+auf, verzichten aber auf ausfihrliche Angabe der Korrektur 
+an der Schwingungsenergie. Da hier H,, nach (81) die Ab- 
+leitungen nach den &, gar nicht enthalt, so kommt fir uns 
+in (69) nur der Term (IE,), °a) iD Betracht; alle tibrigen Glieder 
+fassen wir in die Konstante C,, zusammen. Dann lautet die 
+Rotationsgleichung (69): 
+
+
+(90) {((FRa)n + One — Wh 02, = 0. 
+
+
+1) 8S. E. Schridinger, Ann. d. Phys. 79. 8. 361, § 3. 1926. 
+
+
+Zur Quantentheorie der Molekeln 479 
+
+
+Indem wir in By 5 den translatorischen Anteil weglassen, haben 
+wir nach (70) und (84) fir eine beliebige Funktion f(9): 
+
+
+(Be on iQ =— sate [Fi 4. (yp, fax 
+und nach (80) 
+
+
+APL) = 9,45 f +f 454, + 2 
+
+
+aint? Oo do a “Oo O90 
+
+
+1 99, Of , 9%n af). 
+
+
+Daher wird 
+lacie, h? a a 
+Gf sane ole Bak 
+1 of — 99, 
++2 ae Ge Ps oe ng 2% z}. 
+
+
+Indem wir 4, in der Form 
+A @ fed: Gl] 1 oe? 
+o™ ogo t bY a5 + Gnie Gal 
+schreiben, sehen wir, daB es angebracht ist, folgende Ab- 
+kiirzungen einzufiihren: 
+
+
+= ay,° a —% dg, 
+| 6, = [9° f dz, 2, = {o,° - dz, 
+
+
+o2 on O23 —> 3 ~ 
+lar fossa. 22 = [9° 5 Pn dx. 
+Diese GréBen sind ie Piasonalclements der Matizen VON Py, 
+
+
+Py DEW. Po, P.y* ( * ), 
+bedeuten also die Mittelwerte der zu in ‘Bulogschen Winkel 
+gehérigen Drehimpulse der Elektronenbewegung, bzw. die Mittel- 
+werte ihrer Quadrate. Dann lautet die Gleichung (90) aus- 
+fithrlich: 
+
+
+(91) 
+
+
+(= or + 20,20 Se + 92) + ote (3 sr +9, 
+
+
+(92) + aay (Gor +294 + O3) 
+
+
+sin? "6a 
+
+
+ae sane (We — C,) of 0. = QO. 
+
+
+Sie ist der von one und Pauli aufgestellten Gleichung 
+fir den Rotator mit eingebautem Schwungrad sehr 4hnlich; 
+der Unterschied besteht im wesentlichen darin, daB bei diesen 
+Autoren statt der Quadratmittel 0,?, 22 die Quadrate der 
+
+
+Miitelwerte, 6, 2. auftreten, 
+Ubrigens 14Bt sich die Abhangigkeit der GréBen (91) von 
+
+
+480 M, Born u. R. Oppenheimer 
+
+
+den Winkeln #, wm durch eine elementare Betrachtung fest- 
+stellen, wenn man annimmt daf fir diesen Zweck die Diagonal- 
+elemente der quantenmechanischen Matrizen durch die ent- 
+sprechenden klassischen Mittelwerte ersetzt werden diirfe. Die 
+Bewegung des Drehimpulsvektors der Elektronenbewegung kann 
+man zerlegen in eine unregelmaBige Schwankung ohne mittlere 
+Rotation und eine iiberlagerte gleichformige Rotation um die 
+Molekelachse. Die Schwankung ersetzen wir im Mittel durch 
+einen festen Vektor; dieser rotiert dann gleichférmig um die 
+Achse. Man hat also dasselbe Verhalten wie bei einem sym- 
+metrischen Kreisel, dessen Drehimpuls bezogen auf ein im 
+Kreisel festes Bezugssystem die Komponenten L, M, N haben 
+mége. Aus diesen lassen sich die Komponenten des Dreh- 
+impulses, die zu den Winkeln 3, w gehéren, so ausdriicken?): 
+0 = Lcosy — Msiny, 
+2Q= Lsindsiny + Msind cosy + Neosd; 
+
+dabei ist y der Winkel der Kigenrotation um die Achse. Durch 
+Mitteilung iiber y folgt daraus: 
+6 =0, 2 = Neos, 
+
+OF =1(1? + M%), B= 11? + M)sin2d + N?cos?s. 
+Hier hat man N mit der Quantenzahl p zu identifizieren, die 
+den Drehimpuls um die Achse gibt, und 4(L? + 2°), 3? mit 
+den Quadratmitteln p?, p? des gesamten Elektronendreh- 
+impulses senkrecht und parallel zur Achse; da WN konstant ist, 
+
+
+gilt pr =p”. Man hat also schlieBlich 
+; 6, =0, 2 = peos?, 
+(93) 
+O= pt, 22 = pi sin?d + p? cosa. 
+
+
+Dieses Resultat bedarf aber natiirlich einer strengen quanten- 
+mechanischen Nachpriifung; vermutlich ist p? durch p(p + 1) 
+zu ersetzen. 
+
+Durch das Higenwertproblem (92) wird die GréBe 
+ao W gleich einer numerischen Funktion der Rotations- 
+quantenzahl r, etwa gleich g, ,(r); fiir die Rotationsenergie folgt also 
+
+
+h2 4 h? 
+(94) 8 We = Sad mw Ins") = BaF Ino)» 
+
+
+ner 820? m &* 
+
+
+1) Vgl. etwa: F. Klein und A.Sommerfeld, Theorie des Kreisels 
+1. 8. 108. 
+
+
+Zur Quantentheorie der Moleheln 481 
+
+
+wo 
+
+
+_ mm gn M, M, 3 
+(95) eos = weu,§ 
+
+
+das Tragheitsmoment der Kerne im Gleichgewichte ist. 
+
+Eine Diskussion der héheren Naherungen hat ohne Ein- 
+geben auf die Entartungen keinen Sinn und soll hier unter- 
+bleiben. 
+
+Dagegen woilen wir noch kurz zeigen, daB man die 2wei- 
+atomige Molekel durch ein ganz anderes Stérungsverfahren 
+behandeln kann, dessen klassisches Analogon von Born tnd 
+Hiickel’) durchgefiihrt worden ist. Dabei wird als ungestérte 
+Bewegung nicht das Elektronensystem bei ruhenden Kernen 
+genommen, sondern bei gleichférmiger Rotation der Kerne. 
+
+
+§ 8. Unabhangige Behandlung der zweiatomigen Molekeln 
+
+Wir gehen auf die Gleichung (12) zuriick und schreiben 
+
+sie unter Hinsetzen von (11): 
+{H, sk x“ (H, . ie Hl. 6 Hs) a Why =0. 
+Bei den zweiatomigen Molekeln besteht nun die Besonderheit, 
+daB H,, von & tiberhaupt nicht abhingt. In diesem Falle 
+fihrt die Methode zum Ziele, Translationen und Rotationen 
+sogleich abzuseparieren. Man hat nimlich nach (81) (unter 
+Weglassung des Translationsgliedes): 
+2 2 ° 
+(96) {1 — 2, x (Fe + $ - + a 4,] ¥. w' y= 0. 
+Setzt man nun 
+(97) y= ¥,(9,0) ¥.(e; 8), 
+wo Y, eine Kugelfunktion r-ter Ordnung ist, also der Gleichung 
+4,¥,+r¢+1)¥,=0 
+geniigt, so behalt man fir YW die Bedingung 
+2 2 
+
+(98) [Mo gate (Se ue ar see | — W}¥, = 0. 
+Nun ersetzen wir wieder € durch +x, fragen also nach 
+Schwingungen um den Zustand gleichférmiger Rotation. Be- 
+zeichnen wir die Energie dieses Zustandes mit 
+
+
+Wyuw rir + he 
+(99) teen ape eT) 
+
+
+1) M. Born und E. Hiickel, Phys. Ztschr. 24. §. 1. 1923. 
+
+
+482 M. Born u. R. Oppenheimer 
+
+
+und setzen 
+(100) WH=E+R, 
+so wird die Gleichung (98) 
+(101) (H°+%eH%+x2HO+...-E)0 =0, 
+wo 
+H° = #,°, 
+H® = Hy + an 
+2) o. FF) 2p ee 8 
+(102) H® = H+ LOR" —-H. S., 
+rrr h? 2 
+H,°, H,”, .... bedeuten die frither ebenso bezeichneten 
+
+
+Operatoren. Hs gelten alle ‘Formeln von § 2 unverdndert. 
+
+
+Die Niherungsgleichungen lauten 
+[peer =o 
+0 Foy — (ew _ Ym yo 
+c) (H° — E°) op (2) — (E® — H) yo + (ED pee H‘) Ye 
+
+
+Die erste hat die Lisung 
+(104) B= 7,8), Hoe Wma Onl § 
+wo F,(&), 9,°(; §) die friher eingefiihrten sankidonih und 
+0° (¢) vorlaufig willkirlich ist. Die Integrabilitétsbedingung 
+fir (103b) lantet 
+(EY — He) On 0) = 
+
+Nun ist nach § 2, (26a) 
+
+HO) = (1), + oR = FOP CR = EA, +B. 
+Daher folgt, wie friiher (§ 4), daB 
+(105) E%=0, 57, + B)=0. 
+
+
+Diese Bedingung besagt offenbar, daB bei der ungestérten 
+Rotation Gleichgewicht herrschen mu8 zwischen der Zentrifugal- 
+kraft und der quasielastischen Kraft, die infolge der Elektronen- 
+bewegung einer Verriickung der Kerne widersteht. Die Zentri- 
+fugalkraft ist nimlich 
+
+
+Zur Quantentheorie der Moleketn 483 
+
+
+- (4 =) oe & We r(r + 1) 
+
+
+M, * Mu) M, ' M,)/ 427 8 ” 
+
+
+wo der quantenmechanische Wert ~ Vr(r + 1) fir den Dreh- 
+
+
+impuls p, eingesetzt ist, und das stimmt nach (99) und (95) 
+mit £#’ tiberein. 
+
+Aus der Beziehung (105) hat man den Gleichgewichts- 
+abstand £ zu berechnen, der noch von der Rotationsquanten- 
+zahl r abhangt. Fir kleine Werte der Rotationsenergie 2 kann 
+man & nach Potenzen von 
+
+h® 1 h? 
+(106) B= tS Tore t= (get ac)aer et 
+entwickeln; man erhalt?) 
+1 7 es 
+(107) §& =& + apr ho e rs eral ar Fr) B+. 
+
+
+Da # von der Ordnung <x‘ ist, wird man bei systematischem 
+Vorgehen nur so viele Glieder dieser Reihe gebrauchen, als 
+dem Grade der Approximation beim Stérungsverfahren ent- 
+spricht. 
+
+Indem wir uns nun diesem wieder zuwenden, wollen wir 
+uns kurz fassen, da die Methode dieselbe ist wie frither, nur 
+vereinfacht durch die Vorwegnahme der Rotationen. Die Lésung 
+von (103b) lautet entsprechend (42) 
+
+
+(108) po — =o, We oe + a YP, 
+und die Integrabilititsbedingung von (102c) liefert 
+(2) (1) (2 0 
+ile os HON ne oa Ee I oon 0. 
+Das ist aber die oie a cas 
+
+
+(0) { — Se Fat EO + B)- EPI ol, = 0. 
+
+
+Es wird also, wie in § 7, 
+
+
+(110) wEO) = (st a) he 
+wo die Frequenz 
+
+1 1 1 z y 
+(111) = aS (grt ag)" + R’) 
+
+
+1) Man kann diese Formel einfach aus der zitierten Arbeit von 
+Born und Hiickel entnehmen. 
+
+
+484 M. Born u. 2. Oppenheimer. Zur Quantentheorie der Molehein 
+
+
+noch von der Rotationsquantenzahl r abhingt, die in # vor- 
+kommt. 
+Ferner wird, wie in § 7, 
+
+
+7 
+(112) o,=e * H,(x) 
+mit 
+ol rg 82? ” rr 
+(112a) n=CVb, b= ae aa (3 
+
+
+Das Verfahren la8t sich in der bekannten Weise fortsetzen. 
+Man findet E® = 0, wahrend E® aufer der Abweichung vom 
+harmonischen Schwingungsgesetz auch eine Koppelung mit der 
+Elektronenbewegung enthalt. Doch wiirde die ausfihrliche 
+Angabe der Formeln aus dem Rahmen dieser Abhandlung 
+fallen, die nur das Prinzip der Entwicklung zur Darstellung 
+bringen soll; auch hat die Durchrechnung der héheren Nahe- 
+rungen nur Sinn, wenn gleichzeitig die Entartungen beriick- 
+sichtigt werden. 
+
+
+(Kingegangen 25. August 1927) 
+
+

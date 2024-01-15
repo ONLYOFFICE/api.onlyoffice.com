@@ -1,1 +1,0 @@
-window.Asc.plugin.executeMethod ("UnShowInputHelper", ["asc.{UUID}", true]);

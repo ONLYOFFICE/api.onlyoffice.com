@@ -1,0 +1,14 @@
+{
+  "name": "@onlyoffice/preact-slots",
+  "private": true,
+  "type": "module",
+  "main": "lib/main.ts",
+  "scripts": {
+    "test:types": "tsc",
+    "test": "pnpm test:types"
+  },
+  "dependencies": {
+    "preact": "^10.22.0",
+    "typescript": "^5.4.5"
+  }
+}

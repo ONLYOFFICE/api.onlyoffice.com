@@ -1,0 +1,285 @@
+JUNE 1, 1935 PHYSICAL REVIEW VOLUME 47 
+
+
+The Disintegration of the Deuteron by Impact 
+
+
+J. R. OPPENHEIMER, Berkeley, California 
+(Received March 29, 1935) 
+
+
+High energy deuterons can be disintegrated by their impact with nuclei. For deuteron 
+energies ~2 X10" e.v., the corresponding neutron yield can be of the order of 1 percent. The 
+probability of the process can be calculated by taking advantage of the fact that the nuclear 
+field varies little over the deuteron, and is then given quite simply in terms of the photoelectric 
+absorption and the matrix elements of the nuclear field acting on the deuteron. For low energies 
+the neutron yields are small, amounting to 3107 for 310° e.v. deuterons in Al, and to 1076 
+
+
+for 410° e.v. deuterons in carbon. 
+
+
+CCORDING to the experiments of Chad- 
+wick and Goldhaber deuterons may be 
+disintegrated by the gamma-rays of ThC’”’. The 
+threshold for this photoelectric effect corresponds 
+to the mass defect J of the deuteron with respect 
+to the proton and neutron into which it dis- 
+integrates, and lies roughly at 210° ev. 
+Whenever deuterons of energy greater than this 
+pass through matter, they may be disintegrated 
+by their impact with atomic nuclei. It is this 
+process which we wish to consider. 
+
+When the minimum time of impact T is very 
+short compared to the periods of the deuteron r, 
+then we may determine the mean energy lost by 
+the deuteron for its disintegration by applying 
+the familiar method by which Bohr derived the 
+atomic energy losses of fast particles. This gives 
+for the energy loss per cm 
+
+
+AE/Ax=[44Z2e4/(2M)v?N In (7/7). (1)* 
+
+
+Here N is the number of nuclei/cm’, Ze their 
+charge, v the deuteron velocity and 2M the 
+deuteron mass. Further 
+
+
+T=Ze?/Mv, r=h/Ik, (2) 
+
+
+where k& is a constant of order unity, which de- 
+pends on the structure of the deuteron. The cross 
+section for disintegration is thus in this limit 
+
+
+o = (20Z2e!/MvkiD)d; X=In (Mv3h/ZekI) (3) 
+
+
+where f; is again of order unity, and kil is the 
+mean energy which the deuteron absorbs on 
+
+
+* This is the mean energy transferred, by the impact of a 
+nucleus of velocity v on a deuteron initially at rest, to the 
+relative motion of neutron and proton with respect to their 
+center of mass; the mean work done on the proton is just 
+twice this. 
+
+
+disintegration. If we write! for the energy loss 
+to atomic electrons 
+
+
+A'E 4rNZe'* mys 
+
+——=————-A; A=In ; K~5.3; 
+
+Ax mv? Ze*KR 
+- me (4) 
+Anh 
+
+
+then the yield of neutrons from a thick target, 
+for an initial deuteron energy W, is 
+
+
+Z(m/2M)(W/kiDL (Loi) (5) 
+
+
+where L is the average over the energy range of 
+the deuteron of the ratio \/A. For high energies 
+(~3 X10’ e.v.) and large Z this gives yields of 
+the order of 1 percent. It therefore seems of 
+interest to investigate this process for lower 
+energies, where the assumption 7<r can no 
+longer be made. 
+
+We can make this calculation very simply inso- 
+far as we may neglect the variation of the field of 
+the nucleus over the deuteron. This in turn will 
+be permissible whenever the dimensions d of the 
+deuteron are small compared to the distance of 
+closest approach with the nucleus. Since d cannot 
+be smaller than #/(MI)?, we must have 
+
+
+h/(MI)i«Ze?/ Mv. (6) 
+This condition does not contradict T<r when 
+n= Le? /hu>l. (7) 
+
+
+The condition (7) is well satisfied except for the 
+lightest elements, for all deuteron energies which 
+are likely to be available; and we shall assume the 
+validity of (7) in the following work. 
+
+
+1F, Bloch, Zeits. f. Physik 81, 363 (1933). 
+
+
+845 
+
+
+846 J. 
+
+
+Under these circumstances we can compute the 
+field acting on the deuteron as though it were a 
+point charge moving in the field of the nucleus; 
+let us-call the matrix component of this field 
+which corresponds to an energy loss of the 
+deuteron =hy, &,. This field will disintegrate the 
+deuteron; if o, be the cross section for photo- 
+effect, the cross section for impact. disintegration 
+will be 
+
+7 Wh 
+o = (c/4rh) o,|&,|%dv/v. (8) 
+
+
+Ifh 
+
+
+Now Bethe and Peierls have given? a theoret- 
+ical calculation of o,, which is based on the as- 
+sumption that. the forces between proton and 
+neutron act appreciably only over a region small 
+compared to the size of the deuteron and the 
+wavelength of the photoneutron: they find 
+
+
+2h-a x2 
+
+
+Cy ; 
+3rMI (1-+x)3 
+
+
+x>0; x=hv/T—1. (9) 
+
+
+Since when we insert this in (8) the integrand 
+falls off fairly rapidly with », we may use (9) 
+even for frequencies higher than those for which 
+its derivation is valid; for the true value of ¢c, will 
+give an integrand in (8) which falls off still more 
+rapidly. 
+
+The matrix elements &, are just 2///e times 
+the matrix elements of the acceleration of the 
+deuteron; these are known’ from the theory of the 
+continuous x-ray spectrum, and assume a rela- 
+tively simple form when (7) is valid. We have to 
+remember, however, that the deuteron and 
+nucleus have like charges, whereas the calcula- 
+tions on the continuous x-spectrum are made for 
+two charges which attract each other. For our 
+case we find 
+
+167? 27e? ( 
+exp —27rn 
+2 
+
+
+ZL 
+2 
+
+
+(0-2) He CR2). oo 
+
+
+2H. Bethe and R.: Peierls, Proc. Roy. Soc. A148, 146 
+(1935). 
+
+3H. A. Kramers, Phil. Mag. 46, 836 (1923) and G. 
+Wentzel, Zeits. f. Physik 27, 257 (1924) give the classical 
+theory. Gaunt gives the quantum theoretic treatment, for 
+unlike charges, for n>>1: J. A. Gaunt, Zeits. f. Physik 59, 
+508 (1930). For #0 the exponent in (10) goes to 
+2n?(Ze?/ Mv’) v. 
+
+
+[8 |2= 
+
+
+R. OPPENHEIMER 
+
+
+The function g’(y) appears in the classical theory 
+of the x-ray spectrum: 
+
+
+o' (y) = en(3) yy (iy) Hy’ (ay). (11) 
+
+
+A rough plot of g’ has been given by Kramers: 
+for large y, g’ =1; and g’ does not deviate sensibly 
+from this value except for very small values of ¥, 
+where it is given by 
+
+
+o' (y)—(3?/m) In 2/yC, In C=0.577. 
+
+
+From (8), (9) and (10) we have 
+
+
+(11a) 
+
+
+o = (167Z7%e4/3(3)?MvI) o(Z, W), 
+WIT-1 xd 
+g(Z, W) = ax 
+0 (1-hx)* 
+exp 2mn{1—[1-—(UW/W)(1+x) ]?} 
+
+
+Xe" (nI/2W)(1+x)). 
+
+
+(12) 
+
+
+The integral for ¢(Z, W) may be evaluated for 
+the limiting cases rae but except in these 
+
+
+cases can hardly be written in closed form. 
+For rnI/W>1 we find 
+
+
+4 Zre* snl -s/2 
+c= — 
+a(3)? al 7) 
+
+
+exp 2rn[1—(1—I/W)-?]. (13) 
+For nI/2W<1, on the other hand 
+a L7e4 W | 
+¢=— In —— k=eC~1.51 
+3 Mv?I Ink 
+| (14) 
+
+
+aw Ze Mv*h 
+=— n-———. 
+3 Mv?I Ze*kl 
+
+
+This is in fact of the form (3), with k=1.51, kh, =6. 
+
+If we take Z=13, T=2X10°, W=3X105, we 
+may apply (13). This gives o~2 1077? cm?, and 
+with (4) gives a neutron yield of about 3x107°. 
+For Z=6, W=4X 10%, (13) is inapplicable. Here 
+(12) and (4) give a yield of about 10~®. The in- 
+crease in yield with energy is very rapid. 
+
+
+4 Kramers, reference 3, pp. 858-860. 
+
+

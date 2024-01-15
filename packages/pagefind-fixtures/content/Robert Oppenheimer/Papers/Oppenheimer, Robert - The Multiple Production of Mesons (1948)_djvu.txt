@@ -1,0 +1,1994 @@
+PHYSICAL 
+
+
+REVIEW VOLUME 73, NUMBER 2 JANUARY 
+
+
+The Multiple Production of Mesons 
+
+
+H. W. Lewis, J. R. OPPENHEIMER, AND S. A. WOUTHUYSEN 
+Depariment of Physics, University of California, Berkeley, California* 
+
+
+(Received October 2, 1947) 
+
+
+In this paper an attempt is made to treat the impacts of nucleons of very high energy 
+(> Mc?). These impacts lead to meson emission, despite the relatively small momentum trans- 
+fers to be expected, because changes of nuclear charge and spin require a readjustment of the 
+nuclear meson fields. Where the fields are strong (as e.g., in the pseudoscalar case), meson 
+emission is multiple, and the multiplicity increases with energy. For weaker coupling (e.g., 
+scalar fields) this is not true. 
+
+Two closely related methods are developed for a more quantitative description of these 
+collisions. These methods may be expected to give valid results when the collision time is short 
+compared to the periods of the emitted mesons, and when the emission of mesons into the various 
+modes can be treated as statistically independent. Under these conditions the total cross section 
+may be expected to be about 10-*6 cm?, and the multiplicity to approach for high energies 
+2¢3(MEo/2xp*c*)!, with Eo the primary energy and g the dimensionless coupling constant. 
+
+Some applications to the calculation of positive excess, primary spectrum, angular dis- 
+
+
+15, 
+
+
+1948 
+
+
+tribution, and the theory of auger showers, are discussed briefly in the final section. 
+
+
+I. QUALITATIVE CONSIDERATIONS 
+
+
+URKAWA’S original argument, which antici- 
+pated the existence of mesons, was based on 
+the role which they would play in accounting for 
+nuclear stability and the forces between nucleons. 
+On the one hand, very extensive theoretical study 
+has failed to devise a theory which accounts at 
+all reasonably for the quantitative aspects of 
+nuclear forces; on the other hand, decisive ex- 
+perience with cosmic-ray mesons, both with the 
+absorption and scattering of the penetrating 
+component, and with the capture of mesons 
+brought to rest in matter, fails to reveal the 
+evidences of any strong interaction. Only one 
+phenomenon shows, if not yet conclusively, that 
+there is a strong interaction between mesons and 
+nuclear matter. This is the phenomenon of the 
+production of mesons, which takes place with 
+very high probability, and with characteristic 
+and high multiplicity when the primary cosmic 
+rays traverse the matter of the earth’s atmos- 
+phere.! These present notes give some con- 
+siderations about the theoretical treatment of 
+these collisions. 
+Quite apart from the inadequacy of current 
+theoretical methods and concepts, to which we 
+will have to return over and over again in the 
+
+
+* Now at the Institute for Advanced Study, Princeton, 
+New Jersey. 
+
+1M. Schein, W. P. Jesse, and E. O. Wollan, Phys. Rev. 
+59, 615 (1941); M. Schein, M. Iona, and J. Tabin, Phys. 
+Rev. 64, 253 (1943). 
+
+
+discussion of this problem, it appears that a 
+somewhat more complex model may have to be 
+invoked to reconcile the strong interactions 
+manifested in meson creation with the absence of 
+subsequent interactions between cosmic-ray 
+mesons and nuclear matter. Especially if one 
+compares the processes of production with the 
+processes of meson absorption, let us say, in the 
+domain of ten billion volts, one is led to an 
+apparent lack of correspondence between ele- 
+mentary processes and their approximate in- 
+verses quite at variance with preceding ex- 
+perience. In the discussions of this problem, 
+which has definiteky not been resolved by such 
+theoretical development as the “strong coupling”’ 
+theory, it was recognized at the Shelter Island 
+Conference? that the most natural interpretation 
+lay in the existence of ‘‘structure,’’ either for the 
+nucleons or the mesons, or both. Thus Weisskopf 
+suggested the existence of lang-lived metastable 
+states for the nucleons formed during the primary 
+collision and subsequently decaying with a long 
+lifetime to yield the mesons; whereas Marshak 
+proposed the equally satisfactory view that the 
+mesons originally created were metastable with 
+regard to disintegration into those actually ob- 
+served, as might, for instance, be the case if they 
+had a higher mass. 
+
+In making this study, we shall, of course, not 
+
+
+2 June 1947, sponsored by the National Academy of 
+Sciences. 
+
+
+127 
+
+
+128 
+
+
+be able to account for copious meson production 
+without assuming a strong coupling between 
+mesons and nucleons; but it is to be understood 
+that much of the argument does not depend on a 
+direct identification of the mesons with those 
+observed in cosmic rays, nor on the exclusion of 
+metastable states for nuclear matter. In fact, the 
+arguments which originally led Yukawa to the 
+view that charged quanta must exist have in no 
+way been weakened by recent experience in the 
+domain of nuclear physics: the scattering, by 
+neutrons and protons, of neutrons of high energy 
+reveals the important part played by charge 
+exchange in these phenomena; and the measure- 
+ment of the magnetic moment of the triton 
+strongly suggests, if it does not prove, the 
+existence of electromagnetic currents associated 
+with nuclear attractions.® 
+
+Even under the assumption of strong coupling, 
+such as, for instance, characterized the sym- 
+metric pseudoscalar or ‘‘mixed”’ theories, or the 
+pair theories, of nuclear forces, an understanding 
+of the phenomena of meson production is by 
+no means trivial. There seem to be two charac- 
+teristics of these collisions which are well 
+established: The first is that they correspond toa 
+cross section very close to the size of the nucleus; 
+the second is that the typical act is a multiple 
+one in which a considerable number of mesons, 
+perhaps 5 or so, for typical cosmic-ray energies, 
+are created. When one remembers that these 
+collisions occur at distances of encounter for 
+which nuclear forces as normally experienced are 
+extremely weak, one must ask two questions: 
+Why do these encounters lead to such strong 
+emission, and why is this emission characteris- 
+tically multiple? 
+
+To these two questions one would like to give 
+simple qualitative answers. To the first: although 
+relatively remote collisions are not accompanied 
+by large momentum transfers between nucleons, 
+they probably are accompanied by changes of 
+spin and isotopic spin. Thus, the collision pro- 
+duces a discrepancy between the meson fields 
+which are actually present about the nucleon, 
+and those which are appropriate to its new state. 
+Insofar as it is possible to idealize the collision 
+processes as rapid, compared to the time of 
+
+
+3 Felix Villars, Phys. Rev. 72, 256 (1947). 
+4 Cf. reference 1. 
+
+
+LEWIS, OPPENHEIMER, 
+
+
+AND WOUTHUYSEN 
+
+
+emission of mesons, this would lead us to expect 
+a very probable emission. As to the second 
+question,> and guided by similar qualitative 
+arguments, we may suppose that if the fields of 
+nucleons are indeed very intense, so that large 
+numbers of mesons are present in these fields, 
+then the effect of a sudden change of spin of 
+isotopic spin will be to release considerable 
+numbers of mesons, as is observed. Whether and 
+how this number will depend on the energy of 
+the collision must, as the future analysis will 
+show, depend importantly on detailed charac- 
+teristics of the field. But even at this stage we 
+may say that if the collisions between nucleons 
+involved no change other than a small transfer 
+of momentum, the large radiation cross sections 
+would not be intelligible, and that if the fields 
+surrounding the nucleons were in fact as weak 
+and as weakly dependent on position as the 
+Coulomb field, this radiation process would not 
+be highly multiple. 
+
+It should be observed that in these discussions 
+we have assumed that the primary cosmic ray is 
+itself a nucleon, an assumption which is now 
+current. Some support for the view that meson 
+production is in fact the result of the collision of 
+nucleons comes from the study of so-called 
+penetrating showers throughout the atmosphere, 
+and at sea level.® In fact, the characteristics and 
+number of such showers at sea level, and the 
+equal distribution between charged and neutral 
+initiators, suggests quite strongly that these 
+phenomena are what is left of the primary col- 
+lisions in the upper atmosphere, after the absorp- 
+tion of the primaries and of their secondary 
+protons and neutrons. At least this assumption 
+that protons initiate these collisions in the upper 
+atmosphere underlies the work of this paper. 
+
+Most of the evidence of multiple production 
+and of collision cross section comes from the 
+typical cosmic ray, of energy say ten billion volts. 
+It is possible so to interpret the very large air 
+showers as to obtain evidence bearing on much 
+higher energies. [t seems to be true that these 
+showers have their origin quite near the top of 
+
+
+5 J. R. Oppenheimer and J. Schwinger, Phys. Rev. 60, 
+150 (1941); PEL A. Bethe, Phys. Rev. 70, 787 (1946). 
+
+él. Janossy, Proc. Roy. Soc. A179, 361 (1942); L. 
+Janossy ae G. D. Rochester, Proc. Roy. Soc. A181, 399 
+(1943); W. B. Fretter, Bull. Am. Phys. Soc. Stanford 
+meeting, July 1947. 
+
+
+MULTIPLE PRODUCTION 
+
+
+the atmosphere, and that they involve an in- 
+timate mixture of meson and soft radiation. A 
+natural, but by no means unique, interpretation 
+of this is that the soft radiation arises primarily 
+from the decay of neutral mesons, though little 
+in our arguments would be altered were the decay 
+process to involve transitions from heavier to 
+lighter particles, provided the time of such 
+decay were short enough to satisfy the Mills- 
+Christy condition,’ and long compared to all 
+collision times. If these suggestions prove to be 
+correct, they will bring with them the conse- 
+quence that, even for energies in the range of the 
+10“ volts, and perhaps higher, collision cross 
+sections must be of the order of nuclear areas, 
+and must lead to the conversion of a large part 
+of the primary energy into mesons and their 
+decay products. As we shall see, the interpreta- 
+tion of such collisions on the basis of meson-field 
+theories gives us information about field strengths 
+of very great magnitude, such as might obtain in 
+the immediate neighborhood of the nucleon. 
+
+It is, of course, not possible, even adopting one 
+of the more or less standard forms of meson 
+theory, to compute what will happen in a col- 
+lision between two nucleons of high energy, 
+because of this clearly depends on a reliable 
+theory of the reaction of meson radiation on the 
+collision process. Even in the simple case of the 
+electromagnetic radiation of a slow electron 
+deflected by a scatterer no such theory exists; 
+nor do even the most radical attempts at altering 
+electrodynamics give an answer which is finite 
+and acceptable.’ But precisely for this reason, 
+attempts at treating meson radiation may not be 
+entirely devoid of methodological interest, since 
+effects of radiation reaction, which in electro- 
+dynamics may be small and only barely sus- 
+ceptible to observation, are here of decisive 
+importance. 
+
+For analogy, we may be guided by the problem 
+of electromagnetic radiation. Here, as Bloch and 
+‘6 M. M. Mills and R. F. Christy, Phys. Rev. 71, 275 
+<th Pauli, Helv. Phys. Acta 19, 234 (1946); H. A. 
+Bethe and J. R. Oppenheimer, Phys. Rev. 70, 451 (1946). 
+Note added in proof: Recently, in connection with the 
+work of Lamb, Schwinger, Bethe and Weisskopf on the 
+term shifts of hydrogen, one of us (H. W. L.) has solved 
+this problem (Physical Review; to be published). The ex- 
+tension of this work to meson problems clearly deserves 
+
+
+intensive study. It is to be hoped that it makes many of 
+the assumptions of this paper unnecessary. 
+
+
+OF MESONS 129 
+Nordsieck first showed, the problem can be very 
+simply treated insofar as one may make three 
+assumptions: (1) the collision time is short com- 
+pared to the periods of the emitted radiation; (2) 
+the effect of the emitted radiation, in particular 
+its recoil, on the source may be neglected; (3) only 
+those components of the radiation field will be 
+considered for which these conditions are satis- 
+fied. The difficulties, of course, arise from the 
+fact that in any radiation problem, the ‘“‘virtual”’ 
+effects of components for which conditions 1 and 
+2 are not satisfied cannot legitimately be ignored. 
+When these three conditions are fulfilled, one 
+has two simple results: The radiated spectrum 
+can be obtained as the difference between the 
+quasi-static fields of the radiator as it is and as it 
+should be after the scattering process, and (2) 
+the total probability of collision is not altered, 
+though collisions are now accompanied by the 
+emission of radiation, which would have been 
+regarded as elastic had not the coupling with the 
+radiation field been considered. 
+
+In the following we shall attempt to develop 
+methods based on the three assumptions above, 
+and appropriate to meson-producing collisions. 
+To this end, we shall first modify the Bloch- 
+Nordsieck method of canonical transformation to 
+make it apply to characteristic meson fields. As 
+is well known, this means physically regarding 
+the nucleon, plus its quasi-static field, as the 
+elementary ingredient of the collision rather than 
+the bare nucleon itself. Although it is easy to 
+carry through these calculations, they may 
+nevertheless leave something to be desired, and 
+that for the following reason: in nuclear impacts 
+and for the emission of mesons, the spin and 
+isotopic spin of the nucleons change. On the one 
+hand, these changes cannot be consistently taken 
+into account by a theory which neglects the 
+effects of radiation on the source. On the other 
+hand, just these changes in spin would appear 
+to be decisive for the course of the collision. For 
+this reason we have supplemented the Bloch- 
+Nordsieck treatment by a species of perturbation 
+theory, which in the electromagnetic case would 
+itself be its equivalent, and which again exploits, 
+but to a more limited extent, the statistical 
+independence of the emission process. In this 
+treatment we considered the process of emitting 
+a fixed number of mesons, and calculated its 
+
+
+130 
+
+
+cross section to the lowest order in all coupling 
+constants in which it appears in the formal 
+treatment. We then compare the cross sections 
+for various numbers of mesons emitted, always 
+working in their lowest order. We assume that 
+although these absolute cross sections are mani- 
+festly meaningless, their ratios are correctly 
+given by this means of calculation. In fact, this 
+assumption means that all calculated cross 
+sections will be reduced by the effects of radiation 
+damping, so that, as in the electromagnetic case, 
+the sum of all cross sections is the same as we 
+would obtain for the elastic cross section with the 
+neglect of radiation processes and, further, that 
+the factor by which the calculated cross section 
+must be reduced varies not at all, or only slowly, 
+with the number of mesons emitted. It is clear 
+that quite apart from deeper questions, some 
+consideration needs to be given to the momentum 
+relations in these collisions, since collisions in- 
+volving large transfers of momentum from one 
+nucleon to another can take place only for cor- 
+respondingly small impact parameters. Some 
+comments on this point will be found in the 
+course of the actual calculations. 
+
+Thus the calculations which follow make no 
+pretense to an estimate of total cross sections, 
+but take these over from the estimate of the 
+probability of the corresponding elastic col- 
+lisions. It may be agreed that on the basis of 
+what is known about nuclear forces and of the 
+measurement on the collisions of 100-million volt 
+neutrons with protons and neutrons,® the cross 
+section observed for the cosmic-ray processes 
+would seem to be a reasonable extrapolation. In 
+fact, if one assumes that there are no serious 
+singularities in the potentials between neutrons 
+and protons, and adjusts their range and strength 
+to agree with nuclear experience, one obtains 
+elastic cross sections in the relativistic domain 
+which are constant, and have the value of about 
+10-2 cm? per nucleon. This is in reasonable 
+enough accord with cosmic-ray experience. 
+
+One final comment may perhaps be appropri- 
+ate. These calculations have been carried out in 
+the relativistic domain, that is, where the primary 
+energies are large compared to a billion volts; 
+this has been done in part in an attempt to 
+
+
+® We are indebted to Dr. E. MacMillan for information 
+on #-p and n-n total cross sections at about 90 Mev. 
+
+
+LEWIS, OPPENHEIMER, AND WOUTHUYSEN 
+
+
+make the results applicable to the great auger 
+showers, and this in turn in part because this 
+application of theory extends to the most intense 
+fields and the smallest distances. Since it will be 
+clear from the following calculations that in 
+theories like the scalar theory, where these fields 
+are only moderate, one does not obtain a high 
+and increasing multiplicity of meson production, 
+the question arises as to what meaning to ascribe 
+to the enormously greater field strengths charac- 
+teristic, e.g., of the pseudoscalar, or pair, 
+theories. For certainly we know one thing: the 
+nucleon response to these fields gives no direct 
+evidence of their existence; the nucleons act as 
+though the forces between them were free of 
+important singularities, not only in the normal 
+phenomena of nuclear physics, but even by the 
+collisions of 100-million volt nucleons, where 
+quite small momentum exchanges are the rule. 
+Nevertheless, the possibility should not be over- 
+looked that these strong fields may have mean- 
+ing, in the sense that they can be radiated under 
+suitable circumstances, and yet not be sus- 
+ceptible of familiar interpretation in terms of the 
+behavior of the nucleons which are subject to 
+them. Much will have to be learned before even 
+the partial validity of this notion can be regarded 
+as established. 
+
+In summary of the results of the calculations 
+which have just briefly been described, it may 
+be said that a scalar theory gives an energy inde- 
+pendent, and, in general, a small multiplicity of 
+production; that a theory which involves no 
+internal change in the nucleons when they scatter 
+each other, such as charge or spin exchange, will 
+give a very small probability of radiation; that 
+the symmetrical pseudoscalar theory, and a 
+similar formulation of pair theory, do in fact 
+give large probabilities and large multiplicity of 
+meson production; and that in the forms here 
+considered, and at extremely high energies, the 
+multiplicity rises with the cube root of the 
+primary energy. Some physical applications of 
+these results are discussed in a quite tentative 
+way in Section IV of the paper. 
+
+
+II. BLOCH-NORDSIECK METHOD 
+A. Symmetrical Scalar Theory 
+
+
+We will now treat the collision of two nucleons 
+in the symmetrical scalar theory by a method 
+
+
+MULTIPLE PRODUCTION OF MESONS 
+
+
+similar to that of Bloch and Nordsieck. The 
+meson field will be considered to interact with the 
+nucleon through the latter’s isotopic spin, which 
+will be treated classically. A canonical transfor- 
+mation will be performed to find the quasi-static 
+meson field associated with the nucleon for a 
+definite orientation of its isotopic spin (definite 
+charge state). We will describe charge exchange 
+in the collision by introducing a potential, V, 
+which can change the isotopic spin of the 
+nucleons in the collision. The corresponding 
+change in the quasi-static field appropriate to the 
+isotopic spin orientation will give us the radiation 
+in the collision. Thus the primary interaction 
+between nucleons could, for instance, be of the 
+form (1-2) V(r); of V we shall assume that its 
+Fourier transform tends to zero for momenta 
+>pc. As will be obvious, we should obtain no 
+radiation (in the approximation here considered) 
+were we to omit the charge exchange (1:2) 
+from the interaction. It should further be ob- 
+served that here we neither assume nor deny 
+that the interaction can be derived from the 
+meson interactions themselves. Following Bloch 
+and Nordsieck,!® we use the Dirac equation for 
+the heavy particle coupled to the meson field, and 
+neglect recoils. The Hamiltonian is then,* 
+
+
+kb 
+H=a-P+BM+> 5 (Que! + Pua) 
+ak 
+
+
++Bg(4r)? > (Ore sink-r+Py,.cosk-r) (1) 
+ak Ro 
+
+
+which, by the Bloch-Nordsieck argument,** can 
+be replaced by its positive energy part, 
+
+
+M Ro 
+H= v-P+—+), 3 (eee FP nat) 
+Y ak 
+
+
+g To 
++ —(4r)i +> 7 eee sink-r+P:.cosk-r), (2) 
+Y 0 
+
+
+ak 
+
+
+where the isotopic spin vector = is treated as a 
+classical unit vector. M is the mass of the heavy 
+
+
+10F, Bloch and A. Nordsieck, Phys. Rev. 52, 54 (1937). 
+
+* ¢=h=p=mass of the meson=1. 
+
+** It will be seen in Section III that virtual pair pro- 
+duction does not play an important part in these processes. 
+In (1), w@ and B are the usual Dirac matrices, Qka is the 
+amplitude of the mode of the meson field with wave 
+number k and charge coordinate a, Pka is the momentum 
+conjugate to Qka, ko is [1-+-k?]#, and g* is the dimensionless 
+coupling constant, yM is the energy of the nucleon. 
+
+
+131 
+
+
+particle, and the meson field is represented by 
+Ca = Ok ko (Qa sink: r+ Pre cosk- r), (3) 
+
+
+where the Qyq and Pie are canonically conjugate. 
+We make the canonical transformation 
+
+
+Pra = Pre — ke cosk- r’, 
+Oke = Oka! — Aka sink: rr 
+
+rr, 
+
+P= Pp’ + a kaa (Qh! sink -y’ 
+
+ak 
++ Pra’ cosk-r’ — fax), 
+£T« (4a/ko)? 
+y(ko— V- k) 
+
+
+obtaining finally, for the transformed wave 
+equation, 
+
+
+(4) 
+
+
+with 
+
+
+Lka 
+
+
+M Ro 
+v-P’+—+>> — (Oke? + Pra’) 
+
+Y ak 2 
+
+arg” 
+k ¥?(Ro—V-k) 
+whose solution is 
+u’=y exp[tMyv-r’ lI] hmax(Qko’), (6) 
+
+ak 
+
+
+—Epul(t’, Qra’') =0, (5) 
+
+
+where x is a normalized spinor, and the Ama, are 
+normalized Hermite polynomials. 
+
+Now, transforming back to the old coor- 
+dinates, we have 
+u(r, Ora) =x exp[tMyv-r | 
+
+II exp[ —t@xa cosk- r(Qra+ $e sink: r) 
+
+ak 
+
+
+Xhmaz(Qrat Oka sink- Tr). (7) 
+
+
+The cross section for scattering by a potential V, 
+with emission of 7,, mesons in each mode ak, is 
+
+
+e~Yar, (8) 
+
+
+Nak: 
+
+
+where (P, Po) and (Q, Qo) are the initial and final 
+momentum and energy of the nucleon, and 
+
+
+a (9) 
+
+
+where Ar, is the change in rq during the scat- 
+tering process. 
+
+It should be observed that the term e—“«s 
+above is independent of the m., and should be 
+summed over all the modes available. This would 
+
+
+132 
+
+
+make the total cross section zero, corresponding 
+to the fact that the virtual emissions are not 
+restricted by the energy conservation conditions. 
+A similar result was found by Pauli and Fierz!! 
+for the electromagnetic case. However, the fact 
+that this factor is independent of the 2., means 
+that its effect is to cut down the total cross 
+section, but it does not affect the ratzo of the 
+probabilities of emitting NM and N-+1 mesons. 
+We will assume that the inadequacy of the 
+assumptions inherent in this method, as dis- 
+cussed in Section I, does not destroy this charac- 
+teristic of the damping. In this way we can give 
+sense to the calculation, since we will calculate 
+only the most probable number of mesons 
+emitted, and will attach no significance to the 
+total cross section. Therefore we omit these 
+terms, and all others that do not depend upon 
+the number of emitted mesons. We also replace 
+Nox! by 1, since the finite rest mass makes it 
+unlikely that more than one meson will be 
+emitted into any particular mode. We have, then, 
+
+
+o~|Vepo|? II Wak; (10) 
+
+
+where the product is carried out over all the 
+modes into which a meson is emitted. 
+
+Now to obtain the total cross section for the 
+emission of N mesons, with total energy loss e, 
+this has to be summed over all the modes satis- 
+fying the energy loss condition. Thus 
+
+
+2 N 
+al 
+Il dk, at (Ara?) Na 
+Xx ——__—_______—— } ] ——-—_, 
+a Ron(Ron— V° -k aye a N,! 
+where the sum is taken over all N. such that 
+> Na=WN, and the integral over the volume in 
+momentum space corresponding to an energy 
+loss between e and e+de.*** The N,! arise from 
+the indistinguishability of mesons of each type. 
+We have, then, 
+
+
+o(N, e)de~| Vrol*( 
+
+
+o(N, e)de~w | Veal*( = 
+
+
+(11) 
+
+
+=) = (Ax*)¥ 
+
+
+ary” 
+k adbdin 
+xX f- {1 (12) 
+e Ge? a)? 
+
+
+1 W. Pauliand M. Fierz, Nuovo Cimento 15, 167 (1938). 
+
+*** It should be noted that the continuous decrease in 
+y affects only the absolute magnitude of the cross section, 
+so that the initial value may be used here. 
+
+
+LEWIS, OPPENHEIMER, AND WOUTHUYSEN 
+
+
+where yu, is the cosine of the angle the mth meson 
+makes with the direction of motion of the 
+nucleon. Now, in order to find the limits of 
+integration, it is necessary to take into account 
+the longitudinal momentum transfer from the 
+other nucleon (for which exactly these same con- 
+siderations hold, provided we are in a coordinate 
+system in which each nucleon is near the speed 
+of light). 
+
+If the momentum transfer between the nu- 
+cleons is K, then the equations of conservation 
+of energy and momentum are 
+
+
+Ni 
+APi,= —>\ k.—K,, 
+N2 
+AP , k.+K., 
+2 Ds (13) 
+Ni 
+Ak, = —e=Vv,;: AP, = —Vy, >, k,—K,, 
+N2 
+
+
+AF, = —€ = Vo: AP. = >, k,—v.Kz, 
+
+
+where the 2 axis is taken along the direction of 
+motion of the first nucleon. Thus, since 
+
+
+N 
+Ds Ron=ater, 
+
+
+vy 
+
+
+N N 
+€) = >, (Ron +vekzn) . ye QXny 
+U1 V2 
+(14) 
+
+
+N N 
+(Ron Uirken) = 2 Bn- 
+
+
+01+ Ve 
+Now making the transformation from py, ko, to 
+Qn, Bn we have, since 
+
+
+Vy+V. 
+kdkodp = dadBp~ 2dadB, 
+
+
+Uy V9 
+
+
+g" NitN2 
+o( Ni, Noese:)deydeg ~ | V(K,) | (-) 
+T 
+
+
+ie fe i= , dand Bn (15) 
+
+
+ye ye2V2N IN! 2) No(Bn2)N1 
+
+
+where in the denominator a? appears for each 
+meson emitted by the second nucleon, and £? for 
+each emitted by the first. The integration is over 
+the sheet 
+
+
+N N 
+€) < > On <e+de, €2S ~ BaS éo+des. 
+
+
+For e, and e: large compared to uc’, the integral 
+
+
+(16) 
+
+
+MULTIPLE PRODUCTION OF MESONS 
+
+
+in (15) becomes 
+[- ji <<). n(—— =), 
+arty? wbye 
+
+since for a given a the lower limit of @ is 
+(a?+-71?)/4ay12, and inversely. This can be ap- 
+proximately evaluated when e:/Niy1 and €2/Ney2 
+are either much less than or much greater than 
+one. We shall see that the most probable multi- 
+plicity and energy losses occur in the latter 
+region, so we will evaluate the integral in that 
+case. The major contributions will then come 
+
+
+from aa~ei/N1, Bua~e2e/N2, and the integral 
+becomes, in this limit, 
+
+
+€1 Ni-1 €5 No-l NiN> 
+ANw 2N 1 2N (==) ( in) ———de,dep. 
+
+
+v1 v2 E1€9 
+Thus 
+a (NV. LV. 2€1€2) deide. Cm | V(K z) | : 
+22\% NIN, 
+x (=) (Aes?) %1( A 29?) ¥2 
+v €1€2 
+
+
+. (Ine,/y1)¥* (Ines /y2)¥2 
+
+
+dede. (17) 
+N,! N,! 
+
+
+Now to account for the different distributions of 
+the mesons among the nucleons, this has to be 
+multiplied by the binomial coefficient Cv,%, and 
+summed over JN, to obtain the cross section for 
+the emission of N mesons, with energy losses e€; 
+and €:. 
+
+
+g N N 
+o(New)dade~( = N! a | V(Kz) ie 
+WT N1=0 
+N» 
+(At12)¥1( Ag?) 2 
+
+
+€,€9 
+(Iner/yi)¥! (Inee/y2) 827 
+
+
+N,? N," 
+
+
+The | V|? is placed inside the sum, since, from 
+(13), setting vi~ve~e, 
+No Ni 
+
+
+N 
+2K,=atet>d, kz—>d, ke=ate— Dd, Rin, 
+
+
+so that the longitudinal momentum transfer 
+required depends upon the distribution of the 
+mesons between the nucleons. We can obtain an 
+idea of what is required by using the average 
+values of the kz, as given by the distribution (11). 
+
+
+(18) 
+
+
+€;d 2. 
+
+
+(19) 
+
+
+133 
+
+
+Here the resonance denominators force the 
+emissions to be forward for the most part, and 
+K, is of the order Nuc. Now our assumption that 
+both nucleons are moving near the speed of light 
+requires us, for large energy losses, to work in a 
+coordinate system in which neither nucleon 
+reverses its direction of motion. For large equal 
+energy losses this is the center of mass system. 
+We therefore} go into the center of mass system, 
+setting y1=Y2=y, and suppose that N<y. This 
+corresponds to the condition that the mesons 
+emitted have energies greater than Mc?. The 
+Fourier analysis of the scattering potential should 
+be flat up to momentum transfers of order uc, 
+so that the | V|? can now be taken out of the sum. 
+Integrating over-all energy losses, we obtain 
+
+
+gt\N Emax \ ™ 
+w)~(=) win ) 
+T Y 
+N (AtP)N1(A te?) 2 
+N,!No! 
+
+
+, (20) 
+
+
+N1=0 
+
+
+where é€max is the maximum energy a nucleon can 
+lose in the center of mass system. This probably 
+is somewhere between (y—1)M and (y—2)M, 
+since the nucleon does not convert its rest energy 
+into mesons, and probably stops appreciable 
+emissions when its velocity becomes sensibly 
+less than that of light. Thus this factor becomes 
+In M/p for high energies, greater than around 
+10" volts. 
+
+Now for a symmetrical potential of the form 
+(<1: %2) V(r) as is given by the symmetrical meson 
+theories, t1-+ 2 is a constant of the motion in a 
+scattering process, so At,;= —Art,=Art, and, 
+since the sum in (20) may be replaced to sufficient 
+accuracy by its largest term, we have, 
+
+
+4g?Ac’\% 1 Gane 
+o(N)~ ( ) —(in 
+T N! ¥ 
+
+
+since (4N)!~2-%?(N!)%, This is valid for 
+N <émax/y. The cross section has a maximum at 
+
+
+(21) 
+
+
+(22) 
+
+
+which is small for most reasonable values of g?, 
+and gives a most probable multiplicity which 
+
+
++ Thus, if Eo is the primary energy, 
+yM=(3M(E°+ MM) }. 
+
+
+134 
+
+
+does not increase with energy.{f This corre- 
+sponds to the fact that the scalar meson field has 
+only a r~ singularity near the source, and con- 
+tains only a logarithmically infinite number of 
+mesons. 
+
+
+B. Symmetrical Pseudoscalar Theory 
+
+
+We will now use essentially the same method 
+to treat the case of a symmetrical pseudoscalar 
+field, which is different from the scalar theory in 
+two respects. First, we will use a coupling in 
+which both the isotopic and ordinary spins 
+appear, so that changes in either one can cause 
+meson emission. Second, we will use a gradient 
+coupling so that the quasi-static field has a worse 
+singularity near the source than was the case for 
+the scalar field (1/r? instead of 1/7). As we will 
+see, this latter leads to a more copious meson 
+emission, corresponding to the much stronger 
+meson-field strengths in the vicinity of the 
+source. We will suppose that the internucleonic 
+potential can effect either ordinary or isotopic 
+spin changes, but that it is free of singularities— 
+and its Fourier transform small for k>>yc—as 
+would not be the case were the interaction to be 
+derived directly from the meson fields; such 
+singular interaction can clearly not be treated as 
+small. The procedure is then exactly analogous 
+to that for the scalar field, with the Namiltonian 
+
+
+k 
+Va pig eS = (Qret-+ Pa) 
+ak 
+
+
+Ta 
++g(4m)! 3) —(o-k—ysko) 
+ak kot 
+
+
+X (Ore cosk: rt — Pye sink-r), 
+
+
+which can be replaced by 
+
+
+(23) 
+
+
+M ko ; 
+H=v- Pt te geet Pee!) 
+Y 
+
+
+—g(4m)3 = (bo Ri) 
+X (Qka a r—Pysink-r) (24) 
+
+
+tt Were we to assume very large values of g?, we should 
+have the other limiting case N>>emax/y; here (21) would 
+be replaced by 
+
+
+2 As2 2 QIN 
+Pare Cee see) (8 1 
+
+
+We (2 la) 
+
+
+which yields 
+
+N~ (487A 2% emax?/ry")!, 
+which, though large for large enough g?, still does not 
+increase with increasing energy. 
+
+
+LEWIS, OPPENHEIMER, AND WOUTHUYSEN 
+
+
+for y~c. The canonical transformation is similar 
+to the scalar one, and we obtain again 
+
+
+o~|Vee|? II vex, (25) 
+where now 
+Vak = (24g?/ko)| A(tasi\) F, (26) 
+so that 
+g2\ gNigg’? 
+o (Ni Noeie) desde, ~ | V(K,) n(= ) nen 
+us N, IN,! 
+N 
+xf . { [[ dand8,, (27) 
+where 
+= deal A(raa))) |. 
+The integration yields, 
+g? N g Nig N2 
+o (Ni Noei€2)deyden~ | V(K,) "(=) zee 
+N,'N,! 
+(€)€.)¥—} 
+(28) 
+
+
+x N reap oe 2 
+
+
+Again multiplying by Cy," and summing, we 
+
+
+have 
+g?\ N?(e@)¥— 
+o(Wee)dede~ (- ) ———_———(d¢,de 
+vs N! 
+N g Nig Ne 
+DV) ee (29) 
+N1=0 (Ni!N2!)? 
+
+
+Now, however, for large energy losses in the 
+center of mass system the spherical symmetry 
+gives 
+
+
+K.~jlert+e), 
+
+
+which can be as large as émax, which is larger 
+than yuc for incident proton energies greater 
+than about 510! ev. However, the spherical 
+symmetry also makes the momentum transfer 
+independent of the distribution of the mesons 
+between the two nucleons, so that the matrix 
+element can be taken out of the summation, and 
+we will return to the question of the large mo- 
+mentum transfers below. 
+
+Replacing the sum, as before, by its largest 
+term, which occurs at Ny=fiN and N2=f2N, 
+where fi=qi/(qitq2) and fe=qe2/(qitge2), we 
+have 
+
+
+o( Nees) derder 
+
+
+2\ N N2(e6)¥—! sg, +Go 
+~(- )- i ee ( a ) desde, (30) 
+N38 fr fel? 
+
+
+MULTIPLE PRODUCTION OF 
+
+
+and, integrating over-all energy losses in the 
+center of mass system, 
+
+
+2 erga Gitge x 
+iny~(=) ~~.) . (31) 
+ar N38 fil fof? 
+
+
+(31) has a maximum at 
+
+
+Int Nf2y 3 3 i 
+(yy (GY 
+T fi’ 1 FoF? yM 
+which increases as y! or as the cube root of the 
+primary energy. This corresponds to the inverse 
+square singularity of the pseudoscalar meson 
+field, which gives an unlimited supply of mesons. 
+We have assumed that the | V(K,)|? varies more 
+slowly with NV than the other factors, even in the 
+region of large momentum transfers. 
+We note, for future reference, that the case of 
+a neutral pseudoscalar field is obtained by setting 
+fi=fe=4, and q:=q2=[A(7,0;;) ?, for the case 
+of a symmetrical interaction between the 
+nucleons. Thus, the cross section becomes, 
+
+
+4g? N ence’ 
+oW)=(—=) fate 
+r/ (NY) | 
+
+
+and gives 
+
+
+—— 
+ot 
+
+
+y (a "Tac ¥(“=) (32a) 
+— A(r.¢0 —— }, a 
+1] yM 
+
+
+Tv 
+
+
+We note also that the number of mesons of 
+each charge type depends upon the change in 
+Tao\; SO that with a potential that doesn’t dis- 
+criminate among the different rt. we should 
+expect that an average of one-third of the mesons 
+would be neutral, and two-thirds charged. 
+
+
+C. Comparison and Total Cross Section 
+
+
+The preceding considerations have illustrated 
+a number of general features of the radiation 
+process. First, it is clear from the method, as 
+well as from the examples, that the radiation 
+occurs through a change in the source—in par- 
+ticular, a change in some feature of the source to 
+which the meson field is coupled. Thus the scalar 
+field can be radiated by a change in the isotopic 
+spin of the source, and the pseudoscalar by a 
+change in either the ordinary or isotopic spin. 
+
+
+rn 
+
+
+MESONS 13 
+
+
+Secondly, the number of mesons emitted is 
+largely determined by the number previously 
+existing in the virtual field. Therefore, in order 
+to obtain an appreciably energy-dependent mul- 
+tiplicity of production, we must have a badly 
+singular meson field (worse than 1/r), and cannot 
+cut off the singularity except at very short dis- 
+tances. This makes the self-energy and nuclear 
+forces difficulties acute, and a quantitative dis- 
+cussion of the cut-off question will be deferred to 
+Section IV. 
+
+Another difference between the scalar and 
+pseudoscalar theories is in the angular distribu- 
+tion of the emitted mesons. For the scalar case 
+the average perpendicular momentum of an 
+emitted meson is of order uc, whereas for the 
+pseudoscalar mesons the distribution is spheri- 
+cally symmetric in the center of mass system. 
+This has the consequence that the emission of 
+scalar mesons requires only a small momentum 
+exchange between the nucleons, and the absolute 
+cross section is not limited by this. Thus we 
+might suppose that the total cross section for 
+inelastic scattering is of the same order as that 
+for elastic scattering, around (#/yc)?, which is in 
+rough accord with the data on the absorption of 
+primaries at the top of the atmosphere. 
+
+On the other hand, the pseudosclar mesons 
+require a momentum exchange between the 
+nucleons of the order yMc in the center of mass 
+system, and, if the potential between them is 
+similar to a Lorentz-contracted Yukawa well, 
+this means an impact parameter h/ Mc. However, 
+this extreme situation obtains only for energies 
+greater than around 10-in. volts. For lower 
+energies the factor emax/yM becomes important, 
+and the important impact parameters become of 
+order hcy/émax which increases the cross section 
+somewhat. Thus, at 10! volts primary energy, 
+Emax is perhaps 3 to Suc? and hcy/emax~sh/ uc, 
+which is not too small. 
+
+The evaluation of the physical consequences of 
+these considerations is not unambiguous. For 
+they show that only for close impact (</ Mc for 
+extremely high energies) can probabilities of 
+meson emission be regarded as statistically 
+independent; and only to this case are the 
+methods of this paper applicable. For the more 
+distant collisions, in which large momentum 
+
+
+136 LEWIS, 
+transfers are not readily available, there are two 
+possibilities: either the statistical independence 
+upon which the methods of this paper are based 
+will be maintained, in which case such distant 
+collisions will not, in general, be accompanied by 
+radiation. Or the requirement of small mo- 
+mentum transfers may force correlations among 
+the successive emissions, in which case the 
+methods here used are no longer applicable. 
+However, one might schematize the correlations 
+by supposing, for example, that the volume in 
+momentum space available to the mesons is 
+decreased by the momentum transfer require- 
+ment. In order, for instance, to cut down the 
+momentum transfer from yMc to yuc, a factor 
+of roughly ten, the emissions might be concen- 
+trated forward, into about one-fifth of the pre- 
+viously available momentum space per meson. 
+Thus a factor of 1/5 might be introduced into 
+Eq. (31), and 5-? or 0.6 into Eq. (32). 
+
+Although present theoretical methods do not 
+settle which alternative will be realized, the 
+experimental evidence for auger showers shows 
+that even at these energies the cross sections for 
+converting primary into cascade radiation are 
+still of the order of 1/100 barn per nucleon. 
+
+We also note that ‘cut-off’ procedures in the 
+meson fields would tend to concentrate the 
+emissions forward, level off the multiplicity as a 
+function of energy, and decrease the required 
+momentum transfer between the nucleons. 
+
+We may also note some more general features 
+of the multiplicity laws. The fact that the differ- 
+ential cross section must be a relativistic in- 
+variant, for all numbers of mesons emitted, 
+means, in the case of statistical independence of 
+the successive emissions, that that part of the 
+cross section which involves the meson emission 
+must be a product of invariant factors. Thus, in 
+the scalar case we have 
+
+
+dk, 
+Rony? (Ron =< k,)? 
+
+
+and in the pseudoscalar [|[dk,/kon. In the case 
+where the emissions are statistically independent, 
+(and only in this case) the cross section will 
+break up into a product. Since only the two 
+four-vectors (k, ko) and (P, £) can appear, the 
+
+
+OPPENHEIMER, 
+
+
+AND WOUTHUYSEN 
+
+
+cross section must then have the form 
+
+
+dk, 
+II 5, Thy Fon v-k,) |. 
+
+
+On 
+
+
+The two cases studies so far correspond to f(x) 
+a simple power, f(x) =1/x? for the scalar theory, 
+and f(x) =1 for the pseudoscalar, For a general 
+case f(x)=x’, some of the properties of the 
+solution are immediately clear. First, for »v 
+negative the emissions are concentrated in a 
+forward direction, increasingly so as v becomes 
+more negative. For v=0, we have spherically 
+symmetric emissions in the center of mass 
+system, and for y>0 the mesons tend to be con- 
+centrated backward somewhat. One can do the 
+integrations over the momentum space roughly, 
+and finds that, for v 20, o(N)~wy@t24/N '3t, 
+apart from numerical factors. The case of the 
+pseudoscalar field corresponds to v=0. 
+
+If v is less than zero, the cross section behaves 
+as const./N!3+" for N«&M/u, and const./N!-” 
+for N>M/yn, so that no negative values of v 
+give a multiplicity which varies appreciably with 
+energy. The scalar field corresponds to v= —2. 
+As »v increases, the multiplicity will also tend to 
+increase more rapidly with energy. 
+
+
+III. PERTURBATION METHOD 
+A. Neutral Pseudoscalar 
+
+
+Now, in order to take into account the quan- 
+tum properties of the ordinary and isotopic spin 
+in a more consistent manner, we will treat the 
+case of a neutral pseudoscalar field by a sort of 
+perturbation theory,” giving an explicit form to 
+the spin and isotopic spin dependence of the 
+potential function. In the electromagnetic case 
+this would be the formal equivalent of the Bloch- 
+Nordsieck method. We will use the Born ap- 
+proximation, in the sense that each process will 
+be considered only in the first order in which it 
+occurs, and we will use a potential function pro- 
+portional to (*-T)(¢-X—vysI's), which has the 
+property of flipping either the spin or isotopic 
+spin of the nucleons. Here, as later, the small 
+Greek letters refer to the first nucleon, and the 
+large ones to the second. The matrix elements for 
+the emission of a meson by the first or second 
+
+
+122 We are indebted to Dr. H. A. Bethe for helpful method- 
+ological discussions during the early part of this work. 
+
+
+MULTIPLE PRODUCTION OF MESONS 
+
+
+nucleon, respectively, are 
+
+
+2r\? 
+g a, T20||(Ro— Re), 
+
+
+2r\? 
+(=) T,2)\(Ro+k:z), 
+
+
+0 
+
+
+(33) 
+
+
+where, as before, the pair-producing parts have 
+been omitted, and the nucleons have been sup- 
+posed near the speed of light. We take only the 
+even parts since the large energy denominators 
+associated with pair production will cut down 
+the contribution of the odd parts as 1/y so that 
+one can neglect them. 
+
+The matrix element for the emission of NV, 
+and N. mesons by the first and second nucleon, 
+respectively, is 
+
+
+HW (2rg?) "PTT, Dy, 
+ge Ront 
+xX Apo T22 12° saa VecattO|}T2° . * AGX: 
+
+
+ey 
+
+
+(34) 
+energy denominators 
+
+
+where x; and yy are the initial and final state 
+spinors (each for two nucleons), A; and A, are the 
+corresponding projection operators, and 0, is 
+Ron—Rzn for a meson emitted by the first nucleon, 
+and Ron+k.z, for one emitted by the second 
+nucleon. The energy denominators are of the 
+form 
+
+
+bi(b1 +02) +--+ (—by-1— by) (— by), 
+where the break occurs at the scattering act. If 
+there are 1; emissions by the first nucleon before 
+the scattering, and m2 by the second, then the 
+sum is Over 71, 2, the combinations of 2, and 1» 
+mesons, and all the permutations of the emissions 
+before and after the scattering. Since the oj), 
+
+
+D1, Tz, and Z, all commute, the sum over per- 
+mutations is done directly, and with 
+
+
+1 1 
+yields 
+(2arg?)*/? 
+“tees 
+X (211 T2)"2-"* Vacate (oj 72) "(ZT 2) PAX. 
+
+
+H DL) tt xeF As (opp te) MI" 
+
+
+(35) 
+
+
+137 
+
+
+Now the operator part of Vecatt can be broken 
+up into a part that commutes with the o);7, and 
+a part that anticommutes. Thus 
+
+
+(c-T)(o- = —ysI's) 
+i Cael ze — 50's) + (1: Ti) (oy ; zx) | 
++[7.7.(o1° 1) +(e1: Ti)o22, | (36) 
+
+
+and, calling the former of these At and the 
+latter A~, we have 
+
+
+(2g?) 
+H=V(K)——— 
+
+
+n On 
+
+
+Dp a aac): Bike a. baa ey oa 
+
+
+xe" Ay (oy 72) 8 4( 21, D2) ¥? 
+
+
+(37) 
+
+
+where 
+Dl ( —) nitnzAt+t A—] 
+= CuX1Cn¥2[(—)At4A-]=2A-, 
+
+
+mine 
+‘The loss of the A4* means that only that part of 
+the potential that can flip either the spin or 
+isotopic spin of the nucleons is effective in 
+causing radiation. We have then, 
+
+
+(82g?) *? 
+SX A oie) 
+
+
+2 
+n On 
+
+
+H= V(K,) 
+
+
+K (2 T2)"*A-Aixi]. (38) 
+
+
+Squaring, then averaging over the initial and 
+summing over the final spins (ordinary and iso- 
+topic), we have 
+
+
+(8mg?)* 
+
+
+| Z|? = ye | V(Kz) |? SpLAsA~AA7]. (39) 
+
+
+nO0n 
+
+
+The spur is non-vanishing, and independent of 
+the NV, so 
+
+
+Sx 2\N 
+HP~ 1 VK.) (40) 
+aaa nm On 
+g?\ w dk, 
+do~ | V(K.) | (=) Tay 
+
+
+Now the integration over the momentum space 
+of the mesons, and summation over N;, can be 
+carried out as in Section II, yielding 
+
+
+82? N N?(€1€2) 4 
+da~ | V(K.) "(—) —————de,de, (42) 
+T N'8 
+
+
+138 
+
+
+which, as before, favors large energy losses, and 
+
+
+owny~(— 
+
+
+82? Caaxe 
+~*)' (43) 
+
+
+Ni 
+
+
+a 
+
+
+for the integrated cross section in the center of 
+mass system, which has a maximum at 
+
+
+242 } 
+N= (= Y ~) (= 
+T y¥M 
+
+Comparing (43) with the result for the neutral 
+pseudoscalar field obtained by the _ Bloch- 
+Nordsieck method in Section II, we see that the 
+only difference is the replacement of (Ar,0),)? by 
+2, indicating that an exchange potential is in 
+fact equivalent to a large spin change in the 
+Bloch-Nordsieck method. 
+
+We could, of course, treat a neutral scalar 
+field by exactly this same method, with similar 
+results. 
+
+The extension of the above to the case of the 
+symmetrical theory is not trivial, since the 
+feature that made the combinatorics simple, 
+namely, the commutativity of the 7,, is not 
+present when charged mesons appear. Thus the 
+successive emissions are not independent, and 
+the simplicity is lost. In this particular case the 
+non-commutativity of the successive emissions 
+is related to the conservation of charge. In our 
+treatment by the Bloch-Nordsieck method we 
+neglected this difficulty by treating the isotopic 
+spin vector classically. Such classical treatment 
+would correspond to an extreme form of the 
+so-called strong coupling theories, implying in 
+particular the existence of charge isobars of the 
+nucleons. Thus the charge asymmetry of the 
+emitted mesons is compensated for by the fact 
+that the heavy particles emerge from the col- 
+lision in isobar states, in such a way as to effect 
+the over-all conservation of charge. This problem 
+does not exist in a neutral theory. 
+
+
+B. A Pair Theory 
+
+
+We wish now, in view of the fact that the 
+emission of single mesons may be almost for- 
+bidden, to consider a typical spinor-pair theory. 
+We use an interaction that is sensitive to spin 
+changes of the nucleons, 
+
+
+Aint = rae gv*y* (o- a— —%¥5 ls)yy, 
+
+
+(44) 
+
+
+(45) 
+
+
+LEWIS, OPPENHEIMER, AND WOUTHUYSEN 
+
+
+where the capital letters refer to the heavy par- 
+ticle, and the small ones to the mesons. Taking 
+the even part for the heavy particle, we can 
+replace this by 
+
+
+FA ing= g¥* 2 YY* (oj —¥s)¥, (46) 
+
+
+where we will later take the odd part of the light 
+particle operators. 
+
+Writing down the matrix element for the 
+emission of N pairs in an exactly analogous 
+manner to that used in the preceding section, 
+and with the same potential between the nu- 
+cleons, we obtain 
+
+
+(2g) 
+H= V(K,) Ex Aydt Nida, re 2 (Zip . =2,) Ax: | 
+II. Wn Ant (a4) a )) An Wn, (47) 
+
+
+where, as before, the A and X are the projection 
+operators for the heavy and light particles, 
+respectively, and 
+
+
+bn =e,++e,— — part — pny : 
+
+
+Squaring, then summing over final and averaging 
+over initial spins, we have 
+
+
+(4g")"" 
+
+II. 4,” 
+ SpLAs(Z1.+ Ba) A(Zis- E21) | 
+‘Tn SpLAn*(o)) — ¥5)An7 (oi — ys) J. 
+
+
+The former spur is non-vanishing, and inde- 
+pendent of N, and the latter, since the momen- 
+tum of the ‘‘positron’”’ is the negative momentum 
+of the negative energy state, is 
+
+
+(2/én*en—) (ent — pr 1*) (en = pnt): 
+
+
+Therefore, 
+
+
+P= = V(K,) |? 
+
+
+(48) 
+
+
+Say: 
+do~ (8e2)* TE ee 
+
+
+n En’ En 
+(€n* — pnii*) (en — Prj\~) 
+(ent ten — payyt — pry)? 
+
+
+, (49) 
+
+
+which has an invariant form of the sort discussed 
+in Section II. Integration of this expression over 
+the momentum space available, followed by 
+summation over N;, would give the total cross 
+
+
+MULTIPLE PRODUCTION OF 
+
+
+section for the emission of N pairs, but, unfor- 
+tunately, the integration is not as simple as in 
+the previous cases. However, to obtain an 
+estimate of energy dependence, we may set the 
+final factor in (49) equal to unity, and have 
+
+
+o(N) ~émax?® /NP(2N) !, 
+which has a maximum for 
+N~eémax! 
+which, by coincidence, is the same result as was 
+found for the single pseudoscalar theory. 
+IV. SOME APPLICATIONS 
+A. Angular Distribution 
+
+
+We wish now to apply the foregoing results to 
+the auger showers, and to the primary production 
+of mesons. For this purpose we will use the 
+results of the symmetrical pseudoscalar theory, 
+as obtained in Section II. We found there that 
+the weighting in momentum space was propor- 
+tional to 
+
+
+dk, 
+II « J] dandBn, 
+
+
+% ROn 
+
+
+with the a, and @, defined by (14). Averaging 
+over all the mesons except one, we have for the 
+average value of any function of a and 6 
+
+
+es f Sf fla, B) 
+
+
+X (a — a) * (ee — 8)" dad 8. 
+
+
+(f(a, B))w = 
+
+
+(50) 
+
+
+Thus the average energy of the emitted mesons 
+is obtained by setting f(a, 8)=a+ 8, and gives 
+
+
+(Ropw = (artes) /N, 
+
+
+as it must. 
+
+Now approximating the distribution function 
+for high energies, and transforming it to the 
+laboratory system, we have a convenient form 
+for applications, 
+
+
+NN? Ro 1 
+exp| —N{—+ )| 
+2r ME, Eo 2Mko 
+
+
+dk 
+<exp[ ere eee 
+0 
+
+
+P(k)dk= 
+
+
+(51) 
+
+
+MESONS 139 
+where, as before, energies are measured in units 
+of uc? and masses in units of the meson mass. 
+
+In order to obtain the angular distribution 
+alone, we have to integrate this over ko, and 
+obtain approximately, for small 9, 
+
+
+2M N? 2M 
+P(d)dQ=— exp| — (v+— 
+vw as) 4M? Eo 
+dQ 
+Se (92) 
+(3?+2M / Eo)? 
+
+
+This involves, however, an integration over 
+meson momenta as low as V/2M, many of which 
+will not reach sea level, and, in order to find the 
+sea level angular distribution, we should only go 
+down to energies of the order of 210° ev, which 
+is the energy required to come through the at- 
+mosphere. With the lower limit 7 =2 10° ev we 
+find 
+
+
+2M Nn 2M 
+Pr(o)dax— exp] -—* o?-+-— | 
+
+
+wEo 2M Eo 
+x<—— oo, (53) 
+(2+2M/Eo)? 
+which has two characteristic widths 
+ti~(2M/Ey)t, de~(2M/N7n)}, (54) 
+
+
+and we must choose whichever is smaller. Es- 
+timating the coefficients in (32), we find N~2E,} 
+so that for the most probable multiplicity, 
+
+
+v} ~4Eo-3, ro ~ Fo, (55) 
+
+
+and for Ey >5 X10!" ev, 3; is smaller, and we have 
+roughly 
+
+
+2M dQ 
+P"'(8)dQ~— 
+
+
+Tore (56) 
+Ey (+2M/Ey)? 
+
+
+for angles less than #2. 
+
+This corresponds to spherically symmetric 
+emissions in the center of mass system, and cor- 
+responds to an extremely wide distribution for 
+the most highly populated primary energies. In 
+the region of the auger showers, where E,~ 10" 
+or 10!5 ev, the half-width is around 4107-3 
+radian. This is, of course, the spread of the hard 
+core of the showers, and the initial spread of the 
+neutral mesons that form the soft part. The latter 
+
+
+140 
+
+
+is later considerably spread by multiple scat- 
+tering. 
+
+If the showers are created at altitudes of (say) 
+20 km, this angle corresponds to a diameter of 
+approximately 80 meters at sea level. 
+
+
+B. Primary Spectrum 
+
+
+The fact that the average multiplicity of 
+production increases with the energy of the 
+primary proton causes the energy spectrum of 
+the mesons to be different from that for the 
+primary protons. In particular, if the primary 
+spectrum is proportional to Eo~dE» and the 
+average multiplicity is proportional to Eo", then 
+the average energy e of an emitted meson is 
+E.'-" and the meson spectrum at the place of 
+production is proportional to 
+
+
+eM (-r). li(l-n)—Ide.er/4-1) op ge  A-2r)/—-1) dg, 
+
+
+Thus, if we take the meson spectrum as e?-8de 
+and take r= 4, the primary spectrum implied is 
+Eo? -*dE, in the relatively high energy region for 
+which these considerations are valid, Eo greater 
+than around 10-in. ev. For lower energies the 
+multiplicity changes more rapidly, and if the 
+primary spectrum predicted above persists below 
+10" volts, we should expect the high altitude 
+meson spectrum to deviate from an e~?:5 law, the 
+deviation being toward increased numbers of 
+slow mesons. Of course the decay of the slower 
+mesons and the magnetic effects on the pri- 
+maries will influence these results. 
+
+
+C. Positive Excess 
+
+
+If we suppose that all final charge states of the 
+nucleons are equally probable, then the fact that 
+the primaries are positively charged causes an 
+excess of positive mesons to be produced. If the 
+number of charged mesons is N,, then the average 
+
+
+LEWIS, OPPENHEIMER, AND WOUTHUYSEN 
+
+
+number of positive mesons will be 4(2N.+1) and 
+of negative 4(2N.—1) so that the positive excess 
+is 2/(2N.—1)~1/N,. This is both energy de- 
+pendent and depends upon the absolute number 
+of mesons produced. Taking, as above, N~2Et 
+and N,~2N~1.3E t, we have 
+
+
+Pos. excess~ 0.8 4g t~ €7}, (57) 
+
+
+since €y=Ho/N&3E,t. This gives the positive 
+excess as a function of meson energy at the point 
+of production, and around 210° ev must be 
+added to energies at sea level to extrapolate back 
+to the top of the atmosphere. For energies of a 
+few Bev at sea level, this corresponds to an excess 
+of between 15 and 20 percent, which is in accord 
+with the experiments. No data are yet available 
+on the variation of the excess with meson energy. 
+
+
+D. Range of Fields and Distances Involved 
+
+
+Integrating the distribution (51) over angles, 
+we obtain for the energy distribution in the 
+laboratory system, which is the initial rest 
+system for the air nucleon, 
+
+
+N Ro 1 
+P(Ry) dkh=z— exp| —N ( —-+ ) fete (58) 
+E Ey 2Mkyo 
+
+
+0 
+
+
+Thus the energy distribution is uniform from 
+around k)~ N/2M to ky~ E/N, and the average 
+energy is indeed £o/N. Thus we are exploring 
+the meson field to distances of order N/E which, 
+for N=N~2E,¢ is 2Eo?. Thus a cut-off at a few 
+times the proton Compton wave-length, as is 
+suggested by magnetic moment, nuclear force, 
+and self-energy consideration, would modify our 
+results in the entire cosmic-ray range. The 
+proton Compton wave-length itself becomes im- 
+portant at around 10! ev, and at 10 volt we 
+are exploring the meson field to distances of 
+about 1/1000 of 2/ Mc. 
+
+

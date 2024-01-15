@@ -1,0 +1,1330 @@
+Bulletin of the 5d Routledge 
+2 Taylor & Francis Group 
+
+
+Bulletin of the Atomic Scientists 
+
+
+ISSN: 0096-3402 (Print) 1938-3282 (Online) Journal homepage: http://www.tandfonline.com/loi/rbul20 
+
+
+Physics in the Contemporary World 
+
+
+J. Robert Oppenheimer 
+
+
+To cite this article: J. Robert Oppenheimer (1948) Physics in the Contemporary World, Bulletin of 
+the Atomic Scientists, 4:3, 65-86, DOI: 10.1080/00963402.1948.11460172 
+
+
+To link to this article: http://dx.doi.org/10.1080/00963402.1948.114601 72 
+
+
+sea Published online: 15 Sep 2015. 
+NJ 
+
+(g Submit your article to this journal @ 
+N 
+
+ey View related articles 
+
+
+we Citing articles: 1 View citing articles @ 
+
+
+Full Terms & Conditions of access and use can be found at 
+http://www.tandfonline.com/action/journallnformation?journalCode=rbul20 
+
+
+Download by: [ECU Libraries] Date: 03 July 2017, At: 12:20 
+
+
+Bulletin of the 
+Atomic Scientists 
+
+
+Volume 4 Number 3 
+
+
+Editors 
+
+
+H. H. Goldsmith 
+Eugene Rabinowitch 
+
+
+Assistant Editors 
+Alice Smith, Ruth Shils 
+
+
+Editorial Assistant 
+Virginia Penn 
+
+
+Editorial Board 
+T. H. Davies, H. H. Goldsmith, Clyde 
+A. Hutchison, Jr., Eugene Rabino- 
+witch, Edward A. Shils, Edward Teller 
+
+
+In This Issue 
+
+
+Physics in the Contemporary 
+World 
+by J. Robert Oppenheimer 
+
+
+Scientists and Social Responsibility....69 
+by P. W. Bridgman 
+
+
+Comments on Dr. Bridgman's Paper....72 
+
+
+Atomic Energy in the News............0.. 7 
+
+
+Report on AEC Patent Problems.......... 77 
+by Byron S, Miller 
+
+
+Letter to the Editors... 
+by Abram V. Martin 
+
+
+What Should the Atomic Scientists 
+
+
+by Richard L. Meier 
+
+
+United Nations Atomic Energy News..83 
+by Peter Kihss 
+
+
+Opinions on Atomic Energy from the 
+Netherlands ..........csscssscccsseccnessnscsseessees 
+
+
+The Atomic Energy Commission 
+Reports to the Congress 
+
+
+Report of the Congressional 
+Joint Committee 
+
+
+Published monthly by the Atomic Scientists 
+of Chicago, 1126 East 59th Street, Chicago 
+37. Phone: Midway 10052. Supported by 
+a grant from the Emergency Committee of 
+Atomic Scientists, Albert Einstein, Chairman; 
+Harold C. Urey, Vice-Chairman. 
+
+
+The opinions expressed in the BULLETIN do 
+not represent the official views of any or- 
+ganization. Subscription price—$2.50 a year. 
+Single copy—25 cents. REPORT change of 
+address direct to the BULLETIN, allowing 
+4 weeks before change is to take effect. 
+Manuscripts should be sent in triplicate 
+to H. H. Goldsmith at the above address. 
+
+
+PHYSICS IN THE 
+CONTEMPORARY WORLD 
+
+
+J. Robert Oppenheimer 
+
+
+Dr. Oppenheimer's authority to speak on the relation of physics to 
+the contemporary scene derives from his years of experience as a 
+teacher of physics, his leadership in the Manhattan Project and 
+his current position as Director of the Institute for Advanced Study 
+at Princeton. The following remarks formed the 1947 Arthur D. 
+Little Memorial Lecture and are reprinted from THE TECHNOL- 
+OGY REVIEW, February, 1948, edited at the Massachusetts In- 
+stitute of Technology. 
+
+
+In the ways of science, its practice, the peculiarities of its discipline and 
+universality, there are pajterns which in the past have somewhat altered, 
+and in the future may greatly alter, all that we think about the world and 
+how we manage to live in it. What I shall be able to say of this will not 
+be rich in exhortation; for this is ground that I know how to tread only 
+very slightly. 
+
+But that I should be speaking of such general and such difficult ques- 
+tions at all reflects in the first instance a good deal of self-consciousness on 
+the part of physicists. This self-consciousness is in part a result of the 
+highly critical traditions which have grown up in physics in the last half 
+century, where we have been forced to become aware of what it is that we 
+are doing. It reflects also the experiences of this century, which have shown 
+in so poignant a way how much the applications of science determine our 
+welfare and that of our fellows, and which have cast in doubt that traditional 
+optimism, that confidence in progress, which have characterized Western 
+Culture since the Renaissance. 
+
+As it did on everything else, the last war had a great and at least a tem- 
+porarily disastrous effect on the prosecution of pure science. The demands 
+of military technology in this country and in Britain, the equally over-riding 
+demands of the Resistance in much of Europe, distracted the physicists 
+from their normal occupations as they distracted most other men. 
+
+We in this country, who take our wars rather spastically, perhaps wit- 
+nessed a more total cessation of true professional activity in the field of 
+physics, even in its training, than any other people. For in all the doings of 
+war we, as a country, have been a little like the young physicist who went 
+to Washington to work for the NDRC in 1940. There he met his first Civil 
+Service questionnaire, and came to the questions on drinking—never, occa- 
+sionally, habitually, to excess. He checked both “occasionally” and “to 
+excess.” So, in the past we have taken war. 
+
+All over the world, whether because of the closing of universities, or the 
+distractions of scientists called in one way or another to serve their coun- 
+tries, or because of devastation and terror and attrition, there was a great 
+gap in physical science. It has been an exciting and an inspiring sight to 
+watch the recovery: a recovery testifying to extraordinary vitality and vigor 
+in this human activity. Today, barely two years after the end of hostilities, 
+physics is booming. 
+
+One may have gained the impression that this boom derives primarily from 
+the application of the new techniques developed during the war, such as the 
+atomic reactor and micro-wave equipment; one may have gained the im- 
+pression that in large part the flourishing of physics lies in exploitation 
+of the eagerness of governments to promote it. These are indeed impor- 
+tant factors. But they are only a small part of the story. Without in any 
+way deprecating the great value of wartime technology, one nevertheless 
+sees how much of what is today new knowledge can trace its origin direct- 
+ly, by an orderly yet imaginative extension, to the kind of things that 
+physicists were doing in their laboratories and with their pencils almost a 
+decade ago. 
+
+
+65 
+
+
+Let me try to give a little more sub- 
+stance to the physics that is booming. 
+We are continuing the attempt to dis- 
+cover, to identify and characterize, 
+and surely ultimately to order, our 
+knowledge of what the elementary 
+particles of physics really are. I need 
+hardly say that in the course of this 
+we are learning again how far our 
+notion of elementarity, of what makes 
+a particle elementary, is from the 
+early atomic ideas of the Hindu and 
+Greek atomists, or even from the 
+chemical atomists of a century ago. 
+We are finding out that what we are 
+forced to call elementary particles re- 
+tain neither permanence nor identity, 
+and they are elementary only in the 
+sense that their properties cannot be 
+understood by breaking them down 
+into sub-components. Almost every 
+month has surprises for us in the 
+findings about these particles. We are 
+meeting new ones for which we are 
+not prepared. We are learning how 
+poorly we had identified the properties 
+even of our old friends among them. 
+We are seeing what a challenging job 
+the ordering of this experience is 
+likely to be, and what a strange world 
+we must enter to find that order. 
+
+
+Tools for Understanding 
+Elementary Particles 
+
+
+In penetrating into this world per- 
+haps our sharpest tool in the past 
+has been the observation of the phe- 
+nomena of the cosmic rays in inter- 
+action with matter. But the next years 
+will see an important methodological 
+improvement, when the great program 
+of ultra high energy accelerators be- 
+gins to get under way. This program 
+is itself one of the expensive parts of 
+physics. It has been greatly subsi- 
+dized by the Government, primarily 
+through the Atomic Energy Commis- 
+sion and the Office of Naval Research. 
+It is a superlative example, of which 
+one could find so many, of the repay- 
+ment that technology makes to basic 
+science, in providing means whereby 
+our physical experience can be ex- 
+tended and enriched. 
+
+Another progress is the refinement 
+of our knowledge of the behavior of 
+electrons within atomic systems, a re- 
+finement which on the one hand is 
+based on the micro-wave techniques, 
+to the developments of which the Ra- 
+diation Laboratory of the Massa- 
+chusetis Institute of Technology made 
+unique contributions, and which on the 
+other hand has provided a newly vig- 
+orous criterion for the adequacy of 
+our knowledge of the interactions of 
+
+
+66 
+
+
+radiation and matter. Thus we are 
+beginning to see in this field at least 
+a partial resolution, and I am myself 
+inclined to think rather more than 
+that, of the paradoxes that have 
+plagued the professional physical 
+theorists for two decades. 
+
+A third advance in atomic physics 
+is in the increasing understanding of 
+those forces which give to atomic 
+nuclei their great stability, and to 
+their transmutations their great vio- 
+lence. It is the prevailing view that 
+a true understanding of these forces 
+may well not be separable from the 
+ordering of our experience with re- 
+gard to elementary particles, and 
+that it may also turn on an extension 
+to new fields of recent advances in 
+electro-dynamics. 
+
+However this may be, all of us who 
+are physicists by profession know that 
+we are embarked on another great 
+adventure of exploration and under- 
+standing, and count ourselves happy 
+for that. 
+
+
+The International Picture 
+
+
+In how far is this an account of 
+physics in the United States only? In 
+how far does it apply to other parts of 
+the world, more seriously ravaged and 
+more deeply disturbed by the last war? 
+That question may have a somewhat 
+complex answer, to the varied ele- 
+ments of which one may pay respect- 
+ful attention. 
+
+In much of Europe and in Japan, 
+that part of physics which does not 
+rest on the availability of elaborate 
+and radical new equipment is enjoy- 
+ing a recovery comparable to our own. 
+The traditional close associations of 
+workers in various countries makes 
+it just as difficult now to disentangle 
+the contributions by nationality as it 
+was in the past. But there can be lit- 
+tle doubt that it is very much harder 
+for a physicist in France, for instance, 
+or the Low Countries, and very much 
+more nearly impossible for him in 
+Japan, to build a giant accelerator, 
+than for the workers in this country. 
+
+Yet in those areas of the world 
+where science has not merely been dis- 
+turbed or arrested by war and by ter- 
+ror, but where terror and its official 
+philosophy have, in a deep sense, cor- 
+rupted its very foundations, even the 
+traditional fraternity of scientists has 
+not proved adequate protection against 
+decay. It may not be clear to us in 
+what way and to what extent the spirit 
+of scientific inquiry may come to apply 
+to matters not yet, and perhaps never 
+to be, part of the domain of science; 
+but that it does apply there is one very 
+
+
+brutal indication. Tyranny, when it 
+gets to be absolute, or when it tends 
+so to become, finds it impossible to 
+continue to live with science. 
+
+
+Even in the good ways of contem- 
+porary physics, we are reluctantly 
+made aware of our dependence on 
+things which lie outside our science. 
+The experience of the war, for those 
+who were called upon to serve the sur- 
+vival of their civilization through the 
+Resistance, and for those who contrib- 
+uted more remotely, if far more de- 
+cisively, by the development of new 
+instruments and weapons of war, has 
+left us with a legacy of concern. In 
+these troubled times it is not likely 
+that we shall be free of it altogether. 
+Nor perhaps is it right that we should 
+be. 
+
+
+Nowhere is this troubled sense of 
+responsibility more acute, and surely 
+nowhere has it been more prolix, than 
+among those who participated in the 
+development of atomic energy for mil- 
+itary purposes. I should think that 
+most historians would agree that oth- 
+er technical developments, notably ra- 
+dar, played a more decisive part in 
+determining the outcome of this last 
+war. But I doubt whether that par- 
+ticipation would, of itself, have created 
+the deep trouble and moral concern 
+which so many of us who were physi- 
+cists have felt, have voiced, and have 
+tried to get over feeling. It is not 
+hard to understand why this should be 
+so. The physics which played the de- 
+cisive part in the development of the 
+atomic bomb came straight out of our 
+laboratories and our journals. 
+
+Despite the vision and the farseeing 
+wisdom of our wartime heads of state, 
+the physicists felt a peculiarly inti- 
+mate responsibility for suggesting, for 
+supporting, and in the end, in large 
+measure, for achieving, the realiza- 
+tion of atomic weapons. Nor can we 
+forget that these weapons, as they 
+were in fact used, dramatized so mer- 
+cilessly the inhumanity and evil of 
+modern war. In some sort of crude 
+sense which no vulgarity, no humor, 
+no over-statement can quite extin- 
+guish, the physicists have known sin; 
+and this is a knowledge which they 
+cannot lose. 
+
+
+The Interaction of 
+Science and Technology 
+
+
+Probably in giving expression to 
+such feelings of concern most of us 
+have belabored the influence of science 
+on society through the medium of tech- 
+nology. This is natural, since the de- 
+velopments of the war years were al- 
+
+
+most exclusively technological, and 
+since the participation of academic 
+scientists forced them to be deeply 
+aware of an activity of whose exist- 
+ence they had always known but which 
+had been often remote from them. 
+
+
+When I was a student at Géttingen 
+twenty years ago, there was a story 
+current about the great mathematician 
+Hilbert, who perhaps would have 
+liked, had the world let him, to have 
+thought of his science as something 
+independent of worldly vicissitudes. 
+Hilbert had a colleague, an equally 
+eminent mathematician, Felix Klein, 
+who was certainly aware, if not of the 
+dependence of science generally on 
+society, at least of mathematics on the 
+physical sciences which nourish it and 
+give it application. Klein used to take 
+some of his students to meet once a 
+year with the engineers of the Tech- 
+nical High School in Hanover. One 
+year he was ill, and asked Hilbert to 
+go in his stead, and urged him, in the 
+little talk that he would give, to try 
+to refute the then prevalent notion 
+that there was a basic hostility be- 
+tween science and technology. Hilbert 
+promised to do so; but when the time 
+came a magnificent absentmindedness 
+led him instead to speak his own 
+mind: “One hears a good deal nowa- 
+days of the hostility between science 
+and technology. I don’t think that is 
+true, gentlemen. I am quite sure that 
+it isn’t true, gentlemen. It almost cer- 
+tainly isn’t true. It really can’t be 
+true. Sie haben ja gar nichts mit 
+einander zu tun. They have nothing 
+whatever to do with one another.” 
+Today the wars and the troubled times 
+deny us the luxury of such absent- 
+mindedness. 
+
+
+The great testimony of history 
+shows how often in fact the develop- 
+ment of science has emerged in re- 
+sponse to technological, and even eco- 
+nomic needs, and how in the economy 
+of social effort, science, even of the 
+most abstract and recondite kind, pays 
+for itself again and again in provid- 
+ing the basis for radically new tech- 
+nological developments. In fact, most 
+people, when they think of science as 
+a good thing, when they think of it as 
+worthy of encouragement, when they 
+are willing to see their governments 
+spend substance upon it, when they 
+greatly do honor to men who in science 
+have attained some eminence, have in 
+mind that the conditions of their life 
+have been altered just by such tech- 
+nology, of which they may be reluc- 
+tant to be deprived. 
+
+
+The debt of science to technology is 
+just as great. Even the most abstract 
+
+
+researches owe their very existence to 
+things that have taken place quite 
+outside of science, and with the pri- 
+mary purpose of altering and improv- 
+ing the conditions of man’s life. As 
+long as there is a healthy physics, this 
+mutual fructification will surely con- 
+tinue. Out of its work there will come 
+in the future; as so often in the past, 
+and with an apparently chaotic un- 
+predictability, things which will im- 
+prove man’s health, ease his labor, and 
+divert and edify him. There will come 
+things which, properly handled, will 
+shorten his working day and take 
+away the most burdensome part of 
+his effort, which will enable him to 
+communicate, to travel, and to have 
+a wider choice both in the general 
+question of how he is to spend his life, 
+and in the specific question of how he 
+is to spend an hour of his leisure. 
+There is no need to belabor this point, 
+nor its obverse—that out of science 
+there will come, as there has in this 
+last war, a host of instruments of de- 
+struction which will facilitate that 
+labor, even as they have facilitated 
+all others. 
+
+
+The Scientist Is 
+Responsible to Science 
+
+
+But no scientist, no matter how 
+aware he may be of these fruits of 
+his science, cultivates his work, or 
+refrains from it, because of arguments 
+such as these. No scientist can hope 
+to evaluate what his studies, his re- 
+searches, his experiments, may in the 
+end produce for his fellowmen, except 
+in one respect—if they are sound, 
+they will produce knowledge. And 
+this deep complementarity between 
+what may be conceived to be the social 
+justification of science, and what is 
+for the individual his compelling mo- 
+tive in its pursuit, makes us look for 
+other answers to the question of the 
+relation of science to society. 
+
+One of these is that the scientist 
+should assume responsibility for the 
+fruits of his work. I would not argue 
+against this, but it must be clear to 
+all of us how very modest such as- 
+sumption of responsibility can be, how 
+very ineffective it has been in the past, 
+how necessarily ineffective it will 
+surely be in the future. In fact, it ap- 
+pears little more than an exhortation 
+to the man of learning to be properly 
+uncomfortable; and, in the worst in- 
+stances, is used as a sort of screen to 
+justify the most casual, unscholarly 
+and, in the last analysis, corrupt in- 
+trusion of scientists into other realms 
+of which they have neither experience 
+
+
+nor knowledge, nor the patience to 
+obtain it. 
+
+The true responsibility of a scien- 
+tist, as we all know, is to the integrity 
+and vigor of his science. And because 
+most scientists, like all men of learn- 
+ing, tend in part also to be teachers, 
+they have a responsibility for the 
+communication of the truths which 
+they have found. This is at least a 
+collective if not an individual responsi- 
+bility. That we should see in this any 
+insurance that the fruits of science 
+will be used for man’s benefit, or de- 
+nied to man when they make for his 
+distress or destruction, would be a 
+tragic naiveté. 
+
+
+Can Scientists’ Ways 
+Provide a Pattern? 
+
+
+There is another side of the coin. 
+This is the question of whether there 
+are elements in the way of life of the 
+scientist which need not be restricted 
+to the professional, and which have 
+hope in them for bringing dignity and 
+courage and serenity to other men. 
+Science is not all of the life of reason; 
+it is a part of it. As such, what can 
+it mean to man? 
+
+Perhaps it would be well to empha- 
+size that I am talking neither of wis- 
+dom, nor of an élite of scientists, but 
+precisely of the kind of work and 
+thought, of action and discipline, that 
+makes up the everyday professional 
+life of the scientist. It is not of any 
+general insight into human affairs 
+that I am talking. It is not the kind 
+of thing we recognize in our greatest 
+statesmen, after long service devoted 
+to practical affairs and to the public 
+interest. It is something very much 
+more homely and robust than that. It 
+has in it the kind of beauty that is 
+inseparable from craftsmanship and 
+form, but that has in it also the vigor 
+which we rightly associate with the 
+simple ordered lives of artisans or of 
+farmers, that we rightly associate 
+with lives to which limitations of 
+scope, and traditional ways, have giv- 
+en robustness and structure. 
+
+Even less would it be right to in- 
+terpret the question of what there is 
+in the ways of science which may be 
+of general value to mankind in terms 
+of the creation of an élite. The study 
+of physics, and I think my colleagues 
+in the other sciences will let me speak 
+for them too, does not make philoso- 
+pher-kings. It has not, until now, 
+made kings. It almost never makes 
+fit philosophers—so rarely that they 
+must be counted as exceptions. If the 
+professional pursuit of science makes 
+
+
+67 
+
+
+good scientists, if it makes men with 
+a certain serenity in their lives, who 
+yield perhaps a little more slowly 
+than others to the natural corruptions 
+of their time, it is doing a great deal, 
+and all that we may rightly ask of it. 
+For if Plato believed that in the study 
+of geometry, a man might prepare 
+himself for wisdom and responsibility 
+in the world of men, it was precisely 
+because he thought so hopefully that 
+the understanding of men could be 
+patterned after the understanding of 
+geometry. If we believe that today, it 
+js in a much more recondite sense, 
+and a much more cautious one. 
+
+
+What then is the point? For one 
+thing it is to describe some of the 
+features of the professional life of the 
+scientist, which make it one of the 
+great phenomena of the contemporary 
+world, Here again, I would like to 
+speak of physics; but I have enough 
+friends in the other sciences to know 
+how close their experience is to ours. 
+And I know too that despite profound 
+differences in method and technique, 
+differences which surely are an appro- 
+priate reflection of the difference in 
+the areas of the world under study, 
+what I would say of physics will seem 
+familiar to workers in other disparate 
+fields, such as mathematics, or biology. 
+
+
+The Nature of the 
+Scientific Discipline 
+
+
+What are some of these points? 
+There is, in the first instance, a total 
+lack of authoritarianism, which is hard 
+to comprehend or to admit unless one 
+has lived with it. This is accomplished 
+by one of the most exacting of intel- 
+lectual disciplines. In physics the 
+worker learns the possibility of error 
+very early. He learns that there are 
+ways to correct his mistakes; he 
+learns the futility of trying to con- 
+ceal them. For it is not a field in 
+which error awaits death and subse- 
+quent generations for verdict—the 
+next issue of the journals will take 
+eare of it. The refinement of tech- 
+niques for the prompt discovery of 
+error serves as well as any other as 
+a hallmark of what we mean by 
+science. 
+
+In any case, it is an area of collec- 
+tive effort, in which there is a clear 
+and well defined community whose 
+canons of taste and order simplify 
+the life of the practitioner. It is a field 
+in which the technique of experiment 
+has given an almost perfect harmony 
+to the balance between thought and 
+action. In it we learn so frequently 
+
+
+that we could almost become accus- 
+tomed to it, how vast is the novelty of 
+the world, and how much even the 
+physical world transcends in delicacy 
+and in balance the limits of man’s 
+prior imaginings. We learn that views 
+may be useful and inspiriting although 
+they are not complete. We come to 
+have a great caution in all assertions 
+of totality, of finality or absoluteness. 
+
+
+In this field quite ordinary men, us- 
+ing what are in the last analysis only 
+the tools which are generally available 
+in our society, manage to unfold fot 
+themselves and all others who wish 
+to learn, the rich story of one aspect 
+of the physical world, and of man’s 
+experience. We learn to throw away 
+those instruments of action and those 
+modes of description which are not 
+appropriate to the reality we are try- 
+ing to discern, and in this most pain- 
+ful discipline, find ourselves modest 
+before the world. 
+
+
+Can This Discipline Be 
+Applied to Other Fields? 
+
+
+The question which is so much in 
+our mind is whether a comparable ex- 
+perience, a comparable discipline, a 
+comparable community of interest, 
+can in any way be available to man- 
+kind at large. I suppose that all the 
+professional scientists together num- 
+ber some one one-hundredth of a per 
+cent of the men of the world—even 
+this will define rather generously 
+what we mean by scientists. Scientists 
+as professionals are, I suppose, rath- 
+er sure to constitute a small part of 
+our people. 
+
+
+Clearly, if we raise at all this ques- 
+tion which I have raised, it must be 
+in the hope that there are other areas 
+of human experience that may be dis- 
+covered or invented or cultivated, and 
+to which the qualities which distin- 
+guish scientific life may be congenial 
+and appropriate. It is natural that 
+serious scientists, knowing of their 
+own experience something of the qual- 
+ity of their profession, should just 
+today be concerned about its possible 
+extension. For it is a time when the 
+destruction and the evil of the last 
+quarter century make men everywhere 
+eager to seek all that can contribute 
+to their intellectual life, some of the 
+order and freedom and purpose which 
+we conceive the great days of the past 
+to have had. Of all intellectual activity, 
+science alone has flourished in the last 
+centuries, science alone has turned 
+out to have the kind of universality 
+among men which the times require. 
+
+
+I shall be disputed in this; but it is 
+near to truth. 
+
+If one looks at past history, one 
+may derive some encouragement for 
+the hope that science, as one of the 
+forms of reason, will nourish all of its 
+forms. One may note how integral the 
+love and cultivation of science was 
+with the whole awakening of the hu- 
+man spirit which characterized the 
+Renaissance. Or one may look at the 
+late Seventeenth and Eighteenth Cen- 
+turies in France and England, and 
+see what pleasure and what stimula- 
+tion the men of that time derived 
+from the growth of physics, astronomy 
+and mathematics. 
+
+What perhaps characterizes these 
+periods of the past, which we must 
+be careful not to make more heroic 
+because of their remoteness, was that 
+there were many men who were able 
+to combine in their own lives the activ- 
+ities of a scientist with activities of 
+art and learning and politics, and 
+were able to carry over from the one 
+into the others this combination of 
+courage and modesty which is the 
+lesson that science always tries to 
+teach to anyone who practices it. 
+
+
+Can the Spirit 
+of Science Be Taught? 
+
+
+And here we come to a point we 
+touched earlier. It is very different to 
+hear the results of science, as they 
+may be descriptively or even analyti- 
+cally taught in a class or in a book 
+or in the popular talk of the time; it 
+is very different to hear these and to 
+participate even in a modest way in 
+the actual attainment of new knowl- 
+edge. For it is just characteristic of 
+all work in scientific fields that there 
+is no authority to whom to refer, no 
+one to give canon, no one to blame if 
+the picture does not make sense. 
+
+Clearly these circumstances pose a 
+question of great difficulty in the field 
+of education. For if there is any truth 
+in the views that I have outlined, 
+there is all the difference in the world 
+between hearing about science or its 
+results, and sharing in the experience 
+of the scientist himself and of that of 
+the scientific community. We all know 
+that an awareness of this, and an 
+awareness of the value of science as 
+method, rather than science as doc- 
+trine, underlies the practices of teach- 
+ing te scientist and layman alike. For 
+surely the whole notion of incerporat- 
+ing a laboratory in a high school or 
+college is a deference to the belief 
+
+
+(Continued on Page 85) 
+
+
+January: -29. Working commit- 
+tee heard Mr. Miles observe, on Soviet 
+Point 8, that “the inspectorial appara- 
+tus is about all the agency will have.” 
+M. de Rose said the agency must 
+have other functions. Detailed dis- 
+cussion was left to later linked points. 
+
+Point 4 came up, providing for a 
+special control convention “to be con- 
+cluded in accordance with the con- 
+vention on the prohibition of atomic 
+weapons.” With it was a British ques- 
+tion asking if the Soviet would agree 
+that the outlawry pact “shall only 
+come into force following satisfac- 
+tory implementation of the second 
+convention.” The Soviet had answered 
+that the control convention “must be 
+concluded” after conclusion of the pro- 
+hibition convention. 
+
+M. de Rose observed the 1907 Hague 
+convention had prohibited use of poi- 
+son gas, but such gas was used in 
+World War I and manufactured be- 
+tween the two world wars by “all 
+powers.” He said all points should 
+be dealt with simultaneously by a 
+convention. 
+
+Mr. Miles recalled the 1925 Geneva 
+protocol, signed by some thirty coun- 
+tries, prohibited both gas and bac- 
+teriological warfare. “Nevertheless, 
+there is not a large state in the world 
+that has not conducted active research 
+into the use of these forms of war- 
+fare, and the world well knows that 
+‘it cannot depend on this convention.” 
+Prohibition without prevention is use- 
+less, he said. 
+
+Dr. John D. Babbitt, of Canada, a 
+National Research Council physicist, 
+felt there was room for clarifying the 
+relation between the two Soviet con- 
+ventions. He asked for a “yes or no” 
+answer to the British suggestion that 
+the prohibition convention should 
+come into force following implemen- 
+tation of the control pact. 
+
+
+Mr. Gromyko 
+Refuses Overtures 
+
+
+Mr. Gromyko slammed the door: 
+“We consider that the convention on 
+the prohibition of atomic weapons 
+must be not only signed but also put 
+into force before the other convention 
+is concluded.” Otherwise, he said, the 
+outlawry pact “would not make sense” 
+and would be “a piece of paper.” 
+
+Chairman Farris el Khouri, of Sy- 
+ria, asked if this meant destruction 
+of existing bombs before the control 
+pact, too. Mr. Gromyko said it did— 
+within the period specified by the 
+
+
+Soviet’s June 19, 1946 draft con- 
+vention proposal, namely, within nine- 
+ty days after ratification. 
+
+
+Dr. Wei asked if, in case the first 
+convention were carried out and then 
+majority and minority proposals on 
+controls developed: “Will the minority 
+go along with the majority?” He 
+asked if there were any assurance 
+of a second convention. He feared 
+lest the first step become “the last 
+step,” and the prohibition pact “meet 
+the same fate—failure—as many pre- 
+vious conventions.” 
+
+
+Mr. Gromyko said it had not been 
+the Soviet fault that the commission 
+had not yet found a basis for agree- 
+ment. The Soviet had pointed out 
+decreases in divergences on “certain 
+minor points,” and “then some mem- 
+bers of the Atomic Energy Commis- 
+sion did everything possible to widen 
+this divergence of views on certain 
+points, and we could not help com- 
+ing to the conclusion that probably 
+not all of us are in agreement at the 
+present time at least on carrying 
+out in practice the decision of the 
+United Nations on the establishment 
+of effective international control of 
+atomic energy.” 
+
+
+The Soviet delegate added: “Such 
+proposals as were submitted by the 
+United States representative—I have 
+in mind the so-called Baruch plan, 
+which, as far as I know, was not 
+substantially changed later by the 
+United States—are absolutely un- 
+realistic. 
+
+
+“They do not follow from the in- 
+terests and demands of the establish- 
+ment of effective international con- 
+trol. They are subordinated to the in- 
+terests mainly of one country .. . 
+We have to carry out our negotiations 
+on the basis of realistic and practical 
+proposals, and put aside those pro- 
+posals which prove to be unrealistic 
+and which cannot constitute a basis 
+for agreement.” 
+
+
+Chairman Khouri said the commis- 
+sion should not waste further time in 
+“academic discussion,” but should pre- 
+pare both prohibition and control con- 
+ventions simultaneously, as quickly as 
+possible. “If they were then presented 
+together,” he said, “there would, I 
+feel, no longer be any pretext for 
+opposition or contention.” He ex- 
+pressed the belief the Soviet would 
+not object to the control convention 
+if it were presented and put into 
+force at the same time as the pro- 
+hibition convention. 
+
+
+Physics in the 
+Contemporary World 
+
+
+(Continued from Page 68) 
+
+
+that not only what the scientist finds 
+but how he finds it is worth learning 
+and teaching and worth living 
+through. 
+
+
+Yet there is something fake about 
+all this. No one who has had to do 
+with elementary instruction can have 
+escaped a sense of artificiality in the 
+way in which students are led, by the 
+calculations of their instructors, to 
+follow paths which will tell them 
+something about the physical world. 
+Precisely that groping for what is the 
+appropriate experiment, what are the 
+appropriate terms in which to view 
+subtle or complex phenomena, which 
+are the substance of scientific effort, 
+almost inevitably are distilled out of 
+it by the natural patterns of peda- 
+gogy. The teaching of science to lay- 
+men is not wholly a loss; and here 
+perhaps physics is a typically bad ex- 
+ample. But surely they are rare men 
+who, entering upon a life in whieh 
+science plays no direct part, rem@h- 
+ber from their early courses in physics 
+what science is like or what it is good 
+for. The teaching of science is at its 
+best when it is most like an appren- 
+ticeship. 
+
+
+President Conant, in his sensitive 
+and thoughtful book, On Understand- 
+ing Science, has spoken at length of 
+these matters. He is aware of how 
+false it is to separate scientific theory 
+from the groping, fumbling, tentative 
+efforts which lead to it. He is aware 
+that it is science as method and not 
+as doctrine which we should try to 
+teach. His basic suggestion is that we 
+attempt to find, in the history of our 
+sciences, stories which can be re- 
+created in the instruction and experi- 
+ment of the student, and which thus 
+can enable him to see at first hand 
+how error may give way to less error, 
+confusion to less confusion, and be- 
+wilderment to insight. 
+
+
+The problem that President Conant 
+has here presented is indeed a deep 
+one. Yet he would be quite willing, I 
+think, that I express skepticism that 
+one can recreate the experience of 
+science as an artifact. And he would 
+no doubt share my concern that sci- 
+ence so taught would be corrupt with 
+antiquarianism. It was not antiquar- 
+ianism, but a driving curiosity, that 
+inspired in the men of the Renais- 
+
+
+sance their deep interest in classical 
+culture. 
+
+For it is in fact difficult, almost to 
+the point of impossibility, to recreate 
+the climate of opinion in which sub- 
+stantial errors about the physical 
+world, now no longer entertained, 
+were not only held but were held un- 
+questioned as part of the obvious 
+mode of thinking about reality. It is 
+most difficult to do because in all hu- 
+man thought only the tiniest fraction 
+of our experience is in focus, and be- 
+cause to this focus a whole vast un- 
+analyzed account of experience must 
+be brought to bear. Thus I am in- 
+clined to think that with exceptions 
+that I hope will be many, but fear 
+will be few, the attempt to give the 
+history of science as a living history 
+will be far more difficult than either 
+to tell of the knowledge that we hold 
+today, or to write externally of that 
+history as it may appear in the 
+learned books. It could easily lead to 
+a sort of exercise of mental inventive- 
+ness on the part of teachers and stu- 
+dents alike which is the very opposite 
+of the candor, the “no-holds-barred” 
+rules of Professor Bridgman, that 
+characterize scientific understanding 
+atdts best. 
+
+
+If I am troubled by President Co- 
+nant’s suggestions, this is not at all 
+because I doubt that the suggestions 
+he makes are desirable. I do have a 
+deep doubt as to the extent to which 
+they may be practical. There is some- 
+thing irreversible about acquiring 
+knowledge; and the simulation of the 
+search for it differs in a most pro- 
+‘found way from the reality. In fact, 
+it would seem that only those who had 
+some first-hand experience in the ac- 
+quisition of new knowledge in some 
+disciplined field would be able truly 
+to appreciate how great the science of 
+the past has been, and would be able 
+to measure those giant accomplish- 
+ments against their own efforts to 
+penetrate a few millimeters further 
+into the darkness that surrounds 
+them. 
+
+
+Thus it would seem at least doubt- 
+ful that the spiritual fruits of science 
+could be made generally available, 
+either by the communication of its 
+results, or by the study of its history, 
+or by the necessarily somewhat arti- 
+ficial reenactment of its procedures. 
+Rather it would seem that there are 
+general features of the scientists’ 
+work, the direct experience of which in 
+any context could contribute more to 
+this end. All of us, I suppose, would 
+list such features and find it hard to 
+define the words which we found it 
+
+
+86 
+
+
+necessary to use in our lists. But on 
+a few, a common experience may en- 
+able us to talk in concert. 
+
+In the first instance the work of sci- 
+ence is cooperative; a scientist takes 
+his colleagues as judges, competitors 
+and collaborators. The work of science 
+is disciplined, in that its essential in- 
+ventiveness is most of all dedicated to 
+means for promptly revealing error. 
+One may think of the rigors of mathe- 
+matics, and the virtuosity of physical 
+experiment as two examples. Science 
+is ‘disciplined in its rejection of ques- 
+tions that cannot be answered, and in 
+its grinding pursuit of methods for 
+answering all that can. Science is al- 
+ways limited, and is in a profound 
+sense unmetaphysical, in that it nec- 
+essarily bases itself upon the broad 
+ground of common human experience, 
+tries to refine it within narrow areas 
+where progress seems possible and ex- 
+ploration fruitful. Science is novelty, 
+and change. When it closes it dies... 
+These qualities constitute a way of 
+life which of course does not make 
+wise men from foolish, or good men 
+from wicked, but which has its beauty 
+and which seems singularly suited to 
+man’s estate on earth. 
+
+If there is to be any advocacy at all 
+in this talk it would be this—that we 
+be very sensitive to all new possibil- 
+ities of extending the techniques and 
+the patterns of science into other areas 
+of human experience. 
+
+
+The Scientific Approach 
+and Social Problems 
+
+
+We become fully aware of the need 
+for caution if we look for a moment 
+at what are called the social problems 
+of the day, and try to think what one 
+could mean by approaching them in 
+the scientific spirit, of trying to give 
+substance, for example, to the feeling 
+that a society that could develop 
+atomic energy could also develop the 
+means of controlling it. Surely the 
+establishment of a secure peace is 
+very much in all our minds. It is 
+right that we try to bring reason to 
+bear on an understanding of this prob- 
+lem; but for that there are available 
+to us no equivalents of the experi- 
+mental techniques of science. Errors 
+of conception can remain undetected 
+and even undefined. No means of ap- 
+propriately narrowing the focus of 
+thinking is known to us. Nor have we 
+found good avenues for extending or 
+deepening our experience that bears 
+upon this problem. In short, almost 
+all the preconditions of scientific ac- 
+
+
+tivity are missing, and in this case, 
+at least, one may have a melancholy 
+certainty that man’s inventiveness will 
+not rapidly provide them. All that 
+we have from science in facing such 
+great questions is a memory of our 
+professional life, which makes us 
+somewhat sceptical of other people’s 
+assertions, somewhat critical of en- 
+thusiasms so difficult to define and to 
+control. 
+
+
+Yet the past century has seen many 
+valid and inspiring examples for the 
+extension of science to new domains, 
+One feature which I cannot fail to re- 
+gard as sound—particularly in the 
+fields of biology and psychology—is 
+that they provide an appropriate 
+means of correlating understanding 
+and action, and involve new experi- 
+mental procedures in terms of which 
+a new conceptual apparatus can be 
+defined; above all, they give us means 
+of detecting error. In fact, one of the 
+features which must arouse our sus- 
+picion of the dogmas some of Freud’s 
+followers have built up on the initial 
+brilliant works of Freud, is the ten- 
+dency towards a self-sealing system, a 
+system, that is, which has a way of 
+almost automatically discounting evi- 
+dence which might bear adversely on 
+the doctrine. The whole point of sci- 
+ence is to do just the opposite: to in- 
+vite the detection of error and to wel- 
+come it: Some of you may think that 
+in another field a comparable system 
+has been developed by the recent fol- 
+lowers of Marx. 
+
+
+Thus we may hope for an ever wid- 
+ening and more diverse field of appli- 
+cation of science. But we must be 
+aware how slowly these things develop, 
+and how little their development is 
+responsive to even the most desperate 
+of man’s needs. For me it is an open 
+question, and yet not a trivial one, 
+whether in a time necessarily limited 
+by the threats of war and of chaos, 
+these expanding areas in which the 
+scientific spirit can flourish may yet 
+contribute in a decisive way to man’s 
+rational life. 
+
+I have had to leave this essential 
+question unanswered: I am not at all 
+proud of that. In lieu of apology per- 
+haps I may tell a story of another lec- 
+turer, speaking at Harvard two dec- 
+ades ago. Bertrand Russell had given 
+a talk on the then new quantum me- 
+chanics, of whose wonders he was 
+most appreciative. He spoke hard and 
+earnestly. And when he was done, 
+Professor Whitehead, who presided, 
+thanked him for his efforts, and not 
+least for “leaving the vast darkness 
+of the subject unobscured.” 
+
+

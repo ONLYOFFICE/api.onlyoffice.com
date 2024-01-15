@@ -1,0 +1,1022 @@
+JANUARY, 1928 PHYSICAL REVIEW VOLUME 13 
+
+
+THREE NOTES ON THE QUANTUM THEORY OF 
+APERIODIC EFFECTS 
+
+
+By J. R. OPPENHEIMER* 
+
+
+ABSTRACT 
+
+
+In Section 1 it is shown that the normalization of the characteristic functions 
+corresponding to a continuous spectrum, which has been introduced by Hellinger 
+and Weyl, satisfies the requirements of the 6-normalization of the Dirac-Jordan 
+transformation theory. It is further shown that this normalization makes the flux 
+to and from infinity of systems for which an integral of motion 8 lies in the little 
+range AG’ equal to 
+
+(0F/hdB') AB’. 
+
+_ In Section 2 the condition for the validity of classical mechanics in the form grad 
+\< <1, where d is the instantaneous wave length A= (h/27)[(2M(E— U)]-”?, is applied 
+to establish Rutherford’s formula for the scattering of a-particles. 
+
+In Section 3 a method is developed for computing the transition probabilities 
+between states of the same energy, and which are represented by almost orthogonal 
+eigenfunctions. The theory is applied to the ionization of hydrogen atoms in a 
+constant electric field. The period of ionization in a field of 1 vclt per cm is 10!”° 
+sec. The bearing of such transitions on the problem of metallic conduction is dis- 
+cussed. 
+
+
+HE normalization of continuous spectra has been formulated mathemati- 
+
+cally by Hellinger and Weyl; and it has been shown that this may be 
+applied to a large class of quantum-mechanical problems without in- 
+consistency.! The problem can, however, be treated a good deal more simply 
+and generally. It may be formulated as follows: The 6-normalization 
+required by the Dirac-Jordan transformation theory? 
+
+
+[ te’/ 8°} (6"/ ol!” | = 8(a’ — a”) | | (1a) 
+
+
+i) {6'/ a! } da’ {a"/ B'"} =3(’—B" (1b) 
+
+
+means 
+1 if a’ lies in Aa” 
+: (2a) 
+
+
+0 otherwise 
+
+
+{ da!’ { { a’ /B’ | da’ | B’/a'"} en 
+Aa’! B 
+1 if B’ lies in Ap”’ 
+
+
+J ie | i} { 8’ /al} da’ { a! /p!"} = (2b) 
+
+
+0 otherwise 
+
+
+* National Research Fellow. | 
+
+1See J. R. Oppenheimer, Zeits. f. Physik 41, 268 (1927); the method of this paper is an 
+extension of that outlined in the footnote on page 270. The necessary references are given 
+in this paper. | 
+
+2 A is the range of characteristic values of a, etc. { a’/g'} is the transformation function 
+from & to @, with arguments a’ and 6’. Cf. P. A. M. Dirac. Proc. Roy Soc. A113, 621 (1927) 
+who uses (a@’/8’). | 
+
+
+66 
+
+
+QUANTUM THEORY OF APERIODIC EFFECTS 67 
+
+
+Now the integrals in (1) and the inner integrals in (2) do not converge, 
+so that the normalization in its present form is meaningless. We obtain 
+Weyl’s normalization if we interchange the order of integration in (2a), (2b); 
+and the transformation functions so normalized have all the required 
+properties. In particular the probabilities computed from them are invariant 
+under a point-transformation of the form 6,’ =f(6’); a1’ =g(a’),ie, changes 
+of scale.? _ 
+
+The physical interpretation of (1) is analogous to that of the normaliza- 
+tion of point spectra: the probability that the system has simultaneously 
+the values 6’, B”’ is zero if 6’ 8"; the total probability that it has a B near 
+6B’ is unity. But in aperiodic phenomena, like the photoelectric effect, or a . 
+collision problem, what one observes is not the total number of particles 
+somewhere in the infinite configuration space which satisfy a given con- 
+dition, but their flux to or from infinity: the number of particles entering 
+or leaving the system from “infinity” per unit time. That, when a or B, 
+say 6, is a constant of integration,’ such an interpretation of (1) must be 
+possible, is suggested by the following argument: Consider a system initially » 
+in a discrete state, and subject to a perturbation which dissociates it. If 
+one uses the characteristic functions normalized by (2) one can find the 
+probability of a system leaving the discrete state per unit time for a given 
+range Af’; this must also be equal to the number going to infinity per unit 
+time in the same range, so that the normalization (2) may be regarded as 
+determining the flux to infinity for the state 8’. For a special kind of charac- 
+teristic function this was verified in the previous paper, but it can, of course, 
+be established quite generally. In this paper we shall show (a) that Weyl’s 
+form of (2) enables one to obtain the continuous matrices one needs, e.g., 
+for the perturbation theory; and (b) that it makes the flux to and the flux 
+from infinity in a range AP’ equal to (1/h)(0F/06’)AB’, in accordance with 
+the requirements of quantum statistics. The method provides an analytical 
+rule for the normalization which is considerably simpler than Weyl’s. - 
+
+The Weyl-Hellinger form for (2b) is 
+
+
+N= f AiO (6) da’ A: t (8’") = A268" | (2b") 
+A 
+where 
+
+
+A,Ot (6') = f dp’ | a’ /p'} 
+A,B’ 
+
+
+A,@(8”) = J dp" 1B" /a’} 
+. A,B’? 
+
+
+and where ,A2(’ is the common part of Ai$’ and A.6’’. From this follows 
+(a) that N=0 if AiO’ and A,6” do not overlap, and (b) that 
+
+
+§ The proof that the normalized transformation functions have this property is given 
+by P. Jordan, Zeits. f. Physik 41. 797 (1927). 
+4 The normalization (2), (3) is, of course, applicable even when this is not the case. 
+
+
+68 J. R. OPPENHEIMER 
+
+
+N/Ag’ =1 (2b””) 
+
+
+for A,B’ =A.p’’ =A’. , 
+This last form (2b”): 
+
+
+{ { 4’ /8’} da’ A@t (6")=1 (when 6’ lies in AQ’) (3) 
+A 
+
+
+is just the condition that the matrix components of a function F(a’), which 
+are defined by 
+
+
+F(a’){al/s'}= | Mere" )a01(6") (3a) 
+may be given by 
+F(ea")= J {a'/8"}da'R(a’){8"/a} (35) 
+Pee sede | 
+[ters at aatm(ary {aly 0} = f (er"/ a’ \aa’ f r(6'a") 20108") 
+
+
+=F (68) by (3). 
+
+
+On the other hand we may derive this result, and thus (3), by a limiting 
+process. If we take the domain A of w bounded (—aSa’<-+a), and make 
+{a/B’} = { —a/B’}, the characteristic values of 6 become discrete: 
+
+
+(3c) 
+
+
+F(a’) {a’/ p’} = LF (8’B")o(B"") {B’"/ a } | (3d) 
+where | | | | 
+(6') = J {a’/ B'}da! {p'/ a} (3e) 
+whence 
+
+
+-+a +a B 
+| {p'"'/c! | da’ F(a’) { @’/p’} -{ |B’ /o! } da’ 288) 0(8") {8 / a} (3f) 
+
+
+Now the F(@’@’’) defined by (3d) is always given by (3b). But if we write 
+A@(@’) =a(0’) { a’ /B'} and make a— we get from (3d), (3e) and (3f) just 
+(3) and (3a) while (3b) remains true. 
+
+We may apply (3)-(3b) to find the transition probabilities induced in 
+a system with continuous spectrum by an arbitrary perturbation. Let the 
+system have initially the energy Ey)=hv, and the wave function {| Eo/a’}, 
+and let the perturbation | | 
+
+
++o 
+V(a't) = f Vola") e2*intdy (40%) 
+
+
+— 
+
+
+QUANTUM THEORY OF APERIODIC EFFECTS 69 
+
+
+set in at time J. The perturbed wave function after a time T is then, to 
+a first approximation 
+
+
+4+ eo T 
+| Eo / ax! } e2* 0! — (Qri/ h) J dp : dp’ | diV,( E08") {B’/ a! be?*e-)t , (48) 
+—0 B T's . 
+with y=vr(8’)—. 
+
+
+From this we find, in the usual manner, for the probability that the system 
+is in the range Af’ at the time T 
+
+
+(4n?/h?) J dal! 
+
+
+-{.00 | T 2 
+: dy { dp'V ( Eos") {6'/ a’} dp etrtomn (4) 
+00 Ag’ 
+
+
+T 9 
+
+
+By (3) this becomes 
+
+
++% r 2 
+(4n2/h2) | dp’ | { dvV (EoB’) | dte2n*e-t (4a) 
+AB’ —o 
+
+
+Tq 
+
+
+which is invariant under transformations of the form 6,’ =f(6’), since, by(3b) 
+the [V,(4,6’) |? are contravanant to B’. If we now make V,=0 except inside 
+the range Av(6’) and evaluate (4a) in the usual manner we find that outside 
+Ap’ the number of systems does not grow, and that the total number within 
+the range is fora large T—Ty ~ 
+
+
+(40?/h?) | V,( E08’) 
+
+
+“AB’ Av(B’)(T— To). (4b) 
+This makes the rate at which systems enter the range | 
+(40? /h®) | V( E06’) |’A6’Av(8’). | (40) 
+
+
+Now we can, if we make T—T very large, evaluate (4) by carrying out. 
+the integration with respect to vy first. Using Fourier’s theorem we find 
+instead of (4b) | 
+
+
+An?/h? | V,( Eo") |G" (4d) 
+
+
+for infinite J and 7. Thus, in the steady state when there are (4d) systems 
+in the range Af’, the number entering the range per unit time is (4c). 
+
+We may expect, therefore, that the normalization (3) corresponds to 
+making the number of particles leaving the system to infinity per unit time 
+equal to Av for the range. We shall proceed to show this. | | 
+
+Let us limit ourselves at first to a single degree of freedom and let us 
+suppose that the range of a is not quite infinite, so that some function of 
+8’, say J(8’)/h, takes only integral values. We can then write in place of (3) 
+
+
+J, {a’/B’}da’ | dp’{8”/a’} =1 | (Sa) 
+
+
+Ag’ 
+
+
+6 Cf. E. Schroedinger, Ann. der Physik 81, 117 (1926) Eq. 16. V(#)8’) is the matrix com- 
+ponent of V corresponding to the transition between the states E= E, and B=£’. 
+
+
+70 J. R. OPPENHEIMER | 
+
+
+where @' lies in AB’ and where A’ is a P’ cell. The integral may be regarded 
+as an integral taken over the cell, or as one to which only the integral values 
+of J/h contribute. We may write (5a) 
+
+
+= (1/h)(0J/08’) | (5d) 
+
+
+where 
+b= (L/h) fda’ J a’/p't a6") {8"/a} 
+
+
+is the total probability of finding the system in a §’ cell. Setting B’=J/h 
+makes the probability uniform in phase space, but the range of integration 
+AB’ in (5a) does not vanish in the limit, and the limiting process is thus 
+ambiguous. When we have {8’/a’}~Ce*’, however, this form of (5b) 
+gives us C=1; and in this case Weyl’s normalization means that the 1 mean 
+density per 6’ is assymptotically unity. 
+
+Now if we have 0//06’— ~~, then (5a) goes into (3) when we make 4>~; 
+so that if we can interpret (5b) we shall know what (3) means. A simple 
+way of doing this we get by setting 
+
+
+aJ/p' = h(dE/aJ)— 
+and using 
+b=a(J)=6(8') =dE/at 
+
+
+which is quantum-mechanically true if w is canonically conjugate to J. 
+Then, 
+
+
+juw= 1 (Sc) 
+for 
+B’=E/h (Sd) 
+
+
+Now raw is the flux across a surface w=const. with 6 value equal to £’; 
+and setting B'=/h in (3) makes aw =1. But we may show that rw is equal 
+to the flux to (or from) infinity introduced above and given in terms of the 
+wave functions® by 
+
+
+Din(B") = D(8") = h/2rmi[{a’/B’} (8/da’) {B'/a"} | 
+
+
+For >| (8’) is a constant: it follows from the fact that the transformation 
+equation for {a’/§’} is self-adjoint that >).,(6’) -—>_,..(6’) =0. Further, if 
+6’ is an integral of motion, ®w is a constant independent of w. Hence if 
+>| = is true at one point it is generally true. But we can make the forces 
+vanish at some point & without altering the motion appreciably; and then 
+we have o=f(&) so that the flux across the w= surface is equal to that 
+across a= & surface. 
+
+
+® This quantity was first introduced by M. Born, Zeits. f. Physik. 40, 167 (1926), E 
+Schroedinger Ann. d. Physik. 81, 109 (1926) and W. Gordon, Zeits. f. Physik. 40, 117 (1926). 
+
+
+QUANTUM THEORY OF APERIODIC EFFECTS | id 
+
+
+Hence setting 8’=E/h makes > 1 and the flux to infinity in a range 
+A’ becomes, in this case 
+
+
+> AB’ =AE/h (6) 
+
+
+Since > AB’ does not depend upon the choice of 6’ this Eq. (6) holds gener- 
+ally, as was to be proved. 
+
+With problems of several degrees of freedom the coordinate a’ maybe 
+only half open (aSa’S instead of © Sa’S~), and in this case {8’/a’} 
+will be assymptotically given by two waves, one inward, and one outward, 
+of equal amplitude. We then have >). =0 but au a ~0 to represent 
+the two waves. One finds, in this case, that one must set >. =p ae. 
+for B’=E/h, so that in this case also both ingoing and outgoing waves have 
+unit intensity per L/h. One can understand this most easily as follows: 
+the transformation from @ to w is no longer one-valued so that, to any point 
+in the (a/) space there correspond two points in the (w/) phase space. The 
+Weyl condition thus gives double the density in the (a/) space that it would 
+for an open coordinate. (This enters analytically in the integral (3) which 
+goes only from a to ©.) 
+
+One further point may perhaps be mentioned. In certain experiments, 
+e.g., the photoelectric effect one may expect the flux inward from infinity 
+to vanish, and only the flux outward to count: an atom emits electrons 
+under the influence of light. In spite of this it is not justified to use for the 
+aperiodic characteristic functions merely an outgoing wave. Analytically 
+one sees this because the outgoing wave alone has a singularity at the origin. 
+Physically it follows from the fact that in spectroscopic problems one specifies 
+the energy of the hyperbolic orbit exactly; the phase is thus quite un- . 
+determined and one cannot say to which branch of the hyperbola (ingoing or 
+outgoing) the electron will jump. In general each electron goes on both, 
+since the orbit is closed at infinity. 
+
+When there are several continuous integrals 8; one may set 
+
+
+4 | (6a) 
+if one chooses 
+AB,’ = (1/h)(0E/08.’), AB.’ eat (60) 
+
+
+This gives a convenient rule, which is in practice easier to apply than (3), 
+and which depends, as to be expected, only on the assymptotic behavior 
+of the {a /p! } . In conclusion we may note that with (6b) the flux is given by 
+
+
+f AO@(B’) da’ AOt (B’) (Q) 
+
+
+and that the absorption coefficient for light is given by the square of the 
+modulus of the matrix component of the perturbing energy.’ 
+7 One may regard the analysis of this section as a method of interpreting stationary 
+
+
+solutions of the wave equation, in aperiodic problems, like collisions or photo-ionization. Cf. 
+P, A. M. Dirac, Proc. Roy. Soc. A114, 256 (1927). 
+
+
+72 J. R. OPPENHEIMER 
+
+
+2. One may expect a motion of periodic systems to approach that given 
+by the classical quantum theory when the action per cycle is large compared 
+with h. Kramers’ has shown that this condition makes the number of nodes 
+between the limits of libration large, and has applied the approximation 
+to show that half quantum numbers are better than integers. From Kramers’ 
+argument it appears that the essential condition for the validity of classical 
+mechanics is that the number of nodes of the eigen-function should be large 
+in a region in which the potential energy is sensibly constant. This condition, 
+unlike that on the action per cycle, may be extended to aperiodic motions; 
+in this paragraph we shall show that it enables one very simply to determine 
+whether the classical formulae are valid for any problem that is susceptible 
+of a quantum mechanical solution. The method will be applied to the 
+scattering of an a-particle by a nucleus. 
+
+If one sets e?*5/4 in the wave equation one obtains 
+
+
+(h/2mi)A2S +(AS)2+2M(E— TU) =0 (1) 
+
+
+The classical S' satisfies 
+| (AS)24+2M(E—T)=0 (1a) 
+so that 
+{B/x}a=exp(2ni(—2M)"/h) f ds(B—T)\" (2) 
+
+
+These solutions (2) each correspond to a uniform distribution of particles 
+when E> JU, and a rapid exponential drop at the edge of the geometrical 
+shadow. Because of the interference of the {E/x}’s, however, this does not 
+represent the distribution for any given experimental arrangement: e.g., one 
+obtains the classical deflection pattern at an obstacle by combining the 
+solutions (2) so as to give a plane incident wave. | | 
+
+Now when |(2/27r)A?S(AS)~2| is very small, S and therefore, {E/x}, 
+will not have to be much modified to give the quantum mechanical solution; 
+in this case, therefore, the classical formulae may be expected to retain an 
+approximate validity. Qualitatively, we see that this condition can always 
+be satisfied by taking S/h large enough, since (AS)? is quadratic, A2S linear, 
+in S/h. This is the old condition that quantum numbers shall be large, the 
+wave-length small. Wecan make the condition more precise and bring out 
+the optical analogy better, if we introduce 
+
+
+\=(h/2r){2M(E— ff) }-1 | (3). 
+
+
+as the “wave-length” at a point. The condition that | E/ ae } should be given 
+approximately by (2) in a region then becomes 
+
+
+| grad A| <<1 (4) 
+
+
+8H. A. Kramers, Zeits. f. Physik 39, 828 (1926). 
+
+
+QUANTUM THOERY OF APERIODIC EFFECTS 73 
+
+
+Now in any physical diffraction problem U will have singularities, and there 
+will be points at which (4) will not be satisfied. There will thus be classical 
+scattering if (and only if) these regions are immaterial for the diffraction 
+pattern; that is, if onecan set v= 0 within them without SHECHNE a result 
+appreciably. 
+
+As an example of this method we may consider the scattering of fast 
+a-particles by nuclei. Here we have 
+
+
+U =eye2/r QQ) 
+
+
+On €1€9 €1€9 =are 2 1/2 
+Pee | ees ee ) ee (5) 
+lar 2 7° r 822M 3 
+
+
+r>>ee,, say r=Berer/E 
+
+
+and 
+
+
+If we make 
+
+
+we may replace (5) by 
+. | 72 Fs! > > €1€2 
+and hence (4) can be satisfied outside of a sphere of radius 
+
+
+’o= (c1/E) (e1@2)1/? [hE / 842M |1!4 
+
+
+= Cohy one 
+
+
+where X., is the wave-length at infinity of the incident Q- anaeeiles Now the 
+scattered wave, for large velocities, is given by 
+
+
+T 
+[B/z}imce™ [ pdp f sin 3 dd e278in? (6/2) - cosd -p/d 
+0 0 
+
+
+00 T | 
+= che-tkr | uae i) Sin dd etteinte/2- coed se 
+x 0 
+If we set U=0 inside the sphere of radius 79 we get 
+2 T 
+| E/x} {= chee ter i) pd f sin & ddd e278in® (6/2) -cosd «yu 
+cghss” 0 : 
+
+
+SO that, as 0 | 
+{ E/x}/—>{E/ahs 
+
+
+Hence the region in which (4) is not satisfied is, in the limit vo , immaterial 
+so that Rutherford’s formula must be expected to hold for this case.° 
+
+The argument may be extended to show that the quantum mechanical 
+scattering approaches the classical scattering in the other limiting case, 
+
+
+*See P. M.S. Blackett, Proc. Camb. Phil. Soc. 23, rae 6, 1927. J. R. Oppenheimer, 
+Zeits. f. Physik 43, 413 (1927). 
+
+
+74 J. R. OPPENHEIMER 
+
+
+where v0. For the wave function drops off exponentially within a sphere 
+of radius proportional to v~*, whereas (4) is not satisfied within a sphere of 
+radius proportional to v-*/?. Setting v=0 within this latter sphere does not, 
+therefore, in the limit v—0, affect the scattering. There is, however, no 
+reason to suppose that for intermediate v the classical formulae hold. 
+
+3. If one separates the wave equation for a hydrogen atom in an homo- 
+geneous electric field in parabolic coordinates, one finds that one of the 
+equations has a potential energy which becomes negatively infinite for 
+infinite values of the coordinate. Such an equation has no quadratically 
+integrable solutions, and no point spectrum.'®° There are thus no stable 
+stationary states possible for a hydrogen atom in such a field. 
+
+If one encloses the atom in a large box, periodic motions, of course, 
+become possible. If the field is now made very small, the solutions of the 
+wave equation are very much like those for the unperturbed atom; but if 
+the drop in potential across the box is comparable with the resonance 
+potential of the atom this is no longer the case. We must, therefore, conclude 
+that, under the customary experimental conditions the characteristic func- 
+tions found by the perturbation method, which yield the Stark effect, are 
+not the stationary solutions of the wave equation, and that they do not 
+completely describe the effect of the field. 
+
+The physical interpretation of this result is very simple. If we imagine 
+the potential energy U of the electron plotted along the direction of the 
+- field, we see that it falls from a very high value at one end of the box to a 
+very low value at the other; this uniform fall is broken by a sharp drop due 
+to the nucleus. On the low potential side of the nucleus there is a maximum, 
+sharp inside but gradual outside. If, therefore, we specify the energy of this 
+system, we cannot be certain that the electron is in the neighborhood of the 
+nucleus; it may also be in the low potential part of the field. If we make 
+the box infinite, then it becomes increasingly probable that we shall find the 
+electron in this part of the field, and hence the motion becomes aperiodic. 
+In the classical theory, however, this situation caused no difficulties; for 
+we could specify the other coordinates of the electron (besides the energy), 
+and thus make certain that it was near the nucleus; and it could not leave 
+this region without getting enough energy to clear the maximum in JU. 
+
+We have seen that this is not so in the quantum theory, and that there 
+is no stationary state of interest. The electron will not stay indefinitely near 
+the nucleus. This suggests the following question: Given the atom at time 
+To in, say, its normal state. The field is turned on. What is the probability 
+that at a subsequent time 7 the electron will have left the atom for infinity? 
+If 7 —T is big enough, this probability will be indefinitely near to one; but 
+we may presume that the rate at which it grows will be very small when 
+the field is small. This presumption will be verified. 
+
+We could find the rate of ionization, of course, by computing exactly 
+the characteristic function of the atom in the field as a function of the time 
+and thus finding the rate at which the probability that the atom is outside 
+
+
+10 H, Weyl, Math. Ann. 68, 220 (1910). 
+
+
+QUANTUM THEORY OF APERIODIC EFFECTS 75 
+
+
+a given sphere about the nucleus increases. There is, however, a simpler 
+way of answering the question, which makes use of the fact that the two 
+unperturbed characteristic functions, corresponding to the initial energy 
+and representing, respectively, the atom in its unperturbed normal state, and 
+the electron and nucleus flying apart under the influence of the field and with 
+neglect of their attraction, are nearly orthogonal. It is therefore nearly, but 
+not quite, unambiguous to ask whether the electron is bound or whether it 
+is torn loose, since the chance that we might have to answer “both” is very 
+small. This method of nearly orthogonal characteristic functions appears 
+to be capable of fairly wide applications. We shall therefore first develop 
+the general theory and then apply it to the ionization problem. 
+
+The system is initially in a given state of energy Ey=hvo, and the wave 
+function" yo(x) satisfies 7 
+
+
+[H+ Ho— Eq |yo(x) =0 (1) 
+At the time 7) a perturbation (x) is introduced. Let 
+[H-+Hy— Ey|¥i(v1x) =0 } i= hv (2) 
+
+
+In general #;=hy, may be taken continuous; for unless (2) has characteristic 
+values very close to £o, the effect will not occur." 
+We now require that : 
+
+
+el eeGe Peer wheres 5 GC ew (3) 
+
+
+Of course e,= fdrpo(x)i*(vx) cannot always be small, since 
+
+
+fo = f | voltar=1 
+
+
+It is important to note that the W's are closed with respect to all functions 
+analytic in the configuration space. 
+We may accordingly set for the wave function 
+
+
+[ard yabox) 
+
+
+y= [ a@nvaloayetened | (4) 
+
+
+The initial values of the a@a’s are 
+a(vO) =e, , (4a) 
+We can now write 
+
+
+a(vt) = e,e27*o-) 4 (yt) 
+
+
+1 We now write { Fy /s } =wWo(x), etc. 
+tla Ror the singular case that (1) and (2) have identical discrete characteristic values, 
+see F, Hund, Zeit. p. Physik, 43, 805, 1927. [Note added to proof] 
+
+
+76— J. R. OPPENHEIMER 
+
+
+So that 
+P= yYpe27 ot +- f eoneaira)eroay (48) 
+
+
+The wave equation is | 
+| [A+ Ho+Hi4 (h/2ri)(d/dt) |p=0 (5) 
+Setting (4b) in (5) we get 
+
+
+(h/2mi) [ olotbalva)e*dy+Hboladerroe+ [ c(vt)Hpi(vx)e?**"'dy=0 — (6) 
+
+
+If we expand in terms of the y,’s and make all the coefficients of (6) vanish. 
+we get 
+
+
+(oh/ 2m) c(vl) —Hy(O») ett { c(v't) Hy(v'v) e™*’—) dy’ =0 (6a) 
+Now in the first order we have by (4a) c(vt) =0 and therefore 
+c(v(t=(—27i/h) f “Hl 1(Ov) e27*o-¥) tt (65) 
+0 
+ene | 
+
+
+. T 
+|c(vt) |2= (4?) h? | Hy(Ov) |? f e2rt (o- vt dy |? (6c) 
+
+
+for the number of systems in the state vy at the time J. Only when y~vo 
+does this increase appreciably with 7; the total increase in a mete region 
+about v =v» we get by integrating (6c) with respect to v: 
+
+
+AN(T) = (4x?/h?) | H1(Ovo) [27 (7) 
+
+
+This is only significant, and therefore only accurate, to within a factor of 
+the order of €o?/ > (vo). | 
+
+Because €9 is so small, Hi(0v9) may be much smaller than H,(0v) for 
+some other v. For this reason one cannot be certain that it is sufficient to 
+take the first approximation in (6a), since, if one chooses T large enough 
+to make the transitions sensibly conserve the energy, as in (7), c(vt) may 
+not be very small for some other v.42 From (6a) and (6b) follows, for the 
+correction for the c, 
+
+
+T t 
+Cy = (—4n*/h*) f dy’ f dte?tt’—v)t : dt! err *o-¥)” o(v'v) Hs(Ov’) (8) 
+0 0 
+
+
+12 This second order cascade is important in the theory of dispersion: see P. A. M. Dirac, 
+Roy. Soc. Proc., A114, 710 (1927). 
+
+
+QUANTUM THEORY OF APERIODIC EFFECTS 77 
+
+
+We may obtain a rough estimate of this, and thus of the error in (7), by the 
+following method: : 
+The only term in (8) that can grow large is 
+
+
+: F H (v'v) H,(Ov’) 1 — e2tt(vo-) 7 
+al i ia ee eee 
+
+
+(8a) 
+V-—-Vo V—-Vg 
+
+which has a vanishing denominator for »y=yv). Now H,(0v’) is small for 
+y'~vo, since otherwise the second approximation is unnecessary, and it 
+grows small again for very large v’, since the corresponding wave function 
+has more and more nodes in the region in which yf differs appreciably from 
+zero. There must therefore be some value % for which H)(y’y) Hi(y’v) has 
+a maximum; only in the neighborhood of 7 will the integral contribute much 
+to (8). If, now, the maximum is so sharp that the integrand of (8a) does 
+not change sign within the essential part of the integral, we can estimate 
+the magnitude of the integral if we replace it, in (8a), by 
+
+
+[1/(9—v)] f do Holo'») Hi(0r! | (88) 
+For (8b) is easily evaluated by using . 
+Hy(y'v) = ij drpr* (vx) Ho(x)ba(o"x) (9a) 
+H,(0r’) = J dr" py*(v" x!) Hi( x1) o( x’) (98) 
+If we now integrate directly with respect to v and ise 
+[arneare'e)=e-2) (90) 
+we get for (8b) | 
+| |—1/(vo—¥) | HoH 1(0v0) (10) 
+
+
+so that the second order effect may be roughly allowed for by writing 
+H(Ov) + [1/h(vo—3) ]|HoH1(0r0) (102) 
+
+
+for H,(0vo) in (7). Now because €o is small, Hy will generally be small where 
+H, is large, and conversely, so that the correction (10a) will not be very 
+important. It is for this reason that the approximation introduced is per- 
+missible; if (10a) differed appreciably from H,(Ovo) it would be necessary 
+to use the accurate expression (8) to find AN(T). 
+
+For the problem of the hydrogen atom in the field we take 
+
+
+Hy=—e?/r; H,=—eFz | (11) 
+
+
+‘8’ The method may give a good approximation even when this condition is not fulfilled. 
+
+
+78 J. R. OPPENHEIMER 
+
+
+with the field F along zs. The normalized solution of (1) for the normal state is 
+Yo= [1/(ra®)"]errle= [1/(was)ua}e-Macerron® (12) 
+in the cylindrical polars z, p, ¢. The wave equation for ¥:(vx) becomes 
+Ayit(A+az)yi=0 (12a) 
+with | 
+N= 8r2uv/h=8r'uE/h®?; a=8r'2uek/h? 
+
+
+and can be separated in 2, p, ¢. 
+The solutions take the form 
+
+
+u(Aideds) = 68 PTy"(py 1/2) K (7) (12c) 
+here +/A3 is integral, but Az and A; continuous and 
+| ee eee | (12d) 
+Further Jy3!? is Bessel’s function of parameter A3!/2, and 
+y= (2/3a)(—A1— az) *? (12e) 
+Finally | 
+Ky) =7'H2(— iy) (129) 
+
+
+where Hi; is a solution of Bessle’s equation with parameter 1/3, and for 
+y>0 is the customary Hankel’s function of the second kind; because of the 
+double-valuedness of y this becomes for imaginary y 
+
+
+— iy!!®N13} (2/3a)(Ar-+az)*/?} | (12g) 
+
+
+where N1;3; is Neumann’s cylinder function. We can thus describe the func- 
+tion K as follows: for y>0 it falls off exponentially 
+
+
+Ky) ~(2/a)MPy- Users (128) 
+
+
+For y = 0 it has the value 2224/8. Its first zero occurs at ty~2. Beyond this it 
+oscillates with decreasing amplitude and period, and for Ai taz>0 it is 
+given by 
+
+
+(1 / 2m) 12-16 gil Or/12)+7] — gir /12)+7] (123) 
+It differs from zero chiefly in the region |y| $2. 
+
+
+The normalizing factors & for u are readily found. Since vas is integral, 
+—£, becomes (27)~'/?. Eq. 6 of Section 1 gives 
+
+
+E,=2m(u/h)2;  &,= 24/8r(y/h)/?2(3a)-18 
+
+
+10E 10E 
+“7 is normalized to Ar = 7 ea and K to An => ay aay as in 
+
+
+(6b). The normalizing factor thus becomes 
+
+
+E= (p/h) 21116 73/2(3q)-1/6 (127) 
+
+
+where J 
+
+
+QUANTUM THEORY OF APERIODIC EFFECTS 79 
+
+
+We can see now under what conditions the analysis of this section is applic- 
+able to the problem. The wave function which corresponds in energy to Wp 
+has 
+
+
+N= —Ap= — w?(2re/h)4 
+Since 
+MeO, AsZO, Ar<—Ao 
+
+
+Hence the argument y of K vanishes at a point %92Ao/a; for <0, y is 
+real. Hence if we choose the field small enough, (vox) will be, in the neigh- 
+borhood of the atom, as small as we want; conversely Wo will be very small 
+where ¥i(yox) is large. e€) can therefore be made very small, so that eq. (7) can 
+be interpreted without ambiguity. Furthermore we can use (10a) to esti- 
+mate the second order of cascade. For the essential part of the integral 
+(8a) comes from values of \ for which the zero of ¥ lies close to the nucleus. 
+For small field this corresponds to a very short v range, and in this range 
+the integrand does not in general change sign. 
+
+The matrix components of H, and H)H,; vanish when AA;-0. We are in- 
+terested in them only for \= —Xp, so that \;= —Ag—Az, and the matrix 
+components are functions of A, alone. We can thus find, in accordance with 
+(7) and (10a), AN(T,X.) and we can get the total ionization by integration; 
+
+
+eo 
+
+
+AN(T) = f dvAN(T a) (13) 
+
+
+The necessary matrix components thus become 
+H(d2) = — 2eF E(u1/a) (a /a)'? (14) 
+HoH, (ds) = 2e°F €(u2/a)(m/a)1? 
+
+
+io.¢] 
+
+
+ba = J vdosocorst) f zdge~ (1a) (2*-+p*)"2 K (my) (14a) 
+: ; e 
+
+
+with 
+
+
+bg = J pdosotorat) f gdge~ (1la) (2+e") K (y) /(g2-+ 2) 1/2 
+0 a2 | 
+
+
+We may estimate these integrals as follows: 
+We have in the first place - 
+
+
+pis — [0/8(1/a) |us | (15) 
+
+
+so that it is enough to find the uw». Now we can see at once that pe will be 
+largest for small values of Xe, and that, for small a, it falls off rapidly as Az 
+increases; for the value of e~ta@’+e"” at y=0 becomes much smaller, as 
+does that of K(y) at z=0, as\2 grows. But 
+
+
+ed foe) 
+
+
+waa f gdze lela. K(y)-+ans0? f dg 
+
+
+: | (16) 
+J doers. Ty(onstl2) + KG) 
+G 
+
+
+80 J. R. OPPENHEIMER 
+
+
+and since J,(0) =0 we may neglect the second term. oe ea resiondie term 
+in 1 is also negligible). 
+
+The integral with respect to zis easy to estimate. For, from the properties 
+of K it follows that the main part of the integral is contributed by the stretch 
+os 20 =NotrA2/a: 
+
+
+pe~a f zdze lel. K(y) (16a) 
+Before we evaluate this, we can show that pe is negligible compared to mu. 
+mae f 2 | 2 | dzel#lle. K(y)+a? f edzet4 - K(y) (168) 
+
+
+The term with |z]| is obviously large for small a. In this case therefore the 
+cascade effect proves unimportant compared to the direct transition. For 
+small a and d2 the second term in (16b) yields 
+
+
+uywaTem (2/8a) otro)*!? . (Yy+-Ay)9/ay-1/8 (17) 
+
+
+T= 29/4847 (3/4) /T(1/2)T (15/4) 
+In (13) this gives, with (14a) and (12j) and neglecting higher powers of a 
+
+
+3 
+
+
+AN(T) = (1/24) (h/m)aSMolte- Glee. (18) 
+
+
+which is the required result. 
+
+The rate at which a field of 1 volt per cm dissociates a hydrogen atom is 
+thus 1/10!" persec. The true resistance of 1 cm? of gas at 0,001 mm in this 
+field is about 10!°° ohms. The values of the field for which the dissociation 
+becomes appreciable are of the order of 
+
+
+P8101 As we 
+
+
+which is about a tenth of the field which makes the classical Bohr orbit un- 
+stable. | 
+
+The effect increases very rapidly with a drop in the ionization potential 
+of the atom, so that we should expect it to be particularly marked for certain 
+metallic atoms at the surface of aconductor. The aeona effect, or pulling of 
+electrons out of metal by fields of the order of 10 ‘e. s. u., is probably to be 
+accounted for in this way. 
+
+The importance of effects of the kind here considered is, however, that 
+they restore to the atom some of the classical instability which was destroyed 
+by the quantum conditions. For instance we can now understand a little 
+better the mechanism of metallic conduction. The ionization potential of 
+metallic atoms is characteristically low, so that the valence electrons will be 
+
+
+8a This is confirmed by the fact, that when one uses the data of R. A. Millikan and C. 
+Eyring, This Journal, 27, p. 55, Fig. 2, 1926, to plot the reciprocal of the field against the 
+logarithm of the current minus one fourth the logarithm of the field, the points so obtained 
+lie on a straight line. For this result follows from (18). 
+
+
+QUANTUM THEORY OF APERIODIC EFFECTS | 81 
+
+
+pulled out easily by the fields of neighboring atoms, (and, to a less extent, 
+by external fields). If the probability of ionization is large, we shall no longer 
+be justified in associating an electron with a single ion, and in this sense the 
+valence electrons will be free. We have seen that this probability is greatly 
+decreased if the threshold that the electron must clear is raised. If, therefore, 
+the atoms of the metal are separated, e.g. by heat or by distortion, the pas- 
+sage of the electrons through the metal will be greatly hindered. It is known'* 
+that one can give a fairly satisfactory account of metallic conduction, if one 
+assumes that it is the “gaps” in the atomic lattice which account for the 
+resistance of the metal. 
+
+The transitions involved in a chemical reaction are of the kind considered 
+in this section. In particular, one can easily write down the probability that 
+an electron will be captured from a hydrogen atom by a passing a-particle; 
+but the integrals which occur are awkward to evaluate. 
+
+
+JEFFERSON PHYSICAL LABORATORY, 
+CAMBRIDGE, MaAss., 
+August, 1927. 
+
+
+4 P, W. Bridgmar Rap. du Con. Solvay, Bruxelles, 1924. 
+
+

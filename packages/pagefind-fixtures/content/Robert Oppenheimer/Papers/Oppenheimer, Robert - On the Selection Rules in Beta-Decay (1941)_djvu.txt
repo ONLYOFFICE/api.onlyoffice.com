@@ -1,0 +1,159 @@
+908 LETTERS TO 
+
+
+The three integration lower limits, u, on page 893 are not 
+misprints. However, the brackets should be closed in 
+front of the exponential factor in the second equation for w, 
+and the last equation on page 894 should read w=$+3.2kT. 
+
+
+1G. M. Fleming and J. E. Henderson, Phys. Rev. 58, 887 (1940). 
+2 J. E. Henderson and R. K. Dahlstrom, Phys. Rev. 55, 473 (1939). 
+
+
+On the Selection Rules in Beta-Decay 
+
+
+J. R. OPPENHEIMER 
+Physics Department, University of California, Berkeley, California 
+April 25, 1941 
+
+
+HE rapid decay of a presumably largely 1S He® toa 
+8S-+3D Li® has always been regarded as strong 
+evidence for the Gamow-Teller selection rules in beta- 
+decay. The analogous disintegration C¥—B is also rapid 
+and obviously allowed. However the three further at first 
+sight similar disintegrations 
+
+
+(5) H+H+>D; BeBe; CHN4, 
+
+
+where in every case the parent nucleus would be expected 
+to be largely 4S, and the product nuclei are known to be 
+predominantly 3S+3D, are slower than would be expected 
+for allowed transitions of the observed energy by factors 
+of the order 10¢—107. The activity OM--N"™, homologous 
+to that of C¥, is not known; the activity of F’8, where 
+normal states can perhaps be less unambiguously assigned, 
+is allowed. 
+
+The assumption that the initial states in the disintegra- 
+tions (S) have been incorrectly assigned is very unsatis- 
+factory. For the reaction H+H->D there can be no 
+question that the initial state is 1S; and the astrophysical 
+evidence that this reaction is slow seems excellent. For 
+Be!® and C* states of very high angular momentum ('G) 
+would be required to account, with Gamow-Teller selection 
+rules, for their extremely long life; this is not only highly 
+implausible on the basis of any known nuclear theory, 
+but in gross contradiction with the expected proton- 
+neutron symmetry of the nuclei C! and Be!®, Almost 
+equally unsatisfactory is the assumption that He® and 
+C! are 3S or 3D, and the Gamow-Teller selection rules 
+wrong; for this too, in addition to leaving unexplained the 
+many less direct evidences for spin change in allowed 
+transitions, would grossly violate theoretical expectations 
+on the symmetry of normal states and on the proton- 
+neutron symmetry in C!® and Be”. 
+
+The fast reactions 
+
+
+(F) He®—Li’; 
+
+
+differ from the slow reactions (S$) systematically, in that 
+for (F) energies of over 3 Mev are available, whereas for 
+GS) the energies are 350 kev, 550 kev, and 150 kev, re- 
+spectively. This suggests that the Gamow-Teller selection 
+rules have a ‘“‘threshold,’”’ such as would be involved if 
+the corresponding neutrino had a rest mass. This rest 
+mass would have to be at least of the order of that of an 
+electron, and might for instance characterize a neutrino 
+of spin 3. On this theory the reactions (S) would be 
+governed by Fermi selection rules, and there would then 
+
+
+Clo_+B10 
+
+
+THE EDITOR 
+
+
+be no difficulty, on taking into account the small amount 
+of 8P to be expected in the initial states, and of 1P in B” 
+and Ni‘, in accounting for their very long lifetimes. The 
+reactions (F) on the other hand would involve the emission 
+of a heavy neutrino and be allowed by Gamow-Teller 
+selection rules. 
+
+This suggestion has three simple consequences: (I) There 
+should be a discrepancy, given by the mass of the heavy 
+neutrino, in the energy balance of the reactions (F).} 
+(II) The shape of the upper end of the He® and C* spectra 
+should correspond to a finite neutrino mass. (III) The 
+disintegration O!4—>N", that has an estimated upper limit 
+3.8 Mev—uc?, with w the heavy neutrino mass, should 
+decay rapidly. If we take N!4 as 15 percent 3S, and pee~? 
+Mev, the lifetime should be about 20”. 
+
+It would appear that published evidence was neither 
+sufficient to check nor disprove these expectations. If we 
+suggest the a priort, highly improbable existence of the 
+heavy neutrino, it is in part because these three points 
+can so readily be settled, but even more again to call 
+attention to the very puzzling difficulties that have arisen 
+in interpreting these activities. 
+
+1The Wigner and Hartree estimates of the C!®—Be!? Coulomb 
+difference themselves differ by several hundred kilovolts, and are 
+presumably of insufficient accuracy to afford a test of the C!9 energy 
+Peers ponbaraielt of C with alpha-particles, of N with deuterons, 
+both lead to strong O activity; the bombardment of N with protons 
+leads to a strong C!!. All these reactions have been tried in Berkeley, 
+by Dr. Kamen, Dr. Segré, and Mr. Wright, as sources for O!4; in every 
+case the results of a preliminary survey were negative. These investi- 
+
+
+gations are not yet concluded, and I am grateful to these workers for 
+telling me of their findings. 
+
+
+Non-Laue Diffraction Maxima from Rocksalt— 
+Non-Equatorial Maxima 
+
+
+G. E. M. Jauncey, O. J. BALTZER, AND D. C. MILLER 
+Washington University, St. Louis, Missourt 
+May 15, 1941 
+
+
+ROFESSOR W. H. Zachariasen has been kind enough 
+
+to send the senior author a copy of his Letter to the 
+Editor which appears in this issue of The Physical Review. 
+Non-equatorial associated Bragg spots appeared on the 
+films which were used in Jauncey and Baltzer’s paper.! A 
+correction for the position of these spots on the film must 
+be made if the 7 axis of the crystal and the axis of the 
+cylinder of photographic film are not parallel. Making this 
+correction, which will be described later, we find the 
+experimental shifts, 20,.,—26z, shown in the second column 
+of Table I. The shifts are for the 402 associated Bragg spots 
+
+
+TABLE I. Values of 26m —20B. 
+
+
+FORMULA 
+A Exp ORIG. REV 
+— 3°20’ —1°19’ —2°29’ — 1°37’ 
+2025" — 0°55’ — 1°48’ — 1°10" 
+~ O04 ~ 0°09" = 0033" 909)" 
++0°12’ —0°00’ +0°09/ +0°06’ 
++1°01’ —0°28’ +0°45/ +0°29’ 
++-1°49’ —0°45’ +1°21’ +0°52’ 
+
+

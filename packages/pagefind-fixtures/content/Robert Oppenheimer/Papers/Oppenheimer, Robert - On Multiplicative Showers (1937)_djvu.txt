@@ -1,0 +1,1648 @@
+FEBRUARY 15, 1937 
+
+
+PHYSICAL REVIEW 
+
+
+VOLUME 51 
+
+
+On Multiplicative Showers 
+
+
+J. F. CaRLson AND J. R. Oxsamiste 
+University of Caltfornia, Berkeley, California 
+
+
+(Received December 8, 1936) 
+
+
+In I we discuss the status of the quantum theoretic 
+formulae for pair. production and radiation in the domain 
+of cosmic-ray energies, and the relevance of these processes 
+to an understanding of showers and bursts. In II we give 
+a qualitative estimate of the course implied by the theory 
+for a shower or burst built up by multiplication froma 
+very energetic primary; we then set up the diffusion 
+equations for the equilibrium of electrons and gamma-rays, 
+and show how these can be simplified. In III we carry 
+through the analytic solution of the diffusion equations, 
+
+
+I 
+
+
+N nuclear fields, gamma-rays produce pairs, 
+and electrons lose energy by radiation. The 
+formulae which have been deduced! from the 
+quantum theory give for the probability of these 
+processes values which, for sufficiently high 
+energies, no longer depend upon the energy of the 
+radiation. Because of this, the secondaries, pro- 
+duced by a photon or electron of very high 
+energy, will be nearly as penetrating as the 
+primary, so that the primary energy will soon be 
+divided over a large number of photons and 
+electrons. It is this development and absorption 
+of showers which we wish to investigate. 
+
+The finite limiting cross sections for radiative 
+loss and for pair production essentially limit the 
+penetrating power of electrons and photons; as 
+we shall see, 20 cm of Pb should absorb prac- 
+tically all such radiation if the primary energies 
+are <105 Mev. From this one can conclude, either 
+that the theoretical estimates of the probability 
+of these processes are inapplicable in the domain 
+of cosmic-ray energies, or that the actual pene- 
+tration of these rays has to be ascribed to the 
+presence of a component other than electrons and 
+photons. The second alternative is necessarily 
+radical; for cloud chamber and counter experi- 
+ments show that particles with the same charge 
+as the negative electron belong to the penetrating 
+component of the radiation; and if these are not 
+
+
+1 An account of the results and of the theory upon which 
+they are based may be found in Heitler’s book, The 
+Quantum Theory of Radiation (Oxford, 1936), 
+
+
+and find the distribution of electrons and gamma-rays 
+as a function of their energy, the primary energy, and the 
+thickness and atomic number of the matter traversed. 
+We treat the effect of ionization losses on the shower, 
+calculate the amount of radiation of low energy to be 
+expected, and treat transition effects in passing from one 
+substance to another. In IV we discuss the results of the 
+calculations, and give a summary of the conclusions to 
+which they lead, and the difficulties. 
+
+
+electrons, they are particles not previously known 
+to physics.’ 
+
+Direct evidence for the approximate vandiey 
+of the theoretical formulae is provided by the 
+latest studies of Anderson and Neddermeyer? on 
+the energy loss and pair production of electrons of 
+energy up to 400 Mev. This evidence is still 
+
+
+incomplete; yet it affords absolutely no indica- 
+
+
+tion of a breakdown of the theoretical formulae. 
+Since there is good evidence from the altitude and 
+latitude curves of cosmic-ray ionization, as well 
+as from the transition curves for showers and 
+bursts, of a component in the cosmic rays which 
+is strongly absorbed and yet has a very high 
+energy, it seems of interest to investigate in detail 
+the consequences which the theoretical formulae 
+imply for the degradation, multiplication and 
+absorption of such radiation. We shall find in this 
+way a model for the building up and absorption 
+of large showers and bursts which in many 1mpor- 
+tant respects agrees with what is found experi- 
+mentally.4 From this we should like to derive on 
+the one hand a further argument for the qualita- 
+tive validity of the theoretical formulae, and on 
+the other for the often repeated suggestion that 
+many showers are built up by a long succession 
+
+
+2 Thus Williams first suggested that penetrating cosmic 
+rays were protons, positive and negative: E. J. Williams, 
+Phys. Rev. 45, 729 (1934). Cloud chamber evidence would 
+favor a particle of smaller mass. 
+
+3C. D. Anderson and S. N eddermeyer, Phys. Rev. 50, 
+263 (1936). 
+
+* An account of the experimental findings on showers and 
+bursts and their transition effects may be found in Geiger’s 
+article, ‘‘Die Sekundaer Eftekte der Kosmischen Ultra- 
+strahlung,” Naturwiss, (Leipzig, 1935), 
+
+
+220 
+
+
+ON MULTIPLICATIVE SHOWERS 
+
+
+of simple elementary processes, and not by the 
+simultaneous ejection of a huge number of par- 
+ticles in one elementary act. 
+
+Here a certain caution is necessary. Cloud 
+chamber observations have shown the existence 
+of two fairly well differentiated types of shower.® 
+In one of these, and by far the more common, 
+only electrons, positrons and y-rays appear to 
+take part; the shower particles are, except for 
+those of very low energy, well collimated, with 
+transverse momenta of the order of a few million 
+volts; the showers can often be seen to increase in 
+passing through matter, and typically, if they are 
+large, have no well-defined focus. It is these 
+showers for which our calculations will give us 
+some understanding. In the other and rarer type 
+of shower, transverse momenta of the order of 
+100 Mev are common; the shower is usually not 
+collimated at all; heavy recoil particles are fre- 
+quently seen ; and the total number of particles is 
+usually small. It.is natural to ascribe these 
+showers to the interaction of heavy and light 
+particles, and to accept the arguments which 
+Heisenberg® has advanced to show that for such 
+processes the probability of ejection of several 
+particles should be of the same order of magni- 
+tude as that of one. It would seem, however, that 
+Heisenberg’s attempt to interpret on this basis 
+the larger showers and bursts as highly multiple 
+elementary processes is without cogent experi- 
+mental foundation; and we believe that in fact it 
+rests on an abusive extension of the formalism of 
+the theory of the electron neutrino field. 
+
+One can then believe in the applicability of the 
+following analysis to cosmic-ray photons and 
+electrons and their showers, only if he admits the 
+presence of another component to which the 
+analysis is not at all applicable, and of other 
+types of elementary processes, which essentially 
+involve the heavy particles and their coupling 
+with electrons, and which find no place in this 
+treatment. 
+
+
+I] 
+
+
+We are interested then in what happens when 
+an electron (or positron or photon) of very high 
+initial energy passes through matter. We shall 
+
+
+5 Anderson and Neddermeyer, see reference 3; Brode, 
+MacPherson and Starr, Phys. Rev. 50, 581 (1936). 
+°W. Heisenberg, Zeits. f. Physik 101, 533 (1936). 
+
+
+221 
+
+
+consider only the three elementary processes of 
+pair production by photons, radiation by elec- 
+trons, and ionization losses by electrons, the first 
+two because they dominate the multiplication 
+which makes the shower, the third because it 
+limits the size of the shower and absorbs it. We 
+shall not consider relatively rare multiplicative 
+processes, such as the production by electrons of 
+high energy electronic secondaries, the direct 
+production of pairs by electrons, or the Compton 
+effect. We shall suppose that all high energy 
+particles come off forward, and neglect the 
+angular divergence of the shower. We shall not 
+try to treat in detail radiation of such low energy 
+that these simplifications are invalid. 
+
+To define the probabilities of the elementary 
+processes, we shall use simplified formulae which 
+approximate closely to the limiting forms which . 
+the theory gives for high energies.! 
+
+Thus for the probability that an electron (or 
+positron) radiate an energy in the range E, E+AE 
+in passing through a thickness Ax of matter of 
+atomic number Z, nuclear density N, we shall 
+take | 
+
+
+AZ2e8N 200 
+= In 
+hm?C> Zi 
+
+
+KAxAE 
+
+
+PAxAE =——_—_ K= 
+E 
+
+
+. (1) 
+
+
+with 
+
+
+For the probability that a gamma-ray of energy | 
+E make a pair of energy EF’, E—E’, we take 
+
+
+P'AxAE'=(K'AxAE’)/E; EF’ <E;> 
+K'/K=o~%. (2) 
+
+
+It is convenient to measure length in terms of a 
+variable t=xK. For Pb the unit of length is ~} 
+cm, for water it is about 0.4 m. For elements as 
+heavy as Pb, the constants K and K’ can hardly 
+be regarded as known within 20 percent. Formula 
+(1) is a good approximation as long as the elec- 
+tronic energy is >20 Mev; formula (2) begins to 
+give too large results for E<50 Mev, but is off by 
+only a factor 2 at H=25 Mev. As for ionization 
+losses, we shall suppose them to be independent 
+of energy, and evaluate them for those energies, 
+
+
+where their effect will be important. Thus we 
+
+
+shall write for electrons 
+4nNZe* GB 
+rage ae ao B = I 
+
+
+= Jn ——., (3 
+Ot KmC?  ZRh 
+
+
+222 J. F. 
+
+
+For Pb, 8 has the value 6.5 Mev. It is quite 
+closely inversely proportional to Z. 
+
+For primary energies which are not too high, 
+one can carry through the calculations step by 
+step, finding how many gamma-rays are pro- 
+duced by the primary, how many of these are 
+absorbed by pair production, how many gamma- 
+rays these in turn produce. This procedure was 
+used in computing the number of pairs theo- 
+retically to be expected in the electron traversals 
+studied by Anderson and Neddermeyer; it has 
+been used by Nordheim, and by Heitler and 
+Bhabha,’ though here with neglect of ionization 
+losses. It clearly becomes prohibitively laborious 
+for thicknesses and energies of the order of those 
+involved in large showers and in bursts; and we 
+shall try instead to solve the diffusion equations 
+implied by (1), (2) and (3), and so obtain an 
+insight into the course of the shower for large 
+thicknesses and high primary energies. An ex- 
+tremely rough indication of what we may expect 
+to find we can see from a quite simple argument. 
+
+Both radiation and pair production give two 
+rays for one in the shower. Each process of this 
+kind has about an even chance of happening in a 
+distance t=1 (somewhat less than even for pair 
+production, somewhat more for y-radiation). 
+Thus the order of magnitude of the total number 
+of electrons and y-rays to be expected at a 
+thickness ¢ is 2'. The order of magnitude of the 
+energy loss in thickness Aft is thus ~$82‘At. When 
+the integral of this is equal to the primary 
+energy Eo, the shower will be absorbed. Thus if 
+Tis the distance to which the shower penetrates 
+
+
+B2T~2E In 2. (4) 
+
+
+From this it follows that 7 will increase log- 
+arithmically with EK, and that it will decrease 
+slowly with decreasing Z; that the number of 
+particles in the shower will increase with Eo 
+roughly linearly, and will be roughly proportional 
+to Z. For showers of about 30 particles we should 
+
+
+7 We are indebted to Dr. Nordheim for writing to us of 
+his results. See also Heitler and Bhabha, Nature 138, 401 
+(1936). We are further indebted to Heitler and Bhabha 
+for sending us a manuscript of the paper in which they 
+have extended these calculations. Their results differ from 
+ours primarily because of their neglect of ionization losses; 
+apart from this the agreement between their values and 
+ours is excellent. We do not agree with their conclusion 
+that these calculations make it possible to ascribe the 
+greater part of sea-level cosmic radiation to degraded 
+electrons and photons of high initial energy. 
+
+
+CARLSON AND J. 
+
+
+R. OPPENHEIMER 
+
+
+expect the maximum in the shower to come at 
+T ~ —logs 30~5, or a little over two cm of Pb or 
+about 7 cm of Fe. These are in fact! of the order 
+of the distances at which maxima are found for 
+the transition curves for relatively small showers. 
+For bursts of 1000 particles the transition maxima 
+are found® at about twice as great thicknesses, as 
+our rough estimate would suggest. 
+
+To set up our diffusion equations, let us write 
+y(t, E)AE for the probable number of gamma- 
+rays to be found at a thickness ¢ in the energy 
+range EL, E+AE and Ot, E)AE for the cor- 
+responding number of electrons and positrons. 
+Then | 
+
+
+oy 1 pko 
+ae ae { P(t, ede, (5) 
+Ot Edy 
+de Bo y(t, €) de 
+oop : de+p-— 
+Ot E € de 
+Eo P(E, €) E de 
++f de—0(t,E){ — (6) 
+[E]} €— | 
+
+
+“fol € 
+
+
+The last two terms in (6) can be combined to give 
+
+
+the clearly finite result 
+
+
+| Ho P(t, €) Ede 
+R=lim if | —de— P(t, B){ =| 
+— 6s0 (MY ey5 EE J 5 € 
+
+
+= —@(t, F) In 
+
+
+on 
+
+
+_— I (- t)a (7) 
+—~ —(t, 6) In ( -— € 
+Jz OE E 
+
+
+and give the change in pair distribution which 
+comes directly from the radiative losses of the 
+charged particles. The term in 8 gives the cor- 
+responding change from ionization losses, and the 
+first term on the right in (6) gives the pair pro- 
+duction by y-rays. In (5) the first term gives the 
+absorption of y-rays by pair production, and the 
+second term their replenishment by radiation. 
+These equations are to be solved for the boundary 
+
+
+conditions 
+y(t=0, Z)=0; O¢=0, E)=A(EZ, Eo); (8) 
+
+
+where A vanishes except when £ is in the 
+immediate neighborhood of Eo, and has the in- 
+
+
+ON MULTIPLICATIVE SHOWERS 
+
+
+tegral 1. It will be convenient, however, to take 
+A(Eo, Ey) =0, and to choose for A, not a delta 
+| function, but | 
+
+
+a” | E\* 1 
+A(E, Eo) =lim —(n Eo/E) —(— —, 
+ao fy Eo I'(n) 
+n=4, (9) 
+
+
+The reasons for this choice will be apparent as we 
+develop the solution. 
+From (5) we may write 
+
+
+@(t, E) =e-**(d2z) / (Gt0E) with y= —e-*'z/E. (10) 
+
+
+It is not possible by differentiation to reduce — 
+
+
+(6) to a differential equation, because of the 
+occurrence of # in the integrand of (7). We have 
+therefore tried to replace the terms (7) by others, 
+which would lead to a readily soluble system of 
+differential equations, and which would still give 
+a good representation of (7). As we shall see, we 
+can obtain a solution in terms of integrals of 
+elementary functions provided we write in 
+place of (7) 
+
+
+| Bo Ot, €) 
+R-a f ——§—de+ b@(t, E) 
+z : 
+
+
+€ . 
+de 0? 
++cE—(t, E)+dE’—~+--- 
+OF | of? 
+if a, b, c, d are constants. Two elementary con- 
+ditions now limit their choice. 
+1. The number of particles leaving a given 
+energy range by radiation must be equal to the 
+number entering some other range. 
+
+
+RdE=0. 
+
+
+0 
+
+
+2. The energy lost in Ax must be equal to that 
+appearing in the y-rays 
+
+
+Eo Eo 
+f REdE= f ®(t, E)dE. 
+0 0 
+
+
+If these conditions are to hold for any @, then 
+c=d=0, etc. From (1) a+0=0; and from (2) 
+a-+-b/2=1; thus we must have a= —)=2 and 
+
+
+(, €) 
+
+
+£0 @E 
+R=2f 
+E € 
+
+
+(11a) 
+
+
+de—20(t, E). 
+
+
+(11) 
+
+
+229 
+
+
+The use of this form for R corresponds to assum- 
+ing a uniform distribution of energy losses instead 
+of the 1/E law given by (1), and renormalizing 
+to give the correct total energy loss. The produc- 
+tion of y-rays is, however, treated correctly in 
+accordance with (1); it is only the effect of these 
+losses on the redistribution of the electrons them- 
+selves that is falsified. Since it is difficult to give 
+an a priori estimate of the error thus introduced 
+into the solution, we have used the solutions 
+which we have obtained to compare the values of 
+R given by (7) and by (11a). When ¢ is not too 
+small, most of the particles have of course an 
+energy E<E)>. For this case we found that the 
+two values of R agreed within less than 5 percent. 
+It is of some interest to ask why this should be. 
+
+The answer is to be found in the circumstance 
+that for EXE, our energy distribution curves 
+for @ follow quite closely a 1/E? law as Fig. 4 
+shows, and as cloud chamber observations sug- 
+gest that they should. For this law 
+
+
+P(t, Z)~k(t)/E? 
+and for E<Ep, both (7) and (11a) agree in giving 
+R= —k(i)/E’. 
+
+
+The approximation of replacing (7) by (11a) is 
+thus a very good approximation in the range 
+where neither ¢ nor In E/E are too small; and we 
+shall see that it is only here that our results are of 
+direct physical interest, because for small ¢ and 
+E~E, the fluctuations to be expected from the 
+probable behaviors defined by @® and y are 
+all-important. 
+
+Using (11a) for R, and differentiating (6) we 
+get, if we use (10), the differential equation for 2 
+
+
+z+ (2—¢) 8" +24 /E—202/E*—Bs!"=0 (12) 
+
+
+a2i2 
+OT, with o= 3) 
+
+
+20% 
+
+
+Z 
+a +208" + - if ——— Bi" =0. (12) 
+EO F 
+
+
+Here primes denote differentiation with respect 
+to EF and dots with respect to ¢. Eq. (12’) is to be 
+solved with the boundary conditions 
+
+(13) 
+
+
+2(0,E)=0; 2"(0,.E) =A(E, Ey). 
+
+
+224 tis te 
+
+
+III 
+Let us now write 
+A=In (Ey /E£) 
+and try to solve (12’) by a Laplace transfor- 
+mation: 
+s=1/(2ni) { (dy/erF), (14) 
+c 
+
+
+where C is some suitably chosen contour in the y 
+plane. From (12’) we then find 
+
+
+1 
+
+
+dy 
+oe Seth y(t) 
+2rido y 
+
+
+07 Fy 
+
+
+aF, 
++[2ey(y+1) a ea 
+
+
+(8+y)XA 
+
+
+(15) 
+
+
+where 8/ is a very small number. If we neglect 
+these terms, then 
+
+
+Fy = M jee t+ Nye (16) 
+where py, v are the roots of 
+RP +2(o—-1/y+1)e—20/y(y+1) =0, an) 
+
+
+i 
+
+
+"= ott /yt1[(o—1/y+1)24+20/ytD)} 
+Vv 
+and for R(y)>0, u>v. The constants M,, Ny, 
+and the contour C must be chosen to satisfy (13). 
+It is clear that the integrand of (14) will have 
+branch points in the negative half y plane, and 
+that it will -0 as |y|—o. We therefore choose 
+for our contour C a closed path, consisting of a 
+straight line 6—z0 to 6+20, and the infinite 
+semicircle from 6-++-2 through the negative half 
+plane to 6—70. From (13) we get 
+
+
+f dy/yo"F,(0) = 
+
+: (18) 
+[ dyeaF,/at= —2riHA(E, Eo). 
+
+C 
+
+
+If we multiply (18) by e~%, with R(yo) >6, and 
+integrate over \ from 0 to ~, we get 
+
+
+CARLSON AND J. 
+
+
+R. OPPENHEIMER 
+
+
+dy F,(0Q) 1 dy 0OF,(0) 
+f =0, — = — 690) 
+cy¥-VYo Y 2rd c¢Y—Vo Ot 
+with g=lim Ee wor Ale adr 
+a->00 0 I'(n) 
+| (19) 
+
+
+= lim (1+yo/a)~*. 
+
+
+Since F, and 0F,/dt—-0 as |y|— ©, and have no 
+singularities in the right-hand half-plane, this 
+gives 
+
+
+F,(0)=0; odF,(0)/dt= —$(y). 
+
+
+These are the boundary conditions for F. Any 
+other function A which gives an F,—-0 and 
+dF,/dt-0 as leaves them without 
+singularities in the half-plane R(y) >0, and whose 
+limit gives ACE, Ey) =0 for E+ Eo, could clearly 
+be used in place of (9). But for the treatment of 
+ionization losses it is convenient to have the first 
+3 derivatives of A vanish as HE). 
+
+Let us now carry through the solution for 8=0. 
+For this solution we write 20, yo, Po. From (20) 
+
+
+(20) 
+
+
+ly|—, 
+
+
+= —o/(u—»), Ny=$¢/(u-»), (21) 
+1 dy eri—evt 
+See en ey $. (22) 
+27147 ¢ V av 
+
+
+From this we can readily calculate the total 
+energy of gamma-rays and electrons: 
+
+
+Eo 
+
+
+Ed E[0(t, E)+yolt, E)] 
+
+
+cy 1l-y ur 
+
+
+The integral on the right gives the residue of the 
+integrand at y=1, which is just, asa, 
+
+
+2nie™* since p=a, v=—1 when y=1. 
+
+
+Thus the total energy remains constant, as it 
+should, when ionization losses are neglected. For 
+this the condition on the constants in My 
+a+6/2=1, is essential. 
+
+When t or d are large, then (22) may most con- 
+veniently be evaluated by the saddle point 
+method. The approximation here involved is one 
+which corresponds closely to the limitations im- 
+
+
+ON MULTIPLICATIVE SHOWERS 
+
+
+posed upon the physical interpretation of our 
+solution by the fluctuations which must be ex- 
+pected in the actual behavior of the radiation 
+from the average behavior given by our diffusion 
+equations. The effect of these fluctuations can be 
+simply formulated by the physically obvious 
+assertion that the addition or subtraction of a 
+thickness of matter corresponding to t~1 has an 
+even chance of not altering the actual distribu- 
+tion of pairs and gamma-rays. The’ asymptotic 
+form of @, y for large ¢ thus gives us results whose 
+accuracy corresponds to the applicability of the 
+diffusion equations themselves. 
+
+_ The unique saddle point of the first term of the 
+integrand of (22) lies on the positive real axis, at a 
+point which moves out to larger y values mono- 
+tonically as ¢/\ is increased. If we use a subscript 
+s to indicate that functions are to be evaluated at 
+this saddle point, then we find from this term 
+
+
+exp (Ayst+tus) 
+Zo= — (2rp,''t)—? ——_-__—_-, 
+
+
+Yo — Be 7+4/ Eo, 
+Po=UsVsYo- 
+Here ul’ =p /dy?. 
+From the second term of (22) 
+
+
+1 dy ehytvt 
+—o 
+
+
+we obtain a contribution which remains less than 
+Qe-**, where Q is independent of \ and f, asi. 
+For large ¢ this term is thus quite negligible 
+compared to (24). — 
+For \>?, and \<Z, these expressions (24) can 
+be evaluated analytically. Thus (writing o=2/3). 
+For >? | a 
+
+
+Zy = 2-29 th? exp [Ft+32rUF], 
+
+
+| (25) 
+MeVs= 2+ 3th 488, 
+and for \<z, 
+Zo = 2887-33 3t-8N3 exp [3-27 ], 
+ueVe= 27M, (26) 
+
+
+For intermediate values we give a plot of ys 
+against \/t, from which (24) may be evaluated. 
+
+
+It should be observed that usys gives directly the 
+
+
+225 
+
+
+ratio of Po to yo, and that it never exceeds 2/3. At 
+any energy and thickness ¢>1, there are always 
+more y-rays than electrons. | 
+
+The solution we have given can be readily ex- 
+tended to diffusion equations with R of the 
+general form (11); only the dependence of » and 
+yon y becomes more complicated. 
+
+For the treatment of the ionization losses given 
+by the terms in 8, it is simplest to return to (14), 
+and write instead | 
+
+
+1 dy re 
+z= ‘ eh FO +— POW 
+201 cy E 
+
+
+2 
+
+
+: | 
+=F Oars 7 
++ oF (6) (27) 
+
+
+and leave the contour C unaltered. If for F, (¢) 
+we take (16), (21), then (12’) gives, for the first 
+order terms in p. 
+
+
+ark, 1 \ dF, 20 
+— +2(o-——)—*-__- F, 
+ot” yt27 ot (yt1)(yt+2) 
+i y of dy'(y' +1) (9 +2) 
+2rt (Y+1)(y+2)%¢ 5 
+
+
+ply’ )en ert — p(y! enue 
+ee CO) 
+u(y’) — v(y") 
+
+
+The general solution of this is 
+
+
+Fy) /y=A ee t+ Byer t+ Cyeeutye 
+
+
++Dyerurns, (29) 
+where A,= uorey) (y+ Dt+2) 
+| 2(2o-+py) (uv) 
+9a) 
+
+
+— 
+
+
+oo 
+
+
+2(20-+ vy) (u—»v) 
+
+
+and where C, and D, must be chosen to maintain 
+the boundary conditions (13), which require 
+
+
+C Am) + Bw) — Gt) Art By) : 
+. »(y+1) —p(y+1) 
+(29b) 
+p HO TB) Hot Avr By) 
+
+
+yn =: ° 
+
+
+u(y 1) —r(y+1) 
+
+
+226 | a 
+
+
+For R(y) > —1, C, and D, are analytic, jeCEP for 
+a simple pole af Cy at 
+
+
+Yp=(3—4/73)/8~ —0.69 
+and a simple pole of D, at 
+p = (3+9/73)/8~1.44. 
+
+
+The terms of order B in (27) may. then be written 
+
+
+cf eels ext t Bi er(uye 
++ CyettDtt Dyerthe], 
+
+
+E271 
+(30) 
+
+
+For large \ and ¢ only the term 
+
+
+— fave, eu (yt — 
+FEio2t1 
+
+
+is important. 
+
+
+For the second and fourth terms in (30) we can again 
+show that they remain less than 
+
+
+F onal 3t 
+
+
+as t-—> 0, A> & 
+Eo 
+
+
+and are therefore negligible. 
+The term 
+
+
+T= B_ arc, e(ityA+u(ty)e 
+
+
+Fio2x1 
+
+
+may be evaluated by defotiine the contour C to pass 
+through the saddle point at 
+
+
+Yo= —1+4s. 
+
+
+If we call the path taken along a line parallel to the 
+os axis through y,, 2 then 
+
+
+T= d Cy e(ity)A+H(I+y)t 
+_ Pf, : 
++E 9(04—99)G pelt Mencetay 
+where 3(x) = 0 x>0 
++ x=0 
+1 «<0 
+and 
+
+
+Gp=lim (eCy, 46). 
+e— 0 
+
+
+Each of the terms in T gives a contribution negligible for 
+A—> co compared to (31). From the saddle point integral 
+we get a contribution 
+
+
+<8 
+A, 1S emia yshtHst 
+<Q( Re 
+
+
+where Q is an algebraic function of \ and ¢; from the 
+residue we get 
+< Op ead tists (1t+yp)A 
+Eo 
+
+
+CARLSON AND J. 
+
+
+R. OPPENHEIMER 
+
+
+8 
+Ys 
+Fic. 1. Plot of \/t against +. 
+
+
+with Q: a constant. Both of these are small compared to 
+the term 
+
+
+FO se 2A y. e(itys)A+Het 
+0 
+
+
+which we get from the saddle point integral (31). 
+
+From (31), and the application of the saddle 
+point method to the integral occurring in it, we 
+can readily see by what factors the values of 2p, 
+Yo, Po given in (24) must be modified: 
+2=Z0(1 —Bre/E); y= = Bre) Hy 
+
+P=Pp(1 —B(1+1/y.)7;/E) } 
+
+
+C= Yus¥s(4 —Br;/y £4), (32) 
+yy +1) (+2) (o+ny) 
+where SS eee 
+2(2o-+ny) 
+
+
+From (24) and (32) we can thus give @, y as 
+functions of ¢ and £. The ionization correction 
+still further increases, of course, the proportion 
+of y-rays in the radiation. : 
+
+From (32) we see that our approximate calcu- 
+lation of the effect of ionization losses is based 
+upon the smallness of B/E. This parameter is 
+about 12 percent for Pb, 35 percent for Fe, at 
+E=50 Mev. Clearly the treatment here given is 
+limited to energies E>, but within this limit it 
+can tell us what the effect of these losses will be. 
+
+In fact (22) and (31) give the first two terms in 
+the asymptotic expansion in 8/E of a solution 
+of (12’): 
+
+1 dy enttry 
+
+
+B= ~~ —— | — 
+
+
+ol(—y) : ds(—s)¥e~* 
+
+
+CY pV 
+
+
+Buygse 
+xahi( 9, 9442 ail ae ) (33) 
+2ck 
+
+
+ON MULTIPLICATIVE SHOWERS 
+
+
+0) 6 12 Is 
+
+
+Fic. 2. Plot of total number of electrons N(¢) against #, 
+for air, Ey =2500 Mev, computed from (36). The circles are 
+from the experimental results of Pfotzer,* on the variation 
+of vertical coincidence counting rate in the upper atmos- 
+phere, at magnetic latitude ~50°N. At this latitude the 
+earth’s field will just admit electrons of energy 2500 Mev. 
+The deviations from the curve for £>8 may indicate the 
+presence of some electrons of higher energy, as well as a 
+penetrating component. 
+
+
+Here the contour S in the s plane is a simple loop 
+from +. counterclockwise around the origin 
+and back to +; 2f; is the hypergeometric 
+series and 
+g=o(1t+y)/(o+zy). 
+
+That (33) is a solution of (12’) may be verified by 
+direct substitution. It is not of course the solution 
+satisfying the boundary conditions (13); but an 
+iteration of the arguments just given in connec- 
+tion with (31) indicates that the terms which 
+must be added to satisfy (13) give for ¢>1, 
+EE, a negligible contribution. 
+
+For heavy elements such as Pb, (31) gives an 
+adequate approximation to (33) for all energies 
+high enough to make the use of (2) permissible: 
+the pair production formulae break down before 
+the ionization correction becomes very large. For 
+light elements, for the atmosphere, we may apply 
+(33) for E<. To do this we use the analytic 
+continuation of the hypergeometric series, and 
+evaluate the integral over y by the saddle point 
+method. For E/6 <1 we thus find 
+
+(Qrps’t)—? 
+V(E, t) = edpyst Cs—o) t_____ 
+Vs(Us ae Vs) 
+
+
+© rii+y.tgs) i 
+Pity )r2+y)P +g.) E (34) 
+
+
+— lok 6 
+P(E, t) =—— y(&, t) In —. 
+8B E 
+
+
+* Zeits. f. Physik 102, 41 (1936), Fig. 1, p. 42. 
+
+
+227 
+
+
+Hee Ag=ln (2cEo)/(Busyss); and the saddle 
+
+
+point y, is given as the real positive root of 
+
+
+d 20k 
+“ly In +ut| =0 
+dy Buyg 
+
+
+(35) 
+
+
+and may be found from Fig. 1. 
+
+The energy dependence of y and @, which for 
+E> is roughly given by k/E?, becomes, if E<8, 
+ki/E, ko\n B/E, respectively. The increase in y 
+and @ with decreasing energy will be still further 
+reduced at still lower energies by the absorption 
+of the y-rays by Compton effect. The total 
+number of electrons in the range 0—8 depends 
+upon 6 essentially as 
+
+erpus 
+
+
+and its maximum as a function of ¢ is quite 
+closely inversely proportional to 8 or proportional 
+to Z. 
+
+The total number of electrons is easy to com- 
+pute from (33): 
+
+
+Eo 
+N(t)= { O(E, )\dE= —e-"'X(E=0, t) 
+
+
+— as(2s"t) D(i+yetgs) 
+Vo(us— vs) r(ii+y)r(2+y,)l1+¢s) 
+x erpst (Hema) t (36) 
+
+
+where y, is given again by (35). The maximum 
+value of N(¢) occurs for values of ¢ slightly smaller 
+
+
+than Ag. We give Fig. 2 a plot of N(é) against #, for 
+
+
+water, for which we have taken 8=90 Mev, and # 
+is measured: in units of ~0.4m. The primary 
+energy is ~2.5X10* Mev. The maximum of V 
+occurs at about 1.2 meters. It would seem prob- 
+able that the latitude sensitive transition effects 
+of the cosmic-ray ionization in the upper atmos- 
+phere are to be interpreted on this basis. 
+
+It is futile to apply (33) to elements as heavy 
+as Pb, because for energies of the order of 6 the 
+radiative formulae (1), (2) and the diffusion 
+equation based on them become quite wrong. As 
+is well known, the actual behavior of radiation in 
+the range 1-25 Mev in Pb is extremely compli- 
+cated. Since the absorption coefficient for y-rays 
+has a minimum value which for Pb lies at about 
+3 Mev, we know that for sufficiently great 
+thicknesses of matter y-radiation of roughly this 
+energy will predominate over y-rays of higher or 
+
+
+228 Vee CBS 
+
+
+wo 
+
+
+D.ct?/ 100 Mey 
+o 
+
+
+oe 
+
+
+0 4 8 i2 16 
+t 
+
+
+Fic. 3. A plot of the energy degraded into radiation of 
+energy <25 Mev per unit ¢, against ¢. The plot is for 
+Pb, £o= 2X 104 Mev. The abscissae are in units of 4 cm, the 
+ordinates in units 100 Mev. The number of low energy 
+electrons to be expected at ¢ is roughly 0.15 Des(t—3). 
+
+
+lower energy and over electrons of all energies. 
+A rough estimate of the number of low energy 
+electrons we can get by computing the total 
+energy degraded into the low energy region per 
+unit thickness. Let us call the energy so degraded 
+into an energy region 0<E<e, D,(t). This energy 
+has ultimately to be absorbed by the ionization 
+losses of electrons. The number of electrons 
+which in a distance ¢=1 would lose by ionization 
+an energy D,(¢) is 1/8D.(t); it must be remem- 
+bered, however, that because of the relatively 
+great penetration of the low energy gamma-rays 
+(amounting for Pb to t=3-4), the low energy 
+electrons actually present in the radiation at 
+some fixed thickness t= 7 must be evaluated, not 
+from D,(T)/8, but from some appropriately re- 
+tarded value D,(T —r)/8, where r gives the effec- 
+tive mean penetration of the low energy radia- 
+tion, and may be of the order of 2—3 for Pb. It is 
+in this sense that the curves we give for D,(#) are 
+to be interpreted. For the interpretation of ob- 
+servations made with the high pressure, thick- 
+walled ionization chambers which are used in the 
+study of bursts, the variation of D.(t) with { 
+should itself give a valid estimate of the probable 
+variation of the recorded size of the burst with 
+absorber thickness. 
+
+The calculation of D.(t) is straightforward. 
+The total energy lost by the radiation of energy 
+>e per unit ¢ is | 
+
+
+d pte 
+DY (Hs 1 LO(é, t)+y(#, t) JEdE. (37) 
+
+
+€ 
+
+
+CARLSON AND J. R. OPPENHEIMER 
+
+
+The part of this which is accounted for by 
+ionization losses is 
+
+
+Eo 
+D.(t) = i; BO(E, )dE. (38) 
+
+
+Then DAt) =D.) —D.()™. (39) 
+
+
+In this way we find, from (39), (32) and (24) 
+
+
+(ue—o)(1+peys) 
+a a aaa, 
+
+
+Dt) = — etn 
+1—y, 
+
+
+—[(o-w) C14 +y)ucbeotr tee} (40) 
+
+
+Here 2 is given by (24), and is to be evaluated, as 
+are us, ys and 7, for H=e, \X=In Eo/e, t=1. It will 
+be observed that the effect of the terms in @ in 
+(40) is to increase D.(t) when A>?#, and to de- 
+crease it when A\<¢. We give in Fig. 3 a plot of 
+D.{t) for Pb, e=25 Mev, Eo=2X10* Mev. 
+
+Let us now restrict ourselves to E>£8, and ask 
+how the shower will be altered by changes in the 
+initial radiation. 
+
+A. If the incident radiation is a y-ray of energy 
+E, and not an electron, the boundary conditions 
+(20) must be altered to 
+
+
+F,O)=¢y; dF,(0)/dt=0. (41) 
+This gives us 
+1 vert — wert 
+Zofy] = | ———ayorr, (42) 
+211 C Mav 
+
+
+from which it follows that for {> 1, the number of 
+gamma-rays and electrons will be changed by a 
+factor —»,Vy. from the values given by (32). This 
+factor varies from 0.6 to 1.6 over the range of 
+values of ¢/X for which the shower is appreciable. 
+The course and magnitude of the shower will 
+thus depend very little on whether it is started 
+by an electron or a gamma-ray. The maximum of 
+the shower will come for very slightly higher ¢ 
+values when it is initiated by a y-ray. 
+
+B. If the incident radiation is a group of m 
+electrons of energy E,/m, then from (24) 
+
+
+Potm) =M’Po(A—In m, t); 
+(43) 
+Y 0[n] = my (A—In mM, t) 
+
+
+ON MULTIPLICATIVE SHOWERS 
+
+
+and insofar as @(A, ¢) is quite closely of the form 
+k(t)e~*’, for small variations of \, 
+
+
+Potm] = Po 
+
+
+for small m, and the shower will be substantially 
+the same as if one electron of energy Eo had 
+started it. | 
+
+C. As long as we neglect the ionization terms, 
+we can get no “‘transition effects’’ when a shower, 
+built up in one substance, passes into another. 
+But the terms in 8 do give us such effects, in 
+apparent qualitative agreement with what is 
+found experimentally. Let the radiation go a 
+distance ¢, (measured in units approximate to the 
+first substance) in (1), and then a distance ¢» (in 
+units for (2)) in (2). Then the terms independent 
+of 8 in zg are, for #:-+f.>1. 
+
+
+1 dy erytuCiitte) 
+
+
+z=——| —¢ 
+dro y 
+
+
+(44) 
+ei 
+
+
+The boundary conditions 
+O(E,h) in (1)=@(E,4) in (2); 
+VE, hi) in (l)=y(4,41) in (2) 
+
+
+give then, for ¢4:>1, for the terms in 2 propor- 
+tional to B: 
+
+
+1 
+3 dye | Bad yor (Yer t ta) 
+271 C 
+
+
+u(y) —r(y+1) 
+w(y+1) —r(y+1) 
+_ u(y) —w(y+1) 
+
+u(y+1)—v(y+1) 
+
+
+which for tg=0 is just the ionization correction 
+appropriate to (1), and which for f,-~© ap- 
+proaches that appropriate to (2). If 21>2Z:; 
+Bi1<B2 and @ is decreased by the transition; if 
+Z2>Zi, @ is increased. The transient terms which 
+give the transition fall off, relative to the main 
+terms, as 
+
+
+ehl(ytl) te 
+
+
++(8:—B2)A od 
+
+
+errs] (45) 
+
+
+ele(ystl)—vlys\li2 gnd = elv(yst D—v (ys) Tt2, 
+
+
+Thus the second term will be damped out for te~3, 
+but the first term will persist until tg~1.5—2, the 
+transition thickness is therefore of this order of 
+magnitude. For Ay=2X104 Mev, #:=6 the 
+
+
+229 
+
+
+LOG (P Mev) 
+
+
+4 5 6 7 g 
+» 
+
+
+Fic. 4. A logarithmic plot of energy distributions for 
+shower electrons, made for Pb, Ho=1.5105 Mev and 
+t=15, t=8, t=6, and t=4. Abscissae are X\=In Eo/E; 
+ordinates are natural logarithms of @ measured in (Mev)7. 
+A straight line of slope 2 would correspond to a 1/F? 
+distribution law. 
+
+
+transition from Fe to Pb should increase the 
+number of electrons with energy >50 Mev by 
+about 35 percent. 
+
+It must be remembered that the actual transi- 
+tion effects observed are complicated by the fact 
+that the high energy radiation which produces 
+the showers is to some extent being regenerated 
+in the material in which the showers are formed. 
+
+
+IV 
+
+
+In Fig. 4 we give typical energy distribution 
+curves for the pairs, for Pb, and a primary energy 
+of 1.5105 Mev for t=15, 8, 6, 4. In the neigh- 
+borhood of \=8, the ionization corrections are 
+appreciable, but for \<6 the curves will hold for 
+all substances. It will be observed that these 
+curves follow quite closely what we would get 
+from a distribution law k/E?; thus except for =4 
+they may all be represented by a law of this form 
+in which the exponent of £ never differs from —2 
+by more than five percent. In fact this law gives a 
+very good approximation to the energy distribu- 
+tion for ¢>.7\, and for all energies EXE, but 
+>>. We have already pointed out that it is for 
+this reason that the simplification of the diffusion 
+equations made in replacing (7) by (11) is per- 
+missible. Cloud chamber studies® of the energy 
+distribution of shower electrons seem to fit this 
+
+
+law quite well for E>25 Mev, but the experi- 
+
+
+8C, D. Anderson and S. Neddermeyer, Int. Conf. 
+
+
+Physics, London 171 (1934). 
+
+
+230 | J. F. 
+
+
+mental conditions here are clearly not such as to 
+make this agreement very significant. 
+
+Because of the form of the distribution law, a 
+plot of GE will give a good estimate of the total 
+number of electrons to be expected with energies 
+=F. For Pb, E=50 Mev, and several values of 
+Eo varying from 2700 Mev up to 1.1X10® Mev 
+we give such plots against ¢ (Fig. 5). The rapid 
+increase with Fo of the total number of particles, 
+and the slow shift in the position of the maximum, 
+confirm the qualitative arguments of §2. We 
+would like to interpret in terms.of this shift the 
+well-known observation that the optimum transi- 
+tion thickness for bursts is considerably larger 
+than for showers. In fact, the agreement between 
+the experimental values of the optimal transition 
+thicknesses (~2 cm Pb for showers, ~5 cm Pb 
+for bursts) with the position of the maxima of 
+these curves, seems to us a strong argument for 
+the correctness of the model we are treating, and 
+of the validity of the high energy formulae we 
+have used. In particular the experiments of Nie,° 
+in which it is shown that a burst generated in a 
+suitable layer of matter may sometimes have its 
+magnitude very much increased by the inter- 
+position of a few cm of Pb find a very natural 
+interpretation in terms of these theoretical 
+curves. It must be remembered, however, that 
+the experimental transition curves, which give 
+the dependence on # of the probability of finding 
+a shower or burst whose magnitude exceeds a 
+lower limit defined by the experimental arrange- 
+ment are not strictly comparable with the curves 
+of Fig. 5 which give the variation, for fixed Eo of 
+the probable number of electrons.” For in making 
+this comparison the initial distribution of the 
+radiation over Ey must clearly be taken into 
+account. We want here, too, to point out that the 
+actual behavior of the radiation will fluctuate 
+about that given by our curves, and that the 
+order of magnitude of the probable fluctuations 
+can be estimated by shifting the curves by 
+Ai~ +1. 
+
+
+9 Nie, Zeits. f. Physik 99, 776 (1936). 
+
+10 When counters are used to detect showers, the angular 
+divergence of the shower rays is necessarily exploited. ‘If 
+the theory here developed is at all correct, most of these 
+rays must have a relatively low energy, of the order of 
+several million volts. In fact only cloud chamber observa- 
+tion can tell us much about radiation of much higher 
+energy. . 
+
+
+CARLSON AND J. R. OPPENHEIMER 
+
+
+—_—————— 
+0 5 10 i) 20 25 30 
+t 
+
+
+Fic. 5. Plots against ¢ of @-E for E=50 Mev in Pb. 
+(a) Eo=2.7X103, (b) Eop=2X10!, (c) Ho=1.5X105; 
+(d) Eo=1.110* Abscissae are in units of 3 cm; ordinates 
+in units of 1, 4, 10, and 50 for (a), (b), (c) and (d), re- 
+spectively. These plots also give the number of electrons of 
+energy 250 Mev to be expected as a function of t. 
+
+
+The application of our methods to £o as low as 
+2700 Mev may seem unjustified. Here our results, 
+however, agree reasonably with those computed 
+by Bhabha and Heitler" with neglect of ioniza- 
+tion losses and of processes of high order. For 50 
+Mev the inclusion of ionization losses reduces 
+the number of electrons to be expected by 15-20 
+percent. 
+
+It may be helpful to give a brief summary of 
+the general results. For any absorber we measure 
+length (£) in units which are proportional, roughly, 
+to Z’9/A, where Z is the nuclear charge, A the 
+atomic weight, and p the density, and we define 
+the characteristic energy 6 (see (3)), which varies 
+about like 1/Z. Then, 
+
+(1) The number of electrons per unit energy 
+is about inversely. proportional to the square of 
+the energy, as long as B< EE, t>49n. 
+
+(2) For given energy and ¢>1, there are 
+always more y-rays than electrons; where the 
+
+
+11 Reference 8. Heitler and Bhabha give for Ey)=2.7 X 108 
+Mev, a value PE=4, maximum for t=4; we get PE=4.5 
+at t=4. This discrepancy, and the fact that we find the 
+maximum at f~~5, are both in the direction to be expected 
+from the effects of higher order processes. ) 
+
+
+ON MULTIPLICATIVE SHOWERS 
+
+
+shower is near its maximum, this tatio varies 
+from 1.5—2. 
+
+(3) For E> 8, the distribution curves plotted 
+against ¢ are the same for all absorbers. | 
+
+(4) The number of particles of energy greater 
+than E,>8 passes through a maximum for a 
+value of ¢ which increases logarithmically with 
+FE, /F, and is always quite close to lng Eo/Fi. | 
+
+(5) The maximum number of particles with an 
+energy less than some small multiple of @ is 
+attained for values of ¢ which are slightly smaller 
+than In E)/8, and decrease: slowly with decreas- 
+ing Z. The total number of particles of energy in 
+this range is about inversely proportional to 8, 
+or proportional to Z. 
+
+(6) The maximum size of the shower is 
+limited only by £» with which it increases not 
+quite linearly: thus an increase in Ey by a factor 
+of 100 gives an increase in shower size of about 70. 
+
+(7) If the initial energy Eo is in an incident 
+y-ray, or is divided among a few electrons and 
+
+
+gamma-rays, the course of the shower will be 
+
+
+essentially unaltered. 
+
+(8) Passage of a shower from one material (1) 
+to another (2) will increase the size of the shower 
+if Z.>Z,, decreases it if Z1>Z>. The transition 
+takes place in a thickness #,~1}. All of these 
+
+
+231 
+
+
+results apply only for energies Ey above 10% Mev. 
+
+In this paper we have altogether neglected the 
+question of how such high energy electrons and 
+y-rays can get down through the atmosphere. 
+How serious this difficulty is we can see from (32), 
+which tells us that for every electron of energy 
+~2X105 Mev which hits the earth vertically, 
+only 0.15 electron of energy >550 Mev will 
+survive at the earth’s surface. This difficulty is 
+made even sharper when we consider the form of 
+the shower curves for great thicknesses ¢ > 30, or 
+the showers and bursts reported under very great 
+thicknesses of absorber. In fact, although when 
+we go up far in the atmosphere, the showers, and 
+still more markedly, the bursts, increase more 
+rapidly than the total cosmic-ray ionization, 
+below the atmosphere they do not fall off much 
+more rapidly than this ionization. This suggests 
+that, in addition to primary electrons and per- 
+haps. y-rays, which are able to produce multipli- 
+cative showers directly, there is another cosmic- 
+ray component, slowly absorbed, which is re- 
+sponsible for the continuation of the showers 
+under thicknesses of absorber to which no elec- 
+tron or photon can itself penetrate. Some sug- 
+gestions which we think relevant to the solution 
+of this problem will be discussed in another 
+
+
+paper. 
+
+

@@ -1,0 +1,38 @@
+{
+  "name": "@onlyoffice/server-client",
+  "private": true,
+  "type": "module",
+  "main": "lib/main.ts",
+  "exports": {
+    ".": "./lib/main.ts",
+    "./client.ts": "./lib/client.ts",
+    "./document-editor.ts": "./lib/document-editor.ts"
+  },
+  "scripts": {
+    "demo:server": "store-demo",
+    "playwright": "cd node_modules/@web/test-runner-playwright/node_modules/.bin && ./playwright",
+    "test:all": "pnpm test:types && pnpm test:unit && pnpm test:e2e",
+    "test:e2e": "web-test-runner",
+    "test:types": "tsc",
+    "test:unit": "c8 --all --src lib --exclude main.ts --exclude main.e2e.ts --reporter html --reporter text --check-coverage --branches 80 --functions 80 --lines 80 --statements 80 --per-file tsx node_modules/uvu/bin.js lib ^.*\\.unit\\.ts$",
+    "test": "tsx test.ts"
+  },
+  "dependencies": {
+    "@onlyoffice/document-server-types": "workspace:^",
+    "typescript": "^5.4.5"
+  },
+  "devDependencies": {
+    "@onlyoffice/node-http": "workspace:^",
+    "@onlyoffice/store-demo": "workspace:^",
+    "@types/mocha": "^10.0.6",
+    "@types/node": "^20.12.12",
+    "@web/dev-server": "^0.4.4",
+    "@web/dev-server-esbuild": "^1.0.2",
+    "@web/test-runner": "^0.18.2",
+    "@web/test-runner-playwright": "^0.11.0",
+    "c8": "^9.1.0",
+    "esbuild": "^0.21.4",
+    "tsx": "^4.10.5",
+    "uvu": "^0.5.6"
+  }
+}

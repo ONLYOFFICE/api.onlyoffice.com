@@ -1,0 +1,315 @@
+8 Science and Synthesis 
+EINSTEIN’S PRESENCE * 
+
+
+J. Robert Oppenheimer + It is an honor to be in this company, the tenth 
+year after Einstein’s death, the fiftieth anniversary of his discovery of the 
+general theory of relativity. 
+
+As the President has said, though I knew Einstein for two or three decades, 
+it was only in the last decade of his life that we were close colleagues and 
+something of friends. But I thought that it might be useful, because I am sure 
+that it is not too soon — and for our generation perhaps almost too late — to 
+start to dispel the clouds of myth and to see the great mountain peak that these 
+clouds hide. As always, the myth has its charms; but the truth is far more 
+beautiful. 
+
+Late in his life, in connection with his despair over weapons and wars, Ein- 
+stein said that if he had to live it over again he would be a plumber. This was 
+a balance of seriousness and jest that no one should now attempt to disturb. 
+Believe me, he had no idea of what it was to be a plumber; least of all in the 
+United States, where we have a joke that the typical behavior of this specialist 
+is that he never brings his tools to the scence of the crisis. Einstein brought his 
+tools to his crises; Einstein was a physicist, a natural philosopher, the greatest 
+of our time. 
+
+What we have heard, what you all know, what is the true part of the myth, 
+is his extraordinary originality. The discovery of quanta would surely have 
+come one way or another, but he discovered them. Deep understanding of 
+what it means that no signal could travel faster than light would surely have 
+come; the formal equations were already known; but this simple, brilliant 
+understanding of the physics could well have been slow in coming, and blurred, 
+had he not done it for us. The general theory of relativity which, even today, is 
+not well proved experimentally, no one but he would have done for a long, 
+long time. It is in fact only in the last decade, the last years, that one has seen 
+how a pedestrian and hard-working physicist, or many of them, might reach 
+that theory and understand this singular union of geometry and gravitation, 
+and we can do even that today only because some of the a priori open pos- 
+sibilities are limited by the confirmation of Einstein’s discovery that light 
+would be deflected by gravity. 
+
+Yet there is another side besides the originality. Einstein brought to the 
+work of originality deep elements of tradition. It is only possible to discover in 
+part how he came by it, by following his reading, his friendships, the meager 
+record that we have. But of these deep-seated elements of tradition —I will 
+not try to enumerate them all; I do not know them all — at least three were 
+indispensable and stayed with him. 
+
+
+* Title added after the author’s death. 
+
+
+The Scientific Synthesis 9 
+
+
+The first is from the rather beautiful but recondite part of physics that is the 
+explanation of the laws of thermodynamics in terms of the mechanics of large 
+numbers of particles, statistical mechanics. This was with Einstein all the time. 
+It was what enabled him from Planck’s discovery of the law of black body 
+radiation to conclude that light was not only waves but particles; particles 
+with an energy proportional to their frequency and momentum determined by 
+their wave-number, the famous relations that de Broglie was to extend to all 
+matter, to electrons first and then clearly to all matter. 
+
+
+It was this statistical tradition that led Einstein to the laws governing the 
+emission and absorption of light by atomic systems. It was this that enabled 
+him to see the connection between de Broglie’s waves and the statistics of light- 
+quanta proposed by Bose. It was this that kept him an active proponent and 
+discoverer of the new phenomena of quantum physics up to 1925. 
+
+The second and equally deep strand — and here I think we do know where 
+it came from — was his total love of the idea of a field: the following of 
+physical phenomena in minute and infinitely subdividable detail in space and 
+in time. This gave him his first great drama of trying to see how Maxwell’s 
+equations could be true. They were the first field equations of physics; they are 
+still true today with only very minor and well-understood modifications. It is 
+this tradition which made him know that there had to be a field theory of 
+gravitation, long before the clues to that theory were securely in his hand. 
+
+The third tradition was less one of physics than of philosophy. It is a form 
+of the principle of sufficient reason. It was Einstein who asked what do we 
+mean, what can we measure, what elements in physics are conventional? He 
+insisted that those elements that were conventional could have no part in the 
+real predictions of physics. This also had roots: for one the mathematical in- 
+vention of Riemann, who saw how very limited the geometry of the Greeks had 
+been, how unreasonably limited. But in a more important sense, it followed 
+from the long tradition of European philosophy, you may say, starting with 
+Descartes — if you wish, you can start it in the thirteenth century, because in 
+fact it did start then — and leading through the British empiricists, and very 
+clearly formulated, though probably without influence in Europe, by Charles 
+Peirce: one had to ask how do we do it, what do we mean, is this just some- 
+thing that we use to help ourselves in calculating, or is it something that we 
+can actually study in nature by physical means. For the point here is that the 
+laws of nature not only describe the results of observations, but the laws of 
+nature delimit the scope of observations. That was the point of Einstein’s 
+understanding of the limiting character of the velocity of light; it also was the 
+nature of the resolution in quantum theory, where the quantum of action, 
+Planck’s constant, was recognized as limiting the fineness of the transaction 
+between the system studied and the machinery used to study it, limiting this 
+fineness in a form of atomicity quite different from and much more radical 
+
+
+10 Science and Synthesis 
+
+
+than any that the Greeks had imagined or that was familiar from the atomic 
+theory of chemistry. 
+
+In the last years of Einstein’s life, the last twenty-five years, his tradition in 
+a certain sense failed him. They were the years he spent at Princeton and this, 
+though a source of sorrow, should not be concealed. He had a right to that 
+failure. He spent those years, first, in trying to prove that the quantum theory 
+had inconsistencies in it. No one could have been more ingenious in thinking 
+up unexpected and clever examples, but it turned out that the inconsistencies 
+were not there; and often their resolution could be found in earlier work of 
+Einstein himself. When that did not work, after repeated efforts, Einstein had 
+simply to say that he did not like the theory. He did not like the elements of 
+indeterminacy. He did not like abandonment of continuity or of causality. 
+These were things that he had grown up with, saved by him, and enormously 
+enlarged; and to see them lost, even though he had put the dagger in the 
+hand of their assassin by his own work, was very hard on him. He fought with 
+Bohr in a noble and furious way, and he fought with the theory which he had 
+fathered but which he hated. That is not the first time it has happened in 
+science. 
+
+He also worked with a very ambitious program, to combine the understand- 
+ing of electricity and gravitation in such a way as to explain what he regarded 
+as the semblance — the illusion — of discreteness, of particles in nature. I think 
+that it was clear then, and I believe it to be obviously clear today, that the 
+things that this theory worked with were too meager, left out too much that 
+was known to physicists but had not been known much in Einstein’s student 
+days. Thus it looked like a hopelessly limited and historically rather acciden- 
+tally conditioned approach. Although Einstein commanded the affection, or, 
+more rightly, the love of everyone for his determination to see through his pro- 
+gram, he lost most contact with the profession of physics, because there were 
+things that had been learned which came too late in life for him to concern 
+himself with them. 
+
+Einstein was indeed one of the friendliest of men. I had the impression that 
+he was also, in an important sense, alone. Many very great men are lonely; 
+yet I had the impression that although he was a deep and loyal friend, the 
+stronger human affections played a not very deep or very central part in his 
+life taken as a whole. He had of course incredibly many disciples, in the sense 
+of people who, reading his work or hearing it taught by him, learned from him 
+and had a new view of physics, of the philosophy of physics, of the nature of 
+the world that we live in. But he did not have, in the technical jargon, a school. 
+He did not have very many students who were his concern as apprentices and 
+disciples. And there was an element of the lone worker in him, in sharp con- 
+trast to the teams we see today, and in sharp contrast to the highly co-operative 
+way in which some other parts of science have developed. In later years, he 
+had people working with him. They were typically called assistants and they 
+
+
+The Scientific Synthesis 11 
+
+
+had a wonderful life. Just being with him was wonderful. His secretary had a 
+wonderful life. The sense of grandeur never left him for a minute, nor his sense 
+of humor. The assistants did one thing which he lacked in his young days. His 
+early papers are paralyzingly beautiful, but there are many errata. Later there 
+were none. I had the impression that, along with its miseries, his fame gave 
+him some pleasures, not only the human pleasure of meeting people but the 
+extreme pleasure of music played not only with Elizabeth of Belgium but more 
+with Adolphe Busch, for he was not that good a violinist. He loved the sea and 
+he loved sailing and was always grateful for a ship. I remember walking home 
+with him on his seventy-first birthday. He said, “You know, when it’s once 
+been given to a man to do something sensible, afterward life is a little strange.” 
+
+Einstein is also, and I think rightly, known as a man of very great goodwill 
+and humanity. Indeed, if I had to think of a single word for his attitude 
+towards human problems, I would pick the Sanscrit word “Ahinsa”, not to 
+hurt, harmlessness. He had a deep distrust of power; he did not have that 
+convenient and natural converse with statesmen and men of power that was 
+quite appropriate to Rutherford and to Bohr, perhaps the two physicists of this 
+century who most nearly rivalled him in eminence. In 1915, as he made the 
+general theory of relativity, Europe was tearing itself to pieces and half losing 
+its past. He was always a pacifist. Only as the Nazis came into power in 
+Germany did he have some doubts, as his famous and rather deep exchange of 
+letters with Freud showed, and began to understand with melancholy and 
+without true acceptance that, in addition to understanding, man sometimes has 
+a duty to act. 
+
+After what you have heard, I need not say how luminous was his intelli- 
+gence. He was almost wholly without sophistication and wholly without 
+worldliness. I think that in England people would have said that he did not 
+have much “background,” and in America that he lacked “education.” This 
+may throw some light on how these words are used. I think that this sim- 
+plicity, this lack of clutter and this lack of cant, had a lot to do with his preser- 
+vation throughout of a certain pure, rather Spinoza-like, philosophical monism, 
+which of course is hard to maintain if you have been “educated” and have a 
+“background.” There was always with him a wonderful purity at once child- 
+like and profoundly stubborn. 
+
+Einstein is often blamed or praised or credited with those miserable bombs. 
+This is not in my opinion true. The special theory of relativity might not have 
+been beautiful without Einstein; but it would have been a tool for physicists, 
+and by 1932 the experimental evidence for the inter-convertibility of matter 
+and energy, which he had predicted, was overwhelming. The feasibility of 
+doing anything with this in such a massive way was not clear until seven years 
+later, and then almost by accident. This was not what Einstein really was 
+after. His part was that of creating an intellectual revolution, and discovering 
+more than any scientist of our time how profound were the errors made by 
+
+
+12 Science and Synthesis 
+
+
+men before then. He did write a letter to Roosevelt about atomic energy. 
+I think this was in part his agony at the evil of the Nazis, in part not wanting 
+to harm any one in any way; but I ought to report that that letter had very 
+little effect, and that Einstein himself is really not answerable for all that came 
+later. I believe he so understood it himself. 
+
+
+His was a voice raised with very great weight against violence and cruelty 
+wherever he saw them and, after the war, he spoke with deep emotion and I 
+believe with great weight about the supreme violence of these atomic weapons. 
+He said at once with great simplicity: now we must make a world government. 
+It was very forthright, it was very abrupt, it was no doubt “uneducated,” no 
+doubt without “background;” still all of us in some thoughtful measure must 
+recognize that he was right. 
+
+Without power, without calculation, with none of the profoundly political 
+humor that characterized Gandhi, he nevertheless did move the political 
+world. In almost the last act of his life, he joined with Lord Russell in suggest- 
+ing that men of science get together and see if they could not understand one 
+another and avert the disaster which he foresaw from the arms race. The so- 
+called Pugwash movement which has a longer name now, was the direct result 
+of this appeal. I know it to be true that it had an essential part to play in the 
+Treaty of Moscow, the limited test-ban treaty, which is a tentative, but to me 
+very precious, declaration that reason might still prevail. 
+
+In his last years, as I knew him, Einstein was a twentieth century Eccle- 
+siastes, saying with unrelenting and indomitable cheerfulness, “Vanity of 
+vanities, all is vanity.” 
+
+
+THE UNIFIED FIELD THEORY 
+
+
+Werner Heisenberg Among the many ideas which Einstein has pursued in 
+connection with his theory of general relativity, his proposal of a unified 
+theory has aroused the widest interest on account of its philosophical implica- 
+tion. Einstein has suggested that such different phenomena as gravitation, 
+electromagnetism and material bodies could ultimately be described by one 
+fundamental field or system of fields; that all the different empirical laws of 
+nature could be expressed by one universal system of non-linear equations for 
+the components of this field. From a philosophical point of view this possi- 
+bility looks very attractive. Different groups of phenomena, like gravitation 
+and electricity, can scarcely be separated completely. They may influence each 
+other, and therefore the laws of nature responsible for them cannot be com- 
+pletely independent. The unified field theory would contain the different laws 
+as special cases and would at the same time establish the connection and 
+thereby state the structure of nature. 
+
+
+SCIENCE AND 
+SYNTHESIS 
+
+
+An International Colloquium organized by Unesco on 
+the Tenth Anniversary of the Death of Albert Einstein 
+and Teilhard de Chardin 
+
+
+RENE MAHEU 
+FERDINAND GONSETH 
+
+J. ROBERT OPPENHEIMER 
+WERNER HEISENBERG 
+REVEREND DOMINIQUE DUBARLE 
+SIR JULIAN HUXLEY 
+GIORGIO DE SANTILLANA 
+GERALD HOLTON 
+
+B. M. KEDROV 
+
+FRANCOIS LE LIONNAIS 
+LOUIS DE BROGLIE 
+
+RENE POIRIER 
+
+PIERRE AUGER 
+
+JEAN PIVETEAU 
+REVEREND PIERRE LEROY 
+
+
+French Contributions Translated by 
+BARBARA M. CROOK 
+
+
+SPRINGER-VERLAG BERLIN - HEIDELBERG: NEW YORK 1971 
+
+
+Translated from the French by Barbara M. Crook, with the exception of the papers by 
+J. R. Oppenheimer, W. Heisenberg, Sir Julian Huxley, G. Holton and B. M. Kedrov, 
+also certain contributions to the debates, which were originally delivered in English. 
+
+
+All rights reserved. 
+Original publication in French by Gallimard. 
+
+
+© 1967 by Unesco. 
+Softcover reprint of the hardcover Ist edition 1967 
+
+
+Library of Congress Catalog Card Number 77-143044 
+
+
+ISBN-13: 978-3-642-95208-1  c-ISBN-13: 978-3-642-95206-7 
+DOI: 10.1007/ 978-3-642-95206-7 
+
+

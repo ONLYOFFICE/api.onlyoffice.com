@@ -1,0 +1,148 @@
+OCTOBER 1, 1938 
+
+
+PHYSICAL REVIEW 
+
+
+VOLUME 54 
+
+
+LETTERS TO THE EDITOR 
+
+
+Prompi publication of brief reports of imporiant discoveries in physics may be secured by 
+addressing them to this department. Closing dates for this department are, for the first issue of the 
+month, the eighteenth of the preceding month, for the second issue, the third of the month. Because of 
+the late closing dates for the section no proof can be shown to authors. The Board of Editors does 
+not hold itself responsible for the opinions expressed by the correspondents. 
+
+
+Communications should not in general exceed 600 words in length. 
+
+
+On the Stability of Stellar Neutron Cores 
+
+
+The quite regular variation of stellar energy generation 
+with stellar mass has seemed to justify the hope that neither 
+the structure nor the mechanism of energy generation 
+would differ essentially from star to star. With increased 
+knowledge of the rates of nuclear reactions, it has grown 
+clear that such reactions must take place in stellar in- 
+teriors, and that, on the basis of a standard Eddington 
+model, reactions must occur which can account in order of 
+magnitude for the radiation of the lighter stars. In par- 
+ticular it would seem that the formation of deuterons by 
+proton collision, and at the least partially regenerative 
+capture of protons by elements between carbon and oxygen 
+could be made to account successfully for the main sequence 
+stars.1 Nevertheless it has been clear that these reactions 
+could in no way account for the enormously greater radia- 
+tion of such stars as Capella, and that for these either one 
+would have to invoke other and readier nuclear reactions, 
+with a correspondingly reduced time scale, or one would 
+here be led, as in the earlier arguments of Milne, to expect 
+serious deviations from the Eddington model. 
+
+It is in this connection that the suggestion? of a condensed 
+neutron core, which would make essential deviations from 
+the Eddington model possible even for stars so light that 
+without a core a highly degenerate central zone could not 
+be stable, still seems of some interest. Essential for a dis- 
+cussion of the role of such a core, is the estimate of the 
+minimum mass for which it will be stable. An estimate of 
+Landau, based apparently on the requirement that the 
+sum of the gravitational and kinetic energies per particle 
+of core should be lower than the energy per particle in stable 
+nuclei (Landau chose oxygen), led to the value 0.001 solar 
+
+-masses for the limiting mass. This figure appears to be 
+wrong; if one takes only gravitational attraction into ac- 
+count, the binding energy of a neutron in the core does not 
+become equal to nuclear binding energies until the core 
+mass is about 4 that of the sun. It is true that Landau’s 
+requirement is unnecessarily severe: In order that the core 
+be stable with respect to the most firmly bound nuclei (say 
+calcium) it is only necessary that the neutron’s free energy 
+in the core be less than that in the nucleus. Since the total 
+core energy is proportional to the 7/3 power of the number 
+of particles, the magnitude of the free energy in the core 
+is 7/3 the mean binding energy. One thus gets a limiting 
+core mass of 3 that of the sun. It seems that these results 
+can be obtained without serious error by assuming a uni- 
+form density for the core: The actual polytrope gives only 
+a slightly greater stability (roughly ten percent). 
+
+
+' A core of this high mass, even in a star considerably more 
+massive than the sun, would involve a complete breakdown 
+in the Eddington model, since so heavy a core would be 
+surrounded by a degenerate zone which would use up the 
+star’s total mass. The question of the actual stability of core 
+models thus involves a consideration of the contribution of 
+nuclear forces to the coré-binding. The forces which must 
+be known are those acting between a pair of neutrons; and 
+no existing nuclear experiment or theory gives a complete 
+answer to this question. If, however, we assume that the 
+forces between neutrons are of the spin exchange saturating 
+type (c-o’), they help to reduce the lower limiting mass for 
+core stability only to about yo that of the sun; the de- 
+generate zone surrounding such a core must have nearly 
+the sun’s mass; and thus if such a core existed, the Edding- 
+ton model would be completely wrong except perhaps for 
+very massive stars. 
+
+If, on the. other hand, one gives:up the requirement of 
+saturating two body forces and accepts an explanation of 
+saturation along the lines of the suggestion of Critchfield 
+
+
+- and Teller,? he will be led to suppose that the forces be- 
+
+
+tween all pairs of nuclear. particles are, except for Coulomb 
+forces, the same, and that the only important factor making 
+the binding energy of a neutron in the core smaller than in © 
+say a Ca nucleus is the increased kinetic energy which the 
+promotion required by the exclusion principle involves. 
+With this assumption the minimum core mass is very much 
+reduced, and a mass of a few percent of that of the sun 
+would insure its stability..For core masses under 0.03 that 
+of the sun, the mass of the degenerate zone will be less than 
+that of the core. | 
+
+It seems clear that even in the heaviest stars no core will 
+be formed until practically all sources of nuclear energy 
+have been, at least for the central material of the star, 
+exhausted. The arguments given above cannot, therefore, 
+be regarded as showing that, even with the most favorable 
+assumption about nuclear forces, actual stars have cores; 
+
+
+~ but they do show that forces of the often assumed spin 
+
+
+exchange type preclude the existence of a core for stars with 
+masses comparable to that of the sun. 
+J. R. OPPENHEIMER 
+ROBERT SERBER 
+
+
+Department of Physics, 
+University of California, 
+Berkeley, California, | 
+September 1, 1938. 
+
+
+1 Bethe and: Critchfield, Phys. Rev. 54, 248 (1938). We are indebted 
+to Dr. Bethe for an interesting discussion of these questions. 
+
+2Gamov, Atomic Nuclei and Nuclear Transformations, second edition 
+(Oxford, 1936), p. 234. Landau, Nature 141, 333 (1938). 
+
+3 Critchfield and Teller, Phys. Rev. 53, 812. (1938). 
+
+
+540 
+
+

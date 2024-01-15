@@ -1,0 +1,90 @@
+.tree {
+  color: var(--tree-foreground-color);
+}
+
+.tree__limb {
+  list-style: none;
+  margin: 0;
+  padding-inline-start: 16px;
+}
+
+.tree__limb_bole {
+  padding-inline-start: 0;
+}
+
+.tree__branch {
+  margin-top: 8px;
+}
+
+.tree__branch:first-of-type {
+  margin-top: 0;
+}
+
+.tree__branch_bole {
+  margin-top: 30px;
+}
+
+.tree__branch_bole > .tree__limb {
+  padding-inline-start: 0;
+}
+
+.tree__twig {
+  pointer-events: none;
+  overflow-x: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.tree__twig ~ .tree__limb {
+  margin-top: 8px;
+}
+
+.tree__twig_closed ~ .tree__limb {
+  display: none;
+}
+
+.tree__fruit {
+  pointer-events: auto;
+  cursor: pointer;
+  background-color: transparent;
+  border: 0;
+  padding: 0;
+  width: 8px;
+}
+
+.tree__fruit * {
+  pointer-events: none;
+}
+
+.tree__fruit svg {
+  color: var(--tree-dropdown-color);
+}
+
+.tree__leaf {
+  pointer-events: auto;
+  color: inherit;
+  font-size: 13px;
+  padding-inline-start: 16px;
+  text-decoration: none;
+}
+
+.tree__leaf:hover,
+.tree__leaf:focus {
+  color: var(--tree-focus-foreground-color);
+}
+
+.tree__leaf_current {
+  color: var(--tree-focus-foreground-color);
+}
+
+.tree__leaf_bole {
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--tree-heading-foreground-color);
+  padding-inline-start: 0;
+}
+
+.tree__fruit ~ .tree__leaf {
+  margin-left: 8px;
+  padding-inline-start: 0;
+}

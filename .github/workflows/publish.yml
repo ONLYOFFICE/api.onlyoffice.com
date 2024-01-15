@@ -1,0 +1,43 @@
+name: Publish
+
+on:
+  workflow_dispatch:
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v4
+
+    - name: Setup NodeJS
+      uses: actions/setup-node@v4
+      with:
+        node-version-file: "package.json"
+
+    - name: Setup pnpm
+      uses: pnpm/action-setup@v3
+      with:
+        version: "^9"
+
+    - name: Install Dependencies
+      run: pnpm install --frozen-lockfile
+
+    - name: Build Resources
+      run: cd ./resources && pnpm build
+
+    - name: Build UI Kit
+      run: |
+        cd ./ui/icon
+        pnpm build
+        cd ./ui/logo
+        pnpm build
+
+    - name: Build Site
+      timeout-minutes: 15
+      run: cd ./site && pnpm build
+
+    # - name: Publish Site
+    # Once the content has been built, you can find it in the `./site/dist`
+    # directory. Be aware that this directory could contain as many as 5000
+    # files. You can tar it to better deliver content to the server.

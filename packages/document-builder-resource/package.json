@@ -1,0 +1,31 @@
+{
+  "name": "@onlyoffice/document-builder-resource",
+  "private": true,
+  "type": "module",
+  "exports": {
+    "./*": "./dist/*"
+  },
+  "scripts": {
+    "build": "tsx lib/main.ts",
+    "test:types": "tsc",
+    "test": "pnpm test:types"
+  },
+  "dependencies": {
+    "@onlyoffice/library-declaration": "workspace:^",
+    "@types/node": "^20.12.12",
+    "typescript": "^5.4.5"
+  },
+  "devDependencies": {
+    "@onlyoffice/console": "workspace:^",
+    "@onlyoffice/jq": "workspace:^",
+    "@onlyoffice/jsdoc-declaration": "workspace:^",
+    "@onlyoffice/library-resource": "workspace:^",
+    "@onlyoffice/resource": "workspace:^",
+    "@onlyoffice/stream-string": "workspace:^",
+    "@types/stream-chain": "^2.0.4",
+    "@types/stream-json": "^1.7.7",
+    "stream-chain": "^2.2.5",
+    "stream-json": "^1.8.0",
+    "tsx": "^4.10.5"
+  }
+}

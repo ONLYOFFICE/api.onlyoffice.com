@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>ONLYOFFICE Document Builder HTML Element</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <style>body {height: 100vh}</style>
+    <script type="module" src="../lib/main.ts"></script>
+  </head>
+  <body>
+    <p>
+      <textarea>// Builder command
+builder.CreateFile("docx");
+const document = Api.GetDocument();
+const paragraph = document.GetElement(0);
+paragraph.AddText("This is just a sample text");
+builder.SaveFile("docx", "document.docx");
+builder.CloseFile();
+      </textarea>
+      <button type="button">Execute</button>
+    </p>
+    <template>
+      <document-builder
+        document-server-url="http://0.0.0.0:3000/"
+        ondocumenteditorappready='console.log("Document Editor is ready")'
+        ondocumentbuilderready='console.log("Document Builder is ready")'
+        ondocumenteditorerror="console.error(event.message)"
+        ondocumentbuildererror="console.error(event.message)"
+        onerror="console.error(event.message)"
+      ></document-builder>
+    </template>
+    <script type="module">
+    const ta = document.querySelector("textarea")
+    const ft = DocumentBuilder.fileType(ta.value)
+
+    const cu = new URL("/config", "http://0.0.0.0:4000/")
+    cu.searchParams.set("fileType", ft)
+
+    const cr = await fetch(cu)
+    const cs = await cr.text()
+
+    const te = document.querySelector("template")
+    const tc = te.content.cloneNode(true)
+    const db = tc.querySelector("document-builder")
+    db.setAttribute("config", cs)
+    db.setAttribute("command", ta.value)
+    document.body.appendChild(db)
+
+    const bt = document.querySelector("button")
+    bt.addEventListener("click", async () => {
+      const ta = document.querySelector("textarea")
+      const ft = DocumentBuilder.fileType(ta.value)
+
+      const cu = new URL("/config", "http://0.0.0.0:4000/")
+      cu.searchParams.set("fileType", ft)
+
+      const cr = await fetch(cu)
+      const cs = await cr.text()
+
+      const db = document.querySelector("document-builder")
+      db.setAttribute("config", cs)
+      db.setAttribute("command", ta.value)
+    })
+    </script>
+  </body>
+</html>

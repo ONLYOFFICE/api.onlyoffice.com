@@ -1,0 +1,205 @@
+PHYSICAL REVIEW 
+
+
+VOLUME 73, 
+
+
+NUMBER 10 MAY 15, 1948 
+
+
+Note on Stimulated Decay of Negative Mesons 
+
+
+S. T. Epstein, R. J. FINKELSTEIN, AND J. R. OPPENHEIMER 
+Institute of Advanced Study, Princeton, New Jersey 
+
+
+(Received February 5, 1948) 
+
+
+Theories in which the decay of negative mesons is accelerated by electrostatic fields are 
+investigated. Such theories always give radiative decay for free mesons. The competition of 
+radiationless decay of negative mesons increases with Z5, and the two rates become equal 
+for a value of Z, which depends somewhat on the choice of coupling, but which, for one simple 
+form, is 12. Experimental evidence probably disproves theories of this kind. 
+
+
+ALLEY and Rossi! have reported their 
+studies of the decay of mesons in aluminum. 
+They find that the lifetime of negative mesons in 
+that material is about 3 that of positive mesons. 
+They also refer to the suggestion* that the 
+shortened lifetime may be interpreted, not in 
+terms of competing nuclear capture of mesons, 
+but by the acceleration of the decay process itself, 
+presumably because of the strong electric fields 
+acting on negative mesons when they are bound 
+in atomic states. If this were true, we should 
+clearly have a natural interpretation of the 
+regular and marked decrease of observed delayed 
+coincidences from negative mesons as the effective 
+intensity of the electric field increases with 
+atomic number. 
+
+One general feature of any theory which 
+provides for appreciable acceleration of meson 
+decay by electric fields needs first to be noted. 
+In effect, even in the absence of matter, fluc- 
+tuating electric fields, ascribable to the vacuum 
+fluctuations, will always be present. These will 
+in turn lead to stimulated decay accompanied by 
+the emission of light quanta. Thus, in all theories 
+of this kind, the decay of mesons in free space 
+must, at least frequently, be accompanied by 
+y-ray emission. When negative mesons are 
+trapped in matter, the electrostatic fields of the 
+nuclei compete with the fluctuation fields, giving 
+rise to processes in which no quanta are emitted, 
+and whose probability may be expected to 
+increase markedly with atomic number. 
+
+We wish to report briefly some typical cal- 
+culations bearing on this point. However, we 
+
+
+1G. Valley and B. Rossi, Phys. Rev. 73, 177 (1948). 
+
+* These questions were discussed at the Ram Island 
+Conference sponsored by the National Academy of Sciences, 
+June, 1947, 
+
+
+need to note, in a preliminary way, that the 
+evidence? as it stands is probably not com- 
+patible with the view that normal meson decay 
+involves light quantum emission. It need hardly 
+be pointed out that the results of Anderson’ and 
+his collaborators in which a decay positron has 
+an observed energy of 25 Mev could readily be 
+explained in these terms. 
+
+For the calculations we have assumed that 
+the spin of the meson is 0 (it cannot be greater 
+than 4); it then does not affect these results 
+whether the meson field is scalar or pseudoscalar. 
+
+One might at first take, as a simple interaction 
+which promises to account for a stimulated 
+decay, the coupling 
+
+
+2¢nty"¢.0,U-+complex conjugate, (A) 
+
+
+where ¢,, ¢-, and U are the neutrino, electron, 
+and meson wave functions and 0,=(0/0x,) 
+—(1e/hc)A,. As is well known, the free disin- 
+tegration of a meson into electron and neutrino 
+is highly forbidden with this coupling, and one 
+might suppose that electromagnetic fields would 
+circumvent the selection rule. That this is not 
+true follows from the remark of Nelson,‘ that, 
+in fact, the coupling (A) is for these purposes 
+equivalent to the scalar coupling 
+
+g(m/n) Pn* Pe U, (A’) 
+(with m the electron, » the meson, masses) 
+except for terms of higher order in g, which do 
+not enter here. Estimates based on these coup- 
+lings indicate that the decay rate in aluminum 
+
+
+2For example, R. D. Sard, and E. J. Althaus (to be 
+published). 
+( 3 the Adams, Lloyd, and Rau, Phys. Rev. 72, 724 
+1947). 
+4E. C. Nelson, Phys. Rev. 60, 830 (1941). 
+
+
+1140 
+
+
+STIMULATED DECAY OF NEGATIVE MESONS 
+
+
+is not changed by more than 1 percent from the 
+rate for free mesons. 
+
+We have, therefore, examined more complex 
+coupling schemes, such as are obtained by adding 
+to the Lagrangian one of the four following forms 
+
+
+gFuvgenty*y’ eeU, (B) 
+BF’ onty" ped, (C) 
+BF U0 ent ¥* ee) (D) 
+gh U ent y"Orge- (E) 
+
+
+Of these, we have examined only (B) and (C) 
+in detail. The result of the calculation can be 
+expressed in terms of the ratio A,/A; where A; is the 
+rate of ternary free decay, and X, is the rate of bin- 
+ary stimulated decay for a negative meson trapped 
+in its atomic K-shell. These ratios are completely 
+fixed by the coupling, and of course independent 
+of the value of g. The results are 
+
+
+\s/Az = (256/3) (e?/hc)4Z* for (B), 
+= 1280(e?/hc)*Z5 for (C). 
+
+
+The general character of these results can be 
+understood by a simple argument. The vacuum 
+fluctuations leading to the emission of quanta of 
+energy ~uc? can be characterized by an electric 
+field of the order 
+
+
+Ey = (he)*/(h/uc)?. 
+
+
+On the other hand, the electric field acting on a 
+
+
+1141 
+
+
+meson in the K-shell is 
+Ey, = Ze/[ (h/uc) (he/e?)Z~ J. 
+Hence, for the ratio of the two rates 
+(E;,/ Es)? = 2°(e/he)*. (1) 
+
+
+Detailed calculation shows, however, that in 
+these high energy disintegrations the effective 
+distance of the meson from the nucleus is 
+
+
+(h/uc)(Ze*/hc)* 
+rather than the K-radius 
+(h/wc) (Ze*/he)—, 
+as assumed above. This alters the ratio (1) to 
+Z5(e?/he)*. (2) 
+
+
+We can compare these results with the findings 
+of Valley and Rossi by asking for what value of 
+Z we get a X, twice the value of A;. Valley and 
+Rossi find Z~13; (B) gives Z=24; (C) gives 
+Z=14. This latter result would clearly be con- 
+sistent with experiment. Because of the unlikeli- 
+hood that the basic mechanisms here proposed 
+are realized in nature, we have not examined the 
+cases (D) and (E) in detail. 
+
+It is, of course, conceivable that the accelera- 
+tion of decay would have to be ascribed, not to 
+the electric fields of nuclei, but to the charge 
+density itself. In this case, free decay would not 
+involve y-ray emission, though it would involve 
+pair emission. It has not seemed profitable to 
+explore these complex alternatives. 
+
+

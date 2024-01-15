@@ -1,0 +1,59 @@
+LETTERS TO 
+
+
+unified, however, by rotating the container of the suspension 
+within the magnetic field around an axis parallel to the d1- 
+rection of the (OO01 | axis which one wishes to obtain for the 
+suspension.* It is obvious that by a turn around 90° the 
+particles whose (0001) planes have not been parallel to 
+the field will be acted upon by a ponderomotoric force, 
+correcting for this deviation. This effect is amplified greatly 
+_by bringing the particles gradually into an inhomogeneous 
+region of the magnet. It is thus possible to line up all 
+particles in both directions in a few minutes. Only then 
+the suspending medium is hardened. The microphotographs 
+Figs. 1 and 2 show such hardened gelatine suspensions of 
+large graphite flakes, obtained without and with rotation 
+and seen in the direction of the lines of force. 
+
+
+THE EDITOR 283 
+
+
+Referring to the remark of Professor Krishnan about the 
+‘‘more or less uniform’’ size of the particles, it may be 
+mentioned that greatest care was taken by fractionated 
+sedimentation and centrifugation to have the variation of 
+sizes of the particles not larger than 5 percent.® 
+
+ALEXANDER GOETZ 
+
+California Institute of Technology, 
+
+January 31, 1934. 
+
+
+4 This idea originated with Dr. A. Faessler first for which 
+contribution I wish to give him full credit. 
+
+5 A detailed description of the methods and results will 
+soon be published in the Zeitschrift fiir Physik. 
+
+
+Errata.—The Production of Positives by Nuclear Gamma-Rays 
+(Puys. REv. 44, 948, 1933) 
+
+
+The factor preceding the integral in Eq. (2) should read 
+a/3ary® instead of a/ry’. 
+
+In the second column in the tenth line of the first para- 
+graph the expected yield of positives should be about 
+
+
+6x<10-8 instead of 6X10 per alpha-particle. 
+Leo NEDELSKY 
+J. R. OPPENHEIMER 
+University of California. 
+
+

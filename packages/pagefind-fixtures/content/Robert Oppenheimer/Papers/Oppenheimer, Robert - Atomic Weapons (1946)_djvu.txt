@@ -1,0 +1,523 @@
+Pt tn 
+(for, 4s | 
+eee TaD = 
+i fi a = <b = f 
+ot ‘Ol 
+SPae ty i 
+let, BP E: 
+i 4 7 # ‘ 
+s - ' | I 
+or 
+
+
+Ay AN 
+cae yp ge Res 
+
+
+-h} - 
+
+
+Atomic Weapons 
+
+Author(s): J. R. Oppenheimer 
+
+Source: Proceedings of the American Philosophical Society, Vol. 90, No. 1, Symposium on 
+Atomic Energy and Its Implications (Jan., 1946), pp. 7-10 
+
+Published by: American Philosophical Society 
+
+Stable URL: http://www.jstor.org/stable/3301032 
+
+Accessed: 10-06-2016 23:51 UTC 
+
+
+Your use of the JSTOR archive indicates your acceptance of the Terms & Conditions of Use, available at 
+
+
+http://about.jstor.org/terms 
+
+
+JSTOR is a not-for-profit service that helps scholars, researchers, and students discover, use, and build upon a wide range of content in a trusted 
+digital archive. We use information technology and tools to increase productivity and facilitate new forms of scholarship. For more information about 
+
+
+JSTOR, please contact support @jstor.org. 
+
+
+American Philosophical Society is collaborating with JSTOR to digitize, preserve and extend access to 
+Proceedings of the American Philosophical Society 
+
+
+This content downloaded from 129.101.79.200 on Fri, 10 Jun 2016 23:51:40 UTC 
+All use subject to http://about.jstor.org/terms 
+
+
+ATOMIC WEAPONS 
+J. R. OPPENHEIMER 
+
+
+Professor of Theoretical Physics, California Institute of Technology and the University of California 
+(Read November 16, 1945, in the Symposium on Atomic Energy and its Implications) 
+
+
+Wuat you have good reason to wish to hear 
+from me today, what circumstances have perhaps 
+qualified me to discuss with you on the basis of 
+experience, is how to make atomic weapons. It 
+is true, as we have so often and so earnestly said, 
+that in the scientific studies which we had to carry 
+out at Los Alamos, in the practical arts there de- 
+veloped, there was little of fundamental discovery, 
+there was no great new insight into the nature of 
+the physical world. But we had many surprises; 
+we learned a good many things about atomic nuclei 
+and many more about the behavior of matter 
+under extreme and unfamiliar conditions; and not 
+too few of the undertakings were in their quality 
+and style worthy of the best traditions of physical 
+science. It would not be a dull story; it is being 
+recorded in a handbook of fifteen volumes, much 
+of which we think will be of interest to scientists 
+even if they are not by profession makers of 
+atomic bombs. It would be a pleasure to tell you 
+a little about it. It would be a pleasure to help 
+you to share our pride in the adequacy and the 
+soundness of the physical science, of our common 
+heritage, that went into this weapon, that proved 
+itself last summer in the New Mexico desert. 
+
+That would not be a dull story; but it is not one 
+that I can tell today. It would be too dangerous 
+to tell that story. That is what the President, on 
+behalf of the people of the United States, has told 
+us. That is what many of us, were we forced our- 
+selves to make the decision, might well conclude. 
+What has come upon us, that the insight, the 
+knowledge, the power of physical science, to the 
+cultivation of which, to the learning and teaching 
+of which we are dedicated, has become too danger- 
+ous to be talked of even in these halls? It is that 
+question that faces us now, that goes to the root of 
+what science is and what its value is; it is to that 
+question to which tentatively, partially, and with 
+a profound sense of its difficulty and my own in- 
+adequacy, I must try to speak today. 
+
+It is not a familiar question to us in these late 
+days. It is not a familiar situation. If it seems 
+to bear analogy to that raised by other weapons, 
+to the need for a certain secrecy, let us say, in the 
+
+
+discussion of howitzers or torpedoes, that analogy 
+will mislead us. There are some accidents in this 
+situation, some things that may in the large light 
+of history seem contingent. Atomic weapons are 
+based on things that are in the very frontier of 
+physics; their development is inextricably en- 
+tangled with the growth of physics, as in all prob- 
+ability with that of the biological sciences, and 
+many practical arts. Atomic weapons were actu- 
+ally made by scientists, even, some of you may 
+think, by scientists normally committed to the ex- 
+ploration of rather recondite things. The speed of 
+the development, the active and essential partici- 
+pation of men of science in the development, have 
+no doubt contributed greatly to our awareness of 
+the crisis that faces us even to our sense of re- 
+sponsibility for its resolution. But these are con- 
+tingent things. What is not contingent is that we 
+have made a thing, a most terrible weapon, that 
+has altered abruptly and profoundly the nature of 
+the world. We have made a thing that by all the 
+standards of the world we grew up in is an evil 
+thing. And by so doing, by our participation in 
+making it possible to make these things, we have 
+raised again the question of whether science is 
+good for man, of whether it is good to learn about 
+the world, to try to understand it, to try to control 
+it, to help give to the world of men increased in- 
+sight, increased power. Because we are scientists, 
+we must say an unalterable yes to these questions: 
+it is our faith and our commitment, seldom made 
+explicit, even more seldom challenged, that knowl- 
+edge is a good in itself, knowledge and such power 
+as must come with it. 
+
+One will perhaps think back to the early days 
+of physical science'in western culture when it was 
+felt as so deep a threat to the whole Christian 
+world. One will remember the more recent times 
+of the last century where such a threat was seen 
+by some in the new understanding of the rela- 
+tions between man and the rest of the living world. 
+One may even remember the concern among the 
+learned at some of the developments of physics, 
+the theory of relativity, even more the ideas of 
+complentarity, and their far-reaching implications 
+
+
+PROCEEDINGS OF THE AMERICAN PHILOSOPHICAL SOCIETY, VOL. 90, No. 1, JANUARY, 1946 
+
+
+This content downloaded from 129.101.79.200 on Fri, 10 Jun 2016 23:51:40 UTC 
+All use subject to http://about.jstor.org/terms 
+
+
+8 J. R. OPPENHEIMER 
+
+
+on the relations of common sense and of scientific 
+discovery, their enforced reminder, familiar to 
+Hindu culture but rather foreign to that of Europe, 
+of the latent inadequacies of human conceptions 
+to the real world they must describe. One may 
+think of these things, and especially of the great 
+conflicts of the renaissance, because they reflect 
+the truth that science is a part of the world of 
+men; that often before it has injected into that 
+world elements of instability and change; that if 
+there is peril in the situation today, as I believe, 
+we may look to the past for reassurance that our 
+faith in the value of knowledge can prevail. 
+
+An atomic bomb is not a new conception, a new 
+discovery of reality: it is a very ordinary thing in 
+some ways, compact with much of the science that 
+makes our laboratories and our industry. But it 
+will change men’s lives as over the centuries the 
+knowledge of the solar system changed them; for 
+in a world of atomic weapons wars will cease. 
+And that is not a small thing, not small in itself, 
+as the world knows today perhaps more bitterly 
+than ever before, but perhaps in the end even 
+greater in the alterations, the radical if slow alter- 
+ations, in the relations between men and between 
+nations and cultures, that it implies. 
+
+It can only help us, I believe, to recognize these 
+issues as rather great issues. We can _ serve 
+neither ourselves, nor the cause of the freedom 
+and growth of science, nor our fellow men, if we 
+underestimate the difficulties, or if we through 
+cowardice becloud the radical character of the con- 
+flict and its issue. During our lifetime perhaps 
+atomic weapons could be either a great or a small 
+trouble. They cannot be a small hope. They can 
+be a great one. 
+
+Sometimes, when men speak of the great hope 
+and the great promise of the field of atomic energy, 
+they speak, not of peace, but of atomic power and 
+of nuclear radiations. Certainly these are proper 
+enthusiasms, enthusiasms that we must all share. 
+The technical feasibility of deriving virtually un- 
+limited amounts of power from controlled nuclear 
+reactors seems nearly certain, and realization of 
+plants to demonstrate the advantages and limita- 
+tions of such power does not seem, from the point 
+of view of technical effort, remote. One must 
+look at history to learn that such possibilities will 
+in time be found of value, will in time come to 
+play an important, even if at this moment not 
+thoroughly understood, part in our industry and 
+economy. You have heard this morning of some 
+of the biological and medical problems and uses of 
+
+
+radiation from such reactors. Even physicists can 
+think of some instructive things to do with the 
+grams of neutrons such reactors make available. 
+And all of us, who have seen something of the 
+growth of science, know very well that what we 
+can discern of the possibilities in these fields is a 
+very small part of what will turn up when we get 
+into them. 
+
+Nevertheless, it would seem somewhat wrong 
+to me to let our confidence—in my view our 
+wholly justified confidence—in the future of the 
+peaceful applications of nuclear physics distract us 
+entirely from the immediacy, and the peril, of 
+atomic weapons. It would not be honest to do so, 
+for not even a better understanding of the physical 
+world, not even the most welcome developments 
+of therapy, should make us content to see these 
+weapons turned to the devastation of the earth. 
+It will not even be very practical to do so. Tech- 
+nically, the operation of reactors and the manu- 
+facture of weapons are rather closely related. 
+Wherever reactors are in operation there is a 
+potential source, not necessarily a convenient one, 
+of materials for weapons; wherever materials are 
+made for weapons they can be used for reactors 
+that may be well suited to research or power de- 
+velopment. And it would seem to me almost 
+inevitable that in a world committed to atomic 
+armament the shadows of fear, secrecy, constraint, 
+and guilt would hang heavily over much of nuclear 
+physics, much of science. Scientists in this 
+country have been quick to sense this and to 
+attempt to escape it. I do not think that this 
+attempt can be very successful in a world of 
+atomic armament. 
+
+There is another set of arguments whose intent 
+is to minimize the impact of atomic weapons, and 
+thus to delay or to avert the inevitably in the end 
+radical changes in the world which their advent 
+would seem to require. There are people who say 
+they are not such very bad weapons. Before the 
+New Mexico test we sometimes said that too, writ- 
+ing down square miles and equivalent tonnages 
+and looking at the pictures of a ravaged Europe. 
+After the test we did not say it any more. Some 
+of you will have seen photographs of the Nagasaki 
+strike, seen the great steel girders of factories 
+twisted and wrecked; some of you may have no- 
+ticed that these factories that were wrecked were 
+miles apart. Some of you will have seen pictures 
+of the people who were burned, or had a look at 
+the wastes of Hiroshima. That comb at Nagasaki 
+would have taken out ten square miles, or a bit 
+
+
+This content downloaded from 129.101.79.200 on Fri, 10 Jun 2016 23:51:40 UTC 
+All use subject to http://about.jstor.org/terms 
+
+
+ATOMIC WEAPONS 9 
+
+
+more, if there had been ten square miles to take 
+out. Because it is known that the project cost us 
+two billion dollars, and we dropped just two 
+bombs, it is easy to think that they must be very 
+expensive. But for any serious undertaking in 
+atomic armament—and without any elements of 
+technical novelty whatever, just doing things that 
+have already been done—that estimate of cost 
+would be high by something like a factor of a 
+thousand. Atomic weapons, even with what we 
+know today, can be cheap. Even with what we 
+know how to do today, without any of the new 
+things, the little things and the radical things, 
+atomic armament will not break the economic back 
+of any people that want it. 
+
+The pattern of the use of atomic weapons was 
+set at Hiroshima. They are weapons of aggres- 
+sion, of surprise, and of terror. If they are ever 
+used again it may well be by the thousands, or 
+perhaps by tens of thousands; their method of 
+delivery may well be different and may reflect new 
+possibilities of interception, and the strategy of 
+their use may well be different from what it was 
+against an essentially defeated enemy. But it is 
+a. weapon for aggressors, and the elements of sur- 
+prise and of terror are as intrinsic to it as are the 
+fissionable nuclei. 
+
+One of our colleagues, a man most deeply com- 
+mitted to the welfare and growth of science, ad- 
+vised me not long ago not to give too much weight 
+in any public words to the terrors of atomic wea- 
+pons as they are and as they can be. He knows 
+as well as any of us how much more terrible they 
+can be made. “It might cause a reaction,” he said, 
+“hostile to science. It might turn people away 
+from science.” He is not such an old man, and I 
+think it will make little difference to him, or to any 
+of us, what is said now about atomic weapons if 
+before we die we live to see a war in which they 
+are used. I think that it will not help to avert such 
+a war if we try to rub the edges off this new terror 
+that we have helped bring to the world. I think 
+that it is for us among all men, for us as scientists 
+perhaps in greater measure because it is our tradi- 
+tion to recognize and to accept the strange and the 
+new, I think it is for us to accept as fact this new 
+terror, and to accept with it the necessity for those 
+transformations in the world which will make it 
+possible to integrate these developments into hu- 
+man life. I think we cannot in the long term pro- 
+tect science against this threat to its spirit and 
+this reproach to its issue unless we recognize the 
+threat and the reproach and help our fellow men 
+
+
+in every way suitable to remove their cause. Their 
+cause 1S war. 
+
+If I return so insistently to the magnitude of 
+the peril, not only to science, but to our civiliza- 
+tion, it is because I see in that our one great hope. 
+As a further argument against war, like arguments 
+that have always existed, that have grown with 
+the gradual growth of modern technology, it is not 
+unique ; as a further matter requiring international 
+consideration, like all other matters that so require 
+it, it is not unique. But as a vast threat, and a new 
+one, to all the peoples of the earth, by its novelty, 
+its terror, its strangely promethean quality, it has 
+become, in the eyes of many of us, an opportunity 
+unique and challenging. 
+
+It has proven most difficult to make those 
+changes in the relations between nations and peo- 
+ples, those concurrent and mutually dependent 
+changes in law, in spirit, in customs, in concep- 
+tions—and they are all essential and no one of 
+them is absolutely prior to the others—that should 
+make an end to war. It has not only been difficult ; 
+it has been impossible. It will be difficult in the 
+days ahead, difficult and beset with discourage- 
+ments and frustrations, and it will be slow. But it 
+will not be impossible. If it is recognized, as I 
+think it should be recognized, that this, for us, in 
+our time, is the fundamental problem of human 
+society, that it is a precondition not only for civi- 
+lized life, or for freedom, but for the attainment 
+of any living human aspiration, then it will not be 
+impossible. These are very major commitments, 
+nor would I minimize their depth. For they in- 
+volve holding prior to all else we cherish—all that 
+we would live for and die for—our common bond 
+with all peoples everywhere, our common responsi- 
+bility for a world without war, our common confi- 
+dence that in a world thus united the things that 
+we cherish—learning and freedom and humanity— 
+will not be lost. 
+
+These words may seem visionary, but they are 
+not meant so. It is a practical thing to avert an 
+atomic war. It is a practical thing to recognize 
+the fraternity of the peoples of the world. It isa 
+practical thing to recognize as a common responsi- 
+bility, wholly incapable of unilateral solution, the 
+completely common peril that atomic weapons 
+constitute for the world, to recognize that only 
+by a community of responsibility is there any hope 
+of meeting the peril. It could be an eminently 
+practical thing to attempt to develop these arrange- 
+ments and that spirit of confidence between peo- 
+ples that are needed for the control of atomic 
+
+
+This content downloaded from 129.101.79.200 on Fri, 10 Jun 2016 23:51:40 UTC 
+All use subject to http://about.jstor.org/terms 
+
+
+10 J. R. OPPENHEIMER 
+
+
+weapons. It could be practical to regard this as 
+a pilot plant for all those other necessary inter- 
+national arrangements without which there will be 
+no peace. For this is a new field, less fettered than 
+most with vested interest or with the vast inertia 
+of centuries of purely national sovereignty; this is 
+a new field, growing out of a science inspired by 
+the highest ideals of international fraternity. 
+
+It would seem somewhat visionary and more 
+than a little dangerous to hope that work on atomic 
+energy and atomic weapons might proceed as have 
+so many things in the past, like the building of 
+battleships, on a purely and narrowly national au- 
+thority, without basic confidence between peoples, 
+without cooperation or the abrogation in any way 
+of sovereignty, and to hope that with such a course 
+an armament race would not develop, that some- 
+how these separate, distrustful atomic arsenals 
+would make for the peace of the world. It would 
+seem to me visionary in the extreme, and not prac- 
+tical, to hope that methods which have so sadly 
+failed to avert war in the past will succeed in the 
+face of this far graver peril. 
+
+It would in my opinion be most dangerous to 
+regard, in these shattering times, a radical solution 
+as less practical than a conventional one. It would 
+also be most dangerous, and most certain to lead 
+to tragic discouragements, to expect that a radical 
+solution can evolve rapidly, or that its evolution will 
+be free of the gravest conflicts and uncertainties. 
+The first steps in implementing the international1- 
+zation of responsibility—of responsibility perhaps 
+in the first instance for averting the perils of an 
+atomic war—will inevitably be very modest. It 1s 
+surely not proper for me, who have neither experi- 
+ence nor knowledge, to speak of what such steps 
+might be. But there are two things that perhaps 
+might be borne in mind that we might wish to say 
+as scientists. One is that, not only politically but 
+technically, this field of atomic energy is a very 
+new field and a very rapidly changing one, and 
+that it would be well to stress the interim, tenta- 
+tive character of any arrangements that might in 
+the near future seem appropriate. The second is 
+that in the encouragement and cultivation of the 
+exchange between nations of scientists and stu- 
+dents we would see, not only an opportunity for 
+strengthening the fraternity between scientists of 
+different lands, but a valuable aid in establishing 
+confidence among the nations as to their interests 
+
+
+and activities in science generally, and in the fields 
+bearing on atomic energy in particular. It is not 
+at all as a species of super-intelligence that we 
+should propose this; it is rather as a concrete and 
+constructive, if limited, form of those relations of 
+cooperation among nations which must be the hope 
+of the future. Let me say again: these remarks 
+are not intended in any way to define or exhaust 
+the content of any international arrangements it 
+may be possible or appropriate to make, nor to 
+limit them; they are offered as suggestions that 
+occur naturally to a scientist who would wish to 
+be helpful, but they leave quite untouched the 
+basic problems of statesmanship on which all else 
+depends. 
+
+There will have been little in these words that 
+can have been new to anyone. For months now 
+there has been among scientists, as well as many 
+others, a concrete, often a most confusingly articu- 
+late concern, both for the critical situation in which 
+nuclear physics finds itself and for the more gen- 
+eral dangers of atomic war. It seems to me that 
+these reactions among scientists, that have caused 
+them to meet and speak and testify and write and 
+wrangle without remission, and that are general 
+almost to the point of universality, reflect, correctly 
+reflect, an awareness of unparalleled crisis. It is 
+a crisis because, not only the preferences and tastes 
+of scientists are in jeopardy, but the substance of 
+their faith: the general recognition of the value, 
+the unqualified value, of knowledge, of scientific 
+power and progress. Whatever the individual 
+motivation and belief of the scientist, without that 
+recognition from his fellow men of the value of 
+his work, in the long term science will perish. I 
+do not believe that it will be possible to transcend 
+the present crisis in a world in which the works 
+of science are being used, and are being knowingly 
+used, for ends men hold evil; in such a world it 
+will be of little help to try to protect the scientist. 
+from restraints, from controls, from an imposed 
+secrecy, which he rightly finds incompatible with 
+all he has learned to believe and cherish. There- 
+fore, it has seemed necessary to me to explore 
+somewhat the impact of the advent of atomic wea- 
+pons on our fellow men, and the courses that might 
+lie open for averting the disaster that they invite. 
+I think there is only one such course, and that in 
+it lies the hope of all our futures. 
+
+
+This content downloaded from 129.101.79.200 on Fri, 10 Jun 2016 23:51:40 UTC 
+All use subject to http://about.jstor.org/terms 
+
+

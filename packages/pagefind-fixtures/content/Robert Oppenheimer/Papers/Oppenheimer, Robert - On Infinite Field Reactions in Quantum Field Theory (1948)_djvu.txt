@@ -1,0 +1,311 @@
+224 LETTERS TO 
+
+
+TABLE I. Saturation of the ammonia (3,3) line in a rectangular guide. 
+
+
+Relative saturation 
+
+
+Incident power Experimental 
+Milliwatts Theoretical Theoretical (ref. 3) 
+2.7 X10-4 1.00 (1.00) 1.00 
+5.5 X10-2 0.89 (0.88) 0.82 
+5.5 X10-1 0.45 (0.43) 0.48 
+§.3 0.10 (0.08) 0.08 
+
+
+with the equation of Snyder and Richards is obtained if 
+one assumes that only 62 percent of the collisions effective 
+in broadening the absorption line also restore thermal 
+equilibrium (see Table I, third column). 
+
+The results of Pond and Cannon! are more difficult to 
+interpret, because in their experiment the energy density 
+varied strongly along the guide as well as on a cross section, 
+due to the standing waves set up in the equipment. Still, 
+from the magnitude of the effect one can estimate the 
+relaxation time to be of the order of ten microseconds. 
+This means that collision with the wall is the mechanism 
+that re-establishes thermal equilibrium. Most of the width 
+of the line is therefore due to a non-dissipative cause, the 
+Doppler effect. The theory so far developed cannot be 
+applied to interpret the experiment. One may notice, 
+however, that over the 200-fold variation in incident power 
+investigated by Pond and Cannon, the absorption coefh- 
+cient varies inversely as the cube root of the power. 
+Hence, this is the transition region from constant absorp- 
+tion coefficient (low power level) to constant total power 
+absorbed (high power level). It is somewhat surprising 
+that the transition is so gradual. 
+
+To summarize, then: the data on the saturation of ab- 
+sorption lines broadened only by intermolecular collisions 
+are in agreement with a theory which treats Zeeman com- 
+ponents as independent contributors to the absorption and 
+assumes that all collisions restore thermal equilibrium. 
+
+* U.S. Rubber Company, Predoctoral Fellow. 
+
+1T. A. Pond and W. F. Cannon, Phys. Rev. 72, 1121 (1947). 
+
+2B, Bleaney and R. P. Penrose, Proc. Phys. Soc. 60, 83 (1948). 
+
+3R. L. Carter and W. V. Smith, Phys. Rev. 73, 1053 (1948). 
+
+4C, H. Townes, Phys. Rev. 70, 665 (1946). 
+
+5H. S. Snyder and P. I. Richards, Phys. Rev. 73, 1178 (1948). 
+
+
+6 R. Karplus and J. Schwinger, Phys. Rev. 73, 1020 (1948). 
+7R. Karplus, Phys. Rev. 73, 1120 (1948). 
+
+
+On Infinite Field Reactions in Quantum 
+Field Theory 
+
+
+SIN-ITIRO TOMONAGA 
+Physics Institute, Tokyo Bunrika Daigaku, Tokyo, Japan 
+June 1, 1948 
+
+
+N interpreting the level-shift of the hydrogen atom in 
+terms of the radiative reaction, Bethe! proposed a 
+method of dealing with this problem without touching the 
+inherent divergency of the current quantum field theory. 
+By his theory it has become possible to treat the problem 
+involving field reactions for the first time in close con- 
+nection with the reliable experimental data. On the other 
+
+
+THE EDITOR 
+
+
+hand, Lewis? and Epstein? analyzed the infinities occurring 
+in the radiative correction to the scattering cross-section 
+of an electron in an external field of force and found that 
+also these infinities could be got over by means of a pro- 
+cedure similar to Bethe’s. In a recent issue of the PHYSICAL 
+REvIEw, Schwinger‘ pointed out that in these problems 
+the method of canonical transformation was useful, by 
+which the separation from the fields of the parts belonging 
+to free photons and non-radiating electrons was per- 
+formed, a method which can be regarded as a relativistic 
+generalization of the procedure used by Bloch and Nord- 
+sieck5 as well as by Pauli and Fierz® in the discussions 
+about the self-field of an electron. 
+
+Almost the same line of attack was taken independently 
+of these American authors also by our Tokyo group and 
+some results are now in course of publication in our English 
+journal, Progress of Theoretical Physics. Under the un- 
+favorable conditions after wartime, however, it will be a 
+long time before these papers will appear in print. So I 
+should like to give here a brief summary of the state and 
+views of our investigations. 
+
+We first treated the effect of field reactions in the colli- 
+sion problem on the f-field theory of Pais’—or the C-meson 
+theory of Sakata,’ which had been developed by Sakata 
+independently of Pais—intending to examine whether this 
+theory which had been put forward aiming at the elimina- 
+tion of the infinity occurring in the self-energy of charged 
+particles, was also capable of cancelling out the infinity 
+occurring in the scattering cross section of an electron. 
+We found that this was really the case: the f-field was 
+proved capable of compensating one part of the infinite 
+reactions of the radiation field in this phenomenon. The 
+other part of infinities, that is, of the positron theoretical 
+origin, however, could not be eliminated by introducing 
+this new field.® 
+
+Then the above mentioned work of Bethe appeared. 
+We tried!° to formulate Bethe’s procedure in a mathe- 
+matically more closed form by using a relativistic gen- 
+eralization of the canonical transformation of Pauli and 
+Fierz. By this transformation an infinite term could be 
+separated in the Hamiltonian density, and this term, we 
+found, had the same form as the mass term in the Dirac 
+equation, being bilinear in y* and y. Because of its struc- 
+ture this infinite term can be amalgamated into the mass 
+term of the Dirac equation and one can reinterpret the 
+electron mass in such a way that the compound mass is 
+just what we observe, corresponding to the idea of Bethe. 
+This procedure violates neither the invariance of the 
+theory nor the integrability condition of the generalized 
+Schrédinger equation." In order to investigate the effective- 
+ness of this amalgamation of infinity into the electron 
+mass, we applied the method to the problem lying close 
+at our hand, i.e., the radiative correction to the scattering 
+cross section of an electron.” We found this amalgamation 
+was in fact effective in eliminating the non-positron theo- 
+retical infinity in this problem, a fact that was pointed 
+out independently by Lewis. It was also shown that the 
+infinity of the positron theoretical origin could be elimi- 
+nated by reinterpreting the scattering external potential 
+or by reinterpreting the electron charge. 
+
+
+LETTERS TO 
+
+The result of the canonical transformation shows on the 
+other hand that there occurs an infinity of another type, a 
+term containing electromagnetic potential bilinearly. Be- 
+cause of this structure this infinity is to be attributed to 
+the vacuum polarization effect. In order to see the role to 
+be played by this effect in collision phenomena we analyzed 
+the infinities occurring in the e?-correction to the Klein- 
+Nishina formula. In this problem, we found, besides the 
+infinities of the types mentioned above, an infinity which 
+is closely related to the above mentioned vacuum effect. 
+Infinity of this kind can be, in fact, driven away from the 
+cross section when we substract beforehand the infinite 
+term of the vacuum type from the Hamiltonian. But for 
+this subtraction we cannot find a reasoning so natural and 
+plausible as that used in the case of mass-type and charge- 
+type infinities, where the subtraction was considered as an 
+amalgamation. This is because it would necessarily result 
+in a drastic change of the Maxwell equation for the 
+radiation. 
+
+A way out of this difficulty was suggested :“ it might be 
+possible to introduce some fields which would give rise to 
+the vacuum effect with the opposite sign so that a com- 
+pensation method similar to the f-field theory might be 
+used here. In fact, one finds, applying the same method, 
+that a Pauli-Weisskopf field has this property.4® An 
+alternative possibility is to consider, in the style of Dirac’s 
+theory of the classical electron, that the ‘original equation”’ 
+for the radiation contained, in the same way as the “‘origi- 
+nal mass” of the electron, in itself an infinity with the 
+opposite sign so that, supplemented with the infinity 
+appearing as the result of the interaction, the equation for 
+the observable field becomes just of the Maxwellian form. 
+
+The calculation of the level-shift of a bound electron 
+was also undertaken.!* This work is not yet completed but 
+it was confirmed that the result converges by virtue of our 
+subtraction prescription. We found further, in agreement 
+with Schwinger, that a part of the radiative correction to 
+the energy can be interpreted as caused by an anomalous 
+moment of the electron the existence of which had been 
+expected by Breit.!” 
+
+We hope that various postwar difficulties will soon be 
+settled and that our results will appear in print in the 
+near future. 
+
+
+1H, A. Bethe, Phys. Rev. 72, 339 (1947). 
+
+2H. W. Lewis, Phys. Rev. 73, 173 (1948). 
+
+3S. T. Epstein, Phys. Rev. 73, 177 (1948). 
+
+4]. Schwinger, Phys. Rev. 73, 415 (1948). 
+
+5 F, Bloch and A. Nordsieck, Phys. Rev. 52, 54 (1937). 
+
+6 W. Pauli and M. Fierz, Nuovo Cimiento, 15, No. 3, 1 (1938). 
+
+7A. Pais, Phys. Rev. 68, 227 (1946). 
+
+8S, Sakata, Prog. Theor. Phys. 2, 30 (1947). 
+
+a ve ray Z. Koba and S. Tomonaga, Prog. Theor. Phys. 2, 216, 217 
+
+.) (1947). 
+
+10 T, Tati and S. Tomonaga, lecture at the symposium on the theory 
+of elementary particles, Nov. 1947. Full account of this lecture will be 
+published in Progress of Theoretical Physics. 
+
+u S,. Tomonaga, Prog. Theor. Phys. 1, 27 (1946); Z. Koba, T. Tati 
+and S. Tomonaga, Prog. Theor. Phys. 2, 101, 198 (1947). 
+
+127, Koba and S. Tomonaga, Prog. Theor. Phys. 2, 218 (L) (1947). 
+
+13 Z, Koba and G. Takeda, appearing in Prog. Theor. Phys. 
+
+14M. Taketani, private conversation. 
+
+15K. Baba, M. Sasaki and R. Suzuki, to be published in Prog. 
+Theor. Phys. It was first pointed out by Sakata and Umesawa in the 
+Nagoya University that the Pauli-Weisskopf field gives rise to a posi- 
+tive self-energy of a photon in contrast to a negative one due to the 
+electron field and this would result in the compensation of the vacuum 
+effect mentioned above. __ 
+
+18 Y, Nambu, to be published in Prog. Theor. Phys. 
+
+17 G. Breit, Phys. Rev. 72, 984 (1947). 
+
+
+THE EDITOR 225 
+
+
+Note on the Above Leiter: In transmitting to the Physical 
+Review the accompaning review by Tomonaga of the re- 
+markable work carried out in Japan in recent years, there 
+is one technical note that may be helpful. 
+
+Tomonaga remarks in the fifth paragraph from the end 
+that in addition to the infinite terms which may be recog- 
+nized as contributions to mass and charge, there are other 
+infinities which appear, particularly in the corrections to 
+the Klein-Nishina formula. These have to do with the 
+familiar problem of the light quantum self-energy. As long 
+experience and the recent discussions of Schwinger and 
+others have shown, the very greatest care must be taken 
+in evaluating such self-energies lest, instead of the zero 
+value which they should have, they give non-gauge co- 
+variant, non-covariant, in general infinite results. From 
+manuscripts kindly sent by Tomonaga, I would conclude 
+that the difficulties referred to in this note result from an 
+insufficiently cautious treatment, and therefore inadequate 
+identification, of light quantum self-energies. 
+
+
+J. R. OPPENHEIMER 
+Institute for Advanced Study 
+Princeton, New Jersey 
+
+
+The Absorption of Cosmic Radiation 
+in Meteorites 
+
+
+CarRL AuGUST BAUER 
+University of Michigan, Ann Arbor, Michigan 
+May 26, 1948 
+
+
+PREVIOUS letter! showed that cosmic radiation has 
+produced an appreciable amount of the helium found 
+in metallic meteorites. Since the rate of helium production 
+is directly proportional to the intensity of the cosmic 
+radiation, the radial variation of this cosmic-ray helium 
+within a spherical iron meteorite can be calculated from 
+the radial variation in the intensity of primary cosmic 
+radiation. 
+If No and N(r) are, respectively, the number of primary 
+cosmic-ray particles passing through a unit sphere (cross 
+
+
+Pe) a es | ee cane 
+ie Sa ee ee ee Re Ne 
+ae? a ae | a | 
+) 100 200 300 400 500 600 700 
+
+
+Distonce from center in cm 
+
+
+Fic, 1. The radial variation in the intensity of primary cosmic 
+radiation (or in the relative helium content) in spherical iron meteorites 
+of vapeue masses. The numbers at the top of the curves are log mass 
+in kg. 
+
+

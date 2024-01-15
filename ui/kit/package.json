@@ -1,0 +1,26 @@
+{
+  "name": "@onlyoffice/documentation-ui-kit",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./lib/kit.server.ts",
+    "./kit.css": "./lib/kit.css",
+    "./kit.font.css": "./lib/kit.font.css",
+    "./kit.regular.css": "./lib/kit.regular.css",
+    "./kit.client.ts": "./lib/kit.client.ts",
+    "./kit.server.ts": "./lib/kit.server.ts"
+  },
+  "dependencies": {
+    "@onlyoffice/documentation-ui-font": "workspace:^",
+    "@onlyoffice/documentation-ui-typography": "workspace:^"
+  },
+  "devDependencies": {
+    "preact": "^10.22.0",
+    "preact-render-to-string": "^6.4.1",
+    "typescript": "^5.4.5"
+  },
+  "peerDependencies": {
+    "preact": "^10.19.3",
+    "preact-render-to-string": "^6.4.1"
+  }
+}

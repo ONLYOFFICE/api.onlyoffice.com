@@ -1,0 +1,540 @@
+Mr Oppenheimer, On the theory of vibration-rotation bands 327 
+
+
+On the Quantum Theory of Vibration-Rotation Bands. By 
+J. R. OPPENHEIMER. (Communicated by Mr R. H. Fow er.) 
+
+
+[Received 24 May, read 26 July, 1926.] 
+
+
+1. The frequencies of the lines in the vibration-rotation 
+spectrum of a diatomic molecule may be obtained unambiguously 
+by the application of the classical quantum dynamics to a simple 
+molecular model. The dominant term in the intensities of these 
+lines has been obtained by Fowler* from the summation rules; this, 
+and the next term, were computed by Kemblef from an application 
+of the correspondence principle to a three-dimensional model. But 
+the details of these calculations are not free from ambiguity. For, 
+in the first case, the weight of the states, and, in the second, the 
+method of averaging over transitions, is arbitrary. For the outer 
+lines of the band this ambiguity is negligible; for the inner ones, 
+and particularly for the missing central line, it is not. 
+
+Now the new mechanics { gives a precise solution of this problem, 
+and might accordingly be expected to decide definitely the in- 
+tensity of the null line, and the value of the higher terms in the 
+intensities of the outer lines. The purpose of this note is to obtain 
+the solution, and to compare it with previous results, and with 
+the results of experiment. 
+
+The problem has been treated by Brillouin§. Brillouin’s chief 
+conclusions are (1) that, contrary to the contention of Heisenberg ||, 
+the new mechanics does not necessarily give the same energies as 
+the classical theory with the introduction of half-integral quantum 
+numbers; and (2) that, if Heisenberg’s result were correct, the new 
+mechanics would account for the disappearance of the central line. 
+He uses Cartesian coordinates (9,9), and their corresponding 
+momenta (p,p,). He imposes the constraint 
+
+
+qi” + 92? = a, 
+and the single quantum condition 
+
+
+(1) [471] + [9272] = 2 
+for the rotational motion, where [ab] is the Poisson Bracket of 
+
+
+* Fowler, Phil. Mag. vol. xt1x, p. 1272 (1925). 
+
+{ Kemble, Phys. Rev. vol. xxv, p. 1 (1925). 
+
+} Dirac, Proc. Roy. Soc. A, vol. cx, p. 561 (1926); Born, Heisenberg, Jordan, 
+Zeit. f. Physik, vol. Xxxv, p. 557 (1926). 
+
+§ Brillouin, C.R. vol. cLxxxu, p. 374 (1926). 
+
+il Heisenberg, Zett. f. Physik, vol. xxx, p. 879 (1925); Born und Jordan, Zeit. 
+f. Physik, vol. xxxtv, p. 858 (1925). 
+
+
+328 Mr Oppenheimer, On the quantum theory of 
+
+
+a and 6. On the other hand, the Heisenberg-Dirac* quantum 
+conditions reduce, in this case, to a single condition 
+
+
+(Qs? — Gas), hii) i Bt th 
+
+| AP GP Ga att] "Get ath 
+
+which cannot be reduced to the form (1). Moreover, in the Hamil- 
+tonian used by Brillouin the coupling of the kinetic energies of 
+rotation and vibration is neglected. Finally, the problem is treated 
+in two dimensions, so that we should not expect t correct values 
+for the intensities. Brillouin does not give his solution in detail. 
+He does give the intensities for the case of vanishing coupling, and 
+for this case gets the same intensities for all lines of a band. But 
+it may readily be shown that the differential equation is regular, 
+uniformly in the coupling parameter A as this tends to zero. It 
+follows that the argument cannot explain the absence of the central 
+line for the small finite values of A which occur. In fact we shall 
+show that, in the two-dimensional case, the central line would be 
+present. 
+
+
+2. The dynamical problem. We may take for model two point- 
+atoms attracting each other radially. If the masses of the atoms 
+be m, and m,, then the classical Hamiltonian, after the elimination 
+of the centre of gravity, becomes , 
+
+
+Gr aie 5 (Pe + py? + pe) + U; (a? + y? + 2), 
+
+
+where 
+1 1 1 
+3 =-=—4+—3; £=%— %; 
+( ) p mM, My 1 2 
+(m, + M2) Pe = MxPx, — M Pry: 
+Since we shall not ultimately want x,y, %, 22.42%, and since the elimi- 
+nation of the centre of gravity (3) holds in the quantum theory, we 
+may take (2) as Hamiltonian. There is as yet no adequate reason 
+for not choosing some classically equivalent form. The only other 
+result which we shall take over directly from the classical theory 
+is the expression for the energy radiated per second. We shall use 
+this in terms of Cartesian coordinates and accelerationst; and we 
+shall not be inconsistent if we take the Hamiltonian in terms of 
+them. 
+In the classical solution it is convenient to use polar angle 
+variables. These cannot be represented by matrices, and we shall 
+
+
+* Dirac, Proc. Roy. Soc. A, vol. cx, p. 561 (1926). 
+
+t+ Kemble, Phys. Rev. vol. xxv, p. 1 (1925). 
+
+} Heisenberg, Zeit. f. Physik, vol. xxxur, p. 879 (1925); Born und Jordan, 
+Zeit. f. Physik, vol. xxxtv, p. 858 (1925). 
+
+
+vibration-rotation bands 329 
+
+
+accordingly adopt the more general methods developed by Dirac*. 
+We want a canonical transformation to uniformizing variables such 
+that xyz shall be periodic in the angle variables. Classically we 
+should obtain this by three successive transformations: introduc- 
+tion of polar coordinates, in which the Hamilton-Jacobi equation 
+separates; elimination of the nodes; and uniformization of the 
+vibration-rotation. Diract has shown that there is a canonical 
+transformation equivalent to the first two: 
+(4) matt yet; pip, ten, += ees, 
+ef) = rl (k2 — pp?) (2 + ¢ [kz]) it; 
+= thy? + Lym,? = thy? + Le (ype — 2Pr)?, 
+ef = (2 — p24 (mz + im,); p= Py ~ YPz, 
+Hite peeks. eStats Tas ah 
+
+
+{In general we write a, =a + thy; a, =a — thy, if @ is an action 
+variable.] We shall use only the following information about this 
+transformation: 
+
+
+1, It is canonical. 
+2. The values of xyz obtained by the inversion of (4) are: 
+(5) 2= 47 (we + ae), 
+
+
+iy } = iu [wage + + Dy et — Dpe-9+ 4 wy, e-19-1], 
+2p, _fiPe_ Pe 7 SP 
+where o?=1 i(k + he)’ o,? = 1 k(k—he)’ 
+= o_ (k+ p)(h+ p+ he) 
+1 k(k+ hy) 
+(& — po) (k — po + he) (k — p,) (k — py — hy), 
+2 . 2 
+(6) Tie —_ k (k + hy) ’ O° = k (k— hs) ’ 
+ote (& + Pa) (k+ Pa — hy) 
+7 k (hk — hy) 
+3. The transformed arian: 18 
+(7) He 5, (Pe + a) + U(r). 
+
+
+The third Renee requires certain hypotheses about U; 
+in analogy with the classical solution t we shall suppose that the 
+
+
+* Dirac, Proc. Roy. Soc. A, vol. cx, p. 561 (1926); Born, Heisenberg, Jordan, 
+Zest. f. Physik, vol. xxxv, p. 557 (1926). 
+
+t Dirac, Proc. Roy. Soc. A, vol. cx, p. 281 (1926). 
+
+t Born, Atommechanik, § 20. 
+
+
+330 Mr Oppenheimer, On the quantum theory of 
+
+
+molecule can rotate uniformly; that this rotation is stable; and 
+that the amplitude of the oscillations about it which do in fact 
+occur is small compared with the mean distance of separation of 
+the atoms. Then we must have 
+
+
+Pr=[p-H]=90; f= [rH]=90; kyky= pr? (U' (7), py] 
+when we substitute the proper quantum numbers for k, and the 
+corresponding c-number for 7. We shall take over this c-formula, 
+which may be justified physically, and write 
+
+
+hk, _> _y 
+
+(8) na® (by (UD, ]r-ate) = U' (a) (Def.), 
+
+where & and a are g-numbers. Further, we set r= a (kK) + p, and 
+thus obtain from (1) and (8), the expansion 
+
+
+__ hk 1 
+(ay = Fak (Bt 5a Pe’ + we) + eh 
+which converges by hypothesis. In (7 a) 
+
+
+w= pu” (a) 421% Shy _ wy? + i? 3k ke. x= 40" (a) a ky ke 
+
+
+at (ky + a(R)’ * Oua*" 
+We may note further that 
+(ppr]=1, [pk] = 
+but that F 
+2 
+(9) [pS] = — [a3] = aa (h)" 
+
+
+The retention of first order terms in A does not affect the fre- 
+quencies, but changes the intensities. It follows, however, from 
+the form of the transformation for 7 and 8%, that the relative 
+intensities of lines in the same band will be changed only by a 
+factor of the order of k*J*/a'w!, which is small compared with the 
+terms we shall retain, and too small for experimental detection. 
+‘The new mechanics is, of course, applicable to the more general 
+case; but the transformation, even in the simplest case, where 
+U’” (a) ~ 0, is very cumbersome. We shall accordingly neglect 
+and observe that our results will not give us the intensities in the 
+overtone bands. 
+
+The transformation 
+
+
+(Jee — Jt) +4; p,= {hw}t (Jie + e-¥ Jt), 
+k=k, 3=7+4; 
++ k 3k 
+— (5) -aagg Wheto + edt) — 
+x (Jt (J — byte — evi (J — A), 
+P=P, $=¢ 
+
+
+1 
+(10) "= 55 
+
+
+vibration-rotation bands 331 
+
+
+defines the new canonical variables (J, w), (k, 7), (p,¢). If we 
+assume that these satisfy the quantum conditions, we get at once 
+
+
+[kp] bo (kp,] = [pp,] =, (¢7,] am [¢3] =F [pk] = [Py] = 0; 
+[pp] = (K3] = — 1. 
+(11) [rp,] = — [p,7] = mz x (27 — 2e-t Je) = 1, 
+(12) i (pp, + pep) = (J — A) Tete — ete gh (J — hh 
+and 
+
+
+Moreover 
+
+
+(13) 2 + wp? = hw (2d + 2c Jet) = Qwdy. 
+From the first of these (11) it follows that r and p, are canonical. 
+From the second (12) we get, neglecting powers of ive above the 
+second, 
+_ Skup | Shp 2 2k = 
+[37] = — Jatw® + date? [pp + pPr, p] — Pa aa [rp,] = 0, 
+
+
+kup, 3h, 
+and [Sp,] =r sind “S a [pep + PPrs Pr] = 9. 
+Assuming therefore that the new variables satisfy the quantum 
+conditions, we have shown that the old variables satisfy all the 
+quantum conditions. This establishes the transformation. The as- 
+symmetry of r and p,, and thus of W, in J, is not peculiar to this 
+problem. It has its analogue in the harmonic oscillator, for which 
+
+
+| q (n,n +1) [Pon+1. 
+3. Frequencies, Quantum Numbers. By (7 a) and (13) 
+Kyky , wd 
+14 W = W (Jk) =5—S rn + — 
+
+an OE) = Saat (B) 
+
+This differs from the classical value in having J, for J, and k,k, 
+for k?. 
+
+Before we can find the frequencies, we must decide how to 
+assign the quantum numbers, n, m, 8, corresponding to the action 
+variables J, k, p. The hypothesis of a normal state for the vibratory 
+motion means that » must be integral. The argument by which 
+m and s are determined is strictly analogous to that given by 
+Dirac* and Born, Heisenberg, and Jordant for the Zeeman effect 
+of an atom with one series electron. We should expect s to be so 
+chosen that 
+
+
+PiP2 ; PrP2 
+ké—hil~' lee+ED| oY 
+
+
+since, otherwise by (5) z might not be real forreals and m. This means 
+
+
+* Dirac, Proc. Roy. Soc. A, vol. cxt, p. 281 (1926). 
+_t Dirac, Proc. Roy. Soc. A, vol. ox, p. 561 (1926); Born, Heisenberg, Jordan, 
+Zeit. f. Phystk, vol. xxxv,.p. 557 (1926), 
+
+
+332 Mr Oppenheimer, On the quantum theory of 
+
+
+that s may vary from — m + 4 to + m — }; it is readily seen from 
+the values we get for the intensities (18), that all transitions from 
+8 values within this range to those outside are forbidden. Finally, 
+we may choose m to give a normal state for which a transition 
+with decreasing m is impossible. In this case the only physical 
+justification for such an assumption is the observed absence of the 
+central line*. We shall show that the central line does not vanish 
+if the only condition on m is Brillouin’s condition of symmetry for 
+positive and negative rotations. 
+
+With this assignment of quantum numbers (clearly s is ir- 
+relevant) we get for the absorption frequencies 
+
+(14 a) 
+
+h? (m + $)° ) 
+v(n,m>n+1,m+1)= (+2m+1 wat (0) a2 
++ v(m + §) — ¥2 (+ 4), 
+
+yc 1) (1+ Ems 1+4)(m41 =); 
+
+
+oa ee 
+Bn? a (0) 
+
+
+Deis Dae Da* (0) a? 
+me 0 fy 4 SH dl 
+2 a + BaF (0) cop?” 
+
+
+The difference between these and the classical frequencies is too 
+small for experimental detection, more particularly since a (0) and 
+w, can only be found from the band itself. The energy differences 
+would, however, give an appreciable term in the specific heats. 
+
+
+4. Intensities. We may now compute the a priort intensities of 
+the band lines directly. For this we need z, y, z in terms of the final 
+variables. In each case we have several alternative forms. Thus 
+
+
+(15) 
+z= 5 (mae + «~*m,) = $ (e?a, + «-*a,) r= 5 (ae + @e#*) .... 
+
+
+But since all the transformations are canonical, these forms ought 
+to give the same intensities; and it may be readily verified that 
+
+
+they do. Now to the second order in a, We Bet, using the ex- 
+0 
+pansion for the exponential 
+
+
+2 o ya\n oO n-1lfje\r (4, (-\n—1—r 
+(16) ef Sia ¢ try ~E, OO" 4 SS, CE) ) 
+: o ff: 0 0 
+
+
+o”"” n! 
+= & Mea) (7) FS r)™ _ iF a(n — DV thy (ir) 
+=e ni +2, ni Zn 2kn | 
+==, Q +) Co)" (1 +S) et = (1 t ia) 
+
+
+eft -o= Q - *) e“¥ = (1 — t,) e~*. 
+* On Schrédinger’s Theory there is no normal state for a rigid rotator in two 
+dimensions, and the transitions for m, (} > —4), (-$— 4) occur. 
+
+
+vibration-rotation bands 333 
+Then from (5), (10) and (16), 
+1 : 
+— mieepureert t,-tw _ ~-iw Jt): 
+(17) z b [ak + gay (he € 7H] x 
+[mw (1 + ta.) * + @, (1 — ta,) e~"), 
+
+«| a oh. t-iw _ .-iw »| 9 irtid 
+
+wht & [@ G+ zap e~? Jt) | [tag (1 + tay) € 
+Wy (1 + tag) €- — ayy (1 — tay) e+ F Dy (1 — ty) eW"-), 
+Now expand w+ to second order in a take a and a, in front of 
+
+
+the exponentials in w, and collect the coefficients of ef” and «-*, 
+This gives for the Zeeman components 
+
+
+(18) 
++ 
+|2(—1, = 1,0) | = 5 (gee) el — 2pm {1 + By (om —n)}] 
+
+
+4 
+
+
+[2(—1, + 1,0)| = 5 (ge ag) mL + 2pm (1 ym tmp], 
+[2(+1,—1,0)|=5 (“gr ha) aL + 27m, (1 ~ By (m+n +1) 
+[2+ 1, + 1,0)| = 5 (SE ha) 4 [1 ~ 2pm (1+ By (m — m0 — 1}; 
+| 2(— 1,1, = 1) = 5 (2) eld — 2pm (1 + Hy (ma — mh, 
+| (1,-1.4) =F (Se2) ed — 2yrmg (1 + hy (me — mH, 
+| 2(—1,41,—1)] =F (52) iad + 2pm (1 — By (rm + mH, 
+J2(-L 41+] =F (se2) mull + 2ym, (1 — dy (m+ mp], 
+Ja (+ 1-1-1) |= 5 (Spee he) mel + 2pm (1 ~ fy (mt mt UB, 
+[241-141 = 5 (Go he) aL + Syme (1 — By (mt mt 1 
+241, 41,- 1 |= E (hehe) ell — Byam (1+ By (rm — 0 — WY 
+Jet L+L+0)[=4(so*be) au ll — 29m (1+ By (om — 0 — 1H; 
+
+
+2% 
+| y (ijk) | = | x (29%) |; eGR slee aaa ie ue nee h 
+h 
+
+
+where Y= sn ee 
+
+
+334 Mr Oppenheimer, On the quantum theory of 
+
+
+Actually the system is degenerate. Summing the “intensities ” 
+
+
+I, (0, m > 1, m+ 1) = const. (1 — 4ym, (1 — ym, — §))8, 
++m-%} +m ~-¥ +m-+t 
+~S= Ls w2+4$2(s) oy? + $2 (s) w,2" 
+~m+t -m+t -—m+¥ 
++m-t 
+=} 2 (By? + 20,? + a) 
+-m+t 
+
+
+=t.m.(4+2)= 4 (m+ $) = 4m. 
+
+Similarly 
+
+I, (0, m + 1-1, m) = 4. const. [1 + 4ym, (1+ Sym, — 3y)].m. 
+The intensity of the central line vanishes. But it would not have 
+vanished if we had made m integral, nor if we had treated the 
+problem in two dimensions. 
+
+For the intensities of the 7ith lines* (in energy, and not in 
+quanta) 
+
+a 7 
+14. (fi) 20 (1 — 4yfi (1 — Gyr fy) ARON Y 
+
+
+i 
+I_ (fi) oo Ai(1 + 4yAi(1 + by — Bye 
+or, at least for not too large m, 
+
+
+= Aw 0.8) - nih? 
+I, (Ri)o tie *F (.- af) (14+ pa), 
+- ~ 1 w 0,7) nh? 
+
+a\ee fe er A i eee lal 
+L_(f)a fie (1 + 3yf) Q Sa) 
+This in part resolves the paradox noted by Fowler. For the two 
+branches are nearly equal in intensity in spite of the assymmetry 
+of the temperature factor. The main part of the assymmetric 
+factor which compensates this had been previously obtained by 
+Kemble from the Coriolis forces. 
+
+This means that the summation rules do not apply exactly, 
+because the frequency differences of the lines of the band are not 
+
+
+.v(0,7-—$71,7+ 4), 
+
+
+MOEDP YOR +E LAD, 
+
+
+1 
+negligible. Neglecting the factors (1 + 4yf ...) and e AT sas they 
+hold exactly. For the weights of the states are proportional to m. 
+
+I should like to thank Mr R. H. Fowler, F.R.S., and Mr P. A. M. 
+Dirac for their criticism and advice. 
+
+* Kemble, loc..cit. and Fowler, Phil. Mag. vol. t, p. 1079 (1925). 
+
++ For the fundamental hydrogen chloride band studied by Kemble and Fowler 
+
+
+the values of 4y and h*/2ua,*kr differ by only about 10 per cent.; the positive 
+branch remains slightly the stronger. 
+
+
+vibration-rotation bands 335 
+
+
+5. Summary. The dynamical problem of the “diatomic mole- 
+cule” is solved on the new mechanics. The terms of the rotational 
+energy are A (m? — }), where m = + 4, $, §...; the weights of the 
+corresponding states are 2m; the frequencies differ a little from 
+the classical ones. Finally the intensities are slightly different from 
+those computed by Kemble; the main term agrees with that of 
+Fowler, but the positive branch is only slightly stronger than the 
+negative. The central line vanishes. The intensities are valid only 
+for the fundamental band. 
+
+
+6. Addendum. This problem has been treated by Schrédinger* 
+by his method of characteristics. Schrédinger does not find the 
+intensities; but he obtains energy terms which give frequencies in 
+agreement with (14) and (14a). More recently the problem has been 
+treated by Mensingt by the method of matrices in a paper which 
+came to hand just as the writing of this paper was completed. 
+Mensing neglects y but retains 4. The main terms in the intensities 
+of the fundamental band are, of course, the Zeeman factors of (18). 
+By an application of Born and Jordan’s solution for the anharmonic 
+oscillator { Mensing also obtains expressions for the intensities in 
+the overtones. It is, however, readily seen from (17) that the terms 
+arising from y are of the same order as those arising from A, and 
+that, with the actual values of these constants for the hydrogen 
+halides, the former terms predominate for the outer lines of the 
+overtone bands. It is probably therefore not justified to neglect 
+them and retain A. 
+
+
+* Schrédinger, Ann. d. Phys. vol. LXxrx, p. 484 (1926). See particularly Eq. (51). 
++ Mensing, Zest. f. Physik, vol. xxxvi, p. 814 (1926). 
+} Born und Jordan, Zeit. f. Physik, vol. XXXIV, p. 858 (1925). 
+
+

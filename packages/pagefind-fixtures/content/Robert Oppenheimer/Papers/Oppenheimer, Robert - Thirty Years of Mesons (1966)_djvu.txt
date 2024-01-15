@@ -1,0 +1,906 @@
+Thirty years of mesons 
+Robert Oppenheimer 
+
+
+Citation: Physics Today 19, 11, 51 (1966); doi: 10.1063/1.3047815 
+View online: http://dx.doi.org/10.1063/1.3047815 
+
+View Table of Contents: http://physicstoday.scitation.org/toc/pto/19/11 
+Published by the American Institute of Physics 
+
+
+NEW IDP-7 & IDP-10 ~\°; 
+
+
+Dry Scroll Vacuum Pumps 
+
+
+NEW IDP-7 NEW IDP-10 
+
+
+bat Agilent Technologies 
+
+
+Thirty Years of Mesons 
+
+
+Mesons have been predicted (in the first place, 
+
+pi mesons by Yukawa in 1935),misidentified 
+
+(mu mesons in cosmic rays) and discovered 
+
+(pi mesons in cosmic rays), or at times discovered 
+and not understood (the K mesons). Although 
+
+
+LET ME OPEN this account by reminding you that 
+by now many mesons have been recognized, ordered 
+and sorted out, their properties in part established, 
+in some limited measure understood. 
+
+Thus there are three groups of nonets (some of 
+you may with reason prefer to say mixed octets and 
+singlets): the pseudoscalar which 
+clude the two that Yukawa predicted thirty years 
+ago, the vector mesons, and the mesons with spin 
+two, perhaps slightly less certain; and there are 
+others now being identified. It would 
+hazardous guess that we were now at the beginning 
+or the end of this story. 
+
+
+mesons, in- 
+
+
+be a 
+
+
+Three families of particles 
+
+
+The mesons form one of the three families of 
+particles of which, in addition to the quanta of the 
+classical fields, we find it helpful and necessary to 
+speak. They are characterized, these three families, 
+either by the existence or irrelevance of quantum 
+numbers satisfying ununderstood but very rigorous 
+conservation laws. 
+
+There are the leptons, electron-like objects: the 
+electron, the mu meson, the neutrinos and their 
+antiparticles. The lepton number, the number of 
+leptons minus the number of antileptons, does not 
+change; this is a strict conservation law good even 
+for cosmological times. The leptons have electro- 
+
+
+magnetic interactions, and weak interactions re- 
+
+
+the discovery of more mesons is expected, it seems 
+
+
+unlikely that we are about to return to a 
+
+
+traditional view of the fundamental particles 
+
+
+as “simply” composed. 
+
+
+by Robert Oppenheimer 
+
+
+lated to the Fermi interactions of beta decay. 
+Under hitherto accessible observational conditions, 
+these interactions are never very strong. The lep- 
+tons have no direct or specific involvement with 
+the strong interactions that characterize the other 
+families of particles, mesons and baryons. 
+
+The baryons are proton-like objects: the proton, 
+neutron, the Y*'s, the 3-3 resonance discovered by 
+Fermi and his colleagues, the omega minus. For 
+them, which also have their antiparticles, and which 
+are characterized by a quantum number—baryon 
+number—defined in analogy to lepton number, 
+the baryon number does not change, here again 
+even in cosmic times. 
+
+Mesons have neither of these quantum num- 
+bers: they can appear and disappear singly, sub- 
+ject, of course, to the conservation laws of relativity, 
+to the symmetry between identical particles, to 
+
+
+PHoTO By sTELTZER Robert Oppenheimer recently retired as 
+
+
+) director of the Institute for Advanced 
+Study, a position he has held since 1947. 
+He was born in New York City in 1904, 
+B® veceived his bachelor’s degree from Har- 
+vard University, and his doctorate from 
+Gottingen University. From 1929 to 1947 
+» he was professor of physics at the Uni- 
+versity of California in Berkeley and at 
+the California Institute of Technology. 
+This article is adapted from a talk de- 
+livered at the January meeting of the 
+American Physical Society, in New York. 
+
+
+PHYSICS TODAY +» NOVEMBER 1966 «+ 5] 
+
+
+charge symmetry (although this and the next four 
+do not provide strict or exact rules) to parity 
+and strangeness conservation, charge-conjugation 
+and time-reversal invariance, but nothing like 
+baryon or lepton numbers. 
+
+
+Compelling arguments 
+
+
+Today our situation is, of course, very different than 
+in 1935, but there are still analogies. In that year 
+Yukawa predicted subnuclear objects that had not 
+been observed. My principal purpose is to remind 
+you of the nature of and reasons for what he did, 
+and to follow some of the remarkable episodes 
+that mark the three decades that separate us from 
+those beginnings. Today we also have on the books 
+undiscovered objects that have been sought experi- 
+mentally, and for which, typically, the experimen- 
+tal statement is that they do not exist with a mass 
+less than some rather high value. I have here less 
+in mind the magnetic poles, which seem to me in 
+a quite other category of speculation, than two 
+other sets of objects, sometimes called, in disparate 
+flashes of erudition, schizons and quarks. The for- 
+mer, studied and so named by Lee and Yang, 
+which are vector bosons of undefined parity, 
+strangeness and isotopic spin, were already fore- 
+shadowed by Yukawa: His mesons were to be beta- 
+unstable, and by Yukawa coupling with baryon 
+and lepton currents, were to induce beta decay. 
+Until now the schizons have not been found; if 
+they exist, they are substantially more massive 
+than the proton. As higher neutrino energies be- 
+come available, the search for them will doubtless 
+continue. The quarks, in their simplest, most strik- 
+ing form, have fractional charge and baryon num- 
+ber. They too have not been found. 
+
+In all these cases—Yukawa mesons, 
+quarks—the imagined existence of these particles 
+makes it for a time somewhat easier to describe 
+important regularities that we do observe among 
+particles known to exist: nucleons for Yukawa’s 
+mesons thirty years ago; baryons, mesons, leptons 
+today, If we were now confronted with the existence 
+of the conjectured particles, we should face the 
+most formidable theoretical problems of their de- 
+scription, more formidable no doubt for quarks 
+than schizons, but for both wholly beyond. what 
+we know how to do. We could not explain 
+dynamically how the new objects contribute to the 
+regularities they were invented to account for. In- 
+deed that happened for many long years with 
+meson theory, and has taken many long years to 
+bring to a partial, approximate and provisional 
+
+
+schizons, 
+
+
+resolution. 
+The reasons that have led to the invention of 
+
+
+52 * NOVEMBER 1966 * PHYSICS TODAY 
+
+
+quarks or schizons, while completely nontrivial, do 
+not have the compelling necessity of Yukawa's 
+arguments, even as they were put forward and 
+a fortiori today. Yukawa had a few rough but clear 
+experimental findings. He also had what now ap- 
+pears to be some very solid general arguments; 
+that is why although the journal (The Proceedings 
+of the Physical and Mathematical Society of 
+Japan) in which he published was quite obscure, 
+and his conjecture fairly wide, it was both in 
+Japan and abroad, early taken quite seriously. I 
+should say a word about why we in California 
+took it seriously, because we had some advantages 
+as well as obvious disabilities not shared by our 
+colleagues in Europe. To that I shall return, 
+
+
+On predicting particles 
+
+
+At this point it may be instructive to recall a few 
+episodes of the last thirty years, to pay some at- 
+tention to other mesons that were correctly and 
+thoughtfully anticipated, either on grounds of sym- 
+metry (which has been a very important argument 
+since charge symmetry and charge independence, 
+and still more important since the recognition of 
+unitary symmetry by Gell-Mann and Ne’eman) or, 
+on the other hand, on deep and general principles 
+of relativity and quantum theory. These are prin- 
+ciples so general that they are quite beyond the dis- 
+putes between theoretical physicists who like only 
+S-matrices, those who trust only axiomatic field 
+theory, those who like Lagrangian methods or 
+Feynman diagrams. For all of these are intended 
+to be consistent with the special theory of relativity 
+and the general framework of quantum mechanics. 
+
+The first enlargement of Yukawa’s invention was 
+an application of the symmetry of charge inde- 
+pendence: Kemmer’s recognition that this required 
+a neutral meson in addition to Yukawa's charged 
+particles. Although strangeness was a discovery 
+anticipated by no one, once it was found it was at 
+the same time clear that there must be strange 
+mesons. The rho meson was predicted on the 
+basis of empirical nucleon form factors, but with 
+the use of quite general arguments of quantum 
+field theory. The eta meson was a clear prediction 
+of unitary symmetry; so too was the omega, also 
+needed to complement the rho in explaining 1s0- 
+vector nucleon form factors. 
+
+If we try today to think back to 1935, it is a 
+little strange. A great deal that we now take for 
+granted was then quite uncertain or obscure. Yet 
+I think it will be clear why Yukawa’s argument, 
+though very fresh, was still so persuasive. For that 
+
+
+we had best start with 1932, the beginning of the 
+
+
+SIX CHARGED 
+PRONGS emerge from 
+
+interaction in bub- 
+ble chamber, including 
+four + mesons, two of 
+which undergo ,-e decay. 
+
+
+only the electron and proton were known, and the 
+quanta of classical fields. In that year Chadwick 
+discovered the neutron. The neutron, as you 
+know, was predicted, not on all the grounds that 
+would be clear in 1932, but on many, by Ruther- 
+ford in his 1920 Bakerian lecture. Chadwick, who 
+of course knew that lecture well, once asked the 
+Joliot-Curies why they had not looked for the neu- 
+“| tron in the penetrating radiation they had dis- 
+“| covered, instead of leaving that to Chadwick. They 
+answered that it was unthinkable for Frenchmen 
+to look to a public lecture for any new idea. 
+
+That same year saw another discovery that also 
+had much to do with Yukawa’s invention: Ander- 
+son's discovery of the positron in the cosmic rays. 
+One great change this discovery brought to the 
+physicists of that day: an increased confidence in 
+the general soundness of that combination of quan- 
+“) tum theory and relativity that was quantum elec- 
+“| trodynamics, and more widely by analogy, quantum 
+‘| field theory. For myself, this confidence was greatly 
+
+reinforced by the paper of Pauli and Weisskopf, 
+
+establishing that spinless particles, with no ex- 
+
+clusion principle, no “filled” sea, no “holes,”” never- 
+®| theless were involved in the processes of pair for- 
+mation and annihilation, manifested charge sym- 
+metry—charge-conjugation invariance—and, despite 
+initial disparities of language, closely paralleled 
+the theory of the electron and positron and sup- 
+ported the conjecture that all charged particles 
+would have their own antiparticles of the same 
+mass, 
+
+Well before Yukawa’s paper, Fermi had written 
+his well known review and most welcome simplifica- 
+tion of quantum electrodynamics that led him to 
+a description of beta decay in which the emission 
+and absorption of electron and neutrino are treat- 
+ed in analogy with the emission and absorption of 
+light quanta. Here was another field, the electron- 
+Neutrino field, and thus another field theory; in 
+Japan, in the Soviet Union, elsewhere in Europe 
+and in this country it was noted that Fermi’s theory 
+‘of beta decay implied the existence of forces be- 
+tween proton and neutron; for the neutron could 
+mit an electron and neutrino, and a proton could 
+absorb them. There would be an exchange of 
+
+
+BROOKHAVEN NATIONAL LABORATORY 
+
+
+particles, of momentum and of charge. Although 
+charge exchange was an expected feature of these 
+forces, neither the apparent weakness of the beta- 
+induced forces at nuclear distances, nor their de- 
+pendance on internucleon distance seemed familiar; 
+for the observed forces are strong and characterized 
+—unlike electricity and gravitation—by a_ fairly 
+sharp range (~10-%cm) characteristic of nuclear 
+dimensions. 
+
+
+The range of forces 
+
+
+At this point Yukawa made his theory. He had 
+reported on the electron neutrino theory. Nishina 
+had shown great interest but also saw clearly the 
+inadequacies. Yukawa came up with something 
+better. 
+
+Yukawa noticed that the existence of a range 
+of forces could be understood if the quanta of the 
+field of force had a finite mass. Thus he wrote, 
+instead of Poisson’s equation 
+
+
+Vig+(-G) b= 
+
+
+where ¢ is the potential of the field, » the mass 
+of its quanta and p the nucleon density, the 
+source of the field of which @ is the potential. 
+One then finds, for distance r large compared 
+to the dimensions of p 
+
+
+as ee hG 
+
+
+This is a good explanation of range. From it 
+Yukawa estimated the mass be two or three hun- 
+dred electron masses. 
+
+Yukawa embellished this proposal with one other 
+logically quite separable notion: that these mesons, 
+since they did not seem evident in ordinary matter, 
+were radioactively unstable, and that their radio- 
+activity accounted for the beta activity—the Fermi 
+interactions—of nucleons. Today this has been pro- 
+posed of the schizons, which have no strong inter- 
+actions; strongly interacting particles are much 
+too closely related for an entirely obvious distinc- 
+tion to indicate the “primarily” radioactive ones. 
+
+The inherent generality of Yukawa’s argument 
+for the meson was widely appreciated, and first 
+
+
+PHYSICS TODAY * NOVEMBER 1966 « 53 
+
+
+Ortec thinks research scientists shouldn’t have to be 
+part-time instrument technicians. 
+
+
+If you've got a multichannel analyzer 
+around the lab, we can save you 
+some valuable time in setting up for 
+gamma and x-ray spectroscopy. Our 
+Model 524 System, for example. 
+
+The system includes all the other 
+instrumentation required: a Ge(Li) 
+detector with cryostat and dewar, 
+preamplifier, linear amplifier, biased 
+amplifier, detector bias supply, and 
+an AEC standard modular bin 
+and power supply. 
+
+Prior to shipment, the system is 
+calibrated and adjusted for optimum 
+performance by actual lab checkout. 
+
+
+It is delivered with a setup roster 
+
+
+that explicitly spells out eac 
+every instrument setting. There will 
+be no question, of course, of possible 
+signal incompatibility, poor impedance 
+matching, or any of the other 
+vexations that somehow turn up when 
+you use hardware of randomly 
+assorted manufacture. Ortec 
+equipment is compatible by design. 
+
+It is capable of the same specified 
+level of system performance whether 
+we hook it up and tune it, or you 
+
+do the job, yourself. (The big 
+advantage of the prechecked system, 
+
+
+of course, is that you don't have to 
+spend time calibrating and aligning 
+the instruments.) 
+
+lf you would like detailed 
+specifications, drop us a line. If you 
+have particular questions to discuss, 
+call our Technical Information Center 
+at (615) 482-1006; one of our staff 
+specialists will be glad to help. 
+Oak Ridge Technical Enterprise Corp, 
+111 Midland Road, Oak Ridge, 
+
+
+Tenn. 37830. 
+
+
+So we’re now offering a packaged gamma spectroscopy system. 
+It comes pretested, functionally checked out, and guaranteed 
+capable of 5 keV resolution on the ©°Co 1.33 MeV peak. 
+
+
+54 * NOVEMBER 1966 + PHYSICS TODAY 
+
+
+3467 
+
+
+the meson as relatively light, which is, of course, 
+t necessary but was initially helpful, then when 
+nucleon emits a meson of mass yp, this costs 
+energy not less than y»c*. By the uncertainty 
+relations, this state cannot endure much longer 
+than #i/yc?; and since the meson cannot travel faster 
+than light, it cannot reach much further than 
+R=ti/yc: This is the connection between range R 
+and mass, which has become a recurrent and essen- 
+tial argument in physics and is used over and 
+over in many forms, not least in dispersion theory 
+and in approximate treatments of the analytic 
+structure of scattering amplitudes and form 
+factors. 
+
+
+Cascades and cosmic rays 
+
+In the midthirties our situation in California was 
+rather special, because Anderson was there, and his 
+work on the cosmic rays, and later that of his 
+collaborators. He used to show us his marvelous 
+doud-chamber pictures; the more beautiful and 
+marvelous they grew the sadder he became. The 
+o of the story—perhaps known to you—about 
+naids lies here. I took Pauli to Anderson's 
+itory, to look at some of his recent pictures. 
+on kept shaking his head and looking mel- 
+holy, because the situation they revealed seem 
+mplicated and hard to understand or figure 
+- Pauli was fascinated, and asked: “What did 
+ect to see, that you are so sad—mermaids?” 
+rds have been repeated in quite other con- 
+
+
+confidence in the soundness of the founda- 
+of field theory was one reason why we 
+that Yukawa’s mesons should exist; an- 
+Was in the end quite persuasive to me. 
+1932, it was recognized that the principal 
+rption of gamma rays in matter would be, 
+ie Compton effect, but pair production, with 
+and constant cross section for high energy, 
+pair production in the nuclear electric field. 
+ilar formula and asymptotic energy inde- 
+ence described the gamma radiation of an 
+tron or positron passing through this field. 
+predictions made it awkward to identify 
+netrating radiation, charged or neutral, with 
+ns, positrons or gamma rays. Anderson’s pic- 
+howed countless trajectories penetrating sub- 
+plates of lead and gold without absorp- 
+r detectable interaction. Indeed at sea level 
+true for more than three fourths of the 
+rays. Of these about half, though not 
+were negatively charged. The only known 
+atively charged particle was the electron. 
+
+
+By '35 or "36 we had persuaded ourselves, as 
+others had earlier, that the quantum electro- 
+dynamic formulas for gamma radiation and pair 
+production had little chance of being wrong for 
+cosmic rays, on the convincing ground that these 
+phenomena involved transfers of four-momentum 
+that are not large, and quite in the range where 
+the formulas have been well checked; further, 
+the electromagnetic fields involved were not un- 
+usually strong. Thus, the phenomena were the 
+Lorentz transforms—because of the cosmic rays’ 
+high energy—of situations already rather well ex- 
+plored in the laboratory. We therefore concluded 
+that electrons, gamma rays, positrons would all 
+have poor penetrating power, being rapdily con- 
+verted and degraded by a series of radiative col- 
+lisions and pair productions, in what we then 
+called “multiplicative showers,” what were soon 
+after and much better called “cascades.” Of this 
+Carlson and I made a theory, which of course 
+described the Rossi transition curves and the great 
+air showers of Auger. That seemed to settle the 
+behavior of these components. What were the rest 
+of the cosmic-ray particles, the majority, positive, 
+negative and comparatively vastly more penetrat- 
+ing? 
+
+
+Mesons in cosmic rays 
+
+
+It was Anderson’s opinion that they could not all 
+—these penetrating particles—or even predominant- 
+ly be as heavy as protons. They were thus un- 
+identified and unknown. Thus encouraged, Serber 
+and I got ready a short note, arguing that Yuka- 
+wa’s mesons did exist, and that here, in the cosmic 
+rays, they were. After Anderson himself and Ned- 
+dermeyer published their results and Street and 
+Stevenson found about the same things, we pub- 
+lished our note; that was followed in a month or so 
+by a closely related paper of Yukawa. We did not, 
+as we originally intended, include evidence of the 
+radioactivity of the mesons, for Bohr persuaded 
+us that that was a logically quite separable point, 
+as indeed it was; but within a year Blackett pub- 
+lished that, with better evidence than we had 
+found, 
+
+It is natural that in Europe the response to 
+Yukawa’s paper should have been a little slower; 
+it seems not to have been noted until the con- 
+nection with cosmic rays had been published. 
+There is now a very interesting account of the 
+developments, prepared by Kemmer for the 30th 
+anniversary celebrations of the meson in Kyoto 
+last year. Kemmer himself played an important 
+part in the story. At first, of course, one looked 
+in Japan, in Europe and in this country at 
+
+
+PHYSICS TODAY »* NOVEMBER 1966 * 55 
+
+
+56 
+
+
+ee 
+
+
+BROOKHAVEN NATIONAL LABORATORY 
+
+
+NOVEMBER 1966 
+
+
+PHYSICS TODAY 
+
+
+BUBBLE-CHAMBER PHOTOGRAPH of ;-p in- 
+teraction, producing a K~, a K, (shown by dotted 
+line), a 7, and a neutron (no track). The K* quick- 
+ly decays into 7* and 7° (no track). The 7* decays 
+into a ne which decays into an e. The 7° decays 
+into a pair of gammas (no tracks), one of which 
+creates an e-e* pair. K,° decays into 7* and 7. 
+
+
+what might be the spin and parity of the mesons; 
+scalar mesons, as originally proposed, hardly 
+seemed promising for nuclear forces. We could 
+show, of the cosmic-ray mesons, that they could 
+not have spin one, because then they too would 
+radiate gamma rays too much to be as penetrating 
+as observed. We thought that they were charged 
+pseudoscalar fields. We noticed, with growing but 
+much too well contained alarm, that they showed 
+very little nuclear interaction: they showed no 
+appreciable nuclear scattering besides multiple 
+Coulomb scattering; the limits, still not very sharp, 
+were ominous. We tried to explain this by de- 
+veloping strong coupling theory, which can _in- 
+deed give very much reduced nucleon scattering, 
+
+All of this of course later turned out to be non- 
+sense. No one had ever predicted these cosmic- 
+ray mesons. No one then knew what they were; 
+no one understands their existence today; no one 
+expected it; no one has a good argument as to 
+why they should exist, nor have the properties 
+they have. 
+
+It was in Europe that Kemmer looked at an- 
+other question: not the spin and _parity-transfor- 
+mation properties of the fields but their charge- 
+bearing properties and thus the charge depend- 
+ence of the resulting nuclear forces. After the 
+careful work of Breit, it was hard to doubt that 
+the forces between proton and neutron had much 
+in common with those between proton and _ pro- 
+ton. With charged mesons only, this would be 
+most puzzling since the exchange of a single 
+charged particle, which gives exchange character 
+to proton-neutron forces, is impossible between pro- 
+ton and proton. Kemmer, therefore, not only pos- 
+tulated neutral mesons, but devised a charge 
+independent, charge-symmetric as well as charge- 
+conjugation-invariant theory of the interaction of 
+mesons and nucleons, a theory not only charge 
+symmetric but leading to exchange forces. It was 
+soon widely observed that these neutral mesons, 
+charge self-conjugate, should be unstable for gam- 
+ma decay, whether into two or three quanta de- 
+
+
+other, went off to war. We had the impression 
+that the strong meson-nucleon coupling presented 
+lems that were theoretically very tough, and 
+
+
+nall cosmic-ray meson-nucleon scattering. We 
+hought Yukawa’s general ideas right and that one 
+looked at his mesons in the cosmic rays at sea 
+In some countries, among our Japanese col- 
+es, in England, in Italy, valuable work con- 
+ued; at the Princeton Institute Pauli and _ his 
+colleagues worked out several forms of strong- 
+oupling theory. The development which was later 
+
+
+periments of Conversi et al in Rome. They 
+showed that the interaction of cosmic-ray mesons 
+with nuclei was extraordinarily feeble, of the or- 
+» as was later recognized, to be expected of 
+ermi beta-decay interactions, not of the order 
+of the very strong nuclear forces, or fields that 
+could produce them. Indeed the observations com- 
+pared the radioactive decay rates of negative mes- 
+ons with their capture from mesic stationary 
+atomic states; for light nuclei the rates are com- 
+able. When word of all this became known, 
+was far more decisive than the small nuclear 
+Scattering in proving that cosmic-ray mesons did 
+not do what Yukawa invented mesons to do: re- 
+act with nucleons and thus mediate nuclear forces. 
+Fermi and Teller analyzed the mesic atoms and 
+showed that there was an overwhelming chance 
+t mesons so bound would be captured before 
+ecay if the Yukawa process were of expected or 
+sonable probability. In June of 1947, at the 
+st serious and intimate conference after the war, 
+ese problems were discussed, as were the Lamb 
+hift, and the electron’s anomalous magnetic mo- 
+lent, and renormalization in quantum electro- 
+dynamics. Then Bethe and Marshak proposed that 
+particles one saw in the cosmic rays might 
+e relatively inert decay products of Yukawa’s 
+Mesons. This was indeed found by Powell and 
+hialini with their new Ilford plates. It was 
+then that for ten years we had misread the 
+ticles, 
+
+
+interactions and strangeness 
+
+
+the discovery of the pi meson, and the re- 
+firmation by direct neutron-proton scattering 
+periments of the exchange character of nuclear 
+ces, it became natural to think again of the 
+
+
+neutral meson. We recognized that it would give 
+risé to a copious production of the soft component 
+of cosmic rays, because of the gamma decay; this 
+would explain the Auger showers, without any 
+appreciable number of primary electrons or gamma 
+rays. Then the neutral pi meson was also found 
+in Berkeley. It decayed into two gamma rays, in 
+harmony with the view that the Yukawa pi-meson 
+field was a pseudoscalar field. 
+
+One then had in earnest the problem of how 
+to describe meson-nucleon interactions. For years 
+one had tried perturbation theory in analogy with 
+electrodynamics; but even before the war the 
+strength of the coupling made that seem, as it 
+was, a most unpromising procedure. Nor were the 
+postwar efforts with the related Tamm-Dancoft 
+treatments more fruitful in their results, as they 
+were no more secure in their foundation. Thus 
+in some ways the strong-coupling approximation, 
+which rested at least initially on treating the mes- 
+on mass as very small compared to that of the 
+nucleon, gave more relevant insight: It predicted 
+a low-lying isobar of spin 3/2 and isospin 3/2, 
+as an example. When Fermi and his laboratory 
+began to study the scattering of Yukawa mesons 
+—and not the inert mesons of cosmic radiation— 
+on nucleons, this isobar appeared as a very promi- 
+nent feature, indeed a resonance, in the scattering 
+amplitude. Just this gave impetus to the develop- 
+ment of more adequate and yery slightly more 
+sophisticated ways of dealing with the strong in- 
+teractions. The first work of Chew (similar in 
+approach to strong coupling theory) and then 
+Low's equation, crossing, and forward-dispersion 
+relations (rediscovered by Goldberger and greatly 
+extended by him and many others) led to a frame- 
+work within which—with dispersion relations and 
+the analyticity they express, with crossing sym- 
+metry, with unitarity—one could again describe 
+the properties of strongly interacting particles. As 
+of today, this machinery in general provides very 
+meager powers of accurate a priori prediction but 
+does provide a description in which empirical 
+knowledge and conjectured theoretical regularities 
+can be expressed and exploited. Jost has char- 
+acterized the earlier unenlightened dependence on 
+perturbation theory as requiring a moderately ade- 
+quate familiarity with the Latin and Greek al- 
+phabets, and none whatever with mathematics. 
+
+The last great discovery that cosmic rays contrib- 
+uted to particle physics was the discovery of 
+strange particles. Here the obvious paradox lay in 
+the abundance of their production from non- 
+strange matter, compared to their slow decay back 
+to such matter. It was clear that here the pi-mu 
+
+
+PHYSICS TODAY * NOVEMBER 1966 «+ 57 
+
+
+meson trick would not work; but when one strange 
+particle was produced from nonstrange matter, 
+another of opposite strangeness would appear with 
+it; this probable process would lead to two parti- 
+cles which of themselves could only by weak forces 
+—and slowly—decay into nonstrange matter be- 
+cause for each the decay involves a change in 
+strangeness and thus no fast reaction. It thus 
+was clear that if a negative pi-meson—proton col- 
+lision produced a lambda particle—which would, 
+two times in three, give back a proton and a 
+negative meson—a strange meson of strangeness 
+Opposite to the lambda must appear in the pri- 
+mary collision. 
+
+The story of the strange mesons was itself quite 
+a story, centering on the relation of the tau and 
+theta mesons, which decayed into three and two 
+pi mesons respectively. I shall not remind you of 
+what a tangle and trouble that was, until the 
+two mesons were recognized as one, and the lack 
+of parity conservation in weak interactions, sug- 
+gested by Lee and Yang, was established by Miss 
+Wu and her collaborators. With all this we are 
+surely not finished, not nearly. We do not under- 
+stand the rare decay of the long lived K meson 
+into two pi mesons, though there are many specu- 
+lations, including some, largely from Lee, that 
+would replace this mystery with a larger and 
+deeper one, of a mismatch between charge and 
+baryon-number conjugation. 
+
+
+Puzzles that remain 
+
+
+With the K and pi mesons, one had seven, all 
+described by pseudoscalar fields. A quite different 
+source of enrichment was the analysis of the elec- 
+tromagnetic form factors of the proton and neu- 
+tron. In perturbation-theoretic terms, one expected 
+the proton to be a well localized charge, replaced 
+by a more diffuse one when the proton was dis- 
+sociated into neutron and meson. This picture 
+did not find any support empirically, and for a 
+time it was not clear what physical reactions de- 
+termined the charge distributions. Writing down 
+the dispersion integral for the form factor, one 
+saw that arguments of relativity and complemen- 
+tarity had once again something to say: Frazer 
+and Fulco showed that there must be, to under- 
+stand the form factors, at least a pi-pi complex 
+—an object of spin | and isospin 1, bound though 
+not stable—and estimated where its mass should 
+lie and how unstable it should be. These mesons 
+were looked for and in time found. Theoretical- 
+ly, I fear, no clear calculation of their proper- 
+ties, their mass and width, has been possible so 
+far, and surely not for want of trying. It also 
+
+
+58 +« NOVEMBER 1966 * PHYSICS TODAY 
+
+
+the form factors. Needless to say, we are no 
+finished with the form factors either, especiall 
+at high momentum transfers. 
+With the discovery of the K resonance, the 
+four spin 1, isospin 1/2 excited K mesons, one 
+then had eight vector mesons. An eighth pseudo- 
+scalar meson had long been conjectured and 
+sought and was found in the narrow, long-lived — 
+eta. But this, and the finding of a ninth isoscalar — 
+pseudoscalar and isoscalar vector meson, followed — 
+the increased confidence of Gell-Mann and other 4, 
+colleagues, that there was a good measure of 
+truth in unitary symmetry and the eightfold way. y 
+Unitary symmetry was surely not the only—or t 
+the first—to be tried. It has worked better than 1 
+others, much better, better than O, or G, for 
+instance. As for larger groups, their situation was UE: 
+well reviewed in a session of this meeting, to 4 
+which I refer for an account of the recent work \ 
+and views, among others, of Dashen and Gell- 
+Mann, Giirsey and Radicati, Adler, Weissberger, ! 
+Fubini, Cabbibo. These lead me to expect more 4 
+baryons and mesons to be identified, indications ' 
+of many of which appear in current studies. 
+Whether we should also expect far more massive, ! 
+less familiar ingredients, quarks, that should quite 4 
+directly manifest the order of subnuclear matter, 
+is to me profoundly more doubtful. N9 
+Always before in our history, in chemistry, in 1 
+atomic physics, and nuclear physics, it has been 
+possible to order a large and complex array of | 
+material particles as composites of a very much ! 
+smaller number of more elementary particles in- | 
+
+
+4 
+teracting according to moderately simple—or ap- yf 
+proximately simple—laws. Today one has to re- 
+member that the quarks would, like baryons and 4 
+mesons, have to be strongly interacting particles, ~~ 
+
+—— 
+
+
+composites of one another, composites too of their 
+composites. Thus it seems to me unlikely enough 
+that we are about to return to a simple view of ~ 
+the fundamental particles as “simply” composed, — 
+as is the hydrogen atom or the deuteron, of 
+simpler things and by simple laws. 
+
+It seems to me that we are in for a far greater — 
+novelty than the discovery of “more fundamen- > 
+tal” particles. It is not one of the privileges, as 
+it is assuredly not one of the virtues, of senility — ; 
+to make predictions. I make only one, I think — 
+that we are unlikely to live again through such — 
+a ten-year joke as mistaking the mu mesons for 
+Yukawa’s particles. I do not think that could 
+have happened if it had not been for World W: 
+
+

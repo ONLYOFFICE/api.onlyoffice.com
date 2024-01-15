@@ -1,0 +1,32 @@
+{
+  "name": "@onlyoffice/documentation",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "pnpm make build",
+    "lint": "eslint .",
+    "make": "tsx ./makefile.ts",
+    "test": "pnpm make test"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.3.0",
+    "@stylistic/eslint-plugin": "^2.1.0",
+    "@types/eslint__js": "^8.42.3",
+    "@types/node": "^20.12.12",
+    "@typescript-eslint/eslint-plugin": "^7.7.1",
+    "eslint": "^9.3.0",
+    "eslint-config-flat-gitignore": "^0.1.5",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-promise": "^6.1.1",
+    "eslint-plugin-unicorn": "^52.0.0",
+    "globals": "^15.0.0",
+    "sade": "^1.8.1",
+    "tsx": "^4.10.5",
+    "typescript": "^5.4.5",
+    "typescript-eslint": "^7.7.1",
+    "uvu": "^0.5.6"
+  },
+  "engines": {
+    "node": "^21"
+  }
+}

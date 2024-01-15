@@ -1,0 +1,235 @@
+JANUARY 15, 1935 
+
+
+PHYSICAL REVIEW 
+
+
+VOLUME 47 
+
+
+Note on the Production of Pairs by Charged Particles 
+
+
+J. R. OPPENHEIMER, Department of Physics, University of California 
+(Received December 3, 1934) 
+
+
+We compute the internal conversion by pair-production of the radiation emitted in the 
+impact of charged particles. When the energy available for pair-production is large compared to 
+mc?, this simple method gives a valid estimate of pair-production by the impact. For electrons of 
+very high energy the probability of pair-production increases as [In (E./mc?) P. 
+
+
+HE production of pairs by charged particles 
+of high energy has been considered by 
+Furry and Carlson,! and by Heitler and Nord- 
+heim.? In both of these researches the probability 
+of pair production is calculated by an application 
+of the systematic Born-Mgller perturbation 
+theory for relativistic impacts. We want here 
+to consider a rather simpler method of treating 
+the problem for the case that the energy available 
+for pair production is very large compared to mc’. 
+Consider first pair production by the impacts 
+of a heavy charged particle on a nucleus, where 
+we may take the velocity of the particle vc, 
+and where, in order that large energies may be 
+available for pair production, we shall suppose 
+that pu®>mc, where w= M,M2/(M+M2) is the 
+reduced mass of particle and nucleus. For this 
+case the impact of the two heavy particles and 
+the electromagnetic field produced by the impact 
+can be computed purely classically, and we have 
+to study the production of pairs by this field. 
+For the components of this field of frequency 
+p> vy=mc?/h, the wavelength is small compared 
+to the region, of order #/mc, in which pair 
+production is important, so that the radiation 
+field of the impact may, despite vc, be supposed 
+in this limit to contribute essentially to pair 
+production. | 
+It is easy to calculate the effect of this radia- 
+tion field, if we neglect altogether the diffrac- 
+tion zone field of the charges. To do this 
+we may use the classical expression for the 
+intensity of the continuous x-ray spectrum. If 
+mass and charge of the two particles are Mi, Ze; 
+M., Z2e, respectively, then for unit incident flux 
+of impacting particles the intensity per unit 
+
+
+1W. H. Furry and J. F. Carlson, Phys. Rev. 44, 237 
+(1933). | . 
+
+530) Heitler and L: Nordheim, J. de Physique 5, 449 
+(1934), 
+
+
+frequency of emitted radiation is given by the 
+well-known formula of Kramers 
+OZ PZ Pe? 
+I, = 327°3-?_____, (1) 
+prure® 
+
+
+yop = pv ?/2h, 
+
+
+where ¢=(M1Z2.— M2Z;)/(Mi+M2) is the effec- 
+tive charge. This radiation is dipole radiation, 
+for which the internal conversion coefficient by 
+production of pairs is known.® For v> vo, it is 
+given with good approximation by 
+
+
+(2a/3m)[In (2»/v)—-3/5]; a=e/fic. (2) 
+
+
+If we take from (1) the number of quanta 
+emitted per unit frequency per unit time, we 
+get, using (2), for the cross section for pair 
+production 
+
+
+for | 
+
+
+r= 20 f (dr/)[In (2v/¥9)—3/5.]; 
+
+
+“eZ eZ 2 
+O=163308—— ,. . 3B) 
+
+
+weve 
+
+
+with 
+
+
+where the lower limit of the integral over »v is of 
+order vo. For ¥> 9, we thus get 
+
+
+—o=OLIn (9/10) P. (4) 
+
+The estimate which Heitler and Nordheim 
+give for this case is just 
+
+o~ OQ. (5) 
+
+
+This result they have obtained by applying 
+Born’s approximation to the impact of the two 
+heavy particles and the calculation of their 
+field. Although the validity of this method of 
+
+
+3L, Nedelsky and J. R. Oppenheimer, Phys. Rev. 44, 
+948 (1933), 
+
+
+146 
+
+
+PAIR PRODUCTION BY CHARGED PARTICLES 
+
+
+treating an impact with 2,2.>1, v<c, can 
+hardly be established, it probably gives correct 
+results for the special case of the Coulomb field. 
+On the other hand, the fields calculated by 
+Heitler and Nordheim are just the diffrac- 
+tion zone fields which we have neglected; they, 
+in turn, have neglected the radiation field 
+entirely. The fact that for large ¥/vo, (4) is 
+larger in order of magnitude than (5), may be re- 
+garded as a justification for our neglect of the dif- 
+fraction zone fields, and of the validity, for p> vp, 
+of (4). For y~ v9, on the other hand, (4) and (5) 
+
+
+give contributions of the same order of magni-_ 
+
+
+tude, so that both fields must be considered. 
+This same method can be applied to pair 
+production by electrons of energy E>>mc*. Here 
+we have again to limit ourselves to impacts in 
+which the reaction of the pairs on the impacting 
+electron can be neglected. This restriction, which 
+is also involved in the calculations of Carlson 
+and Furry, means that the energy of the pair 
+
+
+147 
+
+
+by these authors, and as follows also from our 
+calculations, this restriction does not, for large 
+FE, affect the order of magnitude of the results. 
+The neglect of the diffraction zone parts of the 
+field of the particles is here even less open to 
+question than in the case of heavy charges. 
+
+We have now, however, to use in place of (1) 
+the expression for the continuous radiation from 
+high energy electrons in a Coulomb field, for 
+which Bethe and Heitler* give, for hvy<E, 
+hy>mce, | 
+
+
+327Z2e° | 
+I,=————— In (9? / v9) 
+— 3mic® 
+2 (6) 
+with p= E/h. 
+
+
+This radiation is no longer dipole radiation; but 
+for v>vo, the dominant term in the internal 
+conversion coefficient for multipole radiation® is 
+again given by 
+
+
+shall be only a small part of £. As was observed —(Qa/3r) In (v/%9) (7) 
+We thus find, for the cross section for pair production 
+o= (32/9) a2Z*(e4 /mct) i ‘Gi ine wea 
+
+| (64/27 r) 022? (e4/m2c4)[In (7/90) 8. (8) 
+
+
+The calculation of internal conversion, and of the radiation by heavy ions, will be unaffected by 
+the screening of the nuclear field by atomic electrons. But as Bethe and Heitler* have shown, for 
+E>me/aZ*, (6) must be modified. Instead we have, again for hv<E, 
+
+
+I,= (327Z7e°/3m?c) In (199/Z*), (9) 
+
+
+which leads to 
+
+
+o 2(16/91) 22? (e4/mic*) In (199/Z8 [In (5/00) F. (10) 
+
+
+Formulae (8) and (10) show that the probability of pair production by a very high energy electron 
+differs from that for a gamma-ray of the same energy by a factor of the order alin (v/v) }?. This 
+is in complete agreement with the conclusions of Furry and Carlson. For energies of 510° volts, 
+(10) gives for the ratio of these probabilities about 10 percent. 
+
+
+asymptotic value (7) for the internal conversion coefficient 
+may be questioned. The true value of the internal conver- 
+sion coefficient will be smaller than (7). This correction 
+will not affect the dominant term of the result. 
+
+
+an Bethe and W. Heitler, Proc. Roy. Soc, A146, 83 
+
+1934), | 
+®For v>>v, radiation corresponding to multipoles of 
+
+very high order will be present; for these the use of the 
+
+

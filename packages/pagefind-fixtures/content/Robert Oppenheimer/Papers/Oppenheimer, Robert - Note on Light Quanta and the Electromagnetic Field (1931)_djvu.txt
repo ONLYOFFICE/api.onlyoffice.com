@@ -1,0 +1,1384 @@
+AUGUST 15, 1931 PHYSICAL REVIEW VOLUME 38 
+
+
+NOTE ON LIGHT QUANTA AND THE 
+ELECTROMAGNETIC FIELD 
+
+
+By J. R. OPPENHEIMER 
+UNIVERSITY OF CALIFORNIA, BERKELEY, CALIFORNIA 
+
+
+(Received June 26, 1931) 
+
+
+ABSTRACT 
+
+
+1. Introduction: light quantum theory and quantum electrodynamics. 
+
+2. Extreme light quantum theory; spin of quantum; wave equation for quanta; 
+eigenwerte and solutions of the equation; electrostatic quanta; angular momentum 
+and selection rules; Lorentz covariance; theory of the charge-free field; quanta and 
+electrons. ; 
+
+3. Quantum electromagnetics; reformulation to treat progressive and spherical 
+waves; integrals of momentum and angular momentum; new introduction of light 
+quantum equation; distinction between field and corpuscular theories; zero point 
+energy, negative energies, and electromagnetic mass. 
+
+4, Interaction of quanta and charges; critique of light quantum theory. 
+
+
+HE quantum theory of the electromagnetic field! gives a unitary treat- 
+
+ment, on the one hand of the electrostatic fields, and, on the other, of the 
+theory of radiation. The distinction between electrostatic and radiation fields 
+may be preserved in the general theory; for it is possible to put, on this theory, 
+the total energy of a system of field and charges in such a form, that the con- 
+tributions from the two fields remain distinct. In this total energy there are, 
+in addition to the kinetic energy of the charges, terms of three kinds: (a) the 
+electrostatic interaction energy of the charges with each other and with them- 
+selves; (b) the energy of the light quanta, to which must be added an infinite 
+constant, corresponding to a half quantum of energy for each component of 
+the radiation field; (c) the interaction energy of the charges and the radiation 
+field, which gives the magnetic interaction of the charges, the infinite proper 
+magnetic energy of the charges, and those interactions which give rise to the 
+absorption, emission, and scattering of light quanta. 
+
+The terms (b) and (c) are quite similar to those which appear in the 
+relativistic extension? of Dirac’s light quantum theory. There are nevertheless 
+points of difference between the two theories. Some of these differences are 
+altogether trivial; but there are a few which are rather deep-lying. We may 
+cite a few examples of this divergence: 
+
+A. In the field theory, the electrostatic field is an integral and Hevitable 
+part of the electromagnetic field; only when it is included can one establish 
+the invariance of the scheme under space rotations and Lorentz transforma- 
+tions; but in the Dirac theory there is apparently no place for an electrostatic 
+field, and Lorentz covariance may be established without considering such a 
+
+
+1 W. Heisenberg and W. Pauli, Zeits. f. Physik 56, 1 (1929), and 59, 168 (1930). Cited as 
+HPI, and HPII. 
+2 e.g., I. Waller, Zeits. f. Physik 61, 837 (1930). 
+
+
+725 
+
+
+726 J. R. OPPENHEIMER 
+
+
+field; on the other hand the behavior of the scheme under space rotations had 
+not been investigated, and it has therefore not been possible to establish con- 
+servation laws for angular momentum, nor to derive from them the selection 
+rules. 
+
+B. There is in the Dirac theory no analogue to the infinite zero point 
+energy which, on the field theory, must be added to the energy of the quanta 
+in the radiation field. On the other hand we should expect in a completely and 
+consequently corpuscular theory of light to meet with negative energies for 
+the quanta; there is apparently no analogue to these negative energies in the 
+field theory. 
+
+Of course all these points are not unconnected; it will be in part the pur- 
+pose of this paper to study the connection between them, and to see which of 
+the points of difference arise from an incompleteness of the present theory of 
+quanta, and thus may be dissipated by extending the theory, and which are 
+fundamental and persist. It will turn out that in all the points mentioned 
+under A, the light quantum theory, when properly extended, is in full agree- 
+ment with the field theory; but that in the points of difference B, there is an 
+irresoluble disparity between the two theories. But before we may profitably 
+make the comparison, we shall have on the one hand to develop a somewhat 
+more complete light quantum theory than that of Dirac; and on the other 
+to make minor formal changes in the Heisenberg-Pauli field theory. It will be 
+easy then to answer the questions which we have put. 
+
+
+2: 
+
+
+We shall begin by developing an extreme light quantum theory, and for- 
+get for the time all connection with Maxwell’s equations. We shall postpone 
+too a treatment of the interaction of quanta and charges, for this treatment 
+is most readily given after the connection between light quantum theory and 
+quantum electrodynamics has been established. Our present problem is to 
+find the wave equation for the de Broglie waves of the quantum; the theory 
+of the field we shall then obtain by a suitable quantization of the de Broglie 
+amplitudes. 
+
+In obtaining the wave equation we may be helped by a consideration of 
+the integrals of angular momentum for light quanta. There are in particular 
+two selection rules for the absorption and emission of radiation by matter, 
+which should follow from the conservation of angular momentum, and the 
+properties of the quanta which appear or disappear. These rules apply strictly 
+to angular momentum measured about a space fixed point, and only with high 
+approximation (see Eq. (9) ) to that measured about the center of mass of a 
+heavy atom. The rules assert: I. That the component of atomic angular mo- 
+mentum parallel to the direction of motion of the quantum absorbed or 
+emitted changes during the process by one Bohr unit; the sign of the change 
+is determined by the polarization of the quantum; II. That the total angular 
+momentum of the atom may not remain zero during the process of radiation. 
+
+There is a third more qualitative rule, which asserts that the probability 
+that on emission or absorption there be a change of more than one unit in 
+
+
+LIGHT QUANTA 727 
+
+
+total atomic angular momentum, that this probability is small when the wave 
+length of the light A is large compared to the dimensions a of the atom, and of 
+the order 
+
+(a/d)”? 
+
+
+for a change of atomic angular momentum of 1+6 units. To establish this rule 
+one must know something more of the interaction of quanta and charges be- 
+yond the validity of the conservation laws; we shall be able to derive it later. 
+
+But these rules already tell us what we need to know: the component of 
+angular momentum of a light quantum parallel to its direction of motion 
+must be plus or minus one Bohr unit, according to the polarization of the 
+quantum; the total angular momentum of a quantum about any point must 
+be an integral number of Bohr units, and may not vanish. If these statements 
+are true, the conservation laws will give us the selection rules. 
+
+It should be observed of course that these rules refer to the eigenwerte of 
+the angular momentum. There are many radiation processes in which the 
+components of angular momentum of the atom are not determinate; but if we 
+render them determinate, by the use, say of magnetic fields and circularly 
+polarized light, then the rules will hold. We may also mention that the 
+second and third rules, which refer to total angular momentum, could be de- 
+rived classically, and that this is in fact historically the origin of the selection 
+rules. But classically the first rule makes trouble; for a strictly plane electro- 
+magnetic wave has no component of angular momentum parallel to its vector 
+of propagation. Such a component can not arise from orbital angular momen- 
+tum; one may, if one chooses, ascribe it to a spin of the quantum. But unlike 
+the electronic spin, the spin of the quantum is a whole, not a half unit; yet it 
+has two, and not three-eigenwerte; zero is not an eigenwert. Further, the total 
+angular momentum of a quantum may not vanish; spin and unit orbital angu- 
+lar momentum may not be antiparallel. These are the facts which must guide 
+us. 
+
+Now the second order relativistic equation which we should try first for 
+our wave equation is the equation of the retarded potentials, which might 
+serve for a particle free of forces and of vanishing mass 
+
+
+1 
+Oy={aA—a2ty=0 with a, =— (1) 
+CG 
+
+
+wo 
+
+
+This equation is in several respects unsatisfactory. Here, just as for the elec- 
+tron, we should want a linear equation, in order to obtain a suitable density- 
+flux vector with vanishing divergence. We want, too, more than one kind of 
+quantum for given vector of propagation, since we must describe somehow 
+the polarization of the quantum. Also the integrals of angular momentum 
+come out wrong. The corresponding operator is 
+
+
+L = (h/2ri)[r X VI]. 
+
+
+The eigenwerte of the component Ak/27 parallel to the vector of propagation 
+are zero; and the eigenwerte of the total angular momentum /, with 
+
+
+728 J. R. OPPENHEIMER 
+
+
+Wl +1) = (40r?/A2)L? (2) 
+areQ,1,2,.... 
+Now some years ago Jordan suggested that we take account of the polar- 
+ization of light quanta by using® Pauli’s spin matrices 6. With their help we 
+can factor (1), and obtain the two component equation 
+
+
+{(6-v) + aby = 0. 
+
+
+Here ¥ no longer behaves as an invariant under space rotations, but as a 
+spinor of the first rank. We know, however, that it will be impossible to 
+associate such a spinor with any electromagnetic field strength or potential; 
+for the whole of classical electromagnetics involves vectors only. Here the 
+angular momentum operator is 
+
+
+L = (h/2nri)[r & V] + =< 
+
+
+and gives for the eigenwerte 
+
+
+1 1 3 5 
+N= bmp be es me eees—" 
+2 Ze ae. ae 
+This suggests that we should try a three component theory. We introduce 
+a new 
+
+
+Y = (1, We, Ws) 
+
+
+and in place of the 6; three three-row matrices 7; which are the components 
+of a vector 
+
+
+= (71, TQ) 73). 
+We let the 7; satisfy the commutation laws 
+[o X «| = ie (3) 
+
+
+so that they have the eigenwerte 0, +1. We shall have occasion to introduce 
+explicit matrices for the 7; later. We write now for our wave equation 
+
+
+{(e-v) + aty =0. (4) 
+The properties of the solutions of this equation are easy to study. The 
+density—flux vector has the components 
+W; obra 
+
+
+and on the basis of (4) its divergence vanishes. Thus cr plays in some respects 
+the part of the velocity; the eigenwerte of the components are 0, +c. Further 
+the energy and momentum are given by 
+
+
+E = (he/2at)d; p = (hf 
+3 P. Jordan, Zeits. f. Physik, 44, 292 (1927). 
+
+
+LIGHT QUANTA 729 
+
+
+so that (4) is just 
+E = (p-v). (5) 
+
+
+As in Dirac’s equation for the electron, velocity and momentum may have 
+opposite sense, and the energy may be negative. To each value of the mo- 
+menta, there correspond three solutions of (5), with the eigenwerte 
+
+
+H=0, + pe. 
+If we look for monochromatic solutions of (4), setting 
+ST aaa Re 7 ial a7 
+we find 
+(c-V)u = iwi. (6) 
+From this we deduce 
+wlA + w?]u = 0. (6a) 
+
+
+Thus any w constant in time is a solution of (4). Solutions which vary in time 
+must satisfy (1). , 
+
+We may learn more of these solutions by considering a special case. We 
+look for solutions in the form of a plane wave, so that they depend upon the 
+coordinates only through the common factor 
+
+
+erkez 
+
+
+We may then take 73 diagonal, and obtain the three solutions of (6) 
+
+
+w = ke; uy, = 6: wo = 0; 43 = 0; 
+QO = 0; uy = 0; un >= Oe us = 0; (6b) 
+w= — ke; uv, = 0; Uy = 0; Uz = erhe. 
+
+
+Now with this choice of 73, the u; transform under a three-dimensional rota- 
+tion like the components of a spinor of the second rank 
+
+
+Uy ~~ QW 'M%eiB(y + ty) 
+Uy ™ — B 
+
+
+. hg ~~ QM 2%e- Ble — ty). 
+
+
+The solution with w =0 thus has the vector U of which the w’s are the “spinor 
+components” parallel to the vector of propagation; whereas for w+0, this 
+vector lies in a plane perpendicular to the vector of propagation. This sug- 
+gests that the solutions with w=0 will turn out to have something to do with 
+the static solutions of Maxwell’s equations, and that the solutions with 
+w+ 0 will be connected with the light quantum solutions. 
+
+Note on notation. We shall have, in the following to distinguish between 
+three and four vectors, and their spinor components. In general we shall use 
+
+
+730 J. R. OPPENHEIMER 
+
+
+capitals for the vector, small letters for the spinor, components; further we 
+shall use latin indices for three-greek indices for four-vectors and spinors, and 
+shall use a raised index for contragredience, and adopt the summation con- 
+vention. Since we shall not use the spinor components in four dimensions, but 
+rather components which are half spinor and half vector, we give here a table 
+of the notation and components: 
+Thus 
+
+Stee Says 
+spo ++ {2-205 + iSy), — Sz, 2-2(S2 — iSy)} 
+sé... {2-12(5, — 4S,), — Sz, 2-8, + iSy)} 
+Shee US BS ola i | 
+St.-. 1S,, Sy, Sz, — Si} 
+Sur {2-N25, + iSy), — Sz, 2-28, — iSy), Si} 
+
+Gia ee VOUS Se BSN. eS DANG Sy a) 
+Finally, we shall use 0; for the spinor components of the gradient Vi. 
+
+We may define the angular momentum operator by considering an 
+infinitesmal rotation of coordinates. Thus, if we make such a rotation 6; 
+about the z-axis, and if the corresponding change in the u’s is du, then the z- 
+component of the angular momentum L, is given by 
+
+
+bu = (2ri/h)Lub, = |x(0/0%) — y(0/dx) + irs |udy. 
+
+
+So we find 
+L = (h/2mri)|r X ¥] + (h/20)t. (7) 
+
+
+The Eq. (6) is invariant under a space rotation, and the components of L 
+are constants of the motion of the quantum. In particular, for plane wave 
+solutions, the component of L parallel to the vector of propagation commutes 
+with the momentum, and has the eigenwerte 
+
+
+wo =0; }=0 
+w—0; X= +1. 
+
+
+The total angular momentum defined by (2) also commutes with the energy, 
+
+
+and has the eigenwerte 
+ee | ap ee ee 
+
+
+The value 0, cannot, however, occur except wien w=0. For if 7=0, then 
+c= -ilrXyl. 
+If we put this in (6), we get at once 
+wu = — (Ir X V]-V)u = 0. 
+
+
+Thus we see that (6) gives to true light quanta, with w+0 the correct inte- 
+grals of angular momentum. From these, and the conservation laws we may 
+deduce the selection rules I and II. 
+
+
+LIGHT QUANTA 731° 
+
+
+Now to each vector of propagation there are, as we have seen, three 
+solutions of (6); but if we fix the energy, choosing it for instance positive, 
+only one solution survives; we get only one possible value for A, and thus only 
+one kind of polarization. If we wish to exclude negative energies, then (6) 
+will not give us all the solutions we need, and we shall have to add another 
+set, the solutions of an equation analogous to (4), but with matrices 7’ which 
+satisfy, instead of (3) 
+
+
+[e’ xX o/] = — ae’, (3’) 
+Then we write 
+[(e’ A) + 0: |p’ = 0. (4’) 
+The angular momentum is now 
+L! = h/2nilr X V] — h/2re. (7’) 
+
+
+To each k and w#0, we now have two solutions of (4) and 4’), withh=+1 
+respectively. We can of course write the two systems (4) and (4’) as one, if we 
+use a six component wave function, and reduced six row matrices, which 
+have the 7’s and the 7’’s along the main diagonal. In this system of equations 
+we can exclude by an auxiliary condition the solutions for which the energy 
+is negative. We have only to use the improper operator »/A which was intro- 
+duced by Landau and Peierls, and to write 
+
+
+Ow =e, ae V/ AW. 
+
+
+But when we come to introduce the interaction energy of quanta and charges, 
+this condition will no longer be consistent with the equations of motion for 
+the y’s, since we shall always have terms in this interaction which give rise to 
+a spontaneous emission of quanta of negative energy. It is not possible in 
+this theory to exclude quanta of negative energy. 
+
+It will be convenient for us later to have the solutions of (6) which make / 
+and L,=m, say, diagonal; these may be obtained in polar coordinates, with 
+the polar axis parallel to z. For w<0, /40, we get two such solutions, with 
+
+
+w = + ke 
+each of the form 
+: (m) _(tTH;) 
+yjolm = eind DY Gy, P, Dicks (8) 
+s=0,+1 
+Here wp =m+1, us=m, wy =m—1;the P’s are associated Legendre functions 
+of cos 9, the J’s may be given in terms of Bessel’s functions by 
+
+
+(kr) 
+
+
+[, = (kr) SF os iye 
+
+
+and the c’s are constants which do not in general vanish, and which take on 
+different values according to whether w= +c. For the choice of the matrices 
+7; given in (10), the c’s may be taken real, and to satisfy 
+
+
+(m) (—m) (m) (—m) 
+Csi = Ce3 C32 = C52 3 = 0, meee 
+
+
+3a Landau u. Peierls, Zeits. f. Physik 62, 188 (1930). 
+
+
+732 J. -R. OPPENHEIMER 
+
+
+For 1/=0, w =0, and for |e | =], the first term on the right side of (8) does not 
+appear. 
+
+We may use (8) to derive the third of our selection rules. We shall show in 
+the next sections that the probability of the emission or absorption by an 
+atom of a quantum in a state 7 is given essentially by the square of the modu- 
+
+
+lus of the integral 
+B= i dV u,"s' 
+
+
+where the vector S is the current density vector of the atom. Now when the 
+wave-length 27/k of the quantum is large compared to the dimensions a of 
+the region in which S is appreciable, we may expand the functions J in the 
+integral B about the center of mass of the atom, taken as origin, and station- 
+ary. Thus we find that if /,=1-+6, B is small of the order 
+
+
+(ak)?. 
+
+
+This makes the probability of absorption or emission of a quantum with 
+
+
+1/=1-+6, small of the order 
+(ak)? 
+
+
+and gives, in conjunction with the conservation laws for angular momentum, 
+the third of our selection rules. By a similar argument we may take account 
+of the recoil of the atom as a whole upon absorption or emission. This recoil 
+will be small when the atom is massive compared to the quantum; it gives rise 
+to a probability for a violation of the selection rules for angular momentum 
+measured about the center of mass of the atom. This probability is of the 
+
+
+order 
+(hk/ Mc)? (9) 
+
+
+where M is the mass of the atom. For ordinary light this probability is ex- 
+tremely small. 
+
+Although, as we have seen, our fundamental Eq. (4) is covariant under a 
+space rotation, it is not Lorentz covariant. From (6a) and (6b), we see that 
+the reason for this noncovariance is the occurrence of zero eigenwerte for the 
+7’s and for w. This suggests at once that (4) is a degenerate form of a set of 
+four simultaneous equations for four W’s, involving three four-row matrices 
+ps, of which the 7; are certain three-row submatrices; and that these four row 
+matrices p; must have the eigenwerte +1, each twice. A simple investigation 
+of the behavior of (4) under a Lorentz transformation will make this clear. 
+
+Let us take for definiteness our 7; in the form 
+
+
+0 i 0 0 1 0 
+m=2Y—G 0 +i |p ry = QP $.% G4 
+0 -i 0 ae os 
+1 0 O 
+n={ 0 0 0 ). (10) 
+
+
+LIGHT QUANTA 733 
+
+
+This gives us for the transformation properites of the VY; under a three-dimen- 
+sional rotation 
+
+
+Wi ~ 212% + 1y) 
+Y2~ — 2 
+v3 2712(x% — iy). 
+
+
+Now consider a Lorentz rotation in the z—¢ plane. We should expect V2 to 
+transform like the g-component of a covariant four-vector; let us call the 
+t-component of this vector V,. Then we see that in the transformed Eq. (4), 
+new terms appear which give just the four-divergence of VY. This suggests 
+that we should so extend our matrices 7; that the fourth row and column refer 
+to V4, and that the fourth equation makes the four divergence of VY vanish. 
+Thus we may take 
+
+
+Cay Ose4 O tf Ose 
+ee 0+: 0 ee i O22 | 
+
+OS) let O+1 O4i 
+at Qt. © +i O-i 0O 
+
+10 0 0 
+
+0 0 0-1 re 
+
+- 0 o-1 of 
+0-1 0 0 
+
+
+This gives us p;2=1. The p; each have the eigenwerte +1, each twice; they 
+no longer satisfy (3). 
+
+
+The system 
+{(e-v) + ay = 0 (12) 
+
+
+is now Lorentz invariant. Our Eq. (4) 
+
+
+{(r-v) + aby =0 
+
+
+follows from (12) if we set 
+4 = 0. (13) 
+But we obtain from (12) the further condition 
+OY; = Vii = 0. (14) 
+
+
+The three divergence of the three vector YW must vanish. This condition 
+makes the solutions of (4) for which w=0, reduce to constants. Here again 
+we see the connection between these solutions and those solutions of Maxwell’s 
+equations which give the electrostatic field: in the absence of charges there 
+may be no such field. 
+
+
+734 J. R. OPPENHEIMER 
+
+
+The equations (4) and (14) are themselves Lorentz covariant, if we trans- 
+form the y’s, not as the spatial components of a four-vector, but as the 4—k 
+components of a self dual six vector. This six vector V,, may be completely 
+determined by giving its 4— components in terms of the y’s: 
+
+
+Va = i/212p, +3); V2 = 1/2120, — ws); Wag = — ie; Wa, = Oz 
+We can of course use a similar procedure for making (4’) Lorentz covariant. 
+
+These equations may all be written very simply in spinor notation. For 
+(12) we get : 
+Ow = 0 (12’) 
+while for the system (4) and (14) we have 
+
+
+Oyt = 0. (12”) 
+
+
+For the system corresponding to (4’) then 
+
+
+Ow? = 0. (127”) 
+These last two systems have the same form as Maxwell’s equations for the 
+empty field.2> We should therefore expect to have to add on the right hand 
+side of these systems essentially the four-vector charge and current density of 
+matter; we should then have the correct interaction between quanta and 
+charges. The precise form of these terms will be given in section 3. 
+
+This spinorial form for the wave equations lets us see at once a very grave 
+and inescapable defect of the theory. The equations themselves are co- 
+variant; but the Lagrangian from which they and their complex conjugate 
+equations may be deduced is not a scalar density. This has important and 
+disastrous consequences, for it means that the energy density of the quanta 
+is not the 4-4 component of a second rank tensor, nor the momentum density 
+the 4-k component of such a tensor. Further, and equally disastrous, the 
+density and flux of the quanta do not form a four-vector, so that these quan- 
+tities may surely be given no simple physical meaning. All of these results 
+follow at once from the circumstance that one cannot construct an in- 
+variant which shall be linear in P 
+
+Anyi 
+and linear in the complex conjugates of the y’s: 
+
+
+yin 
+
+
+nor make a four vector bilinear in ¥"' and y’™. This is impossible both for the 
+system (12’) and the systems (12’’); and we can see at once that it will be 
+impossible for any system in which the y’s are spinors of even rank—i.e. 
+world vectors and tensors. If we wish to have a positive definite particle 
+density of the form 
+
+
+Vis 
+
+
+% QO, Laporte and G, Uhle ibeck, Phys. Rev. 37, 1380 (1931). 
+
+
+LIGHT QUANTA 735 
+
+
+which shall be the four component of a four vector, then our wave functions 
+must necessarily be spinors of odd rank. This is the essential ground for the 
+impossibility of a completely satisfactory light quantum theory. 
+
+The fact that the energy density of the light quanta cannot be written ina 
+proper form means that the conservation laws for a system of quanta and 
+charges cannot be made covariant. We shall see another expression of this 
+difficulty when we try to write down the interaction energy of the quanta 
+and charges. And this difficulty will persist as long as we want to write our 
+energy density in the form 7 
+
+Yow. 
+
+If we give up this condition, which is essential to a truly corpuscular theory, 
+we see at once that 
+
+prapim 
+gives us a satisfactory energy momentum tensor; this leads then to a system 
+completely equivalent to classical electrodynamics, and the equations (12’’) 
+become then just Maxwell’s equations for the empty field. By a suitable 
+quantization the classical theory may of course be made to give a theory of 
+the light quantum field. But as already pointed out by Landau and Peierls, 
+it is then no longer possible to define a positive definite light quantum density, 
+nor to treat the quanta as particles. 
+
+‘As long then as we are concerned only with the empty field, our equations 
+will be satisfactory. We have only in some coordinate system to set up (4), 
+and to retain those solutions for which w does not vanish. This procedure will 
+be Lorentz’ invariant, and will give the correct eigenwerete for the dynamical 
+integrals of the quanta. We cannot however extend our theory without great 
+arbitrariness to the case where charges are present, and interact with the 
+quanta. To do this we have first to study the connection between our wave 
+functions VY on the one hand, and the electromagnetic potentials and their 
+treatment in the quantum mechanics on the other. It is this inability to find 
+without the help of classical electromagnetics the correct form for the inter- 
+action between quanta and charges that makes us believe that the light quan- 
+tum theory is not in the end very fundamental, and that the analogy between 
+light quanta and electrons, however attractive from the formal point of view, 
+is not very deep lying. But before we pass to the electrodynamical theory, we 
+may say a few words of this analogy. 
+
+If we wish to make the transition from the theory of a single quantum to 
+the theory of a field, in which many quanta satisfy the Einstein-Bose sta- 
+tistics, we have only to write down the: errect commutation laws for the wave 
+amplitudes V,. 
+
+
+[y(P), W(P’)]=(h/27i)6,.5(P — P); [v.(P)wW.(P)] = [v.(P), ¥.(P)] = 0. 
+
+
+The theory of such a system is very simple, and very closely analogous to the 
+field theory for Dirac electrons. The Lagrangian is 
+
+
+L = — (hi/2ri{(o+V) + d:}y. (16) 
+
+
+736 J. R. OPPENHEIMER 
+
+
+Setting Y,=0 gives us the supplementary condition (14). and the new Lag- 
+rangian | 
+
+L = — (he/2rib{(2-V) + a: hy. (16a) 
+We may list here some of the principal operators 2 which gives us the dy- 
+
+
+namical integrals of the field, together with the eigenwerte which we find for 
+the integrals of these densities: Q = [d VyQy 
+
+
+Operator Q. Eigenwerte of Q. 
+Density........... Dette Wiad Sethe a a Paget 4. Ate trea ae 0,1, 2 
+PUK Bhd Rese Lees Cie asd oh ee son eres Bente c(0, +1, 42---) 
+| Dit a2, ae ae ee (he/2wile-V). 0... eee hy,(O, +1, 42,---) 
+Momenta......... C72 a aa ee ee ere ee hv,/c(O, £1, +2,---) 
+Angular b. oo... (h/awile XV] 4-h/dee.... h/r(O, +1, 42° °°) 
+momenta) ° 
+
+
+It should be observed that the energy may be positive or negative, and that 
+there is no zero point energy. 
+
+
+Now we shall see in our next section that it is possible, by a somewhat 
+different choice of Lagrangian, to pass from this extreme light quantum 
+theory to quantum electrodynamics, in which the energy in the field is al- 
+ways necessarily positive. We might now ask the question: Is it possible to 
+find a similar trick for the theory of the Dirac electron, so that, perhaps at 
+the expense of an infinite zero point energy, there would be only positive 
+electronic energy levels? It turns out that we can find such a trick, rather 
+simply, and we shall do so in our next section. (See Eqs. (37) and (38).) In 
+this treatment a group of noninteracting electrons has only positive energy 
+levels. If, nevertheless, we do not believe that any method of this kind will 
+be of fruitful application, it is because of two major difficulties which appear. 
+The one difficulty is this: if we apply the method to the study of a single elec- 
+tron in a field of force, we find that the dynamical problem is always de- 
+generate: for each energy there are wave functions which we should asso- 
+ciate with the motion of particles of positive and negative charge-mass ratio 
+e/m respectively. Radiative transitions between the corresponding states no 
+longer occur; but we find energies and wave functions which are not found in 
+experience; and in particular Klein’s paradox, the abnormal transparency of 
+high potential barriers to slow electrons, still persists. The other fundamental 
+difficulty is that with this method, using the new Lagrangian (38), it is not 
+possible to make the electrons satisfy the exclusion principle. For these rea- 
+sons we cannot regard this attempt to resolve the difficulty of negative elec- 
+tronic energies as satisfactory. We shall not exploit further the analogy be- 
+tween quanta and electrons. 
+
+
+os 
+
+
+We turn now to the quantum theory of the electromagnetic field. The 
+Lagrangian function for the empty field is 
+
+
+Lo = 1/80(E? — H®) = 1/16r[Vabs — VePal?. (17) 
+
+
+LIGHT QUANTA 737 
+
+
+Here E and H are theelectric and magnetic field strengths, and ® the four- 
+vector potential. When charges are present we must add to (17) the term 
+
+
+L; = S*6, (18) 
+
+
+where SS is the four-vector charge and current density. By a variation of the 
+®’s we may deduce Maxwell’s equations; by a variation of the S,, we may, 
+after the addition of suitable inertial terms, deduce the equations of motion 
+of the charges. 
+
+If, asin HPIT, we simplify the analysis by setting 
+
+
+b,=0 | (19) 
+
+then the four Maxwell equation 
+div E + 4rp = 0 (20) 
+no longer follows from a variation of the ®,’s in L; we have to add (20) asa 
+supplementary condition on our wave functions, in addition to those which 
+
+
+now follow from the variation principle: i.e. our wave functions, F say, must 
+fulfill 
+
+
+{div E+ 4xp}F = 0. (20a) 
+The momenta canonically conjugate to the ®; are 
+1 
+ey Se (21) 
+4c’ 
+
+
+We thus have the commutation laws 
+
+
+[1(P), ¥i(P)] = (h/2ri)5:5(P — P’); [UCP), U(P’)] 
+
+
+= [&(P), $;(P’)] = 0. (21a) 
+The Hamiltonian is 
+Hy = [ av{ dV \2ncll,? + 1/8r[v x &]? --f dVS,®p. (22) 
+The components of momentum are 
+jee f dVIsArds. (23) 
+
+
+We shall see later the consequences of this disparity in form of the operators 
+for energy and momentum; for the present it will be enough to remember that 
+in spite of this, and in spite of the convention (19), the scheme is Lorentz 
+invariant, in the sense that the equations fulfilled by all gauge invariant 
+quantities, such as the field strength and energy, are covariant under a 
+Lorentz transformation. The equations for the ®’s themselves are not co- 
+variant; but one may, after a Lorentz transformation, return to the original 
+equations by a new choice of gauge (Umeichung). 
+
+
+738 J. R. OPPENHEIMER 
+
+
+In nearly all the applications of the theory, it is convenient to introduce 
+normal coordinates for the empty field, and to take the amplitudes of the 
+corresponding oscillations as dynamical variables to replace the ®’s. This may 
+be done in a number of ways. Thus in HPJ and HPII, potentials and field 
+strengths are expanded in trigonometric functions of the coordinates, in such 
+away that the tangential component of H and the normal component of & 
+vanish at the boundary of a fundamental cube of dimensions LZ, which is 
+chosen large compared to the region in which there are charges. This is equiva- 
+lent to enclosing the system in a large box with perfectly reflecting walls; and 
+the orthogonal functions represent plane polarized standing electromagnetic 
+waves. Now there are many problems in which it is convenient to have the 
+electromagnetic waves correspond to definite values, say, of the momentum 
+or the angular momentum. For such a treatment one has to use new boundary 
+conditions, and new orthogonal functions. When we carry through the neces- 
+sary analysis, we shall be able to see very clearly the points of analogy and 
+the points of disparity between the field theory and the light quantum theory; 
+and this, rather than the convenience of the new schemes in application, is 
+the reason why we shall give in some detail the elaboration of methods sub- 
+stantially equivalent to those already in use. 
+
+There are three cases which we shall consider; of these the first may be 
+regarded as more or less preliminary; the orthogonal functions are to repre- 
+sent: (a) plane polarized progressive waves of definite momentum; (b) circu- 
+larly polarized progressive waves; (c) spherical waves of definite angular 
+momentum. The boundary conditions for these three cases are pretty obvious. 
+In order to have only an enumerable set of oscillations, we shall still con- 
+sider a finite but large volume V. In (a) and (b) we may take this to be a cube 
+of length L, and may require that potentials and field strengths be periodic 
+in this cube. As long as the dimensions of the cube are very large compared to 
+those of the region to which the charges are confined, we may neglect the 
+image fields of the charges in neighboring cubes, and our formulae will give 
+us results which may be readily interpreted. For (c) we must take our funda- 
+mental volume spherical, and may for convenience demand that the poten- 
+tials vanish on the surface of the sphere. It is in all cases quite easy to see 
+which properties of the field are affected by the boundary conditions, and 
+which are independent of them. 
+
+
+According, for (a), we set 
+
+
+3 
+p; = (4irc/kV)1!? » > fi*quret& ©? 
+1 
+
+
+k l= 
+3 (24) 
+Th; = (k/4riV)*2 So DS fat pypette-r) 
+k I= 
+where k= (ki, ke, ks); ke =(20/L)ni; ni=0, +1, £2,--- and where fiz" is 
+
+
+given by the square matrix 
+
+
+4 Cf. for this E. H. Kennard, Phys. Rev. 37, 458 (1931). 
+
+
+LIGHT QUANTA 739 
+
+
+{ 
+
+1 €2(€1” ++ E92) 1/2 €1€3(€17 + €)7) 12 €1 
+
+2\|— €1(€1” of €7)—1/2 €2€3(€” -+ €27)—1/2 €9 with 
+
+3 0 ae (Gu ++ €27) 1/2 €3 €," roe | ks | /k. 
+
+
+In order that potentials and field strengths may have at all points real 
+eigenwerte, we must have 
+
+
+G—at = Qeitj Pat = Pur. (25) 
+
+
+We write now k>0 when at least two components of & are not negative, and 
+k <0 when at least two components are negative. If k>0O, then gk<0. We 
+use 2; for a summation over all k>0O. We get then the commutation laws 
+(from (21a)) 
+
+
+[Ber, quer] = [per Gere] = (h/202)bwdw; kk’ > 0 
+
+[Ber Dew] = [Ger queer] = [Per gee] = [per Ger] = 0; R, k’ > 0. 
+For the energy we find 
+
+2 
+Hy, = E,+ pak > Ext; E. = >. kePesbes; Ent = ke Pups + Drigur} (26) 
+a he 
+and for the momenta 
+Ie] DT Doi Jae iks{ Berger = Puurt . (27) 
+oa = 
+
+
+The first term in (26) gives the electrostatic energy, and may be evaluated 
+at once by the use of (20); it gives 
+
+
+/ 
+he s fav jer (28) 
+
+
+The second term in (26) gives the proper energy of the light quanta. Since 
+[Ext Ji,n] = 0 
+
+
+energy and momentum may be simultaneously reduced to diagonal form. 
+To do this we make the transformation 
+
+
+1/2 -1 1/2 
+le ee i(h/4m)!!2} Nie v1 oe Tone cart ; 
+: ~1 1/2 1/2 
+Pr= i(h/4r) "4 PreM vet — NewTonc} ; 
+
+1/2 Po 12 
+Pr = (h/4r)!2) Nig vet sa Pon oar ; 
+
+
+: -1 4/2 1/2 
+Dr = (h/4r) Ti eiN vei a Noxon} ; 
+
+
+740 J. R. OPPENHEIMER 
+
+where V4,3=0,1,2---,and | 
+Vinif( Vier) = fNiwev — 848n0 bu) Tix 
+ree eters = f(Niwu + 8; j0n001)T in 
+
+
+Then we get for energy and momenta 
+
+
+Ex, = hhe/2e(Nuit + Now + 1) = hve {Nur + 4+ Nan + ¥} iis) 
+. 29 
+J kt = hk; f 2a Nir eis, Nox) . 
+If we now write for the light quantum terms in the potentials © 
+2 
+bf = (dncf BV)? DI LfuPfgue™ + gue} (30) 
+k l==1 
+there are four terms in the light quantum interaction energy Sid,’ 
+ie . 1/2 11/2 | 
+Sib! = — i(he/kV)? DY DeSifu® | Niel ur — TaN exiete” 
+k l= 
+—1 1/2 1/2 , 
+— ViniNin — Nepil'on)e ir) } (31) 
+
+
+which involve the factor e*”. For each kind of polarization there is a term 
+which gives the absorption of a quantum of momentum kh/27, and one which 
+gives the emission of a quantum of momentum —kh/2r. 
+
+There is a zero point energy, but no zero point momentum. We see 
+formally that this difference arises from the circumstance that the J; are 
+linear, but Ho is quadratic, in 0/0x,. It is this same circumstance that gives us 
+both positive and negative momenta, but only positive energies. If we were 
+to give up the condition that potentials and field strengths were necessarily 
+real, then the energy would no longer be positive definite; in addition to (25), 
+we should also have solutions of the form 
+
+
+gu = — Qn; pw = — Pua; (25a) 
+and our energy would have positive and negative eigenwerte 
+Ext = hv Nia — Na+ New — N'oxa}. (29a) 
+
+
+There would be no zero point energy; but in such a system there would be 
+spontaneous gain in energy by atoms at the expense of the field, as well as 
+spontaneous emission. The light quantum theory gives a situation very much 
+like this. 
+
+The interaction terms (31) are precisely those obtained by a direct rela- 
+tivistic expansion of Dirac’s light quantum theory; they are the most con- 
+venient form for the study of the emission, absorption and scattering of hard 
+light. 
+
+
+LIGHT QUANTA | 741 
+
+
+To treat (b), circularly polarized light, we may make a preliminary trans- 
+formation | 
+
+
+bd, = 3 = 2747 (gb, + iby); b2 = — 3; ‘s 
+wi = x = 2-121, — ill,); 7? = — Is. a 
+The new commutation laws are 
+[w(P), 6,(P)] = (h/2ri)8;:5(P — P’) 
+| ede (33) 
+[wi(P), (P’)| = [b(P), o:(P)] = 0. 
+For the Hamiltonian we get 
+Hy tele Ate Ge ewe (34) 
+
+
+where the 7’s are given by (10). Consider then the equation 
+(<-V)u = iwn. 
+
+
+This is just our wave equation for quanta. We shall choose as our orthogonal 
+functions the normalized solutions u; of (4), which depend on the coordinates 
+only through the common factor 
+
+
+etkor)- R, = 2nn,/L; nh, = Q, oe i, ae 2; oe 
+
+
+We have studied these solutions, and know that to each k there correspond 
+three solutions, withw=0, +kc. Here we must normalize the argument of the 
+solutions, which we do by requiring that in everv case 
+
+
+Uo = gelk.r) 
+
+
+where g is real. Then, demanding as before that potentials and field strengths 
+have real eigenwerte, we make the expansions 
+
+
+bi = (4ac/k)}!? PS yl kats® “ Gros *° } 
+k w 
+(35) 
+ri = (4ri/ ky}? ae Dy | Prati ko aia Pegi ko} , 
+k a) 
+Here, of course, 
+“= U3, U2 = Ue, u® = Uy. 
+This gives 
+[Pre gra’ | a | Pie; ure’ | a (h/ 2m i) 8 ¢%B oe! 
+[Drews Greer | ma [Pre qk’ | oF [Dees Pra | = [Fre Ghee? | a @) 
+
+
+- and, for the Hamiltonian 
+
+
+Hy = dilke Didrwbio + Do’ D2 | o| Gewgew- 
+k w 
+
+
+& a) 
+
+
+742 J. R. OPPENHEIMER 
+
+
+As before, the terms with w=0 give the electrostatic energy (28). The terms 
+with w~0 give an energy 
+
+
+Ens = h|w| /2a(Nivw + New + 1) 
+and momenta 
+Js hes = hk;/20(N tk0 vs Nore) . 
+
+
+For the special case that all N’s vanish except when 2& is parallel to z, the 
+component of angular momentum parallel to z may be made diagonal, and 
+has the eigenwerte 
+
+
+(h/ 21) \ Pe (Mike 5 Nokw) + > (Neko i us) } . 
+k,w>d k,w>O 
+This leads again to the first selection rule of the preceding section. 
+The interaction energy (31) takes the form 
+1/2 
+
+
+Sie = i(hc/ k)1!? Dau Sf si00;#°(W teal thes Focavee) 
+
+
+k w+t0 
+
+
++ sin **(N yrol oe - eva) * 
+Here, as in the light quantum theory, the solutions with w# 0 contribute noth- 
+ing to energy, momentum or field, as long as there are no charges present. 
+
+As another example of the use of (34), we may consider the case (c), using 
+for orthogonal functions the solutions of (6) in polar coordinates which vanish 
+on the surface of a large sphere. We have given such solutions in (8); we 
+normalize their phase by choosing the c’s real. Here again the solutions with 
+w=0 give the electrostatic energy (28). For the light quantum terms in the 
+potential we have 
+
+
+. i 1/2 saint Ay 
+go! = — i(hc/k)*!? Sou Now ow — Tora) 
+w,t,m=0 
+i 1/2 1 1p 
+— i(hc/k)¥!2 Sy Sh tet sm(N roi! toim — Teatm eaim) 
+w,l m> 0 
+
+
+1/2 
+1b) } 
+
+
+t 1/2 —] 
+Wt xin NV vat k seim = PiwtmiV 
+The energy of the light quanta is 
+Hy = YS Dhl wl /2e(Nicrm + Nowtm + 1) + DA| w| /2r(Var + 4). 
+wt 
+
+
+m>0 w,l,m=0 
+For the z-component of angular momentum we get 
+
+
+L, = (h/2r) >> >m(N wim — Neowim) - 
+wl m>0 , 
+By considering the possible changes in total angular momentum when one 
+quantum is absorbed or emitted, we may derive the second and third selection 
+rules of the preceding section. 
+
+
+LIGHT QUANTA 743 
+
+
+Although in both the field theory and the light quantum theory we have 
+had occasion to use the equations 
+
+
+(cV)u = wu; (sv) + db = 0; 
+
+
+there are, even for the empty electromagnetic field, fundamental differences 
+between the two theories. These may be summarized by comparing the 
+Lagrangian functions of the two theories 
+
+
+LQ: — (he/2ni) o[(e-¥) + d:]¢ (36a) 
+
+
+Field: (1/8) {| ab| 2 —| (e-w)o|?}. (36b) 
+
+
+This difference brings with it disparate definitions of the conjugate momenta 
+
+
+LQ: wm; = — (h/2ri)g; 
+
+
+Field: | ry = — (1/42) (0:¢:) 
+and of the Hamiltonian 
+
+
+LQ: (hc/2ri)o(2-V)o = cr'(e: Vd; 
+
+
+Field: (1/84) { | | 2+] (e-W)o| 2} = 2mcPatns + (1/87) | (e- Vo]? 
+
+
+and accounts for the occurrence, in the one case of negative, in the other of 
+infinite positive energies. | 
+
+The nonoccurrence of a zero point energy in the light quantum theory is 
+of interest in connection with an investigation® of Heisenberg on the electro- 
+magnetic mass of charges moving with a velocity close to that of light. One 
+must require of a correct electrodynamics that it should give, for the electro- 
+magnetic energy-momentum vector of such a charge, a four vector the length 
+of which grows, in comparison with the magnitude of the time component, 
+the energy, negligible as the velocity approaches that of light. Now Heisen- 
+berg showed, that with the HP field theory, the vector did not have these 
+properties, and that the reason for this failure lay in the infinite zero point 
+of the field. In this respect the light quantum theory is more satisfactory. 
+But as we shall see in the next section, when we come to consider the inter- 
+action of quanta and charges, the light quantum theory gives not only to the 
+magnetic proper energy, but also to the magnetic interaction energy of 
+charges, a value radically different from that obtained on the field theory, and 
+one hardly to be reconciled with experiment. 
+
+For the treatment of the Dirac electron outlined at the end of the last 
+section, one has only to make in the Tetrode Lagrangian for the electron 
+
+
+(hi/2ri)p[d, — (a:¥) + iyoo |p (y = 2xmc/h) (37) 
+
+
+5 W. Heisenberg, Zeits. f. Physik 65, 4 (1930). 
+
+
+744 J. R. OPPENHEIMER 
+
+
+a change analogous to that from (36a) to (36b) 
+| aw]? —| [Ca-v) + tyao]y | 2. | (38) 
+
+
+Here one has no condition on the reality of the ’s , and one obtains two com- 
+plete systems of terms, corresponding to (25) and (25a) respectively. In each 
+system the motion of a particle with positive and with negative charge-mass 
+ratio e/m is represented. The particles necessarily satisfy the Einstein-Bose 
+statistics. 
+
+The interaction energies of field and charges given in this section have 
+all been derived from the electrokinetic term 
+
+
+S*by (18) 
+
+
+in the Lagrangian. We have now to find what terms must be added to the 
+Lagrangian of the light quantum theory, to give correctly the electrostatic 
+energy of the field, and the elementary probabilities for radiative processes. 
+
+
+4, 
+
+
+When we develop the field theory by the methods of the last section, the 
+interaction terms (18) of the Lagrangian appear finally in two ways, and 
+give rise to the electrostatic energy and the energy of interaction of light 
+quanta and charges. When we set Y,=0, the supplementary condition on the 
+wave function involves p: 
+
+
+div E+ 4rp = 0. | (20) 
+
+
+With the help of this condition, the terms in the Hamiltonian which arise 
+from those expansion terms of 
+
+
+(1/80) E? = (2Qrc*)r? 
+
+
+for which the orthogonal functions correspond to w=0, may be evaluated; 
+they give the electrostatic energy of the field. The terms in 
+
+
+SP; 
+
+
+which appears directly in the Hamiltonian, may be divided into two groups. 
+The one group, for which the expansion functions correspond to w=0, may 
+be shown, as a consequence of (20), to contribute nothing to the energy. The 
+other group, for which the expansion functions correspond to w0, gives the 
+interaction energy of light quanta and charges, and may always be put in. 
+the form 
+
+
+i(he?/ | w |)? S°(Ng12D 0, — Te! N1/2u,). 
+
+
+Here the uw, are a complete set of orthogonal functions (e.g. solutions of (6)). 
+Now we may try to introduce into the Lagrangian of the light quantum 
+theory | 
+
+
+L = — (he/2ni)o[(9-V) + a:]6 
+
+
+LIGHT QUANTA 745 
+
+
+interaction terms which will give these same results. These terms must (1) 
+have real eigenwerte; (2) be Lorentz invariant; (3) be linear in S, and not in- 
+volve the derivatives of S, nor any other quantities referring to the configura- 
+tion of the charges; (4) be linear in @ and ¢. These conditions very nearly de- 
+termine the form of the terms. The condition (4) shows that we cannot hope 
+to find for the interaction of charges and quanta a form like that given by 
+the Hamiltonian theory in configuration space for the interaction of two 
+charges. 
+
+The conditions give for the most general possible form for the interaction 
+terms 
+
+
+Stab, + Stady (39) 
+
+
+where a is some operator not involving the field quantities. It is possible to 
+find a formally satisfactory a; but one has to choose a very quaint operator 
+indeed. The theory is satisfactory in the sense that it leads to the value (28) 
+for the electrostatic energy, and gives the same values as the field theory for 
+the probability of absorption or emission of quanta. This last assertion has 
+of course to be modified, because of the occurrence of auanta of negative en- 
+ergy, for which their is no analogue in the field theory. | 
+
+This occurrence of quanta of negative energy has an important conse- 
+quence, in that it alters the value of the magnetic interaction energy of 
+charges. The calculation is altogether analogous to the field theory calcula- 
+tion,® except that now half the quanta emitted or absorbed have negative 
+energies; and the effect of these processes gives a contribution to the energy 
+of opposite sign to that of the processes involving positive puanta. As a con- 
+sequence, one can no longer deduce Breit’s equation for the second order 
+magnetic energy;’ in fact the terms of second order in v/c vanish. This is of 
+course in flagrant contradiction with experiment. 
+
+The operator a has to be chosen, to obtain the best agreement with the 
+field theory, in the form 
+
+cw = etil4( fc) PE, 
+
+
+Here é is an operator defined by the relations 
+£ = Op 1/2. £29, = Of? = 1; &- [ soe ta = gtil4e1/2 | fedartte de; 
+
+
+This choice of a gives at once light quantum interaction terms 
+
+
+sig,’ ne i(he)*/2 doo, 2 (sia, Nery, os sti; Ty!) 
+2 
+
+
+of the desired form. Here again the terms from s‘g; for w =0 give no contribu- 
+tion to the energy. The supplementary condition introduce by setting ~4=0 
+here becomes 
+
+
+El div 6 = 2r(he)2e-TI4p; po div 6 = 2r(hi)—eT*/4- p, 
+
+
+6 J. R. Oppenheimer, Phys. Rev. 35, 461 (1930). 
+7G. Breit, Phys. Rev. 34, 553 (1929). 
+
+
+746 | J. R. OPPENHEIMER 
+
+
+With the help of this and the relation 
+G9 = — if 1p ENG 
+we find for the energy in the field 
+
+
+/ 
+
+
+pop 
+(r — r’)| 
+
+
+Hy, = — (he/2ni) f dV0O0 = >. (hw,/2r) Ne +3] wv fav 
+w > 
+
+
+as required. | 
+
+Against this formulation one may urge the gravest objections. Not only 
+is the form of the interaction energy derived entirely with the help of elec- 
+tromagnetic theory; this form itself is unsatisfactory because of the occur- 
+rence of the improper operator £. Attempts to avoid the introduction of & lead 
+at once away from the corpuscular theory to an alternative formulation of 
+the field theory in terms of the complex vector £+7H. But to these formal 
+objections to the theory of light quanta one must add that the occurrence of 
+negative energies is in complete discord with experience, both in its direct 
+consequences, which would give an apparent spontaneous absorption of light 
+by matter, and in the value which it gives for the magnetic interaction energy 
+of charges. And we must recall too the difficulties which arose in section 2, 
+where we found it impossible to construct a scalar Lagrangian, a four vector 
+density and flux, or an energy momentum tensor for the light quantum field. 
+For all these reasons the theory developed in this paper is unsatisfactory. 
+It is not impossible that when the occurrence of negative energies for elec- 
+trons is fully understood, the theory of light quanta will be applicable. 
+
+

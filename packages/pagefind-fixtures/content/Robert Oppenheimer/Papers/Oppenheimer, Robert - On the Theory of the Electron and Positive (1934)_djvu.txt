@@ -1,0 +1,2297 @@
+FEBRUARY 15, 1934 
+
+
+PHYSICAL REVIEW 
+
+
+VOLUME 45 
+
+
+On the Theory of the Electron and Positive 
+
+
+W. H. Furry* ann J. R. OPPENHEIMER, University of California, Berkeley, California 
+(Received December 1, 1933) 
+
+
+In this paper we develop Dirac’s suggestions for the 
+interpretation of his theory of the electron to give a con- 
+sistent theory of electrons and positives. In Section 1, we 
+discuss the physical interpretation of the theory, the limits 
+which it imposes on the spatiotemporal description of a 
+system and in particular on the localizability of the elec- 
+tron. In Section 2, we set up the corresponding formalism, 
+introducing wave functions to describe the state of the 
+electrons and positives in the system, and constructing 
+operators to represent the energy, charge and current 
+density, etc. It is shown that the theory is Lorentz in- 
+variant, and has just that invariance under contact trans- 
+formations which the physical interpretation requires. The 
+electromagnetic interaction of the electrons and positives 
+is formulated, and certain ambiguities which arise here are 
+
+
+Eis 
+
+
+ITH the discovery of the positive electron, 
+
+one of the most curious and radical pre- 
+dictions of Dirac’s theory of the electron has re- 
+ceived experimental support. It appears that the 
+positive electron has the properties of the anti- 
+electron of the Dirac theory, and that in some 
+cases, notably in the absorption and internal 
+conversion of gamma-rays, the circumstances of 
+the production of pairs of electrons and positives 
+are just those to be expected from the theory. We 
+want to develop the formalism of the theory in its 
+present form as clearly and consistently as 
+possible, and to show how the formalism is to be 
+interpreted physically, where it justifies earlier 
+methods of calculation, where it leads to new 
+predictions, and where these predictions fail. We 
+shall see that the present theory is limited in 
+very much the same way as the quantum theory 
+of wave fields: here, too, it is possible to develop 
+a consistent and relativistic formalism which 
+within wide limits corresponds to the possibilities 
+of physical observation and gives correct results; 
+but here, too, the legitimate application of the 
+theory is limited to lengths which are large com- 
+
+
+* National Research Fellow. 
+
+
+discussed. In Section 3, it is shown that in all problems to 
+which the Dirac equation is directly applicable it gives the 
+correct energy levels for an electron, and the correct radia- 
+tive and collision transition probabilities. In these prob- 
+lems the wave functions are constructed from the solutions 
+of the Dirac equation. In Section 4, we discuss certain 
+problems which have no analogue in the original Dirac 
+theory of the electron, show that a certain part of the 
+energy of an electromagnetic field in general resides in the 
+electrons and positives, and consider the extent to which, in 
+the present state of theory, this can be detected by experi- 
+ment. For two charges within a Compton wave-length of 
+each other the law of force is not quite Coulomb’s law. The 
+deviations though small should in principle be detectable 
+when protons are scattered in hydrogen. 
+
+
+pared to the classical electron radius e?/mc?; and 
+when not so limited, leads at once to grave con- 
+tradictions with experiment. 
+
+The formal changes which are required in the 
+theory are simple, and correspond closely to 
+Dirac’s most recent suggestion! for interpreting 
+the negative kinetic energy states which are 
+falsely predicted by his theory of the electron in 
+its original form. These formal changes may most 
+easily be formulated with the help of the distinc- 
+tion made by Schroedinger,? in his attempt to re- 
+solve the difficulties with the negative energy 
+states, between odd and even operators, and 
+show how this distinction is properly to be ap- 
+plied to give a consistent and Lorentz invariant 
+theory. This distinction between even and odd 
+operators is essential to the physical interpreta- 
+tion of the theory: for only those dynamical 
+variables of a system which correspond to even 
+operators may be determined without rendering 
+the number of particles—electrons and positives 
+—in the system indeterminate. 
+
+
+1P, A. M. Dirac, Proc. Roy. Soc. A133, 60 (1931). 
+
+2 E, Schroedinger, Berl. Ber., p. 63, 1931. For a review of 
+these earlier theories of the Dirac electron, see W. Pauli, 
+Handb. d. Physik 24, XXIV, 242-247 (1933). 
+
+
+245 
+
+
+246 
+
+
+According to Dirac’s theory, the states of an electron 
+subject to no forces are given by the solutions of the wave 
+equation 
+
+thy = Hoy; fy) = —Bmc?—c(a-p). (1.1) 
+
+
+Any solution of (1.1) may be built up out of solutions of 
+two sorts: those of positive kinetic energy, for which 
+
+
+thb)=HywW=Ey, with E=2=mc (1.2) 
+and those of negative kinetic energy: 
+thb=Hw=Ey, with E=—me. (1.3) 
+
+
+Any state which is a superposition of states of type (1.2) 
+may be called positive, any of type (1.3) alone negative. 
+Now with the help of these solutions, we can assign a 
+matrix to represent any function of the elementary dynam- 
+ical variables of the electron: p, x, a. When this matrix 
+reduces to two submatrices for positive and negative states 
+respectively and has no elements in which one index refers 
+to positive, the other to negative states, the corresponding 
+variable is said to give us an even operator. The momenta 
+of an electron are even; the coordinates are not. 
+
+
+Variables which correspond to operators which 
+are not even may still, of course, in principle be 
+determined; important examples of such vaci- 
+ables are the total energy of a system in an ex- 
+ternal field, and the charge and current density 
+of a system; but this cannot be done without 
+introducing an indeterminacy in the number of 
+electrons and positives present. This circum- 
+stance which corresponds to a complementarity 
+between the description of a system in terms of a 
+definite number of permanent particles on the 
+one hand, and a spatiotemporal specification of 
+these particles on the other, is decisive in limiting 
+the applicability of the nonrelativistic trans- 
+formation theory of the quantum mechanics. For 
+it is not, in general, possible to specify at the 
+same time the number of particles in a system 
+and the values of arbitrary dynamical variables 
+of these particles. In particular, this means that 
+the unambiguous determination of the presence 
+of a positive in a system demands that under the 
+circumstances of the experiment one should be 
+able to abstract entirely from the creation and 
+
+
+destruction of pairs. This must particularly be > 
+
+
+borne in mind in putting such questions as “‘Are 
+there any positives present near a nucleus?”’; for 
+such a question can be given an unambiguous 
+meaning only by reference to such an experi- 
+
+
+W. H. FURRY AND J. 
+
+
+R. OPPENHEIMER 
+
+
+mental arrangement for answering it, that one 
+may abstract from the nuclear field of the atom 
+which produces and destroys pairs. 
+
+From the formal point of view this situation 
+implies serious limitations on the use of wave 
+functions defined in a configuration space: wave 
+functions whose arguments are the characteristic 
+values of the dynamical variables of the particles 
+of the system. For, quite apart from the limita- 
+tion of the symmetry character of the wave func- 
+tions imposed by the exclusion principle, we meet 
+here for the first time the requirement that such 
+wave functions be defined as functions only of 
+even variables, since no physical interpretation 
+whatever can be given to the probability that a 
+particle shall have a determinate value for a 
+variable which is not wholly even. The canonical 
+transformations of the configuration space, 
+which in nonrelativistic theory are unrestricted, 
+are here limited to even transformations. In gen- 
+eral, too, a wave function defined in such an even 
+configuration space will not be adequate to de- 
+scribe the state of the system, since the number of 
+particles in the system, and thus the dimensions 
+of the configuration space, will not in general be 
+determinate: here, as in the description of the 
+electromagnetic field, we shall need, in general, a 
+series of wave functions, defined in spaces of 
+different numbers of dimensions and correspond- 
+ing to the probability of finding different num- 
+bers of particles in the system. This circumstance 
+means that, again as in the case of the electro- 
+magnetic field, the formal aspects of the theory 
+are best studied by abandoning the wave func- 
+tions defined in configuration space and by using 
+the method of quantized waves in actual space; 
+for specific calculations it is more convenient to 
+revert to the configuration space functions; and 
+it is, of course, possible to establish a corre- 
+spondence between the functions introduced by 
+the two methods. 
+
+Before we develop this formalism, we may il- 
+lustrate these considerations in the important 
+case of the position determinations of the elec- 
+tron. It is important to note that what we say 
+here has to do only with the critical length 2/mc, 
+and throws no light at all on the breakdown of 
+the theory for lengths of the order e?/mec?. For 
+what we have here to consider, the charge on the 
+electron could have an arbitrarily small value; 
+
+
+THEORY OF THE ELECTRON AND POSITIVE 
+
+
+and these considerations, like all those based on 
+the present relativistic quantum mechanics, must 
+rather be regarded as attaining asymptotic 
+validity when the ratio of the two critical lengths, 
+which is the fine structure constant, a, goes to 
+zero. 
+
+It has often been observed? that by the gamma- 
+ray microscope one could not, in general, deter- 
+mine the position of an electron with arbitrary 
+precision. The limits on this precision are deter- 
+mined by the, in general, finite wave-length of 
+light scattered through a large angle by the 
+electron. For an electron at rest this wave-length 
+is of the order of the Compton wave-length Xo; 
+for an electron whose kinetic energy before the 
+scattering is E, it is possible to choose an ar- 
+rangement such that the wave-length of the light 
+scattered through a right angle is ~hc/E. The 
+finiteness of these wave-lengths limits, of course, 
+the precision with which, from a given observa- 
+tion in the microscope, one can infer the position 
+of the scattering electron. This limitation in- 
+heres in all attempts to localize the electron by 
+scattering experiments, whatever be the nature 
+of the scattered radiation. 
+
+The Dirac theory of the electron, on the other 
+hand, starts with the postulation of a probability 
+density W(x) that the electron be found near the 
+point x, and thus guarantees the observability of 
+the position of the electron. But it does this only 
+at the expense of admitting the existence of states 
+of negative kinetic energy. For the conclusion 
+that hard light scattered by an electron is neces- 
+sarily softened by the scattering depends essen- 
+tially upon the fact that the kinetic energy of the 
+electron before the scattering is taken positive. 
+Because of the nonexistence in fact of electrons 
+of negative kinetic energy, the postulation of the 
+complete localizability of the electron and the 
+existence of the probability density W(x) appears 
+unjustifiable. 
+
+With the charge density the situation is 
+radically different. On the Dirac theory, it is 
+true, this charge density is merely proportional 
+to W(x): 
+
+
+p(x) =eW(x). (1.4) 
+
+
+3See for instance L. Landau and R. Peierls, Zeits. f. 
+Physik 69, 56 (1931). 
+
+
+247 
+
+
+But for the determination of p other experimental 
+procedures are available. For the quantum theory 
+of the electromagnetic field and the careful con- 
+sideration recently given by Bohr to the possi- 
+bilities of observation which it implies show that, 
+at least so far as we may abstract from the atomic 
+nature of the measuring instruments, the electric 
+field may be mapped out with any precision we 
+want; its divergence gives the charge density p, 
+which may by this method be in principle deter- 
+mined. In any theory in which the atomic nature 
+of measuring instruments is neglected, this ob- 
+servability of charge density must persist. Since 
+we have seen what grave difficulties inhere in 
+relativistic theory in the definition of the particle 
+density, we must be prepared to abandon the 
+simple definition of p given by (1.4). As a matter 
+of fact we shall see that in the present theory the 
+vanishing of the mean charge density in a region 
+of space does not necessarily mean that there are 
+no particles present in the region; it may mean 
+only that there are equal numbers of electrons 
+and positives present and is no guarantee that the 
+region is empty. For in the present theory, the 
+charge density is not an even operator and can 
+therefore be determined only at the expense of 
+leaving indeterminate the number of particles 
+present in the system. , 
+As far as the localizability of the electron itself 
+is concerned, the conclusions reached by the con- 
+sideration of the gamma-ray microscope are fully 
+confirmed by theory. For this it is essential to ob- 
+serve that the coordinate of an electron is not an 
+even operator; this means that in the Dirac 
+theory it is not possible at once to specify the 
+coordinate of a particle and to be sure that its 
+kinetic energy is positive. Now in the determina- 
+tion of the position of an electron, we cannot ad- 
+mit an indeterminacy in the number of particles 
+present since we must be sure that the light was 
+scattered into the microscope by the electron 
+which we wish to observe. (We are considering 
+for simplicity the case where only a single electron 
+is initially present.) We cannot, therefore, devise 
+an experiment for measuring precisely the co- 
+ordinate of the electron. What we have to con- 
+sider is how precisely we can infer the position of 
+an electron from an experiment in which an 
+even operator is determined. Thus we may deter- 
+mine the “‘even part” of the coordinate which is 
+
+
+248 W. H. 
+
+
+given as an operator by 
+o(x) =x —(he/21)[ a,Hy 1+cp,Hy? |. 
+
+
+Inferences as to the value of the coordinate de- 
+pend upon the properties of the transformation 
+functions gx. More precisely, these four- 
+component functions are the transformation 
+functions from g, ¢ the component of spin in a 
+fixed direction and the sign of the kinetic energy 
+to the coordinates.* They are given by 
+
+
+(1.5) 
+
+
+(x, ig, 0, +) =274 f dp exp [i(e—g)0/h] 
+
+
+XL (mc? + p?)* {me + (mic? + p*)*} 4a", 
+
+
+where 
+
+
+(1.6) 
+
+
+A" =p, 
+a4? =me+ (mc? + p?)?, 
+
+
+ay = 13" ae 0, 
+
+
+a3! =mc-+ (mc? p*)?, 
+Qe} =a, = 0, 
+
+
+where these functions are taken for positive 
+kinetic energy, and o=1 corresponds to spin 
+parallel, c=2 to spin antiparallel, to the x axis; 
+a set of functions for negative kinetic energy, 
+which are relevant only in discussing the localiza- 
+tion of the positive, may be obtained from (1.6) 
+by replacing (m?c?+ p*)? throughout by — (m?c? 
++28) 
+
+These functions (1.6) form a complete set for 
+the expansion of any positive function; and the 
+mean dispersion, defined in the usual way as 
+x2—x2 vanishes for all these packets.® This cor- 
+responds to the circumstance that it is possible to 
+prepare an electron in such a way that its posi- 
+tion may be known without uncertainty. But 
+from the results of the experiment, namely the 
+determination of g, no unambiguous and precise 
+inference about the position of the electron be- 
+fore the measurement may be drawn. For the 
+probability of finding a value g is determined by 
+
+
+P(g) Ag=Ag 
+
+
+a 2 
+
+
+xz 
+
+
+o=l1 
+
+
+dx E Ele Due. aa) 
+
+
+—-O 
+
+
+4We here give the formulae for the x-coordinate, and 
+take p,=.=0: analogous formulae can be given which 
+correspond to determining g(x), g(y) and g(z) at once. 
+
+5 This is apparently in disagreement with the argument 
+of Landau and Peierls, reference 3. 
+
+
+FURRY AND J. 
+
+
+R. OPPENHEIMER 
+
+
+and this is not in general given by 
+
+
+4 
+
+W(g) Ag = Ag- 2.1 ¥(g)|* (1.8) 
+but depends upon the value of y in a region of 
+the order \) about g. When nothing is known 
+about the state of the electron, y, before the 
+measurement, the value of the coordinate x is 
+fixed by the determination of g only within the 
+limit of the Compton wave-length. When it is 
+known that the kinetic energy of the electron 
+before the observation is certainly as great as £, 
+then the probability of observing a given value 
+for g depends on the magnitude of the wave func- 
+tion Y only throughout the region g+hc/E; and 
+the position of the electron before the experiment 
+can be inferred from the results of the experiment 
+with a correspondingly greater precision. One 
+may say therefore that, whereas it is possible by 
+experiment to localize an electron, in the sense 
+that the position of the electron after the experi- 
+ment may be determined as precisely as one 
+wishes, it is nevertheless not possible to deter- 
+mine the position of an electron in an arbitrary 
+state with a precision greater than Xp. It will be 
+seen that this corresponds exactly to the possi- 
+bilities. offered by the gamma-ray microscope 
+where the initial determination of position is 
+necessarily unprecise by about ic/E, but where a 
+second determination of position, after the elec- 
+tron is known to have scattered a hard gamma- 
+ray, may in principle be made precise. 
+
+We have in this discussion assumed, in ac- 
+cordance with the physical considerations ad- 
+duced and in conformity with the theory which 
+we are here to develop, that the states of an elec- 
+tron in a system where it is known that no posi- 
+tives or pairs are produced correspond to purely 
+positive functions; in the same way we shall see 
+that the states of the isolated positive correspond 
+to purely negative states; and the limits here 
+derived for the localizability of an electron hold 
+unchanged for a positive. In situations in which, 
+as in the determination of the charge density, we 
+cannot be sure of the number of charges present 
+in our system, no unambiguous position meas- 
+urements of the charges are possible. 
+
+Because of these considerations it is not in 
+general possible, in experimental situations where 
+electron pairs are produced, to localize the region 
+
+
+THEORY OF THE ELECTRON AND POSITIVE 
+
+
+in which they are produced with a precision much 
+greater than the Compton wave-length. In this 
+sense the production of pairs by the absorption 
+of gamma-rays and their internal conversion 
+must be regarded as an extranuclear phenom- 
+enon; as far as present theory is concerned, the 
+fields within the nuclei have singularly little 
+effect upon the probability of these processes. 
+We must turn now to the development of the 
+formal theory. In the next section we shall in- 
+troduce the necessary methods, set up the wave 
+equations which the wave functions of the theory 
+must satisfy, and give the necessary proofs of 
+invariance. In Section 3 we shall show how these 
+equations may be solved and how their solutions 
+are connected with those of the original Dirac 
+theory, and justify the use of this theory in most 
+of the cases to which it has been applied. In Sec- 
+tion 4 we must discuss certain new effects intro- 
+duced in the present theory and define those 
+limitations on the applicability of the theory 
+which are introduced by the here postulated 
+
+
+Wa fa) = [ioe f diese daw Gu-+ aw tues) Wr 59). 
+
+
+249 
+
+
+and not understood corpuscular nature of the 
+elementary charges. | 
+
+
+2. 
+
+
+We must now find what wave functions de- 
+scribe the states and what operators correspond 
+to the dynamical variables, in particular the 
+
+
+energy and charge and current density, of a 
+
+
+system of electrons and positives. In the non- 
+relativistic quantum mechanics, a system of NV 
+indistinguishable particles which satisfy the 
+exclusion principle may be described by an anti- 
+symmetric wave function in the 3N-dimensional 
+configuration space of the particles: 
+
+
+WY (x19121° : ‘XN YNSN). (2.1) 
+
+
+We can find the wave function corresponding to 
+this state as a function of any other complete set 
+of commuting variables &, &---&, with the help 
+of the transformation functions 
+
+
+(1° . fay | x1° ‘ -Zy)! 
+
+
+(2.2) 
+
+
+In particular we can specify the configuration of the jth electron by the three commuting variables 
+£;, nj, ¢; instead of x;, y;, 2;, and use the wave functions 
+
+
+¥(E1- + ow) = [- fds --d2y I (Eimbsl xiv 200 --2y) =(ri- + +7) 
+
+
+for the system. It will in no way impair the gen- 
+erality of the argument to suppose the sets of 
+characteristic values of £, 7, £ enumerable; we can 
+then order these sets of characteristic values in 
+an arbitrary but fixed order; and for any set we 
+can use the symbol 7. We can then fix the sign of 
+the antisymmetric function (2.3) by letting its 
+arguments be ordered. If we introduce’ new 
+variables NV, to describe the system, one for each 
+characteristic value of 7, and let N,=1 when there 
+is a particle present in the state 7, N,=0 when 
+there is no particle present in this state, then we 
+can describe the state of the system by a wave 
+function of the N,’s, defined by 
+
+
+6P, Jordan and E. Wigner, Zeits. f. Physik 47, 631 
+(1928). 
+
+
+(2.3) 
+¥(N,)=0 when >~N,+N 
+v(0 -L,, 0 1;; Liye ) 
+=(N!)iW(ri-++rw). (2.4) 
+
+
+Any dynamical variable of the system which is 
+symmetric in the particles corresponds to an 
+operator on (2.4). To a variable which, as an 
+operator on (2.3), is given by 
+
+
+N 
+>» OQ 757; (2.5) 
+j=l 
+there corresponds the operator 
+D Der Os (2.6) 
+
+
+r, vr! 
+
+
+The a,, a,;+ here introduced satisfy 
+
+
+250 
+
+
+a,ta,st+a,ta,t =0; 
+
+
+a,tas+a,a,;* == Ongs 
+
+
+Q,As+FA,=0; 
+(2.7) 
+
+
+They may be expressed in terms of the N,’s and 
+operators [,, v;: 
+
+
+T.F(N: : »Ny_1, N,, Nowa, 
+= F(N,: : tM gaits Le x No4t' : “)T,; 
+
+
+v,-F(N) =(—)*=%sF(N) (2.8) 
+by 
+COA IN i SN Lee (2.9) 
+Thus 
+N,=O,'@y} 1—N,=4a,a,7; 
+N2=N,; T=1; v2=1. (2.10) 
+
+
+Similarly, to an operator on (2.3) of the form 
+
+
+os Q re? ryt; ryEry (2.1 1) 
+a, 79 
+there corresponds the operator 
+Do. Qt a age, (2.12) 
+and to 
+S OQ rg? ry’; Ter (2.13) 
+t=] 
+the operator 
+oy 5? 9°: al pO Oar Og: (2.14) 
+
+
+r,s’, 7,8 
+
+
+It isin terms of this formalism that the relativ- 
+istic theory of electrons and positives may most 
+easily be developed. The formalism as it stands is 
+immediately applicable to the Dirac theory of the 
+electron in its original form and describes a sys- 
+tem of N electrons whose wave functions are 
+given by the Dirac wave equation, and in which 
+the electrons may have positive or negative 
+kinetic energies. (To describe the state of an elec- 
+tron, 7 must be supposed to include a variable 
+which determines the orientation of the spin of 
+the electron.) But a simple formal change, which 
+corresponds exactly to regarding the emptiness 
+and not the fullness of a state of negative kinetic 
+energy as equivalent to the presence of a particle, 
+gives us at once the theory of electrons and posi- 
+tives. To make this change it is necessary, in 
+
+accordance with the physical considerations of 
+Section 1, to restrict the 7’sin a critical way. From 
+now on we shall consider only states 7, such that a 
+given state is either wholly positive or wholly 
+
+
+W. H. FURRY AND J. 
+
+
+R. OPPENHEIMER 
+
+
+negative; the states r which are positive shall be 
+indexed by Latin letters; the negative by Greek; 
+and a state which may be either positive or 
+negative will be indexed by a Latin letter in 
+parentheses: (7). By this restriction the unlimited 
+applicability of the quantum-mechanical trans- 
+formation theory is destroyed. 
+
+
+For what follows it is helpful to generalize our definition 
+of positive and negative states. A positive state is one 
+which is a superposition of states of a free particle of posi- 
+tive kinetic energy. And the states of a free particle are 
+determined by a wave equation which is in general 
+
+
+(cro—T)¥=0; T=—c(a-t)—Bme?. (2.15) 
+Here 
+w= (th/c)(0/dt) — (e/c) V; 
+
+
+(2.16) 
+T= —th grad —(e/c)A 
+
+
+and, for no field 
+
+
+V=—(1/c)(0/dt)X(x, y, 2, 2} 
+A=grad X(x, y, 8, t). 
+
+
+The solutions of (2.15) are given in terms of the solution 
+Yo of (2.15) with \=0 by the transformation 
+
+
+Y= yo exp (ted/hc). 
+
+
+We have of course to consider solutions of (2.15) which 
+correspond to definite values of the kinetic energy, which is 
+represented by the operator cm=T. It will be observed 
+that under the transformation 
+
+
+ie 
+
+
+y’=wWexp (tedh/hc) (2.17) 
+
+
+the kinetic energy is invariant; under it positive states go 
+into positive, negative into negative states. 
+
+
+Let us consider an operator of the form (2.5) 
+for which Q,,)(s) is a diagonal matrix: to it will 
+correspond the operator 
+
+
+> Veet Sy, Qo, (2.18) 
+
+r p 
+
+or, if we write ,=1—-N,, 
+X Dare Qo pM yt dL re (2.19) 
+
+
+For a system containing N electrons—i.e., for 
+which WV of the NV, for the occupied states are 1, 
+and the others vanish—and containing MV posi- 
+
+
+- tives, in states corresponding to pi--:pyu, we 
+
+
+should expect for the operator (2.6) just 
+
+
+THEORY OF THE ELECTRON AND POSITIVE 
+
+
+» ig lN eo = Op (2.20) 
+
+
+We are thus led to consider, in connection with 
+an arbitrary operator Q, the operator 
+
+
+B= YI Qo (ON (s) (2.21) 
+(7) (s) 
+with 
+Wr( 3) = Art Qs) > Wrs= Airy *As} 
+W pg =p! de — bp = —Aghp*. (2.22) 
+
+
+This assignment suffices for a consistent descrip- 
+tion of a system of noninteracting electrons and 
+positives. To the question of the treatment of the 
+interaction of these particles, which cannot be 
+wholly clarified, and to which no complete and 
+unambiguous answer can be given, we shall return 
+only later. 
+
+The energy of a system of noninteracting par- 
+ticles, which may however be subject to arbi- 
+trary external forces, is of the form (2.5), and 
+corresponds then to the operator © 
+
+
+H= Y, Ho (80096): 
+(r) (8s) 
+
+
+(2.23) 
+
+
+In particular the kinetic energy T of the system is 
+
+
+2 N Dee 2, MT op (2.24) 
+r p 
+
+
+and is necessarily positive, the sum of the posi- 
+tive kinetic energies of the electrons and the 
+positive kinetic energies —7",, of the positives. 
+The difference between the total number of posi- 
+tives and electrons in the system, which gives the 
+total charge, 
+
+
+—ev=e(M—N); M=>,M,; N=>N, 
+
+p r 
+commutes with H, and is constant, as it should 
+be: to any system there corresponds a fixed value 
+of »v. But both M and N change with time in 
+
+
+general: 
+
+
+—inN= —ihM=> (FT ppp Oy ~ LH rptyt Gp). (2.25) 
+rp 
+
+Unless the energy corresponds to an even opera- 
+tor the number of particles in the system N-+ MW 
+will not be constant. The rate of production of a 
+pair 7, p is measured by |#,,|? and that of its 
+annihilation by |/,,|?. 
+
+The modification by which (2.21) was obtained 
+from (2.6), namely the subtraction of 
+
+
+251 
+
+
+Sa) = ye Q (2.26) 
+has destroyed, as we have seen, and as the phys- 
+ics requires, the invariance of the theory under 
+arbitrary contact transformations. If we restrict. 
+ourselves however to the even transformations, 
+((r)|(s)), for which ((r)|(s)) is an even matrix, 
+then >°_(Q), which is the spur of the matrix 
+Q(»)(s) IN an invariant subspace, will remain in- 
+variant. To any wave function of the V, and M, 
+there will correspond a wave function of N, and 
+M, for any s, o which are obtained from 7, p by an 
+even transformation; and under such eraastonma: 
+tion the theory is invariant. 
+
+The Lorentz invariance of the theory follows 
+from this. For under Lorentz transformation 
+positive kinetic energies go over into positive, 
+negative into negative; the Lorentz transforma- 
+tion is even. Thus 
+
+
+> —(2) and O= 2. Q 62) (s)B0r) Fao) — L- (Q) 
+r) (s) 
+
+
+will transform under a Lorentz transformation 
+just as Q does; if Q is a scalar, then 
+
+
+2 —(2) 
+
+
+will be scalars; if the Q# form a four vector, so 
+will the 
+
+
+and © 
+
+
+> —(2#) and the &+. 
+
+
+In the present formulation the subtraction of 
+the spur (2.26) destroys the gauge invariance of 
+the theory, in that it is not possible to associate 
+in an unambiguous way with a given choice of 
+gauge to represent a given field a unique gauge in 
+(2.16). This circumstance means that the division 
+of states into positive and negative here formu- 
+lated is still provisional, and will have to be modi- 
+fied in the presence of an electromagnetic field. 
+As the arguments of the next section will show, 
+the non-gauge-invariance of the theory does not 
+affect the predictions which the theory makes 
+about the reactions of the system to a given 
+external field—the energy differences of the 
+states of the system in the field, the transition 
+probabilities, and the probabilities of production 
+of observable pairs. On the other hand, the 
+predictions of the theory about the reaction of 
+the system on the electromagnetic field are 
+gauge-dependent. 
+
+
+252 W. H. 
+
+
+Again with neglect of the interaction of the 
+particles, we may write the wave equation for 
+the functions ¥(NV,; M,). If there is an electro- 
+magnetic field described by the potentials V, A 
+
+
+then the Hamiltonian is given by 
+H=eV-+thc(a, grad)+e(a-A)—Bmc?. (2.27) 
+
+
+To this there corresponds the matrix H(,) (3) and 
+to this the operator 
+
+
+V(N,; M,) =09, 
+M 
+-0-- par : -) = (NIM !)?(—)*lyy (11: “Ns ptt? -pm), 
+
+
+17 (Re OS ee ee 
+
+
+FURRY AND J. 
+
+
+R. OPPENHEIMER 
+
+
+H= > Hoy (s 00 (s)- 
+(ry (8) 
+
+
+(2.28) 
+
+
+The wave equation is then 
+in(d/dt)w(Nr; M,) = HYy(N;; M,). (2.29) 
+
+
+We can readily write the wave equation in the 
+
+
+‘configuration space of the particles which cor- 
+
+
+responds to this. We define the wave functions in 
+configuration space, in analogy to (2.4), by’ 
+
+
+N-M+p 
+
+
+N-M=v (2.30) 
+
+
+with the arguments of the yyy ordered. We may now define the operator @ corresponding to (2.5) and 
+(2.21) as an operator in configuration space. This operator transforms any function y into &y, 
+
+
+according to 
+
+
+N M 
+(OY), u(7; p) =D Oren, ao rear’ Piga 5p) — QL DL Qoreshw, um (13 ++ + 03-19" D341°° +) 
+reat p’ 9 
+
+
+N M 
+—(NM)~*§ SD (-)8 FEO pophwis, maa Pe-aPaga so ppg’ **) 
+Ge 
+—(N+1)*(+1)? D0 Oper brgs, meats tw?"5 p’prs+ spa). (2.31) 
+rh pt 
+
+
+Then the wave equation is 
+
+
+or, in detail, for N— MW =v=0: 
+th(0/dt)Wo= — dX. XS Aorerbur(’s 9’), 
+r’? pt 
+
+
+th(d/dt)vn, u(7; 7) = (Ay)w, u(r; p) 
+
+
+(2.32) 
+
+
+(2.33) 
+
+
+th(d/dt)Wir(ra; px) = DS Ary rebirl’; 91) — Hor, Wirri; 0’) —Hrye,boo— 2 Do Ayr Woa(rir’; p’p1); 
+yt p! rv’ p? 
+
+
+forv=1: 
+
+
+th(d/dt) Pr0(71) a Fr, rio(1’) — 22 2 2X, EL reborn’; p'), 
+
+
+th(0/dt)Wo1(rire; p1) = >, Ayr parlr’re; pr) td Ar, reQoil(rir’$ pi) 
+
+
+(2.34) 
+
+
+— SS Aororber(rite; p’) — 2-H ro, i011) +272 ro Wi0l(%2) — 692) Dd) Dp bse(rirer’; pp); 
+p’ r? pt 
+
+
+and for v= —1: 
+
+
+th(O/dt)Wor(or) = — L Hore Worlo’) — 2% DoD) Mare bia(r"; pp), 
+
+
+th(d/db)Wie(r13 pips) om » FT, rwis(’ ; P1p2) a= 2 Aorp Wi12(113 p’ pa) 
+an p? 
+
+
+(2.35) 
+
+
+— > Aorpshie(r1; pip’) — 2-2 1,0, Wor(p2) +22 ry o,Po1(o1) — O89) Dy Ayr Ws0(rit"; p’pipa). 
+p’ yr! p’ 
+
+
+M 
+7 Here [p;] is the ordinal number assigned to the state p; in ordering the negative states. The factor (—)##l#j is in- 
+
+
+serted to save writing. 
+
+
+THEORY OF THE ELECTRON AND POSITIVE 
+
+
+The rule for the transition from (2.6) to (2.21) 
+cannot be unambiguously extended to operators 
+
+
+of the form (2.14) ; and for the consideration of the — 
+
+
+electromagnetic interaction of the particles of 
+the system we must revert to electrodynamical 
+theory. According to (2.21), to the charge density 
+
+
+Dy PM's Pyro) =eWoy Woy (2.36) 
+v 
+
+
+and current density 
+
+
+DIimvins Jom =ebrn avery (2.37) 
+t 
+
+
+must be assigned the operators 
+
+
+and =D fers) @(r)(8)- 
+(r)(s) 
+
+
+Dd Pir) (8)@(r) (8) 
+(r)(s) 
+
+
+(2.38) 
+
+
+The form a four vector S*. 
+
+The electrostatic interaction of the system with 
+itself, i.e., the Coulomb forces exerted by the 
+particles on themselves and on each other, may 
+then, with neglect of retardation, be obtained 
+from the matrix 
+
+
+Por) (sy (X) pct) (my (X”) 
+Conca wom= ff drdr! = ee ae 
+
+
+pees) 
+
+
+and give an operator 
+
+
+C= Cory (s) + (2) (m)® (7) (8)@ (2) (mm) 
+(7), (s), (1), Cm) 
+
+
+(2.40) 
+
+
+This includes of course in its present form the 
+proper electrostatic energy of the particles. 
+
+
+oe 
+
+
+ple 
+
+
+(r) Cs) (2) (m) 
+
+
+253 
+
+
+When the magnetic forces and the retardation 
+of the forces between the charges must be taken 
+strictly into account, there can be, of course, no 
+operator in the configuration space of the par- 
+ticles to represent the corresponding energy; 
+rather one must use the expressions (2.38) for the 
+charge and current of the system, and from these 
+compute the interaction energy between the 
+charges and the electromagnetic field 
+
+
+pis f de[6V+U-A)]. (2.41) 
+
+
+This expression may then be treated as a per- 
+turbation which induces an interchange of energy 
+between the particles and the field; and in its 
+application one meets only the same difficulties 
+as in the Dirac dispersion theory: convergence 
+difficulties which rest ultimately on an illegiti- 
+mate application of the methods of the quantum 
+mechanics to the electromagnetic field. 
+
+
+In addition to the approximation (2.39) by which, with 
+the total neglect of retardation, one has the possibility of 
+taking into account to all orders the Coulomb interactions 
+of the charges, one has had, as is known, a second method of 
+approximation by which one can take the fully retarded 
+interaction into account to the first order only. For the case 
+that, in the absence. of interactions, the Hamiltonian of 
+the system is even and has the characteristic values E,, Ep, 
+the interaction may to the first order be taken into account 
+by the inclusion of a term in the energy which corresponds 
+to the operator 
+
+
+Dy A crycayt (1) my O07) (8) OCD) Cm) F 
+
+
+; ye SH ry (a) (%)S* (ay (amy (H’) 
+A (ry(s)i ()(m) = sf drdr’ >). ——__--—____- [exp (4(r¢s7/€) + exp (tv(y¢mr/C) | (2.42) 
+i 
+
+
+= er 
+
+
+with v5(s) =(Euy—Evsy)/h. But the application of this 
+method is seriously limited on the present theory. For 
+an unambiguous extension of this to the case where 
+the odd parts of the Hamiltonian without interac- 
+tion are not negligible does not appear to be possible, be- 
+cause the method presupposes that in the absence of inter- 
+actions the particles remain in stationary states, and, on 
+the present theory, this is not, in general, true; in general, 
+namely, there will be no even states r which give deter- 
+minate values to the energy of the system. 
+
+The interactions between the particles, in particular, the 
+Coulomb interactions given by (2.40), can certainly not be 
+entirely neglected, since one must surely expect that posi- 
+tives and electrons will attract and repel each other. On 
+
+
+the other hand, there are ambiguities in the application of 
+(2.40), which arise from the apparent impossibility of 
+drawing a rational distinction in all cases between proper 
+energy and interaction energy, and which we must now 
+discuss. Two consequences in particular of these interac- 
+tions must be noted. In the first place, they give rise to the 
+possibility of the simultaneous production or destruction of 
+more than one pair, a possibility which does not, of course, 
+exist when they are neglected. In the second place they 
+introduce deviations in the energy levels of an electron in a 
+static field computed from Dirac’s equation. These effects 
+are small, and in view of the ambiguities involved in ap- 
+plying (2.40), it appears that the application of the formal- 
+ism to these problems transcends the limits within which 
+
+
+254 
+
+
+the methods are valid. For these ambiguities can appar- 
+ently be dissipated only by a clearer understanding of the 
+stability of the elementary particles. 
+
+The terms in (2.40) with Cys: m, Coo: ru and Crs; po Cor- 
+respond to the even parts of the interactions of electrons 
+with electrons, positives with positives, and electrons with 
+positives. In analogy to the replacement of (2.12) by (2.14), 
+we may eliminate the proper energies by 
+
+
+Oy Wim PE AL Anas; WO pa Wrp—PA ght ay’, 
+
+
+leaving 
+Wr sWpo = Ay Aghohpt ANA WyoWrs = —Aohp Ay As. 
+
+
+Analogous rules can be given for all the other terms of 
+(2.40) 
+
+
+Wp sWlpAr Ar AyAs, WprWsi Pay Ast aiay, 
+
+
+WO paWmdPAghAm' Ap", W pmOahPAmAnAe Ap”. 
+
+
+W prWs¢—Aeh pA Se: 
+
+
+The remaining terms should not be changed. These changes 
+have been made in such a way that no infinite contributions 
+to the electrostatic energy appear. Because there is no equa- 
+tion in configuration space with which to compare our 
+formulae, we cannot be sure that as far as the odd parts of 
+(2.40) are concerned our results are right: they lead to no 
+grossly incorrect consequences. In fact the distinction be- 
+tween proper energy and interaction energy, which has in 
+the present state of field theory to be made, cannot be 
+made without ambiguity in a system in which the number 
+of particles is necessarily indeterminate. 
+
+
+3. 
+
+
+The wave functions which we have introduced, 
+vv, u(r3p), give us directly the probability 
+P(ri:++twjpi-++pm) of finding in the system NV 
+electrons and M positives in the states 71: +--+ pw. 
+Just as in the case of the general transformation 
+functions of nonrelativistic theory, it is here not 
+always possible to say to what extent these 
+probabilities can be determined by actual ex- 
+- periment. For although the theory enables us to 
+devise conceptual experiments for the determina- 
+tion of P which in no way contradict the theoret- 
+ical possibilities, it is not in general possible to 
+find actual physical means for carrying them out. 
+This may be illustrated by considering the func- 
+tion W for a static, non-even field, and taking the 
+(r) to be the components of momentum of the 
+particles. Here, by suddenly destroying the field, 
+destroying it, that is, in a time very short com- 
+pared to h/mc*, and determining in the usual way 
+the momenta of the free particles, we can in prin- 
+ciple determine P. Again, by scattering hard 
+
+
+W. H. FURRY AND J. R. OPPENHEIMER 
+
+
+radiation, and observing the momenta of the 
+particles of the pair and of the light after scatter- 
+
+
+“ing, we could in principle determine the original 
+
+
+momentum distribution with the same precision 
+as in nonrelativistic atomic theory. But here an 
+important point must be noted: the gamma-ray— _ 
+or electron—which we use for the experiment, will 
+itself tend to produce or destroy pairs; for the 
+perturbation it induces is represented by an 
+operator which is not even; and to determine the 
+initial distribution in momentum of the pairs, we 
+should have actually to use an “‘even’’ gamma- 
+ray. It is clear therefore that the actual experi- 
+ments in which positives are observed do not 
+provide us with unambiguous determinations of 
+FP for the field around nuclei. [t is clear too that 
+the theory in its present form does not impose 
+restrictions on the available experimental means, 
+which make P unobservable; from the point of 
+view of this theory, there could be such a thing as 
+an ‘even’ gamma-ray. Nor is it possible to say 
+whether the limitations which are in fact imposed 
+ought to be recognized by a consistent theory: 
+whether, that is, they should be regarded as 
+limitations in principle or by accident. It seems 
+clear that such a limitation in the experimental 
+possibilities could only be based on a theory in 
+which the electromagnetic nature of the electrons 
+and positives were understood; and it is in the 
+sense of the quantum mechanical theory, and the 
+approximation a—0 which defines its appli- 
+cability, that these restrictions should not find a 
+counterpart in the theory, or the possibilities of 
+observation which it offers. This situation, how- 
+ever, makes it particularly urgent to show how 
+the wave functions ~y, w(7; p), which are only in 
+principle and hardly in fact observable, can be 
+used for the calculation of things that the experi- 
+ments do give us. 
+
+When the interaction of the particles can be 
+neglected, the wave equation (2.32) determines 
+the characteristic values of the energy of the 
+system in static fields, and the transition prob- 
+abilities in collisions and radiative processes. Now 
+to certain of these questions, such as the energy 
+levels of an electron in some static fields, or the 
+probability of scattering of light by an electron, 
+the Dirac theory of the electron gives us an 
+answer, and one in large measure confirmed by 
+experiment. We have now to show how, in these 
+
+
+THEORY OF THE ELECTRON AND POSITIVE 
+
+
+cases, the new formalism gives the same answer 
+as the Dirac theory. 
+
+Let us consider first the characteristic values 
+of the energy of an electron in a static field. Ac- 
+cording to the Dirac theory these are determined 
+as the characteristic values of H in the equation 
+
+
+Ag = Eqttn. (3.1) 
+
+
+Under certain circumstances, some of these char- 
+acteristic values give correctly the energy levels 
+of an electron in the field of force, and the corre- 
+sponding wave functions may be used to describe 
+the behavior of the electron in its stationary 
+states. The circumstances under which this is so 
+may be defined in the following way: if we 
+imagine the field in which the electron is moving 
+(or the odd part of the field) to go adiabatically to 
+zero, the wave functions will go over into the 
+wave functions of a free particle (or the functions 
+for a particle in an even field of force). In the 
+absence of degeneracies of a special kind, any 
+solution uw, will go over into a positive or purely 
+negative function. A function which in this sense 
+is ‘‘genetically positive” (LZ) will correspond to a 
+possible state of the electron, and the energy 
+value E;, to a possible energy level. The functions 
+A which are genetically negative do not corre- 
+spond to states of the electron. Such an unam- 
+biguous application of the adiabatic theorem will, 
+in general, only then be possible, when the 
+stationary states corresponding to the even part 
+of the energy are not in this sense degenerate, 
+that positive and negative functions correspond 
+to the same energy value. When, as in the prob- 
+lem of the Klein paradox, such degeneracies oc- 
+cur, no simple interpretation of the Dirac wave 
+functions can be given. But in many problems, in 
+particular in the problems of electrons in atomic 
+fields, and in general in all stationary state prob- 
+lems to which the Dirac theory gives correct 
+answers, the classification of states as genetically 
+positive (ZL) or genetically negative (A) will be 
+possible; and it is just in these cases that we can 
+establish a connection between the wave func- 
+tions of the present theory and those of the 
+Dirac theory in its original form, and a corre- 
+sponding equivalence of energy levels. Without 
+in general investigating the properties of the fields 
+for which this division of states is possible, we 
+may remark that of the simple fields defined by a 
+
+
+200 
+
+
+scalar potential which is a polynomial in 7 and 
+1/r, the Coulomb field alone® permits this classi- 
+fication. As for the states A, which in the Dirac 
+theory are simply rejected, we shall see that in 
+the present theory, as we should expect, these 
+define the states of the positive in the field, and 
+give — EH, for the corresponding energy levels. 
+In the present formalism the energies £7, Fa, 
+the wave functions uw; and uw,, do not appear di- 
+rectly at all. Rather (2.33) determines the states 
+of the system when it is known that there are 
+just as many electrons as positives present; (2.34) 
+when it is known that there is one electron more; 
+(2.35) when there is one extra positive, and so on. 
+And the energies £; must be connected with the 
+
+
+differences in energy levels of (2.34) and (2.33), 
+
+
+those of the positive with differences between 
+(2.35) and (2.33). Now just in the case of fields 
+for which, on the Dirac theory, the classification 
+of states as L or A is possible, there is a unique 
+state (O), for which the energy is a minimum, and 
+which corresponds to the normal state of the 
+pairs in that field. The interpretation of the wave 
+
+
+function for this state has already been discussed ; 
+
+
+to the question of the interpretation of the energy 
+we shall return in the next section. Let us call 
+this energy ©), and the wave functions for this 
+state y. For yv=1, (2.34) will give us a set of 
+energies E™ and corresponding wave functions; 
+for v= —1, we shall get the energies LE“). We 
+shall now show that the differences between the 
+EE“) and EE are just the L energy values given 
+us by the Dirac equation: 
+
+
+EO EO =F, (3.2a) 
+
+
+and similarly that the differences between the 
+E™ and E©® are the negative of the A energy 
+
+
+values of the Dirac equation: 
+
+
+EVSROS— hy, (3.2b) 
+
+
+In particular the energy differences HE — EF” 
+are the energy differences H,—F,’. This result 
+is essential, for it shows that where the Dirac 
+theory gives correct energy levels for an electron, 
+the present theory gives the same energies. In 
+particular it shows that the present theory will 
+give again Sommerfeld’s formula for the relativ- 
+istic doublets. In the derivation of the result it is 
+
+
+8 M.S. Plesset, Phys. Rev. 41, 278 (1932). 
+
+
+256 
+
+
+essential that we neglect.the effect of the electro- 
+magnetic interaction of the particles of the pairs.® 
+
+For the proof of (3.2) one can on the one hand 
+use perturbation methods, treating the odd parts 
+of H as small. If we let the states 7, p diagonalize 
+the even part of H, we find, to the second order 
+in H7,,: for v=0: 
+
+
+FMD dg?) (Ep Eg) (3.3) 
+rT, p 
+forv=1: 
+ee es ae (3.4) 
+r p 
+and for v= —1 
+
+
+EM =—Y) Y| Hr, |?(Er—-E,). (3.5) 
+r p=eh F 
+
+
+The differences between (3.4) and (3.3) on the 
+one hand, and (3.3) and (3.5) on the other, are 
+however just the terms of this order in Ez; and 
+
+
+(GENE Ohi es ia i107, (1) yp(0) 
+wwii, w (7%; p) =(N+1)7? DS (—) Or SM YOn, we - 
+4=1 
+
+
+N+1 
+
+
+W. H. FURRY AND J. 
+
+
+R. OPPENHEIMER 
+
+
+Ex for those states Z and A which go over into 
+1, \ when the odd part of H vanishes. In interpre- 
+tation of this result it may be remarked that that 
+contribution to the energy which in the Dirac 
+theory may formally be ascribed to transitions to 
+states of negative kinetic energy, here appears 
+because of the interdiction, on introduction of the 
+electron, of the formation of such pairs as have 
+electrons in the state in which the electron was 
+introduced. This perturbation method can be 
+extended to prove (3.2) in all orders, but soon 
+becomes unwieldy. 
+
+We may obtain a more powerful method of 
+solving the wave equations (2.32) by the follow- 
+ing construction. We introduce the components 
+of the Dirac wave functions uz) in the (7) space: 
+
+
+OF = ee (3.6) 
+and form the wave functions 
+Pah ye =o 45D) 
++(N+1)2 © Cores, wales + pnp’), 
+. (3.7) 
+
+
+(0; (L)) 2 ee 
+Wy, nai (43 p) =(N+1)-*? DO) NTE Cp SO YOO, w(73 ++ pe-tpsrae +) 
+4=1 
+
+
+It may be shown then that ¥(: ® and p60; () 
+satisfy (2.34) and (2.35), respectively, with en- 
+ergy values respectively #°%+E,7) and EO 
+— Fz). The proof is straightforward and gives 
+us, for cases to which the Dirac equation is di- 
+rectly applicable, a method of constructing the 
+wave functions of the present theory. Here all the 
+solutions of the Dirac equation appear: the solu- 
+tions L give us the wave functions for an elec- 
+tron, the solutions A those for a positive. 
+We must of course demand that 
+
+
+(A; O) 
+
+
+(O; Z) 
+Wn41, N =; 
+
+
+Wn, n41=0, (3.8) 
+
+
+for these functions would correspond to the addi- 
+tion of an electron in a genetically negative state 
+or a positive corresponding to a genetically posi- 
+
+
+9 Cf, Section 4. 
+
+
+~(N+1)I XS Co Oynrrs, war(t’rie ++ 5p) 
+
+
+tive state. It is easy to see by direct inspection 
+
+
+that (3.8) must be satisfied; and we obtain a 
+proof by constructing the yy, , in terms of the 
+C™).,). This construction of the yy,» is sug- 
+gested by the original formulation which Dirac 
+gave to the present theory, according to which 
+‘all negative energy states’”’ should normally be 
+full. Alternatively we may characterize the state 
+(O) by saying that all the “negative energy 
+states’ of the positive are full. If then we are 
+given a complete set of solutions uz and uw, and 
+form the quantities C%(,, C4q@ for all these states, 
+we may write the solutions as infinite determi- 
+nants, as follows: 
+
+
+WO 9, o=|C,*| , 
+
+
+= es (3.9) 
+YO. (715 pa) = | C2 Co, "|, 
+
+
+THEORY OF THE ELECTRON AND POSITIVE 
+
+
+and generally 
+YOO n, n(fi: "* FN, Pie? - pn) 
+
+
+=(N1-| Cr% Coys 5|s (3.9) 
+
+
+where, in these determinants, in all the rows L 
+the C,,” are replaced by the C”py,;_;; here r’s 
+and p’s should be ordered. Alternatively we may 
+
+
+write 
+
+
+Yoo, o=|CoAls WOO1, 1(r13 1) = — | Co A9C;,4], 
+(3.10) 
+
+
+297 
+
+
+The ¥y so defined, if we avoid questions intro- 
+duced by the convergence of the determinants, 
+formally satisfies (2.32), with the energy value 
+
+
+EO = — 3) Ayr, (73 p)/WO 0, o- (3.11) 
+r, p 
+
+
+From these expressions for ¥ the vanishing of 
+YO? ) and py: % follows. 
+
+We may now generalize (3.7) to give us the 
+wave functions which correspond to the addition 
+of electrons in the states L,---L, and m posi- 
+tives in the states A,---Am. These functions 
+
+
+Yon, w(f1' + *TN3 pi’ + * pn) 
+=(—)%(N Do CoA C4 
+
+
+vanish unless all the Z’s and all the A’s are 
+
+
+Pemee distinct: 
+
+
+CLiees Ln L’); AreerAm) 
+
+
+(Lise Ln; A) 
+Wn, M 
+
+
+N 
+(ri- ++ ty3 pis pm) = N-* DD (1) 1 ye, a Pea + +5 P) 
+3 
+
+
+(Li+++ Ln; A) 
+
+
+SCCM 1)’ 3 Ce FP! vy a) | (Ge) 
+p! 
+
+
+=O unless N—M=n+1-m; (3.12) 
+M 
+Dy+++ Ln; Agee*Am(D’)) 1 AY , L; AyessAm 
+Vivat (Y1:°¢¢N3 pit + pm) =M? > (=) ¥-#Cp 2 y, M1 (rs 98 pe pir *) 
+i=1 
+1 y= rp CL; Aaee+Am) 
+—(—)eFm( N41) Ce ebay, a” (rye +4 p) 
+=0 unless V—-M=n-—m-—1. 
+The identities corresponding to (3.8) are now of the form 
+YBa End's BierAm) =), Lares Eng AierAmL) = Q) (3.13) 
+
+
+and follow, as before, from (3.9). In this way we can construct a series of solutions, corresponding to 
+different values of 1, for all of which »=m and vy =0. The transition from a state x to n+1 corresponds 
+to the creation of a pair; that from » to m—1 to its annihilation. Similarly the transition, with 
+m=0, n=1, from the state L to L’ gives just the transition of the electron from one “genetically 
+positive” state to another, and that from A to A’, with m=1, n=0, gives the corresponding transition 
+for the positives. 
+
+With the help of the functions (3.12) we can establish another useful result. Let us consider an 
+operator of the form (2.5). To this there will correspond an operator & on the ¥(N,; /,), and from 
+this, according to (2.31), we can construct the corresponding operator as a matrix in the scheme L, 
+A. The only elements of this matrix which do not vanish are those for which (L)-(L’), (A)>(A’), 
+(L; A)->(O), or (O)->(Z; A). By using the functions (3.12) we can now prove that 
+
+
+(L | o|L’) = (yo -Oyl") = Qn 7 = f drain 
+(Aa | A’) = (yo OYS%) = — Ana = = f arity; 
+(L; A|3|0) =(9% 9-8) = -Qra= — f drapous; 
+
+
+(O||L; A) = (PO - ay ®) = —M%p= — f drasou:, 
+
+
+258 
+
+
+In this proof one has to make repeated use of the 
+identities (3.13). For operators of the form (2.21) 
+we may thus use the Dirac functions uz and us, 
+to compute the matrix elements for states (ZL), 
+(A), (O), and (LZ; A). In general G@y41°4n5 Attn) 
+gives us wave functions pO 4n14% Ar Am) | 
+per En; Are Am—14’) | pba Enb!; AreerAma’) and 
+pore Ln-1s AveAm-) Tn constructing the corre- 
+sponding matrix elements of &, the antisymmetry 
+of the w~’s in all Z and all A must be considered. 
+
+Let us now consider transitions induced in the 
+system by perturbations. For the present argu- 
+ment it does not matter whether these perturba- 
+tions arise from the coupling of the system with 
+another system, such as the radiation field, or by 
+a direct introduction of time dependent forces. In 
+either case, to a transition of the system in which 
+the energy of the system changes by AZ there will 
+correspond a perturbing term in the Hamiltonian 
+of the system which is of the form (2.5), and is 
+given by the matrix 7()(.) exp(#A#t/h). The per- 
+turbation theory then tells us, that, to the first 
+orders in v, and with suitable normalization, the 
+transition probability L—-JL’ induced by the 
+perturbation will be 
+
+
+Po nasry = (1/h*) | (L'|v| LZ) |? 
+
+
+with FG2-—EX 
+Similarly 
+Pcoysca; a) = (1/8) | (LA|o| O) |; 
+
+| EG )— FO — AR, 
+
+
+(3.15) 
+
+
+necessarily equal to AE. 
+
+
+From (3.14) we see that to this order the transi- 
+tion probabilities are given by 
+
+
+Ponescoy =(1/h*) loner? @; 
+(3.16) 
+
+Puasa = (1/h?) | van |? (d); 
+Poet; 4) = (A/F) | oral? (a); 3.17) 
+
+
+Por; m0 = (1/8?) [oa r|? (d). 
+
+
+This result shows that in the problems where the 
+Dirac theory may be applied to determine the 
+stationary states of the system, the first order 
+transition probabilities, which give the probabil- 
+ities of radiative and collision transitions, may be 
+computed with the help of the Dirac wave func- 
+tions uz) just as in nonrelativistic theory. For 
+these cases (3.16b) also shows that analogous 
+
+
+W. H. FURRY AND J. R. OPPENHEIMER 
+
+
+methods may be applied to positives, and gives 
+(3.17a) for the probability of pair production; itis 
+this formula which is applied in computing the 
+production of pairs by gamma-rays and electrons. 
+
+This result cannot be generally extended to the 
+calculation of higher order transition probabili- 
+ties, as is at once clear when we remember that a 
+system which, when unperturbed, may very well 
+admit the application of the Dirac equation, may, 
+under the influence of the perturbation, cease to 
+have this property. Thus the free electron or the 
+electron in a Coulomb field may as is well known 
+be treated by the Dirac equation; but when this 
+system is coupled to the radiation field, the 
+catastrophic transitions to negative energy states 
+occur, and we cannot expect that a theory in 
+which these transitions cannot be unambiguously 
+excluded will give correct results. One can show, 
+however, that to the second order in v, for any 
+perturbation whatever, the direct use of the 
+wave functions wz, ua and their corresponding 
+energy values E,, E, gives, upon application of 
+the usual perturbation methods, the correct re- 
+sult. For the proof of this the antisymmetry of the 
+peri so in the L’s and A’s is essential. 
+
+This result is sufficiently general to validate all 
+the calculations made on the basis of the Dirac 
+equation which have been compared with experi- 
+ment. In particular it furnishes a generalization 
+of Dirac’s proof that “filling the states of nega- 
+tive energy’ would not affect the scattering 
+formulae of Thomson and Klein-Nishina. As far 
+as perturbations induced by coupling an electron 
+with the radiation field are concerned, calcula- 
+tions of transition to orders higher than the 
+second cannot in any case be made, because in 
+these higher orders the difficulties of the magnetic 
+proper energy make an insurmountable am- 
+biguity. For this magnetic proper energy the 
+present theory, of course, gives new results; but 
+these in no way remove the familiar difficulties of 
+the radiation theory. 
+
+The limitation on the nature of the system 
+which makes possible an unambiguous applica- 
+tion of Dirac’s equation, and which has played so 
+large a part in the arguments of this section, 
+admits a very simple interpretation. For this 
+limitation means only that in such systems no 
+genuine transitions to states of negative energy 
+should, on the Dirac theory, be possible; on the 
+
+
+THEORY OF THE ELECTRON AND POSITIVE 
+
+
+present theory these are the systems in which, 
+though pairs may be present, their presence may 
+be unambiguously detected only by disturbing 
+the system with high energy radiations. To prob- 
+lems in which pairs are constantly being created 
+by the fields present, the Dirac equation in its 
+original form cannot be simply applied. 
+
+Throughout this section we have consistently 
+neglected the interaction of the particles with 
+each other, and supposed them to be affected only 
+by given external fields. When these interactions 
+are considered, the proofs which we have given of 
+the applicability of the Dirac equation no longer 
+hold, for in the original Dirac theory these inter- 
+actions have of course no analogue. In particular, 
+when these interactions are considered, one can 
+no longer establish the rigorous validity of the 
+scattering formulae, and the energy levels of 
+electrons in static fields cease to be given correctly 
+by the Dirac equation. The effects of these inter- 
+actions are in general small and cannot, as we 
+have seen, be unambiguously formulated in all 
+cases. But within the limits here discussed, which 
+from a physical point of view seem inevitable, we 
+have shown that the Dirac equation, wherever it 
+can consistently be applied, leads to the same 
+results as the present theory. For such problems, 
+and within these limits, it is thus not in general 
+necessary to use the wave functions wy, m(7; p) 
+at all; and this is fortunate, since the wave equa- 
+tions which determine them are in general in- 
+tractable. 
+
+
+4. 
+
+
+In this section we have to consider some of the 
+applications of the theory which have no analogue 
+in the Dirac theory of the electron in its original 
+form. We shall make no attempt to treat these 
+exhaustively, but try only in a few simple cases 
+to see how the results may be interpreted, and in 
+what way the application of the theory is limited. 
+
+Let us look first at HE. In a system in which 
+directly observable pairs are not being created 
+and in which therefore the solutions of Dirac’s 
+equations may be classified as L or A, there exists 
+as we have seen a unique normal state for the 
+pairs; the energy of this state is © and is given 
+by (3.11). This is the energy of these ‘‘nascent’”’ 
+pairs in the given field; when the field vanishes 
+E50; when the field does not vanish E™ is in 
+
+
+259 
+
+
+general negative. To establish the field, therefore, 
+we do not in general have to do quite as much 
+work as electromagnetic theory predicts; for in 
+addition to the electromagnetic energy 
+
+
+E, = (1/81) f dr(C2+62) (4.1) 
+
+
+in the electromagnetic field, there is an energy 
+E in the pairs formed by the field. This is in no 
+sense a discrepancy with Maxwell’s theory, ac- 
+cording to which &, should give the energy in 
+empty space of the field ©, 9; for, as we have 
+seen, the field will not be empty. This then is the 
+simplest general interpretation of E™, 
+
+If the field is itself produced by a charged 
+particle—and here we shall assume that this par- 
+ticle is not an electron, but is so heavy that the 
+reaction of the pairs upon it may be neglected— 
+then the corresponding energy EK‘ must be in- 
+terpreted as proper energy of the particle. The 
+only way in which £™ here could be directly ob- 
+servable is by the creation or destruction of the 
+particle; it could be inferred from the mass of the 
+particle if the specifically electromagnetic energy 
+of the particle could be computed in a satisfactory 
+manner. For a point charge with a Coulomb field 
+this proper energy HE is infinite and negative. 
+It does not appear to be possible to interpret the 
+difference between the electromagnetic and the 
+pair energy of the particle in such a way that 
+this difference should correspond to a finite mass; 
+and in general it may be said that the present 
+theory, which presupposes the particulate nature 
+of the electron and positive, throws absolutely no 
+light on their ultimate stability. 
+
+When more than one heavy charged particle 
+produces the field, the energy E™ will depend 
+upon their relative positions. This dependence of 
+the energy on the positions of the particles will 
+correspond to a new term in the potential be- 
+tween them: i.e., to new forces. These forces will 
+not in general be Coulomb forces and the devia- 
+tions may be computed, and should ultimately be 
+observable. | 
+
+To make these considerations quantitative, let 
+us consider the case of an electrostatic field, for 
+which 
+
+A=0; © = —grad V. (4.2) 
+
+
+When the field strength is not too great, we should 
+
+
+260 W. H. 
+
+
+expect to be able to solve (2.33) and compute 
+y, by perpurbation methods, and use (3.3) for 
+EO. A sufficient condition on the field strength 
+is that it should always be small compared to 
+mc?/eh. In this case it will be permissible to 
+neglect entirely the even part of V which can 
+give effects only in higher order and corresponds 
+to the nonuniform motion of the pairs when they 
+are accelerated by the field. Then we find 
+
+
+EO = — 30 | Veo l?/(Er—E,), (4.3) 
+
+
+where now 7, p index the positive and negative 
+states of a free electron. The energy density in the 
+pairs is of the order a compared to the electro- 
+magnetic energy. For the case that the potential 
+varies relatively little in regions of the order of 
+the Compton wave-length we find for the ratio of 
+the two energy densities: 
+
+
+EO /E,= — ax. (4.4) 
+
+
+Here «x is given by the integral 
+c= (2/m) [ hk? (1+hk?) dk 
+(0 
++(4/3m) { R4(1 +k?) dk, (4.5) 
+0 
+
+
+where in turn k is (1/2mc) times the magnitude of 
+the vector difference of the momenta of the two 
+particles of a pair. The second integral diverges 
+for large values of k: the contribution of pairs of 
+large momentum does not fall off rapidly enough 
+to give a determinate result. This divergence does 
+not depend upon the special simplifications intro- 
+duced into the problem and arises from a genuine 
+limitation of the present theory. 
+
+This limitation is of the same kind as that met 
+in all applications of the quantum mechanical 
+formalism to wave fields, and comes in the di- 
+vergence of x to a similar expression; it has its 
+analogue in the now familiar divergence difficul- 
+ties of dispersion theory which may be schemati- 
+cally formulated as the failure of such theories 
+when applied to extremely small lengths or inter- 
+vals of time. The difficulty here has nothing to do 
+with the introduction of point singularities in the 
+field ; the electromagnetic field we are studying is 
+slowly varying and nowhere infinite. An analo- 
+gous failure of field theory in a problem in which 
+
+
+FURRY AND J. 
+
+
+R. OPPENHEIMER 
+
+
+no singularities occur is known in gravitational 
+theory, where the quantum theoretic calculation 
+of the gravitational energy of an electromagnetic 
+wave gives a divergent result.!° These difficulties 
+thus tend to appear in all problems in which ex- 
+tremely small lengths are involved; the critical 
+lengths are presumably of the order of the cla s- 
+sical electron radius. The difficulties are of such a 
+character that they are apparently not to be 
+overcome merely by modifying the electromag- 
+netic field of an electron within these small dis- 
+tances, but require here a more profound change 
+in our notions of space and time, on which ulti- 
+mately the quantum mechanical methods rest, 
+and which in turn require the existence of stable 
+particles for their definition. At present neither 
+the precise point at which the theory breaks down 
+nor the nature of the needed modifications can be 
+determined; but it is clear that the sort of thing 
+we must do with expressions like (4.5) is to break 
+off the integral as it stands at some upper limit K 
+corresponding roughly to the critical length 
+e?/mc?, and trust a future theory to show that 
+the contributions from k values greater than 
+this are small. It is from this at once apparent 
+that the theory in its present form can make no 
+predictions whatever about the fields within the 
+critical distance e?/mc? of a charge. 
+
+In the case of the production of pairs, there is 
+direct evidence that the present theory gives too 
+large a probability for high energy pairs. For the 
+probability of production of pairs by a beam of 
+gamma-rays in the field of nuclei, when computed 
+on the basis of the present theory, turns out to be 
+much larger than any value which could be rec- 
+onciled with the known penetrating power of 
+high energy gamma-rays. And in this case too the 
+failure of the theory seems in no way connected 
+with the magnitude of the nuclear field in the im- 
+mediate neighborhood of the nuclei. The fact 
+that the theory should fail here is not very sur- 
+prising when we remember that even on classical 
+theory the model of a point electron, which un- 
+derlies the present theory, would give altogether 
+wrong results for the reaction of the electron to 
+light of wave-length appreciably shorter than the 
+critical length e?/mc?. 
+
+With this understanding, then, x is given by 
+
+
+10, Rosenfeld, Zeits, f. Physik 65, 589 (1930), 
+
+
+THEORY OF THE ELECTRON AND POSITIVE 
+
+
+(4/37) In 2K —10/97 and is about 2 with K~1/a. 
+The result then tells us that the work we must do 
+to establish an electrostatic field is about 2 per- 
+cent less than the energy stored in the electro- 
+magnetic field; the difference is supplied by the 
+pairs. One might at first suppose that this result 
+would have catastrophic consequences for elec- 
+tromagnetic theory. But one sees at once that the 
+forces exerted upon a point charge (by a field 
+which still varies little within \9), which serve 
+to define the field strengths in terms of the unit 
+of charge, are reduced by the pairs formed about 
+the charge in just the ratio (4.4). And we may 
+readily see that the forces exerted by two charges 
+upon each other (again at distances large com- 
+pared to Xo), which serve to define the unit of 
+
+
+Dee a (aesea/4n*r«) [ f dhe’ 
+
+
+with k, k’=(27/mc) times the momentum of the 
+positive and electron, and e=(1+?)?. When 
+R>o, this may be evaluated and gives just 
+
+
+(0) 
+Eint. = — ake €o/R. 
+
+
+(4.7) 
+
+
+This result shows that if we define the unit 
+charge!! in the usual way and the field strengths 
+in terms of this charge, then the energy in the 
+field will be given by &. of electromagnetic 
+theory. In situations where the charges are not 
+strongly accelerated and in which no lengths 
+small compared to Ao enter, the difference be- 
+tween the charge so defined and the true charge 
+
+
+10a Note added in proof: Because of the gauge dependence 
+of the theory no unambiguous calculation of the polariza- 
+tion energy of the pairs in a magnetostatic field can be 
+made; and in fact no straightforward choice of gauge gives 
+for this energy that value formally equal to (4.4), which 
+alone is consistent with relativity. This consideration 
+shows that, quite apart from the ambiguities discussed 
+~ above, the present calculations of the reaction of the pairs 
+on the field may have to be essentially modified. 
+
+1 Through the kindness of Professor Lawrence, we have 
+just seen Dirac’s report to the Solvay Congress. In this 
+report, Dirac, from a different point of view, is led to a 
+result that the charge of an electron defined in the usual 
+way is not the true charge. The expression which Dirac 
+derives for the difference between these charges is in com- 
+plete agreement with (4.7). 
+
+
+261 
+
+
+charge, are similarly reduced; so that as long as 
+we do not consider lengths smaller than \o— 
+which vanishes as i goes to zero as the corre- 
+spondence principle requires—the consistency of 
+classical electromagnetic theory is not affected 
+at all, and the difference between the ‘true’ 
+charges, and “true” fields and those which in- 
+clude the effect of the pairs, are not, under these 
+circumstances, observable. 1! 
+
+We may calculate simply this dependence of 
+pair energy on the separation of two charges. 
+If the charge on the particles is not greater than 
+Ze, then the condition |€| <m?c*/he means only 
+that the particles shall stay far apart compared to 
+(aZ)*Ao. If the two particles are separated by a 
+distance R, then 
+
+
+[ ee’ —_ (k-k’) — 1 je*k-k): R/O 
+
+
+(4.6) 
+ec’ (e+e’)|k—k’|* 
+
+
+Ze, will not be observable.” In principle a detec- 
+tion of this difference between true and apparent 
+charge could be expected for a violently accel- 
+erated electron; the effects would be of the order 
+a for accelerations of the order mc?/h. But for 
+such accelerations the electron theoretic behavior 
+of an electron is uncertain by effects of just the 
+order a which is the ratio of the acceleration to 
+mc*/e?. Although, therefore, the effects here dis- 
+cussed would in principle be capable of observa- 
+tion if we had an adequate electromagnetic 
+theory with which to compare them and would in 
+that case have to be taken into account in descril 
+ing the behavior of the electron, they would a, 
+pear in fact in the present state of the theory not 
+to be unambiguously detectable by observation. 
+A similar argument shows that the deviations 
+from (4.7) given by (4.6) for the field at dis- 
+tances R<)Xo from an electron are also in this 
+
+
+sense unobservable, that they are masked by the 
+
+
+12 This can be said in another way: Because of the polar- 
+izability of the nascent pairs, the dielectric constant of 
+space into which no matter has been introduced differs 
+
+
+‘from that of truly empty space. For fields which are 
+
+
+neither too strong nor too rapidly varying the dielectric 
+constant of a vacuum then has the constant value~ (1-+ xa). 
+Because it is in practice impossible not to have pairs pres- 
+ent, we may redefine all dielectric constants, as is cus- 
+tomarily done, by taking that of a vacuum to be unity. 
+
+
+262 
+
+
+electron theoretic uncertainties in the behavior of 
+an accelerated electron. Thus these deviations in 
+the field give a shift in the energy levels of an 
+atomic electron predicted by the Dirac theory; 
+but these shifts are never greater than the un- 
+certainties in the energy levels which arise from 
+our ignorance of the reaction of the electron to its 
+own radiation field. 
+
+For protons, for which we may perhaps sup- 
+pose that the electron theoretic ambiguities arise 
+only for the far larger accelerations Mc‘*/e? the 
+deviations from the Coulomb law should in prin- 
+ciple be detectable. These deviations arise at dis- 
+tances R~Xo. For R<KXo, but still, in order that 
+KR may be regarded as large, large compared to 
+e/nc, (4.6) gives: 
+
+
+Ein. = — (ae®/R) «+ ((10/9)27) 
++ ((4/3)r) (In (2tR/No)+7)] (4.8) 
+
+
+W. H. FURRY AND J. 
+
+
+R. OPPENHEIMER 
+
+
+with y = Euler’s constant. This corresponds to an 
+increase of effective charge of the proton of 
+
+
+be~ (2ae/37) In (40/25R). (4.9) 
+
+
+The effect is small, but may perhaps be detected 
+by scattering experiments. For the scattering of 
+protons by protons, deviations from the scatter- 
+ing for a Coulomb field of the order of one percent 
+should appear for proton energies of a hundred 
+thousand volts. It must again be emphasized that 
+for very close distances of approach, where these 
+deviations may be large, the theory may not be 
+applied; for the methods here used to give a 
+meaning to x must rather be thought of as the 
+first steps in an approximation based upon the 
+actual smallness of a. 
+
+

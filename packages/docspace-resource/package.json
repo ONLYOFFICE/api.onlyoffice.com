@@ -1,0 +1,26 @@
+{
+  "name": "@onlyoffice/docspace-resource",
+  "private": true,
+  "type": "module",
+  "exports": {
+    "./*": "./dist/*"
+  },
+  "scripts": {
+    "build": "tsx lib/main.ts",
+    "test:types": "tsc",
+    "test": "pnpm test:types"
+  },
+  "dependencies": {
+    "@onlyoffice/service-declaration": "workspace:^",
+    "@types/node": "^20.12.12",
+    "typescript": "^5.4.5"
+  },
+  "devDependencies": {
+    "@onlyoffice/console": "workspace:^",
+    "@onlyoffice/openapi-declaration": "workspace:^",
+    "@onlyoffice/openapi-resource": "workspace:^",
+    "@onlyoffice/resource": "workspace:^",
+    "@onlyoffice/stream-string": "workspace:^",
+    "tsx": "^4.10.5"
+  }
+}

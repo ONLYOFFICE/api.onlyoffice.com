@@ -1,0 +1,28 @@
+{
+  "name": "@onlyoffice/rehype-starry-night",
+  "private": true,
+  "type": "module",
+  "main": "lib/main.ts",
+  "scripts": {
+    "test:types": "tsc",
+    "test:unit": "tsc --noEmit false --rootDir lib --outDir dist && c8 --all --src ./dist --reporter html --reporter text --check-coverage --branches 80 --functions 80 --lines 80 --statements 80 --per-file uvu dist ^.*\\.test\\.js$",
+    "test": "pnpm test:types && pnpm test:unit"
+  },
+  "dependencies": {
+    "@types/hast": "^3.0.4",
+    "@wooorm/starry-night": "^3.2.0",
+    "hast-util-to-text": "^4.0.0",
+    "typescript": "^5.4.5",
+    "unist-util-visit": "^5.0.0",
+    "vfile": "^6.0.1"
+  },
+  "devDependencies": {
+    "c8": "^9.1.0",
+    "rehype-parse": "^9.0.0",
+    "rehype-stringify": "^10.0.0",
+    "remark-parse": "^11.0.0",
+    "remark-rehype": "^11.1.0",
+    "unified": "^11.0.4",
+    "uvu": "^0.5.6"
+  }
+}

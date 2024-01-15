@@ -1,1 +1,0 @@
-window.Asc.plugin.executeMethod ("SelectContentControl", ["5_665"]);

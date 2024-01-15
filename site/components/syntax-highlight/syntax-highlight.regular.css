@@ -1,0 +1,145 @@
+/* The styles below are inspired by the `starry-night/both` theme */
+
+[data-dark-theme="regular"][data-theme-preference="dark"] {
+  color-scheme: dark;
+
+  --syntax-highlight-comment-color: #8b949e;
+  --syntax-highlight-constant-color: #79c0ff;
+  --syntax-highlight-entity-color: #d2a8ff;
+  --syntax-highlight-storage-modifier-import-color: #c9d1d9;
+  --syntax-highlight-entity-tag-color: #7ee787;
+  --syntax-highlight-keyword-color: #ff7b72;
+  --syntax-highlight-string-color: #a5d6ff;
+  --syntax-highlight-variable-color: #ffa657;
+  --syntax-highlight-brackethighlighter-unmatched-color: #f85149;
+  --syntax-highlight-invalid-illegal-text-color: #f0f6fc;
+  --syntax-highlight-invalid-illegal-bg-color: #8e1519;
+  --syntax-highlight-carriage-return-text-color: #f0f6fc;
+  --syntax-highlight-carriage-return-bg-color: #b62324;
+  --syntax-highlight-string-regexp-color: #7ee787;
+  --syntax-highlight-markup-list-color: #f2cc60;
+  --syntax-highlight-markup-heading-color: #1f6feb;
+  --syntax-highlight-markup-italic-color: #c9d1d9;
+  --syntax-highlight-markup-bold-color: #c9d1d9;
+  --syntax-highlight-markup-deleted-text-color: #ffdcd7;
+  --syntax-highlight-markup-deleted-bg-color: #67060c;
+  --syntax-highlight-markup-inserted-text-color: #aff5b4;
+  --syntax-highlight-markup-inserted-bg-color: #033a16;
+  --syntax-highlight-markup-changed-text-color: #ffdfb6;
+  --syntax-highlight-markup-changed-bg-color: #5a1e02;
+  --syntax-highlight-markup-ignored-text-color: #c9d1d9;
+  --syntax-highlight-markup-ignored-bg-color: #1158c7;
+  --syntax-highlight-meta-diff-range-color: #d2a8ff;
+  --syntax-highlight-brackethighlighter-angle-color: #8b949e;
+  --syntax-highlight-sublimelinter-gutter-mark-color: #484f58;
+  --syntax-highlight-constant-other-reference-link-color: #a5d6ff;
+}
+
+@media (prefers-color-scheme: dark) {
+  [data-dark-theme="regular"][data-theme-preference="auto"] {
+    color-scheme: dark;
+
+    --syntax-highlight-comment-color: #8b949e;
+    --syntax-highlight-constant-color: #79c0ff;
+    --syntax-highlight-entity-color: #d2a8ff;
+    --syntax-highlight-storage-modifier-import-color: #c9d1d9;
+    --syntax-highlight-entity-tag-color: #7ee787;
+    --syntax-highlight-keyword-color: #ff7b72;
+    --syntax-highlight-string-color: #a5d6ff;
+    --syntax-highlight-variable-color: #ffa657;
+    --syntax-highlight-brackethighlighter-unmatched-color: #f85149;
+    --syntax-highlight-invalid-illegal-text-color: #f0f6fc;
+    --syntax-highlight-invalid-illegal-bg-color: #8e1519;
+    --syntax-highlight-carriage-return-text-color: #f0f6fc;
+    --syntax-highlight-carriage-return-bg-color: #b62324;
+    --syntax-highlight-string-regexp-color: #7ee787;
+    --syntax-highlight-markup-list-color: #f2cc60;
+    --syntax-highlight-markup-heading-color: #1f6feb;
+    --syntax-highlight-markup-italic-color: #c9d1d9;
+    --syntax-highlight-markup-bold-color: #c9d1d9;
+    --syntax-highlight-markup-deleted-text-color: #ffdcd7;
+    --syntax-highlight-markup-deleted-bg-color: #67060c;
+    --syntax-highlight-markup-inserted-text-color: #aff5b4;
+    --syntax-highlight-markup-inserted-bg-color: #033a16;
+    --syntax-highlight-markup-changed-text-color: #ffdfb6;
+    --syntax-highlight-markup-changed-bg-color: #5a1e02;
+    --syntax-highlight-markup-ignored-text-color: #c9d1d9;
+    --syntax-highlight-markup-ignored-bg-color: #1158c7;
+    --syntax-highlight-meta-diff-range-color: #d2a8ff;
+    --syntax-highlight-brackethighlighter-angle-color: #8b949e;
+    --syntax-highlight-sublimelinter-gutter-mark-color: #484f58;
+    --syntax-highlight-constant-other-reference-link-color: #a5d6ff;
+  }
+}
+
+[data-light-theme="regular"][data-theme-preference="light"] {
+  color-scheme: light;
+
+  --syntax-highlight-comment-color: #57606a;
+  --syntax-highlight-constant-color: #0550ae;
+  --syntax-highlight-entity-color: #6639ba;
+  --syntax-highlight-storage-modifier-import-color: #24292f;
+  --syntax-highlight-entity-tag-color: #116329;
+  --syntax-highlight-keyword-color: #cf222e;
+  --syntax-highlight-string-color: #0a3069;
+  --syntax-highlight-variable-color: #953800;
+  --syntax-highlight-brackethighlighter-unmatched-color: #82071e;
+  --syntax-highlight-invalid-illegal-text-color: #f6f8fa;
+  --syntax-highlight-invalid-illegal-bg-color: #82071e;
+  --syntax-highlight-carriage-return-text-color: #f6f8fa;
+  --syntax-highlight-carriage-return-bg-color: #cf222e;
+  --syntax-highlight-string-regexp-color: #116329;
+  --syntax-highlight-markup-list-color: #3b2300;
+  --syntax-highlight-markup-heading-color: #0550ae;
+  --syntax-highlight-markup-italic-color: #24292f;
+  --syntax-highlight-markup-bold-color: #24292f;
+  --syntax-highlight-markup-deleted-text-color: #82071e;
+  --syntax-highlight-markup-deleted-bg-color: #ffebe9;
+  --syntax-highlight-markup-inserted-text-color: #116329;
+  --syntax-highlight-markup-inserted-bg-color: #dafbe1;
+  --syntax-highlight-markup-changed-text-color: #953800;
+  --syntax-highlight-markup-changed-bg-color: #ffd8b5;
+  --syntax-highlight-markup-ignored-text-color: #eaeef2;
+  --syntax-highlight-markup-ignored-bg-color: #0550ae;
+  --syntax-highlight-meta-diff-range-color: #8250df;
+  --syntax-highlight-brackethighlighter-angle-color: #57606a;
+  --syntax-highlight-sublimelinter-gutter-mark-color: #8c959f;
+  --syntax-highlight-constant-other-reference-link-color: #0a3069;
+}
+
+@media (prefers-color-scheme: light) {
+  [data-light-theme="regular"][data-theme-preference="auto"] {
+    color-scheme: light;
+
+    --syntax-highlight-comment-color: #57606a;
+    --syntax-highlight-constant-color: #0550ae;
+    --syntax-highlight-entity-color: #6639ba;
+    --syntax-highlight-storage-modifier-import-color: #24292f;
+    --syntax-highlight-entity-tag-color: #116329;
+    --syntax-highlight-keyword-color: #cf222e;
+    --syntax-highlight-string-color: #0a3069;
+    --syntax-highlight-variable-color: #953800;
+    --syntax-highlight-brackethighlighter-unmatched-color: #82071e;
+    --syntax-highlight-invalid-illegal-text-color: #f6f8fa;
+    --syntax-highlight-invalid-illegal-bg-color: #82071e;
+    --syntax-highlight-carriage-return-text-color: #f6f8fa;
+    --syntax-highlight-carriage-return-bg-color: #cf222e;
+    --syntax-highlight-string-regexp-color: #116329;
+    --syntax-highlight-markup-list-color: #3b2300;
+    --syntax-highlight-markup-heading-color: #0550ae;
+    --syntax-highlight-markup-italic-color: #24292f;
+    --syntax-highlight-markup-bold-color: #24292f;
+    --syntax-highlight-markup-deleted-text-color: #82071e;
+    --syntax-highlight-markup-deleted-bg-color: #ffebe9;
+    --syntax-highlight-markup-inserted-text-color: #116329;
+    --syntax-highlight-markup-inserted-bg-color: #dafbe1;
+    --syntax-highlight-markup-changed-text-color: #953800;
+    --syntax-highlight-markup-changed-bg-color: #ffd8b5;
+    --syntax-highlight-markup-ignored-text-color: #eaeef2;
+    --syntax-highlight-markup-ignored-bg-color: #0550ae;
+    --syntax-highlight-meta-diff-range-color: #8250df;
+    --syntax-highlight-brackethighlighter-angle-color: #57606a;
+    --syntax-highlight-sublimelinter-gutter-mark-color: #8c959f;
+    --syntax-highlight-constant-other-reference-link-color: #0a3069;
+  }
+}

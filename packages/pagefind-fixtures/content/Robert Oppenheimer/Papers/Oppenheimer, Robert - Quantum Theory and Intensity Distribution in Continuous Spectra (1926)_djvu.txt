@@ -1,0 +1,184 @@
+NovEMBER 27, 1926] 
+
+
+NATURE 
+
+
+771 
+
+
+cannot now be employed in that sense. In English 
+usage, ‘ candle-power ’ is strictly a form of power, and 
+might, if we had the data, be defined in ergs per second. 
+In French, an electric current cannot be strictly 
+expressed in amperes, but the iutensité of a current 
+can be so stated. In English, the notion of intensité 
+is here redundant, and, as the reviewer observes, 
+‘In scientific English the word ‘ intensity ’ always con- 
+notes something analogous to ‘energy per unit area.’ ”’ 
+A good deal might be said about the proper use of 
+the term ‘ flux,’ when ‘ luminous flux’ is to be sub- 
+stituted for ‘light.’ Flux is generally employed in 
+English to connote a flow, not a rate. ‘ Luminous 
+radiation ’ is all that is wanted, without introducing 
+the conception of a rate. Need we stop to consider, 
+or wait to know what light is before using the word 
+in scientific English ? Heat is not easy to define, 
+temperature is less easy, but no new terms are wanted 
+here. A. P. TROTTER. 
+Teffont, Salisbury, 
+October 30. 
+
+
+I am very glad to find Mr. Trotter in agreement 
+with me regarding some points in photometric 
+nomenclature, but in reply to his concluding remarks 
+I have only to suggest that the scientific use of the 
+term ‘light’ should be at least as exact and simple as 
+its ordinary use in English. Terms like ‘ ultra-violet 
+light ’ are simply ridiculous. That is why I suggested 
+a greater care in the use of the word. Why manu- 
+facture new terms because a very small proportion 
+of the population misuses the good old words ? 
+
+L. Cc. M. 
+
+
+Broadcasting Birth-control. 
+
+
+Sir James Marcuant, in a letter published in the 
+Times of November 17, refers to my “ extreme and 
+one-sided views’’ on the subject of birth-control. 
+As there appears to be much misconception in regard 
+to what I actually did say on this subject during the 
+broadcast debate on “‘ Is Science Bad for the World ?” 
+on November 16, I should like to have the opportunity 
+of putting my words on record. They were as 
+follows : 
+
+“ Birth-control is capable of great harm, if it is 
+not regulated ; but its absence would lead to greater 
+harm. It therefore must be regulated and supervised 
+by the State” (or, I would now add, by the medical 
+profession), “ and the nation should allow no inter- 
+ference on the part of prudery or of religious in- 
+tolerance. |...” Here I was interrupted. 
+
+J claim that this statement was neither extreme nor 
+one-sided. Whether . subjects like ‘ birth-control ” 
+should ever be mentioned on the wireless is another 
+issue altogether. To me personally, letters such as 
+that of Sir James Marchant appear to add point to 
+the fear which has been expressed that State control 
+of broadcasting might well tend to dulness and 
+sterility through a banning of all controversial 
+matters. Had broadcasting been possible in 1859, 
+doubtless no expression of opinion would have been 
+allowed over the wireless on the shocking question 
+of whether man had not been specially created, but 
+had evolved from animals. 
+
+However, I am here only concerned to defend 
+myself from the imputation of having abused my 
+privileged position at the microphone. I should also 
+add that a year ago I was invited to give a series of 
+wireless talks on biology and human life, and that 
+no objection was then raised by the B.B.C. to the 
+brief references to birth-control which I there made. 
+I therefore conclude (and earnestly hope that I am 
+correct) that though the policy of the B.B.C. may be 
+
+
+NO. 2978, VOL. 118] 
+
+
+against the raising of the question in a controversial 
+way in debate, this does not preclude the topic from 
+ever being mentioned over the wireless. 
+Jutian S. Huxrey. 
+King’s College, 
+Strand, London, W.C.z2. 
+
+
+Spectrographic Junction between the X-ray Region 
+and the Extreme Ultra-violet. 
+
+
+In a letter published in Nature of October 16, p. 
+551, Dr. A. Dauvillier has announced some pre- 
+liminary results of attempts to get spectroscopic 
+evidence of the unknown region ‘between the X-rays 
+and the extreme ultra-violet. He has followed the 
+same general methods and technique as have been 
+used by me in measuring the K- and L-series of the 
+formerly unknown domain of wave-lengths 12 AU 
+25 A.U. (Phil. Mag., February 1926). 
+
+My experience from this work is that a thorough 
+critical scrutiny of the obtained spectrograms is 
+necessary to exclude erroneous interpretations. To 
+show that the lines found were not ordinary short 
+wave-lengths reflected in higher orders or in other 
+atomic planes than those supposed, Dr. Dauvillier has 
+used goldbeater’s foil. Our experience is that such 
+foils, even of the thinnest obtainable sort, absorb com- 
+pletely all wave-lengths greater than 13 A.U.-15 A.U., 
+and therefore it is scarcely possible by this means to 
+identify the longer wave-lengths. 
+
+It is also surprising that a foil of magnesium thick 
+enough to prevent the photographic plate from 
+fogging by the rather intense ordinary light would 
+transmit this very soft radiation in any considerable 
+amount, especially when the relatively small in- 
+tensity of the N- and O-series, as also theoretically 
+suggested by Kramers, is taken into account. 
+
+It will, however, be of great interest to get a de- 
+tailed report of these experiments, which, if they 
+prove to be correctly interpreted, are of high scientific 
+value. RoBeERT THORZUS. 
+
+Physical Laboratory of the University, 
+
+Upsala, Sweden, October 29. 
+
+
+Quantum Theory and Intensity Distribution in 
+Continuous Spectra. 
+
+
+Tue undulatory mechanics makes it possible to give 
+a quantum theory of aperiodic phenomena, and, in 
+particular, to compute the intensity distribution for 
+continuous spectra. The theory has recently been 
+applied to the hyperbolic orbits of the hydrogen atom 
+(Proc. Camb. Phil. Soc., Oct. 1926). The results are 
+too complicated to be given here in detail; but they 
+yield an estimate of the intensity distribution in the 
+continuous X-ray absorption spectra. This is, I 
+believe, the first experimental verification of this 
+part of the theory. . ae 
+
+According to the theory, absorption sets in discon- 
+tinuously at the series limit with a finite value, which, 
+for a given », electron, is proportional to the wave- 
+length of the limit. For very short waves the ab- 
+sorption coefficient is of the form f(n, k)Z*\*+e, 
+where Z is the effective nuclear charge and \ the wave- 
+length of the radiation, and where k=4,4.... The 
+values of f(n, k) give atomic absorption coefficients 
+ZB, where a ranges from 3 to 4-5, and where 8, for 
+the shortest waves, is 2-5, and for the customary 
+range varies between 2-5 and 3. This is in agreement 
+with the empirical formule. 
+
+J. R. OPPENHEIMER. 
+Institut fiir Theoretische Physik, 
+Gottingen, October 30. 
+
+
+© 1926 Nature Publishing Group 
+
+

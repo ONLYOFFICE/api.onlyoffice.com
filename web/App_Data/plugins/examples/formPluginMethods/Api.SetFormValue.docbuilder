@@ -1,1 +1,0 @@
-window.Asc.plugin.executeMethod ("SetFormValue", ["1_713", true]);

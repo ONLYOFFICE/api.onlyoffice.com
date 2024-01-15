@@ -1,2 +1,0 @@
-// Return a Range object that represents the left end of the specified range:
-oWorksheet.GetRange("C4:D5").End("xlToLeft").SetFillColor(Api.CreateColorFromRGB(255, 224, 204));

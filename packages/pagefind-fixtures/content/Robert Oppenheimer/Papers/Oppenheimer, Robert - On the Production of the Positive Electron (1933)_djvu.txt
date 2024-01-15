@@ -1,0 +1,416 @@
+LETTERS TO 
+
+
+An examination of the statistics of the problem shows that 
+if in an appreciable fraction of ionic spurts, say 20 percent 
+as observed, the counters also record, then the number of 
+rays is probably not considerably less than what would 
+correspond to an average of one ray through each counter 
+set. Taking into account the average distances involved, 
+we are led to the conclusion that the nuclear disintegra- 
+tions observed corresponded to at least 100 secondaries, 
+and may of course represent many more. The possibility of 
+there being more secondaries than would correspond to the 
+
+
+THE EDITOR 53 
+
+
+total number of electrons and protons in the disintegrated 
+atom naturally raises interesting considerations regarding 
+the mechanism of the processes accompanying the dis- 
+integration. 
+W. F. G. Swann 
+C. G. MONTGOMERY 
+Bartol Research Foundation of 
+The Franklin Institute, 
+Swarthmore, Pennsylvania, 
+June 1, 1933, 
+
+
+Scattering of Molecular Rays in Gases 
+
+
+Knauer! has recently investigated the scattering of 
+molecular rays in gases. By the aid of high speed pumps the 
+author has found it possible to produce a more intense 
+beam so that scattering might be investigated with higher 
+resolving power. 
+
+A beam is formed by three successive slits and the distri- 
+bution of the scattered molecules or atoms studied by the 
+aid of a Pirani gauge. Two slits placed before the gauge 
+permit molecules to enter it only when they are scattered 
+from a definite position in the beam. 
+
+Fig. 1 (curves A and B) shows the scattering curves which 
+have been obtained for hydrogen molecules and helium 
+atoms. The temperature of the source of the beam and 
+scattering chamber was 20°C. The scattered intensity is 
+expressed in arbitrary units, being simply the galvanometer 
+deflection multiplied by sin 6 to correct for the variation in 
+the length of the beam from which scattered molecules 
+may enter the gauge. | 
+
+Massey and Mohr? have computed the scattered intensity 
+for helium atoms having a relative kinetic energy corre- 
+sponding to 20°C and — 185°C. The results which they have 
+obtained offer a qualitative explanation of the helium 
+scattering curve. Curve C (Fig. 1) is reproduced from their 
+article after being multiplied by sin 26 and divided by 
+sin 9 to obtain the scattering per unit solid angle in a 
+coordinate system in which one atom is initially at rest. 
+One peak occurs at 25° and another at 40°. From a qualita- 
+tive point of view three effects are immediately obvious 
+which would tend to merge these two peaks into the one 
+observed at 30°. The first is the finite resolving power of 
+the apparatus, second the Maxwellian distribution of 
+
+
+He scattered in He 
+
+
+He scattered in H 
+
+
+eee a 
+
+
+zero curve C 
+
+
+Scattered Intensity 
+
+
+e) 50 80 0 30 60 90 
+tS) 6 
+
+
+Fic. 1. Curve A, He scattered in He; curve B, He 
+scattered in He; curve C, results of Massey and Mohr for 
+He scattered in He. 
+
+
+velocities in the beam and third the fact that the scattering 
+molecules are not at rest but are moving in random direc- 
+tions with a Maxwellian distribution of velocities. 
+
+The intensity of the region of 65° is too small to deter- 
+mine definitely whether a peak exists there. 
+
+A complete report will appear in a short time. 
+
+| R. M. ZaBeE.L* 
+Massachusetts Institute of Technology, 
+June 3, 1933. 
+
+
+* National Research Fellow 
+1 Knauer, Zeits. f. Physik 80, 80 (1933). 
+* Massey and Mohr, Nature 130, 277 (1932). 
+
+
+On the Production of the Positive Electron 
+
+
+The experimental discovery of the positive electron gives 
+us a striking confirmation of Dirac’s theory of the electron, 
+and of his most recent attempts to give a consistent inter- 
+pretation of the formalism of that theory. As is well known, 
+and quite apart from the difficulties connected with the 
+existence and stability of the electron itself, the theory in 
+its original form led to very grave difficulties in all prob- 
+lems involving lengths of the order of the Compton wave- 
+length, in that it predicted the occurrence of electrons of 
+negative kinetic energy, in gross conflict with experience. 
+
+
+Dirac has pointed out that we might obtain a consistent 
+theory by assuming that it is only the absence of electrons 
+of negative kinetic energy that has a physical meaning; in 
+this way one could avoid the occurrence of the critical trans- 
+itions, and yet understand the validity of many correct 
+predictions of the theory, such as the formula for the 
+relativistic fine structure, and the Thomson and Klein- 
+Nishina scattering formulae: only the physical interpreta- 
+tion of the formulism was changed, and involved in many 
+cases the appearance pairs of electrons and ‘‘antielectrons”’ 
+
+
+54 LETTERS TO THE EDITOR 
+
+
+—particles of electronic mass and of positive charge numer- 
+ically equal to that of the electron. It was this aspect of 
+the theory which remained dubious; and the discovery of 
+the positive electron appears to settle that doubt. 
+
+. Perhaps the simplest example of the production of pairs 
+is the case of an externally maintained electrostatic field in 
+which differences of potential greater than 2 mc? occur. 
+Here one may see in a particularly clear way that the pro- 
+duction of pairs is a typical quantum effect, depending 
+upon the finite wave-length of the electron waves, and dis- 
+appearing, as the correspondence principle requires, when 
+h->0. For all macroscopic fields such an effect is negligible; 
+and for the fields within nuclei, where alone the pairs 
+might be expected to be of primary importance, we know 
+that Dirac’s theory, together with the whole notion of the 
+electron as a particle, becomes inapplicable. It is for this 
+reason that the anti-electrons could so long escape de- 
+tection, 
+
+In the case of a Coulomb field the theory shows that to 
+detect the pairs we should have to use radiation (electrons 
+or gamma-rays) of energy greater than 2 mc? (strictly 
+greater than mce?[1+(1+a2Z?/(1—a?Z?)*)~*] where Ze is 
+the charge producing the field). Thus, if we allow gamma- 
+rays of energy y to fall upon a nucleus, we should expect 
+pairs to appear; the kinetic energy of the pairs would be 
++ —2 mc?; and the effect might be interpreted as a photo- 
+electric absorption of the gamma-ray by the pair; in the 
+process the nucleus necessarily takes up. a small recoil 
+momentum. The recent experiments of Anderson and 
+Neddermeyer with filtered gamma-rays of Th C’” show 
+that in fact pairs are produced when the radiation passes 
+through lead; and this very strongly supports the tentative 
+suggestion made by Blackett and Occhialini that that part 
+of the absorption of these rays in lead which cannot be 
+accounted for by the scattering and photo-effect of the 
+atomic electrons is to be ascribed to the creation of pairs 
+near the nucleus. This hypothesis, even without calculation, 
+finds much support in the evidence, for the number of 
+pairs observed by Anderson and Neddermeyer is of the 
+right order to account for the excess absorption of the 
+gamma-rays. Further Gray and Tarrant! have found that 
+a part, but not all, of the excess energy absorbed is re- 
+radiated; the reradiated gamma-rays consist, wholly for 
+the light elements, and for the greater part in lead, of 
+quanta of energy 510° volts. This is what we should 
+expect from the pairs, which should lose practically all of 
+their kinetic energy in passing through matter, and in 
+which the anti-electron near the end of its range should 
+combine with an electron with the radiation of two quanta 
+of about a half-million volts. 
+
+We have applied the theory to this simple model, in 
+which gamma-rays of high energy may be absorbed by 
+the production of pairs in the Coulomb field of nuclei. 
+When the energy of the gamma-rays is only a little greater 
+than the threshold energy, and the kinetic energy of the 
+pair is small, so that relativistic effects for electron and 
+positive may reasonably be neglected, the calculations can 
+easily be made strictly. The important term in the effective 
+absorption cross section per nucleus (of charge Z) for 
+
+
+gamma-rays of energy y is 
+a =(mr/3 (2)*)atZ5(et/mct)gie 2720), with 
+g=y/me—2, (1) 
+
+
+The positives tend to take most of the available kinetic 
+energy, and the distribution in the direction of ejection of 
+the particles about the direction of the incident gamma- 
+rays is given by the cosine-square law. 
+
+For higher energies of the gamma-rays, we have made an 
+approximate calculation, in which we have found the wave 
+functions for the pair to the first order only in the per- 
+turbing field of the nucleus. For y—> © we find asymptoti- 
+cally 
+
+o = (27/6 —2/3)aZe4/mirc!. (2) 
+
+
+Here the relative probability of a distribution of energy 
+between positive (e,) and electron (e_) is given by 
+
+
+ete? (e>> me; <> me). (3) 
+
+
+Both particles tend to come off within a small angle of the 
+original beam. The probability of ejection falls off rapidly 
+for angles >>mc?/e,, mc?/e_ for the two particles. 
+
+From (2) we see that the excess absorption of hard 
+radiation should be proportional to Z?, in good agreement 
+with the experiments with Th C’’ gamma-rays. Further, 
+even the asymptotic formula (2) gives reasonable values for 
+the absolute magnitude of the excess absorption. Numerical 
+calculation for the case of Th C”, y22.610%v (with the 
+use of the same approximate wave functions), gives an 
+excess absorption of about 25 percent of the Klein-Nishina 
+absorption of these rays in lead, and 15 percent in tin, in 
+excellent agreement with experiment. We see too from a 
+comparison of (1) and (2) that the absorption due to the 
+production of pairs rises very rapidly as the energy of the 
+gamma-rays is increased; at half the energy of the Th C” 
+rays the absorption is only one five-hundredth as great. 
+The small effect for gamma-rays near the threshold arises 
+in part from the small number of states available, and in 
+part from the repulsion of the low energy positive by the 
+nuclear field. In this way we can understand that the excess 
+absorption and the reradiated gamma-rays were not ob- 
+served with incident gamma-rays of energy much lower 
+than 210° volts. Thus the theory gives a reasonable ac- 
+count of the dependence of the excess absorption on the 
+gamma-ray energy and on the atomic number and of the 
+absolute magnitude of the absorption. The origin of the 
+radiation of ~ 10° volts which Gray and Tarrant found re- 
+radiated from heavy element is not altogether clear. It is 
+possible that this arises by the annihilation of a positive in 
+a process in which only one quantum is radiated, and an 
+electron or nucleus takes up a small recoil momentum. The 
+relative importance of such processes would increase with 
+the atomic number, as is observed. 
+
+According to the theory the gamma-rays from a radio- 
+active nucleus should occasionally be ‘‘internally con- 
+verted” by the production of a pair near the nucleus. The 
+internal conversion coefficient is of the order a3Z?, and is 
+
+
+1 Gray and Tarrant, Proc. Roy. Soc. A136, 662 (1932). 
+
+
+LETTERS TO 
+
+
+about 210-4 for the quadripole gamma-ray of Th C”, 
+y =2.6X 108 volts. 
+
+The application of (2) to the absorption of cosmic rays 
+is in some respects illuminating. For as the energy of the 
+gamma-ray is increased, the absorption by the production 
+of pairs becomes relatively more important than the ab- 
+sorption by Compton effect. This would account for. Ander- 
+son’s observation that among high energy particles the 
+numbers of positives and negatives are roughly equal; and 
+it would increase the energy of the gamma-rays as esti- 
+mated from their absorption coefficients. Further (2) gives 
+a limiting penetration, which is of the same order for water 
+as that observed for the hardest cosmic rays. Nevertheless 
+(3) is here in definite disagreement with experiment, in that 
+a penetration in water twice as great as that predicted by 
+(2) has been observed by Regener, and further in that (2) 
+predicts serious deviations from the mass absorption law 
+which are certainly not found experimentally. It appears 
+that deviations from the Coulomb law for the nuclear fields 
+could not sensibly affect our result; and one is tempted to 
+see in this discrepancy a failure of the theory when applied 
+to radiation whose wave-length is of the order of the critical 
+distance e?/me? which marks the limit of applicability of 
+
+
+THE EDITOR 55 
+
+
+classical electron theory. But we must emphasize that (2) 
+was derived by the use of approximations which may be 
+unsound; just in the range of high energies and large atomic 
+numbers their validity appears doubtful; and we believe 
+that no conclusions may justly be drawn until this purely 
+analytical point is settled. Even for light elements the use 
+of (2) for y greater than 108 volts appears to us questionable. 
+
+On the present simple theory there is no place for the 
+simultaneous production of large numbers of pairs. The 
+fast electrons and positives, however, will themselves tend 
+to produce further pairs; and although this point too wants 
+much closer investigation, it is possible that one may so 
+be able to account for the multiple tracks observed. 
+
+We want to express our profound thanks to Professor 
+Bohr, who has helped us to understand the essential con- 
+sistency of the theory which we have here applied. 
+
+J. R. OPPENHEIMER 
+. M. S. PLEesset* 
+California Institute of Technology, 
+Pasadena, California, 
+June 9, 1933. 
+
+
+* National Research Fellow | 
+
+
+The Emission of Alpha-Particles from Various Targets Bombarded by Deutons of High Speed 
+
+
+Using a sample of hydrogen containing 50 percent of the 
+heavy isotope, H?, in our apparatus for the multiple accel- 
+eration of ions we have given to the ions H!H?* energies of 
+2,000,000 volts. These ions striking any target immediately 
+yield 660,000 volt-protons and 1,330,000 volt H? nuclei 
+which we call deutons. We have directed these particles 
+against various targets. 
+
+It was of particular interest to study elements of the 
+nuclear type 4n+2 in order to ascertain whether these 
+would yield nuclei of type 4” and a-particles. As a matter 
+of fact the two targets which were most striking because of 
+the range and number of emitted a-particles were NH,NO; 
+and LiF, which contained the nuclei N#4 and Li’. Experience 
+with other targets containing O, H and F shows that most 
+of the effects observed were due to N and Li. N yielded 
+about 100 a-particles per 10° deutons all apparently homo- 
+geneous with a range of 6.8 cm. The minimum deuton 
+energy at which we observed this disintegration was 
+600,000 volts. The energy of the a-particles obtained in 
+this disintegration is only about one-half of that which 
+should be set free in the process N!4-+H?>C”+Het. 
+
+With Li a large number of a-particles of range 8.2 cm 
+were obtained which are very likely due to the accompany- 
+ing protons. In addition there are about one-tenth as many 
+with the great range of 14.5 cm corresponding to an energy 
+of 12,500,000 volts. No other known natural or artificial 
+disintegration has yielded particles of so great energy. If we 
+assume the process Li*+H?—2He‘4 and take for He the 
+mass 4.0022 and for H? and Li® the most recent values of 
+Bainbridge, which he has kindly communicated to us, the 
+values 2.0136 and 6.0145, respectively, and take account of 
+the kinetic energy of the deuton (1,300,000 volts), we find 
+23,400,000 volts as the total.energy set free. If this energy 
+
+
+is equally divided between the two a-particles, each would 
+have 11,700,000 volts, whereas, from the observed range 
+we find 12,500,000 volts. This calculation of the energy 
+from the range is a wide extrapolation, with the use of the 
+3/2 power voltage range relation, and the agreement be- 
+tween the observed and calculated values is well within the 
+limits of uncertainty because of this and other causes. An 
+alternative, but less likely hypothesis, that the process in- 
+volves Li’ with the emission of a neutron, happens to agree 
+equally well with the observations if the mass of the 
+neutron has the low value (about unity) that we discuss 
+later. . 
+
+With the Be target a-particles were obtained of the same 
+range (3.3 cm) as those obtained in this laboratory in 
+similar experiments with high speed protons. But the num- 
+ber of disintegrations per deuton was at least 100 times as 
+great as the number per proton. The identity of the two 
+ranges strongly suggests that the bombarding particle 
+merely causes the disintegration of the unstable Be nucleus; 
+in other words, that we have disintegration without cap- 
+ture. This is a process which has already been suggested by 
+Bainbridge! for the disintegration of Be by a-particles. If 
+we take Bainbridge’s value for the mass of Be, 9.0155, our 
+value for the kinetic energy of the a-particles and Chad- 
+wick’s? for the kinetic energy of the neutron, the mass of 
+the neutron would come out as a little less than unity, 
+which tends to confirm the estimate of the mass of the 
+neutron (following communication) which we have obtained 
+from quite different experiments. 
+
+Of the remaining targets studied, Al and Mg gave a small 
+
+
+1 Bainbridge, Phys. Rev. 43, 367 (1933). 
+* Chadwick, Proc. Roy. Soc. A136, 692 (1932). 
+
+

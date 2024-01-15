@@ -1,0 +1,27 @@
+{
+  "name": "@onlyoffice/openapi-resource",
+  "private": true,
+  "type": "module",
+  "main": "lib/main.ts",
+  "scripts": {
+    "test:types": "tsc",
+    "test": "pnpm test:types"
+  },
+  "dependencies": {
+    "@onlyoffice/jq": "workspace:^",
+    "@onlyoffice/openapi-declaration": "workspace:^",
+    "@onlyoffice/node-path": "workspace:^",
+    "@onlyoffice/service-resource": "workspace:^",
+    "@onlyoffice/stream-json": "workspace:^",
+    "@onlyoffice/stream-string": "workspace:^",
+    "@types/multistream": "^4.1.3",
+    "@types/node": "^20.12.12",
+    "@types/stream-chain": "^2.0.4",
+    "@types/stream-json": "^1.7.7",
+    "multistream": "^4.1.0",
+    "openapi-types": "^12.1.3",
+    "stream-chain": "^2.2.5",
+    "stream-json": "^1.8.0",
+    "typescript": "^5.4.5"
+  }
+}

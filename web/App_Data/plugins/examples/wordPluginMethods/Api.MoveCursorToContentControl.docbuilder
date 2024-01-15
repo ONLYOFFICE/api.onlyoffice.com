@@ -1,1 +1,0 @@
-window.Asc.plugin.executeMethod ("MoveCursorToContentControl", ["2_839", false]);

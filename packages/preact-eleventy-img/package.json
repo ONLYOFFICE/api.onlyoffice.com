@@ -1,0 +1,17 @@
+{
+  "name": "@onlyoffice/preact-eleventy-img",
+  "private": true,
+  "type": "module",
+  "main": "lib/main.tsx",
+  "scripts": {
+    "test:types": "tsc",
+    "test": "pnpm test:types"
+  },
+  "dependencies": {
+    "@11ty/eleventy-img": "^4.0.2",
+    "@onlyoffice/preact-types": "workspace:^",
+    "@types/11ty__eleventy-img": "^4.0.0",
+    "preact": "^10.22.0",
+    "typescript": "^5.4.5"
+  }
+}

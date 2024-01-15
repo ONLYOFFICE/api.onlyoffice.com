@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>ONLYOFFICE Document Editor HTML Element</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <style>body {height: 100vh; margin: 0}</style>
+    <script type="module" src="../lib/main.ts"></script>
+  </head>
+  <body>
+    <template>
+      <document-editor
+        document-server-url="http://0.0.0.0:3000/"
+        ondocumenteditorappready='console.log("Document Editor is ready")'
+        ondocumenteditorerror="console.error(event.message)"
+        onerror="console.error(event.message)"
+      >
+      </document-editor>
+    </template>
+    <script type="module">
+    const te = document.querySelector("template")
+    const tc = te.content.cloneNode(true)
+    const de = tc.querySelector("document-editor")
+    const cr = await fetch("http://0.0.0.0:4000/config")
+    const cs = await cr.text()
+    de.setAttribute("config", cs)
+    document.body.appendChild(de)
+    </script>
+  </body>
+</html>

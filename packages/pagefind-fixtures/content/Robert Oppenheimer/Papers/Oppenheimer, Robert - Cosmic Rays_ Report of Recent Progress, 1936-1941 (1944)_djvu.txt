@@ -1,0 +1,725 @@
+J. R. OPPENHEIMER 
+
+
+Cosmic Rays: Report of 
+Recent Progress, 1936-1941 
+
+
+HE ORIGIN of cosmic rays has 
+been the subject of a good deal of speculation. The extraterrestrial 
+character of their origin, which has been certainly established for 
+over twenty years, and the rapidly unfolding evidence that the radia- 
+tion itself has properties qualitatively unlike that of any radiation 
+we can produce in the laboratory, have naturally led to quite radical 
+suggestions about the ultimate source of the radiation. These specula- 
+tions have been in large part barren because they have been based 
+on theories subsequently shown to be erroneous, of just what the 
+primary cosmic rays—those striking the atmosphere of the earth— 
+really were. Our ideas on this question have undergone many serious 
+revisions in recent years, and it does not seem likely that we have 
+arrived ata final answer even now. But a few facts, clearly established, 
+do serve to exclude some possibilities for the origin of the radiation, and 
+to lend weight to others. Thus it is known that the greatest part, and 
+probably the whole, of cosmic radiation reaches the earth’s atmosphere 
+in the form of singly charged particles, and that this charge is largely, 
+if not entirely, positive in sign. The mean energy of the primary cosmic 
+rays is some ten billion electron volts. The minimum energy is some 
+two billion volts, and the distribution in energy appears to be continu- 
+ously decreasing. But unambiguous evidence shows that there are some 
+primary rays with energies exceeding 10°°-electron volts, although rays 
+with this energy are extremely rare, of the order of one in a billion of 
+the total number. These energies so greatly exceed, in order of magni- 
+tude, not only those currently released in laboratory experience of 
+nuclear reactions, but the total energy available from the complete 
+annihilation of the heaviest known nuclei, that we may be quite sure 
+
+
+24 Science in the University 
+
+
+that the origin of cosmic rays is not in any way associated with the 
+conversion of matter into energy, or with the phenomena of nuclear 
+physics generally. The view which at present seems most plausible 
+to physicists is that the primary cosmic rays receive their high ener- 
+gies—and on this property alone most of their remarkable behavior 
+would seem to rest—by acceleration in electric fields probably of low 
+intensity but of immense extent. Whether these fields act within stellar 
+systems, or between galaxies, is not established. The actual origin of 
+the radiations thus constitutes a serious and interesting problem for 
+astrophysics, and possibly for cosmology; it probably has no close con- 
+nection with atomic physics. 
+
+What does concern atomic physics—and what for most physicists 
+constitutes the extraordinary interest and puzzle of the cosmic rays— 
+is the behavior of the radiation once it has reached the earth and comes 
+into interaction with the matter of the earth’s atmosphere and, later, 
+of the earth’s surface; for the cosmic rays give us by far the most 
+powerful high-voltage laboratory that we have, with the primary 
+rays, and some of their secondary products, as the high-energy radia- 
+tion, and the matter they hit on earth as the target. Even the humblest 
+cosmic ray is, from this point of view, a far more powerful projectile 
+than any we can produce in the laboratory, since it carries some thou- 
+sand times higher energy than the best products of the cyclotron or 
+betatron. 
+
+It may not at first be clear why these high energies are of such in- 
+terest to the physicist. The reason why high-voltage equipment was 
+necessary to open up the vast field of nuclear reactions was that charged 
+particles are strongly repelled by nuclei and must be given energy 
+enough to overcome this repulsion if they are to penetrate to the 
+nuclear matter and cause transmutation. But the energies necessary 
+for this are well within the range of existing laboratory installations, 
+and in fact all nuclei have been transmuted by cyclotron bombard- 
+ment. The importance of the vastly higher energies of cosmic radia- 
+tion to deepened physical investigation lies in a different circumstance. 
+It is this: in a collision in which two particles are hurled together with 
+a momentum #, and energy E, not all features in the interaction will 
+manifest themselves clearly—those whose scale of length is smaller 
+than 4/p, or whose scale of time is much shorter than hc/E, will be 
+
+
+Oppenheimer: Cosmic Rays 25 
+
+
+largely lost because of the inevitable lack of spatiotemporal definition 
+demanded by the uncertainty principle for systems with well-defined 
+momentum. In these formulae / is Planck’s constant, c the velocity of 
+light; their numerical values are such that the characteristic lengths 
+and times for a ten-million-volt electron are about 5x10 cm. or some 
+ten times nuclear dimensions, and 2x10 ™ sec., respectively. These 
+spatiotemporal dimensions are decreased roughly in the inverse ratio 
+of the energy with which the collision takes place. Thus, with respect 
+to fundamental physical discovery the domain of very high energies 
+is also the domain of the very small and very rapid—a domain that, 
+as experience has shown, is rich in new complexities and new order. 
+And it is because cosmic rays are unique in opening up this remark- 
+able, strange, and otherwise inaccessible region of the atomic world 
+that they have commanded such interest from physicists. 
+
+It is in this connection important, especially in evaluating the rather 
+fragmentary and extraordinarily incomplete knowledge that cosmic- 
+ray experience has given us, to remember that the radiation itself does 
+not have those features of controllability that make an artificially pro- 
+duced laboratory radiation so useful. Work with cosmic rays is neces- 
+sarily observational rather than experimental. We can alter the nature 
+of the matter which the cosmic rays strike, we can investigate the 
+radiation at various stages in its course through the earth’s atmos- 
+phere and the earth itself, and we can improve and refine the methods 
+of observation; but we cannot alter the radiation itself, cannot increase 
+its intensity to pursue weak effects, cannot readily separate one com- 
+ponent of its complex spectrum from another. These limitations are 
+reflected in our very partial and uncertain knowledge. It is, in its field, 
+the only knowledge we have at all. 
+
+This complexity of the cosmic radiation to which I have just referred 
+has made it helpful, in disentangling the phenomena, to distinguish 
+three qualitatively distinct, though genetically related, types of radi- 
+ation: the soft or cascade component, the mesotrons, and the primary 
+rays. In summarizing some of the remarkable discoveries of recent 
+years, we may follow this classification, although we may be fairly sure 
+that it isa very rough and incomplete one, and postpone our discussion 
+of the genetic relations of these components to the end. 
+
+Cascades.—The cosmic rays are very penetrating: it takes some 30 
+
+
+26 Science in the University 
+
+
+meters of water to reduce their intensity at sea level to one-half, and 
+the radiation is still detectable at 1,000 m of water below sea level. 
+Nevertheless, there is always a portion of the radiation, amounting to 
+more than half at high altitudes, dropping to some ro per cent just 
+below sea level, and rising again with increasing depth to some 20 
+or 30 per cent, that is readily absorbed by some inches of a heavy 
+material such as lead. This portion is called the soft component, and 
+the processes involved in its absorption and regeneration have been the 
+subject of a great deal of study. It consists of electrons, which are 
+normal ingredients of matter, and positrons, unstable mates of the 
+electron of the same mass and opposite charge, and gamma rays, high- 
+frequency electromagnetic radiation. 
+
+It has taken research and discovery to make this identification, since 
+the positron itself was not known until it was discovered in the cosmic 
+rays, and since the properties of all these radiations are qualitatively 
+unlike anything that was known before. In this development theo- 
+retical ideas have played a very great part. Thus the existence of the 
+positron and its properties had been suggested on theoretical grounds 
+before its actual discovery, and this rendered its identification rela- 
+tively easy and conclusive. The reason for the theoretical prediction 
+of the positron was this: when we try to make a theory of the wave 
+mechanics of electrons which is in accordance with the special prin- 
+ciple of relativity, we are led—by very general and inescapable argu- 
+ments—to the conclusion that the electron must have a mate which 
+is either a particle of the same charge as an electron and of negative 
+mass, or a particle of the same mass and of opposite charge. With the 
+former alternative, ordinary electrons should be able by emission of 
+radiation to transform themselves into electrons of negative mass— 
+the “donkey” electrons, so called because they retreat when we pull, 
+advance when we push them. This prediction, which is in the grossest 
+kind of contradiction with the experimental stability of electrons, 
+shows that of the two alternatives only the second is possible, and that 
+we must have, in nature, particles of the same mass as the electron, 
+but positively charged. A further general consequence of the relativ- 
+istic wave mechanics is, then, that a pair of positively and negatively 
+charged electrons—a positron-electron pair—may be created by the 
+collision of two sufficiently energetic beams of radiation, or, and this 
+
+
+Oppenheimer: Cosmic Rays 27 
+
+
+is the case of practical importance, by the impact of radiation on a 
+strong electrostatic field, such as surrounds the atomic nucleus of 
+elements of high atomic number. All these predictions could be made 
+quantitative by assuming the detailed correctness of Dirac’s electron 
+theory, which alone had given a complete and experimentally verified 
+account of the properties of electrons in atomic physics, of the electron 
+spin and magnetic moment, and of the duplexity phenomena of 
+spectroscopy. When Anderson found in the cosmic radiation a particle 
+of positive charge and electronic mass, a whole host of experiments 
+soon proved that these positrons could be annihilated, together with 
+an electron, on collision; that such pairs could be made by irradiating 
+heavy elements with gamma rays; and that our quantitative formulae 
+for the probability of these processes agreed with the facts. These phe- 
+nomena of pair formation and annihilation, which can be studied in 
+the laboratory, since the energy necessary for pair creation is just over 
+one million electron volts, afforded a most striking confirmation of 
+the interconvertibility of matter and energy, in that the energy of a 
+gamma ray could be used up to create the mass of a pair of particles, 
+and conversely in that the mass of a pair of particles could disappear 
+in the form of radiation. The instability of the positron is then natu- 
+rally ascribed to the circumstance that there is in normal matter a great 
+excess of electrons with which any stray positron will in a short time 
+combine. Positrons of high energy will almost always lose their energy 
+before combining with electrons. 
+
+The phenomenon of pair production by gamma rays provides one 
+of the two essential mechanisms dominating the behavior of the soft 
+component. The probability that a gamma ray of high energy (above 
+some ten million volts) will make a pair on hitting the strong electric 
+field around an atomic nucleus is proportional to the square of the 
+nuclear charge, and independent of the gamma-ray energy. Thus the 
+penetrating power of gamma rays is limited, whatever their energy, 
+and is much smaller in heavy materials than in light. The mean dis- 
+tance that a gamma ray travels before making a pair is, in Pb (lead), 
+about 0.6 cm; in water, about 50 cm. It is, then, clear that a few inches 
+of Pb will absorb all the incident gamma radiation. 
+
+In order to follow the behavior of the soft component in detail, 
+it is necessary to know, too, what happens to the high-energy pairs. 
+
+
+28 Science in the University 
+
+
+Like all charged particles, these lose energy continuously to the loosely 
+bound electrons of the atoms near which they pass, and this loss 
+manifests itself in ionization of the atoms and thus affords the actual 
+means of detection in ionization chambers, counters, and cloud cham- 
+bers of the cosmic rays. But electrons and positrons also lose energy 
+by another, and for high energies incomparably more important, 
+mechanism. When they pass through the strong electric fields around 
+atomic nuclei—the same fields in which gamma rays produce pairs— 
+they are deflected, accelerated, and radiate. Here again the probability 
+of radiating as gamma radiation a given fraction of the electron’s 
+energy is independent, for high energies, of the electron’s energy, and 
+proportional again to the square of the atomic number of the material; 
+and the characteristic distance in which an electron will, on the aver- 
+age, have lost half its energy in the form of radiation is slightly smaller 
+than, though of the same order as, the characteristic absorption dis- 
+tance for gamma rays, amounting to 0.5 cm of Pb, 4o cm of water. 
+What, then, do these theoretical predictions imply, for the behavior 
+of an electron, positron, or gamma ray of very high energy incident 
+on matter? In a very short distance the gamma ray will make a pair; 
+the pair will make gamma rays; the gamma rays will make further 
+pairs, and the pairs further gamma rays, and all these secondary radia- 
+tions will be just about as penetrating and absorbable as the primary. 
+Thus, from one initial energetic ray we shall soon have built up a great 
+shower or cascade of rays, and this multiplication will continue until 
+the rays are of such low energy that they are no longer effective in 
+radiating and producing pairs, and lose their energy by ionization 
+alone. The characteristic energy at which multiplication ceases is lower 
+in heavy elements than in light, since in the former the multiplicative 
+processes are more probable. The energy is about 9 mev (million elec- 
+tron volts) for Pb, about 100 mev for water. For this reason the multi- 
+plication proceeds further, and for a given total energy leads toa larger 
+cascade in heavy elements than in light. A 10° v-electron will in Pb 
+make a shower in which at the maximum —and this occurs some 3 cm 
+from the surface—there are about 100 charged particles and some 150 
+gamma rays; a 10° v-electron will make a shower of some 5,000,000 
+particles, reaching its maximum dimension after some 8 cm of Pb, 
+some 6 m of water. Almost all the secondary radiation preserves ap- 
+
+
+Oppenheimer: Cosmic Rays 29 
+
+
+proximately the primary direction, with appreciable angular devia- 
+tions limited to secondaries of low energy. 
+
+This, then, is what atomic theory says about the behavior of the soft 
+component. For a long time these ideas—which only recently have 
+been worked out with full mathematical elaboration—were viewed 
+with a good deal of skepticism, for three reasons: 
+
+1. If these ideas are right, electrons, positrons, gamma rays, are all 
+very rapidly absorbed ; 20 cm of Pb should take out even the most ener- 
+getic soft radiation. Yet the cosmic rays are penetrating, and even a 
+meter of Pb does not reduce their intensity by a factor of 2. 
+
+2. Direct cloud-chamber observation of the behavior of cosmic rays, 
+at sea level, showed that the overwhelming majority would pass 
+through a plate of Pb without undergoing the energy loss, or mani- 
+festing the multiplication, theoretically predicted for electrons. 
+
+3. Although phenomena of shower formation have long been 
+known, and have been studied by coincidence-counter, ionization- 
+chamber, and cloud-chamber techniques, it was for a long time erro- 
+neously believed that these showers were explosive, many rays being 
+simultaneously created in one collision process; and only a detailed 
+analysis revealed that the overwhelming majority of showers were 
+in fact multiplicative, and that the explosive events were rare and of a 
+characteristically different nature and distribution. 
+
+Arguments 1 and 2 had an added cogency since it was quite easy to 
+show that the penetrating cosmic rays most certainly were not protons 
+or other nuclei, in that their mass was smaller than the proton mass 
+and they occurred with about equal frequency with positive and with 
+negative charge. The acceptance of the theoretical ideas concerning 
+the behavior of the soft component therefore brought with it the 
+necessity of admitting that the penetrating, and at sea level the pre- 
+ponderant, component of cosmic rays consisted almost wholly of 
+radiation not hitherto known to physics. The evidence of the detailed 
+agreement between the actual behavior of the soft component, in its 
+shower formation, multiplication, and absorption, and in the location 
+of the shower maxima and the dependence of this on material and on 
+shower size, left in the end no doubt that the theoretical predictions 
+were right, and that the soft component of cosmic rays was only a 
+part of a far more complex radiation, of which the greater part was 
+
+
+30 Science in the University 
+
+
+not electronic, and was new. The positive and negative particles of 
+this penetrating radiation, identified at first only in the negative sense 
+that they were neither electrons, positrons, protons, nor any known 
+particle, have come to be known as mesotrons, or mesons, because their 
+mass is intermediate between that of electrons and that of protons. The 
+mesotron also, like the positron, had been the subject of theoretical 
+speculation before it was discovered. But before we enter on the argu- 
+ments involved, and the difficult and as yet unsettled question of the 
+range of their validity, it will be well to sketch one other important 
+application of the cascade theory of the soft component, an application 
+which was for long regarded as its greatest success, but which we now 
+know to be in large measure illusory. 
+
+This has to do with the course of cosmic rays incident on the earth’s 
+atmosphere. To simplify and render quantitative the argument we 
+may confine our attention to those rays which reach the earth at a high 
+geomagnetic latitude but not near the equator. These rays are charged 
+particles having energy sufficient to penetrate the geomagnetic field 
+of the earth at high latitudes but insufficient to penetrate in the equa- 
+torial belt. By choosing two suitable latitudes it is thus possible by 
+subtraction of the low-latitude from the high-latitude effects to obtain 
+the effects which must be ascribed to primary charged particles lying 
+in a relatively narrow and accurately calculable energy range. If the 
+ionization due to these primaries, lying for example in the range 
+10-15 bev (billion electron volts), or the frequency of counting, in a 
+vertical counter telescope, is plotted against the amount of matter 
+traversed by the radiation from the top of the earth’s atmosphere, a 
+curve is obtained which at first rises steeply, has a sharp maximum 
+at about 100 gm/cm’, and then falls off rapidly at greater depths. This 
+curve is in rough but excellent agreement with the theoretically cal- 
+culated cascade curve for the behavior of a 12-bev electron or positron 
+incident on the earth’s atmosphere: the position of the maximum 
+agrees precisely with that calculated, and there are only two, obviously 
+related, points of discrepancy. One is that the maximum reached— 
+about to particles per primary in this case—is about 30 per cent below 
+the theoretical; the other is that the curve at great depths, near sea 
+level (1,000 gm/cm’), falls off much less rapidly than the cascade 
+curve. This last is just another expression for the fact that if all cosmic 
+
+
+Oppenheimer: Cosmic Rays 31 
+
+
+radiation were soft we could not account for its actual very great 
+penetration. It was, then, natural to suggest that the primary and sec- 
+ondary cascade radiation could in part be converted, on nuclear im- 
+pact, into mesotrons; that this at the same time reduced the extent of 
+the cascade multiplication, by converting a part of the energy into 
+nonmultiplying components, and accounted for the low absorption 
+at great depths. The probabilities estimated in this way for meso- 
+tron production seemed, in the light of theoretical speculation, not 
+unreasonable, and the good agreement between cascade theory and 
+atmospheric “transition” curves was taken as at the same time validat- 
+ing the cascade theory and establishing unambiguously the nature of 
+primary cosmic radiation: since it was charged, and predominantly, 
+at least, positively charged, and produced showers, it consisted of posi- 
+trons. Cosmologically this was an odd result, since the only processes 
+we know that make positrons also make gamma rays and electrons. 
+But these worries turned out to be unnecessary: the multiplication of 
+primary cosmic rays in the upper atmosphere, which seemed to be 
+described so well by the cascade theory, now appears to be a totally 
+different and even more remarkable phenomenon. To this we shall 
+return in our last section. 
+
+Mesons and Nuclei—The suggestion that there exist particles carry- 
+ing a unit positive or negative charge and with a mass approximately 
+two hundred times that of the electron and approximately one-tenth 
+that of the proton, was first put forward by Yukawa about three years 
+before it was generally recognized by physicists that such particles con- 
+stituted the penetrating component of cosmic rays. Yukawa’s argu- 
+ments were a great deal more speculative than those on which the 
+prediction of the positron was based; and although mesotrons are now 
+known to exist, and are in fact known to have not only the mass and 
+charge Yukawa predicted, but also to be, as he suggested, unstable 
+(with a half life of some microseconds), nevertheless it is now quite 
+certain that the mesotron will not perform that function for which 
+Yukawa invented it, namely, to give us a direct consistent theory, in 
+agreement with known facts, about nuclear forces. The situation in 
+this respect is not only rather complicated; it is also very incompletely 
+understood, and presents at the moment the principal challenge to 
+theoretical physics. 
+
+
+32 Science in the University 
+
+
+It will be helpful to outline first Yukawa’s ideas, and then the facts 
+that bear on them, and finally the present dark state of the theory. 
+
+Yukawa put forward a theory of nuclear forces based on an analogy 
+con variazione with the Faraday-Maxwell field theory of electro- 
+magnetic interactions: he tried to make a theory in which the forces 
+between neutrons and protons, protons and protons, neutrons and 
+neutrons, appear not directly in terms of action at a distance, but 
+through the intermediary of a field: each neutron and proton (we 
+call them nucleons) produces a field, and another nucleon moving 
+in that field is subject to forces. In electrodynamics this formulation 
+has proved powerful and led to increased insight, in that the laws 
+for producing electromagnetic fields, on the one hand, and the re- 
+sponse of charges to such fields, on the other, are far simpler than 
+the actual laws of interaction of charges. Field theories of this type 
+also automatically satisfy the fundamental requirement of the special 
+theory of relativity, that momentum and energy be propagated with 
+a finite velocity, never exceeding that of light. Since our empirical 
+knowledge of nuclear forces has not led to any great insight into 
+their detailed nature, it was natural to look to field theories to provide 
+us with a powerful method of investigating them. 
+
+The two points in which nuclear forces differ most strikingly from 
+electromagnetic forces are that they have a very limited range, R~ 10 * 
+cm, and are very much stronger than electromagnetic interactions be- 
+tween elementary particles. Yukawa was now able to establish the 
+following general important interpretation of the range R. Just as 
+the quantum theory leads to the existence of light quanta, or photons, 
+which carry the energy and momentum of the electromagnetic field, 
+so, in general, quantum theory will ascribe corpuscular properties to 
+any field. Yukawa could now show that if these quanta had a mass 
+M=A/Rc, then the range of forces would be of the order R. With the 
+best values for R, obtained from evidence on nuclear forces, M turns 
+out to be approximately two hundred electron masses, very close indeed 
+to the best experimental determinations of the mass of the mesotron, 
+the penetrating particle of the cosmic ray. 
+
+By rather less general arguments, Yukawa, and others working on 
+the elaboration of this theory, were led to assign further properties to 
+these nuclear force quanta, or mesons as we call them. 
+
+
+Oppenheimer: Cosmic Rays 33 
+
+
+1. From the striking saturation character of nuclear forces—that is, 
+from the fact that the density of nuclear matter is about constant for 
+all nuclei, as is also the binding energy per nucleon—physicists had 
+concluded that the exchange of momentum between nucleons, which 
+gives the forces between them, is often if not always accompanied by 
+an exchange of charge. This leads to forces of the so-called exchange 
+type, which have saturation properties similar to the familiar ones that 
+characterize the homopolar chemical bond. For this reason Yukawa 
+assumed that mesons carried a charge—an elementary positive or nega- 
+tive charge. The question of the existence of neutral mesons is not 
+yet definitively settled, and the cosmic rays do not provide any good 
+grounds for believing in them. The cosmic-ray mesons are singly, posi- 
+tively and negatively, charged. 
+
+2. Yukawa suggested that mesons are spontaneously beta-radioactive, 
+and estimated their lifetime on the assumption that it is their presence 
+in nuclei which give rise to the observed beta and positron radioactivity 
+of nuclei. Although efforts to refine the quantitative connection be- 
+tween beta decay and meson decay in nuclei have not been successful, 
+the general order of magnitude of the lifetime of the meson, predicted 
+by Yukawa as a microsecond, is in good agreement with the best 
+cosmic-ray observations. These observations are themselves of interest. 
+They rest on a circumstance long ago noted, that the absorption of 
+cosmic rays in the atmosphere exceeds their absorption in an equivalent 
+weight of any kind of condensed matter. By assuming that this excess 
+absorption is to be ascribed to the spontaneous decay of mesons in their 
+relatively long paths through the rare atmosphere, and by taking into 
+account the Einstein effect, or retarding of the decay process for fast- 
+moving mesons, one can obtain a reasonably consistent interpretation 
+of all the absorption data by assigning to a meson a proper lifetime of 
+some microseconds. An extremely important consequence of this result 
+is that mesons are not primary: they are themselves produced in the 
+earth’s atmosphere by the primary rays. The view that they are pro- 
+duced by nuclear impacts is of course in qualitative agreement with 
+Yukawa’s theory, according to which mesons are present in the field 
+of all nuclear particles. 
+
+3. Nuclear forces are strongly spin-dependent, that is, they depend 
+strongly in magnitude, and even in sign, on the relative orientations of 
+
+
+34 Science in the University 
+
+
+the intrinsic spins or angular momenta of the nucleons involved, and 
+the orientation of these spins with respect to the line of centers of the 
+nucleons. To explain this dependence, Yukawa and others assumed 
+that the meson, like the photon, had itseif a unit of angular momentum 
+or spin, which it could carry from one nucleon to another. It turned 
+out that this assumption was not necessary to explain the spin depend- 
+ence of nuclear forces; and in fact an analysis of the collisions of mesons 
+with the electrostatic fields surrounding nuclei, in which they, too, like 
+electrons, can radiate gamma rays—gamma rays which, if of sufficient 
+energy, are readily detectable as large cascade showers or bursts,— 
+showed unambiguously that the meson spin is not unity, that it may 
+be zero, or, as it is for the electron, 4%. The value 0 is alone consistent 
+with Yukawa’s field theory in its simpler forms. 
+
+4. A final known essential difference between meson and photon 
+fields is that the meson fields are near nucleons, and correspondingly 
+the strength of nuclear forces is enormously greater than in the electro- 
+magnetic case. For the mathematical treatment of this case quite new 
+methods have had to be worked out, the physical content of which lies 
+in treating the nucleon plus its intense field, rather than the “bare” 
+nucleon, as the fundamental particle. One of the most interesting quali- 
+tative predictions of this strong-coupling treatment, as yet unverified 
+by cosmic-ray observation, is the existence of excited states, or isobars, 
+of proton and neutron, with a mass less than 10 per cent greater than 
+that of the known stable forms, and carrying anomalous charges and 
+spins, charges of +2 or -1 units for instance. These isobars are unstable, 
+and only in cosmic-ray phenomena or with a giant cyclotron should 
+we expect to find them. 
+
+The quantitative development of Yukawa’s ideas along the lines here 
+outlined has not led to a satisfactory theory. In fact, even if we limit 
+ourselves to a consideration of the detailed form of the nuclear forces 
+theoretically predicted, it has not been possible to obtain any measure 
+of agreement, despite the considerable flexibility of these theories, with 
+nuclear experience; nor has it been possible on any of these theories to 
+escape the conclusion that there is a connection between the effective 
+range R of nuclear forces, which is roughly known, and the scattering 
+of mesons by nuclei. The experimental estimates of this scattering sys- 
+tematically fall below the theoretical predictions by a factor of about 
+
+
+Oppenheimer: Cosmic Rays 35 
+
+
+100. It is not at present understood how to resolve this difficulty, which 
+has appeared in the detailed elaboration of all forms of meson theory 
+of nuclear forces. Nor has the meson theory of forces as yet helped 
+in any way to systematize or illuminate the facts of nuclear physics. 
+It would seem likely that the source of all these troubles, which so far 
+no amount of mathematical ingenuity has been able to resolve, lies in 
+the inapplicability of field theory to nuclear problems, where the range 
+of forces between nucleons probably does not exceed appreciably the 
+size of the nucleons themselves, and where therefore the Faraday- 
+Maxwell ideas of the propagation of disturbances between small ele- 
+mentary charges, over distances vastly greater than the size of the 
+charges themselves, no longer may appropriately be applied. The prob- 
+lems put to us by this frustration of Yukawa’s program would appear 
+to be among the most urgent and deep-seated in contemporary atomic 
+physics. It is important, in this connection, to observe that cosmic-ray 
+findings on the scattering of mesons as well as on their secondary 
+origin, on the nature of the radiative collisions of mesons, and on their 
+shewer-producing properties, have served to eliminate many theoret- 
+ically possible forms of meson theory. 
+
+Primary and Secondary Radiations.—Under these circumstances it is 
+inevitable that many physicists should wish to regard the agreement 
+between the properties of the cosmic-ray mesons and the particle pre- 
+dicted by Yukawa as sheer accident, and to revert to the view that 
+mesons have no deep connection with nuclei. It does not seem to us 
+that this is a tenable position: it is not the idea that mesons are essential 
+ingredients of nuclei, responsible for the forces holding them together 
+as well as for many of the properties of the neutron and proton them- 
+selves, that is at fault, but rather our mathemaitcal methods and physi- 
+cal models for describing this situation. For mesons most certainly are 
+an ingredient of nuclei, and for this there is direct cosmic-ray evidence 
+of the most striking sort. 
+
+We have seen that mesons are secondary cosmic rays, made in the 
+upper atmosphere. Our discussion of the atmospheric transition curve 
+on the basis of cascade theory led us to believe that the primary cosmic 
+rays were positrons, and that either these, or the secondary gamma rays 
+of the cascade, would, in addition to making the great atmospheric 
+cascade phenomena, produce mesons. 
+
+
+36 Science in the University 
+
+
+Three sets of observations, carried out very near the top of the atmos- 
+phere, have shown that this is not so. 
+
+1. At less than one cascade unit from the top of the atmosphere, 
+where, according to cascade theory, the number of vertical rays should 
+exceed the number of primary rays by only some 30 per cent, the actual 
+observed number of vertical rays is some five to ten times the number 
+of primaries (these figures refer to the most energetic component; for 
+lower energies the multiplication at this point is two- to fivefold). This 
+indicates that the fundamental multiplicative process has nothing to 
+do with cascades, and strongly suggests that it involves, not the succes- 
+sive building up of the radiation, but the production of a considerable 
+number of secondaries in one elementary collision taking place very 
+near the top of the atmosphere. 
+
+2. If the primary radiation were cascade (positrons), then very large 
+showers should be very frequent near the top of the atmosphere. This 
+is not the case. The maximum in the shower component falls well 
+below the maximum in the atmospheric transition curve, and the num- 
+ber of large showers, with an energy of 10°° v or so, is far too small to 
+be consistent with the view that primary cosmic rays are positrons of 
+mean energy in this range. 
+
+3. If the primary radiation were cascade radiation, most of it, near 
+the top of the atmosphere, before meson production is appreciable, 
+would be absorbed by some inches of Pb. This is not the case; the 
+intensity of radiation, well above the atmospheric transition maximum, 
+is nearly independent of Pb filtration. 
+
+These facts show clearly that there is a rapid noncascade multiplica- 
+tion of the primary rays in the atmosphere, and that the immediate 
+products of this multiplication are penetrating cosmic rays, or mesons— 
+whether they are in all respects similar to the mesons which survive at 
+sea level is not known with certainty. A detailed analysis of this pri- 
+mary multiplication shows that it occurs on the average at a depth of 
+some 30 gm/cm’ of matter, and that the mean number of rays pro- 
+duced in one multiplicative collision is about ten, increasing somewhat 
+with the energy of the primary rays. These fundamental explosions, 
+which occur very much less frequently lower in the atmosphere, but 
+can still be seen in cloud chambers operated at 14,000 ft, and indirectly 
+detected even lower, involve the simultaneous ejection from an atomic 
+
+
+Oppenheimer: Cosmic Rays 37 
+
+
+nucleus—a nitrogen nucleus for the most part—of some 5 to 20 mesons, 
+together with a general pulverization of the nucleus itself into its com- 
+ponent nucleons. This fact alone shows that mesons do play an essen- 
+tial part in nuclei, and confirms in a qualitative way the enormously 
+high meson density around nucleons. 
+
+The agreement, then, between the position and magnitude of the 
+atmospheric transition curve and the cascade theory turns out to be 
+an accident: the primary radiation is certainly not cascade. The most 
+conservative hypothesis at the moment is that this primary radiation 
+consists largely of protons (we know it is for the most part singly posi- 
+tively charged). But this is a conjecture only, rendered plausible by the 
+fact that we might expect a collision of one nucleon of high energy 
+with an atomic nucleus to give rise to just such an explosion of mesons 
+as is found. 
+
+It turns out that many of the mesons so formed are quite slow, and 
+that, traveling in the rare reaches of the upper atmosphere, most of 
+them decay spontaneously, thus giving rise to secondary radiation of 
+rather low-energy electrons and positrons, which subsequently build 
+up small showers and provide a cascade component that is relatively 
+intense in the upper atmosphere. Some part of the meson energy of the 
+penetrating component is converted into the cascade component even 
+in solid matter, where meson decay is insignificant. This is a simple 
+effect, for the most part, in which mesons hit electrons present in 
+matter and give them a high energy. In addition to this, mesons do 
+occasionally radiate in the strong electric fields near atomic nuclei, and 
+this gamma radiation can initiate showers. In this way it is possible 
+to understand fairly well the production and intensity of the soft 
+radiation, not only in the atmosphere, but deep in the earth. The soft 
+radiation, once formed, is adequately described by the cascade theory. 
+But it is almost all tertiary radiation, produced by the decay and the 
+collisions of mesons that are themselves secondary. There is no evi- 
+dence that mesons, once formed, interact strongly with atomic nuclei, 
+or even that they are scattered by them. I have already mentioned the 
+difficulty of understanding this small scattering. 
+
+There is one part of the soft component, insignificant in intensity 
+but unmistakable in its surprising properties, that cannot at present be 
+accounted for as tertiary radiation: this is the showers of immense 
+
+
+38 Science in the University 
+
+
+size that were discovered by Auger, showers in which a million or 
+more electrons and positrons may sweep over an area of many square 
+meters simultaneously. Some of these showers at their maximum point 
+may extend over 100 meters square or more, and involve an energy of 
+10-10" volts. The frequency of these events, which can be recorded 
+by coincidence counters separated by tens of meters, and illuminated by 
+cloud chambers so operated that we may look at the radiation passing 
+at a random point between the counters, is very small, but is still 
+immensely greater than any tertiary cascade radiation would explain. 
+Whether there is a weak high-energy primary cascade component, or 
+whether these high-energy gamma rays or electrons are occasionally 
+produced in the collisions of a primary protonic component with mat- 
+ter in the earth’s atmosphere, is for the moment not known. And on 
+this point, as on so many others that have arisen in this discussion, 
+theoretical ideas can be only a rather untrustworthy guide, since their 
+application involves an extrapolation over the known range of validity 
+of existing theory by a factor of about one hundred million. 
+
+It is perhaps appropriate to conclude this report without attempting 
+to alleviate the impression of uncertainty, of adventure, and of an 
+inevitable confusion. For that is likely for a long time to be a part of 
+research in cosmic rays. 
+
+
+SCIENCE 
+IN THE 
+
+
+UNIVERSITY 
+
+
+By Members of the Faculties of 
+the University of California 
+
+
+UNIVERSITY OF CALIFORNIA PRESS 
+BERKELEY AND LOS ANGELES 
+
+
+1944 
+
+
+UNIVERSITY OF CALIFORNIA PRESS 
+BERKELEY AND LOS ANGELES 
+
+
+CALIFORNIA 
+
+
+CAMBRIDGE UNIVERSITY PRESS 
+
+
+LONDON, ENGLAND 
+
+
+COPYRIGHT, 1944, BY 
+
+
+THE REGENTS OF THE UNIVERSITY OF CALIFORNIA 
+
+
+PRINTED IN THE UNITED STATES OF AMERICA 
+
+
+BY THE UNIVERSITY OF CALIFORNIA PRESS 
+
+

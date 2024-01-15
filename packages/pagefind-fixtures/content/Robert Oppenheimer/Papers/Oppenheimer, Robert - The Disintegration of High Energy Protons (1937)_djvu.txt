@@ -1,0 +1,1196 @@
+DISINTEGRATION OF PROTONS 
+
+
+bombardment with alpha-particles from Ra C 
+and Th C’. They ascribe these to the formation 
+of K*? from Cl’? thus: 
+
+
+Cl3?7+ He* K 49+ nt, 
+
+
+In view of the present results, however, it seems 
+highly probable that they were detecting the 
+formation of both K** and K*°. 
+
+
+(b) The formation of K** from calcium 
+
+
+In a previous paper? results obtained by one of 
+us in a study of the radioactivities induced in 
+calcium by deuteron bombardment were re- 
+ported. It was noted that a weak activity was 
+observed in the potassium fraction separated 
+chemically from the irradiated metal. It was 
+suggested that this might be due to contami- 
+nation, though it was thought, in view of the 
+fact that the half-period did not agree with that 
+of any well-known contaminant, that it might be 
+due to K38 formed thus: 
+
+
+Catt H?>K384+ Het; K38>A38-4 et, 
+
+
+Following the production of K?§ by bombarding 
+chlorine with alpha-particles, a search was made 
+for this isotope in irradiated calcium. It has a 
+sufficiently short half-life to have been unob- 
+servable in the previous experiments on account 
+
+
+JUNE 15, 1937 
+
+
+PHYSICAL REVIEW 
+
+
+1037 
+
+
+of the time needed for the chemical separation 
+adopted. 
+
+Calcium metal was, therefore, bombarded with 
+deuterons for half an hour and, following solution 
+in HCI and the addition of inactive KCl, potas- 
+sium was precipitated by means of perchloric 
+acid and ethyl alcohol. In consequence the 
+precipitate was contaminated with radioactive 
+scandium.® However, on correcting for this it was 
+found that K%8 was present, the decay curve 
+corresponding to a _ half-period of 7.6+0.2 
+minutes. This curve is reproduced in Fig. 5. 
+
+The decay of this precipitate was measured 
+until its corrected intensity was less than the 
+natural leak of the electroscope, but no evidence 
+was obtained of the 12.4 hour period of K*®. The 
+expected reaction 
+
+
+Ca#+ H’?-K”-+Het; KY—>Ca”-+e7 
+would thus appear to be rather improbable. 
+
+
+V. CONCLUSION 
+
+
+In conclusion we wish to thank the staff of the 
+Radiation Laboratory for their cooperation, and 
+especially Professor E. O. Lawrence for his 
+interest and encouragement. The investigation 
+has been aided by grants to the laboratory from 
+the Research Corporation, the Chemical Founda- 
+tion and the Josiah Macy, Jr. Foundation. 
+
+
+VOLUME 51 
+
+
+The Disintegration of High Energy Protons 
+
+
+G. NorpuHeim, L. W. NorpHeEm, 
+Purdue University, Lafayette, Indiana 
+
+
+J. R. OPPENHEIMER AND R. SERBER 
+University of California, Berkeley, California 
+(Received March 22, 1937) 
+
+
+The coupling between light and heavy particles assumed 
+in the Fermi theory of 6-decay makes it possible for high 
+energy protons in passing through matter to transfer a 
+considerable fraction of their energy to electrons and neu- 
+trinos. If we suppose that this coupling is a maximum for 
+relative energies of the light and heavy particles of the 
+order fAc/R, with R the range of nuclear forces, and is small 
+for much higher relative energies, the most important 
+process which occurs, for sufficiently energetic protons, can 
+be pictured as a sort of photodisintegration of the proton by 
+the contracted Coulomb field of a passing nucleus, the 
+proton changing into a neutron and emitting a positron and 
+a neutrino. With a coupling of the type described, and of 
+
+
+the magnitude required by the proton-neutron forces, 
+processes involving more than one pair of light particles 
+will be relatively rare. The cross section for the disintegra- 
+tion of a proton of energy £ is found to be of the order 
+
+
+2a(h/ Mc) RZ? \n? (A /Mc*), 
+
+
+and is very small, even for heavy nuclei. The mean energy 
+given to the positron per disintegration is of the order 
+
+
+2(hc/R)(E/ Mc?) /in (E/Me?). 
+
+
+The positrons emitted in these disintegrations can account 
+in order of magnitude for the incidence of showers observed 
+under thick absorbers. 
+
+
+1038 
+
+
+1. SOME CONSEQUENCES OF THE FERMI COUPLING 
+
+
+“NTIL recently the only mechanisms known 
+by which a proton could lose an appreciable 
+fraction of its energy to electrons and y-rays were 
+elastic impacts of the proton with extranuclear 
+electrons, and the relatively insignificant radia- 
+tion emitted by the protons deflected in nuclear 
+fields. The Fermi theory of 8-decay provides a 
+new mechanism for such energy transfer, because 
+of the coupling assumed in this theory between 
+the heavy particles (proton and neutron) and the 
+electron-neutrino field. Owing to the weakness of 
+the coupling necessary to explain the long life- 
+times of the 6-radioactive substances, this effect 
+would be extremely small if one were to take 
+over unmodified the coupling used in the theory 
+of 6-disintegration. However, a strong increase 
+of the coupling with the energies of the particles 
+concerned is suggested when one attempts an 
+explanation of nuclear forces on the basis of 
+Fermi’s theory. The question of the consequences 
+of this modified Fermi coupling for the behavior 
+of heavy particles of high energy thus needs 
+investigation. 
+
+An unambiguous answer to this question de- 
+pends upon a satisfactory formulation of the 
+problem of nuclear forces. The unsatisfactory 
+character of present theories manifests itself in 
+the occurrence of divergences in the method in- 
+volved in their formulation, the method of 
+successive approximations. This divergence of 
+the method of successive approximations indi- 
+cates that processes which from the point of 
+view of this approximation are of high order, 
+and which involve the cooperation of a large 
+number of light particles, may be of dominant 
+importance. The. point of view adopted by 
+Heisenberg! in his theory of showers would seem 
+to be that this feature of the present inadequate 
+field theory will also be characteristic of a correct 
+theory, and that just those implications of 
+present theory which would at first seem most 
+subject to suspicion can have a qualitative 
+validity. 
+
+Quite different from Heisenberg’s suggestion is 
+the more usual procedure of avoiding divergences 
+by the formal device of reducing the coupling 
+between heavy and light particles for high 
+
+
+1W. Heisenberg, Zeits. f. Physik 101, 533 (1936). 
+
+
+NORDHEIM, NORDHEIM, OPPENHEIMER AND SERBER 
+
+
+relative energies. In this wav one can account for 
+the finite range of nuclear forces by taking a 
+coupling which becomes small for electrons and 
+neutrinos whose de Broglie wave-length is smaller 
+than this range (~2xX10-" cm). When the 
+constants of the coupling are adjusted to give 
+not only the range but the magnitude of nuclear 
+forces, it turns out that even at its maximum the 
+coupling is rather small, so that the probability 
+of finding an electron-neutrino pair in the 
+neighborhood of a heavy particle is less than one 
+in ten, and the probability of finding many such 
+pairs is negligible. In fact, if one applies the 
+“Born approximation,’ and regards the coupling 
+as small, the parameter which determines the 
+relative magnitude of successive terms in this 
+approximation is #/McR, where R is the range 
+of nuclear forces.? This model is now so much 
+modified as compared to that of Heisenberg that 
+it no longer affords any explanation of showers. 
+This model makes it possible to give a quanti- 
+tative estimate of the probability that a proton 
+will disintegrate in its passage through matter 
+into a neutron, a positron, and a neutrino, and 
+of the magnitude of the energy loss to light 
+particles for which the Fermi coupling is re- 
+sponsible. For very high energies such a dis- 
+integration of the proton will occur for quite 
+distant impacts with atomic nuclei. These dis- 
+integrations may be thought of as a sort of photo- 
+effect of the proton by the contracted Coulomb 
+field of the passing nucleus. For sufficiently high 
+energies thesedistantimpacts, which arerelatively 
+easy to discuss, will contribute the dominant 
+terms to the probability of proton disintegration.3 
+
+
+2 Against the correctness of this formulation is the 
+equality of the forces between proton and neutron and 
+between proton and proton, since these appear in different 
+orders in the Born approximation. It would seem that the 
+electron-neutrino theory of nuclear forces could only very 
+artificially be made to explain this equality, as well as the 
+range and magnitude of the forces. The generalization of 
+the $-transformation theory proposed by G. Gamow and 
+E. Teller, Phys. Rev. 51, 289 (1937), would give the same 
+order of magnitude for the proton disintegration effect as 
+derived in this paper. 
+
+3 For the range of energies actually found in the cosmic 
+rays, the probability of disintegration through a direct 
+impact of the proton and nucleus may be expected, on the 
+basis of our model, to have a magnitude comparable to 
+that of the process we discuss for light elements, but to be 
+considerably smaller for heavy ones. In comparing the 
+results of our calculation with the observed incidence of sea 
+level showers, it should not be forgotten that we have not 
+taken these direct impacts into account, and that their 
+contribution may be sensitive to the model assumed. 
+
+
+DISINTEGRATION OF PROTONS 
+
+
+2. THE FORM OF THE COUPLING 
+
+
+We investigate first the possibilities of formu- 
+lating a modified and ‘cut-off’? Fermi coupling 
+convenient for the treatment both of nuclear 
+forces and of high energy disintegrations. 
+
+The simplest form of the Fermi interaction 
+energy is! 
+
+
+Hex =G(me) (h/me) - (bu*Bee) (oe*Bvr)dr, (1) 
+
+
+which describes the transition of a proton, P, 
+into a neutron, N, with the emission of a positron, 
+e, and a neutrino, v. Here the matrix £6 is the 
+coefficient of the mass term in the Dirac equation 
+written in its normal form, and the integrand 1s 
+thus built up of the simplest scalars which can 
+be formed from the Dirac wave functions of the 
+heavy and light particles. G is a pure number 
+which fixes the magnitude of the interaction. 
+A coupling of the type (1) will lead to an inter- 
+action between a neutron and a proton which, 
+to the second order in G, is represented by the 
+Majorana potential J(r)P™, given by 
+
+
+LI (r)P™ w= 3 » { HTypVHpy™ 
++Hpy™Hyp™} /(ecte,), | (2) 
+
+
+where the sum extends over all possible electron 
+and neutrino states, with energies e, and e,, re- 
+spectively, and the upper indices (1), (2) dis- 
+tinguish the heavy particles. 
+
+It is well known, however, that the coupling 
+(1), with G determined to give the correct order 
+of magnitude for the lifetimes of the 6-active 
+nuclei (¢~107”), gives the result that J(r) is far 
+too small for separations of the heavy particles of 
+the order 10-8 cm, and is highly singular, 
+behaving like 7-*, as r—0. In order to obtain a 
+potential of finite range and depth, and proper 
+magnitude, without violating the facts of B- 
+decay, it is necessary to modify (1) so that: 
+
+1. The order of magnitude of Hpy remains 
+unchanged for energies of the light particles in 
+the 8-decay region (<25 mc’). 
+
+2. Hpy increases enormously for light particle 
+energies of the order fc/R~137 me’. | 
+
+3. Hpy-0 for still higher light particle 
+energies, 
+
+
+_ 4 The form of the spin dependence in (1) has been chosen 
+because it gives Majorana forces. 
+
+
+1039 
+
+
+To obtain such a dependence of (1) on the 
+energies we could, for free particles, simply 
+multiply the integrand by a suitable amplitude 
+factor f, which is an invariant function of the 
+four-vector momenta of all the particles. For 
+arbitrary states the interaction could then be 
+found by superposition of the individual Fourier 
+components. Since #/R«Mc we can choose a 
+coordinate system in which the heavy particle 
+velocities are small. In this system our invariant, 
+f, must reduce to an arbitrary function of the 
+energies of electron and neutrino and of the angle 
+between their directions of motion. 
+
+Thus our matrix element for the coupling 
+becomes, in the rest system of the heavy particle 
+(using plane waves for the electron and neutrino), 
+
+
+Hpy=Glme')(h/me) { (dw¥8u) 
+
+
+X (w*Byp)f(p, q) exp L(¢/hc)(p—q)-rjdz, (3) 
+
+
+where u and w are the Dirac amplitudes for the 
+electron and neutrino wave functions, and p and 
+q are c times their momenta. 
+
+
+For J(r) we obtain from (2) and (3), after carrying out 
+
+
+- the summations over the spin variables in the usual way,° 
+
+
+J(1) = exp [(¢/he)(p —q) -r] 
+
+
+x<dpdq, 
+
+
+G? |f(p, ; 2 
+~~ (me?) *2( aa 
+
+
+where r=1r,—r2 is the distance between the two heavy 
+
+
+. particles. We can carry out the integrations over the direc- 
+
+
+tions of p and q if we make the assumption that there is no 
+coupling between the directions of emission of the electron 
+and neutrino. Neglecting the difference between p and e, 
+we find 
+
+
+Gil =( (eee gPhe . bt 
+
+
+1S (mc?) 4 874 pb+q pr he 
+
+
+h 
+x sin dredge. (4) 
+qr he 
+
+
+The amplitude function f(p, g) has to be adjusted so that 
+(4) gives the right magnitude and range for the nuclear 
+forces. The former will be given correctly when the energy 
+of the first stationary state of the deuteron is ~0. Because 
+
+
+5 In the first term of (2) (emission of an electron and an 
+antineutrino by the neutron and their reabsorption by the 
+proton) the summation is extended over all positive energy 
+states of the electron and negative energy states of the 
+neutrino, in the second term (emission of a positron and a 
+neutrino by the proton and their reabsorption by the 
+neutron) over all negative energy states of the electron and 
+positive energy states of the neutrino. The density of 
+electron and neutrino states in our units is dpdq/(27hc)°. 
+
+
+1040 
+
+
+of the short range, this condition is approximately satisfied 
+when 
+
+
+So J(r)rdr~ —h?/ M, (5) 
+
+
+as Bethe has observed.* An alternative expression of this 
+condition is the phase integral 
+
+
+SOL — MI (1) dr = dah. (5a) 
+
+
+If we introduce (4) into (5) and reverse the order of 
+integration, the integral over a=r/hc gives 
+
+
+Jy a-da sin ap sin ag= —43 In |p—q|/(p+4), 
+and the an of G is determined by ' 
+
+
+oe f(b OI? _p+¢ 
+Mec or ian se p+q 
+
+
+mp q| 
+The problem of finding a function f which 
+satisfies the requirements 1, 2, and 3 has been 
+studied by Camp,’ and may be simply solved by 
+taking 
+
+
+f(, a) = (p+ q)? exp [— (a?/2)|p—q|?]e(p+q), 
+
+
+————pdpqdq. (6) 
+
+
+which leads to the Gaussian potential 
+T(r) Ee — Jye-7 lah)? 
+GC? a 
+~ (Qme2)4 (Qn) fica’ 
+
+
+2M ca? 
+
+
+by (5a). When this coupling is applied to the 
+problem of proton disintegration, it leads, be- 
+cause of the dependence of f on the angle 
+between p and q, to unnecessarily cumbersome 
+integrals. Since it is unlikely that any real 
+theoretical significance is to be attached to 
+this f, we have chosen instead a form which is 
+convenient for calculation, and which satisfies 
+conditions 2 and 3:8 
+
+
+fle, O= 
+
+
+If in this formula s and m are adjusted (s~12) 
+to give a long enough life for the high energy 
+B-emitters Li’ and B®, the potential J(r) loses 
+all resemblance to a simple trough, and shows 
+marked oscillations. Since we can see that our 
+results depend little on ” and s, we shall choose, 
+when it is necessary to fix them, the ‘‘com- 
+promise’’ values s=4, n»=2. To the question of 
+
+
+(mce?)~sprePlAgs—ne-alA, 
+
+
+6 Bethe and Bacher, Rev. Mod. pee 8, 109 (1936), 
+
+7G. Camp, Phys. Rev. 51, 1046 (1937). 
+
+8 In the 6-decay region this is equivalent to the general 
+formulation of the coupling discussed by Uhlenbeck and 
+Konopinski, Phys. Rev. 48, 7 (1935). 
+
+
+(7) 
+
+
+NORDHEIM, NORDHEIM, OPPENHEIMER AND SERBER 
+
+
+the effect of a dependence of f on the angle 
+between p and q, we shall return later. 
+One can show that with (7) 
+
+
+pore. v¥—> 0 
+
+
+Ins | 
+
+
+const, r—0. 
+
+
+The relation (6) becomes 
+
+
+Q2st67-4 mM amc? 28s+3 
+
+0 Ce) 
+T,(2s+2)!M\ A 
+
+where 7, is a number of order unity, depending 
+
+on the choice of s and 2. For s=2,”n=1, T,=0.77, 
+
+
+and for s=4, n=2, T,=0.70. As a measure of 
+the range we can use 
+
+
+(8) 
+
+
+r=2f serir/ [ser 
+
+
+With s=4, n=2 we get R=2hc/po, where 
+bo= 2A is the energy at which f has its maximum. 
+As R~2.2*10-8 cm, we find in this case 
+pow 115 mc?. 
+
+The choice (7) for f gives the simplest extrapo- 
+lation of the form of interaction used in the 
+theory of 8-disintegration. Another form, which 
+expresses the feature that f has a pronounced 
+maximum, is the Gaussian function 
+
+
+Hb, ) =[(p+q)/me?Pe-O-r9" 4% ¢—Ca-wo 284, (9) 
+
+
+(9) can be considered as the limiting form of. (7) 
+for n~3s— ©, with the correspondence pp=nA, 
+A=n'A. The factor [(p+4q)/mec? }? is introduced 
+to simplify the integration, which gives 
+
+G2 A®ho4 é pot 
+
+
+2 
+—) sin? —— e—4?r?/2(hte)? 
+(mc?) (29)? \ por he 
+
+
+while the phase integral (5a) gives, for A<p, 
+G? = (27)3(m/M) (me?)*/A’p??. (10) 
+
+
+J(r)=—- 
+
+
+3. CALCULATION OF THE CROSS SECTION 
+
+
+The process of the disintegration of a high 
+energy proton by the Coulomb field of a nucleus 
+can be thought of, in the coordinate system in 
+which the proton is initially at rest, as the 
+emission by the proton of a positron and a 
+neutrino, the positron then being deflected by 
+the contracted Coulomb field of the passing 
+
+
+DISINTEGRATION OF PROTONS 
+
+
+nucleus.? From this formulation we can see that 
+it is only when frequencies of the order po/h are 
+important in this contracted field that the dis- 
+integration will be probable. In the whole of the 
+calculation we shall confine ourselves to the case 
+where the field is strongly contracted, where, 
+therefore, the proton has a velocity, v, very close 
+to that of light, and an energy large compared to 
+its rest energy. We shall keep only the dominant 
+terms in £ and In &, where €=1/(1—v?/c?)?, 
+
+One way which suggests itself for this calcula- 
+tion is the impact parameter method of v. 
+Weizsacker and Williams,’ which replaces the 
+contracted Coulomb field by a bundle of parallel 
+y-rays moving in the same direction as the 
+nucleus. This method is valid if the momentum 
+
+
+Neglecting terms of order 1/é, we find 
+
+
+1041 
+
+
+of the field normal to the direction of motion of 
+the nucleus can be neglected compared to the 
+transverse momenta of the wave packet repre- 
+senting the positron. As we shall see, in our 
+problem values of the impact parameter for 
+which this condition is not satisfied give an 
+essential contribution to the cross section. 
+
+Instead, we shall make a Fourier analysis of 
+the Coulomb field of the passing nucleus, without 
+neglecting the transverse component of the 
+propagation vector of the electromagnetic field. 
+The field of a point charge Ze moving with 
+velocity v in the z direction is given by 
+
+
+g=Le/(P+(e+y")/P I, 
+A,=(u/c)e, A,=A,=0. 
+
+
+e=A,= (Ze/2athe) { (RK) exp [ (¢/hce)(K-r—kct) | dK, ¢(K)=1/(g?+ k?/&), 
+
+
+where the vector k is the component of K parallel to the zg axis, and g is the component of K per- 
+pendicular to the g axis. By adding the gauge terms y’(K) = — ¢(K), A’(K) = — (K/k)¢(K) we ob- 
+
+
+tain g=0 and 
+
+
+A= { ACK) exp [ (4/hc)(K-r—kct) |dK/(2rhc)®, A(K)= —4rh?c?Ze(g/k)/(g2?+k2/#). (11) 
+
+
+The matrix element of the interaction energy, H=e(q@- A), of an electron and the electromagnetic 
+field (11), between a state of momentum p’/c and a negative energy state of momentum —p/c, is 
+
+
+Hyp = —4nVPOL?0(g/k) (u!*agu) /(g?+k?/E), 
+
+
+(12) 
+
+
+where p’+p=K, and where we write s, for the component of a vector s in the direction of g. 
+For the transition from the initial state (proton with momentum P=0) to the final state (neutron 
+
+
++ positron-++neutrino with respective momenta N, p/c, q/c) through an intermediate state in which 
+the electron has a momentum p’/c, we obtain from (3) and (12), with the neglect of the kinetic 
+energy of the heavy particle, the differential cross section 
+
+
+2 h 6 9 : 9 dK 
+he BR? (g2-+ k2/ 2)? (Qahc)3 
+
+
+me 
+
+
+2 2 | 4 (Wy*Bu')(w’*a,u) |? 
+Lapa woe | 
+c Me Bae 
+
+
+with the density factors dp.=dp/(2rhc)?, dpy=@dQ,/(2rhc)*, dQ, the element of solid angle for the 
+directions of emission of the neutrino, and wp, vy, the Dirac amplitudes for the heavy particle wave 
+
+
+® The two other processes, (1) the proton is first scattered by the nucleus into an intermediate state and then emits 
+the light particles and (2) a @-transformation of the nucleus is induced by the Coulomb field of the passing 
+proton, are much less important than the one discussed in the text. 
+
+10C. F. v. Weizsacker, Zeits. f. Physik 88, 612 (1934); E. J. Williams, Phys. Rev. 45, 729 (1934), Danske Vid. 
+Selsk. Math. Fys. 13, 4 (1935). 
+
+
+1042 
+
+
+NORDHEIM, NORDHEIM, OPPENHEIMER AND SERBER 
+
+
+functions. The momentum and energy relations are 
+
+
+pt+p=K=k-+g, 
+
+
+etg=k, 
+= [p?+ (me)? }. 
+
+
+e=Lp?+(mc?)? }, 
+
+
+(13) 
+
+
+Carrying out the summation over the spin directions in the usual way, and integrating over the 
+directions of emission of the neutrino and the azimuth of g, we obtain for the cross section 
+
+
+G?2?r, 
+
+
+with 
+
+
+dk gid 
+errors es rr 
+
+
+—dp, (14) 
+
+
+gq’)? € 
+
+
+i. PFO OPS. 
+Ret = 
+
+
+S=e(e”+q") —2 (q—me?) [(p: p’) + (mc?)?+ 2pyp,' ]|—me?(e"” — g? — 2eq), 
+
+
+and 7) =e2/mc?. 
+
+
+The determining factors in (14) are the amplitude function f, which we assume to be large only for 
+values of p’ and q of the order fc/R, and the resonance denominator (e’*—q?). We introduce polar 
+coordinates for p, with @ the angle between p and z, and ¢ that between the p—z and g—zg planes, 
+
+
+and obtain from (13) 
+
+
+e* —P=p"—g+ (mc)? = g?+2ke—2p(k cos 6+¢ sin 6 cos ¢). 
+
+
+For p>mc, this becomes 
+
+
+g?+ (k/p) (mc?)?+ 2kp(1 —cos 8) 
+—2pg sin 8 cos 9g, 
+
+
+(15) 
+
+
+and the minimum value of the resonance de- 
+nominator is found to be 
+
+
+(1—p/k) {g?+ (me*)?/L(p/k) (1 — p/k) J}. 
+
+
+From (15) and (16) we see that the principal 
+contribution comes from values of g small com- 
+pared to k. This makes it possible to simplify S 
+by retaining only the lowest power in g. 
+
+With the help of the relation 
+
+
+2(p-p’) =@?+ 2eq—e" +2 (me’)?, 
+
+
+which follows from (13) for small g, we get for 
+the leading term of S 
+
+
+S= (e"—@)(e+9—2me?) — 4(me?)?(q—me?). 
+
+
+(16) 
+
+
+On the other hand, the factor g?/(g?+k?/é)? 
+shows that only g>k/é is effective. Therefore for 
+k/&>mc/[(b/k)(1—p/k) }*, i.e., not too large &, 
+g will determine the magnitude of the resonance 
+denominator and we can neglect all the mass 
+
+
+(17). 
+
+
+terms and put «=p, e’ =>’, obtaining 
+
+
+Gant wake ~ dg 
+ At(mc?) 2d k/e& 
+
+
+PI f(d’, Cae 
+a peut p(p”— 
+
+
+If we had used the v. Weizsacker-Williams 
+method, introducing an impact parameter p, and 
+replacing the field by an approximately equiva- 
+lent light quantum field, g would not, of course, 
+have appeared in the conservation laws (13), 
+and thus the third integral in (14) would have 
+been independent of g. Instead of (18) we should 
+then have found 
+
+
+CZre dk phtl*dp 
+eee ie | —1(0). 
+~ An (me?)? 
+
+
+With the correlation p~hc/g, this agrees with 
+(18) for g<2mc?, the minimum value of 
+mce/{(p/k)(1—p/k) |?, or p-2&sh/mc, since it 
+follows from (16) that under these circumstances 
+I(g)~1I(O). Since, however, values of g larger 
+
+
+(18) 
+
+
+(18a) 
+
+
+than 2 mc? contribute essentially to the result, 
+
+
+DISINTEGRATION OF PROTONS 1043 
+
+
+the introduction into (18a) of 4h/mc as a lower Owing to the resonance denominator only 
+limit of the impact parameter would be wrong. ’~q will contribute to the dominant term in 
+The method of the impact parameter is in- In é, and in (18) we can replace p’ by g in 
+applicable. f(~’, g) and integrate over the directions of p, 
+
+
+[ev/oe"—a)= [ Yoap, 
+
+
+sin 6déd¢ . sin 6d@ 
+Y= f f Pr rmncer wrrersr reread | ——--__—————.._ (19) 
+24+. 2kp(1—cos 0) —2pg sin 8 cos ¢ o {[g?+2kp(1—cos 6) ? —4p2¢? sin? @}3 
+If we introduce x= (1—cos @) and replace sin? 6 by 2x in the second term of the denominator, we get 
+| (w/kp) In [4kp/g(1—p/k)],  ¢<Smax=[4k6/(1—p/k) }, 
+0 9 e > Pmaxe 
+The integration over g gives 
+
+
+i © g-idg In [Akp/e%(1 — p/h) ]= In? [2E/(b/p—1)"), (20) 
+
+
+kf 
+
+
+and (18) becomes, using k=p+-gq, 
+
+
+G2Z2y 02 co © dp | 2¢ | 
+eee Tee 2 2dq 1 Igy es 
+cee | Pif(a, DI af ca n Pre 
+
+
+In the argument of the logarithm we may take p~q~#k, and we obtain for the dominant term in 
+In € in the cross section" 
+
+
+GZ 2y 0” 
+
+
+rmanrepenest ls wef q\f(@, @) |?dq. 
+
+An’ (mc?)? Jo. 
+
+For large é the neglect of the mass term in the resonance denominator (e’* — gq’) is no longer allowed 
+(although the mass dependent terms in (17) always give a negligible contribution). The only change 
+introduced by the mass term will be that we have to replace (19) by | 
+
+
+m Akp 
+Y=2 if ax a (1 —p/kye-+4(k/p) (mo?) Z<Lmaxy 
+a ee AC te eo Re et ee ee ee ae eee os tam g 1 a 
+o iLg?+ (k/b) (me*)?+ 2kpx P — 8p?g?x}3 : > 
+-y £*§$maxy 
+
+
+where {max 1S the value of g for which the argument of the logarithm 1 is unity, and instead of (20) we 
+will have 
+
+
+cas 2E- k es k (mce?)? J. 
+
+n ——, -<k= ———-— 
+
+- dg Akp | (k/p-1* ¢& 2 p (1—p/k) 
+
+ke = (:--)| ee (mc?)? : ae 2322 mc? k 
+2 p (1—p/k) 
+
+
+k 
+1 Jn the siden in which we are working the introduction of a nuclear radius ~R within which the fields (11) are 
+incorrect will not affect our results. 
+
+
+———e ETI ent — 
+
+
+n ; > K 
+a " C—b/B) Rk £ 
+
+
+1044 NORDHEIM, NORDHEIM, OPPENHEIMER AND SERBER 
+
+In carrying out the integrations over and gq we may again in the argument of the logarithm put 
+pb~qw~gk, and set k~Ro=2qo, where qo is the value of g at the maximum of g|f(q, g)|?. The dominant 
+terms in the cross section are 
+
+
+b =¢o In’ &, E<ky/me?, 
+
+@ =doln (Ro/mc*) In (&mc*/ko), § >Ro/me’, (21) 
+G27" co 
+
+Lear i) q\f(a, @) |?dq. 
+
+
+Wecan also calculate, from (14), the energy distribution of the emitted positrons in the coordinate 
+system in which the nucleus is at rest. If in the coordinate system in which the proton is initially at 
+rest the positron is moving at an angle 6 to the z axis, with energy e and velocity u, it has in the rest 
+system of the nucleus the energy 
+
+E=&e[1—(uv/c?) cos 6|~ép(1—cos 6) = Epx. 
+The energy distribution is obtained by introducing £ as a new variable in place of x in (14), and 
+reversing the order of integrations, leaving the integration over £ till last. The cross section for 
+
+
+emission of a positron in the energy range dE at E is thus 
+
+
+G?Z*r,? dE 
+
+
+2r?(mc?)? € 
+
+
+o(E)dE= “ela @ \?dg { 
+
+
+The integral over g gives approximately 
+
+
+2éE (mc?)?é k 
+—— In —_—___, > ~, 
+ARE k(1—p/k) 2p g 
+and the cross section is found to be 
+a 
+o(L)dE= +¢0— In — 
+0 
+(mc*)*E Ro 
+tkho>E> ae (22) 
+0 
+
+
+For E> ko the distribution falls off rapidly with 
+F, the exact form of the high energy tail depend- 
+ing on the amplitude function f.” 
+
+For the total energy transmitted to the posi- 
+trons per cm path, we obtain 
+
+
+W.=N | $(B)EdE~Nehods In &, (23) 
+
+
+where N is the number of atoms per cm’. 
+
+
+2 In calculating the high energy tail it is not legitimate 
+to replace f(p’, g) by f(g, q). With the amplitude function 
+(7), the cross section for high energies falls off exponentially. 
+
+
+ap 
+Bre Pt+Que g 
+
+
+” dg 1 
+
+
+Let + (/p)(met)*+28E/ EP Soro /ELE 
+
+
+The angular distribution of the neutrinos in the 
+rest system of the proton will be uniform for any 
+amplitude function which does not contain a 
+constraint between the direction of emission of 
+the positron and neutrino. The energy lost to 
+neutrinos per cm path is thus 
+
+
+W,= NG, 
+-| Ifa @) |?da/ f alf(q, q) |2dq. (24) 
+
+
+This is larger than W., because the positrons are 
+
+
+ejected preferentially in the forward direction in 
+
+
+the rest system of the proton, and therefore re- 
+ceive less energy. It is evident that the intro- 
+duction of a constraint between the directions of 
+the positron and neutrino could reduce W, toa 
+value comparable to W.. 
+
+
+4. RESULTS AND DISCUSSION 
+
+
+Our final results for the cross section, energy 
+distribution and energy losses for proton dis- 
+integration are contained in the expressions (21) 
+to (24). We have now to evaluate ¢o, using the 
+amplitude functions f(p, gq) discussed in §2. 
+
+
+DISINTEGRATION OF PROTONS 
+
+
+From (7) we obtain 
+G?Z2r 2 co 
+oo= =f gstte—4al Ada 
+4m? (me?)*s+? P 
+Leremem 4r(2s+1) mc 
+= — = Z*7,—_},, (25) 
+Ro M T (2s +2) Ro 
+
+
+with ko=3(2s+1)A, and the value of G? given in 
+(8). Taking the numerical values for T, from §2, 
+
+
+tz=6.6X10-3 for s=2, 
+t,=8.8X1073 s=A4, 
+
+
+n=, 
+for n=2. 
+
+
+For g, which appears in (24), we find 
+G= (s+35+1)Ro. 
+With s=4, n=2, Ry~ 250 mc’. 
+
+
+The Gaussian amplitude function (9) gives 
+
+
+GZ? r 2 oe) — 
+do= } g’e~2(a—Po) lA dq 
+“0 
+
+
+223(mec2)3 
+
+
+= (27) *Z?re'(me?/A)(m/M) 
+
+
+(26) 
+
+
+for A<o, with the help of (10). With the cor- 
+respondence A~ko/(2s)?, (26) gives practically 
+the same results as (25). We see from (25) and 
+(26) that the cross section does not depend sensi- 
+tively on the details of the amplitude function. 
+
+The cross section is of the order of magnitude 
+2nre?(Z?/137)(m/M) In? — and is therefore small 
+even for large Z. As the main contribution 
+comes from impact parameters of the order 
+p=thc/ky~ séro the probability of a disintegra- 
+tion for a single passage is very small, which is a 
+necessary condition for the applicability of the 
+Born approximation. The energy given to light 
+particles per impact is, however, quite large, the 
+mean energy lost to the positron being ~foé/In &, 
+or about 3 billion volts for a 10 billion volt 
+proton. 
+
+To obtain an idea of the total energy trans- 
+mitted to the light particles, we compare (23) and 
+(24) with the ordinary ionization losses which are 
+given by 
+
+
+Wion = 24 NZroeme in (2&3 m?ct/Ry*Z?), 
+
+
+where Ry=27 ev. 
+
+
+1045 
+
+
+TABLE I. Numerical values for the energies transmitted to 
+positrons and neutrinos, and the loss by tonization for a 
+number of different energies in air (expressed in water 
+equivalent) and in lead. 
+
+
+Distance 
+
+per dis- 
+
+Wion integra- 
+We W, Wion |E >100 Mev tion 
+
+é Mev/cm| Mev/cm| Mev/cm| Mev/cm meters 
+Air (water 10 0.017 0.022 1.7 0 320 
+equiva- 102 0.35 0.88 2.2 0.27 80 
+lent) 108 5.2 19 2a 0.61 36 
+10 1.8 J 2.3 12 0 3.0 
+Pb 102 36 90 18 2.4 0.75 
+103 540 2000 22 5.5 0.35 
+
+
+In Table I we give numerical values for the 
+energies transmitted to positrons and neutrinos, 
+and the loss by ionization, for a number of differ- 
+ent energies in air (expressed in water equivalent) 
+and in lead. The figures given are for s=4, n=2, 
+but depend little on the particular values chosen. 
+
+We have already mentioned that the model 
+which we have assumed for the Fermi coupling 
+precludes its importance for cosmic ray showers. 
+If, however, it be supposed that heavy particles 
+constitute an essential part of the penetrating 
+component of cosmic rays, then the proton (and 
+neutron) disintegrations considered in this paper 
+can provide a mechanism for transferring a con- 
+siderable fraction of the proton’s energy to a light 
+particle, and thus for initiating showers at depths 
+in-matter to which no electrons or photons can 
+penetrate. For in most of these disintegrations 
+the positron will have a high enough energy to 
+initiate a small shower." In order to compare the 
+effectiveness of these disintegrations with that of 
+the energy transfer by direct impact with extra- 
+nuclear electrons, we give in column 4 the energy 
+lost per cm by such impacts to electrons of energy 
+greater than 100 Mev. 
+
+In the last column of Table I we give the mean 
+distance traveled by a proton per disintegration. 
+This distance is of the right order of magnitude to 
+account for the observed incidence of showers 
+under great thicknesses (>10 cm) of Pb. 
+
+
+13 A discussion of shower production by high energy 
+electrons has been given by J. F. Carlson and J. R. Oppen- 
+heimer, Phys. Rev. 51, 220 (1937) and by H. T. Bhabha 
+and W. Heitler, Proc. Roy. Soc. A159, 432 (1937). 
+
+

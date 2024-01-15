@@ -1,0 +1,29 @@
+{
+  "name": "@onlyoffice/jsdoc-declaration",
+  "private": true,
+  "type": "module",
+  "main": "lib/main.ts",
+  "scripts": {
+    "test:types": "tsc",
+    "test": "pnpm test:types"
+  },
+  "dependencies": {
+    "@onlyoffice/async-transform": "workspace:^",
+    "@onlyoffice/console": "workspace:^",
+    "@onlyoffice/declaration-code-example": "workspace:^",
+    "@onlyoffice/declaration-tokenizer": "workspace:^",
+    "@onlyoffice/eslint-presentation": "workspace:^",
+    "@onlyoffice/jsdoc": "workspace:^",
+    "@onlyoffice/library-declaration": "workspace:^",
+    "@onlyoffice/markdown": "workspace:^",
+    "@onlyoffice/strings": "workspace:^",
+    "@types/mdast": "^4.0.3",
+    "@types/node": "^20.12.12",
+    "@vscode/vscode-languagedetection": "^1.0.22",
+    "mdast-util-from-markdown": "^2.0.0",
+    "mdast-util-to-markdown": "^2.1.0",
+    "typescript": "^5.4.5",
+    "unist-util-select": "^5.1.0",
+    "unist-util-visit": "^5.0.0"
+  }
+}

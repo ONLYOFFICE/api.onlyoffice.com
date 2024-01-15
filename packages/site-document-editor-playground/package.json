@@ -1,0 +1,34 @@
+{
+  "name": "@onlyoffice/site-document-editor-playground",
+  "private": true,
+  "type": "module",
+  "main": "lib/main.tsx",
+  "exports": {
+    ".": "./lib/main.tsx",
+    "./main.css": "./lib/main.css",
+    "./client.ts": "./lib/client.ts"
+  },
+  "scripts": {
+    "test:types": "tsc",
+    "test": "pnpm test:types"
+  },
+  "dependencies": {
+    "@onlyoffice/combobox-container-html-element": "workspace:^",
+    "@onlyoffice/document-editor-code-sample": "workspace:^",
+    "@onlyoffice/document-editor-html-element": "workspace:^",
+    "@onlyoffice/document-editor-mirror-html-element": "workspace:^",
+    "@onlyoffice/document-server-types": "workspace:^",
+    "@onlyoffice/document-server-utils": "workspace:^",
+    "@onlyoffice/server-client": "workspace:^",
+    "@onlyoffice/site-config": "workspace:^",
+    "@onlyoffice/ui-kit": "workspace:^",
+    "dot-prop": "^9.0.0",
+    "preact": "^10.22.0",
+    "typescript": "^5.4.5"
+  },
+  "devDependencies": {
+    "@onlyoffice/site-config-fixtures": "workspace:^",
+    "@storybook/preact": "^8.0.0",
+    "vite": "^5.1.6"
+  }
+}
