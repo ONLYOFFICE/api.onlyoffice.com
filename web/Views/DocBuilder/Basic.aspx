@@ -43,11 +43,6 @@
         </thead>
         <tbody>
             <tr class="tablerow">
-                <td><a href="<%= Url.Action("gettingstarted") %>">Builder.API</a></td>
-                <td>The JavaScript API to work with the document editor. It contains classes and methods for every document type: <a href="<%= Url.Action("textdocumentapi") %>">Text document API</a>,
-                    <a href="<%= Url.Action("spreadsheetapi") %>">Spreadsheet API</a>, <a href="<%= Url.Action("presentationapi") %>">Presentation API</a>, and <a href="<%= Url.Action("formapi") %>">Form API</a>.</td>
-            </tr>
-            <tr class="tablerow">
                 <td><a href="<%= Url.Action("framework") %>">Builder.Framework</a></td>
                 <td>A software tool that contains a collection of libraries, classes, and functions that are used to develop applications.
                     Currently, the following frameworks are available: <a href="<%= Url.Action("integrationapi/c") %>">C++</a>, <a href="<%= Url.Action("integrationapi/com") %>">COM</a>, <a href="<%= Url.Action("integrationapi/net") %>">.Net</a>.</td>
