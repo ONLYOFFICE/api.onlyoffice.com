@@ -15,21 +15,21 @@
     </h1>
 
     <p class="dscr">As any document is a composite object consisting of a tree of larger nodes (paragraphs and tables) where it is possible to insert smaller document elements (text runs, images, charts, shapes),
-        <b>Builder.API</b> allows to insert the content and format it to your liking quickly and easily.
+        <b>Office API</b> allows to insert the content and format it to your liking quickly and easily.
     </p>
     <p>
-        Builder.API is the JavaScript library which is used to work with the document editor.
+        Office API is the JavaScript library which is used to work with the document editor.
         It contains classes and methods for every document type: <a href="<%= Url.Action("textdocumentapi") %>">Text document API</a>,
         <a href="<%= Url.Action("spreadsheetapi") %>">Spreadsheet API</a>, <a href="<%= Url.Action("presentationapi") %>">Presentation API</a>, and <a href="<%= Url.Action("formapi") %>">Form API</a>.
     </p>
 
     <h2>Where to use</h2>
-    <p>Here are some examples of where you can use Builder.API:</p>
+    <p>Here are some examples of where you can use Office API:</p>
     <ul>
-        <li>build <a href="<%= Url.Action("structure", "plugin") %>">plugins</a> using Builder.API in the plugin code <em>.js</em> file
+        <li>build <a href="<%= Url.Action("structure", "plugin") %>">plugins</a> using Office API in the plugin code <em>.js</em> file
             to interact with the editor content and web services;</li>
-        <li>write <a href="<%= Url.Action("macros", "plugin") %>">macros</a> using the JavaScript syntax and Builder.API scripting notation;</li>
-        <li>generate documents using Builder.API in the <a href="<%= Url.Action("basic", "docbuilder") %>">Document Builder scripts</a>.</li>
+        <li>write <a href="<%= Url.Action("macros", "plugin") %>">macros</a> using the JavaScript syntax and Office API scripting notation;</li>
+        <li>generate documents using Office API in the <a href="<%= Url.Action("basic", "docbuilder") %>">Document Builder scripts</a>.</li>
     </ul>
 
     <h2>Where to start</h2>

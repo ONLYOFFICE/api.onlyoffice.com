@@ -10,10 +10,10 @@
 <p>Besides the text runs, paragraphs can also contain <em>inline text content controls</em> and <em>hyperlinks</em>.</p>
 <p>A table has a little bit more complex structure, as it comprises <em>table rows</em>, which in their turn include <em>table cells</em> within their structure. <em>Table cells</em> can have the whole <em>paragraph</em>, <em>table</em> or <em>block content control</em> structure inside them.</p>
 <p>A block content control can also contain the <em>paragraph</em>, <em>table</em> or another <em>block content control</em> inside it.</p>
-<p>Thus any text document structure with <b>ONLYOFFICE Document Builder</b> API used to create it can be outlined like this:</p>
+<p>Thus any text document structure with <b>ONLYOFFICE Office API</b> used to create it can be outlined like this:</p>
 
 <div class="document_structure">
-        <p class="node_label"><b>ONLYOFFICE Document Builder API</b></p>
+        <p class="node_label"><b>ONLYOFFICE Office API</b></p>
         <p class="node_description">
             Document and document elements creation:
             <br />
@@ -215,5 +215,5 @@ oParagraph.SetJc("center");                 // set the paragraph justification t
 oParagraph.AddText("Center");               // add a text containing a single 'Center' word to the paragraph
 builder.SaveFile("docx", "example.docx");   // save the resulting text document as a file in the .docx format with a new 'example.docx' name
 builder.CloseFile();                        // close the text document file and finish work with ONLYOFFICE Document Builder</pre>
-    <p>As you can see you just need to use the <em>builder.OpenFile();</em> method of the <a href="<%= Url.Action("integrationapi/cdocbuilder") %>">CDocBuilder</a> class with the path to the necessary text document as an argument to open it. In the above example we open <b>mydocument.docx</b> document, get its first paragraph and change the text in it to the centered "Center" text. The same way any other text document element can be changed.</p>
+    <p>As you can see you just need to use the <em>builder.OpenFile();</em> method of the <a href="<%= Url.Action("integrationapi/c/cdocbuilder", "docbuilder") %>">CDocBuilder</a> class with the path to the necessary text document as an argument to open it. In the above example we open <b>mydocument.docx</b> document, get its first paragraph and change the text in it to the centered "Center" text. The same way any other text document element can be changed.</p>
     <p>Use the appropriate API documentation sections to find out which methods allow you to change certain document and spreadsheet element formatting properties.</p>

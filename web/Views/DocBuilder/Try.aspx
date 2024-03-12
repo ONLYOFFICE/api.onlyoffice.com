@@ -20,7 +20,7 @@
     <p>You can search for the desired method to use its script in the text area below. Or, in case you have a script of your own, use the button under the text area to upload it. You can select the necessary editor.</p>
 
     <div>
-        <ul class="doc-builder-file-types top-nav">
+        <ul class="doc-builder-file-types try-tabs">
             <li class="<%= Request["type"] != "cell" && Request["type"] != "slide" && Request["type"] != "form" ? "active" : "" %>">
                 <a href="<%= Url.Action("try") %>">Document Editor</a>
             </li>

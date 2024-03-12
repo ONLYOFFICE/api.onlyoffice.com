@@ -11,7 +11,7 @@
         </li>
     </ul>
 
-    <div class="treeheader">Builder.API</div>
+    <div class="treeheader">Office API</div>
     <ul class="side-nav root">
         <li>
             <a href="<%= Url.Action("textdocumentapi") %>">Text document API</a>

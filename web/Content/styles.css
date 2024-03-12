@@ -1633,6 +1633,7 @@ a.required {
     text-align: left;
     height: 35px;
     margin-bottom: 25px;
+    margin-left: 0;
     border: none;
     box-shadow: inset #bfbfbf 0 -1px 0 0;
 }
@@ -3279,3 +3280,43 @@ select {
     width: 100%;
     max-width: 260px;
 }
+
+.try-tabs {
+    height: 37px;
+    margin: 0 0 25px 0;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    text-align: center;
+    padding-right: 15px;
+    max-width: 833px;
+}
+
+    .try-tabs li {
+        display: block;
+        float: left;
+        /*padding: 0px 12px 0 12px;*/
+    }
+
+        .try-tabs li.active a {
+            color: #FF6F3D;
+            border-bottom: 2px solid #FF6F3D;
+        }
+
+    .try-tabs a {
+        color: #CCC;
+        font-size: 13px;
+        font-weight: 600;
+        line-height: 35px;
+        outline: none;
+        text-decoration: none;
+        text-transform: uppercase;
+        display: block;
+        width: fit-content;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+        .try-tabs a:hover {
+            color: #FF6F3D;
+            border-bottom: 2px solid #FFFFFF;
+        }
