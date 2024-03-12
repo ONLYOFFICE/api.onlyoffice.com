@@ -49,6 +49,13 @@
       "parent": "docspace"
    },
    {
+      "id":"officeapi",
+      "title":"Office API",
+      "description":"In this section, you will learn how to use our JavaScript library to write code for your plugins, macros, builder scripts, etc. This library contains classes and methods for every document type: Text document API, Spreadsheet API, Presentation API, and Form API.",
+      "version": "7.5",
+      "parent": "docs"
+   },
+   {
       "id":"docbuilder",
       "title":"Document Builder",
       "description":"In this section, you will learn how to generate documents easily without running a document editor and integrate Document builder into your DMS, CRM system, etc.",
