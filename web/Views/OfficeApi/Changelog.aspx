@@ -15,7 +15,7 @@
         <span class="hdr">Changelog</span>
     </h1>
 
-    <p class="dscr">The list of changes for ONLYOFFICE Document Builder API.</p>
+    <p class="dscr">The list of changes for Office JavaScript API.</p>
     <h2 id="75" class="copy-link">Version 7.5</h2>
     <p><b>Methods of combo box / dropdown list content control</b></p>
     <ul>
@@ -237,13 +237,6 @@
         <li>Added the <a href="<%= Url.Action("spreadsheetapi/api/onworksheetchange") %>">Api/onWorksheetChange</a> event to Spreadsheet API.</li>
         <li>Added the <a href="<%= Url.Action("presentationapi/api/attachEvent") %>">Api/attachEvent</a> method to Presentation API.</li>
         <li>Added the <a href="<%= Url.Action("presentationapi/api/detachEvent") %>">Api/detachEvent</a> method to Presentation API.</li>
-    </ul>
-    <br />
-
-    <p><b>Integration API</b></p>
-    <ul>
-        <li>Updated the <a href="<%= Url.Action("integrationapi/c") %>">C++</a> wrapper for ONLYOFFICE Document Builder.</li>
-        <li>Added the <a href="<%= Url.Action("integrationapi/net") %>">.Net</a> wrapper for ONLYOFFICE Document Builder.</li>
     </ul>
     <br />
     

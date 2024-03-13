@@ -4,7 +4,7 @@
 
 <%@ Register TagPrefix="UserControl"
     TagName="Generator"
-    Src="~/Views/DocBuilder/Buildersamples/samplegenerator.ascx" %>
+    Src="~/Views/OfficeApi/Buildersamples/samplegenerator.ascx" %>
 
 <h1>
     <a class="up" href="<%= Url.Action("buildersamples/") %>"></a>

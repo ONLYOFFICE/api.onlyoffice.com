@@ -11,7 +11,7 @@
       "title": "Docs",
       "description": "In this section, you will learn how to bring document editing and co-authoring to your web app users, set up, configure and integrate ONLYOFFICE Docs, extend its functionality using your own plugins/macros, and integrate document editors into the desktop applications. You will also find the information on how to use Document Builder to generate documents easily without running document editors. Use our Office JavaScript API to write code for your plugins, macros, builder scripts, etc.",
       "abstract": "ONLYOFFICE Docs is a collaborative office suite that includes editors for text documents, spreadsheets, presentations, fillable forms, and PDFs.",
-      "sections": [ "officeapi", "docbuilder", "editors", "desktop", "plugin" ]
+      "sections": [ "officeapi", "editors", "plugin", "docbuilder", "desktop" ]
    },
    {
       "id": "portals",
@@ -56,17 +56,24 @@
       "parent": "docs"
    },
    {
-      "id":"docbuilder",
-      "title":"Document Builder",
-      "description":"In this section, you will learn how to generate documents easily without running a document editor and integrate Document builder into your DMS, CRM system, etc.",
-      "version": "7.5",
-      "parent": "docs"
-   },
-   {
       "id":"editors",
       "title":"Docs API",
       "description":"In this section, you will learn how to bring document editing and co-authoring to your web app users, set up, configure, and integrate ONLYOFFICE Docs.",
       "version":"7.5",
+      "parent": "docs"
+   },
+   {
+      "id":"plugin",
+      "title":"Plugins and Macros",
+      "description":"In this section, you will learn how to extend the ONLYOFFICE Docs functionality by creating your own plugins/macros. Here you will find the information about their structure, development lifecycle, and examples.",
+      "version":"7.5",
+      "parent": "docs"
+   },
+   {
+      "id":"docbuilder",
+      "title":"Document Builder",
+      "description":"In this section, you will learn how to generate documents easily without running a document editor and integrate Document builder into your DMS, CRM system, etc.",
+      "version": "7.5",
       "parent": "docs"
    },
    {
@@ -75,13 +82,6 @@
       "description":"In this section, you will learn how to extend the ONLYOFFICE Desktop Editors functionality by setting up, customizing and integrating them with the document management systems.",
       "parent": "docs",
       "version":"7.5"
-   },
-   {
-      "id":"plugin",
-      "title":"Plugins and Macros",
-      "description":"In this section, you will learn how to extend the ONLYOFFICE Docs functionality by creating your own plugins/macros. Here you will find the information about their structure, development lifecycle, and examples.",
-      "version":"7.5",
-      "parent": "docs"
    },
    {
       "id":"backend",

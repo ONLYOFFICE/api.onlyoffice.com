@@ -9,11 +9,11 @@
 <p>The <em>range</em> element can contain <em>areas</em> and <em>comments</em>.</p>
 <p>Some drawn objects - <em>images</em>, <em>shapes</em>, <em>charts</em> - can be placed directly to the <em>worksheet</em>.</p>
 <p>The text that does not pertain to the cell values, can be grouped to <em>paragraphs</em> and added to the <em>shapes</em>. For the sake of convenience (as it is always easier to work with smaller blocks than with larger ones) the text is usually divided into small text portions called <em>runs</em>. Each paragraph can consist either of only one text run or have dozens of them inside, depending on the paragraph complexity.</p>
-<p>Thus any spreadsheet document structure with <b>ONLYOFFICE Document Builder</b> API used to create it can be outlined like this:</p>
+<p>Thus any spreadsheet document structure with <b>Office JavaScript API</b> used to create it can be outlined like this:</p>
 
 <div class="spreadsheet_document">
 <div class="document_structure">
-        <p class="node_label"><b>ONLYOFFICE Document Builder API</b></p>
+        <p class="node_label"><b>Office JavaScript API</b></p>
         <p class="node_description">Spreadsheet creation, global color and fill/stroke settings:<br />
             <a href="<%= Url.Action("spreadsheetapi/api") %>">Api</a>, <a href="<%= Url.Action("spreadsheetapi/apifill") %>">ApiFill</a>, <a href="<%= Url.Action("spreadsheetapi/apibullet") %>">ApiBullet</a>, <a href="<%= Url.Action("spreadsheetapi/apistroke") %>">ApiStroke</a>, <a href="<%= Url.Action("spreadsheetapi/apigradientstop") %>">ApiGradientStop</a>, <a href="<%= Url.Action("spreadsheetapi/apiunicolor") %>">ApiUniColor</a>, <a href="<%= Url.Action("spreadsheetapi/apipresetcolor") %>">ApiPresetColor</a>, <a href="<%= Url.Action("spreadsheetapi/apirgbcolor") %>">ApiRGBColor</a>, <a href="<%= Url.Action("spreadsheetapi/apischemecolor") %>">ApiSchemeColor</a>, <a href="<%= Url.Action("spreadsheetapi/apiname") %>">ApiName</a>
         </p>
@@ -113,6 +113,6 @@ oWorksheet.SetColumnWidth(0, 20);                // set the width of the first c
 oWorksheet.GetRange("A1").SetValue("New cell");  // set the 'New cell' value to the A1 spreadsheet cell
 builder.SaveFile("xlsx", "example.xlsx");        // save the resulting spreadsheet as a file in the .xlsx format with a new 'example.xlsx' name
 builder.CloseFile();                             // close the spreadsheet file and finish work with ONLYOFFICE Document Builder</pre>
-    <p>As you can see you just need to use the <em>builder.OpenFile();</em> method of the <a href="<%= Url.Action("integrationapi/cdocbuilder") %>">CDocBuilder</a> class with the path to the necessary spreadsheet as an argument to open it. In the above example we open <b>myspreadsheet.xlsx</b> spreadsheet, get its first sheet and change the sheet name, first column width and enter the new value into its A1 cell. The same way any other spreadsheet element can be changed.</p>
+    <p>As you can see you just need to use the <em>builder.OpenFile();</em> method of the <a href="<%= Url.Action("integrationapi/cdocbuilder", "docbuilder") %>">CDocBuilder</a> class with the path to the necessary spreadsheet as an argument to open it. In the above example we open <b>myspreadsheet.xlsx</b> spreadsheet, get its first sheet and change the sheet name, first column width and enter the new value into its A1 cell. The same way any other spreadsheet element can be changed.</p>
     <p>Use the appropriate API documentation sections to find out which methods allow you to change certain document and spreadsheet element formatting properties.</p>
 

@@ -4,7 +4,7 @@
 
 <%@ Register TagPrefix="UserControl"
     TagName="Generator"
-    Src="~/Views/DocBuilder/Buildersamples/samplegenerator.ascx" %>
+    Src="~/Views/OfficeApi/Buildersamples/samplegenerator.ascx" %>
 
 <h1>
     <a class="up" href="<%= Url.Action("buildersamples/") %>"></a>
@@ -24,7 +24,7 @@
     <a href="<%= Url.Action("formapi/api/createtextform") %>">Api/CreateTextForm</a>).</li>
 </ul>
 
-<p>This sample is available for the <b>C++ and .Net DocBuilder Frameworks</b>.<br />Download the sample and get more information on the <a href="<%= Url.Action("builderframeworksamples") %>">Builder framework samples</a> page.</p>
+<p>This sample is available for the <b>C++ and .Net DocBuilder Frameworks</b>.<br />Download the sample and get more information on the <a href="<%= Url.Action("builderframeworksamples", "docbuilder") %>">Builder framework samples</a> page.</p>
 
 <textarea id="builderScript" name="builderScript" data-easy="true" class="docbuilder-script" spellcheck="false"></textarea>
 
