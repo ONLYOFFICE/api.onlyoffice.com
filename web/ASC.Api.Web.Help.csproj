@@ -2355,6 +2355,7 @@
     <Content Include="Content\img\arrow-gray.svg" />
 	<Content Include="Content\img\arrow-select.svg" />
     <Content Include="Content\img\close.svg" />
+    <Content Include="Content\img\copy-content.svg" />
     <Content Include="Content\img\csharp\add.png" />
     <Content Include="Content\img\csharp\browse.png" />
     <Content Include="Content\img\csharp\platform.png" />

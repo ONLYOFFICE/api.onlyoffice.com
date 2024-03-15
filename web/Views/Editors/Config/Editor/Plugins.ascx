@@ -41,9 +41,26 @@
         <button id="addButton_plugins_pluginsData" class="add-button" style="margin-top: 12px;">+</button>
     </div>
 </div>
-<div id="configPreHolder">
-    <pre style="word-wrap: break-word;" id="configPre"></pre>
+<div id="configPreHolder" style="display: flex; margin-top: 18px;">
+    <div>
+        <div id="configHeader" class="configHeader">
+            <div class="preContentType">
+                <span style="font-family: monospace">Config.js</span>
+            </div>
+            <div>
+                <div class="tooltip">
+                    <div class="copyConfig">
+                        <img alt="Copy" src="<%= Url.Content("~/content/img/copy-content.svg") %>" />
+                        <span id="tooltiptext-hover" style="display: inline;" class="tooltiptext">When you copy, you get the HTML code for the whole example.</span>
+                        <span id="tooltiptext-click" style="display: none;" class="tooltiptext">HTML copied.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <pre style="word-wrap: break-word;" id="configPre"></pre>
+    </div>  
 </div>
+
 
 <div id="editorSpace">
     <div style="min-width: 832px; min-height: 550px;" id="placeholder"></div>
@@ -132,7 +149,37 @@
             Width = "100%"
         }) %>;
 </script>
+<script>
+    var config_global = "";
+    $(".copyConfig").click(function () {
+        var html = `
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script type="text/javascript" src="<%= ConfigurationManager.AppSettings["editor_url"] ?? "" %>/web-apps/apps/api/documents/api.js"><\/script>
+</head>
+<body>
+    <div id="editorSpace">
+        <div id="placeholder"></div>
+    </div>
+    <script>
+new DocsAPI.DocEditor("placeholder", ${JSON.stringify(config_global, null, '\t')});
+    <\/script>
+</body>
+`;
 
+        navigator.clipboard.writeText(html).then(function () {
+            document.getElementById("tooltiptext-hover").style = "display: none;";
+            document.getElementById("tooltiptext-click").style = "display: inline; width: 95px!important;";
+        }, function (err) {
+            console.error('Could not copy content: ', err);
+        });
+    })
+    $(".tooltip").mouseleave(function () {
+        document.getElementById("tooltiptext-hover").style = "display: inline;";
+        document.getElementById("tooltiptext-click").style = "display: none;";
+    })
+</script>
 <script>
     $(document).ready(function () {
         resizeCodeInput();
@@ -210,7 +257,7 @@
             window.docEditor.destroyEditor();
         }
         window.docEditor = new DocsAPI.DocEditor("placeholder", config);
-
+        config_global = config;
         var pre = document.getElementById("configPre");
         pre.innerHTML = config_string;
         hljs.highlightBlock(pre);
@@ -232,9 +279,10 @@
         var paddingBottom = Number(getComputedStyle(document.getElementsByTagName("pre")[0]).paddingBottom.split("px")[0]);
         var borderSize = Number(getComputedStyle(document.getElementsByTagName("pre")[0]).border.split("px")[0]);
         var controlFieldsHeight = Math.round(document.getElementById("controlFields").getBoundingClientRect().height * 100) / 100;
+        var headerHeight = document.getElementById("configHeader").getBoundingClientRect().height;
 
         var offset = paddingTop + paddingBottom + (borderSize * 2);
-        var height = controlFieldsHeight - offset;
+        var height = controlFieldsHeight - offset - headerHeight;
 
         document.getElementById("configPre").style.height = `${height}px`;
     }
