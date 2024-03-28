@@ -123,6 +123,12 @@
                     <a href="<%= Url.Action("buildersamples/createformaldocument") %>">Creating formal document</a>
                 </li>
                 <li>
+                    <a href="<%= Url.Action("buildersamples/addwatermark") %>">Adding watermark</a>
+                </li>
+                <li>
+                    <a href="<%= Url.Action("buildersamples/createtabledocument") %>">Creating table document</a>
+                </li>
+                <li>
                     <a href="<%= Url.Action("buildersamples/createreports") %>">Creating report document</a>
                 </li>
                 <li>
@@ -130,6 +136,9 @@
                 </li>
                 <li>
                     <a href="<%= Url.Action("buildersamples/fillspreadsheet") %>">Filling spreadsheet</a>
+                </li>
+                <li>
+                    <a href="<%= Url.Action("buildersamples/createspreadsheetchart") %>">Creating spreadsheet chart</a>
                 </li>
                 <li>
                     <a href="<%= Url.Action("buildersamples/commenterrors") %>">Commenting spreadsheet errors</a>

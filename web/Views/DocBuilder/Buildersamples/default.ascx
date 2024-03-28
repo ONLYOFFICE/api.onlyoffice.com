@@ -15,6 +15,28 @@
         </div>
         <p class="block_more-sample"><a href="<%= Url.Action("buildersamples/createformaldocument") %>">More</a></p>
     </li>
+
+    <li class="sample-example" data-types="text-editor,spreadsheet,presentation,visual,non-system,ole-object">
+        <a href="<%= Url.Action("buildersamples/addwatermark") %>">
+            <div class="example-sample-img add-watermark"></div>
+        </a>
+        <div class="sample-info">
+            <p class="name-example-sample"><a href="<%= Url.Action("buildersamples/addwatermark") %>">Adding watermark</a></p>
+            <p>Adds a watermark to the document.</p>
+        </div>
+        <p class="block_more-sample"><a href="<%= Url.Action("buildersamples/addwatermark") %>">More</a></p>
+    </li>
+    <li class="sample-example" data-types="text-editor,spreadsheet,presentation,visual,non-system,ole-object">
+        <a href="<%= Url.Action("buildersamples/createtabledocument") %>">
+            <div class="example-sample-img create-table-document"></div>
+        </a>
+        <div class="sample-info">
+            <p class="name-example-sample"><a href="<%= Url.Action("buildersamples/createtabledocument") %>">Creating table document</a></p>
+            <p>Creates a document with a styled table.</p>
+        </div>
+        <p class="block_more-sample"><a href="<%= Url.Action("buildersamples/createtabledocument") %>">More</a></p>
+    </li>
+
     <li class="sample-example" data-types="text-editor,spreadsheet,presentation,visual,non-system,ole-object">
         <a href="<%= Url.Action("buildersamples/createreports") %>">
             <div class="example-sample-img create-reports"></div>
@@ -44,6 +66,16 @@
             <p>Fills spreadsheet with array-based values.</p>
         </div>
         <p class="block_more-sample"><a href="<%= Url.Action("buildersamples/fillspreadsheet") %>">More</a></p>
+    </li>
+    <li class="sample-example" data-types="text-editor,spreadsheet,presentation,visual,non-system,ole-object">
+        <a href="<%= Url.Action("buildersamples/createspreadsheetchart") %>">
+            <div class="example-sample-img create-spreadsheet-chart"></div>
+        </a>
+        <div class="sample-info">
+            <p class="name-example-sample"><a href="<%= Url.Action("buildersamples/createspreadsheetchart") %>">Creating chart spreadsheet</a></p>
+            <p>Creates a chart filled with array-based values in the spreadsheet.</p>
+        </div>
+        <p class="block_more-sample"><a href="<%= Url.Action("buildersamples/createspreadsheetchart") %>">More</a></p>
     </li>
     <li class="sample-example" data-types="text-editor,spreadsheet,presentation,visual,non-system,ole-object">
         <a href="<%= Url.Action("buildersamples/commenterrors") %>">

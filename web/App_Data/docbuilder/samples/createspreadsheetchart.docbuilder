@@ -1,0 +1,23 @@
+builder.CreateFile("xlsx");
+var oWorksheet = Api.GetActiveSheet();
+var sHeaders = [ "Year", "Revenue South dept", "Revenue West dept" ];
+var sData = [
+    [ "Q1 2022", "Q2 2022", "Q3 2022", "Q4 2022", "Q1 2023", "Q2 2023", "Q3 2023" ],
+    [ "14512", "15502", "13897", "11110", "13906", "12023", "11274" ],
+    [ "9201", "10338", "8937", "11680", "15516", "18095", "18251" ]
+];
+
+for (var i = 0; i < sHeaders.length; i++) {
+  oWorksheet.GetRangeByNumber(i, 0).SetValue(sHeaders[i]);
+  for (var j = 0; j < sData[0].length; j++) {
+    oWorksheet.GetRangeByNumber(i, j + 1).SetValue(sData[i][j]);
+  }
+}
+oWorksheet.GetRange("B2:H3").SetNumberFormat("$#,##0");
+oWorksheet.GetRange("A1").SetColumnWidth(18);
+oWorksheet.GetRange("B1:H3").SetAlignHorizontal("left");
+var sheetName = oWorksheet.GetName();
+var oChart = oWorksheet.AddChart(`'${sheetName}'!$A$1:$H$3`, true, "lineNormal", 1, 153 * 36000, 50 * 36000, 0, 0, 4, 0);
+oChart.SetTitle("Financial Overview (in thousands of USD)", 10);
+oChart.SetLegendPos("left");
+Api.Save();

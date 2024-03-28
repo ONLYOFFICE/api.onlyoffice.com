@@ -1,0 +1,12 @@
+builder.CreateFile("docx");
+var oDocument = Api.GetDocument();
+oDocument.InsertWatermark("Watermark", true);
+var oSettings = oDocument.GetWatermarkSettings();
+oSettings.SetType("image");
+oSettings.SetImageURL("https://api.onlyoffice.com/content/img/docbuilder/examples/onlyoffice_logo.png");
+oSettings.SetImageSize(40 * 36000, 40 * 36000);
+oSettings.SetDirection("horizontal");
+oSettings.SetOpacity(100);
+oDocument.SetWatermarkSettings(oSettings);
+builder.SaveFile("docx", "Watermark.docx");
+builder.CloseFile();
