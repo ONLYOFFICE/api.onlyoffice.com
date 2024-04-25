@@ -1,1271 +1,1041 @@
-// @ts-check
+// todo: remove html from description.
+// todo: we should omit the - in the returns description, if it is not a list.
+// todo: try to convert summary to markdown. It is not always a sentence.
+// todo?: bring back the see also.
+// todo: omit quotes from string literals.
 
-/**
- * @typedef {import("../types/doclet.js").Doclet} Doclet
- * @typedef {import("../types/doclet.js").DocletCatharsis} DocletCatharsis
- * @typedef {import("../types/doclet.js").DocletParam} DocletParam
- * @typedef {import("../../types/index.js").AliasDeclaration} AliasDeclaration
- * @typedef {import("../../types/index.js").ClassDeclaration} ClassDeclaration
- * @typedef {import("../../types/index.js").ConstructorDeclaration} ConstructorDeclaration
- * @typedef {import("../../types/index.js").Declaration} Declaration
- * @typedef {import("../../types/index.js").DeclarationMeta} DeclarationMeta
- * @typedef {import("../../types/index.js").DeclarationParent} DeclarationParent
- * @typedef {import("../../types/index.js").DeclarationType} DeclarationType
- * @typedef {import("../../types/index.js").DeclarationValue} DeclarationValue
- * @typedef {import("../../types/index.js").EventDeclaration} EventDeclaration
- * @typedef {import("../../types/index.js").FunctionType} FunctionType
- * @typedef {import("../../types/index.js").InstanceMethodDeclaration} InstanceMethodDeclaration
- * @typedef {import("../../types/index.js").InstancePropertyDeclaration} InstancePropertyDeclaration
- * @typedef {import("../../types/index.js").ObjectDeclaration} ObjectDeclaration
- * @typedef {import("../../types/index.js").PropertyDeclaration} PropertyDeclaration
- * @typedef {import("../../types/index.js").ReferenceType} ReferenceType
- * @typedef {import("../../types/index.js").TypeDeclaration} TypeDeclaration
- */
+import {Readable, Writable} from "node:stream"
+import type {Library} from "@onlyoffice/documentation-declarations-types/library.ts"
+import {Tokenizer} from "@onlyoffice/documentation-declarations-types/tokenizer.js"
+import {createESlint} from "@onlyoffice/documentation-utils/eslint.ts"
+import {AsyncTransform} from "@onlyoffice/documentation-utils/stream.ts"
+import languagedetection from "@vscode/vscode-languagedetection"
+import {English} from "sentence-splitter/lang"
+import {split} from "sentence-splitter"
+import type {Catharsis, Doclet, DocletParam} from "../types/doclet.d.ts"
+import {console} from "./console.ts"
+import {toDeclarationTokens, toTypeTokens} from "./tokenizer.ts"
 
-import { Transform } from "node:stream"
-import { createEslint } from "@onlyoffice/documentation-utils/eslint.ts"
-import { English } from "sentence-splitter/lang"
-import { split } from "sentence-splitter"
-import { tokenizeDeclaration, tokenizeType } from "./tokenizer.ts"
+const {ModelOperations} = languagedetection
+const model = new ModelOperations()
+const eslint = createESlint()
 
-const eslint = createEslint()
+export interface FirstIterationChunk {
+  key: number
+  value: Doclet
+}
 
-// todo: rename name to identifier (parameters too)
-// todo: rename custom to reference
-// todo: delete the syntax property from content
-// todo: https://github.com/textlint-rule/sentence-splitter
+export class FirstIteration extends AsyncTransform {
+  _c: Cache
+  _i: number
 
-class PreprocessDeclarations extends Transform {
-  /**
-   * @param {DeclarationsCache} cache
-   */
-  constructor(cache) {
-    super({ objectMode: true })
-    this._i = 0
-    this._cache = cache
+  constructor(c: Cache) {
+    super({objectMode: true})
+    this._c = c
+    this._i = -1
   }
 
-  _transform(ch, _, cb) {
-    this._asyncTransform(ch).then(() => {
-      cb(null)
-    })
-  }
+  async _atransform(ch: FirstIterationChunk): Promise<undefined> {
+    const m = JSON.stringify({key: ch.key, longname: ch.value.longname})
+    console.log(`Start processing '${m}' at first iteration`)
 
-  /**
-   * @param {any} ch
-   * @returns {Promise<void>}
-   */
-  async _asyncTransform(ch) {
-    /** @type {Doclet} */
-    const doc = ch.value
+    const [a, ...errs] = await toDeclaration(ch.value)
 
-    if (Object.hasOwn(doc, "kind")) {
-      if (doc.kind === "package") {
-        return
-      }
+    for (const e of errs) {
+      console.error(e)
     }
 
-    const meta = parseMeta(doc)
+    for (const d of a) {
+      this._record(d)
+      this._overload(d)
+      this._index(d)
+      this.push(d)
+    }
 
-    // todo: "scope": "static"
-    // todo: for id const sign = "" (we do not need actually a new const)
-    // just add the sign to the id
+    console.log(`Finish processing '${m}' at first iteration`)
+  }
 
-    // In most cases anonymous refer to a global iife.
+  _record(d: Library.Declaration) {
+    const b = this._c.next
 
-    if (Object.hasOwn(doc, "inherits")) {
-      if (Object.hasOwn(doc, "memberof")) {
-        if (doc.memberof === "<anonymous>") {
-          return
+    if (d.kind === "class") {
+      if (d.extends) {
+        for (const e of d.extends) {
+          let r = b.records[e.id]
+          if (!r) {
+            r = cacheRecord()
+            b.records[e.id] = r
+          }
+
+          r.extendsBy.add(d.id)
         }
-        const mo = doc.memberof.replace("<anonymous>~", "")
-        const cid = createID(meta.package, mo)
-        const p = doc.inherits.split("#")[0]
-        const pid = createID(meta.package, p)
-        this._cache.populate(cid, "extends", pid)
-        this._cache.populate(pid, "implements", cid)
       }
+
       return
     }
 
-    let d = parseDeclaration(doc, meta)
-
-    /** @type {Declaration[]} */
-    const ms = []
-
-    if (Object.hasOwn(doc, "kind")) {
-      if (doc.kind === "class") {
-        /** @type {ClassDeclaration} */
-        const cl = {
-          ...d,
-          kind: "class"
-        }
-        // @ts-ignore
-        delete cl.type
-
-        if (Object.hasOwn(doc, "properties")) {
-          doc.properties.forEach((p) => {
-            const pr = createInstanceProperty(p, d)
-            ms.push(pr)
-            cl.instanceProperties = [{
-              type: "reference",
-              id: pr.id,
-              identifier: p.name
-            }]
-          })
-        }
-
-        const co = createConstructor(doc, cl)
-        ms.push(co)
-
-        cl.constructors = [{
-          type: "reference",
-          id: co.id,
-          identifier: co.identifier
-        }]
-        cl.title = createTitle(cl)
-        cl.signature = tokenizeDeclaration(cl)
-
-        d = cl
-      } else if (doc.kind === "event") {
-        const ev = createEvent(doc, d)
-
-        if (Object.hasOwn(ev, "parent")) {
-          this._cache.populate(ev.parent.id, "events", ev.id)
-        }
-
-        d = ev
-      } else if (doc.kind === "function") {
-        const fu = createFunction(doc, d)
-
-        /** @type {Declaration} */
-        let td = fu
-        if (Object.hasOwn(td, "parent")) {
-          /** @type {InstanceMethodDeclaration} */
-          // @ts-ignore
-          const me = {
-            ...td,
-            kind: "instanceMethod"
-          }
-          this._cache.populate(td.parent.id, "instanceMethods", td.id)
-          td = me
-        }
-
-        td.signature = tokenizeDeclaration(td)
-        td.title = createTitle(td)
-
-        d = td
-      } else if (doc.kind === "typedef") {
-        if (Object.hasOwn(doc, "type") && Object.hasOwn(doc.type, "parsedType")) {
-          const t = parseType(d, doc.type.parsedType)
-          if (t.type === "object") {
-            /** @type {ObjectDeclaration} */
-            const ob = {
-              ...d,
-              kind: "object",
-              type: {
-                type: "object"
-              }
-            }
-
-            if (Object.hasOwn(doc, "properties")) {
-              ob.type.properties = []
-              doc.properties.forEach((p) => {
-                const pr = createProperty(p, d)
-                ms.push(pr)
-                ob.type.properties.push({
-                  type: "reference",
-                  id: pr.id,
-                  identifier: p.name
-                })
-              })
-            }
-
-            ob.title = createTitle(ob)
-            d = ob
-          } else {
-            // @ts-ignore
-            d.type = t
-            d.signature = tokenizeDeclaration(d)
-            d.title = createTitle(d)
-          }
-        }
+    if (d.kind === "event") {
+      if (!d.parent) {
+        throw new Error("Event has no parent")
       }
+
+      let r = b.records[d.parent.id]
+      if (!r) {
+        r = cacheRecord()
+        b.records[d.parent.id] = r
+      }
+
+      r.events.add(d.id)
+
+      return
     }
 
-    if (Object.hasOwn(doc, "examples")) {
-      d.examples = await parseExamples(doc.examples)
+    if (d.kind === "method") {
+      if (!d.parent) {
+        throw new Error("Method has no parent")
+      }
+
+      let mp = b.records[d.parent.id]
+      if (!mp) {
+        mp = cacheRecord()
+        b.records[d.parent.id] = mp
+      }
+
+      mp.methods.add(d.id)
+
+      return
+    }
+  }
+
+  _overload(d: Library.Declaration) {
+    const b = this._c.next
+
+    const u0 = d.id
+    const d1 = d
+    const u1 = ui(u0)
+
+    if (u1 !== u0) {
+      const r0 = reference(u0)
+      const r1 = reference(u1)
+
+      const i0 = b.indexes[u0]
+      if (i0 === undefined) {
+        throw new Error(`Declaration '${u0}' has no index`)
+      }
+
+      const d0 = b.declarations[i0]
+      if (!d0) {
+        throw new Error(`Index '${i0}' has no declaration`)
+      }
+
+      let a0 = d0.overloads
+      if (!a0) {
+        a0 = []
+        d0.overloads = a0
+      }
+
+      let a1 = d1.overloadsBy
+      if (!a1) {
+        a1 = []
+        d1.overloadsBy = a1
+      }
+
+      for (const r of a0) {
+        const i = b.indexes[r.id]
+        if (i === undefined) {
+          throw new Error(`Declaration '${r.id}' has no index`)
+        }
+
+        const d = b.declarations[i]
+        if (!d) {
+          throw new Error(`Index '${i}' has no declaration`)
+        }
+
+        let a = d.overloadsBy
+        if (!a) {
+          a = []
+          d.overloadsBy = a
+        }
+
+        a.push(r1)
+        a1.push(r)
+      }
+
+      a0.push(r1)
+      a1.push(r0)
     }
 
-    this._cache.index(d.id, this._i)
+    d1.id = u1
+
+    function ui(u: string): string {
+      let n = u
+      let i = 0
+      while (b.indexes[n] !== undefined) {
+        i += 1
+        n = `${u}-${i}`
+      }
+      return n
+    }
+  }
+
+  _index(d: Library.Declaration): void {
     this._i += 1
+    this._c.next.indexes[d.id] = this._i
+  }
+}
+
+export class SecondIteration extends AsyncTransform {
+  _c: Cache
+  _i: number
+
+  constructor(c: Cache) {
+    super({objectMode: true})
+    this._c = c
+    this._i = -1
+  }
+
+  async _atransform(d: Library.Declaration): Promise<undefined> {
+    const m = JSON.stringify({id: d.id})
+    console.log(`Start processing '${m}' at second iteration`)
+
+    this._populate(d)
+    this._index(d)
     this.push(d)
-    ms.forEach((d) => {
-      this._cache.index(d.id, this._i)
-      this._i += 1
-      this.push(d)
+
+    console.log(`Finish processing '${m}' at second iteration`)
+  }
+
+  _populate(d: Library.Declaration) {
+    const b = this._c.current
+
+    const r = b.records[d.id]
+    if (!r) {
+      return
+    }
+
+    if (d.kind === "class") {
+      if (r.events.size > 0) {
+        let a = d.events
+        if (!a) {
+          a = []
+          d.events = a
+        }
+
+        for (const e of r.events) {
+          const r = reference(e)
+          a.push(r)
+        }
+      }
+
+      if (r.extendsBy.size > 0) {
+        let a = d.extendsBy
+        if (!a) {
+          a = []
+          d.extendsBy = a
+        }
+
+        for (const e of r.extendsBy) {
+          const r = reference(e)
+          a.push(r)
+        }
+      }
+
+      if (r.methods.size > 0) {
+        let a = d.instanceMethods
+        if (!a) {
+          a = []
+          d.instanceMethods = a
+        }
+
+        for (const e of r.methods) {
+          const r = reference(e)
+          a.push(r)
+        }
+      }
+
+      return
+    }
+  }
+
+  _index(d: Library.Declaration): void {
+    this._i += 1
+    this._c.next.indexes[d.id] = this._i
+  }
+}
+
+export class ThirdIteration extends AsyncTransform {
+  _c: Cache
+  _i: number
+
+  constructor(c: Cache) {
+    super({objectMode: true})
+    this._c = c
+    this._i = -1
+  }
+
+  async _atransform(d: Library.Declaration): Promise<undefined> {
+    const m = JSON.stringify({id: d.id})
+    console.log(`Start processing '${m}' at third iteration`)
+
+    d.signature = toDeclarationTokens(d)
+    if (d.signature.length === 0) {
+      d.signature = undefined
+    }
+
+    if (d.signature) {
+      this._sig(d.signature)
+    }
+
+    // Cannot merge statements, TS does not understand well the in keyword.
+
+    if (
+      d.kind === "constructor" ||
+      d.kind === "event" ||
+      d.kind === "method"
+    ) {
+      this._func(d.type)
+    }
+
+    if (
+      d.kind === "type" &&
+      !("id" in d.type) &&
+      d.type.type === "function"
+    ) {
+      this._func(d.type)
+    }
+
+    this._index(d)
+    this.push(d)
+
+    console.log(`Finish processing '${m}' at third iteration`)
+  }
+
+  _func(t: Library.FunctionType) {
+    if (t.parameters) {
+      for (const p of t.parameters) {
+        // Conceptually there should be toValueTokens.
+        p.signature = toTypeTokens(p.type)
+        this._sig(p.signature)
+      }
+    }
+
+    if (t.returns) {
+      t.returns.signature = toTypeTokens(t.returns.type)
+      this._sig(t.returns.signature)
+    }
+  }
+
+  _sig(s: Tokenizer.Token[]) {
+    const b = this._c.current
+    for (const t of s) {
+      if (t.type === "reference" && t.text === "") {
+
+        const i = b.indexes[t.id]
+        if (i === undefined) {
+          t.text = t.id
+          continue
+        }
+
+        const d = b.declarations[i]
+        if (!d) {
+          t.text = t.id
+          continue
+        }
+
+        t.text = d.identifier
+      }
+    }
+  }
+
+  _index(d: Library.Declaration): void {
+    this._i += 1
+    this._c.next.indexes[d.id] = this._i
+  }
+}
+
+export class Cache {
+  buffers: CacheBuffer[]
+
+  get next(): CacheBuffer {
+    return this.buffers[0]
+  }
+
+  get current(): CacheBuffer {
+    return this.buffers[1]
+  }
+
+  constructor() {
+    this.buffers = []
+  }
+
+  setup() {
+    this.buffers = [cacheBuffer(), cacheBuffer()]
+  }
+
+  step() {
+    this.buffers.pop()
+    this.buffers.unshift(cacheBuffer())
+  }
+
+  toWritable(): Writable {
+    const b = this.next
+    return new Writable({
+      objectMode: true,
+      write(ch, _, cb) {
+        b.declarations.push(ch)
+        cb()
+      }
     })
   }
+
+  toReadable(): Readable {
+    const b = this.current
+    return Readable.from(b.declarations)
+  }
 }
 
-class PostprocessDeclarations extends Transform {
-  /**
-   * @param {DeclarationsCache} cache
-   */
-  constructor(cache) {
-    super({ objectMode: true })
-    this._cache = cache
+export interface CacheBuffer {
+  declarations: Partial<Library.Declaration[]>
+  indexes: Partial<Record<string, number>>
+  records: Partial<Record<string, CacheRecord>>
+}
+
+function cacheBuffer(): CacheBuffer {
+  return {
+    declarations: [],
+    indexes: {},
+    records: {}
   }
+}
 
-  _transform(ch, _, cb) {
-    /** @type {Declaration} */
-    const d = ch.value
+export interface CacheRecord {
+  events: Set<string>
+  extendsBy: Set<string>
+  methods: Set<string>
+}
 
-    const dc = this._cache.retrieve(d.id)
-    if (dc !== undefined) {
-      if (Object.hasOwn(dc, "instanceMethods")) {
-        // todo: resolve ignoring.
-        // @ts-ignore
-        d.instanceMethods = dc.instanceMethods.map((id) => {
-          /** @type {ReferenceType} */
-          const t = {
-            type: "reference",
-            id,
-            identifier: ""
-          }
-          return t
-        })
-      }
-      if (Object.hasOwn(dc, "methods")) {
-        // todo: resolve ignoring.
-        // @ts-ignore
-        d.methods = dc.methods.map((id) => {
-          /** @type {ReferenceType} */
-          const t = {
-            type: "reference",
-            id,
-            identifier: ""
-          }
-          return t
-        })
-      }
-      if (Object.hasOwn(dc, "events")) {
-        // todo: resolve ignoring.
-        // @ts-ignore
-        d.events = dc.events.map((id) => {
-          /** @type {ReferenceType} */
-          const t = {
-            type: "reference",
-            id,
-            identifier: ""
-          }
-          return t
-        })
-      }
-      if (Object.hasOwn(dc, "extends")) {
-        // todo: resolve ignoring.
-        // @ts-ignore
-        d.extends = dc.extends.map((id) => {
-          /** @type {ReferenceType} */
-          const t = {
-            type: "reference",
-            id,
-            identifier: ""
-          }
-          return t
-        })
-      }
-      if (Object.hasOwn(dc, "implements")) {
-        // todo: resolve ignoring.
-        // @ts-ignore
-        d.implements = dc.implements.map((id) => {
-          /** @type {ReferenceType} */
-          const t = {
-            type: "reference",
-            id,
-            identifier: ""
-          }
-          return t
-        })
-      }
+function cacheRecord(): CacheRecord {
+  return {
+    events: new Set(),
+    extendsBy: new Set(),
+    methods: new Set()
+  }
+}
+
+async function toDeclaration(dc: Doclet): Promise<[Library.Declaration[], ...Error[]]> {
+  switch (dc.kind) {
+  case "class":
+    return toClassDeclaration(dc)
+
+  case "constant":
+    return [[], new Error("Constant is not supported")]
+
+  case "event":
+    return toEventDeclaration(dc)
+
+  case "external":
+    return [[], new Error("External is not supported")]
+
+  case "file":
+    return [[], new Error("File is not supported")]
+
+  case "function":
+    return toFunctionDeclaration(dc)
+
+  case "interface":
+    return [[], new Error("Interface is not supported")]
+
+  case "member":
+    return [[], new Error("Member is not supported")]
+
+  case "mixin":
+    return [[], new Error("Mixin is not supported")]
+
+  case "module":
+    return [[], new Error("Module is not supported")]
+
+  case "namespace":
+    return [[], new Error("Namespace is not supported")]
+
+  case "package":
+    return [[], new Error("Package is not supported")]
+
+  case "param":
+    return [[], new Error("Param is not supported")]
+
+  case "typedef":
+    return toTypeDeclaration(dc)
+
+  case undefined:
+    return [[], new Error("Doclet has no kind")]
+
+  default:
+    return [[], new Error(`Unknown kind: ${dc.kind}`)]
+  }
+}
+
+async function toClassDeclaration(dc: Doclet): Promise<[[Library.ClassDeclaration, ...Library.Declaration[]], ...Error[]]> {
+  const pa: Library.Declaration[] = []
+
+  const [d, ...errs0] = await toDeclarationNode(dc)
+  const cl = classDeclaration(d)
+
+  if (dc.augments && dc.augments.length > 0) {
+    let ex = cl.extends
+    if (!ex) {
+      ex = []
+      cl.extends = ex
     }
 
-    this.push(d)
-    cb(null)
+    for (const a of dc.augments) {
+      const r = reference(a)
+      ex.push(r)
+    }
+  }
+
+  if (dc.properties && dc.properties.length > 0) {
+    let pr = cl.instanceProperties
+    if (!pr) {
+      pr = []
+      cl.instanceProperties = pr
+    }
+
+    for (const dp of dc.properties) {
+      const [p] = await toPropertyDeclaration(cl, dp)
+      pa.push(p)
+
+      const r = reference(p.id)
+      pr.push(r)
+    }
+  }
+
+  const [cd, ...errs1] = await toConstructorDeclaration(cl, dc)
+  pa.push(cd)
+
+  let cs = cl.constructors
+  if (!cs) {
+    cs = []
+    cl.constructors = cs
+  }
+
+  const r = reference(cd.id)
+  cs.push(r)
+
+  return [[cl, ...pa], ...errs0, ...errs1]
+}
+
+function classDeclaration(d: Library.DeclarationNode): Library.ClassDeclaration {
+  return {
+    ...d,
+    kind: "class",
+    constructors: undefined,
+    events: undefined,
+    extends: undefined,
+    extendsBy: undefined,
+    instanceMethods: undefined,
+    instanceProperties: undefined,
+    typeMethods: undefined,
+    typeProperties: undefined
   }
 }
 
-class PostPostprocessDeclarations extends Transform {
-  /**
-   * @param {DeclarationsCache} cache
-   */
-  constructor(cache) {
-    super({ objectMode: true })
-    this._cache = cache
-  }
+async function toConstructorDeclaration(dn: Library.DeclarationNode, dc: Doclet): Promise<[Library.ConstructorDeclaration, ...Error[]]> {
+  dc = {...dc, memberof: dn.id, name: "constructor"}
+  const [[f], ...errs0] = await toFunctionDeclarationUnits(dc)
+  const [d, ...errs1] = await toDeclarationNode(dc)
+  const c = constructDeclaration(f, d)
 
-  _transform(ch, _, cb) {
-    this._asyncTransform(ch).then(() => {
-      cb(null)
+  if (dc.params && dc.params.length > 0) {
+    c.type.parameters = dc.params.map((p) => {
+      const [v, ...e] = toValue(p)
+      errs1.push(...e)
+      return v
     })
   }
 
-  async _asyncTransform(ch, _, cb) {
-    /** @type {Declaration} */
-    const d = ch.value
-
-    // todo: remove the postfixes.
-
-    // const heroSection = {
-    //   title: d.title,
-    //   signature: d.signature
-    // }
-    // /** @type {any} */
-    // const descriptionSection = {
-    //   type: "description",
-    //   description: d.description
-    // }
-    /** @type {any} */
-    const parametersSection = {
-      type: "parameters",
-      items: []
-    }
-    /** @type {any} */
-    const returnsSection = {
-      type: "returns",
-    }
-    /** @type {any} */
-    const examplesSection = {
-      type: "examples",
-      items: []
-    }
-    /** @type {any} */
-    const topicsSection = {
-      type: "topics",
-      items: []
-    }
-    /** @type {any} */
-    const relationshipSection = {
-      type: "relationship",
-      items: []
-    }
-    /** @type {any} */
-    const seeAlsoSection = {
-      type: "seeAlso",
-      items: []
-    }
-
-    let p
-    let items
-
-    switch (d.kind) {
-    case "class":
-      if (d.examples !== undefined) {
-        examplesSection.items = d.examples
-      }
-      if (d.constructors !== undefined) {
-        topicsSection.items.push({
-          title: "Constructors",
-          items: d.constructors
-        })
-      }
-      if (d.instanceProperties !== undefined) {
-        topicsSection.items.push({
-          title: "Instance Properties",
-          items: d.instanceProperties
-        })
-      }
-      if (d.instanceMethods !== undefined) {
-        topicsSection.items.push({
-          title: "Instance Methods",
-          items: d.instanceMethods
-        })
-      }
-      if (d.typeMethods !== undefined) {
-        topicsSection.items.push({
-          title: "Type Methods",
-          items: d.typeMethods
-        })
-      }
-      if (d.typeProperties !== undefined) {
-        topicsSection.items.push({
-          title: "Type Properties",
-          items: d.typeProperties
-        })
-      }
-      if (d.events !== undefined) {
-        topicsSection.items.push({
-          title: "Events",
-          items: d.events
-        })
-      }
-      if (d.extends !== undefined) {
-        relationshipSection.items.push({
-          title: "Extends",
-          items: d.extends
-        })
-      }
-      if (d.implements !== undefined) {
-        relationshipSection.items.push({
-          title: "Implements",
-          items: d.implements
-        })
-      }
-      break
-    case "constructor":
-      if (d.examples !== undefined) {
-        examplesSection.items = d.examples
-      }
-      if (d.type.parameters !== undefined) {
-        parametersSection.items = d.type.parameters.map((v) => {
-          const o = {
-            name: v.name,
-            signature: tokenizeType(v.type)
-          }
-          if (v.description !== undefined) {
-            o.description = v.description
-          }
-          if (v.default !== undefined) {
-            o.default = v.default
-          }
-          return o
-        })
-      }
-      if (d.parent !== undefined) {
-        // @ts-ignore
-        p = await this._cache._onRetrieve(d.parent.id)
-        if (p !== undefined && p.kind === "class") {
-          items = p.constructors.filter((c) => d.id !== c.id)
-          if (items.length > 0) {
-            seeAlsoSection.items = items
-          }
-        }
-      }
-      break
-    case "instanceMethod":
-      if (d.examples !== undefined) {
-        examplesSection.items = d.examples
-      }
-      if (d.type.parameters !== undefined) {
-        parametersSection.items = d.type.parameters.map((v) => {
-          const o = {
-            name: v.name,
-            signature: tokenizeType(v.type)
-          }
-          if (v.description !== undefined) {
-            o.description = v.description
-          }
-          if (v.default !== undefined) {
-            o.default = v.default
-          }
-          return o
-        })
-      }
-      if (d.type.returns !== undefined) {
-        returnsSection.signature = tokenizeType(d.type.returns.type)
-        if (d.type.returns.description !== undefined) {
-          returnsSection.description = d.type.returns.description
-        }
-      }
-      if (d.parent !== undefined) {
-        // @ts-ignore
-        p = await this._cache._onRetrieve(d.parent.id)
-        if (p !== undefined && p.kind === "class") {
-          items = p.instanceMethods.filter((c) => d.id !== c.id)
-          if (items.length > 0) {
-            seeAlsoSection.items = items
-          }
-        }
-      }
-      break
-    case "instanceProperty":
-      if (d.examples !== undefined) {
-        examplesSection.items = d.examples
-      }
-      if (d.parent !== undefined) {
-        // @ts-ignore
-        p = await this._cache._onRetrieve(d.parent.id)
-        if (p !== undefined && p.kind === "class") {
-          items = p.instanceProperties.filter((c) => d.id !== c.id)
-          if (items.length > 0) {
-            seeAlsoSection.items = items
-          }
-        }
-      }
-      break
-    case "typeMethod":
-      if (d.examples !== undefined) {
-        examplesSection.items = d.examples
-      }
-      if (d.type.parameters !== undefined) {
-        parametersSection.items = d.type.parameters.map((v) => {
-          const o = {
-            name: v.name,
-            signature: tokenizeType(v.type)
-          }
-          if (v.description !== undefined) {
-            o.description = v.description
-          }
-          if (v.default !== undefined) {
-            o.default = v.default
-          }
-          return o
-        })
-      }
-      if (d.type.returns !== undefined) {
-        returnsSection.signature = tokenizeType(d.type.returns.type)
-        if (d.type.returns.description !== undefined) {
-          returnsSection.description = d.type.returns.description
-        }
-      }
-      if (d.parent !== undefined) {
-        // @ts-ignore
-        p = await this._cache._onRetrieve(d.parent.id)
-        if (p !== undefined && p.kind === "class") {
-          items = p.typeMethods.filter((c) => d.id !== c.id)
-          if (items.length > 0) {
-            seeAlsoSection.items = items
-          }
-        }
-      }
-      break
-    case "typeProperty":
-      if (d.examples !== undefined) {
-        examplesSection.items = d.examples
-      }
-      if (d.parent !== undefined) {
-        // @ts-ignore
-        p = await this._cache._onRetrieve(d.parent.id)
-        if (p !== undefined && p.kind === "class") {
-          items = p.typeProperties.filter((c) => d.id !== c.id)
-          if (items.length > 0) {
-            seeAlsoSection.items = items
-          }
-        }
-      }
-      break
-    case "event":
-      if (d.examples !== undefined) {
-        examplesSection.items = d.examples
-      }
-      if (d.type.parameters !== undefined) {
-        parametersSection.items = d.type.parameters.map((v) => {
-          const o = {
-            name: v.name,
-            signature: tokenizeType(v.type)
-          }
-          if (v.description !== undefined) {
-            o.description = v.description
-          }
-          if (v.default !== undefined) {
-            o.default = v.default
-          }
-          return o
-        })
-      }
-      if (d.parent !== undefined) {
-        // @ts-ignore
-        p = await this._cache._onRetrieve(d.parent.id)
-        if (p !== undefined && p.kind === "class") {
-          items = p.events.filter((c) => d.id !== c.id)
-          if (items.length > 0) {
-            seeAlsoSection.items = items
-          }
-        }
-      }
-      break
-    case "object":
-      break
-    case "method":
-      break
-    case "property":
-      break
-    case "type":
-      if (d.examples !== undefined) {
-        examplesSection.items = d.examples
-      }
-      break
-    default:
-      // todo: throw new Error(`Unknown kind: ${d.kind}`)
-    }
-
-    const sections = []
-    // if (descriptionSection.description !== undefined) {
-    //   sections.push(descriptionSection)
-    // }
-    if (parametersSection.items.length > 0) {
-      sections.push(parametersSection)
-    }
-    if (returnsSection.description !== undefined || returnsSection.signature !== undefined) {
-      sections.push(returnsSection)
-    }
-    if (examplesSection.items.length > 0) {
-      sections.push(examplesSection)
-    }
-    if (topicsSection.items.length > 0) {
-      sections.push(topicsSection)
-    }
-    if (relationshipSection.items.length > 0) {
-      sections.push(relationshipSection)
-    }
-    if (seeAlsoSection.items.length > 0) {
-      sections.push(seeAlsoSection)
-    }
-    if (sections.length > 0) {
-      // @ts-ignore
-      d.sections = sections
-    }
-
-    this.push(d)
-  }
+  return [c, ...errs0, ...errs1]
 }
 
-/**
- * @param {Doclet} doc
- * @returns {DeclarationMeta}
- */
-function parseMeta(doc) {
-  /** @type {DeclarationMeta} */
-  const m = {
-    package: "main"
-  }
-
-  if (doc.meta !== undefined) {
-    if (doc.meta.file !== undefined) {
-      m.package = doc.meta.file
-    }
-  }
-
-  return m
+function constructDeclaration(f: Library.FunctionType, d: Library.DeclarationNode): Library.ConstructorDeclaration {
+  return {...d, kind: "constructor", type: f}
 }
 
-/**
- * @param {Doclet} doc
- * @param {DeclarationMeta} meta
- * @returns {Declaration}
- */
-function parseDeclaration(doc, meta) {
-  /** @type {Declaration} */
-  const d = {
+async function toPropertyDeclaration(dn: Library.DeclarationNode, dp: DocletParam): Promise<[Library.PropertyDeclaration, ...Error[]]> {
+  const [v, ...errs0] = toValue(dp)
+  const [d, ...errs1] = await toDeclarationNode({...dp, memberof: dn.id})
+
+  if ("id" in v) {
+    v.id = d.id
+  }
+
+  if (d.description) {
+    v.description = serializeString(d.description)
+  }
+
+  return [propertyDeclaration(v, d), ...errs0, ...errs1]
+}
+
+function propertyDeclaration(v: Library.Value, d: Library.DeclarationNode): Library.PropertyDeclaration {
+  return {...d, kind: "property", scope: "instance", ...v}
+}
+
+async function toEventDeclaration(dc: Doclet): Promise<[[Library.EventDeclaration], ...Error[]]> {
+  const [[f, d], ...errs] = await toFunctionDeclarationUnits(dc)
+  return [[eventDeclaration(f, d)], ...errs]
+}
+
+function eventDeclaration(f: Library.FunctionType, d: Library.DeclarationNode): Library.EventDeclaration {
+  return {...d, kind: "event", type: f}
+}
+
+async function toFunctionDeclaration(dc: Doclet): Promise<[[Library.MethodDeclaration | Library.TypeDeclaration], ...Error[]]> {
+  const [[f, d], ...errs] = await toFunctionDeclarationUnits(dc)
+  if (!d.parent) {
+    return [[typeDeclaration(f, d)], ...errs]
+  }
+  return [[methodDeclaration(f, d)], ...errs]
+}
+
+function methodDeclaration(f: Library.FunctionType, d: Library.DeclarationNode): Library.MethodDeclaration {
+  return {...d, kind: "method", scope: "instance", type: f}
+}
+
+async function toFunctionDeclarationUnits(dc: Doclet): Promise<[[Library.FunctionType, Library.DeclarationNode], ...Error[]]> {
+  const t = typeNode()
+  const f = functionType(t)
+  const [d, ...errs] = await toDeclarationNode(dc)
+
+  if (dc.params && dc.params.length > 0) {
+    f.parameters = dc.params.map((p) => {
+      const [v, ...e] = toValue(p)
+      errs.push(...e)
+      return v
+    })
+  }
+
+  // todo: should we apple void if no returns statement?
+  // what about class constructors?
+  if (dc.returns && dc.returns.length > 0) {
+    // JSDoc allows multiple @returns, in practice, the first one is used only.
+    const r = dc.returns[0]
+
+    const [t, ...e] = toVoidableType(r)
+    errs.push(...e)
+
+    const fr = functionReturns(t)
+    if (r.description) {
+      fr.description = serializeString(r.description)
+    }
+
+    f.returns = fr
+  }
+
+  return [[f, d], ...errs]
+}
+
+async function toTypeDeclaration(dc: Doclet): Promise<[[Library.TypeDeclaration], ...Error[]]> {
+  const [t, ...errs0] = toAnyableType(dc)
+
+  if (
+    !("id" in t) &&
+    t.type === "object" &&
+    dc.properties &&
+    dc.properties.length > 0
+  ) {
+    t.properties = dc.properties.map((p) => {
+      const [v, ...e] = toValue(p)
+      errs0.push(...e)
+      return v
+    })
+  }
+
+  const [d, ...errs1] = await toDeclarationNode(dc)
+  const td = typeDeclaration(t, d)
+
+  return [[td], ...errs0, ...errs1]
+}
+
+function typeDeclaration(t: Library.Type, d: Library.DeclarationNode): Library.TypeDeclaration {
+  return {...d, kind: "type", type: t}
+}
+
+async function toDeclarationNode(dc: Doclet): Promise<[Library.DeclarationNode, ...Error[]]> {
+  const errs: Error[] = []
+  const d = declarationNode()
+
+  if (!dc.name) {
+    errs.push(new Error("Doclet has no name"))
+  } else {
+    d.id = dc.name
+    d.title = dc.name
+    d.identifier = dc.name
+  }
+
+  if (dc.memberof) {
+    d.id = `${dc.memberof}#${d.id}`
+    d.parent = reference(dc.memberof)
+  }
+
+  ;[d.summary, d.description] = resolveAbstract(dc)
+  if (!d.summary) {
+    d.summary = undefined
+  }
+  if (!d.description) {
+    d.description = undefined
+  }
+
+  if (dc.examples && dc.examples.length > 0) {
+    d.examples = await Promise.all(dc.examples.map(toExample))
+  }
+
+  return [d, ...errs]
+}
+
+function declarationNode(): Library.DeclarationNode {
+  return {
     id: "",
-    meta,
-    identifier: "",
+    kind: "",
     title: "",
-    kind: "type",
-    type: {
-      type: "unknown"
-    },
-    signature: []
+    summary: undefined,
+    description: undefined,
+    // since: "",
+    // deprecated: "",
+    parent: undefined,
+    identifier: "",
+    signature: undefined,
+    examples: undefined,
+    overloads: undefined,
+    overloadsBy: undefined
   }
-
-  if (doc.name !== undefined) {
-    d.identifier = doc.name
-    d.title = doc.name
-  }
-
-  if (Object.hasOwn(doc, "summary") && Object.hasOwn(doc, "description")) {
-    d.summary = doc.summary
-    d.description = doc.description
-  } else if (Object.hasOwn(doc, "summary")) {
-    d.summary = doc.summary
-  } else if (Object.hasOwn(doc, "description")) {
-    d.summary = parseFirstSentence(doc.description)
-    d.description = doc.description
-  }
-
-  let ln = d.identifier
-  if (Object.hasOwn(doc, "memberof")) {
-    if (doc.memberof !== "<anonymous>") {
-      const mo = doc.memberof.replace("<anonymous>~", "")
-      ln = `${mo}#${ln}`
-      d.parent = {
-        id: createID(d.meta.package, mo),
-        identifier: mo
-      }
-    }
-  }
-  d.id = createID(d.meta.package, ln)
-
-  return d
 }
 
-// /**
-//  * @param {Doclet} doc
-//  * @param {Declaration} d
-//  * @returns {ClassDeclaration}
-//  */
-// function createClass(doc, d) {
-//   /** @type {ClassDeclaration} */
-//   const c = {
-//     id: d.id,
-//     meta: d.meta,
-//     identifier: d.identifier,
-//     title: "",
-//     kind: "class",
-//     signature: []
-//   }
+function toValue(dp: DocletParam): [Library.Value, ...Error[]] {
+  const [t, ...errs] = toAnyableType(dp)
+  const v = value(t)
 
-//   if (Object.hasOwn(doc, "properties")) {
-//     c.instanceProperties = doc.properties.map((dp) => {
-//       return createInstanceProperty(p, d)
-//     })
-//     doc.properties.forEach((p) => {
-//       /** @type {InstancePropertyDeclaration} */
-//       const pr = createInstanceProperty(p, d)
-
-//       ms.push(pr)
-//       cl.instanceProperties = [{
-//         type: "reference",
-//         id: pr.id,
-//         identifier: p.name
-//       }]
-//     })
-//   }
-
-//   return c
-// }
-
-/**
- * @param {DocletParam} doc
- * @param {Declaration} d
- * @returns {InstancePropertyDeclaration}
- */
-function createInstanceProperty(doc, d) {
-  const v = praseValue(d, doc)
-
-  /** @type {InstancePropertyDeclaration} */
-  const p = {
-    id: createID(d.meta.package, `${d.identifier}#${doc.name}`),
-    meta: {
-      package: d.meta.package
-    },
-    identifier: v.name,
-    title: v.name,
-    kind: "instanceProperty",
-    parent: {
-      id: d.id,
-      identifier: d.identifier
-    },
-    type: v.type,
-    signature: []
+  if (!dp.name) {
+    errs.push(new Error("DocletParam has no name"))
+  } else {
+    v.identifier = dp.name
   }
 
-  if (Object.hasOwn(v, "description")) {
-    p.summary = parseFirstSentence(v.description)
-    p.description = v.description
+  if (dp.description) {
+    v.description = dp.description
   }
 
-  p.title = createTitle(p)
-  p.signature = tokenizeDeclaration(p)
+  if ("defaultvalue" in dp) {
+    const [t, ...e] = toLiteralType(dp.defaultvalue)
+    errs.push(...e)
+    v.default = t
+  }
 
-  return p
+  return [v, ...errs]
 }
 
-/**
- * @param {Doclet} doc
- * @param {Declaration} d
- * @returns {ConstructorDeclaration}
- */
-function createConstructor(doc, d) {
-  let identifier = "constructor"
-
-  /** @type {ConstructorDeclaration} */
-  const c = {
-    id: createID(d.meta.package, `${d.identifier}#${identifier}`),
-    meta: {
-      package: d.meta.package
-    },
-    identifier,
-    title: identifier,
-    parent: {
-      id: d.id,
-      identifier: d.identifier
-    },
-    kind: "constructor",
-    type: {
-      type: "function"
-    },
-    signature: []
-  }
-
-  if (Object.hasOwn(doc, "params")) {
-    c.type.parameters = doc.params.map((p) => {
-      return praseValue(d, p)
-    })
-  }
-
-  c.signature = tokenizeDeclaration(c)
-
-  return c
-}
-
-/**
- * @param {Doclet} doc
- * @param {Declaration} d
- * @returns
- */
-function createEvent(doc, d) {
-  /** @type {EventDeclaration} */
-  const e = {
-    ...d,
-    kind: "event",
-    type: {
-      type: "function"
-    }
-  }
-
-  if (Object.hasOwn(doc, "params")) {
-    e.type.parameters = doc.params.map((p) => {
-      return praseValue(e, p)
-    })
-  }
-
-  e.signature = tokenizeDeclaration(e)
-  e.title = createTitle(e)
-
-  return e
-}
-
-/**
- * @param {Doclet} doc
- * @param {Declaration} d
- * @returns {TypeDeclaration}
- */
-function createFunction(doc, d) {
-  /** @type {FunctionType} */
-  const t = {
-    type: "function"
-  }
-
-  /** @type {TypeDeclaration} */
-  const f = {
-    ...d,
-    kind: "type",
+function value(t: Library.Type): Library.Value {
+  return {
+    identifier: "",
+    signature: undefined,
+    description: undefined,
+    default: undefined,
     type: t
   }
+}
 
-  if (Object.hasOwn(doc, "params")) {
-    t.parameters = doc.params.map((p) => {
-      return praseValue(d, p)
+function toAnyableType(d: Doclet | DocletParam): [Library.Type, ...Error[]] {
+  if (!d.type || !d.type.parsedType) {
+    return toAnyType()
+  }
+  return toType(d.type.parsedType)
+}
+
+function toAnyType(): [Library.AnyType, ...Error[]] {
+  const t = typeNode()
+  return [anyType(t)]
+}
+
+function toVoidableType(d: Doclet | DocletParam): [Library.Type, ...Error[]] {
+  if (!d.type || !d.type.parsedType) {
+    return toVoidType()
+  }
+  return toType(d.type.parsedType)
+}
+
+function toVoidType(): [Library.VoidType, ...Error[]] {
+  const t = typeNode()
+  return [voidType(t)]
+}
+
+function toLiteralType(value: Library.LiteralType["value"]): [Library.LiteralType, ...Error[]] {
+  const t = typeNode()
+  return [literalType(t, value)]
+}
+
+function toType(ca: Catharsis): [Library.Type, ...Error[]] {
+  if (ca.type === "AllLiteral") {
+    return toAnyType()
+  }
+
+  if (ca.type === "FieldType") {
+    const [t, ...errs] = toAnyType()
+    return [t, ...errs, new Error("FieldType is not supported")]
+  }
+
+  if (ca.type === "FunctionType") {
+    // https://github.com/jsdoc/jsdoc/issues/1955/
+    const t = typeNode()
+    return [functionType(t)]
+  }
+
+  if (ca.type === "NameExpression") {
+    if (!ca.name) {
+      const [t, ...errs] = toAnyType()
+      return [t, ...errs, new Error("NameExpression has no name")]
+    }
+
+    const t = typeNode()
+
+    switch (ca.name) {
+    case "Array":
+    case "array":
+      return [arrayType(t)]
+    case "Boolean":
+    case "boolean":
+      return [passthroughType(t, ca.name)]
+    case "Number":
+    case "number":
+      return [passthroughType(t, ca.name)]
+    case "Object":
+    case "object":
+      return [objectType(t)]
+    case "String":
+    case "string":
+      return [passthroughType(t, ca.name)]
+    default:
+      // continue
+    }
+
+    if (isNumberLiteral(ca.name)) {
+      const v = Number(ca.name)
+      return [literalType(t, v)]
+    }
+
+    if (isStringLiteral(ca.name)) {
+      // const v = omitStringQuotes(ca.name)
+      return [literalType(t, ca.name)]
+    }
+
+    return [reference(ca.name)]
+  }
+
+  if (ca.type === "NullLiteral") {
+    const t = typeNode()
+    return [literalType(t, null)]
+  }
+
+  if (ca.type === "RecordType") {
+    const [t, ...errs] = toAnyType()
+    return [t, ...errs, new Error("RecordType is not supported")]
+  }
+
+  if (ca.type === "TypeApplication") {
+    if (!ca.expression) {
+      const [t, ...errs] = toAnyType()
+      return [t, ...errs, new Error("TypeApplication has no expression")]
+    }
+
+    const [e, ...errs] = toType(ca.expression)
+
+    if (!ca.applications) {
+      return [e, ...errs, new Error("TypeApplication has no applications")]
+    }
+
+    if ("id" in e) {
+      return [e, ...errs]
+    }
+
+    switch (e.type) {
+    case "any":
+      break
+
+    case "array":
+      e.items = ca.applications.map((c) => {
+        const [t, ...e] = toType(c)
+        errs.push(...e)
+        return t
+      })
+      break
+
+    case "function":
+    case "literal":
+    case "object":
+    case "passthrough":
+    case "union":
+    case "unknown":
+    case "void":
+      break
+
+    default:
+      // @ts-expect-error
+      return [e, ...errs, new Error(`Unknown type: ${e.type}`)]
+    }
+
+    return [e, ...errs]
+  }
+
+  if (ca.type === "TypeUnion") {
+    if (!ca.elements || ca.elements.length === 0) {
+      const [t, ...errs] = toAnyType()
+      return [t, ...errs, new Error("TypeUnion has no elements")]
+    }
+
+    const errs: Error[] = []
+
+    const t = typeNode()
+    const u = unionType(t)
+    u.types = ca.elements.map((c) => {
+      const [t, ...e] = toType(c)
+      errs.push(...e)
+      return t
     })
+
+    return [u, ...errs]
   }
 
-  if (Object.hasOwn(doc, "returns")) {
-    // There is no way that the `returns` contains more than one element.
-    // todo: overloading returns many items.
-    if (doc.returns.length === 1) {
-      const v = praseValue(d, doc.returns[0])
-      t.returns = {
-        type: v.type
-      }
-      if (v.description !== undefined) {
-        t.returns.description = v.description
-      }
-    }
+  if (ca.type === "UndefinedLiteral") {
+    const t = typeNode()
+    return [literalType(t, undefined)]
   }
 
-  return f
+  if (ca.type === "UnknownLiteral") {
+    const t = typeNode()
+    return [unknownType(t)]
+  }
+
+  const [t, ...errs] = toAnyType()
+  return [t, ...errs, new Error(`Unknown type: ${ca.type}`)]
 }
 
-/**
- * @param {Doclet} doc
- * @param {Declaration} d
- * @returns {PropertyDeclaration}
- */
-function createProperty(doc, d) {
-  const v = praseValue(d, doc)
-
-  /** @type {PropertyDeclaration} */
-  const pr = {
-    id: createID(d.meta.package, `${d.identifier}#${doc.name}`),
-    meta: {
-      package: d.meta.package
-    },
-    identifier: v.name,
-    title: v.name,
-    kind: "property",
-    parent: {
-      id: d.id,
-      identifier: d.identifier
-    },
-    type: v.type,
-    signature: []
-  }
-
-  if (Object.hasOwn(v, "description")) {
-    pr.summary = parseFirstSentence(v.description)
-    pr.description = v.description
-  }
-
-  return pr
+function anyType(t: Library.TypeNode): Library.AnyType {
+  return {...t, type: "any"}
 }
 
-/**
- * @param {Declaration} d
- * @param {DocletParam} p
- * @returns {DeclarationValue}
- */
-function praseValue(d, p) {
-  /** @type {DeclarationValue} */
-  const v = {
-    name: "",
-    type: {
-      type: "unknown"
-    }
-  }
-  if (Object.hasOwn(p, "name")) {
-    v.name = p.name
-  }
-  if (Object.hasOwn(p, "description")) {
-    v.description = p.description
-  }
-  if (Object.hasOwn(p, "type") && Object.hasOwn(p.type, "parsedType")) {
-    v.type = parseType(d, p.type.parsedType)
-  }
-  if (Object.hasOwn(p, "defaultvalue")) {
-    // todo: resolve ignoring.
-    // @ts-ignore
-    v.default = p.defaultvalue
-  }
-  return v
+function arrayType(t: Library.TypeNode): Library.ArrayType {
+  return {...t, type: "array", items: undefined}
 }
 
-/**
- * @param {Declaration} d
- * @param {DocletCatharsis} ca
- * @returns {DeclarationType}
- */
-function parseType(d, ca) {
-  /** @type {DeclarationType} */
-  let t = {
-    type: "unknown"
-  }
-  if (Object.hasOwn(ca, "type")) {
-    switch (ca.type) {
-      // case "AllLiteral":
-      // case "FieldType":
-      // case "FunctionType":
-      case "NameExpression":
-        if (!Object.hasOwn(ca, "name")) {
-          break
-        }
-        // todo: should we parse primitives with objects or just one of them?
-        switch (ca.name) {
-          case "array":
-          case "Array":
-            t = {
-              type: "array",
-              children: []
-            }
-            break
-          case "boolean":
-          case "Boolean":
-            t = {
-              type: "primitive",
-              name: "boolean"
-            }
-            break
-          case "number":
-          case "Number":
-            t = {
-              type: "primitive",
-              name: "number"
-            }
-            break
-          case "object":
-          case "Object":
-            // todo: object of what?
-            t = {
-              type: "object"
-            }
-            break
-          case "string":
-          case "String":
-            t = {
-              type: "primitive",
-              name: "string"
-            }
-            break
-          default:
-            if (isNumberLiteral(ca.name)) {
-              // todo: what if `Number(ca.name)` is `NaN`?
-              t = {
-                type: "literal",
-                value: Number(ca.name)
-              }
-              break
-            }
-            if (isStringLiteral(ca.name)) {
-              t = {
-                type: "literal",
-                value: ca.name.slice(1, -1)
-              }
-              break
-            }
-            t = {
-              type: "reference",
-              id: createID(d.meta.package, ca.name),
-              // @ts-ignore
-              identifier: ca.name
-            }
-            break
-        }
-        break
-      case "NullLiteral":
-        t = {
-          type: "literal",
-          value: null
-        }
-        break
-      // case "RecordType":
-      case "TypeApplication":
-        if (!Object.hasOwn(ca, "expression")) {
-          break
-        }
-        // todo: should we be checking this more strictly? (see ts-ignore below)
-        t = parseType(d, ca.expression)
-        if (Object.hasOwn(ca, "applications")) {
-          if (t.type === "object") {
-            // @ts-ignore
-            t.type = "record"
-          }
-          // @ts-ignore
-          t.children = ca.applications.map((a) => {
-            return parseType(d, a)
-          })
-          break
-        }
-        // @ts-ignore
-        t.children = [{
-          type: "unknown"
-        }]
-        break
-      case "TypeUnion":
-        if (!Object.hasOwn(ca, "elements")) {
-          break
-        }
-        t = {
-          type: "union",
-          children: ca.elements.map((e) => {
-            return parseType(d, e)
-          })
-        }
-        break
-      case "UndefinedLiteral":
-        t = {
-          type: "literal",
-          value: undefined
-        }
-        break
-      case "UnknownLiteral":
-        t = {
-          type: "unknown"
-        }
-        break
-      default:
-        // todo: should we throw an error here?
-        // throw new Error(`Unknown type: ${ca.type}`)
-        break
-    }
-  }
-  // todo: separate them, they mean different things.
-  if (Object.hasOwn(ca, "optional") || Object.hasOwn(ca, "nullable")) {
-    t = {
-      type: "optional",
-      children: [t]
-    }
-  }
-  return t
+function functionType(t: Library.TypeNode): Library.FunctionType {
+  return {...t, type: "function", parameters: undefined, returns: undefined}
 }
 
-/**
- * @param {string[]} es
- * @returns {Promise<string[]>}
- */
-function parseExamples(es) {
-  return Promise.all(es.map(async (e) => {
-    const [r] = await eslint.lintText(e)
-    if (r.output !== undefined) {
-      e = r.output
-    }
-    return e
-  }))
+function functionReturns(t: Library.Type): Library.FunctionReturns {
+  return {signature: undefined, description: undefined, type: t}
 }
 
-/**
- * @param {Declaration} d
- * @returns {string}
- */
-function createTitle(d) {
-  return d.identifier
-  // let t = ""
-  // switch (d.kind) {
-  // // case "alias":
-  // case "class":
-  //   t = d.identifier
-  //   break
-  // case "constructor":
-  // case "event":
-  //   t = createFunctionTitle(d)
-  //   break
-  // // case "initializer":
-  // case "instanceMethod":
-  //   t = createFunctionTitle(d)
-  //   break
-  // case "instanceProperty":
-  //   t = d.identifier
-  //   break
-  // case "method":
-  //   // t = createFunctionTitle(d)
-  //   break
-  // case "object":
-  //   t = d.identifier
-  //   break
-  // case "property":
-  //   t = d.identifier
-  //   break
-  // // case "staticMethod":
-  // // case "staticProperty":
-  // case "type":
-  //   t = d.identifier
-  //   break
-  // }
-  // return t
+function literalType(t: Library.TypeNode, value: Library.LiteralType["value"]): Library.LiteralType {
+  return {...t, type: "literal", value}
 }
 
-// /**
-//  * @param {ConstructorDeclaration | EventDeclaration | InstanceMethodDeclaration} d
-//  * @returns {string}
-//  */
-// function createFunctionTitle(d) {
-//   let t = `${d.identifier}(`
-//   if (d.type.parameters !== undefined) {
-//     t += d.type.parameters
-//       .map((p) => {
-//         return p.name
-//       })
-//       .join(", ")
-//   }
-//   t += ")"
-//   return t
-// }
+function objectType(t: Library.TypeNode): Library.ObjectType {
+  return {...t, type: "object", properties: undefined, methods: undefined}
+}
 
-/**
- * @param {string} s
- * @returns {string}
- */
-function parseFirstSentence(s) {
-  const r = split(s, {
-    AbbrMarker: {
-      language: English
+function passthroughType(t: Library.TypeNode, value: Library.PassthroughType["value"]): Library.PassthroughType {
+  return {...t, type: "passthrough", value}
+}
+
+function unionType(t: Library.TypeNode): Library.UnionType {
+  return {...t, type: "union", types: []}
+}
+
+function unknownType(t: Library.TypeNode): Library.UnknownType {
+  return {...t, type: "unknown"}
+}
+
+function voidType(t: Library.TypeNode): Library.VoidType {
+  return {...t, type: "void"}
+}
+
+function typeNode(): Library.TypeNode {
+  return {type: ""}
+}
+
+function reference(id: Library.Reference["id"]): Library.Reference {
+  return {id}
+}
+
+async function toExample(c: string): Promise<Library.Example> {
+  const e = example()
+  e.syntax = "js"
+  e.code = c
+  const [m] = await model.runModel(c)
+  switch (m.languageId) {
+  case "js":
+  case "json":
+    await js(m.languageId)
+    break
+  default:
+    // continue
+  }
+  return e
+
+  async function js(x: string) {
+    e.syntax = x
+    const [r] = await eslint.lintText(c, {filePath: `example.${x}`})
+    if (r.output) {
+      e.code = r.output
     }
-  })
+  }
+}
+
+function example(): Library.Example {
+  return {syntax: "", code: ""}
+}
+
+function resolveAbstract(dc: Doclet): [string, string] {
+  // todo: https://github.com/craftzdog/remark-strip-html/issues/2/
+  const [s, d] = resolve()
+  return [serializeString(s), serializeString(d)]
+
+  function resolve() {
+    if (dc.summary && dc.description) {
+      return [dc.summary, dc.description]
+    }
+
+    if (dc.summary) {
+      return [dc.summary, dc.summary]
+    }
+
+    if (dc.description) {
+      const s = firstSentence(dc.description)
+      return [s, dc.description]
+    }
+
+    return ["", ""]
+  }
+}
+
+function firstSentence(s: string): string {
+  const r = split(s, {AbbrMarker: {language: English}})
   if (r.length === 0) {
     return s
   }
   return r[0].raw
 }
 
-/**
- * @param {string} a
- * @param {string} b
- * @returns {string}
- */
-function createID(a, b) {
-  return `${a};${b}`
+function serializeString(s: string) {
+  return s.trim()
 }
 
-/**
- * @param {string} s
- * @returns {boolean}
- */
-function isNumberLiteral(s) {
+function isNumberLiteral(s: string): boolean {
   return !isNaN(parseFloat(s))
 }
 
-/**
- * @param {string} s
- * @returns {boolean}
- */
-function isStringLiteral(s) {
+function isStringLiteral(s: string): boolean {
   return s.startsWith('"') && s.endsWith('"') ||
     s.startsWith("'") && s.endsWith("'")
 }
 
-/**
- * @typedef {Object} CacheDeclaration
- * @property {string[]=} instanceMethods
- * @property {string[]=} methods
- * @property {string[]=} events
- * @property {string[]=} extends
- * @property {string[]=} implements
- */
-
-class DeclarationsCache {
-  constructor() {
-    /** @type {Record<string, CacheDeclaration>} */
-    this.m = {}
-  }
-
-  /**
-   * @param {string} id
-   * @returns {void}
-   */
-  setup(id) {
-    this.m[id] = {}
-  }
-
-  /**
-   * @param {string} id
-   * @param {keyof Omit<CacheDeclaration, "index">} k
-   * @param {string} v
-   * @returns {void}
-   */
-  populate(id, k, v) {
-    if (!Object.hasOwn(this.m, id)) {
-      this.setup(id)
-    }
-    if (!Object.hasOwn(this.m[id], k)) {
-      this.m[id][k] = []
-    }
-    if (this.m[id][k].includes(v)) {
-      return
-    }
-    this.m[id][k].push(v)
-  }
-
-  /**
-   * @param {string} id
-   * @param {number} i
-   * @returns {void}
-   */
-  index(id, i) {
-    if (!Object.hasOwn(this.m, id)) {
-      this.setup(id)
-    }
-    // @ts-ignore
-    this.m[id].index = i
-  }
-
-  /**
-   * @param {string} id
-   * @returns {CacheDeclaration=}
-   */
-  retrieve(id) {
-    return this.m[id]
-  }
-
-  /**
-   * @returns {void}
-   */
-  clear() {
-    this.m = {}
-  }
-}
-
-export {
-  DeclarationsCache,
-  PostprocessDeclarations,
-  PostPostprocessDeclarations,
-  PreprocessDeclarations
+function omitStringQuotes(s: string): string {
+  return s.slice(1, -1)
 }

@@ -1,11 +1,18 @@
-import { ESLint } from "eslint"
+// todo: migrate to eslint 9 with flat config.
 
-export function createEslint(): ESLint {
+import {ESLint} from "eslint"
+
+export function createESlint(): ESLint {
   return new ESLint({
     useEslintrc: false,
     fix: true,
     overrideConfig: {
-      extends: ["eslint:recommended"],
+      extends: [
+        "eslint:recommended",
+        "plugin:jsonc/recommended-with-json",
+        "plugin:jsonc/recommended-with-json5",
+        "plugin:jsonc/recommended-with-jsonc"
+      ],
       env: {
         browser: true,
         es2022: true
@@ -14,7 +21,9 @@ export function createEslint(): ESLint {
         sourceType: "module",
         ecmaVersion: "latest",
       },
-      plugins: ["@stylistic/js"],
+      plugins: [
+        "@stylistic/js"
+      ],
       rules: {
         "no-undef": "off",
         "no-unused-vars": ["warn", {

@@ -8,13 +8,15 @@
     "./http.ts": "./lib/http.ts",
     "./jq.ts": "./lib/jq.ts",
     "./once.ts": "./lib/once.ts",
+    "./stream.ts": "./lib/stream.ts",
     "./strings.ts": "./lib/strings.ts",
     "./svg.ts": "./lib/svg.ts",
     "./wait.ts": "./lib/wait.ts"
   },
   "dependencies": {
     "@stylistic/eslint-plugin-js": "^1.5.4",
-    "eslint": "^8.56.0"
+    "eslint": "^8.56.0",
+    "eslint-plugin-jsonc": "^2.15.1"
   },
   "devDependencies": {
     "@types/eslint": "^8.56.2",

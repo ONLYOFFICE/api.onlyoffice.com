@@ -1,5 +1,8 @@
-// https://github.com/jsdoc/jsdoc/blob/21c9f5df97e4a2080b049d2ca45c460c8da76c5b/packages/jsdoc-doclet/lib/schema.js#L202
-interface Doclet {
+/**
+ * {@link https://github.com/jsdoc/jsdoc/blob/4.0.2/lib/jsdoc/schema.js/#L186 JSDoc Reference}
+ */
+export interface Doclet {
+  augments?: string[]
   description?: string
   examples?: string[]
   fires?: string[]
@@ -19,7 +22,10 @@ interface Doclet {
   type?: DocletType
 }
 
-type DocletKind =
+/**
+ * {@link https://github.com/jsdoc/jsdoc/blob/4.0.2/lib/jsdoc/schema.js/#L328 JSDoc Reference}
+ */
+export type DocletKind =
   "class" |
   "constant" |
   "event" |
@@ -35,19 +41,28 @@ type DocletKind =
   "param" |
   "typedef"
 
-type DocletScope =
+/**
+ * {@link https://github.com/jsdoc/jsdoc/blob/4.0.2/lib/jsdoc/schema.js/#L437 JSDoc Reference}
+ */
+export type DocletScope =
   "global" |
   "inner" |
   "instance" |
   "static"
 
-interface DocletMeta {
+/**
+ * {@link https://github.com/jsdoc/jsdoc/blob/4.0.2/lib/jsdoc/schema.js/#L25 JSDoc Reference}
+ */
+export interface DocletMeta {
   columnno?: number
   file?: string // custom
   lineno?: number
 }
 
-interface DocletParam {
+/**
+ * {@link https://github.com/jsdoc/jsdoc/blob/4.0.2/lib/jsdoc/schema.js/#L155 JSDoc Reference}
+ */
+export interface DocletParam {
   defaultvalue?: unknown
   description?: string
   name?: string
@@ -56,22 +71,31 @@ interface DocletParam {
   type?: DocletType
 }
 
-interface DocletType {
-  parsedType?: DocletCatharsis
+/**
+ * {@link https://github.com/jsdoc/jsdoc/blob/4.0.2/lib/jsdoc/schema.js/#L89 JSDoc Reference}
+ */
+export interface DocletType {
+  parsedType?: Catharsis
 }
 
-// https://github.com/hegemonic/catharsis/blob/0.9.0/lib/schema.js
-interface DocletCatharsis {
-  type?: DocletCatharsisType
+/**
+ * {@link https://github.com/hegemonic/catharsis/blob/0.9.0/lib/schema.js/ Catharsis Reference}
+ */
+export interface Catharsis {
+  type?: CatharsisType
+  params?: Catharsis[]
   name?: string
-  expression?: DocletCatharsis
-  applications?: DocletCatharsis[]
-  elements?: DocletCatharsis[]
+  expression?: Catharsis
+  applications?: Catharsis[]
+  elements?: Catharsis[]
   optional?: boolean
   nullable?: boolean
 }
 
-type DocletCatharsisType =
+/**
+ * {@link https://github.com/hegemonic/catharsis/blob/0.9.0/lib/types.js/ Catharsis Reference}
+ */
+export type CatharsisType =
   "AllLiteral" |
   "FieldType" |
   "FunctionType" |
@@ -82,12 +106,3 @@ type DocletCatharsisType =
   "TypeUnion" |
   "UndefinedLiteral" |
   "UnknownLiteral"
-
-export {
-  Doclet,
-  DocletCatharsis,
-  DocletKind,
-  DocletMeta,
-  DocletParam,
-  DocletType
-}

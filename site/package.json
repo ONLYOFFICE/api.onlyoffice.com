@@ -16,6 +16,7 @@
     "@11ty/eleventy-img": "^4.0.2",
     "@mdx-js/mdx": "^3.0.0",
     "@onlyoffice/documentation-declarations-fixtures": "workspace:^",
+    "@onlyoffice/documentation-declarations-scripts": "workspace:^",
     "@onlyoffice/documentation-declarations-types": "workspace:^",
     "@onlyoffice/documentation-resources": "workspace:^",
     "@onlyoffice/documentation-ui-storybook": "workspace:^",

@@ -21,6 +21,7 @@ import {env} from "node:process"
 
 // todo: temp
 const doSkip = env.SKIP_REMOTE === "true"
+// const doSkip = true
 
 // todo: refactor it.
 // add support for hot reload

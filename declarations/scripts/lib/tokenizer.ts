@@ -1,532 +1,403 @@
-// @ts-check
+// todo: add double quotes for string literals.
 
-/**
- * @typedef {import("../../index.js").TypeDeclaration} TypeDeclaration
- * @typedef {import("../../index.js").ArrayType} ArrayType
- * @typedef {import("../../index.js").ClassDeclaration} ClassDeclaration
- * @typedef {import("../../index.js").ConstructorDeclaration} ConstructorDeclaration
- * @typedef {import("../../index.js").ReferenceType} ReferenceType
- * @typedef {import("../../index.js").Declaration} Declaration
- * @typedef {import("../../index.js").DeclarationType} DeclarationType
- * @typedef {import("../../index.js").DeclarationValue} DeclarationValue
- * @typedef {import("../../index.js").EventDeclaration} EventDeclaration
- * @typedef {import("../../index.js").FunctionType} FunctionType
- * @typedef {import("../../index.js").InstanceMethodDeclaration} InstanceMethodDeclaration
- * @typedef {import("../../index.js").InstancePropertyDeclaration} InstancePropertyDeclaration
- * @typedef {import("../../index.js").MethodDeclaration} MethodDeclaration
- * @typedef {import("../../index.js").OptionalType} OptionalType
- * @typedef {import("../../index.js").PropertyDeclaration} PropertyDeclaration
- * @typedef {import("../../index.js").RecordType} RecordType
- * @typedef {import("../../index.js").UnionType} UnionType
- */
+import type {Library} from "@onlyoffice/documentation-declarations-types/library.js"
+import type {Tokenizer} from "@onlyoffice/documentation-declarations-types/tokenizer.ts"
 
-// DecoratorToken
-// IdentifierToken
-// KeywordToken
-// ReferenceToken
-// TextToken
-
-// decorator
-// identifier
-// keyword
-// reference
-// text
-
-/**
- * @typedef {Object} DeclarationToken
- * @property {string} type
- * @property {string=} id
- * @property {string} text
- */
-
-/**
- * @param {Declaration} d
- * @returns {DeclarationToken[]}
- */
-function tokenizeDeclaration(d) {
-  let tk = []
+export function toDeclarationTokens(d: Library.Declaration): Tokenizer.Token[] {
   switch (d.kind) {
-  // case "alias":
-  //   break
   case "class":
-    tk = tokenizeClass(d)
-    break
+    return toClassDeclarationTokens(d)
   case "constructor":
-    tk = tokenizeConstructor(d)
-    break
+    return toConstructorDeclarationTokens(d)
   case "event":
-    tk = tokenizeEvent(d)
-    break
-  // case "initializer":
-  //   break
-  case "instanceMethod":
-    tk = tokenizeMethod(d)
-    break
-  case "instanceProperty":
-    tk = tokenizeProperty(d)
-    break
+    return toEventDeclarationTokens(d)
   case "method":
-    tk = tokenizeMethod(d)
-    break
-  case "object":
-    break
+    return toMethodDeclarationTokens(d)
   case "property":
-    tk = tokenizeProperty(d)
-    break
-  // case "staticMethod":
-  //   break
-  // case "staticProperty":
-  //   break
+    return toPropertyDeclarationTokens(d)
   case "type":
-    tk = tokenizeTypeDeclaration(d)
-    break
+    return toTypeDeclarationTokens(d)
   default:
-    // todo: log an warning
-    break
+    return []
   }
-  return tk
 }
 
-/**
- * @param {ClassDeclaration} d
- * @returns {DeclarationToken[]}
- */
-function tokenizeClass(d) {
-  const tk = [
-    {
-      type: "keyword",
-      text: "class"
-    },
-    {
-      type: "text",
-      text: " "
-    },
-    {
-      type: "identifier",
-      text: d.identifier
+export function toClassDeclarationTokens(d: Library.ClassDeclaration): Tokenizer.Token[] {
+  const a: Tokenizer.Token[] = []
+
+  let t: Tokenizer.Token
+
+  t = toKeywordToken()
+  t.text = "class"
+  a.push(t)
+
+  t = toTextToken()
+  t.text = " "
+  a.push(t)
+
+  t = toIdentifierToken()
+  t.text = d.identifier
+  a.push(t)
+
+  if (d.extends) {
+    t = toTextToken()
+    t.text = " "
+    a.push(t)
+
+    t = toKeywordToken()
+    t.text = "extends"
+    a.push(t)
+
+    t = toTextToken()
+    t.text = " "
+    a.push(t)
+
+    for (const e of d.extends) {
+      t = toReferenceToken()
+      t.id = e.id
+      a.push(t)
+
+      t = toTextToken()
+      t.text = ", "
+      a.push(t)
     }
-  ]
-  if (d.extends !== undefined) {
-    tk.push(
-      {
-        type: "text",
-        text: " "
-      },
-      {
-        type: "keyword",
-        text: "extends"
-      },
-      {
-        type: "text",
-        text: " "
-      },
-    )
-    d.extends.forEach((e) => {
-      tk.push(
-        ...tokenizeReference(e),
-        {
-          type: "text",
-          text: ", "
-        }
-      )
-    })
-    tk.pop()
+
+    a.pop()
   }
-  return tk
+
+  return a
 }
 
-/**
- * @param {ConstructorDeclaration} d
- * @returns {DeclarationToken[]}
- */
-function tokenizeConstructor(d) {
-  return [
-    {
-      type: "text",
-      text: "constructor"
-    },
-    ...tokenizeParameters(d.type)
-  ]
+export function toConstructorDeclarationTokens(d: Library.ConstructorDeclaration): Tokenizer.Token[] {
+  const a: Tokenizer.Token[] = []
+
+  let t: Tokenizer.Token
+
+  t = toIdentifierToken()
+  t.text = d.identifier
+  a.push(t)
+
+  const b = toFunctionTypeTokens(d.type)
+  a.push(...b)
+
+  return a
 }
 
-/**
- * @param {EventDeclaration} d
- * @returns {DeclarationToken[]}
- */
-function tokenizeEvent(d) {
-  return [
-    {
-      type: "decoration",
-      text: "(event)"
-    },
-    {
-      type: "text",
-      text: " "
-    },
-    {
-      type: "identifier",
-      text: d.identifier
-    },
-    ...tokenizeParameters(d.type),
-    ...tokenizerReturns(d.type)
-  ]
+export function toEventDeclarationTokens(d: Library.EventDeclaration): Tokenizer.Token[] {
+  const a: Tokenizer.Token[] = []
+
+  let t: Tokenizer.Token
+
+  t = toDecoratorToken()
+  t.text = "(event)"
+  a.push(t)
+
+  t = toTextToken()
+  t.text = " "
+  a.push(t)
+
+  t = toIdentifierToken()
+  t.text = d.identifier
+  a.push(t)
+
+  const b = toFunctionTypeTokens(d.type)
+  a.push(...b)
+
+  return a
 }
 
-// /**
-//  * @param {TypeDeclaration} d
-//  * @returns {DeclarationToken[]}
-//  */
-// function tokenizeFunction(d) {
-//   return [
-//     {
-//       type: "text",
-//       text: "function"
-//     },
-//     {
-//       type: "text",
-//       text: " "
-//     },
-//     {
-//       type: "identifier",
-//       text: d.identifier
-//     },
-//     ...tokenizeParameters(d.type),
-//     ...tokenizerReturns(d.type)
-//   ]
-// }
+export function toMethodDeclarationTokens(d: Library.MethodDeclaration): Tokenizer.Token[] {
+  const a: Tokenizer.Token[] = []
 
-/**
- * @param {InstanceMethodDeclaration | MethodDeclaration} d
- * @returns {DeclarationToken[]}
- */
-function tokenizeMethod(d) {
-  return [
-    {
-      type: "decoration",
-      text: "(method)"
-    },
-    {
-      type: "text",
-      text: " "
-    },
-    {
-      type: "identifier",
-      text: d.identifier
-    },
-    ...tokenizeParameters(d.type),
-    ...tokenizerReturns(d.type)
-  ]
+  let t: Tokenizer.Token
+
+  t = toDecoratorToken()
+  t.text = "(method)"
+  a.push(t)
+
+  t = toTextToken()
+  t.text = " "
+  a.push(t)
+
+  t = toIdentifierToken()
+  t.text = d.identifier
+  a.push(t)
+
+  const b = toFunctionTypeTokens(d.type)
+  a.push(...b)
+
+  return a
 }
 
-/**
- * @param {InstancePropertyDeclaration | PropertyDeclaration} d
- * @returns {DeclarationToken[]}
- */
-function tokenizeProperty(d) {
-  return [
-    {
-      type: "decoration",
-      text: "(property)"
-    },
-    {
-      type: "text",
-      text: " "
-    },
-    {
-      type: "identifier",
-      text: d.identifier
-    },
-    {
-      type: "text",
-      text: ": "
-    },
-    {
-      type: "text",
-      text: d.type.type
-    }
-  ]
+export function toPropertyDeclarationTokens(d: Library.PropertyDeclaration): Tokenizer.Token[] {
+  const a: Tokenizer.Token[] = []
+
+  let t: Tokenizer.Token
+
+  t = toDecoratorToken()
+  t.text = "(property)"
+  a.push(t)
+
+  t = toTextToken()
+  t.text = " "
+  a.push(t)
+
+  const b = toValueTokens(d)
+  a.push(...b)
+
+  return a
 }
 
-/**
- * @param {TypeDeclaration} d
- * @returns {DeclarationToken[]}
- */
-function tokenizeTypeDeclaration(d) {
-  return [
-    {
-      type: "decoration",
-      text: `(${d.type.type})`
-    },
-    {
-      type: "text",
-      text: " "
-    },
-    {
-      type: "identifier",
-      text: d.identifier
-    },
-    {
-      type: "text",
-      text: ": "
-    },
-    ...tokenizeType(d.type)
-  ]
+export function toTypeDeclarationTokens(d: Library.TypeDeclaration): Tokenizer.Token[] {
+  const a: Tokenizer.Token[] = []
+
+  let t: Tokenizer.Token
+
+  t = toDecoratorToken()
+  t.text += "("
+  if ("id" in d.type) {
+    t.text += d.type.id
+  } else {
+    t.text += d.type.type
+  }
+  t.text += ")"
+  a.push(t)
+
+  t = toTextToken()
+  t.text = " "
+  a.push(t)
+
+  t = toIdentifierToken()
+  t.text = d.identifier
+  a.push(t)
+
+  t = toTextToken()
+  t.text = ": "
+  a.push(t)
+
+  const b = toTypeTokens(d.type)
+  a.push(...b)
+
+  return a
 }
 
-/**
- * @param {DeclarationValue} v
- * @returns {DeclarationToken[]}
- */
-function tokenizeValue(v) {
-  const tk = [
-    {
-      type: "text",
-      text: v.name
-    },
-    {
-      type: "text",
-      text: ": "
-    },
-    ...tokenizeType(v.type)
-  ]
-  return tk
+export function toValueTokens(v: Library.Value): Tokenizer.Token[] {
+  const a: Tokenizer.Token[] = []
+
+  let u: Tokenizer.Token
+
+  u = toTextToken()
+  u.text = v.identifier
+  a.push(u)
+
+  u = toTextToken()
+  u.text = ": "
+  a.push(u)
+
+  const b = toTypeTokens(v.type)
+  a.push(...b)
+
+  if (v.default) {
+    u = toTextToken()
+    u.text = " = "
+    a.push(u)
+
+    u = toTextToken()
+    u.text = String(v.default.value)
+    a.push(u)
+  }
+
+  return a
 }
 
-/**
- *
- * @param {DeclarationType} t
- * @returns {DeclarationToken[]}
- */
-function tokenizeType(t) {
-  let tk = []
+export function toTypeTokens(t: Library.Type): Tokenizer.Token[] {
+  if ("id" in t) {
+    const u = toReferenceToken()
+    u.id = t.id
+    return [u]
+  }
+
   switch (t.type) {
+  case "any":
+    return toLiteralTokens({type: "literal", value: t.type})
   case "array":
-    tk = tokenizeArray(t)
-    break
+    return toArrayTypeTokens(t)
   case "function":
-    // tk = tokenizeFunction(t)
-    break
+    return toFunctionTypeTokens(t)
   case "literal":
-    tk = [
-      {
-        type: "text",
-        text: (() => {
-          switch (typeof t.value) {
-          case "string":
-            return `"${t.value}"`
-          default:
-            return String(t.value)
-          }
-        })()
-      }
-    ]
-    break
+    return toLiteralTokens(t)
   case "object":
-    break
-  case "optional":
-    tk = tokenizeOptional(t)
-    break
-  case "primitive":
-    tk = [
-      {
-        type: "text",
-        text: t.name
-      }
-    ]
-    break
-  // case "readonly":
-  //   break
-  case "record":
-    tk = tokenizeRecord(t)
-    break
-  case "reference":
-    tk = tokenizeReference(t)
-    break
-  // case "setonly":
-  //   break
+    return toLiteralTokens({type: "literal", value: t.type})
+  case "passthrough":
+    return toLiteralTokens({type: "literal", value: t.value})
   case "union":
-    tk = tokenizeUnion(t)
-    break
+    return toUnionTypeTokens(t)
   case "unknown":
-    tk = [
-      {
-        type: "text",
-        text: "unknown"
-      }
-    ]
-    break
+    return toLiteralTokens({type: "literal", value: t.type})
+  case "void":
+    return toLiteralTokens({type: "literal", value: t.type})
   default:
-    // todo: log
-    break
+    return []
   }
-  return tk
 }
 
-/**
- * @param {ArrayType} t
- * @returns {DeclarationToken[]}
- */
-function tokenizeArray(t) {
-  const tk = []
-  t.children.forEach((t) => {
-    tk.push(
-      ...tokenizeType(t),
-      {
-        type: "text",
-        text: ", "
-      }
-    )
-  })
-  tk.pop()
-  tk.push(
-    {
-      type: "text",
-      text: "[]"
-    }
-  )
-  return tk
-}
+export function toArrayTypeTokens(t: Library.ArrayType): Tokenizer.Token[] {
+  const a: Tokenizer.Token[] = []
 
-/**
- * @param {ReferenceType} t
- * @returns {DeclarationToken[]}
- */
-function tokenizeReference(t) {
-  return [
-    {
-      type: "reference",
-      id: t.id,
-      text: t.identifier
-    }
-  ]
-}
+  let u: Tokenizer.Token
 
-/**
- * @param {FunctionType} t
- * @returns {DeclarationToken[]}
- */
-function tokenizeParameters(t) {
-  const tk = [
-    {
-      type: "text",
-      text: "("
+  if (t.items) {
+    for (const e of t.items) {
+      const b = toTypeTokens(e)
+      a.push(...b)
+
+      const u = toTextToken()
+      u.text = ", "
+      a.push(u)
     }
-  ]
-  if (t.parameters !== undefined) {
-    t.parameters.forEach((p) => {
-      tk.push(
-        ...tokenizeValue(p),
-        {
-          type: "text",
-          text: ", "
-        }
-      )
-    })
-    tk.pop()
+
+    a.pop()
+
+    if (t.items.length > 1) {
+      u = toTextToken()
+      u.text = "("
+      a.unshift(u)
+
+      u = toTextToken()
+      u.text = ")"
+      a.push(u)
+    }
   }
-  tk.push(
-    {
-      type: "text",
-      text: ")"
-    }
-  )
-  return tk
+
+  u = toTextToken()
+  u.text = "[]"
+  a.push(u)
+
+  return a
 }
 
-/**
- * @param {FunctionType} t
- * @returns {DeclarationToken[]}
- */
-function tokenizerReturns(t) {
-  const tk = []
-  if (t.returns !== undefined) {
-    tk.push(
-      {
-        type: "text",
-        text: ": "
-      },
-      ...tokenizeType(t.returns.type)
-    )
+export function toFunctionTypeTokens(t: Library.FunctionType): Tokenizer.Token[] {
+  const a: Tokenizer.Token[] = []
+
+  let u: Tokenizer.Token
+
+  u = toTextToken()
+  u.text = "("
+  a.push(u)
+
+  if (t.parameters) {
+    for (const e of t.parameters) {
+      const b = toValueTokens(e)
+      a.push(...b)
+
+      const u = toTextToken()
+      u.text = ", "
+      a.push(u)
+    }
+
+    a.pop()
   }
-  return tk
+
+  u = toTextToken()
+  u.text = ")"
+  a.push(u)
+
+  if (t.returns) {
+    u = toTextToken()
+    u.text = ": "
+    a.push(u)
+
+    const b = toTypeTokens(t.returns.type)
+    a.push(...b)
+  }
+
+  return a
 }
 
-/**
- * @param {OptionalType} t
- * @returns {DeclarationToken[]}
- */
-function tokenizeOptional(t) {
-  const tk = []
-  t.children.forEach((t) => {
-    tk.push(
-      ...tokenizeType(t),
-      {
-        type: "text",
-        text: ", "
-      }
-    )
-  })
-  tk.pop()
-  tk.push(
-    {
-      type: "text",
-      text: "?"
+export function toLiteralTokens(t: Library.LiteralType): Tokenizer.Token[] {
+  const a: Tokenizer.Token[] = []
+
+  const u = toTextToken()
+  u.text = String(t.value)
+  a.push(u)
+
+  return a
+}
+
+export function toUnionTypeTokens(t: Library.UnionType): Tokenizer.Token[] {
+  const a: Tokenizer.Token[] = []
+
+  let u: Tokenizer.Token
+
+  for (const e of t.types) {
+    const b = toTypeTokens(e)
+    if (b.length > 1) {
+      u = toTextToken()
+      u.text = "("
+      b.unshift(u)
+
+      u = toTextToken()
+      u.text = ")"
+      b.push(u)
     }
-  )
-  return tk
+
+    a.push(...b)
+
+    u = toTextToken()
+    u.text = " | "
+    a.push(u)
+  }
+
+  a.pop()
+
+  return a
 }
 
-/**
- * @param {RecordType} t
- * @returns {DeclarationToken[]}
- */
-function tokenizeRecord(t) {
-  const tk = [
-    {
-      type: "text",
-      text: "Record"
-    },
-    {
-      type: "text",
-      text: "&lt;"
-    }
-  ]
-  t.children.forEach((t) => {
-    tk.push(
-      ...tokenizeType(t),
-      {
-        type: "text",
-        text: ", "
-      }
-    )
-  })
-  tk.pop()
-  tk.push(
-    {
-      type: "text",
-      text: "&gt;"
-    }
-  )
-  return tk
+export function toDecoratorToken(): Tokenizer.DecoratorToken {
+  const t = tokenNode()
+  return decoratorToken(t)
 }
 
-/**
- * @param {UnionType} t
- * @returns {DeclarationToken[]}
- */
-function tokenizeUnion(t) {
-  const tk = []
-  t.children.forEach((t) => {
-    tk.push(
-      ...tokenizeType(t),
-      {
-        type: "text",
-        text: " | "
-      }
-    )
-  })
-  tk.pop()
-  return tk
+export function decoratorToken(t: Tokenizer.TokenNode): Tokenizer.DecoratorToken {
+  return {...t, type: "decorator"}
 }
 
-export { tokenizeDeclaration, tokenizeType }
+export function toIdentifierToken(): Tokenizer.IdentifierToken {
+  const t = tokenNode()
+  return identifierToken(t)
+}
+
+export function identifierToken(t: Tokenizer.TokenNode): Tokenizer.IdentifierToken {
+  return {...t, type: "identifier"}
+}
+
+export function toKeywordToken(): Tokenizer.KeywordToken {
+  const t = tokenNode()
+  return keywordToken(t)
+}
+
+export function keywordToken(t: Tokenizer.TokenNode): Tokenizer.KeywordToken {
+  return {...t, type: "keyword"}
+}
+
+export function toTextToken(): Tokenizer.TextToken {
+  const t = tokenNode()
+  return textToken(t)
+}
+
+export function textToken(t: Tokenizer.TokenNode): Tokenizer.TextToken {
+  return {...t, type: "text"}
+}
+
+export function toReferenceToken(): Tokenizer.ReferenceToken {
+  const t = tokenNode()
+  return referenceToken(t)
+}
+
+export function referenceToken(t: Tokenizer.TokenNode): Tokenizer.ReferenceToken {
+  return {...t, type: "reference", id: ""}
+}
+
+export function tokenNode(): Tokenizer.TokenNode {
+  return {type: "", text: ""}
+}

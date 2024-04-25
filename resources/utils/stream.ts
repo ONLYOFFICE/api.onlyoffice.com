@@ -1,6 +1,6 @@
 import {createReadStream, createWriteStream} from "node:fs"
 import type {TransformCallback} from "node:stream"
-import {Readable, Transform} from "node:stream"
+import {Duplex, Readable, Transform, Writable} from "node:stream"
 import MultiStream from "multistream"
 import Chain from "stream-chain"
 import StreamArray from "stream-json/streamers/StreamArray.js"
@@ -8,6 +8,51 @@ import StreamObject from "stream-json/streamers/StreamObject.js"
 import Disassembler from "stream-json/Disassembler.js"
 import Parser from "stream-json/Parser.js"
 import Stringer from "stream-json/Stringer.js"
+
+export class StringWritable extends Writable {
+  buf: string
+
+  constructor(buf = "") {
+    super()
+    this.buf = buf
+  }
+
+  _write(ch: any, _: BufferEncoding, cb: TransformCallback) {
+    this.buf += String(ch)
+    cb()
+  }
+
+  // clear(): void {
+  //   this.buf = ""
+  // }
+
+  toReadable(): StringReadable {
+    return new StringReadable(this.buf)
+  }
+}
+
+export class StringReadable extends Readable {
+  buf: string
+
+  constructor(buf = "") {
+    super()
+    this.buf = buf
+  }
+
+  _read() {
+    this.push(this.buf)
+    this.buf = ""
+    this.push(null)
+  }
+
+  // clear(): void {
+  //   this.buf = ""
+  // }
+
+  toWritable(): StringWritable {
+    return new StringWritable(this.buf)
+  }
+}
 
 interface ChainChunk {
   key: unknown
@@ -108,6 +153,21 @@ export function createIndexes(from: string, to: string, by: string): Promise<voi
     new Parser(),
     new StreamArray(),
     new StreamIndex(by),
+    new UnStreamObject(),
+    makeObject(),
+    new Stringer(),
+    createWriteStream(to)
+  )
+}
+
+export function createIndexes2(r: Readable, to: string, by: string): Promise<void> {
+  let i = -1
+  return chain(
+    r,
+    (ch) => {
+      i += 1
+      return {key: (ch as any)[by], value: i}
+    },
     new UnStreamObject(),
     makeObject(),
     new Stringer(),

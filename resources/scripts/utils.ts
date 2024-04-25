@@ -37,6 +37,10 @@ export async function createREST(r) {
   await writeTemplate("rest", r)
 }
 
+export async function writeCode(r) {
+  await writeTemplate("code", r)
+}
+
 /**
  * @param {"code" | "rest"} n
  * @param {string} r

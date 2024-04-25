@@ -15,6 +15,7 @@
     "../index.d.ts",
     "./components",
     "./config",
+    "./generated",
     "./layouts",
     "./pages",
     "./resources",

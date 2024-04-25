@@ -7,6 +7,10 @@ import * as documentBuilder from "./scripts/document-builder.ts"
 import * as hostedSolutions from "./scripts/hosted-solutions.ts"
 import {createTempDir, prepareLibDir} from "./utils/basedir.ts"
 
+if (esMain(import.meta)) {
+  main()
+}
+
 function main(): void {
   sade("./makefile.js")
     .command("build")
@@ -17,14 +21,8 @@ function main(): void {
 export async function build(): Promise<void> {
   const tempDir = await createTempDir()
   const distDir = await prepareLibDir()
-  await Promise.all([
-    communityServer.build(tempDir, distDir),
-    docspace.build(tempDir, distDir),
-    documentBuilder.build(tempDir, distDir),
-    hostedSolutions.build(tempDir, distDir)
-  ])
-}
-
-if (esMain(import.meta)) {
-  main()
+  await communityServer.build(tempDir, distDir)
+  await docspace.build(tempDir, distDir)
+  await documentBuilder.build(tempDir, distDir)
+  await hostedSolutions.build(tempDir, distDir)
 }

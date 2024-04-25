@@ -1,6 +1,6 @@
-import { Console as NodeConsole } from "node:console"
+import {Console as NodeConsole} from "node:console"
 import process from "node:process"
-import pack from "../package.json" assert { type: "json" }
+import pack from "../package.json" with {type: "json"}
 
 export class Console extends NodeConsole {
   static console = new Console(pack.name, process.stdout, process.stderr)
@@ -34,12 +34,8 @@ export class Console extends NodeConsole {
     return new Console(this._name, this._stdout, this._stderr)
   }
 
-  info(...data: any[]): void {
-    this.log(...data)
-  }
-
   log(...data: any[]): void {
-    super.info(`${this.prefix()} info:`, ...data)
+    super.log(`${this.prefix()} info:`, ...data)
   }
 
   warn(...data: any[]): void {

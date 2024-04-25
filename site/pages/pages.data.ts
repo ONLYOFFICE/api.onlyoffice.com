@@ -6,17 +6,42 @@ export function data() {
     remote: "",
     layout: "article",
     tags: ["navigation"],
+
+    // todo: refactor.
     permalink(data) {
       const a = data.page.filePathStem.split("/")
-      const s = a
+      let s = a
         .slice(2, a.length)
         .map((s) => {
           s = s.toLowerCase()
           return slugify.default(s)
         })
         .join("/")
+
+      if (data.slug) {
+        s = s.replace(data.page.fileSlug, data.slug(data))
+      }
+
       return `/${s}.${data.page.outputFileExtension}`
     },
+
+    // todo: rename, make generic.
+    // todo: refactor.
+    _link(data: any, _s: string): string {
+      const a = data.page.filePathStem.split("/")
+      let s = a
+        .slice(2, a.length)
+        .map((s) => {
+          s = s.toLowerCase()
+          return slugify.default(s)
+        })
+        .join("/")
+
+      s = s.replace(data.page.fileSlug, _s)
+
+      return `/${s}/`
+    },
+
     eleventyComputed: {
       title(data) {
         if (data === undefined) {

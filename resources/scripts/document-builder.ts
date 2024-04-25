@@ -1,187 +1,184 @@
-import { rm } from "node:fs/promises"
-import { createReadStream, createWriteStream } from "node:fs"
-import { join } from "node:path"
-import {
-  DeclarationsCache,
-  PostprocessDeclarations,
-  PostPostprocessDeclarations,
-  PreprocessDeclarations as JSDocPreprocessDeclarations
-} from "@onlyoffice/documentation-declarations-scripts/jsdoc.ts"
-import { sortJSON, prettifyJSON } from "@onlyoffice/documentation-utils/jq.ts"
-import Chain from "stream-chain"
+import {rm} from "node:fs/promises"
+import {createWriteStream} from "node:fs"
+import {join} from "node:path"
+import {Readable} from "node:stream"
+import {Cache, FirstIteration, SecondIteration, ThirdIteration} from "@onlyoffice/documentation-declarations-scripts/jsdoc.ts"
+import {prettifyJSON} from "@onlyoffice/documentation-utils/jq.ts"
 import StreamArray from "stream-json/streamers/StreamArray.js"
 import Disassembler from "stream-json/Disassembler.js"
+import Parser from "stream-json/Parser.js"
 import Stringer from "stream-json/Stringer.js"
-import parser from "stream-json"
-import { downloadFile } from "../utils/net.ts"
-import { createIndexes, mergeArrays } from "../utils/stream.ts"
-import { num, writeTemplate } from "./utils.ts"
+import {console} from "../utils/console.ts"
+import {download} from "../utils/net.ts"
+import {StringWritable, chain, createIndexes2} from "../utils/stream.ts"
+import {writeCode} from "./utils.ts"
 
-import { createRequire } from "node:module"
-const require = createRequire(import.meta.url)
+const config = [
+  {
+    name: "document-builder.document",
+    variant: "master",
+    source: {
+      owner: "vanyauhalin",
+      repo: "onlyoffice-document-builder-test",
+      branch: "main",
+      path: "document-builder/master/document.json"
+    }
+  },
+  {
+    name: "document-builder.form",
+    variant: "master",
+    source: {
+      owner: "vanyauhalin",
+      repo: "onlyoffice-document-builder-test",
+      branch: "main",
+      path: "document-builder/master/form.json"
+    }
+  },
+  {
+    name: "document-builder.presentation",
+    variant: "master",
+    source: {
+      owner: "vanyauhalin",
+      repo: "onlyoffice-document-builder-test",
+      branch: "main",
+      path: "document-builder/master/presentation.json"
+    }
+  },
+  {
+    name: "document-builder.spreadsheet",
+    variant: "master",
+    source: {
+      owner: "vanyauhalin",
+      repo: "onlyoffice-document-builder-test",
+      branch: "main",
+      path: "document-builder/master/spreadsheet.json"
+    }
+  },
 
-const ref = "https://raw.githubusercontent.com/onlyoffice/document-builder-declarations/dist/master/"
-const files = [
-  "sdkjs-forms.json",
-  "sdkjs.json"
+  {
+    name: "document-builder-plugin.common",
+    variant: "master",
+    source: {
+      owner: "vanyauhalin",
+      repo: "onlyoffice-document-builder-test",
+      branch: "main",
+      path: "document-builder-plugin/master/common.json"
+    }
+  },
+  {
+    name: "document-builder-plugin.document",
+    variant: "master",
+    source: {
+      owner: "vanyauhalin",
+      repo: "onlyoffice-document-builder-test",
+      branch: "main",
+      path: "document-builder-plugin/master/document.json"
+    }
+  },
+  {
+    name: "document-builder-plugin.form",
+    variant: "master",
+    source: {
+      owner: "vanyauhalin",
+      repo: "onlyoffice-document-builder-test",
+      branch: "main",
+      path: "document-builder-plugin/master/form.json"
+    }
+  },
+  {
+    name: "document-builder-plugin.presentation",
+    variant: "master",
+    source: {
+      owner: "vanyauhalin",
+      repo: "onlyoffice-document-builder-test",
+      branch: "main",
+      path: "document-builder-plugin/master/presentation.json"
+    }
+  },
+  {
+    name: "document-builder-plugin.spreadsheet",
+    variant: "master",
+    source: {
+      owner: "vanyauhalin",
+      repo: "onlyoffice-document-builder-test",
+      branch: "main",
+      path: "document-builder-plugin/master/spreadsheet.json"
+    }
+  }
 ]
 
-/**
- * @param {string} tempDir
- * @param {string} distDir
- * @returns {Promise<void>}
- */
-export async function build(tempDir, distDir) {
-  /** @type {string[]} */
-  const froms = []
+export async function build(tempDir: string, distDir: string): Promise<void> {
+  for (const c of config) {
+    const m = JSON.stringify({name: c.name, variant: c.variant})
+    console.log(`Start building '${m}'`)
 
-  await Promise.all(files.map(async (file) => {
-    const f = join(tempDir, file)
-    const u = `${ref}${file}`
-    await downloadFile(u, f)
+    const w = new StringWritable()
+    const u = sourceDownloadURL(c.source)
+    await download(w, u)
 
-    const cache = new DeclarationsCache()
+    const cache = new Cache()
+    cache.setup()
 
-    let from = f
-    let to = join(tempDir, num(file, 0))
-    await new Promise((res, rej) => {
-      const c = new Chain([
-        createReadStream(from),
-        parser(),
-        new StreamArray(),
-        new PreprocessDeclarations(cache),
-        new Disassembler(),
-        new Stringer({ makeArray: true }),
-        createWriteStream(to)
-      ])
-      c.on("error", rej)
-      c.on("close", res)
-    })
+    await chain(
+      w.toReadable(),
+      new Parser(),
+      new StreamArray(),
+      new FirstIteration(cache),
+      cache.toWritable()
+    )
+    cache.step()
 
-    from = to
-    to = join(tempDir, num(file, 1))
-    await new Promise((res, rej) => {
-      const c = new Chain([
-        createReadStream(from),
-        parser(),
-        new StreamArray(),
-        new PostprocessDeclarations(cache),
-        new Disassembler(),
-        new Stringer({ makeArray: true }),
-        createWriteStream(to)
-      ])
-      c.on("error", rej)
-      c.on("close", res)
-    })
+    await chain(
+      cache.toReadable(),
+      new SecondIteration(cache),
+      cache.toWritable()
+    )
+    cache.step()
 
-    const _list = require(to)
-    // @ts-ignore
-    cache._onRetrieve = function _onRetrieve(id) {
-      // @ts-ignore
-      return _list[cache.retrieve(id).index]
-    }
+    await chain(
+      cache.toReadable(),
+      new ThirdIteration(cache),
+      cache.toWritable()
+    )
+    cache.step()
 
-    // let _to = to
-    // // @ts-ignore
-    // cache._onRetrieve = async function _onRetrieve(id) {
-    //   let d
-    //   await new Promise((res, rej) => {
-    //     const c = new Chain([
-    //       createReadStream(_to),
-    //       parser(),
-    //       new StreamArray(),
-    //       new Transform({
-    //         objectMode: true,
-    //         transform(ch, _, cb) {
-    //           if (ch.value.id === id) {
-    //             d = ch.value
-    //           } else {
-    //             cb(null)
-    //           }
-    //         }
-    //       })
-    //     ])
-    //     c.on("error", rej)
-    //     c.on("close", res)
-    //   })
-    //   // @ts-ignore
-    //   return d
-    // }
+    const f = join(tempDir, `${c.name}.json`)
 
-    from = to
-    to = join(tempDir, num(file, 2))
-    await new Promise((res, rej) => {
-      const c = new Chain([
-        createReadStream(from),
-        parser(),
-        new StreamArray(),
-        new PostPostprocessDeclarations(cache),
-        new Disassembler(),
-        new Stringer({ makeArray: true }),
-        createWriteStream(to)
-      ])
-      c.on("error", rej)
-      c.on("close", res)
-    })
+    await chain(
+      Readable.from(cache.current.declarations),
+      new Disassembler(),
+      new Stringer({makeArray: true}),
+      createWriteStream(f)
+    )
 
-    froms.push(to)
-  }))
+    await Promise.all([
+      (async () => {
+        const t = join(distDir, `${c.name}.declarations.json`)
+        await prettifyJSON(f, t)
+      })(),
 
-  const pn = "document-builder"
-  const pd = `${pn}.declarations.json`
-  const pi = `${pn}.indexes.json`
+      (async () => {
+        const n = `${c.name}.indexes.json`
 
-  let from = ""
-  let to = join(tempDir, pd)
-  await mergeArrays(froms.map((f) => createReadStream(f)), to)
+        // todo: use cache.current.indexes
+        const r = Readable.from(cache.current.declarations)
+        const f = join(tempDir, n)
+        await createIndexes2(r, f, "id")
 
-  from = to
-  to = join(distDir, pd)
-  await sortJSON(from, to, ".id")
+        const t = join(distDir, n)
+        await prettifyJSON(f, t)
 
-  from = to
-  to = join(tempDir, pi)
-  await createIndexes(from, to, "id")
+        await rm(f)
+      })()
+    ])
 
-  from = to
-  to = join(distDir, pi)
-  await prettifyJSON(from, to)
+    await rm(f)
+    await writeCode(c.name)
 
-  await writeTemplate("code", pn)
-  await rm(tempDir, { recursive: true, force: true })
+    console.log(`Finish building '${m}'`)
+  }
 }
 
-class PreprocessDeclarations extends JSDocPreprocessDeclarations {
-  // todo: typing.
-  constructor(cache) {
-    super(cache)
-  }
-
-  _transform(ch, enc, cb) {
-    // todo: /** @type {Doclet} */
-    const doc = ch.value
-    if (Object.hasOwn(doc, "meta") && Object.hasOwn(doc.meta, "file")) {
-      let file = doc.meta.file.replace(/.*contents\/([\S\s]*)\.js.*/, "$1")
-      if (doc.meta.file.includes("sdkjs-forms")) {
-        file = `forms/${file}`
-      }
-      doc.meta.file = file
-    }
-    // todo: support the `Example: 1.` in properties, parameters, and returns.
-    if (Object.hasOwn(doc, "longname")) {
-      if (doc.longname === "ApiRange#Find" || doc.longname === "ApiRange#Replace") {
-        // todo: @also
-        // https://github.com/ONLYOFFICE/sdkjs/blob/eb92448a74506b94ca984b6c6dd82b715ecf4836/cell/apiBuilder.js#L3307
-        // https://github.com/ONLYOFFICE/sdkjs/blob/eb92448a74506b94ca984b6c6dd82b715ecf4836/cell/apiBuilder.js#L3464
-        cb(null)
-        return
-      }
-    }
-    if (Object.hasOwn(doc, "name")) {
-      if (doc.name.startsWith("\"") && doc.name.endsWith("\"")) {
-        doc.name = doc.name.slice(1, -1)
-      }
-    }
-    super._transform(ch, enc, cb)
-  }
+function sourceDownloadURL(s: typeof config[0]["source"]) {
+  return `https://raw.githubusercontent.com/${s.owner}/${s.repo}/${s.branch}/${s.path}`
 }
