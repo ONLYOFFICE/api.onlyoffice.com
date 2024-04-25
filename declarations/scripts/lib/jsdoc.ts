@@ -1,24 +1,27 @@
-// todo: remove html from description.
-// todo: we should omit the - in the returns description, if it is not a list.
-// todo: try to convert summary to markdown. It is not always a sentence.
+// todo: add support for the @link tag.
 // todo?: bring back the see also.
 // todo: omit quotes from string literals.
 
 import {Readable, Writable} from "node:stream"
 import type {Library} from "@onlyoffice/documentation-declarations-types/library.ts"
 import {Tokenizer} from "@onlyoffice/documentation-declarations-types/tokenizer.js"
-import {createESlint} from "@onlyoffice/documentation-utils/eslint.ts"
+import {ESLint} from "@onlyoffice/documentation-utils/eslint.ts"
 import {AsyncTransform} from "@onlyoffice/documentation-utils/stream.ts"
 import languagedetection from "@vscode/vscode-languagedetection"
+import type {ListItem, Paragraph} from "mdast"
+import {fromMarkdown} from "mdast-util-from-markdown"
+import {toMarkdown} from "mdast-util-to-markdown"
 import {English} from "sentence-splitter/lang"
 import {split} from "sentence-splitter"
+import {select, selectAll} from "unist-util-select"
+import {SKIP, visit} from "unist-util-visit"
 import type {Catharsis, Doclet, DocletParam} from "../types/doclet.d.ts"
 import {console} from "./console.ts"
 import {toDeclarationTokens, toTypeTokens} from "./tokenizer.ts"
 
 const {ModelOperations} = languagedetection
 const model = new ModelOperations()
-const eslint = createESlint()
+const eslint = new ESLint()
 
 export interface FirstIterationChunk {
   key: number
@@ -624,7 +627,9 @@ async function toFunctionDeclarationUnits(dc: Doclet): Promise<[[Library.Functio
 
     const fr = functionReturns(t)
     if (r.description) {
-      fr.description = serializeString(r.description)
+      let s = omitSingleListItem(r.description)
+      s = serializeString(s)
+      fr.description = s
     }
 
     f.returns = fr
@@ -993,11 +998,10 @@ function example(): Library.Example {
 }
 
 function resolveAbstract(dc: Doclet): [string, string] {
-  // todo: https://github.com/craftzdog/remark-strip-html/issues/2/
   const [s, d] = resolve()
   return [serializeString(s), serializeString(d)]
 
-  function resolve() {
+  function resolve(): [string, string] {
     if (dc.summary && dc.description) {
       return [dc.summary, dc.description]
     }
@@ -1007,7 +1011,8 @@ function resolveAbstract(dc: Doclet): [string, string] {
     }
 
     if (dc.description) {
-      const s = firstSentence(dc.description)
+      let s = firstParagraph(dc.description)
+      s = firstSentence(s)
       return [s, dc.description]
     }
 
@@ -1015,16 +1020,48 @@ function resolveAbstract(dc: Doclet): [string, string] {
   }
 }
 
-function firstSentence(s: string): string {
-  const r = split(s, {AbbrMarker: {language: English}})
-  if (r.length === 0) {
-    return s
+function firstParagraph(s: string): string {
+  const t = fromMarkdown(s)
+  const n = select("paragraph", t) as Paragraph | undefined
+  if (n) {
+    s = toMarkdown({type: "root", children: [n]})
   }
-  return r[0].raw
+  return s
 }
 
-function serializeString(s: string) {
-  return s.trim()
+function firstSentence(s: string): string {
+  const r = split(s, {AbbrMarker: {language: English}})
+  if (r.length > 0) {
+    s = r[0].raw
+  }
+  return s
+}
+
+function serializeString(s: string): string {
+  return omitHTMLTags(s).trim()
+}
+
+function omitSingleListItem(s: string): string {
+  const t = fromMarkdown(s)
+  const r = selectAll("list:first-child listItem", t) as ListItem[]
+  if (r.length === 1) {
+    s = toMarkdown({type: "root", children: r[0].children})
+  }
+  return s
+}
+
+function omitHTMLTags(s: string): string {
+  const t = fromMarkdown(s)
+
+  visit(t, "html", (_, index, parent) => {
+    if (!parent || index === undefined) {
+      return
+    }
+    parent.children.splice(index, 1)
+    return [SKIP, index]
+  })
+
+  return toMarkdown(t)
 }
 
 function isNumberLiteral(s: string): boolean {
