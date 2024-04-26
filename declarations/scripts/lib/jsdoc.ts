@@ -1,6 +1,8 @@
 // todo: add support for the @link tag.
-// todo?: bring back the see also.
+// todo: should we bring back the see also?
 // todo: omit quotes from string literals.
+// todo: should we apple void if no returns statement?
+//       what about class constructors?
 
 import {Readable, Writable} from "node:stream"
 import type {Library} from "@onlyoffice/documentation-declarations-types/library.ts"
@@ -616,8 +618,6 @@ async function toFunctionDeclarationUnits(dc: Doclet): Promise<[[Library.Functio
     })
   }
 
-  // todo: should we apple void if no returns statement?
-  // what about class constructors?
   if (dc.returns && dc.returns.length > 0) {
     // JSDoc allows multiple @returns, in practice, the first one is used only.
     const r = dc.returns[0]
@@ -703,8 +703,6 @@ function declarationNode(): Library.DeclarationNode {
     title: "",
     summary: undefined,
     description: undefined,
-    // since: "",
-    // deprecated: "",
     parent: undefined,
     identifier: "",
     signature: undefined,

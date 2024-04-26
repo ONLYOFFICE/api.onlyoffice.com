@@ -60,6 +60,8 @@ export namespace Library {
     title: string
     summary?: string
     description?: string
+    // since?: string
+    // deprecated?: string
     parent?: Reference
     identifier: string
     signature?: Tokenizer.Token[]
@@ -105,7 +107,6 @@ export namespace Library {
     returns?: FunctionReturns
   }
 
-  // export interface ValueNode {} ?
   export interface FunctionReturns {
     signature?: Tokenizer.Token[]
     description?: string
@@ -128,7 +129,7 @@ export namespace Library {
     value: any
   }
 
-  // is it modification or composition?
+  // todo: is it modification or composition?
   // export interface OptionalType extends TypeNode {
   //   type: "optional"
   //   children: Type[]
