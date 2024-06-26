@@ -1,9 +1,6 @@
-import "./client.ts"
-import colors from "@onlyoffice/ui-colors/main.css?inline"
-import type {Meta} from "@storybook/preact"
-import type {JSX} from "preact"
-import {h} from "preact"
-import codeListing from "./main.css?inline"
+import {type Meta} from "@storybook/preact"
+import {type JSX, h} from "preact"
+import {Default as CodeEditorStory} from "../../ui-code-editor/lib/main.story.tsx"
 import {
   CodeListing,
   CodeListingAction,
@@ -14,12 +11,11 @@ import {
   CodeListingTabPanel
 } from "./main.tsx"
 
-const meta: Meta = {
-  title: "UI/Code Listing",
-  parameters: {styles: [colors, codeListing]}
-}
+export default {
+  title: "UI/Code Listing"
+} satisfies Meta
 
-export function Composition(): JSX.Element {
+export function Default(): JSX.Element {
   return <CodeListing>
     <CodeListingTabListWrapper>
       <CodeListingTabList label="List of Tabs">
@@ -44,4 +40,27 @@ export function Composition(): JSX.Element {
   </CodeListing>
 }
 
-export default meta
+export function WithCodeEditor(): JSX.Element {
+  return <CodeListing>
+    <CodeListingTabListWrapper>
+      <CodeListingTabList label="List of Tabs">
+        <CodeListingTab id="first">First Tab</CodeListingTab>
+        <CodeListingTab id="second">Second Tab</CodeListingTab>
+      </CodeListingTabList>
+      <CodeListingActionList label="List of Actions">
+        <CodeListingAction>
+          <button type="button">@</button>
+        </CodeListingAction>
+        <CodeListingAction>
+          <button type="button">@</button>
+        </CodeListingAction>
+      </CodeListingActionList>
+    </CodeListingTabListWrapper>
+    <CodeListingTabPanel by="first">
+      <CodeEditorStory>console.log("First Tab Content")</CodeEditorStory>
+    </CodeListingTabPanel>
+    <CodeListingTabPanel by="second">
+      <CodeEditorStory>console.log("Second Tab Content")</CodeEditorStory>
+    </CodeListingTabPanel>
+  </CodeListing>
+}

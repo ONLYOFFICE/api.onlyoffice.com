@@ -9,4 +9,9 @@ html {
   font-family: var(--typography-sans-serif-font);
   font-size: 14px;
   line-height: var(--typography-line-height);
+  transition: padding 0.3s;
+}
+
+.sb-show-main.sb-main-padded {
+  padding: 0;
 }

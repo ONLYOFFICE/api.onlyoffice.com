@@ -2022,9 +2022,6 @@ importers:
 
   packages/ui-button:
     dependencies:
-      clsx:
-        specifier: ^2.1.0
-        version: 2.1.0
       preact:
         specifier: ^10.22.0
         version: 10.22.0
@@ -2032,9 +2029,6 @@ importers:
         specifier: ^5.4.5
         version: 5.4.5
     devDependencies:
-      '@onlyoffice/ui-colors':
-        specifier: workspace:^
-        version: link:../ui-colors
       '@storybook/preact':
         specifier: ^8.0.0
         version: 8.0.0(preact@10.22.0)
@@ -2063,9 +2057,9 @@ importers:
         specifier: ^5.4.5
         version: 5.4.5
     devDependencies:
-      '@onlyoffice/ui-colors':
+      '@onlyoffice/preact-types':
         specifier: workspace:^
-        version: link:../ui-colors
+        version: link:../preact-types
       '@storybook/preact':
         specifier: ^8.0.0
         version: 8.0.0(preact@10.22.0)
@@ -2078,6 +2072,9 @@ importers:
       '@github/tab-container-element':
         specifier: ^4.8.0
         version: 4.8.0
+      '@onlyoffice/preact-types':
+        specifier: workspace:^
+        version: link:../preact-types
       '@onlyoffice/tab-container-element-types':
         specifier: workspace:^
         version: link:../tab-container-element-types
@@ -2088,34 +2085,6 @@ importers:
         specifier: ^5.4.5
         version: 5.4.5
     devDependencies:
-      '@onlyoffice/ui-colors':
-        specifier: workspace:^
-        version: link:../ui-colors
-      '@storybook/preact':
-        specifier: ^8.0.0
-        version: 8.0.0(preact@10.22.0)
-      vite:
-        specifier: ^5.1.6
-        version: 5.1.6(@types/node@20.12.12)(lightningcss@1.24.1)(terser@5.31.0)
-
-  packages/ui-code-listing-code-editor:
-    dependencies:
-      preact:
-        specifier: ^10.22.0
-        version: 10.22.0
-      typescript:
-        specifier: ^5.4.5
-        version: 5.4.5
-    devDependencies:
-      '@onlyoffice/ui-code-editor':
-        specifier: workspace:^
-        version: link:../ui-code-editor
-      '@onlyoffice/ui-code-listing':
-        specifier: workspace:^
-        version: link:../ui-code-listing
-      '@onlyoffice/ui-colors':
-        specifier: workspace:^
-        version: link:../ui-colors
       '@storybook/preact':
         specifier: ^8.0.0
         version: 8.0.0(preact@10.22.0)
@@ -2132,9 +2101,6 @@ importers:
         specifier: ^5.4.5
         version: 5.4.5
     devDependencies:
-      '@onlyoffice/ui-colors':
-        specifier: workspace:^
-        version: link:../ui-colors
       '@storybook/preact':
         specifier: ^8.0.0
         version: 8.0.0(preact@10.22.0)
@@ -2171,81 +2137,12 @@ importers:
 
   packages/ui-content:
     dependencies:
-      '@onlyoffice/preact-types':
-        specifier: workspace:^
-        version: link:../preact-types
-      preact:
-        specifier: ^10.22.0
-        version: 10.22.0
-      typescript:
-        specifier: ^5.4.5
-        version: 5.4.5
-    devDependencies:
-      '@onlyoffice/ui-colors':
-        specifier: workspace:^
-        version: link:../ui-colors
-      '@storybook/preact':
-        specifier: ^8.0.0
-        version: 8.0.0(preact@10.22.0)
-      vite:
-        specifier: ^5.1.6
-        version: 5.1.6(@types/node@20.12.12)(lightningcss@1.24.1)(terser@5.31.0)
-
-  packages/ui-content-code-editor:
-    dependencies:
-      preact:
-        specifier: ^10.22.0
-        version: 10.22.0
-      typescript:
-        specifier: ^5.4.5
-        version: 5.4.5
-    devDependencies:
-      '@onlyoffice/ui-code-editor':
-        specifier: workspace:^
-        version: link:../ui-code-editor
-      '@onlyoffice/ui-colors':
-        specifier: workspace:^
-        version: link:../ui-colors
-      '@onlyoffice/ui-content':
-        specifier: workspace:^
-        version: link:../ui-content
-      '@storybook/preact':
-        specifier: ^8.0.0
-        version: 8.0.0(preact@10.22.0)
-      vite:
-        specifier: ^5.1.6
-        version: 5.1.6(@types/node@20.12.12)(lightningcss@1.24.1)(terser@5.31.0)
-
-  packages/ui-content-code-listing:
-    dependencies:
-      preact:
-        specifier: ^10.22.0
-        version: 10.22.0
-      typescript:
-        specifier: ^5.4.5
-        version: 5.4.5
-    devDependencies:
-      '@onlyoffice/ui-code-listing':
-        specifier: workspace:^
-        version: link:../ui-code-listing
-      '@onlyoffice/ui-colors':
-        specifier: workspace:^
-        version: link:../ui-colors
-      '@onlyoffice/ui-content':
-        specifier: workspace:^
-        version: link:../ui-content
-      '@storybook/preact':
-        specifier: ^8.0.0
-        version: 8.0.0(preact@10.22.0)
-      vite:
-        specifier: ^5.1.6
-        version: 5.1.6(@types/node@20.12.12)(lightningcss@1.24.1)(terser@5.31.0)
-
-  packages/ui-content-tab-container:
-    dependencies:
       '@github/tab-container-element':
         specifier: ^4.8.0
         version: 4.8.0
+      '@onlyoffice/preact-types':
+        specifier: workspace:^
+        version: link:../preact-types
       '@onlyoffice/tab-container-element-types':
         specifier: workspace:^
         version: link:../tab-container-element-types
@@ -2256,12 +2153,6 @@ importers:
         specifier: ^5.4.5
         version: 5.4.5
     devDependencies:
-      '@onlyoffice/ui-colors':
-        specifier: workspace:^
-        version: link:../ui-colors
-      '@onlyoffice/ui-content':
-        specifier: workspace:^
-        version: link:../ui-content
       '@storybook/preact':
         specifier: ^8.0.0
         version: 8.0.0(preact@10.22.0)
@@ -2271,6 +2162,9 @@ importers:
 
   packages/ui-form-control:
     dependencies:
+      '@onlyoffice/preact-types':
+        specifier: workspace:^
+        version: link:../preact-types
       clsx:
         specifier: ^2.1.0
         version: 2.1.0
@@ -2281,12 +2175,6 @@ importers:
         specifier: ^5.4.5
         version: 5.4.5
     devDependencies:
-      '@onlyoffice/ui-colors':
-        specifier: workspace:^
-        version: link:../ui-colors
-      '@onlyoffice/ui-select':
-        specifier: workspace:^
-        version: link:../ui-select
       '@storybook/preact':
         specifier: ^8.0.0
         version: 8.0.0(preact@10.22.0)
@@ -2351,9 +2239,6 @@ importers:
       '@onlyoffice/ui-code-listing':
         specifier: workspace:^
         version: link:../ui-code-listing
-      '@onlyoffice/ui-code-listing-code-editor':
-        specifier: workspace:^
-        version: link:../ui-code-listing-code-editor
       '@onlyoffice/ui-code-preview':
         specifier: workspace:^
         version: link:../ui-code-preview
@@ -2363,15 +2248,6 @@ importers:
       '@onlyoffice/ui-content':
         specifier: workspace:^
         version: link:../ui-content
-      '@onlyoffice/ui-content-code-editor':
-        specifier: workspace:^
-        version: link:../ui-content-code-editor
-      '@onlyoffice/ui-content-code-listing':
-        specifier: workspace:^
-        version: link:../ui-content-code-listing
-      '@onlyoffice/ui-content-tab-container':
-        specifier: workspace:^
-        version: link:../ui-content-tab-container
       '@onlyoffice/ui-form-control':
         specifier: workspace:^
         version: link:../ui-form-control
@@ -2421,6 +2297,9 @@ importers:
       '@onlyoffice/combobox-container-html-element':
         specifier: workspace:^
         version: link:../combobox-container-html-element
+      '@onlyoffice/preact-types':
+        specifier: workspace:^
+        version: link:../preact-types
       preact:
         specifier: ^10.22.0
         version: 10.22.0
@@ -2428,9 +2307,6 @@ importers:
         specifier: ^5.4.5
         version: 5.4.5
     devDependencies:
-      '@onlyoffice/ui-colors':
-        specifier: workspace:^
-        version: link:../ui-colors
       '@storybook/preact':
         specifier: ^8.0.0
         version: 8.0.0(preact@10.22.0)
@@ -2470,6 +2346,9 @@ importers:
 
   packages/ui-sr-only:
     dependencies:
+      '@onlyoffice/preact-types':
+        specifier: workspace:^
+        version: link:../preact-types
       preact:
         specifier: ^10.22.0
         version: 10.22.0
@@ -2686,9 +2565,6 @@ importers:
       '@onlyoffice/ui-code-listing':
         specifier: workspace:^
         version: link:../packages/ui-code-listing
-      '@onlyoffice/ui-code-listing-code-editor':
-        specifier: workspace:^
-        version: link:../packages/ui-code-listing-code-editor
       '@onlyoffice/ui-code-preview':
         specifier: workspace:^
         version: link:../packages/ui-code-preview
@@ -2698,15 +2574,6 @@ importers:
       '@onlyoffice/ui-content':
         specifier: workspace:^
         version: link:../packages/ui-content
-      '@onlyoffice/ui-content-code-editor':
-        specifier: workspace:^
-        version: link:../packages/ui-content-code-editor
-      '@onlyoffice/ui-content-code-listing':
-        specifier: workspace:^
-        version: link:../packages/ui-content-code-listing
-      '@onlyoffice/ui-content-tab-container':
-        specifier: workspace:^
-        version: link:../packages/ui-content-tab-container
       '@onlyoffice/ui-form-control':
         specifier: workspace:^
         version: link:../packages/ui-form-control
@@ -2869,9 +2736,6 @@ importers:
       storybook:
         specifier: ^8.0.0
         version: 8.0.0(@babel/preset-env@7.24.0(@babel/core@7.24.0))(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
-      storybook-addon-paddings:
-        specifier: ^5.0.1
-        version: 5.0.1(@storybook/components@8.0.10(@types/react@18.2.65)(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(@storybook/manager-api@8.0.10(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(@storybook/preview-api@8.0.10)(@storybook/theming@8.0.10(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(@storybook/types@8.0.10)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       typescript:
         specifier: ^5.4.5
         version: 5.4.5
@@ -4869,18 +4733,12 @@ packages:
   '@storybook/channels@8.0.0':
     resolution: {integrity: sha512-uykCBlSIMVodsgTFC/XAgO7JeaTJrKtDmmM6Z4liGkPS6EUvurOEu2vK6FuvojzhLHdVJ5bP+VXSJerfm7aE4Q==}
 
-  '@storybook/channels@8.0.10':
-    resolution: {integrity: sha512-3JLxfD7czlx31dAGvAYJ4J4BNE/Y2+hhj/dsV3xlQTHKVpnWknaoeYEC1a6YScyfsH6W+XmP2rzZKzH4EkLSGQ==}
-
   '@storybook/cli@8.0.0':
     resolution: {integrity: sha512-4W99ldBUJjrEbZlxI4rvqW8lRY+AP2+wLGRMp4nyI/XW5cp7R+OryZf4imHgecunBQyKGXVek+poDlgKPQsxsg==}
     hasBin: true
 
   '@storybook/client-logger@8.0.0':
     resolution: {integrity: sha512-olc1vUfaZNkXc7L8UoCdGmyBieHQbsaB+0vVoivYMSa1DHYtXE75RefU3lhMSGrkvIZmXMvfaIDmnyJIOB5FxA==}
-
-  '@storybook/client-logger@8.0.10':
-    resolution: {integrity: sha512-u38SbZNAunZzxZNHMJb9jkUwFkLyWxmvp4xtiRM3u9sMUShXoTnzbw1yKrxs+kYJjg+58UQPZ1JhEBRcHt5Oww==}
 
   '@storybook/codemod@8.0.0':
     resolution: {integrity: sha512-rLY3M1xL+4S5dUB8XoSfDF46FxdntSsaFH4sjHZ08itVbwAAl7XqhYElVGueuobTgicJcOVTY8CJNkWcY6ETzA==}
@@ -4891,20 +4749,11 @@ packages:
       react: ^16.8.0 || ^17.0.0 || ^18.0.0
       react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0
 
-  '@storybook/components@8.0.10':
-    resolution: {integrity: sha512-eo+oDDcm35YBB3dtDYDfcjJypNVPmRty85VWpAOBsJXpwp/fgU8csx0DM3KmhrQ4cWLf2WzcFowJwI1w+J88Sw==}
-    peerDependencies:
-      react: ^16.8.0 || ^17.0.0 || ^18.0.0
-      react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0
-
   '@storybook/core-common@8.0.0':
     resolution: {integrity: sha512-fqlQYw5/PDW/oj34QwU5u0HkNLPgELfszsvLFsUcwI7uAzwb/WC2WdPvncT7qRPNcSZLXKJcA8QAqKL4t4I8bg==}
 
   '@storybook/core-events@8.0.0':
     resolution: {integrity: sha512-kkabj4V99gOTBW+y3HM/LTCDekglqb+lslZMamM+Ytxv1lCqCEOIR/OGfnYOyEaK4BLcx61Zp+fO30FZxtoT1w==}
-
-  '@storybook/core-events@8.0.10':
-    resolution: {integrity: sha512-TuHPS6p5ZNr4vp4butLb4R98aFx0NRYCI/7VPhJEUH5rPiqNzE3PZd8DC8rnVxavsJ+jO1/y+egNKXRYkEcoPQ==}
 
   '@storybook/core-server@8.0.0':
     resolution: {integrity: sha512-uVvS4psu/wQ+m9JTAvEvSwxjNKiCviNmNX1fv/VYRhQiAHhdb3e58NfeHd6QBffyOF80hY1RJWe3vAPcNIoZxA==}
@@ -4920,9 +4769,6 @@ packages:
 
   '@storybook/csf@0.1.3':
     resolution: {integrity: sha512-IPZvXXo4b3G+gpmgBSBqVM81jbp2ePOKsvhgJdhyZJtkYQCII7rg9KKLQhvBQM5sLaF1eU6r0iuwmyynC9d9SA==}
-
-  '@storybook/csf@0.1.8':
-    resolution: {integrity: sha512-Ntab9o7LjBCbFIao5l42itFiaSh/Qu+l16l/r/9qmV9LnYZkO+JQ7tzhdlwpgJfhs+B5xeejpdAtftDRyXNajw==}
 
   '@storybook/docs-mdx@3.0.0':
     resolution: {integrity: sha512-NmiGXl2HU33zpwTv1XORe9XG9H+dRUC1Jl11u92L4xr062pZtrShLmD4VKIsOQujxhhOrbxpwhNOt+6TdhyIdQ==}
@@ -4942,9 +4788,6 @@ packages:
 
   '@storybook/manager-api@8.0.0':
     resolution: {integrity: sha512-vJcCc2hG78RjIyhmooqnBlVrTdIomzRqG5WO025tXFgRV1eRUkWJRqSSudcLJO6wk77ZSAtI1ihsDrjsrBFWZw==}
-
-  '@storybook/manager-api@8.0.10':
-    resolution: {integrity: sha512-LLu6YKQLWf5QB3h3RO8IevjLrSOew7aidIQPr9DIr9xC8wA7N2fQabr+qrJdE306p3cHZ0nzhYNYZxSjm4Dvdw==}
 
   '@storybook/manager@8.0.0':
     resolution: {integrity: sha512-1aCHzc+A4IOdDves+mE0K9bjyyPzPAIlR7oI6kSuO416/HXXJDdN5G825OQB/VIBYc1b8cNElMdNVKQK2FQorQ==}
@@ -4968,9 +4811,6 @@ packages:
   '@storybook/preview-api@8.0.0':
     resolution: {integrity: sha512-R2NBKtvHi+i1b/3PZe4u4YdJ7dlqr8YTqLn7syB/YSnKRAa7DYed+GJLu4qFJisE6IuYi+57AsdW16otRFEVvg==}
 
-  '@storybook/preview-api@8.0.10':
-    resolution: {integrity: sha512-uZ6btF7Iloz9TnDcKLQ5ydi2YK0cnulv/8FLQhBCwSrzLLLb+T2DGz0cAeuWZEvMUNWNmkWJ9PAFQFs09/8p/Q==}
-
   '@storybook/preview@8.0.0':
     resolution: {integrity: sha512-cFV7+6LYe1qr1HXm+oc74Z6ygAKgkjkhfGsfDhdS+UrzoFL9JF/+++RcE+xSBNVfzZjL19U1CsPEN0v0smIbkQ==}
 
@@ -4982,9 +4822,6 @@ packages:
 
   '@storybook/router@8.0.0':
     resolution: {integrity: sha512-NPV4pb7TBOepPymHBLDmnwPcH4SnrNsD3LiHaVoaE4xaKMZBse2slWxeWM6IGb6Ynoy6pQpsHhAnt+rTjlcv9w==}
-
-  '@storybook/router@8.0.10':
-    resolution: {integrity: sha512-AZhgiet+EK0ZsPbaDgbbVTAHW2LAMCP1z/Un2uMBbdDeD0Ys29Af47AbEj/Ome5r1cqasLvzq2WXJlVXPNB0Zw==}
 
   '@storybook/telemetry@8.0.0':
     resolution: {integrity: sha512-TpPswQYvhpFCyojWdKKOL7JMUhGqAr6Rqc/KQx4KEkHZat4K1yP7idNqpEIo/gavhlS1xVCNyp+WtzBI7d1PFw==}
@@ -5000,22 +4837,8 @@ packages:
       react-dom:
         optional: true
 
-  '@storybook/theming@8.0.10':
-    resolution: {integrity: sha512-7NHt7bMC7lPkwz9KdDpa6DkLoQZz5OV6jsx/qY91kcdLo1rpnRPAiVlJvmWesFxi1oXOpVDpHHllWzf8KDBv8A==}
-    peerDependencies:
-      react: ^16.8.0 || ^17.0.0 || ^18.0.0
-      react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0
-    peerDependenciesMeta:
-      react:
-        optional: true
-      react-dom:
-        optional: true
-
   '@storybook/types@8.0.0':
     resolution: {integrity: sha512-6nJipdgoAkVFk2JpRPCm9vb/Yuak2lmdZRv9qzl8cNRttlbOESVlzbmhgxCmWV0OYUaMeYge9L8NWhJ14LKbzw==}
-
-  '@storybook/types@8.0.10':
-    resolution: {integrity: sha512-S/hKS7+SqNnYIehwxdQ4M2nnlfGDdYWAXdtPCVJCmS+YF2amgAxeuisiHbUg7eypds6VL0Oxk/j2nPEHOHk9pg==}
 
   '@stylistic/eslint-plugin-js@2.1.0':
     resolution: {integrity: sha512-gdXUjGNSsnY6nPyqxu6lmDTtVrwCOjun4x8PUn0x04d5ucLI74N3MT1Q0UhdcOR9No3bo5PGDyBgXK+KmD787A==}
@@ -8900,22 +8723,6 @@ packages:
   store2@2.14.3:
     resolution: {integrity: sha512-4QcZ+yx7nzEFiV4BMLnr/pRa5HYzNITX2ri0Zh6sT9EyQHbBHacC6YigllUPU9X3D0f/22QCgfokpKs52YRrUg==}
 
-  storybook-addon-paddings@5.0.1:
-    resolution: {integrity: sha512-saZiWzTFJ/DYxjeXBifcOfPuUkFgsYXPjCzAzxdTiR0MD1X+K6F1JaSzmdyCQ9EFUciXi1D9tk118tCd+yaDOg==}
-    peerDependencies:
-      '@storybook/components': ^7.0.0
-      '@storybook/manager-api': ^7.0.0
-      '@storybook/preview-api': ^7.0.0
-      '@storybook/theming': ^7.0.0
-      '@storybook/types': ^7.0.0
-      react: ^16.8.0 || ^17.0.0 || ^18.0.0
-      react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0
-    peerDependenciesMeta:
-      react:
-        optional: true
-      react-dom:
-        optional: true
-
   storybook@8.0.0:
     resolution: {integrity: sha512-ZWfFoKLsZ7kYgqcVgDeUZpN89cxzEx2Mw9afhfMNzwSnjhx9xRdzdNvK7DY1nDnfborxzBhkvwYf/oxRbifKuw==}
     hasBin: true
@@ -11416,14 +11223,6 @@ snapshots:
       telejson: 7.2.0
       tiny-invariant: 1.3.3
 
-  '@storybook/channels@8.0.10':
-    dependencies:
-      '@storybook/client-logger': 8.0.10
-      '@storybook/core-events': 8.0.10
-      '@storybook/global': 5.0.0
-      telejson: 7.2.0
-      tiny-invariant: 1.3.3
-
   '@storybook/cli@8.0.0(@babel/preset-env@7.24.0(@babel/core@7.24.0))(react-dom@18.2.0(react@18.2.0))(react@18.2.0)':
     dependencies:
       '@babel/core': 7.24.0
@@ -11475,10 +11274,6 @@ snapshots:
     dependencies:
       '@storybook/global': 5.0.0
 
-  '@storybook/client-logger@8.0.10':
-    dependencies:
-      '@storybook/global': 5.0.0
-
   '@storybook/codemod@8.0.0':
     dependencies:
       '@babel/core': 7.24.0
@@ -11508,22 +11303,6 @@ snapshots:
       '@storybook/icons': 1.2.9(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       '@storybook/theming': 8.0.0(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       '@storybook/types': 8.0.0
-      memoizerific: 1.11.3
-      react: 18.2.0
-      react-dom: 18.2.0(react@18.2.0)
-      util-deprecate: 1.0.2
-    transitivePeerDependencies:
-      - '@types/react'
-
-  '@storybook/components@8.0.10(@types/react@18.2.65)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)':
-    dependencies:
-      '@radix-ui/react-slot': 1.0.2(@types/react@18.2.65)(react@18.2.0)
-      '@storybook/client-logger': 8.0.10
-      '@storybook/csf': 0.1.8
-      '@storybook/global': 5.0.0
-      '@storybook/icons': 1.2.9(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
-      '@storybook/theming': 8.0.10(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
-      '@storybook/types': 8.0.10
       memoizerific: 1.11.3
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
@@ -11566,10 +11345,6 @@ snapshots:
       - supports-color
 
   '@storybook/core-events@8.0.0':
-    dependencies:
-      ts-dedent: 2.2.0
-
-  '@storybook/core-events@8.0.10':
     dependencies:
       ts-dedent: 2.2.0
 
@@ -11655,10 +11430,6 @@ snapshots:
     dependencies:
       type-fest: 2.19.0
 
-  '@storybook/csf@0.1.8':
-    dependencies:
-      type-fest: 2.19.0
-
   '@storybook/docs-mdx@3.0.0': {}
 
   '@storybook/docs-tools@8.0.0':
@@ -11691,27 +11462,6 @@ snapshots:
       '@storybook/router': 8.0.0
       '@storybook/theming': 8.0.0(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       '@storybook/types': 8.0.0
-      dequal: 2.0.3
-      lodash: 4.17.21
-      memoizerific: 1.11.3
-      store2: 2.14.3
-      telejson: 7.2.0
-      ts-dedent: 2.2.0
-    transitivePeerDependencies:
-      - react
-      - react-dom
-
-  '@storybook/manager-api@8.0.10(react-dom@18.2.0(react@18.2.0))(react@18.2.0)':
-    dependencies:
-      '@storybook/channels': 8.0.10
-      '@storybook/client-logger': 8.0.10
-      '@storybook/core-events': 8.0.10
-      '@storybook/csf': 0.1.8
-      '@storybook/global': 5.0.0
-      '@storybook/icons': 1.2.9(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
-      '@storybook/router': 8.0.10
-      '@storybook/theming': 8.0.10(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
-      '@storybook/types': 8.0.10
       dequal: 2.0.3
       lodash: 4.17.21
       memoizerific: 1.11.3
@@ -11764,23 +11514,6 @@ snapshots:
       ts-dedent: 2.2.0
       util-deprecate: 1.0.2
 
-  '@storybook/preview-api@8.0.10':
-    dependencies:
-      '@storybook/channels': 8.0.10
-      '@storybook/client-logger': 8.0.10
-      '@storybook/core-events': 8.0.10
-      '@storybook/csf': 0.1.8
-      '@storybook/global': 5.0.0
-      '@storybook/types': 8.0.10
-      '@types/qs': 6.9.15
-      dequal: 2.0.3
-      lodash: 4.17.21
-      memoizerific: 1.11.3
-      qs: 6.12.1
-      tiny-invariant: 1.3.3
-      ts-dedent: 2.2.0
-      util-deprecate: 1.0.2
-
   '@storybook/preview@8.0.0': {}
 
   '@storybook/react-dom-shim@8.0.0(react-dom@18.2.0(react@18.2.0))(react@18.2.0)':
@@ -11793,12 +11526,6 @@ snapshots:
       '@storybook/client-logger': 8.0.0
       memoizerific: 1.11.3
       qs: 6.12.0
-
-  '@storybook/router@8.0.10':
-    dependencies:
-      '@storybook/client-logger': 8.0.10
-      memoizerific: 1.11.3
-      qs: 6.12.1
 
   '@storybook/telemetry@8.0.0':
     dependencies:
@@ -11824,25 +11551,9 @@ snapshots:
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
 
-  '@storybook/theming@8.0.10(react-dom@18.2.0(react@18.2.0))(react@18.2.0)':
-    dependencies:
-      '@emotion/use-insertion-effect-with-fallbacks': 1.0.1(react@18.2.0)
-      '@storybook/client-logger': 8.0.10
-      '@storybook/global': 5.0.0
-      memoizerific: 1.11.3
-    optionalDependencies:
-      react: 18.2.0
-      react-dom: 18.2.0(react@18.2.0)
-
   '@storybook/types@8.0.0':
     dependencies:
       '@storybook/channels': 8.0.0
-      '@types/express': 4.17.21
-      file-system-cache: 2.3.0
-
-  '@storybook/types@8.0.10':
-    dependencies:
-      '@storybook/channels': 8.0.10
       '@types/express': 4.17.21
       file-system-cache: 2.3.0
 
@@ -16715,18 +16426,6 @@ snapshots:
   statuses@2.0.1: {}
 
   store2@2.14.3: {}
-
-  storybook-addon-paddings@5.0.1(@storybook/components@8.0.10(@types/react@18.2.65)(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(@storybook/manager-api@8.0.10(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(@storybook/preview-api@8.0.10)(@storybook/theming@8.0.10(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(@storybook/types@8.0.10)(react-dom@18.2.0(react@18.2.0))(react@18.2.0):
-    dependencies:
-      '@storybook/components': 8.0.10(@types/react@18.2.65)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
-      '@storybook/manager-api': 8.0.10(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
-      '@storybook/preview-api': 8.0.10
-      '@storybook/theming': 8.0.10(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
-      '@storybook/types': 8.0.10
-      memoizerific: 1.11.3
-    optionalDependencies:
-      react: 18.2.0
-      react-dom: 18.2.0(react@18.2.0)
 
   storybook@8.0.0(@babel/preset-env@7.24.0(@babel/core@7.24.0))(react-dom@18.2.0(react@18.2.0))(react@18.2.0):
     dependencies:

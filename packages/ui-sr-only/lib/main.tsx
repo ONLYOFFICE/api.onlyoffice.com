@@ -1,15 +1,8 @@
-import type {JSX} from "preact"
-import {Fragment, cloneElement, h, toChildArray} from "preact"
+import {type ChildrenIncludable} from "@onlyoffice/preact-types"
+import {Fragment, type JSX, cloneElement, h, toChildArray} from "preact"
 
-export interface SrOnlyParameters {
-  children?: any
-}
-
-export function SrOnly(
-  {children}: SrOnlyParameters
-): JSX.Element {
-  return <>
-    {toChildArray(children)
-      .map((ch) => cloneElement(ch, {class: "sr-only"}))}
-  </>
+export function SrOnly(p: ChildrenIncludable): JSX.Element {
+  return <>{toChildArray(p.children)
+    // @ts-ignore
+    .map((ch) => cloneElement(ch, {class: "sr-only"}))}</>
 }

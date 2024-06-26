@@ -2,15 +2,10 @@
   "extends": "../tsconfig.base.json",
   "compilerOptions": {
     "rootDir": ".",
-    "outDir": "./dist",
+    "outDir": "dist",
     "jsx": "react",
     "jsxFactory": "h",
     "jsxFragmentFactory": "Fragment"
   },
-  "include": [
-    "../index.d.ts",
-    "./lib/*.ts",
-    "./lib/*.tsx",
-    "./makefile.ts"
-  ]
+  "include": ["lib", "makefile.ts"]
 }

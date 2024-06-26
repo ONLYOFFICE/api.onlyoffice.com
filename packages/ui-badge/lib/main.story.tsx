@@ -1,10 +1,10 @@
-import type {Meta} from "@storybook/preact"
-import {type JSX, Fragment, h} from "preact"
+import {type Meta} from "@storybook/preact"
+import {Fragment, type JSX, h} from "preact"
 import {Badge} from "./main.tsx"
 
-const meta: Meta = {
+export default {
   title: "UI/Badge"
-}
+} satisfies Meta
 
 export function Default(): JSX.Element {
   return <>
@@ -13,5 +13,3 @@ export function Default(): JSX.Element {
     <Badge variant="support">support</Badge>
   </>
 }
-
-export default meta

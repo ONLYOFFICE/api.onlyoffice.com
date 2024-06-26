@@ -4,8 +4,7 @@
   "type": "module",
   "scripts": {
     "build": "storybook build --config-dir ./lib --disable-telemetry --output-dir ./dist",
-    "make": "tsx ./makefile.ts",
-    "preview": "pnpm build && pnpm make preview",
+    "preview": "pnpm build && tsx ./makefile.ts",
     "serve": "storybook dev --config-dir ./lib --no-open --port 6006"
   },
   "devDependencies": {
@@ -22,7 +21,6 @@
     "react-dom": "^18.2.0",
     "sade": "^1.8.1",
     "storybook": "^8.0.0",
-    "storybook-addon-paddings": "^5.0.1",
     "typescript": "^5.4.5",
     "vite": "^5.1.6"
   }

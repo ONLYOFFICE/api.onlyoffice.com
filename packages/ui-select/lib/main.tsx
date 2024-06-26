@@ -1,60 +1,48 @@
-import type {JSX} from "preact"
-import {h} from "preact"
+import {type ChildrenIncludable} from "@onlyoffice/preact-types"
+import {type JSX, h} from "preact"
 
-export interface SelectParameters {
-  children?: any
+export interface SelectProperties extends ChildrenIncludable {
   name?: string
 }
 
-export function Select(
-  {children, name}: SelectParameters
-): JSX.Element {
-  return <combobox-container name={name} class="select">
-    {children}
+export function Select(p: SelectProperties): JSX.Element {
+  return <combobox-container name={p.name} class="select">
+    {p.children}
   </combobox-container>
 }
 
-export interface SelectComboboxParameters {
-  children?: any
+export function SelectCombobox(p: ChildrenIncludable): JSX.Element {
+  return <div role="combobox">{p.children}</div>
 }
 
-export function SelectCombobox(
-  {children}: SelectComboboxParameters
-): JSX.Element {
-  return <div role="combobox">{children}</div>
-}
-
-export interface SelectListboxParameters {
-  children?: any
+export interface SelectListboxProperties extends ChildrenIncludable {
   hidden?: boolean
 }
 
-export function SelectListbox(
-  {children, hidden = true}: SelectListboxParameters
-): JSX.Element {
+export function SelectListbox(p: SelectListboxProperties): JSX.Element {
+  const {children, hidden = true} = p
   return <div role="listbox" hidden={hidden}>{children}</div>
 }
 
-export interface SelectOptionParameters {
-  children?: any
+export interface SelectOptionProperties extends ChildrenIncludable {
   selected?: boolean
   value?: string
 }
 
-interface SelectOptionProperties {
+interface OptionProperties {
   "aria-selected"?: boolean
   "data-value"?: string
 }
 
-export function SelectOption(
-  {children, selected, value}: SelectOptionParameters
-): JSX.Element {
+export function SelectOption(p: SelectOptionProperties): JSX.Element {
+  const {children, selected, value} = p
+
   return <div class="select__option-container">
     <div role="option" {...props()}>{children}</div>
   </div>
 
-  function props(): SelectOptionProperties {
-    const o: SelectOptionProperties = {}
+  function props(): OptionProperties {
+    const o: OptionProperties = {}
     if (selected !== undefined) {
       o["aria-selected"] = selected
     }

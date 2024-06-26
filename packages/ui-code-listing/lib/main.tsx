@@ -1,76 +1,47 @@
-import type {JSX} from "preact"
-import {h} from "preact"
+import {type ChildrenIncludable} from "@onlyoffice/preact-types"
+import {type JSX, h} from "preact"
 
-export interface CodeListingParameters {
-  children?: any
+export function CodeListing(p: ChildrenIncludable): JSX.Element {
+  return <tab-container class="code-listing">{p.children}</tab-container>
 }
 
-export function CodeListing(
-  {children}: CodeListingParameters
-): JSX.Element {
-  return <tab-container class="code-listing">{children}</tab-container>
+export function CodeListingTabListWrapper(p: ChildrenIncludable): JSX.Element {
+  return <div slot="tablist-wrapper">{p.children}</div>
 }
 
-export interface CodeListingTabListWrapperParameters {
-  children?: any
+export interface CodeListingTabListParameters extends ChildrenIncludable {
+  label?: string
 }
 
-export function CodeListingTabListWrapper(
-  {children}: CodeListingTabListWrapperParameters
-): JSX.Element {
-  return <div slot="tablist-wrapper">{children}</div>
+export function CodeListingTabList(p: CodeListingTabListParameters): JSX.Element {
+  return <div role="tablist" aria-label={p.label}>{p.children}</div>
 }
 
-export interface CodeListingTabListParameters {
-  children?: any
-  label: string
+export interface CodeListingTabParameters extends ChildrenIncludable {
+  id?: string
 }
 
-export function CodeListingTabList(
-  {children, label}: CodeListingTabListParameters
-): JSX.Element {
-  return <div role="tablist" aria-label={label}>{children}</div>
+export function CodeListingTab(p: CodeListingTabParameters): JSX.Element {
+  return <button type="button" id={p.id} role="tab">{p.children}</button>
 }
 
-export interface CodeListingTabParameters {
-  children?: any
-  id: string
+export interface CodeListingActionListParameters extends ChildrenIncludable {
+  label?: string
 }
 
-export function CodeListingTab(
-  {children, id}: CodeListingTabParameters
-): JSX.Element {
-  return <button type="button" id={id} role="tab">{children}</button>
+export function CodeListingActionList(p: CodeListingActionListParameters): JSX.Element {
+  return <div class="code-listing__action-list" aria-label={p.label}>{p.children}</div>
 }
 
-export interface CodeListingActionListParameters {
-  children?: any
-  label: string
+export function CodeListingAction(p: ChildrenIncludable): JSX.Element {
+  return <div class="code-listing__action">{p.children}</div>
 }
 
-export function CodeListingActionList(
-  {children, label}: CodeListingActionListParameters
-): JSX.Element {
-  return <div class="code-listing__action-list" aria-label={label}>{children}</div>
+export interface CodeListingTabPanelParameters extends ChildrenIncludable {
+  // todo: rename to labelledby
+  by?: string
 }
 
-export interface CodeListingActionParameters {
-  children?: any
-}
-
-export function CodeListingAction(
-  {children}: CodeListingActionParameters
-): JSX.Element {
-  return <div class="code-listing__action">{children}</div>
-}
-
-export interface CodeListingTabPanelParameters {
-  by: string
-  children?: any
-}
-
-export function CodeListingTabPanel(
-  {by, children}: CodeListingTabPanelParameters
-): JSX.Element {
-  return <div role="tabpanel" aria-labelledby={by}>{children}</div>
+export function CodeListingTabPanel(p: CodeListingTabPanelParameters): JSX.Element {
+  return <div role="tabpanel" aria-labelledby={p.by}>{p.children}</div>
 }

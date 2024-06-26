@@ -1,10 +1,7 @@
-import type {HTMLAttributes} from "preact/compat"
+import {type HTMLAttributes} from "preact/compat"
 import {type JSX, h} from "preact"
 
-export interface CodePreviewParameters extends HTMLAttributes<HTMLDivElement> {
-  children?: any
-}
-
-export function CodePreview({children, ...a}: CodePreviewParameters): JSX.Element {
-  return <div class="code-preview" {...a}>{children}</div>
+export function CodePreview(p: HTMLAttributes<HTMLDivElement>): JSX.Element {
+  const {children, ...props} = p
+  return <div class="code-preview" {...props}>{p.children}</div>
 }

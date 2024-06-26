@@ -1,10 +1,10 @@
-import type {Meta} from "@storybook/preact"
+import {type Meta} from "@storybook/preact"
 import {type JSX, h} from "preact"
 import {Breadcrumb, BreadcrumbCrumb} from "./main.tsx"
 
-const meta: Meta = {
+export default {
   title: "UI/Breadcrumb"
-}
+} satisfies Meta
 
 export function Default(): JSX.Element {
   return <Breadcrumb aria-label="Breadcrumb">
@@ -13,5 +13,3 @@ export function Default(): JSX.Element {
     <BreadcrumbCrumb href="/">Breadcrumb</BreadcrumbCrumb>
   </Breadcrumb>
 }
-
-export default meta

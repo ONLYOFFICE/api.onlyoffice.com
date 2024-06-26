@@ -1,12 +1,8 @@
-import type {HTMLAttributes} from "preact/compat"
-import type {JSX} from "preact"
-import {h} from "preact"
+import {type HTMLAttributes} from "preact/compat"
+import {type JSX, h} from "preact"
 
-export interface CodeEditorParameters extends HTMLAttributes<HTMLTextAreaElement> {
-  children?: any
-}
-
-export function CodeEditor({children, ...props}: CodeEditorParameters): JSX.Element {
+export function CodeEditor(p: HTMLAttributes<HTMLTextAreaElement>): JSX.Element {
+  const {children, ...props} = p
   return <textarea
     class="code-editor"
     rows={4}

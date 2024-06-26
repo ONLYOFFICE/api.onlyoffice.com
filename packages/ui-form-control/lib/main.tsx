@@ -1,7 +1,7 @@
+import {type ChildrenIncludable} from "@onlyoffice/preact-types"
 import {clsx} from "clsx"
 import {useContext} from "preact/hooks"
-import type {JSX} from "preact"
-import {createContext, h} from "preact"
+import {type JSX, createContext, h} from "preact"
 
 interface Contextual {
   for: string
@@ -9,24 +9,24 @@ interface Contextual {
 
 const Context = createContext<Contextual>({for: ""})
 
-export interface FormControlParameters {
-  children?: any
+export interface FormControlProperties extends ChildrenIncludable {
   class?: string
   for?: string
 }
 
-export function FormControl(
-  {children, ...props}: FormControlParameters
-): JSX.Element {
+export function FormControl(p: FormControlProperties): JSX.Element {
+  const {children, ...props} = p
+
   return <Context.Provider value={ctx()}>
     <div class={cls()}>{children}</div>
   </Context.Provider>
 
   function ctx(): Contextual {
-    if (!props.for) {
-      props.for = ""
+    const c: Contextual = {for: ""}
+    if (props.for) {
+      c.for = props.for
     }
-    return {for: props.for}
+    return c
   }
 
   function cls(): string {
@@ -34,23 +34,11 @@ export function FormControl(
   }
 }
 
-export interface FormControlLabelParameters {
-  children?: any
-}
-
-export function FormControlLabel(
-  {children}: FormControlLabelParameters
-): JSX.Element {
+export function FormControlLabel(p: ChildrenIncludable): JSX.Element {
   const ctx = useContext(Context)
-  return <label class="form-control__label" for={ctx.for}>{children}</label>
+  return <label class="form-control__label" for={ctx.for}>{p.children}</label>
 }
 
-export interface FormControlControlParameters {
-  children?: any
-}
-
-export function FormControlControl(
-  {children}: FormControlControlParameters
-): JSX.Element {
-  return <div class="form-control__control">{children}</div>
+export function FormControlControl(p: ChildrenIncludable): JSX.Element {
+  return <div class="form-control__control">{p.children}</div>
 }

@@ -1,13 +1,10 @@
-import type {Meta} from "@storybook/preact"
-import type {JSX} from "preact"
-import {Fragment, h} from "preact"
-import srOnly from "./main.css?inline"
+import {type Meta} from "@storybook/preact"
+import {Fragment, type JSX, h} from "preact"
 import {SrOnly} from "./main.tsx"
 
-const meta: Meta = {
-  title: "UI/Screen Reader Only",
-  parameters: {styles: [srOnly]}
-}
+export default {
+  title: "UI/Screen Reader Only"
+} satisfies Meta
 
 export function Composition(): JSX.Element {
   return <>
@@ -17,5 +14,3 @@ export function Composition(): JSX.Element {
     </SrOnly>
   </>
 }
-
-export default meta

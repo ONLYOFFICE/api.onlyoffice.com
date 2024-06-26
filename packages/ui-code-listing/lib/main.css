@@ -54,3 +54,10 @@
   display: flex;
   padding: 4px;
 }
+
+/* Integration with @onlyoffice/code-editor */
+
+.code-listing .code-editor {
+  border: none;
+  margin-top: 0;
+}
