@@ -1,10 +1,10 @@
 import {is} from "uvu/assert"
 import {Client} from "./main.ts"
 
-it("assigns a document editor config", async () => {
+it("signs a document editor config", async () => {
   const c = new Client()
   c.baseURL = "http://localhost:4000/"
-  const [r] = await c.documentEditor.assign({
+  const [r] = await c.documentEditor.sign({
     documentType: "word",
     document: {
       fileType: "docx",

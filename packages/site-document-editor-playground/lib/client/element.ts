@@ -96,7 +96,7 @@ export class SiteDocumentEditorPlayground extends HTMLElement {
     }
 
     try {
-      [de.config] = await this.#client.documentEditor.assign(af)
+      [de.config] = await this.#client.documentEditor.sign(af)
     } catch (e) {
       let m = "Failed to sign DocEditor configuration"
       if (e instanceof Error) {

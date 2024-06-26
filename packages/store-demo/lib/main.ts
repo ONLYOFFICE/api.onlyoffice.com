@@ -149,9 +149,8 @@ async function route(opts: Options, req: IncomingMessage, res: ServerResponse): 
 
   if (req.url === "/editors/configcreate") {
     const b = await body(req)
-    const j = JSON.parse(b)
 
-    const c: DocEditorConfigurableOptions = JSON.parse(j.jsonConfig)
+    const c: DocEditorConfigurableOptions = JSON.parse(b)
     if (!c.document) {
       throw new Error("Missing document")
     }
@@ -166,11 +165,10 @@ async function route(opts: Options, req: IncomingMessage, res: ServerResponse): 
     c.document.url = u.toString()
 
     c.token = sign(c, opts.jwt.secret, {algorithm: opts.jwt.algorithm})
-    j.jsonConfig = JSON.stringify(c)
 
     res.statusCode = 200
     res.setHeader("Content-Type", "application/json")
-    res.write(JSON.stringify(j))
+    res.write(JSON.stringify(c))
     res.end()
     return
   }

@@ -1,10 +1,6 @@
 import type {DocEditorConfigurableOptions} from "@onlyoffice/document-server-types"
 import type {Client} from "./client.ts"
 
-interface InternalAssignResponse {
-  jsonConfig: string
-}
-
 export type AssignResponse = DocEditorConfigurableOptions
 
 export class DocumentEditorService {
@@ -14,13 +10,10 @@ export class DocumentEditorService {
     this.#c = c
   }
 
-  // todo: rename to sign
-  async assign(config: DocEditorConfigurableOptions): Promise<[AssignResponse, Request, Response]> {
+  async sign(config: DocEditorConfigurableOptions): Promise<[AssignResponse, Request, Response]> {
     const u = this.#c.url("editors/configcreate")
-    const b = {jsonConfig: JSON.stringify(config)}
-    const req = this.#c.request("POST", u, b)
-    const [i, res] = await this.#c.fetch<InternalAssignResponse>(req)
-    const r = JSON.parse(i.jsonConfig)
+    const req = this.#c.request("POST", u, config)
+    const [r, res] = await this.#c.fetch<DocEditorConfigurableOptions>(req)
     return [r, req, res]
   }
 }

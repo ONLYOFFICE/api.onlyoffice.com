@@ -22,7 +22,7 @@ test("creates a services", () => {
   is(s instanceof DocumentEditorService, true)
 })
 
-test("assigns a document editor config", async (ctx) => {
+test("signs a document editor config", async (ctx) => {
   const [c, s, t] = setup()
   ctx.t = t
 
@@ -32,10 +32,7 @@ test("assigns a document editor config", async (ctx) => {
 
     const b = await body(req)
     const j = JSON.parse(b)
-    const jj = JSON.parse(j.jsonConfig)
-    jj.token = "xxx"
-    const cc = JSON.stringify(jj)
-    j.jsonConfig = cc
+    j.token = "xxx"
     const c = JSON.stringify(j)
 
     res.setHeader("Content-Type", "application/json")
@@ -43,7 +40,7 @@ test("assigns a document editor config", async (ctx) => {
     res.end()
   })
 
-  const [r, req, res] = await c.documentEditor.assign({documentType: "word"})
+  const [r, req, res] = await c.documentEditor.sign({documentType: "word"})
 
   is(res.status, 200)
   is(req.method, "POST")
@@ -60,7 +57,7 @@ test("throws an error if the response is not ok", async (ctx) => {
   })
 
   try {
-    const [_, __, res] = await c.documentEditor.assign({documentType: "word"})
+    const [_, __, res] = await c.documentEditor.sign({documentType: "word"})
     un(`Expected an error, but got '${res.status}'`)
   } catch (e) {
     is(e instanceof ErrorResponse, true)
