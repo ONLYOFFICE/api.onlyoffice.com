@@ -1,5 +1,5 @@
 {
-  "name": "@onlyoffice/documentation-storybook",
+  "name": "@onlyoffice/storybook",
   "private": true,
   "type": "module",
   "scripts": {
