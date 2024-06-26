@@ -1,5 +1,6 @@
 .page .chapter {
   height: 100%;
+  min-height: calc(100vh - 72px);
 }
 
 .page .chapter__navigation {
