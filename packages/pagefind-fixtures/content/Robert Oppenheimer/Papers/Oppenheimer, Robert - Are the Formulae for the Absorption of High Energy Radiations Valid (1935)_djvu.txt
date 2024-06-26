@@ -1,0 +1,1215 @@
+44 J. 
+
+
+be a distinct systematic difference between the 
+separations depending on the pressure used ‘in 
+the source. It is conceivable that this is real. 
+On the other hand it may be due to wide varia- 
+tion in intensities of the unresolved components. 
+If we assume that the fourth and fifth compo- 
+_nents have zero intensities on the low pressure 
+plates and theoretical intensities on the high 
+
+
+JANUARY 1, 1935 
+
+
+PHVSICAL REVIEW 
+
+
+R. OPPENHEIMER 
+
+
+pressure plates, the systematic difference is 
+greatly reduced. The only conclusion to be drawn 
+at present from this difference is that the 
+
+
+‘uncertainty of the separation must be much 
+
+
+greater than is indicated by the calculated 
+probable errors. Our best estimate of this 
+uncertainty may be expressed by saying that 
+1/a probably lies between 137 and 138. 
+
+
+VOLUME 47 
+
+
+Are the Formulae for the Absorption of High Energy Radiations Valid? 
+
+
+J. R. OPPENHEIMER, University of California, Berkeley 
+(Received November 12, 1934) 
+
+
+In this paper we consider the discrepancies between 
+theoretical prediction and experiment for the absorption 
+of cosmic-ray electrons and gamma-rays. By applying a 
+strict criterion for the validity of classical electron theory, 
+it is possible to derive new formulae for impact and 
+radiative energy losses of high energy electrons, which 
+may be regarded as theoretical lower limits for these 
+
+
+1. THe THEORETICAL FORMULAE 
+
+
+HE question of the validity of the theoretical 
+
+
+formulae for the absorption of high energy 
+radiations has been brought to a new prominence 
+by recent experimental and theoretical re- 
+searches. On the one hand the observation of the 
+cloud chamber tracks of cosmic rays has made it 
+possible to extend our knowledge of the specific 
+ionization and energy loss of electrons from 
+_ particles of a few million volts on up to a few 
+billion.! On the other hand two mechanisms of 
+absorption, increasingly important at high 
+energies, have been carefully investigated the- 
+oretically :? the pair production by gamma-rays, 
+and the radiative energy losses of electrons. The 
+question of whether the formulae derived for the 
+probability of these processes, and the more 
+familiar formulae for the ionization and impact 
+energy losses of fast electrons, should hold for the 
+very high cosmic-ray energies, has often been 
+discussed, and has been explicitly studied by v. 
+
+
+1C, D. Anderson and S. H. Neddermeyer, International 
+Conference on Physics, London, 1934. 
+
+2H. Bethe and W. Heitler, Proc. Roy. Soc. A146, 83 
+(1934). 
+
+
+quantities, and which are in far better agreement with 
+experiment than the formulae given by an _ uncritical 
+application of quantum mechanics to these problems. 
+These limitations on classical electron theory are consistent 
+with those given by possible unitary classical field theories, 
+but are more incisive than those given by®the unitary 
+theory of Born. | 
+
+
+Weizsaecker? and by Williams.4 The conclusion 
+to which these researches have led is that the 
+formulae should remain valid. The experiments, 
+however, do not speak for this. We want here to 
+reconsider the question in the light of this dis- 
+crepancy. , 
+
+The predictions of the theory are these: (1) 
+The specific primary ionization of an electron 
+(or positron) should pass through a minimum as 
+the energy of the electron increases, and should 
+increase slowly with the energy throughout the 
+entire range of cosmic-ray energies. If the veloc- 
+ity of the electron be v=@c, then the specific 
+ionization should vary® with v according to 
+
+
+(1/6")[In «8-+1n (k/a) - 367] 
+e=(1—67)-?; a=e/ic. (1) 
+
+Here & is a constant of the order of 10, depending 
+
+on the f-values of the atomic electrons of the 
+
+
+matter through which the ray is passing. Ac- 
+cording to this formula one has to expect an 
+
+
+with 
+
+
+ 3y, Weizsaecker, Zeits. f. Physik 88, 612 (1934). 
+
+4K. J. Williams, Phys. Rev. 45, 729 (1934). 
+
+5e.g., H. Bethe, Handbuch der Phystk, XXIV, 1, 2nd 
+edition, 1932. 
+
+
+ABSORPTION OF HIGH ENERGY RADIATION | 45 
+
+
+increase of the ionization in air, which amounts 
+to seventy percent when the energy of the elec- 
+tron rises from three million to a billion volts. 
+
+Often it is not the primary ionization which is 
+observed, but the ‘‘probable’’ ionization :® the 
+total ionization produced by the primary and by 
+secondaries with energies less than ¢’mc® (in 
+practice ¢>>a~™, e’ <1). This probable ionization 
+is measured roughly by the total energy loss to 
+secondaries of energy <e’mc’, and increases with 
+‘¢ less rapidly than the primary ionization, since 
+the increase in ionization comes chiefly from 
+secondaries of very low energy. For the probable 
+ionization we have instead of (1) 
+
+
+(1/62) (In (Be)+1n (Rav €’/o®) — 46%}, 
+
+
+with ky~2.5 for hydrogen. 
+
+(2) An electron passing through matter will 
+be accelerated by the nuclear fields, and will 
+radiate. If o, is the differential cross section of a 
+nucleus for radiation of a quantum of energy hy, 
+one may define a cross section for energy loss | 
+
+
+(1a) 
+
+
+= (A/o0) ayvdv; vor=emc?/h. 
+0 
+
+
+This has been computed by Heitler and Sauter’ 
+for a model in which the nuclear field is taken to 
+be the Coulomb field of a charge Ze: 
+
+
+o=4aZ7%p2(In 2e—§), with p=e?/mc*, (2) 
+
+
+a result valid for «1. These calculations have 
+been extended by Bethe and Heitler to the case 
+of a nuclear field screened externally by the 
+statistical charge distribution of the atomic 
+electrons. With this model o does not increase 
+indefinitely, but approaches, for e> ©, an 
+asymptotic value 
+
+
+doZ*p*[In (183/Z4)+1/18)]. 3) 
+
+
+For energies above 10° volts o does not differ 
+seriously from its limiting value (3). Essentially 
+these same results have been derived by v. 
+Weizsaecker by a method which we shall have 
+to consider in detail. 
+
+(3) Gamma-rays of high energy will produce 
+pairs in nuclear fields. Bethe and Heitler have 
+carried through the calculations of the cross 
+
+
+$F. J. Williams, Proc. Roy. Soc. A135, 108 (1932). 
+7 Reference 2. 
+
+
+section for pair production in the fields of un- 
+screened and screened nuclei, and find 
+
+
+o=4AaZ?p{7/9 In 2e—109/54], (4) 
+o=4aZ2p°[7/9 In (183/Z%) —1/54]. (5) 
+
+
+All of these calculations are approximate, for the 
+effect of the nuclear field is treated as small, and: 
+the formulae obtained are to be regarded as the 
+first terms in a series of powers of aZ. Complete 
+calculations which do not involve this approx- 
+imation have not been made: but by using the 
+wave functions of Furry® it is at least possible to 
+see that the error involved does not become 
+progressive as the energy increases, that, for 
+example, no terms of the form aZe occur; and 
+this conclusion, as Williams has observed, follows 
+also from the argument of v. Weizsaecker. The 
+formulae (4) and (5) have thus to be regarded as 
+legitimate approximations for small Z, no matter 
+how great the energy. In the case of pair pro- 
+duction o is known to be quite accurately pro- 
+portional to Z? for gamma-rays of energy 2.6 
+and 5.4 million volts;? and it appears from this 
+that one may expect (5) to hold without serious 
+error even for heavy elements. 
+
+
+2. THE EXPERIMENTAL EVIDENCE!® 
+
+
+According to (3), a beam of high energy elec- 
+trons should have a good part of its energy con- 
+verted into gamma-radiation in a centimeter of 
+lead; in an equal distance this gamma-ray will 
+be largely reconverted into pairs. The two 
+mechanisms together therefore furnish a very 
+rapid mechanism for the degradation and ab- 
+sorption of electrons, positrons or gamma-rays, 
+
+
+an absorption which deviates strongly from a 
+
+
+mass absorption law. It is therefore possible to do 
+justice to the great penetration of the cosmic 
+rays only by admitting that the formulae are 
+wrong, or by postulating some other and less 
+absorbable component of the rays to account for 
+their penetration. 
+
+Other arguments lead to this same alternative. 
+
+
+Thus it is possible to observe the ionization of 
+
+
+8W.H. Furry, Phys. Rev. 46, 391 (1934). 
+
+9E. McMillan, Phys. Rev. 46, 868 (1934). 
+
+10 Such clarity as there is in this account of the experi- 
+mental situation I owe entirely to Dr. Anderson and Mr. 
+Neddermeyer, who have with great patience explained to 
+me just what the evidence is, what it indicates, and how 
+little it proves. 
+
+
+46 | J. 
+
+
+cosmic-ray tracks in cloud chambers. This has 
+been done by Anderson and Neddermeyer and 
+by Kunze," who fail to find evidence for the in- 
+crease in ionization with e predicted by (1). 
+According to Dr. Anderson, estimates of two 
+kinds have been made: 
+
+(a) Estimates of the density of thin tracks, 
+which should give the primary ionization, for 
+which (1) holds. Although a seventy percent 
+difference in density for low energy 6-particles 
+could be detected, no difference could be de- 
+tected for tracks varying from a few million to a 
+few billion volts. 
+
+(b) Actual counts-on diffuse tracks. Here it is 
+the total ionization produced by primary for 
+secondaries of energy below some value £ which 
+is measured. E is determined by the fact that 
+when an energetic secondary is curled up in the 
+magnetic field, it makes the separate counting 
+of the drops impossible. E probably lies between 
+10% and 105 volts. For this “‘probable’”’ ionization 
+we have instead of (1) to use (1a). Here again 
+there is no large increase in ionization with e. 
+A small increase might still escape detection. 
+
+It would thus seem necessary to say, either 
+that the increase of ionization predicted by (1) 
+or (1a) does not occur, or that all of the high 
+energy tracks by Anderson are made by protons. 
+This second alternative, which has been seriously 
+advocated by Williams,4 meets with the diff- 
+culty that there are tracks (with an Hp corre- 
+sponding to a 5108 volt electron, for instance) 
+for which one would expect an ionization ob- 
+servably greater than the minimum, whether 
+they are made by electrons or protons. But the 
+uncertainties in the ionization observations do 
+not make it possible to exclude the possibility 
+of protons completely. 
+
+Anderson and Neddermeyer! have made stud- 
+ies of the energy losses in lead plates. For tracks 
+of not too high energy (~3X10® volts), the 
+energy loss can be directly measured. There is 
+good evidence for large energy losses, which are 
+almost certainly radiative. The losses are smaller 
+than one would expect from (3). But the number 
+of tracks is small; large fluctuations are to be 
+expected ; and it is not certain, though it is prob- 
+able, that the formula (3) gives too high a result. 
+
+
+1 P, Kunze, Zeits. f. Physik 83, 1 (1933). 
+
+
+R. OPPENHEIMER 
+
+
+With higher energy tracks, where energy losses 
+are not directly measurable, one can still con- 
+clude that, if the tracks are made by electrons 
+(and positrons) both (3) and (5) cannot be right, 
+since one does not observe at all that multiplica- 
+tion of tracks by gamma-radiation and pair pro- 
+duction which (3) and (5) would predict. 
+
+Against the hypothesis that these high energy 
+tracks are made by protons, positive and nega- 
+tive, there are two further arguments. In the 
+energy range where one can unambiguously 
+distinguish between electronic and protonic mass, 
+protons are an extreme rarity, and although 
+positive and negative curvatures occur with 
+about equal frequency for the high energy tracks, 
+no definitely recognizable negative protonic 
+tracks have been seen. The second argument 
+concerns the production of high energy secondary 
+electrons. The number and distribution of these 
+corresponds to what we should expect for pri- 
+maries of electronic mass, and can hardly have 
+been produced by protons of the observed distri- 
+bution in Hp. It does not seem likely that protons 
+are important in the energetic part of the cosmic 
+radiation. 
+
+Little evidence exists for the validity of the 
+theoretical formulae for pair production by 
+gamma-rays of very high energy. The theoretical 
+formulae hold quite well up to energies of 10? 
+volts, but beyond that there are no definite tests 
+of the formulae. Gilbert!®? has, however, meas- 
+ured the absorption coefficient of the shower 
+producing components of the cosmic rays. This 
+absorption follows the Z? law; and the radiation 
+is probably a gamma-radiation. The total ab- 
+sorption found by Gilbert is, however, only 
+one-fourth of that to be expected from (5) for 
+single pair production alone. 
+
+It is with this experimental evidence in mind 
+that we wish to reexamine the question of the 
+validity of the theoretical formulae. We shall see 
+that when we restrict ourselves to those contri- 
+butions to the formulae where the applicability of © 
+theory cannot be held in doubt, we obtain re- 
+
+
+sults to be regarded as theoretical lower limits 
+
+
+for the probability of the processes in question— 
+which in every case differ radically from the 
+corresponding formulae of Section 1. For radia- 
+
+
+2C, W. Gilbert, Proc. Roy. Soc. A144, 559 (1934). 
+
+
+ABSORPTION OF HIGH ENERGY RADIATION 47 
+
+
+tive losses, for the probable total ionization, for 
+pair production by gamma-rays, the modifica- 
+tions in the formulae appear to resolve satis- 
+factorily the discrepancies with experiments. 
+This is probably not true in the case of primary 
+ionization, for which the modified formulae still 
+call for a detectable increase in the range of 
+cosmic-ray energies. 
+
+
+3. Tue LIMITATIONS OF CLASSICAL ELECTRON 
+THEORY 
+
+
+The origin of the critique of the theoretical 
+formulae lies in classical electron theory. The 
+domain of applicability of this theory is limited 
+to problems in which an unambiguous separation 
+of the field of the electron itself and the external 
+field acting on it is possible: in which, that is, 
+the effect of the proper field is with good approxi- 
+mation given by the inertia of the electron, and 
+in which the radiative reaction of the electron 
+may be treated as a small correction. Thus we 
+
+
+may consider the expansion given by Lorentz® for _ 
+
+
+the proper force of an electron, taken momen- 
+tarily at rest, and considered as a distribution of 
+charge, spherically symmetric, and limited to a 
+region of order of magnitude p=e?/mc’: 
+
+
+F= mé-42e# /30+O0(ep' x /c*). (6) 
+
+
+The condition that the terms in this series de- 
+crease rapidly is then that 
+
+
+Xp/dc<K1; “X p/¥c<K1, --- 
+
+
+etc. The frequencies of the motion of the electron 
+must therefore be small compared to v=mc?/e?. 
+When the external forces are in this sense slowly 
+varying, classical electron theory can be un- 
+ambiguously applied. 
+
+This condition: that the radiative reaction be 
+small compared to the inertial reaction—and 
+thus the external ponderomotive force—does not 
+depend on the choice of reference system; in fact 
+the usual method of computing the radiative 
+forces in a system in which the electron is not at 
+rest is to transform 2e?/3c** by a Lorentz trans- 
+formation, under which all terms of (6) trans- 
+form similarly. But only in a coordinate system 
+in which the electron is substantially at rest 
+(1— 6?~1) can the criterion for the applicability 
+
+
+1H, A, Lorentz, Theory of Electrons, p. 252. 
+
+
+of electron theory be put simply as the condi- 
+tion that the fields acting on the electron shall 
+not vary much in a time 7=1/7. 
+
+Since the formalism of the Dirac electron 
+theory and the quantum theory of the field may 
+be regarded as a natural quantum theoretic 
+generalization of the dualistic classical electron 
+theory, one may expect that this formalism too 
+will fail in the same region as its classical counter- 
+part. The fact that a relativistic quantum theory 
+is possible at all depends then essentially upon 
+the smallness of a, which gives the relative mag- 
+nitude of successive terms in (6) for the frequen- 
+cies~mc?/h characteristic of relativistic electron 
+theory. Since, in the problem of the energy losses 
+and radiation of very high energy electrons, 
+energies corresponding to frequencies >? neces- 
+sarily occur, the question of the validity of the 
+theoretical formulae requires investigation. 
+
+
+4, APPLICATION TO THE CLASSICAL THEORY OF 
+ENERGY Loss! 
+
+
+One may treat the ionization and energy loss 
+of a fast electron by computing the probability 
+of transition induced in the atomic systems by the 
+field, calculated classically; of the (undeflected) 
+primary ; for all impacts in which the momentum 
+transfer is small compared to the primary mo- 
+mentum this treatment is fully justified; and it 
+is the probability of these impacts which can be 
+observed by studying the primary and ‘probable’ 
+ionization of the electron tracks. The components 
+of the primary field responsible for this ioniza- 
+tion are low frequency components, for which 
+v<v; the secondary electron, in these impacts, 
+never attains velocities very close to that of light, 
+and if only these low frequency components 
+acted on the electron, there could be no question 
+
+144The question of the energy losses of very energetic 
+electrons has been much considered by Swann, who has 
+also emphasized that with increasing ¢ the radiative forces 
+may increase enormously. The present treatment differs 
+from Swann’s in two essential points: (a) Swann concludes 
+that when the radiation computed classically would be 
+equal to the energy transferred, no transfer at all will 
+occur, whereas we argue that the magnitude of the radia- 
+tion reaction merely makes classical electron theory in- 
+applicable. (b) Swann assumes that for large e the radiative 
+reactions are large for all impacts, whereas we find this 
+true only for impacts with parameter p<p=pe. This is 
+why we find a finite constant lower limit for the energy 
+loss, instead of concluding, as does Swann, that it should 
+
+
+vanish as e—>, We do not believe that the vanishing of 
+the energy loss can be justified by any electrodynamics. 
+
+
+48 | J. 
+
+
+of the validity of the theoretical formulae. It 
+is substantially this argument which has so often 
+led to the conclusion that the formulae should 
+hold.“ The cogency of this argument can, how- 
+ever, be questioned. The argument may be for- 
+mulated in this way: Assume the validity of 
+theory to describe the reaction of the electron to 
+all components, high as well as low, to the field, 
+then we can show that the high frequency com- 
+ponents contribute nothing to the probability 
+of the processes—small energy transfers—in 
+which we are interested. Then for the low fre- 
+quency components alone there is no question 
+of the validity of theory. But to establish this 
+it is necessary to assume the validity of the 
+theory also for the high frequency components, 
+and this assumption cannot be justified. The 
+condition for the rapid convergence of (6) is a 
+condition on the total motion of the electron, and 
+thus on the whole external field acting on it, 
+and we must be prepared to find that the pondero- 
+motive force acting on the electron cannot, 
+when rapidly varying fields are involved, be 
+taken simply as the sum of the forces exerted by 
+the separate Fourier components. It is in this 
+point that we differ from v. Weizsaecker and 
+from Williams; and it is only by insisting on this 
+that we can understand at all why the theoretical 
+formulae can fail. | 
+We are here making a distinction, which in 
+the domain of classical electron theory does not 
+need to be made, between the external field 
+strengths computed by classical theory, and the 
+ponderomotive force, which is of the same general 
+character as that developed by Born’ in his 
+modified unitary electrodynamics. Such a dis- 
+tinction is possible only in a theory in which the 
+field equations are not linear, since for a linear 
+theory it would follow from the conservation 
+laws that the ponderomotive force of the sum of 
+two fields is the sum of the ponderomotive forces 
+of the separate fields. The existence of such 
+nonlinearities seems, however, inevitable in 
+any theory which would account for the specific 
+stability of the electron ; and it may be remarked 
+that the theory of the positron, even in its present 
+
+
+15 Reference 6; J. F. Carlson and J. R. Oppenheimer, 
+Phys. Rev. 41, 763 (1932). 
+
+16M. Born, Proc. Roy. Soc. A143, 410 (1934); M. Born 
+and L. Infeld, Proc. Roy. Soc. A144, 425 (1934). 
+
+
+R. OPPENHEIMER 
+
+
+incomplete form, involves such nonlinearities 
+for the field equations. | 
+
+In the following discussion we shall then sup- 
+pose—in distinction to v. Weizsaecker and 
+Williams—that whenever high frequency com- 
+ponents are present in the external field with an 
+amplitude comparable to that of the low fre- 
+quency components, the application of electron 
+theory becomes dubious. To the question of the 
+application of Born’s electrodynamics to these 
+problems we shall return in Section 7. 
+
+The normal component .of the electric in- 
+tensity in the field of the primary which is 
+responsible for the greater part of the ionization, 
+is given by the Fourier resolution: 
+
+
+gm f emeytdr, with 
+
+
+H,(vpi/ev)-e- I”, (7) 
+
+
+6 t= 
+
+
+€U 
+
+
+Here $, the impact parameter, is the distance 
+
+
+from the track, z is measured along the track and 
+=0 for £=0, and again e=(1—6?)~?, and v is the 
+primary velocity. The components of frequency 
+y> y are large near the track, and begin to fall off 
+rapidly as p>p=e/v~ep. Emaximum at P is 
+mc /eev, and thus for e>1, the field is always 
+weak. We may, however, expect that for impacts 
+in which the field within p is of importance 
+the theoretical calculations can give totally 
+wrong results. In a purely classical calculation 
+of the energy loss, the omisston of such impacts 
+has the effect of introducing a lower limit p for 
+the impact parameter, and thus gives an energy 
+loss which does not increase with e; instead of the 
+classical formula of Bohr: energy losses <mc? 
+
+
+~ (Are*/mv?) In (emu? /e?w), (8) 
+
+
+(w the resonance frequency of the atomic elec- 
+trons), we obtain 
+
+
+~ (Are*/mv*) In (mv? /e*w). (9) 
+
+
+The increase in energy loss which comes from 
+the equatorial flattening of the field, and the 
+consequent increase in the upper limit of the 
+impact parameter (Pmax.~ve/w), is Compensated 
+by the decrease in close impacts. The impacts 
+which are excluded by taking p as a lower limit 
+for the impact parameter involve relatively large 
+energy transfers; but for e~100 transfers of 
+
+
+ABSORPTION OF HIGH ENERGY RADIATION 49° 
+
+
+energy of the order of 20 volts are being excluded. 
+We might therefore suppose that for primary 
+energies >5X10’ volts, the observed ionization 
+will no longer increase with energy. To the 
+difficulties in extending these considerations to a 
+quantum theoretic calculation of ionization we 
+shall return later. In the problem of radiative 
+losses these complications do not arise. 
+
+
+5. APPLICATION TO RADIATIVE LOSSES 
+
+
+In the treatment of radiative losses one con- 
+siders the probability of radiation of an electron 
+(or positron) when it is accelerated in the screened 
+field of a nucleus—a field given (very roughly) by 
+the potential 
+
+
+V=Ze{1/r—1/ro} 
+=0 for r>fro 
+ro=h?/meZ}. 
+
+
+for r<7o 
+
+
+with 
+
+
+The frequencies of the radiated energy are of the 
+order emc?/h; the velocity of the electron is large, 
+and here again it is not at once clear whether 
+classical electron theory should be applicable. 
+To simplify the consideration of this question, 
+v. Weizsaecker has considered the problem in 
+another coordinate system: that in which the 
+impinging electron is at rest. This electron is now 
+accelerated by the field of the passing nucleus, 
+and will radiate. One needs, however, in this 
+coordinate system to consider frequencies for the 
+emitted radiation which are of the order of 
+mc’/h; and in this system, for such radiative 
+processes, the electron never attains an energy 
+very large compared to mc. The situation is 
+thus quite analogous to that in the problem of 
+ionization: the components of the field of the 
+passing nucleus which one needs to consider are 
+<yv, and this in a coordinate system where the 
+electron does not attain a velocity very close to 
+c. Here again, in the classical treatment of the 
+problem, there are impacts for which the field 
+acting on the electron varies rapidly in a time 
+7=1/¥, and for which therefore we must call in 
+question the validity of the electron theoretic 
+treatment. | 
+
+v. Weizsaecker has in fact shown that one may 
+give a semi-classical treatment of the problem, 
+for e>0, which leads to (2) and (3). In this 
+treatment one introduces again an impact 
+
+
+parameter ~, considers the radiation for an elec- 
+tron initially at p, and integrates over p. This 
+treatment can be justified for such values of p 
+that the field of the nucleus is there varying 
+little over a wave packet which is large enough 
+to permit a fair definition of the momentum 
+change of the electron during this impact; such 
+wave packets are large compared to 4/mc; and 
+one thus concludes that for values of po>h/mc 
+the method may be used. For p<h/me the field 
+varies rapidly; and v. Weizsaecker shows that 
+for such impacts we may expect little radiation. 
+Thus f/mc is roughly the lower limit of the 
+impact parameter. For an unscreened nucleus 
+the percentage error introduced by the necessary 
+vagueness of fmin, vanishes with e>«; for a 
+screened nucleus it does not, but remains of the 
+order #/mcr. This is because, for an unscreened 
+nucleus, the outer limit of the impact parameter, 
+determined by the condition that the impact 
+time be not too long compared to h/mc*, in- 
+creases with e; whereas for the screened nucleus 
+it remains =7. 
+
+For e>1, p>h/mc, the field of the nucleus 
+can now be represented with good approxima- 
+tion as the superposition of plane electromagnetic. 
+waves traveling parallel to the nucleus; the am- 
+plitude of these waves is given, from (7), by | 
+
+
+Ey~ (rivZe/2ec*)H 1 (avp/ec). 
+
+
+The radiative losses can thus be regarded as 
+arising from the scattering of these waves; and 
+for the treatment of this v. Weizsaecker uses 
+the formula of Klein-Nishina—the result is 
+
+
+o~AaZ*p*[In pmax, —ln Pmin. | 
+~AaZ’ p? In € 
+
+
+~4AaZ*p* In (1/aZ4) 
+
+
+for no screening (3a) 
+
+
+screening. (4a) 
+
+
+The justification for regarding these formulae 
+as valid for large e v. Weizsaecker finds in the 
+circumstance that only components of the 
+nuclear field and the radiation field: for which 
+v<vy play a part in these results. 
+
+We have, however, to remember that for im- 
+pacts for which p<p=ep, the impact time is 
+short compared to 7, and frequencies >v appear 
+in the field acting on the electron. They do not 
+contribute directly to the probability of radiative 
+losses, but their presence makes the application 
+
+
+50 ie 
+
+
+of electron theory and the use of the superposi- 
+tion principle for the force on the electron ques- 
+tionable. If we omit altogether the contribution 
+of these impacts, we have again to introduce a 
+new lower limit for p, fb=ep. For e>137, p 
+>h/mc, and we find smaller radiative losses 
+than those given by (3a) and (4a): 
+
+
+o~4aZ*p* In (1/a) 
+~4AaZ*p* In (1/0?Z%e) 
+
+
+~0 for e>~a?Z-: 
+
+
+no screening, (3b) 
+screening. (Ab) 
+
+
+6. DISCUSSION: APPLICATION TO PRIMARY 
+IONIZATION 
+
+
+Formula (9) for the ionization energy losses, 
+and (4b) for radiative losses (and presumably 
+y-ray pair production), have been derived by 
+neglecting all contributions from those impacts 
+to which classical electron theory may not 
+certainly be applied; they thus give us lower 
+limits for the effects to be expected in fact, since 
+it is possible (and for some problems certain) that 
+some contribution will come from these ‘fast’ 
+impacts which cannot at present be rigorously 
+treated. a 
+
+These lower limits (4b) and (9) differ signifi- 
+cantly from (4a), (8), the theoretical formulae 
+obtained by applying. present theory to all 
+impacts. For in (9) there is no increase with e 
+of the low energy ionization energy losses. Ac- 
+cording to (4b), moreover, the probability of 
+radiative losses (and pair production by y-rays) 
+begins to decrease for ¢>137, and vanishes al- 
+together for e~(137)?Z-, or 10°-10'° v. In 
+spite of the rough nature of these conclusions, 
+and the tentativeness of the experimental re- 
+sults, we may thus say that the discrepancies 
+between theory and experiment which appear 
+to exist when we use the theoretical formulae of 
+Section 1 disappear when we leave out of con- 
+sideration those processes where the application 
+of present theory is dubious. 
+
+In the classical calculation of energy transfer, 
+
+
+we have seen that the limitation on the impact 
+
+
+parameter p>P leaves out all impacts in which 
+large energies are transferred to the secondary. 
+The number and distribution of the secondaries 
+with energies E’>>mc’, E’<emc?, has been studied 
+by Anderson and Neddermeyer.! They find good 
+agreement with the classical formula for the 
+
+
+R. OPPENHEIMER 
+
+
+probability of production of such secondaries: 
+
+od’ = (ret/mc?) (dE’/E”). (10) 
+(In the range investigated the interchange terms 
+by which the quantum theoretical formulae 
+differ from (10) are negligible.) The number of 
+secondaries is small, and the observed energy 
+has to be corrected for energy loss; nevertheless, 
+these experiments give no evidence of a discrep- 
+ancy here between theory and experiment, and 
+show that high energy secondaries are produced, 
+and with frequency that can hardly be less than 
+that predicted by a factor of two. These secon- 
+daries are produced in impacts to which we should 
+not expect electron theory to apply; and the 
+approximate validity of (10) cannot be justified 
+from our point of view. What the experiments 
+themselves seem to show is that the theoretical 
+predictions for the number of high energy secon- 
+daries are not more seriously in error than those 
+for low energy secondaries. 
+
+The classical treatment of small energy losses 
+cannot be justified quantum theoretically. For 
+one cannot make wave packets which at the same 
+time define precisely enough the momentum of 
+the electron (AP < amc) and over which the field 
+varies relatively little, except for values of the 
+impact parameter p>h/mca; and impacts for 
+smaller p contribute essentially to this energy 
+loss. One can, however, formally obtain the cor- 
+rect quantum theoretic answer for the energy 
+by introducing as a lower limit for p not p 
+but i/mc." If we do this but introduce p as a 
+further lower limit, we find that the low energy 
+losses (Z’ <mc*) increase with ¢ till e~137, and 
+then remain constant. 
+
+When ¢>a™, p>hi/mca, classical calculations 
+can be made for all impacts for which p>, 
+since in this region the problem of energy trans- 
+fers can be treated as a pure dispersion problem. 
+If now we again take p as a lower limit for the 
+impact parameter, we find that the primary 
+ionization approaches, for e>, a finite limit, 
+and in place of (1) obtain: | 
+
+
+~In (a*) for &>a™. (11) 
+
+
+This gives a primary ionization about 70 percent 
+greater than the minimum value of (1). The 
+corresponding result, for «>, for the total 
+energy loss <mc?, is given essentially by (9). 
+
+
+17F, Bloch, Ann. d. Physik 16, 285 (1933). 
+
+
+ABSORPTION OF HIGH ENERGY RADIATION | 51 
+
+
+This limiting value is roughly equal to the mini- 
+mum value of the classical expression for this 
+energy loss, and is about 25 percent greater than 
+the minimum of. the corresponding quantum 
+theoretic value. These results are again to be 
+regarded as lower limits, for e—©, since in their 
+derivation impacts with p< have been omitted 
+altogether. | 
+
+To find the course of this increase of ionization 
+with e, we should have to treat wave packets so 
+large that in a part the field was rapidly varying, 
+and in the rest slowly varying. A simple but 
+hardly adequate way to do this is to set the 
+field of the primary zero within p; this procedure 
+in the classical calculation leads of course to (9). 
+If we do this we find that for «<a, formula (1) 
+should hold. 
+
+These conclusions help somewhat to mitigate, 
+but do not resolve, the discrepancies between 
+theory and the cloud chamber observations of 
+ionization. In spite of the qualitative. character of 
+(11), we think it certain, both that electrons of 
+arbitrarily high energy will give a primary 
+ionization measurably greater than the minimum 
+value, and that for large e the increase predicted 
+by (1) cannot be regarded as theoretically es- 
+tablished. 
+
+
+7. RELATION TO CLASSICAL UNITARY ELECTRON 
+‘THEORIES 
+
+
+In Section 3 we have formulated a condition 
+for the validity of electron theory: that the suc- 
+cessive terms in the Lorentz expansion (6) 
+should diminish rapidly, that in particular, the 
+radiative reaction should be small compared to 
+the inertial reaction. The ground for the neces- 
+sity of this limitation is that the stability of the 
+electron itself is not to be understood on the 
+basis of Maxwellian electrodynamics: non- 
+Maxwellian forces must be assumed to account 
+for the stability; of their nature, apart from 
+this, we know nothing; and it is therefore not 
+possible to take the reaction of the electron-to 
+these forces into account in detail; we have to 
+confine ourselves to those problems in which the 
+effect of these forces is given essentially by the 
+inertial reaction of the electron which must 
+then for stability be equal to the external pon- 
+deromotive force. In any classical theory which 
+
+
+accounts for the electron’s stability, the limita- 
+tions we have discussed could be removed. 
+
+Recently Born has proposed a modification of 
+Maxwellian electrodynamics in which the elec- 
+tron itself appears as a possible (if not unique) 
+singular solution of the field equations of finite 
+energy =mc?. When the electron is subjected to 
+an external field, its motion can be deduced from 
+the conservation laws for energy and momentum, 
+which are to hold in spite of the fact that the 
+field equations, from which they may in general 
+be deduced, fail to hold along some world line— 
+the electron’s path. One has thus a consistent 
+classical theory which gives a specific answer 
+even where the earlier electron theory could 
+not be applied. What does this theory give for 
+the problems of ionization and radiative loss we 
+are here considering? 
+
+When the fields acting on the electron are 
+weak, | F|<F=m’c'/e, and when they vary 
+slowly (for the electron nearly at rest »<v) then 
+this motion agrees with that given by electron 
+
+
+theory. When the electron (nearly at rest) is 
+
+
+acted on by a disturbance whose frequency 
+grows large compared to », then, as Born has 
+shown, the reaction of the electron is in general 
+much smaller than that computed: fror’ the 
+Lorentz Force. And when the external fields are 
+of the order F, the treatment of these fields as 
+small perturbations breaks down, and we may 
+again expect deviations from electron theoretic 
+formulas. 
+
+It is with the latter condition that we are con- 
+cerned, since, as we have seen, the frequencies 
+in the field which are directly involved in energy 
+loss and radiation are low, and deviations from 
+classical electron theory are to be expected only 
+if the superposition principle for the pondero- 
+motive force breaks down. The external fields 
+become comparable to the proper field F=m?c*/e? 
+for impact parameter p~pe?, for impact energy 
+losses, and for p~p(Ze)*? for radiative losses. 
+The theory of Born thus does not give as strong a 
+limitation on the validity of classical theory as 
+we have used: p~pe. 
+
+This situation is, however, not intrinsic to a 
+classical unitary electron theory, and depends 
+upon the fact that the Lagrangian of Born’s 
+theory involves the field strengths, but not their 
+
+
+52 HARKINS, GANS AND NEWSON 
+
+
+derivatives. Consider for instance the Lagrangian 
+L=7V(1+p?¢/y)7 with y=4FF,,, and — 
+
+
+p= 3(0FH/dx*) 9 (0F,,/dx*), 
+The field equations of this Lagrangian are of the 
+
+
+3rd order—and nonlinear. They have a static. 
+
+
+spherically symmetric singular solution, of finite 
+energy, which reduces for r>p to a Coulomb 
+field. For this Lagrangian the superposition 
+principle breaks down for 
+
+
+prods prpZid, 
+
+
+for impact and radiative losses respectively. 
+More generally, if Z involves derivatives of the 
+fields of order z, and gives an electron of finite 
+energy as a singular solution, then the superposi- 
+
+
+JANUARY 1, 1935 
+
+
+PHYSICAL REVIEW 
+
+
+tion principle breaks down for 
+
+
+Dimp. © pEeMtD(nt2) | Prad. © pL mt (atl)! (n+2) | 
+
+
+The p=pe which we have used as a limit for 
+classical theory in this paper is thus given by a 
+unitary field theory whose field equations are 
+integral equations, for which no, 
+
+We adduce these considerations, not because 
+we believe that the solution to the problem of 
+electronic stability lies in a theory of this type, 
+but because they show that there is, even in 
+classical theory, no inconsistency in the criteria 
+we have used for the validity of electron theory. 
+The discrepancies between theoretical predic- 
+tion and the experiments can thus be understood 
+on a purely classical basis. 
+
+
+VOLUME 47 
+
+
+The Disintegration of the Nuclei of Light Atoms by Neutrons 
+
+
+II. Neon, Fluorine and Carbon | 
+
+
+Witiiam D. Harkins, Davip M. GANs anp Henry W. Newson, Department of Chemistry, University of Chicago 
+(Received November 8, 1934) 
+
+
+Neon and fluorine. Quantitative information is presented 
+
+
+on the disintegration, by capture of a neutron, of 11 nuclei — 
+
+
+of neon and 13 of fluorine. The reactions are considered 
+to be: 
+
+e Nese ie & On otles 
+
+9 Fitton 7 No+sHe 
+in which nitrogen 16-is a new isotope of nitrogen. As in 
+the earlier work on nitrogen, it is found that: (1) Neutrons 
+effective in disintegration appear both to come directly 
+from the source and to be scattered by nuclear impact 
+prior to the disintegration. (2) Kinetic energy disappears 
+in the process, or is (rarely) conserved. This kinetic energy 
+decrement may be transformed into mass, if mass increases 
+in the reaction, or into y-rays; it may also excite the 
+heavier product nucleus and later give rise to an artificial 
+radioactivity. (3) The maximum, minimum.and average 
+kinetic energy for the neutrons which in our experiments 
+have been found to disintegrate fluorine, neon and nitrogen 
+are listed below in the table. 
+
+Carbon. Mass values obtained in positive ray work 
+
+
+I. INTRODUCTION 
+
+
+HE first paper! of this series on the disinte- 
+gration of light atoms by neutrons pre- 
+sented values related to the mechanics of the 
+disintegration of twenty-eight nitrogen nuclei. 
+
+
+1 Harkins, Gans and Newson, Phys. Rev. 44, 529 (1933), 
+
+
+- give 6.9 m.e.v. as the mass increase in the reaction: 
+
+
+12 1 9 4 
+6 Cotom—>4Ber+2Heo. 
+
+
+If the mass values are extremely accurate only neutrons 
+with kinetic energy greater than about 6.9 m.e.v. can 
+therefore disintegrate carbon. Of 6 disintegrations found 
+among 6400 pairs of photographs with ethylene, only 1. 
+involves a neutron which approximates this energy. The 
+other disintegrations may be those of oxygen or nitrogen 
+from the water vapor and trace of air in the chamber. 
+Carbon has therefore not yet been disintegrated with 
+certainty by neutrons. It is of interest that about 20 
+percent of the neutrons found in this work have extremely 
+high velocities, so that their kinetic energy is from 13.6 
+to 15.1 m.e.v., and that the energy transformed into 
+y-rays rises as high as 10 m.e.v, 
+
+
+No. of : 
+disinte- _ Kinetic Energy in m.e.v. 
+grations Min. Ave. ax. 
+Nitrogen (28) 1.9 5.4 16.1 
+Fluorine (13) 1.9 6.7 13.2 
+3.1 10.6 15.1 
+
+
+Neon (11) 
+
+
+Further experiments have since been carried out 
+
+
+with deuterium, carbon, fluorine and neon. This 
+
+
+paper gives the quantitative relations found for 
+the disintegration of 11 neon and 13 fluorine 
+nuclei. 
+
+
+2For preliminary reports, see Harkins, Gans and New- 
+son, Phys. Rev. 44, 236, 945 (1933), ; 
+
+

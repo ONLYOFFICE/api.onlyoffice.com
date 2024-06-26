@@ -1,0 +1,283 @@
+JULY 15, 1941 
+
+
+PHYSICAL REVIEW 
+
+
+VOLUME 60 
+
+
+On the Interaction of Mesotrons and Nuclei 
+
+
+J. R. OPPENHEIMER AND JULIAN SCHWINGER 
+Department of Physics, University of California, Berkeley, California 
+(Received June 19, 1941) 
+
+
+HE formalism of mesotron field theories was 
+first developed in analogy either with the 
+method of classical electrodynamics that involves 
+the determination of fields produced by pregiven 
+sources, or with the perturbation technique of 
+quantum electrodynamics. This program not only 
+has led to predictions in contradiction with 
+experiment (the singular nature of nuclear forces, 
+and large cross sections for mesotron scattering 
+by nuclei) but is intrinsically inconsistent, for the 
+methods of electrodynamics, involving the neg- 
+lect of the reaction of field on source, and based 
+on the small magnitude of the coupling between 
+charges and the electromagnetic field, are here 
+quite unjustified. This inconsistency is rendered 
+far sharper by the charge- and spin-dependent 
+couplings of the mesotron theory. These diffi- 
+culties have led to two apparently unrelated sug- 
+gestions for modifying the formal treatment of 
+mesotron theory. 
+
+Thus Heisenberg has attempted a more com- 
+plete solution of the mesotron. equations by 
+including, within the framework of a classical 
+theory, the large reaction of the field on the 
+emitting source. He treated the problem of a 
+neutral vector field interacting with a fixed, 
+spatially extended source to which is attached a 
+classical spin. His calculations showed that the 
+inertia of the spin, arising from the reaction of its 
+proper field, would greatly reduce the spin- 
+dependent mesotron scattering. A_ relativistic 
+variant of this procedure has been elaborated by 
+Bhabha, who based his work on Dirac’s classical 
+electron model. Those terms in the field reaction 
+on the source which become singular as a, the 
+spatial’ extension of the source, vanishes, are 
+discarded and the finite terms are evaluated in 
+the limit of point coupling. However, it is 
+precisely these singular terms that are essential 
+for Heisenberg’s explanation of the small mesotron 
+scattering. Furthermore, quite apart from the 
+serious question of whether this method affords a 
+classical description of elementary particles, it is 
+so essentially restricted to the classical domain 
+
+
+that it provides no basis for a correspondence 
+treatment of the actual quantum-mechanical 
+problems encountered in a discussion of the 
+scattering of charged mesotrons and of nuclear 
+forces. 
+
+For this reason Bhabha himself and Heitler 
+suggested the alternative. theory of proton 
+isobars. They observed that, from the point of 
+view of perturbation theory, the large scattering 
+arising from charge- and spin-dependent couplings 
+is a consequence of the prohibition of certain 
+intermediate states in the scattering process by 
+the conservation laws for charge and angular 
+momentum. They therefore proposed a modifi- 
+cation of the assumptions of mesotron theory by 
+postulating the existence of slightly more massive 
+nuclear particles with arbitrary integral charge 
+and half-integral spin. By a suitable choice of the 
+excitation energy of the lowest isobars—high 
+enough to make them escape ready detection— 
+the scattering cross section could be reduced 
+sufficiently to avoid conflict with experiment. 
+
+The connection between these two sets of ideas 
+lies in the circumstance that a field strongly 
+coupled to a charge or spin-dependent source will 
+itself possess states in which charge or angular 
+momentum is bound to the source, with the 
+energy of the system increasing quadratically in 
+its dependence on the total charge or angular 
+momentum. This has been shown in detail by 
+Wentzel for the charged scalar field. Wentzel 
+used a lattice space to achieve convergence and 
+considered only the limit of strong coupling. 
+Despite the fact that his theory predicted isobars, 
+his calculations indicated an inacceptably large 
+value for the mesotron scattering cross section. 
+
+The evidence of nuclear forces shows, however, 
+that the mesotron coupling is spin dependent, 
+and indicates that the coupling constant itself is 
+not very large. In order to see how these facts 
+would modify Wentzel’s conclusions, we have 
+investigated a class of problems that throws some 
+light on the earlier work and that also offers 
+promise of a limited but consistent description of 
+
+
+150. 
+
+
+INTERACTION OF MESOTRONS AND NUCLEI 
+
+
+the mesotron, in agreement with experience: 
+nuclear forces on the one hand, and, on the other, 
+the small scattering, zero spin, and highly 
+multiple production observed for mesotrons in 
+cosmic rays. We have, in part, generalized 
+Heisenberg’s treatment, and considered the clas- 
+sical problem of the coupling of neutral and 
+charged, scalar and pseudo-scalar mesotrons to 
+an extended, spatially fixed source. These prob- 
+lems are all rigorously soluble, for all values of 
+the coupling constant and source size. In addi- 
+tion, we have treated Wentzel’s quantum problem 
+of the charged scalar field,! using an extended 
+source instead of a lattice space, in the limit where 
+the coupling constant g is large, y=g?/hc>1, 
+and have made the analogous calculation for the 
+neutral pseudo-scalar in the corresponding limit 
+y>> xa (here x=yc/h and yp is the mesotron mass). 
+The problem of the charged pseudo-scalar has 
+not been solved quantum-mechanically even in 
+this limit, nor has any quantum solution been 
+found for intermediate values of y, or y/xa; nor 
+have the revisions in nuclear forces been calcu- 
+lated in detail. 
+
+Nevertheless, we believe our results to be of 
+some interest. The classical solutions for the 
+pseudo-scalar always give states of bound angular 
+momentum if y/xa is not too small; the energy of 
+these states depends on the total angular 
+momentum J, as 
+
+
+3 (xa/y)pc?(J?— 4). 
+Here a is defined by 
+a= fdrK (1) |r—r' | K(r') dr’ 
+
+
+and K(r) is the source function. The symmetrical 
+scalar and charged scalar theories give solutions 
+with bound charge, the former only if 2y >1; and 
+here the mass of the normal state of an isobar, for 
+y>>1, depends on the charge Q as (u/v)(Q—72)”. 
+For the symmetrical pseudo-scalar the condition 
+for the existence of bound spin and charge is 
+2y>3xa. The quantum solutions for y>1 
+(charged scalar) and y>xa (neutral pseudo- 
+scalar) agree in these conclusions.’ This agree- 
+
+
+1 Julian Schwinger, to be published soon. 
+2G. Wentzel (Helv. Phys. Acta 13, 269 (1940)) gives 
+yka>>1 as the condition for the validity of his solution and, 
+for the isobar separation (u/y«a)(Q—4)?. In both results 
+yea must be replaced by y. Wentzel’s conclusions were 
+obtained by overlooking the contribution to the isobar 
+
+
+15t 
+
+
+ment confirms the a priori expectation that, for 
+large enough coupling, the quantum fluctuations 
+of the source will be negligible compared to the 
+reaction of the source to the field. 
+
+Classical scattering formulae, applicable when 
+the proton recoil is negligible, give for all pseudo- 
+scalar theories a scattering vanishing with a’: 
+this is a direct consequence of the fact that, in 
+these theories, only p states are coupled to the 
+source. Thus, for y>xa, and a mesotron mo- 
+mentum p<h/a, the scattering cross section for a 
+charged mesotron on the symmetrical pseudo- 
+scalar theory is 
+
+
+do = #a*(pc/E)*(1+2 cos*d)dQ, (1) 
+
+
+whereas for a charged scalar with y>1, a—-0, it 
+is just 
+
+do = (hc/E)*dQ. (2) 
+The results of the quantum solution agree with 
+(2) for the charged scalar, and are of the same 
+form as (1) for the neutral pseudo-scalar. 
+
+It is thus clear that pseudo-scalar theories can 
+give a scattering small enough to agree with that 
+observed, but that scalar theories could, at most, 
+do so with a choice of y far too small to account 
+for nuclear forces. In fact, the experimental 
+scattering results demand a value of a of the 
+order of the proton Compton wave-length h/Mc, 
+or possibly slightly smaller. Indeed, this length 
+marks the extreme limit of validity of the 
+methods we are using, and of the classical 
+localizability of the source. | 
+
+With this small value of a, and a value y~ 34, 
+which is derived from the magnitude of nuclear 
+forces in singlet states, the spin and charge 
+isobars will have an excitation only somewhat 
+smaller than the rest energy of the mesotron. 
+
+This small value of y would at first sight seem 
+to be inconsistent with the high multiplicity of 
+mesotron production in high energy nuclear 
+collisions; but for pseudo-scalar theories this is 
+not so. We have made an admittedly crude 
+estimate of this multiplicity by calculating 
+classically the excitation of the mesotron field 
+when a proton’s velocity and spin are suddenly 
+
+
+energy of order g™ in the expansion of the Hamiltonian in 
+descending powers of g. For a detailed discussion see 
+reference 1. 
+
+
+152 | am © 
+
+
+altered, and then limiting the actual spectrum to 
+mesotrons of total energy equal to or lower than 
+the energy loss AE of the proton. In this way one 
+finds a multiplicity N~y*(AE/uc?)?, with a value 
+10 for y=7y, and an energy loss of 10! volts. 
+Under these conditions, and with a comparable 
+value of y, a scalar theory would give practically 
+no multiple production. 
+
+It will be observed that we have used a value 
+_of y given by the perturbation theoretic evalua- 
+tion of nuclear forces. This is because, for singlet 
+states, our theories still give forces of range h/wc, 
+which have an effective depth of the order yuc?, 
+and which behave like g?/a for y <a. The detailed 
+
+
+R. OPPENHEIMER AND J. 
+
+
+SCHWINGER 
+
+
+radial dependence, and in particular the form of 
+the tensor forces, remains to be investigated. 
+
+In conclusion, we should like again to empha- 
+size that our present methods involve, in their 
+physical content, only a rather more complete 
+effort to take into account the reaction of the 
+source to the mesotron field than either Bhabha’s 
+classical methods or the a priort postulation of 
+isobars afforded. But it would seem that these 
+methods are sufficient to decide definitely in favor 
+of a pseudo-scalar, rather than a scalar or vector, 
+field and to fix roughly the values of the coupling 
+constant and source size needed to make the 
+model definite. : 
+
+

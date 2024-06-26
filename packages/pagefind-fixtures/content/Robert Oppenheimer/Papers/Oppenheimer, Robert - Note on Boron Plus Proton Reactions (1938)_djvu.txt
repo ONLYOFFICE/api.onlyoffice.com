@@ -1,0 +1,418 @@
+636 | ns (7 
+
+
+minute from LiOH+H!, CaF.+H!, and B+H!}, 
+
+
+respectively. These results were secured under 
+
+
+different experimental conditions for each target 
+
+
+and indicate only the order of magnitude of the 
+relative yields. Using an electroscope surrounded 
+by 1 inch of lead, Hafstad and Tuve® found a 
+ratio of ionizations of 0.13 for CaF.,+H! and 
+LiOH +H}. Observations made in this laboratory 
+indicate a higher yield from CaF,.+H! relative to 
+B-++H! than the ratio of five to one indicated 
+roughly by Bothe and Gentner’s results. The 
+yields found for Li+H? in this laboratory are not 
+trustworthy as the composition of the surface of 
+the target employed was uncertain. In all cases 
+the observed yields must be corrected for the 
+relative response of a counter or electroscope to 
+incident quanta of different energies. In case the 
+secondaries are produced in lead it can be shown 
+that the response is roughly proportional to the 
+energy of the quantum. The theoretical cross 
+sections for pair formation and recoil electron 
+production must be taken into account as well as 
+the range of the pair and recoil secondaries. On 
+this basis the yields from LiOH-+H! and 
+CaF.+H! must be corrected by factors of ~2 
+
+
+APRIL 15, 1938 
+
+
+and ~0.5 relative to that from B+H). 
+
+
+PHYSICAL REVIEW 
+
+
+R. OPPENHEIMER AND R. SERBER 
+
+
+The 
+corrected yields are, respectively, 7X10-° and 
+5 X10-° quanta per incident proton. 
+
+The yield for LiOH+H! is much larger than 
+that given by the results of Hafstad, Heydenburg 
+and Tuve, and the source of the discrepancy is 
+not entirely clear. More direct evidence is 
+obviously needed. Our results indicate a gamma- 
+ray breadth of 40 volts for the 440 kv resonance 
+for Li?+H}. 
+
+In conclusion it is well to point out that the 
+radiative capture of protons by B" is intimately 
+connected with the alpha-particle transmutations 
+occurring when boron is bombarded by protons. 
+The B"-+H! reactions have been discussed by 
+Kalckar, Oppenheimer and Serber,“ but it is 
+difficult to reconcile their conclusions simul- 
+taneously with the energy distribution of the 
+gamma-radiation, with the large yield which we 
+find and with other recent experimental results 
+on these reactions. Further discussion of these 
+difficulties will be found in this issue in an article 
+
+
+by Professor Oppenheimer and Dr. Serber. 
+
+
+, 4 pales, Oppenheimer and Serber, Phys. Rev. 52, 279 
+193 . 
+
+
+VOLUME 53 
+
+
+Note on Boron Plus Proton Reactions 
+
+
+J. R. OPPENHEIMER AND R. SERBER 
+University of California, Berkeley, California 
+(Received February 1, 1938) 
+
+
+A discussion of the experimental evidence on the B“+H! reactions and of the selection rules 
+available for their interpretations shows that it is not possible to obtain a satisfactory descrip- 
+tion on the assumption that the same resonance level of C” is responsible, both for the 16 Mev 
+y-ray observed by Fowler, Gaerttner and Lauritsen, and the long range alpha-particles whose 
+
+
+angular distribution was determined by Neuert. 
+
+
+HE disintegrations induced when B" is 
+bombarded with protons exhibit certain 
+striking peculiarities. We wish to return to their 
+interpretation in the light of new experimental 
+evidence! on the yield and spectrum of the 
+y-rays observed in these reactions. 
+The essential findings may be briefly sum- 
+
+
+1 Fowler, Gaerttner and Lauritsen, Phys. Rev. 53, 628 
+(1938). 
+
+
+marized. The most probable reaction involves? 
+the emission of short range a-particles, leaving 
+the Be® in an excited unstable state (probably 
+
+
+1D). This reaction shows no resonance,’ and is 
+
+
+accompanied by no observable y-rays or long 
+range a’s. Both the long range a’s and the 
+
+
+2 Dee and Gilbert, Proc. Roy. Soc. 154, 279 (1936). 
+ao Wells, Tate and Hill, Phys. Rev. 51, 
+(1937). 
+
+
+434 
+
+
+BORON-PROTON REACTIONS 
+
+
+y-rays come from a resonance reaction.*: > The 
+resonance occurs at about 160 kv, and the reso- 
+nance energy agrees within the experimental 
+uncertainty of 2—3 kv for the two reactions.® ? 
+
+Since for neither reaction has another reso- 
+nance level been observed in the range up to 
+500 kv, it is natural to ascribe both reactions to 
+the same level of the excited compound C®. 
+The resonance yield of a’s from a pure B target 
+is roughly 5X10-°;? the total yield of y-rays 
+determined by Fowler and Lauritsen! is also 
+56 10=1%5 : 
+
+The long range a-particles are anisotropically 
+distributed,® roughly according to a 1+cos? 6 law 
+(with @ the angle between the direction of 
+emission and the direction of bombardment). 
+The y-ray spectrum! shows three resoluble lines, 
+at 4, 12 and 16 Mev. The first two have equal 
+intensity ; the 16 Mev line, which corresponds to 
+transitions to normal C, is about six times as 
+weak. Fowler and Lauritsen give arguments 
+based on the excitation curves of Bothe and 
+Gentner and their own work to make it plausible 
+that all three y-rays come from the 160 kv 
+resonance.’ | 
+
+It is clear that for the interpretation of these 
+findings selection rules will be essential. The 
+known selection rules which could be invoked 
+are these: | 
+
+
+4 Bothe and Gentner, Zeits. f. Physik 104, 685 (1937). 
+_5 Allen, Haxbyand Williams, Phys. Rev. 53, 325(A) (1938). 
+
+6 We are indebted to Dr. Williams for a further discussion 
+of the experimental results reported in reference 5. 
+
+7 Allen, Haxby and Williams give 10 kv as the observed 
+breadth of the resonance, but it seems (reference 6) not im- 
+possible that this is entirely instrumental, and comes 
+primarily from the ripple and unsteadiness of the accelerat- 
+ing voltage of the protons. If one were to accept the 
+observed breadth as real, it would add further serious 
+difficulties to the interpretation; for since the proton 
+breadth of the level must be very small compared to 10 kv, 
+and since y-radiation competes successfully with a-emis- 
+sion, this would necessitate a y-ray breadth of the order of 
+several kilovolts. This is larger than any value heretofore 
+observed, and seems particularly implausible for radiation 
+of magnetic dipole or electric. quadripole type which, as 
+we shall see, is probably involved in these reactions. 
+
+8 The y-ray yield is smaller than that from the Li’+H! 
+reaction by a factor of 10-20. If one accepts the absolute 
+radiative field for the Li reaction given by Hafstad, 
+Heydenburg and Tuve (Phys. Rev. 50, 504 (1936)), one is 
+led to y-ray yields from the B reaction here considered 
+which are about a tenth of those given by Fowler and 
+Lauritsen. The precise value of the yield will not be im- 
+portant for our argument. In fact the y-ray breadths of 
+highly excited light nuclei are so difficult to estimate 
+theoretically that our information about them must depend 
+on just such absolute yield measurements as are here 
+involved. 
+
+® Neuert, Physik. Zeits. 38, 122 (1937). 
+
+
+637 
+
+
+1. A compound nucleus cannot decay into 
+products with vanishing intrinsic angular mo- 
+mentum if it has odd parity and even angular 
+
+
+momentum, or even parity and odd angular 
+momentum. This rule offers at first sight a 
+natural explanation!® of the absence of long 
+
+
+range a@’s in the nonresonance reaction. 
+
+2. An odd C® level of vanishing angular 
+momentum can never give three a-particles. 
+These rules, 1 and 2, are strict. | 
+
+3. A triplet compound state will disintegrate 
+to singlet products at a rate roughly 10* slower 
+than a corresponding singlet, because the forces 
+converting spin into orbital angular momentum 
+are small. This argument is naturally invoked?® 
+to account for the great but not complete 
+stability of the C” resonance level to a-decay. 
+Only singlet and triplet states may be expected 
+when B" is bombarded by protons." ; 
+
+4. Since the Coulomb forces are still small for 
+C, the isotopic spin” T may also be a fairly good 
+quantum number, and a level of C”® with T=1 
+will disintegrate into products with T=0 at a 
+rate reduced by a factor which may be of the 
+order of 104 from that of levels with 7=0. Only 
+levels with 7 =0, 1 will be formed in the reactions 
+considered. | | 
+
+No further relevant selection rules of com- 
+parable rigor would seem to follow from known 
+invariance properties of the nuclear system. 
+
+The relatively large yield of short range a’s 
+shows that this reaction must come predomi- 
+nantly from the capture of s-protons, and the 
+
+
+absence of observable resonance indicates that 
+
+
+ae yo Oppenheimer and Serber, Phys. Rev. 52, 279 
+1937). 
+
+11 In a recent letter Landau (Phys. Rev. 52, 1251 (1937)) 
+has objected to this argument, on the ground that the 
+spin-orbit off-diagonal perturbation energy is not small 
+compared to the spacing of the levels of a. sufficiently 
+highly excited sufficiently heavy nucleus. Quite apart from 
+the fact that the ‘‘combining’’ resonance levels of C” 
+would seem to be spaced by several hundred kilovolts, 
+this argument appears to involve a misapprehension, in 
+that it uses an estimate of the magnitude of the matrix 
+elements of the spin-orbit coupling energy based on a 
+“one-body” model, of the level spacing based on a ‘‘many- 
+body’”’ model. It would in fact seem that the “average 
+energy denominator’ occurring in the perturbation the- 
+oretic treatment can hardly be essentially smaller than 
+h/collision time, and that the triplet contamination of a 
+singlet wave function can hardly exceed a few percent. 
+Analogous arguments apply to the selection rule 4. 
+
+122 Wigner, Phys. Rev. 51, 106 (1937). We are indebted 
+to Professor Breit, who in private communications has 
+emphasized the role which might be played by the so-called 
+‘partition quantum numbers.” 
+
+
+638 J. 
+
+
+singlet levels, with rapid a-decay rate and I. 
+breadths of the order of hundreds of kilovolts, 
+must be involved. Since normal B" is pretty 
+certainly odd, 1 can be used to explain the 
+absence of long range a’s only if the C” involved 
+has even angular momentum; this cannot be 
+zero by 2. We are thus led to assign for the 
+‘normal state of B™ an odd D, G term. The most 
+plausible state seems to be a 7D3;2. 
+
+The angular dependence of the long range a’s 
+shows that the resonance level is formed. not 
+by s, but by » or d proton capture. Estimates of 
+the proton breadth, based on correcting the 
+observed breadth of the 440 kv resonance level 
+in the Li’+H! reaction for altered barrier 
+penetrability, give T,~5 v for p-protons, and 
+about 1/100 of that for d-protons. The observed 
+resonance yields thus show that we have to do 
+with p-capture, and that the minimum possible 
+value for y-ray and long range a breadth is of 
+the same order as the proton breadth. Since 
+r,<10F,, it is hard to accept the ‘‘observed”’ 
+breadth of the resonance level, ~ 10 kv, as real. 
+
+
+The resonance level is then even; its angular 
+
+
+momentum 7 must be 1 or 2, since it gives 
+y-rays to 1S of normal C™; and since it gives 
+long range a’s we must have 1=2. The resonance 
+
+
+level must therefore be a 'D, or a?Po, *?De, or 2Fo. - 
+
+
+Now the energy" of the resonance level differs 
+from that of normal B® by just about what we 
+should expect for the Coulomb energy difference 
+(~0.002 mu). Since the normal state of B” is 
+the lowest lying term of isotopic spin T=1, 
+
+
+we should expect!* the resonance level to be a | 
+
+
+TABLE |. Angular distribution of long range a-particles. 
+c=cos 0, s=sin 6. | 
+
+
+NORMAL STATE OF B?! 
+
+
+RESO- 
+NANCE 
+STATE OF 
+
+Cie 2P 1/2 - 2P 3/0 2D 3/2 2D 5/2 2F 5/2, 7/2 
+1p 1+3c? 1+3c? s? s? 2 +c? 
+Pe 1-+-3c? 1+65? 1+6s? 3+¢? 
+8De 1+3c? 1 3 +45? 447s? 
+3B, 142c?2 1+16s2 
+8F 4 3+5c? 
+
+
+18 We wish to thank Professor Breit for pointing out to 
+us the possible homology of the resonance level and normal 
+BL. | 
+
+4 Feenberg and Phillips, Phys. Rev. 51, 597 (1937). 
+
+
+R. OPPENHEIMER AND R. SERBER 
+
+
+singlet or triplet P, D or F with T=1. The great 
+stability of the level to a-decay would suggest 
+that it is a triplet, so that selection rules 3 and 4 
+could both be invoked to explain this stability. 
+Since however an even pure triplet *Pe, *De, ?Fo, 
+cannot combine with the 1S normal state of 
+C” by y-radiation, this possibility is excluded. 
+In fact the only triplet which could give the high 
+energy y-ray with the observed intensity is an 
+even 3S, which can neither give long range a’s 
+nor be formed from a parent B"™ in a 2D state by 
+p capture. . 
+
+The only remaining possibility is that the 
+resonance level is an even 1D with T=1, and 
+that its stability must be understood in terms 
+of the approximate conservation law for isotopic 
+spin. However the angular distribution to be 
+expected for the long range a’s, for capture to 
+1D from a ?D3;2, 5/2 parent term of B", is sin? 6, 
+which cannot be reconciled with the observed 
+1-+cos? @. It will be seen from Table I that, to 
+obtain an anisotropy even qualitatively in agree- 
+ment with experiment, we would be forced either 
+to make the resonance level a °F, or to make 
+the parent term one of odd Z and thus to give 
+up the explanation, in terms of the parity angular 
+momentum selection rule, of the striking ab- 
+sence of long range a’s in the dominant s capture 
+reaction. | 
+
+We have been led to this very unsatisfactory 
+conclusion by the supposition that both the long 
+range a-particles and the 16 Mev y-rays come 
+from the same resonance level. In this connection 
+it should be emphasized that the yields of long 
+range a-particles and y-rays have not been 
+adequately investigated in the range above 
+250 kv. If one assumes, as our arguments perhaps 
+
+
+suggest, that the high energy y-ray comes from 
+a resonance level in this range, and other than 
+
+
+that for which the angular distribution of the 
+long range a’s has been determined, no unique 
+assignment of the resonance level is possible at 
+present. If this should turn out to be true, one © 
+would probably still-fiave some difficulty in 
+reconciling a 7D parent B witha triplet character 
+for the resonance level. | 
+
+

@@ -1,6 +1,7 @@
 // todo: normalize naming of eleventy, remark, and other plugins.
 
 import {eleventyClean} from "@onlyoffice/eleventy-clean"
+import {eleventyPagefind} from "@onlyoffice/eleventy-pagefind"
 import {eleventySiteConfig} from "@onlyoffice/eleventy-site-config"
 import {eleventyStarryNight} from "@onlyoffice/eleventy-starry-night"
 import {eleventyYAML} from "@onlyoffice/eleventy-yaml"
@@ -27,6 +28,8 @@ function config(uc: Eleventy.UserConfig): unknown {
   uc.addPlugin(eleventyYAML)
   uc.addPlugin(eleventySiteConfig)
   uc.addPlugin(sitemapPlugin)
+
+  uc.addPlugin(eleventyPagefind)
 
   return {
     dir: {

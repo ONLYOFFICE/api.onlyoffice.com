@@ -1,0 +1,158 @@
+462 LETTERS TO 
+
+
+On the Spin of the Mesotron 
+
+
+J. R. OPPENHEIMER 
+Physics Depariment, University of California, Berkeley, California 
+February 14, 1941 
+
+
+N two papers in this issue of The Physical Review 
+Christy and Kusaka! have given minimum estimates 
+
+for the probability of radiative collisions by mesotrons, and 
+have shown that these involve, for a mesotron of spin one 
+and mass of the order of two hundred electron masses, a 
+frequency of burst production greater by more than an 
+order of magnitude than that actually found. In the case of 
+mesotrons of zero spin the agreement with observation is 
+
+
+good: in the case of mesotrons of spin 3 and unit magnetic 
+
+
+moment the calculated values exceed the experimental by a 
+factor of about 1.6, a factor which probably lies within the 
+uncertainties of the calculation, in particular the rather 
+large uncertainty introduced by the unknown mass m of 
+the mesotron. Nevertheless the many experimental indi- 
+cations of the beta-instability of mesotrons, and in par- 
+ticular the result of Nelson’s analysis? of the data of Neher 
+and Stever, that about one-half of the energy of mesotron 
+decay is shower producing, would seem fully to have 
+confirmed Yukawa’s suggestion that mesotrons can dis- 
+integrate into electrons and neutrinos; and this would in 
+our opinion make a half-integral value of the mesotron spin 
+improbable. These arguments would then establish that the 
+mesotron was described by a scalar or pseudoscalar field. 
+It may be remarked in this connection that the neutron 
+proton forces derived’ from a charged pseudoscalar field by 
+‘classical’ or perturbation-theoretic approximation agree in 
+sign and spin dependence, though not of course in their 
+singular dependence upon distance, with the sign and 
+magnitude of the singlet triplet difference and the quadripole 
+moment of the deuteron system, whereas the corresponding 
+theory for charged mesotrons of unit spin gives a quadripole 
+moment of wrong sign. The results of CK can thus not be 
+regarded as adding a further difficulty to this in itself 
+highly unsatisfactory theory of nuclear forces. 
+
+The calculations of CK give minimum estimates of burst 
+production for the following reasons: 
+
+(1) They have in each case been made with that value 
+
+of the magnetic moment which gives the smallest radiative 
+probabilities compatible with the spin considered. 
+_ (2) They do not include nuclear collisions, and any 
+electromagnetic or nuclear secondaries such collisions might 
+produce. . 
+
+(3) They include only those processes whose probability 
+
+
+can legitimately be computed by perturbation theory; in» 
+
+
+them any contribution from processes that do not satisfy 
+this condition has been discarded. 
+
+The first two points are fully discussed in the papers of 
+CK, and of Corben and Schwinger.‘ It is only the last we 
+wish to review here, since on this depends the cogency of 
+the conclusions reached. 
+
+The radiative collisions of a mesotron of mass m and 
+energy émc?, €>>1, with the Coulomb field of a nucleus of 
+charge Z and radius hZ*/mc, may with good approximation, 
+insofar as they are extranuclear, be treated as the Compton 
+scattering by the mesotron of the virtual quanta in the 
+
+
+THE EDITOR 
+
+
+contracted field of the nucleus. In this coordinate system, 
+where the mesotron is at rest, the maximum field acting on 
+the mesotron, when it is nearest to the nucleus, is of the 
+order eZ?é(mc/h)?. The ratio of the interaction energy of 
+this field with the mesotron charge and current is 
+Ziat(a=e2/he); and the probability of processes involving 
+the absorption of » virtual quanta is small of the order 
+(aZ*)"1 compared to that of the absorption of one virtual 
+quantum. This circumstance makes it possible to treat the 
+effect of the various virtual quanta additively, and in 
+particular to eliminate the possibility that the presence of a 
+small intensity of high frequency quanta can sensibly 
+alter the reaction of the mesotron to radiation of lower 
+frequency. 
+
+For the further consideration of what happens when a 
+quantum of frequency »v is absorbed by a mesotron, it is 
+convenient to introduce a coordinate system in which 
+mesotron and quantum have equal and opposite momenta, 
+in which all momenta are of the order P=(mhvr)?, and all 
+scattering processes are essentially isotropic. For the 
+validity of the perturbation-theoretic treatment of the 
+Compton effect, it isnow further necessary that the coupling 
+energy between light quanta of momentum P and mesotrons 
+of momentum P be small compared to the energy of light 
+quantum or mesotron, a condition which is satisfied if and 
+only if P<me/a}. This condition is not only necessary for 
+the formal derivation of the scattering formula, but is also 
+the condition that processes involving the simultaneous 
+emission of several light quanta or several mesotron pairs 
+be unlikely compared to the calculated process of simple 
+scattering. In fact the relative probability that ¢g quanta 
+and p pairs be emitted is of the order Sy p(aP?2/m%c2)r2p, 
+where the S,,p are numbers of order unity but presumably 
+less than one, of which only the first, S;,9=(5/72)?, has 
+been computed. For virtual quantum frequencies higher 
+than mc?/ha, one may then expect the emission of large 
+numbers of quanta and mesotron pairs: of these the former 
+but not the latter will be burst-producing. For frequencies 
+under this limit, multiple processes are unlikely, and there 
+is no reason to expect competition® from them to reduce the 
+probability of single scattering, or to doubt the applicability 
+of perturbation theory. 
+
+What CK have done is to leave out altogether all 
+scattering processes of virtual quanta of frequency above 
+mc/ha, and to show that their results on burst production, 
+especially for the smaller burst sizes, are not at all critically 
+dependent on the exact frequency of this ‘“‘cut-off.” It is 
+true that the calculations of CK necessarily involve the 
+application of the quantum theory of the electromagnetic 
+field to space time regions smaller than any for which this 
+theory has heretofore been directly verified. But apart from 
+this it would seem that no valid argument could be found 
+against the cogency of their conclusions. 
+
+1R.F. Christy and S. Kusaka, Phys. Rev. 59, 405, 414 (1941) quoted 
+a Welk Phys. Rev. 58, 771 (1940). 
+
+3W. Rarita and J. Schwinger, Phys. Rev. 59, 436 (1941). This result 
+is obtained by using a pure pseudovector coupling, and introducing 
+suitable square well potentials for the radial dependence of the forces. 
+
+4H. C. Corben and J. Schwinger, Phys. Rev. 58, 953 (1940). 
+
+5 See for instance L. Landau, J. Phys. USSR 2, 483 (1940). I am 
+
+
+indebted to Professor Pauli for calling to my attention the relevance 
+of Landau’s argument to the calculations of CK. 
+
+

@@ -1,0 +1,286 @@
+948 LETTERS TO 
+
+
+tried with about the same results as for pure hydrogen. 
+No evidence of any helium ions was observed. 
+
+A probable mechanism for the dissociation of the 
+hydrogen is as follows. From work on accommodation 
+coefficients of ions on metal surfaces it seems reasonable 
+to suppose that the hundred volt ions striking the cylinder 
+retain after neutralization between 80 and 90 percent of 
+their kinetic energy. Since their masses are approximately 
+equal to those of the gas atoms or molecules, they quickly 
+reach thermal equilibrium with the gas, thus producing 
+effectively a gas at a very high temperature. The chemical 
+equilibrium data between atomic and molecular hydrogen 
+as a function of pressure and temperature would then lead 
+one to expect a high ratio of atomic to molecular hydrogen. 
+At lower pressures most of the collisions of the high speed 
+neutral particles are with the walls and thus the gas is 
+
+
+THE EDITOR 
+
+
+not raised to the effective high temperature. The mechan- 
+ism just outlined is quite possibly that responsible in 
+part for the dissociation in the proton source reported 
+recently by Oliphant and Rutherford.® 
+The proton source here reported is believed to possess 
+certain advantages: first, the small voltages needed for its 
+operation are obtainable from storage batteries and thus 
+require no elaborate apparatus and second, the total power 
+required is small, being less than one hundred watts. 
+E. S. LAMAR 
+OVERTON LUHR 
+George Eastman Research Laboratories, 
+Massachusetts Institute of Technology, 
+November 14, 1933. 
+
+
+§’ Oliphant and Rutherford, Proc. Roy. Soc. A141, 259 
+(1933). 
+
+
+Lit Fine Structure and Wave Functions near the Nucleus 
+
+
+The fine structure of the (1s2p)’P level of Lit has been 
+calculated by using for the unperturbed level wave func- 
+tions built up from F=7,(1+¢ cos 6) exp (—x71/2 —yro/2) 
+by multiplication with the proper angle functions and for- 
+mation of the antisymmetric part of the products. a, x, 
+and y were determined by the Ritz variational method. 
+The energy of the spin-free state assumed its minimum 
+value —1.16404R, for x=0.3605, y=0.993, c= —0.009836. 
+The expressions for the spin-orbit and spin-spin inter- 
+actions used previously! to calculate the fine structure of 
+He were evaluated for this wave function and gave 
+C= —0.334, D= —1.040 cm. The energies of the triplet 
+levels 7 =0, 1, 2 are Fo +[—3(C+D), 2(D—C), 0], respec- 
+tively, and the measurements of Schiiler? give C=0.016, 
+
+= — 1.033. | 
+
+The variational process was conducted as follows. Since 
+c is small and gives a very small contribution to the 
+energy, it was first taken to be zero and x and y were 
+varied, the values above giving a minimum energy. 
+Keeping x and y fixed, the energy was then minimized 
+with respect to c. The energy is very sensitive to a change 
+in y, and the error in y caused by neglecting ¢ can hardly 
+exceed +0.001. It may be that the best value of x is 
+
+
+shifted slightly by lifting the restriction c=0, but a change 
+in x of even 0.0002 changes C and D by less than one part 
+in 500. Thus disagreement between calculated and observed 
+values of C is quite definitely present. 
+
+As in He the disagreement is much smaller for the spin- 
+spin interaction D than for the spin orbit interaction C. 
+In both cases this is due to the fact that the spin orbit 
+interaction is a sum of two opposing effects having the 
+same order of magnitude. One may suppose that to some 
+extent this situation is general also for heavier atoms and 
+one may express a doubt as to the exactness of nuclear 
+magnetic moments derived by using approximate theo- 
+retical expressions for the spin-orbit interaction. 
+
+We are indebted to Mr. J. Leiner for help with the 
+numerical computations. 
+
+JOHN A. WHEELER 
+G. BREIT 
+New York University, 
+University Heights, 
+November 15, 1933. 
+
+
+1G. Breit, Phys. Rev. 36, 385 (1930). 
+2H. Schiiler, Zeits. f. Physik 66, 431 (1930). 
+
+
+The Production of Positives by Nuclear Gamma-Rays 
+
+
+The gamma-rays emitted by a nucleus may, when the 
+energy of the rays is greater than the million volts necessary 
+to produce a pair, be absorbed by the creation of an 
+electron and a positive in the neighborhood of the nucleus. 
+The probability of internal conversion by an atomic 
+electron is very small for gamma-rays of high energy and 
+elements of small atomic number, for this process depends 
+
+
+essentially upon the Coulomb field of the nucleus and the 
+
+
+consequent acceleration of the electron. In contrast to this 
+atomic internal conversion, the production of pairs can 
+occur even when the gamma-ray is emitted by a nucleus 
+of negligible electrostatic field. 
+
+
+This circumstance makes possible a very simple calcu- 
+lation of the probability of internal absorption of the 
+gamma-ray by pair production, in which one neglects 
+entirely the effect upon electron and positive of the 
+electrostatic field of the nucleus. A more detailed con- 
+sideration shows that the results so computed should be 
+valid whenever, for both particles of the pair, the quantity 
+2rZe*/hv is small; here v is the velocity of the particle, and 
+Z the nuclear charge. For light elements the method will 
+thus give trustworthy results whenever this absorption is 
+important; but with the heavier radioactive elements the 
+
+
+LETTERS TO 
+
+
+results may be expected to hold even reasonably well only 
+for the hardest radioactive gamma-rays. | 
+
+The probability of pair production depends a little, 
+though not nearly as much as the atomic internal con- 
+version, on whether the gamma-ray is a dipole or a quadri- 
+pole ray. If y, «, e’, are the energies of gamma-ray, electron 
+and positive, all in units mc?, so that e, ¢ =land y=e+e’, 
+this probability is 
+
+
+(ala) "del 2pp/-+(2+e%) In B] (1) 
+
+
+for a dipole gamma-ray, and 
+
+
+(a/ay®) [ "del 8p! (ee! —1) +3y%(@ +e” —2) In b} (2) | 
+
+
+for a quadripole. Here 
+p=(e&—1)?; p' =(e" —1)?; b=y ee’ + pp’ +1); a=27e*/he. 
+
+
+For very high energy gamma-rays we obtain the asymp- 
+totic values 
+
+
+(Qa/3mr) {In Qy)—3/5} and (2a/3r) {In (2y) — 61/30} 
+for dipole and quadripole, respectively. 
+
+In the approximation here considered, the distribution 
+in energy, as given by (1) and (2), is symmetric between 
+the two particles. Because the nuclear field repels the 
+positives and attracts the electrons, the positives will in 
+fact tend to have higher energies; and when the gamma-ray 
+is not too near the threshold, the mean energy of the 
+positives will exceed that of the electrons by about aZ mc’. 
+For high energies the two particles tend to come off within 
+a small angle of each other, though this effect is much less 
+pronounced than for the pairs created by a beam of 
+gamma-rays. It should be emphasized that these results, 
+and the formulae given, are very insensitive to changes 
+
+
+THE EDITOR 949 
+
+
+in the field of the multipole, and the electrostatic field, 
+in the immediate neighborhood of the nucleus. 
+
+We may apply this theory to the observations of Curie 
+and Joliot! who detected positives from beryllium and 
+aluminum bombarded by the alpha-particles of polonium. 
+This bombardment is known, in the case of beryllium, to 
+produce gamma-rays of energy somewhat over five million 
+volts, and we may take the yield of gamma-rays to be 
+roughly 310-5 per alpha- particle. For this case (1) and 
+(2) agree in giving about 210-3 for the probability that 
+a gamma-ray will produce a pair; and we are thus led to 
+expect a yield of positives of about 610~° per alpha- 
+particle. This seems consistent with the observations; but 
+quantitative data are not available. For aluminum, on the 
+other hand, it is necessary to assume a vield of very high 
+energy gamma-rays at least fifty times the known yield 
+of disintegration protons to account for the number of 
+positives observed. This, together with the circumstance 
+that, in absolute disagreement with the expected symmetry 
+of the energy distributions, practically no high energy 
+electrons were observed, makes it almost certain that the 
+positives observed were not produced as pairs by the 
+radiation from the disintegrating nucleus, and wholly 
+confirms the distinction made by Curie and Joliot between 
+the positives observed in the two cases. The positives 
+observed in aluminum are, from the point of view of 
+present theory, altogether unexplained. 
+
+The intense gamma-ray of Th C”’, with y~5, is known 
+by its atomic internal conversion to be a quadripole ray. 
+Here (2), which should still be right in order of magnitude, 
+gives 5107 for the probability of pair production. 
+
+Leo NEDELSKY 
+J. R. OPPENHEIMER 
+University of California, 
+November 18, 1933. 
+
+
+17, Curie and F. Joliot, J. de Physique 4, 494 (1933). 
+
+
+Hyperfine Structure in the Tantalum Arc Spectrum 
+
+
+The results given in this note were presented in full at 
+the June, 1933, meeting of the American Physical Society 
+in Chicago. The evidence leading to the determination of 
+the value 7/2 for the nuclear spin of tantalum was not 
+given in full in the published abstract.! This evidence is 
+especially interesting since it was possible to determine the 
+nuclear spin without any knowledge of the term analysis 
+of the spectrum. A partial analysis has been published 
+since. / 
+
+The spectrum was excited in a water-cooled Schiiler 
+tube, and the hyperfine structure resolved by means of a 
+Fabry-Perot etalon. The two lines on which the chief 
+evidence rests are \A5997.24 and 6020.69. A reproduction 
+of the original photograph of these lines, taken by the 
+second author, is shown in Fig. 1, together with their 
+microphotometer traces. The etalon separation was 5 mm. 
+6020.69 can be interpreted only a transition between 
+levels with J-values 1/2 and 3/2. The intervals can be 
+fitted only if Z is 7/2. The level scheme is shown in Fig. 2, 
+
+
+in which the intervals and positions of components are 
+given in cm, The term identifications are from Kiess 
+and Kiess. The agreement between the observed and 
+calculated patterns is shown ir Table I. (The measured 
+
+
+TABLE I, 
+Position Intensity Position Intensity 
+
+Component  (obs.) (obs.) (calc.) (calc.) 
+
+A 0 33 0 15.9 
+
+B 0.085 63 0.084 47,7 
+
+C .193 100 .189 100 
+
+D 355 65 349 45.4 
+
+i A19 61 412 47.7 
+
+F A495 41 A96 34.1 
+
+
+1 Grace and McMillan, Phys. Rev. 44, 325A (1933). 
+2 Kiess and Kiess, Bur. Standards J. Research 11, 277 
+(1933), 
+
+

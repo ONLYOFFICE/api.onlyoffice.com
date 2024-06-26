@@ -1,0 +1,2024 @@
+SEPTEMBER 15, 1932 PHYSICAL REVIEW VOLUME 41 
+
+
+The Impacts of Fast Electrons and Magnetic Neutrons 
+
+
+By J. F. CarRLson AND J. R. OPPENHEIMER 
+University of California, Berkeley, California 
+
+
+(Received July 18, 1932) 
+
+
+In this paper we consider the behavior of electrons with energy very large com- 
+pared to their proper energy in their passage through matter, and further treat the im- 
+pacts suffered by a certain type of hypothetical elementary neutral particle whose 
+existence was tentatively suggested by Pauli. In the introduction we outline the 
+problem and the methods to be employed, and give a summary of the formulae which 
+embody our results. In Section I we develop the method suggested by Mller for the 
+relativistic treatment of impacts; in (a) we apply it to the impacts of two free electrons; 
+in (b) we show how it is to be applied to those impacts of a fast electron in which 
+little energy is transferred to the secondary; in (c) we develop the theory of the mag- 
+netic neutron, and apply Mdller’s method to the treatment of its impacts. In II we 
+give the detailed calculation of the energy transfers from a fast electron to the elec- 
+trons of the matter through which it is passing, and compute the range and ionizing 
+power of the primary electron. In III we apply the theory of the neutron to compute 
+the number and nature of its impacts. 
+
+
+INTRODUCTION 
+
+
+ECENT experiments on the cosmic rays and on the penetrating radiation 
+produced in the artificial disintegration of beryllium have raised again 
+
+the question of the behavior of particles of very high energy in their passage 
+through matter. Both these radiations have been shown to be extremely 
+penetrating; and cloud chamber photographs have shown that both are ac- 
+companied by electrons of velocity very close to that of light; in the case of 
+the cosmic rays the presence of electrons of energy over 10° volts has been 
+established. The range of such particles, the number and nature of the sec- 
+ondary particles produced in their passage through matter can be computed 
+theoretically. It has seemed to us desirable for a better understanding of the 
+nature and properties of these radiations to have a more complete theoretical 
+answer to these questions than is available. We shall, in this paper, be con- 
+cerned with the behavior of two types of particle; chiefly we wish to study 
+the electron of high energy; energy large, that is, compared with the proper 
+energy mc”. But we shall also study the impacts of a certain type of neutron, 
+a hypothetical elementary neutral particle carrying a magnetic moment. This 
+particle necessarily has a spin and presumably satisfies the exclusion princi- 
+ple; its existence was tentatively proposed by Pauli,’ on the ground that by 
+its introduction certain difficulties in the theory of nuclei could be resolved, 
+and on the further ground that such a particle could be described by a wave 
+function which satisfies all the requirements of quantum mechanics and rela- 
+
+
+1 Professor Pauli presented the considerations which led him to the introduction and defi- 
+nition of the magnetic neutron at a seminar on theoretical physics in Ann Arbor in the summer 
+of 1931. 
+
+
+763 
+
+
+764 J. F, CARLSON AND J. R. OPPENHEIMER 
+
+
+tivity. These requirements, for instance, show that an elementary particle can 
+have a magnetic but not an electric dipole moment; they do not suffice to fix 
+the magnitude of the moment nor of the mass of the particle. Pauli supposed 
+that such neutrons might form a third element in the building of nuclei, in 
+addition to the electrons and protons; in this way one could understand the 
+anomalous spin and statistics of certain nuclei, and the apparent failure of 
+the conservation of energy in beta-particle disintegration. Pauli accordingly 
+supposed that the mass of the neutron was not much greater than that of 
+the electron, and that its magnetic moment was small compared to the Bohr 
+magneton. One may, however, assume that the neutron has a mass very close 
+to that of the proton, and that such neutrons are substituted for pairs of elec- 
+trons and protons in certain nuclei, instead of being added to them; such neu- 
+trons would help explain the anomalous spin and statistics of nuclei, although 
+they would throw no light on the beta-ray disintegrations. The experimental 
+evidence on the penetrating beryllium radiation suggests that neutrons of 
+nearly protonic mass do exist; and since our calculations may be carried 
+through without specifying the mass or magnetic moment of the neutron, 
+we shall consider the most general particle which satisfies the wave equation 
+proposed by Pauli. [t is important to observe that there may very well be 
+other types of neutral particles, which are not elementary, and to which our 
+calculations do not apply; and for clarity we shall call the particle which 
+satisfies Pauli’s wave equation a magnetic neutron. Certain of our results, 
+such as the relatively great penetration of the particle, relatively rare im- 
+pacts, and large mean energy loss per impact, characterize the behavior of 
+any neutral particle. 
+
+The collisions and range of beta-particles have been often studied theo- 
+retically; and even the case in which the primary velocity of the beta-particle 
+is very close to that of light has been studied by Bohr? in his classical theory 
+of range. But Bohr used a classical model for the atom and the beta-particle, 
+and a classical method for treating their interaction; and Bohr’s treatment 
+of the close impacts involving large energy losses is even classically not free 
+from ambiguity. A very complete quantum theoretical calculation has been 
+made by Bethe? for the case that the electron has a velocity not comparable 
+with that of light; and our first problem in this paper is to make this calcula- 
+tion relativistically, so that it may be applied to electrons of energy very 
+large compared to their proper energy. 
+
+At first sight the semi-classical method used by Gaunt* would appear 
+appropriate for our purpose. Gaunt’s method is semi-classical in that, in the 
+quantum mechanical expression for the probability of excitation (ionization) 
+of an atom, the matrix component of the interaction energy between primary 
+and atomic electrons is in part replaced by a Fourier component, replaced, 
+that is, by the matrix component for the transition of the atomic electron of 
+the Fourier component of the potential of the primary electron. For transi- 
+
+
+2 N. Bohr, Phil. Mag. 30, 58 (1915). 
+3H. Bethe, Ann. d. Physik 6, 325 (1930). 
+4 J. A. Gaunt, Proc. Cam. Phil. Soc, 23, 732 (1928). 
+
+
+IMPACTS OF FAST ELECTRONS 765 
+
+
+tions in which the primary electron has a small change of momentum, small 
+energy loss and small deflection, this method constitutes a valid application 
+of the correspondence principle. And this method is readily extended to high 
+velocity primaries, since we have now only to take, in place of the electro- 
+static potential, the Fourier component of the retarded four-vector potentials 
+of the primary as a perturbation which induces transitions of the atomic elec- 
+trons. The method is, however, not very elegant, even for the computation 
+of the probability of small energy losses, because it gives an incorrect and 
+very large probability of transitions involving small energy losses but large 
+deflections, transitions to the study of which it may not legitimately be ap- 
+plied. We shall, therefore, not use this method; but in §II we shall give an 
+outline of it, because it gives an illuminating insight into our formulae, and 
+makes clear in a simple way the reason for the increase in ionization power 
+with increasing energy of the primary. Quite recently Mgller® has given a 
+beautiful method of treating the relativistic impact of two electrons. This 
+method is based upon a refinement of the correspondence principle; it neg- 
+lects higher powers of the interaction energy between the electrons, and the 
+effect of radiative forces; but within these limits it is strict and unambiguous, 
+and enables one to take account, not only of the relativistic variation of mass 
+with the velocity of the electrons, but of the retardation of the forces between 
+them, of the spin forces, of interchange and the exclusion principle. The 
+method is applicable not only to the impacts between two free electrons, but 
+to the impacts of a free and an atomic electron in which small energies are 
+transferred; it is further applicable to the impact of a neutron with an elec- 
+tron or proton; and it is this method which we shall use. In doing this we 
+may take advantage of the fact that for energy losses very large compared to 
+the ionization energy of the atomic electron we may treat both electrons as 
+free; whereas for small energy losses we may neglect relativistic effects for 
+the atomic electron, and, as it turns out, interchange. For extranuclear elec- 
+trons there is a region of energy loss large compared to the binding energy and 
+small compared to the proper energy where the two calculations merge and 
+agree. For the neutron the probability of. small energy losses is small, and 
+the binding of an atomic electron can be largely neglected. 
+
+In §I then we shall give an outline of M@ller’s method, and its application 
+to the three calculations; intimate collisions with an electron, collisions with 
+a bound electron involving small energy loss, and collisions of a neutron. We 
+shall have to discuss here the limitations imposed upon the method by the 
+neglect of higher powers of the interaction energy and of radiative forces. 
+These points cannot be fully settled without an adequate quantum electro- 
+dynamics, since they involve questions whose classical analogue is the theory 
+of the structure of the electron. But we shall see that our method gives an 
+upper limit to the range and a lower limit to the ionizing power; and we shall 
+see further that the neglect we have made is small of the order of the fine 
+structure constant. We shall have to carry the details of the calculation of the 
+
+
+5 C, Maller, Zeits. f. Physik 70, 786 (1931). Further L. Rosenfeld, ibid. 73, 253 (1931). 
+
+
+766 J. F. CARLSON AND J, R. OPPENHEIMER 
+
+
+impact of two free electrons rather further than was done by Mller, and 
+shall obtain a formula for the differential probability of a given energy loss, 
+a formula which may be applied to the impact of an electron with an atomic 
+electron for all energy losses large compared to the binding energy. 
+
+In §II we shall treat impacts involving small energy losses, and compute 
+the range and the number of primary ions for a beta-particle. In §III we shall 
+carry through the calculations of the impacts of a magnetic neutron, and 
+apply them for a few typical values of the constants characterizing the par- 
+ticle. 
+
+We shall give here a summary of certain of our results. Let the energy 
+of the primary electron be | | 
+
+
+E = emc? (T) 
+
+
+and the binding energy of the second electron be J, and the energy lost by 
+the primary be #’. We have to consider only collisions in which 
+
+
+FE! s 4[(e — 1)mc? — I] (II) 
+
+
+since one particle has always at least half the initial energy (see 1.32). The 
+following formulae hold for large e. 
+1. 
+
+
+The differential cross section for an energy loss H’>T is 
+
+
+Qnet dE! E*+ E+ (E— EB’) 
+
+
+mot EE? 2E(E ~ E’) 
+
+
+odE! = (IIT) 
+
+
+The angle y between the trajectories of the two electrons after such an im- 
+pact is given by , 
+y= (Qmc2/E')\1 — E’/E). 
+vas 
+
+
+If the cross section for ionization of the atomic electron by a primary elec- 
+tron of velocity v be | 
+
+
+Fion = Ri(Qre*/mv®L) In mv?/ kel (IVa) 
+then the cross section for ionization by the fast electron of energy m7 is 
+Cion = Ry(2re*/mec*Z) {In (mc? /Rel) + 2 Ine}. | (IVb) 
+
+
+When the atomic electron was initially bound in the normal state of a hydro- 
+
+
+gen-like atom, 
+ki = 0.29; ke = 0.024. (IVc) 
+
+
+3. 
+
+
+If the mean energy loss to the atomic electron for a primary of velocity 
+
+
+v is 
+bE = (4re*/mv?) In mo? / kgf (Va) 
+
+
+then for a primary of large energy 
+
+
+bE = (4re*/mc*) {In mc3/ksl + (3/2) ne + 0.22}. (Vb) 
+
+
+IMPACTS OF FAST ELECTRONS 767 
+
+
+For an electron in the normal state of a hydrogen-like atom 
+k3 = 1. ses (Vc) 
+
+
+4. 
+
+
+When a magnetic neutron hits a charged particle, the mean energy loss 
+per impact is of the same order as the maximum energy loss permitted by 
+the conservation laws. If the mass of the neutron be M, its magnetic moment 
+bt, its velocity small compared to that of light and its energy #, and if the 
+charge and mass of the secondary be respectively e, and m=AM, then the 
+mean energy loss of the neutron is 
+
+
+SE = (Tre%u2/6h2c2) E (VIa) 
+
+
+forvA=1 
+and COOL 
+
+
+| 
+
+
+(27% e8u?/h?c?)NE (Vib) 
+
+
+for \X1. Further details and other cases of impacts of the magnetic neutron 
+are treated in §III. 
+
+
+_ Nore: After the completion of this work, a very interesting paper* of Heisenberg has come 
+to hand. Heisenberg is concerned with the problem of the nature of cosmic rays; and he de- 
+rives theoretical formulae for the range of high speed particles with which to compare the ex- 
+perimental findings. Heisenberg’s formula for the range of a fast electron differs only very 
+slightly from that which we have found (Vb); we do not believe that the application of our 
+formulae would lead to sensibly different conclusions. Note added in proof: An outline of a 
+derivation of a formula for the energy loss of a fast electron, by a method also based on 
+Méller’s and altogether similar to that used by us in II, has been given in a recent paper 
+of Bethe (Zeits. f. Physik, 76, 283 (1932)), 
+
+
+I. RELATIVIsTIC THEORY OF JMPACTS 
+
+
+~The method which Mgller proposed for the relativistic treatment of im- 
+pacts is a generalization of two familiar elementary methods; the nonrela- 
+tivistic collision theory of the quantum mechanics, and the theory of the 
+transitions induced in a quantum mechanical system by a known electro- 
+magnetic field. According to the nonrelativistic quantum mechanics, we can 
+write down the interaction energy V of the two particles which are colliding 
+as a function of the coordinates (and in some cases momenta) of the particles; 
+for two electrons this energy is just the electrostatic interaction energy. We 
+can further specify the stationary states of the non-interacting particles by 
+certain quantum numbers 7, p, e.g., the components of momenta of the two 
+particles. In the matrix scheme in which these quantum numbers are diagonal 
+there will be a matrix V,,°* which corresponds to the interaction energy. 
+Then with neglect of higher powers of the interaction energy, and with suit- 
+able normalization, the transition probability for a transition in which the 
+one particle changes its state from s—»r and the other from o—> will be given 
+by 
+
+Dar i = (42r?/h) | rsP° 
+
+
+25(H, + BE, ~ BE, — Ez). (1.1) 
+
+
+6 W. Heisenberg, Ann. d. Physik [5,] 13, 430 (1932). 
+
+
+768 J. F. CARLSON AND J. R. OPPENHEIMER 
+
+
+(The energy of a particle in state r is written #,; and 6(x) is the delta func- 
+tion.) Further, when we know the wave functions for the particles in their 
+non-interacting stationary states 
+
+
+We = Uge WBF) Bet 
+
+
+(1.2) 
+
+
+We = Uge 28h) Egt 
+
+
+we can compute the matrix V,,.°7: 
+a | { drdr’itii,'Vusu,’ . (1.3) 
+
+
+(Integral over configuration space r, r’ of two particles.) Now when we are 
+dealing with particles whose velocity is close to that of light, we must of 
+course use relativisitic wave functions to characterize their stationary states; 
+there is no difficulty in doing this. For the electron we must use solutions of 
+Dirac’s wave equation; for the neutron we may use solutions of the wave 
+equation given by Pauli. But the function V no longer exists, since one can- 
+not, when the retardation of the forces is taken into account, express the 
+interaction energy as a function of the coordinates and momenta alone. What 
+then, in the relativistic theory, should replace the matrix element V,,°7? 
+
+We can answer this question if we consider first the perturbation induced 
+in a quantum mechanical system by a given electromagnetic field. Let the 
+
+
+four-vector potential of the field be ¢y(x, y, 2, t); w=1--- 4, and the charge 
+and current density vector of the system be 
+
+Je = pp, (1.4) 
+Then 
+
+Ses 1/chyj* (hs) 
+
+
+is the operator representing the interaction energy of field and system. We 
+resolve this operator in a Fourier integral 
+
+
+V = [ Vacs V, = (— 1/cj*) [ eto. (1.6) 
+
+
+To V, there now corresponds a matrix in the scheme of the stationary states 
+without field | 
+
+
+Vier = [ wVnede. — (4.7) 
+
+
+Here, again neglecting higher powers of the interaction energy, we find for 
+the transition probability 
+
+
+An? /h| V7 |? 8(E, — Ey — hy). (1.8) 
+
+
+Now when the field ¢, is produced by a particle of known trajectory, a tra- 
+jectory uninfluenced by the reaction of the system upon it, we express the 
+potentials in terms of the retarded charge and current density J” of this 
+particle: 
+
+
+IMPACTS OF FAST ELECTRONS 769 
+
+
+Jl). 
+d*(r, 1) = (ye) far ls — es r=|r—2'| (1.9) 
+Then | 
+V, =(- ier) f iri, [ arersetat (expo (1.10) 
+
+
+and the transition probability c— is given by 
+
+
+(4or2/h) | Vier |? 6(E, — E, — hj) 
+
+
+ertivrle 
+Var = (— 1/c?) [fora i [ recrmat| Ue. (1.11) 
+rT 
+
+
+This at once suggests that, when the trajectory of the particle is influenced 
+by the reaction of the system, so that the state of the particle also changes as | 
+a result of the interaction, we replace the Fourier component of the retarded 
+potentials of the particle by the matrix component corresponding to the transi- 
+tion in question. Thus if again _ 
+
+
+Jie = yi" 
+
+
+We == Upe 2TH) Lot 
+
+
+with 
+
+
+are the wave functions for the stationary states of the particle, we have to 
+replace [Je tdi by i,j*u, with E,—-E,=hy, 
+This gives 
+
+
+P,P? = (40?2/h) | Vio?" |? 6(E, + E, — E; — E,) | 
+(1.12) 
+
+
+Vys?% = (= 1/c?) Sf Ard’ tythy’ jj ve Aris he) (He Ey ry us’ |r, 
+
+
+This reduces to (1.3) when retardation may be neglected and the velocity 
+of the particles is small compared to that of light; it reduces to (1.11) when 
+the reaction of the system on the particle may be neglected. 
+
+This is the formula proposed by Mgller.5 Although the derivation of the 
+formula distinguishes between the system and the particle, the result which 
+we obtain for V;s°" when we reverse the roles of the two 
+
+
+C= 17¢7) Jf dedet atin eB, tel. 
+
+
+gives the same transition probability, and the same matrix to represent the 
+interaction energy. 
+
+We are thus led to consider the interaction energy represented by the 
+matrix (1.12), Ve". One might at first suppose that by the use of this expres- 
+sion for the energy, and the higher approximations of the method of variation 
+of constants by which the transition probabilities may be computed, one 
+
+
+770 J. F. CARLSON AND J. R. OPPENHEIMER 
+
+
+could obtain a strict expression for these transition probabilities. This is not 
+so, however, because in the derivation of (1.12) the reaction of each particle 
+to its own field had been neglected; this reaction should be taken into ac- 
+count in any strict theory, and its omission makes the higher approximations 
+—involving higher powers of the charge or moment of the particles, invalid. 
+‘Thus (1.12) gives no account of collisions between the particles in which ra- 
+diation is emitted; but we know that such transitions will in fact occur. Their 
+relative frequency, frequency relative to the transitions in which no radiation 
+is emitted, is known to be of the order 
+
+
+a(o/c)? (1.13) 
+where « is the fine structure constant, and d the mean velocity of the charges. 
+This probability can thus be neglected when one of the particles moves with 
+a velocity small compared to light; even when this is not so, radiative pro- 
+cesses are presumably relatively rare because of the smallness of a. We shall 
+see that in our theory of the impact of a high velocity electron upon matter 
+the impacts in which very little energy is lost are the only ones of importance. 
+But in these impacts the secondary electron has very low velocities, so that 
+we know that radiative processes cannot be important in these impacts. For 
+this reason the results we obtain with neglect of radiative forces furnish a 
+lower limit to the ionizing power and energy loss of the fast electron. On the 
+other hand the formulae derived from (1.12) for impacts in which large en- 
+ergies are transferred may be seriously in error; this error is at least of the 
+order a. 
+
+When the two colliding particles are electrons, (1.12) must be modified 
+to take account of interchange and the exclusion principle. When the inter- 
+action energy matrix corresponds to an operator in configuration space, it is 
+known that this may be done by writing for the interaction energy 
+
+
+AD Vig Ge Gute (1. 14) 
+
+
+r,8 p,e 
+and by treating the a’s as dynamical variables which satisfy 
+
+
+ApUs + Got, = O 
+Apt Ag + Apap = Spa; (1.15) 
+ajtagt + a,ta,t =0. | 
+
+The order of the a’s has been so chosen that the interaction of each particle 
+with its own field has been eliminated. Now although V,,°* corresponds to no 
+operator in configuration space, and there is no wave equation in the con- 
+figuration space of the two particles with which to compare our results, we 
+still take (1.14) to represent the interaction energy. Since each a,* corre- 
+sponds to a transition in which a particle enters the state 7, and each a, to 
+one in which a particle leaves the state 7, there are now four terms in this 
+sum which give rise to a transition in which the two particles go from the 
+states s and ¢ tov and p. Because of the symmetry of V,,°", these four terms 
+are equal in pairs; for the transition probability we find, in place of (1.12) 
+
+
+Piet = (4r?/h) | rs? — Vero? ® 2 5(E, + H, - oe — ie) Ch. 16) 
+
+
+IMPACTS OF FAST ELECTRONS 771 
+
+
+In dealing with the impacts of a fast electron on an atom, it is easy to see 
+that when the energy transferred to the atomic electron is small the inter- 
+change terms in (1.16) are negligible; for such impacts we may use (1.12) in 
+place of (1.16). 
+
+We have now to apply these formulae to the three cases: (a) Impacts of 
+two free electrons. (b) Impacts of a fast electron with an atomic electron, in 
+which little energy is given to the secondary. (c) Impacts of a neutron with 
+an electron or proton. 
+
+
+(a) High velocity impacts of free electrons 
+
+
+To apply (1.16) to the impacts of two free electrons we have to write down 
+explicitly the wave functions for the stationary states of the free electrons 
+and the expressions for the matrix components of the charge and current 
+vector. The states of each electron we may specify by giving the components 
+of momentum 
+
+
+p? = (b2, py, P); P® = (po, Py, pe) 
+
+
+and the component of spin o™, o® of each electron in the gz direction. (We 
+exclude states of negative energy; and to the approximation here considered 
+this causes no ambiguity.) For each of the electrons we take the wave func- 
+tions to be solutions of the equations 
+
+
+[(4/2mi)(8/at) + (hc/2ri)(a grad) — aync? |p = 0 (Lot) 
+
+
+in which for each electron we take the a’s in the familiar form 
+
+
+( 0 0 0 1 ) 0 0-1 \ 
+0 ) 1 0 0) 0 t 0 
+a, = ; Ay =] ; 
+0) 1 0 0 0 -i 0 0 
+1 0 0 0) t 0 0 0 
+| (1.18) 
+0 0 1 0 1 0 0 0 
+0 0 0-1 0 1 0 0) 
+a; = 5) ag = , . 
+1 0 0 0 0 0 —1 0 
+0 — 1 0 0 0 0 0-1 ) 
+The solutions of these equations we write in the form 
+| Woe! = Appi 2th) Up -r)—Ed) (1.19) 
+
+
+with 
+ie c(m2c? =e p2)ie 
+
+
+and with the a,,? functions of (p, 7). For an electron initially at rest we take 
+for the a’: 
+
+
+li ace g=— | 
+
+
+Q, = dg = a4 = 03 a3 = 1; ay = dg = 3 = OF = 
+
+
+Q 
+| 
+
+
+(1.20) 
+
+
+772 J. F. CARLSON AND J. R. OPPENHEIMER 
+
+
+These states will be characterized by an index (0). Thus 
+p™ = 0, EO = me; ¢ = + 1; etc. 
+
+
+This wave function represents a uniform electron density of one electron per 
+unit volume. For an electron moving in the g direction we take 
+
+
+c=+1 es | 
+dg = a4 = 0 a1 = a3 = O 
+(1.21) 
+a1= —Np/g a. = Np./g 
+a3 = N a= N 
+where | 
+g=me+ E/c 
+and 
+
+
+iN? = Og (£2 — mic4)1/2, 
+
+
+These states will be characterized by a superscript (2). This wave function is 
+normalized to represent a stream of unit flux, so that the transition probabili- 
+ties computed from it will give directly the cross section for scattering. 
+
+We may without loss of generality suppose that after impact both elec- 
+trons are moving in the xz plane, since, as we shall see, momentum is con- 
+served in the impact. For such an electron we take 
+
+
+oc=+1 g=-—t!l 
+a= —Np./g u= — Np./g 
+dy = — Np./g a2 = Np./g (1.22) 
+a3 = N ag = 0 
+d4 = 0 ag= N 
+where , 
+g=mce-+ E/c 
+and 
+N? = — g¢/2Eh', 
+
+
+These states will be characterized by superscripts (1) and (2). This wave 
+function is normalized to dp, dp, dp, =dp. We shall need the Jacobian 
+
+
+J = (pp ,pO)/0(E® + B® 6 ,g%) 
+where, by the conservation of momentum, 
+E®(p@) = E®@(p@ — p), (1.23) 
+We find 
+
+
+IMPACTS OF FAST ELECTRONS. . 773 
+
+
+Note: There is at this point in Mgller’s paper an error, in that Mgller uses in 
+place of 7! 
+5° = I(D. P1 P/O E 9 6). 
+
+
+Now J'4J®, because by the conservation laws E@ depends on p™. It 
+is J” that we must use to take out the 6(E-+ E®) —(#%+ EH) in (1.16). 
+We are indebted to Dr. Heisenberg for tellung us that Mgller had found an 
+error at this point in his paper. 
+
+Further the charge density is given by 
+
+
+2 | 
+e Dwi (1.24) 
+j=l 
+and the current density by 
+ec > Wiagkp*. (1.25) 
+dik 
+
+
+If we put these expressions in (1.16), we find for the transition probability 
+from the intial states [(1.20) and (1.21)] of the two electrons to states 
+
+
+pO, 6D), pg 
+
+
+such that 
+EY 4+ E® = FO 4 EO 
+
+
+the expression 
+
+
+2 
+AhsetJ ) | A | ) | J dretrsnoo-po-oin | dp@dg doh (1.26) 
+_ A1,:°A2,0° — (A1,¢: A2,o) 7 
+| p® — p®|2— (1/)(EO — EM|2 
+A1,0°A2,;° — (A1,0° As, 3) 
+| p® — p® |? — (1/e)(E@® — B®)? 
+
+
+(1.27) 
+
+
+Here 
+; | 
+0 pee . 
+Ayy= Sap oe) ai(p, 6), 
+j=l 
+4 
+Aro = Diai(p®, o)ajka*(p, 0). 
+iy hol 
+Now 
+2 
+Q = lim f dre2rilh) (IpO-pO—p1 7) | Ve(p® — p® — p®), (1.28) 
+V-> 0 Vv 
+
+
+Thus momentum as well as energy are conserved, and we may set 
+
+
+p® = p® — p®, (1.29) 
+
+
+774 J. F. CARLSON AND J. R. OPPENHEIMER 
+
+
+Further if we divide (1.27) by V we get the cross section for impact with a 
+single electron at rest. In (1.27) we have to consider all the possible orienta- 
+tions of spin of the two electrons in initial and final states: to take one fourth 
+the sum of (1.27) over the sixteen combinations of values of ¢, 6, 0, o®, 
+The resulting cross section can be expressed as a function of e and ?, the 
+angle of deflection of one of the electrons; it is independent of the azimuth 
+of deflection of this electron; and all the components of momentum are de- 
+termined by the conservation laws when @ and ¢ are given for one electron. 
+Before carrying out this reduction we may make a few observations on the 
+geometry of the impact. 
+
+According to the conservation laws, if the two electrons after impact have 
+direction of motion making the angles 31,02 with the g axis, 
+
+
+oY sind: = p™ sin de. (1.30) 
+Further, the energy of a particle coming off at an angle? is 
+
+
+= = 2 a ° 
+E! = mc eee ee (1.31) 
+2+(e—1)p2’ B=sing; | 
+and the absolute value of its momentum is mc [2a(e—1)!/2|/[2+(e—1)6?]. 
+Thus the particle with the smaller energy always comes off at a larger angle; 
+when the energy is shared equally the two particles come off at the same 
+angle J», such that 
+
+
+sin?d,, = 2/(e + 3). ~ (1.32) 
+In general the angle y between the particles is | 
+tgy = [2 + (e — 1)87]/[(e — 1)o8] (1.33) 
+which reduces to | | . 
+y? = (2me?/E’)(1 — E'/E) (1.34) 
+
+
+for large e. [Here E’ is the smaller of the two energies E®, E®.| In no im- 
+pact do both electrons come off at an angle larger than J; and since (0. 7) 
+gives the probability that an electron come off at an angled, and the other 
+at the corresponding angle determined by (1.30), we have only to consider 
+impacts in which ? S$?,,; impacts in which }>¢d,, will be the same impacts 
+as those for which 3? <?,,, but in which the angle 3 refers to the slower and 
+not the faster of the two electrons. 
+
+We should note that by (1.34) the angle between the electrons grows small- 
+er as the both the primary energy and the energy transferred grow large 
+compared to the proper energy. This point is of some importance in connec- 
+tion with the interpretation of cloud chamber experiments, since it leads us 
+to expect that very high energy secondary electrons produced by elastic im- 
+pact with high energy primaries will come off nearly parallel to the direction 
+of the primary. | 
+
+We shall let then? be the angle which the faster of the two secondary elec- 
+trons, for which we use (1), makes with the primary direction. Further we 
+
+
+IMPACTS OF FAST ELECTRONS . 775 
+
+
+shall write ~=cos 0, B=sin vd, g=(e-—1)G%. Then the conservation laws give 
+us the relations 
+
+
+p,Y = — p,%) = [ (e2 — 1)1/22a8/(2 + g) |me 
+pp.) = (e2 — 1)1/8me 
+pi) = [2aXe — 1)12/(2 + q) me 
+pi? = [et — 1)¥%(e + 1)8%/(2 + @) Ime 
+| p® — pO |? — (1/e)(EO — EM)? = [2(e — 1)62/(2 + g) |mte? 
+| | p® — p®|2— (1/c)(BO — B®)? = [A(e — 1)a2/(2 + gq) |m2e? 
+gO = Ime g® = [(4 + (e+ 3)g)/(2 + @) me 
+g® = (e+ 1)me pO = [2a(e? — 1)¥2/(2 + g)]me (1.35) 
+gD = [et D/Q+Q]mc EM = [(2e — g)/(2+ g)]me. 
+Thus we get for the differential cross section, | 
+
+
+ret (e+ Dat te+3e | LO__ MOP 4 56 
+
+
+I 
+
+
+oda = 
+
+
+pe Lazes ee > toes 
+mc4 2(¢e— 1)? (2+) o o(),¢% 6) [(e + 1) 6? 2a? 
+
+
+Here each of the L(a), M(c) refers to a different one of the sixteen possible 
+orientations of electron spin; Z(c) is the direct term, M(c) the interchange 
+term. The L and M can be tabulated as a function of ¢ and 3. We write 
+
+
+geet lel) Mea 15 St a (e = er 3) 8" 
+
+
+(0) | gf) | @@ | g® L(o) M(c) 
+
+
+os 7 re ae . 4 
+a) es yl ee ae ae eon) ene 1) B25 1—yo?+(e%—1) 64S 
+—~| +] —] +] 1+yo?t(e—1)[40%62 
+aa Neat ae a ee — (1+) (e+1)e"]S — 2yo21 +30? +-6?],S 
+—~{+]4+ ]+ 7 
+See sees Je | ee Sp Deed) (2g iS + 2e8y[2(e+2)a? + (e+1)?6?).S 
++/+}+]- 
+—~|—|—{|+ ] +£2a8(e-1)A1+e%)S + 2a6qS 
+
+a aa Peak eae = (1.37) 
+Bo lel, see. SEAGIG S + 2agy[20?4-(e+1)6?]S 
++}—-[|+]+ 
+—| +) —|— | F4ve6(1+66?)S + 2yap[4o? + (e+1?)6?]S 
++/+]-|- 
+—{—!|+] + | 29S 20°¢S 
+—~{|+)—-|+ | 
+ti — {| tl — 4} 2g +e6*)S 1 — yo? -+-g[40?-+ (e+1)6?].S 
+
+
+For large € the last six contribute nothing to the cross section; the first four 
+are important for energy losses not large compared to the proper energy; 
+the next four are important for all energy losses comparable with the proper 
+
+
+776 J. F. CARLSON AND J. R. OPPENHEIMER 
+
+
+energy; the next two are important only for energy losses comparable with 
+the primary energy. From (1.35) the energy transferred is 
+
+
+A’ = mee + 1)¢/2 + ¢. (1.38) 
+We must consider only impacts for which 
+6< On, El < de — 1)-me?. (1.39) 
+
+
+For these the differential cross section is given by 
+
+
+Qnet dH! EA + B44 (E— EDS 
+
+
+od! = — 
+me? E EXE — BE’? 
+
+
+(1.40) 
+
+
+This concludes our study of the impacts in which large energies are trans- 
+ferred. Certain further calculation by this method, primarily for the case of 
+smaller e, were given® by Mgller; and there, too, the connection between cer- 
+tain results of this calculation with earlier attempts at the calculation of 
+impacts were given. One point we may mention here: when € is not large, we 
+may use Rutherford’s formula to give us the differential cross section for en- 
+ergy loss,—or rather the nonrelativistic quantum mechanically extension of 
+Rutherford’s formula which takes account of interchange and the exclusion 
+principle. This gives, for H’<E, 
+
+
+odk! 2 2ne!dE!/ EE". (1.41) 
+
+
+This agrees with our result for energy losses small compared to the proper 
+energy; but for larger energy transfers it gives too large a cross section. When 
+higher powers of the interaction energy are not neglected, terms of the order 
+of the fine structure constant must be added to (1.40). In the case of the 
+nonrelativistic calculation (1.41) these are only of importance when £’ is 
+of the same order as E; and presumably, although not certainly, these terms 
+will not be of importance for large ¢ except in this case E’~E£. 
+
+
+(b) Small energy transfers to bound electrons 
+
+
+We have now to consider the case that a primary electron of very large 
+energy gives to a secondary which was originally bound in an atom an energy 
+not comparable to its proper energy. The states for the primary electron are 
+still given by (1.21) and (1.22); but certain simplifications are introduced 
+even here by the fact that the energy of the primary changes very little. For 
+practically all such impacts involve a very small deflection for the primary; 
+and in their treatment it is legitimate to neglect quantities which are small 
+when the primary momentum changes by a relatively very small amount. 
+With this understanding we see that only the matrix components of the 
+charge and current of the primary in which the spin of the primary does not 
+change are important, and that these are independent of the original orienta- 
+tion of the primary spin, which we may thus take parallel to z. (Caseg= +1). 
+Further the components of current, and thus of vector potential, in the «xy 
+plane, are negligible. We have to consider only the scalar potential and the z 
+component of the vector potential of the primary. 
+
+
+IMPACTS OF FAST ELECTRONS 777 
+
+
+There are two further simplifications. In the first place interchange is 
+negligible (interchange terms are important in general only when the energy 
+transferred in of the order of the primary energy); we may thus use (1.12) 
+in place of (1.16). In the second place the secondary electron never gets a 
+velocity comparable with that of light, so that for it we may use nonrelativis- 
+tic wave functions and expressions for charge and current density; and we 
+may neglect the spin of this electron. On the other hand we may not use wave 
+functions which neglect the binding of the atomic electron, and must replace 
+for it (1.19) and (1.21). Let the initial energy and wave function of the elec- 
+
+
+tron be 
+EO = — Ty hy = e2rilnttygy (1.42) 
+
+
+After the impact the atomic electron may be excited or ionized. Let the corre- 
+sponding energies and wave functions be 
+
+
+Ent Val aoa eC ari/hEnity, y: 
+
+
+| (1.43) 
+&, Vel — eC erilhity ny): 
+
+
+where J stands for the two other quantum numbers in addition to the energy, 
+necessary in the most general case to specify the state of the electron. Further 
+let the continuous wave functions for energies above the ionizing potential 
+be normalized in the energy scale. 
+
+The expressions for the charge and current density are ethan simply 
+
+
+p= opp 
+(¢/2m) |(h/2ni)(b grad y — grad yp) (1.44) 
+— (2e/c)WAv| ~ (eh/2rim)p grad y. 
+
+
+The terms in the vector potential A are of higher order in the interaction 
+energy and may be dropped. 
+
+If as before we let the primary electron be deflected in the plane, and call 
+the angles of deflection again 3, ¢, we get from (1.12) for the probability of 
+excitation to a state n, I: 
+
+
+Aq%e4 
+oa = ff asap | V0] 2 T= |r. — ro| 
+
+
+Vyomt = ff drsdraitn(rs) exp {2i/h[(Lp® — p®]-r9 
+
+
+— (1/c)(E® — EM)7} [1 — h/2rime(d/d20) /r|uo(r2) 
+and for the probability of ionization to a state of energy in the range dE 
+Ame4 
+
+
+7 aE | { asagr >| V oF? | a, 
+Cc é 
+
+
+To get the total probability of excitation or ionization these expressions must 
+be summed over u, /; to get the energy loss per impact they must be multi- 
+plied by 
+
+
+(1.45) 
+
+
+ond = 
+
+
+E’=Em+I, EF = ELI (1.47) 
+
+
+778 J. F. CARLSON AND J. R. OPPENHEIMER 
+
+
+and summed over /, summed and integrated over x and &. In the next section 
+we shall evaluate these expressions as far as possible when we leave the atomic 
+wave functions arbitrary; and we shall evaluate them in detail for the case 
+that the wave functions are those of a hydrogen like atom. From them we 
+shall find, for the differential cross section for an energy loss &’ large com- 
+pared to the ionizing energy J, | 
+
+
+odE! = Ine'dE'/mek” 
+
+
+in agreement with (1.40); but for smaller energy losses we shall obtain results 
+which differ very markedly from those given by (1.40). 
+
+
+(c) Theory of magnetic neutron 
+
+For the impacts of a neutron with a free electron we have again to use 
+(1.12). Here the wave function for the electron before impact is given by 
+(1.29); that after impact by (1.22); and the charge and current density of the 
+electron by (1.24-5). We have only to find.the matrix components of the 
+charge and current density of the neutron. 
+
+The wave equation proposed by Pauli! for the magnetic neutron is simply 
+related to the Dirac equation for the electron. In the absence of a field this 
+latter may be written 
+
+
+ly“p. — imc] = 0; pa = (— h/2ni) (9/08); po = (h/2ri)(4/dx)); 
+l= 1,2,3 
+yi? boyy = oy. (1.49) 
+
+
+In the absence of a field this equation is to hold for the magnetic neutron, 
+except that the neutron’s mass M must be substituted for that of the electron. 
+In the presence of a field new terms are to be added to the wave equation: 
+
+
+ly"p, — ic + P| = 0; P = ko F,,. (1.50) 
+Here F,, is the field tensor, 
+
+
+(1.48) 
+where the y“ satisfy 
+
+
+Cer ete ede rrr anes 
+and x is a constant which is related to the magnetic moment u of the neutron: 
+= p/4dec. (1.51) 
+
+
+These terms are not altogether arbitrary. Thus o” must be an antisymmetric 
+tensor; it may not involve the coordinates nor powers of the momenta higher 
+than the first. Thus (1.50) turns out to be the only hermitian not identically 
+vanishing possibility which involves the field strengths linearly. The fact 
+that x is real is required by the hermiticity of the term; otherwise one could 
+not interpret the wave function of a particle which was conserved. The sign of 
+the term is arbitrary, and determines whether the magnetic moment of the 
+neutron is parallel or antiparallel to its spin. 
+
+From (1.50) one may deduce two conservations laws. One asserts that 
+the divergence of the four vector 
+
+
+SH = ptyd (1.52) 
+
+
+IMPACTS OF FAST ELECTRONS 779 
+
+
+vanishes, and gives the conservation law for the neutron density. The other 
+OJ" /Ax* = 0; J# = (— w/2)(0/d)x(ptor’d) (1.53) 
+
+
+gives, as we shall show, the conservation of the charge and current vector. 
+The two four vectors-particle density and flux, charge and current density, 
+do not, as in the case of the electron, differ merely by a constant factor. 
+
+The first justification for calling 4 the magnetic moment of the neutron 
+we obtain if we reduce (1.50) for the case of velocities small compared to that 
+of light. We find then that the neutron is described by a two-component wave 
+function which satisfies 
+
+
+[(h/2ri)(0/0t)— h?/8r?MA + p(H-c)]o = 0. (1.54) 
+
+
+Here the o’s are the Pauli spin matrices 
+
+
+0 1 Sf SG i © 
+oc; = ) Oy 2 ) i ) (1.55) 
+1 0 i 0 0 =—1 
+
+
+and H the magnetic field. This is just what we should expect for the wave 
+equation of a neutral particle carrying a spin and a magnetic moment yu. 
+
+A further justification for calling w the magnetic moment of the neutron 
+we can obtain by showing that. 
+
+
+J* = (— p/2)(0/dx”) (gto?) (1.56) 
+
+
+does correspond to the charge and current vector. For if we calculate the 
+potentials and field strengths of a wave packet moving with low velocity by 
+using (1.53) for the charge and current vector, we get just the field we should 
+expect for the neutron of magnetic moment. Here as in the case of the electron 
+the components of momentum do not completely specify the state; we need 
+also to specify the orientation of the spin; and by doing this we determine the 
+orientation of the field-producing magnetic moment. 
+
+We can verify that (1.53) is right in the following way. The wave equa- 
+tion (1.50) and its adjoint equation may be obtained by variation of d+ and ¢ 
+in the Lagrangian. : 
+
+
+L = [ avorlr'p, — iMc + xo”F,,|¢. (1.57) 
+If we add to (1.54) the Lagrangian of the empty electromagnetic field, 
+(1/167) f dVEWP., (1.58) 
+
+
+and in this vary, precisely as in the familiar case of the electron, the poten- 
+tials, we get in place of Maxwell’s equations for the empty field 
+
+
+AF! /ax” = Ane (1.59) 
+
+
+with J¥ given by (1.53). Thus, as far as the field produced by the neutron is 
+concerned, J/# given by (1.53) acts like the charge and current density. It is 
+a four vector, and its divergence vanishes. 
+
+
+780 J. F. CARLSON AND J. R. OPPENHEIMER 
+
+
+It is convenient to rewrite the Eqs, (1.50) in the form corresponding to 
+(1.17). Thus for the free neutron (no field), we get 
+
+
+[(h/2ri)(0/0L) + (he/2ri)(a- grad) — aMc?|y = 0 (1.60) 
+where the a’s aid given by (1.18), if we take 
+yt = a0; y' = tana; ¢ = tay. (1.61) 
+The density current four vector then becomes 
+Wy, cho. 7 (1.62) 
+
+
+The neutron density is, as it must be, essentially non-negative. The terms 
+corresponding to P in (1.50) then become 
+
+
+— tagxo”’F (1.63) 
+
+and the charge and current vector is given by | 
+JH = = pd/dx7 (prep). (1.64) 
+Here the four row matrices y”” are given in terms of the Pauli spin matrices 
+
+
+(1.55) by 
+
+
+cHK = Q) 
+
+
+0 1S} 
+git me ae tl =m 
+— 4S] 0) 
+— Sm 0 
+hE Se ht ( ) 
+| 0 Sim 
+
+
+Here (k, 1, m) are a cyclic permutation of (1, 2, 3). This expression must 
+be used in (1.12) to compute cross sections for impacts. For the states of the 
+free neutron we may again use the wave functions (1.20) and (1.21). In place 
+of (1.27) we find 
+
+
+(1.65) 
+
+
+16r2he pT | Bi2?Odp@ag Ode (1.66) 
+where Q is given by (1.28) and where now 
+
+
+Ag .o°T1,i4 + (Ae,oT1,1) 
+
+
+B= | ee (1.67) 
+|p = p | 2 1/%(EO — EO)2 
+Here the A’s are given by (1.27) and the 7’s are defined 
+T1£= Dd a(p, oD) T hak(pVeD)Agy 
+7 om 
+Api; = p© — p™; (1.68) 
+
+
+Api. = — (1/c(E® — E), 
+
+
+As before QO V6(p™ —p™ — p®), | 
+We can write the cross section for a particular set of spin orientations 
+
+
+16r2hew2J | B(o) |2de9Mde™, (1.69) 
+
+
+IMPACTS OF FAST ELECTRONS 781 
+
+
+As before we must take, to find the differential cross section, one fourth the 
+sum of these expressions over all sixteen orientations of initial and final spins: 
+
+
+= 
+odidd = 4r*hewIY > | B(c) | *déd¢. (1.70) 
+) 
+
+
+a) g@ 400) 0 
+
+
+The quantities 7 occurring here may be tabulated in terms of the initial and 
+and final momenta and energy of the neutron. If for brevity we write 
+
+
+po, = 1; p,% = fr: pb, = p’; 
+
+
+(1..71) 
+Eg Bee. DOSE ae ee 
+
+then we find for the 7”s the following values: 
+
+a) x) i T; 
+
+Bes cones sce uacuuae. jl cudaie. nfedean sass 
+
+— | — | tAr(rp'/eg') +idgp'/g! ¥ p'(L—rr'/gg’) £ Arp'/eg' + Agp'/g 
+
+tl oe (+rp’?/ge") +Ar(i-+rr'/gg") 
+
+— | + | zAr(rp'/gg' tidg((r/g)+r'/g') | +Ag((r/g)+r'/2.) 1.72) 
+a) |g) Te i 
+
+[+]. | 7 rere 7 
+
+= le | Cmap tree) tag (7 /g)—2'/e). | (ap) gare) 0/2’) 
+
++ 
+
+
++ | tip’(1+rr’/ge’) tidgp’/g’ tip'(r/g)+r'/g’) Fidrp'/g’ 
+
+
+It is not possible, without knowing the mass of the neutron, to reduce these 
+expressions further. We shall, therefore, postpone until $III the discussion 
+of these formulae. There, too, we shall make such elementary investigations 
+of the effect of the binding of the electron as are necessary to our purpose. 
+Before proceeding to the further application of this method of Mller, 
+we wish again to emphasize the approximate character of the method. We 
+have throughout neglected two things: the reaction of the particles to their 
+own field, and all radiative processes; and higher order terms in the interac- 
+tion of the two particles. In the case of the electron, both these neglects 
+mean the omission of terms of the order of the fine structure constant, terms 
+which are genuinely small unless both particles involved are moving with 
+velocities comparable to light. Just what effect these terms could have on the 
+things in which we are most interested—range and ionizing power of the pri- 
+mary, energy distribution of the secondaries—we shall discuss when we have 
+our results before us. But the formula (1.40), which is derived with neglect 
+of these terms, is subject to grave doubt, since we have no assurance that 
+terms of the form ea will not appear, and no physical assurance that in the 
+intimate collision of two electrons this approximate method can be legit- 
+imately employed. It seems at present by far the soundest method available, 
+and perhaps experiment can show in what measure it is inadequate. The fur- 
+ther study of impacts involving neutrons, a study which should not neglect 
+
+
+782 J. F. CARLSON AND J. R. OPPENHEIMER 
+
+
+higher powers of the interaction energy, presents even in the nonrelativistic 
+case serious analytic complications; and we have not thought it advisable to 
+attempt these without some more certain information about the characteris- 
+tic constants, in particular the moment, of this hypothetical particle. 
+
+
+II. IonizING POWER AND RANGE OF FAst ELECTRONS 
+
+
+We must now consider in detail the small energy losses suffered by a fast 
+electron in its impacts with an atom. Just as in the nonrelativistic theory, if 
+we neglect the binding of the atomic electron we find an infinite probability 
+for small energy losses; and just as in the nonrelativistic treatment the proper 
+consideration of the binding gives us a finite probability of energy loss and a 
+finite range. 
+
+Before using our formula (1.46) to study these impacts we may outline 
+briefly the semiclassical method of treating this same problem. This method, 
+it will be remembered, is valid only for such impacts as involve small energy 
+loss and small deflection of the primary; in this method we treat the primary 
+particle classically, neglect the reaction of the atom upon it, and use the field 
+calculated for this undeflected trajectory as a perturbation causing transition 
+of the atomic electron. If we choose our coordinates so that the particle passes 
+along the z-axis, and goes through the origin at =0, then the field of the par- 
+ticle is given by the potentials 
+
+
+A, = Ay =0; A, = (eve/c) |x? + y? + A(z — vf)? )?; 
+$ = ee[x? + y? + (2 — wf)? }-1; 
+where v is the velocity of the particle and 
+t/e = (1 — 0?/c?)1/2, 
+
+
+The probability of a transition of the atomic electron in which its energy 
+changes by #’ is determined by the Fourier component of this field of fre- 
+quency v’=E'/h. We therefore analyze the potentials by a Fourier integral: 
+
+
+(2.1) 
+
+
+A, = (4e/c) [ Komp/en cos 2rv(t — 2/v)du 
+a (2.2) 
+Ks ely) i} EOE MP ET OTE 
+
+
+where Ko is the Hankel function: 
+
+
+Ace “  coshdh : As 
+wmf arp eyin’ and P= Ce see a aie 
+
+
+The perturbation energy for the atomic electron is given by 
+V = eb — (1/0)Ad. - 03) 
+
+
+where j is the current operator which, to a sufficient approximation, is given 
+by (1.44): 7,= (4e/2rm1)0/0z. Thus the transition probability for an atomic 
+
+
+IMPACTS OF FAST ELECTRONS 783 
+
+
+transition n—>n’ in which the energy of the atom changes by E’=E,, —E, 
+= hy’ is just 
+
+
+Pan’ = (An?/h?) (2 4) 
+
+
+[ier2e*/0 K (2rv' p/ev) e2* 2!" [1 — (hv/2rimc?)d/dz| updr 
+
+
+where the u’s are the wave amplitudes for the atomic electron. The nonrela- 
+tivistic expression is® 
+
+
+y] 
+
+
+(255) 
+
+
+An? 
+
+
+2e? fav’ p 7 
+Secs Gy —K Girt e2niv elvy dr 
+v v 
+
+
+h? 
+
+
+Oa 
+Rn 
+
+
+Now for distant collisions, to which alone this method may be legitimately 
+applied, we may expand the potentials about the position of the nucleus of 
+the atom, which we take to be on the y axis at a distance from the track, 
+and consider only the first two terms of the expansion, 1.e., the dipole moment 
+of the atom. If we let the y-component of the displacement of the electron 
+from the center of the atom be ¢ then we find 
+
+
+Prn'(p) = (16me*/ hv?) | fan’ | 2[K’(Qarv’p/ve) |? (2.6) 
+where K’(£) =0K)()/OE and Cnn = fin fundr. The nonrelativistic formula is® 
+Pan'(p) = (16m%e/ hv?) | fan’ | 2K’ (20v'p/v) |. (2.7) 
+
+
+Thus in this calculation the effect of retardation is to introduce p/e in place 
+of p in the argument of K’. Since K’ is a rapidly decreasing function 
+
+
+Ke) ole fore 2 0, 
+
+
+(2.8) 
+K'(&) Rie oss (1 /2&)1/2e-% for (£) => OO, 
+
+
+this means that for a given transition and a given position of the atom the 
+probability of a given energy loss is increased by considering retardation; 
+energy losses occur at greater and greater distances from the track as the 
+velocity of the primary approaches more and more closely that of light.We 
+are, therefore, led to expect a greater number of low velocity secondaries 
+than we should find from an extrapolation of the nonrelativistic formula; 
+and this is just what we shall find. It is an immediate consequence of the flat- 
+tening out of the field of the electron in the equatorial plane. 
+
+As the position of the atom approaches the track, 0, and the total 
+number of transitions becomes infinite. For these intimate collisions the ex- 
+pansion of the potentials about p and the assumption that the track is unde- 
+flected are both illegitimate. There are a number of ways in which, for small 
+energy losses, we might try to modify the calculation of these close impacts, 
+in such a way that the integral over converges and gives a finite result. Per- 
+haps the simplest is to stop the integration at a point # where, according to 
+(2.6), the probability of inelastic impact is unity. This point turns out to be, 
+for a hydrogen-like electron, of the order of the Compton wave-length divided 
+by the effective nuclear charge 2: | 
+
+
+p = 1.4h/2emcze ~ h/2rmcez. (2.9) 
+
+
+784 J. F. CARLSON AND J. R. OPPENHEIMER 
+
+
+This procedure gives for the mean energy loss due to small energy transfer, 
+small compared to the proper energy, 
+
+
+6 = (4re*/mc*) In (mc*e/W) (2.10) 
+
+
+where W is of the order of the ionizing potential J, and for a hydrogen like 
+atom is W=3.0 I. This result is in remarkable agreement with that which 
+we shall obtain by our strict calculations with the help of (1.46); and it is 
+of some interest to inquire into the ground for this. The answer is very simple. 
+We shall see that in our strict calculations (2.6) is right for distant impacts, 
+impacts, that is, in which the deflection of the primary is negligible. For 
+angles of deflection ? which are much smaller than | 
+
+
+5 = (2mI)1!2/mce | (2.11) 
+
+
+we get just this result (2.6), if we connect 3 and the parameter p by the dy- 
+namical relation pd ~e?/mc’e. For larger? i.e., smaller , the transition proba- 
+bility for transitions involving small energy loss decreases rapidly, instead 
+of becoming infinite as it does by (2.6). Thus it is approximately right to 
+break off the integral over p at a point | 
+
+
+Dp ~ (e2/mered) ~ (h/2rmcz) 
+
+
+and this is what, in these preliminary calculations, we have done. 
+
+We must now turn to the strict calculation. We shall here be dealing only 
+with small energy losses, and since our expressions converge very rapidly as 
+the angle of deflection ? increases, we have only to evaluate them for small ?. 
+As before, we shall assume throughout that ¢ is a large number, and neglect 
+higher powers of 1/¢. We need to know the change of momentum of the pri- 
+mary in terms of the energy lost #’ and the angle of deflection }. Thus, with 
+these approximations, 
+
+
+pe — ~,0 = E’/ ¢; p,? = Ed/c; 
+(2.12) 
+
+
+|p — p| 2 = (1/c)(R2 + E492), 
+Further 
+
+
+|p — pO | 2 — (1/c%)(Ei — EM)? = (1/c2)((E/e4) + E454) (2.13) 
+and 
+
+
+pe”, py, p,) (D RQ) | 
+bat Pus? = ier sin 3 ~ me’c sind. (2.14) 
+d(E, 3, $) : | 
+
+
+We start with the formulae (1.45), (1.46): 
+
+
+{oS 
+
+
+Von = J desdesitalrs exp {(27i/h) [( [p® — pO] -r) 
+
+
+— 1/ce(EO — E®)r]} [C1 — (4/2rimc)d/d2)uo(re) |/r. 
+
+
+IMPACTS OF FAST ELECTRONS 785 
+
+
+In all cases the matrix integral may be written as the product of two in- 
+tegrals if we replace throughout 
+
+
+Yi = fetri. 
+
+
+Thus 
+
+
+Vipo” = pio(p) pa(m, 1, p™) (215) 
+where 
+
+
+prx(p?) = [Gain exp {(27i/h) [([p — p ]-r) —(1/e)(E — E™)r]} (2.16) 
+and 
+
+
+pa(m, 1, pM) = feria exe} “(Ip — po}-9} [1 (h/2ximc)d/dz}uo. (2.17) 
+
+
+The former integral may be evaluated at once, and gives just, by (2.14) 
+pi(p) = (Wc2/a)1/((E'2/e2) + E9?). (2.18) 
+The second integral may be considerably simplified, for it may be replaced by 
+
+
+p2 = J deiiuerty with y = 2amce sind /h. (2.19) 
+We may see this in the following way. We may expand 
+
+
+exp {(2ri/h)([p® — p®]-2)} 
+
+
+in powers of d: 
+
+
+211 QT? 
+e(ari/he) bine Raine eta ES. ae 492 > an (2.20) 
+he hc? 
+
+
+In all terms but the first the factor 
+e(2rishe)B’z/1 — (h/2rimc)(d/dz) | (2.21) 
+
+
+gives a correction of the order, by (2.12), E’/mec? which is small of the order 
+(v/c)? for the atomic electron, and negligible. If we neglect (2.21) in the first 
+term the integral vanishes; and we have to show that here, too, this neglect 
+is justified. But now the integral 
+
+
+[deine erie — (h/2rimc)d/d2]uo (2.23) 
+is just the matrix component of a perturbation produced by a field of poten- 
+tial | 
+
+A; =, Ay a 0; A; Sa Se grwtine) Be - et) —_ e(2rt/h) EB’ (ct) | (223) 
+
+These potentials may be derived for the scalar 
+| A = — h/Qie@rilhe) (eet) (2.24) 
+by differentiation A=grad A; ¢= —0A/di. They thus correspond to no field; 
+
+
+786 J. F. CARLSON AND J. R. OPPENHEIMER 
+
+
+and the corresponding matrix element vanishes. (This may be verified by 
+direct calculation as far as the dipole moment of the atom is concerned.) 
+The transition probability is thus given by | 
+
+
+ERED { dy?| pam, ty y) | *1/C? + 0)7] (2.25) 
+
+
+with 7 =27E’/hceand p2(n,1,y) = [drain uy. This expression may, of course, 
+be evaluated when we know the u’s. We shall not need this evaluation to 
+calculate the energy loss of the primary; but we do need it to compute the 
+probability of ionization; and it is instructive to have the explicit expressions. 
+We shall consider the very simplest case of an electron bound in the normal 
+state of a hydrogen-like atom, with an effective nuclear charge zg; we shall 
+calculate o for transitions to the continuum. We need to introduce the length 
+
+
+1/d = h?/4n?mze? (2.26) 
+and the quantum number 
+n = 1/bk = 2ne®z/hv; k = 2nmo/h;v = (2E/m)*'!2 = [(2/m)(E’ — 1) |*/?; (2.27) 
+
+
+which measures the energy of the secondary electron. If we now use parabolic 
+coordinates with the pole along the x axis, and use the well-known wave 
+functions for the hydrogen-like atom in such coordinates, we can evaluate 
+not only ps, but the sum (integral) of |p2|? over all states / of the same energy. 
+We thus find _ 
+
+
+Z10r 2m b> exp |— 2nte—!2kb/(b2 + vy? — p 
+Aaa) aS P| : A = z 
+i 
+
+
+he 1 — e2rn 
+
+
+(2.28) 
+v3 [y? + (0? + #2/3] 
+(e+ a — ee + Otay 
+For very small ancray losses 
+E’'~T (2,29) 
+
+
+the integrand G(y) of the expression for the transition probability de- 
+creases with increasing y, and becomes very large for y--0. For small y 
+G(y)~7?/(y? +7)? whereas for larger y>b; G(y)~y—-”. Thus the transition 
+probability begins to fall off more rapidly with increasing angle of deflection 
+when the angle grows of the order 
+
+
+& = hb/2rmce. (2.30) 
+
+
+This is the result quoted before (2.11) in connection with the semi-classical 
+calculation. In this earlier calculation we neglected higher powers of y higher 
+moments of the atomic electron—and thus replaced e~” by 1 —iyx. And this 
+reduced expression becomes wrong when y~), 3~v. | 
+
+For energy losses large compared to the ionizing potential the value of G 
+for y—0 grows very small, and the integral over y comes entirely from the 
+
+
+IMPACTS OF FAST ELECTRONS 787 
+
+
+region y2-~&?; with neglect of higher powers of I/E’ the integral may then be 
+evaluated, and gives just 
+
+
+od Ei! = 2netdE! mek”. (1. 40a) 
+
+
+This agrees with our result (1.40) for the energy loss to a free electron for 
+E'<Kme*, 
+
+We may use (2.28) to compute the cross section for ionization. For (1.40) 
+gives a negligible contribution for high energy losses, and we do not need here 
+to supplement it with the result (1.40). We so find, carrying out approxi- 
+mately the quadratures over y and # for the cross section for ionization 
+
+
+Cion = 0.29(2met/me?) In (mere? /0.0241). (2.31) 
+The nonrelativistic result is, for this case of a hydrogen like’ atom 
+Tion = 0.29(2re4/my*T) In (mv?/0.0242) (2.32) 
+
+
+where v is the velocity of the primary. The two differ by (1.27e*/mc?)Ine for 
+yv—c. The constant 1.2 is here computed only for the simple atom which we 
+have considered; it depends upon the f-values for the atomic electron, and 
+no universal closed formula can be given for it. We may get a somewhat more 
+general result by comparing our formula with the nonrelativistic one. For 
+(2.25) differs from the corresponding nonrelativistic formula in three points: 
+(1) In the nonrelativistic formula c is to be replaced throughout by v. (2) In 
+the nonrelativistic formula the quantity 7 in the denominator of (2.25) is to 
+be replaced by 7’ =27E’/hv. (3) The upper limits of integration for y and E’ 
+are greater in our formula. This third difference is not essential in computing 
+the probability of ionization, since high energy loss impacts contribute rela- 
+tively little to this probability. Now the nonrelativistic formula may always 
+be written? 
+
+Fion = ky(2re4/mv?) In (mv? / Rel). (2.33) 
+
+
+By (1) this becomes 
+ki(2re*/me*Z) In (mc? /Rol), | (2.34) 
+
+
+and (2) may be taken into account in the following way. For the range 
+O78’, y/b is small, and we may write 
+
+
+J dete m~ = 4Y%Xn1,0, Xnt,o = J tounedr, 
+
+
+Thus the term to be added to the nonrelativistic cross section is 
+| 16r’et 7”? 
+—— | dE S| «1,0|?In—- (2.35) 
+h?¢? 9 1 n? 
+But the nonrelativistic cross section (2.34) itself may with v=c be written 
+167%e4 
+
+
+hc? 
+
+
+mec? 
+
+
+i dE >~| xz1,0| ?-In—— 
+0 i 
+
+
+k?f 
+
+
+788 J. F. CARLSON AND J. R. OPPENHEIMER 
+
+
+ie., ki =(82?mI/h?) - fod E >. |xn10 |?. Thus our result is 
+Cion = ky(2re*/mc?l) In me*e?/ Rel. (2.36) 
+
+
+This shows that the number of ions produced by a fast electron increases 
+as its velocity approaches that of light. The ionizing power passes through a 
+minimum for e~3; the increase is very slow; if we use the value of ke given 
+by (2.31) for a hydrogen-like atom; and if for air we take J to be about fifty — 
+volts, then the number of ions is double the minimum value for electrons of 
+e~10°, or energy of the order of 10° volts. 
+
+To compute the mean energy loss, and thus the range, of the fast electron, 
+we might again use the hydrogen-like atomic model, and supplement (2.28) 
+with the corresponding expression for the probability of excitation. But here, 
+too, it is simpler to compare our expression (2.25) with the corresponding non- 
+relativistic one. It is simpler still to use the sum theorem of Bethe? 
+
+
+2 
+
+
+(82?m/h®y2) >\(E, — Eo) | Jf aie = | (2.37) 
+nl 
+
+
+directly. If we apply this directly, we get for the mean energy loss 
+
+
+27e4 dy? 
+SE! = f 2 (2.38) 
+mo Jo y? + 7? 
+
+
+where 7 = (27/hce)W, and W=s/ is an appropriately chosen mean value of 
+the energy transferred per impact; and where the integration over y is to be 
+taken up to the maximum value permitted by the conservation laws. We have 
+here, however, to consider that the method used in the derivation of(2.25) 
+is not applicable for large energy losses and large values of y, since it leads 
+to (1.40a) in place of the correct (1.40). It is easy to correct for this, because 
+of the fact that when 
+
+
+E> (2.39) 
+
+
+we may use the calculations of §I for free electrons. Since when (2.39) is 
+satisfied the conservation laws are fulfilled, we know that in the range 
+I<E’<mc? we may set 
+
+
+E! = h?y?/8r?m. 3 (2.40) 
+Thus if we integrate (2.38) up toa y value corresponding to an energy loss E: 
+l<KE<Kme?; 7? = 822m E/h? (2.41) 
+
+we get a . 
+6! = (Qret/mc?) In 89?*mE/h?7?. (2.42) 
+
+
+And we may add to this the mean energy loss given by (1.40) for impacts 
+involving an energy transfer E’= E> TJ. This gives for large 
+Ph oe Eo Be EE Diet 
+
+
+mec 
+eee ee ee Inia $—2In2| 
+2B E — E!)?E” “|i os 
+
+(2.43) 
+
+
+Em 
+6E" = if E'dE’ 
+EB 
+
+
+IMPACTS OF FAST ELECTRONS 789 
+
+
+Thus for the total energy loss 
+OF = 6B + bE” | 
+27e! 
+
+
+mec 
+a 2 In + 3 ine + 0.43] (2.44) 
+
+
+mc? 
+
+
+which is our result for the mean energy loss. 
+The direct calculation with the model of a hydrogen-like atom gives 
+(2.44) with the constant 
+
+
+ke = 1] -|1; W = 1.12. (2.45) 
+
+
+This result gives just half the energy loss we should expect from Bohr’s 
+classical formula;? it gives twice the range. When e¢ is large we get for the 
+range R of the particle in a gas containing N electrons per cc 
+
+
+| R-t= (4re4*N /m?c4e) [In me?/W + (3/2) In E| (2.46) 
+
+
+where now W isa properly taken average energy of the order of the mean ioni- 
+zation potential. As e grows large compared with mc?/W this approaches 
+
+
+R-! => (6e*N) /(m?c*) In €/e. (2.47) 
+Noite: We get an upper limit for the range if we set 
+
+
+dE” =0, 
+
+
+since this means that no large energy losses occur, and since we know that 
+the neglects of our theory (radiative forces) can have no sensible effect upon 
+the small energy losses. With 6£1!=0 we get asymptotically 
+
+
+Ro — Are*N/m?c! In €/e, 
+
+
+which is four times the distance traveled according to the Klein-Nishina 
+formula, by a gamma-ray before its first Compton encounter. This range 
+(2.47) is just one-sixth the distance which (according to the Klein-Nishina 
+formula) a quantum of energy (emc?) travels, on the average, before its 
+first Compton encounter. Thus even for the greatest energies a gamma-ray 
+is, according to theoretical results at present available, more penetrating than 
+an electron of the same energy. It should be remarked that in the application 
+of these formulae nuclear electrons may not, presumably, be neglected; they 
+should be included in counting the total number (JV) of electrons per cc. But 
+unless € is very large, the contribution of these electrons to the stopping power 
+will be smaller than that of the extranuclear electrons, since the binding en- 
+ergy of the former must be of the order of a few million volts. It seems at 
+present impossible to extend our calculations to the case of electrons bound in 
+nuclei, because of our ignorance of the nature of that binding. But insofar 
+as wave mechanics is applicable to such particles, (2.46) should give a reliable 
+estimate of their effect on a fast electron. 
+
+
+790 J. F. CARLSON AND J. R. OPPENHEIMER 
+
+
+Ill. Impacts OF THE MAGNETIC NEUTRON 
+
+
+We want now to study in a little more detail the expression which we have 
+derived for the impact of a magnetic neutron with a free electron. The cross 
+section for such encounters is given in (1.67) and the somewhat complicated 
+quantities occurring in this expression are given in (1.69). We shall consider 
+first and chiefly the case that the neutron has a velocity small compared with 
+that of light; in this case it will be unable to give the electron a very high 
+velocity, and we may greatly simplify (1.67) by neglecting higher powers of 
+v/c for both particles. The complicated summation of the square of the 
+numerators of (1.67) then reduces to 
+
+
+ere er ee) pamle (3.1) 
+and we find from (1.72) 
+N = (1/2M%*) { p’4 + p’2(4r? — 8rAr + 2(Ar)?] + (Ar)#}. (3.2) 
+Further the denomination of (1.67) becomes 
+| p® =~ po | 2 = (Ar)? + ’2, (3.3) 
+
+
+If we introduce for the ratio of the mass m of the secondary to that of the 
+
+
+neutron 
+= m/M (3.4) 
+
+
+and the further abbreviations 
+a = cosd, B = sind, g = [a + (2 — B227]/(44 +2, (3.5) 
+we find | 
+2nre'u? {e484 + g287[4 — 8(1 — gar) + 2(1 — go)*] + (1 — ga)4} 
+~ a (1 = 2ge +g)? 
+The energy transferred is 
+fae (te A = Dees g2):, (3.7) 
+
+
+Several points are at once clear. Since for a—1, g—>1 the cross section be- 
+haves for small angles like | 
+
+
+oda ~ da/(1 — a) ~ d8?/B? (3.8) 
+
+
+whereas in the case of the Coulomb field it behaved like 
+da/ (1a)? ~ dB?/B*. | (359) 
+
+
+The mean energy transferred may be computed without considering the 
+binding of the secondary, since 6E = foE’da converges. Further, the cross 
+section is independent of the velocity or energy of the neutron, and the mean 
+energy loss is directly proportional to the initial energy; finally the cross 
+section is proportional to the square of the magnetic moment of the neutron. 
+
+We shall reduce (3.6) for the case that the neutron has a mass equal to 
+that of the secondary, \=1, or much smaller, X>1 or much larger \<1. 
+
+
+IMPACTS OF FAST ELECTRONS 791 
+ee Here g=a, 
+oda = gags 4 Dato — 484-8 + BH}. (3.10 
+The quadrature over the angle of deflection gives for the energy loss 
+SE = | oBdo = Can (3.11). 
+
+
+where oo = 167r%e?u?/h?c?. This cross section ¢) may be written 
+y 
+oo = we'n?/mct, with n = w/ug; w= eh/tamc-n (3,12) 
+
+
+where 7 is the magnetic moment of the neutron measured in Bohr magnetons. 
+This quantity 2 is presumably quite small, so that oo is very small indeed. The 
+expression for the total number of impacts 
+
+
+ae [ede | Ga 
+
+
+does not converge in the small angles. The preponderance of small energy 
+losses is not nearly so marked here as for the impacts of an electron; and it is 
+easy to show, by repeating the familiar nonrelativistic calculations for the 
+‘impact of a particle with a bound electron, that the total number of impacts 
+in which an energy of the order of a few times the binding energy or less in 
+transferred is finite and independent of the primary energy and corresponds 
+to a cross section of the order of oo. The total cross section thus turns out to be 
+
+
+es [ oda ~ ool} In (E/W) — 7/16} (3.14) 
+
+
+where W is of the order of the ionizing energy. The mean energy transferred 
+per impact is thus 
+
+
+SE/o ~ (E/24) In B/W. (3.15) 
+
+
+Such a magnetic neutron, quite apart from the great infrequency of its im- 
+
+pacts, a factor In?/4mc? smaller cross section than an electron—will never 
+
+produce ion tracks in a cloud chamber, since it tends to lose an appreciable 
+
+fraction of its energy, and suffer an appreciable deflection at every impact. 
+A> 1. For this case we find 
+
+
+Rv On (3.16) 
+SE = (19/96)o.E/r (3.17) 
+and forA<«1: | 
+PHEW. (3.18) 
+SE = 09E/8, (3.19) 
+
+
+792 J. F. CARLSON AND J. R. OPPENHEIMER 
+
+
+In both these cases impacts are relatively rare; in both, the mean energy 
+loss is necessarily smaller than for equal masses; only for a heavy neutron are 
+impacts without large deflection possible. If such a neutron as this had a large 
+magnetic moment, large compared to the Bohr magneton, it could produce 
+recognizable cloud chamber tracks; but values of 2 large enough to give this 
+seem a priorz extremely improbable. 
+
+The formulae we have given apply equally—especially to the impacts of a 
+magnetic neutron with a proton or nucleus. They do not account very well for 
+the phenomena observed in the penetrating radiation from Be bombarded 
+with alpha-particles. In the first place, such a magnetic neutron would have 
+more impacts with highly charged nuclei than with protons, whereas the ob- 
+servations show that this is not so; in the second place the number of impacts 
+would depend so little on the energy of the neutron, so that it would be hard 
+to account for the observed inhomogeneous absorption of the radiation. 
+Finally the distance between impacts would be enormous; with »=107 and 
+A\=1, a neutron of 5.108 volts would travel~100 km before ejecting a visible 
+proton from paraffin. | 
+
+One might suppose that in the general case of velocities not small com- 
+pared to that of light, different and more satisfactory results might be ob- 
+tained. We have investigated this case only for \=1, in which case the con- 
+servation laws give simple algebraic relations between angle of deflection and 
+final momenta and energy. For this case the total cross section increases with 
+e, where again # =eMc? is the initial energy of the neutron, and is of the order. 
+
+
+oe" . (3 . 20) 
+
+
+In this case €>1, the preponderance of small deflections and relatively small 
+energy losses is still less marked than in the case of low velocity magnetic 
+
+
+neutrons. When 
+e >In E/W 
+
+
+the electron tends to lose a large part of its energy in each encounter it makes. 
+Such a neutron could not produce cloud chamber tracks; and since it is cer- 
+tain on energetic grounds that the radiation from beryllium does not consist 
+of such neutrons, we have not thought it desirable to give further details in 
+the evaluation of (1.67). | 
+
+We believe that these computations show that there is no experimental 
+evidence for the existence of a particle like the magnetic neutron. 
+
+

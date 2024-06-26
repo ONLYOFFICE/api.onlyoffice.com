@@ -1,0 +1,928 @@
+THE 
+
+
+PHYSICAL REVIEW 
+
+
+A Journal of Experimental and Theoretical Physics Established by E. L. Nichols in 1893 
+
+
+Vor. 57, No. 2 
+
+
+JANUARY 15, 1940 
+
+
+SECOND SERIES - 
+
+
+The Production of Soft Secondaries by Mesotrons 
+
+
+J. R. OPPENHEIMER AND H. Snyper, University of California, Berkeley, California 
+
+
+AND 
+
+
+R. Serper, University of Illunots, Urbana, Illanots 
+(Received November 3, 1939) 
+
+
+I, Cosmic-ray evidence shows that the soft component, 
+which persists even under great thicknesses of matter, 
+consists, primarily at least, of electrons and y-rays. The 
+- observations of the magnitude and variation with depth 
+of the soft component and showers, and of the size and 
+material dependence of bursts, lead to the following rough 
+phenomenological description: In addition to ordinary 
+ionization losses, the mesotrons have an appreciable chance 
+of transferring a considerable fraction of their energy to 
+the soft component. For transfers above 2 X 10! v this prob- 
+ability is roughly independent of mesotron energy. Under 
+10° v the probability of large transfers is much greater, 
+roughly 20 times as great as at higher energies. II. The 
+production of secondaries of energy <10 v can be ac- 
+counted for by a familiar process: the Lorentz contracted 
+Coulomb field of the mesotron, in sweeping. over an atom, 
+ejects a high energy electron. This mechanism, however, is 
+inadequate to explain the very large energy transfers, 
+>10 v, involved in bursts. The theory which has been 
+developed to describe the mesotron of spin one associates 
+with transitions in which the direction of the mesotron spin 
+changes an intrinsic dipole moment; this dipole field favors 
+
+
+I. INTRODUCTION: OBSERVATIONS 
+
+
+HE persistence of the soft component of 
+
+cosmic radiation under great thicknesses of 
+matter shows that this is secondary radiation 
+produced by the mesotrons of the penetrating 
+component. At sea level the cascade radiation 
+which comprises the soft component still has 
+three sources of roughly equal importance :! 
+
+
+1 We are grateful to Professor E. Amaldi for informing 
+us of unpublished experimental results. For a general dis- 
+
+
+high energy transfers, and, roughly, can account for the 
+observed bursts. However, the dipole field also gives 
+probabilities of high energy bremsstrahlung, >10!° v, much 
+too large to be compatible with the observations. III. The 
+
+
+cross sections for the production of electron secondaries 
+
+
+75 
+
+
+and bremsstrahlung by the intrinsic mesotron dipole field 
+have been estimated under the assumption that the coup- 
+ling of mesotron and electromagnetic field is small; when 
+this is not so the formula cannot be right. Examination of 
+the approximation made indicates that the estimate of the 
+cross section for electron secondaries should be valid up to 
+mesotron energies of ~10" v, and is thus applicable to 
+the bursts. The bremsstrahlung formula, on the other hand, 
+fails at 10" v; it thus cannot be used for bursts, while for 
+energies 109<#<10" it leads to no contradiction with the 
+experimental evidence. The problem of extending the 
+formulae above these critical energies probably goes beyond 
+the framework of present theory. The evidence indicates 
+that it is the largeness of the coupling, and not the oc- 
+currence of lengths smaller than the critical h/wo~2 X 1078 
+cm, that limits the applicability of the quantum me- 
+chanics. 
+
+
+degraded primary cascade radiation of high 
+initial energy; secondaries produced by the 
+mesotrons in matter; and (less certainly) second- 
+aries from the disintegration of mesotrons in the 
+atmosphere. But after a few meters water 
+equivalent below sea level only the second group 
+of secondaries is of importance. 
+
+From this point on, the fraction of soft com- 
+
+
+cussion, see Euler and Heisenberg, Ergeb. d. exakt. 
+Naturwiss. 17, 1 (1938). 
+
+
+76 J. R. OPPENHEIMER, H. 
+ponent increases with depth.? Of the order of 10 
+percent of the ionizing particles are soft at 10 m 
+under sea level; the proportion is about doubled 
+at 30 m. The number of showers and of bursts 
+also tails off less rapidly with filtration than the 
+number of mesotrons. At 75 m below sea level 
+the relative number of showers is about four 
+times that at 10 m. This soft radiation has the 
+typical behavior of cascade radiation of electrons 
+and y-rays, and there is no evidence that heavy 
+
+
+particles or low energy mesotrons play an im-_ 
+
+
+portant part in it. 
+
+These results may be simply interpreted: 
+filtration increases the mean mesotron energy, 
+and for a power law. energy distribution this 
+increase is linear with depth. Thus the increase in 
+the soft component with filtration means that 
+the mean energy transfer from mesotrons to soft 
+component must increase with mesotron energy. 
+
+Some information on the energy transfer cross 
+section in the region of very high energies is 
+given by what. is known of the variation of 
+burst frequency with burst size and with ma- 
+terial. A most striking result here® is that the 
+distribution of bursts in size, above roughly 
+10!° v, follows the same law as the energy 
+distribution of the penetrating mesotrons: the 
+number of bursts greater than S in size is given 
+
+
+Nss~S~, (1) 
+
+
+by whereas the number of mesotrons of energy 
+greater than EF is given by the law, obtained from 
+the absorption curve on the assumption that most 
+of the absorption comes from ionization losses, 
+
+
+Nszr~E-?, yrwl.9., (2) 
+
+
+This parallelism of the burst frequency and 
+absorption curves follows immediately if for high 
+energies the probability of a given fractional 
+transfer of energy from a mesotron to soft 
+radiation is independent of mesotron energy. 
+Such a law of.energy transfer does, in fact, give a 
+mean energy loss just proportional to the meso- 
+tron energy. 
+
+Additional evidence on the form of the cross 
+section is provided by observations on the rela- 
+
+
+y~1.8, 
+
+
+2W. M. Nielsen and K. Z. Morgan, Phys. Rev. 54, 245 
+a6ee. P. Auger and T. Grivet, Rev. Mod. Phys. 11, 232 
+1939), 
+3 A, Sittkus, Zeits. f. Physik 112, 626 (1939); M. Schein 
+and P. S. Gill, Phys. Rev. 55, 1111 (1939). 
+
+
+SNYDER AND R. SERBER 
+
+tive burst frequencies in different materials. As 
+is discussed in more detail elsewhere,’ a cross 
+section depending only on fractional energy loss 
+gives, for the frequency of bursts in substances 
+of different atomic number, a Z dependence 
+
+
+(g(Z)/Z)1(Z)*-”, (3) 
+
+
+where g(Z) gives the atomic number dependence 
+per atom of the large energy transfers, and I(Z) 
+is the critical energy of the cascade theory, which 
+increases with decreasing Z. It seems probable 
+that, by taking into account the effect of scat- 
+tering on the low energy cascade radiation, this 
+result, if g(Z)=Z, can be reconciled with the 
+observed approximate equality of burst fre- 
+quencies in different materials. 
+
+These considerations suggest that, in addition 
+to the ordinary ionization losses, mesotrons can 
+transfer to the soft component an appreciable 
+fraction of their total energy, and that the 
+probability of this is roughly independent of the 
+mesotron energy. It is, however, not possible to 
+fix the constant determining this probability to 
+give agreement both with the increase in soft 
+radiation on filtration and with the absolute 
+value for the probability that a high energy 
+mesotron make a burst. To see this, let us write 
+for the cross section per atom for a mesotron of 
+energy # and mass pz to transfer an energy fE to 
+the soft component 
+
+
+do = aox(f df, (4) 
+
+
+Then the probability that in a centimeter of 
+material a mesotron of energy greater than & 
+makes a burst of energy greater than E is just 
+
+
+0o= wZe'/ pct. 
+
+
+p= oN f K(f) frdf, (5) 
+
+
+where JN is the number of atoms per cc of the 
+material. According to Schein and Gill®> the 
+probability that a mesotron will make a burst of 
+energy greater than 2 X10!° v is about £=2X10-° 
+per cm. | 
+
+An independent check on this figure we may 
+obtain by the following argument: the maximum 
+of the transition curve for bursts in Pb, at ~5 
+cm, is about twice the value at greater thick- 
+
+
+‘J. R. Oppenheimer, Rev. Mod. Phys. 11,7264 (1939). 
+5’ Schein and Gill, reference 3. 
+
+
+SOFT 
+
+
+nesses. Thus the bursts produced by cascade 
+radiation give a contribution equal to that from 
+the mesotrons: decay ‘electrons will not give an 
+appreciable contribution. The total number of 
+cascade electrons is about 1/20 the number of 
+mesotrons. Of these the theory of showers shows 
+that (4*107/e)!\® have an energy greater than e. 
+On the other hand, if e> 10", roughly (2 *10°/)!° 
+mesotrons have an energy greater than e. The 
+bursts they make have a “range” of about 5 cm 
+in Pb. Thus we must have, for the probability é 
+that a mesotron of energy >e make a burst ina 
+cm of Pb, 
+
+
+5£(2%10%/e)#9= (1/20)(4 10/6)", 
+= (1/100) (1/50)"$~0.5 X10-%. 
+
+
+The value €~ 10-5, gives 
+
+
+c= f «Nfafrs. (6) 
+
+
+Now this value is not great enough to account for 
+the increase in relative soft radiation with 
+filtration. To see this we have to compare the 
+total energy lost to the soft component per cm by 
+(4) with the mean ionization energy loss of the 
+secondaries, which gives then directly the number 
+of soft particles per mesotron. This ratio is 
+
+
+R=mB [ «(f)fdf/4ute? In (1(Z)/ZRh). (1) 
+
+
+Here m is the electron mass and EF the mean 
+mesotron energy. This gives, for the increase in 
+ratio of soft to hard component on filtration by 
+30 m water equivalent, if we use (6) to estimate 
+x, only 0.5 percent, whereas the experimental 
+value is more nearly 10 percent. 
+
+Since the mesotron energies and energy trans- 
+fers involved in the increase of the soft compo- 
+nent are primarily less than 10! v, and the bursts 
+involve energies greater than 2X10!° v, we are 
+led to the following rough phenomenological 
+description: In addition to ordinary ionization 
+losses, the mesotrons have an appreciable chance 
+of transferring a considerable fraction of their 
+
+
+‘We have supposed {” “K(f df~ nA "«(f)fdf; for a distri- 
+
+
+bution «(f) which greatly favored the emission of slow 
+electrons this would no longer be right. For example 
+«(f)~1/f? would increase the fraction of soft component 
+of energy >Emin by a factor In (H/Emin). 
+
+
+SECONDARIES FROM MESOTRONS 77 
+
+
+energy to the soft component. For transfers 
+above 2X10!° v this probability is roughly 
+independent of mesotron energy and is given by. 
+(4) and (6). Under 10" v the probability of large 
+transfers is much greater, and in this range it is 
+roughly 20 times as great as at higher energies. 
+
+
+II. ELECTRON SECONDARIES AND 
+BREMSSTRAHLUNG 
+
+
+The elementary processes by which mesotrons 
+transfer energy to the soft component may con- 
+veniently be classified as nuclear or electromag- — 
+netic, according to whether the coupling of 
+mesotrons with the heavy particles or with the 
+electromagnetic field plays the primary part in 
+them. Because of the large nuclear coupling and: 
+high mesotron mass it has usually been assumed 
+that the nuclear processes would alone be im- 
+portant for high energy transfers. In fact, calcu- 
+lations of nuclear effects, such as mesotron 
+absorption and scattering by nuclei, calculations 
+based on the perturbation theoretic treatment of 
+the coupling as small, lead to cross sections so 
+large, for high energies, that they completely 
+contradict the high penetrating power of the 
+mesotrons. It has been emphasized especially by 
+Heisenberg’ that the prediction of these large 
+cross sections rests on the essentially erroneous 
+treatment of the interactions as small; despite 
+several attempts no reliable estimate of them has 
+been given, and this problem probably goes 
+beyond the framework of present theory. Nor is 
+it sure in what way such impacts will give 
+appreciable amounts of soft radiation: the emis- 
+sion of y-rays from nuclei excited by such impacts 
+hardly seems a very plausible mechanism; the 
+radiative capture of a mesotron by a nucleus, 
+inverse to the mesotron photo-effect, seems more 
+probable. 
+
+Under these circumstances we have thought it 
+profitable to re-examine the electromagnetic 
+effects a little more closely. For the problem of 
+energy transfers to the soft component two types 
+of collision are of first importance: elastic impacts 
+with free electrons, and bremsstrahlung: to this 
+latter corresponds, for the inverse problem of the 
+creation of mesotrons by the soft component, pair 
+production. 
+
+
+7W. Heisenberg, Zeits. f. Physik 113, 61 (1939), 
+
+
+78 J. R. OPPENHEIMER, H. 
+
+If mesotrons satisfied the Dirac equation, cross 
+sections for these two processes could be obtained 
+from the familiar calculations for electrons. For 
+the cross section per atom that a mesotron of 
+energy £ gives a fraction f of its energy to an 
+electron, 
+
+
+larZe* df arc" 
+c= eee Sy u/( Lae ) 
+mcf f 2m 
+= 200(u2c?/mE)df/f?. (8) 
+
+
+Similarly, for the cross section per atom that a 
+y-ray of energy fE be emitted 
+
+
+4aZoo 2E(1— 4(1- 
+do =——-— |n —— l(s42 : oar (9) 
+“5 ucrZ sf a 
+
+
+a=e?/he. 
+
+
+In this result atomic screening has been neg- 
+lected, but the Coulomb field has been smoothed 
+out for r<Z3h/uc; and the Born approximation 
+has, of course, been used. 
+
+The cross section (8) gives a logarithmic 
+increase of the soft radiation with filtration; the 
+fraction of the electrons of energy greater than 
+Emin at depth ¢ is 
+
+
+2me? I(Z) 
+
+i ee a) 
+WOE wis ZRh 
+
+In 10(e/10%)? 
+36—41n Z 
+
+
+R=} 
+
+
+for 
+
+
+ow 
+
+
+Emin=10' v, (10) 
+where ¢« is the ionization energy loss of the 
+mesotron in penetrating to the depth ¢. This 
+gives, at sea level, R=13 percent, at 30 m below 
+sea level, with Z=12, R=25 percent, at 80 m 
+R=31 percent, in rough agreement with the 
+observed values, although perhaps somewhat low 
+at 80m. From (9) we obtain R~3 X1075Z(€/109), 
+a much smaller contribution than (10). 
+
+For showers of energies X10° vv <E<10" v, 
+(8) gives, instead of (1), the law Nsg~S-7, 
+Both the size dependence and absolute number 
+of showers predicted by (8) agree well with the 
+experimental results.* 
+
+However, (8) has the wrong energy dependence, 
+(9) the wrong Z dependence, to account for the 
+observations on bursts. But it is interesting to 
+note that both (8) and (9) give for bursts 
+
+
+* See A. C. B. Lovell, Proc. Roy. Soc. 172, 583 (1939), 
+
+
+SNYDER AND R. SERBER 
+>2X10!° v, a probability in rough agreement 
+with observation; thus (9) gives 
+
+
+k~3aZ~2 for Pb, 
+
+
+whereas the experimental value is x~ 4. Also (8) 
+gives, for all Z and bursts >2X10!°, a burst 
+frequency corresponding to n~ 4. 
+
+There is, however, valid ground for doubting 
+the applicability to the burst processes of (8) and 
+(9). For Yukawa’s theory requires an integral 
+mesotron spin, and the spin dependence of 
+nuclear forces shows that this spin must be one. 
+The theory which has been developed to describe 
+these particles? makes the mesotron electro- 
+magnetic current density depend on derivatives 
+of the mesotron field, and associates, with transi- 
+tions in which the direction of the mesotron spin 
+changes, current distributions more singular than 
+those of a Dirac electron. The Fourier com- 
+ponents of current corresponding to a momentum 
+hk > wc behave like k?: for the Dirac electron, and 
+for mesotron transitions not changing the spin, 
+they behave like k->. For a classical point charge 
+they behave like k°, and for a point dipole like k; 
+thus one may roughly ascribe these singular 
+currents to an intrinsic mesotron dipole moment. 
+The Fourier components of current corresponding 
+to this dipole moment are larger by a factor k/yc 
+than those corresponding to the electric charge. 
+
+These singular currents of course interact very 
+strongly with high frequency radiation fields. 
+They radically alter the high energy cross 
+sections, giving much larger values than (8) and 
+(9). At the same time they introduce couplings 
+so large that the question of the perturbation 
+theoretic estimate of the cross section requires 
+re-examination. 
+
+This behavior of the cross sections is well 
+illustrated by the work of Laporte® on the 
+Coulomb scattering of mesotrons. Treating this 
+problem by the Born approximation, one finds 
+for scattering without spin change the Rutherford 
+result 
+
+
+do =4Z0)(uc?/E) csc! $6d(cos 0), E>yuc?. (11) 
+8 Yukawa, Sakata, and Taketani, Proc. Phys.-Math. 
+
+Soc. Japan 20, 319 (1938); Yukawa, Sakata, Kobayasi, 
+
+and Taketani, Proc. Phys.-Math. Soc. Japan 20, 720 
+
+(1938); N. Kemmer, Proc. Roy. Soc. A166, 127 (1938); 
+
+Froéhlich, Heitler, and Kemmer, Proc. Roy. Soc. A166, 
+
+154 (1938); H. J. Bhabha, Proc. Roy. Soc. A166, 501 (1938). 
+9Q. Laporte, Phys. Rev. 54, 905 (1938). 
+
+
+SOFT SECONDARIES FROM MESOTRONS 79 
+
+
+For scattering with spin change 
+
+
+do =%Zoy ctg? 50d (cos 0). (12) 
+
+
+For elastic impacts with electrons one finds,! 
+again using the Born approximation, an analo- 
+gous result: for no spin change we again get (8); 
+for spin change 
+
+
+do=foo(1—f+sf)df/f, 
+. f<1/A+tyc/2mB). 
+
+
+This result is indeed of the form (4), and thus can 
+account roughly for the size and material- 
+dependence of large bursts. It gives 
+
+
+413) 
+
+
+K=0.22. 
+
+
+This is of the order of magnitude observed, and 
+together with (8) can probably account for the 
+greater part of the high energy bursts. 
+
+For the bremsstrahlung, the high probability of 
+large angle scattering given by (12), and the 
+large coupling with high frequency radiation 
+fields, give a cross section increasing rapidly 
+with energy. For an unscreened Coulomb field 
+the cross section takes the asymptotic form 
+o~aZoo(E/uc?)?; most of these are close impacts 
+and correspond to large angles of scattering and 
+radiation. It is therefore essential to take into 
+account the modification of the Coulomb field 
+within the nuclear radius ~ Z*h/ye. If we do this 
+by eliminating all Fourier components of the 
+Coulomb field with k>pc/hZ*, and thus ignoring 
+nuclear collisions, we get for high &, still using 
+the Born approximation, a cross section of the 
+form 
+
+
+o~aZiool/uc?. (14) 
+
+
+It is clear that neither the E nor Z dependence 
+of this cross section is in agreement with the 
+observations on bursts. For H>2X10! v, (14) 
+cannot be right. However, in the range 10° v 
+<E<10! v, (14) is in no contradiction to the 
+experimental evidence: its contribution to the 
+soft component would be only R~1 percent. 
+
+We see, so that (13) can account roughly for 
+soft radiation with E>2X10!° v; that (14) can 
+surely not be right for E>2 X10" v. On what 
+
+10 This result has been independently derived by Corben 
+
+
+and Massey, Proc. Phil. Camb. Soc. in press. We are 
+indebted to Dr. Corben for telling us of his results. 
+
+
+grounds can we regard (14) as invalid; and do 
+these apply, and if so in what range of energies, 
+
+
+to (13)? 
+
+
+III. VALIDITY 
+
+
+Two distinct but related criteria" are involved 
+in the question of the validity of both our results 
+(13) and (14) for secondaries and bremsstrahlung: 
+Formulae for mesotron charge and current 
+density have been used for arbitrary small wave- 
+lengths; one may question, as has often been 
+done, whether they are right for distances | 
+<h/wc. On the other hand, we have throughout 
+treated the coupling of mesotron and electro- 
+magnetic field as small, have used, that is, a 
+Born approximation: under what conditions is 
+this treatment justified? The formulae (13) and 
+(14) will surely have no validity when it is not. 
+
+The former condition is not in Lorentz- 
+invariant form, nor can it be reformulated to 
+apply only to the rest system of the mesotron, 
+since in the impact the mesotron momenta 
+change. A natural extension of the criterion is 
+that only for those impacts in which momentum 
+transfer + and energy transfer e satisfy 
+
+
+(15). 
+
+
+r—e/eb we 
+
+
+can charge and current expressions of mesotron 
+theory be used. This condition is thus clearly 
+equivalent to the rejection of relativistic mesotron 
+theory. It is incisive; there is no evidence that it 
+is right. | 
+
+To apply this condition we note that in the 
+rest system of the center of mass of electron and 
+mesotron the energy of the electron does not 
+change, and the transverse and longitudinal 
+momentum changes are of the same order of 
+magnitude. Since the transverse momentum 
+transfer is invariant, and is of the order (2mE)?, 
+we get from (15) | 
+
+
+E> we?/2m~10!® v. 
+
+
+It is, as we have seen, only above this energy that 
+the terms (13) become of importance compared 
+to (8). 
+
+In the same way we may apply (15) to the 
+bremsstrahlung. If the Coulomb field were not 
+
+
+11 W. Heisenberg, Zeits. f. Physik 110, 251 (1938). 
+
+
+80 J. R. OPPENHEIMER, H. 
+cut off at the nuclear radius, the scattering and 
+radiation would be at large angles in the nuclear 
+rest system, and (15) would give 
+
+
+E> wet. 
+
+
+For the screened field the scattering and radiation 
+is roughly isotropic in a coordinate system S 
+where the mesotron momentum is (2uF)?, so 
+that uw} p2c?; in either case the bremsstrahlung 
+formulae would have no range of validity at all, 
+since they are for the case E>>wc?, and (15) 
+denies that mesotron theory is applicable to such 
+a problem. 
+
+For nuclear problems, where the relative 
+magnitude of the coupling energy compared to 
+the kinetic energy of the mesotrons is measured 
+by gE/uc?, with g a constant of order unity, the 
+smallness of the interaction energy essentially 
+requires (15). For electromagnetic effects the 
+relative magnitude of the coupling is a?H/ne?, 
+a=e?/ic; and the coupling may remain small 
+even when (15) is violated. 
+
+It is clear from (13) and (14) that for high 
+enough energies the coupling terms are not small. 
+If we use for each problem the coordinate 
+systems in which scattering is roughly isotropic, 
+in which therefore for secondaries and brems- 
+strahlung, respectively, the mesotron momentum 
+P is (2mE)? and (2uE)', the validity of the Born 
+approximation at least requires that the cross 
+section be small compared to the summed areas 
+of the partial waves involved. For the second- 
+aries, with nearly spherical scattering, this means 
+that o<(#/P)?, and thus that 
+
+
+E<pe/mZoe2~4X10"/Z v. (16) 
+
+
+For the bremsstrahlung, the half-width, 66, of the 
+angular distribution of the scattered mesotron, 
+for fixed direction of emission of the y-ray, is of 
+the order (60)?~ (uc/Z#)?/pE~ye?/ZiE ; thus par- 
+tial waves up to L?~Z!F/yuc? are involved; we 
+must have o<(hL/P)? and 
+
+
+E<pe/eZ~3X104/Z v. (17) 
+
+
+To see whether these conditions, which are 
+certainly necessary for the smallness of the 
+coupling, are also sufficient, let us look more 
+closely at the coupling energy density and the 
+kinetic energy density. This is simplest in the 
+coordinate systems S, where one may use wave 
+
+
+SNYDER AND R. SERBER 
+
+packets of approximate dimensions 4/P through- 
+out. The kinetic energy density is then of the 
+order (P/h)*Pc whereas the coupling energy, for 
+those transitions involving a change of mesotron 
+spin, is ~(P/h)'ai(P/uc)Pc, and the ratio is of 
+
+
+the order 
+o? P/ yc. (18) 
+
+
+Then we must have 
+
+
+i <we/ma~2 X10" v for the validity of (13), 
+
+
+and 
+E<pe?/a~10" v for the validity of (14). 
+
+
+These conditions are more incisive than (16,17), 
+because the coupling of the mesotron with its 
+radiation field becomes large before the coupling 
+with the weaker fields of electron and nucleus do. 
+Thus in the problem of the bremsstrahlung the 
+maximum value of the electric field of the 
+nucleus (in coordinate system S) acting on the 
+mesotron is Ze(Z*h/uc)—?(Ey/ye)? = Ztelyic/h’, 
+whereas the zero point electric field fluctuations 
+of wave-length #/P, which induce mesotron 
+radiation of this wave-length, are of the order 
+(hc)*P?/h?=(hc)*pE/h, and thus (E/ucaZ*) 
+larger. 
+
+The derivation of the results (13) and (14) can 
+certainly then not be justified for energies 
+greater than 10!° v for the bremsstrahlung, 
+2X10" v for the secondaries. For to extend these 
+results to higher energies would involve not 
+treating the coupling of mesotrons and radiation 
+as small. It is well known that this program 
+leads to divergent results, and that only the 
+roughest correspondence-theoretic analogies offer 
+any guide to their interpretation. It should be 
+emphasized that it would be of no use to treat 
+more strictly, say in the problem of brems-— 
+strahlung, the motion of the mesotron in the 
+Coulomb field; it is not primarily the magnitude 
+of thts coupling which makes the trouble. 
+
+This discussion therefore suggests that the 
+bremsstrahlung formula (14) may well be right up 
+to 10!° v; at much higher energies the observa- 
+tional material on burst frequency shows that it 
+must be wrong. On the other hand (13), for high 
+energy secondaries, can be justified up to 2X10” 
+v, and, as we have seen, can explain at least a 
+good part of the bursts observed. 
+
+
+SOURCE OF ENERGY 
+
+
+It may be mentioned that for the inverse 
+problem of mesotron production, pair production 
+in a ‘‘cut-off’’ Coulomb field again gives a cross 
+
+
+section of the form o=aZ*ooH/uc?, and again a_ 
+
+
+limit ~10! v for its validity. At this highest 
+energy the cross section per atom of oxygen is 
+10-28 cm?, which is about 300 times too small to 
+account for the observed high intensity of 
+
+
+JANUARY 15, 1940 
+
+
+PHYSICAL REVIEW 
+
+
+IN DENSE STARS 81 
+
+
+secondary mesotrons of this energy. A cross 
+section 300 times larger would, as a matter of 
+fact, be inconsistent with the high penetrability 
+of mesotrons. The large observed discrepancy 
+between mesotron production and absorption 
+probabilities has been repeatedly emphasized.” 
+
+
+12 See for example, L. W. Nordheim, Phys. Rev. 56, 502 
+(1939), 
+
+
+VOLUME 57 
+
+
+The Proton-Deuteron Transformation As a Source of Energy in Dense Stars* 
+
+
+W. A. WILDHACK 
+George Washington University, Washington, D. C. 
+
+
+(Received November 4, 1938) 
+
+
+The rates of energy evolution due to the transformation to helium, starting with the reaction 
+H+H=D-+et, in hydrogen at densities of 104 to 108 g/cm, were calculated on the basis of 
+complete degeneracy, and the assumption of a crystal-like spacing of the protons. The results 
+indicate that any considerable amount of hydrogen in white dwarf stars would lead to much 
+higher luminosities than those observed. Thus the low effective molecular weight (1.5) as 
+calculated for some of these stars from the accepted white dwarf model, cannot be due to a 
+high content of hydrogen. It might be explained as due to very large content (~100 percent) 
+of the helium isotope He but it is very difficult to see how such large amounts of this isotope 
+could be present in these stars. It appears that the paradox can be removed only by revision 
+of the observational data concerning the white dwarf radii. 
+
+
+1. INTRODUCTION 
+
+
+HE importance of the reaction H+H=D-+et 
+as a major source of stellar energy has been 
+established by Bethe and Critchfield,! at least for 
+stars lighter than the sun. In view of prevailing 
+theories of stellar composition, which indicate a 
+considerable proportion of hydrogen in most 
+stars, it is desirable to investigate the rate of 
+energy production due to this H—H reaction in 
+dense stars. 
+
+Since the zero-point energy of matter at high 
+stellar densities (p = 10° or 10’ g/cm?) approaches 
+that due to stellar temperatures (10%-10’ °C), it 
+is permissible, for a conservative approximation, 
+to neglect temperatures in computing the rate of 
+combination of protons. The results may then be 
+
+
+interpreted as indicating a minimum value for 
+
+
+the rate of energy production for assumed com- 
+
+
+* The preliminary results of this work were referred to 
+by G. Gamow, Phys. Rev. 55, 723 (1939). 
+1H. Bethe and C. Critchfield, Phys. Rev. 54, 248 (1938). 
+
+
+positions, or as indicating a maximum hydrogen 
+content for a given rate of energy production. 
+
+We will first consider an electron-proton gas, 
+corresponding to a pure hydrogen composition 
+and consider later the modifications necessary to 
+take account of heavier particles. We assume 
+closest cubic packing of the protons. Then, if 27 
+is the distance between nearest protons, the 
+volume per proton is 
+
+
+A(v2)r2 and 2r=(v2M/pu)’, (1) 
+where JM is the mass of the proton (1.66 10-* g) 
+
+
+and py is the density of protons in g/cm?. 
+
+
+2. THE POTENTIAL FUNCTION 
+
+
+In deducing the form of the potential function 
+governing the relative motion of two protons, the 
+influence of neighboring protons will be con- 
+sidered first. The electrical potential at the 
+equilibrium points may be taken as zero. Each 
+proton, in its equilibrium position, is more or 
+
+

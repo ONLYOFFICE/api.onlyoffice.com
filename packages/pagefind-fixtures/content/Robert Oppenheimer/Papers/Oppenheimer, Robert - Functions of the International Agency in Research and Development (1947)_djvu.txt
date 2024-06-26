@@ -1,0 +1,1091 @@
+Bulletin of the Routledge 
+
+
+Taylor & Francis Group 
+Bulletin of the Atomic Scientists 
+
+
+ISSN: 0096-3402 (Print) 1938-3282 (Online) Journal homepage: https://www.tandfonline.com/loi/rbul20 
+
+
+Functions of the International Agency in Research 
+and Development 
+
+
+J. Robert Oppenheimer 
+
+
+To cite this article: J. Robert Oppenheimer (1947) Functions of the International Agency 
+in Research and Development, Bulletin of the Atomic Scientists, 3:7, 173-176, DOI: 
+10.1080/00963402.1947.11459078 
+
+
+To link to this article: https://doi.org/10.1080/00963402.1947.11459078 
+
+
+sea Published online: 15 Sep 2015. 
+XJ 
+(sg Submit your article to this journal @ 
+alal Article views: 1 
+N 
+IQ] View related articles @ 
+
+
+we Citing articles: 5 View citing articles @ 
+
+
+Full Terms & Conditions of access and use can be found at 
+https://www.tandfonline.com/action/journallnformation?journalCode=rbul20 
+
+
+FUNCTIONS OF THE INTERNATIONAL AGENCY 
+
+
+IN RESEARCH AND DEVELOPMENT 
+
+
+J. Robert Oppenheimer 
+
+
+The following report is a slightly condensed version of the testimony 
+given by Dr. Oppenheimer before the Control Committee of the 
+UN Atomic Energy Commission on April 29 concerning interna- 
+tional research and developmental activities. Dr. Oppenheimer 
+was wartime director of the Los Alamos Laboratory and a member 
+of the committee that prepared the Acheson-Lilienthal Report on 
+the international contro! of atomic energy. Dr. Oppenheimer, Pro- 
+fessor of Physics at California Institute of Technology and at the 
+University of California, is about to assume his new duties as head 
+of the Institute for Advanced Studies at Princeton. 
+
+
+I have read the seven working pa- 
+pers and, by and large, have been very 
+much impressed, not only with the 
+very great elements of agreement, 
+but also with the clarity which per- 
+meates them. I think that the prob- 
+lems of research and development are 
+among those where the attack should be 
+most clear and where agreement 
+should be least difficult. 
+
+I think everyone has had the ex- 
+perience, when he first inquired into 
+atomic energy, of being rather dis- 
+appointed that the so-called benign 
+uses, the so-called peaceful uses 
+seemed so extremely vague and so 
+conjectural, and in some cases so 
+remote, compared to the very im- 
+mediate application in the form of 
+atomic weapons. The reason for this 
+is that, to an extent that is hard 
+to overstate, the peaceful uses of 
+atomie energy are a problem of re- 
+search and development. 
+
+Therefore, it need hardly be em- 
+phasized that any attempt to out- 
+line what the consequences of such 
+research will be is most misleading, 
+unless it is coupled with a statement 
+that we do not know what the con- 
+sequences of such research will be. 
+
+I would start then by an account 
+of what to me are the visible areas 
+of development, and I will try to 
+give some feeling as to whether they 
+are things which will pay off—which 
+will lead to benefits—in a month 
+or a year or a century. Having done 
+that, I will speak a little of respon- 
+sibility, of the organic relation which 
+international agencies might appro- 
+priately have to these varied fields. 
+In this, I am going to adopt the 
+fundamental principle of international 
+
+
+cooperative development of atomic 
+energy. This is a _ controversial 
+principle which has been argued about, 
+but it seems to me that there has 
+been sufficient agreement on it to 
+warrant pursuing it in this discus- 
+sion, 
+
+
+SIX FIELDS 
+OF INVESTIGATION 
+
+
+I have listed six fields of investiga- 
+tion—others would make slightly dif- 
+ferent lists. The first is essentially 
+the use of atomic energy as an in- 
+strument of research and develop- 
+ment itself. As you know, this field 
+was opened up before the war. The 
+role of atomic energy, in its pure- 
+ly narrow and technical sense of the 
+chain reaction, in making the use of 
+tracers possible, is a limited but 
+very important one. It is limited, 
+because you can make both stable 
+and radioactive tracers by other meth- 
+ods. What the development of re- 
+actors has done is essentially to give 
+a limitless supply. In some cases 
+this supply is undigestible. A fis- 
+sion product is manufactured normal- 
+ly in quantities far beyond any that 
+seem to have usefulness in academic 
+or industrial research. I have no 
+doubt that uses will be found; but 
+it is hard to handle hundreds of 
+thousands of curies of material, and 
+it is not clear to me that this will 
+be a great thing for the future. It 
+is clear that in the case of tracers 
+which are hard to make, where the 
+yield is small, and of which the most 
+notable and probably the most fa- 
+
+
+mous example is carbon 14, the avail- 
+ability of these tracers has quite 
+revolutionized the scale of activity. 
+
+This is characteristic also of the 
+direct use of radiation which is again 
+not a new thing. Gamma rays and 
+neutrons have been used for alleged- 
+ly therapeutic purposes for a long 
+time, and some thoughts about their 
+industrial use have occurred to peo- 
+ple in the past; but here again the 
+scale has been vastly increased by 
+reactors. These are things which can 
+start paying off in scientific insight, 
+and probably in technical progress, 
+very rapidly. 
+
+As for other uses, in physical re- 
+search, of intense beams of neutrons, 
+I may point out that the very pre- 
+cise measurements of the magnetic 
+moment of the neutron were in fact 
+accomplished using a reactor and that 
+it is doubtful whether a comparably 
+good job could have been done in 
+any other way. 
+
+With regard to power, the other 
+great development to which people 
+who try to promote the benign uses 
+of atomic energy usually refer, the 
+situation is different in all respects. 
+It is not an undertaking which is 
+likely to be successful if left to the 
+random efforts of small laboratories. 
+
+
+PROBLEMS OF 
+OPERATING REACTORS 
+
+
+The time scale for it, though con- 
+troversial, is certainly different from 
+the time scale for the applications of 
+radioactive materials. There are a 
+number of problems which in fact 
+are closely related. There is the 
+problem of operating reactors at tem- 
+peratures sufficiently high, so that 
+significant power can be produced. 
+This is a complicated problem in chem- 
+ical engineering, complicated by what 
+radiation does to materials, compli- 
+cated by questions of heat transfer. 
+This problem was not pursued by us 
+during the war; we do not have a 
+small generator of atomic power 
+turning over a turbo-generator to 
+demonstrate. My own view is that 
+it should not be a matter of many 
+
+
+173 
+
+
+years before delivering atomic ener- 
+gy in the form of electrical energy 
+will be a proven thing. But that is 
+of course a very small part of the 
+problem. In order to consider using 
+power reactors, let us say, for spe- 
+cialized purposes such as propulsion, 
+and a fortiori for general power 
+production, so as to relieve power 
+shortages and to supplement power 
+on the present scale of world con- 
+sumption, you have to worry about 
+the problem of fuel; and the prob- 
+lem of fuel is very largely the prob- 
+lem of making what in the termi- 
+nology of these Committees is called 
+nuclear fuel. This does not happen 
+overnight. This is something where 
+one can erect from the fundamental 
+constants, Planck’s constant, the 
+charge on the electron, and so on, 
+a certain time scale which it will 
+take to produce reasonable quanti- 
+ties of this fuel. 
+
+
+THREE STAGES 
+IN DEVELOPMENT 
+
+
+Therefore, speaking just as a guess, 
+I would give the following estimate 
+of three stages in the development 
+of atomic power, and I assure you 
+that this is not secret information, 
+because there is no secret informa- 
+tion as to estimating what the future 
+holds in store. 
+
+I think that within five years, 
+and possibly considerably less than 
+that, there will be a demonstration 
+of usable electrical energy derived 
+from nuclear reactors. I think in 
+a decade from now, and certainly in 
+less than two decades, it may be 
+possible to apply nuclear energy to 
+certain specific highly critical prob- 
+lems of energy generation. Whether 
+this will be to establish a station 
+near the north pole, or to propel ships 
+or rockets, J don’t know; but it will 
+be a case where cost is not important, 
+where one is willing to divert quite 
+valuable material to a specialized and 
+important objective. I think that it 
+will take between thirty and fifty 
+years before atomic energy can in 
+any substantial way supplement the 
+general power resources of the world. 
+
+There are three other areas of 
+activity that I have written down. 
+One is the question of the origins of 
+nuclear energy. I think there is a 
+rather wide-spread belief that the 
+pursuit of fundamental physics is 
+related to atomic energy. It is in 
+
+
+174 
+
+
+fact so related, but much less direct- 
+ly and much less foreseeably, I 
+think, than is commonly assumed. 
+
+
+EXTENSION OF 
+FRONTIERS OF KNOWLEDGE 
+
+
+I may illustrate the relation, by 
+saying that I think the study of fun- 
+damental particles, nuclear forces, the 
+reasans for nuclear stability, the prop- 
+erties of nuclear reactions, and so 
+on, that these things, insofar as they 
+relate to the future, bear to atomic 
+energy about the same relation that 
+the quantum theory does to organic 
+chemistry. This theory is necessary, 
+in order really to understand organic 
+chemistry in terms of physics, but 
+is not necessary in order to have a 
+mastery of organic chemistry quite 
+adequate for the manufacture of TNT 
+and quite adequate for the study of 
+plastics. 
+
+These studies of fundamental phys- 
+ies, which are extremely popular 
+among my colleagues in this country, 
+and no doubt abroad, are characteris- 
+tically things which are conducted in 
+universities, though sometimes in in- 
+dustrial laboratories, and which could 
+be conducted in scientific institutes. 
+They are, as I think was observed 
+in the working paper of the United 
+Kingdom, ideal training grounds for 
+scientists. They correspond to an ex- 
+tension of the frontiers of human 
+knowledge. They may lead, in some 
+way or other, to practical consequen- 
+ces of immense import for the world; 
+that they have a direct bearing on 
+atomic energy is admittedly possible, 
+but I should not predict that it is 
+likely. I do not, in other words, be- 
+lieve in the cosmic ray bombs of 
+which we have read so much in the 
+newspapers. 
+
+Here again these are activities 
+which are now going on, which will 
+continue, and of which it is reason- 
+able to expect that they will not be 
+exhausted, at least in our lifetime, 
+and where the prediction of any kind 
+of practical fruit is really beyond 
+even my indiscretion. 
+
+There are two other areas. One 
+is the field of atomic explosives. I 
+think that the design of instruments 
+for the delivery of atomic weapons, 
+instruments for the fusing of atomic 
+weapons, of minor improvements in 
+the economy of such weapons, in the 
+way in which they use the material, 
+
+
+and so on, these are things which it 
+is hardly reasonable to have studied, 
+except with war-like intent. I think 
+that the discovery of the possibilities 
+of making atomic explosions, what 
+kind of materials can be used, what 
+principles of assembly can be used, 
+what really goes on in an atomic ex- 
+plosion, these are matters which may 
+need to be studied even in a peaceful 
+world. I believe that very affirmative- 
+ly, because I think that we do not 
+too fully understand what the limita- 
+tions and what the possibilities are, 
+and I do not think it is possible to 
+feel confidence in a system of security 
+which leaves unanswered questions 
+which are capable of answer by the 
+proven methods of physical experi- 
+mentation. 
+
+
+There may be one other argument 
+in favor of such study; it is conceiv- 
+able—you have all heard it discussed 
+—that atomic explosives may come 
+to be useful for nondestructive pur- 
+poses. Of course, physically they will 
+always destroy something but they 
+may be used for purposes which are 
+beneficial, such as certain blasting 
+operations or operations for the con- 
+trol of weather, and so on. I do not 
+believe this is a very hopeful avenue 
+of attack, but I do not think that, in 
+any plans for the future, the door 
+should be firmly bolted against ex- 
+ploring these things, 
+
+
+PROBLEMS OF 
+CONTROL AND SAFETY 
+
+
+This brings me to a class of prob- 
+lems which are directed toward pur- 
+poses of contro] and safety. Let me 
+give three or four examples. An 
+agency which is worried about the 
+destructive uses of atomic energy will 
+be concerned to see to what extent 
+use can be made of denaturants. I 
+can honestly say that I do not know, 
+and, to the best of my knowledge, 
+none of my colleagues in this coun- 
+try know, how useful denaturants will 
+be—within the rather wide limits 
+of the assertion that they will be of 
+some use, and the certainty that they 
+cannot be all-comprehensive as a 
+scheme of control. 
+
+
+I will give a second example. Every- 
+one knows that in the sun the re- 
+actions of light nuclei, notably of 
+hydrogen, give rise to the energy that 
+we live by. Every month or so a 
+man will come around with some 
+scheme for making this energy avail- 
+
+
+able terrestrially. The schemes I 
+have heard are unsound. They will 
+not work. But there is no law of 
+nature that says you cannot make 
+atomic energy on earth out of light 
+nuclei. Therefore, it is necessary to 
+keep open an avenue whereby any 
+sound scheme that is proposed, or 
+any scheme which is not on paper 
+proven unsound, could be explored. 
+
+
+RESPONSIBILITIES OF 
+THE AGENCY 
+
+
+There are other things which tend 
+toward the maintenance of safety. 
+For instance, it has often been sug- 
+gested that clandestine plants of a 
+certain kind could be detected by the 
+radioactivity that they emit. That 
+wants to be explored. One would 
+want to know whether there are sim- 
+ple methods by which the detonation 
+of an atomic bomb in a remote area 
+can reliably be detected. These are 
+things which any agency that was 
+really worried about maintaining 
+security would want to be free to 
+act upon. It would wish to explore 
+any good suggestions that were made. 
+
+
+It has seemed to me that it would 
+be useful—and here I think my views 
+follow very closely the suggestions 
+in the working paper presented by 
+France—to distinguish three rather 
+different kinds of responsibility that 
+an international agency would have. 
+The first of these is what might be 
+called primary responsibility, as in 
+an undertaking without which the 
+agency could not do the other duties 
+with which it was entrusted. The 
+second is facilitative responsibility. 
+The third responsibility is a sec- 
+ondary and benevolent responsibility, 
+because on the whole it was a very 
+good thing to have this work go on, 
+the agency has an interest in it, but 
+does not live and die by it. 
+
+
+I think these distinctions will be- 
+come clearer by example. With the 
+exception of its responsibility for 
+control, the only thing which an agen- 
+cy dedicated to international develop- 
+ment of atomic energy has to do now 
+lies in the field of research and devel- 
+opment. That is an overstatement. 
+It does have to do some other things. 
+It has to mine some uranium, look 
+into the future, and so on; but the 
+peaceful uses of atomic energy are 
+coextensive with research and devel- 
+opment. 
+
+
+If one takes these words with 
+the kind of seriousness that the situa- 
+tion warrants, I would say that the 
+international agency would have a 
+primary responsibility for the devel- 
+opment of reactors, for the methods 
+of producing nuclear fuels. Here my 
+own view would be that, in the long- 
+term, the reactors themselves would 
+be the most effective instruments for 
+doing this, but that separation plants 
+would play a necessary, if not major, 
+part. The agency would have such 
+responsibility for the discovery, ex- 
+ploitation, and recovery of raw mate- 
+rials, for the problems that I men- 
+tioned above, having to do with safe- 
+ty, and with devices that can be 
+used to render more or less likely the 
+diversion of material to destructive 
+ends, and for an understanding of 
+atomic explosives, 
+
+When I say “primary responsibil- 
+ity”, I do not mean by that that the 
+international agency should forbid 
+others to participate in this work. 
+We will talk of that briefly later. 
+But it should see that the work gets 
+done and should by all means direct- 
+ly engage in the work, in laboratories 
+of its own. Such laboratories are 
+going to be large undertakings. They 
+are going to be patterned after the 
+typical wartime laboratory, which was 
+mostly a place where development 
+was carried out. They are going to 
+be not too dissimilar from what in 
+this country is a rather common pat- 
+tern of industrial laboratory. They 
+are not going to be very much like 
+the academic laboratory in which 
+fundamental physics, chemistry, and 
+biology have in the past been pur- 
+sued. 
+
+
+THE FACILITY 
+LABORATORY 
+
+
+Quite different is the style of the 
+facility laboratory, the laboratory 
+which is built and perhaps operated 
+by the agency, but with the purpose 
+of being useful to people outside 
+the agency and with the purpose of 
+making available facilities and tech- 
+niques developed by the agency. A 
+small reactor is in this category. 
+Here I would not wish to insist that 
+it be operated by the agency. That 
+does not seem to me to be terribly 
+important. It must at least be li- 
+censed, and it needs to be brought 
+into existence by the agency. 
+
+
+The agency must be responsible for 
+seeing that such facilities are avail- 
+able where there are people to make 
+use of them. Here a very much 
+greater degree of dispersion is prob- 
+ably desirable. Here the pattern 
+should probably be laboratories of 
+quite moderate size and not very 
+programmatic; that is, anyone who 
+comes in and says “I want to radiate 
+this” should get permission, provided 
+“this” is not something that will blow 
+the place up and provided he is a 
+competent scientist. These laborato- 
+ries should be free laboratories in 
+which the agency’s great role is that 
+it can facilitate the pursuit of scien- 
+tific and technical matters. 
+
+
+VALUE OF UNPREDICTABLE 
+FINDINGS 
+
+
+In the third category, by way of 
+example, I think it might be very 
+desirable for the international agen- 
+ey to have a great synchrotron or 
+synchro-cyclotron. However, this is 
+certainly a field in which it does 
+not have a primary involvement. This 
+is a great field in which men and 
+women work in a rather badly or- 
+ganized manner, as scientists usually 
+do, in institutes and universities; 
+men and women who get up late and 
+do not quite know what they are 
+going to do tomorrow unless they do 
+have a bright idea, in which they 
+will work as they have in the past 
+and from which essentially unpre- 
+dictable findings about the natural 
+world will emerge. 
+
+
+That goes for physics; it goes for 
+chemistry; it goes for biology; and 
+it goes for all those fields which have 
+contact with atomic energy but in 
+which that contact is only a very 
+small part of the field. Atomic ener- 
+gy is a small part of science; it is 
+only a very big problem in the con- 
+temporary world. 
+
+
+As was mentioned in the memoran- 
+dum of the United Kingdom, I share 
+the view that these three kinds of 
+activities probably should not be 
+mixed to too great an extent. What 
+you run into when you mix develop- 
+mental activities, which are pro- 
+grammed, planned and focused, with 
+activities which are of an inquiring 
+and scientific nature, is the rivalry 
+of two incompatible snobisms. 
+
+
+The scientist is irritated by the 
+practical preoccupations of the man 
+conderned with development, and the 
+
+
+175 
+
+
+man concerned with development 
+thinks that the scientist is lazy and 
+of no account and is not doing a real 
+job anyway. Therefore, the labora- 
+tory very soon gets to be all one 
+thing or all the other. I remember 
+that Dr. Fermi came to Los Alamos 
+some time after the foundation of the 
+laboratory. He was somewhat horri- 
+fied when he came to me and said, 
+“The people here are actually in- 
+terested in developing atomic weap- 
+ons.” That indicated the triumph 
+of the engineer’s view over that of the 
+scientist. 
+
+
+THREE FIELDS 
+FOR MONOPOLY 
+
+
+Of all these things, there are, to 
+my way of thinking, only three where 
+I would feel that a provision for mo- 
+nopoly by the international agency, 
+as opposed to the privilege to pur- 
+sue and instruction to pursue, might 
+appropriately be written into the pa- 
+per setting up the agency. Two are 
+in the fields of atomic explosives and 
+in those parts of reactor develop- 
+ment which use a large amount of 
+explosive or potentially explosive ma- 
+terial. My belief is that the reactor 
+cevelopment of the future will in- 
+volve large amounts of nuclear fuel, 
+amounts so large that their diversion 
+would in itself constitute a military 
+menace, perhaps not a major menace 
+but a disagreeable menace. 
+
+
+These two things and a third, which 
+I would add as a possibility but not 
+a mandate, would be the only fields 
+of monopoly. As every one knows, 
+the third is that fission products can 
+be used as poisons. I do not know 
+whether this is a very effective form 
+of warfare. However, the explora- 
+tion of the potentialities here might 
+well be left an international mo- 
+nopoly. Certainly, it is something 
+which should not be facilitated by the 
+international agency as a national 
+activity. One would not want the in- 
+ternational agency to say, “Here are 
+a million curies of radio-barium. 
+See how many people you can poison 
+with it.” 
+
+I think that the prominence that 
+has been given to the matter of atom- 
+ic explosives, in what has been writ- 
+ten about it, gives quite a wrong view 
+of its importance. I think one or two 
+laboratories poking around on the 
+question of the fundamentals of atom- 
+ic explosives, trying out notions of 
+how you might use a certain dena- 
+
+
+176 
+
+
+tured material and prove that it would 
+explode, would probably be all that 
+would be involved. 
+
+
+There may be a period of a decade 
+where an international agency might 
+say of this field, “There is not any- 
+thing to do; nobody has any ideas 
+and we are not interested in im- 
+proving the efficiency of atomic ex- 
+plosions by five per cent.” However, 
+I think that provisions should be made 
+to make such studies possible; and 
+provisions should surely be made to 
+forbid them to national agencies, be- 
+cause they are certainly useful in the 
+hands of national agencies only in 
+the measure in which they may be 
+used in warfare. 
+
+I would add to that—and here I 
+am differing from the United States’ 
+working paper, but I believe in a 
+legitimate way—it does not seem to 
+me very profitable to forbid thinking 
+about atomie explosives. This is 
+something the prohibition of which 
+may be rather hard to enforce. I be- 
+lieve, therefore, that the prohibition 
+should be limited to those activities 
+which require the possession of sig- 
+nificant quantities of nuclear fuel for 
+being carried out, because, if the in- 
+ternational agency is good, if it is 
+any good, it will know where the nu- 
+clear fuel is and it will know what 
+is happening to it. Controls which 
+are determined by this physical in- 
+strument—namely, where the mate- 
+rial is—are certainly enforceable, if 
+anything is. 
+
+I do not think that general staffs 
+can be prevented from brooding about 
+targets to bombard, carriers to carry 
+the bombs, fuses, or anything like 
+that; and I would hesitate to do more 
+than to implore them not to engage 
+in this activity. I would hesitate to 
+prohibit them from engaging in this 
+activity. 
+
+
+SCALE OF RESEARCH 
+AND DEVELOPMENT 
+
+
+I should now like to comment as to 
+the scale of this whole activity of 
+atomic research and development. I 
+think the work of the development 
+authority might, when it was flourish- 
+irg, take some ten per cent of the 
+physicists and chemists, perhaps five 
+per cent of the chemical engineers, 
+and perhaps five per cent of the min- 
+ing engineers there are in the world. 
+
+There ought to be several pro- 
+g-ammatic laboratories, several mean- 
+ing not one or two and not one 
+
+
+hundred but something of the order 
+of a half-dozen perhaps, which would 
+give a reasonable dispersion and yet 
+make possible rather large laborato- 
+ries in which coordinated effort would 
+be carried on... Futhermore, it is 
+important to emphasize that there 
+should be openness, not only among 
+these laboratories but also between 
+these laboratories and all other lab- 
+oratories of the agency, and all pri- 
+vate, university, academic, national, 
+and institutional laboratories. There 
+should be complete and absolute open- 
+ness. 
+
+
+SECRET KNOWLEDGE 
+IS DANGEROUS 
+
+
+I also extend this to the problem of 
+atomic explosives. Knowledge about 
+atomic explosives is, in @ situation 
+such as we are here contemplating, 
+more dangerous if not disseminated 
+than it is if disseminated. The pos- 
+sibilities of keeping secrets in this 
+field are in any case so remote, if one 
+has an international undertaking, 
+that one should plan for a systematic 
+program of dissemination and educa- 
+tion. 
+
+I have a word to say about this; 
+namely, that it is not enough to de- 
+clare something is open. It requires 
+instruction; it requires work to get 
+an understanding of these things 
+abroad. I know this from experience. 
+I know it is not enough to tell some- 
+one a secret; it is very hard to give 
+away a secret. You have to work at- 
+it week after week after week be- 
+cause these things are complex. Only 
+the creation of a really widespread 
+and informed understanding of the 
+techniques of atomic energy will get 
+work on these problems advanced 
+rapidly and with full effectiveness, 
+
+
+Let me explain that. The normal 
+way in which progress is made in 
+any of these developmental activi- 
+ties is that people become excited by 
+the problem, They read about it some 
+place; they talk about it; they have 
+en idea and they come and say they 
+would like to work on it. In order 
+to further that goal, people who are 
+not working on the problem, on the 
+specific problem, must have a way of 
+finding out about it. That is, they 
+must have access to information be- 
+fore there is any foreseeable chance 
+that they will make good use of the 
+information. 
+
+
+(Continued on Page 197) 
+
+
+Functions of the 
+International Agency 
+
+
+(Continued from Page 176) 
+
+
+It is my feeling that the agency, 
+if it is set up, must devote itself 
+to the cultivation of this understand- 
+ing, so that the whole pool of scien- 
+tists and engineers in the world will 
+be available. Only a small fraction 
+of them would actually participate in 
+the work. Nevertheless, those who 
+participate in the work should be the 
+ones who are interested in it and have 
+learned about it before they could 
+prove that their learning about it 
+would pay off. 
+
+
+I belabor this point because it is, 
+to my way of thinking, the decisive 
+reason why the development of the 
+peaceful uses of atomic energy will 
+prosper more under a system of in- 
+ternational cooperation, and corres- 
+ponding openness, than it possibly 
+can under purely national systems. 
+
+
+Under purely national systems, vast 
+areas will remain secret. It is true 
+that various nations may all be keep- 
+ing the same secrets from each other, 
+but they will keep them. As a result 
+of that, the spontaneous growth and 
+development—which is the thing that 
+has always in the past enriched our 
+lives through scientific discovery— 
+will be enormously slowed down. It 
+will not be stopped. I do not know 
+that my time scales for atomic pow- 
+er are too far off even under national 
+development, but they are certainly 
+too short for national development 
+and deliberately conservatively long 
+for international development. 
+
+
+There are other reasons. The dis- 
+traction of atomic armament is a 
+real distraction. But these are sec- 
+ondary reasons compared to the enor- 
+mous advantage of allowing the imagi- 
+nation and spontaneous interest of 
+men to carry out this development, as 
+it would under such conditions of in- 
+ternational cooperation and openness. 
+
+
+I would make only two further com- 
+ments: there is in the proposal for 
+international cooperative development, 
+insofar as it is a job of research and 
+development, very little that is con- 
+trary to past patterns of scientists 
+and technical people all over the 
+world. It is a pattern recognized by 
+all of us. Just for that reason, this 
+part of the job of international con- 
+trol is an easy part; in this part, one 
+can be quite confident of success. 
+
+
+| 
+
+
+A Letter to the Editors | 
+
+
+IMPORTANT OMISSION IN AC- 
+COUNT OF WORLD GOVERNMENT 
+
+
+I have just read in your June 
+issue the article, “The World Gov- 
+ernment Movement in the United 
+States,” by Mr. Harrison Brown. In 
+the article Mr. Brown discusses the 
+movement at some length and ends 
+by listing and describing world gov- 
+ernment organizations. In both he 
+fails to mention Federal Union. 
+
+
+His only reference to the Federal 
+Union movement is to say that “ad- 
+vocates of Russian exclusion from 
+such a government, including former 
+Associate Justice Owen J. Roberts 
+and Clarence Streit (formerly leader 
+of the Union Now movement), di- 
+vorced themselves from the groups 
+listed above at an early date.” 
+
+
+The fact is that Federal Union, Inc., 
+was founded in 1939 to unite free 
+people by world government and has 
+never changed that policy. It is not 
+based on a negative policy of ex- 
+cluding Kussia, but on a_ positive 
+policy of uniting free nations until 
+the attraction of this free union brings 
+all nations of the world into a dem- 
+ocratic federal world government. 
+Mr. Streit is still leader of the Union 
+Now movement which is Federal 
+Union. Advocates of this movement 
+did not divorce themselves from the 
+groups which Mr. Brown lists; the 
+reverse is true, two of the three 
+crganizations Brown mentions being 
+
+
+The last comment is this: 
+
+Although the primary purpose of 
+the United States proposals is to pro- 
+vide security, rather than to provide 
+freedom of research, this freedom is 
+nevertheless a criterion by which 
+their fundamental soundness may be 
+judged; for no proposals predicated on 
+forbidding enquiry and learning could, 
+in the end, survive. 
+
+
+first formed as splinter groups break- 
+ing away from Federal Union. 
+
+Mr. Brown and some of his col- 
+leagues seek to minimize Federal 
+Union by ignoring it. Yet this or- 
+ganization has done more by sus- 
+tained effort to stimulate the desire 
+for world government than any of 
+the four organizations Mr. Brown 
+lists at the end... 
+
+It is significant that in the same 
+issue of your publication in which 
+Mr. Brown discussed the “world gov- 
+ernment movement” while convenient- 
+ly ignoring Federal Union, Dr. Har- 
+old C. Urey in the lead article calls 
+for a federal union of democratic 
+nations as the first step toward dem- 
+ocratic world government. This is 
+exactly the Federal Union prog- 
+gram... 
+
+—Don Dennis 
+Executive Director, 
+Federal Union Ine. 
+
+
+I would like to apologize to Fed- 
+eral Union for overlooking their or- 
+ganization in my article surveying 
+world government groups. Contrary 
+to the belief expressed by Mr. Den- 
+nis, the omission was not premedi- 
+tated, nor was it my intention to 
+“minimize Federal Union by ignor- 
+ing it’, The fact of the matter is 
+that I have long admired the unselfish 
+vigor with which Mr. Streit has car- 
+ried on his program of education con- 
+cerning the need for federation. 
+
+When the editors of the BULLETIN 
+requested that I write an article de- 
+scribing ‘which organization is 
+which” in world government circles, 
+I accepted reluctantly, realizing that 
+the history of the various organiza- 
+tions is so complicated, I might easily 
+offend some groups and find myself in 
+a delicate position, Apparently, I was 
+right. 
+
+Perhaps the omission occurred be- 
+cause I have always subconsciously 
+thought Federal Union leaders to be 
+vigorous in their belief that a gov- 
+ernment should be formed either 
+directly or indirectly excluding Rus- 
+sia until she is democratized. A gov- 
+ernment that does not include Russia 
+is not a “world” government. Like- 
+wise, I did not believe, until Mr. Den- 
+nis indicated my error, that a group 
+fighting for such a partial govern- 
+ment considered itself to be a world 
+government organization. I apolo- 
+gize. 
+
+—Harrison Brown 
+
+
+197 
+
+

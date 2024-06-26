@@ -1,0 +1,587 @@
+Tur JOHNS HOPKINS 
+
+
+UNIVERSITY FRESS 
+
+
+A Study of Thinking 
+
+A Study of Thinking by Jerome S. Bruner; Jacqueline J. Goodnow; George A. Austin; Roger 
+W. Brown 
+
+Review by: Robert Oppenheimer 
+
+The Sewanee Review, Vol. 66, No. 3, The University of the South 1858-1958: The Centennial 
+Symposia (Summer, 1958), pp. 481-490 
+
+Published by: The Johns Hopkins University Press 
+
+Stable URL: http://www.jstor.org/stable/27538750 
+
+
+Accessed: 10/06/2014 21:29 
+
+
+Your use of the JSTOR archive indicates your acceptance of the Terms & Conditions of Use, available at 
+http://www.jstor.org/page/info/about/policies/terms.jsp 
+
+
+JSTOR is a not-for-profit service that helps scholars, researchers, and students discover, use, and build upon a wide range of 
+content in a trusted digital archive. We use information technology and tools to increase productivity and facilitate new forms 
+of scholarship. For more information about JSTOR, please contact support @jstor.org. 
+
+
+The Johns Hopkins University Press 1s collaborating with JSTOR to digitize, preserve and extend access to The 
+Sewanee Review. 
+
+
+http://www.jstor.org 
+
+
+This content downloaded from 62.122.73.213 on Tue, 10 Jun 2014 21:29:20 PM 
+All use subject to JSTOR Terms and Conditions 
+
+
+ARTS AND LETTERS 48] 
+
+
+A STUDY OF THINKING* 
+
+
+By ROBERT OPPENHEIMER 
+
+
+In the spring of 1949, the Massachusetts Institute of Technology 
+held a convocation devoted to the celebration of recent successes in the 
+sciences, and to reflections on their portent. Mr. Churchill, then Prime 
+Minister of the United Kingdom, commented in the course of his ad- 
+dress, “The Dean of the Humanities spoke with awe, ‘of an approach- 
+ing scientific ability to control men’s thoughts with precision.’ I shall 
+be very content to be dead when that happens.” This book which is 
+before us need lend no haste to Churchill’s thoughts of death, nor to 
+those of the many others who, without words or with words of less 
+austere finality, share his anxieties. 
+
+
+_ Even the lay reader will recognize in this book some fresh and solid 
+steps toward an understanding of characteristic traits of man’s rational 
+behavior. He will also see that the psychological sciences have a very 
+long way indeed to go. For 4 Study of Thinking has in many ways 
+the flavor of the opening of a new science. This is not because its au- 
+thors so regard themselves. They are learned in the literature of their 
+science; they make discriminating and frequent use of the findings of 
+those who have worked in the study of perception, of concept forma- 
+tion, of linguistics and of learning. They are happy to recognize that 
+the logical ideas to which they are led are as well explicated by Aris- 
+totle as ever since; it is clear that the models of von Neumann and 
+the theory of games have contributed both to their explicit terminology, 
+and to their ways of thinking and of formulating problems. 
+
+But the book has a unity of view and a fervor of conviction which 
+makes it point to the future. If it raises more questions than it answers, 
+the questions are new and newly sharp because there are some answers 
+in the book. Although there is little in the findings here reported that 
+shocks or transcends common sense, these findings are cast with the 
+precision and objectivity which is indeed the mark of a science finding 
+its bearings. 
+
+We are concerned throughout with the discovery and creation of 
+order in man’s cognitive life. We are dealing with a work which both 
+
+
+*4 Study of Thinking. By Jerome S. Bruner, Jacqueline J. Goodnow, the late 
+George A. Austin; with an Appendix on Language by Roger W. Brown. Publication 
+of the Harvard Cognition Project. New York: John Wiley and Sons, Inc. London: 
+Chapman and Hall, Limited. 
+
+
+This content downloaded from 62.122.73.213 on Tue, 10 Jun 2014 21:29:20 PM 
+All use subject to JSTOR Terms and Conditions 
+
+
+482 ARTS AND LETTERS 
+
+
+studies a part of this great theme and, in itself, exemplifies it. The 
+theme is vast. Man has a great capacity for discrimination. His po- 
+tential sense of otherness is almost unlimited. Rational life begins 
+with the selective practice of ignoring differences, failing in truth to per- 
+ceive them; rational life begins with the failure to use discriminatory 
+power in anything like its full potentiality. It lies in the selection, ar- 
+rangement, and appropriate adequation to the objects of perception 
+and thought, of limited traits, of a small residue of potential wealth. © 
+
+Dr. Brown in his Appendix assaults the analogous problems of lan- 
+guage, language made possible only because so many differences of 
+sound and tone, aspiration, and articulation are ignored in the forging 
+of a common tongue. Lest this creation of order from chaos be seen 
+wholly as attrition, one anticipatory finding: the powers of discrimina- 
+tion which are subordinated in learning and in language, are not lost; 
+they are in a sense set to one side, or on the back burner. They do not 
+come easily and immediately into use; but once there is evidence that 
+they are relevant to the subject of learning or thought, they can be 
+brought back. Thus we can learn languages whose phonetic and sonic 
+distinctions differ in profound ways from those of our own; thus it is 
+that we can not only see the world as ordered, but can learn when we 
+have missed the point, and can attain new levels of insight, complexity, 
+richness and structure. 
+
+A physicist, reflecting on these matters, is likely to be reminded of 
+his experiences with the quantum theory. In perception, in learning 
+concepts, only a small part of our potential perceptivity is engaged. 
+The small part, if we are to be successful, must have a proper adequa- 
+tion to our theme. The rest cannot be involved in the operation if 
+there is to be clarity or order at all. Some of the rest will be involved 
+in other problems and other contexts. These limited constellations of 
+our human powers are used in a complementary way, none of them ex- 
+hausting what we could do, but each in a measure excluding the con- 
+current use of all the others. In physics we have learned that in ex- 
+periments on an atomic scale, one experimental arrangement and the 
+words and ideas appropriate for describing the findings of that experi- 
+ment, are complementary to others which might indeed have been used, 
+which will again be used, but which cannot be used concurrently. 
+
+What then is this book all about? Certainly not about the whole of 
+perception and of thinking; certainly not even about the whole of.the 
+
+
+This content downloaded from 62.122.73.213 on Tue, 10 Jun 2014 21:29:20 PM 
+All use subject to JSTOR Terms and Conditions 
+
+
+ARTS AND LETTERS 433 
+
+
+processes of abstraction and categorization. But the authors tell us 
+in their preface, 
+
+
+This book is an effort to deal with one of the simplest and most 
+ubiquitous phenomena of cognition: categorizing or conceptualiz- 
+ing. On closer inspection, it is not so simple. The spirit of the 
+inquiry is descriptive. We have not sought “explanation” in terms 
+of learning theory, information theory, or personality theory. We 
+have sought to describe and in a small measure to explain what 
+happens when an intelligent human being seeks to sort the en- 
+vironment into significant classes of events so that he may end by 
+treating discriminably different things as equivalents. In dealing 
+with the problem, we have found ourselves travelling far afield. 
+
+
+More specifically, the book is an extended analysis, and a report of 
+experiments, some done earlier by these and other scientists, but the 
+majority done for testing the analysis and answering the questions 
+which it raises. It deals with situations neecessarily almost ludicrously 
+abstract and unlifelike, with how people learn to categorize, with how 
+they learn to recognize instances that they see or hear as belonging 
+or not belonging to a class, as illustrating or not illustrating a concept. 
+It asks by what procedures people learn to do these things. Are they 
+procedures which show a certain consistency of logical method? Do the 
+various steps in learning form a coherent pattern, or is each step a 
+more or less random probe? Can one perceive the logical structure un- 
+derlying the effort of learning? Can one describe it as a strategy of 
+learning? And to the extent to which the answers of these questions 
+are affirmative, can one understand the choice of strategy in terms of 
+its difficulty, its economy, its certitude, its abstractness, the burden it 
+puts on memory and inference? How is the choice of strategy affected 
+by the circumstances of the learning process, the pressure of time, the 
+availability of confirmation, the penalties attaching to error, the purity 
+or allusiveness of the material being ordered? 
+
+
+In short, this is an inquiry, limited to the most antiseptic, controll- 
+able and gamelike situations, into one great part of human reason: 
+the learning of categories and concepts on the basis of an experience 
+either wholly, or in some cases only partially, logically adequate to 
+teach them. But neither the authors nor the reader will mistake the 
+vast scope of the domain to which this research is relevant. “The re- 
+search we have reported has mainly been drawn from the field of 
+‘concept formation’ so-called, but’ we would propose that our conclu- 
+
+
+This content downloaded from 62.122.73.213 on Tue, 10 Jun 2014 21:29:20 PM 
+All use subject to JSTOR Terms and Conditions 
+
+
+484 ARTS AND LETTERS 
+
+
+sions are applicable to any phenomenon where an organism is faced 
+with the task of identifying and placing events into classes on the basis 
+of using certain criterial cues and ignoring others.” Or again, very 
+near the end, 
+
+
+We have chosen to call this volume 4 Study of Thinking. A word 
+in explanation of this title brings the enterprise to a close. Concept 
+attainment is, to be sure, an aspect of what is conventionally called 
+thinking, and in this sense the title justifies itself. But we have 
+also urged a broader view: that virtually all cognitive activity in- 
+volves and is dependent on the process of categorizing. More cri- 
+tical still, the act of categorizing derives from man’s capacity to 
+infer from ‘sign to significate, and in so far as we have shed any 
+light on categorizing as such it is our hope that we have also made 
+clearer the nature of inference as a psychological phenomenon. 
+
+
+It is in passages like these that the authors point with firm hope to 
+the future. With even greater frequency, they acknowledge their debt 
+to their colleagues, present and past, and even to the “Zeitgeist,” that 
+has made it natural for psychologists to turn their attention to man 
+as a rational being, and not only to the problems of his appetites, his 
+folly, and his will. 
+
+
+How have the authors set about their enterprise? The main part of 
+the book is divided into two principal sections: the first is primarily 
+an analysis of categorizing activity, and its relations to general infer- 
+ence; and the discussion of the factors involved in learning how to sort 
+the environment into functionally significant categories and equivalence 
+classes. Here we find discussed the form in which decisions on how 
+to learn occur in practice, how sequences of such decisions come to de- 
+fine a learning strategy, what general considerations may favor one or 
+another course of learning, and how one may alter the weight of these 
+considerations by changing the “problem.” It is right that these des- 
+criptive and analytic chapters come first, before the discussion of the 
+experimental material; the experiments could hardly be intelligible 
+without this. Yet the authors themselves state that the clarity which 
+illuminates these earlier chapters, and gives order and sense to the 
+sequence of experiments, and meaning to the questions that they an- 
+swer, emerged after long periods of observation and did not underlie 
+the initial designs. “. .. the ideal strategies that have served us so 
+steadily in this chapter are essentially refined versions of what we 
+have observed our subjects doing. They were not invented by us in 
+
+
+This content downloaded from 62.122.73.213 on Tue, 10 Jun 2014 21:29:20 PM 
+All use subject to JSTOR Terms and Conditions 
+
+
+ARTS AND LETTERS 485 
+
+
+an a priori manner. Our description of ideal strategies is a descrip- 
+tion of what, it seemed to us, our subjects were trying to ‘bring off.’ ” 
+Perhaps this also has to do with the hopeful quality of the book. If 
+in these simple experiments, stylized as we have said and piteously 
+artificial, enough could emerge to warrant an ordered review of so much 
+of logic and of common sense, the experiments themselves take on an 
+interest far greater than any single one of them reported in this, their 
+summation. 
+
+
+Throughout the whole of the analytic discussion, and throughout 
+most of the presentation of the experiments, the authors see, in the 
+learning problems which they have studied, a very close analogy to the 
+situations confronting the scientist when he plans his research pro- 
+gram and tries to decide between alternative concepts and theories, 
+which are at the moment still compatible with the evidence. Some parts 
+of science are clearly not touched on in this—the moments of discov- 
+ery, the times of creation. Here, rather, is the scientist doing his con- 
+scientious best, disentangling puzzles fairly well defined and finite. In- 
+deed, it is the part of science which is most like a game that is closest 
+to the situations dealt with in this study. The rules are well defined; 
+the information is honest; there are no tricks: a world, to alter Ein- 
+stein’s “Raffiniert ist der Herr Gott, aber boshaft ist er nicht,”—in 
+which God is not only not malicious but not even very subtle. But 
+this, no doubt, is where most of us begin as children, and this, for 
+sure, is where most of us still stay most of our time as men. 
+
+Chapters 4 to 7 describe the experimental designs, the experiments 
+themselves, and the questions they raised; and chapter 8 returns to 
+the summary of what has been learned, and to some of the principal 
+questions raised to a new sharpness by the findings and their analysis, 
+questions only partially answered or as yet wholly unanswered. 
+
+What do the experiments do? They are designed to make manifest 
+the sequence of choices the subjects use in trying to learn. The verbal 
+accounts the subjects give are occasionally referred to; they are not 
+part of the experiment. 
+
+
+In studying concept attainment, then, it has been our aim to 
+externalize for observation as many of the decisions as could pos- 
+sibly be brought into the open in the hope that regularities in these 
+decisions might provide the basis for making inferences about the 
+processes involved in learning or attaining a concept.... To put 
+the matter perhaps too simply, the analysis of performance strat- 
+egy consists in comparing the actual performance of a subject with 
+
+
+This content downloaded from 62.122.73.213 on Tue, 10 Jun 2014 21:29:20 PM 
+All use subject to JSTOR Terms and Conditions 
+
+
+486 APTS AND LETTERS 
+
+
+a set of rational or ideal strategies and determining a best fit. 
+
+In the study of thinking, inference, conceptualizing, and 
+other such diversely labelled activities, the great technical problem 
+is precisely this one. If behavior is to be viewed as strategy, the 
+task of analysis can only be accomplished by devising experiments 
+that can get a lot of sequentially linked behavior out of the or- 
+ganism where it can be observed. 
+
+
+The subjects of the experiments were students, mostly from Harvard, 
+a few from Radcliffe. The number of subjects in one given experi- 
+ment runs in the tens, seldom in the hundreds. The students are as- 
+signed a task of learning, usually from visual material, cards on which 
+objects are printed or drawings, mostly abstract, some sketchily the- 
+matic. As far as the experimentor can arrange it, the world of the 
+student is limited to these cards that he may see or select or be shown. 
+The students are told that they are to learn about a class which con- 
+tains some but not all of the cards. They are told whether the defining 
+concepts are conjunctive (round and blue), or disjunctive (round or 
+blue or both), and whether the relationship between the instance and 
+the category is certain or only probable. Then the students are watched 
+going about their learning. Sometimes there are limited opportunities 
+for selecting instances, or for volunteering a solution; sometimes not. 
+Sometimes the cards are presented with maximum order; sometimes 
+not. Sometimes what is on the cards refers to a human world; some- 
+times not. What goes on is duly noted. On occasion, things which 
+cannot be recorded as part of the experiment, such as an expression of 
+pleasure at insight, or an evidence of mastery, are noted down as a pro- 
+blem for the future. 
+
+
+The four chapters on experiments, sometimes reviewing earlier work, 
+but for the most part undertaken for the purposes of this study, are 
+called, “Selection Strategies in Concept Attainment,” “Reception Strat- 
+egies in Concept Attainment,” “On Disjunctive Concepts and Their 
+Attainment,” “On Categorizing with Probabilistic Cues.” | 
+
+
+We shall turn now to a sketchy and incomplete account of some of 
+the findings. But before we do that, in order to stress again the ab- 
+stract nature of the experiments, we quote the final sentences of this 
+study, “We have idealized the experimental] situations employed in our 
+investigations beyond what is normal in daily life, but that is the price 
+one pays for experimenting at all. It is our hope that by reaching a 
+fuller understanding of these more idealized forms of thinking i”. vitro, 
+
+
+This content downloaded from 62.122.73.213 on Tue, 10 Jun 2014 21:29:20 PM 
+All use subject to JSTOR Terms and Conditions 
+
+
+ARTS AND LETTERS 487 
+
+
+the complexities of thinking as we observe it around us will be more 
+readily understood.” 
+
+Huizinga, who sees human culture and man’s rational life as an out- 
+growth of Homo Ludens, would, no doubt, concur. 
+
+A Study of Thinking is replete with findings based on experiments 
+and their analysis. They are almost all statistical findings, in the sense 
+that the traits of behavior discovered can not be predicated with uni- 
+versality and certainty of every subject. One of the findings, for in- 
+stance, is that when students are trying to learn a disjunctive concept, 
+they fare far better when their first instances are negative. This does 
+not mean that every sequence started with a negative instance gives 
+the quickest possible learning, nor does it mean that no subject whose 
+“rst instance is positive learns quickly. But the statistical traits are 
+striking, and strikingly different from a record of chance behavior; and 
+in none of the important conclusions is there any question of their sta- 
+tistical significance. The samples are small, but they appear to be 
+more than large enough. They are, however, quite specialized, and the 
+
+
+question of whether Hindus, Senegalese, or Senators would behave like 
+Harvard students is left over for the future. 
+
+
+The samples which are here briefly sketched seem typical to this re- 
+viewer in their interest, in their scope, and in the extent to which they 
+seem to confirm, refute, or refine common sense views. I have at- 
+tempted to select findings which could be presented with a minimum of 
+specialized language, and this has caused me to omit many which are 
+sharp and, to me, most illuminating. Even where no very specialized 
+language is needed, we must remember that these refer to well-defined 
+experimental situations, that they are in this sense objective, and in 
+this sense limited. 
+
+
+A. It is possible, in the problem solving behavior of a subject, to 
+identify a strategic pattern, and to get a measure of strategic con- 
+sistency. “. . . it is possible to describe and evaluate strategies in a 
+relatively systematic way, both in terms of their objectives and in terms 
+of the steps taken to achieve these” . . . “Each of the strategies is 
+amenable to relatively rigorous description, and it is fairly simple to 
+employ a quite precise measure for describing the shift from one strat- 
+egy to the other.” Thus the authors indicate that they can usually 
+identify a strategy from observation of the subject’s choices and se- 
+quence of choices. It is all-important for the future of their work that 
+
+
+This content downloaded from 62.122.73.213 on Tue, 10 Jun 2014 21:29:20 PM 
+All use subject to JSTOR Terms and Conditions 
+
+
+488 ARTS AND LETTERS 
+
+
+this identification be established as objective, in the sense that the cri- 
+teria for identification can be learned by others. 
+
+
+The authors write further, “. . . it is possible to demonstrate the ef- 
+fect of relevant conditions upon measurable aspects of categorizing stra- 
+tegies. By so doing, we have been able to ‘get into’ the process of con- 
+cept attainment... .” Subjects in general adopt strategies appropriate 
+to the problem beloce them, the amount of information they are being 
+given, and the instructions of the game. And then again, “In general 
+we are struck by the notable flexibility and intelligence of our subjects 
+in adapting their strategies to the information, capacity, and risk re- 
+quirements we have imposed on them.” If he expects to be allowed 
+to continue, the student will take steps, the value of which lies in the 
+future use of the information they yield. Some of the best strategies 
+on purely logical grounds are unused because they require too much 
+inference and too much thinking to be done readily in the head. 
+Through all this, a strategy is a sequence of decisions made by the sub- 
+ject in an attempt to learn the concept. Through all this, the question 
+of the relevance of education and culture comes often to mind. How 
+universal are these traits! 
+
+
+B. A second set of findings has to do with a comparison between in- 
+stances based on pictures, pictures of people that evoke stories and 
+familiar scenes on the one hand, with pictures of shapes and figures of 
+a neutral and abstract quality on the other. The thematic examples 
+reduce the logical appropriateness of the strategies employed, and gen- 
+erally tend to lead to the testing of a series of hypotheses evoked by 
+the themes. “. . . in attempting to differentiate exemplars from non- 
+exemplars of a category, as one so frequently must in science, medicine, 
+and indeed in daily life, the person will, in the absence of other infor- 
+mation, tend to fall back on cues that in the past have seemed useful, 
+whether these cues have been useful in an analagous situation or not.” 
+This is surely not the whole reason why the questions which most move 
+and touch men are among the hardest to answer. 
+
+
+C. A third set of findings has to do with decisive evidence for the 
+aversion and the ineptitude that are involved in the negative: in hand- 
+ling the negative instance, in learning from the indirect test, and in 
+learning anything about disjunctive concepts. It is not that negative 
+instances are not essential. They are in fact the principal instrument 
+of correcting error and learning. But they are not liked and there is 
+a marked “tendency on the part of subjects to utilize only positive in- 
+
+
+This content downloaded from 62.122.73.213 on Tue, 10 Jun 2014 21:29:20 PM 
+All use subject to JSTOR Terms and Conditions 
+
+
+ARTS AND LETTERS 489 
+
+
+stances as a basis for forming hypotheses.” Subjects also do not like 
+to use indirect tests of a hypothesis. They do not like to have to trans- 
+form negative information into positive information or a positive con- 
+clusion. Finally, subjects do not like and show little skill in attaining 
+disjunctive concepts. The authors think that this may be a character- 
+istic of our culture. “It is a characteristic of much scientific thinking 
+to assume at the outset that whatever behaves in a common way does 
+so for a common cause.” This finding is clearly relevant to the pro- 
+blem of causality in history. 
+
+
+D, Strategies and the purposes of strategy are markedly affected, 
+among many other things, by the extent to which the student can learn 
+whether he is right or wrong. If he is told of his errors, he works 
+hard to eliminate them and to solve the problem. If he has little op- 
+portunity to know whether he is right or wrong, he abandons this hope 
+and adopts a prudential policy, keeping error within limited bounds. 
+Such is our government. 
+
+
+EK. In a beautiful little experiment on categorization of spoken sounds, 
+the Harvard student regarded as distinctive sounds characterized by 
+different letters in English. The mono-lingual Navajos, not Harvard 
+students, categorized by the length of the vowel. Once the material 
+was so arranged as to indicate the possible relevance of vowel length, 
+English-speaking students categorized by it too. This is an example 
+of a theme running through the whole book: powers of discrimination, 
+unused but latent, are resurrected when evoked by the problem. 
+
+
+None of the findings sketched above, and indeed very few in the 
+book as a whole, upsets what we would have expected, or outrages 
+common sense; but in every case they suggest further studies; and in 
+most cases, the questions to which they lead find no firm answer in 
+common sense. This reviewer, at least, does not know the answers. 
+
+
+A Study of Thinking ranges through territory which has been for 
+millennia a battleground of epistemology and metaphysics. It is thus 
+not astonishing that from time to time the authors may be found tem- 
+porarily manning one of the old trenches. Thus at one point they say, 
+“To be sure, the defining criteria in terms of which equivalence classes 
+are formed exist in nature as potentially discriminable.” This does 
+not keep them from writing, further on, “The categories in terms of 
+which we group the events of the world around us are constructions 
+or inventions. ... They do not ‘exist’ in the environment.” Nor is 
+Dr. Brown able to avoid a bout with Locke and Berkeley. But the 
+
+
+This content downloaded from 62.122.73.213 on Tue, 10 Jun 2014 21:29:20 PM 
+All use subject to JSTOR Terms and Conditions 
+
+
+490 ARTS AND LETTERS 
+
+
+authors’ more steady view, it appears to me, they record as follows: 
+“We have found it more meaningful to regard a concept as a network 
+of sign-significate inferences by which one goes beyond a set of ob- 
+served criterial properties exhibited by an object or event to the class 
+identity of the object or event in question, and thence to additional in- 
+ferences about other unobserved properties of the object or event.” 
+
+
+That man must act in order to know, that he must thereby reject 
+other actions of which he is capable, and lose other knowledge of what 
+is knowable in the world, will not solve the old philosophical questions; 
+but it will alter, deepen, and illuminate them. 
+
+
+NOW, GOD HELP THEE, POOR MONKEY!* 
+
+
+By CHARLES TOMLINSON 
+
+
+Mr. Coveney’s study of the child in literature (its title comes from 
+the words of Lady Macduff to her son) is typical of a good deal of 
+the critical writing that appears in England at the present. At its best 
+level, his book is highly informative and stimulating. At its average 
+level it seems uncertain of the nature of the audience it has to deal 
+with, and consequently disperses much of its force in retailing beck- 
+ground information of the kind that the educated reader already pos- 
+sesses. At its worst level Poor Monkey is somewhat derivative in sub- 
+stance and tired in tone. Now this is a pity. For the book possesses 
+a real core and its materials are potentially and, at times, actually a 
+valuable addition to our notions about literature. 
+
+The author traces the passage of the literary image of the child from 
+Blake to Lawrence. He sees in the Romantic use of that image a 
+creative symbol, “a focal point of contact,” as he says, “between the 
+growing human consciousness and the ‘experience’ of an alien world.” 
+In short, the child focuses a disquiet and, at the same time, the artist’s 
+hopes for human salvation: it is a touchstone for life. The corruption 
+of that symbol provides Mr. Coveney with matter for some of his most 
+interesting and original chapters; the symbol of growth gives place to 
+its antithesis, to the Victorian image of the “dying child” and to the 
+
+
+*Poor Monkey: The Child in Literature. By Peter Coveney. London: Rockcliff. 30s. 
+
+
+This content downloaded from 62.122.73.213 on Tue, 10 Jun 2014 21:29:20 PM 
+All use subject to JSTOR Terms and Conditions 
+
+

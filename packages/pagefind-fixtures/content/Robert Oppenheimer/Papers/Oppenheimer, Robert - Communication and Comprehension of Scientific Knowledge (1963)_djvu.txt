@@ -1,0 +1,443 @@
+Communication and Comprehension of Scientific Knowledge 
+
+Author(s): J. Robert Oppenheimer 
+
+Source: Proceedings of the National Academy of Sciences of the United States of America, 
+Vol. 50, No. 6 (Dec. 15, 1963), pp. 1194-1200 
+
+Published by: National Academy of Sciences 
+
+Stable URL: http://www.jstor.org/stable/71866 
+
+
+Accessed: 03/05/2014 21:52 
+
+
+Your use of the JSTOR archive indicates your acceptance of the Terms & Conditions of Use, available at 
+http://www.jstor.org/page/info/about/policies/terms.jsp 
+
+
+JSTOR is a not-for-profit service that helps scholars, researchers, and students discover, use, and build upon a wide range of 
+content in a trusted digital archive. We use information technology and tools to increase productivity and facilitate new forms 
+of scholarship. For more information about JSTOR, please contact support @jstor.org. 
+
+
+National Academy of Sciences 1s collaborating with JSTOR to digitize, preserve and extend access to 
+Proceedings of the National Academy of Sciences of the United States of America. 
+
+
+http://www.jstor.org 
+
+
+This content downloaded from 130.132.123.28 on Sat, 3 May 2014 21:52:45 PM 
+All use subject to JSTOR Terms and Conditions 
+
+
+1194 CENTENNIAL: FOURTH SCIENTIFIC SESSION Proc. N. A.&. 
+
+
+artist, and poet, until after the time of the Renaissance when a new tool was per- 
+fected by the use of which he could project a new, more exclusive public image. 
+This tool was the experimental method which led to the flourishing of natural science 
+in the Western World. 
+
+Our Academy’s birth occurred at a time when systematic use of accumulated 
+scientific knowledge for practical purposes was first being made, which soon caused 
+the flourishing of synthetic chemicals and metallurgical industries. Only recently 
+did societies as a whole, through governments, recognize science as a powerful 
+stimulus for political, economic, and cultural change and progress; and thus only 
+recently did governments begin consciously to promote science. ‘The result has 
+been its continuing exponential growth, the appearance of many new scientific 
+disciplines, and also the emergence of many difficult problems. President Kennedy 
+spoke of some of the problems in his address at our Centennial Convocation. 
+Some others will be considered by the distinguished speakers this afternoon. 
+
+The extraordinarily rapid growth of science (let us not forget that over 90 per 
+cent of all natural scientists who ever lived are still alive) and the proliferation of 
+new areas of research have led, from sheer volume as well as other factors, to 
+difficulties in communication. ‘There is the problem of transmitting information 
+among the sciences, to preserve their coherence, if not unity; an individual scientist 
+knows more and more about less and less. A far more difficult problem is communi- 
+cation between scientists and those who apply the results of scientific research to 
+political, technological, and cultural purposes. This is the topic about which we 
+shall hear from Dr. Oppenheimer. 
+
+Dr. Wiesner will speak of our Government’s effort to expand science in the ex- 
+pectation of rich practical returns for our society and to enhance its cultural con- 
+tributions. 
+
+Dr. Fisk will tell us of the problems which arise when knowledge obtained in 
+basic research is being translated into practical uses by organized modern industrial 
+research teams. ‘These are the uses that constitute the progress of our technological 
+civilization. | 
+
+And finally Dr. Rabi will speak of science in the framework of the culture of a 
+free society as a force of far deeper significance than mere satisfaction of material 
+needs. 
+
+
+COMMUNICATION AND COMPREHENSION OF SCIENTIFIC 
+KNOWLEDGE 
+
+
+By J. RoBERT OPPENHEIMER 
+INSTITUTE FOR ADVANCED STUDY 
+
+
+The theme that has been assigned to me seems in some ways a little odd. That 
+is only in part because this talk comes after three days and fifteen lectures in which, 
+as actors and auditors, we have lived with many beautiful examples of good com- 
+munication, and even very largely good comprehension—good understanding—of 
+scientific knowledge. If I have any doubts, it may be that here and there, in those 
+
+
+This content downloaded from 130.132.123.28 on Sat, 3 May 2014 21:52:45 PM 
+All use subject to JSTOR Terms and Conditions 
+
+
+Vou. 50, 1963 CENTENNIAL: FOURTH SCIENTIFIC SESSION 1195 
+
+
+reports which dealt with subjects close to me, the communication and the under- 
+standing have gone a little bit beyond the knowledge. 
+
+In an important sense, the sciences have solved the problem of communicating 
+within and with one another more completely than has any human enterprise. I 
+may retell an old story. Thirty-five years ago, Dirac and I were in Gottingen. 
+He was making the quantum theory of radiation, and I was a student. He learned 
+that I sometimes wrote a poem, and he took me to task, saying, “In physics we try 
+to say things that no one knew before in a way that everyone can understand, 
+whereas in poetry... .” 
+
+It is an old and sousisient tradition with us to be concerned with the words we 
+use, and with their purification, and thus with the concepts in terms of which we 
+describe nature. It was true of Newton, of Lavoisier, of Cauchy, of Mendel, and 
+of course, in our day, of Einstein, and of Bohr. As for Newton, we will understand 
+this better when we have, after almost three centuries, the critical edition of the 
+Principia; at least we will know that in the renowned Hypotheses non jfingo it is 
+not the first word but the last that bears the meaning. 
+
+When we tell about our work, we explain what we have done and we tell what we 
+have seen, whether we are describing a radioastronomical object, or a new property 
+of fiber bundles, or the behavior of men attempting to solve problems. We are 
+prepared to believe that the explicit content of science has its roots in these accounts 
+of action, often factual, often foreshortened and synoptic, because cast in terms 
+which the scientific traditions have established long ago. 
+
+Among us there is surely a great and appropriate variation in how we describe 
+this foundation for the objectivity of our knowledge, and for the lack of ambiguity 
+in the terms we use to tell of it; and of course there is an even wider latitude, 
+insofar as we may bring ourselves 0 speak of them, in what we think of the reasons 
+for the success of science, in what attributes of the world of nature in which we 
+find ourselves underlie the manifestations of order which are our business: why 
+we can work on the same table and with the same test tube when we cannot have the 
+same melancholy or the same resolution; why so much of the order of the natural 
+world finds its expression in number and the more abstract mathematical structure. 
+
+We probably all, with varying enthusiasm, would say yes to Charles Peirce as to 
+how to make our ideas clear. We would make a good case that we do indeed know 
+the structure of some ribonucleic acids, or some properties of the longer-lived 
+particles of physics, only leaving room for the fact that in new things as well as in 
+old, there are points we may not have looked at, and that wonders may be hidden in 
+the crevasses. . 
+
+This foundation for aawleiee precudes much that is an essential part of man’s 
+life. One cannot be a very effective scientist if he is a practicing solipsist. We 
+cannot expect to describe a common world of introspection by telling people what 
+we have done and what we have seen; though probably we can, and increasingly we 
+will, describe elements of behavior which may have some correspondence to the 
+inner world. Among these things of which we cannot talk without some ambiguity, 
+and in which the objective structure of the sciences will play what is often a very 
+minor part, but sometimes an essential one, are many questions which are not 
+private, which are common questions, and public ones: the arts, the good life, the 
+good society. ' There is to my view no reason why we should come to these with a 
+
+
+This content downloaded from 130.132.123.28 on Sat, 3 May 2014 21:52:45 PM 
+All use subject to JSTOR Terms and Conditions 
+
+
+1196 CHNTENNIAL: FOURTH SCIENTIFIC SESSION Proc. N. A. S. 
+
+
+greater consensus or a greater sense of valid relevant experience than any other pro- 
+fession. ‘They need reason, and they need a preoccupation with consistency; 
+but only insofar as the scientist’s life has analogies with the artist’s—and in impor- 
+tant ways it does—only insofar as the scientist’s life is in some way a good life, and 
+his society a good society, have we any professional credentials to enter these discus- 
+sions, and not primarily because of the objectivity of our communication and our 
+knowledge. Butif I doubt whether we have a special qualification for these matters, 
+I doubt even more that our professional practices should disqualify us, or that we 
+should lose interest and heart in preoccupations which have ennobled and purified 
+men throughout history, and for which the world has great need today. Your 
+lives attest this. 
+
+This account of a constant concern within the scientific enterprise to purify and 
+refine our language is, of course, a sort of parody of what we are all about. We 
+do not really do this except in moments of crisis, or in order to make way for some- 
+thing very new and deep. We come to our new problems full of old ideas and old 
+words, not only the inevitable words of daily life, but those which experience has 
+shown fruitful over the years. This is an inevitable approach to the new; and when 
+it is not too new, it gets by. But the comprehension, the understanding of scientific 
+knowledge is a very different thing from being the recipient of a communication. I 
+think there is an element of action inseparable from understanding: to question, to 
+try, to apply, to adapt, to ask new questions, to see if one understands, and to test 
+what one has been told: action in the laboratory or the observatory, or on paper, 
+or, at the very least, in the motions of the spirit. We need, at times, to talk about 
+the sources and the springs of this motion, without which communication would 
+provide the fuel pipes, the electrical wiring, the transmission of a car, but not the 
+combustion which gives it power and life. 
+
+We do not talk of this very well: imagination, play, curiosity, invention, action, 
+these are all involved. ‘T'hey are indeed only rarely all combined, and supple- 
+mented by skepticism and criticism, In any one man in any one moment; one of 
+the charms of the scientific enterprise is how deficient we can be in many of these 
+qualities and still play some meaningful part in it. 
+
+We know that we love the old words, the old imagery, and the old analogies, 
+and that we keep them for more and more unfamiliar and more and more un- 
+recognizable things. ‘Think of “wave,” ‘information,’ “relativity.” We know 
+that one can explore and study the springs of the movement of science, that it is 
+a fit if very difficult subject of study. Today at least we are not able to talk about 
+it very well, not at all as we can of molecules or galaxies, or even of the effective 
+definition of the words that we use. Yet we may be sure that without a living 
+engagement there 1s no understanding and there is no life of science, and we know 
+that we cannot command this, or perhaps even learn it, except by apprenticeship, 
+by following what others have done, and by listening to the mischievous voices of 
+adventure and play and exploration and doubt with which we greet a new experience 
+or anew communication. ‘This has very much to do with what we can in practice 
+and honestly mean by the unity of science. I think, for instance, of contemporary 
+mathematics, whose absence from this program does not at all reflect a lack of 
+vitality, of discovery, and of beauty in the current scene. Up to our time, it has 
+been the experience of our enterprise that there have been a good number of men 
+
+
+This content downloaded from 130.132.123.28 on Sat, 3 May 2014 21:52:45 PM 
+All use subject to JSTOR Terms and Conditions 
+
+
+Vou. 50, 1963 CENTENNIAL: FOURTH SCIENTIFIC SESSION 1197 
+
+
+who combined creation and wide knowledge of the mathematics of their day with a 
+lively interest in those elements of the natural sciences in which this mathematical 
+order might be embodied. ‘This conversation, as a lively mutual understanding, 
+is rather thin today. It is not rare to find a physical scientist who will hear some 
+beautiful new result—in algebra, for instance, or topology—with pleasure, with 
+amazement, and with admiration; but it is not likely that he will be deeply engaged, 
+and try to see if he can make it wider, how it affects other things he may have known, 
+or thought to know. I know that it is also true that many mathematicians will 
+accept with a certain interest that there are in nature two neutrinos which have 
+different properties, or that astronomers believe that they may be witnessing 
+evidence of very massive gravitational implosion in other galaxies. ‘To me it seems 
+good that we still do tell each other these pieces of news; but I would hope that the 
+century-long tradition of a felt sense of reciprocal relevance between mathematics 
+and natural science would soon again find itself embodied in many of us, or, far 
+more plausibly, in our successors. 
+
+Thus between us, as specialists in our professions, there 1s a partly accidental 
+quality to the effectiveness of our converse with one another, and thus to the 
+effective unity of our view of the world, even as scientists. There are two reasons 
+for deploring this. One is that past experience suggests so strongly that among 
+the sciences there are elements of relevance and mutual enlightenment which make 
+such converse an essential part of deep and rapid progress; the other is that we 
+regret for ourselves what we do not really know, and we regret for others what we 
+cannot really tell them. ‘This is, of course, a reflection, within the internal society 
+of the scientific enterprise, of a situation that characterizes our relations with 
+human societies as a whole, with the society within which we are embedded, and 
+that leaves us with problems, some very grave, and by no means all clearly soluble, 
+having to do just with the communication and comprehension—understanding—of 
+scientific knowledge. | 
+
+These problems rest, of course, on human weakness and limitation; but more 
+specifically they rest on at least three features of the scientific enterprise which it 
+has in common with the world in which its whole action takes place: size and satura- 
+tion, growth and change, and specialization. I will not speak to size, having no 
+true wisdom as to whether there is a natural and appropriate limit to how vast the 
+scientific enterprise can and should be, beyond which it suffers too deeply from suf- 
+focation and fragmentation. I do not think that I know an answer, but I rather 
+hope that those who follow me today may have some wisdom; and I know that they 
+have some views on how large our world should be, perhaps because that is a still 
+harder question. | 
+
+One thing we do know: growth and change imply size, and growth and change 
+are very deep in the nature of the scientific enterprise. Without them we would not 
+recognize the rooms in which we were living, or what our days were all about. As 
+for specialization, it is what sharpens our tools and our words, and is the instrument 
+of penetrating deeper and farther into the world of nature. 
+
+I think that we must live with these, and that we can live with them. Some of 
+us will know one thing, some fewer will know many things, and the unity of our 
+knowledge, its freedom from contradiction, and its important and often very deep 
+
+
+This content downloaded from 130.132.123.28 on Sat, 3 May 2014 21:52:45 PM 
+All use subject to JSTOR Terms and Conditions 
+
+
+1198 CENTENNIAL: FOURTH SCIENTIFIC SESSION Proc. N. A. 8. 
+
+
+common relevance, will not preclude but will be enriched by the great and blessed 
+diversity of man. , 
+
+These limits on the communication and comprehension of scientific knowledge 
+which we find among ourselves, with which we have been living and will continue 
+to live, have their analogies in the related but vaster limitations that we have in 
+our external relations with those who are not yet, or not ever, involved in the 
+scientific enterprise. ‘The first of these is with the young, those who may be enter- 
+ing the life of science, and perhaps also, perhaps even more importantly, those who 
+may not. I cannot speak with even a decent record of experience of authority 
+of the problems of education and schooling, for I have known them only at the late 
+level that is essentially apprenticeship, where a young man or woman has become 
+engaged in some part of science, and the problem is to help him enlarge his interest 
+and his power and his knowledge of what others have done. I have the impression, 
+which I hope may be true enough to be shared by most of you, that in the graduate 
+schools, and in their increasing postdoctoral studies, we have in the natural and 
+mathematical sciences rather happy arrangements for this period of apprenticeship, 
+happy in comparison with the situation in other branches of study—historical or 
+philosophical, for instance—rather happy in comparison with our sister institutions 
+abroad, and very happy indeed in comparison with our own country some fifty 
+years ago. Apart from this, my life gives me no qualification except to express an 
+appreciation to our many colleagues who have been studying and practicing the 
+teaching of the sciences in the schools and the colleges, so that first sight shall 
+not repel, and the institutions not resist the natural curiosity and love and joy of 
+the experience, but open it, so that as many as can will have an opportunity to 
+discover some trait of nature, to see with welcome some sure sign of order in nature, 
+with their own hands and their own heads. 
+
+I know that our colleagues understand the universal value, in all teaching, of 
+quickly correcting error. I know that they are concerned to free the teaching of 
+science of a slovenly and lazy dependence on history, in which discoveries were 
+often made in obscure, contingent, and not deeply relevant struggles, whose in- 
+terest as history is not helpful to the young student, and usually obscure to his 
+teacher. I know that they hope, as often as may be, to open perspectives on the 
+larger connections in nature and in the sciences which describe it, and rarely, 
+when it can be done with historical scruple, on some chapters in the history of man’s 
+knowledge. 
+
+We mostly take it for granted, though it is not quite obvious, that we would like 
+to have this opening of the world of science, this induction into it, effective not only 
+for those who will be of our company, but for as many as may be of all the young, 
+and the newly young who are willing to study. It seems to me that there are prob- 
+ably two reasons why we hold this view, not in the first instance commensurable 
+reasons. On the one hand, I think we increasingly feel the need for companionship 
+and for help. I am not here speaking of the patronage of science, which has not 
+been ungenerous or niggardly in the past years, though it may come to be so. I 
+have in mind rather what we all know, that more rapidly than ever before, the 
+sciences have been embodied in new technologies, and that these bring on the scene 
+new powers and possibilities, now a new need, now a new opportunity. ‘These 
+needs and opportunities often are relevant to what in us, and in most men, are the 
+
+
+This content downloaded from 130.132.123.28 on Sat, 3 May 2014 21:52:45 PM 
+All use subject to JSTOR Terms and Conditions 
+
+
+Vot. 50, 1963 CENTENNIAL: FOURTH SCIENTIFIC SESSION 1199 
+
+
+most deeply held convictions of what is right and good, convictions rooted in a 
+long tradition, and integrally a part of our sensibility. We do not talk about it 
+much, but most of us, I think, are committed to preserving life and health where that 
+is possible. Increasingly, and largely because of the effects during the last centuries 
+of technology and industrialization themselves on its modes, we are committed to 
+limiting, if possible to eliminating, war. Weare committed to relieving, to reducing 
+labor and drudgery, and not only the hard labor of the field and the mine and the 
+galley, but the dull labor of the Midlands factory. We are now clearly engaged 
+in a great enterprise testing whether we can live in a world in which war does not 
+play its traditional part, an enterprise in which not only long inherited human in- 
+stitutions, but even older, even other more permanent human attitudes, of anger, 
+hatred, solidarity, self-importance, righteousness, which war has fed, can permit 
+the change. We are in this too deeply, I think, to let the good news or the bad 
+news of the day or month or year affect or limit our hope and, where it is possible 
+for us, our engagement in this great, open, unsettled action of man’s history. 
+
+With the preservation of life too, and along with it the alteration and automation 
+of work, we are concerned not only with the inadequacy of our institutions, which 
+were framed for a very different world, but with our attitude toward the meaning 
+and value and nature and quality of human life, so largely in our past built on pro- 
+ductive work as its foundation. Here in this country we see the mixed fruits of 
+medical and engineering technology first with the young and the old. It is reason- 
+able to expect that they will spread, and that they will characterize many other 
+technologically developed societies. I know of the concern, so well expressed by 
+some of you, that even the saving of children’s lives may have created problems 
+with which no one can cope, that have some bearing on the growth and size of the 
+human society. | 
+
+Though I do not suppose that a thorough knowledge of science, which is essentially 
+unavailable to all of us, would really be helpful to our friends in other ways of life 
+in acting with insight and courage in the contemporary world, it would perhaps 
+be good if in talking with them we could count on a greater recognition of the 
+quality of our certitudes, where we are dealing with scientific knowledge that 
+really exists, and the corresponding quality of hesitancy and doubt when we are 
+assessing the probable course of events, the way in which men will choose and act, 
+to ignore or to apply, or make hypertrophic or nugatory the technological pos- 
+sibilities recently opened. I think that some honest and remembered experience 
+of the exploration of nature, of discovery, and of the way in which we talk to one 
+another about these things, might indeed be helpful; but that is because 1t would 
+remove barriers and encourage an effective and trusting converse between us, and 
+make more fruitful the indispensable role of friendship. ‘These things are perhaps 
+always easier in a small society. ‘They were perhaps easier a century ago, for us 
+and for many of the countries of Europe. We have a modest part to play in history, 
+and the barriers between us and the men of affairs, the statesmen, the artists, the 
+lawyers, with whom we should be talking, could perhaps be markedly reduced if 
+more of them knew a little of what we were up to, knew it with pleasure and some 
+confidence; and if we were prepared to recognize both the important analogies 
+between what moves us to act and to know, and the extraordinary and special 
+quality of our experience and our communication about it with one another. I 
+
+
+This content downloaded from 130.132.123.28 on Sat, 3 May 2014 21:52:45 PM 
+All use subject to JSTOR Terms and Conditions 
+
+
+1200 CENTENNIAL: FOURTH SCIENTIFIC SESSION Proc. N. A.S. 
+
+
+have often thought that with the historic game so grand and so uncertain, we should 
+not dismiss any help, even of that small part which we could play. 
+
+The other set of reasons for hoping the young people who will not be professional 
+scientists, and older people who are young in heart, could have a greater scientific 
+literacy and some limited experience, as ours also is limited, is that we know, all 
+of us, that the experience of scientific discovery is a good and beautiful experience, 
+and an unforgettable one. We know that this is true even of little discoveries, 
+and we understand that with the great ones it is shattering. It was on his seventy- 
+first birthday that Einstein said to me, ‘‘When it has once been given a man to do 
+some sensible things, afterwards his life is a little different.”” It seems not really 
+as an act of arrogance but simply human, and not in the purely pejorative sense of 
+the word, to wish these pleasures for as many of our fellows as can have them. 
+
+In our world, many things that men do rather naturally, that they have learned 
+to do long, long ago, have become professions, have become part of the market. I 
+think of song and sport and the arts, the practical arts and the fine arts. None of 
+these is without discipline; and although they are very different from those that 
+lead to the sciences, I would be slow to rate them easier. Yet people sing and make 
+sport and practice the arts quite apart from the market, quite apart from a career. 
+It would be a poorer, thinner life without that. Though surely we will not all burst 
+into song, or take to skis, or pick up a chisel or a brush, some of us have done some 
+of these things, and some of us will; and it seems a proper hope that in our educa- 
+tion, both for the young, and for those, in growing number, who like us have kept 
+a lifelong taste for it, we do what we can to open the life of science at least as wide 
+as that of song and the arts. Not everybody will want our pleasures, as among 
+us not everyone can taste the other’s, and as even we cannot expect an astronomer 
+and a biologist fully to share what each has. We think of this as a high and 
+lovely part of life which, with all its discipline, is still directly responsive to a deep 
+human need. We all know this, and all share it; but each of us, I think, must be 
+free to use his own words to sing its praise, even to describe it. 
+
+We may be seeing a time in which war will come to play a smaller and an in- 
+creasingly trivial part in man’s life. I hope that we are. We may be coming to a 
+time in which for growing parts of the world the production of goods will require a 
+much more minor commitment of human effort and life, and the market leave men 
+with a far greater measure of freedom. I hope that we are. Jor this it will clearly 
+not be enough that we preserve the integrity of our communication and compre- 
+hension, either among us, or with our fellows; but this is at the heart of our enter- 
+prise, and it is the least we can do. 
+
+
+This content downloaded from 130.132.123.28 on Sat, 3 May 2014 21:52:45 PM 
+All use subject to JSTOR Terms and Conditions 
+
+

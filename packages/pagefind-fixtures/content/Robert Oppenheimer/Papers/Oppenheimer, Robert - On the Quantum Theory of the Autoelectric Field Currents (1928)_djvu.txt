@@ -1,0 +1,212 @@
+On the Quantum Theory of the Autoelectric Field Currents 
+
+Author(s): J. R. Oppenheimer 
+
+Source: Proceedings of the National Academy of Sciences of the United States of America, 
+Vol. 14, No. 5 (May 15, 1928), pp. 363-365 
+
+Published by: National Academy of Sciences 
+
+Stable URL: http://www.jstor.org/stable/85208 
+
+
+Accessed: 04/05/2014 00:24 
+
+
+Your use of the JSTOR archive indicates your acceptance of the Terms & Conditions of Use, available at 
+http://www.jstor.org/page/info/about/policies/terms.jsp 
+
+
+JSTOR is a not-for-profit service that helps scholars, researchers, and students discover, use, and build upon a wide range of 
+content in a trusted digital archive. We use information technology and tools to increase productivity and facilitate new forms 
+of scholarship. For more information about JSTOR, please contact support @jstor.org. 
+
+
+National Academy of Sciences 1s collaborating with JSTOR to digitize, preserve and extend access to 
+Proceedings of the National Academy of Sciences of the United States of America. 
+
+
+http://www.jstor.org 
+
+
+This content downloaded from 195.78.108.85 on Sun, 4 May 2014 00:24:34 AM 
+All use subject to JSTOR Terms and Conditions 
+
+
+PROCEEDINGS 
+
+
+NATIONAL ACADEMY OF SCIENCES 
+
+
+ON THE QUANTUM THEORY OF THE AUTOELECTRIC FIELD 
+CURRENTS 
+
+
+By J. R. OPPENHEIMER* 
+NORMAN BriIDGE LABORATORY, PASADENA 
+
+
+Communicated March 28, 1928 
+
+
+By the application of a sufficiently intense electric field a Bohr atom 
+could be rendered unstable. For when the drop in potential across the 
+electronic orbit reaches a value of the order of magnitude of the ionizing 
+potential of the atom (10° volts/cm.), the electron, instead of remain- 
+ing in the neighborhood of the nucleus will fall down the hill of 
+potential energy, and the atom will be dissociated. This dissociation 
+is explosive in character. For there is a critical field strength, below 
+which the atom remains stable indefinitely and above which it dissociates 
+in a time of the order of the orbital periods of the atom. ‘The character- 
+istic for the .autoelectric current should accordingly show abrupt dis- 
+continuities. 
+
+If one examines the same problem with the quantum mechanics, he 
+finds that these abrupt changes disappear: Any field, no matter how 
+weak, will in time dissociate an atom. ‘This is essentially a consequence 
+of the fact that the motion of the electron is no longer absolutely restricted 
+to a region of the dimensions of the Bohr orbit; it will now occasionally, 
+though not very often, be found at points much further from the nucleus; 
+and the further it is, the smaller will be the field required to insure that 
+it does not return to the nucleus. Since the probability that an electron 
+be at a distance R from the nucleus falls off exponentially with increasing 
+R, the rate at which the field ionizes the atom may be expected to decrease 
+rapidly when the field strength is decreased. 
+
+These considerations may be made precise. For, by a slight extension 
+of the perturbation theory of the quantum mechanics, one may find the 
+rate at which the field induces transitions; and the particular transition 
+which is responsible for the effect is the quantum jump from the normal 
+state of the atom to a state of the same energy, in which electron and 
+nucleus are falling apart under the influence of the field. ‘This rate turns 
+out! to be, for a hydrogenic atom with ionizing potential W, 
+
+
+This content downloaded from 195.78.108.85 on Sun, 4 May 2014 00:24:34 AM 
+All use subject to JSTOR Terms and Conditions 
+
+
+364 PHYSICS: J. R. OPPENHEIMER Proc. N. A. S. 
+
+
+ae a = h/2a(2mW)7"” 
+0.02 h/m a? a’ exp {— 4/3 8a} (1) 
+a = 8r'mek /h? 
+
+
+per unit time; here m and —e are the mass and charge of the electron. 
+If the wave functions of the atom are not quite hydrogenic in character, 
+the exponential is not essentially affected, but the numerical factor may 
+vary by a factor, perhaps, of two. | 
+From (1) it follows that the characteristics of the field currents should 
+satisfy | | 
+Inti —'/sln F = C/E. | (2) 
+
+
+The reversible curves published two years ago by Millikan and Eyring? 
+do, in fact, satisfy this condition very satisfactorily. And the formula 
+(2) is essentially that found empirically and independently by Millikan 
+and Lauritsen;? it has been shown by them to hold with great exactitude 
+for all the reversible currents investigated. 
+
+With W in volts, the theoretical value of C in volts per cm. is —108 W™”. 
+The observed slope of the characteristic should thus make possible, pro- 
+vided F may be correctly estimated, the determination of the ionizing 
+potential for electrons in metal: the work function. The values of F, 
+however, computed from the geometrical dimensions of the wire, give for 
+W values of a few tenths of a volt. From this we may conclude that the 
+autoelectrons do not come uniformly from the surface of the wire, but 
+only from certain favored points where the field strengths are abnormally 
+high. Now this is just what is found experimentally. For the wire (after 
+systematic out-gassing) may be subjected to fields of four million volts 
+per centimeter without drawing a current measurable on the galvanom- 
+eter;* but this condition may suddenly be changed,’ so that the current 
+jumps immediately to a large value, and one (or more) bright spots appear 
+on the anode and the walls of the tube. If after such an event the wire 
+is examined*’ microscopically, it is found that at appropriate positions 
+there are small craters, and that these are surrounded by protuberances 
+with very small radius of curvature; and the dimensions of these points, 
+which should be responsible for the current, vary from a tenth to a fortieth 
+of those of the wire and thus give work functions of the order of a few 
+volts. Thus atypical crater has a radius of curvature of 2 X 107° cm. and 
+gives W = 4.7 volts. Diffraction, however, makes the precise estimation 
+of the radii of curvature of the points impossible. 
+
+The formula (1) gives in amperes for the current per series electron: 
+
+
+i=3X 10°F“ WwW” exp — (10° W” F-, (3) 
+
+
+It is thus possible, from the value of W and F, to compute the number of 
+atoms taking part in the effect. This computation cannot be made very 
+
+
+This content downloaded from 195.78.108.85 on Sun, 4 May 2014 00:24:34 AM 
+All use subject to JSTOR Terms and Conditions 
+
+
+Vou. 14, 1928 PHYSICS: J. R. OPPENHEIMER | 365 
+
+
+precise, however, because small changes in the exponential mask large 
+changes in the number of atoms, and because, further, the value of the 
+constant factor is not quite certain. But all the values so far obtained 
+show that the number of atoms taking part lies between 10~* and 10~6 
+of the total number of surface atoms. ‘This explains the spotted appear- 
+ance of the anode, and agrees reasonably with the dimensions of the 
+points as observed, which give an area about 10~° that of the wire. 
+
+The field currents are not absolutely independent of temperature. 
+Empirically the characteristic curves show two distinct slopes for constant 
+temperature and varying field; these correspond respectively to the 
+thermionic current as modified by the field (Schottky), and to the field 
+current as modified by the temperature; because of the steepness of the 
+exponentials the intermediate region is not susceptible of experimental 
+resolution. The former region is given qualitatively by Schottky’s 
+theory of the reduced image force. In the latter region one finds the law 
+that the relative change in current induced by a change of temperature 
+is nearly independent of the strength of the field. ‘This law follows readily 
+from the theory of field currents,' if one assumes the existence of one or 
+more excited electronic states with work functions somewhat less than W. 
+
+Since the formula (1) was published, two theoretical treatments of the 
+autoelectric effect have been given. ‘The former of these, that of Houston,® 
+ascribes the effect to the reduction of the work function of the metal by 
+the field, and the internal partial pressure which the conduction electrons 
+acquire on the Fermi statistics. ‘This seems, however, not to lead to a 
+satisfactory quantitative account of the experiments; for this purpose, 
+the atom furnishes a better model than the Fermi gas. In the second 
+paper® the effect is obtained, as in the present theory, from the fact that 
+the wave functions for the electrons do not vanish completely outside the 
+surface of the metal; but the method of computing the current is in- 
+consistent with the quantum mechanics and involves undetermined 
+constants which should in fact be determinate. The characteristic 
+obtained by this calculation also fails to agree with experiment, because 
+the binding force which holds the electron in the metal is taken to be 
+the image force instead of the coulomb attraction of the ions, as in the 
+present paper. 
+
+* NATIONAL RESEARCH FELLOW. 
+
+1 J. R. Oppenheimer, Phys. Rev., 31, 80 (1928). 
+
+2 R. A. Millikan and C. Eyring, [bzd., 27, 55 (1926). 
+
+3 R.A. Millikan and C. Lauritsen, Proc. Nat. Acad. Scé., 14, 45 (1928). 
+
+4. R.A. Millikan and B. E. Shackelford, Phys. Rev., 15, 289 (1920). 
+
+44 T am indebted to Dr. Lauritsen for an opportunity to see his photographs of the 
+craters. 
+
+
+5 V. Houston, Zs. Phys., 47, 33 (1928). 
+6 QO. W. Richardson, Roy. Soc. Proc., A667, 719 (1928). 
+
+
+This content downloaded from 195.78.108.85 on Sun, 4 May 2014 00:24:34 AM 
+All use subject to JSTOR Terms and Conditions 
+
+

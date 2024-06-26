@@ -1,0 +1,791 @@
+RS 
+
+
+International Control of Atomic Energy 
+
+Author(s): J. Robert Oppenheimer 
+
+Source: Foreign Affairs, Vol. 26, No. 2 (Jan., 1948), pp. 239-252 
+Published by: Council on Foreign Relations 
+
+Stable URL: http://www. jstor.org/stable/20030103 
+
+
+Accessed: 10/06/2014 14:17 
+
+
+Your use of the JSTOR archive indicates your acceptance of the Terms & Conditions of Use, available at 
+http://www.jstor.org/page/info/about/policies/terms.jsp 
+
+
+JSTOR is a not-for-profit service that helps scholars, researchers, and students discover, use, and build upon a wide range of 
+content in a trusted digital archive. We use information technology and tools to increase productivity and facilitate new forms 
+of scholarship. For more information about JSTOR, please contact support @jstor.org. 
+
+
+Council on Foreign Relations is collaborating with JSTOR to digitize, preserve and extend access to Foreign 
+Affairs. 
+
+
+http://www.jstor.org 
+
+
+This content downloaded from 195.34.78.178 on Tue, 10 Jun 2014 14:17:18 PM 
+All use subject to JSTOR Terms and Conditions 
+
+
+FOREIGN AFFAIRS 
+
+
+Vol. 26 JANUARY 1948 No. 2 
+
+
+INTERNATIONAL CONTROL OF 
+ATOMIC ENERGY 
+
+
+By F. Robert Oppenheimer 
+
+
+One day in a clearing in the forest, Confucius came upon a woman in deep mourning, 
+wracked by sorrow. He learned that her son had just been eaten by a tiger; and he 
+attempted to console her, to make clear how unavailing her tears would be, to restore 
+her composure. But when he left, he had barely reéntered the forest, when the renewed 
+sounds of weeping recalled him. “That is not all,” the woman said. “You see, my hus- 
+band was eaten here a year ago by this same tiger.” Again Confucius attempted to con- 
+sole her and again he left only to hear renewed weeping. “Is that not all?” “Oh, no,” 
+she said. “The year before that my father too was eaten by the tiger.” Confucius 
+thought for a moment, and then said: “This would not seem to bea very salutary neigh- 
+borhood. Why don’t you leave it?”” The woman wrung her hands. “I know,” she said, 
+“I know; but, you see, the government is so excellent.” 
+
+
+HIS wry tale comes to mind often when one observes the 
+
+efforts which the Government of the United States is mak- 
+
+ing to turn the development of atomic energy to good ends, 
+
+and the frustrations and sorrows of the negotiations within the 
+
+United Nations Atomic Energy Commission to which these ef- 
+forts toward international control have now been reduced. 
+
+In these notes I should like to write briefly of some of the 
+sources of United States policy, and of the formulation of that 
+eed in the context of the contemporary world. Against the 
+
+ackground of present prospects, which manifestly make success 
+in any short term seem rather unlikely, to write of these matters 
+today must of necessity be difficult. We are beyond advocacy, 
+and not yet far enough for history. Yet the effort may not be 
+without some slight usefulness in helping us to achieve an ap- 
+
+reciation of what was sound, what was timely and what was last- 
+ing in the policy adopted by the United States, and even more 
+than that, in helping us to see why this policy has not been suc- 
+cessful. To answer simply that we have failed because of non- 
+cooperation on the part of the Soviet Government is certainly to 
+give a most essential part of a true answer. Yet we must ask our- 
+selves why in a matter so overwhelmingly important to our in- 
+
+
+This content downloaded from 195.34.78.178 on Tue, 10 Jun 2014 14:17:18 PM 
+All use subject to JSTOR Terms and Conditions 
+
+
+240 FOREIGN AFFAIRS 
+
+
+terest we have not been successful; and we must be prepared to 
+try to understand what lessons this has for our future conduct. 
+
+Clearly, such understanding must depend in the first instance 
+on insight into the nature and sources of Soviet policy, and in- 
+deed into our own political processes. Such an analysis, which in 
+any final sense may transcend the collective wisdom of our time, 
+is of course wholly beyond the scope of this paper. These notes 
+are concerned solely with questions of our intent with regard to 
+atomic control, questions which, though necessarily over- 
+abstract, are yet a part of history. 
+
+
+II 
+
+
+The development of atomic energy had none of the other- 
+worldliness normally characteristic of new developments in 
+science. It was marked from the very first by an extreme self- 
+consciousness on the part of all participants, which has given it 
+an often heroic, though not eleauatls rather comic, aspect. 
+Thus when the phenomenon of fission was discovered by Hahn, 
+after less than a decade of intensive exploration of nuclear struc- 
+ture and nuclear transmutations, we were all very quick to hail it, 
+not as a beautiful discovery, but as a likely source of a great 
+technological development. Long before it was known that con- 
+ditions could be realized for maintaining a fission chain reaction, 
+long before the difficulties in that enterprise were appreciated or 
+methods for their solution sketched out, the phenomenon of fission 
+was greeted as a possible source of atomic explosives, and their 
+development was urged upon many governments. Thus, it 
+happened that when, in the United States, the Manhattan Dis- 
+trict was approaching the completion of its task, and atomic —_ 
+ons were in fact almost ready for use, there was a fairly well 
+informed group of people who in a sort of fraternal privacy had 
+discussed what these developments might mean — what prob- 
+lems they would raise, and along what lines the solution might be 
+sought. After the use of the weapons at the end of the war, much 
+of this thinking became public; it achieved a sort of synoptic 
+codification because of the joint requirements of easy comprehen- 
+sion and military security. 
+
+Yet it should be not without usefulness now to recall how the 
+
+roblem appeared to us in the summer of 1945, when it became 
+fally apparent that atomic weapons and the large-scale release of 
+atomic energy were not only realizable, but were about to be 
+
+
+This content downloaded from 195.34.78.178 on Tue, 10 Jun 2014 14:17:18 PM 
+All use subject to JSTOR Terms and Conditions 
+
+
+CONTROL OF ATOMIC ENERGY 241 
+
+
+realized. Even at that time a good deal of thought had gone into 
+what subsequently came to be known as the peaceful use of 
+atomic energy. On the technical side this preoccupation was 
+natural enough, since many interesting avenues of exploration 
+had been sealed off by the overriding requirements of the military 
+program, and we were naturally curious to sketch out what might 
+ie along these avenues against that time when there should be 
+leisure oe their pursuit. 
+
+But beyond that there was a political consideration. It was 
+clear to us that the forms and methods by which mankind might 
+in the future hope to protect itself against the dangers of un- 
+limited atomic warfare would be decisively influenced just " the 
+answer to the question “Is there any good in the atom?” From 
+the first, it has been clear that the answer to this question would 
+have a certain subtlety. The answer would be “yes,” and em- 
+phatically “yes,” but it would be a “yes” unconvincing, condi- 
+tional and temporizing compared to the categorical affirmative of 
+the atomic bomb itself. In particular, the advantages which 
+could come from the exploitation of atomic energy do not appear 
+to be of such a character that they are likely to contribute in a 
+very short term to the economic or technical well-being of man- 
+kind. They are among the long-range goods. Thus they could 
+not be expected to recommend themselves as urgent to the 
+peoples of countries devastated by war, suffering from hunger, 
+poverty, homelessness and the awful confusion of a shattered 
+civilization. The importance of these limitations was perhaps not 
+adequately recognized as a deterrent to the sort of interest in the 
+development of atomic energy on the part of other peoples and 
+other governments which might have played so great a part in 
+assuring their support for our hopes. Only among the professional 
+scientists, for whom the interest in the development of atomic 
+energy is rather immediate, could we have expected to find, and 
+did we in fact find, an enlightened enthusiasm for codperation in 
+this development. 
+
+Only two classes of peaceful applications of atomic energy 
+were then apparent. To the best of my knowledge, only two are 
+apparent today. One is the development of a new source of 
+power; the other is a family of new instruments of research, in- 
+vestigation, technology and therapy. 
+
+Of the former, it was clear two years ago, and it is clear today, 
+that although the generation of useful power from atomic sources 
+
+
+This content downloaded from 195.34.78.178 on Tue, 10 Jun 2014 14:17:18 PM 
+All use subject to JSTOR Terms and Conditions 
+
+
+242 FOREIGN AFFAIRS 
+
+
+would assuredly be a soluble problem and would under favorable 
+circumstances make decisive progress within a decade, the ques- 
+tion of the usefulness of this power, the scale on which it could be 
+made available, and the costs and general economic values, would 
+take a long time to answer. As we all know, the answers depend 
+on the raw material situation — essentially, that is, on the avail- 
+ability and cost of natural uranium and thorium — and on the 
+extent to which one could in practice manage to consume the 
+abundant isotope of uranium and thorium as nuclear fuels. Thus, 
+no honest evaluation of the prospects of power in 1945 could fail 
+to recognize the necessity iain development and explora- 
+tion. Equally, no honest evaluation could give assurances as to 
+the ultimate outcome beyond those general assurances which the 
+history of our technology justifies. Certainly no evaluation at 
+that time, nor for that matter today, could justify regarding 
+atomic power as an immediate economic aid to a devastated and 
+fuel-hungry world, nor give its development the urgency which 
+the pail of atomic armaments would be sure to have once the 
+nature and ferocity of the weapons had been made clear to all. 
+
+With regard to the use of tracer materials, of radioactive 
+species, and of radiations for science, the practical arts, for tech- 
+nology and medicine, we were in a better position to judge what 
+might come. The use of tracer materials was not new. The last 
+decade — the 1930’s — had seen increasingly varied and effective 
+applications of them. The use of radiation for the study of the 
+properties of matter, for diagnosis and for therapy was likewise 
+not new. Several decades of hopeful and bitter experiences gave 
+us some notion of the power and limitations of these tools. What 
+was held in store by the development of atomic reactors and of 
+new methods for the handling of radioactive materials and the 
+separation of isotopes, was a much greater variety and a vastly 
+greater quantity of tracer materials, and a far higher intensity of 
+radiation than had been available in the past. That this would be 
+a stimulus to physical and biological study was clear; that its 
+value would in the first instance depend on the skilful develop- 
+ment of chemical, physical and biclopical techniques, and that 
+this development even under the best circumstances would be a 
+gradual and continuing one, we knew as well. 
+
+Thus, our picture of the peaceful uses of atomic energy was 
+neither need i nor heroic: on the one hand, many years, perhaps 
+many decades, of development — largely engineering develop- 
+
+
+This content downloaded from 195.34.78.178 on Tue, 10 Jun 2014 14:17:18 PM 
+All use subject to JSTOR Terms and Conditions 
+
+
+CONTROL OF ATOMIC ENERGY 243 
+
+
+ment — with the purpose of providing new sources of power; on 
+the other hand, a new aie of instruments for the exploration 
+of the physical and biological world, and in time, for their further 
+set to be added to the always growing arsenal of what 
+scientists and engineers have had available. 
+
+Three other matters were clear at that time. On the one hand, 
+the development of atomic power could not be separated from 
+technological development essential for and largely sufficient for 
+the manufacture of atomic weapons. On the other hand, neither 
+the development of power nor the effective and widespread use 
+of the new tools of research and technology could prosper fully 
+without a very considerable openness and candor with regard to 
+the technical realities — an openness and candor difficult to rec- 
+oncile with the traditional requirements of military security 
+about the development of weapons of war. To these general con- 
+siderations we should add again: although the peaceful use of 
+atomic energy might well aidiean the interests of technical 
+people, and appear as an inspiration to statesmen concerned with 
+the welfare of mankind, it could not make a direct appeal to the 
+weary, hungry, almost desperate peoples of a war-ravaged world. 
+Such an appeal, if made, could hardly be made in honesty. 
+
+
+III 
+
+
+Important though these views as to the peaceful future of 
+atomic energy may have been, they were overshadowed then as 
+they have been overshadowed since by a preoccupation of quite 
+another sort. In an over-simplified statement, this is the pre- 
+occupation for the “control of atomic energy to the extent neces- 
+sary to prevent its use for destructive purposes.” Two sorts of con- 
+siderations bear on this problem, one deriving from the nature of 
+atomic armament, and the other from the palitical climate of the 
+postwar world. The former set of arguments has perhaps been 
+
+iven more relative weight in public discussions. Surely it 1s in the 
+Tater that the peti ga cs of policy should have lain. 
+
+Even the weapons tested in New Mexico and used against 
+Hiroshima and Nagasaki served to demonstrate that with the re- 
+lease of atomic energy quite revolutionary changes had occurred 
+in the techniques of warfare. It was quite clear that with nations 
+committed to atomic armament, weapons even more terrifying, 
+and perhaps vastly more terrifying, than those already delivered 
+would be developed; and it was clear even from a casual estimate 
+
+
+This content downloaded from 195.34.78.178 on Tue, 10 Jun 2014 14:17:18 PM 
+All use subject to JSTOR Terms and Conditions 
+
+
+244 FOREIGN AFFAIRS 
+
+
+of costs that nations so committed to atomic armament could 
+accumulate these weapons in truly terrifying numbers. 
+
+As the war ended, adequate defenses against the delivery of 
+atomic weapons almost certainly did not exist. There would be 
+variations, as military developments progressed, in the advan- 
+tages of offense and defense. If effective antiaircraft interception 
+is developed before new types of aircraft or rockets, there may 
+even be periods during which the delivery of atomic weapons is 
+seriously handicapped. But it was clear then that for the most 
+
+art the development of these weapons had given to strategic 
+bombardment — that form of warfare which peculiarly charac- 
+terized the last war, and contributed so much to the desolation 
+of Europe and Asia — a new and important and qualitative in- 
+crease in ferocity. It was not necessary to envisage novel and in- 
+genious methods of delivery, such as the suitcase and the tramp 
+steamer, to make this point clear to us. To this must be added a 
+preoccupation not unnatural for us in the United States. It seemed 
+unreasonable to suppose that any future major conflict would 
+leave this country as relatively unharmed as had the last two 
+wars and as totally unscathed by strategic bombardment. These 
+points have been so commonly made, and with such fervor, that 
+they have perhaps obscured to some extent the true nature of the 
+issues involved in the international control of atomic energy. 
+
+In this last war, the fabric of civilized life has been worn so thin 
+in Europe that there is the gravest danger that it will not hold. 
+Twice in a generation, the efforts and the moral energies of a 
+large part of mankind have been devoted to the fighting of wars. 
+If the atomic bomb was to have meaning in the contemporary 
+world, it would have to be in showing that not modern man, not 
+navies, not ground forces, but war itself was obsolete. The ques- 
+tion of the fe of atomic energy thus appeared in one main 
+constructive context: ‘What can be done with this development 
+to make it an instrument for the preservation of peace and for 
+bringing about those altered relations between the sovereign na- 
+tions on the basis of which there is some reason to hope that 
+peace can be preserved?” 
+
+Although this may have been the question in principle, a far 
+more concrete and immediate problem faced the world. It is true 
+that there may be a certain myopia in too great a preoccupation 
+with relations between the Soviet Union and the United States. 
+It is true that other sources of conflict, other possibilities of war, 
+
+
+This content downloaded from 195.34.78.178 on Tue, 10 Jun 2014 14:17:18 PM 
+All use subject to JSTOR Terms and Conditions 
+
+
+CONTROL OF ATOMIC ENERGY 245 
+
+
+and other problems which must be solved if the world is to achieve 
+peace can well be discerned and could well be decisive. But al- 
+though the codperation — on a scale, with an intimacy and ef- 
+fectiveness heretofore unknown — between the Soviet Union and 
+the United States may not be sufficient for the establishment of 
+peace, it clearly was necessary. Thus, the question naturally 
+presented itself whether the codperative control and develop- 
+ment of atomic energy might not play a unique and decisive part 
+in the program of establishing such codperation. Clearly, quite 
+widely divergent views might be held as to the readiness of the 
+Soviet Union to embark on such codperation — varying from the 
+belief that it would be forthcoming if the United States indicated 
+the desire for it to the conviction that it was not in our power to 
+bring it about. The prevalent view, and, I believe, that on which 
+our subsequent policy was based, was that such codperation 
+would represent a reversal of past Soviet policy, and to some ex- 
+tent a repudiation of elements of Soviet political theory, very 
+much more incisive in fact than the corresponding attitudes on 
+our part. The prevalent view, that is, saw in the problems of 
+atomic energy, not an opportunity to allow the leaders of the 
+Soviet state to carry out a policy of international rid ap ena of 
+openness, candor and renunciation of violence to which they were 
+a committed; rather, it saw an opportunity to cause a de- 
+cisive change in the whole trend of Soviet policy, without which 
+the prospects of an assured peace were indeed rather gloomy, and 
+which might well be, if accomplished, the turning point in the 
+attern of international relations. 
+
+Why did the field of atomic energy appear hopeful for this en- 
+deavor? It appeared hopeful only in part because of the terrifying 
+nature of atomic warfare, which to all peoples and some govern- 
+ments would provide a strong incentive to adapt themselves to a 
+changing technology. As such, atomic weapons were only a sort 
+of consummation of the total character of warfare as waged in 
+this last world war, a sort of final argument, if one were needed, a 
+straw to break the camel’s back. But there were other points far 
+more specific. The control of atomic weapons always appeared 
+possible only on the basis of an intensive and working collabora- 
+tion between peoples of many nationalities, on the creation (at 
+least in this area) of supra-national patterns of communication, 
+of work and of development. The Stenens of atomicenergy lay 
+in an area peculiarly suited to such internationalization, and in 
+
+
+This content downloaded from 195.34.78.178 on Tue, 10 Jun 2014 14:17:18 PM 
+All use subject to JSTOR Terms and Conditions 
+
+
+246 FOREIGN AFFAIRS 
+
+
+fact requiring it for the most effective exploitation, almost on 
+technical grounds alone. The development of atomic energy lay 
+in a field international by tradition and untouched by preéxisting 
+national patterns of control. Thus the problem as it appeared in 
+the summer of 1945 was to use our understanding of atomic en- 
+ergy, and the developments that we had carried out, with their 
+implied hope and implied threat, to see whether in this area in- 
+ternational barriers might not be broken down and patterns of 
+candor and codperation established which would make the peace 
+of the world. 
+
+It was impossible even at that time not to raise two questions 
+of some gravity. One was whether Soviet policy had not already 
+congealed into almost total non-codperation. The difficulties dur- 
+ing the war years, both in cooperation on technical problems 
+which had some analogy to atomic energy, and in the more gen- 
+eral matters of the codrdination of strategy, could certainly be 
+read as a bad augury for a codperative future. A second and re- 
+lated question was whether the development of atomic weapons 
+by Great Britain, Canada and the United States, and the an- 
+nouncement of this completed development at the end of the war, 
+might not itself rd toad to cast a doubt upon our willingness to 
+cooperate in the future with allies with whom we had not in this 
+field been willing to codperate during the war. 
+
+In any case, these doubts = rather strongly to the need 
+for discussions between the heads of state and their immediate 
+advisors, in an attempt to re-open the issue of far-reaching co- 
+operation. The later —— of problems of atomic energy to 
+discussions within the United Nations, where matters of the 
+highest policy could only be touched upon with difficulty and 
+clumsily, would 6 tr to have prejudiced the chances of any 
+genuine rac of minds. 
+
+In the field of atomic energy our own security demanded a quite 
+new approach to international problems. The security of all peo- 
+ples would be jeopardized by a failure to establish new systems 
+of openness and codperation between the nations; and many 
+favorable circumstances made concrete cooperative action appear 
+attractive and feasible. Thus atomic energy had a special rdle in 
+international affairs. Yet it should be stressed again that no 
+prospect of intimate collaboration in this field appeared likely of 
+success unless coupled with a comparable codperation in other 
+fields. It should be stressed again that if atomic energy appeared 
+
+
+This content downloaded from 195.34.78.178 on Tue, 10 Jun 2014 14:17:18 PM 
+All use subject to JSTOR Terms and Conditions 
+
+
+CONTROL OF ATOMIC ENERGY 247 
+
+
+of some importance as an international issue, it was precisely be- 
+cause it was not entirely separable from other issues, precisely 
+because what was done in that field might be prototypical of 
+what could be done in others, and precisely because we appeared 
+to have in this a certain freedom of manceuvre — which our 
+technical developments appeared to have given us — to ask for a 
+consideration on the highest possible plane of the means by which 
+the nations of the world could learn so to alter their relations that 
+future wars would no longer be likely. 
+
+
+IV 
+
+
+The views which have just been outlined no doubt reflect only 
+roughly those current in the closing months of the war, among the 
+people to whom familiarity or responsibility had made the nature 
+of atomic energy apparent. That considerations such as these 
+should have found expression in the policy of the people and the 
+Government of the United States is itself somewhat surprising. 
+One must bear in mind that the field of atomic energy was quite 
+unfamiliar to the people of this country, that the whole spirit 
+and temper of a development of this kind would require explain- 
+ing and reéxplaining. One must bear in mind that for reasons of 
+security much that was relevant to an understanding of the prob- 
+lem could not be revealed and cannot be revealed today. One 
+must bear in mind that with the end of the war there was a wide- 
+spread nostalgia among all our people that the efforts and ten- 
+sions of the war years be relaxed and that we return to a more 
+familiar and less arduous life. That under these circumstances the 
+United States should have developed, and in large part com- 
+mitted itself to, a policy of genuine internationalization of atomic 
+energy, and that it should have fortified this policy with concrete, 
+if sketchy, proposals as to how the internationalization was to be 
+accomplished, and indeed that it should have taken the initiative 
+in putting these views before the governments of the other 
+Powers — this should not be too lightly dismissed as a remark- 
+able achievement in the democratic formulation of public policy. 
+Nevertheless, this has cost something. 
+
+Perhaps most of all what it has cost is that in our reoccupation 
+with determining and clarifying our own policy, we cies given far 
+too little thought to attempting to influence that of the Soviet 
+Union on the only plane where such an influence could be effective. 
+We have allowed our own internal preoccupations to make us 
+
+
+This content downloaded from 195.34.78.178 on Tue, 10 Jun 2014 14:17:18 PM 
+All use subject to JSTOR Terms and Conditions 
+
+
+248 FOREIGN AFFAIRS 
+
+
+content to put forward our views in the world forum of the United 
+Nations, without pursuing early enough, on a high enough plane, 
+or with a fixed enough resolution, the objective of making the 
+heads of the Soviet state in part, at least, party to our effort. Our 
+internal effort has cost delay, it has cost confusion, it has cost the 
+injection of some irrelevant and some inconsistent elements in our 
+policy with regard to atomic energy. Above all, it has cost a sort 
+of schizophrenic separation of our dealings in this field from our 
+dealings in all others. In fact, in order to keep pace with political 
+developments all over the world, we have found ourselves negat- 
+ing in many concrete political contexts the possibility of that 
+confidence and that codperation which we were asking for in the 
+field of atomic energy. It is surely idle to speculate, as 1t may well 
+be meaningless to ask, whether, if this country had had its own 
+thoughts in better order in June 1945, and had been prepared to 
+act upon them, its policies would have met with greater success. 
+Only an historian to whom the intimacies of Soviet thinking and 
+Soviet decision are freely available would be able to begin to 
+answer such a question. But the evidence, as the actual course of 
+events has unfolded it, necessarily gives little support to the view 
+that by prompter, clearer and more magnanimous action we 
+might have achieved our on 
+
+The history of the development of United States atomic energy 
+policy from the first pronouncements of President Truman and 
+Secretary Stimson on August 6, 1945, to the most recent detailed 
+working papers of the United States representative on the United 
+Nations Atomic Energy Commission, is of public record, and has 
+in large part been summarized by the State Department’s report 
+“International Control of Atomic Energy.” ! Two aspects of this 
+development need to be specially mentioned. One has to do with 
+what may be called the aim of United States policy — the sketch 
+of our picture of the world as we would like to see it in so far as 
+atomic energy was concerned. Here, the principles of internation- 
+alization, openness, candor and the complete absence of secrecy, 
+and the emphasis on codperative, constructive development, the 
+absence of international rivalry, the absence of legal right for 
+national governments to intervene — these are the an on 
+which our policy was built. It is quite clear that in this field we 
+would like to see patterns established which, if they were more 
+
+
+1“Tnternational Control of Atomic Energy: Growth of a Policy.” Washington: Department 
+of State Publication 2702, 1947. 
+
+
+This content downloaded from 195.34.78.178 on Tue, 10 Jun 2014 14:17:18 PM 
+All use subject to JSTOR Terms and Conditions 
+
+
+CONTROL OF ATOMIC ENERGY 249 
+
+
+generally extended, would constitute some of the most vital ele- 
+ments of a new international law: patterns not unrelated to the 
+ideals which more generally and eloquently are expressed by the 
+advocates of world government. It has naturally taken some time 
+for it to be clear that more modest attempts at control were likely 
+to agepravate rather than alleviate the international rivalries and 
+suspicions which it is our purpose to abolish. 
+
+his solution which the United States has proposed and advo- 
+cated is a radical solution, and clearly calls for a spirit of mutual 
+confidence and trust 1n order to give it any elements of substance. 
+Only in the field of sanctions — of the enforcement of undertak- 
+ings with regard to atomic energy — has the policy of the United 
+States necessarily been somewhat conservative. Here in an effort 
+to fit this problem of enforcement into the preéxisting structure of 
+the United Nations it has had to rely on the prospects of collective 
+security to protect complying states against the deliberate efforts 
+of another state to evade controls, and to arm atomically. 
+
+The second aspect of our policy which needs to be mentioned is 
+that while these proposals were being developed, and their sound- 
+ness explored and understood, the very bases for international 
+codperation between the United States and the Soviet Union 
+were being eradicated by a revelation of their deep conflicts of 
+interest, the deep and apparently mutual repugnance of their 
+ways of life, and the apparent conviction on the part of the Soviet 
+Union of the inevitability of conflict — and not in ideas alone, but 
+in force. For these reasons, the United States has coupled its far- 
+reaching proposals for the future of atomic energy with rather 
+guarded reference to the safeguards required, lest in our transi- 
+tion to the happy state of international control we find ourselves 
+at a marked relative disadvantage. 
+
+Many factors have contributed to this background of caution. 
+There appears to be little doubt that at the asa time our unique 
+possession of the facilities and weapons of atomic energy consti- 
+tute military advantages which we only reluctantly would lay 
+down. There appears to be little doubt that we yearn for the 
+notion of a trusteeship, more or less as it was formulated by Presi- 
+dent Truman in his Navy Day address of late 1945: we would de- 
+sire, that 1s, a situation in which our pacific intent was recognized 
+and in which the nations of the world would gladly see us the sole 
+possessors of atomic weapons. As a corollary, we are reluctant to 
+see any of the knowledge on which our present mastery of atomic 
+
+
+This content downloaded from 195.34.78.178 on Tue, 10 Jun 2014 14:17:18 PM 
+All use subject to JSTOR Terms and Conditions 
+
+
+250 FOREIGN AFFAIRS 
+
+
+energy rests, revealed to potential enemies. Natural and in- 
+evitable as these desires are, they nevertheless stand in bleak con- 
+tradiction to our central proposals for the renunciation of sover- 
+eignty, secrecy and rivalry in the field of atomic energy. Here 
+again, it is no doubt idle to ask how this country would have re- 
+sponded had the Soviet Union 4g parares the problem of atomic 
+energy control in a true spirit of codperation. Such a situation 
+presupposes those profound changes in all of Soviet policy, which 
+in their reactions upon us would have altered the nature of our 
+political purposes, and opened new avenues for establishing inter- 
+national control, unfettered by the conditions which in the present 
+state of the world we no doubt shall insist upon. Nor should it be 
+forgotten that were there more reality to the plans for the inter- 
+nationalization of atomic energy, we ourselves, and the govern- 
+ments of other countries as well, would have found many diff- 
+culties in reconciling particular national security, custom and 
+advantage with an over-all international plan for insuring the 
+security of the world’s peoples. That these a have not 
+arisen in any serious form reflects the lack of reality of all dis- 
+cussions to date. 
+
+Yet despite these limitations the work of the United Nations 
+Atomic Energy Commission has established one point: through 
+many months of discussion, under circumstances of often dis- 
+
+iriting frustration, and by delegates not initially committed to 
+it, the basic idea of security through international codperative 
+development has proven its extraordinary and profound vitality. 
+
+
+Vv 
+
+
+The view sketched above of the international aspects of the 
+problems of atomic energy is thus a history of high, if not provably 
+unreasonable hope, and of failure. Questions will naturally arise 
+as to whether limited but nevertheless worthy objectives cannot 
+be achieved in this field. Thus, there is the question of whether 
+agreements to outlaw atomic weapons more like the conventional 
+agreements, supplemented by a more modest apparatus for in- 
+spection, may not give us some degree of security. Possibly when 
+x lines of political hostility were not as sharply drawn as they 
+are now between the Soviet Union and the United States, we 
+might have tried to find an affirmative answer to this question. 
+Were we not dealing with a rival whose normal practices, even in 
+matters having nothing to do with atomic energy, involve secrecy 
+
+
+This content downloaded from 195.34.78.178 on Tue, 10 Jun 2014 14:17:18 PM 
+All use subject to JSTOR Terms and Conditions 
+
+
+CONTROL OF ATOMIC ENERGY 251 
+
+
+and police control which is the very opposite of the openness that 
+we have advocated — and under suitable assurances offered to 
+adopt — we might believe that less radical steps of internation- 
+alization could be adequate. The history of past efforts to outlaw 
+weapons, to reduce armaments or to maintain peace by such 
+methods gives little encouragement for hopefulness regarding 
+these approaches. 
+
+Nor does it seem reasonable to hope, with the world as it now 
+is, and with our policies in fields other than atomic energy as 
+clearly predicated as they now are on conflict (which is not the 
+same as war) with the Soviet Union, that intermediate solutions 
+involving, perhaps, a formal renunciation of atomic armament, 
+and some concession with regard to access to atomic facilities on 
+the part of international inspectors, will appeal to us as useful. 
+They will hardly do so either in the achievement of present secur- 
+ity or the later realization of codperative relations. fides it has 
+come to be the official position of the Government of the United 
+States that palliative solutions along these lines would almost 
+certainly give rise to intensified rey pee and intensified rival- 
+ries, whereas they manifestly would lose for us whatever national 
+advantages — and they cannot a priori be dismissed as incon- 
+siderable — our prior development and extensive familiarity with 
+atomic energy now give us. 
+
+Clearly we may not lightly dismiss consideration of whether 
+there are other approaches to the problem of the international 
+control of atomic energy which have a better chance of contribut- 
+ing to our security. In fact, recent literature is replete with sug- 
+gestions along these lines. No one aware of the gravity of the 
+situation can fail to advocate what appears to be a hopeful avenue 
+of approach; and no one has a right to dismiss these proposals 
+without the most careful consideration. 
+
+It is my own view that none of these proposals has any elements 
+of hopefulness in the short term. In fact, it appears most doubtful 
+if there are now any courses open to the United States which can 
+give to our people the sort of security they have known in the 
+past. The argument that such a course must exist seems to be 
+specious; and in the last analysis most current proposals rest on 
+this argument. 
+
+This does not mean that on a lower plane, and with much more 
+limited objectives, problems of policy with regard to atomic en- 
+ergy will not arise, even in the international field. Clearly, ar- 
+
+
+This content downloaded from 195.34.78.178 on Tue, 10 Jun 2014 14:17:18 PM 
+All use subject to JSTOR Terms and Conditions 
+
+
+259 FOREIGN AFFAIRS 
+
+
+rangements that could be established between the Government 
+of the United States and other governments, for the purpose of 
+profitably exploiting atomic energy or of strengthening our rela- 
+tive position in this field, have some sort of bearing on security, 
+and have an important, if not transparent, bearing on the e 
+abilities for the maintenance of peace. But such arrangements, 
+difficult though they may be to determine, and significant though 
+they may be for our future welfare, cannot pretend, and.do not 
+pretend, to offer us real security, nor are they direct steps toward 
+the perfection of those codperative arrangements to which we 
+rightly look as the best insurance of peace. They belong in the 
+same class, in our present situation, as the proper, imaginative 
+and wise conduct of our domestic atomic-energy program. They 
+are part of the necessary conditions for the long-range mainte- 
+nance of peace; but no one would for a moment suppose them to be 
+sufficient. | 
+
+Thus, if we try to examine what part atomic energy may play in 
+international relations in the near future, we can hardly believe 
+that it alone can reverse the trend to rivalry and conflict which 
+exists in the present-day world. My own view is that only a pro- 
+found change in the whole orientation of Soviet policy, and a cor- 
+responding reorientation of our own, even in matters far from 
+atomic energy, would give substance to the initial high hopes. The 
+aim of those who would work for the establishment of peace, and 
+who would wish to see atomic energy pay whatever useful part 
+it can in bringing this to pass, must be to maintain what was 
+sound in the early hopes, and by all means in their power to look 
+to their eventual realization. 
+
+It is necessarily denied to us in these days to see at what time, 
+to what immediate ends, in what context, and in what manner of 
+world, we may return again to the great issues touched on by the 
+international control of atomic energy. Yet even in the history of 
+recent failure, we may recognize elements that bear more gener- 
+ally on the health of our civilization. We may discern the essential 
+harmony, in a world where science has extended and deepened 
+our understanding of the common sources of power for evil and 
+
+ower for good, of restraining the one and of eet the other. 
+his is seed we take with us, travelling to a land we cannot see, to 
+plant in new soil. 
+
+
+This content downloaded from 195.34.78.178 on Tue, 10 Jun 2014 14:17:18 PM 
+All use subject to JSTOR Terms and Conditions 
+
+

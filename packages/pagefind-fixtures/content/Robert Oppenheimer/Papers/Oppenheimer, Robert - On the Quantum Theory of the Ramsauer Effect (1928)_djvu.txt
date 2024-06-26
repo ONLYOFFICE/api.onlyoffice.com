@@ -1,0 +1,165 @@
+On the Quantum Theory of the Ramsauer Effect 
+
+Author(s): J. R. Oppenheimer 
+
+Source: Proceedings of the National Academy of Sciences of the United States of America, 
+Vol. 14, No. 3 (Mar. 15, 1928), pp. 261-262 
+
+Published by: National Academy of Sciences 
+
+Stable URL: http://www. jstor.org/stable/8542 1 
+
+
+Accessed: 04/05/2014 07:07 
+
+
+Your use of the JSTOR archive indicates your acceptance of the Terms & Conditions of Use, available at 
+http://www.jstor.org/page/info/about/policies/terms.jsp 
+
+
+JSTOR is a not-for-profit service that helps scholars, researchers, and students discover, use, and build upon a wide range of 
+content in a trusted digital archive. We use information technology and tools to increase productivity and facilitate new forms 
+of scholarship. For more information about JSTOR, please contact support @jstor.org. 
+
+
+National Academy of Sciences 1s collaborating with JSTOR to digitize, preserve and extend access to 
+Proceedings of the National Academy of Sciences of the United States of America. 
+
+
+http://www.jstor.org 
+
+
+This content downloaded from 195.78.109.15 on Sun, 4 May 2014 07:07:52 AM 
+All use subject to JSTOR Terms and Conditions 
+
+
+VoL. 14, 1928 PHYSICS: J. R. OPPENHEIMER 261 
+
+
+ON THE .QUANTUM THEORY OF THE RAMSAUER EFFECT 
+By J. R. OPPENHEIMER* 
+NORMAN BRIDGE LABORATORY OF Puysics, PASADENA 
+
+
+Communicated February 21, 1928 
+
+
+The Ramsauer effect does not correspond to the decrease in optical 
+scattering by a particle when the wave-length of the light is increased. 
+For one may compute the cross-section for elastic collision of an electron 
+with an atom, without making the approximations used by Born. If 
+one does this, and neglects the resonance of the colliding electron with 
+the atomic electrons one finds that, for atoms with no dipole moment in 
+the normal state, the cross-section approaches a finite limit when the 
+electronic velocity is decreased. The only general result of this calculation 
+is that the distribution of scattered electrons tends, in this limit, to become 
+uniform over all angles. 
+
+If, however, one considers the electronic resonance and spin, one obtains 
+results which seem adequate to account for the effects observed by Ram- 
+sauer. ‘Thus one may compute two first order cross-sections for the elastic 
+collision of an electron and a hydrogenic atom, corresponding to initial 
+orbital wave functions respectively symmetric and anti-symmetric in 
+the codrdinates of the impacting electron and the atomic electron. ‘These 
+turn out to be of the form | 
+
+
+| f(a, 5) =e g(v, 5) | 
+
+
+and 
+
+
+|f(v, 6) — g(v, 8) |®. 
+
+
+Here v is the electronic velocity, 6 the angle of deflection; f and g are 
+positive; f corresponds to transitions in which the atomic electron remains 
+undisturbed, and the free electron changes its direction of motion by the 
+angle 6; g corresponds to transitions in which the free electron takes the 
+place of the atomic electron and this latter electron leaves the atom with 
+a velocity v and a direction of motion 6. For fixed 6 and large v, fis much 
+greater than g, while for v = 0, g = 6f; and f becomes equal to g for 
+velocities of the order of a volt. Thus the symmetric wave function gives 
+a cross-section which is always greater than that computed without reso- 
+nance: ‘The anti-symmetric one gives a cross-section which, for each angle 
+of deflection, vanishes for some small velocity; and the corresponding 
+total cross-section | 
+
+
+i: 6d | f(a, 6) — g(v, 6)|? 
+
+
+has a sharp minimum at about a volt. 
+
+
+This content downloaded from 195.78.109.15 on Sun, 4 May 2014 07:07:52 AM 
+All use subject to JSTOR Terms and Conditions 
+
+
+262 PHYSICS: WIENER AND STRUIK Proc. N. A. S. 
+
+
+Now, in general, both symmetrical and anti-symmetrical wave functions 
+will occur; and the orbital wave function will involve terms which are 
+symmetrical in the colliding electron and one of the atomic electrons. 
+But if the atom has only paired electrons, the symmetric orbital solution 
+will be excluded by Pauli’s principle. Hence in this case (e.g., helium, 
+argon, methane) the cross-section will be given by the anti-symmetric 
+wave function alone, and may pass through a minimum for sufficiently. 
+low velocities. | 
+
+The position and shape of the minimum will depend essentially upon 
+the series of wave functions of the atom, and may be computed only by 
+complete solution of the collision problem; the first order cross-section 
+is inadequate for quantitative prediction. But the occurrence of the 
+minimum depends upon the chemical properties of the atom; this is in 
+good agreement with the available experiments,! and particularly with 
+those of Rusch, who reports a sharp minimum in the cross-sections of 
+argon and krypton. Details of the theory will be published elsewhere. 
+
+
+* NATIONAL RESEARCH FELLOW. 
+1 Hdb. d. Phys., 23, 646, 1926. 
+
+
+THE FIFTH DIMENSION IN RELATIVISTIC QUANTUM THEORY 
+
+
+By NoRBERT WIENER AND D. J. STRUIK 
+DEPARTMENT OF MATHEMATICS, MASSACHUSETTS INSTITUTE OF TECHNOLOGY 
+
+
+Communicated January 24, 1928 
+
+
+O. Klein! has shown that the Schrédinger equation 
+
+
+Lf 2 wh 4 trie $5 Ov 
+a/ —g ik=1 Ox? ox" he j=1 Ox? 
+Are? ik mc _ 
+hc? LE, ee | ss 
+may be cast into the form 
+1 & 0 ,~,~— » dv | 
+—— pce = — OF 2 
+TS ztoan V YY ov | @) 
+
+
+where 
+
+
+2rix® 
+U(x, xt, 07, 08, x4) =e Pat, x, x8, x"), 
+and the matrix y;; has the components 
+1 
+
+
+Yo = —>>> 
+mc? 
+
+
+This content downloaded from 195.78.109.15 on Sun, 4 May 2014 07:07:52 AM 
+All use subject to JSTOR Terms and Conditions 
+
+

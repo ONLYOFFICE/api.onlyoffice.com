@@ -1,0 +1,1059 @@
+THE 
+PHYSICAL REVIEW 
+
+
+cA journal of experimental and theoretical physics established by E. L. Nichols in 1893 
+
+
+SECOND Serigzs, Vor. 70, Nos. 7 aAnb 8 
+
+
+OCTOBER 1 anp 15, 1946 
+
+
+Reaction of Radiation on Electron Scattering and Heitler’s 
+Theory of Radiation Damping 
+
+
+H. A. BETHE 
+Cornell University, Ithaca, New York 
+
+
+AND 
+
+
+J. ROBERT OPPENHEIMER 
+University of California, Berkeley, California 
+(Received June 26, 1946) 
+
+
+The reaction of radiation on the scattering of electrons is treated on the basis of Heitler’s 
+theory of radiation damping. Because in this theory no account is taken of virtual processes, 
+the infra-red catastrophe reappears, and the theory gives a total cross section for scattering, 
+which depends critically on the longest wave-length radiation that can be emitted, and which 
+does not agree with the correspondence principle. It seems probable that only by a modifica- 
+tion of present theories specific to the domain of high energies and small distances will a satis- 
+factory solution of this simple problem be found. 
+
+
+1. THE INFRA-RED CATASTROPHE IN 
+THE ORDINARY THEORY 
+
+
+MONG the many problems involving radia- 
+
+tion damping there is one which has been 
+
+the subject of much study and to which no 
+
+satisfactory answer has yet been obtained. This 
+
+is the reaction of radiation on the scattering of 
+
+an electron. 
+
+If we consider the scattering of an electron in 
+
+a fixed potential field, which we may for con- 
+
+venience assume to be weak, then the scattering 
+cross section of the electron is given by 
+
+
+m 2 
+do= (— Vin) dw, (1) 
+
+
+where k and p are initial and final momenta, 
+
+
+Vep= dr Veile—9)-2h, (1a) 
+
+
+dp=p*dpdw, m is the mass, V the scattering 
+potential. One would expect that the reaction 
+of radiation emitted in the collision might not 
+affect the probability of scattering for low ve- 
+locity of the electron because the recoil of the 
+emitted radiation should be negligible. But as 
+the velocity of the electron is increased, correc- 
+tions of order (v/c)* should appear in the formula 
+for scattering, which are proportional to the 
+square of the electron’s charge. 
+
+It is clear that these corrections, while pre- 
+sumably small, are in principle subject to direct 
+experimental study. The theory of the inter- 
+action of radiation with matter should make it 
+possible to compute them. As is well known, if 
+one applies the accepted principles of quantum 
+electrodynamics to this problem, one does not 
+obtain a reasonable or a finite answer. We should 
+like to discuss the status of this problem from a 
+somewhat new point of view in order that we can 
+
+
+451 
+
+
+452 He As 
+
+
+see how to apply to it the proposals which have 
+been put forward by Heitler! for eliminating the 
+divergence difficulties of the present theory. In 
+fact, it seems not unreasonable to apply all 
+proposed modifications of electrodynamics to 
+this simple problem as a sort of criterion of their 
+adequacy. Judged by this criterion, the pro- 
+posals put forth by Heitler must be regarded as 
+unsatisfactory. 
+
+The difficulties of this problem first appeared 
+in the form of the so-called infra-red catastrophe. 
+In fact, if one computes by perturbation methods 
+the probability that an electron will be scattered 
+with the emission of a quantum of frequency q 
+one obtains the cross section 
+
+
+2e? (p—k)* dg 
+nd 
+me gq 
+
+
+(2) 
+
+
+whose integral will diverge logarithmically for 
+small g. This problem has been analyzed in 
+detail by Bloch and Nordsieck.? These authors 
+showed that it is in fact unlikely that a scattering 
+process will take place with the emission of 0, 1, 
+or, in fact, any finite number of quanta. Specifi- 
+cally by a rigorous but non-relativistic solution 
+of the problem for low frequencies, they showed 
+that the increase in probability of scattering with 
+the emission of a large number of quanta 1s 
+quantitatively compensated by the decrease in 
+the probability of elastic scattering or scattering 
+with the emission of a smaller number of quanta. 
+Thus, they obtained for the total probability of 
+scattering the result (1), as one would indeed 
+expect. 
+
+The situation is, however, not as satisfactory 
+as this, because Bloch and Nordsieck neglected 
+the fact that only quanta which are energetically 
+capable of emission, i.e., below the high fre- 
+quency limit given by the electron’s kinetic 
+energy, can in fact be emitted. 
+
+Taking this circumstance into account but 
+still calculating non-relativistically, Pauli and 
+Fierz® showed that the total cross section for 
+scattering is not unchanged but would in fact 
+vanish because the reaction on the probability of 
+
+1W. Heitler, Proc. Camb. Phil. Soc. 37, 291 (1941); 
+W. Heitler and H. W. Peng, Proc. Camb. Phil. Soc. 38, 
+296 (1942). 
+
+
+2F, Bloch and A. Nordsieck, Phys. Rev. 52, 54 (1937). 
+3W. Pauliand M. Fierz, Nuovo Cimento 15, 167 (1938). 
+
+
+BETHE AND J. 
+
+
+R. OPPENHEIMER 
+
+
+elastic scattering is not adequately compensated 
+by an increased probability for scattering with 
+the emission of high frequency quanta. The 
+divergences at high frequencies which appear in 
+this treatment are again logarithmic. 
+
+This subject was further clarified by Dancoff* 
+who considered what effect relativistic correc- 
+tions would have on the high frequency terms of 
+Pauli and Fierz. In doing this he necessarily 
+confined his attention to terms of the second 
+order in the electron’s charge. His result was 
+that these terms do not in general converge and 
+that relativistic corrections could not be counted 
+on to alter qualitatively the Pauli-Fierz result. 
+The details of Dancoff’s result further suggest 
+that the theory made no sense at all. Thus the 
+precise character of the infinite terms depends 
+on whether the scattering potential is a four- 
+vector or a world scalar and whether the spin of 
+the scattered particle 1s 0 or 4. It is not possible 
+to believe that in a problem involving only 
+charges moving with low velocity these deduc- 
+tions can have any relation to reality. 
+
+If we wish to consider this problem from the 
+point of view proposed by Heitler and, at the 
+same time, wish to be able to take relativistic 
+effects into account, it will be necessary to 
+analyze it in terms of the perturbation theory 
+based on the smallness of the electron’s charge. 
+If for a moment we introduce a lowest frequency 
+g, then it is easy to see the part played by the 
+arguments of Bloch and Nordsieck, Pauli and 
+Fierz, and Dancoff in determining the radiative 
+corrections. This frequency g can, in fact, be 
+fantastically low, and this situation may be 
+realized by considering the collision problem as 
+it would be if the electron and the scatterer 
+were both enclosed in a conducting box of 
+enormous dimensions. 
+
+When we carry out this calculation we can at 
+first neglect the contribution of processes in 
+which more than one quantum is involved, or 
+which involve a higher order of the electron’s 
+charge than the second. We then see that as 
+long as the frequency g is smaller than the upper 
+limit of the spectrum and the velocity of the 
+electron is small compared to the velocity of 
+light, two corrections to the scattering formula 
+
+
+4S. M. Dancoff, Phys. Rev. 55, 959 (1939), 
+
+
+RADIATION DAMPING 
+
+
+cancel. One of these is the positive correction 
+which comes from the probability of emitting a 
+quantum of frequency g 
+
+
+o 
+at 
+
+
+6,d¢= 
+
+
+dq 
+i ae aes 
+; (3) 
+
+
+4rhmc3 
+
+
+2e* (p—k)?’ dq ; 
+
+
+Er eeerereremnemmntin:  aeenateanmencntintethmeminictenmennitemnt maamaammnene 0. 
+
+
+The second is a negative correction to the 
+probability of scattering without emitting a 
+quantum of frequency 4g, 
+
+
+§.do= — 6,de. (4) 
+
+
+This second correction may be formally ob- 
+tained in either of two ways. (a) It may be 
+regarded as caused by the virtual emission and 
+reabsorption of a quantum of frequency q during 
+the scattering process; or (b) it may be regarded 
+as a renormalization of the probability that the 
+incident electron and the scattered electron will 
+in fact have no quanta associated with them. 
+These are, of course, equivalent descriptions. 
+The finite result of Bloch and Nordsieck follows 
+from an expansion of this simple argument to 
+processes involving the multiple emission of 
+quanta. The conclusion which appears above is 
+maintained throughout but, of course, as @ is 
+made smaller and smaller, the neglect of processes 
+involving more than one quantum finally be- 
+comes inadmissible. The argument of Pauli and 
+Fierz is then simply this: The probability of 
+scattering with emission of radiation has no 
+terms for frequency g>mv?/2h. On the other 
+hand, the corrections to the probability of 
+radiationless scattering continue for infinitely 
+high g and lead to a logarithmic divergence. 
+What Dancoff has done is to show that a con- 
+sistent relativistic calculation for these latter 
+terms does not give generally finite results. 
+
+We, therefore, see that the terms involving the 
+virtual emission of quanta as a correction to the 
+probability of radiationless scattering, and which 
+may alternatively be derived as a sort of re- 
+normalization of the probability that electrons 
+will be unaccompanied by quanta, have a dual 
+r6le. For low frequencies they are needed to 
+cancel the change in scattering probability 
+caused by the emission of a quantum, a change 
+
+
+453 
+
+
+which, as @ goes to 0, becomes logarithmically 
+infinite. For high frequencies these terms them- 
+selves have nothing left to cancel and give rise 
+to a new logarithmic divergence. Thus, no pro- 
+posal which is as simple as either including or 
+excluding these terms can give a finite result or 
+a sensible one. This is the essential reason why 
+Heitler’s proposals give an unsatisfactory answer 
+when applied to this simple problem. 
+
+
+2. HEITLER’S THEORY: QUALITATIVE 
+CONSIDERATIONS 
+
+
+In the theory of radiation damping developed 
+by Heitler and his collaborators, the transition 
+probability from an initial state, A, to a final 
+state, B, is determined by certain matrix ele- 
+ments U4gz which are related to the matrix 
+element H4z of the Hamiltonian by the equation 
+
+
+Uses=Haptin dic pcHacUcs. (5) 
+
+
+The sum goes over all states, C, of the same 
+energy as the initial and final state; pc is the 
+density of states of the type C per unit energy. 
+The cross section of a process leading from 
+state A to B is given in Heitler’s theory by 
+
+
+20 
+7483 =—ps| Uaszl?, 
+VA 
+
+
+(6) 
+
+
+where v4 is the velocity of the incident particle, 
+and pz is the density of states of type B per unit 
+energy. Equation (6) is entirely analogous to 
+the usual formula for the cross section except 
+that the matrix element of the Hamiltonian is 
+replaced by that of U. 
+
+The last term in Eq. (5) represents the radia- 
+tion damping. Its function is to keep the transi- 
+tion matrix elements U finite even if the matrix 
+elements of the Hamiltonian or the number of 
+possible final states become very large. Heitler 
+and his collaborators have proved in many 
+papers on the meson theory that all cross sections 
+actually remain finite at high energies while they 
+would increase indefinitely without radiation 
+damping. Also in our case, the result for the 
+cross section is finite under all conditions, but 
+we shall show that the result does not agree 
+with physical expectations as discussed in Sec- 
+tion 1. 
+
+
+454 
+
+
+The matrix elements of the Hamiltonian 
+relevant for our problem are of two types. The 
+first type is the matrix element for simple 
+scattering which is simply the Fourier component 
+of the potential as given in Eq. (la), 
+
+
+(K| Z| p) = Vip. (7) 
+
+
+The other relevant matrix elements correspond 
+to the emission of a quantum q together with 
+the scattering of the electron from its initial 
+momentum k to the final momentum p. These 
+matrix elements are 
+
+
+(k| Z| pq) = Cq-*(p—k) -uVig, (8) 
+where 
+
+
+C=e/2rhimc} (8a) 
+
+
+is a constant and uw is a unit vector in the direc- 
+tion of polarization of the quantum. The matrix 
+element (8) is normalized in such a way that the 
+number of states of the quantum can be simply 
+taken equal to the volume in g-space, dq =47q’*dq. 
+It is easily seen that (8) agrees with Eq. (3) of 
+the first section. 
+
+We shall now estimate the order of magnitude 
+of the cross section for scattering with emission 
+of radiation in first approximation; i.e., with the 
+assumption that radiation is small. We shall also 
+estimate the reaction of radiation on the radia- 
+tionless scattering, represented by the radiation 
+damping term in (5). We shall find that in 
+contrast to the theory outlined in Section 1, 
+these two effects do not cancel, and we shall 
+show that this lack of cancellation makes 
+Heitler’s theory unacceptable. 
+
+In first approximation we may put U=H for 
+transitions involving radiation. According to (6) 
+and (8), the cross section for transitions with 
+radiation will then be proportional to V?C? (apart 
+from other factors), which is of the order C? 
+times the cross section for scattering without 
+radiation. 
+
+We now consider the correction which radia- 
+tion makes to the cross section for radiationless 
+transitions by applying Eq. (5) to such transi- 
+tions. The radiation reaction is given by the 
+contribution of states C containing a quantum, 
+to the last term of (5). If we make again the 
+approximation Ucr=Hcpg for such states C, 
+their contribution to the last term of (5) will be 
+
+
+H. A. BETHE AND J. 
+
+
+R. OPPENHEIMER 
+
+
+of the order V?C?. Since Hag is of order V, the 
+relative magnitude of the radiation reaction term 
+in (5) is of order VC?. This is smaller than the 
+relative probability of collisions with radiation 
+by a factor of the order V, which can be made 
+arbitrarily small by a suitable choice of the 
+scatterer. 
+
+Actually, the effect of radiation reaction on 
+the cross section aap is even smaller. This is 
+because the damping term in (5) is imaginary 
+in our present approximation while Hz, is real. 
+The effect of the damping term on the cross 
+section oz, is only of the relative order of V?C* 
+which is extremely small because C contains the 
+(small) electron charge as a factor. Actually, 
+closer examination shows that the leading term 
+in the radiation reaction is not given by inserting 
+for Ucg its first approximation, Hcg. In the 
+next approximation, an imaginary term appears 
+in Ucg which is of the relative order V compared 
+with Hez, and this term gives a real contribution 
+to the radiation damping term in Eq. (5). The 
+effect of this, both on U4g and on the cross 
+section o,p, is of the relative order V?C?, whereas 
+the cross section for emission of radiation was 
+shown to be of the relative order C?. Therefore 
+we see that the transitions with emission of 
+radiation are not compensated by a correspond- 
+ing reduction of the cross section for scattering 
+without radiation. 
+
+This failure of compensation is especially 
+serious because the total probability of emission 
+of radiation diverges logarithmically for small 
+frequencies g as was shown after Eq. (2). The 
+total cross section for scattering with and without 
+emission of radiation will, therefore, depend on 
+the lower limit for the frequency, ¢, and thereby 
+on the size of the imaginary box in which the 
+radiator is considered to be enclosed. It is clear 
+that such a dependence has no physical meaning. 
+The Heitler theory of radiation damping in its 
+present form therefore does not solve the problem 
+of the infra-red catastrophe. Moreover, the red 
+end of the spectrum does not appear to involve 
+a profound problem which would require going 
+beyond the scope of present quantum mechanics, 
+so that the failure of Heitler’s theory must be 
+considered the more serious. 
+
+Heitler’s theory forbids, in fact, the customary 
+solution of the infra-red problem as outlined in 
+
+
+RADIATION DAMPING 
+
+
+Section 1. Heitler’s prescription is to calculate 
+the matrix element of each phenomenon only in 
+the first approximation in which such a matrix 
+element appears. This prescription serves to 
+eliminate the usual divergences at high fre- 
+quencies. However, it also eliminates in our case 
+the perturbation by virtual quanta of low fre- 
+quencies which gave the result (4), and thereby 
+eliminated the infra-red catastrophe. In Heitler’s 
+theory this perturbation must be left out and 
+there is, therefore, no adequate compensation 
+for the scattering which takes place with emission 
+of radiation. 
+
+
+3. HEITLER’S THEORY: QUANTITATIVE 
+CALCULATION 
+
+
+For a quantitative discussion of Eq. (5) we 
+shall make the simplifying assumption that the 
+matrix elements of the scattering potential V;.» 
+do not depend on the direction of the vectors k 
+and p. This amounts to assuming an interaction 
+potential of range very short compared to the 
+electron’s wave-length. In addition we _ shall 
+neglect the higher order effects such as the 
+emission of two quanta or the scattering of 
+quanta. We shall, however, make no restrictions 
+on the magnitude of the electronic charge e and 
+thereby of the constant C, nor any restrictions 
+on the magnitude of the matrix element Vip= V. 
+
+We shall first write down Eq. (5) explicitly for 
+transitions with and without radiation. Using 
+Dirac’s notation for the matrix element, we have 
+for transitions without radiation 
+
+
+(p’| U|p)=(p’|A |p) 
+
+
+_4xmp 
+
+
+i= f | ad ( ff U| 
+Tae a ee 
+
+
+_ 4armp dw’ 
+ir f 
+(27h)? 
+
+
+7, ae |H#|p’’q)(p"q| Up). (9) 
+
+
+For scattering with emission of radiation, we 
+have the Heitler equation 
+
+
+4nrmp du"’ 
+“Qah) 4a 
+*L(p’a| Z| pq) (p'’q| Up) 
++(p’q| |p’) (p”’| Up) J. 
+
+
+(p’q| U|p) =(p’q| A |p) +7 
+
+
+(10) 
+
+
+455 
+
+
+In any matrix element, q means that a quantum 
+exists in the respective state of the system; p or 
+p’ or p” denote the momentum of the electron, 
+pb the absolute value of the momentum which is 
+the same for all states, the integral dw’’ is over 
+all directions of p” and the integral dq is over 
+magnitude, direction and polarization of the 
+light quantum. 
+
+These equations are to be solved with expres- 
+sions (7) and (8) for the matrix elements of the 
+Hamiltonian. It is reasonable to assume, and it 
+will in fact be shown to be true, that the solution 
+will have the form 
+
+
+(p’| U|p) =Ai+Asp-p’/p’, 
+
+
+(11) 
+(p’q| U|p)=q-*(Bip’-u+Bzp-u). 
+
+
+Inserting (11) into (10) we obtain 
+
+
+Byp’-u+B.p-u=VC(p’—p)-u 
+
+
++—— [ ——[V(Bip"-0+Bip-w) 
+Ar 
+
+
++VC(p'—p’)-u(Ai+Aop”- p/p?) J. (12) 
+
+
+The integration over dw’’ is elementary. The 
+terms containing only one factor involving p” 
+vanish upon integration, whereas the average of 
+a term of the form p”-a p’”-b gives the result 
+a-b/3 upon averaging. If we also introduce the 
+abbreviation 
+
+
+W = (mp /2nh®) V, (13) 
+
+
+and then compare terms with p-u and terms 
+with p’-u on both sides of the equation, we find: 
+
+
+Bi= VC+1CWA,, 
+
+
+Be=—VC+iWB.-iwea,/3. 
+
+
+In a similar way we obtain by inserting (11) 
+into (9) and using the abbreviation (13) 
+
+
+A,+A2(p’: p/p”) = v+if (dw'"/471) 
+x| we i+A op”: p/p?) + f dqq* 
+
+
+xCW(p"—p)-u(Bip"-u+ Bip-u) | (15) 
+
+
+456 
+
+
+Evaluation gives 
+A,+A2(p’- p/p?) = V+iWA, 
+
+
+Sir -D max 
++iWCp—( B.- Br ) eas 
+3 p 7 
+
+
+(16) 
+
+
+In this equation gmax 1s the Duane-Hunt high 
+frequency limit, qmax=mv?/2h. On the other 
+hand, ¢ is determined by the size of the box in 
+which the system is considered to be enclosed. 
+As this box becomes larger, the logarithm in the 
+last term of Eq. (16) increases indefinitely. 
+
+Combining Eq. (14) and (16) and using the 
+abbreviation 
+
+
+R= (82/3) C*p? In (Qs /-G) 
+
+
+2 @ (*): 
+
+3m hco\c 
+we find the following solutions for the ampli- 
+tudes: 
+
+
+niv 
+
+
+n——, (17) 
+2hg 
+
+
+1+iWR 
+1-iW+WR 
+iWR 
+| emerge. 
+1—iW+WR/3 
+VC 
+1 -iW+WPR 
+-~VC 
+1 -iW+WR/3 
+
+
+— 
+pees 
+
+
+As= 
+(18) 
+
+
+The quantity R contains the dependence on the 
+size of the box and becomes infinite for infinite 
+size; however, for any reasonable size, R is quite 
+small. 
+
+It will be noted that the amplitudes A, etc. 
+all remain finite when R goes to infinity. This 
+shows that in this case as in others the theory of 
+radiation damping gives finite results. It will also 
+be noted that for R= « (strong coupling with 
+radiation) the coefficients B, and Bz, become 
+vanishingly small, so that in this limit the 
+scattering process paradoxically will take place 
+without the emission of radiation. (This result 
+is not changed by integration over all frequencies 
+g which can be emitted.) 
+
+The result for the cross sections becomes quite 
+complicated in the general case. For instance, 
+
+
+H. A. BETHE AND J. 
+
+
+R. OPPENHEIMER 
+
+
+the result for the cross section without emission 
+of radiation takes the form 
+
+
+do =**dwW? 
+1+1WR 
+
+
+tWRcecosa |? 
+x Re AAR TOR PR EN TST : 
+1—-1W+W?R 
+
+
+1—-1W+ W?R/3 
+
+
+where X=i/p is the de Broglie wave-length of 
+the particle, divided by 27. The further evalua- 
+tion simplifies in the limit of very large R in 
+which case the result is 
+
+
+do = N7dw(1+3 cos a)?. (20) 
+
+
+The cross section thus becomes of the order x? 
+which is reasonable. Generally it is clear that 
+de is a quadratic function of cos a, the angular 
+dependence being due to the interaction with 
+radiation. 
+
+We shall now discuss the result in more detail 
+in the limit of small R and thereby substantiate 
+the qualitative considerations of the last section. 
+If we neglect all terms of higher relative order 
+than W?R?, the cross section for scattering with- 
+out radiation (19) reduces to 
+
+
+do =NdwW1—-W?-4W2R 
++W?R?(1+cos a)?+---] (21) 
+
+
+where a is the scattering angle (angle between p 
+and k). Similarly, if we neglect terms of relative 
+order W?R, we find from (18) 
+
+
+and the cross section for scattering with emission 
+of radiation of frequency g becomes (cf. (11)) 
+
+
+2 
+
+
+6 do = dw 
+
+
+dq 
+C?—2p7(1—cos a) sin? B, (23) 
+i+W ¢ 
+
+
+where @ is the angle between u and p—p’; or, if 
+we integrate over all frequencies and directions 
+for the emitted radiation: 
+
+
+op = 2X’dwRW?/(1+ W?). (24) 
+
+
+Therefore, the ratio of the scattering with 
+radiation to the scattering without radiation is 
+of the order R. On the other hand, the first 
+correction which the radiation reaction makes 
+to the cross section for radiationless scattering 
+is of the relative order W?R. This correction, 
+
+
+RADIATION DAMPING 
+
+
+therefore, does not compensate the cross section 
+with emission of radiation and the total scatter- 
+ing will therefore depend on R, and thus on the 
+minimum frequency which can be emitted. 
+
+
+4. REMARK ON THE SCATTERING BY A 
+POTENTIAL IN HEITLER’S THEORY 
+
+
+If we disregard radiation and simply consider 
+the scattering by a concentrated potential, the 
+cross section becomes 
+
+
+do =dwW?/(1+ W?), (25) 
+
+
+which follows from (19) by neglecting R. The 
+expression (25) is obviously correct for small W 
+in which case it is identical with the Born 
+approximation. For strong potentials (large W) 
+the cross section remains finite and attains the 
+limiting value 47x? which is the correct upper 
+limit if only spherically symmetrical scattering 
+is considered. However, this limit will be attained 
+regardless of the sign of the potential. Actually 
+the result 4X? is reasonable only for an attractive 
+potential (and even in this case there should be 
+fluctuations corresponding to resonance) while 
+in the case of a repulsive potential the cross 
+section can never become greater than 47a? 
+where a is the radius of the region in which the 
+repulsive potential exists. This limit holds even 
+for infinitely strong repulsion and is smaller 
+than 47x?, because the assumption that the 
+matrix elements for the scattering V;, are inde- 
+pendent of the direction of k and p, is equivalent 
+to assuming a<x. 
+
+Moreover, Eq. (25) does not correctly describe 
+the deviations from the Born approximation 
+when this approximation first begins to fail. 
+According to (25) the deviations should be of 
+the relative order W?; whereas the actual theory 
+gives a deviation of the order W(X/a) which is 
+much larger. 
+
+We do not regard this failure of Heitler’s 
+theory as significant because the theory was not 
+intended to describe higher approximations for 
+an arbitrary interaction such as the deviations 
+from the Born approximation for an arbitrary 
+potential. Heitler’s theory was actually intended 
+to apply to problems of radiation, and the 
+matrix elements of the Hamiltonian should be 
+taken from the fundamental theory of the inter- 
+
+
+457 
+
+
+action of particles with radiation. For this 
+reason we consider the failure of the theory in 
+the problem of the infra-red catastrophe as much 
+more significant than its failure in the scattering 
+problem. 
+
+
+5. CONCLUSIONS 
+
+
+The theory of radiation damping developed 
+by Heitler and his collaborators gives, in all 
+applications that have so far been made, a finite 
+result for all cross sections even in the case of 
+very large interactions. However, the application 
+of the theory to the problem of the reaction of 
+radiation on the scattering of electrons does not 
+give a physically sensible result. The effect of 
+radiation damping on the scattering without 
+radiation is extremely small compared with the 
+cross section for scattering with emission of 
+radiation. The total scattering probability is 
+therefore essentially the sum of the uncorrected 
+scattering with and without radiation. The latter 
+is subject to the infra-red catastrophe and de- 
+pends on the lower limit g of the frequencies 
+which can be emitted, becoming infinite as @ 
+goes to zero. It is evident that such a dependence 
+can have no physical reality and that the prob- 
+ability of electron scattering should not depend 
+on its ability to emit radio waves of extremely 
+long wave-length. 
+
+In the customary theory as outlined in Section 
+1, the infra-red catastrophe does not occur be- 
+cause the scattering with emission of radiation 
+is compensated by an equal decrease of the 
+scattering without radiation. This decrease is 
+brought about by the consideration of the in- 
+fluence of virtual quanta with long wave-length 
+on the scattering without radiation. This amounts 
+to the inclusion in the theory of matrix elements 
+which are of higher order than is necessary to 
+obtain a non-vanishing transition probability. 
+The inclusion of such matrix elements is for- 
+bidden in Heitler’s theory. It is seen that these 
+matrix elements play an important role in 
+avoiding the infra-red catastrophe. 
+
+It is well known that the inclusion of the 
+perturbation by the virtual quanta leads to 
+divergent results due to the quanta of Mmgh 
+frequency. This ultraviolet catastrophe is in- 
+herent in the customary theory and avoided in 
+Heitler’s theory of radiation damping. What we 
+
+
+458 
+
+
+have shown in this paper is that it is not possible 
+to obtain a satisfactory answer either by in- 
+cluding the effects of virtual quanta as they are 
+given by present theory or by excluding them 
+entirely. They must be retained for long wave- 
+lengths. They must be eliminated or modified 
+for short wave-lengths. 
+
+This implies the existence of a critical wave- 
+length. There are at least three possibilities. 
+There is (1) the wave-length corresponding to 
+the Duane-Hunt limit, (2) that corresponding 
+to the electron’s Compton wave-length, or (3) a 
+new length characteristic of a future theory and 
+presumably smaller. 
+
+The first of these possibilities, which might 
+for instance amount to some method of system- 
+atic elimination of all virtual processes except 
+those involving the creation of particles which 
+in the actual problem are energetically capable 
+of being created, would clearly involve a major 
+and not correspondence theoretic change in the 
+
+
+BARSCHALL, BATTAT, AND BRIGHT 
+
+
+formalism of quantum mechanics. In particular, 
+it would mean giving up the existence of a 
+Hamiltonian and a wave function calculable 
+from it. It does not seem likely that this will 
+prove to be the correct path. 
+
+The results of Dancoff show that at least in 
+present relativistic theory the Compton wave- 
+length of the electron does not provide a suitable 
+critical wave-length for the problem in question. 
+It therefore seems most probable to us that a 
+new length will be involved in a correct solution, 
+above which the present quantum theory will 
+have a kind of validity and below which new 
+phenomena will have to be taken into account. 
+It would seem likely that only in this way can 
+the correspondence principle be satisfied. It is 
+not satisfied by Heitler’s proposals, and that in 
+the last analysis is why they are unsatisfactory. 
+In any case, we believe that the simple problem 
+here considered may afford a useful test of 
+future theories of radiation. 
+
+
+PHYSICAL REVIEW VOLUME 70, 
+
+
+NUMBERS 7 AND 8 
+
+
+OCTOBER 1 AND 15, 1946 
+
+
+Scattering of Fast Neutrons by Boron 
+
+
+H. H. BarscHaui,* M. E. Batrat,** anp W. C. BriGut 
+Los Alamos Laboratory, Los Alamos, New Mexico 
+
+
+(Received July 1, 1946) 
+
+
+The cross section of boron for the scattering of fast neutrons through angles greater than 30° 
+was measured at neutron energies between 0.2 and 3 Mev. 
+
+
+HE scattering of monoenergetic fast neu- 
+
+trons by boron has been investigated by 
+Kikuchi and Aoki'? for d—d neutrons and by 
+Leipunsky? for photo-neutrons of 130-, 220-, and 
+850-kev energy. In the present experiments the 
+scattering of neutrons of energies from 0.2 to 
+3 Mev was investigated for the two boron 
+isotopes. 
+
+The enriched material available was boron 
+powder containing 53 percent B!*. The powder 
+was placed in a cylindrical brass container, 
+24%’ idd. The density of the powder was in- 
+
+* Now at the University of Wisconsin. 
+
+** Now at Washington University. 
+
+1S. Kikuchi and H. Aoki, Proc. Phys. Math. Soc. Japan 
+21, 75 (1939). 
+
+
+2H. Aoki, Proc. Phys. Math. Soc. Japan 21, 232 (1939). 
+3A. I. Leipunsky, J. Phys. U.S.S.R. 3, 231 (1940). 
+
+
+creased by shaking it on a vibrating table. 194 
+grams of the powder formed a layer 14” thick, 
+containing 0.255 X10" atoms/cm”. A sample of 
+normal boron powder was prepared in the same 
+way. The normal sample contained 200 grams of 
+powder and had the same number of atoms per 
+cm? as the enriched sample. 
+
+The experiments at neutron energies up to 
+1500 kev were carried out using neutrons ob- 
+tained by bombarding Li with protons acceler- 
+ated by the University of Wisconsin’s electro- 
+static generator. For the experiments at 3 Mev 
+the neutrons were produced by bombarding DO 
+ice with 200-kev deuterons obtained by means 
+of a Cockcroft-Walton set. 
+
+The cross section for the scattering of neutrons 
+through angles greater than 30° was measured. 
+
+

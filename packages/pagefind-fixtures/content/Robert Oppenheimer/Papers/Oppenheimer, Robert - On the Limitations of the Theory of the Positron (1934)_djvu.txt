@@ -1,0 +1,299 @@
+LETTERS TO THE EDITOR 
+
+
+903 
+
+
+5 
+
+
+@ 
+ane 
+ie) 
+
+
+a 
+vs 9 
+URRENT IN AMPERES xX 10° 
+
+
+a N 
+: \ 
+\ 
+
+
+CARBON DISK PLACED 
+AT WINDOW 
+
+
+GALVANOME TE: ROE: FLECTION IN CM 
+
+
+| 
+| 
+t 
+
+
+Fic. 2. Radioactivity from protons on carbon. 
+
+
+sensitivity and, in spite of the raggedness of the trace at 
+this extreme sensitivity, a displacement of the mean of 
+about one centimeter could have been detected. This 
+would be one-two thousandth of the effect measured in 
+Fig. 1 and, since the proton-current used was four times 
+the deuton-current, we may conclude that any effect 
+produced by protons on carbon is less than one-eight 
+thousandth of the effect produced by deutons. [Inci- 
+dentally, this is additional evidence for the extreme purity 
+of our proton-beam after magnetic analysis, as previously 
+reported. | 
+
+The wide discrepancy between this result and those 
+reported by the workers in Cambridge and Pasadena 
+does not appear to us to be particularly surprising, since 
+magnetic analysis evidently was not used in their experi- 
+ments. While it is true that in the experiments at Pasadena 
+residual contamination by deuterium would hardly be 
+expected to amount to 10 percent or 20 percent of the 
+total beam, it is quite possible that the total beam with 
+deuterium flowing might contain only five to ten times as 
+many deutons as with the deuterium-flow cut off. In some 
+
+
+of our previous work we determined the yields of several 
+efficient disintegration-processes by working for many 
+days with no deuterium-flow, that is, using only the residue 
+of deuterium left in the tube from previous runs. Further 
+evidence that the percentage of deutons in the Pasadena 
+experiments is much lower than estimated is given by_ 
+the higher gamm-ray yields from carbon and beryllium 
+we have observed.‘ 
+
+We take great pleasure in expressing our gratitude to 
+Professors Urey, Zanetti, and La Mer, of Columbia 
+University, for the supply of deuterium which made these 
+experiments possible. | 
+
+L. R. Harstap 
+M. A. Tuve 
+Department of Terrestrial Magnetism, 
+Carnegie Institution of Washington, 
+Washington, D. C., 
+June 1, 1934. 
+
+
+4Hafstad, Tuve and Brown, Phys. Rev. 45, 746-747 
+(1934). 
+
+
+On the Limitations of the Theory of the Positron 
+
+
+In a recent paper! Dirac has suggested a further develop- 
+ment of his theory of the positron. Dirac here considers the 
+operators corresponding to charge and current density for 
+a system of electrons in which nearly all the negative energy 
+states are full, and shows that in the presence of an arbi- 
+trary external electromagnetic field these operators may 
+be divided into two terms: one of these is infinite, and 
+depends on the field but not on the state of the electrons; 
+the other is finite and determinate, and depends on the 
+field and on the electron state. Dirac makes the suggestion 
+that these second terms be regarded as giving the charge 
+and current density of the electron-positron distribution 
+(epd): i.e., that the formalism of his theory of the electron 
+be modified by the subtraction from the operators for 
+charge and current density of the infinite and _field- 
+dependent terms. This modification leaves unaltered the 
+Lorentz and gauge invariance of the theory and the validity 
+of the conservation law for charge and current. Because, 
+however, the way in which the operators are to be modified 
+depends upon the value of the electromagnetic field, the 
+
+
+method is not readily extended to take account of the field 
+produced by the efd; on the other hand, it gives for the 
+charge and current induced in the efd by an external field 
+finite and definite results, and thus constitutes in this 
+respect a true theoretical advance. 
+
+In the further development. of Dirac’s suggestions one 
+meets, however, with a curious difficulty, in that it is ap- 
+parently impossible to find a consistent definition of the 
+operators for the energy and momentum density of the epd. 
+Dirac’s density matrix, of course, makes possible a com- 
+plete formal definition of any operator, which one obtains, 
+in analogy with the methods of the quantum mechanics, 
+by taking the matrix product of the matrix corresponding 
+to the variable in question and the density matrix. This is 
+just what Dirac has done for the current density. If one 
+carries this through for the energy momentum tensor of 
+the epd, one finds in general that its divergence is not given 
+by the Lorentz force with Dirac’s expressions for the 
+charge and current. This is because the electromagnetic 
+
+
+1P, Dirac, Proc. Camb. Phil. Soc. 30, 150 (1934). 
+
+
+904 LETTERS TO 
+
+
+potentials enter explicitly in the density matrix, and lead 
+to the existence of non-Maxwellian forces. With this 
+definition of the dynamical operators, one has thus to 
+abandon either Dirac’s expression for the charge and 
+current density or the validity of the conservation laws for 
+energy and momentum. In particular one would not other- 
+wise obtain consistent results, in computing on the one 
+-hand the induced charge density, and on the other the 
+polarization energy, of the efd in an electrostatic field. 
+
+The simplest way of obviating these difficulties is to 
+modify the density matrix in a way which does not depend 
+on the electromagnetic field strengths present: i.e., to 
+subtract from the operator given by the Dirac theory of 
+the electron the expressions for the state of the electron 
+distribution in the absence of external fields, for which all 
+negative states are full. This procedure leads directly. to 
+the theory of the positron as we have developed it. On 
+this theory one finds a polarization of a vacuum by an 
+electromagnetic field which is infinite, and which can only 
+be rendered reasonably unambiguous by special conven- 
+tions about the way in which the divergent expressions 
+occurring are to be handled.? This theory is therefore not 
+only unable in general to predict the reaction of the epd to 
+its own field, but can make no unambiguous statements 
+about the fields induced by the epd under the influence of 
+a given external field. 
+
+Nevertheless we believe that these difficulties in no way 
+impair the limited validity of the theory of the positron, 
+a validity which is limited to those questions which do not 
+involve essentially the reaction of the electrons and 
+positrons to their own radiation fields and thus does not 
+extend to problems in which there are external fields whose 
+frequency is of the order of the critical value mc?/e?. For 
+at least insofar as the fields are themselves produced by 
+electrons and positrons, the polarization of the epd mani- 
+fests itself? in effects which are not unambiguously sepa- 
+
+
+rable from the unknown effects of the radiation reaction of - 
+
+
+the particles. An instructive illustration of this may be 
+found in the question of the fluctuations of the charge 
+density of the epd, which was brought to our attention by 
+Dr. Bloch. If we consider, for instance, the case of an 
+empty epd in no external field, for which the expectation 
+value of the charge density vanishes everywhere, we readily 
+find that the expectation value of the square of the charge 
+within any volume is infinite, corresponding to the fact 
+that there are infinite fluctuations in the charge density. 
+If we now ask in what measure it is possible to observe 
+these fluctuations, we see that, to detect them, we must 
+have an observing system (e.g., galvanometer) which will 
+react in accordance with the electron-theoretic laws to 
+electromagnetic fields of arbitrarily high frequency. If we 
+admit that our instruments will not respond to waves of 
+
+
+THE EDITOR 
+
+
+frequency large compared to mc?/e?, then we see at once 
+that the observed fluctuations in the charge density will be 
+finite and small, and that the paradoxical predictions of 
+the theory of the positron are quite without physical 
+consequences. 
+
+There exists the possibility, which is suggested by 
+classical electron-theory, that we should have in the 
+proton a particle which would respond in accordance with 
+Maxwellian electrodynamic to waves of frequency far 
+greater than mc?/e*, and that by its use the effects of the 
+polarization of the epd could be separated from the 
+problems of radiation reaction. There is, however, a grow- 
+ing mass of experimental evidence that so simple a theory 
+of the proton can hardly be correct, and which lends 
+support to the view that the present electrodynamics will 
+be inapplicable in all questions involving lengths of the 
+
+
+‘order of e?/mc?. From this point of view the paradoxes of 
+
+
+the theory of the positron would be inextricably connected 
+
+
+-with those of quantum electrodynamics, and the applica- 
+
+
+bility of the two theories would be similarly limited. 
+
+It must of course be remarked that the condition that 
+in the field acting upon the charges there be no components 
+of frequency of the order of mc3/e? or greater is a sufficient, 
+but by no means a necessary condition for the applicability 
+of present electrodynamics, for this condition is clearly 
+not relativistically invariant. The necessary condition, as 
+Bohr particularly has emphasized, is that there exist a 
+coordinate system in which such high frequency com- 
+ponents are absent, insofar at least as one may consequently 
+neglect the reaction of the charges to their own field. On 
+the other hand, it is not in general possible to infer that, 
+if in a given Lorentz frame high frequency components 
+appear, the reaction of the charges to the low frequency 
+components is correctly given by the Lorentz force. It is 
+for this reason that one need not regard as altogether 
+cogent the arguments recently advanced by v. Weiz- 
+saecker! for the validity of the theoretical formulae for 
+the behavior of very high energy radiations in their passage 
+through matter, formulae which are in fact very difficult 
+indeed to reconcile with experiment. 
+
+. W. H. Furry* 
+. J. R. OPPENHEIMER 
+Pasadena, , 
+June 2, 1934. 
+
+
+2 Thus Peierls, to whom we are indebted for telling us 
+of his results, has developed a method by which the 
+polarization of the epd in an arbitrary electromagnetic may 
+be computed in first order in a gauge and Lorentz invariant 
+manner. 7 
+
+3W.H. Furry and J. R. Oppenheimer, Phys. Rev. 45, 
+245 (1934); pages 261-2. 
+
+41. F. v. Weizsaecker, Zeits f. Physik 88, 612 (1934). 
+
+* National Research Fellow. 
+
+
+A New Mode of Disintegration Induced by Neutrons 
+
+
+The capture of a neutron followed by the ejection of an 
+a-particle is now a well-known process in the disintegration 
+of light nuclei. Thus in nitrogen this may be written: 
+
+
+7N¥-+ on! = ;BU+ 2He'. 
+Using as a source of neutrons beryllium bombarded by 
+3 MV deutons, which were accelerated in the Lawrence- 
+
+
+Livingston! apparatus, I have photographed six examples 
+of a disintegration in which the emitted particle is of 
+smaller charge than an a-particle and is probably a proton. 
+The judgment is based on the character of the trace left 
+
+
+1E. O. Lawrence and M. S. Livingston, Phys. Rev. 45, 
+608 (1934). 
+
+

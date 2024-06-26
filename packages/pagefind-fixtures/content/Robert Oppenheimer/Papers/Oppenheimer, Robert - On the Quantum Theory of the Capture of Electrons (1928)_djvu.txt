@@ -1,0 +1,520 @@
+MARCH, 1928 PHYSICAL REVIEW VOLUME 31 
+
+
+ON THE QUANTUM THEORY OF THE 
+CAPTURE OF ELECTRONS 
+
+
+By J. R. OPPENHEIMER* 
+
+
+ABSTRACT 
+
+
+In Section 1 the method of a previous paper! is applied to find the rate at which 
+a particles capture electrons from atoms. The mean free path for capture varies 
+roughly with the sixth power of the velocity of the @ particle, and in good agree- 
+ment with Rutherford’s experiments.’ The value of the mean free path is computed for 
+capture in air, and agrees with the experimental value. 
+
+In Section 2 the probability of radiative recombination of electrons and protons 
+
+_is computed. The cross section for recombination becomes infinite for small relative — 
+
+velocities with the inverse square of the velocity; for high velocities it is given by 
+10—3 7-5/2, where W is the energy in volts of the incident electrons. 
+
+
+N THE collision of an e-particle with an atom, one of the atomic electrons 
+
+will occasionally be captured by the passing particle. In this capture the 
+electron jumps from one bound orbit to another; and the energy difference 
+in the binding is taken up in the relative translational energy of the two 
+heavy particles. The initial and final states have the same energy; but the 
+wave functions representing them are not strictly, orthogonal, since it is 
+possible, though not very likely, that the electron, although “bound” to the 
+atom, be found in the immediate neighborhood of the a-particle. If one 
+writes out the scalar product of the initial and final wave functions, e.g., for 
+hydrogen, 
+
+
+e= f dt Yuvuet+Wat HY gt ( 1) 
+
+
+where the integral is to be taken over the configuration space, one sees that, 
+for large relative velocities, this becomes very small.2 The capture thus 
+corresponds to a transition between almost orthogonal states of the same 
+energy, and may be treated by the methods of ref. 1. For this one needs the 
+form of the wave function in the initial state; we shall carry through the 
+calculation for a hydrogen-like atom with arbitrary nuclear charge, and shall 
+consider, subsequently, how, and with what error, this may be applied. 
+
+This capture of electrons has been studied both experimentally* and 
+theoretically. Our theory will give directly the mean free path for capture 
+as a function of the velocity of the a-particle and the constants of the atom. 
+This has been observed for a considerable range of velocities in air, and will 
+give the most direct check on the theory. 
+
+Fowler’s theory‘ of the capture is based on considerations radically dif- 
+ferent from those of this paper. Fowler observes that the loss of the captured 
+
+
+* National Research Fellow. 
+1J. R. Oppenheimer, Phys. Rev., Jan. 1928, Section 3. Referred to as ref. 1. 
+2 For this the wave functions must be normalized to dE/h, Cf. ref. 1, Eq. 3. 
+3E, Rutherford, Phil. Mag. 47, 277, 1924. Hdb. d. Physik, xxiv, 177 (1927). 
+4R. H. Fowler, Phil Mag. 47, 269, and 416 (1924). 
+
+349 
+
+
+350 J. R. OPPENHEIMER 
+
+
+electron of the a-particle may be regarded as a process of ionization by 
+collision with one of the atomic electrons. (We shall adduce evidence that 
+the process of loss is not precisely of this kind, but that is here irrelevant). 
+The reverse process to this is a three body collision: two electrons strike the 
+a-particle; one of them is captured, and the other carries off the excess energy. 
+If now one imagines the electrons to form a gas at the temperature appro- 
+priate to the velocity of the a-particles, and assumes that the system is in 
+thermodynamic equilibrium at this temperature, one may use the principle 
+of detailed balancing to compute the probability of capture from the proba- 
+bility of loss by ionization; and this latter probability is approximately known 
+from the classical formulae of Bohr. Fowler has carried through the calcu- 
+lations on this basis. They yield, with certain not very unreasonable assump- 
+tions, a satisfactory account of the experiments on the ratio of the number 
+of a-particles with a captured electron to the number of bare a-particles in a 
+beam that has been passed through a film of metal. 
+
+The theoretical objection to this calculation is that it completely neglects 
+the réle of the nuclei, and ascribes to the electrons a velocity relative to each 
+other, and relative to the nuclei, which they have not in fact. We shall see 
+later that encounters in which two electrons take part play an unimportant 
+part in the process of capture. Empirically? this is confirmed by the fact 
+that the experiments seem to demand a probability of capture proportional 
+to the first power, and not the square, of the electron density. Fowler’s 
+formulae may also be applied, with a slight modification, to the evaluation 
+of the mean free path for capture in air. They give results which do not 
+agree nearly as well as those of the present theory with the experiments, and 
+which seem definitely unsatisfactory. 
+
+We shall first compute the first order cross section® for capture into the 
+normal state by an a-particle of mass M, charge 2e, and velocity V, for an 
+atom with a single electron of mass m, charge —e, and with a nucleus of mass 
+gM, and charge Ze. If we eliminate the motion of the center of gravity of the 
+system as a whole, we may describe the relative motion in terms of the vector 
+R from the center of gravity of the electron and a-particle to the nucleus, 
+and the vector r from this same center of gravity to the electron. The wave 
+function for the initial state, representing a unit stream of a@-particles per unit 
+area, is then® 
+
+(2M/K ha®)!!2¢i(K-R)+i«(e-R)/R-|R-rl /a (2) 
+with 
+a=h?/AruZe? ; p=mgM/(m+qM) ; M=M?q/[m+(1+q)M] 
+K=2ruV/h K=29MV/h. (3) 
+
+5 The probability of capture has the dimensions of an area because the initial wave func- 
+tion (2) is normalized to make the incident flux per unit avea per unit time unity. oA =[H]. 
+
+6 The first two exponential factors give the translational motion of the atom and a- 
+particle; the third gives the motion in the normal state of the atom of the electron about the 
+
+
+center of gravity of the atom; the factor is chosen to make the flux of incident a-particles one 
+per unit area per unit time. 
+
+
+QUANTUM THEORY OF THE CAPTURE OF ELECTRONS 351 
+
+
+The wave function for a final state, with a relative velocity of nucleus and 
+Helium ion V’, is . 
+1/2(M K’'/ haga) 1/2¢i(K'R)—2 ba (4) 
+with 
+ao= h?/4r2ye? ; K’=24MV'/h. 
+This is normalized’ to dydw, where E=hy is the total energy of the final 
+state, and dw is the element of solid angle of the unit vector s=V’/V’. The 
+
+
+perturbing energy for the capture is the interaction energy of the a-particle 
+and electron: 
+
+
+Hy = (—2e/r)(u/m). (6) 
+The matrix component of this which conserves the energy has a velocity V1: 
+W=Vi; V2-Vit=(h2/4r2ul) (1/0?—4/a0"), (7) 
+
+
+and is a function of the direction of Vi, or of the vector s: 
+
+
+Hy(s) = (Me? Ks/ hay’ K’)(228/n) 1? { dR 
+
+
+| dr/r- ey UK R)—(K1Riv)—k(rR)/R)—[2r+|R-2) a, (8) 
+
+
+If we expand the |R—r| in the exponent for small r/R we get 
+H4(S) = 242g 1/2Z-82q 2M e?(K,/hK) 
+{4—(Z—iaox)?}1{1+02(| Ki—K])?}-2._ (9) 
+This gives for the first order cross section? 
+29n!TP2a,%e! 
+
+
+=4 2 mf H 2q er aan pe oe nae de Te ee, Ge cas eee 
+oo n?/ | 1(s) | 7 3h! ZK? | agtet+2(44Z%) ag? ae | 
+
+
+(10) 
+
+We have now to consider the validity of certain of the approximations 
+involved in this calculation. It was shown in ref. 1. that, if the matrix 
+element of 4, to some other final state—involving a transition which violates 
+the conservation of energy—is much larger than that responsible for the first 
+order effect, second order terms must be considered. The matrix elements of 
+H, have maximum values for V’ parallel to V, and these values are sensibly 
+independent of V’. In this case, therefore, the second order terms are negli- 
+gible; and they may be shown, in fact, to vanish more rapidly than oo with 
+increasing V. This applies also to transitions to excited states in Het. 
+
+In evaluating H; we have neglected the term —2Ze?/R, which gives the 
+interaction energy of the nucleus and the a-particle, and which gives rise to 
+the Rutherford scattering. The contribution of this-term to the probability 
+
+
+7 Ref. 1, Section 1. 
+§ Ref. 1, Section 3, Eq. 7. 
+
+
+S02 J. R. OPPENHEIMER 
+
+
+of capture is only apparent, and arises from the fact that the wave function 
+for the deflected a-particle and undisturbed atom is not quite orthogonal to 
+that of the deflected a-particle with a captured electron. The contribution 
+of this term to the cross section vanishes more rapidly than a with increasing 
+V. 
+
+The electron may be caught into one of the excited states of Het. The 
+wave functions for these states corresponding to (4) are 
+
+
+kl a | 
+Se ed ee tee et(K'R)—2r /nay 
+2harn?(k-+m)!|(n+k)!]3 
+
+LO (4y/mao) P™ (cos 8)eims (11) 
+
+
+1/2") 
+
+
+where 2, k, m are the three quantum numbers of the Het orbit. If one uses 
+(11) to estimate the probability of capture into the excited states, one finds 
+that the contribution of states for which k+#0 vanishes more rapidly than ap 
+by a factor V-*. The only important terms, for large V, for the states , 0, 0, 
+are those arising from the first term of the Laguerre polynomials. Each such 
+state has a transition probability 
+
+
+1 21344 M 2ay2e4 
+
+
+0, = -— (12) 
+n®  3h!ZK?[agtet+2(4/n?+Z2) ag’? + + «| 
+For large V the total probability of capture thus becomes 
+a= dion too= Dd (1/n)oo= 1.200. (13) 
+n=2 n=] 
+In the evaluation of H,(s) the exponent [r—R| was expanded: 
+|R-r| ~R—(R-r)/R (14) 
+
+
+The integral as it stands is difficult to evaluate, but we may control this 
+approximation by setting 
+R—(R-r)/R For R>r. 
+
+
+| a | ~ r—(R-r)/r For R<r. ee 
+
+
+This introduces into the integral over R new terms of the form 
+
+
+K Sel ao [2k 1b tank. . (15) 
+
+
+These vanish more rapidly for large V than the terms retained. 
+
+Part of the excess of energy of the electron in its initial state over that 
+in its final state may be given off as spontaneous radiation; this may increase 
+the probability of capture, in particular of capture into the normal state of 
+Het. The cross section for radiative capture is® 
+
+
+Votry 
+o> f a f dv(64n'v3/he3)| P(,9)|%; k—v)=hvo=Ey (16) 
+0 
+
+
+QUANTUM THEORY OF THE CAPTURE OF ELECTRONS 353 
+
+
+where v1 = (h?/87uag")(Z?—4), and where P(j,s) is that component of the 
+effective electric moment —er of the system which corresponds to a tran- 
+sition to a state of energy h7, and a direction of relative velocity given by the 
+vector s. The resulting matrix integrals differ from Hy; chiefly in having a 
+factor r in place of 2e/r; and this introduces a factor x~‘e~? into the cross 
+section. The ratio of o, too turns out? of the order of magnitude of 
+
+
+o,/o=v3h?K/etaM cx. (17) 
+
+
+For the range to which we shall apply our formulae this is about 10-7. Stimu- 
+lated radiative transfers do not occur. 
+
+These considerations give, for the mean cross section for capture in atomic 
+hydrogen 
+
+
+o=1.209= [210-4 /W2(W +135) | (18) 
+
+
+where W is the equivalent electron voltage of the a-particle. This is valid 
+only for velocities for which 50/ W may be neglected. 
+
+For atomic hydrogen captures in which two electrons play a part can 
+not occur. They may occur for other atoms, provided that the sum of the 
+ionization potentials of the two electrons is less than the energy of binding 
+in Het. But the coupling between the electrons is not very great—compared 
+with the coupling of each to the nucleus—and one may expect such captures 
+to be of the same relative importance as double ionizations in the theory of 
+ionization by collision. One cannot estimate this very accurately without 
+a more detailed knowledge of the periodic and aperiodic wave functions for 
+the atom in question. But Fowler’s calculations offer a convenient upper 
+limit, since they make encounters between electrons much more probable 
+than they are in fact, and assume that any electron can absorb any quantum 
+of energy. It will be seen that Fowler’s formula gives a cross section for 
+capture by double encounter only about 1/100th of that computed by (10). 
+As has been observed, the probability of the simple capture depends very 
+little on the energy to be taken up by the nucleus. 
+
+The most direct way, then, of adapting (18) to experiments on air is to 
+neglect the interaction of the atomic electrons, and use, for the wave func- 
+tion of each electron, that of the normal state of a hydrogen-like atom with 
+such a nuclear charge Z, as gives the proper ionizing potential for the 
+electron. This yields for \., the mean free path for capture, in air at N.P.T., 
+
+
+Ao t=2,(5.4X 108/Z,W2) | W+27644Z,2) $1, (19) 
+
+
+where the summation is to be taken over all the electrons of the “air mole- 
+cule.” The value of A}, depends only slightly on the ionizing potentials.!° 
+
+
+® To evaluate (16) one may use the property of the normalized wave functions for the 
+motion of the ion: fdwfdupyz+(v, s, R’)Ya+*(v, 8, R’’) =8(R’—R’’) 
+
+10 The oxygen molecule has twelve electrons with Z ranging from 1 to 1.7; and four with | 
+Z=7.5. The nitrogen molecule has ten electrons with Z ranging from 1.1 to 1.7; and four with 
+Z=6.5. Cf. Hdb. d. Physik, xxiii, 756-760, 1926. 
+
+
+354 J. R. OPPENHEIMER 
+
+
+For comparison we may quote Fowler’s result": 
+Not = 2.7 107 e(62h/402V W2) {| W+104}-. (20) 
+
+
+Here », is the effective density for double encounters of “loosely bound” 
+electrons. If NM be the number of such electrons per molecule, and G be the 
+volume of the molecule, we may set, for air at N.P.T., 
+
+
+ye=2.7X10"N(N—1)/G; N=10.4; G=6xX10-%, 
+
+
+The numerical values are given in Table I. 
+
+
+TABLE I[ 
+V (cm/sec) \-(mm) A. (mm) A-(mm) 
+computed (20) observed (4) computed (19) 
+1.) 500 2i2 23 
+LS X10? 
+os 4.4 0.037 0.039 
+0.9 «109 
+3: 0.042 0.0008 0.0009 
+0.44 109 
+Ratio (1./2.) 115 59 57 
+
+
+Ratio (2./3.) 105 46 44 
+
+
+To apply (19) to find the relative concentrations of Het and He*+ in 
+a beam that has passed through air or metal, we must know the probability’ 
+for the process of loss. There is some evidence that this is not a simple 
+ionization by electron impact. In the first place, since the probability 
+depends upon the square of the matrix component of the perturbing energy, 
+the probability of ionization due to the nucleus should be Z? times that 
+for the ionization due to an electron, whereas that due to all the electrons 
+should be Z times that due to a single electron; for heavy atom the nucleus 
+would thus be the more important. The second point is empirical. For the 
+classical theory gives a probability of ionization which falls off with V~?; 
+and one may readily see by writing down the matrix elements that, for large 
+velocities, the quantum mechanics gives this too; this has been established 
+in detail by Elsasser.!2 But experimentally Rutherford finds that the mean 
+free path for loss varies, in a range for which Bohr’s formula should hold, 
+as V1. It may be shown that the ionization due to a colliding dipole falls off 
+less rapidly with increasing V than that due to a simple charge; so that both 
+discrepancies may be resolved by taking for the ionizing particle the core 
+of the atom. 
+
+If one uses Bohr’s formula for the rate of loss, the method of this section 
+leads to reasonable values for +1e ratio of the concentrations of Hett and 
+Het. This ratio then varies 2.. V4, whereas Rutherford finds V4°. 
+
+2. The recombination spectrum for electrons and protons may be studied 
+by canonical methods; and »re may compute the cross section for re- 
+
+
+11 Fowler, ref. 4, Eq. 11. . 
+12] am indebted to Dr. Elsasser for informing me of his results. 
+
+
+QUANTUM THEORY OF THE CAPTURE OF ELECTRONS 355 
+
+
+combination from the known wave functions of the hydrogen atom." For, 
+in spite of the fact that the aperiodic wave functions approach those of free 
+particles only when the distance between the particles r is held constant 
+and their relative velocity V is increased indefinitely, and not when V is 
+held constant and 7 is increased, one can write down an initial wave in terms 
+of these wave functions which, for large r, represents a unit incident beam 
+per unit area, moving with a velocity V in a given direction (cos 6=0). 
+This turns out to be 
+
+
+Wi 2x2 SR 1/2) i Wr", b’ 0) (1) 
+k‘ =0 
+
+
+where Y(v’,k’,0) is the aperiodic wave function for the state E=hy'’ =4mYV?, 
+orbital angular momentum k’, and component of angular momentum parallel 
+to the beam zero, taken real, and normalized to dv’. For the normal state 
+the wave function is 
+
+
+W(0,0,0) = (rag?) —1/2e71/ 40, (2) 
+The interaction energy giving the spontaneous emission may be written 
+Hy = 4ar(hv?/3c3)}!? (3) 
+
+
+where v is the frequency of the emitted light. The cross section for radiative 
+recombination to the normal state, 
+
+
+ops 4n?/h { dr WiHW(0,0,0) (4) 
+
+
+thus becomes 
+oo= (27 re2h/3m2c8g2) e~ 4a )tan~"a (4 1 g?)-2(1 = Br ig\—1 (5) 
+
+
+where g is the ratio of the initial translational energy of the electron to the 
+energy of ionization of the hydrogen atom. For low velocities the cross 
+section becomes infinite: 
+
+
+| oy~ (2 re*h/3e14mc3) o-?. éy=2.718--- 
+For high velocities it is given by 
+oy~(64e2h/3m?c8) o>, (7) 
+
+
+The extension of (5) to recombination for excited states offers consider- 
+able arithmetic difficulties. For high velocities it is easy to modify (7) to 
+take account of the excited states. For, for high velocities, the wave functions 
+of the two body problem approach those for the free particles, and these latter 
+become almost orthogonal to the periodic wave functions, and may be used 
+to evaluate o. For the initial wave function we may thus take 
+
+
+V1! 2etxr cos 6 = p-1Y—-1/2 >) Pi (cos 5) Ty (xr) =WVo . (3) 
+ke’ =0 
+
+
+18 Cf. J. R. Oppenheimer, Z. f. Physik, 41, 268 (1927), Eqs. 46, 47, 29. Further Y. Sugiura, 
+Journ. d. Physique, VI, 7, 113 (1927) Eq. 15. 
+
+
+356 | J. R. OPPENHEIMER 
+
+
+with 
+Tye (ar) = ai™ - (2k +1) (26/7) ST pen spo(kr) . (9) 
+For that of the final state, with the scien bound in an v,k,m orbit, we have 
+(2k+1)(k—m)!(n—k—-1)! 
+mn?ags(k+-m)![(a-+ k) 1]? 
+P (cos d)e*™?=Y(n, k,m). (10) 
+
+
+1/2 
+es k 
+t evrinay®? ae (2r/nao) 
+
+
+The otal cross section for recombination, a, is then 
+2 
+
+
+o=4r7/h? >) (11) 
+
+
+n,k,m 
+
+
+{ drboH (i, km) 
+
+
+Now the selection rule gives k—k’= +1. With this limitation one may 
+readily verify that the dominant terms for high V have k=0, k’=1, and 
+that only the first two terms of the Laguerre polynomials corresponding to 
+k=0 need be retained; all other terms vanish more rapidly with the 
+velocity. Eq. (11) thus reduces to 
+
+
+o = (64r'v8e?/3ch) >. (164/032? VK?) 
+
+
+n=l 
+
+
+J artscanyeret*4 (n= )r/na) "(12) 
+
+
+This yields 
+
+
+o = (28e*h/ 3m) 9-5 Dn = op Dn (13) 
+n=l n=1 
+or numerically 
+o=10-8y-? (14) 
+
+
+with W the electron voltage of the incident beam. For recombination with 
+a bare nucleus of charge Z, ¢ must be multiplied by Z>. For recombination 
+from high velocities, and for recombination to the normal state for all 
+velocities, the light emitted is polarized with its electric vector parallel to 
+the electron beam. 
+
+JEFFERSON PHYSICAL LABORATORY, 
+
+
+CAMBRIDGE, MASSACHUSETTS, 
+December 1927. 
+
+

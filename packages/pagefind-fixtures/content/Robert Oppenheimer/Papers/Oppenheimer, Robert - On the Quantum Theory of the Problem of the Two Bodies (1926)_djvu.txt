@@ -1,0 +1,624 @@
+422 Mr Oppenheimer, On the quantum theory 
+
+
+On the Quantum Theory” of the Problem of the Two Bodies. 
+(Preliminary Communication.) By J. R. OPPENHEIMER. (Com- 
+municated by Mr R. H. Fow.er.) 
+
+
+[Read 26 July 1926.] 
+
+
+The problem of the two bodies has been treated on the new 
+mechanics by Dirac*, Paulit, and Schrédinger{, who have inde- 
+pendently derived the Balmer terms. The present paper is an 
+attempt at a more complete solution. In particular, ‘formulae are 
+derived for the line intensities of the hydrogen spectrum, for the 
+photoelectric effect and its inverse, and for the continuous absorp- 
+tion spectrum in the ultraviolet and in the X-ray regions. Also 
+the probabilities of transition, deflection and capture are computed 
+for the collision of an electron and an ion. Numerical values are 
+only obtained, however, for the simplest line intensities. It is hoped 
+to treat the problem in greater detail. 
+
+I. Elliptic Orbits. For the line intensities the system may be 
+treated as multiply periodic. We shall assume three degrees of 
+freedom, and characterize transitions by six quantum numbers 
+(nkm, n’k'm’). The fourth degree of freedom which would follow 
+from the existence of an electronic magnetic moment, would not 
+affect the intensities of the series lines as wholes. For the emis- 
+sion lines we may use the classical formula§ for the intensity in 
+which frequencies and amplitudes have been replaced by their — 
+quantum theoretic analogues]||. Thus 
+
+
+: 3 Dtqrs G2 ; 
+I (nkm, n’k'm')= % 363 [»* (n, n’)}| x. (nkem, n’k’m’)|?...(1). 
+a=l1 
+The frequencies are 
+ey eee | 
+» (nn!) = R (= - =) ene e nee ee scenes reeee (2). 
+
+
+According to Schridinger{ the amplitudes are given by 
+Lau (nkm) = XLS xq (nkm, n'k'm’) u(n'k'm’) ...... (8), 
+n' km! 
+where the functions u(nkm) satisfy the following conditions : 
+
+
+1. They are bounded everywhere within the configuration 
+space O<7r; 0<3 <7; 0<¢< 27, and tend to zero sufficiently fast 
+as 7 —> 00, 
+
+
+* Dirac, Proc. Roy. Soc. A, 110, 561 (1926). 
+
++ Pauli, Zeit. f. Phys. 36, 336 (1926). 
+
++ Schrédinger, Ann. d. Phys. 79, 361 (1926). 
+
+§ Kramers, Intensities of Spectral Lines, Copenhagen, 1919. 
+\| Born u. Jordan Zeit. f. Phys. 34, 858 (1925), 
+
+‘I Schrodinger, dun. d. Phys. 79, 734 (1926). 
+
+
+of the problem of the two bodies 423 
+
+
+2. They are twice continuously differentiable. 
+
+
+3. They satisfy, if ~, « and HE are mass, charge and energy of 
+the electron 
+
+
+4. They are one-valued within the configuration space. 
+5. They are normal and orthogonal with respect to the con- 
+figuration space 
+Mtoe 5 _ gt gk’ om’ , _@ CA) 
+[[fucnkm) u (w'k'm’ p dra dg = 8% Bf 8M 5 p= TSS) Cas} 
+=?r'sinS 
+From this it follows that 
+&_ (nkm, n’'k’m’) 
+Orr pie 
+= i i | u(nkm) wu (n'k'm’) wa (r3) p (r3$) dbdddr ...(6). 
+oJoJo 
+For & <0, it is only possible to construct solutions which have 
+the form 
+u(nkm) = Unim (7, 3, ) 
+n-1-k (_. ; ] 
+= A 08M pi) (cosS) ake? = ( oay G: Fe ) 
+sinmp & a) ! 
+RT! citaniearitns (7), 
+
+
+where k=k—4 and a=(47rpe*/nh*)r satisfy (1)—(5) for certain 
+values of the constants, namely 
+
+
+m=1, 2, 8...... . 
+k=0, 1, 2.50 of alsem teak (8). 
+m=0, +1, +2...... tk 
+
+
+From (1), (6) and (7), we get, on performing the integrations, the 
+selection rules 
+
+
+Averaging over m and m’, we get the component intensities * 
+
+
+ny _. 2) 8 Pelt 29 _ 1\* (4+ k’) A? (nk, nk’) 
+inh ne)= ( 3) A? (nk) A? (n'k’) 
+
+
+Bone Nn? ne =( 1). 
+
+
+* The intensities of the hydrogen lines have been investigated by Pauli in a 
+paper not yet published. 
+
+
+424 Mr Oppenheimer, On the quantum theory 
+where 
+A? (nk) 
+oie n3(—1)ntn (2k ++ ye+1)! [(n +B! 
+
+
+y=0 
+
+
+and 
+A (nk, n’k’) 
+wo Ea E31 (nn enbtnnk +n (— 2yntm(n + (nl + ke)! kt tent yet 2)! 
+y=0 y2=0 (n +n ere tytyat3 1! y2! (2k + 1)! (2k + Yo)! (n— k -—-il— —m):! 
+(n’ -k-1- 2)! 
+(12). 
+
+
+wre eeeeones 
+
+
+Averaging again over & and k’ we get the series intensities. In 
+ergs per atom per second these give*, for the first and second Lyman 
+lines, 0:00667 and 0:000644; for the first and second Balmer lines, 
+000789 and 0:00199. The only directly observable ratio is that of 
+the second Lyman to first Balmer line. Thus 
+
+
+1 (8, 2) 
+I (3, 1) ee 
+The absorption lines (n, n’) from the initial state n, have total 
+
+
+intensitiest 
+
+
+n® Qrre"? 8 
+
+
+n? ht (2 3)" 
+times the corresponding emission intensities. This gives, for 
+instance, the two observable ratios 
+
+
+pa (lS (1, 2) ran (2, 3) 
+=772; es" — = 5:37. 
+Tavs (1, Tavs (1, 3) : abs (2, 4) 
+
+
+The evidence in favour of such calculations of absolute intensities 
+is not very extensive. Two such calculations were carried through 
+on the Correspondence Principle. Thus Tolman} found an approxi- 
+mate agreement for the outer lines of a vibration-rotation band in 
+the infra red ; and Kramers§ found a rough value for the efficiency 
+of an X-ray bulb. 
+
+
+II. Hyperbolic Orbits. It is possible to extend this method to 
+the treatment of hyperbolic orbits. Classically the Fourier 
+coefficients for the coordinates do not exist for these orbits. On 
+
+
+* I am indebted to Mr J, T. Edsahl for checking these calculations. 
++ Fowler, Phil. Mag. 50, 1079 (1925). 
+
+t Tolman and Badger, Phys. Rev. 27, 383 (1926). 
+
+§ Kramers, Phil. Mag. 46, 836 (1923). 
+
+
+of the problem of the two bodies 425 
+
+
+the quantum theory the components corresponding to a transition 
+between two hyperbolic orbits do not exist and we are forced to 
+use the accelerations directly. For photoelectric transitions, how- 
+ever, the coordinate components may be found, and the intensities 
+are derived from them in accordance with (1). Here, however, 
+
+
+E : 
+h ee ee 
+
+
+where EF is the positive energy of the hyperbolic orbit. The 
+factors in the solution of (4) which depend on 9 and ¢ are those 
+given in (7). The values of & and m for which these satisfy the 
+conditions (1)—{5), are 
+
+
+w=h, §,  & cece. cone : 
+mers ere ee ci} wie SGoaueses (15). 
+For all values of m and k it is possible to find an integral function 
+SJ (E, k) of r satisfying (4), and which, for a set of values of # 
+which become closer and closer as the configuration space is 
+expanded, satisfy the conditions (1) to (4), and are orthogonal. 
+The characteristic functions so obtained are 
+
+
+u(Ekm) = A, °2™?> p™ (cos) (Ek) ......(16), 
+
+
+sin mp * 
+
+
+where sf (Ek) = fie (r) = © 6, (ER) PFE cccceees (17). 
+v=0 
+
+
+R 
+u(n, E)="3t 
+
+
+The coefficients are given, on the one hand, by the double circuit 
+integrals + 
+
+
+2c, (Zk) = if (2+ y)2e (2 —y)%7} de| i 
+YY. 
+
+
+x B (aya) I, (2t+y)e7l(2—y)e-ldz ...... (18),. 
+may): 
+
+
+where 
+a=k+1l—in*; a=k+1+in* 
+ee Sere (19) 
+n* = (Qatpet/WE)*; y= a (2uzyh 
+and on the other, by the recurrence formulae 
+(v2 + 2kv) ¢, + 82?mh= (e’c,_, + Ee,_,) =0 
+T (a,) P'(a,) ...(20). 
+
+
+1 
+Co = 5 Bm, 2) = I’ (a + 4) 
+
+
++ See, for an account of the mathematical methods, Schlesinger, Differential- 
+gleichungen, Vieweg, 1922, and Whittaker and Watson, Modern Analysis, Cam- 
+bridge, Chap. x1v. 
+
+
+426 Mr Oppenheimer, On the quantum theory 
+
+
+From these it follows that 
+v Da? | 
+¢, (Ek) = S,(E) | Il (73+ 2kr)h Ree (21), 
+r=1 
+
+
+where S, is of degree |= | in E, and thus that the series defining 
+
+
+J is absolutely convergent and real. Finally, f is given asympto- 
+tically for large values of (2yr) by the expansion 
+
+
+T' (a, +8) < 
+“Taras ot 
+
+
+T eee +s) = 99 
+Ar@Lass os Oe 
+which only fails when £ is zero. 
+
+It is now possible to see in detail how this case differs from 
+the periodic one. In the first place it follows from (22) that we can 
+no longer choose the constant s, to make 
+
+
+in iam wpdddddv= 1. 
+oJolo 
+
+
+The functions u are thus still orthogonal, but cannot be made 
+normal. In the second place, even if we eliminate all values of # 
+for which condition 1 is not satisfied, we are left with a continuous 
+manifold of characteristic functions. The equations (3) thus become 
+meaningless, and must be replaced by 
+
+
+u(nkm) a= = % Y wa (nkm, n'k'm’) u(n’k'm’) 
+a! k° m’ 
+
+
+F (Eh) ~ r* (— Qyr)-% er T (a1) 
+
+
+— rk (— Qyr)~% 6-1 T (ae) = 
+
+
++[* % 3 ea(nkm, Bk’m!)df(E).u(Ek’m') 
+0 ik’ m’ 
+u(Ekm) a= 3 3S 2,(Ekm, n'k'm’) u(n'k'm’) 
+n’ k’ m’ 
+
+
++] 2% a (Ekm, E'k'm’)u(Ek'm’). df (£’) 
+
+
+0 k’ m 
+ee ere (23). 
+Here the wu, are to be normalized, and the ug chosen to make 
+4 (Ekm, nk'm’) = aq! (nk'm’, Ekm)............ (24). 
+
+
+Finally we may determine f(Z) by the following argument. 
+Classically we should have, for the acceleration of the electron 
+in an orbit of energy £, 
+
+
+&_ (EL) = Wee #a (E, v) exp (2aivt) dv, 
+and, for the energy radiated from that orbit 
+const. ; Bf ze (Ev) exp (2arivt) dv. 
+
+
+of the problem of the two bodies 427 
+
+
+Quantum theoretically we have, for the components of acceleration 
+corresponding to a photoelectric transition 
+
+
+u(n) da 
+
+
+= | Any (nE) @,(nE) u(E) exp [20i(E/h)t]df (E) 
+
+
+[we suppress the indices & and m throughout this argument]. 
+By analogy the radiated energy should be 
+
+
+const. = | [ee (nF) v>(nE) oy (E)exp [2ri(E/h)t]d(E/h), 
+a 0 . 
+
+so that the energy radiated per unit time from the transition 
+
+n—»>(H, E+d£E) 1s, for given k +m, k’' +m’, 
+
+
+const, 3 [ie (nE) (BE) eal d (Bh) s.s0.++.-(26). 
+
+
+On the other hand the total radiation from inverse photoelectric 
+transitions from an orbit of energy £ is 
+
+
+const. & & x2 (En) v*(En). 
+
+
+Of this 
+const. & 2a?(En) v4 (En) ....csscceeseeeees (27) 
+
+
+is to be ascribed to transitions H ->n. 
+
+Now for the fully excited atom, where all temperature factors 
+are ironed out, the number of atoms in any range of phases will 
+be proportional to the corresponding volume of phase space. Thus 
+if the number of atoms in an elliptic orbit with quantum numbers 
+nkm is one, the number with a given m and & and positive energy 
+between F and £ + AE is 
+
+
+1 od 
+ed RNC ee 28). 
+age ae 22) 
+Here J is an action variable for the system and w the canonically 
+conjugate angle variable.. The rate at which this number is in- 
+creasing is, since J is a constant, 
+
+
+ot 
+war CER) xecsedsae ieee (29). 
+It is easy to shew that 
+w = 08 (30). 
+
+
+428 Mr Oppenheimer, On the quantum theory 
+
+
+Thus the number of electrons entering the range of hyperbolic 
+orbits per unit time is 
+A (E/h). 
+This gives, for the condition for detailed equilibrium 
+Lo? (nt) v§ (n#) A (Eh) =( fh x. (n£) v? (nE)P A (E/h) ...(31), 
+whence 
++ oF _1 
+Pie NS GPA GIN ucvacaaas (32). 
+We may verify®* this result in part by computing how many 
+electrons enter the range of hyperbolic orbits 
+EL, E+AE; kik + Ak, m,m+Am 
+from a free electron gas with Maxwellian distribution-in-velocity. 
+We get 
+const. AE. Am. (1 — m?/k?)~ 4 kAk (k? + n2)74 00. (38). 
+In the limit of large ( and k) this becomes 
+const. AH AmAk (1 — m?*/k?). 
+This agrees with the quantum theoretic calculation except for the 
+
+
+factor (1 — m?/k*)~ 4, The experiment of Stern and Gerlach suggests 
+that, in this paradox, the quantum theoretic answer is right. 
+In any case (32) gives 
+
+
+(a) u(n) a, = = &q (nn’) u(n’) + [a (nE) u(E£)d(£+h) 
+(0) u(B)a.= & 2a (En'yu(n') + i a (EE yu(E)a(E' + b)| 
+
+
+to determine u (#) and thus the a, (wZ). Let us call the factor in 
+u which remains after division by the normalized functions of $ 
+and ¢, u; and let us write 
+
+
+a=U(E, k; r)=f(E, ks r) x (ER) cece (35). 
+From (8) and (6) we get 
+r (En) =|. 1, r,u(E).u(n) dr = 15 (En) y (Ek) ...(36). 
+Also, _ 
+Cra en I. a (myu(n)r oredr sccseecsees (37), 
+where, for (36) and (37) 
+[rw (n) dr = 1. 
+
+
+* Tam much indebted to Dr P. A. M. Dirac for suggesting this procedure. 
+
+
+of the problem of the two bodies 429 
+
+
+Then we get, from (34), (36), (24) and (37), the integral equation 
+for x 
+
+
+u(n)r— x r (nn’)u (n’) = [ox (Ek) f (Ek; r) 1) (En) d (E/h) 
+
+
+which is of the form 
+| x? (En) Fi (r; En, k, kh’) d(E/h) = F,(r; 0, k’) ...(89). 
+0 
+
+
+The existence of a solution (38) independent of r is made plausible 
+by the orthogonality of the u(#); the mathematical problem will 
+be treated in detail shortly. 
+
+With this notation the continuous absorption spectrum is 
+given by 
+
+
+IT (nk, nk') dE = Barely (ki + k) (5 ye *) x (EE) a dE ...(40), 
+
+
+BC? k hon B 
+where 2 
+rs $ “s (- ee 
+v=0 y=0 nh 
+n (=2)9 (nt k ‘aa 
+c= a(n png) Otte +5+2)! 
+4, 2 1p 8\ —2k—-3 
+B=( A) 4, &) 
+and |k—k'|=1. 
+
+
+Moreover, if p,(v) is the energy density of radiation, the distribution 
+of photoelectrons in velocity per atom per unit of time is 
+
+
+2 Warretp? 2 em n-1(lk-k1=1) : rn X2pa? 
+Nw) du= ga (e+ k) AF ode 
+
+
+Similarly the emission spectrum from hyperbolic to elliptic 
+orbits is, in energy per electron 
+ny Aree R\Kk+k' (ayy 
+I (Ek, nk =a (+a) a a “B- oeceee 
+|k—-k'|=1. 
+
+It follows from (22) that the integrals for the components of 
+the coordinates corresponding to transitions between two hyper- 
+bolic orbits diverge. If we compute the components of the 
+acceleration directly from the equations of motion we get 
+
+#,= 0,8 pr 
+@,=cos $ sind; o,=sin ¢sinS; w,=cos9)"""” 
+
+
+430 Mr Oppenheimer, On the quantum theory 
+
+
+from which 
+e? ut, (EkmE'k'm’) d (E'[h) 
+= (E'/h) fffsin Sa. u(Bkm) u(E'k'm’) dbd¥dv ...(44). 
+Now 
+7 aa $ vtktkt1- og — So (Ek), Cyr (E'k’) 
+[ SEO SER) de & Fg Brees gym BS 
+
+
+where we must choose R, to make 
+Qy (£)R, >>1; 27 (2) RB, >>1. 
+For small values of £, of the order of a volt, the series converges 
+rapidly. 
+This gives, for the intensity of the continuous emission 
+spectrum 
+I (Ek, E’k’) a(£’ /h) 
+4 ed 2 ’ J 
+= CELE ER) OER) & g Retr dB) 
+v= 
+Bae ed Strate (46). 
+
+
+III. Kinematics. From (42) and (46) we can get the probability 
+that an electron, entering an hyperbolic orbit, shall be bound to 
+the ion in an elliptic orbit, or shall emerge in another hyperbolic 
+orbit. These probabilities are equal to the corresponding intensity 
+of radiation divided by the energy radiated for a single transition. 
+The total probability of capture for an electron of energy H and 
+total angular momentum k, averaged over the possible values of m, 
+is thus MEP T (he nik 
+
+n’=o n’— -k’|= 2 ‘) 
+Pe= oe Bo Bt Rhn'= Orme noeerene 
+
+
+Classically an angular momentum & would correspond to an 
+hyperbola with asymptote a distance A from the origin 
+
+
+_# kin 
+2H (1 + k/n*)4 
+Thus an electron of energy # must “fall within a circle of area 
+
+
+4 
+ip about the ion.” Its probability of capture is 
+
+
+P,(E)=lim © hje (BR) 43 a a (49). 
+K+>ow Fe=0 k=O 
+
+
+The quantity called, classically, the effective cross-section, is, for 
+such electrons 
+
+
+of the problem of the two bodies 431 
+
+
+Now. classically the electron approximates more and more 
+closely to a free electron as 7 is indefinitely increased. This is not, 
+however, true on the new theory. For it is easy to shew, by setting 
+e= 0 in (4), that the characteristics for the free electron are 
+
+
+moPS” cos S(— tyr) 74 Tg (— tyr) veers (51), 
+
+
+which, for large 7, approach 
+
+
+cos 
+sin 
+
+
+cos (m) k+1 = z 
+a mpP, (cos) Ret rev]... eeeees (52). 
+
+
+On the other hand (22) gives, for large x, characteristics which 
+differ from (52) by having (yr + an’ — hyr) in place of (yr). 
+
+Now it will in general be possible to expand the self adjoint 
+characteristics u/p for large r in terms of the characteristics 
+st) in three normal directions 
+Qry. 
+in space. If if should be possible to expand* it in terms of the 
+characteristics of only such electrons as have the same energy, this 
+would solve the problem of the deflection spectrum. For the initial 
+beam we should have such a sum of characteristics as would give 
+an electron moving, say, along the x axis with the initial velocity. 
+During the encounter the statistical distribution of the character- 
+istics will be changed, in accordance with (46). By analysis of the 
+resulting characteristics in terms of the characteristics of free 
+electrons with the corresponding final energy moving along the 
+three normal directions, we can find the relative probability of any 
+deflection and change in energy by the encounter}. This problem 
+will be considered in detail. 
+
+I should like to thank Mr R. H. Fowler, F.R.S. and Dr P. A. M. 
+
+
+Dirac, for many valuable suggestions. 
+
+
+for electrons moving with velocity ( 
+
+
+* This is impossible if one neglects transitions, 
++ In this connection see a paper by Born, Zeit. f. Phys. 37, 863 (1926). 
+
+

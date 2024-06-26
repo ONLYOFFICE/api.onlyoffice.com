@@ -1,0 +1,635 @@
+APRIL 15, 1930 PHYSICAL REVIEW VOLUME 35 
+
+
+TWO NOTES ON THE PROBABILITY OF RADIATIVE 
+TRANSITIONS 
+
+
+By J. R. OPPENHEIMER 
+NorMAN BRIDGE LABORATORY, PASADENA 
+
+
+(Received March 4, 1930) 
+
+
+ABSTRACT 
+
+
+In 1 we compute the rate at which electrons and protons should, on Dirac’s 
+theory of electrons and protons, annihilate each other; this gives a mean life time 
+for matter of the order of 107!° sec. 
+
+
+In 2 we compute by Dirac’s radiation theory the relative probability of radiative 
+and radiationless transitions; we obtain an expression substantially equivalent to 
+that derived by Heisenberg and Pauli. 
+
+
+I 
+
+
+N ELECTRON satisfying Dirac’s linear wave equation will very rapidly 
+lose energy to the electromagnetic field. If the electron is free, it must 
+lose this energy by radiating at least two quanta, in order that energy and 
+momentum may be conserved in the process. If the electron is bound, e.g. 
+in an atom, transitions in which only one quantum is radiated can occur, 
+since there are then other particles present which can take up the necessary 
+momentum. But these transitions are rare compared with the two-quantum 
+transitions, which, as is well known, may be expected according to the theory 
+to occur at an infinite rate. Now Dirac has suggested! that the reason why 
+these transitions do not in fact occur is that the states of negative energy are 
+filled; and this suggestion leads to a satisfactory understanding of the validity 
+of the scattering laws derived from his wave equation. But according to Dirac 
+not all of the states of negative energy are full; there are a few gaps in the dis- 
+tribution for negative electrons nearly at rest; and thus transitions to states 
+of negative energy should not be quite excluded. Dirac further suggests that 
+the empty states of negative energy are protons; and thus the filling of these 
+states should correspond to the annihilation of an electron and a proton. This 
+should occur very rarely; and if Dirac’s suggestion were correct, we should 
+expect to find a very small value for the corresponding transition probability. 
+In this note we shall compute this transition probability on the basis of the 
+present theory. 
+
+This computation cannot be made theoretically unique and certain until 
+the grave difficulties introduced by the inequality of electron and proton 
+masses are resolved; and this resolution seems to demand an essential ad- 
+vance? in the theory. The chief ambiguity for the present work arises from the 
+fact that the energy radiated by the conversion of a stationary positive elec- 
+
+
+1P, A.M. Dirac, Roy. Soc. Proc. A126, 360 (1930). 
+2 J. R. Oppenheimer, Phys. Rev. 35, 461 (1930). 
+
+
+939 
+
+
+940 J. R. OPPENHEIMER 
+
+
+tron into a stationary negative electron is 2 mc’; whereas the energy liberated 
+by the annihilation of a stationary electron and a stationary proton should be 
+(m+ Mp)c?. We shall make the computation without explicit recognition of 
+the difference in mass of electron and proton; this gives a transition probabil- 
+ity which is absurdly large, and which is not appreciably reduced by the sub- 
+stitution of m+ M> for 2m in the final formula. 
+
+Let us consider for definiteness an enclosure of volume V in which there is 
+one free electron, and one gap in the negative energy distribution; and let 
+both the electron and the gap be at rest. If electron and proton have in fact a 
+relative velocity v, then our result will be in error by terms of the relative 
+order (u/c). For the wave equation of the electron we write 
+
+
+|W /c + ame + (h/277) [a1(d/dx) + a2(d/dy) + a(d/d2]}y = 0 (1) 
+
+
+We take the matrices | |a,(pc) | | in the form 
+
+
+0 0 O 1 0 0 0O 42 
+0 O 1 0 QO -1 0 
+l|a1(po)|| = . a wae I|a2(po)|| = a. ote a 
+1 0 O 9O i-z O O 9O 
+(2) 
+0 O 1 ) 10 0 90 
+0 oO O-1 0 1 0 O 
+l|as(oo)|| = i x: oe el? l|xo(po)|| = on 
+0O-1i O QO 0 0 O-I!1 
+
+
+The normalized solutions corresponding to momenta p, g, 7, and energy W 
+given by 
+
+
+(WiepPp=re+pP+egtr (3) 
+may then be written 
+p3* = 0; 
+F (mc + W /c)e2tt/h (prt autre) 
+Mine + Wey + PE Ge + PAY 
+pe __ cee (p + tern ee... 
+[me + W/eyr+ pt get fpev 
+perni/h( prt aytrz) 
+and 
+ya = 0; vs = pat 
+
+
+= 4 
+WP = — fot; wo® = Yt. @) 
+
+
+The two wave functions for a and 8 give electrons with spin oriented parallel 
+and antiparallel respectively to the 2 axis. 
+
+
+RADIATIVE TRANSITIONS 941 
+
+
+For the initial state of the electron we take 
+
+W = Eq = hig = mo*, Yi? = oo? = 0; Wa? = eP*(2V)“1s a? = (2V)—1? (5) 
+similarly for the final state we take 
+
+W = EF? = — ly = —me*?; 3° = pat = 0; 
+
+vit = ert (2V)-10; Yat = (20), 
+
+
+Here y and 6 are independent indeterminate phases; if in the final results we 
+average over these, we shall have assumed random orientations for the spins 
+of both initial and final states; and with this understanding both (5) and (6) 
+may be regarded as spherically symmetric. 
+
+We shall need also the wave functions for states with 
+
+
+(6) 
+
+
+p=¢q=0;r=4+me; W= + (2))?me?. 
+
+
+These are 
+— retirimez/h (1 + (2)1/2) gk2rimes/h 
+vo” = ye = 05 fi* = ————;_ os" = ee 
+meVil2(4 + 2(2)'/2)1/2 Vil2(4 + 2(2) 1/2) 1/2 
+and 
+Wik = Ps? = 0; Yo® = — fit; Ys? = Yar. (7) 
+
+
+Initially there is to be no radiation present; the electron is in the state 
+(0). The probability amplitude at a later time ¢ that a quantum of frequency 
+vy, momentum p, and electric vector polarized along the unit vector e, shall 
+have been emitted, and that the electron shall have jumped to a state of 
+momentum P, energy #7, and polarization of spin 7 =a, 8, is then 
+
+
+1 poe erti(vtr—vg)t 
+b(p 58; P ,v,r) — so 2(0; p,2,3,7)—_____——— : (8) 
+
+
+yv+P— vp 
+
+
+Here v(0; p, #, 3, 7) is the matrix component for the transition in question of 
+the interaction energy between the electron and the light quantum field. This 
+vanishes except when P = — p, and for P= — p has the value 
+
+
+3 
+ec(Onfonv yo > €,cuje 2TH AP. »)o; B,P,r; with p? = vo? + v? (9) 
+
+i=1 
+where 
+
+3 
+( DS eee 2 Ti AAP. »)o; b,P,r 
+l=1 
+is the matrix component corresponding to the electronic transition 
+(0) ae (v,P,7) 
+
+of the component of the vector 
+
+
+gen 2ti/h(P. r) 
+
+
+parallel to e. 
+
+
+942 J. R. OPPENHEIMER 
+
+
+The probability amplitude that the electron should have jumped to state 
+(e), and that a second quantum of frequency v’, momentum p’, and polariza- 
+tion along e’ should have been emitted, vanishes except when p’ = — p=P, and 
+for p’=P has the value 
+
+
+aed 2re*c” {— e2ri(rv—ny)t 1— efti—n)t 
+$(p,£,p ,£;¢) = re aaa 
+
+
+hyV rye 
+
+
+y—PD— vo 2(v — vo) 
+
+
+with 
+
+
+3 3 
+> >4( D eare-*rsin) ( Deiaretrinow?) 
+rs t 03 ,Pr, v,P,rie 
+
+
+e=1 l=1 
+
+
+: 3 
++( Deletion’) ( >; cue*iNo) Voto (10) 
+DO Ee 0,Prie 
+
+
+i=] i=] 
+
+
+This grows large only for y~vo, J7~ +(2)"v9; and here the first term in the 
+bracket may be neglected. 
+
+To evaluate >© for vy =v, 7= +(2)'?y9, we may without loss of generality 
+take p along 2, since both initial and final wave functions are effectively 
+spherically symmetric. We may further take, again without loss of generality, 
+e along x. There are then two cases to consider, with e’ along x and along y 
+respectively. For these cases we have in turn 
+
+
+= LL wl fav Loreen matony' 
+
+
+vt (2)'/%, r=a,8 
+
+
+{ i dV Tyrer OF Ly rh (11) 
++4 fav > Ferree) OP) Lol} fav Ss Fate *riersay(o pyr | 
+
+
+po 
+
+
+If we use (2) and (7) this gives us 
+
+
+>; = 0 for e'||x 
+dD, = (= 1/2m)(1 + @t1O-) for e’|ly. 
+
+
+From this we conclude that the probability of an emission is proportional to 
+the square of the sine of the angle between the electric vectors of the two 
+quanta. 
+
+Now there are 2»,?(V/c’) components of the radiation field per unit solid 
+angle per unit frequency about 9; the direction of propagation of one quan- 
+tum can vary over a hemisphere; but when this is fixed polarization, fre- 
+quency and direction of propagation of the other quantum are determinate. 
+Thus we get the total chance of an emission at time ¢ by integrating the 
+absolute value of the square of @ (averaged over y and 6) over a hemisphere of 
+solid angle and all frequencies, and multiplying by 2»,?(V/c?); thus 
+
+
+(12) 
+
+
+RADIATIVE TRANSITIONS 943 
+
+
+» arf Blows, — p,e';e)|? 
+p.€ 
+
+
+Anve?V efct-4e? 1 7? dy| 1 — efriv—we |? 
+
+
+c h2y,2V2 Dye 0 A(y — Vo)? 
+
+
+162r+e4c *1—cosx 
+m= f- f — dx (13) 
+hy 92V —0 x? 
+’ 167°e4 
+7 meV 
+
+
+The mean life time of an electron in a proton density of mp protons per 
+unit volume is thus 
+
+
+m¢3 5x 10!° 
+| ae — sec. (14) 
+l67r°e4np Ny 
+It should be observed that the retention of the terms for # = — 2!/2yy in the 
+
+
+expression (11) for >°, may be justified by an argument similar to that used 
+by Dirac to validate the scattering formulae. For although the electron can- 
+not jump to this state of negative energy, because it is already filled, there is a 
+double transition which gives just the same terms in >., and in which first a 
+negative electron in the state (—2!/*v»9, P, r) jumps to a state near the state 
+(0), and then the original positive electron jumps down from the state (0) to 
+the state (—2!v9, P,7); in either transition either of the two quanta may 
+be emitted. 
+
+If we try to correct (13) to take account of the fact that the energy ra- 
+diated should be (m+ Mp)c? and not 2mc’, we get in place of (14) 
+
+
+(m+M,)2%® 5X10 
+
+
+54 
+647° e*n » Ny 
+
+
+7 
+
+
+SEC. (15) 
+
+
+Both (14) and (15) give an absurdly short mean life time for matter. With 
+np = 10% we get 
+
+
+T~5X 10-8; T7S 5X 10-9. 
+
+
+Of course the protons and electrons of matter are not in general free, nor 
+uniformly distributed, nor at rest. But we should hardly expect their agglom- 
+eration into nuclei, or even atoms, to reduce appreciably the mean transi- 
+tion probability, since this would mean essentially an increase in the effective 
+np to be used. In any case (14) or (15) should apply roughly to electrons and 
+protons in a discharge tube. 
+
+
+I] 
+
+
+In their paper on the relativistic treatment of the interaction of radiation 
+and matter, Heisenberg and Pauli point out that according to their theory the 
+radiationless transitions of the quantum mechanics may always be expected 
+
+
+944 J. R OPPENHEIMER 
+
+
+to be accompanied by transitions which correspond to a change in the ma- 
+terial system and the emission of at least one quantum of light.’ So, for exam- 
+ple, in the Auger jumps, in the ionization of an atom in an electric field, in the 
+capture of electrons by alpha-particles, and in the radioactive decay of nuclei, 
+the energy of the liberated particles should show a certain diffuseness; and 
+energy is only conserved by the emission of an appropriate continuous dis- 
+tribution of light. Heisenberg and Pauli derive an expression for the prob- 
+ability of such transitions involving radiation; they show that this probability 
+is small, compared with that of the radiationless transitions, of the order 
+
+
+e/he (v/c)’. 
+
+
+They apply this result to the problem of radioactive disintegration, where the 
+escape of the alpha and beta particles may be roughly schematized as a diffu- 
+sion through a high wall of potential energy; and they obtain so an explana- 
+tion of the sharp definition of the energies of alpha-particles, and the great 
+diffuseness of the beta spectrum. The non-appearance of the gamma radia- 
+tion, which, on this theory, should accompany beta-ray disintegration, re- 
+mains unexplained. 
+
+In this note we shall compute the relative probability of such radiative 
+transitions on the basis of the Dirac radiation theory. For this probability we 
+obtain an expression which, in the approximation to which the calculations of 
+H. P. were carried, should agree with the results of that calculation. In our 
+formula certain terms appear which were deliberately neglected in H. P.; 
+and further this formula is applicable to a slightly more general group of 
+problems than that of H. P., which cannot strictly be applied to any of the 
+problems mentioned above except that of the Auger jumps; but except for 
+these minor modifications our result reduces to that of H. P.; and it gives the 
+same predictions when applied to the theory of radioactive disintegration. 
+The present work is rather simpler than that on the basis of the more general 
+theory. 
+
+For the occurrence of radiationless transitions it is essential that the 
+material system (and we shall call this the “atom”) be in a quasistationary 
+state of an energy equal to the energy of some aperiodic motion of the system. 
+Let the wave equation for the atom,—which may be written in the configura- 
+
+
+tion space, and without explicit reference to the radiation field, to the order 
+(v/c)’—be 
+
+
+(H — hv)y, = 0. (16) 
+Let the initial state have the energy 
+Eo = hv (17) 
+and be given by a wave packet which satisfies the equation 
+(H — V — hyo)o = O. (18) 
+
+
+3 'W. Heisenberg and W., Pauli, Zeits. f. Physik 56, 1 (1929); cited as H. P. 
+
+
+RADIATIVE TRANSITIONS 945 
+
+
+The wave packets for the quasistationary aperiodic states of the atom we call 
+6,; they satisfy 
+
+
+(H — V’ — hv)é, = 0; £ = bv (19) 
+
+
+and shall be normalized to dy. Then the probability of a radiationless transi- 
+tion to the continuum is given, to the first order in the small quantity 
+
+
+No/ Vo, by 
+
+
+No = 4a? /h? | Vio | oe Vie = J 475,70. (20) 
+
+
+(The integral over dr is to be taken over the configuration space of the atom.) 
+
+Now let there be no radiation present initially. Since the atom has energy 
+levels lower than Eo, it can make radiative transitions to these states; Dirac’s 
+radiation theory gives us, for the probability per unit time per unit frequency 
+v, of the radiation, for this transition 
+
+
+Adv, = 167°, dv,/3hc? | P, +0 (2 
+with 
+
+
+Pek ve = f 479, Pee (21) 
+
+
+where P is the time rate of change of the electric moment of the atom. (With 
+Dirac’s linear Hamiltonian for the electron it will be 
+
+
+> e,a* 
+Rk 
+
+
+where e, is the charge on the &’th particle, and the a‘s are the Dirac matrices, 
+and the summation is to be taken over all particles.) 
+
+Now when V is not very small, (21) gives us only a very poor approxima- 
+tion for the probability of the corresponding transitions. Somewhat inac- 
+curately we may say that the system can reach the same final state by a dou- 
+ble jump, in which, e.g., the atom goes over into some arbitrary state in the 
+continuum, and then—but there is no interval between the jumps,—jumps to 
+the final state and emits a quantum. In this process of course only the total 
+energy of the system is conserved, and that only when one considers the 
+double jump as a single process. This is the effect treated by H. P.; and to 
+obtain it we have only to carry the perturbation theory a step farther than 
+was necessary for the derivation of (20) and (21). 
+
+The Dirac wave equation for the probability amplitude @ for the whole 
+system, taken as a function of the state, which for brevity we describe by the 
+single index v, of the atom, and the number J,, of quanta of frequency »,, 
+polarization p, and given direction of propagation, is 
+
+
+946 J. R. OPPENHEIMER 
+
+
+— h/2wi-d/dto(v,Nep) = >, H(v, Nesp; v'N'sp)o(v", Nap) 
+
+
+v'N’sp 
+
+
+f a'V'.090,Ma) + Vi0b(0, Np) 
+
+
+i 
+
+
+1/2 1/2 1/2 
+
+
+(22) 
++ dv’ > Nar p'Ye'Ke" p'(Cs" p! ‘ P,,)o(v’ ) Nap _ 5250 pp’) 
+sp’ 
+
+
+1/2 
+
+
+1/2 : 
++ dv’ SON ea + 1) ep sks p (Csrpy Pr Ov’, Nop -- bee'O pp’) 
+s'p’ 
+
+
+with Ksp=h/2rC op. 
+
+
+Here o,, is the number of components of the radiation field of given polariza- 
+tion per unit frequency about v, per unit solid angle for the direction of propa- 
+gation; and e, is a unit vector parallel to the electric vector of the component 
+
+
+sp. The summation >”, and the product II infra, are to be taken over all the 
+sp sp 
+components of the field. 
+
+
+If we take for our initial conditions for @ 
+
+
+b(v, Nesp) = 0) 
+
+
+, (23) 
+(0, Np) cos [[6(N up, O)em 2h 
+sp 
+and put these values in (7), we find in first approximation 
+—Qyrivt en rivet 
+oily, Np) oe [[6(v.5,0) Carre peseroerey 
+sp h(v — ve) 
+1/2 1/2 a eee 
+ve 28( Nee ? 1) LL'8(N rp, O) ve? Xs" p' (Cs p’ ; Pi. eat ee ee (24) 
+s’p’ s'’ pt! hiv + Ver V0) 
+
+
+In II’ the factor for s’’=s’, p’’ =p’ is to be omitted. 
+
+If one puts this expression (24) for @,in (22), integrates the equation to ob- 
+tain the second approximation ¢2(v, N,,), and takes the sum over all com- 
+ponents of the field 
+
+
+7 | dg {diel Ln) |, 
+
+
+this gives the probability that the system has, at time ¢ emitted a quantum of 
+frequency near v,=v)—%, and made a transition to a state in the continuum 
+of energy near hy. The coefficient of ¢ in this expression gives the transition 
+
+
+probability for transitions to a state in the range 7 to 7-+Az: 
+dV oy Py dy’ Pw W5 2 
+Gr pas 
+
+
+, 
+Vo — P pomp 
+
+
+167°v,Ap 
+
+
+A, (FAR = 
+( 30% h8 
+
+
+(25) 
+
+
+The first term in the bracket is the direct emission given by (21) and neglected 
+by H. P.; the remaining terms differ from those of H. P. (132) only by having 
+
+
+RADIATIVE TRANSITIONS 947 
+
+
+V’ in place of V. When yo and 6, are characteristic functions of the same 
+equation, these terms reduce to those given in H. P. 
+
+It should be observed that both (25) and H. P. (132) are derived as approxi- 
+mations; in particular, the momentum of the light quantum, and terms of 
+higher order in v/c, are neglected in both computations. The retention of this 
+momentum leads to the same modification in (25) and H. P. (132); and so 
+does the retention or terms of the fourth order in v/c. But in higher orders 
+only the method of H. P. can be used, since then no equation of the form (16) 
+holds for the atom, and it is necessary to work directly from the more general 
+equations of quantum electrodynamics, and take more complete account of 
+the retardation of the forces between the particles of the atom. 
+
+To obtain the order of magnitude of the total radiative transition prob- 
+ability for radioactive disintegrations, we may observe that V and V’ may 
+be expected to be of the same order of magnitude as Avo, and we integrate (25) 
+for all frequencies pv, up to v9; this gives 
+
+
+2 
+
+
+f drO,Yo| . 
+
+
+The ratio of this to (20) gives the relative probability that radiation will be 
+emitted in the disintegration: 
+
+
+Az/dho ~ €7/ he: (v/c)? (27) 
+
+
+hi = { : A, (PF) dB ~ v*v92e?/erh 
+0 
+
+
+(26) 
+
+
+in agreement with H. P. (133). From (25) it is clear that only a much more 
+detailed knowledge of 9, and WY» and of the form of the Hamiltonian Z in (16) 
+than is at present available can give us any precise value for \,/Xo. 
+
+The application of (27) enables us to estimate the relative probability of 
+radiative and radiationless capture of electrons from atoms by an alpha par- 
+ticle, and gives for the ratio of the probabilities 10-*, in agreement with the 
+more detailed calculations of the effect. 
+
+

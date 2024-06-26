@@ -1,0 +1,463 @@
+Physics tonight 
+J. Robert Oppenheimer 
+
+
+Citation: Physics Today 9, 7, 10 (1956); doi: 10.1063/1.3060021 
+View online: http://dx.doi.org/10.1063/1.3060021 
+
+View Table of Contents: hitp://physicstoday.scitation.org/toc/pto/9/7 
+Published by the American Institute of Physics 
+
+
+NEW IDP-7 & IDP-10 
+
+
+Dry Scroll Vacuum Pumps —— —— 
+
+
+at Agilent Technologies 
+
+
+10 
+
+
+Physics Tonight 
+
+
+By J. Robert Oppenheimer 
+
+
+An address presented before the American Institute of 
+Physics as part of the AIP’s 25th Anniversary Session 
+on the general topic “Anticipations”, held February 2, 
+1956, in New York City. 
+
+
+| Side bencent are involved in a wonderfully diverse 
+and varied set of enterprises, not simply and neces- 
+sarily related. Your speaker is not distinguished by the 
+development of his imagination; almost everything that 
+happens amazes him. I shall not try to give a general 
+landscape of all that physicists are up to. It ranges 
+from the magnetohydrodynamics of interstellar matter 
+to nuclear alignment at low temperatures; it ranges 
+from the giant rocket to transistors, and to instruments 
+for detecting valuable minerals in the ground; it ranges 
+from automation to the coding problem of genetics; it 
+ranges from teaching doctors and engineers and soldiers, 
+and even ordinary men, to advising the heads of state. 
+
+I shall speak to three separate themes, illustrative of 
+this diversity, that may be samples. One has to do with 
+the physicist as teacher, and a serious problem in com- 
+munication. One has to do with the physicist as citizen, 
+and the changes that his works have brought about in 
+the arts of war. The first and the main sample has to do 
+with physics itself, and the physicist as discoverer. 
+
+
+ROGRESS in physics is always marked by two com- 
+
+plementary traits, one centripetal and one centrifu- 
+gal. We always try, by the use of new techniques, 
+instruments, technology, and ideas, to transcend past 
+experience, to find out something new, and to penetrate 
+into aspects of the physical world hitherto hidden or 
+implicit. This is the side that has adventure in it. It is 
+the side for which the great accelerators and the in- 
+genious detectors are devised, that give a touch of 
+romance and adventure and novelty to our work, 
+
+Yet at the same time we try to find the elements of 
+unity and of order in the new experience, and in its 
+connections with the old. It is true that we are plural- 
+ists. We maintain, rightly and stoutly, that any part 
+of physics is just as good, just as much a reward to 
+the intelligent, just as worthy as any other. 
+
+But there is another side to it; physics has remained 
+rather more united than almost any other part of human 
+thought. It has been possible to reduce immense, varied 
+experience to a few, simple, rather necessary, not too 
+empirical themes and principles. When we had courage 
+
+
+we used to call them laws. Remembering what other 
+meanings law can have, we are hesitant to call them laws. 
+
+We often deprecate the majesty and power of the 
+order that pervades the physical world, because we 
+know that it is not all comprehended, is subject to 
+change without notice, and that at any given moment 
+our attention and our wonder are devoted primarily to 
+what we do not understand, to the puzzles. You have 
+only to think of the history of physics, of Newtonian 
+mechanics, or Maxwell’s theory, or, in this century, of 
+the immense syntheses of the theories of relativity, or 
+of atomic mechanics. In these there are traits of sim- 
+plicity, of unity, and of necessity, and the vastest and 
+most disparate experience is comprehended within a few 
+general ideas and principles. 
+
+Today, in what is called in the trade particle physics 
+—and here I would include mesodynamics and at least 
+some aspects of field theory—we are searching for this 
+order, and we are very far from seeing it. We have a 
+vast jumble of odd dimensionless numbers, none of 
+them understandable or derivable, all with an insulting 
+lack of obvious meaning. Just in the class of objects 
+that live long enough to deserve the name of particle — 
+there are the light mesons, the K-mesons, at last the 
+antinucleon, and the hyperons. This should not be a 
+talk to the special problems that at the moment seem 
+most pressing of solution: the relation of the 7-meson 
+and the @-meson; why the antiproton interacts with 
+such a large cross section with nuclei; whether we can 
+understand the scattering of pions in s states. There are 
+greater mysteries. 
+
+We have a maze of findings: the masses of the semi- 
+stable particles, their lifetimes, their reactions, their 
+numerous and striking selection rules. In some ways this 
+field may remind us of the quantum theory of atoms 
+as it was in the earlier years of this century; but we 
+have not found that single key to the new physics that 
+Planck discovered at the turn of the century, nor any- 
+thing analogous to Bohr’s postulates. Above all, we do 
+not have the great guidance of the correspondence prin- 
+ciple to relate familiar physics that we understand with | 
+the phenomena now newly discovered. 
+
+
+ee 
+
+
+ee 
+
+
+PHYSICS TODAY 
+
+
+NDEED, in ordering the discoveries in this field we 
+
+have three sure guides and one uncertain one: small 
+fingers of light in the darkness, imperfect analogies, by 
+whose correction and refinement we may hope for un- 
+derstanding. It is not wrong that we use analogies. There 
+can hardly be any other way than to try to talk about 
+a new situation in terms which have been adequate to 
+an older one, aware that we are making a mistake, but 
+trying to learn from nature what the mistake is. 
+
+One of these fingers of light is the nonrelativistic 
+quantum mechanics, One uses this in the model ex- 
+ploited by Chew, for the study of the interaction of 
+mesons and nucleons. It rests on the fiction, which obvi- 
+ously is not going to last forever, that the mass ratio of 
+nucleon to pion, which is in fact about seven, is infinite. 
+
+The second is the theory of weakly interacting fields, 
+of which the most perfect and most beautiful example 
+is quantum electrodynamics, just in its present approxi- 
+mate state. It is so perfect that for positronium I sup- 
+pose we have rightly the feeling that there are only two 
+kinds of mysteries left. One is that the charge and the 
+mass of the electron are numbers that mean nothing to 
+us, that we have to read from experiment. The other is 
+that there are some really academic fine points that we 
+may not know enough about. Thus it is possible that 
+higher order Fermi processes somewhat modify the in- 
+teraction of electron and positron. It is certain that the 
+existence of mesons and nuclear matter modifies the 
+electromagnetic field. We know a little of this, but 
+perhaps not in all detail. We hardly can be sure, not 
+knowing what mesons exist. We even know that some- 
+where in this picture gravity probably plays a part. 
+But these are all of such extraordinary remoteness and 
+smallness that we have an almost closed theory of 
+positronium, as closed as it is healthy for anything to 
+be in this world. 
+
+
+J. Robert Oppenheimer, professor of physics and director 
+of the Institute for Advanced Study in Princeton, is a 
+former president (1948) of the American Physical Society. 
+
+(Photo by Gertrude Samuels—PIX) 
+
+
+JULY 1956 
+
+
+12 
+
+
+Tt is even something of a paradox that the weak in- 
+teractions introduced by Fermi to describe radioactive 
+processes give us one of the few quantitatively adequate 
+instruments of description, and that the strong, more 
+obvious forces elude us. 
+
+A third tool is our understanding of the connection 
+between the invariance of physical systems, and the 
+constants, or almost-constants, of the system's be- 
+havior—its selection rules. We have begun to see that 
+some of the most striking of these symmetry or in- 
+variance properties lie outside the Lorentz group, and 
+the simple rules of charge symmetry and of the identity 
+of elementary particles. 
+
+The fourth tool, and a very powerful one it is, is the 
+application of relativity and its pronouncements about 
+causal behavior to the theory of fundamental particles. 
+It is a powerful tool, but it is not certain; for we are 
+not convinced that we as yet understand how to formu- 
+late the requirements of relativity in domains of experi- 
+ence in which our familiar ideas of space and time are 
+not obviously or necessarily applicable. 
+
+
+wet sort of questions can we ask about the order 
+that we do not have and are seeking? I can think 
+of at least three: Will this be an atomic theory, in the 
+basic sense that the number of long-lived fundamental 
+particles is finite? Shall we find that, as we study with 
+higher and higher energy impacts and higher and higher 
+resolving power, we come to an end of the relatively 
+stable components of matter? The experience of the last 
+five years can be read both ways, Very much new has 
+been found; but it seems a small lot, and we do not 
+know whether there is another installment coming. 
+
+This question, as has long been recognized, may be 
+closely related to the question of whether we can in 
+fact define the state of affairs in arbitrarily small in- 
+tervals of space and time. The reason is that if one has 
+an infinite regress of more massive objects that Jast 
+indefinitely long compared to their proper times, it 
+would appear that they could be used rather naturally 
+for the measurement of smaller and smaller intervals. 
+If there are no such particles, then the definition of 
+spaciotemporal relations and the definition of fields is 
+at least not a direct extension of what we have known 
+in classical and quantum theory. 
+
+The second question rests on the first. If we are 
+through, or will one day soon be through with the dis- 
+covery of fundamental particles, will we also be through 
+with the discovery of the laws of their behavior? 
+Hitherto, the changes in physical law as we go to higher 
+energy and smaller distance have usually been charac- 
+terized by the emergence, or the emerging importance, 
+of new objects. Is a new regime that is qualitatively 
+different to emerge when we come to still higher ener- 
+gies, even though there are no stable particles, or quasi- 
+stable particles, characteristic of that energy? There is 
+no necessary answer to this question, even if we accept 
+the finiteness of the fundamental group of particles. 
+There are, among others, two probably related reasons: 
+One is that the particles are of a great but only finite 
+
+
+the mysteriously small number which characte 
+Fermi interactions, which points in an obscure way to 
+the even smaller number characterizing gravitati 
+forces. Do these define enormously higher energies: 
+those now under study, where novelty again appears 
+novelty relevant to the character of the atomic wo 
+Of course they do define enormously higher energies, 
+We do not know whether that means that a new set of 
+laws and a new set of phenomena will become manife st, 
+and we do not know whether it is relevant to the grea ie 
+puzzles with which we are living today. 
+The third question rests even more heavily. Will this 
+world, with its variety, its un-understood numbers, ever 
+really yield to an ordered description, simple and ce 
+sary? Will our future students be able to me 
+mass ratios, the coupling constants, the selection rules 
+as necessary consequences of the physical principles 7 
+the subnuclear world; or will these remain empirica ( 
+findings, to be measured with greater and greater ac- 
+curacy, and recorded in tables that every physicist must. 
+memorize or carry about with him? Surely past expe 
+ence, especially in relativity and atomic mechanics, has — 
+shown that at a new level of explanation some simple 
+notions previously taken for granted as inevitable had 
+to be abandoned as no longer applicable. Surely we are 
+fully prepared not to regress in this, not to find that 
+in this new domain the generalization symbolized by 
+Planck’s constant and the velocity of light are suddenly 
+no longer there. On the contrary, we are prepared for 
+a new and at first probably almost unrecognizable kind 
+of explanation. Always in the past there has been an 
+explanation of immense sweep and simplicity, and in it 
+vast detail has been comprehended as necessary. Do we 
+have the faith that this is inevitably true of man and 
+nature? Do we even have the confidence that we shall — 
+have the wit to discover it? For some odd reason, the 
+answer to both questions is yes. 
+
+
+HYSICISTS not only invent and discover; they also 
+explain. On the one hand we are teachers, increasing 
+the number and, we hope, the competence of our own 
+profession, There is for us at least one great problem 
+that, in my opinion, is relevant to the now very promi- 
+nent question of the adequacy of our profession, both 
+in talent and in number, to the needs of the time and 
+of our country. 
+It is true that here much could, and some should 
+be said of many of the practices by which we waste 
+ourselves and our colleagues, and the treasure of their 
+genius and training. I do not have in mind so much the 
+Federal security system, though there are too many 
+people here who know its sorrows and its evils to ignore 
+it. I have in mind quite practical things, for the shortage 
+of people is largely in practical undertakings. The i- 
+version of scientists to administration, the terrible prob- 
+lems of largeness in organization, lack of adequate 4 
+sistance, the committees on committees, these cou ti 
+be better than they are, could by being better greatly 
+
+
+PHYSICS TODAY 
+
+
+ig ae 
+
+
+of science. There is moreover, and this is far 
+
+r, in many practical undertakings, a characteristic 
+p fog in policy, a tendency massively to pursue 
+ature and trivial and irrelevant a ait that 
+
+
+ag know something of our work, and have some 
+honest pleasure in it. I may not deal with this theme 
+
+
+wh hich overcame me as T listened with some anguish to 
+what he said. For there is an old truth that we cannot 
+ach what we do not know: I fear that he has char- 
+acterized as an educational crisis, a default in trans- 
+mission to a new generation, what is in fact a deeper 
+crisis, a default in our own understanding. This crisis 
+s deep in the mind of every thoughtful scientist. What 
+‘can we do better to maintain the health and the firm- 
+ness of our civilization? How can we let the beauties, 
+the excitement, the order, the love of science play some 
+“helpful part? 
+
+Every scientific advance, past or contemporary, has 
+two traits: it is an enrichment of technique; it enables 
+“us to do what we could not do before, or to do it better: 
+‘it is knowhow. It is also, on the other hand, the answer 
+and formulation of questions long agitating man’s curi- 
+osity, something to contemplate, in Peirce’s words, “the 
+demi-cadence which closes a musical phrase in the 
+“symphony of our intellectual life’, a glimpse of har- 
+‘mony and order, a thing of beauty: it is knowledge. 
+
+_ As physics grows, and there appears to be more and 
+more to learn, the problem of reconciling knowhow and 
+knowledge grows more difficult and more urgent. We do 
+solve it in one context. In the last years of graduate 
+study, in the years following those of postdoctoral study, 
+knowhow and knowledge are not each other's enemies, 
+but each other's complements. There students are al- 
+lowed to forget almost all there is in the world except 
+the problems on which they are working. They are then 
+in action as apprentices. They see the relevance of tech- 
+nique to understanding, and, if we or they are any good 
+at all, they are touched with the light and wonder at 
+“finding out something new. 
+
+‘We tend to teach each other, except in the golden 
+years of graduate and postdoctoral study and appren- 
+ticeship, more and more in terms of mastery of tech- 
+nique, losing the sense of beauty and with it the sense 
+of history and of man. On the other hand, we tend to 
+teach those not destined to be physicists too much in 
+terms of the story, and too little in terms of the sub- 
+stance. We must make more humane what we tell the 
+
+
+. Stratton, “Science and the Educated Man", Physics Today, 
+1956, This lecture was given before the same session of the 
+sped, Institute of Physics as the talk printed here. 
+
+
+‘JULY 1956 
+
+
+13 
+
+
+young physicist, and must seek ways to make more 
+robust and more detailed what we tell the man of art or 
+letters or affairs, if we are to contribute to the integrity 
+of our common cultural life. 
+
+
+Si elias are not only inventors and discoverers 
+and teachers: they are busy in almost all the prac- 
+tical undertakings of a highly technical society, making 
+available to men power, material, information, and order. 
+
+I will take one field where our works have made 
+changes of great portent for man’s history. We have 
+changed the instruments, and therefore in large measure 
+the nature, of war. What this was to mean for our 
+future has been in part vivid and clear for a long time 
+now to many of those who worked during the second 
+world war to make available the new resources. I think 
+especially of Bohr, but he was far from being alone. 
+Despite the “peace of mutual terror”, despite “deter- 
+rence” and “retaliation”, despite the growing apparent 
+commitment to the thesis that global or total war has 
+become “unthinkable”, the full import of the new situa- 
+tion is surely not clear today. This is in part because 
+there tends to be between the intention and the pro- 
+nouncements of statesmen and of governments, and 
+what in fact happens, an often tragic mismatch; it is 
+even more because of the larger truth that civilizations 
+themselves achieve their greatest triumphs, not by their 
+avowed purpose, intent, and dedication, but almost by 
+inadvertence. 
+
+I know how many of you devote much of your heart 
+and life not only to the explanation of the technical 
+possibilities, but to weighing the probable course of 
+future development, and the alternatives of policy. Yet 
+the last decade has brought one change that we must 
+welcome. In a measure that is in the nature of things 
+neither complete nor adequate, the new situation has 
+been explained to the makers of policy in particular, and 
+to people in general. The labors of physicists in explana- 
+tion and in prophecy are not and cannot be ended; and 
+there is no standing Joint Committee on the World’s 
+Salvation to which they can abdicate their concern. 
+Yet by now the problem of living with the new dangers 
+and the new hopes is where it belongs: with the public 
+and its officers, the governments. Let us be sure that by 
+our effort and our clarity we always keep it there. 
+
+
+HESE three themes that I have touched could 
+
+hardly be more disparate. I see no logical or neces- 
+sary relation between them. The majority of us is con- 
+cerned with only one or another, or with yet a different 
+room in the vast house of physics. They are connected 
+for us not through logic, but because there are among 
+us men who have an interest in more than one. This 
+is the unity of our profession, as, in my opinion, it 
+must be typical of the unity of contemporary culture 
+and even life. The American Institute of Physics and 
+its founder societies are the benign framework for bring- 
+ing together not only the specialists, but those among 
+you who, by bearing in themselves more than one 
+passion, provide the basis of our community. 
+
+

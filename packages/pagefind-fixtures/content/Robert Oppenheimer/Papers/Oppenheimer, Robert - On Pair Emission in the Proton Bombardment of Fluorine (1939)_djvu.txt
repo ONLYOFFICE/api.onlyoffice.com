@@ -1,0 +1,336 @@
+1066 LETTERS TO 
+
+
+us to exclude the possibility of fission of protactinium by 
+
+
+thermal neutrons; but the yield of such a process should at . 
+
+
+any rate be very much smaller than in uranium. An 
+accurate determination of the threshold of neutron energy 
+for protactinium fission would of course be very important 
+and might perhaps be most easily obtained by a comparison 
+between the fission yields for fast neutrons of well-defined 
+
+
+energy in protactinium, uranium, and thorium, like that . 
+
+
+provided for the two latter elements by the experiments of 
+Ladenburg, Kanner, Barschall and Van Voorhis,? as 
+discussed in Section IV, C (see especially Fig. 6) of our 
+
+
+paper. | 
+NIELS BoHR 
+
+
+Institute for Theoretical Physics, . 
+Copenhagen, Denmark. 
+
+
+| Joun A. WHEELER 
+Palmer Physical Laboratory, 
+Princeton University, 
+Princeton, New Jersey, 
+October 20, 1939. 
+
+
+1 on Grosse, E. T. Booth and J. R. Dunning, Phys. Rev. 56, 382 
+1939). 
+2N. Bohr and J. A. Wheeler, Phys. Rev. 56, 426 (1939), 
+-3R. Ladenburg, M. H. Kanner, H. H. Barschall and- C. C. Van 
+Voorhis, Phys. Rev. 56, 168 (1939), 
+
+
+On Pair Emission in the Proton Bombardment of Fluorine 
+
+
+The gamma-rays emitted when fluorine is bombarded by 
+protons have been studied by Fowler and Lauritsen, who 
+
+
+have shown that these gamma-rays are monochromatic, 
+
+
+with an energy of (6.3-40.1) Mev, independent of the 
+proton energy; that they are emitted by an excited oxygen 
+nucleus formed from the compound nucleus Ne?° by short 
+rangé alpha-particle emission; and that they are emitted 
+strongly only at certain well-defined proton energies which 
+correspond to resonance levels in Ne®*. To account for the 
+sharpness of these resonances it has been suggested that the 
+parity-angular momentum . selection rule prohibits the 
+emission from these states of a long range alpha-particle, 
+with the formation of a normal oxygen nucleus. 
+
+Recently Fowler and Lauritsen! have shown that under 
+proton bombardment fluorine also emits electron pairs of 
+total energy (5.9+0.5) Mev. The excitation function for 
+the pairs also exhibits resonances, but: uncorrelated with 
+those for the gamma-rays—at some energies there are 
+more than 100 times as many gamma-rays as pairs; at 
+others the number of gamma-rays is comparable with, and 
+may be smaller than, the number of pairs. Since, for any 
+multipole order the pair creation internal conversion 
+coefficient for 6-Mev gamma-rays is less than half of one 
+percent, the pair emission must arise from a nuclear 
+transition for which gamma-radiation is strictly forbidden, 
+i.e., either Ne?® or O!8% possesses an excited state with 
+j=0 with no lower states of nonvanishing j, from which 
+these pairs must originate. Since Ne?® is known from the 
+work of Bonner to have a number of low-lying excited 
+states, we are led to ascribe the pairs to a transition from an 
+excited state of oxygen, with 7=0 and about 6 Mev 
+excitation energy, to the ground state. 
+
+If long range alpha-particle emission from the corre- 
+sponding Ne? is to be forbidden by the parity-angular 
+
+
+THE EDITOR 
+
+
+momentum selection rule, this state in oxygen must be of 
+odd parity (0-). A (0-->0*) transition, however, corre- 
+sponds to vanishing matrix elements of charge and current 
+density ; decay by pair emission can only occur if there is a 
+nonelectromagnetic coupling between nuclear particles and 
+the pair field. Thus, a coupling term of the form suggested 
+by the Gamow-Teller, theory of nuclear forces, 
+
+
+— Ge1-G prot) or (el-Fneut); 
+
+
+would permit this transition to occur with the emission of 
+pairs. A value of the coupling constant much smaller than 
+that suggested by these authors would be sufficient to give 
+a rate of pair emission greater than the rate of the com- 
+petitive process of two-quantum emission. This latter 
+process takes place by the successive emission of an 
+electric dipole and a magnetic dipole quantum, through the 
+intermediary of states possessing the character 1* or 17. 
+The lifetime of the 07 state associated with this method of 
+decay may be roughly estimated at 10-6 sec. 
+
+The only alternative to this radical suggestion is to 
+assume the excited state in oxygen to be of even parity 
+(0+). Pair emission, no longer forbidden, proceeds at the 
+
+
+rate: 
+| e? 2 7 
+Gaels, (=) | (Yexe, 2r?ynorm) ie 
+
+
+which exceeds the rate of two-quantum emission: 
+
+
+() (2) ( ; “ -) (=) () I(Yese, C22 PY norm) [2 
+
+
+since y, the energy emitted in the transition, is rather less 
+than A (~20 Mev), the mean energy difference between the 
+ground state and the excited states of type 1~ which act as 
+intermediates in the double electric dipole emission 
+process. (The summation in these formulae is to be 
+extended over all nuclear protons.) The quanta would give 
+a weak continuous spectrum extending up to 6 Mev and 
+would not have been observed. 
+
+This second alternative involves abandoning the expla- 
+nation of the long life of the resonance states of Ne? in 
+terms of the parity-angular momentum selection rule. 
+Neither spin nor isotopic spin conservation can ‘appreciably 
+reduce the probability of long range alpha-particle emis- 
+sion. Indeed, if the first excited state of O18 is 0+, it would 
+seem likely on the basis of the alpha-particle model, which 
+could make this intelligible, that this state has the same 
+spin and isotopic spin as the ground state. For this reason 
+we must expect the yield of long range alpha-particles to 
+show resonance at the energies which produce pairs. Some 
+indication that this may be so is afforded by the fact that 
+the maximum pair yield found by Fowler and Lauritsen 
+is under a tenth of the maximum gamma-ray yield, which 
+suggests that the emission of long range alpha-particles 
+competes with the alpha-particle emission leading to the 
+excited state. We should in fact expect that at bombarding 
+energies of the order of 1 Mev, where pair emission becomes 
+appreciable, the Coulomb barrier would not materially 
+reduce the emission probability of even the short range 
+alpha-particles. The value of 10 to 1 suggested by the 
+observed yield of pairs for the ratio of the decay rates of 
+
+
+LETTERS TO 
+
+
+long and short range alpha-particles is thus a reasonable 
+one. The fact that the gamma-ray yields are larger, and, 
+near the 330-kev resonance, much larger than the yield of 
+long range alpha-particles, makes it necessary to assume 
+that, at least for this y-ray resonance, the long range alpha- 
+emission is either forbidden or reduced. 
+
+If then the excited state is even, we should expect the 
+resonance yield of long range alpha-particles to be com- 
+parable with, and probably considerably greater than the 
+yield of pairs. If this is not so, the pair emission itself would 
+seem to provide strong evidence for a nonelectromagnetic 
+coupling between electrons and heavy particles. 
+
+| J. R. OPPENHEIMER 
+
+
+J. S. ScHWINGER* 
+University of California, 
+Berkeley, California, 
+October 29, 1939, 
+
+
+* National Research Fellow. 
+1W. A. Fowler and C. C. Lauritsen, Phys. Rev. 56, 840 (1939). 
+
+
+Observation of the Spectrum of Ne V 
+
+
+Previous investigations of the spectra of rare gases! have 
+been limited in the extent of ionization which was produced 
+in the gas atom. The development of methods of study of 
+atoms which can be fixed in an electrode in solid form has 
+extended the spectra of such ions to far greater stages of 
+ionization. In an attempt to close some of the gaps in 
+isoelectronic sequence data, experiments have been under- 
+taken to determine whether higher stages of ionization 
+can be studied in the rare gases. This communication is a 
+preliminary report of some observations of the spectra of 
+neon. _ | 
+
+A periodic disruptive discharge in neon gas enclosed in 
+Pyrex and quartz capillaries of about 2 mm bore and 15 mm 
+length has been used as a source of light on a 3-meter 
+grazing incidence vacuum spectrograph. On the resulting 
+spectrograms the principal lines of Ne III, Ne IV; and 
+Ne V have been identified. 
+
+The wave-lengths of the lines attributed to Ne V are 
+given in Table I. The identification seems certain inasmuch 
+as the lines are well isolated on the plates and their positions 
+can be predicted with good accuracy from isoelectronic 
+sequence data. The wave-lengths given must be regarded as 
+tentative as they may be in error by as much as 0.05A 
+because of the scarcity of standard lines on the plate from 
+which the measurements were taken. 
+
+It is expected that refinements of experimental technique 
+will permit fuller development of the spectrum of Ne V 
+and more accurate wave-length measurements. Since the 
+lines due to Ne V are equally as strong as those due. to 
+Ne III and Ne IV on the present plates, it is possible that 
+
+
+TABLE I. Spectrum lines attributed to Ne V. 
+
+
+TRANSITION 
+
+
+A VAC, vy CM7) 
+
+572.38 174,708 2p2 8P2 —252p3 8Do, 19 
+572.12 174,787 2p2 8P2 —2s2p3 3D 30 
+569.84 175,487 2p? 83P1 —252p3 8Do, 1° 
+568.45 175,918 2p? 3P9 —2s2.p3 37) 4 
+483.00 207,039 2p2 §P2—2s2p3 P20 
+481.30 207,770 2p? 3P1 —2s2p3 3P1, 9? 
+480.38. 208,168 2p2 8P9 —2s2 p3 3P;0 
+
+
+THE EDITOR 1067 
+
+
+this method will provide for the excitation of still higher 
+stages of ionization. Experiments are being carried out 
+with argon, krypton and xenon. 
+
+
+FreED W. PAUL 
+Mendenhall Laboratory, 
+Ohio State University, 
+Columbus, Ohio, 
+October 31, 1939. 
+
+
+(1938 a Boyce, Phys. Rev. 46, oe (1934); 47, 718 (1935); 48, 396 
+
+
+Work Functions of Different Faces of Silver Single Crystals 
+
+
+The work functions of the (100) and (111) faces of silver 
+single crystals have been determined by a photoelectric. 
+method after extended outgassing of the crystals in a high 
+vacuum. The crystal faces were prepared by a method 
+described previously.! The equilibrium value of the work 
+function for the (100) face is 4.81 0.01 electron volts. This 
+value was obtained after 2283 hours of heating at various 
+temperatures up to visible red heat. 356 hours of additional 
+heating did not change this value. After the crystal had 
+subsequently remained at room temperature for 2130 hours, 
+at a pressure of 1 to 3X1078 mm Hg, the work function 
+decreased to 4.65 ev. After 100 hours of additional heating 
+of the crystal the work function increased to 4.79 ev, and 
+after an additional 118 hours of heating it returned to the 
+equilibrium value of 4.81 ev. — 
+
+The equilibrium value of 4.75 +-0.01 ev fog the (111) face 
+was obtained after 1227 hours of heating at temperatures 
+similar to those above. This crystal had been outgassed in 
+two previous experiments so that a much shorter time was. 
+required to reach the equilibrium value of the work 
+function than for the (100) face. The above equilibrium 
+value was not changed by 407 hours of additional heating. 
+At this time the crystal became slightly contaminated 
+while heating a tantalum plate near it. The effect of the 
+contamination was to cause a failure of the experimental 
+results to fit the Fowler theoretical curve. 
+
+Measurements of the contact potential difference, by the 
+Kelvin null method, between the two crystal faces at 
+frequent intervals during outgassing agreed with the 
+differences of the photoelectric work functions to within 
++0.01 volt until the results for the (111) face failed to fit 
+the Fowler theoretical curve. 
+
+We believe that these values are the best that can be 
+obtained by heating since silver crystals etch rapidly, thus 
+exposing other faces, when heated at temperatures where 
+appreciable evaporation occurs.? The above values may be 
+compared with 4.74 ev, previously obtained by Winch,? for 
+polycrystalline silver after heating for 1200 hours which 
+included short intervals at temperatures as high as 850°C 
+where evaporation is rapid. 
+
+
+H, E.: FARNSWORTH 
+Brown University, 
+Providence, Rhode Island. 
+
+
+RaLtepH P. WINCH 
+Williams. College, 
+Williamstown, Massachusetts, 
+October 24, 1939, 
+
+
+1H, E. Farnsworth, Phys. Rev. 40, 699 (1932). 
+
+2A larger preliminary value for contact potential difference was 
+previously reported before sufficient outgassing had been carried out. 
+H. E. Farnsworth, Phys. Rev. 51, 378 (1937). 
+oan P. Winch, Phys. Rev. 37, 1269 (1931); R. H. Fowler, 38, 45 
+
+

@@ -1,0 +1,440 @@
+On the Quantum Theory of the Polarization of Impact Radiation 
+
+Author(s): J. R. Oppenheimer 
+
+Source: Proceedings of the National Academy of Sciences of the United States of America, 
+Vol. 13, No. 12 (Dee. 15, 1927), pp. 800-805 
+
+Published by: National Academy of Sciences 
+
+Stable URL: http://www. jstor.org/stable/85652 
+
+
+Accessed: 04/05/2014 08:39 
+
+
+Your use of the JSTOR archive indicates your acceptance of the Terms & Conditions of Use, available at 
+http://www.jstor.org/page/info/about/policies/terms.jsp 
+
+
+JSTOR is a not-for-profit service that helps scholars, researchers, and students discover, use, and build upon a wide range of 
+content in a trusted digital archive. We use information technology and tools to increase productivity and facilitate new forms 
+of scholarship. For more information about JSTOR, please contact support @jstor.org. 
+
+
+National Academy of Sciences 1s collaborating with JSTOR to digitize, preserve and extend access to 
+Proceedings of the National Academy of Sciences of the United States of America. 
+
+
+http://www.jstor.org 
+
+
+This content downloaded from 130.132.123.28 on Sun, 4 May 2014 08:39:50 AM 
+All use subject to JSTOR Terms and Conditions 
+
+
+800 PHYSICS: J. R. OPPENHEIMER Proc. N. A. 8. 
+
+
+follows from the fact that when we look at the wave equation from the 
+calculus of variations standpoint, we know that in the neighborhood 
+of the correct ‘‘Higenfunktion” y and the correct ‘“‘Eigenwerte”’ FE, 5E = 0 
+for any 6y. Incidentally, this also indicates why the Ritz method seems 
+to be a particularly powerful one in calculating the approximate energy 
+values of the wave equation. 
+
+1 Van Vleck, J. H., Proc. Nat. Acad. Sci., 12, 662, 1926. 
+
+2 An abstract of this paper has appeared in the Bulletins of Amer. Phys. Soc., Chicago 
+meeting, November, 1927. . 
+
+3 Kellner, G. W., Zeits. Physik, 44, 91, 1927. 
+
+4 Wills and Hector, Physic. Rev., 23, 209, 1926; Hector, zbid., 24, 418, 1926. 
+
+5 Soné, T., Phil. Mag., 39, 305, 1920. 
+
+6 Lehrer, E., Ann. Physik, 81, 229, 1926. 
+
+
+ON THE QUANTUM THEORY OF THE POLARIZATION OF IM- 
+PACT RADIATION 
+
+
+By J. R. OppENHEIMER* 
+JEFFERSON PHYSICAL LABORATORY, HARVARD UNIVERSITY 
+
+
+Communicated October 26, 1927 
+
+
+The general theory of the polarization of light excited by electronic 
+impact has been given in a previous paper.' In particular, it is shown 
+that the polarization computed on the quantum mechanics is independent 
+of the axis chosen for describing the directional degeneracy of the atom. — 
+It is further shown that, if one neglects the spin of the impacting electron 
+and if one assumes that the perturbing interaction energy is small, the 
+polarization of the emitted light may be computed ‘‘as if” only those 
+states were excited, for which the component of angular momentum in 
+a certain direction is the same as in the normal state; and the direction 
+is that of the vector difference of the velocities of the incident and scattered 
+electron. If this result is applied to electrons with just the necessary 
+energy to excite the atom, it yields the momentum rule formulated by 
+Skinner; the excitation does not change the component of angular momen- 
+tum in the direction of the electron beam. Experimentally? one finds 
+that these rules fail in two ways: (1) They do not apply to intercombination 
+lines; in particular, they fail conspicuously for radiation from the *S; and 
+3P; states of mercury; and (2) the observed polarization tends, as the 
+energy of the exciting electron is diminished, first, towards a maximum, 
+which in the case of normal lines is proportional to and of the same sign 
+as that given by the rule, and, as the energy is further decreased, tends 
+to zero. In this paper we shall show that the first of these discrepancies 
+
+
+This content downloaded from 130.132.123.28 on Sun, 4 May 2014 08:39:50 AM 
+All use subject to JSTOR Terms and Conditions 
+
+
+VoL. 13, 1927 PHYSICS: J. R. OPPENHEIMER 801 
+
+
+may be explained when one takes into account the spin of the impacting 
+electron and the Heisenberg resonance principle;? and that the second 
+follows when one discards the assumption that the perturbing energy is 
+small. The theory may thus be made to give a complete account of the 
+experimental results. 
+
+We shall first show that, as the velocity of the exciting electron ap- 
+proaches that of the resonance potential in question, the polarization of 
+the excited line tends to zero. If y,(X) be the wave functions of the 
+atom, we may write* the wave function for the system atom + electron: 
+
+
+s=+p 
+W(X; r, 0, ~) = Ly bal X) xulrs v; ~) = > 2 a ¥n(X) Vps(d, 2)Vnps(") (1) 
+
+
+=Q s=—- 
+
+
+where r—2(r2y, 95)! + Dn — bb + Ir dynes + Onps (1) = 0 (2) 
+
+
+21 v 
+Onps(Y) — f dy f sin ddd Y55(0, ~) ds V aay? Xn’ (3) 
+
+
+2) 2 
+n 
+
+
+Sam 
+resonance energy; 7, 0, yg, are the polar codrdinates of the electron with 
+the polar axis chosen in the same arbitrary direction as for the atom; 
+Y,; are the normalized spherical harmonics; and V is the interaction energy 
+of atom and electron. Whenever dj is positive, y,,, will be the amplitude | 
+of the probability of the excitation of the state 1, which is associated with 
+that electronic wave which behaves asymptotically like 
+
+
+Here 
+
+
+is the excess of the energy of the exciting electron over the 
+
+
+ent 
+
+
+~ Y 55 (3, ¢) ° (4) 
+r 
+
+
+Thus yng) is the amplitude for the excitation which is independent of the 
+initial direction of the electron; if y,,, = Ofor p ¥ 0, the light emitted from 
+the state n would be unpolarized. We have thus to show that 
+
+
+lim VYnps/Vnoo ——> O For p # 0,” # 0. (5) 
+—>0 
+
+
+n 
+
+
+Now, uniformly in A, —~> 0, for 2 ¥ 0, 
+Onps < A/r*t* for 7 > 1; ngs < A/r for 7 <1; @S0, (6) 
+
+
+For the non-diagonal terms this is shown in l.c.2. For the diagonal term 
+VanXn it follows from the fact that the dipole moment of the atom has no 
+diagonal elements; and this excludes only the case of atomic hydrogen, 
+which has a first order Stark effect. 
+
+If we now use, as in l. c. 2, for the solution of (2), 
+
+
+Yups = C4 EO Sa aay, (2) FOE I _ yy, © +10; €= Aur; (7) 
+
+
+This content downloaded from 130.132.123.28 on Sun, 4 May 2014 08:39:50 AM 
+All use subject to JSTOR Terms and Conditions 
+
+
+802 | PHYSICS: J. R. OPPENHEIMER Proc. N. A. S. 
+E 
+with 10 = fo dvGe 9 emi 
++ 
+
+
+J a pain (Me) J apes E) 7 J ~17,(%) J 4.5 41p)(&) 
+J + p43/2(%) STAC) a J" +p -41/2(%) J — p—=1/,(&) 
+
+
+G(x, §) = (9) 
+
+
+we find, for the asymptotic outgoing wave associated with that solution 
+(F’) which is everywhere finite, and which corresponds to no incident wave— 
+since there are initially no atoms in the excited state n— 
+
+
+1 Ie aa (10) 
+g 
+where Cups = lim / Ax F(X, £) Otyp.(%/ Xn) (11) 
+fs) toe 
+—G(x, £).€” 
+7Go= ee, (12) 
+Taye), (&) 
+With lim F(x, €) < Ax*t? for x < x; (13a) 
+| £—>0 
+lim F(x, &) < Ax for x 2 x; (138) 
+—E—>0 
+this gives 
+lim Cyps/Cnoo ~ ” —> 0 for p # 0. (14) 
+\,—>0 | 
+
+
+This establishes our first point. 
+
+As was explained in 1. c. 1,5 the spin of the exciting electron is important 
+only because of Heisenberg’s resonance: there is a chance that the collid- 
+ing electron will change places with one of the valence electrons of the 
+atom. For normal lines this effect is not important, since in the excita- 
+tion of these lines the magnitude of the total spin vector of the system 
+will not change; the probability of interchange of electrons will thus be of 
+the order of the interaction energy of the spins compared with that of the 
+atomic spin and atomic orbit, and this will be negligible. It is thus 
+permissible, for these cases, to couple the atomic spin and atomic orbital 
+angular momentum before applying the perturbation; and this leads at 
+once to Skinner’s rules for the fofal angular momentum of the atom. For 
+intercombination excitations the situation is different: the total spin 
+vector can only be conserved if the spin of the impacting electron changes 
+during the excitation. ‘This form of excitation (A) will be more probable 
+than that (3B) in which the atomic coupling remains undisturbed, in the 
+same way in which normal transitions are more probable the intercombi- 
+nation transitions in an atom. We may thus expect that when a state 
+can be excited by (A), the momentum rules will fail, and that the correct 
+
+
+This content downloaded from 130.132.123.28 on Sun, 4 May 2014 08:39:50 AM 
+All use subject to JSTOR Terms and Conditions 
+
+
+Vou. 13, 1927 PHYSICS: J. R. OPPENHEIMER 803 
+
+
+polarization must be computed by coupling spin and angular momentum 
+after considering the perturbation; when (A) is impossible, the lines should 
+be considerably weaker, and should be polarized in the same way, but not 
+so completely, as predicted by the momentum rules.® 
+
+We shall now show how to compute the polarization of lines excited 
+by scheme (A). If we treat the collision problem with neglect of all 
+spins, we find’ that the component of atomic orbital angular momentum 
+parallel to the vector difference of velocities of incident and scattered 
+electron remains unchanged by the excitation. We thus know k, s and 
+the component in this direction, k,, of k; what we want to know is the 
+probability amplitude of 7, k, s,7, = m. For from these amplitudes, for 
+given 7 and all m, we can calculate, by the methods of 1. c. 1, the polari- 
+zation of the spontaneous radiation from the state j, k, s. ‘Thus we need 
+only the transformation functions from the quantities k, s, k,,s, = m — k.,, 
+to j, k, s, m. ‘This problem can be solved by the canonical methods of 
+the quantum mechanics. For if we can write j as a function of the quan- 
+tities k, s, k,, s,, and other quantities whose laws of commutation with 
+these are known, then the required amplitude will be given by 
+
+
+i(k’, 8’, Rey m’....) — 74, B’, 8’, m'/k', 8’, kh, m’) = 0. (15) 
+
+
+Now 
+
+IG PA) = Re ae 1) SS 1) 2S) SRS) = Boe ae by hse 
+(16) 
+
+so that 
+
+
+HG+1) = RR +1) +5(s + 1) — 2h + RySy + RS]. (17) 
+
+
+Instead of solving (15) directly as a matrix equation, we may, by repeated 
+applications of the formula 
+
+
+(x! /z") += Seis) dy'(y'/2") (18) 
+obtain vy", ki, ™ ’) — (7’ ) k’, s Ne tee m ) = 
+OLS Shs ERD RRO, yp i, By 
+
+
+ee aco ioe a pb)’ (R’+ 1) 
+O2q/ ra, "42k (19) 
+
+
+The moduli of the functions — 
+(si/s) ooo, (hk, /k!) 
+
+
+are known, but their phases are indeterminate, and one must average 
+over them in the final result. The phases of 
+
+
+(s,/s,) and (k,/k;) 
+
+
+This content downloaded from 130.132.123.28 on Sun, 4 May 2014 08:39:50 AM 
+All use subject to JSTOR Terms and Conditions 
+
+
+804 | PHYSICS: J. R. OPPENHEIMER : Proc. N. A. S. 
+
+
+are independent of each other, but those of 
+
+
+(s:/8:), (83/2) and of (Ry/Rz), (Ry/Rs) 
+are not. One has thus to average only over the independent phases of 
+(s,/sz) and (k,/k;). 
+We may apply these results to the case of mercury, which has been 
+studied in detail by Skinner.? Let us take first the simple case of the 
+3S, states. Here | 7 
+
+
+ko =0, fj =s' = 1; m’ = +1,0; 
+and one readily finds 
+| v@, 0, 0) |? = | v1, 0, #1) |? = 1. (20) 
+
+
+The radiation from this state is thus unpolarized on scheme (A). If 
+it were excited by (8), it would be completely polarized. Actually Skin- 
+ner finds that the polarization is either absent or extremely weak. 
+
+Another case of interest is that of *P:, which gives the resonance line. 
+Here j’ = k’ = s'’ = 13m’ = 0, +1; | 
+
+
+24 1 
+(0/0) = f ip f sin ddd sin 3 cos(g + B) cos? = 0 (21) 
+
+
+so that y(1, 0, 0) = 0. Further, (19) gives | 
+| v1, 0, #1) |? = 4/2 (22) 
+
+
+The polarization of the resonance line is thus of opposite sign and similar 
+magnitude to that given by the momentum rules. That is what is found.’ 
+By the same methods one finds for the *P2. terms: 
+
+
+y(2, 0,0) = y(2,0, +2) = 0, | 
+ene ieee aaa (23), 
+
+
+For the 3D, and *D, states the excitation (A) is impossible. Lines from 
+these states should, therefore, be weaker than the others, and their polari- 
+zation should fall rather below that of the momentum rules. For *D, 
+this has been reported by Skinner.? For the *D; the excitation (A) is 
+possible; the states m = 0, +1 are all excited, but the polarization is only 
+slightly less than that of the momentum rules. This is also confirmed. 
+
+It may be mentioned that the transformation function y(j’, &,, m’) 
+enables one to answer the question: Given that an atom has a certain 
+energy in a weak magnetic field; what is the probability that it will have 
+a given energy (Paschen-Back level) in a strong field? | 
+
+In conclusion we may summarize the theoretical predictions on the 
+polarization of impact radiation: For very high electronic velocities the 
+line has, insofar as the excitation is direct (in principle this can be sepa- 
+
+
+This content downloaded from 130.132.123.28 on Sun, 4 May 2014 08:39:50 AM 
+All use subject to JSTOR Terms and Conditions 
+
+
+Vor. 13, 1927. PHYSICS: S. LEFSCHETZ 805 
+
+
+rated from cascade effects), a polarization --p. As the velocity of the 
+exciting electron is diminished, this polarization also diminishes, and 
+changes sign at a voltage of the order of 200. ‘The polarization then 
+increases with diminishing velocity, and the curve, if extrapolated to the 
+resonance velocity, gives a polarization +). When the velocity of the 
+electron approaches that of the resonance potential, the polarization 
+grows more slowly, and has a maximum within a volt or so of the resonance 
+potential; thereafter it approaches zero. ‘The polarization » may, for 
+normal lines, and for intercombination lines for which the excitation 
+(A) is impossible, be computed by the momentum rule; for other inter- 
+combination lines it is more nearly given by the method (19) outlined 
+above. 
+
+
+* NATIONAL RESEARCH FELLOW. 
+
+1 Oppenheimer, J. R., Z. Physik, 43, 27, 1927. Referred to as 1. c., I. 
+
+2 For the former discrepancy see Skinner, H. W. B., Roy. Soc. Proc., A112, 642, 
+1926. I am much indebted to Dr. Skinner for informing me of his recent results by 
+letter. 
+
+81. c., 1, p. 46. 
+
+4 See a paper on the Ramsauer effect, referred to as 1. c., 2, to appear shortly in the 
+Z. Phystk. | 
+
+5 P, 45. | 
+
+6 The polarization should be less marked in part because of the relative impor- 
+tance of cascade excitation. 
+
+7L. c, 1, p. 38. 
+
+
+LHE RESIDUAL SET OF A COMPLEX ON A MANIFOLD AND 
+RELATED QUESTIONS (SECOND NOTE) 
+
+
+By S. LEFSCHETZ 
+DEPARTMENT OF MATHEMATICS, PRINCETON UNIVERSITY 
+
+
+Communicated November 9, 1927 
+
+
+1. In a recent Note under the same title! I communicated two very 
+general formulas concerning certain topological simultaneous invariants 
+of a C, on an M,, true subset of the manifold (formulas (3), (4) of the 
+Note). ‘The proofs were given explicitly and completely for a polyhedral 
+Cy, i.e., a subcomplex of a subdivision of the C,, defining M,. Regarding 
+the general C, it was stated on the strength of a certain theorem that the 
+derivation of the formulas could proceed without change, and likewise for 
+the most general closed subset G of /,,. On more searching examination 
+it turned out to be decidedly otherwise, partly due to a necessary change 
+in the theorem, and that the proofs for the polyhedral C;, would have to 
+undergo profound change before they could carry over to the more general 
+
+
+This content downloaded from 130.132.123.28 on Sun, 4 May 2014 08:39:50 AM 
+All use subject to JSTOR Terms and Conditions 
+
+

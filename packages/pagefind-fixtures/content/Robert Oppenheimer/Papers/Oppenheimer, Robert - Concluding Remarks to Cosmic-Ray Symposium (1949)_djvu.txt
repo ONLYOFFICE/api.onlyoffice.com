@@ -1,0 +1,289 @@
+REVIEWS OF MODERN PHYSICS 
+
+
+VOLUME 21, 
+
+
+NUMBER 1 JANUARY, 1949 
+
+
+Concluding Remarks to Cosmic-Ray Symposium 
+
+
+J. R. OPPENHEIMER 
+
+
+Institute for Advanced Study, Princeton, New Jersey 
+
+
+N concluding this conference I have been 
+asked by President Du Bridge to summarize 
+
+its almost unsummarizable proceedings. I shall 
+try only to make a few comments. What we have 
+heard here, the arguments about the nature of 
+the incoming cosmic radiation, the arguments 
+about the origin of the incoming cosmic radia- 
+tion, made a very deep impression; and so too 
+the new evidence as to the kinds of particles 
+which are found, evidence on which the theo- 
+retical physicist has learned to be properly 
+humble. Apart from arguments which are almost 
+arguments of consistency, and which make us 
+hesitate to believe that those mesons that are 
+easily produced by nuclei are hard for nuclei to 
+capture, there are of course no a priori views at 
+the moment about what the things may be. 
+I think it hard to disbelieve Le Prince Ringuet’s 
+evidence for a very heavy meson. 
+
+But perhaps what to me was most exciting of 
+all was the account from Schein and above all 
+from Rossi about the nature of the interactions 
+which are encountered in the cosmic radiation. 
+It will be some time before one will be able to 
+
+mock up the 10-billion volt nucleon-nucleon col- 
+lisions, with which presumably the cosmic-ray 
+story starts, by artificial acceleration. Here again 
+the conclusion which one is first led to is some- 
+what surprising. One finds that as products of 
+these collisions there are at least three kinds of 
+radiation. There are, at least, nucleons; there are 
+the cascade components, electrons, and gamma- 
+rays, and there are mesons. The general energetic 
+average over the cosmic-ray spectrum indicates 
+that the amount of energy going into these three 
+different components is not very different, one 
+from the other. There may be, as Schein said, 
+a strong tendency for the nuclear component to 
+play a less prominent part as the energy of the 
+collision is increased. We also know that the 
+primaries lose their ability to make by collision 
+the second and third components very early— 
+essentially after a few nuclear’ impacts. A few 
+
+
+passages in the neighborhood of the nucleus, and 
+they can no longer do these things. © 
+
+I think that the possibility should perhaps be 
+faced that we not only don’t know what the 
+elementary particles are, but that the whole way 
+of thinking about their interactions, which we 
+have derived by analogy from electromagnetic 
+theory, and by the application of this analogy 
+to problems of the meson field as Yukawa 
+originally suggested, that these views may be 
+quite wrong. We have at the moment at least 
+the possibility of trying further to exploit that 
+analogy. One or two points about this: one is 
+that a really good job to date has not been done. 
+Heitler gladly told you that his theory was not 
+a really good job. The really good job would be 
+to take advantage, or rather, and this is the 
+second point, to see whether one can take ad- 
+vantage of the developments in electrodynamics 
+that are so much associated with Schwinger’s 
+name. 
+
+As you know, the purpose of these develop- 
+ments has been to take into account, certainly 
+in an approximate way, and perhaps even in 
+principle rigorously, the effects, on the one hand 
+of the interaction of charges with the fluctuations 
+in electromagnetic fields that derive from the 
+quantum nature of light, and on the other, the 
+interaction of quanta with fluctuations in charge 
+that derive from the phenomena of pair pro- 
+duction and annihilation. Schwinger’s achieve- 
+ment has been to provide a method for isolating 
+these ‘“‘reactive’’ effects, which manifest them- 
+selves as peculiar deviations in the laws of inter- 
+action between electrons and between electrons 
+and radiation, from the paradoxical effects ex- 
+pressing the contributions of these same inter- 
+actions to the mass and charge of the elementary 
+particles, contributions that are not, at least 
+directly, measurable or separable from other 
+sources on inertia or charge, and the infinite 
+values of which, according to present theory, are 
+thus not in themselves in contradiction with 
+experience. In electrodynamics the alteration of 
+
+
+181 
+
+
+1820 Oe 
+
+
+interaction laws thus found is small; it is prob- 
+able that, if completely evaluated, it would have 
+the effect of making all real interactions less 
+singular. 
+
+For the case of nucleons and mesons, argu- 
+ments of analogy suggest that these reactive 
+corrections would be far larger, and that their 
+neglect could give a totally misleading picture 
+of nucleon interactions and nucleon-meson col- 
+lisions. It is not known whether if the very much 
+more complicated of the nuclear problems, where 
+neither the nature of the fields nor the inter- 
+actions is known from classical physics, and 
+where surely the interactions are in some way 
+far stronger, this can logically be done—it is 
+certainly not known with what techniques to 
+do it. It is above all unknown whether it makes 
+any sense to do it; that is, whether this is a 
+step toward describing the real world. Perhaps 
+that may be a point on which we shall have 
+evidence for Dr. Millikan’s next birthday. If it 
+were necessary today to prejudge the outcome, 
+perhaps we should doubt that the attempt to 
+take into account that 
+fields are here surely very large would in itself 
+lead to a theory in agreement with experience. 
+
+If one tries in these problems to use only the 
+roughest arguments of correspondence as to what 
+to expect in high energy nucleon collisions, one 
+comes, if he takes only known couplings into 
+account, to a picture in some respects like that 
+already outlined here by Heitler. Thus, for in- 
+stance, one would see no appreciable chance for 
+the emission of gamma-rays or electrons during 
+the encounters. One then ascribes the fact that 
+there obviously is a soft component produced by 
+these encounters to the production of unstable 
+mesons, whose decay produces the soft radiation. 
+A natural view has seemed to be that we were 
+dealing with unstable neutral mesons, the exist- 
+ence of which might give a sort of isotopic sym- 
+metry to nuclear forces. But, for instance, the 
+Le Frince Ringuet mesons, if they were also 
+strongly coupled to nuclear matter, would like- 
+wise be expected to disintegrate into gamma- 
+rays; perhaps the one picture we have seen 
+indicates a lifetime rather long to fit this sup- 
+position. 
+
+We have come to the view that probably, in 
+the relatively high energy region, the number of 
+
+
+interactions between 
+
+
+R. OPPENHEIMER 
+
+
+mesons produced in nucleon impacts is typically 
+greater than one, and that it increases slowly 
+with the energy of the encounter. Heitler’s 
+failure to find this multiplicity may derive, in 
+part from the special nature of the problems 
+studied, but in the main, I believe, from the 
+peculiarities of his treatment of radiation reac- 
+tion. At least there are problems, where one 
+knows the answer from classical electrodynamics, 
+and where there is multiplicity of emission, and 
+yet where the theory of Heitler would not give 
+a correct account of it. 
+
+On the experimental side, I may mention two 
+points that bear on the question of multiplicity, 
+and that have been brought up in our meetings. 
+One has to do with the course of the air shower 
+curve, and more generally with the variation of 
+the soft component, in the atmosphere. There 
+has been work, notably by Lewis and by Christy 
+and Mills, towards a theoretical understanding 
+of what these curves would be like if we were 
+dealing with a primary electron or primary 
+photon. If in fact the photon or electron were 
+made singly or in fixed small numbers by nucleon 
+encounters, say, on the average, some fifty 
+grams or so below the top of the atmosphere, the 
+curves should be displaced downward corre- 
+spondingly. Therefore we should expect the 
+experimental air showers curves (and also those 
+for’the soft component) to have their maximum 
+well below that calculated for a soft primary. 
+According to the analyses of Lewis, and of Mills 
+and Christy, this seems not be true. The maxima 
+are definitely higher than calculated. This means 
+that although the soft component is “‘late’’ in 
+getting started, this is more than made up for 
+by the initial multiplicity with which it starts, 
+which must be considerably greater than the 
+cascade multiplication in the thickness of matter 
+needed on the average for a nucleon encounter. 
+
+The second point may be more speculative. In 
+Auger’s beautiful report he told us how close, in 
+Auger showers, is the relation between the 
+penetrating component on the one hand, the 
+cascade component on the other. Even after 
+filtration with 20 cm of Pb there are still com- 
+ponents present capable of making cascades. If, 
+as seems most reasonable, we are here no longer 
+dealing with the fluctuations in the penetrating 
+power of the high energy cascades per se, then 
+
+
+CONCLUDING REMARKS 
+
+
+this would fit rather closely with the suggested 
+views about the nature of the primary collisions. 
+In these collisions the primary would lose the 
+greater part of its energy to mesons. Among 
+these perhaps a third will be neutral and unstable 
+and give rise to the cascade. The others will be 
+charged mesons and penetrating, and will for 
+the most part be distributed over an area at 
+sea level of some hundred meters square. For 
+high energies the rate of pi-mu-decay will be 
+slowed, so that many mesons will retain their 
+nuclear activity; they will be able to initiate 
+cascades something like a nucleon cross section. 
+This interpretation, however, uncertain at the 
+moment, may deserve further study. 
+
+However that may be, all the basic questions 
+seem to me quite open. It may be doubted 
+whether these rough descriptions, exploiting 
+points of supposed analogy between the Maxwell 
+field and the Yukawa field, have any valid 
+content; it may be doubted whether a refinement 
+
+
+183 
+
+
+of such theory, based on a generalization of the 
+recent advances in electrodynamics, will lead 
+toward the truth; surely, if this refinement can 
+be carried out at all in a logically consistent — 
+manner, it will lead to a theory rather radically 
+different from what we have today. It may well 
+be that a quite new description of interactions is 
+called for, at present no more to be anticipated 
+than the taxonomy of the mesons themselves. 
+
+On these questions experiment will throw 
+light: what are the particles with which we have 
+to deal? what are the primary collisions, what 
+their immediate and what their secondary prod- 
+ucts? are they multiple? and if so, how do 
+multiplicity and cross section vary with energy? 
+what are the many origins of cascade radiation? 
+what becomes of the mesons? ... These are 
+among the questions to which this conference 
+has led us; the answers will be the elements of 
+our understanding of the fundamental particles 
+and the laws of their interaction. 
+
+

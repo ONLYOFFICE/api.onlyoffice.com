@@ -1,0 +1,9 @@
+{
+  "name": "@onlyoffice/pagefind-types",
+  "private": true,
+  "type": "module",
+  "main": "lib/main.ts",
+  "dependencies": {
+    "typescript": "^5.4.5"
+  }
+}

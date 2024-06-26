@@ -1,0 +1,1648 @@
+nN 
+for) 
+ioe) 
+
+
+Zur Quantentheorie kontinuierlicher Spektren’'). 
+
+Von J. R. Oppenheimer in Gottingen. 
+
+(Eingegangen am 24. Dezember 1926.) 
+Die Normieruny der Eigenfunktionen der Systeme mit Streckenspektreu wird all- 
+gemein behandelt. Die Theorie wird auf das Wasserstoffatom, die kontinuierlichen 
+Réntgenabsorptionskoeffizienten, die Polarisation und Intensitétsverteilung der 
+Bremsstrahlung, und die Geschwindigkeits- und Richtungsverteilung der Photo- 
+elektronen angewandt. Es ergeben sich die Comptonschen und die Kramers- 
+
+schen Formeln. 
+
+
+I. Allgemeine Theorie. 
+
+
+1. Einleitung. Nach Schriédinger kann man die beobachtbaren 
+Eigenschaften ees dynamischen Systems aus der Gesamtheit der Li- 
+
+
+sungen % einer Differentialgleichung ableiten. Falls man es — wie 
+wir im folgenden voraussetzen werden — mit konservativen, in den 
+Variablen x, separierbaren Systemen zu tun hat, findet man bekanntlich 
+a 21, 
+
+yp — It, re cerdpery( i E t) (1) 
+
+wo die 4, Gleichungen des Typus 
+
+1 oO ( OW: 
+
+—— =— le =— Ax (aid .= 0 2 
+ot) Oa 05,4) + let fel x] Ur (2) 
+
+
+gentigen, und wo die Knergie E = E(A,, 4,...) ist. Fiir spektroskopische *) 
+Probleme hat man ferner die Konstanten 4). so zu wihlen, daB die aw, in 
+jedem physikalisch zulassigen Punkte (x,, v,... «,) beschrankt, eindeutig, 
+und zweimal stetig differentiierbar sind. Die Gesamtheit der so entstehen- 
+den A-Werte ist das Eigenwertspektrum des Systems und besteht im 
+allgemeinen aus diskreten Punkten, ihren Haufungsstellen und kontinuier- 
+lichen Strecken des 1-Raumes. Wir werden die zu einem Punkte dieses 
+Raumes gehérige Bewegung demgem4B periodisch, singular und aperiodisch 
+nennen. Dieses stimmt nach (1) mit dem klassischen Kriterium einer 
+periodischen Bewegung, daf sie durch eine (mehrfache) Fouriersche 
+Reihe dargestellt werden kann, abgesehen von trivialen Ausnahmen 
+iitberein. 
+
+Nach der Bornschen Auffassung mnB man 7 (2,)’| als eine Wahr- 
+scheinlichkeitsdichte der Koordinate .. ansehen. Da klassisch nur eine 
+
+
+1) Gckiirazte Gdttinger Dissertation. 
+2) Fur kinematische Probleme sui man allgeweinere Lésungen behandetn. 
+
+
+J. R. Oppenheimer, Zur Quantentheorie kontinuierlicher Spektren. 2OY 
+
+
+periodische Bewegung innerhalb eines begrenzten Teiles des Koordinaten- 
+raumes vor sich geht, kénnte man auch hier erwarten, da8 nur die zu 
+einer periodischen Bewegung gehérigen w quadratisch integrierbar sein 
+miBten, daB also alle Integrale 
+
+
+J be deond ay 
+
+
+iiber das Grundgebiet existieren wiirden. DaB das nicht der Fall ist, 
+erkennt man an einem einfachen Beispiel. Nimmt man fiir die potentielle 
+
+
+Energie etwa E up , so sieht man, da die Wellengleichung 
+
+
+—1 
+ro | 
+fiir jeden Energiewert zwischen 0 und + 1 quadratisch integrierbare 
+Lisungen hat. Falls aber die zu einer ihrer Natur nach unbegrenzten 
+Koordinate gehérige Differentialgleichung (2) eine und nur eine singu- 
+lare Stelle im Endlichen hesitzt, so ist w dann und nur dann 
+quadratisch integrierbar, wenn die entsprechende Bewegung periodisch 
+ist’). Da jedes Teilchen eine singulire Stelle und eine prinzipiell unbe- 
+schrinkte Koordinate in die Differentialgleichung einfiihrt, kénnte man 
+vermuten, da dieser Satz fiir alle echten physikalischen Probleme gilt. 
+
+
+2. Die Eigendifferentiale. Wegen der Selbstadjungiertheit der 
+Gleichungen (2) sind die simtlichen w zueinander orthogonal. Bekannt- 
+lich?) miissen die periodischen Lisungen auf eins normiert werden, um 
+die Heisenbergschen Matrizen zu liefern. Dieses kénnen wir nach der 
+Bornschen Auffassung als eine Wahrscheinlichkeitsaussage deuter: Die 
+Gesamtwahrscheinlichkeit, daB ein System gleichzeitig in awei Quanten- 
+zustanden existiert, ist Null; das Gewicht jedes Quantenzustandes ist eins. 
+Fir die aperiodischen Bewegungen versagt einerseits wegen der Nicht- 
+integrabilitat der entsprechenden » die Schrédingersche Normierung; 
+andererseits hat jetzt die zweite Wahrschemlichkeitsaussage iiber das 
+Gewicht keinen Sinn. 
+
+Das mathematische Problem der Normierung kontinuierlicher Spektren 
+ist von Hellinger’) fiir die quadratischen Formen, von Weyl*) fiir 
+Sturm-Liouvillesche Gleichungen gelést worden. Und zwar findet man 
+
+
+1) Der Beweis beruht darauf, dai man im Unendlichen entweder zwei be- 
+schrankte, nicht integrierbare Lisungen oder eine unbeschrinkte und eine integrier- 
+bare hat, die nur fir gewisse A4-Werte mit dem an der anderen singuliren Stelle 
+analytischen Integral iibereinstimmt. 
+
+2) E. Schrédinger, Ann. d. Phys. 79, 734, 1926. 
+
+3) E. Hellinger, Crelles Journ. 136, 1, 1910. 
+
+4) H. Weyl, Math. Ann. 68. 220, 1910. 
+
+
+270 J. B. Oppenhéimer, 
+
+
+nicht, daB es ei eindeutiges Normierungsverfahren gibt, sondern daf 
+fiir jede stetige Funktion f(A) die Bedingung’) 
+
+
+lim 1/4f { 9de4,04,0 = 5,, 
+
+
+Af—>o 
+Atear fat 4f 
+4,0 ={¥dfQ); 4,0 =f vara (3) 
+fy fa 
+
+
+eine durchfithrbare Normierung der w liefert. Dabei ist 6,, == 0,1, je 
+nachdem die Intervalle f,, f,+ 4f und f,, fy+ If aus- oder in- 
+einanderliegen. Man kann offenbar durch eine geeignete Wahl von 
+f(A) die von w abgeleiteten Matrizen mit einer willkiirlichen Funktion 
+von A multiplizieren. Das physikalische Problem ist die Bestimmung von f. 
+
+
+3. Das normierende Differential?). Fir diesen Zweck betrachten 
+wir zundchst eine Differentialgleichung (2) mit Punkt- und Strecken- 
+spektrum. Das Ergebnis fir f wird dann allgemein gelten. Wir fassen 
+zwei, der Eigenfunktion w(A,) und dem Eigendifferential*) 4 @ (A,) ent- 
+sprechende Anfangszustinde ins Auge und berechnen nach einer von 
+Dirac‘) angegebenen Methode die von einer Lichtwelle erzeugten Uber- 
+
+
+1) Dabei ist (3) gerade die Bedingung, daf die durch 
+F(x) y(4,x) = § FGA) d (2) (8a) 
+definierten kontinuierlichen Matrixkomponenten einer Funktion F(x) durch 
+FQM) = fede F(a) yd) y* (at) 
+
+gegeben seien. Denn aus (3a) folgt 
+
+{ F@) y Ga) y*@,x) edz =f edx y* (Wx) f FGA") dO(0",. 
+
+2) Die Uberlegungen dieses Abschnittes kénnen etwas vereinfacht werden, 
+indem man das Integral des Quadrats der gestérten Higendifferentiale statt das 
+
+
+Quadrat der Koeffizienten dieser Eigendifferentiale als Ubergangswahrscheinlich- 
+keiten nimmt, Man erhalt dann statt (5) 
+
+
+ar | MCA) of 
+Man kann ferner zeigen, da alle Ubergangswahrscheinlichkeiten gegeniiber Trans- 
+formationen von f invariant sind und daf fir alle f das Gleichgewichtsprinzip seine 
+Giltigkeit behalt. Unsere Wahl von f entsteht dadurch, dafi man verlangte, dai 
+das Quadrat der Matrixkomponenten selber fiir die Absorptionskoeffizienten mal- 
+gebend sein sollten. Sie hat auferdem noch die Eigenschaft, daf nur fiir sie das 
+statistische Gewicht einer Strecke durch das Integral des Quadrats der Eigen- 
+differentiale gegeben ist. (Anm. bei der Korrektur.) 
+
+5) Die -@(4) sind im Grenzfall wegen der Vertauschbarkeit der Folge 
+der Integration nach 4 und der Differentiation nach a Liésungen der Differential- 
+gleichungen. 
+
+*) Pp. A. M. Dirac, Proc. Roy. Soc. (A) 112, 661, 1926. 
+
+
+Zur Quantentheorie kontinuierlicher Spektren. Qq1 
+
+
+gangswahrscheinlichkeiten 4, > 41,, 44, >A, Wir berechnen dann 
+nach Born’) die Gewichte der zwei Anfangszustinde — fiir /@ natiir- 
+lich in einem etwas erweiterten Sinne —, und sodann quasiklassisch die 
+Gewichte der Zustande im thermodynamischen Gleichgewicht. Hieraus 
+erhalten wir, wegen der Unabhingigkeit?) dieser Wahrscheinlichkeiten, die 
+Ubergangswahrscheinlichkeit fiir das Gleichgewicht. Endlich verlangen wir, 
+daB diese einander gleich sein sollen, und erhalten eine Bedingung fiir f. 
+
+
+Wir schreiben die Gleichung (2) in der Form 
+
+
+S/de2 (Vo wv) +A+X'@M]Vov =o. 
+
+
+Da diese Gleichung Punkt- und Streckenspektrum besitzt, muS X’ (4) 
+asymptotisch einem begrenzten Wert zustreben, den wir offenbar gleich 
+Null setzen kénnen °): 
+
+lim X' = 0. 
+
+vt —>} co 
+
+Wir berechnen jetzt die Stérung, die eine polarisierte Lichtwelle 
+
+(mit elektromagnetischem Potential %) in den Systemen a) w(A,) und 
+b) J@(A,) erzeugt. Sei af () die Komponente des elektrischen Moments 
+des Systems parallel &. J hingt auch von den anderen Koordinaten x, 
+ab; wir kénnen aber hier diese Abhingigkeit vernachlassigen, da es sich 
+nur um Anderungen in einem bestimmten 4, handelt. Die Stirungs- 
+
+
+‘ : : ML . 
+funktion in der Schridingerschen Gleichung ist dann oe Wenn wir 
+
+
+jetzt in dieser gestérten Gleichung mit dem Ansatz 
+
+
+Eald) yd) + J a(a)d@@) 
+eingehen, so erhalten wir nach der Diracschen Methode eine Differential- 
+gleichung fiir «(A) 
+
+
+ihe. 
+
+
+ee 22% | 
+— — , wi) ‘2 Y as — Zip 
+Jaq UA) = Syed) MAL) Lewy) T(x Ext} 
+
+
+; : Det 
++ | a) AR) Xeaep | eee a f(a’) 
+
+
+1) M. Born, ZS. £. Phys. 40, 167, 1926. 
+
+2) Pp. A. M. Dirac (Il. ¢.); Born (I. ¢.). 
+
+3) Der Fall, dai X' keinem Grenzwert zustrebt, sondern oszilliert, bietet 
+keine besonderen Schwierigkeiten; nur miissen iiberall Integrale X = { X'dx 
+durch ihre Mittelwerte ersetzt werden. Dieser Fall kommt z. B. beim Compton- 
+effekt vor. Unsere Normierung gilt auch da (W. Gordon, ZS.{. Phys. 40, 117, 1926). 
+
+Zeitschriit fiir Physik. Bd. XLI. 18 
+
+
+272 J. R. Oppenheimer, 
+
+
+Setzen wir jetzt dic Anfangswerte von « ein, integrieren, setzen die so er- 
+haltenen g-Werte wieder ein, integrieren wieder, und vernachlissigen wir 
+endlich die von den Phasen abhangigen Terme, so erhalten wir fiir die Zeit 7’ 
+
+
+, 4x? , 
+a) [a (Ay)? iz = pe | ME (A, 4 is 
+
+
+b) [«(A,)? |r a | 02 (Ag)? lp f?. 
+Wir bemerken jetzt, da8 die Strallungsdichte pro Frequenzeinheit 
+T 
+
+
+> 2 
+| UW erzirt Ut 
+
+
+0 
+
+
+ist. Die Anzahl der in a) von 4, nach A, bis 4, + 4A tibergehenden 
+Systeme ic 
+
+
+| 2x 
+| Yeap ea (E;, — En,) i at | 
+J | 
+
+
+2 
+
+
+2a 
+c 
+
+
+, 
+
+
+1 
+
+
+Ey 1 
+EAA.) Ld (=): v = 7 Bh, — Ba): (5) 
+
+
+Ky 2 
+
+
+Die Anzahl der in b) von 4, bis 4,-+ JA nach 2, iibergehenden ist 
+22 : 
+ae ele (A, a4)? | 4f?. (6) 
+
+
+Wir gehen jetzt zur Berechnung der Gewichte des Anfangszustandes 
+iiber. Nach dem oben Gesagten ist das fiir den Fall a) gleich der Hinheit. 
+Um das Gewicht eines zu einer aperiodischen Bewegung gehérigen 
+A-Intervalls zu definieren, verfahren wir folgendermaBen: Wir betrachten 
+im Koordinatenraum (x,, .t,...7,) des Svstems eine unendlich ferne Flache 
+gz == const. Als Gewicht einer Strecke 4/1 nehmen wir die in der Zeit- 
+einheit durch diese Fliche strémende und 44 entsprechende Wahrschein- 
+lichkeit. Diese erhalten wir aus einer Anwendung des Greenschen 
+Satzes auf die Schrédingersche Differentialgleichung: die Gesamtwabr- 
+scheinlichkeitsinderung in einem abgeschlossenen Bereiche des Raumes 
+ist durch ein Flachenintegral tiber die begrenzende Flache gegeben'): 
+
+
+df h 
+2 a x ' 
+qi (Bide = |5 S(EVv B*), de. 
+
+
+Der durch unsere Flache strémende Teil ist wegen der Normierung’) der 
+
+
+: he ; : 
+Zo. = lim >=—{7 3[B (2) B' (z)*]*). 7 
+bmn spe OP ar) (7) 
+
+') w ist hier einc Masse; fiir das Einkérperproblem dic Masse des Teilchens. 
+3 bedeutet ,imaginirer Teil<. 
+
+2) Falls mehrere dy kontinuierlich sind, so hat man die Integrale durch 
+Mittelwerte zu ersetzen. 
+
+3) Dabei ist das Langenelement in der z-Richtung durch ds — gd-x ge- 
+geben. Nach Gleichung (2) hangt g nicht von x ab. 
+
+
+Zur Quantentheorie kontinuierlicher Spektren. 273 
+
+
+Quit 
+Fir 6 = 40 (,,) e * kénnen wir dies mit der Gleichung (4) und der 
+Bedingung (3) berechnen. Sei u(x) eine Lisung von (4) und £(A) ein 
+normierender Faktor, dann wird ') 
+
+
+fog+ 44) 
+
+
+h. 
+ek AO=fEAu@AdiWs F.= aaa 3fu @)u' @] BE LAr HP. 
+f G2) - 
+Die allgemeine asymptotische Lisung der Gleichung lautet 
+
+
+u —> Kel Viet X1i+7@), (8) 
+
+
+wo K und  stetige, mit 4 langsam veranderliche Funktionen sind. Hier- 
+aus bilden?) wir den Integranden des Integrals in . 
+
+
+4 
+Yo gt * p72 $2 41> i eos i) 
+Belew a@ > ip Kegiaesin |S tae i 
+Die Bedingung (3) lautet also 
+
+A 
+
+
+2 du 
+lim lim | 4.2 @a%27’ sin eee 5 
+i ore +i) je 
+0 
+48 
+Das wird *) 4 K2 82 Atle f’ 
+Andererseits ergibt (8) 
+lim 3 (u (a) w' (#)*) == A42 K?, 
+2 —> 00 
+also wird 
+aim ES (u (2) u' (@)*) = af’. (10) 
+
+
+Das fiir das Sidec by berechnete ,Gewicht* der Strecke 44 wird also 
+CEC Ati 
+Sau wu f'Q,) 
+
+Wir miissen jetzt das Verhiltnis der statistischen Gewichte der 
+Strecke 44 und des Wertes 4, nach der klassischen Quantentheorie be- 
+rechnen. Elementare statistische Betrachtungen*) zeigen, daB es JE, 
+selbst proportional sein mu8; aber wir kommen mit diesem Ergebnis 
+nicht aus, da es uns zum Beispiel nicht das Intensitétsverhaltnis des 
+
+
+ao = 
+
+
+1) Wegen der oben erwihuten Vertauschbarkeit der Folge der insberation 
+nach / und der Differentiation nach x. 
+
+2) Man kann den asymptotischen Wert iiberail gebrauchen, weil das Integral 
+zwischen allen endlichen Grenzen tis Grenziibergang verschwindet. 
+
+3) XN fiihr = = 
+
+) Man fiihre y = (G7 a 
+K. Fues, Ann. d. Phys. 81, #82, 1926. 
+
+4) Siehe hierzu J.R. Oppenheimer, Proc. Camb. Phil. Soc. 28, 422. 1926. 
+
+
+18* 
+
+
+4h als neue Integrationsvariable ein. Siehe 
+
+
+274 J. BR. Oppenheimer, 
+
+
+kontinuierlichen und Linienspektrums ergeben wiirde. Wir stellen also 
+diese rein kinematische Frage: Im Mittel sitzt in jedem diskreten Quanten- 
+zustand ein Teilchen; wieviele Teilchen mit 4-Werten zwischen 4, und 
+4,+ 44 schreiten dann im Mittel in der Zeiteinheit tiber eine unendlich 
+ferne Grenze hinein? Dabei sind alle anderen Quantenkonstanten fest- 
+zuhalten. Denken wir uns einen aus der zu A gehérigen Wirkungs- 
+variablen J == J(A) und der kanonischen Winkelvariablen w bestehenden 
+Phasenraum, so lautet die Antwort offenbar: die durch h geteilte in der 
+Zeiteinheit von den Teilchen zuriickgelegte Fliche dieses Raumes: 
+wd'(4) 4a. Aus der Gleichung (4) sehen wir ferner, da8 x asymptotisch 
+nur von w abhingt; daher treten alle diese Teilchen tatsichlich tiber die 
+
+
+% = const-Fliche im Koordinatenranm heriiber. Da auch quanten- 
+mechanisch in diesem Falle 
+
+: OE 
+
+ame 
+
+
+ist, erhalten wir fiir das oben definierte statistische Gewicht der Strecke 
+Ag dg + 4A 
+
+1 OE OS 1 
+
+Shae = — : 2 
+
+h oJ O1’ ae h aes (12) 
+Wir dividieren jetzt (6) durch (11), multiplizieren den Quotienten dann 
+mit (12). Dieses ergibt dann die Ubergangswahrscheinlichkeit aus dem 
+Intervall 4,, 4, + 4A nach 4, in einem Gleichgewichtssystem, und muf 
+daher (5) gleich sein. Wir erhalten also 
+
+
+BE 8 2 2 
+a(t) = ie 4%, | 
+df 
+
+
+Hf! 
+_ h 
+dh 82 ug 
+
+
+(18) 
+
+
+Man kann sich leicht iiberzeugen, da® dieses Ergebnis auch im allgemeinen 
+gilt. Nur wenn X’ asymptotisch positiv unendlich wird, und wenn es 
+asymptotisch wesentlich von einem anderen kontinuierlich veranderlichen 
+A abhangt, miiBte man das statistische Argument etwas andern. Dieser 
+Fall wird wohl in physikalischen Problemen nie vorkommen. 
+Die Kigendifferentiale sind also 
+A+ 4h 
+h 
+
+
+Zz 
+
+
+Damit ist die Normierung durchgefiihrt. 
+
+
+Zur Quantentheorie kontinuierlicher Spektren. O74 
+
+
+Zum Schlu8 bemerken wir: Falls man, wie in den iiblichen Problemen 
+dE We 
+di 8x pg 
+hat, so hat df die Dimensionen einer Frequenz. Die Quadrate der 
+photoelektrischen Matrixkomponenten untergscheiden sich dann durch einen 
+Zeitfaktor von den periodischen, wie es auch sein sollte’). Und die 
+Zahl der in der Strecke 44 (pro Zeiteinheit) eintretenden Teilchen ist 
+nun im Gleichgewicht gerade 
+
+
+h U — 
+Imp S9UH 4 = f AG%ede, 
+
+
+wenn hier # nach (10) normiert ist. 
+
+
+I. Anwendung auf das Zweikirperproblem. 
+
+
+1. Die Lésung der Differentialgleichung’). Die Berechnung 
+der Eigenfunktionen fihren wir in zwei Schritten durch. Wir finden 
+erstens die beschrénkten, eindeutigen, zweimal stetig differentierbaren 
+Liésungen unserer Gleichung. Eine solche Lisung bezeichnen wir mit u, 
+den entsprechenden normierenden Faktor mit £, und schreiben wy = £ u. 
+Wir werden auch immer die Argumente und Parameter von w, & und u 
+unterdriicken, wenn der Sinn sonst klar ist. 
+
+Wir nehmen als Modellsystem einen schweren Kern der Masse H, 
+der ein Elektron mit dem Potential — Ze — a anzieht. Dabei ist R 
+der Elektronenabstand, Zé die , Kernladung*, — ¢ die Elektronenladung, 
+und } eine kleine Konstante, die fiir das Wasserstoffatom verschwindet, 
+fiir K-Elektronen in schweren Atomen einen roh berechenbaren Wert 
+annimmt. Nach der tiblichen Abspaltung der Schwerpunktsbewegung 
+und Separation der tibrigen Gleichung in Polarkoordinaten erhalten wir 
+
+
+zunichst Gy a0, 
+10/7. .0Ow hep 
+sin 9 09 (sin 55) ‘i (2s ~~ sin? 3) ets 
+
+
+FER) +9 FEED ao 
+
+
+r 
+
+
+1) Weil man klassisch fiir periodische Bewegungen die Ausstrahlung pro 
+Zeiteinheit, fiir aperiodische fiir die ganze Bahn berechnet. 
+
+2) Die Ergebnisse dieser Abteilung sind von E. Fues, Ann. d. Phys. 80, 
+1926, fiir das Molekiilproblem, von J. R. Oppenheimer, Proc. Camb. Phil. Soc. 
+(i. ¢.) fiir das hier behandelte gegeben worden. 
+
+
+276 J. R. Oppenheimer, 
+
+
+Die Gleichungen sind alle bekannt. Das erste Ergebnis ist, da® die $- 
+und g-Bewegungen fiir periodische und aperiodische Bahnen gleich sind; 
+
+
+im besonderen mu8B man ho = mW, ig = vt 
+
+
+setzen. Das wiirde 
+klassisch nicht der Fall gewesen sein, wo man die Quantenbedingung 
+aus der Periodizitat der Bewegung selbst, und nicht aus dem periodischen 
+Charakter der Koordimaten ableitete. Bekanntlich mui man m ganz- 
+
+
+zablig, s halbzahlig annehmen, und erhalt 
+u(p) == cosm@m +tsinmg, { 
+
+
+(14) 
+u(®) = PM, (Cosa). — J 
+Die Gleichung fiir u(r) lautet 
+1o Ou aa a k(k+ 1p ; 
+soa Cts = a eS a 
+Dabei ist 
+ah / 8a mM — 8 Ze mi 
+i \ om tae!” a ED’ 
+und 
+82° bm WU 1 
+ei + 1) == 3? — — 
+nee) 7 h? (m + MW) 4 
+Fiir 6 = 0 ist & ganzzahlig. m ist die Elektronenmasse, E die Energie 
+der Teilchen bei rahendem gemeinsamen Schwerpunkt. 
+Die Funktionen 
+cc rk fern (2 — pee (e+ pide, (16) 
+é 
+won = — ist, geniigen (15), wenn C so gewihlt ist, daB 
+Vv 
+
+
+|S fer ptt tp ettde = 0. 
+C 
+
+Wir werden mit den partikuléren Lisungen zu tun haben, die aus der 
+
+folgenden Wahl von C entstehen: 
+
+
+u,, C,: eine aus dem negativ Unendlichen herkommende, -- y um- 
+kreisende, einfache Schleife, 
+4a, Cy: eine dhnliche, — y umkreisende Schleife, 
+uy, Cy: eine um + y und —y herumgelegte Doppelschleife. 
+Dann ist?) 
+ty == (1 — FEET Ew) 4 CL —~ TEE TIN“D) og, (17) 
+
+
+1) Vel. L. Schlesinger, Differentialgleichungen, V. W. V., Berlin 1922, 
+Kap. VIEL 
+
+
+Zur Quantentheorie kontinuierlicher Spektren. 277 
+
+
+Verschwindet u, nicht identisch, so ist sie ee ganze Transzendente. Ist 
+sie auBerdem auch im Unendlichen beschrinkt, so ist sie die gesuchte 
+Liésung. Ist sie es nicht, so existiert in diesem Falle keine Lésung. 
+
+Setzen wir 
+
+pork + 
+h= SD | (e— p)ttn(e + ptonzedz = Slertt* (18) 
+= 4 z 
+
+in (15) ein, so erhalten wir die einfache Rekursionsformel 
+
+
+t2@kt+t+ le +u¢_1,—-p'e,_2 = 0. 
+
+
+Aus dieser finden wir mit c_, = 0 
+epeeie ee di Sa ea (19) 
+IJ v(2k-+ pv) iv 
+r= 1 
+Wir geben hier die ersten acht ¢,/¢, wieder: 
+i= —s, 
+fi, = @—2k+ 1), 
+fy = —8 4 (6k + 3d)6, 
+f, == ot — (12h + De + (122 + 24k + 9), 
+f, = — 6 + (20k 4 30)6% — (602 +4 160k +4 89)6, 
+
+
+f, = 6° — (80% 4. 53) 6 + (18072 + 600k + 439) 6? — (12078 
++. 54022 + 690 k + 228), 
+f, = — 67+ (40K + 91) 65 — (880 @ 4 43820% + 11289) 6? 
+-- (720 18 + 3800 2 + 7340 k + 8429) 6, 
+f, = 6 — (54h +4 140) 6° + (80072 + 6560% + 13934) 6! 
+— (824078 + 22520 12 + 42886 k + 25010) 6? 
++ (1680 4 + 13440 73 + 36170 1? + 86960 & + 110285). 
+
+
+(19a) 
+
+
+Dabei ist k = k + 1/, gesetzt. 
+Andererseits finden wir durch Ausfiihrung der Integrale in (18) 
+
+
+a aa 
+
+
+Cr pith +n) al — ertik —m) : a <— e2 Uk — 1) . Q; 
+
+
+t! 
+Q@= Birt lk--rn+t lFa—hrt+lnrnt+k+r+2, —1) 
+-(—1)FB(r + 1k—u-+ 1) F(—n—h,r + 1k+2+1r—n, —1). (20) 
+
+
+Darin ist B das Eulersche Integral erster Gattung, I’ die hyper- 
+geometrische Reihe. 
+
+
+278 J. R. Oppenheimer, 
+
+
+Eine asymptotische Entwicklung erhalten wir aus (17) und 
+u~ al pee e277 (k—2)) yr—lLeyr Tk + — n) es » y)r +k 
+
+
+(—n+h+2)(—n+k+ 1) 
+(1 a te 
+
+
+ug ~ (1 — e& 2+) rr let DRL 1 + n)(2y)y-" +k 
+
+
+(Gres oorer yy...) 
+yr 
+
+
+(21) 
+
+
+Man sieht jetzt, da8 auch in diesem Falle das Schridingersche 
+Resultat gilt: Fir jedes positive E ist u, eine beschrinkte ganze 
+Transzendente. Tiir negative FE muf dagegen » —k = 1, 2,... sein), 
+um eine solche zu liefern. Wahlt man in diesem Falle C, als einen Kreis 
+um den Punkt z = —y, so wird 
+
+
+n—k—-1(__PYay py 4 k 
+t= 2ei.(—2yphttykemye SS iterit aD a ae » (22) 
+j= ik: 
+
+
+2. Die Normierung der Liésungen. Die Werte von &(g), & (#) 
+und £(r) fiir den periodischen Fall erhalten wir durch Einsetzen von 
+(14) und (22) in [\y2de = 1. Es wird 
+
+
+1 
+
+fp == 2a; also: “$5, 
+
+e y2a 
+2 1 (+m—})! _(¢—m—D! 
+WS EE DRA OE (s— m — 4)! 
+f° = $ (s —m— 3)! 5 ‘Com 
+=a A 
+&? = —4r(2y)*-1 Aah; & = AW*(n, hi) 
+
+
+Pa+kht+ i) 
+
+
+A? (n, k) = 1 Pa! 
+
+
+Setzen wir (17), (21), (13) in (10) und 9 = »’ ein, so folgt fiir &, im 
+aperiodischen Falle 
+# {d —_ erik + m)y? 2 ad —— er ti (k—n))? 
+
+
+[yet |2yPFratk+iyr—npet+ )} = gel 
+
+
+1) Die Bedingung, daB — y ein Pol des Integranden sei. 
+
+
+Zur Quantentheorie kontinuierlicher Spektren. 279 
+
+
+Folglich 
+
+
+i= 
+
+
+ee (29 
+(1 ~ etl +my (1 —- 2tih—m) YORE 1 —nPk+14n) : 
+
+
+Wir werden spater die normierten Koeffizienten c, == &¢, gebrauchen. 
+Hier geben wir ¢,, woraus die héheren ¢, nach (19) zu bestimmen sind: 
+
+
+es [A oc spats Zh] Wet ltware+til—n»n 
+C= Ve ler m,e* 2 i D! : 
+
+
+3. Die Matrixkomponenten. Wesentlich fiir die Ubergangs- 
+wahrscheinlichkeiten sind die Matrixkomponenten der kartesischen Koor- 
+dinaten des Elektrons*). Andererseits sind die durch das Atom erzeugten 
+elektromagnetischen Potentiale®) im gro8en Abstand durch die Kom- 
+ponenten der Geschwindigkeiten bestimmt. In diesem Abschnitt sollen 
+die nétigen Rechnungen durchgefiihrt werden. 
+
+
+(24) 
+
+
+Wir bemerken zunichst, daB die von # und  herriihrenden Faktoren 
+davon unabhingig sind, ob die Bewegung periodisch ist oder nicht. Wir 
+erhalten also in allen Fallen die Auswahlregel 4s == +1, 4m=0, +1, 
+und die Polarisationsfaktoren *) 
+
+
+22 2 
+
+
+@, (8, m; 3’,m’) == [cos @ sin dy @, g) wv (8, p)dtdg@ 
+00 
+
+
+i (8s —s’ —1—2m)(s' + m —})! 
+AYss'(s’'—m—})! 
+
+
+d 
+
+
+27 2% 
+@y (3, 8; $e’) = ( J sin? & (cos @ + ising) yy ddd 
+40 . (25) 
+—_ 48 (e+m+p!G—m— ir 
+ 2Yss' |(s' —m—aylotm— py’ 
+@, (8, m1; 8',m') = ( [ sin? 9 (cos p — isin 9) uy dedg 
+vu 0 
+
+
+_ 43 fe +m—3!(~s—m ahs 
+ose lO — m+ _7l@tu—p_[ 
+
+
+1) P. A. M. Dirac, Lc. 
+
+2) W. Gordon, l.c. 
+
+8) Die Rekursionsformeln fir PY” sind uz. B. bei C. Eckart, Phys. Rev. 
+28, 927, 1926 zu finden. 
+
+
+‘dh >> (4 pun 45> 4 opppyzuery rom orp 
+
+
+HIOPOS Toqe yqQIS19 oIs !youstees oynoucdmoNXUye_Y Jap FunMUTseg aULOWAS|[e oto INF FYOIU 4st Touro, osercy 
+
+
+i) 
+— cg) if —f—y—u\ =f 
+Cy TS me pp — ta bratal | wk 2 i! (' ae ) are 
+POSS Pata OOM eet ata ate } Bai 
+a & 
+es fase ht anad— a0) 83 
+
+@ youu 
+“{1OLSLOAWOY Q == fy INY cnn 
+
+
+Unep ‘4 YORU jSto UorotIdequt pun (ZZ) pan (97) TeIsozuy sep qyeysop uoyonerqes sry 
+otp ‘oyLoY eure wowsdoyuy opposed qornp tf uoqpeyse os ‘ute Te1SoqxuT sep ut (2a) pun (gq) aA faite ‘¢ 
+
+
+I 
+
+
+“XLRI UeoSrporred orp ITM Usqed UoyUaIzTZeoysuOydiosq W USTOILLEMUTpUOY pun -worurT Jap YorepsieA wnZ “VW 
+‘| S7f7 sown tm ueqeq requayo 
+
+
+: Gh a rl 4) IT (¢— 4¥— Wu), T(z +f C+ 4e)T(Be+EAR YS ii! Cre etltary(u+ uy ° ed c= 
+
+a, ( )  & ESE +f te ie t + sl + aI 1 + it + MT (1 + Y + U) T 64 0(% =) LE AMEE yt (UU) T— Yf—  T-y te 
+
+& ‘6 p (Gtat Or tatOne 
+
+ee ar (a—- Ora—Or St as) 
+
+ae a ee ‘uaquauodur0y 
+
+
+‘WaUaIeg nz gf/[ WOA usqostpoede orp “ uoa wozrEqep woqostyyejeojoyd pun weyosrpotad orp ose ueqey aL 
+
+
+gt «OT gf A gt ot 
+ta . pun . 
+2 27 A 27 % By 
+qoINp () == 9 MY Uesungorepsssundemeg uep yoru ‘repo quruyseq 2 ‘f ‘e YOINp puts esate “UsZLayey ayartpue 
+‘OT[@Y Weserp UT 48vsrEA galery 
+
+
+URI 4THyIe “Gyedraqn ‘ysqpas UsyLEISp[ey Up ‘waFfungreqy ueIqE nz ue UE INN 
+“UP OP INF ZqPVSUY OTPOSMOPIOL JOp YONY ‘uslerssearp ,ueystporrede* erp ‘ysisseyy Yone on ‘saqe gep ‘weseys 
+“fxo voquauodMoyxXIy YW , uaystayyzepsojyoyd~ pun ,uayostported* erp gep ‘({zZ) pun (27) sne qyorey yyats wep 
+
+
+280 
+
+
+Zur Quantentheorie kontinuierlicher Spektren. 28i 
+
+
+i. Hier nehmen wir das Doppelschleifenintegral lings eines Halb- 
+kreises vom Radius | y'|, vermeiden den Pol des Integranden und erhalten 
+
+
+[r(n, k; x’, h)|—> GT, 2 sind (k + li’ + 3) x G, | y' |P-F-3, 
+wo?) 
+1 ke 
+—S\(—1) peer | 
+e = ( Nga be 3) 5) 
+Fiir gegebene » und y’ wird also 
+. 1 3 
+lr(n, ky n'y )|>f, (n, ky b’)| yf aZkte (27) 
+wo 
+———— 3 
+2%u. (3 fagi\** 2 
+f, (nh, k’)) = 2 p2Besinbe tet 3)x.2-8 7¢ sa <3 
+: h nh , 
+1 (28) 
+
+
+, Foa+t+k+1reé+rh+4 | Pin—hk) ye 
+oS Pe—bHPR+tVYP2k+ 2) lePa+hit YJ 
+
+
+2. Hier nehmen wir die imaginire z-Achse fiir das Doppelschleifen- 
+7 7 & 
+integral, und entwickeln den Nenner nach Potenzen von —: 
+
+
+|r (na, 5m’, k’) | 
+
+
+n—k-1 3 . a ; a _ 
+= 3S SCH spent Ets t ere, 
+ie (29) 
+wo : 
+he (—1IJ PUT +j)+ 4004 k+1) + D2 
+Ben Ta—k—jPakt+j+2).j! wPwtk+i 
+Aus (19) folgt die Konvergenz dieser Reihe fiir SF <(l. Sie 
+v 
+
+
+konvergiert rasch fiir kleines | y’| und ist deshalb bequem fiir die Unter- 
+suchung von Spektren in der Néhe der Grenze. Im Grenzfall y’-> 0 
+strebt |r (nv, k; x’; k’)' einem konstanten, Z? umgekehrt proportionalen 
+Wert zu. 
+
+Um eine allgemein giiltige Formel fiir r(x, k; n', kh’) zu erhalten, 
+verwenden wir ein Verfahren von Fues*) an, das leider nur fiir ganzzahlige 
+k und fk’ gilt. Denn das Integral J; ist gleich (1 — ¢27/@+) mal einem 
+einfachen positiven Schleifenintegral um (—- y’, — y'). Der Integrand 
+
+
+1) Die Formel versagt, wenn & + ik’ eine ungerade ganze Zahl ist. In diesem 
+
+
+apa.» 
+Fall ist r (a, hj n'y Fk) ~ | y' | 2 proportional [siehe (30)]. 
+*) E. Fues, lc. 
+
+
+282 J. R. Oppenheimer, 
+
+
+hat im erliuterten Fall aber sonst nur eine Singularitat, den Pol z= y». 
+Also ist 
+
+
+(Z == yy’ kK (Z + y')~ nit | 
+
+
+I, = — 81+ ®) Res | (y — eet Prits { 
+
+
+Ponta Dk chia ne ee 
+| -Q", § (80) 
+
+
+= yTHHRI—3 (—2 gi) (1—e2 tH +8) [1 a (2) 
+
+
+a Ken” ka ; —iacig|7|-@+H'4j+3—-20) 
+PS rte sj t3—a) | : 
+
+
+Fir ganzzahlige i und i’ bricht die Reihe mit 6 — k+i'--j+3 
+ab. Man erhélt dann 
+
+
+a=0 
+
+
+a8 9 
+lim ¥ (2, k; 1’; k’) = const git 2|y’ -* 2 
+
+
+n'—>o 
+und 
+lim ¢ (mk; rn’, hk’) == const Z—?. 
+n! —> o 
+
+Ferner konvergiert die Reihe (80) auch fir unganzzahlige / und }" 
+und ergibt dann in den Grenzfillen genau die Formeln (27) und (29). 
+Man kénnte deshalb vermuten, da8 (80) im allgemeinen eine brauchbare 
+Naherung liefert. 
+
+C. Wir haben jetzt die aperiodischen Matrixkomponenten von r—? 
+zu berechnen. Am einfachsten setzen wir die Reihen (18) in das Integral 
+ein, und integrieren bis zu einem bestimmten r-Wert R. Dabei mu’ R 
+so gewahlt werden, da® fiir beide Eigenfunktionen der asymptotische 
+Wert (21) vernachlissigt werden kann — a fortiori, daB die Entwicklung 
+(21) iiberhaupt gilt. Wenn y und y’ einander nahezu gleich sind, ergibt 
+das Verfahren eine gut konvergierende Reihe. Falls also 
+
+
+PeR+ 2%») y|R> 1 
+PeU+2|y [RS 1, 
+
+
+ist 
+r—2 (a, hy on’, i’) = DS) GREET e+, (31) 
+
+
+wo 
+t 
+
+
+Cubs 
+G — a + t—Ee : 
+‘ OS ora ry ae 
+
+
+1 
+Um r-® bis zu yz berechnen, mu8 man ungefihr 2 Glieder 
+
+
+der Reihe (81) nehmen. Andererseits kénnen wir die Integrale (17) 
+
+
+Zur Quantentheorie kontinuierlicher Spektren. 983 
+
+
+gebrauchen, dann die Integrationsfolge wie in B vertauschen*). Fiir groBe 
+
+
+y—@hj2]> 1, n <1, ist 
+r2(n, ky we) = DER + DET p [ERK SS, (32) 
+wo &, — el fae 2 ti +k)) ga — 62 2i(—n Th) é, 
+und 7 1 ii 
+1= 2sin— (E+ I faae ‘—_, ( ‘ 
+ait (= #) 2 (=o) Geo ) 
+
+
+Fir ganzzahlige & und i’ kénnen wir wieder eine allgemeine Formel 
+finden. Wir geben sie hier nur der Vollstaindigkeit halber wieder, da 
+sie fiir die Rechnungen durch (31) und (32) ersetzt werden kann: 
+
+
+2 (ni, i; fs ES Deg ® Foss] era | k—n he, 
+
+
+2 Sinz |r| 6 /\ikK+h'—6 
+
+
+Low t' | (1 4 zy" ee Ey yee (ety dz 
+A v Y 
+
+
+= eae aA Lrg # 8a gy 
+
+
+1, geht dies in (32) iiber. 
+
+
+Il. Physikalische Ergebnisse. 
+
+
+1. Anwendbarkeit des Modells. Wenn man 6 = 0 in (13) 
+setzt, so erhalt man den Fall des atomaren Wasserstofis. Das atomare 
+Wiedervereinigungsspektrum ist mehrfach®) beobachtet worden; doch 
+waren Intensitétsmessungen ohne genauere Kenntnis der Energieverteilung 
+im Kanalstrahl schwer zu deuten. Andererseits ist das einzige bekannte 
+atomare Absorptionsspektrum — das an die Balmerserie ankntipfende — 
+noch nicht experimentell analysiert. In den Sternen findet Yii*) zum 
+Beispiel, daB dieses Spektrum in der Nahe von Hj anfingt, steil bis zur 
+Grenze ansteigt, und dann bis ins Ultraviolette wesentlich konstant bleibt. 
+Die Theorie, wie wir zeigen werden, verlangt ganz eindeutig, dafi die 
+Absorption nach der Grenze nicht langsamer als 42” abfallt. Wir michten 
+also den Versuch, dieses Spektrum etwa als ein verschwommenes atomares 
+Spektrum zu deuten*), als nicht zutreffend ansehen, und vielmebr glauben, 
+
+
+1) Um die Konvergenz der Integrale nach + zu sichern —- was nach (21) 
+verlangt ist -~ mu8 man R(z) = —7 < O setzen, und dann 7 gegen Null kon- 
+vergieren lassen. 
+
+*) J. Stark, Ann. d. Phys. 52, 255, 1917; 54, 81, 1917. 
+
+8) ¢. Yi. Lick Observatory Bulletin 375, 1926. 
+
+4) W.H. Crew und E. Hulbert, Phys. Rev. 28, 936. 1926. 
+
+
+284 J. R. Oppenheimer, 
+
+
+daS es sich auch hier, wie bei den Alkalien, um eine Uberlagerung eines 
+echten atomaren Spektrums und eines Molekiilspektrums handelt. Riéntgen- 
+absorptionsmessungen sind auch im Wasserstoff bekannt. Wir werden 
+sehen, daB die Theorie den wesentlichen Zug dieser Messungen — einen 
+héheren Exponent im A-Gesetz — genau wiedergibt. J4in den aperiodischen 
+Matrizen entsprechendes Spektrum ist bei Wasserstoff nicht bekannt. 
+
+Unsere Rechnungen kénnten auch eine angendherte Giiltigkeit haben 
+in den Fallen, wo klassisch das Elektron wesentlich in einem gestérten 
+Coulombfeld sich bewegt — bei den Alkalien und den tiefen Réntgen- 
+spektren schwerer Atome. Das ist jedoch bei dem heutigen Stand der 
+Quantentheorie im allgemeinen noch nicht streng zu rechtfertigen. Bei 
+den Alkalien kommt noch die Schwierigkeit hinzu, da8 bekanntlich der 
+Potentialansatz (IT) auch fiir die periodischen Bewegungen nicht hinreicht. 
+Wir wollen aber im folgenden annehmen, da&S, falls wir b und z so 
+wihlen, daB das Potential mit dem wahren in der wesentlichen Strecke 
+der Matrizenintegrale tibereinstimmt, das Ergebnis auch roh giiltig ist. 
+Wir miissen aber bekennen, daB diese Annahme eigentlich einer ein- 
+gehenderen Rechtfertigung bedarf. 
+
+Fiir die K-Elektronen in einem schweren Atom sieht man leicht. 
+daB die wesentliche Strecke von fr. owvy* dr fiir die photoelektrischen 
+Ubergiinge gerade um den Radius der K-Elektronenbahn liegt. Aus der 
+Jonisationsspannung des Heliums kénnen wir aber » fiir diese Bahn roh 
+berechnen. Anderseits kénnen wir dann auch & aus n—k = 1 be- 
+rechnen und darauf auch b und wegen 4s = 1 auch w’',h' finden. Daf 
+dieses Verfahren einen sehr guten Wert des Exponenten von 4 liefert, mag 
+zum Teil zufallig sein. 
+
+2. Das kontinuierliche Absorptionsspektrum des atomaren 
+Wasserstoffs. Die Zahl der durch eine polarisierte Lichtwelle er- 
+zeugten Ubergiinge ist durch (5) gegeben. Mitteln wir tiber alle Polari- 
+sationsrichtungen, und multiplizieren wir das Resultat mit der pro 
+Ubergang absorbierten Energie, so erhalten wir fiir den Absorptions- 
+koeffizienten «, 
+
+
+8 3 2 
+a, I,dv = a P(s)|r(n, ky n', EPL, dy, (33) 
+h 
+wo vy = R/n® — Rin’? und R die Rydbergsche Konstante ist und 
+s+s 
+y= : 34 
+PQ = (34) 
+
+
+Wir untersuchen zuniichst die an die Lymanserie ankniipfenden Spektren. 
+setzen dazu s = }, 3 == 3, k= 0, 1,» 1, Z=— 1. Betrachten 
+
+
+Zur Quantentheorie kontinuierlicher Spektren. 285 
+
+
+wir «, fiir sehr kurze Wellenlingen 4, dann gilt die Formel (27) fiir 
+r(n,n’). Nun ist k++ kh’ = 1, daher f, = 0; d. he v(m, n'). pt — 0. 
+Hierin haben wir eine Erklirung der von Hewlett') beobachteten Tat- 
+sache, da fiir Wasserstoff die Réntgenabsorption rascher mit wachsender 
+Harte abfallt als beischwereren Atomen. Experimentell findet Hewlett’) 
+fir den gesamten Schwichungskoeffizient ¢, + const A*/2, Deutet man 
+wie tiblich den ersten Term als Streuung, so stimmt der Absorptions- 
+koeffizient mit dem theoretischen iiberein”). 
+
+
+Betrachten wir nun mit Hilfe der Formel (29) «, in der Niuhe der 
+Grenze. Hier ist |y’| klein, |n’| groB, y= 0, h+h'4j44 = 4, 
+fy == 4! und 
+
+
+4 
+r(1,n’) = 224! yee > ve Ce, y—*. (3d) 
+Fiir y' > 0 wird dies nach (19) 
+
+
+232 3! ya Gy [St ey — 1) — 2,85 | n' |-? gale 
+Da 
+
+
+4 i 
+und nach (24) ~ 
+
+
+6 cvs ae o'nyh(1+ 5 lh? ), 
+
+
+wird (35) 
+rin) ~ =e y72 [1 — (0,95 e — 0,8) |n’ |-2 - 
+aus 
+h 
+~ RA "2 004). ZN pp tts ee, 
+ye RL +|n' Pod: Pals t= ga 
+findet man nach (53) 
+24 ics 
+ty & Rap (1 — 3,3 |n'|-? ---). 
+Fiihrt man dann 4 == e/v, 2, == ¢/R ein, so wird 
+Oy 8,2 ef e138 [238, (36) 
+
+
+Wir werden spater auf diese Formel zuriickkommen. Bemerkenswert ist, 
+da sie h nicht explizite enthalt. 
+
+
+1) C.W. Hewlett, Phys. Rev. 20, 688, 1922. 
+2) Dieses ist nicht allgemein zu erwarten, da es sich nicht um atomaren 
+Wasserstoff handelt. 
+
+
+2386 J. R. Oppenheimer, 
+
+
+Um «, fiir x ~ |n'| zu schitzen, miissen wir die Formel (30) ge- 
+brauchen. Diese 148t sich nicht leicht allgemein behandeln: setzt man 
+aber |n'| == » = 1, so findet man 
+
+
+tty (Aq) 0% (3) Se) (37) 
+
+
+Wir kénnen also mit ziemlicher Sicherheit folgendes iiber den Verlauf 
+des Exponenten von 4 aussagen: Nah an der Grenze ist er 3,3; mit 
+wachsendem vy wird er allma&hlich kleiner, und wiirde asymptotisch den 
+Wert 2,5 annehmen; aber wegen des singuléren Wertes von & — da 
+k+ hk — 1 ist — wachst er fiir sehr kurze Wellen wieder an und 
+strebt dem Grenzwert 3,5 zu. 
+
+Demgema8 kénnen wir fiir eine gegebene Intensititsverteilung J, die 
+Ionisationswahrscheinlichkeit roh berechnen. Nehmen wir beispielsweise 
+I, == T eine Konstante an, so ist die Wahrscheinlichkeit 
+oO 
+
+
+gan Che dd 
+
+
+rh 
+
+
+BT a? [heck wars = %le TA jhe u. 
+
+
+SO Cm, 
+
+
+Vergleichen wir diese mit der Anregungswahrscheinlichkeit (1,0 > 2,1), 
+die der ersten Lymanlinie entspricht. Letztere ist nach (26) gleich 
+
+8 2? P ‘ 28 WI 
+
+ene 1 ON = gee aaa 
+Das Verhaltnis ist 725. Die Wahrscheinlichkeit einer Jonisation ist 
+unter diesen Umstanden 725 die einer einfachen Anregung. 
+
+Fiir das an die Balmerserie ankniipfende Spektrum sind die Ver- 
+haltnisse etwas komplizierter. Betrachten wir zuerst die Anfangsbahn 
+n== 2, hk — 0. Da k und #' immer noch fir den Faktor x singular 
+sind, hat man wieder fiir alle kurzen Wellen 
+
+
+Oy ~ A35, 
+
+
+An der Grenze kann man mit dem oben benutzten Verfahren eine (36) 
+analoge Formel finden. Man findet') 
+
+
+ee geo 
+yw 3,2 — (38 
+‘ “ae Abe ee) 
+Der Exponent und der Faktor sind fast ungeiindert. Diese Tatsache ist 
+in den Réntgenspektren in Comptons allgemeiner Formel zum Ausdruck 
+
+
+gebracht. 
+
+
+1) 4, ist hier die Wellenlinge der Balmer-Grenze. 
+
+
+Zur Quantentheorie kontinuierlicher Spektren. O87 
+
+
+Fir n — 2, k — 1 wird asymptotisch 
+
+Oy ~ AH, (39) 
+Die Absorption fallt noch steiler als bei den Elektronen mit & — O ab. 
+In der Nahe der Grenze haben wir 7’ —= 0 und 7’ == 2 zu setzen. Im 
+
+ersteren Fall wird an der Grenze 
+é, == 0,1 27/ee? 4. (40) 
+Die Absorption ist viel geringer als die von / = |, h’ — 2, oder k= 1, 
+k' == 2 herriihrende. Physikalisch kénnen wir das folgendermagen deuten: 
+
+
+das losgeléste Elektron hat eine geringere Wahrscheinlichkeit, dem Kern 
+naher zu kommen, als in seiner urspriinglichen Bahn. Die Fortsetzung 
+der Entwicklung ist fiir diesen Fall sehr miithsam’); «, fallt aber auch 
+hier steiler als A® ab. 
+
+
+Fir k = 1, h’ = 2 kann man wieder die Rechnung durchfiihren: 
+
+
+21,3 4/au 
+vi(ln)~» ale ie y—2 (1 — 2,15 |n'|-? 2? ...): 
+
+
+e h 
+2 4¢ 
+Pasi k= > 
+. 2 dat 
+ay 3,5 op BA (41) 
+
+
+Wir sehen also, daB die von &==0 und k= 1 ausgehenden Absorptionen 
+an der Grenze einander ungefaéhr gleich sind, daB aber die von ik = 1 
+etwas starker abfallt. Da ftir hohe Frequenzen dasselbe (auch fiir ganz- 
+zahliges k) gilt, kénnen wir vermuten, daf es fiir alle Frequenzen gilt. 
+Wir sehen also, da8 das kontinuierliche , Balmer“-Spektrum von atomarem 
+Wasserstoff stets nach der Grenze abfallt (in Absorption — in Emission 
+kommt noch ein Faktor 4—? hinzu). Wir werden jetzt die Ergebnisse 
+auf die Réntgenspektren iibertragen, wo die empirischen Tatsachen besser 
+festgestellt sind. 
+
+3. Die kontinuierlichen Réntgenabsorptionsspektrén’). Der 
+wesentliche Teil des Matrizenintegrals fiir r(1,n’) liefert eine kleine 
+Strecke um yr ~ 1/y. Nach unserer Annahme haben wir also b so zu 
+wihlen, da8 es in dieser Strecke mit dem wahren Kraftgesetz miéglichst 
+gute Ubereinstimmung gibt. Diese wesentliche Strecke ist gerade die, 
+
+
+1) Die in (19) angegebenen c,j/eg reichen fiir eine genaue Bestimmung der 
+Exponenten hier nicht aus. 
+
+2) Hinige der Ergebnisse dieses Abschnitts und des nichsten sind qualitativ 
+von G. Wentzel, ZS. f£. Phys. 40, 574, 1926, gegeben. Siebe auch J. R. Oppen- 
+heimer, Nature 118, 771, 1926. 
+
+Zeitschrift fiir Physik. Bd. XI. 19 
+
+
+288 J. R. Oppenheimer, 
+
+
+die das K-Elektron in ,seiner Bahn“ erfiillt. Vernachlassigen wir die 
+iuBeren Elektronen, so kénnen wir den Zusatzterm, der von der An- 
+wesenheit des anderen X-Elektrons herrihrt, gré6fenordnungsmiBig"') 
+abschitzen, indem wir aus der Jonisationspannung des Heliums und den 
+Beziehungen n — ik == 1, b= &(k + 1) die Grofen b und f, kh’ berechnen: 
+
+n= 1,2; = 02; bD=O025; k= 1,1 (42) 
+In der Tat geben diese Werte gute Ubereinstimmung mit den empirischen 
+Formeln; der genaue Wert von b ist hierbei nicht sehr wesentlich; 
+
+
+wesentlich ist nur sein Nichtverschwinden. 
+Setzen wir (43) in (28) ein, so wird 
+2esing(k+ kh + 4)a = 0,27 
+
+
+nf u 3,2 a? we? 1,7 
+te ea a ee 
+
+
+Fir hohe Frequenzen ergibt das mit 
+P= lhem R23 yn |-*. Ay Cn RZ 
+
+
+und 
+
+
+% 2,3 —, — (43) 
+
+
+Kleine Anderungen von b wiirden dieses Ergebnis nur wenig dndern. 
+Mit b = 0,5 waren die Exponenten gleich 3 und 2, die Konstante 
+etwas gréBer. 
+
+Fir 4~4,, wo k = 0 keine Sonderstelle ist, kénnen wir «, durch 
+Interpolation zwischen (36) und (41) roh berechnen. Wir erhalten 
+
+
+2 43,38 
+ty ~ 3,3 Pills a (44) 
+we igs 
+Ferner (30) a) 
+GMa) 2-96 
+
+
+ae 6. 
+ow (5) 
+Wir kénnen also fiir K-Elektronen folgendes aussagen: Den Ab- 
+sorptionskoeffizienten kann man (wegen A, ~ Z—*) 
+ty == GZAt+2048to4—~2-6 (45) 
+schreiben. Dabei ist o immer klein. An der Grenze ist 6 — 0,3, fallt 
+
+
+aber rasch ab, und hat fiir $4, den Wert — 0,2. Asymptotisch strebt 6 
+gegen — 0,3. Diese Aussage ist durch die Experimente gut bestatigt. 
+
+
+1) Der Zweck dieses Verfahrens, das offenbar nicht streng berechtigt ist, 
+ist gerade, die Unregelmaifiigkeiten zu vermeiden, die fiir sehr wasserstoffihnliche 
+Anfangsbahnen und sehr kurze Wellen vorkommen. Auch experimentell gibt 
+Allen (t. ¢.) Andeutungen dieser UnregelmaSigkeiten. 
+
+
+Zur Quantentheorie kontinuierlicher Spektren. 289 
+
+
+Allen’) findet zum Beispiel, da8 es fiir die K-Absorption keine allgemein 
+giiltige Formel gibt. Er findet folgende Werte fir 6: 
+
+
+Tabelle 1. 
+| Cu | Al | Zn | Fe | Ni | Sn 
+Bedi tnd Ber ae 01 | 04 | —o2 | —0,25 | —0,25 
+
+
+Der Wert der Konstante G audert sich im ganzen Bereicli um etwa +/,. 
+
+Die Formeln (36), (41), (45) enthalten / nicht cxplizite. Man kénnte 
+deshalb erwarten, da8 sie auch ,klassisch“ abgeleitet worden sind. Das 
+ist in der Tat der Fall. Denn sie unterscheiden sich nur durch einen 
+Faktor von der GriSenordnung eins von der von Compton?) gedeuteten 
+Thomsonschen Formel. 
+
+& 
+Oy == 15,6 ma FF . 
+
+Setzen wir endlich 2, = cn?/RZ? in die korrespondenzmabige Formel 
+von Kramers ein, so erhalten wir 
+
+
+Sa e& 4s 
+
+
+ayalme 
+Bekanntlich®) mu8 man g = 2,2 bis 2,4 fiir die A-Elektronen setzen, 
+um Ubereinstimmung mit den Experimenten zu gewinnen. Dann wird 
+& A 
+2Oy ™~ 68-3 re 
+Die Forme! (44) stimmt also auch zahlenmabig. 
+
+Uber die L- und M-Absorption sind unsere Ergebnisse noch quali- 
+tativer. Erstens kiénnen wir sagen, da8 & und 4’ sicher nicht ganzzahlig 
+sein werden, da8 demgem&8 o, sich asymptotisch wie A—*l2 —* verhalten 
+wird. Andererseits kénnen wir aus der Konstanz der Faktoren in (36), 
+(38) und (41) schlieBen, daB der Beitrag eines Elektrons zur Absorption 
+in der Nahe der Kante der Wellenlinge der Kante proportional ist. 
+Hierin sehen wir auch die Rechtfertigung der universellen Formel 
+Comptons. Da aber die Absorption, die von einem P- oder D-Term 
+entspringt, stets rascher mit wachsender Frequenz abnimmt als die eines 
+S-Terms, kiénnen wir noch zwei Schliisse ziehen: 
+
+
+1) Allen, Phys. Rev. 28, 908, 1926. 
+2) A. H. Compton, ebenda 24, 247, 1919. 
+3) Siehe z. B. Handb. d. Physik, 23. Bd., 58. 324, 1926. 
+
+
+19* 
+
+
+290 J. R. Oppenheimer, 
+
+
+1. Der Exponent von 4 sollte fiir Z-Absorption etwas gréBer sein 
+als fiir K-Absorption. 
+
+2. Regt man mit Réntgenstrahlen, die weicher als die K-Grenze 
+sind, an, so sollte mit wachsender Frequenz die Intensitaét der Z,,- und 
+L,,-Linien rascher abnehmen als die der Z,-Linien. 
+
+Der erste Schlu8 ist z.B. von Allen’) bestatigt worden. So findet 
+er fiir die £-Absorption der in Tabelle 1 angegebenen Elemente 6 
+stets zwischen O und 0,08. Der zweite scheint noch nicht untersucht 
+worden zu sein. Ohne genauere Kenntnisse der Dynamik der Atome 
+kénnen wir wohl nicht viel weiter kommen. 
+
+4, Die Photoelektronen. In manchen Fallen liefert auch o{ly 
+eine Abschaétzung der photoelektrischen A\usbeute. Zu diesen gehéren 
+wieder der atomare Wasserstoff und die K- und L-Elektronen schwerer 
+Atome, und mit gréBerer Unsicherheit, die Alkalidimpfe. Wir werden 
+uns aber hier mit einer kurzen Besprechung der Intensititsverhaltnisse 
+in den durch Réntgenstrahlen losgelisten Elektronen begniigen. 
+
+Zunachst sieht man, daB die photoelektrische Ausbeute von den 
+K-Elektronen auch roh durch ein 43+°-Gesetz wiedergegeben werden 
+kann. Hier aber ist @ an der Grenze roh + 1,3, fallt dann etwas ab 
+und strebt asymptotisch dem Wert 0,7 zu. Die Ausbeute ist von Sadler?) 
+fir Aluminium gemessen worden fiir einen Bereich, wo nur die K-Emission 
+wesentlich war. In der Tat verhdlt sich «, ungefahr wie A* 5, wie man 
+aus der von Bothe*) angegebenen Tabelle ersehen kann. Da die Ver- 
+suche mit einer Metallplatte gemacht worden sind, und da die schnellen 
+Elektronen leichter aus der Platte hinaus kinnten, ist der etwas geringere 
+Wert des Exponenten leicht zu verstehen. 
+
+Die Konstanten in (36) und (38) und (41) sind einander beinahe 
+gleich. Deshalb sollte die GréBe des photoelektrischen Sprunges pro 
+Elektron dem Quadrat der Wellenlange der Kante proportional sein. 
+
+Die theoretische Abhingigkeit des Exponenten von A von & findet 
+in den Versuchen von Robinson‘) eine schiéne Bestatigung. Er beob- 
+achtet die Z-Photoelektronen verschiedener Atome, indem er sie mit 
+einem harten Réntgenstrahl beleuchtet. Liegt die Wellenlinge dieser 
+Strahlung dicht an der Z-Grenze, so tritt die Z,,,-Emission sechsmal so 
+
+
+TIL 
+stark vor als die von £,, wie es nach (38) und (41) sein miiBte; ist die 
+
+
+Vic. 
+
+*) C. A. Sadler, Phil. Mag. 22, 447, 1911. 
+
+3) W.Bothbe, Handbuch der Physik, 23. Bd., S.340, 1926. 
+*) Derselbe, I. ec. 8. 352. 
+
+
+Zur Quantentheorie kontinuierlichér Spektren. 291 
+
+
+Wellenlange viel kleiner als die £-Grenze, so ist die Z,-Emission tat- 
+sichlich starker als die von Z,,,: Der Abfall der aus P-Termen ent- 
+springenden Emission ist stirker als der der S-Terme. Diese Tatsache 
+haben wir im vorhergehenden Abschnitt theoretisch abgeleitet. Auch 
+das Ergebnis, da8 die A-Emission starker’ als die von Z ist, 1a8t 
+sich durch das Vorhandensein von 42 im Nenner von (86) und (41) 
+erklaren. 
+
+Bekanntlich sind die von einem polarisierten Réntgenstrahl los- 
+gelésten Elektronen nicht gleichméSig tiber alle Winkel verteilt!). Das 
+Maximum liegt in der Richtung des elektrischen Vektors der Strahlung 
+und fallt longitudinal sowie azimutal ziemlich steil herab. Beschrinken 
+wir uns auf S-Elektronen (s == }), so kénnen wir eine einfache Formel 
+fiir diese Verteilung ableiten. Sei @ = 0 die Richtung des magnetischen, 
+gy == 0 die des elektrischen Vektors. Dann sind die erzeugten Uber- 
+ginge dem Quadrat der Matrixkomponenten von — cos m sin propor- 
+tional [vg]. (25)]. Die Eigenfunktion des Anfangszustandes hingt von 
+g und $.nicht ab. Nach (14) sind die Rigenfunktionen der hyperbolischen 
+Bahn cos gm P?(cos#) proportional. Nach Born hat man |w(,q,)/? als 
+die Wahrscheinlichkeit zu deuten, daftir, da8 das Elektron die Koor- 
+dinaten 9, und g, hat. Die Richtungsverteilung ist also einfach durch 
+
+
+sin? $ cos? 
+
+
+gegeben. Das Maximum liegt parallel dem elektrischen Vektor; der 
+Abfall entspricht auch roh dem von Bubb?) gefundenen. Fiir unpolari- 
+sierte Strahlung wird die Richtungsverteilung einfach 
+
+
+cos? y. 
+
+
+Das Voreilen des Maximums in der longitudinalen Ebene, das mit 
+harterer Strahlung vorkommt, erklart unsere Theorie nicht. Um dieses 
+zu erhalten, miiBte man, wie auch klassisch, die Strahlungsabsorption und 
+das Wasserstoffatom relativistisch behandeln, wie Dirac?) und Gordon‘) 
+es fiir das freie Elektron gemacht haben. 
+
+5. Die Bremsstrahlung. Betrachten wir zunichst einen unend- 
+lichen gleichmaSigen Elektronenstrahl, der mit einer der Energie F ent- 
+sprechenden Geschwindigkeit in der Richtung # — O fliegt. Am Null- 
+
+
+1) W. Bothe, Lc. S. 383 ff. 
+
+2) F. W. Bubb, Phys. Rev. 28, 137, 1924. 
+
+3) P. A.M. Dirac, Proc. Roy. Soc. (A) 111, 405, 1926. 
+4) W. Gordon, l.c. 
+
+
+292 J. R. Oppenheimer, 
+
+
+punkt sei wieder ein schwerer Kern der Ladung Ze. Dann ist die dem 
+Strahlenbiindel cate Higenfunktion 
+y= i 7S 2800, kv) P,_ 1), (cos 9). (48) 
+r= Ye 
+Diese Darstellung ist zwar rein symbolisch, da die Reihe nicht konvergiert. 
+Bemerkenswert ist auch, daB wegen des langsamen Abfalls der poten- 
+tiellen Energie (46) asymptotisch nicht in die Eigenfunktion eines freien 
+Elektrons tibergeht'). Die pro Zeiteinheit pro Frequenzeinheit von der 
+Frequenz RZ? (n—2—-n'—*) aus von diesem System ausgestrahlte Energie ist 
+2662? ; aA; 
+(An) 5 ate 3, 2) Bus {|r 2a, s— 4; n',s—*/,)|*! 
++h, (>? (my s— Yas ws st Map (47) 
+Dabei sind 
+Bi, = $ {| a, (s, 0;s—1, 0)? a | Gy (8, 0;s— 1, l).a@,(s,0:s—1, 1) |}, 
+By, = 8 {|@, (8, 0; 8 + 1, 0O)P + |@, (5, 0; 8 + 1, 1).@, (8, O: 8 + 1, 1)II. 
+Die Matrixkomponenten sind in (25) gegeben. 
+
+Beschrinken wir uns jetzt auf sehr groBes H und mafiges E’. Dann 
+kénnen wir (31) fiir die Matrixkomponenten von r—? gebrauchen. Wir 
+kénnen uns dann ferner auf s' = }, s == 3, also auf den ersten Sum- 
+manden des zweiten Terms von (47) beschrinken. Die gestrahlte 
+Energie 7, wird 
+
+12823 2? ® 
+ip Bla, , 05 2, OP [2 By mr’, KY? 
+
+
+8 wy 
+Da aber 
+
+
+0, (5, 0; 3, 0) = 3- "he 
+und gréBenordnungsmibig*) n' > 1,2 <1 
+
+
+, Qle 2 
+r—2(n, ky n’, oc) ~ nthe a yes 
+2uk 
+ergibt das mit v —= V f 
+ub 
+642 Zs 
+4, = 38 3 ro t 
+
+
+1) Die Reihe (46) erhailt man, indem man erstens die Eigenfunktion einer 
+ebenen Welle e#¥7°°S? nach den Eigenfunktionen eines freien Elektrons ent- 
+wickelt, dann letztere durch die entsprechenden Lisungen des Zweikirperproblems 
+ersetzt, und endlich so normiert, daB die Zahl der pro Flacheneinheit pro Zeit- 
+einheit eintretenden Teilchen gleich Eins ist: 
+
+hy ow re 
+
+274 {v Y a(roadt = 
+vgl. J.R. Oppenheimer, Proc. Camb. Phil. Soc. 28, 422, 1926. 
+
+2) Wir sehen von dem singuliren Fall ) = 0 ab. 
+
+
+Zur Quantentheorie kontinuierlicher Spektren. 293 
+
+
+Das unterscheidet sich von der Kramersschen Formel nur durch einen 
+Faktor ol n. 
+n 
+
+In diesem Grenzfall ist die Strahlung vollstandig polarisiert, und 
+zwar mit dem elektrischen Vektor parallel dem Elektronenstrahl. Diese 
+Polarisation ist aber im allgemeinen nicht vollstindig, sondern wird es 
+nur mit wachsender Harte der Elektronen. 
+
+Die weitere Berechnung der Bremsstrahlune scheint auf Grund des 
+hier benutzten Modells kaum gerechtfertigt. Fiir schnelle Elektronen 
+kommen ja nur die Elektronen, die sehr nahe am Kern vorbeifliegen, fiir 
+die Strahlung in Betracht. Fir langsame dagegen miiBten auch die den 
+Kern umbhiillenden Klektronen mit beriicksichtigt werden, was zu einer 
+wesentlichen neuen Ditferentialgleichung fihrt. 
+
+
+Herrn Professor M. Born bin ich fiir seine freundlichen Ratschlige 
+herzlich dankbar. 
+
+
+Gottingen. Institut fiir theoretische Physik. 
+
+

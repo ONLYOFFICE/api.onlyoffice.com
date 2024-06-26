@@ -1,0 +1,374 @@
+SEPTEMBER 15, 1935 
+
+
+PHYSICAL REVIEW 
+
+
+VOLUME 48 
+
+
+Note on the Transmutation Function for Deuterons 
+
+
+J. R. OPPENHEIMER AND M. Puruies, University of California, Berkeley 
+(Received July 1, 1935) 
+
+
+We consider the effect of the finite size and ready polarizability of the deuteron on the 
+probability of transmutations involving the capture of the neutron. These have as a conse- 
+quence that the Coulomb repulsion of the nucleus is less effective than for alpha-particles or 
+protons, and that the corresponding transmutation functions increase less rapidly with deuteron 
+energy. We treat the collision by the adiabatic approximation and obtain quantitative results 
+for this energy dependence which are in good agreement with experiment. 
+
+
+ANY elements can be rendered radioactive 
+
+by deuteron bombardment, the reaction 
+
+involving the capture of a neutron and the libera- 
+tion of.a proton: 
+
+
+Am +E, Am HHI, (1) 
+
+
+Four reactions of this type have been studied in 
+detail by Lawrence, McMillan and Thornton.! 
+The transmutation functions which are found in- 
+crease smoothly with deuteron energy, but the 
+increase is far less rapid than we should expect on 
+the basis of the familiar considerations of 
+Gamow? on the penetration of charged particles 
+through the potential barrier of the nuclear 
+Coulomb field. To account even roughly for the 
+observations on this basis, we are forced to as- 
+sume that the Coulomb potential breaks down at 
+very large distances (~ 1.5 x 10~” cm for copper). 
+The transmutation function is thus anomalous 
+when compared to that for protons and alpha- 
+particles, and it is natural to associate this 
+anomaly with the structure of the deuteron, 
+particularly its low stability. We wish to show 
+in this paper that when this is taken into account, 
+it does in fact provide a satisfactory explanation 
+of the experiments. 
+
+For neutron capture to be possible the neutron 
+must have an appreciable probability of coming 
+within the range of the nuclear forces. But this 
+condition can be satisfied even when the center 
+of mass of the deuteron lies beyond the range of 
+these forces. It is this possibility which leads to 
+an explanation of the fact that even with such a 
+
+
+1 Lawrence, McMillan and Thornton, preceding article. 
+We are greatly indebted to the authors for the opportunity 
+of seeing their experimental results, and for many helpful 
+discussions. | 
+
+2Gamow, Atomic Nuclei and Radtoactiwity (Oxford Uni- 
+versity Press, 1931). 
+
+
+highly charged element as copper nuclear trans- 
+mutations can occur for deuteron energies of the 
+order of 2 MV. 
+
+The quantitative treatment of the correspond- 
+ing collision problem is complicated, not only by 
+our ignorance of the detailed forces involved, but 
+by the complete inapplicability of the Born ap- 
+proximation. For the velocity of the deuteron is 
+not large compared to the internal velocity of 
+proton and neutron; the effective time of collision 
+of the deuteron is long compared to its period. 
+We have thus to use the adiabatic approximation: 
+the relative motion of proton and neutron is ap- 
+proximately given by the solution of the wave 
+equation when the distance of the center of mass 
+of the deuteron from the nucleus is held fixed; 
+the center of mass moves in an effective potential 
+which is the energy &(X) of the relative motion; 
+and the perturbation which induces the inelastic 
+impacts of the transmutation is the term in the 
+kinetic energy neglected in this zeroth approxi- 
+mation. In fact the cross section for the transmu- 
+tation is then given, with a proper normalization 
+of the wave functions, by 
+
+
+o=1/t?| Sfdpdny;(p, n) 
+x [#2 /4MAx+ W—-I-&(X) vil, X)/2. (2) 
+
+
+Here # and z are the coordinates of proton and 
+neutron, x= p—vn their relative coordinates, X 
+the coordinates of the center of mass of deuteron 
+measured from the nucleus as origin. Further y; 
+
+
+is the approximate adiabatic wave function for 
+
+
+the initial state (normalized to unit flux); ¥, the 
+wave function for the final state, in which the 
+neutron is captured and the proton is flying off 
+with a considerable kinetic energy; and W, I, 2M 
+are kinetic energy, binding energy and mass of 
+
+
+900 
+
+
+TRANSMUTATION FUNCTIONS FOR DEUTERONS 
+
+
+the deuteron. We wish to evaluate the de- 
+pendence of this cross section on the energy of 
+the deuteron, insofar as this can be done without 
+a detailed knowledge of the structure of the 
+nucleus and the nature of the nuclear forces. 
+The reactions (1) are highly exothermic, and 
+we may therefore neglect the dependence of the 
+final wave function for the proton on the deuteron 
+energy; except in the immediate neighborhood of 
+the nucleus we can take for the final wave func- 
+tion of the proton a plane wave. Further, the 
+final wave function for the neutron will vanish 
+except in the immediate neighborhood of the 
+nucleus. Since the neutron is far more stably 
+bound in the nucleus than in the deuteron, it is 
+reasonable to neglect the finite extension of the 
+corresponding wave function. The effect of this 
+neglect will be to make the value of the binding 
+energy of the deuteron which best fits the ex- 
+perimental curves somewhat lower than the true 
+value, but the error should be small, especially 
+for an atomic number as high as that of copper. 
+We shall take then 
+(3) 
+
+
+p,~elheM ey *ns(n) 
+
+
+except for very small values of ». Here E is the 
+
+
+energy imparted to the proton by the dis- 
+integration. 
+
+The essential energy dependence of o is deter- 
+mined by the form of y;. The adiabatic ap- 
+proximation gives 
+
+pi=u(x, X)e(X), (4) 
+
+
+where u(x, X) is the wave function for the rela- 
+tive coordinates x, when the center of mass X is 
+fixed, and y(X) is the wave function for the mo- 
+
+
+f(a) =cos™ (a)?— (a1 —a))?, 
+
+
+1+<. 
+6(z) = cot7! (z)?—1, 
+(Z 
+
+
+L 
+2 
+
+
+a2)! 1+—(t ( 
+(z)? 
+
+
+i 
+
+
+— 2%)? 
+
+
+1+2z 
+' (tanh 
+
+
+501 
+
+
+tion of the center of mass. If Vo be the potential 
+between neutron and proton, and Vy the nuclear 
+potential, then these functions are determined by — 
+the wave equations | 
+
+
+(h2/MA,+8(X)~— Volx)—Vy(x, X)}u=0, (5) 
+{72/4 MAx+W—I—8(X)}o=0. (6) 
+
+
+According to the familiar arguments of Wigner, 
+Vo is given by an extremely narrow and deep 
+trough, and is equivalent, as Bethe and Peierls® 
+have observed, to the boundary condition for 
+
+
+~—6O An u/0x) go = — (MTD) */h. (7) 
+
+
+For Vy we shall take the Coulomb repulsion of 
+the proton, and neglect the specifically nuclear 
+forces in the immediate neighborhood of the 
+nucleus; for these the adiabatic approximation 
+can hardly be valid, and they could have a sen- 
+sible effect on the transmutation function only if 
+resonance occurred; the experimental curves 
+afford no evidence for this. | 
+
+According to (3) we need consider u only for 
+n=0, x=2X. If we now determine u, & and ¢ by 
+the Wentzel-Kramers-Brillouin method, we find, 
+with sufficient approximation, 
+
+
+2X(WI)? /sZe? 1 
+
+u(2xX, X)=a(X) exp [= -1) 
+. hy AT. 
+
+6(X) = —I+Ze?/X 
+
+b(W, X) 2Ze2 (XW 
+
+ead ate 
+Uv hv Le? 
+
+Here Z is the nuclear charge, v the deuteron 
+
+
+velocity, W= Mv? the deuteron energy, and the 
+functions f and @ are defined by 
+
+
+(8) 
+
+
+g(X)= 
+
+
+z>1 
+2a Na | | 
+) -tan-x@'), O<z<1i (9) 
+1—gz 
+—22\2 | 
+(—) —tanh=! (-2)!). <0 
+1—2 | 
+
+
+3 Bethe and Peierls, Proc. Roy. Soc. A148, 146 (1935). 
+
+
+502 J. 
+
+
+Further a(X), 6(W, X) are slowly varying func- | 
+
+
+tions. Far from the turning points X,=Ze?/2I, 
+X= Ze?/W, they are given by 
+
+
+a(X) = (I—~Ze/2X)-?; b(W, X) = (Zet/X —W)-?. 
+
+
+Since, as we shall see, the values of X which 
+
+contribute essentially to the matrix integrals for ¢ 
+
+vary little with W, the contribution of a and 5 
+
+to the transmutation function will be neglected. 
+We can thus write 
+
+
+Pi(2X, X)~1/v 
+
+
+2Z7e/M\? W IX 
+és | (—} rae —)I, (10) 
+h I I Ze . 
+
+
+F(q, 9) =y8(1/y—1) +q-4(qy). (11) 
+
+
+Regarded as a function of X, F has a rather 
+sharp minimum. The position of this minimum 
+varies little with deuteron energy in the range 
+1.5 MV to 3 MV, and lies roughly at Ze?/2T. 
+The breadth of the corresponding maximum of 
+Wi(2X, X) décreases slowly with W, but since 
+this breadth is of the same order as the wave- 
+length 4/(2ME)? of the proton wave function, 
+
+
+where 
+
+
+this variation will affect the magnitude of the_ 
+
+
+matrix integral very little. The effect of the varia- 
+tion of a and 0 and of the logarithmic derivatives 
+of u and ¢ which appear in the integrals for o 
+
+
+could in principle be taken into account by ob-_ 
+
+
+taining accurate solutions of the wave equations 
+(5), (6); but without a detailed knowledge of the 
+energy of the proton £, and the form of the final 
+
+
+neutron wave function, such refinements would 
+
+
+be illusory. Throughout the range J/2<W<2I, 
+
+
+R. OPPENHEIMER 
+
+
+AND M. PHILLIPS 
+
+
+the variation of « with W is given essentially by 
+
+
+1 (=) #(=)| (12) 
+CRD ee eae aa 2 
+“ v? h I[/ IT 7 
+
+
+where F(W/T) is the minimum value of F(W/TJ, 
+IX /Ze*). A plot of F(W/T) is given in Fig. 1. 
+
+The form of the transmutation functions given 
+by (12) still depends upon the value of J. This is 
+known to be roughly 2 MV, and this value gives 
+satisfactory agreement with the experimental 
+curves of Lawrence, McMillan and Thornton. In 
+Fig. 2 of their paper Eq. (12) is plotted for three 
+values of J (1.5 MV, 2 MV, 2.4 MV) for the 
+aluminum reaction. It is seen that the agreement 
+with the experimental values is best for [~2 
+MV. The approximations in the theoretical treat- 
+ment would tend to favor rather too low a value 
+of the binding energy of the deuteron. 
+
+

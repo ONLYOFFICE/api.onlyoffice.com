@@ -1,0 +1,1020 @@
+SEPTEMBER, 1928 _ PHYSICAL REVIEW . VOLUME 32 
+
+
+ON THE QUANTUM THEORY OF ELECTRONIC IMPACTS! 
+
+
+By J. R. OPPENHEIMER* 
+
+
+ABSTRACT 
+
+
+It is shown that the previous treatment of electronic collisions has been in- 
+complete; the error consists in the neglect of terms in the solution which correspond 
+to an interchange of the colliding electron with one of those in the atom. The cor- 
+rected first order cross section for elastic collisions is evaluated by Dirac’s method 
+for atomic hydrogen and helium. The complete solution for hydrogen is set up by 
+Born’s method for hydrogen; it is shown that the elastic cross section becomes 
+infinite, for low velocities, with the reciprocal of the velocity; it is further shown 
+that the first order cross section reduces to that already obtained. For hydrogen 
+this is a monotonically increasing function; for atoms with completely paired: elec- 
+trons the monotonic increase is broken by a minimum at velocities corresponding to 
+about a volt; the higher the azimuthal quantum number of the paired valence elec- 
+trons, the more marked the minimum, and the lower the voltage at which it occurs. 
+
+
+HERE are at present two methods of treating the collision ofan electron 
+with an atom. In the one calculation? one solves the transformation equa- 
+tion from the time to a set of constants of integration specifying the state 
+of the atom and the components of momentum of the electron; and by choos- 
+ing a solution which represents the atom initially in its normal state, anda free 
+electron wave of unit intensity per unit time per unit area, one may obtain 
+transition probabilities which give directly the cross section for an encounter 
+of any specified type. In the second method? one obtains a solution of the 
+stationary Schroedinger equation for the coupled system of atom and 
+~electron, combines the solutions to represent an incident wave ot unit in- 
+tensity per unit area impinging upon the unexcited atom, and interprets the 
+scattered wave by means of a flux vector. In the former method one thus 
+computes the rate of increase of the probability that the system is in the 
+final state in question; in the second one finds the rate at which electrons 
+leave the atom in this state; and since it follows from the normalization of 
+the wave functions for this state that these two rates are equal,’ the two meth- 
+ods are equivalent. The former method is more convenient for the estimation 
+of first order cross sections; the latter for low velocity encounters, where the 
+properties of the exact solution are important. 
+The first order problem has been solved explicitly for the collision of an 
+electron with a hydrogen atom.> The cross section for elastic collision so 
+
+
+1 For a preliminary account of this work see J. R. Oppenheimer, Proc. Nat. Acad. Sci. 
+14, 261 (1928). 
+
+* National Research Fellow. 
+
+2P. A. M. Dirac, Roy. Soc. Proc. A114, 243 (1927). 
+
+3M. Born, Zeits. f. Physik, 38, 803 (1926). 
+
+4 J. R. Oppenheimer, Phys. Rev. 31, 66 (1928). 
+
+5 M. Born, Goett. Nach. 146 (1926); W. Elsasser, Zeits. f. Physik, 45, 522 (1927). 
+
+
+361 
+
+
+362 | J. R. OPPENHEIMER 
+
+
+obtained is a monotonic function of the electronic velocity, and increases 
+uniformly to a finite limit—the gas kinetic cross section—as the velocity is 
+diminished. This calculation would indicate that for hydrogen there should 
+be no Ramsauer effect, and no secondary maxima in the angular distribution 
+of the scattered electrons. | 
+
+Before the development of the quantum mechanics, Elsasser suggested® 
+that these effects might be interpreted as the diffraction by the atom of the 
+long de Broglie waves of the electron, and predicted that the elastic cross 
+section should vanish with the fourth power of the electronic velocity. This 
+argument is, however, incorrect. In the first place, as we shall show, the atom 
+does not behave, even for slow collisions, as a rigid body: all the atomic 
+characteristics are excited. In the second place Mensing showed’ that, even 
+for an especially favorable atomic model, the cross section does not vanish 
+in the limit; this is because the refractive index within the atom is not, as 
+in the optical case, nearly a constant, but varies instead with the reciprocal 
+of the velocity. In the course of this work we shall see that the cross section 
+does not become infinite faster than the reciprocal of the velocity; it is not 
+possible to prove that it remains finite nor that it vanishes. 
+
+All of the work on collisions has, however, been incomplete. Analytically, 
+this incompleteness is the result of neglecting, in the former method of 
+treating the problem, transitions to states in which atomic and impacting 
+electrons are interchanged; and, in the latter method, the excitation of the 
+continuous spectrum. If one does not neglect these effects, he finds that, 
+for a given atom, there is not one, but a series of elastic cross sections, cor- 
+responding to wave functions of differing symmetry in the orbital coordinates 
+of the electrons in the atom and the colliding electron. Thus for hydrogen 
+there are two cross sections, one for symmetric waves, one for waves anti- 
+symmetric in the coordinates of the two electrons. In general all cross sec- 
+tions approach, for high velocity encounters, those computed with neglect 
+of the resonance terms; for low velocities there are characteristic deviations, 
+which make the angular distribution of the scattered electrons irregular, 
+and the total elastic cross section pass, in certain cases, through a minimum, 
+instead of increasing monotonically with decreasing velocity. 
+
+In this paper we shall first compute by the former of the two methods 
+the first order cross section for encounters with a hydrogen atom. We shall 
+then set up the general equations for the collision by the second method, and 
+show how the solutions are to be interpreted physically. We shall investi- 
+gate the behavior of the elastic cross section for extremely low velocities; 
+and we shal! also show that the equations lead to a first order cross section 
+identical with that found by the former method. We shall apply this to 
+obtain the first order cross sections for hydrogen and helium, although these 
+are of no quantitative significance; for the calculation itself shows the first 
+approximation to be inadequate for low velocity encounters, and the full 
+
+
+6 W. Elsasser, Naturwiss, 13, 711, 1925. 
+7L. Mensing, Zeits. f. Physik, 45, 603, 1927. 
+
+
+QUANTUM THEORY OF ELECTRON IMPACTS 363 
+
+
+calculations appear impossible. We shall indicate, however, the physical 
+predictions to be made on the basis of the theory, and obtain a few qualitative 
+results for more complex atoms. 
+
+2. If we neglect the interaction of the Som and electron, we may de- 
+scribe the system by giving numerical values to six first integrals: the 
+quantum numbers of the atom u, k, m, and the three electronic constants, — 
+v, 0, 6, which are defined in terms of the cartesian components of the elec- 
+tronic momentum by the relations: 
+
+
+y=(2Mb)-[p.2+p,2-+p.2] 3 O=tan-(p.2+p,)/p,; o=tan—p,/ps, (1) 
+
+
+where WM is the reduced electronic mass. To each set of values of these six 
+integrals we shall be able to assign two linearly independent wave functions; 
+in particular these may be chosen respectively symmetric and antisymmetric 
+in the coordinates of the two electrons. If they are so chosen, then a wave 
+function initially symmetric will give rise, during the collision, only to sym- 
+metric waves; one initially antisymmetric will produce only antisymmetric 
+waves: for the interaction energy is of course symmetric. If now one solves 
+the transformation equation from this set of integrals to the time, he finds, 
+for the first order cross sections? 
+
+
+onum(v’ 0,6) = (42/h?) | V(n, k,m,v’ ,0,¢) |? (2) 
+
+
+where pv’ and x are connected with the initial value of », »y say, by the relation 
+y—v'—R+Rn’*=0 where R is Rydberg’s constant 27?Met/h®. Here Vy 
+(n, k, m,v', 0, 6) and V_-(n, k, m, v’, 6, @) are the matrix components of the 
+interaction energy for a transition from the initial wave function, which has 
+
+
+n=1, k=0, m=0, v=v, 0=0 
+
+
+to a wave function with n, k, m, v’, 0, 6; and the wave functions are in the ~ 
+two cases respectively symmetric and antisymmetric. 
+
+These matrix components may readily be written down, although one can- 
+not give explicitly the corresponding operator in coordinate space. If r; and 
+r2 are the vectors from the atomic center of gravity to the two electrons, and 
+Wnim the normalized hydrogen wave functions, and x,0, the normalized 
+functions for the free electron, then the wave functions normalized to dy 
+are for the two cases respectively 
+
+
+Uc casis = Q-1/2f Wnum(1)Xv99(L2) + Wakm(I2)Xveg(L1) } (3) 
+
+
+Furthermore, the initial wave, properly normalized to represent a stream of 
+unit intensity per unit area, is 
+
+
+2-2 Yroo( #1) noes) + Yr00(r2) n(t1) } (4) 
+
+
+8 Here as in the following, the upper sign refers to the orbitally symmetric, the lower to 
+the orbitally antisymmetric, solution. | ; 
+
+
+364 J. R. OPPENHEIMER 
+
+
+with 
+y= (21/y) *Xr00 = (h/ Mv) xs00 (5) 
+where v is the initial electronic velocity. 
+With 
+
+
+Vir’) = —e?/r+e/ | rl—r' 
+
+
+the matrix components then become 
+
+
+= 
+2 fare f drovitnway V (es, 43)¥soo(ts) (es) 
+
+
+aa V(re,r)W100(ri) (re) |=ftg (6) 
+with 
+
+
+fv' 8, ¢) = far. [ars Vrem(L)Wr100(41) V (2,21) x0 06(£2) mo(£2) 
+
+
+and 
+
+
+g(v’ 0,6) = fer: J dee hin(ea)¥ sone) V rays) xo (es) (e) 
+
+
+so that we get for the elastic cross section 
+o(v’ 0,6) = (402/h?) | f(v',0,4) £00’, 0,4) |? (7) 
+
+
+An obvious difficulty may perhaps be mentioned here. The functions 
+y are all orthogonal to each other, and so are the functions x; but the y’s 
+are orthogonal to the. x’s only in the sense of continuous spectra: 
+
+
+ae ee { ene SG 
+A 
+
+
+A-0 
+
+
+This is because wy and y satisfy different wave equations. The non- 
+orthogonality is negligible for high velocities, but for slow encounters it may 
+introduce a serious ambiguity. One may overcome this in principle by using 
+in place of the x’s, the corresponding wave functions for the hyperbolic 
+orbits of the hydrogen atom; and for high velocities this would give the same 
+result as (7). But again for low velocities it would introduce a serious error 
+into the first order cross section; for the two terms in the interaction energy 
+which do in fact nearly neutralize each other would here be treated unsym- 
+metrically; and the resulting cross section would turn out too large. We shall 
+meet the same difficulty in a somewhat different form in 3. 
+
+By considering the secondary waves whose amplitude does not increase 
+steadily with the time, one may solve the transformation equations correctly 
+to a higher order; and the difficulty in the choice of proper orthogonal initial 
+_ wave functions would then disappear. But this method is in practice less 
+
+suited to the exact solution of the problem than that of Born. , 
+
+
+QUANTUM THEORY OF ELECTRON IMPACTS 365 
+
+
+3. The Schroedinger equation 
+[(h2/8r2M) (Ai+As) + h(y— R) $e?/ry+e?/ro—e?/ | rita | JY =0 (8) 
+has solutions of the form? 
+
+
+x { Unkm(£1)Wnkm(L2) ae Untm(L2)Wakm(f1) 
+
+
+nkm 
+i { do!" YU terem(t orem (2) + toram(ta)boren(Pn) } (9) 
+0 km 
+
+
+where the ¥,-zm's are the hyperbolic wave functions for the hydrogen atom, 
+with energy hy’, and normalized to dv’, and where the w’s satisfy 
+
+
+(42/84? M) A+ h(y— R+ Ra) |tnem(t) + Knem(r) =0 (10a) 
+and | | 
+[(42/8?M)A+ h(v—R—-v') —9') +2/7 | tyr em(t) + Kyem(t) =9 — (10b) 
+Here | 
+Knen(t)= Sy Vaimwvrnrtterent) +f . do! Vener (tree) 
+
+
+Kyrem(r) = Ss Vor temnt etm’ (L) Unt bem (Lr) + f dp"’ | Verne em’ (2) (11) 
+0 kl m! 
+
+
+vi kim’ 
+
+
++ (€2/17)6 mm’O4%6(v’ — p’’) } Uy? ktm? (2) 
+
+
+and 
+* 
+V2) em! Pem(L) = [debate (eV (esr Wtanl) 
+
+
+If one considers a linear combination, Y say, of the solutions (9), he sees 
+that this involves some terms quadratically nonintegrable in 71, some quad- 
+ratically nonintegrable in 72, and, for sufficiently large E, some quadratically 
+integrable in neither 7; nor 72... Now for each pair of terms in y and w* quad- 
+ratically nonintegrable in 71, there will correspond two waves in m-space, 
+one approaching, the other receding, from the atom. One may then combine 
+the solutions (9) with different u’s in such a way that there is no ingoing 
+wave in 7;-space to correspond to an excited or quadratically nonintegrable 
+wave in /e-space, and that the ingoing wave in rj-space corresponding to 
+the wave function of the unexcited atom in /2-space represents a stream of 
+electrons moving parallel to z, of $ electron per unit time per unit area. The 
+incident wave will then have asymptotically the same form as that of 
+
+
+(2y)-1/2 { 61 Wio9(r2) ee W100(r1) \ | (12) 
+
+
+® Here as in the following, 2.4m indicates that the terms are to be summed over m from 
+—k to k, over k from 0 to »—1, over z from 1 to infinity. For 2 the term = 1 is omitted. 
+Lem indicates summation over m as before, over & from 0 to infinity. 
+
+
+366 | | J. R. OPPENHEIMER 
+
+
+The corresponding solution (9) will then have, as we shall show, the asymp- 
+totic form 
+
+
+(2v)-1/2{ e721 Wroo(re) tei? Proo(ri) } +T(,6,94) { (e-7"1/r1)W 100(42) 
+t (e-*179/ 79) r00(41) + DE’ Ds (m, b, mv" 0,8) | (€-"/r)Warm(£2) 
+
+
+nkm 
+
+
+em t0°8/29-Wnrm(t1) } + f dv" > Py (v""k,m,v’ ,0,6)/rira: { ety’ rrty!'79) 
+0 km 
+| ety! raty’r) | 
+with 
+Yn = [y?—~ (89? MR/h)(1—n-2) ]1? 
+
+
+y! =29(2Mr'/h) 1? 
+y= 2n(2Mv"/ h) 1? 
+
+
+; Paes Ha 
+
+
+yp’ +p’ +R—v=0 
+
+
+The constants D vanish for »<3R/4; the constants F vanish forv<R. 
+The evaluation of the flux vector then gives for the cross section for elastic 
+collision: 
+
+
+oo(v,0,6) = 20| Ts(v,0,¢) | . (14) 
+for the cross section for excitation!® to the state n, k, m: 
+(hyn/ aM) | D(a, k,m,v’ 6,6) | ? (15) 
+
+
+and for the cross section for ionization, in which the two electrons have the 
+energies hv’ and hv” 7 
+
+
+10 In a recent paper (Proc. Nat. Acad. Sci. 13, 800, 1927) the collision problem was con- 
+sidered, to obtain an estimate of the-cross section for excitation when the electronic voltage 
+approaches the resonance potential, in order to prove that in this limit the polarization of the 
+excited light tends to vanish. In this treatment the continuous spectrum of the atom was neg- 
+lected; and the treatment is therefore as it stands invalid. If one considers the continuous 
+spectrum, one may in fact show that the polarization will tend to fall far below its value given 
+by the momentum rules; it does not appear possible to show in general that it vanishes. Per- 
+haps we may state the physical grounds for the failure of the momentum rule in an elementary 
+way: when, as in the derivation of the momentum rules, the effect of the atom on the motionof 
+the electron after the collision is neglected, only those electrons with vanishing angular momen- 
+tum will have, in the limit, an appreciable chance of being near the atom; conversely, in this 
+limit, the electron will have no appreciable chance of carrying away angular momentum; and 
+this, since the electron initially had no angular momentum about the direction of the electron 
+beam, at once gives, by the conservation theorem, the momentum rules. But when the 
+influence of the atom on the final wave function for the electron is taken into account—and 
+it is of capital importance in the limit when the electronic voltage approaches the resonance 
+potential, the situation is changed; for now an electron with finite angular momentum can be 
+near the atom; conversely the electron can now take up, and in general will take up, momentum 
+from the atom; and thus excitations forbidden by the momentum rule will occur. It may 
+be added that this modification does not affect at all the second part of the paper quoted, 
+which is concerned with the anomalous polarization of the intercombination lines. 
+
+
+QUANTUM THEORY OF ELECTRON IMPACTS 367 
+
+
+(yy h?/ 242M?) | Fa (v’, k,m,v’,0,¢) | ? (16) 
+
+
+In each case there is a cross section corresponding to waves initially sym- 
+metric, and one corresponding to waves initially antisymmetric, in the orbital 
+coordinates of the electrons. We shall consider this solution in detail for the 
+case vy <3R. 
+
+For this case the wave 
+
+
+DL Untm(L2)Vnkm(L1) — “dy Doty’ em (2) Wo" km (21) (17) 
+
+
+nkm km 
+
+
+will involve only one set of waves quadratically nonintegrable in re. For 
+both Knrm(re) and Ky km(re) vanish as 72 ,sincethe V’s fall off atleast with 
+1/r, and the w’s are bounded uniformly in r. Thus the equations for the u’s 
+take the asymptotic form 
+
+
+[A+An |unkm=0 An = (842M /h)(v—R+Rn-*) 
+
+
+(10c) 
+[A+Ap + e?/r |utytnm =O. Ayr = (84?M/h)(v—R—v') 
+
+
+And for all the u’s except u199 the parameter A is negative; the corresponding 
+solutions will therefore be uniformly quadratically integrable; only w1o9 will 
+involve waves which extend to infinity. 
+
+Similarly, there will be only one set of waves quadratically nonintegrable 
+in 7. For in the first place all the functions for the discrete states, Warm; 
+fall off exponentially. And although the functions y,/;m are quadratically 
+nonintegrable, the coefficients w,/;m are uniformly bounded in yv and 72 
+except in the immediate neighborhood of v’ =v. To see this we may examine 
+more closely the equations (10) for the w’s. If we take the second term in the 
+expression for K,-%m, we see that it is an improper integral; for in the nucleus 
+for v’’ =p’, the term 
+
+
+f de! | Wrem(t’) [2¢2/ | r—r" | 
+
+
+does not exist. We may, however, modify the work to get rid of this difficulty. 
+The physical reason for the modification will be made evident when we con- 
+sider the interpretation of the waves. Let us expand the solution y in terms 
+of the Warm’s, as before, but replace tHe WV» kms by the solutions ¢,'x4m of the 
+differential equation 
+
+
+— [(h2/84?M) A+ hy’ + (€2/r) 6-7/8 |byram(r) =0 (18) 
+where B is a large positive constant. Then 
+
+
+lim Pvkn- Vit 
+
+
+Bo 
+
+
+lim ar Vakm(t) bvem(t)— 0 
+
+
+Be 0 
+
+
+368 J. R. OPPENHEIMER 
+
+
+so that by going to the limit Bo in the final expressions for the cross 
+sections, we shall obtain the solutions (9). For finite B the solutions will 
+now have the ¢y-zm in place of the ¥,-xm in (9), the w’s will be given by (10), 
+and for the K’s we shall have the proper integral 
+
+
+o 
+{ dy" DS Uyreme ttm! (£) Uy me (L) with OU yrkmp!* kim (L) 
+0 
+
+
+k’m?’ 
+
+
+| (19) 
+~ J dt! bertvm(t’)boram(e’){—e/ | e—2"| +(e) e*/r} 
+Now the inhomogeneous terms K will be bounded. And unless 
+y—R~p'=—R/e? | (20) 
+
+
+where / is integral, the inhomogeneous equations will have bounded solutions. 
+But since 
+
+
+y—R—y'<—R/4 
+only for /=1 will the homogeneous equation be soluble, and only for this 
+
+
+value of v’ will the amplitude of the solution of the inhomogeneous equation 
+become infinite. The integral in (17) thus has the form 
+
+
+roe) v+e 
+| dv" ee Ly em( £2) by km(L1) + f dy’ De v') “by km (tH 100( 12) 
+0 km v—e km : 
+(21) 
+f dr'Wioo(t') Kyrtm(t’) 
+where Z is a function bounded in v’ and 7,.. Now the first term of (21) gives 
+a wave in 7, which is quadratically integrable, since it is expansible in terms 
+
+
+of the ¢’s with uniformly bounded coefficients. The second term gives at 
+once 
+
+
+—KremPvam(11— wt/ 2Y 8, >) W100(r2) (22) 
+with 
+Kykm = Qarh- fa Vroo(r’) Kynn(t’) (23) 
+
+
+Now the @’s may be given asymptotically by 
+by’ hm(L) = derim (18,6) ~(2/0)/2¥ em (8,4) sin lyrteaty’, &) | (24) 
+
+
+where 6 and ¢ are the polar angles of the vector r, the Y,, are the normalized 
+spherical harmonics of order p and degree s, and the a’s are real constants 
+depending upon B. Similarly 
+
+
+uyo0(r)~ > Viem(0,o)/r- { Byume® Tmt) 4 B_pmei rim) } (25) 
+— km 
+
+
+QUANTUM THEORY OF ELECTRON IMPACTS 369 
+
+
+with the B’s and 7’s real. As we shall show, the Bxm and Tom may be 
+determined in terms of the By xrm and Tirm by the wave equation (10a). 
+(See (36) and (37)). Further the x’s are determined in these terms by (19) 
+and (23). Finally the remaining w’s are determined; for the corresponding 
+homogeneous equations have no solution, and the inhomogeneous terms 
+depend only on the B’s and 7’s and x’s. For the case »<3R/4, then, 
+the solution is completely given in terms of the two sets of constants Byam 
+and 7:%m; and these must be chosen to make the incident wave of the 
+solutions (9) one of unit intensity per unit area: 
+
+
+Ba nme thm F yt 2K, mete) = (Qy)-1/2y~16, (RE 1/2) e RFU art (26) 
+The scattered wave then becomes 
+
+
+> Am { 171/71 W902) V em(O1, b1) EW 12° W100(11) V km (O2, be) } (27) 
+km 
+
+
+with 
+Atm = B—pméit-#" — Bos jpmetttim RED iF yl 2, 5 gente sk) | (28) 
+
+
+This yields at once the elastic cross section. Of this we have to show (a) 
+that in the limit v0 it grows in general with v~!; and (b) that in first order 
+it reduces to (7). 
+
+The physical interpretation of the waves (9), (13), is immediate. In 
+spite of the fact that the atom cannot be excited or ionized by the collision 
+without violation of the energy theorem, the wave functions for such excita- 
+tion do not in general vanish identically; instead they fall off rapidly as the 
+nonatomic electron recedes from the atom, so that the chance of finding 
+the atom excited or ionized is only then considerable when another electron 
+is in its immediate vicinity. The excitation is thus not permanent; during 
+the collision the atom will make quantum jumps; but when the collision is 
+over the atom will have returned to its normal state. The electron which 
+is left in the normal state is not necessarily the same as was originally there; 
+but since one has no way of distinguishing which was originally in the atom, 
+it is physically meaningless to ask which has escaped. 
+
+The necessity for replacing the y’s by the ¢’s in order to make the integral 
+for the K’s exist may be interpreted in this way: the hyperbolic wave func- 
+tions W,’zm are not a possible zero order approximation to the motion of the 
+ejected electron; for this ejection only takes place when the atom is left 
+neutral, and not ionized; and the hyperbolic wave functions do not approach, 
+for infinite distance, a linear combination of the waves which represent the 
+motion of an electron with the same energy in the field of a neutral atom. 
+In the final results the limit B—o should exist. 
+
+Write . 
+
+
+Ui0(r) = Dye?) Vim(0,¢) (29) 
+
+
+km 
+
+
+370 ae J. R. OPPENHEIMER 
+
+
+Then the equations for the y’s are, with €=yyr, 
+(d/ dE) (E* yem’ (E)) + [2 — RCRA) | yam (E) HYW7EPRS em(1) = 0 (30) 
+
+
+where 
+
+
+Sin()= [ad {dd sin 6¥ mn®(0,6) Kiul?0,6) 
+
+
+and 
+
+
+K00= V 100100 4100 — 2 KykmV 100vem W100 > Vi i0o0nkm Unkm 
+
+
+nkm 
+
+
+(31) 
+at dy’ 2d V i000" km Lytkm 
+The solutions of (30) which remain finite for £=0 then satisfy 
+Vim = Chm V+k(E) + 64m y—e(E) + Liem(€) | (32) 
+with 
+veel) = EMV ng yal €) 3y—e(E) = EN? Fg 08) (33) 
+. g 
+Tim(é) = rf dx Gil x, €)Sam(x) 
+and 
+| m= — lim [Tum(€) - y~Lx(€) | (34) 
+and 
+G.(#,8)= Yeu(x) yen(€) ed oe 7 (35) 
+yn(x) y—x(€) y"4n(%) 4/_2(%) 
+
+
+We shall see (45), (47) that I exists and vanishes for E00. The solution 
+(29) then behaves asymptotically like (25) with 
+
+
+Beam (2n)-H%4f | egam | | oom 242 cham 6am | eH 
+sin [arg Crim—Arg C_rm|} 12 (36) 
+and 
+sin Term =(2ry Baim) !!?{ | Crem | sin [arg cram 
++(k+1)1/2]+| cem| sin [arg cum ¥ ka/2]} (37) 
+
+
+The incident wave will thus represent a stream of unit intensity if |ciim| 
+and arg C;%m are chosen so that (26) is satisfied. This shows that, as v—-0 
+
+
+1 Here, as in the following, A is a fixed positive constant independent of 7, v, k, m. 
+
+
+QUANTUM THEORY OF ELECTRON IMPACTS 371 
+
+
+| Cam | 2+ | Cem | 2< Av} (38) 
+We shall now show that | 
+| Ce <Ay}!? 7 (39) 
+
+
+for the case that Vo = Vioo 100 <Ar* £1.e., that the atom has no dipole moment 
+in its normal state. For in the first place 
+
+
+| V roonkm | <A/r (40) 
+Further, by (10) and (38) | | 
+| Unkm | <0): | Lita) <o!? O(r) (41) 
+
+
+where the Q’s are bounded uniformly in v, and are, as we have shown, 
+quadratically integrable in 7. Further, as we shall show (57) 
+
+
+| Konm| <v7/2A 3 Viownm<A/r (42) 
+Finally | 
+| Vo t100 | Su Aes (43) 
+Thus by (31) | 
+| Sim | <Ao71/¢~! for vS15 (44) 
+| Sim | <Ay-lV%y-2-¢ for r>19 (45) 
+
+
+But on the other hand it follows from the non-vanishing of the Wronskian 
+and the expansions for the J’s that 
+
+
+lim [Gi(x,)(y-4@)] <A" rae } 6) 
+
+£0 <Ax*t*(Inx)%* for «Sx ; 
+Hence 
+
+a eat 
+coim= [Tinlad (47) 
+with | 
+<Av 3/2414 (nx), for xS x9 
+| rm | <Ay-Veteg-l~e for x> x0 } 
+
+From this we find, uniformly in v 
+
+
+| Ck | <Ayl/?+k(Lny) be | (48) 
+
+
+as announced. 
+To estimate the x’s we may note first that the ¢’s remain. uniformly 
+bounded as v0, and approach | 
+
+
+Ax J on41|(2re/h)(2Mr)!!2|-Vin(0,¢) 
+
+
+372 J. R. OPPENHEIMER 
+
+
+Thus the matrix components Uy: k/mvikm eXist,and remain uniformly bounded 
+as v—-0, satisfying 
+
+
+| |U| <A/r | (49) 
+Further, from (41) 
+| | tnem| <Av*/? 5] Lynm| <Av-W? (50) 
+Thus | 
+Kykm | <Av7}? (51) 
+
+
+as used in (43). 
+Hence from (27) we find, uniformly in k and m, that if the |ci.m| and 
+the arg Ci%m are chosen to satisfy (26) 
+
+
+| Anm| <Ao7} (52) 
+Thus 
+| T2(r,0,¢) | <Ao (53) 
+and (14) gives for the cross section 
+oo(v,0,6)<Av! (54) 
+
+
+If we had neglected the continuous spectrum, we should have found 
+instead that oo approached in the limit a finite constant independent of @ 
+and ¢, so that scattering became uniform over all angles. But this result is 
+of no physical significance; and since we have used the properties of the wave 
+functions to obtain the lowest upper limit for oo that they in general permit, 
+we must conclude that in general the cross section grows in accordance with 
+(54). | 
+
+When we evaluate oo in first order, we may introduce several simpli- 
+fications. In the first place we may neglect the influence of the scattered 
+wave on the incoming wave, as this would give a term of second order. 
+We may thus satisfy (26) by setting 
+
+
+Chm = (0/0) Smal Rg )e Pt?) #8 (55) 
+
+
+Further we may replace the ¢@’s by the p’s, defined by 
+
+
+ee f ds f sin 040Y am *(8,6)xv0o(4) (56) 
+
+
+(This amounts to setting B=0), since the validity of the first order calcula- 
+tion depends upon neglecting the distinction between the y’s and the x’s, 
+and, as pointed out in 2, it is best to use the same functions for both electrons. 
+(See further 4.) Finally we may evaluate Kioo and Kyzm by giving the u’s 
+their initial values 
+
+
+Uvkm = Unkm =O (57) 
+
+
+QUANTUM THEORY OF ELECTRON IMPACTS 373 
+
+
+except 
+M1090 = (20)! /2@t? = 2-1/2n, 
+
+
+Then (23) gives 
+Kykm = 2! taht i) dr f de'broo*(eWroolt)n(t’)prim*(2)V(r’,r) (58) 
+and with (28), (23), (25), and (30) we get 
+
+
+Aum = —2mh-¥(20)-1? f a J de’ | Wro0(r) |2n.(r’) orem *(2’) V(r" , 2) 
+| (59) 
+F Qah-'(Qv)-12 i) dr | dr'byoo* (2 )Wr00o(r) no( 2’) prem (4) V(r" ,r) 
+
+
+Thus with (56) 
+
+T(v,0,6) = 20h-'(20)-*?[— fv ,6,) Far,0,9) | (60) 
+which, with (14), gives 
+oo(v 6,0) = (4n?/h?) | f—g| ? (61) 
+
+
+in agreement with (7). 
+
+4. The quantitative estimation of these cross sections has no very pre- 
+cise significance. For the p’s are a very bad approximation to the wave func- 
+tions for the aperiodic motion of the electrons; they are not orthogonal to the 
+y,'s; and they give a cross section which remains finite for v=0, whereas the 
+true cross section presumably becomes infinite with v!. This may be shown 
+to depend upon the fact that the p’s approach zero for v=0, whereas the 
+@’s and presumably the true functions, do not.. Nor can one overcome this 
+difficulty by using the ¥’s or the ¢’s for the p’s; in the former case the flux 
+vector does not exist, and in the second case it depends essentially, in the 
+first order calculation, upon B, and does not approach a limit when Bo. 
+These difficulties would disappear in a complete solution, but at present they 
+appear analytically inevitable. 
+
+The qualitative characteristics of oo are easy to obtain. The first term f is 
+
+
+f(v,8,) = f(v,0) = —(e?/8rR) { [1 +0/R-sin26/2]-!+ [1+ (/R) sin? 6/2\-2} (62) 
+
+
+and is just the term that gives Born’s cross section. The second term cannot 
+be written in closed form. For large v it is smaller than f, since 
+g<Av$ : (63) 
+
+
+whereas f falls off only with the inverse square of v. For v=0 we have directly 
+
+
+go=2(0,0,6) = [ar f de'baoot(e) {2/1 bet | rar" \ Wioo(r) 
+
+
+= —3¢?/2mR=+6f(0,6) oe 
+
+
+374 ‘J. R. OPPENHEIMER 
+
+
+For fixed angle of deflection 6 both f and g decrease monotonically with in- 
+creasing v. Thus for each value of 6 there is a value of v for which the two 
+terms become equal. These values of v lie within a small range for which v 
+corresponds to a few volts. 
+
+The symmetric cross section is always larger than Born’s value. For large 
+vy it is nearly equal to this latter; for small v it is 49 times as great. It in- 
+creases monotonically with decreasing v. The angular distribution of scat- 
+tered electrons varies slowly with v, and there are no secondary maxima. 
+
+The antisymmetric cross section is much larger than Born’s for v=0, and 
+nearly equal to it for large v. But in the range in which the functions 
+fv, 6) —g(v, 8) have their zeros, it will be smaller than Born’s value; and be- 
+cause these values of v lie in a small range, the total cross section 
+
+
+f dp f sin 6d0co(v, 8) 
+
+
+has a minimum in this region. In this region also there are secondary maxima 
+in the angular distribution of the electrons. 
+
+Had we taken for the normal state of the atom, a P or D, instead of an 
+S, term, with wave function, say, respectively 
+
+
+Wo1o = const €~*/24r cos 8 
+
+
+W320 = const e~*/3472(3 cos? @—1) 
+we should obtain analogous results. But since in this case 
+g<Ay? 
+
+
+65 
+g<Av? oD) 
+
+
+for the two functions respectively, the second term will fall off more rapidly 
+than for the S state, and the zeros of f-g will thus occur for lower values of v. 
+And since they will also occur within a smaller range, the minimum in the 
+total cross section will be more marked. Quite generally, the lower the posi- 
+tion of the minimum, the sharper it will be. For @ enters the cross section 
+only in the form of ) so that, the lower the velocity, the slighter the 
+dependence of f and g upon #, and the smaller the range of velocities in which » 
+fae 
+
+5. If there were no electronic spin, we should have to take, to satisfy 
+the exclusion principle, the orbitally antisymmetric solution for the collision 
+of an electron with a hydrogen atom; and this would lead to a cross section 
+which had a minimum as a function of v. But because of the electron spin 
+the symmetric solution will occur with a third the weight of the antisym- 
+metric one; so that the total first order cross section for atomic hydrogen is 
+
+
+(4a? /l?) » (f?-+-g"— fg) (66) 
+Now 
+
+
+Pre [eas (a fae ears se) (67) 
+
+
+QUANTUM THEORY OF ELECTRON IMPACTS 375 
+
+
+The total cross section can thus never fall much under Born’s value, and for 
+low velocities it will be larger. Thus the theory leads to the prediction that 
+atomic hydrogen, and probably the similar alkali atoms, should show no 
+Ramsauer effect. 
+
+For other atoms we obtain different results. Thus for helium ne orbital 
+wave must be symmetric in two electrons—to correspond to the normal 
+state of the atom—and cannot, by the exclusion principle, be symmetric 
+in allthree. The two non-combining wave functions corresponding to (3) turn 
+out to be 
+
+
+(a) (01,12) X,og(r3) +eb(r1, 73) Xveg(r2) +e (re, 2s) Xveg(r1) 
+(b) W(ri,re) Xveg(rs) +e (11,13) Xvog(t2) +ep(re, fs) Xe (1) 
+with e=1(4— 3-1/2) 
+
+
+(68) 
+
+
+where (r,r’) =¥(r’, r) is the wave function for the normal state of the atom.” 
+
+
+1 The functions (68) may be used to compute the excitation probabilities for singlet and 
+triplet atomic states; the final wave functions are for the two cases, e.g. in the system (a) 
+
+
+Vale, r2)xvog(es) + belts, 5)xvoe(ts) + eva (es, #1) xv06(F2) 
+with 
+p+(x, y) ad t¥il, x) 
+
+
+The cross section for the singlets becomes 
+
+
+J f faxaraev,% v)xb0el#) Js Awl 
+
+
+toe |e delet poate It 
+
+
+That for the triplets is_ 
+
+
+[ f fadayre, nue, Sunn [rete ape | 
+
+
+Neither of these vanishes identically. One may obtain a rough idea of the behavior of the cross 
+sections by neglecting the coupling of the atomic electrons, and setting ¥(x, y) =Y100(«) Yioo(y), 
+
+
+ba(x, y) =(1/24/?) { ¥100(*)¥n bm (y) + Wr00(¥)¥nkm(x) } 
+
+
+o4.= (40? /h?) 
+
+
+o_=(129?/h?) 
+
+
+Then 
+o,=(842/h?)|L—-3M—3N|2; ot = ent) | M—N|2, 
+
+
+with Ps -f f dxdy Pnim(x)¥r00(x)xv96(9) IY ) fe 1 
+
+
+M= [ff dudydz viens) | vao0(r) |[*r00(=)xv09(2)m(x) Ae a et det 
+
+
+tTeoa] 
+
+
+ae 
+
+
+Here L corresponds to transitions in which one atomic electron is excited; M to those in which 
+one atomic electron is ionized, and the impacting electron is bound in.the excited state; N to 
+those in which one atomic electron is freed, and the other excited, and the impacting electron 
+is caught in the normal state. Further 
+
+L<Av"; M<Av-; N<Av-8 
+
+
+so that with increasing electronic velocity singlet excitation should predominate. 
+
+
+N= f f f dxdy- dz yim =)¥s00(v)¥iv0(#)¥00(#)x009(2) (7) te 
+
+
+376 J, R. OPPENHEIMER 
+
+
+The first order cross section then is 
+| (4n°/h®)-|fi-gl? (69) 
+with 
+
+
+f= fa [ae fez v(r,r’) 2xve6* (2!) m(r"”) | —2e2/r"” 
+, | +e%/ |r” —2' |+e?/ 2-4] | 
+(70) 
+
+
+gam fide fide! fae" Ute,r We 1! Dxas*(e ne”) [= 2e%/r" 
+te?/|r’—2r'| +e2/| r”—2| | 
+
+
+Here again f gives the classical cross section. And since (69) depends upon 
+vy and @ much as (7) does, the theory does give, for helium, a break in the 
+monotonic rise of the cross section with decreasing v. In general we can say 
+that the ratio of the true cross section to its “classical” value will pass through 
+a minimum. Whether the cross section itself passes through a minimum, 
+or merely shows a flattening, will depend upon the distribution of zeros of 
+f@, 0)—g@, 0). And this effect should occur for all atoms with paired elec- 
+trons, and should not occur for an atom with an unpaired electron. Thus 
+cadmium should show the break, and sodium should not. But these results 
+are based upon the approximately hydrogenic character of the atomic wavé 
+functions, and are thus not directly applicable to molecules. 
+
+Since the minimum is more marked for P than for S, for D than for P 
+terms, we should expect the effect to be more marked the higher the azi- 
+muthal quantum number of the paired valence electrons. And we should 
+expect the minimum to occur for a lower voltage the higher the azimuthal 
+quantum number 
+
+In conclusion it should be recailed that an adequate quantitative treat- 
+ment of the collision problem involves a more complete solution of the equa- 
+tions (10) than can as yet, even in the simplest case of atomic hydrogen, be 
+given. 
+
+
+NorMAN BRIDGE LABORATORY oF PHyYsIcs, 
+PASADENA, CALIFORNIA, 
+May, 1928. 
+
+

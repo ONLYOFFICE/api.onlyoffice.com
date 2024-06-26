@@ -1,0 +1,1218 @@
+Zur Quantenmechanik der Richtungsentartung. 
+
+
+Von J. R. Oppenheimer in Gottingen. 
+
+
+(Eingegangen am 8. Marz 1927.) 
+
+
+Es wird gezeigt, daf man in der Quantenmechanik die Stérungen entarteter Systeme 
+ohne ,,Hilfsfelder“ untersuchen kann. Die spontane Ausstrahlung solcher gestérten 
+Systeme wird nach der Diracschen Theorie berechnet. Es ergeben sich als 
+Spezialfaille die Heisenbergschen Polarisationsregeln fiir das Resonanzleuchten, 
+die Skinnerschen fiir das StoBleuchten, die Hanleschen fiir den Kinflu8 AuBerer 
+Felder. Die Theorie wird auf verschiedene Probleme des Stofleuchtens angewandt; 
+die anomale Polarisation der Quecksilberresonanzlinie wird als Resonanzeffekt 
+gedeutet. 
+
+
+Es hat sich als méglich erwiesen, die iibliche Beschreibung eines 
+Atoms durch stationiire Zustinde, Ubergange, Einsteinkoeffizienten usw. 
+in die Quantenmechanik zu iibertragen. So kann man das Verhalten 
+eines Atoms einer Stérung gegeniiber immer noch durch die Anderung 
+der Energiewerte und die erzeugten Ubergangswahrscheinlichkeiten an- 
+geben. Aber diese , Wahrscheinlichkeiten* unterscheiden sich auf charak- 
+teristische Weise von den klassischen, da sie nicht mehr unbedingt von- 
+elinander unabhingig sind. Dies kommt z. B. in den Stérungen eines 
+entarteten Systems vor: Die Stérung erzeugt bestimmte Uberginge, und 
+im Laufe der Zeit kehrt das Atom zum Normalzustand durch spontane 
+Ausstrahlung zuriick; aber die entsprechenden ,Ubergangswahrscheinlich- 
+keiten“ dieses zweiten Prozesses miissen als gegenseitig voneinander ab- 
+hangig betrachtet werden. Wir kinnen daher Abweichungen von der 
+alten Quantentheorie erwarten, und wir werden zeigen, da diese gerade 
+die erforderlichen sind, um eine hinreichende Theorie der Polarisation 
+des Resonanzleuchtens und des StoBleuchtens zu erzielen. 
+
+Von diesem Gesichtspunkt aus betrachtet, unterscheiden sich die 
+entarteten Systeme darin, da8 die Kigenfunktionen nicht durch die Angabe 
+der nicht entarteten Quantenzahlen n;allein bestimmt sind. Im allgemeinen 
+werden wir zwar wissen, da fiir ein gegebenes n,; alle Werte der ent- 
+arteten Quantenzahlen 6 gleichwahrscheinlich sind. Aber, wenn w(n, 6) 
+eine entsprechende Figenfunktion ist, so ist dann 
+
+Nx 
+
+
+> 4(66') v(m, 6’) (1) 
+
+
+o 
+
+
+28 J. R. Oppenheimer, 
+
+
+auch eine Eigenfunktion, wo die Summe iiber alle die N Zustinde des 
+Grundterms erstreckt ist und wo die N? Konstanten ayy,» den 1/, N (N + 1)- 
+Bedingungen geniigen: 
+
+
+N 
+= Ag 51 Ug" gt == Ooo" (2) 
+of 
+
+
+sonst aber unbestimmt sind. Fiir den Fall eines Atoms in der Abwesenheit 
+duBerer Felder z. B. ist dies gleichbedeutend mit der klassischen Aussage, 
+da8 die Achse der Richtungsquantelung unbestimmt ist, da irgend eine 
+Eigenfunktion eines entarteten Systems durch eine lineare Kombination der 
+Eigenfunktionen fiir dieselbe Energie und fiir eine beliebige Stellung des 
+Achsensystems dargestellt werden kann. Fiir ein Wasserstoffatom z. B. 
+sind die Eigenfunktionen ¢ P!” (cos #) e&*™%, und man kann leicht zeigen, 
+daB diese sich bei einer beliebigen Rotation in eine lineare Kombination 
+der neuen P{” (cos 9) ¢&™% fiir dieselbe Haupt- und azimutale Quanten- 
+zahl umwandeln. 
+
+Wir kénnen jetzt zwischen Stérungen unterscheiden, je nachdem sie 
+die Entartung aufheben oder nicht [z. B. Elektronensto8, Licht]+). Man 
+kann zeigen”), daB man im ersteren Falle die agg so wihlen mu8, daf 
+die 1/,N(N — 1) Bedingungen des Verschwindens derjenigen Matrix- 
+komponenten E,. der Stérungsenergie erfillt sind, die den Ubergingen 
+zwischen Zustinden, die urspriinglich zu demselben Energiewert gehdrten, 
+entsprechen : 
+
+
+NN 
+
+(1 — 0, a) = = Oy ott Leg? gttt age wn 0. (2 a) 
+Falls einige dieser Bedingungen identisch erfiillt sind, so ist die Entartung 
+nicht viéllig aufgehoben. Als Beispiel nehmen wir das Stern-Gerlach- 
+Experiment; hier diirfen wir die Polarachse fiir die Molekeln, auch bevor 
+sie in das magnetische Feld eingetreten sind, parallel der Feldrichtung 
+wiahlen; dann gentigen @5' — Ooq den Gleichungen (2) und (2a). Wir 
+bemerken, daS die Wellengleichung fir dieses Experiment in drei Glei- 
+chungen zerfallt: erstens eine fiir den zu der magnetischen Quantenzahl m 
+konjugierten Winkel, zweitens eine fiir die iibrigen atomaren Koordinaten 
+
+
+1) Die Energiewerte des gestérten Atoms sind in allen Naherungen die des 
+ungestérten. M. Born, ZS. f. Phys. 88, 803, 1926. 
+
+®) Vgl. die Behandlung des Starkeffekts nach der Methode der sakularen 
+Stérungen. E. Schrédinger, Ann. d. Phys. 80, 437, 1926. Ferner M. Born, 
+W. Heisenberg, P. Jordan, Quantenmechanik II, Kap. 3, § 2; ZS. f. Phys. 38, 
+585, 1926. 
+
+
+Zur Quantenmechanik der Richtungsentartung. 29 
+
+
+und drittens eine fiir die translatorischen Koordinaten der Molekel. Die 
+letzte lautet: 
+
+
+2 H 
+Cre ee =| wit 
+
+
+h t— Ta y = 0, 
+wo FE; die urspriingliche translatorische Energie, M die Molekiilmasse, 
+w die Elektronenmasse und H das Feld bedeuten; sie zeigt, daS die Kin- 
+stellungsenergie*) der Molekiile im Felde aus der translatorischen ent- 
+nommen wird: die dem Felde parallel eingestellten Molektile werden 
+beschleunigt, die antiparallelen verlangsamt. Ferner, wenn ein zusitz- 
+liches, homogenes, magnetisches Feld vorhanden ist, so sind die zwei 
+Strahlen nicht von gleicher Geschwindigkeit; das Verhiltnis ist 
+E, + A Eq \'2 
+(aE) ’ 
+
+wo E;, die translatorische Energie, 7 H,, die Auispaltungsenergie ist. 
+
+Wir betrachten jetzt Stérungen, die die Entartungen nicht autheben. 
+Seien die station’ren Zustinde des Atoms (n,,  .-.; 64; Gy ---) == (My Gx) 
+= (n, 6), die Energie E = E(n,,n,...) == E(m) und die Anzahl der 
+Zustinde mit dem Termwert E — E(n) gleich N. Urspriinglich diirfen 
+wir annehmen, daS das Atom im Normalzustand (n°) ist, und es wird 
+mit gleicher Wabrscheinlichkeit in jedem der N® Zustinde (n™, 6) 
+sich befinden. Die Eigenfunktion des ungestirten Atoms kénnen wir, 
+wenn wir mit w(n,6) die Eigenfunktionen fiir die Quantenzahlen n, 6 in 
+einem beliebigen Achsensystem bezeichnen, folgendermaBen schreiben: 
+
+0) 
+yO = 3 gh Yo! n® wv (n, 6’) 
+
+
+7 
+
+
+(0) (3) 
+¥(n, 6’) = D4, 6:n) y(n, 6), 
+
+
+oy 
+
+
+wo die a(o’,6) der Bedingung (2) geniigen. Es ist wichtig, zu bemerken, 
+da8 wir die Phasenkonstanten y, i) nicht kennen und daf wir in unserem 
+Endergebnis iiber sie werden mitteln miissen. Das hat aber mit der Ent- 
+artung des Systems nichts zu tun; es ist der formale Ausdruck der 
+Tatsache, daf die Geschichte (d. h. der zeitliche Verlauf der Hamilton- 
+schen Funktion) fiir die verschiedenen Atome verschieden ist, und daB 
+deshalb die Zeit fiir diese Atome nicht von einem gemeinsamen Nullpunkt 
+
+
+1) Fiir die klassische Besprechung dieses Experiments siehe A. Einstein 
+und P. Ehrenfest, ZS. f. Phys. 11, 31, 1922. Nach dem Mechanismus der Kin- 
+stellung hat es aber hier keinen Sinn zu fragen, denn das System darf, auch bevor 
+es in das Feld eingetreten ist, als eingestellt betrachtet werden. 
+
+
+30 J. R. Oppenheimer, 
+
+
+aus gerechnet werden darf. Nun ist die Eigenfunktion (3) wegen der 
+Willkirlichkeit der a(6, 6’) nicht véllig bestimmt: Wir miissen also 
+zeigen, da trotz dieser Unbestimmtheit das Verhalten des Systems ein- 
+deutig festgelegt werden kann. 
+
+Die Eigenfunktion des gestiérten Atoms ist durch 
+
+
+N 
+g® = SS Son; n, 6’) ¥ (n, 6’) (4) 
+
+
+gegeben, wo die @ (n; n,@) die Ubergangswahrscheinlichkeiteamplituden 
+py + w(n,6) sind. Diese Amplituden hingen natiirlich von der Art 
+der Stérung ab und kénnen aus der Stérungsenergie abgeleitet worden 
+sein. Diese Energie wird im allgemeinen von den dynamischen Koordi- 
+naten des stérenden Systems und von denen des Atoms gleichzeitig ab- 
+hangen. Ist z.B. das stérende System ein Elektron, so wird sie von 
+der Lage des Elektrons abhangen; ist es Strahlung, so hingt sie von 
+der Intensitiit und den Phasen dieser Strahlung ab. Aber fiir jeden 
+Ubergang des stérenden Systems ist diese Stérungsenergie als Funktion 
+der atomaren Koordinaten allein gegeben: die Matrixkomponente der 
+Energie fiir den betreffenden Ubergang des sttérenden Systems. Wir 
+werden spiter zeigen, da8 diese Uberginge voneinander unabhingig sind, 
+und kénnen uns daher auf die Betrachtung einer einzigen Funktion 
+— etwa V — beschraénken?). Dann wird 
+—2ni 
+
+
+5 | ary VaR, 0) 
+
+
+Nun kénnen wir die Funktionen y(n, 6) einer Transformation (1) unter- 
+werfen. Dabei transformieren sich auch die @(n,6), aber sie transfor- 
+mieren sich kontragredient zu den w(n,6), so da8 wy bei der Trans- 
+formation invariant bleibt: 
+
+
+N 
+Do (nn, 6’) W (n, 6) 
+0; 
+
+
+t 
+
+
+@ (n,6) = 
+
+
+N N WN 
+> SDB a (n°; n, 6) a* (6,6; n) a(6', 6"; n) w (0, 0") (5) 
+GO Of 
+
+
+N 
+= Sa (n; n, 6) v (0,6) 
+
+
+2 
+nach (2). Dabei ist 
+—2ni 
+
+
+o (n: n, 6) = 
+
+
+| dry V p* (n, 6) (Ba) 
+gesetzt. 
+
+
+1) Dabei ist V im allgemeinen ein Operator und eine Funktion der Zeit. 
+
+
+Zor Quantenmechanik der Richtungsentartung. 31 
+
+
+Setzen wir jetzt (5a), (5) und (8) in (4) ein, so erhalten wir 
+
+
+yO = SD y® (n) 
+@) 
+
+
+ne 
+a 
+
+
+Nn wO) w 
+
+
+= S535 Sa, ; nO) g* Von oy (nO, 6; mY, 6D) w(n™, 6), (6) 
+
+
+PG PP 
+
+
+w® hangt also von den a(6,6'; n°), nicht aber von den a(6,6'; n™ ab: 
+Fiir gegebene Eigenfunktionen des Anfangssystems ist die gestérte Kigen- 
+funktion eindeutig bestimmt: sie hingt nicht von der Wahl der Achse 
+ab. Aber da auch die Phasen in 7 durch die Angabe von ~ villig 
+bestimmt sind, darf man nicht tiber sie unabhingig mitteln; es folgt daraus, 
+daS die Ubergange (und daher auch die Strahlung) von den N Zu- 
+standen (v,6) nicht als unabhingig betrachtet werden kénnen. 
+
+Wir berechnen jetzt die Intensitét der spontanen Strahlung von der 
+Frequenz y(n, n®), die dem Ubergang n‘ —> n entspricht und die 
+parallel einem beliebigen Vektor 8 polarisiert ist. Sei Yt der Vektor 
+des elektrischen Moments des Atoms und sei (I%.8) —= M,, dann wird?) 
+diese Intensitat 
+
+| 
+
+
+16 23! (n®, n) & . 
+
+
+T (8:0, n®) — 3 SI) J deo (n) a, V (0, 0") 
+o, ; 
+Nn) (7) 
+(0, 6") = Sa", 6"; n®) v(m, 0”), 
+
+
+70 
+% 
+
+
+In Z gehen jetzt a(6,o'; n™ und die a(¢,6'; n™) ein. Mitteln wir aber 
+tiber die unabhingigen Phasen Yona) SO wird mit (6) und (2) 
+3 a4 fy(1) 992) w) yw?) 
+eee > 'M, (2), 6; 2), 6) ie 
+é 90) 5) 
+t a 
+yw) e 
+
+
+My (0, 6 ; 2, 62) = S} co(n', 0? n®, 6) [dz vm, 6) M, y*(n®, 62. 
+0) 
+2 
+
+
+L(8; 0, n@) — 
+
+
+Das ist jetzt von den @ unabhingig. Da8 man, um zu bestimmten Er- 
+gebnissen zu gelangen, die unbekannten Phasen einfiihren und dann weg- 
+mitteln mu8, wird wohl daher riihren, da in der heutigen Theorie die 
+Zeit immer als Parameter und nicht als dynamische Koordinate behandelt 
+
+
+1) P. Dirac, Proc. Roy. Soc. 114, A, 243, 1927. 
+
+
+32 J. B. Oppenheimer, 
+
+
+wird. In dem Falle, wo fiir eine bestimmte Wahl dieses Systems alle @ ver- 
+schwinden, auSer einem, kann man offenbar fiir diese Wahl die Strahlung 
+klassisch — mit unabhingigen Wahrscheinlichkeiten — berechnen. 
+
+
+Die Formel (8) gibt die Strahlung fiir einen einzigen Ubergang des 
+stérenden Systems an, und die gesamte Strahlung wird durch Summieren 
+bzw. Integrieren tiber alle solche Ubergiinge erhalten. DaB es berechtigt 
+ist, diese Uberginge als voneinander unabhangig zu betrachten, zeigt man 
+analytisch auf dieselbe Weise, wie wir die Unabhangigkeit der Ubergange 
+von (wn) nach den N® Zustinden (n®, 6) bestiitigt haben. Falls das 
+storende System ein Elektronenstrahl ist, so bedeutet diese Unabhingig- 
+keit physikalisch, da8 die Uberginge, die durch die verschiedenen mig- 
+lichen Ablenkungen des Elektrons verursacht sind, nicht untereinander 
+gekoppelt sind. Das mu8 so sein, da man, indem man sich eines gentigend 
+schwachen Strahles bedient und gentigend viele Experimente macht, 
+prinzipiell eine Korrelation zwischen der Ablenkung des Elektrons und 
+dem durch das Atom emittierten Licht finden kann. 
+
+
+In der Ableitung von (8) haben wir angenommen, daf die unregel- 
+maBigen kleinen Felder, die immer vorhanden sind, zu vernachlassigen 
+und daf die Ubergiinge zwischen den verschiedenen »-Niveaus unab- 
+hingig waren. Um dies zu rechtfertigen, miissen wir die spontane Aus- 
+strahlung etwas naher betrachten; dies wird uns auch eine Erklérung der 
+bekannten Effekte der auBeren Felder auf die Polarisation des Resonanz- 
+und StoSleuchtens liefern. 
+
+
+Wir kénnen uns wieder auf einen einzigen Ubergang des stérenden 
+Systems beschranken, und daher auch auf ein einziges Wertsystem der 
+n). Der Einfachheit halber dtirfen wir ferner annehmen, da dieser 
+Zustand der erste angeregte Zustand des Atoms ist; dann kénnen wir 
+alle spontanen Uberginge vernachlissigen, aufer denen zum Normal- 
+gustand »®, Nach den vorhergehenden Betrachtungen kiénnen wir auch 
+den Normalzustand als einfach voraussetzen (WV = 1); seine Energie 
+sei EH — hy, Wir nehmen dann an, da$ ein kleines Feld vorhanden 
+ist, das die Entartung des Systems aufhebt, indem es die N® — WN Zu- 
+stinde (n®, 6) aufspaltet: ihre Energien seien E(n™, 6%) = hy. 
+Endlich diirfen wir die spontanen Ubergiinge zwischen den Zustinden 
+(n®, 6) vernachlissigen wegen des Faktors (dv)? in den Einstein- 
+A-Koeffizienten. Nun darf man py (n, 6) als Produkt einer Zeitfunktion 
+und einer Funktion der Koordinaten 2; des Atoms schreiben: 
+
+
+wn, gj= bg ® u(n, 6; 5). 
+
+
+Zur Quantenmechanik der Richtungsentartung. 33 
+
+
+Dann ist b, (t) die Wahrscheinlichkeitsamplitude daftir, da8 zur Zeit ¢ das 
+Atom im (”,¢) Zustand ist, und da8 es nicht gestrahlt hat. Nun wird 
+im Laufe der Zeit das Atom zum Grundzustand zuriickkehren; sei b,,(¢) 
+die Amplitude dafiir, da8 zur Zeit t das Atom im Normalzustand ist und 
+dafi es ein Quant der Frequenz » und Polarisation 8 ausgestrahlt hat. 
+Die GréSen b kénnen als Funktionen der atomaren Quantenzahlen, der 
+Zeit, und der Anzahlen Z,, der Quanten der Frequenz y und Polarisation 8 
+aufgefaBt werden: 
+bo @) = b(n, 6; ¢; 0,0... 0), 
+by5@ = bv; ¢;0,0...0; Z,, = 1...0...0). 
+Nach Dirac geniigen die b den Differentialgleichungen [l.c. Gleichung (18)| 
+2 
+h 
+a = Fin, 6, Lys e435 L yy 80 meg n', 6; Zy,0,1 Licts me ) b (n’, 6; t; Ayia Liga : ); 
+wo die Summe & iiber alle stationiren Zustinde des Atoms und alle Zu- 
+stinde y,8 der Strahlung zu erstrecken ist, und wo F die Hamiltonsche 
+Funktion des Gesamtsystems ist. Nun verschwinden alle Komponenten 
+von F fir (m, 2’) —& (xn, n) und ferner alle Diagonalglieder fir 
+n= n®, Z,,5¢ 0 und endlich alle fir 2 Z>1. Die iibrigen Kom- 
+ponenten sind: 
+
+F(n®,6;0,0...0...0; 2,6’; 0,0...0...0) = dou hve, 
+F(n®;0,0...Z,, = 1...0;n;0,0...2,,=1...0) = hy, +), . 
+F(n®,6;0,0...0...0; n;0,0...2,; = 1... 0,0) 
+== F*(n;0,0...Z,3==1...0,0;n, 6;0,0...0...0) = 1M, (n® 6; n) 
+
+
+wo 
+
+
+4: 
+b(N, 651; Zr, 54) Zry99 ++) (9) 
+
+
+M, (n®, ¢; n™) = [aru (n®, 6) M, u* (n), 
+
+
+— 1 ( hy \ile 
+ype a) 
+
+
+ist, wo g,, die Anzahl der Zustinde der Strahlung im Bereich d$d~y ist. 
+Das Fehlen des Faktors y2 gegeniiber Dirac riihrt daher, da8 wir die 
+Richtungen der Ausstrahlung nicht angeben, die Polarisation dagegen mit 
+dem Vektor 8 beschreiben. Wir fiihren jetzt, um die Gleichungen von y 
+zu befreien, 
+
+
+und wo 
+
+
+2727Vyt 
+Es = dee ° 
+
+
+Yo 9 zit : 
+Eve == Dye dug CP 7EGOt ME 
+Zeitschrift fir Physik. Bd. XLIUTI. 3 
+
+
+34 J. R. Oppenheimer, 
+
+
+ein. Dabei ist |é,,(4)|?dyd8 die Wabrscheinlichkeit dafiir, daB zur Zeit t 
+das Atom im Normalzustand ist, und daS ein Quant im Bereich dyvd8 
+ausgestrahlt worden ist. Dann nimmt (9) die einfache Form an 
+
+
+1b, = [ds [dv gM, (0, 00; n®) £,, 6 PHOT %0), 
+
+
+e ara ibaa (10) 
+t £3 = D>) UF (n® 6; n) 9 £, € 0), 
+
+a) 
+
+4 
+
+
+. 2 fave , ; 
+Setzt man fiir g seinen berechneten Wert 7 (=) ein, so sieht man, 
+daB die Integrale nach y nicht konvergieren. In den meisten Fallen 
+sind sie aber halbkonvergent, und man kann y durch seinen Wert an der 
+Resonanzstelle (y,—,) ersetzen. Da man immer y durch einen von 
+(vo — v,) nur wenig abweichenden Mittelwert ersetzen kann, und da der 
+
+
+Punkt fiir die folgenden Betrachtangen nicht sehr wesentlich ist, werden 
+2 —w)\'2 .,, 
+wir g durch g, == = (Eee— wl) * gleich in (10) ersetzen?). 
+
+
+Diese Gleichungen lésen wir durch den Ansatz 
+N 
+&5 = = Pon" (1d) 
+4~=0 
+fiir die Anfangsbedingungen 
+
+
+é, (0) = S por = En & (nO; wu, 6); 6 = 1,2... N, (12a) 
+% 
+
+
+£,,(0) = 0. (12b) 
+
+Die N? GréBen «,, sind durch die N(N — 1) + N Gleichungen gegeben: 
+o = 1,2...N, 
+
+[Case — Oorx + 224 (Vy —)| Moo =O: 6 +6, (13a) 
+x —1,2...N, 
+
+
+| boot + Door Oesx | =0; <= 1,2...4N, 
+
+
+1 y 7 (18b) 
+Hoo! = 5 I ay | d8 M,(n®; n®, 6) M* (n; n®, 6’). 
+
+
+Die po, sind durch die N Gleichungen (12a) und durch die N(N — 1) 
+Gleichungen 
+ie 
+
+
+> [Uso + Boo! box | Pox = 0; 
+
+
+, 
+z 
+
+
+Hl 
+
+
+o ; 
+
+
+1,2...N—1, 
+1,2...N 
+gegeben. 
+
+
+1) Fiir eine kurze Besprechung der hier betonten Schwierigkeiten siehe 
+P. Dirac, Proc. Roy. Soc. (im Erscheinen). 
+
+
+Zur Quantenmechanik der Richtungsentartung. 35 
+
+
+Wir bemerken, da8, falls fir irgend ein o alle die (1 — 040') too! 
+verschwinden, (11) die einfache Form 
+
+
+£, == £,(O)e 249°; Ag = 2 poo (15) 
+
+
+annimmt, wo A der Einsteinkoeffizient fir (n®,6)—> mn ist. Ferner, 
+wenn die Terme y, weit auseinander rticken, nihern sich die &,(¢) der 
+Form 
+
+Eo(O)e “Biot **Pot, 3 (B,) = 0, 
+
+
+d.h. die Kopplung zwischen den Zustinden verschwindet. Falls endlich 
+das Feld verschwindet, so wird o,, == %, eine Wurzel der sikularen 
+Gleichung 
+
+| oot + Soo Oty, | = 0. (16) 
+
+
+Man kann leicht bestatigen, da8 in diesem Falle die o, reell und negativ 
+far reelle uo sind. 
+
+
+Wir werden jetzt die Ausstrahlung fir den Fall woo = O und fiir 
+ein nicht verschwindendes Feld untersuchen; zu diesem Zwecke wird es 
+bequem sein, N == 2 zu setzen, so daf wir die Lésung (14) explizit hin- 
+schreiben kénnen. Damit werden wir den Starkeffekt erster Ordnung 
+fiir die P-Terme quantitativ behandeln kénnen. Hier wird: 
+
+
+1 9, 
+05 2 > {= tha — Hea + 2m; + Jy}, 
+
+1 , 
+oj 2—= > {= Mia Hae — 265 + Hj}; Y  (d7) 
+A, = — 4, = 2xi(v; — »,), 
+
+
+wy = + V@sa— tv + 24; (tgs — Bis) + 4p + 4 bs Mor 
+
+
+Ferner fiir 5 = Uy: 
+1 
+Pay = ss (a £12) EO + yg EO}, 
+2 wy 
+1 
+Pig = 5,/ (a1 + % 1) 0) + tre &(0)}; 
+eo (18) 
+Do = 2 i {Cu + @1) &.(0) — ty 9 &,(0)}, 
+1 
+Peg: So Dui (fay + Oy 9) Eg (0) — fy» &, (0)}. 
+
+
+36 J. R. Oppenheimer, 
+
+
+Aus (10) und (12b) kénnen wir ¥, = fave &* (=) berechnen, d. h. die 
+Gesamtwabrscheinlichkeit, da®8 Licht von der Polarisation 8 wihrend 
+der Riickkehr des Systems in den Normalzustand ausgestrablt worden 
+ist*): 
+
+
+al ttf 
+— > bat 
+- ay 04 + OF 
+Oy = Moz + 2 wt (v5 — Vo) 2), i (19) 
+N 
+7 ed = Jo Poj M, (2; n®), 6). 
+oO 
+
+
+Fir den Fall, da® die (1 — doo’) Moo alle verschwinden, nimmt (19) die 
+einfachere Form an: 
+
+
+= 3 (wis + yy) ett + Fy) + 24,5 (ett — Ft) 
+re (Mis + wy”? + | Fiz? (20) 
+tj = 95 yu, (n®; n®, 9), 
+
+
+2 i (vy; — 4). 
+
+
+Diese letzte Form zeigt in klarer Weise, wie das wachsende Feld die 
+Kopplung der Emission von den verschiedenen Zustinden (6) zerstért. 
+
+
+Die Formel (8) liefert eine Rechtfertigung der Theorie von Heisen- 
+berg®) tiber die Polarisation der Resonanzstrahlung. Denn, wie wir 
+gesagt haben, falls wir das Achsensystem (und daher auch die Eigen- 
+funktionen) so wahlen, da8 fiir gegebene n, 6 und » nur ein @ von 
+Null verschieden ist, so kénnen die Ubergiinge von dem Zustand (6%) 
+klassisch — d.h. als unabhingige Ubergange — berechnet werden. Fiir 
+linear polarisiertes Licht z. B. kénnen wir leicht ein solches System an- 
+geben, da, wenn die Polarachse des Systems parallel zu dem elektrischen 
+Vektor des Lichtes liegt, nur die Ubergiinge, die die magnetische Quanten- 
+zahl] unverandert lassen, stattfinden werden. Wenn daher keine weitere 
+
+
+1) Dieses betrifft einen einzigen Zeitpunkt der urspriinglichen Stérung. Fiir 
+
+
+die ganze Stérung miifte man & , (oc) fiber die Zeit der Stérung integrieren. Die 
+
+
+Verteilung der Strahlung tiber » und o bleibt aber dabei ungedndert. 
+
+2) Vgl. (13a). 
+
+8) W. Heisenberg, ZS. f. Phys. 31, 617, 1925; fermer J. H. van Vieck, 
+Proc. Nat. Acad. 11, 612, 1925. Die Berechtigung der Heisenbergschen Regeln 
+ist auf Grund der klassischen Quantentheorie von L. Nordheim versucht worden. 
+Das Ergebnis war jedoch nicht in jeder Hinsicht befriedigend: L. Nordheim, 
+ZS. f. Phys. 38, 729, 1925. Herrn Nordheim bin ich fiir interessante Be- 
+sprechungen zu bestem Dank verpflichtet. 
+
+
+Zur Quantenmechanik der Richtungsentartung. 37 
+
+
+Entartung vorhanden ist, so wird die Heisenbergsche Regel gelten. 
+Aber wir bemerken, da8 sie nur dann gilt: bestrahlte man atomaren 
+Wasserstoff mit der ersten Balmerlinie, so wiirde die Ausstrahlung nicht 
+durch diese Regel berechenbar sein. Ahnliche Betrachtungen kénnen fiir 
+zirkular polarisiertes Licht durchgefiihrt werden. 
+
+
+Ein Fall, der experimentell ziemlich griindlich untersucht worden 
+ist"), ist der, wo die urspriingliche Stérung durch einen gerichteten 
+Elektronenstrahl erfolgt. Wir haben gezeigt, daB das durch die ver- 
+schiedenen miéglichen Ablenkungen der Elektronen erzeugte Licht unab- 
+hangig behandelt werden kann. Dann kénnen wir eine einfache, der 
+Heisenbergschen analoge Regel angeben, die immer dann gilt, wenn das 
+atomare System nicht in / und j entartet ist. Das Elektron mége die 
+Anfangsgeschwindigkeit », und die Endgeschwindigkeit », haben; dann darf 
+die Polarisation der emittierten Strahlung klassisch, d.h. mit unabhingigen 
+Wahrscheinlichkeiten berechnet werden, indem man das System als durch 
+ein magnetisches Feld parallel dem Vektor 4» = », —», richtungs- 
+gequantelt betrachtet und das Elektron durch eine polarisierte Lichtwelle 
+mit elektrischem Vektor in derselben Richtung ersetzt. Zunichst werden 
+wir einen Beweis dieser Aussage skizzieren, und sie dann auf einige ein- 
+fache Falle anwenden. 
+
+
+Der Einfachheit halber vernachlissigen wir zunichst den Elektronen- 
+eigendrehimpuls und untersuchen nur nachtriglich die dadurch erzeugte 
+Abinderung unserer Ergebnisse. Seien R, @, ® die Koordinaten des 
+freien Elektrons in dem oben definierten Koordinatensystem, d.b. @ = 0 
+fir den Radiusvektor parallel zu 7». Seien ferner g, ... gm, die Azimute 
+der atomaren Elektronen um 42, p,... py die konjugierten Impulse. In 
+der potentiellen Energie des ungestérten Systems werden dann nur die 
+Differenzen p;— q; eingehen. Fiihren wir also 
+
+
+1 ; 1 
+7) = 2 pn Hj = F GI- Pr» P= D> Pi Pj = Pj — P, 
+
+
+als neue Variabeln ein, so kénnen wir von der Schrédingerfunktion des 
+Atoms eine Funktion ¢*"? von g allein abspalten; der andere Faktor 
+hingt nicht von gm ab. Fiir gegebene andere Quantenzahlen n, stellt 
+dann g das Azimut des Atoms um 4», und m die Komponente des Dreh- 
+
+
+1) W. Kossel und Gerthsen, Ann. d. Phys. 77, 273, 1925; A. Ellett, 
+P. Foote und F. Mohler, Phys. Rev. 27, 31, 1926; H. Skinner, Proc. Roy. 
+Soc. (A) 112, 642, 1926; B. Quarder, ZS. f. Phys., im Erscheinen. 
+
+
+38 J. RB. Oppenheimer, 
+
+
+impulses in dieser Richtung dar. Dann ist die Amplitude w (n, m©; 
+n2), mm) proportional dem Ausdruck’) 
+
+
+2n 2 
+
+
+f JO sin ADV (WO, m; nM, mO;: RO, D) fF Rees, (21) 
+0 0 
+
+
+wo K eine durch den Ablenkungswinkel bestimmte Konstante*) und V 
+die entsprechende Matrixkomponente der Stérungsenergie des Elektrons 
+und des Atoms. ist. Diese Stérungsenergie wird im allgemeinen eine 
+sehr komplizierte Funktion der atomaren Koordinaten sein; aber nach- 
+dem wir sie tiber alle diese Koordinaten, aufSer g; integriert haben, 
+wird sie eine Funktion F von R, @ und cosy allein, wo y = p—@® 
+jst. Sei nun oe 
+
+
+Fy, R, @) = S Cy (R, @) cos iy, 
+dann wird =! 
+
+
+V (n®, mM; 0, mv; R,O, B) 
+
+
+=>) “lag {cos? @ cost + sin! @ sinl g} ep (m) — m0) (22) 
+7 
+
+
+a ip ()— (0) 
+se Cot aps yO) ee OD. 
+
+
+Aus (21) und (22) folgt das Verschwinden aller durch das Elektron 
+erzeugten ga, auBer denen fiir m© == m®; und das rechtfertigt die oben 
+angegebene Regel. 
+
+Dieses Ergebnis kann man unmittelbar auf Stofionisation durch ge- 
+ladene Teilehen anwenden; im allgemeinen ist die Berechnung der ¢(R) 
+sehr verwickelt, aber fiir die harteren §-T'eilchen, die durch schnelle 
+a-Teilchen aus leichten Atomen losgerissen werden, kann man zeigen, daf 
+die Verteilung der 6-Teilchen gleichmaBig tiber alle Winkel wird 5). 
+
+
+1) M. Born, Géttinger Nachrichten 1926, S. 146. — Herrn Prof. Born bin 
+ich fiir die Gelegenheit, diese Arbeit vor ihrem Erscheinen sehen zu diirfen, zu 
+Dank verpflichtet. 
+
+
+4x ®m 
+Se gle I? 
+
+
+(v2? + v? — 2 v1 vg cos 0), wo d den Ablenkungswinkel, m die 
+
+
+Hlektronenmasse bedeutet. 
+
+3) Dies Ergebnis wurde unter Vernachlissigung der relativistischen Mechanik 
+erhalten. Man findet fir diesen Grenzfall, daf8 die Verteilung der 0-Teilchen 
+durch (1 — 24-1 Fi cos? ...) gegeben ist, wo der Polarabstand # im oben defi- 
+
+1 1\>1 
+nierten Koordinatensystem gemessen wird, und wo 4A —= ( —z) ist, wo 4, 
+M1 2 
+A,, 4) die de Broglieschen Wellenlingen des 0-Teilchens baw. des ankommenden 
+a-Teilchens bzw. des auslaufenden a-Teilchens sind. Fiir die analoge photoelek- 
+trische Rechnung und die Matrixkomponenten siehe G. Wentzel, ZS. i. Phys. 40, 
+574, 1926, und R. Oppenheimer, ebenda 41, 268, 1927. 
+
+
+Zur Quantenmechanik der Richtungsentartung. 39 
+
+
+Dieses Resultat kénnte experimentell gepriift werden, indem man die 
+Teilchen in einem Gas bei niedrigem Drucke zahlt. 
+
+
+Wenn », klein ist — d. h. das Elektron nur die nétige Anregungs- 
+energie hat —, so liegt die Polarachse des oben eingefihrten Systems 
+fiir alle Ablenkungen zu dem Elektronenstrahl parallel. So erhalten wir 
+in diesem Falle das Skinnersche Ergebnis, daB die Komponente des 
+Drehimpulses des Atoms parallel dem Strahl sich nicht findern kann. 
+Die Polarisation fiir ein gegebenes v, hangt also von der Verteilung der 
+Vektoren 4» ab. In einfachen Fallen kann man diese Verteilung be- 
+rechnen, aber einige Ergebnisse kénnen wir geometrisch und ohne auf 
+die Einzelheiten einzugehen einsehen: Wenn die Anfangsenergie des 
+Elektrons nicht mehr als zweimal so gro’ wie die Anregungsenergie (4 E) 
+ist, so mu8 die Polarisation in demselben Sinne wie bei der Anregungs- 
+spannung sein, was auch das Ablenkungsspektrum der Elektronen sein 
+mag. Ferner, fiir sehr grobe Anfangsgeschwindigkeiten werden die 4» 
+fast alle zu dem Strahl senkrecht liegen. Denn wenn wir mit 9 den 
+Ablenkungswinkel des Elektrons bezeichnen, so ist die senkrechte Kom- 
+ponente (|) von 4» gleich v,sind, die parallele Komponente (|!) da- 
+
+24K 
+m (V, + ,) 
+keiten wird 0 auSer fiir einen sehr kleinen Bruchteil der Stéfe sehr 
+klein sein; deshalb 
+
+
+gegen *) [v, — v,|cosd ~ cosd. Aber fiir gro8e Geschwindig- 
+
+
+Es wird daher plausibel, da8 die Polarisation aller Linien fiir hohe 
+Geschwindigkeiten sich umkebrt®). Das kénnen wir bestitigen, indem 
+wir die Rechnung fiir einen einfachen Fall durchfithren. Sei ein Wasser- 
+stoffatom urspriinglich im Normalzustand, und sei es durch Elektronen- 
+stoB zum (nm = 2, & == 1)-Zustand angeregt. Die relative Wahr- 
+scheinlichkeit einer Ablenkung zwischen 6 und 6 + dé ist dann) 
+
+
+a? (8) dd 
+= sind dd {(vj + vf — 2 v, v, cos O) (v3 + vo? + v3 — 2 0, v, cos 6)*}"1, (23) 
+
+
+3) Fiir kleine Ablenkungswinkel. 
+
+
+*) B. Quarder findet fiir grofe v, eine Gesamtpolarisation senkrecht zu 
+dem Elektronenstrahl. Das ist jedoch wegen der Kaskadenspriinge schwer ver- 
+standlich. Vegl. B. Quarder, Le. 
+
+
+3) M. Born, 1. c. Formel (29). 
+
+
+40 J. R. Oppenheimer, 
+
+
+2 
+WO 0% = und e die Elektronenladung ist. Der Mittelwert des 
+
+
+we 
+h 
+Quadrats des Sinus des Winkels zwischen 4» und der Richtung des 
+Elektronenstrahls ist dann 
+
+o* (6) sin? ddd 
+
+
+vo} + of — 20, v, cosd 
+
+
+Pi =o {fat aa} {| 
+
+
+2 
+Man kann dann leicht beweisen, da8 im Grenzfall a 
+
+
+> 0, Pi=> 1. 
+
+
+Die senkrechte Komponente wachst nur sehr langsam mit der Ge- 
+schwindigkeit an; ihr Verhiltnis zur parallelen Komponente wachst wie 
+
+
+w 
+
+
+G ln =) fiir grofe v, an. Wenn w’?(§) wesentlich steiler von 6 = 0 
+% 
+
+
+abfiele wie in (23), so wiirde die Umkehrung der Polarisation nicht zu- 
+stande kommen. Man kann aber einsehen, da8 (6) im allgemeinen un- 
+gefabr die Form (23) hat. Es ist nicht méglich, eine aligemein giiltige 
+Formel fiir die Anderung der Polarisation mit der Geschwindigkeit der 
+Elektronen anzugeben. Aber aus dem oben Gesagten geht hervor, daS die 
+
+
+Polarisation fiir eine Geschwindigkeit v, > 2 yz verschwinden mubB. 
+
+
+Bevor wir die Modifikationen untersuchen, die durch den Elektronen- 
+magnete verursacht werden, dirfen wir vielleicht einige Beispiele der 
+Anwendung von (19) und (20) zur Berechnung der Wirkung duferer 
+Felder auf die Polarisation angeben. Es ist klar, da8, mit Ausnahme 
+von Wasserstoff, wo das Abschirmungsdublett zusammenfallt, diese 
+Effekte unabhingig davon sein werden, ob das Licht durch Elektronen- 
+sto8 oder durch Strahlung erzeugt worden ist. 
+
+
+a) Ein einfaches Beispiel ist folgendes: Polarisiertes Licht regt ein 
+normales ,klassisches‘ 1) Wasserstoffatom an, das sich in einem Magnet- 
+feld  befindet, das in der Richtung y mit dem elektrischen Vektor € 
+des Lichtes liegt. Zu berechnen ist die Intensitatsverteilung der spontanen 
+ersten Lymanlinie, die dem Vektor 8 parallel polarisiert ist. Sei s der 
+Polarabstand von 8, @ der Winkel zwischen seiner Projektion auf eine Ebene 
+senkrecht zur (€, )-Ebene und dieser letzten Ebene. Die y,;; bilden 
+eine Diagonalmatrix, und wir kénnen daher (15) gebrauchen. Setzen wir 
+
+
+A = 2 fy, = 2 Ugg = 2 bg3 
+
+
+1) D. h. ohne Magnetelektron, 
+
+
+Zur Quantenmechanik der Richtungsentartung. Al 
+
+
+gleich dem Einsteinkoeffizienten, so erhalten wir aus (20) fiir die relative 
+Intensitaét des parallel zu dem Vektor 8 polarisierten Lichtes 
+
+
+sin 2y sin 2s (A®cos @ +5, sine) 
+m 
+
+
+1 A 
+cos? y cos” s + 3 sin’ y sin? s + 5 
+
+
+2 e 
+A® 4. __. H? 
+a Am? 94) 
+( 
+H 
+1 sin? y sin? s (4 cos 29 + 2 “4 sin 2 e) 
+5 2 : 
+ec 
++ me o 
+
+
+So bewirkt ein Feld parallel dem elektrischen Vektor des Lichtes 
+(cos y = 1) keine Stérung der Polarisation. Ein senkrechtes Feld dagegen 
+reduziert, falls man senkrecht zu § und senkrecht zu € (@ = 0) beobachtet, 
+die Intensitit auf ihren Halbwert; falls man parallel 5, senkrecht € (s = a/2) 
+beobachtet, so bewirkt das Feld au8er der Depolarisation auch noch eine 
+Rotation der Polarisationsebene um einen Winkel 4, der durch 
+
+eH 
+tang 24 = A 
+gegeben ist. Das ist aber gerade die Formel, die Hanle®) aus der Os- 
+zillatorentheorie abgeleitet hat; (24) gibt natiirlich auch die Effekte im 
+schragen Felde und mit schrager Beobachtung an. Die Polarisation der 
+betreffenden ersten Lymanlinie sollte durch ein Feld von 70Gau8 um 
+15° gedreht werden. 
+
+b) Als zweites Beispiel betrachten wir den Einflu8 eines elektrischen 
+Feldes auf dieselbe, dieses Mal aber durch Elektronensto8 angeregte 
+Lymanlinie. Wir nehmen an, da8 die Elektronen gerichtet sind und daf 
+sie ungefihr die Anregungsenergie urspriinglich besitzen. Wir wéahlen 
+die Polarachse dem Felde § parallel und messen gm und 9 von der (@, ¥,)- 
+Ebene; dann haben wir die Eigenfunktionen nach der Integrabilitats- 
+bedingung (2a) zu wahlen. Sie sind 
+
+
+trp 
+w, = so 6 6]. + cose) — 1], 
+° 2 ae (25) 
+
+
+‘ 
+W, == be ra] J sin 8 cos g |, 
+
+
+Wb, == be ra[ 7 sino sing], 
+
+
+42 J. R. Oppenheimer, 
+
+
+2 
+
+
+mit b = (82a*)-*2 und a= time’ Die entsprechenden 
+sind 1): 
+
+
+0, —= o|— Fe + ype], (26) 
+
+
+Die p-Matrix ist wegen 
+
+
+Pr3 = Psy = Pag = Pox = Pyj = O 
+
+
+reduzierbar. Setzen wir 
+
+
+Psy == Bes = — the = — Mar = Flag = 
+_ 3uieak 
+
+
+ee ere " fs 2 2 
+§= w= + V+ &, 
+
+
+so wird mit (13a), (18b) und (14) 
+
+
+; 00 O54 0% 
+G4, >= —ptu—s; Pas = gi | St — Aetcon 7, 
+, (0,7 , & 
+Ped el ie ee ee er 
+@ Oo ot (27) 
+ly, == — 0; p = 33{- 22 + —4¢o { 
+21 ef we + 21 Qu V6 y2 " 
+; Oy, & 
+Gag = —U-—-b +0 Pas = pe Ge cosy, 
+Og, = — 24; P3g = @) sin y; 
+
+
+1) Man setze in M. Born, 1. ce. Gleichungen (17), (25), 27) 
+
+
+kw 0, Qh =F, 4 =H A = 9. 
+Dann sieht man, daf die Anregungsamplituden 2, ~,, 73, 7, fiir wi), #0), uM) 
+
+
+BO my +- 73), 
+
+
+wt) sich wie sin y, cos 7, eB , Overhalten. Andererseits ist #, = 
+3 
+
+
+1 
+Og = pe” + 73), 3 = 2, ©, = a4. Daraus folgt (25). 
+
+
+Zur Quantenmechanik der Richtungsentartung. 43 
+
+
+ferner mit (19), (25) und (27) 
+
+
+Bu l(,_ # Dae 
+= — —_ {1-5 == COS 
+T, 0, yee \( £) ee gat Sf 
+
+sul “ id | 
+= a 1-5) COS $ COS —= coss;. 
+Ts 4 yi" w rT a j 
+
+
+Bu 
+T3 — yi sin y Sin $ cos g. 
+
+
+Fiir die Strahlung parallel zu 8 polarisiert wird fir d — 0 
+
+
+2 
+tt. 3 @0 
+as = 
+
+
+{cos? y cos? s + sin? y sin? s cos? g} 
+cf 
+
+
+3 a 
+
+
+sin2ysin2scosg} (28) 
+
+
+wo? 1 
++ an {cos? s} + 88 { 
+
+
+und fiir d = 0 
+
+
+3 cae 
+bof 0 2 
+%. <= —— cos* (8.0,). 
+mrs A ( ) 
+
+
+Vernachlassigt man das zweite Glied in (28) (d. h. betrachtet man Resonanz- 
+leuchten statt StoSleuchten), so sieht man, da8 in diesem Falle nur ein 
+schriges Feld eine Depolarisation oder Drehung der Polarisationsebene 
+verursachen kann, im Gegensatz zu den Beobachtungen von Hanle?) an 
+dem Starkeffekt zweiter Ordnung bei Natrium. Man sieht ferner, daf 
+ein Drittel der Strahlung eine Polarisation hat, die von der Anregung 
+unabhingig ist. Wir haben hier anscheinend ein Versagen des Prinzips 
+der spektroskopischen Stabilitat, das folgendermaSen zu erklaren ist: Fiir 
+verschwindendes Feld fallt der metastabile Teil der angeregten Higen- 
+funktion nicht exponentiell ab — die Strahlung ist gerade die, die man 
+beobachten wiirde, falls nur der k — 1-Zustand angeregt wiire. Wenn 
+man jetzt ein kleines Feld anlegt, so kehrt der metastabile Zustand 
+langsam (mit einer Abklingungskonstante. die gleich der Frequenz- 
+auispaltung ist) in den Normalzustand zuriick: seine Metastabilitat wird 
+zerstért. Aber die Lebensdauer wichst unbegrenzt an, wenn das Feld 
+verschwindet. Experimentell wiirde man bei ,Abwesenheit“ eines 
+duBeren Feldes den zweiten Term in (28) als unpolarisierte Strahlung 
+
+
+1) W. Hanle, ZS. f. Phys. 33, 346, 1926. 
+
+
+44 J. R. Oppenheimer, 
+
+
+beobachten; ein Feld parallel dem Elektronenstrahl wiirde die Polari- 
+sation steigern, ein senkrechtes sie vermindern. Hier haben wir einen 
+Fall, wo der Einflu8 eines elektrischen Feldes anders ist, je nach- 
+dem die Linie durch polarisiertes Licht oder durch Elektronensto8 
+angeregt ist, da im ersteren Falle der zweite Term in (28) nicht vor- 
+handen sein wiirde. 
+
+In diesen Uberlegungen haben wir den Drehimpuls der Elektronen 
+in dem atomaren System und des stoBenden Elektrons vernachlassigt. 
+Die atomaren Elektronenmagnete andern natiirlich die Emissionsméglich- 
+keiten, aber sie andern nichts Wesentliches in den friiheren Betrachtungen: 
+die Strahlung, die durch einen StoB erzeugt wird, ist im allgemeinen 
+dieselbe, welche durch eine Lichtwelle mit elektrischem Vektor parallel zu 
+dem antisymmetrischen Geschwindigkeitsvektor 4» erzeugt wird, und 
+kann klassisch — d.h. mit unabhingigen Wahrscheinlichkeiten — be- 
+rechnet werden, indem man die Polarachse fiir das atomare System 
+parallel © legt. Es sollte betont werden, daf die Strahlung quanten- 
+mechanisch — d. h. mit interferierenden Wahrscheinlichkeiten — in allen 
+Fallen prinzipiell berechnet werden kann’). Nehmen wir jetzt z. B. den 
+Fall der D-Lipien, wo die Matrixkomponenten des elektrischen Moments 
+quantenmechanisch ausgerechnet worden sind). Wir haben oben gezeigt, 
+da8 die Stérungsenergie nur von der Komponente des elektrischen 
+Moments parallel dem antisymmetrischen Geschwindigkeitsvektor abhingt ; 
+die Theorie sagte dann voraus, da8 nur Uberginge stattfinden, wo 
+diese Komponente des Bahndrehimpulses sich nicht andert. Aus der 
+Arbeit von Heisenberg und Jordan entnehmen wir, da8 in der 
+neuen Theorie diese Komponente des Moments und daher auch die 
+Stérungsfunktion selbst nur nicht verschwindende Matrixkomponenten 
+hat fiir die Ubergiinge, wo diese Komponente des Gesamtdrehimpulses 
+konstant bleibt. Dieses zeigt wieder die Berechtigung der Skinnerschen 
+Annahme. 
+
+Zunichst méchte es scheinen, da8 der Drehimpuls des stoBenden 
+Elektrons keinen merklichen Einflu8 haben kénnte, da erstens die be- 
+treffenden Stérungsglieder auSerordentlich klein sind, und da zweitens 
+man erwarten kénnte, da® der Drehimpuls mit dem Bahnimpuls des 
+stofenden Elektrons selbst gekoppelt sein wiirde. Skinner hat aber 
+
+
+1) Das gilt auch, natiirlich, fiir allgemeine Stérungen: z. B. elliptisch polari- 
+siertes Licht. 
+
+2) W. Heisenberg und P. Jordan, ZS. f. Phys. 87, 2638, 1926; vgl. ins- 
+besondere Gleichung (30). 
+
+
+Zur Quantenmechanik der Richtungsentartung. 45 
+
+
+vermutet, da8 dieser Drehimpuls die anomale Polarisation der Queck- 
+silberresonanzlinie (und die geringe Polarisation einiger anderer Linien) 
+erklaren kénnte. Es scheint festgestellt zu sein, da8 diese Polarisation 
+weder einem Kaskadensprung aus dem 2?S,-Niveau?), noch zerstreuter 
+Strahlung zuzuschreiben ist®); und die Polarisation ist fiir Spannungen 
+gemessen worden*), wo sie nach den vorhergehenden Betrachtungen den- 
+selben Sinn haben mu8, wie fiir die Anregungsspannung selbst. Wir 
+miissen also mit Skinner schlieBen, da’ die klassische Theorie diesen 
+Effekt nicht zu erkliren vermag. Um uns einer nicht ganz genauen 
+Schreibweise zu bedienen, kénnen wir sagen, da das stoBende Elektron 
+die Richtung seines Drehimpulses wahrend des StoBes andern miifte. 
+Nun entsprechen die Anregungen der anomalen Linien in allen Fallen 
+Interkombinationsiibergingen, und man wird vermuten, da’ es daher 
+nicht berechtigt ist, die Stérung des stoSenden Elektrons gegeniiber der 
+Kopplung zwischen dem atomaren Elektronendrehimpulsvektor und dem 
+atomaren Bahnimpulsvektor als klein zu betrachten. Wir kénnen das 
+etwas anders formulieren: die Wahrscheinlichkeit einer , Vertauschung“ 
+des stoBenden Elektrons mit einem atomaren Elektron ist nicht zu ver- 
+nachlissigen gegentiber der Wahrscheinlichkeit eines Interkombinations- 
+tibergangs im Atom. Wir miiSten also den Eigendrehimpuls des stoBenden 
+Elektrons mit dem atomaren Figendrehimpuls als gekoppelt betrachten*).: 
+Dann wiirden Uberginge, bei denen der Betrag des gesamten Higendreh- 
+impulsvektors sich dnderte, nur selten vorkommen. Das bedeutet aber, 
+da8 fir die betreffenden Anregungen der Drehimpuls des stoSenden 
+Elektrons sich ,umdrehen* mu. Es ist dann nicht schwer zu sehen, 
+da8 man auf diese Weise die kleine senkrechte Polarisation der Resonanz- 
+linie erklaéren kann, da in erster Naherung die Bahnimpulse der atomaren 
+und des stoBenden Elektrons bzw. der Eigenimpulse dieser Elektronen 
+untereinander gekoppelt sind. Nur nachtriglich ist der. Gesamtimpuls 
+mit dem Gesamteigendrehimpuls gekoppelt. Man hat also zunachst den 
+Sto8 ohne Beriicksichtigung der Eigenimpulse auszurechnen, und findet, 
+wie oben gezeigt, da8 der Bahnimpuls senkrecht auf Jv liegen muB. 
+Dieser muS dann mit dem Eigenimpulsvektor so gekoppelt sein, da8 der 
+Gesamtdrehimpuls der des betreffenden Terms ist. Nach dieser Theorie 
+sollten die von *S-Termen ausgehenden Linien fast unpolarisiert sein, 
+
+
+1) A. Ellett, P. Foote, F. Mohler, lic. 
+
+2) H. Skinner, l.c. 
+
+3) B. Quarder, ZS. f. Phys., l. c. 
+
+4) Vel. W. Heisenberg, ZS. f. Phys. 41, 251, 1927. 
+
+
+46 J. R. Oppenheimer, Zur Quantenmechanik der Richtungsentartung. 
+
+
+die von 3D-Termen ausgehenden dagegen fast ihre ,berechnete“ Polari- 
+sation haben. Das stimmt auch mit den Experimenten iiberein. Nach 
+dieser Theorie wiirde ferner ein Wasserstoffion trotz eines Higendreh- 
+impulses eine normal polarisierte Resonanzlinie erregen. Aber wenn 
+auch diese Erklarung schon prinzipiell als befriedigend anzusehen sein 
+sollte, so wiirde sie zu ihrer Bestitigung doch einer viel eingehenderen 
+Untersuchung bediirfen. 
+
+Herrn Prof. M. Born bin ich fiir seine férdernde Besprechung herz- 
+lich dankbar. 
+
+
+Gottingen, Institut fiir theoretische Physik. 
+
+

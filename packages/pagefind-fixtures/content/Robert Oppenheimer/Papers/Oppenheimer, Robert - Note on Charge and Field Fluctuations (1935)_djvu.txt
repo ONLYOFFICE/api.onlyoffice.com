@@ -1,0 +1,266 @@
+JANUARY 15, 1935 
+
+
+PHYSICAL REVIEW 
+
+
+VOLUME 47 
+
+
+Note on Charge and Field Fluctuations 
+
+
+J. R. OPPENHEIMER, Department of Physics, University of Calfornia 
+(Received December 3, 1934) 
+
+
+The field fluctuations which arise from the possibility of creating positron-electron pairs are 
+computed. These fluctuations, which are inescapable in all field measurements, give a simple 
+interpretation of Heisenberg’s results on charge fluctuations, and of the divergences which 
+appear in his calculations. The pair-induced fluctuations in the radiation field are in general 
+small of order a compared to those which arise from the corpuscular character of the radiation. 
+
+
+HE fluctuations in charge density to be 
+expected on the basis of the positron theory 
+of Dirac have recently been studied by Heisen- 
+berg.! Consider a large enclosure of volume JV, 
+in which there are known to be WN; electrons of 
+momentum k, and M; positrons of momentum k. 
+Consider further a small volume of dimensions 
+Iy, Le, L3, and ask for the average value of the 
+charge in this volume over a time 7. This 1s, 
+of course, with e the electronic charge, 
+
+
+R= (LyLels/V) LN: 
+k 
+k 
+
+
+é=e(m—7); 
+
+
+The charge in this volume will, however, fluctu- 
+
+
+ate about its mean value, and these fluctuations 
+
+
+(Ae)? can now be divided, as Heisenberg has 
+shown, into three sets of terms: 
+
+(a) vacuum terms, which are present when 
+‘N=M=0, and which have no analogue in 
+non-relativistic theory. 
+
+(8) terms linear in Nz, Mz. These reduce to 
+their classically expected value 
+
+
+(Ae)’= (i+) (1) 
+
+
+for space time regions large compared to those 
+within which the electrons and positfons can be 
+localized. When, however, for all electrons and 
+positrons present 
+
+
+TKh(Wet Ok); Li<h(m?e+k?2)-} 
+
+
+(k; the component of momentum parallel to 
+L;), then these fluctuations tend to vanish. The 
+deviations from (1) under these circumstances 
+are an immediate consequence of the limitations 
+on the localizability of the particles. 
+
+
+1W. Heisenberg, Verh. d. Sachs. Akad. 86, 317 (1934). 
+
+
+(y) negative terms quadratic in the N’s and 
+M’s, which give the familiar reduction, to be 
+expected on the basis of the exclusion principle, 
+in the fluctuations of a dense Fermi gas. 
+
+It is with the vacuum terms that Heisenberg 
+is chiefly concerned. These not only do not 
+vanish, but for a sharply limited spatio temporal 
+region are infinite. This result can only be 
+interpreted as a consequence of the infinite 
+disturbance produced when we try to measure 
+the charge in a sharply defined region; and 
+Heisenberg has, in fact, shown that if we take 
+the boundaries of our spatial volume ‘spread 
+out” over a distance 0, then we get in general 
+finite fluctuations. Thus 
+
+
+(Ae)?~eL?/bcT for cTK0KL; cTKA=hh/me. 
+~OL/bCT? for cTKOKL; cT>>.. 
+
+
+These conclusions lose at once their paradoxical 
+character, if we consider the experimental ar- 
+rangement by which we might measure the 
+charge. To do this it is only necessary to measure 
+the normal component of the electric field over 
+the surface of the volume in which we are 
+interested. These field measurements will give 
+
+
+fluctuating results, and these fluctuations will 
+
+
+correspond to those of the charge within the 
+volume. We have thus to consider the fluctua- 
+tions in the longitudinal component of the 
+electric intensity, averaged over a time 7’, and 
+a slab of dimensions 1, Le, Ls. | 
+
+These field fluctuations are given by an 
+integral of the form 
+
+
+(A6)))? 
+26 arte? 
+| ¢ if aK (3) 
+Leh Leer? se 77 rt 
+
+
+144 
+
+
+CHARGE AND FIELD FLUCTUATIONS 
+
+
+with 
+
+
+145 
+
+
+e= (u2+h2)?; ef = (w2+k”)? and p= mc/h=1/r. 
+
+
+sin? (c/2)(et+e’)T sin? 4(ki— 
+
+
+ky’) Ly sin? £(Re— 
+
+
+ko!) Le sin? 4(k —ka')Ls 
+
+
+ne neeatenratrtnenneeetsinitnmnarnntiianinsteinimnitimncents i syiusintemnnianetnnintaepemertnasinpaentuinianenssarennthinnsamtnttt 
+Ps alicia masa aime: . . 
+
+
+The integrand differs from that given by 
+Heisenberg for the charge fluctuations essentially 
+by the factor |k—k’| -2. This integral converges, 
+and may be evaluated when we make limiting 
+assumptions about the relative magnitude of 
+the lengths c7, L;, \. We thus find 
+
+
+for (AG))2~ 
+all LD Sa 
+eee LyLoLseT? 
+all LiS>cT 4 
+a LyLeLhscT 
+Racca oe Nl ia Sh he es ee ae) 
+all Lin 2 7 
+LKeT L120 L3eL 
+cT > LichT® 
+= | 
+all Lin 
+L<<ceT LyKLo; In(L/L4) 
+eT iSi28: (| Ver i : 
+
+
+(ko— Re’)? (k3—ks’)? 
+
+
+If we apply these results to field measurements 
+in a rectangular slab of area L*, and thickness 0, 
+and use v (Ae)?~L?*v (A6&\)?, we get at once for 
+the charge fluctuations the values (2) given by 
+Heisenberg, and the further value, for the case 
+LET 
+
+
+(Ae)?~e?(L?/c?T?) In (L/D), 
+
+
+which is also in agreement with Heisenberg’s 
+formulae. We thus see that the infinite fluctua- 
+tions which we find for a sharply limited volume 
+arise from the measurement of fields in infinitely 
+thin slabs; for these an infinite charge density is 
+required, and the charge fluctuations correspond 
+to the pairs created in the neighborhood of 
+these surface charges. 
+
+The calculations of field fluctuations can Be 
+extended to include those of the radiation field, 
+which are of the same order of magnitude as 
+those of the longitudinal field. Thus the fluctua- 
+tions in the average value of the total electric 
+intensity are given by an integral of the form 
+(3), but with an extra factor 
+
+
+(k—k’)2{ (kK—k’)2(ce’ — kk’ — p2) + (e+ e')2(ee’ +3k- k’+54")} 
+
+
+(ce’ —k-k’— yw?) (e+e)? — (k— 
+
+
+The corresponding integrals can again be 
+evaluated under limiting assumptions about the 
+magnitude of L, c7’, \ and lead to results whose 
+order of magnitude agrees in every case with (4). 
+
+These fluctuations in the radiation field are 
+not in principle separable from the fluctuations 
+arising from the corpuscular character of electro- 
+magnetic radiation. These latter fluctuations 
+have been studied by Bohr and Rosenfeld,? 
+who give for them | 
+
+
+(Ae,)2?~AcL~4 for L>cT, 
+
+
+(Ac,)?~hcL(cT)? for cT>L. 
+
+
+”N. Bohr and L. Rosenfeld, Det. Kgl. Dansk. Vid. 
+Selskap. 12, 8 (1933). 
+
+
+ky? 
+
+
+To these must be added the fluctuations arising 
+from the creation of matter by the field measure- 
+ments, so that the total fluctuations are, for 
+instance, 
+
+
+(Ace)?~hcL~(cT)? (1 +e? /hic) ; L«cT; L<&X. 
+(Ac)??~whcL(cT)?(1+e/meL); L«&ceT; L>». 
+
+
+From the form of these expressions it seems 
+quite doubtful whether the physical significance 
+of the modifications introduced by the pairs can 
+be legitimately evaluated without taking into 
+account the atomicity of the electric charge 
+with which the field measurements are necessarily 
+made. 
+
+

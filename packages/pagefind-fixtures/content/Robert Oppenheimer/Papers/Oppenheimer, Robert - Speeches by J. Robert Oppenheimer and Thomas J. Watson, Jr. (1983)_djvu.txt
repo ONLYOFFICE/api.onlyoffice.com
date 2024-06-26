@@ -1,0 +1,720 @@
+Announcement and Dedication 
+
+
+The IBM Electronic Data 
+Processing Machines can serve 
+as a needed substitute for ex- 
+periment in certain scientific 
+areas, Dr. J. Robert Oppen- 
+heimer, Director of the Institute 
+for Advanced Study at Princeton, 
+N. J., told 200 leading scientists and 
+leaders in education, government, 
+defense and business who attended 
+a luncheon April 7 at IBM World 
+Headquarters and the first public 
+showing of the new highspeed cal- 
+culator. IBM Chairman Thos. J. 
+Watson, who presided, presented 
+IBM > President Thomas J. Watson 
+Jr. and Dr. C. C. Hurd, Director of 
+the IBM Applied Science Division, 
+who later demonstrated the new ma- 
+chines in the calculator room. 
+
+Texts of the addresses of Messrs. 
+Watson and Dr. Hurd appear else- 
+where in this issue. 
+
+
+Mr. Watson said that introducing 
+Dr. Oppenheimer to the scientists 
+and educators would be like intro- 
+ducing the President of the United 
+States to the Congress. 
+
+
+“You are all familiar with Dr. 
+Oppenheimer’s brilliant career,” he 
+continued, “his important participa- 
+tion in the atom bomb project, his 
+able direction of the work of the 
+Institute for Advanced Study, and 
+his great record of service to his 
+country, so that my pleasant duty 
+in presenting him :o you today is 
+un easy one. 
+
+
+Cites Aid to Science 
+
+
+“There is one phase of his car- 
+cer, however, with which some of 
+you may not be familiar, and in 
+which I feel he has made a tre- 
+mendous contribution to the achieve- 
+ments of science. When he joined 
+the faculties of the University of 
+California and the California Insti- 
+tute of Technology in the thirties, 
+he surrounded himself with a group 
+of young, full-time graduates who 
+developed themselves into outstand- 
+ing physicists under his guidance. 
+
+“When war came and the need 
+for nuclear physicists became ap- 
+purent, this group of young men be- 
+came an important nucleus around 
+which was built the scientific team 
+which contributed so greatly to the 
+war effort. The work of these men, 
+and of those who felt their influence, 
+constitutes a self-perpetuating con- 
+tribut.2n on the part of Dr. Oppen- 
+heimer to the advancement of 
+Pe: and to the progress of 
+
+
+our world. 
+
+
+“Ladies and gentlemen, I am 
+honored to present to you Dr. J. 
+Robert Oppenheimer, Director of 
+the Institute for Advanced Study.” 
+
+Dr. Oppenheimer spoke as fol- 
+lows: 
+
+
+“It is a pleasure to be associated in 
+any way with this celebration; that 
+is what we are here for today, to 
+celebrate an extraordinary achieve- 
+ment. I need hardly speak of the 
+magnanimity, in the true sense of 
+the word, of Mr. Watson, that has 
+made this achievement possible. I 
+think I should give a word of real 
+congratulation to the scientists and 
+engineers who have brought a com- 
+puter into existence which, as it 
+comes into existence, is neither too 
+little nor too late. This is a quite 
+rare Occurrence among computers. 
+
+
+“When I was asked to talk, I had 
+the impression that the ‘phone had 
+rung in the wrong office at the Insti- 
+tute, and I said, ‘Haven't you got 
+the wrong number? Don’t you want 
+to talk to Dr. von Neumann down 
+the hall?” ‘No,’ I was told, ‘He 
+really knows too much about this 
+subject.” 
+
+“So it was clear to me my task was 
+limited. I am to talk about the 
+meaning of the computers in re- 
+search, in new understanding of the 
+world; I am not to talk about the 
+immense prospect of their contribu- 
+tions to the defense program, of 
+their contributions to industry, of 
+their contributions to the solution of 
+practical problems. 
+
+
+Tells of Ancient Computation 
+
+
+“The two are not too far apart. 
+More than two millenia ago, com- 
+pution was playing a very remark- 
+able part in the life of Babylonia. 
+There had been developed a most 
+sophisticated and refined mathe- 
+matical treatment of the raw data on 
+lunar eclipses: purely as a mathe- 
+matical problem without any  me- 
+chanical model; without anything 
+that we could call celestial mechan- 
+ics. The problem the chaps had was 
+to predict the next lunar eclipse and 
+the next one after that, into the fu- 
+ture. They learned the art of num- 
+bers so well that these same methods 
+were still in successful use in India 
+in the last century; and this, remem- 
+ber, was without any notion of the 
+laws of motion; it was just from a 
+study of the numbers themselves. 
+
+“But the analogy goes further, be- 
+cause they were not only interested 
+in this because of the obvious prac- 
+tical value, to a society in which 
+
+
+Dr. J. Robert Oppenheimer Praises Scientific Uses of ‘701 
+
+
+eclipses hau some magic meaning, 
+of knowing when they were going to 
+occur, an ability to predict, so to 
+speak, the local stock market; but 
+the computations were also clearly 
+followed simply because of the beau- 
+ty of the occupation, because of the 
+art and wonder of it; and it is per- 
+haps that part that I am supposed 
+to talk about most today. They are 
+never separate in human life, and 
+they will not be separate with the 
+new computers of the International 
+Business Machines either. 
+
+
+Substitute for Experiment 
+
+
+“The use of computation to extend 
+understanding is, of course, not new. 
+It characterizes the whole of scien- 
+tific life in the last centuries. But 
+there is something new about tne 
+high-speed computer. I want to over- 
+simplify and almost parody what this 
+is about by stressing one element of 
+it. The high-speed computer, in cer- 
+tain areas, is a sort of substitute for 
+experiment. It enables us to find 
+out the connection between things in 
+places where we have not the power 
+(and I hope my examples will illus- 
+trate why) to make those deliberate, 
+controlled changes in the state of 
+affairs which are the normal way 
+that we try to disentangle things. 
+
+“That is one pre-condition. And 
+the other pre-condition is that the 
+subject has to be mathematically 
+kind of obstinate and tough. You 
+do not want a high-speed computer 
+for something you can do by the 
+classic methods of analysis. 
+
+
+Used for Complex rropiems 
+
+
+“In practice this means that one 
+applies computers primarily to prob- 
+lems which are complex and which, 
+in the technical phrase, are deeply 
+non-linear. That means, in a non/ 
+technical phrase (and I hope my 
+colleagues will forgive me for it), 
+problems in which the effects are not 
+the sum of the effects of the causes, 
+in which every constellation of what 
+actually goes on has a kind of 
+uniqueness and cannot be put to- 
+gether out of similar simpler cle- 
+ments. Most of the problems that 
+have yielded to high-speed comput- 
+ing, and many that are on the books 
+for the future, have this characteris- 
+tic, and in that they go beyond the 
+familiar mathematics of the last cen- 
+turies. 
+
+“I think I can illustrate this by tak- 
+ing three examples. Two are familiar 
+in the sense that a lot of work has 
+been done on them. The third is for 
+the books, for the future. | 
+
+
+Annals of the History of Computing, Volume 5, Number 2, April 1983 ° 157 
+
+
+Announcement and Dedication 
+
+
+“The first is the perpetual problem 
+
+
+of weather. How does the atmos- 
+phere act? And this, as everyone 
+knows, is a complex problem in 
+strongly non-linear hydronamics. 
+Great progress is being made in us- 
+ing rough information about the 
+state of the atmosphere today to 
+know something about the state of 
+the atmosphere tomorrow-—and that 
+this will be of practical importance 
+1 need hardly add. 
+
+“What will come out of it, too, is 
+that after the accumulation of ex- 
+perience, which in this case is not to 
+take weather readings so much as to 
+do calculations, and check them oc- 
+casionally against weather readings 
+to see whether you got the point of 
+that particular situation, a new kind 
+of order and simplicity will emerge, 
+because we will know what makes 
+a difference, we will know what is 
+important, we will know what is 
+trivial, we will even know (even 
+though I think it in this case un- 
+likely), whether we have forgotten 
+some very deep or surprisingly new 
+point. 
+
+“A second example, that is even 
+more striking, it this; We from time 
+to time get messages of immense 
+stellar explosions which may have 
+taken place some hundred million 
+years ago. It is hard to do experi- 
+ments with those things. No one can 
+go back a hundred million years, and 
+no one wishes to go out a hundred 
+million years into space in order to 
+learn what effect mankind, if he then 
+survives, will see two hundred mil- 
+lion years from now. And yet it is 
+of great interest and excitement, and 
+
+
+a challenge to man’s imagination, 
+to try to figure out what causes these 
+great events. This is also a deeply 
+non-linear problem, in all likelihood 
+a problem where the fundamental 
+laws are known, a problem where 
+the mathematical unscrambling will 
+be the payoff. 
+
+
+Aids Atomic Research 
+
+
+“The third example is a more mod- 
+est thing, but also in its way striking, 
+and that has to do with the state 
+of affairs, not in an exploding star, 
+but in an atomic explosion. Here | 
+think a whole new tradition of the 
+use of computers and of computa- 
+tional methods has been built up. 
+And even today, when there have 
+been a large number of atomic ex- 
+plosions, the inside of an exploding 
+bomb is not a cozy place to observe; 
+a great deal of the normal experi- 
+mentation is foreclosed by that, and 
+by the cost and cumbersomeness of 
+the effort. Initially, there was a 
+much stronger argument, in that we 
+did not have enough stuff to make 
+an explosion. Then the important 
+proving grounds of atomic bombs 
+were the paper proving grounds in 
+which one tries to see what ought 
+to be going on. It is a rare, though 
+not an unheard of event, that what 
+happens in Nevada and in the Pacific 
+tells us something important and 
+new, that had not been found in 
+this immense prior effort at under- 
+standing. This has set, I think, one 
+of the highest standards of analysis 
+that has ever appeared in what we 
+could call a generalized sort of engi- 
+neering. 
+
+
+158 + Annals of the History of Computing, Volume 5, Number 2, April 1983 
+
+
+“In all of these efforts, one hopes 
+for a lot. One hopes, first of all, out 
+of the wealth of experience to get a 
+simple view of what is at first quite 
+a complicated phenomenon. One 
+hopes that mathematics will eventu- 
+ally catch up in its full analytic 
+powers with the experience that the 
+computers give. One hopes to find 
+out what the important elements of 
+the problem are, and whether models 
+work. And one hopes, above all, to 
+find out if one has been a fool and 
+left out the mainspring of the phe- 
+nomena one has tried to investigate. 
+
+
+Useful in Genetics Study 
+
+
+“It seems clear to me that in the 
+statistical problems of genetics and 
+of population studies, as in studies 
+of economic models, experiment is 
+also going to be a very costly and 
+perhaps a prohibitive thing: thus | 
+would expect that in these fields, 
+too, the availability of computers 
+could be of unmeasured value. 
+
+
+“This is a new tool. It is a new 
+tool, as was the microscope. It is a 
+new tool, as are the tracers, the 
+radioactive tracers, which have so 
+recently become available to all 
+branches of science. It is, as such a 
+tool, a monument to man’s reason, 
+in two ways: to its limitation, be- 
+cause without experience, without 
+Massive experience, we never get the 
+point; to its power, because once we 
+have experience, knowledge cannot 
+regress, science can never be retro- 
+grade. It is a tribute to deep mod- 
+esty, and to the mind’s high splen- 
+dor.” 
+
+
+An dan oh 
+
+
+Announcement and Dedicati 
+
+
+on 
+
+
+IBM President Describes 701 Development 
+
+
+The work of IBM engineers 
+and scientists to develop and 
+manufacture the highly intricate 
+IBM Electronic Data Processing 
+Machines in the short period of 
+twenty-four months was de- 
+scribed at the New York luncheon 
+April 7 by Thomas J. Watson Jr., 
+IBM. President. 
+
+Introducing the younger Mr. Wat- 
+son, Thos. J. Watson, who presided, 
+suid that an idea and a personality 
+were behind IBM's development of 
+the new machines. 
+
+“The idea back of the new calcu- 
+lator was to build machines that 
+would go far beyond anything that 
+the company had accomplished be- 
+fore,” he said. “And the personality 
+behind the new machines was Thom- 
+as J. Watson Jr., President of our 
+company. He has followed the de- 
+velopment of the new machines, 
+sometimes day and night, from the 
+very inception of the idea. He has 
+taken the entire responsibility for 
+the executive staff all the way 
+through. This was an extra project 
+assigned entirely to him and he has 
+carried it through: in a way that 
+has made all of us happy and well 
+satisfied with the result. 
+
+
+Presents IBM President 
+
+“I present Thomas J. Watson Jr., 
+President of IBM.” 
+
+The IBM President said that it 
+was a difficult task to follow Dr. 
+Oppenheimer with any discussion of 
+mathematical computers because of 
+the honor guest’s great authority in 
+such matters. 
+
+“My discussion will be confined 
+to just how the new machines were 
+developed in our business,” he said. 
+“Following my remarks we will go 
+downstairs to the calculator room 
+to see how the machines actually 
+work. 
+
+“As Dr. Oppenheimer has ex- 
+plained, men have been trying to 
+simplify and mechanize arithmetic 
+problems for thousands of years. 
+The machines we present today con- 
+stitute another step along the way, 
+and not the last step. 
+
+“As you enter the calculator room 
+please notice the Pascal computer 
+which is mounted at the left of the 
+entrance. This computer was built 
+30U years ago by the son of a French 
+customs collector who was kept up 
+lute nights figuring customs duties. 
+He invented a machine to solve the 
+problem, a simple machine which 
+probably was the first mechanical 
+
+
+computing machine to be built. The 
+principle of the big machines you 
+will see demonstrated is essentially 
+the same as the principle of that 
+first machine. Over the years man 
+has added capacity, flexibility and 
+speed. but nothing more. 
+War Heightened Demand 
+
+
+“After World War II the demands 
+for automatic computing increased 
+tremendously. We had a tremendous 
+shortage of mathematicians and en- 
+gineers. Employers wanted to free 
+their staffs for conception rather 
+than repetitive thinking, and it was 
+particularly important that the pro- 
+totype model of a missile, an air- 
+plane or a jet engine work cor- 
+rectly, because of the very high cost 
+of producing that prototype. 
+
+“For example, in the aeronautical 
+field, where this machine will do 
+much work, the prewar airplane re- 
+quired 70,000 man-hours of engi- 
+neering. In the postwar airplane, a 
+little bigger, 12,000,000 man-hours 
+of engineering were required. That 
+gives you an idea of the problems 
+that exist in the areas in which we 
+work. 
+
+“The tremendously increased cost 
+of engineering and computation re- 
+quired new tools. and in the period 
+trom 1946 to 1950. 1BM) built a 
+hamnber of partial answers. We have 
+
+
+some 1,200 electronic computers of: 
+
+
+medium size in the field at the mo- 
+ment, and these computers height- 
+ened our knowledge of the field and 
+heightened the desire on the part 
+of a few customers for a much more 
+powerful tool. 
+
+
+“After the start of the Korean 
+crisis, greatly increased defense ac- 
+tivity in the aircraft, the atomic 
+energy and the munitions manufac- 
+turing fields increased the demands 
+for machines capable of engineering 
+computations of the highest order. 
+IBM was anxious to contribute in any 
+way it could to the defense effort. 
+
+
+Research Is Expanded 
+
+
+“Our electronic research had ex- 
+panded greatly after the war, and by 
+1950 our people felt they had com- 
+ponents which, if put together, could 
+make the very large capacity tool 
+that industry wanted. We developed 
+a paper plan and decided perhaps 
+we could get interested people to 
+indicate to us that they wanted such 
+a machine. Our engineers made a 
+trip to the West Coast and came 
+back with tentative orders for eight- 
+een. Then, because of the complexi- 
+
+
+ties of the problem, the engineers 
+
+
+and mathematicians of the people 
+who were going to buy the machines 
+sat down with our own engineers 
+and scientists and agreed on the de- 
+sired operating characteristics of the 
+machines. 
+
+
+Handles Tough Problems 
+
+
+“Many of you may wonder how 
+long it will be before these machines 
+will be in use in your office. At pres- 
+ent the new machine is so costly to 
+build that you must have a compli- 
+cated problem before it is applicable. 
+As Dr. Oppenheimer said, the prob- 
+lem must be obstinate and tough. 
+If any of you have obstinate and 
+tough problems we will be delighted 
+to apply a machine to them. 
+
+“As transistors and other types of 
+components make this equipment 
+less expensive, we think the office 
+equipment industry will present ma- 
+chines which will be applicable to 
+many jobs which are not now me- 
+chanized. 
+
+“Our scientists, engineers and pro- 
+duction people have an unusual rec- 
+ord in the production of these ma- 
+
+chines. Just twenty-four months ago 
+one of our scientists sat down in my 
+office and said, ‘I think we could 
+do such a job.’ At that point the 
+machines were not even on paper, 
+but now, twenty-four months later, 
+we are presenting the second ma- 
+chine we built. 
+
+“I would like to mention by name 
+all of the scientists who contributed 
+to the machines. Many of them are 
+sitting with you at your tables. But 
+I am afraid that the time is too 
+short, as we want to show you the 
+machines. 
+
+“The machine will be demonstrat- 
+ed by Dr. C. C. Hurd, Director of 
+our Applied Science Division. Dr. 
+Hurd came to IBM from the Atomic 
+Energy Project at Oak Ridge, where 
+he was one of the research directors. 
+He has been a tremendous help in 
+the scientific side of our business, 
+and he is able to make these com- 
+plex ‘machines and the complex 
+problems they do sound relatively 
+simple, which is no mean task. 
+
+“Dr. Hurd’s demonstration will 
+take just a few minutes, and for the 
+rest of the afternoon he and his as- 
+sociates will be available to answer 
+any questions of the scientists who 
+are here. 
+
+“We thank you very much for 
+coming, and thank you for your at- 
+tention.” 
+
+
+5 
+
+
+Annals of the History of Computing, Volume 5, Number 2, April 1983 * 159 
+
+
+Announcement and Dedication 
+
+
+IBM Engineers Designed and Built '701' Calculator in Record Time 
+
+
+Cognizant of the urgent need 
+for an improved electronic cal- 
+culator with greater speed, stor- 
+age capacity and flexibility than 
+existing machines, and which 
+could be produced commercial- 
+ly to solve complex problems of the 
+
+
+defense effort, Thos. J. Watson di- 
+rected the attention of the IBM en- 
+
+
+gineering and research organization 
+at the start of 1951 to the develop- 
+ment of what was to be the IBM 
+Electronic Data Processing Machines. 
+
+
+Throughout the intensified pro- 
+gram of research and development 
+which produced the new calculator 
+
+
+in record time, top executives at 
+World Headquarters and at Pough- 
+keepsie served in a planning, consult- 
+
+
+Planners, Consultants on Calculator 
+
+
+W. W. McDOWELL 
+
+
+J. W. BIRKENSTOCK 
+
+
+ing and advisory capacity. These ad- 
+visors included Thomas J. Watson 
+Jr., IBM President; W. W. Mc- 
+Dowell, Director of Engineering; J. 
+W. Birkenstock, Director of Product 
+Planning and Market Analysis; R. 
+L. Palmer, Manager of the Pough- 
+keepsie Engineering Laboratory, and 
+Dr. C. C. Hurd, Director of the Ap- 
+plied Science Division. 
+
+
+ps 
+
+
+DR. C. C. HURD 
+
+
+R. L. PALMER 
+
+
+160 * Annals of the History of Computing, Volume 5, Number 2, April 1983 
+
+

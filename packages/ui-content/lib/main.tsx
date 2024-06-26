@@ -1,10 +1,8 @@
-import type {JSX} from "preact"
-import {h} from "preact"
+import type {ChildrenIncludable} from "@onlyoffice/preact-types"
+import {type JSX, h} from "preact"
 
-export interface ContentParameters {
-  children?: any
-}
+export interface ContentProperties extends ChildrenIncludable {}
 
-export function Content({children}: ContentParameters): JSX.Element {
+export function Content({children}: ContentProperties): JSX.Element {
   return <div class="content">{children}</div>
 }

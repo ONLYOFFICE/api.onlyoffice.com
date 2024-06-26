@@ -1,0 +1,845 @@
+725 
+
+
+Uber die Strahlung der freien Elektronen 
+im Coulombfeld. 
+
+
+Von J. R. Oppenheimer*, zurseit in Ziirich. 
+
+
+Mit 5 Abbildungen. (Hingegangen am 6. Mai 1929.) 
+
+
+Fir die Strahlung eines Elektrons im Felde eines positiven Ions ergibt die Quanten- 
+
+mechanik Werte, die von den klassischen und korrespondenzmafigen wesentlich 
+
+abweichen. Die neuen Werte ergeben die richtige Gréfenordnung fir die kon- 
+tinuierliche Absorption im Innern der Sterne. 
+
+
+Bekanntlich liefert die Kramerssche Theorie eine befriedigende Er- 
+klarung der Bremsstrahlung**. Auf Grund dieser Theorie lassen sich 
+nicht nur die Form der Isochromaten und der spektralen Verteilung ver- 
+stehen; sie gibt auch die GréSenordnung der Gesamtstrahlung richtig 
+wieder. Dagegen fiihrt die Anwendung der Theorie auf die Berechnung 
+der kontinuierlichen Absorption im Innern der Sterne zu Werten, die 
+zehnmal kleiner sind als die, die man aus den astronomischen Daten er- 
+halt ***, Diese sind also weder mit der Theorie noch mit den Ex- 
+perimenten im Einklang. . 
+
+Nun sind die Zustinde im Innern der Sterne wesentlich von den- 
+jenigen verschieden, die man in der Réntgenréhre trifft. Denn in einem 
+Falle sind die Atome, auf die das strahlende Elektron trifft, unzerstérte 
+normale Atome; im anderen Falle aber sind sie wegen der groSen [oni- 
+sation praktisch nackte Ionen. Dieser Unterschied bringt nun mit sich, 
+da8 fiir Frequenzen oberhalb der Kantenfrequenz die Strahlung in den 
+zwei Fallen wesentlich verschieden sein muS. Da nun in beiden Fallen 
+die Strahlung an der Kante kontinuierlich verlauft, darf man nicht ohne 
+weiteres schlieBen, da8 die kontinuierliche Strahlung in beiden Fallen 
+praktisch die gleiche sein wird; in der Nahe der Kante kénnte man Ab- 
+weichungen erwarten. Freilich sind diese Abweichungen in der K- 
+Réntgenabsorption nicht sehr wesentlich; aber da8 sie wesentlich sein 
+kinnen, zeigt die Tatsache, da® die kontinuierliche Absorption fir die 
+Alkalien 20 mal kleiner ist als die, die man aus einem wasserstoff- 
+ahnlichen Modell berechnet. Nun ist die Strahlung in der Nahe der 
+Kante ftir das astronomische Problem besonders wichtig; denn die mittlere 
+
+
+* National Research Fellow and Fellow of the International Education Board. 
+** H. A. Kramers, Phil. Mag. (6) 46, 836, 1923. 
+*ek AS. Eddington, Internal Constitution of the Stars, Chap IX. Oam- 
+bridge 1926. 
+
+
+46* 
+
+
+726 J. R. Oppenheimer, 
+
+
+Translationsenergie der Elektronen ist nur ein Bruchteil der mittleren 
+Energie der Quanten. Es besteht also die Méglichkeit, dab die Kramers- 
+sche Formel zwar fiir die Bremsstrahlung, nicht aber ftir die Strahlung 
+eines Elektrons im Felde eines nackten Kernes die richtigen Werte liefert. 
+
+Wir werden sehen, da8 die Quantenmechanik eine Strahlung ergibt, 
+die von der Kramersschen wesentlich abweicht. Zum Vergleich geben 
+wir die Kramerssche Formel wieder: Wenn ein Strom von ein Elektron 
+pro Zeit- und Flacheneinheit mit der Geschwindigkeit v auf einen Z-fach 
+geladenen Kern sté8t, so lautet sie fiir die pro Zeit- und Frequenzeinheit 
+ausgestrahlte Energie 
+
+
+B22? 2? €® 
+1, == 8 (1) 
+3 V8 mv 
+Diese Formel gilt bis zur Kantenfrequenz y, == oe - In (1) hat die 
+
+
+GréBeg an der Kante den Wert 1, und wachst mit abnehmender Frequenz 
+sehr langsam an; sie wird mit verschwindender Frequenz logarithmisch 
+unendlich. Die Formel (1) schreiben wir 
+
+
+bi 4 
+i= — =— 1.8949, 
+ya’? q 
+
+
+wobei 
+320 27 68 
+
+
+C= 3am @) 
+
+
+Es wird sich nun ergeben, da8 diese Aussagen fiir kleine Frequenzen 
+richtig bleiben; fiir gréSere Frequenzen, und besonders in der Nahe der 
+Kante, finden wir ein ganz anderes Verhalten. Fiir sehr groBe Ge- 
+schwindigkeiten — solche, die einer Energie entsprechen, die das Hundert- 
+fache der Ionisationsarbeit iibertrifft — ist die Strahlung sogar geringer 
+als die nach (1) berechnete. Aber in dem Gebiet, das in den Sternen in 
+Betracht kommt, ist sie 10- bis 30 mal gréBer. 
+
+Wir gehen nun zur Rechnung iiber. Sie la8t sich nach bekannten 
+Methoden durchfiihren, indem man die Matrixkomponenten der Polarisation 
+ausrechnet und in die quantenmechanische Formel* fiir die Intensitat der 
+Strahlung einsetzt. Da die Bewegungsrichtung der Elektronen nach dem 
+Sprung beliebig ist, kommt bei uns noch eine Integration iiber diese 
+Richtungen vor; und es handelt sich nur darum, die Rechnung so zu fiihren, 
+
+
+* Hierbei vernachlassigen wir den Impuls der Strahlung, das ist fiir die An- 
+wendung der Ergebnisse im Innern der Sterne wegen der geringen Geschwindig- 
+keiten erlaubt. Fiir die Berechnung der Intensitét sehr harter Strahlung waren 
+unsere Formeln nicht anwendbar. 
+
+
+Uber die Strahlung der freien Elektronen im Coulombfeld. 727 
+
+
+da8 man die Gré8e der Strahlung bei gegebener Anfangsgeschwindigkeit 
+méglichst leicht ablesen kann. 
+
+Es soll ein Strom von ein Elektron pro Zeit- und Flacheneinheit mit 
+den Geschwindigkeitskomponenten 0, 0, » auf einen Z-fach geladenen 
+Kern stoSen. Wir fiihren die parabolischen Koordinaten 
+
+
+1 
+Eé=rte4; no=r—2z; p= are tang ©; dv = 4 Etna dydo 
+und die Abkiirzungen 
+he 2umy 1 wz kv RZ? 
+
+
+a 
+
+
+— —____: = n v = 
+An? m Ze’ ah? ak hv ? 4a n2 
+
+
+ein. Dann lautet die Wellengleichung 
+
+
+0 /,0W 0 Ow 1 1\¢@ i? 1 
+xe (tae) tos (nS) + Ser as [3 Etm+7|¥=0. 
+Der Ausgangszustand der Elektronen 148t* sich dann durch eine Lisung 
+dieser Gleichung einfach darstellen: 
+
+Wy = Cet? C—D F(in, 1,iky). (3) 
+[C? = em". P(1— in). (1 +in).o-}, 
+so entspricht (3) dem oben festgestellten Elektronenstrom. Hierbei ist 
+
+
+F die entartete hypergeometrische Funktion 
+(0) (@) 
+
+
+[e304 —2)-*ds. 
+
+
+Setzt man 
+
+
+I(b) 
+2ui 
+
+
+F(a, b, x) — 
+
+Wir gebrauchen ihre Reihenentwicklung 
+rb) Qr@ta«# 
+
+= (4) 
+Pa) =, 0(b+7) 0! 
+und ihren asymptotischen Wert fiir groBe |x| 
+{(— a)-¢ gt — 0 et) ; 5 
+Iro—a)' T@ $ () 
+
+Das System der Lésungen der Wellengleichung, die zum kontinuier- 
+lichen Spektrum gehoren, ist 
+
+
+F(a, b, #) == 
+
+
+F (a, b, x) = I'(b) 
+
+
+te ‘m == 0,1,2... 0 
+Pitman — Veman \—- cc la <0; ieee) 
+= Nev crime sian @—m p(M— I +ia, m+1, —ikg) (6) 
+‘ 1 
+("ye +iatins m+, ik) (E nym. 
+
+
+* W. Gordon, ZS. f. Phys. 48, 180, 1928. 
+
+
+728 J. R. Oppenheimer, 
+
+
+Da (8) axialsymmetrisch ist, werden wir nur pan UDd Yrr4n ZU 
+gebrauchen haben. Diese normieren wir in der av-Skale gemé8 der 
+
+
+Bedingung 
+atin Ao 
+Jar tman | de’ J fav’ Wma == 1 pin 
+So erhalt man fiir die normierenden Faktoren N z.B. — vgl. (5) — 
+
+
+em yk? I, + Ty) 
+2(|rG —ia)? |G —tia—in)-’ 
+
+
+—-2 — 
+Nor — 
+
+
+-0{ (St {md da} sin e+} (98) = 22°, 
+
+
+T, = aie {in én: Aa. cin |S G2 | Qnén a 
+
+
+So wird 
+
+
+Novy = 4umkh- (67% 4 e~7%)—1 (e%@ 4 ea —22n)—1 (7) 
+und 
+
+
+Neiev—4amPh-le(a+n) (e%@ = e77%)—1 (ere — Ee e242) 1, (8) 
+
+
+Fir die Strahlung, die mit ihrem elektrischen Wektor parallel z 
+polarisiert ist, hat man dann 
+
+
+64 ot | Ol? (vy — 42p 
+ee. f du Neew [Teh @) 
+
+
+— co 
+
+
+wobei 
+os bed did 2 2 
+=; g ng — 4) Wy Yoon: 
+0 
+
+Fiir die senkrechte Komponente gilt 
+
+64a4| CP — ve r a ar) 
+I | dew LEP 
+
+ie ag (10) 
+
+
+ins all dé dy (E+ 4) En)? Uy Vrr2n CF*Y. 
+
+
+0 
+
+
+a 
+
+
+Uber die Strahlung der freien Elektronen im Coulombfeld. 729 
+
+
+Gebraucht man die Beziehungen* 
+bF (a, b,x) = (b—a) F@,b+1,2)+aF(e+1,641, a), 
+aF (a, b, 2) = (b— a) F(a — 1, b, 2) — 6 — 2a) Fa, b, 2) 
+—aF(a+1, b, 2), 
+(edge * 'P@,0,—ikb Fb, —ik'® (14) 
+
+
+eo 
+
+
+_ (b—a—a)u+a'—a { pee 
+
+
+i(k—F) age * * F (a,b, —ik&) F(ab, ik 8) 
+
+
+wobei 
+gh EE 
+hth wn tn 
+
+
+ist, so lassen sich ZZ und Jz auf die Integrale 
+
+
+) k+k' 
+I= fate? ° FG—ia lik 8; 
+0 
+
+
+AtK 
+
+
+T= [edge * * FOL —ie, 2,188), 
+0 
+0 oes 
+
+I, = Jane 2" F(—in, 1, —ikn) FG —ia—inl, 1, —ik'n), 
+0 
+=o bee, 
+
+I, = [ndye 2" F(~-in, 2, —ikyn) F(—ia—in’, 2, —ik'n), 
+0 
+oo kth 
+
+
+I, = [ndne *? "FQ —in, 2, —iky) FU—ia—in’, 2, —ik'n) 
+
+
+zuriickfiihren. 
+
+
+Diese Integrale konvergieren nicht. Da man aber aus den Be- 
+wegungsgleichungen und der Konvergenz der Beschleunigungsmatrix- 
+integrale weiB, daB die entsprechenden Matrixkomponenten existieren, kann 
+man die Integrale durch Verschiebung des Integrationsweges um einen 
+Viertelkreis in der unteren baw. oberen & bzw. 4-Ebene auswerten. Denn 
+fiir diese Integrale verschwinden bei der Beschleunigungsmatrix die lings 
+dem unendlichen Viertelkreis genommenen Terme, und man kann die 
+
+
+* P. S. Epstein, Phys. Rev. (2) 27, 695, 1926. 
+
+
+730 J. R. Oppenheimer, 
+
+
+Integrale iiber die imaginare £- bzw. 7-Achse durch Einsetzen der Reihen- 
+entwicklungen (4) gliedweise integrieren*. So findet man 
+
+
+( ang ETH 1 i ae — 2% : 
+L =e 2 FuE—ia, as cae os wate tie, 
+: (12) 
+—A4 
+I.= —1+ie 
+7 ERY 
+
+
+Ferner wird 
+fie jkte, 1 
+I,=fdne ® "F(—in, 1, —iky) F(5—ia—in’ 1, —ik'n) 
+
+
+0 
+
+
+aa pe ela 
+
+
+( pate 
+ELS, rime 2 OO oe) 
+
+
+24 Un tte sep wa (—in+s) 
+a —Yotiat+in x 
+Roe o = T(— ins! 
+Me ue ct 2K 
+F(5—ta —in', —51 ETE) 
+— 23 yu-tle tia tin! = Lin +s) et ts 
+ras I(—in) s! |G —ia—in)/ 
+1 
+2k Akk' z 
+ae—Ye—ta—in' (| _.e\—1 ‘ fg 
+ler lg—ta—tin’(] __g)— tla ttetin Gorté pon) 
+
+
+1 
+px) Any Uetiatin 
+t le 
+= ta | dzgg—'l2—ie—in’ 
+0 
+
+
+k+k |[G—ia—in)P 
+
+
+ba es Akk' 2 \ in 
+qd — 2) Matterin’ (w+ a a4) 
+
+
+Zie~ 7m Ypttadtal +é Pale. xe oy 
+=e gee eR ‘n F(—ins —ia—in' 1, —4) (13) 
+wo 
+Akk 
+‘= GK 
+— (k — ky 
+a 
+—4e-7™ Pre ee P ; Se 
+epee tin F(—in, 1 —ia—imn, 2, — q), 
++4e-7 wa 
+Gaps Pe 1—ta —in’, 2, — q). 
+
+
+* Den Hinweis auf diesen Kunstgriff verdanke ich Herrn Prof. Pauli, der die 
+Methode fiir die analoge Rechnung in Polarkoordinaten gebraucht hat. 
+
+
+Uber die Strahlung der freien Elektronen im Coulombfeld. 731 
+
+
+Daraus wird, unter Benutzung von (11) und u = Latah 
+n +7 
+4 —3 p- tH 
+|I2|= Ts a (1—2ia—2in’) F(— in, 2—ia—in',1,—4) 
+4inn' ; 
+(1 Qia —2in' 4 ew) EC in,t-—ia—in', 1, —q|,b (13) 
+32 wu—4 eo 7” ? : Seige 2 
+t= ak LEP |F (1 —in, 1—ia —in’, 2, —y)j. 
+Die Integration iiber o 1aBt sich ausfiihren. Sie fiihrt aber zu unend- 
+lichen Reihen — im wesentlichen die, die man direkt erhalt, wenn man 
+mit Polarkoordinaten rechnet —, die fiir numerische Auswertung un- 
+
+
+geeignet sind. Wir werden also die Rechnung fir drei Spezialfalle durch- 
+fihren; die Werte der Emission sind dann fiir beliebige Frequenzen und 
+Geschwindigkeiten durch eine kleine graphische Interpolation erhaltbar. 
+Die drei Falle sind: 
+
+a) n> oc. Das entspricht der Kante und ihrer unmittelbaren 
+Nihe. Das Gebiet der Giiltigkeit dieser Formeln wird fiir groBe Ge- 
+schwindigkeiten klein. Deshalb betrachten wir auch 
+
+b) » > 0. Dadurch kénnen wir die Emission fiir alle Geschwindig- 
+keiten in dem Frequenzbereich vy, < v < 1 y, bestimmen. 
+
+c) q—> oo. Das entspricht dem entgegengesetzten Grenzfall langer 
+Wellen. Aber diese Naherung hat ein viel gréferes Anwendungsgebiet, 
+da 1/q bis zu Frequenzen 2, recht klein bleibt. 
+
+Die Kurven lassen sich dann ohne wesentliche Unbestimmtheit von 
+vy = 0 bis vy = », ziehen. 
+
+a) Fiir 2' > oo werden 
+
+
+[F(1—in, 1~ia—in’, 2, —g| ~ |F(1—in, 2, 4incz)|, 
+
+
+3 
+| —2éa— Bin) F(—in, ata EA A =a) 
+
+
+2 
+4inn’ 1 
+— (1-240 —2in! + 59") wf im, = —ia—in' 1, —1)| 
+320. 8 : ‘AG 
+~ 4nit—! — vc F(—in, 1, 4inz)|, 
+Ot 
+wobei t == 1+ a/n'. Die Integrale tiber @ miissen dann nur iiber die 
+
+
+Strecke — n’ bis 0 genommen werden, und man erhilt 
+I? = 440 Q9,, 
+
+
+San3 (16) 
+
+
+I a 3 @ Xn: 
+
+
+732 J. R. Oppenheimer, 
+
+
+wo Q durch (2) gegeben ist, und 
+
+
+2nn 0 2 
+ae = 9 | 8 —_i ; | 
+Ou = gee [dee at F(—in, beet) a 
+0 
+: (17) 
+122%” . . 8 
+ln = Zan 7 dz.t.(1— +) |F(l — in, 2, 4inz)[* 
+
+
+0 
+Diese sind nicht durch elementare Funktionen darzustellen. Fir grofe 
+Geschwindigkeiten findet man unter Gebrauch von (4) 
+a, = 1—xn, Yn = 1— a0. (18) 
+Fir kleine Geschwindigkeiten kann man eine asymptotische Formel fir 
+F benutzen. Aber da hier auch ein Parameter gro8 wird, ist (5) ungiiltig; 
+nach der Sattelpunktmethode findet man 
+
+
+1 
+ee (x? F(in, 1, -—4icn)} ~ 2n2t F(1 + in, 2, —4irn), 
+
+
+Ain? enl2n (4.7 m)i—in ern (Agnyitin 
+"irda — in) (L—1/4r)-** FU +in) a apr 
+Das ergibt , 
+3n? 3 3 48 
+On = Ee tn © Gog (In4—F) WS. (19) 
+
+
+Fir zwischenliegende Werte von n kann man F' mittels (4) berechnen 
+und die Integrale graphisch abschiétzen. Die so erhaltene Emission ist 
+70 
+
+
+wi) 
+i 
+0 
+-5' —————l_ a — —_ 
+= 7 0 7 2 
+Fig. 1. 
+Als Abszisse ist Ingn aufgetragen. Als Ordinaten sind aufgetragen 
+1. In 10 
+
+
+2. In I#/Q an der Kante 
+3.InI7/Q 5» » » 
+
+
+in Fig. 1 aufgetragen, und zwar logarithmisch. Die numerischen Werte 
+der #,, Yn sind durch die Formeln 
+8a (n/2)? + 1 + wn)" lian 
+
+
+Bn itan > In =" an) (1 + 208) 
+
+
+(20) 
+
+
+Uber die Strahlung der freien Elektronen im Coulombfeld. 733 
+
+
+mit grofer Annéherung (innerhalb 10%) gegeben. Diese stimmen in den 
+zwei Grenzfallen mit (18) und (19) iiberein und diirften fir die Berechnung 
+der Emission in der Nahe der Kante ausreichen. 
+
+Wenn » —> 0, gelten 
+
+
+| 3 
+(2a — Bin) F(—in, Sta — in 1, —4) 
+
+
+Ainn’ 1 Ann’ 
+—(1—2ia— Bin + ee F( in,-—ia—in’, 1a) 
+2 | n+t+n 
+
+
+ntn' + ” 
+|F(— in, 1 —ia—in’, 2, —9)| 
+mw [242 g-1 («+ n')—1 (1 — cos {2 + 2’) In w})"2 |. 
+Da a 
+a 
+| do (e7@ + e— 72)—1 (e7 4+ e7 a—2aM')\—1 — — i aaa 
+wird us 2D Jy 2)2 
+1 — n?7/n 
+Tt = 4ung o—"h ae . 
+Also wird an der Kante 
+Olt? 
+oi — 2. (21) 
+Ferner, da 
+d ao (a + n') — wil+n?) 
+(7 * — e— 72) (ere e— %a— Ban’) ~~ 6 al —e-2 mn!) 
+wird, wieder in der Nahe der Kante 
+. Ban? 1+ 1/n? 
+f= 3 @ 1 — e—22n' 
+und 
+Olan I* le ' ‘ 
+ig ae fir n' > o. (22) 
+
+
+Tragt man Emission gegen v/v, auf, so wiachst die Tangente an der Kante 
+mit n. Fiir die parallele Komponente ist sie dreimal so gro8 wie fir 
+die senkrechte. 
+
+c) Bis auf Glieder in I/q gilt* fiir g > 00 
+
+
+i = Anglzde—7™ | P(¢—ia—id).qtm : VG tiatid). geri ) 
+: G+ ky | PG-ia-in)Pdt+in) ~ PEt+ia+in)P(i-in)| | an 
+lz2| _ B2aqe—7™ V(-ta—i6).g* | iat id gta tin’ (2) 
+“ak + RY [| PU-ia—in)P+in) © P+iatin) Pin)!’ 
+
+
+* Whittaker und Watson, Modern Analysis, Abs. 14, 51, Cambridge 12e: 
+In der dritten Ausgabe ist die Endformel falsch. 
+Zeitschrift fiir Physik. Bd. 55. 47 
+
+
+734 J. R. Oppenheimer, 
+
+
+wobei 0 = n’—nist. Das ergibt 
+4 eo 
+_ +2 Qn | do 
+
+
+n+n 
+
+
+1+c0s {(%+6)lng + 2arg I($+io0+id)+2argl(1+in)+2argl'(¢—ia—in')} 
+(e%% 4 e— 72) (e7% + 7 24-228) 
+
+
+yee 822 Qnin’ 
+(n+ nyt 
+
+
+— 0 
+
+
+[# 
+
+
+? 
+
+
+1+cos{(a+d}Ing+ 2arg I’ (ia4+10)+2argM(1+in)+ QargI(1 —ia—in'’) 
+(1 +.6/e) (e7* —e~™*) (¢7% — e~ #4—270) . 
+
+
+Diese Integrale lassen sich durch geeignete Verschiebung des Integrations- 
+weges in der oberen bzw. unteren o-Ebene berechnen, wobei die Ver- 
+schiebung immer so durchzuftihren ist, daB auf dem Integrationswege die 
+aus dem cos herriihrende Terme im Limes g — oo verschwinden. In J* 
+sind die Residuen, am Pol auf der reellen Achse zu halbieren. So wird, 
+wieder bis auf Glieder in I/q: 
+_ 42 Qnd 
+(nen) (1 —e- 28) 
+
+1627 Qnin'd Ann’ 
+a pewaaiee [1 {1600+ 5 |—2]. 
+Hierbei ist 
+
+y == arg {T(1+in).TA—in).T(1—id}- 
+
+Diese GréBe verschwindet quadratisch in n und 0. 
+
+Da nun bei »y == 2%, q = 8 ist, liefert (24) eine gute Naherung 
+fir den gréferen Teil des Frequenzbereichs. Dieser Bereich nimmt 
+natiirlich fiir sehr kleine Geschwindigkeiten ab, denn fiir die Giltigkeit 
+von (23) mu vorausgesetzt werden, da8 n/q noch klein sei. 
+
+In den Fig. 2 und 3 sind die Punkte bis zu 7 v, aus (24) bestimmt; 
+in der Nahe der Kante gebraucht man (16), (21), (22). Aus diesen 
+Kurven sieht man, daf fiir n <j die spektrale Verteilung nicht sehr von 
+der Kramersschen abweicht. Bei kleineren Geschwindigkeiten ist jedoch 
+die Strahlung in der Nahe der Kante verhaltnismaSig nun viel grifer. 
+Andeutungen eines solchen Effekts scheinen in der Tat von Kulen- 
+kampff gefunden worden zu sein*. Diese Anhiufung der Strahlung in 
+
+
+Woe [1 + (4nn')—“2 sin (O In g — y}], 
+
+
+(24) 
+
+
+* H. Kulenkampff, Handb. d. Physik XXIII, 450, 1926; auch Ann. d. Phys. 
+(4) 79, 548, 1922. 
+
+
+Uber die Strahlung der freien Elektronen im Coulombfeld. 785 
+
+
+der Nahe der Kante hat auch die Folge, da8 die mit dicken Platten be- 
+obachteten spektralen Verteilungskurven fiir kleine Spannungen an der 
+Kante steiler ansteigen miissen als nach (1); und das wiirde den beobachteten 
+Knick erkliren kénnen. Diese Meinung ist dadurch gestiitzt, da8 bei 
+gegebener Spannung die GriSe des Knickes stark mit wachsender Atom- 
+nummer, also wachsendem », zunimmt*. An den Kurven sieht man ferner, 
+
+
+Fig. 2. Fig. 3. 
+Als Ordinaten sind ,aufgetragen Als Ordinaten sind aufgetragen 
+1, 17/Q far n = 1/4 1. 77/Q fir n = 2 
+2. 1219 ne 2. 171Q n= V2 
+3.1 3.7770 , n=1 
+477@ n= 4.171Q , n=2 
+5. 17]7Q , n=1 
+
+
+5. I71Q , m= 1g 
+
+
+6 FQ ,n=0 a 
+
+
+da8 die Isochromaten im allgemeinen langsamer mit wachsender Spannung 
+zunehmen miiSten als nach der Kramersschen Theorie. 
+
+
+In Fig. 4 ist die Gesamtstrahlung als Funktion der Anfangs- 
+geschwindigkeit aufgetragen. Da diese von der durch (1) gegebenen 
+stark abweicht, diirfte sie kaum mit der Erfahrung im Bremsspektrum in 
+
+
+* H. Kulenkampff, 1. c., 8.455, Abb. 11. 
+A7* 
+
+
+736 J. R. Oppenheimer, 
+
+
+Einklang stehen. In Fig. 5 ist die Polarisation an der Kante aufgetragen. 
+
+
+Sie ist durch 
+I? — tJ 
+
+
++451 
+definiert. Man sieht, da§ ihr Wert nie unter 75 fallt; dieser ist sehr 
+viel gréSer als der, den man bei dicken Schichten’ in der Réntgenréhre 
+
+
+findet*. Die Diskrepanz diirfte zum Teil 
+auf fast elastische ZusammenstéBe im Me- 
+tall, zum Teil aber, wie auch die Dis- 
+4 krepanz in der Gréfe der Gesamtstrahlung, 
+auf die Abschirmung der atomaren Elek- 
+tronen zurickzufihren sein. 
+Um diese Ergebnisse auf die Berech- 
+2 nung der ,Undurchsichtigkeit“ der Sterne 
+anwenden zu kénnen**, mu man auch 
+die Strahlung mit berticksichtigen, die 
+
+
+P — 100. 
+
+
+7) 
+
+
+* 
+
+
+0 
+TO 72 dem Einfangen des Elektrons in einem 
+—lnn : ; 
+Fig. 4. gebundenen Zustande entspricht. Denn die 
+Als Ordinate ist aufgetragen Gré8e der kontinuierlichen Strahlung ist 
+ve par zwar eine notwendige, nicht aber eine 
+Pe Vo hinreichende Bedingung fir die GréBe der 
+
+2Q% 
+
+
+Undurchsichtigkeit; und die Strahlung, die 
+
+
+a ane aa dem Einfangen entspricht, ist auch erheb- 
+Pe lich gréBer als die, die Eddington * 
+| diesen Spriingen zugeschrieben hat. Nach 
+
+50 4 derselben Methode, die wir gebraucht 
+
+
+—lnn haben, um (9), (10) und (15) abzuleiten, 
+findet man namlich fiir die gesamte 
+Intensitét der Strahlung, die mit dem Einfangen im n-ten Zustande ver- 
+kniipft ist: 
+
+
+—4nare tan Nin 
+
+
+It = 4° QRZ? N-*° 
+
+
+J — e220 1 
+
+
+N-1 : ~, —AinN 
+aa (Na —1) F(—in 24a N, 1, atin) 
+QinN ; —4inNyP 
+SO cgi) ee cay) 
+
+
+* H. Kulenkampff, Handb. d. Phys. XXIII, 450, 1926; auch Ann. d. Phys. 
+(4) 79,548, 1922. 
+** A. Eddington, Llc. 
+
+
+Uber die Strahlung der freien Elektronen im Coulombfeld. 737 
+
+
+fiir die parallele Komponente und 
+[e= 642? QRZ? N—-2 e—4n are tan Nin s, 
+G+ Nn? i—e-aan 
+
+
+2 
+
+
+N—2 
+8, = S@t+y (¥—a—n|F (1 in 2+ aN, " —tie3 
+a=0 
+
+
+(N+ in? 
+
+
+fiir die senkrechte*. Wiederholt man nun die Eddin gtonsche Rechnung, 
+
+so ist an den allgemeinen Ergebnissen wenig zu andern. Wegen der 
+
+expliziten Abhingigkeit von der effektiven Kernladung, die nun auftritt, 
+
+und wegen ihrer Abhingigkeit von der Temperatur wachst die Undurch- 
+
+sichtigkeit etwas langsamer mit abnehmender Temperatur. Man findet 
+kyoc T—-3-2  statt kh, oc Toe. 
+
+
+Das liegt aber durchaus im Bereich der astronomisch méglichen Ver- 
+haltnisse: 
+kgoc T—*lz bis ky oc Tle. 
+
+Ferner kann man nun den von Eddington diskutierten Fall des Eisens 
+in Capella numerisch untersuchen. Dabei hat man die effektive Kern- 
+ladung gleich 25 zu setzen** und findet fir die Undurchsichtigkeit 
+k, = 35. Der von Eddington auf Grund der Kramersschen Theorie 
+gefundene Wert war 4,95; der astronomisch berechnete Wert ist 53. 
+
+
+Herrn Prof. Pauli michte ich fiir manche gute Ratschlage danken. 
+* Daraus findet man im Grenzfall N — oo fiir die Strahlung pro Frequenz- 
+
+
+einheit genau die Formeln (16). 
+** A. Eddington, 1. c., Chap X. 
+
+

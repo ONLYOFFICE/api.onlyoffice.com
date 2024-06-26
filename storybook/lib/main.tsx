@@ -18,6 +18,7 @@ function config(): StorybookConfig {
     ],
     staticDirs: [
       "../../ui/font/static",
+      {from: "../../packages/pagefind-fixtures/dist/pagefind", to: "pagefind"},
       "../../site/pages/_static"
     ],
     previewHead(head) {

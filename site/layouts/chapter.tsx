@@ -1,7 +1,19 @@
 // todo: replace with `config/sitemap.ts`.
 
 import type {Data, Context} from "@onlyoffice/eleventy-types"
-import {Chapter, ChapterContent, ChapterNavigation, Help} from "@onlyoffice/site-kit"
+import {
+  Chapter,
+  ChapterContent,
+  ChapterNavigation,
+  SearchClear,
+  SearchContainer,
+  SearchField,
+  SearchHidable,
+  SearchOutput,
+  SearchPlaceholder,
+  SearchTemplate,
+  Help
+} from "@onlyoffice/site-kit"
 import {GithubIcon} from "@onlyoffice/ui-icons/rich/24.tsx"
 import {Breadcrumb, BreadcrumbCrumb, Content} from "@onlyoffice/ui-kit"
 import {type JSX, Fragment, h} from "preact"
@@ -17,14 +29,33 @@ export function data(): Data {
 export function render({content, ...ctx}: Context): JSX.Element {
   return <Chapter>
     <ChapterNavigation>
+      <SearchContainer>
+        <SearchPlaceholder>Type <kbd>/</kbd> to search</SearchPlaceholder>
+        <SearchField label="Search" />
+        <SearchClear label="Clear" />
+        <SearchTemplate>
+          <li>
+            <a data-search-container-link></a>
+            <p data-search-container-matches></p>
+          </li>
+        </SearchTemplate>
+      </SearchContainer>
       <Navigation {...ctx} />
     </ChapterNavigation>
     <ChapterContent>
       <B url={ctx.page.url} />
-      <Content>
-        {ctx.title && <h1>{ctx.title}</h1>}
-        {content}
-      </Content>
+      <SearchHidable>
+        <Content>
+          {ctx.title && <h1>{ctx.title}</h1>}
+          {content}
+        </Content>
+      </SearchHidable>
+      <SearchOutput>
+        <Content>
+          <h1 aria-live="polite"><span data-search-container-counter></span> Results</h1>
+          <ol data-search-container-results></ol>
+        </Content>
+      </SearchOutput>
       {/* todo */}
       {/* <Help>
         <GithubIcon width={24} height={24} />

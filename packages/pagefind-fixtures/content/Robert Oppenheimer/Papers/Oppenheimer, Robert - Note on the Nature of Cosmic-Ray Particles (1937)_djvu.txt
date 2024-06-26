@@ -1,0 +1,150 @@
+LETTERS TO 
+
+
+fraction of unscattered neutrons to be detected, the effect is 
+necessarily small. 
+
+In another scattering experiment only one plate was used 
+and the detector was placed out of the direct beam at an 
+angle of about twenty-five degrees so that the only neutrons 
+counted were scattered neutrons, Again the number 
+counted was greatest with the plate demagnetized. The 
+percentage change was 4.1 percent +1.4 percent. The 
+probable error is rather large because of the high back- 
+ground of fast neutrons in a scattering experiment. 
+
+P. N. POWERS 
+H. CARROLL 
+
+
+J. R. DUNNING 
+Pupin Physics Laboratories, 
+Columbia University, 
+New York, N. Y., 
+May 18, 1937. 
+
+
+1 Powers, Beyer and Dunning, Phys. Rev. 51, 371 (1937). 
+
+2 Schwinger, Phys. Rev. 51, 544 (1937). 
+
+3 Bloch, Phys. Rev. 50, 259 (1936). 
+
+4 Hoffman, Livingston and Bethe, Phys. Rev. 51, 214 (1937). 
+
+
+Note on the Nature of Cosmic-Ray Particles 
+
+
+The results of Neddermeyer and Anderson,! and those of 
+Street and Stevenson,? seem quite clearly to indicate the 
+presence, in the penetrating component of cosmic rays, of 
+positive and negative particles of electronic charge, which 
+do not radiate and make showers as do electrons, and 
+which are not protons. Since the probability of radiation 
+can depend essentially only on the charge and the mass of 
+the particle, these authors suggest that we have here to do 
+with particles of mass intermediate between that of the 
+electron and that of the proton. If this mass u is unique, 
+it introduces a new constant /=h/ye into physics; and one 
+would hope to bring this into connection with the length 
+which plays so fundamental a part in the structure of 
+nuclei: the ‘‘size’’ of the proton and neutron: the range of 
+nuclear forces. The value of some 50-100 Mev which this 
+argument suggests for the mass of the particle seems 
+consistent with the cloud chamber observations. These 
+observations themselves, however, could be equally well 
+interpreted if the particles had a quite wide variation in 
+mass; nor do they exclude values considerably lower than 
+50 Mev. 
+
+In fact, it has been suggested by Yukawa‘ that the 
+possibility of exchanging such particles of intermediate 
+mass would offer a more natural explanation of the range 
+and magnitude of the exchange forces between proton and 
+neutron than the Fermi theory of the electron-neutrino 
+field. Thus a straightforward application to this problem 
+of the quantum theory of fields, developed for such 
+particles by Pauli and Weisskopf, gives a Heisenberg 
+exchange force approximately derivable from a potential of 
+the form —fce~!'/4arr. Yet in trying to account in 
+detail along these lines for the characteristics of nuclear 
+
+
+THE EDITOR 1113 
+
+
+forces, one meets with difficulties hardly less troublesome 
+than in the various forms of electron-neutrino theory which 
+have been proposed. In particular, the reconciliation of the 
+approximate saturation character of nuclear forces with the 
+apparent equality of like and unlike particle forces and 
+with the magnetic moments of neutron and proton could 
+here too be achieved only by an extreme artificiality. These 
+considerations therefore cannot be regarded as the elements 
+of a correct theory, nor serve as any argument whatever 
+for the existence of the particles; their valid content can 
+at most be this: that these particles may be emitted from 
+nuclei when sufficient energy (>yc?) is available, and that 
+they will ultimately prove relevant to an understanding of 
+nuclear forces. Since even with an energy up to 15 Mev 
+available for the disintegration, nuclei exhibit normal 
+8-decay, the mass of the particles must surely on this view 
+exceed 15 Mev. These particles need not then be primary 
+cosmic rays, but may be ejected from nuclei by y-rays (and 
+formed by pair production) in the upper atmosphere, and 
+thus complicate the degradation of the primary electrons 
+and greatly increase the effective penetration of the 
+radiation. 
+
+The incidence near sea level of multiplicative showers 
+may then be understood in a simple way. For on the one 
+hand we may expect some degraded shower radiation from 
+incident electronic primaries of high initial energy;® on the 
+other hand the penetrating particles will produce electronic 
+secondaries by extranuclear impacts; from the curvature 
+distribution of the particles, and with any acceptably low 
+value for their mass, one can see that impacts in which the 
+secondary has energy enough to initiate a small shower 
+should occur about once in 10 m water equivalent. At great 
+elevations (>3 km from sea level) the degraded shower 
+radiation should play the predominant part; under con- 
+siderable thicknesses of heavy absorber, at sea level, this 
+radiation. will be absorbed, and only the secondaries will 
+contribute to the multiplicative showers. Near sea level 
+the two contributions may be comparable in importance. 
+
+J. R. OPPENHEIMER 
+
+
+R. SERBER 
+California Institute of Technology, 
+
+
+Pasadena, California, 
+June 1, 1937. 
+
+
+1S. Neddermeyer and C. D. Anderson, Phys. Rev. 51, 884 (1937). 
+Goan. Street and E. C. Stevenson, Bull. Am. Phys. Soc. 12, 2, 13 
+
+3 Jt is true that the range of nuclear forces is roughly equal to e? /mc?; 
+but the fact that it has not been possible to find in electron theory itself 
+any satisfactory physical interpretation of this ‘‘electron radius’ 
+makes it seem likely that the interpretation of even this quantity must 
+essentially involve the heavy particles and their structure. 
+
+4H. Yukawa, Proc. Phys. Math. Soc., Japan 17, 48 (1935). 
+
+5 The number of electrons surviving at sea level depends critically on 
+the energy of the incident particles. For vertical incidence the number 
+surviving per primary of energy EF is 
+
+
+3-10-12 Xexp {x-? In (50x) +924}, 
+
+
+where x=}1ln F/I, and I1=75 Mev. This is the asymptotic form for 
+t{=27 of Eq. (36), in Phys. Rev. 51, 227 (1937). 
+
+

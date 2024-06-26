@@ -1,0 +1,404 @@
+Second Series February 15, 1931 Vol. 37, No. 4 
+
+
+THE 
+
+
+PHYSICAL REVIEW 
+
+
+NOTE ON THE STATISTICS OF NUCLEI 
+
+
+By P, EHRENFEST AND J. R. OPPENHEIMER 
+CALIFORNIA INSTITUTE OF TECHNOLOGY, PASADENA 
+
+
+(Received December 23, 1930) 
+
+
+ABSTRACT 
+From Pauli’s exclusion principle we derive the rule for the symmetry of the wave 
+functions in the coordinates of the center of gravity of two similar stable clusters of 
+electrons and protons, and justify the assumption that the clusters satisfy the Einstein- 
+Bose or Fermi-Dirac statistics according to whether the number of particles in each 
+cluster is even or odd. The rule is shown to become invalid only when the interaction 
+between the clusters is large enough to disturb their internal motion. 
+
+
+I. INTRODUCTION 
+
+
+HE band spectra of symmetric diatomic molecules show certain striking 
+differences from those of asymmetric molecules. For when the two nuclei 
+of the molecule are identical, the intensity of the individual lines of a band, 
+instead of varying smoothly from line to line, alternates more or less mark- 
+edly. This alternation may in most cases be understood! with the help of a 
+simple rule, but in the case of the N. molecule, the theoretical prediction 
+seems to disagree with experiment, in that it leads us to expect those band- 
+lines to be the niore intense, which are in fact weaker. In this paper we do not 
+propose to resolve this disagreement; we shall only try to give as direct a der- 
+ivation as possible of the rule which plays the cardinal part in obtaining the 
+theoretical prediction. For it seems that, in spite of the frequent citations of 
+this rule, no explicit derivation of it from Pauli’s exclusion principle has been 
+published. In giving this derivation we shall have to investigate the condi- 
+tions under which the rule is valid, and the degree of approximation to which 
+it may be expected to hold. 
+The rule may be stated: 
+
+
+R. “If we have two nuclei, each built up of ~ electrons and m protons, and 
+if the nuclei are in the “same inner state,” then not all the molecular states 
+which would be possible for an asymmetric molecule will be found to occur; 
+even, S 
+if n+m is only those states will occur for which the wave function 
+odd, U 
+remains unchanged 
+when we interchange the “coordinates” of the nuclei. 
+changes its sign 
+
+
+1 See the comprehensive report by R. S. Mullikan, Transactions of the Faraday Society 25, 
+611 (1929). 
+333 
+
+
+334 P, EHRENFEST AND J. R. OPPENHEIMER 
+
+
+When the nuclei are in different states, the molecule behaves like an asym- 
+metric molecule.” 
+
+Since we may expect the nuclei to be in their normal state, we should be 
+able by this rule to predict the weight of the states S and the weight of the 
+states A if we knew the degree of degeneracy g of the normal states of the 
+nuclei. Thus there will always be $¢(g—1) states S and $¢(g—1) states A pos- 
+sible; if 2 plus m is even, there will be g states S, if 2 plus m is odd, gstates A, 
+also possible. The relative weights of the states S and A will therefore be 
+
+
+(g + 1)/(g — 1) if mn + mis even 
+(g — 1)/(g +1) if m + mis odd. 
+
+
+If we ascribe the degeneracy of the normal state of the nuclei to the spatial 
+degeneracy of an angular momentum sh/27, then these ratios become 
+
+
+(s + 1)/s for m + m even 
+s/(s + 1) for m + m odd. 
+
+
+(1) 
+
+
+From this we see that, since ~-++m is odd for the nitrogen nucleus, the 
+states A should have a greater weight than the states S. According to the 
+assertions of band spectroscopists, the electronic wave functions of the normal 
+state of the Ne molecule are symmetric in the coordinates of the nuclei, and 
+there is no resultant electronic angular momentum parallel to the molecular 
+axis. If we accept these assertions, we are led to expect a greater weight for 
+states of odd rotational quantum number than for those of even quantum 
+number; and it is this expectation which is not confirmed by experiment. 
+
+Our problem is now so to refine the expressions “internal state” and “in- 
+terchange the coordinates of the nuclei” in our rule R, that we can derive the 
+rule from the exclusion principle. 
+
+
+II. WAVE PACKETS FOR A SYSTEM OF Two CLUSTERS 
+
+
+We shall consider first the following preliminary problem: Suppose that 
+we have a system containing 27 electrons and 2m protons. Suppose further 
+that for any group of electrons and m protons we could write down a com- 
+plete set of wave functions u; for the stationary states k; how then, using any 
+two of these wave functions uw, and w;, can we build up a wave packet for the 
+whole system which satisfies the exclusion principle for all the electrons and 
+all the protons in the system? Only when the particles of the system do not 
+interact at all will these wave packets represent the stationary states of the 
+whole system; but with the help of these packets, by linear combination, we 
+shall be able to build up wave functions which do represent stationary states 
+for any interaction energy of the particles. The functions u may for instance 
+represent states of a nucleus, or an atom, or a molecule, or even some aper- 
+iodic motion of the ” plus m particles; for this preliminary problem we need 
+to make no assumption about them; but we shall see later that only when the 
+functions u represent very stable configurations: 1.e. very tight binding of the 
+particles,—can we deduce any significant results; and so we shall call any 
+group of z electrons and m electrons a cluster. 
+
+
+STATISTICS OF NUCLEI 335 
+
+
+Let the cartesian coordinates, referred to a fixed axis system, and the com- 
+ponent of spin in a fixed direction, of the jth electron be x;; similarly let the 
+coordinates and spin of the zth proton be y;. Let us split up each of the func- 
+tions u into two functions, a function 7, which depends only on the coordi- 
+nates of the center of gravity of the cluster, and a function y, which depends 
+on the relative coordinates of the particles, and on the spin variables: 
+
+
+seid Bis, i PT oe Sy ye Be. ert SRG. Ba SED 
+= T.(a)o(a@) 
+iid 206 Te Gusnes $e) 
+ST (Xng1 +++ Kany Vmti s+ + Vam)Wr(Sng1 + + LonVmp1 ++ + Yom) = T.(B)p-(6) 
+
+
+We write a for the arguments (30149 - + + Xn, Vide > + Ym) and 8 for the argu- 
+ments (Xn41Xn42° + + Lony Vnsi Vm42° + + Vom) 
+
+
+Since T depends only on the sum of the coordinates of the electrons, and the 
+sum of the coordinates of the protons, and does not involve the spins at all, 
+it must remain unchanged when we make an arbitrary permutation of the 
+arguments x of u among themselves or of the arguments y of u among them- 
+selves. On the other hand uw must be antisymmetric in its arguments x and 
+in its arguments y, since otherwise it could not represent a stationary state 
+for the cluster allowed by the exclusion principle. Thus Y must be antisym- 
+metric in the x’s and in the y’s. Let now P be an operator which makes an 
+arbitrary permutation of the x’s and an arbitrary permutation of the y’s in 
+any function of x1 +--+ Xen) ¥1 °° * Yen, and let p be the order of the permuta- 
+tion P. Then the functions 
+
+
+1 
+
+Pasor = amy] Teh PA Pole (alevel6)} (2) 
+satisfy the exclusion principle, if the summation be taken over all the (27)! 
+(2m)! permutations P. There are only r=(2m)!(2n)!/(m!)2(n!)?. different 
+terms in this sum, since by the antisymmetry of the y’s, all of the terms in 
+which the arguments of 7, (and therefore also of T;) are the same have Jer 
+ae same value. If we define a distribution by the symbol (x; ---, y;- .| 
+-Yqg-++) in which the arguments of 7, are to the left, those of r, to 
+ce ene of the line, and in which the order of the arguments to the left and 
+
+to the right is indifferent, then we can write 
+
+
+1 
+Peter = — Di(—)*P{ Ta) Ti B¥e(oe(B) } (3) 
+
+
+where now the summation is taken only over the 7 different distributions. 
+Now in Fet.¢¢ with o =7T, we can combine the term with the distribution 
+
+PEP ET GES pO Oey) (4) 
+with that with the inverted distribution 
+
+
+(Cyan ee 
+
+
+336 P, EHRENFEST AND J. R. OPPENHEIMER 
+This second term may be derived from (4) by 2 plus m interchanges, and will 
+therefore appear in the sum with the same sign as (4) if.” plus m is even, and 
+
+
+with the opposite sign if m plus 2 is odd. We may therefore write, with §= 
+( dis 1) m+n 7 
+
+
+1 
+Fateo = — >" (=)? P { Weloeve(8) [Ts(a) T(8) + 6Ts(8)T (a) ]} (5) 
+
+
+where now the summation is taken over the 7/2 different sets of arguments in 
+the y,’s. When 7o, we have instead, 
+
+
+1 
+Fite = — Dy (—) PP vo(a)ve(8)Ts(a) TB) + Oba(B)ve(ae) Ts(8) Ts(ax) } 
+
+
+which we may write 
+
+
+1 
+Fite => > (—) PP { [¥o(a)v-(8) + vo(B)¥-(e) | [Ts(a) T:(8) + 0T.(8)T (a) | 
+
+
+(6) 
++ [Yo(o)¥-(8) — ¥o(8)¥-(a) ][T.(a) T(8) — 07 .(8) Tela) ]} 
+symmetric ( even, 
+From (5) we see that Fst,¢¢ is in s and ¢ when m-n is: 
+antisymmetric lodd, 
+
+
+and, from (6), that for r#0, Fst,o, has, for n-++m either even or odd, both a 
+symmetric and an antisymmetric part, neither of which vanishes identically. 
+These properties of the wave packets F will make it possible to deduce our 
+rule. | 
+
+
+III. SYMMETRY OF WAVE FUNCTIONS FOR A SYSTEM OF Two CLUSTERS 
+
+
+We should expect that these symmetry properties in s and ¢ would persist 
+in the stationary wave functions built up from the F’s whenever the interac- 
+tion of the two clusters was too small appreciably to distort the internal con- 
+figuration of the clusters. In this paragraph we shall have to find the wave 
+functions @ for the stationary states of the system of two clusters. We shall 
+see that, when certain matrix components of the interaction energy of the 
+particles may be neglected, the ¢’s do in fact have the same symmetry in s, 
+t as the corresponding wave packets F; and we shall see further that the con- 
+ditions under which we may neglect these matrix components are just those 
+in which the interaction of the clusters does not greatly disturb their internal 
+motion. 
+
+Let E be the energy of the system, and H the Hamiltonian; it will in gen- 
+eral be given us as an operator on a function of the x’s and the y’s, and it will 
+be ‘impartial’ to all «’s and ‘impartial’ to all y’s. The wave equation for 
+b(x1 as Yom) will be 
+
+
+(H — E)¢ =0 (7) 
+
+
+Since ¢ must satisfy the exclusion principle, and since our original w’s formed 
+a complete set of functions, we may expand ¢ as a linear function of the F's: 
+
+
+STATISTICS OF NUCLEI 337 
+
+
+@ = » > > a(st, oT EF stor + », > a(st, o0)F ¢t.c0- (8) 
+(o ,7r) $s t g (s ,t) 
+OAT 
+
+
+Here the summation >)” is to be taken over all pairs (¢,7) with or, and 
+
+
+> @,t) over all pairs (s, t). We now introduce that part of the irreducible matrix 
+for H which belongs to the term system satisfying the exclusion principle: 
+
+
+(st, or | H| St o'r’) = J dV Pyt orl gv o'r. (9) 
+
+
+The integration (dV ---) is to be taken over the whole domain of all the 
+coordinates, and is to include a summation over the two values of all the 
+spin variables. With the help of this matrix we may write the wave equation 
+for the a’s which is equivalent to (8): 
+
+
+Dy. Dy Dek, o'7’ | H | st, or)a(st, o7) 
+
+
+(¢,7) 8 
+ont 
++ > Dils't’, o'r'| | st, oo)a(st, oo) = Ea(s't’, o'r’). (10) 
+
+
+o (s ,%) 
+
+
+By (5), (6) we have 
+
+
+D pee = OF ts ,r0 
+and | 
+a(st, or) = Oa(ts, Tc). | (11) 
+
+
+Suppose now that we may set 
+
+
+(st, or | H| s't', o'r’) 
+
+
+Mer Gaia (12) 
+
+
+We shall have later to see under what circumstances, and to what approxima- 
+tion, (12) is legitimate; but if we accept it, then we see that (10) reduces to a 
+series of independent equations, one for each pair of values of (¢, T) 
+
+
+o=T: > (a0, st | H| ao, st)alac, si) = Ealoo, s’t’) 
+(s ,é) ; 
+
+
+gr: >, > (or, s/t’ | H | oT, st)a(or, st) = Eator, s’t’) 
+& t 
+
+
+For each such pair of values (c, 7) we thus get a set of solutionsa (st); for o 
+( symmetric \ even; 
+=7 these will be: ins and t when m+ 7 is for o#r both 
+lerieomneete load : 
+symmetric and antisymmetric functions are possible. If we define the “state” 
+of the cluster by the o’s, then this result is fully equivalent to the rule (X) 
+given at the beginning of this paper. We may see this directly in the follow- 
+ing way: for the quantum numbers s, ¢, we may take directly the value of the 
+components of the total momenta of the two clusters; if we introduce the 
+
+
+center of gravity coordinates of the two clusters, X, Y by the conditions 
+sX — Xs = h/2wi; sY — Vs = 0; 
+
+
+(13) 
+WY — Vi = h/2wi; iX — X= 0; 
+
+
+338 P. EHRENFEST AND J. R. OPPENHEIMER 
+
+
+then we get the transformation functions: 
+(st/XY) xz eT eri/h(sX+tY) | (14): 
+
+
+The wave functions for the stationary states of the whole system are then 
+given as functions of X, Y by 
+
+
+Y_a(st, or)(st/XY). (15) 
+s,t 
+: symmetric even; 
+For o =7, these must be: in X and Y when +m is for 
+lene eae odd; 
+
+
+o #7 they may have either symmetry. 
+
+We have now only to consider the conditions for the validity of (12). If 
+the states o, 7 of the isolated clusters are degenerate, then the matrix ele- 
+ments of H corresponding to transitions between such degenerate states— 
+states in which the isolated clusters have the same internal energy,—may be 
+made to vanish by choosing suitably the u’s which give the stationary states 
+of the clusters. The terms 
+
+
+(st, ot | H | s't’, o’t’) 
+
+
+in which the states (o, 7) and (o’, r’) correspond to different energy levels of 
+the clusters, will, since the original “’s were chosen to make the internal en- 
+ergy of the isolated clusters a diagonal matrix, represent the matrix compon- 
+ents of the interaction and interchange energy of the particles in one cluster 
+with those in the other; and if the particles in the cluster are very tightly 
+bound together, these energies will be very small compared to the energy differ- 
+ences of two stationary states a, o’ of the isolated cluster. The terms which 
+were neglected in (12) therefore, will give in this case only very small correc- 
+tion terms to the a’s of the order of the ratio of the interaction energy of the 
+two clusters to their proper energy; in general these correction terms will 
+be neither symmetric nor antisymmetric in s and ¢, so that only for very stable 
+clusters may we expect a rule like (R) to hold: for the two identical atoms of 
+a symmetric molecule no such rule as (R) holds, since here the interaction 
+energy of the atoms is of the same order of magnitude as their proper energy. 
+Even in this case, of course, the exclusion principle for the electrons and pro- 
+tons reduces the number of possible stationary states; but here we cannot say 
+just what states are excluded by investigating only the symmetry of the cor- 
+responding wave functions in the coordinates of the center of gravity of the 
+clusters, but must study in detail the symmetry of the functions in the coor- 
+dinates of all the elementary particles. The importance of the rule (R) arises 
+from the circumstance, that in the dynamical treatment of most atomic and 
+molecular problems we do not need to know anything about the structure of 
+the nuclei, except that they are stable: we may treat them as point charges, 
+with, in some cases, a spin s which gives a proper intrinsic degeneracy. And 
+whenever this is so, we may use a rule like (R) to determine what states of the 
+system survive the exclusion principle. 
+
+

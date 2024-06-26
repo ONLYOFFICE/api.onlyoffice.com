@@ -1,0 +1,393 @@
+ROBERT OPPENHEIMER 
+ON ALBERT EINSTEIN 
+
+
+THOUGH I KNEW Einstein for two or three decades, it was only in the 
+last decade of his life that we were close colleagues and something of 
+friends. But I thought that it might be useful, because I am sure that it 
+is not too soon—and for our generation perhaps almost too late—to 
+start to dispel the clouds of myth and to see the great mountain peak 
+that these clouds hide. As always, the myth has its charms; but the 
+truth is far more beautiful. 
+
+Late in his life, in connection with his despair over weapons and 
+wars, Einstein said that if he had to live it over again he would be a 
+plumber. This was a balance of seriousness and jest that no one should 
+now attempt to disturb. Believe me, he had no idea of what it was to be 
+a plumber; least of all in the United States, where we have a joke that 
+the typical behavior of this specialist is that he never brings his tools 
+to the scene of the crisis. Einstein brought his tools to his crises; Ein- 
+stein was a physicist, a natural philosopher, the greatest of our time. 
+
+What we have heard, what you all know, what is the true part of 
+the myth is his extraordinary originality. The discovery of quanta 
+would surely have come one way or another, but he discovered them. 
+Deep understanding of what it means that no signal could travel 
+faster than light would surely have come; the formal equations were 
+already known; but this simple, brilliant understanding of the physics 
+
+
+5) 
+
+
+ROBERT OPPENHEIMER 
+
+
+could well have been slow in coming, and blurred, had he not done it 
+for us. The general theory of relativity which, even today, is not well 
+proved experimentally, no one but he would have done for a long, 
+long time. It is in fact only in the last decade, the last years, that one 
+has seen how a pedestrian and hard-working physicist, or many of 
+them, might reach that theory and understand this singular union of 
+geometry and gravitation; and we can do even that today only because 
+some of the a priori open possibilities are limited by the confirmation 
+of Einstein’s discovery that light would be deflected by gravity. 
+
+Yet there is another side besides the originality. Einstein brought to 
+the work of originality deep elements of tradition. It is only possible 
+to discover in part how he came by it, by following his reading, his 
+friendships, the meager record that we have. But of these deep-seated 
+elements of tradition—I will not try to enumerate them all; I do not 
+know them all—at least three were indispensable and stayed with him. 
+
+The first is from the rather beautiful but recondite part of physics 
+that is the explanation of the laws of thermodynamics in terms of the 
+mechanics of large numbers of particles, statistical mechanics. This 
+was with Einstein all the time. It was what enabled him from Planck’s 
+discovery of the law of black body radiation to conclude that light 
+was not only waves but particles, particles with an energy propor- 
+tional to their frequency and momentum determined by their wave- 
+number, the famous relations that de Broglie was to extend to all 
+matter, to electrons first and then clearly to all matter. 
+
+It was this statistical tradition that led Einstein to the laws govern- 
+ing the emission and absorption of light by atomic systems. It was this 
+that enabled him to see the connection between de Broglie’s waves 
+and the statistics of light-quanta proposed by Bose. It was this that 
+kept him an active proponent and discoverer of the new phenomena 
+of quantum physics up to 1925. 
+
+The second and equally deep strand—and here I think we do know 
+where it came from—was his total love of the idea of a field: the fol- 
+
+
+36 
+
+
+ALBERT EINSTEIN 
+
+
+lowing of physical phenomena in minute and infinitely subdividable 
+detail in space and in time. This gave him his first great drama of try- 
+ing to see how Maxwell’s equations could be true. They were the first 
+field equations of physics; they are still true today with only very minor 
+and well-understood modifications. It is this tradition which made him 
+know that there had to be a field theory of gravitation, long before the 
+clues to that theory were securely in his hand. 
+
+The third tradition was less one of physics than of philosophy. It is 
+a form of the principle of sufficient reason. It was Einstein who asked 
+what do we mean, what can we measure, what elements in physics are 
+conventional? He insisted that those elements that were conventional 
+could have no part in the real predictions of physics. This also had 
+roots: for one the mathematical invention of Riemann, who saw how 
+very limited the geometry of the Greeks had been, how unreasonably 
+limited. But in a more important sense, it followed from the long tra- 
+dition of European philosophy, you may say starting with Descartes— 
+if you wish you can start it in the Thirteenth Century, because in fact 
+it did start then—and leading through the British empiricists, and very 
+clearly formulated, though probably without influence in Europe, by 
+Charles Pierce: One had to ask how do we do it, what do we mean, is 
+this just something that we can use to help ourselves in calculating, or 
+is it something that we can actually study in nature by physical means? 
+For the point here is that the laws of nature not only describe the results 
+of observations, but the laws of nature delimit the scope of observa- 
+tions. That was the point of Einstein’s understanding of the limiting 
+character of the velocity of light; it also was the nature of the resolution 
+in quantum theory, where the quantum of action, Planck’s constant, 
+was recognized as limiting the fineness of the transaction between the 
+system studied and the machinery used to study it, limiting this fine- 
+ness in a form of atomicity quite different from and quite more radi- 
+cal than any that the Greeks had imagined or than was familiar from 
+the atomic theory of chemistry. 
+
+
+37 
+
+
+ROBERT OPPENHEIMER 
+
+
+In the last years of Einstein’s life, the last twenty-five years, his tra- 
+dition in a certain sense failed him. They were the years he spent at 
+Princeton and this, though a source of sorrow, should not be con- 
+cealed. He had a right to that failure. He spent those years first in try- 
+ing to prove that the quantum theory had inconsistencies in it. No one 
+could have been more ingenious in thinking up unexpected and clever 
+examples; but it turned out that the inconsistencies were not there; 
+and often their resolution could be found in earlier work of Einstein 
+himself. When that did not work, after repeated efforts, Einstein had 
+simply to say that he did not like the theory. He did not like the elements 
+of indeterminacy. He did not like the abandonment of continuity or 
+of causality. These were things that he had grown up with, saved by 
+him, and enormously enlarged; and to see them lost, even though he 
+had put the dagger in the hand of their assassin by his own work, was 
+very hard on him. He fought with Bohr in a noble and furious way, 
+and he fought with the theory which he had fathered but which he 
+hated. It was not the first time that this has happened in science. 
+
+He also worked with a very ambitious program, to combine the 
+understanding of electricity and gravitation in such a way as to 
+explain what he regarded as the semblance—the illusion—of discrete- 
+ness, of particles in nature. I think that it was clear then, and believe it 
+to be obviously clear today, that the things that this theory worked 
+with were too meager, left out too much that was known to physicists 
+but had not been known much in Einstein’s student days. Thus it 
+looked like a hopelessly limited and historically rather accidentally 
+conditioned approach. Although Einstein commanded the affection, 
+or, more rightly, the love of everyone for his determination to see 
+through his program, he lost most contact with the profession of 
+physics, because there were things that had been learned which came 
+too late in life for him to concern himself with them. 
+
+Einstein was indeed one of the friendliest of men. I had the impres- 
+sion that he was also, in an important sense, alone. Many very great 
+
+
+38 
+
+
+ALBERT EINSTEIN 
+
+
+men are lonely; yet I had the impression that although he was a deep 
+and loyal friend, the stronger human affection played a not very deep 
+or very central part in his life taken as a whole. He had of course 
+incredibly many disciples, in the sense of people who, reading his 
+work or hearing it taught by him, learned from him and had a new 
+view of physics, of the philosophy of physics, of the nature of the 
+world that we live in. But he did not have, in the technical jargon, a 
+school. He did not have very many students who were his concern as 
+apprentices and disciples. And there was an element of the lone 
+worker in him, in sharp contrast to the teams we see today, and in 
+sharp contrast to the highly cooperative way in which some other 
+parts of science have developed. In later years, he had people working 
+with him. They were typically called assistants and they had a won- 
+derful life. Just being with him was wonderful. His secretary had a 
+wonderful life. The sense of grandeur never left him for a minute, nor 
+his sense of humor. The assistants did one thing which he lacked in his 
+young days. His early papers are paralyzingly beautiful, but there are 
+many errata. Later there were none. I had the impression that, along 
+with its miseries, his fame gave him some pleasures, not only the 
+human pleasure of meeting people but the extreme pleasure of music 
+played not only with Elizabeth of Belgium but more with Adolf 
+Busch, for he was not that good a violinist. He loved the sea and he 
+loved sailing and was always grateful for a ship. I remember walking 
+home with him on his seventy-first birthday. He said, “You know, 
+when it’s once been given to a man to do something sensible, after- 
+ward life is a little strange.” 
+
+Einstein is also, and J think rightly, known as a man of very great 
+good will and humanity. Indeed, if I had to think of a single word for 
+his attitude toward human problems, I would pick the Sanscrit word 
+Abinsa, not to hurt, harmlessness. He had a deep distrust of power; 
+he did not have that convenient and natural converse with statesmen 
+and men of power that was quite appropriate to Rutherford and to 
+
+
+Bey 
+
+
+ROBERT OPPENHEIMER 
+
+
+Bohr, perhaps the two physicists of this century who most nearly 
+rivaled him in eminence. In 1915, as he made the general theory of 
+relativity, Europe was tearing itself to pieces and half losing its past. 
+He was always a pacifist. Only as the Nazis came into power in Ger- 
+many did he have some doubts, as his famous and rather deep 
+exchange of letters with Freud showed, and began to understand with 
+melancholy and without true acceptance that, in addition to under- 
+standing, man sometimes has a duty to act. 
+
+After what you have heard, I need not say how luminous was his 
+intelligence. He was almost wholly without sophistication and wholly 
+without worldliness. I think that in England people would have said 
+that he did not have much “background,” and in America that he 
+lacked “education.” This may throw some light on how these words 
+are used. I think that this simplicity, this lack of clutter and this lack 
+of cant, had a lot to do with his preservation throughout of a certain 
+pure, rather Spinoza-like, philosophical monism, which of course is 
+hard to maintain if you have been “educated” and have a “back- 
+ground.” There was always with him a wonderful purity, at once 
+childlike and profoundly stubborn. 
+
+Einstein is often blamed or praised or credited with these miserable 
+bombs. It is not in my opinion true. The special theory of relativity 
+might not have been beautiful without Einstein; but it would have 
+been a tool for physicists, and by 1932 the experimental evidence for 
+the inter-convertibility of matter and energy which he had predicted 
+was overwhelming. The feasibility of doing anything with this in such 
+a massive way was not clear until seven years later, and then almost 
+by accident. This was not what Einstein really was after. His part was 
+that of creating an intellectual revolution, and discovering more than 
+any scientist of our time how profound were the errors made by men 
+before then. He did write a letter to Roosevelt about atomic energy. I 
+think this was in part his agony at the evil of the Nazis, in part not 
+wanting to harm anyone in any way; but I ought to report that that 
+
+
+40 
+
+
+ALBERT EINSTEIN 
+
+
+letter had very little effect, and that Einstein himself is really not 
+answerable for all that came later. I believe he so understood it himself. 
+
+His was a voice raised with very great weight against violence and 
+cruelty wherever he saw them and, after the war, he spoke with deep 
+emotion and I believe with great weight about the supreme violence 
+of these atomic weapons. He said at once with great simplicity: Now 
+we must make a world government. It was very forthright, it was 
+very abrupt, it was no doubt “uneducated,” no doubt without “back- 
+ground”; still all of us in some thoughtful measure must recognize 
+that he was right. 
+
+Without power, without calculation, with none of the profoundly 
+political humor that characterized Gandhi, he nevertheless did move 
+the political world. In almost the last act of his life, he joined with 
+Lord Russell in suggesting that men of science get together and see if 
+they could not understand one another and avert the disaster which 
+he foresaw from the arms race. The so-called Pugwash movement, 
+which has a longer name now, was the direct result of this appeal. I 
+know it to be true that it had an essential part to play in the Treaty of 
+Moscow, the limited test-ban treaty, which is a tentative, but to me 
+very precious, declaration that reason might still prevail. 
+
+In his last years, as I knew him, Einstein was a twentieth-century 
+Ecclesiastes, saying with unrelenting and indomitable cheerfulness, 
+“Vanity of vanities, all is vanity.” 
+
+
+—This was a lecture delivered at UNESCO House 
+in Paris on December 13, 1965. 
+
+
+41 
+
+
+The Company They Kept 
+
+
+Writers on Unforgettable Friendships 
+
+
+PREFACE BY 
+Robert B. Silvers 
+
+
+EDITED BY 
+Robert B. Silvers and Barbara Epstein 
+
+
+NEW YORK REVIEW BOOKS 
+
+
+New York 
+
+
+THIS 1S A NEW YORK REVIEW BOOK 
+
+
+PUBLISHED BY THE NEW YORK REVIEW OF BOOKS 
+
+
+THE COMPANY THEY KEPT: 
+WRITERS ON UNFORGETTABLE FRIENDSHIPS 
+
+
+Copyright © 2006 by The New York Review of Books 
+Preface © 2006 Robert B. Silvers 
+
+
+All pieces © by individual authors: 
+
+“On John Cheever” © 1983 by Saul Bellow. Reprinted with permission of The Wylie Agency, Inc. 
+“Francis Bacon (1909-1992)” © 1992 by Caroline Blackwood. Reprinted with permission. 
+Excerpt from “Isaiah Berlin at Eighty” © 1989 by Joseph Brodsky. Reprinted by permission of Farrar, 
+Straus and Giroux, LLC, on behalf of the Estate of Joseph Brodsky. 
+
+“My Life with Stravinsky” © 1982 by Robert Craft. Reprinted with permission. 
+
+“Knowing S.J. Perelman” © 1987 by Prudence Crowther. Reprinted with permission. 
+
+“Hart Crane” © 1966 by Edward Dahlberg. Reprinted with permission. 
+
+“E. W. (1895-1972)” © 1972 by Jason Epstein. Reprinted with permission. 
+
+“Visiting Gertrude and Alice” © 1986 by Maurice Grosser. Reprinted with permission. 
+
+“Mary McCarthy in New York” © 1992 by Elizabeth Hardwick. Reprinted with permission. 
+Preface to the book There You Are: Writings on Irish and American Literature and History by Thomas 
+Flanagan; preface by Seamus Heaney; edited and with an introduction by Christopher Cahill; published 
+by The New York Review of Books. Preface © 2004 by Seamus Heaney. Reprinted with permission. 
+“On Bruce Chatwin” © 1989 by Michael Ignatieff. Reprinted with permission. 
+
+“Josephine Herbst” © 1969 by Alfred Kazin. Reprinted with permission of The Wylie Agency, Inc. 
+“In Memory of Octavio Paz (1914-1998)” © 1998 by Enrique Krauze. Reprinted with permission. 
+“Theodore Roethke” © 1963 by Stanley Kunitz. Reprinted with permission on behalf of the author by 
+Darhansoff, Verrill, Feldman, Literary Agents. 
+
+“Anthony Hecht (1923-2004)” © 2004 by Brad Leithauser. Reprinted with permission. 
+“Randall Jarrell, 1914-1965” © 1965 by Robert Lowell. Reprinted with permission. 
+“Delmore Schwartz (1913-1966)” © 1966 by Dwight Macdonald. Reprinted with permission. 
+“F.W. Dupee (1904-1979)” © 1979 by Mary McCarthy. Reprinted with permission of 
+The Mary McCarthy Literary Trust. 
+
+“On the Road” © 2002 by Larry McMurtry. Reprinted with permission. 
+
+
+“Sweet Evening Breeze” © 1984 by Darryl Pinckney. Reprinted with permission. 
+“Remembering Francis Crick” © 2005 by Oliver Sacks. Reprinted with permission of The Wylie Agency, Inc. 
+“On Jér6me Lindon, 1926-2001” © 2001 by Richard Seaver. Reprinted with permission. 
+
+“On Paul Goodman” © 1972 by Susan Sontag. Reprinted with permission of The Wylie Agency, Inc. 
+“On Joseph Brodsky {1940-1996)” © 1996 by Tatyana Tolstaya. Reprinted with permission of The Wylie 
+Agency, Inc. Translation © 1996 by Jamey Gambrell. 
+
+“On Robert Lowell” © 1984 by Derek Walcott. Reprinted with permission. 
+
+
+All rights reserved, which includes the right 
+to reproduce this book or portions thereof in any form whatsoever. 
+
+
+Published by The New York Review of Books, 1755 Broadway, New York, NY 10019 
+www.nyrb.com 
+Distributed in the United States by Random House 
+
+
+Library of Congress Cataloging-in-Publication Data 
+The company they kept : writers on unforgettable friendships / edited by Robert B. Silvers and Barbara 
+Epstein ; preface by Robert B. Silvers. 
+p. cm. 
+ISBN 1-59017-203-5 (hardcover : alk. paper) — ISBN 1-59017-204-3 (pbk. : alk. paper) 
+1. Celebrities — Biography. 2. Authors — Biography. 3. Friendship. 4. Influence (Literary, artistic, 
+etc.) 5. Biography — 20th century. 
+I. Silvers, Robert B. II. Epstein, Barbara, 1929- 
+CT 120.E55 2006 
+
+
+920.009'04 — dc22 
+2005027598 
+
+
+Cover design: Louise Fili Ltd. 
+Printed in the United States of America on acid-free paper. 
+ISBN-13: 978-1-59017-203-2 
+ISBN-10: 1-59017-203-5 
+13579108642 
+
+

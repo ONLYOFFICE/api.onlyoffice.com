@@ -1,0 +1,1281 @@
+MARCH 1, 1930 PHYSICAL REVIEW VOLUME 35 
+
+
+NOTE ON THE THEORY OF THE INTERACTION 
+OF FIELD AND MATTER 
+
+
+By J. R. OPPENHEIMER 
+BERKELEY, CALIFORNIA 
+
+
+(Received November 12, 1929) 
+
+
+ABSTRACT 
+
+
+The paper develops a method for the systematic integration of the relativistic 
+wave equations for the coupling of electrons and protons with each other and with 
+the electromagnetic field. It is shown that, when the velocity of light is made infinite, 
+these equations reduce to the Schroedinger equation in configuration space for the 
+many body problem. It is further shown that it is impossible on the present theory 
+to eliminate the interaction of a charge with its own field, and that the theory leads 
+to false predictions when it is applied to compute the energy levels and the fre- 
+quency of the absorption and emission lines of an atom. 
+
+
+HE relativistic theory of the interaction of electrons and protons with 
+
+each other and with the electromagnetic field has been developed in two 
+papers.! The theory is developed in close analogy to the corresponding class- 
+ical theory: the field is on the one hand determined by the configuration of 
+the charges; and the motion of the charges is affected by the field. The in- 
+teraction between two charges is not then, on this theory, expressed directly 
+as a function of the configuration of the charges, but as the effect on each of 
+the charges of the field induced by the other. On the classical theory this pro- 
+cedure involves grave difficulties, because each charge reacts also with its 
+own field. The proper energy of this interaction is, for point charges infinite; 
+and it depends upon the motion of the charge. On the classical theory one 
+tried to avoid this difficulty by ascribing to the elementary charges a finite 
+size; but it was not possible to carry through the theory in a way that was not 
+completely arbitrary; nor was it possible to make the work relativistically 
+invariant. Oneof the purposes of the present paper is to see in how far these 
+difficulties persist in the quantum theory, and in what measure they render 
+impossible the application of the theory. 
+
+We may recapitulate briefly the main points of divergence between the 
+present quantum theoretic treatment and the classical theory. In the first 
+place the state of the matter is here represented, not by a trajectory, but by a 
+wave function. Further, the Hamiltonian for the matter is that derived from 
+Dirac’s linear wave equation, and not from the quadratic wave equation 
+which would follow from the classical relativistic Hamiltonian. Finally, both 
+the material waves and the electromagnetic waves are quantized, the matter 
+
+
+1W. Heisenberg and W. Pauli, Zeits. f. Physik 56, 1 (1929); ibid. in press. The second 
+of these two papers is referred to in this work as LC. I am greatly indebted to Professor 
+Heisenberg and Professor Pauli, not only for the opportunity of seeing their work before its 
+publication, but also for their very valuable criticism and advice. 
+
+
+461 
+
+
+462 J. R. OPPENHEIMER 
+
+
+to make the particles satisfy the exclusion principle, the field to make the 
+quanta satisfy the Einstein-Bose statistics. This precedure leads to a formal 
+difficulty; for the fourth Maxwell equation 
+
+
+div E—4rp=0 (1) 
+
+
+is inconsistent with the quantum conditions, according to which there are 
+functions of the electromagnetic potentials which do not commute with div 
+E but which must commute with the charge density. The two papers of 
+Heisenberg and Pauli are distinguished chiefly by different methods of re- 
+solving this difficulty. In the former paper new terms were added to the 
+fourth Maxwell equation to make the new equation consistent with the quan- 
+tum conditions; in obtaining physical results these terms were to be made to 
+vanish. In the second paper a much more satisfactory method has been used, 
+which takes advantage of the fact that the left hand side of (1) is a constant 
+of the motion for all systems involving matter and radiation; and it is shown 
+that this constancy follows from the gauge invariance of the Hamiltonian 
+for all such systems. The solution of the dynamical problem thus reduces to 
+finding a wave function for the coupled system of field and matter, which 
+makes the Hamiltonian for the coupled system a diagonal matrix, and which 
+in addition makes the left hand side of (1) vanish. The wave function has 
+thus to satisfy not only the Hamiltonian wave equation, but also a series of 
+wave equations which express the fact that (1) is satisfied at all points in 
+space. It is from this set of wave equations that we shall start in this paper; 
+we shall write them first in the form given in LC Eq. (68), in which the wave 
+function is taken as a function of the Cartesian coordinates 
+
+
+qe = (gp ,qp® ,gp) ; P=1,2,-°°°, NW 
+and spin variables 
+op; P=1,2,---,N 
+of the N particles in the system, the number of quanta 
+
+
+M, 
+of frequency 
+Vy 
+
+
+vector of propagation K,=(K,, K,?, K,3); K,=v,/c and polarization A, and 
+finally a third set of variables P,3, which are essentially the constant com- 
+ponents of the electric field parallel to the vectors of propagation K,. We 
+shall first show that it is possible to eliminate the P,s’s from the wave equa- 
+tions in such a way that (1) is automatically satisfied. The reason why this is 
+possible is that the condition (1) determines div E precisely—instead of deter- 
+mining only the relative probabilities of different values of div E,—when the 
+configuration of the charges is known, so that the values of the P’s so deter- 
+mined can be put at once into the Hamiltonian. When this is done the 
+variables Q,3 canonically conjugate to the P’s must disappear from the Hamil- 
+tonian, since otherwise the Hamiltonian would not be consistent with (1); 
+
+
+INTERACTION OF FIELD AND MATTER 463 
+
+
+we shall show that this is in fact the case, and then proceed to an investiga- 
+tion of the resulting Hamiltonian. 
+
+It should be observed that the wave functions must satisfy, in addition to 
+the wave equations in configuration space, the condition that they be anti- 
+symmetric in all the electrons of the system, and antisymmetric in all the 
+protons of the system. Only wave functions satisfying these conditions are to 
+be considered in this paper; and it will therefore be unnecessary to indicate 
+the antisymmetry of the wave functions explicitly. The fact that electrons 
+and protons satisfy the exclusion principle is largely irrelevant to the difficul- 
+ties discussed in this work;for these difficulties persist even in the one-electron 
+problem. On the other hand it is to be hoped that the resolution of the errors 
+in the present theory will make the heuristic postulate of the exclusion prin- 
+ciple unnecessary. 
+
+We shall look for a solution of the wave equation in which both wave 
+function and characteristic values are expanded in powers of v/c. It has al- 
+ready been shown by Breit? that, when the interaction of the particles may be 
+treated as small, and radiation processes may be neglected, that these inter- 
+action terms give a contribution to the energy of the system, which, in second 
+order in v/c, agrees with that computed from Breit’s equation.® We shall not 
+retain the assumption that the interaction terms are small, and shall show, 
+somewhat more generally, that when the proper energy terms are systemat- 
+ically neglected, the characteristic energy levels and the wave function are 
+determined by Breit’s equation. This equation is, of course, not relativisti- 
+cally invariant; and it takes no account of radiation processes. In order to 
+remedy these defects one must retain the proper energy terms; and we shall 
+show that it is then possible to make a formally satisfactory theory to give the 
+shape and position of all spectral lines, and the energy of the normal state. 
+The theory, is, however, wrong, since it gives a displacement of the spectral 
+lines from the frequency predicted on the basis of the nonrelativistic theory 
+which is in general infinite. This displacement arises from the infinite inter- 
+action of the electron with itself; this interaction depends upon the state of 
+the material system; and the difference in the energy for two different states 
+is not in general finite. Thus the present theory gives no more than the non- 
+relativisitic theory of Jordan, Klein and Wigner.’ It seems improbable that 
+Breit’s equation gives the energy levels of an atom correct to second order 
+terms in v/c; but we shall see that there is ground for supposing that it does 
+give the separation of the fine structure levels correctly in this order. On the 
+other hand the displacement in the frequency of the spectral lines which arises 
+from the proper energy should be of the second order in v/c, and is thus larger 
+than the natural line breadth, which is of the third order; and on the present 
+theory it is not possible to compute this displacement. We shall return later 
+to a consideration of these difficulties. 
+
+
+2G. Breit, Phys. Rev. 34, 553 (1929). 
+
+3 Breit, ibid., Eq. (6). 
+
+* P. Jordan and O. Klein, Zeits. f. Physik 45, 751 (1927). P. Jordan and E. Wigner, ibid. 
+47, 631 (1928). 
+
+
+464 J. R. OPPENHEIMER 
+1. The condition that the left hand side of (1), regarded as an operator on 
+the wave function y of the variables 
+
+qp,op, My, Py: 
+
+
+shall make the wave function vanish at every point in space, gives a series 
+of wave equations 
+
+
+I Coy=| Poot Lerw(as) [Marser,Ma,Pa =0 
+P 
+
+
+which must hold for all values of the K, consistent with the boundary 
+conditions. Here the v are functions defined in LC (54): 
+
+
+2 
+v°°(qp) =—(¢k,3L3)—1/? sin tk, Ygp™ sin wk, ®gp® sin rh, gp) (2) 
+T 
+
+
+Here Lis the length of the fundamental cube, or Hohlraum, and is taken finite 
+in LC to avoid the introduction of a continuous manifold of normal coordi- 
+nates; in all our results we shall make Z become infinite. Furthermore the 
+Hamiltonian for the coupled system, regarded as an operator on the same 
+wave function, gives the wave equation 
+
+
+N Th 
+II \- E+ 3 Mone + mo Past |+ > | co" grade) -+mpagtet | y 
+P=1 87 
+
+
+r A=1,2 
+
+
++4 > lepAo(gr) + cola -A°(ge))| by 
+
+
+P=1 
+
+
+N 
++L > Sue [Mn+ 1) = Mata] by 
+
+
+r A=1,2 Pel 
+
+
++4 by Diue""Qaa b= (+H—E)y=0. 
+
+
+r P=1 
+
+
+Here A ° is the external scalar potent al, and A® the external vector potential; 
+and A,, is an operator which transforms M,, into M@,—1, and leaves all other 
+variables unchanged; the a@”’s are operators which operate only ong,, and are 
+derived from the Dirac matrices a,,' by the definition 
+
+
+ay"F (op) = De p'p pl (pp) ; ao F (op) = DO p' op (pr) ; 
+pp PP 
+Further the Q,; are canonically conjugate to the P,3 so that 
+h / 
+| PrsQr’3] =——brr (3) 
+271 
+Finally the functions u,", up," are defined in LC (59): 
+
+
+yi Ni: 
+up’? = epc > > \ar?0173(qp) 
+
+
+l= 
+
+
+INTERACTION OF FIELD AND MATTER 465 
+
+
+h \'2 3 
+up? = evel ) > ayPv:™ (qr) sA=1,2 (4) 
+2T?; I=1 
+
+
+8 1/2 “ 
+vi" (gp) = (=) Fy cos rkigp™ sin rkygp™” sin rkyqe” ; 
+
+
+1=1,2,3. 
+N=1,2,3. 
+
+
+The square matrix Fp is given by the scheme 
+
+
+1 €2"/(e1> + €27)1/? — eye3/(ex?+eo”) 1? gy 
+2 —€, / (er? + €27) 1? eg€3/(€12+-€07)1/? ee (5) 
+3 0 — (ey eo?) 1/2 gg 
+
+
+where the e€,”’s are the direction cosines of the vector K,. It should be ob- 
+served that 
+
+
+he h 
+——(a? gradp)epv"’(qp) =——pp”. (6) 
+Tt 2n1 
+This equation, together with (3), shows that 
+[HC,]=0 (7) 
+
+
+for all 7, so that all the C,’s are constants of the motion. The equations I and 
+II are those given’ in LC (68). 
+
+From I we see that the wave function must be singular in the P’s. We may 
+avoid the use of singular functions by making a contact transformation from 
+the variables P to Q, and writing the wave function as: 
+
+
+V(gp,op, Min 0,3) : 
+For we may then solve (3) by taking 
+
+
+h @ 
+am 271 0013 
+
+
+If now we set 
+
+
+v(¢p »oP, Mr Ors) = ge etne Zepo" (ap) Qrag (gp, OP, My Ors) (8) 
+the equations I give us 
+dg 
+00-3 
+
+
+0 (9) 
+
+
+for all r so that 
+¢=¢(¢r,orp,M ny). 
+
+
+5 In LC (68) the A’s are dropped. 
+
+
+466 J. R. OPPENHEIMER 
+
+
+Further the Hamiltonian II becomes 
+
+
+N 
+e~2rilh Devoe) Qra4 ~E+ > | > Ma hv,.+ 1p, Devcorzoar)o Ge) | 
+r P 
+
+
+r A=1,2 P,P’ 
+he? 2 
+
+
+0 he 
++ih >, D> v,epv"(gp) —~— Yi»—+ E (aPgradp) +mpcrag? | 
+r P 00-3 4n; Ors P 2a 
+
+
+—c Y) Dler(a? gradp)o(qr)Qs+ Diep {Ao(qr) + (a? A%(gr)) | (10) 
+=F oy > ue Or3+ i DS > Sup |(Ma+ 1)! AQ 
+
+
+r 
+
+
+= Mots] (qropM, )=0. 
+
+
+The terms in Q drop out because of (6); the terms in 0/0Q give nothing be- 
+cause of (9). The equations I and II thus reduce to the single system 
+
+
+\ Ts E+ Hot > M,yhy, ae 1 Sou? | (Mat 1)}/*A 7} — Mp} PA, | be=o 
+
+
+e rAP (11) 
+C 
+Ho= {ar gradp) + mpc?” +pp[A (gr) + (a? - AM(a)) | 
+P Tt 
++e D2) Dererv,v"(qr)o"( grr) t 
+Pf r 
+It is this system which we must now investigate. 
+The terms 
+G(qr qr) = Diwv.0"(qr)0"( gr’) 
+may readily be evaluated,® and give for Lx 
+1 
+COs ; rp = | Qp—ap’| - (12) 
+r 
+
+
+PP’ 
+
+
+The terms for pand p’ different give the electrostatic interaction of the two 
+particles; the terms for p=)’ give the infinite electrostatic proper energy of 
+the particles; on the present theory it is not possible, as it was on the non- 
+relativistic theory,‘ to eliminate these terms; the physical ground for this 
+impossibility has already been indicated, and lies in the fact that the field 
+acting on any particle is the sum of the fields induced by all particles; it is a 
+consequence of the principle of superposition for the field. These electro- 
+static proper energy terms do not, however, interfere with the application of 
+the theory, since they are constants, and may be dropped from (11) without 
+altering the form of the wave function. We shall find other infinite proper 
+
+
+6 W. Heisenberg and W. Pauli, Zeits. f. Physik 56, 1 (1929). Eq. (115); G. Breit, reference 
+2 Eq. (57). Breit has independently evaluated the P,3; terms in the Hamiltonian; and I am 
+much intebted to him for informing me of his result 
+
+
+INTERACTION OF FIELD AND MATTER 467 
+
+
+energy terms in the course of the work; but these will turn out not to be con- 
+stants, but to depend upon the configuration of the system; dropping them 
+does alter the form of the wave function. 
+
+If we now neglect the coupling between matter and the light quantum 
+field the wave equation reduces to 
+
+
+| — B+ Hot E Mabe. |6=0 (13) 
+
+
+rr 
+
+
+and for the case that no quanta are present we have 
+
+
+he 
+{ — E+ ye | Se" gradp) + mpcrao? + ep [A o°(gr) Si (a? : A(qp) | | 
+(14) 
+
+
+epep’ 
+ate pa aid \ (or, gr) =0. 
+
+
+pp: 2rpp: 
+
+
+We shall show that the terms which we have neglected in (12) are small of the 
+order (v/c)?; and by neglecting other terms of the same order, (13) can be 
+considerably simplified. For consider first the equation 
+
+
+\- E+ > | a" grade)-+mnctas? |to=0. (15) 
+p L2rt 
+For N-free uncoupled particles. If we choose all matrices|| a,,'.,,|| of the form 
+b a 
+0 0 ¢ d 
+CeO me 
+a d 0 / 
+and all the ||a,,°.,|| of the form: 
++1 0 0 0 
+mm 53 . 
+0 0 0 —-1 
+and satisfying of course 
+[a PaP'|=0 for P¥P’ ; [atPa”P|+ = 26up (17) 
+
+
+then any ¢(¢,) in which 2 of the o,’s have either of the values 3 or 4 will be 
+small compared with any of the @’s for which all of the o,’s have the values 
+1 or 2 of the order (v/c)". Now the terms 
+
+
+’ €peép: 
+
+
+» epAo(qr) 
+Pp 2rpp: 
+
+
+in (14) do not involve the aw?’s, while the terms 
+
+
+ep(a?- A(qp)) 
+
+
+468 J. R. OPPENHEIMER 
+
+
+are small of the order v/c; thus as v/c is made to vanish, all the solutions of (14) 
+vanish except those for which all the o,’s have the values 1 or 2; and (14) 
+reduces to 
+
+
+2 € pep: 
+
+
+| -#+ 4 mirc + end ge aoe Ap— >,’ \ | s(orae) =0 (18) 
+
+
+Sr?mp P' 2rpp: 
+
+
+for all ¢,’s=1 or 2 and 
+d(opgp)=0 for any op=3 or 4 
+
+
+which is the Schroedinger equation for the N-body problem.’ It would thus be 
+possible to take (18) as the starting point for our systematic solution of (11) 
+in powers of v/c. We shall not do this, however, as it would complicate the 
+analysis, and lead to no new results. We shall thus give up the assumption 
+that the a’s are written in the form (16), and take for our zero’th approxima- 
+tion to (11), the solutions of (14).* 
+
+2. We may write the equations (11) sertatem: 
+
+
+> Mn=M =0;(—E+H)o= —i Diup™o(1n); 6=¢(0,-n) (11.1) 
+
+
+rr rhP 
+
+
+ites = foo B Tu$(1a, ton) | 
+P r’d! P 
+
+
+29112; du b( 2) 
+P 
+
+
+M=1 
+(11.2) 
+
+
+(= E+ h(v,+y,r) +H) $( 1, ; Len) a a t » [up™o( 1,y”) 
+
+
+P 
+
+
+M=2 tur’ (1a) |—i DO Dome’ b(Lan, bones Lene) (11.3) 
+
+
+ae, Sad P 
+
+
+se Dret 23 [up™(2rr, 1y-y/) + up" o( 1 ’ 2d") 
+P 
+
+
+(— E+2hv,+ Ho) b(2n) = +21?i dup o( 1a) 
+P 
+
+
+=i) Sur’ o(2n, tex) 344 up o(3.a) 
+2, 2 ~ (11.4) 
+
+
+etc. 
+Now for fixed 7, and fixed K,, 
+up? = 0(¢71/2) 
+whereas 
+vy =O(c). 
+7 It is possible to write the two component wave equation when the magnetic interactions 
+are retained up to the order (v/c)?, as has been shown by Breit, reference 2. 
+
+
+* We shall not make explicit use of the fact that the a’s are in the form (16); we shall, how- 
+ever, retain the assumption that the a’s are small of the order 2/c, to obtain up” = O(c72), 
+
+
+INTERACTION OF FIELD AND MATTER 469 
+
+
+Thus we should expect ¢(1,,) to be small of the order c—*??, #(1,,1,’x') to be 
+of the order c~’, and so on, and we should try to find a solution of (11) of the 
+form 
+
+
+E=EO+ EOL E®... 
+
+
+(19) 
+(Mn) =6O (Mar) +O(M ar) >> - 
+with 
+E™ =0(c-") 
+
+
+6) (My) =0(c7 7-3 /2M) , 
+
+
+It should be observed that in general there will be certain frequencies for 
+which ¢(1,,), (1, 1,’x’) etc. will not converge uniformly for c—>™ ; and that 
+for these frequencies the expansions (19) will be illegitimate. The frequencies 
+for which this convergence is non-uniform are those for which 
+
+
++k— > Mah, 
+
+
+ry 
+is a characteristic value of the homogeneous equations 
+(Ho—d)o=0. (20) 
+
+
+Such frequencies will not occur if (20) has no solutions for \<F, i.e. if the 
+material system is in a normal state; but in general the expansions (19) must 
+be modified; we shall return to this modification later, and shall see that it 
+gives a satisfactory theory of the absorption and emission of radiation; but for 
+the present we shall assume that the atom is in a normal state, so that (19) 
+is justified. 
+
+On the present theory there is no normal state for the matter, because 
+states of infinite negative energy are possible; one may in fact show that, on 
+the present theory, Dirac jumps to such states from states of positive energy, 
+jumps in which the energy and momentum lost by the matter are taken up by 
+the field, are not only possible, but infinitely probable. But that the theory 
+should predict this is a token of an error in the theory; and since the Dirac 
+jumps do not seem to be directly responsible for the difficulties with which 
+we are, in this work, most concerned, we shall for the present neglect them. 
+
+We shall first give a complete solution for the case that we drop all proper 
+energy terms, for the case, that is, that in all double sums of the form 
+
+
+DF (gp, oP, QP" , Op’) 
+PP’ 
+
+
+we may set the terms with p equal to p’ equal to zero. This solution is not 
+unique beyond terms of the second order in v/c; for in the higher orders it is 
+no longer possible uniquely to separate proper energy and interaction energy. 
+But we may readily obtain a possible solution: 
+
+
+a Ss up™ M,y 
+¢(Mn)= T] pio o (21) 
+
+
+rr hy, 
+
+
+470 J. R. OPPENHEIMER 
+
+
+where os 
+Mp" bp” 
+| - E+ He > yee | o=0. (22) 
+rh PP? hv, 
+For if we put these values, for example, in (11.2) we get 
++i Diup™ Re iy 
+e up? ™ pp 
+———-|-E+H->) + hv, | > 
+hy, rv’! PP’ Very! 
+(23) 
+1 
+a E 0 Can Jo=i Doupr?. 
+hv, P P 
+Now in 
+he 
+» [ H ,pp™| = > ——(a?- gradp) +mpcrag? + ep(a?. A(qp) yp (24) 
+P pp L\291 
+and in 
+Soup ppt’ 
+PP’ 
+we may put 
+a a 
+PP’ ppt 
+so that 
+
+
+[A ur] =0 (25) 
+
+P 
+and (11.2) is satisfied. In a similar way it may be shown that all the equations 
+(11) are satisfied. 
+
+
+We may evalute the terms 
+
+
+: v7 pvp p') 
+aay eye SoaPay?’ >, ae 4 
+rh hv, 2 iv 
+
+
+rr vy? 
+in (22) by observing that for /41’ 
+w™(qp)ov™(grr) 9 A T 
+OF (grr) 5 APF = 
+rh v,? dq'p’ Oq5, c*rpp: 
+and 
+v1” gp). apr) cae 2 
+. ne ———F (qr qr’) 
+rr 07° 2c*rpp, Oq'p 
+so that 
+ae + (eyP.. ¢yP! P Pp? 
+bp’ up’ —epep: ( (QP -aP’) (a? -rppr)(a?’- rpp’) 
+y Vee eee eee (27) 
+rh hv, 4 Ypp: repp: 
+This gives for ¢o 
+
+
+CFP LP) + (ce: op)(””-zppr) | bp =0 (28) 
+Pp f° ppt § 
+
+This is the equation used by Breit.’ It is patently not relativistically invariant; 
+this means that the proper energy terms are not invariant, and forces us to 
+
+
+1 , Cpep’ 
+‘ ~E+Hot— 2, 
+
+
+INTERACTION OF FIELD AND MATTER A471 
+
+
+retain these terms, at least in part. Furthermore, we have not, in the deduc- 
+tion of (28), used the fact that the atom is in its normal state; in spite of this 
+there is no sign, in the solution, of processes involving the emission or ab- 
+sorption of radiation; for these processes arise from the interaction of the 
+particles with their own field. We have, therefore, to consider the solution of 
+(11) when the proper energy is not neglected; the retention of these terms will 
+preserve the invariance of the theory,and give usan account of radiation proc- 
+esses, but it leads to results in contradiction with experiment; it makes the 
+validity of (28), even to the second order in v/c, doubtful. 
+
+3. We can readily find a solution of the form (19) when E°and¢°correspond 
+to a normal state for the matter; but we cannot find this solution in closed 
+form; nor is there an equation in configuration space, corresponding to (28), 
+for ¢. If we put (19) in (11.2) etc. we get 
+
+
+| a fan ++ dqy® 
+
+
+Buia! (29) 
+oN 
+
+
+ae (0) ee 
+OmY m 
+
+ona D 
+Ss 
+
+
+hy. + Em — Ep ’ | 
+
+
+(Ho— Em bm =0 
+and further 
+rN orth? (0) 
+
+
+bom mn Yn 
+
+
+(0) ae eee Da aE ee 
+b (La, Len’) Xu [Av + Em — Eo |[h(y, te) + En — Ey | 
+
+
+r’\’ ry (0) 
+bom bmn n 
+
+
+a a re era =O 
+du [ hep + Em — Ey |[h(v, +9) +E, — Ep | oy) 
+Bom Bran 
+
+
+(0) See Date pt oe ee ee a et sa ew ae 7) 
+(Qn)=— 2 Lu [ hy, t+ Em — Ey |[2hv, +E, — Eo | — 
+
+
+Further E(o!) and @(o!) vanish, and 
+
+
+E,@ =— Xu > 
+
+
+het Em © — Eo 
+
+
+Tr 5” (0) 
+=O OY 
+
+
+bomb mn Pn _ 
+= [hot En (0) — Fy |[E, — Kg | 
+Moreover #1(,1,), (0?) and E(9*) vanish, and 
+
+
+rar! rh (0) 
+
+
+bom Den Date 
+CG eee ee ee 
+POE 2 2 Tov En Bll EOE, By] 
+(32) 
+rh ar hl —Th 
+
+
+bom Omn be 
+B®-- YD Lessee 
+
+
+r’n! mk n x0 [ hv, +Em mw) — Ey | [ hv, +E, — BE, | [E£, — Ey | 
+
+
+etc. 
+
+
+472 J. R. OPPENHEIMER 
+
+
+The terms 
+— Epo (1) 
+and 
+iD Lue" aden) — 284 Dupo 2a) 
+P Xr? P 
+
+
+in the equation for ¢®(1,,) cancel, so that 
+
+
+g®@ (1,n) =0 
+and 
+oo=0, Ey) =0. 
+
+
+The expansion for E‘ and 6 can be continued, and only terms of even 
+order in v/c appear. 
+It will be observed that the interaction terms in (31) 
+
+
+— DY Det En — Ey |= 
+
+
+rr m 
+
+
+f 30ur90%da | [enna (33) 
+
+
+| we write [4a for i} ads f aa a dqn‘® D> | 
+gienay 
+
+
+differ from those computed for the second order from (28): 
+~ > > (hr,)7} 
+rh m 
+
+
+It is possible to express 
+
+
+fee arrevoda] f3.urosioda| (34) 
+
+
+up” up:™ 
+
+
+rr hy, + Ey? = Ey 
+
+
+in terms of the confluent hypergeometric functions, but the expressions are 
+too complicated to be suitable for calculation. 
+The proper energy terms 
+
+
+2 
+
+
+| { bm pp dy dq 
+rr 
+-» > -—— = eT om 
+TA P m hy, + En = Ey rhAPm 
+do not exist, although both 
+rr 
+> Tom.p 
+rr 
+and 
+rv 
+> Line 
+converge; for large p,, 
+
+
+7,601) 
+
+
+INTERACTION OF FIELD AND MATTER 473 
+
+
+and for large £ 
+
+
+rr 
+>) Tom,p=0(1). 
+at 
+
+
+The energy level of the normal state is thus infinitely displaced by the 
+interaction of the particles with the field; the question which we have now to 
+consider is whether or not the energy differences between two states are dis- 
+placed by a finite or an infinite amount. 
+
+In order to answer this question we must treat the case of energies which 
+do not correspond to a normal state for the matter; and we have to modify 
+(19), and take account of the emission of radiation by the system. And for 
+this purpose it is convenient to make the dimensions L of the Hohlraum in- 
+finite, because that makes the physical interpretation of the solution more 
+immediate. For then v, becomes continuous and we may normalize the 
+vi™(qgp) to the intervals AvAw, where Aw is the element of solid angle of the 
+unit vector e,. Furthermore we may treat here, to simplify the writing, the 
+case that # corresponds to the first excited state of the atom, so that there 1s 
+only one energy £, lower than £ for which (20) is soluble. 
+
+We define the energy of the normal state by 
+
+
+-Eyp= Ep + Ep @+ Ey «+ - (35) 
+
+
+where Ey) and £y“ are given by (31) and (32), and we define the corres- 
+ponding wave function 
+
+
+Uo = bo +49 +49 + - - (36) 
+
+
+where ¢)™ is given by (31). We can then extend this definition formally to 
+obtain the energy and wave function of excited states: 
+
+
+Em=Em-+Em@+ Em® «0+ 3 
+
+
+rv 2 
+Osi 
+Eq@=— f i» | doe X ys | Brn 
+x 
+
+
+n hv, +E, — En™ 
+Unm=Om™ tom +bn” ier etc. 
+
+
+(37) 
+
+
+But in the expressions for E, etc, and dm etc, the integrals over vy are now 
+improper, and we have to displace the path of integration around the singu- 
+larities. This is equivalent to replacing 
+
+
+1 
+
+
+See ee op Ore 
+hv+ EF, —Em®™ 
+by 
+
+
+1 
+
+
+Se eee (0) __ Ft (0) 
+hE. p wt Tet Es Ey) (38) 
+
+
+and then taking the principal value of the integrals over vy. Then in general all 
+the E,,’s except Hy are complex. We now transform the ¢(My, qpop) by the 
+formulae 
+
+
+474 J. R. OPPENHEIMER 
+
+
+o(M,.,m) = > i se f an ae ee dgv um(Qp, oP) (39) 
+oP 
+
+
+(Mr, 9p , oP) 
+and introduce 
+
+
+rh 
+linn P= ae | aw f aque + dqy® tmup™ Uy « (40) 
+oP 
+
+
+Then if the ¢(.V/, m) satisfy the equations, which follow from (11): 
+r Eo —E 
+(—E+E,,)o(0,m)=—i fo da, >, a pF y(w,d)o (+) 
+h P n 
+= { dy, i dw, >, >» ne { dv,! | dw,’ >> Ypton Pr Fa(ce, 07’ 4¥2" A, N) (41) 
+» P ee 
+Ev-E 
+5( t+) sea 
+h 
+,n) < ———_-—_-—__+—- 6 | », . 
+
+| ars re ee oe n /S 
+
+
+En—E ¢ 
+“f Fy (wr) (» eee i ) —1 > { dy,’ | ae bie (42) 
+P ’ 
+
+
+: tr 
+(11, 1m) = 1 olin 
+Pa 
+
+
+Eo- 
+Fila,’ , Wy Pr, d,A)6 (0+ ) 
+
+
+. rn! rh 
+b(1) } Lyn. ,m) = i>, Knm PO (1a } n) + bam POUL e ) n) } 
+
+
+Pm 
+
+
+1 2 nt s/ fe +—=—)I 
+eee zeae samc 9 os al 7 aes eee 
+—E+h(y+y)+Em h h 
+
+
+Eyo—E 
+a F(a, yy’ Pr yA N’)E (v-t0'+=——) abe 
+
+
+where now the functions F are completely arbitrary, then the ¢(Mn, gp, Gp) 
+satisfy (11); for each choice of these F’s we can obtain a solution of (11). Now 
+the terms 
+
+
+rr 
+_ fam ‘Po(O ) n) 
+— E+ hy.+ Em 
+
+
+give a radiation field which does not extend to infinity; and the terms 
+: o(0,n)6 s( +=) 
+SSeS ,%)Omod | vy -- ————— ] etc. 
+h ; h 
+
+
+represent outgoing® electromagnetic waves, so that by the choice of the F's 
+
+
+8 P_ A.M. Dirac, Zeits. f. Physik 44, 585 (1927). 
+
+
+INTERACTION OF FIELD AND MATTER 475 
+
+
+we may determine the radiation incident upon the system. The simplest case 
+is that in which only quanta of the single frequency 
+
+
+1 
+a ea =), (43) 
+
+
+are incident upon the system, so that all the F’s vanish except 
+Fi(w yd) : 
+For this case 
+
+
+1 f des-ttom PF (wd) 
+
+
+Gon’ 
+$(0,m) a f : 
+
+
+E—E,, = ee 
+
+
+(44) 
+
+
+Now by hypothesis £ is to be chosen that only one E,,— E,that for m =1, say, 
+is to be small, so that only 
+
+
+1G," 
+
+
+E-E, 
+
+
+¢(0,1)= (45) 
+
+
+is large. The probability of absorption to this state is thus proportional to 
+
+
+| G1" |? | Gy’ |? 
+a (46) 
+|E-E,|? | v+Eo—E,|? 
+so that the shape of the absorption line is given by 
+const. 
+———— (47) 
+
+
+1 
+v vee = Ey) 
+
+
+since G’,, varies slowly with »v. 
+
+If we evaluate Eo, E; to the second order in v/c,and drop the higher terms— 
+and this is equivalent to neglecting transitions in which more than one quan- 
+tum plays a part—(47) reduces to 
+
+
+const. 
+
+
+1 1 1 Tec 1 es 
+es (0) _. fr,0 a 2 emenmanen Zs ©) pamneemeay ir ©) are oD games yet 
+Rea Ey) +— (Eo —— Ey 5B.) | + | Bit E,® |? 
+
+
+. (48) 
+
+
+The absorption line is thus of the same shape as that predicted on the basis 
+of the correspondence principle, and that found, for this case, by Dirac’, and 
+the half-breadth of the line is 
+
+
+E,©-—E,® T f m 
+—————|=— | d b 
+h h Ww Ld | 01 
+
+
+2 
+
+
+1 
+Ant, 
+
+
+2— 
+
+
+(49) 
+
+
+where 7; is the natural life time of the state 1. 
+
+
+476 J. R. OPPENHEIMER 
+
+
+The center of the absorption line is displaced to the red from (1//) (Fy 6” — 
+Ey‘) by an amount 
+
+
+1 1 _ 
+pi Ey gr eee 
+
+
+ary ty | bon |? 
+-— f wf od > pars ay es eat 
+
+
+rr 
+
+
+as rr 
+1 n n 7 an n 
+~~ fofor ds ole Hi .P* BoP set \. (50) 
+
+
+7) PP’ NA tt EL, O-E,© lwteE,O-— BE, 
+
+
+Here the principle values are to be taken for all improper integrals over v. 
+The terms for p¥)’ are just those to be expected from (33) for the displace- 
+ment of the energy levels by the magnetic interaction of the particles. The 
+terms 
+
+
+th 
+reek | Yon.P |? 
+ai i X Secs WwHE,O—E,O st ee} a 
+must be ascribed to the effect of the interaction of the particle with its own 
+
+
+field. They may be compared with the formula obtained? for the same effect 
+by Dirac, who finds a displacement 
+
+
+— [{ w fas ren woe (52) 
+hy +E — Ey 
+There does not appear to be any justification for this result, because in its 
+derivation terms were neglected that are of the same order as those retained. 
+But it is of interest to observe that the integral in (52) exists, and gives a 
+finite displacement of the line of the second order in v/c. This displacement 
+is thus larger than the natural line breadth, which is of the third order. It can 
+be computed® when the uw’s are known. Thus for the first Lyman doublet of 
+
+
+hydrogen we find the same displacement, in this order, for both components; 
+it turns out to be 
+
+
+ch 1 ch 
+
+
+3276" Ty 329%7e? 
+
+
+which is about forty times the line breadth. The fact that this term, and the 
+similar terms in (51), are the same, in second order, for the two components 
+of the doublet, suggests that the formulae (33) in which the proper energy is 
+neglected, will give the atomic fine structure splitting correct to the second 
+order. 
+
+If we try to compute the displacement from (51), we find that the in- 
+tegrals over v diverge logarithmically for high frequencies. One can readily 
+
+
+§ The calculations of the displacements predicted by the results of Dirac were carried 
+through in collaboration with Harvey Hall; and I am indebted to him for permission to quote 
+them here. One must use the retarded potentials to obtain a convergent integral. 
+
+
+INTERACTION OF FIELD AND MATTER 477 
+
+
+see that this is not the result of the neglect of higher order terms, nor of any 
+of the approximations made in the work. The theory thus leads to the false 
+prediction that spectral lines will be infinitely displaced from the values com- 
+puted by the Bohr frequency condition. The behavior of the expression (51) 
+calls for some comment. As the formula stands, the integral over v diverges 
+absolutely; this may be verified by evaluating the terms for a free particle. 
+But the question arises whether it is possible so to rearrange the order of 
+the integration over »y the summation over n, and the two integrations involved 
+in the evaluation of the umn’s by (40), that the limit no, yo exists. 
+This cannot be effected by an interchange of the sum over and the integral 
+over v; but there is a procedure which, when the E’s in the resonance de- 
+nominators of (51) are dropped, does give an absolutely convergent result. 
+This procedure was suggested by Heisenberg, who showed that, if we first 
+perform the integration over vy and w and the summation over A, then sum 
+over all the states n of the same energy, then sum these up to some large but 
+finite energy E, take the difference of the two terms for the state (0) and the 
+state (1), then perform the two integrations over the configuration space, 
+and finally allow E to become infinite, the limit H-2 exists, and (51) tends 
+to zero. But if we try to apply this procedure to (51) when the & terms are 
+not dropped, we get for the leading term the divergent result 
+
+
+4e,2/he- (Ey — Ey) /h- dx /x (53) 
+
+
+Nor is there any method for obtaining an absolutely convergent expression 
+for (51). It should be observed that (53) gives us another justification for 
+using (33) to get the fine structure separations correct to the second order. 
+
+One can see quite simply that (47) ought not to give a finite line dis- 
+placement. For consider two states of a free particle; in one let the particle 
+be at rest; in the other let it have the velocity v. Then if the energy of the 
+particle at rest be #, the energy of the moving particle in proper coordinates 
+moving with the particle will also be &. But we know how this energy 
+transforms under a Lorentz transformation; in the original coordinates it 
+will be 
+
+
+EB B=(1-(/c?]” 
+
+
+and in the same coordinates the difference in energy of the two states, which 
+gives the line displacement, will be 
+
+Bee) 
+But this can only be finite if & is finite which, by (31), it is not. 
+
+We have treated these difficulties in some detail, because they show that 
+the present theory will not be applicable to any problem where relativistic 
+effects are important, where, that is, we cannot be guided throughout by the 
+limiting case c~0, The theory can thus not be applied to a discussion of the 
+structure of the nuclei. It appears improbable that the difficulties discussed in 
+this work will be soluble without an adequate theory of the masses of electron 
+and proton; nor is it certain that such a theory will be possible on the basis of 
+the special theory of relativity. 
+
+

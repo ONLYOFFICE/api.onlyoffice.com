@@ -656,6 +656,34 @@ importers:
         specifier: ^0.5.6
         version: 0.5.6
 
+  packages/eleventy-pagefind:
+    dependencies:
+      '@onlyoffice/eleventy-types':
+        specifier: workspace:^
+        version: link:../eleventy-types
+      '@types/node':
+        specifier: ^20.12.12
+        version: 20.12.12
+      pagefind:
+        specifier: ^1.1.0
+        version: 1.1.0
+      typescript:
+        specifier: ^5.4.5
+        version: 5.4.5
+    devDependencies:
+      '@11ty/eleventy':
+        specifier: ^2.0.1
+        version: 2.0.1
+      c8:
+        specifier: ^9.1.0
+        version: 9.1.0
+      tsx:
+        specifier: ^4.10.5
+        version: 4.11.0
+      uvu:
+        specifier: ^0.5.6
+        version: 0.5.6
+
   packages/eleventy-site-config:
     dependencies:
       '@onlyoffice/eleventy-types':
@@ -1146,6 +1174,24 @@ importers:
         specifier: ^2.4.1
         version: 2.4.1
 
+  packages/pagefind-fixtures:
+    devDependencies:
+      '@11ty/eleventy':
+        specifier: ^2.0.1
+        version: 2.0.1
+      '@onlyoffice/eleventy-types':
+        specifier: workspace:^
+        version: link:../eleventy-types
+      pagefind:
+        specifier: ^1.1.0
+        version: 1.1.0
+
+  packages/pagefind-types:
+    dependencies:
+      typescript:
+        specifier: ^5.4.5
+        version: 5.4.5
+
   packages/preact-dataset:
     dependencies:
       '@onlyoffice/camel-to-dash':
@@ -1599,6 +1645,9 @@ importers:
       '@onlyoffice/site-playground':
         specifier: workspace:^
         version: link:../site-playground
+      '@onlyoffice/site-search':
+        specifier: workspace:^
+        version: link:../site-search
       '@onlyoffice/site-service-declaration':
         specifier: workspace:^
         version: link:../site-service-declaration
@@ -1708,6 +1757,34 @@ importers:
       '@onlyoffice/ui-kit':
         specifier: workspace:^
         version: link:../ui-kit
+      '@storybook/preact':
+        specifier: ^8.0.0
+        version: 8.0.0(preact@10.22.0)
+      vite:
+        specifier: ^5.1.6
+        version: 5.1.6(@types/node@20.12.12)(lightningcss@1.24.1)(terser@5.31.0)
+
+  packages/site-search:
+    dependencies:
+      '@onlyoffice/pagefind-types':
+        specifier: workspace:^
+        version: link:../pagefind-types
+      '@onlyoffice/preact-types':
+        specifier: workspace:^
+        version: link:../preact-types
+      '@onlyoffice/ui-icons':
+        specifier: workspace:^
+        version: link:../ui-icons
+      '@onlyoffice/ui-kit':
+        specifier: workspace:^
+        version: link:../ui-kit
+      preact:
+        specifier: ^10.22.0
+        version: 10.22.0
+      typescript:
+        specifier: ^5.4.5
+        version: 5.4.5
+    devDependencies:
       '@storybook/preact':
         specifier: ^8.0.0
         version: 8.0.0(preact@10.22.0)
@@ -2109,6 +2186,9 @@ importers:
 
   packages/ui-content:
     dependencies:
+      '@onlyoffice/preact-types':
+        specifier: workspace:^
+        version: link:../preact-types
       preact:
         specifier: ^10.22.0
         version: 10.22.0
@@ -2319,9 +2399,15 @@ importers:
       '@onlyoffice/ui-sizes':
         specifier: workspace:^
         version: link:../ui-sizes
+      '@onlyoffice/ui-slots':
+        specifier: workspace:^
+        version: link:../ui-slots
       '@onlyoffice/ui-sr-only':
         specifier: workspace:^
         version: link:../ui-sr-only
+      '@onlyoffice/ui-template':
+        specifier: workspace:^
+        version: link:../ui-template
       preact:
         specifier: ^10.22.0
         version: 10.22.0
@@ -2402,6 +2488,25 @@ importers:
       preact:
         specifier: ^10.22.0
         version: 10.22.0
+      typescript:
+        specifier: ^5.4.5
+        version: 5.4.5
+    devDependencies:
+      '@storybook/preact':
+        specifier: ^8.0.0
+        version: 8.0.0(preact@10.22.0)
+      vite:
+        specifier: ^5.1.6
+        version: 5.1.6(@types/node@20.12.12)(lightningcss@1.24.1)(terser@5.31.0)
+
+  packages/ui-template:
+    dependencies:
+      preact:
+        specifier: ^10.22.0
+        version: 10.22.0
+      preact-render-to-string:
+        specifier: ^6.4.1
+        version: 6.4.1(preact@10.22.0)
       typescript:
         specifier: ^5.4.5
         version: 5.4.5
@@ -2503,6 +2608,9 @@ importers:
       '@onlyoffice/eleventy-clean':
         specifier: workspace:^
         version: link:../packages/eleventy-clean
+      '@onlyoffice/eleventy-pagefind':
+        specifier: workspace:^
+        version: link:../packages/eleventy-pagefind
       '@onlyoffice/eleventy-site-config':
         specifier: workspace:^
         version: link:../packages/eleventy-site-config
@@ -4562,6 +4670,31 @@ packages:
 
   '@open-wc/testing@4.0.0':
     resolution: {integrity: sha512-KI70O0CJEpBWs3jrTju4BFCy7V/d4tFfYWkg8pMzncsDhD7TYNHLw5cy+s1FHXIgVFetnMDhPpwlKIPvtTQW7w==}
+
+  '@pagefind/darwin-arm64@1.1.0':
+    resolution: {integrity: sha512-SLsXNLtSilGZjvqis8sX42fBWsWAVkcDh1oerxwqbac84HbiwxpxOC2jm8hRwcR0Z55HPZPWO77XeRix/8GwTg==}
+    cpu: [arm64]
+    os: [darwin]
+
+  '@pagefind/darwin-x64@1.1.0':
+    resolution: {integrity: sha512-QjQSE/L5oS1C8N8GdljGaWtjCBMgMtfrPAoiCmINTu9Y9dp0ggAyXvF8K7Qg3VyIMYJ6v8vg2PN7Z3b+AaAqUA==}
+    cpu: [x64]
+    os: [darwin]
+
+  '@pagefind/linux-arm64@1.1.0':
+    resolution: {integrity: sha512-8zjYCa2BtNEL7KnXtysPtBELCyv5DSQ4yHeK/nsEq6w4ToAMTBl0K06khqxdSGgjMSwwrxvLzq3so0LC5Q14dA==}
+    cpu: [arm64]
+    os: [linux]
+
+  '@pagefind/linux-x64@1.1.0':
+    resolution: {integrity: sha512-4lsg6VB7A6PWTwaP8oSmXV4O9H0IHX7AlwTDcfyT+YJo/sPXOVjqycD5cdBgqNLfUk8B9bkWcTDCRmJbHrKeCw==}
+    cpu: [x64]
+    os: [linux]
+
+  '@pagefind/windows-x64@1.1.0':
+    resolution: {integrity: sha512-OboCM76BcMKT9IoSfZuFhiqMRgTde8x4qDDvKulFmycgiJrlL5WnIqBHJLQxZq+o2KyZpoHF97iwsGAm8c32sQ==}
+    cpu: [x64]
+    os: [win32]
 
   '@pkgjs/parseargs@0.11.0':
     resolution: {integrity: sha512-+1VkjdD0QBLPodGrJUeqarH8VAIvQODIbwh9XpP5Syisf7YoQgsJKPNFoqqLQlu+VQ/tVSshMR6loPMn8U+dPg==}
@@ -8101,6 +8234,10 @@ packages:
     resolution: {integrity: sha512-5NPgf87AT2STgwa2ntRMr45jTKrYBGkVU36yT0ig/n/GMAa3oPqhZfIQ2kMEimReg0+t9kZViDVZ83qfVUlckg==}
     engines: {node: '>= 14'}
 
+  pagefind@1.1.0:
+    resolution: {integrity: sha512-1nmj0/vfYcMxNEQj0YDRp6bTVv9hI7HLdPhK/vBBYlrnwjATndQvHyicj5Y7pUHrpCFZpFnLVQXIF829tpFmaw==}
+    hasBin: true
+
   pako@0.2.9:
     resolution: {integrity: sha512-NUcwaKxUxWrZLpDG+z/xZaCgQITkA/Dv4V/T6bw7VON6l1Xz/VnrBqrYjZQ12TamKHzITTfOEIYUj48y2KXImA==}
 
@@ -10986,6 +11123,21 @@ snapshots:
       - bufferutil
       - supports-color
       - utf-8-validate
+
+  '@pagefind/darwin-arm64@1.1.0':
+    optional: true
+
+  '@pagefind/darwin-x64@1.1.0':
+    optional: true
+
+  '@pagefind/linux-arm64@1.1.0':
+    optional: true
+
+  '@pagefind/linux-x64@1.1.0':
+    optional: true
+
+  '@pagefind/windows-x64@1.1.0':
+    optional: true
 
   '@pkgjs/parseargs@0.11.0':
     optional: true
@@ -15746,6 +15898,14 @@ snapshots:
     dependencies:
       degenerator: 5.0.1
       netmask: 2.0.2
+
+  pagefind@1.1.0:
+    optionalDependencies:
+      '@pagefind/darwin-arm64': 1.1.0
+      '@pagefind/darwin-x64': 1.1.0
+      '@pagefind/linux-arm64': 1.1.0
+      '@pagefind/linux-x64': 1.1.0
+      '@pagefind/windows-x64': 1.1.0
 
   pako@0.2.9: {}
 
