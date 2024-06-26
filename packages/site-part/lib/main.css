@@ -82,3 +82,10 @@
 .part__help {
   margin-top: 64px;
 }
+
+/* Integration with @onlyoffice/site-help */
+
+.part .help {
+  padding-left: 40px;
+  padding-right: 40px;
+}

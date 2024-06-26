@@ -175,3 +175,13 @@
 .home__part_reverse .home__preview {
   grid-column: 1;
 }
+
+/* Integration with @onlyoffice/site-search */
+
+.home__hero search-container {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 48px;
+  max-width: 736px;
+}

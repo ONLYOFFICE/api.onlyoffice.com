@@ -1,27 +1,19 @@
-import {CodePreview} from "@onlyoffice/ui-kit"
 import {JavascriptSdkIcon} from "@onlyoffice/ui-icons/rich/32.tsx"
-import type {Meta} from "@storybook/preact"
+import {CodePreview} from "@onlyoffice/ui-kit"
+import {type Meta} from "@storybook/preact"
 import {type JSX, h} from "preact"
-import {Default as SearchDefault} from "../../site-search/lib/main.story.tsx"
-import {
-  Home,
-  HomeHero,
-  HomeIn,
-  HomeLink,
-  HomeLinks,
-  HomePart,
-  HomePreview
-} from "./main.tsx"
+import {Default as SearchStory} from "../../site-search/lib/main.story.tsx"
+import {Home, HomeHero, HomeIn, HomeLink, HomeLinks, HomePart, HomePreview} from "./main.tsx"
 
-const meta: Meta = {
+export default {
   title: "Site/Home"
-}
+} satisfies Meta
 
 export function Default(): JSX.Element {
   return <Home>
     <HomeHero>
       <h1>Welcome to ONLYOFFICE API</h1>
-      <SearchDefault size="large" />
+      <SearchStory size="large" />
     </HomeHero>
     <HomePart>
       <HomeIn>
@@ -141,5 +133,3 @@ function code(): string {
   </body>
 </html>`
 }
-
-export default meta

@@ -1,7 +1,6 @@
-import type {ChildrenIncludable} from "@onlyoffice/preact-types"
+import {type ChildrenIncludable} from "@onlyoffice/preact-types"
 import {useSlots} from "@onlyoffice/ui-slots"
-import type {JSX} from "preact"
-import {Fragment, h, toChildArray} from "preact"
+import {Fragment, type JSX, h, toChildArray} from "preact"
 
 export function Page({children}: ChildrenIncludable): JSX.Element {
   const [slots, outer] = useSlots(children, {

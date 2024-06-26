@@ -1,8 +1,7 @@
-import type {JSX} from "preact"
-import {h} from "preact"
+import {type ChildrenIncludable} from "@onlyoffice/preact-types"
+import {type JSX, h} from "preact"
 
-export interface ThemeSwitcherParameters {
-  children?: any
+export interface ThemeSwitcherParameters extends ChildrenIncludable {
   label?: string
 }
 
@@ -18,8 +17,7 @@ export function ThemeSwitcher(
   </theme-switcher>
 }
 
-export interface ThemeSwitcherOptionParameters {
-  children?: any
+export interface ThemeSwitcherOptionParameters extends ChildrenIncludable {
   value?: string
 }
 

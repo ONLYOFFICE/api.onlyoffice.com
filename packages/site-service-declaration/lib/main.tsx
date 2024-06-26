@@ -1,8 +1,8 @@
 // import {Badge, CodeListing} from "@onlyoffice/documentation-ui-kit"
 
-import type {ChildrenIncludable} from "@onlyoffice/preact-types"
+import {type ChildrenIncludable} from "@onlyoffice/preact-types"
 import type * as Service from "@onlyoffice/service-declaration"
-import type {Resource} from "@onlyoffice/service-resource"
+import {type Resource} from "@onlyoffice/service-resource"
 import {
   Badge,
   Callback,
@@ -15,7 +15,7 @@ import {
   CodeListingTabPanel
 } from "@onlyoffice/ui-kit"
 import {useContext} from "preact/hooks"
-import {type JSX, Fragment, createContext, h} from "preact"
+import {Fragment, type JSX, createContext, h} from "preact"
 
 interface ContextProperties {
   stack: string[]

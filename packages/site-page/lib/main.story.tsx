@@ -1,15 +1,15 @@
-import type {ChildrenIncludable} from "@onlyoffice/preact-types"
+import {type ChildrenIncludable} from "@onlyoffice/preact-types"
 import {OnlyofficeLogo, SrOnly} from "@onlyoffice/ui-kit"
-import type {Meta} from "@storybook/preact"
+import {type Meta} from "@storybook/preact"
 import {type JSX, h} from "preact"
-import {Default as ChapterDefault} from "../../site-chapter/lib/main.story.tsx"
-import {Default as HomeDefault} from "../../site-home/lib/main.story.tsx"
-import {Default as PartDefault} from "../../site-part/lib/part.story.tsx"
+import {Default as ChapterStory} from "../../site-chapter/lib/main.story.tsx"
+import {Default as HomeStory} from "../../site-home/lib/main.story.tsx"
+import {Default as PartStory} from "../../site-part/lib/main.story.tsx"
 import {
-  Default as PlaygroundDefault,
-  DocumentEditor as PlaygroundDocumentEditorDefault
+  Default as PlaygroundStory,
+  WithDocumentEditor as PlaygroundDocumentEditorStory
 } from "../../site-playground/lib/main.story.tsx"
-import {Default as ThemeSwitcher} from "../../site-theme-switcher/lib/main.story.tsx"
+import {Default as ThemeSwitcherStory} from "../../site-theme-switcher/lib/main.story.tsx"
 import {
   Page,
   PageFooter,
@@ -21,9 +21,9 @@ import {
   PageHeaderMenu
 } from "./main.tsx"
 
-const meta: Meta = {
+export default {
   title: "Site/Page"
-}
+} satisfies Meta
 
 export function Default({children}: ChildrenIncludable): JSX.Element {
   return <Page>
@@ -59,7 +59,7 @@ export function Default({children}: ChildrenIncludable): JSX.Element {
         <a href="/">home</a>
       </PageFooterLinkContainer>
       <PageFooterThemeSwitcher>
-        <ThemeSwitcher />
+        <ThemeSwitcherStory />
       </PageFooterThemeSwitcher>
       <PageFooterCopyright>
         <a href="/">onlyoffice.com</a>
@@ -69,24 +69,22 @@ export function Default({children}: ChildrenIncludable): JSX.Element {
   </Page>
 }
 
-export function Home(): JSX.Element {
-  return <Default><HomeDefault /></Default>
+export function WithHome(): JSX.Element {
+  return <Default><HomeStory /></Default>
 }
 
-export function Part(): JSX.Element {
-  return <Default><PartDefault /></Default>
+export function WithPart(): JSX.Element {
+  return <Default><PartStory /></Default>
 }
 
-export function Chapter(): JSX.Element {
-  return <Default><ChapterDefault /></Default>
+export function WithChapter(): JSX.Element {
+  return <Default><ChapterStory /></Default>
 }
 
-export function Playground(): JSX.Element {
-  return <Default><PlaygroundDefault /></Default>
+export function WithPlayground(): JSX.Element {
+  return <Default><PlaygroundStory /></Default>
 }
 
-export function PlaygroundDocumentEditor(): JSX.Element {
-  return <Default><PlaygroundDocumentEditorDefault /></Default>
+export function WithPlaygroundDocumentEditor(): JSX.Element {
+  return <Default><PlaygroundDocumentEditorStory /></Default>
 }
-
-export default meta

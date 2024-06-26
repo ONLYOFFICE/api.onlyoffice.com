@@ -1,11 +1,11 @@
-import type {Meta} from "@storybook/preact"
+import {type Meta} from "@storybook/preact"
 import {type JSX, h} from "preact"
-import {Default as SearchDefault} from "../../site-search/lib/main.story.tsx"
+import {Default as SearchStory} from "../../site-search/lib/main.story.tsx"
 import {Chapter, ChapterContent, ChapterNavigation} from "./main.tsx"
 
-const meta: Meta = {
+export default {
   title: "Site/Chapter"
-}
+} satisfies Meta
 
 export function Default(): JSX.Element {
   return <Chapter>
@@ -21,7 +21,7 @@ export function Default(): JSX.Element {
 export function WithSearch(): JSX.Element {
   return <Chapter>
     <ChapterNavigation>
-      <SearchDefault />
+      <SearchStory />
       {Array.from({length: 100}, (_, i) => <div><a key={i} href="/">{i}</a></div>)}
     </ChapterNavigation>
     <ChapterContent>
@@ -29,5 +29,3 @@ export function WithSearch(): JSX.Element {
     </ChapterContent>
   </Chapter>
 }
-
-export default meta

@@ -1,10 +1,10 @@
-import type {Meta} from "@storybook/preact"
+import {type Meta} from "@storybook/preact"
 import {type JSX, h} from "preact"
 import {ThemeSwitcher, ThemeSwitcherOption} from "./main.tsx"
 
-const meta: Meta = {
+export default {
   title: "Site/Theme Switcher"
-}
+} satisfies Meta
 
 export function Default(): JSX.Element {
   return <ThemeSwitcher label="Color Theme Switcher">
@@ -13,5 +13,3 @@ export function Default(): JSX.Element {
     <ThemeSwitcherOption value="dark">dark</ThemeSwitcherOption>
   </ThemeSwitcher>
 }
-
-export default meta

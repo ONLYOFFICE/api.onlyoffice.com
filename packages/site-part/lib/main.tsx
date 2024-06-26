@@ -1,4 +1,4 @@
-import type {ChildrenIncludable} from "@onlyoffice/preact-types"
+import {type ChildrenIncludable} from "@onlyoffice/preact-types"
 import {type JSX, h} from "preact"
 
 export function Part({children}: ChildrenIncludable): JSX.Element {

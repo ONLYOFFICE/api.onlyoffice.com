@@ -1,37 +1,30 @@
-import type {
-  EnumRepresentable,
-  PlaygroundConfigurable,
-  PropertyConfigurable
-} from "@onlyoffice/site-config"
-import {Button} from "@onlyoffice/ui-button"
-import {CodeEditor} from "@onlyoffice/ui-code-editor"
 import {
+  type EnumRepresentable,
+  type PlaygroundConfigurable,
+  type PropertyConfigurable
+} from "@onlyoffice/site-config"
+import {
+  Button,
+  CodeEditor,
   CodeListing,
   CodeListingTab,
   CodeListingTabList,
   CodeListingTabListWrapper,
-  CodeListingTabPanel
-} from "@onlyoffice/ui-code-listing"
-import {Content} from "@onlyoffice/ui-content"
-import {
+  CodeListingTabPanel,
+  Content,
   ContentTab,
   ContentTabContainer,
   ContentTabList,
-  ContentTabPanel
-} from "@onlyoffice/ui-content-tab-container"
-import {
+  ContentTabPanel,
   FormControl,
+  FormControlControl,
   FormControlLabel,
-  FormControlControl
-} from "@onlyoffice/ui-form-control"
-import {
   Select,
   SelectCombobox,
   SelectListbox,
   SelectOption
-} from "@onlyoffice/ui-select"
-import type {JSX} from "preact"
-import {Fragment, h} from "preact"
+} from "@onlyoffice/ui-kit"
+import {type JSX, Fragment, h} from "preact"
 
 const samples = [
   {id: "html", label: "HTML"},
@@ -46,7 +39,7 @@ export interface DocumentEditorPlaygroundParameters {
 export function DocumentEditorPlayground(
   {config}: DocumentEditorPlaygroundParameters
 ): JSX.Element {
-  return <site-document-editor-playground class="de-playground">
+  return <document-editor-playground class="de-playground">
     <Content>
       <form>
         <Properties />
@@ -66,7 +59,7 @@ export function DocumentEditorPlayground(
     <Content>
       <Samples />
     </Content>
-  </site-document-editor-playground>
+  </document-editor-playground>
 
   function Properties(): JSX.Element {
     const ts: JSX.Element[] = []

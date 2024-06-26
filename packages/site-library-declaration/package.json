@@ -16,11 +16,11 @@
     "@onlyoffice/library-declaration": "workspace:^",
     "@onlyoffice/library-resource": "workspace:^",
     "@onlyoffice/preact-types": "workspace:^",
+    "@onlyoffice/ui-kit": "workspace:^",
     "preact": "^10.22.0",
     "typescript": "^5.4.5"
   },
   "devDependencies": {
-    "@onlyoffice/ui-kit": "workspace:^",
     "@storybook/preact": "^8.0.0",
     "vite": "^5.1.6"
   }

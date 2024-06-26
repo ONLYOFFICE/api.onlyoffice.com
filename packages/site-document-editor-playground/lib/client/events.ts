@@ -1,19 +1,19 @@
-import type {SiteDocumentEditorPlayground} from "./element.ts"
+import {type DocumentEditorPlayground} from "./element.ts"
 
-export class SiteDocumentEditorPlaygroundErrorEvent extends ErrorEvent {
+export class DocumentEditorPlaygroundErrorEvent extends ErrorEvent {
   static get type(): string {
-    return "sitedocumenteditorplaygrounderror"
+    return "documenteditorplaygrounderror"
   }
 
   constructor(eventInitDict?: ErrorEventInit) {
-    super(SiteDocumentEditorPlaygroundErrorEvent.type, eventInitDict)
+    super(DocumentEditorPlaygroundErrorEvent.type, eventInitDict)
   }
 }
 
-export interface SiteDocumentEditorPlaygroundErrorListener extends EventListener {
-  (this: SiteDocumentEditorPlayground, event: SiteDocumentEditorPlaygroundErrorEvent): void
+export interface DocumentEditorPlaygroundErrorListener extends EventListener {
+  (this: DocumentEditorPlayground, event: DocumentEditorPlaygroundErrorEvent): void
 }
 
-export interface GlobalSiteDocumentEditorPlaygroundErrorHandler {
-  (this: GlobalEventHandlers, ev: SiteDocumentEditorPlaygroundErrorEvent): void
+export interface GlobalDocumentEditorPlaygroundErrorHandler {
+  (this: GlobalEventHandlers, ev: DocumentEditorPlaygroundErrorEvent): void
 }

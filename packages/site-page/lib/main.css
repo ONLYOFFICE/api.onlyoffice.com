@@ -149,3 +149,17 @@
   margin-bottom: 0;
   margin-top: 14px;
 }
+
+/* Integration with @onlyoffice/site-chapter */
+
+.page .chapter {
+  height: 100%;
+  min-height: calc(100vh - 72px);
+}
+
+.page .chapter__navigation {
+  max-height: calc(100vh - 72px - 20px * 2);
+  overflow-y: scroll;
+  position: sticky;
+  top: 72px;
+}

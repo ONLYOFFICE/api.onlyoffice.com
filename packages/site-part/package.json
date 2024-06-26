@@ -5,7 +5,6 @@
   "main": "lib/main.tsx",
   "exports": {
     ".": "./lib/main.tsx",
-    "./help.css": "./lib/help.css",
     "./main.css": "./lib/main.css"
   },
   "scripts": {

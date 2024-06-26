@@ -1,13 +1,11 @@
-// import {Badge} from "@onlyoffice/documentation-ui-kit"
-
-import type {Token} from "@onlyoffice/declaration-tokenizer"
+import {type Token} from "@onlyoffice/declaration-tokenizer"
 import {referenceToken, tokenNode} from "@onlyoffice/declaration-tokenizer"
 import type * as Library from "@onlyoffice/library-declaration"
 import {type Resource} from "@onlyoffice/library-resource"
 import {type ChildrenIncludable} from "@onlyoffice/preact-types"
 import {Badge} from "@onlyoffice/ui-kit"
 import {useContext} from "preact/hooks"
-import {type JSX, Fragment, createContext, h} from "preact"
+import {Fragment, type JSX, createContext, h} from "preact"
 
 interface ContextProperties {
   onHighlightSyntax(p: ChildrenIncludable & {syntax: string}): any

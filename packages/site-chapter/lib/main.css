@@ -22,3 +22,10 @@
   padding: 32px calc(var(--m) + var(--rp)) 140px var(--rp);
   width: 100%;
 }
+
+/* Integration with @onlyoffice/site-search */
+
+.chapter search-container {
+  display: block;
+  margin-bottom: 24px;
+}

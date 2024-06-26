@@ -6,8 +6,7 @@
   "exports": {
     ".": "./lib/main.ts",
     "./main.css": "./lib/main.css",
-    "./client.ts": "./lib/client.ts",
-    "./reference": "./lib/reference.d.ts"
+    "./client.ts": "./lib/client.ts"
   },
   "scripts": {
     "test:types": "tsc",

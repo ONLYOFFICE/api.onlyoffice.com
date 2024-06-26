@@ -1,13 +1,13 @@
 import {JavascriptSdkIcon} from "@onlyoffice/ui-icons/rich/64.tsx"
 import {SrOnly} from "@onlyoffice/ui-kit"
-import type {Meta} from "@storybook/preact"
+import {type Meta} from "@storybook/preact"
 import {type JSX, h} from "preact"
-import {Default as Help} from "../../site-help/lib/main.story.tsx"
+import {Default as HelpStory} from "../../site-help/lib/main.story.tsx"
 import {Part, PartChapter, PartChapters, PartHelp, PartHero} from "./main.tsx"
 
-const meta: Meta = {
+export default {
   title: "Site/Part"
-}
+} satisfies Meta
 
 export function Default(): JSX.Element {
   return <Part>
@@ -24,9 +24,7 @@ export function Default(): JSX.Element {
       </PartChapter>)}
     </PartChapters>
     <PartHelp>
-      <Help />
+      <HelpStory />
     </PartHelp>
   </Part>
 }
-
-export default meta

@@ -1531,27 +1531,9 @@ importers:
       '@onlyoffice/site-config':
         specifier: workspace:^
         version: link:../site-config
-      '@onlyoffice/ui-button':
+      '@onlyoffice/ui-kit':
         specifier: workspace:^
-        version: link:../ui-button
-      '@onlyoffice/ui-code-editor':
-        specifier: workspace:^
-        version: link:../ui-code-editor
-      '@onlyoffice/ui-code-listing':
-        specifier: workspace:^
-        version: link:../ui-code-listing
-      '@onlyoffice/ui-content':
-        specifier: workspace:^
-        version: link:../ui-content
-      '@onlyoffice/ui-content-tab-container':
-        specifier: workspace:^
-        version: link:../ui-content-tab-container
-      '@onlyoffice/ui-form-control':
-        specifier: workspace:^
-        version: link:../ui-form-control
-      '@onlyoffice/ui-select':
-        specifier: workspace:^
-        version: link:../ui-select
+        version: link:../ui-kit
       dot-prop:
         specifier: ^9.0.0
         version: 9.0.0
@@ -1675,6 +1657,9 @@ importers:
       '@onlyoffice/preact-types':
         specifier: workspace:^
         version: link:../preact-types
+      '@onlyoffice/ui-kit':
+        specifier: workspace:^
+        version: link:../ui-kit
       preact:
         specifier: ^10.22.0
         version: 10.22.0
@@ -1682,9 +1667,6 @@ importers:
         specifier: ^5.4.5
         version: 5.4.5
     devDependencies:
-      '@onlyoffice/ui-kit':
-        specifier: workspace:^
-        version: link:../ui-kit
       '@storybook/preact':
         specifier: ^8.0.0
         version: 8.0.0(preact@10.22.0)
@@ -1825,9 +1807,6 @@ importers:
 
   packages/site-theme-switcher:
     dependencies:
-      '@onlyoffice/radiogroup-container-html-element':
-        specifier: workspace:^
-        version: link:../radiogroup-container-html-element
       preact:
         specifier: ^10.22.0
         version: 10.22.0
@@ -1835,6 +1814,12 @@ importers:
         specifier: ^5.4.5
         version: 5.4.5
     devDependencies:
+      '@onlyoffice/preact-types':
+        specifier: workspace:^
+        version: link:../preact-types
+      '@onlyoffice/radiogroup-container-html-element':
+        specifier: workspace:^
+        version: link:../radiogroup-container-html-element
       '@storybook/preact':
         specifier: ^8.0.0
         version: 8.0.0(preact@10.22.0)

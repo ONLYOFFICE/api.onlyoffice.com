@@ -1,11 +1,11 @@
 import {GithubIcon} from "@onlyoffice/ui-icons/rich/24.tsx"
-import type {Meta} from "@storybook/preact"
+import {type Meta} from "@storybook/preact"
 import {type JSX, h} from "preact"
 import {Help} from "./main.tsx"
 
-const meta: Meta = {
+export default {
   title: "Site/Help"
-}
+} satisfies Meta
 
 export function Default(): JSX.Element {
   return <Help>
@@ -18,5 +18,3 @@ export function Default(): JSX.Element {
     </ul>
   </Help>
 }
-
-export default meta

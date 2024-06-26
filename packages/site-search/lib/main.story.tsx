@@ -1,7 +1,6 @@
 import {Content} from "@onlyoffice/ui-kit"
-import type {Meta} from "@storybook/preact"
-import {type JSX, Fragment, h} from "preact"
-import content from "../../pagefind-fixtures/content/Robert Oppenheimer/Oppenheimer, Robert - Uncommon Sense (Birkhäuser, 1984)_djvu.txt?raw"
+import {type Meta} from "@storybook/preact"
+import {Fragment, type JSX, h} from "preact"
 import {
   SearchClear,
   type SearchContainerProperties,
@@ -13,9 +12,9 @@ import {
   SearchTemplate
 } from "./main.tsx"
 
-const meta: Meta = {
+export default {
   title: "Site/Search"
-}
+} satisfies Meta
 
 export function Default({...props}: SearchContainerProperties): JSX.Element {
   return <SearchContainer {...props}>
@@ -37,7 +36,7 @@ export function WithContent(): JSX.Element {
     <SearchHidable>
       <Content>
         <h1>Content</h1>
-        {content.slice(3000, 6000).split("\n\n").map((c) => <p>{c}</p>)}
+        content
       </Content>
     </SearchHidable>
     <SearchOutput>
@@ -48,5 +47,3 @@ export function WithContent(): JSX.Element {
     </SearchOutput>
   </>
 }
-
-export default meta
