@@ -1,10 +1,6 @@
 import type {Data, Context} from "@onlyoffice/eleventy-types"
-import {SiteDocumentEditorPlayground} from "@onlyoffice/site-document-editor-playground"
-import {
-  SitePlaygroundLayout,
-  SitePlaygroundLayoutBefore,
-  SitePlaygroundLayoutPlayground
-} from "../../../../../../packages/site-playground/lib/main.tsx"
+import {DocumentEditorPlayground} from "@onlyoffice/site-document-editor-playground"
+import {Playground, PlaygroundBefore, PlaygroundContent} from "@onlyoffice/site-playground"
 import {Content} from "@onlyoffice/ui-content"
 import {type JSX, h} from "preact"
 
@@ -15,14 +11,14 @@ export function data(): Data {
 }
 
 export function render({config}: Context): JSX.Element {
-  return <SitePlaygroundLayout>
-    <SitePlaygroundLayoutBefore>
+  return <Playground>
+    <PlaygroundBefore>
       <Content>
         <h1>Document Editor Playground</h1>
       </Content>
-    </SitePlaygroundLayoutBefore>
-    <SitePlaygroundLayoutPlayground>
-      <SiteDocumentEditorPlayground config={config.playground} />
-    </SitePlaygroundLayoutPlayground>
-  </SitePlaygroundLayout>
+    </PlaygroundBefore>
+    <PlaygroundContent>
+      <DocumentEditorPlayground config={config.playground} />
+    </PlaygroundContent>
+  </Playground>
 }
