@@ -18,7 +18,6 @@
     "typescript": "^5.4.5"
   },
   "devDependencies": {
-    "@onlyoffice/site-kit": "workspace:^",
     "@onlyoffice/ui-icons": "workspace:^",
     "@onlyoffice/ui-kit": "workspace:^",
     "@storybook/preact": "^8.0.0",

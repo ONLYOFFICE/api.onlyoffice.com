@@ -1,3 +1,8 @@
+import {CodePreview} from "@onlyoffice/ui-kit"
+import {JavascriptSdkIcon} from "@onlyoffice/ui-icons/rich/32.tsx"
+import type {Meta} from "@storybook/preact"
+import {type JSX, h} from "preact"
+import {Default as SearchDefault} from "../../site-search/lib/main.story.tsx"
 import {
   Home,
   HomeHero,
@@ -6,12 +11,7 @@ import {
   HomeLinks,
   HomePart,
   HomePreview
-} from "@onlyoffice/site-kit"
-import {CodePreview} from "@onlyoffice/ui-kit"
-import {JavascriptSdkIcon} from "@onlyoffice/ui-icons/rich/32.tsx"
-import type {Meta} from "@storybook/preact"
-import {type JSX, h} from "preact"
-import {Default as SearchDefault} from "../../site-search/lib/main.story.tsx"
+} from "./main.tsx"
 
 const meta: Meta = {
   title: "Site/Home"

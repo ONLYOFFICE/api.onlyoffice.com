@@ -1,3 +1,7 @@
+import {Content} from "@onlyoffice/ui-kit"
+import type {Meta} from "@storybook/preact"
+import {type JSX, Fragment, h} from "preact"
+import content from "../../pagefind-fixtures/content/Robert Oppenheimer/Oppenheimer, Robert - Uncommon Sense (Birkhäuser, 1984)_djvu.txt?raw"
 import {
   SearchClear,
   type SearchContainerProperties,
@@ -7,11 +11,7 @@ import {
   SearchOutput,
   SearchPlaceholder,
   SearchTemplate
-} from "@onlyoffice/site-kit"
-import {Content} from "@onlyoffice/ui-kit"
-import type {Meta} from "@storybook/preact"
-import {type JSX, Fragment, h} from "preact"
-import content from "../../pagefind-fixtures/content/Robert Oppenheimer/Oppenheimer, Robert - Uncommon Sense (Birkhäuser, 1984)_djvu.txt?raw"
+} from "./main.tsx"
 
 const meta: Meta = {
   title: "Site/Search"
