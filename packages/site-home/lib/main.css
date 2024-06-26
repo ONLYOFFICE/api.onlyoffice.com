@@ -27,6 +27,10 @@
   width: 100%;
 }
 
+.home__hero + .home__part {
+  margin-top: 100px;
+}
+
 .home__in {
   margin-top: 24px;
   max-width: 440px;

@@ -3,6 +3,7 @@
 @import "../node_modules/@onlyoffice/site-theme-switcher/lib/main.css";
 @import "../node_modules/@onlyoffice/site-page/lib/main.css";
 @import "../node_modules/@onlyoffice/site-home/lib/main.css";
+@import "../node_modules/@onlyoffice/site-home/lib/search-container.css";
 @import "../node_modules/@onlyoffice/site-part/lib/main.css";
 @import "../node_modules/@onlyoffice/site-part/lib/help.css";
 @import "../node_modules/@onlyoffice/site-chapter/lib/main.css";

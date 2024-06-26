@@ -3,15 +3,20 @@ import {CancelIcon, MagnifyingGlassIcon} from "@onlyoffice/ui-icons/poor/24.tsx"
 import {Template, useSlots} from "@onlyoffice/ui-kit"
 import {type JSX, h} from "preact"
 
-export function SearchContainer({children}: ChildrenIncludable): JSX.Element {
+export interface SearchContainerProperties extends ChildrenIncludable {
+  size?: "default" | "large"
+}
+
+export function SearchContainer({children, size}: SearchContainerProperties): JSX.Element {
   const [slots] = useSlots(children, {
     placeholder: SearchPlaceholder,
     field: SearchField,
     clear: SearchClear,
     template: SearchTemplate
   })
+
   return <search-container>
-    <form class="search" id="search" action="https://duckduckgo.com/" method="get">
+    <form class={cls()} id="search" action="https://duckduckgo.com/" method="get">
       <MagnifyingGlassIcon class="search__glass" width={24} height={24} />
       {slots.placeholder}
       {slots.field}
@@ -20,10 +25,18 @@ export function SearchContainer({children}: ChildrenIncludable): JSX.Element {
     </form>
     {slots.template}
   </search-container>
+
+  function cls(): string {
+    let s = "search"
+    if (size === "large") {
+      s += " search_large"
+    }
+    return s
+  }
 }
 
 export function SearchPlaceholder({children}: ChildrenIncludable): JSX.Element {
-  return <span class="search__tip">{children}</span>
+  return <span class="search__placeholder">{children}</span>
 }
 
 export interface SearchFieldProperties {
@@ -52,6 +65,10 @@ export function SearchHidable({children}: ChildrenIncludable): JSX.Element {
   return <div data-search-container-hidable>{children}</div>
 }
 
-export function SearchOutput({children}: ChildrenIncludable): JSX.Element {
-  return <output data-search-container-output for="search" hidden>{children}</output>
+export interface SearchOutputProperties extends ChildrenIncludable {
+  hidden?: boolean
+}
+
+export function SearchOutput({children, hidden = true}: SearchOutputProperties): JSX.Element {
+  return <output data-search-container-output for="search" hidden={hidden}>{children}</output>
 }

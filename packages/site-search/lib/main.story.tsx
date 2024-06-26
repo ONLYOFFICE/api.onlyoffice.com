@@ -1,23 +1,24 @@
-import {Content} from "@onlyoffice/ui-kit"
-import type {Meta} from "@storybook/preact"
-import {type JSX, Fragment, h} from "preact"
-import content from "../../pagefind-fixtures/content/Robert Oppenheimer/Oppenheimer, Robert - Uncommon Sense (Birkhäuser, 1984)_djvu.txt?raw"
 import {
   SearchClear,
+  type SearchContainerProperties,
   SearchContainer,
   SearchField,
   SearchHidable,
   SearchOutput,
   SearchPlaceholder,
   SearchTemplate
-} from "../lib/main.tsx"
+} from "@onlyoffice/site-kit"
+import {Content} from "@onlyoffice/ui-kit"
+import type {Meta} from "@storybook/preact"
+import {type JSX, Fragment, h} from "preact"
+import content from "../../pagefind-fixtures/content/Robert Oppenheimer/Oppenheimer, Robert - Uncommon Sense (Birkhäuser, 1984)_djvu.txt?raw"
 
 const meta: Meta = {
   title: "Site/Search"
 }
 
-export function Default(): JSX.Element {
-  return <SearchContainer>
+export function Default({...props}: SearchContainerProperties): JSX.Element {
+  return <SearchContainer {...props}>
     <SearchPlaceholder>Type <kbd>/</kbd> to search</SearchPlaceholder>
     <SearchField label="Search" />
     <SearchClear label="Clear" />
@@ -30,7 +31,7 @@ export function Default(): JSX.Element {
   </SearchContainer>
 }
 
-export function Composition(): JSX.Element {
+export function WithContent(): JSX.Element {
   return <>
     <Default />
     <SearchHidable>

@@ -6,9 +6,16 @@
   box-sizing: border-box;
   column-gap: 8px;
   display: grid;
+  font-size: 13px;
   grid-template-columns: min-content 1fr;
   padding: 10px 12px;
+  text-align: start;
   width: 100%;
+}
+
+.search_large {
+  font-size: 16px;
+  padding: 20px 22px;
 }
 
 search-container[filled] .search {
@@ -26,17 +33,17 @@ search-container[focused] .search {
   grid-row: 1;
 }
 
-.search__tip {
+.search__placeholder {
   grid-column: 2;
   grid-row: 1;
 }
 
-search-container[filled] .search__tip,
-search-container[focused] .search__tip {
+search-container[filled] .search__placeholder,
+search-container[focused] .search__placeholder {
   display: none;
 }
 
-.search__tip kbd {
+.search__placeholder kbd {
   border-radius: 3px;
   border: solid 1px #ccc;
   font-size: 0.85em;

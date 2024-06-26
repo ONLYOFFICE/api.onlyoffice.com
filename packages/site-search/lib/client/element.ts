@@ -1,5 +1,10 @@
 import type {PagefindFragment, PagefindModule} from "@onlyoffice/pagefind-types"
 
+// https://github.com/primer/react/blob/v36.14.0/packages/react/src/TextInput/TextInput.tsx
+// todo: separate input logic into a separate search-container.
+// todo: separate keydown logic into a separate keydown-container.
+// todo: rename to pagefind-container.
+
 export class SearchContainer extends HTMLElement {
   static get tagName(): string {
     return "search-container"
@@ -108,14 +113,17 @@ export class SearchContainer extends HTMLElement {
   }
 
   async #setup(): Promise<void> {
+    console.log(window.location.href)
     await this.#setupPagefind()
     this.#setupQuery()
     this.#setupSites()
+    this.#setupOutput()
     this.#setupSelf()
   }
 
   async #setupPagefind(): Promise<void> {
     try {
+      // todo: move path to the parameters (src)
       const p = await imp<PagefindModule>("/pagefind/pagefind.js")
       await p.init()
       this.#pagefind = p
@@ -144,6 +152,22 @@ export class SearchContainer extends HTMLElement {
       return
     }
     e.setAttribute("value", window.location.host)
+  }
+
+  #setupOutput(): void {
+    const q = this.#query
+    if (!q) {
+      return
+    }
+
+    // todo: temp solution
+
+    const t = this.#templateElement
+    if (!t) {
+      return
+    }
+
+    this.#searchCallback()
   }
 
   #setupSelf(): void {
@@ -242,14 +266,39 @@ export class SearchContainer extends HTMLElement {
   #handleKeydown(e: KeyboardEvent): void {
     switch (true) {
     case isWindowEvent(e) && isSlashKey(e.key):
-      e.preventDefault()
-      // eslint-disable-next-line no-case-declarations
-      const qe = this.#queryElement
-      if (qe) {
-        qe.focus()
-      }
+      this.#handleSlash(e)
+      break
+    case isQueryElement(e.target) && isEnterKey(e.key):
+      this.#handleEnter(e)
       break
     }
+  }
+
+  #handleSlash(e: KeyboardEvent): void {
+    e.preventDefault()
+    const q = this.#queryElement
+    if (q) {
+      q.focus()
+    }
+  }
+
+  #handleEnter(e: KeyboardEvent): void {
+    e.preventDefault()
+
+    // todo: temp solution
+
+    const qs = this.#query
+    if (!qs) {
+      return
+    }
+
+    const te = this.#templateElement
+    if (te) {
+      return
+    }
+
+    // todo: move path to the parameters
+    window.location.href = `/search/?q=${encodeURIComponent(qs)}`
   }
 
   #handleSubmit(e: SubmitEvent): void {
@@ -286,7 +335,9 @@ export class SearchContainer extends HTMLElement {
       ce.textContent = String(sr.results.length)
     }
 
-    const ae = await Promise.all(sr.results.map(async (r) => {
+    // todo: move the limit to the parameters
+    // todo: rewrite with for loop
+    const ae = await Promise.all(sr.results.slice(0, 100).map(async (r) => {
       const d = await r.data()
       return this.#createFragment(d)
     }))
@@ -385,6 +436,10 @@ function isQueryElement(e: unknown): e is HTMLInputElement {
 
 function isClearElement(e: unknown): e is HTMLButtonElement {
   return e instanceof HTMLButtonElement && e.value === "clear"
+}
+
+function isEnterKey(k: unknown): k is string {
+  return k === "Enter"
 }
 
 function isSlashKey(k: unknown): k is string {

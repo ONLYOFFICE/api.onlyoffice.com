@@ -1,15 +1,19 @@
 import {basename, dirname, extname, join} from "node:path"
 import type {Context, Data} from "@onlyoffice/eleventy-types"
 import {
-  type HomePartParameters,
   Home,
   HomeHero,
   HomeIn,
   HomeLink,
   HomeLinks,
+  type HomePartParameters,
   HomePart,
-  HomePreview
-} from "@onlyoffice/site-home"
+  HomePreview,
+  SearchClear,
+  SearchContainer,
+  SearchField,
+  SearchPlaceholder
+} from "@onlyoffice/site-kit"
 import * as icons from "@onlyoffice/ui-icons/rich/32.tsx"
 import {CodePreview} from "@onlyoffice/ui-code-preview"
 import {type JSX, h} from "preact"
@@ -30,6 +34,11 @@ export function render({collections}: Context): JSX.Element {
   return <Home>
     <HomeHero>
       <h1>Welcome to ONLYOFFICE API</h1>
+      <SearchContainer size="large">
+        <SearchPlaceholder>Search in all sections</SearchPlaceholder>
+        <SearchField label="Search" />
+        <SearchClear label="Clear" />
+      </SearchContainer>
     </HomeHero>
     {collections.navigation.map((item, i) => {
       return <HomePart key={i} variant={variant()}>
