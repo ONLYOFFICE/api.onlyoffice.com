@@ -1,4 +1,4 @@
-import type {Data, Context} from "@onlyoffice/eleventy-types"
+import type {Context, Data} from "@onlyoffice/eleventy-types"
 import {DocumentEditorPlayground} from "@onlyoffice/site-document-editor-playground"
 import {Playground, PlaygroundBefore, PlaygroundContent} from "@onlyoffice/site-playground"
 import {Content} from "@onlyoffice/ui-content"

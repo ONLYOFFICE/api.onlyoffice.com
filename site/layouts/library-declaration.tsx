@@ -1,4 +1,4 @@
-import type {Data, Context} from "@onlyoffice/eleventy-types"
+import type {Context, Data} from "@onlyoffice/eleventy-types"
 import {LibraryDeclaration} from "@onlyoffice/site-kit"
 import {type JSX, h} from "preact"
 import {Markdown} from "../components/markdown/markdown.ts"

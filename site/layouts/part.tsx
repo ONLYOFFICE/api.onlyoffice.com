@@ -1,4 +1,4 @@
-import type {Data, Context} from "@onlyoffice/eleventy-types"
+import type {Context, Data} from "@onlyoffice/eleventy-types"
 import {Help} from "@onlyoffice/site-help"
 import {
   Part,
