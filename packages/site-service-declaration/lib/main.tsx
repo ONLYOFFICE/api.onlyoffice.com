@@ -1,5 +1,3 @@
-// import {Badge, CodeListing} from "@onlyoffice/documentation-ui-kit"
-
 import {type ChildrenIncludable} from "@onlyoffice/preact-types"
 import type * as Service from "@onlyoffice/service-declaration"
 import {type Resource} from "@onlyoffice/service-resource"
