@@ -1,4 +1,4 @@
-import {basename, dirname, extname, join} from "node:path"
+import {basename, extname, join} from "node:path"
 import type {Context, Data} from "@onlyoffice/eleventy-types"
 import {
   Home,
@@ -82,8 +82,7 @@ export function render({collections}: Context): JSX.Element {
       }
 
       function src(): string {
-        const d = dirname(item.file)
-        return join(d, item.preview)
+        return join("assets/images/", item.preview)
       }
     })}
   </Home>
