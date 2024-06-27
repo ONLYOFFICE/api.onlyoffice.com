@@ -1,11 +1,10 @@
 import {createRequire} from "node:module"
-import type {Resource} from "@onlyoffice/service-resource"
+import {type Resource} from "@onlyoffice/service-resource"
 import {isBuild, isPreview} from "../config/mode.ts"
 
 const require = createRequire(import.meta.url)
 
-const {list, resolve} = resource("community-server")
-export {list, resolve}
+export const {list, resolve} = resource("community-server")
 
 function resource(n: string): Resource {
   const f = file(n)

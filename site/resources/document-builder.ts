@@ -1,5 +1,5 @@
 import {createRequire} from "node:module"
-import type {Resource} from "@onlyoffice/library-resource"
+import {type Resource} from "@onlyoffice/library-resource"
 import {isBuild, isPreview} from "../config/mode.ts"
 
 const require = createRequire(import.meta.url)
