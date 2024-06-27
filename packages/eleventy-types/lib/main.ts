@@ -19,6 +19,8 @@ export interface Template {
  * {@link https://www.11ty.dev/docs/config/ Eleventy Reference}
  */
 export interface UserConfig {
+  logger: ConsoleLogger
+
   /**
    * {@link https://www.11ty.dev/docs/data-custom/ Eleventy Reference}
    */
@@ -57,7 +59,7 @@ export interface UserConfig {
   /**
    * {@link https://www.11ty.dev/docs/plugins/ Eleventy Reference}
    */
-  addPlugin(plugin: unknown): void
+  addPlugin(plugin: unknown, ...a: unknown[]): void
 
   /**
    * {@link https://www.11ty.dev/docs/languages/custom/ Eleventy Reference}
@@ -65,9 +67,24 @@ export interface UserConfig {
   addTemplateFormats(formats: string): void
 
   /**
+   * {@link https://www.11ty.dev/docs/copy/ Eleventy Reference}
+   */
+  addPassthroughCopy(...args: unknown[]): void
+
+  /**
    * {@link https://www.11ty.dev/docs/events/ Eleventy Reference}
    */
   on(type: string, cb: unknown): void
+}
+
+/**
+ * {@link https://github.com/11ty/eleventy/blob/v2.0.1/src/Util/ConsoleLogger.js/#L8 Eleventy Reference}
+ */
+export interface ConsoleLogger {
+  /**
+   * {@link https://github.com/11ty/eleventy/blob/v2.0.1/src/Util/ConsoleLogger.js#L83 Eleventy Reference}
+   */
+  message(message: string, type?: "log" | "warn" | "error", chalkColor?: boolean, forceToConsole?: boolean): void
 }
 
 /**
