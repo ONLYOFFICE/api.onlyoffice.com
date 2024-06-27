@@ -2803,9 +2803,6 @@ importers:
       '@onlyoffice/documentation-ui-font':
         specifier: workspace:^
         version: link:../font
-      '@onlyoffice/documentation-ui-logo':
-        specifier: workspace:^
-        version: link:../logo
       '@onlyoffice/documentation-ui-sr-only':
         specifier: workspace:^
         version: link:../sr-only
