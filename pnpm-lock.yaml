@@ -2509,6 +2509,9 @@ importers:
       '@onlyoffice/eleventy-clean':
         specifier: workspace:^
         version: link:../packages/eleventy-clean
+      '@onlyoffice/eleventy-lightningcss':
+        specifier: workspace:^
+        version: link:../packages/eleventy-lightningcss
       '@onlyoffice/eleventy-pagefind':
         specifier: workspace:^
         version: link:../packages/eleventy-pagefind

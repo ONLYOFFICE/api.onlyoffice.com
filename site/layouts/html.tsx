@@ -18,9 +18,6 @@ export async function render(
   // todo: validate the context.
   // For example, if description is missing, print an error.
 
-  // todo: cache it!
-  // const regular = await buildRegularTheme()
-
   const c = await renderToString(
     // todo: do not forget to change the lang after localization.
     <html
@@ -40,7 +37,7 @@ export async function render(
 
         <Font.Links root="/" />
 
-        <link rel="stylesheet" href="/main.css" />
+        <link rel="stylesheet" href="/assets/main.css" />
         {/* <meta name="theme-color" media="(prefers-color-scheme: light)" content="#000000" /> */}
         {/* <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#000000" /> */}
         {/* <style media="(prefers-color-scheme: dark)">{dark}</style> */}

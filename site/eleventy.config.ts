@@ -1,17 +1,18 @@
 // todo: normalize naming of eleventy, remark, and other plugins.
 
 import {eleventyClean} from "@onlyoffice/eleventy-clean"
+import {eleventyLightningcss} from "@onlyoffice/eleventy-lightningcss"
 import {eleventyPagefind} from "@onlyoffice/eleventy-pagefind"
 import {eleventySiteConfig} from "@onlyoffice/eleventy-site-config"
 import {eleventyStarryNight} from "@onlyoffice/eleventy-starry-night"
 import {type UserConfig} from "@onlyoffice/eleventy-types"
 import {eleventyYAML} from "@onlyoffice/eleventy-yaml"
+import {isBuild, isPreview} from "@onlyoffice/site-env"
 import {markupPlugin} from "./config/markup.ts"
 import {navigationPlugin} from "./config/navigation.ts"
 import {previewPlugin} from "./config/preview.ts"
 import {scriptPlugin} from "./config/script.ts"
 import {staticPlugin} from "./config/static.ts"
-import {stylePlugin} from "./config/style.ts"
 
 import {eleventyPlugin as sitemapPlugin} from "./config/sitemap.ts"
 
@@ -19,7 +20,10 @@ function config(uc: UserConfig): unknown {
   uc.addPlugin(eleventyClean)
   uc.addPlugin(staticPlugin)
   uc.addPlugin(markupPlugin)
-  uc.addPlugin(stylePlugin)
+  uc.addPlugin(eleventyLightningcss, {
+    filename: "assets/main.css",
+    minify: isBuild() || isPreview()
+  })
   uc.addPlugin(scriptPlugin)
   uc.addPlugin(navigationPlugin)
   uc.addPlugin(eleventyStarryNight)
