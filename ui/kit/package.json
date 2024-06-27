@@ -11,7 +11,6 @@
     "./kit.server.ts": "./lib/kit.server.ts"
   },
   "dependencies": {
-    "@onlyoffice/documentation-ui-color": "workspace:^",
     "@onlyoffice/documentation-ui-font": "workspace:^",
     "@onlyoffice/documentation-ui-sr-only": "workspace:^",
     "@onlyoffice/documentation-ui-typography": "workspace:^"

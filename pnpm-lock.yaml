@@ -2730,21 +2730,6 @@ importers:
         specifier: ^5.1.6
         version: 5.1.6(@types/node@20.12.12)(lightningcss@1.24.1)(terser@5.31.0)
 
-  ui/color:
-    devDependencies:
-      '@onlyoffice/documentation-ui-storybook':
-        specifier: workspace:^
-        version: link:../storybook
-      preact:
-        specifier: ^10.22.0
-        version: 10.22.0
-      preact-render-to-string:
-        specifier: ^6.4.1
-        version: 6.4.1(preact@10.22.0)
-      typescript:
-        specifier: ^5.4.5
-        version: 5.4.5
-
   ui/font:
     devDependencies:
       preact:
@@ -2759,9 +2744,6 @@ importers:
 
   ui/kit:
     dependencies:
-      '@onlyoffice/documentation-ui-color':
-        specifier: workspace:^
-        version: link:../color
       '@onlyoffice/documentation-ui-font':
         specifier: workspace:^
         version: link:../font
