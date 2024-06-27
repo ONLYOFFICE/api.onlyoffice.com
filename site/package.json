@@ -68,7 +68,6 @@
     "hast-util-to-jsx-runtime": "^2.3.0",
     "hast-util-to-text": "^4.0.0",
     "html-minifier-terser": "^7.2.0",
-    "lightningcss": "^1.23.0",
     "mdast-util-from-markdown": "^2.0.0",
     "mdast-util-gfm-table": "^2.0.0",
     "mdast-util-to-hast": "^13.1.0",
