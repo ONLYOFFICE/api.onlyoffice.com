@@ -4,7 +4,6 @@ import eleventyImage from "@11ty/eleventy-img"
 import type {Root} from "hast"
 import {visit} from "unist-util-visit"
 import type {VFile} from "vfile"
-import {isHTTPSURL, isHTTPURL} from "../../config/baseurl.ts"
 
 // https://github.com/11ty/eleventy-img/issues/206/
 // https://github.com/rehypejs/rehype-picture/blob/main/lib/index.js/
