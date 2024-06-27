@@ -2745,32 +2745,6 @@ importers:
         specifier: ^5.4.5
         version: 5.4.5
 
-  ui/content:
-    dependencies:
-      '@onlyoffice/documentation-ui-sr-only':
-        specifier: workspace:^
-        version: link:../sr-only
-    optionalDependencies:
-      '@onlyoffice/documentation-ui-color':
-        specifier: workspace:^
-        version: link:../color
-      '@onlyoffice/documentation-ui-typography':
-        specifier: workspace:^
-        version: link:../typography
-    devDependencies:
-      '@onlyoffice/documentation-ui-storybook':
-        specifier: workspace:^
-        version: link:../storybook
-      preact:
-        specifier: ^10.22.0
-        version: 10.22.0
-      preact-render-to-string:
-        specifier: ^6.4.1
-        version: 6.4.1(preact@10.22.0)
-      typescript:
-        specifier: ^5.4.5
-        version: 5.4.5
-
   ui/font:
     devDependencies:
       preact:
@@ -2788,9 +2762,6 @@ importers:
       '@onlyoffice/documentation-ui-color':
         specifier: workspace:^
         version: link:../color
-      '@onlyoffice/documentation-ui-content':
-        specifier: workspace:^
-        version: link:../content
       '@onlyoffice/documentation-ui-font':
         specifier: workspace:^
         version: link:../font

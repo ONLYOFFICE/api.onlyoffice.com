@@ -1,7 +1,7 @@
 import type {Context, Data} from "@onlyoffice/eleventy-types"
 import {DocumentEditorPlayground} from "@onlyoffice/site-document-editor-playground"
-import {Playground, PlaygroundBefore, PlaygroundContent} from "@onlyoffice/site-playground"
-import {Content} from "@onlyoffice/ui-content"
+import {Playground, PlaygroundBefore, PlaygroundContent} from "@onlyoffice/site-kit"
+import {Content} from "@onlyoffice/ui-kit"
 import {type JSX, h} from "preact"
 
 export function data(): Data {
