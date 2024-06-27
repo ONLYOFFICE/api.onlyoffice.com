@@ -360,9 +360,9 @@ importers:
       '@onlyoffice/preact-jsx-base':
         specifier: workspace:^
         version: link:../preact-jsx-base
-      '@onlyoffice/unique-string':
+      '@onlyoffice/strings':
         specifier: workspace:^
-        version: link:../unique-string
+        version: link:../strings
       '@onlyoffice/utility-types':
         specifier: workspace:^
         version: link:../utility-types
@@ -537,9 +537,9 @@ importers:
       '@onlyoffice/document-server-types':
         specifier: workspace:^
         version: link:../document-server-types
-      '@onlyoffice/unique-string':
+      '@onlyoffice/strings':
         specifier: workspace:^
-        version: link:../unique-string
+        version: link:../strings
       typescript:
         specifier: ^5.4.5
         version: 5.4.5
@@ -584,9 +584,6 @@ importers:
         specifier: ^5.4.5
         version: 5.4.5
     devDependencies:
-      '@onlyoffice/unique-string':
-        specifier: workspace:^
-        version: link:../unique-string
       '@types/node':
         specifier: ^20.12.12
         version: 20.12.12
@@ -1859,9 +1856,9 @@ importers:
       '@onlyoffice/node-http':
         specifier: workspace:^
         version: link:../node-http
-      '@onlyoffice/unique-string':
+      '@onlyoffice/strings':
         specifier: workspace:^
-        version: link:../unique-string
+        version: link:../strings
       '@types/jsonwebtoken':
         specifier: ^9.0.6
         version: 9.0.6
@@ -2365,22 +2362,6 @@ importers:
       vite:
         specifier: ^5.1.6
         version: 5.1.6(@types/node@20.12.12)(lightningcss@1.24.1)(terser@5.31.0)
-
-  packages/unique-string:
-    dependencies:
-      typescript:
-        specifier: ^5.4.5
-        version: 5.4.5
-    devDependencies:
-      c8:
-        specifier: ^9.1.0
-        version: 9.1.0
-      tsx:
-        specifier: ^4.10.5
-        version: 4.10.5
-      uvu:
-        specifier: ^0.5.6
-        version: 0.5.6
 
   packages/utility-types:
     dependencies:

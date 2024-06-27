@@ -7,7 +7,7 @@ import type {
 } from "@onlyoffice/document-server-types"
 import {
   uniqueString
-} from "@onlyoffice/unique-string"
+} from "@onlyoffice/strings"
 import type {
   DocumentEditorAppReadyListener,
   DocumentEditorCollaborativeChangesListener,

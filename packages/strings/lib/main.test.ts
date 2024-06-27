@@ -1,6 +1,6 @@
-import {equal as eq, is} from "uvu/assert"
+import {equal as eq, is, unreachable as un} from "uvu/assert"
 import {test} from "uvu"
-import {cutPrefix, cutSuffix, substringPosition} from "./main.ts"
+import {cutPrefix, cutSuffix, substringPosition, uniqueString} from "./main.ts"
 
 test("cutPrefix(): returns an empty string when both strings are empty", () => {
   const s = cutPrefix("", "")
@@ -70,6 +70,28 @@ test("substringPosition(): returns the position for a string that contains the s
 test("substringPosition(): returns the position for a multiline string that contains the substring", () => {
   const r = substringPosition("foo\nbar", "a")
   eq(r, [2, 1])
+})
+
+test("uniqueString(): generates a string", () => {
+  const s = uniqueString()
+  is(typeof s, "string")
+})
+
+test("uniqueString(): generates a string with 12 characters", () => {
+  const s = uniqueString()
+  is(s.length, 12)
+})
+
+test("uniqueString(): generates a unique string", () => {
+  const t = new Set()
+  for (let i = 0; i < 100_000; i += 1) {
+    const s = uniqueString()
+    if (t.has(s)) {
+      un(`string ${s} already exists with ${i} iterations`)
+      return
+    }
+    t.add(s)
+  }
 })
 
 test.run()

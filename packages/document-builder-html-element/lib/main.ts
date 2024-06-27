@@ -1,7 +1,7 @@
 import {DocumentEditor} from "@onlyoffice/document-editor-html-element"
 import {builder, fileType} from "@onlyoffice/document-builder-utils"
 import type {DocEditorConnector} from "@onlyoffice/document-server-types"
-import {uniqueString} from "@onlyoffice/unique-string"
+import {uniqueString} from "@onlyoffice/strings"
 import type {Stringify} from "@onlyoffice/utility-types"
 
 declare global {

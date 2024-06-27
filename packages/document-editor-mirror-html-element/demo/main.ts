@@ -7,7 +7,7 @@ import {createServer} from "node:http"
 import {join} from "node:path"
 import {URL, fileURLToPath} from "node:url"
 import type {DocumentEditorConfig} from "@onlyoffice/document-editor-html-element"
-import {uniqueString} from "@onlyoffice/unique-string"
+import {uniqueString} from "@onlyoffice/strings"
 
 const config = {
   hostname: "0.0.0.0",
