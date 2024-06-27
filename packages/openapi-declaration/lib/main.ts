@@ -6,7 +6,7 @@ import {Console} from "@onlyoffice/console"
 import * as example from "@onlyoffice/service-declaration/example.ts"
 import type * as REST from "@onlyoffice/service-declaration"
 import * as service from "@onlyoffice/service-declaration"
-import slugify from "@sindresorhus/slugify"
+import {slug} from "github-slugger"
 import type {OpenAPIV3_1 as OpenAPI} from "openapi-types"
 import pack from "../package.json" with {type: "json"}
 
@@ -16,6 +16,8 @@ const console = new Console(pack.name, process.stdout, process.stderr)
 function hash(s: string): string {
   return createHash("md5").update(s).digest("hex")
 }
+
+// todo: move out the slug, it is not a responsibility of this package
 
 // todo: if the same component is defined in multiple files, it will be overwritten.
 // todo: if two paths have the same title and summary, they will have the same slugs.
@@ -62,7 +64,7 @@ export class ProcessPath extends Transform {
               // todo: support overloading, ex portal and Portal.
               // temp solution
               const g = a.slice(0, i + 1).join("/")
-              const s = g.split("/").map(slugify).join("/")
+              const s = g.split("/").map(slug).join("/")
               let ct = this._cache.groups[s]
               if (ct === undefined) {
                 ct = {
