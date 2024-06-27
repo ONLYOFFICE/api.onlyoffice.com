@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@types/node": "^20.12.12",
+    "kleur": "^4.1.5",
     "typescript": "^5.4.5"
   },
   "devDependencies": {
