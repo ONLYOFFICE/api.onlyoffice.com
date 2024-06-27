@@ -12,7 +12,6 @@
   },
   "dependencies": {
     "@onlyoffice/documentation-ui-font": "workspace:^",
-    "@onlyoffice/documentation-ui-sr-only": "workspace:^",
     "@onlyoffice/documentation-ui-typography": "workspace:^"
   },
   "devDependencies": {

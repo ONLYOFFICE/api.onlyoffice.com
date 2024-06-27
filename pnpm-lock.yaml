@@ -2747,24 +2747,9 @@ importers:
       '@onlyoffice/documentation-ui-font':
         specifier: workspace:^
         version: link:../font
-      '@onlyoffice/documentation-ui-sr-only':
-        specifier: workspace:^
-        version: link:../sr-only
       '@onlyoffice/documentation-ui-typography':
         specifier: workspace:^
         version: link:../typography
-    devDependencies:
-      preact:
-        specifier: ^10.22.0
-        version: 10.22.0
-      preact-render-to-string:
-        specifier: ^6.4.1
-        version: 6.4.1(preact@10.22.0)
-      typescript:
-        specifier: ^5.4.5
-        version: 5.4.5
-
-  ui/sr-only:
     devDependencies:
       preact:
         specifier: ^10.22.0
