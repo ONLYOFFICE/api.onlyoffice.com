@@ -1,6 +1,6 @@
+import {setTimeout} from "node:timers/promises"
 import type {JSX} from "preact"
 
-import {wait} from "@onlyoffice/documentation-utils/wait.ts"
 import {renderToStringAsync} from "preact-render-to-string"
 import {isValidElement} from "preact"
 import {transformMarkup} from "../config/markup.ts"
@@ -14,7 +14,7 @@ declare module "unified" {
 
 export async function renderToString(el: JSX.Element): Promise<string> {
   // todo: explain. DO NOT DELETE THE HACK BELLOW!
-  await wait()
+  await setTimeout(0)
 
   if (!isValidElement(el)) {
     throw new Error("Invalid element")

@@ -4,8 +4,7 @@
   "type": "module",
   "exports": {
     "./strings.ts": "./lib/strings.ts",
-    "./svg.ts": "./lib/svg.ts",
-    "./wait.ts": "./lib/wait.ts"
+    "./svg.ts": "./lib/svg.ts"
   },
   "scripts": {
     "test": "tsx ./node_modules/uvu/bin.js ./lib/ ^.*\\.test\\.ts$"
