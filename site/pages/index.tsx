@@ -15,12 +15,11 @@ import {
   SearchPlaceholder
 } from "@onlyoffice/site-kit"
 import * as icons from "@onlyoffice/ui-icons/rich/32.tsx"
-import {CodePreview} from "@onlyoffice/ui-kit"
+import {CodePreview, useSuspense} from "@onlyoffice/ui-kit"
 import {type JSX, h} from "preact"
 import {SyntaxHighlight} from "@/components/syntax-highlight/syntax-highlight.ts"
 
 import eleventyImage from "@11ty/eleventy-img"
-import {useSuspense} from "@/components/suspense.tsx"
 import type {HTMLAttributes} from "preact/compat"
 
 export function data(): Data {
@@ -127,10 +126,8 @@ function EleventyPicture({
     }
   })
 
-  return <Suspense><Suspender /></Suspense>
-
-  function Suspender(): JSX.Element {
-    return <picture>
+  return <Suspense>
+    {() => <picture>
       <source type={d.sourceType} srcset={d.srcset} />
       <img
         class={cls}
@@ -142,6 +139,6 @@ function EleventyPicture({
         src={d.url}
         width={d.width}
       />
-    </picture>
-  }
+    </picture>}
+  </Suspense>
 }

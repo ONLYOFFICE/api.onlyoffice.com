@@ -1,6 +1,7 @@
 import {starryNight} from "@onlyoffice/eleventy-starry-night"
 import {rehypeStarryNight} from "@onlyoffice/rehype-starry-night"
 import {rehypePreact} from "@onlyoffice/rehype-preact"
+import {useSuspense} from "@onlyoffice/ui-kit"
 import {Fragment, jsx, jsxs} from "preact/jsx-runtime"
 import type {JSX} from "preact"
 import {h} from "preact"
@@ -9,7 +10,6 @@ import remarkParse from "remark-parse"
 import remarkRehype from "remark-rehype"
 import {unified} from "unified"
 import {rehypePlugin as rehypeImage} from "../image/image.config.ts"
-import {useSuspense} from "../suspense.tsx"
 
 import rehypeSlug from "rehype-slug"
 import rehypeAutolink from "rehype-autolink-headings"
@@ -40,13 +40,5 @@ export function Root({children}: RootParameters): JSX.Element {
     result = v.result as JSX.Element
   })
 
-  return (
-    <Suspense>
-      <Suspender />
-    </Suspense>
-  )
-
-  function Suspender() {
-    return result
-  }
+  return <Suspense>{() => result}</Suspense>
 }

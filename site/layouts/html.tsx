@@ -2,7 +2,7 @@ import {Font} from "@onlyoffice/documentation-ui-kit"
 import {type Context} from "@onlyoffice/eleventy-types"
 // import {wait} from "@onlyoffice/documentation-utils/wait.ts"
 import {h} from "preact"
-import {renderToString} from "../config/preact.ts"
+import {renderToString} from "../config/preact.tsx"
 
 export async function render(
   {

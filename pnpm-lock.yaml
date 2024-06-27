@@ -2359,6 +2359,9 @@ importers:
       '@onlyoffice/ui-sr-only':
         specifier: workspace:^
         version: link:../ui-sr-only
+      '@onlyoffice/ui-suspense':
+        specifier: workspace:^
+        version: link:../ui-suspense
       '@onlyoffice/ui-template':
         specifier: workspace:^
         version: link:../ui-template
@@ -2455,6 +2458,31 @@ importers:
       vite:
         specifier: ^5.1.6
         version: 5.1.6(@types/node@20.12.12)(lightningcss@1.24.1)(terser@5.31.0)
+
+  packages/ui-suspense:
+    dependencies:
+      '@onlyoffice/preact-types':
+        specifier: workspace:^
+        version: link:../preact-types
+      preact:
+        specifier: ^10.22.0
+        version: 10.22.0
+      typescript:
+        specifier: ^5.4.5
+        version: 5.4.5
+    devDependencies:
+      c8:
+        specifier: ^9.1.0
+        version: 9.1.0
+      preact-render-to-string:
+        specifier: ^6.4.1
+        version: 6.4.1(preact@10.22.0)
+      tsx:
+        specifier: ^4.10.5
+        version: 4.11.0
+      uvu:
+        specifier: ^0.5.6
+        version: 0.5.6
 
   packages/ui-template:
     dependencies:

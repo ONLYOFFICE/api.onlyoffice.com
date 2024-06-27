@@ -29,6 +29,7 @@
     "@onlyoffice/ui-sizes": "workspace:^",
     "@onlyoffice/ui-slots": "workspace:^",
     "@onlyoffice/ui-sr-only": "workspace:^",
+    "@onlyoffice/ui-suspense": "workspace:^",
     "@onlyoffice/ui-template": "workspace:^",
     "preact": "^10.22.0",
     "typescript": "^5.4.5"
