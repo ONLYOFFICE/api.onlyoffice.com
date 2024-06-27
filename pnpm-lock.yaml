@@ -1963,6 +1963,25 @@ importers:
         specifier: ^0.5.6
         version: 0.5.6
 
+  packages/ui-article-card:
+    dependencies:
+      '@onlyoffice/preact-types':
+        specifier: workspace:^
+        version: link:../preact-types
+      preact:
+        specifier: ^10.22.0
+        version: 10.22.0
+      typescript:
+        specifier: ^5.4.5
+        version: 5.4.5
+    devDependencies:
+      '@storybook/preact':
+        specifier: ^8.0.0
+        version: 8.0.0(preact@10.22.0)
+      vite:
+        specifier: ^5.1.6
+        version: 5.1.6(@types/node@20.12.12)(lightningcss@1.24.1)(terser@5.31.0)
+
   packages/ui-badge:
     dependencies:
       '@onlyoffice/preact-types':
@@ -2205,6 +2224,9 @@ importers:
 
   packages/ui-kit:
     dependencies:
+      '@onlyoffice/ui-article-card':
+        specifier: workspace:^
+        version: link:../ui-article-card
       '@onlyoffice/ui-badge':
         specifier: workspace:^
         version: link:../ui-badge
@@ -2708,31 +2730,6 @@ importers:
         specifier: ^5.1.6
         version: 5.1.6(@types/node@20.12.12)(lightningcss@1.24.1)(terser@5.31.0)
 
-  ui/article-card:
-    optionalDependencies:
-      '@onlyoffice/documentation-ui-color':
-        specifier: workspace:^
-        version: link:../color
-      '@onlyoffice/documentation-ui-content':
-        specifier: workspace:^
-        version: link:../content
-      '@onlyoffice/documentation-ui-typography':
-        specifier: workspace:^
-        version: link:../typography
-    devDependencies:
-      '@onlyoffice/documentation-ui-storybook':
-        specifier: workspace:^
-        version: link:../storybook
-      preact:
-        specifier: ^10.22.0
-        version: 10.22.0
-      preact-render-to-string:
-        specifier: ^6.4.1
-        version: 6.4.1(preact@10.22.0)
-      typescript:
-        specifier: ^5.4.5
-        version: 5.4.5
-
   ui/color:
     devDependencies:
       '@onlyoffice/documentation-ui-storybook':
@@ -2788,9 +2785,6 @@ importers:
 
   ui/kit:
     dependencies:
-      '@onlyoffice/documentation-ui-article-card':
-        specifier: workspace:^
-        version: link:../article-card
       '@onlyoffice/documentation-ui-color':
         specifier: workspace:^
         version: link:../color
