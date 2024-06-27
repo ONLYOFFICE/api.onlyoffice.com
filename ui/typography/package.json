@@ -6,7 +6,6 @@
     "./typography.css": "./lib/typography.css"
   },
   "devDependencies": {
-    "@onlyoffice/documentation-ui-storybook": "workspace:^",
     "preact": "^10.22.0",
     "preact-render-to-string": "^6.4.1",
     "typescript": "^5.4.5"

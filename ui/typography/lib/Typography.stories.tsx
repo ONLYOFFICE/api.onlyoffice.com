@@ -1,4 +1,3 @@
-import { Properties as StorybookProperties } from "@onlyoffice/documentation-ui-storybook"
 import type { JSX } from "preact"
 import { Fragment, h } from "preact"
 import typography from "./typography.css?inline"
@@ -19,20 +18,4 @@ export default {
       </>
     )
   ]
-}
-
-const properties: string[] = [
-  "typography-monospace-font",
-  "typography-sans-serif-font",
-  "typography-line-height"
-]
-
-export function Properties(): JSX.Element {
-  return (
-    <StorybookProperties>
-      {properties.map((p) => (
-        <StorybookProperties.Property key={p} property={p} />
-      ))}
-    </StorybookProperties>
-  )
 }
