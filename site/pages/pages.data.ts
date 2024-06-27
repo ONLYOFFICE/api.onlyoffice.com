@@ -1,5 +1,5 @@
 import type {Data} from "@onlyoffice/eleventy-types"
-import {cutPrefix, cutSuffix} from "@onlyoffice/node-strings"
+import {cutPrefix, cutSuffix} from "@onlyoffice/strings"
 import {slug} from "github-slugger"
 
 declare module "@onlyoffice/eleventy-types" {

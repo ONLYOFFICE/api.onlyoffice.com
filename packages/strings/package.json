@@ -1,5 +1,5 @@
 {
-  "name": "@onlyoffice/node-strings",
+  "name": "@onlyoffice/strings",
   "private": true,
   "type": "module",
   "main": "lib/main.ts",
