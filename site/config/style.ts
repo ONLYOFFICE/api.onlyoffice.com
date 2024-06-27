@@ -1,7 +1,7 @@
 import { join, parse } from "node:path"
 import type { UserConfig } from "@11ty/eleventy"
+import {isBuild, isPreview} from "@onlyoffice/site-env"
 import { bundleAsync } from "lightningcss"
-import { isBuild, isPreview } from "./mode.ts"
 import {Transform} from "node:stream"
 
 export function stylePlugin(uc: UserConfig): void {

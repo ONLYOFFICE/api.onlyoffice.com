@@ -4,16 +4,16 @@
 // how to marry the Eleventy variable with our own, it is easier to use the
 // second solely.
 
-import { env } from "node:process"
+import {env} from "node:process"
 
 /**
  * Checks if the current run mode is set to `build`.
  * @returns `true` if the run mode is `build`, `false` otherwise.
  */
 export function isBuild(): boolean {
-  const m = env.DOCUMENTATION_RUN_MODE
+  const m = env.SITE_RUN_MODE
   if (m === undefined) {
-    throw new Error("DOCUMENTATION_RUN_MODE is not defined")
+    throw new Error("SITE_RUN_MODE is not defined")
   }
   return m === "build"
 }
@@ -23,9 +23,9 @@ export function isBuild(): boolean {
  * @returns `true` if the run mode is `preview`, `false` otherwise.
  */
 export function isPreview(): boolean {
-  const m = env.DOCUMENTATION_RUN_MODE
+  const m = env.SITE_RUN_MODE
   if (m === undefined) {
-    throw new Error("DOCUMENTATION_RUN_MODE is not defined")
+    throw new Error("SITE_RUN_MODE is not defined")
   }
   return m === "preview"
 }
@@ -35,9 +35,9 @@ export function isPreview(): boolean {
  * @returns `true` if the run mode is `serve`, `false` otherwise.
  */
 export function isServe(): boolean {
-  const m = env.DOCUMENTATION_RUN_MODE
+  const m = env.SITE_RUN_MODE
   if (m === undefined) {
-    throw new Error("DOCUMENTATION_RUN_MODE is not defined")
+    throw new Error("SITE_RUN_MODE is not defined")
   }
   return m === "serve"
 }

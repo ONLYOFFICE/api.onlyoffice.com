@@ -2,8 +2,8 @@ import { Buffer } from "node:buffer"
 import { tmpdir } from "node:os"
 import { parse } from "node:path"
 import type { UserConfig } from "@11ty/eleventy"
+import {isBuild, isPreview} from "@onlyoffice/site-env"
 import { build } from "esbuild"
-import { isBuild, isPreview } from "./mode.ts"
 import {Transform} from "node:stream"
 
 export function scriptPlugin(uc: UserConfig): void {

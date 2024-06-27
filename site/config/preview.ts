@@ -1,7 +1,7 @@
 import type { UserConfig } from "@11ty/eleventy"
 import { Cli, Logger } from "@11ty/eleventy-dev-server/cli.js"
 import EleventyDevServer from "@11ty/eleventy-dev-server/server.js"
-import { isPreview } from "./mode.ts"
+import {isPreview} from "@onlyoffice/site-env"
 
 export function previewPlugin(uc: UserConfig): void {
   if (!isPreview()) {

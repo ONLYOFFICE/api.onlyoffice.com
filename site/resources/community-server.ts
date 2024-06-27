@@ -1,6 +1,6 @@
 import {createRequire} from "node:module"
 import {type Resource} from "@onlyoffice/service-resource"
-import {isBuild, isPreview} from "../config/mode.ts"
+import {isBuild, isPreview} from "@onlyoffice/site-env"
 
 const require = createRequire(import.meta.url)
 

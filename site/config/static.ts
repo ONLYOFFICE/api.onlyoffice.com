@@ -1,5 +1,5 @@
 import type { UserConfig } from "@11ty/eleventy"
-import { isBuild, isPreview } from "./mode.ts"
+import {isBuild, isPreview} from "@onlyoffice/site-env"
 
 export function staticPlugin(uc: UserConfig): void {
   // todo: export the passthrough copy options from primitives.

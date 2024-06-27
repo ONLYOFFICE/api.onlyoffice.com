@@ -2,7 +2,6 @@
 
 import { extname } from "node:path"
 import type { UserConfig } from "@11ty/eleventy"
-import { isBuild, isPreview } from "./mode.ts"
 
 export interface NavigationItem {
   title: string
