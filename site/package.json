@@ -42,6 +42,7 @@
     "@onlyoffice/node-path": "workspace:^",
     "@onlyoffice/openapi-resource-fixtures": "workspace:^",
     "@onlyoffice/preact-callback": "workspace:^",
+    "@onlyoffice/preact-eleventy-img": "workspace:^",
     "@onlyoffice/preact-slots": "workspace:^",
     "@onlyoffice/preact-suspense": "workspace:^",
     "@onlyoffice/radiogroup-container-html-element": "workspace:^",

@@ -1,6 +1,6 @@
 import {basename, extname, join} from "node:path"
 import type {Context, Data} from "@onlyoffice/eleventy-types"
-import {useSuspense} from "@onlyoffice/preact-suspense"
+import {EleventyImage} from "@onlyoffice/preact-eleventy-img"
 import {
   Home,
   HomeHero,
@@ -19,9 +19,6 @@ import * as icons from "@onlyoffice/ui-icons/rich/32.tsx"
 import {CodePreview} from "@onlyoffice/ui-kit"
 import {type JSX, h} from "preact"
 import {SyntaxHighlight} from "@/components/syntax-highlight/syntax-highlight.ts"
-
-import eleventyImage from "@11ty/eleventy-img"
-import type {HTMLAttributes} from "preact/compat"
 
 export function data(): Data {
   return {
@@ -55,7 +52,7 @@ export function render({collections}: Context): JSX.Element {
         </HomeIn>
         <HomePreview>
           <a href={item.link} title={item.title}></a>
-          <EleventyPicture class={cls()} src={src()} />
+          <EleventyImage alt="" class={cls()} src={src()} urlPath="/assets/" outputDir="dist/assets/" />
           <CodePreview>
             <pre><code><SyntaxHighlight syntax={item.sample.syntax}>
               {item.sample.code}
@@ -87,58 +84,4 @@ export function render({collections}: Context): JSX.Element {
       }
     })}
   </Home>
-}
-
-interface EleventyPictureParameters extends HTMLAttributes<HTMLImageElement> {}
-
-function EleventyPicture({
-  alt,
-  class: cls,
-  decoding = "async",
-  loading = "lazy",
-  src
-}: EleventyPictureParameters): JSX.Element {
-  let d: any
-
-  const Suspense = useSuspense(async () => {
-    const o = {
-      formats: ["webp"],
-      urlPath: "/assets/",
-      outputDir: "dist/assets/",
-      filenameFormat(id: string, s: string, w: number, f: string) {
-        const e = extname(s)
-        const n = basename(s, e)
-        return `${n}-${w}w-${id}.${f}`
-      }
-    }
-
-    const e = extname(src)
-    if (e === ".svg") {
-      o.formats = ["svg"]
-    }
-
-    const s = await eleventyImage(src, o)
-
-    if (s.svg) {
-      d = s.svg[0]
-    } else {
-      d = s.webp[0]
-    }
-  })
-
-  return <Suspense>
-    {() => <picture>
-      <source type={d.sourceType} srcset={d.srcset} />
-      <img
-        class={cls}
-        alt={alt}
-        aria-hidden={true}
-        decoding={decoding}
-        height={d.height}
-        loading={loading}
-        src={d.url}
-        width={d.width}
-      />
-    </picture>}
-  </Suspense>
 }
