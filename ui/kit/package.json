@@ -12,7 +12,6 @@
   },
   "dependencies": {
     "@onlyoffice/documentation-ui-article-card": "workspace:^",
-    "@onlyoffice/documentation-ui-button": "workspace:^",
     "@onlyoffice/documentation-ui-color": "workspace:^",
     "@onlyoffice/documentation-ui-content": "workspace:^",
     "@onlyoffice/documentation-ui-font": "workspace:^",
