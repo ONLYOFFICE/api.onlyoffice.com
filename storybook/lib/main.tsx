@@ -15,7 +15,7 @@ export default {
   staticDirs: [
     "../../ui/font/static",
     {from: "../../packages/pagefind-fixtures/dist/pagefind", to: "pagefind"},
-    "../../site/pages/_static"
+    "../../site/assets/images"
   ],
   previewHead(head) {
     return head + renderToString(<Font.Links />)
