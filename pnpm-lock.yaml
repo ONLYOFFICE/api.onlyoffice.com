@@ -95,22 +95,6 @@ importers:
         specifier: ^0.5.6
         version: 0.5.6
 
-  packages/camel-to-dash:
-    dependencies:
-      typescript:
-        specifier: ^5.4.5
-        version: 5.4.5
-    devDependencies:
-      c8:
-        specifier: ^9.1.0
-        version: 9.1.0
-      tsx:
-        specifier: ^4.10.5
-        version: 4.11.0
-      uvu:
-        specifier: ^0.5.6
-        version: 0.5.6
-
   packages/combobox-container-html-element:
     dependencies:
       typescript:
@@ -1311,31 +1295,6 @@ importers:
       typescript:
         specifier: ^5.4.5
         version: 5.4.5
-
-  packages/preact-dataset:
-    dependencies:
-      '@onlyoffice/camel-to-dash':
-        specifier: workspace:^
-        version: link:../camel-to-dash
-      typescript:
-        specifier: ^5.4.5
-        version: 5.4.5
-    devDependencies:
-      c8:
-        specifier: ^9.1.0
-        version: 9.1.0
-      preact:
-        specifier: ^10.22.0
-        version: 10.22.0
-      preact-render-to-string:
-        specifier: ^6.4.1
-        version: 6.4.1(preact@10.22.0)
-      tsx:
-        specifier: ^4.10.5
-        version: 4.11.0
-      uvu:
-        specifier: ^0.5.6
-        version: 0.5.6
 
   packages/preact-jsx-base:
     dependencies:
