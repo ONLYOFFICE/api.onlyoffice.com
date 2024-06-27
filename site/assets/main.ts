@@ -12,8 +12,8 @@ import "@onlyoffice/document-editor-mirror-html-element"
 import "@onlyoffice/ui-kit/client.ts"
 import "@onlyoffice/documentation-ui-kit/kit.client.ts"
 import "@onlyoffice/site-kit/client.ts"
-import "./components/tree/tree.client.ts"
-import "./components/document-builder-container/element.ts"
+import "../components/tree/tree.client.ts"
+import "../components/document-builder-container/element.ts"
 import {Client} from "@onlyoffice/server-client"
 
 async function main(): Promise<void> {

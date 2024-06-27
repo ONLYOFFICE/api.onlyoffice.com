@@ -28,6 +28,7 @@
     "@onlyoffice/document-editor-mirror-html-element": "workspace:^",
     "@onlyoffice/documentation-ui-kit": "workspace:^",
     "@onlyoffice/eleventy-clean": "workspace:^",
+    "@onlyoffice/eleventy-esbuild": "workspace:^",
     "@onlyoffice/eleventy-lightningcss": "workspace:^",
     "@onlyoffice/eleventy-pagefind": "workspace:^",
     "@onlyoffice/eleventy-site-config": "workspace:^",

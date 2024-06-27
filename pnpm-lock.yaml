@@ -2543,6 +2543,9 @@ importers:
       '@onlyoffice/eleventy-clean':
         specifier: workspace:^
         version: link:../packages/eleventy-clean
+      '@onlyoffice/eleventy-esbuild':
+        specifier: workspace:^
+        version: link:../packages/eleventy-esbuild
       '@onlyoffice/eleventy-lightningcss':
         specifier: workspace:^
         version: link:../packages/eleventy-lightningcss
