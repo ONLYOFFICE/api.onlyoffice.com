@@ -1,5 +1,4 @@
 import {basename, dirname, extname, join} from "node:path"
-import {URL, fileURLToPath} from "node:url"
 import eleventyImage from "@11ty/eleventy-img"
 import type {Root} from "hast"
 import {visit} from "unist-util-visit"
@@ -9,8 +8,6 @@ import type {VFile} from "vfile"
 // https://github.com/rehypejs/rehype-picture/blob/main/lib/index.js/
 // https://www.11ty.dev/docs/plugins/image/#make-your-own-markup
 export function rehypePlugin() {
-  const d = currentDir()
-
   return async function (tree: Root, file: VFile) {
     const transformers: any[] = []
 
@@ -99,9 +96,4 @@ export function rehypePlugin() {
     await Promise.all(transformers)
     return tree
   }
-}
-
-function currentDir() {
-  const u = new URL(import.meta.url)
-  return fileURLToPath(u)
 }
