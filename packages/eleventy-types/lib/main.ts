@@ -105,9 +105,11 @@ export interface DataExtension {
  * {@link https://www.11ty.dev/docs/config/ Eleventy Reference}
  */
 export interface UserConfigDir {
-  input: string
-  output: string
   data: string
+  includes: string
+  input: string
+  layouts: string
+  output: string
 }
 
 /**
