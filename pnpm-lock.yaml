@@ -2841,18 +2841,6 @@ importers:
         specifier: ^5.4.5
         version: 5.4.5
 
-  ui/hooks:
-    devDependencies:
-      preact:
-        specifier: ^10.22.0
-        version: 10.22.0
-      preact-render-to-string:
-        specifier: ^6.4.1
-        version: 6.4.1(preact@10.22.0)
-      typescript:
-        specifier: ^5.4.5
-        version: 5.4.5
-
   ui/icon:
     devDependencies:
       '@onlyoffice/documentation-utils':
@@ -2900,9 +2888,6 @@ importers:
       '@onlyoffice/documentation-ui-font':
         specifier: workspace:^
         version: link:../font
-      '@onlyoffice/documentation-ui-hooks':
-        specifier: workspace:^
-        version: link:../hooks
       '@onlyoffice/documentation-ui-icon':
         specifier: workspace:^
         version: link:../icon

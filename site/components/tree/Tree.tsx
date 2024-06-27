@@ -1,4 +1,5 @@
-import { ChevronRightIcon, useSlots } from "@onlyoffice/documentation-ui-kit"
+import { ChevronRightIcon} from "@onlyoffice/documentation-ui-kit"
+import {useSlots} from "@onlyoffice/ui-kit"
 import { clsx } from "clsx"
 import type { JSX } from "preact"
 import { h } from "preact"
