@@ -865,9 +865,9 @@ importers:
       '@onlyoffice/library-declaration':
         specifier: workspace:^
         version: link:../library-declaration
-      '@onlyoffice/strings':
+      '@onlyoffice/markdown':
         specifier: workspace:^
-        version: link:../strings
+        version: link:../markdown
       '@types/mdast':
         specifier: ^4.0.3
         version: 4.0.3
@@ -988,6 +988,43 @@ importers:
       tsx:
         specifier: ^4.10.5
         version: 4.10.5
+      uvu:
+        specifier: ^0.5.6
+        version: 0.5.6
+
+  packages/markdown:
+    dependencies:
+      '@types/mdast':
+        specifier: ^4.0.3
+        version: 4.0.3
+      mdast-util-from-markdown:
+        specifier: ^2.0.0
+        version: 2.0.0
+      mdast-util-to-markdown:
+        specifier: ^2.1.0
+        version: 2.1.0
+      mdast-util-to-string:
+        specifier: ^4.0.0
+        version: 4.0.0
+      sentence-splitter:
+        specifier: ^5.0.0
+        version: 5.0.0
+      typescript:
+        specifier: ^5.4.5
+        version: 5.4.5
+      unist-util-remove:
+        specifier: ^4.0.0
+        version: 4.0.0
+      unist-util-select:
+        specifier: ^5.1.0
+        version: 5.1.0
+    devDependencies:
+      c8:
+        specifier: ^9.1.0
+        version: 9.1.0
+      tsx:
+        specifier: ^4.10.5
+        version: 4.11.0
       uvu:
         specifier: ^0.5.6
         version: 0.5.6
@@ -1883,43 +1920,6 @@ importers:
       typescript:
         specifier: ^5.4.5
         version: 5.4.5
-    devDependencies:
-      c8:
-        specifier: ^9.1.0
-        version: 9.1.0
-      tsx:
-        specifier: ^4.10.5
-        version: 4.10.5
-      uvu:
-        specifier: ^0.5.6
-        version: 0.5.6
-
-  packages/strings:
-    dependencies:
-      '@types/mdast':
-        specifier: ^4.0.3
-        version: 4.0.3
-      mdast-util-from-markdown:
-        specifier: ^2.0.0
-        version: 2.0.0
-      mdast-util-to-markdown:
-        specifier: ^2.1.0
-        version: 2.1.0
-      mdast-util-to-string:
-        specifier: ^4.0.0
-        version: 4.0.0
-      sentence-splitter:
-        specifier: ^5.0.0
-        version: 5.0.0
-      typescript:
-        specifier: ^5.4.5
-        version: 5.4.5
-      unist-util-remove:
-        specifier: ^4.0.0
-        version: 4.0.0
-      unist-util-select:
-        specifier: ^5.1.0
-        version: 5.1.0
     devDependencies:
       c8:
         specifier: ^9.1.0

@@ -15,7 +15,7 @@
     "@onlyoffice/eslint-presentation": "workspace:^",
     "@onlyoffice/jsdoc": "workspace:^",
     "@onlyoffice/library-declaration": "workspace:^",
-    "@onlyoffice/strings": "workspace:^",
+    "@onlyoffice/markdown": "workspace:^",
     "@types/mdast": "^4.0.3",
     "@types/node": "^20.12.12",
     "@vscode/vscode-languagedetection": "^1.0.22",
