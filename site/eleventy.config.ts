@@ -38,9 +38,9 @@ function config(uc: UserConfig): unknown {
   return {
     dir: {
       data: "data",
-      includes: "components",
-      input: ".",
-      layouts: "layouts",
+      includes: "../components",
+      input: "pages",
+      layouts: "../layouts",
       output: "dist"
     }
   }
