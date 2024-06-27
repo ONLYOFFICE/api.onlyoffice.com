@@ -15,7 +15,6 @@
     "@onlyoffice/documentation-ui-color": "workspace:^",
     "@onlyoffice/documentation-ui-content": "workspace:^",
     "@onlyoffice/documentation-ui-font": "workspace:^",
-    "@onlyoffice/documentation-ui-icon": "workspace:^",
     "@onlyoffice/documentation-ui-logo": "workspace:^",
     "@onlyoffice/documentation-ui-sr-only": "workspace:^",
     "@onlyoffice/documentation-ui-typography": "workspace:^"
