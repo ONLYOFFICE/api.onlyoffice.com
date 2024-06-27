@@ -1,6 +1,6 @@
 import {is} from "uvu/assert"
 import {test} from "uvu"
-import {firstParagraph, firstSentence, isStringLiteral, selectSection} from "./main.ts"
+import {firstParagraph, firstSentence, selectSection} from "./main.ts"
 
 test("firstParagraph() returns an empty string for an empty content", () => {
   const e = firstParagraph("")
@@ -65,26 +65,6 @@ test("firstSentence() returns a first sentence for a content with a single sente
 test("firstSentence() returns a first sentence for a content with multiple sentences", () => {
   const e = firstSentence("a. b.")
   is(e, "a.")
-})
-
-test("isStringLiteral() returns false for an empty string", () => {
-  const e = isStringLiteral("")
-  is(e, false)
-})
-
-test("isStringLiteral() returns false for a string without quotes", () => {
-  const e = isStringLiteral("s")
-  is(e, false)
-})
-
-test("isStringLiteral() returns true for a string with double quotes", () => {
-  const e = isStringLiteral('"s"')
-  is(e, true)
-})
-
-test("isStringLiteral() returns true for a string with single quotes", () => {
-  const e = isStringLiteral("'s'")
-  is(e, true)
 })
 
 test.run()

@@ -865,6 +865,9 @@ importers:
       '@onlyoffice/markdown':
         specifier: workspace:^
         version: link:../markdown
+      '@onlyoffice/strings':
+        specifier: workspace:^
+        version: link:../strings
       '@types/mdast':
         specifier: ^4.0.3
         version: 4.0.3

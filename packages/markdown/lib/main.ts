@@ -58,8 +58,3 @@ export function firstSentence(s: string): string {
   }
   return s
 }
-
-export function isStringLiteral(s: string): boolean {
-  return s.startsWith('"') && s.endsWith('"') ||
-    s.startsWith("'") && s.endsWith("'")
-}

@@ -1,6 +1,12 @@
 import {equal as eq, is, unreachable as un} from "uvu/assert"
 import {test} from "uvu"
-import {cutPrefix, cutSuffix, substringPosition, uniqueString} from "./main.ts"
+import {
+  cutPrefix,
+  cutSuffix,
+  isStringLiteral,
+  substringPosition,
+  uniqueString
+} from "./main.ts"
 
 test("cutPrefix(): returns an empty string when both strings are empty", () => {
   const s = cutPrefix("", "")
@@ -50,6 +56,26 @@ test("cutSuffix(): cuts when the string ends with a suffix", () => {
 test("cutSuffix(): cuts the length of the suffix when the string ends with a suffix", () => {
   const s = cutSuffix("abb", "b")
   is(s, "ab")
+})
+
+test("isStringLiteral() returns false for an empty string", () => {
+  const e = isStringLiteral("")
+  is(e, false)
+})
+
+test("isStringLiteral() returns false for a string without quotes", () => {
+  const e = isStringLiteral("s")
+  is(e, false)
+})
+
+test("isStringLiteral() returns true for a string with double quotes", () => {
+  const e = isStringLiteral('"s"')
+  is(e, true)
+})
+
+test("isStringLiteral() returns true for a string with single quotes", () => {
+  const e = isStringLiteral("'s'")
+  is(e, true)
 })
 
 test("substringPosition(): returns the zero position for an empty string", () => {

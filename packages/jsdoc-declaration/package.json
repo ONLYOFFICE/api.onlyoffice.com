@@ -16,6 +16,7 @@
     "@onlyoffice/jsdoc": "workspace:^",
     "@onlyoffice/library-declaration": "workspace:^",
     "@onlyoffice/markdown": "workspace:^",
+    "@onlyoffice/strings": "workspace:^",
     "@types/mdast": "^4.0.3",
     "@types/node": "^20.12.12",
     "@vscode/vscode-languagedetection": "^1.0.22",

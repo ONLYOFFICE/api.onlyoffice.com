@@ -12,6 +12,12 @@ export function cutSuffix(s: string, p: string): string {
   return s
 }
 
+export function isStringLiteral(u: unknown): u is string {
+  return typeof u === "string" &&
+    (u.startsWith('"') && u.endsWith('"') ||
+    u.startsWith("'") && u.endsWith("'"))
+}
+
 export function substringPosition(a: string, b: string): [number, number] {
   const i = a.indexOf(b)
   if (i === -1) {
