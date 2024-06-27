@@ -7,9 +7,10 @@ import {
   PageFooterThemeSwitcher,
   PageHeader,
   PageHeaderLogo,
-  PageHeaderMenu
-} from "@onlyoffice/site-page"
-import {ThemeSwitcher, ThemeSwitcherOption} from "@onlyoffice/site-theme-switcher"
+  PageHeaderMenu,
+  ThemeSwitcher,
+  ThemeSwitcherOption
+} from "@onlyoffice/site-kit"
 import {OnlyofficeLogo} from "@onlyoffice/ui-logos"
 import {SrOnly} from "@onlyoffice/ui-sr-only"
 import {type JSX, h} from "preact"

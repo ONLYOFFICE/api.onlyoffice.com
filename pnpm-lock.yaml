@@ -2507,27 +2507,9 @@ importers:
       '@onlyoffice/service-resource':
         specifier: workspace:^
         version: link:../packages/service-resource
-      '@onlyoffice/site-document-editor-playground':
-        specifier: workspace:^
-        version: link:../packages/site-document-editor-playground
-      '@onlyoffice/site-home':
-        specifier: workspace:^
-        version: link:../packages/site-home
       '@onlyoffice/site-kit':
         specifier: workspace:^
         version: link:../packages/site-kit
-      '@onlyoffice/site-page':
-        specifier: workspace:^
-        version: link:../packages/site-page
-      '@onlyoffice/site-part':
-        specifier: workspace:^
-        version: link:../packages/site-part
-      '@onlyoffice/site-playground':
-        specifier: workspace:^
-        version: link:../packages/site-playground
-      '@onlyoffice/site-theme-switcher':
-        specifier: workspace:^
-        version: link:../packages/site-theme-switcher
       '@onlyoffice/store-demo':
         specifier: workspace:^
         version: link:../packages/store-demo

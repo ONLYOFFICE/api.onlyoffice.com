@@ -1,12 +1,12 @@
 import type {Context, Data} from "@onlyoffice/eleventy-types"
-import {Help} from "@onlyoffice/site-kit"
 import {
+  Help,
   Part,
   PartChapter,
   PartChapters,
   PartHelp,
   PartHero
-} from "@onlyoffice/site-part"
+} from "@onlyoffice/site-kit"
 import {GithubIcon} from "@onlyoffice/ui-icons/rich/24.tsx"
 import * as icons from "@onlyoffice/ui-icons/rich/64.tsx"
 import {SrOnly} from "@onlyoffice/ui-sr-only"
