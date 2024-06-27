@@ -72,6 +72,11 @@ export interface UserConfig {
   addPassthroughCopy(...args: unknown[]): void
 
   /**
+   * {@link https://www.11ty.dev/docs/transforms/ Eleventy Reference}
+   */
+  addTransform(name: string, callback: (content: unknown, file: string) => unknown): void
+
+  /**
    * {@link https://www.11ty.dev/docs/events/ Eleventy Reference}
    */
   on(type: string, cb: unknown): void
