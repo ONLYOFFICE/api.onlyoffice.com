@@ -1,5 +1,6 @@
 import {basename, extname, join} from "node:path"
 import type {Context, Data} from "@onlyoffice/eleventy-types"
+import {useSuspense} from "@onlyoffice/preact-suspense"
 import {
   Home,
   HomeHero,
@@ -15,7 +16,7 @@ import {
   SearchPlaceholder
 } from "@onlyoffice/site-kit"
 import * as icons from "@onlyoffice/ui-icons/rich/32.tsx"
-import {CodePreview, useSuspense} from "@onlyoffice/ui-kit"
+import {CodePreview} from "@onlyoffice/ui-kit"
 import {type JSX, h} from "preact"
 import {SyntaxHighlight} from "@/components/syntax-highlight/syntax-highlight.ts"
 

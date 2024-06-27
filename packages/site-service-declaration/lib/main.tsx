@@ -1,9 +1,9 @@
 import {type ChildrenIncludable} from "@onlyoffice/preact-types"
+import {Callback} from "@onlyoffice/preact-callback"
 import type * as Service from "@onlyoffice/service-declaration"
 import {type Resource} from "@onlyoffice/service-resource"
 import {
   Badge,
-  Callback,
   CodeListing,
   // CodeListingAction,
   // CodeListingActionList,

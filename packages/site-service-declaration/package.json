@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "@onlyoffice/openapi-resource-fixtures": "workspace:^",
+    "@onlyoffice/preact-callback": "workspace:^",
     "@onlyoffice/preact-types": "workspace:^",
     "@onlyoffice/service-declaration": "workspace:^",
     "@onlyoffice/service-resource": "workspace:^",

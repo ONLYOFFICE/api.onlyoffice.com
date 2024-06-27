@@ -1,4 +1,4 @@
-import {Callback} from "@onlyoffice/ui-kit"
+import {Callback} from "@onlyoffice/preact-callback"
 import {type JSX, Fragment, h} from "preact"
 
 export interface Page {

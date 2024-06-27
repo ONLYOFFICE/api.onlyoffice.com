@@ -1,6 +1,7 @@
 import {type ChildrenIncludable} from "@onlyoffice/preact-types"
+import {useSlots} from "@onlyoffice/preact-slots"
 import {CancelIcon, MagnifyingGlassIcon} from "@onlyoffice/ui-icons/poor/24.tsx"
-import {Template, useSlots} from "@onlyoffice/ui-kit"
+import {Template} from "@onlyoffice/ui-kit"
 import {type JSX, h} from "preact"
 
 export interface SearchContainerProperties extends ChildrenIncludable {

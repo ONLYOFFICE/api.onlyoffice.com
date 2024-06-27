@@ -1,7 +1,7 @@
 import {starryNight} from "@onlyoffice/eleventy-starry-night"
+import {useSuspense} from "@onlyoffice/preact-suspense"
 import {rehypeStarryNight} from "@onlyoffice/rehype-starry-night"
 import {rehypePreact} from "@onlyoffice/rehype-preact"
-import {useSuspense} from "@onlyoffice/ui-kit"
 import {Fragment, jsx, jsxs} from "preact/jsx-runtime"
 import type {JSX} from "preact"
 import {h} from "preact"

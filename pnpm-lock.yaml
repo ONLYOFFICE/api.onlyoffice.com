@@ -1296,11 +1296,57 @@ importers:
         specifier: ^5.4.5
         version: 5.4.5
 
+  packages/preact-callback:
+    dependencies:
+      '@onlyoffice/preact-types':
+        specifier: workspace:^
+        version: link:../preact-types
+      preact:
+        specifier: ^10.22.0
+        version: 10.22.0
+      typescript:
+        specifier: ^5.4.5
+        version: 5.4.5
+
   packages/preact-jsx-base:
     dependencies:
       typescript:
         specifier: ^5.4.5
         version: 5.4.5
+
+  packages/preact-slots:
+    dependencies:
+      preact:
+        specifier: ^10.22.0
+        version: 10.22.0
+      typescript:
+        specifier: ^5.4.5
+        version: 5.4.5
+
+  packages/preact-suspense:
+    dependencies:
+      '@onlyoffice/preact-types':
+        specifier: workspace:^
+        version: link:../preact-types
+      preact:
+        specifier: ^10.22.0
+        version: 10.22.0
+      typescript:
+        specifier: ^5.4.5
+        version: 5.4.5
+    devDependencies:
+      c8:
+        specifier: ^9.1.0
+        version: 9.1.0
+      preact-render-to-string:
+        specifier: ^6.4.1
+        version: 6.4.1(preact@10.22.0)
+      tsx:
+        specifier: ^4.10.5
+        version: 4.11.0
+      uvu:
+        specifier: ^0.5.6
+        version: 0.5.6
 
   packages/preact-types:
     dependencies:
@@ -1771,12 +1817,12 @@ importers:
 
   packages/site-page:
     dependencies:
+      '@onlyoffice/preact-slots':
+        specifier: workspace:^
+        version: link:../preact-slots
       '@onlyoffice/preact-types':
         specifier: workspace:^
         version: link:../preact-types
-      '@onlyoffice/ui-slots':
-        specifier: workspace:^
-        version: link:../ui-slots
       preact:
         specifier: ^10.22.0
         version: 10.22.0
@@ -1846,6 +1892,9 @@ importers:
       '@onlyoffice/pagefind-types':
         specifier: workspace:^
         version: link:../pagefind-types
+      '@onlyoffice/preact-slots':
+        specifier: workspace:^
+        version: link:../preact-slots
       '@onlyoffice/preact-types':
         specifier: workspace:^
         version: link:../preact-types
@@ -1874,6 +1923,9 @@ importers:
       '@onlyoffice/openapi-resource-fixtures':
         specifier: workspace:^
         version: link:../openapi-resource-fixtures
+      '@onlyoffice/preact-callback':
+        specifier: workspace:^
+        version: link:../preact-callback
       '@onlyoffice/preact-types':
         specifier: workspace:^
         version: link:../preact-types
@@ -2113,18 +2165,6 @@ importers:
         specifier: ^5.1.6
         version: 5.1.6(@types/node@20.12.12)(lightningcss@1.24.1)(terser@5.31.0)
 
-  packages/ui-callback:
-    dependencies:
-      '@onlyoffice/preact-types':
-        specifier: workspace:^
-        version: link:../preact-types
-      preact:
-        specifier: ^10.22.0
-        version: 10.22.0
-      typescript:
-        specifier: ^5.4.5
-        version: 5.4.5
-
   packages/ui-code-editor:
     dependencies:
       preact:
@@ -2310,9 +2350,6 @@ importers:
       '@onlyoffice/ui-button':
         specifier: workspace:^
         version: link:../ui-button
-      '@onlyoffice/ui-callback':
-        specifier: workspace:^
-        version: link:../ui-callback
       '@onlyoffice/ui-code-editor':
         specifier: workspace:^
         version: link:../ui-code-editor
@@ -2340,15 +2377,9 @@ importers:
       '@onlyoffice/ui-sizes':
         specifier: workspace:^
         version: link:../ui-sizes
-      '@onlyoffice/ui-slots':
-        specifier: workspace:^
-        version: link:../ui-slots
       '@onlyoffice/ui-sr-only':
         specifier: workspace:^
         version: link:../ui-sr-only
-      '@onlyoffice/ui-suspense':
-        specifier: workspace:^
-        version: link:../ui-suspense
       '@onlyoffice/ui-template':
         specifier: workspace:^
         version: link:../ui-template
@@ -2418,15 +2449,6 @@ importers:
         specifier: ^2.4.1
         version: 2.4.1
 
-  packages/ui-slots:
-    dependencies:
-      preact:
-        specifier: ^10.22.0
-        version: 10.22.0
-      typescript:
-        specifier: ^5.4.5
-        version: 5.4.5
-
   packages/ui-sr-only:
     dependencies:
       '@onlyoffice/preact-types':
@@ -2445,31 +2467,6 @@ importers:
       vite:
         specifier: ^5.1.6
         version: 5.1.6(@types/node@20.12.12)(lightningcss@1.24.1)(terser@5.31.0)
-
-  packages/ui-suspense:
-    dependencies:
-      '@onlyoffice/preact-types':
-        specifier: workspace:^
-        version: link:../preact-types
-      preact:
-        specifier: ^10.22.0
-        version: 10.22.0
-      typescript:
-        specifier: ^5.4.5
-        version: 5.4.5
-    devDependencies:
-      c8:
-        specifier: ^9.1.0
-        version: 9.1.0
-      preact-render-to-string:
-        specifier: ^6.4.1
-        version: 6.4.1(preact@10.22.0)
-      tsx:
-        specifier: ^4.10.5
-        version: 4.11.0
-      uvu:
-        specifier: ^0.5.6
-        version: 0.5.6
 
   packages/ui-template:
     dependencies:
@@ -2597,6 +2594,15 @@ importers:
       '@onlyoffice/openapi-resource-fixtures':
         specifier: workspace:^
         version: link:../packages/openapi-resource-fixtures
+      '@onlyoffice/preact-callback':
+        specifier: workspace:^
+        version: link:../packages/preact-callback
+      '@onlyoffice/preact-slots':
+        specifier: workspace:^
+        version: link:../packages/preact-slots
+      '@onlyoffice/preact-suspense':
+        specifier: workspace:^
+        version: link:../packages/preact-suspense
       '@onlyoffice/radiogroup-container-html-element':
         specifier: workspace:^
         version: link:../packages/radiogroup-container-html-element

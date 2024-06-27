@@ -1,5 +1,5 @@
 {
-  "name": "@onlyoffice/ui-suspense",
+  "name": "@onlyoffice/preact-suspense",
   "private": true,
   "type": "module",
   "main": "lib/main.tsx",

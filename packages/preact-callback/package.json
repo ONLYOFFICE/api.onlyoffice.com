@@ -1,5 +1,5 @@
 {
-  "name": "@onlyoffice/ui-callback",
+  "name": "@onlyoffice/preact-callback",
   "private": true,
   "type": "module",
   "main": "lib/main.tsx",

@@ -1,5 +1,5 @@
 {
-  "name": "@onlyoffice/ui-slots",
+  "name": "@onlyoffice/preact-slots",
   "private": true,
   "type": "module",
   "main": "lib/main.ts",

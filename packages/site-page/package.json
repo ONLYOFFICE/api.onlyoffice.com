@@ -12,8 +12,8 @@
     "test": "pnpm test:types"
   },
   "dependencies": {
+    "@onlyoffice/preact-slots": "workspace:^",
     "@onlyoffice/preact-types": "workspace:^",
-    "@onlyoffice/ui-slots": "workspace:^",
     "preact": "^10.22.0",
     "typescript": "^5.4.5"
   },

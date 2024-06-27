@@ -1,5 +1,5 @@
 import {setTimeout} from "node:timers/promises"
-import {createSuspense} from "@onlyoffice/ui-kit"
+import {createSuspense} from "@onlyoffice/preact-suspense"
 import {createElement, h, isValidElement} from "preact"
 import {renderToStringAsync} from "preact-render-to-string"
 
