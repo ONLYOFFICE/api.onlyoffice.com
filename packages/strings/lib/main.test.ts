@@ -1,6 +1,6 @@
-import {is} from "uvu/assert"
+import {equal as eq, is} from "uvu/assert"
 import {test} from "uvu"
-import {cutPrefix, cutSuffix} from "./main.ts"
+import {cutPrefix, cutSuffix, substringPosition} from "./main.ts"
 
 test("cutPrefix(): returns an empty string when both strings are empty", () => {
   const s = cutPrefix("", "")
@@ -50,6 +50,26 @@ test("cutSuffix(): cuts when the string ends with a suffix", () => {
 test("cutSuffix(): cuts the length of the suffix when the string ends with a suffix", () => {
   const s = cutSuffix("abb", "b")
   is(s, "ab")
+})
+
+test("substringPosition(): returns the zero position for an empty string", () => {
+  const r = substringPosition("", "")
+  eq(r, [1, 0])
+})
+
+test("substringPosition(): returns the negative position for a string that does not contain the substring", () => {
+  const r = substringPosition("foo", "bar")
+  eq(r, [-1, -1])
+})
+
+test("substringPosition(): returns the position for a string that contains the substring", () => {
+  const r = substringPosition("foo", "o")
+  eq(r, [1, 1])
+})
+
+test("substringPosition(): returns the position for a multiline string that contains the substring", () => {
+  const r = substringPosition("foo\nbar", "a")
+  eq(r, [2, 1])
 })
 
 test.run()

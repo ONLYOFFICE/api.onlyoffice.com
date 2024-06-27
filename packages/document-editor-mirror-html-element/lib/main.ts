@@ -3,7 +3,7 @@
 import {callerPosition} from "@onlyoffice/caller-position"
 import type {DocumentEditorEventHandlerName} from "@onlyoffice/document-editor-html-element"
 import {DocumentEditor} from "@onlyoffice/document-editor-html-element"
-import {substringPosition} from "@onlyoffice/substring-position"
+import {substringPosition} from "@onlyoffice/strings"
 import type {Stringify} from "@onlyoffice/utility-types"
 
 declare global {

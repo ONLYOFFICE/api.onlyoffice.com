@@ -11,3 +11,13 @@ export function cutSuffix(s: string, p: string): string {
   }
   return s
 }
+
+export function substringPosition(a: string, b: string): [number, number] {
+  const i = a.indexOf(b)
+  if (i === -1) {
+    return [-1, -1]
+  }
+  const l = a.slice(0, i).split("\n").length
+  const c = i - a.lastIndexOf("\n", i) - 1
+  return [l, c]
+}

@@ -574,9 +574,9 @@ importers:
       '@onlyoffice/preact-jsx-base':
         specifier: workspace:^
         version: link:../preact-jsx-base
-      '@onlyoffice/substring-position':
+      '@onlyoffice/strings':
         specifier: workspace:^
-        version: link:../substring-position
+        version: link:../strings
       '@onlyoffice/utility-types':
         specifier: workspace:^
         version: link:../utility-types
@@ -1927,22 +1927,6 @@ importers:
       tsx:
         specifier: ^4.10.5
         version: 4.11.0
-      uvu:
-        specifier: ^0.5.6
-        version: 0.5.6
-
-  packages/substring-position:
-    dependencies:
-      typescript:
-        specifier: ^5.4.5
-        version: 5.4.5
-    devDependencies:
-      c8:
-        specifier: ^9.1.0
-        version: 9.1.0
-      tsx:
-        specifier: ^4.10.5
-        version: 4.10.5
       uvu:
         specifier: ^0.5.6
         version: 0.5.6
