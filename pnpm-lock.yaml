@@ -2510,9 +2510,6 @@ importers:
       '@onlyoffice/site-document-editor-playground':
         specifier: workspace:^
         version: link:../packages/site-document-editor-playground
-      '@onlyoffice/site-help':
-        specifier: workspace:^
-        version: link:../packages/site-help
       '@onlyoffice/site-home':
         specifier: workspace:^
         version: link:../packages/site-home

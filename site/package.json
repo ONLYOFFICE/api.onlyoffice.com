@@ -46,7 +46,6 @@
     "@onlyoffice/service-declaration": "workspace:^",
     "@onlyoffice/service-resource": "workspace:^",
     "@onlyoffice/site-document-editor-playground": "workspace:^",
-    "@onlyoffice/site-help": "workspace:^",
     "@onlyoffice/site-home": "workspace:^",
     "@onlyoffice/site-kit": "workspace:^",
     "@onlyoffice/site-page": "workspace:^",

@@ -1,5 +1,5 @@
 import type {Context, Data} from "@onlyoffice/eleventy-types"
-import {Help} from "@onlyoffice/site-help"
+import {Help} from "@onlyoffice/site-kit"
 import {
   Part,
   PartChapter,
