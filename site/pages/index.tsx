@@ -15,7 +15,7 @@ import {
   SearchPlaceholder
 } from "@onlyoffice/site-kit"
 import * as icons from "@onlyoffice/ui-icons/rich/32.tsx"
-import {CodePreview} from "@onlyoffice/ui-code-preview"
+import {CodePreview} from "@onlyoffice/ui-kit"
 import {type JSX, h} from "preact"
 import {SyntaxHighlight} from "@/components/syntax-highlight/syntax-highlight.ts"
 

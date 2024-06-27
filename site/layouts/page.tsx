@@ -11,8 +11,8 @@ import {
   ThemeSwitcher,
   ThemeSwitcherOption
 } from "@onlyoffice/site-kit"
+import {SrOnly} from "@onlyoffice/ui-kit"
 import {OnlyofficeLogo} from "@onlyoffice/ui-logos"
-import {SrOnly} from "@onlyoffice/ui-sr-only"
 import {type JSX, h} from "preact"
 
 export function data(): Data {

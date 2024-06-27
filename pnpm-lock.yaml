@@ -2519,27 +2519,6 @@ importers:
       '@onlyoffice/template-hast-element':
         specifier: workspace:^
         version: link:../packages/template-hast-element
-      '@onlyoffice/ui-button':
-        specifier: workspace:^
-        version: link:../packages/ui-button
-      '@onlyoffice/ui-code-editor':
-        specifier: workspace:^
-        version: link:../packages/ui-code-editor
-      '@onlyoffice/ui-code-listing':
-        specifier: workspace:^
-        version: link:../packages/ui-code-listing
-      '@onlyoffice/ui-code-preview':
-        specifier: workspace:^
-        version: link:../packages/ui-code-preview
-      '@onlyoffice/ui-colors':
-        specifier: workspace:^
-        version: link:../packages/ui-colors
-      '@onlyoffice/ui-content':
-        specifier: workspace:^
-        version: link:../packages/ui-content
-      '@onlyoffice/ui-form-control':
-        specifier: workspace:^
-        version: link:../packages/ui-form-control
       '@onlyoffice/ui-icons':
         specifier: workspace:^
         version: link:../packages/ui-icons
@@ -2549,12 +2528,6 @@ importers:
       '@onlyoffice/ui-logos':
         specifier: workspace:^
         version: link:../packages/ui-logos
-      '@onlyoffice/ui-select':
-        specifier: workspace:^
-        version: link:../packages/ui-select
-      '@onlyoffice/ui-sr-only':
-        specifier: workspace:^
-        version: link:../packages/ui-sr-only
       '@onlyoffice/xml-types':
         specifier: workspace:^
         version: link:../packages/xml-types

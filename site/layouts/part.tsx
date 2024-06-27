@@ -7,9 +7,9 @@ import {
   PartHelp,
   PartHero
 } from "@onlyoffice/site-kit"
+import {SrOnly} from "@onlyoffice/ui-kit"
 import {GithubIcon} from "@onlyoffice/ui-icons/rich/24.tsx"
 import * as icons from "@onlyoffice/ui-icons/rich/64.tsx"
-import {SrOnly} from "@onlyoffice/ui-sr-only"
 import {type JSX, Fragment, h} from "preact"
 
 declare module "@onlyoffice/eleventy-types" {
