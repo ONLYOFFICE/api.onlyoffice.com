@@ -1,21 +1,19 @@
+import {type Context, type Data} from "@onlyoffice/eleventy-types"
 import type { JSX } from "preact"
 import { Fragment, h } from "preact"
 import { TableOfContents } from "../components/table-of-contents/table-of-contents.ts"
-import type { Eleventy } from "../config/eleventy.ts"
-import { useChildren } from "../config/eleventy.ts"
 import { retrieve } from "../config/sitemap.ts"
 
-export function data() {
+export function data(): Data {
   return {
     layout: "chapter"
   }
 }
 
-export function render(ctx: Eleventy.Context): JSX.Element {
-  const children = useChildren(ctx)
+export function render(ctx: Context): JSX.Element {
   return (
     <>
-      {children}
+      {ctx.content}
       <TableOfContents url={ctx.page.url} onRetrieve={retrieve} />
     </>
   )

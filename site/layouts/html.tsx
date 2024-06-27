@@ -1,7 +1,7 @@
 import {Font} from "@onlyoffice/documentation-ui-kit"
+import {type Context} from "@onlyoffice/eleventy-types"
 // import {wait} from "@onlyoffice/documentation-utils/wait.ts"
 import {h} from "preact"
-import type {Eleventy} from "../config/eleventy.ts"
 import {renderToString} from "../config/preact.ts"
 
 export async function render(
@@ -10,7 +10,7 @@ export async function render(
     title,
     description,
     content
-  }: Eleventy.Context
+  }: Context
 ): Promise<string> {
   // // todo: explain. DO NOT DELETE THE HACK BELLOW!
   // await wait()

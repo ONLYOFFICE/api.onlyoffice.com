@@ -1,4 +1,21 @@
 /**
+ * {@link https://github.com/11ty/eleventy/blob/v2.0.1/src/TemplateCollection.js/#L5 Eleventy Reference}
+ */
+export interface TemplateCollection {
+  getAll(): Template[]
+}
+
+/**
+ * {@link https://github.com/11ty/eleventy/blob/v2.0.1/src/Template.js#/L35 Eleventy Reference}
+ */
+export interface Template {
+  data: Data
+  outputPath: string
+  url: string
+  date: Date
+}
+
+/**
  * {@link https://www.11ty.dev/docs/config/ Eleventy Reference}
  */
 export interface UserConfig {
@@ -16,6 +33,11 @@ export interface UserConfig {
    * {@link https://www.11ty.dev/docs/data-global-custom/ Eleventy Reference}
    */
   globalData: GlobalData
+
+  /**
+   * {@link https://www.11ty.dev/docs/collections/ Eleventy Reference}
+   */
+  addCollection(name: string, callback: unknown): void
 
   /**
    * {@link https://www.11ty.dev/docs/data-custom/ Eleventy Reference}
@@ -146,8 +168,19 @@ export interface Page {
  */
 export interface Context {
   collections: Collections
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  content: any
+  content: Content
+  eleventy: Eleventy
+  page: Page
 }
 
 export interface Collections {}
+
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export type Content = any
+
+/**
+ * {@link https://www.11ty.dev/docs/data-eleventy-supplied/#eleventy-variable Eleventy Reference}
+ */
+export interface Eleventy {
+  generator: string
+}

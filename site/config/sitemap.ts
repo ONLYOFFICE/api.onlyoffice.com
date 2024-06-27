@@ -1,5 +1,9 @@
 import { extname } from "node:path"
-import type { Eleventy } from "./eleventy.ts"
+import {
+  type Template,
+  type TemplateCollection,
+  type UserConfig
+} from "@onlyoffice/eleventy-types"
 
 export type Pages = Page[]
 
@@ -20,11 +24,11 @@ interface State {
 let pages: Pages = []
 let indexes: Indexes = {}
 
-export function eleventyPlugin(uc: Eleventy.UserConfig): void {
+export function eleventyPlugin(uc: UserConfig): void {
   uc.addCollection("sitemap", sitemap)
 }
 
-function sitemap(tc: Eleventy.TemplateCollection): [] {
+function sitemap(tc: TemplateCollection): [] {
   const l = tc.getAll()
   ;[pages, indexes] = collect(l)
   return []
@@ -42,7 +46,7 @@ export function retrieve(u: string): Page | undefined {
   return pages[i]
 }
 
-function collect(templates: Eleventy.Template[]): [Pages, Indexes] {
+function collect(templates: Template[]): [Pages, Indexes] {
   const pages: Pages = []
   const states: State[] = []
   const indexes: Indexes = {}
@@ -53,7 +57,7 @@ function collect(templates: Eleventy.Template[]): [Pages, Indexes] {
 
   return [pages, indexes]
 
-  function pre(t: Eleventy.Template): void {
+  function pre(t: Template): void {
     if (!isSupported(t)) {
       return
     }
@@ -151,7 +155,7 @@ function collect(templates: Eleventy.Template[]): [Pages, Indexes] {
   }
 }
 
-function isSupported(t: Eleventy.Template): boolean {
+function isSupported(t: Template): boolean {
   return extname(t.outputPath) === ".html"
 }
 

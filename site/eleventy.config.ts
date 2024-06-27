@@ -4,6 +4,7 @@ import {eleventyClean} from "@onlyoffice/eleventy-clean"
 import {eleventyPagefind} from "@onlyoffice/eleventy-pagefind"
 import {eleventySiteConfig} from "@onlyoffice/eleventy-site-config"
 import {eleventyStarryNight} from "@onlyoffice/eleventy-starry-night"
+import {type UserConfig} from "@onlyoffice/eleventy-types"
 import {eleventyYAML} from "@onlyoffice/eleventy-yaml"
 import {markupPlugin} from "./config/markup.ts"
 import {navigationPlugin} from "./config/navigation.ts"
@@ -12,10 +13,9 @@ import {scriptPlugin} from "./config/script.ts"
 import {staticPlugin} from "./config/static.ts"
 import {stylePlugin} from "./config/style.ts"
 
-import type {Eleventy} from "./config/eleventy.ts"
 import {eleventyPlugin as sitemapPlugin} from "./config/sitemap.ts"
 
-function config(uc: Eleventy.UserConfig): unknown {
+function config(uc: UserConfig): unknown {
   uc.addPlugin(eleventyClean)
   uc.addPlugin(staticPlugin)
   uc.addPlugin(markupPlugin)
