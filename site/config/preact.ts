@@ -1,6 +1,6 @@
 import {setTimeout} from "node:timers/promises"
 import {createSuspense} from "@onlyoffice/ui-kit"
-import {h, isValidElement} from "preact"
+import {createElement, h, isValidElement} from "preact"
 import {renderToStringAsync} from "preact-render-to-string"
 
 export async function renderToString(e: unknown): Promise<string> {
@@ -12,8 +12,9 @@ export async function renderToString(e: unknown): Promise<string> {
   }
 
   const [r, P] = createSuspense()
-  const p = renderToStringAsync(<P>{e}</P>)
+  const p = createElement(P, null, e)
+  const s = renderToStringAsync(p)
   r()
 
-  return await p
+  return await s
 }
