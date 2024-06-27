@@ -82,12 +82,6 @@ table {
   visibility: visible;
 }
 
-.breadcrumbs__crumb {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  text-wrap: nowrap;
-}
-
 /* todo: temp solution */
 document-builder {
   display: block;
