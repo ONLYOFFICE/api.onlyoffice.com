@@ -3656,3 +3656,697 @@ select:invalid {
             color: #FF6F3D;
             border-bottom: 2px solid #FFFFFF;
         }
+
+    #configPre::-webkit-scrollbar-button {
+        display: none;
+    }
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+    /* Tooltip text */
+    .tooltip .tooltiptext {
+        visibility: hidden;
+        width: 165px;
+        background-color: #333;
+        color: #fff;
+        text-align: left;
+        padding: 6px 6px 6px 12px;
+        border-radius: 3px;
+        /* Position the tooltip text */
+        position: absolute;
+        z-index: 1;
+        bottom: 125%;
+        right: 0%;
+        margin-left: -60px;
+        /* Fade in tooltip */
+        opacity: 0;
+        transition: opacity 0.3s;
+    }
+
+        /* Tooltip arrow */
+        .tooltip .tooltiptext::after {
+            content: "";
+            position: absolute;
+            top: 100%;
+            right: 10px;
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: #333 transparent transparent transparent;
+        }
+
+    /* Show the tooltip text when you mouse over the tooltip container */
+    .tooltip:hover .tooltiptext {
+        visibility: visible;
+        opacity: 1;
+    }
+    
+    .jsSdk_object_holder {
+    padding-left: 24px;
+}
+
+.jsSdk_nested_group {
+    margin-bottom: 18px;
+}
+
+    .jsSdk_nested_group div.line {
+        margin-top: 6px !important;
+    }
+
+.select {
+    position: relative;
+    color: #333333 !important;
+    font-size: 12px;
+    width: 100%;
+    height: 36px;
+    background-color: #F9F9F9;
+    -webkit-appearance: none;
+    background-image: url("img/arrow-select.svg");
+    background-position: right;
+    background-origin: content-box;
+    background-position: calc(100% - 5px);
+    background-repeat: no-repeat;
+    display: block;
+    margin: 0;
+}
+
+.new-select {
+    border-radius: 4px;
+    position: relative;
+    border: 1px solid #DCDCDC;
+    padding: 10px 8px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.new-select__list {
+    max-height: 200px;
+    overflow: scroll;
+    overflow-x: hidden;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    border-radius: 3px;
+    position: absolute;
+    top: 41px;
+    left: 0;
+    border: 1px solid #aaa;
+    cursor: pointer;
+    box-sizing: border-box;
+    width: 100%;
+    z-index: 2;
+    background: #fff;
+    user-select: none;
+}
+    .new-select__list::-webkit-scrollbar {
+        width: 2px;
+    }
+
+    .new-select__list::-webkit-scrollbar-thumb {
+        background: #999999;
+        border-radius: 10px;
+    }
+
+    .new-select__list.on {
+        display: block;
+    }
+
+.new-select__item span {
+    display: block;
+    padding: 10px 8px;
+}
+
+    .new-select__item span:hover {
+        background-color: #f9f9f9;
+    }
+
+.new-select:after {
+    content: '';
+    display: block;
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    right: 9px;
+    top: 9px;
+}
+    .new-select.on {
+        background-color: #ffffff !important;
+        border: 1px solid #aaa;
+    }
+        .new-select.on:after {
+            background-image: url("img/arrow-select.svg");
+            background-position: right;
+            background-origin: content-box;
+            background-position: calc(100% - 6px);
+            background-position-y: 5px !important;
+            background-repeat: no-repeat;
+            -webkit-transform: rotate(180deg);
+            -ms-transform: rotate(180deg);
+            -o-transform: rotate(180deg);
+            transform: rotate(180deg);
+        }
+
+.copyJsSdkHolder {
+    position: relative;
+}
+
+.jsSdkHeader {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: space-between;
+    border-radius: 3px 3px 0px 0px;
+    margin-top: 0px;
+    height: 30px;
+    background-color: #f9f9f9;
+    border: 1px solid #D0D5DA;
+    border-bottom: none;
+}
+
+.preContentType {
+    background-color: white;
+    height: 100%;
+    padding: 5px 10px;
+    border-radius: 3px 0px 0px 0px;
+    border-right: 1px solid #D0D5DA;
+}
+
+.copyJsSdk {
+    margin: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 24px;
+    width: 24px;
+}
+
+.copyJsSdk:hover {
+    border-radius: 2px;
+    background-color: #E2E2E2;
+}
+
+.jsSdkPre {
+    border-radius: 0px 0px 3px 3px;
+    margin-top: 0px;
+    overflow-y: scroll;
+}
+    .jsSdkPre::-webkit-scrollbar {
+        width: 4px;
+    }
+    .jsSdkPre::-webkit-scrollbar-track {
+        background: #f1f1f1;
+    }
+    .jsSdkPre::-webkit-scrollbar-thumb {
+        background: #E2E2E2;
+    }
+
+        .jsSdkPre::-webkit-scrollbar-thumb:hover {
+            background: #999;
+        }
+
+    .jsSdkPre::-webkit-scrollbar-button {
+        display: none;
+    }
+
+
+
+    .copyJsSdkHolder {
+    position: relative;
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+    /* Tooltip text */
+    .tooltip .tooltiptext-hover {
+        visibility: hidden;
+        width: 165px;
+        background-color: #333;
+        color: #fff;
+        text-align: left;
+        padding: 6px 6px 6px 12px;
+        border-radius: 3px;
+        /* Position the tooltip text */
+        position: absolute;
+        z-index: 1;
+        bottom: 125%;
+        right: 0%;
+        margin-left: -60px;
+        /* Fade in tooltip */
+        opacity: 0;
+        transition: opacity 0.3s;
+    }
+
+        /* Tooltip arrow */
+        .tooltip .tooltiptext-hover::after {
+            content: "";
+            position: absolute;
+            top: 100%;
+            right: 10px;
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: #333 transparent transparent transparent;
+        }
+
+    /* Show the tooltip text when you mouse over the tooltip container */
+    .tooltip:hover .tooltiptext-hover {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    .copyJsSdkHolder {
+    position: relative;
+}
+
+
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+    /* Tooltip text */
+    .tooltip .tooltiptext-click {
+        visibility: hidden;
+        width: 165px;
+        background-color: #333;
+        color: #fff;
+        text-align: left;
+        padding: 6px 6px 6px 12px;
+        border-radius: 3px;
+        /* Position the tooltip text */
+        position: absolute;
+        z-index: 1;
+        bottom: 125%;
+        right: 0%;
+        margin-left: -60px;
+        /* Fade in tooltip */
+        opacity: 0;
+        transition: opacity 0.3s;
+    }
+
+        /* Tooltip arrow */
+        .tooltip .tooltiptext-click::after {
+            content: "";
+            position: absolute;
+            top: 100%;
+            right: 10px;
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: #333 transparent transparent transparent;
+        }
+
+    /* Show the tooltip text when you mouse over the tooltip container */
+    .tooltip:hover .tooltiptext-click {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    .copyJsSdkHolder {
+    position: relative;
+}
+
+.jsSdk_object_holder {
+    padding-left: 24px;
+}
+
+.jsSdk_nested_group {
+    margin-bottom: 18px;
+}
+
+    .jsSdk_nested_group div.line {
+        margin-top: 6px !important;
+    }
+
+.select {
+    position: relative;
+    color: #333333 !important;
+    font-size: 12px;
+    width: 100%;
+    height: 36px;
+    background-color: #F9F9F9;
+    -webkit-appearance: none;
+    background-image: url("img/arrow-select.svg");
+    background-position: right;
+    background-origin: content-box;
+    background-position: calc(100% - 5px);
+    background-repeat: no-repeat;
+    display: block;
+    margin: 0;
+}
+
+.new-select {
+    border-radius: 4px;
+    position: relative;
+    border: 1px solid #DCDCDC;
+    padding: 10px 8px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.new-select__list {
+    max-height: 200px;
+    overflow: scroll;
+    overflow-x: hidden;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    border-radius: 3px;
+    position: absolute;
+    top: 41px;
+    left: 0;
+    border: 1px solid #aaa;
+    cursor: pointer;
+    box-sizing: border-box;
+    width: 100%;
+    z-index: 2;
+    background: #fff;
+    user-select: none;
+}
+    .new-select__list::-webkit-scrollbar {
+        width: 2px;
+    }
+
+    .new-select__list::-webkit-scrollbar-thumb {
+        background: #999999;
+        border-radius: 10px;
+    }
+
+    .new-select__list.on {
+        display: block;
+    }
+
+.new-select__item span {
+    display: block;
+    padding: 10px 8px;
+}
+
+    .new-select__item span:hover {
+        background-color: #f9f9f9;
+    }
+
+.new-select:after {
+    content: '';
+    display: block;
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    right: 9px;
+    top: 9px;
+}
+    .new-select.on {
+        background-color: #ffffff !important;
+        border: 1px solid #aaa;
+    }
+        .new-select.on:after {
+            background-image: url("img/arrow-select.svg");
+            background-position: right;
+            background-origin: content-box;
+            background-position: calc(100% - 6px);
+            background-position-y: 5px !important;
+            background-repeat: no-repeat;
+            -webkit-transform: rotate(180deg);
+            -ms-transform: rotate(180deg);
+            -o-transform: rotate(180deg);
+            transform: rotate(180deg);
+        }
+
+.copyJsSdkHolder {
+    position: relative;
+}
+
+.jsSdkHeader {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: space-between;
+    border-radius: 3px 3px 0px 0px;
+    margin-top: 0px;
+    height: 30px;
+    background-color: #f9f9f9;
+    border: 1px solid #D0D5DA;
+    border-bottom: none;
+}
+
+.preContentType {
+    background-color: white;
+    height: 100%;
+    padding: 5px 10px;
+    border-radius: 3px 0px 0px 0px;
+    border-right: 1px solid #D0D5DA;
+}
+
+.copyJsSdk {
+    margin: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 24px;
+    width: 24px;
+}
+
+.copyJsSdk:hover {
+    border-radius: 2px;
+    background-color: #E2E2E2;
+}
+
+.jsSdkPreNoScroll {
+    border-radius: 0px 0px 3px 3px;
+    margin-top: 0px;
+}
+    .jsSdkPreNoScroll::-webkit-scrollbar {
+        width: 4px;
+    }
+    .jsSdkPreNoScroll::-webkit-scrollbar-track {
+        background: #f1f1f1;
+    }
+    .jsSdkPreNoScroll::-webkit-scrollbar-thumb {
+        background: #E2E2E2;
+    }
+
+        .jsSdkPreNoScroll::-webkit-scrollbar-thumb:hover {
+            background: #999;
+        }
+
+    .jsSdkPreNoScroll::-webkit-scrollbar-button {
+        display: none;
+    }
+
+
+
+    .copyJsSdkHolder {
+    position: relative;
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+    /* Tooltip text */
+    .tooltip .tooltiptext-hover {
+        visibility: hidden;
+        width: 165px;
+        background-color: #333;
+        color: #fff;
+        text-align: left;
+        padding: 6px 6px 6px 12px;
+        border-radius: 3px;
+        /* Position the tooltip text */
+        position: absolute;
+        z-index: 1;
+        bottom: 125%;
+        right: 0%;
+        margin-left: -60px;
+        /* Fade in tooltip */
+        opacity: 0;
+        transition: opacity 0.3s;
+    }
+
+        /* Tooltip arrow */
+        .tooltip .tooltiptext-hover::after {
+            content: "";
+            position: absolute;
+            top: 100%;
+            right: 10px;
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: #333 transparent transparent transparent;
+        }
+
+    /* Show the tooltip text when you mouse over the tooltip container */
+    .tooltip:hover .tooltiptext-hover {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    .copyJsSdkHolder {
+    position: relative;
+}
+
+
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+    /* Tooltip text */
+    .tooltip .tooltiptext-click {
+        visibility: hidden;
+        width: 165px;
+        background-color: #333;
+        color: #fff;
+        text-align: left;
+        padding: 6px 6px 6px 12px;
+        border-radius: 3px;
+        /* Position the tooltip text */
+        position: absolute;
+        z-index: 1;
+        bottom: 125%;
+        right: 0%;
+        margin-left: -60px;
+        /* Fade in tooltip */
+        opacity: 0;
+        transition: opacity 0.3s;
+    }
+
+        /* Tooltip arrow */
+        .tooltip .tooltiptext-click::after {
+            content: "";
+            position: absolute;
+            top: 100%;
+            right: 10px;
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: #333 transparent transparent transparent;
+        }
+
+    /* Show the tooltip text when you mouse over the tooltip container */
+    .tooltip:hover .tooltiptext-click {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    .copyJsSdkHolder {
+    position: relative;
+}
+
+.sample-block {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 16px;
+    margin: 0;
+    margin-top: 32px;
+}
+
+.sample-info {
+    padding: 24px;
+    margin-bottom: 12px;
+}
+
+.framework-sample-info {
+    padding: 24px;
+    margin-bottom: 40px;
+}
+
+.sample-example {
+    background-color: #fff;
+    border: 1px solid #EFEFEF;
+    box-sizing: border-box;
+    box-shadow: 0px 7px 25px rgba(85, 85, 85, 0.15);
+    border-radius: 3px;
+    padding: 24px;
+    list-style-type: none;
+    position: relative;
+    max-width: 256px;
+}
+
+.sample-example {
+    padding: 0;
+}
+
+    .sample-example.hidden {
+        display: none;
+    }
+
+.example-sample-img {
+    height: 120px;
+    margin: auto;
+    background-position: 50% 50%;
+    background-color: #F9F9F9;
+}
+
+.name-example-sample {
+    margin: 0 0 12px 0;
+}
+
+    .name-example-sample a {
+        color: #333;
+        font-weight: 700;
+        text-decoration: none;
+        font-size: 18px;
+    }
+
+.block_more-sample {
+    margin: 9px 0 0 24px;
+    position: absolute;
+    bottom: 12px;
+    padding-bottom: 6px;
+}
+
+@media screen and (max-width: 1024px) {
+
+    .sample-block {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 16px;
+    }
+
+    .example-img {
+        background-size: 208px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .sample-block {
+        grid-template-columns: 1fr;
+        padding: 0;
+    }
+
+    .sample-example {
+        max-width: 100%;
+    }
+}
+
+.sample-open-file {
+    background-image: url("img/docspace/js-sdk-open-file-in-editors.png");
+    background-repeat: no-repeat;
+}  
+
+.authorization {
+    background-image: url("img/docspace/js-sdk-log-in.png");
+    background-repeat: no-repeat;
+}
+
+.create-file-in-selected-folder {
+    background-image: url("img/docspace/js-sdk-create-file.png");
+    background-repeat: no-repeat;
+}
+
+.customization-of-editors {
+    background-image: url("img/docspace/js-sdk-customization-of-editors.png");
+    background-repeat: no-repeat;
+}
+
+.attach-files {
+    background-image: url("img/docspace/js-sdk-attach-files.png");
+    background-repeat: no-repeat;
+}
