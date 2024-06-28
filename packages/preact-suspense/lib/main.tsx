@@ -2,7 +2,7 @@
 
 import {type ChildrenIncludable} from "@onlyoffice/preact-types"
 import {Suspense, useContext} from "preact/compat"
-import {type JSX, createContext, h} from "preact"
+import {Fragment, type JSX, createContext, h, toChildArray} from "preact"
 
 interface Contextual {
   register(_: Deferred): void
@@ -79,10 +79,13 @@ export function useSuspense(cb: SuspenseCallback): SuspenseConsumer {
     if (!r) {
       throw d.promise
     }
-    if (typeof p.children === "function") {
-      return p.children()
-    }
-    return p.children
+    return <>{toChildArray(p.children).map((ch) => {
+      if (typeof ch === "function") {
+        // @ts-ignore
+        return ch()
+      }
+      return ch
+    })}</>
   }
 }
 
