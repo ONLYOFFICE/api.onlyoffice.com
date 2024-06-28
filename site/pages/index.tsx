@@ -52,7 +52,7 @@ export function render({collections}: Context): JSX.Element {
         </HomeIn>
         <HomePreview>
           <a href={item.link} title={item.title}></a>
-          <EleventyImage alt="" class={cls()} src={src()} />
+          <EleventyImage alt="" class={cls()} src={item.preview} />
           <CodePreview>
             <pre><code><SyntaxHighlight syntax={item.sample.syntax}>
               {item.sample.code}
@@ -77,10 +77,6 @@ export function render({collections}: Context): JSX.Element {
       function cls(): string {
         const e = extname(item.preview)
         return basename(item.preview, e)
-      }
-
-      function src(): string {
-        return join("assets/images/", item.preview)
       }
     })}
   </Home>
