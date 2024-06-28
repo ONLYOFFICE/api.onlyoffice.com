@@ -1394,6 +1394,24 @@ importers:
         specifier: ^10.22.0
         version: 10.22.0
 
+  packages/rehype-eleventy-img:
+    dependencies:
+      '@11ty/eleventy-img':
+        specifier: ^4.0.2
+        version: 4.0.2
+      '@types/11ty__eleventy-img':
+        specifier: ^4.0.0
+        version: 4.0.0
+      '@types/hast':
+        specifier: ^3.0.4
+        version: 3.0.4
+      typescript:
+        specifier: ^5.4.5
+        version: 5.4.5
+      unist-util-visit:
+        specifier: ^5.0.0
+        version: 5.0.0
+
   packages/rehype-preact:
     dependencies:
       '@types/hast':
