@@ -61,6 +61,7 @@
     "@onlyoffice/ui-kit": "workspace:^",
     "@onlyoffice/ui-logos": "workspace:^",
     "@onlyoffice/xml-types": "workspace:^",
+    "@types/11ty__eleventy-img": "^4.0.0",
     "@types/hast": "^3.0.4",
     "@types/mdast": "^4.0.3",
     "@types/node": "^20.12.12",

@@ -15,6 +15,7 @@
     "components",
     "config",
     "generations",
+    "internal",
     "layouts",
     "pages",
     "resources",

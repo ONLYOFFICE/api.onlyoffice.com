@@ -1,6 +1,5 @@
 import {basename, extname, join} from "node:path"
 import type {Context, Data} from "@onlyoffice/eleventy-types"
-import {EleventyImage} from "@onlyoffice/preact-eleventy-img"
 import {
   Home,
   HomeHero,
@@ -19,6 +18,7 @@ import * as icons from "@onlyoffice/ui-icons/rich/32.tsx"
 import {CodePreview} from "@onlyoffice/ui-kit"
 import {type JSX, h} from "preact"
 import {SyntaxHighlight} from "@/components/syntax-highlight/syntax-highlight.ts"
+import {EleventyImage} from "@/internal/eleventy-image.tsx"
 
 export function data(): Data {
   return {
@@ -52,7 +52,7 @@ export function render({collections}: Context): JSX.Element {
         </HomeIn>
         <HomePreview>
           <a href={item.link} title={item.title}></a>
-          <EleventyImage alt="" class={cls()} src={src()} urlPath="/assets/" outputDir="dist/assets/" />
+          <EleventyImage alt="" class={cls()} src={src()} />
           <CodePreview>
             <pre><code><SyntaxHighlight syntax={item.sample.syntax}>
               {item.sample.code}

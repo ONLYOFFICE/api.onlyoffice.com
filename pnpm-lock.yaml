@@ -1316,6 +1316,9 @@ importers:
       '@onlyoffice/preact-suspense':
         specifier: workspace:^
         version: link:../preact-suspense
+      '@onlyoffice/preact-types':
+        specifier: workspace:^
+        version: link:../preact-types
       '@types/11ty__eleventy-img':
         specifier: ^4.0.0
         version: 4.0.0
@@ -2672,6 +2675,9 @@ importers:
       '@onlyoffice/xml-types':
         specifier: workspace:^
         version: link:../packages/xml-types
+      '@types/11ty__eleventy-img':
+        specifier: ^4.0.0
+        version: 4.0.0
       '@types/hast':
         specifier: ^3.0.4
         version: 3.0.4
