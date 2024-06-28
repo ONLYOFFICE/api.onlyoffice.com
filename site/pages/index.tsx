@@ -1,4 +1,3 @@
-import {basename, extname, join} from "node:path"
 import type {Context, Data} from "@onlyoffice/eleventy-types"
 import {
   Home,
@@ -14,11 +13,10 @@ import {
   SearchField,
   SearchPlaceholder
 } from "@onlyoffice/site-kit"
-import * as icons from "@onlyoffice/ui-icons/rich/32.tsx"
 import {CodePreview} from "@onlyoffice/ui-kit"
 import {type JSX, h} from "preact"
 import {SyntaxHighlight} from "@/components/syntax-highlight/syntax-highlight.ts"
-import {EleventyImage} from "@/internal/eleventy-image.tsx"
+import {EleventyImage, Icon} from "@/internal/eleventy-image.tsx"
 
 export function data(): Data {
   return {
@@ -45,14 +43,14 @@ export function render({collections}: Context): JSX.Element {
           <a href={item.link}>More</a>
           <HomeLinks>
             {item.children.map((item, i) => <HomeLink key={i}>
-              <Icon name={item.icon} height={32} width={32} />
+              <Icon src="rich32" name={item.icon} height={32} width={32} />
               <a href={item.link}>{item.title}</a>
             </HomeLink>)}
           </HomeLinks>
         </HomeIn>
         <HomePreview>
           <a href={item.link} title={item.title}></a>
-          <EleventyImage alt="" class={cls()} src={item.preview} />
+          <EleventyImage alt="" src={item.preview} />
           <CodePreview>
             <pre><code><SyntaxHighlight syntax={item.sample.syntax}>
               {item.sample.code}
@@ -66,17 +64,6 @@ export function render({collections}: Context): JSX.Element {
           return "default"
         }
         return "reverse"
-      }
-
-      function Icon({...props}): JSX.Element {
-        const Icon = icons[props.name]
-        delete props.name
-        return <Icon {...props} />
-      }
-
-      function cls(): string {
-        const e = extname(item.preview)
-        return basename(item.preview, e)
       }
     })}
   </Home>

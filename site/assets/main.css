@@ -88,17 +88,17 @@ document-builder {
   height: 550px;
 }
 
-.home .docs-preview {
+.home img[src^="/assets/docs-preview"] {
   height: 540px !important;
   width: auto !important;
 }
 
-.home .docspace-preview {
+.home img[src^="/assets/docspace-preview"] {
   height: 430px !important;
   width: auto !important;
 }
 
-.home .workspace-preview {
+.home img[src^="/assets/workspace-preview"] {
   height: 500px !important;
   width: auto !important;
 }
