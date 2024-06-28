@@ -16,7 +16,7 @@ import {
 import {CodePreview} from "@onlyoffice/ui-kit"
 import {type JSX, h} from "preact"
 import {SyntaxHighlight} from "@/components/syntax-highlight/syntax-highlight.ts"
-import {EleventyImage, Icon} from "@/internal/eleventy-image.tsx"
+import {EleventyImage, Icon} from "@/internal/components.tsx"
 
 export function data(): Data {
   return {
