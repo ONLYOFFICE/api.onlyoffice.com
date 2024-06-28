@@ -7,17 +7,7 @@ import requireFromString from "require-from-string"
 import { read } from "to-vfile"
 import { matter } from "vfile-matter"
 
-import {rehypePlugin as rehypeImage} from "../components/image/image.config.ts"
-import remarkGFM from "remark-gfm"
-
-import {starryNight} from "@onlyoffice/eleventy-starry-night"
-import {rehypeStarryNight} from "@onlyoffice/rehype-starry-night"
-
-import rehypeSlug from "rehype-slug"
-import rehypeAutolink from "rehype-autolink-headings"
-
-import {remarkDocumentBuilder} from "@onlyoffice/remark-document-builder"
-import {rehypeDocumentBuilderContainer} from "../components/document-builder-container/rehype.ts"
+import {rehypePlugins, remarkPlugins} from "@/internal/markdown.tsx"
 
 // todo: refactor it.
 // add support for hot reload
@@ -71,17 +61,8 @@ export function markupPlugin(uc: UserConfig): void {
 
                   vf = await compile(vf, {
                     jsxImportSource: "preact",
-                    rehypePlugins: [
-                      rehypeSlug,
-                      [rehypeAutolink, {behavior: "wrap"}],
-                      rehypeImage,
-                      [rehypeStarryNight, starryNight],
-                      rehypeDocumentBuilderContainer
-                    ],
-                    remarkPlugins: [
-                      remarkDocumentBuilder,
-                      remarkGFM
-                    ]
+                    rehypePlugins: rehypePlugins(),
+                    remarkPlugins: remarkPlugins()
                   })
 
                   return {

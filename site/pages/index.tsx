@@ -16,7 +16,8 @@ import {
 import {CodePreview} from "@onlyoffice/ui-kit"
 import {type JSX, h} from "preact"
 import {SyntaxHighlight} from "@/components/syntax-highlight/syntax-highlight.ts"
-import {EleventyImage, Icon} from "@/internal/components.tsx"
+import {Icon} from "@/internal/icon.tsx"
+import {Image} from "@/internal/image.tsx"
 
 export function data(): Data {
   return {
@@ -50,7 +51,7 @@ export function render({collections}: Context): JSX.Element {
         </HomeIn>
         <HomePreview>
           <a href={item.link} title={item.title}></a>
-          <EleventyImage alt="" src={item.preview} />
+          <Image alt="" src={item.preview} />
           <CodePreview>
             <pre><code><SyntaxHighlight syntax={item.sample.syntax}>
               {item.sample.code}

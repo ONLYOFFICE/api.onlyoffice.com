@@ -1,10 +1,10 @@
 import type {Context, Data} from "@onlyoffice/eleventy-types"
 import {ServiceDeclaration} from "@onlyoffice/site-kit"
 import {type JSX, Fragment, h} from "preact"
-import {Markdown} from "../components/markdown/markdown.ts"
 import {SyntaxHighlight} from "../components/syntax-highlight/syntax-highlight.ts"
 import {TableOfContents} from "../components/table-of-contents/table-of-contents.ts"
 import {retrieve} from "../config/sitemap.ts"
+import {Markdown} from "@/internal/markdown.tsx"
 
 export function data(): Data {
   return {

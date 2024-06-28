@@ -1,22 +1,10 @@
 import image, {type ImageOptions} from "@11ty/eleventy-img"
 import {type Element, type Root} from "hast"
-import {visit} from "unist-util-visit"
 
 type Index = number | undefined
 type Parent = Root | Element | undefined
 
-export function rehypeEleventyImage(o: ImageOptions) {
-  return async function (t: Root) {
-    let r = Promise.resolve()
-    visit(t, "element", (n, i, p) => {
-      r = transform(o, n, i, p)
-    })
-    await r
-    return t
-  }
-}
-
-async function transform(o: ImageOptions, n: Element, i: Index, p: Parent): Promise<void> {
+export async function modify(o: ImageOptions, n: Element, i: Index, p: Parent): Promise<void> {
   if (!p || typeof i !== "number" || n.tagName !== "img") {
     return
   }

@@ -9,8 +9,8 @@ import {
 } from "@onlyoffice/site-kit"
 import {SrOnly} from "@onlyoffice/ui-kit"
 import {GithubIcon} from "@onlyoffice/ui-icons/rich/24.tsx"
-import * as icons from "@onlyoffice/ui-icons/rich/64.tsx"
 import {type JSX, Fragment, h} from "preact"
+import {Icon} from "@/internal/icon.tsx"
 
 declare module "@onlyoffice/eleventy-types" {
   interface Context {
@@ -49,7 +49,7 @@ export function render({
           return <Fragment key={i} />
         }
         return <Fragment key={i}>{item.children.map((item, i) => <PartChapter key={i}>
-          <Icon name={item.icon} height={64} with={64} />
+          <Icon src="rich64" name={item.icon} height={64} width={64} />
           <h3><a href={item.link}>{item.title}</a></h3>
           <p>{item.summary}</p>
         </PartChapter>)}</Fragment>
@@ -67,10 +67,4 @@ export function render({
       </Help>
     </PartHelp>
   </Part>
-
-  function Icon({...props}): JSX.Element {
-    const Icon = icons[props.name]
-    delete props.name
-    return <Icon {...props} />
-  }
 }

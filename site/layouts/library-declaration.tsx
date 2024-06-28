@@ -1,8 +1,8 @@
 import type {Context, Data} from "@onlyoffice/eleventy-types"
 import {LibraryDeclaration} from "@onlyoffice/site-kit"
 import {type JSX, h} from "preact"
-import {Markdown} from "../components/markdown/markdown.ts"
 import {SyntaxHighlight} from "../components/syntax-highlight/syntax-highlight.ts"
+import {Markdown} from "@/internal/markdown.tsx"
 
 export function data(): Data {
   return {
