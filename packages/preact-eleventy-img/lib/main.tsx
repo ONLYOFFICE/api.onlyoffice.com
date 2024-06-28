@@ -5,9 +5,6 @@ import {Fragment, type JSX, h, cloneElement} from "preact"
 
 export function EleventyImage(p: ImageOptions & ChildrenIncludable): JSX.Element {
   const img = cloneElement<HTMLImageElement>(p.children)
-  if (img.type !== "img") {
-    throw new Error("The 'EleventyImage' component must be used with an 'img' element.")
-  }
   if (!img.props.src) {
     throw new Error("The 'src' attribute is required, but missing.")
   }
