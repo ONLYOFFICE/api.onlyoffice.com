@@ -34,7 +34,7 @@ export function EleventyImage(p: HTMLAttributes<HTMLImageElement>): JSX.Element 
   return <PreactEleventyImage {...o}>{img}</PreactEleventyImage>
 }
 
-export function useImage(p: HTMLAttributes<HTMLImageElement>): JSX.Element {
+function useImage(p: HTMLAttributes<HTMLImageElement>): JSX.Element {
   let s = p.src
   if (s && typeof s === "string" && !s.startsWith("/")) {
     s = join("assets/images/", s)
