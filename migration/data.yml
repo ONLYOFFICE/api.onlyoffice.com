@@ -168,40 +168,40 @@
   to: DocSpace/Plugins SDK/Plugins SDK/Adding Plugin
 
 - from: https://api.onlyoffice.com/docspace/pluginssdk/plugintutorial
-  to: DocSpace/Plugins SDK/How to create a plugin step by step
+  to: DocSpace/Plugins SDK/Plugins SDK/How to create a plugin step by step
 
 - from: https://api.onlyoffice.com/docspace/pluginssdk/plugintutorial/planning
-  to: DocSpace/Plugins SDK/How to create a plugin step by step/Planning
+  to: DocSpace/Plugins SDK/Plugins SDK/How to create a plugin step by step/Planning
 
 - from: https://api.onlyoffice.com/docspace/pluginssdk/plugintutorial/developing
-  to: DocSpace/Plugins SDK/How to create a plugin step by step/Developing
+  to: DocSpace/Plugins SDK/Plugins SDK/How to create a plugin step by step/Developing
 
 - from: https://api.onlyoffice.com/docspace/pluginssdk/plugintutorial/developing/creatingtemplate
-  to: DocSpace/Plugins SDK/How to create a plugin step by step/Developing/Step 1. Create a plugin template
+  to: DocSpace/Plugins SDK/Plugins SDK/How to create a plugin step by step/Developing/Step 1. Create a plugin template
 
 - from: https://api.onlyoffice.com/docspace/pluginssdk/plugintutorial/developing/configuringentrypoint
-  to: DocSpace/Plugins SDK/How to create a plugin step by step/Developing/Step 2. Configure the plugin entry point
+  to: DocSpace/Plugins SDK/Plugins SDK/How to create a plugin step by step/Developing/Step 2. Configure the plugin entry point
 
 - from: https://api.onlyoffice.com/docspace/pluginssdk/plugintutorial/developing/addingicons
-  to: DocSpace/Plugins SDK/How to create a plugin step by step/Developing/Step 3. Add plugin icons
+  to: DocSpace/Plugins SDK/Plugins SDK/How to create a plugin step by step/Developing/Step 3. Add plugin icons
 
 - from: https://api.onlyoffice.com/docspace/pluginssdk/plugintutorial/developing/configuringinterfaceelements
-  to: DocSpace/Plugins SDK/How to create a plugin step by step/Developing/Step 4. Configure the plugin's interface elements
+  to: DocSpace/Plugins SDK/Plugins SDK/How to create a plugin step by step/Developing/Step 4. Configure the plugin's interface elements
 
 - from: https://api.onlyoffice.com/docspace/pluginssdk/plugintutorial/developing/creatingplugintypes
-  to: DocSpace/Plugins SDK/How to create a plugin step by step/Developing/Step 5. Create plugin types
+  to: DocSpace/Plugins SDK/Plugins SDK/How to create a plugin step by step/Developing/Step 5. Create plugin types
 
 - from: https://api.onlyoffice.com/docspace/pluginssdk/plugintutorial/developing/creatingsettingstype
-  to: DocSpace/Plugins SDK/How to create a plugin step by step/Developing/Step 6. Create the settings plugin type
+  to: DocSpace/Plugins SDK/Plugins SDK/How to create a plugin step by step/Developing/Step 6. Create the settings plugin type
 
 - from: https://api.onlyoffice.com/docspace/pluginssdk/plugintutorial/developing/creatingcodefile
-  to: DocSpace/Plugins SDK/How to create a plugin step by step/Developing/Step 7. Create the code file
+  to: DocSpace/Plugins SDK/Plugins SDK/How to create a plugin step by step/Developing/Step 7. Create the code file
 
 - from: https://api.onlyoffice.com/docspace/pluginssdk/plugintutorial/testing
-  to: DocSpace/Plugins SDK/How to create a plugin step by step/Testing
+  to: DocSpace/Plugins SDK/Plugins SDK/How to create a plugin step by step/Testing
 
 - from: https://api.onlyoffice.com/docspace/pluginssdk/plugintutorial/using
-  to: DocSpace/Plugins SDK/How to create a plugin step by step/Using
+  to: DocSpace/Plugins SDK/Plugins SDK/How to create a plugin step by step/Using
 
 - from: https://api.onlyoffice.com/docspace/pluginssdk/changelog
   to: DocSpace/Plugins SDK/More Information/Changelog
@@ -873,10 +873,10 @@
   to: Docs/Document Builder/Get Started/Debugging
 
 - from: https://api.onlyoffice.com/docbuilder/framework
-  to: Document Builder/Builder Framework/Overview
+  to: Docs/Document Builder/Builder Framework/Overview
 
 - from: https://api.onlyoffice.com/docbuilder/integrationapi/c
-  to: Document Builder/Builder Framework/C++
+  to: Docs/Document Builder/Builder Framework/C++
 
 - from: https://api.onlyoffice.com/docbuilder/integrationapi/c/cdocbuilder
   to: Docs/Document Builder/Builder Framework/C++/CDocBuilder
