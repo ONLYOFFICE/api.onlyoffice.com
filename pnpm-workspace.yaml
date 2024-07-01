@@ -1,9 +1,6 @@
 packages:
-  - "declarations/*"
+  - "migration"
   - "packages/*"
-  - "resources"
-  - "server"
   - "site"
   - "storybook"
   - "ui/*"
-  - "utils"
