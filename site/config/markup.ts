@@ -7,7 +7,7 @@ import requireFromString from "require-from-string"
 import { read } from "to-vfile"
 import { matter } from "vfile-matter"
 
-import {rehypePlugins, remarkPlugins} from "@/internal/markdown.tsx"
+import {markdown, rehypePlugins, remarkPlugins} from "@/internal/markdown.tsx"
 
 // todo: refactor it.
 // add support for hot reload
@@ -32,6 +32,17 @@ export function markupPlugin(uc: UserConfig): void {
       const m = requireFromString(r.outputFiles[0].text)
       return m.data()
     }
+  })
+
+  uc.addTemplateFormats("md")
+  uc.addExtension("md", {
+    outputFileExtension: "html",
+    compile(c) {
+      return async () => {
+        const v = await markdown().process(c)
+        return v.result
+      }
+    },
   })
 
   // https://github.com/11ty/eleventy/issues/636
