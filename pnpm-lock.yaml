@@ -640,6 +640,34 @@ importers:
         specifier: ^0.5.6
         version: 0.5.6
 
+  packages/eleventy-config:
+    dependencies:
+      '@onlyoffice/eleventy-types':
+        specifier: workspace:^
+        version: link:../eleventy-types
+      '@onlyoffice/site-config':
+        specifier: workspace:^
+        version: link:../site-config
+      typescript:
+        specifier: ^5.4.5
+        version: 5.4.5
+    devDependencies:
+      '@11ty/eleventy':
+        specifier: ^2.0.1
+        version: 2.0.1
+      '@onlyoffice/node-assert':
+        specifier: workspace:^
+        version: link:../node-assert
+      c8:
+        specifier: ^9.1.0
+        version: 9.1.0
+      tsx:
+        specifier: ^4.10.5
+        version: 4.11.0
+      uvu:
+        specifier: ^0.5.6
+        version: 0.5.6
+
   packages/eleventy-esbuild:
     dependencies:
       '@onlyoffice/async-transform':
@@ -754,34 +782,6 @@ importers:
       '@11ty/eleventy':
         specifier: ^2.0.1
         version: 2.0.1
-      c8:
-        specifier: ^9.1.0
-        version: 9.1.0
-      tsx:
-        specifier: ^4.10.5
-        version: 4.11.0
-      uvu:
-        specifier: ^0.5.6
-        version: 0.5.6
-
-  packages/eleventy-config:
-    dependencies:
-      '@onlyoffice/eleventy-types':
-        specifier: workspace:^
-        version: link:../eleventy-types
-      '@onlyoffice/site-config':
-        specifier: workspace:^
-        version: link:../site-config
-      typescript:
-        specifier: ^5.4.5
-        version: 5.4.5
-    devDependencies:
-      '@11ty/eleventy':
-        specifier: ^2.0.1
-        version: 2.0.1
-      '@onlyoffice/node-assert':
-        specifier: workspace:^
-        version: link:../node-assert
       c8:
         specifier: ^9.1.0
         version: 9.1.0
@@ -2588,6 +2588,9 @@ importers:
       '@onlyoffice/eleventy-clean':
         specifier: workspace:^
         version: link:../packages/eleventy-clean
+      '@onlyoffice/eleventy-config':
+        specifier: workspace:^
+        version: link:../packages/eleventy-config
       '@onlyoffice/eleventy-esbuild':
         specifier: workspace:^
         version: link:../packages/eleventy-esbuild
@@ -2600,9 +2603,6 @@ importers:
       '@onlyoffice/eleventy-pagefind':
         specifier: workspace:^
         version: link:../packages/eleventy-pagefind
-      '@onlyoffice/eleventy-config':
-        specifier: workspace:^
-        version: link:../packages/eleventy-config
       '@onlyoffice/eleventy-starry-night':
         specifier: workspace:^
         version: link:../packages/eleventy-starry-night
