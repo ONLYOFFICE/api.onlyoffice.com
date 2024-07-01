@@ -33,6 +33,7 @@ const icons: Record<IconProperties["src"], Record<string, InternalIcon>> = {
     "docspace-api": rich32.DocspaceApiIcon,
     "document-builder": rich32.DocumentBuilderIcon,
     "javascript-sdk": rich32.JavascriptSdkIcon,
+    "office-api": rich32.OfficeApiIcon,
     "plugins": rich32.PluginsIcon,
     "self-hosted": rich32.SelfHostedIcon,
     "workspace-api": rich32.WorkspaceApiIcon
@@ -43,6 +44,7 @@ const icons: Record<IconProperties["src"], Record<string, InternalIcon>> = {
     "docspace-api": rich64.DocspaceApiIcon,
     "document-builder": rich64.DocumentBuilderIcon,
     "javascript-sdk": rich64.JavascriptSdkIcon,
+    "office-api": rich64.OfficeApiIcon,
     "plugins": rich64.PluginsIcon,
     "self-hosted": rich64.SelfHostedIcon,
     "workspace-api": rich64.WorkspaceApiIcon
