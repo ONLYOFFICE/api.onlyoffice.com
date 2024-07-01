@@ -193,7 +193,7 @@ function config() {
         "@stylistic/rest-spread-spacing": e,
         "@stylistic/semi": [e, "never"],
         "@stylistic/semi-spacing": e,
-        "@stylistic/semi-style": e,
+        "@stylistic/semi-style": [e, "first"],
         "@stylistic/space-before-blocks": e,
         "@stylistic/space-before-function-paren": [e, {
           anonymous: "always",
