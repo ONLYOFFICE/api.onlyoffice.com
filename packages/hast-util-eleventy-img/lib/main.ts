@@ -20,7 +20,7 @@ export async function modify(o: ImageOptions, n: Element, i: Index, p: Parent): 
   let c = p.children[i]
 
   const m = await image(s, o)
-  const r = image.generateObject(m)
+  const r = image.generateObject(m, n.properties)
 
   if ("picture" in r) {
     c = {
