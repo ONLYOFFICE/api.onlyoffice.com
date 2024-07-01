@@ -75,7 +75,6 @@ function config() {
 
         // core: Suggestions
         "camelcase": e,
-        "consistent-return": e,
         "curly": [e, "all"],
         "default-case-last": e,
         "default-param-last": e,
@@ -137,7 +136,7 @@ function config() {
         "@stylistic/arrow-spacing": e,
         "@stylistic/block-spacing": "off",
         "@stylistic/brace-style": e,
-        "@stylistic/comma-dangle": e,
+        "@stylistic/comma-dangle": [e, "always-multiline"],
         "@stylistic/comma-spacing": e,
         "@stylistic/comma-style": e,
         "@stylistic/computed-property-spacing": e,
