@@ -764,7 +764,7 @@ importers:
         specifier: ^0.5.6
         version: 0.5.6
 
-  packages/eleventy-site-config:
+  packages/eleventy-config:
     dependencies:
       '@onlyoffice/eleventy-types':
         specifier: workspace:^
@@ -2600,9 +2600,9 @@ importers:
       '@onlyoffice/eleventy-pagefind':
         specifier: workspace:^
         version: link:../packages/eleventy-pagefind
-      '@onlyoffice/eleventy-site-config':
+      '@onlyoffice/eleventy-config':
         specifier: workspace:^
-        version: link:../packages/eleventy-site-config
+        version: link:../packages/eleventy-config
       '@onlyoffice/eleventy-starry-night':
         specifier: workspace:^
         version: link:../packages/eleventy-starry-night

@@ -1,5 +1,5 @@
 {
-  "name": "@onlyoffice/eleventy-site-config",
+  "name": "@onlyoffice/eleventy-config",
   "private": true,
   "type": "module",
   "main": "lib/main.ts",
