@@ -39,7 +39,7 @@ export interface UserConfig {
   /**
    * {@link https://www.11ty.dev/docs/collections/ Eleventy Reference}
    */
-  addCollection(name: string, callback: unknown): void
+  addCollection(name: string, callback: (template: TemplateCollection) => unknown[]): void
 
   /**
    * {@link https://www.11ty.dev/docs/data-custom/ Eleventy Reference}
