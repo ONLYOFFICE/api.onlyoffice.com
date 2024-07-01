@@ -11,6 +11,11 @@ import {visit} from "unist-util-visit"
 export function Image(p: HTMLAttributes<HTMLImageElement>): JSX.Element {
   let r: JSX.Element | null = null
 
+  // todo: this is a temporary solution during the migration.
+  if (!p.alt) {
+    p.alt = ""
+  }
+
   const s = path(p.src)
   const o = options(s)
 
@@ -29,6 +34,11 @@ export function rehypeImage() {
     visit(t, "element", (n, i, p) => {
       if (n.tagName !== "img") {
         return
+      }
+
+      // todo: this is a temporary solution during the migration.
+      if (!n.properties.alt) {
+        n.properties.alt = ""
       }
 
       const s = path(n.properties.src)
