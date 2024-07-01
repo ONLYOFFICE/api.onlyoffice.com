@@ -242,7 +242,7 @@ function populateRequestHero(req: REST.RequestDeclaration, m: string, p: string,
     a.push(s.summary)
     req.slug = a
       .map((s) => {
-        return slugify(s)
+        return slug(s)
       })
       .join("/")
 
