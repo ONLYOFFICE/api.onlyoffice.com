@@ -67,11 +67,7 @@ function path(s: unknown): string {
   if (typeof s !== "string") {
     throw new Error("The 'src' attribute must be a string.")
   }
-  if (!s.startsWith("/")) {
-    s = join("assets/images/", s)
-  }
-  // @ts-ignore false positive
-  return s
+  return join("assets/images/", s)
 }
 
 function options(s: string): ImageOptions {
