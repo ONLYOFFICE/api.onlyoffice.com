@@ -82,6 +82,10 @@ table {
   visibility: visible;
 }
 
+.content img {
+  height: auto !important;
+}
+
 /* todo: temp solution */
 document-builder {
   display: block;
