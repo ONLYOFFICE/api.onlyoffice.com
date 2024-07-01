@@ -23,19 +23,12 @@ jobs:
     - name: Install Dependencies
       run: pnpm install --frozen-lockfile
 
-    - name: Build Resources
-      run: cd ./resources && pnpm build
-
-    - name: Build UI Kit
-      run: |
-        cd ./ui/icon
-        pnpm build
-        cd ./ui/logo
-        pnpm build
+    - name: Build Packages
+      run: pnpm build
 
     - name: Build Site
       timeout-minutes: 15
-      run: cd ./site && pnpm build
+      run: cd site && pnpm build
 
     # - name: Publish Site
     # Once the content has been built, you can find it in the `./site/dist`
