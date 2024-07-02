@@ -1,6 +1,6 @@
 import {createRequire} from "node:module"
 import {type Resource} from "@onlyoffice/library-resource"
-import {isBuild, isPreview} from "@onlyoffice/site-env"
+import {isBuild} from "@onlyoffice/site-env"
 
 const require = createRequire(import.meta.url)
 
@@ -20,7 +20,7 @@ function resource(n: string): Resource {
 }
 
 function file(n: string): string {
-  if (isBuild() || isPreview()) {
+  if (isBuild()) {
     return `@onlyoffice/document-builder-resource/${n}.ts`
   }
   return "@onlyoffice/jsdoc-resource-fixtures/resource.ts"

@@ -19,18 +19,6 @@ export function isBuild(): boolean {
 }
 
 /**
- * Checks if the current run mode is set to `preview`.
- * @returns `true` if the run mode is `preview`, `false` otherwise.
- */
-export function isPreview(): boolean {
-  const m = env.SITE_RUN_MODE
-  if (m === undefined) {
-    throw new Error("SITE_RUN_MODE is not defined")
-  }
-  return m === "preview"
-}
-
-/**
  * Checks if the current run mode is set to `serve`.
  * @returns `true` if the run mode is `serve`, `false` otherwise.
  */

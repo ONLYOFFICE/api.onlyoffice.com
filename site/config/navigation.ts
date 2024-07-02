@@ -22,7 +22,7 @@ interface Context {
 
 // todo: do not use weak map
 const cache = new WeakMap()
-const doCache = true // isBuild() || isPreview()
+const doCache = true // isBuild()
 
 export function navigationPlugin(uc: UserConfig): void {
   uc.addCollection("navigation", (tc) => {

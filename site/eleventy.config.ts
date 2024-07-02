@@ -8,29 +8,26 @@ import {eleventyPagefind} from "@onlyoffice/eleventy-pagefind"
 import {eleventyStarryNight} from "@onlyoffice/eleventy-starry-night"
 import {type UserConfig} from "@onlyoffice/eleventy-types"
 import {eleventyYAML} from "@onlyoffice/eleventy-yaml"
-import {isBuild, isPreview} from "@onlyoffice/site-env"
+import {isBuild} from "@onlyoffice/site-env"
 import {Config} from "@onlyoffice/site-config"
 import {markupPlugin} from "./config/markup.ts"
 import {navigationPlugin} from "./config/navigation.ts"
-import {previewPlugin} from "./config/preview.ts"
 import {staticPlugin} from "./config/static.ts"
 
 import {eleventyPlugin as sitemapPlugin} from "./config/sitemap.ts"
 
 function config(uc: UserConfig): unknown {
-  const minify = isBuild() || isPreview()
-
   uc.addPlugin(eleventyClean)
   uc.addPlugin(staticPlugin)
   uc.addPlugin(markupPlugin)
 
   uc.addPlugin(eleventyLightningcss, {
     filename: "assets/main.css",
-    minify
+    minify: isBuild(),
   })
 
   uc.addPlugin(eleventyHtmlMinifierTerser, {
-    minify,
+    minify: isBuild(),
     collapseBooleanAttributes: true,
     collapseWhitespace: true,
     decodeEntities: true,
@@ -44,7 +41,6 @@ function config(uc: UserConfig): unknown {
 
   uc.addPlugin(navigationPlugin)
   uc.addPlugin(eleventyStarryNight)
-  uc.addPlugin(previewPlugin)
 
   uc.addPlugin(eleventyYAML)
   uc.addPlugin(sitemapPlugin)
@@ -69,7 +65,7 @@ function config(uc: UserConfig): unknown {
           }),
         },
         format: "esm",
-        minify,
+        minify: isBuild(),
         platform: "browser",
       },
     }

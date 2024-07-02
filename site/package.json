@@ -6,7 +6,7 @@
     "demo:editor": "docker run --env JWT_HEADER=Authorization --env JWT_SECRET=your-256-bit-secret --publish 3000:80 onlyoffice/documentserver-de:8.0",
     "demo:server": "store-demo",
     "build": "SITE_RUN_MODE=build node --require esbuild-register --max-old-space-size=8192 ./node_modules/@11ty/eleventy/cmd.js --config ./eleventy.config.ts",
-    "preview": "SITE_RUN_MODE=preview node --require esbuild-register --max-old-space-size=8192 ./node_modules/@11ty/eleventy/cmd.js --config ./eleventy.config.ts",
+    "preview": "eleventy-dev-server --dir dist",
     "serve": "SITE_RUN_MODE=serve node --require esbuild-register --max-old-space-size=8192 ./node_modules/@11ty/eleventy/cmd.js --serve --quiet --config ./eleventy.config.ts"
   },
   "devDependencies": {

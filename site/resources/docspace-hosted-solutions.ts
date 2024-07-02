@@ -1,6 +1,6 @@
 import {createRequire} from "node:module"
 import {type Resource} from "@onlyoffice/service-resource"
-import {isBuild, isPreview} from "@onlyoffice/site-env"
+import {isBuild} from "@onlyoffice/site-env"
 
 const require = createRequire(import.meta.url)
 
@@ -12,7 +12,7 @@ function resource(n: string): Resource {
 }
 
 function file(n: string): string {
-  if (isBuild() || isPreview()) {
+  if (isBuild()) {
     return `@onlyoffice/docspace-hosted-solutions-resource/${n}.ts`
   }
   return "@onlyoffice/openapi-resource-fixtures/resource.ts"
