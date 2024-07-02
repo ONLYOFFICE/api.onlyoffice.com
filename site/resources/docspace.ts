@@ -1,6 +1,6 @@
 import {createRequire} from "node:module"
+import {isBuild} from "@onlyoffice/eleventy-env"
 import {type Resource, nop} from "@onlyoffice/service-resource"
-import {isBuild} from "@onlyoffice/site-env"
 
 const require = createRequire(import.meta.url)
 

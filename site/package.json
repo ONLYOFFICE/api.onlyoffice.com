@@ -5,9 +5,9 @@
   "scripts": {
     "demo:editor": "docker run --env JWT_HEADER=Authorization --env JWT_SECRET=your-256-bit-secret --publish 3000:80 onlyoffice/documentserver-de:8.0",
     "demo:server": "store-demo",
-    "build": "SITE_RUN_MODE=build node --require esbuild-register --max-old-space-size=8192 ./node_modules/@11ty/eleventy/cmd.js --config ./eleventy.config.ts",
+    "build": "node --require esbuild-register --max-old-space-size=8192 ./node_modules/@11ty/eleventy/cmd.js --config ./eleventy.config.ts",
     "preview": "eleventy-dev-server --dir dist",
-    "serve": "SITE_RUN_MODE=serve node --require esbuild-register --max-old-space-size=8192 ./node_modules/@11ty/eleventy/cmd.js --serve --quiet --config ./eleventy.config.ts"
+    "serve": "node --require esbuild-register --max-old-space-size=8192 ./node_modules/@11ty/eleventy/cmd.js --serve --quiet --config ./eleventy.config.ts"
   },
   "devDependencies": {
     "@11ty/eleventy": "^2.0.1",
@@ -28,6 +28,7 @@
     "@onlyoffice/document-editor-mirror-html-element": "workspace:^",
     "@onlyoffice/documentation-ui-kit": "workspace:^",
     "@onlyoffice/eleventy-clean": "workspace:^",
+    "@onlyoffice/eleventy-env": "workspace:^",
     "@onlyoffice/eleventy-esbuild": "workspace:^",
     "@onlyoffice/eleventy-html-minifier-terser": "workspace:^",
     "@onlyoffice/eleventy-lightningcss": "workspace:^",
@@ -54,7 +55,6 @@
     "@onlyoffice/service-declaration": "workspace:^",
     "@onlyoffice/service-resource": "workspace:^",
     "@onlyoffice/site-config": "workspace:^",
-    "@onlyoffice/site-env": "workspace:^",
     "@onlyoffice/site-kit": "workspace:^",
     "@onlyoffice/store-demo": "workspace:^",
     "@onlyoffice/strings": "workspace:^",
