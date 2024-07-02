@@ -1,3 +1,6 @@
+import {existsSync, readFileSync} from "node:fs"
+import {join} from "node:path"
+import {cwd} from "node:process"
 import yaml from "yaml"
 
 export interface InputConfig {
@@ -16,6 +19,58 @@ export class Config implements Configurable {
   baseUrl = ""
   server = new ServerConfig()
   playground = new PlaygroundConfig()
+
+  static #config: Configurable
+  static #done = false
+
+  static read(m?: string): Configurable {
+    if (this.#done) {
+      return this.#config
+    }
+    this.#done = true
+    this.#config = this.load(cwd(), m)
+    return this.#config
+  }
+
+  static load(d: string, m?: string): Configurable {
+    // It is crucial to use synchronous operations. This will allow
+    // configuration to be loaded within the Eleventy or JSX components.
+
+    const n = "config"
+    const a: Config[] = []
+
+    const f = join(d, `${n}.yml`)
+    if (existsSync(f)) {
+      const c = readFileSync(f, "utf8")
+      const r = Config.fromYaml(c)
+      a.push(r)
+    }
+
+    if (m) {
+      const f = join(d, `${n}.${m}.yml`)
+      if (existsSync(f)) {
+        const c = readFileSync(f, "utf8")
+        const r = Config.fromYaml(c)
+        a.push(r)
+      }
+    }
+
+    let c = new Config()
+
+    if (a.length === 0) {
+      return c
+    }
+
+    [c] = a
+
+    if (a.length > 1) {
+      for (let i = 1; i < a.length; i += 1) {
+        c = Config.merge(c, a[i])
+      }
+    }
+
+    return c
+  }
 
   static fromJson(data: string): Configurable {
     const o = JSON.parse(data)
