@@ -28,15 +28,6 @@ function config(uc: UserConfig): unknown {
     minify
   })
 
-  uc.addPlugin(eleventyEsbuild, {
-    input: "assets/main.ts",
-    target: "assets",
-    minify,
-    rename() {
-      return "main.js"
-    }
-  })
-
   uc.addPlugin(eleventyHtmlMinifierTerser, {
     minify,
     collapseBooleanAttributes: true,
@@ -56,6 +47,25 @@ function config(uc: UserConfig): unknown {
 
   uc.addPlugin(eleventyYAML)
   uc.addPlugin(sitemapPlugin)
+
+  uc.addPlugin(eleventyEsbuild, () => {
+    return {
+      passthrough: {
+        input: "assets/main.ts",
+        target: "assets",
+      },
+      copy: {
+        rename() {
+          return "main.js"
+        },
+      },
+      esbuild: {
+        format: "esm",
+        minify,
+        platform: "browser",
+      },
+    }
+  })
 
   uc.addPlugin(eleventyPagefind)
 

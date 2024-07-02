@@ -44,7 +44,7 @@ export async function render(
         {/* <style media="(prefers-color-scheme: light)">{light}</style> */}
         {/* <style>{regular}</style> */}
 
-        <script defer src="/assets/main.js" />
+        <script defer type="module" src="/assets/main.js" />
       </head>
       <body>
         {content}

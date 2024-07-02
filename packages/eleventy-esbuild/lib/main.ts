@@ -2,32 +2,35 @@ import {tmpdir} from "node:os"
 import process from "node:process"
 import {AsyncTransform} from "@onlyoffice/async-transform"
 import {Console} from "@onlyoffice/console"
-import {type UserConfig} from "@onlyoffice/eleventy-types"
-import {build} from "esbuild"
+import {type RecursiveCopyOptions, type UserConfig} from "@onlyoffice/eleventy-types"
+import {type BuildOptions, build} from "esbuild"
 import pack from "../package.json" with {type: "json"}
 
 // In the future, we should replace our custom logger with the eleventy one
 // (see for the ConsoleLogger type for the @onlyoffice/eleventy-types).
 const console = new Console(pack.name, process.stdout, process.stderr)
 
-export interface EleventyEsbuildOptions {
-  input: string
-  target: string
-  minify?: boolean
-  rename?(): string
+export interface EleventyEsbuildCallback {
+  (): EleventyEsbuildOptions
 }
 
-export function eleventyEsbuild(uc: UserConfig, op: EleventyEsbuildOptions): void {
-  const o: Record<string, unknown> = {
+export interface EleventyEsbuildOptions {
+  passthrough: {
+    input: string
+    target: string
+  }
+  copy: RecursiveCopyOptions
+  esbuild: BuildOptions
+}
+
+export function eleventyEsbuild(uc: UserConfig, cb: EleventyEsbuildCallback): void {
+  const o = cb()
+  uc.addPassthroughCopy({[o.passthrough.input]: o.passthrough.target}, {
     transform() {
-      return new Build(op)
-    }
-  }
-  if (op.rename) {
-    // todo: wrap the rename function to be able to pass the content to a hash function
-    o.rename = op.rename
-  }
-  uc.addPassthroughCopy({[op.input]: op.target}, o)
+      return new Build(o)
+    },
+    ...o.copy,
+  })
 }
 
 class Build extends AsyncTransform {
@@ -43,10 +46,10 @@ class Build extends AsyncTransform {
       // Esbuild populates the console itself.
       const r = await build({
         bundle: true,
-        entryPoints: [this._o.input],
-        minify: this._o.minify,
+        entryPoints: [this._o.passthrough.input],
         outdir: tmpdir(),
-        write: false
+        write: false,
+        ...this._o.esbuild,
       })
       if (r.errors.length !== 0) {
         return
