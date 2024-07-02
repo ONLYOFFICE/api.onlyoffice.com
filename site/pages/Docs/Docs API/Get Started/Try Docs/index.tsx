@@ -1,4 +1,5 @@
-import type {Context, Data} from "@onlyoffice/eleventy-types"
+import {type Data} from "@onlyoffice/eleventy-types"
+import {Config} from "@onlyoffice/site-config"
 import {
   DocumentEditorPlayground,
   Playground,
@@ -14,7 +15,8 @@ export function data(): Data {
   }
 }
 
-export function render({config}: Context): JSX.Element {
+export function render(): JSX.Element {
+  const c = Config.read()
   return <Playground>
     <PlaygroundBefore>
       <Content>
@@ -22,7 +24,7 @@ export function render({config}: Context): JSX.Element {
       </Content>
     </PlaygroundBefore>
     <PlaygroundContent>
-      <DocumentEditorPlayground config={config.playground} />
+      <DocumentEditorPlayground config={c.playground} />
     </PlaygroundContent>
   </Playground>
 }

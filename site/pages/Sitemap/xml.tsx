@@ -1,4 +1,5 @@
-import type {Context, Data} from "@onlyoffice/eleventy-types"
+import {type Data} from "@onlyoffice/eleventy-types"
+import {Config} from "@onlyoffice/site-config"
 import {type JSX, Fragment, h} from "preact"
 import {list} from "@/config/sitemap.ts"
 
@@ -10,14 +11,15 @@ export function data(): Data {
   }
 }
 
-export function render({config}: Context): JSX.Element {
+export function render(): JSX.Element {
+  const c = Config.read()
   return <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     {list().map((p) => {
       if (p.url === undefined) {
         return <></>
       }
       return <url>
-        <loc>{config.baseUrl}{p.url}</loc>
+        <loc>{c.baseUrl}{p.url}</loc>
         <lastmod>{p.date.toISOString()}</lastmod>
       </url>
     })}

@@ -5,7 +5,6 @@ import {eleventyEsbuild} from "@onlyoffice/eleventy-esbuild"
 import {eleventyHtmlMinifierTerser} from "@onlyoffice/eleventy-html-minifier-terser"
 import {eleventyLightningcss} from "@onlyoffice/eleventy-lightningcss"
 import {eleventyPagefind} from "@onlyoffice/eleventy-pagefind"
-import {eleventyConfig} from "@onlyoffice/eleventy-config"
 import {eleventyStarryNight} from "@onlyoffice/eleventy-starry-night"
 import {type UserConfig} from "@onlyoffice/eleventy-types"
 import {eleventyYAML} from "@onlyoffice/eleventy-yaml"
@@ -56,7 +55,6 @@ function config(uc: UserConfig): unknown {
   uc.addPlugin(previewPlugin)
 
   uc.addPlugin(eleventyYAML)
-  uc.addPlugin(eleventyConfig)
   uc.addPlugin(sitemapPlugin)
 
   uc.addPlugin(eleventyPagefind)

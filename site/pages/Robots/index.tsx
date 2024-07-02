@@ -1,4 +1,5 @@
-import type {Context, Data} from "@onlyoffice/eleventy-types"
+import {type Data} from "@onlyoffice/eleventy-types"
+import {Config} from "@onlyoffice/site-config"
 import {h} from "preact"
 import {data as sitemap} from "../Sitemap/xml.tsx"
 
@@ -10,7 +11,8 @@ export function data(): Data {
   }
 }
 
-export function render({config}: Context): string {
+export function render(): string {
+  const c = Config.read()
   const s = sitemap()
-  return `Sitemap: ${config.baseUrl}${s.permalink}\nUser-agent: *`
+  return `Sitemap: ${c.baseUrl}${s.permalink}\nUser-agent: *`
 }
