@@ -9,6 +9,7 @@ import {eleventyStarryNight} from "@onlyoffice/eleventy-starry-night"
 import {type UserConfig} from "@onlyoffice/eleventy-types"
 import {eleventyYAML} from "@onlyoffice/eleventy-yaml"
 import {isBuild, isPreview} from "@onlyoffice/site-env"
+import {Config} from "@onlyoffice/site-config"
 import {markupPlugin} from "./config/markup.ts"
 import {navigationPlugin} from "./config/navigation.ts"
 import {previewPlugin} from "./config/preview.ts"
@@ -49,6 +50,7 @@ function config(uc: UserConfig): unknown {
   uc.addPlugin(sitemapPlugin)
 
   uc.addPlugin(eleventyEsbuild, () => {
+    const c = Config.read()
     return {
       passthrough: {
         input: "assets/main.ts",
@@ -60,6 +62,12 @@ function config(uc: UserConfig): unknown {
         },
       },
       esbuild: {
+        define: {
+          "import.meta.env": JSON.stringify({
+            DEV: !isBuild(),
+            CONFIG_SERVER_BASE_URL: c.server.baseUrl,
+          }),
+        },
         format: "esm",
         minify,
         platform: "browser",

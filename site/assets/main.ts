@@ -18,7 +18,9 @@ import {Client} from "@onlyoffice/server-client"
 
 async function main(): Promise<void> {
   const c = new Client()
-  c.baseURL = "http://0.0.0.0:4000/"
+  if (import.meta && import.meta.env && import.meta.env.CONFIG_SERVER_BASE_URL) {
+    c.baseURL = import.meta.env.CONFIG_SERVER_BASE_URL
+  }
 
   const sp = document.querySelector("document-editor-playground")
   if (sp) {
