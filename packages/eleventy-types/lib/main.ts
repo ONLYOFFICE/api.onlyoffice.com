@@ -1,3 +1,11 @@
+import type copy from "recursive-copy"
+
+// todo: https://github.com/timkendrick/recursive-copy/pull/45/
+export type RecursiveCopyOptions = Exclude<Parameters<typeof copy.default extends {
+  (s: string, d: string, o?: infer O): unknown
+  (s: string, d: string, c: (e: Error | null, r?: Array<unknown>) => void): unknown
+} ? (s: string, d: string, o?: O) => unknown : never>[2], undefined>
+
 /**
  * {@link https://github.com/11ty/eleventy/blob/v2.0.1/src/TemplateCollection.js/#L5 Eleventy Reference}
  */
@@ -69,7 +77,7 @@ export interface UserConfig {
   /**
    * {@link https://www.11ty.dev/docs/copy/ Eleventy Reference}
    */
-  addPassthroughCopy(...args: unknown[]): void
+  addPassthroughCopy(input: string | Record<string, string>, copy?: RecursiveCopyOptions): void
 
   /**
    * {@link https://www.11ty.dev/docs/transforms/ Eleventy Reference}
