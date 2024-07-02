@@ -33,7 +33,7 @@ async function run(cmd: string): Promise<void> {
       continue
     }
     await new Promise((res, rej) => {
-      const s = spawn("pnpm", [cmd], {cwd: d, stdio: "inherit"})
+      const s = spawn("pnpm", [cmd], {cwd: d, shell: true, stdio: "inherit"})
       s.on("close", res)
       s.on("error", rej)
     })

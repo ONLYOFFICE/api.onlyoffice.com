@@ -31,7 +31,10 @@ async function main(): Promise<void> {
 }
 
 function spawnServer(): ReturnType<typeof spawn> {
-  return spawn("pnpm", ["run", "demo:server"], {stdio: ["pipe", "pipe", "pipe"]})
+  return spawn("pnpm", ["run", "demo:server"], {
+    shell: true,
+    stdio: ["pipe", "pipe", "pipe"],
+  })
 }
 
 async function waitServer(): Promise<boolean> {
@@ -49,7 +52,10 @@ async function waitServer(): Promise<boolean> {
 }
 
 function spawnTest(): ReturnType<typeof spawn> {
-  return spawn("pnpm", ["run", "test:all"], {stdio: "inherit"})
+  return spawn("pnpm", ["run", "test:all"], {
+    shell: true,
+    stdio: "inherit",
+  })
 }
 
 let c = 0

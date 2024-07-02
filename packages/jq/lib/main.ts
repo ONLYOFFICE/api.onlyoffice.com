@@ -8,7 +8,7 @@ export function hasJQ(): Promise<boolean> {
 
 export function jq(w: Writable, opts: string[] = []): Promise<void> {
   return new Promise((res, rej) => {
-    const s = spawn("jq", ["--monochrome-output", ...opts])
+    const s = spawn("jq", ["--monochrome-output", ...opts], {shell: true})
     s.stdout.on("data", (ch) => {
       w.write(ch)
     })

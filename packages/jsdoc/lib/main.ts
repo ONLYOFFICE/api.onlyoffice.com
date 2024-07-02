@@ -136,7 +136,7 @@ export type CatharsisType =
 
 export function jsdoc(w: Writable, opts: string[]): Promise<void> {
   return new Promise((res, rej) => {
-    const s = spawn("pnpm", ["exec", "--", "jsdoc", ...opts])
+    const s = spawn("pnpm", ["exec", "--", "jsdoc", ...opts], {shell: true})
     s.stdout.on("data", (ch) => {
       w.write(ch)
     })
