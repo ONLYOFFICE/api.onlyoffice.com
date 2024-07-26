@@ -5297,7 +5297,6 @@
     <Content Include="Views\DocBuilder\Try.aspx" />
     <Content Include="Views\DocSpace\ApiSystem.aspx" />
     <Content Include="Views\DocSpace\ApiSystem\Authentication.ascx" />
-    <Content Include="Views\DocSpace\ApiSystem\Batch.ascx" />
     <Content Include="Views\DocSpace\ApiSystem\Default.ascx" />
     <Content Include="Views\DocSpace\ApiSystem\Faq.ascx" />
     <Content Include="Views\DocSpace\ApiSystem\Filters.ascx" />
@@ -5311,7 +5310,6 @@
     <Content Include="Views\DocSpace\ApiSystem\TariffSection\TariffGet.ascx" />
     <Content Include="Views\DocSpace\ApiSystem\TariffSection\TariffSet.ascx" />
     <Content Include="Views\DocSpace\Backend.aspx" />
-    <Content Include="Views\DocSpace\Backend\Batch.ascx" />
     <Content Include="Views\DocSpace\Backend\Default.ascx" />
     <Content Include="Views\DocSpace\Backend\Faq.ascx" />
     <Content Include="Views\DocSpace\Backend\Filters.ascx" />
