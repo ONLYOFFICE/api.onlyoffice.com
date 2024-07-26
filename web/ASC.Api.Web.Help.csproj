@@ -3077,6 +3077,7 @@
     <Content Include="Content\img\docbuilder\samples\fill-spreadsheet.svg" />
     <Content Include="Content\img\docbuilder\samples\mail-merge-reception.svg" />
     <Content Include="Content\img\docbuilder\terminal.png" />
+    <Content Include="Content\img\docspace\add-in-js-sdk-root-url.png" />
     <Content Include="Content\img\docspace\box.png" />
     <Content Include="Content\img\docspace\button.png" />
     <Content Include="Content\img\docspace\checkbox.png" />
@@ -3122,6 +3123,16 @@
     <Content Include="Content\img\docspace\textarea.png" />
     <Content Include="Content\img\docspace\toast.png" />
     <Content Include="Content\img\docspace\toggle-button.png" />
+    <Content Include="Content\img\docspace\gifs\open-editor.gif" />
+    <Content Include="Content\img\docspace\gifs\js-sdk-authorization-sample.gif" />
+    <Content Include="Content\img\docspace\gifs\js-sdk-create-file.gif" />
+    <Content Include="Content\img\docspace\gifs\js-sdk-attach-files.gif" />
+    <Content Include="Content\img\docspace\js-sdk-open-file-in-editors.png" />
+    <Content Include="Content\img\docspace\js-sdk-log-in.png" />
+    <Content Include="Content\img\docspace\js-sdk-create-file.png" />
+    <Content Include="Content\img\docspace\js-sdk-customization-of-editors.png" />
+    <Content Include="Content\img\docspace\js-sdk-attach-files.png" />
+    <Content Include="Content\img\docspace\customization-of-editors.png" />
     <Content Include="Content\img\docspace\upload-plugin.jpg" />
     <Content Include="Content\img\docspace\viewer-mode.png" />
     <Content Include="Content\img\Editor\accept_reject.png" />
@@ -5335,6 +5346,12 @@
     <Content Include="Views\DocSpace\JsSdk\InitModes\System.ascx" />
     <Content Include="Views\DocSpace\JsSdk\InitModes\Viewer.ascx" />
     <Content Include="Views\DocSpace\JsSdk\Methods.ascx" />
+    <Content Include="Views\DocSpace\JsSdk\Samples\Default.ascx" />
+    <Content Include="Views\DocSpace\JsSdk\Samples\AttachFiles.ascx" />
+    <Content Include="Views\DocSpace\JsSdk\Samples\Authorization.ascx" />
+    <Content Include="Views\DocSpace\JsSdk\Samples\CreateFileInSelectedFolder.ascx" />
+    <Content Include="Views\DocSpace\JsSdk\Samples\CustomizationOfEditors.ascx" />
+    <Content Include="Views\DocSpace\JsSdk\Samples\SampleOpenFile.ascx" />
     <Content Include="Views\DocSpace\Method.aspx" />
     <Content Include="Views\DocSpace\Navigation.ascx" />
     <Content Include="Views\DocSpace\PluginsSdk.aspx" />

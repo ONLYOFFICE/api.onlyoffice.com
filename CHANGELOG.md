@@ -1,4 +1,5 @@
 # Change Log
+- docspace: added the JS SDK samples
 
 ## 5.1.0
 - editors: added the startFilling method

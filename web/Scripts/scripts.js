@@ -490,3 +490,28 @@ function deepCopyConfig(config) {
     };
     return result;
 }
+function createJsSdkHTML(jsSdk) {
+    return document.getElementById(jsSdk+'Pre').textContent;
+}
+function copyJsSdkToClipboard(html, hoverId, clickId) {
+    navigator.clipboard.writeText(html).then(function () {
+        document.getElementById(hoverId).style = "display: none;";
+        document.getElementById(clickId).style = "display: inline; width: 95px!important;";
+    }, function (err) {
+        console.error('Could not copy content: ', err);
+    });
+}
+
+function copyJsSdkMouseLeave(hoverId, clickId) {
+    document.getElementById(hoverId).style = "display: inline;";
+    document.getElementById(clickId).style = "display: none;";
+}
+
+function deepCopyJsSdk(jsSdk) {
+    const copy = JSON.parse(JSON.stringify(jsSdk));
+    const result = {
+        jsSdk: jsSdk,
+        copy: copy
+    };
+    return result;
+}
