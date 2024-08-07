@@ -726,6 +726,12 @@ playground:
           - document:
               fileType: docx
             documentType: word
+            editorConfig:
+              customization:
+                anonymous:
+                  request: false
+                  label: "Guest"
+                integrationMode: embed
             height: 700px
             width: 100%
 
@@ -739,6 +745,11 @@ playground:
             documentType: word
             editorConfig:
               callbackUrl: "https://example.com/url-to-callback.ashx"
+              customization:
+                anonymous:
+                  request: false
+                  label: "Guest"
+                integrationMode: embed
             height: 700px
             width: 100%
             events:
@@ -754,6 +765,11 @@ playground:
             documentType: word
             editorConfig:
               callbackUrl: "https://example.com/url-to-callback.ashx"
+              customization:
+                anonymous:
+                  request: false
+                  label: "Guest"
+                integrationMode: embed
             height: 700px
             width: 100%
             events:
@@ -769,6 +785,11 @@ playground:
             documentType: word
             editorConfig:
               callbackUrl: "https://example.com/url-to-callback.ashx"
+              customization:
+                anonymous:
+                  request: false
+                  label: "Guest"
+                integrationMode: embed
             height: 700px
             width: 100%
             events:
@@ -784,6 +805,11 @@ playground:
             documentType: word
             editorConfig:
               callbackUrl: "https://example.com/url-to-callback.ashx"
+              customization:
+                anonymous:
+                  request: false
+                  label: "Guest"
+                integrationMode: embed
             height: 700px
             width: 100%
             events:
@@ -799,6 +825,11 @@ playground:
             documentType: cell
             editorConfig:
               callbackUrl: "https://example.com/url-to-callback.ashx"
+              customization:
+                anonymous:
+                  request: false
+                  label: "Guest"
+                integrationMode: embed
             height: 700px
             width: 100%
             events:
@@ -814,6 +845,11 @@ playground:
             documentType: cell
             editorConfig:
               callbackUrl: "https://example.com/url-to-callback.ashx"
+              customization:
+                anonymous:
+                  request: false
+                  label: "Guest"
+                integrationMode: embed
             height: 700px
             width: 100%
             events:
@@ -829,6 +865,11 @@ playground:
             documentType: cell
             editorConfig:
               callbackUrl: "https://example.com/url-to-callback.ashx"
+              customization:
+                anonymous:
+                  request: false
+                  label: "Guest"
+                integrationMode: embed
             height: 700px
             width: 100%
             events:
@@ -844,6 +885,11 @@ playground:
             documentType: cell
             editorConfig:
               callbackUrl: "https://example.com/url-to-callback.ashx"
+              customization:
+                anonymous:
+                  request: false
+                  label: "Guest"
+                integrationMode: embed
             height: 700px
             width: 100%
             events:
@@ -859,6 +905,11 @@ playground:
             documentType: slide
             editorConfig:
               callbackUrl: "https://example.com/url-to-callback.ashx"
+              customization:
+                anonymous:
+                  request: false
+                  label: "Guest"
+                integrationMode: embed
             height: 700px
             width: 100%
             events:
@@ -874,6 +925,11 @@ playground:
             documentType: slide
             editorConfig:
               callbackUrl: "https://example.com/url-to-callback.ashx"
+              customization:
+                anonymous:
+                  request: false
+                  label: "Guest"
+                integrationMode: embed
             height: 700px
             width: 100%
             events:
@@ -889,6 +945,11 @@ playground:
             documentType: slide
             editorConfig:
               callbackUrl: "https://example.com/url-to-callback.ashx"
+              customization:
+                anonymous:
+                  request: false
+                  label: "Guest"
+                integrationMode: embed
             height: 700px
             width: 100%
             events:
@@ -904,6 +965,11 @@ playground:
             documentType: slide
             editorConfig:
               callbackUrl: "https://example.com/url-to-callback.ashx"
+              customization:
+                anonymous:
+                  request: false
+                  label: "Guest"
+                integrationMode: embed
             height: 700px
             width: 100%
             events:
@@ -919,6 +985,11 @@ playground:
             documentType: word
             editorConfig:
               callbackUrl: "https://example.com/url-to-callback.ashx"
+              customization:
+                anonymous:
+                  request: false
+                  label: "Guest"
+                integrationMode: embed
               user:
                 id: "78e1e841"
                 name: "John Smith"
@@ -937,6 +1008,11 @@ playground:
             documentType: cell
             editorConfig:
               callbackUrl: "https://example.com/url-to-callback.ashx"
+              customization:
+                anonymous:
+                  request: false
+                  label: "Guest"
+                integrationMode: embed
               user:
                 id: "78e1e841"
                 name: "John Smith"
@@ -955,6 +1031,11 @@ playground:
             documentType: slide
             editorConfig:
               callbackUrl: "https://example.com/url-to-callback.ashx"
+              customization:
+                anonymous:
+                  request: false
+                  label: "Guest"
+                integrationMode: embed
               user:
                 id: "78e1e841"
                 name: "John Smith"
@@ -974,6 +1055,10 @@ playground:
             editorConfig:
               callbackUrl: "https://example.com/url-to-callback.ashx"
               customization:
+                anonymous:
+                  request: false
+                  label: "Guest"
+                integrationMode: embed
                 autosave: false
               user:
                 id: "78e1e841"
@@ -994,6 +1079,10 @@ playground:
             editorConfig:
               callbackUrl: "https://example.com/url-to-callback.ashx"
               customization:
+                anonymous:
+                  request: false
+                  label: "Guest"
+                integrationMode: embed
                 autosave: false
               user:
                 id: "78e1e841"
@@ -1014,6 +1103,10 @@ playground:
             editorConfig:
               callbackUrl: "https://example.com/url-to-callback.ashx"
               customization:
+                anonymous:
+                  request: false
+                  label: "Guest"
+                integrationMode: embed
                 autosave: false
               user:
                 id: "78e1e841"
@@ -1035,6 +1128,11 @@ playground:
             documentType: pdf
             editorConfig:
               callbackUrl: "https://example.com/url-to-callback.ashx"
+              customization:
+                anonymous:
+                  request: false
+                  label: "Guest"
+                integrationMode: embed
             height: 700px
             width: 100%
             events:
@@ -1053,6 +1151,11 @@ playground:
             documentType: pdf
             editorConfig:
               callbackUrl: "https://example.com/url-to-callback.ashx"
+              customization:
+                anonymous:
+                  request: false
+                  label: "Guest"
+                integrationMode: embed
               mode: edit
             height: 700px
             width: 100%
@@ -1072,6 +1175,11 @@ playground:
             documentType: cell
             editorConfig:
               callbackUrl: "https://example.com/url-to-callback.ashx"
+              customization:
+                anonymous:
+                  request: false
+                  label: "Guest"
+                integrationMode: embed
               user:
                 id: "78e1e841"
                 name: "John Smith"
@@ -1093,6 +1201,11 @@ playground:
             documentType: word
             editorConfig:
               callbackUrl: "https://example.com/url-to-callback.ashx"
+              customization:
+                anonymous:
+                  request: false
+                  label: "Guest"
+                integrationMode: embed
               mode: edit
             height: 700px
             width: 100%
@@ -1113,6 +1226,11 @@ playground:
             documentType: word
             editorConfig:
               callbackUrl: "https://example.com/url-to-callback.ashx"
+              customization:
+                anonymous:
+                  request: false
+                  label: "Guest"
+                integrationMode: embed
               mode: edit
             height: 700px
             width: 100%
@@ -1132,6 +1250,11 @@ playground:
             documentType: word
             editorConfig:
               callbackUrl: "https://example.com/url-to-callback.ashx"
+              customization:
+                anonymous:
+                  request: false
+                  label: "Guest"
+                integrationMode: embed
               mode: edit
             height: 700px
             width: 100%
@@ -1151,6 +1274,11 @@ playground:
             documentType: word
             editorConfig:
               callbackUrl: "https://example.com/url-to-callback.ashx"
+              customization:
+                anonymous:
+                  request: false
+                  label: "Guest"
+                integrationMode: embed
               mode: edit
             height: 700px
             width: 100%
@@ -1170,6 +1298,11 @@ playground:
             documentType: cell
             editorConfig:
               callbackUrl: "https://example.com/url-to-callback.ashx"
+              customization:
+                anonymous:
+                  request: false
+                  label: "Guest"
+                integrationMode: embed
               mode: edit
             height: 700px
             width: 100%
@@ -1189,6 +1322,11 @@ playground:
             documentType: slide
             editorConfig:
               callbackUrl: "https://example.com/url-to-callback.ashx"
+              customization:
+                anonymous:
+                  request: false
+                  label: "Guest"
+                integrationMode: embed
               mode: edit
             height: 700px
             width: 100%
@@ -1204,6 +1342,11 @@ playground:
               url: "https://example.com/url-to-example-document.docx"
             documentType: word
             editorConfig:
+              customization:
+                anonymous:
+                  request: false
+                  label: "Guest"
+                integrationMode: embed
               mode: view
             height: 700px
             width: 100%
@@ -1219,6 +1362,11 @@ playground:
               url: "https://example.com/url-to-example-document.pdf"
             documentType: pdf
             editorConfig:
+              customization:
+                anonymous:
+                  request: false
+                  label: "Guest"
+                integrationMode: embed
               mode: view
             height: 700px
             width: 100%
@@ -1234,6 +1382,11 @@ playground:
               url: "https://example.com/url-to-example-spreadsheet.xlsx"
             documentType: cell
             editorConfig:
+              customization:
+                anonymous:
+                  request: false
+                  label: "Guest"
+                integrationMode: embed
               mode: view
             height: 700px
             width: 100%
@@ -1249,6 +1402,11 @@ playground:
               url: "https://example.com/url-to-example-presentation.pptx"
             documentType: slide
             editorConfig:
+              customization:
+                anonymous:
+                  request: false
+                  label: "Guest"
+                integrationMode: embed
               mode: view
             height: 700px
             width: 100%
@@ -1266,6 +1424,10 @@ playground:
             editorConfig:
               callbackUrl: "https://example.com/url-to-callback.ashx"
               customization:
+                anonymous:
+                  request: false
+                  label: "Guest"
+                integrationMode: embed
                 customer:
                   address: "My City, 123a-45"
                   info: "Some additional information"
@@ -1292,6 +1454,10 @@ playground:
             editorConfig:
               callbackUrl: "https://example.com/url-to-callback.ashx"
               customization:
+                anonymous:
+                  request: false
+                  label: "Guest"
+                integrationMode: embed
                 customer:
                   address: "My City, 123a-45"
                   info: "Some additional information"
@@ -1318,6 +1484,10 @@ playground:
             editorConfig:
               callbackUrl: "https://example.com/url-to-callback.ashx"
               customization:
+                anonymous:
+                  request: false
+                  label: "Guest"
+                integrationMode: embed
                 customer:
                   address: "My City, 123a-45"
                   info: "Some additional information"
@@ -1341,6 +1511,12 @@ playground:
               title: "Example Document Title.docx"
               url: "https://example.com/url-to-example-document.docx"
             documentType: word
+            editorConfig:
+              customization:
+                anonymous:
+                  request: false
+                  label: "Guest"
+                integrationMode: embed
             height: 700px
             width: 100%
             type: embedded
@@ -1355,6 +1531,12 @@ playground:
               title: "Example Document Title.xlsx"
               url: "https://example.com/url-to-example-document.xlsx"
             documentType: cell
+            editorConfig:
+              customization:
+                anonymous:
+                  request: false
+                  label: "Guest"
+                integrationMode: embed
             height: 700px
             width: 100%
             type: embedded
@@ -1369,6 +1551,12 @@ playground:
               title: "Example Document Title.pptx"
               url: "https://example.com/url-to-example-document.pptx"
             documentType: slide
+            editorConfig:
+              customization:
+                anonymous:
+                  request: false
+                  label: "Guest"
+                integrationMode: embed
             height: 700px
             width: 100%
             type: embedded
