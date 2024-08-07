@@ -100,7 +100,9 @@ playground:
         href: docs/docs-api/usage-api/config/document/info/#uploaded
         type: string
 
-      # document.permissions.changeHistory
+      - path: document.permissions.changeHistory
+        href: docs/docs-api/usage-api/config/document/permissions/#changeHistory
+        type: boolean
 
       - path: document.permissions.chat
         href: docs/docs-api/usage-api/config/document/permissions/#chat
@@ -184,17 +186,15 @@ playground:
         type: boolean
         default: true
 
-        #Не понятно
       - path: document.permissions.reviewGroups[0]
         href: docs/docs-api/usage-api/config/document/permissions/#reviewGroups
         type: string
 
-        #Не понятно
       - path: document.permissions.userInfoGroups[0]
         href: docs/docs-api/usage-api/config/document/permissions/#userInfoGroups
         type: string
         default: ""
-        #Не понятно в конфиге ACTION_DATA
+
       - path: editorConfig.actionLink
         href: docs/docs-api/usage-api/config/editorConfig/#actionLink
         type: string
@@ -909,6 +909,120 @@ playground:
             events:
               onAppReady: console.log("Document Editor is ready")
 
+      - name: Open DOCX for co-editing
+        configs:
+          - document:
+              fileType: docx
+              key: B143195F47A0
+              title: "Example Document Title.docx"
+              url: "https://example.com/url-to-example-document.docx"
+            documentType: word
+            editorConfig:
+              callbackUrl: "https://example.com/url-to-callback.ashx"
+              user:
+                id: "78e1e841"
+                name: "John Smith"
+            height: 700px
+            width: 100%
+            events:
+              onAppReady: console.log("Document Editor is ready")
+
+      - name: Open XLSX for co-editing
+        configs:
+          - document:
+              fileType: xlsx
+              key: 6FB60FE9E548
+              title: "Example Spreadsheet Title.xlsx"
+              url: "https://example.com/url-to-example-spreadsheet.xlsx"
+            documentType: cell
+            editorConfig:
+              callbackUrl: "https://example.com/url-to-callback.ashx"
+              user:
+                id: "78e1e841"
+                name: "John Smith"
+            height: 700px
+            width: 100%
+            events:
+              onAppReady: console.log("Document Editor is ready")
+
+      - name: Open PPTX for co-editing
+        configs:
+          - document:
+              fileType: pptx
+              key: B6C57F1FC447
+              title: "Example Presentation Title.pptx"
+              url: "https://example.com/url-to-example-presentation.pptx"
+            documentType: slide
+            editorConfig:
+              callbackUrl: "https://example.com/url-to-callback.ashx"
+              user:
+                id: "78e1e841"
+                name: "John Smith"
+            height: 700px
+            width: 100%
+            events:
+              onAppReady: console.log("Document Editor is ready")
+
+      - name: Open DOCX for co-editing in strict mode
+        configs:
+          - document:
+              fileType: docx
+              key: 491BD667CABA
+              title: "Example Document Title.docx"
+              url: "https://example.com/url-to-example-document.docx"
+            documentType: word
+            editorConfig:
+              callbackUrl: "https://example.com/url-to-callback.ashx"
+              customization:
+                autosave: false
+              user:
+                id: "78e1e841"
+                name: "John Smith"
+            height: 700px
+            width: 100%
+            events:
+              onAppReady: console.log("Document Editor is ready")
+
+      - name: Open XLSX for co-editing in strict mode
+        configs:
+          - document:
+              fileType: xlsx
+              key: DB1788E4AF4A
+              title: "Example Spreadsheet Title.xlsx"
+              url: "https://example.com/url-to-example-spreadsheet.xlsx"
+            documentType: cell
+            editorConfig:
+              callbackUrl: "https://example.com/url-to-callback.ashx"
+              customization:
+                autosave: false
+              user:
+                id: "78e1e841"
+                name: "John Smith"
+            height: 700px
+            width: 100%
+            events:
+              onAppReady: console.log("Document Editor is ready")
+
+      - name: Open PPTX for co-editing in strict mode
+        configs:
+          - document:
+              fileType: pptx
+              key: 5664FFF42E4E
+              title: "Example Presentation Title.pptx"
+              url: "https://example.com/url-to-example-presentation.pptx"
+            documentType: slide
+            editorConfig:
+              callbackUrl: "https://example.com/url-to-callback.ashx"
+              customization:
+                autosave: false
+              user:
+                id: "78e1e841"
+                name: "John Smith"
+            height: 700px
+            width: 100%
+            events:
+              onAppReady: console.log("Document Editor is ready")
+
       - name: Open PDF form for editing
         configs:
           - document:
@@ -1002,5 +1116,261 @@ playground:
               mode: edit
             height: 700px
             width: 100%
+            events:
+              onAppReady: console.log("Document Editor is ready")
+
+      - name: Open DOCX without access to the content control settings
+        configs:
+          - document:
+              fileType: docx
+              key: 779591724609
+              title: "Example Document Title.docx"
+              url: "https://example.com/url-to-example-document.docx"
+              permissions:
+                edit: true
+                modifyContentControl: false
+            documentType: word
+            editorConfig:
+              callbackUrl: "https://example.com/url-to-callback.ashx"
+              mode: edit
+            height: 700px
+            width: 100%
+            events:
+              onAppReady: console.log("Document Editor is ready")
+
+      - name: Open DOCX for commenting
+        configs:
+          - document:
+              fileType: docx
+              key: 5C5D4CCA7674
+              title: "Example Document Title.docx"
+              url: "https://example.com/url-to-example-document.docx"
+              permissions:
+                edit: false
+                comment: true
+            documentType: word
+            editorConfig:
+              callbackUrl: "https://example.com/url-to-callback.ashx"
+              mode: edit
+            height: 700px
+            width: 100%
+            events:
+              onAppReady: console.log("Document Editor is ready")
+
+      - name: Open XLSX for commenting
+        configs:
+          - document:
+              fileType: xlsx
+              key: B62D0C4B9C09
+              title: "Example Spreadsheet Title.xlsx"
+              url: "https://example.com/url-to-example-spreadsheet.xlsx"
+              permissions:
+                edit: false
+                comment: true
+            documentType: cell
+            editorConfig:
+              callbackUrl: "https://example.com/url-to-callback.ashx"
+              mode: edit
+            height: 700px
+            width: 100%
+            events:
+              onAppReady: console.log("Document Editor is ready")
+
+      - name: Open PPTX for commenting
+        configs:
+          - document:
+              fileType: pptx
+              key: DA7CC0B9
+              title: "Example Presentation Title.pptx"
+              url: "https://example.com/url-to-example-presentation.pptx"
+              permissions:
+                edit: false
+                comment: true
+            documentType: slide
+            editorConfig:
+              callbackUrl: "https://example.com/url-to-callback.ashx"
+              mode: edit
+            height: 700px
+            width: 100%
+            events:
+              onAppReady: console.log("Document Editor is ready")
+
+      - name: Open DOCX for viewing
+        configs:
+          - document:
+              fileType: docx
+              key: D24A86BDE9A2
+              title: "Example Document Title.docx"
+              url: "https://example.com/url-to-example-document.docx"
+            documentType: word
+            editorConfig:
+              mode: view
+            height: 700px
+            width: 100%
+            events:
+              onAppReady: console.log("Document Editor is ready")
+
+      - name: Open PDF for viewing
+        configs:
+          - document:
+              fileType: pdf
+              key: 9B9F6EFE8937
+              title: "Example Document Title.pdf"
+              url: "https://example.com/url-to-example-document.pdf"
+            documentType: pdf
+            editorConfig:
+              mode: view
+            height: 700px
+            width: 100%
+            events:
+              onAppReady: console.log("Document Editor is ready")
+
+      - name: Open XLSX for viewing
+        configs:
+          - document:
+              fileType: xlsx
+              key: 138E9734B413
+              title: "Example Spreadsheet Title.xlsx"
+              url: "https://example.com/url-to-example-spreadsheet.xlsx"
+            documentType: cell
+            editorConfig:
+              mode: view
+            height: 700px
+            width: 100%
+            events:
+              onAppReady: console.log("Document Editor is ready")
+
+      - name: Open PPTX for viewing
+        configs:
+          - document:
+              fileType: pptx
+              key: 37195B2B9BF4
+              title: "Example Presentation Title.pptx"
+              url: "https://example.com/url-to-example-presentation.pptx"
+            documentType: slide
+            editorConfig:
+              mode: view
+            height: 700px
+            width: 100%
+            events:
+              onAppReady: console.log("Document Editor is ready")
+
+      - name: Open DOCX for rebranding
+        configs:
+          - document:
+              fileType: docx
+              key: D97815D69205
+              title: "Example Document Title.docx"
+              url: "https://example.com/url-to-example-document.docx"
+            documentType: word
+            editorConfig:
+              callbackUrl: "https://example.com/url-to-callback.ashx"
+              customization:
+                customer:
+                  address: "My City, 123a-45"
+                  info: "Some additional information"
+                  logo: "https://example.com/logo-big.png"
+                  mail: "john@example.com"
+                  name: "John Smith and Co."
+                  www: "example.com"
+                logo:
+                  image: "https://example.com/logo.png"
+                  url: "https://example.com"
+            height: 700px
+            width: 100%
+            events:
+              onAppReady: console.log("Document Editor is ready")
+
+      - name: Open XLSX for rebranding
+        configs:
+          - document:
+              fileType: xlsx
+              key: 6CDE57CAF31F
+              title: "Example Spreadsheet Title.xlsx"
+              url: "https://example.com/url-to-example-spreadsheet.xlsx"
+            documentType: cell
+            editorConfig:
+              callbackUrl: "https://example.com/url-to-callback.ashx"
+              customization:
+                customer:
+                  address: "My City, 123a-45"
+                  info: "Some additional information"
+                  logo: "https://example.com/logo-big.png"
+                  mail: "john@example.com"
+                  name: "John Smith and Co."
+                  www: "example.com"
+                logo:
+                  image: "https://example.com/logo.png"
+                  url: "https://example.com"
+            height: 700px
+            width: 100%
+            events:
+              onAppReady: console.log("Document Editor is ready")
+
+      - name: Open PPTX for rebranding
+        configs:
+          - document:
+              fileType: pptx
+              key: E9B24523F469
+              title: "Example Presentation Title.pptx"
+              url: "https://example.com/url-to-example-presentation.pptx"
+            documentType: slide
+            editorConfig:
+              callbackUrl: "https://example.com/url-to-callback.ashx"
+              customization:
+                customer:
+                  address: "My City, 123a-45"
+                  info: "Some additional information"
+                  logo: "https://example.com/logo-big.png"
+                  mail: "john@example.com"
+                  name: "John Smith and Co."
+                  www: "example.com"
+                logo:
+                  image: "https://example.com/logo.png"
+                  url: "https://example.com"
+            height: 700px
+            width: 100%
+            events:
+              onAppReady: console.log("Document Editor is ready")
+
+      - name: Open DOCX file for embedded viewing
+        configs:
+          - document:
+              fileType: docx
+              key: B949CB79
+              title: "Example Document Title.docx"
+              url: "https://example.com/url-to-example-document.docx"
+            documentType: word
+            height: 700px
+            width: 100%
+            type: embedded
+            events:
+              onAppReady: console.log("Document Editor is ready")
+
+      - name: Open XLSX file for embedded viewing
+        configs:
+          - document:
+              fileType: xlsx
+              key: 9CB47328
+              title: "Example Document Title.xlsx"
+              url: "https://example.com/url-to-example-document.xlsx"
+            documentType: cell
+            height: 700px
+            width: 100%
+            type: embedded
+            events:
+              onAppReady: console.log("Document Editor is ready")
+
+      - name: Open PPTX file for embedded viewing
+        configs:
+          - document:
+              fileType: pptx
+              key: 9CB47328
+              title: "Example Document Title.pptx"
+              url: "https://example.com/url-to-example-document.pptx"
+            documentType: slide
+            height: 700px
+            width: 100%
+            type: embedded
             events:
               onAppReady: console.log("Document Editor is ready")
