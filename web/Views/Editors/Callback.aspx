@@ -65,7 +65,7 @@
                 <td id="changesurl" class="copy-link">changesurl</td>
                 <td>
                     Defines the link to the file with the document editing data used to track and display the document changes history.
-                    The link is present when the <em>status</em> value is equal to <b>2</b> or <b>3</b> only. The file must be saved and its address must be sent as <i>changesUrl</i> parameter using the <a href="<%= Url.Action("methods") %>#setHistoryData">setHistoryData</a> method to show the changes corresponding to the specific document version.
+                    The link is present when the <em>status</em> value is equal to <b>2</b>, <b>3</b>, <b>6</b>, or <b>7</b>. The file must be saved and its address must be sent as <i>changesUrl</i> parameter using the <a href="<%= Url.Action("methods") %>#setHistoryData">setHistoryData</a> method to show the changes corresponding to the specific document version.
                 </td>
                 <td>string</td>
                 <td>optional</td>
