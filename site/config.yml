@@ -9,341 +9,1556 @@ playground:
     documentServerUrl: http://localhost:3000/
 
     config:
-    - path: documentType
-      href: docs/docs-api/usage-api/config/#documentType
-      type: string
-      cases: [word, cell, slide, pdf]
-      default: word
+      - path: documentType
+        href: docs/docs-api/usage-api/config/#documentType
+        type: string
+        cases: [word, cell, slide, pdf]
+        default: word
 
-    - path: height
-      href: docs/docs-api/usage-api/config/#height
-      type: string
-      default: 100%
+      - path: height
+        href: docs/docs-api/usage-api/config/#height
+        type: string
+        default: "100%"
 
-    # - path: token
+      - path: width
+        href: docs/docs-api/usage-api/config/#width
+        type: string
+        default: "100%"
 
-    - path: document.fileType
-      href: docs/docs-api/usage-api/config/document/#fileType
-      type: string
-      cases: [docx, xlsx, pptx, pdf]
-      default: docx
+      - path: token
+        href: docs/docs-api/usage-api/config/#token
+        type: string
 
-    # - path: document.key
+      - path: document.fileType
+        href: docs/docs-api/usage-api/config/document/#fileType
+        type: string
+        cases:
+          [docx, doc, odt, txt, xlsx, xls, ods, csv, pptx, ppsx, ppt, odp, pdf]
+        default: docx
 
-    - path: document.referenceData.fileKey
-      href: ""
-      type: string
+      - path: document.key
+        href: docs/docs-api/usage-api/config/document/#key
+        type: string
 
-    - path: document.referenceData.instanceId
-      href: ""
-      type: string
+      - path: document.referenceData.fileKey
+        href: docs/docs-api/usage-api/config/document/referenceData/#fileKey
+        type: string
 
-    - path: document.referenceData.key
-      href: ""
-      type: string
+      - path: document.referenceData.instanceId
+        href: docs/docs-api/usage-api/config/document/referenceData/#instanceId
+        type: string
 
-    - path: document.title
-      href: ""
-      type: string
-      default: Playground Document
+      - path: document.referenceData.key
+        href: docs/docs-api/usage-api/config/document/referenceData/#key
+        type: string
 
-    # - path: document.url
+      - path: document.title
+        href: docs/docs-api/usage-api/config/document/#title
+        type: string
+        default: Playground Document
 
-    - path: document.info.author
-      href: ""
-      type: string
-      deprecated: true
+      - path: document.url
+        href: docs/docs-api/usage-api/config/document/#url
+        type: string
 
-    - path: document.info.created
-      href: ""
-      type: string
-      deprecated: true
+      - path: document.info.author
+        href: docs/docs-api/usage-api/config/document/info/#author
+        type: string
+        deprecated: true
 
-    - path: document.info.favorite
-      href: ""
-      type: boolean
+      - path: document.info.created
+        href: docs/docs-api/usage-api/config/document/info/#created
+        type: string
+        deprecated: true
 
-    - path: document.info.folder
-      href: ""
-      type: string
+      - path: document.info.favorite
+        href: docs/docs-api/usage-api/config/document/info/#favorite
+        type: boolean
 
-    - path: document.info.owner
-      href: ""
-      type: string
+      - path: document.info.folder
+        href: docs/docs-api/usage-api/config/document/info/#folder
+        type: string
 
-    - path: document.info.sharingSettings[0].isLink
-      href: ""
-      type: boolean
+      - path: document.info.owner
+        href: docs/docs-api/usage-api/config/document/info/#owner
+        type: string
 
-    - path: document.info.sharingSettings[0].permissions
-      href: ""
-      type: string
-      cases: [Full Access, Read Only, Deny Access]
+      - path: document.info.sharingSettings[0].isLink
+        href: docs/docs-api/usage-api/config/document/info/sharingSettings/#isLink
+        type: boolean
 
-    - path: document.info.sharingSettings[0].user
-      href: ""
-      type: string
+      - path: document.info.sharingSettings[0].permissions
+        href: docs/docs-api/usage-api/config/document/info/sharingSettings/#permissions
+        type: string
+        cases: [Full Access, Read Only, Deny Access]
 
-    - path: document.info.uploaded
-      href:
-      type: string
+      - path: document.info.sharingSettings[0].user
+        href: docs/docs-api/usage-api/config/document/info/sharingSettings/#user
+        type: string
 
-    # document.permissions.changeHistory
-    # document.permissions.chat
-    # document.permissions.comment
-    # document.permissions.commentGroups[0].edit
-    # document.permissions.commentGroups[0].remove
-    # document.permissions.commentGroups[0].view
-    # document.permissions.copy
-    # document.permissions.deleteCommentAuthorOnly
-    # document.permissions.download
-    # document.permissions.edit
-    # document.permissions.editCommentAuthorOnly
-    # document.permissions.fillForms
-    # document.permissions.modifyContentControl
-    # document.permissions.modifyFilter
-    # document.permissions.print
-    # document.permissions.protect
-    # document.permissions.rename
-    # document.permissions.review
-    # document.permissions.reviewGroups[0]
-    # document.permissions.userInfoGroups[0]
-    # editorConfig.actionLink
-    # editorConfig.callbackUrl
-    # editorConfig.coEditing.mode
-    # editorConfig.coEditing.change
-    # editorConfig.createUrl
-    # editorConfig.lang
-    # editorConfig.location
-    # editorConfig.mode
-    # editorConfig.recent[0].folder
-    # editorConfig.recent[0].title
-    # editorConfig.recent[0].url
-    # editorConfig.region
-    # editorConfig.templates[0].image
-    # editorConfig.templates[0].title
-    # editorConfig.templates[0].url
-    # editorConfig.user.firstname
-    # editorConfig.user.group
-    # editorConfig.user.id
-    # editorConfig.user.image
-    # editorConfig.user.lastname
-    # editorConfig.user.name
-    # editorConfig.customization.anonymous.request
-    # editorConfig.customization.anonymous.label
-    # editorConfig.customization.autosave
-    # editorConfig.customization.chat
-    # editorConfig.customization.commentAuthorOnly
-    # editorConfig.customization.comments
-    # editorConfig.customization.compactHeader
-    # editorConfig.customization.compactToolbar
-    # editorConfig.customization.compatibleFeatures
-    # editorConfig.customization.customer.address
-    # editorConfig.customization.customer.info
-    # editorConfig.customization.customer.logo
-    # editorConfig.customization.customer.logoDark
-    # editorConfig.customization.customer.mail
-    # editorConfig.customization.customer.name
-    # editorConfig.customization.customer.phone
-    # editorConfig.customization.customer.www
-    # editorConfig.customization.features.spellcheck.mode
-    # editorConfig.customization.feedback.url
-    # editorConfig.customization.feedback.visible
-    # editorConfig.customization.forcesave
-    # editorConfig.customization.goback.blank
-    # editorConfig.customization.goback.requestClose
-    # editorConfig.customization.goback.text
-    # editorConfig.customization.goback.url
-    # editorConfig.customization.help
-    # editorConfig.customization.hideNotes
-    # editorConfig.customization.hideRightMenu
-    # editorConfig.customization.hideRulers
-    # editorConfig.customization.integrationMode
-    # editorConfig.customization.logo.image
-    # editorConfig.customization.logo.imageDark
-    # editorConfig.customization.logo.imageEmbedded
-    # editorConfig.customization.logo.url
-    # editorConfig.customization.macros
-    # editorConfig.customization.macrosMode
-    # editorConfig.customization.mentionShare
-    # editorConfig.customization.mobileForceView
-    # editorConfig.customization.plugins
-    # editorConfig.customization.review.hideReviewDisplay
-    # editorConfig.customization.review.hoverMode
-    # editorConfig.customization.review.reviewDisplay
-    # editorConfig.customization.review.showReviewChanges
-    # editorConfig.customization.review.trackChanges
-    # editorConfig.customization.reviewDisplay
-    # editorConfig.customization.showReviewChanges
-    # editorConfig.customization.spellcheck
-    # editorConfig.customization.submitForm
-    # editorConfig.customization.toolbarHideFileName
-    # editorConfig.customization.toolbarNoTabs
-    # editorConfig.customization.trackChanges
-    # editorConfig.customization.uiTheme
-    # editorConfig.customization.unit
-    # editorConfig.customization.zoom
-    # editorConfig.embedded.embedUrl
-    # editorConfig.embedded.fullscreenUrl
-    # editorConfig.embedded.saveUrl
-    # editorConfig.embedded.shareUrl
-    # editorConfig.embedded.toolbarDocked
-    # editorConfig.plugins.autostart[0]
-    # editorConfig.plugins.pluginsData[0]
-    # editorConfig.plugins.url
+      - path: document.info.uploaded
+        href: docs/docs-api/usage-api/config/document/info/#uploaded
+        type: string
 
-    - path: editorConfig.customization.compactHeader
-      href: docs/docs-api/usage-api/config/editor-config/customization/#compactHeader
-      type: boolean
-      default: false
+      - path: document.permissions.changeHistory
+        href: docs/docs-api/usage-api/config/document/permissions/#changeHistory
+        type: boolean
 
-    - path: events.onAppReady
-      href: docs/docs-api/usage-api/config/events/#onAppReady
-      type: function
-      default: console.log("Document Editor is ready")
+      - path: document.permissions.chat
+        href: docs/docs-api/usage-api/config/document/permissions/#chat
+        type: boolean
+        default: true
 
-    - path: events.onCollaborativeChanges
-      href: docs/docs-api/usage-api/config/events/#onCollaborativeChanges
-      type: function
+      - path: document.permissions.comment
+        href: docs/docs-api/usage-api/config/document/permissions/#comment
+        type: boolean
+        default: true
 
-    - path: events.onDocumentReady
-      href: docs/docs-api/usage-api/config/events/#onDocumentReady
-      type: function
+      - path: document.permissions.commentGroups[0].edit
+        href: docs/docs-api/usage-api/config/document/permissions/commentGroups/#edit
+        type: string
 
-    - path: events.onDocumentStateChange
-      href: docs/docs-api/usage-api/config/events/#onDocumentStateChange
-      type: function
+      - path: document.permissions.commentGroups[0].remove
+        href: docs/docs-api/usage-api/config/document/permissions/commentGroups/#remove
+        type: string
 
-    - path: events.onDownloadAs
-      href: docs/docs-api/usage-api/config/events/#onDownloadAs
-      type: function
+      - path: document.permissions.commentGroups[0].view
+        href: docs/docs-api/usage-api/config/document/permissions/commentGroups/#view
+        type: string
 
-    - path: events.onError
-      href: docs/docs-api/usage-api/config/events/#onError
-      type: function
+      - path: document.permissions.copy
+        href: docs/docs-api/usage-api/config/document/permissions/#copy
+        type: boolean
+        default: true
 
-    - path: events.onInfo
-      href: docs/docs-api/usage-api/config/events/#onInfo
-      type: function
+      - path: document.permissions.deleteCommentAuthorOnly
+        href: docs/docs-api/usage-api/config/document/permissions/#deleteCommentAuthorOnly
+        type: boolean
+        default: false
 
-    - path: events.onMakeActionLink
-      href: docs/docs-api/usage-api/config/events/#onMakeActionLink
-      type: function
+      - path: document.permissions.download
+        href: docs/docs-api/usage-api/config/document/permissions/#download
+        type: boolean
+        default: true
 
-    - path: events.onMetaChange
-      href: docs/docs-api/usage-api/config/events/#onMetaChange
-      type: function
+      - path: document.permissions.edit
+        href: docs/docs-api/usage-api/config/document/permissions/#edit
+        type: boolean
+        default: true
 
-    - path: events.onOutdatedVersion
-      href: docs/docs-api/usage-api/config/events/#onOutdatedVersion
-      type: function
+      - path: document.permissions.editCommentAuthorOnly
+        href: docs/docs-api/usage-api/config/document/permissions/#editCommentAuthorOnly
+        type: boolean
+        default: false
 
-    - path: events.onPluginsReady
-      href: docs/docs-api/usage-api/config/events/#onPluginsReady
-      type: function
+      - path: document.permissions.fillForms
+        href: docs/docs-api/usage-api/config/document/permissions/#fillForms
+        type: boolean
+        default: true
 
-    - path: events.onReady
-      href: docs/docs-api/usage-api/config/events/#onReady
-      type: function
+      - path: document.permissions.modifyContentControl
+        href: docs/docs-api/usage-api/config/document/permissions/#modifyContentControl
+        type: boolean
+        default: true
 
-    - path: events.onRequestClose
-      href: docs/docs-api/usage-api/config/events/#onRequestClose
-      type: function
+      - path: document.permissions.modifyFilter
+        href: docs/docs-api/usage-api/config/document/permissions/#modifyFilter
+        type: boolean
+        default: true
 
-    - path: events.onRequestCompareFile
-      href: docs/docs-api/usage-api/config/events/#onRequestCompareFile
-      type: function
+      - path: document.permissions.print
+        href: docs/docs-api/usage-api/config/document/permissions/#print
+        type: boolean
+        default: true
 
-    - path: events.onRequestCreateNew
-      href: docs/docs-api/usage-api/config/events/#onRequestCreateNew
-      type: function
+      - path: document.permissions.protect
+        href: docs/docs-api/usage-api/config/document/permissions/#protect
+        type: boolean
+        default: true
 
-    - path: events.onRequestEditRights
-      href: docs/docs-api/usage-api/config/events/#onRequestEditRights
-      type: function
+      - path: document.permissions.rename
+        href: docs/docs-api/usage-api/config/document/permissions/#rename
+        type: boolean
+        default: true
 
-    - path: events.onRequestHistory
-      href: docs/docs-api/usage-api/config/events/#onRequestHistory
-      type: function
+      - path: document.permissions.review
+        href: docs/docs-api/usage-api/config/document/permissions/#review
+        type: boolean
+        default: true
 
-    - path: events.onRequestHistoryClose
-      href: docs/docs-api/usage-api/config/events/#onRequestHistoryClose
-      type: function
+      - path: document.permissions.reviewGroups[0]
+        href: docs/docs-api/usage-api/config/document/permissions/#reviewGroups
+        type: string
 
-    - path: events.onRequestHistoryData
-      href: docs/docs-api/usage-api/config/events/#onRequestHistoryData
-      type: function
+      - path: document.permissions.userInfoGroups[0]
+        href: docs/docs-api/usage-api/config/document/permissions/#userInfoGroups
+        type: string
+        default: ""
 
-    - path: events.onRequestInsertImage
-      href: docs/docs-api/usage-api/config/events/#onRequestInsertImage
-      type: function
+      - path: editorConfig.actionLink
+        href: docs/docs-api/usage-api/config/editorConfig/#actionLink
+        type: string
 
-    - path: events.onRequestMailMergeRecipients
-      href: docs/docs-api/usage-api/config/events/#onRequestMailMergeRecipients
-      type: function
+      - path: editorConfig.callbackUrl
+        href: docs/docs-api/usage-api/config/editorConfig/#callbackUrl
+        type: string
 
-    - path: events.onRequestOpen
-      href: docs/docs-api/usage-api/config/events/#onRequestOpen
-      type: function
+      - path: editorConfig.coEditing.mode
+        href: docs/docs-api/usage-api/config/editorConfig/coEditing/#mode
+        type: string
+        cases: [fast, strict]
 
-    - path: events.onRequestReferenceData
-      href: docs/docs-api/usage-api/config/events/#onRequestReferenceData
-      type: function
+      - path: editorConfig.coEditing.change
+        href: docs/docs-api/usage-api/config/editorConfig/coEditing/#change
+        type: boolean
+        default: true
 
-    - path: events.onRequestReferenceSource
-      href: docs/docs-api/usage-api/config/events/#onRequestReferenceSource
-      type: function
+      - path: editorConfig.createUrl
+        href: docs/docs-api/usage-api/config/editorConfig/#createUrl
+        type: string
 
-    - path: events.onRequestRename
-      href: docs/docs-api/usage-api/config/events/#onRequestRename
-      type: function
+      - path: editorConfig.lang
+        href: docs/docs-api/usage-api/config/editorConfig/#lang
+        type: string
+        default: "en"
 
-    - path: events.onRequestRestore
-      href: docs/docs-api/usage-api/config/events/#onRequestRestore
-      type: function
+      - path: editorConfig.location
+        href: docs/docs-api/usage-api/config/editorConfig/#location
+        type: string
 
-    - path: events.onRequestSaveAs
-      href: docs/docs-api/usage-api/config/events/#onRequestSaveAs
-      type: function
+      - path: editorConfig.mode
+        href: docs/docs-api/usage-api/config/editorConfig/#mode
+        type: string
+        cases: [edit, view]
 
-    - path: events.onRequestSelectDocument
-      href: docs/docs-api/usage-api/config/events/#onRequestSelectDocument
-      type: function
+      - path: editorConfig.recent[0].folder
+        href: docs/docs-api/usage-api/config/editorConfig/recent/#0-folder
+        type: string
 
-    - path: events.onRequestSelectSpreadsheet
-      href: docs/docs-api/usage-api/config/events/#onRequestSelectSpreadsheet
-      type: function
+      - path: editorConfig.recent[0].title
+        href: docs/docs-api/usage-api/config/editorConfig/recent/#title
+        type: string
 
-    - path: events.onRequestSendNotify
-      href: docs/docs-api/usage-api/config/events/#onRequestSendNotify
-      type: function
+      - path: editorConfig.recent[0].url
+        href: docs/docs-api/usage-api/config/editorConfig/recent/#url
+        type: string
 
-    - path: events.onRequestSharingSettings
-      href: docs/docs-api/usage-api/config/events/#onRequestSharingSettings
-      type: function
+      - path: editorConfig.region
+        href: docs/docs-api/usage-api/config/editorConfig/#region
+        type: string
+        default: "en-US"
 
-    - path: events.onRequestUsers
-      href: docs/docs-api/usage-api/config/events/#onRequestUsers
-      type: function
+      - path: editorConfig.templates[0].image
+        href: docs/docs-api/usage-api/config/editorConfig/templates/#image
+        type: string
 
-    - path: events.onWarning
-      href: docs/docs-api/usage-api/config/events/#onWarning
-      type: function
+      - path: editorConfig.templates[0].title
+        href: docs/docs-api/usage-api/config/editorConfig/templates/#title
+        type: string
+
+      - path: editorConfig.templates[0].url
+        href: docs/docs-api/usage-api/config/editorConfig/templates/#url
+        type: string
+
+      - path: editorConfig.user.firstname
+        href: docs/docs-api/usage-api/config/editorConfig/user/#firstname
+        type: string
+
+      - path: editorConfig.user.lastname
+        href: docs/docs-api/usage-api/config/editorConfig/user/#lastname
+        type: string
+
+      - path: editorConfig.user.group
+        href: docs/docs-api/usage-api/config/editorConfig/user/#group
+        type: string
+
+      - path: editorConfig.user.id
+        href: docs/docs-api/usage-api/config/editorConfig/user/#id
+        type: string
+
+      - path: editorConfig.user.image
+        href: docs/docs-api/usage-api/config/editorConfig/user/#image
+        type: string
+
+      - path: editorConfig.user.name
+        href: docs/docs-api/usage-api/config/editorConfig/user/#name
+        type: string
+
+      - path: editorConfig.customization.anonymous.request
+        href: docs/docs-api/usage-api/config/editorConfig/customization/#anonymous-request
+        type: boolean
+        default: true
+
+      - path: editorConfig.customization.anonymous.label
+        href: docs/docs-api/usage-api/config/editorConfig/customization/#anonymous-label
+        type: string
+
+      - path: editorConfig.customization.autosave
+        href: docs/docs-api/usage-api/config/editorConfig/customization/#autosave
+        type: boolean
+        default: true
+
+      - path: editorConfig.customization.chat
+        href: docs/docs-api/usage-api/config/editorConfig/customization/#chat
+        type: boolean
+        default: true
+
+      - path: editorConfig.customization.commentAuthorOnly
+        href: docs/docs-api/usage-api/config/editorConfig/customization/#commentAuthorOnly
+        type: boolean
+        default: false
+
+      - path: editorConfig.customization.comments
+        href: docs/docs-api/usage-api/config/editorConfig/customization/#comments
+        type: boolean
+        default: true
+
+      - path: editorConfig.customization.compactHeader
+        href: docs/docs-api/usage-api/config/editorConfig/customization/#compactHeader
+        type: boolean
+        default: false
+
+      - path: editorConfig.customization.compactToolbar
+        href: docs/docs-api/usage-api/config/editorConfig/customization/#compactToolbar
+        type: boolean
+        default: false
+
+      - path: editorConfig.customization.compatibleFeatures
+        href: docs/docs-api/usage-api/config/editorConfig/customization/#compatibleFeatures
+        type: boolean
+        default: false
+
+      - path: editorConfig.customization.customer.address
+        href: docs/docs-api/usage-api/config/editorConfig/customization/customer/#address
+        type: string
+
+      - path: editorConfig.customization.customer.info
+        href: docs/docs-api/usage-api/config/editorConfig/customization/customer/#info
+        type: string
+
+      - path: editorConfig.customization.customer.logo
+        href: docs/docs-api/usage-api/config/editorConfig/customization/customer/#logo
+        type: string
+
+      - path: editorConfig.customization.customer.logoDark
+        href: docs/docs-api/usage-api/config/editorConfig/customization/customer/#logoDark
+        type: string
+
+      - path: editorConfig.customization.customer.mail
+        href: docs/docs-api/usage-api/config/editorConfig/customization/customer/#mail
+        type: string
+
+      - path: editorConfig.customization.customer.name
+        href: docs/docs-api/usage-api/config/editorConfig/customization/customer/#name
+        type: string
+
+      - path: editorConfig.customization.customer.phone
+        href: docs/docs-api
+        type: string
+
+      - path: editorConfig.customization.customer.www
+        href: docs/docs-api/usage-api/config/editorConfig/customization/customer/#www
+        type: string
+
+      - path: editorConfig.customization.features.spellcheck.mode
+        href: docs/docs-api/usage-api/config/editorConfig/customization/features/spellcheck/#mode
+        type: boolean
+        default: true
+
+      - path: editorConfig.customization.features.roles
+        href: docs/docs-api/usage-api/config/editorConfig/customization/features/#roles
+        type: boolean
+        default: true
+
+      - path: editorConfig.customization.feedback.url
+        href: docs/docs-api/usage-api/config/editorConfig/customization/feedback/#url
+        type: string
+
+      - path: editorConfig.customization.feedback.visible
+        href: docs/docs-api/usage-api/config/editorConfig/customization/feedback/#visible
+        type: boolean
+        default: false
+
+      - path: editorConfig.customization.forcesave
+        href: docs/docs-api/usage-api/config/editorConfig/customization/#forcesave
+        type: boolean
+        default: false
+
+      - path: editorConfig.customization.goback.blank
+        href: docs/docs-api/usage-api/config/editorConfig/customization/goback/#blank
+        type: boolean
+        default: true
+
+      - path: editorConfig.customization.goback.requestClose
+        href: docs/docs-api/usage-api/config/editorConfig/customization/goback/#requestClose
+        type: boolean
+        default: false
+
+      - path: editorConfig.customization.goback.text
+        href: docs/docs-api/usage-api/config/editorConfig/customization/goback/#text
+        type: string
+        default: "Open file location"
+
+      - path: editorConfig.customization.goback.url
+        href: docs/docs-api/usage-api/config/editorConfig/customization/goback/#url
+        type: string
+
+      - path: editorConfig.customization.help
+        href: docs/docs-api/usage-api/config/editorConfig/customization/#help
+        type: boolean
+        default: true
+
+      - path: editorConfig.customization.hideNotes
+        href: docs/docs-api/usage-api/config/editorConfig/customization/#hideNotes
+        type: boolean
+        default: false
+
+      - path: editorConfig.customization.hideRightMenu
+        href: docs/docs-api/usage-api/config/editorConfig/customization/#hideRightMenu
+        type: boolean
+        default: true
+
+      - path: editorConfig.customization.hideRulers
+        href: docs/docs-api/usage-api/config/editorConfig/customization/#hideRulers
+        type: boolean
+        default: false
+
+      - path: editorConfig.customization.integrationMode
+        href: docs/docs-api/usage-api/config/editorConfig/customization/#integrationMode
+        type: string
+        default: "embed"
+
+      - path: editorConfig.customization.logo.image
+        href: docs/docs-api/usage-api/config/editorConfig/customization/logo/#image
+        type: string
+
+      - path: editorConfig.customization.logo.imageDark
+        href: docs/docs-api/usage-api/config/editorConfig/customization/logo/#imageDark
+        type: string
+
+      - path: editorConfig.customization.logo.imageEmbedded
+        href: docs/docs-api/usage-api/config/editorConfig/customization/logo/#imageEmbedded
+        type: string
+
+      - path: editorConfig.customization.logo.url
+        href: docs/docs-api/usage-api/config/editorConfig/customization/logo/#url
+        type: string
+
+      - path: editorConfig.customization.logo.visible
+        href: docs/docs-api/usage-api/config/editorConfig/customization/logo/#visible
+        type: boolean
+        default: true
+
+      - path: editorConfig.customization.macros
+        href: docs/docs-api/usage-api/config/editorConfig/customization/#macros
+        type: boolean
+        default: true
+
+      - path: editorConfig.customization.macrosMode
+        href: docs/docs-api/usage-api/config/editorConfig/customization/#macrosMode
+        type: string
+        cases: [disable, enable, warn]
+
+      - path: editorConfig.customization.mentionShare
+        href: docs/docs-api/usage-api/config/editorConfig/customization/#mentionShare
+        type: boolean
+        default: true
+
+      - path: editorConfig.customization.mobileForceView
+        href: docs/docs-api/usage-api/config/editorConfig/customization/#mobileForceView
+        type: boolean
+        default: true
+
+      - path: editorConfig.customization.plugins
+        href: docs/docs-api/usage-api/config/editorConfig/customization/#plugins
+        type: boolean
+        default: true
+
+      - path: editorConfig.customization.review.hideReviewDisplay
+        href: docs/docs-api/usage-api/config/editorConfig/customization/review/#hideReviewDisplay
+        type: boolean
+        default: false
+
+      - path: editorConfig.customization.review.hoverMode
+        href: docs/docs-api/usage-api/config/editorConfig/customization/review/#hoverMode
+        type: boolean
+        default: false
+
+      - path: editorConfig.customization.review.reviewDisplay
+        href: docs/docs-api/usage-api/config/editorConfig/customization/review/#reviewDisplay
+        type: string
+        cases: [markup, simple, final, original]
+
+      - path: editorConfig.customization.review.showReviewChanges
+        href: docs/docs-api/usage-api/config/editorConfig/customization/review/#showReviewChanges
+        type: boolean
+        default: false
+
+      - path: editorConfig.customization.review.trackChanges
+        href: docs/docs-api/usage-api/config/editorConfig/customization/review/#trackChanges
+        type: boolean
+        default: true
+
+      - path: editorConfig.customization.reviewDisplay
+        href: docs/docs-api/usage-api/config/editorConfig/customization/#reviewDisplay
+        type: boolean
+
+      - path: editorConfig.customization.showReviewChanges
+        href: docs/docs-api/usage-api/config/editorConfig/customization/#showReviewChanges
+        type: boolean
+        default: ""
+
+      - path: editorConfig.customization.spellcheck
+        href: docs/docs-api/usage-api/config/editorConfig/customization/#spellcheck
+        type: boolean
+        default: true
+
+      - path: editorConfig.customization.submitForm
+        href: docs/docs-api/usage-api/config/editorConfig/customization/#submitForm
+        type: boolean
+        default: true
+
+      - path: editorConfig.customization.toolbarHideFileName
+        href: docs/docs-api/usage-api/config/editorConfig/customization/#toolbarHideFileName
+        type: boolean
+        default: false
+
+      - path: editorConfig.customization.toolbarNoTabs
+        href: docs/docs-api/usage-api/config/editorConfig/customization/#toolbarNoTabs
+        type: boolean
+        default: false
+
+      - path: editorConfig.customization.trackChanges
+        href: docs/docs-api/usage-api/config/editorConfig/customization/#trackChanges
+        type: boolean
+        default: true
+
+      - path: editorConfig.customization.uiTheme
+        href: docs/docs-api/usage-api/config/editorConfig/customization/#uiTheme
+        type: string
+        cases:
+          [theme-light, theme-classic-light, theme-dark, theme-contrast-dark]
+
+      - path: editorConfig.customization.unit
+        href: docs/docs-api/usage-api/config/editorConfig/customization/#unit
+        type: string
+        cases: [cm, pt, ich]
+
+      - path: editorConfig.customization.zoom
+        href: docs/docs-api/usage-api/config/editorConfig/customization/#zoom
+        type: string
+        default: "100"
+
+      - path: editorConfig.embedded.embedUrl
+        href: docs/docs-api/usage-api/config/editorConfig/embedded/#embedUrl
+        type: string
+
+      - path: editorConfig.embedded.fullscreenUrl
+        href: docs/docs-api/usage-api/config/editorConfig/embedded/#fullscreenUrl
+        type: string
+
+      - path: editorConfig.embedded.saveUrl
+        href: docs/docs-api/usage-api/config/editorConfig/embedded/#saveUrl
+        type: string
+        default: ""
+
+      - path: editorConfig.embedded.shareUrl
+        href: docs/docs-api/usage-api/config/editorConfig/embedded/#shareUrl
+        type: string
+        default: ""
+
+      - path: editorConfig.embedded.toolbarDocked
+        href: docs/docs-api/usage-api/config/editorConfig/embedded/#toolbarDocked
+        type: string
+        cases: [top, bottom]
+
+      - path: editorConfig.plugins.autostart[0]
+        href: docs/docs-api/usage-api/config/editorConfig/plugins/#autostart
+        type: string
+        default: ""
+
+      - path: editorConfig.plugins.pluginsData[0]
+        href: docs/docs-api/usage-api/config/editorConfig/plugins/#pluginsData
+        type: string
+        default: ""
+
+      - path: editorConfig.plugins.url
+        href: docs/docs-api/usage-api/config/editorConfig/plugins/#url
+        type: string
+        default: "en"
+
+      - path: events.onAppReady
+        href: docs/docs-api/usage-api/config/events/#onAppReady
+        type: function
+        default: console.log("Document Editor is ready")
+
+      - path: events.onCollaborativeChanges
+        href: docs/docs-api/usage-api/config/events/#onCollaborativeChanges
+        type: function
+
+      - path: events.onDocumentReady
+        href: docs/docs-api/usage-api/config/events/#onDocumentReady
+        type: function
+
+      - path: events.onDocumentStateChange
+        href: docs/docs-api/usage-api/config/events/#onDocumentStateChange
+        type: function
+
+      - path: events.onDownloadAs
+        href: docs/docs-api/usage-api/config/events/#onDownloadAs
+        type: function
+
+      - path: events.onError
+        href: docs/docs-api/usage-api/config/events/#onError
+        type: function
+
+      - path: events.onInfo
+        href: docs/docs-api/usage-api/config/events/#onInfo
+        type: function
+
+      - path: events.onMakeActionLink
+        href: docs/docs-api/usage-api/config/events/#onMakeActionLink
+        type: function
+
+      - path: events.onMetaChange
+        href: docs/docs-api/usage-api/config/events/#onMetaChange
+        type: function
+
+      - path: events.onOutdatedVersion
+        href: docs/docs-api/usage-api/config/events/#onOutdatedVersion
+        type: function
+
+      - path: events.onPluginsReady
+        href: docs/docs-api/usage-api/config/events/#onPluginsReady
+        type: function
+
+      - path: events.onReady
+        href: docs/docs-api/usage-api/config/events/#onReady
+        type: function
+
+      - path: events.onRequestClose
+        href: docs/docs-api/usage-api/config/events/#onRequestClose
+        type: function
+
+      - path: events.onRequestCompareFile
+        href: docs/docs-api/usage-api/config/events/#onRequestCompareFile
+        type: function
+
+      - path: events.onRequestCreateNew
+        href: docs/docs-api/usage-api/config/events/#onRequestCreateNew
+        type: function
+
+      - path: events.onRequestEditRights
+        href: docs/docs-api/usage-api/config/events/#onRequestEditRights
+        type: function
+
+      - path: events.onRequestHistory
+        href: docs/docs-api/usage-api/config/events/#onRequestHistory
+        type: function
+
+      - path: events.onRequestHistoryClose
+        href: docs/docs-api/usage-api/config/events/#onRequestHistoryClose
+        type: function
+
+      - path: events.onRequestHistoryData
+        href: docs/docs-api/usage-api/config/events/#onRequestHistoryData
+        type: function
+
+      - path: events.onRequestInsertImage
+        href: docs/docs-api/usage-api/config/events/#onRequestInsertImage
+        type: function
+
+      - path: events.onRequestMailMergeRecipients
+        href: docs/docs-api/usage-api/config/events/#onRequestMailMergeRecipients
+        type: function
+
+      - path: events.onRequestOpen
+        href: docs/docs-api/usage-api/config/events/#onRequestOpen
+        type: function
+
+      - path: events.onRequestReferenceData
+        href: docs/docs-api/usage-api/config/events/#onRequestReferenceData
+        type: function
+
+      - path: events.onRequestReferenceSource
+        href: docs/docs-api/usage-api/config/events/#onRequestReferenceSource
+        type: function
+
+      - path: events.onRequestRename
+        href: docs/docs-api/usage-api/config/events/#onRequestRename
+        type: function
+
+      - path: events.onRequestRestore
+        href: docs/docs-api/usage-api/config/events/#onRequestRestore
+        type: function
+
+      - path: events.onRequestSaveAs
+        href: docs/docs-api/usage-api/config/events/#onRequestSaveAs
+        type: function
+
+      - path: events.onRequestSelectDocument
+        href: docs/docs-api/usage-api/config/events/#onRequestSelectDocument
+        type: function
+
+      - path: events.onRequestSelectSpreadsheet
+        href: docs/docs-api/usage-api/config/events/#onRequestSelectSpreadsheet
+        type: function
+
+      - path: events.onRequestSendNotify
+        href: docs/docs-api/usage-api/config/events/#onRequestSendNotify
+        type: function
+
+      - path: events.onRequestSharingSettings
+        href: docs/docs-api/usage-api/config/events/#onRequestSharingSettings
+        type: function
+
+      - path: events.onRequestUsers
+        href: docs/docs-api/usage-api/config/events/#onRequestUsers
+        type: function
+
+      - path: events.onWarning
+        href: docs/docs-api/usage-api/config/events/#onWarning
+        type: function
 
     scenarios:
-    - name: Select...
-      configs:
-      - document:
-          fileType: docx
-        documentType: word
-        height: 100%
+      - name: Select...
+        configs:
+          - document:
+              fileType: docx
+            documentType: word
+            editorConfig:
+              customization:
+                anonymous:
+                  request: false
+                  label: "Guest"
+                integrationMode: embed
+            height: 700px
+            width: 100%
 
-    - name: Open DOCX file for editing
-      configs:
-      - document:
-          fileType: docx
-          key: E7FAFC9C22A8
-        documentType: word
-        height: 100%
-        events:
-          onAppReady: console.log("Document Editor is ready")
+      - name: Open DOCX file for editing
+        configs:
+          - document:
+              fileType: docx
+              key: E7FAFC9C22A8
+              title: "Example Document Title.docx"
+              url: "https://example.com/url-to-example-document.docx"
+            documentType: word
+            editorConfig:
+              callbackUrl: "https://example.com/url-to-callback.ashx"
+              customization:
+                anonymous:
+                  request: false
+                  label: "Guest"
+                integrationMode: embed
+            height: 700px
+            width: 100%
+            events:
+              onAppReady: console.log("Document Editor is ready")
+
+      - name: Open DOC file for editing
+        configs:
+          - document:
+              fileType: doc
+              key: D21889C484E9
+              title: "Example Document Title.doc"
+              url: "https://example.com/url-to-example-document.doc"
+            documentType: word
+            editorConfig:
+              callbackUrl: "https://example.com/url-to-callback.ashx"
+              customization:
+                anonymous:
+                  request: false
+                  label: "Guest"
+                integrationMode: embed
+            height: 700px
+            width: 100%
+            events:
+              onAppReady: console.log("Document Editor is ready")
+
+      - name: Open ODT file for editing
+        configs:
+          - document:
+              fileType: odt
+              key: B95B853D3B1E
+              title: "Example Document Title.odt"
+              url: "https://example.com/url-to-example-document.odt"
+            documentType: word
+            editorConfig:
+              callbackUrl: "https://example.com/url-to-callback.ashx"
+              customization:
+                anonymous:
+                  request: false
+                  label: "Guest"
+                integrationMode: embed
+            height: 700px
+            width: 100%
+            events:
+              onAppReady: console.log("Document Editor is ready")
+
+      - name: Open TXT file for editing
+        configs:
+          - document:
+              fileType: txt
+              key: B2D7ACF65806
+              title: "Example Document Title.txt"
+              url: "https://example.com/url-to-example-document.txt"
+            documentType: word
+            editorConfig:
+              callbackUrl: "https://example.com/url-to-callback.ashx"
+              customization:
+                anonymous:
+                  request: false
+                  label: "Guest"
+                integrationMode: embed
+            height: 700px
+            width: 100%
+            events:
+              onAppReady: console.log("Document Editor is ready")
+
+      - name: Open XLSX file for editing
+        configs:
+          - document:
+              fileType: xlsx
+              key: 53500B46FCA9
+              title: "Example Spreadsheet Title.xlsx"
+              url: "https://example.com/url-to-example-spreadsheet.xlsx"
+            documentType: cell
+            editorConfig:
+              callbackUrl: "https://example.com/url-to-callback.ashx"
+              customization:
+                anonymous:
+                  request: false
+                  label: "Guest"
+                integrationMode: embed
+            height: 700px
+            width: 100%
+            events:
+              onAppReady: console.log("Document Editor is ready")
+
+      - name: Open XLS file for editing
+        configs:
+          - document:
+              fileType: xls
+              key: D01A6B57CD96
+              title: "Example Spreadsheet Title.xls"
+              url: "https://example.com/url-to-example-spreadsheet.xls"
+            documentType: cell
+            editorConfig:
+              callbackUrl: "https://example.com/url-to-callback.ashx"
+              customization:
+                anonymous:
+                  request: false
+                  label: "Guest"
+                integrationMode: embed
+            height: 700px
+            width: 100%
+            events:
+              onAppReady: console.log("Document Editor is ready")
+
+      - name: Open ODS file for editing
+        configs:
+          - document:
+              fileType: ods
+              key: 000C2F39D5A4
+              title: "Example Spreadsheet Title.ods"
+              url: "https://example.com/url-to-example-spreadsheet.ods"
+            documentType: cell
+            editorConfig:
+              callbackUrl: "https://example.com/url-to-callback.ashx"
+              customization:
+                anonymous:
+                  request: false
+                  label: "Guest"
+                integrationMode: embed
+            height: 700px
+            width: 100%
+            events:
+              onAppReady: console.log("Document Editor is ready")
+
+      - name: Open CSV file for editing
+        configs:
+          - document:
+              fileType: csv
+              key: B04E56B18519
+              title: "Example Spreadsheet Title.csv"
+              url: "https://example.com/url-to-example-spreadsheet.csv"
+            documentType: cell
+            editorConfig:
+              callbackUrl: "https://example.com/url-to-callback.ashx"
+              customization:
+                anonymous:
+                  request: false
+                  label: "Guest"
+                integrationMode: embed
+            height: 700px
+            width: 100%
+            events:
+              onAppReady: console.log("Document Editor is ready")
+
+      - name: Open PPTX file for editing
+        configs:
+          - document:
+              fileType: pptx
+              key: 9E2BDFCD1D75
+              title: "Example Presentation Title.pptx"
+              url: "https://example.com/url-to-example-presentation.pptx"
+            documentType: slide
+            editorConfig:
+              callbackUrl: "https://example.com/url-to-callback.ashx"
+              customization:
+                anonymous:
+                  request: false
+                  label: "Guest"
+                integrationMode: embed
+            height: 700px
+            width: 100%
+            events:
+              onAppReady: console.log("Document Editor is ready")
+
+      - name: Open PPSX file for editing
+        configs:
+          - document:
+              fileType: ppsx
+              key: 3DAB8BAA68E4
+              title: "Example Presentation Title.ppsx"
+              url: "https://example.com/url-to-example-presentation.ppsx"
+            documentType: slide
+            editorConfig:
+              callbackUrl: "https://example.com/url-to-callback.ashx"
+              customization:
+                anonymous:
+                  request: false
+                  label: "Guest"
+                integrationMode: embed
+            height: 700px
+            width: 100%
+            events:
+              onAppReady: console.log("Document Editor is ready")
+
+      - name: Open PPT file for editing
+        configs:
+          - document:
+              fileType: ppt
+              key: EEE93333E5F3
+              title: "Example Presentation Title.ppt"
+              url: "https://example.com/url-to-example-presentation.ppt"
+            documentType: slide
+            editorConfig:
+              callbackUrl: "https://example.com/url-to-callback.ashx"
+              customization:
+                anonymous:
+                  request: false
+                  label: "Guest"
+                integrationMode: embed
+            height: 700px
+            width: 100%
+            events:
+              onAppReady: console.log("Document Editor is ready")
+
+      - name: Open ODP file for editing
+        configs:
+          - document:
+              fileType: odp
+              key: 47BAE2E8A54F
+              title: "Example Presentation Title.odp"
+              url: "https://example.com/url-to-example-presentation.odp"
+            documentType: slide
+            editorConfig:
+              callbackUrl: "https://example.com/url-to-callback.ashx"
+              customization:
+                anonymous:
+                  request: false
+                  label: "Guest"
+                integrationMode: embed
+            height: 700px
+            width: 100%
+            events:
+              onAppReady: console.log("Document Editor is ready")
+
+      - name: Open DOCX for co-editing
+        configs:
+          - document:
+              fileType: docx
+              key: B143195F47A0
+              title: "Example Document Title.docx"
+              url: "https://example.com/url-to-example-document.docx"
+            documentType: word
+            editorConfig:
+              callbackUrl: "https://example.com/url-to-callback.ashx"
+              customization:
+                anonymous:
+                  request: false
+                  label: "Guest"
+                integrationMode: embed
+              user:
+                id: "78e1e841"
+                name: "John Smith"
+            height: 700px
+            width: 100%
+            events:
+              onAppReady: console.log("Document Editor is ready")
+
+      - name: Open XLSX for co-editing
+        configs:
+          - document:
+              fileType: xlsx
+              key: 6FB60FE9E548
+              title: "Example Spreadsheet Title.xlsx"
+              url: "https://example.com/url-to-example-spreadsheet.xlsx"
+            documentType: cell
+            editorConfig:
+              callbackUrl: "https://example.com/url-to-callback.ashx"
+              customization:
+                anonymous:
+                  request: false
+                  label: "Guest"
+                integrationMode: embed
+              user:
+                id: "78e1e841"
+                name: "John Smith"
+            height: 700px
+            width: 100%
+            events:
+              onAppReady: console.log("Document Editor is ready")
+
+      - name: Open PPTX for co-editing
+        configs:
+          - document:
+              fileType: pptx
+              key: B6C57F1FC447
+              title: "Example Presentation Title.pptx"
+              url: "https://example.com/url-to-example-presentation.pptx"
+            documentType: slide
+            editorConfig:
+              callbackUrl: "https://example.com/url-to-callback.ashx"
+              customization:
+                anonymous:
+                  request: false
+                  label: "Guest"
+                integrationMode: embed
+              user:
+                id: "78e1e841"
+                name: "John Smith"
+            height: 700px
+            width: 100%
+            events:
+              onAppReady: console.log("Document Editor is ready")
+
+      - name: Open DOCX for co-editing in strict mode
+        configs:
+          - document:
+              fileType: docx
+              key: 491BD667CABA
+              title: "Example Document Title.docx"
+              url: "https://example.com/url-to-example-document.docx"
+            documentType: word
+            editorConfig:
+              callbackUrl: "https://example.com/url-to-callback.ashx"
+              customization:
+                anonymous:
+                  request: false
+                  label: "Guest"
+                integrationMode: embed
+                autosave: false
+              user:
+                id: "78e1e841"
+                name: "John Smith"
+            height: 700px
+            width: 100%
+            events:
+              onAppReady: console.log("Document Editor is ready")
+
+      - name: Open XLSX for co-editing in strict mode
+        configs:
+          - document:
+              fileType: xlsx
+              key: DB1788E4AF4A
+              title: "Example Spreadsheet Title.xlsx"
+              url: "https://example.com/url-to-example-spreadsheet.xlsx"
+            documentType: cell
+            editorConfig:
+              callbackUrl: "https://example.com/url-to-callback.ashx"
+              customization:
+                anonymous:
+                  request: false
+                  label: "Guest"
+                integrationMode: embed
+                autosave: false
+              user:
+                id: "78e1e841"
+                name: "John Smith"
+            height: 700px
+            width: 100%
+            events:
+              onAppReady: console.log("Document Editor is ready")
+
+      - name: Open PPTX for co-editing in strict mode
+        configs:
+          - document:
+              fileType: pptx
+              key: 5664FFF42E4E
+              title: "Example Presentation Title.pptx"
+              url: "https://example.com/url-to-example-presentation.pptx"
+            documentType: slide
+            editorConfig:
+              callbackUrl: "https://example.com/url-to-callback.ashx"
+              customization:
+                anonymous:
+                  request: false
+                  label: "Guest"
+                integrationMode: embed
+                autosave: false
+              user:
+                id: "78e1e841"
+                name: "John Smith"
+            height: 700px
+            width: 100%
+            events:
+              onAppReady: console.log("Document Editor is ready")
+
+      - name: Open PDF form for editing
+        configs:
+          - document:
+              fileType: pdf
+              key: D05D6A33
+              title: "Example Form Template Title.pdf"
+              url: "https://example.com/url-to-example-form.pdf"
+              permissions:
+                edit: true
+            documentType: pdf
+            editorConfig:
+              callbackUrl: "https://example.com/url-to-callback.ashx"
+              customization:
+                anonymous:
+                  request: false
+                  label: "Guest"
+                integrationMode: embed
+            height: 700px
+            width: 100%
+            events:
+              onAppReady: console.log("Document Editor is ready")
+
+      - name: Open PDF for filling in froms
+        configs:
+          - document:
+              fileType: pdf
+              key: DEEC57D9
+              title: "Example Form Template Title.pdf"
+              url: "https://example.com/url-to-example-form.pdf"
+              permissions:
+                edit: false
+                fillForms: true
+            documentType: pdf
+            editorConfig:
+              callbackUrl: "https://example.com/url-to-callback.ashx"
+              customization:
+                anonymous:
+                  request: false
+                  label: "Guest"
+                integrationMode: embed
+              mode: edit
+            height: 700px
+            width: 100%
+            events:
+              onAppReady: console.log("Document Editor is ready")
+
+      - name: Open XLSX without access to change the filter
+        configs:
+          - document:
+              fileType: xlsx
+              key: B0823482653D
+              title: "Example Spreadsheet Title.xlsx"
+              url: "https://example.com/url-to-example-spreadsheet.xlsx"
+              permissions:
+                edit: true
+                modifyFilter: false
+            documentType: cell
+            editorConfig:
+              callbackUrl: "https://example.com/url-to-callback.ashx"
+              customization:
+                anonymous:
+                  request: false
+                  label: "Guest"
+                integrationMode: embed
+              user:
+                id: "78e1e841"
+                name: "John Smith"
+            height: 700px
+            width: 100%
+            events:
+              onAppReady: console.log("Document Editor is ready")
+
+      - name: Open DOCX for review
+        configs:
+          - document:
+              fileType: docx
+              key: 9B5D4A67A9A9
+              title: "Example Document Title.docx"
+              url: "https://example.com/url-to-example-document.docx"
+              permissions:
+                edit: false
+                review: true
+            documentType: word
+            editorConfig:
+              callbackUrl: "https://example.com/url-to-callback.ashx"
+              customization:
+                anonymous:
+                  request: false
+                  label: "Guest"
+                integrationMode: embed
+              mode: edit
+            height: 700px
+            width: 100%
+            events:
+              onAppReady: console.log("Document Editor is ready")
+
+      - name: Open DOCX for restricted review
+        configs:
+          - document:
+              fileType: docx
+              key: CE661B77
+              title: "Example Document Title.docx"
+              url: "https://example.com/url-to-example-document.docx"
+              permissions:
+                edit: true
+                review: true
+                reviewGroups: -"Group2"
+            documentType: word
+            editorConfig:
+              callbackUrl: "https://example.com/url-to-callback.ashx"
+              customization:
+                anonymous:
+                  request: false
+                  label: "Guest"
+                integrationMode: embed
+              mode: edit
+            height: 700px
+            width: 100%
+            events:
+              onAppReady: console.log("Document Editor is ready")
+
+      - name: Open DOCX without access to the content control settings
+        configs:
+          - document:
+              fileType: docx
+              key: 779591724609
+              title: "Example Document Title.docx"
+              url: "https://example.com/url-to-example-document.docx"
+              permissions:
+                edit: true
+                modifyContentControl: false
+            documentType: word
+            editorConfig:
+              callbackUrl: "https://example.com/url-to-callback.ashx"
+              customization:
+                anonymous:
+                  request: false
+                  label: "Guest"
+                integrationMode: embed
+              mode: edit
+            height: 700px
+            width: 100%
+            events:
+              onAppReady: console.log("Document Editor is ready")
+
+      - name: Open DOCX for commenting
+        configs:
+          - document:
+              fileType: docx
+              key: 5C5D4CCA7674
+              title: "Example Document Title.docx"
+              url: "https://example.com/url-to-example-document.docx"
+              permissions:
+                edit: false
+                comment: true
+            documentType: word
+            editorConfig:
+              callbackUrl: "https://example.com/url-to-callback.ashx"
+              customization:
+                anonymous:
+                  request: false
+                  label: "Guest"
+                integrationMode: embed
+              mode: edit
+            height: 700px
+            width: 100%
+            events:
+              onAppReady: console.log("Document Editor is ready")
+
+      - name: Open XLSX for commenting
+        configs:
+          - document:
+              fileType: xlsx
+              key: B62D0C4B9C09
+              title: "Example Spreadsheet Title.xlsx"
+              url: "https://example.com/url-to-example-spreadsheet.xlsx"
+              permissions:
+                edit: false
+                comment: true
+            documentType: cell
+            editorConfig:
+              callbackUrl: "https://example.com/url-to-callback.ashx"
+              customization:
+                anonymous:
+                  request: false
+                  label: "Guest"
+                integrationMode: embed
+              mode: edit
+            height: 700px
+            width: 100%
+            events:
+              onAppReady: console.log("Document Editor is ready")
+
+      - name: Open PPTX for commenting
+        configs:
+          - document:
+              fileType: pptx
+              key: DA7CC0B9
+              title: "Example Presentation Title.pptx"
+              url: "https://example.com/url-to-example-presentation.pptx"
+              permissions:
+                edit: false
+                comment: true
+            documentType: slide
+            editorConfig:
+              callbackUrl: "https://example.com/url-to-callback.ashx"
+              customization:
+                anonymous:
+                  request: false
+                  label: "Guest"
+                integrationMode: embed
+              mode: edit
+            height: 700px
+            width: 100%
+            events:
+              onAppReady: console.log("Document Editor is ready")
+
+      - name: Open DOCX for viewing
+        configs:
+          - document:
+              fileType: docx
+              key: D24A86BDE9A2
+              title: "Example Document Title.docx"
+              url: "https://example.com/url-to-example-document.docx"
+            documentType: word
+            editorConfig:
+              customization:
+                anonymous:
+                  request: false
+                  label: "Guest"
+                integrationMode: embed
+              mode: view
+            height: 700px
+            width: 100%
+            events:
+              onAppReady: console.log("Document Editor is ready")
+
+      - name: Open PDF for viewing
+        configs:
+          - document:
+              fileType: pdf
+              key: 9B9F6EFE8937
+              title: "Example Document Title.pdf"
+              url: "https://example.com/url-to-example-document.pdf"
+            documentType: pdf
+            editorConfig:
+              customization:
+                anonymous:
+                  request: false
+                  label: "Guest"
+                integrationMode: embed
+              mode: view
+            height: 700px
+            width: 100%
+            events:
+              onAppReady: console.log("Document Editor is ready")
+
+      - name: Open XLSX for viewing
+        configs:
+          - document:
+              fileType: xlsx
+              key: 138E9734B413
+              title: "Example Spreadsheet Title.xlsx"
+              url: "https://example.com/url-to-example-spreadsheet.xlsx"
+            documentType: cell
+            editorConfig:
+              customization:
+                anonymous:
+                  request: false
+                  label: "Guest"
+                integrationMode: embed
+              mode: view
+            height: 700px
+            width: 100%
+            events:
+              onAppReady: console.log("Document Editor is ready")
+
+      - name: Open PPTX for viewing
+        configs:
+          - document:
+              fileType: pptx
+              key: 37195B2B9BF4
+              title: "Example Presentation Title.pptx"
+              url: "https://example.com/url-to-example-presentation.pptx"
+            documentType: slide
+            editorConfig:
+              customization:
+                anonymous:
+                  request: false
+                  label: "Guest"
+                integrationMode: embed
+              mode: view
+            height: 700px
+            width: 100%
+            events:
+              onAppReady: console.log("Document Editor is ready")
+
+      - name: Open DOCX for rebranding
+        configs:
+          - document:
+              fileType: docx
+              key: D97815D69205
+              title: "Example Document Title.docx"
+              url: "https://example.com/url-to-example-document.docx"
+            documentType: word
+            editorConfig:
+              callbackUrl: "https://example.com/url-to-callback.ashx"
+              customization:
+                anonymous:
+                  request: false
+                  label: "Guest"
+                integrationMode: embed
+                customer:
+                  address: "My City, 123a-45"
+                  info: "Some additional information"
+                  logo: "https://example.com/logo-big.png"
+                  mail: "john@example.com"
+                  name: "John Smith and Co."
+                  www: "example.com"
+                logo:
+                  image: "https://example.com/logo.png"
+                  url: "https://example.com"
+            height: 700px
+            width: 100%
+            events:
+              onAppReady: console.log("Document Editor is ready")
+
+      - name: Open XLSX for rebranding
+        configs:
+          - document:
+              fileType: xlsx
+              key: 6CDE57CAF31F
+              title: "Example Spreadsheet Title.xlsx"
+              url: "https://example.com/url-to-example-spreadsheet.xlsx"
+            documentType: cell
+            editorConfig:
+              callbackUrl: "https://example.com/url-to-callback.ashx"
+              customization:
+                anonymous:
+                  request: false
+                  label: "Guest"
+                integrationMode: embed
+                customer:
+                  address: "My City, 123a-45"
+                  info: "Some additional information"
+                  logo: "https://example.com/logo-big.png"
+                  mail: "john@example.com"
+                  name: "John Smith and Co."
+                  www: "example.com"
+                logo:
+                  image: "https://example.com/logo.png"
+                  url: "https://example.com"
+            height: 700px
+            width: 100%
+            events:
+              onAppReady: console.log("Document Editor is ready")
+
+      - name: Open PPTX for rebranding
+        configs:
+          - document:
+              fileType: pptx
+              key: E9B24523F469
+              title: "Example Presentation Title.pptx"
+              url: "https://example.com/url-to-example-presentation.pptx"
+            documentType: slide
+            editorConfig:
+              callbackUrl: "https://example.com/url-to-callback.ashx"
+              customization:
+                anonymous:
+                  request: false
+                  label: "Guest"
+                integrationMode: embed
+                customer:
+                  address: "My City, 123a-45"
+                  info: "Some additional information"
+                  logo: "https://example.com/logo-big.png"
+                  mail: "john@example.com"
+                  name: "John Smith and Co."
+                  www: "example.com"
+                logo:
+                  image: "https://example.com/logo.png"
+                  url: "https://example.com"
+            height: 700px
+            width: 100%
+            events:
+              onAppReady: console.log("Document Editor is ready")
+
+      - name: Open DOCX file for embedded viewing
+        configs:
+          - document:
+              fileType: docx
+              key: B949CB79
+              title: "Example Document Title.docx"
+              url: "https://example.com/url-to-example-document.docx"
+            documentType: word
+            editorConfig:
+              customization:
+                anonymous:
+                  request: false
+                  label: "Guest"
+                integrationMode: embed
+            height: 700px
+            width: 100%
+            type: embedded
+            events:
+              onAppReady: console.log("Document Editor is ready")
+
+      - name: Open XLSX file for embedded viewing
+        configs:
+          - document:
+              fileType: xlsx
+              key: 9CB47328
+              title: "Example Document Title.xlsx"
+              url: "https://example.com/url-to-example-document.xlsx"
+            documentType: cell
+            editorConfig:
+              customization:
+                anonymous:
+                  request: false
+                  label: "Guest"
+                integrationMode: embed
+            height: 700px
+            width: 100%
+            type: embedded
+            events:
+              onAppReady: console.log("Document Editor is ready")
+
+      - name: Open PPTX file for embedded viewing
+        configs:
+          - document:
+              fileType: pptx
+              key: 9CB47328
+              title: "Example Document Title.pptx"
+              url: "https://example.com/url-to-example-document.pptx"
+            documentType: slide
+            editorConfig:
+              customization:
+                anonymous:
+                  request: false
+                  label: "Guest"
+                integrationMode: embed
+            height: 700px
+            width: 100%
+            type: embedded
+            events:
+              onAppReady: console.log("Document Editor is ready")
