@@ -28,5 +28,8 @@
   },
   "engines": {
     "node": "^21"
+  },
+  "dependencies": {
+    "httpsnippet": "^3.0.6"
   }
 }

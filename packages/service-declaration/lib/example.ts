@@ -1,5 +1,6 @@
-import {type Example, example} from "@onlyoffice/declaration-code-example"
-import {type RequestDeclaration} from "./main.ts"
+import { type Example, example } from "@onlyoffice/declaration-code-example"
+import { type RequestDeclaration } from "./main.ts"
+import { HTTPSnippet } from 'httpsnippet';
 
 export function httpExample(req: RequestDeclaration): Example {
   const e = example()
@@ -10,36 +11,29 @@ export function httpExample(req: RequestDeclaration): Example {
 
   const q = query(req)
   const [m, p] = req.endpoint.split(" ")
-  const h = headers(req)
-  e.code = code(m, p, q, h)
+  e.code = code(m, p, q)
   return e
 
-  function headers(req: RequestDeclaration): string {
-    if (!req.headerParameters) {
-      return ""
-    }
-    let s = ""
-    for (const h of req.headerParameters) {
-      if ("id" in h) {
-        throw new Error("header parameter references not supported")
-      }
-      s += `${h.identifier}: `
-      if (h.cases) {
-        s += h.cases.join(", ")
-      } else {
-        s += `${h.identifier}`
-      }
-      s += "\n"
-    }
-    return s.slice(0, -1)
+  function parseHeaders(headerObject) {
+    return headerObject.map(header => ({
+      name: header.identifier,
+      value: header.cases.join(', ')
+    }));
   }
 
-  function code(m: string, p: string, q: string, h: string): string {
-    let s = `${m} ${p}${q} HTTP/1.1`
-    if (h !== "") {
-      s += `\n${h}`
+  function code(m: string, p: string, q: string): string {
+    if (req.headerParameters !== undefined) {
+      const headersArray = req.headerParameters !== undefined ? parseHeaders(req.headerParameters) : [];
+      const request = {
+        method: m,
+        url: `http://example.com${p}${q}`,
+        headers: headersArray,
+      }
+      const snippet = new HTTPSnippet(request)
+      const output = snippet.convert('http', 'http1.1')
+      return output
     }
-    return s
+
   }
 }
 
@@ -53,8 +47,7 @@ export function curlExample(req: RequestDeclaration): Example {
   const q = query(req)
   const [m, p] = req.endpoint.split(" ")
   const x = method(m)
-  const h = headers(req)
-  e.code = code(x, p, q, h)
+  e.code = code(x, p, q)
   return e
 
   function method(m: string): string {
@@ -64,37 +57,22 @@ export function curlExample(req: RequestDeclaration): Example {
     return `-X "${m}"`
   }
 
-  function headers(req: RequestDeclaration): string {
-    if (!req.headerParameters) {
-      return ""
-    }
-    let s = ""
-    for (const h of req.headerParameters) {
-      if ("id" in h) {
-        throw new Error("header parameter references not supported")
-      }
-      s += `\t-H "${h.identifier}: `
-      if (h.cases) {
-        s += h.cases.join(", ")
-      } else {
-        s += `{${h.identifier}}`
-      }
-      s += '" \\\n'
-    }
-    return s.slice(0, -1)
+  function parseHeaders(headerObject) {
+    return headerObject.map(header => ({
+      name: header.identifier,
+      value: header.cases.join(', ')
+    }));
   }
 
-  function code(m: string, p: string, q: string, h: string): string {
-    let s = "curl -L"
-    if (m !== "") {
-      s += ` ${m} \\`
-    } else {
-      s += " \\"
-    }
-    if (h !== "") {
-      s += `\n${h}`
-    }
-    return `${s}\n\t{host}${p}${q}`
+  function code(m: string, p: string, q: string): string {
+    const headersArray = req.headerParameters !== undefined ? parseHeaders(req.headerParameters) : [];
+    const snippet = new HTTPSnippet({
+      method: m,
+      url: `http://example.com${p}${q}`,
+      headers: headersArray
+    })
+    const output = snippet.convert('shell')
+    return output
   }
 }
 
