@@ -3,9 +3,8 @@ import {mkdir, readFile, readdir, rm, writeFile} from "node:fs/promises"
 import path from "node:path"
 import {argv} from "node:process"
 import {URL, fileURLToPath} from "node:url"
-import babel from "@babel/core"
+import {toJsxFile} from "@onlyoffice/svg-preact"
 import sade from "sade"
-import {optimize as svgo} from "svgo"
 
 function main(): void {
   sade("ui-colors", true)
@@ -52,7 +51,7 @@ async function build(): Promise<void> {
 
         let f = path.join(sd, hn)
         let c = await readFile(f, "utf8")
-        c = await transform(n, c)
+        c = await toJsxFile(n, c)
 
         f = path.join(ds, `${n}.tsx`)
         await writeFile(f, c)
@@ -77,54 +76,6 @@ function rename(n: string): string {
     s += w.charAt(0).toUpperCase() + w.slice(1)
   }
   return `${s}Icon`
-}
-
-async function transform(n: string, c: string): Promise<string> {
-  // todo: Finalize the svgo configuration for each style separately.
-  const s = svgo(c, {
-    plugins: [
-      // "preset-default",
-      "removeDimensions",
-      "sortAttrs",
-      // {
-      //   name: "removeAttrs",
-      //   params: {
-      //     attrs: ["fill"]
-      //   }
-      // },
-      {
-        name: "addAttributesToSVGElement",
-        params: {
-          attributes: [{
-            // "fill": "currentColor",
-            "aria-hidden": "true",
-          }],
-        },
-      },
-    ],
-  })
-
-  c = `export function ${n}({title, titleId, desc, descId, ...props}) {
-return ${s.data.replace(">", "aria-labelledby={titleId} aria-describedby={descId} {...props}>{desc ? <desc id={descId}>{desc}</desc> : null}{title ? <title id={titleId}>{title}</title> : null}")}
-}`
-
-  const b = await babel.transformAsync(c, {
-    plugins: [["@babel/plugin-transform-react-jsx", {
-      pragma: "h",
-      pragmaFrag: "Fragment",
-      useBuiltIns: true,
-    }]],
-  })
-  if (!b || !b.code) {
-    throw new Error("Failed to transform")
-  }
-
-  c = `import {type JSX, h} from "preact";\n${b.code
-    .replace("}) {", "}: JSX.SVGAttributes<SVGSVGElement> & {title?: string, titleId?: string, desc?: string, descId?: string}): JSX.Element {")
-    .replace(`const ${n}`, `export const ${n}`)
-    .replace(`export default ${n};`, "")}`
-
-  return c
 }
 
 function rootDir(): string {
