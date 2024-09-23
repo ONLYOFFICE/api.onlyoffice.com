@@ -52,6 +52,7 @@ return ${s.data.replace(">", "aria-labelledby={titleId} aria-describedby={descId
 
   c = `import {type JSX, h} from "preact";\n\n${b.code
     .replace("}) {", "}: JSX.SVGAttributes<SVGSVGElement> & {title?: string, titleId?: string, desc?: string, descId?: string}): JSX.Element {")
+    .replace('return h("svg", Object.assign({', '// @ts-ignore i have no idea how to fix this properly\n  return h("svg", Object.assign({')
     .replace(`const ${n}`, `export const ${n}`)
     .replace(`export default ${n};`, "")}\n`
 
