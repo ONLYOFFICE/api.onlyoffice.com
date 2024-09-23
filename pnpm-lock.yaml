@@ -2563,6 +2563,9 @@ importers:
         specifier: 5.4.5
         version: 5.4.5
     devDependencies:
+      '@onlyoffice/strings':
+        specifier: workspace:^
+        version: link:../strings
       '@onlyoffice/svg-preact':
         specifier: workspace:^
         version: link:../svg-preact

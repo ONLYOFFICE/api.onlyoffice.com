@@ -3,6 +3,7 @@ import {mkdir, readFile, readdir, rm, writeFile} from "node:fs/promises"
 import path from "node:path"
 import {argv} from "node:process"
 import {URL, fileURLToPath} from "node:url"
+import {pascalCase} from "@onlyoffice/strings"
 import {toJsxFile} from "@onlyoffice/svg-preact"
 import sade from "sade"
 
@@ -47,7 +48,8 @@ async function build(): Promise<void> {
       for (const hn of lh) {
         const he = path.extname(hn)
         let n = path.basename(hn, he)
-        n = rename(n)
+        n = pascalCase(n)
+        n += "Icon"
 
         let f = path.join(sd, hn)
         let c = await readFile(f, "utf8")
@@ -68,14 +70,6 @@ async function build(): Promise<void> {
       await writeFile(f, c)
     }
   }
-}
-
-function rename(n: string): string {
-  let s = ""
-  for (const w of n.split("-")) {
-    s += w.charAt(0).toUpperCase() + w.slice(1)
-  }
-  return `${s}Icon`
 }
 
 function rootDir(): string {
