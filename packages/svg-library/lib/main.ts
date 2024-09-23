@@ -24,7 +24,7 @@ async function build(src: string, dest: string): Promise<void> {
   console.log("Build complete")
 }
 
-async function walk(src: string, dest: string): Promise<string[]> {
+async function walk(src: string, dest: string): Promise<void> {
   const m: string[] = []
 
   if (!existsSync(dest)) {
@@ -39,19 +39,7 @@ async function walk(src: string, dest: string): Promise<string[]> {
 
     if (s.isDirectory()) {
       const d = path.join(dest, n)
-      const m = await walk(p, d)
-
-      let c = ""
-      for (const x of m) {
-        c += `export {${x}} from "./${n}/${x}.tsx";\n`
-      }
-      if (c.length === 0) {
-        continue
-      }
-
-      const f = path.join(dest, `${n}.tsx`)
-      console.log(`Writing ${f}`)
-      await writeFile(f, c)
+      await walk(p, d)
       continue
     }
 
@@ -73,7 +61,30 @@ async function walk(src: string, dest: string): Promise<string[]> {
     m.push(x)
   }
 
-  return m
+  let d = path.dirname(dest)
+  let g = "."
+  let n: string
+
+  if (d === ".") {
+    d = dest
+    n = "main"
+  } else {
+    n = path.basename(dest)
+    g += `/${n}`
+  }
+
+  const f = path.join(d, `${n}.tsx`)
+
+  let c = ""
+  for (const x of m) {
+    c += `export {${x}} from "${g}/${x}.tsx";\n`
+  }
+  if (c.length === 0) {
+    return
+  }
+
+  console.log(`Writing ${f}`)
+  await writeFile(f, c)
 }
 
 main()
