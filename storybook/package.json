@@ -23,6 +23,7 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "storybook": "8.0.0",
+    "storybook-addon-deep-controls": "0.8.0",
     "typescript": "5.4.5",
     "vite": "5.1.6"
   }

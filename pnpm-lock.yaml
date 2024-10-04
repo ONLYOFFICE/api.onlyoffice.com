@@ -2499,6 +2499,19 @@ importers:
         specifier: 6.0.1
         version: 6.0.1
 
+  packages/storybook-addon-deep-controls:
+    dependencies:
+      typescript:
+        specifier: 5.4.5
+        version: 5.4.5
+    devDependencies:
+      '@storybook/preact':
+        specifier: 8.0.0
+        version: 8.0.0(preact@10.22.0)
+      rimraf:
+        specifier: 6.0.1
+        version: 6.0.1
+
   packages/stream-json:
     dependencies:
       '@types/node':
@@ -3522,6 +3535,9 @@ importers:
       storybook:
         specifier: 8.0.0
         version: 8.0.0(@babel/preset-env@7.25.3(@babel/core@7.24.7))(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      storybook-addon-deep-controls:
+        specifier: 0.8.0
+        version: 0.8.0(@storybook/addon-controls@8.0.0(@types/react@18.3.3)(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(@storybook/types@8.0.0)(storybook@8.0.0(@babel/preset-env@7.25.3(@babel/core@7.24.7))(react-dom@18.2.0(react@18.2.0))(react@18.2.0))
       typescript:
         specifier: 5.4.5
         version: 5.4.5
@@ -9756,6 +9772,13 @@ packages:
 
   store2@2.14.3:
     resolution: {integrity: sha512-4QcZ+yx7nzEFiV4BMLnr/pRa5HYzNITX2ri0Zh6sT9EyQHbBHacC6YigllUPU9X3D0f/22QCgfokpKs52YRrUg==}
+
+  storybook-addon-deep-controls@0.8.0:
+    resolution: {integrity: sha512-WIczW/M7l9JZ7c4DzW7vV10gMLnVghJx7GGsy1Qra0D1nYW6k74XAtpsGRPudp057CjWXZv1fbcSr0NP4RSNjA==}
+    peerDependencies:
+      '@storybook/addon-controls': 7.x.x || 8.x.x
+      '@storybook/types': 7.x.x || 8.x.x
+      storybook: 7.x.x || 8.x.x
 
   storybook@8.0.0:
     resolution: {integrity: sha512-ZWfFoKLsZ7kYgqcVgDeUZpN89cxzEx2Mw9afhfMNzwSnjhx9xRdzdNvK7DY1nDnfborxzBhkvwYf/oxRbifKuw==}
@@ -18435,6 +18458,12 @@ snapshots:
   statuses@2.0.1: {}
 
   store2@2.14.3: {}
+
+  storybook-addon-deep-controls@0.8.0(@storybook/addon-controls@8.0.0(@types/react@18.3.3)(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(@storybook/types@8.0.0)(storybook@8.0.0(@babel/preset-env@7.25.3(@babel/core@7.24.7))(react-dom@18.2.0(react@18.2.0))(react@18.2.0)):
+    dependencies:
+      '@storybook/addon-controls': 8.0.0(@types/react@18.3.3)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      '@storybook/types': 8.0.0
+      storybook: 8.0.0(@babel/preset-env@7.25.3(@babel/core@7.24.7))(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
 
   storybook@8.0.0(@babel/preset-env@7.25.3(@babel/core@7.24.7))(react-dom@18.2.0(react@18.2.0))(react@18.2.0):
     dependencies:

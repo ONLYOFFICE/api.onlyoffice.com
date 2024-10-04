@@ -9,6 +9,7 @@ export default {
   addons: [
     "@storybook/addon-essentials",
     "@storybook/addon-storysource",
+    "storybook-addon-deep-controls",
   ],
   stories: [
     "../../packages/site-*/lib/*.story.tsx",
