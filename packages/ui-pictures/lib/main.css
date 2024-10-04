@@ -30,7 +30,7 @@
 
   display: inline-grid;
   isolation: isolate;
-  max-inline-size: 100%;
+  max-inline-size: fit-content;
   position: relative;
 }
 
