@@ -1,16 +1,9 @@
-.status-404__picture {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr;
-  inline-size: fit-content;
-}
+/* .status {} */
 
-.status-404__picture svg {
-  grid-column: 1;
-  grid-row: 1;
-}
+/* .status__heading {} */
 
-.status-404__picture svg:nth-of-type(2) {
-  margin-inline-start: 50%;
-  transform: translateX(-49%) translateY(16%);
-}
+/* .status__picture {} */
+
+/* .status__description {} */
+
+/* .status__button {} */
