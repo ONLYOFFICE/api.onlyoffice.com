@@ -1,9 +1,17 @@
-.status {}
+.status {
+  inline-size: fit-content;
+  text-align: center;
+}
 
-.status__heading {}
+.status__description {
+  font-size: var(--text-display-font-size-default);
+  font-weight: var(--text-display-font-weight-default);
+  line-height: var(--text-display-line-height-default);
+  margin-block-end: 0;
+  margin-block-start: var(--base-size-32);
+}
 
-.status__picture {}
-
-.status__description {}
-
-.status__button {}
+/* todo: replace with .status__button {} */
+.status .button {
+  margin-block-start: var(--base-size-48);
+}

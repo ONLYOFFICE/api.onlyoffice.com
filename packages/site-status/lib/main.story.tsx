@@ -31,7 +31,7 @@ export const Default: StoryObj = {
         <Picture404 />
       </StatusPicture>
       <StatusDescription>Oops...Page not found!</StatusDescription>
-      <StatusButton>Go to home page</StatusButton>
+      <StatusButton href="/">Go to home page</StatusButton>
     </Status>
   },
 }
@@ -63,7 +63,7 @@ export const Playground = deepControls<PlaygroundProperties>()
           <Picture404 {...p.picture} />
         </StatusPicture>
         <StatusDescription>{p.description}</StatusDescription>
-        <StatusButton>{p.button}</StatusButton>
+        <StatusButton href="/">{p.button}</StatusButton>
       </Status>
     },
   })
