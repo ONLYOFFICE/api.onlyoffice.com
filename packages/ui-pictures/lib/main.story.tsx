@@ -27,9 +27,6 @@ export const Playground: StoryObj<Picture404Properties> = {
     },
   },
   argTypes: {
-    label: {
-      control: "text",
-    },
     size: {
       control: "select",
       options: ["default", "small", "medium", "large"],
