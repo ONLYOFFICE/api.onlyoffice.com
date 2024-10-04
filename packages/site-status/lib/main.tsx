@@ -2,8 +2,22 @@ import {LinkButton, SrOnly} from "@onlyoffice/ui-kit"
 import {Fragment, type JSX, type PreactDOMAttributes, h} from "preact"
 import {type HTMLAttributes} from "preact/compat"
 
-export function Status(p: PreactDOMAttributes): JSX.Element {
-  return <div class="status">{p.children}</div>
+export interface StatusProperties extends PreactDOMAttributes {
+  size?: "default" | "small" | "medium" | "large"
+}
+
+export function Status(p: StatusProperties): JSX.Element {
+  const a: JSX.HTMLAttributes<HTMLDivElement> = {
+    class: "status",
+  }
+
+  // The error mentioned below is a false positive.
+  // eslint-disable-next-line unicorn/explicit-length-check
+  if (typeof a.class === "string" && p.size) {
+    a.class += ` status_size_${p.size}`
+  }
+
+  return <div {...a}>{p.children}</div>
 }
 
 export function StatusHeading(p: PreactDOMAttributes): JSX.Element {

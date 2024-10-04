@@ -309,39 +309,35 @@
 /* Integration with @onlyoffice/site-status */
 
 .page .status {
+  --status-size-is-default: var(--false);
+  --status-size-is-small: var(--true);
+  --status-size-is-medium: var(--false);
+  --status-size-is-large: var(--false);
+
   inline-size: 100%;
   margin-inline: auto;
   max-inline-size: var(--temp-page-breakpoint-xlarge);
+  padding-block-end: var(--base-size-40);
+  padding-block-start: var(--base-size-64);
   padding-inline: var(--base-size-16);
 
   @media (--size-viewport-width-small) {
+    --status-size-is-default: var(--false);
+    --status-size-is-small: var(--false);
+    --status-size-is-medium: var(--true);
+    --status-size-is-large: var(--false);
+
+    padding-block-end: calc(var(--base-size-12) + var(--base-size-112));
+    padding-block-start: calc(var(--base-size-36) + var(--base-size-128));
     padding-inline: var(--base-size-24);
   }
 
   @media (--size-viewport-width-medium) {
-    padding-block-end: calc(var(--base-size-12) + var(--base-size-112));
-    padding-block-start: calc(var(--base-size-36) + var(--base-size-128));
+    --status-size-is-default: var(--false);
+    --status-size-is-small: var(--false);
+    --status-size-is-medium: var(--false);
+    --status-size-is-large: var(--true);
+
     padding-inline: var(--base-size-32);
-  }
-}
-
-.page .status .picture-404 {
-  --picture-404-size-is-default: var(--false);
-  --picture-404-size-is-small: var(--true);
-  --picture-404-size-is-medium: var(--false);
-  --picture-404-size-is-large: var(--false);
-
-  @media (--size-viewport-width-small) {
-    --picture-404-size-is-default: var(--false);
-    --picture-404-size-is-small: var(--false);
-    --picture-404-size-is-medium: var(--true);
-    --picture-404-size-is-large: var(--false);
-  }
-
-  @media (--size-viewport-width-medium) {
-    --picture-404-size-is-default: var(--false);
-    --picture-404-size-is-small: var(--false);
-    --picture-404-size-is-medium: var(--false);
-    --picture-404-size-is-large: var(--true);
   }
 }

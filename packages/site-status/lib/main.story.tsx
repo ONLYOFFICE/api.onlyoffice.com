@@ -1,14 +1,13 @@
-import {type ControlsOf, deepControls} from "@onlyoffice/storybook-addon-deep-controls"
 import {Picture404} from "@onlyoffice/ui-kit"
 import {type Meta, type StoryObj} from "@storybook/preact"
 import {h} from "preact"
-import {Playground as Picture404Playground} from "../../ui-pictures/lib/main.story.tsx"
 import {
   Status,
   StatusButton,
   StatusDescription,
   StatusHeading,
   StatusPicture,
+  type StatusProperties,
 } from "./main.tsx"
 
 export default {
@@ -36,34 +35,38 @@ export const Default: StoryObj = {
   },
 }
 
-export interface PlaygroundProperties {
+export interface PlaygroundProperties extends StatusProperties {
   heading: string
   description: string
   button: string
-  picture: ControlsOf<typeof Picture404Playground>
 }
 
-export const Playground = deepControls<PlaygroundProperties>()
-  .append("picture", Picture404Playground)
-  .to({
-    parameters: {
-      actions: {
-        disable: true,
-      },
+export const Playground: StoryObj<PlaygroundProperties> = {
+  parameters: {
+    actions: {
+      disable: true,
     },
-    args: {
-      heading: "404",
-      description: "Oops...Page not found!",
-      button: "Go to home page",
+  },
+  argTypes: {
+    size: {
+      control: "select",
+      options: ["default", "small", "medium", "large"],
     },
-    render(p) {
-      return <Status>
-        <StatusHeading>{p.heading}</StatusHeading>
-        <StatusPicture>
-          <Picture404 {...p.picture} />
-        </StatusPicture>
-        <StatusDescription>{p.description}</StatusDescription>
-        <StatusButton href="/">{p.button}</StatusButton>
-      </Status>
-    },
-  })
+  },
+  args: {
+    size: "default",
+    heading: "404",
+    description: "Oops...Page not found!",
+    button: "Go to home page",
+  },
+  render(p) {
+    return <Status size={p.size}>
+      <StatusHeading>{p.heading}</StatusHeading>
+      <StatusPicture>
+        <Picture404 />
+      </StatusPicture>
+      <StatusDescription>{p.description}</StatusDescription>
+      <StatusButton href="/">{p.button}</StatusButton>
+    </Status>
+  },
+}
