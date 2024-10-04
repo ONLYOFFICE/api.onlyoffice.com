@@ -14,10 +14,10 @@
   --picture-404-size-max-inline-size-large: 587px;
 
   --picture-404-size-is-medium: var(--false);
-  --picture-404-size-max-inline-size-medium: 400px;
+  --picture-404-size-max-inline-size-medium: 414px;
 
   --picture-404-size-is-small: var(--false);
-  --picture-404-size-max-inline-size-small: 300px;
+  --picture-404-size-max-inline-size-small: 200px;
 
   --picture-404-size-is-default: var(--true);
   --picture-404-size-max-inline-size-default: var(--picture-404-size-max-inline-size-medium);
