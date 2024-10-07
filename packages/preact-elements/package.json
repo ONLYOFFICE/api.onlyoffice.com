@@ -2,7 +2,7 @@
   "name": "@onlyoffice/preact-elements",
   "type": "module",
   "private": true,
-  "main": "lib/main.ts",
+  "main": "lib/main.tsx",
   "scripts": {
     "clean": "rimraf node_modules",
     "test:types": "tsc",

@@ -5,8 +5,13 @@
 import {Slot} from "@onlyoffice/preact-slots"
 import {type JSX, h} from "preact"
 
+export interface AProperties extends ElementProperties<"a"> {}
 export const A = wrap("a")
+
+export interface ButtonProperties extends ElementProperties<"button"> {}
 export const Button = wrap("button")
+
+export interface DivProperties extends ElementProperties<"div"> {}
 export const Div = wrap("div")
 
 export interface Element<E extends keyof JSX.IntrinsicElements> {
