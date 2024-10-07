@@ -27,16 +27,26 @@ export const Playground: StoryObj<ButtonProperties> = {
     },
   },
   argTypes: {
+    size: {
+      control: "select",
+      options: ["default", "small", "medium", "large"],
+    },
     variant: {
       control: "select",
       options: ["default", "accent", "neutral"],
     },
   },
   args: {
+    size: "default",
     variant: "default",
     children: "Button",
   },
   render(p) {
-    return <Button variant={p.variant}>{p.children}</Button>
+    return <Button
+      size={p.size}
+      variant={p.variant}
+    >
+      {p.children}
+    </Button>
   },
 }
