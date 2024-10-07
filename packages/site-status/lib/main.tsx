@@ -1,6 +1,5 @@
-import {LinkButton, SrOnly} from "@onlyoffice/ui-kit"
+import {Button, type ButtonProperties, SrOnly} from "@onlyoffice/ui-kit"
 import {Fragment, type JSX, type PreactDOMAttributes, h} from "preact"
-import {type HTMLAttributes} from "preact/compat"
 
 export interface StatusProperties extends PreactDOMAttributes {
   size?: "default" | "small" | "medium" | "large"
@@ -34,7 +33,7 @@ export function StatusDescription(p: PreactDOMAttributes): JSX.Element {
   return <p class="status__description">{p.children}</p>
 }
 
-export function StatusButton(p: HTMLAttributes<HTMLAnchorElement>): JSX.Element {
+export function StatusButton(p: ButtonProperties): JSX.Element {
   // todo: append class="status__button"
-  return <LinkButton {...p} variant="accent" />
+  return <Button variant="accent" {...p} />
 }

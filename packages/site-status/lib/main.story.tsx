@@ -66,7 +66,9 @@ export const Playground: StoryObj<PlaygroundProperties> = {
         <Picture404 />
       </StatusPicture>
       <StatusDescription>{p.description}</StatusDescription>
-      <StatusButton href="/">{p.button}</StatusButton>
+      <StatusButton asChild>
+        <a href={window.location.href}>{p.button}</a>
+      </StatusButton>
     </Status>
   },
 }
