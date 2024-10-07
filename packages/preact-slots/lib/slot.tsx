@@ -1,4 +1,4 @@
-// The Slot component is a simplified version of the [@radix-ui/react-slot].
+// This file is a simplified version of the [@radix-ui/react-slot] package.
 //
 // [@radix-ui/react-slot]: https://github.com/radix-ui/primitives/blob/74b182b401c8ca0fa5b66a5a9a47f507bb3d5adc/packages/react/slot/src/Slot.tsx
 
