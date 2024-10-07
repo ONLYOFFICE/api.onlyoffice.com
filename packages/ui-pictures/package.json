@@ -14,7 +14,9 @@
     "test": "pnpm test:types"
   },
   "dependencies": {
+    "@onlyoffice/preact-elements": "workspace:^",
     "@onlyoffice/ui-mascots": "workspace:^",
+    "clsx": "2.1.0",
     "preact": "10.22.0",
     "typescript": "5.4.5"
   },

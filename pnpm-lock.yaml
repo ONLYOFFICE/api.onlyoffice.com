@@ -3096,9 +3096,15 @@ importers:
 
   packages/ui-pictures:
     dependencies:
+      '@onlyoffice/preact-elements':
+        specifier: workspace:^
+        version: link:../preact-elements
       '@onlyoffice/ui-mascots':
         specifier: workspace:^
         version: link:../ui-mascots
+      clsx:
+        specifier: 2.1.0
+        version: 2.1.0
       preact:
         specifier: 10.22.0
         version: 10.22.0
