@@ -13,7 +13,10 @@
     "test": "pnpm test:types"
   },
   "dependencies": {
+    "@onlyoffice/preact-elements": "workspace:^",
+    "@onlyoffice/preact-types": "workspace:^",
     "@onlyoffice/ui-kit": "workspace:^",
+    "clsx": "2.1.0",
     "preact": "10.22.0",
     "typescript": "5.4.5"
   },

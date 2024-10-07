@@ -25,7 +25,9 @@ export const Default: StoryObj = {
   },
   render() {
     return <Status>
-      <StatusHeading>404</StatusHeading>
+      <StatusHeading>
+        <h1>404</h1>
+      </StatusHeading>
       <StatusPicture>
         <Picture404 />
       </StatusPicture>
@@ -61,7 +63,9 @@ export const Playground: StoryObj<PlaygroundProperties> = {
   },
   render(p) {
     return <Status size={p.size}>
-      <StatusHeading>{p.heading}</StatusHeading>
+      <StatusHeading>
+        <h1>{p.heading}</h1>
+      </StatusHeading>
       <StatusPicture>
         <Picture404 />
       </StatusPicture>

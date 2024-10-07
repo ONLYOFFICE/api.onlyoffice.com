@@ -2430,9 +2430,18 @@ importers:
 
   packages/site-status:
     dependencies:
+      '@onlyoffice/preact-elements':
+        specifier: workspace:^
+        version: link:../preact-elements
+      '@onlyoffice/preact-types':
+        specifier: workspace:^
+        version: link:../preact-types
       '@onlyoffice/ui-kit':
         specifier: workspace:^
         version: link:../ui-kit
+      clsx:
+        specifier: 2.1.0
+        version: 2.1.0
       preact:
         specifier: 10.22.0
         version: 10.22.0

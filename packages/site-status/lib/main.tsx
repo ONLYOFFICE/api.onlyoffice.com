@@ -1,39 +1,35 @@
+import * as Elements from "@onlyoffice/preact-elements"
+import {type ChildrenIncludable} from "@onlyoffice/preact-types"
 import {Button, type ButtonProperties, SrOnly} from "@onlyoffice/ui-kit"
-import {Fragment, type JSX, type PreactDOMAttributes, h} from "preact"
+import {clsx} from "clsx"
+import {Fragment, type JSX, h} from "preact"
 
-export interface StatusProperties extends PreactDOMAttributes {
+export interface StatusProperties extends Omit<Elements.DivProperties, "size"> {
   size?: "default" | "small" | "medium" | "large"
 }
 
 export function Status(p: StatusProperties): JSX.Element {
-  const a: JSX.HTMLAttributes<HTMLDivElement> = {
-    class: "status",
-  }
-
-  // The error mentioned below is a false positive.
-  // eslint-disable-next-line unicorn/explicit-length-check
-  if (typeof a.class === "string" && p.size) {
-    a.class += ` status_size_${p.size}`
-  }
-
-  return <div {...a}>{p.children}</div>
+  const {size, ...o} = p
+  o.class = clsx("status", size && `status_size_${size}`, o.class)
+  return <Elements.Div {...o} />
 }
 
-export function StatusHeading(p: PreactDOMAttributes): JSX.Element {
-  return <SrOnly>
-    <h1>{p.children}</h1>
-  </SrOnly>
+export function StatusHeading(p: ChildrenIncludable): JSX.Element {
+  return <SrOnly>{p.children}</SrOnly>
 }
 
-export function StatusPicture(p: PreactDOMAttributes): JSX.Element {
+export function StatusPicture(p: ChildrenIncludable): JSX.Element {
   return <>{p.children}</>
 }
 
-export function StatusDescription(p: PreactDOMAttributes): JSX.Element {
-  return <p class="status__description">{p.children}</p>
+export function StatusDescription(p: Elements.PProperties): JSX.Element {
+  const {...o} = p
+  o.class = clsx("status__description", o.class)
+  return <Elements.P {...o} />
 }
 
 export function StatusButton(p: ButtonProperties): JSX.Element {
-  // todo: append class="status__button"
-  return <Button variant="accent" {...p} />
+  const {...o} = p
+  o.class = clsx("status__button", o.class)
+  return <Button variant="accent" {...o} />
 }

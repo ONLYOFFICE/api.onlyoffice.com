@@ -78,8 +78,7 @@
   margin-block-start: var(--status-description-computed-margin-block-start-current);
 }
 
-/* todo: replace with .status__button {} */
-.status .button {
+.status__button {
   margin-block-start: var(--status-button-computed-margin-block-start-current);
 }
 
@@ -118,4 +117,13 @@
   --picture-404-size-is-small: var(--status-size-is-small);
   --picture-404-size-is-medium: var(--status-size-is-medium);
   --picture-404-size-is-large: var(--status-size-is-large);
+}
+
+/* Integration with @onlyoffice/ui-button */
+
+.status__button.button {
+  --button-size-is-default: var(--status-size-is-default);
+  --button-size-is-small: var(--status-size-is-small);
+  --button-size-is-medium: var(--status-size-is-medium);
+  --button-size-is-large: var(--status-size-is-large);
 }
