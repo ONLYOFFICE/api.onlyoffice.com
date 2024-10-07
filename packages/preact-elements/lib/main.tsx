@@ -14,6 +14,9 @@ export const Button = wrap("button")
 export type DivProperties = ElementProperties<"div">
 export const Div = wrap("div")
 
+export type PProperties = ElementProperties<"p">
+export const P = wrap("p")
+
 export interface Element<E extends keyof JSX.IntrinsicElements> {
   (properties: ElementProperties<E>): JSX.Element
 }
