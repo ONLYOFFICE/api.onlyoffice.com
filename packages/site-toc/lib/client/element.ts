@@ -1,9 +1,8 @@
-/**
- * The Table of Contents (TOC) element is inspired by the Mozilla Developer
- * Network (MDN) [Yari Table of Contents component].
- *
- * [Yari Table of Contents component]: https://github.com/mdn/yari/blob/b10b2ae0c1460ba98ef1bd1d3c1b4c1551fd424b/client/src/document/organisms/toc/index.tsx#L23
- */
+// The Table of Contents (TOC) element is inspired by the Mozilla Developer
+// Network (MDN) [Yari Table of Contents component].
+//
+// [Yari Table of Contents component]: https://github.com/mdn/yari/blob/b10b2ae0c1460ba98ef1bd1d3c1b4c1551fd424b/client/src/document/organisms/toc/index.tsx#L23
+
 export class TocContainer extends HTMLElement {
   static get tagName(): string {
     return "toc-container"
