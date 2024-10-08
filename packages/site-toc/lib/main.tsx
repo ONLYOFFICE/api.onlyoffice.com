@@ -1,25 +1,36 @@
-import {type JSX, type PreactDOMAttributes, h} from "preact"
-import {type HTMLAttributes} from "preact/compat"
+import * as Elements from "@onlyoffice/preact-elements"
+import {clsx} from "clsx"
+import {type JSX, h} from "preact"
 
-export function Toc(p: PreactDOMAttributes): JSX.Element {
+export function Toc(p: Elements.DivProperties): JSX.Element {
+  const {...o} = p
+  o.class = clsx("toc", o.class)
+
   return <toc-container>
-    <div class="toc">{p.children}</div>
+    <Elements.Div {...o} />
   </toc-container>
 }
 
-export function TocHeading(p: PreactDOMAttributes): JSX.Element {
-  return <h2 class="toc__heading">{p.children}</h2>
+export function TocHeading(p: Elements.H2Properties): JSX.Element {
+  const {...o} = p
+  o.class = clsx("toc__heading", o.class)
+  return <Elements.H2 {...o} />
 }
 
-export function TocList(p: PreactDOMAttributes): JSX.Element {
-  return <ul class="toc__list">{p.children}</ul>
+export function TocList(p: Elements.UlProperties): JSX.Element {
+  const {...o} = p
+  o.class = clsx("toc__list", o.class)
+  return <Elements.Ul {...o} />
 }
 
-export function TocItem(p: PreactDOMAttributes): JSX.Element {
-  return <li class="toc__item">{p.children}</li>
+export function TocItem(p: Elements.LiProperties): JSX.Element {
+  const {...o} = p
+  o.class = clsx("toc__item", o.class)
+  return <Elements.Li {...o} />
 }
 
-export function TocLink(p: HTMLAttributes<HTMLAnchorElement>): JSX.Element {
-  const {children, ...o} = p
-  return <a class="toc__link" {...o}>{children}</a>
+export function TocLink(p: Elements.AProperties): JSX.Element {
+  const {...o} = p
+  o.class = clsx("toc__link", o.class)
+  return <Elements.A {...o} />
 }

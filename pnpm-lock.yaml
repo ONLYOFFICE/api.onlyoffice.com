@@ -2505,6 +2505,12 @@ importers:
 
   packages/site-toc:
     dependencies:
+      '@onlyoffice/preact-elements':
+        specifier: workspace:^
+        version: link:../preact-elements
+      clsx:
+        specifier: 2.1.0
+        version: 2.1.0
       preact:
         specifier: 10.22.0
         version: 10.22.0
@@ -2512,9 +2518,6 @@ importers:
         specifier: 5.4.5
         version: 5.4.5
     devDependencies:
-      '@onlyoffice/preact-types':
-        specifier: workspace:^
-        version: link:../preact-types
       '@storybook/preact':
         specifier: 8.0.0
         version: 8.0.0(preact@10.22.0)
