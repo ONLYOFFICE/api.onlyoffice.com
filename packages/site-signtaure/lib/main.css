@@ -1,0 +1,70 @@
+.signature {
+  /* stylelint-disable @stylistic/declaration-block-semicolon-newline-before */
+  /* stylelint-disable @stylistic/declaration-block-semicolon-space-before */
+  /* stylelint-disable @stylistic/declaration-colon-space-after */
+  --true: initial;
+  --false: ;
+  /* stylelint-enable @stylistic/declaration-block-semicolon-newline-before */
+  /* stylelint-enable @stylistic/declaration-block-semicolon-space-before */
+  /* stylelint-enable @stylistic/declaration-colon-space-after */
+
+  --signature-variant-is-block: var(--false);
+  --signature-variant-is-inline: var(--false);
+  --signature-variant-is-default: var(--true);
+
+  --signature-background-color-block: var(--temp-color-signature-background);
+  --signature-background-color-inline: var(--base-color-transparent);
+  --signature-background-color-default: var(--signature-background-color-block);
+
+  --signature-computed-background-color-block: var(--signature-variant-is-block, var(--signature-background-color-block));
+  --signature-computed-background-color-inline: var(--signature-variant-is-inline, var(--signature-background-color-inline));
+  --signature-computed-background-color-default: var(--signature-variant-is-default, var(--signature-background-color-default));
+
+  --signature-computed-background-color-current: var(--signature-computed-background-color-block) var(--signature-computed-background-color-inline) var(--signature-computed-background-color-default);
+
+  background-color: var(--signature-computed-background-color-current);
+  color: var(--temp-color-signature-text);
+  font-family: var(--base-text-font-family-monospace);
+}
+
+.signature > code {
+  font-family: var(--base-text-font-family-monospace);
+}
+
+.signature_variant_default {
+  --signature-variant-is-block: var(--false);
+  --signature-variant-is-inline: var(--false);
+  --signature-variant-is-default: var(--true);
+}
+
+.signature_variant_block {
+  --signature-variant-is-default: var(--false);
+  --signature-variant-is-block: var(--true);
+  --signature-variant-is-inline: var(--false);
+}
+
+.signature_variant_inline {
+  --signature-variant-is-default: var(--false);
+  --signature-variant-is-block: var(--false);
+  --signature-variant-is-inline: var(--true);
+}
+
+.sg-en {
+  color: var(--temp-color-signature-entity);
+}
+
+.sg-kw {
+  color: var(--temp-color-signature-keyword);
+}
+
+.sg-pm {
+  color: var(--temp-color-signature-parameter);
+}
+
+.sg-st {
+  color: var(--temp-color-signature-string);
+}
+
+.sg-tp {
+  color: var(--temp-color-signature-type);
+}
