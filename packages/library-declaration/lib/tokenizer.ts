@@ -132,7 +132,8 @@ export function methodDeclaration(d: Library.MethodDeclaration): Tokenizer.Token
   const b = functionType(d.type)
   a.push(...b)
 
-  return a
+  const formatter = new Formatter()
+  return formatter.format(a)
 }
 
 export function propertyDeclaration(d: Library.PropertyDeclaration): Tokenizer.Token[] {
@@ -397,4 +398,77 @@ function textToken(): Tokenizer.TextToken {
 
 function referenceToken(): Tokenizer.ReferenceToken {
   return new tokenizer.ReferenceToken()
+}
+
+export class Formatter {
+  end = 0
+  indent = 2
+  limit = 100
+  start = 0
+
+  length(a: Tokenizer.Token[]): number {
+    let t = 0
+    for (const e of a) {
+      if (e.text) {
+        t += e.text.length
+      }
+    }
+    return t
+  }
+
+  parameters(a: Tokenizer.Token[]): void {
+    let o = 0
+    let im = false
+
+    for (const [i, {text}] of a.entries()) {
+      if (text === "(" && !im) {
+        im = true
+        this.start = i
+      }
+
+      if (im) {
+        if (text === "(") {
+          o += 1
+        }
+
+        if (text === ")") {
+          o -= 1
+        }
+
+        if (o === 0) {
+          this.end = i
+          break
+        }
+      }
+    }
+  }
+
+  format(a: Tokenizer.Token[]): Tokenizer.Token[] {
+    if (this.length(a) < this.limit) {
+      return a
+    }
+
+    this.parameters(a)
+
+    const b = textToken()
+    b.text = "\n"
+
+    const c = textToken()
+    c.text = ", "
+
+    const t = textToken()
+    t.text = " ".repeat(this.indent)
+
+    a.splice(this.start + 1, 0, b, t)
+    this.end += 2
+    for (let i = this.end; i >= this.start; i -= 1) {
+      if (a[i].text === ", ") {
+        a.splice(i + 1, 0, b, t)
+        this.end += 2
+      }
+    }
+    a.splice(this.end, 0, c, b)
+
+    return a
+  }
 }
