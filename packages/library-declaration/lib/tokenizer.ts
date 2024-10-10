@@ -265,7 +265,7 @@ export function arrayType(t: Library.ArrayType): Tokenizer.Token[] {
 
     a.pop()
 
-    if (t.items.length > 1) {
+    if (t.items.length > 1 || "type" in t.items[0] && t.items[0].type === "union") {
       u = textToken()
       u.text = "("
       a.unshift(u)
