@@ -329,7 +329,11 @@ export function literalType(t: Library.LiteralType): Tokenizer.Token[] {
   const a: Tokenizer.Token[] = []
 
   const u = textToken()
-  u.text = String(t.value)
+  if (t.value === "string") {
+    u.text = `"${String(t.value)}"`
+  } else {
+    u.text = String(t.value)
+  }
   a.push(u)
 
   return a

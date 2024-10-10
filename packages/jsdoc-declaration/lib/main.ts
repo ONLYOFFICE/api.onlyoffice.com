@@ -773,8 +773,8 @@ function type(ca: Catharsis): [Library.Type, ...Error[]] {
     }
 
     if (isStringLiteral(ca.name)) {
-      // const v = omitStringQuotes(ca.name)
-      return [library.literalType(t, ca.name)]
+      const v = omitStringQuotes(ca.name)
+      return [library.literalType(t, v)]
     }
 
     return [library.reference(ca.name)]
@@ -945,6 +945,6 @@ function isNumberLiteral(s: string): boolean {
   return !Number.isNaN(Number.parseFloat(s))
 }
 
-// function omitStringQuotes(s: string): string {
-//   return s.slice(1, -1)
-// }
+function omitStringQuotes(s: string): string {
+  return s.slice(1, -1)
+}
