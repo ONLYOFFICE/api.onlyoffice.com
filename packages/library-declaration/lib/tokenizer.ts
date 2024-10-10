@@ -350,16 +350,6 @@ export function unionType(t: Library.UnionType): Tokenizer.Token[] {
 
   for (const e of t.types) {
     const b = type(e)
-    if (b.length > 1) {
-      u = textToken()
-      u.text = "("
-      b.unshift(u)
-
-      u = textToken()
-      u.text = ")"
-      b.push(u)
-    }
-
     a.push(...b)
 
     u = textToken()
