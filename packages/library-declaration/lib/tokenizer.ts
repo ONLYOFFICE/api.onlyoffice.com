@@ -117,10 +117,6 @@ export function methodDeclaration(d: Library.MethodDeclaration): Tokenizer.Token
 
   let t: Tokenizer.Token
 
-  t = decoratorToken()
-  t.text = "(method)"
-  a.push(t)
-
   t = textToken()
   t.text = " "
   a.push(t)
