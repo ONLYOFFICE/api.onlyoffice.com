@@ -380,26 +380,21 @@ export function voidType(t: Library.VoidType): Tokenizer.Token[] {
 }
 
 function decoratorToken(): Tokenizer.DecoratorToken {
-  const t = tokenizer.tokenNode()
-  return tokenizer.decoratorToken(t)
+  return new tokenizer.DecoratorToken()
 }
 
 function identifierToken(): Tokenizer.IdentifierToken {
-  const t = tokenizer.tokenNode()
-  return tokenizer.identifierToken(t)
+  return new tokenizer.IdentifierToken()
 }
 
 function keywordToken(): Tokenizer.KeywordToken {
-  const t = tokenizer.tokenNode()
-  return tokenizer.keywordToken(t)
+  return new tokenizer.KeywordToken()
 }
 
 function textToken(): Tokenizer.TextToken {
-  const t = tokenizer.tokenNode()
-  return tokenizer.textToken(t)
+  return new tokenizer.TextToken()
 }
 
 function referenceToken(): Tokenizer.ReferenceToken {
-  const t = tokenizer.tokenNode()
-  return tokenizer.referenceToken(t)
+  return new tokenizer.ReferenceToken()
 }

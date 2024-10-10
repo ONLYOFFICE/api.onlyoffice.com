@@ -819,36 +819,31 @@ function voidText(): Tokenizer.TextToken {
 }
 
 function decoratorToken(s: string): Tokenizer.DecoratorToken {
-  const n = tokenizer.tokenNode()
-  const t = tokenizer.decoratorToken(n)
+  const t = new tokenizer.DecoratorToken()
   t.text = s
   return t
 }
 
 function identifierToken(id: string): Tokenizer.IdentifierToken {
-  const n = tokenizer.tokenNode()
-  const t = tokenizer.identifierToken(n)
+  const t = new tokenizer.IdentifierToken()
   t.text = id
   return t
 }
 
 function keywordToken(s: string): Tokenizer.KeywordToken {
-  const n = tokenizer.tokenNode()
-  const t = tokenizer.keywordToken(n)
+  const t = new tokenizer.KeywordToken()
   t.text = s
   return t
 }
 
 function textToken(s: string): Tokenizer.TextToken {
-  const n = tokenizer.tokenNode()
-  const t = tokenizer.textToken(n)
+  const t = new tokenizer.TextToken()
   t.text = s
   return t
 }
 
 function referenceToken(id: string): Tokenizer.ReferenceToken {
-  const n = tokenizer.tokenNode()
-  const t = tokenizer.referenceToken(n)
+  const t = new tokenizer.ReferenceToken()
   t.id = id
   return t
 }

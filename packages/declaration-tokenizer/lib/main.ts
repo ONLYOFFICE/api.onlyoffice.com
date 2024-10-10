@@ -8,52 +8,33 @@ export interface TokenMap {
   text: TextToken
 }
 
-export interface DecoratorToken extends TokenNode {
-  type: "decorator"
+export class DecoratorToken implements TokenNode {
+  type = "decorator"
+  text = ""
 }
 
-export function decoratorToken(t: TokenNode): DecoratorToken {
-  return {...t, type: "decorator"}
+export class IdentifierToken implements TokenNode {
+  type = "identifier"
+  text = ""
 }
 
-export interface IdentifierToken extends TokenNode {
-  type: "identifier"
+export class KeywordToken implements TokenNode {
+  type = "keyword"
+  text = ""
 }
 
-export function identifierToken(t: TokenNode): IdentifierToken {
-  return {...t, type: "identifier"}
+export class ReferenceToken implements TokenNode {
+  type = "reference"
+  id = ""
+  text = ""
 }
 
-export interface KeywordToken extends TokenNode {
-  type: "keyword"
-}
-
-export function keywordToken(t: TokenNode): KeywordToken {
-  return {...t, type: "keyword"}
-}
-
-export interface ReferenceToken extends TokenNode {
-  type: "reference"
-  id: string
-}
-
-export function referenceToken(t: TokenNode): ReferenceToken {
-  return {...t, type: "reference", id: ""}
-}
-
-export interface TextToken extends TokenNode {
-  type: "text"
-}
-
-export function textToken(t: TokenNode): TextToken {
-  return {...t, type: "text"}
+export class TextToken implements TokenNode {
+  type = "text"
+  text = ""
 }
 
 export interface TokenNode {
   type: string
   text: string
-}
-
-export function tokenNode(): TokenNode {
-  return {type: "", text: ""}
 }
