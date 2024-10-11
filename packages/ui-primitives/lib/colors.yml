@@ -191,6 +191,15 @@ regular:
       sublimelinter-gutter-mark: "#484f58"
       constant-other-reference-link: "#a5d6ff"
 
+    temp-signature:
+      background: "#FAFBFC"
+      entity: "#C73B41"
+      keyword: "#A32A8A"
+      parameter: "#1A66E0"
+      string: "#438443"
+      text: "#4F5561"
+      type: "#6848BA"
+
     temp-base-icon:
       black: "#333333"
       white: "#FFFFFF"
@@ -618,6 +627,15 @@ regular:
       brackethighlighter-angle: "#57606a"
       sublimelinter-gutter-mark: "#8c959f"
       constant-other-reference-link: "#0a3069"
+
+    temp-signature:
+      background: "#FAFBFC"
+      entity: "#C73B41"
+      keyword: "#A32A8A"
+      parameter: "#1A66E0"
+      string: "#438443"
+      text: "#4F5561"
+      type: "#6848BA"
 
     temp-base-icon:
       black: "#333333"
