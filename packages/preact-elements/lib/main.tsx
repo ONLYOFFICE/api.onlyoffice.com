@@ -11,6 +11,9 @@ export const A = wrap("a")
 export type ButtonProperties = ElementProperties<"button">
 export const Button = wrap("button")
 
+export type CodeProperties = ElementProperties<"code">
+export const Code = wrap("code")
+
 export type DivProperties = ElementProperties<"div">
 export const Div = wrap("div")
 
@@ -22,6 +25,12 @@ export const Li = wrap("li")
 
 export type PProperties = ElementProperties<"p">
 export const P = wrap("p")
+
+export type PreProperties = ElementProperties<"pre">
+export const Pre = wrap("pre")
+
+export type SpanProperties = ElementProperties<"span">
+export const Span = wrap("span")
 
 export type UlProperties = ElementProperties<"ul">
 export const Ul = wrap("ul")
