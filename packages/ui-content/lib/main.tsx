@@ -1,8 +1,11 @@
-import {type ChildrenIncludable} from "@onlyoffice/preact-types"
+import * as Elements from "@onlyoffice/preact-elements"
+import {clsx} from "clsx"
 import {type JSX, h} from "preact"
 
-export function Content(p: ChildrenIncludable): JSX.Element {
-  return <div class="content">{p.children}</div>
+export function Content(p: Elements.DivProperties): JSX.Element {
+  const {...o} = p
+  o.class = clsx("content", o.class)
+  return <Elements.Div {...o} />
 }
 
 // export function ContentTabContainer(p: ChildrenIncludable): JSX.Element {
