@@ -2547,7 +2547,7 @@ importers:
         specifier: 5.1.6
         version: 5.1.6(@types/node@22.4.1)(lightningcss@1.26.0)(sugarss@4.0.1(postcss@8.4.41))(terser@5.31.6)
 
-  packages/site-signtaure:
+  packages/site-signature:
     dependencies:
       '@onlyoffice/preact-elements':
         specifier: workspace:^
