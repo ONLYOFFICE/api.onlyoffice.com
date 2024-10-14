@@ -29,3 +29,7 @@
   margin-inline-start: 0;
   padding-block-end: var(--base-size-16);
 }
+
+.glossary__details > :first-child {
+  margin-block-start: 0;
+}
