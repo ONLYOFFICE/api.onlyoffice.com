@@ -128,8 +128,8 @@ export function methodDeclaration(d: Library.MethodDeclaration): Tokenizer.Token
   const b = functionType(d.type)
   a.push(...b)
 
-  const formatter = new Formatter()
-  return formatter.format(a)
+  const f = new Formatter()
+  return f.format(a)
 }
 
 export function propertyDeclaration(d: Library.PropertyDeclaration): Tokenizer.Token[] {
@@ -391,74 +391,77 @@ function referenceToken(): Tokenizer.ReferenceToken {
 }
 
 export class Formatter {
-  end = 0
   indent = 2
   limit = 100
-  start = 0
+  newline = "\n"
 
-  length(a: Tokenizer.Token[]): number {
-    let t = 0
-    for (const e of a) {
+  format(a: Tokenizer.Token[]): Tokenizer.Token[] {
+    const f = [...a]
+
+    let l = 0
+    for (const e of f) {
       if (e.text) {
-        t += e.text.length
+        l += e.text.length
       }
     }
-    return t
-  }
 
-  parameters(a: Tokenizer.Token[]): void {
+    if (l < this.limit) {
+      return f
+    }
+
+    let s = 0
+    let e = 0
     let o = 0
     let im = false
 
-    for (const [i, {text}] of a.entries()) {
-      if (text === "(" && !im) {
+    for (const [i, t] of f.entries()) {
+      if (t.text === "(" && !im) {
         im = true
-        this.start = i
+        s = i
       }
 
       if (im) {
-        if (text === "(") {
+        if (t.text === "(") {
           o += 1
         }
 
-        if (text === ")") {
+        if (t.text === ")") {
           o -= 1
         }
 
         if (o === 0) {
-          this.end = i
+          e = i
           break
         }
       }
     }
-  }
 
-  format(a: Tokenizer.Token[]): Tokenizer.Token[] {
-    if (this.length(a) < this.limit) {
-      return a
+    let b = textToken()
+    b.text = this.newline
+
+    let t = textToken()
+    t.text = " ".repeat(this.indent)
+
+    f.splice(s + 1, 0, b, t)
+    e += 2
+
+    for (let i = s; i <= e; i += 1) {
+      if (f[i].text === ", ") {
+        b = textToken()
+        b.text = "\n"
+        t = textToken()
+        t.text = " ".repeat(this.indent)
+        f.splice(i + 1, 0, b, t)
+        e += 2
+      }
     }
-
-    this.parameters(a)
-
-    const b = textToken()
-    b.text = "\n"
 
     const c = textToken()
     c.text = ", "
+    b = textToken()
+    b.text = "\n"
+    f.splice(e, 0, c, b)
 
-    const t = textToken()
-    t.text = " ".repeat(this.indent)
-
-    a.splice(this.start + 1, 0, b, t)
-    this.end += 2
-    for (let i = this.end; i >= this.start; i -= 1) {
-      if (a[i].text === ", ") {
-        a.splice(i + 1, 0, b, t)
-        this.end += 2
-      }
-    }
-    a.splice(this.end, 0, c, b)
-
-    return a
+    return f
   }
 }
