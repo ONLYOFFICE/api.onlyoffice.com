@@ -75,9 +75,12 @@
   --signature-computed-hover-external-reference-text-decoration-default: var(--signature-variant-is-default, var(--signature-hover-external-reference-text-decoration-default));
   --signature-computed-hover-external-reference-text-decoration-current: var(--signature-computed-hover-external-reference-text-decoration-block) var(--signature-computed-hover-external-reference-text-decoration-inline) var(--signature-computed-hover-external-reference-text-decoration-default);
 
+  --signature-computed-foreground-color-current: var(--temp-color-signature-text);
+  --signature-computed-font-family-current: var(--base-text-font-family-monospace);
+
   background-color: var(--signature-computed-background-color-current);
-  color: var(--temp-color-signature-text);
-  font-family: var(--base-text-font-family-monospace);
+  color: var(--signature-computed-foreground-color-current);
+  font-family: var(--signature-computed-font-family-current);
 }
 
 .signature > code {
