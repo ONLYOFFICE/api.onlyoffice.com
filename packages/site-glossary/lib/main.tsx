@@ -15,6 +15,12 @@ export function GlossaryTerm(p: Elements.DtProperties): JSX.Element {
   return <Elements.Dt {...o} />
 }
 
+export function GlossaryName(p: Elements.SpanProperties): JSX.Element {
+  const {...o} = p
+  o.class = clsx("glossary__name", o.class)
+  return <Elements.Span {...o} />
+}
+
 export function GlossaryDetails(p: Elements.DdProperties): JSX.Element {
   const {...o} = p
   o.class = clsx("glossary__details", o.class)

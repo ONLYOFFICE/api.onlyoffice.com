@@ -1,7 +1,7 @@
 import {Join} from "@onlyoffice/preact-join"
 import {type Meta, type StoryObj} from "@storybook/preact"
 import {h} from "preact"
-import {Glossary, GlossaryDetails, GlossaryTerm} from "./main.tsx"
+import {Glossary, GlossaryDetails, GlossaryName, GlossaryTerm} from "./main.tsx"
 
 export default {
   title: "Site / Glossary",
@@ -19,7 +19,7 @@ export const Default: StoryObj = {
   render() {
     return <Glossary>
       <GlossaryTerm>
-        Alpaca
+        <GlossaryName>Alpaca</GlossaryName>
       </GlossaryTerm>
       <GlossaryDetails>
         <Join separator=" ">
@@ -32,7 +32,9 @@ export const Default: StoryObj = {
         </Join>
       </GlossaryDetails>
       <GlossaryTerm>
-        <a href={window.location.href}>Llama</a>
+        <GlossaryName>
+          <a href={window.location.href}>Llama</a>
+        </GlossaryName>
       </GlossaryTerm>
       <GlossaryDetails>
         <Join separator=" ">

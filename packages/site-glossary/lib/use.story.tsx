@@ -3,7 +3,7 @@ import {Signature, SignatureReference} from "@onlyoffice/site-signature"
 import {Badge, BadgeCaption, BadgeGroup} from "@onlyoffice/ui-kit"
 import {type Meta, type StoryObj} from "@storybook/preact"
 import {Fragment, h} from "preact"
-import {Glossary, GlossaryDetails, GlossaryTerm} from "./main.tsx"
+import {Glossary, GlossaryDetails, GlossaryName, GlossaryTerm} from "./main.tsx"
 
 export default {
   title: "Site / Glossary / Use Cases",
@@ -39,7 +39,9 @@ export const GlossaryOfMethods: StoryObj = {
     return <Glossary>
       {Array.from({length: 20}).map(() => <>
         <GlossaryTerm>
-          <a href={window.location.href}>CreateOleObject</a>
+          <GlossaryName>
+            <a href={window.location.href}>CreateOleObject</a>
+          </GlossaryName>
           <Signature variant="inline" signature={p.signature}>
             <SignatureReference>
               {(p) => <a href={p.reference.id}>{p.children}</a>}

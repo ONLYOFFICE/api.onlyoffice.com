@@ -10,11 +10,14 @@
   border-block-start-color: var(--color-border-muted);
   border-block-start-style: solid;
   border-block-start-width: var(--size-border-width-thin);
-  font-weight: var(--base-text-font-weight-bold);
   padding-block-start: var(--base-size-16);
 }
 
-.glossary__term > a {
+.glossary__name {
+  font-weight: var(--base-text-font-weight-bold);
+}
+
+.glossary__name > a {
   color: inherit;
   text-decoration: none;
 
