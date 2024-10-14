@@ -1,10 +1,12 @@
 import {type ChildrenIncludable} from "@onlyoffice/preact-types"
 import type * as ServiceDeclaration from "@onlyoffice/service-declaration"
 import * as Sig from "@onlyoffice/signature"
+import * as SiteGlossary from "@onlyoffice/site-glossary"
 import {Signature} from "@onlyoffice/site-signature"
 import {
   Badge,
   BadgeCaption,
+  BadgeGroup,
   CodeListing,
   CodeListingTab,
   CodeListingTabList,
@@ -308,7 +310,7 @@ interface ComplexTypeProperties {
 
 function ComplexType(p: ComplexTypeProperties): JSX.Element {
   const {type: t} = p
-  return <DictionaryList entities={t.entities} />
+  return <Glossary entities={t.entities} />
 }
 
 interface EnumTypeProperties {
@@ -360,31 +362,31 @@ interface ObjectTypeProperties {
 
 function ObjectType(p: ObjectTypeProperties): JSX.Element {
   const {type: t} = p
-  return <DictionaryList properties={t.properties} />
+  return <Glossary properties={t.properties} />
 }
 
-interface DictionaryListProperties {
+interface GlossaryProperties {
   properties?: ServiceDeclaration.Property[]
   entities?: ServiceDeclaration.Entity[]
 }
 
-function DictionaryList(p: DictionaryListProperties): JSX.Element {
+function Glossary(p: GlossaryProperties): JSX.Element {
   return <>
-    {p.properties && p.properties.length !== 0 && <dl>
-      {p.properties.map((p) => <DictionaryListItem property={p} entity={p.self} />)}
-    </dl>}
-    {p.entities && p.entities.length !== 0 && <dl>
-      {p.entities.map((e) => <DictionaryListItem entity={e} />)}
-    </dl>}
+    {p.properties && p.properties.length !== 0 && <SiteGlossary.Glossary>
+      {p.properties.map((p) => <GlossaryItem property={p} entity={p.self} />)}
+    </SiteGlossary.Glossary>}
+    {p.entities && p.entities.length !== 0 && <SiteGlossary.Glossary>
+      {p.entities.map((e) => <GlossaryItem entity={e} />)}
+    </SiteGlossary.Glossary>}
   </>
 }
 
-interface DictionaryListItemProperties {
+interface GlossaryItemProperties {
   property?: ServiceDeclaration.Property
   entity: ServiceDeclaration.Entity | ServiceDeclaration.CircularReference
 }
 
-function DictionaryListItem(p: DictionaryListItemProperties): JSX.Element {
+function GlossaryItem(p: GlossaryItemProperties): JSX.Element {
   const {entity: e, property: r} = p
   const t: JSX.Element[] = []
   const d: JSX.Element[] = []
@@ -404,7 +406,9 @@ function DictionaryListItem(p: DictionaryListItemProperties): JSX.Element {
   }
 
   if (s.length !== 0) {
-    t.push(<Signature variant="inline" signature={s} />)
+    t.push(<Badge variant="transparent">
+      <Signature variant="inline" signature={s} />
+    </Badge>)
   }
 
   if (e.type !== "circular" && e.format) {
@@ -437,8 +441,12 @@ function DictionaryListItem(p: DictionaryListItemProperties): JSX.Element {
   }
 
   return <>
-    <dt>{t}</dt>
-    <dd>{d}</dd>
+    <SiteGlossary.GlossaryTerm>
+      {t.length !== 0 && <BadgeGroup>{t}</BadgeGroup>}
+    </SiteGlossary.GlossaryTerm>
+    <SiteGlossary.GlossaryDetails>
+      {d}
+    </SiteGlossary.GlossaryDetails>
   </>
 }
 
