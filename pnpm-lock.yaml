@@ -2526,7 +2526,7 @@ importers:
         version: link:../site-glossary
       '@onlyoffice/site-signature':
         specifier: workspace:^
-        version: link:../site-signtaure
+        version: link:../site-signature
       '@onlyoffice/ui-kit':
         specifier: workspace:^
         version: link:../ui-kit
