@@ -22,7 +22,11 @@ export const Default: StoryObj = {
   render() {
     return <>
       {Playground.args && Playground.args.signature &&
-        <Signature signature={Playground.args.signature} />}
+        <Signature signature={Playground.args.signature}>
+          <SignatureReference>
+            {(p) => <a href={p.reference.id}>{p.children}</a>}
+          </SignatureReference>
+        </Signature>}
     </>
   },
 }
@@ -87,6 +91,12 @@ export const Playground: StoryObj<SignatureProperties> = {
       {type: "type", text: "boolean"},
       {type: "text", text: " = "},
       {type: "text", text: "false"},
+      {type: "text", text: ","},
+      {type: "text", text: "\n"},
+      {type: "text", text: "  "},
+      {id: "#", token: {type: "parameter", text: "iAmReferenceOnPage"}},
+      {type: "text", text: ": "},
+      {id: window.location.href, token: {type: "type", text: "iAmReferenceOnExternalPage"}},
       {type: "text", text: ","},
       {type: "text", text: "\n"},
       {type: "text", text: "): "},
