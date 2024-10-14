@@ -40,6 +40,7 @@ export const Playground: StoryObj<PlaygroundProperties> = {
         "critical",
         // "innovative",
         "neutral",
+        "transparent",
         // "vibrant",
       ],
     },

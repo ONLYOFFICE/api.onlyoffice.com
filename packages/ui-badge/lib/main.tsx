@@ -16,6 +16,7 @@ export interface BadgeProperties extends Elements.SpanProperties {
     "critical" |
     "innovative" |
     "neutral" |
+    "transparent" |
     "vibrant"
 }
 
