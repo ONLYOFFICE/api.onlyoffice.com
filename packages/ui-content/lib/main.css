@@ -203,7 +203,7 @@
   margin-block-start: var(--base-size-24);
 }
 
-.content-tab-container {
+/* .content-tab-container {
   display: block;
   margin-block-start: var(--base-size-20);
 }
@@ -251,7 +251,7 @@
 
 .content-tab-container button[role="tab"][aria-selected="true"]::before {
   background-color: var(--color-foreground-accent);
-}
+} */
 
 /* Integration with @onlyoffice/code-editor */
 
