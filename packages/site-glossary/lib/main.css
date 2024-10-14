@@ -28,8 +28,16 @@
   margin-block-start: var(--base-size-12);
   margin-inline-start: 0;
   padding-block-end: var(--base-size-16);
+
+  &:empty {
+    margin-block-start: 0;
+  }
 }
 
 .glossary__details > :first-child {
   margin-block-start: 0;
+}
+
+.glossary__details .glossary {
+  margin-inline-start: var(--base-size-32);
 }
