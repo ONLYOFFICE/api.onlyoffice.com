@@ -1,6 +1,6 @@
 import type * as Library from "@onlyoffice/library-declaration"
 import {
-  KeywordToken,
+  ParameterToken,
   Reference,
   type Signature,
   StringToken,
@@ -33,25 +33,9 @@ export function classDeclaration(d: Library.ClassDeclaration): Signature {
 
   let t: Token
 
-  t = new KeywordToken()
-  t.text = "class"
-  a.push(t)
-
-  t = new TextToken()
-  t.text = " "
-  a.push(t)
-
-  t = new IdentifierToken()
-  t.text = d.identifier
-  a.push(t)
-
   if (d.extends) {
     t = new TextToken()
     t.text = " "
-    a.push(t)
-
-    t = new KeywordToken()
-    t.text = "extends"
     a.push(t)
 
     t = new TextToken()
@@ -59,9 +43,9 @@ export function classDeclaration(d: Library.ClassDeclaration): Signature {
     a.push(t)
 
     for (const e of d.extends) {
-      t = new ReferenceToken()
-      t.id = e.id
-      a.push(t)
+      const r = new Reference()
+      r.id = e.id
+      a.push(r)
 
       t = new TextToken()
       t.text = ", "
@@ -77,14 +61,6 @@ export function classDeclaration(d: Library.ClassDeclaration): Signature {
 export function constructorDeclaration(d: Library.ConstructorDeclaration): Signature {
   const a: Signature = []
 
-  let t: Token
-
-  // For consistency
-  // eslint-disable-next-line prefer-const
-  t = new IdentifierToken()
-  t.text = d.identifier
-  a.push(t)
-
   const b = functionType(d.type)
   a.push(...b)
 
@@ -94,18 +70,8 @@ export function constructorDeclaration(d: Library.ConstructorDeclaration): Signa
 export function eventDeclaration(d: Library.EventDeclaration): Signature {
   const a: Signature = []
 
-  let t: Token
-
-  t = new DecoratorToken()
-  t.text = "(event)"
-  a.push(t)
-
-  t = new TextToken()
+  const t = new TextToken()
   t.text = " "
-  a.push(t)
-
-  t = new IdentifierToken()
-  t.text = d.identifier
   a.push(t)
 
   const b = functionType(d.type)
@@ -117,14 +83,8 @@ export function eventDeclaration(d: Library.EventDeclaration): Signature {
 export function methodDeclaration(d: Library.MethodDeclaration): Signature {
   const a: Signature = []
 
-  let t: Token
-
-  t = new TextToken()
+  const t = new TextToken()
   t.text = " "
-  a.push(t)
-
-  t = new IdentifierToken()
-  t.text = d.identifier
   a.push(t)
 
   const b = functionType(d.type)
@@ -136,17 +96,7 @@ export function methodDeclaration(d: Library.MethodDeclaration): Signature {
 export function propertyDeclaration(d: Library.PropertyDeclaration): Signature {
   const a: Signature = []
 
-  let t: Token
-
-  t = new DecoratorToken()
-  t.text = "(property)"
-  a.push(t)
-
-  t = new TextToken()
-  t.text = " "
-  a.push(t)
-
-  t = new TextToken()
+  const t = new ParameterToken()
   t.text = d.identifier
   a.push(t)
 
@@ -158,22 +108,8 @@ export function typeDeclaration(d: Library.TypeDeclaration): Signature {
 
   let t: Token
 
-  t = new DecoratorToken()
-  t.text += "("
-  if ("id" in d.type) {
-    t.text += d.type.id
-  } else {
-    t.text += d.type.type
-  }
-  t.text += ")"
-  a.push(t)
-
   t = new TextToken()
   t.text = " "
-  a.push(t)
-
-  t = new IdentifierToken()
-  t.text = d.identifier
   a.push(t)
 
   t = new TextToken()
@@ -188,7 +124,7 @@ export function typeDeclaration(d: Library.TypeDeclaration): Signature {
 
 export function type(t: Library.Type): Signature {
   if ("id" in t) {
-    const u = new ReferenceToken()
+    const u = new Reference()
     u.id = t.id
     return [u]
   }
@@ -298,13 +234,15 @@ export function functionType(t: Library.FunctionType): Signature {
 export function literalType(t: Library.LiteralType): Signature {
   const a: Signature = []
 
-  const u = new TextToken()
-  if (t.value === "string") {
-    u.text = `"${String(t.value)}"`
-  } else {
+  if (typeof t.value === "string") {
+    const u = new TypeToken()
     u.text = String(t.value)
+    a.push(u)
+  } else {
+    const u = new StringToken()
+    u.text = `"${t.value}"`
+    a.push(u)
   }
-  a.push(u)
 
   return a
 }
