@@ -374,15 +374,18 @@ function References(p: ReferenceProperties): JSX.Element {
         return <></>
       }
       return <>
-        {d.signature && <SiteGlossary.GlossaryTerm>
-          <SiteGlossary.GlossaryName>
+        <SiteGlossary.GlossaryTerm>
+          {d.identifier && <SiteGlossary.GlossaryName>
             {d.identifier}
-          </SiteGlossary.GlossaryName>
-          <Signature variant="inline" signature={d.signature} />
-        </SiteGlossary.GlossaryTerm>}
-        {d.summary && <SiteGlossary.GlossaryDetails>
-          <Description>{d.summary}</Description>
-        </SiteGlossary.GlossaryDetails>}
+          </SiteGlossary.GlossaryName>}
+          {d.summary && d.summary.signature &&
+            <Signature variant="inline" signature={d.summary.signature} />}
+        </SiteGlossary.GlossaryTerm>
+        <SiteGlossary.GlossaryDetails>
+          {d.summary && d.summary.text && <Description>
+            {d.summary.text}
+          </Description>}
+        </SiteGlossary.GlossaryDetails>
       </>
     })}
   </SiteGlossary.Glossary>

@@ -608,12 +608,16 @@ async function declarationNode(dc: Doclet): Promise<[Library.DeclarationNode, ..
     d.parent = library.reference(dc.memberof)
   }
 
-  [d.summary, d.description] = resolveAbstract(dc)
-  if (!d.summary) {
-    d.summary = undefined
+  const [summary, description] = resolveAbstract(dc)
+
+  if (summary) {
+    const s = library.summary()
+    s.text = summary
+    d.summary = s
   }
-  if (!d.description) {
-    d.description = undefined
+
+  if (description) {
+    d.description = description
   }
 
   // todo: it is a temporary solution.

@@ -1,6 +1,7 @@
 import {type Declaration, type Type} from "@onlyoffice/library-declaration"
 import {type Signature} from "@onlyoffice/signature"
 import * as description from "./internal/description.ts"
+import * as summary from "./internal/summary.ts"
 
 export interface ComputeCallback {
   (this: void, s: Signature): void
@@ -9,11 +10,23 @@ export interface ComputeCallback {
 export function computeDeclaration(d: Declaration, cb: ComputeCallback): void {
   computeType(d, cb)
 
-  const s = description.declaration(d)
+  let s = description.declaration(d)
   cb(s)
 
   if (s.length !== 0) {
     d.signature = s
+  }
+
+  s = summary.declaration(d)
+  cb(s)
+
+  if (s.length !== 0) {
+    let o = d.summary
+    if (!o) {
+      o = {}
+      d.summary = o
+    }
+    o.signature = s
   }
 }
 

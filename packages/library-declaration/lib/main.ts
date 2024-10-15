@@ -129,7 +129,7 @@ export interface DeclarationNode {
   id: string
   kind: string
   title: string
-  summary?: string
+  summary?: Summary
   description?: string
   // since?: string
   // deprecated?: string
@@ -157,6 +157,15 @@ export function declarationNode(): DeclarationNode {
     overloadsBy: undefined,
     tryIt: undefined,
   }
+}
+
+export interface Summary {
+  signature?: Signature
+  text?: string
+}
+
+export function summary(): Summary {
+  return {signature: undefined, text: undefined}
 }
 
 export interface Value {
