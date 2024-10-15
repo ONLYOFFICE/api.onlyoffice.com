@@ -1,5 +1,6 @@
 import {type Declaration, type Type} from "@onlyoffice/library-declaration"
 import {type Signature} from "@onlyoffice/signature"
+import {normalize} from "@onlyoffice/signature/utils.ts"
 import * as description from "./internal/description.ts"
 import * as summary from "./internal/summary.ts"
 
@@ -11,6 +12,7 @@ export function computeDeclaration(d: Declaration, cb: ComputeCallback): void {
   computeType(d, cb)
 
   let s = description.declaration(d)
+  s = normalize(s)
   cb(s)
 
   if (s.length !== 0) {
@@ -18,6 +20,7 @@ export function computeDeclaration(d: Declaration, cb: ComputeCallback): void {
   }
 
   s = summary.declaration(d)
+  s = normalize(s)
   cb(s)
 
   if (s.length !== 0) {
@@ -34,7 +37,8 @@ export function computeType(u: Type, cb: ComputeCallback): void {
   if (!("id" in u) && u.type === "function") {
     if (u.parameters) {
       for (const p of u.parameters) {
-        const s = description.type(p.type)
+        let s = description.type(p.type)
+        s = normalize(s)
         cb(s)
 
         if (s.length !== 0) {
@@ -44,7 +48,8 @@ export function computeType(u: Type, cb: ComputeCallback): void {
     }
 
     if (u.returns) {
-      const s = description.type(u.returns.type)
+      let s = description.type(u.returns.type)
+      s = normalize(s)
       cb(s)
 
       if (s.length !== 0) {
