@@ -403,7 +403,7 @@ function Values(p: ValuesProperties): JSX.Element {
     {v.map((v) => <>
       <SiteGlossary.GlossaryTerm>
         <BadgeGroup>
-          <Badge variant="calm">{v.identifier}</Badge>
+          {v.identifier && <Badge variant="calm">{v.identifier}</Badge>}
           {v.signature && <Badge variant="transparent">
             <Signature variant="inline" signature={v.signature} />
           </Badge>}
