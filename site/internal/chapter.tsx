@@ -1,6 +1,11 @@
 import {Sitemap, type SitemapEntity} from "@onlyoffice/eleventy-sitemap"
 import {type ChildrenIncludable} from "@onlyoffice/preact-types"
 import {
+  Article,
+  ArticleBreadcrumb,
+  ArticleContent,
+  ArticleHelp,
+  ArticleSidebar,
   ChapterContent,
   Chapter as SChapter,
   ChapterNavigation as SChapterNavigation,
@@ -143,21 +148,30 @@ export function Chapter(p: ChapterProperties): JSX.Element {
       <ChapterNavigation level={2} url={p.url} />
     </SChapterNavigation>
     <ChapterContent>
-      <Breadcrumb url={p.url} />
-      <SearchHidable>
-        <Content>
-          <h1>{ud.title}</h1>
-          {p.children}
-          {ud.tableOfContents && <TableOfContents url={p.url} depth={1} />}
-        </Content>
-      </SearchHidable>
-      <SearchOutput>
-        <Content>
-          <h1 aria-live="polite"><span data-search-container-counter /> Results</h1>
-          <ol data-search-container-results />
-        </Content>
-      </SearchOutput>
-      {ud.help && <Help current={p.url} />}
+      <Article>
+        <ArticleBreadcrumb>
+          <Breadcrumb url={p.url} />
+        </ArticleBreadcrumb>
+        <ArticleSidebar />
+        <ArticleContent>
+          <SearchHidable>
+            <Content>
+              <h1>{ud.title}</h1>
+              {p.children}
+              {ud.tableOfContents && <TableOfContents url={p.url} depth={1} />}
+            </Content>
+          </SearchHidable>
+          <SearchOutput>
+            <Content>
+              <h1 aria-live="polite"><span data-search-container-counter /> Results</h1>
+              <ol data-search-container-results />
+            </Content>
+          </SearchOutput>
+        </ArticleContent>
+        <ArticleHelp>
+          {ud.help && <Help current={p.url} />}
+        </ArticleHelp>
+      </Article>
     </ChapterContent>
   </SChapter>
 }
