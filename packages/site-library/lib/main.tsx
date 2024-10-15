@@ -1,7 +1,8 @@
-import type * as Tokenizer from "@onlyoffice/declaration-tokenizer"
 import type * as LibraryDeclaration from "@onlyoffice/library-declaration"
 import {type ChildrenIncludable} from "@onlyoffice/preact-types"
-import {Badge} from "@onlyoffice/ui-kit"
+import * as SiteGlossary from "@onlyoffice/site-glossary"
+import {Signature} from "@onlyoffice/site-signature"
+import {Badge, BadgeCaption, BadgeGroup} from "@onlyoffice/ui-kit"
 import {type ComponentChildren, Fragment, type JSX, createContext, h} from "preact"
 import {useContext} from "preact/hooks"
 
@@ -278,9 +279,8 @@ function FunctionTypeDeclaration(p: TypeDeclarationProperties): JSX.Element {
     </>}
     {t.returns && <>
       <Heading for="Returns" />
-      {t.returns.signature && <code>
-        <Tokens tokens={t.returns.signature} />
-      </code>}
+      {t.returns.signature &&
+        <Signature variant="inline" signature={t.returns.signature} />}
       {t.returns.description && <Description>
         {t.returns.description}
       </Description>}
@@ -342,10 +342,6 @@ function ObjectTypeDeclaration(p: TypeDeclarationProperties): JSX.Element {
   </>
 }
 
-interface SignatureProperties {
-  signature: Tokenizer.Token[]
-}
-
 interface ExamplesProperties {
   examples: LibraryDeclaration.Example[]
 }
@@ -363,16 +359,6 @@ function Examples(p: ExamplesProperties): JSX.Element {
   </>
 }
 
-function Signature(p: SignatureProperties): JSX.Element {
-  const {signature: s} = p
-
-  return <pre>
-    <code>
-      <Tokens tokens={s} />
-    </code>
-  </pre>
-}
-
 interface ReferenceProperties {
   references: LibraryDeclaration.Reference[]
 }
@@ -381,22 +367,25 @@ function References(p: ReferenceProperties): JSX.Element {
   const {references: r} = p
   const {Description, onRetrieve} = useContext(ctx)
 
-  return <dl>
+  return <SiteGlossary.Glossary>
     {r.map((r) => {
       const d = onRetrieve(r)
       if (!d) {
         return <></>
       }
       return <>
-        {d.signature && <dt>
-          {d.identifier}
-        </dt>}
-        {d.summary && <dd>
+        {d.signature && <SiteGlossary.GlossaryTerm>
+          <SiteGlossary.GlossaryName>
+            {d.identifier}
+          </SiteGlossary.GlossaryName>
+          <Signature variant="inline" signature={d.signature} />
+        </SiteGlossary.GlossaryTerm>}
+        {d.summary && <SiteGlossary.GlossaryDetails>
           <Description>{d.summary}</Description>
-        </dd>}
+        </SiteGlossary.GlossaryDetails>}
       </>
     })}
-  </dl>
+  </SiteGlossary.Glossary>
 }
 
 interface ValuesProperties {
@@ -407,105 +396,27 @@ function Values(p: ValuesProperties): JSX.Element {
   const {values: v} = p
   const {Description} = useContext(ctx)
 
-  return <dl>
+  return <SiteGlossary.Glossary>
     {v.map((v) => <>
-      <dt>
-        {v.identifier}
-        {v.signature && <>
-          {" "}
-          <Badge>
-            <Tokens tokens={v.signature} />
-          </Badge>
-        </>}
-      </dt>
-      <dd>
+      <SiteGlossary.GlossaryTerm>
+        <BadgeGroup>
+          <Badge variant="calm">{v.identifier}</Badge>
+          {v.signature && <Badge variant="transparent">
+            <Signature variant="inline" signature={v.signature} />
+          </Badge>}
+          {v.default && <Badge variant="neutral">
+            <BadgeCaption>
+              default
+            </BadgeCaption>
+            {v.default.value}
+          </Badge>}
+        </BadgeGroup>
+      </SiteGlossary.GlossaryTerm>
+      <SiteGlossary.GlossaryDetails>
         {v.description && <Description>{v.description}</Description>}
-        {v.default && <p>Default: <code>{String(v.default.value)}</code></p>}
-      </dd>
+      </SiteGlossary.GlossaryDetails>
     </>)}
-  </dl>
-}
-
-interface TokensProperties {
-  tokens: Tokenizer.Token[]
-}
-
-function Tokens(p: TokensProperties): JSX.Element {
-  const {tokens: t} = p
-  return <>{t.map((t) => <Token token={t} />)}</>
-}
-
-interface TokenProperties {
-  token: Tokenizer.Token
-}
-
-function Token(p: TokenProperties): JSX.Element {
-  const {token: t} = p
-
-  switch (t.type) {
-  case "decorator":
-    return <DecoratorToken token={t} />
-  case "identifier":
-    return <IdentifierToken token={t} />
-  case "keyword":
-    return <KeywordToken token={t} />
-  case "reference":
-    return <ReferenceToken token={t} />
-  case "text":
-    return <TextToken token={t} />
-  default:
-    return <></>
-  }
-}
-
-interface DecoratorTokenProperties {
-  token: Tokenizer.DecoratorToken
-}
-
-function DecoratorToken(p: DecoratorTokenProperties): JSX.Element {
-  const {token: t} = p
-  return <span class="dt-de">{t.text}</span>
-}
-
-interface IdentifierTokenProperties {
-  token: Tokenizer.IdentifierToken
-}
-
-function IdentifierToken(p: IdentifierTokenProperties): JSX.Element {
-  const {token: t} = p
-  return <span class="dt-id">{t.text}</span>
-}
-
-interface KeywordTokenProperties {
-  token: Tokenizer.KeywordToken
-}
-
-function KeywordToken(p: KeywordTokenProperties): JSX.Element {
-  const {token: t} = p
-  return <span class="dt-ke">{t.text}</span>
-}
-
-interface ReferenceTokenProperties {
-  token: Tokenizer.ReferenceToken
-}
-
-function ReferenceToken(p: ReferenceTokenProperties): JSX.Element {
-  const {token: t} = p
-  const {onLink} = useContext(ctx)
-  const u = onLink(t)
-  if (u) {
-    return <a class="dt-re" href={u}>{t.text}</a>
-  }
-  return <span class="dt-re">{t.text}</span>
-}
-
-interface TextTokenProperties {
-  token: Tokenizer.TextToken
-}
-
-function TextToken(p: TextTokenProperties): JSX.Element {
-  const {token: t} = p
-  return <>{t.text}</>
+  </SiteGlossary.Glossary>
 }
 
 interface HeadingProperties {

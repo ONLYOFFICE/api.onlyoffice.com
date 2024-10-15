@@ -1,13 +1,15 @@
-// todo: add double quotes for string literals.
-// todo: fix the array type.
-// todo: add new lines for the long types.
+import type * as Library from "@onlyoffice/library-declaration"
+import {
+  KeywordToken,
+  Reference,
+  type Signature,
+  StringToken,
+  TextToken,
+  type Token,
+  TypeToken,
+} from "@onlyoffice/signature"
 
-import type * as Tokenizer from "@onlyoffice/declaration-tokenizer"
-// eslint-disable-next-line no-duplicate-imports
-import * as tokenizer from "@onlyoffice/declaration-tokenizer"
-import type * as Library from "./main.ts"
-
-export function declaration(d: Library.Declaration): Tokenizer.Token[] {
+export function declaration(d: Library.Declaration): Signature {
   switch (d.kind) {
   case "class":
     return classDeclaration(d)
@@ -26,42 +28,42 @@ export function declaration(d: Library.Declaration): Tokenizer.Token[] {
   }
 }
 
-export function classDeclaration(d: Library.ClassDeclaration): Tokenizer.Token[] {
-  const a: Tokenizer.Token[] = []
+export function classDeclaration(d: Library.ClassDeclaration): Signature {
+  const a: Signature = []
 
-  let t: Tokenizer.Token
+  let t: Token
 
-  t = keywordToken()
+  t = new KeywordToken()
   t.text = "class"
   a.push(t)
 
-  t = textToken()
+  t = new TextToken()
   t.text = " "
   a.push(t)
 
-  t = identifierToken()
+  t = new IdentifierToken()
   t.text = d.identifier
   a.push(t)
 
   if (d.extends) {
-    t = textToken()
+    t = new TextToken()
     t.text = " "
     a.push(t)
 
-    t = keywordToken()
+    t = new KeywordToken()
     t.text = "extends"
     a.push(t)
 
-    t = textToken()
+    t = new TextToken()
     t.text = " "
     a.push(t)
 
     for (const e of d.extends) {
-      t = referenceToken()
+      t = new ReferenceToken()
       t.id = e.id
       a.push(t)
 
-      t = textToken()
+      t = new TextToken()
       t.text = ", "
       a.push(t)
     }
@@ -72,14 +74,10 @@ export function classDeclaration(d: Library.ClassDeclaration): Tokenizer.Token[]
   return a
 }
 
-export function constructorDeclaration(d: Library.ConstructorDeclaration): Tokenizer.Token[] {
-  const a: Tokenizer.Token[] = []
+export function constructorDeclaration(d: Library.ConstructorDeclaration): Signature {
+  const a: Signature = []
 
-  let t: Tokenizer.Token
-
-  // For consistency
-  // eslint-disable-next-line prefer-const
-  t = identifierToken()
+  const t = new IdentifierToken()
   t.text = d.identifier
   a.push(t)
 
@@ -89,20 +87,20 @@ export function constructorDeclaration(d: Library.ConstructorDeclaration): Token
   return a
 }
 
-export function eventDeclaration(d: Library.EventDeclaration): Tokenizer.Token[] {
-  const a: Tokenizer.Token[] = []
+export function eventDeclaration(d: Library.EventDeclaration): Signature {
+  const a: Signature = []
 
-  let t: Tokenizer.Token
+  let t: Token
 
-  t = decoratorToken()
+  t = new DecoratorToken()
   t.text = "(event)"
   a.push(t)
 
-  t = textToken()
+  t = new TextToken()
   t.text = " "
   a.push(t)
 
-  t = identifierToken()
+  t = new IdentifierToken()
   t.text = d.identifier
   a.push(t)
 
@@ -112,16 +110,16 @@ export function eventDeclaration(d: Library.EventDeclaration): Tokenizer.Token[]
   return a
 }
 
-export function methodDeclaration(d: Library.MethodDeclaration): Tokenizer.Token[] {
-  const a: Tokenizer.Token[] = []
+export function methodDeclaration(d: Library.MethodDeclaration): Signature {
+  const a: Signature = []
 
-  let t: Tokenizer.Token
+  let t: Token
 
-  t = textToken()
+  t = new TextToken()
   t.text = " "
   a.push(t)
 
-  t = identifierToken()
+  t = new IdentifierToken()
   t.text = d.identifier
   a.push(t)
 
@@ -132,16 +130,16 @@ export function methodDeclaration(d: Library.MethodDeclaration): Tokenizer.Token
   return f.format(a)
 }
 
-export function propertyDeclaration(d: Library.PropertyDeclaration): Tokenizer.Token[] {
-  const a: Tokenizer.Token[] = []
+export function propertyDeclaration(d: Library.PropertyDeclaration): Signature {
+  const a: Signature = []
 
-  let t: Tokenizer.Token
+  let t: Token
 
-  t = decoratorToken()
+  t = new DecoratorToken()
   t.text = "(property)"
   a.push(t)
 
-  t = textToken()
+  t = new TextToken()
   t.text = " "
   a.push(t)
 
@@ -151,12 +149,12 @@ export function propertyDeclaration(d: Library.PropertyDeclaration): Tokenizer.T
   return a
 }
 
-export function typeDeclaration(d: Library.TypeDeclaration): Tokenizer.Token[] {
-  const a: Tokenizer.Token[] = []
+export function typeDeclaration(d: Library.TypeDeclaration): Signature {
+  const a: Signature = []
 
-  let t: Tokenizer.Token
+  let t: Token
 
-  t = decoratorToken()
+  t = new DecoratorToken()
   t.text += "("
   if ("id" in d.type) {
     t.text += d.type.id
@@ -166,15 +164,15 @@ export function typeDeclaration(d: Library.TypeDeclaration): Tokenizer.Token[] {
   t.text += ")"
   a.push(t)
 
-  t = textToken()
+  t = new TextToken()
   t.text = " "
   a.push(t)
 
-  t = identifierToken()
+  t = new IdentifierToken()
   t.text = d.identifier
   a.push(t)
 
-  t = textToken()
+  t = new TextToken()
   t.text = ": "
   a.push(t)
 
@@ -184,16 +182,16 @@ export function typeDeclaration(d: Library.TypeDeclaration): Tokenizer.Token[] {
   return a
 }
 
-export function value(v: Library.Value): Tokenizer.Token[] {
-  const a: Tokenizer.Token[] = []
+export function value(v: Library.Value): Signature {
+  const a: Signature = []
 
-  let u: Tokenizer.Token
+  let u: Token
 
-  u = textToken()
+  u = new TextToken()
   u.text = v.identifier
   a.push(u)
 
-  u = textToken()
+  u = new TextToken()
   u.text = ": "
   a.push(u)
 
@@ -201,11 +199,11 @@ export function value(v: Library.Value): Tokenizer.Token[] {
   a.push(...b)
 
   if (v.default) {
-    u = textToken()
+    u = new TextToken()
     u.text = " = "
     a.push(u)
 
-    u = textToken()
+    u = new TextToken()
     u.text = String(v.default.value)
     a.push(u)
   }
@@ -213,9 +211,9 @@ export function value(v: Library.Value): Tokenizer.Token[] {
   return a
 }
 
-export function type(t: Library.Type): Tokenizer.Token[] {
+export function type(t: Library.Type): Signature {
   if ("id" in t) {
-    const u = referenceToken()
+    const u = new ReferenceToken()
     u.id = t.id
     return [u]
   }
@@ -244,21 +242,21 @@ export function type(t: Library.Type): Tokenizer.Token[] {
   }
 }
 
-export function anyType(t: Library.AnyType): Tokenizer.Token[] {
+export function anyType(t: Library.AnyType): Signature {
   return literalType({type: "literal", value: t.type})
 }
 
-export function arrayType(t: Library.ArrayType): Tokenizer.Token[] {
-  const a: Tokenizer.Token[] = []
+export function arrayType(t: Library.ArrayType): Signature {
+  const a: Signature = []
 
-  let u: Tokenizer.Token
+  let u: Token
 
   if (t.items) {
     for (const e of t.items) {
       const b = type(e)
       a.push(...b)
 
-      const u = textToken()
+      const u = new TextToken()
       u.text = ", "
       a.push(u)
     }
@@ -266,29 +264,29 @@ export function arrayType(t: Library.ArrayType): Tokenizer.Token[] {
     a.pop()
 
     if (t.items.length > 1 || "type" in t.items[0] && t.items[0].type === "union") {
-      u = textToken()
+      u = new TextToken()
       u.text = "("
       a.unshift(u)
 
-      u = textToken()
+      u = new TextToken()
       u.text = ")"
       a.push(u)
     }
   }
 
-  u = textToken()
+  u = new TextToken()
   u.text = "[]"
   a.push(u)
 
   return a
 }
 
-export function functionType(t: Library.FunctionType): Tokenizer.Token[] {
-  const a: Tokenizer.Token[] = []
+export function functionType(t: Library.FunctionType): Signature {
+  const a: Signature = []
 
-  let u: Tokenizer.Token
+  let u: Token
 
-  u = textToken()
+  u = new TextToken()
   u.text = "("
   a.push(u)
 
@@ -297,7 +295,7 @@ export function functionType(t: Library.FunctionType): Tokenizer.Token[] {
       const b = value(e)
       a.push(...b)
 
-      const u = textToken()
+      const u = new TextToken()
       u.text = ", "
       a.push(u)
     }
@@ -305,12 +303,12 @@ export function functionType(t: Library.FunctionType): Tokenizer.Token[] {
     a.pop()
   }
 
-  u = textToken()
+  u = new TextToken()
   u.text = ")"
   a.push(u)
 
   if (t.returns) {
-    u = textToken()
+    u = new TextToken()
     u.text = ": "
     a.push(u)
 
@@ -321,10 +319,10 @@ export function functionType(t: Library.FunctionType): Tokenizer.Token[] {
   return a
 }
 
-export function literalType(t: Library.LiteralType): Tokenizer.Token[] {
-  const a: Tokenizer.Token[] = []
+export function literalType(t: Library.LiteralType): Signature {
+  const a: Signature = []
 
-  const u = textToken()
+  const u = new TextToken()
   if (typeof t.value === "string") {
     u.text = `"${t.value}"`
   } else {
@@ -335,24 +333,24 @@ export function literalType(t: Library.LiteralType): Tokenizer.Token[] {
   return a
 }
 
-export function objectType(t: Library.ObjectType): Tokenizer.Token[] {
+export function objectType(t: Library.ObjectType): Signature {
   return literalType({type: "literal", value: t.type})
 }
 
-export function passthroughType(t: Library.PassthroughType): Tokenizer.Token[] {
+export function passthroughType(t: Library.PassthroughType): Signature {
   return literalType({type: "literal", value: t.value})
 }
 
-export function unionType(t: Library.UnionType): Tokenizer.Token[] {
-  const a: Tokenizer.Token[] = []
+export function unionType(t: Library.UnionType): Signature {
+  const a: Signature = []
 
-  let u: Tokenizer.Token
+  let u: Token
 
   for (const e of t.types) {
     const b = type(e)
     a.push(...b)
 
-    u = textToken()
+    u = new TextToken()
     u.text = " | "
     a.push(u)
   }
@@ -362,32 +360,12 @@ export function unionType(t: Library.UnionType): Tokenizer.Token[] {
   return a
 }
 
-export function unknownType(t: Library.UnknownType): Tokenizer.Token[] {
+export function unknownType(t: Library.UnknownType): Signature {
   return literalType({type: "literal", value: t.type})
 }
 
-export function voidType(t: Library.VoidType): Tokenizer.Token[] {
+export function voidType(t: Library.VoidType): Signature {
   return literalType({type: "literal", value: t.type})
-}
-
-function decoratorToken(): Tokenizer.DecoratorToken {
-  return new tokenizer.DecoratorToken()
-}
-
-function identifierToken(): Tokenizer.IdentifierToken {
-  return new tokenizer.IdentifierToken()
-}
-
-function keywordToken(): Tokenizer.KeywordToken {
-  return new tokenizer.KeywordToken()
-}
-
-function textToken(): Tokenizer.TextToken {
-  return new tokenizer.TextToken()
-}
-
-function referenceToken(): Tokenizer.ReferenceToken {
-  return new tokenizer.ReferenceToken()
 }
 
 export class Formatter {
@@ -395,7 +373,7 @@ export class Formatter {
   limit = 100
   newline = "\n"
 
-  format(a: Tokenizer.Token[]): Tokenizer.Token[] {
+  format(a: Signature): Signature {
     const f = [...a]
 
     let l = 0
@@ -436,10 +414,10 @@ export class Formatter {
       }
     }
 
-    let b = textToken()
+    let b = new TextToken()
     b.text = this.newline
 
-    let t = textToken()
+    let t = new TextToken()
     t.text = " ".repeat(this.indent)
 
     f.splice(s + 1, 0, b, t)
@@ -447,18 +425,18 @@ export class Formatter {
 
     for (let i = s; i <= e; i += 1) {
       if (f[i].text === ", ") {
-        b = textToken()
+        b = new TextToken()
         b.text = "\n"
-        t = textToken()
+        t = new TextToken()
         t.text = " ".repeat(this.indent)
         f.splice(i + 1, 0, b, t)
         e += 2
       }
     }
 
-    const c = textToken()
+    const c = new TextToken()
     c.text = ", "
-    b = textToken()
+    b = new TextToken()
     b.text = "\n"
     f.splice(e, 0, c, b)
 

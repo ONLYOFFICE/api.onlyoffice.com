@@ -13,11 +13,10 @@
 
 import {type Example} from "@onlyoffice/declaration-code-example"
 import {type Reference} from "@onlyoffice/declaration-reference"
-import {type Token} from "@onlyoffice/declaration-tokenizer"
+import {type Signature} from "@onlyoffice/signature"
 
 export {type Example} from "@onlyoffice/declaration-code-example"
 export {type Reference, reference} from "@onlyoffice/declaration-reference"
-export {type Token} from "@onlyoffice/declaration-tokenizer"
 
 export type Declaration = DeclarationMap[keyof DeclarationMap]
 
@@ -136,7 +135,7 @@ export interface DeclarationNode {
   // deprecated?: string
   parent?: Reference
   identifier: string
-  signature?: Token[]
+  signature?: Signature
   examples?: Example[]
   overloads?: Reference[]
   overloadsBy?: Reference[]
@@ -162,7 +161,7 @@ export function declarationNode(): DeclarationNode {
 
 export interface Value {
   identifier: string
-  signature?: Token[]
+  signature?: Signature
   description?: string
   default?: LiteralType
   type: Type
@@ -220,7 +219,7 @@ export function functionType(t: TypeNode): FunctionType {
 }
 
 export interface FunctionReturns {
-  signature?: Token[]
+  signature?: Signature
   description?: string
   type: Type
 }
