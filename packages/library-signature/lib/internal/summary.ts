@@ -83,10 +83,6 @@ export function eventDeclaration(d: Library.EventDeclaration): Signature {
 export function methodDeclaration(d: Library.MethodDeclaration): Signature {
   const a: Signature = []
 
-  const t = new TextToken()
-  t.text = " "
-  a.push(t)
-
   const b = functionType(d.type)
   a.push(...b)
 
