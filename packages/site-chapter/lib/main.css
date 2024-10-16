@@ -146,7 +146,9 @@ body:has(chapter-container:state(navigation-visible)) {
   block-size: 100%;
   margin-inline: auto;
   padding-block: var(--chapter-article-padding-block);
+}
 
+.chapter .article:not(.article_variant_narrow) {
   @media (--size-viewport-width-xlarge) {
     --article-variant-is-narrow: var(--false);
     --article-variant-is-wide: var(--true);
