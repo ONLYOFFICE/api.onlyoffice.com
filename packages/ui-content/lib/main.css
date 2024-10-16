@@ -195,13 +195,13 @@
   padding-inline-start: var(--base-size-16);
 } */
 
-.content hr {
+/* .content hr {
   background-color: var(--color-border-default);
   block-size: var(--size-border-width-thin);
   border: 0;
   margin-block-end: var(--base-size-24);
   margin-block-start: var(--base-size-24);
-}
+} */
 
 /* .content-tab-container {
   display: block;
