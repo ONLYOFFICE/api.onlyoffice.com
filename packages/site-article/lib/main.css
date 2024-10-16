@@ -60,8 +60,11 @@
 }
 
 .article__breadcrumb {
+  font-size: var(--text-caption-font-size);
+  font-weight: var(--text-caption-font-weight);
   grid-column: 1;
   grid-row: 1;
+  line-height: var(--text-caption-line-height);
 }
 
 .article__sidebar {
