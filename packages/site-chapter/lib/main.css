@@ -99,6 +99,7 @@ body:has(chapter-container:state(navigation-visible)) {
   grid-row: 1;
   inset-block-start: var(--chapter-navigation-inset-block-start);
   overflow-y: auto;
+  padding-block: var(--base-size-32); /* todo: temp, remove it */
   padding-inline: var(--chapter-navigation-padding-inline);
 
   @media not (--size-viewport-width-medium) {
