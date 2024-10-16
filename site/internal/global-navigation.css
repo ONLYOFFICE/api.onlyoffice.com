@@ -107,7 +107,7 @@
 .global-navigation__menu-link {
   color: var(--color-foreground-default);
   display: block;
-  font-size: var(--text-body-font-size-small);
+  font-size: var(--base-text-font-size-12);
   font-weight: var(--base-text-font-weight-semi-bold);
   inline-size: min-content;
   letter-spacing: var(--base-text-letter-spacing-0-04);
@@ -220,9 +220,9 @@
   text-decoration: none;
 
   @media (--size-viewport-width-medium) {
-    font-size: var(--text-body-font-size-large);
+    font-size: var(--text-body-font-size-medium);
     font-weight: var(--base-text-font-weight-semi-bold);
-    line-height: var(--text-body-line-height-large);
+    line-height: var(--text-body-line-height-medium);
   }
 
   &:focus-visible,
