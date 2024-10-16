@@ -9,7 +9,9 @@ export interface ComputeCallback {
 }
 
 export function computeDeclaration(d: Declaration, cb: ComputeCallback): void {
-  computeType(d, cb)
+  if ("type" in d) {
+    computeType(d.type, cb)
+  }
 
   let s = description.declaration(d)
   s = normalize(s)
@@ -34,7 +36,11 @@ export function computeDeclaration(d: Declaration, cb: ComputeCallback): void {
 }
 
 export function computeType(u: Type, cb: ComputeCallback): void {
-  if (!("id" in u) && u.type === "function") {
+  if ("id" in u) {
+    return
+  }
+
+  if (u.type === "function") {
     if (u.parameters) {
       for (const p of u.parameters) {
         let s = description.type(p.type)
