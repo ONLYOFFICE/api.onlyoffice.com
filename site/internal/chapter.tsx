@@ -176,7 +176,14 @@ function Root(p: ChapterProperties): JSX.Element {
       <ChapterNavigation level={2} url={p.url} />
     </Site.ChapterNavigation>
     <Site.ChapterContent>
-      <Site.Article>
+      <Site.Article
+        variant={(() => {
+          if (ue.data.tempChapterNext) {
+            return "wide"
+          }
+          return "narrow"
+        })()}
+      >
         <Site.ArticleBreadcrumb>
           <Breadcrumb url={p.url} />
         </Site.ArticleBreadcrumb>
