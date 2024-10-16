@@ -150,8 +150,8 @@
 }
 
 .page-footer {
-  font-size: var(--text-body-font-size-small);
-  line-height: var(--text-body-line-height-small);
+  font-size: var(--text-caption-font-size);
+  line-height: var(--text-caption-line-height);
   padding-inline: var(--base-size-16);
 
   @media (--size-viewport-width-small) {
