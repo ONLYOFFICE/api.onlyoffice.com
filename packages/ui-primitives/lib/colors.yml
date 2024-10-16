@@ -193,7 +193,8 @@ regular:
       constant-other-reference-link: "#a5d6ff"
 
     temp-signature:
-      background: "#404040"
+      # background: "#404040"
+      background: background.muted
       entity: "#E09094"
       keyword: "#F2B4EA"
       parameter: "#ACC8F5"
@@ -631,7 +632,8 @@ regular:
       constant-other-reference-link: "#0a3069"
 
     temp-signature:
-      background: "#FAFBFC"
+      # background: "#FAFBFC"
+      background: background.muted
       entity: "#C73B41"
       keyword: "#A32A8A"
       parameter: "#3D63DD"
