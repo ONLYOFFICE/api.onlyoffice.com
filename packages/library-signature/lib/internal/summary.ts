@@ -106,16 +106,6 @@ export function propertyDeclaration(d: Library.PropertyDeclaration): Signature {
 export function typeDeclaration(d: Library.TypeDeclaration): Signature {
   const a: Signature = []
 
-  let t: Token
-
-  t = new TextToken()
-  t.text = " "
-  a.push(t)
-
-  t = new TextToken()
-  t.text = ": "
-  a.push(t)
-
   const b = type(d.type)
   a.push(...b)
 

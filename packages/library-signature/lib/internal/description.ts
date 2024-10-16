@@ -166,10 +166,6 @@ export function typeDeclaration(d: Library.TypeDeclaration): Signature {
   t.text = d.identifier
   a.push(t)
 
-  t = new TextToken()
-  t.text = ": "
-  a.push(t)
-
   const b = type(d.type)
   a.push(...b)
 
