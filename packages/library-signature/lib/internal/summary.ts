@@ -38,10 +38,6 @@ export function classDeclaration(d: Library.ClassDeclaration): Signature {
     t.text = " "
     a.push(t)
 
-    t = new TextToken()
-    t.text = " "
-    a.push(t)
-
     for (const e of d.extends) {
       const r = new Reference()
       r.id = e.id
