@@ -1,5 +1,13 @@
 The document info section allows to change additional parameters for the document (document owner, folder where the document is stored, uploading date, sharing settings).
 
+## Summary
+
+| Name                  | Type    | Description                                                 |
+| --------------------- | ------- | ----------------------------------------------------------- |
+| [author](#author)     | string  | Defines the name of the document author/creator.            |
+| [created](#created)   | string  | Defines the document creation date.                         |
+| [favorite](#favorite) | boolean | Defines the highlighting state of the Favorite icon.        |
+
 ## author
 
 Defines the name of the document author/creator. Deprecated since version 5.4, please use [owner](#owner) instead.
