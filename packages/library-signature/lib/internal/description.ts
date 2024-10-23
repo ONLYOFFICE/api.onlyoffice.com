@@ -193,8 +193,28 @@ export function value(v: Library.Value): Signature {
   u.text = ": "
   a.push(u)
 
+  if (!("id" in v.type) && v.type.type === "function") {
+    u = new TextToken()
+    u.text = "("
+    a.push(u)
+  }
+
   const b = type(v.type)
   a.push(...b)
+
+  if (!("id" in v.type) && v.type.type === "function") {
+    u = new TextToken()
+    u.text = " => "
+    a.push(u)
+
+    u = new TypeToken()
+    u.text = "void"
+    a.push(u)
+
+    u = new TextToken()
+    u.text = ")"
+    a.push(u)
+  }
 
   if (v.default) {
     u = new TextToken()
