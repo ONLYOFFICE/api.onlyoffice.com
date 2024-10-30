@@ -193,8 +193,39 @@ export function value(v: Library.Value): Signature {
   u.text = ": "
   a.push(u)
 
+  if (v.default && !("id" in v.type) && v.type.type === "function") {
+    u = new TextToken()
+    u.text = "("
+    a.push(u)
+  }
+
   const b = type(v.type)
   a.push(...b)
+
+  if (!("id" in v.type) && v.type.type === "function") {
+    if (v.type.returns) {
+      a.splice(-2, 2)
+    }
+
+    u = new TextToken()
+    u.text = " => "
+    a.push(u)
+
+    if (v.type.returns) {
+      const b = type(v.type.returns.type)
+      a.push(...b)
+    } else {
+      u = new TypeToken()
+      u.text = "void"
+      a.push(u)
+    }
+  }
+
+  if (v.default && !("id" in v.type) && v.type.type === "function") {
+    u = new TextToken()
+    u.text = ")"
+    a.push(u)
+  }
 
   if (v.default) {
     u = new TextToken()
