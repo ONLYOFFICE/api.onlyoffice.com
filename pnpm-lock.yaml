@@ -3609,6 +3609,25 @@ importers:
 
   packages/theme-guard-css: {}
 
+  packages/theme-guard-preact:
+    dependencies:
+      '@onlyoffice/preact-elements':
+        specifier: workspace:^
+        version: link:../preact-elements
+      clsx:
+        specifier: 2.1.0
+        version: 2.1.0
+      preact:
+        specifier: 10.22.0
+        version: 10.22.0
+      typescript:
+        specifier: 5.4.5
+        version: 5.4.5
+    devDependencies:
+      rimraf:
+        specifier: 6.0.1
+        version: 6.0.1
+
   packages/ui-article-card:
     dependencies:
       '@onlyoffice/preact-types':
