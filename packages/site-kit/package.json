@@ -36,6 +36,7 @@
     "@onlyoffice/site-theme-switcher": "workspace:^",
     "@onlyoffice/site-toc": "workspace:^",
     "@onlyoffice/theme-guard-css": "workspace:^",
+    "@onlyoffice/theme-guard-preact": "workspace:^",
     "preact": "10.22.0",
     "typescript": "5.4.5"
   },

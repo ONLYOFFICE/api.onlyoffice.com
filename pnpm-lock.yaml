@@ -3009,6 +3009,9 @@ importers:
       '@onlyoffice/theme-guard-css':
         specifier: workspace:^
         version: link:../theme-guard-css
+      '@onlyoffice/theme-guard-preact':
+        specifier: workspace:^
+        version: link:../theme-guard-preact
       preact:
         specifier: 10.22.0
         version: 10.22.0
