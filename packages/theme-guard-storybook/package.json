@@ -2,7 +2,7 @@
   "name": "@onlyoffice/theme-guard-storybook",
   "type": "module",
   "private": true,
-  "main": "lib/main.tsx",
+  "main": "lib/main.story.tsx",
   "scripts": {
     "clean": "rimraf node_modules",
     "test:types": "tsc",

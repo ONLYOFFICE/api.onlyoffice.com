@@ -3,7 +3,7 @@ import {type Meta, type StoryObj} from "@storybook/preact"
 import {h} from "preact"
 
 export default {
-  title: "Site / Theme Guard",
+  title: "Site Utilities / Theme Guard",
 } satisfies Meta
 
 export const Default: StoryObj = {
@@ -16,6 +16,8 @@ export const Default: StoryObj = {
     },
   },
   render() {
-    return <ThemeGuard>Default</ThemeGuard>
+    return <ThemeGuard>
+      <div>Default</div>
+    </ThemeGuard>
   },
 }
