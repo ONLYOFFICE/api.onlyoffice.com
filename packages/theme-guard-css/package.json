@@ -1,0 +1,6 @@
+{
+  "name": "@onlyoffice/theme-guard-css",
+  "type": "module",
+  "private": true,
+  "main": "lib/main.css"
+}
