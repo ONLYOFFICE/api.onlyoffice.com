@@ -16,6 +16,7 @@ export default {
   stories: [
     "../../packages/site-*/lib/*.story.tsx",
     "../../packages/ui-*/lib/*.story.tsx",
+    "../../packages/*-storybook/lib/*.story.tsx",
   ],
   staticDirs: [
     {from: "../../packages/pagefind-fixtures/dist/pagefind", to: "pagefind"},

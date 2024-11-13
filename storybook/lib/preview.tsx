@@ -56,6 +56,7 @@ export default {
           "Site Regions",
           "Site Composites",
           "Site Patterns",
+          "Site Utilities",
           "UI",
           "UI Foundation",
           "UI Assets",
