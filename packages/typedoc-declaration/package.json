@@ -1,0 +1,28 @@
+{
+  "name": "@onlyoffice/typedoc-declaration",
+  "type": "module",
+  "private": true,
+  "main": "lib/main.ts",
+  "scripts": {
+    "clean": "rimraf coverage node_modules",
+    "test:types": "tsc",
+    "test:unit": "c8 --config ../../c8.config.json tsx node_modules/uvu/bin.js lib ^.*\\.test\\.ts$",
+    "test": "pnpm test:types && pnpm test:unit"
+  },
+  "dependencies": {
+    "@onlyoffice/mdast-util-eslint": "workspace:^",
+    "@onlyoffice/mdast-util-first-sentence": "workspace:^",
+    "mdast-util-from-markdown": "2.0.0",
+    "mdast-util-to-markdown": "2.1.0",
+    "remark-strip-html": "1.0.2",
+    "typedoc": "0.26.11",
+    "typescript": "5.4.5"
+  },
+  "devDependencies": {
+    "@types/node": "20.12.12",
+    "c8": "9.1.0",
+    "rimraf": "6.0.1",
+    "tsx": "4.16.5",
+    "uvu": "0.5.6"
+  }
+}

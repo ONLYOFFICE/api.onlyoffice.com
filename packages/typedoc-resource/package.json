@@ -1,0 +1,18 @@
+{
+  "name": "@onlyoffice/typedoc-resource",
+  "type": "module",
+  "private": true,
+  "main": "lib/main.ts",
+  "scripts": {
+    "clean": "rimraf node_modules",
+    "test:types": "tsc",
+    "test": "pnpm test:types"
+  },
+  "dependencies": {
+    "@onlyoffice/console": "workspace:^",
+    "typescript": "5.4.5"
+  },
+  "devDependencies": {
+    "rimraf": "6.0.1"
+  }
+}
