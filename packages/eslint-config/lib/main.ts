@@ -3,6 +3,8 @@
 // style or you do not. This approach simplifies things, making them easier to
 // manage.
 
+// todo: https://github.com/sindresorhus/eslint-plugin-unicorn/issues/2493/
+
 import eslintOnlyoffice from "@onlyoffice/eslint-plugin"
 import eslintStylistic from "@stylistic/eslint-plugin"
 import {ESLint as ES} from "eslint"
@@ -524,7 +526,6 @@ const c: Config = [
       "unicorn/no-useless-undefined": e,
       "unicorn/no-zero-fractions": e,
       "unicorn/number-literal-case": e,
-      "unicorn/numeric-separators-style": e,
       "unicorn/prefer-add-event-listener": e,
       "unicorn/prefer-array-find": e,
       "unicorn/prefer-array-flat-map": e,
