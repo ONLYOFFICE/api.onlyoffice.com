@@ -116,7 +116,7 @@ export class EntityDeclaration implements DeclarationNode {
   id = ""
   parentId = ""
   children: string[] = []
-  entity: Entity = new NoopEntity()
+  // entity: Entity = new NoopEntity()
 }
 
 export interface DeclarationNode {
@@ -126,63 +126,71 @@ export interface DeclarationNode {
   children: string[]
 }
 
-export type Entity = EntityMap[keyof EntityMap]
-
-export interface EntityMap {
-  class: ClassEntity
-  method: MethodEntity
-  noop: NoopEntity
-  property: PropertyEntity
-  type: TypeEntity
-}
-
-export class ClassEntity implements EntityNode {
-  is = "class" as const
+export class Entity {
   name = ""
-  source = new Source()
-  document = new Document()
-  signature = new Signature()
-}
-
-export class MethodEntity implements EntityNode {
-  is = "method" as const
-  name = ""
-  source = new Source()
-  document = new Document()
-  type: FunctionType | NoopType = new NoopType()
-  signature = new Signature()
-}
-
-export class NoopEntity implements EntityNode {
-  is = "noop" as const
-}
-
-export class PropertyEntity implements EntityNode {
-  is = "property" as const
-  name = ""
-  source = new Source()
+  // source = new Source()
   document = new Document()
   type: Type = new NoopType()
   signature = new Signature()
 }
 
-export class TypeEntity implements EntityNode {
-  is = "type" as const
-  name = ""
-  source = new Source()
-  document = new Document()
-  type: Type = new NoopType()
-  signature = new Signature()
-}
+// export type Entity = EntityMap[keyof EntityMap]
 
-export interface EntityNode {
-  is: string
-}
+// export interface EntityMap {
+//   class: ClassEntity
+//   method: MethodEntity
+//   noop: NoopEntity
+//   property: PropertyEntity
+//   type: TypeEntity
+// }
+
+// export class ClassEntity implements EntityNode {
+//   is = "class" as const
+//   name = ""
+//   // source = new Source()
+//   document = new Document()
+//   signature = new Signature()
+// }
+
+// export class MethodEntity implements EntityNode {
+//   is = "method" as const
+//   name = ""
+//   // source = new Source()
+//   document = new Document()
+//   type: FunctionType | NoopType = new NoopType()
+//   signature = new Signature()
+// }
+
+// export class NoopEntity implements EntityNode {
+//   is = "noop" as const
+// }
+
+// export class PropertyEntity implements EntityNode {
+//   is = "property" as const
+//   name = ""
+//   // source = new Source()
+//   document = new Document()
+//   type: Type = new NoopType()
+//   signature = new Signature()
+// }
+
+// export class TypeEntity implements EntityNode {
+//   is = "type" as const
+//   name = ""
+//   // source = new Source()
+//   document = new Document()
+//   type: Type = new NoopType()
+//   signature = new Signature()
+// }
+
+// export interface EntityNode {
+//   is: string
+// }
 
 export type Type = TypeMap[keyof TypeMap]
 
 export interface TypeMap {
-  enum: EnumType
+  // enum: EnumType
   function: FunctionType // ?
   // object: ObjectType
 
@@ -203,10 +211,10 @@ export class ArrayType implements TypeNode {
   elementType: Type = new NoopType()
 }
 
-export class EnumType implements TypeNode {
-  is = "enum" as const
-  members: EnumMember[] = []
-}
+// export class EnumType implements TypeNode {
+//   is = "enum" as const
+//   members: EnumMember[] = []
+// }
 
 export class FunctionType implements TypeNode {
   is = "function" as const
@@ -274,9 +282,9 @@ export class EnumMember {
   signature = new Signature()
 }
 
-export class Source {
-  url = ""
-}
+// export class Source {
+//   url = ""
+// }
 
 export class DocumentFragment {
   description = ""

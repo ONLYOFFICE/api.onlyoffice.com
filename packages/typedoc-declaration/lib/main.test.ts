@@ -1,15 +1,15 @@
 import path from "node:path"
 import {Application, type JSONOutput} from "typedoc"
 import {test} from "uvu"
+import {inspect} from "node:util"
+import {process} from "./internal.ts"
 
 test("900:", async () => {
   const o = await setup("900")
-  for (const c of o.children) {
-    console.log(c)
-    console.log(c.typeParameters)
-    console.log(c.type)
-  }
-  // console.log(o.children[0].comment.blockTags[2].content)
+  console.log(inspect(o, {depth: null, colors: true}))
+  console.log("\n\n")
+  const r = await process(o)
+  console.log(inspect(r, {depth: null, colors: true}))
 })
 
 test.run()
