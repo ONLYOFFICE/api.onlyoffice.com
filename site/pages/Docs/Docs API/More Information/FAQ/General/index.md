@@ -8,8 +8,6 @@ If you do not know where to start with ONLYOFFICE Docs API, we suggest that you 
 
 If you are interested in a specific programming language example, see the [Language-specific examples](../../../Get%20Started/Language-specific%20examples/index.md) which are available in several programming languages and explain how to install ONLYOFFICE Docs, where to get the example source files and how to install them and connect ONLYOFFICE Docs.
 
-The users who use some document management systems (Nextcloud, ownCloud, SharePoint etc.) and simply want to know how to connect ONLYOFFICE Docs to these systems should visit the [Ready-to-use connectors](../../../Get%20Started/Ready-to-use%20connectors/index.md) section where all the main plugins working with ONLYOFFICE Docs are explained.
-
 The detailed description of every API method is available in the larger **Documentation** module. All the methods are described in the appropriate sections, the list of them is available in the [Advanced parameters](../../../Usage%20API/Advanced%20parameters/index.md).
 
 ## How to find out the current version number of ONLYOFFICE Docs?

@@ -9,7 +9,7 @@ This documentation describes:
 - How to extend the editors functionality with [plugins](../../Usage%20API/Config/Editor/Plugins/index.md) and [customization settings](../../Usage%20API/Config/Editor/Customization/index.md), or limit it to suit your use-case
 - How to manage editors via [Automation API](../../Usage%20API/Automation%20API/index.md)
 - How to use the [WOPI protocol](../../Using%20WOPI/Overview/index.md) to integrate your application with an online office
-- How to integrate ONLYOFFICE Docs into a range of [frameworks](../Frontend%20Frameworks/index.md) and [Document Management Systems (DMSs)](../Ready-to-use%20connectors/index.md)
+- How to integrate ONLYOFFICE Docs into a range of [frameworks](../Frontend%20Frameworks/index.md)
 
 ## What editors can do
 
@@ -19,6 +19,8 @@ ONLYOFFICE Docs provides the following features:
 - collaborating on files with other teammates in real time.
 
 ONLYOFFICE Docs API is used to let the developers integrate the ONLYOFFICE Document/Spreadsheet/Presentation/Pdf Editors into their own web sites and setup and manage the editors. ONLYOFFICE Docs can be customized to look and feel like part of your application or webpage by [customizing the user interface](../../Usage%20API/Config/Editor/Customization/index.md).
+
+ONLYOFFICE Docs can also be integrated into some of the existing [Document Management Systems (DMSs)](https://helpcenter.onlyoffice.com/integration.aspx?from=api) using plugins. These plugins will add the document editing features into the document management system you use quickly and easily without having to write your own code.
 
 ## How to get editors
 
