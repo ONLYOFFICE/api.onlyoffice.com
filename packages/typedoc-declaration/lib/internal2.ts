@@ -144,7 +144,7 @@ export async function createCollection(ctx: Context, o: J.Reflection): R<Entity[
   err = errors.join(err, fe)
   c.push(...fc)
 
-  // shake(o, c)
+  shake(o, c)
 
   if (isSignatureReflection(o)) {
     if (o.parameters) {
@@ -367,7 +367,7 @@ export async function createGroups(o: J.Reflection): R<Group[]> {
 }
 
 function shake(o: J.Reflection, c: Entity[]): void {
-  console.log(o, c)
+  // console.log(o, c)
 }
 
 export class Group {
