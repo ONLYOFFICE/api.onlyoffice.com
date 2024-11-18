@@ -47,8 +47,8 @@ export class Declaration {
 }
 
 export class DeclarationSignature {
-  verbose: unknown[] = []
   concise: unknown[] = []
+  verbose: unknown[] = []
 }
 
 export class DeclarationReturns {
@@ -61,7 +61,7 @@ export class Fragment {
   location: number[] = []
   signature = new FragmentSignature()
   default = ""
-  example = ""
+  // example = ""
   description = ""
   properties: Fragment[] = []
 }

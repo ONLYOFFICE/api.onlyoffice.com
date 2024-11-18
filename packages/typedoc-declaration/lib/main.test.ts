@@ -1,20 +1,20 @@
 import path from "node:path"
-import {Application, type JSONOutput} from "typedoc"
-import {test} from "uvu"
 import {inspect} from "node:util"
-import {process} from "./internal.ts"
+import {Application, type JSONOutput as J} from "typedoc"
+import {test} from "uvu"
+import {createCollection} from "./internal2.ts"
 
 test("900:", async () => {
   const o = await setup("900")
   console.log(inspect(o, {depth: null, colors: true}))
   console.log("\n\n")
-  const r = await process(o)
+  const [r] = await createCollection(o)
   console.log(inspect(r, {depth: null, colors: true}))
 })
 
 test.run()
 
-async function setup(s: string): Promise<JSONOutput.ProjectReflection> {
+async function setup(s: string): Promise<J.ProjectReflection> {
   const d = path.join("fixtures", s)
   const e = path.join(d, "main.ts")
   const c = path.join(d, "tsconfig.json")

@@ -1,5 +1,6 @@
 // https://pkg.go.dev/errors@go1.23.3/
 
+// eslint-disable-next-line unicorn/custom-error-definition
 class Errors extends Error {
   collection: Error[] = []
 

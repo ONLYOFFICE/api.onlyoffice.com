@@ -10,6 +10,7 @@
     "test": "pnpm test:types && pnpm test:unit"
   },
   "dependencies": {
+    "@onlyoffice/console": "workspace:^",
     "@onlyoffice/mdast-util-eslint": "workspace:^",
     "@onlyoffice/mdast-util-first-sentence": "workspace:^",
     "mdast-util-from-markdown": "2.0.0",

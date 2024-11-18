@@ -3640,6 +3640,9 @@ importers:
 
   packages/typedoc-declaration:
     dependencies:
+      '@onlyoffice/console':
+        specifier: workspace:^
+        version: link:../console
       '@onlyoffice/mdast-util-eslint':
         specifier: workspace:^
         version: link:../mdast-util-eslint
