@@ -50,16 +50,12 @@ const groups: Record<string, number> = {
   "Classes": 0,
   "Interfaces": 1,
   "Type Aliases": 2,
-
   "Enumerations": 3,
   "Variables": 4,
   "Functions": 5,
-
   "Constructors": 6,
-
   "Type Properties": 7,
   "Type Methods": 8,
-
   "Instance Properties": 9,
   "Instance Methods": 10,
 }
