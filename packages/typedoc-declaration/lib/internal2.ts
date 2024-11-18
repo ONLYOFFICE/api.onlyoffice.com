@@ -64,14 +64,82 @@ const groups: Record<string, number> = {
   "Instance Methods": 10,
 }
 
-// type O = J.ProjectReflection | J.DeclarationReflection
-
 type R<T> = Promise<Result<T, Error>>
 type E = Error | undefined
 
+type Trail = (number | Trail)[]
+
+class Context {
+  #trail: Trail = []
+
+  get trail() {
+    if (this.#trail.length === 0) {
+      return []
+    }
+
+    const [t] = this.#trail
+
+    if (!Array.isArray(t)) {
+      throw new Error("The 'in' method has not been called")
+    }
+
+    return structuredClone(t)
+  }
+
+  in() {
+    this.#trail.push([])
+  }
+
+  out() {
+    const t = this.#trail[this.#trail.length - 1]
+
+    if (!Array.isArray(t)) {
+      throw new Error("The end of the trail is not an array")
+    }
+
+    if (t.length !== 0) {
+      throw new Error("The end of the trail is not empty")
+    }
+
+    this.#trail.pop()
+  }
+
+  push(i: number) {
+    const t = this.#trail[this.#trail.length - 1]
+
+    if (!Array.isArray(t)) {
+      throw new Error("The end of the trail is not an array")
+    }
+
+    t.push(i)
+  }
+
+  pop() {
+    const t = this.#trail[this.#trail.length - 1]
+
+    if (!Array.isArray(t)) {
+      throw new Error("The end of the trail is not an array")
+    }
+
+    t.pop()
+  }
+}
+
 type Entity = unknown
 
-export async function createCollection(o: J.Reflection): R<Entity[]> {
+export async function process(o: J.Reflection): Promise<Entity[]> {
+  const ctx = new Context()
+
+  // ctx.next(0)
+
+  const [c] = await createCollection(ctx, o)
+
+  // ctx.prev()
+
+  return [c]
+}
+
+export async function createCollection(ctx: Context, o: J.Reflection): R<Entity[]> {
   let err: E
   const c: Entity[] = []
 
@@ -87,12 +155,12 @@ export async function createCollection(o: J.Reflection): R<Entity[]> {
   err = errors.join(err, fe)
   c.push(...fc)
 
-  shake(o, c)
+  // shake(o, c)
 
   if (isSignatureReflection(o)) {
     if (o.parameters) {
       for (const r of o.parameters) {
-        const [nc, ne] = await createCollection(r)
+        const [nc, ne] = await createCollection(ctx, r)
         err = errors.join(err, ne)
         c.push(...nc)
       }
@@ -102,7 +170,7 @@ export async function createCollection(o: J.Reflection): R<Entity[]> {
   if (isDeclarationReflection(o)) {
     if (o.signatures) {
       for (const r of o.signatures) {
-        const [nc, ne] = await createCollection(r)
+        const [nc, ne] = await createCollection(ctx, r)
         err = errors.join(err, ne)
         c.push(...nc)
       }
@@ -112,7 +180,7 @@ export async function createCollection(o: J.Reflection): R<Entity[]> {
   if (isContainerReflection(o)) {
     if (o.children) {
       for (const r of o.children) {
-        const [nc, ne] = await createCollection(r)
+        const [nc, ne] = await createCollection(ctx, r)
         err = errors.join(err, ne)
         c.push(...nc)
       }
@@ -287,7 +355,7 @@ function shake(o: J.Reflection, c: Entity[]): void {
 }
 
 export class Group {
-  id = ""
+  id = -1
   name = ""
   description = ""
   sourceChildren: number[] = []
@@ -315,10 +383,10 @@ export class Group {
 }
 
 export class Declaration {
-  id = ""
+  id = -1
   sourceId = -1
   name = ""
-  // location: number[] = []
+  // indices: number[] = []
   narrative = new Narrative()
   // properties: Fragment[] = []
   // members: Fragment[] = []
@@ -328,6 +396,7 @@ export class Declaration {
     let err: E
     const d = new Declaration()
 
+    d.sourceId = o.id
     d.name = o.name
 
     if (o.comment) {
@@ -343,7 +412,7 @@ export class Declaration {
 export class Fragment {
   sourceId = -1
   name = ""
-  // location: number[] = []
+  // indices: number[] = []
   default = ""
   narrative = new Narrative()
   // properties: Fragment[] = []
@@ -460,22 +529,22 @@ export class Narrative {
     }
 
     if (t) {
-      t = await sanitizeMarkdown(t)
+      t = await sanitize(t)
     }
 
     if (s) {
-      s = await sanitizeMarkdown(s)
+      s = await sanitize(s)
       if (!s.endsWith(".")) {
         s += "."
       }
     }
 
     if (e) {
-      e = await sanitizeMarkdown(e)
+      e = await sanitize(e)
     }
 
     if (r) {
-      r = await sanitizeMarkdown(r)
+      r = await sanitize(r)
     }
 
     n.summary = s
@@ -495,14 +564,14 @@ export class Narrative {
     }
 
     if (t) {
-      t = await sanitizeMarkdown(t)
+      t = await sanitize(t)
     }
 
     return [n]
   }
 }
 
-async function sanitizeMarkdown(s: string): Promise<string> {
+async function sanitize(s: string): Promise<string> {
   const r = fromMarkdown(s)
   remarkStripHtml()(r)
   await eslint(r)

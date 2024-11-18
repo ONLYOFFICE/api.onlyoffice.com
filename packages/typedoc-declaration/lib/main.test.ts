@@ -9,6 +9,7 @@ test("900:", async () => {
   console.log(inspect(o, {depth: null, colors: true}))
   console.log("\n\n")
   const [r] = await createCollection(o)
+  console.log("\n\n")
   console.log(inspect(r, {depth: null, colors: true}))
 })
 

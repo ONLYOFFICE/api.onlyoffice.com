@@ -35,7 +35,7 @@ export class Group {
 
 export class Declaration {
   name = ""
-  location: number[] = []
+  trail: number[] = []
   signature = new DeclarationSignature()
   summary = ""
   description = ""
@@ -58,7 +58,7 @@ export class DeclarationReturns {
 
 export class Fragment {
   name = ""
-  location: number[] = []
+  trail: number[] = []
   signature = new FragmentSignature()
   default = ""
   // example = ""
