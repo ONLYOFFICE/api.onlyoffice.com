@@ -70,58 +70,47 @@ type E = Error | undefined
 type Trail = (number | Trail)[]
 
 class Context {
-  #trail: Trail = []
+  #r: Trail
+  #p: Trail
+  #c: Trail
 
   get trail() {
-    if (this.#trail.length === 0) {
+    if (this.#r.length === 0) {
       return []
     }
 
-    const [t] = this.#trail
+    const [t] = this.#r
 
     if (!Array.isArray(t)) {
-      throw new Error("The 'in' method has not been called")
+      throw new Error("The method 'in' has not been called")
     }
 
     return structuredClone(t)
   }
 
+  constructor() {
+    this.#r = []
+    this.#p = this.#r
+    this.#c = this.#r
+  }
+
   in() {
-    this.#trail.push([])
+    this.#p = this.#c
+    this.#c = []
+    this.#p.push(this.#c)
   }
 
   out() {
-    const t = this.#trail[this.#trail.length - 1]
-
-    if (!Array.isArray(t)) {
-      throw new Error("The end of the trail is not an array")
-    }
-
-    if (t.length !== 0) {
-      throw new Error("The end of the trail is not empty")
-    }
-
-    this.#trail.pop()
+    this.#p.pop()
+    this.#c = this.#p
   }
 
   push(i: number) {
-    const t = this.#trail[this.#trail.length - 1]
-
-    if (!Array.isArray(t)) {
-      throw new Error("The end of the trail is not an array")
-    }
-
-    t.push(i)
+    this.#c.push(i)
   }
 
   pop() {
-    const t = this.#trail[this.#trail.length - 1]
-
-    if (!Array.isArray(t)) {
-      throw new Error("The end of the trail is not an array")
-    }
-
-    t.pop()
+    this.#c.pop()
   }
 }
 
@@ -130,11 +119,11 @@ type Entity = unknown
 export async function process(o: J.Reflection): Promise<Entity[]> {
   const ctx = new Context()
 
-  // ctx.next(0)
+  ctx.in()
 
   const [c] = await createCollection(ctx, o)
 
-  // ctx.prev()
+  ctx.out()
 
   return [c]
 }
@@ -147,11 +136,11 @@ export async function createCollection(ctx: Context, o: J.Reflection): R<Entity[
   err = errors.join(err, ge)
   c.push(...gc)
 
-  const [dc, de] = await createDeclarations(o)
+  const [dc, de] = await createDeclarations(ctx, o)
   err = errors.join(err, de)
   c.push(...dc)
 
-  const [fc, fe] = await createFragments(o)
+  const [fc, fe] = await createFragments(ctx, o)
   err = errors.join(err, fe)
   c.push(...fc)
 
@@ -159,38 +148,50 @@ export async function createCollection(ctx: Context, o: J.Reflection): R<Entity[
 
   if (isSignatureReflection(o)) {
     if (o.parameters) {
+      ctx.in()
+
       for (const r of o.parameters) {
         const [nc, ne] = await createCollection(ctx, r)
         err = errors.join(err, ne)
         c.push(...nc)
       }
+
+      ctx.out()
     }
   }
 
   if (isDeclarationReflection(o)) {
     if (o.signatures) {
+      ctx.in()
+
       for (const r of o.signatures) {
         const [nc, ne] = await createCollection(ctx, r)
         err = errors.join(err, ne)
         c.push(...nc)
       }
+
+      ctx.out()
     }
   }
 
   if (isContainerReflection(o)) {
     if (o.children) {
+      ctx.in()
+
       for (const r of o.children) {
         const [nc, ne] = await createCollection(ctx, r)
         err = errors.join(err, ne)
         c.push(...nc)
       }
+
+      ctx.out()
     }
   }
 
   return [c, err]
 }
 
-export async function createDeclarations(o: J.Reflection): R<Declaration[]> {
+export async function createDeclarations(ctx: Context, o: J.Reflection): R<Declaration[]> {
   let err: E
   const c: Declaration[] = []
 
@@ -200,35 +201,50 @@ export async function createDeclarations(o: J.Reflection): R<Declaration[]> {
 
   if (isDeclarationReflection(o)) {
     if (o.signatures) {
-      for (const r of o.signatures) {
+      for (const [i, r] of o.signatures.entries()) {
+        ctx.push(i)
+
         const [d, de] = await Declaration.from(r)
         err = errors.join(err, de)
+        d.trail = ctx.trail
         c.push(d)
+
+        ctx.pop()
       }
     }
   }
 
   if (o.children) {
-    for (const r of o.children) {
+    for (const [i, r] of o.children.entries()) {
+      ctx.push(i)
+
       const [d, de] = await Declaration.from(r)
       err = errors.join(err, de)
+      d.trail = ctx.trail
       c.push(d)
+
+      ctx.pop()
     }
   }
 
   return [c, err]
 }
 
-export async function createFragments(o: J.Reflection): R<Fragment[]> {
+export async function createFragments(ctx: Context, o: J.Reflection): R<Fragment[]> {
   let err: E
   const c: Fragment[] = []
 
   if (isSignatureReflection(o)) {
     if (o.parameters) {
-      for (const r of o.parameters) {
+      for (const [i, r] of o.parameters.entries()) {
+        ctx.push(i)
+
         const [f, fe] = await Fragment.from(r)
         err = errors.join(err, fe)
+        f.trail = ctx.trail
         c.push(f)
+
+        ctx.pop()
       }
     }
   }
@@ -386,7 +402,7 @@ export class Declaration {
   id = -1
   sourceId = -1
   name = ""
-  // indices: number[] = []
+  trail: Trail = []
   narrative = new Narrative()
   // properties: Fragment[] = []
   // members: Fragment[] = []
@@ -412,7 +428,7 @@ export class Declaration {
 export class Fragment {
   sourceId = -1
   name = ""
-  // indices: number[] = []
+  trail: Trail = []
   default = ""
   narrative = new Narrative()
   // properties: Fragment[] = []

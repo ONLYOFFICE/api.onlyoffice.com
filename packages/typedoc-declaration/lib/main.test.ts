@@ -2,13 +2,13 @@ import path from "node:path"
 import {inspect} from "node:util"
 import {Application, type JSONOutput as J} from "typedoc"
 import {test} from "uvu"
-import {createCollection} from "./internal2.ts"
+import {process} from "./internal2.ts"
 
 test("900:", async () => {
   const o = await setup("900")
   console.log(inspect(o, {depth: null, colors: true}))
   console.log("\n\n")
-  const [r] = await createCollection(o)
+  const [r] = await process(o)
   console.log("\n\n")
   console.log(inspect(r, {depth: null, colors: true}))
 })
