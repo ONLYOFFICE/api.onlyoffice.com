@@ -1,4 +1,4 @@
 {
   "extends": "../../tsconfig.base.json",
-  "include": ["lib", "index.d.ts", "../../.local/test.tsx"]
+  "include": ["lib", "index.d.ts"]
 }
