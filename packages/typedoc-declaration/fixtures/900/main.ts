@@ -22,17 +22,6 @@ class B {}
 
 
 
-
-
-
-
-
-
-
-
-
-
-
 // function a(s: string, n: number) {}
 
 // function b(u: null) {}

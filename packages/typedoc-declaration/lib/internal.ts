@@ -1,563 +1,421 @@
-/* eslint-disable */
-// https://typedoc.org/tags/category/
-// https://typedoc.org/tags/example/
-
+import * as errors from "@onlyoffice/errors"
+import type * as L from "@onlyoffice/library-declaration/next.ts"
 import {eslint} from "@onlyoffice/mdast-util-eslint"
 import {firstSentence} from "@onlyoffice/mdast-util-first-sentence"
+import {type Result} from "@onlyoffice/result"
+import {
+  isContainerReflection,
+  isDeclarationReflection,
+  isMethodReflection,
+  isParameterReflection,
+  isPropertyReflection,
+  isSignatureReflection,
+} from "@onlyoffice/typedoc-util-is-reflection"
 import {fromMarkdown} from "mdast-util-from-markdown"
 import {toMarkdown} from "mdast-util-to-markdown"
 import remarkStripHtml from "remark-strip-html"
-import {type JSONOutput as J} from "typedoc"
+import {type JSONOutput as J, ReflectionKind} from "typedoc"
 import {Console} from "./console.ts"
-import * as errors from "./errors.ts"
-import * as L from "./typedoc-declaration.ts"
-import {type Result} from "./result.ts"
-import {kindToString} from "./typedoc-util-kind-to-string.ts"
-import {
-  isDeclarationReflection,
-  isProjectReflection,
-  isModuleReflection,
-  isNamespaceReflection,
-  isEnumReflection,
-  isEnumMemberReflection,
-  isVariableReflection,
-  isFunctionReflection,
-  isClassReflection,
-  isInterfaceReflection,
-  isConstructorReflection,
-  isPropertyReflection,
-  isMethodReflection,
-  isCallSignatureReflection,
-  isIndexSignatureReflection,
-  isConstructorSignatureReflection,
-  isParameterReflection,
-  isTypeLiteralReflection,
-  isTypeParameterReflection,
-  isAccessorReflection,
-  isGetSignatureReflection,
-  isSetSignatureReflection,
-  isTypeAliasReflection,
-  isReferenceReflection,
-  isDocumentReflection,
-  isSignatureReflection,
-} from "./typedoc-util-is-reflection.ts"
 
-const console = Console.shared
+export const console = Console.shared
 
-type R<T> = Promise<Result<T, Error>>
-type E = Error | undefined
+export const groups: Record<string, number> = {
+  "Classes": 0,
+  "Interfaces": 1,
+  "Type Aliases": 2,
+  "Enumerations": 3,
+  "Variables": 4,
+  "Functions": 5,
+  "Constructors": 6,
+  "Type Properties": 7,
+  "Type Methods": 8,
+  "Instance Properties": 9,
+  "Instance Methods": 10,
+}
 
-// export async function process(o: J.ProjectReflection): Promise<unknown[]> {
-//   // if (o.children) {
-//   //   for (const [i, c] of o.children.entries()) {
-//   //     // this.ctx.location.push(i)
+export class Context {
+  #c: L.Trail
+  #r: L.Trail
 
-//   //     const d = new DeclarationEntity()
-//   //     d.l.id = String(c.id)
-//   //     d.l.declaration.name = c.name
-//   //     // d.l.declaration.location = structuredClone(this.ctx.location)
-//   //     d.l.declaration.summary = ""
-//   //     d.l.declaration.signature = []
-//   //     d.l.declaration.description = ""
+  i: number
 
-//   //     // this.ctx.location.pop()
-//   //   }
-//   // }
+  get trail(): L.Trail {
+    if (this.#r.length === 0) {
+      return []
+    }
 
-//   const [a, err] = await process(o)
+    const [t] = this.#r
 
-//   const errs = errors.split(err)
-//   for (const err of errs) {
-//     console.error(err.message)
-//   }
+    if (!Array.isArray(t)) {
+      // The error is not relevant.
+      // eslint-disable-next-line unicorn/prefer-type-error
+      throw new Error("The method 'in' has not been called")
+    }
 
-//   return a
-// }
-
-export async function process(o: J.Reflection): R<Container> {
-  console.log(`Start processing the '${kindToString(o.kind)}' reflection at '${o.name}'`)
-
-  const [c, err] = await Container.from(o)
-
-  for (const e of errors.split(err)) {
-    console.error(e.message)
+    return structuredClone(t)
   }
 
-  console.log(`Finish processing the '${kindToString(o.kind)}' reflection at '${o.name}'`)
+  constructor() {
+    this.#r = []
+    this.#c = this.#r
+    this.i = -1
+  }
+
+  in(): void {
+    let p = this.#r
+
+    while (true) {
+      if (p.length === 0) {
+        break
+      }
+
+      const u = p[p.length - 1]
+
+      if (!Array.isArray(u)) {
+        break
+      }
+
+      p = u
+    }
+
+    this.#c = []
+    p.push(this.#c)
+  }
+
+  out(): void {
+    let p = this.#r
+
+    while (true) {
+      if (p.length === 0) {
+        break
+      }
+
+      const u = p[p.length - 1]
+
+      if (!Array.isArray(u)) {
+        break
+      }
+
+      if (u === this.#c) {
+        break
+      }
+
+      p = u
+    }
+
+    p.pop()
+    this.#c = p
+  }
+
+  push(i: number): void {
+    this.#c.push(i)
+  }
+
+  pop(): void {
+    this.#c.pop()
+  }
+}
+
+export async function process(o: J.Reflection): Promise<L.Entity[]> {
+  const ctx = new Context()
+
+  // The functions for working with the collection are far from efficient.
+  // However, they are also not the primary bottleneck in the entire
+  // documentation. Therefore, optimizing them may not be worthwhile.
+
+  let [c] = await createItems(ctx, o)
+  c = sortItems(c)
+  c = shakeItems(c)
+
+  return convertItems(c)
+}
+
+export type Item = Group | Declaration | Fragment
+export type E = Error | undefined
+export type R<T> = Promise<Result<T, Error>>
+
+export async function createItems(ctx: Context, o: J.Reflection): R<Item[]> {
+  let err: E
+  const c: Item[] = []
+
+  ctx.in()
+
+  const [gc, ge] = await createGroups(o)
+  err = errors.join(err, ge)
+  c.push(...gc)
+
+  const [dc, de] = await createDeclarations(ctx, o)
+  err = errors.join(err, de)
+  c.push(...dc)
+
+  const [fc, fe] = await createFragments(ctx, o)
+  err = errors.join(err, fe)
+  c.push(...fc)
+
+  if (isSignatureReflection(o) && o.parameters) {
+    for (const [i, r] of o.parameters.entries()) {
+      ctx.push(i)
+
+      const [nc, ne] = await createItems(ctx, r)
+      err = errors.join(err, ne)
+      c.push(...nc)
+
+      ctx.pop()
+    }
+  }
+
+  if (isDeclarationReflection(o) && o.signatures) {
+    for (const [i, r] of o.signatures.entries()) {
+      ctx.push(i)
+
+      const [nc, ne] = await createItems(ctx, r)
+      err = errors.join(err, ne)
+      c.push(...nc)
+
+      ctx.pop()
+    }
+  }
+
+  if (isContainerReflection(o) && o.children) {
+    for (const [i, r] of o.children.entries()) {
+      ctx.push(i)
+
+      const [nc, ne] = await createItems(ctx, r)
+      err = errors.join(err, ne)
+      c.push(...nc)
+
+      ctx.pop()
+    }
+  }
+
+  ctx.out()
 
   return [c, err]
-
-  // console.log(`Start processing the '${kindToString(o.kind)}' reflection at '${o.name}'`)
-
-  // let e: E
-  // let a: unknown[] = []
-
-  // if (isProjectReflection(o)) {
-  //   [a, e] = await processProjectReflection(o)
-  // } else if (isModuleReflection(o)) {
-  //   e = new Error(`The reflection '${kindToString(o.kind)}' is not supported`)
-  // } else if (isNamespaceReflection(o)) {
-  //   e = new Error(`The reflection '${kindToString(o.kind)}' is not supported`)
-  // } else if (isEnumReflection(o)) {
-  //   [a, e] = await processEnumReflection(o)
-  // } else if (isEnumMemberReflection(o)) {
-  //   [a, e] = await processEnumMemberReflection(o)
-  // } else if (isVariableReflection(o)) {
-  //   [a, e] = await processVariableReflection(o)
-  // } else if (isFunctionReflection(o)) {
-  //   [a, e] = await processFunctionReflection(o)
-  // } else if (isClassReflection(o)) {
-  //   [a, e] = await processClassReflection(o)
-  // } else if (isInterfaceReflection(o)) {
-  //   [a, e] = await processInterfaceReflection(o)
-  // } else if (isConstructorReflection(o)) {
-  //   [a, e] = await processConstructorReflection(o)
-  // } else if (isPropertyReflection(o)) {
-  //   [a, e] = await processPropertyReflection(o)
-  // } else if (isMethodReflection(o)) {
-  //   [a, e] = await processMethodReflection(o)
-  // } else if (isCallSignatureReflection(o)) {
-  //   [a, e] = await processCallSignatureReflection(o)
-  // } else if (isIndexSignatureReflection(o)) {
-
-  // } else if (isConstructorSignatureReflection(o)) {
-
-  // } else if (isParameterReflection(o)) {
-
-  // } else if (isTypeLiteralReflection(o)) {
-
-  // } else if (isTypeParameterReflection(o)) {
-
-  // } else if (isAccessorReflection(o)) {
-
-  // } else if (isGetSignatureReflection(o)) {
-  //   e = new Error(`The reflection '${kindToString(o.kind)}' is not supported`)
-  // } else if (isSetSignatureReflection(o)) {
-  //   e = new Error(`The reflection '${kindToString(o.kind)}' is not supported`)
-  // } else if (isTypeAliasReflection(o)) {
-  //   [a, e] = await processTypeAliasReflection(o)
-  // } else if (isReferenceReflection(o)) {
-
-  // } else if (isDocumentReflection(o)) {
-  //   e = new Error(`The reflection '${kindToString(o.kind)}' is not supported`)
-  // } else {
-  //   e = new Error(`The reflection '${kindToString(o.kind)}' is not supported`)
-  // }
-
-  // for (const r of errors.split(e)) {
-  //   console.error(r.message)
-  // }
-
-  // console.log(`Finish processing the '${kindToString(o.kind)}' reflection at '${o.name}'`)
-
-  // return [a, e]
 }
 
-async function processProjectReflection(o: J.ProjectReflection): R<unknown[]> {
-  let ae: E
-  const a: unknown[] = []
+export async function createDeclarations(ctx: Context, o: J.Reflection): R<Declaration[]> {
+  let err: E
+  const c: Declaration[] = []
 
-  const [b, be] = await processContainerReflection(o)
-  ae = errors.join(ae, be)
-  a.push(...b)
-  // a.shift()
+  if (!isContainerReflection(o)) {
+    return [c, err]
+  }
 
-  return [a, ae]
-}
+  if (isDeclarationReflection(o) && o.signatures) {
+    for (const [i, r] of o.signatures.entries()) {
+      ctx.push(i)
 
-async function processEnumReflection(o: J.DeclarationReflection): R<unknown[]> {
-  let ae: E
-  const a: unknown[] = []
+      const [d, de] = await Declaration.from(r)
+      err = errors.join(err, de)
+      d.trail = ctx.trail
+      c.push(d)
 
-  const [d, de] = await Declaration.from(o)
-  ae = errors.join(ae, de)
-  a.push(d)
+      ctx.pop()
+    }
+  }
 
   if (o.children) {
-    for (const c of o.children) {
-      if (!isEnumMemberReflection(c)) {
-        const e = new Error("Enum reflections must have enum member reflections")
-        ae = errors.join(ae, e)
+    for (const [i, r] of o.children.entries()) {
+      ctx.push(i)
+
+      const [d, de] = await Declaration.from(r)
+      err = errors.join(err, de)
+      d.trail = ctx.trail
+      c.push(d)
+
+      ctx.pop()
+    }
+  }
+
+  return [c, err]
+}
+
+export async function createFragments(ctx: Context, o: J.Reflection): R<Fragment[]> {
+  let err: E
+  const c: Fragment[] = []
+
+  if (isSignatureReflection(o) && o.parameters) {
+    for (const [i, r] of o.parameters.entries()) {
+      ctx.push(i)
+
+      const [f, fe] = await Fragment.from(r)
+      err = errors.join(err, fe)
+      f.trail = ctx.trail
+      c.push(f)
+
+      ctx.pop()
+    }
+  }
+
+  return [c, err]
+}
+
+export async function createGroups(o: J.Reflection): R<Group[]> {
+  let err: E
+  const c: Group[] = []
+
+  if (!isContainerReflection(o)) {
+    return [c, err]
+  }
+
+  if (o.categories) {
+    for (const r of o.categories) {
+      const [n, ne] = await Group.from(r)
+      err = errors.join(err, ne)
+
+      // todo: add a test case to prove this
+      // If an entity contains a custom category and has a child entity that
+      // is not included in any category, the latter will be added to the
+      // "Other" built-in category. This category cannot be added manually.
+
+      if (n.name === "Other") {
         continue
       }
 
-      const [b, be] = await process(c)
-      ae = errors.join(ae, be)
-      d.members.push(...b)
+      if (n.sourceChildren.length !== 0) {
+        c.push(n)
+      }
     }
   }
 
-  return [a, ae]
-}
-
-async function processEnumMemberReflection(o: J.DeclarationReflection): R<unknown[]> {
-  let ae: E
-  const a: unknown[] = []
-
-  const [f, fe] = await Fragment.from(o)
-  ae = errors.join(ae, fe)
-  a.push(f)
-
-  return [a, ae]
-}
-
-async function processVariableReflection(o: J.DeclarationReflection): R<unknown[]> {
-  let ae: E
-  const a: unknown[] = []
-
-  const [b, be] = await processContainerReflection(o)
-  ae = errors.join(ae, be)
-  a.push(...b)
-
-  return [a, ae]
-}
-
-async function processFunctionReflection(o: J.DeclarationReflection): R<unknown[]> {
-  return await Container.from(o)
-  // let ae: E
-  // const a: unknown[] = []
-
-  //     // typedoc generates multiple signatures
-  //     // if a function has 3 signature where the last is the implementation
-  //     // typedoc does not include the implementation in the signatures
-  //     // typedoc stores the implementation in the o object
-  //     // sources will be an array if there are multiple signatures
-
-  //     // multiple call functions is an overload
-  //     // const [b, be] = await process(s)
-  //     // ae = errors.join(ae, be)
-  //     // // a.push(...b)
-
-  // if (o.signatures) {
-  //   const b: unknown[] = []
-
-  //   for (const s of o.signatures) {
-  //     if (!isCallSignatureReflection(s)) {
-  //       const e = new Error("Function reflections must have a call signature reflection")
-  //       ae = errors.join(ae, e)
-  //       continue
-  //     }
-
-  //     const [d, de] = await process(s)
-
-  //     // const [d, de] = await createDeclaration(s)
-  //     ae = errors.join(ae, de)
-
-  //     // todo: if (b.length !== 0 && !s.comment) {}
-
-  //     b.push(d)
-
-  //     // if (s.parameters) {
-  //     //   for (const p of s.parameters) {
-  //     //     const [f, fe] = await Fragment.from(p)
-  //     //     ae = errors.join(ae, fe)
-  //     //     d.parameters.push(f)
-  //     //   }
-  //     // }
-  //   }
-
-  //   a.push(...b)
-  // }
-
-  // return [a, ae]
-}
-
-async function processClassReflection(o: J.DeclarationReflection): R<unknown[]> {
-  let ae: E
-  const a: unknown[] = []
-
-  const [b, be] = await processContainerReflection(o)
-  ae = errors.join(ae, be)
-  a.push(...b)
-
-  return [a, ae]
-}
-
-async function processInterfaceReflection(o: J.DeclarationReflection): R<unknown[]> {
-  let ae: E
-  const a: unknown[] = []
-
-  const [b, be] = await processContainerReflection(o)
-  ae = errors.join(ae, be)
-  a.push(...b)
-
-  return [a, ae]
-}
-
-async function processConstructorReflection(o: J.DeclarationReflection): R<unknown[]> {
-  let ae: E
-  const a: unknown[] = []
-
-  const [b, be] = await processContainerReflection(o)
-  ae = errors.join(ae, be)
-  a.push(...b)
-
-  return [a, ae]
-}
-
-async function processPropertyReflection(o: J.DeclarationReflection): R<unknown[]> {
-  let ae: E
-  const a: unknown[] = []
-
-  const [b, be] = await processContainerReflection(o)
-  ae = errors.join(ae, be)
-  a.push(...b)
-
-  return [a, ae]
-}
-
-async function processMethodReflection(o: J.DeclarationReflection): R<unknown[]> {
-  let ae: E
-  const a: unknown[] = []
-
-  const [b, be] = await processFunctionReflection(o)
-  ae = errors.join(ae, be)
-  a.push(...b)
-
-  return [a, ae]
-}
-
-async function processCallSignatureReflection(o: J.SignatureReflection): R<unknown[]> {
-  return await Container.from(o)
-  // let ae: E
-  // const a: unknown[] = []
-
-  // const [d, de] = await Declaration.from(o)
-  // ae = errors.join(ae, de)
-  // a.push(d)
-
-  // // todo: if (b.length !== 0 && !s.comment) {}
-
-  // if (o.parameters) {
-  //   for (const p of o.parameters) {
-  //     const [f, fe] = await Fragment.from(p)
-  //     ae = errors.join(ae, fe)
-  //     d.parameters.push(f)
-  //   }
-  // }
-
-  // return [a, ae]
-}
-
-async function processTypeAliasReflection(o: J.DeclarationReflection): R<unknown[]> {
-  let ae: E
-  const a: unknown[] = []
-
-  const [b, be] = await processContainerReflection(o)
-  ae = errors.join(ae, be)
-  a.push(...b)
-
-  return [a, ae]
-}
-
-// async function processDeclarationReference(o: J.DeclarationReflection): R<unknown[]> {
-//   let ae: E
-//   const a: unknown[] = []
-
-//   const [d, de] = await createDeclaration(o)
-//   ae = errors.join(ae, de)
-//   a.push(d)
-
-//   // if (o.categories) {}
-
-//   // if (o.groups) {}
-
-//   // if (o.signatures) {}
-
-//   if (o.children) {
-//     for (const c of o.children) {
-//       const [b, be] = await process(c)
-//       ae = errors.join(ae, be)
-//       a.push(...b)
-//     }
-//   }
-
-//   return [a, ae]
-// }
-
-async function processContainerReflection(o: J.ContainerReflection): R<unknown[]> {
-  let ae: E
-  const a: unknown[] = []
-
-  const [b, be] = await Declaration.from(o)
-  ae = errors.join(ae, be)
-  a.push(b)
-
-  // if (o.categories) {}
+  const a: Group[] = []
 
   if (o.groups) {
-    for (const g of o.groups) {}
+    for (const r of o.groups) {
+      const [n, ne] = await Group.from(r)
+      err = errors.join(err, ne)
+
+      if (n.sourceChildren.length !== 0) {
+        a.push(n)
+      }
+    }
   }
+
+  const p = new Group()
+  p.name = "Type Properties"
+
+  const m = new Group()
+  m.name = "Type Methods"
 
   if (o.children) {
-    for (const c of o.children) {
-      const [b, be] = await process(c)
-      ae = errors.join(ae, be)
-      a.push(b)
+    for (const r of o.children) {
+      if (isPropertyReflection(r)) {
+        if (r.flags.isStatic) {
+          p.sourceChildren.push(r.id)
+        }
+        continue
+      }
+
+      if (isMethodReflection(r)) {
+        if (r.flags.isStatic) {
+          m.sourceChildren.push(r.id)
+        }
+        continue
+      }
     }
   }
 
-  return [a, ae]
+  if (p.sourceChildren.length !== 0) {
+    a.push(p)
+  }
+
+  if (m.sourceChildren.length !== 0) {
+    a.push(m)
+  }
+
+  const b: Group[] = []
+
+  for (const x of a) {
+    for (const y of c) {
+      for (const c of y.sourceChildren) {
+        const i = x.sourceChildren.indexOf(c)
+        if (i !== -1) {
+          x.sourceChildren.splice(i, 1)
+        }
+      }
+    }
+
+    if (x.sourceChildren.length !== 0) {
+      b.push(x)
+    }
+  }
+
+  for (const x of b) {
+    let f = false
+
+    for (let i = 0; i < c.length; i += 1) {
+      const y = c[i]
+
+      const a = groups[x.name]
+      const b = groups[y.name]
+
+      if (a < b) {
+        f = true
+        c.splice(i, 0, x)
+        break
+      }
+    }
+
+    if (!f) {
+      c.push(x)
+    }
+  }
+
+  return [c, err]
 }
 
-// input is an any J.Type
-// and the output is an entity and its groups
-// then you have to merge them into the container
+export function sortItems(c: Item[]): Item[] {
+  const x: (Declaration | Fragment)[] = []
 
-class Container {
-  // groups: Group[] = []
-  // declarations: Declaration[] = []
-  entities: (Group | Declaration)[] = []
-  fragments: Fragment[] = []
-
-  static async from(o: J.Reflection): R<Container> {
-    if (isProjectReflection(o)) {
-      return await this.fromContainerReflection(o)
+  for (const e of c) {
+    if (e instanceof Group) {
+      continue
     }
 
-    if (isFunctionReflection(o)) {
-      return await this.fromFunctionReflection(o)
-    }
-
-    if (isClassReflection(o)) {
-      return await this.fromContainerReflection(o)
-    }
-
-    if (isMethodReflection(o)) {
-      return await this.fromFunctionReflection(o)
-    }
-
-    if (isCallSignatureReflection(o)) {
-      return await this.fromSignatureReflection(o)
-    }
-
-    if (isParameterReflection(o)) {
-      return await this.fromParameterReflection(o)
-    }
-
-    const e = new Error(`The creation of a container from the '${kindToString(o.kind)}' reflection is not supported`)
-    return [new Container(), e]
+    x.push(e)
   }
 
-  static async fromFunctionReflection(o: J.DeclarationReflection): R<Container> {
-    let err: E
-    let c = new Container()
+  x.sort((a, b) => {
+    return a.sourceId - b.sourceId
+  })
 
-    if (o.signatures) {
-      for (const e of o.signatures) {
-        const [n, ne] = await process(e)
-        err = errors.join(err, ne)
-        c = Container.merge(c, n)
-      }
+  const y: Item[] = []
+
+  let i = 0
+
+  for (let t of c) {
+    if (t instanceof Group) {
+      y.push(t)
+      continue
     }
 
-    return [c, err]
+    t = x[i]
+    y.push(t)
+
+    i += 1
   }
 
-  static async fromSignatureReflection(o: J.SignatureReflection): R<Container> {
-    let err: E
-    const c = new Container()
-
-    const [d, de] = await Declaration.from(o)
-    err = errors.join(err, de)
-    // c.declarations.push(d)
-    c.entities.push(d)
-
-    // todo: if (b.length !== 0 && !s.comment) {}
-
-    if (o.parameters) {
-      for (const e of o.parameters) {
-        const [n, ne] = await process(e)
-        err = errors.join(err, ne)
-        d.parameters = n.fragments
-      }
-    }
-
-    return [c, err]
-  }
-
-  static async fromParameterReflection(o: J.ParameterReflection): R<Container> {
-    let err: E
-    const c = new Container()
-
-    const [f, fe] = await Fragment.from(o)
-    err = errors.join(err, fe)
-    c.fragments.push(f)
-
-    return [c, err]
-  }
-
-  static async fromContainerReflection(o: J.ContainerReflection): R<Container> {
-    let err: E
-    let c = new Container()
-
-    const [d, de] = await Declaration.from(o)
-    err = errors.join(err, de)
-    // c.declarations.push(d)
-    c.entities.push(d)
-
-    // if (o.categories) {
-    //   for (const e of o.categories) {
-    //     const [n, ne] = await this.fromReflectionCategory(e)
-    //     err = errors.join(err, ne)
-    //     c = Container.merge(c, n)
-    //   }
-    // }
-
-    // if (o.groups) {
-    //   for (const e of o.groups) {
-    //     const [n, ne] = await this.fromReflectionGroup(e)
-    //     err = errors.join(err, ne)
-    //     c = Container.merge(c, n)
-    //   }
-    // }
-
-    if (o.children) {
-      for (const e of o.children) {
-        const [n, ne] = await process(e)
-        err = errors.join(err, ne)
-        c = Container.merge(c, n)
-      }
-    }
-
-    return [c, err]
-  }
-
-  // static async fromReflectionGroup(o: J.ReflectionGroup): R<Container> {
-  //   return await this.fromReflectionCategory(o)
-  // }
-
-  // static async fromReflectionCategory(o: J.ReflectionCategory): R<Container> {
-  //   let err: E
-  //   const c = new Container()
-
-  //   const [g, ge] = await Group.fromReflectionCategory(o)
-  //   err = errors.join(err, ge)
-  //   // c.groups.push(g)
-  //   c.entities.push(g)
-
-  //   return [c, err]
-  // }
-
-  static merge(a: Container, b: Container): Container {
-    const c = new Container()
-    // c.groups = [...a.groups, ...b.groups]
-    // c.declarations = [...a.declarations, ...b.declarations]
-    c.entities = [...a.entities, ...b.entities]
-    c.fragments = [...a.fragments, ...b.fragments]
-    return c
-  }
+  return y
 }
 
-class Group {
+export function shakeItems(c: Item[]): Item[] {
+  // If a constructor does not have a description, the class description is used.
+
+  return c
+}
+
+export function convertItems(c: Item[]): L.Entity[] {
+  return c
+}
+
+export class Group {
+  id = -1
   name = ""
   description = ""
+  // children: number[] = []
+  sourceChildren: number[] = []
 
-  static async fromReflectionGroup(o: J.ReflectionGroup): R<Group> {
-    return await this.fromReflectionCategory(o)
-  }
-
-  static async fromReflectionCategory(o: J.ReflectionCategory): R<Group> {
+  static async from(o: J.ReflectionGroup | J.ReflectionCategory): R<Group> {
     let err: E
     const g = new Group()
 
@@ -569,22 +427,32 @@ class Group {
       g.description = n.description
     }
 
+    if (o.children) {
+      for (const c of o.children) {
+        g.sourceChildren.push(c)
+      }
+    }
+
     return [g, err]
   }
 }
 
-class Declaration {
+export class Declaration {
+  id = -1
+  sourceId = -1
   name = ""
-  location: number[] = []
+  trail: L.Trail = []
+  // children: number[] = []
   narrative = new Narrative()
-  properties: Fragment[] = []
-  members: Fragment[] = []
-  parameters: Fragment[] = []
+  // properties: Fragment[] = []
+  // members: Fragment[] = []
+  // parameters: Fragment[] = []
 
   static async from(o: J.Reflection): R<Declaration> {
     let err: E
     const d = new Declaration()
 
+    d.sourceId = o.id
     d.name = o.name
 
     if (o.comment) {
@@ -595,28 +463,15 @@ class Declaration {
 
     return [d, err]
   }
-
-  to(): L.Declaration {
-    const d = new L.Declaration()
-    d.name = this.name
-    d.location = this.location
-    d.summary = this.narrative.summary
-    d.description = this.narrative.description
-    // d.properties = this.properties
-    // d.members = this.members
-    // d.parameters = this.parameters
-    d.returns.description = this.narrative.returns
-    d.examples = this.narrative.examples
-    return d
-  }
 }
 
-class Fragment {
+export class Fragment {
+  sourceId = -1
   name = ""
-  location: number[] = []
+  trail: L.Trail = []
   default = ""
   narrative = new Narrative()
-  properties: Fragment[] = []
+  // properties: Fragment[] = []
 
   static async from(o: J.Reflection): R<Fragment> {
     if (isDeclarationReflection(o)) {
@@ -650,6 +505,7 @@ class Fragment {
     let err: E
     const f = new Fragment()
 
+    f.sourceId = o.id
     f.name = o.name
 
     if (o.comment) {
@@ -660,20 +516,9 @@ class Fragment {
 
     return [f, err]
   }
-
-  to(): L.Fragment {
-    const f = new L.Fragment()
-    f.name = this.name
-    f.location = this.location
-    f.default = this.default
-    // f.example = this.example
-    f.description = this.narrative.description
-    // f.properties = this.properties
-    return f
-  }
 }
 
-class Narrative {
+export class Narrative {
   summary = ""
   description = ""
   examples = ""
@@ -683,7 +528,7 @@ class Narrative {
     if (!Array.isArray(o)) {
       return await this.fromComment(o)
     }
-    return await this.fromCommentDisplayPart(o)
+    return await this.fromCommentDisplayParts(o)
   }
 
   static async fromComment(o: J.Comment): R<Narrative> {
@@ -740,22 +585,22 @@ class Narrative {
     }
 
     if (t) {
-      t = await sanitize(t)
+      t = await sanitizeMarkdown(t)
     }
 
     if (s) {
-      s = await sanitize(s)
+      s = await sanitizeMarkdown(s)
       if (!s.endsWith(".")) {
         s += "."
       }
     }
 
     if (e) {
-      e = await sanitize(e)
+      e = await sanitizeMarkdown(e)
     }
 
     if (r) {
-      r = await sanitize(r)
+      r = await sanitizeMarkdown(r)
     }
 
     n.summary = s
@@ -766,7 +611,7 @@ class Narrative {
     return [n, err]
   }
 
-  static async fromCommentDisplayPart(o: J.CommentDisplayPart[]): R<Narrative> {
+  static async fromCommentDisplayParts(o: J.CommentDisplayPart[]): R<Narrative> {
     const n = new Narrative()
 
     let t = ""
@@ -775,14 +620,14 @@ class Narrative {
     }
 
     if (t) {
-      t = await sanitize(t)
+      t = await sanitizeMarkdown(t)
     }
 
     return [n]
   }
 }
 
-async function sanitize(s: string): Promise<string> {
+export async function sanitizeMarkdown(s: string): Promise<string> {
   const r = fromMarkdown(s)
   remarkStripHtml()(r)
   await eslint(r)
@@ -793,4 +638,14 @@ async function sanitize(s: string): Promise<string> {
   }
 
   return c
+}
+
+// This function is too small to be separated into its own package. If another
+// package requires this function in the future, it can be moved out.
+
+export function kindToString(n: number): string {
+  if (n in ReflectionKind) {
+    return ReflectionKind[n]
+  }
+  return "Unknown"
 }

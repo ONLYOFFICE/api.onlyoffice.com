@@ -2,7 +2,7 @@ import path from "node:path"
 import {inspect} from "node:util"
 import {Application, type JSONOutput as J} from "typedoc"
 import {test} from "uvu"
-import {process} from "./internal2.ts"
+import {process} from "./internal.ts"
 
 test("900:", async () => {
   const o = await setup("900")
