@@ -16,6 +16,7 @@ import {toMarkdown} from "mdast-util-to-markdown"
 import remarkStripHtml from "remark-strip-html"
 import {type JSONOutput as J, ReflectionKind} from "typedoc"
 import {Console} from "./console.ts"
+import {resolve} from "./typedoc-util-resolve.ts"
 
 export const console = Console.shared
 
@@ -37,8 +38,6 @@ export class Context {
   #c: L.Trail
   #r: L.Trail
 
-  i: number
-
   get trail(): L.Trail {
     if (this.#r.length === 0) {
       return []
@@ -58,7 +57,6 @@ export class Context {
   constructor() {
     this.#r = []
     this.#c = this.#r
-    this.i = -1
   }
 
   in(): void {
@@ -125,7 +123,7 @@ export async function process(o: J.Reflection): Promise<L.Entity[]> {
 
   let [c] = await createItems(ctx, o)
   c = sortItems(c)
-  c = shakeItems(c)
+  c = shakeItems(o, c)
 
   return convertItems(c)
 }
@@ -367,12 +365,12 @@ export async function createGroups(o: J.Reflection): R<Group[]> {
 export function sortItems(c: Item[]): Item[] {
   const x: (Declaration | Fragment)[] = []
 
-  for (const e of c) {
-    if (e instanceof Group) {
+  for (const t of c) {
+    if (t instanceof Group) {
       continue
     }
 
-    x.push(e)
+    x.push(t)
   }
 
   x.sort((a, b) => {
@@ -398,8 +396,27 @@ export function sortItems(c: Item[]): Item[] {
   return y
 }
 
-export function shakeItems(c: Item[]): Item[] {
-  // If a constructor does not have a description, the class description is used.
+// If a constructor does not have a description, the class description is used.
+
+export function shakeItems(o: J.Reflection, c: Item[]): Item[] {
+  // let i = -1
+
+  const rc: Item[] = []
+  const fc: Fragment[] = []
+
+  for (let j = c.length - 1; j >= 0; j -= 1) {
+    const t = c[j]
+
+    if (t instanceof Declaration) {
+      rc.push(t)
+      continue
+    }
+
+    if (t instanceof Fragment) {
+      fc.push(t)
+      continue
+    }
+  }
 
   return c
 }

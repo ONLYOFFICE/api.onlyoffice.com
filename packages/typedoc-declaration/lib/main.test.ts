@@ -8,7 +8,7 @@ test("900:", async () => {
   const o = await setup("900")
   console.log(inspect(o, {depth: null, colors: true}))
   console.log("\n\n")
-  const [r] = await process(o)
+  const r = await process(o)
   console.log("\n\n")
   console.log(inspect(r, {depth: null, colors: true}))
 })
