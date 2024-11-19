@@ -10,9 +10,8 @@ import {toMarkdown} from "mdast-util-to-markdown"
 import remarkStripHtml from "remark-strip-html"
 import {type JSONOutput as J} from "typedoc"
 import {Console} from "./console.ts"
-import * as errors from "./errors.ts"
-import * as L from "./typedoc-declaration.ts"
-import {type Result} from "./result.ts"
+import * as errors from "@onlyoffice/errors"
+import {type Result} from "@onlyoffice/result"
 import {kindToString} from "./typedoc-util-kind-to-string.ts"
 import {
   isContainerReflection,
@@ -42,7 +41,7 @@ import {
   isReferenceReflection,
   isDocumentReflection,
   isSignatureReflection,
-} from "./typedoc-util-is-reflection.ts"
+} from "@onlyoffice/typedoc-util-is-reflection"
 
 const console = Console.shared
 
@@ -62,8 +61,6 @@ const groups: Record<string, number> = {
 
 type R<T> = Promise<Result<T, Error>>
 type E = Error | undefined
-
-type Trail = (number | Trail)[]
 
 class Context {
   #r: Trail

@@ -11,8 +11,11 @@
   },
   "dependencies": {
     "@onlyoffice/console": "workspace:^",
+    "@onlyoffice/errors": "workspace:^",
     "@onlyoffice/mdast-util-eslint": "workspace:^",
     "@onlyoffice/mdast-util-first-sentence": "workspace:^",
+    "@onlyoffice/result": "workspace:^",
+    "@onlyoffice/typedoc-util-is-reflection": "workspace:^",
     "mdast-util-from-markdown": "2.0.0",
     "mdast-util-to-markdown": "2.1.0",
     "remark-strip-html": "1.0.2",
