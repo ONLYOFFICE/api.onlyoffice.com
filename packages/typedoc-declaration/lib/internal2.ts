@@ -5,6 +5,7 @@
 
 import {eslint} from "@onlyoffice/mdast-util-eslint"
 import {firstSentence} from "@onlyoffice/mdast-util-first-sentence"
+import * as L from "@onlyoffice/library-declaration/next.ts"
 import {fromMarkdown} from "mdast-util-from-markdown"
 import {toMarkdown} from "mdast-util-to-markdown"
 import remarkStripHtml from "remark-strip-html"
@@ -43,6 +44,8 @@ import {
   isSignatureReflection,
 } from "@onlyoffice/typedoc-util-is-reflection"
 
+import {inspect} from "node:util"
+
 const console = Console.shared
 
 const groups: Record<string, number> = {
@@ -63,9 +66,10 @@ type R<T> = Promise<Result<T, Error>>
 type E = Error | undefined
 
 class Context {
-  #r: Trail
-  #p: Trail
-  #c: Trail
+  #c: L.Trail
+  #r: L.Trail
+
+  i: number
 
   get trail() {
     if (this.#r.length === 0) {
@@ -83,19 +87,54 @@ class Context {
 
   constructor() {
     this.#r = []
-    this.#p = this.#r
     this.#c = this.#r
+    this.i = -1
   }
 
   in() {
-    this.#p = this.#c
+    let p = this.#r
+
+    while (true) {
+      if (p.length === 0) {
+        break
+      }
+
+      const u = p[p.length - 1]
+
+      if (!Array.isArray(u)) {
+        break
+      }
+
+      p = u
+    }
+
     this.#c = []
-    this.#p.push(this.#c)
+    p.push(this.#c)
   }
 
   out() {
-    this.#p.pop()
-    this.#c = this.#p
+    let p = this.#r
+
+    while (true) {
+      if (p.length === 0) {
+        break
+      }
+
+      const u = p[p.length - 1]
+
+      if (!Array.isArray(u)) {
+        break
+      }
+
+      if (u === this.#c) {
+        break
+      }
+
+      p = u
+    }
+
+    p.pop()
+    this.#c = p
   }
 
   push(i: number) {
@@ -111,19 +150,29 @@ type Entity = unknown
 
 export async function process(o: J.Reflection): Promise<Entity[]> {
   const ctx = new Context()
-
-  ctx.in()
-
   const [c] = await createCollection(ctx, o)
-
-  ctx.out()
-
   return [c]
 }
 
+// shake
+// stir
+
+// function shake(
+//   o: J.Reflection,
+//   gc: Group[],
+//   dc: Declaration[],
+//   fc: Fragment[],
+// ): Entity[] {
+//   const c: Entity[] = []
+
+//   return [...gc, ...dc, ...fc]
+// }
+
 export async function createCollection(ctx: Context, o: J.Reflection): R<Entity[]> {
   let err: E
-  const c: Entity[] = []
+  let c: Entity[] = []
+
+  ctx.in()
 
   const [gc, ge] = await createGroups(o)
   err = errors.join(err, ge)
@@ -137,49 +186,81 @@ export async function createCollection(ctx: Context, o: J.Reflection): R<Entity[
   err = errors.join(err, fe)
   c.push(...fc)
 
-  shake(o, c)
+  // for (const e of c) {
+  //   if (e instanceof Group || e instanceof Declaration) {
+  //     ctx.i += 1
+  //     e.id = ctx.i
+  //   }
+  // }
+
+  console.log("before", o.id, inspect(c, {depth: null, colors: true}))
 
   if (isSignatureReflection(o)) {
     if (o.parameters) {
-      ctx.in()
+      for (const [i, r] of o.parameters.entries()) {
+        ctx.push(i)
 
-      for (const r of o.parameters) {
         const [nc, ne] = await createCollection(ctx, r)
         err = errors.join(err, ne)
         c.push(...nc)
-      }
 
-      ctx.out()
+        ctx.pop()
+      }
     }
   }
 
   if (isDeclarationReflection(o)) {
     if (o.signatures) {
-      ctx.in()
+      for (const [i, r] of o.signatures.entries()) {
+        ctx.push(i)
 
-      for (const r of o.signatures) {
         const [nc, ne] = await createCollection(ctx, r)
         err = errors.join(err, ne)
         c.push(...nc)
-      }
 
-      ctx.out()
+        ctx.pop()
+      }
     }
   }
 
   if (isContainerReflection(o)) {
     if (o.children) {
-      ctx.in()
+      for (const [i, r] of o.children.entries()) {
+        ctx.push(i)
 
-      for (const r of o.children) {
         const [nc, ne] = await createCollection(ctx, r)
         err = errors.join(err, ne)
         c.push(...nc)
-      }
 
-      ctx.out()
+        ctx.pop()
+      }
     }
   }
+
+  // If a constructor does not have a description, the class description is used.
+
+  for (const _ of [0]) {
+    if (c.length === 0) {
+      break
+    }
+
+    const [e] = c
+
+    // if (e instanceof Group) {
+    //   break
+    // }
+
+
+
+    // const a = [...c]
+    // c.length = 0
+
+    // c = a
+  }
+
+  ctx.out()
+
+  console.log("after", o.id, inspect(c, {depth: null, colors: true}))
 
   return [c, err]
 }
@@ -359,14 +440,11 @@ export async function createGroups(o: J.Reflection): R<Group[]> {
   return [c, err]
 }
 
-function shake(o: J.Reflection, c: Entity[]): void {
-  // console.log(o, c)
-}
-
 export class Group {
   id = -1
   name = ""
   description = ""
+  // children: number[] = []
   sourceChildren: number[] = []
 
   static async from(o: J.ReflectionGroup | J.ReflectionCategory): R<Group> {
@@ -395,7 +473,8 @@ export class Declaration {
   id = -1
   sourceId = -1
   name = ""
-  trail: Trail = []
+  trail: L.Trail = []
+  // children: number[] = []
   narrative = new Narrative()
   // properties: Fragment[] = []
   // members: Fragment[] = []
@@ -421,7 +500,7 @@ export class Declaration {
 export class Fragment {
   sourceId = -1
   name = ""
-  trail: Trail = []
+  trail: L.Trail = []
   default = ""
   narrative = new Narrative()
   // properties: Fragment[] = []

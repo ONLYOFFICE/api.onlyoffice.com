@@ -12,6 +12,7 @@
   "dependencies": {
     "@onlyoffice/console": "workspace:^",
     "@onlyoffice/errors": "workspace:^",
+    "@onlyoffice/library-declaration": "workspace:^",
     "@onlyoffice/mdast-util-eslint": "workspace:^",
     "@onlyoffice/mdast-util-first-sentence": "workspace:^",
     "@onlyoffice/result": "workspace:^",

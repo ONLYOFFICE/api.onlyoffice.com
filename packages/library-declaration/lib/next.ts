@@ -8,26 +8,26 @@ export interface EntityMap {
 }
 
 export class GroupEntity implements EntityNode {
-  id = ""
+  id = -1
   type = "group" as const
-  // parentId = ""
-  // children: string[] = []
+  parentId = -1
+  children: number[] = []
   group = new Group()
 }
 
 export class DeclarationEntity implements EntityNode {
-  id = ""
+  id = -1
   type = "declaration" as const
-  // parentId = ""
-  // children: string[] = []
+  parentId = -1
+  children: number[] = []
   declaration = new Declaration()
 }
 
 export interface EntityNode {
-  id: string
+  id: number
   type: string
-  // parentId: string
-  // children: string[]
+  parentId: number
+  children: number[]
 }
 
 export class Group {
