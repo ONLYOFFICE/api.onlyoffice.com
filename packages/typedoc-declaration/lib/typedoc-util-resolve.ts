@@ -33,25 +33,16 @@ export function resolve(o: J.Reflection, t: Trail): J.Reflection | undefined {
 }
 
 function target(o: J.Reflection): J.Reflection[] {
-  if (isSignatureReflection(o)) {
-    if (o.parameters) {
-      return o.parameters
-    }
-    return []
+  if (isSignatureReflection(o) && o.parameters) {
+    return o.parameters
   }
 
-  if (isDeclarationReflection(o)) {
-    if (o.signatures) {
-      return o.signatures
-    }
-    return []
+  if (isDeclarationReflection(o) && o.signatures) {
+    return o.signatures
   }
 
-  if (isContainerReflection(o)) {
-    if (o.children) {
-      return o.children
-    }
-    return []
+  if (isContainerReflection(o) && o.children) {
+    return o.children
   }
 
   return []
