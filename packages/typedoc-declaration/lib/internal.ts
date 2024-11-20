@@ -1,4 +1,5 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
+import {inspect} from "node:util"
 import * as errors from "@onlyoffice/errors"
 import * as L from "@onlyoffice/library-declaration/next.ts"
 import {eslint} from "@onlyoffice/mdast-util-eslint"
@@ -22,8 +23,7 @@ import {toMarkdown} from "mdast-util-to-markdown"
 import remarkStripHtml from "remark-strip-html"
 import {type JSONOutput as J, ReflectionKind} from "typedoc"
 import {Console} from "./console.ts"
-import {depth, resolve} from "./typedoc-util-resolve.ts"
-import {inspect} from "node:util"
+import {depth, pair, resolve} from "./typedoc-util-resolve.ts"
 
 export const console = Console.shared
 
@@ -110,6 +110,13 @@ export class Context {
 
     p.pop()
     this.#c = p
+  }
+
+  with(i: number): L.Trail {
+    this.push(i)
+    const t = this.trail
+    this.pop()
+    return t
   }
 
   push(i: number): void {
@@ -214,27 +221,19 @@ export async function createDeclarations(ctx: Context, o: J.Reflection): R<Decla
 
   if (isDeclarationReflection(o) && o.signatures) {
     for (const [i, r] of o.signatures.entries()) {
-      ctx.push(i)
-
       const [d, de] = await Declaration.from(r)
       err = errors.join(err, de)
-      d.trail = ctx.trail
+      d.trail = ctx.with(i)
       c.push(d)
-
-      ctx.pop()
     }
   }
 
   if (isContainerReflection(o) && o.children) {
     for (const [i, r] of o.children.entries()) {
-      ctx.push(i)
-
       const [d, de] = await Declaration.from(r)
       err = errors.join(err, de)
-      d.trail = ctx.trail
+      d.trail = ctx.with(i)
       c.push(d)
-
-      ctx.pop()
     }
   }
 
@@ -247,14 +246,10 @@ export async function createFragments(ctx: Context, o: J.Reflection): R<Fragment
 
   if (isSignatureReflection(o) && o.parameters) {
     for (const [i, r] of o.parameters.entries()) {
-      ctx.push(i)
-
       const [f, fe] = await Fragment.from(r)
       err = errors.join(err, fe)
-      f.trail = ctx.trail
+      f.trail = ctx.with(i)
       c.push(f)
-
-      ctx.pop()
     }
   }
 
@@ -400,12 +395,50 @@ export function shakeItems(o: J.Reflection, c: Item[]): Item[] {
 
   let pd = -1
 
-  // let i = 0
+  let i = 0
   let d = new Declaration()
 
   for (const t of c) {
+    if (t instanceof Fragment) {
+      continue
+    }
+
     const cd = depth(t.trail)
     global.console.log("before", tc.map((t) => t.name), t.name, cd)
+
+    // t.id = i
+
+    // if (t instanceof Group) {
+    //   for (let i = tc.length - 1; i >= 0; i -= 1) {
+    //     const p = tc[i]
+
+    //     if (p instanceof Declaration) {
+    //       p.children.push(t.id)
+    //       break
+    //     }
+    //   }
+    // }
+
+    // if (t instanceof Declaration) {
+    //   for (let i = tc.length - 1; i >= 0; i -= 1) {
+    //     const p = tc[i]
+
+    //     if (p instanceof Group) {
+    //       const i = p.sourceChildren.indexOf(t.sourceId)
+
+    //       if (i !== -1) {
+    //         p.children.push(t.id)
+    //         break
+    //       }
+    //     }
+
+    //     if (p instanceof Declaration) {
+    //       break
+    //     }
+    //   }
+    // }
+
+    // i += 1
 
     // if (cd > pd) {
     //   pd = cd
@@ -426,17 +459,25 @@ export function shakeItems(o: J.Reflection, c: Item[]): Item[] {
       pd = cd
       tc.push(t)
     } else if (cd < pd) {
+      if (t.name === "D") {
+        while (cd < pd) {
+          const p = tc[tc.length - 1]
+          pd = depth(p.trail)
+          tc.pop()
+        }
+      }
+
       while (cd < pd) {
         const p = tc[tc.length - 1]
         pd = depth(p.trail)
         tc.pop()
       }
-      if (t instanceof Declaration) {
-        const p = tc[tc.length - 1]
-        if (p instanceof Declaration) {
-          tc.pop()
-        }
-      }
+      // if (t instanceof Declaration) {
+      //   const p = tc[tc.length - 1]
+      //   if (p instanceof Declaration) {
+      //     tc.pop()
+      //   }
+      // }
       tc.push(t)
     } else {
       tc.push(t)
@@ -535,7 +576,7 @@ export class Group {
   name = ""
   trail: L.Trail = []
   description = ""
-  // children: number[] = []
+  children: number[] = []
   sourceChildren: number[] = []
 
   static async from(o: J.ReflectionGroup | J.ReflectionCategory): R<Group> {
@@ -580,7 +621,7 @@ export class Declaration {
   properties: Fragment[] = []
   members: Fragment[] = []
   parameters: Fragment[] = []
-  // children: number[] = []
+  children: number[] = []
 
   static async from(o: J.Reflection): R<Declaration> {
     let err: E

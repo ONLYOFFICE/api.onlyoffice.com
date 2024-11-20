@@ -22,6 +22,40 @@ export function depth(t: Trail): number {
   return d
 }
 
+export function pair(t: Trail): [number, number] {
+  return p(t, 0)
+
+  function p(t: Trail, c: number): [number, number] {
+    let m = c
+    let i = -1
+
+    if (t.length === 0) {
+      return [m, i]
+    }
+
+    for (const s of t) {
+      if (Array.isArray(s)) {
+        const n = c + 1
+        const [d, j] = p(s, n)
+
+        if (d > m) {
+          m = d
+          i = j
+        }
+
+        continue
+      }
+
+      if (c >= m) {
+        m = c
+        i = s
+      }
+    }
+
+    return [m, i]
+  }
+}
+
 export function resolve(o: J.Reflection, t: Trail): J.Reflection | undefined {
   let c: J.Reflection | undefined = o
 
