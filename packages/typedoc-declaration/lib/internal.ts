@@ -22,7 +22,7 @@ import {toMarkdown} from "mdast-util-to-markdown"
 import remarkStripHtml from "remark-strip-html"
 import {type JSONOutput as J, ReflectionKind} from "typedoc"
 import {Console} from "./console.ts"
-import {resolve} from "./typedoc-util-resolve.ts"
+import {depth, resolve} from "./typedoc-util-resolve.ts"
 import {inspect} from "node:util"
 
 export const console = Console.shared
@@ -212,10 +212,6 @@ export async function createDeclarations(ctx: Context, o: J.Reflection): R<Decla
   let err: E
   const c: Declaration[] = []
 
-  if (!isContainerReflection(o)) {
-    return [c, err]
-  }
-
   if (isDeclarationReflection(o) && o.signatures) {
     for (const [i, r] of o.signatures.entries()) {
       ctx.push(i)
@@ -229,7 +225,7 @@ export async function createDeclarations(ctx: Context, o: J.Reflection): R<Decla
     }
   }
 
-  if (o.children) {
+  if (isContainerReflection(o) && o.children) {
     for (const [i, r] of o.children.entries()) {
       ctx.push(i)
 
@@ -400,11 +396,70 @@ export function sortItems(c: Item[]): Item[] {
 
 export function shakeItems(o: J.Reflection, c: Item[]): Item[] {
   const rc: Item[] = []
+  const tc: (Group | Declaration)[] = []
+
+  let pd = -1
 
   // let i = 0
   let d = new Declaration()
 
   for (const t of c) {
+    const cd = depth(t.trail)
+    global.console.log("before", tc.map((t) => t.name), t.name, cd)
+
+    // if (cd > pd) {
+    //   pd = cd
+    //   tc.push(t)
+    // } else if (cd < pd) {
+    //   while (cd < pd) {
+    //     const p = tc[tc.length - 1]
+    //     pd = depth(p.trail)
+    //     tc.pop()
+    //   }
+    //   tc.push(t)
+    // } else {
+    //   // tc.pop()
+    //   tc.push(t)
+    // }
+
+    if (cd > pd) {
+      pd = cd
+      tc.push(t)
+    } else if (cd < pd) {
+      while (cd < pd) {
+        const p = tc[tc.length - 1]
+        pd = depth(p.trail)
+        tc.pop()
+      }
+      if (t instanceof Declaration) {
+        const p = tc[tc.length - 1]
+        if (p instanceof Declaration) {
+          tc.pop()
+        }
+      }
+      tc.push(t)
+    } else {
+      tc.push(t)
+    }
+
+    global.console.log("after", tc.map((t) => t.name), t.name, cd, "\n\n")
+
+    // if (cd >= pd) {
+    //   pd = cd
+    //   tc.push(t)
+    // } else {
+    //   while (cd < pd) {
+    //     tc.pop()
+    //     pd = depth(tc[tc.length - 1].trail)
+    //   }
+    // }
+
+    rc.push(t)
+
+    continue
+
+    global.console.log(depth(t.trail), t)
+
     if (t instanceof Group) {
       rc.push(t)
       continue

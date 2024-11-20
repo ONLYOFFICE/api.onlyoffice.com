@@ -6,6 +6,22 @@ import {
 } from "@onlyoffice/typedoc-util-is-reflection"
 import {type JSONOutput as J} from "typedoc"
 
+export function depth(t: Trail): number {
+  // if (t.length === 0) {
+  //   return -1
+  // }
+
+  let d = 0
+
+  for (const s of t) {
+    if (Array.isArray(s)) {
+      d = Math.max(d, depth(s) + 1)
+    }
+  }
+
+  return d
+}
+
 export function resolve(o: J.Reflection, t: Trail): J.Reflection | undefined {
   let c: J.Reflection | undefined = o
 
