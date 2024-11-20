@@ -2,7 +2,18 @@ import path from "node:path"
 import {inspect} from "node:util"
 import {Application, type JSONOutput as J} from "typedoc"
 import {test} from "uvu"
+// import {Console} from "./console.ts"
 import {process} from "./internal.ts"
+
+// const console = Console.shared.copy()
+
+// test.before(() => {
+//   Console.shared.mute()
+// })
+
+// test.after(() => {
+//   Console.shared.restore(console)
+// })
 
 test("900:", async () => {
   const o = await setup("900")

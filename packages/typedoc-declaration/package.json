@@ -2,6 +2,10 @@
   "name": "@onlyoffice/typedoc-declaration",
   "type": "module",
   "private": true,
+  "exports": {
+    ".": "./lib/main.ts",
+    "./console.ts": "./lib/console.ts"
+  },
   "main": "lib/main.ts",
   "scripts": {
     "clean": "rimraf coverage node_modules",

@@ -12,19 +12,26 @@
 
 // class B {}
 
-class A {
-  constructor(a: string) {}
-}
+// /**
+//  * @category custom
+//  */
+// class A {
+//   constructor(a: string) {}
+// }
 
-class B {}
+// class B {}
 
 
 
 
 
-// function a(s: string, n: number) {}
+// enum C {
+//   A,
+//   B,
+//   C,
+// }
 
-// function b(u: null) {}
+function b(u: null) {}
 
 // // interface B {}
 

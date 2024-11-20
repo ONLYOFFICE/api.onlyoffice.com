@@ -1,11 +1,16 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import * as errors from "@onlyoffice/errors"
-import type * as L from "@onlyoffice/library-declaration/next.ts"
+import * as L from "@onlyoffice/library-declaration/next.ts"
 import {eslint} from "@onlyoffice/mdast-util-eslint"
 import {firstSentence} from "@onlyoffice/mdast-util-first-sentence"
 import {type Result} from "@onlyoffice/result"
 import {
+  isCallSignatureReflection,
+  isConstructorSignatureReflection,
   isContainerReflection,
   isDeclarationReflection,
+  isEnumReflection,
+  isFunctionReflection,
   isMethodReflection,
   isParameterReflection,
   isPropertyReflection,
@@ -17,6 +22,7 @@ import remarkStripHtml from "remark-strip-html"
 import {type JSONOutput as J, ReflectionKind} from "typedoc"
 import {Console} from "./console.ts"
 import {resolve} from "./typedoc-util-resolve.ts"
+import {inspect} from "node:util"
 
 export const console = Console.shared
 
@@ -115,13 +121,23 @@ export class Context {
 }
 
 export async function process(o: J.Reflection): Promise<L.Entity[]> {
-  const ctx = new Context()
+  let err: E
+  let c: Item[] = []
 
   // The functions for working with the collection are far from efficient.
   // However, they are also not the primary bottleneck in the entire
   // documentation. Therefore, optimizing them may not be worthwhile.
 
-  let [c] = await createItems(ctx, o)
+  const ctx = new Context()
+
+  const [d, de] = await Declaration.from(o)
+  err = errors.join(err, de)
+  c.push(d)
+
+  const [tc, te] = await createItems(ctx, o)
+  err = errors.join(err, te)
+  c.push(...tc)
+
   c = sortItems(c)
   c = shakeItems(o, c)
 
@@ -136,11 +152,11 @@ export async function createItems(ctx: Context, o: J.Reflection): R<Item[]> {
   let err: E
   const c: Item[] = []
 
-  ctx.in()
-
-  const [gc, ge] = await createGroups(o)
+  const [gc, ge] = await createGroups(ctx, o)
   err = errors.join(err, ge)
   c.push(...gc)
+
+  ctx.in()
 
   const [dc, de] = await createDeclarations(ctx, o)
   err = errors.join(err, de)
@@ -248,7 +264,7 @@ export async function createFragments(ctx: Context, o: J.Reflection): R<Fragment
   return [c, err]
 }
 
-export async function createGroups(o: J.Reflection): R<Group[]> {
+export async function createGroups(ctx: Context, o: J.Reflection): R<Group[]> {
   let err: E
   const c: Group[] = []
 
@@ -260,6 +276,7 @@ export async function createGroups(o: J.Reflection): R<Group[]> {
     for (const r of o.categories) {
       const [n, ne] = await Group.from(r)
       err = errors.join(err, ne)
+      n.trail = ctx.trail
 
       // todo: add a test case to prove this
       // If an entity contains a custom category and has a child entity that
@@ -282,6 +299,7 @@ export async function createGroups(o: J.Reflection): R<Group[]> {
     for (const r of o.groups) {
       const [n, ne] = await Group.from(r)
       err = errors.join(err, ne)
+      n.trail = ctx.trail
 
       if (n.sourceChildren.length !== 0) {
         a.push(n)
@@ -291,9 +309,11 @@ export async function createGroups(o: J.Reflection): R<Group[]> {
 
   const p = new Group()
   p.name = "Type Properties"
+  p.trail = ctx.trail
 
   const m = new Group()
   m.name = "Type Methods"
+  m.trail = ctx.trail
 
   if (o.children) {
     for (const r of o.children) {
@@ -363,71 +383,93 @@ export async function createGroups(o: J.Reflection): R<Group[]> {
 }
 
 export function sortItems(c: Item[]): Item[] {
-  const x: (Declaration | Fragment)[] = []
-
-  for (const t of c) {
-    if (t instanceof Group) {
-      continue
+  return c.sort((a, b) => {
+    for (let i = 0; i < Math.max(a.trail.length, b.trail.length); i += 1) {
+      const x = Array.isArray(a.trail[i]) ? a.trail[i][0] : a.trail[i]
+      const y = Array.isArray(b.trail[i]) ? b.trail[i][0] : b.trail[i]
+      if (x !== y) {
+        return (x || 0) - (y || 0)
+      }
     }
-
-    x.push(t)
-  }
-
-  x.sort((a, b) => {
-    return a.sourceId - b.sourceId
+    return 0
   })
-
-  const y: Item[] = []
-
-  let i = 0
-
-  for (let t of c) {
-    if (t instanceof Group) {
-      y.push(t)
-      continue
-    }
-
-    t = x[i]
-    y.push(t)
-
-    i += 1
-  }
-
-  return y
 }
 
 // If a constructor does not have a description, the class description is used.
 
 export function shakeItems(o: J.Reflection, c: Item[]): Item[] {
-  // let i = -1
-
   const rc: Item[] = []
-  const fc: Fragment[] = []
 
-  for (let j = c.length - 1; j >= 0; j -= 1) {
-    const t = c[j]
+  // let i = 0
+  let d = new Declaration()
+
+  for (const t of c) {
+    if (t instanceof Group) {
+      rc.push(t)
+      continue
+    }
 
     if (t instanceof Declaration) {
+      const s = resolve(o, t.trail)
+      if (!s) {
+        const s = inspect(t.trail, {depth: null, colors: true})
+        throw new Error(`The trail '${s}' could not be resolved`)
+      }
+
+      if (isFunctionReflection(s)) {
+        continue
+      }
+
+      d = t
       rc.push(t)
       continue
     }
 
     if (t instanceof Fragment) {
-      fc.push(t)
-      continue
+      const s = resolve(o, d.trail)
+      if (!s) {
+        const s = inspect(d.trail, {depth: null, colors: true})
+        throw new Error(`The trail '${s}' could not be resolved`)
+      }
+
+      if (isCallSignatureReflection(s)) {
+        d.parameters.push(t)
+        continue
+      }
+
+      if (isConstructorSignatureReflection(s)) {
+        d.parameters.push(t)
+        continue
+      }
+
+      console.log(d, s)
+
+      throw new Error("huh?")
     }
   }
 
-  return c
+  return rc
 }
 
 export function convertItems(c: Item[]): L.Entity[] {
-  return c
+  const r: L.Entity[] = []
+
+  for (const t of c) {
+    if (t instanceof Fragment) {
+      throw new Error("allo")
+    }
+
+    const e = t.to()
+    r.push(e)
+  }
+
+  return r
 }
 
 export class Group {
   id = -1
   name = ""
+  trail: L.Trail = []
   description = ""
   // children: number[] = []
   sourceChildren: number[] = []
@@ -452,6 +494,17 @@ export class Group {
 
     return [g, err]
   }
+
+  to(): L.GroupEntity {
+    const g = new L.Group()
+    g.name = this.name
+    g.description = this.description
+
+    const e = new L.GroupEntity()
+    e.group = g
+
+    return e
+  }
 }
 
 export class Declaration {
@@ -459,11 +512,11 @@ export class Declaration {
   sourceId = -1
   name = ""
   trail: L.Trail = []
-  // children: number[] = []
   narrative = new Narrative()
-  // properties: Fragment[] = []
-  // members: Fragment[] = []
-  // parameters: Fragment[] = []
+  properties: Fragment[] = []
+  members: Fragment[] = []
+  parameters: Fragment[] = []
+  // children: number[] = []
 
   static async from(o: J.Reflection): R<Declaration> {
     let err: E
@@ -479,6 +532,37 @@ export class Declaration {
     }
 
     return [d, err]
+  }
+
+  to(): L.DeclarationEntity {
+    const d = new L.Declaration()
+    d.name = this.name
+    d.trail = this.trail
+    d.summary = this.narrative.summary
+    d.description = this.narrative.description
+
+    for (const f of this.properties) {
+      const t = f.to()
+      d.properties.push(t)
+    }
+
+    for (const f of this.members) {
+      const t = f.to()
+      d.members.push(t)
+    }
+
+    for (const f of this.parameters) {
+      const t = f.to()
+      d.parameters.push(t)
+    }
+
+    d.returns.description = this.narrative.returns
+    d.examples = this.narrative.examples
+
+    const e = new L.DeclarationEntity()
+    e.declaration = d
+
+    return e
   }
 }
 
@@ -532,6 +616,17 @@ export class Fragment {
     }
 
     return [f, err]
+  }
+
+  to(): L.Fragment {
+    const f = new L.Fragment()
+    f.name = this.name
+    f.trail = this.trail
+    f.description = this.narrative.description
+
+    // for (const p of )
+
+    return f
   }
 }
 
