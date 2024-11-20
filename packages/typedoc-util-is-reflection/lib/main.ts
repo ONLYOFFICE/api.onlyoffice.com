@@ -113,7 +113,7 @@ export function isIndexSignatureReflection(
 export function isConstructorSignatureReflection(
   r: unknown,
 ): r is R<J.DeclarationReflection, K.ConstructorSignature> {
-  return isDeclarationReflection(r) && isConstructorSignatureKind(r.kind)
+  return isSignatureReflection(r) && isConstructorSignatureKind(r.kind)
 }
 
 // function isParameterReflection(r: unknown): r is J.ParameterReflection {
