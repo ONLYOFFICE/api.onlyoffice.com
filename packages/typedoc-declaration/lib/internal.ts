@@ -6,6 +6,7 @@ import {firstSentence} from "@onlyoffice/mdast-util-first-sentence"
 import {type Result} from "@onlyoffice/result"
 import {
   isCallSignatureReflection,
+  isConstructorReflection,
   isConstructorSignatureReflection,
   isContainerReflection,
   isDeclarationReflection,
@@ -417,6 +418,14 @@ export function shakeItems(o: J.Reflection, c: Item[]): Item[] {
       }
 
       if (isFunctionReflection(s)) {
+        continue
+      }
+
+      if (isConstructorReflection(s)) {
+        continue
+      }
+
+      if (isMethodReflection(s)) {
         continue
       }
 
