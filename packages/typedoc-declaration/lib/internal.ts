@@ -1,5 +1,4 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
-import {inspect} from "node:util"
 import * as errors from "@onlyoffice/errors"
 import * as L from "@onlyoffice/library-declaration/next.ts"
 import {eslint} from "@onlyoffice/mdast-util-eslint"
@@ -23,7 +22,7 @@ import {toMarkdown} from "mdast-util-to-markdown"
 import remarkStripHtml from "remark-strip-html"
 import {type JSONOutput as J, ReflectionKind} from "typedoc"
 import {Console} from "./console.ts"
-import {depth, pair, resolve, type Pair} from "./typedoc-util-resolve.ts"
+import {pair, resolve} from "./typedoc-util-resolve.ts"
 
 export const console = Console.shared
 
@@ -53,8 +52,6 @@ export class Context {
     const [t] = this.#r
 
     if (!Array.isArray(t)) {
-      // The error is not relevant.
-      // eslint-disable-next-line unicorn/prefer-type-error
       throw new Error("The method 'in' has not been called")
     }
 
@@ -387,176 +384,95 @@ export function sortItems(c: Item[]): Item[] {
   })
 }
 
-// If a constructor does not have a description, the class description is used.
-
 export function shakeItems(o: J.Reflection, c: Item[]): Item[] {
   const rc: Item[] = []
   const tc: (Group | Declaration)[] = []
 
-  let d = new Group()
+  const d = new Group()
   d.trail = []
   tc.push(d)
 
+  // const m: Record<number, Declaration> = {}
+  let i = 0
+
   for (const t of c) {
-    if (t instanceof Fragment) {
-      continue
-    }
-
-    let pd = depth(tc[tc.length - 1].trail)
-    const cd = depth(t.trail)
-
-    let pp = pair(tc[tc.length - 1].trail)
-    const cp = pair(t.trail)
-
-    global.console.log("before", tc.map((t) => t.name), t.name)
-
-    if (cd > pd) {
-      tc.push(t)
-    } else if (cd < pd) {
-      while (cd < pd) {
-        tc.pop()
-        const p = tc[tc.length - 1]
-        pd = depth(p.trail)
-      }
-
-      if (t instanceof Declaration) {
-        let p = tc[tc.length - 1]
-        while (cd === pd && p instanceof Declaration) {
-          tc.pop()
-          p = tc[tc.length - 1]
-          pd = depth(p.trail)
-        }
-      }
-
-      if (t instanceof Declaration) {
-        let p = tc[tc.length - 1]
-        while (cd === pd && cp[1] > pp[1] && pp[1] !== -1) {
-          tc.pop()
-          p = tc[tc.length - 1]
-          pd = depth(p.trail)
-          pp = pair(p.trail)
-        }
-      }
-
-      tc.push(t)
-    } else {
-      tc.push(t)
-    }
-
-    global.console.log("after", tc.map((t) => t.name), t.name, "\n\n")
-
-    rc.push(t)
-
-    continue
-
-    // const cd = depth(t.trail)
-    // global.console.log("before", tc.map((t) => t.name), t.name, cd)
-
-    // // t.id = i
-
-    // // if (t instanceof Group) {
-    // //   for (let i = tc.length - 1; i >= 0; i -= 1) {
-    // //     const p = tc[i]
-
-    // //     if (p instanceof Declaration) {
-    // //       p.children.push(t.id)
-    // //       break
-    // //     }
-    // //   }
-    // // }
-
-    // // if (t instanceof Declaration) {
-    // //   for (let i = tc.length - 1; i >= 0; i -= 1) {
-    // //     const p = tc[i]
-
-    // //     if (p instanceof Group) {
-    // //       const i = p.sourceChildren.indexOf(t.sourceId)
-
-    // //       if (i !== -1) {
-    // //         p.children.push(t.id)
-    // //         break
-    // //       }
-    // //     }
-
-    // //     if (p instanceof Declaration) {
-    // //       break
-    // //     }
-    // //   }
-    // // }
-
-    // // i += 1
-
-    // // if (cd > pd) {
-    // //   pd = cd
-    // //   tc.push(t)
-    // // } else if (cd < pd) {
-    // //   while (cd < pd) {
-    // //     const p = tc[tc.length - 1]
-    // //     pd = depth(p.trail)
-    // //     tc.pop()
-    // //   }
-    // //   tc.push(t)
-    // // } else {
-    // //   // tc.pop()
-    // //   tc.push(t)
-    // // }
-
-    // if (cd > pd) {
-    //   pd = cd
-    //   tc.push(t)
-    // } else if (cd < pd) {
-    //   if (t.name === "D") {
-    //     while (cd < pd) {
-    //       const p = tc[tc.length - 1]
-    //       pd = depth(p.trail)
-    //       tc.pop()
-    //     }
-    //   }
-
-    //   while (cd < pd) {
-    //     const p = tc[tc.length - 1]
-    //     pd = depth(p.trail)
-    //     tc.pop()
-    //   }
-    //   // if (t instanceof Declaration) {
-    //   //   const p = tc[tc.length - 1]
-    //   //   if (p instanceof Declaration) {
-    //   //     tc.pop()
-    //   //   }
-    //   // }
-    //   tc.push(t)
-    // } else {
-    //   tc.push(t)
-    // }
-
-    // global.console.log("after", tc.map((t) => t.name), t.name, cd, "\n\n")
-
-    // // if (cd >= pd) {
-    // //   pd = cd
-    // //   tc.push(t)
-    // // } else {
-    // //   while (cd < pd) {
-    // //     tc.pop()
-    // //     pd = depth(tc[tc.length - 1].trail)
-    // //   }
-    // // }
-
-    // rc.push(t)
-
-    // continue
-
-    global.console.log(depth(t.trail), t)
-
     if (t instanceof Group) {
+      const [cd] = pair(t.trail)
+      global.console.log("before", tc.map((t) => t.name), t.name)
+
+      while (true) {
+        const p = tc[tc.length - 1]
+        const [pd] = pair(p.trail)
+
+        if (cd < pd) {
+          tc.pop()
+          continue
+        }
+
+        break
+      }
+
+      t.id = i
+      i += 1
+
+      tc.push(t)
+      global.console.log("after", tc.map((t) => t.name), t.name, "\n\n")
       rc.push(t)
       continue
     }
 
     if (t instanceof Declaration) {
+      const [cd, ci] = pair(t.trail)
+      global.console.log("before", tc.map((t) => t.name), t.name)
+
+      while (true) {
+        const p = tc[tc.length - 1]
+        const [pd, pi] = pair(p.trail)
+
+        if (
+          cd < pd ||
+          cd === pd && p instanceof Declaration ||
+          cd === pd && ci > pi && pi !== -1
+        ) {
+          tc.pop()
+          continue
+        }
+
+        break
+      }
+
+      // t.id = i
+      // i += 1
+      // m[t.sourceId] = t
+
+      // if (isConstructorSignatureReflection(s)) {
+      //   const p = tc[tc.length - 1]
+
+      //   if (!(p instanceof Declaration)) {
+      //     throw new Error("huh")
+      //   }
+
+      //   const s = resolve(o, p.trail)
+
+      //   if (!s) {
+      //     throw new Error(`The trail '${p.trail}' could not be resolved`)
+      //   }
+
+      //   if (!isConstructorReflection(s)) {
+      //     throw new Error("huh")
+      //   }
+
+      //   // p.sourceChildren.push()
+
+      //   // If a constructor does not have a description, the class description is used.
+      // }
+
+      tc.push(t)
+      global.console.log("after", tc.map((t) => t.name), t.name, "\n\n")
+
       const s = resolve(o, t.trail)
       if (!s) {
-        const s = inspect(t.trail, {depth: null, colors: true})
-        throw new Error(`The trail '${s}' could not be resolved`)
+        throw new Error(`The trail '${t.trail}' could not be resolved`)
       }
 
       if (isFunctionReflection(s)) {
@@ -571,33 +487,43 @@ export function shakeItems(o: J.Reflection, c: Item[]): Item[] {
         continue
       }
 
-      d = t
+      t.id = i
+      i += 1
+
       rc.push(t)
       continue
     }
 
     if (t instanceof Fragment) {
-      const s = resolve(o, d.trail)
+      const p = tc[tc.length - 1]
+      if (!(p instanceof Declaration)) {
+        throw new Error("huh???")
+      }
+
+      const s = resolve(o, p.trail)
       if (!s) {
-        const s = inspect(d.trail, {depth: null, colors: true})
-        throw new Error(`The trail '${s}' could not be resolved`)
+        throw new Error(`The trail '${p.trail}' could not be resolved`)
       }
 
       if (isCallSignatureReflection(s)) {
-        d.parameters.push(t)
+        p.parameters.push(t)
         continue
       }
 
       if (isConstructorSignatureReflection(s)) {
-        d.parameters.push(t)
+        p.parameters.push(t)
         continue
       }
 
-      console.log(d, s)
-
-      throw new Error("huh?")
+      continue
     }
+
+    throw new Error("huh??")
   }
+
+  function free(): void {}
+
+  // global.console.log(m)
 
   return rc
 }
@@ -668,6 +594,7 @@ export class Declaration {
   members: Fragment[] = []
   parameters: Fragment[] = []
   children: number[] = []
+  sourceChildren: number[] = []
 
   static async from(o: J.Reflection): R<Declaration> {
     let err: E
@@ -680,6 +607,24 @@ export class Declaration {
       const [n, ne] = await Narrative.from(o.comment)
       err = errors.join(ne)
       d.narrative = n
+    }
+
+    if (isSignatureReflection(o) && o.parameters) {
+      for (const r of o.parameters) {
+        d.sourceChildren.push(r.id)
+      }
+    }
+
+    if (isDeclarationReflection(o) && o.signatures) {
+      for (const r of o.signatures) {
+        d.sourceChildren.push(r.id)
+      }
+    }
+
+    if (isContainerReflection(o) && o.children) {
+      for (const r of o.children) {
+        d.sourceChildren.push(r.id)
+      }
     }
 
     return [d, err]
