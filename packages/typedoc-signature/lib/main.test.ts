@@ -15,6 +15,46 @@ test("900: ?", async () => {
   eq(ac, ec)
 })
 
+test("901: ?", async () => {
+  const [t, ac, ec] = await setup("901")
+
+  for (const e of ac) {
+    compute(t, e)
+  }
+
+  eq(ac, ec)
+})
+
+test("902: ?", async () => {
+  const [t, ac, ec] = await setup("902")
+
+  for (const e of ac) {
+    compute(t, e)
+  }
+
+  eq(ac, ec)
+})
+
+test("903: ?", async () => {
+  const [t, ac, ec] = await setup("903")
+
+  for (const e of ac) {
+    compute(t, e)
+  }
+
+  eq(ac, ec)
+})
+
+test("905: ?", async () => {
+  const [t, ac, ec] = await setup("905")
+
+  for (const e of ac) {
+    compute(t, e)
+  }
+
+  eq(ac, ec)
+})
+
 test.run()
 
 async function setup(s: string): Promise<[J.ProjectReflection, Entity[], Entity[]]> {
