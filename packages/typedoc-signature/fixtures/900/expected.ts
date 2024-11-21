@@ -8,16 +8,17 @@ import {
   type Signature,
   TextToken,
   type Token,
+  TypeToken,
 } from "@onlyoffice/signature"
 
 export const collection: Entity[] = []
 
-let e: Entity
+let e0: Entity
 let s: Signature = []
 let t: Token
 
-e = new DeclarationEntity()
-e.declaration.trail = [0]
+e0 = new DeclarationEntity()
+e0.declaration.trail = [0, [0]]
 
 t = new KeywordToken()
 t.text = "function"
@@ -32,9 +33,21 @@ t.text = "f"
 s.push(t)
 
 t = new TextToken()
-t.text = "()"
+t.text = "("
 s.push(t)
 
-e.declaration.signature.verbose = s
+t = new TextToken()
+t.text = ")"
+s.push(t)
 
-collection.push(e)
+t = new TextToken()
+t.text = ": "
+s.push(t)
+
+t = new TypeToken()
+t.text = "void"
+s.push(t)
+
+e0.declaration.signature.verbose = s
+
+collection.push(e0)

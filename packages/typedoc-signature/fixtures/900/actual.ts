@@ -5,6 +5,6 @@ import {
 
 export const collection: Entity[] = []
 
-const e0 = new DeclarationEntity()
-e0.declaration.trail = [0]
-collection.push(e0)
+const e = new DeclarationEntity()
+e.declaration.trail = [0, [0]]
+collection.push(e)
