@@ -22,10 +22,49 @@ export function depth(t: Trail): number {
   return d
 }
 
-export function pair(t: Trail): [number, number] {
+  // function greater(a: Pair, b: Pair): boolean {
+  //   const [ad, ai] = a
+  //   const [bd, bi] = b
+
+  //   if (ad > bd) {
+  //     return true
+  //   }
+
+  //   return false
+  // }
+
+  // function less(a: Pair, b: Pair): boolean {
+  //   const [ad, ai] = a
+  //   const [bd, bi] = b
+
+  //   if (ad < bd) {
+  //     return true
+  //   }
+
+  //   // if (ad === bd && ai > bi) {
+  //   //   return true
+  //   // }
+
+  //   return false
+  // }
+
+  // function equal(a: Pair, b: Pair): boolean {
+  //   const [ad, ai] = a
+  //   const [bd, bi] = b
+
+  //   if (ad === bd) {
+  //     return true
+  //   }
+
+  //   return false
+  // }
+
+export type Pair = [number, number]
+
+export function pair(t: Trail): Pair {
   return p(t, 0)
 
-  function p(t: Trail, c: number): [number, number] {
+  function p(t: Trail, c: number): Pair {
     let m = c
     let i = -1
 

@@ -23,7 +23,7 @@ import {toMarkdown} from "mdast-util-to-markdown"
 import remarkStripHtml from "remark-strip-html"
 import {type JSONOutput as J, ReflectionKind} from "typedoc"
 import {Console} from "./console.ts"
-import {depth, pair, resolve} from "./typedoc-util-resolve.ts"
+import {depth, pair, resolve, type Pair} from "./typedoc-util-resolve.ts"
 
 export const console = Console.shared
 
@@ -393,111 +393,157 @@ export function shakeItems(o: J.Reflection, c: Item[]): Item[] {
   const rc: Item[] = []
   const tc: (Group | Declaration)[] = []
 
-  let pd = -1
-
-  let i = 0
-  let d = new Declaration()
+  let d = new Group()
+  d.trail = []
+  tc.push(d)
 
   for (const t of c) {
     if (t instanceof Fragment) {
       continue
     }
 
+    let pd = depth(tc[tc.length - 1].trail)
     const cd = depth(t.trail)
-    global.console.log("before", tc.map((t) => t.name), t.name, cd)
 
-    // t.id = i
+    let pp = pair(tc[tc.length - 1].trail)
+    const cp = pair(t.trail)
 
-    // if (t instanceof Group) {
-    //   for (let i = tc.length - 1; i >= 0; i -= 1) {
-    //     const p = tc[i]
-
-    //     if (p instanceof Declaration) {
-    //       p.children.push(t.id)
-    //       break
-    //     }
-    //   }
-    // }
-
-    // if (t instanceof Declaration) {
-    //   for (let i = tc.length - 1; i >= 0; i -= 1) {
-    //     const p = tc[i]
-
-    //     if (p instanceof Group) {
-    //       const i = p.sourceChildren.indexOf(t.sourceId)
-
-    //       if (i !== -1) {
-    //         p.children.push(t.id)
-    //         break
-    //       }
-    //     }
-
-    //     if (p instanceof Declaration) {
-    //       break
-    //     }
-    //   }
-    // }
-
-    // i += 1
-
-    // if (cd > pd) {
-    //   pd = cd
-    //   tc.push(t)
-    // } else if (cd < pd) {
-    //   while (cd < pd) {
-    //     const p = tc[tc.length - 1]
-    //     pd = depth(p.trail)
-    //     tc.pop()
-    //   }
-    //   tc.push(t)
-    // } else {
-    //   // tc.pop()
-    //   tc.push(t)
-    // }
+    global.console.log("before", tc.map((t) => t.name), t.name)
 
     if (cd > pd) {
-      pd = cd
       tc.push(t)
     } else if (cd < pd) {
-      if (t.name === "D") {
-        while (cd < pd) {
-          const p = tc[tc.length - 1]
-          pd = depth(p.trail)
+      while (cd < pd) {
+        tc.pop()
+        const p = tc[tc.length - 1]
+        pd = depth(p.trail)
+      }
+
+      if (t instanceof Declaration) {
+        let p = tc[tc.length - 1]
+        while (cd === pd && p instanceof Declaration) {
           tc.pop()
+          p = tc[tc.length - 1]
+          pd = depth(p.trail)
         }
       }
 
-      while (cd < pd) {
-        const p = tc[tc.length - 1]
-        pd = depth(p.trail)
-        tc.pop()
+      if (t instanceof Declaration) {
+        let p = tc[tc.length - 1]
+        while (cd === pd && cp[1] > pp[1] && pp[1] !== -1) {
+          tc.pop()
+          p = tc[tc.length - 1]
+          pd = depth(p.trail)
+          pp = pair(p.trail)
+        }
       }
-      // if (t instanceof Declaration) {
-      //   const p = tc[tc.length - 1]
-      //   if (p instanceof Declaration) {
-      //     tc.pop()
-      //   }
-      // }
+
       tc.push(t)
     } else {
       tc.push(t)
     }
 
-    global.console.log("after", tc.map((t) => t.name), t.name, cd, "\n\n")
-
-    // if (cd >= pd) {
-    //   pd = cd
-    //   tc.push(t)
-    // } else {
-    //   while (cd < pd) {
-    //     tc.pop()
-    //     pd = depth(tc[tc.length - 1].trail)
-    //   }
-    // }
+    global.console.log("after", tc.map((t) => t.name), t.name, "\n\n")
 
     rc.push(t)
 
     continue
+
+    // const cd = depth(t.trail)
+    // global.console.log("before", tc.map((t) => t.name), t.name, cd)
+
+    // // t.id = i
+
+    // // if (t instanceof Group) {
+    // //   for (let i = tc.length - 1; i >= 0; i -= 1) {
+    // //     const p = tc[i]
+
+    // //     if (p instanceof Declaration) {
+    // //       p.children.push(t.id)
+    // //       break
+    // //     }
+    // //   }
+    // // }
+
+    // // if (t instanceof Declaration) {
+    // //   for (let i = tc.length - 1; i >= 0; i -= 1) {
+    // //     const p = tc[i]
+
+    // //     if (p instanceof Group) {
+    // //       const i = p.sourceChildren.indexOf(t.sourceId)
+
+    // //       if (i !== -1) {
+    // //         p.children.push(t.id)
+    // //         break
+    // //       }
+    // //     }
+
+    // //     if (p instanceof Declaration) {
+    // //       break
+    // //     }
+    // //   }
+    // // }
+
+    // // i += 1
+
+    // // if (cd > pd) {
+    // //   pd = cd
+    // //   tc.push(t)
+    // // } else if (cd < pd) {
+    // //   while (cd < pd) {
+    // //     const p = tc[tc.length - 1]
+    // //     pd = depth(p.trail)
+    // //     tc.pop()
+    // //   }
+    // //   tc.push(t)
+    // // } else {
+    // //   // tc.pop()
+    // //   tc.push(t)
+    // // }
+
+    // if (cd > pd) {
+    //   pd = cd
+    //   tc.push(t)
+    // } else if (cd < pd) {
+    //   if (t.name === "D") {
+    //     while (cd < pd) {
+    //       const p = tc[tc.length - 1]
+    //       pd = depth(p.trail)
+    //       tc.pop()
+    //     }
+    //   }
+
+    //   while (cd < pd) {
+    //     const p = tc[tc.length - 1]
+    //     pd = depth(p.trail)
+    //     tc.pop()
+    //   }
+    //   // if (t instanceof Declaration) {
+    //   //   const p = tc[tc.length - 1]
+    //   //   if (p instanceof Declaration) {
+    //   //     tc.pop()
+    //   //   }
+    //   // }
+    //   tc.push(t)
+    // } else {
+    //   tc.push(t)
+    // }
+
+    // global.console.log("after", tc.map((t) => t.name), t.name, cd, "\n\n")
+
+    // // if (cd >= pd) {
+    // //   pd = cd
+    // //   tc.push(t)
+    // // } else {
+    // //   while (cd < pd) {
+    // //     tc.pop()
+    // //     pd = depth(tc[tc.length - 1].trail)
+    // //   }
+    // // }
+
+    // rc.push(t)
+
+    // continue
 
     global.console.log(depth(t.trail), t)
 
