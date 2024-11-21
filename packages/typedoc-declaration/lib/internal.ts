@@ -395,10 +395,190 @@ export function shakeItems(o: J.Reflection, c: Item[]): Item[] {
   // const m: Record<number, Declaration> = {}
   let i = 0
 
+  // for (const t of c) {
+  //   if (t instanceof Group) {
+  //     const [cd] = pair(t.trail)
+  //     global.console.log("before", tc.map((t) => t.name), t.name)
+
+  //     while (true) {
+  //       const p = tc[tc.length - 1]
+  //       const [pd] = pair(p.trail)
+
+  //       if (cd < pd) {
+  //         tc.pop()
+  //         continue
+  //       }
+
+  //       break
+  //     }
+
+  //     // t.id = i
+  //     // i += 1
+
+  //     tc.push(t)
+  //     global.console.log("after", tc.map((t) => t.name), t.name, "\n\n")
+  //     rc.push(t)
+  //     continue
+  //   }
+
+  //   if (t instanceof Declaration) {
+  //     const [cd, ci] = pair(t.trail)
+  //     global.console.log("before", tc.map((t) => t.name), t.name)
+
+  //     while (true) {
+  //       const p = tc[tc.length - 1]
+  //       const [pd, pi] = pair(p.trail)
+
+  //       if (
+  //         cd < pd ||
+  //         cd === pd && p instanceof Declaration ||
+  //         cd === pd && ci > pi && pi !== -1
+  //       ) {
+  //         tc.pop()
+  //         continue
+  //       }
+
+  //       break
+  //     }
+
+  //     // t.id = i
+  //     // i += 1
+  //     // m[t.sourceId] = t
+
+  //     // if (isConstructorSignatureReflection(s)) {
+  //     //   const p = tc[tc.length - 1]
+
+  //     //   if (!(p instanceof Declaration)) {
+  //     //     throw new Error("huh")
+  //     //   }
+
+  //     //   const s = resolve(o, p.trail)
+
+  //     //   if (!s) {
+  //     //     throw new Error(`The trail '${p.trail}' could not be resolved`)
+  //     //   }
+
+  //     //   if (!isConstructorReflection(s)) {
+  //     //     throw new Error("huh")
+  //     //   }
+
+  //     //   // p.sourceChildren.push()
+
+  //     //   // If a constructor does not have a description, the class description is used.
+  //     // }
+
+  //     tc.push(t)
+  //     global.console.log("after", tc.map((t) => t.name), t.name, "\n\n")
+
+  //     // const s = resolve(o, t.trail)
+  //     // if (!s) {
+  //     //   throw new Error(`The trail '${t.trail}' could not be resolved`)
+  //     // }
+
+  //     // if (isFunctionReflection(s)) {
+  //     //   continue
+  //     // }
+
+  //     // if (isConstructorReflection(s)) {
+  //     //   continue
+  //     // }
+
+  //     // if (isMethodReflection(s)) {
+  //     //   continue
+  //     // }
+
+  //     // t.id = i
+  //     // i += 1
+
+  //     rc.push(t)
+  //     continue
+  //   }
+
+  //   if (t instanceof Fragment) {
+  //     continue
+
+  //     const p = tc[tc.length - 1]
+  //     if (!(p instanceof Declaration)) {
+  //       throw new Error("huh???")
+  //     }
+
+  //     const s = resolve(o, p.trail)
+  //     if (!s) {
+  //       throw new Error(`The trail '${p.trail}' could not be resolved`)
+  //     }
+
+  //     if (isCallSignatureReflection(s)) {
+  //       p.parameters.push(t)
+  //       continue
+  //     }
+
+  //     if (isConstructorSignatureReflection(s)) {
+  //       p.parameters.push(t)
+  //       continue
+  //     }
+
+  //     continue
+  //   }
+
+  //   throw new Error("huh??")
+  // }
+
   for (const t of c) {
+    if (t instanceof Fragment) {
+      continue
+    }
+
+    global.console.log("before", tc.map((t) => t.name), t.name)
+
+    set(t)
+    free(t)
+    loc(t)
+
+    global.console.log("after", tc.map((t) => t.name), t.name, "\n\n")
+
+    keep(t)
+  }
+
+  // while (tc[tc.length - 1] !== d) {
+  //   tc.pop()
+  // }
+
+  function set(t: Item): void {
+    if (t instanceof Group) {
+      t.id = i
+      i += 1
+      return
+    }
+
+    if (t instanceof Declaration) {
+      const s = resolve(o, t.trail)
+      if (!s) {
+        throw new Error(`The trail '${t.trail}' could not be resolved`)
+      }
+
+      if (
+        isFunctionReflection(s) ||
+        isConstructorReflection(s) ||
+        isMethodReflection(s)
+      ) {
+        return
+      }
+
+      t.id = i
+      i += 1
+      return
+    }
+
+    if (t instanceof Fragment) {
+      return
+    }
+
+    throw new Error("huh??")
+  }
+
+  function free(t: Item): void {
     if (t instanceof Group) {
       const [cd] = pair(t.trail)
-      global.console.log("before", tc.map((t) => t.name), t.name)
 
       while (true) {
         const p = tc[tc.length - 1]
@@ -412,18 +592,11 @@ export function shakeItems(o: J.Reflection, c: Item[]): Item[] {
         break
       }
 
-      t.id = i
-      i += 1
-
-      tc.push(t)
-      global.console.log("after", tc.map((t) => t.name), t.name, "\n\n")
-      rc.push(t)
-      continue
+      return
     }
 
     if (t instanceof Declaration) {
       const [cd, ci] = pair(t.trail)
-      global.console.log("before", tc.map((t) => t.name), t.name)
 
       while (true) {
         const p = tc[tc.length - 1]
@@ -441,87 +614,116 @@ export function shakeItems(o: J.Reflection, c: Item[]): Item[] {
         break
       }
 
-      // t.id = i
-      // i += 1
-      // m[t.sourceId] = t
-
-      // if (isConstructorSignatureReflection(s)) {
-      //   const p = tc[tc.length - 1]
-
-      //   if (!(p instanceof Declaration)) {
-      //     throw new Error("huh")
-      //   }
-
-      //   const s = resolve(o, p.trail)
-
-      //   if (!s) {
-      //     throw new Error(`The trail '${p.trail}' could not be resolved`)
-      //   }
-
-      //   if (!isConstructorReflection(s)) {
-      //     throw new Error("huh")
-      //   }
-
-      //   // p.sourceChildren.push()
-
-      //   // If a constructor does not have a description, the class description is used.
-      // }
-
-      tc.push(t)
-      global.console.log("after", tc.map((t) => t.name), t.name, "\n\n")
-
-      const s = resolve(o, t.trail)
-      if (!s) {
-        throw new Error(`The trail '${t.trail}' could not be resolved`)
-      }
-
-      if (isFunctionReflection(s)) {
-        continue
-      }
-
-      if (isConstructorReflection(s)) {
-        continue
-      }
-
-      if (isMethodReflection(s)) {
-        continue
-      }
-
-      t.id = i
-      i += 1
-
-      rc.push(t)
-      continue
+      return
     }
 
     if (t instanceof Fragment) {
-      const p = tc[tc.length - 1]
-      if (!(p instanceof Declaration)) {
-        throw new Error("huh???")
-      }
-
-      const s = resolve(o, p.trail)
-      if (!s) {
-        throw new Error(`The trail '${p.trail}' could not be resolved`)
-      }
-
-      if (isCallSignatureReflection(s)) {
-        p.parameters.push(t)
-        continue
-      }
-
-      if (isConstructorSignatureReflection(s)) {
-        p.parameters.push(t)
-        continue
-      }
-
-      continue
+      return
     }
 
     throw new Error("huh??")
   }
 
-  function free(): void {}
+  function loc(t: Item): void {
+    if (t instanceof Group) {
+      for (let i = tc.length - 1; i >= 0; i -= 1) {
+        const p = tc[i]
+
+        if (!(p instanceof Declaration)) {
+          continue
+        }
+
+        // if (p.trail !== t.trail) {
+        //   break
+        // }
+
+        // for (const c of t.sourceChildren) {
+        //   if (!p.sourceChildren.includes(c)) {
+        //     break
+        //   }
+        // }
+
+        p.children.push(t.id)
+        break
+      }
+
+      tc.push(t)
+      return
+    }
+
+    if (t instanceof Declaration) {
+      // const s = resolve(o, t.trail)
+      // if (!s) {
+      //   throw new Error(`The trail '${t.trail}' could not be resolved`)
+      // }
+
+      if (
+        // isFunctionReflection(s) ||
+        // isConstructorReflection(s) ||
+        // isMethodReflection(s)
+        t.id === -1
+      ) {
+        for (let i = tc.length - 1; i >= 0; i -= 1) {
+          const p = tc[i]
+
+          const j = p.sourceChildren.indexOf(t.sourceId)
+          if (j === -1) {
+            continue
+          }
+
+          p.sourceChildren.splice(j, 1, ...t.sourceChildren)
+          break
+        }
+      } else {
+        // for (let i = tc.length - 1; i >= 0; i -= 1) {
+        //   const p = tc[i]
+        // }
+
+        // global.console.log("loc", t.name, t.id)
+      }
+
+      tc.push(t)
+      return
+    }
+
+    if (t instanceof Fragment) {
+      return
+    }
+
+    throw new Error("huh??")
+  }
+
+  function keep(t: Item): void {
+    if (t instanceof Group) {
+      rc.push(t)
+      return
+    }
+
+    if (t instanceof Declaration) {
+      // const s = resolve(o, t.trail)
+      // if (!s) {
+      //   throw new Error(`The trail '${t.trail}' could not be resolved`)
+      // }
+
+      if (
+        // isFunctionReflection(s) ||
+        // isConstructorReflection(s) ||
+        // isMethodReflection(s)
+        t.id === -1
+      ) {
+        return
+      }
+
+      rc.push(t)
+      return
+    }
+
+    if (t instanceof Fragment) {
+      return
+    }
+
+    throw new Error("huh??")
+  }
 
   // global.console.log(m)
 
@@ -545,6 +747,7 @@ export function convertItems(c: Item[]): L.Entity[] {
 
 export class Group {
   id = -1
+  sourceId = -1
   name = ""
   trail: L.Trail = []
   description = ""
