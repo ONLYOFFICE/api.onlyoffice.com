@@ -22,7 +22,8 @@ import {toMarkdown} from "mdast-util-to-markdown"
 import remarkStripHtml from "remark-strip-html"
 import {type JSONOutput as J, ReflectionKind} from "typedoc"
 import {Console} from "./console.ts"
-import {pair, resolve} from "./typedoc-util-resolve.ts"
+import {depth, pair, resolve} from "./typedoc-util-resolve.ts"
+import {inspect} from "util"
 
 export const console = Console.shared
 
@@ -116,6 +117,59 @@ export class Context {
     return t
   }
 
+  huh(): L.Trail {
+    const r = this.trail
+
+    let t = r
+
+    while (true) {
+      if (Array.isArray(t) && t.length === 0) {
+        t.push(0.5)
+        break
+      }
+
+      if (Array.isArray(t) && Array.isArray(t[t.length - 1])) {
+        t = t[t.length - 1]
+        continue
+      }
+
+      if (Array.isArray(t)) {
+        t[t.length - 1] += 0.5
+        break
+      }
+
+      break
+    }
+
+    return r
+
+    // function test() {
+    //   let c: J.Reflection | undefined = o
+
+    //   for (const s of t) {
+    //     if (!c) {
+    //       break
+    //     }
+
+    //     if (Array.isArray(s)) {
+    //       c = resolve(c, s)
+    //       continue
+    //     }
+
+    //     const t = target(c)
+
+    //     if (t.length !== 0) {
+    //       c = t[s]
+    //       continue
+    //     }
+
+    //     break
+    //   }
+
+    //   return c
+    // }
+  }
+
   push(i: number): void {
     this.#c.push(i)
   }
@@ -146,7 +200,8 @@ export async function process(o: J.Reflection): Promise<L.Entity[]> {
   c = sortItems(c)
   c = shakeItems(o, c)
 
-  return convertItems(c)
+  // return convertItems(c)
+  return c
 }
 
 export type Item = Group | Declaration | Fragment
@@ -221,6 +276,7 @@ export async function createDeclarations(ctx: Context, o: J.Reflection): R<Decla
       const [d, de] = await Declaration.from(r)
       err = errors.join(err, de)
       d.trail = ctx.with(i)
+      d._depth = depth(d.trail) + 1
       c.push(d)
     }
   }
@@ -230,6 +286,7 @@ export async function createDeclarations(ctx: Context, o: J.Reflection): R<Decla
       const [d, de] = await Declaration.from(r)
       err = errors.join(err, de)
       d.trail = ctx.with(i)
+      d._depth = depth(d.trail) + 1
       c.push(d)
     }
   }
@@ -246,6 +303,7 @@ export async function createFragments(ctx: Context, o: J.Reflection): R<Fragment
       const [f, fe] = await Fragment.from(r)
       err = errors.join(err, fe)
       f.trail = ctx.with(i)
+      f._depth = depth(f.trail) + 1
       c.push(f)
     }
   }
@@ -261,11 +319,15 @@ export async function createGroups(ctx: Context, o: J.Reflection): R<Group[]> {
     return [c, err]
   }
 
+  // let i = 0
+
   if (o.categories) {
     for (const r of o.categories) {
       const [n, ne] = await Group.from(r)
       err = errors.join(err, ne)
       n.trail = ctx.trail
+      n._huh = ctx.huh()
+      n._depth = (depth(n.trail) + 1) / 2
 
       // todo: add a test case to prove this
       // If an entity contains a custom category and has a child entity that
@@ -277,6 +339,7 @@ export async function createGroups(ctx: Context, o: J.Reflection): R<Group[]> {
       }
 
       if (n.sourceChildren.length !== 0) {
+        // n.order = next()
         c.push(n)
       }
     }
@@ -289,8 +352,11 @@ export async function createGroups(ctx: Context, o: J.Reflection): R<Group[]> {
       const [n, ne] = await Group.from(r)
       err = errors.join(err, ne)
       n.trail = ctx.trail
+      n._huh = ctx.huh()
+      n._depth = (depth(n.trail) + 1) / 2
 
       if (n.sourceChildren.length !== 0) {
+        // n.order = next()
         a.push(n)
       }
     }
@@ -299,10 +365,12 @@ export async function createGroups(ctx: Context, o: J.Reflection): R<Group[]> {
   const p = new Group()
   p.name = "Type Properties"
   p.trail = ctx.trail
+  p._depth = (depth(p.trail) + 1) / 2
 
   const m = new Group()
   m.name = "Type Methods"
   m.trail = ctx.trail
+  m._depth = (depth(m.trail) + 1) / 2
 
   if (o.children) {
     for (const r of o.children) {
@@ -323,10 +391,12 @@ export async function createGroups(ctx: Context, o: J.Reflection): R<Group[]> {
   }
 
   if (p.sourceChildren.length !== 0) {
+    // p.order = next()
     a.push(p)
   }
 
   if (m.sourceChildren.length !== 0) {
+    // m.order = next()
     a.push(m)
   }
 
@@ -369,9 +439,18 @@ export async function createGroups(ctx: Context, o: J.Reflection): R<Group[]> {
   }
 
   return [c, err]
+
+  // function next(): number {
+  //   const j = o.id + (i + 1) / 10
+  //   i += 1
+  //   return j
+  // }
 }
 
 export function sortItems(c: Item[]): Item[] {
+  // return c.sort((a, b) => {
+  //   return a.order - b.order
+  // })
   return c.sort((a, b) => {
     for (let i = 0; i < Math.max(a.trail.length, b.trail.length); i += 1) {
       const x = Array.isArray(a.trail[i]) ? a.trail[i][0] : a.trail[i]
@@ -384,188 +463,270 @@ export function sortItems(c: Item[]): Item[] {
   })
 }
 
+// export function shakeItems2(o: J.Reflection, c: Item[]): Item[] {
+//   const rc: Item[] = []
+
+//   const gc: Group[] = []
+//   const dc: Declaration[] = []
+//   const fc: Fragment[] = []
+
+//   const g = new Group()
+//   gc.push(g)
+
+//   const d = new Declaration()
+//   dc.push(d)
+
+//   const f = new Fragment()
+//   fc.push(f)
+
+//   let i = 0
+
+//   for (const t of c) {
+//     if (t instanceof Fragment) {
+//       continue
+//     }
+
+//     f0(t)
+//     f1(t)
+//     f2(t)
+//     f4(t)
+//   }
+
+//   return rc
+
+//   function f0(t: Item): void {
+//     let c: Item[] = []
+
+//     if (t instanceof Group) {
+//       c = gc
+//     } else if (t instanceof Declaration) {
+//       c = dc
+//     } else if (t instanceof Fragment) {
+//       c = fc
+//     } else {
+//       throw new Error("Unknown item")
+//     }
+
+//     const [cd] = pair(t.trail)
+
+//     while (true) {
+//       const p = c[c.length - 1]
+//       const [pd] = pair(p.trail)
+
+//       if (cd < pd) {
+//         c.pop()
+//         f3(p)
+//         continue
+//       }
+
+//       break
+//     }
+//   }
+
+//   function f1(t: Item): void {
+//     let c: Item[] = []
+
+//     if (t instanceof Group) {
+//       c = gc
+//     } else if (t instanceof Declaration) {
+//       c = dc
+//     } else if (t instanceof Fragment) {
+//       c = fc
+//     } else {
+//       throw new Error("Unknown item")
+//     }
+
+//     c.push(t)
+//   }
+
+//   function f2(t: Item): void {
+//     if (t instanceof Group) {
+//       t.id = next()
+//       return
+//     }
+
+//     if (t instanceof Declaration && isContainer(t)) {
+//       return
+//     }
+
+//     if (t instanceof Declaration) {
+//       t.id = next()
+//       return
+//     }
+
+//     if (t instanceof Fragment) {
+//       return
+//     }
+
+//     throw new Error("Unknown item")
+//   }
+
+//   function f3(t: Item): void {}
+
+//   function exit(t: Item): void {
+//     if (t instanceof Group) {
+//       for (let i = tc.length - 1; i >= 0; i -= 1) {
+//         const p = tc[i]
+
+//         if (p instanceof Fragment) {
+//           throw new Error("how?")
+//         }
+
+//         if (p instanceof Group) {
+//           continue
+//         }
+
+//         const [cd, ci] = pair(t.trail)
+//         const [pd, pi] = pair(p.trail)
+
+//         if (cd === pd && ci === pi) {
+//           p.children.unshift(t.id)
+//         }
+
+//         break
+//       }
+
+//       return
+//     }
+
+//     if (t instanceof Declaration && t.id === -1) {
+//       for (let i = tc.length - 1; i >= 0; i -= 1) {
+//         const p = tc[i]
+
+//         if (p instanceof Fragment) {
+//           throw new Error("how?")
+//         }
+
+//         if (!p.sourceChildren.includes(t.sourceId)) {
+//           continue
+//         }
+
+//         p.children.push(...t.children)
+//         break
+//       }
+
+//       return
+//     }
+
+//     if (t instanceof Declaration) {
+//       for (let i = tc.length - 1; i >= 0; i -= 1) {
+//         const p = tc[i]
+
+//         if (p instanceof Fragment) {
+//           throw new Error("how?")
+//         }
+
+//         if (!p.sourceChildren.includes(t.sourceId)) {
+//           continue
+//         }
+
+//         p.children.push(t.id)
+//         break
+//       }
+
+//       return
+//     }
+
+//     if (t instanceof Fragment) {
+//       return
+//     }
+
+//     throw new Error("Unknown item")
+//   }
+
+//   function f4(t: Item): void {
+//     if (t instanceof Group) {
+//       rc.push(t)
+//       return
+//     }
+
+//     if (t instanceof Declaration && t.id === -1) {
+//       return
+//     }
+
+//     if (t instanceof Declaration) {
+//       rc.push(t)
+//       return
+//     }
+
+//     if (t instanceof Fragment) {
+//       return
+//     }
+
+//     throw new Error("Unknown item")
+//   }
+
+//   function isContainer(t: Declaration): boolean {
+//     const s = resolve(o, t.trail)
+//     if (!s) {
+//       throw new Error(`The trail '${t.trail}' could not be resolved`)
+//     }
+
+//     return isFunctionReflection(s) ||
+//       isConstructorReflection(s) ||
+//       isMethodReflection(s)
+//   }
+
+//   function next(): number {
+//     const j = i
+//     i += 1
+//     return j
+//   }
+// }
+
 export function shakeItems(o: J.Reflection, c: Item[]): Item[] {
+  global.console.log(inspect(c, {depth: null, colors: true}), "\n\n")
   const rc: Item[] = []
-  const tc: (Group | Declaration)[] = []
+  // const tc: (Group | Declaration)[] = []
+  const tc: Item[] = []
 
   const d = new Group()
-  d.trail = []
   tc.push(d)
 
-  // const m: Record<number, Declaration> = {}
   let i = 0
 
-  // for (const t of c) {
-  //   if (t instanceof Group) {
-  //     const [cd] = pair(t.trail)
-  //     global.console.log("before", tc.map((t) => t.name), t.name)
-
-  //     while (true) {
-  //       const p = tc[tc.length - 1]
-  //       const [pd] = pair(p.trail)
-
-  //       if (cd < pd) {
-  //         tc.pop()
-  //         continue
-  //       }
-
-  //       break
-  //     }
-
-  //     // t.id = i
-  //     // i += 1
-
-  //     tc.push(t)
-  //     global.console.log("after", tc.map((t) => t.name), t.name, "\n\n")
-  //     rc.push(t)
-  //     continue
-  //   }
-
-  //   if (t instanceof Declaration) {
-  //     const [cd, ci] = pair(t.trail)
-  //     global.console.log("before", tc.map((t) => t.name), t.name)
-
-  //     while (true) {
-  //       const p = tc[tc.length - 1]
-  //       const [pd, pi] = pair(p.trail)
-
-  //       if (
-  //         cd < pd ||
-  //         cd === pd && p instanceof Declaration ||
-  //         cd === pd && ci > pi && pi !== -1
-  //       ) {
-  //         tc.pop()
-  //         continue
-  //       }
-
-  //       break
-  //     }
-
-  //     // t.id = i
-  //     // i += 1
-  //     // m[t.sourceId] = t
-
-  //     // if (isConstructorSignatureReflection(s)) {
-  //     //   const p = tc[tc.length - 1]
-
-  //     //   if (!(p instanceof Declaration)) {
-  //     //     throw new Error("huh")
-  //     //   }
-
-  //     //   const s = resolve(o, p.trail)
-
-  //     //   if (!s) {
-  //     //     throw new Error(`The trail '${p.trail}' could not be resolved`)
-  //     //   }
-
-  //     //   if (!isConstructorReflection(s)) {
-  //     //     throw new Error("huh")
-  //     //   }
-
-  //     //   // p.sourceChildren.push()
-
-  //     //   // If a constructor does not have a description, the class description is used.
-  //     // }
-
-  //     tc.push(t)
-  //     global.console.log("after", tc.map((t) => t.name), t.name, "\n\n")
-
-  //     // const s = resolve(o, t.trail)
-  //     // if (!s) {
-  //     //   throw new Error(`The trail '${t.trail}' could not be resolved`)
-  //     // }
-
-  //     // if (isFunctionReflection(s)) {
-  //     //   continue
-  //     // }
-
-  //     // if (isConstructorReflection(s)) {
-  //     //   continue
-  //     // }
-
-  //     // if (isMethodReflection(s)) {
-  //     //   continue
-  //     // }
-
-  //     // t.id = i
-  //     // i += 1
-
-  //     rc.push(t)
-  //     continue
-  //   }
-
-  //   if (t instanceof Fragment) {
-  //     continue
-
-  //     const p = tc[tc.length - 1]
-  //     if (!(p instanceof Declaration)) {
-  //       throw new Error("huh???")
-  //     }
-
-  //     const s = resolve(o, p.trail)
-  //     if (!s) {
-  //       throw new Error(`The trail '${p.trail}' could not be resolved`)
-  //     }
-
-  //     if (isCallSignatureReflection(s)) {
-  //       p.parameters.push(t)
-  //       continue
-  //     }
-
-  //     if (isConstructorSignatureReflection(s)) {
-  //       p.parameters.push(t)
-  //       continue
-  //     }
-
-  //     continue
-  //   }
-
-  //   throw new Error("huh??")
-  // }
+  // add if current depth >= previous
 
   for (const t of c) {
     if (t instanceof Fragment) {
       continue
     }
 
-    global.console.log("before", tc.map((t) => t.name), t.name)
-
-    set(t)
+    global.console.log("before f", tc.map((t) => `${t.name} ${t.sourceId}`).join(", "), "/", t.name, t.sourceId)
+    enter(t)
     free(t)
     loc(t)
-
-    global.console.log("after", tc.map((t) => t.name), t.name, "\n\n")
-
-    keep(t)
+    release(t)
+    global.console.log("after  f", tc.map((t) => `${t.name} ${t.sourceId}`).join(", "), "/", t.name, t.sourceId, "\n\n")
   }
 
-  // while (tc[tc.length - 1] !== d) {
-  //   tc.pop()
-  // }
+  while (true) {
+    const p = tc[tc.length - 1]
 
-  function set(t: Item): void {
+    if (p === d) {
+      break
+    }
+
+    global.console.log("before w", tc.map((t) => `${t.name} ${t.sourceId}`).join(", "), "/", p.name, p.sourceId)
+    tc.pop()
+    exit(p)
+    global.console.log("after  w", tc.map((t) => `${t.name} ${t.sourceId}`).join(", "), "/", p.name, p.sourceId, "\n\n")
+  }
+
+  return rc
+
+  function enter(t: Item): void {
     if (t instanceof Group) {
-      t.id = i
-      i += 1
+      t.id = next()
+      return
+    }
+
+    if (t instanceof Declaration && isContainer(t)) {
       return
     }
 
     if (t instanceof Declaration) {
-      const s = resolve(o, t.trail)
-      if (!s) {
-        throw new Error(`The trail '${t.trail}' could not be resolved`)
-      }
-
-      if (
-        isFunctionReflection(s) ||
-        isConstructorReflection(s) ||
-        isMethodReflection(s)
-      ) {
-        return
-      }
-
-      t.id = i
-      i += 1
+      t.id = next()
       return
     }
 
@@ -573,7 +734,7 @@ export function shakeItems(o: J.Reflection, c: Item[]): Item[] {
       return
     }
 
-    throw new Error("huh??")
+    throw new Error("Unknown item")
   }
 
   function free(t: Item): void {
@@ -584,8 +745,13 @@ export function shakeItems(o: J.Reflection, c: Item[]): Item[] {
         const p = tc[tc.length - 1]
         const [pd] = pair(p.trail)
 
-        if (cd < pd) {
+        if (
+          cd < pd
+          // cd === pd && t instanceof Group && p instanceof Group ||
+          // cd === pd && t instanceof Declaration && p instanceof Declaration
+        ) {
           tc.pop()
+          exit(p)
           continue
         }
 
@@ -603,11 +769,15 @@ export function shakeItems(o: J.Reflection, c: Item[]): Item[] {
         const [pd, pi] = pair(p.trail)
 
         if (
-          cd < pd ||
-          cd === pd && p instanceof Declaration ||
-          cd === pd && ci > pi && pi !== -1
+          cd < pd
+          // cd === pd && t instanceof Group && p instanceof Group ||
+          // cd === pd && t instanceof Declaration && p instanceof Declaration
+          // cd < pd ||
+          // cd === pd && p instanceof Declaration ||
+          // cd === pd && ci > pi && p !== d
         ) {
           tc.pop()
+          exit(p)
           continue
         }
 
@@ -621,99 +791,156 @@ export function shakeItems(o: J.Reflection, c: Item[]): Item[] {
       return
     }
 
-    throw new Error("huh??")
+    throw new Error("Unknown item")
   }
 
   function loc(t: Item): void {
     if (t instanceof Group) {
+      tc.push(t)
+      return
+    }
+
+    if (t instanceof Declaration) {
+      tc.push(t)
+      return
+    }
+
+    if (t instanceof Fragment) {
+      tc.push(t)
+      return
+    }
+
+    throw new Error("Unknown item")
+  }
+
+  function exit(t: Item): void {
+    if (t instanceof Group) {
       for (let i = tc.length - 1; i >= 0; i -= 1) {
         const p = tc[i]
 
-        if (!(p instanceof Declaration)) {
+        if (p instanceof Fragment) {
+          throw new Error("how?")
+        }
+
+        if (p instanceof Group) {
           continue
         }
 
-        // if (p.trail !== t.trail) {
-        //   break
+        const [cd, ci] = pair(t.trail)
+        const [pd, pi] = pair(p.trail)
+
+        if (cd === pd && ci === pi) {
+          p.children.unshift(t.id)
+        }
+
+        break
+      }
+
+      return
+    }
+
+    if (t instanceof Declaration && t.id === -1) {
+      for (let i = tc.length - 1; i >= 0; i -= 1) {
+        const p = tc[i]
+
+        if (p instanceof Fragment) {
+          throw new Error("how?")
+        }
+
+        // const j = p.sourceChildren.indexOf(t.sourceId)
+        // if (j === -1) {
+        //   continue
         // }
 
-        // for (const c of t.sourceChildren) {
-        //   if (!p.sourceChildren.includes(c)) {
-        //     break
-        //   }
-        // }
+        if (!p.sourceChildren.includes(t.sourceId)) {
+          continue
+        }
+
+        p.children.push(...t.children)
+        // p.sourceChildren.splice(j, 1, ...t.sourceChildren)
+        break
+      }
+
+      return
+    }
+
+    if (t instanceof Declaration) {
+      for (let i = tc.length - 1; i >= 0; i -= 1) {
+        const p = tc[i]
+
+        if (p instanceof Fragment) {
+          throw new Error("how?")
+        }
+
+        if (!p.sourceChildren.includes(t.sourceId)) {
+          continue
+        }
 
         p.children.push(t.id)
         break
       }
 
-      tc.push(t)
-      return
-    }
-
-    if (t instanceof Declaration) {
-      // const s = resolve(o, t.trail)
-      // if (!s) {
-      //   throw new Error(`The trail '${t.trail}' could not be resolved`)
-      // }
-
-      if (
-        // isFunctionReflection(s) ||
-        // isConstructorReflection(s) ||
-        // isMethodReflection(s)
-        t.id === -1
-      ) {
-        for (let i = tc.length - 1; i >= 0; i -= 1) {
-          const p = tc[i]
-
-          const j = p.sourceChildren.indexOf(t.sourceId)
-          if (j === -1) {
-            continue
-          }
-
-          p.sourceChildren.splice(j, 1, ...t.sourceChildren)
-          break
-        }
-      } else {
-        // for (let i = tc.length - 1; i >= 0; i -= 1) {
-        //   const p = tc[i]
-        // }
-
-        // global.console.log("loc", t.name, t.id)
-      }
-
-      tc.push(t)
       return
     }
 
     if (t instanceof Fragment) {
+      // global.console.log("exit t", t)
+
+      // // for (let i = tc.length - 1; i >= 0; i -= 1) {
+      // //   const p = tc[i]
+      // //   global.console.log("check p", p)
+      // // }
+
+      // for (let i = tc.length - 1; i >= 0; i -= 1) {
+      //   const p = tc[i]
+      //   global.console.log("exit p", p)
+
+      //   if (p instanceof Fragment) {
+      //     continue
+      //   }
+
+      //   if (p instanceof Group) {
+      //     throw new Error("how?")
+      //   }
+
+      //   global.console.log("inside p", p, p.sourceChildren.includes(t.sourceId))
+
+      //   if (!p.sourceChildren.includes(t.sourceId)) {
+      //     continue
+      //   }
+
+      //   const s = resolve(o, p.trail)
+      //   if (!s) {
+      //     throw new Error(`The trail '${p.trail}' could not be resolved`)
+      //   }
+
+      //   // if (
+      //   //   isCallSignatureReflection(s) ||
+      //   //   isConstructorSignatureReflection(s)
+      //   // ) {
+      //     p.parameters.push(t)
+      //   // }
+
+      //   break
+      // }
+
       return
     }
 
-    throw new Error("huh??")
+    throw new Error("Unknown item")
   }
 
-  function keep(t: Item): void {
+  function release(t: Item): void {
     if (t instanceof Group) {
       rc.push(t)
       return
     }
 
+    if (t instanceof Declaration && t.id === -1) {
+      return
+    }
+
     if (t instanceof Declaration) {
-      // const s = resolve(o, t.trail)
-      // if (!s) {
-      //   throw new Error(`The trail '${t.trail}' could not be resolved`)
-      // }
-
-      if (
-        // isFunctionReflection(s) ||
-        // isConstructorReflection(s) ||
-        // isMethodReflection(s)
-        t.id === -1
-      ) {
-        return
-      }
-
       rc.push(t)
       return
     }
@@ -722,12 +949,25 @@ export function shakeItems(o: J.Reflection, c: Item[]): Item[] {
       return
     }
 
-    throw new Error("huh??")
+    throw new Error("Unknown item")
   }
 
-  // global.console.log(m)
+  function isContainer(t: Declaration): boolean {
+    const s = resolve(o, t.trail)
+    if (!s) {
+      throw new Error(`The trail '${t.trail}' could not be resolved`)
+    }
 
-  return rc
+    return isFunctionReflection(s) ||
+      isConstructorReflection(s) ||
+      isMethodReflection(s)
+  }
+
+  function next(): number {
+    const j = i
+    i += 1
+    return j
+  }
 }
 
 export function convertItems(c: Item[]): L.Entity[] {
@@ -749,6 +989,7 @@ export class Group {
   id = -1
   sourceId = -1
   name = ""
+  // order = -1
   trail: L.Trail = []
   description = ""
   children: number[] = []
@@ -791,6 +1032,7 @@ export class Declaration {
   id = -1
   sourceId = -1
   name = ""
+  // order = -1
   trail: L.Trail = []
   narrative = new Narrative()
   properties: Fragment[] = []
@@ -805,6 +1047,7 @@ export class Declaration {
 
     d.sourceId = o.id
     d.name = o.name
+    // d.order = o.id
 
     if (o.comment) {
       const [n, ne] = await Narrative.from(o.comment)
@@ -868,6 +1111,7 @@ export class Declaration {
 export class Fragment {
   sourceId = -1
   name = ""
+  // order = -1
   trail: L.Trail = []
   default = ""
   narrative = new Narrative()
@@ -907,6 +1151,7 @@ export class Fragment {
 
     f.sourceId = o.id
     f.name = o.name
+    // f.order = o.id
 
     if (o.comment) {
       const [n, ne] = await Narrative.from(o.comment)

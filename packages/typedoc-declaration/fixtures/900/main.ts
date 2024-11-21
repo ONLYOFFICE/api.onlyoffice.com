@@ -21,17 +21,46 @@
 
 // class B {}
 
+// function a(b: string): void {}
 
+/**
+ * say hi
+ */
+class C {
+  // a(b: string): void
+  // a(b: number): void
+  // a(b: number | string): void {}
+  a(): void {}
+}
+
+class D {
+  a(): void {}
+}
+
+// class C {
+//   a(): void {}
+//   // b(): void {}
+// }
+
+// class D {
+//   a(): void {}
+//   // b(): void {}
+// }
+
+// function a() {}
 
 
 
 // enum C {
+//   /**
+//    * @category G
+//    */
 //   A,
 //   B,
 //   C,
 // }
 
-function b(u: null) {}
+// function b(u: null) {}
 
 // // interface B {}
 
