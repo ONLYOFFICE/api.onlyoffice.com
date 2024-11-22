@@ -2,6 +2,10 @@
   "name": "@onlyoffice/typedoc-declaration",
   "type": "module",
   "private": true,
+  "exports": {
+    ".": "./lib/main.ts",
+    "./console.ts": "./lib/console.ts"
+  },
   "main": "lib/main.ts",
   "scripts": {
     "clean": "rimraf coverage node_modules",
@@ -12,6 +16,7 @@
   "dependencies": {
     "@onlyoffice/console": "workspace:^",
     "@onlyoffice/errors": "workspace:^",
+    "@onlyoffice/library-declaration": "workspace:^",
     "@onlyoffice/mdast-util-eslint": "workspace:^",
     "@onlyoffice/mdast-util-first-sentence": "workspace:^",
     "@onlyoffice/result": "workspace:^",

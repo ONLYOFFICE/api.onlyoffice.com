@@ -3675,6 +3675,9 @@ importers:
       '@onlyoffice/errors':
         specifier: workspace:^
         version: link:../errors
+      '@onlyoffice/library-declaration':
+        specifier: workspace:^
+        version: link:../library-declaration
       '@onlyoffice/mdast-util-eslint':
         specifier: workspace:^
         version: link:../mdast-util-eslint

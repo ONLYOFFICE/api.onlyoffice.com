@@ -2,13 +2,24 @@ import path from "node:path"
 import {inspect} from "node:util"
 import {Application, type JSONOutput as J} from "typedoc"
 import {test} from "uvu"
-import {process} from "./internal2.ts"
+// import {Console} from "./console.ts"
+import {process} from "./internal.ts"
+
+// const console = Console.shared.copy()
+
+// test.before(() => {
+//   Console.shared.mute()
+// })
+
+// test.after(() => {
+//   Console.shared.restore(console)
+// })
 
 test("900:", async () => {
   const o = await setup("900")
   console.log(inspect(o, {depth: null, colors: true}))
   console.log("\n\n")
-  const [r] = await process(o)
+  const r = await process(o)
   console.log("\n\n")
   console.log(inspect(r, {depth: null, colors: true}))
 })
@@ -22,6 +33,7 @@ async function setup(s: string): Promise<J.ProjectReflection> {
 
   const a = await Application.bootstrapWithPlugins({
     entryPoints: [e],
+    name: s,
     readme: "none",
     tsconfig: c,
   })
