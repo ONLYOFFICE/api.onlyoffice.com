@@ -67,6 +67,9 @@ export function data(): Data {
       if (!d.page) {
         return
       }
+      if (d._exclude && d._exclude(d)) {
+        return
+      }
       let p = d.page.filePathStem
       if (d.slug) {
         [p] = cutSuffix(p, d.page.fileSlug)

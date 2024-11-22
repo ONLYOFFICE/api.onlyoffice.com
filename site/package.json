@@ -24,6 +24,7 @@
     "@onlyoffice/combobox-container-html-element": "workspace:^",
     "@onlyoffice/community-server-resource": "workspace:^",
     "@onlyoffice/docspace-hosted-solutions-resource": "workspace:^",
+    "@onlyoffice/docspace-plugin-sdk-resource": "workspace:^",
     "@onlyoffice/docspace-resource": "workspace:^",
     "@onlyoffice/document-builder-hast-element": "workspace:^",
     "@onlyoffice/document-builder-html-element": "workspace:^",
