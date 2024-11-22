@@ -77,6 +77,8 @@ export async function process(o: J.Reflection): Promise<L.Entity[]> {
 }
 
 export async function processItems(ctx: Context, o: J.Reflection): R<Item[]> {
+  console.log(`Start processing the #${o.id} reflection`)
+
   let err: E
   const c: Item[] = []
 
@@ -197,6 +199,8 @@ export async function processItems(ctx: Context, o: J.Reflection): R<Item[]> {
 
   ctx.r.out()
   ctx.v.out()
+
+  console.log(`Finish processing the #${o.id} reflection`)
 
   return [c, err]
 }
