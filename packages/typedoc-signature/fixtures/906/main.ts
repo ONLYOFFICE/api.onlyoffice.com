@@ -1,0 +1,1 @@
+let value: { a: string, b: number };

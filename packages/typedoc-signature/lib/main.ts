@@ -12,6 +12,7 @@ import {
   isMethodReflection,
   isProjectReflection,
   isSignatureReflection,
+  isVariableReflection,
 } from "@onlyoffice/typedoc-util-is-reflection"
 import {type JSONOutput as J} from "typedoc"
 
@@ -43,7 +44,28 @@ export function compute(r: J.Reflection, e: Entity): void {
   }
   if (isFunctionReflection(p) && isCallSignatureReflection(t)) {
     functionsDeclaration(r, e.declaration)
+    return
   }
+  if (isVariableReflection(t)) {
+    variableDeclaration(r, e.declaration)
+  }
+}
+
+export function variableDeclaration(r: J.Reflection, d: Declaration): void {
+  const s: Signature = []
+
+  const e = resolve(r, d.trail.flat(Infinity))
+
+  if (!isVariableReflection(e)) {
+    return
+  }
+
+  if (e.type) {
+    const b = type(e.type)
+    s.push(...b)
+  }
+
+  d.signature.verbose = s
 }
 
 export function classDeclaration(r: J.Reflection, d: Declaration): void {
@@ -147,33 +169,33 @@ export function functionsDeclaration(r: J.Reflection, d: Declaration): void {
 }
 
 export function value(p: J.ParameterReflection): Signature {
-  const a: Signature = []
+  const s: Signature = []
   let t: Token
 
   t = new ParameterToken()
   t.text = p.name
-  a.push(t)
+  s.push(t)
 
   t = new TextToken()
   t.text = ": "
-  a.push(t)
+  s.push(t)
 
   if (p.type) {
     const b = type(p.type)
-    a.push(...b)
+    s.push(...b)
   }
 
   if (p.defaultValue) {
     t = new TextToken()
     t.text = " = "
-    a.push(t)
+    s.push(t)
 
     t = new TextToken()
     t.text = String(p.defaultValue)
-    a.push(t)
+    s.push(t)
   }
 
-  return a
+  return s
 }
 
 export function type(t: J.SomeType): Signature {
@@ -210,7 +232,7 @@ export function type(t: J.SomeType): Signature {
     case "templateLiteral":
       return []
     case "tuple":
-      return []
+      return tupleType(t)
     case "namedTupleMember":
       return []
     case "typeOperator":
@@ -224,6 +246,35 @@ export function type(t: J.SomeType): Signature {
     }
   }
   return []
+}
+
+export function tupleType(tt: J.TupleType): Signature {
+  const s: Signature = []
+  let t: Token
+
+  if (!tt.elements) {
+    return s
+  }
+
+  t = new TextToken()
+  t.text = "["
+  s.push(t)
+
+  for (const e of tt.elements) {
+    const b = type(e)
+    s.push(...b)
+
+    t = new TextToken()
+    t.text = ", "
+    s.push(t)
+  }
+  s.pop()
+
+  t = new TextToken()
+  t.text = "]"
+  s.push(t)
+
+  return s
 }
 
 export function arrayType(a: J.ArrayType): Signature {

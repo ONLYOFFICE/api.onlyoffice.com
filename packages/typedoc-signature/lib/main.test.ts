@@ -5,6 +5,7 @@ import {test} from "uvu"
 import {equal as eq} from "uvu/assert"
 import {compute} from "./main.ts"
 
+/*
 test("900: ?", async () => {
   const [t, ac, ec] = await setup("900")
 
@@ -54,7 +55,16 @@ test("905: ?", async () => {
 
   eq(ac, ec)
 })
+*/
+test("906: ?", async () => {
+  const [t, ac, ec] = await setup("906")
 
+  for (const e of ac) {
+    compute(t, e)
+  }
+
+  eq(ac, ec)
+})
 test.run()
 
 async function setup(s: string): Promise<[J.ProjectReflection, Entity[], Entity[]]> {
