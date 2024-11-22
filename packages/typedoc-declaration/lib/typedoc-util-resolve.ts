@@ -7,10 +7,6 @@ import {
 import {type JSONOutput as J} from "typedoc"
 
 export function depth(t: Trail): number {
-  // if (t.length === 0) {
-  //   return -1
-  // }
-
   let d = 0
 
   for (const s of t) {
@@ -20,79 +16,6 @@ export function depth(t: Trail): number {
   }
 
   return d
-}
-
-  // function greater(a: Pair, b: Pair): boolean {
-  //   const [ad, ai] = a
-  //   const [bd, bi] = b
-
-  //   if (ad > bd) {
-  //     return true
-  //   }
-
-  //   return false
-  // }
-
-  // function less(a: Pair, b: Pair): boolean {
-  //   const [ad, ai] = a
-  //   const [bd, bi] = b
-
-  //   if (ad < bd) {
-  //     return true
-  //   }
-
-  //   // if (ad === bd && ai > bi) {
-  //   //   return true
-  //   // }
-
-  //   return false
-  // }
-
-  // function equal(a: Pair, b: Pair): boolean {
-  //   const [ad, ai] = a
-  //   const [bd, bi] = b
-
-  //   if (ad === bd) {
-  //     return true
-  //   }
-
-  //   return false
-  // }
-
-export type Pair = [number, number]
-
-export function pair(t: Trail): Pair {
-  return p(t, 0)
-
-  function p(t: Trail, c: number): Pair {
-    let m = c
-    let i = -1
-
-    if (t.length === 0) {
-      return [m, i]
-    }
-
-    for (const s of t) {
-      if (Array.isArray(s)) {
-        const n = c + 1
-        const [d, j] = p(s, n)
-
-        if (d > m) {
-          m = d
-          i = j
-        }
-
-        continue
-      }
-
-      if (c >= m) {
-        m = c
-        i = s
-      }
-    }
-
-    return [m, i]
-  }
 }
 
 export function resolve(o: J.Reflection, t: Trail): J.Reflection | undefined {
