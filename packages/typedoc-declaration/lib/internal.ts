@@ -426,6 +426,21 @@ export function shakeItems(o: J.Reflection, c: Item[]): Entity[] {
     }
 
     if (t instanceof Fragment) {
+      const cd = depth(t.trail.virtual)
+
+      while (true) {
+        const p = tc[tc.length - 1]
+        const pd = depth(p.trail.virtual)
+
+        if (cd <= pd && p !== g) {
+          tc.pop()
+          f3(p)
+          continue
+        }
+
+        break
+      }
+
       return
     }
 
