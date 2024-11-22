@@ -10,7 +10,7 @@ export function data(r: Resource): Data {
   const rs = new ResourceSlugger()
 
   return {
-    layout: "html",
+    layout: "library",
 
     items: r.list(),
     pagination: {
@@ -86,6 +86,42 @@ export function data(r: Resource): Data {
 
       //   return a
       // },
+
+      library(data) {
+        if (!data.pagination || !data.pagination.items) {
+          throw new Error("No pagination")
+        }
+
+        const [e]: Entity[] = data.pagination.items
+
+        const d = new LibraryDatum()
+        d.declaration = e
+
+        // d.onLink = function onLink(t) {
+        //   if (!data || !data.crosslink) {
+        //     return ""
+        //   }
+
+        //   const r = retrieve(t.id)
+        //   if (!r) {
+        //     return ""
+        //   }
+
+        //   const s = r.id.split("#").join("/")
+        //   const u = data.crosslink(data, `${s}/`)
+        //   if (!u) {
+        //     return ""
+        //   }
+
+        //   return u
+        // }
+
+        d.onRetrieve = function onRetrieve(id) {
+          return r.retrieve(id)
+        }
+
+        return d
+      },
     },
 
     // eleventyComputed: {
