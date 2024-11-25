@@ -159,6 +159,10 @@ export function eleventySitemap(uc: UserConfig): void {
     const s = new Sitemap()
 
     for (const te of ts) {
+      if (!te.outputPath) {
+        continue
+      }
+
       const n = path.extname(te.outputPath)
       if (n !== ".html") {
         continue
