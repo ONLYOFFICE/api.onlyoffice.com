@@ -1,5 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
-
 // The functions for working with the collection are far from efficient.
 // However, they are also not the primary bottleneck in the entire
 // documentation. Therefore, optimizing them may not be worthwhile.
@@ -15,7 +13,6 @@ import {
   isConstructorSignatureReflection,
   isContainerReflection,
   isDeclarationReflection,
-  isEnumReflection,
   isFunctionReflection,
   isMethodReflection,
   isParameterReflection,
