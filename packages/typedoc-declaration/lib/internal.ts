@@ -1064,9 +1064,6 @@ export function resolveTrail(o: J.Reflection, t: L.Trail): J.Reflection | undefi
   return c
 }
 
-// This function is too small to be separated into its own package. If another
-// package requires this function in the future, it can be moved out.
-
 export function kindToString(n: number): string {
   if (n in ReflectionKind) {
     return ReflectionKind[n]
