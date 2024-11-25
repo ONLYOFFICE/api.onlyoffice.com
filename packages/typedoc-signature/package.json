@@ -17,6 +17,7 @@
     "typescript": "5.4.5"
   },
   "devDependencies": {
+    "@onlyoffice/typedoc-declaration": "workspace:^",
     "c8": "9.1.0",
     "rimraf": "6.0.1",
     "tsx": "4.16.5",
