@@ -7,7 +7,7 @@ export function data(): Data {
   return {
     permalink: "/sitemap.xml",
     layout: "xml",
-    eleventyExcludeFromCollections: true,
+    // eleventyExcludeFromCollections: true,
   }
 }
 

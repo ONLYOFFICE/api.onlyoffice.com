@@ -2,6 +2,7 @@ import {randomUUID} from "node:crypto"
 import path from "node:path"
 import {type Data, type UserConfig} from "@onlyoffice/eleventy-types"
 import {isEmpty} from "@onlyoffice/objects"
+import * as next from "./next.ts"
 
 declare module "@onlyoffice/eleventy-types" {
   interface Data {
@@ -152,6 +153,8 @@ export class SitemapIndexes {
 }
 
 export function eleventySitemap(uc: UserConfig): void {
+  next.eleventySitemap(uc)
+
   uc.addCollection("sitemap", (tc) => {
     const ts = tc.getAll()
 
@@ -159,6 +162,7 @@ export function eleventySitemap(uc: UserConfig): void {
     const s = new Sitemap()
 
     for (const te of ts) {
+      // console.log(te.url, te.data.url)
       if (!te.outputPath) {
         continue
       }

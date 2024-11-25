@@ -2,6 +2,10 @@
   "name": "@onlyoffice/eleventy-sitemap",
   "type": "module",
   "private": true,
+  "exports": {
+    ".": "./lib/main.ts",
+    "./next.ts": "./lib/next.ts"
+  },
   "main": "lib/main.ts",
   "scripts": {
     "clean": "rimraf node_modules",

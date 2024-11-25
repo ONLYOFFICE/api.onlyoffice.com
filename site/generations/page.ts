@@ -1,3 +1,4 @@
+import {type SitemapData as SitemapData2, SitemapDatum as SitemapDatum2} from "@onlyoffice/eleventy-sitemap/next.ts"
 import {type SitemapData, SitemapDatum} from "@onlyoffice/eleventy-sitemap"
 import {type Data} from "@onlyoffice/eleventy-types"
 import {cutSuffix} from "@onlyoffice/strings"
@@ -41,7 +42,7 @@ declare module "@onlyoffice/eleventy-types" {
   interface EleventyComputed {
     icon?(data: Data): string | undefined
     title?(data: Data): string | undefined
-    url?(data: Data): string | undefined
+    // url?(data: Data): string | undefined
     description?(data: Data): string | undefined
     summary?(data: Data): string | undefined
     blank?(data: Data): boolean | undefined
@@ -68,7 +69,7 @@ export function data(): Data {
         return
       }
       if (d._exclude && d._exclude(d)) {
-        return
+        return false
       }
       let p = d.page.filePathStem
       if (d.slug) {
@@ -109,6 +110,61 @@ export function data(): Data {
         if (d.page) {
           return d.page.fileSlug
         }
+      },
+
+      canonicalUrl(d) {
+        const u = d.specificUrl
+        if (!u) {
+          return
+        }
+        // todo: use cutSuffix
+        if (u.endsWith("index.html")) {
+          return u.slice(0, -10)
+        }
+        return u
+      },
+
+      specificUrl(d) {
+        if (!d.page) {
+          return
+        }
+        let p = d.page.filePathStem
+        if (d.slug) {
+          [p] = cutSuffix(p, d.page.fileSlug)
+          p += d.slug(d)
+        }
+        p = p.split("/")
+          .map((s) => {
+            return slug(s)
+          })
+          .join("/")
+        p += `.${d.page.outputFileExtension}`
+        return p
+      },
+
+      sitemap2(d) {
+        const a = d.defaultSitemap2
+        if (!a) {
+          return
+        }
+        const b = d.sitemap2
+        if (!b) {
+          return a
+        }
+        return SitemapDatum2.merge(a, b)
+      },
+
+      defaultSitemap2(d) {
+        const m = new SitemapDatum2()
+        m.type = "page"
+        if (d.title) {
+          m.title = d.title
+        }
+        m.url = d.canonicalUrl
+        if (d.page) {
+          m.path = d.page.inputPath
+        }
+        return m
       },
 
       layout(d) {

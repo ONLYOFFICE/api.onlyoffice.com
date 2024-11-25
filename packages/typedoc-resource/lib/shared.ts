@@ -13,7 +13,8 @@ export class Config extends Array<ConfigEntity> {
   static async read(): Promise<Config> {
     const c = new Config()
 
-    const p = path.join(cwd(), "config.ts")
+    const p = to(path.join(cwd(), "config.ts"))
+    console.log(p)
     const m = await import(p)
 
     for (const r of m.config) {
@@ -23,6 +24,11 @@ export class Config extends Array<ConfigEntity> {
 
     return c
   }
+}
+
+function to(p) {
+  p = p.replace(/\\/g, '/')
+  return `file:///${p}`
 }
 
 export interface InputConfigEntity {

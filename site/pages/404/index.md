@@ -1,4 +1,4 @@
 ---
 layout: status
-eleventyExcludeFromCollections: true
+# eleventyExcludeFromCollections: true
 ---
