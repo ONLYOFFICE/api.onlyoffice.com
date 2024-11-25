@@ -27,7 +27,6 @@ import {toMarkdown} from "mdast-util-to-markdown"
 import remarkStripHtml from "remark-strip-html"
 import {type JSONOutput as J, ReflectionKind} from "typedoc"
 import {Console} from "./console.ts"
-import {depth, resolve} from "./typedoc-util-resolve.ts"
 
 const console = Console.shared
 
@@ -388,11 +387,11 @@ export function shakeItems(o: J.Reflection, c: Item[]): Entity[] {
 
   function f1(t: Item): void {
     if (t instanceof Group) {
-      const cd = depth(t.trail.virtual)
+      const cd = trailDepth(t.trail.virtual)
 
       while (true) {
         const p = tc[tc.length - 1]
-        const pd = depth(p.trail.virtual)
+        const pd = trailDepth(p.trail.virtual)
 
         if (cd < pd && p !== g) {
           tc.pop()
@@ -407,11 +406,11 @@ export function shakeItems(o: J.Reflection, c: Item[]): Entity[] {
     }
 
     if (t instanceof Declaration) {
-      const cd = depth(t.trail.virtual)
+      const cd = trailDepth(t.trail.virtual)
 
       while (true) {
         const p = tc[tc.length - 1]
-        const pd = depth(p.trail.virtual)
+        const pd = trailDepth(p.trail.virtual)
 
         if (cd <= pd && p !== g) {
           tc.pop()
@@ -426,11 +425,11 @@ export function shakeItems(o: J.Reflection, c: Item[]): Entity[] {
     }
 
     if (t instanceof Fragment) {
-      const cd = depth(t.trail.virtual)
+      const cd = trailDepth(t.trail.virtual)
 
       while (true) {
         const p = tc[tc.length - 1]
-        const pd = depth(p.trail.virtual)
+        const pd = trailDepth(p.trail.virtual)
 
         if (cd <= pd && p !== g) {
           tc.pop()
@@ -528,7 +527,7 @@ export function shakeItems(o: J.Reflection, c: Item[]): Entity[] {
           continue
         }
 
-        const s = resolve(o, p.trail.real)
+        const s = resolveTrail(o, p.trail.real)
 
         if (!s) {
           throw new Error(`The trail '${p.trail.real}' could not be resolved`)
@@ -574,7 +573,7 @@ export function shakeItems(o: J.Reflection, c: Item[]): Entity[] {
   }
 
   function isContainer(t: Declaration): boolean {
-    const s = resolve(o, t.trail.real)
+    const s = resolveTrail(o, t.trail.real)
 
     if (!s) {
       throw new Error(`The trail '${t.trail.real}' could not be resolved`)
@@ -1013,6 +1012,56 @@ export class ContextTrail {
 export class Trail {
   virtual: L.Trail = []
   real: L.Trail = []
+}
+
+export function trailDepth(t: L.Trail): number {
+  let d = 0
+
+  for (const s of t) {
+    if (Array.isArray(s)) {
+      d = Math.max(d, trailDepth(s) + 1)
+    }
+  }
+
+  return d
+}
+
+export function resolveTrail(o: J.Reflection, t: L.Trail): J.Reflection | undefined {
+  let c: J.Reflection | undefined = o
+
+  for (const s of t) {
+    if (!c) {
+      break
+    }
+
+    if (Array.isArray(s)) {
+      c = resolveTrail(c, s)
+      continue
+    }
+
+    let t: J.Reflection[] = []
+
+    if (isSignatureReflection(o) && o.parameters) {
+      t = o.parameters
+    }
+
+    if (isDeclarationReflection(o) && o.signatures) {
+      t = o.signatures
+    }
+
+    if (isContainerReflection(o) && o.children) {
+      t = o.children
+    }
+
+    if (t.length !== 0) {
+      c = t[s]
+      continue
+    }
+
+    break
+  }
+
+  return c
 }
 
 // This function is too small to be separated into its own package. If another
