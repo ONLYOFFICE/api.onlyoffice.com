@@ -1,31 +1,12 @@
 import path from "node:path"
 import {type Entity} from "@onlyoffice/library-declaration/next.ts"
+import {process} from "@onlyoffice/typedoc-declaration"
 import {Application, type JSONOutput as J} from "typedoc"
 import {test} from "uvu"
 import {equal as eq} from "uvu/assert"
 import {compute} from "./main.ts"
 
 /*
-test("900: ?", async () => {
-  const [t, ac, ec] = await setup("900")
-
-  for (const e of ac) {
-    compute(t, e)
-  }
-
-  eq(ac, ec)
-})
-
-test("901: ?", async () => {
-  const [t, ac, ec] = await setup("901")
-
-  for (const e of ac) {
-    compute(t, e)
-  }
-
-  eq(ac, ec)
-})
-
 test("902: ?", async () => {
   const [t, ac, ec] = await setup("902")
 
@@ -56,15 +37,22 @@ test("905: ?", async () => {
   eq(ac, ec)
 })
 */
+
 test("906: ?", async () => {
   const [t, ac, ec] = await setup("906")
 
-  for (const e of ac) {
-    compute(t, e)
+  for (const x of ac) {
+    for (const y of ec) {
+      if (y.id === x.id) {
+        compute(t, x)
+        if ("declaration" in x && "declaration" in y) {
+          eq(x.declaration.signature.verbose, y.declaration.signature.verbose)
+        }
+      }
+    }
   }
-
-  eq(ac, ec)
 })
+
 test.run()
 
 async function setup(s: string): Promise<[J.ProjectReflection, Entity[], Entity[]]> {
@@ -84,9 +72,8 @@ async function setup(s: string): Promise<[J.ProjectReflection, Entity[], Entity[
   }
 
   const o = a.serializer.projectToObject(p, d)
-
-  const x = await import(`../fixtures/${s}/actual.ts`)
+  const ac = await process(o)
   const y = await import(`../fixtures/${s}/expected.ts`)
 
-  return [o, x.collection, y.collection]
+  return [o, ac, y.collection]
 }

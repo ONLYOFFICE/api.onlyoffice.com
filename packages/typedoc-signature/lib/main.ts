@@ -47,21 +47,38 @@ export function compute(r: J.Reflection, e: Entity): void {
     return
   }
   if (isVariableReflection(t)) {
-    variableDeclaration(r, e.declaration)
+    variableDeclaration(t, e.declaration)
   }
 }
 
-export function variableDeclaration(r: J.Reflection, d: Declaration): void {
-  const s: Signature = []
-
-  const e = resolve(r, d.trail.flat(Infinity))
-
-  if (!isVariableReflection(e)) {
+export function variableDeclaration(v: J.Reflection, d: Declaration): void {
+  if (!isVariableReflection(v)) {
     return
   }
 
-  if (e.type) {
-    const b = type(e.type)
+  const s: Signature = []
+  let t: Token
+
+  t = new KeywordToken()
+  t.text = "type"
+  s.push(t)
+
+  t = new TextToken()
+  t.text = " "
+  s.push(t)
+
+  if (v.type) {
+    t = new EntityToken()
+    t.text = v.name
+    s.push(t)
+  }
+
+  t = new TextToken()
+  t.text = " = "
+  s.push(t)
+
+  if (v.type) {
+    const b = type(v.type)
     s.push(...b)
   }
 
@@ -226,7 +243,7 @@ export function type(t: J.SomeType): Signature {
     case "reference":
       return []
     case "reflection":
-      return []
+      return literalType(t.type)
     case "rest":
       return []
     case "templateLiteral":
@@ -246,6 +263,28 @@ export function type(t: J.SomeType): Signature {
     }
   }
   return []
+}
+
+export function reflectionType(r: J.ReflectionType): Signature {
+  // TODO: remove
+  const s: Signature = []
+  let t: Token
+
+  if (r.declaration.children) {
+    for (const c of r.declaration.children) {
+      if (c.type) {
+        const b = type(c.type)
+        s.push(...b)
+      }
+
+      t = new TextToken()
+      t.text = ", "
+      s.push(t)
+    }
+    s.pop()
+  }
+
+  return s
 }
 
 export function tupleType(tt: J.TupleType): Signature {
@@ -346,6 +385,10 @@ export function functionType(r: J.SignatureReflection): Signature {
 export function unionType(u: J.UnionType): Signature {
   const s: Signature = []
   let t: Token
+
+  if (!u.types) {
+    return s
+  }
 
   for (const ts of u.types) {
     const b = type(ts)

@@ -20,7 +20,7 @@ let s: Signature = []
 let t: Token
 
 e0 = new DeclarationEntity()
-e0.declaration.trail = [0]
+e0.id = 2
 
 t = new KeywordToken()
 t.text = "class"
@@ -41,7 +41,7 @@ collection.push(e0)
 s = []
 
 e1 = new DeclarationEntity()
-e1.declaration.trail = [0, [0, [0]]]
+e1.id = 5
 
 t = new KeywordToken()
 t.text = "constructor"
@@ -74,7 +74,7 @@ collection.push(e1)
 s = []
 
 e2 = new DeclarationEntity()
-e2.declaration.trail = [0, [1, [0]]]
+e2.id = 6
 
 t = new KeywordToken()
 t.text = "function"

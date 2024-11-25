@@ -17,7 +17,7 @@ let s: Signature = []
 let t: Token
 
 e0 = new DeclarationEntity()
-e0.declaration.trail = [0]
+e0.id = 2
 
 t = new KeywordToken()
 t.text = "class"

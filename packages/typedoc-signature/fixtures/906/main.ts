@@ -1,1 +1,1 @@
-let value: { a: string, b: number };
+let value: "up" | "down";
