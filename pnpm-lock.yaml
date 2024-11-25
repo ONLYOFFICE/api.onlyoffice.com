@@ -3753,6 +3753,9 @@ importers:
         specifier: 5.4.5
         version: 5.4.5
     devDependencies:
+      '@onlyoffice/typedoc-declaration':
+        specifier: workspace:^
+        version: link:../typedoc-declaration
       c8:
         specifier: 9.1.0
         version: 9.1.0
