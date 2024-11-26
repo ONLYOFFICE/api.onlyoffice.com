@@ -2,7 +2,9 @@
   "name": "@onlyoffice/fixture-resource",
   "type": "module",
   "private": true,
-  "main": "dist/main.ts",
+  "exports": {
+    "./typedoc.ts": "./dist/typedoc.ts"
+  },
   "scripts": {
     "clean": "rimraf dist node_modules",
     "build": "typedoc-resource typedoc"
