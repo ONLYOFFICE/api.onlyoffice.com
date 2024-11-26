@@ -153,7 +153,7 @@ export class SitemapIndexes {
 }
 
 export function eleventySitemap(uc: UserConfig): void {
-  next.eleventySitemap(uc)
+  // next.eleventySitemap(uc)
 
   uc.addCollection("sitemap", (tc) => {
     const ts = tc.getAll()

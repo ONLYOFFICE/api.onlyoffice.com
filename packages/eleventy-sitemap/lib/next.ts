@@ -182,7 +182,7 @@ export class Sitemap implements SitemapAccessible {
       }
     }
 
-    console.log(st.#entities)
+    // console.log(st.#entities)
 
     return st
   }

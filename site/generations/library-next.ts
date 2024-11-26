@@ -20,23 +20,23 @@ export function data(r: Resource): Data {
       addAllPagesToCollections: true,
     },
 
-    _exclude(data) {
-      if (!data.pagination || !data.pagination.items) {
-        throw new Error("No pagination")
-      }
+    // _exclude(data) {
+    //   if (!data.pagination || !data.pagination.items) {
+    //     throw new Error("No pagination")
+    //   }
 
-      const [e]: Entity[] = data.pagination.items
+    //   const [e]: Entity[] = data.pagination.items
 
-      if (e.type === "group") {
-        return true
-      }
+    //   if (e.type === "group") {
+    //     return true
+    //   }
 
-      if (e.type === "declaration") {
-        return false
-      }
+    //   if (e.type === "declaration") {
+    //     return false
+    //   }
 
-      throw new Error("Unknown entity type")
-    },
+    //   throw new Error("Unknown entity type")
+    // },
 
     slug(data) {
       if (!data.pagination || !data.pagination.items) {
@@ -88,30 +88,30 @@ export function data(r: Resource): Data {
       //   return a
       // },
 
-      sitemap2(data) {
-        if (!data.pagination || !data.pagination.items) {
-          throw new Error("No pagination")
-        }
+      // sitemap2(data) {
+      //   if (!data.pagination || !data.pagination.items) {
+      //     throw new Error("No pagination")
+      //   }
 
-        const a = data.defaultSitemap2
-        if (!a) {
-          return
-        }
+      //   const a = data.defaultSitemap2
+      //   if (!a) {
+      //     return
+      //   }
 
-        const b = new SitemapDatum()
+      //   const b = new SitemapDatum()
 
-        const [e]: Entity[] = data.pagination.items
+      //   const [e]: Entity[] = data.pagination.items
 
-        if (e.type === "group") {
-          b.type = "group"
-        } else if (e.type === "declaration") {
-          b.type = "page"
-        } else {
-          throw new Error("Unknown entity type")
-        }
+      //   if (e.type === "group") {
+      //     b.type = "group"
+      //   } else if (e.type === "declaration") {
+      //     b.type = "page"
+      //   } else {
+      //     throw new Error("Unknown entity type")
+      //   }
 
-        return SitemapDatum.merge(a, b)
-      },
+      //   return SitemapDatum.merge(a, b)
+      // },
 
       library(data) {
         if (!data.pagination || !data.pagination.items) {

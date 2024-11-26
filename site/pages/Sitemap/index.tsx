@@ -6,7 +6,7 @@ import {TableOfContents} from "@/internal/table-of-contents.tsx"
 export function data(): Data {
   return {
     layout: "page",
-    // eleventyExcludeFromCollections: true,
+    eleventyExcludeFromCollections: true,
   }
 }
 
