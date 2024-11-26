@@ -1,6 +1,11 @@
-/* eslint-disable */
-
-import {type Template, type UserConfig} from "@onlyoffice/eleventy-types"
+import {
+  type Data,
+  type Template,
+  type UserConfig,
+} from "@onlyoffice/eleventy-types"
+import * as errors from "@onlyoffice/errors"
+import {type Result} from "@onlyoffice/result"
+import pack from "../package.json" with {type: "json"}
 
 declare module "@onlyoffice/eleventy-types" {
   interface Data {
@@ -13,10 +18,11 @@ declare module "@onlyoffice/eleventy-types" {
 }
 
 export interface SitemapData {
-  type: EntityType
-  title: string
-  url: string
-  path: string
+  type?: EntityType
+  title?: string
+  url?: string
+  path?: string
+  order?: number
 }
 
 export class SitemapDatum implements SitemapData {
@@ -24,7 +30,7 @@ export class SitemapDatum implements SitemapData {
   title = ""
   url = ""
   path = ""
-  // order = -1
+  order = 0
 
   static merge(a: SitemapData, b: SitemapData): SitemapData {
     const c = new SitemapDatum()
@@ -53,6 +59,12 @@ export class SitemapDatum implements SitemapData {
       c.path = a.path
     }
 
+    if (b.order !== undefined) {
+      c.order = b.order
+    } else if (a.order !== undefined) {
+      c.order = a.order
+    }
+
     return c
   }
 }
@@ -60,52 +72,59 @@ export class SitemapDatum implements SitemapData {
 export function eleventySitemap(uc: UserConfig): void {
   uc.addCollection("sitemap2", (tc) => {
     const at = tc.getAll()
-    Sitemap.shared = Sitemap.from(at)
+
+    const [st, err] = Sitemap.from(at)
+    Sitemap.shared = st
+
+    for (const e of errors.split(err)) {
+      uc.logger.message(e.message, "error", "red", false, pack.name)
+    }
+
     return []
   })
 }
 
+export class Sitemap {
+  static shared: Sitemap
 
+  static from(at: Template[]): Result<Sitemap, Error> {
+    const s0 = new Sitemap()
+    s0.#templates = at
 
+    this.#populate(s0)
+    const err = this.#attach(s0)
 
+    const s1 = new Sitemap()
+    s1.#templates = at
 
+    const re = s0.findByUrl("/")
+    if (!re) {
+      throw new Error("Root not found")
+    }
 
+    this.#transfer(s0, s1, re)
+    this.#reattach(s0, s1)
 
-export interface SitemapAccessible {
-  // get indexes(): SitemapIndexes
-  // get entities(): SitemapEntity[]
-  // trace(e: SitemapEntity): string[] // rename to trailOf
-  // find(t: string, b: keyof SitemapIndexes): SitemapEntity | undefined
-}
+    return [s1, err]
+  }
 
-export class Sitemap implements SitemapAccessible {
-  static shared: SitemapAccessible
-
-  static from(at: Template[]): Sitemap {
-    const st = new Sitemap()
-    st.#templates = at
-
-    for (const [ti, te] of st.#templates.entries()) {
+  static #populate(s0: Sitemap): void {
+    for (const [ti, te] of s0.#templates.entries()) {
       const sd = te.data.sitemap2
+
       if (!sd) {
         continue
       }
 
+      if (!(sd instanceof SitemapDatum)) {
+        throw new Error("Sitemap data is not a SitemapDatum")
+      }
+
       if (sd.type === "group") {
-        const ed = new EntityData()
-        ed.title = sd.title
-        ed.url = sd.url
-        ed.path = sd.path
-
         const ge = new GroupEntity()
-        ge.id = st.#entities.length
         ge.templateId = ti
-        ge.data = ed
-
-        st.#entities.push(ge)
-        st.#idIndex[ge.id] = st.#entities.length - 1
-        st.#urlIndex[ed.url] = st.#entities.length - 1
-        st.#pathIndex[ed.path] = st.#entities.length - 1
+        ge.data = EntityData.from(sd)
+        s0.#addEntity(ge)
         continue
       }
 
@@ -114,28 +133,21 @@ export class Sitemap implements SitemapAccessible {
       }
 
       if (sd.type === "page") {
-        const ed = new EntityData()
-        ed.title = sd.title
-        ed.url = sd.url
-        ed.path = sd.path
-
         const pe = new PageEntity()
-        pe.id = st.#entities.length
         pe.templateId = ti
-        pe.data = ed
-
-        st.#entities.push(pe)
-        st.#idIndex[pe.id] = st.#entities.length - 1
-        st.#urlIndex[ed.url] = st.#entities.length - 1
-        st.#pathIndex[ed.path] = st.#entities.length - 1
+        pe.data = EntityData.from(sd)
+        s0.#addEntity(pe)
         continue
       }
 
       throw new Error(`Unknown type: ${sd.type}`)
     }
+  }
 
-    for (const en of st.#entities) {
-      let pe: Entity | undefined
+  static #attach(s0: Sitemap): Error | undefined {
+    let err: Error | undefined
+
+    for (const en of s0.#entities) {
       let ce: Entity | undefined = en
 
       while (true) {
@@ -150,26 +162,25 @@ export class Sitemap implements SitemapAccessible {
 
         let ur = ""
         for (let i = 0; i < ac.length - 2; i += 1) {
-          ur += ac[i] + "/"
+          ur += `${ac[i]}/`
         }
 
-        pe = st.findByUrl(ur)
+        let pe = s0.findByUrl(ur)
+
         if (!pe) {
           const ed = new EntityData()
-          ed.title = "Unknown Page"
+          ed.title = "404 Not Found"
           ed.url = ur
+          ed.order = -9999
 
           const ge = new PageEntity()
-          ge.id = st.#entities.length
           ge.data = ed
-
-          st.#entities.push(ge)
-          st.#idIndex[ge.id] = st.#entities.length - 1
-          st.#urlIndex[ed.url] = st.#entities.length - 1
-          st.#pathIndex[ed.path] = st.#entities.length - 1
+          s0.#addEntity(ge)
 
           pe = ge
-          // todo: const e = new Error
+
+          const e = new Error(`Parent not found: ${ce.data.url} (#${ce.id}, #${ce.templateId})`)
+          err = errors.join(err, e)
         }
 
         if (ce.parentId === -1) {
@@ -178,13 +189,90 @@ export class Sitemap implements SitemapAccessible {
         }
 
         ce = pe
-        pe = undefined
       }
     }
 
-    // console.log(st.#entities)
+    return err
+  }
 
-    return st
+  static #transfer(s0: Sitemap, s1: Sitemap, e: Entity): void {
+    if (!e) {
+      return
+    }
+
+    s1.#addEntity(e)
+
+    if (e.children.length === 0) {
+      return
+    }
+
+    e.children.sort((a, b) => {
+      const x = s0.findById(a)
+      if (!x) {
+        throw new Error(`Entity not found: #${a}`)
+      }
+
+      const y = s0.findById(b)
+      if (!y) {
+        throw new Error(`Entity not found: #${b}`)
+      }
+
+      const d = x.data.order - y.data.order
+      if (d !== 0) {
+        return d
+      }
+
+      return x.data.title.localeCompare(y.data.title)
+    })
+
+    for (const id of e.children) {
+      const e = s0.findById(id)
+      if (!e) {
+        throw new Error(`Entity not found: #${id}`)
+      }
+
+      this.#transfer(s0, s1, e)
+    }
+  }
+
+  static #reattach(s0: Sitemap, s1: Sitemap): void {
+    for (const en of s1.#entities) {
+      if (en.parentId === -1 && en.data.url !== "/") {
+        throw new Error(`Entity not attached: #${en.id}`)
+      }
+
+      if (en.parentId !== -1) {
+        const e0 = s0.findById(en.parentId)
+        if (!e0) {
+          throw new Error(`Parent not found: #${en.parentId}`)
+        }
+
+        const e1 = s1.findByUrl(e0.data.url)
+        if (!e1) {
+          throw new Error(`Parent not found: ${e0.data.url}`)
+        }
+
+        en.parentId = e1.id
+      }
+
+      if (en.children.length === 0) {
+        continue
+      }
+
+      for (const [i, id] of en.children.entries()) {
+        const e0 = s0.findById(id)
+        if (!e0) {
+          throw new Error(`Entity not found: #${id}`)
+        }
+
+        const e1 = s1.findByUrl(e0.data.url)
+        if (!e1) {
+          throw new Error(`Entity not found: ${e0.data.url}`)
+        }
+
+        en.children[i] = e1.id
+      }
+    }
   }
 
   #idIndex: Record<number, number> = {}
@@ -195,9 +283,9 @@ export class Sitemap implements SitemapAccessible {
 
   #entities: Entity[] = []
 
-  // get entities(): Entity[] {
-  //   return this.#entities
-  // }
+  get entities(): Entity[] {
+    return this.#entities
+  }
 
   #templates: Template[] = []
 
@@ -216,37 +304,31 @@ export class Sitemap implements SitemapAccessible {
     return this.#entities[n]
   }
 
-  // resolveTemplateId(id: number): Template
+  trailOf(e: Entity): number[] {
+    const t: number[] = []
+
+    let c: Entity | undefined = e
+    while (c) {
+      t.push(c.id)
+      c = this.findById(c.parentId)
+    }
+
+    return t.reverse()
+  }
+
+  dataOf(e: Entity): Data {
+    const t = this.#templates[e.templateId]
+    return t.data
+  }
+
+  #addEntity(e: Entity): void {
+    e.id = this.#entities.length
+    this.#entities.push(e)
+    this.#idIndex[e.id] = this.#entities.length - 1
+    this.#urlIndex[e.data.url] = this.#entities.length - 1
+    this.#pathIndex[e.data.path] = this.#entities.length - 1
+  }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 export type Entity = EntityMap[EntityType]
 
@@ -295,28 +377,21 @@ export interface EntityNode {
 }
 
 export class EntityData {
+  static from(d: SitemapDatum): EntityData {
+    const e = new EntityData()
+    e.title = d.title
+    e.url = d.url
+    e.path = d.path
+    e.order = d.order
+    return e
+  }
+
   title = ""
   url = ""
   path = ""
-  // order = -1
+  order = -1
 
   get external(): boolean {
     return this.url.startsWith("http")
   }
 }
-
-// export class Group {
-//   title = ""
-//   // order = -1
-// }
-
-// export class Page {
-//   title = ""
-//   url = ""
-//   path = ""
-//   // order = -1
-
-//   get external(): boolean {
-//     return this.url.startsWith("http")
-//   }
-// }
