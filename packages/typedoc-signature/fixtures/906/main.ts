@@ -1,1 +1,3 @@
-let value: "up" | "down";
+interface A {
+  m(a: void): void
+}

@@ -22,6 +22,7 @@ import {
   isFunctionReflection,
   isInterfaceReflection,
   isMethodReflection,
+  isParameterReflection,
   isProjectReflection,
   isPropertyReflection,
   isSignatureReflection,
@@ -190,6 +191,32 @@ export function interfaceReflection(i: J.Reflection, d: Declaration): void {
         t = new TextToken()
         t.text = "\n"
         s.push(t)
+      } else if (c.signatures) {
+        for (const v of c.signatures) {
+          t = new TextToken()
+          t.text = "  "
+          s.push(t)
+
+          t = new ParameterToken()
+          t.text = v.name
+          s.push(t)
+
+          const b = functionType(v)
+          s.push(...b)
+
+          if (v.type) {
+            t = new TextToken()
+            t.text = ": "
+            s.push(t)
+
+            const b = type(v.type)
+            s.push(...b)
+          }
+
+          t = new TextToken()
+          t.text = "\n"
+          s.push(t)
+        }
       }
     }
   }
@@ -410,9 +437,15 @@ export function functionsDeclaration(r: J.Reflection, d: Declaration): void {
   d.signature.verbose = s
 }
 
-export function value(p: J.DeclarationReflection | J.ParameterReflection): Signature {
+export function value(p: J.Reflection): Signature {
   const s: Signature = []
   let t: Token
+
+  if (!isDeclarationReflection(p) &&
+    !isParameterReflection(p) &&
+    !isSignatureReflection(p)) {
+    return s
+  }
 
   t = new ParameterToken()
   t.text = p.name
@@ -425,6 +458,10 @@ export function value(p: J.DeclarationReflection | J.ParameterReflection): Signa
   if (p.type) {
     const b = type(p.type)
     s.push(...b)
+  }
+
+  if (isSignatureReflection(p)) {
+    return s
   }
 
   if (p.defaultValue) {
@@ -610,17 +647,18 @@ export function literalType(l: unknown): Signature {
     function: true,
     symbol: true,
     bigint: true,
+    void: true,
   }
 
   const s: Signature = []
 
   if (ts[String(l)]) {
-    const t = new StringToken()
-    t.text = `"${l}"`
-    s.push(t)
-  } else {
     const t = new TypeToken()
     t.text = String(l)
+    s.push(t)
+  } else {
+    const t = new StringToken()
+    t.text = `"${l}"`
     s.push(t)
   }
 
