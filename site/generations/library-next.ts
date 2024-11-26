@@ -1,4 +1,5 @@
-import {SitemapDatum} from "@onlyoffice/eleventy-sitemap"
+import {SitemapDatum} from "@onlyoffice/eleventy-sitemap/next.ts"
+// import {SitemapDatum} from "@onlyoffice/eleventy-sitemap"
 import {type Data} from "@onlyoffice/eleventy-types"
 import {type Entity} from "@onlyoffice/library-declaration/next.ts"
 import {cutSuffix} from "@onlyoffice/strings"
@@ -85,6 +86,31 @@ export function data(r: Resource): Data {
       //   }
 
       //   return a
+      // },
+
+      // sitemap2(data) {
+      //   if (!data.pagination || !data.pagination.items) {
+      //     throw new Error("No pagination")
+      //   }
+
+      //   const a = data.defaultSitemap2
+      //   if (!a) {
+      //     return
+      //   }
+
+      //   const b = new SitemapDatum()
+
+      //   const [e]: Entity[] = data.pagination.items
+
+      //   if (e.type === "group") {
+      //     b.type = "group"
+      //   } else if (e.type === "declaration") {
+      //     b.type = "page"
+      //   } else {
+      //     throw new Error("Unknown entity type")
+      //   }
+
+      //   return SitemapDatum.merge(a, b)
       // },
 
       library(data) {

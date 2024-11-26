@@ -13,7 +13,8 @@ export class Config extends Array<ConfigEntity> {
   static async read(): Promise<Config> {
     const c = new Config()
 
-    const p = path.join(cwd(), "config.ts")
+    const p = to(path.join(cwd(), "config.ts"))
+    console.log(p)
     const m = await import(p)
 
     for (const r of m.config) {
@@ -25,41 +26,44 @@ export class Config extends Array<ConfigEntity> {
   }
 }
 
+function to(p) {
+  p = p.replace(/\\/g, '/')
+  return `file:///${p}`
+}
+
 export interface InputConfigEntity {
   name: string
-  variant: string
   source: InputConfigEntitySource
 }
 
 export class ConfigEntity {
   name = ""
-  variant = ""
   source = new ConfigEntitySource()
 
   static fromObject(o: InputConfigEntity): ConfigEntity {
     const c = new ConfigEntity()
     c.name = o.name
-    c.variant = o.variant
     c.source = ConfigEntitySource.fromObject(o.source)
     return c
   }
 
   async download(): Promise<StringWritable> {
-    console.log(`Start downloading the config entity '${this.name}' with variant '${this.variant}'`)
+    console.log(`Start downloading the config entity '${this.name}'`)
 
     const s = new StringWritable()
     await this.source.download(s)
 
-    console.log(`Finish downloading the config entity '${this.name}' with variant '${this.variant}'`)
+    console.log(`Finish downloading the config entity '${this.name}'`)
     return s
   }
 }
 
 export interface InputConfigEntitySource {
-  owner: string
-  repo: string
-  reference: string
-  path: string
+  owner?: string
+  repo?: string
+  reference?: string
+  path?: string
+  content?: string
 }
 
 export class ConfigEntitySource {
@@ -67,13 +71,31 @@ export class ConfigEntitySource {
   repo = ""
   reference = ""
   path = ""
+  content = ""
 
   static fromObject(o: InputConfigEntitySource): ConfigEntitySource {
     const c = new ConfigEntitySource()
-    c.owner = o.owner
-    c.repo = o.repo
-    c.reference = o.reference
-    c.path = o.path
+
+    if (o.owner) {
+      c.owner = o.owner
+    }
+
+    if (o.repo) {
+      c.repo = o.repo
+    }
+
+    if (o.reference) {
+      c.reference = o.reference
+    }
+
+    if (o.path) {
+      c.path = o.path
+    }
+
+    if (o.content) {
+      c.content = o.content
+    }
+
     return c
   }
 
@@ -83,6 +105,13 @@ export class ConfigEntitySource {
   }
 
   async download(w: Writable): Promise<void> {
+    if (this.content) {
+      console.log("Start writing the content of the config entity source")
+      w.write(this.content)
+      console.log("Finish writing the content of the config entity source")
+      return
+    }
+
     const u = this.url
     console.log(`Start downloading the config entity source from '${u.pathname}'`)
 
