@@ -14,7 +14,9 @@
   },
   "dependencies": {
     "@onlyoffice/eleventy-types": "workspace:^",
+    "@onlyoffice/errors": "workspace:^",
     "@onlyoffice/objects": "workspace:^",
+    "@onlyoffice/result": "workspace:^",
     "typescript": "5.4.5"
   },
   "devDependencies": {
