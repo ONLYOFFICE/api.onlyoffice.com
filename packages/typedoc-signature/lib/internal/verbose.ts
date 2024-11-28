@@ -90,12 +90,12 @@ export function verbose(r: J.Reflection, e: Entity): void {
 }
 
 export function classDeclaration(c: J.Reflection, d: Declaration): void {
-  const s: Signature = []
-  let t: Token
-
   if (!isClassReflection(c)) {
     return
   }
+
+  const s: Signature = []
+  let t: Token
 
   t = new KeywordToken()
   t.text = "class"
@@ -113,11 +113,11 @@ export function classDeclaration(c: J.Reflection, d: Declaration): void {
 }
 
 export function constructorDeclaration(c: J.Reflection, d: Declaration): void {
-  const s: Signature = []
-
   if (!isSignatureReflection(c)) {
     return
   }
+
+  const s: Signature = []
 
   const t = new KeywordToken()
   t.text = "constructor"
@@ -207,12 +207,12 @@ export function enumReflection(e: J.Reflection, d: Declaration): void {
 }
 
 export function functionsDeclaration(f: J.Reflection, d: Declaration): void {
-  const s: Signature = []
-  let t: Token
-
   if (!isCallSignatureReflection(f)) {
     return
   }
+
+  const s: Signature = []
+  let t: Token
 
   t = new KeywordToken()
   t.text = "function"
@@ -318,12 +318,12 @@ export function interfaceReflection(i: J.Reflection, d: Declaration): void {
 }
 
 export function methodDeclaration(m: J.Reflection, d: Declaration): void {
-  const s: Signature = []
-  let t: Token
-
   if (!isSignatureReflection(m)) {
     return
   }
+
+  const s: Signature = []
+  let t: Token
 
   t = new KeywordToken()
   t.text = "function"

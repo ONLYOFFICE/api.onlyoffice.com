@@ -5,8 +5,6 @@ import {
   GroupEntity,
 } from "@onlyoffice/library-declaration/next.ts"
 import {
-  EntityToken,
-  KeywordToken,
   ParameterToken,
   type Signature,
   StringToken,
@@ -49,11 +47,11 @@ export function concise(r: J.Reflection, e: Entity): void {
   const p = resolve(r, f)
 
   if (isClassReflection(t)) {
-    classDeclaration(t, e.declaration) // TODO
+    classDeclaration(t, e.declaration)
     return
   }
   if (isConstructorReflection(p) && isSignatureReflection(t)) {
-    constructorDeclaration(t, e.declaration) // TODO
+    constructorDeclaration(r, e.declaration)
     return
   }
   if (isEnumMemberReflection(t)) {
@@ -65,7 +63,7 @@ export function concise(r: J.Reflection, e: Entity): void {
     return
   }
   if (isFunctionReflection(p) && isCallSignatureReflection(t)) {
-    functionsDeclaration(t, e.declaration) // TODO
+    functionsDeclaration(r, e.declaration) // TODO
     return
   }
   if (isInterfaceReflection(t)) {
@@ -85,48 +83,47 @@ export function concise(r: J.Reflection, e: Entity): void {
     return
   }
   if (isVariableReflection(t)) {
-    variableDeclaration(t, e.declaration) // TODO
+    variableDeclaration(t, e.declaration)
   }
 }
 
 export function classDeclaration(c: J.Reflection, d: Declaration): void {
-  const s: Signature = []
-  let t: Token
-
   if (!isClassReflection(c)) {
     return
   }
 
-  t = new KeywordToken()
-  t.text = "class"
-  s.push(t)
+  const s: Signature = []
+  let t: Token
 
   t = new TextToken()
-  t.text = " "
+  t.text = "  "
   s.push(t)
 
-  t = new EntityToken()
+  t = new TypeToken()
   t.text = c.name
   s.push(t)
 
-  d.signature.verbose = s
+  d.signature.concise = s
 }
 
-export function constructorDeclaration(c: J.Reflection, d: Declaration): void {
-  const s: Signature = []
+export function constructorDeclaration(r: J.Reflection, d: Declaration): void {
+  const tt = d.trail.flat(Infinity)
+  const c = resolve(r, tt)
 
   if (!isSignatureReflection(c)) {
     return
   }
 
-  const t = new KeywordToken()
-  t.text = "constructor"
-  s.push(t)
+  const s: Signature = []
 
   const b = parameters(c)
   s.push(...b)
 
-  d.signature.verbose = s
+  d.signature.concise = s
+
+  if (d.parameters.length !== 0) {
+    fragment(r, d)
+  }
 }
 
 export function enumMemberReflection(e: J.Reflection, d: Declaration): void {
@@ -159,32 +156,32 @@ export function enumReflection(e: J.Reflection, d: Declaration): void {
   }
 
   const s: Signature = []
+  let t: Token
 
-  const t = new TypeToken()
+  t = new TextToken()
+  t.text = "  "
+  s.push(t)
+
+  t = new TypeToken()
   t.text = e.name
   s.push(t)
 
   d.signature.concise = s
 }
 
-export function functionsDeclaration(f: J.Reflection, d: Declaration): void {
-  const s: Signature = []
-  let t: Token
+export function functionsDeclaration(r: J.Reflection, d: Declaration): void {
+  const tt = d.trail.flat(Infinity)
+  const f = resolve(r, tt)
 
   if (!isCallSignatureReflection(f)) {
     return
   }
 
-  t = new KeywordToken()
-  t.text = "function"
-  s.push(t)
+  const s: Signature = []
+  let t: Token
 
   t = new TextToken()
-  t.text = " "
-  s.push(t)
-
-  t = new EntityToken()
-  t.text = f.name
+  t.text = "  "
   s.push(t)
 
   const b = parameters(f)
@@ -204,6 +201,10 @@ export function functionsDeclaration(f: J.Reflection, d: Declaration): void {
   }
 
   d.signature.concise = s
+
+  if (d.parameters.length !== 0) {
+    fragment(r, d)
+  }
 }
 
 export function interfaceReflection(i: J.Reflection, d: Declaration): void {
@@ -212,8 +213,13 @@ export function interfaceReflection(i: J.Reflection, d: Declaration): void {
   }
 
   const s: Signature = []
+  let t: Token
 
-  const t = new TypeToken()
+  t = new TextToken()
+  t.text = "  "
+  s.push(t)
+
+  t = new TypeToken()
   t.text = i.name
   s.push(t)
 
@@ -221,15 +227,15 @@ export function interfaceReflection(i: J.Reflection, d: Declaration): void {
 }
 
 export function methodDeclaration(r: J.Reflection, d: Declaration): void {
-  const s: Signature = []
-  let t: Token
-
   const tt = d.trail.flat(Infinity)
   const m = resolve(r, tt)
 
   if (!isSignatureReflection(m)) {
     return
   }
+
+  const s: Signature = []
+  let t: Token
 
   const b = parameters(m)
   s.push(...b)
@@ -250,17 +256,7 @@ export function methodDeclaration(r: J.Reflection, d: Declaration): void {
   d.signature.concise = s
 
   if (d.parameters.length !== 0) {
-    for (const f of d.parameters) {
-      const tt = f.trail.flat(Infinity)
-      const e = resolve(r, tt)
-      if (!isParameterReflection(e)) {
-        return
-      }
-      if (e.type) {
-        const b = type(e.type)
-        f.signature.concise.push(...b)
-      }
-    }
+    fragment(r, d)
   }
 }
 
@@ -289,8 +285,13 @@ export function typeAliasReflection(a: J.Reflection, d: Declaration): void {
   }
 
   const s: Signature = []
+  let t: Token
 
-  const t = new TypeToken()
+  t = new TextToken()
+  t.text = "  "
+  s.push(t)
+
+  t = new TypeToken()
   t.text = a.name
   s.push(t)
 
@@ -303,22 +304,9 @@ export function variableDeclaration(v: J.Reflection, d: Declaration): void {
   }
 
   const s: Signature = []
-  let t: Token
 
-  t = new KeywordToken()
-  t.text = "type"
-  s.push(t)
-
-  t = new TextToken()
-  t.text = " "
-  s.push(t)
-
-  t = new EntityToken()
-  t.text = v.name
-  s.push(t)
-
-  t = new TextToken()
-  t.text = " = "
+  const t = new TextToken()
+  t.text = "  "
   s.push(t)
 
   if (v.type) {
@@ -327,6 +315,20 @@ export function variableDeclaration(v: J.Reflection, d: Declaration): void {
   }
 
   d.signature.concise = s
+}
+
+export function fragment(r: J.Reflection, d: Declaration): void {
+  for (const f of d.parameters) {
+    const tt = f.trail.flat(Infinity)
+    const e = resolve(r, tt)
+    if (!isParameterReflection(e)) {
+      return
+    }
+    if (e.type) {
+      const b = type(e.type)
+      f.signature.concise.push(...b)
+    }
+  }
 }
 
 export function parameters(r: J.SignatureReflection): Signature {
