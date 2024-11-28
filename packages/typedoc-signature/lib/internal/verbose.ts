@@ -598,10 +598,37 @@ export function literalType(l: J.LiteralType): Signature {
 export function referenceType(r: J.ReferenceType): Signature {
   // TODO
   const s: Signature = []
+  let t: Token
 
-  const t = new TypeToken()
+  t = new TypeToken()
   t.text = r.name
   s.push(t)
+
+  if (r.name === "Promise") {
+    t = new TextToken()
+    t.text = "<"
+    s.push(t)
+
+    if (r.typeArguments) {
+      for (const a of r.typeArguments) {
+        const b = type(a)
+        s.push(...b)
+
+        t = new TextToken()
+        t.text = " | "
+        s.push(t)
+      }
+      s.pop()
+    } else {
+      t = new TypeToken()
+      t.text = "void"
+      s.push(t)
+    }
+
+    t = new TextToken()
+    t.text = ">"
+    s.push(t)
+  }
 
   return s
 }
