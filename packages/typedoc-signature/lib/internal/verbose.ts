@@ -651,9 +651,7 @@ export function reflectionType(r: J.ReflectionType): Signature {
         s.push(...b)
       }
     }
-  }
-
-  if (r.declaration.children) {
+  } else if (r.declaration.children) {
     t = new TextToken()
     t.text = "{"
     s.push(t)
@@ -679,6 +677,14 @@ export function reflectionType(r: J.ReflectionType): Signature {
       }
     }
     s.pop()
+
+    t = new TextToken()
+    t.text = "}"
+    s.push(t)
+  } else {
+    t = new TextToken()
+    t.text = "{"
+    s.push(t)
 
     t = new TextToken()
     t.text = "}"
