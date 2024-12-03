@@ -7,7 +7,9 @@ import {
 import {
   EntityToken,
   KeywordToken,
+  NoopToken,
   ParameterToken,
+  Reference,
   type Signature,
   StringToken,
   TextToken,
@@ -33,6 +35,10 @@ import {
   isVariableReflection,
 } from "@onlyoffice/typedoc-util-is-reflection"
 import {type JSONOutput as J} from "typedoc"
+
+let indent = 0
+const NEWLINE = "\n"
+const LIMIT = 100
 
 export function verbose(r: J.Reflection, e: Entity): void {
   if (!isProjectReflection(r)) {
@@ -186,8 +192,17 @@ export function enumReflection(e: J.Reflection, d: Declaration): void {
   s.push(t)
 
   if (e.children) {
+    indent += 2
     for (const c of e.children) {
       if (c.type) {
+        t = new TextToken()
+        t.text = NEWLINE
+        s.push(t)
+
+        t = new TextToken()
+        t.text = " ".repeat(indent)
+        s.push(t)
+
         const b = value(c)
         s.push(...b)
 
@@ -196,8 +211,17 @@ export function enumReflection(e: J.Reflection, d: Declaration): void {
         s.push(t)
       }
     }
+    indent -= 2
     s.pop()
   }
+
+  t = new TextToken()
+  t.text = NEWLINE
+  s.push(t)
+
+  t = new TextToken()
+  t.text = " ".repeat(indent)
+  s.push(t)
 
   t = new TextToken()
   t.text = "}"
@@ -274,7 +298,16 @@ export function interfaceReflection(i: J.Reflection, d: Declaration): void {
   s.push(t)
 
   if (i.children) {
+    indent += 2
     for (const c of i.children) {
+      t = new TextToken()
+      t.text = NEWLINE
+      s.push(t)
+
+      t = new TextToken()
+      t.text = " ".repeat(indent)
+      s.push(t)
+
       if (c.type) {
         const b = value(c)
         s.push(...b)
@@ -307,8 +340,17 @@ export function interfaceReflection(i: J.Reflection, d: Declaration): void {
         }
       }
     }
+    indent -= 2
     s.pop()
   }
+
+  t = new TextToken()
+  t.text = NEWLINE
+  s.push(t)
+
+  t = new TextToken()
+  t.text = " ".repeat(indent)
+  s.push(t)
 
   t = new TextToken()
   t.text = "}"
@@ -456,8 +498,17 @@ export function parameters(r: J.SignatureReflection): Signature {
   s.push(t)
 
   if (r.parameters && r.parameters.length !== 0) {
+    indent += 2
     for (const f of r.parameters) {
       if (f.type) {
+        t = new TextToken()
+        t.text = "_NEWLINE_"
+        s.push(t)
+
+        t = new TextToken()
+        t.text = `_INDENT-${indent}_`
+        s.push(t)
+
         const b = value(f)
         s.push(...b)
 
@@ -466,14 +517,23 @@ export function parameters(r: J.SignatureReflection): Signature {
         s.push(t)
       }
     }
-
+    indent -= 2
     s.pop()
+
+    t = new TextToken()
+    t.text = "_NEWLINE_"
+    s.push(t)
+
+    t = new TextToken()
+    t.text = `_INDENT-${indent}_`
+    s.push(t)
   }
 
   t = new TextToken()
   t.text = ")"
   s.push(t)
 
+  format(s)
   return s
 }
 
@@ -656,8 +716,17 @@ export function reflectionType(r: J.ReflectionType): Signature {
     t.text = "{"
     s.push(t)
 
+    indent += 2
     for (const c of r.declaration.children) {
       if (c.type) {
+        t = new TextToken()
+        t.text = NEWLINE
+        s.push(t)
+
+        t = new TextToken()
+        t.text = " ".repeat(indent)
+        s.push(t)
+
         t = new ParameterToken()
         t.text = c.name
         s.push(t)
@@ -671,12 +740,17 @@ export function reflectionType(r: J.ReflectionType): Signature {
 
         const b = type(c.type)
         s.push(...b)
-        t = new TextToken()
-        t.text = " "
-        s.push(t)
       }
     }
-    s.pop()
+    indent -= 2
+
+    t = new TextToken()
+    t.text = NEWLINE
+    s.push(t)
+
+    t = new TextToken()
+    t.text = " ".repeat(indent)
+    s.push(t)
 
     t = new TextToken()
     t.text = "}"
@@ -731,7 +805,16 @@ export function unionType(u: J.UnionType): Signature {
     return s
   }
 
+  indent += 2
   for (const ts of u.types) {
+    t = new TextToken()
+    t.text = "_NEWLINE_"
+    s.push(t)
+
+    t = new TextToken()
+    t.text = `_INDENT-${indent}_`
+    s.push(t)
+
     const b = type(ts)
     s.push(...b)
 
@@ -739,8 +822,10 @@ export function unionType(u: J.UnionType): Signature {
     t.text = " | "
     s.push(t)
   }
+  indent -= 2
   s.pop()
 
+  format(s)
   return s
 }
 
@@ -766,4 +851,32 @@ function target(o: J.Reflection): J.Reflection[] {
   }
 
   return []
+}
+
+function format(s: Signature): void {
+  let l = indent
+  for (const t of s) {
+    if (!(t instanceof Reference || t instanceof NoopToken) &&
+      (t.text !== "_NEWLINE_" && !/^_INDENT-\d+_/.test(t.text))) {
+      l += t.text.length
+    }
+  }
+
+  for (const t of s) {
+    if (t instanceof TextToken && t.text === "_NEWLINE_") {
+      if (l > LIMIT) {
+        t.text = NEWLINE
+      } else {
+        t.text = ""
+      }
+    }
+    if (t instanceof TextToken && /^_INDENT-\d+_$/.test(t.text)) {
+      const m = /_INDENT-(\d+)_/.exec(t.text)
+      let i = 0
+      if (l > LIMIT && m) {
+        i = Number.parseInt(m[1])
+      }
+      t.text = " ".repeat(i)
+    }
+  }
 }
