@@ -2363,6 +2363,52 @@ importers:
         specifier: 0.5.6
         version: 0.5.6
 
+  packages/remark-lint-case-police:
+    dependencies:
+      '@types/mdast':
+        specifier: 4.0.3
+        version: 4.0.3
+      case-police:
+        specifier: 0.7.2
+        version: 0.7.2
+      unified-lint-rule:
+        specifier: 3.0.0
+        version: 3.0.0
+      vfile:
+        specifier: 6.0.1
+        version: 6.0.1
+    devDependencies:
+      c8:
+        specifier: 9.1.0
+        version: 9.1.0
+      esbuild:
+        specifier: 0.23.0
+        version: 0.23.0
+      remark-lint:
+        specifier: 10.0.0
+        version: 10.0.0
+      remark-parse:
+        specifier: 11.0.0
+        version: 11.0.0
+      remark-stringify:
+        specifier: 11.0.0
+        version: 11.0.0
+      rimraf:
+        specifier: 6.0.1
+        version: 6.0.1
+      tsx:
+        specifier: 4.16.5
+        version: 4.16.5
+      typescript:
+        specifier: 5.4.5
+        version: 5.4.5
+      unified:
+        specifier: 11.0.5
+        version: 11.0.5
+      uvu:
+        specifier: 0.5.6
+        version: 0.5.6
+
   packages/remark-lint-eslint:
     dependencies:
       '@onlyoffice/eslint-config':
@@ -7164,6 +7210,10 @@ packages:
 
   caniuse-lite@1.0.30001651:
     resolution: {integrity: sha512-9Cf+Xv1jJNe1xPZLGuUXLNkE1BoDkqRqYyFJ9TDYSqhduqA4hu4oR9HluGoWYQC/aj8WHjsGVV+bwkh0+tegRg==}
+
+  case-police@0.7.2:
+    resolution: {integrity: sha512-qxIuluIS2DdugnuveaTXrN+++BcjRZkoNXIc+2yIFDZlAl72YekXhr/M1xzfOGU445nZKi4ruIZbp0qz1YBEFQ==}
+    hasBin: true
 
   catharsis@0.9.0:
     resolution: {integrity: sha512-prMTQVpcns/tzFgFVkVp6ak6RykZyWb3gu8ckUpd6YkTlacOd3DXGJjIpD4Q6zJirizvaiAjSSHlOsA+6sNh2A==}
@@ -14821,6 +14871,8 @@ snapshots:
   camelcase@6.3.0: {}
 
   caniuse-lite@1.0.30001651: {}
+
+  case-police@0.7.2: {}
 
   catharsis@0.9.0:
     dependencies:
