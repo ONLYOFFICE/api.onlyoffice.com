@@ -804,6 +804,7 @@ export class Fragment {
   sourceId = -1
   name = ""
   trail = new Trail()
+  optional = false
   default = ""
   narrative = new Narrative()
 
@@ -826,6 +827,10 @@ export class Fragment {
 
   static async fromParameterReflection(o: J.ParameterReflection): R<Fragment> {
     const [f, fe] = await Fragment.fromReflection(o)
+
+    if (o.flags.isOptional) {
+      f.optional = true
+    }
 
     if (o.defaultValue !== undefined) {
       // todo: if (isStringLiteral(o.defaultValue)) {}
@@ -855,6 +860,7 @@ export class Fragment {
     const f = new L.Fragment()
     f.name = this.name
     f.trail = this.trail.real
+    f.optional = this.optional
     f.description = this.narrative.description
     return f
   }
