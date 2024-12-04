@@ -159,6 +159,9 @@ function Fragments(p: FragmentsProperties): JSX.Element {
           {f.signature.concise.length !== 0 && <Badge variant="transparent">
             <Signature variant="inline" signature={f.signature.concise} />
           </Badge>}
+          {f.optional && <Badge variant="neutral">
+            optional
+          </Badge>}
           {f.default && <Badge variant="neutral">
             <BadgeCaption>default: </BadgeCaption>{f.default}
           </Badge>}
