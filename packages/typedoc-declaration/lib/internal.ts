@@ -9,6 +9,7 @@ import {firstSentence} from "@onlyoffice/mdast-util-first-sentence"
 import {type Result} from "@onlyoffice/result"
 import {
   isCallSignatureReflection,
+  isClassReflection,
   isConstructorReflection,
   isConstructorSignatureReflection,
   isContainerReflection,
@@ -16,7 +17,7 @@ import {
   isFunctionReflection,
   isMethodReflection,
   isParameterReflection,
-  // isPropertyReflection,
+  isPropertyReflection,
   isSignatureReflection,
 } from "@onlyoffice/typedoc-util-is-reflection"
 import {isReflectionType} from "@onlyoffice/typedoc-util-is-type"
@@ -259,7 +260,6 @@ export async function processGroups(ctx: Context, o: J.Reflection): R<Group[]> {
       // If an entity contains a custom category and has a child entity that
       // is not included in any category, the latter will be added to the
       // "Other" built-in category. This category cannot be added manually.
-
       if (n.name === "Other") {
         continue
       }
@@ -279,11 +279,13 @@ export async function processGroups(ctx: Context, o: J.Reflection): R<Group[]> {
       const [n, ne] = await Group.from(r)
       err = errors.join(err, ne)
 
-      // if (n.name === "Properties") {
-      //   n.name = "Instance Properties"
-      // } else if (n.name === "Methods") {
-      //   n.name = "Instance Methods"
-      // }
+      // Skip these groups, as specific alternatives will be created manually.
+      if (
+        isClassReflection(o) &&
+        (n.name === "Properties" || n.name === "Methods")
+      ) {
+        continue
+      }
 
       if (n.sourceChildren.length !== 0) {
         const i = next()
@@ -293,41 +295,65 @@ export async function processGroups(ctx: Context, o: J.Reflection): R<Group[]> {
     }
   }
 
-  // const p = new Group()
-  // p.name = "Type Properties"
+  if (isClassReflection(o)) {
+    const tp = new Group()
+    tp.name = "Type Properties"
 
-  // const m = new Group()
-  // m.name = "Type Methods"
+    const tm = new Group()
+    tm.name = "Type Methods"
 
-  // if (o.children) {
-  //   for (const r of o.children) {
-  //     if (isPropertyReflection(r)) {
-  //       if (r.flags.isStatic) {
-  //         p.sourceChildren.push(r.id)
-  //       }
-  //       continue
-  //     }
+    const ip = new Group()
+    ip.name = "Instance Properties"
 
-  //     if (isMethodReflection(r)) {
-  //       if (r.flags.isStatic) {
-  //         m.sourceChildren.push(r.id)
-  //       }
-  //       continue
-  //     }
-  //   }
-  // }
+    const im = new Group()
+    im.name = "Instance Methods"
 
-  // if (p.sourceChildren.length !== 0) {
-  //   const i = next()
-  //   p.trail.virtual = ctx.v.with(i)
-  //   a.push(p)
-  // }
+    if (o.children) {
+      for (const r of o.children) {
+        if (isPropertyReflection(r)) {
+          if (r.flags.isStatic) {
+            tp.sourceChildren.push(r.id)
+          } else {
+            ip.sourceChildren.push(r.id)
+          }
+          continue
+        }
 
-  // if (m.sourceChildren.length !== 0) {
-  //   const i = next()
-  //   m.trail.virtual = ctx.v.with(i)
-  //   a.push(m)
-  // }
+        if (isMethodReflection(r)) {
+          if (r.flags.isStatic) {
+            tm.sourceChildren.push(r.id)
+          } else {
+            im.sourceChildren.push(r.id)
+          }
+          continue
+        }
+      }
+    }
+
+    if (tp.sourceChildren.length !== 0) {
+      const i = next()
+      tp.trail.virtual = ctx.v.with(i)
+      a.push(tp)
+    }
+
+    if (tm.sourceChildren.length !== 0) {
+      const i = next()
+      tm.trail.virtual = ctx.v.with(i)
+      a.push(tm)
+    }
+
+    if (ip.sourceChildren.length !== 0) {
+      const i = next()
+      ip.trail.virtual = ctx.v.with(i)
+      a.push(ip)
+    }
+
+    if (im.sourceChildren.length !== 0) {
+      const i = next()
+      im.trail.virtual = ctx.v.with(i)
+      a.push(im)
+    }
+  }
 
   const b: Group[] = []
 
