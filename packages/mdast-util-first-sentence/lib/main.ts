@@ -48,12 +48,9 @@ function append(c: {s: string}, r: Parent, n: unknown): void {
     if (c.s.startsWith(t.value)) {
       c.s = c.s.slice(t.value.length)
     } else {
-      const i = t.value.indexOf(c.s)
-      if (i === -1) {
-        return
-      }
+      const i = Math.max(0, c.s.length)
+      t.value = t.value.slice(0, i + 1).trimEnd()
       c.s = ""
-      t.value = t.value.slice(0, i + 1)
     }
 
     if (!c.s && !t.value.endsWith(".")) {
