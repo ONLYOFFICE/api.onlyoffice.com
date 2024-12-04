@@ -2181,6 +2181,9 @@ importers:
 
   packages/remark-config:
     dependencies:
+      '@onlyoffice/remark-lint-case-police':
+        specifier: workspace:^
+        version: link:../remark-lint-case-police
       '@onlyoffice/remark-lint-eslint':
         specifier: workspace:^
         version: link:../remark-lint-eslint

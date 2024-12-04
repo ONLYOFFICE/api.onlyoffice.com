@@ -3,6 +3,7 @@
 // https://github.com/remarkjs/remark-lint/issues/80
 // https://github.com/remarkjs/remark-lint/tree/10.0.0/packages/remark-lint-no-html
 
+import {remarkLintCasePolice} from "@onlyoffice/remark-lint-case-police"
 import {remarkLintEslint} from "@onlyoffice/remark-lint-eslint"
 import remarkLint from "remark-lint"
 import remarkLintBlockquoteIndentation from "remark-lint-blockquote-indentation"
@@ -72,6 +73,7 @@ export function remarkConfig(): Preset {
     plugins: [
       remarkLint,
       [remarkLintBlockquoteIndentation, 2],
+      [remarkLintCasePolice, {}],
       [remarkLintCheckboxCharacterStyle, {checked: "x", unchecked: " "}],
       remarkLintCheckboxContentIndent,
       [remarkLintCodeBlockStyle, "fenced"],

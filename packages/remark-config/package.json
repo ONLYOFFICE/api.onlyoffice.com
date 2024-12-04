@@ -13,6 +13,7 @@
     "test": "pnpm test:types && pnpm test:unit"
   },
   "dependencies": {
+    "@onlyoffice/remark-lint-case-police": "workspace:^",
     "@onlyoffice/remark-lint-eslint": "workspace:^",
     "remark-lint": "10.0.0",
     "remark-lint-blockquote-indentation": "4.0.0",
