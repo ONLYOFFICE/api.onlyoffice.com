@@ -29,9 +29,6 @@ import {Console} from "./console.ts"
 
 const console = Console.shared
 
-// todo: typedoc has no Instance Methods, property or Type one
-// todo: something wrong with the summary selection
-// todo: type alias may include properties and methods
 // todo: support nested categories
 // todo: rename constructors
 
