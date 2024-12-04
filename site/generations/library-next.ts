@@ -125,10 +125,10 @@ export function data(r: Resource): Data {
         const d = new LibraryDatum()
         d.declaration = e
 
-        d.onLink = function onLink(t) {
+        d.onLink = function onLink(id) {
           const s = Sitemap.shared
 
-          const e = r.retrieve(t.id)
+          const e = r.retrieve(id)
           if (!e) {
             return ""
           }
