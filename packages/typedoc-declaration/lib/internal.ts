@@ -34,22 +34,23 @@ const console = Console.shared
 
 export const groups: Record<string, number> = {
   // Parent groups
-  "Classes": 0,
-  "Interfaces": 1,
-  "Type Aliases": 2,
-  "Enumerations": 3,
-  "Variables": 4,
-  "Functions": 5,
+  "Namespaces": 0,
+  "Classes": 1,
+  "Interfaces": 2,
+  "Type Aliases": 3,
+  "Enumerations": 4,
+  "Variables": 5,
+  "Functions": 6,
 
   // Child groups
-  "Constructors": 6,
-  "Type Properties": 7,
-  "Type Methods": 8,
-  "Instance Properties": 9,
-  "Instance Methods": 10,
-  "Properties": 11,
-  "Methods": 12,
-  "Enumeration Members": 13,
+  "Constructors": 7,
+  "Type Properties": 8,
+  "Type Methods": 9,
+  "Instance Properties": 10,
+  "Instance Methods": 11,
+  "Properties": 12,
+  "Methods": 13,
+  "Enumeration Members": 14,
 }
 
 export type Entity = Group | Declaration
