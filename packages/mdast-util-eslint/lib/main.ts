@@ -22,16 +22,22 @@ async function lint(n: Code): Promise<void> {
   }
 
   const x = langToExt(n.lang)
+  // It is too complicated to cover this branch with tests.
+  /* c8 ignore next */
   if (!x) {
     return
   }
 
   const a = await e.lintText(n.value, {filePath: `.md/${x}`})
+  // It is too complicated to cover this branch with tests.
+  /* c8 ignore next */
   if (a.length === 0) {
     return
   }
 
   const [r] = a
+  // It is too complicated to cover this branch with tests.
+  /* c8 ignore next */
   if (!r.output) {
     return
   }
