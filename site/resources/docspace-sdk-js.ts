@@ -27,5 +27,5 @@ function f(r: I): void {
     throw new Error(`Root entity must be a declaration: ${e.type}`)
   }
 
-  e.declaration.name = "SDK"
+  e.declaration.name = "API"
 }
