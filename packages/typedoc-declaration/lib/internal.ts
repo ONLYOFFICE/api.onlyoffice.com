@@ -910,39 +910,34 @@ export class Narrative {
     let err: E
     const n = new Narrative()
 
-    let t = ""
-    for (const e of o.summary) {
-      t += e.text
-    }
-
+    let d = joinContent("", o.summary)
     let s = ""
     let e = ""
     let r = ""
 
     if (o.blockTags) {
       for (const t of o.blockTags) {
+        if (t.tag === "@remarks") {
+          d = joinContent(d, t.content)
+          continue
+        }
+
         if (t.tag === "@summary" && s) {
           continue
         }
 
         if (t.tag === "@summary") {
-          for (const c of t.content) {
-            s += c.text
-          }
+          s = joinContent(s, t.content)
           continue
         }
 
         if (t.tag === "@example") {
-          for (const c of t.content) {
-            e += c.text
-          }
+          e = joinContent(e, t.content)
           continue
         }
 
         if (t.tag === "@returns") {
-          for (const c of t.content) {
-            r += c.text
-          }
+          r = joinContent(r, t.content)
           continue
         }
 
@@ -951,14 +946,14 @@ export class Narrative {
       }
     }
 
-    if (t && !s) {
-      const r = fromMarkdown(t)
+    if (d && !s) {
+      const r = fromMarkdown(d)
       const p = firstSentence(r)
       s = toMarkdown(p)
     }
 
-    if (t) {
-      t = await sanitizeMarkdown(t)
+    if (d) {
+      d = await sanitizeMarkdown(d)
     }
 
     if (s) {
@@ -977,7 +972,7 @@ export class Narrative {
     }
 
     n.summary = s
-    n.description = t
+    n.description = d
     n.examples = e
     n.returns = r
 
@@ -998,6 +993,22 @@ export class Narrative {
 
     return [n]
   }
+}
+
+export function joinContent(с: string, ps: J.CommentDisplayPart[]): string {
+  if (с.length !== 0) {
+    с += "\n\n"
+  }
+
+  for (const e of ps) {
+    с += `${e.text}\n\n`
+  }
+
+  if (с.endsWith("\n\n")) {
+    с = с.slice(0, -2)
+  }
+
+  return с
 }
 
 export async function sanitizeMarkdown(s: string): Promise<string> {
