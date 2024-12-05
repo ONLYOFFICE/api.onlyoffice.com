@@ -30,5 +30,5 @@ async function lint(n: Code): Promise<void> {
     return
   }
 
-  n.value = r.output
+  n.value = r.output.trimEnd()
 }
