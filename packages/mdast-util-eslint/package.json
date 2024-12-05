@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@onlyoffice/eslint-config": "workspace:^",
+    "@onlyoffice/lang-to-ext": "workspace:^",
     "@types/mdast": "4.0.3",
     "typescript": "5.4.5",
     "unist-util-visit": "5.0.0"

@@ -1359,6 +1359,9 @@ importers:
       '@onlyoffice/eslint-config':
         specifier: workspace:^
         version: link:../eslint-config
+      '@onlyoffice/lang-to-ext':
+        specifier: workspace:^
+        version: link:../lang-to-ext
       '@types/mdast':
         specifier: 4.0.3
         version: 4.0.3
