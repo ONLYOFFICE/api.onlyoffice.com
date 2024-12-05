@@ -31,6 +31,7 @@ const console = Console.shared
 
 // todo: support nested categories
 // todo: rename constructors
+// todo: remove the group sorting, as it is the responsibility of the site
 
 export const groups: Record<string, number> = {
   // Parent groups
