@@ -4,10 +4,10 @@ export const config: Config = [
   {
     name: "main",
     source: {
-      owner: "vanyauhalin",
+      owner: "onlyoffice",
       repo: "docspace-sdk-js-declarations",
-      reference: "dist",
-      path: "develop/docspace-sdk-js.json",
+      reference: "develop",
+      path: "docspace-sdk-js.json",
     },
   },
 ]
