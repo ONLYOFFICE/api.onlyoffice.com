@@ -997,20 +997,37 @@ export class Narrative {
   }
 }
 
-export function joinContent(с: string, ps: J.CommentDisplayPart[]): string {
-  if (с.length !== 0) {
-    с += "\n\n"
+export function joinContent(c: string, ps: J.CommentDisplayPart[]): string {
+  if (ps.length === 0) {
+    return c
   }
 
-  for (const e of ps) {
-    с += `${e.text}\n\n`
+  const a: J.CommentDisplayPart = {kind: "text", text: c}
+  const [b] = ps
+  join(a, b)
+
+  for (let i = 1; i < ps.length; i += 1) {
+    const a = ps[i - 1]
+    const b = ps[i]
+    join(a, b)
   }
 
-  if (с.endsWith("\n\n")) {
-    с = с.slice(0, -2)
+  if (c.startsWith("\n\n")) {
+    c = c.slice(2)
   }
 
-  return с
+  return c
+
+  function join(a: J.CommentDisplayPart, b: J.CommentDisplayPart): void {
+    const x = a.text.endsWith(" ")
+    const y = b.text.startsWith(" ")
+
+    if (!x && !y) {
+      c += "\n\n"
+    }
+
+    c += b.text
+  }
 }
 
 export async function sanitizeMarkdown(s: string): Promise<string> {
