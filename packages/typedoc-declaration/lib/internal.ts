@@ -54,10 +54,11 @@ export const groups: Record<string, number> = {
   "Enumeration Members": 14,
 }
 
-export type Entity = Group | Declaration
 export type Item = Entity | Fragment
-export type E = Error | undefined
+export type Entity = Group | Declaration
+
 export type R<T> = Promise<Result<T, Error>>
+export type E = Error | undefined
 
 export async function process(o: J.Reflection): Promise<L.Entity[]> {
   let err: E
@@ -81,8 +82,15 @@ export async function process(o: J.Reflection): Promise<L.Entity[]> {
   ctx.v.pop()
   ctx.v.out()
 
-  const r = shakeItems(o, c)
-  return convertItems(r)
+  const s = shakeItems(o, c)
+
+  const r = Repository.from(o, s)
+
+  // for (const e of r.entities) {
+  //   compute(r, e)
+  // }
+
+  return r.entities
 }
 
 export async function processItems(ctx: Context, o: J.Reflection): R<Item[]> {
@@ -667,21 +675,10 @@ export function shakeItems(o: J.Reflection, c: Item[]): Entity[] {
   }
 }
 
-export function convertItems(c: Entity[]): L.Entity[] {
-  const r: L.Entity[] = []
-
-  for (const t of c) {
-    const e = t.to()
-    r.push(e)
-  }
-
-  return r
-}
-
 export class Group {
   id = -1
   name = ""
-  trail = new Trail()
+  trail = new TrailDuplex()
   narrative = new Narrative()
   parentId = -1
   children: number[] = []
@@ -731,7 +728,7 @@ export class Declaration {
   id = -1
   sourceId = -1
   name = ""
-  trail = new Trail()
+  trail = new TrailDuplex()
   narrative = new Narrative()
   properties: Fragment[] = []
   parameters: Fragment[] = []
@@ -794,7 +791,6 @@ export class Declaration {
   to(): L.DeclarationEntity {
     const d = new L.Declaration()
     d.name = this.name
-    d.trail = this.trail.real
     d.summary = this.narrative.summary
     d.description = this.narrative.description
 
@@ -828,7 +824,7 @@ export class Declaration {
 export class Fragment {
   sourceId = -1
   name = ""
-  trail = new Trail()
+  trail = new TrailDuplex()
   optional = false
   default = ""
   narrative = new Narrative()
@@ -884,7 +880,6 @@ export class Fragment {
   to(): L.Fragment {
     const f = new L.Fragment()
     f.name = this.name
-    f.trail = this.trail.real
     f.optional = this.optional
     f.description = this.narrative.description
     return f
@@ -993,6 +988,13 @@ export class Narrative {
 
     return [n]
   }
+
+  get isEmpty(): boolean {
+    return this.summary.length === 0 &&
+      this.description.length === 0 &&
+      this.examples.length === 0 &&
+      this.returns.length === 0
+  }
 }
 
 export function joinContent(с: string, ps: J.CommentDisplayPart[]): string {
@@ -1024,16 +1026,19 @@ export async function sanitizeMarkdown(s: string): Promise<string> {
   return c
 }
 
+export type NestedTrail = (number | NestedTrail)[]
+export type FlatTrail = number[]
+
 export class Context {
   v = new ContextTrail()
   r = new ContextTrail()
 }
 
 export class ContextTrail {
-  #c: L.Trail
-  #r: L.Trail
+  #c: NestedTrail
+  #r: NestedTrail
 
-  get trail(): L.Trail {
+  get trail(): NestedTrail {
     if (this.#r.length === 0) {
       return []
     }
@@ -1098,7 +1103,7 @@ export class ContextTrail {
     this.#c = p
   }
 
-  with(i: number): L.Trail {
+  with(i: number): NestedTrail {
     this.push(i)
     const t = this.trail
     this.pop()
@@ -1114,12 +1119,70 @@ export class ContextTrail {
   }
 }
 
-export class Trail {
-  virtual: L.Trail = []
-  real: L.Trail = []
+export class Repository {
+  static from(o: J.Reflection, c: Entity[]): Repository {
+    const r = new Repository(o)
+
+    for (const t of c) {
+      const e = t.to()
+      r.#entities.push(e)
+
+      if (
+        t instanceof Group ||
+        e instanceof L.GroupEntity
+      ) {
+        continue
+      }
+
+      const d = e.declaration
+      const f = flatTrail(t.trail.real)
+      r.#trailIndex.set(d, f)
+
+      for (const [i, p] of t.properties.entries()) {
+        const e = d.properties[i]
+        const f = flatTrail(p.trail.real)
+        r.#trailIndex.set(e, f)
+      }
+
+      for (const [i, p] of t.parameters.entries()) {
+        const e = d.parameters[i]
+        const f = flatTrail(p.trail.real)
+        r.#trailIndex.set(e, f)
+      }
+    }
+
+    return r
+  }
+
+  #sourceTree: J.Reflection
+
+  #entities: L.Entity[] = []
+
+  get entities(): L.Entity[] {
+    return this.#entities
+  }
+
+  #trailIndex = new Map<L.Declaration | L.Fragment, FlatTrail>()
+
+  constructor(o: J.Reflection) {
+    this.#sourceTree = o
+  }
+
+  trailOf(t: L.Declaration | L.Fragment): FlatTrail | undefined {
+    return this.#trailIndex.get(t)
+  }
+
+  reflectionOf(t: FlatTrail): J.Reflection | undefined {
+    return resolveTrail(this.#sourceTree, t)
+  }
 }
 
-export function trailDepth(t: L.Trail): number {
+export class TrailDuplex {
+  virtual: NestedTrail = []
+  real: NestedTrail = []
+}
+
+export function trailDepth(t: NestedTrail): number {
   let d = 0
 
   for (const s of t) {
@@ -1131,7 +1194,21 @@ export function trailDepth(t: L.Trail): number {
   return d
 }
 
-export function resolveTrail(o: J.Reflection, t: L.Trail): J.Reflection | undefined {
+export function flatTrail(t: NestedTrail): FlatTrail {
+  const c: FlatTrail = []
+
+  for (const s of t) {
+    if (Array.isArray(s)) {
+      c.push(...flatTrail(s))
+    } else {
+      c.push(s)
+    }
+  }
+
+  return c
+}
+
+export function resolveTrail(o: J.Reflection, t: NestedTrail): J.Reflection | undefined {
   let c: J.Reflection | undefined = o
 
   for (const s of t) {
