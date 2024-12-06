@@ -37,7 +37,6 @@ export class Group {
 
 export class Declaration {
   name = ""
-  trail: Trail = []
   signature = new DeclarationSignature()
   summary = ""
   description = ""
@@ -59,7 +58,6 @@ export class DeclarationReturns {
 
 export class Fragment {
   name = ""
-  trail: Trail = []
   signature = new FragmentSignature()
   optional = false
   default = ""
@@ -71,5 +69,3 @@ export class Fragment {
 export class FragmentSignature {
   concise: Signature = []
 }
-
-export type Trail = (number | Trail)[]
