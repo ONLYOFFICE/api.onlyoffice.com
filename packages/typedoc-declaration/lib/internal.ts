@@ -1195,17 +1195,17 @@ export function trailDepth(t: NestedTrail): number {
 }
 
 export function flatTrail(t: NestedTrail): FlatTrail {
-  const c: FlatTrail = []
+  const f: FlatTrail = []
 
   for (const s of t) {
     if (Array.isArray(s)) {
-      c.push(...flatTrail(s))
+      f.push(...flatTrail(s))
     } else {
-      c.push(s)
+      f.push(s)
     }
   }
 
-  return c
+  return f
 }
 
 export function resolveTrail(o: J.Reflection, t: NestedTrail): J.Reflection | undefined {
