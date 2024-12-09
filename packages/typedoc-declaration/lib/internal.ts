@@ -1286,20 +1286,20 @@ export function resolveTrail(o: J.Reflection, t: NestedTrail): J.Reflection | un
 
     let t: J.Reflection[] = []
 
-    if (isSignatureReflection(o) && o.parameters) {
-      t = o.parameters
+    if (isSignatureReflection(c) && c.parameters) {
+      t = c.parameters
     }
 
-    if (isDeclarationReflection(o) && isReflectionType(o.type)) {
-      t = [o.type.declaration]
+    if (isDeclarationReflection(c) && isReflectionType(c.type)) {
+      t = [c.type.declaration]
     }
 
-    if (isDeclarationReflection(o) && o.signatures) {
-      t = o.signatures
+    if (isDeclarationReflection(c) && c.signatures) {
+      t = c.signatures
     }
 
-    if (isContainerReflection(o) && o.children) {
-      t = o.children
+    if (isContainerReflection(c) && c.children) {
+      t = c.children
     }
 
     if (t.length !== 0) {
