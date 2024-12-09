@@ -6,8 +6,8 @@ export const config: Config = [
     source: {
       owner: "onlyoffice",
       repo: "docspace-plugin-sdk-declarations",
-      reference: "dist",
-      path: "master/docspace-plugin-sdk.json",
+      reference: "develop",
+      path: "docspace-plugin-sdk.json",
     },
   },
 ]
