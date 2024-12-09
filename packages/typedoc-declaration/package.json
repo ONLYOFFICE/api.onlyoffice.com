@@ -20,6 +20,7 @@
     "@onlyoffice/mdast-util-eslint": "workspace:^",
     "@onlyoffice/mdast-util-first-sentence": "workspace:^",
     "@onlyoffice/result": "workspace:^",
+    "@onlyoffice/strings": "workspace:^",
     "@onlyoffice/typedoc-util-is-reflection": "workspace:^",
     "@onlyoffice/typedoc-util-is-type": "workspace:^",
     "mdast-util-from-markdown": "2.0.0",

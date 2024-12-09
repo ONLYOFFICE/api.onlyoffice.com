@@ -7,6 +7,7 @@ import * as L from "@onlyoffice/library-declaration/next.ts"
 import {eslint} from "@onlyoffice/mdast-util-eslint"
 import {firstSentence} from "@onlyoffice/mdast-util-first-sentence"
 import {type Result} from "@onlyoffice/result"
+import {isStringLiteral} from "@onlyoffice/strings"
 import {
   isCallSignatureReflection,
   isClassReflection,
@@ -878,8 +879,11 @@ export class Fragment {
     }
 
     if (o.defaultValue !== undefined) {
-      // todo: if (isStringLiteral(o.defaultValue)) {}
-      f.default = o.defaultValue
+      if (isStringLiteral(o.defaultValue)) {
+        f.default = o.defaultValue.slice(1, -1)
+      } else {
+        f.default = o.defaultValue
+      }
     }
 
     return [f, fe]
@@ -905,6 +909,7 @@ export class Fragment {
     const f = new L.Fragment()
     f.name = this.name
     f.optional = this.optional
+    f.default = this.default
     f.description = this.narrative.description
     return f
   }
