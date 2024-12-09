@@ -163,11 +163,13 @@ class VirtualPather implements Pather {
 
     while (c) {
       if (c.type === "group") {
-        s = `${c.group.name}/${s}`
+        const n = sanitizeName(c.group.name)
+        s = `${n}/${s}`
       }
 
       if (c.type === "declaration") {
-        s = `${c.declaration.name}/${s}`
+        const n = sanitizeName(c.declaration.name)
+        s = `${n}/${s}`
       }
 
       c = r.retrieve(c.parentId)
@@ -206,7 +208,8 @@ class SpecificPather implements Pather {
 
     while (c) {
       if (c.type === "declaration") {
-        s = `${c.declaration.name}/${s}`
+        const n = sanitizeName(c.declaration.name)
+        s = `${n}/${s}`
       }
 
       c = r.retrieve(c.parentId)
@@ -236,4 +239,8 @@ class SpecificPather implements Pather {
 
 interface Pather {
   path(r: Resource, e: Entity): string
+}
+
+function sanitizeName(t: string): string {
+  return t.replaceAll("/", " ")
 }
