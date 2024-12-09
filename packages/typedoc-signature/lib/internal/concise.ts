@@ -1,9 +1,5 @@
 // TODO: remove flat()
-import {
-  type Declaration,
-  type Entity,
-  GroupEntity,
-} from "@onlyoffice/library-declaration/next.ts"
+import {type Declaration, type DeclarationEntity} from "@onlyoffice/library-declaration/next.ts"
 import {
   ParameterToken,
   type Signature,
@@ -24,34 +20,32 @@ import {
   isInterfaceReflection,
   isMethodReflection,
   isParameterReflection,
-  isProjectReflection,
   isPropertyReflection,
   isSignatureReflection,
   isTypeAliasReflection,
   isVariableReflection,
 } from "@onlyoffice/typedoc-util-is-reflection"
 import {type JSONOutput as J} from "typedoc"
+import {type ComputeRepository} from "../main.ts"
 
-export function concise(r: J.Reflection, e: Entity): void {
-  if (!isProjectReflection(r)) {
-    throw new Error("Expected a project reflection")
-  }
-
-  if (e instanceof GroupEntity) {
+export function concise(r: ComputeRepository, e: DeclarationEntity): void {
+  const f = r.trailOf(e.declaration)
+  if (!f) {
     return
   }
-
-  const f = e.declaration.trail.flat(Infinity)
-  const t = resolve(r, f)
+  const t = r.reflectionOf(f)
   f.pop()
-  const p = resolve(r, f)
+  const p = r.reflectionOf(f)
 
+  if (e.declaration.parameters.length !== 0) {
+    fragment(r, e.declaration)
+  }
   if (isClassReflection(t)) {
     classDeclaration(t, e.declaration)
     return
   }
   if (isConstructorReflection(p) && isSignatureReflection(t)) {
-    constructorDeclaration(r, e.declaration)
+    constructorDeclaration(t, e.declaration)
     return
   }
   if (isEnumMemberReflection(t)) {
@@ -63,7 +57,7 @@ export function concise(r: J.Reflection, e: Entity): void {
     return
   }
   if (isFunctionReflection(p) && isCallSignatureReflection(t)) {
-    functionsDeclaration(r, e.declaration)
+    functionsDeclaration(t, e.declaration)
     return
   }
   if (isInterfaceReflection(t)) {
@@ -71,7 +65,7 @@ export function concise(r: J.Reflection, e: Entity): void {
     return
   }
   if (isMethodReflection(p) && isCallSignatureReflection(t)) {
-    methodDeclaration(r, e.declaration)
+    methodDeclaration(t, e.declaration)
     return
   }
   if (isPropertyReflection(t)) {
@@ -106,10 +100,7 @@ export function classDeclaration(c: J.Reflection, d: Declaration): void {
   d.signature.concise = s
 }
 
-export function constructorDeclaration(r: J.Reflection, d: Declaration): void {
-  const tt = d.trail.flat(Infinity)
-  const c = resolve(r, tt)
-
+export function constructorDeclaration(c: J.Reflection, d: Declaration): void {
   if (!isSignatureReflection(c)) {
     return
   }
@@ -120,10 +111,6 @@ export function constructorDeclaration(r: J.Reflection, d: Declaration): void {
   s.push(...b)
 
   d.signature.concise = s
-
-  if (d.parameters.length !== 0) {
-    fragment(r, d)
-  }
 }
 
 export function enumMemberReflection(e: J.Reflection, d: Declaration): void {
@@ -169,10 +156,7 @@ export function enumReflection(e: J.Reflection, d: Declaration): void {
   d.signature.concise = s
 }
 
-export function functionsDeclaration(r: J.Reflection, d: Declaration): void {
-  const tt = d.trail.flat(Infinity)
-  const f = resolve(r, tt)
-
+export function functionsDeclaration(f: J.Reflection, d: Declaration): void {
   if (!isCallSignatureReflection(f)) {
     return
   }
@@ -201,10 +185,6 @@ export function functionsDeclaration(r: J.Reflection, d: Declaration): void {
   }
 
   d.signature.concise = s
-
-  if (d.parameters.length !== 0) {
-    fragment(r, d)
-  }
 }
 
 export function interfaceReflection(i: J.Reflection, d: Declaration): void {
@@ -226,10 +206,7 @@ export function interfaceReflection(i: J.Reflection, d: Declaration): void {
   d.signature.concise = s
 }
 
-export function methodDeclaration(r: J.Reflection, d: Declaration): void {
-  const tt = d.trail.flat(Infinity)
-  const m = resolve(r, tt)
-
+export function methodDeclaration(m: J.Reflection, d: Declaration): void {
   if (!isSignatureReflection(m)) {
     return
   }
@@ -254,10 +231,6 @@ export function methodDeclaration(r: J.Reflection, d: Declaration): void {
   }
 
   d.signature.concise = s
-
-  if (d.parameters.length !== 0) {
-    fragment(r, d)
-  }
 }
 
 export function propertyReflection(p: J.Reflection, d: Declaration): void {
@@ -317,16 +290,18 @@ export function variableDeclaration(v: J.Reflection, d: Declaration): void {
   d.signature.concise = s
 }
 
-export function fragment(r: J.Reflection, d: Declaration): void {
+export function fragment(r: ComputeRepository, d: Declaration): void {
   for (const f of d.parameters) {
-    const tt = f.trail.flat(Infinity)
-    const e = resolve(r, tt)
-    if (!isParameterReflection(e)) {
-      return
-    }
-    if (e.type) {
-      const b = type(e.type)
-      f.signature.concise.push(...b)
+    const tt = r.trailOf(f)
+    if (tt) {
+      const e = r.reflectionOf(tt)
+      if (!isParameterReflection(e)) {
+        return
+      }
+      if (e.type) {
+        const b = type(e.type)
+        f.signature.concise.push(...b)
+      }
     }
   }
 }
