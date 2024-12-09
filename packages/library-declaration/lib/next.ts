@@ -40,7 +40,6 @@ export class Declaration {
   signature = new DeclarationSignature()
   summary = ""
   description = ""
-  properties: Fragment[] = []
   parameters: Fragment[] = []
   returns = new DeclarationReturns()
   examples = ""
@@ -63,7 +62,6 @@ export class Fragment {
   default = ""
   example = ""
   description = ""
-  properties: Fragment[] = []
 }
 
 export class FragmentSignature {
