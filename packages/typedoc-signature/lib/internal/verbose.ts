@@ -37,12 +37,12 @@ const NEWLINE = "\n"
 const LIMIT = 100
 
 export function verbose(r: ComputeRepository, e: DeclarationEntity): void {
-  const f = r.trailOf(e.declaration)
+  let f = r.trailOf(e.declaration)
   if (!f) {
     return
   }
   const t = r.reflectionOf(f)
-  f.pop()
+  f = f.slice(0, -1)
   const p = r.reflectionOf(f)
 
   if (isClassReflection(t)) {
