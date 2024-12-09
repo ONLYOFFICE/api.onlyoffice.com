@@ -8,6 +8,7 @@ import {eslint} from "@onlyoffice/mdast-util-eslint"
 import {firstSentence} from "@onlyoffice/mdast-util-first-sentence"
 import {type Result} from "@onlyoffice/result"
 import {isStringLiteral} from "@onlyoffice/strings"
+import {compute} from "@onlyoffice/typedoc-signature"
 import {
   isCallSignatureReflection,
   isClassReflection,
@@ -87,9 +88,9 @@ export async function process(o: J.Reflection): Promise<L.Entity[]> {
 
   const r = Repository.from(o, s)
 
-  // for (const e of r.entities) {
-  //   compute(r, e)
-  // }
+  for (const e of r.entities) {
+    compute(r, e)
+  }
 
   return r.entities
 }
