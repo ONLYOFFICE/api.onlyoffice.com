@@ -3810,6 +3810,9 @@ importers:
       '@onlyoffice/result':
         specifier: workspace:^
         version: link:../result
+      '@onlyoffice/strings':
+        specifier: workspace:^
+        version: link:../strings
       '@onlyoffice/typedoc-util-is-reflection':
         specifier: workspace:^
         version: link:../typedoc-util-is-reflection
