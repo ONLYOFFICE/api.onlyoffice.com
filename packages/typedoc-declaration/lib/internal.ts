@@ -563,12 +563,13 @@ export function shakeItems(o: J.Reflection, c: Item[]): Entity[] {
           r.parentId = p.id
         }
 
+        p.children.push(...t.children)
+
         if (p instanceof Declaration) {
           p.properties.push(...t.properties)
           p.parameters.push(...t.parameters)
         }
 
-        p.children.push(...t.children)
         break
       }
 
@@ -576,6 +577,12 @@ export function shakeItems(o: J.Reflection, c: Item[]): Entity[] {
     }
 
     if (t instanceof Declaration) {
+      const s = resolveTrail(o, t.trail.real)
+
+      if (!s) {
+        throw new Error(`The trail '${t.trail.real}' could not be resolved`)
+      }
+
       for (let i = tc.length - 1; i >= 0; i -= 1) {
         const p = tc[i]
 
@@ -589,6 +596,23 @@ export function shakeItems(o: J.Reflection, c: Item[]): Entity[] {
 
         t.parentId = p.id
         p.children.push(t.id)
+
+        if (
+          isCallSignatureReflection(s) &&
+          !t.narrative.isEmpty &&
+          p.narrative.isEmpty
+        ) {
+          p.narrative = Narrative.merge(p.narrative, t.narrative)
+        }
+
+        if (
+          isCallSignatureReflection(s) &&
+          t.narrative.isEmpty &&
+          !p.narrative.isEmpty
+        ) {
+          t.narrative = Narrative.merge(t.narrative, p.narrative)
+        }
+
         break
       }
 
@@ -987,6 +1011,36 @@ export class Narrative {
     }
 
     return [n]
+  }
+
+  static merge(a: Narrative, b: Narrative): Narrative {
+    const c = new Narrative()
+
+    if (b.summary) {
+      c.summary = b.summary
+    } else if (a.summary) {
+      c.summary = a.summary
+    }
+
+    if (b.description) {
+      c.description = b.description
+    } else if (a.description) {
+      c.description = a.description
+    }
+
+    if (b.examples) {
+      c.examples = b.examples
+    } else if (a.examples) {
+      c.examples = a.examples
+    }
+
+    if (b.returns) {
+      c.returns = b.returns
+    } else if (a.returns) {
+      c.returns = a.returns
+    }
+
+    return c
   }
 
   get isEmpty(): boolean {
