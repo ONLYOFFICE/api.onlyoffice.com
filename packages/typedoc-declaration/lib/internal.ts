@@ -567,7 +567,6 @@ export function shakeItems(o: J.Reflection, c: Item[]): Entity[] {
         p.children.push(...t.children)
 
         if (p instanceof Declaration) {
-          p.properties.push(...t.properties)
           p.parameters.push(...t.parameters)
         }
 
@@ -755,7 +754,6 @@ export class Declaration {
   name = ""
   trail = new TrailDuplex()
   narrative = new Narrative()
-  properties: Fragment[] = []
   parameters: Fragment[] = []
   parentId = -1
   children: number[] = []
@@ -818,11 +816,6 @@ export class Declaration {
     d.name = this.name
     d.summary = this.narrative.summary
     d.description = this.narrative.description
-
-    for (const f of this.properties) {
-      const t = f.to()
-      d.properties.push(t)
-    }
 
     for (const f of this.parameters) {
       const t = f.to()
@@ -1213,12 +1206,6 @@ export class Repository {
       const d = e.declaration
       const f = flatTrail(t.trail.real)
       r.#trailIndex.set(d, f)
-
-      for (const [i, p] of t.properties.entries()) {
-        const e = d.properties[i]
-        const f = flatTrail(p.trail.real)
-        r.#trailIndex.set(e, f)
-      }
 
       for (const [i, p] of t.parameters.entries()) {
         const e = d.parameters[i]
