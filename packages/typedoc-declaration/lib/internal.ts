@@ -564,12 +564,11 @@ export function shakeItems(o: J.Reflection, c: Item[]): Entity[] {
           r.parentId = p.id
         }
 
-        p.children.push(...t.children)
-
         if (p instanceof Declaration) {
           p.parameters.push(...t.parameters)
         }
 
+        p.children.push(...t.children)
         break
       }
 
@@ -594,11 +593,11 @@ export function shakeItems(o: J.Reflection, c: Item[]): Entity[] {
           continue
         }
 
-        t.parentId = p.id
-        p.children.push(t.id)
-
         if (
-          isCallSignatureReflection(s) &&
+          (
+            isCallSignatureReflection(s) ||
+            isConstructorSignatureReflection(s)
+          ) &&
           !t.narrative.isEmpty &&
           p.narrative.isEmpty
         ) {
@@ -606,13 +605,22 @@ export function shakeItems(o: J.Reflection, c: Item[]): Entity[] {
         }
 
         if (
-          isCallSignatureReflection(s) &&
+          (
+            isCallSignatureReflection(s) ||
+            isConstructorSignatureReflection(s)
+          ) &&
           t.narrative.isEmpty &&
           !p.narrative.isEmpty
         ) {
           t.narrative = Narrative.merge(t.narrative, p.narrative)
         }
 
+        if (isConstructorSignatureReflection(s)) {
+          t.name = "constructor"
+        }
+
+        t.parentId = p.id
+        p.children.push(t.id)
         break
       }
 
