@@ -120,10 +120,6 @@ function Declaration(p: DeclarationProperties): JSX.Element {
       <Heading for="Description" />
       <Description>{d.description}</Description>
     </>}
-    {d.properties.length !== 0 && <>
-      <Heading for="Properties" />
-      <Fragments fragments={d.properties} />
-    </>}
     {d.parameters.length !== 0 && <>
       <Heading for="Parameters" />
       <Fragments fragments={d.parameters} />
