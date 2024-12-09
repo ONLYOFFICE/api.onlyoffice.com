@@ -14,7 +14,6 @@ export class Config extends Array<ConfigEntity> {
     const c = new Config()
 
     const p = to(path.join(cwd(), "config.ts"))
-    console.log(p)
     const m = await import(p)
 
     for (const r of m.config) {
@@ -26,8 +25,9 @@ export class Config extends Array<ConfigEntity> {
   }
 }
 
-function to(p) {
-  p = p.replace(/\\/g, '/')
+// todo: remove it
+function to(p: string): string {
+  p = p.replace(/\\/g, "/")
   return `file:///${p}`
 }
 

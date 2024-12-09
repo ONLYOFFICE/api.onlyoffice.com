@@ -1,9 +1,16 @@
 # Change Log
 
-- docs api: added the mobileView actions to the WOPI discovery
+## 6.3.0
 - docspace oauth api: added a new section
+- docspace api backend: v3.0
+- docspace api-system: auto creation
+- docspace api-system: v3.0
+- docs api: restructured Conversion API
+- docs api: added the mobileView actions to the WOPI discovery
 - docs api: restructured the Get Started section
 - docs api: the editorConfig.customization.mobileForceView parameter is deprecated, please use the editorConfig.customization.mobile parameter instead
+- docbuilder: redesign sections
+- docbuilder: updated builder framework samples
 
 ## 6.2.0
 - docspace js sdk: storybook link

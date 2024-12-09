@@ -2,26 +2,24 @@ import path from "node:path"
 import {inspect} from "node:util"
 import {Application, type JSONOutput as J} from "typedoc"
 import {test} from "uvu"
-// import {Console} from "./console.ts"
+import {Console} from "./console.ts"
 import {process} from "./internal.ts"
-
-// const console = Console.shared.copy()
 
 // test.before(() => {
 //   Console.shared.mute()
 // })
 
 // test.after(() => {
-//   Console.shared.restore(console)
+//   Console.shared.unmute()
 // })
 
 test("900:", async () => {
   const o = await setup("900")
-  console.log(inspect(o, {depth: null, colors: true}))
-  console.log("\n\n")
+  global.console.log(inspect(o, {depth: null, colors: true}))
+  global.console.log("\n\n")
   const r = await process(o)
-  console.log("\n\n")
-  console.log(inspect(r, {depth: null, colors: true}))
+  global.console.log("\n\n")
+  global.console.log(inspect(r, {depth: null, colors: true}))
 })
 
 test.run()

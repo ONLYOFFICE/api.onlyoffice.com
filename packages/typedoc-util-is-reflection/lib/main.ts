@@ -4,7 +4,6 @@ import {
   isClassKind,
   isConstructorKind,
   isConstructorSignatureKind,
-  isDocumentKind,
   isEnumKind,
   isEnumMemberKind,
   isFunctionKind,
@@ -14,23 +13,15 @@ import {
   isMethodKind,
   isModuleKind,
   isNamespaceKind,
-  isParameterKind,
-  isProjectKind,
   isPropertyKind,
-  isReferenceKind,
   isSetSignatureKind,
   isTypeAliasKind,
   isTypeLiteralKind,
-  isTypeParameterKind,
   isVariableKind,
 } from "@onlyoffice/typedoc-util-is-kind"
 import {type JSONOutput as J, type ReflectionKind as K} from "typedoc"
 
 type R<R, K> = R & {kind: K}
-
-// function isProjectReflection(r: unknown): r is J.ProjectReflection {
-//   return isReflection(r) && isProjectKind(r.kind)
-// }
 
 export function isModuleReflection(
   r: unknown,
@@ -116,19 +107,11 @@ export function isConstructorSignatureReflection(
   return isSignatureReflection(r) && isConstructorSignatureKind(r.kind)
 }
 
-// function isParameterReflection(r: unknown): r is J.ParameterReflection {
-//   return isReflection(r) && isParameterKind(r.kind)
-// }
-
 export function isTypeLiteralReflection(
   r: unknown,
 ): r is R<J.DeclarationReflection, K.TypeLiteral> {
   return isDeclarationReflection(r) && isTypeLiteralKind(r.kind)
 }
-
-// function isTypeParameterReflection(r: unknown): r is J.TypeParameterReflection {
-//   return isReflection(r) && isTypeParameterKind(r.kind)
-// }
 
 export function isAccessorReflection(
   r: unknown,
@@ -153,14 +136,6 @@ export function isTypeAliasReflection(
 ): r is R<J.DeclarationReflection, K.TypeAlias> {
   return isDeclarationReflection(r) && isTypeAliasKind(r.kind)
 }
-
-// function isReferenceReflection(r: unknown): r is J.ReferenceReflection {
-//   return isReflection(r) && isReferenceKind(r.kind)
-// }
-
-// function isDocumentReflection(r: unknown): r is J.DocumentReflection {
-//   return isReflection(r) && isDocumentKind(r.kind)
-// }
 
 export function isDeclarationReflection(
   r: unknown,

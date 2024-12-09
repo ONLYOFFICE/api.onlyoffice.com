@@ -20,7 +20,14 @@ test("eslint(): ignores a fenced code block without a language", async () => {
 test("eslint(): lints a fenced code block with a language", async () => {
   const a = u("root", [u("code", {lang: "js"}, "'hi'")])
   await eslint(a)
-  const e = u("root", [u("code", {lang: "js"}, '"hi"\n')])
+  const e = u("root", [u("code", {lang: "js"}, '"hi"')])
+  eq(a, e)
+})
+
+test("eslint(): lints a fenced code block with a non-extension language", async () => {
+  const a = u("root", [u("code", {lang: "javascript"}, "'hi'")])
+  await eslint(a)
+  const e = u("root", [u("code", {lang: "javascript"}, '"hi"')])
   eq(a, e)
 })
 

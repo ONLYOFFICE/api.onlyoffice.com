@@ -796,9 +796,6 @@ importers:
       '@onlyoffice/errors':
         specifier: workspace:^
         version: link:../errors
-      '@onlyoffice/objects':
-        specifier: workspace:^
-        version: link:../objects
       '@onlyoffice/result':
         specifier: workspace:^
         version: link:../result
@@ -1159,12 +1156,12 @@ importers:
       '@onlyoffice/library-signature':
         specifier: workspace:^
         version: link:../library-signature
+      '@onlyoffice/mdast-util-extract-section':
+        specifier: workspace:^
+        version: link:../mdast-util-extract-section
       '@onlyoffice/mdast-util-first-sentence':
         specifier: workspace:^
         version: link:../mdast-util-first-sentence
-      '@onlyoffice/mdast-util-select-section':
-        specifier: workspace:^
-        version: link:../mdast-util-select-section
       '@onlyoffice/signature':
         specifier: workspace:^
         version: link:../signature
@@ -1255,6 +1252,27 @@ importers:
         specifier: 4.16.5
         version: 4.16.5
 
+  packages/lang-to-ext:
+    devDependencies:
+      c8:
+        specifier: 9.1.0
+        version: 9.1.0
+      esbuild:
+        specifier: 0.23.0
+        version: 0.23.0
+      rimraf:
+        specifier: 6.0.1
+        version: 6.0.1
+      tsx:
+        specifier: 4.16.5
+        version: 4.16.5
+      typescript:
+        specifier: 5.4.5
+        version: 5.4.5
+      uvu:
+        specifier: 0.5.6
+        version: 0.5.6
+
   packages/library-declaration:
     dependencies:
       '@onlyoffice/declaration-code-example':
@@ -1341,6 +1359,9 @@ importers:
       '@onlyoffice/eslint-config':
         specifier: workspace:^
         version: link:../eslint-config
+      '@onlyoffice/lang-to-ext':
+        specifier: workspace:^
+        version: link:../lang-to-ext
       '@types/mdast':
         specifier: 4.0.3
         version: 4.0.3
@@ -1363,6 +1384,40 @@ importers:
       unist-builder:
         specifier: 4.0.0
         version: 4.0.0
+      uvu:
+        specifier: 0.5.6
+        version: 0.5.6
+
+  packages/mdast-util-extract-section:
+    dependencies:
+      '@onlyoffice/mdast-util-is-node':
+        specifier: workspace:^
+        version: link:../mdast-util-is-node
+      '@types/mdast':
+        specifier: 4.0.3
+        version: 4.0.3
+      mdast-util-to-string:
+        specifier: 4.0.0
+        version: 4.0.0
+      typescript:
+        specifier: 5.4.5
+        version: 5.4.5
+    devDependencies:
+      c8:
+        specifier: 9.1.0
+        version: 9.1.0
+      mdast-util-from-markdown:
+        specifier: 2.0.0
+        version: 2.0.0
+      mdast-util-to-markdown:
+        specifier: 2.1.0
+        version: 2.1.0
+      rimraf:
+        specifier: 6.0.1
+        version: 6.0.1
+      tsx:
+        specifier: 4.16.5
+        version: 4.16.5
       uvu:
         specifier: 0.5.6
         version: 0.5.6
@@ -1416,40 +1471,6 @@ importers:
       c8:
         specifier: 9.1.0
         version: 9.1.0
-      rimraf:
-        specifier: 6.0.1
-        version: 6.0.1
-      tsx:
-        specifier: 4.16.5
-        version: 4.16.5
-      uvu:
-        specifier: 0.5.6
-        version: 0.5.6
-
-  packages/mdast-util-select-section:
-    dependencies:
-      '@onlyoffice/mdast-util-is-node':
-        specifier: workspace:^
-        version: link:../mdast-util-is-node
-      '@types/mdast':
-        specifier: 4.0.3
-        version: 4.0.3
-      mdast-util-to-string:
-        specifier: 4.0.0
-        version: 4.0.0
-      typescript:
-        specifier: 5.4.5
-        version: 5.4.5
-    devDependencies:
-      c8:
-        specifier: 9.1.0
-        version: 9.1.0
-      mdast-util-from-markdown:
-        specifier: 2.0.0
-        version: 2.0.0
-      mdast-util-to-markdown:
-        specifier: 2.1.0
-        version: 2.1.0
       rimraf:
         specifier: 6.0.1
         version: 6.0.1
@@ -1518,25 +1539,6 @@ importers:
         version: 0.5.6
 
   packages/object-to-string:
-    dependencies:
-      typescript:
-        specifier: 5.4.5
-        version: 5.4.5
-    devDependencies:
-      c8:
-        specifier: 9.1.0
-        version: 9.1.0
-      rimraf:
-        specifier: 6.0.1
-        version: 6.0.1
-      tsx:
-        specifier: 4.16.5
-        version: 4.16.5
-      uvu:
-        specifier: 0.5.6
-        version: 0.5.6
-
-  packages/objects:
     dependencies:
       typescript:
         specifier: 5.4.5
@@ -3735,9 +3737,15 @@ importers:
       '@onlyoffice/result':
         specifier: workspace:^
         version: link:../result
+      '@onlyoffice/strings':
+        specifier: workspace:^
+        version: link:../strings
       '@onlyoffice/typedoc-util-is-reflection':
         specifier: workspace:^
         version: link:../typedoc-util-is-reflection
+      '@onlyoffice/typedoc-util-is-type':
+        specifier: workspace:^
+        version: link:../typedoc-util-is-type
       mdast-util-from-markdown:
         specifier: 2.0.0
         version: 2.0.0
@@ -3795,40 +3803,6 @@ importers:
         specifier: 6.0.1
         version: 6.0.1
 
-  packages/typedoc-signature:
-    dependencies:
-      '@onlyoffice/library-declaration':
-        specifier: workspace:^
-        version: link:../library-declaration
-      '@onlyoffice/signature':
-        specifier: workspace:^
-        version: link:../signature
-      '@onlyoffice/typedoc-util-is-reflection':
-        specifier: workspace:^
-        version: link:../typedoc-util-is-reflection
-      typedoc:
-        specifier: 0.26.11
-        version: 0.26.11(typescript@5.4.5)
-      typescript:
-        specifier: 5.4.5
-        version: 5.4.5
-    devDependencies:
-      '@onlyoffice/typedoc-declaration':
-        specifier: workspace:^
-        version: link:../typedoc-declaration
-      c8:
-        specifier: 9.1.0
-        version: 9.1.0
-      rimraf:
-        specifier: 6.0.1
-        version: 6.0.1
-      tsx:
-        specifier: 4.16.5
-        version: 4.16.5
-      uvu:
-        specifier: 0.5.6
-        version: 0.5.6
-
   packages/typedoc-util-is-kind:
     dependencies:
       typedoc:
@@ -3856,6 +3830,28 @@ importers:
       '@onlyoffice/typedoc-util-is-kind':
         specifier: workspace:^
         version: link:../typedoc-util-is-kind
+      typedoc:
+        specifier: 0.26.11
+        version: 0.26.11(typescript@5.4.5)
+      typescript:
+        specifier: 5.4.5
+        version: 5.4.5
+    devDependencies:
+      c8:
+        specifier: 9.1.0
+        version: 9.1.0
+      rimraf:
+        specifier: 6.0.1
+        version: 6.0.1
+      tsx:
+        specifier: 4.16.5
+        version: 4.16.5
+      uvu:
+        specifier: 0.5.6
+        version: 0.5.6
+
+  packages/typedoc-util-is-type:
+    dependencies:
       typedoc:
         specifier: 0.26.11
         version: 0.26.11(typescript@5.4.5)

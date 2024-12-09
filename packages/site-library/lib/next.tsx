@@ -124,10 +124,6 @@ function Declaration(p: DeclarationProperties): JSX.Element {
       <Heading for="Properties" />
       <Fragments fragments={d.properties} />
     </>}
-    {d.members.length !== 0 && <>
-      <Heading for="Members" />
-      <Fragments fragments={d.members} />
-    </>}
     {d.parameters.length !== 0 && <>
       <Heading for="Parameters" />
       <Fragments fragments={d.parameters} />
@@ -162,6 +158,9 @@ function Fragments(p: FragmentsProperties): JSX.Element {
           <Badge variant="calm">{f.name}</Badge>
           {f.signature.concise.length !== 0 && <Badge variant="transparent">
             <Signature variant="inline" signature={f.signature.concise} />
+          </Badge>}
+          {f.optional && <Badge variant="neutral">
+            optional
           </Badge>}
           {f.default && <Badge variant="neutral">
             <BadgeCaption>default: </BadgeCaption>{f.default}

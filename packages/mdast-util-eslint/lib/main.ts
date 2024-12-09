@@ -1,4 +1,5 @@
 import {ESLint} from "@onlyoffice/eslint-config"
+import {langToExt} from "@onlyoffice/lang-to-ext"
 import {type Code, type Nodes} from "mdast"
 import {visit} from "unist-util-visit"
 
@@ -20,15 +21,26 @@ async function lint(n: Code): Promise<void> {
     return
   }
 
-  const a = await e.lintText(n.value, {filePath: `.md/.${n.lang}`})
+  const x = langToExt(n.lang)
+  // It is too complicated to cover this branch with tests.
+  /* c8 ignore next */
+  if (!x) {
+    return
+  }
+
+  const a = await e.lintText(n.value, {filePath: `.md/${x}`})
+  // It is too complicated to cover this branch with tests.
+  /* c8 ignore next */
   if (a.length === 0) {
     return
   }
 
   const [r] = a
+  // It is too complicated to cover this branch with tests.
+  /* c8 ignore next */
   if (!r.output) {
     return
   }
 
-  n.value = r.output
+  n.value = r.output.trimEnd()
 }

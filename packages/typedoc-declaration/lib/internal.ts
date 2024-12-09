@@ -7,8 +7,10 @@ import * as L from "@onlyoffice/library-declaration/next.ts"
 import {eslint} from "@onlyoffice/mdast-util-eslint"
 import {firstSentence} from "@onlyoffice/mdast-util-first-sentence"
 import {type Result} from "@onlyoffice/result"
+import {isStringLiteral} from "@onlyoffice/strings"
 import {
   isCallSignatureReflection,
+  isClassReflection,
   isConstructorReflection,
   isConstructorSignatureReflection,
   isContainerReflection,
@@ -19,6 +21,7 @@ import {
   isPropertyReflection,
   isSignatureReflection,
 } from "@onlyoffice/typedoc-util-is-reflection"
+import {isReflectionType} from "@onlyoffice/typedoc-util-is-type"
 import {fromMarkdown} from "mdast-util-from-markdown"
 import {toMarkdown} from "mdast-util-to-markdown"
 import remarkStripHtml from "remark-strip-html"
@@ -27,24 +30,36 @@ import {Console} from "./console.ts"
 
 const console = Console.shared
 
+// todo: support nested categories
+// todo: rename constructors
+// todo: remove the group sorting, as it is the responsibility of the site
+
 export const groups: Record<string, number> = {
-  "Classes": 0,
-  "Interfaces": 1,
-  "Type Aliases": 2,
-  "Enumerations": 3,
-  "Variables": 4,
-  "Functions": 5,
-  "Constructors": 6,
-  "Type Properties": 7,
-  "Type Methods": 8,
-  "Instance Properties": 9,
-  "Instance Methods": 10,
+  // Parent groups
+  "Namespaces": 0,
+  "Classes": 1,
+  "Interfaces": 2,
+  "Type Aliases": 3,
+  "Enumerations": 4,
+  "Variables": 5,
+  "Functions": 6,
+
+  // Child groups
+  "Constructors": 7,
+  "Type Properties": 8,
+  "Type Methods": 9,
+  "Instance Properties": 10,
+  "Instance Methods": 11,
+  "Properties": 12,
+  "Methods": 13,
+  "Enumeration Members": 14,
 }
 
-export type Entity = Group | Declaration
 export type Item = Entity | Fragment
-export type E = Error | undefined
+export type Entity = Group | Declaration
+
 export type R<T> = Promise<Result<T, Error>>
+export type E = Error | undefined
 
 export async function process(o: J.Reflection): Promise<L.Entity[]> {
   let err: E
@@ -68,8 +83,15 @@ export async function process(o: J.Reflection): Promise<L.Entity[]> {
   ctx.v.pop()
   ctx.v.out()
 
-  const r = shakeItems(o, c)
-  return convertItems(r)
+  const s = shakeItems(o, c)
+
+  const r = Repository.from(o, s)
+
+  // for (const e of r.entities) {
+  //   compute(r, e)
+  // }
+
+  return r.entities
 }
 
 export async function processItems(ctx: Context, o: J.Reflection): R<Item[]> {
@@ -121,6 +143,28 @@ export async function processItems(ctx: Context, o: J.Reflection): R<Item[]> {
     }
   }
 
+  if (isDeclarationReflection(o) && isReflectionType(o.type)) {
+    ctx.v.push(0)
+    ctx.r.push(0)
+
+    const [d, de] = await Declaration.from(o.type.declaration)
+    err = errors.join(err, de)
+    d.trail.virtual = ctx.v.trail
+    d.trail.real = ctx.r.trail
+    c.push(d)
+
+    if (d.isProbablyReflection) {
+      d.beSureReflection()
+    }
+
+    const [tc, te] = await processItems(ctx, o.type.declaration)
+    err = errors.join(err, te)
+    c.push(...tc)
+
+    ctx.r.pop()
+    ctx.v.pop()
+  }
+
   if (isDeclarationReflection(o) && o.signatures) {
     for (const [i, r] of o.signatures.entries()) {
       for (const [i, g] of gc.entries()) {
@@ -139,6 +183,10 @@ export async function processItems(ctx: Context, o: J.Reflection): R<Item[]> {
       d.trail.virtual = ctx.v.trail
       d.trail.real = ctx.r.trail
       c.push(d)
+
+      if (d.isProbablyReflection) {
+        d.beSureReflection()
+      }
 
       const [tc, te] = await processItems(ctx, r)
       err = errors.join(err, te)
@@ -220,7 +268,6 @@ export async function processGroups(ctx: Context, o: J.Reflection): R<Group[]> {
       // If an entity contains a custom category and has a child entity that
       // is not included in any category, the latter will be added to the
       // "Other" built-in category. This category cannot be added manually.
-
       if (n.name === "Other") {
         continue
       }
@@ -240,6 +287,14 @@ export async function processGroups(ctx: Context, o: J.Reflection): R<Group[]> {
       const [n, ne] = await Group.from(r)
       err = errors.join(err, ne)
 
+      // Skip these groups, as specific alternatives will be created manually.
+      if (
+        isClassReflection(o) &&
+        (n.name === "Properties" || n.name === "Methods")
+      ) {
+        continue
+      }
+
       if (n.sourceChildren.length !== 0) {
         const i = next()
         n.trail.virtual = ctx.v.with(i)
@@ -248,40 +303,64 @@ export async function processGroups(ctx: Context, o: J.Reflection): R<Group[]> {
     }
   }
 
-  const p = new Group()
-  p.name = "Type Properties"
+  if (isClassReflection(o)) {
+    const tp = new Group()
+    tp.name = "Type Properties"
 
-  const m = new Group()
-  m.name = "Type Methods"
+    const tm = new Group()
+    tm.name = "Type Methods"
 
-  if (o.children) {
-    for (const r of o.children) {
-      if (isPropertyReflection(r)) {
-        if (r.flags.isStatic) {
-          p.sourceChildren.push(r.id)
+    const ip = new Group()
+    ip.name = "Instance Properties"
+
+    const im = new Group()
+    im.name = "Instance Methods"
+
+    if (o.children) {
+      for (const r of o.children) {
+        if (isPropertyReflection(r)) {
+          if (r.flags.isStatic) {
+            tp.sourceChildren.push(r.id)
+          } else {
+            ip.sourceChildren.push(r.id)
+          }
+          continue
         }
-        continue
-      }
 
-      if (isMethodReflection(r)) {
-        if (r.flags.isStatic) {
-          m.sourceChildren.push(r.id)
+        if (isMethodReflection(r)) {
+          if (r.flags.isStatic) {
+            tm.sourceChildren.push(r.id)
+          } else {
+            im.sourceChildren.push(r.id)
+          }
+          continue
         }
-        continue
       }
     }
-  }
 
-  if (p.sourceChildren.length !== 0) {
-    const i = next()
-    p.trail.virtual = ctx.v.with(i)
-    a.push(p)
-  }
+    if (tp.sourceChildren.length !== 0) {
+      const i = next()
+      tp.trail.virtual = ctx.v.with(i)
+      a.push(tp)
+    }
 
-  if (m.sourceChildren.length !== 0) {
-    const i = next()
-    m.trail.virtual = ctx.v.with(i)
-    a.push(m)
+    if (tm.sourceChildren.length !== 0) {
+      const i = next()
+      tm.trail.virtual = ctx.v.with(i)
+      a.push(tm)
+    }
+
+    if (ip.sourceChildren.length !== 0) {
+      const i = next()
+      ip.trail.virtual = ctx.v.with(i)
+      a.push(ip)
+    }
+
+    if (im.sourceChildren.length !== 0) {
+      const i = next()
+      im.trail.virtual = ctx.v.with(i)
+      a.push(im)
+    }
   }
 
   const b: Group[] = []
@@ -367,6 +446,10 @@ export function shakeItems(o: J.Reflection, c: Item[]): Entity[] {
     }
 
     if (t instanceof Declaration && isContainer(t)) {
+      return
+    }
+
+    if (t instanceof Declaration && t.isSureReflection) {
       return
     }
 
@@ -482,6 +565,12 @@ export function shakeItems(o: J.Reflection, c: Item[]): Entity[] {
         }
 
         p.children.push(...t.children)
+
+        if (p instanceof Declaration) {
+          p.properties.push(...t.properties)
+          p.parameters.push(...t.parameters)
+        }
+
         break
       }
 
@@ -489,6 +578,12 @@ export function shakeItems(o: J.Reflection, c: Item[]): Entity[] {
     }
 
     if (t instanceof Declaration) {
+      const s = resolveTrail(o, t.trail.real)
+
+      if (!s) {
+        throw new Error(`The trail '${t.trail.real}' could not be resolved`)
+      }
+
       for (let i = tc.length - 1; i >= 0; i -= 1) {
         const p = tc[i]
 
@@ -502,6 +597,23 @@ export function shakeItems(o: J.Reflection, c: Item[]): Entity[] {
 
         t.parentId = p.id
         p.children.push(t.id)
+
+        if (
+          isCallSignatureReflection(s) &&
+          !t.narrative.isEmpty &&
+          p.narrative.isEmpty
+        ) {
+          p.narrative = Narrative.merge(p.narrative, t.narrative)
+        }
+
+        if (
+          isCallSignatureReflection(s) &&
+          t.narrative.isEmpty &&
+          !p.narrative.isEmpty
+        ) {
+          t.narrative = Narrative.merge(t.narrative, p.narrative)
+        }
+
         break
       }
 
@@ -588,21 +700,10 @@ export function shakeItems(o: J.Reflection, c: Item[]): Entity[] {
   }
 }
 
-export function convertItems(c: Entity[]): L.Entity[] {
-  const r: L.Entity[] = []
-
-  for (const t of c) {
-    const e = t.to()
-    r.push(e)
-  }
-
-  return r
-}
-
 export class Group {
   id = -1
   name = ""
-  trail = new Trail()
+  trail = new TrailDuplex()
   narrative = new Narrative()
   parentId = -1
   children: number[] = []
@@ -652,10 +753,9 @@ export class Declaration {
   id = -1
   sourceId = -1
   name = ""
-  trail = new Trail()
+  trail = new TrailDuplex()
   narrative = new Narrative()
   properties: Fragment[] = []
-  members: Fragment[] = []
   parameters: Fragment[] = []
   parentId = -1
   children: number[] = []
@@ -680,6 +780,10 @@ export class Declaration {
       }
     }
 
+    if (isDeclarationReflection(o) && isReflectionType(o.type)) {
+      d.sourceChildren.push(o.type.declaration.id)
+    }
+
     if (isDeclarationReflection(o) && o.signatures) {
       for (const r of o.signatures) {
         d.sourceChildren.push(r.id)
@@ -695,21 +799,29 @@ export class Declaration {
     return [d, err]
   }
 
+  // todo: explain the difference between methods, why these methods are needed
+
+  get isProbablyReflection(): boolean {
+    return this.name === "__type"
+  }
+
+  get isSureReflection(): boolean {
+    return this.name === "TYPEDOC REFLECTION"
+  }
+
+  beSureReflection(): void {
+    this.name = "TYPEDOC REFLECTION"
+  }
+
   to(): L.DeclarationEntity {
     const d = new L.Declaration()
     d.name = this.name
-    d.trail = this.trail.real
     d.summary = this.narrative.summary
     d.description = this.narrative.description
 
     for (const f of this.properties) {
       const t = f.to()
       d.properties.push(t)
-    }
-
-    for (const f of this.members) {
-      const t = f.to()
-      d.members.push(t)
     }
 
     for (const f of this.parameters) {
@@ -737,7 +849,8 @@ export class Declaration {
 export class Fragment {
   sourceId = -1
   name = ""
-  trail = new Trail()
+  trail = new TrailDuplex()
+  optional = false
   default = ""
   narrative = new Narrative()
 
@@ -761,9 +874,16 @@ export class Fragment {
   static async fromParameterReflection(o: J.ParameterReflection): R<Fragment> {
     const [f, fe] = await Fragment.fromReflection(o)
 
+    if (o.flags.isOptional) {
+      f.optional = true
+    }
+
     if (o.defaultValue !== undefined) {
-      // todo: if (isStringLiteral(o.defaultValue)) {}
-      f.default = o.defaultValue
+      if (isStringLiteral(o.defaultValue)) {
+        f.default = o.defaultValue.slice(1, -1)
+      } else {
+        f.default = o.defaultValue
+      }
     }
 
     return [f, fe]
@@ -788,7 +908,8 @@ export class Fragment {
   to(): L.Fragment {
     const f = new L.Fragment()
     f.name = this.name
-    f.trail = this.trail.real
+    f.optional = this.optional
+    f.default = this.default
     f.description = this.narrative.description
     return f
   }
@@ -813,39 +934,34 @@ export class Narrative {
     let err: E
     const n = new Narrative()
 
-    let t = ""
-    for (const e of o.summary) {
-      t += e.text
-    }
-
+    let d = joinContent("", o.summary)
     let s = ""
     let e = ""
     let r = ""
 
     if (o.blockTags) {
       for (const t of o.blockTags) {
+        if (t.tag === "@remarks") {
+          d = joinContent(d, t.content)
+          continue
+        }
+
         if (t.tag === "@summary" && s) {
           continue
         }
 
         if (t.tag === "@summary") {
-          for (const c of t.content) {
-            s += c.text
-          }
+          s = joinContent(s, t.content)
           continue
         }
 
         if (t.tag === "@example") {
-          for (const c of t.content) {
-            e += c.text
-          }
+          e = joinContent(e, t.content)
           continue
         }
 
         if (t.tag === "@returns") {
-          for (const c of t.content) {
-            r += c.text
-          }
+          r = joinContent(r, t.content)
           continue
         }
 
@@ -854,14 +970,14 @@ export class Narrative {
       }
     }
 
-    if (t && !s) {
-      const r = fromMarkdown(t)
+    if (d && !s) {
+      const r = fromMarkdown(d)
       const p = firstSentence(r)
       s = toMarkdown(p)
     }
 
-    if (t) {
-      t = await sanitizeMarkdown(t)
+    if (d) {
+      d = await sanitizeMarkdown(d)
     }
 
     if (s) {
@@ -880,7 +996,7 @@ export class Narrative {
     }
 
     n.summary = s
-    n.description = t
+    n.description = d
     n.examples = e
     n.returns = r
 
@@ -901,6 +1017,76 @@ export class Narrative {
 
     return [n]
   }
+
+  static merge(a: Narrative, b: Narrative): Narrative {
+    const c = new Narrative()
+
+    if (b.summary) {
+      c.summary = b.summary
+    } else if (a.summary) {
+      c.summary = a.summary
+    }
+
+    if (b.description) {
+      c.description = b.description
+    } else if (a.description) {
+      c.description = a.description
+    }
+
+    if (b.examples) {
+      c.examples = b.examples
+    } else if (a.examples) {
+      c.examples = a.examples
+    }
+
+    if (b.returns) {
+      c.returns = b.returns
+    } else if (a.returns) {
+      c.returns = a.returns
+    }
+
+    return c
+  }
+
+  get isEmpty(): boolean {
+    return this.summary.length === 0 &&
+      this.description.length === 0 &&
+      this.examples.length === 0 &&
+      this.returns.length === 0
+  }
+}
+
+export function joinContent(c: string, ps: J.CommentDisplayPart[]): string {
+  if (ps.length === 0) {
+    return c
+  }
+
+  const a: J.CommentDisplayPart = {kind: "text", text: c}
+  const [b] = ps
+  join(a, b)
+
+  for (let i = 1; i < ps.length; i += 1) {
+    const a = ps[i - 1]
+    const b = ps[i]
+    join(a, b)
+  }
+
+  if (c.startsWith("\n\n")) {
+    c = c.slice(2)
+  }
+
+  return c
+
+  function join(a: J.CommentDisplayPart, b: J.CommentDisplayPart): void {
+    const x = a.text.endsWith(" ")
+    const y = b.text.startsWith(" ")
+
+    if (!x && !y) {
+      c += "\n\n"
+    }
+
+    c += b.text
+  }
 }
 
 export async function sanitizeMarkdown(s: string): Promise<string> {
@@ -916,16 +1102,19 @@ export async function sanitizeMarkdown(s: string): Promise<string> {
   return c
 }
 
+export type NestedTrail = (number | NestedTrail)[]
+export type FlatTrail = number[]
+
 export class Context {
   v = new ContextTrail()
   r = new ContextTrail()
 }
 
 export class ContextTrail {
-  #c: L.Trail
-  #r: L.Trail
+  #c: NestedTrail
+  #r: NestedTrail
 
-  get trail(): L.Trail {
+  get trail(): NestedTrail {
     if (this.#r.length === 0) {
       return []
     }
@@ -990,7 +1179,7 @@ export class ContextTrail {
     this.#c = p
   }
 
-  with(i: number): L.Trail {
+  with(i: number): NestedTrail {
     this.push(i)
     const t = this.trail
     this.pop()
@@ -1006,12 +1195,70 @@ export class ContextTrail {
   }
 }
 
-export class Trail {
-  virtual: L.Trail = []
-  real: L.Trail = []
+export class Repository {
+  static from(o: J.Reflection, c: Entity[]): Repository {
+    const r = new Repository(o)
+
+    for (const t of c) {
+      const e = t.to()
+      r.#entities.push(e)
+
+      if (
+        t instanceof Group ||
+        e instanceof L.GroupEntity
+      ) {
+        continue
+      }
+
+      const d = e.declaration
+      const f = flatTrail(t.trail.real)
+      r.#trailIndex.set(d, f)
+
+      for (const [i, p] of t.properties.entries()) {
+        const e = d.properties[i]
+        const f = flatTrail(p.trail.real)
+        r.#trailIndex.set(e, f)
+      }
+
+      for (const [i, p] of t.parameters.entries()) {
+        const e = d.parameters[i]
+        const f = flatTrail(p.trail.real)
+        r.#trailIndex.set(e, f)
+      }
+    }
+
+    return r
+  }
+
+  #sourceTree: J.Reflection
+
+  #entities: L.Entity[] = []
+
+  get entities(): L.Entity[] {
+    return this.#entities
+  }
+
+  #trailIndex = new Map<L.Declaration | L.Fragment, FlatTrail>()
+
+  constructor(o: J.Reflection) {
+    this.#sourceTree = o
+  }
+
+  trailOf(t: L.Declaration | L.Fragment): FlatTrail | undefined {
+    return this.#trailIndex.get(t)
+  }
+
+  reflectionOf(t: FlatTrail): J.Reflection | undefined {
+    return resolveTrail(this.#sourceTree, t)
+  }
 }
 
-export function trailDepth(t: L.Trail): number {
+export class TrailDuplex {
+  virtual: NestedTrail = []
+  real: NestedTrail = []
+}
+
+export function trailDepth(t: NestedTrail): number {
   let d = 0
 
   for (const s of t) {
@@ -1023,7 +1270,21 @@ export function trailDepth(t: L.Trail): number {
   return d
 }
 
-export function resolveTrail(o: J.Reflection, t: L.Trail): J.Reflection | undefined {
+export function flatTrail(t: NestedTrail): FlatTrail {
+  const f: FlatTrail = []
+
+  for (const s of t) {
+    if (Array.isArray(s)) {
+      f.push(...flatTrail(s))
+    } else {
+      f.push(s)
+    }
+  }
+
+  return f
+}
+
+export function resolveTrail(o: J.Reflection, t: NestedTrail): J.Reflection | undefined {
   let c: J.Reflection | undefined = o
 
   for (const s of t) {
@@ -1040,6 +1301,10 @@ export function resolveTrail(o: J.Reflection, t: L.Trail): J.Reflection | undefi
 
     if (isSignatureReflection(o) && o.parameters) {
       t = o.parameters
+    }
+
+    if (isDeclarationReflection(o) && isReflectionType(o.type)) {
+      t = [o.type.declaration]
     }
 
     if (isDeclarationReflection(o) && o.signatures) {

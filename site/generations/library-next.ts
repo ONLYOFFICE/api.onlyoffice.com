@@ -1,14 +1,20 @@
-import {SitemapDatum} from "@onlyoffice/eleventy-sitemap/next.ts"
-// import {SitemapDatum} from "@onlyoffice/eleventy-sitemap"
+import {type SitemapData, SitemapDatum} from "@onlyoffice/eleventy-sitemap"
 import {type Data} from "@onlyoffice/eleventy-types"
 import {type Entity} from "@onlyoffice/library-declaration/next.ts"
 import {cutSuffix} from "@onlyoffice/strings"
-import {slug} from "github-slugger"
 import {LibraryDatum} from "../internal/library.tsx"
-import {type Resource} from "../resources/docspace-plugin-sdk.ts"
+import {Sitemap} from "../internal/sitemap.ts"
+
+export interface Resource {
+  list(): Entity[]
+  retrieve(id: number): Entity | undefined
+}
 
 export function data(r: Resource): Data {
-  const rs = new ResourceSlugger()
+  const sp = new SpecificPather()
+  const vp = new VirtualPather()
+
+  const sr: Record<string, SitemapData> = {}
 
   return {
     layout: "library",
@@ -20,31 +26,41 @@ export function data(r: Resource): Data {
       addAllPagesToCollections: true,
     },
 
-    // _exclude(data) {
-    //   if (!data.pagination || !data.pagination.items) {
-    //     throw new Error("No pagination")
-    //   }
+    doWrite(data) {
+      if (!data.pagination || !data.pagination.items) {
+        throw new Error("No pagination")
+      }
 
-    //   const [e]: Entity[] = data.pagination.items
+      const [e]: Entity[] = data.pagination.items
 
-    //   if (e.type === "group") {
-    //     return true
-    //   }
+      if (e.type === "group") {
+        return false
+      }
 
-    //   if (e.type === "declaration") {
-    //     return false
-    //   }
+      if (e.type === "declaration") {
+        return true
+      }
 
-    //   throw new Error("Unknown entity type")
-    // },
+      // @ts-expect-error
+      throw new Error(`Unknown entity type: ${e.type}`)
+    },
 
-    slug(data) {
+    virtualPath(data) {
       if (!data.pagination || !data.pagination.items) {
         throw new Error("No pagination")
       }
       const [e]: Entity[] = data.pagination.items
-      const s = rs.slug(r, e)
-      return `${s}/index`
+      const p = vp.path(r, e)
+      return `${p}/index.html`
+    },
+
+    specificPath(data) {
+      if (!data.pagination || !data.pagination.items) {
+        throw new Error("No pagination")
+      }
+      const [e]: Entity[] = data.pagination.items
+      const p = sp.path(r, e)
+      return `${p}/index.html`
     },
 
     eleventyComputed: {
@@ -63,37 +79,17 @@ export function data(r: Resource): Data {
           return e.declaration.name
         }
 
-        throw new Error("Unknown entity type")
+        // @ts-expect-error
+        throw new Error(`Unknown entity type: ${e.type}`)
       },
 
-      // sitemap(data) {
-      //   if (!data.pagination || !data.pagination.items) {
-      //     throw new Error("No pagination")
-      //   }
-
-      //   const a = data.defaultSitemap
-
-      //   if (!a) {
-      //     return
-      //   }
-
-      //   // const b = new SitemapDatum()
-
-      //   const [e]: Entity[] = data.pagination.items
-
-      //   if (e.type === "group") {
-      //     return
-      //   }
-
-      //   return a
-      // },
-
-      sitemap2(data) {
+      sitemap(data) {
         if (!data.pagination || !data.pagination.items) {
           throw new Error("No pagination")
         }
 
-        const a = data.defaultSitemap2
+        const a = data.defaultSitemap
+
         if (!a) {
           return
         }
@@ -107,10 +103,15 @@ export function data(r: Resource): Data {
         } else if (e.type === "declaration") {
           b.type = "page"
         } else {
-          throw new Error("Unknown entity type")
+          // @ts-expect-error
+          throw new Error(`Unknown entity type: ${e.type}`)
         }
 
-        return SitemapDatum.merge(a, b)
+        const c = SitemapDatum.merge(a, b)
+
+        sr[e.id] = c
+
+        return c
       },
 
       library(data) {
@@ -123,24 +124,22 @@ export function data(r: Resource): Data {
         const d = new LibraryDatum()
         d.declaration = e
 
-        // d.onLink = function onLink(t) {
-        //   if (!data || !data.crosslink) {
-        //     return ""
-        //   }
+        d.onLink = function onLink(id) {
+          const s = Sitemap.shared
 
-        //   const r = retrieve(t.id)
-        //   if (!r) {
-        //     return ""
-        //   }
+          const e = r.retrieve(id)
+          if (!e) {
+            return ""
+          }
 
-        //   const s = r.id.split("#").join("/")
-        //   const u = data.crosslink(data, `${s}/`)
-        //   if (!u) {
-        //     return ""
-        //   }
+          const m = sr[e.id]
+          if (!m || !m.url) {
+            return ""
+          }
 
-        //   return u
-        // }
+          const p = s.findPageByUrl(m.url)
+          return p.canonicalUrl
+        }
 
         d.onRetrieve = function onRetrieve(id) {
           return r.retrieve(id)
@@ -149,115 +148,29 @@ export function data(r: Resource): Data {
         return d
       },
     },
-
-    // eleventyComputed: {
-    //   title(data) {
-    //     if (!data || !data.pagination || !data.pagination.items) {
-    //       throw new Error("No pagination")
-    //     }
-    //     return data.pagination.items[0].title
-    //   },
-
-    //   sitemap(data) {
-    //     if (!data.pagination || !data.pagination.items) {
-    //       return
-    //     }
-
-    //     const a = data.defaultSitemap
-    //     if (!a) {
-    //       return
-    //     }
-
-    //     const b = new SitemapDatum()
-
-    //     const [d]: Declaration[] = data.pagination.items
-    //     switch (d.kind) {
-    //     case "class":
-    //       b.groups = [
-    //         {title: "Constructors"},
-    //         {title: "Events"},
-    //         {title: "Methods"},
-    //         {title: "Properties"},
-    //       ]
-    //       break
-    //     case "constructor":
-    //       b.group = "Constructors"
-    //       break
-    //     case "event":
-    //       b.group = "Events"
-    //       break
-    //     case "method":
-    //       b.group = "Methods"
-    //       break
-    //     case "property":
-    //       b.group = "Properties"
-    //       break
-    //     }
-
-    //     return SitemapDatum.merge(a, b)
-    //   },
-
-    //   library(data) {
-    //     if (!data.pagination || !data.pagination.items) {
-    //       return
-    //     }
-
-    //     const d = new LibraryDatum()
-    //     ;[d.declaration] = data.pagination.items
-
-    //     d.onLink = function onLink(t) {
-    //       if (!data || !data.crosslink) {
-    //         return ""
-    //       }
-
-    //       const r = retrieve(t.id)
-    //       if (!r) {
-    //         return ""
-    //       }
-
-    //       const s = r.id.split("#").join("/")
-    //       const u = data.crosslink(data, `${s}/`)
-    //       if (!u) {
-    //         return ""
-    //       }
-
-    //       return u
-    //     }
-
-    //     d.onRetrieve = function onRetrieve(r) {
-    //       return retrieve(r.id)
-    //     }
-
-    //     return d
-    //   },
-    // },
   }
 }
 
-class ResourceSlugger {
+class VirtualPather implements Pather {
   #m = new Map<string, number>()
 
-  slug(r: Resource, e: Entity): string {
+  path(r: Resource, e: Entity): string {
     let s = ""
     let i = 0
 
     let c: Entity | undefined = e
 
     while (c) {
-      // if (c.type === "group") {
-      //   c = r.retrieve(c.parentId)
-      //   continue
-      // }
-
       if (c.type === "group") {
-        s = `${slug(c.group.name)}/${s}`
+        const n = sanitizeName(c.group.name)
+        s = `${n}/${s}`
       }
 
       if (c.type === "declaration") {
-        s = `${slug(c.declaration.name)}/${s}`
+        const n = sanitizeName(c.declaration.name)
+        s = `${n}/${s}`
       }
 
-      // s = `${slug(c.declaration.name)}/${s}`
       c = r.retrieve(c.parentId)
     }
 
@@ -281,4 +194,52 @@ class ResourceSlugger {
 
     return s
   }
+}
+
+class SpecificPather implements Pather {
+  #m = new Map<string, number>()
+
+  path(r: Resource, e: Entity): string {
+    let s = ""
+    let i = 0
+
+    let c: Entity | undefined = e
+
+    while (c) {
+      if (c.type === "declaration") {
+        const n = sanitizeName(c.declaration.name)
+        s = `${n}/${s}`
+      }
+
+      c = r.retrieve(c.parentId)
+    }
+
+    [s] = cutSuffix(s, "/")
+
+    while (true) {
+      const id = this.#m.get(s)
+
+      if (!id) {
+        this.#m.set(s, e.id)
+        break
+      }
+
+      if (id === e.id) {
+        break
+      }
+
+      i += 1
+      s = `${s}-${i}`
+    }
+
+    return s
+  }
+}
+
+interface Pather {
+  path(r: Resource, e: Entity): string
+}
+
+function sanitizeName(t: string): string {
+  return t.replaceAll("/", " ")
 }
