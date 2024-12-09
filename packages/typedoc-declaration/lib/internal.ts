@@ -567,7 +567,6 @@ export function shakeItems(o: J.Reflection, c: Item[]): Entity[] {
         p.children.push(...t.children)
 
         if (p instanceof Declaration) {
-          p.properties.push(...t.properties)
           p.parameters.push(...t.parameters)
         }
 
@@ -755,7 +754,6 @@ export class Declaration {
   name = ""
   trail = new TrailDuplex()
   narrative = new Narrative()
-  properties: Fragment[] = []
   parameters: Fragment[] = []
   parentId = -1
   children: number[] = []
@@ -818,11 +816,6 @@ export class Declaration {
     d.name = this.name
     d.summary = this.narrative.summary
     d.description = this.narrative.description
-
-    for (const f of this.properties) {
-      const t = f.to()
-      d.properties.push(t)
-    }
 
     for (const f of this.parameters) {
       const t = f.to()
@@ -1214,12 +1207,6 @@ export class Repository {
       const f = flatTrail(t.trail.real)
       r.#trailIndex.set(d, f)
 
-      for (const [i, p] of t.properties.entries()) {
-        const e = d.properties[i]
-        const f = flatTrail(p.trail.real)
-        r.#trailIndex.set(e, f)
-      }
-
       for (const [i, p] of t.parameters.entries()) {
         const e = d.parameters[i]
         const f = flatTrail(p.trail.real)
@@ -1299,20 +1286,20 @@ export function resolveTrail(o: J.Reflection, t: NestedTrail): J.Reflection | un
 
     let t: J.Reflection[] = []
 
-    if (isSignatureReflection(o) && o.parameters) {
-      t = o.parameters
+    if (isSignatureReflection(c) && c.parameters) {
+      t = c.parameters
     }
 
-    if (isDeclarationReflection(o) && isReflectionType(o.type)) {
-      t = [o.type.declaration]
+    if (isDeclarationReflection(c) && isReflectionType(c.type)) {
+      t = [c.type.declaration]
     }
 
-    if (isDeclarationReflection(o) && o.signatures) {
-      t = o.signatures
+    if (isDeclarationReflection(c) && c.signatures) {
+      t = c.signatures
     }
 
-    if (isContainerReflection(o) && o.children) {
-      t = o.children
+    if (isContainerReflection(c) && c.children) {
+      t = c.children
     }
 
     if (t.length !== 0) {
