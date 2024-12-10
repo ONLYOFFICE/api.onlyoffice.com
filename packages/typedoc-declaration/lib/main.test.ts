@@ -32,7 +32,6 @@ async function setup(s: string): Promise<J.ProjectReflection> {
   const a = await Application.bootstrapWithPlugins({
     entryPoints: [e],
     name: s,
-    readme: "none",
     tsconfig: c,
   })
 

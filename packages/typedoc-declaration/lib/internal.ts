@@ -18,6 +18,7 @@ import {
   isFunctionReflection,
   isMethodReflection,
   isParameterReflection,
+  isProjectReflection,
   isPropertyReflection,
   isSignatureReflection,
 } from "@onlyoffice/typedoc-util-is-reflection"
@@ -774,6 +775,12 @@ export class Declaration {
     d.sourceId = o.id
     d.name = o.name
 
+    // if (isProjectReflection(o) && o.readme) {
+    //   const [n, ne] = await Narrative.from(o.readme)
+    //   err = errors.join(ne)
+    //   d.narrative = n
+    // }
+
     if (o.comment) {
       const [n, ne] = await Narrative.from(o.comment)
       err = errors.join(ne)
@@ -935,7 +942,7 @@ export class Narrative {
     let err: E
     const n = new Narrative()
 
-    let d = joinContent("", o.summary)
+    let d = appendContent("", o.summary)
     let s = ""
     let e = ""
     let r = ""
@@ -943,26 +950,22 @@ export class Narrative {
     if (o.blockTags) {
       for (const t of o.blockTags) {
         if (t.tag === "@remarks") {
-          d = joinContent(d, t.content)
-          continue
-        }
-
-        if (t.tag === "@summary" && s) {
+          d = appendContent(d, t.content)
           continue
         }
 
         if (t.tag === "@summary") {
-          s = joinContent(s, t.content)
+          s = appendContent(s, t.content)
           continue
         }
 
         if (t.tag === "@example") {
-          e = joinContent(e, t.content)
+          e = appendContent(e, t.content)
           continue
         }
 
         if (t.tag === "@returns") {
-          r = joinContent(r, t.content)
+          r = appendContent(r, t.content)
           continue
         }
 
@@ -1007,14 +1010,13 @@ export class Narrative {
   static async fromCommentDisplayParts(o: J.CommentDisplayPart[]): R<Narrative> {
     const n = new Narrative()
 
-    let t = ""
-    for (const e of o) {
-      t += e.text
+    let d = appendContent("", o)
+
+    if (d) {
+      d = await sanitizeMarkdown(d)
     }
 
-    if (t) {
-      t = await sanitizeMarkdown(t)
-    }
+    n.description = d
 
     return [n]
   }
@@ -1057,37 +1059,20 @@ export class Narrative {
   }
 }
 
-export function joinContent(c: string, ps: J.CommentDisplayPart[]): string {
+export function appendContent(c: string, ps: J.CommentDisplayPart[]): string {
   if (ps.length === 0) {
     return c
   }
 
-  const a: J.CommentDisplayPart = {kind: "text", text: c}
-  const [b] = ps
-  join(a, b)
-
-  for (let i = 1; i < ps.length; i += 1) {
-    const a = ps[i - 1]
-    const b = ps[i]
-    join(a, b)
+  if (c.length !== 0) {
+    c += "\n\n"
   }
 
-  if (c.startsWith("\n\n")) {
-    c = c.slice(2)
+  for (const p of ps) {
+    c += p.text
   }
 
   return c
-
-  function join(a: J.CommentDisplayPart, b: J.CommentDisplayPart): void {
-    const x = a.text.endsWith(" ")
-    const y = b.text.startsWith(" ")
-
-    if (!x && !y) {
-      c += "\n\n"
-    }
-
-    c += b.text
-  }
 }
 
 export async function sanitizeMarkdown(s: string): Promise<string> {
