@@ -1214,11 +1214,13 @@ export class Repository {
       const d = e.declaration
       const f = flatTrail(t.trail.real)
       r.#trailIndex.set(d, f)
+      r.#definitionIndex.set(t.sourceId, d)
 
       for (const [i, p] of t.parameters.entries()) {
         const e = d.parameters[i]
         const f = flatTrail(p.trail.real)
         r.#trailIndex.set(e, f)
+        r.#definitionIndex.set(p.sourceId, e)
       }
     }
 
@@ -1233,18 +1235,24 @@ export class Repository {
     return this.#entities
   }
 
-  #trailIndex = new Map<L.Declaration | L.Fragment, FlatTrail>()
+  #trailIndex = new Map<L.Definition, FlatTrail>()
+
+  #definitionIndex = new Map<number, L.Definition>()
 
   constructor(o: J.Reflection) {
     this.#sourceTree = o
   }
 
-  trailOf(t: L.Declaration | L.Fragment): FlatTrail | undefined {
+  trailOf(t: L.Definition): FlatTrail | undefined {
     return this.#trailIndex.get(t)
   }
 
   reflectionOf(t: FlatTrail): J.Reflection | undefined {
     return resolveTrail(this.#sourceTree, t)
+  }
+
+  definitionOf(o: J.Reflection): L.Definition | undefined {
+    return this.#definitionIndex.get(o.id)
   }
 }
 
