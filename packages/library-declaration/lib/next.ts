@@ -35,6 +35,13 @@ export class Group {
   description = ""
 }
 
+export type Definition = DefinitionMap[keyof DefinitionMap]
+
+export interface DefinitionMap {
+  declaration: Declaration
+  fragment: Fragment
+}
+
 export class Declaration {
   name = ""
   signature = new DeclarationSignature()
