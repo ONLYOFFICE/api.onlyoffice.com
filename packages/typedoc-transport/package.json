@@ -1,5 +1,5 @@
 {
-  "name": "@onlyoffice/typedoc-transform",
+  "name": "@onlyoffice/typedoc-transport",
   "type": "module",
   "private": true,
   "main": "lib/main.ts",
