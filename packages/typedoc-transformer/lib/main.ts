@@ -1,6 +1,6 @@
 import {
   PassThrough,
-  Transform as T,
+  Transform,
   type TransformCallback,
   pipeline,
 } from "node:stream"
@@ -15,17 +15,17 @@ import {type FlatTrail} from "./trail.ts"
 // todo: remove the group sorting, as it is the responsibility of the site
 // todo: remove the block
 
-export interface TransformTransport {
+export interface TransformerTransport {
   trailFor(t: L.Definition, f: FlatTrail): void
   idFor(s: number, e: number): void
   reflectionOf(t: FlatTrail): J.Reflection | undefined
 }
 
-export class Transform extends T {
+export class Transformer extends Transform {
   #in: PassThrough
   #out: PassThrough
 
-  constructor(tt: TransformTransport) {
+  constructor(tt: TransformerTransport) {
     super({objectMode: true})
 
     const input = new PassThrough({objectMode: true})
@@ -80,7 +80,7 @@ export class Transform extends T {
   }
 }
 
-class ShakerBlock extends T {
+class ShakerBlock extends Transform {
   c: Entity[]
 
   constructor() {

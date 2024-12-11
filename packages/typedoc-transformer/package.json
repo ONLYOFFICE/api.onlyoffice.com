@@ -1,5 +1,5 @@
 {
-  "name": "@onlyoffice/typedoc-transform",
+  "name": "@onlyoffice/typedoc-transformer",
   "type": "module",
   "private": true,
   "exports": {
