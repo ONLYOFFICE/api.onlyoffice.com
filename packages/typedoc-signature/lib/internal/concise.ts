@@ -1,6 +1,8 @@
+/* eslint-disable unicorn/no-array-push-push */
 import {type Declaration, type DeclarationEntity} from "@onlyoffice/library-declaration/next.ts"
 import {
   ParameterToken,
+  Reference,
   type Signature,
   StringToken,
   TextToken,
@@ -34,7 +36,10 @@ import {
 } from "../../../typedoc-util-is-type/lib/main.ts"
 import {type ComputeRepository} from "../main.ts"
 
+let idOf: (id: number) => number | undefined
+
 export function concise(r: ComputeRepository, e: DeclarationEntity): void {
+  idOf = r.idOf.bind(r)
   let f = r.trailOf(e.declaration)
   if (!f) {
     return
@@ -47,127 +52,133 @@ export function concise(r: ComputeRepository, e: DeclarationEntity): void {
     fragment(r, e.declaration)
   }
   if (isClassReflection(t)) {
-    classDeclaration(t, e.declaration)
+    const s = classDeclaration(t)
+    e.declaration.signature.concise.push(...s)
     return
   }
   if (isConstructorReflection(p) && isSignatureReflection(t)) {
-    constructorDeclaration(t, e.declaration)
+    const s = constructorDeclaration(t)
+    e.declaration.signature.concise.push(...s)
     return
   }
   if (isEnumMemberReflection(t)) {
-    enumMemberReflection(t, e.declaration)
+    const s = enumMemberReflection(t)
+    e.declaration.signature.concise.push(...s)
     return
   }
   if (isEnumReflection(t)) {
-    enumReflection(t, e.declaration)
+    const s = enumReflection(t)
+    e.declaration.signature.concise.push(...s)
     return
   }
   if (isFunctionReflection(p) && isCallSignatureReflection(t)) {
-    functionsDeclaration(t, e.declaration)
+    const s = functionsDeclaration(t)
+    e.declaration.signature.concise.push(...s)
+    const r = returns(t.type)
+    e.declaration.returns.signature.concise.push(...r)
     return
   }
   if (isInterfaceReflection(t)) {
-    interfaceReflection(t, e.declaration)
+    const s = interfaceReflection(t)
+    e.declaration.signature.concise.push(...s)
     return
   }
   if (isMethodReflection(p) && isCallSignatureReflection(t)) {
-    methodDeclaration(t, e.declaration)
+    const s = methodDeclaration(t)
+    e.declaration.signature.concise.push(...s)
+    const r = returns(t.type)
+    e.declaration.returns.signature.concise.push(...r)
     return
   }
   if (isPropertyReflection(t)) {
-    propertyReflection(t, e.declaration)
+    const s = propertyReflection(t)
+    e.declaration.signature.concise.push(...s)
     return
   }
   if (isTypeAliasReflection(t)) {
-    typeAliasReflection(t, e.declaration)
+    const s = typeAliasReflection(t)
+    e.declaration.signature.concise.push(...s)
     return
   }
   if (isVariableReflection(t)) {
-    variableDeclaration(t, e.declaration)
+    const s = variableDeclaration(t)
+    e.declaration.signature.concise.push(...s)
   }
 }
 
-export function classDeclaration(c: J.Reflection, d: Declaration): void {
-  if (!isClassReflection(c)) {
-    return
+export function classDeclaration(r: J.Reflection): Signature {
+  const s: Signature = []
+
+  if (!isClassReflection(r)) {
+    return s
   }
 
-  const s: Signature = []
-  let t: Token
-
-  t = new TextToken()
+  const t = new TextToken()
   t.text = "  "
   s.push(t)
 
-  t = new TypeToken()
-  t.text = c.name
-  s.push(t)
+  s.push(reference(r.id, r.name))
 
-  d.signature.concise.push(...s)
+  return s
 }
 
-export function constructorDeclaration(c: J.Reflection, d: Declaration): void {
-  if (!isSignatureReflection(c)) {
-    return
-  }
-
+export function constructorDeclaration(r: J.Reflection): Signature {
   const s: Signature = []
 
-  const b = parameters(c)
+  if (!isSignatureReflection(r)) {
+    return s
+  }
+
+  const b = parameters(r)
   s.push(...b)
 
-  d.signature.concise.push(...s)
+  return s
 }
 
-export function enumMemberReflection(e: J.Reflection, d: Declaration): void {
-  if (!isEnumMemberReflection(e)) {
-    return
+export function enumMemberReflection(r: J.Reflection): Signature {
+  const s: Signature = []
+
+  if (!isEnumMemberReflection(r)) {
+    return s
   }
 
-  const s: Signature = []
-  let t: Token
-
-  t = new TextToken()
+  const t = new TextToken()
   t.text = ": "
   s.push(t)
 
-  if (e.type) {
-    const b = type(e.type)
+  if (r.type) {
+    const b = type(r.type)
     s.push(...b)
   } else {
-    t = new TypeToken()
-    t.text = "0"
-    s.push(t)
+    s.push(reference(r.id, "0"))
   }
 
-  d.signature.concise.push(...s)
+  return s
 }
 
-export function enumReflection(e: J.Reflection, d: Declaration): void {
-  if (!isEnumReflection(e)) {
-    return
+export function enumReflection(r: J.Reflection): Signature {
+  const s: Signature = []
+
+  if (!isEnumReflection(r)) {
+    return s
   }
 
-  const s: Signature = []
-  let t: Token
-
-  t = new TextToken()
+  const t = new TextToken()
   t.text = "  "
   s.push(t)
 
-  t = new TypeToken()
-  t.text = e.name
-  s.push(t)
+  s.push(reference(r.id, r.name))
 
-  d.signature.concise.push(...s)
+  return s
 }
 
-export function functionsDeclaration(f: J.Reflection, d: Declaration): void {
+export function functionsDeclaration(f: J.Reflection): Signature {
+  const s: Signature = []
+
   if (!isCallSignatureReflection(f)) {
-    return
+    return s
   }
 
-  const s: Signature = []
   let t: Token
 
   t = new TextToken()
@@ -181,142 +192,97 @@ export function functionsDeclaration(f: J.Reflection, d: Declaration): void {
   t.text = ": "
   s.push(t)
 
-  if (f.type) {
-    const b = type(f.type)
-    s.push(...b)
-    d.returns.signature.concise.push(...b)
-  } else {
-    t = new TypeToken()
-    t.text = "unknown"
-    s.push(t)
-    d.returns.signature.concise.push(t)
-  }
-
-  d.signature.concise.push(...s)
+  return s
 }
 
-export function interfaceReflection(i: J.Reflection, d: Declaration): void {
-  if (!isInterfaceReflection(i)) {
-    return
+export function interfaceReflection(r: J.Reflection): Signature {
+  const s: Signature = []
+
+  if (!isInterfaceReflection(r)) {
+    return s
   }
 
-  const s: Signature = []
-  let t: Token
-
-  t = new TextToken()
+  const t = new TextToken()
   t.text = "  "
   s.push(t)
 
-  t = new TypeToken()
-  t.text = i.name
-  s.push(t)
+  s.push(reference(r.id, r.name))
 
-  d.signature.concise.push(...s)
+  return s
 }
 
-export function methodDeclaration(m: J.Reflection, d: Declaration): void {
-  if (!isSignatureReflection(m)) {
-    return
-  }
-
+export function methodDeclaration(m: J.Reflection): Signature {
   const s: Signature = []
-  let t: Token
+
+  if (!isSignatureReflection(m)) {
+    return s
+  }
 
   const b = parameters(m)
   s.push(...b)
 
-  t = new TextToken()
+  const t = new TextToken()
   t.text = ": "
   s.push(t)
 
-  if (m.type) {
-    const b = type(m.type)
-    s.push(...b)
-    d.returns.signature.concise.push(...b)
-  } else {
-    t = new TypeToken()
-    t.text = "unknown"
-    s.push(t)
-    d.returns.signature.concise.push(t)
-  }
-
-  d.signature.concise.push(...s)
+  return s
 }
 
-export function propertyReflection(p: J.Reflection, d: Declaration): void {
-  if (!isPropertyReflection(p)) {
-    return
-  }
-
+export function propertyReflection(r: J.Reflection): Signature {
   const s: Signature = []
+
+  if (!isPropertyReflection(r)) {
+    return s
+  }
 
   const t = new TextToken()
   t.text = ": "
-  if (p.flags.isOptional) {
+  if (r.flags.isOptional) {
     t.text = `?${t.text}`
   }
   s.push(t)
 
-  if (p.type) {
-    const b = type(p.type)
+  if (r.type) {
+    const b = type(r.type)
     s.push(...b)
   }
 
-  d.signature.concise.push(...s)
+  return s
 }
 
-export function typeAliasReflection(a: J.Reflection, d: Declaration): void {
-  if (!isTypeAliasReflection(a)) {
-    return
-  }
-
+export function typeAliasReflection(r: J.Reflection): Signature {
   const s: Signature = []
-  let t: Token
 
-  t = new TextToken()
-  t.text = "  "
-  s.push(t)
-
-  t = new TypeToken()
-  t.text = a.name
-  s.push(t)
-
-  d.signature.concise.push(...s)
-}
-
-export function variableDeclaration(v: J.Reflection, d: Declaration): void {
-  if (!isVariableReflection(v)) {
-    return
+  if (!isTypeAliasReflection(r)) {
+    return s
   }
-
-  const s: Signature = []
 
   const t = new TextToken()
   t.text = "  "
   s.push(t)
 
-  if (v.type) {
-    const b = type(v.type)
+  s.push(reference(r.id, r.name))
+
+  return s
+}
+
+export function variableDeclaration(r: J.Reflection): Signature {
+  const s: Signature = []
+
+  if (!isVariableReflection(r)) {
+    return s
+  }
+
+  const t = new TextToken()
+  t.text = "  "
+  s.push(t)
+
+  if (r.type) {
+    const b = type(r.type)
     s.push(...b)
   }
 
-  d.signature.concise.push(...s)
-}
-
-export function fragment(r: ComputeRepository, d: Declaration): void {
-  for (const f of d.parameters) {
-    const tt = r.trailOf(f)
-    if (tt) {
-      const e = r.reflectionOf(tt)
-      if (!isParameterReflection(e)) {
-        return
-      }
-      if (e.type) {
-        const b = type(e.type)
-        f.signature.concise.push(...b)
-      }
-    }
-  }
+  return s
 }
 
 export function parameters(r: J.SignatureReflection): Signature {
@@ -437,13 +403,16 @@ export function literalType(l: J.LiteralType): Signature {
 }
 
 export function referenceType(r: J.ReferenceType): Signature {
-  // TODO
   const s: Signature = []
   let t: Token
 
-  t = new TypeToken()
-  t.text = r.name
-  s.push(t)
+  if (typeof r.target === "number") {
+    s.push(reference(r.target, r.name))
+  } else {
+    t = new TypeToken()
+    t.text = r.name
+    s.push(t)
+  }
 
   if (r.name === "Promise") {
     t = new TextToken()
@@ -595,4 +564,53 @@ export function unionType(u: J.UnionType): Signature {
   s.pop()
 
   return s
+}
+
+function fragment(r: ComputeRepository, d: Declaration): void {
+  for (const f of d.parameters) {
+    const tt = r.trailOf(f)
+    if (tt) {
+      const e = r.reflectionOf(tt)
+      if (!isParameterReflection(e)) {
+        return
+      }
+      if (e.type) {
+        const b = type(e.type)
+        f.signature.concise.push(...b)
+      }
+    }
+  }
+}
+
+function returns(r: J.SomeType | undefined): Signature {
+  const s: Signature = []
+
+  if (r && r.type) {
+    const b = type(r)
+    s.push(...b)
+  } else {
+    const t = new TypeToken()
+    t.text = "unknown"
+    s.push(t)
+  }
+
+  return s
+}
+
+function reference(t: number, n: string): Token | Reference {
+  let r: Token | Reference
+
+  const id = idOf(t)
+
+  if (id) {
+    r = new Reference()
+    r.id = String(id)
+    r.token = new TypeToken()
+    r.token.text = n
+  } else {
+    r = new TypeToken()
+    r.text = n
+  }
+
+  return r
 }

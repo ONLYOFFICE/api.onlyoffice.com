@@ -43,8 +43,10 @@ import {type ComputeRepository} from "../main.ts"
 let indent = 0
 const NEWLINE = "\n"
 const LIMIT = 100
+let idOf: (id: number) => number | undefined
 
 export function verbose(r: ComputeRepository, e: DeclarationEntity): void {
+  idOf = r.idOf.bind(r)
   let f = r.trailOf(e.declaration)
   if (!f) {
     return
@@ -809,13 +811,24 @@ export function literalType(l: J.LiteralType): Signature {
 }
 
 export function referenceType(r: J.ReferenceType): Signature {
-  // TODO
   const s: Signature = []
   let t: Token
 
-  t = new TypeToken()
-  t.text = r.name
-  s.push(t)
+  if (typeof r.target === "number") {
+    const id = idOf(r.target)
+    if (id) {
+      const rt = new Reference()
+      rt.id = String(id)
+      rt.token = new TypeToken()
+      rt.token.text = r.name
+      s.push(rt)
+    }
+  }
+  if (s.length === 0) {
+    t = new TypeToken()
+    t.text = r.name
+    s.push(t)
+  }
 
   if (r.name === "Promise" || r.name === "Record") {
     t = new TextToken()
