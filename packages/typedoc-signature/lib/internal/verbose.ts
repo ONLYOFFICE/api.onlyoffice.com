@@ -1,5 +1,4 @@
-// TODO: remove flat()
-import {type Declaration, type DeclarationEntity} from "@onlyoffice/library-declaration/next.ts"
+import {type DeclarationEntity} from "@onlyoffice/library-declaration/next.ts"
 import {
   EntityToken,
   KeywordToken,
@@ -16,7 +15,6 @@ import {
   isCallSignatureReflection,
   isClassReflection,
   isConstructorReflection,
-  isContainerReflection,
   isDeclarationReflection,
   isEnumMemberReflection,
   isEnumReflection,
@@ -30,6 +28,16 @@ import {
   isVariableReflection,
 } from "@onlyoffice/typedoc-util-is-reflection"
 import {type JSONOutput as J} from "typedoc"
+import {
+  isArrayType,
+  isIntrinsicType,
+  isLiteralType,
+  isReferenceType,
+  isReflectionType,
+  isTemplateLiteralType,
+  isTupleType,
+  isUnionType,
+} from "../../../typedoc-util-is-type/lib/main.ts"
 import {type ComputeRepository} from "../main.ts"
 
 let indent = 0
@@ -37,67 +45,75 @@ const NEWLINE = "\n"
 const LIMIT = 100
 
 export function verbose(r: ComputeRepository, e: DeclarationEntity): void {
-  const f = r.trailOf(e.declaration)
+  let f = r.trailOf(e.declaration)
   if (!f) {
     return
   }
   const t = r.reflectionOf(f)
-  f.pop()
+  f = f.slice(0, -1)
   const p = r.reflectionOf(f)
 
   if (isClassReflection(t)) {
-    classDeclaration(t, e.declaration)
+    const s = classDeclaration(t)
+    e.declaration.signature.verbose.push(...s)
     return
   }
   if (isConstructorReflection(p) && isSignatureReflection(t)) {
     const s = constructorDeclaration(t)
-    e.declaration.signature.verbose = s
+    e.declaration.signature.verbose.push(...s)
     return
   }
   if (isEnumMemberReflection(t)) {
-    enumMemberReflection(t, e.declaration)
+    const s = enumMemberReflection(t)
+    e.declaration.signature.verbose.push(...s)
     return
   }
   if (isEnumReflection(t)) {
-    enumReflection(t, e.declaration)
+    const s = enumReflection(t)
+    e.declaration.signature.verbose.push(...s)
     return
   }
   if (isFunctionReflection(p) && isCallSignatureReflection(t)) {
-    functionsDeclaration(t, e.declaration)
+    const s = functionsDeclaration(t)
+    e.declaration.signature.verbose.push(...s)
     return
   }
   if (isInterfaceReflection(t)) {
-    interfaceReflection(t, e.declaration)
+    const s = interfaceReflection(t)
+    e.declaration.signature.verbose.push(...s)
     return
   }
   if (isMethodReflection(p) && isCallSignatureReflection(t)) {
     const s = methodDeclaration(t, p)
-    e.declaration.signature.verbose = s
+    e.declaration.signature.verbose.push(...s)
     return
   }
   if (isPropertyReflection(t)) {
     const s = propertyReflection(t)
-    e.declaration.signature.verbose = s
+    e.declaration.signature.verbose.push(...s)
     return
   }
   if (isTypeAliasReflection(t)) {
-    typeAliasReflection(t, e.declaration)
+    const s = typeAliasReflection(t)
+    e.declaration.signature.verbose.push(...s)
     return
   }
   if (isVariableReflection(t)) {
-    variableDeclaration(t, e.declaration)
+    const s = variableDeclaration(t)
+    e.declaration.signature.verbose.push(...s)
   }
 }
 
-export function classDeclaration(c: J.Reflection, d: Declaration): void {
-  if (!isClassReflection(c)) {
-    return
+export function classDeclaration(r: J.Reflection): Signature {
+  const s: Signature = []
+
+  if (!isClassReflection(r)) {
+    return s
   }
 
-  const s: Signature = []
   let t: Token
 
-  if (c.flags.isAbstract) {
+  if (r.flags.isAbstract) {
     t = new KeywordToken()
     t.text = "abstract"
     s.push(t)
@@ -116,11 +132,11 @@ export function classDeclaration(c: J.Reflection, d: Declaration): void {
   s.push(t)
 
   t = new EntityToken()
-  t.text = c.name
+  t.text = r.name
   s.push(t)
 
-  if (c.extendedTypes) {
-    for (const e of c.extendedTypes) {
+  if (r.extendedTypes) {
+    for (const e of r.extendedTypes) {
       t = new TextToken()
       t.text = " "
       s.push(t)
@@ -134,37 +150,38 @@ export function classDeclaration(c: J.Reflection, d: Declaration): void {
       s.push(t)
 
       const b = type(e)
+      format(b)
       s.push(...b)
     }
   }
 
   const childrenSignatures: Signature = []
-  if (c.children) {
+  if (r.children) {
     indent += 2
 
     t = new TextToken()
     t.text = " {"
     childrenSignatures.push(t, ...newline())
 
-    for (const children of c.children) {
-      if (isConstructorReflection(children) && children.signatures) {
-        for (const signatures of children.signatures) {
-          if (isSignatureReflection(signatures)) {
-            const ts = constructorDeclaration(signatures)
+    for (const c of r.children) {
+      if (isConstructorReflection(c) && c.signatures) {
+        for (const cs of c.signatures) {
+          if (isSignatureReflection(cs)) {
+            const ts = constructorDeclaration(cs)
             childrenSignatures.push(...ts, ...newline())
           }
         }
       }
 
-      if (isPropertyReflection(children)) {
-        const ts = propertyReflection(children)
+      if (isPropertyReflection(c)) {
+        const ts = propertyReflection(c)
         childrenSignatures.push(...ts, ...newline())
       }
 
-      if (isMethodReflection(children) && children.signatures) {
-        for (const signatures of children.signatures) {
-          if (isSignatureReflection(signatures)) {
-            const ts = methodDeclaration(signatures, children)
+      if (isMethodReflection(c) && c.signatures) {
+        for (const cs of c.signatures) {
+          if (isSignatureReflection(cs)) {
+            const ts = methodDeclaration(cs, c)
             childrenSignatures.push(...ts, ...newline())
           }
         }
@@ -181,7 +198,7 @@ export function classDeclaration(c: J.Reflection, d: Declaration): void {
     s.push(...childrenSignatures)
   }
 
-  d.signature.verbose = s
+  return s
 }
 
 export function constructorDeclaration(r: J.Reflection): Signature {
@@ -203,24 +220,26 @@ export function constructorDeclaration(r: J.Reflection): Signature {
   return s
 }
 
-export function enumMemberReflection(e: J.Reflection, d: Declaration): void {
-  if (!isEnumMemberReflection(e)) {
-    return
+export function enumMemberReflection(r: J.Reflection): Signature {
+  const s: Signature = []
+
+  if (!isEnumMemberReflection(r)) {
+    return s
   }
 
-  const s: Signature = []
   let t: Token
 
   t = new EntityToken()
-  t.text = e.name
+  t.text = r.name
   s.push(t)
 
   t = new TextToken()
   t.text = " = "
   s.push(t)
 
-  if (e.type) {
-    const b = type(e.type)
+  if (r.type) {
+    const b = type(r.type)
+    format(b)
     s.push(...b)
   } else {
     t = new TypeToken()
@@ -228,15 +247,16 @@ export function enumMemberReflection(e: J.Reflection, d: Declaration): void {
     s.push(t)
   }
 
-  d.signature.verbose = s
+  return s
 }
 
-export function enumReflection(e: J.Reflection, d: Declaration): void {
-  if (!isEnumReflection(e)) {
-    return
+export function enumReflection(r: J.Reflection): Signature {
+  const s: Signature = []
+
+  if (!isEnumReflection(r)) {
+    return s
   }
 
-  const s: Signature = []
   let t: Token
 
   t = new KeywordToken()
@@ -248,7 +268,7 @@ export function enumReflection(e: J.Reflection, d: Declaration): void {
   s.push(t)
 
   t = new EntityToken()
-  t.text = e.name
+  t.text = r.name
   s.push(t)
 
   t = new TextToken()
@@ -259,9 +279,9 @@ export function enumReflection(e: J.Reflection, d: Declaration): void {
   t.text = "{"
   s.push(t)
 
-  if (e.children) {
+  if (r.children) {
     indent += 2
-    for (const c of e.children) {
+    for (const c of r.children) {
       if (c.type) {
         s.push(...newline())
 
@@ -282,15 +302,16 @@ export function enumReflection(e: J.Reflection, d: Declaration): void {
   t.text = "}"
   s.push(t)
 
-  d.signature.verbose = s
+  return s
 }
 
-export function functionsDeclaration(f: J.Reflection, d: Declaration): void {
-  if (!isCallSignatureReflection(f)) {
-    return
+export function functionsDeclaration(r: J.Reflection): Signature {
+  const s: Signature = []
+
+  if (!isCallSignatureReflection(r)) {
+    return s
   }
 
-  const s: Signature = []
   let t: Token
 
   t = new KeywordToken()
@@ -302,10 +323,10 @@ export function functionsDeclaration(f: J.Reflection, d: Declaration): void {
   s.push(t)
 
   t = new EntityToken()
-  t.text = f.name
+  t.text = r.name
   s.push(t)
 
-  const b = parameters(f)
+  const b = parameters(r)
   format(b)
   s.push(...b)
 
@@ -313,8 +334,9 @@ export function functionsDeclaration(f: J.Reflection, d: Declaration): void {
   t.text = ": "
   s.push(t)
 
-  if (f.type) {
-    const b = type(f.type)
+  if (r.type) {
+    const b = type(r.type)
+    format(b)
     s.push(...b)
   } else {
     t = new TypeToken()
@@ -322,15 +344,16 @@ export function functionsDeclaration(f: J.Reflection, d: Declaration): void {
     s.push(t)
   }
 
-  d.signature.verbose = s
+  return s
 }
 
-export function interfaceReflection(i: J.Reflection, d: Declaration): void {
-  if (!isInterfaceReflection(i)) {
-    return
+export function interfaceReflection(r: J.Reflection): Signature {
+  const s: Signature = []
+
+  if (!isInterfaceReflection(r)) {
+    return s
   }
 
-  const s: Signature = []
   let t: Token
 
   t = new KeywordToken()
@@ -342,7 +365,7 @@ export function interfaceReflection(i: J.Reflection, d: Declaration): void {
   s.push(t)
 
   t = new EntityToken()
-  t.text = i.name
+  t.text = r.name
   s.push(t)
 
   t = new TextToken()
@@ -353,9 +376,9 @@ export function interfaceReflection(i: J.Reflection, d: Declaration): void {
   t.text = "{"
   s.push(t)
 
-  if (i.children) {
+  if (r.children) {
     indent += 2
-    for (const c of i.children) {
+    for (const c of r.children) {
       s.push(...newline())
 
       if (c.type) {
@@ -404,7 +427,7 @@ export function interfaceReflection(i: J.Reflection, d: Declaration): void {
   t.text = "}"
   s.push(t)
 
-  d.signature.verbose = s
+  return s
 }
 
 export function methodDeclaration(r: J.Reflection, p: J.Reflection): Signature {
@@ -416,7 +439,7 @@ export function methodDeclaration(r: J.Reflection, p: J.Reflection): Signature {
 
   let t: Token
 
-  const f = methodFlags(p.flags)
+  const f = flags(p.flags)
   if (f) {
     s.push(...f)
 
@@ -438,6 +461,7 @@ export function methodDeclaration(r: J.Reflection, p: J.Reflection): Signature {
 
   if (r.type) {
     const b = type(r.type)
+    format(b)
     s.push(...b)
   } else {
     t = new TypeToken()
@@ -458,7 +482,7 @@ export function propertyReflection(r: J.Reflection): Signature {
 
   let t: Token
 
-  const f = propertyFlags(r.flags)
+  const f = flags(r.flags)
   if (f) {
     s.push(...f)
 
@@ -483,15 +507,17 @@ export function propertyReflection(r: J.Reflection): Signature {
     s.push(...b)
   }
 
+  format(s)
   return s
 }
 
-export function typeAliasReflection(a: J.Reflection, d: Declaration): void {
-  if (!isTypeAliasReflection(a)) {
-    return
+export function typeAliasReflection(r: J.Reflection): Signature {
+  const s: Signature = []
+
+  if (!isTypeAliasReflection(r)) {
+    return s
   }
 
-  const s: Signature = []
   let t: Token
 
   t = new KeywordToken()
@@ -503,27 +529,29 @@ export function typeAliasReflection(a: J.Reflection, d: Declaration): void {
   s.push(t)
 
   t = new EntityToken()
-  t.text = a.name
+  t.text = r.name
   s.push(t)
 
   t = new TextToken()
   t.text = " = "
   s.push(t)
 
-  if (a.type) {
-    const b = type(a.type)
+  if (r.type) {
+    const b = type(r.type)
+    format(b)
     s.push(...b)
   }
 
-  d.signature.verbose = s
+  return s
 }
 
-export function variableDeclaration(v: J.Reflection, d: Declaration): void {
-  if (!isVariableReflection(v)) {
-    return
+export function variableDeclaration(r: J.Reflection): Signature {
+  const s: Signature = []
+
+  if (!isVariableReflection(r)) {
+    return s
   }
 
-  const s: Signature = []
   let t: Token
 
   t = new KeywordToken()
@@ -535,19 +563,20 @@ export function variableDeclaration(v: J.Reflection, d: Declaration): void {
   s.push(t)
 
   t = new EntityToken()
-  t.text = v.name
+  t.text = r.name
   s.push(t)
 
   t = new TextToken()
   t.text = " = "
   s.push(t)
 
-  if (v.type) {
-    const b = type(v.type)
+  if (r.type) {
+    const b = type(r.type)
     s.push(...b)
   }
 
-  d.signature.verbose = s
+  format(s)
+  return s
 }
 
 export function parameters(r: J.SignatureReflection): Signature {
@@ -597,49 +626,50 @@ export function parameters(r: J.SignatureReflection): Signature {
   return s
 }
 
-export function value(p: J.Reflection): Signature {
+export function value(r: J.Reflection): Signature {
   const s: Signature = []
   let t: Token
 
   if (
-    !isDeclarationReflection(p) &&
-    !isParameterReflection(p) &&
-    !isSignatureReflection(p)
+    !isDeclarationReflection(r) &&
+    !isParameterReflection(r) &&
+    !isSignatureReflection(r)
   ) {
     return s
   }
 
   t = new ParameterToken()
-  t.text = p.name
+  t.text = r.name
   s.push(t)
 
   t = new TextToken()
   t.text = ": "
   s.push(t)
 
-  if (p.type) {
-    const b = type(p.type)
+  if (r.type) {
+    const b = type(r.type)
     s.push(...b)
   }
 
-  if (isSignatureReflection(p)) {
+  if (isSignatureReflection(r)) {
     return s
   }
 
-  if (p.defaultValue) {
+  if (r.defaultValue) {
     t = new TextToken()
     t.text = " = "
     s.push(t)
 
     t = new TextToken()
-    t.text = String(p.defaultValue)
+    t.text = String(r.defaultValue)
     s.push(t)
   }
 
+  format(s)
   return s
 }
 
-export function methodFlags(f: J.ReflectionFlags): Signature | undefined {
+export function flags(f: J.ReflectionFlags): Signature | undefined {
   const s: Signature = []
   let t: Token
 
@@ -668,47 +698,6 @@ export function methodFlags(f: J.ReflectionFlags): Signature | undefined {
     t.text = "abstract"
     s.push(t)
   }
-
-  if (s.length !== 0) {
-    const r: Signature = []
-    for (let i = 0; i < s.length; i = +1) {
-      r.push(s[i])
-      if (i < s.length - 1) {
-        t = new TextToken()
-        t.text = " "
-        r.push(t)
-      }
-    }
-    return r
-  }
-
-  return undefined
-}
-
-export function propertyFlags(f: J.ReflectionFlags): Signature | undefined {
-  const s: Signature = []
-  let t: Token
-
-  if (f.isPrivate) {
-    t = new KeywordToken()
-    t.text = "private"
-    s.push(t)
-  }
-  if (f.isProtected) {
-    t = new KeywordToken()
-    t.text = "protected"
-    s.push(t)
-  }
-  if (f.isPublic) {
-    t = new KeywordToken()
-    t.text = "public"
-    s.push(t)
-  }
-  if (f.isStatic) {
-    t = new KeywordToken()
-    t.text = "static"
-    s.push(t)
-  }
   if (f.isReadonly) {
     t = new KeywordToken()
     t.text = "readonly"
@@ -717,91 +706,43 @@ export function propertyFlags(f: J.ReflectionFlags): Signature | undefined {
 
   if (s.length !== 0) {
     const r: Signature = []
-    for (let i = 0; i < s.length; i += 1) {
-      r.push(s[i])
-      if (i < s.length - 1) {
-        t = new TextToken()
-        t.text = " "
-        r.push(t)
-      }
+    for (const char of s) {
+      r.push(char)
+      const t = new TextToken()
+      t.text = " "
+      r.push(t)
     }
+    r.pop()
     return r
   }
 
-  return undefined
-}
-
-export function flags(f: J.ReflectionFlags): KeywordToken | undefined {
-  const t = new KeywordToken()
-  if (f.isAbstract) {
-    t.text = "abstract"
-    return t
-  }
-  if (f.isConst) {
-    t.text = "const"
-    return t
-  }
-  if (f.isExternal) {
-    t.text = "external"
-    return t
-  }
-  if (f.isInherited) {
-    t.text = "inherited"
-    return t
-  }
-  if (f.isOptional) {
-    t.text = "optional"
-    return t
-  }
-  if (f.isPrivate) {
-    t.text = "private"
-    return t
-  }
-  if (f.isProtected) {
-    t.text = "protected"
-    return t
-  }
-  if (f.isPublic) {
-    t.text = "public"
-    return t
-  }
-  if (f.isReadonly) {
-    t.text = "readonly"
-    return t
-  }
-  if (f.isRest) {
-    t.text = "rest"
-    return t
-  }
-  if (f.isStatic) {
-    t.text = "static"
-    return t
-  }
   return undefined
 }
 
 export function type(t: J.SomeType): Signature {
-  if (t) {
-    switch (t.type) {
-    case "array":
-      return arrayType(t)
-    case "intrinsic":
-      return intrinsicType(t)
-    case "literal":
-      return literalType(t)
-    case "reference":
-      return referenceType(t)
-    case "reflection":
-      return reflectionType(t)
-    case "templateLiteral":
-      return templateLiteralType(t)
-    case "tuple":
-      return tupleType(t)
-    case "union":
-      return unionType(t)
-    default:
-      return []
-    }
+  if (isArrayType(t)) {
+    return arrayType(t)
+  }
+  if (isIntrinsicType(t)) {
+    return intrinsicType(t)
+  }
+  if (isLiteralType(t)) {
+    return literalType(t)
+  }
+  if (isReferenceType(t)) {
+    return referenceType(t)
+  }
+  if (isReflectionType(t)) {
+    return reflectionType(t)
+  }
+  if (isTemplateLiteralType(t)) {
+    return templateLiteralType(t)
+  }
+  if (isTupleType(t)) {
+    return tupleType(t)
+  }
+  if (isUnionType(t)) {
+    return unionType(t)
   }
   return []
 }
@@ -820,7 +761,15 @@ export function arrayType(a: J.ArrayType): Signature {
   s.push(...b)
 
   if (a.elementType.type === "union") {
-    const t = new TextToken()
+    t = new TextToken()
+    t.text = "_NEWLINE_"
+    s.push(t)
+
+    t = new TextToken()
+    t.text = `_INDENT-${indent}_`
+    s.push(t)
+
+    t = new TextToken()
     t.text = ")"
     s.push(t)
   }
@@ -829,6 +778,7 @@ export function arrayType(a: J.ArrayType): Signature {
   t.text = "[]"
   s.push(t)
 
+  format(s)
   return s
 }
 
@@ -867,7 +817,7 @@ export function referenceType(r: J.ReferenceType): Signature {
   t.text = r.name
   s.push(t)
 
-  if (r.name === "Promise") {
+  if (r.name === "Promise" || r.name === "Record") {
     t = new TextToken()
     t.text = "<"
     s.push(t)
@@ -875,10 +825,17 @@ export function referenceType(r: J.ReferenceType): Signature {
     if (r.typeArguments) {
       for (const a of r.typeArguments) {
         const b = type(a)
+        format(b)
         s.push(...b)
 
         t = new TextToken()
-        t.text = " | "
+        if (r.name === "Promise") {
+          t.text = " | "
+        }
+        if (r.name === "Record") {
+          t.text = ", "
+        }
+
         s.push(t)
       }
       s.pop()
@@ -928,19 +885,23 @@ export function reflectionType(r: J.ReflectionType): Signature {
       if (c.type) {
         s.push(...newline())
 
+        const ts: Signature = []
         t = new ParameterToken()
         t.text = c.name
-        s.push(t)
+        ts.push(t)
 
         t = new TextToken()
         t.text = ": "
         if (c.flags.isOptional) {
           t.text = `?${t.text}`
         }
-        s.push(t)
+        ts.push(t)
 
         const b = type(c.type)
-        s.push(...b)
+        ts.push(...b)
+
+        format(ts)
+        s.push(...ts)
       }
     }
     indent -= 2
@@ -967,7 +928,7 @@ export function templateLiteralType(tt: J.TemplateLiteralType): Signature {
   const s: Signature = []
   let t: Token
 
-  t = new TextToken()
+  t = new StringToken()
   t.text = "`"
   s.push(t)
   for (const tl of tt.tail) {
@@ -977,6 +938,7 @@ export function templateLiteralType(tt: J.TemplateLiteralType): Signature {
     for (const e of tl) {
       if (typeof e !== "string") {
         const b = type(e)
+        format(b)
         s.push(...b)
       } else {
         const t = new TypeToken()
@@ -988,7 +950,7 @@ export function templateLiteralType(tt: J.TemplateLiteralType): Signature {
     t.text = "}"
     s.push(t)
   }
-  t = new TextToken()
+  t = new StringToken()
   t.text = "`"
   s.push(t)
 
@@ -1009,6 +971,7 @@ export function tupleType(tt: J.TupleType): Signature {
 
   for (const e of tt.elements) {
     const b = type(e)
+    format(b)
     s.push(...b)
 
     t = new TextToken()
@@ -1042,8 +1005,21 @@ export function unionType(u: J.UnionType): Signature {
     t.text = `_INDENT-${indent}_`
     s.push(t)
 
+    if (ts.type === "reflection") {
+      t = new TextToken()
+      t.text = "("
+      s.push(t)
+    }
+
     const b = type(ts)
+    format(b)
     s.push(...b)
+
+    if (ts.type === "reflection") {
+      t = new TextToken()
+      t.text = ")"
+      s.push(t)
+    }
 
     t = new TextToken()
     t.text = " | "
@@ -1052,32 +1028,7 @@ export function unionType(u: J.UnionType): Signature {
   indent -= 2
   s.pop()
 
-  format(s)
   return s
-}
-
-export function resolve(o: J.Reflection, t: number[]): J.Reflection {
-  for (const s of t) {
-    const r = target(o)
-    o = r[s]
-  }
-  return o
-}
-
-function target(o: J.Reflection): J.Reflection[] {
-  if (isSignatureReflection(o) && o.parameters) {
-    return o.parameters
-  }
-
-  if (isDeclarationReflection(o) && o.signatures) {
-    return o.signatures
-  }
-
-  if (isContainerReflection(o) && o.children) {
-    return o.children
-  }
-
-  return []
 }
 
 function format(s: Signature): void {
