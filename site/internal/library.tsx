@@ -78,17 +78,6 @@ export function Library(p: LibraryProperties): JSX.Element {
     </Site.NextLibrary.Library>
   }
 
-  if ("parentId" in d.declaration) {
-    return <Site.Next.Library entity={d.declaration} onLink={d.onLink} onRetrieve={d.onRetrieve}>
-      <Site.Next.LibraryDescription>
-        {Markdown}
-      </Site.Next.LibraryDescription>
-      <Site.Next.LibrarySyntaxHighlight>
-        {SyntaxHighlight}
-      </Site.Next.LibrarySyntaxHighlight>
-    </Site.Next.Library>
-  }
-
   return <Site.Library {...d}>
     <Site.LibraryHeading for="Constructors">
       <h2>Constructors</h2>

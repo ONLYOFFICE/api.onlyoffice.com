@@ -1,5 +1,9 @@
 # Change Log
 
+- docs api: added the information about calling editor methods in the frameworks
+- docs api: added the Checking PDF forms page
+- docspace backend: added the Removed user page
+
 ## 6.3.0
 - docspace oauth api: added a new section
 - docspace api backend: v3.0
