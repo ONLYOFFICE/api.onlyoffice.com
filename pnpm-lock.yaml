@@ -3792,42 +3792,15 @@ importers:
 
   packages/typedoc-declaration:
     dependencies:
-      '@onlyoffice/console':
-        specifier: workspace:^
-        version: link:../console
-      '@onlyoffice/errors':
-        specifier: workspace:^
-        version: link:../errors
       '@onlyoffice/library-declaration':
         specifier: workspace:^
         version: link:../library-declaration
-      '@onlyoffice/mdast-util-eslint':
+      '@onlyoffice/typedoc-transformer':
         specifier: workspace:^
-        version: link:../mdast-util-eslint
-      '@onlyoffice/mdast-util-first-sentence':
+        version: link:../typedoc-transformer
+      '@onlyoffice/typedoc-transport':
         specifier: workspace:^
-        version: link:../mdast-util-first-sentence
-      '@onlyoffice/result':
-        specifier: workspace:^
-        version: link:../result
-      '@onlyoffice/strings':
-        specifier: workspace:^
-        version: link:../strings
-      '@onlyoffice/typedoc-util-is-reflection':
-        specifier: workspace:^
-        version: link:../typedoc-util-is-reflection
-      '@onlyoffice/typedoc-util-is-type':
-        specifier: workspace:^
-        version: link:../typedoc-util-is-type
-      mdast-util-from-markdown:
-        specifier: 2.0.0
-        version: 2.0.0
-      mdast-util-to-markdown:
-        specifier: 2.1.0
-        version: 2.1.0
-      remark-strip-html:
-        specifier: 1.0.2
-        version: 1.0.2
+        version: link:../typedoc-transport
       typedoc:
         specifier: 0.26.11
         version: 0.26.11(typescript@5.4.5)

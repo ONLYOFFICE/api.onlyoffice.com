@@ -3,7 +3,7 @@ import {inspect} from "node:util"
 import {Application, type JSONOutput as J} from "typedoc"
 import {test} from "uvu"
 import {Console} from "./console.ts"
-import {process} from "./internal.ts"
+import {process} from "./main.ts"
 
 // test.before(() => {
 //   Console.shared.mute()
