@@ -1,11 +1,7 @@
 {
-  "name": "@onlyoffice/typedoc-declaration",
+  "name": "@onlyoffice/typedoc-transport",
   "type": "module",
   "private": true,
-  "exports": {
-    ".": "./lib/main.ts",
-    "./console.ts": "./lib/console.ts"
-  },
   "main": "lib/main.ts",
   "scripts": {
     "clean": "rimraf coverage node_modules",
@@ -15,8 +11,8 @@
   },
   "dependencies": {
     "@onlyoffice/library-declaration": "workspace:^",
-    "@onlyoffice/typedoc-transformer": "workspace:^",
-    "@onlyoffice/typedoc-transport": "workspace:^",
+    "@onlyoffice/typedoc-util-is-reflection": "workspace:^",
+    "@onlyoffice/typedoc-util-is-type": "workspace:^",
     "typedoc": "0.26.11",
     "typescript": "5.4.5"
   },

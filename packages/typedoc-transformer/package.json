@@ -1,5 +1,5 @@
 {
-  "name": "@onlyoffice/typedoc-declaration",
+  "name": "@onlyoffice/typedoc-transformer",
   "type": "module",
   "private": true,
   "exports": {
@@ -14,9 +14,19 @@
     "test": "pnpm test:types && pnpm test:unit"
   },
   "dependencies": {
+    "@onlyoffice/async-transform": "workspace:^",
+    "@onlyoffice/console": "workspace:^",
+    "@onlyoffice/errors": "workspace:^",
     "@onlyoffice/library-declaration": "workspace:^",
-    "@onlyoffice/typedoc-transformer": "workspace:^",
-    "@onlyoffice/typedoc-transport": "workspace:^",
+    "@onlyoffice/mdast-util-eslint": "workspace:^",
+    "@onlyoffice/mdast-util-first-sentence": "workspace:^",
+    "@onlyoffice/result": "workspace:^",
+    "@onlyoffice/strings": "workspace:^",
+    "@onlyoffice/typedoc-util-is-reflection": "workspace:^",
+    "@onlyoffice/typedoc-util-is-type": "workspace:^",
+    "mdast-util-from-markdown": "2.0.0",
+    "mdast-util-to-markdown": "2.1.0",
+    "remark-strip-html": "1.0.2",
     "typedoc": "0.26.11",
     "typescript": "5.4.5"
   },
