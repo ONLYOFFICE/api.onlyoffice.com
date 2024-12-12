@@ -34,11 +34,11 @@ import {
   isTupleType,
   isUnionType,
 } from "../../../typedoc-util-is-type/lib/main.ts"
-import {type ComputeRepository} from "../main.ts"
+import {type Transport} from "../main.ts"
 
 let idOf: (id: number) => number | undefined
 
-export function concise(r: ComputeRepository, e: DeclarationEntity): void {
+export function concise(r: Transport, e: DeclarationEntity): void {
   idOf = r.idOf.bind(r)
   let f = r.trailOf(e.declaration)
   if (!f) {
@@ -566,7 +566,7 @@ export function unionType(u: J.UnionType): Signature {
   return s
 }
 
-function fragment(r: ComputeRepository, d: Declaration): void {
+function fragment(r: Transport, d: Declaration): void {
   for (const f of d.parameters) {
     const tt = r.trailOf(f)
     if (tt) {

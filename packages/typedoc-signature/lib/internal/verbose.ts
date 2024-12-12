@@ -38,22 +38,22 @@ import {
   isTupleType,
   isUnionType,
 } from "../../../typedoc-util-is-type/lib/main.ts"
-import {type ComputeRepository} from "../main.ts"
+import {type Transport} from "../main.ts"
 
 let indent = 0
 const NEWLINE = "\n"
 const LIMIT = 100
 let idOf: (id: number) => number | undefined
 
-export function verbose(r: ComputeRepository, e: DeclarationEntity): void {
-  idOf = r.idOf.bind(r)
-  let f = r.trailOf(e.declaration)
+export function verbose(tr: Transport, e: DeclarationEntity): void {
+  idOf = tr.idOf.bind(tr)
+  let f = tr.trailOf(e.declaration)
   if (!f) {
     return
   }
-  const t = r.reflectionOf(f)
+  const t = tr.reflectionOf(f)
   f = f.slice(0, -1)
-  const p = r.reflectionOf(f)
+  const p = tr.reflectionOf(f)
 
   if (isClassReflection(t)) {
     const s = classDeclaration(t)
@@ -169,21 +169,41 @@ export function classDeclaration(r: J.Reflection): Signature {
       if (isConstructorReflection(c) && c.signatures) {
         for (const cs of c.signatures) {
           if (isSignatureReflection(cs)) {
-            const ts = constructorDeclaration(cs)
-            childrenSignatures.push(...ts, ...newline())
+            const cd = constructorDeclaration(cs)
+            childrenSignatures.push(...cd, ...newline())
           }
         }
       }
 
       if (isPropertyReflection(c)) {
-        const ts = propertyReflection(c)
+        const pr = propertyReflection(c)
+        const ts: Signature = []
+        for (const e of pr) {
+          if ("type" in e && e.type === "entity") {
+            t = new ParameterToken()
+            t.text = e.text
+            ts.push(t)
+          } else {
+            ts.push(e)
+          }
+        }
         childrenSignatures.push(...ts, ...newline())
       }
 
       if (isMethodReflection(c) && c.signatures) {
         for (const cs of c.signatures) {
           if (isSignatureReflection(cs)) {
-            const ts = methodDeclaration(cs, c)
+            const md = methodDeclaration(cs, c)
+            const ts: Signature = []
+            for (const e of md) {
+              if ("type" in e && e.type === "entity") {
+                t = new ParameterToken()
+                t.text = e.text
+                ts.push(t)
+              } else {
+                ts.push(e)
+              }
+            }
             childrenSignatures.push(...ts, ...newline())
           }
         }

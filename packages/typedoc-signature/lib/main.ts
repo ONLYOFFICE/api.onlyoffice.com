@@ -5,16 +5,28 @@ import {verbose} from "./internal/verbose.ts"
 
 type FlatTrail = number[]
 
-export interface ComputeRepository {
-  trailOf(t: Declaration | Fragment): FlatTrail | undefined
-  reflectionOf(t: FlatTrail): J.Reflection | undefined
+export interface ComputeTransport extends Transport {
+  entities: Entity[]
 }
 
-export function compute(r: ComputeRepository, e: Entity): void {
-  if (e instanceof GroupEntity) {
-    return
+export interface Transport {
+  trailOf(t: Declaration | Fragment): FlatTrail | undefined
+  reflectionOf(t: FlatTrail): J.Reflection | undefined
+  idOf(id: number): number | undefined
+}
+
+export function compute(ct: ComputeTransport): void {
+  const tr: Transport = {
+    trailOf: ct.trailOf.bind(ct),
+    reflectionOf: ct.reflectionOf.bind(ct),
+    idOf: ct.idOf.bind(ct),
   }
 
-  verbose(r, e)
-  concise(r, e)
+  for (const e of ct.entities) {
+    if (e instanceof GroupEntity) {
+      continue
+    }
+    verbose(tr, e)
+    concise(tr, e)
+  }
 }
