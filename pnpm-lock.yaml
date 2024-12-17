@@ -373,6 +373,9 @@ importers:
       c8:
         specifier: 9.1.0
         version: 9.1.0
+      esbuild:
+        specifier: 0.23.0
+        version: 0.23.0
       hast-util-to-html:
         specifier: 9.0.1
         version: 9.0.1

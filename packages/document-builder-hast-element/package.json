@@ -2,9 +2,12 @@
   "name": "@onlyoffice/document-builder-hast-element",
   "type": "module",
   "private": true,
-  "main": "lib/main.ts",
+  "main": "dist/main.js",
   "scripts": {
     "clean": "rimraf node_modules",
+    "build:code": "esbuild --outdir=dist --tsconfig=tsconfig.emit.json --sourcemap lib/*",
+    "build:types": "tsc --project tsconfig.emit.json",
+    "build": "pnpm build:types && pnpm build:code",
     "test:types": "tsc",
     "test:unit": "c8 --config ../../c8.config.json tsx node_modules/uvu/bin.js lib ^.*\\.test\\.ts$",
     "test": "pnpm test:types && pnpm test:unit"
@@ -18,6 +21,7 @@
     "@onlyoffice/document-editor-html-element": "workspace:^",
     "@types/hast": "3.0.4",
     "c8": "9.1.0",
+    "esbuild": "0.23.0",
     "hast-util-to-html": "9.0.1",
     "rimraf": "6.0.1",
     "tsx": "4.16.5",
