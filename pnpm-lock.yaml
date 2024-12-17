@@ -399,9 +399,9 @@ importers:
       '@onlyoffice/document-server-types':
         specifier: workspace:^
         version: link:../document-server-types
-      typescript:
-        specifier: 5.4.5
-        version: 5.4.5
+      '@types/web':
+        specifier: 0.0.187
+        version: 0.0.187
     devDependencies:
       preact:
         specifier: 10.22.0
@@ -409,6 +409,9 @@ importers:
       rimraf:
         specifier: 6.0.1
         version: 6.0.1
+      typescript:
+        specifier: 5.4.5
+        version: 5.4.5
 
   packages/document-builder-resource:
     dependencies:
