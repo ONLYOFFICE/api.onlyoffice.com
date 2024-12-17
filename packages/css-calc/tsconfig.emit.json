@@ -1,0 +1,9 @@
+{
+  "extends": "../../tsconfig.emit.json",
+  "compilerOptions": {
+    "rootDir": "lib",
+    "outDir": "dist"
+  },
+  "include": ["lib"],
+  "exclude": ["lib/**/*.test.ts"]
+}
