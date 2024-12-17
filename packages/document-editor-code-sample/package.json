@@ -2,9 +2,12 @@
   "name": "@onlyoffice/document-editor-code-sample",
   "type": "module",
   "private": true,
-  "main": "lib/main.ts",
+  "main": "dist/main.js",
   "scripts": {
     "clean": "rimraf coverage node_modules",
+    "build:code": "esbuild --outdir=dist --tsconfig=tsconfig.emit.json --sourcemap lib/*",
+    "build:types": "tsc --project tsconfig.emit.json",
+    "build": "pnpm build:types && pnpm build:code",
     "playwright": "cd node_modules/@web/test-runner-playwright/node_modules/.bin && ./playwright",
     "test:unit": "web-test-runner",
     "test:types": "tsc",
@@ -13,8 +16,7 @@
   "dependencies": {
     "@onlyoffice/document-server-types": "workspace:^",
     "@onlyoffice/document-server-utils": "workspace:^",
-    "@onlyoffice/object-to-string": "workspace:^",
-    "typescript": "5.4.5"
+    "@onlyoffice/object-to-string": "workspace:^"
   },
   "devDependencies": {
     "@open-wc/testing": "4.0.0",
@@ -24,6 +26,7 @@
     "@web/test-runner": "0.18.2",
     "@web/test-runner-playwright": "0.11.0",
     "esbuild": "0.23.0",
-    "rimraf": "6.0.1"
+    "rimraf": "6.0.1",
+    "typescript": "5.4.5"
   }
 }

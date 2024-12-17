@@ -486,9 +486,6 @@ importers:
       '@onlyoffice/object-to-string':
         specifier: workspace:^
         version: link:../object-to-string
-      typescript:
-        specifier: 5.4.5
-        version: 5.4.5
     devDependencies:
       '@open-wc/testing':
         specifier: 4.0.0
@@ -514,6 +511,9 @@ importers:
       rimraf:
         specifier: 6.0.1
         version: 6.0.1
+      typescript:
+        specifier: 5.4.5
+        version: 5.4.5
 
   packages/document-editor-hast-element:
     dependencies:
