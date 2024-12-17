@@ -105,9 +105,9 @@ importers:
 
   packages/combobox-container-html-element:
     dependencies:
-      typescript:
-        specifier: 5.4.5
-        version: 5.4.5
+      '@types/web':
+        specifier: 0.0.187
+        version: 0.0.187
     devDependencies:
       '@web/dev-server':
         specifier: 0.4.4
@@ -124,6 +124,9 @@ importers:
       rimraf:
         specifier: 6.0.1
         version: 6.0.1
+      typescript:
+        specifier: 5.4.5
+        version: 5.4.5
 
   packages/command:
     dependencies:
@@ -7085,6 +7088,9 @@ packages:
 
   '@types/uuid@9.0.8':
     resolution: {integrity: sha512-jg+97EGIcY9AGHJJRaaPVgetKDsrTgbRjQ5Msgjh/DQKEFl0DtyRr/VCOyD1T2R1MNeWPK/u7JoGhlDZnKBAfA==, tarball: https://registry.npmjs.org/@types/uuid/-/uuid-9.0.8.tgz}
+
+  '@types/web@0.0.187':
+    resolution: {integrity: sha512-PNvOlIo9AkUA8dvdqJHrvvIZG40Qi37QHNyl1qOD1m/4Lj+2thAtwJM2N9UmtGBtkhb3x9mP/6JlXYtQcZ3uFg==, tarball: https://registry.npmjs.org/@types/web/-/web-0.0.187.tgz}
 
   '@types/ws@7.4.7':
     resolution: {integrity: sha512-JQbbmxZTZehdc2iszGKs5oC3NFnjeay7mtAWrdt7qNtAVK0g19muApzAy4bm9byz79xa2ZnO/BOBC2R8RC5Lww==, tarball: https://registry.npmjs.org/@types/ws/-/ws-7.4.7.tgz}
@@ -14603,6 +14609,8 @@ snapshots:
   '@types/unist@3.0.3': {}
 
   '@types/uuid@9.0.8': {}
+
+  '@types/web@0.0.187': {}
 
   '@types/ws@7.4.7':
     dependencies:
