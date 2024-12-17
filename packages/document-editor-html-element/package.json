@@ -19,7 +19,8 @@
   },
   "dependencies": {
     "@onlyoffice/document-server-types": "workspace:^",
-    "@onlyoffice/strings": "workspace:^"
+    "@onlyoffice/strings": "workspace:^",
+    "@types/web": "0.0.187"
   },
   "devDependencies": {
     "@onlyoffice/store-demo": "workspace:^",

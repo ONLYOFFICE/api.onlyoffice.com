@@ -551,6 +551,9 @@ importers:
       '@onlyoffice/strings':
         specifier: workspace:^
         version: link:../strings
+      '@types/web':
+        specifier: 0.0.187
+        version: 0.0.187
     devDependencies:
       '@onlyoffice/store-demo':
         specifier: workspace:^
