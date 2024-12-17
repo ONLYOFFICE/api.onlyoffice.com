@@ -8,6 +8,7 @@
 // todo: add the event attribute similar to the class attribute (continuation of the previous todo)
 // todo: add comments to all of them, including deprecation notices
 // todo: add exports, types fields to the package.json
+// todo: add @since tags to all of them
 
 import {
   type DocEditor,
