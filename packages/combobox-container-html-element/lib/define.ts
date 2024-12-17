@@ -1,6 +1,8 @@
 /* eslint @stylistic/max-len: ["error", {code: 140}] */
 
-import {ComboboxContainer} from "./element.ts"
+import {
+  ComboboxContainer,
+} from "./element.ts"
 import {
   ComboboxContainerChangeEvent,
   ComboboxContainerChangedEvent,
