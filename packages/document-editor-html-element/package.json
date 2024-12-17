@@ -19,8 +19,7 @@
   },
   "dependencies": {
     "@onlyoffice/document-server-types": "workspace:^",
-    "@onlyoffice/strings": "workspace:^",
-    "typescript": "5.4.5"
+    "@onlyoffice/strings": "workspace:^"
   },
   "devDependencies": {
     "@onlyoffice/store-demo": "workspace:^",
@@ -28,6 +27,7 @@
     "@web/dev-server-esbuild": "1.0.2",
     "esbuild": "0.23.0",
     "preact": "10.22.0",
-    "rimraf": "6.0.1"
+    "rimraf": "6.0.1",
+    "typescript": "5.4.5"
   }
 }
