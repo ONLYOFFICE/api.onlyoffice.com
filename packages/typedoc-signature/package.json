@@ -10,9 +10,13 @@
     "test": "pnpm test:types && pnpm test:unit"
   },
   "dependencies": {
+    "@onlyoffice/console": "workspace:^",
     "@onlyoffice/library-declaration": "workspace:^",
     "@onlyoffice/signature": "workspace:^",
+    "@onlyoffice/typedoc-transformer": "workspace:^",
+    "@onlyoffice/typedoc-transport": "workspace:^",
     "@onlyoffice/typedoc-util-is-reflection": "workspace:^",
+    "@onlyoffice/typedoc-util-is-type": "workspace:^",
     "typedoc": "0.26.11",
     "typescript": "5.4.5"
   },
