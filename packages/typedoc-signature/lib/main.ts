@@ -14,13 +14,16 @@ import {
   isVariableReflection,
 } from "@onlyoffice/typedoc-util-is-reflection"
 import {type JSONOutput as J} from "typedoc"
+import {Console} from "./console.ts"
 import * as C from "./internal/concise.ts"
+import {Context} from "./internal/context.ts"
 import {Formatter} from "./internal/formatter.ts"
 import * as V from "./internal/verbose.ts"
 
-export interface ComputeFormat extends Format, Transport {}
+const console = Console.shared
 
-export interface Format {
+export interface ContextFormat extends Transport {
+  context: Context
   formatter: Formatter
 }
 
@@ -34,7 +37,7 @@ export interface Transport {
   idOf(id: number): number | undefined
 }
 
-type FlatTrail = number[]
+export type FlatTrail = number[]
 
 export function compute(ct: ComputeTransport): void {
   const tr: Transport = {
@@ -48,19 +51,29 @@ export function compute(ct: ComputeTransport): void {
       continue
     }
 
-    let ft = tr.trailOf(e.declaration)
-    if (!ft) {
-      return
-    }
-    const t = tr.reflectionOf(ft)
-    ft = ft.slice(0, -1)
-    const p = tr.reflectionOf(ft)
+    console.log(`Start computing the signature for ${e.declaration.name} id = ${e.id}`)
 
-    if (!t || !p) {
+    let ft = ct.trailOf(e.declaration)
+    if (!ft) {
+      console.log(`Trail for ${e.declaration.name} id = ${e.id} not found!`)
+      continue
+    }
+    const t = ct.reflectionOf(ft)
+    ft = ft.slice(0, -1)
+    const p = ct.reflectionOf(ft)
+
+    if (!t) {
+      console.log(`Target for ${e.declaration.name} id = ${e.id} not found!`)
       continue
     }
 
-    const cf: ComputeFormat = {
+    if (!t) {
+      console.log(`Parent for ${e.declaration.name} id = ${e.id} not found!`)
+      continue
+    }
+
+    const cf: ContextFormat = {
+      context: new Context(),
       formatter: new Formatter(),
       ...tr,
     }
@@ -107,5 +120,9 @@ export function compute(ct: ComputeTransport): void {
       v.push(...V.variableDeclaration(t, cf))
       c.push(...C.variableDeclaration(t, cf))
     }
+
+    cf.formatter.format(e.declaration.signature.verbose)
+
+    console.log(`Finish computing the signature for ${e.declaration.name} id = ${e.id}`)
   }
 }
