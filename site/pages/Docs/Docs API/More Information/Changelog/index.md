@@ -2,6 +2,8 @@ The list of changes of ONLYOFFICE Docs API.
 
 ## Version 8.3
 
+- The [editorConfig.customization.compactToolbar](../../Usage%20API/Config/Editor/Customization/index.md#compacttoolbar) parameter is now available for the viewer.
+
 ## Version 8.2
 
 - The [editorConfig.customization.mobileForceView](../../Usage%20API/Config/Editor/Customization/index.md#mobileforceview) parameter is deprecated, please use the [editorConfig.customization.mobile](../../Usage%20API/Config/Editor/Customization/index.md#mobile) parameter instead.
