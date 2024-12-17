@@ -1,14 +1,25 @@
+/* eslint @stylistic/max-len: ["error", {code: 140}] */
+
 import {ComboboxContainer} from "./element.ts"
 import {
   ComboboxContainerChangeEvent,
-  type ComboboxContainerChangeEventListener,
   ComboboxContainerChangedEvent,
-  type ComboboxContainerChangedEventListener,
-  type GlobalComboboxContainerChangeHandler,
-  type GlobalComboboxContainerChangedHandler,
+  type GlobalComboboxContainerChangeEventHandler,
+  type GlobalComboboxContainerChangedEventHandler,
 } from "./events.ts"
+import {
+  type ComboboxContainerAttributeMap,
+} from "./types.ts"
 
 declare global {
+  namespace preact {
+    namespace JSX {
+      interface IntrinsicElements {
+        [ComboboxContainer.tagName]: HTMLAttributes<ComboboxContainer> & Partial<ComboboxContainerAttributeMap>
+      }
+    }
+  }
+
   interface Window {
     ComboboxContainer: typeof ComboboxContainer
     ComboboxContainerChangeEvent: typeof ComboboxContainerChangeEvent
@@ -16,25 +27,17 @@ declare global {
   }
 
   interface HTMLElementTagNameMap {
-    "combobox-container": ComboboxContainer
-  }
-
-  namespace preact {
-    namespace JSX {
-      interface IntrinsicElements {
-        "combobox-container": HTMLAttributes<ComboboxContainer>
-      }
-    }
+    [ComboboxContainer.tagName]: ComboboxContainer
   }
 
   interface GlobalEventHandlersEventMap {
-    comboboxcontainerchange: ComboboxContainerChangeEventListener
-    comboboxcontainerchanged: ComboboxContainerChangedEventListener
+    [ComboboxContainerChangeEvent.type]: ComboboxContainerChangeEvent
+    [ComboboxContainerChangedEvent.type]: ComboboxContainerChangedEvent
   }
 
   interface GlobalEventHandlers {
-    oncomboboxcontainerchange: GlobalComboboxContainerChangeHandler | null
-    oncomboboxcontainerchanged: GlobalComboboxContainerChangedHandler | null
+    [ComboboxContainerChangeEvent.handlerName]: GlobalComboboxContainerChangeEventHandler | null
+    [ComboboxContainerChangedEvent.handlerName]: GlobalComboboxContainerChangedEventHandler | null
   }
 }
 
@@ -42,8 +45,10 @@ export function define(): void {
   if (window.customElements.get(ComboboxContainer.tagName)) {
     return
   }
+
   window.ComboboxContainer = ComboboxContainer
   window.customElements.define(ComboboxContainer.tagName, ComboboxContainer)
+
   window.ComboboxContainerChangeEvent = ComboboxContainerChangeEvent
   window.ComboboxContainerChangedEvent = ComboboxContainerChangedEvent
 }
