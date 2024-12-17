@@ -16,22 +16,22 @@ import {
 import {type JSONOutput as J} from "typedoc"
 import {Console} from "./console.ts"
 import * as C from "./internal/concise.ts"
-import {Context} from "./internal/context.ts"
 import {Formatter} from "./internal/formatter.ts"
+import {State} from "./internal/state.ts"
 import * as V from "./internal/verbose.ts"
 
 const console = Console.shared
 
-export interface ContextFormat extends Transport {
-  context: Context
-  formatter: Formatter
-}
-
-export interface ComputeTransport extends Transport {
-  entities: Entity[]
+export interface Context {
+  s: State
+  f: Formatter
+  trailOf(t: Declaration | Fragment): FlatTrail | undefined
+  reflectionOf(t: FlatTrail): J.Reflection | undefined
+  idOf(id: number): number | undefined
 }
 
 export interface Transport {
+  entities: Entity[]
   trailOf(t: Declaration | Fragment): FlatTrail | undefined
   reflectionOf(t: FlatTrail): J.Reflection | undefined
   idOf(id: number): number | undefined
@@ -39,13 +39,7 @@ export interface Transport {
 
 export type FlatTrail = number[]
 
-export function compute(ct: ComputeTransport): void {
-  const tr: Transport = {
-    trailOf: ct.trailOf.bind(ct),
-    reflectionOf: ct.reflectionOf.bind(ct),
-    idOf: ct.idOf.bind(ct),
-  }
-
+export function compute(ct: Transport): void {
   for (const e of ct.entities) {
     if (e instanceof GroupEntity) {
       continue
@@ -55,27 +49,29 @@ export function compute(ct: ComputeTransport): void {
 
     let ft = ct.trailOf(e.declaration)
     if (!ft) {
-      console.log(`Trail for ${e.declaration.name} id = ${e.id} not found!`)
+      console.log(`Trail for ${e.declaration.name} id = ${e.id} not found`)
       continue
     }
+
     const t = ct.reflectionOf(ft)
+    if (!t) {
+      console.log(`Target for ${e.declaration.name} id = ${e.id} not found`)
+      continue
+    }
+
     ft = ft.slice(0, -1)
     const p = ct.reflectionOf(ft)
-
     if (!t) {
-      console.log(`Target for ${e.declaration.name} id = ${e.id} not found!`)
+      console.log(`Parent for ${e.declaration.name} id = ${e.id} not found`)
       continue
     }
 
-    if (!t) {
-      console.log(`Parent for ${e.declaration.name} id = ${e.id} not found!`)
-      continue
-    }
-
-    const cf: ContextFormat = {
-      context: new Context(),
-      formatter: new Formatter(),
-      ...tr,
+    const cf: Context = {
+      s: new State(),
+      f: new Formatter(),
+      trailOf: ct.trailOf.bind(ct),
+      reflectionOf: ct.reflectionOf.bind(ct),
+      idOf: ct.idOf.bind(ct),
     }
 
     const f = e.declaration.parameters
@@ -88,40 +84,40 @@ export function compute(ct: ComputeTransport): void {
     }
 
     if (isClassReflection(t)) {
-      v.push(...V.classDeclaration(t, cf))
-      c.push(...C.classDeclaration(t, cf))
+      v.push(...V.classDeclaration(cf, t))
+      c.push(...C.classDeclaration(cf, t))
     } else if (isConstructorReflection(p) && isSignatureReflection(t)) {
-      v.push(...V.constructorDeclaration(t, cf))
+      v.push(...V.constructorDeclaration(cf, t))
       c.push(...C.constructorDeclaration(t))
     } else if (isEnumMemberReflection(t)) {
-      v.push(...V.enumMemberReflection(t, cf))
-      c.push(...C.enumMemberReflection(t, cf))
+      v.push(...V.enumMemberReflection(cf, t))
+      c.push(...C.enumMemberReflection(cf, t))
     } else if (isEnumReflection(t)) {
-      v.push(...V.enumReflection(t, cf))
-      c.push(...C.enumReflection(t, cf))
+      v.push(...V.enumReflection(cf, t))
+      c.push(...C.enumReflection(cf, t))
     } else if (isFunctionReflection(p) && isCallSignatureReflection(t)) {
-      v.push(...V.functionsDeclaration(t, cf))
+      v.push(...V.functionsDeclaration(cf, t))
       c.push(...C.functionsDeclaration(t))
-      r.push(...C.returns(t.type, cf))
+      r.push(...C.returns(cf, t.type))
     } else if (isInterfaceReflection(t)) {
-      v.push(...V.interfaceReflection(t, cf))
-      c.push(...C.interfaceReflection(t, cf))
+      v.push(...V.interfaceReflection(cf, t))
+      c.push(...C.interfaceReflection(cf, t))
     } else if (isMethodReflection(p) && isCallSignatureReflection(t)) {
       v.push(...V.methodDeclaration(t, p, cf))
       c.push(...C.methodDeclaration(t))
-      r.push(...C.returns(t.type, cf))
+      r.push(...C.returns(cf, t.type))
     } else if (isPropertyReflection(t)) {
-      v.push(...V.propertyReflection(t, cf))
-      c.push(...C.propertyReflection(t, cf))
+      v.push(...V.propertyReflection(cf, t))
+      c.push(...C.propertyReflection(cf, t))
     } else if (isTypeAliasReflection(t)) {
-      v.push(...V.typeAliasReflection(t, cf))
-      c.push(...C.typeAliasReflection(t, cf))
+      v.push(...V.typeAliasReflection(cf, t))
+      c.push(...C.typeAliasReflection(cf, t))
     } else if (isVariableReflection(t)) {
-      v.push(...V.variableDeclaration(t, cf))
-      c.push(...C.variableDeclaration(t, cf))
+      v.push(...V.variableDeclaration(cf, t))
+      c.push(...C.variableDeclaration(cf, t))
     }
 
-    cf.formatter.format(e.declaration.signature.verbose)
+    cf.f.format(e.declaration.signature.verbose)
 
     console.log(`Finish computing the signature for ${e.declaration.name} id = ${e.id}`)
   }

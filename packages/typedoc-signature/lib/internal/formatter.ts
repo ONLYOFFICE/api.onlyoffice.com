@@ -2,13 +2,9 @@ import {NoopToken, Reference, type Signature, TextToken, type Token} from "@only
 import {IndentToken, NewlineToken} from "./tokens.ts"
 
 export class Formatter {
-  l: number
-  n: string
-
-  constructor(l = 100, n = "\n") {
-    this.l = l
-    this.n = n
-  }
+  i = " "
+  l = 100
+  n = "\n"
 
   preprocess(s: Signature): void {
     let l = 0
@@ -30,7 +26,7 @@ export class Formatter {
 
     // if the length is less than 100 and there are no newlines in the signature of the child elements
     // remove indents and newlines
-    if (l < 100 && !f) {
+    if (l < this.l && !f) {
       const ts: Signature = []
 
       for (const t of s) {
@@ -55,12 +51,7 @@ export class Formatter {
           t.text = this.n
         }
         if (e instanceof IndentToken) {
-          let ci = 0
-          const i = /_INDENT-(\d+)_/.exec(e.text)
-          if (i) {
-            ci = Number.parseInt(i[1])
-          }
-          t.text = " ".repeat(ci)
+          t.text = this.i.repeat(e.indent)
         }
         ts.push(t)
       } else {

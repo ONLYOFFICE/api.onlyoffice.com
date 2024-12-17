@@ -35,12 +35,10 @@ import {
   isUnionType,
 } from "@onlyoffice/typedoc-util-is-type"
 import {type JSONOutput as J} from "typedoc"
-import {type Context} from "./context.ts"
 import {type Formatter} from "./formatter.ts"
 
-export interface ContextFormat {
-  context: Context
-  formatter: Formatter
+export interface Context {
+  f: Formatter
   trailOf(t: Declaration | Fragment): FlatTrail | undefined
   reflectionOf(t: FlatTrail): J.Reflection | undefined
   idOf(id: number): number | undefined
@@ -48,7 +46,7 @@ export interface ContextFormat {
 
 export type FlatTrail = number[]
 
-export function classDeclaration(r: J.Reflection, cf: ContextFormat): Signature {
+export function classDeclaration(cf: Context, r: J.Reflection): Signature {
   const s: Signature = []
 
   if (!isClassReflection(r)) {
@@ -77,7 +75,7 @@ export function constructorDeclaration(r: J.Reflection): Signature {
   return s
 }
 
-export function enumMemberReflection(r: J.Reflection, cf: ContextFormat): Signature {
+export function enumMemberReflection(cf: Context, r: J.Reflection): Signature {
   const s: Signature = []
 
   if (!isEnumMemberReflection(r)) {
@@ -98,7 +96,7 @@ export function enumMemberReflection(r: J.Reflection, cf: ContextFormat): Signat
   return s
 }
 
-export function enumReflection(r: J.Reflection, cf: ContextFormat): Signature {
+export function enumReflection(cf: Context, r: J.Reflection): Signature {
   const s: Signature = []
 
   if (!isEnumReflection(r)) {
@@ -137,7 +135,7 @@ export function functionsDeclaration(f: J.Reflection): Signature {
   return s
 }
 
-export function interfaceReflection(r: J.Reflection, cf: ContextFormat): Signature {
+export function interfaceReflection(cf: Context, r: J.Reflection): Signature {
   const s: Signature = []
 
   if (!isInterfaceReflection(r)) {
@@ -170,7 +168,7 @@ export function methodDeclaration(m: J.Reflection): Signature {
   return s
 }
 
-export function propertyReflection(r: J.Reflection, cf: ContextFormat): Signature {
+export function propertyReflection(cf: Context, r: J.Reflection): Signature {
   const s: Signature = []
 
   if (!isPropertyReflection(r)) {
@@ -192,7 +190,7 @@ export function propertyReflection(r: J.Reflection, cf: ContextFormat): Signatur
   return s
 }
 
-export function typeAliasReflection(r: J.Reflection, cf: ContextFormat): Signature {
+export function typeAliasReflection(cf: Context, r: J.Reflection): Signature {
   const s: Signature = []
 
   if (!isTypeAliasReflection(r)) {
@@ -208,7 +206,7 @@ export function typeAliasReflection(r: J.Reflection, cf: ContextFormat): Signatu
   return s
 }
 
-export function variableDeclaration(r: J.Reflection, cf: ContextFormat): Signature {
+export function variableDeclaration(cf: Context, r: J.Reflection): Signature {
   const s: Signature = []
 
   if (!isVariableReflection(r)) {
@@ -267,7 +265,7 @@ export function value(p: J.Reflection): Signature {
   return s
 }
 
-export function type(t: J.SomeType, cf: ContextFormat): Signature {
+export function type(t: J.SomeType, cf: Context): Signature {
   if (isArrayType(t)) {
     return arrayType(t, cf)
   }
@@ -295,7 +293,7 @@ export function type(t: J.SomeType, cf: ContextFormat): Signature {
   return []
 }
 
-export function arrayType(a: J.ArrayType, cf: ContextFormat): Signature {
+export function arrayType(a: J.ArrayType, cf: Context): Signature {
   const s: Signature = []
   let t: Token
 
@@ -347,7 +345,7 @@ export function literalType(l: J.LiteralType): Signature {
   return s
 }
 
-export function referenceType(r: J.ReferenceType, cf: ContextFormat): Signature {
+export function referenceType(r: J.ReferenceType, cf: Context): Signature {
   const s: Signature = []
   let t: Token
 
@@ -356,26 +354,26 @@ export function referenceType(r: J.ReferenceType, cf: ContextFormat): Signature 
   }
 
   if (r.typeArguments) {
+    if (s.length === 0) {
+      t = new TypeToken()
+      t.text = r.name
+      s.push(t)
+    }
+
     t = new TextToken()
     t.text = "<"
     s.push(t)
 
-    if (r.typeArguments) {
-      for (const a of r.typeArguments) {
-        const b = type(a, cf)
-        cf.formatter.preprocess(b)
-        s.push(...b)
+    for (const a of r.typeArguments) {
+      const b = type(a, cf)
+      cf.f.preprocess(b)
+      s.push(...b)
 
-        t = new TextToken()
-        t.text = ", "
-        s.push(t)
-      }
-      s.pop()
-    } else {
-      t = new TypeToken()
-      t.text = "unknown"
+      t = new TextToken()
+      t.text = ", "
       s.push(t)
     }
+    s.pop()
 
     t = new TextToken()
     t.text = ">"
@@ -399,7 +397,7 @@ export function referenceType(r: J.ReferenceType, cf: ContextFormat): Signature 
   return s
 }
 
-export function reflectionType(r: J.ReflectionType, cf: ContextFormat): Signature {
+export function reflectionType(r: J.ReflectionType, cf: Context): Signature {
   const s: Signature = []
   let t: Token
 
@@ -460,7 +458,7 @@ export function reflectionType(r: J.ReflectionType, cf: ContextFormat): Signatur
   return s
 }
 
-export function templateLiteralType(tt: J.TemplateLiteralType, cf: ContextFormat): Signature {
+export function templateLiteralType(tt: J.TemplateLiteralType, cf: Context): Signature {
   const s: Signature = []
   let t: Token
 
@@ -482,7 +480,7 @@ export function templateLiteralType(tt: J.TemplateLiteralType, cf: ContextFormat
         s.push(t)
 
         const b = type(e, cf)
-        cf.formatter.preprocess(b)
+        cf.f.preprocess(b)
         s.push(...b)
 
         t = new TextToken()
@@ -502,7 +500,7 @@ export function templateLiteralType(tt: J.TemplateLiteralType, cf: ContextFormat
   return s
 }
 
-export function tupleType(tt: J.TupleType, cf: ContextFormat): Signature {
+export function tupleType(tt: J.TupleType, cf: Context): Signature {
   const s: Signature = []
   let t: Token
 
@@ -531,7 +529,7 @@ export function tupleType(tt: J.TupleType, cf: ContextFormat): Signature {
   return s
 }
 
-export function unionType(u: J.UnionType, cf: ContextFormat): Signature {
+export function unionType(u: J.UnionType, cf: Context): Signature {
   const s: Signature = []
   let t: Token
 
@@ -564,11 +562,15 @@ export function unionType(u: J.UnionType, cf: ContextFormat): Signature {
   return s
 }
 
-export function fragment(f: Fragment[], cf: ContextFormat): void {
+export function fragment(f: Fragment[], cf: Context): void {
   for (const e of f) {
     const ft = cf.trailOf(e)
     if (ft) {
       const t = cf.reflectionOf(ft)
+      if (!t) {
+        console.log(`Reflection for fragment ${e.name} not found`)
+        continue
+      }
       if (!isParameterReflection(t)) {
         return
       }
@@ -576,11 +578,13 @@ export function fragment(f: Fragment[], cf: ContextFormat): void {
         const b = type(t.type, cf)
         e.signature.concise.push(...b)
       }
+    } else {
+      console.log(`Trail for fragment ${e.name} not found`)
     }
   }
 }
 
-export function returns(r: (J.SomeType | undefined), cf: ContextFormat): Signature {
+export function returns(cf: Context, r: (J.SomeType | undefined)): Signature {
   const s: Signature = []
 
   if (r && r.type) {
@@ -595,7 +599,7 @@ export function returns(r: (J.SomeType | undefined), cf: ContextFormat): Signatu
   return s
 }
 
-function reference(t: number, n: string, cf: ContextFormat): Token | Reference {
+function reference(t: number, n: string, cf: Context): Token | Reference {
   let r: Token | Reference
   const id = cf.idOf(t)
 
@@ -605,6 +609,7 @@ function reference(t: number, n: string, cf: ContextFormat): Token | Reference {
     r.token = new TypeToken()
     r.token.text = n
   } else {
+    console.log(`Reflection id not found for ${n} typedoc reference id = ${t}`)
     r = new TypeToken()
     r.text = n
   }

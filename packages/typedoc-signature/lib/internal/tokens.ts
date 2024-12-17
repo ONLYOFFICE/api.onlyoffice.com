@@ -7,8 +7,10 @@ export class NewlineToken extends TextToken {
 
 export class IndentToken extends TextToken {
   processed = false
+  text = "_INDENT_"
+  indent: number
   constructor(i = 0) {
     super()
-    this.text = `_INDENT-${i}_`
+    this.indent = i
   }
 }
