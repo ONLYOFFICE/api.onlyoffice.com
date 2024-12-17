@@ -1314,7 +1314,7 @@ Example: true
 
 ### submitForm.resultMessage
 
-Defines a message displayed after forms are submitted. The follwoing values are available:
+Defines a message displayed after forms are submitted. The following values are available:
 
 - **""** - the message will not be displayed;
 - **null / undefined** - the default message will be displayed;
