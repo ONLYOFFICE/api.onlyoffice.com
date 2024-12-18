@@ -1306,13 +1306,34 @@ Example: true
 
 ## submitForm
 
-Defines if the **Complete & Submit** button is displayed or hidden on the top toolbar. Button will only be available for the *pdf* format. The default value is **false**.
+Starting from version 8.3, defines the **Complete & Submit** button settings. If this parameter is a boolean value, then it specifies whether the **Complete & Submit** button will be displayed or hidden on the top toolbar. Button will only be available for the *pdf* format. The default value is **true**.
+
+Type: object or boolean
+
+Example: true
+
+![Submit button](/assets/images/editor/submitForm.png)
+![Submit button](/assets/images/editor/submitForm-message.png)
+
+### submitForm.visible
+
+Defines whether the **Complete & Submit** button will be displayed or hidden on the top toolbar. Button will only be available for the *pdf* format. The default value is **true**.
 
 Type: boolean
 
 Example: true
 
-![Submit button](/assets/images/editor/submitForm.png)
+### submitForm.resultMessage
+
+Defines a message displayed after forms are submitted. The following values are available:
+
+- **""** - the message will not be displayed;
+- **null / undefined** - the default message will be displayed;
+- **"text"** - any text that the user specifies will be displayed.
+
+Type: string
+
+Example: "text"
 
 ## toolbar
 
@@ -1531,7 +1552,10 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
         trackChanges: true,
         hoverMode: false,
       },
-      submitForm: true,
+      submitForm: {
+        visible: true,
+        resultMessage: "text",
+      },
       toolbarHideFileName: false,
       uiTheme: "theme-dark",
       unit: "cm",

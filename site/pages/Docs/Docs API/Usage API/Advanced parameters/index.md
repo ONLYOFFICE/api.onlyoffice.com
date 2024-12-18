@@ -206,7 +206,10 @@ const config = {
         trackChanges: true,
         hoverMode: false,
       },
-      submitForm: true,
+      submitForm: {
+        visible: true,
+        resultMessage: "text",
+      },
       toolbarHideFileName: false,
       uiTheme: "theme-dark",
       unit: "cm",

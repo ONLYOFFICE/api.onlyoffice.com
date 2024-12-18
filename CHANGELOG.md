@@ -1,5 +1,6 @@
 # Change Log
 
+- docs api: the editorConfig.customization.submitForm parameter can now be used as an object
 - docs api: the editorConfig.customization.compactToolbar parameter is now available for the viewer
 - docs api: added the editorConfig.customization.pointerMode parameter
 - docs api: updated the WOPI section
