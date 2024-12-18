@@ -31,6 +31,7 @@ The customization section allows to customize the editor interface so that it lo
 - [mentionShare](#mentionshare)
 - [mobile](#mobile)
 - [plugins](#plugins)
+- [pointerMode](#pointermode)
 - [review](#review)
 - [reviewDisplay](#reviewdisplay)
 - [rightMenu](#rightmenu)
@@ -177,7 +178,7 @@ Example: false
 
 ## compactToolbar
 
-Defines if the top toolbar type displayed is full (**false**) or compact (**true**). The default value is **false**.
+Defines if the top toolbar type displayed is full (**false**) or compact (**true**). The default value is **false**. Starting from version 8.3, this setting is also available for the viewer. The default value for the *view* mode is **true**.
 
 Type: boolean
 
@@ -1157,6 +1158,16 @@ Type: boolean
 
 Example: true
 
+## pointerMode
+
+Defines the pointer mode (**select** or **hand**) when the presentation editor is loaded in the viewer. The default value is **select**.
+
+Type: string
+
+Example: "select"
+
+![Pointer mode](/assets/images/editor/pointerMode.png)
+
 ## review
 
 Contains the information about the review mode.
@@ -1533,6 +1544,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
         standardView: false,
       },
       plugins: true,
+      pointerMode: "select",
       review: {
         hideReviewDisplay: false,
         showReviewChanges: false,

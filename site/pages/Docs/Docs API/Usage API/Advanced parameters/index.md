@@ -198,6 +198,7 @@ const config = {
         standardView: false,
       },
       plugins: true,
+      pointerMode: "select",
       review: {
         hideReviewDisplay: false,
         showReviewChanges: false,
