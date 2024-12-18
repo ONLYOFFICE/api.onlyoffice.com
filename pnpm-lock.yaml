@@ -1896,10 +1896,6 @@ importers:
         version: 5.4.5
 
   packages/preact-merge:
-    dependencies:
-      preact:
-        specifier: 10.22.0
-        version: 10.22.0
     devDependencies:
       esbuild:
         specifier: 0.23.0
