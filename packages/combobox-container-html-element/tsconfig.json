@@ -1,4 +1,3 @@
 {
-  "extends": "../../tsconfig.base.next.json",
-  "include": ["lib", "index.d.ts", "wds.config.ts"]
+  "extends": "../../tsconfig.base.next.json"
 }
