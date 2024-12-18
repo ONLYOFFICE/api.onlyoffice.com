@@ -2022,9 +2022,6 @@ importers:
       '@types/hast':
         specifier: 3.0.4
         version: 3.0.4
-      typescript:
-        specifier: 5.4.5
-        version: 5.4.5
       unist-util-visit:
         specifier: 5.0.0
         version: 5.0.0
@@ -2035,9 +2032,15 @@ importers:
       '@onlyoffice/rehype-metastring':
         specifier: workspace:^
         version: link:../rehype-metastring
+      esbuild:
+        specifier: 0.23.0
+        version: 0.23.0
       rimraf:
         specifier: 6.0.1
         version: 6.0.1
+      typescript:
+        specifier: 5.4.5
+        version: 5.4.5
 
   packages/rehype-description-list:
     dependencies:
