@@ -12,6 +12,9 @@
     "test:unit": "c8 --config ../../c8.config.json tsx node_modules/uvu/bin.js lib ^.*\\.test\\.ts$",
     "test": "pnpm test:types && pnpm test:unit"
   },
+  "dependencies": {
+    "@types/node": "20.12.12"
+  },
   "devDependencies": {
     "c8": "9.1.0",
     "esbuild": "0.23.0",
