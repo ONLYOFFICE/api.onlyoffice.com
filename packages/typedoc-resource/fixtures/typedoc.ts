@@ -1,4 +1,4 @@
-import {type Entity} from "@onlyoffice/library-declaration/next.ts"
+import {type Entity} from "@onlyoffice/library-declaration/next.js"
 import c from "./typedoc.json" with {type: "json"}
 
 export class Resource {

@@ -4,7 +4,7 @@ import {
   DeclarationEntity,
   type Entity,
   GroupEntity,
-} from "@onlyoffice/library-declaration/next.ts"
+} from "@onlyoffice/library-declaration/next.js"
 import {Console as C1} from "@onlyoffice/typedoc-transformer/console.ts"
 import {Application, type JSONOutput as J} from "typedoc"
 import {test} from "uvu"

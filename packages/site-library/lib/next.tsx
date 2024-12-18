@@ -1,4 +1,4 @@
-import * as L from "@onlyoffice/library-declaration/next.ts"
+import * as L from "@onlyoffice/library-declaration/next.js"
 import {type ChildrenIncludable} from "@onlyoffice/preact-types"
 import * as SiteGlossary from "@onlyoffice/site-glossary"
 import * as SiteSignature from "@onlyoffice/site-signature"
