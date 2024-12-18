@@ -1,4 +1,4 @@
-import {type Declaration, type Entity, type Fragment, GroupEntity} from "@onlyoffice/library-declaration/next.ts"
+import {GroupEntity} from "@onlyoffice/library-declaration/next.ts"
 import {
   isCallSignatureReflection,
   isClassReflection,
@@ -13,31 +13,15 @@ import {
   isTypeAliasReflection,
   isVariableReflection,
 } from "@onlyoffice/typedoc-util-is-reflection"
-import {type JSONOutput as J} from "typedoc"
 import {Console} from "./console.ts"
 import * as C from "./internal/concise.ts"
+import {type Context} from "./internal/context.ts"
 import {Formatter} from "./internal/formatter.ts"
 import {State} from "./internal/state.ts"
+import {type Transport} from "./internal/transport.ts"
 import * as V from "./internal/verbose.ts"
 
 const console = Console.shared
-
-export interface Context {
-  s: State
-  f: Formatter
-  trailOf(t: Declaration | Fragment): FlatTrail | undefined
-  reflectionOf(t: FlatTrail): J.Reflection | undefined
-  idOf(id: number): number | undefined
-}
-
-export interface Transport {
-  entities: Entity[]
-  trailOf(t: Declaration | Fragment): FlatTrail | undefined
-  reflectionOf(t: FlatTrail): J.Reflection | undefined
-  idOf(id: number): number | undefined
-}
-
-export type FlatTrail = number[]
 
 export function compute(ct: Transport): void {
   for (const e of ct.entities) {
@@ -69,9 +53,7 @@ export function compute(ct: Transport): void {
     const cf: Context = {
       s: new State(),
       f: new Formatter(),
-      trailOf: ct.trailOf.bind(ct),
-      reflectionOf: ct.reflectionOf.bind(ct),
-      idOf: ct.idOf.bind(ct),
+      t: ct,
     }
 
     const f = e.declaration.parameters
@@ -80,7 +62,7 @@ export function compute(ct: Transport): void {
     const r = e.declaration.returns.signature.concise
 
     if (f.length !== 0) {
-      C.fragment(f, cf)
+      C.fragments(cf, f)
     }
 
     if (isClassReflection(t)) {
@@ -117,7 +99,7 @@ export function compute(ct: Transport): void {
       c.push(...C.variableDeclaration(cf, t))
     }
 
-    cf.f.format(e.declaration.signature.verbose)
+    e.declaration.signature.verbose = cf.f.format(e.declaration.signature.verbose)
 
     console.log(`Finish computing the signature for ${e.declaration.name} id = ${e.id}`)
   }

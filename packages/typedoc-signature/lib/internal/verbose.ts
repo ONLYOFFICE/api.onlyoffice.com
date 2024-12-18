@@ -37,20 +37,11 @@ import {
 } from "@onlyoffice/typedoc-util-is-type"
 import {type JSONOutput as J} from "typedoc"
 import {Console} from "../console.ts"
-import {type Formatter} from "./formatter.ts"
-import {type State} from "./state.ts"
+import {type Context} from "./context.ts"
 
 const console = Console.shared
 
-export interface Context {
-  s: State
-  f: Formatter
-  idOf(id: number): number | undefined
-}
-
-export type FlatTrail = number[]
-
-export function classDeclaration(cf: Context, r: J.Reflection): Signature {
+export function classDeclaration(ctx: Context, r: J.Reflection): Signature {
   const s: Signature = []
 
   if (!isClassReflection(r)) {
@@ -95,35 +86,35 @@ export function classDeclaration(cf: Context, r: J.Reflection): Signature {
       t.text = " "
       s.push(t)
 
-      const b = type(e, cf)
-      cf.f.preprocess(b)
+      let b = type(ctx, e)
+      b = ctx.f.preprocess(b)
       s.push(...b)
     }
   }
 
   const ss: Signature = []
   if (r.children) {
-    cf.s.in()
+    ctx.s.in()
 
     t = new TextToken()
     t.text = " {"
     ss.push(t)
 
-    ss.push(...newline(cf))
+    ss.push(...newline(ctx))
 
     for (const c of r.children) {
       if (isConstructorReflection(c) && c.signatures) {
         for (const cs of c.signatures) {
           if (isSignatureReflection(cs)) {
-            const cd = constructorDeclaration(cf, cs)
+            const cd = constructorDeclaration(ctx, cs)
             ss.push(...cd)
-            ss.push(...newline(cf))
+            ss.push(...newline(ctx))
           }
         }
       }
 
       if (isPropertyReflection(c)) {
-        const pr = propertyReflection(cf, c)
+        const pr = propertyReflection(ctx, c)
         const ts: Signature = []
         for (const e of pr) {
           if (e instanceof EntityToken) {
@@ -136,13 +127,13 @@ export function classDeclaration(cf: Context, r: J.Reflection): Signature {
         }
         ss.push(...ts)
 
-        ss.push(...newline(cf))
+        ss.push(...newline(ctx))
       }
 
       if (isMethodReflection(c) && c.signatures) {
         for (const cs of c.signatures) {
           if (isSignatureReflection(cs)) {
-            const md = methodDeclaration(cs, c, cf)
+            const md = methodDeclaration(cs, c, ctx)
             const ts: Signature = []
             for (const e of md) {
               if (e instanceof EntityToken) {
@@ -154,12 +145,12 @@ export function classDeclaration(cf: Context, r: J.Reflection): Signature {
               }
             }
             ss.push(...ts)
-            ss.push(...newline(cf))
+            ss.push(...newline(ctx))
           }
         }
       }
     }
-    cf.s.out()
+    ctx.s.out()
 
     ss.pop()
 
@@ -173,8 +164,8 @@ export function classDeclaration(cf: Context, r: J.Reflection): Signature {
   return s
 }
 
-export function constructorDeclaration(cf: Context, r: J.Reflection): Signature {
-  const s: Signature = []
+export function constructorDeclaration(ctx: Context, r: J.Reflection): Signature {
+  let s: Signature = []
 
   if (!isSignatureReflection(r)) {
     return s
@@ -184,15 +175,15 @@ export function constructorDeclaration(cf: Context, r: J.Reflection): Signature 
   t.text = "constructor"
   s.push(t)
 
-  const b = parameters(r, cf)
+  const b = parameters(r, ctx)
   s.push(...b)
 
-  cf.f.preprocess(s)
+  s = ctx.f.preprocess(s)
 
   return s
 }
 
-export function enumMemberReflection(cf: Context, r: J.Reflection): Signature {
+export function enumMemberReflection(ctx: Context, r: J.Reflection): Signature {
   const s: Signature = []
 
   if (!isEnumMemberReflection(r)) {
@@ -210,8 +201,8 @@ export function enumMemberReflection(cf: Context, r: J.Reflection): Signature {
   s.push(t)
 
   if (r.type) {
-    const b = type(r.type, cf)
-    cf.f.preprocess(b)
+    let b = type(ctx, r.type)
+    b = ctx.f.preprocess(b)
     s.push(...b)
   } else {
     t = new TypeToken()
@@ -222,7 +213,7 @@ export function enumMemberReflection(cf: Context, r: J.Reflection): Signature {
   return s
 }
 
-export function enumReflection(cf: Context, r: J.Reflection): Signature {
+export function enumReflection(ctx: Context, r: J.Reflection): Signature {
   const s: Signature = []
 
   if (!isEnumReflection(r)) {
@@ -252,12 +243,12 @@ export function enumReflection(cf: Context, r: J.Reflection): Signature {
   s.push(t)
 
   if (r.children) {
-    cf.s.in()
+    ctx.s.in()
     for (const c of r.children) {
       if (c.type) {
-        s.push(...newline(cf))
+        s.push(...newline(ctx))
 
-        const b = value(cf, c)
+        const b = value(ctx, c)
         s.push(...b)
 
         t = new TextToken()
@@ -265,10 +256,10 @@ export function enumReflection(cf: Context, r: J.Reflection): Signature {
         s.push(t)
       }
     }
-    cf.s.out()
+    ctx.s.out()
   }
 
-  s.push(...newline(cf))
+  s.push(...newline(ctx))
 
   t = new TextToken()
   t.text = "}"
@@ -277,7 +268,7 @@ export function enumReflection(cf: Context, r: J.Reflection): Signature {
   return s
 }
 
-export function functionsDeclaration(cf: Context, r: J.Reflection): Signature {
+export function functionsDeclaration(ctx: Context, r: J.Reflection): Signature {
   const s: Signature = []
 
   if (!isCallSignatureReflection(r)) {
@@ -298,8 +289,8 @@ export function functionsDeclaration(cf: Context, r: J.Reflection): Signature {
   t.text = r.name
   s.push(t)
 
-  const b = parameters(r, cf)
-  cf.f.preprocess(b)
+  let b = parameters(r, ctx)
+  b = ctx.f.preprocess(b)
   s.push(...b)
 
   t = new TextToken()
@@ -307,8 +298,8 @@ export function functionsDeclaration(cf: Context, r: J.Reflection): Signature {
   s.push(t)
 
   if (r.type) {
-    const b = type(r.type, cf)
-    cf.f.preprocess(b)
+    let b = type(ctx, r.type)
+    b = ctx.f.preprocess(b)
     s.push(...b)
   } else {
     t = new TypeToken()
@@ -319,7 +310,7 @@ export function functionsDeclaration(cf: Context, r: J.Reflection): Signature {
   return s
 }
 
-export function interfaceReflection(cf: Context, r: J.Reflection): Signature {
+export function interfaceReflection(ctx: Context, r: J.Reflection): Signature {
   const s: Signature = []
 
   if (!isInterfaceReflection(r)) {
@@ -349,12 +340,12 @@ export function interfaceReflection(cf: Context, r: J.Reflection): Signature {
   s.push(t)
 
   if (r.children) {
-    cf.s.in()
+    ctx.s.in()
     for (const c of r.children) {
-      s.push(...newline(cf))
+      s.push(...newline(ctx))
 
       if (c.type) {
-        const b = value(cf, c)
+        const b = value(ctx, c)
         s.push(...b)
 
         t = new TextToken()
@@ -363,12 +354,12 @@ export function interfaceReflection(cf: Context, r: J.Reflection): Signature {
       }
       if (c.signatures) {
         for (const v of c.signatures) {
-          const ts: Signature = []
+          let ts: Signature = []
           t = new ParameterToken()
           t.text = v.name
           ts.push(t)
 
-          const b = parameters(v, cf)
+          const b = parameters(v, ctx)
           ts.push(...b)
 
           if (v.type) {
@@ -376,11 +367,11 @@ export function interfaceReflection(cf: Context, r: J.Reflection): Signature {
             t.text = ": "
             ts.push(t)
 
-            const b = type(v.type, cf)
+            const b = type(ctx, v.type)
             ts.push(...b)
           }
 
-          cf.f.preprocess(ts)
+          ts = ctx.f.preprocess(ts)
           s.push(...ts)
 
           t = new TextToken()
@@ -389,11 +380,11 @@ export function interfaceReflection(cf: Context, r: J.Reflection): Signature {
         }
       }
     }
-    cf.s.out()
+    ctx.s.out()
     s.pop()
   }
 
-  s.push(...newline(cf))
+  s.push(...newline(ctx))
 
   t = new TextToken()
   t.text = "}"
@@ -405,9 +396,9 @@ export function interfaceReflection(cf: Context, r: J.Reflection): Signature {
 export function methodDeclaration(
   r: J.Reflection,
   p: J.Reflection,
-  cf: Context,
+  ctx: Context,
 ): Signature {
-  const s: Signature = []
+  let s: Signature = []
 
   if (!isSignatureReflection(r)) {
     return s
@@ -428,7 +419,7 @@ export function methodDeclaration(
   t.text = r.name
   s.push(t)
 
-  const b = parameters(r, cf)
+  const b = parameters(r, ctx)
   s.push(...b)
 
   t = new TextToken()
@@ -436,8 +427,8 @@ export function methodDeclaration(
   s.push(t)
 
   if (r.type) {
-    const b = type(r.type, cf)
-    cf.f.preprocess(b)
+    let b = type(ctx, r.type)
+    b = ctx.f.preprocess(b)
     s.push(...b)
   } else {
     t = new TypeToken()
@@ -445,12 +436,12 @@ export function methodDeclaration(
     s.push(t)
   }
 
-  cf.f.preprocess(s)
+  s = ctx.f.preprocess(s)
   return s
 }
 
-export function propertyReflection(cf: Context, r: J.Reflection): Signature {
-  const s: Signature = []
+export function propertyReflection(ctx: Context, r: J.Reflection): Signature {
+  let s: Signature = []
 
   if (!isPropertyReflection(r)) {
     return s
@@ -479,15 +470,15 @@ export function propertyReflection(cf: Context, r: J.Reflection): Signature {
   s.push(t)
 
   if (r.type) {
-    const b = type(r.type, cf)
+    const b = type(ctx, r.type)
     s.push(...b)
   }
 
-  cf.f.preprocess(s)
+  s = ctx.f.preprocess(s)
   return s
 }
 
-export function typeAliasReflection(cf: Context, r: J.Reflection): Signature {
+export function typeAliasReflection(ctx: Context, r: J.Reflection): Signature {
   const s: Signature = []
 
   if (!isTypeAliasReflection(r)) {
@@ -513,16 +504,16 @@ export function typeAliasReflection(cf: Context, r: J.Reflection): Signature {
   s.push(t)
 
   if (r.type) {
-    const b = type(r.type, cf)
-    cf.f.preprocess(b)
+    let b = type(ctx, r.type)
+    b = ctx.f.preprocess(b)
     s.push(...b)
   }
 
   return s
 }
 
-export function variableDeclaration(cf: Context, r: J.Reflection): Signature {
-  const s: Signature = []
+export function variableDeclaration(ctx: Context, r: J.Reflection): Signature {
+  let s: Signature = []
 
   if (!isVariableReflection(r)) {
     return s
@@ -547,15 +538,15 @@ export function variableDeclaration(cf: Context, r: J.Reflection): Signature {
   s.push(t)
 
   if (r.type) {
-    const b = type(r.type, cf)
+    const b = type(ctx, r.type)
     s.push(...b)
   }
 
-  cf.f.preprocess(s)
+  s = ctx.f.preprocess(s)
   return s
 }
 
-export function parameters(r: J.SignatureReflection, cf: Context): Signature {
+export function parameters(r: J.SignatureReflection, ctx: Context): Signature {
   const s: Signature = []
   let t: Token
 
@@ -564,16 +555,16 @@ export function parameters(r: J.SignatureReflection, cf: Context): Signature {
   s.push(t)
 
   if (r.parameters && r.parameters.length !== 0) {
-    cf.s.in()
+    ctx.s.in()
     for (const f of r.parameters) {
       if (f.type) {
-        t = cf.s.nt()
+        t = ctx.s.nt()
         s.push(t)
 
-        t = cf.s.it()
+        t = ctx.s.it()
         s.push(t)
 
-        const b = value(cf, f)
+        const b = value(ctx, f)
         s.push(...b)
 
         t = new TextToken()
@@ -581,13 +572,13 @@ export function parameters(r: J.SignatureReflection, cf: Context): Signature {
         s.push(t)
       }
     }
-    cf.s.out()
+    ctx.s.out()
     s.pop()
 
-    t = cf.s.nt()
+    t = ctx.s.nt()
     s.push(t)
 
-    t = cf.s.it()
+    t = ctx.s.it()
     s.push(t)
   }
 
@@ -598,8 +589,8 @@ export function parameters(r: J.SignatureReflection, cf: Context): Signature {
   return s
 }
 
-export function value(cf: Context, r: J.Reflection): Signature {
-  const s: Signature = []
+export function value(ctx: Context, r: J.Reflection): Signature {
+  let s: Signature = []
   let t: Token
 
   if (
@@ -616,10 +607,13 @@ export function value(cf: Context, r: J.Reflection): Signature {
 
   t = new TextToken()
   t.text = ": "
+  if (r.flags.isOptional) {
+    t.text = `?${t.text}`
+  }
   s.push(t)
 
   if (r.type) {
-    const b = type(r.type, cf)
+    const b = type(ctx, r.type)
     s.push(...b)
   }
 
@@ -637,7 +631,7 @@ export function value(cf: Context, r: J.Reflection): Signature {
     s.push(t)
   }
 
-  cf.f.preprocess(s)
+  s = ctx.f.preprocess(s)
   return s
 }
 
@@ -691,9 +685,9 @@ export function flags(f: J.ReflectionFlags): Signature | undefined {
   return undefined
 }
 
-export function type(t: J.SomeType, cf: Context): Signature {
+export function type(ctx: Context, t: J.SomeType): Signature {
   if (isArrayType(t)) {
-    return arrayType(t, cf)
+    return arrayType(ctx, t)
   }
   if (isIntrinsicType(t)) {
     return intrinsicType(t)
@@ -702,25 +696,25 @@ export function type(t: J.SomeType, cf: Context): Signature {
     return literalType(t)
   }
   if (isReferenceType(t)) {
-    return referenceType(t, cf)
+    return referenceType(ctx, t)
   }
   if (isReflectionType(t)) {
-    return reflectionType(t, cf)
+    return reflectionType(ctx, t)
   }
   if (isTemplateLiteralType(t)) {
-    return templateLiteralType(t, cf)
+    return templateLiteralType(ctx, t)
   }
   if (isTupleType(t)) {
-    return tupleType(t, cf)
+    return tupleType(ctx, t)
   }
   if (isUnionType(t)) {
-    return unionType(t, cf)
+    return unionType(ctx, t)
   }
   return []
 }
 
-export function arrayType(a: J.ArrayType, cf: Context): Signature {
-  const s: Signature = []
+export function arrayType(ctx: Context, a: J.ArrayType): Signature {
+  let s: Signature = []
   let t: Token
 
   if (isUnionType(a.elementType.type)) {
@@ -729,14 +723,14 @@ export function arrayType(a: J.ArrayType, cf: Context): Signature {
     s.push(t)
   }
 
-  const b = type(a.elementType, cf)
+  const b = type(ctx, a.elementType)
   s.push(...b)
 
   if (isUnionType(a.elementType.type)) {
-    t = cf.s.nt()
+    t = ctx.s.nt()
     s.push(t)
 
-    t = cf.s.it()
+    t = ctx.s.it()
     s.push(t)
 
     t = new TextToken()
@@ -748,7 +742,7 @@ export function arrayType(a: J.ArrayType, cf: Context): Signature {
   t.text = "[]"
   s.push(t)
 
-  cf.f.preprocess(s)
+  s = ctx.f.preprocess(s)
   return s
 }
 
@@ -778,12 +772,12 @@ export function literalType(l: J.LiteralType): Signature {
   return s
 }
 
-export function referenceType(r: J.ReferenceType, cf: Context): Signature {
+export function referenceType(ctx: Context, r: J.ReferenceType): Signature {
   const s: Signature = []
   let t: Token
 
   if (typeof r.target === "number") {
-    const id = cf.idOf(r.target)
+    const id = ctx.t.idOf(r.target)
     if (id) {
       const rt = new Reference()
       rt.id = String(id)
@@ -807,8 +801,8 @@ export function referenceType(r: J.ReferenceType, cf: Context): Signature {
     s.push(t)
 
     for (const a of r.typeArguments) {
-      const b = type(a, cf)
-      cf.f.preprocess(b)
+      let b = type(ctx, a)
+      b = ctx.f.preprocess(b)
       s.push(...b)
 
       t = new TextToken()
@@ -839,14 +833,14 @@ export function referenceType(r: J.ReferenceType, cf: Context): Signature {
   return s
 }
 
-export function reflectionType(r: J.ReflectionType, cf: Context): Signature {
+export function reflectionType(ctx: Context, r: J.ReflectionType): Signature {
   const s: Signature = []
   let t: Token
 
   if (r.declaration.signatures) {
     for (const c of r.declaration.signatures) {
-      const ts: Signature = []
-      const b = parameters(c, cf)
+      let ts: Signature = []
+      const b = parameters(c, ctx)
       ts.push(...b)
 
       if (c.type) {
@@ -854,11 +848,11 @@ export function reflectionType(r: J.ReflectionType, cf: Context): Signature {
         t.text = " => "
         ts.push(t)
 
-        const b = type(c.type, cf)
+        const b = type(ctx, c.type)
         ts.push(...b)
       }
 
-      cf.f.preprocess(ts)
+      ts = ctx.f.preprocess(ts)
       s.push(...ts)
     }
   } else if (r.declaration.children) {
@@ -866,12 +860,12 @@ export function reflectionType(r: J.ReflectionType, cf: Context): Signature {
     t.text = "{"
     s.push(t)
 
-    cf.s.in()
+    ctx.s.in()
     for (const c of r.declaration.children) {
       if (c.type) {
-        s.push(...newline(cf))
+        s.push(...newline(ctx))
 
-        const ts: Signature = []
+        let ts: Signature = []
         t = new ParameterToken()
         t.text = c.name
         ts.push(t)
@@ -883,16 +877,16 @@ export function reflectionType(r: J.ReflectionType, cf: Context): Signature {
         }
         ts.push(t)
 
-        const b = type(c.type, cf)
+        const b = type(ctx, c.type)
         ts.push(...b)
 
-        cf.f.preprocess(ts)
+        ts = ctx.f.preprocess(ts)
         s.push(...ts)
       }
     }
-    cf.s.out()
+    ctx.s.out()
 
-    s.push(...newline(cf))
+    s.push(...newline(ctx))
 
     t = new TextToken()
     t.text = "}"
@@ -910,7 +904,7 @@ export function reflectionType(r: J.ReflectionType, cf: Context): Signature {
   return s
 }
 
-export function templateLiteralType(tt: J.TemplateLiteralType, cf: Context): Signature {
+export function templateLiteralType(ctx: Context, tt: J.TemplateLiteralType): Signature {
   const s: Signature = []
   let t: Token
 
@@ -931,8 +925,8 @@ export function templateLiteralType(tt: J.TemplateLiteralType, cf: Context): Sig
         t.text = "${"
         s.push(t)
 
-        const b = type(e, cf)
-        cf.f.preprocess(b)
+        let b = type(ctx, e)
+        b = ctx.f.preprocess(b)
         s.push(...b)
 
         t = new TextToken()
@@ -952,7 +946,7 @@ export function templateLiteralType(tt: J.TemplateLiteralType, cf: Context): Sig
   return s
 }
 
-export function tupleType(tt: J.TupleType, cf: Context): Signature {
+export function tupleType(ctx: Context, tt: J.TupleType): Signature {
   const s: Signature = []
   let t: Token
 
@@ -965,8 +959,8 @@ export function tupleType(tt: J.TupleType, cf: Context): Signature {
   s.push(t)
 
   for (const e of tt.elements) {
-    const b = type(e, cf)
-    cf.f.preprocess(b)
+    let b = type(ctx, e)
+    b = ctx.f.preprocess(b)
     s.push(...b)
 
     t = new TextToken()
@@ -982,7 +976,7 @@ export function tupleType(tt: J.TupleType, cf: Context): Signature {
   return s
 }
 
-export function unionType(u: J.UnionType, cf: Context): Signature {
+export function unionType(ctx: Context, u: J.UnionType): Signature {
   const s: Signature = []
   let t: Token
 
@@ -990,12 +984,12 @@ export function unionType(u: J.UnionType, cf: Context): Signature {
     return s
   }
 
-  cf.s.in()
+  ctx.s.in()
   for (const ts of u.types) {
-    t = cf.s.nt()
+    t = ctx.s.nt()
     s.push(t)
 
-    t = cf.s.it()
+    t = ctx.s.it()
     s.push(t)
 
     if (isReflectionType(ts.type)) {
@@ -1004,8 +998,8 @@ export function unionType(u: J.UnionType, cf: Context): Signature {
       s.push(t)
     }
 
-    const b = type(ts, cf)
-    cf.f.preprocess(b)
+    let b = type(ctx, ts)
+    b = ctx.f.preprocess(b)
     s.push(...b)
 
     if (ts.type === "reflection") {
@@ -1018,20 +1012,20 @@ export function unionType(u: J.UnionType, cf: Context): Signature {
     t.text = " | "
     s.push(t)
   }
-  cf.s.out()
+  ctx.s.out()
   s.pop()
 
   return s
 }
 
-function newline(cf: Context): Signature {
+function newline(ctx: Context): Signature {
   const s: Signature = []
 
-  const nt = cf.s.nt()
+  const nt = ctx.s.nt()
   nt.processed = true
   s.push(nt)
 
-  const it = cf.s.it()
+  const it = ctx.s.it()
   it.processed = true
   s.push(it)
 

@@ -6,7 +6,7 @@ export class Formatter {
   l = 100
   n = "\n"
 
-  preprocess(s: Signature): void {
+  preprocess(s: Signature): Signature {
     let l = 0
     let f = false // has a formatted signature in the child elements
 
@@ -35,12 +35,12 @@ export class Formatter {
         }
       }
 
-      s.length = 0
-      s.push(...ts)
+      return ts
     }
+    return s
   }
 
-  format(s: Signature): void {
+  format(s: Signature): Signature {
     const ts: Signature = []
     let t: Token
 
@@ -59,8 +59,6 @@ export class Formatter {
       }
     }
 
-    s.length = 0
-    s.push(...ts)
+    return ts
   }
 }
-
