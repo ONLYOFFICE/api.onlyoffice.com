@@ -2096,9 +2096,6 @@ importers:
       json5:
         specifier: 2.2.3
         version: 2.2.3
-      typescript:
-        specifier: 5.4.5
-        version: 5.4.5
       unist-util-visit:
         specifier: 5.0.0
         version: 5.0.0
@@ -2112,6 +2109,9 @@ importers:
       c8:
         specifier: 9.1.0
         version: 9.1.0
+      esbuild:
+        specifier: 0.23.0
+        version: 0.23.0
       rehype-raw:
         specifier: 7.0.0
         version: 7.0.0
@@ -2130,6 +2130,9 @@ importers:
       tsx:
         specifier: 4.16.5
         version: 4.16.5
+      typescript:
+        specifier: 5.4.5
+        version: 5.4.5
       unified:
         specifier: 11.0.5
         version: 11.0.5
