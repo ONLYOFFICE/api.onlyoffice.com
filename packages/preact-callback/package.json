@@ -5,15 +5,19 @@
   "main": "lib/main.tsx",
   "scripts": {
     "clean": "rimraf node_modules",
+    "build:code": "esbuild --outdir=dist --tsconfig=tsconfig.emit.json --sourcemap lib/*",
+    "build:types": "tsc --project tsconfig.emit.json",
+    "build": "pnpm build:types && pnpm build:code",
     "test:types": "tsc",
     "test": "pnpm test:types"
   },
   "dependencies": {
     "@onlyoffice/preact-types": "workspace:^",
-    "preact": "10.22.0",
-    "typescript": "5.4.5"
+    "preact": "10.22.0"
   },
   "devDependencies": {
-    "rimraf": "6.0.1"
+    "esbuild": "0.23.0",
+    "rimraf": "6.0.1",
+    "typescript": "5.4.5"
   }
 }
