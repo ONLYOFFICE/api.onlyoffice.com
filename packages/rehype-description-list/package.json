@@ -14,16 +14,17 @@
     "@onlyoffice/hast-util-is-text": "workspace:^",
     "@types/hast": "3.0.4",
     "hastscript": "8.0.0",
-    "typescript": "5.4.5",
     "unist-util-visit": "5.0.0"
   },
   "devDependencies": {
     "@types/node": "20.12.12",
     "c8": "9.1.0",
+    "esbuild": "0.23.0",
     "rehype-parse": "9.0.0",
     "rehype-stringify": "10.0.0",
     "rimraf": "6.0.1",
     "tsx": "4.16.5",
+    "typescript": "5.4.5",
     "unified": "11.0.5",
     "uvu": "0.5.6"
   }
