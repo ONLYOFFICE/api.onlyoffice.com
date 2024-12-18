@@ -1994,9 +1994,9 @@ importers:
 
   packages/radiogroup-container-html-element:
     dependencies:
-      typescript:
-        specifier: 5.4.5
-        version: 5.4.5
+      '@types/web':
+        specifier: 0.0.187
+        version: 0.0.187
     devDependencies:
       '@web/dev-server':
         specifier: 0.4.4
@@ -2013,6 +2013,9 @@ importers:
       rimraf:
         specifier: 6.0.1
         version: 6.0.1
+      typescript:
+        specifier: 5.4.5
+        version: 5.4.5
 
   packages/rehype-clean:
     dependencies:

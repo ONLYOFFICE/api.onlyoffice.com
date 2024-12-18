@@ -2,21 +2,28 @@
   "name": "@onlyoffice/radiogroup-container-html-element",
   "type": "module",
   "private": true,
-  "main": "lib/main.ts",
+  "main": "dist/main.js",
   "scripts": {
     "clean": "rimraf node_modules",
+    "build:code": "esbuild --outdir=dist --tsconfig=tsconfig.emit.json --sourcemap lib/*",
+    "build:types": "tsc --project tsconfig.emit.json",
+    "build": "pnpm build:types && pnpm build:code",
     "demo": "wds . --watch",
     "test:types": "tsc",
     "test": "pnpm test:types"
   },
+  "peerDependencies": {
+    "preact": "10.22.0"
+  },
   "dependencies": {
-    "typescript": "5.4.5"
+    "@types/web": "0.0.187"
   },
   "devDependencies": {
     "@web/dev-server": "0.4.4",
     "@web/dev-server-esbuild": "1.0.2",
     "esbuild": "0.23.0",
     "preact": "10.22.0",
-    "rimraf": "6.0.1"
+    "rimraf": "6.0.1",
+    "typescript": "5.4.5"
   }
 }
