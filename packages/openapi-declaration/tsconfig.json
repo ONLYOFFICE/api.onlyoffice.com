@@ -1,8 +1,4 @@
 {
   "extends": "../../tsconfig.base.next.json",
-  "compilerOptions": {
-    "rootDir": "lib",
-    "outDir": "dist"
-  },
   "include": ["lib"]
 }
