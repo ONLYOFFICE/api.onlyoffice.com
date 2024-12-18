@@ -4,7 +4,7 @@
   "private": true,
   "main": "dist/main.js",
   "scripts": {
-    "build:code": "esbuild lib/* --outdir=dist",
+    "build:code": "esbuild --outdir=dist --tsconfig=tsconfig.emit.json --sourcemap lib/*",
     "build:types": "tsc --project tsconfig.emit.json",
     "build": "pnpm build:types && pnpm build:code",
     "clean": "rimraf coverage dist node_modules",
