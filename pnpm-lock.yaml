@@ -1887,13 +1887,16 @@ importers:
       preact:
         specifier: 10.22.0
         version: 10.22.0
-      typescript:
-        specifier: 5.4.5
-        version: 5.4.5
     devDependencies:
+      esbuild:
+        specifier: 0.23.0
+        version: 0.23.0
       rimraf:
         specifier: 6.0.1
         version: 6.0.1
+      typescript:
+        specifier: 5.4.5
+        version: 5.4.5
 
   packages/preact-merge:
     dependencies:
