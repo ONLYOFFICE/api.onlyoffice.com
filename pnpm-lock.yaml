@@ -724,9 +724,6 @@ importers:
       p-queue:
         specifier: 6.6.2
         version: 6.6.2
-      typescript:
-        specifier: 5.4.5
-        version: 5.4.5
     devDependencies:
       c8:
         specifier: 9.1.0
@@ -737,6 +734,9 @@ importers:
       tsx:
         specifier: 4.16.5
         version: 4.16.5
+      typescript:
+        specifier: 5.4.5
+        version: 5.4.5
       uvu:
         specifier: 0.5.6
         version: 0.5.6
