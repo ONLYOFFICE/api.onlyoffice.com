@@ -1,0 +1,11 @@
+{
+  "extends": "../../tsconfig.emit.json",
+  "compilerOptions": {
+    "jsx": "react",
+    "jsxFactory": "h",
+    "jsxFragmentFactory": "Fragment",
+    "rootDir": "lib",
+    "outDir": "dist"
+  },
+  "include": ["lib"]
+}
