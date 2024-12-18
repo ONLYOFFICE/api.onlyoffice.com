@@ -178,7 +178,7 @@ Example: false
 
 ## compactToolbar
 
-Defines if the top toolbar type displayed is full (**false**) or compact (**true**). The default value is **false**.
+Defines if the top toolbar type displayed is full (**false**) or compact (**true**). The default value is **false**. Starting from version 8.3, this setting is also available for the viewer. The default value for the *view* mode is **true**.
 
 Type: boolean
 

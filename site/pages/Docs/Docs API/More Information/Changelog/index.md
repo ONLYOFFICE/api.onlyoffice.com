@@ -2,6 +2,8 @@ The list of changes of ONLYOFFICE Docs API.
 
 ## Version 8.3
 
+- The [editorConfig.customization.compactToolbar](../../Usage%20API/Config/Editor/Customization/index.md#compacttoolbar) parameter is now available for the viewer.
+
 - Added the [editorConfig.customization.pointerMode](../../Usage%20API/Config/Editor/Customization/index.md#pointermode) parameter.
 
 ## Version 8.2

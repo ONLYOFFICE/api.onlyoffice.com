@@ -1,5 +1,6 @@
 # Change Log
 
+- docs api: the editorConfig.customization.compactToolbar parameter is now available for the viewer
 - docs api: added the editorConfig.customization.pointerMode parameter
 - docs api: updated the WOPI section
 - docs api: added the information about calling editor methods in the frameworks
