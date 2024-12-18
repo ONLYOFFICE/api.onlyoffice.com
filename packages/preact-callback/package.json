@@ -12,8 +12,7 @@
     "test": "pnpm test:types"
   },
   "dependencies": {
-    "@onlyoffice/preact-types": "workspace:^",
-    "preact": "10.22.0"
+    "@onlyoffice/preact-types": "workspace:^"
   },
   "devDependencies": {
     "esbuild": "0.23.0",

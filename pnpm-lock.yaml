@@ -1824,9 +1824,6 @@ importers:
       '@onlyoffice/preact-types':
         specifier: workspace:^
         version: link:../preact-types
-      preact:
-        specifier: 10.22.0
-        version: 10.22.0
     devDependencies:
       esbuild:
         specifier: 0.23.0
