@@ -1465,9 +1465,6 @@ importers:
       '@types/mdast':
         specifier: 4.0.3
         version: 4.0.3
-      typescript:
-        specifier: 5.4.5
-        version: 5.4.5
       unist-util-visit:
         specifier: 5.0.0
         version: 5.0.0
@@ -1475,12 +1472,18 @@ importers:
       c8:
         specifier: 9.1.0
         version: 9.1.0
+      esbuild:
+        specifier: 0.23.0
+        version: 0.23.0
       rimraf:
         specifier: 6.0.1
         version: 6.0.1
       tsx:
         specifier: 4.16.5
         version: 4.16.5
+      typescript:
+        specifier: 5.4.5
+        version: 5.4.5
       unist-builder:
         specifier: 4.0.0
         version: 4.0.0
