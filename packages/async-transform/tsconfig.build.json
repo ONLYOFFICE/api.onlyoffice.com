@@ -1,3 +1,4 @@
 {
-  "extends": ["../../tsconfig.build.next.json", "./tsconfig.json"]
+  "extends": "../../tsconfig.build.next.json",
+  "include": ["lib"]
 }
