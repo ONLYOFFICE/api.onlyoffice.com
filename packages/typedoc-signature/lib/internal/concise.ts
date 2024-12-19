@@ -100,7 +100,7 @@ export function enumReflection(ctx: Context, r: J.Reflection): Signature {
   return s
 }
 
-export function functionsDeclaration(f: J.Reflection): Signature {
+export function functionsDeclaration(ctx: Context, f: J.Reflection): Signature {
   const s: Signature = []
 
   if (!isCallSignatureReflection(f)) {
@@ -109,16 +109,20 @@ export function functionsDeclaration(f: J.Reflection): Signature {
 
   let t: Token
 
-  t = new TextToken()
-  t.text = "  "
-  s.push(t)
-
   const b = parameters(f)
   s.push(...b)
 
-  t = new TextToken()
-  t.text = ": "
-  s.push(t)
+  if (f.type) {
+    if ("name" in f.type && f.type.name === "void") {
+      return s
+    }
+    t = new TextToken()
+    t.text = ": "
+    s.push(t)
+
+    const b = type(ctx, f.type)
+    s.push(...b)
+  }
 
   return s
 }
@@ -139,19 +143,33 @@ export function interfaceReflection(ctx: Context, r: J.Reflection): Signature {
   return s
 }
 
-export function methodDeclaration(m: J.Reflection): Signature {
+export function methodDeclaration(ctx: Context, m: J.Reflection): Signature {
   const s: Signature = []
 
   if (!isSignatureReflection(m)) {
     return s
   }
 
+  let t: Token
+
   const b = parameters(m)
   s.push(...b)
 
-  const t = new TextToken()
+  t = new TextToken()
   t.text = ": "
   s.push(t)
+
+  if (m.type) {
+    if ("name" in m.type && m.type.name === "void") {
+      return s
+    }
+    t = new TextToken()
+    t.text = ": "
+    s.push(t)
+
+    const b = type(ctx, m.type)
+    s.push(...b)
+  }
 
   return s
 }
@@ -285,7 +303,7 @@ export function arrayType(ctx: Context, a: J.ArrayType): Signature {
   const s: Signature = []
   let t: Token
 
-  if (isUnionType(a.elementType.type)) {
+  if (isUnionType(a.elementType)) {
     t = new TextToken()
     t.text = "("
     s.push(t)
@@ -294,7 +312,7 @@ export function arrayType(ctx: Context, a: J.ArrayType): Signature {
   const b = type(ctx, a.elementType)
   s.push(...b)
 
-  if (isUnionType(a.elementType.type)) {
+  if (isUnionType(a.elementType)) {
     const t = new TextToken()
     t.text = ")"
     s.push(t)

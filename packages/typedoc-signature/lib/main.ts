@@ -79,14 +79,14 @@ export function compute(ct: Transport): void {
       c.push(...C.enumReflection(cf, t))
     } else if (isFunctionReflection(p) && isCallSignatureReflection(t)) {
       v.push(...V.functionsDeclaration(cf, t))
-      c.push(...C.functionsDeclaration(t))
+      c.push(...C.functionsDeclaration(cf, t))
       r.push(...C.returns(cf, t.type))
     } else if (isInterfaceReflection(t)) {
       v.push(...V.interfaceReflection(cf, t))
       c.push(...C.interfaceReflection(cf, t))
     } else if (isMethodReflection(p) && isCallSignatureReflection(t)) {
-      v.push(...V.methodDeclaration(t, p, cf))
-      c.push(...C.methodDeclaration(t))
+      v.push(...V.methodDeclaration(cf, t, p))
+      c.push(...C.methodDeclaration(cf, t))
       r.push(...C.returns(cf, t.type))
     } else if (isPropertyReflection(t)) {
       v.push(...V.propertyReflection(cf, t))

@@ -133,7 +133,7 @@ export function classDeclaration(ctx: Context, r: J.Reflection): Signature {
       if (isMethodReflection(c) && c.signatures) {
         for (const cs of c.signatures) {
           if (isSignatureReflection(cs)) {
-            const md = methodDeclaration(cs, c, ctx)
+            const md = methodDeclaration(ctx, cs, c)
             const ts: Signature = []
             for (const e of md) {
               if (e instanceof EntityToken) {
@@ -394,9 +394,9 @@ export function interfaceReflection(ctx: Context, r: J.Reflection): Signature {
 }
 
 export function methodDeclaration(
+  ctx: Context,
   r: J.Reflection,
   p: J.Reflection,
-  ctx: Context,
 ): Signature {
   let s: Signature = []
 
@@ -717,7 +717,7 @@ export function arrayType(ctx: Context, a: J.ArrayType): Signature {
   let s: Signature = []
   let t: Token
 
-  if (isUnionType(a.elementType.type)) {
+  if (isUnionType(a.elementType)) {
     t = new TextToken()
     t.text = "("
     s.push(t)
@@ -726,7 +726,7 @@ export function arrayType(ctx: Context, a: J.ArrayType): Signature {
   const b = type(ctx, a.elementType)
   s.push(...b)
 
-  if (isUnionType(a.elementType.type)) {
+  if (isUnionType(a.elementType)) {
     t = ctx.s.nt()
     s.push(t)
 
