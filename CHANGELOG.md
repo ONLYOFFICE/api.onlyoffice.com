@@ -1,5 +1,7 @@
 # Change Log
 
+- docs api: added conversion from vsdx format
+- docs api: added the visio document type to the documentType parameter
 - docs api: the editorConfig.customization.submitForm parameter can now be used as an object
 - docs api: the editorConfig.customization.compactToolbar parameter is now available for the viewer
 - docs api: added the editorConfig.customization.pointerMode parameter

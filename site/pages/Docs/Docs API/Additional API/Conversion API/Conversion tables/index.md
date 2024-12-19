@@ -75,3 +75,9 @@ Below you can find tables with formats that are available for conversion in diff
 | pptm | +   | +   | +   | +   | +   | +   | +    | +   | +    | +    | +    | +    |      | +    |
 | pptx | +   | +   | +   | +   | +   | +   | +    | +   | +    | +    | +    | +    | +    |      |
 | sxi  | +   | +   | +   | +   | +   | +   | +    | +   | +    | +    | +    | +    | +    | +    |
+
+## Visio document file formats
+
+|      | bmp | docm | docx | docxf | dotm | dotx | epub | fb2 | gif | html | jpg | odt | ott | pdf | pdfa | png | rtf | txt |
+| ---- | --- | ---- | ---- | ----- | ---- | ---- | ---- | --- | --- | ---- | --- | --- | --- | --- | ---- | --- | --- | --- |
+| vsdx | +   |      |      |       |      |      |      |     | +   |      | +   |     |     | +   | +    | +   |     |     |

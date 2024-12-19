@@ -2,6 +2,8 @@ The list of changes of ONLYOFFICE Docs API.
 
 ## Version 8.3
 
+- Added conversion from [vsdx](../../Additional%20API/Conversion%20API/Conversion%20tables/index.md#visio-document-file-formats) format.
+- Added the *visio* document type to the [documentType](../../Usage%20API/Config/index.md#documenttype) parameter.
 - The [editorConfig.customization.submitForm](../../Usage%20API/Config/Editor/Customization/index.md#submitform) parameter can now be used as an object.
 - The [editorConfig.customization.compactToolbar](../../Usage%20API/Config/Editor/Customization/index.md#compacttoolbar) parameter is now available for the viewer.
 - Added the [editorConfig.customization.pointerMode](../../Usage%20API/Config/Editor/Customization/index.md#pointermode) parameter.

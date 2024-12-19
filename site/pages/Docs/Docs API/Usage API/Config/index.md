@@ -11,7 +11,8 @@ Defines the document type to be opened:
 - **word** - text document (*.doc, .docm, .docx, .dot, .dotm, .dotx, .epub, .fb2, .fodt, .htm, .html, .mht, .mhtml, .odt, .ott, .rtf, .stw, .sxw, .txt, .wps, .wpt, .xml*);
 - **cell** - spreadsheet (*.csv, .et, .ett, .fods, .ods, .ots, .sxc, .xls, .xlsb, .xlsm, .xlsx, .xlt, .xltm, .xltx, .xml*);
 - **slide** - presentation (*.dps, .dpt, .fodp, .odp, .otp, .pot, .potm, .potx, .pps, .ppsm, .ppsx, .ppt, .pptm, .pptx, .sxi*);
-- **pdf** - portable document format (*.djvu, .docxf, .oform, .oxps, .pdf, .xps*).
+- **pdf** - portable document format (*.djvu, .docxf, .oform, .oxps, .pdf, .xps*);
+- **visio** - visio document (*.vsdx*).
 
 Type: string
 
