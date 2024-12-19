@@ -2,7 +2,7 @@ The list of changes of ONLYOFFICE Docs API.
 
 ## Version 8.3
 
-- The document editing will be prohibited for all users editing the document with the specified *key*, if the *users* parameter is not specified for the [drop](../../Additional%20API/Command%20service/drop/index.md) command
+- The document editing will be prohibited for all users editing the document with the specified *key*, if the *users* parameter is not specified for the [drop](../../Additional%20API/Command%20service/drop/index.md) command.
 - The [editorConfig.customization.submitForm](../../Usage%20API/Config/Editor/Customization/index.md#submitform) parameter can now be used as an object.
 - The [editorConfig.customization.compactToolbar](../../Usage%20API/Config/Editor/Customization/index.md#compacttoolbar) parameter is now available for the viewer.
 - Added the [editorConfig.customization.pointerMode](../../Usage%20API/Config/Editor/Customization/index.md#pointermode) parameter.
