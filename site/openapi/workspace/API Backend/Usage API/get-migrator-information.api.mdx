@@ -1,0 +1,71 @@
+---
+id: get-migrator-information
+title: "Get migrator information"
+description: "Returns the information about the migrators with the names specified in the request."
+sidebar_label: "Get migrator information"
+hide_title: true
+hide_table_of_contents: true
+api: eJy1VMtu2zAQ/BWBZzVyg558c4sgDfoK7ORk+EBLa4uJRLLkKo4r6N+7S8qy1dpFe6gOAh+7nNnZIVuBcuvFdClqtXUSldFilQoPeeMU7mmjFbMGS+PUj7D7EWQBjhMcjUQqdhQHYtVRVgE+d8qGQ6ZiDtg47RMsIVF6Y1wdDkjk2jQYViOkcT7ZKSzDkpY1+MRbyNVGQUGJYdnB9wY8XhFeP3xvCmLXitxoBI08lNZWKg8g2ZNnDq3weQm15BHuLRArs36CHOkc64wFhwo87w5UvhIBXhjX8ll5TMxmYBx50in9qdI5uacpSVH7EzSPTumt6OLH5L012kfM68nkL5BOpCOAfy33ErFBBlRY8cKXHu+O4ETP9t3k7e8EH7Xs/QCF4KgaaFrQjjU+CCuxpFkmrcqurybZYKxsEDmAHF22YNZRk7NeO1Zj1ScI5TCTMm6nQoeejXMDNZZlfvTLzausbQVn+r08dGrV8eHEjkF7aT6Yum408UwW4F7AJfObxUMyu78jaJr6qEslkWAE5bMOtQz96JndAl5q6EjcEzv/r+vTK4nwipmtJAlJjBtXMXjs3JJlpkjqHf2Pz0Iqxv2jC19yxymhbdfSw6Oruo6XCczx00HDF+mUXLOMS5a2PLwerXimRrK2od43D0yLw6smNvoXb3fpIWOW52Dxj7GrE1Pef1s8UPC6fy5qU3COkzt+Sug/FTQwQf9gwLDWUjf1tpFbjo1nsp3Y+GM3Pgc39gOu6rCl9ycMx8ZM+0L4z2WdTWnb6HUS9BAfty5mDLchRnNjV8T6J+r5CxQ=
+sidebar_class_name: "post api-method"
+info_path: site/openapi/workspace/API Backend/Usage API/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get migrator information"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/api/2.0/migration/migratorsInfo"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns the information about the migrators with the names specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"migratorsName":{"description":"List of migrator names","type":"array","items":{"type":"string"}}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"List of migrator information","content":{"application/json":{"schema":{"type":"array","items":{"type":"object","title":"MigratorInfo"}}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

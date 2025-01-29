@@ -1,0 +1,71 @@
+---
+id: insert-a-file
+title: "Insert a file"
+description: "Inserts a file specified in the request to the selected folder by single file uploading."
+sidebar_label: "Insert a file"
+hide_title: true
+hide_table_of_contents: true
+api: eJy1Vt9v4zYM/lcEPadNmmbrFmAYer0eFmy7K5oUA67NA2Mzja625ElyU8/w/z5SspukydI9bH5wZImkPvLjj9TSw6OT43u5VBm6/ieTpWidnPekw6S0yld0WMvL0q+MVX+BV0b/gkBCrGRpJXtyTXIo5w1ppegSqwoWk2M50Q6tdwIEmxeuwEQtFaZCaeFXKCz+WaLzwpvw6TDDxNPxMsAQi0o4pR9JM6iXRWYgpY1TurMACzl6BssANX3QhVFxwqAUAyjAr+RbVNFJMflIJy5ZYQ5yXEtfFWzBeUs3yIadaeF9MGnFEonRHrXnJRRFppIQjf43x1brfVNm8Y3cYazWFBQHhY5P2Rf+3QV124ZC6aL0glAg5KS6a6qhDeUPqX/iAIUg9N560pMJGfP4GdeT5fWLcn5ffdoy48R6hUSFZUqiGpGncR0ZUEuhvICMea8Esi0njBXa+M29YC1UTIDH3G2FY2FMhqAptD35hFhcGf1MUZl68KX7l5BYL6RKgJNEC+QlBYyt7GHZ3MkPM+oKQ0kZ7hsOBvvXxpTlHGSaev8V6Z9Dfr7Nsp7EF8gLJnSLQcJ5V6QU+vRD9b5lSvYDdpfG5kCoZVmqdOeeQfucHHh1D0P4qFyRQfU+8N/VE4qvoCvw7kmx6qzL0SNKoOGRmghJXz6DBzvNIcuO65Q24xxwLCkgaLH+jTXM1Z19R/3hoU+iaZl4x0s0tB33WP0UXPHyc0nk/wRprjSltgVvbEjXtujkNZkyFeIfFooIviXq+M3DwXBwcjY8GfwwO7sYn1+MB+en56Ph6MfvLr6ykd9MzKrjVkYP9Iy+5/dWrmyh411GFqCFdB8NzvYz/E5D280JN0tRG12ZlLulcSG/uGmOZR8K1R+eDvpxNNRdb236KtSI3MyIKVdBTMeDk+LVLTL5K1Zdd17F417XvXd0AzQus9tNF77ugvHaRbfcfw3Zfru797bE+cG2wycN41magLM1dmXyvNTkmpiiJXlxez2dicubCdmnTxdDmdE9LrRlDl0OgcHWmdhI2tH3dgZtDZP/c0i2Uff44vtUzBR0glrGQoks3zMlJEk8c9dgpul3vDNHA9kUvZUJsZR1vQDH9dY0vE3oLP9LoOUzWAULDiCN5FQ5XlNiLSFzeCQC2wP5IOQuezSnzjNkJX9J5rPaHvrNnGRX3b+Tuj2+iveczNjIRn2vmze9TuMySbDwR2XnW2Vz82U6I+FF+zchNynrWFjTJr8DVBP8DiUS9mpKHv1YUhOk82iTE55Lc7denkK9tAv26mAwdkuniwy/2a2DKnUdq5FY7OTj0T9qvNZrlGZu5oT6bwgRgDY=
+sidebar_class_name: "post api-method"
+info_path: site/openapi/workspace/API Backend/Usage API/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Insert a file"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/api/2.0/files/{folderId}/insert"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Inserts a file specified in the request to the selected folder by single file uploading.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"folderId","in":"path","description":"Folder ID","schema":{"type":"string"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"file":{"description":"Request input stream","type":"object"},"title":{"description":"File name","type":"string"},"createNewIfExist":{"description":"Specifies whether to create a new file if it already exists or not","type":"array","items":{"type":"boolean"}},"keepConvertStatus":{"description":"Specifies whether to keep the file converting status or not","type":"boolean"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Inserted file","content":{"application/json":{"schema":{"type":"object","properties":{"Name":{"type":"string","example":"File name"},"UpdatedBy":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"},"Updated":{"type":"string","example":"2020-12-08T17:37:03.3424957Z"},"Location":{"type":"string","example":"4\\\\46\\\\File name"}},"title":"FileWrapper"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

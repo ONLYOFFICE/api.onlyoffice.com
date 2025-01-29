@@ -1,0 +1,71 @@
+---
+id: add-a-mailbox-alias
+title: "Add a mailbox alias"
+description: "Adds an alias to the mailbox with the ID specified in the request."
+sidebar_label: "Add a mailbox alias"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVE1v2zAM/SuCzl6cpj31tGwtsGAYUPTjVAQFY6mxWlvSJLltZuS/j5Tk1N7aHYbm4FASKT0+PrLnAbaen97yFlTjpXuSrvyB5sa8SM/XBfey6pwKO/Tp+bILtXHqFwRl9DcJQjqKdWjxgj+jn+TrPUYJ6SunLLnxU74UwjPQDBoFngXDQi1Zm15hzyrUcWN1xryVlbpXUjCl456TPzvpwwxvz+YXIxBLzyujg9SBTLC2UVXEVD54erHnvqplC2SFnZWIwWweZBXwHuuMlS4oTA9PM4o7JWg1hZ15QGAYlq9R+OoWs94XPGZzp6GV74dGn9doH5zSW76PP0rJW6N9QrKYz9+/R0AABt6bSkFAeg6kIQegKa0P4mMlRj5DsgW/N66FkLaOF7ghX6C1DTkdLY5PiI4zg1zq/48/p1KMgjNXY9fo8tnoZjerTMuJwqBCPLqK0k0YUG7IrD9Dzngi+mR+9De3NxqynKWId7USl4if2y4SA6HGRQlWlYvZvBx1SDt0SBkLXIIg/Q+tckVcJzrfbJhDinjzd7nDSEV46nRc8CSpaWwESMW8fG2D84GYqYznU2keREfP3Jv4fCbtq2nbTiNiluhjl+dX12x5sUIQuPSJpwYV5wPFW+NDC1FPA0YhGBxaeVD7hOdRq37MIMjkBfkSSttgvQla56J2Us1uiVn0xKrh97VueZFmW2aJ/rF6OLNqzI5i+34DXt64Zr+nbXzX0fRD8wmcgg1Rd7vGN+thAPb8EctIfMZEP10TQnJvulTmP/pxXwwRy6qSNvzTdz0S5sXNNfpu8ghsjaAQB880HvF7ytEwkfeovrjXYwH1toMt+aYrSUuk/akUH6MUs0FJDUd6NwI4VWWR86AvZfVmSN8noSOfg386ejfi0ArJm0q8RtS/AbVoR58=
+sidebar_class_name: "put api-method"
+info_path: site/openapi/workspace/API Backend/Usage API/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Add a mailbox alias"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"put"}
+  path={"/api/2.0/mailserver/mailboxes/alias/add"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Adds an alias to the mailbox with the ID specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"mailbox_id":{"description":"Mailbox ID","type":"integer"},"alias_name":{"description":"Mailbox alias","type":"string"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Mailbox data associated with the tenant","content":{"application/json":{"schema":{"type":"object","properties":{"Id":{"type":"integer","format":"int32","example":"1234"},"DomainId":{"type":"integer","format":"int32","example":"1234"},"Email":{"type":"string","example":"Email@only.com"}},"title":"ServerDomainAddressData"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

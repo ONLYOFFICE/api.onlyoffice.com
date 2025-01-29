@@ -1,0 +1,63 @@
+---
+id: get-smtp-settings
+title: "Get the SMTP settings"
+description: "Returns the current portal SMTP settings."
+sidebar_label: "Get the SMTP settings"
+hide_title: true
+hide_table_of_contents: true
+api: eJztWF1P2zAU/SuWn6umK5u09WkVX5sGqCKgPVQVcpNbanDizHbKuqj/ffc6aUlTKPQRKQ9AHZ97zr3X9ilOwZ24t3ww5iFEuZFuyQIWXt6MmAXnZIpzkw7XGRjhpE5/xnzA78GFicvCNaDDDdhMpxaQqOD9Xo/+xGAjIzOKwphtyg6PdOogdQR08NcFmRIypZGN5pAI/3yZAUbq6QNEDkMyQ2k4WarMtXU1lHUGmRG1LfuDUB2e5kqJqUKgMzl0OPwVSUZDngiputWwG+mEr1BImzq1xEzvwexwjwjW4TNtEuFK3FF/n1j/C5JbSGMwwzjGntm3Cwg9nIkKv6+UVDs5W35vFFPqnUiLHV5eiQTerRmXMSyloH3CI2xyIlJSiwzEuKxSKHtrwbxP7/g5iOUY9abgy5U2tEfC2idt4sP1WbYO3ZdEsUatSBxSQoXhRU1uqrUC7EtT79RjLUM004ZhNbxGPMM0YMM4zN38AEqBcCol8qf1BXaqAsmxzCunkncwhxlEcoaHjj3NAckNc5q6xK5uLi73pC/tCcxErtzGJg7RkjOGWgwdyWA5G+NgwgCLS95XtVEcj4skTqFGNdPw0zuaDWNy0vnlHYbH3d8w7Q4zST+XOgbVva587sTpbt0Cccy9bpapqvfBg9WtobWG1hpaa2gf19D8/2atk7VO1jpZ62Qf2MlI+XPv0+699DalddFG/oOYe9DRLuhMm6mMcSN6T7TVRRkvzQUXNrojhrtHoAd4Exa0N58QAHyymjRrugaXm9RutZBMTajtW3cXSRJcVF1duMlkBe03HohMBv1uL7BY5RruB5xyMwsw1qeWG4XwuXPZIAiUjoQiYx587X3rBzvre0HzrAznlPa6ypBMv/T17Vo3Wwbz+YUP8EB6S9mG4W4j+kjrRwm+fTKdaR9dW80ziScEsZR7mc+iX9p9aV8Ir8jPwfneNffGVjXF8+uFgxpeFVR7IUHnkdpYVN0fU7WIxP5Tt2srUA3pbUn5/TfmRTEVFm6NWq3o8Z8cDO0R/LgQRpbWNZ6gxBw3DbadFs23lg+jCDJa84VQeTOlSW1nnJ/eIEpsOxGmWLa++kC866l0WWNtrFSpTb9XnVciiqJcbaxojS+nXo2oalujfQF4HP8DDVZ2Sw==
+sidebar_class_name: "get api-method"
+info_path: site/openapi/docSpace/API Backend/Usage API/asc-files
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get the SMTP settings"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/smtpsettings/smtp"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns the current portal SMTP settings.
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"SMTP settings","content":{"text/plain":{"schema":{"type":"object","properties":{"host":{"type":"string","description":"Host","nullable":true,"example":"mail.example.com"},"port":{"type":"integer","description":"Port","format":"int32","nullable":true,"example":25},"senderAddress":{"type":"string","description":"Sender address","nullable":true,"example":"notify@example.com"},"senderDisplayName":{"type":"string","description":"Sender display name","nullable":true,"example":"Postman"},"credentialsUserName":{"type":"string","description":"Credentials username","nullable":true,"example":"notify@example.com"},"credentialsUserPassword":{"type":"string","description":"Credentials user password","nullable":true,"example":"{password}"},"enableSSL":{"type":"boolean","description":"Enables SSL or not","example":false},"enableAuth":{"type":"boolean","description":"Enables authentication or not","example":true},"useNtlm":{"type":"boolean","description":"Specifies whether to use NTLM or not","example":false},"isDefaultSettings":{"type":"boolean","description":"Specifies if the current settings are default or not","example":false}},"additionalProperties":false,"description":"SMTP settings","title":"ASC.Web.Api.ApiModel.ResponseDto.SmtpSettingsDto"}},"application/json":{"schema":{"type":"object","properties":{"host":{"type":"string","description":"Host","nullable":true,"example":"mail.example.com"},"port":{"type":"integer","description":"Port","format":"int32","nullable":true,"example":25},"senderAddress":{"type":"string","description":"Sender address","nullable":true,"example":"notify@example.com"},"senderDisplayName":{"type":"string","description":"Sender display name","nullable":true,"example":"Postman"},"credentialsUserName":{"type":"string","description":"Credentials username","nullable":true,"example":"notify@example.com"},"credentialsUserPassword":{"type":"string","description":"Credentials user password","nullable":true,"example":"{password}"},"enableSSL":{"type":"boolean","description":"Enables SSL or not","example":false},"enableAuth":{"type":"boolean","description":"Enables authentication or not","example":true},"useNtlm":{"type":"boolean","description":"Specifies whether to use NTLM or not","example":false},"isDefaultSettings":{"type":"boolean","description":"Specifies if the current settings are default or not","example":false}},"additionalProperties":false,"description":"SMTP settings","title":"ASC.Web.Api.ApiModel.ResponseDto.SmtpSettingsDto"}},"text/json":{"schema":{"type":"object","properties":{"host":{"type":"string","description":"Host","nullable":true,"example":"mail.example.com"},"port":{"type":"integer","description":"Port","format":"int32","nullable":true,"example":25},"senderAddress":{"type":"string","description":"Sender address","nullable":true,"example":"notify@example.com"},"senderDisplayName":{"type":"string","description":"Sender display name","nullable":true,"example":"Postman"},"credentialsUserName":{"type":"string","description":"Credentials username","nullable":true,"example":"notify@example.com"},"credentialsUserPassword":{"type":"string","description":"Credentials user password","nullable":true,"example":"{password}"},"enableSSL":{"type":"boolean","description":"Enables SSL or not","example":false},"enableAuth":{"type":"boolean","description":"Enables authentication or not","example":true},"useNtlm":{"type":"boolean","description":"Specifies whether to use NTLM or not","example":false},"isDefaultSettings":{"type":"boolean","description":"Specifies if the current settings are default or not","example":false}},"additionalProperties":false,"description":"SMTP settings","title":"ASC.Web.Api.ApiModel.ResponseDto.SmtpSettingsDto"}}}},"401":{"description":"Unauthorized"},"403":{"description":"Forbidden"}}}
+>
+  
+</StatusCodes>
+
+
+      

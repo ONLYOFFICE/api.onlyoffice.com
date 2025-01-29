@@ -1,0 +1,71 @@
+---
+id: get-the-user-folders
+title: "Get the user folders"
+description: "Returns a list of user folders with the IDs specified in the request."
+sidebar_label: "Get the user folders"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVUtT2zAQ/isandoZl4TAKTdepUwfw0ByyuSg2JtYIEuqJAOpJ/+9u5LTOEDKlDQHR7L28e3u508ND2Lh+XDCKyFV77NRBTjPpxn3kNdOhiWeNfykDqVx8pcI0ugvINCIfByueMYf0Q74dIVeBfjcSUtmfMhvINROeyaYkj4wM2e1B8fmKQt7lKFkoQR2de6Zt5DLuYSCSR1fOvhZgw8HmKBdnpoC4TQ8NzqADrQU1iqZR1i9O09JG+7zEipBq7C0gDDM7A7ygHGsMxZckODpVBbxbxvytxZowkjI0K+NI5wTS9xitZXvxJcIZ4EdyfjcuEogMF7ju6MBX60wqXAI9qp4mes6nmxSsQ/OmMAUPIBi0jOsWigWDOt/3A9E/FEbvTXap+oH/f5b1VPp/9rrXfB2zCC15c0SMg5PorKKrA4HR8ccq7nu9PVdAX6ICjrOPjipF1uWmizQcqyJ6WemTo3Yne3VZBRhZIJQ+wRoIZRC6v1x7BslycT7I2CIIEPcf0fZGaMopJDnIgjesvW4f/iSoGMtWimCIsapALfIAb6AyC4RStz0hJW9wUG/F1WNRGfD6LWw3RJ1EwtflbcNpa38CpHThKBMx1kix3DbN0Kib+Nmo1gX69pbxZn0p11RwO2KQs9NTNm25cxUVa0RJbsF94DqcHNxO2In11eYGLc+dUOJgEloItb4UIn4Sba4LiFEGe0qLn8m0B0p/W9a3TYtwFPoWYVEI3i1U5QtTWdCHUVLnA8+aUL4150R9qfEesiyaWbCw9ip1YpeYxZHNxIuH4STYkbNmlADy/Wl1PB7HBZ1MFb2aUR4yFzVaZjPRGyVrT1O8hxs+KvttEO4y4sR2s7aO6kyBbk48Uj3FT6HHBcmNjpyLL5rcGR6UYsF2aaQxBji9Dbh7iPh2gUVtT7Syw7Abe5lbR30pKpedWmaRGfs59o+He30+EP4ZE0DnSLq3yeUw9M=
+sidebar_class_name: "get api-method"
+info_path: site/openapi/workspace/API Backend/Usage API/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get the user folders"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/mail/userfolders"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns a list of user folders with the IDs specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"ids":{"description":"List of folder IDs","type":"array","items":{"type":"integer","format":"uint32"}},"parentId":{"description":"Parent folder ID (root level is equal to 0)","type":"array","items":{"type":"integer","format":"uint32"}}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"List of folders","content":{"application/json":{"schema":{"type":"array","items":{"type":"object","properties":{"Id":{"type":"integer","format":"uint32","example":"1234"},"ParentId":{"type":"integer","format":"uint32","example":"1234"},"Name":{"type":"string","example":"name"},"UnreadCount":{"type":"integer","format":"int32","example":"123"},"TotalCount":{"type":"integer","format":"int32","example":"123"},"UnreadChainCount":{"type":"integer","format":"int32","example":"123"},"TotalChainCount":{"type":"integer","format":"int32","example":"123"},"FolderCount":{"type":"integer","format":"int32","example":"123"}},"title":"MailUserFolderData"}}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

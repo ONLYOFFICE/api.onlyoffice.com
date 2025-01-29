@@ -1,0 +1,71 @@
+---
+id: terminate-reassign
+title: "Terminate the data reassignment"
+description: "Terminates the data reassignment for the user with the ID specified in the request."
+sidebar_label: "Terminate the data reassignment"
+hide_title: true
+hide_table_of_contents: true
+api: eJztWN9v2zYQ/lcEPm6y5che4votSxog2IYFifNkGAVNnS02EqmRVNLU8P++O0qy6bhp2qHrk18S+nS8++67HxK5Zo6vLJvM2A3oqoAoie4tmCjjjrN5zHQFhjup1XXGJsyBKaXiDm6BWytXisXMwD81WPe7zp7ZZM2EVg6UoyWvqkIKvzv5aLUimRU5lJxW7rkCNKkXH0E4tFMZ8uUkWHpaIwhyudWzzki1Qr0MrDCyIqso9mCvL6OnXFvwqCNpI9PCgywxUOpHyHDjUpuSIzBW15J+wydeYsQoEO+EWGRi3Bue8WVvdHY67I35QPSWkA3T385OT/mZYJtNzHiWSXLMi5sA7ZIXFl4Cu21oiSpueAlInI0QQNQxiLFELoct0hI5i5ACAdYiNiedR3Z+d9FvEtM/r+RfOoPC9lvTl073p7uEdDIP1MEnd+T853Ielvsvvx7J/4nkE1QDttLKNmymgwH9e4lw3/XKNL6DkeX7piq4/K7cyW/I2/UlilRdFHxBgTpTQ5iRNB2PGUYBxmjztrX3Xu1rBq0uIaJwyCpiFRghX0FgWmLUKzAHtm92ykENofYwDYvoJB2O0LS0F5oEDkISFloXwNUhC4F2YIvAoy3ruKs9o1rB30t8K60ZqLqk19MFFk6z67ZWquEktHXBlYDCL6+4LEiIr6+vszhrjUa9qF3FUWsdRe0qjrZuSK9bo7j1SNJ2GUetb5S1q/le43VRbOJtZIP4JE7jYTzawX0tM7NBiPQkxJjuYxvugRq9Amewme93HlootepPc/SRod3+pSTqFjXunHL7cNck6M3J8EY3N43q2xmN3rSdGMgP5un3TtNjRx478tiRP7oj/9NX5bEVj614bMUf24rkYzQ4OfzEvVe8drk28rPnEZWGh0pX2ixkloHyWC2I2kj37AuKW/GBLHx4ABIwChVJeUIFYHNiZN/U9nPc+o97fxzZ+8L3RwB8Qseb6Em63P/C84utQMilxGqQqj0Y+A/6PrrD40Ou6b6hqv084S7HHwmvZJL2B0nlSUs6P8n2VoJRNOYRjx4+mNoUuC13rpokSaEFL/DM5Cbjwbs0OSifP+l51GxnFGjHyx3NuWaU7bOz7WfE9QcKcODgwYd+h2o4BMi80PpBgiecBujt7tLkfVdwuzPgN57PyPRSeyBBSV3JAuhUQzQ0oT2mfsxh7CX3o7vFuU3el3P3kqLgbud/ynvLZ3AIQ9w+i+u2CGZENmpiGVBh+ELwd1Db66hdMWAOKd+0ab1ecAv3pthsSIwODZU3Lh+5kc07YjZHZznWO+afqsfnGKeoD7k3JWikXtRNyl98m9LManacCwGVC3TDcOZBcd/cT1Fr0d6bldj/KDT8ieLBvxPG6PqNXPji87I1K7ha1f5dxRrHft7URE5YkE3ptQsKp3uknsMw9iu1CYD+Ujhf3LFeN9WORHb6zaNXd7SUdtqeBQT9L7+d+uI=
+sidebar_class_name: "put api-method"
+info_path: site/openapi/docSpace/API Backend/Usage API/asc-files
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Terminate the data reassignment"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"put"}
+  path={"/api/2.0/people/reassign/terminate"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Terminates the data reassignment for the user with the ID specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"userId":{"type":"string","description":"User ID whose data is reassigned/removed","format":"uuid","example":"c9ccbdc8-37af-4763-8a0c-fed325766a7c"}},"additionalProperties":false,"description":"Request parameters for terminating the reassignment process","title":"ASC.People.ApiModels.RequestDto.TerminateRequestDto"}},"text/json":{"schema":{"type":"object","properties":{"userId":{"type":"string","description":"User ID whose data is reassigned/removed","format":"uuid","example":"c9ccbdc8-37af-4763-8a0c-fed325766a7c"}},"additionalProperties":false,"description":"Request parameters for terminating the reassignment process","title":"ASC.People.ApiModels.RequestDto.TerminateRequestDto"}},"application/*+json":{"schema":{"type":"object","properties":{"userId":{"type":"string","description":"User ID whose data is reassigned/removed","format":"uuid","example":"c9ccbdc8-37af-4763-8a0c-fed325766a7c"}},"additionalProperties":false,"description":"Request parameters for terminating the reassignment process","title":"ASC.People.ApiModels.RequestDto.TerminateRequestDto"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Reassignment progress","content":{"text/plain":{"schema":{"type":"object","properties":{"id":{"type":"string","description":"ID","nullable":true,"example":"2288"},"error":{"type":"string","description":"Error","nullable":true,"example":"some text"},"percentage":{"type":"integer","description":"Percentage","format":"int32","example":1234},"isCompleted":{"type":"boolean","description":"IsCompleted","example":true},"status":{"oneOf":[{"enum":["Created","Running","Completed","Canceled","Failted"],"type":"string","description":"[Created - Created, Running - Running, Completed - Completed, Canceled - Canceled, Failted - Failted]","example":"Created"},{"enum":[0,1,2,3,4],"type":"integer","description":"[0 - Created, 1 - Running, 2 - Completed, 3 - Canceled, 4 - Failted]","example":0}],"title":"ASC.Common.Threading.DistributedTaskStatus"}},"additionalProperties":false,"title":"ASC.People.ApiModels.ResponseDto.TaskProgressResponseDto"}},"application/json":{"schema":{"type":"object","properties":{"id":{"type":"string","description":"ID","nullable":true,"example":"2288"},"error":{"type":"string","description":"Error","nullable":true,"example":"some text"},"percentage":{"type":"integer","description":"Percentage","format":"int32","example":1234},"isCompleted":{"type":"boolean","description":"IsCompleted","example":true},"status":{"oneOf":[{"enum":["Created","Running","Completed","Canceled","Failted"],"type":"string","description":"[Created - Created, Running - Running, Completed - Completed, Canceled - Canceled, Failted - Failted]","example":"Created"},{"enum":[0,1,2,3,4],"type":"integer","description":"[0 - Created, 1 - Running, 2 - Completed, 3 - Canceled, 4 - Failted]","example":0}],"title":"ASC.Common.Threading.DistributedTaskStatus"}},"additionalProperties":false,"title":"ASC.People.ApiModels.ResponseDto.TaskProgressResponseDto"}},"text/json":{"schema":{"type":"object","properties":{"id":{"type":"string","description":"ID","nullable":true,"example":"2288"},"error":{"type":"string","description":"Error","nullable":true,"example":"some text"},"percentage":{"type":"integer","description":"Percentage","format":"int32","example":1234},"isCompleted":{"type":"boolean","description":"IsCompleted","example":true},"status":{"oneOf":[{"enum":["Created","Running","Completed","Canceled","Failted"],"type":"string","description":"[Created - Created, Running - Running, Completed - Completed, Canceled - Canceled, Failted - Failted]","example":"Created"},{"enum":[0,1,2,3,4],"type":"integer","description":"[0 - Created, 1 - Running, 2 - Completed, 3 - Canceled, 4 - Failted]","example":0}],"title":"ASC.Common.Threading.DistributedTaskStatus"}},"additionalProperties":false,"title":"ASC.People.ApiModels.ResponseDto.TaskProgressResponseDto"}}}},"401":{"description":"Unauthorized"},"403":{"description":"Forbidden"}}}
+>
+  
+</StatusCodes>
+
+
+      

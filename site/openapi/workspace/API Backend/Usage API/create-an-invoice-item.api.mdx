@@ -1,0 +1,71 @@
+---
+id: create-an-invoice-item
+title: "Create an invoice item"
+description: "Creates an invoice item with the parameters (title, description, price, etc.) specified in the request."
+sidebar_label: "Create an invoice item"
+hide_title: true
+hide_table_of_contents: true
+api: eJztWN1u2zYUfhWCVxug2LKcYUOAYUicDDOKtmnsYGhTX9ASHbOWSJWkEntGHmcvsifbOaRkS7ZrpVg37CK6EGjyO4fn5zuUD9fUsntDz+5orLPuUD4oEXNDJwE1PC60sCtYW9Pzws6VFn8wK5T8jbOEa5TRMKIBfQQcp5MnkEq4ibXIEUbP6AAAlhvCJBFeNQFkRh6FnRM75yRnmmXccm3Id1bYlAekpiEguQaZgHAbd74nJuexmAmegDInrfnnghvbARPK4YVKwOA1jZW0XFocsjxPRewM734yaNaamnjOM4Yju8o5GKqmn3hsQU+uVc61FRADXEWTcNB0a1j3xWOCSpOxWsh7+rQTiqMq6ksHFLkgtKjwmI2wLLIppAiEzaJoETVWxQuy4DyH/UghhT1khEO9K5i0jhPP0Pi5Ah+wymoWL0AGcqT0AXWjMtWGiJlLtaiwRBjipIEGShOpatZOlUo5k7hBSbcxW/ZEsq//V6GNbXLSsiUZXm6VCWDQvbd2qyw6pGzEgW7JM7W5B/lqciWNp1kUhscjCnq+EaPHFaObCQ4oX7Isx6USAjaOMI2vPC9ukRZHxfbQoOGyWQJfFq4DQe66YnyTOAGdKZ0xMIQmqpi6stvq6HUilB0UWnMZr75JLAZzIbnh5H3haTVaZVOVHpf5609Enk+nmj8I1u774M17b3dqC83fwHnYhkf40AwU1IS2bNpwoqqBuoTVBfcyF8yIuAU9Y6kBOFapD9AmpEM5U79roJ8vi9HukfA12Yp8tsabg6A8B57jxra225PcHk+H+AdkvYFP3Nd672Qw6e4D+bZlwyiMwpNedNI7HUfRWa9/dtrr/ND/8aeo3/+w1XLxDMoPk0M7bSwtCpE0dg7L5+TAq3pc7ITJU7ZqD/ZrseDkA5MrZs1COAa0V+FrJll5FJ8/MMv0KGNpSxUWOiVWEYNIwpyUP1nUTKT8VreIf/zYBWhSxNbgkCuY9nMo3mEmX/5SGK5/ZkkmpAANDL5Ojaq5AlVqxTlWjDd+wORV0jhHj9Ec0Jc85Q1yHS2Lyxqw+t7UkgtT/ah5Ykb904bJ28qqlfl2Mnopt5dyeym3f7fcXjj6wtH/H0eH0IVsSOo6mNOwt9+03EpW3hTwxKmB5n6ugGE0V8Zxj9k5/OqyXHSjTtjFW4eycSobnereYYQdjafowduHjV+g6hXHLlOgBXO/HFDpiNeUdSZhy3SzvS64qnzftPvb5Ded20yXDXlYdtfbhZ0mOdxvdDEze91puNdihq7rnKm6VQOVZdidr8iIa/jnT26uRmNyfj2EjeGn8UameOHimi+MeMbcOVLGwh8Ku7cxu37Wbk/+wwucMpmWL20Xzg3hvvWFr0lPmjvMNCCBNtgP64xuwubcmAR0jiQD4Ho9ZQYr+ukJp2ETjP0dDB+YFr5jupvABvPqKmtNF8AhDLJz/WSM5iA8LTzHdlrup6CSOI9jntuj2EmtDq7fjsYAnpYXVZlKUEazR7zEgvcZhYFy0XPcd3NrSKu8L+DEg3WvE5mMtdYshIUrhHKAXlVLclWzsFkTQekIvtGtgyLrtS8zCGiF90tflNgUokdjQidg9d/ZZOFI
+sidebar_class_name: "post api-method"
+info_path: site/openapi/workspace/API Backend/Usage API/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Create an invoice item"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/api/2.0/crm/invoiceitem"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Creates an invoice item with the parameters (title, description, price, etc.) specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"title":{"description":"Invoice item title","type":"string"},"description":{"description":"Invoice item description","type":"string"},"price":{"description":"Invoice item price","type":"number"},"sku":{"description":"Invoice item stock keeping unit","type":"string"},"stockQuantity":{"description":"Invoice item stock quantity","type":"number"},"trackInventory":{"description":"Specifies if the inventory is tracked or not","type":"boolean"},"invoiceTax1id":{"description":"First invoice item tax ID","type":"integer"},"invoiceTax2id":{"description":"Second invoice item tax ID","type":"integer"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Invoice item","content":{"application/json":{"schema":{"type":"object","properties":{"Title":{"type":"string","example":"Title"},"StockKeepingUnit":{"type":"string","example":"StockKeepingUnit"},"Description":{"type":"string","example":"Description"},"Price":{"type":"number","format":"double","example":"1.2"},"Currency":{"type":"object","properties":{"Title":{"type":"string","example":"Chinese Yuan"},"Symbol":{"type":"string","example":"¥"},"Abbreviation":{"type":"string","example":"CNY"},"CultureName":{"type":"string","example":"CN"},"IsConvertable":{"type":"boolean","example":"true"},"IsBasic":{"type":"boolean","example":"false"}},"title":"CurrencyInfoWrapper"},"StockQuantity":{"type":"number","format":"double","example":"2.2"},"TrackInvenory":{"type":"boolean","example":"true"},"InvoiceTax1":{"type":"object","properties":{"Name":{"type":"string","example":"Name"},"Description":{"type":"string","example":"Description"},"Rate":{"type":"number","format":"double","example":"Rate"},"CreateOn":{"type":"string","example":"2020-12-14T22:13:41.5378233Z"},"CreateBy":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"},"CanEdit":{"type":"boolean","example":"true"},"CanDelete":{"type":"boolean","example":"true"},"ID":{"type":"integer","format":"int32","example":"1234"}},"title":"InvoiceTaxWrapper"},"InvoiceTax2":{"type":"object","properties":{"Name":{"type":"string","example":"Name"},"Description":{"type":"string","example":"Description"},"Rate":{"type":"number","format":"double","example":"Rate"},"CreateOn":{"type":"string","example":"2020-12-14T22:13:41.5378233Z"},"CreateBy":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"},"CanEdit":{"type":"boolean","example":"true"},"CanDelete":{"type":"boolean","example":"true"},"ID":{"type":"integer","format":"int32","example":"1234"}},"title":"InvoiceTaxWrapper"},"CreateOn":{"type":"string","example":"2020-12-14T22:13:41.5378233Z"},"CreateBy":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"},"CanEdit":{"type":"boolean","example":"true"},"CanDelete":{"type":"boolean","example":"true"},"ID":{"type":"integer","format":"int32","example":"1234"}},"title":"InvoiceItemWrapper"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

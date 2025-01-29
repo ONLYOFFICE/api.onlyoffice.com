@@ -1,0 +1,71 @@
+---
+id: get-edit-diff-url
+title: "Get changes URL"
+description: "Returns a URL to the changes of a file version specified in the request."
+sidebar_label: "Get changes URL"
+hide_title: true
+hide_table_of_contents: true
+api: eJztV0tP20AQ/iurPbVSFKcBqa1vCCityqHicUIRWuxxvODsLrvjiMjyf+/M2gnmpVaUA6pyiWNnnt/M53zbSFTzINML+U1XEEQi4lXORtI68Aq1NT9ymco54GGu8UAXxbmv5Eg65dUCEDx7N9LQDZkV5E32I6kN3TmFJX33cFtrDxQGfQ0jGbISFkqmjcSVYy9tEObgybSwfqGwe7QzpQdwpxauIqPd6e7nth1tMi0pMxW3TnVbg1/JV8b+NN3ZbdsZVxqcNYEAoADTyYQvOYTMa8dIkC/DI/rcotQBrV+JXKGieJmlXAZjcrjDxFWKa2ueFmWvriFDRtEzzKi7jFmpzBwCA3xvG9BrMx/WX3tNt6auKnXF5XeobrqRwS5AcAWyHckbWD0X7C+9nYeltnX4c+3/lqd+y5Z5Cc9ipFfWQzFUTttOM1bVr0GbhaoCOaHG6LJ3uj+OfBnvWw9jJsj3biV4hBQF7Q2Y9wLLmjGv4Ma7wPSAWHaAtgvlXKWz+HpKroPdsmzLsncCy//EsvgvtqXXll5ber09vVqO9lBcngDW3gShxPnJsUArsATR80nYgp4XQ/kZHGS60JALbaIpC20IOKZ2SJqXthfuUa2TEk9lopxOpuNJwnFC/EyaTrO3CVCVSU4Cn2U0+OVa2sf5yRLRpUlS2UxVpQ2Yfpl8nSbycQvH/Lvo3CVL6gAZDRhXp/z66FimQnapaiwvH9KNavsJrOF7hf/ArJf5mbU3GuIgtCls9H6MuRxsiVxO4xuACl6ouDV98CPADbIE9uM+mnsx/5ZT6TsdnA7u+dGN6IJhIEsakuwWNvRXuqSb4xXPimvmaRHIPBD2bZorFYB427b8uDsU8QxzHXi5882mRugHh6ilqmouLc5sqbzuuPCc64tAfTjpD3ofxUu9rkdtVsOc63L69toZWZagclohrqD7cS/LwOHAbRh5Ntj4o8MzWpDfJWcSXQ==
+sidebar_class_name: "get api-method"
+info_path: site/openapi/docSpace/API Backend/Usage API/asc-files
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get changes URL"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/files/file/{fileId}/edit/diff"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns a URL to the changes of a file version specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"fileId","in":"path","required":true,"schema":{"type":"integer","format":"int32","example":4247}},{"name":"version","in":"query","schema":{"type":"integer","format":"int32","example":1234}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"File version history data","content":{"text/plain":{"schema":{"type":"object","properties":{"changesUrl":{"type":"string","format":"uri","nullable":true,"example":"some text"},"key":{"type":"string","nullable":true,"example":"some text"},"previous":{"type":"object","properties":{"key":{"type":"string","nullable":true,"example":"some text"},"url":{"type":"string","format":"uri","nullable":true,"example":"some text"},"fileType":{"type":"string","nullable":true,"example":"some text"}},"additionalProperties":false,"title":"ASC.Files.Core.EditHistoryUrl"},"token":{"type":"string","nullable":true,"example":"some text"},"url":{"type":"string","format":"uri","nullable":true,"example":"some text"},"version":{"type":"integer","format":"int32","example":1234},"fileType":{"type":"string","nullable":true,"example":"some text"}},"additionalProperties":false,"title":"ASC.Files.Core.EditHistoryDataDto"}},"application/json":{"schema":{"type":"object","properties":{"changesUrl":{"type":"string","format":"uri","nullable":true,"example":"some text"},"key":{"type":"string","nullable":true,"example":"some text"},"previous":{"type":"object","properties":{"key":{"type":"string","nullable":true,"example":"some text"},"url":{"type":"string","format":"uri","nullable":true,"example":"some text"},"fileType":{"type":"string","nullable":true,"example":"some text"}},"additionalProperties":false,"title":"ASC.Files.Core.EditHistoryUrl"},"token":{"type":"string","nullable":true,"example":"some text"},"url":{"type":"string","format":"uri","nullable":true,"example":"some text"},"version":{"type":"integer","format":"int32","example":1234},"fileType":{"type":"string","nullable":true,"example":"some text"}},"additionalProperties":false,"title":"ASC.Files.Core.EditHistoryDataDto"}},"text/json":{"schema":{"type":"object","properties":{"changesUrl":{"type":"string","format":"uri","nullable":true,"example":"some text"},"key":{"type":"string","nullable":true,"example":"some text"},"previous":{"type":"object","properties":{"key":{"type":"string","nullable":true,"example":"some text"},"url":{"type":"string","format":"uri","nullable":true,"example":"some text"},"fileType":{"type":"string","nullable":true,"example":"some text"}},"additionalProperties":false,"title":"ASC.Files.Core.EditHistoryUrl"},"token":{"type":"string","nullable":true,"example":"some text"},"url":{"type":"string","format":"uri","nullable":true,"example":"some text"},"version":{"type":"integer","format":"int32","example":1234},"fileType":{"type":"string","nullable":true,"example":"some text"}},"additionalProperties":false,"title":"ASC.Files.Core.EditHistoryDataDto"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

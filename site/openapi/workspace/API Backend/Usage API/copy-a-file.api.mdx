@@ -1,0 +1,71 @@
+---
+id: copy-a-file
+title: "Copy a file"
+description: "Copies (and converts if possible) an existing file to the specified folder."
+sidebar_label: "Copy a file"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVVlvGjEQ/iuWn1oJsoTQpkWqKnKpUa8oEFXK8TDsDsHN7tq1vWm2iP/eGXsJhETwEj94vfYc3xz+PJMebp3sX8mJytElJzzLm5bM0KVWGa90KfvyUBuFTryBMhOpLu/ReifURBjtnBrn+FZAKfBBOa/KW8GmhNfCT1E4g6maKMzEROcZ2h3ZkgYsFOjRsuOZLOmHfLDWaUbHij0a8FO5DoPRidMj2nfpFAuQ/Zn0tWFt5y25lvM5Ybf4p0LnD3RWswQB9lh6XoIxuUqBzSW/HducPTelx78x9YzTakORUuR8SlD8SYiBUMb/FWhHyLEHy02kEegavBCRHymf4xYbIYdB7gUjXp9oWzy3cBhrw8mfsMCj6ljrHKGk/PDgFDmjSxcj63Y6L5kyoWoqIHilHP4IpV4vWkviAxSGUxJLHDqCUF6YDDxmB/V2y7Em63Y5CUCoZVWp7ImfTjPaL0yLwRCOlDM51NuBf1d3KC6hrMG7O8Wqj1XeoAQl3KJl6cE9eLDDAvJ8s05lc66vY0kBQYv1z6zmWl3YLerX1wmJZlXqHS9R03bcY/UdcObhc+XQfoKsUCXdaAtekwfuuhiQPCZTukb8ZcFE8E2hNnvudrqd9m633fkw2t3v7+33O3s7e71u7+O7/Us28k3HrtpspXdNo/ee55VeWUHHu4wsQIvdTmQz1RmzinahdZhc+jIBo5LuTieJ3MdzMos0NE9SbWpwTDWYVlb5esg9HpttUJE9q/4FuF8Q6LavgCarX7FeENk0HrcWNPdENwDnS3S+pKzjRajrlLPMxgqHLDcXnOBthXN2PtEBVCN3qIuiKikOMURLJCHOj4cjMTg7JVX6dfHW51RGShHpc6oKCMVokBMj1AIWjPCELVZI9pXfiianHh98QheRUkrYqtjksYxXnHCSpELyjQ8PWPzSp//4qjT1pOdhyk1AarPZGBxfmPmct6kAlojmipb3YBWMOW30PGXK8ZoKMIHc4YbIl8/Ti6gX7VFyb9xDXvEfLe+oWR6fv/kNSTY9w97j4WH00R6xiaXyMyqetxYagzRF4zfK3qxcjLOfwxEJj5sns9AZ61j4S5s8B6A6xBxuQNibUbuUtxUxGJ1Hmzz+A2Nv0R0=
+sidebar_class_name: "post api-method"
+info_path: site/openapi/workspace/API Backend/Usage API/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Copy a file"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/api/2.0/files/file/{fileId}/copyas"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Copies (and converts if possible) an existing file to the specified folder.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"fileId","in":"path","description":"File ID","schema":{"type":"string"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"destFolderId":{"description":"Destination folder ID","type":"string"},"destTitle":{"description":"Destination file title","type":"string"},"toForm":{"description":"Convert to form","type":"boolean"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Copied file","content":{"application/json":{"schema":{"type":"object","properties":{"Name":{"type":"string","example":"File name"},"UpdatedBy":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"},"Updated":{"type":"string","example":"2020-12-08T17:37:03.3424957Z"},"Location":{"type":"string","example":"4\\\\46\\\\File name"}},"title":"FileWrapper"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

@@ -1,0 +1,71 @@
+---
+id: delete-a-task-status
+title: "Delete a task status"
+description: "Deletes a task status with the ID specified in the request."
+sidebar_label: "Delete a task status"
+hide_title: true
+hide_table_of_contents: true
+api: eJylU01z2jAQ/SsanT0xpT1xYwozYdpDp5BThoNiL7GCbanSmpRq/N+7K9kkBOilHIyk/X7vbZConr2cPUrrzAsUmG+U33u5zaSHonMaj2QMct5hZZz+o1Cb9h5UCY6DHJ1kJl/JD+S2p6gSfOG0ZTc5kwuoAcELJZDSCo8KOy9eNVYCKxCrhfAWCr3TUArdxjcHvzrweEdprXKqoXjnYw8tXSin5oqas1uFlfxYcvOu0GpBZl9U0Cg5CxKPNiZoEZ6p/0zujGsUpqfPU9nzAA68Na0HzxHTyYT/blagHIWhdC2ym7K21kWEKH/x7Bsuq5snhpkCUWPND187j6bhpOuUs6dfJr9MPl2WfmjVQASUkr0InsqUZCkj0hE0AmUmc2V1Pr2b5COvqeE86LKXb+Suub0061WKT21Tum9wHJGvkjkbOTmLjY3pdmdi+DilaZqupYpiDe4ATvxcrjdi/mNFSejq03y1IrWgpHhrPDYqQjjUSFo6l9JH9sMbHf+pvWFshN+Y21rR1NRU52qukSB+ZEzIk0Bm2BPMDO3Y2YyUSoKqaBL2DuFJeXhwdd/zM1VyvFt0PCin1RPDRCovteczcbpTtYd/DHih9Ks9j/y1TN5B1R3f6LgnNuMy9VvyqsaVDoNhXhRg8V3Ihbh5WU7yWyy/LzdLcmd9nstmH2UzHLjA1Y7OFTS2x98+uxESQhJl35/8k+lmxEm2w/A8BC3bXzgZs3I=
+sidebar_class_name: "delete api-method"
+info_path: site/openapi/workspace/API Backend/Usage API/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Delete a task status"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"delete"}
+  path={"/api/2.0/project/status/{id}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Deletes a task status with the ID specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"id","in":"path","description":"Task status ID","schema":{"type":"integer","format":"int32"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Task status","content":{"application/json":{"schema":{"type":"object","title":"CustomTaskStatus"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

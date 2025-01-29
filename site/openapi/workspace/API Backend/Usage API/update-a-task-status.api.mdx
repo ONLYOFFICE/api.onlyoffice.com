@@ -1,0 +1,71 @@
+---
+id: update-a-task-status
+title: "Update a task status"
+description: "Updates a task status with a value specified in the request."
+sidebar_label: "Update a task status"
+hide_title: true
+hide_table_of_contents: true
+api: eJylU01v2zAM/SuCzl6dFTvllg0FNgwYiiY5BTkoNhursSVNopNmhv/7SMlu4zbbYfPBoMSv98inTqLaBznfSOftExSYr1Q4BLnNZICi9RrP5OzkosXKev1LobbmK6gSPCd5smQmTxQHcttTVgmh8NpxmJzLtSsVQhBKIJUVARW2QZw0VnR1VHULIjgo9KOGUmgjsALh4WcLAW+o7mB+tiWh6GRhDYJBNpVztS4imvwpcK9OhqKCRrGFZwfU3e6YEdUhbg48agjsNXBaRiB8mOL9AadLpLKPHwMJzpqQ8m9ns/eZiWk5yc7+HTFqrPniSxvQNryT5SuiTH6afbwCwahhS1BKjmqAjiV5XBunoLCiQ66czm9vZvm48Re048aXDCtxvbr3F7hU6TucKVNz/yq5M2lUw95JbgTEvB9ed3r3rBrHNLueSzzaWHpkbpumNYRGLMEfwYuHu+VKLO6/UQM6hsS5ZnmhpHxnAzYqjnXon1Yy1Z58o9ALUf2vWIeZIDxj7mpFIyFUra+5SRr9hgdGkTT8JMph2QM0ej0VkeC4rtupAGtf9z1fUw/P75DMo/Ja7XhCmy3Vr8an2MkDbYLHFul8WDEaDifYcVNv1NdnY8aiKMDhX2O3F1q6X68odjc8ycaWnOLViZ8r/eeSDBunGwUU7zrak9m3as+xqSTLgeU6VdMhqmkwmNToMucLgFNhZQMP/jOrqyldl7RK8xzjk+uPGS9qTtG8zi2h/g3wRMoZ
+sidebar_class_name: "put api-method"
+info_path: site/openapi/workspace/API Backend/Usage API/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Update a task status"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"put"}
+  path={"/api/2.0/project/status"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Updates a task status with a value specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"newStatus":{"description":"New task status"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Updated task status","content":{"application/json":{"schema":{"type":"object","title":"CustomTaskStatus"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

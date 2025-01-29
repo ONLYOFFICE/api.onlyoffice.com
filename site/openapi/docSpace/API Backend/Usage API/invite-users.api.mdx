@@ -1,0 +1,71 @@
+---
+id: invite-users
+title: "Invite users"
+description: "Invites users specified in the request to the current portal."
+sidebar_label: "Invite users"
+hide_title: true
+hide_table_of_contents: true
+api: eJztWF9vEzkQ/yorP0LIhsDDkbfQAwlBj4pSnXRVhCa7k8TUuza2NzQX7Xe/GXuXOmkqrgpPKHlIN975/5uZzngrPCydmFyLC9RGYZZnF1YvpEInZgOhDVrwUtfvSjERsl5Lj1cOrRMDYfFbg86/1uVGTLai0LXH2vMjGKNkEfjyr07XfOaKFVbAT8wnLZasNEgMhEGd3xgkPXr+FQtPKoxlA7wkY4gxJaafHTFYCxuiJcsqPm8HokRXWGmYkgg+SOczvcgasjtLZQwE3kJFTpMlLJ1sfz5+8XIgnLeyXhKr0xVmHm/ZlrnWCoEEettgOyM1RaN8YzGxpWPct+CsIxyIulEK5qyRpSQGJKpaEg1lKZkZ1EUSggUoh/vCP0UYMgMWKvSETbbQnaNkTHCbffXSB0XTy7NhxHo4NfJcl6jcsBPyp9fDd3cg350Go9i6E56/D55pmT55egL2NwGWzbLoDEUuwjEejfjPw8FmrUn7DnVuFMi9fPgJ6OWh+JKHFZBU0TREkMZxO+o+zw589Z9WcJZIR9Zs/qKoHVLxMFTn8gazf6DegHc3kkV1sX2UEKhhiZa5YQ0e7OPYk3TpBXy0cikpY44WdA63x8vAUjbV0WIuK1CPdKixKvM6c8yZdaFtQ1bx+HFlj4nPCtx0H6y+LyRMoUNQR3LTWtey+h/EPyv5tHj/xjlX7rAr3TckRm8QD7Xf+833VGynYjsV2y8rtgdm11OVnarsVGW/qMpY0svR8/uz5lUNjV9pK/+lZSIQvbhP9FbbuSxLrEO9OiwaK/0mTPzgii8s4csN8gFNt8CF950IUMza2f6kHSdjF2fbzBks5EJiSaN25leYdRcXjBT/JEWWJt/MaOtBDUkwTecrzRceRrvQFcCv6FcORubj4Sg3YSrP43WIYGPtmqdotrVhkMXKezPJc6ULUCsSMvlj9Gqc39s3PvD7LLIL9qN3+5I7VGxCu87fbVNGvkdep+rQQ3bJCH8WX2h9IzHEk1vfp7sLmzd9Buwta49fr5LtajdfZb3Qwd4kfd6Ge6WB4GjFCKzHoUAoRBWE3ty5EyH8sZ3shC25azoa6i6aycpD5jSxUCPs1xxqoiTgORUC9CHAAXzyn/Flsu12Do6LvG35mBRbzlZ6XIOVscKveR1dUfoS3hzsgKk4i+48+8zGMLlqIsR7A2I76DmmRYHGJ7SpA7Mkgy8+Xn4OoMVLuorqlk4tfOcLPPqeCMG3fD929XC2FQrqZUP/I+h91By6RMPxSDMw5lr3wP70r+pN6sduakYP+Jv9Ocix3cb0pkj29PHVgxxdTHvqEAYy+j+CHTF9
+sidebar_class_name: "post api-method"
+info_path: site/openapi/docSpace/API Backend/Usage API/asc-files
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Invite users"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/api/2.0/people/invite"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Invites users specified in the request to the current portal.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"required":["invitations"],"type":"object","properties":{"invitations":{"type":"array","items":{},"description":"List of user invitations","example":[{"int":1234,"string":"some text","boolean":true}]},"culture":{"type":"string","description":"Culture","nullable":true,"example":"some text"}},"additionalProperties":false,"description":"Request parameters for inviting users","title":"ASC.People.ApiModels.RequestDto.InviteUsersRequestDto"}},"text/json":{"schema":{"required":["invitations"],"type":"object","properties":{"invitations":{"type":"array","items":{},"description":"List of user invitations","example":[{"int":1234,"string":"some text","boolean":true}]},"culture":{"type":"string","description":"Culture","nullable":true,"example":"some text"}},"additionalProperties":false,"description":"Request parameters for inviting users","title":"ASC.People.ApiModels.RequestDto.InviteUsersRequestDto"}},"application/*+json":{"schema":{"required":["invitations"],"type":"object","properties":{"invitations":{"type":"array","items":{},"description":"List of user invitations","example":[{"int":1234,"string":"some text","boolean":true}]},"culture":{"type":"string","description":"Culture","nullable":true,"example":"some text"}},"additionalProperties":false,"description":"Request parameters for inviting users","title":"ASC.People.ApiModels.RequestDto.InviteUsersRequestDto"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"List of users","content":{"text/plain":{"schema":{"type":"object","properties":{"id":{"type":"string","format":"uuid","example":"{00000000-0000-0000-0000-000000000000}"},"displayName":{"type":"string","nullable":true,"example":"Mike Zanyatski"},"title":{"type":"string","nullable":true,"example":"Manager"},"avatar":{"type":"string","nullable":true,"example":"some text"},"avatarOriginal":{"type":"string","nullable":true,"example":"some text"},"avatarMax":{"type":"string","nullable":true,"example":"some text"},"avatarMedium":{"type":"string","nullable":true,"example":"some text"},"avatarSmall":{"type":"string","nullable":true,"example":"url to small avatar"},"profileUrl":{"type":"string","nullable":true,"example":"some text"},"hasAvatar":{"type":"boolean","example":true},"isAnonim":{"type":"boolean","example":true}},"additionalProperties":false,"title":"ASC.Web.Api.Models.EmployeeDto"}},"application/json":{"schema":{"type":"object","properties":{"id":{"type":"string","format":"uuid","example":"{00000000-0000-0000-0000-000000000000}"},"displayName":{"type":"string","nullable":true,"example":"Mike Zanyatski"},"title":{"type":"string","nullable":true,"example":"Manager"},"avatar":{"type":"string","nullable":true,"example":"some text"},"avatarOriginal":{"type":"string","nullable":true,"example":"some text"},"avatarMax":{"type":"string","nullable":true,"example":"some text"},"avatarMedium":{"type":"string","nullable":true,"example":"some text"},"avatarSmall":{"type":"string","nullable":true,"example":"url to small avatar"},"profileUrl":{"type":"string","nullable":true,"example":"some text"},"hasAvatar":{"type":"boolean","example":true},"isAnonim":{"type":"boolean","example":true}},"additionalProperties":false,"title":"ASC.Web.Api.Models.EmployeeDto"}},"text/json":{"schema":{"type":"object","properties":{"id":{"type":"string","format":"uuid","example":"{00000000-0000-0000-0000-000000000000}"},"displayName":{"type":"string","nullable":true,"example":"Mike Zanyatski"},"title":{"type":"string","nullable":true,"example":"Manager"},"avatar":{"type":"string","nullable":true,"example":"some text"},"avatarOriginal":{"type":"string","nullable":true,"example":"some text"},"avatarMax":{"type":"string","nullable":true,"example":"some text"},"avatarMedium":{"type":"string","nullable":true,"example":"some text"},"avatarSmall":{"type":"string","nullable":true,"example":"url to small avatar"},"profileUrl":{"type":"string","nullable":true,"example":"some text"},"hasAvatar":{"type":"boolean","example":true},"isAnonim":{"type":"boolean","example":true}},"additionalProperties":false,"title":"ASC.Web.Api.Models.EmployeeDto"}}}},"401":{"description":"Unauthorized"},"403":{"description":"Forbidden"}}}
+>
+  
+</StatusCodes>
+
+
+      

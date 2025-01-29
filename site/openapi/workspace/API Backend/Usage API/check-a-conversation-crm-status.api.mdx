@@ -1,0 +1,71 @@
+---
+id: check-a-conversation-crm-status
+title: "Check a conversation CRM status"
+description: "Checks if a conversation is CRM linked or not by message ID."
+sidebar_label: "Check a conversation CRM status"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVMtu2zAQ/BWCZzVynPSSm+sYrdEGKOLkZBgBLa0txqLIklQSV9C/d5eUXClJe2l9MChyHzOzQzbci73jV2uuhCzTua6ewDrhpa4c3yTcQVZb6Y8Y0fBZ7Qtt5c9w/AVEDpYyLa54wp8xDvimxawcXGaloTB+xecFZAfH5I4Jlg0aMOnY/PaGlbI6QM60ZZX2bHtkCpwTe2DL6zOsa+FHDc5/0jmiaDhW8FB5WgpjSpmFWumjo14Nd1kBStDKHw1gd719hMxjHWO1AeslODrtejzInL7GgJfXTCPY6oTEsZ3VivkCRgSwaNdEIqY9qtGGH2F2BhWMraaTydseQ6WDCs4LXzss+Z8I3kToy3wQ2sNM+E5bJXzcupjiBrwIZUoKOp9efLzkSGLpvoXJDApstS5BVKN4b2vgRNpLHzZu0Elzq1aRUBTkcnL+VoP7SnSOwiYUpQA/sR/fQyAkfIEfqTAynZ5N0mDR4QBcSt5JM6vSk3y9Y1ekU5TiXd+eOGH1r3DETEmYinic8EooOh3lBpA0iNvfnlz0Qow9NWmp4E6HRp0wc61UXSE2tgKLJNjtYnXHZt+X2I44RVVK4bE0DcBo55UIU+/QhKv0+hqN3DNSeHBb/vUWdmJ5ePGpKQVqhQBrW1KTOKc1KYmROCn8p1lFMw8elIRTF9q2ikYVQeODUSBTqtA0W+Hg3pZtS9sosqWnB5dPwkqxJRnXG+xc9K9Pww84vHCfiOiHO8JJ4WUdh/vqBrVJnzHLMjD+r7GbgSU/L+4wdtu9QkrnlGLFM71Q+H/FcaFN5IkBYa/BYVb7GlXE81iSHESuHxvwEAzYLYhUf1QdBwDHXkw6HvRPrN5NaZpob9Szj49Hf8w4XYAYTYPeIOpfMewbfQ==
+sidebar_class_name: "get api-method"
+info_path: site/openapi/workspace/API Backend/Usage API/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Check a conversation CRM status"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/mail/conversations/link/crm/status"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Checks if a conversation is CRM linked or not by message ID.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"message_id":{"description":"ID of any messages from the conversation","type":"integer"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Conversation CRM status","content":{"application/json":{"schema":{"type":"object","properties":{"MessageId":{"type":"integer","format":"int32","example":"12354"},"IsLinked":{"type":"boolean","example":"true"}},"title":"MailCrmStatus"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

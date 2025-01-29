@@ -1,0 +1,71 @@
+---
+id: start-file-conversion
+title: "Start file conversion"
+description: "Starts a conversion operation of a file with the ID specified in the request."
+sidebar_label: "Start file conversion"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVm1z4jYQ/isafTbBGJI0zHRuaJNOM23aTCBzM5fwYbFF0GFbqiSTUA//vbuSMeHIQadTf7Dl1b48+6Jd1dzBi+XDJz6XubDdP7Uw4KQqLZ9G3Iq0MtKtcb/mo8otlJF/++1fBWTCkJzBFY/4K/IJPt2gVCZsaqQmNj7kYwfGWQYsVeVKGItUprZWmJrjDplmr9ItmFsIdnvNrBapnEuRMVl6mhF/VcK6MzSkwUAhHGryqEr8QSuk4pZwSLKpwS34t0B+ISu310i36UIUwIc1d2tN0tYZWb7wDaE3wmp0X1jaT+KYPvuK2hghLFvlDjWib06UjnhB61ymfr/71ZJAfWgQjIE1oXWisO/oavZVpKRQG4qRkwEGenYANuLiDQqdEyk7H1zF6Qw6cC4uOoM4m3UgnSWdq0ES97MZ9JLsgm+iHfKJV9WqlIj+BdMZ8bkyBbhA6idkpKwKSvOdWgn8/Vlpwn0tckwBLdRrmStfAXdgliP7EMrhttDKOC9AWXf8oC6eYtZhpDViPVyR4ogluAq6I9andaM+YgPibi1E7Bz/g5GIXXh5b2e6Fxfv9L1RL5go+y/9bYX7MUmPVWVScTz8NvAgN9XY6XT+4Wv2mEZfq760UemjzsCJ7Kf1fy2U1smqktmenbh5Oh+8tg9BuJZW57A+DfxOLgX7AuUanF1KEp1Il58SghIoHcg9WgH2i3EBeX5cpjI5c4pZ4mTgpZpkUyt4NCfEn5+7yJpVqbO0FArJgUbiZ2D126fKCvMjZIUsJWoAp9ACmnDBIX6DqtRaiM8GdADfJOq45SRO4k4v6cQ/THqXw/7lMO6f9QfJ4Or88gsp+V2F5nFcy+AZn8EFvd/Vyjt0RCVkDbQbYxD+UZVN+FI8Kqd86O2ZCkfPetQPoSNu6In4IO4dts/HEppJgmaIC7v5QmXUtitf0dS8h7wLWnaTs7gbBhO9u3Vo85su9tN0uRsofDeqxtRqw2H4cGDtWrCWv4n1dmIswna0nSd7sh6lLOfKi7deF0VVokU2FgZxsIeb8YSN7m9RyRbWkOdYENZRaLWyrgCf1saGn4xh+O25sheuejdb/vdR2kTCiTfXxeONgUCcVTg6IQtPFCbkxDxQH6FMNF/8DNuh+206sNkv0F2Sr+sZWDqPmw2R0bah6wQuV2AkzCiWOMYzaWmNVTCH3IojQdiN8Q/hb7NbUmpXkFe+tCO+xFy314TNFDkX2ytM3WyO0lRo907sYJTT/aCt1vvHCfJSLe9X1dJXVbMg7R9C2i+wLT56b6LviNR1qFmM5JY/bH1Xoq3qwE0RmuLB/Af1lE9R
+sidebar_class_name: "put api-method"
+info_path: site/openapi/workspace/API Backend/Usage API/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Start file conversion"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"put"}
+  path={"/api/2.0/files/file/{fileId}/checkconversion"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Starts a conversion operation of a file with the ID specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"fileId","in":"path","description":"File ID","schema":{"type":"string"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Operation result","content":{"application/json":{"schema":{"type":"array","items":{"type":"object","properties":{"Id":{"type":"string","example":"d5490cba-a5e6-40db-acb2-94203dba12d6"},"OperationType":{"type":"integer","format":"int32","enum":["Move","Copy","Delete","Download","MarkAsRead","Import","Convert"],"description":"[0 - Move, 1 - Copy, 2 - Delete, 3 - Download, 4 - MarkAsRead, 5 - Import, 6 - Convert]","example":"6"},"Progress":{"type":"integer","format":"int32","example":"30"},"Source":{"type":"string","example":"source"},"File":{"type":"object","properties":{"Name":{"type":"string","example":"File name"},"UpdatedBy":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"},"Updated":{"type":"string","example":"2020-12-08T17:37:03.3424957Z"},"Location":{"type":"string","example":"4\\\\46\\\\File name"}},"title":"FileWrapper"},"Error":{"type":"string","example":""},"Processed":{"type":"string","example":"1"}},"title":"ConversationResult"}}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

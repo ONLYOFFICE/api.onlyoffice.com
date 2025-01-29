@@ -1,0 +1,63 @@
+---
+id: get-the-mail-server-information
+title: "Get the mail server information"
+description: "Returns full information on the mail server associated with the current tenant."
+sidebar_label: "Get the mail server information"
+hide_title: true
+hide_table_of_contents: true
+api: eJztWN1P2zAQ/1ciP1eUr73wtIoyQBsMUeAF9cFNjsY0sTPbgXZR//fd2UlJKP0YgjFtlarGsX/3ffY5VzDLh4Yd3LKUi8SAfgDd7rmHYf0WMxDmWtgJIgrWyW2stPjJrVDyBHgEmig1jliLPSIOWH+KVBGYUIuMYOyAXYLNtTTBXZ4kgZB3SqeOQ4A/G0NAkgMvOuDGqFBwC1HwKGzs1lEDDdIGFiSXdgtFaTCZkgZQ8YLtbm/ToynzC8mqM67LxdELjJFvqCSOLbHjWZaI0OHb94Z4FsyEMaScRnaSAUpRg3sIiTDTKgNthdfI+2817jSqYQSKHiJVi3lF/dTeLk7AmKdZQqCd3b19Nm2xrjTvyf5sfAmh0tFqGSfK2BrKWC3ksMHTIZDnhRbKZ9LrdDo1N6DFnYC6VgOlEuCyQWB1DmyKFFZYN+HD0VWYDrKyrMstJ6697G5dU895CstNlYRApjc8yVdAHxzkzczCfGja1R2JdF3DepDgtNLLNZ6hKJb5ADfHV5gsJ3mCvZ2hM7tmlrr5wxjC0T8ZyaVsl3CZZbib/iZSYdc4M87wyByo8RkfH6pc2gvQ16ZxlK21Zz+9oJjTYGaUXHxGVmSlKiUQib7n9rep5v3TSJu6R7jWfIKcsIql73K6isjHsxdzDZFXYK1Uaa2Rsedlxm4qw6YybCrDpjKsrAyL1qvF8iCFP3pEVluaik6D+gX3lpgS3RUmS/hkdQCfg5G+E0X4RfGuBnnnvp7+iL5llhvmIJ+VTCZboUoXBrg0tkqi9StLJxHcfEw6/KXemweVm6axiYZa5dmHuO1/zuvydZOvS/PVg44pQxdBqJNSreHi/vbOfLflWvKyNYS1iFAp4Cuaz4bg/MptjC9tnon27tZ2u9Zr8g/qzrQ9tuo49ajZ4gPxYt/pKaqZoIsEhpVUif1yyxfqgyat041kOfLSzEOVprlEiYE3OLg86l0FnYtTZEJtMG9iwi3462qG19aUu5t7KeMY7Fwjq9ZvYs8aYsVTn+kdemOlVyyMbRuLHDoFdc61Sycfh1tyGSIxEvj/FAvn/Coa+ELx6LdY7C7yt6woBnj+X+tkOqXpHzloagvi8IFrwQfkzNs+CourzmDBRnQRZJ0whIxi629EB/PNNWoaznLm+OgKsZRRzSiPXJTLAXGvluSkxrsZ8FapwshdNReQFIXPITSswld3twUUsyzzaHJyH7fHL54VNN4=
+sidebar_class_name: "get api-method"
+info_path: site/openapi/workspace/API Backend/Usage API/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get the mail server information"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/mailserver/serverinfo/get"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns full information on the mail server associated with the current tenant.
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Full mail server information for the current tenant","content":{"application/json":{"schema":{"type":"object","properties":{"Server":{"type":"object","properties":{"Id":{"type":"integer","format":"int32","example":"1234"},"Dns":{"type":"object","properties":{"Id":{"type":"integer","format":"int32","example":"1234"},"MxRecord":{"type":"object","properties":{"Host":{"type":"string","example":"Host"},"Priority":{"type":"integer","format":"int32","example":"1234"},"IsVerified":{"type":"boolean","example":"true"}},"title":"ServerDomainMxRecordData"},"SpfRecord":{"type":"object","properties":{"Name":{"type":"string","example":"name"},"Value":{"type":"string","example":"value"},"IsVerified":{"type":"boolean","example":"true"}},"title":"ServerDomainDnsRecordData"},"DkimRecord":{"type":"object","properties":{"Selector":{"type":"string","example":"Selector"},"PublicKey":{"type":"string","example":"PublicKey"},"IsVerified":{"type":"boolean","example":"true"}},"title":"ServerDomainDkimRecordData"},"DomainCheckRecord":{"type":"object","properties":{"Name":{"type":"string","example":"name"},"Value":{"type":"string","example":"value"},"IsVerified":{"type":"boolean","example":"true"}},"title":"ServerDomainDnsRecordData"},"IsVerified":{"type":"boolean"}},"title":"ServerDomainDnsData"},"ServerLimits":{"type":"object","properties":{"MailboxMaxCountPerUser":{"type":"integer","format":"int32","example":"5"}},"title":"ServerLimitData"},"InServer":{"type":"object","title":"MailboxServer"},"OutServer":{"type":"object","title":"MailboxServer"}},"title":"ServerData"},"Domains":{"type":"array","items":{"type":"object","properties":{"Id":{"type":"integer","format":"int32","example":"id"},"IsSharedDomain":{"type":"boolean","example":"true"},"Name":{"type":"string","example":"Name"},"Dns":{"type":"object","properties":{"Id":{"type":"integer","format":"int32","example":"1234"},"MxRecord":{"type":"object","properties":{"Host":{"type":"string","example":"Host"},"Priority":{"type":"integer","format":"int32","example":"1234"},"IsVerified":{"type":"boolean","example":"true"}},"title":"ServerDomainMxRecordData"},"SpfRecord":{"type":"object","properties":{"Name":{"type":"string","example":"name"},"Value":{"type":"string","example":"value"},"IsVerified":{"type":"boolean","example":"true"}},"title":"ServerDomainDnsRecordData"},"DkimRecord":{"type":"object","properties":{"Selector":{"type":"string","example":"Selector"},"PublicKey":{"type":"string","example":"PublicKey"},"IsVerified":{"type":"boolean","example":"true"}},"title":"ServerDomainDkimRecordData"},"DomainCheckRecord":{"type":"object","properties":{"Name":{"type":"string","example":"name"},"Value":{"type":"string","example":"value"},"IsVerified":{"type":"boolean","example":"true"}},"title":"ServerDomainDnsRecordData"},"IsVerified":{"type":"boolean"}},"title":"ServerDomainDnsData"}},"title":"ServerDomainData"}},"Mailboxes":{"type":"array","items":{"type":"object","properties":{"Id":{"type":"integer","format":"int32","example":"1234"},"UserId":{"type":"string","example":"UserId"},"UserDisplayName":{"type":"string","example":"UserDisplayName"},"Address":{"type":"object","properties":{"Id":{"type":"integer","format":"int32","example":"1234"},"DomainId":{"type":"integer","format":"int32","example":"1234"},"Email":{"type":"string","example":"Email@only.com"}},"title":"ServerDomainAddressData"},"Name":{"type":"string","example":"Name"},"Aliases":{"type":"array","items":{"type":"object","properties":{"Id":{"type":"integer","format":"int32","example":"1234"},"DomainId":{"type":"integer","format":"int32","example":"1234"},"Email":{"type":"string","example":"Email@only.com"}},"title":"ServerDomainAddressData"}}},"title":"ServerMailboxData"}},"Mailgroups":{"type":"array","items":{"type":"object","properties":{"Id":{"type":"integer","format":"int32","example":"1234"},"Address":{"type":"object","properties":{"Id":{"type":"integer","format":"int32","example":"1234"},"DomainId":{"type":"integer","format":"int32","example":"1234"},"Email":{"type":"string","example":"Email@only.com"}},"title":"ServerDomainAddressData"},"Addresses":{"type":"array","items":{"type":"object","properties":{"Id":{"type":"integer","format":"int32","example":"1234"},"DomainId":{"type":"integer","format":"int32","example":"1234"},"Email":{"type":"string","example":"Email@only.com"}},"title":"ServerDomainAddressData"}}},"title":"ServerDomainGroupData"}}},"title":"ServerFullData"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

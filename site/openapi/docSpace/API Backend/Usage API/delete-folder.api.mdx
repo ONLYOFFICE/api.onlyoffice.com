@@ -1,0 +1,71 @@
+---
+id: delete-folder
+title: "Delete a folder"
+description: "Deletes a folder with the ID specified in the request."
+sidebar_label: "Delete a folder"
+hide_title: true
+hide_table_of_contents: true
+api: eJztWEtv2zgQ/isET/tQ/UrSpr557QQINkEXSYseAqOgpbHNRiK1JOXUNfTfd4aUbNmOF3XRnuqLTVLz+maGn+xZcSdmlvcf+bVMwbI2u9ZpAsbyccR1DkY4qdVNwvs8gRQchMc84rkwIsMDQ9orrnCDQlP/GOUjLhXuc+HmuDbwbyENoBlnCoi4jeeQCd5fcbfMSU8qBzNvd6pNJlw4OuvhAXwRWZ6i0Fn38rIsx8EaWPeXTpZkItaorBwtRZ6nMvYxtz9brehsz5eefIbYEQRDCJ0ES08DvsEUITWEJ1qnIFQzDoJQIr4sg0QKB+nyG+RRQSSJpMhE+k/D8VSkFjPipCNZPngYtnwpWkNtoDXI5Z3GyGzrPoAeOd0aNStBlh18cb8S3maZ//jzlwFOtg3YXCsbkPQ6nQDIxkbm5BIN30rrmJ6yKRpn6ytsMdDGRfEdk6dCHpU5mTRkrDNSzVBGFWkqJnUCGvng3bcXPY5Bv6ujIHWt4N3UcwaoIiPqudMLQDtDnS/xK4CmhX5WqRbEJXfCPA3sPfjNTZZr47yCWoBfjYrQEEC0tRvfdnoeyRt7xegrYuQTN/QVseAZt2GBB1UEdFQtI7aJhaysNxELceFhWJBxH5+371dosQ6UTNbrcbOJQjbKaJ2eTtSNetFZdB5dRK+jNxuAG87cQdhZw+uusfUasM628JzvwLhoIHjdjP3NwZg7xMrNxv4Ik6q5H8AsZIyLj8Prau2frFvCbm/fE7bSN94Me90e+Y7odjqoDMZoc1yrVj4xUgvHdjnpTqWSdr6lephRCpO+5GINqzDyfz1anQGjKxw8p9BMkzBG0D2SDjI6L3ctkU71kj9G6wcQW6AuYratmuPBHq0fS+onajpR04maTtT0k6jpu35hnzjpxEknTjpx0k/hJHJw3unu///7oETh5trIr5heL3S2L3StzUQmCSjPbhZizKFbepoRNv5EFj49AR3gP05PI88ogHxBrbttKlwTywQLaWLP0s2ZmwO7GTGbQyynEhImlT+rZjcttJgBhrmZLPmZkpvjvi1y2e61Om1fq3Yw217Vs6WSU8RmUY+efHvwuXN5v91OdSzSubauf9l522vv3fZbes6COicwNfYHIvXQGdsZ2NQ8l38DFb2adW2JVfOuWOsnCT6p9La430yqrup23BlAhGbdmjHUcwc11d79bqegMwIfAC38KyNHxJnwL4wquoqd66rsJqIxNvv+ClaJaQwTNrc11PKRsoaSWE1e3736PuGiv54XYiWoaqSxWk2EhQ8mLUs6Rm+GGhGXC2FkuGJY9kRaWifrG3UQ32/31fjxd3Yo6LrEiiq5EGnhSS7ivgM2U81yjLJzvBBUOYwhPB4GT688GW/U9/7O0FsqaAziGHLXkG1GM25cjdHV7dX7KxScVMPODMkBz414prEqfvowdR5mPCjgz1Y8FWpWiBnJBt+ekAqqSbOhQ+tWC0L0YiJ2Oj1goE9C9KLGahVuS1mu5cOjgxpVVmtpnwgM+j9KGp4L
+sidebar_class_name: "delete api-method"
+info_path: site/openapi/docSpace/API Backend/Usage API/asc-files
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Delete a folder"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"delete"}
+  path={"/api/2.0/files/folder/{folderId}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Deletes a folder with the ID specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"folderId","in":"path","required":true,"schema":{"type":"integer","format":"int32","example":3188}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"deleteAfter":{"type":"boolean","example":true},"immediately":{"type":"boolean","example":true}},"additionalProperties":false,"title":"ASC.Files.Core.ApiModels.RequestDto.DeleteFolder"}},"text/json":{"schema":{"type":"object","properties":{"deleteAfter":{"type":"boolean","example":true},"immediately":{"type":"boolean","example":true}},"additionalProperties":false,"title":"ASC.Files.Core.ApiModels.RequestDto.DeleteFolder"}},"application/*+json":{"schema":{"type":"object","properties":{"deleteAfter":{"type":"boolean","example":true},"immediately":{"type":"boolean","example":true}},"additionalProperties":false,"title":"ASC.Files.Core.ApiModels.RequestDto.DeleteFolder"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"List of file operations","content":{"text/plain":{"schema":{"type":"object","properties":{"id":{"type":"string","nullable":true,"example":"1952"},"Operation":{"oneOf":[{"enum":["Move","Copy","Delete","Download","MarkAsRead","Import","Convert","Duplicate"],"type":"string","description":"[Move - Move, Copy - Copy, Delete - Delete, Download - Download, MarkAsRead - MarkAsRead, Import - Import, Convert - Convert, Duplicate - Duplicate]","example":"Move"},{"enum":[0,1,2,3,4,5,6,7],"type":"integer","description":"[0 - Move, 1 - Copy, 2 - Delete, 3 - Download, 4 - MarkAsRead, 5 - Import, 6 - Convert, 7 - Duplicate]","example":0}],"title":"ASC.Web.Files.Services.WCFService.FileOperations.FileOperationType"},"progress":{"type":"integer","format":"int32","example":100},"error":{"type":"string","nullable":true,"example":""},"processed":{"type":"string","nullable":true,"example":"1"},"finished":{"type":"boolean","example":true},"url":{"type":"string","format":"uri","nullable":true,"example":"some text"},"files":{"type":"array","items":{},"nullable":true},"folders":{"type":"array","items":{},"nullable":true}},"additionalProperties":false,"title":"ASC.Files.Core.ApiModels.ResponseDto.FileOperationDto"}},"application/json":{"schema":{"type":"object","properties":{"id":{"type":"string","nullable":true,"example":"1952"},"Operation":{"oneOf":[{"enum":["Move","Copy","Delete","Download","MarkAsRead","Import","Convert","Duplicate"],"type":"string","description":"[Move - Move, Copy - Copy, Delete - Delete, Download - Download, MarkAsRead - MarkAsRead, Import - Import, Convert - Convert, Duplicate - Duplicate]","example":"Move"},{"enum":[0,1,2,3,4,5,6,7],"type":"integer","description":"[0 - Move, 1 - Copy, 2 - Delete, 3 - Download, 4 - MarkAsRead, 5 - Import, 6 - Convert, 7 - Duplicate]","example":0}],"title":"ASC.Web.Files.Services.WCFService.FileOperations.FileOperationType"},"progress":{"type":"integer","format":"int32","example":100},"error":{"type":"string","nullable":true,"example":""},"processed":{"type":"string","nullable":true,"example":"1"},"finished":{"type":"boolean","example":true},"url":{"type":"string","format":"uri","nullable":true,"example":"some text"},"files":{"type":"array","items":{},"nullable":true},"folders":{"type":"array","items":{},"nullable":true}},"additionalProperties":false,"title":"ASC.Files.Core.ApiModels.ResponseDto.FileOperationDto"}},"text/json":{"schema":{"type":"object","properties":{"id":{"type":"string","nullable":true,"example":"1952"},"Operation":{"oneOf":[{"enum":["Move","Copy","Delete","Download","MarkAsRead","Import","Convert","Duplicate"],"type":"string","description":"[Move - Move, Copy - Copy, Delete - Delete, Download - Download, MarkAsRead - MarkAsRead, Import - Import, Convert - Convert, Duplicate - Duplicate]","example":"Move"},{"enum":[0,1,2,3,4,5,6,7],"type":"integer","description":"[0 - Move, 1 - Copy, 2 - Delete, 3 - Download, 4 - MarkAsRead, 5 - Import, 6 - Convert, 7 - Duplicate]","example":0}],"title":"ASC.Web.Files.Services.WCFService.FileOperations.FileOperationType"},"progress":{"type":"integer","format":"int32","example":100},"error":{"type":"string","nullable":true,"example":""},"processed":{"type":"string","nullable":true,"example":"1"},"finished":{"type":"boolean","example":true},"url":{"type":"string","format":"uri","nullable":true,"example":"some text"},"files":{"type":"array","items":{},"nullable":true},"folders":{"type":"array","items":{},"nullable":true}},"additionalProperties":false,"title":"ASC.Files.Core.ApiModels.ResponseDto.FileOperationDto"}}}},"401":{"description":"Unauthorized"},"403":{"description":"Forbidden"}}}
+>
+  
+</StatusCodes>
+
+
+      

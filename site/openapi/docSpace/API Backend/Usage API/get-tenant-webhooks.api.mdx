@@ -1,0 +1,63 @@
+---
+id: get-tenant-webhooks
+title: "Get webhooks"
+description: "Returns a list of the tenant webhooks."
+sidebar_label: "Get webhooks"
+hide_title: true
+hide_table_of_contents: true
+api: eJztV8FSIjEQ/ZVUzhSD4MHl5upqWbpbW6LlgaKsMNMw0TDJJj2oS/Hv250ZdIBSuawnDghkXr90v34dw0KimgbZH8oBIOpiGkQi7mCcW/sY5KglrQOvUNviIpN9OQW8gUIV+AppSQ/B2SIAsSxkt9PhtwxC6rXjOIq60gGFnQiMoeKpjhVPGnOBOWgvUltM9FQ45dUMEDwT0xpFIPMhPGPijNIFfwtpDjMV118c0AZ2/AApUojznC/qKpmKNHwO1FkDo2nXKXgCrVdxcUpLE+tnCitUr0sL8KxmzlDc4dFRb9mSBeXfIAvoSdQtrl+MInBpjBpzNPoSGmTyO5RG5WKQ5qUh9SQxl15/Tnx7ffEhb7AzEKwmMwZIPeAlvHzOO4hQ8UjYnemp2wRqSju21oAqttkdpHpCzRB6woZ4s4jyIGoeYb0oLDY15+25jmB22WRwtRVLwSrLNCOU+d3wxESZQJWhxljX8eCkTZZvHzvNr582AxPa17XzT9G2VwNxEj1HK1FgVFiGHbw1qIAf+eug2zv8b/ne0SRWOcTMeRvnjE7j5CcPwe7nbj93+7n7grmL/+n2A7cfuP3AfcXA8UaHnYPtO+ttoUrMrdd/qbER1NsGnVk/1lkGRRxdchlZF8lkw4VUIb1nhnt2El2vPaiMqnwiAMjRcrQpzDVg6QvygTCr23IOmzfmNjHQ9Ti39V2c51thTl8S5XTSbXeSUF/jkzpGcl5+zjdqTqv05CCZI7p+khibKpPbgP2jzrdustWsK34uqnDJKa8qHPC5VJ0o63W+9p/SuaxGKB4T67CW5Hs8nVr2UUOUThcTG6MbbT3TBtgpnHuVz7zLnXCU8EzF87EmP4c3iTaLWLz9jNhd47qIxq+OeCzF4asEH3KFhCTJo8KV6NzgWnZSi5Vl5GIxVgFuvVkueflPCZ4tQR/nyuvqfBmOaIecPEJKc5+imvI4TcFxl+fKlJsZjRpeOP9xQygWeL0Hldr1B+ZdPSpeGqwbzan25r/L1jsRi0XVYKpoha8evRtR17ZCxwJo+v4Bkwf7xQ==
+sidebar_class_name: "get api-method"
+info_path: site/openapi/docSpace/API Backend/Usage API/asc-files
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get webhooks"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/settings/webhook"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns a list of the tenant webhooks.
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"List of tenant webhooks with their config parameters","content":{"text/plain":{"schema":{"type":"object","properties":{"configs":{"type":"object","properties":{"id":{"type":"integer","description":"ID","format":"int32","example":4883},"name":{"type":"string","description":"Name","nullable":true,"example":"Beulah Schulist"},"uri":{"type":"string","description":"URI","nullable":true,"example":"some text"},"secretKey":{"type":"string","description":"Secret key","nullable":true,"example":"some text"},"enabled":{"type":"boolean","description":"Specifies if the webhooks are enabled or not","example":true},"ssl":{"type":"boolean","description":"SSL","example":true}},"additionalProperties":false,"title":"ASC.Web.Api.ApiModels.ResponseDto.WebhooksConfigDto"},"status":{"type":"integer","description":"Status","format":"int32","example":1234}},"additionalProperties":false,"title":"ASC.Web.Api.ApiModels.ResponseDto.WebhooksConfigWithStatusDto"}},"application/json":{"schema":{"type":"object","properties":{"configs":{"type":"object","properties":{"id":{"type":"integer","description":"ID","format":"int32","example":4883},"name":{"type":"string","description":"Name","nullable":true,"example":"Beulah Schulist"},"uri":{"type":"string","description":"URI","nullable":true,"example":"some text"},"secretKey":{"type":"string","description":"Secret key","nullable":true,"example":"some text"},"enabled":{"type":"boolean","description":"Specifies if the webhooks are enabled or not","example":true},"ssl":{"type":"boolean","description":"SSL","example":true}},"additionalProperties":false,"title":"ASC.Web.Api.ApiModels.ResponseDto.WebhooksConfigDto"},"status":{"type":"integer","description":"Status","format":"int32","example":1234}},"additionalProperties":false,"title":"ASC.Web.Api.ApiModels.ResponseDto.WebhooksConfigWithStatusDto"}},"text/json":{"schema":{"type":"object","properties":{"configs":{"type":"object","properties":{"id":{"type":"integer","description":"ID","format":"int32","example":4883},"name":{"type":"string","description":"Name","nullable":true,"example":"Beulah Schulist"},"uri":{"type":"string","description":"URI","nullable":true,"example":"some text"},"secretKey":{"type":"string","description":"Secret key","nullable":true,"example":"some text"},"enabled":{"type":"boolean","description":"Specifies if the webhooks are enabled or not","example":true},"ssl":{"type":"boolean","description":"SSL","example":true}},"additionalProperties":false,"title":"ASC.Web.Api.ApiModels.ResponseDto.WebhooksConfigDto"},"status":{"type":"integer","description":"Status","format":"int32","example":1234}},"additionalProperties":false,"title":"ASC.Web.Api.ApiModels.ResponseDto.WebhooksConfigWithStatusDto"}}}},"401":{"description":"Unauthorized"},"403":{"description":"Forbidden"}}}
+>
+  
+</StatusCodes>
+
+
+      

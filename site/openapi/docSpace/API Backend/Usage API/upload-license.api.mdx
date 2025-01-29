@@ -1,0 +1,71 @@
+---
+id: upload-license
+title: "Upload a license"
+description: "Uploads a portal license specified in the request."
+sidebar_label: "Upload a license"
+hide_title: true
+hide_table_of_contents: true
+api: eJydVMFu2zAM/RVDZ7dO0x623LYCBYYN2IC0pyIoFJmt1cqSJtFdM8P/PlKyF6dpgWGXgBEfqcfHJ/cC5UMUq1uxBkRtH2JRFd+0AhtBbErhPASJ2tkvtViJzhsn6yldigA/O4j42dU7sepFDVEF7RlO4BFWSESpmhYsRipRziKFDG87g9rLgNW9C+1JLVHycVQNtCnCnQdq5LaPoJBqfWA6qCFy9kqbHIwwGYLcEUojtHw+lP9ECF5k6w01uO2FZmJny/OLUkQMpAZVRddCgfDCBLbOGZDUC0MHw2YY6A6wytUJOqMUccctBQ8mhiEBA0Tv6P4EWC4W7yp2qBJfXXkjtT0QhztK741WaT3VY3THgFT7RoZzF4uzYwY3VnbYuKB/Qy0S6PwYdOXCVtc1WMF9IqguaNwlAWVUd9zh7gn4gGaWNY3ziwBkp2HzeiU3yVCxkIV3AaUpzLij6EHpew11oW2BDRSj1U6pWwtEke3oXUy2kNjQv0p6XS1PF1UcnVyZv3pGCM8QYuLYBUPoBtGvqso4JU1DfVYfFh+XlTjyDOeLXC6Y/zTumtXMuzwceu9Hr78CG9LKNv2fw8im3F4596Qh6ajtvUvVGpN1Pq0vT7OfSsHcM5/nJa+FB29l2urYPAtJOu5nPhik31vq/0Qfh5q5kXgkKftxAbc8MSFpBUnxvAQKzf5zwkozsu+3MsJNMMPAx3RLYL9Q+CyDltv0Hjd0Q0MGIuV5b0ldcZnHOLlmPgw3HfN661sylFPRJ6XA4ww+H2Mzc9SP7+vr9M7zB6119fSKU8dyH2Z6vM/DlefljgHTnlJ2N7v/lRcyS/5lzm9W9H32Ewk24XPq3YpRugmdRqWX/wd8uQiS
+sidebar_class_name: "post api-method"
+info_path: site/openapi/docSpace/API Backend/Usage API/asc-files
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Upload a license"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/api/2.0/settings/license"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Uploads a portal license specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"description":"License attachments","content":{"multipart/form-data":{"schema":{"type":"object","properties":{"Files":{"type":"array","items":{},"description":"License attachments","example":[{"int":1234,"string":"some text","boolean":true}]}}},"encoding":{"Files":{"style":"form"}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"License","content":{"text/plain":{"schema":{}},"application/json":{"schema":{}},"text/json":{"schema":{}}}},"401":{"description":"Unauthorized"},"403":{"description":"Forbidden"}}}
+>
+  
+</StatusCodes>
+
+
+      

@@ -1,0 +1,73 @@
+---
+id: get-the-i-cal-feed
+title: "Get the iCal feed"
+description: "Returns the iCal feed associated with the calendar by its ID and signagure specified in the request."
+sidebar_label: "Get the iCal feed"
+hide_title: true
+hide_table_of_contents: true
+api: eJzlVE1v2zAM/SuCTlsQ1EGPuQVZ0QUDhiHJTm0Pis3EahVZE+lsnuH/PtJ2nKRfGHadL9YH+fj4SKrWZHaop3c6NQ58ZmIy7xeojM8UlhtMow1kC4/6YawzGPZ6qpdAZfSoKAdl2VNtATJlEIvUGuLlT0t5e3vEV5tKWUK1+NTh2503uzKCwgCp3Vr2sb71iPCjBKSre3/vR6OvBcFoNFXrQu2AWgOJNVZVUSovUalQJUJ7swfKi4wRhJ31u2f8nPVP6oMlZuccw3mITLY18pACoolVx4z94eOVHutgomFUiCJWrT1vOP1jUouMTawIEgzl+rlKR0k5ab7DNIe90dNaUxUEBSkyR9004wF4CP4u7urM6m1ULloEDFw/QLm/nkzk9wbFQSXGTAtP4EmsTQjOpkask0cUl/plyGLzCCmxI1lyciBgs2DnHc6yZ8Gc+BvrrkpsxgVtJeYUpzoxwSbXV5Nk6Mj6JHOTMAmX1IM+jaQOaRktVSvh0+U4Kxk62t8t4c9gMohnPDnCF6iO0ubd9fio/YWvVIXNtkXr3qc1L/b70nNEtYJ4gKiWN6u1mn1bMAhvsZPUcU8hafYPBdLetJr1MW77Fj5X+6Ig9Un8/2fI+vIQ/KIkOMPVYfHK6ESOrjvupHZsyf0h/dmny8vp5SjyTg5PY8RDkHMVBKGuNwbhe3RNI8ecf6z4nJcHE63ZSIl5xDOLsub+3BqH8E59Lsf71SSOjeel6w7GlbLj5RO34cUzIm/A30c+fwD+Ie5JnuaBjftBkOS7+1maQqAzzxevgDwuwxjf3qx5XP4AJbotVg==
+sidebar_class_name: "get api-method"
+info_path: site/openapi/workspace/API Backend/Usage API/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get the iCal feed"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/calendar/{calendarId}/ical/{signature}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns the iCal feed associated with the calendar by its ID and signagure specified in the request.
+
+**Note**: To get the feed, you need to use the method returning the iCal feed link (it will generate the necessary signature).
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"calendarId","in":"path","description":"Calendar ID","schema":{"type":"string"}},{"name":"signature","in":"path","description":"Signature","schema":{"type":"string"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Calendar iCal feed","content":{"application/json":{"schema":{"type":"object","title":"iCalApiContentResponse"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

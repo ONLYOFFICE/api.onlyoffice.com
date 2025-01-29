@@ -1,0 +1,71 @@
+---
+id: save-ip-restrictions
+title: "Save the IP restrictions"
+description: "Saves the new portal IP restrictions specified in the request."
+sidebar_label: "Save the IP restrictions"
+hide_title: true
+hide_table_of_contents: true
+api: eJztVlFP2zAQ/iuRH7euKYWHrW+FDanaJlV0aA9Vhdzk2hic2LOdQlf1v+/OTofTjk0wCQmJB0pi3/m++77z5TbM8aVlgymbgHOiWtokTUbjxIB1RmROqMqyWYcpDYbT2yhnA2b5Ckb6IrbpMAM/alw5VfmaDTYsU5WDytEj11qKzLun11ZVtGazAkpOT26tAc9U82vIHJ6jDQVzAiztinaYe3tuDF+juXBQ0vq2w3KwmRGaLNHgi7AuUQvKhuc5JmSBYFa1lHwu8QhnaugwuOOlptcpBiO8R/3jkw6jmNWSclUlJA7uCNpcKQm8Cq7b2RZj4tGCAnI5jnAvuLSwD2iP1qQhLNHc8BIcGILnhCMwbDg5636HeXeoBf19VTnI7kXwsB+d6rb5P+UWol1G0Aj0K9/Px3dc5m/evhL/TMQTOAyncTMw2e/16N+DJLWwtTBFPctfHi25eKSIkU3D7F+UiDjHJBbKDPMyBGyO2OkQ+XhF/qVHTO5oPIGsNsKt21QSkwd1+/iqfYEJP7ExvrhM6ayT3tHhZbiseO0KZcRPyJk3Oj40OldmLvIcKs+ZbQL59sFtdkUnXN0ALeD14zkmcosGwGbb2X5DmOC8YBNXQFLBbaKVcVwe3ESrIRMLAXkiKm/btI0unow3tFA0eejaK8NdgS8p1yLtd3upbWaXVGjTHkosmBXdbUJdG4lOhXN6kKZSZVwWyrrB+96HfsoOmirtJ8GdUUY7AiZUL6Ek2jTcN2wtPgN17Ao7C73HZtjH6fhMqRsRqpEK8eJ+dvq0q4bDT8ITGjeFWygPLqqbcyH9J4KoCemu+lQHGvkoua/SBjsp58XYnwn3+Irmvf9Xu+ExasGIzau3aaSfEsloieJ7kYP8RK7en1xJY3LYbOZ4Ky6N3G5pGYMZql18XHEjwh2eEmEFFjNqTmx7XdlZyOzdN4JF5rIOMu+1zW1n5zHMMtAuso1TmUXlPL785kULI3OJ3z5cNPyWxmn8HTBGo/fvicCvbZjk1bLmS7INgX3TqImYuAhDuTUPlM5uq1rHabSrMyRAv5TOHz02m1DhSOTOPmw96NFQurP2LCDoXyMUXSw=
+sidebar_class_name: "put api-method"
+info_path: site/openapi/docSpace/API Backend/Usage API/asc-files
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Save the IP restrictions"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"put"}
+  path={"/api/2.0/settings/iprestrictions"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Saves the new portal IP restrictions specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"ipRestrictions":{"type":"array","items":{},"description":"List of IP addresses","nullable":true,"example":[{"int":1234,"string":"some text","boolean":true}]}},"additionalProperties":false,"description":"IP restrictions request parameters","title":"ASC.Web.Api.ApiModel.RequestsDto.IpRestrictionsBaseRequestsDto"}},"text/json":{"schema":{"type":"object","properties":{"ipRestrictions":{"type":"array","items":{},"description":"List of IP addresses","nullable":true,"example":[{"int":1234,"string":"some text","boolean":true}]}},"additionalProperties":false,"description":"IP restrictions request parameters","title":"ASC.Web.Api.ApiModel.RequestsDto.IpRestrictionsBaseRequestsDto"}},"application/*+json":{"schema":{"type":"object","properties":{"ipRestrictions":{"type":"array","items":{},"description":"List of IP addresses","nullable":true,"example":[{"int":1234,"string":"some text","boolean":true}]}},"additionalProperties":false,"description":"IP restrictions request parameters","title":"ASC.Web.Api.ApiModel.RequestsDto.IpRestrictionsBaseRequestsDto"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"List of IP restrictions parameters","content":{"text/plain":{"schema":{"type":"object","properties":{"ip":{"type":"string","nullable":true,"example":"some text"},"forAdmin":{"type":"boolean","example":true}},"additionalProperties":false,"title":"ASC.IPSecurity.IpRestrictionBase"}},"application/json":{"schema":{"type":"object","properties":{"ip":{"type":"string","nullable":true,"example":"some text"},"forAdmin":{"type":"boolean","example":true}},"additionalProperties":false,"title":"ASC.IPSecurity.IpRestrictionBase"}},"text/json":{"schema":{"type":"object","properties":{"ip":{"type":"string","nullable":true,"example":"some text"},"forAdmin":{"type":"boolean","example":true}},"additionalProperties":false,"title":"ASC.IPSecurity.IpRestrictionBase"}}}},"401":{"description":"Unauthorized"},"403":{"description":"Forbidden"}}}
+>
+  
+</StatusCodes>
+
+
+      

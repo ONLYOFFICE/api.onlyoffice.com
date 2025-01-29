@@ -1,0 +1,71 @@
+---
+id: get-task-comments
+title: "Get task comments"
+description: "Returns a list of the comments for the task with the ID specified in the request."
+sidebar_label: "Get task comments"
+hide_title: true
+hide_table_of_contents: true
+api: eJzFVO9P2zAQ/Vcsf13bhLYTo9I0Mai0ajAhWjSJHx+O5NoaEtuzL0Cp+r/v7KQqFYxqH6blQ2Q79969u5zfUhLMvBxcSevMHWaUTMDfe3nTkh6zyila8MelPKxobpx6BlJGf0PI0QWQ45VsyUeOQ3mzYlSOPnPKhjA5kOdIldNegCiUJ2GmguYoMlOWqMmLqXHxgDineFQ0j7vRsfAWMzVVmAul45nDXxV66nCyZvnV5CxtKTOjicnCEqwtVBYlJnc+CFhKn82xhLCihUWWZG5DmczDBVt0pNDHryxB5WG1XUFoByvi+AavON2Mq1/FJ8jx1mhfs3TT9DXFSVP6umzm+lvR4BwsGMdtLv3uYkb5ixhPTukZx3C3S+CcsqpU+Gv4BKUtQkjaPO03XutHcq1n4Fj1v2Of4VvMG6axKVHYEMbhR5se/hlxVPdcrBvOuHqU/18Tj5W3BSx+QLmj2lN1j+IS9AKIZzNAJ4qKXSDQEMeTC30AAjcuoSjex1SuEGSED5ECIir+D2emqsALtwN+fZ1waF5l5MMSDR/XZwHeAW+fvlQe3WfIS6X5MjggEy4Q36m6IDlkKrNA/OnA1uJPwNOpyaMJvJ++m3bT9l63nX6a7O0PevuDtNfp9dL+wcf+ZWAaachIPbzs260xBYLeoplC4XFLVDM7QZNdX/iW7Kd7r6/4hYbGIFltiCqRtyxczjBOFtCcNwlYlXQ7abI22+A6ybL2nsFV2j64+bBKGp+QGwseBz+op/JNI974hFXfMRpFUDWvP7ekjrO2jY0yg+Gcb/x0uO7Gxg/TVSCbmnj2ojGVZl1ijO4BnTgfjifi8GzEqXjr654UQEzLaX4DVKkfJA==
+sidebar_class_name: "get api-method"
+info_path: site/openapi/workspace/API Backend/Usage API/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get task comments"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/project/task/{taskid:[0-9]+}/comment"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns a list of the comments for the task with the ID specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"taskid":{"description":"Task ID","type":"integer"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"List of comments","content":{"application/json":{"schema":{"type":"array","items":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"ParentId":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"Page":{"type":"string","example":"Some page"},"Content":{"type":"string","example":"Comment content"},"Author":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"},"LastModified":{"type":"string","example":"2020-12-08T17:37:03.3304954Z"},"Inactive":{"type":"boolean","example":"false"}},"title":"CommentWrapper"}}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

@@ -1,0 +1,63 @@
+---
+id: get-all-active-connections
+title: "Get active connections"
+description: "Returns all the active connections to the portal."
+sidebar_label: "Get active connections"
+hide_title: true
+hide_table_of_contents: true
+api: eJztVcFu2zAM/RVDZyNO0x623IKuLYptwNCs2CEICsZmY7WypUly1szwv4+UHMRJ2sN67iGJJT0+kXzPTCs8rJ2YLsQc88ZKv02yZJZ7ucEk13WN9KhrJ5ap0AYt8Oq2EFOxRj9TKiIvB8BUWHSGnpBYWzEZj/mnQJdbaRhCsT2/0daDOrgmFbTyWHsO8vjiM6NA1rxyeYkVhP2tQWLRqycKoxBjOTUv441Kr2V9tdlxRKwk0jVaAh9m8o3BCQZ0Kh61rcBH+PmENvAFKqOI4GxyftGlQnqs3IAWrIWt2O93x/y34SAVdaMUrJjJ2wY7wkFRSAaB+jFI/xGUw1R46RkrZvPL0S9cjWZG8ue7LlC50V3f4C9ej04EoE0R+I1RMg96ZU9Of7Tw/1sY/PfRu3f0jm+4GJ+dvvn3NTS+1Fb+xUIE0Pkp6FrblSwKrIMKrp9LNKNaAS5/YIaHZ+QNmjVQUH1/CIBi2S2PG3CHvrG1S0CpxJeYwMlkS7wOJ3EYjYisQsqwH3EsL/iSFhkYmU1G42yXTxa5DqeXQ7tB60KujVUUV3pvplmmdA6q1M5PP40/T7JXnEDnSQwXXMfumjn7LlrrsPi9C4z8imyDGqqwHsLIHEyfa/0sMfRT1o86RA9EvpYKOX3OPeazmbA8hhKuIPi/J79B/0oTj8tp92P8XRL0lQ3+ACiZ0M+212PBZROSFBEDj5CxT1ShZnLjOaZtV+Dw3qqu4+3fDVq2ET1uwMr4hiyWdFdJviIhWMbQbPrLytGwHTagmuPclgPT3Fz95CwaTnIoURSjf2De3VG9HbAeaRfv5u8ufSOibaP+VNEOH4/ejOhr26FDAfTG/gO5tcX8
+sidebar_class_name: "get api-method"
+info_path: site/openapi/docSpace/API Backend/Usage API/asc-files
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get active connections"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/security/activeconnections"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns all the active connections to the portal.
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Active portal connections","content":{"text/plain":{"schema":{"type":"object","properties":{"loginEvent":{"type":"integer","description":"Login event","format":"int32","example":1234},"items":{"type":"array","items":{},"description":"Items","nullable":true}},"additionalProperties":false,"title":"ASC.Web.Api.ApiModels.ResponseDto.ActiveConnectionsDto"}},"application/json":{"schema":{"type":"object","properties":{"loginEvent":{"type":"integer","description":"Login event","format":"int32","example":1234},"items":{"type":"array","items":{},"description":"Items","nullable":true}},"additionalProperties":false,"title":"ASC.Web.Api.ApiModels.ResponseDto.ActiveConnectionsDto"}},"text/json":{"schema":{"type":"object","properties":{"loginEvent":{"type":"integer","description":"Login event","format":"int32","example":1234},"items":{"type":"array","items":{},"description":"Items","nullable":true}},"additionalProperties":false,"title":"ASC.Web.Api.ApiModels.ResponseDto.ActiveConnectionsDto"}}}},"401":{"description":"Unauthorized"},"403":{"description":"Forbidden"}}}
+>
+  
+</StatusCodes>
+
+
+      

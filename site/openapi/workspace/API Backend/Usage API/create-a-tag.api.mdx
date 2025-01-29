@@ -1,0 +1,71 @@
+---
+id: create-a-tag
+title: "Create a tag"
+description: "Creates a tag for the selected entity with a tag name specified in the request."
+sidebar_label: "Create a tag"
+hide_title: true
+hide_table_of_contents: true
+api: eJyVUk1PwzAM/SuRTyBVtEycdgM0CYSE0DZOiENIPRq0JiHxgFH237HTjY2NCz059Xt+zx8dkH5OMHwAE9tyKvFjAQnNIlpa8v8OzhfU+Gg/NVnvrlDXGAUfOYIC3hmH8LhiVo3JRBsEBkO4ZABhUlqxgpr5qKhBlXCOhrBW6IgF1LulZg1xuuV8QGNnlgHWZULE1wUmOmGpdXjhazbWgfGOuIqEOoS5Ndlg+ZJEvoNkGmy1RLQMyIb80wtLc50QfcBIFpNkeyPTjOn2ehj1JnOBYlMnUbTuGVaFjO6WTR/yput2Dkn5k1ZS8C71DgZV9WcJZv+3xx2ZAs6q08O6906v94k1CKpFftacCT7l6Whq+FXqYMvBSVXKXXTbIQ2PxJM29OVD8JEWjhNfRic8XpWUTW+uZyLu+hb/vKEf1yx1g0tmWnHY9OkC8gSHv7nZsrQ/3h7D6EO3YY77y9wMY2dPO7uzbuazBUtChUvftrkXNcH4hlGNR5OpOr+7Zj4/Uz+9uZw0sYlvEZsiBw==
+sidebar_class_name: "post api-method"
+info_path: site/openapi/workspace/API Backend/Usage API/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Create a tag"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/api/2.0/crm/{entityType:(contact|opportunity|case)}/tag"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Creates a tag for the selected entity with a tag name specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"entityType":{"description":"Entity type","type":"string"},"tagName":{"description":"Tag name","type":"string"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Tag","content":{"application/json":{"schema":{"type":"string"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

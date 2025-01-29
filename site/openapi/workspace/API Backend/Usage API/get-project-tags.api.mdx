@@ -1,0 +1,63 @@
+---
+id: get-project-tags
+title: "Get project tags"
+description: "Returns a list of all the available project tags."
+sidebar_label: "Get project tags"
+hide_title: true
+hide_table_of_contents: true
+api: eJy1VN9v00AM/leiew5LN3iahNCAaUwwmNZOSGx9cFO3uTXJHXdOWYn6v2PfpV0zNjaQyEN7P77P/uyz3SqCuVeHV8o6c4M5ZSPZj1PlMW+cphXfteqoocI4/RNIm/oDwhSdcByvVKp+MA7VeM2sKfrcaSswdagukBpX+wSSUntKzCyBskyowASWoEuYlJh0fhPRscfGHHprao8sqlUHg4H89a1+6mwF5anKTU1Yk+DA2lLnQWR24wXcKp8XWIGsaGWR6eAcrJjHmiu/c24mooMvWJFFRzpKOJ3uYDS7mnPsqZoZVwHFo5cHfIC3UNlSQPsDtU7VSJPstlRPTtfzHnAYFklEMuX9bpjPIO6mhelDAmr836oNYi9i0vWkJ/k5Gdmq27poGj3te+i+Fw/8bL4Qvva2hNVnqJ7I25leYPIN6hWQX+hnJvsMapBkMPpoCQRuWHEx/pnTOK5Wk3hBSskyS/jnzsx0iZfuCfr1dcbQaZOTlyUaPo5nQt8Db2/fNB7da5hWuuaqdkCGPbALigGpYzZlVohfHdgofuep/s9D7Hj/EgpAfLPzt+C5SuVL1avB/u99eVlDNyZwGsxUyFvWqOYYqgio4E0GVmcHe4NsM3G4j9XdvBlKv8ZCe3Dq3PWx1R8xNLI4L+J1qupQPn1uUKPrmQn0Lrh3pqqamj0mQ3RLdMnF8XCUHJ2fshHe+hhUCYSeJPHWeKogdGbn4wSpN77UvfnX3s2mfxqFXaCEt5RxZ+jQ5U2supjMK8kCIzmdsU27hpWU8jQuWLKA2nbCj8f1ul7L8fcGncx1Xi7BaQhdfzVm48VmtLdqwbnlNOY5WrG4hLKJWb83YmXqbx/65HjEWCmD/kMtwkN1C7G+uapXO7b7b5Z2EuR3nT5CadtYBhzYBh+vHmVsCyWiJaljrulf4GlY7w==
+sidebar_class_name: "get api-method"
+info_path: site/openapi/workspace/API Backend/Usage API/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get project tags"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/project/tag"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns a list of all the available project tags.
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"List of tags","content":{"application/json":{"schema":{"type":"array","items":{"type":"object","properties":{"Id":{"type":"integer","format":"int32","example":"10"},"Title":{"type":"string","example":"Sample Title"},"Description":{"type":"string","example":"Sample description"},"Status":{"type":"integer","format":"int32","example":"0"},"Responsible":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"},"ResponsibleId":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"}},"title":"ObjectWrapperBase"}}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

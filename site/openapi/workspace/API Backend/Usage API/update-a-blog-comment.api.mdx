@@ -1,0 +1,71 @@
+---
+id: update-a-blog-comment
+title: "Update a blog comment"
+description: "Updates a blog comment specified in the request changing its content."
+sidebar_label: "Update a blog comment"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVMFu2zAM/RVB56zOip1yS7sCKwYMRZOcihwUm4nV2pImyUkzw/8+UpKTOEkLDFgOAS2Rj4/ko1ruxcbxyQvPdV03Svp9dldpPFqOuIO8sXiC1y2fNr7UVv4RXmr1A0QBlsIsWnzEd+gHfNlhVAEut9KQG5/whSmEB8cEWyEsoyygPHMGcrmWUDCpmC+BWfjdgPMsL4XaSLVh0jv0Vh69bzCBEVbU4MG6wEbhB6InOEkUJKUzwpf8nMN9Svr4Ha9cXkIt+KTlfm8Iw3mL+XhH3BOLO13sySPlJ1MYU8k8FJ+9OoJtL6H06hVyT2ytNmC9BHcGMyT2C3aHjnh4p8hzUvQjXs5o5SLc7Xh8CRX7XAy6jHD/WsFJ3hH/Nv56JZESSQlQcPLCqZS6oN43oXSawIRnwsjs9macHXVF1LJELWsPo+v4UWkz4hOrvKq3A09E/wn7fuplvB71shjEBpJU8PNxuA/vojYVDIZzqJ1A1zokk56cgoBCDWwGdguWPT/M5mz69Igp8dPFzlQkdE/xRjtfi9DhxCiO52wLzoV6SuZ/7U3qF6krM5XAdiG/xlaULY7qhZqJnjisIJhUKtqUOR1FtpPjvuGylFglhbftSjhY2Krr6Bj5WHoy0NwKK8WKWogrW0hHNiplLSoHn9Q+2NerBfQqUERzK6qGvtB8Q02cvgrdEp3L/rFq0/19zPRlTijH+IsF6UZ9xDTPwfhPfZcnm/C0mFP70itS64JCrNjhIf0HqjoUHqQezlrUj9o0YkO+EZKES8s21P1b0H0yqKirzRiuQN8Z+qeqroa0bdyqrjv4x6sPIw57F71pNktk/Rd1iS5R
+sidebar_class_name: "put api-method"
+info_path: site/openapi/workspace/API Backend/Usage API/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Update a blog comment"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"put"}
+  path={"/api/2.0/community/blog/comment/{commentid}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Updates a blog comment specified in the request changing its content.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"commentid","in":"path","description":"Comment ID","schema":{"type":"string"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"content":{"description":"New comment text","type":"string"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Updated blog comment","content":{"application/json":{"schema":{"type":"string"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

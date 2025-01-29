@@ -1,0 +1,71 @@
+---
+id: get-tariff
+title: "Get a portal tariff"
+description: "Returns the current portal tariff."
+sidebar_label: "Get a portal tariff"
+hide_title: true
+hide_table_of_contents: true
+api: eJztV81u2zgQfhVC11Us2g6Krm/dpC2KFm26SU+BUdDSOGJLiyw5SpoV/O47Q8q2HCdoeyjQg32wxOHMN/8Up8tQ3YRsdp1dWI/KiEJ8bC2qbJ5n1oFXqG3zpspm2Q3glfJ6uczyzCmvVoDgWbLLGloQh4elh1DTvm5o+a0Ff0+LCkLptWMgol46KPVSQxB3NWANXtCfwIgs7rQxYgGiR4KKxENZw0plsy7De8dqFtYaUA1twXe1coZo6FtYr8lkknK2CRCYfyIlP/b1n7XeQ4PCJXdx41JpGyR61APfsXBGsRfdoX67+AIlchQ8Rwh10qarAY8msBvwxLS0fqUwkaaTodFjOV2Te6gQWNI28GEZwwlNu+KMXHmtDElcKM2BOAejOJ7vLUYKudtrC+h1c3MQ6usIIE5EfOaCpWjFj1xENFrFZy56UCLQm3D0Oh/a2tuyzrfWyXycT/Lpzoidyw+skDsLxlv1k53q6VNKJWcUNUYDXlyejc6sh9E/VCPk7SgV42UMH8WxauG8j+TDqGxTUBHDCWoq1qFrVCbPT+TpyVheyWezqZxJOZLp95c8pVWEZ1vPf68Oo0ug2v2dKso2oF2Bf1M9pqFpjVGLTUMNwQMJCe4LBvnGB0QYACjvY2VqhBXT1w+h1kRRVaW5JJS5GPTNUpkAP8xyFgGcowjFA6n4EuyxOY/NeWzOP6U54zfz2JXHrjx25R/TlQxxKseHd+BPjWqxtl7/RzfsyDQ9ZHpl/UJXFTSxvwOUrdd4H7tNhfIzI3z+CkygW7fibrsjBsjmXIL7UP8Ctr4J8aZfPnb/HpE0zRO17QeNOGJgTYtCOV1MRrJI/MX2vh7A327mj9YbYq0R3awojC2VqW3A2XP596Q4aK53vC+SeMa2bly75FMrHUz7Du6S5vRb4Kz1A88eWz/1lNZ+1RBjppuljdKDTL3ShlTkGdue7LmdcAocGbxS8fTswV8DCnUwpuz50u2mlp+Lce/HYMAh1TF6XR/wa3aSOCnknIQIwIJJP0WLI8tsXbdQAT55s14zOQ17nIxKB67ialuoT5r8y6Pgo+bHFA1mz1tlWuaKub0lsNRT13PiralQKetsZhJ7UZbgcCA1xJ4PivL1yyvi4mTv10PKfP/CuJut5n6A+qBQkm7+56/DoxJdl4qNorvhT1tPSvS+bbijA3QE/A8ecB8V
+sidebar_class_name: "get api-method"
+info_path: site/openapi/docSpace/API Backend/Usage API/asc-files
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get a portal tariff"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/portal/tariff"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns the current portal tariff.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"refresh","in":"query","description":"Specifies whether the tariff will be refreshed","schema":{"type":"boolean","example":true}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Current portal tariff","content":{"text/plain":{"schema":{"type":"object","properties":{"id":{"type":"integer","format":"int32","example":103},"state":{"oneOf":[{"enum":["Trial","Paid","Delay","NotPaid"],"type":"string","description":"[Trial - Trial, Paid - Paid, Delay - Delay, NotPaid - Not paid]","example":"Trial"},{"enum":[0,1,2,3],"type":"integer","description":"[0 - Trial, 1 - Paid, 2 - Delay, 3 - Not paid]","example":0}],"title":"ASC.Core.Billing.TariffState"},"dueDate":{"type":"string","format":"date-time","example":"2008-04-10T06:30:00.0000000+04:00"},"delayDueDate":{"type":"string","format":"date-time","example":"2008-04-10T06:30:00.0000000+04:00"},"licenseDate":{"type":"string","format":"date-time","example":"2008-04-10T06:30:00.0000000+04:00"},"customerId":{"type":"string","nullable":true,"example":"some text"},"quotas":{"type":"array","items":{},"nullable":true}},"additionalProperties":false,"title":"ASC.Core.Billing.Tariff"}},"application/json":{"schema":{"type":"object","properties":{"id":{"type":"integer","format":"int32","example":103},"state":{"oneOf":[{"enum":["Trial","Paid","Delay","NotPaid"],"type":"string","description":"[Trial - Trial, Paid - Paid, Delay - Delay, NotPaid - Not paid]","example":"Trial"},{"enum":[0,1,2,3],"type":"integer","description":"[0 - Trial, 1 - Paid, 2 - Delay, 3 - Not paid]","example":0}],"title":"ASC.Core.Billing.TariffState"},"dueDate":{"type":"string","format":"date-time","example":"2008-04-10T06:30:00.0000000+04:00"},"delayDueDate":{"type":"string","format":"date-time","example":"2008-04-10T06:30:00.0000000+04:00"},"licenseDate":{"type":"string","format":"date-time","example":"2008-04-10T06:30:00.0000000+04:00"},"customerId":{"type":"string","nullable":true,"example":"some text"},"quotas":{"type":"array","items":{},"nullable":true}},"additionalProperties":false,"title":"ASC.Core.Billing.Tariff"}},"text/json":{"schema":{"type":"object","properties":{"id":{"type":"integer","format":"int32","example":103},"state":{"oneOf":[{"enum":["Trial","Paid","Delay","NotPaid"],"type":"string","description":"[Trial - Trial, Paid - Paid, Delay - Delay, NotPaid - Not paid]","example":"Trial"},{"enum":[0,1,2,3],"type":"integer","description":"[0 - Trial, 1 - Paid, 2 - Delay, 3 - Not paid]","example":0}],"title":"ASC.Core.Billing.TariffState"},"dueDate":{"type":"string","format":"date-time","example":"2008-04-10T06:30:00.0000000+04:00"},"delayDueDate":{"type":"string","format":"date-time","example":"2008-04-10T06:30:00.0000000+04:00"},"licenseDate":{"type":"string","format":"date-time","example":"2008-04-10T06:30:00.0000000+04:00"},"customerId":{"type":"string","nullable":true,"example":"some text"},"quotas":{"type":"array","items":{},"nullable":true}},"additionalProperties":false,"title":"ASC.Core.Billing.Tariff"}}}},"401":{"description":"Unauthorized"},"403":{"description":"Forbidden"}}}
+>
+  
+</StatusCodes>
+
+
+      

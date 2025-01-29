@@ -1,0 +1,63 @@
+---
+id: get-room-index-export
+title: "Gets room index export"
+description: "Gets room index export"
+sidebar_label: "Gets room index export"
+hide_title: true
+hide_table_of_contents: true
+api: eJztV8lu2zAQ/RWBZ9XyBjTxLc2GoEuKLCfDCGhpbDOmSJWkXKeC/70zpGxLTn1oe/UloYYzj28WPpgVc3xu2WjMboQEGyXRg9a5ZZOY6QIMd0Kru4yN2Bwc7dypDNbX60Ibx2JmwBZaWUCAivW7XfqXgU2NKCgQw+6X6JZq5UA52nWwdkkhuVD0ZdMF5Nzb3wpAdz19hZSQC0PHOxGgRdbwsc4INUcfVUrJpxJtzpQQM1jzvKBP9vH8bMA2aDFGm78LtTqHiFhSPFJIkTifQwNEYDJzMIgy0ybnLpgGfdaA6fUHQ4wX9lKTwUEzganWErhq+hML9LeOu9JnrBXcz7AtFQNV5tSfSwOccGL2UCoV0tij45qrFKRf3nAhyYhNPEy83Z1xDRp9iOpVHNXoaKpXcbQ7hvy2azTXJ5K1XsZRfTba6tWkmecui028y6wb9+J+PIiHe7r7Eh/w7TaZ9poc+21ugxap4RE63Q2dKZyndvF42UGEXKvO0wLPyBC3cyWodNMSI5+4XT6GBm386JfS0aW58709OlEVZRMmIt72oTlm8W4ewhS0sL/xHP5jfvdAz0b+Mw4C8SwT1AMuvzcu5oxLC+0CehXBMhroXBTiq85A2s5DLRNXTneudFrmeKc+lUJmYKioaA6HFIUUqZec5NXqk0KcFOKkECeFaCiE//VwkoaTNJyk4SQNTWmgY4bd3vv3x7PipVtoI375uUGnwXunG22mIstAeboW0tII9+YvELfpCyG8LIEMjFqLqf9EB2ATmoA21C04Gxl8KEWCXkoRbJ9KOSCN+iFFEsXdAj8SXoik3+kmM0o9oUCb+MhdoAWzAmM9m5IawRbOFaMkkTrlcqGtG511z/vJu3n/QvtRCGfEdJvYIwln0MZ2ersWI6vPaMAW+xFqu6EyEXyq9VKAr5hQM+2jD3uJvsQ98Fn1vSoi4Zx7Aa/Bj5aslU61f0Uej6jpNx6ZeGIZpjdUfEy5oSfWnDS4Junr7hPbVx4LRsWlkKqacku3YLMh848SDA0DLlfciHAFxhM8aoHTgcWmVvmCsos0hYKYrbgsD6lNGlNxe/2EXlTjdhtCwesF4W631FsD9aA/4Wz6S0r5x4iqCj3GjLb+YetoRJ3b1tsngPfuN+A1fnk=
+sidebar_class_name: "get api-method"
+info_path: site/openapi/docSpace/API Backend/Usage API/asc-files
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Gets room index export"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/files/rooms/indexexport"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Gets room index export
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Ok","content":{"text/plain":{"schema":{"type":"object","properties":{"id":{"type":"string","nullable":true,"example":"7983"},"error":{"type":"string","nullable":true,"example":"some text"},"percentage":{"type":"integer","format":"int32","example":1234},"isCompleted":{"type":"boolean","example":true},"status":{"oneOf":[{"enum":["Created","Running","Completed","Canceled","Failted"],"type":"string","description":"[Created - Created, Running - Running, Completed - Completed, Canceled - Canceled, Failted - Failted]","example":"Created"},{"enum":[0,1,2,3,4],"type":"integer","description":"[0 - Created, 1 - Running, 2 - Completed, 3 - Canceled, 4 - Failted]","example":0}],"title":"ASC.Common.Threading.DistributedTaskStatus"},"resultFileId":{"nullable":true,"example":{"int":1234,"string":"some text","boolean":true}},"resultFileName":{"type":"string","nullable":true,"example":"some text"},"resultFileUrl":{"type":"string","nullable":true,"example":"some text"}},"additionalProperties":false,"title":"ASC.Files.Core.ApiModels.ResponseDto.DocumentBuilderTaskDto"}},"application/json":{"schema":{"type":"object","properties":{"id":{"type":"string","nullable":true,"example":"7983"},"error":{"type":"string","nullable":true,"example":"some text"},"percentage":{"type":"integer","format":"int32","example":1234},"isCompleted":{"type":"boolean","example":true},"status":{"oneOf":[{"enum":["Created","Running","Completed","Canceled","Failted"],"type":"string","description":"[Created - Created, Running - Running, Completed - Completed, Canceled - Canceled, Failted - Failted]","example":"Created"},{"enum":[0,1,2,3,4],"type":"integer","description":"[0 - Created, 1 - Running, 2 - Completed, 3 - Canceled, 4 - Failted]","example":0}],"title":"ASC.Common.Threading.DistributedTaskStatus"},"resultFileId":{"nullable":true,"example":{"int":1234,"string":"some text","boolean":true}},"resultFileName":{"type":"string","nullable":true,"example":"some text"},"resultFileUrl":{"type":"string","nullable":true,"example":"some text"}},"additionalProperties":false,"title":"ASC.Files.Core.ApiModels.ResponseDto.DocumentBuilderTaskDto"}},"text/json":{"schema":{"type":"object","properties":{"id":{"type":"string","nullable":true,"example":"7983"},"error":{"type":"string","nullable":true,"example":"some text"},"percentage":{"type":"integer","format":"int32","example":1234},"isCompleted":{"type":"boolean","example":true},"status":{"oneOf":[{"enum":["Created","Running","Completed","Canceled","Failted"],"type":"string","description":"[Created - Created, Running - Running, Completed - Completed, Canceled - Canceled, Failted - Failted]","example":"Created"},{"enum":[0,1,2,3,4],"type":"integer","description":"[0 - Created, 1 - Running, 2 - Completed, 3 - Canceled, 4 - Failted]","example":0}],"title":"ASC.Common.Threading.DistributedTaskStatus"},"resultFileId":{"nullable":true,"example":{"int":1234,"string":"some text","boolean":true}},"resultFileName":{"type":"string","nullable":true,"example":"some text"},"resultFileUrl":{"type":"string","nullable":true,"example":"some text"}},"additionalProperties":false,"title":"ASC.Files.Core.ApiModels.ResponseDto.DocumentBuilderTaskDto"}}}},"401":{"description":"Unauthorized"},"403":{"description":"Forbidden"}}}
+>
+  
+</StatusCodes>
+
+
+      

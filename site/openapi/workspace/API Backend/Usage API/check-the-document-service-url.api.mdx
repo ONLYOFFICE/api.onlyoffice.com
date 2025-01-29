@@ -1,0 +1,71 @@
+---
+id: check-the-document-service-url
+title: "Check the document service URL"
+description: "Checks the document service location."
+sidebar_label: "Check the document service URL"
+hide_title: true
+hide_table_of_contents: true
+api: eJyVVE1z2jAQ/Ssend1AMz1xo0lmmmkPDB8nhoOwF6xgS6q0hlAP/727kl0+AmnCgZGl/Xj73pMagXLtxWAuVqoE35sAotK0s0iFh6x2Cvd02ohhjYVx6o9EZfQPkDk4znK0EqnYURyIxYGycvCZU5bDxEA8FJBtfIIFJLnJ6go0Jh7cVmWQlCYL1e6ogIPfNXj8bnJq14jMaKRQXkprSxUDey+eizbCZwVUkle4t0BtzPIFMqQ61hkLDhV4PqWWk9hs5sqwcQZuSqhknjvwPjGr5LEDyDk0XtpV9+iIE3FIzws+E0an5acLJ0oHQnj+MrFObSVCogF3xm3+23VkHH6g54OpqlqTejenCT9m3lujfSTsvt9/W/nxUjilV8ZVQRIq+1mtpHNyT3nkmMqf7J/iSsW3/te3SGZatjaEXHBUBfSZ04mtg/oSC/roSat693f9XvQ00dciF0dTTxhWHPqqtY9wrfoJAS8jKOJxKrSs+PQsN0DiucdHNz+9ysqWcMWN3cA3XXUjoDPAiUFYkABZIbcSl+In46fJNBmOnqkWffrIZkm288j51nisZJCrnSvc2+vXdjb+JS6u+cmF/fCNb+lFeMWeLSWxS0DqeE2jjnPmniJJSfoPWkYuOjXptSkIOUc2zVJ6Zudw4G2i3/G7RcutdEoumZb5gjoU3dPViA3JylwF5F+mjIfDyzrKfmHlQ9plDLMMLL4buzix5mg2pdhl+7JVJucUJ3f86tH/QNDCBCKDG8NeQ+LodS3XHBtLsrfY/efW3ARrtgseqjvS+xOA5y5N2zn4n6e6mtI00fjEZxcfj25m/LsaMZoFXRDqv79+N5Q=
+sidebar_class_name: "put api-method"
+info_path: site/openapi/workspace/API Backend/Usage API/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Check the document service URL"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"put"}
+  path={"/api/2.0/files/docservice"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Checks the document service location.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"docServiceUrl":{"description":"The address of Document Server","type":"string"},"docServiceUrlInternal":{"description":"The address of Document Server in the local private network","type":"string"},"docServiceUrlPortal":{"description":"The address of Community Server","type":"string"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Document service information","content":{"application/json":{"schema":{"type":"array","items":{"type":"string"}}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

@@ -1,0 +1,71 @@
+---
+id: get-a-contact-status
+title: "Get a contact status"
+description: "Returns a contact status with the ID specified in the request."
+sidebar_label: "Get a contact status"
+hide_title: true
+hide_table_of_contents: true
+api: eJytU8Fu2zAM/RWBO9at3bTAsNy6pECDHTbEHXYoctBkJlYRS5pEt82M/Psoy0mbruiwoj5JMt/jI/nYAclVgPENKN/kE2tIKgqwyCCgar2mDf/r4KKl2nr9W5K25gplhT5iPJ8gg3uOQ1hsGVVhUF67GAZjmCO13gQhhUrMIpCkNoh7TbWgGsVsKoJDpZcaK6FN/+bxV4uBTph5OH62FevoILKgoXiUzq216vXktyFm6yCoGhsZT7RxyPntz1tUxDzOW4eeNIYdDYspey26ik+HuieHamdTphgoNStYcfXb/osKg7MmJOJRUfyLjJneqYo5rhl4hzPCJkxsmxifycxgaX0jKT2djfgBH2Tj1jHoFLiAa03xskcG8tqsDuJSCMdOnxb2GuJpIOMmdm3964gP8uNScfs4urSevvreYm+oh4f1v7DR2TnEWVJqxW5iyR8/PA9pGHgG58Xp3xP+buSwH1j1RA3ylX0FK+znJqnmSy6dzkcnRR5XbfBgnlyRd888Ob4pjj8tjrbwuIhl9EUa/YvruC+a03zBDSN1FFen3xkY2cS/B9hebTTe/HHRLneNeWFRim1kXdo+275bTdMaFihK9HfoxfyyvBYX32ack68h9Yi9yvyc7w9YRojp
+sidebar_class_name: "get api-method"
+info_path: site/openapi/workspace/API Backend/Usage API/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get a contact status"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/crm/contact/status/{contactStatusid:[0-9]+}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns a contact status with the ID specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"contactStatusid":{"description":"Contact status ID","type":"integer"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Contact status","content":{"application/json":{"schema":{"type":"object","properties":{"RelativeItemsCount":{"type":"integer","format":"int32","example":"1"},"Title":{"type":"string","example":"Title"},"Description":{"type":"string","example":"Description"},"Color":{"type":"string","example":"#a7fc00"},"SortOrder":{"type":"integer","format":"int32","example":"1"},"ID":{"type":"integer","format":"int32","example":"1234"}},"title":"ContactStatusWrapper"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

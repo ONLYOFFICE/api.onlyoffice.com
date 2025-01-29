@@ -1,0 +1,71 @@
+---
+id: add-contact-address-information
+title: "Add contact address information"
+description: "Adds the address information to the contact with the ID specified in the request."
+sidebar_label: "Add contact address information"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVNtS2zAQ/RWNXiuIE+gFnhouLSmFoYTCdJg8KPYmFsSWK8nQNJN/71nZBFLaTjvTPDi70l7O2dXuQgY99XL3Wqau6OzbMug0eDlS0lNaOxPmuFvIfh1y68x3HYwtj0hn5NjHQZJK3sOO5GgJr4x86kzFZnJX9rPMi5CT0FnmyHthyol1RYwigo1XaZNT3JuQx4PBgfAVpWZiKINDPHP0tSYfNpGsFfdsBmgLye5UBhZ1Vc1MGoN3bjwDWEif5lRolsK8IkCy4xtKA+JUzlbkgiH/EAYoTMbKOom2KMAFrzaKQdIparBUsqX23K/fcs500HIZf4zeV7b0TdJekvw+3ZNSIe9/ojlA0ItosfiZipJNvuZoq4cDKuuC23yW25KgHxbazPB/RWPPHVdyeMtBlLxA90IM8tGUt5QNGPM7ndLY2luIbS3i/R19sLUrNUc6mQ8rWEF6f9LE3pvZaQPni86tZZvhKb6D/U/4ftDjcbzsD07wvTyWz97cdSI2RESsRBdiBK1ED2KLW4ktKBG6EtsQW/RKvITyQECJV9AeOCjxGlpLQ4k30XDFRIkdHLRkkJYhREKQGUNLChrDiMQgMwqQg8QgQBASI2hIQmEAIAqJk18ej7gn33RRzbhxXX59+xrds27+lw1dOSfsfMAv89HRB2fK6ZqZr6vKuvDWlrO5nUxMSpupLZ4mPtUF/TnGkYUFPAb+zJlCr2FFaWekyzX74OrG/uBfSXV7W9uSpyyYEA/aWeJXf+UwNzyxcQy3k+7zyftc6nbNURbDFAQVG0FW1sdZ0iGH1tGV6fQ2kw6vzHZxdBarDbJ7nWzsjF4sO+1miPP/uE+HPKrNNP5yq64oI8sxzeFpGFzeXCtZxoKv+0a0vAvOH5fj4UNZ1pZbsuR4ExvzrKpUFHUJaGJI7o6cOD8cXoj+2QDZoPqmOjM0HFVYLn8AQYYK7w==
+sidebar_class_name: "post api-method"
+info_path: site/openapi/workspace/API Backend/Usage API/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Add contact address information"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/api/2.0/crm/contact/{contactid:[0-9]+}/addressdata"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Adds the address information to the contact with the ID specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"contactid":{"description":"Contact ID","type":"integer"},"address":{"description":"Address data"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Contact information","content":{"application/json":{"schema":{"type":"object","properties":{"InfoType":{"type":"integer","format":"int32","enum":["Phone","Email","Website","Skype","Twitter","LinkedIn","Facebook","Address","LiveJournal","MySpace","GMail","Blogger","Yahoo","MSN","ICQ","Jabber","AIM","VK"],"description":"[0 - Phone, 1 - Email, 2 - Website, 3 - Skype, 4 - Twitter, 5 - LinkedIn, 6 - Facebook, 7 - Address, 8 - LiveJournal, 9 - MySpace, 10 - GMail, 11 - Blogger, 12 - Yahoo, 13 - MSN, 14 - ICQ, 15 - Jabber, 16 - AIM, 17 - VK]","example":"1"},"Category":{"type":"integer","format":"int32","example":"0"},"Data":{"type":"string","example":"support@onlyoffice.com"},"CategoryName":{"type":"string","example":"Home"},"IsPrimary":{"type":"boolean","example":"true"},"ID":{"type":"integer","format":"int32","example":"1234"}},"title":"ContactInfoWrapper"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

@@ -1,0 +1,77 @@
+---
+id: upload-a-file-to-the-common-section
+title: "Upload a file to the 'Common' section"
+description: "Uploads a file specified in the request to the 'Common' section by single file uploading or standart multipart/form-data method."
+sidebar_label: "Upload a file to the 'Common' section"
+hide_title: true
+hide_table_of_contents: true
+api: eJztVlFv2jAQ/iuWnzZECav2hKpqXddp06atKvRhAh6OxBC3iZ3ZTmkW8d93ZyeFFKimvW48BMe+O393990HNXewsnw05UuZCRt91FkijOXzPrciLo10FR7W/KJ0qTbyFzip1ScBaEROBle8z9doJ/h8g16JsLGRBZnxEb8tMg2JZcAoPLOFiOVSioRJxVwqmBE/S2Edc9q/zvilznOtZpzh7RSDLSpmpVqhs49Q+oC4wbRh1oFKwDiWl5mTBa6ipTb5SQIOWC4QcTKYqZnq9b5pJ3q9EfuhSxaDasL4kNZjWWuWyOVSGKEcW0NlRzPFdj9nOjvvbp1l8vyWsB0AOPA32VSXWYKpOJ/dpVYOw59MqkIwRP608UHaQlvp8019bS1VJFSraounIA9ucXBjDuP0/Y4V+KArvGFTzLa2C51Ug7MI0R7F/wd1PBQgwppg95uL3uM9fFTzBh4toSgyGXvORHeWGFFzG6ciB1oRfuSIXtxhrzFOYXQhjJPC0imlQt9dQt00SUlVlA6BIwFzdO2G2vRbEBO//zxIpxGh4C/E2OnO8VD7LTwU0fNtP8hXiRnpZUPHdSrUzqSAPdSWbXQwBip8xQnM7U5ZsTbYWzwgH8B28IVUYCq+CR/qG2JWNiA6HQ73gYXxFWFQXtnXvP+33Q03vh2+OXCJgkZcRMLJKjAOT7CinhfgUnyLoJDR6WAYBaV6F3upiMLA8a1ejQlCSOqgaj1Bw3hfhC8dwXjqGs0Zvnd8PS7K8WbL9atHyIvA0Yare7w7RqItFaZtn+YbwrHUHp90FM+LYakwJTYW5kEYdnM1nrCL68+IEl9tqF8GDhERvaheOfg+NEmEBrYKclRl+TPd3hni/xL+L0h4MxFOPLqoyAAHAulUmoyoEMZvSuOCljiAvGVvnzdDiKtmDPEfQEpTi/Z1vQArbk222dA2ZmLovwQuH8BIWBDFp0T7tP07UfN7nMeuPhPVISvDvD7Tm02/9biIY1G4F23nO8Jy/X08QeNF84uV64R8DKzp1wyfI44L7YfB64jfq3HS1KqEFdmGmKQKJF5dUbn3otIsKKv2SFU7CLv60m8SoSelddClroNkYUFb+3B01ONJ1II19XWOqH8DrtxmrQ==
+sidebar_class_name: "post api-method"
+info_path: site/openapi/workspace/API Backend/Usage API/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Upload a file to the 'Common' section"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/api/2.0/files/@common/upload"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Uploads a file specified in the request to the "Common" section by single file uploading or standart multipart/form-data method.
+
+**Note**: You can upload files in two different ways:
+             <ol>
+            <li>Using single file upload. You should set the Content-Type and Content-Disposition headers to specify a file name and content type, and send the file to the request body.</li>
+            <li>Using standart multipart/form-data method.</li>
+            </ol>
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"file":{"description":"Request input stream","type":"object"},"contentType":{"description":"Content-Type header","type":"object"},"contentDisposition":{"description":"Content-Disposition header","type":"object"},"files":{"description":"List of files when specified as multipart/form-data","type":"array","items":{"type":"string","format":"binary"}}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Uploaded file(s)","content":{"application/json":{"schema":{"type":"object"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

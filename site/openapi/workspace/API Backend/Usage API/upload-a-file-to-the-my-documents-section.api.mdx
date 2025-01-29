@@ -1,0 +1,77 @@
+---
+id: upload-a-file-to-the-my-documents-section
+title: "Upload a file to the 'My documents' section"
+description: "Uploads a file specified in the request to the 'My documents' section by single file uploading or standart multipart/form-data method."
+sidebar_label: "Upload a file to the 'My documents' section"
+hide_title: true
+hide_table_of_contents: true
+api: eJztVk1z2jAQ/SsanVrGxTTTE5PJNG3TaadfmUAOHeCw2AIrsSVXkkNcD/+9u5IdIEDa6bXlYGRp9+nt7tuFhjtYWj6c8IXMhY3f6zwVxvJZxK1IKiNdjYcNP69cpo38CU5q9UEAGpGTwRWP+ArtBJ+t0SsVNjGyJDM+5NdlriG1DBjBM1uKRC6kSJlUzGWCGfGjEtYxp/3rlH+pWaqTqhDK2SlnyIGQ2LxmVqolQnicysPiBtOGWQcqBeNYUeVOlriKF9oUL1JwwAqBvNP+VE1Vr/dVO9HrDdl3XbEEVAvjIa1ntNIslYuFMHg9W0Fth1PFtj+nOj/b3TrN5dk1cTtAsO9vspmu8hRDcT7Gt1o5hH8xrkvBkPnDxjtpS22ljzfzGbaUl5CzukuhgiK4JcGNOcSJ/I4V+KArvGGb0i7Dc53W/dMY2R7l/wd5PAQQY05QA+1Fb/AePmx4S4+WUJa5TLxy4htLumi4TTJRAK2IPypFz2+w1ohTGl0K46SwdEqh0PeurK7aoKQqK4fEUYYFuu5CraOOxNjvPwbZKURI+BMYW9U5DrVfwkOIXm/7IJ8lRqQXrRxXmVBb/QL2UFk26GAM1PiKfVjYrbRibrC2eEA+gOXgc6nA1HwdPlQ35KxsYHQyGOwTC00sQqM8s8959LfVDTe+Grw8cImCdsSIlJNVUByeYEa9LsBl+BZDKeOT/iAO8+p1Uceh2fhmYo3o+hDQwbn1QAuxPgmfNqLwUDHqMXzf8fWcKL6rjc4v7qEogz5bne5p7piANjKYdDWarYnHQnt+0hEeCqsoKoUhsZEwd8Kwq4vRmJ1ffkSW+GpD7nJwyIikRbkqwNegDSIUr5sev5mz/NH83mrj/6P83xnlbXc4ce/iMgdsDpRWZXISRGjDCbUOWmIj8k7JEcdmxGfbjvhfIKPORdummYMV1yZfr2kbozD0rwKXd2AkzEnqE5J/1v2xaPgt9uXujCbJQ16Fvn00c9ZR53GeJKJ0T9rOtobL5bfRGI3n7a9WoVPyMbCiXzR8DjkutG8HP0/8XoMdp5YVLMk2YNJ0oAG2O1xu/XBpFxRVd6TqLYa7cyZqA6EnhXXQpWnC6MKEdvbh6KjHw3AL1lTTGbL+BZtXalQ=
+sidebar_class_name: "post api-method"
+info_path: site/openapi/workspace/API Backend/Usage API/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Upload a file to the 'My documents' section"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/api/2.0/files/@my/upload"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Uploads a file specified in the request to the "My documents" section by single file uploading or standart multipart/form-data method.
+
+**Note**: You can upload files in two different ways:
+             <ol>
+            <li>Using single file upload. You should set the Content-Type and Content-Disposition headers to specify a file name and content type, and send the file to the request body.</li>
+            <li>Using standart multipart/form-data method.</li>
+            </ol>
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"file":{"description":"Request input stream","type":"object"},"contentType":{"description":"Content-Type header","type":"object"},"contentDisposition":{"description":"Content-Disposition header","type":"object"},"files":{"description":"List of files when specified as multipart/form-data","type":"array","items":{"type":"string","format":"binary"}}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Uploaded file(s)","content":{"application/json":{"schema":{"type":"object"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

@@ -1,0 +1,63 @@
+---
+id: tfa-app-generate-setup-code
+title: "Generate setup code"
+description: "Generates the setup TFA code for the current user."
+sidebar_label: "Generate setup code"
+hide_title: true
+hide_table_of_contents: true
+api: eJztVU1v2zAM/SuGzkacZTtsuQVFExQbsAFtT0FQKDITq5UlVR9ZMyP/faRkr0mKXoYCvfSSWBL59MhHUh0LfOvZdMmuIQSpt76oipv5rPD9kq1KZiw4HqTRVzWbsrDhM2sXoGkT0C3aC1MDK5kDb432gHgdm4zH9FeDF05a8kbfZF2IbC6MDqADWQV4CpVVXGpaedFAy9P+3gK6mfU9iIAu1hGXIPMVXAgTe4Bs6IND0mioo1J8rXAvuAhEjdc/tdoPa3jirVXJxbRQ0P3sULKW68jVpQ5u/x32bwj86ChHKfyrlm/h1qk3Q0d4XteSUszVr6MMbbjy6BRkSC4LY7YKRrMYGky7FDwYN3rWL+FYq+gAoap7bz7UeFc1Uld8yPC+MhDSl/Gnl7PsVnN0Mk7+gZolo88vjebGrWVdg06MPIjoZEDmSxTKiztCuHugpC5TWBjtbzQAtjrg3D2FGiauL5AqzWecpDSpaZoWG+PSNuI7jKOIHtwI0VpAijS1t5BKhYcGFxW3spqMxtUw5Ssc6tj7VUJlRNTtwPnEM5IqrAnBTqtKGcFVY3yYfh1/m1TsnOQPOi+yO6MYhpCvqXz7Cj0J/J/eyInKC/XmbVofm5WMngZ8MsyDzM0h9cYk717I2fXFaC4VXlEy4p757CYkjUXCWMVk3oMPyezz2L9IJ7F0zw/U/+W+j+vobUMqMdd4FmJJQaMlSpGS3j+5Jcty5D0UBPNIOSeHrltzT51yOND2YwRH1YOfO+5kbpPlCi9qsJxQA1Iw5ZnNhABLRbDjKp4TWx2VyuLyBq0o9afqZB36D8IdjvT+CPVMtnw3/R7KVzy6LkuPEQ32+ehVjz62wToFgI36F9uBDKQ=
+sidebar_class_name: "get api-method"
+info_path: site/openapi/docSpace/API Backend/Usage API/asc-files
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Generate setup code"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/settings/tfaapp/setup"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Generates the setup TFA code for the current user.
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Setup code","content":{"text/plain":{"schema":{"type":"object","properties":{"account":{"type":"string","nullable":true,"readOnly":true,"example":"some text"},"manualEntryKey":{"type":"string","nullable":true,"readOnly":true,"example":"some text"},"qrCodeSetupImageUrl":{"type":"string","nullable":true,"readOnly":true,"example":"some text"}},"additionalProperties":false,"title":"Google.Authenticator.SetupCode"}},"application/json":{"schema":{"type":"object","properties":{"account":{"type":"string","nullable":true,"readOnly":true,"example":"some text"},"manualEntryKey":{"type":"string","nullable":true,"readOnly":true,"example":"some text"},"qrCodeSetupImageUrl":{"type":"string","nullable":true,"readOnly":true,"example":"some text"}},"additionalProperties":false,"title":"Google.Authenticator.SetupCode"}},"text/json":{"schema":{"type":"object","properties":{"account":{"type":"string","nullable":true,"readOnly":true,"example":"some text"},"manualEntryKey":{"type":"string","nullable":true,"readOnly":true,"example":"some text"},"qrCodeSetupImageUrl":{"type":"string","nullable":true,"readOnly":true,"example":"some text"}},"additionalProperties":false,"title":"Google.Authenticator.SetupCode"}}}},"401":{"description":"Unauthorized"},"403":{"description":"Forbidden"}}}
+>
+  
+</StatusCodes>
+
+
+      

@@ -1,0 +1,71 @@
+---
+id: update-if-exist
+title: "Update a file version if it exists"
+description: "Updates a file version if a file with such a name already exists."
+sidebar_label: "Update a file version if it exists"
+hide_title: true
+hide_table_of_contents: true
+api: eJzVVU1T2zAQ/SsaHVvXTtMeWt+AwgzTdoaBcspkGMVeY4FiqdI6kHry37sr22AC9NQLF0dZv/14b3flTqK6DjJfyBNtIIhMXACibsi2TKR14BVq25yWMpetKxXCaXV8rwPKRHr43ULAQ1tuZd7JwjYIDfJROWd0ET2zm2AbtoWihrXiE24dUDi7uoGC4zjPeVBDiDjACWhlrQHVEAru1doZsqFvYbdLpCpLzRmUOZsEqJQJkEjUyFh5cHGURmbpkfWQHjj905ZgQnreF/8NbToyfjRJjo9wj2+3+mkL3r1/ozQ4g4fgbBP6uuazGf+UEAqvHSem8Id9eWKjTAu54NKErgTWIB4GWOggQlsUEELVGmIymdbYaGeUflmikf2+qq9qOnX49xA9Ihn7efbxObnLRrVYW6//QCkj6NNz0In1K12W0OcMULReIy3lglYxFFcc4eoW2EByqpLo3xEA5HJHS76XLy55EEpU1DGxAR+ifNVoudNYs5Q1GRq1BqEMx9wK4GshpBR8DVQx3xiujaOlsKY/mXI6m6ezjMOErL9NdAXDbRLAc7JYdOsNOdSILs8yYwtlahsw/zL7Os/kfsU/+L3o3SUTGvlfsNz93DxV4UF/qug7GRLJRPj/FJZIHggaFHurIQrLfTx/vPSOx2UY9iXuBHtVNubYn36KOMhJ1s2cu+mI1lrF4RhK6PV/QX6Ng8L7Akxu3v/SvUGbyVZQobEj3dDKBQtHSGomPauB29OGUh+4ZwzuupUKcOnNbsdm0s/zKNJxo7xWK1ZpsaQkNVVCPeQJiH2SRz2xD7+4JIbTgse27W3hLhk9DmjFHU6wUxrLyWieXf4i1Gr4dq3pPiKjV3f8XaNnLiV//jhFHKBo66RRzXWrrhnbJ46XQsuiTIeqH5/hwHTGV812SuPptPUE+Ml0XvToun5iScgR37961WOQdERHFajov+pDwbM=
+sidebar_class_name: "put api-method"
+info_path: site/openapi/docSpace/API Backend/Usage API/asc-files
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Update a file version if it exists"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"put"}
+  path={"/api/2.0/files/updateifexist"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Updates a file version if a file with such a name already exists.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"set":{"type":"boolean","example":true}},"additionalProperties":false,"title":"ASC.Files.Core.ApiModels.RequestDto.SettingsRequestDto"}},"text/json":{"schema":{"type":"object","properties":{"set":{"type":"boolean","example":true}},"additionalProperties":false,"title":"ASC.Files.Core.ApiModels.RequestDto.SettingsRequestDto"}},"application/*+json":{"schema":{"type":"object","properties":{"set":{"type":"boolean","example":true}},"additionalProperties":false,"title":"ASC.Files.Core.ApiModels.RequestDto.SettingsRequestDto"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Boolean value: true if the operation is successful","content":{"text/plain":{"schema":{"type":"boolean"}},"application/json":{"schema":{"type":"boolean"}},"text/json":{"schema":{"type":"boolean"}}}},"401":{"description":"Unauthorized"},"403":{"description":"Forbidden"}}}
+>
+  
+</StatusCodes>
+
+
+      

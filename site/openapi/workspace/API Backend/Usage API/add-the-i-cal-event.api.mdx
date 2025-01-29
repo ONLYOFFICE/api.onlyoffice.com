@@ -1,0 +1,71 @@
+---
+id: add-the-i-cal-event
+title: "Add the iCal event"
+description: "Adds the iCal event to the calendar specified in the request."
+sidebar_label: "Add the iCal event"
+hide_title: true
+hide_table_of_contents: true
+api: eJylVE1z2jAQ/SsenWmgmZ640ZRJMz00E+DEcFisBSvYkirJEOrhv3dXtgHz0UPrg2cl7cfbt0+qRIC1F8O5SCFHLcH1x1vUwYtFT3hMS6fCno4rMSpDZpz6DUEZ/R1BouMwR5boiR35oVgcKEqiT52y7CaGYiSlT0KGiXqCPEHOnQQTd9qKibeYqpVCmSgdTxz+KtGHB0rcmF+NJBiVSI0OlIJNsDZXaYTTf/dcrBI+zbAAtsLeIpU3y3dMA+Wxzlh0QaGPaZrSz6WSvO5ifmqBPc9evlFsk8sHp/RaHHoitnE7NrJ3N1Cl/l5I03qkaWVcAeE6QfyYE2+N9nUrj4PBdcop+E0CO6ChOErzj6zV1b4MPl8XmGlo9IBSsFeBtCQ+hDU+8g0ho1UfrOo/Pgz6R3mZMnglMVIoThqbMIa6o5tKO2KjhD9wT5GKcWT1cU9oKPi0ExuBcZNvJxGNP6CwOV6LoCW5M93TZpzc+ST1ykRUKnA28WSKotTUSDJBt0WXvI0n02T0+kKxtPQ1bTkEwsHxTFMBkf4WupQXF0VcXKYz+f/3vWrYDPgR+jYHIpNAlS7nKvXs5kw1edL0WEJNUjI7E6QLn/HEyb2qluBx5vLDgbeplOOng8wtOAVL5mm+oDJZ+3pUYkOjZPJiW5+mDIrd87Ie9YVWD702YpSmaMNffRdnonz9OZmS87J5RQojOcbBjl8Y+g8F9xVpjhKMexWNS69LWLNvnZMFxcLv6nET9dgY3FV7pPdnCLvS7DWN8J/buhlSVbXaidDWvz66G3G8D7U3j3VBqP8A964Fsw==
+sidebar_class_name: "post api-method"
+info_path: site/openapi/workspace/API Backend/Usage API/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Add the iCal event"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/api/2.0/calendar/outsideevent"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Adds the iCal event to the calendar specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"calendarGuid":{"description":"Calendar GUID","type":"string"},"eventGuid":{"description":"Event GUID","type":"string"},"ics":{"description":"Event in the iCal format","type":"string"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Task awaiter","content":{"application/json":{"schema":{"type":"object"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

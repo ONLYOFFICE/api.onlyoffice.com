@@ -1,0 +1,71 @@
+---
+id: update-webhook
+title: "Update a webhook"
+description: "Updates the tenant webhook with the parameters specified in the request."
+sidebar_label: "Update a webhook"
+hide_title: true
+hide_table_of_contents: true
+api: eJztmFFv2zYQgP8KwcfNtVyn2zK/pWkLBMmGIm6wh8AoaOlssZFIjqTipIb/++5IyaHteMmwditQP1iWyePd8e475sIl92Lu+Oiaj8F7qeaOZewPmJZa3zg+6XFtwAovtTor+Ig3phAe2nne4xb+bMD517q456Mlz7XyoDy9CmMqmYeV2SenFY25vIRa0ButkxYKMqxEDaiqsZLs+XsDaEhPP0HucdhY8sBLcLROFvRsZSQam4NFoQJcbqUhYzh+9gaHZtrWwkepoyEOwJ2oTYXrfhn8fLTqRbOorBZ3F6DmvuSjnwY9XkvV/RysvXHeYmh2DP0ePV9r5hfiFqwS7LyZ8lXcEll4UPnyKZVXl2ep86QhNeB0DczDnSf1DnIL/hzuk5jsUTsOouwGZXHnTVWJKenztoG96kGRUBrwqdYVCLWj/W2UZNoypf3fWaCf5LmrnqF2PL54UhcqE0UhaYWo3ieszETlYFtjCy5rsWVGWEyhB+vQkJc+BOFkfNpHwf6JkfT5TRdQuf5lXOLeeN3v6uNUq5mcJzOc/KH4HZA/IP8dIZ8e9j/8eGD/wP73wj55ZMEZrVxEdjgY0NdWmkPbVGCslVCeLVq/FtKXTHrH8qB507+klwp/UUwl5FZZff3ieXV8nBbPs+pjP2+voalEycZ52VTS+aRmnlMlz+T4mymTsYFczjAZTM6YL6FLu2PCAoPtIvo3RfPPiuQp8iPNu+Q/dtrvnvUHKA9Q/g9Q7um6DzQeaPzPaST1rwYvH+kDlGh8qa38jOEJQke7Qu+0ncqiABW4xlwhAB5Tdb3kwuUfScNHygf20hZEgXtboADwyWqyQ0XoO1wI7WO9B40/NB3MtekomFRhrm2c+mgDRUpNV0CmCXUkqL/lmTAyG/YHmWtvj7LF+m7Igb2lVoYcbyxmipfem1GWVToXVamdHx0Pfh1mOwm7oHkWl3PaVBeDMZV1rNzNSKwZQHfOI6qhHDfFepwaKGys9I2EEFw6Ly4frrDedozEk4H+c1hrSnv9tiYT6jdqamN8XQyxZAKyLb5SzXTwPYHtnayAuj+KXIzG7ZBIMRiuWoTDrXUo5pYJ9hDxjTAmt3FfkoM20ElLGo6oUIgRimvKAkoiFiEuEQzCtHUUM0rZJ8nlciocXNlqtaJhtGIJbHy9FVbGs+Z6ghZKJB1pIJZCxvlp3NyLD+QPiVdNBGCrN1n1uhUneQ7GJ7LpHiYJ4e+vPqDUtL3TrLHmcdCKBd134nPEOV2LkomAYhhb8kqoeSPmJBsNh0OmoYikeEYQ2xfaTjel7tNtbHIbN0BP2s6jK5bLyD4GspOPU3tXtCHtpEMU0Om/AOmIj4w=
+sidebar_class_name: "put api-method"
+info_path: site/openapi/docSpace/API Backend/Usage API/asc-files
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Update a webhook"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"put"}
+  path={"/api/2.0/settings/webhook"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Updates the tenant webhook with the parameters specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"required":["name","uri"],"type":"object","properties":{"id":{"type":"integer","description":"ID","format":"int32","example":7063},"name":{"maxLength":50,"minLength":0,"type":"string","description":"Name","example":"Laverna Kub"},"uri":{"minLength":1,"type":"string","description":"URI","format":"uri","example":"some text"},"secretKey":{"type":"string","description":"Secret key","nullable":true,"example":"some text"},"enabled":{"type":"boolean","description":"Enabled or not","nullable":true,"example":true},"ssl":{"type":"boolean","description":"SSL","nullable":true,"example":true}},"additionalProperties":false,"description":"Webhook request parameters","title":"ASC.Web.Api.ApiModels.RequestsDto.WebhooksConfigRequestsDto"}},"text/json":{"schema":{"required":["name","uri"],"type":"object","properties":{"id":{"type":"integer","description":"ID","format":"int32","example":7063},"name":{"maxLength":50,"minLength":0,"type":"string","description":"Name","example":"Laverna Kub"},"uri":{"minLength":1,"type":"string","description":"URI","format":"uri","example":"some text"},"secretKey":{"type":"string","description":"Secret key","nullable":true,"example":"some text"},"enabled":{"type":"boolean","description":"Enabled or not","nullable":true,"example":true},"ssl":{"type":"boolean","description":"SSL","nullable":true,"example":true}},"additionalProperties":false,"description":"Webhook request parameters","title":"ASC.Web.Api.ApiModels.RequestsDto.WebhooksConfigRequestsDto"}},"application/*+json":{"schema":{"required":["name","uri"],"type":"object","properties":{"id":{"type":"integer","description":"ID","format":"int32","example":7063},"name":{"maxLength":50,"minLength":0,"type":"string","description":"Name","example":"Laverna Kub"},"uri":{"minLength":1,"type":"string","description":"URI","format":"uri","example":"some text"},"secretKey":{"type":"string","description":"Secret key","nullable":true,"example":"some text"},"enabled":{"type":"boolean","description":"Enabled or not","nullable":true,"example":true},"ssl":{"type":"boolean","description":"SSL","nullable":true,"example":true}},"additionalProperties":false,"description":"Webhook request parameters","title":"ASC.Web.Api.ApiModels.RequestsDto.WebhooksConfigRequestsDto"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Updated tenant webhook with its config parameters","content":{"text/plain":{"schema":{"type":"object","properties":{"id":{"type":"integer","description":"ID","format":"int32","example":4883},"name":{"type":"string","description":"Name","nullable":true,"example":"Beulah Schulist"},"uri":{"type":"string","description":"URI","nullable":true,"example":"some text"},"secretKey":{"type":"string","description":"Secret key","nullable":true,"example":"some text"},"enabled":{"type":"boolean","description":"Specifies if the webhooks are enabled or not","example":true},"ssl":{"type":"boolean","description":"SSL","example":true}},"additionalProperties":false,"title":"ASC.Web.Api.ApiModels.ResponseDto.WebhooksConfigDto"}},"application/json":{"schema":{"type":"object","properties":{"id":{"type":"integer","description":"ID","format":"int32","example":4883},"name":{"type":"string","description":"Name","nullable":true,"example":"Beulah Schulist"},"uri":{"type":"string","description":"URI","nullable":true,"example":"some text"},"secretKey":{"type":"string","description":"Secret key","nullable":true,"example":"some text"},"enabled":{"type":"boolean","description":"Specifies if the webhooks are enabled or not","example":true},"ssl":{"type":"boolean","description":"SSL","example":true}},"additionalProperties":false,"title":"ASC.Web.Api.ApiModels.ResponseDto.WebhooksConfigDto"}},"text/json":{"schema":{"type":"object","properties":{"id":{"type":"integer","description":"ID","format":"int32","example":4883},"name":{"type":"string","description":"Name","nullable":true,"example":"Beulah Schulist"},"uri":{"type":"string","description":"URI","nullable":true,"example":"some text"},"secretKey":{"type":"string","description":"Secret key","nullable":true,"example":"some text"},"enabled":{"type":"boolean","description":"Specifies if the webhooks are enabled or not","example":true},"ssl":{"type":"boolean","description":"SSL","example":true}},"additionalProperties":false,"title":"ASC.Web.Api.ApiModels.ResponseDto.WebhooksConfigDto"}}}},"401":{"description":"Unauthorized"},"403":{"description":"Forbidden"}}}
+>
+  
+</StatusCodes>
+
+
+      

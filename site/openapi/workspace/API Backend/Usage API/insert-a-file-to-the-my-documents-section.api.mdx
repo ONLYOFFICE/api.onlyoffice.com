@@ -1,0 +1,71 @@
+---
+id: insert-a-file-to-the-my-documents-section
+title: "Insert a file to the 'My documents' section"
+description: "Inserts a file specified in the request to the 'My documents' section by single file uploading."
+sidebar_label: "Insert a file to the 'My documents' section"
+hide_title: true
+hide_table_of_contents: true
+api: eJy9Vd9v2zYQ/lcIPjux47jLZmDY0jbFgq1dEDsY0NgPtETHbCSSI6k4muD/fd+RcmzXnrOHonqQKPJ+fHf33bHhQTx4Prznc1VI3/1gilw6z6cd7mVWORVqHDb8sgoL49Q/Iiijf5MCQqTksOIdvoSc5NMVtHLpM6csifEhv9ZeuuCZYGSeeSszNVcyZ0qzsJDMyb8r6QMLJv5O+Mea5SarSqmDn3AGDGSJzWrmlX6AiWinsoUROTZO4by18dbkgNrwzOgAbVoKawuVRcjdL54ANdxnC1kKWoXaSkA0sy9wAjvWGQuwSno6JT/03Y3ntsWrtK0C8wHxl1DdNbXChgqH1D8QeC1KudGBDcRBOhmMBflJLq/nV8/Kh331UZs+z5YLiXw5yltSQ4a1XKbsqDlTgYmCilMzSbY8M45pEzZ+hXOixi8KV/qtdMyMKaTQfAVEj1Lad0Y/ISujIELl/yck0ov1jHCyZAFRImFkZQ/Lxic9VFFvDZgT/fV7vX23iVfgUSxT51sV/ROVZiPV1qbD5bMoLRV0q4LAeWdzpD5/W79u+To/ZHduXCmAmleVynf89Nrn5MBr/RCE98rbQtSvA/+oHiX7LHQtgn9UpDpec/SIktDiAZ0O6csnEYQblaIojutUriAOeJJkImqR/o0zVKs794r6ZNKFaF5l6H8spcF22iP1U+Ht8y8Viv+zyEulQW0ngnGRrm3T8SuYMrWUfzlhE/i2UMc993v93slZ/6T34/jsYnh+Meydn54P+oOf3lx8JiN/mMSq41YGEzyDH+i9xZUtdLRLyCK0SPdB72yf4XdatCMXuEmqRHsZhMCt8ZFfIizw1xVWdfunvW6a37+WdVfF5uCbCT4i+iceHpzjL/HA1u8yTgWCsEjHHR5jGO7qRkzUX7eb8Xu1zsLL+NyK+yVX+3PuPrhKTg/OGzpZEZ65iThbY+9MWVYaobGRdJBnt1ejMbu8uYZ9/PqUwwJ+fJzHlLNSxNK1waQJsr6YXrl/+Ff32tYt812uuLY8QT6HLtod1UFMVWqlxIN7qh0kwQSaK8QFfMGGWMzIByR4YWK6edPMhKdeXK1oGwAdXfNYPgmnxIxyfD+Fj8X6pm9QnDomPsZ9MiZEJF5UiThfDd1VZ61xmWXShqOy0y123/w5GkN41t7mpclJx4kl3fR4DzkWJtYhEjruNSi1fqgwq3CebBI9qYN22f0Y2d0uKKr1ka63EO4SvdMGQm8K66BK06TeQULX8unoPzVeuitJU02nQP0vaydD3g==
+sidebar_class_name: "post api-method"
+info_path: site/openapi/workspace/API Backend/Usage API/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Insert a file to the 'My documents' section"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/api/2.0/files/@my/insert"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Inserts a file specified in the request to the "My documents" section by single file uploading.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"file":{"description":"Request input stream","type":"object"},"title":{"description":"File name","type":"string"},"createNewIfExist":{"description":"Specifies whether to create a new file if it already exists or not","type":"array","items":{"type":"boolean"}},"keepConvertStatus":{"description":"Specifies whether to keep the file converting status or not","type":"boolean"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Inserted file","content":{"application/json":{"schema":{"type":"object","properties":{"Name":{"type":"string","example":"File name"},"UpdatedBy":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"},"Updated":{"type":"string","example":"2020-12-08T17:37:03.3424957Z"},"Location":{"type":"string","example":"4\\\\46\\\\File name"}},"title":"FileWrapper"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

@@ -1,0 +1,71 @@
+---
+id: change-default-access-rights
+title: "Change the default access rights"
+description: "Changes the default access rights in the sharing settings."
+sidebar_label: "Change the default access rights"
+hide_title: true
+hide_table_of_contents: true
+api: eJztWFFv2zYQ/isEn7aOtWQnbRO/ZW4LFBu2Im62h8AoaIm2uEqiSlJJPcH/fXdHyZEVB+iwpyF6sY7H4+nuu+8omg33cuv4/Ja/17lyLGJL5b0uQbcS3FTKSq9N+SHlc55kstyqt2oj69xfJYly7lpvM++44FZ9rZXzP5t0x+cNT0zpVelRlFWV64S8RH85U6LOJZkqJEp+VylwLa2VO3CjvSocrSp3v28grIarsi4wvt9MqcDiWsn0Twt2rUwP561OPIh/SKuVI92dVvcgLExRYCQCE8zfG1vg9KJ23hSg8cqitTHFVVroEuR3qcb8Qfpo7pW9cWABULSB4ptoMlUusbrCtEB9i9Gxlwwfgh1iBA3KTJYpu0dFmGvVOAiRkyKIgoUcQBUEtMJcyAYFwdqcQNNKgh2SAyXKbIMDMO0livY0ZBsag+cub3QOMpM4EKzFALStJNgBDFCSzGoYrAAJ9U0WVY7gUIn24lCzWEzFTJyJc/FKvBZvxIW4FFNQTh/w1MCTLdVgAGh8QHN6AsXZAcKzI+zOe7C96iH2uo/VmwFGF4+BuRwAMo37WEynT4MQ71f7/R7yU9/8yPeR78+F7/1t/sVPI/FH4j8L4iP1rXKVKZ0iPs/iGB/HSd5UqfQqZS6TyCpm6djEfhiwSAzYIgbMECdocFz5XqXFQxoLk+dybeAoZ+yPkEPvdEafqSqX+jvbFQIe23Vs1/9lu0Jy2hMgV8vFhP7vTBbGqslSJTXEvyPdEnoU0Bp+077/iza2yNgiz6ZF/uXfnLE3xt54Jr2B3XEeT08cBktZ+8xY/bdKORmdPTaCoq91mqqSox/XvoE6R7rkM3r4/EWhAo6f1C4EIV9hnMeuFnRt55jPFEvD5R2TdHvXnUOBKDjZnU5dewM4Aa+FglDx8q+qsdkq6TMYRLLS0WwSRxtEIeoWRKkk98G77e4GAcs7ZR0FX9sc1mfeV/Moyk0i88w4P7+IL2fRI7b8ivMsLOeYWIfDEjeacN4+RuNh56n0Lwq3nlIWNO6bwYaE7hNjvmhFAOMOdv1whfmuK3u3P8UrXLMx9IYhC8Af5hdivpthTStIqpC0KbYBhCo8XYRh8r071P9WwRaQ3kEf4qMyNG05bxEtsISCwu+mTanzgYGdKCsAgpXD1U2zlk7d2Hy/RzWgaJGYIN5BOHJNQK7grRkwFSqJPKBqwS5OKb78hDGieV6H4g3OXbj5hBV47Vz5nm0/r1WPrx9vPoHVur2PLkyKxlbitwN/55zj9Ta+gmhEuobnAHQtt2gbXkzHwBpR6lMrkKgVMJ1uqtz10zjmXEgAfzGdkyuaJvAWgOzsw9STK1pIO2tCAYL+BwE0v/w=
+sidebar_class_name: "put api-method"
+info_path: site/openapi/docSpace/API Backend/Usage API/asc-files
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Change the default access rights"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"put"}
+  path={"/api/2.0/files/settings/dafaultaccessrights"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Changes the default access rights in the sharing settings.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"array","items":{"anyOf":[{"enum":["None","ReadWrite","Read","Restrict","Varies","Review","Comment","FillForms","CustomFilter","RoomAdmin","Editing","PowerUser"],"type":"string","description":"[None - None, ReadWrite - Read and write, Read - Read, Restrict - Restrict, Varies - Varies, Review - Review, Comment - Comment, FillForms - Fill forms, CustomFilter - Custom filter, RoomAdmin - Room admin, Editing - Editing, PowerUser - Power user]","example":"None"},{"enum":[0,1,2,3,4,5,6,7,8,9,10,11],"type":"integer","description":"[0 - None, 1 - Read and write, 2 - Read, 3 - Restrict, 4 - Varies, 5 - Review, 6 - Comment, 7 - Fill forms, 8 - Custom filter, 9 - Room admin, 10 - Editing, 11 - Power user]","example":0}]}}},"text/json":{"schema":{"type":"array","items":{"anyOf":[{"enum":["None","ReadWrite","Read","Restrict","Varies","Review","Comment","FillForms","CustomFilter","RoomAdmin","Editing","PowerUser"],"type":"string","description":"[None - None, ReadWrite - Read and write, Read - Read, Restrict - Restrict, Varies - Varies, Review - Review, Comment - Comment, FillForms - Fill forms, CustomFilter - Custom filter, RoomAdmin - Room admin, Editing - Editing, PowerUser - Power user]","example":"None"},{"enum":[0,1,2,3,4,5,6,7,8,9,10,11],"type":"integer","description":"[0 - None, 1 - Read and write, 2 - Read, 3 - Restrict, 4 - Varies, 5 - Review, 6 - Comment, 7 - Fill forms, 8 - Custom filter, 9 - Room admin, 10 - Editing, 11 - Power user]","example":0}]}}},"application/*+json":{"schema":{"type":"array","items":{"anyOf":[{"enum":["None","ReadWrite","Read","Restrict","Varies","Review","Comment","FillForms","CustomFilter","RoomAdmin","Editing","PowerUser"],"type":"string","description":"[None - None, ReadWrite - Read and write, Read - Read, Restrict - Restrict, Varies - Varies, Review - Review, Comment - Comment, FillForms - Fill forms, CustomFilter - Custom filter, RoomAdmin - Room admin, Editing - Editing, PowerUser - Power user]","example":"None"},{"enum":[0,1,2,3,4,5,6,7,8,9,10,11],"type":"integer","description":"[0 - None, 1 - Read and write, 2 - Read, 3 - Restrict, 4 - Varies, 5 - Review, 6 - Comment, 7 - Fill forms, 8 - Custom filter, 9 - Room admin, 10 - Editing, 11 - Power user]","example":0}]}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Updated sharing rights (None, ReadWrite, Read, Restrict, Varies, Review, Comment, FillForms, CustomFilter, RoomAdmin, Editing, Collaborator)","content":{"text/plain":{"schema":{"type":"array","items":{"oneOf":[{"enum":["None","ReadWrite","Read","Restrict","Varies","Review","Comment","FillForms","CustomFilter","RoomAdmin","Editing","PowerUser"],"type":"string","description":"[None - None, ReadWrite - Read and write, Read - Read, Restrict - Restrict, Varies - Varies, Review - Review, Comment - Comment, FillForms - Fill forms, CustomFilter - Custom filter, RoomAdmin - Room admin, Editing - Editing, PowerUser - Power user]","example":"None"},{"enum":[0,1,2,3,4,5,6,7,8,9,10,11],"type":"integer","description":"[0 - None, 1 - Read and write, 2 - Read, 3 - Restrict, 4 - Varies, 5 - Review, 6 - Comment, 7 - Fill forms, 8 - Custom filter, 9 - Room admin, 10 - Editing, 11 - Power user]","example":0}],"title":"ASC.Files.Core.Security.FileShare"}}},"application/json":{"schema":{"type":"array","items":{"oneOf":[{"enum":["None","ReadWrite","Read","Restrict","Varies","Review","Comment","FillForms","CustomFilter","RoomAdmin","Editing","PowerUser"],"type":"string","description":"[None - None, ReadWrite - Read and write, Read - Read, Restrict - Restrict, Varies - Varies, Review - Review, Comment - Comment, FillForms - Fill forms, CustomFilter - Custom filter, RoomAdmin - Room admin, Editing - Editing, PowerUser - Power user]","example":"None"},{"enum":[0,1,2,3,4,5,6,7,8,9,10,11],"type":"integer","description":"[0 - None, 1 - Read and write, 2 - Read, 3 - Restrict, 4 - Varies, 5 - Review, 6 - Comment, 7 - Fill forms, 8 - Custom filter, 9 - Room admin, 10 - Editing, 11 - Power user]","example":0}],"title":"ASC.Files.Core.Security.FileShare"}}},"text/json":{"schema":{"type":"array","items":{"oneOf":[{"enum":["None","ReadWrite","Read","Restrict","Varies","Review","Comment","FillForms","CustomFilter","RoomAdmin","Editing","PowerUser"],"type":"string","description":"[None - None, ReadWrite - Read and write, Read - Read, Restrict - Restrict, Varies - Varies, Review - Review, Comment - Comment, FillForms - Fill forms, CustomFilter - Custom filter, RoomAdmin - Room admin, Editing - Editing, PowerUser - Power user]","example":"None"},{"enum":[0,1,2,3,4,5,6,7,8,9,10,11],"type":"integer","description":"[0 - None, 1 - Read and write, 2 - Read, 3 - Restrict, 4 - Varies, 5 - Review, 6 - Comment, 7 - Fill forms, 8 - Custom filter, 9 - Room admin, 10 - Editing, 11 - Power user]","example":0}],"title":"ASC.Files.Core.Security.FileShare"}}}}},"401":{"description":"Unauthorized"},"403":{"description":"Forbidden"}}}
+>
+  
+</StatusCodes>
+
+
+      

@@ -1,0 +1,71 @@
+---
+id: create-backup-schedule
+title: "Create the backup schedule"
+description: "Creates the backup schedule of the current portal with the parameters specified in the request."
+sidebar_label: "Create the backup schedule"
+hide_title: true
+hide_table_of_contents: true
+api: eJztWU1v4zYQ/SsEj63WVpws0PqWdXaxRRts0GTRQ2AEtDSOmUiiSlJJXMP/vTOkJFOyHSSX3YsuNkXN1xu+mZGtDbfi3vDpLf8kkseq5POIqxK0sFIVf6R8yhMNwoK/e52sIK0y4BHX8G8Fxn5S6ZpPNzxRhYXC0lKUZSYTZ2D8YFRBewYVc0Eruy4BrarFAyQW7ZSa3FkJxslZpcU93DihDVcFfFticBsORZVTlBcqqXJ0ZFD1ZqVlWgpt1+HurEIj+SxTVYpXf6lEZPh9Iay4RuPg9KROr0hvpgqDippQ14EZq2Vxj1IpmETLkmDg9m3rgn1g7TpiB2JAgd0uS3eyQWQo469YQpcRc3HirvuOWBsuecM1o8QAueuH7rzhpveW1LtzBAAvIi8zwrRLzzZqUxlHJ9EkOo3Ooo879BJP8R7zsQc/7sI+OQpysgftdAfrrAfn4xuij7cUnrQOyfn1bEQGRp6PI8yC1SKxpt64DvizjRo6YcJEbg6xT6SpJIgiu+rwsKiyTCzIpdUVbPvpqN2wkgyDBU3E6+oECJC+j+CqRFKFnExOz6KGZ0g4lQOz8ELhLJTKQBSt1yeRVfB+xe0cdRcuIcaxKA2wHzviS/Ei8ypnyI4F0kotmV2BP6iUeWN4QCUlKOJLpXNhvbXTyWvgKWiMJtGqOH4M3SaAS6nSw/X/+Qn0+kKsUckt/wF4bNaXSIbVG0q5sYHkc0uWinXEWnPt9jNe1PvOdHsjp6tuibVx9SvsjbUVBHLSC2Dyit9Xi8N/nT+Il6+iSDPQd37nyucXT2WlKv0GanwlsQOHHoSBKmL9BlP+6F6ztD1WlUuRGejbmyGvumV4LBvnpbxUKWRmRDqEPq3yMgi5qaG9Yi8hkUsMgcklE4y02LPMMrYA5odjypRmhbIhEF+I78LiA2WmHrLvhdUd0RdWcfJPDWIYw8MYHsbwMIaHMTyM4WEM/5QxHP4o/uXXYR4P83iYx8M8HubxMI+Hefzj5zFFoMGU2Fh9bU3imL56jj1y5trNlFHohJXqv/2LnEnDTJUkYMyyooka/BHufnqXmZCHZ32T2P7jwdGHg1Dh9Z/1O0mSPYtP9sF9L0RlV0rL/8Bx/iw+3Rf6ovRCpil4nwaSSku7dp1HmOSOLNy5Hn6L6RT0YPGMAsDnVH99RhIljMveoneidVNF6xpTx0qlLU79Z4m9hfZ3B85MTbqUycLdq19DjNA1iqyoP/JSGdc9Bba9KR+LUo4no3jsvY49N+sxsHufYUA/EaUIW6UzVFxZW07H44xm9ApNTn+Lf5+M9+rAP6J4dU64mzQR5XJPr26y2mPCyP4EKvwC8dF1KBZx4g3yST1KcPmn4/5799rlc1NTvefDzsNgb9T/hJm7N3K9bnfyNbMtHGS+C8d1C43bzlQHJIulcrkMOsAXmbk5TCfpT+dpQuQmRuTC1Uqdak/HQ2zsH3DwbusHkLhmRtA6MHzHx01N6FuiDUoipXmTW+o7h2g9pyxiMaDSZrMQBr7rbLulbXSoqW7ndLJa+meUW3pAWmEhI5NbqvCZh//Bsaslwn7LohHvNc6xH5Y2kA3hzINKvfp2feMo418i5tixcVeLZ3rBiJ9Tzul1JPlwNHF7G56J4r5CVuN979m10IqyE9aWr6J6QXiaW8U6xNEtOo+APgnPQY3NxhcuZrKR97eOatQ5baRdGjDo/wE1AB2n
+sidebar_class_name: "post api-method"
+info_path: site/openapi/docSpace/API Backend/Usage API/asc-files
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Create the backup schedule"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/api/2.0/backup/createbackupschedule"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Creates the backup schedule of the current portal with the parameters specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"storageType":{"oneOf":[{"enum":["Documents","ThridpartyDocuments","CustomCloud","Local","DataStore","ThirdPartyConsumer"],"type":"string","description":"[Documents - Documents, ThridpartyDocuments - Thridparty documents, CustomCloud - Custom cloud, Local - Local, DataStore - Data store, ThirdPartyConsumer - Thirdparty consumer]","example":"Documents"},{"enum":[0,1,2,3,4,5],"type":"integer","description":"[0 - Documents, 1 - Thridparty documents, 2 - Custom cloud, 3 - Local, 4 - Data store, 5 - Thirdparty consumer]","example":0}],"title":"ASC.Data.Backup.Contracts.BackupStorageType"},"storageParams":{"type":"object","additionalProperties":{"nullable":true},"description":"Storage parameters","nullable":true,"example":[{"key":{"int":1234,"string":"some text","boolean":true},"value":{"int":1234,"string":"some text","boolean":true}}]},"backupsStored":{"type":"integer","description":"Maximum number of the stored backup copies","format":"int32","nullable":true,"example":1234},"cronParams":{"type":"object","properties":{"period":{"oneOf":[{"enum":["EveryDay","EveryWeek","EveryMonth"],"type":"string","description":"[EveryDay - Every day, EveryWeek - Every week, EveryMonth - Every month]","example":"EveryDay"},{"enum":[0,1,2],"type":"integer","description":"[0 - Every day, 1 - Every week, 2 - Every month]","example":0}],"title":"ASC.Data.Backup.BackupAjaxHandler_BackupPeriod"},"hour":{"type":"integer","description":"Hour","format":"int32","example":0},"day":{"type":"integer","description":"Day","format":"int32","example":0}},"additionalProperties":false,"description":"Cron parameters","title":"ASC.Data.Backup.ApiModels.Cron"},"dump":{"type":"boolean","description":"Specifies if a dump will be created or not","example":true}},"additionalProperties":false,"description":"Backup schedule parameters","title":"ASC.Data.Backup.ApiModels.BackupScheduleDto"}},"text/json":{"schema":{"type":"object","properties":{"storageType":{"oneOf":[{"enum":["Documents","ThridpartyDocuments","CustomCloud","Local","DataStore","ThirdPartyConsumer"],"type":"string","description":"[Documents - Documents, ThridpartyDocuments - Thridparty documents, CustomCloud - Custom cloud, Local - Local, DataStore - Data store, ThirdPartyConsumer - Thirdparty consumer]","example":"Documents"},{"enum":[0,1,2,3,4,5],"type":"integer","description":"[0 - Documents, 1 - Thridparty documents, 2 - Custom cloud, 3 - Local, 4 - Data store, 5 - Thirdparty consumer]","example":0}],"title":"ASC.Data.Backup.Contracts.BackupStorageType"},"storageParams":{"type":"object","additionalProperties":{"nullable":true},"description":"Storage parameters","nullable":true,"example":[{"key":{"int":1234,"string":"some text","boolean":true},"value":{"int":1234,"string":"some text","boolean":true}}]},"backupsStored":{"type":"integer","description":"Maximum number of the stored backup copies","format":"int32","nullable":true,"example":1234},"cronParams":{"type":"object","properties":{"period":{"oneOf":[{"enum":["EveryDay","EveryWeek","EveryMonth"],"type":"string","description":"[EveryDay - Every day, EveryWeek - Every week, EveryMonth - Every month]","example":"EveryDay"},{"enum":[0,1,2],"type":"integer","description":"[0 - Every day, 1 - Every week, 2 - Every month]","example":0}],"title":"ASC.Data.Backup.BackupAjaxHandler_BackupPeriod"},"hour":{"type":"integer","description":"Hour","format":"int32","example":0},"day":{"type":"integer","description":"Day","format":"int32","example":0}},"additionalProperties":false,"description":"Cron parameters","title":"ASC.Data.Backup.ApiModels.Cron"},"dump":{"type":"boolean","description":"Specifies if a dump will be created or not","example":true}},"additionalProperties":false,"description":"Backup schedule parameters","title":"ASC.Data.Backup.ApiModels.BackupScheduleDto"}},"application/*+json":{"schema":{"type":"object","properties":{"storageType":{"oneOf":[{"enum":["Documents","ThridpartyDocuments","CustomCloud","Local","DataStore","ThirdPartyConsumer"],"type":"string","description":"[Documents - Documents, ThridpartyDocuments - Thridparty documents, CustomCloud - Custom cloud, Local - Local, DataStore - Data store, ThirdPartyConsumer - Thirdparty consumer]","example":"Documents"},{"enum":[0,1,2,3,4,5],"type":"integer","description":"[0 - Documents, 1 - Thridparty documents, 2 - Custom cloud, 3 - Local, 4 - Data store, 5 - Thirdparty consumer]","example":0}],"title":"ASC.Data.Backup.Contracts.BackupStorageType"},"storageParams":{"type":"object","additionalProperties":{"nullable":true},"description":"Storage parameters","nullable":true,"example":[{"key":{"int":1234,"string":"some text","boolean":true},"value":{"int":1234,"string":"some text","boolean":true}}]},"backupsStored":{"type":"integer","description":"Maximum number of the stored backup copies","format":"int32","nullable":true,"example":1234},"cronParams":{"type":"object","properties":{"period":{"oneOf":[{"enum":["EveryDay","EveryWeek","EveryMonth"],"type":"string","description":"[EveryDay - Every day, EveryWeek - Every week, EveryMonth - Every month]","example":"EveryDay"},{"enum":[0,1,2],"type":"integer","description":"[0 - Every day, 1 - Every week, 2 - Every month]","example":0}],"title":"ASC.Data.Backup.BackupAjaxHandler_BackupPeriod"},"hour":{"type":"integer","description":"Hour","format":"int32","example":0},"day":{"type":"integer","description":"Day","format":"int32","example":0}},"additionalProperties":false,"description":"Cron parameters","title":"ASC.Data.Backup.ApiModels.Cron"},"dump":{"type":"boolean","description":"Specifies if a dump will be created or not","example":true}},"additionalProperties":false,"description":"Backup schedule parameters","title":"ASC.Data.Backup.ApiModels.BackupScheduleDto"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Boolean value: true if the operation is successful","content":{"text/plain":{"schema":{"type":"boolean"}},"application/json":{"schema":{"type":"boolean"}},"text/json":{"schema":{"type":"boolean"}}}},"401":{"description":"Unauthorized"},"403":{"description":"Forbidden"}}}
+>
+  
+</StatusCodes>
+
+
+      

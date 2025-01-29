@@ -1,0 +1,71 @@
+---
+id: save-room-quota-settings
+title: "Save the room quota settings"
+description: "Saves the room quota settings specified in the request to the current portal."
+sidebar_label: "Save the room quota settings"
+hide_title: true
+hide_table_of_contents: true
+api: eJztV0tv2zgQ/isEj9vEUhyj6OqWJi2w2F20GyfYQ2AUtDS22VIkS1JuU8P/vTOk7NBWH5f0UsSAbWk0nMf3DWeoDQ9i6Xl1x6cQgtRLzwr2X2eC4LMTbiw4EaTRfzW84l6s4dqYNj7eqfMT7uBjBz68NM09rza8NjqADnQprFWyjhaK995okvl6Ba2gq3BvAc2a+XuoA9qxjvwFCZ6eghZzBSmUB+W5MQqERu0GfO2kJdson1qo5QKXMrlgYQXsIy1kfpeUcMCSxYYZx7Qhh/BZtFah2eA62JLJhehU2Ps0Gt4sEJu9d4mZLcHlS8/G55PtyV7DB4f+cgXuTQsswOfAt7PjsK+Sxz7atVAd8C1GIppGkopQbzNQFkJ5ODZxndBnVjjRQgDn2QIzJAw6D+4ICIwsyBDjuphejv6H+ejCSvr+axpQo96avwpmdMBz9iBGSAk9cfp7cZpv1z+ePZH7G5FLMTrw1mif2BqXJf0dhnaDiOvAHDb5YRhZX4+b3yohH7VAfsbugFOErRUhiZ5PhiRzJXy4hlqoulMiwBV+M0N76vd2GlQ4DbIFFOpOKYo3hZPXB0L34rScnJ6VN+Xz6rysynJUps+zcoJ3P6+InNJL42CUkPf9/3DKHm/Px96cT9j/GPtfMu6eQP8R6GRzUp4Nu9StFl1YGSe/QMOj0vlQ6bVxc9k0oGNsHurOyXAfZ4Pw9Tuy8O4DkAD7omgw/0+oAHw27PlTPPf62J+/0RiZ7wdZw6ROSn1/DybeomOHbZNZ44JQI3SETX9l6EBtjY9FI8IK7wphZTEelcXOdEHuoresC+OEWOPIiIl0TuG6VQi2KgplkPYVWqxelH+Oi8HA/Yees7Q8DrYdJlOq5lSwh8js6wYD+xsFWCI4sOg+VzvhNAVwOpgPMs1C2ibXD+8Er3Z1dLQhUpUd1nxfxlIvTPSfVc1rqYAAoOxTRusxsU8gtiLuyz484ut7dB3Dkr2uPDrPPXrZsMRwI2ebnvM7ghY1kfVI7cMr1YB5JIzIpTWbzRzlt05ttyTGKBzVMV6uhZNpC9/N0NcKCxvJplKJhPLLlOvpDUVG6nR8qYaDhc5HacVFXYMNmW6ezSyr5bdvpjeoNu9fAls8nKDUiU+UDf5WnNP7JPmIpRZlG2xYetmJJekmz7GTdAROXn6p0PqL7Hwn9H2ex2FdpgzoNzvvHa7YbFJtI5I7/f5M970VPaY77QgDBv0VUtZJ9g==
+sidebar_class_name: "post api-method"
+info_path: site/openapi/docSpace/API Backend/Usage API/asc-files
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Save the room quota settings"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/api/2.0/settings/roomquotasettings"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Saves the room quota settings specified in the request to the current portal.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"enableQuota":{"type":"boolean","description":"Specifies if the quota settings are enabled or not","example":true},"defaultQuota":{"oneOf":[{"type":"integer","example":1234},{"type":"string","example":"some text"}],"description":"Default quota value"}},"additionalProperties":false,"description":"Request parameters for the user quota settings","title":"ASC.Web.Api.ApiModel.RequestsDto.QuotaSettingsRequestsDto"}},"text/json":{"schema":{"type":"object","properties":{"enableQuota":{"type":"boolean","description":"Specifies if the quota settings are enabled or not","example":true},"defaultQuota":{"oneOf":[{"type":"integer","example":1234},{"type":"string","example":"some text"}],"description":"Default quota value"}},"additionalProperties":false,"description":"Request parameters for the user quota settings","title":"ASC.Web.Api.ApiModel.RequestsDto.QuotaSettingsRequestsDto"}},"application/*+json":{"schema":{"type":"object","properties":{"enableQuota":{"type":"boolean","description":"Specifies if the quota settings are enabled or not","example":true},"defaultQuota":{"oneOf":[{"type":"integer","example":1234},{"type":"string","example":"some text"}],"description":"Default quota value"}},"additionalProperties":false,"description":"Request parameters for the user quota settings","title":"ASC.Web.Api.ApiModel.RequestsDto.QuotaSettingsRequestsDto"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Tenant room quota settings","content":{"text/plain":{"schema":{"type":"object","properties":{"enableQuota":{"type":"boolean","example":true},"defaultQuota":{"type":"integer","format":"int64","example":1234},"lastRecalculateDate":{"type":"string","format":"date-time","nullable":true,"example":"2008-04-10T06:30:00.0000000+04:00"}},"additionalProperties":false,"title":"ASC.Core.Tenants.TenantRoomQuotaSettings"}},"application/json":{"schema":{"type":"object","properties":{"enableQuota":{"type":"boolean","example":true},"defaultQuota":{"type":"integer","format":"int64","example":1234},"lastRecalculateDate":{"type":"string","format":"date-time","nullable":true,"example":"2008-04-10T06:30:00.0000000+04:00"}},"additionalProperties":false,"title":"ASC.Core.Tenants.TenantRoomQuotaSettings"}},"text/json":{"schema":{"type":"object","properties":{"enableQuota":{"type":"boolean","example":true},"defaultQuota":{"type":"integer","format":"int64","example":1234},"lastRecalculateDate":{"type":"string","format":"date-time","nullable":true,"example":"2008-04-10T06:30:00.0000000+04:00"}},"additionalProperties":false,"title":"ASC.Core.Tenants.TenantRoomQuotaSettings"}}}},"401":{"description":"Unauthorized"},"403":{"description":"Forbidden"}}}
+>
+  
+</StatusCodes>
+
+
+      

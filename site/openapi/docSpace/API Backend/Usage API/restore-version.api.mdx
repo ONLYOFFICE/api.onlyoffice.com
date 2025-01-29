@@ -1,0 +1,71 @@
+---
+id: restore-version
+title: "Restore a file version"
+description: "Restores a file version specified in the request."
+sidebar_label: "Restore a file version"
+hide_title: true
+hide_table_of_contents: true
+api: eJztWEtv1DAQ/iuWTyDSTdhWtORW0fIQIFApHEAr5CazG0MSG9sprKL8d2Zsd5tuW0oXcdsemtiZ5zfjaT/33ImF5fkX/lzWYFnK/JPPEq40GOGkal+VPOcGrFMGPoGxuMUTroURDThco3bPW1yg2By1UT7hssWVFq7CdwM/OmkAzTjTQcJtUUEjeN5zt9SkJVsHCzAoOlemES5s7U5xA36JRtcodLC/lw1DsvJ0vorEu/rRgVnyDW0/nu7ujW13pr7TrnVGtouxFW5VA8zBL8eHYUZpW61ai2ii1jTL6FGCLYzUBCsqRDRZJQncJSuFEzkjDNmro4R9h2USVjHZ5OKFLYzqdMIE6ywY9rNSrNOoDSVukUbCCgO+eszJBpcXLopKtAsstMQPFbCQBQvQJKxGKabm69IJQy/oml2CXijEtXUeEMw41bUgvPrrQKmzb1A46hhDLeVkAESWmxQp4QjKTVVou7oWZyQXeuzGqiSrrtnIdVR+QdhvZoGqdU9o/iLD/Wx6QMmF7r2P5mEpWnbcNGBkUWHXJlyUpaS2EfX7UUxzUVtUdNIFtQ/PJn5OTJ7hTJgco8rL0DGHnauUoWB8/0F5d7adK07lzYGv8KTW3qFG9tNElO/aenk9GzxjBzvZ3s7j7DR7ku9meZZNsvDzKNvDFcVFVj6rFt7N5xbc3V6tFu0fvWbkxxu/D3yHWgbw8OUI/XgICLZw4iKc/9Dp0dDIgjBG0CiTDhraH9Zt4UY455+unZL7ed+wjxCKt6qE2k5O4ug8cmrcXbgMxrWuZeHHW/rNqu3c2c6d7dzZzp3/Pnf8fzrbgbMdONuBsx04/3/gDGT/KmM8CTTcRpq34oNWQyHnEvlfJHbEuVF2gpkgS68UcfgF+KYkUp7zVGiZTidZSnas/532gb4PaWT7l3QvwBWoPrHjnFfO6TxNa1WIulLW5QfZ02nK1wN+Q98jfeTEii0UnZFu+YHGZyibsMVXgefp69WRhwG+BqpjZOVXxCI9L5T6LsEXQrZz5bXXMeejacjPp9QzGgNuhK97NB6BXcN1PZ3+kvduVIqY2Ygx06wkPPtYly+UNkpiZeiExvjpiY98db2yViDElWpA6n1/Jix8NPUw0Ha4v6CyldJSP5er5vRoj+5RzkXdUXScbkJukQ43I5eSM1oYGQ7KTU5uhe/BSbwVeshuA+aiD9rl2OdFKBGLYYaSFQ4t+oODEYSPh0UB2o3UxpZnozPx4vgUu+c3GiJtpA==
+sidebar_class_name: "get api-method"
+info_path: site/openapi/docSpace/API Backend/Usage API/asc-files
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Restore a file version"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/files/file/{fileId}/restoreversion"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Restores a file version specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"fileId","in":"path","required":true,"schema":{"type":"integer","format":"int32","example":8740}},{"name":"version","in":"query","schema":{"type":"integer","format":"int32","example":1234}},{"name":"url","in":"query","schema":{"type":"string","example":"some text"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Version history data: file ID, key, file version, version group, a user who updated a file, creation time, history changes in the string format, list of history changes, server version","content":{"text/plain":{"schema":{"type":"object","properties":{"id":{"type":"integer","format":"int32","example":1234},"key":{"type":"string","nullable":true,"example":"some text"},"version":{"type":"integer","format":"int32","example":1234},"versionGroup":{"type":"integer","format":"int32","example":1234},"user":{"type":"object","properties":{"id":{"type":"string","nullable":true,"example":"7028"},"name":{"type":"string","nullable":true,"example":"Adan Emmerich"}},"additionalProperties":false,"title":"ASC.Files.Core.EditHistoryAuthor"},"created":{"type":"object","properties":{"utcTime":{"type":"string","format":"date-time","readOnly":true,"example":"2008-04-10T06:30:00.0000000+04:00"},"timeZoneOffset":{"type":"string","format":"date-span","readOnly":true,"example":"00:00:00"}},"additionalProperties":false,"title":"ASC.Api.Core.ApiDateTime"},"changesHistory":{"type":"string","nullable":true,"example":"some text"},"changes":{"type":"array","items":{},"nullable":true},"serverVersion":{"type":"string","nullable":true,"example":"some text"}},"additionalProperties":false,"title":"ASC.Files.Core.ApiModels.ResponseDto.EditHistoryDto"}},"application/json":{"schema":{"type":"object","properties":{"id":{"type":"integer","format":"int32","example":1234},"key":{"type":"string","nullable":true,"example":"some text"},"version":{"type":"integer","format":"int32","example":1234},"versionGroup":{"type":"integer","format":"int32","example":1234},"user":{"type":"object","properties":{"id":{"type":"string","nullable":true,"example":"7028"},"name":{"type":"string","nullable":true,"example":"Adan Emmerich"}},"additionalProperties":false,"title":"ASC.Files.Core.EditHistoryAuthor"},"created":{"type":"object","properties":{"utcTime":{"type":"string","format":"date-time","readOnly":true,"example":"2008-04-10T06:30:00.0000000+04:00"},"timeZoneOffset":{"type":"string","format":"date-span","readOnly":true,"example":"00:00:00"}},"additionalProperties":false,"title":"ASC.Api.Core.ApiDateTime"},"changesHistory":{"type":"string","nullable":true,"example":"some text"},"changes":{"type":"array","items":{},"nullable":true},"serverVersion":{"type":"string","nullable":true,"example":"some text"}},"additionalProperties":false,"title":"ASC.Files.Core.ApiModels.ResponseDto.EditHistoryDto"}},"text/json":{"schema":{"type":"object","properties":{"id":{"type":"integer","format":"int32","example":1234},"key":{"type":"string","nullable":true,"example":"some text"},"version":{"type":"integer","format":"int32","example":1234},"versionGroup":{"type":"integer","format":"int32","example":1234},"user":{"type":"object","properties":{"id":{"type":"string","nullable":true,"example":"7028"},"name":{"type":"string","nullable":true,"example":"Adan Emmerich"}},"additionalProperties":false,"title":"ASC.Files.Core.EditHistoryAuthor"},"created":{"type":"object","properties":{"utcTime":{"type":"string","format":"date-time","readOnly":true,"example":"2008-04-10T06:30:00.0000000+04:00"},"timeZoneOffset":{"type":"string","format":"date-span","readOnly":true,"example":"00:00:00"}},"additionalProperties":false,"title":"ASC.Api.Core.ApiDateTime"},"changesHistory":{"type":"string","nullable":true,"example":"some text"},"changes":{"type":"array","items":{},"nullable":true},"serverVersion":{"type":"string","nullable":true,"example":"some text"}},"additionalProperties":false,"title":"ASC.Files.Core.ApiModels.ResponseDto.EditHistoryDto"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

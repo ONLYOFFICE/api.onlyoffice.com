@@ -1,0 +1,71 @@
+---
+id: add-a-message
+title: "Add a message"
+description: "Adds a message to the selected discussion within a project with the ID specified in the request."
+sidebar_label: "Add a message"
+hide_title: true
+hide_table_of_contents: true
+api: eJztV21v2zYQ/isEv3TDnFhW42IzMAxpEqzGkC2IEwxomg8X6RyzlUSNRzXxDP/33enNEuLFyboA/VDBsCnqnrtHd4/J40p7uCU9udK5sx8x8sNjQ1FBZGxG+nqgCaPCGb9kk5U+LPzCOvM3eH78DiFGJ1DHIz3Qd2yH+nrNqBgpciYXMz3Rh3FMClSKRHCLylvlF6gIE46HsYrbiOrO+IXJ2LZmU06U1tNjRTlGZm4YwSYy5/CvAsnvc+x6+NbGzHSlI5t5zLwMIc8TE5WMhx9J+Kw0RQtMQUZ+mSMztDcSjf1w3BydN0jytGZhYrnpv9NZTXB6zKjai+Ggt5ySNc8Yn+BD1Ca5qrJoseSdyW4F2uHeB582+cN7vw2YAxOPTA6Zp4foS0LHbEl99+sl/3zP+WcASAHKJL8avNrmNLPezJcP3c3qYpC6WyAXw0lZK2PVJaLgxha+U33rxGwTCpyDJd+ydlLqlOTG2gQh0+vqkhJTzqKsKhMGwb8mSA/+r/rXRf7jLhOh77Kexh2bRgsDPbcuBV9NvQ55Au8hzUUdehS+lhxfNGLpZ79rOSsHzd9CQDMPvqDnRgwEOqUzZz5z6beku2s8h4RQrzdy1jMjj+q0/Ok4t5XcL0SSj77AO0wSO+C/rSHFH6repxaFuDiC7IgXEo9HNk3r2u3mVuJOYrPL3Luisq6c05EteiGelLxx6aEkGT/+tmEQBnujcC8ML4KDyWg0Gb/ZH78Z/zgOD953nLxdPlNVbaiWZVGYuF/h+trb8tVcQoGXojyB5e+Q7pDeqfmE6j1kS/D0yTxRr6eQQb0UHrLSwM1SSJLHMYVLZBEhsVRQogTPapubBC/dDviHD0M2jYvIkwzR8nQ1J/B9oPz+l4IXwZ8hTk1m2AN463ryPmFXdokoyq7It4V6qTJc5vGXy6l28k1OX7uc2kK9VBn+wx4UPG8Lqiyl4t299wnA7l79ZfvXedUJmJse5W+C/woF3ynVyxSiE71u/9q2pOwaD4LRll44g/okwyuvWKXcwlrmp3NLpYTAL/huCLkZhvvBsDkcrdoTweQq2Pvp+of1MG2bzuaoNJPushLf1gNTmwT2/huWva+QWlSPueUuJdXHliylfT3fHHROmlT1DirBJiFtktt2eDPVPyxs5pt+/0o6puu1cJvbknPtVDqoIuPXVDN0n7nvPz+ZXajDsymD+ZaqDCe8zHEm1+t/AB7Lxnw=
+sidebar_class_name: "post api-method"
+info_path: site/openapi/workspace/API Backend/Usage API/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Add a message"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/api/2.0/project/{projectid:[0-9]+}/message"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Adds a message to the selected discussion within a project with the ID specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"projectid":{"description":"Project ID","type":"integer"},"title":{"description":"Discussion title","type":"string"},"content":{"description":"Message text","type":"string"},"participants":{"description":"User IDs (GUIDs) separated with ','","type":"string"},"notify":{"description":"Specifies whether to notify participants about a message or not","type":"array","items":{"type":"boolean"}}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Message","content":{"application/json":{"schema":{"type":"object","properties":{"ProjectOwner":{"type":"object","properties":{"Id":{"type":"integer","format":"int32","example":"123"},"Title":{"type":"string","example":"Sample project"},"Status":{"type":"integer","format":"int32","example":"0"},"IsPrivate":{"type":"boolean","example":"false"}},"title":"SimpleProjectWrapper"},"Text":{"type":"string","example":"Hello, this is sample message"},"CanCreateComment":{"type":"boolean","example":"false"},"CanEdit":{"type":"boolean","example":"true"},"CommentsCount":{"type":"integer","format":"int32","example":"5"},"Created":{"type":"string","example":"2020-12-22T04:11:56.5658524Z"},"CreatedBy":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"},"CreatedById":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"Updated":{"type":"string","example":"2020-12-22T04:11:56.5658524Z"},"UpdatedBy":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"},"UpdatedById":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"Id":{"type":"integer","format":"int32","example":"10"},"Title":{"type":"string","example":"Sample Title"},"Description":{"type":"string","example":"Sample description"},"Status":{"type":"integer","format":"int32","example":"0"},"Responsible":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"},"ResponsibleId":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"}},"title":"MessageWrapper"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

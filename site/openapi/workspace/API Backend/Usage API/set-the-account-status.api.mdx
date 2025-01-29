@@ -1,0 +1,71 @@
+---
+id: set-the-account-status
+title: "Set the account status"
+description: "Sets the status of an account with the email address specified in the request."
+sidebar_label: "Set the account status"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVMtu2zAQ/BWCZyVy0558c5sADXoJYvsU+EBLa4uJRLLkyokr6N+7S0p+pHGBAtVBILmv2dkhO4lqG+T0STZK1/msKGxrMMhVJgMUrde4J2MnZy1W1utfCrU130GV4DnI00pm8pX8QK56iiohFF47dpNTOQcMAisQARW2QdiNUEaoVEW8aqyiFbi4UGXpIQQRHBR6o6EU2kSzh58tBLymSsPyqy0JVycLaxAM8lI5V+si4sufA1fvZCgqSs0r3DsgPHb9DAVSHuetA48aAltjfV6cox/YOIdHwUOygF6breyJKuoOLserAvWOmBxYmAr0LYgrAUataygzsVF14INSh3hyrLG2tgZlZB8/7j84a0KCfTOZXC7KmNf2TdzfUrZ/5UmT+5ZGnMmN9Y3CdPT5RiYUXyaf/iy8NGoQCTXAXg3QtiSLayPlCiva5Mrp/OZ6kkfBDVIIeaLwqLo5Q0ptfqi9A1RK9wP2FKkZRJXMmTSqYetZbETFPT8eVXT3phpXw4kKxrkexsrT6jn/xsa6GtlffrNN0xoe6xz8Drx4vJsvxOzhniJpGxIrNaUIyCJxNmCjIt8DOLodUd/jfUjykO8u0YnK//99GkhEeMPc1Yo4JKStj5chDeyJGSZPGhn9I0WZHMd2IIlufkX9sXvXrVWApa/7no+plOc3hJY75TXrm3dUphqfkU6+0ASZ0djn1YJBsXvdpgm/U2yfjREkdnD4V9/ViRAflgvyXQ+PR2NLDvHqlR8W+k8lLWykPQovnnU0QrNt1ZZ9U0qWEWv9XIUvUYXDgpsaTWZ/AvBckNnQB/+5qw9Dui5pnPgc/ZPpYsThFiRvnuqKUP8GBR0Jwg==
+sidebar_class_name: "put api-method"
+info_path: site/openapi/workspace/API Backend/Usage API/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Set the account status"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"put"}
+  path={"/api/2.0/mail/accounts/state"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Sets the status of an account with the email address specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"email":{"description":"Account email address","type":"string"},"state":{"description":"Account activity status: true - enabled, false - disabled","type":"boolean"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Account mailbox ID","content":{"application/json":{"schema":{"type":"integer","format":"int32"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

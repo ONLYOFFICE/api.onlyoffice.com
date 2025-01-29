@@ -1,0 +1,71 @@
+---
+id: create-a-task-category
+title: "Create a task category"
+description: "Creates a new task category with the parameters (title, description, etc.) specified in the request."
+sidebar_label: "Create a task category"
+hide_title: true
+hide_table_of_contents: true
+api: eJy9VVFr2zAQ/itCe9nAq9O0MMhblxZWBmtpUvYQ8qDYl1itbWmS3DQz+e+7k+zUTtOMwlgegizdd7q777tTzZ1YWT6a8cQU8VTYR8vnEbeQVEa6DR7U/KJymTLyt3BSld9ApGAIYHDFI75GO+DzLaJSsImRmsz4iI/RwIFlgpWwZg5dswQ3Vsps2Fq6jLkMmBZGFODAWPbRSZdDxDpeIgYuOfnErIZELiWkTJYeZuBXBdad4P3N8qtKMdqaJ6p0UDpaCq1zmfio4wdLMdXcJhkUglZuowGjVIsHSBz60UZpME6C9acUCy36OU17WQSjqHVlnZHlim/3CnHcR/fsgCdZiBX8wBK99nNNR6zEM6aW/foe8mSVcTfGc3c8IuWNdh4k1nOFG1v/o3pbrUobyjQcDP7iDh39I0ruIEfgE1w7KOxYVcHjXpQRXypTCBe2zoa4Ac+i0EQmP6U6+LLdCpd10E2VurZakEIV8wQQbtoq4m1MMEHbyz7/byO6hogbq1yZ44gP4ssywaqj9aTL6PvrcPlu2PDsnJMEmubwRI8bnn8a5LaRScTPB6evdXFfimaSQOr9YONnKqViK+v59qzwWGgZD08GMY0k0nXcEVM7mSakmiCMg/Nplxo6+w6ElBRDFo4jXvqe6mN9UCTLu5eZctWmv5sJL6z009ttd3r2ZbPTfgPq63Kpuj7HqiiqEvNiEzBPYNjd1WTKLm6vEYqfNlyR00B1xB5VrBBeXU0mYdzitN2fBHvDaNeN/2tANzw4eHaxzoX0Sq9MTsEExmdEEloi5zQuTEEoDIc+2jzweclIJWhc1wth4d7k2y1t40WGHipcPgkjxYIKOpvjJVn7VtX8ESVAVfa5f55SSGSeV0Eie1NpG7WIiyQB7Y7azjtCvr2ZTNF40TxGhUoJY8SaHir8H3FcKF86L12/VyOv5aqiOTPiwScJkZqlr+NHr+NmQVm1R+WmE2Ff0lGTCP1TWgchdR26BAva2oejNxG7PgrWROoco/4DkdPYLA==
+sidebar_class_name: "post api-method"
+info_path: site/openapi/workspace/API Backend/Usage API/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Create a task category"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/api/2.0/crm/task/category"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Creates a new task category with the parameters (title, description, etc.) specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"title":{"description":"Task category title","type":"string"},"description":{"description":"Task category description","type":"string"},"imageName":{"description":"Image name of task category","type":"string"},"sortOrder":{"description":"Task category order","type":"integer"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Task category","content":{"application/json":{"schema":{"type":"object","properties":{"RelativeItemsCount":{"type":"integer","format":"int32","example":"1"},"ImagePath":{"type":"string","example":"path to image"},"Title":{"type":"string","example":"Title"},"Description":{"type":"string","example":"Description"},"Color":{"type":"string","example":"#a7fc00"},"SortOrder":{"type":"integer","format":"int32","example":"1"},"ID":{"type":"integer","format":"int32","example":"1234"}},"title":"TaskCategoryWrapper"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

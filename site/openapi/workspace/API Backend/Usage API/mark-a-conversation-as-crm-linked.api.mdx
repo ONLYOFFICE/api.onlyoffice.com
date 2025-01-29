@@ -1,0 +1,71 @@
+---
+id: mark-a-conversation-as-crm-linked
+title: "Mark a conversation as CRM linked"
+description: "Marks a conversation as CRM linked. All the new mails will be added to the CRM history."
+sidebar_label: "Mark a conversation as CRM linked"
+hide_title: true
+hide_table_of_contents: true
+api: eJy1VE1v2zAM/SuEzm7cdbfcurTAiq1Y0Y9TFhSMrcRqJEuT5KaZ4f8+UnZSp2t3Ww4OJVLk4+OTWhFxHcR0Lgwqnc9s/Sx9wKhsHcQiE0EWjVdxRxGtOG9iZb36ndxfJZbS80lPlsjEluKkWHR0qpSh8MpxmJiKa/SbAAjFKDlggNntNWhVb2Q5gXOtIVYSarkFRhJgq2hrKQHLUpYQbXLzkUqFaP1uQiW9/NXIEL/YkgC2ggpEWUc20TmtilQqfwoMoxWhqKRBtuLOSQJml0+yiJTHeeukj0oG9qry0cgQcC15ddzL1QXYFWC9gyEkwMpbk8CN+6OkQxFFmNZEVJeJwptHxohFfFRl+Dv7d2qN83Ob1IhiRKDqlH1ltbZbVa/J8gbjFNoUsqNUUzjNYFhxWVp3k581jH6XyQvsDVP4BCcw65FkcMYLDDKDz2T9cM762NQ89EMT6D3ykiZswnsMUnLNGzNvhrwXGFF0/S8TRpJ0SgpwTSIcY0WLHJ3KzyaneRLfmL+QE1m07TfiVYR3PMB+Ru9K8QCL0n6TCS+zWvXuTNRo2Ht0VjA6Vsjtq5YuX9A4Ld9q4fSdCc7bbtFxnZVN9fc0WGMShXAnPTUFt5d393B+c0UouMd+3BojVWRlOBuiwaTSASRfmn/eGfHmmo3k/x9v3EBwlC8xdxqJX0LfeM31+6HOmX2KpLHSlzPT39FoReIxOWm89FxU1D0fbNslyfDB667jbZqH54eHzGf0CpdM7ZzprvZvTys2NGfmO7V+cs/wOFw3vQ7evAL8OB2kePNwT7HL4fEwtuQjHrf8sNB3KsiwrodMAWmvpaHV6ybpQfQpWUDYcOtj/W2S/gaDge5d9W4E8FiK2dANf7vsgyNt26ubONrH964PTxz030fzzBaE+g+58won
+sidebar_class_name: "put api-method"
+info_path: site/openapi/workspace/API Backend/Usage API/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Mark a conversation as CRM linked"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"put"}
+  path={"/api/2.0/mail/conversations/crm/mark"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Marks a conversation as CRM linked. All the new mails will be added to the CRM history.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"id_message":{"description":"ID of any messages from the conversation","type":"integer"},"crm_contact_ids":{"description":"List of CRM entities in the following format: {entity_id: 0, entity_type: 0}.\n            Entity types: 1 - Contact, 2 - Case, 3 - Opportunity","type":"array","items":{"type":"object","title":"CrmContactData"}}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={undefined}
+>
+  
+</StatusCodes>
+
+
+      

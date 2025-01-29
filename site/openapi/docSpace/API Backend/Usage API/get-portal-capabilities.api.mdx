@@ -1,0 +1,63 @@
+---
+id: get-portal-capabilities
+title: "Get portal capabilities"
+description: "Returns the information about portal capabilities."
+sidebar_label: "Get portal capabilities"
+hide_title: true
+hide_table_of_contents: true
+api: eJztV01v4jAQ/SuWz4ggTrvcUNutqmVVVLbaA0LVJBmIW8f22g4qQvnvO+MgNcCqrXrmgIjt+Xgz814wexlhE+RkKa/AQa60igqDXA2kdeghKmvuSjmRG4xz6yPoI7OB9BicNYGeJ3s5Ho34q8RQeOXYlzw7N1Ec+xXWRDSRzSO+xsxpUIZXoaiwhrS/c0j+Nn/GIpKL8wwp+dOpLsHdGMg1lj3j3FqNYMj6GMTCYaHW5CrUWsQKxex6OhcBY1RmEwR4FNgFE9YLYzkfvkLtNEVdgw7YDlLKa1sfgB4yhugpxFnCGdmKsjMeSNNozdHlJPoGe6FlsDUK7oBsU4VbVaIPvfjgPewohIpY8357lkmFKOxavDm/k2/ZS7iiUCHYGeSoPy5oMRfabpQROtm/VxOXYqGJ1Rfncz8lX6HCOyPhlB38R/8Z8It78fgwG4o7nj5FduChxog+pald3A2YFiZxg62PqFGq0BUykGvrayDaysarD5pA+KAsFUMAPe+RN/FpIKOKyXK6uBr+wXw4dYo/v2yJevhw0NV1tMO+5GjdRXZOqyLpM3sO9iKdi3Qu0vmcdNLvzUUzF81cNPNJzbTtGQ0eMDbehFSAMh1MOhGQ2yYKd37nGxJ8akFlD7dJVhjEihYZOJWNh6Ps5IoY0G8TOZd7Kp/aLqsY3STLtC1AVzbEybfR93F2LgY+F527bFccqaD+xd2Cxd7pGULxxJx5esFdn/5O/UTmv6F58bpvRqrg8IW1LwpTw7ny5N3r7Q+lE3zG3uHZjpPaCHANScuH4Lf4306d1rN/uyx/re2H2nr3bILTdETuZrDkwsmSpsB385N/AtxqttnvcwhICmhb3v7boKfeLelxC151vFyyzCsEejOkwaX2ymlRoOORb0E3p1hWPWLc3vymxv4D0GRb/A==
+sidebar_class_name: "get api-method"
+info_path: site/openapi/docSpace/API Backend/Usage API/asc-files
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get portal capabilities"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/capabilities"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns the information about portal capabilities.
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Portal capabilities","content":{"text/plain":{"schema":{"type":"object","properties":{"ldapEnabled":{"type":"boolean","description":"Specifies if the LDAP settings are enabled or not","example":false},"ldapDomain":{"type":"string","description":"Ldap domain","nullable":true,"example":"some text"},"providers":{"type":"array","items":{},"description":"List of providers","nullable":true,"example":["some text"]},"ssoLabel":{"type":"string","description":"SP login label","nullable":true,"example":""},"oauthEnabled":{"type":"boolean","description":"Specifies if OAuth is enabled or not","example":true},"ssoUrl":{"type":"string","description":"SSO URL. If this parameter is empty, then the SSO settings are disabled","format":"uri","nullable":true,"example":""}},"additionalProperties":false,"title":"ASC.Web.Api.ApiModel.ResponseDto.CapabilitiesDto"}},"application/json":{"schema":{"type":"object","properties":{"ldapEnabled":{"type":"boolean","description":"Specifies if the LDAP settings are enabled or not","example":false},"ldapDomain":{"type":"string","description":"Ldap domain","nullable":true,"example":"some text"},"providers":{"type":"array","items":{},"description":"List of providers","nullable":true,"example":["some text"]},"ssoLabel":{"type":"string","description":"SP login label","nullable":true,"example":""},"oauthEnabled":{"type":"boolean","description":"Specifies if OAuth is enabled or not","example":true},"ssoUrl":{"type":"string","description":"SSO URL. If this parameter is empty, then the SSO settings are disabled","format":"uri","nullable":true,"example":""}},"additionalProperties":false,"title":"ASC.Web.Api.ApiModel.ResponseDto.CapabilitiesDto"}},"text/json":{"schema":{"type":"object","properties":{"ldapEnabled":{"type":"boolean","description":"Specifies if the LDAP settings are enabled or not","example":false},"ldapDomain":{"type":"string","description":"Ldap domain","nullable":true,"example":"some text"},"providers":{"type":"array","items":{},"description":"List of providers","nullable":true,"example":["some text"]},"ssoLabel":{"type":"string","description":"SP login label","nullable":true,"example":""},"oauthEnabled":{"type":"boolean","description":"Specifies if OAuth is enabled or not","example":true},"ssoUrl":{"type":"string","description":"SSO URL. If this parameter is empty, then the SSO settings are disabled","format":"uri","nullable":true,"example":""}},"additionalProperties":false,"title":"ASC.Web.Api.ApiModel.ResponseDto.CapabilitiesDto"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

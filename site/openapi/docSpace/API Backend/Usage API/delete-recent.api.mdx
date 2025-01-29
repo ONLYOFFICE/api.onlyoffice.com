@@ -1,0 +1,71 @@
+---
+id: delete-recent
+title: "Delete recent files"
+description: "Removes files with the IDs specified in the request from the 'Recent' section."
+sidebar_label: "Delete recent files"
+hide_title: true
+hide_table_of_contents: true
+api: eJztVlFv2jAQ/iuRHzdGKO3DxhsFKlVru4m1TxRVJrkQt0ns2Q4tQ/z33dmhGNCqddKkPvQBCOfPvrvvPt9lxSyfG9absDNRgIniyP2yaYtJBZpbIavzlPVYCgVYGEMClWUtpuFnDcaeynTJeiuWyMrSAj5ypQqRuI3xvZEV2UySQ8npyS4V4Glydg8JnaM0ubECXeJqhr7PUxMAudZ8iThhoXR2Xi2/ZRjvM0Kg5zloxMATL1WBtqPu8cm69YwwVotqHgKYkSVEFp4sW0/XLVbVRcFntGJ1DWu08DQVlAIvvgcRZrww0GJWWHdK/8eg7ehqD6SGdl+JS4k8mfbYszO00q2fcoMfm+RbOyMnFMA7Ry9zFMrpw8d3sl4gi9xoMEpWxmff7XToJwWTaKHIO/q4ktHmtrbCe+vEqAouXkWwsdzWZoBRBtgtg5nUJbfedNw9oPRvebkUiZZGZrbdN+oKrGPncpG0r+TAZzAGUxf2QDGv1csbTOefmsSby4POPOkcHcrxpuK1zaUWvyBlDnR8CDqTeibSFCrHiIGk1sIu3aXlJrmjE+4egAx4AXiKCT0iANh0jXNs96gxlHKBgy5z4+5R2DyyOUTnQxMZBYnIBKSRqJyxGXJRpmXpDLfMD8BbFmEQdGIbfZWACWxnJBWD2xz/x1yJuNvuxM5ZrDfD04BegDYu/loXiMytVb04LmTCi1wa2/vc+dKN2X7wF7Qe+e2McttQ8YN04Uu/S8i27ynxFajxVbx0/0MYtkM6PpHyQYDjmAQ33s740UYfQUudkFZaQeejxieqTDqv+x0NfVDOPo9Fl0qtMNGSO103QQ0dgZEnypdon4PgXeN/1LJhK2iGGKir0aqp6oSoRCTWlW5SE2NTWywJlY9Qq9UMu/SNLtZrMqN3TQLFxwXXwg+HCVGWo2KxnCQGVzLW3J1P1xQLwYvaV3Cvr9FE8jv6SQLKBtgw/mmg0OHoYnQ9QuCseXErXYtgmj9SEvjdY4xe/ciLk5OzrVjBq3nN54T1vl2TqImQUGJeTM1DMFNxyIaZ7GrP50DfwYzd3bFaef0ilxu8X/rjjobVDdoRgUH/BmgQxD4=
+sidebar_class_name: "delete api-method"
+info_path: site/openapi/docSpace/API Backend/Usage API/asc-files
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Delete recent files"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"delete"}
+  path={"/api/2.0/files/recent"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Removes files with the IDs specified in the request from the "Recent" section.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"fileIds":{"type":"array","items":{"anyOf":[{"type":"integer","example":1234},{"type":"string","example":"some text"}]},"nullable":true}},"additionalProperties":false,"title":"ASC.Files.Core.ApiModels.RequestDto.FileBaseBatchRequestDto"}},"text/json":{"schema":{"type":"object","properties":{"fileIds":{"type":"array","items":{"anyOf":[{"type":"integer","example":1234},{"type":"string","example":"some text"}]},"nullable":true}},"additionalProperties":false,"title":"ASC.Files.Core.ApiModels.RequestDto.FileBaseBatchRequestDto"}},"application/*+json":{"schema":{"type":"object","properties":{"fileIds":{"type":"array","items":{"anyOf":[{"type":"integer","example":1234},{"type":"string","example":"some text"}]},"nullable":true}},"additionalProperties":false,"title":"ASC.Files.Core.ApiModels.RequestDto.FileBaseBatchRequestDto"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"No content","content":{"text/plain":{"schema":{"type":"object","properties":{"statusCode":{"type":"integer","format":"int32","example":1234}},"additionalProperties":false,"title":"Microsoft.AspNetCore.Mvc.NoContentResult"}},"application/json":{"schema":{"type":"object","properties":{"statusCode":{"type":"integer","format":"int32","example":1234}},"additionalProperties":false,"title":"Microsoft.AspNetCore.Mvc.NoContentResult"}},"text/json":{"schema":{"type":"object","properties":{"statusCode":{"type":"integer","format":"int32","example":1234}},"additionalProperties":false,"title":"Microsoft.AspNetCore.Mvc.NoContentResult"}}}},"401":{"description":"Unauthorized"},"403":{"description":"Forbidden"}}}
+>
+  
+</StatusCodes>
+
+
+      

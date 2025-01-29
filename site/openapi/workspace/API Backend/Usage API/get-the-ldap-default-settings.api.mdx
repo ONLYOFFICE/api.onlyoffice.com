@@ -1,0 +1,63 @@
+---
+id: get-the-ldap-default-settings
+title: "Get the LDAP default settings"
+description: "Returns the LDAP default settings."
+sidebar_label: "Get the LDAP default settings"
+hide_title: true
+hide_table_of_contents: true
+api: eJydVktT2zAQ/isZnTMk0J64pRAeU2AyJEwPHQ6KvYkFsqRKayD15L93148kTk0wXBJZ+r7d1T60mwuUyyBOf4sAiMosw+DmfDQRj33aiDKvcEWHuRhlmFiv/kpU1lyBjMEzydNK9MUr4UA8rokVQ4i8cgwTp+IeMPMm9DCBHsvtxbCQmcZere2I2B6CsyYAmZGLk+GQ/5piWqnEjKxBMMgE6ZxWUWHe4CkwKxchSiCVvMKVA5Jj508QIRGdtw48qlLn2Mi5hptYOr4mCawE7TDn1mqQhqjwJlOneQ99BmLdF1OUHmc6dIUH3RUJJv4FOrIpjFOputP8C4dnAw7oyWENbIUh9EMAf353GF1hCD2xHu+ydN6QrygKS9rpi4X1qcRy69tJQ8ZxrexCafzIvB0csW7sUpkREmyeUZ4dZO5hmU1xvaX0YGRLKmypJtOaCaMoghDu1TLB0I1xoXzAO5lCRyNb8EXcKJ/jT4hpI5CcW0qVjhKaUOLOFOqu6vewrNnOlYZJYk1XGa2MIuRlCXaO+j6cZFx6m7lb4GQNiXIdq6dgfVQQNajGfyJoLfhaSpfK2AVWBdVRcRNa6/yM1Q32l57Kojo7FHDx1MgQXq2PD8M3qB3GjxXCbuVK7+WKWNSk0g8qml4pEnQdzstm0/Fa/GI4POOOsmCHwFd5VzIkh+/bTmGjkcuRHUjv3bTukes1H30fHv/fVB+MrJo6xIWAFOiT3C2WUPRIiWSLGEinBidHw8FmQNCkYFB1Y7GdE6bcbUu/t04L23A49ROKeLAZSXncF4Zqgi+4yy3sUmZhC3p1wTObppkhjb2yi/Xux9NZbzS5JiH0GcrrafJNQPayswFTWaRdpeMS8P2RROwNMfl2zOg2z1TXRHjDgdOyzObMF+27dOpv9gEhya2FAzeK2bWF/tK5NE8lZDwT8nwuAzx4vV7z9p8MPE9mtHyRXvH8wl+kKKmHs1w8k5frjGHfSJ2V/t8blXhu2wT/cjwjLKdGM2TPRciqBUuvj8xqR3Yzev3KBP5d99+h5HmZEHSxGl8evcvYpEyJZgc/Up7/A2PBtpE=
+sidebar_class_name: "get api-method"
+info_path: site/openapi/workspace/API Backend/Usage API/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get the LDAP default settings"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/settings/ldap/default"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns the LDAP default settings.
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"LDAP default settings","content":{"application/json":{"schema":{"type":"object","properties":{"EnableLdapAuthentication":{"type":"boolean","example":"true"},"StartTls":{"type":"boolean","example":"true"},"Ssl":{"type":"boolean","example":"true"},"SendWelcomeEmail":{"type":"boolean","example":"true"},"Server":{"type":"string","example":"Server"},"UserDN":{"type":"string","example":"UserDN"},"PortNumber":{"type":"integer","format":"int32","example":"1"},"UserFilter":{"type":"string","example":"UserFilter"},"LoginAttribute":{"type":"string","example":"LoginAttribute"},"LdapMapping":{"type":"object","example":"null"},"AccessRights":{"type":"object","example":"null"},"FirstNameAttribute":{"type":"string","example":"FirstNameAttribute"},"SecondNameAttribute":{"type":"string","example":"SecondNameAttribute"},"MailAttribute":{"type":"string","example":"MailAttribute"},"TitleAttribute":{"type":"string","example":"TitleAttribute"},"MobilePhoneAttribute":{"type":"string","example":"MobilePhoneAttribute"},"LocationAttribute":{"type":"string","example":"LocationAttribute"},"GroupMembership":{"type":"boolean","example":"true"},"GroupDN":{"type":"string","example":"GroupDN"},"GroupNameAttribute":{"type":"string","example":"GroupNameAttribute"},"GroupFilter":{"type":"string","example":"GroupFilter"},"UserAttribute":{"type":"string","example":"UserAttribute"},"GroupAttribute":{"type":"string","example":"GroupAttribute"},"Authentication":{"type":"boolean","example":"true"},"Login":{"type":"string","example":"Login"},"Password":{"type":"string","example":"Password"},"PasswordBytes":{"type":"array","items":{"type":"object","example":"1"}},"IsDefault":{"type":"boolean","example":"true"},"AcceptCertificate":{"type":"boolean","example":"true"},"AcceptCertificateHash":{"type":"string","example":"AcceptCertificateHash"}},"title":"LdapSettings"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

@@ -1,0 +1,71 @@
+---
+id: get-the-space-usage-statistics
+title: "Get the space usage statistics"
+description: "Returns the space usage statistics of the module with the ID specified in the request."
+sidebar_label: "Get the space usage statistics"
+hide_title: true
+hide_table_of_contents: true
+api: eJy1VE1v2zAM/SuGzkGdFTvllq1FFwwbhqbBDkUOjM3Eam1Jk+i0qeH/PlJ2vpq03WU5OPp4FMnHRzaKYBXU6F4FJNJmFdIpAelAOgtqPuDjrPaaNgxp1Limwnr9wgBrviHk6MXU80oN1BPjUM1btsoxZF47gamRukWqvQkJFZgEBxkmdYAVr3eeEruMt5XN6xKTJ01F3E+u2AAzvdSYJ9rEM49/agx0wR4deKiQ0IcYnuENu9MSjBbHDqhQr6P50fmYXPFNyAqsQI0aRRsntoE8k8A3S+srID6pa36vlaQ8BmdNwCD4y+FQ/s4+fT5HfjSzhtCQGIJzpc4ikelDEOvmNBrwHjaSDGEVDs7t4gEzEgK8dehJdzH9jPmf5oLPULlSjib8UBJpagdqknVuP4BrhiWRSba50gEWJeYHdgtrSwRzZLiEMkQfU/3yQUjD5MuGInbmy38Ip2ZUy2jSFA9nQvNUGBfhCuS3Z3JZma38Burz8NNppWYGei1jHp9jGRWW01IrjMRKviOVgtPp5cUw3XXHvp5pLHOsctrovFX7ZplKIbuanG2ZfYGd/o6brVyL7nqwFfKRbYxSm6WN5n3yX21V1YY9JlP0a/TJ7fX0Lhn/mvAjvA1dsiUQN4xQ7GygCmLVex83SO/05evmafYS/n9d3XND+EypK4Gp4cjrThxdXe6FOEZyZSLrXW1keRj5vj68GXEXcw8XTIDYN80CArLi2laO2beXEcfLNXgtEo8TJd/JPSr6HTYOp8rZBLYVN1LuNZS17Hj5yPWPM6udM6rYDtWmvxhnGTo6MDkZHDKaduq9ub5jrGj7WGWPUWX9Ql4/G86x4LaxybcdvGHSNJ2G23aH767etNipvM9cMuBG/QssCDtb
+sidebar_class_name: "get api-method"
+info_path: site/openapi/workspace/API Backend/Usage API/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get the space usage statistics"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/settings/statistics/spaceusage/{id}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns the space usage statistics of the module with the ID specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"id","in":"path","description":"Module ID","schema":{"type":"string","format":"uuid"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Module space usage statistics","content":{"application/json":{"schema":{"type":"array","items":{"type":"object","properties":{"Name":{"type":"string","example":"Item name"},"Icon":{"type":"string","example":"Item icon path"},"Disabled":{"type":"boolean","example":"false"},"Size":{"type":"string","example":"0 Byte"},"Url":{"type":"string","example":"Item url"}},"title":"UsageSpaceStatItemWrapper"}}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

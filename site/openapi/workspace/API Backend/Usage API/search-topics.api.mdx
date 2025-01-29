@@ -1,0 +1,71 @@
+---
+id: search-topics
+title: "Search topics"
+description: "Returns a list of topics matching the search query specified in the request with the topic titles, dates of creation and update, post texts, and authors."
+sidebar_label: "Search topics"
+hide_title: true
+hide_table_of_contents: true
+api: eJzNVl9v2zYQ/yoEn5VYVtYNMzBsWZZtwdYiqB0MaOqHi3S2WEsiR1JpPEHffXek7Ni167TYy4xAoe5+9/94p056WDo5uZe5ruu2UX49+lXbtnZynkiHeWuJRPxOXra+1Fb9A17p5neEAi3LWTrJRH4kHMp5T1IFutwqwzA5kW/Rt7ZxAkSlnBd6Ibw2KneiBp+XqlkKX6JwCDYvxd8t2rVwBnO1UFgI1QSuRWKQ8Efly0AIKoRXvkKXiAI8OtackzNsVkBTiNYwPRFGk6THJ09IpkOIw52T0wYs1OjRuhBhQy/kcXCCuIrdN+BL+WlM0x1vienyEmuQk076tWENzlsKTPacDYvO6MahY36WpvxvX9ufe3khfbluPDaekWBMpfIQ1OiDY3h3aA6sheCwx9rt0PXDB8w9x2m1QetVdOKm2MEoMrWkSiZyoS2VJJIuMiLgE9SmYtA4lX0iZ5zuwyh3gdNwiJGwyBUXBIvTQlmapWfj7Cz9bja+mLz6dpJm5xfZq++zcfaOldyFQv5HJTNqgNMaZqVygv5cjIHbZsf6z+uvTOzWwjavbauKPYvp8Ds78tj82IVflDMVrN+E9jwVwmu1QvEOmjV4t1JfWLPX0AB3AKEvH8GDndZQVadlWltRkYVjpIAgxfK3Vi9UhXf2BfH370cELdrcOz6iJnKksfg5OPP0Y+vQ/gBFrRq6Hha8JgtkwseA5DWp0mvEvyyY6Pys5FFEAauXIm5aio8kph58677wMjRtzePuDTMqIlxV2iHXc+pVvlrLg8F3n4ozEeGJGNM5SiQio3MUmu+3Q4giePI1Ht00kUVWg2O3mqI77s0eNDrF6GNuhK3w4oQ5do1gOU7okVG5duoVlsqM5wJXLJSsD4Bv0vHhSLxrYNg2lGJG0ZQuNV0vucRw73gqT+QIjBpl5+noeXkt2M7op7hPRl0Y0b18XmVTHp7xuh5daM8hG/UHbtdAGdnJZkfsyQYPFeU2iA8BX21cElO0j2jF2+vpTFze3pASenUx0IpXV5gzPG9qCAN+sDFsme1a2EtR97wl/tcrdsgmM0c0xCiZFGsbB0Ss4j2nmpBUx7D7hrTFlqcWT+RQTTpN4sql7i55PJNs1z2A44nT90yO/Mk9HR/BKnjgWtBqL5TjM3XQAiqHJ5L5yW4/6v+mRRpGPELV8hsdV9Qwm++Hfk7AcvOZ1A28yzxH43ekDhY8fzNsu/236xlhOZ37nbkKnTkcWPtRj/abdOMeP/vkMyJdF/u+77f4yPqsxPZmRDQnaE4X+1+SMHcr
+sidebar_class_name: "get api-method"
+info_path: site/openapi/workspace/API Backend/Usage API/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Search topics"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/community/forum/@search/{query}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns a list of topics matching the search query specified in the request with the topic titles, dates of creation and update, post texts, and authors.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"query","in":"path","description":"Search query","schema":{"type":"string"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"List of topics","content":{"application/json":{"schema":{"type":"array","items":{"type":"object","properties":{"Id":{"type":"integer","format":"int32","example":"10"},"Title":{"type":"string","example":"Sample topic"},"Created":{"type":"string","example":"2020-12-07T13:56:02.3259212Z"},"Updated":{"type":"string","example":"2020-12-07T13:56:02.3259212Z"},"Text":{"type":"string","example":"This is sample post"},"UpdatedBy":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"},"ThreadTitile":{"type":"string","example":"null"},"Status":{"type":"integer","format":"int32","enum":["Normal","Closed","Sticky"],"description":"[0 - Normal, 1 - Closed, 2 - Sticky]","example":"0"},"Type":{"type":"integer","format":"int32","enum":["Informational","Poll"],"description":"[0 - Informational, 1 - Poll]","example":"0"},"Tags":{"type":"array","items":{"type":"string","example":"Tag1,Tag2"}}},"title":"ForumTopicWrapper"}}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

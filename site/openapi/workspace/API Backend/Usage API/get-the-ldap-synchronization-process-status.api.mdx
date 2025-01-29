@@ -1,0 +1,63 @@
+---
+id: get-the-ldap-synchronization-process-status
+title: "Get the LDAP synchronization process status"
+description: "Returns the LDAP synchronization process status."
+sidebar_label: "Get the LDAP synchronization process status"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVVFv0zAQ/iuRn7slKwjE3qoxtolpTGsHD1Uf3PTaeEtsYzuFEuW/c2enWTK6tSCkKrV933c+f3c+V8zxlWWnU2bBOSFXNr7+OLplswEupKURboPGio1KlykjfnEnlLwEvgBDJIMjNmA/EAdsViNrATY1QhOMnbI7cKWRNnIZROQ3shuZZkbJxlOkjUrB2sg67kp7jL4MWK2kBQyqYsMkob++0y8aTGAHFpJSJR1IR1iudS5Sb48fLBEqZtMMCk4jt9GALtT8AVKHRNwfvTkRtjtThc7BwaIDnSuVA5eIhZ+czLjmTAmsHrCrLtA6g/rtxI1DnAdhz41R5jDoN24k2Q4C34JJUaJuFAJFW2EiB2ypTMFdWHoz3Mk/I5mWpCycKbkUpriD7yVYt1/Wkcb5+mBVG78H48dgBM9vymIOe4TrISl/1pZgbngBr/M6ONqv9MfcT+sCkfeV52LxyahiF6vNwAIFPnICKV1Xw+Tkw1Hy/mj4bpIkp/7XuryXTuT/z+clt9nr5/KIfkn4qu3WFjeGb5CFjaH465o7YXWN/p1wfnq94Prl8qOMqBKLe08yAgbRbf+YePBrpD70eUyttbnftY/6bXLyZ8+6l7zpoFjWhCoAp1jhbAX+wnCHorOYaxEPj5O47cY57hO3fW7bk8fU0JrLtaszP6VBi8/g80BRZME8YNLXbp/rwxJyqTy9OSZ2xKKUuGOEd2cNJro7H0+i0e0VOsGpDafLMSshE1pZV3DfdJs9LsAd2v7Zs+ejeurr//KSNBI4+OlinXNUAAMsjb8qQe8p6YNIVNyLGzTHIalOKyEsfNYyRY1uyqpqzi3cm7yuaRkr0NADicM1x94yJ9GmM9wn276RFXvEBKDWaQqaUr3meRlS8+yhouezLYuL8wliqWj62Xz02WwG5H1rkpuO735iB00I9K0HL1CqKtQKHmyLD6YXGW01BTTpO8Mb8Bslg9N8
+sidebar_class_name: "get api-method"
+info_path: site/openapi/workspace/API Backend/Usage API/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get the LDAP synchronization process status"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/settings/ldap/status"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns the LDAP synchronization process status.
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Operation status","content":{"application/json":{"schema":{"type":"object","properties":{"Completed":{"type":"boolean","example":"true"},"Id":{"type":"string","example":"true"},"Status":{"type":"string","example":"true"},"Error":{"type":"string","example":"true"},"Warning":{"type":"string","example":"true"},"Percents":{"type":"integer","format":"int32","example":"true"},"CertificateConfirmRequest":{"type":"object","properties":{"Approved":{"type":"boolean","example":"true"},"Requested":{"type":"boolean","example":"true"},"SerialNumber":{"type":"string","example":"SerialNumber"},"IssuerName":{"type":"string","example":"IssuerName"},"SubjectName":{"type":"string","example":"SubjectName"},"ValidFrom":{"type":"string","format":"date-time","example":"2019-07-26T00:00:00"},"ValidUntil":{"type":"string","format":"date-time","example":"2019-07-26T00:00:00"},"Hash":{"type":"string","example":"Hash"},"CertificateErrors":{"type":"array","items":{"type":"integer","format":"int32","example":"1"}}},"title":"LdapCertificateConfirmRequest"},"Source":{"type":"string","example":"Source"},"OperationType":{"type":"string","example":"OperationType"}},"title":"LdapOperationStatus"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

@@ -1,0 +1,71 @@
+---
+id: create-thumbnails
+title: "Create thumbnails"
+description: "Creates thumbnails for the files with the IDs specified in the request."
+sidebar_label: "Create thumbnails"
+hide_title: true
+hide_table_of_contents: true
+api: eJztVsFu2zAM/RVDxy2Ls2yHLbc23YBiHVqs3SkICsamY7WypUl02yDwv4+Us1ZJsdsOHdAcYot6Iqn3SMlbRbAOarZQX7XBkOVZfKrlSFmHHkjb9rRUM1V4BMKrumtWLWgT1Eh5/NVhoGNbbtRsqwrbErYkr+Cc0UVcnN8E24otFDU2IG+0ccge7eoGC2I/zkso0hyWZytrSvSnZUig4D1sGKkJm2iHdnNecdaPCM2x1+gZgw/QOMO299MPH/vRIyKQ1+06BahgG8wIH0j1y36k2s4YWMkM+Q7ZUDEVLyARtkBZamETzEVCVgUm4EiRpujl6HI+juqN59bj+Mjp77ZEE8Y/BqFOyI6PIeAxUFE/2ZQEkOCvUv0XUqXN9ebtq2YvXzMJ4TE424ZBhOlkIo8SQ+G1k8js/0wHymyVCS3Z6YmcsMmRGhvUGdD7ah8WxLNy+Htz90Ni+0nM4zEfMno86LPKeh5izCtk95rqOOQMs+Cw0JXGMtNtNO6uhDHn3iDVVm4OZ0MsQ6CaRzk4nU/Hkzy6yym9UAL6O/Qh6t15w+iayM3y3NgCTM1+Zp8mn6e5Osz6TOazYTlrLJ6KzmvaXMpmB84hFNfQUX19i5u05Jz+hlJzLTRxnMK4EsV9Ye2txth8wuKPp3vvy58a22ushZTkKCm7ZVLszyd7CVPZmNRhrXEKQsmwzbupYqzw2UDUcpfzIFq2x+UeQcnl/A8V3jGYVCZnF3Xb7tReCL2MZL3VQIGkluTJxIisgtxuV9w8P73pezFzFM86Lfj1Drwe+nUhXNUITHQskiilmg97e3cl+QjcdIOyB20hh8Sw4qgo0FGCTfewTGr34vzyimGr3SdOww3PVg/38vnD/zOl5ENJYsQii7atMtCuO1gLdogsv986lT0L
+sidebar_class_name: "post api-method"
+info_path: site/openapi/docSpace/API Backend/Usage API/asc-files
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Create thumbnails"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/api/2.0/files/thumbnails"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Creates thumbnails for the files with the IDs specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"folderIds":{"type":"array","items":{"anyOf":[{"type":"integer","example":1234},{"type":"string","example":"some text"}]},"nullable":true},"fileIds":{"type":"array","items":{"anyOf":[{"type":"integer","example":1234},{"type":"string","example":"some text"}]},"nullable":true}},"additionalProperties":false,"title":"ASC.Files.Core.ApiModels.RequestDto.BaseBatchRequestDto"}},"text/json":{"schema":{"type":"object","properties":{"folderIds":{"type":"array","items":{"anyOf":[{"type":"integer","example":1234},{"type":"string","example":"some text"}]},"nullable":true},"fileIds":{"type":"array","items":{"anyOf":[{"type":"integer","example":1234},{"type":"string","example":"some text"}]},"nullable":true}},"additionalProperties":false,"title":"ASC.Files.Core.ApiModels.RequestDto.BaseBatchRequestDto"}},"application/*+json":{"schema":{"type":"object","properties":{"folderIds":{"type":"array","items":{"anyOf":[{"type":"integer","example":1234},{"type":"string","example":"some text"}]},"nullable":true},"fileIds":{"type":"array","items":{"anyOf":[{"type":"integer","example":1234},{"type":"string","example":"some text"}]},"nullable":true}},"additionalProperties":false,"title":"ASC.Files.Core.ApiModels.RequestDto.BaseBatchRequestDto"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"List of file IDs","content":{"text/plain":{"schema":{}},"application/json":{"schema":{}},"text/json":{"schema":{}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

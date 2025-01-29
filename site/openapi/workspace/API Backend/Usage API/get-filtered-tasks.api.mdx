@@ -1,0 +1,71 @@
+---
+id: get-filtered-tasks
+title: "Get filtered tasks"
+description: "Returns a list with the detailed information about all the tasks matching the parameters specified in the request."
+sidebar_label: "Get filtered tasks"
+hide_title: true
+hide_table_of_contents: true
+api: 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
+sidebar_class_name: "get api-method"
+info_path: site/openapi/workspace/API Backend/Usage API/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get filtered tasks"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/project/task/filter"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns a list with the detailed information about all the tasks matching the parameters specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"projectid":{"description":"Project ID","type":"integer"},"myProjects":{"description":"Specifies whether to return tasks only from my projects or not","type":"boolean"},"milestone":{"description":"Milestone ID","type":"array","items":{"type":"integer","format":"int32"}},"myMilestones":{"description":"Specifies whether to return tasks only from my milestones or not","type":"boolean"},"nomilestone":{"description":"Specifies whether to return tasks only without milestones or not","type":"boolean"},"tag":{"description":"Project tag","type":"integer"},"status":{"description":"Task status","type":"array","items":{"type":"integer","format":"int32"}},"substatus":{"description":"Custom task status","type":"array","items":{"type":"integer","format":"int32"}},"follow":{"description":"Specifies whether to return only followed tasks or not","type":"boolean"},"departament":{"description":"Departament GUID","type":"string"},"participant":{"description":"Participant GUID","type":"array","items":{"type":"string","format":"uuid"}},"creator":{"description":"Creator GUID","type":"string"},"deadlineStart":{"description":"Minimum value of task deadline","type":"string"},"deadlineStop":{"description":"Maximum value of task deadline","type":"string"},"lastId":{"description":"Last task ID","type":"integer"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"List of tasks","content":{"application/json":{"schema":{"type":"array","items":{"type":"object","properties":{"CreateBy":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"},"Created":{"type":"string","example":"2020-12-16T03:11:54.3573531Z"},"Contact":{"type":"object","properties":{"Email":{"type":"object","properties":{"InfoType":{"type":"integer","format":"int32","enum":["Phone","Email","Website","Skype","Twitter","LinkedIn","Facebook","Address","LiveJournal","MySpace","GMail","Blogger","Yahoo","MSN","ICQ","Jabber","AIM","VK"],"description":"[0 - Phone, 1 - Email, 2 - Website, 3 - Skype, 4 - Twitter, 5 - LinkedIn, 6 - Facebook, 7 - Address, 8 - LiveJournal, 9 - MySpace, 10 - GMail, 11 - Blogger, 12 - Yahoo, 13 - MSN, 14 - ICQ, 15 - Jabber, 16 - AIM, 17 - VK]","example":"1"},"Category":{"type":"integer","format":"int32","example":"0"},"Data":{"type":"string","example":"support@onlyoffice.com"},"CategoryName":{"type":"string","example":"Home"},"IsPrimary":{"type":"boolean","example":"true"},"ID":{"type":"integer","format":"int32","example":"1234"}},"title":"ContactInfoWrapper"},"SmallFotoUrl":{"type":"string","example":"url to foto"},"MediumFotoUrl":{"type":"string","example":"url to foto"},"DisplayName":{"type":"string","example":"Tadjeddine Bachir"},"IsCompany":{"type":"boolean","example":"false"},"AccessList":{"type":"array","items":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"}},"IsPrivate":{"type":"boolean","example":"true"},"IsShared":{"type":"boolean","example":"false"},"ShareType":{"type":"integer","format":"int32","enum":["None","ReadWrite","Read"],"description":"[0 - None, 1 - ReadWrite, 2 - Read]","example":"0"},"Currency":{"type":"object","properties":{"Title":{"type":"string","example":"Chinese Yuan"},"Symbol":{"type":"string","example":"¥"},"Abbreviation":{"type":"string","example":"CNY"},"CultureName":{"type":"string","example":"CN"},"IsConvertable":{"type":"boolean","example":"true"},"IsBasic":{"type":"boolean","example":"false"}},"title":"CurrencyInfoWrapper"},"CanEdit":{"type":"boolean","example":"true"},"CanDelete":{"type":"boolean","example":"true"},"ID":{"type":"integer","format":"int32","example":"1234"}},"title":"ContactBaseWithEmailWrapper"},"Title":{"type":"string","example":"Send a commercial offer"},"Description":{"type":"string","example":"Description"},"DeadLine":{"type":"string","example":"2020-12-16T03:11:54.3573531Z"},"AlertValue":{"type":"integer","format":"int32","example":"1"},"Responsible":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"},"IsClosed":{"type":"boolean","example":"true"},"Category":{"type":"object","properties":{"ImagePath":{"type":"string","example":"path to image"},"Title":{"type":"string","example":"Title"},"Description":{"type":"string","example":"Description"},"Color":{"type":"string","example":"#a7fc00"},"SortOrder":{"type":"integer","format":"int32","example":"1"},"ID":{"type":"integer","format":"int32","example":"1234"}},"title":"TaskCategoryBaseWrapper"},"Entity":{"type":"object","properties":{"EntityType":{"type":"string","example":"opportunity"},"EntityId":{"type":"integer","format":"int32","example":"123445"},"EntityTitle":{"type":"string","example":"Household appliances internet shop"}},"title":"EntityWrapper"},"CanEdit":{"type":"boolean","example":"true"},"ID":{"type":"integer","format":"int32","example":"1234"}},"title":"TaskWrapper"}}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

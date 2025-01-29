@@ -1,0 +1,71 @@
+---
+id: upload-files-to-the-message
+title: "Upload files to the message"
+description: "Uploads files specified in the request to the selected discussion message."
+sidebar_label: "Upload files to the message"
+hide_title: true
+hide_table_of_contents: true
+api: eJztV21P2zAQ/iuRv660aaBoqzRNUDpRTWyIFk0C+sEkBzUkceZzgK7qf99dnIZGMFrGkPhAhJAvvpfn7p7al5mw8hJF91RkRl9BaFtfVQwoxg2BEOZG2SltzsRObifaqN/SKp3ug4zAsJGhlWiIW9IDMZ6TVQQYGpWxmuiK4yzWMkLvgp16mEGoLhREnko9OwHPwK8c0HpWFyJCTAhoO1IY5ojkw0sAUV5Ck6KU2rs6IkwzEerUQmp5KbMsVmGBrXWFHHkmMJxAInllpxkQFn3O+ZEfyjQDYxWlSbtlABWxUEd/4La8wR5ZlV4UBb2k5OcNUST10IoLSCZ4byONkVMSqUgJLiFa+CJX2iTSulebgZi7h1PGTKfowgS+/1eM5OM/1ePQ8eDHbcotXqU9iNbJpyHgTiZZzErtYJOLN1KWxcoWrVHpZU1zWCy8kphsNLTS5mtVcNmPz6YDPDTqRtrlmOdaxyDTmvKFjBEE1946hGKoeKssy09DtXXtH8GdfTqBfYhj3SBqK/ToD10+JeHYRU+mPfoJWejpJCl7txpbYdeP1Cp1a3Kn7ZxjT+e1EGsVr1N4KEBGT2cb+IG/0Q42gmDkb3Xb7W5nu9nZ7nzsBFsnS052p89kVRWqQpnnKqp3uHw2Hvm3eBjCnsIsltPvMllBvQN1Dd6JTKfS4rVak68HMpXl0bBDTJNmmMg4ftomNzGffsianiys2J7YxqfLsVlhfnbWItUoDy3yEjS9du/YvCkxu/uSI5jPMkpUqsiDtNrU6N0nV3oKwMx24KtGvVYbjrPo5XQqnbzT6a3TqWrUa7XhH+4g/3lXkNPkji/fvWsYLt/VL7u/jtwkoM5rkN8J/wYJv9Sq12nEUvRy/KvGkmJq3PLbDwfF41SWMzydvKyVAImET2QaCwpJOyGpJTPVCpp+a/FBUM4rrVk1KXdP/Y1P4w/zlpuA7z8VhjxjOgo++sFQlYJifINiJGZoE7fdEGlBrLptgZWH2KP78b+/KFhtfPerkfzUH8/Z94UuYpa14jkoTwmmNwRzA8Y76g9H3s7hgCKTiK5OMR1WVI/5/A+RulIM
+sidebar_class_name: "post api-method"
+info_path: site/openapi/workspace/API Backend/Usage API/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Upload files to the message"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/api/2.0/project/message/{messageid:[0-9]+}/files"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Uploads files specified in the request to the selected discussion message.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"messageid":{"description":"Message ID","type":"integer"},"files":{"description":"File IDs","type":"array","items":{"type":"integer","format":"int32"}}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Message","content":{"application/json":{"schema":{"type":"object","properties":{"ProjectOwner":{"type":"object","properties":{"Id":{"type":"integer","format":"int32","example":"123"},"Title":{"type":"string","example":"Sample project"},"Status":{"type":"integer","format":"int32","example":"0"},"IsPrivate":{"type":"boolean","example":"false"}},"title":"SimpleProjectWrapper"},"Text":{"type":"string","example":"Hello, this is sample message"},"CanCreateComment":{"type":"boolean","example":"false"},"CanEdit":{"type":"boolean","example":"true"},"CommentsCount":{"type":"integer","format":"int32","example":"5"},"Created":{"type":"string","example":"2020-12-22T04:11:56.5658524Z"},"CreatedBy":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"},"CreatedById":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"Updated":{"type":"string","example":"2020-12-22T04:11:56.5658524Z"},"UpdatedBy":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"},"UpdatedById":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"Id":{"type":"integer","format":"int32","example":"10"},"Title":{"type":"string","example":"Sample Title"},"Description":{"type":"string","example":"Sample description"},"Status":{"type":"integer","format":"int32","example":"0"},"Responsible":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"},"ResponsibleId":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"}},"title":"MessageWrapper"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

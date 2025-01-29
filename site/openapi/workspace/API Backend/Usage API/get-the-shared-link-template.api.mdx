@@ -1,0 +1,71 @@
+---
+id: get-the-shared-link-template
+title: "Get the shared link template"
+description: "Returns a new unsaved link object to the file with the ID specified in the request."
+sidebar_label: "Get the shared link template"
+hide_title: true
+hide_table_of_contents: true
+api: eJy1Vktz2zYQ/isYnJlIcdLH6OZatqtpJ81ITnPw6ACRKxExCbAAKFnl6L93d0HSlMWm05lWBwmPfXz77QNqZFA7L2ePcqsL8JNVrpw2O7lOpIe0djoc8bKR13XIrdN/qqCt+RlUBo6UHK5kIg8oB3J9Qq0MfOp0RWJyJpcQame8UMLAQdTGqz1kotDmSdjNV0iDCFaEHAR5Fwcdct4t5sJXkOqtRmlt+MzBHzX48BbdVcqpEgI4z9gMbtAXmVgQGk2eKxVy+RrOHXlZzPHcpzmUSs4aGY4VafvAcZ8ohtbVTzY7kkRqTQATaKmqqtApkzD56slmc2kqRkY4na3ABQ2ebrW/swXz1ryCtWpj9UJvkSqmR/uOGo8pQRq2rCysE8aS8dbZxtoClEHg9CHsvrLGR5dX0+mIt2iPvQQoq0Jh7pL/KspVzeeYiAtuE7m1rlToQta1ziSibaU/cgYvcpHIXxHk6EWreO9sXQ0EejYS+dvBRK4vr5iBwZXGyHcoPACIR++v8ABMXVKhf7SGSFpivX/hYo9r/iFUzMTv2DvIAp3tNRxwcWPLkkhNqPSKO7RO1ze1D7bEEyxhedEzj1PxRpC/RLzDVe8yEVftNhHveRUdJ+ID7qLvRHzHN+Q+Ed/jukWQiB9w04NIxI90N8CxZrpt+gTZUu/y4Mepm2uvNgUsobR7GBehnK0gBMyU/+d6wcFi51BgN49bu32utONSnKswXiQsAtm4/ifl/cG6kXKkbgk6FHQ0xPzFYf1jYsiyCe74wFr/pljaPuekw0iCKa1RJuaUxJj/hcmBUj0aywDudQo9Su76D9N3l43+2ah2aqNBksKZmVu0LXfAiaAROZMTVenJ1dvpJL4ATZyjp0mcOzQmJoMx0b0KK5oHfQov34YeP1r/BY7dWM7jddIN7TNdBkkDZ/kygG+fFfqG8wEaXA0nsri17KmlhWq9NghOrMDtcVgub1cP4vrTAv3h1kdaKBAfiO7K+lAqHm8tnHsIw5n7ekae8Tt4GP6nd65lMMBzmCAEzQVdu4J8x+Q9Er0oiemjgqQE4u+sfwpfckjmukCwInMMndSbZqM8fHbF6UTH6NrRg4/LPQ4UanV+YrPY9lg7W1V4+AYTL0/sKPquKAxVxF4VNe1w+YQl0j/hpzVK5t2fjKa9vIk+3nA/vihfPFanpNO4TlOowjdl14OuuL99QNlN++qXNiMVp2iO0zfjtBwylz2fNVhOZlerHclGk1TE1HjnPfDEPdAuKKhRJs7boaOFvimqUZWmiR2GCezk49XfavQ9GKUpMWtE/ReXdGZp
+sidebar_class_name: "get api-method"
+info_path: site/openapi/workspace/API Backend/Usage API/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get the shared link template"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/files/{fileId}/sharedlink/template"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns a new unsaved link object to the file with the ID specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"fileId","in":"path","description":"File ID","schema":{"type":"string"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"isFolder":{"description":"Specifies if a link is to the shared folder or not","type":"boolean"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Shared link template","content":{"application/json":{"schema":{"type":"object","properties":{"SubjectId":{"type":"string","format":"uuid"},"SubjectName":{"type":"string"},"Link":{"type":"string"},"SubjectGroup":{"type":"boolean"},"Owner":{"type":"boolean"},"Share":{"type":"integer","format":"int32","enum":["None","ReadWrite","Read","Restrict","Varies","Review","Comment","FillForms","CustomFilter"],"description":"[0 - None, 1 - ReadWrite, 2 - Read, 3 - Restrict, 4 - Varies, 5 - Review, 6 - Comment, 7 - FillForms, 8 - CustomFilter]"},"LockedRights":{"type":"boolean"},"DisableRemove":{"type":"boolean"},"LinkSettings":{"type":"object","properties":{"AutoDelete":{"type":"boolean"},"ExpirationDate":{"type":"string"},"Expired":{"type":"boolean"},"Password":{"type":"string"}},"title":"LinkSettingsWrapper"},"EntryType":{"type":"integer","format":"int32","enum":["Folder","File"],"description":"[1 - Folder, 2 - File]"},"Inherited":{"type":"boolean"}},"title":"AceWrapper"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

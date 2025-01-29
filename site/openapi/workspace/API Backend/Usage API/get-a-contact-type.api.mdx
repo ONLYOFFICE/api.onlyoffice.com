@@ -1,0 +1,71 @@
+---
+id: get-a-contact-type
+title: "Get a contact type"
+description: "Returns a contact type with the ID specified in the request."
+sidebar_label: "Get a contact type"
+hide_title: true
+hide_table_of_contents: true
+api: eJytU01vEzEQ/SvWcGTpbtNKiNzapBIRB1ASxKHKwXgnWVdZ29izLSHKf2dmd5MmtIoEwid/vPfmeT62QHqVYHgPJtb5yDvShhIsMkhommhpw29buGmo8tH+0mS9+4i6xCicyDvI4IlxCIsds0pMJtogMBjCFKmJLimtTKesaBNQPVmqFFWoJmOVAhq7tFgq69q7iD8aTHTBuv321pfsYguigY5kq0NYW9O6yR+SxNpCMhXWWnYShKP77w9oiHVC9AEjWUx7GbYyZ5At5eLU8+jY6WTM9F7OcvQV/3vXLnGXgnepEx0UxXkp1vlP/qe4ZuIjTgjrNPJNp/iHyQyWPtaauqurAV/gT12HtYAuge3PLcnhwEwUrVud4DoIY8fH3zrHOAYyb+TXPp5nvNHvl4aTx+iZj/Q5tq31D//hUv0tbXB1DVJJ6lKxr5d0xrfIJeqLncF1cfmyul+d7qcCy1amRj5yR8EK26ppqviQ62DzwUWRy4D1vZeLzXx70onD++Ldh8XbHTyP3kw6oiv6qwN4+C6H+IQbZloxVnXPGThdy+sJt3UqLTd9Hq67fUpeDEexE82lb2MdslTXjWN7aobxEaOa3s3m6ubLhCPyMXXZ4R5ldY72G6Fagdk=
+sidebar_class_name: "get api-method"
+info_path: site/openapi/workspace/API Backend/Usage API/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get a contact type"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/crm/contact/type/{contactTypeid:[0-9]+}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns a contact type with the ID specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"contactTypeid":{"description":"Contact type ID","type":"integer"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Contact type","content":{"application/json":{"schema":{"type":"object","properties":{"RelativeItemsCount":{"type":"integer","format":"int32","example":"1"},"Title":{"type":"string","example":"Title"},"Description":{"type":"string","example":"Description"},"Color":{"type":"string","example":"#a7fc00"},"SortOrder":{"type":"integer","format":"int32","example":"1"},"ID":{"type":"integer","format":"int32","example":"1234"}},"title":"ContactTypeWrapper"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

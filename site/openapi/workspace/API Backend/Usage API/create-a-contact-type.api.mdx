@@ -1,0 +1,71 @@
+---
+id: create-a-contact-type
+title: "Create a contact type"
+description: "Creates a new contact type with the parameters specified in the request."
+sidebar_label: "Create a contact type"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVMFu2zAM/RVBu3p1mhYYkFuXFlixQ4skxQ5FDorMxGptS5PkpJnhfx8p2anTdQEKNIeAlh4pku+RDfdi4/jkkUtbplNdeSG948uEO5C1VX6Pdw2/qn2urfojvNLVDxAZWPKxaPGE7xAHfNmiVwZOWmUIxid8igAPjglWwY7JGJ35vQG2Uz5nPgdmhBUleLCOOQNSrRVkTFXhzsLvGpw/wzc687vOMKOGUyyoPJnCmELJkFn65OjdhjuZQynIoscwE716AukxjrHagPUKXLhVvgAy3uQ9zDRikj6S81ZVG95ih7T1dza04mQAwjEdgIcoCtPf4EEbflSeM7pyMavxaHQ6JMb5pAbMoEDHLdx6KN1U1zHimyQTvta2FD4eXYzxAF5Eaah1/Jxasej7eNykIS5CEHs9LOuUxxCIflNdaHva44v4tpbYPETPh+R8uJ7b6w+7jS8uOTHZSarna4ExflmkqCM74Zej83/ZfahEN2KQhTA4ErnO8MZoF2gTPsevVBiVjs9GKY1rN1BpJ4l+YufEfaT33bk9FIaxfsIePRWlkMfrhFc4j/h95BtyInHNXufwpi/+MEevnAxmY9TSA2s9xE11WdYV5srmYLdg2exmvmBX97foip8uNqWg5eGJD2pCKYJeuuziasHNIo/nIjtW12FMPnMXde3z8OJTUwgV5Fnbgh6MPD1SbxGJTNGs2rKbWBFGMPjjssyJWsQ2zUo4eLBF29IxvmNp7aK5FVaJFbXscYlv5P3mbfgzEhdFhuV9XcTit6KoI7FvNkKb9B5XUoLxJ7HLgfru7+YLBK+6tVvqjHys2NFKxv8JR0OHdgfBhbMGmas2tdgQNsYk+ZDCj9X3HNTXGVRVf1XtBxkeCzHpCqF/Kutdl6aJ2saG9vh49V+Pg/ojmjhdYtZ/AX7hbs8=
+sidebar_class_name: "post api-method"
+info_path: site/openapi/workspace/API Backend/Usage API/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Create a contact type"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/api/2.0/crm/contact/type"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Creates a new contact type with the parameters specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"title":{"description":"Contact type title","type":"string"},"sortOrder":{"description":"Contact type sort order","type":"integer"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Contact type","content":{"application/json":{"schema":{"type":"object","properties":{"RelativeItemsCount":{"type":"integer","format":"int32","example":"1"},"Title":{"type":"string","example":"Title"},"Description":{"type":"string","example":"Description"},"Color":{"type":"string","example":"#a7fc00"},"SortOrder":{"type":"integer","format":"int32","example":"1"},"ID":{"type":"integer","format":"int32","example":"1234"}},"title":"ContactTypeWrapper"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

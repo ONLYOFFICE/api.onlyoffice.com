@@ -1,0 +1,71 @@
+---
+id: delete-a-topic
+title: "Delete a topic"
+description: "Deletes a topic with the ID specified in the request."
+sidebar_label: "Delete a topic"
+hide_title: true
+hide_table_of_contents: true
+api: eJylVm1v2zYQ/isEPyuRrKwbZmAostjDjK1FMDso0NQfLhIdsZZEjqTSaIL+++5IyY4b10k3w5Ap8p5753PuuIN7y6e3PFNV1dTStfFvyjSV5euIW5E1BrfwvOOXjSuUkf+Ak6r+XUAuDOEMrnjEv6Cc4OseUbmwmZGaxPiUz0QpnLAMmFNaZuyLdAVzhWCLGbNaZHIjRc5k7feM+LsR1p2jQg0GKkQa663X+ILavA5JBiUp1+AK/rXFlbezmOGBzQpRAZ923LWa8LJ24h4dj/hGmQpc2LpIeU+eG2G1qq2whEiThH6O6EZ0plBR7UgAtC5l5rMSf7Yk1T23q+4+i8xRWEZpYZwMNhb5a3yLuHiESpckNEl4H/GVdPS2g1pnZH1/ILj0i5B0glxhoZzIT4PSJE3OJulZ8tNqcjF98+M0Sc8v0jc/p5P0Iym50fn/V7ISj+60hlUhLcOvDTFoZd0T67+235nYnYVdXpvG99DeYjJ8zo48xg+5MJNWl9C+9914KoR3civYR6hbcHYrX1mzd1ADdQBKXz6AA7OsoCxPYxpTYpGZJUkGHkX4a6M2shQ35gX4p08xiuZN5iwthcLtsEfwc7D68W1jhfkF8krWEjWAU2gBTbgQEJ+jKtUK8cGADs6vCmIFDFi+FHHdYHyIWDpwjX3lZaibipjnPR2UuHFVKiuonksns23Ln3HQbcLOWBCP2ATXARGxFNcBtD5sBx+F9+R7PFrU4QiteseuFUZ33JsD0eAUSR9zwxP0zg0wBlriPycq+8I1gvtJhA9ityf18vzuiYwq5kvmz39IJs8J76aGgfcxwySFnFwovF0oR8TumRpJeMpj0DJOz5N4P0k2ZCn2FBR3A3X3fD9XlkST4cIenS77oLX8Q7Qj6xfhOBqHwgHWOykxux4+hHw1usSWwjwIw/6aL1fs8nqBSvDVhlhLZJfANMQ4FXgqH2yEMTZOsa9nTrcfCP954A2hOmTHGDkGI0VHmnB/Q4pvKQ8oiUn2I2iIKXQkdmDER+em45zE5iuIPRHbdXdgiRD6nrbRrqHBjssHMBLuKFE4aHNpaY0V3kBpxYlAn8zZo76PtavJwwcoG3rD5RYruZ/k/RpFi/HvRDecXmaZ0O4J7tmUpXm968XZ/M/5ao7i1KyHfbP1fTMsyMBRtw5baPSRnn30DUjXha7s+518OPomYte3QZqytMab9y/GZiZB
+sidebar_class_name: "delete api-method"
+info_path: site/openapi/workspace/API Backend/Usage API/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Delete a topic"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"delete"}
+  path={"/api/2.0/community/forum/topic/{topicid}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Deletes a topic with the ID specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"topicid","in":"path","description":"Topic ID","schema":{"type":"integer","format":"int32"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Topic","content":{"application/json":{"schema":{"type":"object","properties":{"Id":{"type":"integer","format":"int32","example":"10"},"Title":{"type":"string","example":"Sample topic"},"Created":{"type":"string","example":"2020-12-07T13:56:02.3259212Z"},"Updated":{"type":"string","example":"2020-12-07T13:56:02.3259212Z"},"Text":{"type":"string","example":"This is sample post"},"UpdatedBy":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"},"ThreadTitile":{"type":"string","example":"null"},"Status":{"type":"integer","format":"int32","enum":["Normal","Closed","Sticky"],"description":"[0 - Normal, 1 - Closed, 2 - Sticky]","example":"0"},"Type":{"type":"integer","format":"int32","enum":["Informational","Poll"],"description":"[0 - Informational, 1 - Poll]","example":"0"},"Tags":{"type":"array","items":{"type":"string","example":"Tag1,Tag2"}}},"title":"ForumTopicWrapper"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

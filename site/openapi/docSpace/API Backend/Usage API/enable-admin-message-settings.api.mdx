@@ -1,0 +1,71 @@
+---
+id: enable-admin-message-settings
+title: "Enable the administrator message settings"
+description: "Displays the contact form on the 'Sign In' page, allowing users to send a message to the DocSpace administrator in case they encounter any issues while accessing DocSpace."
+sidebar_label: "Enable the administrator message settings"
+hide_title: true
+hide_table_of_contents: true
+api: eJztVktz2jAQ/isaHVuKKe2h5UbzmMm0mWRCMj0kTEbYC1YiS6okQ6iH/95d2Q4GkmMOnckBY6/2+e23a1c8iIXno1s+gRCkXniWsHPwXizA82mPGwtOBGn0WcZHHLSYKRhnhdSNUmvGe9zBnxJ8+GGyNR9VPDU6gA50K6xVMo1ukgdvNMl8mkMh6C6sLaBvM3uANKAf6yhokJgAnZZOX+iO3swYBUKjYgY+ddKSW5RPLKRyjlZMzlnIgQlKU/qA+RvHiqYoJhywuo6MoVwbiglPorAK3QdXwmbT4yLLJDkW6rKTzlwoD/uBr+q6mRVOFBDAeTZHxy+GZ36LV5CBIvLx5Kj/G2b9sZX0OzcZqH7j1B8H07+OELyEeqOFSpySDvAU3gF+Q4C7RP7w8R3pt0Ka0nbgrdG+hm44GNDfbraNByZmpgwRJ7QpVWBmzrxYolemYdXNs7OT4qxYJeRuC/e7fNDj1+esTvvr4PNhpjdalCE3Tv6FjEelL4dKp8bNZJaBjlTzkJZOBlylt7hAfXpPHu4fgQSIjciwnBUqAJ9upvt9PJYeS1v7CAoVLdJAnSyY0VF2xydyodmZvuPY7AX0mFDKrAiy0lPbg0HcdMbEc7tRQpbHJp1Yke5zUmqWCg+kskZOpqZEpJE5es2k99hZtsqlQqs0RX8Up3XUx0KQa7mhF4w1Ps6NCDk+JcLKZNgfJG0Lk5b625ZitktMOMJUOoVWeQh2lCTKpELl6G/0bfB9mBwM2S86Z7U5JwhbxCfU0Jp2u7g/zy2m9RMFPa5xSui5q9bjRCmkmnmUEFtJTLnavhxP2gHdboQ4qmQ4N1HcGadTRI3qpCLrxJdDohAhVYjIwCaLk7gJXt8X3UHYgaLzrv7vmNN0pDPNiE3kQdWw6JbahZrIo0iXZwz2uYQUILqQRVXNMKUbpzYbEmPrHM0d3i6FkwQzPWGkHAcR6UPkixThRzWSn64pL1JXZc2YvZWy6bUWY6zLho5ut5ZpZzYuLybXqDZrvq8KXK4odWJF3154HXFO32sUI5I3yiquhF6UWCee15HjiisJmi6ha+o2N1RPe6TX3Tp2mV5XQFeq50WLqqqnBZFs9eujVy0aTFvtCAMm/Q8B9MWt
+sidebar_class_name: "post api-method"
+info_path: site/openapi/docSpace/API Backend/Usage API/asc-files
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Enable the administrator message settings"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/api/2.0/settings/messagesettings"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Displays the contact form on the "Sign In" page, allowing users to send a message to the DocSpace administrator in case they encounter any issues while accessing DocSpace.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"turnOn":{"type":"boolean","description":"Specifies if the administrator messages are enabled or not","example":true}},"additionalProperties":false,"description":"Request parameters for administrator message settings","title":"ASC.Web.Api.ApiModel.RequestsDto.TurnOnAdminMessageSettingsRequestDto"}},"text/json":{"schema":{"type":"object","properties":{"turnOn":{"type":"boolean","description":"Specifies if the administrator messages are enabled or not","example":true}},"additionalProperties":false,"description":"Request parameters for administrator message settings","title":"ASC.Web.Api.ApiModel.RequestsDto.TurnOnAdminMessageSettingsRequestDto"}},"application/*+json":{"schema":{"type":"object","properties":{"turnOn":{"type":"boolean","description":"Specifies if the administrator messages are enabled or not","example":true}},"additionalProperties":false,"description":"Request parameters for administrator message settings","title":"ASC.Web.Api.ApiModel.RequestsDto.TurnOnAdminMessageSettingsRequestDto"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Message about the result of saving new settings","content":{"text/plain":{"schema":{}},"application/json":{"schema":{}},"text/json":{"schema":{}}}},"401":{"description":"Unauthorized"},"403":{"description":"Forbidden"}}}
+>
+  
+</StatusCodes>
+
+
+      

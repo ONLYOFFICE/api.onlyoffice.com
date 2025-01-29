@@ -1,0 +1,71 @@
+---
+id: set-a-message-status
+title: "Set a message status"
+description: "Sets a status to the messages with the IDs specified in the request."
+sidebar_label: "Set a message status"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVE1v2zAM/SuCzl6TZTvl1m0FVmwDiqY9pTkoNhOrsT4m0W0zI/99pCzno+02bFgODiWS4uPjkzqJah3ldC6N0s3oG8So1hDlopARyjZo3JKzk+ct1i7oHwq1s59BVRA4KZAlC/lIcSAXO8qqIJZBew6TUzkDjEKJiArbKNAJrEGYXEQ8aqzTzuWnKKKHUq80VELbtBngewsRz+j8bH5wFaHpZOksgkU2lfeNLhOq0X3kmp2MZQ1GsYVbD4TCLe+hRDrHB+choKYGyaur9HeK+KuOKNxqAMnQKDEfpEJQW1pStyYeFdCEZ02MFHLlglHYb72byN2OeEzNv6yUuc7kTMVdYvNOFmS19mBr411AZZGXLtCO5SLNnTwAixi0XVM5/jFf0Tsb+zYn4/Ef28yzKGtl1zSBDLn4a6b/gaAE+P347UuMt1Zl1UGVmDRAy4o8vk3TVFjTYqS8Hk3OxqOk4KEhWoWNPKh4xlB7Ql7V8qEFr79A6oEx1L27kFYZ9p7kJlDMxfVBnxdPyvgG9vqajxcHCeznxKevXKqqkaPlR2dMawmomEF4gCCuL2Y34vzqkmrTMvaUNAqpDud7F9GoNIUMje4aXTVzoir57EIe3Z3/dTczbQhPOPKNItYIXRsaLtZPaM6cUiTNiL48Jf4bXhreoUkRSzW1xNFdt1QRbkOz2/E2VQr8CJH5oIJWS+ZrvqAq9fAOdXJDI2MSU3NvbhgThzdtP9Jn0t0VQ8Z5WYLH38YujoR3dXtDscv8DhlXcUpQj/xG0XfKV9IlrpPS0l5HU7Prlpolf38k64a1fSq7TZJdNripwWW3RwBPFVjkPvjLXb2a0nW9qInPIb53/TJjL/s+moe6INQ/AZBTHAc=
+sidebar_class_name: "put api-method"
+info_path: site/openapi/workspace/API Backend/Usage API/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Set a message status"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"put"}
+  path={"/api/2.0/mail/messages/mark"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Sets a status to the messages with the IDs specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"ids":{"description":"List of message IDs","type":"array","items":{"type":"integer","format":"int32"}},"status":{"description":"Message status: \"read\", \"unread\", \"important\", or \"normal\"","type":"string"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"List of messages with changed status","content":{"application/json":{"schema":{"type":"array","items":{"type":"integer","format":"int32"}}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

@@ -1,0 +1,63 @@
+---
+id: get-currency-rates
+title: "Get currency rates"
+description: "Returns a list of all the currency rates."
+sidebar_label: "Get currency rates"
+hide_title: true
+hide_table_of_contents: true
+api: eJyVU8tu2zAQ/BWBZ8GynZx8CxonDdpD4Qd6CHygpbXFRHx0SblRBf17d/VIpKYBWh9kkjuz3J0d1iLIsxerR5GiTj6ViGBSBV4cYuEhLVGFiqK1uClDblH9kkFZ8xlkBsgspJWIxU/CgTg0xMrAp6gcw8RKbCCUaHwko0L5ENlTJIsiCjlEaXdXFaEM4GeUBME7azxdvqrFcj7nv2m2r32OKZeoqTUBTGCGdK5QaVtm8uSZVguf5qAlr0LlgBJJRFkRj6rWfnRuj0+QBgo4tA4wqK6YO7S616YaoX1AZc6EhhepXcFH6/1GNLHY2X+D77e3DN9QGyOgKfWR5I3FyaKW1JXIbHkkwpi6mC2Y+nA7IipS4Txl0tHVckpcXl2LhqhBhfZgKJWr+I6kH2Vo+BeL6/ni/RT2RvZmgKxNpIG2GUXO0GonQ06bRDqVLGfzhJ01TCwZJjaYa8uj6VT+q8XeRubUF2hnxjXkXTgWRmqOTrhtUcqcbEsfurRal4ZujLaAF8Bos97uoptvD5SEtr7rreDyAgvrrA9atvbp77iH8N55E2nqNyP+l/P7FgO8hMQVkjqkAkosOGOn5iP3T0jSk+2Omr+DxejptNXQ68upakbX9VF62GPRNHz8owTkd0zLi0Ql2Uy0o1vy4SnX4pnkJSXTFByP8SKLshP+jwfFr/x15PfrHWHZENNZPbez6hecfQiZapR7Ora4L4G/TfwBpa47J1BjA74Lfch49UqHZnUP5O7fsuWumg==
+sidebar_class_name: "get api-method"
+info_path: site/openapi/workspace/API Backend/Usage API/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get currency rates"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/crm/currency/rates"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns a list of all the currency rates.
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"List of currency rates","content":{"application/json":{"schema":{"type":"array","items":{"type":"object","properties":{"FromCurrency":{"type":"string","example":"EUR"},"ToCurrency":{"type":"string","example":"USD"},"Rate":{"type":"number","format":"double","example":"1.1"},"ID":{"type":"integer","format":"int32","example":"1234"}},"title":"CurrencyRateWrapper"}}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

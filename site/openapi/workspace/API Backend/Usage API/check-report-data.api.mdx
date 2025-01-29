@@ -1,0 +1,71 @@
+---
+id: check-report-data
+title: "Check report data"
+description: "Checks the report data for the parameters specified in the request."
+sidebar_label: "Check report data"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVE1T2zAQ/SsenR0cAoSWW8ow006nU4bAKZPDRl7HAttSJRlIPfnv3ZWcLwg9dJpDRtJ+vX371p3wsHTiaiakrbM7NNp6J+apcChbq/yKTJ2YtL7UVv0Gr3TzFSFHyyGWTiIVL+SHYr6mqBydtMqwm7gS1yXKJ5f4EhMbMic5eEgKbcObAQs1erQucQalKhTmiWp6/18tOn9C6fvjF50TmE5I3XhsPB/BmErJACp7dFyyE06WWAOf/MoggdCLR5Se8hirDVqv0O2s3RvEkYAkGNNNBkUFl9Txml5Ujbdolc4/jiWXxESfYylqaICO7n2CHxvLNgyshRVdid96D7Vw3qpmSQaisgbiQrStysU6/pgyZ3TjYqej4fBDsKqJGfgx/VdqY83z4en7Mg8N9NJBhkfdI12JPGG0C0MBX9ItA6Oy0ckwYxVGrWSS1SN2Spxy+djSUT1uYVGu7xhoYwhlNKeiIbHR/SA2YOL+7nYiu3mF2lS4Szg8nPtwf4YzcVbAp4tifD64uDy9HJxfjEeDxVkhByP5eXxWjMdQwJiWg9EUOiRVnrOLa13XbUONJVO0z2iTu5vpfTK5/UZY6eoigxV4wsXCYcaoMKfoWwn7tb9a4s0G7m3Lf1rGnmKPrz4zFRDDhKy1FdeKs5wx/+RJ02RJ2TqsMBfka5gpfShKHj/5dt0CHD7Yar3mZ6pj+ZNDx2ewChbM1IzZKzdfnU480XCZvtDZ4D7u6jNUbRz+G+Gu003EREo0/q++8z2F3v6c3pPzov/u1DrnGAsv3BD9Xwk66MB0EGV462hgzbIldZA95mSJ8RYcKvQpKLQ/cFcbU7PaQ3go1rRvhP+5raMhXRf1T4Ru/KPpw4jthkRvnumcUP8BoHIVpA==
+sidebar_class_name: "post api-method"
+info_path: site/openapi/workspace/API Backend/Usage API/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Check report data"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/api/2.0/crm/report/check"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Checks the report data for the parameters specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"type":{"description":"Report type","type":"integer"},"timePeriod":{"description":"Report time period","type":"integer"},"managers":{"description":"Managers","type":"array","items":{"type":"string","format":"uuid"}}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Report information","content":{"application/json":{"schema":{"type":"object"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

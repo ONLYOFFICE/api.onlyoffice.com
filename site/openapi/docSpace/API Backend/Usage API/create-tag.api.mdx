@@ -1,0 +1,71 @@
+---
+id: create-tag
+title: "Create a tag"
+description: "Creates a custom tag with the parameters specified in the request."
+sidebar_label: "Create a tag"
+hide_title: true
+hide_table_of_contents: true
+api: eJzlVc1y0zAQfhWPjmDiEOgM+FYCZZgW6KTtKZPpKPYmVitLQpKbBk/enV3Jpk5Cb9x6sWVptdrvR+uWeb52LJ+zMyHBJVky07p2bJEybcByL7T6VrKcFRa4h2u+Zimz8KsB5z/pcsvylhVaeVCehtwYKYqwK7tzWtGcKyqoOY381gCm0ss7KDzmMZbO8AIcrSpeA71r/ngBau0rlk9OTlJWC9V/j9M+h/NWKKpFNVLypcQ5bxtIGTzy2tAnO7fC+W3ylW+ltiXb7VLGy1JQbVxeDo5ecelwpxc+7Du9mo4CGaOptjA6NeK7LkG60SzC/uz1aNqz8TQXDvDw6F8k8KHwr16/PAboCAvOaOUipMl4TK8SXGGFoZMx/w/YJHjfkoA3HV6cYBwjudjn7ZDaI2KfN12s6f347XEZN4o3vtJW/AYkh4LeHQedabsUZQkq0OegaKzweN/neMtdcUsZbu+BJhA4LxHOBgOALXbYO/ZTRcpcwpOicV7XgYON8FXiK0gMt0iHB+sSZ6AQKwFlIlRY6zrNCLNjSKWpExntgoM42YJl3IhsMhpnK9ItC92MyrUPmDBU21iJcZX3Js8yqQsuK8yQfxh/nGTssNQLWk/idkZIeuBXxGuUdh/+X29jIec4kXZu3g9LGSmLiut7AYFREmz21Ei/9Obtb8ORiSnFSocDD+2K6QluhPAwoVhiqeZqkC+qgCL40MT3cA+a+P9Rq+NkYGusKSjRdsrNiTCMRO3wuepgBP2QdpKIYtp2yR3cWLnb0TTmt2Q5HD5wK+Ltny8wd4UeRMlI8CALm0ZAb66pEgqXTVTp4Dbt0n7HaVGA8YPYYfWLgQMvf15dY9iy+//V2CNw1vIN/RvxmTNGv086IxgmzLVMcrVu+Jpi48nhdjdExtBE0S7dgPD0S2o7xLHvroiAnoTnnzvaNjoUmezj49KzOzpO++hAAxb9B7Uu0XQ=
+sidebar_class_name: "post api-method"
+info_path: site/openapi/docSpace/API Backend/Usage API/asc-files
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Create a tag"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/api/2.0/files/tags"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Creates a custom tag with the parameters specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"name":{"maxLength":255,"minLength":0,"type":"string","nullable":true,"example":"Kristy Gaylord"}},"additionalProperties":false,"title":"ASC.Files.Core.ApiModels.RequestDto.CreateTagRequestDto"}},"text/json":{"schema":{"type":"object","properties":{"name":{"maxLength":255,"minLength":0,"type":"string","nullable":true,"example":"Kristy Gaylord"}},"additionalProperties":false,"title":"ASC.Files.Core.ApiModels.RequestDto.CreateTagRequestDto"}},"application/*+json":{"schema":{"type":"object","properties":{"name":{"maxLength":255,"minLength":0,"type":"string","nullable":true,"example":"Kristy Gaylord"}},"additionalProperties":false,"title":"ASC.Files.Core.ApiModels.RequestDto.CreateTagRequestDto"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"New tag name","content":{"text/plain":{"schema":{}},"application/json":{"schema":{}},"text/json":{"schema":{}}}},"401":{"description":"Unauthorized"},"403":{"description":"Forbidden"}}}
+>
+  
+</StatusCodes>
+
+
+      

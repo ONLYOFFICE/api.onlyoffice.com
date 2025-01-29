@@ -1,0 +1,71 @@
+---
+id: create-a-post
+title: "Create a post"
+description: "Creates a blog post with the specified title, content, tags and subscription to comments defined in the request body."
+sidebar_label: "Create a post"
+hide_title: true
+hide_table_of_contents: true
+api: eJzFVm1v2zYQ/isEPyux4hVtZ2AokizDiq1dUDso0NQfztI5ZiORHEklUQX/992Rkl8aNxmwDdMHgeTdc7p77oXqZIAbLyfXsjB13WgV2tFZZehonkmPRePohMSdPG3Cyjj1FYIy+leEEh3DHK1kJu9JD+V8TagSfeGUZTU5keekENALEAsyK6zxQdyrsBJhhcJbLNRSYSmCChVmojA6oA6ZYK8E6FL4ZrExJ4IR7CZpeFHiUmlCKh1NOfyzQbK9MGV7TA71+zPaykkne8O8BGsrVcQwRl88O9lJX6ywBl6F1iK5bRZfsAhkxzpj0QWFPkrZTV7sB3nJUSVZNljwwSl9I9fZ7rcPwfAhHEKlvHwL+V0RxCwTPx4tOGK3TIwyNXDIVM/hAs978h7bnQ4qnklmQmOmNmwbJ7TZ8XNhTIWg5To+TLe3RvvE0jjPH3/hPd5XrShiOZTRusz+rbTMmMOtVh95JvEBassJ26GanJ0NWfy+/kVaJT8Jksq4fBo0zsf50cn4KH85y19Nfng5OXlx/OrH1yevx/knNnJly39u5O1B/NK4GogD2TSq3LOX98/Rgdfw7ER41j5P93/lws/K2wra91A/k5136hbFJ9AtBH+r/mZK34GGGxpapH16BwHctIaqehrTuIr7wbOmgIhi/KUzS1XhlXsG/vnziFTLpgiel2joOJ0x/Bi8fXjTeHQ/QVkrTa1N3WzoC9z+KSB5QaZMi/jRgcV9Ec9prmsWkeyXhqJJ3fgiP3ncgFca+hFOJchaNdKWUin7ZrQQVrQbgVWj8XE+2t4IPLrl9j6YclumUjh4K2woIUu/YUtIxQ6skjiTOiZ4Hxs94r7/sB3cFwORm8G7JXkzObZHaWJu9wfGXnANrtmdpdm1ej5EKqbo7tCJDxfTmTi9fEtWaOsTgRVfZHEaMGE1xBHVx5K6h265nss96neun//tPuwzwiNwRE1GCaE4mlTAKfHXnC7SpNRHfntKaB3TTzf7imMjva5bgOfqX6/5mD7k+B+BlnfgFCyY0+s52V8NvwmdvKU6YKJjPEcz9obVqybVyTezf50NiNOiQBue1J3vlPLlH9MZe9xf+7UpGePgnn8J6D2RtDCRvVi/8ayj1OqbhqYDyZNNrkZul/1ivo3F3C84qkGk2x0P9+s66wPhN4d1ENJ1qVWI0EE/ib6L2DRT0uZ8zsnrvwDNNVBr
+sidebar_class_name: "post api-method"
+info_path: site/openapi/workspace/API Backend/Usage API/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Create a post"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/api/2.0/community/blog"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Creates a blog post with the specified title, content, tags and subscription to comments defined in the request body.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"title":{"description":"Post title","type":"string"},"content":{"description":"Post text","type":"string"},"tags":{"description":"List of tags separated with comma","type":"string"},"subscribeComments":{"description":"Subscribes to the post comments or not","type":"boolean"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Newly created post","content":{"application/json":{"schema":{"type":"object","properties":{"Text":{"type":"string","example":"Post text"},"Title":{"type":"string","example":"Example post"},"Created":{"type":"string","example":"2020-12-06T07:36:14.7981820Z"},"Updated":{"type":"string","example":"2020-12-06T07:36:14.7981820Z"},"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"CreatedBy":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"}},"title":"BlogPostWrapperFull"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

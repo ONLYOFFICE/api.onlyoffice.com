@@ -1,0 +1,71 @@
+---
+id: update-a-subtask
+title: "Update a subtask"
+description: "Updates the selected subtask with the title and responsible specified in the request."
+sidebar_label: "Update a subtask"
+hide_title: true
+hide_table_of_contents: true
+api: eJztVttO20AQ/RVrX5vEjklQG6mquERqVBUhAqrE5WGwJ2TB3t3uroE04t87u3Ycp6SBXpB4wA/RXubMnLnEPnNm4cqwwRlTWl5jYsNjMDeGXbSYwaTQ3M7ocs52CjuVmv8Ay6X4jJCidiBNK9Zid2SH7OKBUCmaRHPlzNiAnagULJrATjEwmJF/TANTXFoKEtxxO/U3ltsMAxBpoNEoKQy/pL1RmPAJJwAX3kzj9wKN7VDAarkrU6I3Z4kUFoV1S1Aq44mnGV4bR2LOTDLFHNzKzhQSLXnpUiU/lLRCbTkaf0useOpWq1m4kgSjfbKv8JzCXVEFHqhKZTLrYOMqz98gG7k+xh7gXV2npmHtyFjNxZXz46u32UNp8gjrn5pIWYM4ih77KttYd448/aeK74EYptw2DC+lzBAEWeI95MplxiaQGXSpukaM0ob1opwtNpE6B1sebcUr8G681XPoPZpWyqIBrwrRNI6jOGp343YcH0e9Qbc76G93+tv99/24d9pwsjt7OrnR2lA10aLg6UroqHraa34Wj6Owz43KYHYAOW7O5Su/weAUxAwsTagv4GJWNoBAQDWhO7dgQY9zyLLNmEJngZWBcZYBeJTDH2o54Rme6Cfg5+chmaZFYo1boqTj8szBO2DU/afCoP4Iac4FJw9gJUVYDj8bkis5Q/ymQZXk60a9VBuqP8W/jVPl5G2cXvs41Y16qTb8xXstemYPxn4RlJau482X+zOAzY8BwccWbGH+lK0ne7T6zXsb+Nc78I1WvUwjGtErpeSC++helvSi7holIqBSovTmdVY50pb4MVX4CQI7pU0IiodxJwoXqta5D+elUhucRe0PF+8ewnkt3hZHbCl7x07ClIO4VvzWBaFQX3BGSO4ITsvrFhN+vFaxnrHTSEdL/TpclG2pP6MVWRn9IhWXHViUb6kFuZhI76m62ZN5XgjKJhijvkUdHA3Hx8HO4YjQtDVlUTOn0S2R+wnQ5Prj
+sidebar_class_name: "put api-method"
+info_path: site/openapi/workspace/API Backend/Usage API/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Update a subtask"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"put"}
+  path={"/api/2.0/project/task/{taskid:[0-9]+}/{subtaskid:[0-9]+}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Updates the selected subtask with the title and responsible specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"taskid":{"description":"Task ID","type":"integer"},"subtaskid":{"description":"Subtask ID","type":"integer"},"responsible":{"description":"New subtask responsible","type":"string"},"title":{"description":"New subtask title","type":"string"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Updated subtask","content":{"application/json":{"schema":{"type":"object","properties":{"CanEdit":{"type":"boolean","example":"false"},"TaskId":{"type":"integer","format":"int32","example":"1234"},"Created":{"type":"string","example":"2020-12-22T04:11:56.5658524Z"},"CreatedBy":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"},"CreatedById":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"Updated":{"type":"string","example":"2020-12-22T04:11:56.5658524Z"},"UpdatedBy":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"},"UpdatedById":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"Id":{"type":"integer","format":"int32","example":"10"},"Title":{"type":"string","example":"Sample Title"},"Description":{"type":"string","example":"Sample description"},"Status":{"type":"integer","format":"int32","example":"0"},"Responsible":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"},"ResponsibleId":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"}},"title":"SubtaskWrapper"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

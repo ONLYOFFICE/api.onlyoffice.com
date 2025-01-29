@@ -1,0 +1,71 @@
+---
+id: log-out-from-the-connection
+title: "Log out from the connection"
+description: "Logs out from the connection with the ID specified in the request."
+sidebar_label: "Log out from the connection"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVE1z2jAQ/SsanT0xpT35RtvMlGkPmRJOGQ7CXmM1sqTqg5R6/N+7K4NjAuTUS7KW9uPpvbd0PIid58UT91BGJ8MhX5RB7oGVRmvA0GjPN9l4jakdX8TQGCf/Crr+BqICRy0cRjzjL5gHfNNjVQW+dNJSGi/4D7PzzMTAamdaFprpEPYiQ5POll+Zt1DKWkLFpE5nDn5H8OEOu1vhRAsBnE9QNH5ga2V2Ut/vQYclQZA0zorQ8CsYsCdQJk7Ca1820ApedDwcLLWSOsAOH5Tx2rhWhOHo45z39CIH3iIl4KliPpvRv/MJn41RIDTbCxWhYMFFYLJOzzAWXOKMSc98LEvwvo4KRyERASFRN2GtkmVKy395atldgtwOQxBT32f80+zDJY61FkeZoOKUhaw1piJiYkhEIj0Fz4WV+fxulo8GEMkAE/1zZBdly7spyz1/NcWK4A2UXLXGCBtnfYfDSaBmuM5OIp7VJshS1yaVy6Ao44tp26hxIluB24NjP+9Xj2zxsMQm+OmHlysR0Cwc663xoRWJwuMM1P+WBd96pXtV5f9Y90hCgD8ht0ogBwgxOkWjBjWeiCHMRD0m9GJ4oQmeDapgUJy5H03a4LOpWddthYe1U31PxwjE0QJjuBdOii1xijtUSU8xWqMWysP7NJxvz9UnncTWhDytAX5h+IzSv1nVfoP5zekXpDumLHAzbJgUX+wEreLo54f1I1EUicGp1Z6T1Y4Bdb8K7Nx1J5T0t89ulHTdYOS+H/OHq5sVo9WHbOJpg6v7D4cM4/c=
+sidebar_class_name: "put api-method"
+info_path: site/openapi/workspace/API Backend/Usage API/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Log out from the connection"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"put"}
+  path={"/api/2.0/security/activeconnections/logout/{loginEventId}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Logs out from the connection with the ID specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"loginEventId","in":"path","description":"Login event ID","schema":{"type":"integer","format":"int32"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Boolean value: true if the operation is successful","content":{"application/json":{"schema":{"type":"boolean"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

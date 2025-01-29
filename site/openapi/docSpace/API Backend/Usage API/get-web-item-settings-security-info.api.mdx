@@ -1,0 +1,71 @@
+---
+id: get-web-item-settings-security-info
+title: "Get the security settings"
+description: "Returns the security settings for the modules specified in the request."
+sidebar_label: "Get the security settings"
+hide_title: true
+hide_table_of_contents: true
+api: eJztV99v2jAQ/lcsPzPC2B423qp1rdA2bSqb9oBQZZKDuA22Z19oWcT/vjsnoeFHJ3XaS6VGAuz4/N3d952to5KolkGOpnICiNosg0jEBNLSa9zIWU9aB16htmacyZFcAv6E+Rhh1Zq3tmOzsLInnfJqBQieMStpaELbdBZoTRsa/irBb2iSQUi9doxMbz/rgMIuxMpmZQFifM72ATcF784A3Nf5DaTIL9McVkqOKokbx6vKe8WAmoIip9W2J+FerRxvncpgVyAQ7lHOtltKx0Nw1gRgSzkcDPhnP5Q2IRGaDAk7tQbBYPRKWIkrFCdTHUdj2zidZ+ZQ157uatKYw51pQE/wR1R8aSmgFVMWhZpzJuhL6CQmq0HzvDrx1T5bSWSUIYrxN75OaxE3ijuNucAchEpTCEGgjbNaqKMQCWzpben+yWG98+kewfC0S+3c2gKUOeJ24iDVC9JE6EUEDYdiC+VBNIDCemEsi7njvfGow6SMgj7dpw5tkdNIiVDOmZcTrhaqCLAlZyrLNGOp4lunpuJyT6LGWA9nkw99Opn9M6f5Q0UERf+qKfZztP22rGksI6pzhU7jyU5ugn2p5pdqfsbVHG/llzJ+KePnXMaM+3bw+rgl+WFUibn1+jcRGo3eHBtdWD/XWQYmHoiWw9iFqZBeM8L1LfALaoJURlndkQFQXzQ7ZOcKsPQmPCLGgmh50D6I0HCZCW3iggdq8gL2yQW1grltGsfYHWJOk0Q5nQz7g6TFTHbhcuR+3baPpS/IPEd0oyQpbKqK3AYcvRu8HybHPSSvi3q75KRa0AnfB/WR32fi4TQ4/QnYedOv7pk1jWtq7a2GSK7mXpd3d3S+0MQF2XLsdTzrIWvlKOCVivdSA34JeJrZw4yqh77zP0rSpNzpY/k+YqKrRp8p80GWpFDUYxdd6PwvYCHYtKrmKsAPX2y3/Lpu70dTGq6V1/WVMJ2Ri5yKjoRhWSP58oxuEsdVsVZFeRjSrFM7lx+/kxXrsS9ZLU4zYNx2yWw6qAda1r75e9t7ZEdV1fVAGbX29dKjO5rcWuuYAB3nP8OolK8=
+sidebar_class_name: "get api-method"
+info_path: site/openapi/docSpace/API Backend/Usage API/asc-files
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get the security settings"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/settings/security"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns the security settings for the modules specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"ids","in":"query","description":"List of module IDs","style":"deepObject","schema":{"type":"array","items":{},"example":["some text"]}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Security settings","content":{"text/plain":{"schema":{"type":"object","properties":{"webItemId":{"type":"string","description":"Module ID","nullable":true,"example":"{00000000-0000-0000-0000-000000000000}"},"users":{"type":"array","items":{},"description":"List of users with the access to the module","nullable":true},"groups":{"type":"array","items":{},"description":"List of groups with the access to the module","nullable":true},"enabled":{"type":"boolean","description":"Specifies if the security settings are enabled or not","example":true},"isSubItem":{"type":"boolean","description":"Specifies if this module is a subitem or not","example":false}},"additionalProperties":false,"title":"ASC.Web.Api.ApiModel.ResponseDto.SecurityDto"}},"application/json":{"schema":{"type":"object","properties":{"webItemId":{"type":"string","description":"Module ID","nullable":true,"example":"{00000000-0000-0000-0000-000000000000}"},"users":{"type":"array","items":{},"description":"List of users with the access to the module","nullable":true},"groups":{"type":"array","items":{},"description":"List of groups with the access to the module","nullable":true},"enabled":{"type":"boolean","description":"Specifies if the security settings are enabled or not","example":true},"isSubItem":{"type":"boolean","description":"Specifies if this module is a subitem or not","example":false}},"additionalProperties":false,"title":"ASC.Web.Api.ApiModel.ResponseDto.SecurityDto"}},"text/json":{"schema":{"type":"object","properties":{"webItemId":{"type":"string","description":"Module ID","nullable":true,"example":"{00000000-0000-0000-0000-000000000000}"},"users":{"type":"array","items":{},"description":"List of users with the access to the module","nullable":true},"groups":{"type":"array","items":{},"description":"List of groups with the access to the module","nullable":true},"enabled":{"type":"boolean","description":"Specifies if the security settings are enabled or not","example":true},"isSubItem":{"type":"boolean","description":"Specifies if this module is a subitem or not","example":false}},"additionalProperties":false,"title":"ASC.Web.Api.ApiModel.ResponseDto.SecurityDto"}}}},"401":{"description":"Unauthorized"},"403":{"description":"Forbidden"}}}
+>
+  
+</StatusCodes>
+
+
+      

@@ -1,0 +1,71 @@
+---
+id: get-the-linked-crm-entities
+title: "Get the linked CRM entities"
+description: "Returns a list of the CRM entities (contact, case, or opportunity) linked with a conversation."
+sidebar_label: "Get the linked CRM entities"
+hide_title: true
+hide_table_of_contents: true
+api: eJy1VEtP3DAQ/iuWT62Uki3qaW8UEEUtUrXACa3QbDJsDPGjtgOkUf57Z+ws7PKo1ENziGzP65tvPnuQEdZBzq+kBtWWh9ZEqGKQy0IGrDqvYk/GQR50sbFe/YaorPmGUKPnIE8rWcgH8kO5HCmqxlB55dhNzuUCY+dNECBaFaKwNyI2KA4XZwJNVFFhEB+qXLMQFQQshPXCOmd97AwV/0iB5g5r8aBiQ2nI+R59SDD2qLLHXx2G+NXWhHOQnIsy8xKca1WVHMvbwGgGGaoGNfAq9g4Jn13dYhUpj/PWoWdAbNUYAqzxWtW8223pLNvE6dGeOI1CQy9WvOPmwPRiihXKVG1XE3JlUtPbyKngBEAR3jVxOaaP+wnOmpBh7M9mr+v/mIhMBPaU/cZ6nbLOxZAPCXcx2a+5TiHgHiL4a+ayEHTe4kgY/pUt8B56iqNh6/AWiykzHRx6PSnpiOrKqbcvs8+v27k0MEkLa8leGmlLvMs1psFAbGhTglPl/t6sTDKtvC6zLsqNjuSzYM8Zd2bwTdk+9+PUd0wNMZImmwtpQLN1JzZBY2IWz4I7fgTtuN9dwcxGTnhjU6ENIVbrpGdxjp5kIBbH5xfi4OcplWNVZC5aiJRaUryzIWpIU5jQnGBMMpquw/YVki9u3dY1+P8XcKIy4mMsXQvEJMHvfMsw8uyumGfypOnRn+fH0vOa/jk1LZ5aoRekod45ahhWhOfSt+PIx0S757eIlvfgFayY2KslVWs2z9Eg72iczHZq/9MFY2P3tsvjfqHxsdhEHFQVuvhX3+WWNE+OL8h3NT062tYc4uGBHyT6zyUtbJpGUmE6G2i8Zt2RSsieU7KmWP27krxLkpwW3NTGZPotgLvqLKY++M9dvRkyDFnw4/jkn03vRjxdiezNw10S6j+RBSOH
+sidebar_class_name: "get api-method"
+info_path: site/openapi/workspace/API Backend/Usage API/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get the linked CRM entities"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/mail/crm/linked/entities"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns a list of the CRM entities (contact, case, or opportunity) linked with a conversation.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"message_id":{"description":"Message ID. It may be ID of any message included in the conversation","type":"integer"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"List of entity information: {entity_id, entity_type, avatar_link, title}","content":{"application/json":{"schema":{"type":"array","items":{"type":"object","title":"CrmContactData"}}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

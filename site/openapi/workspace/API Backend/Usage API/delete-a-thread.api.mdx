@@ -1,0 +1,71 @@
+---
+id: delete-a-thread
+title: "Delete a thread"
+description: "Deletes a thread with the ID specified in the request."
+sidebar_label: "Delete a thread"
+hide_title: true
+hide_table_of_contents: true
+api: eJylVV1P2zAU/SuRnwtJAxui0jR1tNPQxjTRoklAH0xySwxJ7NlOoYvy33dvnKQtlI6xPqT+OOd++fq4ZJbfGja4YpHMsiIXdul/lrrIDJv1mIGo0LiE+yUbFjaRWvzmVsj8C/AYNPE0jliPPSAO2KxCVgwm0kIRjA3YCFKwYDzu2YSw3oOwCY7BOx15RkEk5gJiT+T1moZfBRi7jxYV1zxDqja1+xwnaM4ZEeRSkHnFbcKe+pw6T6cj3DFRAhlng5LZpSILIrdwi7H32FzqjFu3dBCyioLXYJTMDRhihEFAf9uMIz2SaCm3hOBKpSKqK+PfGYKVzx3LmzuILGWmpQJthXNyGr8muB6DR56plED9gFU9NhWWZh3VWC3y2w3gFCvahIuE0Xoau2iTetCcFzFPcGAh3s0KgzDY64d7wdG0fzB4934QhPsH4eFx//jokoxcqPj/jZxDhCWfSiWiN9QtPDh8YuQVRWyrQfC1PD4t//FoO9NdhEVR9/HKVdD89rZ82l99ksKolC+/11diV+xn4h68S54vuTX34pVdc8ZzTrVE9HDBLdeTjKfpbk6hU6yQZwjp8ZpF/B9azkUKF/ov9OtrH6FxEVlDQ5C47NaIvs+NevxYGNAfeJyJXKAFbiV6QBfWJcTGaEouAX5qrmBzqxY0dw9o120T4DDoP7/fFzlvlA6blVAoQonEk0QcSVktTSg6A+ZzJfxwP/BX2jknV767OX7ZilXFVlo6IVlw7bFVUbsyofGvsGx1LnHbvVYHN7h1mCKfy5reZH3SBuVNQC9Ae+fjydQb/jhFIzg1LtsUe9lYOisljc14LQ2NDyfdnXI/ldlypYBvV/kmWQuP1seexlwxlML1iyvzFVUCkVjoWnSbrNxFKjKy0YY36F4HVPIE8yF2Wd5wQy1YVbSMnjU9aDhccC34DRUL35dYGBrjOc95amBHruuvy9bw2wPMKcgFTwua4fAej3PtBatmiE3ah7RstodRBMquEZ+9LfRMdT05Gn8bT8cIp6bd7J77unuaATnYGtdmI7VB0rfqvUApS9ebVdXh3daLjK57HZrKNMMb+AfH0tQU
+sidebar_class_name: "delete api-method"
+info_path: site/openapi/workspace/API Backend/Usage API/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Delete a thread"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"delete"}
+  path={"/api/2.0/community/forum/thread/{threadid}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Deletes a thread with the ID specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"threadid","in":"path","description":"Thread ID","schema":{"type":"integer","format":"int32"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Thread","content":{"application/json":{"schema":{"type":"object","properties":{"Id":{"type":"integer","format":"int32","example":"10"},"Title":{"type":"string","example":"The Thread"},"Description":{"type":"string","example":"Sample thread"},"Created":{"type":"string","example":"2020-12-07T13:56:02.3249197Z"},"Updated":{"type":"string","example":"2020-12-07T13:56:02.3249197Z"},"RecentTopicId":{"type":"integer","format":"int32","example":"1234"},"RecentTopicTitle":{"type":"string","example":"Sample topic"},"UpdatedBy":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"}},"title":"ForumThreadWrapper"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

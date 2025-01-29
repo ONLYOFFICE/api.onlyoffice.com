@@ -1,0 +1,63 @@
+---
+id: get-the-recommended-quota
+title: "Get the recommended quota"
+description: "Returns the recommended quota for the current portal."
+sidebar_label: "Get the recommended quota"
+hide_title: true
+hide_table_of_contents: true
+api: eJylVF1P2zAU/SuRnyNS2m4PvKEJGJo2MVomTagPbnJpDIlt7JuOEuW/7147LQ2DbWwvrWOfc+73bQXKlRdH18Iah7LKvjYGpVikwkPeOIUbemvFcYOlcepRojL6I8gCHHMcnUQqfhAOxKIjVgE+d8oyTByJS8DGaZ9gCYmD3NQ16AKK5J6NJDfGhRey40BjEj04IEEH3hrtgRxrxXg04r+hcnQzFbnRSFwGSGsrlQcPs1vPqFb4vIRa8gk3FohnlreQIxGtMxYcqmjjvNjDKJJcUYCpIA9rifFqMqYLeJC1rRg0nkxFl4ovsoY9qken9GoADAhCfpYPp6qCmXqEP9p6Px1IHJKxd73GnOKu/kvkOEe1hisPzr85aOafgqSqgv992DsUMS6cyvf91U29HJoqTLMk2sDW+CC6u5Z6JREGJXrB4B6OWN+UV6z4RFkaU4HUAw66JtTmO0j3Bujkr7AERoXhYg5aaow923X8Mh0d/trUV1r2cwZF4NdAnxS3WEHoWYklfWTSqmx8MMr6kQ3TlDm1Khm0ndsZt36s0ovTu4uA1D7BhpiKfSjjcyp06OwhNzil9I0J9D64DzTWjSaLyQzcGlxyeTKbJ8cX5yRCnz7GVlFpPHIGrfFYyzCevY0zwJdXhHi2UNqnef/n3dJHjfCAma0kBU0+Na5i9Zjga04JISnFnPTApMPWo5ho2nUlBcLotl1KD1eu6jq+vm/A8dak41o6JUMbXi/ISrldnK24o4xTcvMcLBdtLasm1uLZDuOduuuCs5M5YblHhuW7C+XrD6y+fdKbPe1hJdPeBf7t0lcobRubgwLb4uPTq4xd+0Q0Z3dBDf8TR0wmNQ==
+sidebar_class_name: "get api-method"
+info_path: site/openapi/workspace/API Backend/Usage API/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get the recommended quota"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/portal/quota/right"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns the recommended quota for the current portal.
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Quota","content":{"application/json":{"schema":{"type":"object","properties":{"Id":{"type":"integer","format":"int32","example":"234"},"Name":{"type":"string","example":"Name"},"MaxFileSize":{"type":"integer","format":"int64","example":"12345"},"MaxTotalSize":{"type":"integer","format":"int64","example":"12345"},"ActiveUsers":{"type":"integer","format":"int32","example":"2"},"Features":{"type":"string","example":"Features"},"Price":{"type":"number","format":"double","example":"22.5"},"AvangateId":{"type":"string","example":"AvangateId"},"Visible":{"type":"boolean","example":"true"},"Year":{"type":"boolean","example":"true"},"Year3":{"type":"boolean","example":"true"}},"title":"TenantQuota"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

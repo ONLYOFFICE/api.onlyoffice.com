@@ -1,0 +1,71 @@
+---
+id: start-backup-restore
+title: "Start the restoring process"
+description: "Starts the data restoring process of the current portal with the parameters specified in the request."
+sidebar_label: "Start the restoring process"
+hide_title: true
+hide_table_of_contents: true
+api: eJztWUtv2zgQ/isET/tQbcfpYde3NGmBYh8NkvRkGAUtjW3WNKklqaRZw/99Z0jJpvzI1j3sAoUujkQO5/nNaIZZcy/mjo/G/I3Il1XJJxk3JVjhpdHvCz7izgvr4+YdOG8s8Ixb+KvClzemeOajNc+N9qA9PYqyVDIPx/ufndG05vIFrAQ9+ecSkKeZfobcI5/SkjAvwdHuNEghqVtK563Uc6QswOVWlsQXl6M+7P0N7uhKKTFVSO1tBRmHL2JVqnDYrIB5+OL5JuOkupjDQ+C75S9R8TnYAwH3kZoFsozPjF0JH+kvhy8JvRhevt5JuxVWrNwxy0VRSJIl1G3LB23Gm1N6lcQYPFj3kjLjNV9CiJCk6JBuWePS1D0ZnxqjQOit1EehKjj/4GaCZ7XxcvacGN3Q7BvzJxGi3axyaAgTU1N5VhrrhWI2YA3lMcRIDs4xYxly5ol5UeQpX86EcrAv8m7HNvWglz4g5ur+uncjvOhFgPWuSvmHKUC5XisDbrzhJJh80KG8Q/n3jfK0pP/0cwf3Du7fMdxJNKpZGu1i7IaDAf05ClW0Yo7EbsRyQ9p7KGqLsu0eQ91zbI4wwBkDa43N0M1aaI9Iz9i0zYlJDyv2Q+SfsVq1jD1Yod0M7I8ZU1Iv0bqk5wqfoVIJeVZiSnfdKH00rO2IhNNBxaOJdpBL+7kTLD9WA74y04PV3348erxVhc5QPgbptnbAW12tiI/R8GEW8hHCyraHzviuU24CR431y+VvXIPqFduLPq4c4ADXmsdJqnCjwibbajXILrLhTvqp4jgeJJIvUpnDU8IGm8npLLtGfFqR+ybLWt6jiAi3PP5V+KqQ/luFOFetgy/dud+5Lp26dOrSqZVO3zQedXnU5VGXR0keEc/Xg4vDJvSjFpVfYOP7N6ZKILo8JHpn7FQWBeigm4O8stI/B3gIl38iDp/CODHGtlcUaOcTEgCfkBP3xxRhvWN+AaxA1Y9187OwizIstqZN1/8k/SKs77pz5krIaUwomNRhr75R7KECSLIwdPVYGhfqg/ALfOuLUvaHvUE/wr4fLibtFtE4bTxS30+WVVbhgYX35ajfVyYXaoGsRr8Mfh32DxD2O+2zeJyT1Y2T7qlixaLUdtUWG6jRb7iA2EC76D0lyzj149inm6WE4H0qhXe7m9O3DYDSIbk1h7XG22Zea82g/8MwuJsFa05Sz0xwSoLtd1IBzWAUkujmxyFhlEK6EuGDUPssoKqGwB6e9kOVXDT/Z2CsI52MWGhFwNe6BuaYYICUCE3e1OQQuwSe6DRCIBGv11Ph4KNVmw0toyBL2TehiFgZC8yYJu4FpiMichtifh2Nf/UQry/qAB42rVRk44mrPIfSJ7SpGZMk024/3D+EUMf7/BWOx7hqxRPd9ePviHP6vwDJCPkQ1tZcCT2vEI24HyWH+leRV9IcidlQP5A9zZZ+Tu1oJ0+0gH7JnqMn1uuYgOjJhj5unTxR+7ShDm5Apf8BaRmeHQ==
+sidebar_class_name: "post api-method"
+info_path: site/openapi/docSpace/API Backend/Usage API/asc-files
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Start the restoring process"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/api/2.0/backup/startrestore"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Starts the data restoring process of the current portal with the parameters specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"backupId":{"type":"string","description":"Backup ID","nullable":true,"example":"some text"},"storageType":{"type":"integer","description":"Storage type","format":"int32","nullable":true,"example":1234},"storageParams":{"type":"object","additionalProperties":{"nullable":true},"description":"Storage parameters","nullable":true,"example":[{"key":{"int":1234,"string":"some text","boolean":true},"value":{"int":1234,"string":"some text","boolean":true}}]},"notify":{"type":"boolean","description":"Notifies users about portal restoring process or not","example":true}},"additionalProperties":false,"description":"Restoring parameters","title":"ASC.Data.Backup.ApiModels.BackupRestoreDto"}},"text/json":{"schema":{"type":"object","properties":{"backupId":{"type":"string","description":"Backup ID","nullable":true,"example":"some text"},"storageType":{"type":"integer","description":"Storage type","format":"int32","nullable":true,"example":1234},"storageParams":{"type":"object","additionalProperties":{"nullable":true},"description":"Storage parameters","nullable":true,"example":[{"key":{"int":1234,"string":"some text","boolean":true},"value":{"int":1234,"string":"some text","boolean":true}}]},"notify":{"type":"boolean","description":"Notifies users about portal restoring process or not","example":true}},"additionalProperties":false,"description":"Restoring parameters","title":"ASC.Data.Backup.ApiModels.BackupRestoreDto"}},"application/*+json":{"schema":{"type":"object","properties":{"backupId":{"type":"string","description":"Backup ID","nullable":true,"example":"some text"},"storageType":{"type":"integer","description":"Storage type","format":"int32","nullable":true,"example":1234},"storageParams":{"type":"object","additionalProperties":{"nullable":true},"description":"Storage parameters","nullable":true,"example":[{"key":{"int":1234,"string":"some text","boolean":true},"value":{"int":1234,"string":"some text","boolean":true}}]},"notify":{"type":"boolean","description":"Notifies users about portal restoring process or not","example":true}},"additionalProperties":false,"description":"Restoring parameters","title":"ASC.Data.Backup.ApiModels.BackupRestoreDto"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Backup progress: completed or not, progress percentage, error, tenant ID, backup progress item (Backup, Restore, Transfer), link","content":{"text/plain":{"schema":{"type":"object","properties":{"isCompleted":{"type":"boolean","example":true},"progress":{"type":"integer","format":"int32","example":1234},"error":{"type":"string","nullable":true,"example":"some text"},"link":{"type":"string","nullable":true,"example":"some text"},"tenantId":{"type":"integer","format":"int32","example":1234},"backupProgressEnum":{"oneOf":[{"enum":["Backup","Restore","Transfer"],"type":"string","description":"[Backup - Backup, Restore - Restore, Transfer - Transfer]","example":"Backup"},{"enum":[0,1,2],"type":"integer","description":"[0 - Backup, 1 - Restore, 2 - Transfer]","example":0}],"title":"ASC.Data.Backup.Contracts.BackupProgressEnum"},"taskId":{"type":"string","nullable":true,"example":"some text"}},"additionalProperties":false,"title":"ASC.Data.Backup.Contracts.BackupProgress"}},"application/json":{"schema":{"type":"object","properties":{"isCompleted":{"type":"boolean","example":true},"progress":{"type":"integer","format":"int32","example":1234},"error":{"type":"string","nullable":true,"example":"some text"},"link":{"type":"string","nullable":true,"example":"some text"},"tenantId":{"type":"integer","format":"int32","example":1234},"backupProgressEnum":{"oneOf":[{"enum":["Backup","Restore","Transfer"],"type":"string","description":"[Backup - Backup, Restore - Restore, Transfer - Transfer]","example":"Backup"},{"enum":[0,1,2],"type":"integer","description":"[0 - Backup, 1 - Restore, 2 - Transfer]","example":0}],"title":"ASC.Data.Backup.Contracts.BackupProgressEnum"},"taskId":{"type":"string","nullable":true,"example":"some text"}},"additionalProperties":false,"title":"ASC.Data.Backup.Contracts.BackupProgress"}},"text/json":{"schema":{"type":"object","properties":{"isCompleted":{"type":"boolean","example":true},"progress":{"type":"integer","format":"int32","example":1234},"error":{"type":"string","nullable":true,"example":"some text"},"link":{"type":"string","nullable":true,"example":"some text"},"tenantId":{"type":"integer","format":"int32","example":1234},"backupProgressEnum":{"oneOf":[{"enum":["Backup","Restore","Transfer"],"type":"string","description":"[Backup - Backup, Restore - Restore, Transfer - Transfer]","example":"Backup"},{"enum":[0,1,2],"type":"integer","description":"[0 - Backup, 1 - Restore, 2 - Transfer]","example":0}],"title":"ASC.Data.Backup.Contracts.BackupProgressEnum"},"taskId":{"type":"string","nullable":true,"example":"some text"}},"additionalProperties":false,"title":"ASC.Data.Backup.Contracts.BackupProgress"}}}},"401":{"description":"Unauthorized"},"403":{"description":"Forbidden"}}}
+>
+  
+</StatusCodes>
+
+
+      

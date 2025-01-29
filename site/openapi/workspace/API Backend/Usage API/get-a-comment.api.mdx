@@ -1,0 +1,71 @@
+---
+id: get-a-comment
+title: "Get a comment"
+description: "Returns the information about a comment with the ID specified in the request."
+sidebar_label: "Get a comment"
+hide_title: true
+hide_table_of_contents: true
+api: eJzFVW1P2zAQ/iuRPxcaWia2StOEADG0MSFaNImXD9fk2pgmsWc7hS7Kf9+dk/QFSvmyafmQOPY9d8+dz49L4WBqxeBOaKMeMXLdE5VlmDsrHjrCYlQY6Ra0XorjwiXKyN/gpMq/IsRoGGdoJDriiexQPFSEitFGRmo2EwNxja4wuQ1cgoHMJ8pk3kEAY1W4AIKojhc8SZd4o4vTwGqM5ERiTAg/Z/BXgdbtUyANBjJ0aKxnldMPRWm8SKYiOawGl4iXXJrcKAQt2SjBDMSgFG6h2Yd1RuZTWqlJ0kxRkMOKczJotcotWrbvhSF/tvomeKRyxyMyAa1TGfmEu4+W7crXcdWYC8+pGaXROFlHuYjf59YR+AyZTtkkbJ69La/2EVVHXIEhdv/O+xS3eV55GqoMA81mZH6yqtXbiHbb2sISrm7G/1fEU2l1Cosfvvt2cb+UMwxuIV+AszPJ0JF06XsgyKk+xic6BwdmmEGa7sYUJg2cCixbBuBRfj+MmsgUb8w78Pv7LpnGReQsD1HRdD3H8H2w+vlLYdF8hjiTuSQP4GgDKgrh6oTEGblSC8SfBnRN/jtYd6lif5R3h++FvXDvoLcXfhwdHA36R4Owv9/vh4efPhzesqeLHCIn5+t1GyuVIuQbbiaQWtwg1fQOc/KkKl48DA9eH+CbHBqFw9i7IJVJFPEWU/SNxYoyEF3QstvbD7utYDbS0y2XGlSJlXQO+bTXvbhVQJfpkNtvuGjlK6mXO62+bWA9O9ZSD19LtMgpYjBEM0cTXJ8NR8Hx1QU5oV9bJ5mCIx3limplXQZekZoY57imxy+1s1zJ2l+X9KYCDp9dl04VFYD4FXXH1lW/4/KQJdW9PuLNYV+RHaxuAJLrhJJjVFmOwXLzVxVPU0TDlxkN52AkjLlydInE0vKY9to30I7UN26Qrbzb7cx5L+eQFvxHwxlt7vo9VT2QcdJeo2WzfhxFqN0a8tUNwrfRsjPPz0Zky3272Ukz30nNgL1vZbXZVC1FfledNyBlWfdpVS3t66U3EctOrq25SA90CP8AEvfPSQ==
+sidebar_class_name: "get api-method"
+info_path: site/openapi/workspace/API Backend/Usage API/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get a comment"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/project/comment/{commentid}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns the information about a comment with the ID specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"commentid","in":"path","description":"Comment ID","schema":{"type":"string","format":"uuid"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Comment","content":{"application/json":{"schema":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"ParentId":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"Page":{"type":"string","example":"Some page"},"Content":{"type":"string","example":"Comment content"},"Author":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"},"LastModified":{"type":"string","example":"2020-12-08T17:37:03.3304954Z"},"Inactive":{"type":"boolean","example":"false"}},"title":"CommentWrapper"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

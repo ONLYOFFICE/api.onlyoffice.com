@@ -1,0 +1,63 @@
+---
+id: get-my-bookmarks
+title: "Get my bookmarks"
+description: "Returns a list of all the bookmarks for the current user with the bookmark titles, dates of creation and update, bookmark texts, and author."
+sidebar_label: "Get my bookmarks"
+hide_title: true
+hide_table_of_contents: true
+api: eJzNVVFv2zgM/iuCnt3EyYreFmDYul3RG24bhrXDgHV9YGwm1mJLOklu6hn57yNlO413W3vDXi4JHJn8PpIiKaqVAdZeLq5kZqqq1io00xfGbCpwGy+vE+kxqx1JCdLK0zoUxqmvEJTRfyHk6JjqaCUTuSUcyusdsXL0mVOWYXIh32OonfYCRKl8EGYloCxFKFAsB1diZVyUkDeHOojaoxNbFYoRTgQVSvSJyCGgZ0sZOWc3AnQuasvy5ACOt4HQrIMY+4TidOit0R5p262cpyn/jQN+3Ye5D49YmdGBAmMwWFuqLLqdfvHMaKXPCqyAV6GxSDbAOWiIRzmp/IHcLL9gFkhhnbHogurieJUfYBS5WlNuE0lpqSB0opNjEuAtVLZk0Gwmd4m85IQcUH1wSq9HwHNj1iUKpbMJMz648n58EYJdfP48pd92u52sI31C/RH9FXW11KAesEFORDBUuwFN1JdcKszvJ87TeXo0mx+lJ5fpH4tHJ4vZ8eTxjL5PHn2K0ccS/6aRPw+r/XDqDoJ/0fxiKfdG95Wsa5WPnKT95+gHj+ETo1beltC8heqBgr9RGxSfQDcQ/Eb9xy55Axq45wh9egMB3EVFp/R+Tt1V2TNSQGQx/50zK1Xig41GDUbQvM6C5yUaEncypk/A29tnPAeeQl4pTWfSQTDkgVyEbkPyjEyZBvGjA4tj1TDGWNXpdqw+Tmf/PvAfNPSjjVqLURXSK9VRrjEWGEJBL1OwajqfpNO7YTmMiOlzj+VK3g3MCx4IXUP8cGzeDQqr/sY4KTiSolMnUscyj7kxNKVXJtL7fb4cYhEX6G5oar4/u7gUp+9ekRF69d0OSx6YgatjjQ8VxMbvfZxjEFUzmnb5+ITsh9//bZb3OWTdlA4HpZB2WHeN1xXtihNMSCpbnOJ9smg9WKZlVzy6uApKDnPadgmeO3i3Y/E/NTq+Aml5A07BkjN/dU2+iuEWbOWGqkgFyzK03DM3UNZdfb+7LfiC3PfX+dklYXlD45bYxJboF2x9UOnmwPa4O5I+BH7ukp9Q2rZrONrYgO9UP2XsW7JDc46v6Sh9A2/ExaY=
+sidebar_class_name: "get api-method"
+info_path: site/openapi/workspace/API Backend/Usage API/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get my bookmarks"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/community/bookmark/@self"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns a list of all the bookmarks for the current user with the bookmark titles, dates of creation and update, bookmark texts, and author.
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"List of bookmarks","content":{"application/json":{"schema":{"type":"array","items":{"type":"object","properties":{"Id":{"type":"integer","format":"int64","example":"11"},"Title":{"type":"string","example":"Google inc."},"Url":{"type":"string","example":"http:\\/\\/www.google.com"},"Thumbnail":{"type":"string","example":"Url to thumbnail"},"Created":{"type":"string","example":"2020-12-06T07:36:14.8181893Z"},"Updated":{"type":"string","example":"2020-12-06T07:36:14.8181893Z"},"Description":{"type":"string","example":"Google"},"CreatedBy":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"}},"title":"BookmarkWrapper"}}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

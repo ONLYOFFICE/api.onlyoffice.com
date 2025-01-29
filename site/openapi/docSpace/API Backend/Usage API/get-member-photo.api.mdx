@@ -1,0 +1,71 @@
+---
+id: get-member-photo
+title: "Get a user photo"
+description: "Returns a photo of the user with the ID specified in the request."
+sidebar_label: "Get a user photo"
+hide_title: true
+hide_table_of_contents: true
+api: eJztV99v0zAQ/lcsP4GUNqWbRunbYIAmmJg29oSqyk2ujTcnNrazjUX937mzk66lmwYVj31o6x/nu+++u3PPDfdi4fj4Bz8HbRSwlJ0X2mvHJwnXBqzwUlenOR/zBfgzKGdggwBPuBFWlODB0vmGVzhBsdqBlTluywpnRvgCxzm4zEpDunDxCkXY6QmuW/hZSwuo3tsaEu6yAkrBxw33vwxpc97KaoGScC9KxIdLo7cHR3y5nNBpZ3TlwNGB4WBAP5uWvhd1OauEVOwR7JhpKxeyErhIniTMgsdpwkpxL8u6ZE4+QLc3kwvcgFzWZcJcKZRCMJmuPFQ+4IR7nxolyNtmG7+eXUPmiSxLbHoZwXYInvJ004NvG1hxu6qVEjNiIlL2SEwOc1ErP6UITIP4lDyZvhmOBj366hs0sCTeyN+XbV9EuV1sHhwNevjpLCKzL5s7W6N/J6OYAj38dEYxdC8bfS8XO9kaDXuj4cq9kB9/4WGU28Xe4ah3OOrsxTx80dxlm647hG/YO2i9Q3MizyWpFOp8LYvnQjlU5qUPqo4vP/TjHdI/NvJM56Bc/6Kt0BOv+6tadCfCC1yJuo1RMgu3THrt9L6K9lW0r6J/rqLwL7Qvn3357Mvn38uHtB8O3mx3j1eVqH2BZfKAHWoQOtgW+qTtTOY5VAGlg6y20v8KHbFw2ZQ0TG+AFjDlBTXGdygAfEId7Faq17ZyTMQ6Y3rOfAGMeGF30hdhdnrCnIFMziXkTFZhjdpocL7PKQsQcduuhx4d++8xT4WR6bA/SE0gJ21il75Mu4LG6W3XyNcWw8oL7804TZXOhCq08+PR4N0w3QrvV9pn8TgnlzoGLukWihfNJg+rhEFMX3Ah6V4OG2Lt+yHT+kZCoFZWcx1Or8X6k1RoIuGEPeK5HVKkDAIuRbgNW+WfwSOvgcrO5w1Hmsem/r/EofVx7XmAsAKzTRuUH0QASmJYKFAhMDgYrx5QESdSSvSTfNPMhIMrq5ZLWkZblvIKh7fCylhcGL9cOhrnq+p41tFXF+376zV7fJM9ibwLWUWRuRWqphkOQ0S7N99ygpIFJjmmAgGJm8dZBsavHVvXPFnL2M8fv6MUZcBmksR0aAek90kwf2RPtE3fy+SZE00TMxDZ7OTj1rMnWt866eAAXh+/Ac8NR8k=
+sidebar_class_name: "get api-method"
+info_path: site/openapi/docSpace/API Backend/Usage API/asc-files
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get a user photo"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/people/{userid}/photo"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns a photo of the user with the ID specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"userid","in":"path","description":"User ID","required":true,"schema":{"type":"string","example":"8736"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Thumbnail parameters: original photo, retina, maximum size photo, big, medium, small","content":{"text/plain":{"schema":{"type":"object","properties":{"original":{"type":"string","description":"Original photo","nullable":true,"example":"default_user_photo_size_1280-1280.png"},"retina":{"type":"string","description":"Retina","nullable":true,"example":"default_user_photo_size_360-360.png"},"max":{"type":"string","description":"Maximum size","nullable":true,"example":"default_user_photo_size_200-200.png"},"big":{"type":"string","description":"Big","nullable":true,"example":"default_user_photo_size_82-82.png"},"medium":{"type":"string","description":"Medium","nullable":true,"example":"default_user_photo_size_48-48.png"},"small":{"type":"string","description":"Small","nullable":true,"example":"default_user_photo_size_32-32.png"}},"additionalProperties":false,"title":"ASC.People.ApiModels.ResponseDto.ThumbnailsDataDto"}},"application/json":{"schema":{"type":"object","properties":{"original":{"type":"string","description":"Original photo","nullable":true,"example":"default_user_photo_size_1280-1280.png"},"retina":{"type":"string","description":"Retina","nullable":true,"example":"default_user_photo_size_360-360.png"},"max":{"type":"string","description":"Maximum size","nullable":true,"example":"default_user_photo_size_200-200.png"},"big":{"type":"string","description":"Big","nullable":true,"example":"default_user_photo_size_82-82.png"},"medium":{"type":"string","description":"Medium","nullable":true,"example":"default_user_photo_size_48-48.png"},"small":{"type":"string","description":"Small","nullable":true,"example":"default_user_photo_size_32-32.png"}},"additionalProperties":false,"title":"ASC.People.ApiModels.ResponseDto.ThumbnailsDataDto"}},"text/json":{"schema":{"type":"object","properties":{"original":{"type":"string","description":"Original photo","nullable":true,"example":"default_user_photo_size_1280-1280.png"},"retina":{"type":"string","description":"Retina","nullable":true,"example":"default_user_photo_size_360-360.png"},"max":{"type":"string","description":"Maximum size","nullable":true,"example":"default_user_photo_size_200-200.png"},"big":{"type":"string","description":"Big","nullable":true,"example":"default_user_photo_size_82-82.png"},"medium":{"type":"string","description":"Medium","nullable":true,"example":"default_user_photo_size_48-48.png"},"small":{"type":"string","description":"Small","nullable":true,"example":"default_user_photo_size_32-32.png"}},"additionalProperties":false,"title":"ASC.People.ApiModels.ResponseDto.ThumbnailsDataDto"}}}},"401":{"description":"Unauthorized"},"403":{"description":"Forbidden"}}}
+>
+  
+</StatusCodes>
+
+
+      

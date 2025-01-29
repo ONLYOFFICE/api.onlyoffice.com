@@ -1,0 +1,71 @@
+---
+id: update-a-file
+title: "Update a file"
+description: "Updates the information of the selected file with the parameters specified in the request."
+sidebar_label: "Update a file"
+hide_title: true
+hide_table_of_contents: true
+api: eJy1Vdtu2zgQ/RWBz0qsON5ma2CxSJsUG3S3CBpnF0jih7E0jphIIpekkriC/r0zpORbXOel1QNND+dy5sLDRji4t2J8K+ayQDv4xKuYxsJiWhvpFnTUiNPa5crIb+Ckqv5CyNCwiaGdiMUz6aGYtmSVoU2N1KwmxuJaZ+DQRi7HSFZzZUrvIFJzL7JYYOowizh09Cxd7sUaDJTo0NjIakzlXJKKrPyZwf9rtO6Qoq7UPMSK/lBIdnXBoCQD0OBysY2KU4wuzkhu0xxLEONGuIVma+uMrO5Fy6l0oT6obMEaqaocVo63oHUhU5/K4MGyz+a1KzV7oOQYp1EajZNUVj6VrkDebGL6gs+hCuE83gYUiwKs+5eSlSHelnldztD0dS246C74e+pMlh4lpXFP7Wv9x2larSob0A2T5LVzX6+19pGvn1SML75n29WPBb5AqblMIbZvLUEN45R9WLztmUZgh9+QAknqWmYbcZLuO9ix9B9DOJNWF7B4G/g/8hGjG6gW4OyjZNNJ3/k9RlCB700sTp/AgbkqoSj229SmiJyKLGtG4K3Y/tIo7v+1ecP87m5AqlmdOstbVCQOMjY/BKtf/qwtmj8gK2UlyQM4xdMT96MszsmVWiD+Z0AH8F2j9kceJsPk4Gh4kPw+OToZH5+Mk+PD49Fw9P63kxt28rcKU7Xfy+iOvtE7XtdmZQ0dSxmZ7mY+FqPk6PWQX1fQcRzhZi2illxlzCG1Hy9mkrEYgJaD4WEyCGzJ66AJnNOKFWle8QUIk7iTOpcZkbvPuOjpKg/HcU9mG7YeFd+wrytiOu/rsCSWVY02CCNpOcRcrWt+VGVZV4Q2ukJDPBF9Pb+aRKeXF2Tc08ZYBDLhhmhlXQm+Hx2+0OcIPNVs8+waZf7ah6ArpcMXN6DLSZUksHUY/NC2W64zaVLjmAX8Exd+6WfcPRlE+TllyNpNMwPLd6dtWUyRDL+DtH0CI2HG5aMnJ5OW9zQkcygs7sl/9eTsBNsPQ8WT8ARFzf9o+0ijsXzS2ilp5v3b23SHH0OMgwm7WBm/YuU27i1O0xS126s7XRv/y+sJ6c66V7BUGZsYeCYhrx6n8in7cfeyhqamuq+Jy+g8uOTh5Ru2OfuPfva7DSe1sxKb16AvC6+c1U6Tpgk3q22X+uHohxbLuxe0uTFTQv0dhh8XBg==
+sidebar_class_name: "put api-method"
+info_path: site/openapi/workspace/API Backend/Usage API/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Update a file"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"put"}
+  path={"/api/2.0/files/file/{fileId}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Updates the information of the selected file with the parameters specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"fileId","in":"path","description":"File ID","schema":{"type":"string"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"title":{"description":"New file title","type":"string"},"lastVersion":{"description":"Number of the latest file version","type":"integer"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"File information","content":{"application/json":{"schema":{"type":"object","properties":{"Name":{"type":"string","example":"File name"},"UpdatedBy":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"},"Updated":{"type":"string","example":"2020-12-08T17:37:03.3424957Z"},"Location":{"type":"string","example":"4\\\\46\\\\File name"}},"title":"FileWrapper"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

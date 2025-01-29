@@ -1,0 +1,71 @@
+---
+id: get-the-visit-statistics
+title: "Get the visit statistics"
+description: "Returns the user visit statistics for the period specified in the request."
+sidebar_label: "Get the visit statistics"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVE1v2zAM/SuGrktqx2v3kVu3Bu2wHYomxQ5FDorNxGpjSZPotpmR/15SthunX8OGBYFBSST19B7JWqBceTG+Eh4QlV75eIoSlUeVeTEf0HZWOYUbcqnFcYWFceo3ORh9BjIHx6GOLDEQd+QHYr6lqBx85pRlNzEWF4CV0z7CAqLKg4tulVcY+ceLoqVx4dSCUyaPvIVMLRXkkdJh38GvCjwe0C2t+cXkhKkWmdEIGtmU1q5VFrDF155vroXPCiglW7ixQFjM4hoypDzWGboNFXg+XTpTnkiCT/Y+eKLDYQcsZ5dBl8ujI8bEljbMy8ETnb8dGn78KG+N9g2WNEmeZ/pBTEVmGVmjNEZZQaA8pfvb50vn5IbiSKnS/5mWE+XtWm66x+2DHwi4l6Vd89YojVP6J2nCdLzmTzKXksAKJmOIqoS9JBw+HKXDNJ0lh+PRaHz08SA5/PA5+XT0LknGSch9Zjz2kRMdsKI67GWnrffpXuYmUv1TIMurMKy+Mu3nrMBPR3RTcKvfYTJ6Ltmllm2/QB7SlEDLnE5WEKiWWNAillbF6UESP3bgrjHi0Cli14ZTFrTR5sVm3Alt1XcISjOUojkeCC1LPt2LDdi4Yi52rTXpGOi3xk7Irt57LaD00oT7O65MWVaaIEdTcLfU9BeT6Sw6Pv9G4bT0DUdrSuOR4y3pWspQtS3IU8DQ/E+nhXgyX3pD4P+OmpZKhHuMqQ2IScJZuTVf2Yh3xTyTJ8kXRGoEZLOPthGRxmJBb+Sgul5ID5duvd3yNl3oeMCSeSudkgsm8GpOlxXdjK3FDanJrIaXDmcMjd3XVaP2k97fDrqI4ywDi2/6znuleTqZke+ina6lyTnEyTuevPQdCzJMID4UYdirSUa9quSKfZuUXFJc/fsVeRMqsjX4Ud2R3vQA7hfnoH0Hf/lVL4bUdVPvxGfn3xy9GvHYEY03azsn1A9RUWZs
+sidebar_class_name: "get api-method"
+info_path: site/openapi/workspace/API Backend/Usage API/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get the visit statistics"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/settings/statistics/visit"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns the user visit statistics for the period specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"fromDate":{"description":"Start period date","type":"string"},"toDate":{"description":"End period date","type":"string"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"List of point charts","content":{"application/json":{"schema":{"type":"array","items":{"type":"object","properties":{"DisplayDate":{"type":"string","example":"12/22/2020"},"Date":{"type":"string","format":"date-time","example":"2020-12-22T04:11:57.0469085+00:00"},"Hosts":{"type":"integer","format":"int32","example":"0"},"Hits":{"type":"integer","format":"int32","example":"0"}},"title":"ChartPointWrapper"}}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

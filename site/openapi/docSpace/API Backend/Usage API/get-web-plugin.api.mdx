@@ -1,0 +1,71 @@
+---
+id: get-web-plugin
+title: "Gets web plugins by name specified in request"
+description: "Gets web plugins by name specified in request"
+sidebar_label: "Gets web plugins by name specified in request"
+hide_title: true
+hide_table_of_contents: true
+api: eJztWVtv2zYU/isCX9ZhjqWmwdDpzWvSrtjSBnHaASuMgpaObTYUqZGUE83Qf985lHyL7VlengrIQGxdDj+eOz/kLJjjU8viL2wIzgk1tUEY/AnjXBZToSwb9ZjOwXAntHqfsphNweHrG/+a9VjODc/AgSGMBVN4g0L+p8dQIkYJN8PrFGxiRE44+PBDLWDg70IYQFxnCugxm8wg4yxeMFfmBGSdQZ1QEh55lkt6dPkDV1OQOrgzkI0lL1lVjQjK5lpZsLT6PIroZ3tPVDvIl3onWjlQzm8Fjy7MJSdtF7sq6PE3SByZasgTTtRb1JbuKrrXTlVIycekfm3n2ppbXXIZDLlDF04EyJRVPTZHd/r1x+A/N4L/tYPVGQRkIyFvLT+Gfrlx13oHKRLAMBxH/6MRbI3MCzfT5jjwoJZrjTvDmxs+baHyb7QsJ9HW4HXCfWiVLDdr2db4NsGktMexh7Vca1yRtfLI++wkbyQGuINfy+PlJdJ9m0+0yTgWLSsKFNjcZhE1n7M9X8tP5UtAWCz28lBIDltyLe4h+Iurkjt7LwjKCSdPBeEKPWZ8Ps+543vzuW1BeICPRmDWcPlsoGv++HwMSEWRPRtmmHF5okGFkYHTgaWVQePaymfVREj4ZJ7jnxm3g6fBGmstgavNJCQMKh07UFqJrIUwGZymgoqJy5uNAphwaWGVYGwwfNPH46s/yEX/Wqcgbf8KYXQJcOn0urI+tujqb7xk4Hv6qp5SfHTmhO88ayfgMfr6LLo4exndRT/Hr6I4ivpNKf0UXeAd7QyKPJjutXZ756tGctdltrQO9jvsSRurBXcRiv0B3l5NWdC+szZ8qEVvXUq2xP4/Uce/JvC3DdHBwPdXTMxnAeHmOR7Anq2F36zuGE3HaDpG0zGajtF0jKZjNB2j+Q4Zjf/vTEdlOirTUZmOynRUpqMyHZXpqMz3SGUI+SJ6uTuX+qTqw1P8A55gXESvdoXeajMWaQrKa2ghKYxwpZ+5cZt8JYSv90APGKYQhfEBBYCNaDa2DfUOnA0eVsMwG4zLgAhTYHNIBPKcNBAqoNEcWOr9GaB2zeiPjgKa58Us5LkIz/tRuAxF+LCaGoYLwqsYKWrmy9mgzwI2cy6Pw1DqhMuZti5+Hf1yHu4SEHof1MsZ2bA0eUgUsD6Gtg1fJQIq9js+6C2HkVtizVAy0fpegPelUBPtV28E9i12JcqYFddj83PfsFDhjKs1xTzZmU843moMeTJQY+zG8HJdaHWIvpAnUBKDxDYqBjNjPd7tsdgbMiKmhbi4aLEYc0s9uaroMe5nKK3wcs6NqOsHo4knddNamsI4aNmL22bK+2PQ0Ke9ui+jpyhIcy4LusNLH9za3dWI+j2mN+YE6VC/GiQJ5G5j0SbuaCN/313dsZqpbmdLnRfNBeHuVeVJGtV703fVO7BisahTsapW8vWrgysa25bS3gBsHP8CPTfOSw==
+sidebar_class_name: "get api-method"
+info_path: site/openapi/docSpace/API Backend/Usage API/asc-files
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Gets web plugins by name specified in request"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/settings/webplugins/{name}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Gets web plugins by name specified in request
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"name","in":"path","description":"Name","required":true,"schema":{"type":"string","example":"D'angelo Tremblay"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Web plugin","content":{"text/plain":{"schema":{"type":"object","properties":{"name":{"type":"string","description":"Name","nullable":true,"example":"Royal Satterfield"},"version":{"type":"string","description":"Version","nullable":true,"example":"some text"},"description":{"type":"string","description":"Description","nullable":true,"example":"some text"},"license":{"type":"string","description":"License","nullable":true,"example":"some text"},"author":{"type":"string","description":"Author","nullable":true,"example":"some text"},"homePage":{"type":"string","description":"Home page","nullable":true,"example":"some text"},"pluginName":{"type":"string","description":"PluginName","nullable":true,"example":"some text"},"scopes":{"type":"string","description":"Scopes","nullable":true,"example":"some text"},"image":{"type":"string","description":"Image","nullable":true,"example":"some text"},"createBy":{"type":"object","properties":{"id":{"type":"string","format":"uuid","example":"{00000000-0000-0000-0000-000000000000}"},"displayName":{"type":"string","nullable":true,"example":"Mike Zanyatski"},"title":{"type":"string","nullable":true,"example":"Manager"},"avatar":{"type":"string","nullable":true,"example":"some text"},"avatarOriginal":{"type":"string","nullable":true,"example":"some text"},"avatarMax":{"type":"string","nullable":true,"example":"some text"},"avatarMedium":{"type":"string","nullable":true,"example":"some text"},"avatarSmall":{"type":"string","nullable":true,"example":"url to small avatar"},"profileUrl":{"type":"string","nullable":true,"example":"some text"},"hasAvatar":{"type":"boolean","example":true},"isAnonim":{"type":"boolean","example":true}},"additionalProperties":false,"title":"ASC.Web.Api.Models.EmployeeDto"},"createOn":{"type":"string","description":"Create on","format":"date-time","example":"2008-04-10T06:30:00.0000000+04:00"},"enabled":{"type":"boolean","description":"Enabled","example":true},"system":{"type":"boolean","description":"System","example":true},"url":{"type":"string","description":"Url","nullable":true,"example":"some text"},"settings":{"type":"string","description":"Settings","nullable":true,"example":"some text"}},"additionalProperties":false,"title":"ASC.Web.Api.ApiModels.ResponseDto.WebPluginDto"}},"application/json":{"schema":{"type":"object","properties":{"name":{"type":"string","description":"Name","nullable":true,"example":"Royal Satterfield"},"version":{"type":"string","description":"Version","nullable":true,"example":"some text"},"description":{"type":"string","description":"Description","nullable":true,"example":"some text"},"license":{"type":"string","description":"License","nullable":true,"example":"some text"},"author":{"type":"string","description":"Author","nullable":true,"example":"some text"},"homePage":{"type":"string","description":"Home page","nullable":true,"example":"some text"},"pluginName":{"type":"string","description":"PluginName","nullable":true,"example":"some text"},"scopes":{"type":"string","description":"Scopes","nullable":true,"example":"some text"},"image":{"type":"string","description":"Image","nullable":true,"example":"some text"},"createBy":{"type":"object","properties":{"id":{"type":"string","format":"uuid","example":"{00000000-0000-0000-0000-000000000000}"},"displayName":{"type":"string","nullable":true,"example":"Mike Zanyatski"},"title":{"type":"string","nullable":true,"example":"Manager"},"avatar":{"type":"string","nullable":true,"example":"some text"},"avatarOriginal":{"type":"string","nullable":true,"example":"some text"},"avatarMax":{"type":"string","nullable":true,"example":"some text"},"avatarMedium":{"type":"string","nullable":true,"example":"some text"},"avatarSmall":{"type":"string","nullable":true,"example":"url to small avatar"},"profileUrl":{"type":"string","nullable":true,"example":"some text"},"hasAvatar":{"type":"boolean","example":true},"isAnonim":{"type":"boolean","example":true}},"additionalProperties":false,"title":"ASC.Web.Api.Models.EmployeeDto"},"createOn":{"type":"string","description":"Create on","format":"date-time","example":"2008-04-10T06:30:00.0000000+04:00"},"enabled":{"type":"boolean","description":"Enabled","example":true},"system":{"type":"boolean","description":"System","example":true},"url":{"type":"string","description":"Url","nullable":true,"example":"some text"},"settings":{"type":"string","description":"Settings","nullable":true,"example":"some text"}},"additionalProperties":false,"title":"ASC.Web.Api.ApiModels.ResponseDto.WebPluginDto"}},"text/json":{"schema":{"type":"object","properties":{"name":{"type":"string","description":"Name","nullable":true,"example":"Royal Satterfield"},"version":{"type":"string","description":"Version","nullable":true,"example":"some text"},"description":{"type":"string","description":"Description","nullable":true,"example":"some text"},"license":{"type":"string","description":"License","nullable":true,"example":"some text"},"author":{"type":"string","description":"Author","nullable":true,"example":"some text"},"homePage":{"type":"string","description":"Home page","nullable":true,"example":"some text"},"pluginName":{"type":"string","description":"PluginName","nullable":true,"example":"some text"},"scopes":{"type":"string","description":"Scopes","nullable":true,"example":"some text"},"image":{"type":"string","description":"Image","nullable":true,"example":"some text"},"createBy":{"type":"object","properties":{"id":{"type":"string","format":"uuid","example":"{00000000-0000-0000-0000-000000000000}"},"displayName":{"type":"string","nullable":true,"example":"Mike Zanyatski"},"title":{"type":"string","nullable":true,"example":"Manager"},"avatar":{"type":"string","nullable":true,"example":"some text"},"avatarOriginal":{"type":"string","nullable":true,"example":"some text"},"avatarMax":{"type":"string","nullable":true,"example":"some text"},"avatarMedium":{"type":"string","nullable":true,"example":"some text"},"avatarSmall":{"type":"string","nullable":true,"example":"url to small avatar"},"profileUrl":{"type":"string","nullable":true,"example":"some text"},"hasAvatar":{"type":"boolean","example":true},"isAnonim":{"type":"boolean","example":true}},"additionalProperties":false,"title":"ASC.Web.Api.Models.EmployeeDto"},"createOn":{"type":"string","description":"Create on","format":"date-time","example":"2008-04-10T06:30:00.0000000+04:00"},"enabled":{"type":"boolean","description":"Enabled","example":true},"system":{"type":"boolean","description":"System","example":true},"url":{"type":"string","description":"Url","nullable":true,"example":"some text"},"settings":{"type":"string","description":"Settings","nullable":true,"example":"some text"}},"additionalProperties":false,"title":"ASC.Web.Api.ApiModels.ResponseDto.WebPluginDto"}}}},"401":{"description":"Unauthorized"},"403":{"description":"Forbidden"}}}
+>
+  
+</StatusCodes>
+
+
+      

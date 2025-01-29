@@ -1,0 +1,63 @@
+---
+id: get-the-auto-clearing-setting-properties
+title: "Get the auto-clearing setting properties"
+description: "Returns the auto-clearing setting properties."
+sidebar_label: "Get the auto-clearing setting properties"
+hide_title: true
+hide_table_of_contents: true
+api: eJyVVMFu2zAM/RVBZ7VO0+6SW9EVWTEMG5oUOwQ5KA4Tq7ElTaLTZUb+faTlJE67At0lkUjxkXx8dCNRr6MczeTKlBCzCSAaS5a5khHyOhjckbeRtzUWLpg/Go2zX0AvIXBUoJNU8oXegZzvKWoJMQ/G8zM5ko+AdbBRYAFC1+gu8hJ0oAwipkzCB+choIF4SUABonc2ApXUyOFgwH/niNMPIBFQ7iyCRY7X3pcmbwvPniODNDLmBVSaT7jzQLBu8Qw5UmAPhbwPkRp3d5TKPvne84VzbJN7Jce67zCUdk3cKLlyodKYTNdDMoCtK+bsu4WfABuyTF8cn7heMn6jkotkbY9snhYBoLu9IXd2JS5Eh6bEkC4HQCWuk6sNVeIm+RKQEp/4ekKeyz31gQZL7qDX8GeNmnzsvRlcvZ3Fk9WdLGDZYlRA1yV51tByqamhkcy0N9nwcpAljXXzihmPkadoay9PcpvwaBL7/xTdkWpC/Qo7ijRcS5HcSlpddW2cYtvijF25Nrxr9M5VVW0po5hA2EIQj/eTqbj98UAgdI2px1IjRORBexex0q18uhxjwA8pW76aXHOS539vSNc8wm/MfKlNq8E6lIya+J4xM/SSGGcZMuctvd1mK9nnnURVUF8c1TQLHeEplPs9m3/VEHj36bilgvSCSZvNKVtxWP9GbmgAxHWeg+eBb3VZp9G8Wjn+MhzFMb6fpiqK82lu2ml2B0Y/uOyuh30+WNWVwL979U5I0yStUGOH98n1bsRRTek1szynPfgLm93FPQ==
+sidebar_class_name: "get api-method"
+info_path: site/openapi/workspace/API Backend/Usage API/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get the auto-clearing setting properties"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/files/settings/autocleanup"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns the auto-clearing setting properties.
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"The auto-clearing setting properties","content":{"application/json":{"schema":{"type":"object","properties":{"IsAutoCleanUp":{"type":"boolean"},"Gap":{"type":"integer","format":"int32","enum":["OneWeek","TwoWeeks","OneMonth","TwoMonths","ThreeMonths"],"description":"[1 - OneWeek, 2 - TwoWeeks, 3 - OneMonth, 4 - TwoMonths, 5 - ThreeMonths]"}},"title":"AutoCleanUpData"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

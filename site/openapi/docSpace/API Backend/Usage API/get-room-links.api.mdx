@@ -1,0 +1,71 @@
+---
+id: get-room-links
+title: "Get room links"
+description: "Returns the links of a room with the ID specified in the request."
+sidebar_label: "Get room links"
+hide_title: true
+hide_table_of_contents: true
+api: eJztWd1P4zgQ/1esPN1JvqZfu0DfELuL0HG3iI+7B1StTOJSL4mdtZ0CG/V/vxnbSZO2LJzEY16IPZ4Zz/zmC0wVWXZvotlt9EVk3JCYXCqVm2hOI1VwzaxQ8iyNZtE9t3hyLuSDiWhUMM1ybrlG2SqSsAEmkcKRkLAqmF3CWvMfpdAcFFhdchqZZMlzFs2qyD4XTkJafs81sC6Uzpn1pMkYCPyJ5UUGTAfjg/WaNpc0ZgycjnDhj5Lr56h9g5L868JZx2WZo4tnciWscwkYPz+B9ZJl6Gowxlgt5D2cpdwkWhSOcxbdbuTIH2SzoaTWAeR6OW9b3r4RPQiGDOloc+kGga1bh1uXjV66ZbhGbcK6G4+vTgYulIMTpfnguBB/qZRnZnDJTaGk4Z+sGiB813j9GkV1ODGI2ng4xE/XFoScGJ6UWthnIqSPlccxUeCAtC6m/MnGRcYwINVurNXdd55YTB6NuWWFv5ElCTdmf8T+BhIIXHKW/gt312v3wWg5df8wjaqQthL8ERYnKs/RJopZnX0Ba/H4pDRW5UCxDm506jjNhUuGVFgf+gv1yPWNAY7X8wKtg6Dgh5LGRqDgmjCZkkck+LNAxo233BH8khLvA5D8ArnQF8eDC0qCT0AJK0oa54CIa4JxAdm2o8jvtmTh9pQ0fqNyDCzDDSSzxwCzzK8oacAAoluTEjbdFHch6iY3HdMJndIP9CM9oIf0iI6A+NaU92iO9qA4biCcdLCbtmD70ELsYxurgy2MDneBOdoCZDRsYzEavQzCryrwKpSNo10tmUa0IoOL9Fph2ssyy9gdyvom2aitEKloNhpPprROQshGlXOCpQYW3CmVcSa9JDTJSJhzlTxgw23KruZpKV6wzHDH/fVRQiB+yexUQ50ziVgcN9X6qoQpXcG7RrO3ul2ZbToxdiXYnmpVFvDd9L5wcKFFzvRzh/31Ig3pi59Nw0bZVjslGewpcTcD2X0p6RrQ6cZBYI9FmCSeSnhbe7donOf7iuaNReK9Ge26MN6YP9ln8fRN9r0pn69a4cXUYymWigKFF63+7lLtf46nplJg41UXRSYS50f83ah+vPTjpR8v/Xjpx0s/Xt5jvLi/W/q50s+Vfq70c6WfK/1ceZe5gsqnw9Hua9qNZKVdKi1+QsI7pskuEzTIO5GmXDoj67c3l4fMJN9Qw7cHjoRI+9Hi2k00Rwy2Xu+4LbU0xC65w8wQtSCMaOwZj8Iu3cHZJ2IKnoiF4CmBJos0fL2FdjUA5TkHi8M7sHv+tUvYxKwQ8XgwjBeITYwaTVyJdB1n4Z0YAr6qH4lLnYHM0tpiFseZSli2VMbODodH43gnX87xnHjxCH2qIbjC+RxGcAeIprTBqD85vgWHB+MOW3guTpR6ED4B8DnTSW/HGnjRdm/PaoyhKsDgnLnfE4LyU249krXHHTeqzfPou4QheNh6aAWjHK5ViMktug+cEBV8VA9+uMjAd+Ze6L2pgCnijyJVdccMv9HZeo1k/5aOIUuFwRafNgXhkN59gl+xrETDXKRWMNT8YNin4UV8frsM/yz4nbzkaR1g+dy+s7YKfFvPgWsJ9YDTAW73B9j8C9sSaWudt5L79PM1cGGudNPJJ05YoN69hmzlmb8bf2LH3CtRVT5XAfaa3x+9KBF8a1xGB6DT/Ac6sJPC
+sidebar_class_name: "get api-method"
+info_path: site/openapi/docSpace/API Backend/Usage API/asc-files
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get room links"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/files/rooms/{id}/links"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns the links of a room with the ID specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"id","in":"path","required":true,"schema":{"type":"integer","format":"int32","example":727}},{"name":"RoomLinks.type","in":"query","schema":{"oneOf":[{"enum":["Invitation","External"],"type":"string","description":"[Invitation - Invitation, External - External]","example":"Invitation"},{"enum":[0,1],"type":"integer","description":"[0 - Invitation, 1 - External]","example":0}],"title":"ASC.Files.Core.ApiModels.ResponseDto.LinkType"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Room security information","content":{"text/plain":{"schema":{"type":"object","properties":{"access":{"oneOf":[{"enum":["None","ReadWrite","Read","Restrict","Varies","Review","Comment","FillForms","CustomFilter","RoomAdmin","Editing","PowerUser"],"type":"string","description":"[None - None, ReadWrite - Read and write, Read - Read, Restrict - Restrict, Varies - Varies, Review - Review, Comment - Comment, FillForms - Fill forms, CustomFilter - Custom filter, RoomAdmin - Room admin, Editing - Editing, PowerUser - Power user]","example":"None"},{"enum":[0,1,2,3,4,5,6,7,8,9,10,11],"type":"integer","description":"[0 - None, 1 - Read and write, 2 - Read, 3 - Restrict, 4 - Varies, 5 - Review, 6 - Comment, 7 - Fill forms, 8 - Custom filter, 9 - Room admin, 10 - Editing, 11 - Power user]","example":0}],"title":"ASC.Files.Core.Security.FileShare"},"sharedTo":{"nullable":true,"example":{"int":1234,"string":"some text","boolean":true}},"isLocked":{"type":"boolean","example":false},"isOwner":{"type":"boolean","example":true},"canEditAccess":{"type":"boolean","example":true},"subjectType":{"oneOf":[{"enum":["User","ExternalLink","Group","InvitationLink","PrimaryExternalLink"],"type":"string","description":"[User - User, ExternalLink - External link, Group - Group, InvitationLink - Invitation link, PrimaryExternalLink - Primary external link]","example":"User"},{"enum":[0,1,2,3,4],"type":"integer","description":"[0 - User, 1 - External link, 2 - Group, 3 - Invitation link, 4 - Primary external link]","example":0}],"title":"ASC.Files.Core.Security.SubjectType"}},"additionalProperties":false,"title":"ASC.Files.Core.ApiModels.ResponseDto.FileShareDto"}},"application/json":{"schema":{"type":"object","properties":{"access":{"oneOf":[{"enum":["None","ReadWrite","Read","Restrict","Varies","Review","Comment","FillForms","CustomFilter","RoomAdmin","Editing","PowerUser"],"type":"string","description":"[None - None, ReadWrite - Read and write, Read - Read, Restrict - Restrict, Varies - Varies, Review - Review, Comment - Comment, FillForms - Fill forms, CustomFilter - Custom filter, RoomAdmin - Room admin, Editing - Editing, PowerUser - Power user]","example":"None"},{"enum":[0,1,2,3,4,5,6,7,8,9,10,11],"type":"integer","description":"[0 - None, 1 - Read and write, 2 - Read, 3 - Restrict, 4 - Varies, 5 - Review, 6 - Comment, 7 - Fill forms, 8 - Custom filter, 9 - Room admin, 10 - Editing, 11 - Power user]","example":0}],"title":"ASC.Files.Core.Security.FileShare"},"sharedTo":{"nullable":true,"example":{"int":1234,"string":"some text","boolean":true}},"isLocked":{"type":"boolean","example":false},"isOwner":{"type":"boolean","example":true},"canEditAccess":{"type":"boolean","example":true},"subjectType":{"oneOf":[{"enum":["User","ExternalLink","Group","InvitationLink","PrimaryExternalLink"],"type":"string","description":"[User - User, ExternalLink - External link, Group - Group, InvitationLink - Invitation link, PrimaryExternalLink - Primary external link]","example":"User"},{"enum":[0,1,2,3,4],"type":"integer","description":"[0 - User, 1 - External link, 2 - Group, 3 - Invitation link, 4 - Primary external link]","example":0}],"title":"ASC.Files.Core.Security.SubjectType"}},"additionalProperties":false,"title":"ASC.Files.Core.ApiModels.ResponseDto.FileShareDto"}},"text/json":{"schema":{"type":"object","properties":{"access":{"oneOf":[{"enum":["None","ReadWrite","Read","Restrict","Varies","Review","Comment","FillForms","CustomFilter","RoomAdmin","Editing","PowerUser"],"type":"string","description":"[None - None, ReadWrite - Read and write, Read - Read, Restrict - Restrict, Varies - Varies, Review - Review, Comment - Comment, FillForms - Fill forms, CustomFilter - Custom filter, RoomAdmin - Room admin, Editing - Editing, PowerUser - Power user]","example":"None"},{"enum":[0,1,2,3,4,5,6,7,8,9,10,11],"type":"integer","description":"[0 - None, 1 - Read and write, 2 - Read, 3 - Restrict, 4 - Varies, 5 - Review, 6 - Comment, 7 - Fill forms, 8 - Custom filter, 9 - Room admin, 10 - Editing, 11 - Power user]","example":0}],"title":"ASC.Files.Core.Security.FileShare"},"sharedTo":{"nullable":true,"example":{"int":1234,"string":"some text","boolean":true}},"isLocked":{"type":"boolean","example":false},"isOwner":{"type":"boolean","example":true},"canEditAccess":{"type":"boolean","example":true},"subjectType":{"oneOf":[{"enum":["User","ExternalLink","Group","InvitationLink","PrimaryExternalLink"],"type":"string","description":"[User - User, ExternalLink - External link, Group - Group, InvitationLink - Invitation link, PrimaryExternalLink - Primary external link]","example":"User"},{"enum":[0,1,2,3,4],"type":"integer","description":"[0 - User, 1 - External link, 2 - Group, 3 - Invitation link, 4 - Primary external link]","example":0}],"title":"ASC.Files.Core.Security.SubjectType"}},"additionalProperties":false,"title":"ASC.Files.Core.ApiModels.ResponseDto.FileShareDto"}}}},"401":{"description":"Unauthorized"},"403":{"description":"Forbidden"}}}
+>
+  
+</StatusCodes>
+
+
+      

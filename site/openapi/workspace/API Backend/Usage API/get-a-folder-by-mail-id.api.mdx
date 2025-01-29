@@ -1,0 +1,71 @@
+---
+id: get-a-folder-by-mail-id
+title: "Get a folder by mail ID"
+description: "Returns a user folder by the mail ID specified in the request."
+sidebar_label: "Get a folder by mail ID"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVMly2zAM/RUNz27kODn55iZu6um0k/Fy8vgAS7DFRCJZkkriavzvBUh5S50e6uqg4QI8PAIPaISHtRP9uahAlukXXeZonVh0hMOsttJv6K4Rg9oX2spf4KVWXxHIiH0srURHvJIdisWWvHJ0mZWGzURfjNHXVrkEktqhTVYBPVluEl9gwgGT0X3iDGZyJTFPpAoXFn/W6PwVIbfLzzonHo3ItPKoPC/BmFJmgU/65DhaI1xWYAW88huDFF8vnzDzhGOsNmi9RMe3HHmU8+qU7vfIiOxbf0nh1vTUbfiYjjNauYjS63b/hJgd3kkw/4lv5PqOU0estK2AwEVNZzc9OsE3qEzJVte9m1tBjB/BEoELAH5AhUfOzlup1ieWii3IcqZYDne6jg/+ONrZYIww1R7KSwBaCgVIdTmPS1FiL/07AkF46cOehcnKipD34EFEQd52r89oUEHbrpgHmAppSxIQawziAl/QJgUj095VNw2dzw0adevS5YaPxGEGTFioUYtnJ8H+dQT5DTfkKZlIEa87USL9U9/AjDthfOjx4S4Dhx7tbhlspUOQNh13uqpqRbySCdoXarjxcDJNBo8jCkVbF9NQgidYroTRzlcQWq5l8oCehtJhHlX7zj9J5dHEuXyWtSny+OZTU5K4mFptSw4TSzLn/JElFYX+bQ2OCkO7tjQ0aQt6FLs0zRIczmy53fIxhbM8s2n5AlbCkjM2X1CoYje2G/FMNeI0hrd9mjIxNi/rWMN3k2rb2XkMsgyN/6vt4khuD8MpU26Hd6VzdrHwyoOd/n1BCx1SHaQVzhqqm1rXsGbbCMlCYUWf6uw56Kxd8KN2V2pzRPBUcp32HfznV511aZqoYsrnzj5efeix13m05souiPVvYiR4KQ==
+sidebar_class_name: "get api-method"
+info_path: site/openapi/workspace/API Backend/Usage API/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get a folder by mail ID"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/mail/userfolders/bymail"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns a user folder by the mail ID specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"mailId":{"description":"Mail ID","type":"integer"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"User folder","content":{"application/json":{"schema":{"type":"object","properties":{"Id":{"type":"integer","format":"uint32","example":"1234"},"ParentId":{"type":"integer","format":"uint32","example":"1234"},"Name":{"type":"string","example":"name"},"UnreadCount":{"type":"integer","format":"int32","example":"123"},"TotalCount":{"type":"integer","format":"int32","example":"123"},"UnreadChainCount":{"type":"integer","format":"int32","example":"123"},"TotalChainCount":{"type":"integer","format":"int32","example":"123"},"FolderCount":{"type":"integer","format":"int32","example":"123"}},"title":"MailUserFolderData"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      
