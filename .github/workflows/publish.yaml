@@ -1,0 +1,73 @@
+name: Publish
+
+run-name: "Publish (site_mode: ${{github.event.inputs.site_mode}})"
+
+on:
+  workflow_dispatch:
+    inputs:
+      site_mode:
+        description: Site mode
+        required: true
+        default: testing
+        type: choice
+        options:
+        #- development
+        - testing
+        #- production
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v4
+
+    - name: Install Dependencies
+      run: npm install
+
+    - name: Build Packages
+      run: NODE_OPTIONS="--max-old-space-size=12288" npm run build
+    
+    - name: Configure AWS Credentials
+      env:
+        mode: ${{github.event.inputs.site_mode}}
+        AWS_ACCESS_KEY_PROD: ${{secrets.AWS_ACCESS_KEY_PROD}}
+        AWS_SECRET_KEY_PROD: ${{secrets.AWS_SECRET_KEY_PROD}}
+        AWS_DISTRIBUTION_ID_PROD: ${{secrets.AWS_DISTRIBUTION_ID_PROD}}
+        AWS_ACCESS_KEY_TEST: ${{secrets.AWS_ACCESS_KEY_TEST}}
+        AWS_SECRET_KEY_TEST: ${{secrets.AWS_SECRET_KEY_TEST}}
+        AWS_DISTRIBUTION_ID_TEST: ${{secrets.AWS_DISTRIBUTION_ID_TEST}}
+      run: |
+        if [ "${mode}" = "production" ]; then
+          echo "AWS_BUCKET_URL=s3://api2static.onlyoffice.com" >> "$GITHUB_ENV"
+          echo "AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY_PROD}" >> "$GITHUB_ENV"
+          echo "AWS_SECRET_ACCESS_KEY=${AWS_SECRET_KEY_PROD}" >> "$GITHUB_ENV"
+          echo "AWS_REGION=us-west-2" >> "$GITHUB_ENV"
+          echo "AWS_DISTRIBUTION_ID=${AWS_DISTRIBUTION_ID_PROD}" >> "$GITHUB_ENV"
+        elif [ "${mode}" = "testing" ]; then
+          echo "AWS_BUCKET_URL=s3://api2static.teamlab.info" >> "$GITHUB_ENV"
+          echo "AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY_TEST}" >> "$GITHUB_ENV"
+          echo "AWS_SECRET_ACCESS_KEY=${AWS_SECRET_KEY_TEST}" >> "$GITHUB_ENV"
+          echo "AWS_DISTRIBUTION_ID=${AWS_DISTRIBUTION_ID_TEST}" >> "$GITHUB_ENV"
+          echo "AWS_REGION=us-east-1" >> "$GITHUB_ENV"
+        elif [ "${mode}" = "development" ]; then
+          echo "Development bucket dose not exist"
+          exit 1
+        else
+          echo "Invalid site mode: $m"
+          exit 1
+        fi
+
+    - name: Configure AWS Credentials
+      uses: aws-actions/configure-aws-credentials@v4
+      with:
+        aws-access-key-id: ${{env.AWS_ACCESS_KEY_ID}}
+        aws-secret-access-key: ${{env.AWS_SECRET_ACCESS_KEY}}
+        aws-region: ${{env.AWS_REGION}}
+
+    - name: Sync AWS Bucket
+      working-directory: build
+      run: aws s3 sync . ${{env.AWS_BUCKET_URL}} --delete
+
+    - name: Invalidate AWS CloudFront Cache
+      run: aws cloudfront create-invalidation --distribution-id ${{env.AWS_DISTRIBUTION_ID}} --paths '/*'
