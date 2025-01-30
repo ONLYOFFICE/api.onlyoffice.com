@@ -60,7 +60,7 @@ const config: Config = {
           } satisfies OpenApiPlugin.Options,
           docspace: {
             specPath: "openapi/docspace/docspace.json",
-            outputDir: "site/openapi/docSpace/API Backend/Usage API",
+            outputDir: "site/openapi/docspace/API Backend/Usage API",
             sidebarOptions: {
               groupPathsBy: "tag",
             },
