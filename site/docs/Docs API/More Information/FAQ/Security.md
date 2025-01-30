@@ -1,5 +1,5 @@
 ---
-order: -11
+sidebar_position: -11
 ---
 
 ## How to limit access to my Document Server?

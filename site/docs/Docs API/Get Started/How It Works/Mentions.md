@@ -1,5 +1,5 @@
 ---
-order: -16
+sidebar_position: -16
 ---
 
 The reference figure and the steps below explain the process of mentioning users in comments in ONLYOFFICE Docs.

@@ -1,5 +1,5 @@
 ---
-order: -4
+sidebar_position: -4
 ---
 
 Starting from version 8.1, you can add custom functions to the spreadsheets using the **Macros** plugin:

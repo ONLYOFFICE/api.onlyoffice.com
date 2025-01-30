@@ -1,5 +1,5 @@
 ---
-order: -2
+sidebar_position: -2
 ---
 
 The events from the [Actions](./Plugin%20Message.md#actions) collection are processed on the portal side. The specified actions are performed depending on the set of values:

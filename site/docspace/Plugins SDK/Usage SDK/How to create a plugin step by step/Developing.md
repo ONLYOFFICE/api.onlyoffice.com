@@ -1,5 +1,5 @@
 ---
-order: -3
+sidebar_position: -3
 ---
 
 Now that all the preparation work is done, you can start developing your plugin.

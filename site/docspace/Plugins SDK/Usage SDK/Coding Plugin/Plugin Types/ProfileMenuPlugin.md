@@ -1,5 +1,5 @@
 ---
-order: -3
+sidebar_position: -3
 ---
 
 The plugin that is embedded in the profile menu.

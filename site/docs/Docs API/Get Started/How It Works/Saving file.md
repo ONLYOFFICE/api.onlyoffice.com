@@ -1,5 +1,5 @@
 ---
-order: -20
+sidebar_position: -20
 ---
 
 The reference figure and the steps below explain the process of saving a document in ONLYOFFICE Docs.

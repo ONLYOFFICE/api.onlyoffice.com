@@ -1,5 +1,5 @@
 ---
-order: -1
+sidebar_position: -1
 ---
 
 The reference figure and the steps below explain the process of setting the avatars for the users in ONLYOFFICE Docs.

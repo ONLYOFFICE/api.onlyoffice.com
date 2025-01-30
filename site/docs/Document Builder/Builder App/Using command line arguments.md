@@ -1,5 +1,5 @@
 ---
-order: -2
+sidebar_position: -2
 ---
 
 If you need to pass some arguments to the created document using the command line, you can do that with **Document Builder**. To do that you will need to modify the code of your **.docbuilder** script file and include the arguments you need into the command running **Document Builder**.

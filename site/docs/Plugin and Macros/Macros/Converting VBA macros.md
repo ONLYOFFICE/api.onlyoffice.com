@@ -1,5 +1,5 @@
 ---
-order: -2
+sidebar_position: -2
 ---
 
 ONLYOFFICE macros are different from Microsoft macros due to the reason the latter use the Visual Basic for Applications (VBA) scripting language. JavaScript is more flexible and can be used with any platform (which is important as ONLYOFFICE editors are supported on Windows, Linux and macOS platforms).

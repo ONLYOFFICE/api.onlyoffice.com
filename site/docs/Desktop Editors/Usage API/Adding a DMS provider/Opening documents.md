@@ -1,5 +1,5 @@
 ---
-order: -4
+sidebar_position: -4
 ---
 
 After [registering](./Login%20and%20logout.md) in the cloud, you can start working on documents stored there.

@@ -1,5 +1,5 @@
 ---
-order: -2
+sidebar_position: -2
 ---
 
 The online office does not support editing files in the legacy binary formats such as *doc*, *ppt*, and *xls*. However, it can convert documents in such formats to the *docx*, *pptx*, and *xlsx* formats accordingly to let the users edit their contents in the online office.

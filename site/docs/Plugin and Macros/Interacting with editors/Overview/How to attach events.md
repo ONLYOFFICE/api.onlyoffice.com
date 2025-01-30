@@ -1,5 +1,5 @@
 ---
-order: -1
+sidebar_position: -1
 ---
 
 There are two options to attach events from the editor.

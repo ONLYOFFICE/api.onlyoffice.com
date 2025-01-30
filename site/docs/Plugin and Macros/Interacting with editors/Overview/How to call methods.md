@@ -1,5 +1,5 @@
 ---
-order: -3
+sidebar_position: -3
 ---
 
 To execute certain editor methods using the plugin, define the **executeMethod** method.

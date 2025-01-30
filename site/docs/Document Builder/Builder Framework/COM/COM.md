@@ -1,5 +1,5 @@
 ---
-order: -5
+sidebar_position: -5
 ---
 
 For the integration of ONLYOFFICE Document Builder into any application, the COM doctrenderer library is used.

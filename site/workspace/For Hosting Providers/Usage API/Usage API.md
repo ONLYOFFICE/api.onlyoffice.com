@@ -1,5 +1,5 @@
 ---
 chapter:
   tableOfContents: true
-order: -2
+sidebar_position: -2
 ---

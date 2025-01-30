@@ -1,5 +1,5 @@
 ---
-order: -2
+sidebar_position: -2
 ---
 
 To protect your local documents, spreadsheets and presentations, encrypt them with a simple symmetric encryption plugin. The steps below explain how to do it.

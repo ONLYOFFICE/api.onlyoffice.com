@@ -1,5 +1,5 @@
 ---
-order: -3
+sidebar_position: -3
 ---
 
 You can generate a developer access token that allows you to make API calls without authorization. To obtain access tokens for other users, apply the standard OAuth flow.

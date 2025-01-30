@@ -1,5 +1,5 @@
 ---
-order: -5
+sidebar_position: -5
 ---
 
 The plugin can be accessed via the context menu.

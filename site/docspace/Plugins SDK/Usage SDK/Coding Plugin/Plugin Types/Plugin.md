@@ -1,5 +1,5 @@
 ---
-order: -9
+sidebar_position: -9
 ---
 
 The default plugin.

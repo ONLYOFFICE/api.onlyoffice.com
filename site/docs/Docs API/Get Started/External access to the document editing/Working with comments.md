@@ -1,5 +1,5 @@
 ---
-order: -3
+sidebar_position: -3
 ---
 
 Collects all the comments from the document and displays them in the custom interface.

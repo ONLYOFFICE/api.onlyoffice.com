@@ -1,5 +1,5 @@
 ---
-order: -4
+sidebar_position: -4
 ---
 
 **Builder.App** is the *docbuilder.exe* executable file which can be run from your application with the *.docbuilder* script file as a parameter to it.

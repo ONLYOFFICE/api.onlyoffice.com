@@ -1,5 +1,5 @@
 ---
-order: -2
+sidebar_position: -2
 ---
 
 When the user goes to the authorization link, four scenarios are possible.

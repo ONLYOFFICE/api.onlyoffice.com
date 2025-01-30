@@ -1,5 +1,5 @@
 ---
-order: -7
+sidebar_position: -7
 ---
 
 ## How to whitelabel ONLYOFFICE Docs?

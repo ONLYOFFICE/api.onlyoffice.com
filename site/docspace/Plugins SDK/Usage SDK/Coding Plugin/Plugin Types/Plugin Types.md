@@ -1,5 +1,5 @@
 ---
-order: -5
+sidebar_position: -5
 ---
 
 The following plugin types can be distinguished:

@@ -1,5 +1,5 @@
 ---
-order: -3
+sidebar_position: -3
 ---
 
 The reference figure and the steps below explain the process of protecting ranges in spreadsheets in ONLYOFFICE Docs.

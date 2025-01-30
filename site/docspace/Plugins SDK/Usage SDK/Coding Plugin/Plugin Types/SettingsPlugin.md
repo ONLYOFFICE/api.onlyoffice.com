@@ -1,5 +1,5 @@
 ---
-order: -8
+sidebar_position: -8
 ---
 
 The plugin that manages settings for the administrator or owner.

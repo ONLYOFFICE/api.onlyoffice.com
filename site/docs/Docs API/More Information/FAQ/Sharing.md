@@ -1,5 +1,5 @@
 ---
-order: -10
+sidebar_position: -10
 ---
 
 ## How to open a document with "track changes" mode enabled?

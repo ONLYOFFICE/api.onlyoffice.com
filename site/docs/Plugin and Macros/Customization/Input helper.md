@@ -1,5 +1,5 @@
 ---
-order: -2
+sidebar_position: -2
 ---
 
 Plugins can create its own window that appears and disappears when you type text. Its location is tied to the cursor.

@@ -1,5 +1,5 @@
 ---
-order: -2
+sidebar_position: -2
 ---
 
 Starting from version 8.1, you can get the viewport settings of the desktop editors. This method is used to set the space between the top panel and the Desktop Editors widget.

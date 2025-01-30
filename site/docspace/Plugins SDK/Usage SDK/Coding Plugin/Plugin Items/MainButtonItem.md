@@ -1,5 +1,5 @@
 ---
-order: -4
+sidebar_position: -4
 ---
 
 Describes an item that will be embedded in the **More** item of the main button menu. It is available only inside a room (folder) and is not available for the room list.

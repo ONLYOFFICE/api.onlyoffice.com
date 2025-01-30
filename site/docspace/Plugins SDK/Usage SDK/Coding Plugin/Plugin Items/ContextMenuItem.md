@@ -1,5 +1,5 @@
 ---
-order: -6
+sidebar_position: -6
 ---
 
 Describes an item that will be embedded in the **Actions** item of the file context menu.

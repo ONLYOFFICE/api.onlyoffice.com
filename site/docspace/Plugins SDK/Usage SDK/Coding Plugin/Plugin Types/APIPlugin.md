@@ -1,5 +1,5 @@
 ---
-order: -7
+sidebar_position: -7
 ---
 
 The plugin that is provided with the origin, proxy, and prefix to make requests to the portal server.

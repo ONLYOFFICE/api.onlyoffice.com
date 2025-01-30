@@ -1,5 +1,5 @@
 ---
-order: -12
+sidebar_position: -12
 ---
 
 ## I am new to ONLYOFFICE Docs API. Where should I start?

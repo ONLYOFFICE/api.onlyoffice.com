@@ -1,5 +1,5 @@
 ---
-order: -1
+sidebar_position: -1
 ---
 
 The standard version of the ONLYOFFICE API is designed to make it really easy to get data for an individual object and to browse connections between objects. It also includes a limited ability to retrieve data for several objects in a single request.

@@ -1,5 +1,5 @@
 ---
-order: -8
+sidebar_position: -8
 ---
 
 ## How to check how many connections I need?

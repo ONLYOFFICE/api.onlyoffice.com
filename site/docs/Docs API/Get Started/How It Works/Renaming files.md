@@ -1,5 +1,5 @@
 ---
-order: -15
+sidebar_position: -15
 ---
 
 The reference figure and the steps below explain the process of renaming a document in ONLYOFFICE Docs.

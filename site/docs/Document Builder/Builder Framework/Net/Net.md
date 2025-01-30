@@ -1,5 +1,5 @@
 ---
-order: -3
+sidebar_position: -3
 ---
 
 For the integration of ONLYOFFICE Document Builder into any application, the .Net doctrenderer library is used.

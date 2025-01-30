@@ -1,5 +1,5 @@
 ---
-order: -4
+sidebar_position: -4
 ---
 
 Plugins can be placed on the toolbar: create their own tabs and fill them, add buttons to the standard tabs.

@@ -1,5 +1,5 @@
 ---
-order: -3
+sidebar_position: -3
 ---
 
 There are two ways to launch the application on Windows: through the shortcut or the terminal.

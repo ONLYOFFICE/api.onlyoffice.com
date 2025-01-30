@@ -1,5 +1,5 @@
 ---
-order: -10
+sidebar_position: -10
 ---
 
 The reference figure and the steps below explain the process of setting a name to an anonymous user in ONLYOFFICE Docs.

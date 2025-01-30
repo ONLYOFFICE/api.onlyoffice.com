@@ -1,5 +1,5 @@
 ---
-order: -3
+sidebar_position: -3
 ---
 
 [ONLYOFFICE DocSpace](https://www.onlyoffice.com/docspace.aspx) is a collaborative cloud platform that allows users to edit and collaborate on documents, spreadsheets, presentations, and forms in customizable rooms. It provides the following features:

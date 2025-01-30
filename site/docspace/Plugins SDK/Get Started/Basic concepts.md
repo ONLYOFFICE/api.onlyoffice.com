@@ -1,5 +1,5 @@
 ---
-order: -2
+sidebar_position: -2
 ---
 
 **DocSpace Plugins SDK** allows developers to create their own plugins and add them to the DocSpace portal.

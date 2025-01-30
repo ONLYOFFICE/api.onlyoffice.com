@@ -1,5 +1,5 @@
 ---
-order: -4
+sidebar_position: -4
 ---
 
 For the interaction with the **document conversion service** the POST requests are used. The request parameters are entered in JSON format in the request body. The requests are sent to the `https://documentserver/converter` address where **documentserver** is the name of the server with the ONLYOFFICE Docs installed.

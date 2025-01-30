@@ -1,5 +1,5 @@
 ---
-order: -3
+sidebar_position: -3
 ---
 
 To run ONLYOFFICE Desktop Editors in debug mode, follow the instructions depending on the operating system you use:

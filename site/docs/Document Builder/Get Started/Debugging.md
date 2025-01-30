@@ -1,5 +1,5 @@
 ---
-order: -1
+sidebar_position: -1
 ---
 
 You can debug any Document Builder [component](../Get%20Started/Overview.md). To do this, follow the instructions below.

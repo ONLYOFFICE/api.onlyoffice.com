@@ -1,5 +1,5 @@
 ---
-order: -1
+sidebar_position: -1
 ---
 
 The **document editing service** informs the **document storage service** about the status of the document editing using the *callbackUrl* from [JavaScript API](../Get%20Started/Basic%20concepts.md). The **document editing service** use the POST request with the information in body.

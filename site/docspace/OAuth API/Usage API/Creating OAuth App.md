@@ -1,5 +1,5 @@
 ---
-order: -6
+sidebar_position: -6
 ---
 
 To create a new OAuth application on your portal:

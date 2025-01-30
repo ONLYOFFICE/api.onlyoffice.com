@@ -1,5 +1,5 @@
 ---
-order: -8
+sidebar_position: -8
 ---
 
 The reference figure and the steps below explain the process of comparing documents in ONLYOFFICE Docs.

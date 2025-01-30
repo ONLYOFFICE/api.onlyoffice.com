@@ -1,5 +1,5 @@
 ---
-order: -1
+sidebar_position: -1
 ---
 
 The list of changes for ONLYOFFICE Plugins and Macros API.

@@ -1,5 +1,5 @@
 ---
-order: -1
+sidebar_position: -1
 ---
 
 If you need to compare two documents, you can use **Document Builder**. The steps below will show you how to do it:

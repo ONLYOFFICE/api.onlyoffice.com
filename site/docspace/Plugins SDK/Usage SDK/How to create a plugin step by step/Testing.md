@@ -1,5 +1,5 @@
 ---
-order: -2
+sidebar_position: -2
 ---
 
 To check the plugin's functionality and fix any bugs that may arise, test the plugin:

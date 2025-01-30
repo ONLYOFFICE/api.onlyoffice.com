@@ -1,5 +1,5 @@
 ---
-order: -2
+sidebar_position: -2
 ---
 
 To develop a plugin for ONLYOFFICE web editors, follow the instructions below.

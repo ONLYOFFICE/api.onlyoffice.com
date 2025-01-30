@@ -1,5 +1,5 @@
 ---
-order: -1
+sidebar_position: -1
 ---
 
 Now that your plugin is tested and works properly, you can [add](../Adding%20Plugin.md#uploading-plugins) it to the DocSpace server version and start using it.

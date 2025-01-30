@@ -1,5 +1,5 @@
 ---
-order: -4
+sidebar_position: -4
 ---
 
 **Step 1**. Install all the necessary packages and programs

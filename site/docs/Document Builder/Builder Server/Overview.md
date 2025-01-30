@@ -1,5 +1,5 @@
 ---
-order: -5
+sidebar_position: -5
 ---
 
 To start integrating **ONLYOFFICE Document Builder** into your own application you need to do the following:

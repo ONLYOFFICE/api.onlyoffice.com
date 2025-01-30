@@ -1,5 +1,5 @@
 ---
-order: -3
+sidebar_position: -3
 ---
 
 The request result is returned in XML format. To receive a response in JSON format you need to specify the *Accept* header with the **application/json** value in the HTTP request (available from version 4.3). When forming the link to the resulting file, the same server name is used which was made the conversion request to.

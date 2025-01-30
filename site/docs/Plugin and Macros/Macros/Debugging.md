@@ -1,5 +1,5 @@
 ---
-order: -3
+sidebar_position: -3
 ---
 
 To debug ONLYOFFICE macros, follow the instructions below.

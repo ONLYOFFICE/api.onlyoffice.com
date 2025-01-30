@@ -1,5 +1,5 @@
 ---
-order: -13
+sidebar_position: -13
 ---
 
 The steps below explain the process of connecting several editors to the same html page in ONLYOFFICE Docs.

@@ -1,5 +1,5 @@
 ---
-order: -7
+sidebar_position: -7
 ---
 
 The desktop app can send text messages to be displayed to the user. To do so, declare the function:

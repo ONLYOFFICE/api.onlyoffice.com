@@ -1,5 +1,5 @@
 ---
-order: -11
+sidebar_position: -11
 ---
 
 To prevent the substitution of important parameters in ONLYOFFICE Docs requests an encrypted signature is added to it in the form of **token**.

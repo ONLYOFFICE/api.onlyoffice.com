@@ -1,5 +1,5 @@
 ---
-order: -1
+sidebar_position: -1
 ---
 
 ONLYOFFICE provides a style sheet for different interface elements. To adjust your plugin interface to the ONLYOFFICE style, connect the [plugin.css](https://onlyoffice.github.io/sdkjs-plugins/v1/plugins.css) to the [index.html](./Entry%20point.md) file with the following link:

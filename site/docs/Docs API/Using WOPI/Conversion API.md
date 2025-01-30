@@ -1,5 +1,5 @@
 ---
-order: -3
+sidebar_position: -3
 ---
 
 In order to convert different file formats in the online office, the POST request should be used. These requests are sent to the */cool/convert-to/\<format>&\<lang=xx-XX>* or */lool/convert-to/\<format>&\<lang=xx-XX>* endpoints.

@@ -1,5 +1,5 @@
 ---
-order: -3
+sidebar_position: -3
 ---
 
 After initializing **document editor** you will get the object that can be used to call the methods.

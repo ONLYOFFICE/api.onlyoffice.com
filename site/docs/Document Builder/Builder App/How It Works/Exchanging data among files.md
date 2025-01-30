@@ -1,5 +1,5 @@
 ---
-order: -2
+sidebar_position: -2
 ---
 
 There is always a chance that you will need to exchange the data among the documents. For example, you might need to open some document, copy style from it, or some data values, close the document, create a new one and paste the copied data to it or use it to form some report.

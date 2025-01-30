@@ -5,7 +5,7 @@ export function data(): Data {
   const c = Config.shared
   return {
     layout: null,
-    order: -2,
+    sidebar_position: -2,
     url: c.storybookUrl,
     blank: true,
   }

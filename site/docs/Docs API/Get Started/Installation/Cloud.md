@@ -1,5 +1,5 @@
 ---
-order: -2
+sidebar_position: -2
 ---
 
 To install ONLYOFFICE Docs in the cloud:

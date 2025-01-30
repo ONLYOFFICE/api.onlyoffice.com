@@ -1,5 +1,5 @@
 ---
-order: -2
+sidebar_position: -2
 ---
 
 Every request to the API supports a certain number of parameters sent in the URL.

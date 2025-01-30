@@ -1,5 +1,5 @@
 ---
-order: -2
+sidebar_position: -2
 ---
 
 **ONLYOFFICE Desktop Editors** allows developers to add specific features which are not directly related to the OOXML format using plugins. You can use ready-made plugins from [ONLYOFFICE App Directory](https://www.onlyoffice.com/en/app-directory) or create your own ones using our [Plugins and macros API documentation](../../Plugin%20and%20Macros/Get%20Started/Getting%20started.md).

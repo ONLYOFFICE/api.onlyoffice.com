@@ -1,5 +1,5 @@
 ---
-order: -1
+sidebar_position: -1
 ---
 
 An HTTP header is required to pass the authentication when performing the API request. The authentication requires a token to be used in the **Authorization** header of the HTTP request.

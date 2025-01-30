@@ -1,5 +1,5 @@
 ---
-order: -1
+sidebar_position: -1
 ---
 
 The following plugin UI components are available for DocSpace plugins:

@@ -1,5 +1,5 @@
 ---
-order: -3
+sidebar_position: -3
 ---
 
 ONLYOFFICE Docs can be integrated into some of the existing document management systems using plugins. These plugins will add the document editing features into the document management system you use quickly and easily without having to write your own code.

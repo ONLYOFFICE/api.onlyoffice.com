@@ -1,5 +1,5 @@
 ---
-order: -17
+sidebar_position: -17
 ---
 
 The reference figure and the steps below explain the process of working with links in ONLYOFFICE Docs.

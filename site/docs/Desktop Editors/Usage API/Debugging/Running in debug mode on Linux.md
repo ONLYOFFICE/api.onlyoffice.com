@@ -1,5 +1,5 @@
 ---
-order: -2
+sidebar_position: -2
 ---
 
 Use the terminal to run ONLYOFFICE Desktop Editors in debug mode on Linux:

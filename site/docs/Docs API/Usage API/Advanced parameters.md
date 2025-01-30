@@ -1,5 +1,5 @@
 ---
-order: -5
+sidebar_position: -5
 ---
 
 The parameters, which can be changed for ONLYOFFICE Docs, can be subdivided into the following main sections:

@@ -1,5 +1,5 @@
 ---
-order: -6
+sidebar_position: -6
 ---
 
 Develop a plugin. Follow the plugin structure described [here](../Plugin%20Structure.md).

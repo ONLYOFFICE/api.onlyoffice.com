@@ -1,5 +1,5 @@
 ---
-order: -7
+sidebar_position: -7
 ---
 
 The viewing opening mode allows the user to view the document only without modifying its data. In order to enable this mode, the [editorConfig.mode](../../Usage%20API/Config/Editor/Editor.md#mode) parameter must be set to **view**.

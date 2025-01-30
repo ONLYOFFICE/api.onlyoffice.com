@@ -1,5 +1,5 @@
 ---
-order: -6
+sidebar_position: -6
 ---
 
 To restrict public access to your data, a secure exchange of requests between an online office and an integrator must be configured.

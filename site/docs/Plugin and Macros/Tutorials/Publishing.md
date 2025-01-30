@@ -1,5 +1,5 @@
 ---
-order: -2
+sidebar_position: -2
 ---
 
 If you want your plugin to be available to other users in the ONLYOFFICE Plugin Marketplace, suggest it for publishing:

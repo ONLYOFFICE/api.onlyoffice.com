@@ -1,5 +1,5 @@
 ---
-order: -8
+sidebar_position: -8
 ---
 
 Once your DMS is [added](./Adding%20a%20DMS%20provider.md) to the connection list, configure the DMS/Desktop Editors interaction:

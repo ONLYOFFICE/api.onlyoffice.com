@@ -1,5 +1,5 @@
 ---
-order: -2
+sidebar_position: -2
 ---
 
 All the plugins are created in English by default. If you want them to be available in your language, you can add translations to them.

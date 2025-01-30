@@ -1,5 +1,5 @@
 ---
-order: -5
+sidebar_position: -5
 ---
 
 Describes an item that will be embedded in the file info panel as a separate tab.

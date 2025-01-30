@@ -1,5 +1,5 @@
 ---
-order: -1
+sidebar_position: -1
 ---
 
 You can add a plugin to the **Cloud service** as an **extension**. It can be done for Google Chrome, Opera, or Microsoft Edge browsers.

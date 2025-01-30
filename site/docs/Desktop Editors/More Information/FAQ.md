@@ -1,5 +1,5 @@
 ---
-order: -1
+sidebar_position: -1
 ---
 
 ## How to install ONLYOFFICE Desktop Editors?
