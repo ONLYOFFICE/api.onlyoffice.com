@@ -177,8 +177,9 @@ const config: Config = {
         },
         {
           href: 'https://github.com/ONLYOFFICE',
-          label: 'GitHub',
           position: 'right',
+          className: 'header-github-link',
+          'aria-label': 'GitHub repository',
         },
       ],
     },
