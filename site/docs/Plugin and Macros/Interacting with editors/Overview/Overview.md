@@ -1,5 +1,5 @@
 ---
-sidebar_position: -3
+sidebar_position: -2
 ---
 
 The plugins and macros can interact with the editors using different events, methods, and commands. Here you will find how to use them.

@@ -1,5 +1,6 @@
 ---
 sidebar_label: .Net example
+sidebar_position: -8
 ---
 
 ## Overview
