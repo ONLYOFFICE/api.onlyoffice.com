@@ -15,6 +15,13 @@
   --ifm-color-primary-lightest: #3cad6e;
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+
+  /* START STATUS OPENAPI */
+  --ifm-color-get: #05b870;
+  --ifm-color-post: #19abff;
+  --ifm-color-delete: #f05151;
+  --ifm-color-put-patch: #f46d2a;
+  /* END STATUS OPENAPI */
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
@@ -27,55 +34,78 @@
   --ifm-color-primary-lighter: #32d8b4;
   --ifm-color-primary-lightest: #4fddbf;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+
+  /* START STATUS OPENAPI */
+  --ifm-color-get: #0f6c47;
+  --ifm-color-post: #126fa5;
+  --ifm-color-delete: #af2323;
+  --ifm-color-put-patch: #9e461a;
+  /* END STATUS OPENAPI */
 }
 
-/* Sidebar Method labels */
-.api-method>.menu__link {
-  align-items: center;
-  justify-content: start;
+/* START OPENAPI */
+.api-method {
+  > .menu__link {
+    align-items: center;
+    justify-content: start;
+    &::after {
+      width: 40px;
+      height: 20px;
+      font-size: 0.75rem;
+      line-height: 20px;
+      text-transform: uppercase;
+      font-weight: 600;
+      border-radius: 0.25rem;
+      align-content: start;
+      margin-left: auto;
+      text-align: right;
+      flex-shrink: 0;
+      border-color: transparent;
+    }
+  }
+}
+.get {
+  > .menu__link {
+    &::after {
+      content: "get";
+      color: var(--ifm-color-get);
+    }
+  }
+}
+.post {
+  > .menu__link {
+    &::after {
+      content: "post";
+      color: var(--ifm-color-post);
+    }
+  }
+}
+.delete {
+  > .menu__link {
+    &::after {
+      content: "del";
+      color: var(--ifm-color-delete);
+    }
+  }
+}
+.put {
+  > .menu__link {
+    &::after {
+      content: "put";
+      color: var(--ifm-color-put-patch);
+    }
+  }
+}
+.patch {
+  > .menu__link {
+    &::after {
+      content: "patch";
+      color: var(--ifm-color-put-patch);
+    }
+  }
 }
 
-.api-method>.menu__link::before {
-  width: 50px;
-  height: 20px;
-  font-size: 12px;
-  line-height: 20px;
-  text-transform: uppercase;
-  font-weight: 600;
-  border-radius: 0.25rem;
-  border: 1px solid;
-  margin-right: var(--ifm-spacing-horizontal);
-  text-align: center;
-  flex-shrink: 0;
-  border-color: transparent;
-  color: white;
-}
-
-.get>.menu__link::before {
-  content: "get";
-  background-color: var(--ifm-color-primary);
-}
-
-.put>.menu__link::before {
-  content: "put";
-  background-color: var(--openapi-code-blue);
-}
-
-.post>.menu__link::before {
-  content: "post";
-  background-color: var(--openapi-code-green);
-}
-
-.delete>.menu__link::before {
-  content: "del";
-  background-color: var(--openapi-code-red);
-}
-
-.patch>.menu__link::before {
-  content: "patch";
-  background-color: var(--openapi-code-orange);
-}
-
+/* Navbar github button */
 .header-github-link::before {
   content: '';
   width: 24px;
