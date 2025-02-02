@@ -25,9 +25,7 @@
   /* COLORS LIST  */
   --c-blue-70: #4d8dff;
   --c-blue-90: #1b6dff;
-}
 
-html[data-theme='light'] {
   --ifm-link-color: var(--c-blue-90);
   --ifm-link-hover-color: rgba(27, 109, 255, 0.8);
 }
@@ -73,45 +71,25 @@ html[data-theme='dark'] {
     }
   }
 }
-.get {
-  > .menu__link {
-    &::after {
-      content: "get";
-      color: var(--ifm-color-get);
-    }
-  }
+.get>.menu__link:after {
+  content: "get";
+  color: var(--ifm-color-get);
 }
-.post {
-  > .menu__link {
-    &::after {
-      content: "post";
-      color: var(--ifm-color-post);
-    }
-  }
+.post>.menu__link:after {
+  content: "post";
+  color: var(--ifm-color-post);
 }
-.delete {
-  > .menu__link {
-    &::after {
-      content: "del";
-      color: var(--ifm-color-delete);
-    }
-  }
+.delete>.menu__link:after {
+  content: "del";
+  color: var(--ifm-color-delete);
 }
-.put {
-  > .menu__link {
-    &::after {
-      content: "put";
-      color: var(--ifm-color-put-patch);
-    }
-  }
+.put>.menu__link:after {
+  content: "put";
+  color: var(--ifm-color-put-patch);
 }
-.patch {
-  > .menu__link {
-    &::after {
-      content: "patch";
-      color: var(--ifm-color-put-patch);
-    }
-  }
+.patch>.menu__link:after {
+  content: "patch";
+  color: var(--ifm-color-put-patch);
 }
 
 /* Navbar github button */
