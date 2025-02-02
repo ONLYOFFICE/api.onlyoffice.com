@@ -4,8 +4,7 @@
  * work well for content-centric websites.
  */
 
-/* You can override the default Infima variables here. */
-:root {
+ :root {
   --ifm-color-primary: #2e8555;
   --ifm-color-primary-dark: #29784c;
   --ifm-color-primary-darker: #277148;
@@ -22,10 +21,18 @@
   --ifm-color-delete: #f05151;
   --ifm-color-put-patch: #f46d2a;
   /* END STATUS OPENAPI */
+
+  /* COLORS LIST  */
+  --c-blue-70: #4d8dff;
+  --c-blue-90: #1b6dff;
 }
 
-/* For readability concerns, you should choose a lighter palette in dark mode. */
-[data-theme='dark'] {
+html[data-theme='light'] {
+  --ifm-link-color: var(--c-blue-90);
+  --ifm-link-hover-color: rgba(27, 109, 255, 0.8);
+}
+
+html[data-theme='dark'] {
   --ifm-color-primary: #25c2a0;
   --ifm-color-primary-dark: #21af90;
   --ifm-color-primary-darker: #1fa588;
@@ -41,6 +48,9 @@
   --ifm-color-delete: #af2323;
   --ifm-color-put-patch: #9e461a;
   /* END STATUS OPENAPI */
+
+  --ifm-link-color: var(--c-blue-70);
+  --ifm-link-hover-color: rgba(77, 141, 255, 0.8);
 }
 
 /* START OPENAPI */
