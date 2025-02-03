@@ -22,12 +22,24 @@
   --ifm-color-put-patch: #f46d2a;
   /* END STATUS OPENAPI */
 
-  /* COLORS LIST  */
+  /* START COLORS LIST */
+  --c-blue-0: #f0f6ff;
   --c-blue-70: #4d8dff;
   --c-blue-90: #1b6dff;
 
+  --c-gray-0: #f3f3f3;
+  --c-gray-100: #141414;
+  /* END COLORS LIST */
+
   --ifm-link-color: var(--c-blue-90);
   --ifm-link-hover-color: rgba(27, 109, 255, 0.8);
+
+  /* START SIDEBAR */
+  --sidebar-spacing-horizontal: 1.5rem;
+  --ifm-menu-color-background-active: var(--c-blue-0);
+
+  --sidebar-category-c: var(--c-gray-100);
+  /* END SIDEBAR */
 }
 
 html[data-theme='dark'] {
@@ -48,6 +60,8 @@ html[data-theme='dark'] {
 
   --ifm-link-color: var(--c-blue-70);
   --ifm-link-hover-color: rgba(77, 141, 255, 0.8);
+
+  --sidebar-category-c: var(--c-gray-0);
 }
 
 /* START OPENAPI */
@@ -91,8 +105,9 @@ html[data-theme='dark'] {
   content: "patch";
   color: var(--ifm-color-put-patch);
 }
+/* END OPENAPI */
 
-/* Navbar github button */
+/* START NAVBAR GITHUB BUTTON */
 .header-github-link::before {
   content: '';
   width: 24px;
@@ -107,3 +122,101 @@ html[data-theme='dark'] {
 .header-github-link:hover::before {
   background-color: var(--ifm-navbar-link-hover-color);
 }
+/* END NAVBAR GITHUB BUTTON */
+
+/* START SIDEBAR */
+[class^='sidebar_'] {
+  max-height: calc(100vh - var(--ifm-navbar-height));
+  position: static;
+
+  overflow-y: auto;
+
+  padding-inline-start: var(--sidebar-spacing-horizontal);
+  padding-inline-end: var(--sidebar-spacing-horizontal);
+  padding-block-start: 1rem;
+
+  > .menu {
+    overflow-x: initial;
+    padding-block-end: 2rem;
+  }
+}
+
+.theme-doc-sidebar-item-category-level-1 > .menu__list > .menu__list-item:last-of-type {
+  padding-block-end: 1.5rem;
+}
+
+.theme-doc-sidebar-item-category-level-1:last-of-type {
+  margin-block-end: 1.5rem;
+}
+
+.theme-doc-sidebar-menu > .theme-doc-sidebar-item-category > .menu__list-item-collapsible + .menu__list {
+  padding-left: 1.1rem;
+}
+
+.menu__link {
+  font-weight: 500;
+  font-size: 0.813rem;
+  line-height: 16px;
+
+  display: flex;
+  align-items: center;
+  letter-spacing: -0.01em;
+}
+
+.menu__list-item {
+  .menu__caret {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    padding: 0 0;
+  }
+
+  .menu__caret::before,
+  .menu__link--sublist::after {
+    min-width: 1.5rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    background: url('../../static/icons/arrow-sidebar.svg') no-repeat;
+    background-position: center center;
+    min-height: 29.5px;
+    padding-left: var(--ifm-menu-link-padding-horizontal);
+  }
+
+  .menu__link--sublist::after {
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+
+  .menu__list-item-collapsible {
+    &::before {
+      content: "";
+
+      width: 1.5rem;
+      height: 1.5rem;
+      height: auto;
+      background-position: center center;
+      transform: rotate(90deg);
+      transition: all 0.3s ease-in-out;
+    }
+
+    .menu__link--active:not(.menu__link--sublist) {
+      background: var(--ifm-menu-color-background-active) !important;
+    }
+  }
+}
+.theme-doc-sidebar-item-category-level-1 {
+  & > .menu__list-item-collapsible {
+    .menu__link {
+      color: var(--sidebar-category-c);
+
+      font-weight: 600;
+      font-size: 0.938rem;
+      line-height: 100%;
+    }
+  }
+}
+/* END SIDEBAR */
