@@ -126,18 +126,11 @@ html[data-theme='dark'] {
 
 /* START SIDEBAR */
 [class^='sidebar_'] {
-  max-height: calc(100vh - var(--ifm-navbar-height));
-  position: static;
-
-  overflow-y: auto;
-
-  padding-inline-start: var(--sidebar-spacing-horizontal);
-  padding-inline-end: var(--sidebar-spacing-horizontal);
   padding-block-start: 1rem;
 
   > .menu {
-    overflow-x: initial;
-    padding-block-end: 2rem;
+    overflow-x: hidden;
+    padding: 0.5rem 1.5rem 0.5rem 0.5rem;
   }
 }
 
