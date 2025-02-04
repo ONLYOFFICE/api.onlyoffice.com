@@ -1,0 +1,642 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Hosted Solutions",
+    "version": "latest"
+  },
+  "paths": {
+    "/api/portal/get": {
+      "get": {
+        "tags": [
+          "Portal"
+        ],
+        "summary": "List portals",
+        "description": "Returns a list of all the portals registered for the user with the email address specified in the request.",
+        "parameters": [
+          {
+            "name": "email",
+            "in": "query",
+            "description": "Portal owner email address",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "example": "test@example.com"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "A list of all the portals registered for the user with the email address specified in the request.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "tenants": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/Tenant"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "$ref": "#/components/responses/400"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          }
+        }
+      }
+    },
+    "/api/portal/register": {
+      "post": {
+        "tags": [
+          "Portal"
+        ],
+        "summary": "Register a new portal",
+        "description": "Registers a new portal with the parameters specified in the request.",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "firstName": {
+                    "type": "string",
+                    "description": "Portal owner first name",
+                    "example": "John"
+                  },
+                  "email": {
+                    "type": "string",
+                    "description": "Portal owner email address",
+                    "example": "test@example.com"
+                  },
+                  "language": {
+                    "type": "string",
+                    "description": "Portal language",
+                    "example": "en"
+                  },
+                  "lastName": {
+                    "type": "string",
+                    "description": "Portal owner last name",
+                    "example": "Smith"
+                  },
+                  "password": {
+                    "type": "string",
+                    "description": "Portal owner password",
+                    "example": 123456
+                  },
+                  "phone": {
+                    "type": "string",
+                    "description": "Portal owner phone number",
+                    "example": 123456789
+                  },
+                  "portalName": {
+                    "type": "string",
+                    "description": "Portal name",
+                    "example": "example"
+                  },
+                  "timeZoneName": {
+                    "type": "string",
+                    "description": "Portal time zone",
+                    "example": "UTC"
+                  }
+                },
+                "required": [
+                  "firstName",
+                  "email",
+                  "lastName",
+                  "portalName"
+                ]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "The link for portal activation and portal description.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "reference": {
+                      "type": "string",
+                      "example": "https://example.com/confirm.aspx"
+                    },
+                    "tenant": {
+                      "$ref": "#/components/schemas/Tenant"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "$ref": "#/components/responses/400"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          }
+        }
+      }
+    },
+    "/api/portal/remove": {
+      "delete": {
+        "tags": [
+          "Portal"
+        ],
+        "summary": "Delete a portal",
+        "description": "Deletes a portal with a name specified in the request.",
+        "parameters": [
+          {
+            "name": "portalName",
+            "in": "query",
+            "description": "Portal name",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "example": "example"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The description of the portal to be deleted",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "tenant": {
+                    "$ref": "#/components/schemas/Tenant"
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "$ref": "#/components/responses/400"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          }
+        }
+      }
+    },
+    "/api/portal/status": {
+      "put": {
+        "tags": [
+          "Portal"
+        ],
+        "summary": "Change portal activation status",
+        "description": "Changes a portal activation status with a value specified in the request.",
+        "parameters": [
+          {
+            "name": "status",
+            "in": "query",
+            "description": "New portal status: Active - 0, Suspended - 1",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "enum": [
+                "Active",
+                "Suspended"
+              ]
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "portalName": {
+                    "type": "string",
+                    "description": "Portal name",
+                    "example": "example"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "The portal description",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "tenant": {
+                    "$ref": "#/components/schemas/Tenant"
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "$ref": "#/components/responses/400"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          }
+        }
+      }
+    },
+    "/api/portal/validateportalname": {
+      "post": {
+        "tags": [
+          "Portal"
+        ],
+        "summary": "Validate portal name",
+        "description": "Checks if the specified name is available to create a portal.",
+        "parameters": [
+          {
+            "name": "portalName",
+            "in": "query",
+            "description": "Portal name",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "example": "example"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "$ref": "#/components/responses/ValidationResponse"
+          },
+          "400": {
+            "$ref": "#/components/responses/ValidationResponse"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          }
+        }
+      }
+    },
+    "/api/tariff/get": {
+      "get": {
+        "tags": [
+          "Billing"
+        ],
+        "summary": "Get tariff",
+        "description": "Returns a pricing plan of a portal with a name specified in the request.",
+        "parameters": [
+          {
+            "name": "portalName",
+            "in": "query",
+            "description": "Portal name",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "example": "example"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The description of the portal and the portal pricing plan.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "tariff": {
+                      "$ref": "#/components/schemas/Tariff"
+                    },
+                    "tenant": {
+                      "$ref": "#/components/schemas/Tenant"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "$ref": "#/components/responses/400"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          }
+        }
+      }
+    },
+    "/api/tariff/set": {
+      "put": {
+        "tags": [
+          "Billing"
+        ],
+        "summary": "Set tariff",
+        "description": "Changes the portal pricing plan with the parameters specified in the request.",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "description": "[^*]: Please keep in mind that the sent value will be converted into megabytes and stored that way. So it is not recommended to use values not multiple of 1048576 (1 megabyte) as they will be truncated to the integer resulting from the division by 1048576, or values less than 1048576 bytes as zero value will be returned in that case both in response to this and the Get tariff requests.\n",
+                "properties": {
+                  "activeUsers": {
+                    "type": "integer",
+                    "description": "Number of active users",
+                    "example": 50
+                  },
+                  "dueDate": {
+                    "type": "string",
+                    "description": "End date of portal pricing plan",
+                    "example": "2016-07-13"
+                  },
+                  "features": {
+                    "type": "string",
+                    "description": "List of available features",
+                    "example": "whitelabel"
+                  },
+                  "maxFileSize": {
+                    "type": "number",
+                    "description": "Maximum size of the available disk space measured in bytes[^*]",
+                    "example": 1073741824
+                  },
+                  "maxTotalSize": {
+                    "type": "number",
+                    "description": "Maximum size of the uploaded files measured in bytes[^*]",
+                    "example": 104857600
+                  },
+                  "portalName": {
+                    "type": "string",
+                    "description": "Portal name",
+                    "example": "example"
+                  }
+                },
+                "required": [
+                  "portalName"
+                ]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "The description of the portal and the portal pricing plan",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "tariff": {
+                      "$ref": "#/components/schemas/Tariff"
+                    },
+                    "tenant": {
+                      "$ref": "#/components/schemas/Tenant"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "$ref": "#/components/responses/400"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Tenant": {
+        "type": "object",
+        "properties": {
+          "created": {
+            "type": "string",
+            "format": "date-time",
+            "examples": [
+              "2010-07-07T15:46:00",
+              "2014-02-07T20:14:00"
+            ]
+          },
+          "domain": {
+            "type": "string",
+            "example": "example.com"
+          },
+          "language": {
+            "type": "string",
+            "examples": [
+              "en-US",
+              "ru-RU"
+            ]
+          },
+          "ownerId": {
+            "type": "string",
+            "examples": [
+              "78e1e841-8314-48465-8fc0-e7d6451b6475",
+              "be7bc931-b966-493e-a8b5-56fc7d21f9c8"
+            ]
+          },
+          "portalName": {
+            "type": "string",
+            "example": "example"
+          },
+          "status": {
+            "type": "string",
+            "example": "Active"
+          },
+          "tenantId": {
+            "type": "integer",
+            "examples": [
+              1,
+              2
+            ]
+          },
+          "timeZoneName": {
+            "type": "string",
+            "examples": [
+              "UTC",
+              "(UTC+03:00) Moscow, St. Petersburg, Volgograd"
+            ]
+          }
+        }
+      },
+      "Tariff": {
+        "type": "object",
+        "properties": {
+          "activeUsers": {
+            "type": "integer",
+            "example": 50
+          },
+          "dueDate": {
+            "type": "string",
+            "format": "date",
+            "example": "2016-07-13"
+          },
+          "features": {
+            "type": "string",
+            "example": "whitelabel"
+          },
+          "maxFileSize": {
+            "type": "number",
+            "example": 104857600
+          },
+          "maxTotalSize": {
+            "type": "number",
+            "example": 1073741824
+          }
+        }
+      }
+    },
+    "responses": {
+      "400": {
+        "description": "Bad Request",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "error": {
+                  "type": "string",
+                  "description": "- params - An error has been made in the method parameters specified in the request.\n- passPolicyError - The password specified in the request does not meet the requirements.\n- portalNameEmpty - The required parameter portalName, which must be present in the request, is not specified.\n- portalNameExist - Portal with the portal name specified in the request has already been registered.\n- portalNameIncorrect - Invalid characters in the portalName parameter.\n- portalNameNotFound - No portal with the portal name specified in the request has been registered.\n- portalsCountTooMuch - The limit for the number of portals has been reached.\n- recaptchaInvalid - Invalid reCAPTCHA value has been entered.\n- tooMuchAttempts - The limit for the number of request attempts has been reached.\n- tooShortError - The portalName specified in the request is too short.\n",
+                  "enum": [
+                    "params",
+                    "passPolicyError",
+                    "portalNameEmpty",
+                    "portalNameExist",
+                    "portalNameIncorrect",
+                    "portalNameNotFound",
+                    "portalsCountTooMuch",
+                    "recaptchaInvalid",
+                    "tooMuchAttempts",
+                    "tooShortError"
+                  ],
+                  "example": "portalNameEmpty"
+                }
+              }
+            }
+          }
+        }
+      },
+      "403": {
+        "description": "Forbidden",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "error": {
+                  "type": "string",
+                  "description": "- authorization - Authorization error, the possible reasons: an unknown authorization scheme is used, or the authorization key is missing, or the authorization key time is out, or a wrong key is used.\n",
+                  "enum": [
+                    "authorization"
+                  ],
+                  "example": "authorization"
+                }
+              }
+            }
+          }
+        }
+      },
+      "500": {
+        "description": "Internal Server Error",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "error": {
+                  "type": "string",
+                  "description": "- authorization - Internal server error when decoding the authorization key.\n- registerNewTenantError - An error occurred while registering a new portal.\n- error - An internal server error occurred.\n",
+                  "enum": [
+                    "authorization",
+                    "registerNewTenantError",
+                    "error"
+                  ],
+                  "example": "error"
+                }
+              }
+            }
+          }
+        }
+      },
+      "ValidationResponse": {
+        "description": "Response containing information about the portal name availability.",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "error": {
+                  "type": "string",
+                  "enum": [
+                    "error",
+                    "portalNameEmpty",
+                    "portalNameExist",
+                    "portalNameIncorrect",
+                    "tooShortError"
+                  ],
+                  "description": "If the portal name is already taken or some other error occurred during the request, the response object will have the error key with one of the following values:\n- error - a general error, the description will be given in the message parameter,\n- portalNameEmpty - the portal name is empty, you need to send some value in the portalName parameter,\n- portalNameExist - the portal name is already taken, you need to choose another one,\n- portalNameIncorrect - the portal name contains some characters which are not allowed (characters other than base Latin letters and digits),\n- tooShortError - the portal name is too short, it cannot be less than 6 characters.\n",
+                  "example": "portalNameEmpty"
+                },
+                "message": {
+                  "type": "string",
+                  "description": "If the portal name is available, the response object message key will have the \"portalNameReadyToRegister\" value, otherwise the error description will be included into the message value."
+                },
+                "variants": {
+                  "type": "array",
+                  "description": "In case error is equal to \"portalNameExist\", the response will also have a list of all the existing potal names starting with the name from the request.",
+                  "items": {
+                    "type": "string",
+                    "example": "example"
+                  }
+                }
+              }
+            },
+            "examples": {
+              "successful": {
+                "description": "Successful response",
+                "value": {
+                  "message": "portalNameReadyToRegister"
+                }
+              },
+              "unsuccessful": {
+                "description": "Unsuccessful response",
+                "value": {
+                  "error": "portalNameExist",
+                  "message": "Portal already exists",
+                  "variants": [
+                    "example"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
