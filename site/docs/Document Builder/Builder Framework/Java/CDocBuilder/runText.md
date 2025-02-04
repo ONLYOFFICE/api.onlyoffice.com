@@ -1,33 +1,20 @@
-```yml signature
-- {type: type, text: boolean}
-- {type: text, text: " "}
-- {type: entity, text: runText}
-- {type: text, text: (}
-- {type: parameter, text: commands}
-- {type: text, text: ": "}
-- {type: type, text: String}
-- {type: text, text: )}
-```
-
-## Description
+# runText
 
 Runs all the commands for the document creation using a single command. Compared to [CDocBuilder.executeCommand](./executeCommand.md) where only one command at a time is allowed, `CDocBuilder.runText` makes it possible to enter all the commands for the document creation at once.
 
 > Please note, that for the `.docbuilder` file the `CDocBuilder.runText` method is not used.
 
+## Syntax
+
+```java
+boolean runText(String commands);
+```
+
 ## Parameters
 
-<parameters>
-
-- commands
-
-  ```yml signature.variant="inline"
-  - {type: type, text: String}
-  ```
-
-  - : The commands which will be used to create the document file (in Java, the escape character must be used when the command contains quotation symbols). All the commands containing `builder.` are line separated, i.e. you cannot write them in one line, each command must start with its own line.
-
-</parameters>
+| Parameter | Type   | Description                                           |
+| --------- | ------ | ----------------------------------------------------- |
+| commands     | String | The commands which will be used to create the document file (in Java, the escape character must be used when the command contains quotation symbols). All the commands containing `builder.` are line separated, i.e. you cannot write them in one line, each command must start with its own line. |
 
 ## Example
 

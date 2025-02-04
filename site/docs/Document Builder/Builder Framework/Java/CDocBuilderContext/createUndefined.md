@@ -1,16 +1,14 @@
-```yml signature
-- {id: ../../CDocBuilderValue/index.md, token: {type: type, text: CDocBuilderValue}}
-- {type: text, text: " "}
-- {type: entity, text: createUndefined}
-- {type: text, text: (}
-- {type: text, text: )}
-```
-
-## Description
+# createUndefined
 
 Creates an undefined value, an analogue of `undefined` in JS.
 
 > Please note, that for the `.docbuilder` file the `CDocBuilderContext.createUndefined` method is not used.
+
+## Syntax
+
+```java
+CDocBuilderValue createUndefined();
+```
 
 ## Example
 

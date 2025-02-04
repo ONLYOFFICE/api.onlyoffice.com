@@ -1,33 +1,20 @@
-```yml signature
-- {type: type, text: HRESULT}
-- {type: text, text: " "}
-- {type: entity, text: IsDouble}
-- {type: text, text: (}
-- {type: parameter, text: result}
-- {type: text, text: ": [out, retval] "}
-- {type: type, text: VARIANT_BOOL*}
-- {type: text, text: )}
-```
-
-## Description
+# IsDouble
 
 Returns true if the `CDocBuilderValue` object is a double value.
 
 > Please note, that for the `.docbuilder` file the `CDocBuilderValue.IsDouble` method is not used.
 
+## Syntax
+
+```cpp
+HRESULT IsDouble([out, retval] VARIANT_BOOL* result);
+```
+
 ## Parameters
 
-<parameters>
-
-- result
-
-  ```yml signature.variant="inline"
-  - {type: type, text: VARIANT_BOOL*}
-  ```
-
-  - : Specifies whether the `CDocBuilderValue` object is a double value.
-
-</parameters>
+| Parameter | Type          | Description                                                        |
+| --------- | ------------- | ------------------------------------------------------------------ |
+| result    | VARIANT_BOOL* | Specifies whether the `CDocBuilderValue` object is a double value. |
 
 ## Example
 

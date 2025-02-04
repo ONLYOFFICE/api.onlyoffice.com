@@ -1,16 +1,14 @@
-```yml signature
-- {type: type, text: bool}
-- {type: text, text: " "}
-- {type: entity, text: IsUndefined}
-- {type: text, text: (}
-- {type: text, text: )}
-```
-
-## Description
+# IsUndefined
 
 Returns true if the `CDocBuilderValue` object is undefined.
 
-> Please note, that for the `.docbuilder` file the` CDocBuilderValue.IsUndefined` method is not used.
+> Please note, that for the `.docbuilder` file the `CDocBuilderValue.IsUndefined` method is not used.
+
+## Syntax
+
+```cpp
+bool IsUndefined();
+```
 
 ## Example
 

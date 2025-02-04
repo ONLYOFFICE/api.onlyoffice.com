@@ -1,57 +1,22 @@
-```yml signature
-- {type: type, text: HRESULT}
-- {type: text, text: " "}
-- {type: entity, text: WriteData}
-- {type: text, text: (}
-- {type: parameter, text: path}
-- {type: text, text: ": [in] "}
-- {type: type, text: BSTR}
-- {type: text, text: ", "}
-- {type: parameter, text: value}
-- {type: text, text: ": [in] "}
-- {type: type, text: BSTR}
-- {type: text, text: ", "}
-- {type: parameter, text: append}
-- {type: text, text: ": [in] "}
-- {type: type, text: VARIANT_BOOL}
-- {type: text, text: )}
-```
-
-## Description
+# WriteData
 
 Writes data to the log file. It is used for logs in JS code.
 
 > Please note, that for the `.docbuilder` file the `CDocBuilder.WriteData` method is not used.
 
+## Syntax
+
+```cpp
+HRESULT WriteData([in] BSTR path, [in] BSTR value, [in] VARIANT_BOOL append);
+```
+
 ## Parameters
 
-<parameters>
-
-- path
-
-  ```yml signature.variant="inline"
-  - {type: type, text: BSTR}
-  ```
-
-  - : The path to the file where all the logs will be written.
-
-- value
-
-  ```yml signature.variant="inline"
-  - {type: type, text: BSTR}
-  ```
-
-  - : The data which will be written to the log file.
-
-- append
-
-  ```yml signature.variant="inline"
-  - {type: type, text: VARIANT_BOOL}
-  ```
-
-  - : Specifies if the new data will be appended to the already existing log file or a new file will be created.
-
-</parameters>
+| **Name** | **Type**     | **Description**                                                                                            |
+| -------- | ------------ | ---------------------------------------------------------------------------------------------------------- |
+| path     | BSTR         | The path to the file where all the logs will be written.                                                   |
+| value    | BSTR         | The data which will be written to the log file.                                                            |
+| append   | VARIANT_BOOL | Specifies if the new data will be appended to the already existing log file or a new file will be created. |
 
 ## Example
 

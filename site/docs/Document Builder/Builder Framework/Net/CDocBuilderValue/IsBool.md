@@ -1,16 +1,14 @@
-```yml signature
-- {type: type, text: bool}
-- {type: text, text: " "}
-- {type: entity, text: IsBool}
-- {type: text, text: (}
-- {type: text, text: )}
-```
-
-## Description
+# IsBool
 
 Returns true if the `CDocBuilderValue` object is a boolean value.
 
 > Please note, that for the `.docbuilder` file the` CDocBuilderValue.IsBool` method is not used.
+
+## Syntax
+
+```cs
+bool IsBool();
+```
 
 ## Example
 

@@ -1,16 +1,14 @@
-```yml signature
-- {type: type, text: bool}
-- {type: text, text: " "}
-- {type: entity, text: IsDouble}
-- {type: text, text: (}
-- {type: text, text: )}
-```
-
-## Description
+# IsDouble
 
 Returns true if the `CDocBuilderValue` object is a double value.
 
 > Please note, that for the `.docbuilder` file the `CDocBuilderValue.IsDouble` method is not used.
+
+## Syntax
+
+```cpp
+bool IsDouble();
+```
 
 ## Example
 

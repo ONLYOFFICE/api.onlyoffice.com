@@ -1,49 +1,22 @@
-```yml signature
-- {type: type, text: void}
-- {type: text, text: " "}
-- {type: entity, text: set}
-- {type: text, text: (}
-- {type: parameter, text: index}
-- {type: text, text: ": "}
-- {type: type, text: int}
-- {type: text, text: " | "}
-- {type: type, text: String}
-- {type: text, text: ", "}
-- {type: parameter, text: value}
-- {type: text, text: ": "}
-- {type: type, text: Object}
-- {type: text, text: )}
-```
-
-## Description
+# set
 
 Sets an array value by its index or name.
 
 > Please note, that for the `.docbuilder` file the `CDocBuilderValue.set` method is not used.
 
+## Syntax
+
+```java
+void set(int | String index, Object value);
+```
+
 ## Parameters
 
-<parameters>
 
-- index
-
-  ```yml signature.variant="inline"
-  - {type: type, text: int}
-  - {type: text, text: " | "}
-  - {type: type, text: String}
-  ```
-
-  - : The index or name of the array value.
-
-- value
-
-  ```yml signature.variant="inline"
-  - {type: type, text: Object}
-  ```
-
-  - : The array value to be set.
-
-</parameters>
+| Parameter | Type          | Description                           |
+| --------- | ------------- | ------------------------------------- |
+| index     | int \| String | The index or name of the array value. |
+| value     | Object        | The array value to be set.            |
 
 ## Example
 

@@ -1,37 +1,20 @@
-```yml signature
-- {id: ../../CDocBuilderValue/index.md, token: {type: type, text: CDocBuilderValue^}}
-- {type: text, text: " "}
-- {type: entity, text: CreateTypedArray}
-- {type: text, text: (}
-- {type: parameter, text: aBuffer}
-- {type: text, text: ": "}
-- {type: type, text: array}
-- {type: text, text: " | "}
-- {type: type, text: <Byte>^}
-- {type: text, text: )}
-```
-
-## Description
+# CreateTypedArray
 
 Creates a Uint8Array value, an analogue of `Uint8Array` in JS.
 
 > Please note, that for the `.docbuilder` file the `CDocBuilderContext.CreateTypedArray` method is not used.
 
+## Syntax
+
+```cs
+CDocBuilderValue^ CreateTypedArray(array | <Byte>^ aBuffer);
+```
+
 ## Parameters
 
-<parameters>
-
-- aBuffer
-
-  ```yml signature.variant="inline"
-  - {type: type, text: array}
-  - {type: text, text: " | "}
-  - {type: type, text: <Byte>^}
-  ```
-
-  - : The array buffer.
-
-</parameters>
+| Parameter | Type               | Description       |
+| --------- | ------------------ | ----------------- |
+| aBuffer   | array \| \<Byte\>^ | The array buffer. |
 
 ## Example
 

@@ -1,33 +1,20 @@
-```yml signature
-- {type: type, text: HRESULT}
-- {type: text, text: " "}
-- {type: entity, text: ToDouble}
-- {type: text, text: (}
-- {type: parameter, text: result}
-- {type: text, text: ": [out, retval] "}
-- {type: type, text: double*}
-- {type: text, text: )}
-```
-
-## Description
+# ToDouble
 
 Converts the `CDocBuilderValue` object to a double value.
 
 > Please note, that for the `.docbuilder` file the `CDocBuilderValue.ToDouble` method is not used.
 
+## Syntax
+
+```cpp
+HRESULT ToDouble([out, retval] double* result);
+```
+
 ## Parameters
 
-<parameters>
-
-- result
-
-  ```yml signature.variant="inline"
-  - {type: type, text: double*}
-  ```
-
-  - : The returned double value.
-
-</parameters>
+| Parameter | Type    | Description                |
+| --------- | ------- | -------------------------- |
+| result    | double* | The returned double value. |
 
 ## Example
 

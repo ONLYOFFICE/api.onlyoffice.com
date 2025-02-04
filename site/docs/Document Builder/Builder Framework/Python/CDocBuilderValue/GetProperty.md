@@ -1,35 +1,20 @@
-```yml signature
-- {type: keyword, text: def}
-- {type: text, text: " "}
-- {type: entity, text: GetProperty}
-- {type: text, text: (}
-- {type: parameter, text: self}
-- {type: text, text: ", "}
-- {type: parameter, text: name}
-- {type: text, text: ": "}
-- {type: type, text: str}
-- {type: text, text: )}
-```
-
-## Description
+# GetProperty
 
 Returns a property of the `CDocBuilderValue` object.
 
 > Please note, that for the `.docbuilder` file the `CDocBuilderValue.GetProperty` method is not used.
 
+## Syntax
+
+```py
+def GetProperty(self, str name);
+```
+
 ## Parameters
 
-<parameters>
-
-- name
-
-  ```yml signature.variant="inline"
-  - {type: type, text: str}
-  ```
-
-  - : The name of the `CDocBuilderValue` object property.
-
-</parameters>
+| Parameter | Type | Description                                         |
+| --------- | ---- | --------------------------------------------------- |
+| name      | str  | The name of the `CDocBuilderValue` object property. |
 
 ## Example
 

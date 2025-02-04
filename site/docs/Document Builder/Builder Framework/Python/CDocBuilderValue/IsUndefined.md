@@ -1,17 +1,14 @@
-```yml signature
-- {type: keyword, text: def}
-- {type: text, text: " "}
-- {type: entity, text: IsUndefined}
-- {type: text, text: (}
-- {type: parameter, text: self}
-- {type: text, text: )}
-```
-
-## Description
+# IsUndefined
 
 Returns true if the `CDocBuilderValue` object is undefined.
 
 > Please note, that for the `.docbuilder` file the `CDocBuilderValue.IsUndefined` method is not used.
+
+## Syntax
+
+```py
+def IsUndefined(self);
+```
 
 ## Example
 

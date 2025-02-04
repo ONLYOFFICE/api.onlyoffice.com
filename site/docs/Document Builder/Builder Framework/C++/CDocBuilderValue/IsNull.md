@@ -1,16 +1,14 @@
-```yml signature
-- {type: type, text: bool}
-- {type: text, text: " "}
-- {type: entity, text: IsNull}
-- {type: text, text: (}
-- {type: text, text: )}
-```
-
-## Description
+# IsNull
 
 Returns true if the `CDocBuilderValue` object is null.
 
-> Please note, that for the `.docbuilder` file the `CDocBuilderValue.IsNll` method is not used.
+> Please note, that for the `.docbuilder` file the `CDocBuilderValue.IsNull` method is not used.
+
+## Syntax
+
+```cpp
+bool IsNull();
+```
 
 ## Example
 

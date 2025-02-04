@@ -1,57 +1,22 @@
-```yml signature
-- {type: type, text: void}
-- {type: text, text: " "}
-- {type: entity, text: writeData}
-- {type: text, text: (}
-- {type: parameter, text: path}
-- {type: text, text: ": "}
-- {type: type, text: String}
-- {type: text, text: ", "}
-- {type: parameter, text: value}
-- {type: text, text: ": "}
-- {type: type, text: String}
-- {type: text, text: ", "}
-- {type: parameter, text: append}
-- {type: text, text: ": "}
-- {type: type, text: boolean}
-- {type: text, text: )}
-```
-
-## Description
+# writeData
 
 Writes data to the log file. It is used for logs in JS code.
 
 > Please note, that for the `.docbuilder` file the `CDocBuilder.writeData` method is not used.
 
+## Syntax
+
+```java
+void writeData(String path, String value, boolean append);
+```
+
 ## Parameters
 
-<parameters>
-
-- path
-
-  ```yml signature.variant="inline"
-  - {type: type, text: String}
-  ```
-
-  - : The path to the file where all the logs will be written.
-
-- value
-
-  ```yml signature.variant="inline"
-  - {type: type, text: String}
-  ```
-
-  - : The data which will be written to the log file.
-
-- append
-
-  ```yml signature.variant="inline"
-  - {type: type, text: boolean}
-  ```
-
-  - : Specifies if the new data will be appended to the already existing log file or a new file will be created.
-
-</parameters>
+| Parameter | Type    | Description                                                                                                |
+| --------- | ------- | ---------------------------------------------------------------------------------------------------------- |
+| path      | String  | The path to the file where all the logs will be written.                                                   |
+| value     | String  | The data which will be written to the log file.                                                            |
+| append    | boolean | Specifies if the new data will be appended to the already existing log file or a new file will be created. |
 
 ## Example
 

@@ -1,35 +1,20 @@
-```yml signature
-- {type: keyword, text: static}
-- {type: text, text: " "}
-- {type: type, text: unsigned char*}
-- {type: text, text: " "}
-- {type: entity, text: AllocMemoryTypedArray}
-- {type: text, text: (}
-- {type: parameter, text: nSize}
-- {type: text, text: ": "}
-- {type: type, text: const size_t*}
-- {type: text, text: )}
-```
-
-## Description
+# AllocMemoryTypedArray
 
 Allocates the memory for a typed array by creating a buffer array of the specified size.
 
 > Please note, that for the `.docbuilder` file the `CDocBuilderContext.AllocMemoryTypedArray` method is not used.
 
+## Syntax
+
+```cpp
+static unsigned char* AllocMemoryTypedArray(const size_t* nSize);
+```
+
 ## Parameters
 
-<parameters>
-
-- nSize
-
-  ```yml signature.variant="inline"
-  - {type: type, text: const size_t*}
-  ```
-
-  - : The buffer array size.
-
-</parameters>
+| **Name** | **Data type** | **Description**        |
+| -------- | ------------- | ---------------------- |
+| nSize    | const size_t* | The buffer array size. |
 
 ## Example
 

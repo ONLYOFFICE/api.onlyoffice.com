@@ -1,31 +1,20 @@
-```yml signature
-- {type: type, text: bool}
-- {type: text, text: " "}
-- {type: entity, text: RunTextA}
-- {type: text, text: (}
-- {type: parameter, text: sCommands}
-- {type: text, text: ": "}
-- {type: type, text: const char*}
-- {type: text, text: )}
-```
+# RunTextA
 
 Runs all the commands for the document creation using a single command in the UTF8 format. Compared to [CDocBuilder.ExecuteCommand](./ExecuteCommand.md) where only one command at a time is allowed, `CDocBuilder.RunTextA` makes it possible to enter all the commands for the document creation at once.
 
 > Please note, that for the `.docbuilder` file the `CDocBuilder.RunTextA` method is not used.
 
+## Syntax
+
+```cpp
+bool RunTextA(const char* sCommands);
+```
+
 ## Parameters
 
-<parameters>
-
-- sCommands
-
-  ```yml signature.variant="inline"
-  - {type: type, text: const char*}
-  ```
-
-  - : The commands in the UTF8 format which will be used to create the document file (in C++, the escape character must be used when the command contains quotation symbols). All the commands containing `builder.` are line separated, i.e. you cannot write them in one line, each command must start with its own line.
-
-</parameters>
+| **Name**  | **Data type** | **Description**                                                                                                                                                                                                                                                                                                       |
+| --------- | ------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| sCommands | const char*   | The commands in the UTF8 format which will be used to create the document file (in C++, the escape character must be used when the command contains quotation symbols). All the commands containing `builder.` are line separated, i.e. you cannot write them in one line, each command must start with its own line. |
 
 ## Example
 

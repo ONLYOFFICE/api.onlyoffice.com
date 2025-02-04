@@ -1,33 +1,20 @@
-```yml signature
-- {id: ../../CDocBuilderValue/index.md, token: {type: type, text: CDocBuilderValue^}}
-- {type: text, text: " "}
-- {type: entity, text: Get}
-- {type: text, text: (}
-- {type: parameter, text: nIndex}
-- {type: text, text: ": "}
-- {type: type, text: int}
-- {type: text, text: )}
-```
-
-## Description
+# Get
 
 Returns an array value by its index.
 
 > Please note, that for the `.docbuilder` file the `CDocBuilderValue.Get` method is not used.
 
+## Syntax
+
+```cs
+CDocBuilderValue^ Get(int nIndex);
+```
+
 ## Parameters
 
-<parameters>
-
-- nIndex
-
-  ```yml signature.variant="inline"
-  - {type: type, text: int}
-  ```
-
-  - : The index of the array value.
-
-</parameters>
+| Parameter | Type | Description                   |
+| --------- | ---- | ----------------------------- |
+| nIndex    | int  | The index of the array value. |
 
 ## Example
 

@@ -1,16 +1,14 @@
-```yml signature
-- {type: type, text: String}
-- {type: text, text: " "}
-- {type: entity, text: toString}
-- {type: text, text: (}
-- {type: text, text: )}
-```
-
-## Description
+# toString
 
 Converts the `CDocBuilderValue` object to a string.
 
 > Please note, that for the `.docbuilder` file the `CDocBuilderValue.toString` method is not used.
+
+## Syntax
+
+```java
+String toString();
+```
 
 ## Example
 

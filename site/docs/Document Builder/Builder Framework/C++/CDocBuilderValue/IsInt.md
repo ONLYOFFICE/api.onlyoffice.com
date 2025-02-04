@@ -1,16 +1,14 @@
-```yml signature
-- {type: type, text: bool}
-- {type: text, text: " "}
-- {type: entity, text: IsInt}
-- {type: text, text: (}
-- {type: text, text: )}
-```
-
-## Description
+# IsInt
 
 Returns true if the `CDocBuilderValue` object is an integer.
 
 > Please note, that for the `.docbuilder` file the `CDocBuilderValue.IsInt` method is not used.
+
+## Syntax
+
+```cpp
+bool IsInt();
+```
 
 ## Example
 

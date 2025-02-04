@@ -1,33 +1,20 @@
-```yml signature
-- {type: type, text: HRESULT}
-- {type: text, text: " "}
-- {type: entity, text: IsBool}
-- {type: text, text: (}
-- {type: parameter, text: result}
-- {type: text, text: ": [out, retval] "}
-- {type: type, text: VARIANT_BOOL*}
-- {type: text, text: )}
-```
-
-## Description
+# IsBool
 
 Returns true if the `CDocBuilderValue` object is a boolean value.
 
 > Please note, that for the `.docbuilder` file the `CDocBuilderValue.IsBool` method is not used.
 
+## Syntax
+
+```cpp
+HRESULT IsBool([out, retval] VARIANT_BOOL* result);
+```
+
 ## Parameters
 
-<parameters>
-
-- result
-
-  ```yml signature.variant="inline"
-  - {type: type, text: VARIANT_BOOL*}
-  ```
-
-  - : Specifies whether the `CDocBuilderValue` object is a boolean value.
-
-</parameters>
+| Parameter | Type          | Description                                                         |
+| --------- | ------------- | ------------------------------------------------------------------- |
+| result    | VARIANT_BOOL* | Specifies whether the `CDocBuilderValue` object is a boolean value. |
 
 ## Example
 

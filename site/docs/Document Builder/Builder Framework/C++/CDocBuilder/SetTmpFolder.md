@@ -1,31 +1,18 @@
-```yml signature
-- {type: type, text: void}
-- {type: text, text: " "}
-- {type: entity, text: SetTmpFolder}
-- {type: text, text: (}
-- {type: parameter, text: sFolder}
-- {type: text, text: ": "}
-- {type: type, text: const wchar_t*}
-- {type: text, text: )}
-```
-
-## Description
+# SetTmpFolder
 
 Sets the path to the folder where the program will temporarily save files needed for the program correct work. After the successful document file creation, all the files will be deleted from the folder. If no temporary folder is set, the system one will be used.
 
+## Syntax
+
+```cpp
+void SetTmpFolder(const wchar_t* sFolder);
+```
+
 ## Parameters
 
-<parameters>
-
-- sFolder
-
-  ```yml signature.variant="inline"
-  - {type: type, text: const wchar_t*}
-  ```
-
-  - : The path to the folder where the temporary files will be saved.
-
-</parameters>
+| **Name** | **Data type**  | **Description**                                                 |
+| -------- | -------------- | --------------------------------------------------------------- |
+| sFolder  | const wchar_t* | The path to the folder where the temporary files will be saved. |
 
 ## Example
 

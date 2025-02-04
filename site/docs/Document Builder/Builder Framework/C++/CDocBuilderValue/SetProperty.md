@@ -1,45 +1,21 @@
-```yml signature
-- {type: type, text: void}
-- {type: text, text: " "}
-- {type: entity, text: SetProperty}
-- {type: text, text: (}
-- {type: parameter, text: sName}
-- {type: text, text: ": "}
-- {type: type, text: const wchar_t*}
-- {type: text, text: ", "}
-- {type: parameter, text: sValue}
-- {type: text, text: ": "}
-- {type: type, text: const wchar_t*}
-- {type: text, text: )}
-```
-
-## Description
+# SetProperty
 
 Sets a property to the `CDocBuilderValue` object.
 
 > Please note, that for the `.docbuilder` file the `CDocBuilderValue.SetProperty` method is not used.
 
+## Syntax
+
+```cpp
+void SetProperty(const wchar_t* sName, const wchar_t* sValue);
+```
+
 ## Parameters
 
-<parameters>
-
-- sName
-
-  ```yml signature.variant="inline"
-  - {type: type, text: const wchar_t*}
-  ```
-
-  - : The name of the `CDocBuilderValue` object property.
-
-- sValue
-
-  ```yml signature.variant="inline"
-  - {type: type, text: const wchar_t*}
-  ```
-
-  - : The value of the `CDocBuilderValue` object property.
-
-</parameters>
+| **Name** | **Data type**  | **Description**                                      |
+| -------- | -------------- | ---------------------------------------------------- |
+| sName    | const wchar_t* | The name of the `CDocBuilderValue` object property.  |
+| sValue   | const wchar_t* | The value of the `CDocBuilderValue` object property. |
 
 ## Example
 

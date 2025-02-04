@@ -1,47 +1,21 @@
-```yml signature
-- {type: keyword, text: static}
-- {type: text, text: " "}
-- {type: type, text: void}
-- {type: text, text: " "}
-- {type: entity, text: FreeMemoryTypedArray}
-- {type: text, text: (}
-- {type: parameter, text: sData}
-- {type: text, text: ": "}
-- {type: type, text: unsigned char*}
-- {type: text, text: ", "}
-- {type: parameter, text: nSize}
-- {type: text, text: ": "}
-- {type: type, text: const size_t*}
-- {type: text, text: )}
-```
-
-## Description
+# FreeMemoryTypedArray
 
 Frees the memory for a typed array.
 
 > Please note, that for the `.docbuilder` file the `CDocBuilderContext.FreeMemoryTypedArray` method is not used.
 
+## Syntax
+
+```cpp
+static void FreeMemoryTypedArray(unsigned char* nSize, const size_t* nSize);
+```
+
 ## Parameters
 
-<parameters>
-
-- sData
-
-  ```yml signature.variant="inline"
-  - {type: type, text: unsigned char*}
-  ```
-
-  - : The allocated memory to be released.
-
-- nSize
-
-  ```yml signature.variant="inline"
-  - {type: type, text: const size_t*}
-  ```
-
-  - : The buffer array size. 
-
-</parameters>
+| **Name** | **Data type**  | **Description**                                 |
+| -------- | -------------- | ----------------------------------------------- |
+| sData    | unsigned char* | The allocated memory to be released.            |
+| nSize    | const size_t*  | The data which will be written to the log file. |
 
 ## Example
 

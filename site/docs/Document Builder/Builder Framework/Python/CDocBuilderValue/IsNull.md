@@ -1,17 +1,14 @@
-```yml signature
-- {type: keyword, text: def}
-- {type: text, text: " "}
-- {type: entity, text: IsNull}
-- {type: text, text: (}
-- {type: parameter, text: self}
-- {type: text, text: )}
-```
-
-## Description
+# IsNull
 
 Returns true if the `CDocBuilderValue` object is null.
 
 > Please note, that for the `.docbuilder` file the `CDocBuilderValue.IsNull` method is not used.
+
+## Syntax
+
+```py
+def IsNull(self);
+```
 
 ## Example
 

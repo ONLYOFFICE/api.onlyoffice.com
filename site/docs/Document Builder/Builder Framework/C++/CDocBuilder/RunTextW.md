@@ -1,33 +1,20 @@
-```yml signature
-- {type: type, text: bool}
-- {type: text, text: " "}
-- {type: entity, text: RunTextW}
-- {type: text, text: (}
-- {type: parameter, text: sCommands}
-- {type: text, text: ": "}
-- {type: type, text: const wchar_t*}
-- {type: text, text: )}
-```
-
-## Description
+# RunTextW
 
 Runs all the commands for the document creation using a single command in the Unicode format. Compared to [CDocBuilder.ExecuteCommand](./ExecuteCommand.md) where only one command at a time is allowed, `CDocBuilder.RunTextW` makes it possible to enter all the commands for the document creation at once.
 
 > Please note, that for the `.docbuilder` file the `CDocBuilder.RunTextW` method is not used.
 
+## Syntax
+
+```cpp
+bool RunTextW(const wchar_t* sCommands);
+```
+
 ## Parameters
 
-<parameters>
-
-- sCommands
-
-  ```yml signature.variant="inline"
-  - {type: type, text: const wchar_t*}
-  ```
-
-  - : The commands in the Unicode format which will be used to create the document file (in C++, the escape character must be used when the command contains quotation symbols). All the commands containing `builder.` are line separated, i.e. you cannot write them in one line, each command must start with its own line.
-
-</parameters>
+| **Name**  | **Data type**  | **Description**                                                                                                                                                                                                                                                                                                          |
+| --------- | -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| sCommands | const wchar_t* | The commands in the Unicode format which will be used to create the document file (in C++, the escape character must be used when the command contains quotation symbols). All the commands containing `builder.` are line separated, i.e. you cannot write them in one line, each command must start with its own line. |
 
 ## Example
 

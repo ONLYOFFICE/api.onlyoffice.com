@@ -1,16 +1,14 @@
-```yml signature
-- {type: type, text: void}
-- {type: text, text: " "}
-- {type: entity, text: Close}
-- {type: text, text: (}
-- {type: text, text: )}
-```
-
-## Description
+# Close
 
 Closes the current scope. This method will be called automatically when the descructor is executed.
 
 > Please note, that for the `.docbuilder` file the `CDocBuilderContextScope.Close` method is not used.
+
+## Syntax
+
+```cpp
+void Close();
+```
 
 ## Example
 

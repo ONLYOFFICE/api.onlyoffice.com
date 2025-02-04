@@ -1,16 +1,14 @@
-```yml signature
-- {id: ../../CDocBuilderValue/index.md, token: {type: type, text: CDocBuilderValue}}
-- {type: text, text: " "}
-- {type: entity, text: getGlobal}
-- {type: text, text: (}
-- {type: text, text: )}
-```
-
-## Description
+# getGlobal
 
 Returns the global object for the current context.
 
 > Please note, that for the `.docbuilder` file the `CDocBuilderContext.getGlobal` method is not used.
+
+## Syntax
+
+```java
+CDocBuilderValue getGlobal();
+```
 
 ## Example
 

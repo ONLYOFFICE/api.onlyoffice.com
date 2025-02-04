@@ -1,31 +1,18 @@
-```yml signature
-- {type: type, text: HRESULT}
-- {type: text, text: " "}
-- {type: entity, text: SetTmpFolder}
-- {type: text, text: (}
-- {type: parameter, text: folder}
-- {type: text, text: ": [in] "}
-- {type: type, text: BSTR}
-- {type: text, text: )}
-```
-
-## Description
+# SetTmpFolder
 
 Sets the path to the folder where the program will temporarily save files needed for the program correct work. After the successful document file creation, all the files will be deleted from the folder. If no temporary folder is set, the system one will be used.
 
+## Syntax
+
+```cpp
+HRESULT SetTmpFolder([in] BSTR folder);
+```
+
 ## Parameters
 
-<parameters>
-
-- folder
-
-  ```yml signature.variant="inline"
-  - {type: type, text: BSTR}
-  ```
-
-  - : The path to the folder where the temporary files will be saved.
-
-</parameters>
+| **Name** | **Type** | **Description**                                                 |
+| -------- | -------- | --------------------------------------------------------------- |
+| folder   | BSTR     | The path to the folder where the temporary files will be saved. |
 
 ## Example
 

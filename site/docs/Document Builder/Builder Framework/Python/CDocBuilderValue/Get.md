@@ -1,35 +1,20 @@
-```yml signature
-- {type: keyword, text: def}
-- {type: text, text: " "}
-- {type: entity, text: Get}
-- {type: text, text: (}
-- {type: parameter, text: self}
-- {type: text, text: ", "}
-- {type: parameter, text: key}
-- {type: text, text: ": "}
-- {type: type, text: int}
-- {type: text, text: )}
-```
-
-## Description
+# Get
 
 Returns an array value by its index.
 
 > Please note, that for the `.docbuilder` file the `CDocBuilderValue.Get` method is not used.
 
+## Syntax
+
+```py
+def Get(self, str key);
+```
+
 ## Parameters
 
-<parameters>
-
-- key
-
-  ```yml signature.variant="inline"
-  - {type: type, text: int}
-  ```
-
-  - : The index of the array value.
-
-</parameters>
+| Parameter | Type | Description                   |
+| --------- | ---- | ----------------------------- |
+| key       | int  | The index of the array value. |
 
 ## Example
 
