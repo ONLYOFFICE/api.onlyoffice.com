@@ -9,7 +9,7 @@ This documentation describes:
 - How to extend the editors functionality with [plugins](../Usage%20API/Config/Editor/Plugins.md) and [customization settings](../Usage%20API/Config/Editor/Customization.md), or limit it to suit your use-case
 - How to manage editors via [Automation API](../Usage%20API/Automation%20API.md)
 - How to use the [WOPI protocol](../Using%20WOPI/Overview.md) to integrate your application with an online office
-- How to integrate ONLYOFFICE Docs into a range of [frameworks](./Frontend%20Frameworks/Frontend%20Frameworks.md) and [Document Management Systems (DMSs)](./Ready-to-use%20connectors/Ready-to-use%20connectors.md)
+- How to integrate ONLYOFFICE Docs into a range of [frameworks](./Frontend%20Frameworks/React.md) and [Document Management Systems (DMSs)](./Ready-to-use%20connectors/Nextcloud%20integration.md)
 
 ## What editors can do
 

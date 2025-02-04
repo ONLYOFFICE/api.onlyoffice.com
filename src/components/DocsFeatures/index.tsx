@@ -36,7 +36,7 @@ const FeatureList: FeatureItem[] = [
   },
   {
     title: 'Plugin and Macros',
-    link: 'Customization/Buttons',
+    link: 'Get Started/Overview',
     description: (
       <>
         In this section, you will learn how to extend the ONLYOFFICE Docs{" "}
@@ -47,7 +47,7 @@ const FeatureList: FeatureItem[] = [
   },
   {
     title: 'Document Builder',
-    link: 'Builder App/How It Works/',
+    link: 'Get Started/Overview',
     description: (
       <>
         In this section, you will learn how to generate documents easily without{" "}
@@ -58,7 +58,7 @@ const FeatureList: FeatureItem[] = [
   },
   {
     title: 'Desktop Editors',
-    link: 'Get Started/How It Works/',
+    link: 'Get Started/Overview',
     description: (
       <>
         In this section, you will learn how to extend the ONLYOFFICE Desktop{" "}

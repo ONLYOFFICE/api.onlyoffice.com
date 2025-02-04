@@ -6,7 +6,7 @@ sidebar_position: -2
 
 This documentation describes:
 
-- How to enable [debug mode](../Usage%20API/Debugging/Debugging.md) to detect and fix all the possible errors
+- How to enable [debug mode](../Usage%20API/Debugging/Running%20in%20debug%20mode%20on%20Windows.md) to detect and fix all the possible errors
 - How to extend editor functionality with ready-to-use [plugins](../Usage%20API/Adding%20plugins.md) or creating your own ones
 - How to integrate desktop editors into the [document management systems (DMS) providers](../Usage%20API/Adding%20a%20DMS%20provider/Adding%20a%20DMS%20provider.md), [open](../Usage%20API/Adding%20a%20DMS%20provider/Opening%20documents.md) and [encrypt](../Usage%20API/Adding%20a%20DMS%20provider/Encryption/Encryption.md) documents in them
 

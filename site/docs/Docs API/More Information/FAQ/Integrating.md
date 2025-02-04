@@ -38,7 +38,7 @@ If you want to connect ONLYOFFICE Docs to one of the existing document managemen
 - [SuiteCRM](../../Get%20Started/Ready-to-use%20connectors/SuiteCRM%20integration.md)
 - [WordPress](../../Get%20Started/Ready-to-use%20connectors/WordPress%20integration.md)
 
-Most of the connectors are available from the corresponding service application store and are easy to install. Just follow the step-by-step instructions at the [connector page](../../Get%20Started/Ready-to-use%20connectors/Ready-to-use%20connectors.md) and connect ONLYOFFICE Docs to your service.
+Most of the connectors are available from the corresponding service application store and are easy to install. Just follow the step-by-step instructions at the [connector page](../../Get%20Started/Ready-to-use%20connectors/Nextcloud%20integration.md) and connect ONLYOFFICE Docs to your service.
 
 ## Which paths should I specify when integrating ONLYOFFICE Docs with my website?
 
