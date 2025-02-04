@@ -29,7 +29,6 @@ class CDocBuilderValue
 | [IsNull](IsNull.md)                   | Returns true if this object is null.            |
 | [IsObject](IsObject.md)               | Returns true if this object is an object.       |
 | [IsString](IsString.md)               | Returns true if this object is a string.        |
-| [IsTypedArray](IsTypedArray.md)       | Returns true if this object is a typed array.   |
 | [IsUndefined](IsUndefined.md)         | Returns true if this object is undefined.       |
 | [Set](Set.md)                         | Sets an array value by its index.               |
 | [SetProperty](SetProperty.md)         | Sets a property to this object.                 |
