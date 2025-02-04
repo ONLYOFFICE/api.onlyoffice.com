@@ -39,10 +39,12 @@
   --dropdown-icon-height: 0.375rem;
   --dropdown-icon-gap: 0.688rem;
 
-  --ifm-menu-color-background-active: var(--c-blue-0);
-
   --sidebar-category-c: var(--c-gray-100);
   /* END SIDEBAR */
+}
+
+html[data-theme='light'] {
+  --ifm-menu-color-background-active: var(--c-blue-0);
 }
 
 html[data-theme='dark'] {
