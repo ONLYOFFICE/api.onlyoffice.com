@@ -96,6 +96,51 @@
 
   --header-block-size: var(--base-size-72);
   --color-foreground-link: #ff6e3d;
+
+  --temp-color-icon-32-javascript-sdk-0: #f5f5f5;
+  --temp-color-icon-32-javascript-sdk-1: #333;
+  --temp-color-icon-32-javascript-sdk-2: #fff;
+  --temp-color-icon-32-javascript-sdk-3: #ff8e3d;
+  --temp-color-icon-32-javascript-sdk-4: #ff6f3d;
+
+  --temp-color-icon-32-docs-api-0: #fff;
+  --temp-color-icon-32-docs-api-1: #333;
+  --temp-color-icon-32-docs-api-2: #f5f5f5;
+  --temp-color-icon-32-docs-api-3: #ff6f3d;
+  --temp-color-icon-32-docs-api-4: #ff8e3d;
+
+  --temp-color-icon-32-desktop-editors-0: #f5f5f5;
+  --temp-color-icon-32-desktop-editors-1: #333;
+  --temp-color-icon-32-desktop-editors-2: #f5f5f5;
+  --temp-color-icon-32-desktop-editors-3: #bdecff;
+  --temp-color-icon-32-desktop-editors-4: #f5f5f5;
+  --temp-color-icon-32-desktop-editors-5: #fff;
+  --temp-color-icon-32-desktop-editors-6: #fff;
+  --temp-color-icon-32-desktop-editors-7: #ff6f3d;
+  --temp-color-icon-32-desktop-editors-8: #ff8e3d;
+
+  --temp-color-icon-32-docspace-api-0: #fff;
+  --temp-color-icon-32-docspace-api-1: #bdecff;
+  --temp-color-icon-32-docspace-api-2: #333;
+  --temp-color-icon-32-docspace-api-3: #ff6f3d;
+  --temp-color-icon-32-docspace-api-4: #ff8e3d;
+
+  --temp-color-icon-32-office-api-0: #fff;
+  --temp-color-icon-32-office-api-1: #bdecff;
+  --temp-color-icon-32-office-api-2: #333;
+  --temp-color-icon-32-office-api-3: #ff6f3d;
+  --temp-color-icon-32-office-api-4: #ff8f3d;
+
+  --temp-color-icon-32-document-builder-0: #fff;
+  --temp-color-icon-32-document-builder-1: #333;
+  --temp-color-icon-32-document-builder-2: #efefef;
+  --temp-color-icon-32-document-builder-3: #333;
+  --temp-color-icon-32-document-builder-4: #fff;
+  --temp-color-icon-32-document-builder-5: #fff;
+  --temp-color-icon-32-document-builder-6: #ffc671;
+  --temp-color-icon-32-document-builder-7: #ff7541;
+  --temp-color-icon-32-document-builder-8: #ff6f3d;
+  --temp-color-icon-32-document-builder-9: #ff8e3d;
 }
 
 html[data-theme='light'] {
