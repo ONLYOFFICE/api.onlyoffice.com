@@ -1,16 +1,8 @@
-import type {ReactNode} from 'react';
-import clsx from 'clsx';
-import Heading from '@theme/Heading';
-import Link from '@docusaurus/Link';
+import type { ReactNode } from 'react';
 import styles from './styles.module.css';
+import { FeaturesGrid } from "@site/src/components/FeaturesGrid";
 
-type FeatureItem = {
-  title: string;
-  link: string,
-  description: ReactNode;
-};
-
-const FeatureList: FeatureItem[] = [
+const FeatureList: FeaturesGrid.Item[] = [
   {
     title: 'JavaScript SDK',
     link: 'Get Started/Basic concepts',
@@ -65,28 +57,11 @@ const FeatureList: FeatureItem[] = [
   },
 ];
 
-function Feature({title, link, description}: FeatureItem) {
-  return (
-    <div className={clsx('col col--4')}>
-      <div className="text--center padding-horiz--md">
-        <Link to={`docspace/${title}/${link}`}>
-          <Heading as="h3">{title}</Heading>
-        </Link>
-        <p>{description}</p>
-      </div>
-    </div>
-  );
-}
-
 export default function DocsFeatures(): ReactNode {
   return (
     <section className={styles.features}>
       <div className="container">
-        <div className="row">
-          {FeatureList.map((props, idx) => (
-            <Feature key={idx} {...props} />
-          ))}
-        </div>
+        <FeaturesGrid linkPrefix='docspace' items={FeatureList}/>
       </div>
     </section>
   );

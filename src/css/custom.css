@@ -5,11 +5,48 @@
  */
 
 :root {
+  --base-size-64: 64px;
   --base-size-36: 36px;
   --base-size-32: 32px;
   --base-size-24: 24px;
   --base-size-16: 16px;
   --base-size-12: 12px;
+
+  --base-text-font-size-12: 12px;
+  --base-text-font-size-13: 13px;
+  --base-text-font-size-14: 14px;
+  --base-text-font-size-16: 16px;
+  --base-text-font-size-18: 18px;
+  --base-text-font-size-24: 24px;
+  --base-text-font-size-32: 32px;
+  --base-text-font-size-40: 40px;
+  --base-text-font-weight-normal: 400;
+  --base-text-font-weight-medium: 500;
+  --base-text-font-weight-semi-bold: 600;
+  --base-text-font-weight-bold: 700;
+  --base-text-letter-spacing-0-04: .04em;
+  --base-text-line-height-1-25: 1.25;
+  --base-text-line-height-1-50: 1.5;
+
+  --text-display-font-size-default: var(--base-text-font-size-40);
+  --text-display-font-weight-default: var(--base-text-font-weight-bold);
+  --text-display-line-height-default: var(--base-text-line-height-1-50);
+  --text-title-font-size-small: var(--base-text-font-size-18);
+  --text-title-font-size-medium: var(--base-text-font-size-24);
+  --text-title-font-size-large: var(--base-text-font-size-32);
+  --text-title-font-weight-small: var(--base-text-font-weight-bold);
+  --text-title-font-weight-medium: var(--base-text-font-weight-bold);
+  --text-title-font-weight-large: var(--base-text-font-weight-bold);
+  --text-title-line-height-small: var(--base-text-line-height-1-25);
+  --text-title-line-height-medium: var(--base-text-line-height-1-25);
+  --text-title-line-height-large: var(--base-text-line-height-1-25);
+  --text-body-font-size-small: var(--base-text-font-size-14);
+  --text-body-font-size-medium: var(--base-text-font-size-16);
+  --text-body-font-size-large: var(--base-text-font-size-18);
+  --text-body-line-height-small: var(--base-text-line-height-1-50);
+
+  --card-border-color: #ededed;
+  --card-background-color: var(--ifm-card-background-color);
 
   --ifm-color-primary: #3578e5;
   --ifm-color-primary-dark: #29784c;
@@ -47,6 +84,17 @@
 
   --sidebar-category-c: var(--c-gray-100);
   /* END SIDEBAR */
+
+  --ifm-heading-color: var(--ifm-font-color-base);
+  --ifm-link-hover-color: var(--ifm-font-color-base);
+  --ifm-link-color: var(--ifm-font-color-base);
+  --ifm-navbar-link-color: var(--ifm-color-content-inverse);
+  --ifm-color-primary: var(--openapi-card-background-color);
+
+  --color-page-header-default-background: #424242;
+  --ifm-navbar-background-color: var(--color-page-header-default-background);
+
+  --header-block-size: var(--base-size-72);
 }
 
 html[data-theme='light'] {
@@ -62,6 +110,8 @@ html[data-theme='dark'] {
   --ifm-color-primary-lightest: #4fddbf;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 
+  --card-border-color: #454545;
+
   /* START STATUS OPENAPI */
   --ifm-color-get: #0f6c47;
   --ifm-color-post: #126fa5;
@@ -73,6 +123,7 @@ html[data-theme='dark'] {
   --ifm-link-hover-color: rgba(77, 141, 255, 0.8);
 
   --sidebar-category-c: var(--c-gray-0);
+  --color-page-header-default-background: #333;
 }
 
 /* START OPENAPI */
@@ -188,3 +239,7 @@ html[data-theme='dark'] {
   }
 }
 /* END SIDEBAR */
+
+main {
+  background-color: var(--openapi-card-background-color);
+}

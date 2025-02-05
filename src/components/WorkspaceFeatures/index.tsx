@@ -1,16 +1,8 @@
 import type {ReactNode} from 'react';
-import clsx from 'clsx';
-import Heading from '@theme/Heading';
-import Link from '@docusaurus/Link';
 import styles from './styles.module.css';
+import { FeaturesGrid } from "@site/src/components/FeaturesGrid";
 
-type FeatureItem = {
-  title: string;
-  link: string,
-  description: ReactNode;
-};
-
-const FeatureList: FeatureItem[] = [
+const FeatureList: FeaturesGrid.Item[] = [
   {
     title: 'API Backend',
     link: 'Get Started/Basic concepts',
@@ -36,27 +28,12 @@ const FeatureList: FeatureItem[] = [
   },
 ];
 
-function Feature({title, link, description}: FeatureItem) {
-  return (
-    <div className={clsx('col col--4')}>
-      <div className="text--center padding-horiz--md">
-        <Link to={`workspace/${title}/${link}`}>
-          <Heading as="h3">{title}</Heading>
-        </Link>
-        <p>{description}</p>
-      </div>
-    </div>
-  );
-}
-
 export default function WorkspaceFeatures(): ReactNode {
   return (
     <section className={styles.features}>
       <div className="container">
         <div className="row">
-          {FeatureList.map((props, idx) => (
-            <Feature key={idx} {...props} />
-          ))}
+          <FeaturesGrid linkPrefix='workspace' items={FeatureList}/>
         </div>
       </div>
     </section>
