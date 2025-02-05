@@ -18,6 +18,11 @@ const config: Config = {
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
 
+  future: {
+    v4: true, // Opt-in for upcoming v4 breaking changes
+    experimental_faster: true,
+  },
+
   i18n: {
     defaultLocale: 'en',
     locales: ['en', 'zh-CN'],
