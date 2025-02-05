@@ -84,6 +84,17 @@
 
   --sidebar-category-c: var(--c-gray-100);
   /* END SIDEBAR */
+
+  --ifm-heading-color: var(--ifm-font-color-base);
+  --ifm-link-hover-color: var(--ifm-font-color-base);
+  --ifm-link-color: var(--ifm-font-color-base);
+  --ifm-navbar-link-color: var(--ifm-color-content-inverse);
+  --ifm-color-primary: var(--openapi-card-background-color);
+
+  --color-page-header-default-background: #424242;
+  --ifm-navbar-background-color: var(--color-page-header-default-background);
+
+  --header-block-size: var(--base-size-72);
 }
 
 html[data-theme='light'] {
@@ -112,6 +123,7 @@ html[data-theme='dark'] {
   --ifm-link-hover-color: rgba(77, 141, 255, 0.8);
 
   --sidebar-category-c: var(--c-gray-0);
+  --color-page-header-default-background: #333;
 }
 
 /* START OPENAPI */
@@ -227,3 +239,7 @@ html[data-theme='dark'] {
   }
 }
 /* END SIDEBAR */
+
+main {
+  background-color: var(--openapi-card-background-color);
+}
