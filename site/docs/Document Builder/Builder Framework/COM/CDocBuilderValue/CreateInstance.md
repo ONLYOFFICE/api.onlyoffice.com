@@ -1,33 +1,20 @@
-```yml signature
-- {type: type, text: HRESULT}
-- {type: text, text: " "}
-- {type: entity, text: CreateInstance}
-- {type: text, text: (}
-- {type: parameter, text: value}
-- {type: text, text: ": [in, optional] "}
-- {type: type, text: VARIANT}
-- {type: text, text: )}
-```
-
-## Description
+# CreateInstance
 
 Creates an instance of the `CDocBuilderValue` class.
 
 > Please note, that for the `.docbuilder` file the `CDocBuilderValue.CreateInstance` method is not used.
 
+## Syntax
+
+```cpp
+HRESULT CreateInstance([in, optional] VARIANT value);
+```
+
 ## Parameters
 
-<parameters>
-
-- value
-
-  ```yml signature.variant="inline"
-  - {type: type, text: VARIANT}
-  ```
-
-  - : A value from which an instance will be created.
-
-</parameters>
+| Parameter | Type    | Description                   |
+| --------- | ------- | ----------------------------- |
+| value     | VARIANT | The returned undefined value. | A value from which an instance will be created. |
 
 ## Example
 

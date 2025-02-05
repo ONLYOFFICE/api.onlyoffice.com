@@ -1,33 +1,20 @@
-```yml signature
-- {type: type, text: HRESULT}
-- {type: text, text: " "}
-- {type: entity, text: GetContext}
-- {type: text, text: (}
-- {type: parameter, text: result}
-- {type: text, text: ": [out, retval] "}
-- {id: ../../CDocBuilderContext/index.md, token: {type: type, text: I_DOCBUILDER_CONTEXT**}}
-- {type: text, text: )}
-```
-
-## Description
+# GetContext
 
 Returns the current JS [context](../CDocBuilderContext/CDocBuilderContext.md).
 
 > Please note, that for the `.docbuilder` file the `CDocBuilder.GetContext` method is not used.
 
+## Syntax
+
+```cpp
+HRESULT GetContext([out, retval] I_DOCBUILDER_CONTEXT** result);
+```
+
 ## Parameters
 
-<parameters>
-
-- result
-
-  ```yml signature.variant="inline"
-  - {id: ../../CDocBuilderContext/index.md, token: {type: type, text: I_DOCBUILDER_CONTEXT**}}
-  ```
-
-  - : The returned JS context.
-
-</parameters>
+| **Name** | **Type**                                                              | **Description**          |
+| -------- | --------------------------------------------------------------------- | ------------------------ |
+| result   | [I_DOCBUILDER_CONTEXT**](../CDocBuilderContext/CDocBuilderContext.md) | The returned JS context. |
 
 ## Example
 

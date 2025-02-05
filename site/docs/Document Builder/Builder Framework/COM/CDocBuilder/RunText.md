@@ -1,45 +1,21 @@
-```yml signature
-- {type: type, text: HRESULT}
-- {type: text, text: " "}
-- {type: entity, text: RunText}
-- {type: text, text: (}
-- {type: parameter, text: commands}
-- {type: text, text: ": [in] "}
-- {type: type, text: BSTR}
-- {type: text, text: ", "}
-- {type: parameter, text: result}
-- {type: text, text: ": [out, retval] "}
-- {type: type, text: VARIANT_BOOL*}
-- {type: text, text: )}
-```
-
-## Description
+# RunText
 
 Runs all the commands for the document creation using a single command. Compared to [CDocBuilder.ExecuteCommand](./ExecuteCommand.md) where only one command at a time is allowed, `CDocBuilder.RunText` makes it possible to enter all the commands for the document creation at once.
 
 > Please note, that for the `.docbuilder` file the `CDocBuilder.RunText` method is not used.
 
+## Syntax
+
+```cpp
+HRESULT RunText([in] BSTR commands, [out, retval] VARIANT_BOOL* result);
+```
+
 ## Parameters
 
-<parameters>
-
-- commands
-
-  ```yml signature.variant="inline"
-  - {type: type, text: BSTR}
-  ```
-
-  - : The commands which will be used to create the document file (in COM, the escape character must be used when the command contains quotation symbols). All the commands containing `builder.` are line separated, i.e. you cannot write them in one line, each command must start with its own line.
-
-- result
-
-  ```yml signature.variant="inline"
-  - {type: type, text: VARIANT_BOOL*}
-  ```
-
-  - : Specifies if the operation of running the commands is successful or not.
-
-</parameters>
+| **Name** | **Type**      | **Description**                                                                                                                                                                                                                                                                                    |
+| -------- | ------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| commands | BSTR          | The commands which will be used to create the document file (in COM, the escape character must be used when the command contains quotation symbols). All the commands containing `builder.` are line separated, i.e. you cannot write them in one line, each command must start with its own line. |
+| result   | VARIANT_BOOL* | Specifies if the operation of running the commands is successful or not.                                                                                                                                                                                                                           |
 
 ## Example
 

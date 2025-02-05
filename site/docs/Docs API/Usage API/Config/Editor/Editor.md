@@ -1,32 +1,5 @@
 The editorConfig section allows to change the parameters pertaining to the editor interface: opening mode (viewer or editor), interface language, additional buttons, etc.).
 
-- [actionLink](#actionlink)
-- [callbackUrl](#callbackurl)
-- [coEditing](#coediting)
-  - [coEditing.mode](#coeditingmode)
-  - [coEditing.change](#coeditingchange)
-- [createUrl](#createurl)
-- [lang](#lang)
-- [location](#location)
-- [mode](#mode)
-- [recent](#recent)
-  - [recent.folder](#recentfolder)
-  - [recent.title](#recenttitle)
-  - [recent.url](#recenturl)
-- [region](#region)
-- [templates](#templates)
-  - [templates.image](#templatesimage)
-  - [templates.title](#templatestitle)
-  - [templates.url](#templatesurl)
-- [user](#user)
-  - [user.firstname](#userfirstname)
-  - [user.group](#usergroup)
-  - [user.id](#userid)
-  - [user.image](#userimage)
-  - [user.lastname](#userlastname)
-  - [user.name](#username)
-- [Example](#example)
-
 ## actionLink
 
 Specifies the data received from the **document editing service** using the [onMakeActionLink](../Events.md#onmakeactionlink) event or the [onRequestSendNotify](../Events.md#onrequestsendnotify) event in *data.actionLink* parameter, which contains the information about the action in the document that will be scrolled to.

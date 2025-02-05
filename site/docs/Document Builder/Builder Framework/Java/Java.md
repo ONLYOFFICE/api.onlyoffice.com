@@ -6,20 +6,14 @@ For the integration of ONLYOFFICE Document Builder into any application, the Jav
 
 ## Classes
 
-The current application version contains five main classes:
+The current application version contains four main classes:
 
-<references>
-
-- [CDocBuilder](CDocBuilder/CDocBuilder.md)
-  - : Used by ONLYOFFICE Document Builder for the document file (text document, spreadsheet, presentation, form document, PDF) to be generated.
-- [CDocBuilderValue](CDocBuilderValue/CDocBuilderValue.md)
-  - : Used by ONLYOFFICE Document Builder for getting the results of called JS commands. It represents a wrapper for a JS object.
-- [CDocBuilderContextScope](CDocBuilderContextScope/CDocBuilderContextScope.md)
-  - : The stack-allocated class which sets the execution context for all operations executed within a local scope.
-- [CDocBuilderContext](CDocBuilderContext/CDocBuilderContext.md)
-  - : Used by ONLYOFFICE Document Builder for getting JS context for working.
-
-</references>
+| **Name**                                                                      | **Description**                                                                                                                           |
+| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
+| [CDocBuilder](CDocBuilder/CDocBuilder.md)                                     | Used by ONLYOFFICE Document Builder for the document file (text document, spreadsheet, presentation, form document, PDF) to be generated. |
+| [CDocBuilderContext](CDocBuilderContext/CDocBuilderContext.md)                | Used by ONLYOFFICE Document Builder for getting JS context for working.                                                                   |
+| [CDocBuilderContextScope](CDocBuilderContextScope/CDocBuilderContextScope.md) | The stack-allocated class which sets the execution context for all operations executed within a local scope.                              |
+| [CDocBuilderValue](CDocBuilderValue/CDocBuilderValue.md)                      | Used by ONLYOFFICE Document Builder for getting the results of called JS commands. It represents a wrapper for a JS object.               |
 
 > JDK 8 and above is supported.
 

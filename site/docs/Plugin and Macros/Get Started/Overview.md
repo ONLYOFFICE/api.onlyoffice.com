@@ -8,10 +8,10 @@ Plugin is an HTML page that is embedded in the editor and uses API to work with 
 
 This documentation describes:
 
-- How to [build](../Structure/Manifest/Manifest.md), [localize](../Structure/Localization.md), run, [test](../Tutorials/Developing/Developing.md) and [publish](../Tutorials/Publishing.md) a plugin
+- How to [build](../Structure/Manifest/Manifest.md), [localize](../Structure/Localization.md), run, [test](../Tutorials/Developing/For%20web%20editors.md) and [publish](../Tutorials/Publishing.md) a plugin
 - How to customize plugins: create [context menu items](../Customization/Context%20menu.md), [toolbar buttons](../Customization/Toolbar.md), [windows and panels](../Customization/Windows%20and%20panels.md), [input helpers](../Customization/Input%20helper.md), process [buttons](../Customization/Buttons.md)
 - How to [write](../Macros/Writing%20macros.md), [debug](../Macros/Debugging.md) and run a macro, add a custom function, or [convert](../Macros/Converting%20VBA%20macros.md) VBA macros to use in ONLYOFFICE
-- How to [interact with the editors](../Interacting%20with%20editors/Overview/Overview.md), use ONLYOFFICE [methods](../Interacting%20with%20editors/Methods/Methods.md) and events
+- How to [interact with the editors](../Interacting%20with%20editors/Overview/Overview.md), use ONLYOFFICE [methods](../Interacting%20with%20editors/Overview/How%20to%20call%20methods.md) and events
 - Where to find guides and [plugin](../Tutorials/Samples/Samples.md)/[macro](../Macros/Samples/Samples.md) code samples to get started
 
 ## What plugins can do
@@ -34,5 +34,5 @@ To quickly install and update plugins, you can use [ONLYOFFICE Plugin Marketplac
 To create your own plugin, you need to follow a few steps:
 
 1. Learn the fundamental concepts for building plugins on the [Getting started](./Getting%20started.md) page and write code that defines the plugin appearance and behavior.
-2. After building the plugin, [test](../Tutorials/Developing/Developing.md) it thoroughly and make sure the plugin looks and works as you expected. Try to anticipate the problems that might occur and suggest your solutions to them.
+2. After building the plugin, [test](../Tutorials/Developing/For%20web%20editors.md) it thoroughly and make sure the plugin looks and works as you expected. Try to anticipate the problems that might occur and suggest your solutions to them.
 3. Now you can use the plugin on your own or suggest it for [publishing](../Tutorials/Publishing.md) by creating a pull request to the [plugin marketplace repository](https://github.com/ONLYOFFICE/onlyoffice.github.io).

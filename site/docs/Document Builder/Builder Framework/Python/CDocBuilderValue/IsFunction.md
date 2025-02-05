@@ -1,17 +1,14 @@
-```yml signature
-- {type: keyword, text: def}
-- {type: text, text: " "}
-- {type: entity, text: IsFunction}
-- {type: text, text: (}
-- {type: parameter, text: self}
-- {type: text, text: )}
-```
-
-## Description
+# IsFunction
 
 Returns true if the `CDocBuilderValue` object is a function.
 
 > Please note, that for the `.docbuilder` file the `CDocBuilderValue.IsFunction` method is not used.
+
+## Syntax
+
+```py
+def IsFunction(self);
+```
 
 ## Example
 

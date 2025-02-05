@@ -1,17 +1,14 @@
-```yml signature
-- {type: keyword, text: def}
-- {type: text, text: " "}
-- {type: entity, text: GetLength}
-- {type: text, text: (}
-- {type: parameter, text: self}
-- {type: text, text: )}
-```
-
-## Description
+# GetLength
 
 Returns the length if the `CDocBuilderValue` object is an array. Otherwise, returns 0.
 
 > Please note, that for the `.docbuilder` file the `CDocBuilderValue.GetLength` method is not used.
+
+## Syntax
+
+```py
+def GetLength(self);
+```
 
 ## Example
 

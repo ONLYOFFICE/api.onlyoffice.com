@@ -1,16 +1,14 @@
-```yml signature
-- {type: type, text: unsigned int}
-- {type: text, text: " "}
-- {type: entity, text: GetLength}
-- {type: text, text: (}
-- {type: text, text: )}
-```
-
-## Description
+# GetLength
 
 Returns the length if the `CDocBuilderValue` object is an array/typed array. Otherwise, returns 0.
 
 > Please note, that for the `.docbuilder` file the `CDocBuilderValue.GetLength` method is not used.
+
+## Syntax
+
+```cs
+unsigned int GetLength();
+```
 
 ## Example
 

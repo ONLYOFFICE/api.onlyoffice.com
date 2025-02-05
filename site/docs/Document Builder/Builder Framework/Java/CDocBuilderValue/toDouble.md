@@ -1,16 +1,14 @@
-```yml signature
-- {type: type, text: double}
-- {type: text, text: " "}
-- {type: entity, text: toDouble}
-- {type: text, text: (}
-- {type: text, text: )}
-```
-
-## Description
+# toDouble
 
 Converts the `CDocBuilderValue` object to a double value.
 
 > Please note, that for the `.docbuilder` file the `CDocBuilderValue.toDouble` method is not used.
+
+## Syntax
+
+```java
+double toDouble();
+```
 
 ## Example
 

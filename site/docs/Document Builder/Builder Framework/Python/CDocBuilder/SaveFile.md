@@ -1,82 +1,20 @@
-```yml signature
-- {type: keyword, text: def}
-- {type: text, text: " "}
-- {type: entity, text: SaveFile}
-- {type: text, text: (}
-- {type: parameter, text: self}
-- {type: text, text: ", "}
-- {type: parameter, text: type}
-- {type: text, text: ": "}
-- {type: type, text: int}
-- {type: text, text: " | "}
-- {type: type, text: str}
-- {type: text, text: ", "}
-- {type: parameter, text: path}
-- {type: text, text: ": "}
-- {type: type, text: str}
-- {type: text, text: ", "}
-- {type: parameter, text: params}
-- {type: text, text: ": "}
-- {type: type, text: str}
-- {type: text, text: " | "}
-- {type: type, text: None}
-- {type: text, text: " = "}
-- {type: type, text: None}
-- {type: text, text: )}
-```
-
-## Description
+# SaveFile
 
 Saves the file after all the changes are made. The type of the file which will be saved needs to be set.
 
+## Syntax
+
+```py
+def SaveFile(self, int | str type, str path, str | None params = None);
+```
+
 ## Parameters
 
-<parameters>
-
-- type
-
-  ```yml signature.variant="inline"
-  - {type: type, text: int}
-  - {type: text, text: " | "}
-  - {type: type, text: str}
-  ```
-
-  - :
-
-    The type of the file to be saved set as a hexadecimal integer for the Python code. For the `.docbuilder` script file the following values are possible: `docx`, `odt`, `rtf`, `txt`, `pptx`, `xlsx`, `ods`, `csv`, `pdf` (see [OFFICESTUDIO\_FILE\_XXX](../../../Builder%20App/Overview.md#format-types) values).
-
-- path
-
-  ```yml signature.variant="inline"
-  - {type: type, text: str}
-  ```
-
-  - :
-
-    The path to the file to be saved together with its name and extension.
-
-- params, default: None
-
-  ```yml signature.variant="inline"
-  - {type: type, text: str}
-  - {type: text, text: " | "}
-  - {type: type, text: None}
-  ```
-
-  - :
-
-    The parameters needed for the correct file saving (most commonly, the encoding is used for the `txt` and `csv` file types or the delimiter for the `csv` files, for other file types this is just an empty string). The parameters are added in the form of XML tags, where `m_nCsvTxtEncoding` is used for the text encoding and `m_nCsvDelimiter` is used for the `csv` delimiter. You can find all the supported values for the encoding [in this file](https://github.com/ONLYOFFICE/server/blob/master/Common/sources/commondefines.js). The supported values for the `csv` delimiters include:
-
-    - `0` - no delimiter;
-    - `1` - tab;
-    - `2` - semicolon;
-    - `3` - colon;
-    - `4` - comma;
-    - `5` - space.
-
-    When saving into an image file (`png` or `jpg`) for creating thumbnails, the additional parameters are used. [See below](#saving-into-images) to find them out.
-
-</parameters>
+| Parameter | Type        | Default | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| --------- | ----------- | ------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| type      | int \| str  |         | The type of the file to be saved set as a hexadecimal integer for the Python code. For the `.docbuilder` script file the following values are possible: `docx`, `odt`, `rtf`, `txt`, `pptx`, `xlsx`, `ods`, `csv`, `pdf` (see [OFFICESTUDIO\_FILE\_XXX](../../../Builder%20App/Overview.md#format-types) values).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| path      | str         |         | The path to the file to be saved together with its name and extension.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| params    | str \| None | None    | The parameters needed for the correct file saving (most commonly, the encoding is used for the `txt` and `csv` file types or the delimiter for the `csv` files, for other file types this is just an empty string). The parameters are added in the form of XML tags, where `m_nCsvTxtEncoding` is used for the text encoding and `m_nCsvDelimiter` is used for the `csv` delimiter. You can find all the supported values for the encoding [in this file](https://github.com/ONLYOFFICE/server/blob/master/Common/sources/commondefines.js). The supported values for the `csv` delimiters include:<br/>`0` - no delimiter;<br/>`1` - tab;<br/>`2` - semicolon;<br/>`3` - colon;<br/>`4` - comma;<br/>`5` - space.<br/>When saving into an image file (`png` or `jpg`) for creating thumbnails, the additional parameters are used. [See below](#saving-into-images) to find them out. |
 
 ## Example
 

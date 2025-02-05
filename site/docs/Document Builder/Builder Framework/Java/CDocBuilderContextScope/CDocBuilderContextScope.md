@@ -1,18 +1,15 @@
-```yml signature
-- {type: keyword, text: class}
-- {type: text, text: " "}
-- {type: entity, text: CDocBuilderContextScope}
-```
-
-## Description
+# CDocBuilderContextScope
 
 The stack-allocated class used by ONLYOFFICE Document Builder which sets the execution context for all operations executed within a local scope. All opened scopes will be closed automatically when the builder [closeFile](../CDocBuilder/closeFile.md) method is called.
 
+## Syntax
+
+```java
+class CDocBuilderContextScope
+```
+
 ## Instance Methods
 
-<references>
-
-- [close](close.md)
-  - : Closes the current scope.
-
-</references>
+| Method            | Description               |
+| ----------------- | ------------------------- |
+| [close](close.md) | Closes the current scope. |

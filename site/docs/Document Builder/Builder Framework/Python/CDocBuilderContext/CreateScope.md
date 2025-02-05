@@ -1,17 +1,14 @@
-```yml signature
-- {type: keyword, text: def}
-- {type: text, text: " "}
-- {type: entity, text: CreateScope}
-- {type: text, text: (}
-- {type: parameter, text: self}
-- {type: text, text: )}
-```
-
-## Description
+# CreateScope
 
 Creates a [context scope](../CDocBuilderContextScope/CDocBuilderContextScope.md) which sets the execution context for all operations executed within a local scope.
 
 > Please note, that for the `.docbuilder` file the `CDocBuilderContext.CreateScope` method is not used.
+
+## Syntax
+
+```py
+def CreateScope(self);
+```
 
 ## Example
 

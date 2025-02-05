@@ -1,16 +1,14 @@
-```yml signature
-- {type: type, text: int}
-- {type: text, text: " "}
-- {type: entity, text: getLength}
-- {type: text, text: (}
-- {type: text, text: )}
-```
-
-## Description
+# getLength
 
 Returns the length if the `CDocBuilderValue` object is an array. Otherwise, returns 0.
 
 > Please note, that for the `.docbuilder` file the `CDocBuilderValue.getLength` method is not used.
+
+## Syntax
+
+```java
+int getLength();
+```
 
 ## Example
 

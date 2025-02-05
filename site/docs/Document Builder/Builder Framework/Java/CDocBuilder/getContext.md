@@ -1,35 +1,20 @@
-```yml signature
-- {id: ../../CDocBuilderContext/index.md, token: {type: type, text: CDocBuilderContext}}
-- {type: text, text: " "}
-- {type: entity, text: getContext}
-- {type: text, text: (}
-- {type: parameter, text: enterContext}
-- {type: text, text: ": "}
-- {type: type, text: boolean}
-- {type: text, text: " = "}
-- {type: text, text: 0}
-- {type: text, text: )}
-```
-
-## Description
+# getContext
 
 Returns the current JS [context](../CDocBuilderContext/CDocBuilderContext.md).
 
 > Please note, that for the `.docbuilder` file the `CDocBuilder.getContext` method is not used.
 
+## Syntax
+
+```java
+CDocBuilderContext getContext(boolean enterContext = 0);
+```
+
 ## Parameters
 
-<parameters>
-
-- enterContext, default: 0
-
-  ```yml signature.variant="inline"
-  - {type: type, text: boolean}
-  ```
-
-  - : Specifies whether the context will be entered.
-
-</parameters>
+| Parameter    | Type    | Default | Description                                    |
+| ------------ | ------- | ------- | ---------------------------------------------- |
+| enterContext | boolean | 0       | Specifies whether the context will be entered. |
 
 ## Example
 

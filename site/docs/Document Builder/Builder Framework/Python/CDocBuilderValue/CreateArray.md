@@ -1,33 +1,20 @@
-```yml signature
-- {type: keyword, text: def}
-- {type: text, text: " "}
-- {type: entity, text: CreateArray}
-- {type: text, text: (}
-- {type: parameter, text: length}
-- {type: text, text: ": "}
-- {type: type, text: int}
-- {type: text, text: )}
-```
-
-## Description
+# CreateArray
 
 Creates an array value. This method returns the current [context](../CDocBuilderContext/CDocBuilderContext.md) and calls its [CreateArray](../CDocBuilderContext/CreateArray.md) method.
 
 > Please note, that for the `.docbuilder` file the `CDocBuilderValue.CreateArray` method is not used.
 
+## Syntax
+
+```py
+def CreateArray(int length);
+```
+
 ## Parameters
 
-<parameters>
-
-- length
-
-  ```yml signature.variant="inline"
-  - {type: type, text: int}
-  ```
-
-  - : The array length.
-
-</parameters>
+| Parameter | Type | Description       |
+| --------- | ---- | ----------------- |
+| length    | int  | The array length. |
 
 ## Example
 

@@ -20,7 +20,7 @@ const config: Config = {
 
   i18n: {
     defaultLocale: 'en',
-    locales: ['en'],
+    locales: ['en', /*'zh-CN'*/],
   },
 
   presets: [
@@ -51,16 +51,30 @@ const config: Config = {
         id: 'openapi',
         docsPluginId: "api",
         config: {
-          workspace: {
+          workspaceBackend: {
             specPath: "openapi/workspace/community-server.json",
             outputDir: "site/openapi/workspace/API Backend/Usage API",
             sidebarOptions: {
               groupPathsBy: "tag",
             },
           } satisfies OpenApiPlugin.Options,
-          docspace: {
+          workspaceHosted: {
+            specPath: "openapi/workspace/hosted-solutions.json",
+            outputDir: "site/openapi/workspace/For Hosting Providers/Usage API",
+            sidebarOptions: {
+              groupPathsBy: "tag",
+            },
+          } satisfies OpenApiPlugin.Options,
+          docspaceBackend: {
             specPath: "openapi/docspace/docspace.json",
             outputDir: "site/openapi/docspace/API Backend/Usage API",
+            sidebarOptions: {
+              groupPathsBy: "tag",
+            },
+          } satisfies OpenApiPlugin.Options,
+          docspaceHosted: {
+            specPath: "openapi/docspace/hosted-solutions.json",
+            outputDir: "site/openapi/docspace/For Hosting Providers/Usage API",
             sidebarOptions: {
               groupPathsBy: "tag",
             },
@@ -174,6 +188,10 @@ const config: Config = {
               docsPluginId: 'api',
             },
           ],
+        },
+        {
+          type: 'localeDropdown',
+          position: 'right',
         },
         {
           href: 'https://github.com/ONLYOFFICE',

@@ -1,16 +1,14 @@
-```yml signature
-- {type: type, text: int}
-- {type: text, text: " "}
-- {type: entity, text: toInt}
-- {type: text, text: (}
-- {type: text, text: )}
-```
-
-## Description
+# toInt
 
 Converts the `CDocBuilderValue` object to an integer.
 
 > Please note, that for the `.docbuilder` file the `CDocBuilderValue.toInt` method is not used.
+
+## Syntax
+
+```java
+int toInt();
+```
 
 ## Example
 

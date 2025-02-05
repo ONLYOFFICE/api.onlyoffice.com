@@ -1,16 +1,14 @@
-```yml signature
-- {type: type, text: bool}
-- {type: text, text: " "}
-- {type: entity, text: IsEmpty}
-- {type: text, text: (}
-- {type: text, text: )}
-```
-
-## Description
+# IsEmpty
 
 Returns true if the `CDocBuilderValue` object is empty.
 
 > Please note, that for the `.docbuilder` file the `CDocBuilderValue.IsEmpty` method is not used.
+
+## Syntax
+
+```cpp
+bool IsEmpty();
+```
 
 ## Example
 

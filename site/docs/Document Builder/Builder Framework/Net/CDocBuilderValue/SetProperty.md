@@ -1,45 +1,21 @@
-```yml signature
-- {type: type, text: void}
-- {type: text, text: " "}
-- {type: entity, text: SetProperty}
-- {type: text, text: (}
-- {type: parameter, text: sName}
-- {type: text, text: ": "}
-- {type: type, text: String^}
-- {type: text, text: ", "}
-- {type: parameter, text: sValue}
-- {type: text, text: ": "}
-- {id: ../../CDocBuilderValue/index.md, token: {type: type, text: CDocBuilderValue^}}
-- {type: text, text: )}
-```
-
-## Description
+# SetProperty
 
 Sets a property to the `CDocBuilderValue` object.
 
 > Please note, that for the `.docbuilder` file the `CDocBuilderValue.SetProperty` method is not used.
 
+## Syntax
+
+```cs
+void SetProperty(String^ sName, CDocBuilderValue^ sValue);
+```
+
 ## Parameters
 
-<parameters>
-
-- sName
-
-  ```yml signature.variant="inline"
-  - {type: type, text: String^}
-  ```
-
-  - : The name of the `CDocBuilderValue` object property.
-
-- sValue
-
-  ```yml signature.variant="inline"
-  - {id: ../../CDocBuilderValue/index.md, token: {type: type, text: CDocBuilderValue^}}
-  ```
-
-  - : The value of the `CDocBuilderValue` object property.
-
-</parameters>
+| Parameter | Type                                                         | Description                                          |
+| --------- | ------------------------------------------------------------ | ---------------------------------------------------- |
+| sName     | String^                                                      | The name of the `CDocBuilderValue` object property.  |
+| sValue    | [CDocBuilderValue^](../CDocBuilderValue/CDocBuilderValue.md) | The value of the `CDocBuilderValue` object property. |
 
 ## Example
 

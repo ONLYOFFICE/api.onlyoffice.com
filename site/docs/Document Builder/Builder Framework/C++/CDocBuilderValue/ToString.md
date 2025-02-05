@@ -1,16 +1,14 @@
-```yml signature
-- {type: type, text: CString}
-- {type: text, text: " "}
-- {type: entity, text: ToString}
-- {type: text, text: (}
-- {type: text, text: )}
-```
-
-## Description
+# ToString
 
 Converts the `CDocBuilderValue` object to a string.
 
 > Please note, that for the `.docbuilder` file the `CDocBuilderValue.ToString` method is not used.
+
+## Syntax
+
+```cpp
+CString ToString();
+```
 
 ## Example
 

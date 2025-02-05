@@ -1,33 +1,20 @@
-```yml signature
-- {type: type, text: HRESULT}
-- {type: text, text: " "}
-- {type: entity, text: CreateScope}
-- {type: text, text: (}
-- {type: parameter, text: result}
-- {type: text, text: ": [out, retval] "}
-- {id: ../../CDocBuilderContextScope/index.md, token: {type: type, text: I_DOCBUILDER_CONTEXT_SCOPE**}}
-- {type: text, text: )}
-```
-
-## Description
+# CreateScope
 
 Creates a [context scope](../CDocBuilderContextScope/CDocBuilderContextScope.md) which sets the execution context for all operations executed within a local scope.
 
 > Please note, that for the `.docbuilder` file the `CDocBuilderContext.CreateScope` method is not used.
 
+## Syntax
+
+```cpp
+HRESULT CreateScope([out, retval] I_DOCBUILDER_CONTEXT_SCOPE** result);
+```
+
 ## Parameters
 
-<parameters>
-
-- result
-
-  ```yml signature.variant="inline"
-  - {id: ../../CDocBuilderContextScope/index.md, token: {type: type, text: I_DOCBUILDER_CONTEXT_SCOPE**}}
-  ```
-
-  - : The returned context scope.
-
-</parameters>
+| Parameter | Type                                                                                  | Description                 |
+| --------- | ------------------------------------------------------------------------------------- | --------------------------- |
+| result    | [I_DOCBUILDER_CONTEXT_SCOPE**](../CDocBuilderContextScope/CDocBuilderContextScope.md) | The returned context scope. |
 
 ## Example
 

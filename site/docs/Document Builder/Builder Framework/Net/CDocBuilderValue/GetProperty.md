@@ -1,33 +1,20 @@
-```yml signature
-- {id: ../../CDocBuilderValue/index.md, token: {type: type, text: CDocBuilderValue^}}
-- {type: text, text: " "}
-- {type: entity, text: GetProperty}
-- {type: text, text: (}
-- {type: parameter, text: sName}
-- {type: text, text: ": "}
-- {type: type, text: String^}
-- {type: text, text: )}
-```
-
-## Description
+# GetProperty
 
 Returns a property of the `CDocBuilderValue` object.
 
 > Please note, that for the `.docbuilder` file the `CDocBuilderValue.GetProperty` method is not used.
 
+## Syntax
+
+```cs
+CDocBuilderValue^ GetProperty(String^ sName);
+```
+
 ## Parameters
 
-<parameters>
-
-- sName
-
-  ```yml signature.variant="inline"
-  - {type: type, text: String^}
-  ```
-
-  - : The name of the `CDocBuilderValue` object property.
-
-</parameters>
+| Parameter | Type    | Description                                         |
+| --------- | ------- | --------------------------------------------------- |
+| sName     | String^ | The name of the `CDocBuilderValue` object property. |
 
 ## Example
 

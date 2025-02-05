@@ -1,16 +1,14 @@
-```yml signature
-- {id: ../../CDocBuilderValue/index.md, token: {type: type, text: CDocBuilderValue}}
-- {type: text, text: " "}
-- {type: entity, text: createNull}
-- {type: text, text: (}
-- {type: text, text: )}
-```
-
-## Description
+# createNull
 
 Creates a null value, an analogue of `null` in JS.
 
 > Please note, that for the `.docbuilder` file the `CDocBuilderContext.createNull` method is not used.
+
+## Syntax
+
+```java
+CDocBuilderValue createNull();
+```
 
 ## Example
 

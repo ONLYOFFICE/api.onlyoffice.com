@@ -1,16 +1,14 @@
-```yml signature
-- {type: type, text: void}
-- {type: text, text: " "}
-- {type: entity, text: Clear}
-- {type: text, text: (}
-- {type: text, text: )}
-```
-
-## Description
+# Clear
 
 Clears the `CDocBuilderValue` object.
 
 > Please note, that for the `.docbuilder` file the `CDocBuilderValue.Clear` method is not used.
+
+## Syntax
+
+```cs
+void Clear();
+```
 
 ## Example
 

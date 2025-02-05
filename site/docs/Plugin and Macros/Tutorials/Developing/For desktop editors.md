@@ -24,6 +24,6 @@ To develop a plugin for ONLYOFFICE desktop editors, follow the instructions belo
 
 ## Debugging
 
-To debug ONLYOFFICE plugins in the desktop editors, use the *--ascdesktop-support-debug-info* flag. To do this, follow the instructions [here](../../../Desktop%20Editors/Usage%20API/Debugging/Debugging.md) depending on the operating system you use.
+To debug ONLYOFFICE plugins in the desktop editors, use the *--ascdesktop-support-debug-info* flag. To do this, follow the instructions [here](../../../Desktop%20Editors/Usage%20API/Debugging/Running%20in%20debug%20mode%20on%20Windows.md) depending on the operating system you use.
 
 ![Debug](/assets/images/desktop/debugging.png)

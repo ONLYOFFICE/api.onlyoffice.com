@@ -10,8 +10,8 @@ bool CreateFile(sExtension);
 
 ## Parameters
 
-| **Name** | **Data type** | **Description** |
-| ------------- | ------------- | ------------- |
+| **Name**   | **Data type**  | **Description**                                                                                                                                                                  |
+| ---------- | -------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | sExtension | const wchar_t* | The file extension. The following values are possible: `docx`, `xlsx`, `pptx`, or `pdf` (see [OFFICESTUDIO\_FILE\_XXX](../../../Builder%20App/Overview.md#format-types) values). |
 
 ## Example

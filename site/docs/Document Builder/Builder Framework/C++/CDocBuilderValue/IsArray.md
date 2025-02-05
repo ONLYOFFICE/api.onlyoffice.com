@@ -1,16 +1,14 @@
-```yml signature
-- {type: type, text: bool}
-- {type: text, text: " "}
-- {type: entity, text: IsArray}
-- {type: text, text: (}
-- {type: text, text: )}
-```
-
-## Description
+# IsArray
 
 Returns true if the `CDocBuilderValue` object is an array.
 
 > Please note, that for the `.docbuilder` file the `CDocBuilderValue.IsArray` method is not used.
+
+## Syntax
+
+```cpp
+bool IsArray();
+```
 
 ## Example
 

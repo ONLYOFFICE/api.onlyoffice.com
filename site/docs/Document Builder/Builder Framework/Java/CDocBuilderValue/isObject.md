@@ -1,16 +1,14 @@
-```yml signature
-- {type: type, text: boolean}
-- {type: text, text: " "}
-- {type: entity, text: isObject}
-- {type: text, text: (}
-- {type: text, text: )}
-```
-
-## Description
+# isObject
 
 Returns true if the `CDocBuilderValue` object is an object.
 
 > Please note, that for the `.docbuilder` file the `CDocBuilderValue.isObject` method is not used.
+
+## Syntax
+
+```java
+boolean isObject();
+```
 
 ## Example
 

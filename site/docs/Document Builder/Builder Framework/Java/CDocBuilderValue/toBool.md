@@ -1,16 +1,14 @@
-```yml signature
-- {type: type, text: boolean}
-- {type: text, text: " "}
-- {type: entity, text: toBool}
-- {type: text, text: (}
-- {type: text, text: )}
-```
-
-## Description
+# toBool
 
 Converts the `CDocBuilderValue` object to a boolean value.
 
 > Please note, that for the `.docbuilder` file the `CDocBuilderValue.toBool` method is not used.
+
+## Syntax
+
+```java
+boolean toBool();
+```
 
 ## Example
 

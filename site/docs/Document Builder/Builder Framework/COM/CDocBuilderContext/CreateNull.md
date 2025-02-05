@@ -1,33 +1,20 @@
-```yml signature
-- {type: type, text: HRESULT}
-- {type: text, text: " "}
-- {type: entity, text: CreateNull}
-- {type: text, text: (}
-- {type: parameter, text: result}
-- {type: text, text: ": [out, retval] "}
-- {id: ../../CDocBuilderValue/index.md, token: {type: type, text: I_DOCBUILDER_VALUE**}}
-- {type: text, text: )}
-```
-
-## Description
+# CreateNull
 
 Creates a null value, an analogue of `null` in JS.
 
 > Please note, that for the `.docbuilder` file the `CDocBuilderContext.CreateNull` method is not used.
 
+## Syntax
+
+```cpp
+HRESULT CreateNull([out, retval] I_DOCBUILDER_VALUE** result);
+```
+
 ## Parameters
 
-<parameters>
-
-- result
-
-  ```yml signature.variant="inline"
-  - {id: ../../CDocBuilderValue/index.md, token: {type: type, text: I_DOCBUILDER_VALUE**}}
-  ```
-
-  - : The returned null value.
-
-</parameters>
+| Parameter | Type                                                            | Description                                 |
+| --------- | --------------------------------------------------------------- | ------------------------------------------- |
+| result    | [I_DOCBUILDER_VALUE**](../CDocBuilderValue/CDocBuilderValue.md) | The pointer to store the created null value |
 
 ## Example
 

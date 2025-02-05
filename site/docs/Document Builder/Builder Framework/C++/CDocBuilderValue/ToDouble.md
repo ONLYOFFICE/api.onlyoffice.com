@@ -1,16 +1,14 @@
-```yml signature
-- {type: type, text: double}
-- {type: text, text: " "}
-- {type: entity, text: ToDouble}
-- {type: text, text: (}
-- {type: text, text: )}
-```
-
-## Description
+# ToDouble
 
 Converts the `CDocBuilderValue` object to a double value.
 
 > Please note, that for the `.docbuilder` file the `CDocBuilderValue.ToDouble` method is not used.
+
+## Syntax
+
+```cpp
+double ToDouble();
+```
 
 ## Example
 

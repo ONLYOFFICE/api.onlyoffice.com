@@ -1,31 +1,18 @@
-```yml signature
-- {type: type, text: bool}
-- {type: text, text: " "}
-- {type: entity, text: CreateFile}
-- {type: text, text: (}
-- {type: parameter, text: nType}
-- {type: text, text: ": "}
-- {type: type, text: int}
-- {type: text, text: )}
-```
-
-## Description
+# CreateFile
 
 Creates a new file. The type of the file which will be created needs to be set.
 
+## Syntax
+
+```cs
+bool CreateFile(int nType);
+```
+
 ## Parameters
 
-<parameters>
-
-- nType
-
-  ```yml signature.variant="inline"
-  - {type: type, text: int}
-  ```
-
-  - : The type of the file to be created set as a hexadecimal integer for the .Net code or `docx`, `xlsx`, `pptx`, or `pdf` for the `.docbuilder` script file (see [OFFICESTUDIO\_FILE\_XXX](../../../Builder%20App/Overview.md#format-types) values).
-
-</parameters>
+| Parameter | Type | Description                                                                                                                                                                                                                                      |
+| --------- | ---- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| nType     | int  | The type of the file to be created set as a hexadecimal integer for the .Net code or `docx`, `xlsx`, `pptx`, or `pdf` for the `.docbuilder` script file (see [OFFICESTUDIO\_FILE\_XXX](../../../Builder%20App/Overview.md#format-types) values). |
 
 ## Example
 

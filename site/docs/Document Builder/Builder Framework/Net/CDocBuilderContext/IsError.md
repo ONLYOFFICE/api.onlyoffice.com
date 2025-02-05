@@ -1,16 +1,14 @@
-```yml signature
-- {type: type, text: bool}
-- {type: text, text: " "}
-- {type: entity, text: IsError}
-- {type: text, text: (}
-- {type: text, text: )}
-```
-
-## Description
+# IsError
 
 Checks for errors in JS.
 
 > Please note, that for the `.docbuilder` file the `CDocBuilderContext.IsError` method is not used.
+
+## Syntax
+
+```cs
+bool IsError();
+```
 
 ## Example
 

@@ -1,35 +1,20 @@
-```yml signature
-- {type: keyword, text: def}
-- {type: text, text: " "}
-- {type: entity, text: CreateArray}
-- {type: text, text: (}
-- {type: parameter, text: self}
-- {type: text, text: ", "}
-- {type: parameter, text: length}
-- {type: text, text: ": "}
-- {type: type, text: int}
-- {type: text, text: )}
-```
-
-## Description
+# CreateArray
 
 Creates an array value, an analogue of `new Array (length)` in JS.
 
 > Please note, that for the `.docbuilder` file the `CDocBuilderContext.CreateArray` method is not used.
 
+## Syntax
+
+```py
+def CreateArray(self, int length);
+```
+
 ## Parameters
 
-<parameters>
-
-- length
-
-  ```yml signature.variant="inline"
-  - {type: type, text: int}
-  ```
-
-  - : The array length.
-
-</parameters>
+| Parameter | Type | Description       |
+| --------- | ---- | ----------------- |
+| length    | int  | The array length. |
 
 ## Example
 

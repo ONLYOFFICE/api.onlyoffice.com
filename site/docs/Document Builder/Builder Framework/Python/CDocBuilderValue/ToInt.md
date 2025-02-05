@@ -1,17 +1,14 @@
-```yml signature
-- {type: keyword, text: def}
-- {type: text, text: " "}
-- {type: entity, text: ToInt}
-- {type: text, text: (}
-- {type: parameter, text: self}
-- {type: text, text: )}
-```
-
-## Description
+# ToInt
 
 Converts the `CDocBuilderValue` object to an integer.
 
 > Please note, that for the `.docbuilder` file the `CDocBuilderValue.ToInt` method is not used.
+
+## Syntax
+
+```py
+def ToInt(self);
+```
 
 ## Example
 
