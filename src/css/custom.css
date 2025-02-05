@@ -6,6 +6,12 @@
 
 /* You can override the default Infima variables here. */
 :root {
+  --base-size-36: 36px;
+  --base-size-32: 32px;
+  --base-size-24: 24px;
+  --base-size-16: 16px;
+  --base-size-12: 12px;
+
   --ifm-color-primary: #2e8555;
   --ifm-color-primary-dark: #29784c;
   --ifm-color-primary-darker: #277148;

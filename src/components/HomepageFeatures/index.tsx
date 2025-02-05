@@ -54,23 +54,45 @@ const FeatureList: FeatureItem[] = [
   },
 ];
 
-function Feature({title, Image, description}: FeatureItem) {
+// function Feature({title, Image, description}: FeatureItem) {
+//   return (
+//     <div className={clsx('col col--4', styles.featureBlock)}>
+//       <div className="text--center">
+//         {typeof Image === 'string' ? (
+//           <img src={Image} alt={title} className={styles.featureSvg} />
+//         ) : (
+//           <Image className={styles.featureSvg} role="img" />
+//         )}
+//       </div>
+//       <div className="text--center padding-horiz--md">
+//         <Link to={title.toLowerCase()}>
+//           <Heading as="h3">{title}</Heading>
+//         </Link>
+//         <p>{description}</p>
+//       </div>
+//     </div>
+//   );
+// }
+
+function Feature({index, title, Image, description}: FeatureItem & { index: number }) {
+  const is_reversed = index % 2;
   return (
-    <div className={clsx('col col--4')}>
-      <div className="text--center">
-        {typeof Image === 'string' ? (
-          <img src={Image} alt={title} className={styles.featureSvg} />
-        ) : (
-          <Image className={styles.featureSvg} role="img" />
-        )}
+      <div className={clsx(styles.featureBlock,{[styles.featureBlockReverse]:is_reversed})}>
+        <div className={styles.homeDecr}>
+          <h2>
+            <Link to={title.toLowerCase()}>{title}</Link>
+          </h2>
+          <p>{description}</p>
+          <Link to={title.toLowerCase()}>More</Link>
+        </div>
+        <div className={styles.homePreview}>
+          {typeof Image === 'string' ? (
+            <img src={Image} alt={title} className={styles.featureSvg} />
+          ) : (
+            <Image className={styles.featureSvg} role="img" />
+          )}
+        </div>
       </div>
-      <div className="text--center padding-horiz--md">
-        <Link to={title.toLowerCase()}>
-          <Heading as="h3">{title}</Heading>
-        </Link>
-        <p>{description}</p>
-      </div>
-    </div>
   );
 }
 
@@ -78,9 +100,9 @@ export default function HomepageFeatures(): ReactNode {
   return (
     <section className={styles.features}>
       <div className="container">
-        <div className="row">
+        <div className={styles.containerFeatures}>
           {FeatureList.map((props, idx) => (
-            <Feature key={idx} {...props} />
+            <Feature key={idx} index={idx} {...props} />
           ))}
         </div>
       </div>
