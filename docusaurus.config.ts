@@ -19,7 +19,6 @@ const config: Config = {
   onBrokenMarkdownLinks: 'warn',
 
   future: {
-    v4: true, // Opt-in for upcoming v4 breaking changes
     experimental_faster: true,
   },
 
