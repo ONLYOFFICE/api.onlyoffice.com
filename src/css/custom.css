@@ -208,13 +208,13 @@
   /* --ifm-navbar-link-hover-color: inherit; */
   /* --ifm-color-primary: var(--openapi-card-background-color); */
   --ifm-color-primary: var(--color-foreground-link);
-  --ifm-menu-color-background-active: var(--c-gray-0);
+  --ifm-menu-color-background-active: var(--ifm-menu-color-background-hover);
   --ifm-font-family-base: "Open Sans", "Open Sans Fallback", system-ui, sans-serif;
 }
 
-html[data-theme='light'] {
-  --ifm-menu-color-background-active: var(--c-blue-0);
-}
+/* html[data-theme='light'] { */
+  /* --ifm-menu-color-background-active: var(--c-blue-0); */
+/* } */
 
 html[data-theme='dark'] {
   --ifm-color-primary-dark: #21af90;
