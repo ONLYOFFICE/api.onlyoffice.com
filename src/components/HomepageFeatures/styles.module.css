@@ -30,6 +30,11 @@
   margin-block-start: var(--base-size-32);
   margin-inline: auto;
   display: grid;
+
+  @media (min-width: 768px) {
+    column-gap: var(--base-size-24);
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 @media (min-width: 1024px) {
