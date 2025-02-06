@@ -18,9 +18,9 @@ const templateProps: FeaturePageTemplate.Props = {
     </>
   ),
   links: [
-    <li>If you have any questions about ONLYOFFICE DocSpace, try the <Link href='docspace/API Backend/More Information/FAQ'>FAQ</Link> section first.</li>,
-    <li>You can request a feature or report a bug by posting an issue on <a href='https://github.com/ONLYOFFICE/DocSpace/issues'>GitHub</a>.</li>,
-    <li>You can also ask our developers on <a href='https://forum.onlyoffice.com/c/docspace/46'>ONLYOFFICE forum</a> (registration required).</li>,
+    <>If you have any questions about ONLYOFFICE DocSpace, try the <Link href='docspace/API Backend/More Information/FAQ'>FAQ</Link> section first.</>,
+    <>You can request a feature or report a bug by posting an issue on <a href='https://github.com/ONLYOFFICE/DocSpace/issues'>GitHub</a>.</>,
+    <>You can also ask our developers on <a href='https://forum.onlyoffice.com/c/docspace/46'>ONLYOFFICE forum</a> (registration required).</>,
   ],
   linkPrefix: 'docspace',
   items: [

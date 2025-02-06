@@ -2,6 +2,7 @@ import styles from './styles.module.css'
 import type { FC, ReactNode } from "react";
 import GithubIcon from '@site/static/icons/github-icon.svg'
 import { FeaturesGrid } from "@site/src/components/FeaturesGrid";
+import Heading from "@theme/Heading";
 
 export namespace FeaturePageTemplate {
   export type Props = {
@@ -18,7 +19,7 @@ export const FeaturePageTemplate: FC<FeaturePageTemplate.Props> = ({ title, desc
     <div className={styles.container}>
       <div className={styles.containerInner}>
         <div className={styles.headerSection}>
-          <h1>{title}</h1>
+          <Heading as="h1" className="hero__title">{title}</Heading>
           <p>{description}</p>
         </div>
         <main>
@@ -27,7 +28,7 @@ export const FeaturePageTemplate: FC<FeaturePageTemplate.Props> = ({ title, desc
         <div className={styles.helpSection}>
           <div className={styles.helpSectionHeader}>
             <GithubIcon/>
-            <h2>Get Help</h2>
+            <Heading as='h2'>Get Help</Heading>
           </div>
           <ul>
             {links.map((linkChildren, index) => (<li key={index}>{linkChildren}</li>))}
