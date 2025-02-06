@@ -1,13 +1,14 @@
 import type {ReactNode} from 'react';
 import clsx from 'clsx';
-import Heading from '@theme/Heading';
 import Link from '@docusaurus/Link';
 import styles from './styles.module.css';
+import { DocsFeatures, DocSpaceFeatures, type Features, WorkspaceFeatures } from "@site/src/features";
 
 type FeatureItem = {
   title: string;
   Image: string | React.ComponentType<React.ComponentProps<'svg'>>;
   description: ReactNode;
+  features: Features;
 };
 
 const FeatureList: FeatureItem[] = [
@@ -24,6 +25,7 @@ const FeatureList: FeatureItem[] = [
         own servers using our methods for hosting providers.
       </>
     ),
+    features: DocSpaceFeatures,
   },
   {
     title: 'Docs',
@@ -38,6 +40,7 @@ const FeatureList: FeatureItem[] = [
         Builder to generate documents easily without running document editors.
       </>
     ),
+    features: DocsFeatures,
   },
   {
     title: 'Workspace',
@@ -51,30 +54,11 @@ const FeatureList: FeatureItem[] = [
         and interact with it using our methods for hosting providers.
       </>
     ),
+    features: WorkspaceFeatures,
   },
 ];
 
-// function Feature({title, Image, description}: FeatureItem) {
-//   return (
-//     <div className={clsx('col col--4', styles.featureBlock)}>
-//       <div className="text--center">
-//         {typeof Image === 'string' ? (
-//           <img src={Image} alt={title} className={styles.featureSvg} />
-//         ) : (
-//           <Image className={styles.featureSvg} role="img" />
-//         )}
-//       </div>
-//       <div className="text--center padding-horiz--md">
-//         <Link to={title.toLowerCase()}>
-//           <Heading as="h3">{title}</Heading>
-//         </Link>
-//         <p>{description}</p>
-//       </div>
-//     </div>
-//   );
-// }
-
-function Feature({index, title, Image, description}: FeatureItem & { index: number }) {
+function Feature({index, title, Image, description, features }: FeatureItem & { index: number }) {
   const is_reversed = index % 2;
   return (
       <div className={clsx(styles.featureBlock,{[styles.featureBlockReverse]:is_reversed})}>
@@ -85,13 +69,23 @@ function Feature({index, title, Image, description}: FeatureItem & { index: numb
           <p>{description}</p>
           <Link to={title.toLowerCase()}>More</Link>
         </div>
-        <div className={styles.homePreview}>
-          {typeof Image === 'string' ? (
-            <img src={Image} alt={title} className={styles.featureSvg} />
-          ) : (
-            <Image className={styles.featureSvg} role="img" />
-          )}
-        </div>
+        <ul className={styles.featuresList}>
+          {features.items.map(((item, index) => (
+            <li className={styles.featuresListItem} key={index}>
+              {item.icon}
+              <Link to={`${features.linkPrefix}/${item.title}/${item.link}`}>{item.title}</Link>
+            </li>
+          )))}
+        </ul>
+        <Link to={title.toLowerCase()} className={styles.homePreview}>
+          <div>
+            {typeof Image === 'string' ? (
+              <img src={Image} alt={title} className={styles.featureSvg} />
+            ) : (
+              <Image className={styles.featureSvg} role="img" />
+            )}
+          </div>
+        </Link>
       </div>
   );
 }

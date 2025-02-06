@@ -1,38 +1,38 @@
-import type {ReactNode} from 'react';
-import clsx from 'clsx';
+import type { ReactNode } from 'react';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
-import DocsFeatures from '@site/src/components/DocsFeatures';
-import Heading from '@theme/Heading';
+import { FeaturePageTemplate } from "@site/src/components/FeaturePageLayout";
+import Link from "@docusaurus/Link";
+import { DocsFeatures } from "@site/src/features";
 
-import styles from './index.module.css';
-
-function PageHeader() {
-  return (
-    <header className={clsx('hero hero--primary', styles.heroBanner)}>
-      <div className="container">
-        <Heading as="h1" className="hero__title">
-          Docs
-        </Heading>
-        <p className="hero__subtitle">
-        ONLYOFFICE Docs is a collaborative office suite that includes editors for
-        text documents, spreadsheets, presentations, fillable forms, and PDFs.
-        </p>
-      </div>
-    </header>
-  );
-}
+const templateProps: FeaturePageTemplate.Props = {
+  title: 'Docs',
+  description: (
+    <>
+      ONLYOFFICE Docs is a collaborative office suite that includes editors for
+      text documents, spreadsheets, presentations, fillable forms, and PDFs.
+    </>
+  ),
+  links: [
+    <>If you have any questions about ONLYOFFICE Docs, try the <Link href='docs/Docs API/More Information/FAQ'>FAQ</Link> section first.
+    </>,
+    <>You can request a feature or report a bug by posting an issue on <a
+      href='https://github.com/ONLYOFFICE/DocumentServer/issues'>GitHub</a>.</>,
+    <>You can also ask our developers on <a href='https://forum.onlyoffice.com/c/document-api/39'>ONLYOFFICE forum</a> (registration
+      required).</>,
+  ],
+  linkPrefix: DocsFeatures.linkPrefix,
+  items: DocsFeatures.items,
+};
 
 export default function Home(): ReactNode {
   const {siteConfig} = useDocusaurusContext();
   return (
     <Layout
       title={`${siteConfig.title} API`}
-      description="Description will go into a meta tag in <head />">
-      <PageHeader />
-      <main>
-        <DocsFeatures />
-      </main>
+      description="Description will go into a meta tag in <head />"
+    >
+      <FeaturePageTemplate {...templateProps}/>
     </Layout>
   );
 }
