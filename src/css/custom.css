@@ -141,6 +141,25 @@
   --temp-color-icon-32-document-builder-7: #ff7541;
   --temp-color-icon-32-document-builder-8: #ff6f3d;
   --temp-color-icon-32-document-builder-9: #ff8e3d;
+
+  --temp-color-icon-32-plugins-0: #d9f4ff;
+  --temp-color-icon-32-plugins-1: #333;
+  --temp-color-icon-32-plugins-2: #9adaf3;
+  --temp-color-icon-32-plugins-3: #bdecff;
+
+  --temp-color-icon-32-self-hosted-0: #efefef;
+  --temp-color-icon-32-self-hosted-1: #333;
+  --temp-color-icon-32-self-hosted-2: #d9f4ff;
+  --temp-color-icon-32-self-hosted-3: #333;
+  --temp-color-icon-32-self-hosted-4: #ff6f3d;
+  --temp-color-icon-32-self-hosted-5: #ff8e3d;
+
+  --temp-color-icon-32-workspace-api-0: #;
+  --temp-color-icon-32-workspace-api-1: #;
+  --temp-color-icon-32-workspace-api-2: #;
+  --temp-color-icon-32-workspace-api-3: #;
+  --temp-color-icon-32-workspace-api-4: #;
+  --temp-color-icon-32-workspace-api-5: #;
 }
 
 html[data-theme='light'] {
