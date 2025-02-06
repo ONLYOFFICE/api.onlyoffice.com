@@ -77,6 +77,7 @@ function Feature({index, title, Image, description, features }: FeatureItem & { 
             </li>
           )))}
         </ul>
+        <Link to={title.toLowerCase()}>
         <div className={styles.homePreview}>
           {typeof Image === 'string' ? (
             <img src={Image} alt={title} className={styles.featureSvg} />
@@ -84,6 +85,7 @@ function Feature({index, title, Image, description, features }: FeatureItem & { 
             <Image className={styles.featureSvg} role="img" />
           )}
         </div>
+        </Link>
       </div>
   );
 }

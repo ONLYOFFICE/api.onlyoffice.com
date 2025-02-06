@@ -53,6 +53,14 @@
   color: var(--color-foreground-link);
 }
 
+.helpSection li::marker {
+  color: var(--color-foreground-accent);
+}
+
+.helpSection h2 {
+  color: var(--color-foreground-accent);
+}
+
 .helpSectionHeader {
   display: flex;
   align-items: center;

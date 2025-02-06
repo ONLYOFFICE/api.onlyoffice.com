@@ -54,11 +54,48 @@
   --card-background-color: var(--ifm-card-background-color);
 
 
-  --color-page-header-default-background: #424242;
-  --ifm-navbar-background-color: var(--color-page-header-default-background);
+  /* START STATUS OPENAPI */
+  --ifm-color-get: #05b870;
+  --ifm-color-post: #19abff;
+  --ifm-color-delete: #f05151;
+  --ifm-color-put-patch: #f46d2a;
+  /* END STATUS OPENAPI */
+
+  /* START COLORS LIST */
+  --c-blue-0: #f0f6ff;
+  --c-blue-70: #4d8dff;
+  --c-blue-90: #1b6dff;
+
+  --c-gray-0: #f3f3f3;
+  --c-gray-100: #141414;
+  /* END COLORS LIST */
+
+  --ifm-link-color: var(--c-blue-90);
+  --ifm-link-hover-color: rgba(27, 109, 255, 0.8);
+
+  /* START SIDEBAR */
+  --dropdown-icon-width: 0.625rem;
+  --dropdown-icon-height: 0.375rem;
+  --dropdown-icon-gap: 0.688rem;
+
+  --sidebar-category-c: var(--c-gray-100);
+  /* END SIDEBAR */
+
+  --ifm-heading-color: var(--ifm-font-color-base);
+  /* --ifm-link-hover-color: var(--ifm-font-color-base); */
+  /* --ifm-link-color: var(--ifm-font-color-base); */
+  /* --ifm-navbar-link-color: var(--ifm-color-content-inverse); */
+  --ifm-navbar-link-hover-color: var(--ifm-heading-color);
+  /* --ifm-color-primary: var(--openapi-card-background-color); */
+  --ifm-color-primary: var(--ifm-background-surface-color);
+  --ifm-card-background-color: var(--openapi-card-background-color);
+
+  /* --color-page-header-default-background: #424242; */
+  /* --ifm-navbar-background-color: #fff; */
 
   --header-block-size: var(--base-size-72);
   --color-foreground-link: #ff6e3d;
+  --color-foreground-accent: var(--color-foreground-link);
 
   --temp-color-icon-32-javascript-sdk-0: #f5f5f5;
   --temp-color-icon-32-javascript-sdk-1: #333;
@@ -117,14 +154,14 @@
   --temp-color-icon-32-self-hosted-4: #ff6f3d;
   --temp-color-icon-32-self-hosted-5: #ff8e3d;
 
-  --temp-color-icon-32-workspace-api-0: #;
-  --temp-color-icon-32-workspace-api-1: #;
-  --temp-color-icon-32-workspace-api-2: #;
-  --temp-color-icon-32-workspace-api-3: #;
-  --temp-color-icon-32-workspace-api-4: #;
-  --temp-color-icon-32-workspace-api-5: #;
-
   --temp-color-shadow-default-small: 0 7px 15px 0 #5454541a;
+
+  --temp-color-icon-32-workspace-api-0: #e2e2e2;
+  --temp-color-icon-32-workspace-api-1: #333;
+  --temp-color-icon-32-workspace-api-2: #bdecff;
+  --temp-color-icon-32-workspace-api-3: #ffc671;
+  --temp-color-icon-32-workspace-api-4: #ff7541;
+  --temp-color-icon-32-workspace-api-5: #ff6f3d;
 
   /* docusaurus theme */
 
@@ -321,9 +358,11 @@ html[data-theme='dark'] {
 /* END SIDEBAR */
 
 main {
-  background-color: var(--openapi-card-background-color);
+  /* background-color: var(--openapi-card-background-color); */
+  background-color: var(--ifm-background-surface-color);
 }
 
 .hero__subtitle {
   color: var(--ifm-font-color-base);
 }
+

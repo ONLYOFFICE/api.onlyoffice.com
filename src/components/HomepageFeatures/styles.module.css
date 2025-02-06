@@ -11,13 +11,14 @@
 }
 
 .featureSvg {
+  --temp-color-shadow-default-small: 0 4px 15px 0 #5454543b;
   box-shadow: var(--temp-color-shadow-default-small);
   border-radius: 8px;
   transition: box-shadow .3s;
 }
 
 .featureSvg:hover {
-  --temp-color-shadow-default-small: 0 12px 100px 0 #ff6e3d33;
+  --temp-color-shadow-default-small: 0 4px 15px 3px #5454543b;
 }
 
 .featureBlock {
