@@ -1,6 +1,12 @@
 import type {ReactNode} from 'react';
 import styles from './styles.module.css';
 import { FeaturesGrid } from "@site/src/components/FeaturesGrid";
+import DocumentBuilderIcon from '@site/static/icons/document-builder-icon.svg';
+import PluginIcon from '@site/static/icons/plugins-icon.svg';
+import DocsApiIcon from '@site/static/icons/docs-api-icon.svg';
+import DocSpaceApiIcon from '@site/static/icons/docspace-api-icon.svg';
+import DesktopEditorIcon from '@site/static/icons/desktop-editors-icon.svg';
+
 
 const FeatureList: FeaturesGrid.Item[] = [
   {
@@ -13,6 +19,7 @@ const FeatureList: FeaturesGrid.Item[] = [
         ONLYOFFICE Docs.
       </>
     ),
+    icon: <DocsApiIcon/>,
   },
   {
     title: 'Office API',
@@ -25,6 +32,7 @@ const FeatureList: FeaturesGrid.Item[] = [
         Spreadsheet API, Presentation API, and Form API.
       </>
     ),
+    icon: <DocSpaceApiIcon/>,
   },
   {
     title: 'Plugin and Macros',
@@ -36,6 +44,7 @@ const FeatureList: FeaturesGrid.Item[] = [
         the information about their structure, development lifecycle, and examples.
       </>
     ),
+    icon: <PluginIcon/>,
   },
   {
     title: 'Document Builder',
@@ -47,6 +56,7 @@ const FeatureList: FeaturesGrid.Item[] = [
         CRM system, etc.
       </>
     ),
+    icon: <DocumentBuilderIcon/>,
   },
   {
     title: 'Desktop Editors',
@@ -58,6 +68,7 @@ const FeatureList: FeaturesGrid.Item[] = [
         with the document management systems.
       </>
     ),
+    icon: <DesktopEditorIcon/>,
   },
 ];
 

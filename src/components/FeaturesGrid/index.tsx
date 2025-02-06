@@ -13,14 +13,16 @@ export namespace FeaturesGrid {
     title: string;
     link: string,
     description: ReactNode;
+    icon: ReactNode;
   };
 }
 
-const Feature: FC<FeaturesGrid.Item & { linkPrefix: string }> = ({title, link, description, linkPrefix}) => {
+const Feature: FC<FeaturesGrid.Item & { linkPrefix: string }> = ({ title, link, description, linkPrefix, icon }) => {
   return (
     <Link to={`${linkPrefix}/${title}/${link}`}>
       <div className={styles.featuresGridItem}>
         <div className={styles.featuresGridItemHeader}>
+          {icon}
           <Heading as="h3">{title}</Heading>
         </div>
         <p>{description}</p>

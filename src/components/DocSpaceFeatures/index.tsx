@@ -1,6 +1,11 @@
 import type { ReactNode } from 'react';
 import styles from './styles.module.css';
 import { FeaturesGrid } from "@site/src/components/FeaturesGrid";
+import SdkIcon from '@site/static/icons/javascript-sdk-icon.svg';
+import PluginIcon from '@site/static/icons/plugins-icon.svg';
+import DocsApiIcon from '@site/static/icons/docs-api-icon.svg';
+import DocSpaceApiIcon from '@site/static/icons/docspace-api-icon.svg';
+import HostingIcon from '@site/static/icons/self-hosted-icon.svg';
 
 const FeatureList: FeaturesGrid.Item[] = [
   {
@@ -13,6 +18,7 @@ const FeatureList: FeaturesGrid.Item[] = [
         single room, or a document.
       </>
     ),
+    icon: <SdkIcon/>,
   },
   {
     title: 'Plugins SDK',
@@ -23,6 +29,7 @@ const FeatureList: FeaturesGrid.Item[] = [
         them to the DocSpace portal.
       </>
     ),
+    icon: <PluginIcon/>,
   },
   {
     title: 'OAuth API',
@@ -33,6 +40,7 @@ const FeatureList: FeaturesGrid.Item[] = [
         on the DocSpace portal.
       </>
     ),
+    icon: <DocsApiIcon/>,
   },
   {
     title: 'API Backend',
@@ -44,6 +52,7 @@ const FeatureList: FeaturesGrid.Item[] = [
         Backend which is implemented as REST over HTTP using GET/POST/PUT/DELETE.
       </>
     ),
+    icon: <DocSpaceApiIcon/>,
   },
   {
     title: 'For Hosting Providers',
@@ -54,6 +63,7 @@ const FeatureList: FeaturesGrid.Item[] = [
         SaaS solution on your own servers using our API methods.
       </>
     ),
+    icon: <HostingIcon/>,
   },
 ];
 

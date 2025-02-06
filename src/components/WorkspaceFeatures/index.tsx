@@ -1,6 +1,8 @@
 import type {ReactNode} from 'react';
 import styles from './styles.module.css';
 import { FeaturesGrid } from "@site/src/components/FeaturesGrid";
+import DocSpaceApiIcon from '@site/static/icons/docspace-api-icon.svg';
+import HostingIcon from '@site/static/icons/self-hosted-icon.svg';
 
 const FeatureList: FeaturesGrid.Item[] = [
   {
@@ -15,6 +17,7 @@ const FeatureList: FeaturesGrid.Item[] = [
         need to install ONLYOFFICE Docs separately.
       </>
     ),
+    icon: <DocSpaceApiIcon/>
   },
   {
     title: 'For Hosting Providers',
@@ -25,6 +28,7 @@ const FeatureList: FeaturesGrid.Item[] = [
         SaaS solution on your own servers using our API methods.
       </>
     ),
+    icon: <HostingIcon/>
   },
 ];
 
