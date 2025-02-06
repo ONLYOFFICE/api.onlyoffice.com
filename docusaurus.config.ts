@@ -91,6 +91,7 @@ const config: Config = {
       logo: {
         alt: 'ONLYOFFICE',
         src: 'img/logo.svg',
+        srcDark: 'img/logo-dark.svg',
       },
       items: [
         {
