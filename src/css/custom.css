@@ -82,8 +82,6 @@
   /* END SIDEBAR */
 
   --ifm-heading-color: var(--ifm-font-color-base);
-  /* --ifm-link-hover-color: var(--ifm-font-color-base); */
-  /* --ifm-link-color: var(--ifm-font-color-base); */
   /* --ifm-navbar-link-color: var(--ifm-color-content-inverse); */
   --ifm-navbar-link-hover-color: var(--ifm-heading-color);
   /* --ifm-color-primary: var(--openapi-card-background-color); */
@@ -204,11 +202,13 @@
   --ifm-heading-color: var(--ifm-font-color-base);
   /*--ifm-link-hover-color: var(--ifm-font-color-base);*/
   --ifm-link-color: var(--color-foreground-link);
+  --ifm-link-hover-color: var(--ifm-link-color);
+
   /* --ifm-navbar-link-color: #9e9e9e; */
   /* --ifm-navbar-link-hover-color: inherit; */
   /* --ifm-color-primary: var(--openapi-card-background-color); */
-  --ifm-color-primary: var(--ifm-background-surface-color);
-  --ifm-hero-background-color: var(--ifm-background-surface-color);
+  --ifm-color-primary: var(--color-foreground-link);
+  --ifm-menu-color-background-active: var(--c-gray-0);
 }
 
 html[data-theme='light'] {
@@ -367,3 +367,18 @@ main {
   color: var(--ifm-font-color-base);
 }
 
+.hero--primary {
+  --ifm-hero-background-color: var(--ifm-background-surface-color);
+}
+
+.menu__list-item-collapsible {
+  padding-left: .5rem;
+}
+
+.menu__link--active:not(.menu__link--sublist) {
+  background-color: var(--ifm-menu-color-background-hover);
+}
+
+.menu__caret:hover {
+  background-color: transparent;
+}
