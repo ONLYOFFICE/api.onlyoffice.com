@@ -3,8 +3,7 @@ import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
 import { FeaturePageTemplate } from "@site/src/components/FeaturePageLayout";
 import Link from "@docusaurus/Link";
-import DocSpaceApiIcon from "@site/static/icons/docspace-api-icon.svg";
-import HostingIcon from "@site/static/icons/self-hosted-icon.svg";
+import { WorkspaceFeatures } from "@site/src/features";
 
 const templateProps: FeaturePageTemplate.Props = {
   title: 'Workspace',
@@ -19,34 +18,8 @@ const templateProps: FeaturePageTemplate.Props = {
     <>You can request a feature or report a bug by posting an issue on <a href='https://github.com/ONLYOFFICE/CommunityServer/issues'>GitHub</a>.</>,
     <>You can also ask our developers on <a href='https://forum.onlyoffice.com/c/workspace/33'>ONLYOFFICE forum</a> (registration required).</>,
   ],
-  linkPrefix: 'workspace',
-  items: [
-    {
-      title: 'API Backend',
-      link: 'Get Started/Basic concepts',
-      description: (
-        <>
-          In this section, you will learn how to integrate ONLYOFFICE Workspace{" "}
-          into your own application and interact with its backend using the{" "}
-          Workspace API Backend which is implemented as REST over HTTP using{" "}
-          GET/POST/PUT/DELETE. This solution is provided without editors, you{" "}
-          need to install ONLYOFFICE Docs separately.
-        </>
-      ),
-      icon: <DocSpaceApiIcon/>
-    },
-    {
-      title: 'For Hosting Providers',
-      link: 'Get Started/Authentication',
-      description: (
-        <>
-          In this section, you will learn how to provide the Workspace portal as a{" "}
-          SaaS solution on your own servers using our API methods.
-        </>
-      ),
-      icon: <HostingIcon/>
-    },
-  ]
+  linkPrefix: WorkspaceFeatures.linkPrefix,
+  items: WorkspaceFeatures.items,
 };
 
 export default function Home(): ReactNode {
