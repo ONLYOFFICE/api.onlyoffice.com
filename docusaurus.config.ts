@@ -88,7 +88,6 @@ const config: Config = {
   themeConfig: {
     image: 'img/favicon.png',
     navbar: {
-      title: 'ONLYOFFICE',
       logo: {
         alt: 'ONLYOFFICE',
         src: 'img/logo.svg',
