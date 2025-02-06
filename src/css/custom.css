@@ -87,7 +87,6 @@
   /* --ifm-navbar-link-color: var(--ifm-color-content-inverse); */
   --ifm-navbar-link-hover-color: var(--ifm-heading-color);
   /* --ifm-color-primary: var(--openapi-card-background-color); */
-  --ifm-color-primary: var(--ifm-background-surface-color);
   --ifm-card-background-color: var(--openapi-card-background-color);
 
   /* --color-page-header-default-background: #424242; */
@@ -205,9 +204,11 @@
   --ifm-heading-color: var(--ifm-font-color-base);
   /*--ifm-link-hover-color: var(--ifm-font-color-base);*/
   --ifm-link-color: var(--color-foreground-link);
-  --ifm-navbar-link-color: #9e9e9e;
-  --ifm-navbar-link-hover-color: inherit;
-  --ifm-color-primary: var(--openapi-card-background-color);
+  /* --ifm-navbar-link-color: #9e9e9e; */
+  /* --ifm-navbar-link-hover-color: inherit; */
+  /* --ifm-color-primary: var(--openapi-card-background-color); */
+  --ifm-color-primary: var(--ifm-background-surface-color);
+  --ifm-hero-background-color: var(--ifm-background-surface-color);
 }
 
 html[data-theme='light'] {
