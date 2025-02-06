@@ -14,6 +14,16 @@ on:
         #- development
         - testing
         - production
+      english:
+        description: 'Build english?'
+        required: true
+        default: true
+        type: boolean
+      chinese:
+        description: 'Build chinese?'
+        required: true
+        default: false
+        type: boolean
 
 jobs:
   publish:
@@ -26,7 +36,21 @@ jobs:
       run: npm install
 
     - name: Build Packages
-      run: NODE_OPTIONS="--max-old-space-size=12288" npm run build
+      env:
+        EN: ${{github.event.inputs.english}}
+        CN: ${{github.event.inputs.chinese}}
+      run: |
+        SUB_PARAMETERS=""
+
+        if [[ "$CN" == "true" && "$EN" == "true" ]]; then
+           SUB_PARAMETERS="-- --locale en --locale zh-CN"
+        elif [[ "$CN" == "true" ]]; then
+           SUB_PARAMETERS="-- --locale zh-CN"
+        elif [[ "$EN" == "true" ]]; then
+           SUB_PARAMETERS="-- --locale en"
+        fi
+
+        NODE_OPTIONS="--max-old-space-size=12288" npm run build ${SUB_PARAMETERS}
     
     - name: Configure AWS Credentials
       env:
