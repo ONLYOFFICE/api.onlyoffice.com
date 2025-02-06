@@ -209,6 +209,7 @@
   /* --ifm-color-primary: var(--openapi-card-background-color); */
   --ifm-color-primary: var(--color-foreground-link);
   --ifm-menu-color-background-active: var(--c-gray-0);
+  --ifm-font-family-base: "Open Sans", "Open Sans Fallback", system-ui, sans-serif;
 }
 
 html[data-theme='light'] {
