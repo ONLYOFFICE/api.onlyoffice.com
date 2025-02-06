@@ -2,7 +2,6 @@
   gap: var(--base-size-32);
   grid-template-columns: 1fr;
   display: grid;
-  margin-block-start: var(--base-size-32);
 }
 
 .featuresGridList a {
@@ -19,6 +18,11 @@
   background-color: var(--card-background-color);
   border-radius: 4px;
   border: 1px solid var(--card-border-color);
+  transition: box-shadow 300ms;
+}
+
+.featuresGridItem:hover {
+  box-shadow: var(--temp-color-shadow-default-small);
 }
 
 .featuresGridItemHeader {
@@ -44,10 +48,6 @@
 }
 
 @media (min-width: 544px) {
-  .featuresGridList {
-    margin-block-start: var(--base-size-64);
-  }
-
   .featuresGridItemHeader > h3 {
     font-size: var(--text-title-font-size-medium);
     font-weight: var(--text-title-font-weight-medium);

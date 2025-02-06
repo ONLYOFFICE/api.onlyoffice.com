@@ -5,7 +5,9 @@
  */
 
 :root {
+  --base-size-112: 112px;
   --base-size-64: 64px;
+  --base-size-48: 48px;
   --base-size-36: 36px;
   --base-size-32: 32px;
   --base-size-24: 24px;
@@ -160,6 +162,8 @@
   --temp-color-icon-32-workspace-api-3: #;
   --temp-color-icon-32-workspace-api-4: #;
   --temp-color-icon-32-workspace-api-5: #;
+
+  --temp-color-shadow-default-small: 0 7px 15px 0 #5454541a;
 }
 
 html[data-theme='light'] {
