@@ -19,7 +19,7 @@ export namespace FeaturesGrid {
 
 const Feature: FC<FeaturesGrid.Item & { linkPrefix: string }> = ({ title, link, description, linkPrefix, icon }) => {
   return (
-    <Link to={`${linkPrefix}/${title}/${link}`}>
+    <Link to={`/${linkPrefix}/${title}/${link}`}>
       <div className={styles.featuresGridItem}>
         <div className={styles.featuresGridItemHeader}>
           {icon}
