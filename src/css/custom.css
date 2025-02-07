@@ -209,12 +209,13 @@
   /* --ifm-color-primary: var(--openapi-card-background-color); */
   --ifm-color-primary: var(--color-foreground-link);
   --ifm-menu-color-background-active: var(--ifm-menu-color-background-hover);
-  --ifm-font-family-base: "Open Sans", "Open Sans Fallback", system-ui, sans-serif;
+  /* --ifm-font-family-base: "Open Sans", "Open Sans Fallback", system-ui, sans-serif; */
 }
 
-/* html[data-theme='light'] { */
+html[data-theme='light'] {
   /* --ifm-menu-color-background-active: var(--c-blue-0); */
-/* } */
+  --ifm-menu-color: #444;
+}
 
 html[data-theme='dark'] {
   --ifm-color-primary-dark: #21af90;
@@ -382,4 +383,16 @@ main {
 
 .menu__caret:hover {
   background-color: transparent;
+}
+
+.footer--dark {
+  --ifm-footer-background-color: #333;
+}
+
+.menu__link {
+  font-size: .900rem;
+  font-weight: 500;
+  letter-spacing: -.01em;
+  line-height: 20px;
+  transition: opacity .2s ease-out;
 }
