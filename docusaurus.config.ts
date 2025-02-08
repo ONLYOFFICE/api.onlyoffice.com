@@ -9,7 +9,7 @@ const config: Config = {
   tagline: 'ONLYOFFICE',
   favicon: 'img/favicon.ico',
 
-  url: 'https://trofim24.github.io',
+  url: 'https://api.onlyoffice.com',
   baseUrl: '/',
 
   organizationName: 'trofim24',
