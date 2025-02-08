@@ -196,6 +196,7 @@ The list of changes for Office JavaScript API.
 
 ### Other methods
 
+- Added the ApiBlockLvlSdt/Copy method to Text document API.
 - Added the ApiParaPr/GetOutlineLvl method to Text document API.
 - Added the ApiParaPr/SetOutlineLvl method to Text document API.
 - Added the ApiRun/MoveCursorToPos method to Text document API.
