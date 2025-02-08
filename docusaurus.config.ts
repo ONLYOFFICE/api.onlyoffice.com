@@ -18,6 +18,17 @@ const config: Config = {
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
 
+  future: {
+    experimental_faster: {
+      mdxCrossCompilerCache: true,
+      swcJsLoader: false,
+      swcJsMinimizer: false,
+      swcHtmlMinimizer: false,
+      lightningCssMinimizer: false,
+      rspackBundler: false,
+    }
+  },
+
   i18n: {
     defaultLocale: 'en',
     path: './site',
