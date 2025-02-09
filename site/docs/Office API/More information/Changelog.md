@@ -1,5 +1,85 @@
 The list of changes for Office JavaScript API.
 
+## Version 8.3
+
+### Bookmark methods
+
+- Added the ApiBookmark class to Text document API.
+- Added the ApiBookmark/Delete method to Text document API.
+- Added the ApiBookmark/GetName method to Text document API.
+- Added the ApiBookmark/GetRange method to Text document API.
+- Added the ApiBookmark/GetText method to Text document API.
+- Added the ApiBookmark/GoTo method to Text document API.
+- Added the ApiBookmark/Select method to Text document API.
+- Added the ApiBookmark/SetName method to Text document API.
+- Added the ApiBookmark/SetText method to Text document API.
+- Added the ApiDocument/GetBookmark method to Text document API.
+
+### Group methods
+
+- Added the Api/CreateGroup method to Text document API.
+- Added the ApiDocument/GroupDrawings method to Text document API.
+- Added the ApiGroup class to Text document API.
+- Added the ApiGroup/GetClassType method to Text document API.
+- Added the ApiGroup/Ungroup method to Text document API.
+- Added the ApiDrawing/GetParentSheet method to Spreadsheet API.
+- Added the ApiGroup class to Spreadsheet API.
+- Added the ApiGroup/GetClassType method to Spreadsheet API.
+- Added the ApiGroup/Ungroup method to Spreadsheet API.
+- Added the ApiWorksheet/GroupDrawings method to Spreadsheet API.
+- Added the Api/CreateGroup method to Presentation API.
+- Added the ApiGroup class to Presentation API.
+- Added the ApiGroup/GetClassType method to Presentation API.
+- Added the ApiGroup/Ungroup method to Presentation API.
+- Added the ApiLayout/GroupDrawings method to Presentation API.
+- Added the ApiMaster/GroupDrawings method to Presentation API.
+- Added the ApiSlide/GroupDrawings method to Presentation API.
+- Added the *Drawing* type to the simple type definitions.
+- Added the *DrawingForGroup* type to the simple type definitions.
+
+### Document methods
+
+- Added the ApiDocument/GetCurrentPage method to Text document API.
+- Added the ApiDocument/GetCurrentVisiblePages method to Text document API.
+- Added the ApiDocumentContent/GetText method to Text document API.
+
+### Section methods
+
+- Added the ApiSection/GetStartPageNumber method to Text document API.
+- Added the ApiSection/SetStartPageNumber method to Text document API.
+
+### Autofilter methods
+
+- Added the ApiRange/SetAutoFilter method to Spreadsheet API.
+- Added the *XlAutoFilterOperator* type to the simple type definitions.
+- Added the *XlDynamicFilterCriteria* type to the simple type definitions.
+
+### Selection methods
+
+- Added the Api/GetSelection method to Presentation API.
+- Added the ApiSelection class to Presentation API.
+- Added the ApiSelection/GetShapes method to Presentation API.
+- Added the ApiSelection/GetSlides method to Presentation API.
+- Added the ApiSelection/GetType method to Presentation API.
+- Added the ApiSelection/IsEmpty method to Presentation API.
+- Added the *SelectionType* type to the simple type definitions.
+
+### Slide methods
+
+- Added the ApiPresentation/GetAllSlideMasters  method to Presentation API.
+- Added the ApiPresentation/GetAllSlides method to Presentation API.
+- Added the ApiSlide/Select method to Presentation API.
+
+### Other methods
+
+- Added the ApiBlockLvlSdt/Copy method to Text document API.
+- Added the ApiNumberingLevel/LinkWithStyle method to Text document API.
+- Moved the GetContent method of Text document from the ApiShape class to the ApiDrawing class.
+- Added the ApiLayout/GetName method to Presentation API.
+- Added the *keepPosition* parameter to the ApiFormBase/ToFixed method of Form API.
+- Added the *PivotTableFieldOptions* type to the simple type definitions.
+- Added the *PivotTableFilterAreaInfo* type to the simple type definitions.
+
 ## Version 8.2
 
 ### Range methods
