@@ -38,7 +38,7 @@ Here is the result:
 
 ## Running the application
 
-Starting from version 7.1, you can run ONLYOFFICE Desktop Editors with the *--ascdesktop-support-debug-info-keep* flag. It can have the following values:
+Starting from version 7.1, you can run ONLYOFFICE Desktop Editors with the `--ascdesktop-support-debug-info-keep` flag. It can be used with the following values:
 
 ### Parameters
 
@@ -48,4 +48,4 @@ Starting from version 7.1, you can run ONLYOFFICE Desktop Editors with the *--as
 | 0       | --ascdesktop-support-debug-info-keep=0       | Stops the application.                                     |
 | default | --ascdesktop-support-debug-info-keep=default | The default application condition - the app is turned off. |
 
-To launch ONLYOFFICE Desktop Editors with this flag, use the same instructions as for the *--ascdesktop-support-debug-info* flag above. The only difference is that the *--ascdesktop-support-debug-info-keep* flag stores the value passed to it. You will not need to specify it every time you run the application.
+To launch ONLYOFFICE Desktop Editors with this flag, use the same instructions as for the `--ascdesktop-support-debug-info` flag above. The only difference is that the `--ascdesktop-support-debug-info-keep` flag stores the value passed to it. You will not need to specify it every time you run the application.
