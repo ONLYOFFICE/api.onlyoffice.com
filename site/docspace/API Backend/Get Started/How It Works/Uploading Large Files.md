@@ -1,5 +1,5 @@
 ---
-sidebar_position: -2
+sidebar_position: -3
 ---
 
 In this article, you will learn how to upload large files to DocSpace using our API Backend.
