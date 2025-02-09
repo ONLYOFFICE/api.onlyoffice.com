@@ -160,6 +160,12 @@ In this example we are finding company logos in a spreadsheet using the Logo API
 
 [More](Find%20company%20logos.md)
 
+## Import hyperlinks
+
+In this example we are importing hyperlinks between different worksheets in the spreadsheet.
+
+[More](Import%20hyperlinks.md)
+
 ## Support
 
 If you want to request a feature or report a bug regarding macros, use the issues section [on GitHub.](https://github.com/ONLYOFFICE/plugin-macros/issues)
