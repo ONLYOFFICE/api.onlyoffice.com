@@ -1373,6 +1373,14 @@ Example: "cm"
 
 > Please note that in case this setting is changed in the editor interface, it will be stored in the browser local storage and will overwrite any values sent as the *editorConfig.customization.unit* parameter.
 
+## wordHeadingsColor
+
+Starting from version 8.3, defines the HEX color for the default heading styles in the document editor.
+
+Type: string
+
+Example: "#00ff00"
+
 ## zoom
 
 Defines the document display zoom value measured in percent. Can take values larger than **0**. For text documents and presentations it is possible to set this parameter to **-1** (fitting the document to page option) or to **-2** (fitting the document page width to the editor page). The default value is **100**.
@@ -1523,6 +1531,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
       toolbarHideFileName: false,
       uiTheme: "theme-dark",
       unit: "cm",
+      wordHeadingsColor: "#00ff00",
       zoom: 100,
     },
   },

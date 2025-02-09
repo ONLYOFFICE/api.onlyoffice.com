@@ -214,6 +214,7 @@ const config = {
       toolbarHideFileName: false,
       uiTheme: "theme-dark",
       unit: "cm",
+      wordHeadingsColor: "#00ff00",
       zoom: 100,
     },
     embedded: {
