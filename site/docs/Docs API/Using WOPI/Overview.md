@@ -6,6 +6,8 @@ Starting from version 6.4, ONLYOFFICE Docs offers support for the **Web Applicat
 
 This documentation describes:
 
+- WOPI protocol [configuration parameters](./Config.md);
+- [key concepts](./Key%20concepts.md) that are vital to understand the requirements for integrating with WOPI clients;
 - file properties that can be specified via [WOPI discovery](./WOPI%20discovery.md);
 - a [host page](./Host%20page.md) that must be built to create an iframe element within the online office;
 - [proof keys](./Proof%20keys.md) which are used to check that the request is received from the online office;
