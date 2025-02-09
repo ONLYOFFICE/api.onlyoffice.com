@@ -38,7 +38,7 @@ The list of changes of ONLYOFFICE Docs API.
 
 ## Version 8.0
 
-- Added the [WOPISrc](../Using%20WOPI/Overview.md#wopisrc) query parameter to the requests from the browser to the server.
+- Added the [WOPISrc](../Using%20WOPI/Key%20concepts.md#wopisrc) query parameter to the requests from the browser to the server.
 - Added the [watermark](../Additional%20API/Conversion%20API/Request.md#watermark) field to the conversion request.
 - Added the *pdf* document type to the [documentType](../Usage%20API/Config/Config.md#documenttype) parameter.
 - Added the [formsdataurl](../Usage%20API/Callback%20handler.md#formsdataurl) parameter to the *Callback handler*.
