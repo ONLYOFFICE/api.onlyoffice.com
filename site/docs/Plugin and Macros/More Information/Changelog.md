@@ -4,6 +4,11 @@ sidebar_position: -1
 
 The list of changes for ONLYOFFICE Plugins and Macros API.
 
+## Version 8.3
+
+- Added the ShowError method to *window\.Asc.plugin.executeMethod*.
+- Added the *isActivated* parameter to the [panel settings](../Customization/Windows%20and%20panels.md#creating-a-window).
+
 ## Version 8.2
 
 - Added the onSubmitForm event.
