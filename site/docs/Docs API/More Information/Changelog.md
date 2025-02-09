@@ -58,7 +58,7 @@ The list of changes of ONLYOFFICE Docs API.
 - Added the [setReferenceSource](../Usage%20API/Methods.md#setreferencesource) method.
 - Added the [events.onRequestReferenceSource](../Usage%20API/Config/Events.md#onrequestreferencesource) event.
 - Added the [-9 error code](../Additional%20API/Conversion%20API/Error%20codes.md) to the Conversion API.
-- Added the *key* field to the [document.referenceData](../Usage%20API/Config/Document/Document.md#referencedata) parameter.
+- Added the *key* field to the [setReferenceData](../Usage%20API/Methods.md#setreferencedata) method.
 - The [events.onRequestCompareFile](../Usage%20API/Config/Events.md#onrequestcomparefile) event is deprecated, please use the [events.onRequestSelectDocument](../Usage%20API/Config/Events.md#onrequestselectdocument) event instead.
 - The [setRevisedFile](../Usage%20API/Methods.md#setrevisedfile) method is deprecated, please use the [setRequestedDocument](../Usage%20API/Methods.md#setrequesteddocument) method instead.
 - Added the [events.onRequestOpen](../Usage%20API/Config/Events.md#onrequestopen) event.
