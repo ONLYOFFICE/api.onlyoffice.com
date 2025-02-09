@@ -142,6 +142,12 @@ In this example we are summing the answer of all highlighted cells in a spreadsh
 
 [More](Sum%20of%20Highlighted%20Cells.md)
 
+## Change font family and size
+
+In this example we are changing the font family and/or size in the presentation.
+
+[More](Change%20font%20family%20and%20size.md)
+
 ## Support
 
 If you want to request a feature or report a bug regarding macros, use the issues section [on GitHub.](https://github.com/ONLYOFFICE/plugin-macros/issues)
