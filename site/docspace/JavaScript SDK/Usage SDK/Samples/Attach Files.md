@@ -1,6 +1,6 @@
 Attaches files to a website using [File selector](../Initialization%20Modes/File%20Selector.md).
 
-<img alt="Authorization sample" src="/assets/images/docspace/gifs/js-sdk-attach-files.gif" width="720px" />
+![Attach files sample](/assets/images/docspace/js-sdk-attach-files.svg)
 
 ## Before you start
 
@@ -526,3 +526,5 @@ Run our HTML file and make sure everything works.
   </script>
 </html>
 ```
+
+<img alt="Authorization sample" src="/assets/images/docspace/gifs/js-sdk-attach-files.gif" width="720px" />

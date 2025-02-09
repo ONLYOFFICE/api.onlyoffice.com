@@ -1,6 +1,6 @@
 Customizes the editor interface so that it looks like your other products (if there are any), and changes the presence or absence of the additional buttons, links, logos and editor owner details.
 
-<img alt="Authorization sample" src="/assets/images/docspace/customization-of-editors.png" width="720px" />
+![Customization sample](/assets/images/docspace/customization-of-editors.svg)
 
 ## Before you start
 
@@ -136,3 +136,5 @@ Run our HTML file and make sure everything works.
   </script>
 </html>
 ```
+
+<img alt="Authorization sample" src="/assets/images/docspace/customization-of-editors.svg" width="720px" />

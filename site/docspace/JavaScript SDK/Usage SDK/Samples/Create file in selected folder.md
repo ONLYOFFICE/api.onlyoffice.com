@@ -1,6 +1,6 @@
 Creates a file in the selected folder and opens it in the editors.
 
-<img alt="Authorization sample" src="/assets/images/docspace/gifs/js-sdk-create-file.gif" width="720px" />
+![Create file sample](/assets/images/docspace/js-sdk-create-file.svg)
 
 ## Before you start
 
@@ -182,3 +182,5 @@ function onButtonClick() {
     const docSpace = DocSpace.SDK.initManager(config)
   </script>
 ```
+
+<img alt="Authorization sample" src="/assets/images/docspace/gifs/js-sdk-create-file.gif" width="720px" />

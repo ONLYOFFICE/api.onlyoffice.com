@@ -1,6 +1,6 @@
 Opens a file in [ONLYOFFICE editors](../../Usage%20SDK/Initialization%20Modes/Editor.md) using the [file selector](../../Usage%20SDK/Initialization%20Modes/File%20Selector.md).
 
-<img alt="Authorization sample" src="/assets/images/docspace/gifs/open-editors.gif" width="720px" />
+![Open editors sample](/assets/images/docspace/open-editors.svg)
 
 ## Before you start
 
@@ -113,3 +113,5 @@ Run our HTML file and make sure everything works.
   </script>
 </html>
 ```
+
+<img alt="Authorization sample" src="/assets/images/docspace/gifs/open-editors.gif" width="720px" />
