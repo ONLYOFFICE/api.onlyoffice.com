@@ -1,5 +1,5 @@
 ---
-sidebar_position: -12
+sidebar_position: -13
 ---
 
 Document conversion service is a part of ONLYOFFICE Docs. It lets the user convert files from one format into another to open them later in **document editors** or for their export.

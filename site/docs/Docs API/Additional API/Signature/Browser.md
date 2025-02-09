@@ -85,6 +85,59 @@ Sample token:
 }
 ```
 
+### refreshFile
+
+When calling the [refreshFile](../../Usage%20API/Methods.md#refreshFile) method to update the file version, the token must be added to validate the parameters.
+
+The `payload` for the JWT token in the JSON format must have the same structure as the [config](../../Usage%20API/Advanced%20parameters.md).
+
+  ``` json
+  {
+    "document": {
+      "key": "Khirz6zTPdfd7",
+      "permissions": {
+        "comment": true,
+        "commentGroups": {
+          "edit": ["Group2", ""],
+          "remove": [""],
+          "view": ""
+        },
+        "copy": true,
+        "deleteCommentAuthorOnly": false,
+        "download": true,
+        "edit": true,
+        "editCommentAuthorOnly": false,
+        "fillForms": true,
+        "modifyContentControl": true,
+        "modifyFilter": true,
+        "print": true,
+        "review": true,
+        "reviewGroups": ["Group1", "Group2", ""]
+      },
+      "url": "https://example.com/url-to-example-document.docx"
+    },
+    "editorConfig": {
+      "callbackUrl": "https://example.com/url-to-callback.ashx",
+      "mode": "edit",
+      "user": {
+        "group": "Group1",
+        "id": "78e1e841",
+        "name": "Smith"
+      }
+    }
+  }
+  ```
+
+Where **example.com** is the name of the server where **document manager** and **document storage service** are installed. See the [How it works](../../Get%20Started/How%20It%20Works.md) section to find out more on ONLYOFFICE Docs service client-server interactions.
+
+Sample token:
+
+``` json
+{
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkb2N1bWVudCI6eyJrZXkiOiJLaGlyejZ6VFBkZmQ3IiwicGVybWlzc2lvbnMiOnsiY29tbWVudCI6dHJ1ZSwiY29tbWVudEdyb3VwcyI6eyJlZGl0IjpbIkdyb3VwMiIsIiJdLCJyZW1vdmUiOlsiIl0sInZpZXciOiIifSwiY29weSI6dHJ1ZSwiZGVsZXRlQ29tbWVudEF1dGhvck9ubHkiOmZhbHNlLCJkb3dubG9hZCI6dHJ1ZSwiZWRpdCI6dHJ1ZSwiZWRpdENvbW1lbnRBdXRob3JPbmx5IjpmYWxzZSwiZmlsbEZvcm1zIjp0cnVlLCJtb2RpZnlDb250ZW50Q29udHJvbCI6dHJ1ZSwibW9kaWZ5RmlsdGVyIjp0cnVlLCJwcmludCI6dHJ1ZSwicmV2aWV3Ijp0cnVlLCJyZXZpZXdHcm91cHMiOlsiR3JvdXAxIiwiR3JvdXAyIiwiIl19LCJ1cmwiOiJodHRwczovL2V4YW1wbGUuY29tL3VybC10by1leGFtcGxlLWRvY3VtZW50LmRvY3gifSwiZWRpdG9yQ29uZmlnIjp7ImNhbGxiYWNrVXJsIjoiaHR0cHM6Ly9leGFtcGxlLmNvbS91cmwtdG8tY2FsbGJhY2suYXNoeCIsIm1vZGUiOiJlZGl0IiwidXNlciI6eyJncm91cCI6Ikdyb3VwMSIsImlkIjoiNzhlMWU4NDEiLCJuYW1lIjoiU21pdGgifX19.irYst9vmsLoQtC-95A-6W8DnbqGXCbmcxJajfbPh6tQ"
+}
+```
+
 ### setHistoryData
 
 When calling the [setHistoryData](../../Usage%20API/Methods.md#sethistorydata) method to view the document [history](../../Get%20Started/How%20It%20Works/Document%20history.md) version in ONLYOFFICE Docs, the token must be added to validate the parameters.

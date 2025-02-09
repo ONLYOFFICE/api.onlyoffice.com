@@ -26,6 +26,7 @@ In this section you will learn how to:
 - [Embedding forms into a web page](Embedding%20forms%20into%20a%20web%20page.md)
 - [Protecting ranges](Protecting%20ranges.md)
 - [Setting avatars](Setting%20avatars.md)
+- [Lifecycle of opening editor](Lifecycle%20of%20opening%20editor.md)
 
 ## User-document interaction
 

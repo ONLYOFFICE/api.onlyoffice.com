@@ -97,6 +97,28 @@ Where **example.com** is the name of the server where **document manager** and *
   >
   > Please note that this structure is deprecated and will not be supported by the next editors versions. Please use a new one.
 
+## refreshFile
+
+Updates the file version without reloading the editor. This method must be called after the [onRequestRefreshFile](./Config/Events.md#onrequestrefreshfile) event.
+
+This method must take the editor initialization configuration for the current file version. The configuration must contain all the parameters used for signing a request to [open a file](../Additional%20API/Signature/Browser.md#opening-file) for editing. The following parameters cannot be changed in the config: [documentType](./Config.md#documenttype), [type](./Config.md#type), [events](./Config/Events.md).
+
+``` ts
+refreshFile({
+  document: {
+    fileType: "docx",
+    key: "Khirz6zTPdfd7",
+    title: "Example Document Title.docx",
+    url: "https://example.com/url-to-example-document.docx",
+  },
+  documentType: "word",
+  editorConfig: {
+    callbackUrl: "https://example.com/url-to-callback.ashx",
+  },
+  token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkb2N1bWVudCI6eyJmaWxlVHlwZSI6ImRvY3giLCJrZXkiOiJLaGlyejZ6VFBkZmQ3IiwidGl0bGUiOiJFeGFtcGxlIERvY3VtZW50IFRpdGxlLmRvY3giLCJ1cmwiOiJodHRwczovL2V4YW1wbGUuY29tL3VybC10by1leGFtcGxlLWRvY3VtZW50LmRvY3gifSwiZG9jdW1lbnRUeXBlIjoid29yZCIsImVkaXRvckNvbmZpZyI6eyJjYWxsYmFja1VybCI6Imh0dHBzOi8vZXhhbXBsZS5jb20vdXJsLXRvLWNhbGxiYWNrLmFzaHgifX0.vbezS2aM8Xf8qFzIAsO-jrIsi7VLxjRYkIkwh5jLTJU",
+})
+```
+
 ## refreshHistory
 
 Show the document version history. This method must be called after the [onRequestHistory](./Config/Events.md#onrequesthistory) events.

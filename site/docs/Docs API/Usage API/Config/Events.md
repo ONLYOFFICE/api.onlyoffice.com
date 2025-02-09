@@ -181,7 +181,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
 
 ## onOutdatedVersion
 
-The function called after the [error](../../More%20Information/Troubleshooting.md#key) is shown, when the document is opened for editing with the old [document.key](./Document/Document.md#key) value, which was used to edit the previous document version and was successfully saved. When this event is called the editor must be reinitialized with a new *document.key*.
+The function called after the [error](../../More%20Information/Troubleshooting.md#key) is shown, when the document is opened for editing with the old [document.key](./Document/Document.md#key) value, which was used to edit the previous document version and was successfully saved. When this event is called the editor must be reinitialized with a new *document.key*. Deprecated since version 8.3, please use [onRequestRefreshFile](#onrequestrefreshfile) instead.
 
 Example:
 
@@ -554,6 +554,40 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
 })
 ```
 
+## onRequestRefreshFile
+
+The function called instead of the [onOutdatedVersion](#onoutdatedversion) event in the following cases:
+
+- when the editor is opened with [key](../Document/index.md#key) that was already used to successfully save a file;
+- when the editor reconnects to the server after losing the connection and interrupting the editing session.
+
+In these cases, the [refreshFile](../../Methods/index.md#refreshfile) method is called and the file version is updated without reloading the editor.
+
+Example:
+
+``` ts
+function onRequestRefreshFile() {
+  refreshFile({
+    document: {
+      fileType: "docx",
+      key: "Khirz6zTPdfd7",
+      title: "Example Document Title.docx",
+      url: "https://example.com/url-to-example-document.docx",
+    },
+    documentType: "word",
+    editorConfig: {
+      callbackUrl: "https://example.com/url-to-callback.ashx",
+    },
+    token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkb2N1bWVudCI6eyJmaWxlVHlwZSI6ImRvY3giLCJrZXkiOiJLaGlyejZ6VFBkZmQ3IiwidGl0bGUiOiJFeGFtcGxlIERvY3VtZW50IFRpdGxlLmRvY3giLCJ1cmwiOiJodHRwczovL2V4YW1wbGUuY29tL3VybC10by1leGFtcGxlLWRvY3VtZW50LmRvY3gifSwiZG9jdW1lbnRUeXBlIjoid29yZCIsImVkaXRvckNvbmZpZyI6eyJjYWxsYmFja1VybCI6Imh0dHBzOi8vZXhhbXBsZS5jb20vdXJsLXRvLWNhbGxiYWNrLmFzaHgifX0.vbezS2aM8Xf8qFzIAsO-jrIsi7VLxjRYkIkwh5jLTJU",
+  })
+}
+const docEditor = new DocsAPI.DocEditor("placeholder", {
+  events: {
+    onRequestRefreshFile,
+  },
+})
+```
+
 ## onRequestRename
 
 The function called when the user is trying to rename the file by clicking the *Rename...* button.
@@ -865,6 +899,27 @@ function onSubmit(event) {
 const docEditor = new DocsAPI.DocEditor("placeholder", {
   events: {
     onSubmit,
+  },
+})
+```
+
+## onUserActionRequired
+
+The function called when a user action is required to open a document in the following cases:
+
+- when the user needs to enter a password to open the protected document;
+- when the user needs to select an encoding for the *txt* file;
+- when the user needs to select an encoding and a delimiter for the *csv* file.
+
+Example:
+
+``` ts
+function onUserActionRequired() {
+  console.log("Enter a password")
+}
+const docEditor = new DocsAPI.DocEditor("placeholder", {
+  events: {
+    onUserActionRequired,
   },
 })
 ```

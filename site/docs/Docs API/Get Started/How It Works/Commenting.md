@@ -1,5 +1,5 @@
 ---
-sidebar_position: -9
+sidebar_position: -10
 ---
 
 The **Comment option** allows you to leave comments on the specific words, phrases, sentences and other document parts, edit and remove these comments. All the comments will be saved and shown to other document users.

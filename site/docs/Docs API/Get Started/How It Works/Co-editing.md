@@ -1,5 +1,5 @@
 ---
-sidebar_position: -19
+sidebar_position: -20
 ---
 
 The reference figure and the steps below explain the process of co-editing a document in ONLYOFFICE Docs.

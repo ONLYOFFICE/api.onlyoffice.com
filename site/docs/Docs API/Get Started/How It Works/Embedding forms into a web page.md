@@ -1,5 +1,5 @@
 ---
-sidebar_position: -4
+sidebar_position: -5
 ---
 
 Starting from version 7.0, ONLYOFFICE Docs offers the possibility to create, edit and collaborate on online forms, fill them out, and save forms as PDF.

@@ -1,5 +1,5 @@
 ---
-sidebar_position: -21
+sidebar_position: -22
 ---
 
 The reference figure and the steps below explain the process of opening a document in ONLYOFFICE Docs.

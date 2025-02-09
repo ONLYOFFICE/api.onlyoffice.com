@@ -32,9 +32,9 @@ Check if the [Callback handler](../Usage%20API/Callback%20handler.md#net-c-docum
 
 ![The file version has been changed](/assets/images/editor/e-key.png)
 
-The editor is loaded with the "The file version has been changed. The page will be reloaded" message.
+The editor displays the "Connection is lost. Trying to connect. Please check connection settings." message.
 
-The **document editing service** cannot open the previously edited and saved file for editing.
+The **document editing service** is trying to update the file version without reloading the editor after the connection is lost.
 
 Do not forget that every time the document is edited and saved, the [document.key](../Usage%20API/Config/Document/Document.md#key) must be generated anew.
 

@@ -1,5 +1,5 @@
 ---
-sidebar_position: -5
+sidebar_position: -6
 ---
 
 The steps below explain the process of inserting data into the spreadsheet by an external link in ONLYOFFICE Docs.

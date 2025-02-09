@@ -132,7 +132,7 @@ Example: false
 
 ## compactToolbar
 
-Defines if the top toolbar type displayed is full (**false**) or compact (**true**). The default value is **false**.
+Defines if the top toolbar type displayed is full (**false**) or compact (**true**). The default value is **false**. Starting from version 8.3, this setting is also available for the viewer. The default value for the *view* mode is **true**.
 
 Type: boolean
 
@@ -1070,6 +1070,7 @@ Example:
 ``` ts
 const mobile = {
   forceView: true,
+  info: false,
   standardView: false,
 }
 ```
@@ -1083,6 +1084,14 @@ Defines whether the view mode is enabled on launch in the mobile document editor
 Type: boolean
 
 Example: true
+
+### mobile.info
+
+Defines whether the **Document Info** button is displayed or hidden in the mobile document editor. The default value is **false**.
+
+Type: boolean
+
+Example: false
 
 ### mobile.standardView
 
@@ -1111,6 +1120,16 @@ Defines if [plugins](../../../../Plugin%20and%20Macros/Get%20Started/Overview.md
 Type: boolean
 
 Example: true
+
+## pointerMode
+
+Defines the pointer mode (**select** or **hand**) when the presentation editor is loaded in the viewer. The default value is **select**.
+
+Type: string
+
+Example: "select"
+
+![Pointer mode](/assets/images/editor/pointerMode.png)
 
 ## review
 
@@ -1250,13 +1269,34 @@ Example: true
 
 ## submitForm
 
-Defines if the **Complete & Submit** button is displayed or hidden on the top toolbar. Button will only be available for the *pdf* format. The default value is **false**.
+Starting from version 8.3, defines the **Complete & Submit** button settings. If this parameter is a boolean value, then it specifies whether the **Complete & Submit** button will be displayed or hidden on the top toolbar. Button will only be available for the *pdf* format. The default value is **true**.
+
+Type: object or boolean
+
+Example: true
+
+![Submit button](/assets/images/editor/submitForm.png)
+![Submit button](/assets/images/editor/submitForm-message.png)
+
+### submitForm.visible
+
+Defines whether the **Complete & Submit** button will be displayed or hidden on the top toolbar. Button will only be available for the *pdf* format. The default value is **true**.
 
 Type: boolean
 
 Example: true
 
-![Submit button](/assets/images/editor/submitForm.png)
+### submitForm.resultMessage
+
+Defines a message displayed after forms are submitted. The following values are available:
+
+- **""** - the message will not be displayed;
+- **null / undefined** - the default message will be displayed;
+- **"text"** - any text that the user specifies will be displayed.
+
+Type: string
+
+Example: "text"
 
 ## toolbar
 
@@ -1464,9 +1504,11 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
       mentionShare: true,
       mobile: {
         forceView: true,
+        info: false,
         standardView: false,
       },
       plugins: true,
+      pointerMode: "select",
       review: {
         hideReviewDisplay: false,
         showReviewChanges: false,
@@ -1474,7 +1516,10 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
         trackChanges: true,
         hoverMode: false,
       },
-      submitForm: true,
+      submitForm: {
+        visible: true,
+        resultMessage: "text",
+      },
       toolbarHideFileName: false,
       uiTheme: "theme-dark",
       unit: "cm",

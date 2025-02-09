@@ -1,5 +1,20 @@
 The list of changes of ONLYOFFICE Docs API.
 
+## Version 8.3
+
+<!--- Added conversion from [vsdm, vsdx, vssm, vssx, vstm, vstx](../Additional%20API/Conversion%20API/Conversion%20tables.md#diagram-document-file-formats) formats.
+- Added the *diagram* document type to the [documentType](../Usage%20API/Config.md#documenttype) parameter.-->
+
+- Added the [editorConfig.customization.mobile.info](../Usage%20API/Config/Editor/Customization.md#mobileinfo) parameter.
+- Added opening for [pages, key, numbers](../Usage%20API/Config.md#documenttype) formats.
+- Added the [events.onUserActionRequired](../Usage%20API/Config/Events.md#onuseractionrequired) event.
+- Added the [refreshFile](../Usage%20API/Methods.md#refreshfile) method.
+- Added the [events.onRequestRefreshFile](../Usage%20API/Config/Events.md#onrequestrefreshfile) event.
+- The document editing will be prohibited for all users editing the document with the specified *key*, if the *users* parameter is not specified for the [drop](../Additional%20API/Command%20service/drop.md) command.
+- The [editorConfig.customization.submitForm](../Usage%20API/Config/Editor/Customization.md#submitform) parameter can now be used as an object.
+- The [editorConfig.customization.compactToolbar](../Usage%20API/Config/Editor/Customization.md#compacttoolbar) parameter is now available for the viewer.
+- Added the [editorConfig.customization.pointerMode](../Usage%20API/Config/Editor/Customization.md#pointermode) parameter.
+
 ## Version 8.2
 
 - The [editorConfig.customization.mobileForceView](../Usage%20API/Config/Editor/Customization.md#mobileforceview) parameter is deprecated, please use the [editorConfig.customization.mobile](../Usage%20API/Config/Editor/Customization.md#mobile) parameter instead.

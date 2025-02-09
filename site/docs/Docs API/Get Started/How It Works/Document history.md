@@ -1,5 +1,5 @@
 ---
-sidebar_position: -18
+sidebar_position: -19
 ---
 
 You can view the history of text documents, spreadsheets or presentations using the **document editor**.

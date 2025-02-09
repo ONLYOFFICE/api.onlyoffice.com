@@ -1,5 +1,7 @@
 Disconnects the users with the identifiers specified in the *users* parameter from the **document editing service**. These users will be able to view the document, but will not be allowed to make changes to it.
 
+Starting from version 8.3, if the *users* parameter is not specified, the document editing will be prohibited for all users editing the document with the specified *key*.
+
 ## Request example
 
 ``` json
