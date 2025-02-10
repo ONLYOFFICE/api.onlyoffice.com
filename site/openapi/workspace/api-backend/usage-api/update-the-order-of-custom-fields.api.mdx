@@ -1,0 +1,71 @@
+---
+id: update-the-order-of-custom-fields
+title: "Update the order of custom fields"
+description: "Updates the order of the custom fields with a list specified in the request."
+sidebar_label: "Update the order of custom fields"
+hide_title: true
+hide_table_of_contents: true
+api: eJyVVFFP2zAQ/iuWnzYpkDRtx9Y3CkyrxiQEZZOG+mCcKzEksWc7g67tf9+dk5R2DAR5unPO3333+e6W3Isbx0dXXNoyPqqd1yWbKygyx2cRdyBrq/wCA5b8sPa5tuqP8EpXX0BkYOmiRYtH/B7jgM/WeCsDJ60yFMZH/NJkwoNjPgemLV5ieh4cuZ2N3SufM8EK5TxzBqTC84ypKoRa+FWD8/uYpzXHOkNWSy515aHyZApjCiUDu/jWUe4ldzKHUpDlFwaQjb6+BekRx1htwHoFjv4GEioL9i79UyKEjLfZssmxQ4gWUlgrFuhi/aXbSqWQ2Q1qFPG5tqXwzVE/5et1xJEz6joNkf+mPAn/WIDZZHHequoG79JHMjijK9ewT5PkKcrOY3ZCVnDfPAICv1W65+p8RtKmikn2GkVQjwdRmoKCeoNh2h+kfY5VnoprKLYAWhG2w8fK+pw6jOI/U7HfRVHDy5fSJE32eule8nHaOxj1D0bJYH/4qfdhkHz4ucHpHucV5Ku6pFGYwoMPV/GM7EOcDTQvoECBxvoB7aMc5F1j0gg1xI6J/pPBuUrYHttARqzXuoQasRS9DXDE+uh22BEboNfCR2yIDmWY7UgwpDrPtFNNtje+UUK3vwl397LOFDU5fjM6vn8YEmygcNC0cpBhLBz8sNivCNKOwiDpPe3+y0q06wqygFUCutiM3NShV4XP0YmFUXG6n8S0/paPQzl6R9MhpF9hIhyIldSlEdVipY3R1tcVxq0kcnm/jpvNEOYsttBNV7c6L2iMmon47wJ9HC+jvkKYL+KfN78jXomS/u7cDQXRnJ4/LsOTTr7tZXaVzHZXzWaNUJq5Duk7kXVZhrqwrexvXNPnJxdTdng2QRLoukbXgna5RwJ/AVMjGjg=
+sidebar_class_name: "put api-method"
+info_path: site/openapi/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Update the order of custom fields"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"put"}
+  path={"/api/2.0/crm/{entityType:(contact|person|company|opportunity|case)}/customfield/reorder"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Updates the order of the custom fields with a list specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"fieldids":{"description":"List of custom field IDs","type":"array","items":{"type":"integer","format":"int32"}},"entityType":{"description":"Entity type","type":"string"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Custom fields in the new order","content":{"application/json":{"schema":{"type":"array","items":{"type":"object","properties":{"EntityId":{"type":"integer","format":"int32","example":"14523423"},"Label":{"type":"string","example":"Birthdate"},"FieldValue":{"type":"string","example":"2020-12-08T17:37:04.5916406Z"},"FieldType":{"type":"integer","format":"int32","enum":["TextField","TextArea","SelectBox","CheckBox","Heading","Date"],"description":"[0 - TextField, 1 - TextArea, 2 - SelectBox, 3 - CheckBox, 4 - Heading, 5 - Date]","example":"5"},"Position":{"type":"integer","format":"int32","example":"10"},"Mask":{"type":"string","example":""},"ID":{"type":"integer","format":"int32","example":"1234"}},"title":"CustomFieldBaseWrapper"}}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

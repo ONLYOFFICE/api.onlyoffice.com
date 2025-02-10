@@ -1,0 +1,71 @@
+---
+id: check-the-domain-name-existence
+title: "Check the domain name existence"
+description: "Checks if a web domain name specified in the request already exists or not."
+sidebar_label: "Check the domain name existence"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVMtu2zAQ/BWCZyVyg558c1KjLXopYgc9GD5Q1NpiLJEsSflRwf/eXVJ+KE4LFKgPMinO7s7uDNXxINaejxe8Ear24Lbg8k8GN9rzZcY9yNapcEBExydtqIxTv0RQRn8BUYKjSIcrnvEd4oAvjxhVgpdOWYLxMX+qQG48Uysm2A4KVsb0TIsGmLcg1UpByfBNqIA5+NmCD0zUlPbAYK988Mw4pk24xzI94NGUSKrj0ugAOtBSWFsrGcnlr55Kd9zLChpBq3CwgGRM8QoyYB7rjAUXFHg6JTL0P2T+Y8gWo/osPjil1/wYf8TJW6N9SvUwGt1mejSmBqHZVtQtjFlwLbC7wSRSoxlbCZThzVlpwFP/CYQ0/rXrIpXnie7H0Ydbhi9a9PJCyQnVAG5LPFlDnJcIFW5yYVX+cD/Kr/ySqPo8tcAvrpkRjzSVd71z5odJv8EBIxVRqdJx1qsyjI3cqNHnixGme9HYGi5CngWijCsTK6lACP5kmqbVSI7NInv2PJ3N2eT7V6yHW5+mUYuAuSneGh8aoa9yRz9Hs97oB1qSSwaTvfLof74K/fAC7ENua0xEfFtXU80k14Imi0gUDJ8XyYhjf8kz3suG97bCXimo6wrh4cXVxyO9RhqOvgC43AqnREGDXCyxWHX6CHR8g/rRdGOrd3OiRnC0e9T3jUmP2SliIiXY8Ffs8sqMn6dzxBb97W9MSSFO7OjLgM8xx4WJk4+2i+86lFOvW7EmbEpJJiK/Dz24iR7sF9TU6UgfrggO7Zj1fdCTuno3pOuSw3GeJ3w6+mPE+Q4kNGm7RNa/Aebs9WU=
+sidebar_class_name: "get api-method"
+info_path: site/openapi/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Check the domain name existence"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/mailserver/domains/exists"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Checks if a web domain name specified in the request already exists or not.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"name":{"description":"Web domain name","type":"string"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Boolean value: true - domain name exists, false - domain name does not exist","content":{"application/json":{"schema":{"type":"boolean"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

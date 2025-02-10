@@ -1,0 +1,65 @@
+---
+id: get-groups
+title: "Get groups"
+description: "Returns the general information about all the groups, such as group ID and group manager."
+sidebar_label: "Get groups"
+hide_title: true
+hide_table_of_contents: true
+api: eJzNVE1v2zAM/SuCjoGXZMVOuRVb0WUfxdC0GLA2B8ZmYzW2pFFy19Twfx9pOU2ytTvPB1sSH78en9XqCOugZzd6Ta7xepnpgHlDJm75sNWnTSwdmSeIxtmPCAWSgIlXOtO/GId62bFXgSEn4wWmZ/oSY0M2qFiiWqNFgkoZe+eo7gMpWLkmKqiqhJDUIVOhyUsFIe3V/IMCWwybGiyskca39taORhcu4mg0U1elCapGLrFQNKT0QNFwuuR3kHTMBRMG72xA7rjVJ9OpfI4r/2JCVO5uqIldcmcj2ihI8L4yeR9sch8E3uqQl1iDrOLWIwcAItiyHzNTh4Nzt7rHPLLBk/PINaYiLqDGA1SIZOyaUfgIta/k6LxvpMd1mZ4XL6FTk3zSNKY48p4Oz5sXXrtH4n5NBP+7lE+wwfEPeCpNDBujO/aLJu6r/E5MEdKiqWugLds7gbybvv2b52sLg7Sw6AOlMbJljT1LEEveTMCbycl4OunnMdF7eS6E+MThiyLdD8Sbz9hPRPKWyZxp2xN/7NsXIpLp3YfO3ru6bixnVAukByR1eba4Uqff5hyEtyH1U0HEEIVJ70JkuUqIIcc5xr2ejmho9/L6b/+ZgcaIj3HiK2AWucmGKqk+TelGOGYkz4nf6SLJtNwlJXMh9rZdQcBrqrpOjn82SHK/8PIByMBKiL5Zctxyd8W0esND4/nkOXoRxANUTRrnHz+h3D7P4jk/u2KsSOtYAZteAcNCou9MdnsQ+1gM2VCCvLvsFZe2Tfrixnb4ZHrV41mBCS18Lvk/+Q0UCOAM
+sidebar_class_name: "get api-method"
+info_path: site/openapi/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get groups"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/group/"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns the general information about all the groups, such as group ID and group manager.
+
+**Note**: This method returns partial group information.
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"List of groups","content":{"application/json":{"schema":{"type":"array","items":{"type":"object","properties":{"Name":{"type":"string","example":"Group Name"},"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"Manager":{"type":"string","example":"Jake.Zazhitski"}},"title":"GroupWrapperSummary"}}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

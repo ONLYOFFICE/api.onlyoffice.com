@@ -1,0 +1,63 @@
+---
+id: get-the-default-folders
+title: "Get the default folders"
+description: "Returns a list of default folders."
+sidebar_label: "Get the default folders"
+hide_title: true
+hide_table_of_contents: true
+api: eJylVEtv2zAM/iuCzk7jJN0K5Fa0XVdsBYYmPQU5MDYdq7UlT5K7Zkb++0gpzy0FijWHWBL58fHx0UkPSyfHM1mDqvpfTJWjdXKeSIdZa5VfkayTl60vjVW/wSujvyKQEmMsnWQif5EeyvmaUDm6zKqG1eRYPqBvrXYCRKWcF6YQORbQVl4U0dEZoS26xmiHFEUnh2nKn2Mz30+DCZsZ7VF7hkDTVCoLAfafHOM66bISa+CTXzVIlsBaWBGO4q3dwbtZPGHmSdBY06D1KkZzlx/oKHK1pLwTWRhbg49PoyE9oG5r5mOCOld6SS93emFe6Tvh6BJ5baHg79SCK/m5gZo+jw5tpJxlWDcVeAzsHxMwS0VPbIwnYkCXYD8Rw/juEzGiU/CSiHM6BkeJ+MRy8pWIz3Tau0vEBSttPc45h1egGyc6kGsKTXNxr0wb2X0HB6fw9+gcLNH9v52p8VB9EM5RfCwIVeO9yVWh8LAjnLex2jt8Tmz2PGkf2Rimw7Q3SHvpYDq4GKfn49HwLI0/uSbzXvmgd08jGOtzDR5ItGbpeTr4dyQeNWxGkiJirRrpSsHJJYY+Bl/SpQ+N6pOzfpju/dxsh3vCAxJ7/eSI7wenUd8wTA57L6M4kRpqlh5hQzhKFybAN6ldmbpuNXmkdrUvaMXDzWQqLn/ckRG6uphVaEbPjDfG+RrCEG983KIXvsQTS+CImW6/E963fjYJenz1fZoGyo/ct7ZiU5HFGWdPmsQj/TOToeS7TVlSrKzVdQtw+Gir9Zqff7ZoeXvS8QWsggUTMZuT9XK7QDv5TKQSf1mGDZftBao20v3XMuPduivx7c2UdLkBjiv0HCq0ObD1rUivDmwfFyvZhMD/6+QNSNfF+lNiW/0oehOx65CozazOqZv/AAGhHvM=
+sidebar_class_name: "get api-method"
+info_path: site/openapi/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get the default folders"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/mail/folders"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns a list of default folders.
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"List of default folders","content":{"application/json":{"schema":{"type":"array","items":{"type":"object","properties":{"Id":{"type":"integer","format":"int32","enum":["Sending","Inbox","Sent","Draft","Trash","Spam","UserFolder","Templates"],"description":"[0 - Sending, 1 - Inbox, 2 - Sent, 3 - Draft, 4 - Trash, 5 - Spam, 6 - UserFolder, 7 - Templates]","example":"1"},"UnreadCount":{"type":"integer","format":"int32","example":"1"},"UnreadMessagesCount":{"type":"integer","format":"int32","example":"1"},"TotalCount":{"type":"integer","format":"int32","example":"1"},"TotalMessgesCount":{"type":"integer","format":"int32","example":"1"},"TimeModified":{"type":"string","format":"date-time","example":"2020-10-01T17:04:32.0000000"}},"title":"MailFolderData"}}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

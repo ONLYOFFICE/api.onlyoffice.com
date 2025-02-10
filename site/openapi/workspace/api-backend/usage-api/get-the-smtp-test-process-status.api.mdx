@@ -1,0 +1,63 @@
+---
+id: get-the-smtp-test-process-status
+title: "Get the SMTP test process status"
+description: "Returns the SMTP test process status."
+sidebar_label: "Get the SMTP test process status"
+hide_title: true
+hide_table_of_contents: true
+api: eJyNVMFu2zAM/RVDZ7fOsp16K4agK4ZhQZ2eghwUh7XV2pJG0Vkzw/8+0nKyuFvbXRJJfI8iH5/cKdJlUFdrFYDI2DJk+bfVUm1SPihaNHTgYKeuW6ocml+ajLNfQO8AhYS8Uqn6yThQm55ZOwgFGi8wdaXugFq0IaEKEsmbEARKPLoCQkgCaWrDJSdACN7ZAFxJp+azmfxNMw1s5wGHCkYqMwtnCSwJQXtfm2KIZ49BWJ0KRQWNlhUdPHAet32EgpjIRXA2MvHOz67xNRDszqBb52rQlrHwrCXMZ4QtqD5Vt+fAQMjKTXBdcA1coLY711yUrdn1wspj1W8yBbdAdPg+bAlYcO/nCQ2rUfJsUvXgsNEUjz7OJ9zZUItrmf3eJQwkQ8Mmb8h/Pw5g7KTvBfFp9uHvgd1bPXqGRRVUA7xl2VQJg/6aKt5k2ptsfjnLTv4LfE8mPslOQz5aMZdpxoH905CnXjjpVzgw00gpVQynyupGohPuUJuxD26gj72yHZrW8o1JDrgHTO4W+Sq5Xt5yEt6G2GKtpUwR07tAjR4cN95xA/Sm69WLp9L9cfJ/v5qxWYJnynytuVcupcVaskV516IEI1ngQcYosSxZZMkg9fMulsTPt+JGhNZ1Wx3gHuu+l+MfLaB8CHi512j0VlRab/i66vgt6NQTK87iFgV4SbrXdRtn8eJZymfiZIabxYqxYpXp+J6G8Y0LyX4M2cNZ7ukk07EE+e3TVyhdF83BjR3xMfQq42SfiBaZN+z738GKxrU=
+sidebar_class_name: "get api-method"
+info_path: site/openapi/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get the SMTP test process status"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/settings/smtp/test/status"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns the SMTP test process status.
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"SMTP operation status","content":{"application/json":{"schema":{"type":"object","properties":{"Completed":{"type":"boolean","example":"true"},"Id":{"type":"string","example":"{some-random-guid}"},"Status":{"type":"string","example":""},"Error":{"type":"string","example":""},"Percents":{"type":"integer","format":"int32","example":"0"},"Source":{"type":"string","example":""}},"title":"SmtpOperationStatus"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

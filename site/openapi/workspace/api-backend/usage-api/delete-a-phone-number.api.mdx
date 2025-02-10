@@ -1,0 +1,71 @@
+---
+id: delete-a-phone-number
+title: "Delete a phone number"
+description: "Deletes a phone number with the ID specified in the request."
+sidebar_label: "Delete a phone number"
+hide_title: true
+hide_table_of_contents: true
+api: eJydksFOAjEQhl+lmauEXYknbiombrwQUC/CoewObAnb1nYWxA3v7swugkbjwZ6m7cw/X+dvA6RXEYYvkIcqeXbZGOY9iJjXwdCezxu4rql0wbxrMs7eoy4wSH7gCHqw4zyE+YGrCox5MF7SYAgj3CBhVFr50llUtq4WGNTOUKmoRJWNVPSYm6XBQhnbngV8rTFSn3WP4Y0rmKKB3FlCSxJq7zcmb2mSdZReDcS8xEpLRHuP3N0t1pgT6/jgPAYyGOW2g8gKib/jjr9CZiOuPCpFCsau4NAu4Yre2djJDdL0byWW+Tc5GdrIwbMzvtWEjuAqvfzZ9Mnqo01YgGRVyFt+J+eJDzIJTSXvE+1NMuiniRi+Ze2kQ41J8zmd4Wy2uzjA+R9MBbJ78q+/4QTP2g+450ojUGV33QOrK7n9VttSyhQmZ6fv3nTl5dFfnTo5IKpL13Y7jubWVVVtGVBNMWzZuMnd9FFdjzPuydvYzWaj+R8S9/sA/PMFng==
+sidebar_class_name: "delete api-method"
+info_path: site/openapi/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Delete a phone number"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"delete"}
+  path={"/api/2.0/crm/voip/numbers/{numberId:\\w+}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Deletes a phone number with the ID specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"numberId":{"description":"Phone number ID","type":"string"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Phone number","content":{"application/json":{"schema":{"type":"object","title":"VoipPhone"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

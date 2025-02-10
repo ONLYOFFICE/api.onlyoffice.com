@@ -1,0 +1,71 @@
+---
+id: add-a-post-to-a-topic
+title: "Add a post to a topic"
+description: "Adds a post to the selected topic with a post subject and content specified in the request."
+sidebar_label: "Add a post to a topic"
+hide_title: true
+hide_table_of_contents: true
+api: eJzNVm1v2zYQ/isCP22AE8ly260GhsFNMywY1hm1gwFt/eEi0RETSeRIKokr6L/vjpQsOXbtFtuA+YNBkfcc7x7eW80s3Bo2/cgSWRRVKewm/EXqqjBsNWKGJ5XGLTyv2ayymdTiM1ghy185pFwTTuOKjdgjynG2ahCVcpNooUiMTdksTU0AgZLGBlYGNuOB4TlPLE/xW4kkeBQ26yRMdXOHZwGUaZDI0vIS9xRPxFqgvCgdXvO/Km7sOV6rQEPBLdfG2VjiB97p9AoyS5AJCmzGntu1dHdfvcUDk2S8ADatmd0owgu8+BbdG7G11AVYvzWJWUP+tde/kemGMK2ZtASlcpE4gsI7Q9fU+8ql85Bs11JxbQU3dIqeoJY5knCV0veutXN36jlyNj+ztEEvPHUHsENivyPrhebp970SY7Uob0nHwJcDOix/svso9yNWjJKl8c7EUbSv4x1/dA6w0b/FmWfq1KONGH+CQuUkNI4n5Oei52rXm6Hswi065gi2JAKOYnqeUPwCcwPD/DgijuLobByfRT8sx5Ppy1fTKD6fxK9ej1//+IGUXKv0nytpLXmz+UZOt1dtKa0ql1f91VH7Ozvw1/3IhLfCqBw271yGHvPld3HPgw9QbsCae+FoFzY/BYIS2jyYPYAFvSggz49jKp1TRTIkGYBDEX6u5Vrk/FqfgH/6FKJoWiXW0JJL3PZ7BD8Ho55+rgzXP0FaiFKgBrASb8ArrHeIXaIqueH8Tw3KG7/MqJ5+hcNehNy1FpKswGwyAwRoDRuqf5YX5vSj/38i9XR8YNm2lebnd8qVrAtfSpZO/hhOFBgh4Z3iDrYQn/m3F4948uKlixHqKF8TXBQKO0/umqvrPVQq+sejEHAx8GXhgQjKvIjG+yX2uoS2S+M7kBT2xkymxJovvK4VTlkISoTxeRT2XX9Nd4Wuc4Z120Ab1s8AC6rJPloOTgJ96CnxG990vTfzx6OuNe9gnYlU9N/3LfWyo/B5S4wGLa5nfNtJBl1MlGvpDGppvOicDBZcP3AdvL9cLIPZ/Arx+Gk8dzkGr3F1m7gqwHWizuo0Hcww4AeX5yPFYBT4j6eelmnqMyEWVSQara58wfIv/JGeASXxjR1JLQE+vquCdLQuTLthCSebjIIEsXV9A4YqYNPQNt6raQbE5QNoATfEKk5bqTC0xrdZQ274EToGw9ZB27vQKcnCB8gr+sLlPQZSP841KxTNusmzbk/bAnDmKkCP3psrmlGHmCUJV/ao7GqQOvM/FksUvmnnvUKmhNHwiJv07yyVzmuXHm6vxngqbyssOXjudVKwU3ru5sq9y5V2QV4d5GI3bTpi6J/cOgipa5+JTbOV90dfRGxz1UvT06zQ6r8Bx4IRAQ==
+sidebar_class_name: "post api-method"
+info_path: site/openapi/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Add a post to a topic"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/api/2.0/community/forum/topic/{topicid}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Adds a post to the selected topic with a post subject and content specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"topicid","in":"path","description":"Topic ID","schema":{"type":"integer","format":"int32"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"parentPostId":{"description":"Parent post ID","type":"integer"},"subject":{"description":"Post subject (required)","type":"string"},"content":{"description":"Post text","type":"string"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"New post","content":{"application/json":{"schema":{"type":"object","properties":{"Id":{"type":"integer","format":"int32","example":"123"},"Subject":{"type":"string","example":"Sample subject"},"Text":{"type":"string","example":"Post text"},"Created":{"type":"string","example":"2020-12-07T13:56:02.3269198Z"},"Updated":{"type":"string","example":"2020-12-07T13:56:02.3269198Z"},"CreatedBy":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"},"ThreadTitle":{"type":"string","example":"Title"},"Attachments":{"type":"array","items":{"type":"object","properties":{"Created":{"type":"string","example":"2020-12-07T13:56:02.3269198Z"},"Updated":{"type":"string","example":"2020-12-07T13:56:02.3269198Z"},"Name":{"type":"string","example":"picture.jpg"},"ContentType":{"type":"string","example":"image/jpeg"},"Size":{"type":"integer","format":"int32","example":"122345"},"Path":{"type":"string","example":"url to file"}},"title":"ForumTopicPostAttachmentWrapper"}}},"title":"ForumTopicPostWrapper"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

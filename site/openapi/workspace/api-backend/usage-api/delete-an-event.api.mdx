@@ -1,0 +1,71 @@
+---
+id: delete-an-event
+title: "Delete an event"
+description: "Deletes an event with the ID specified in the request."
+sidebar_label: "Delete an event"
+hide_title: true
+hide_table_of_contents: true
+api: eJylVl9z2zYM/yo8PiuxrCRN6rvdzmvcW25L2pud7q5pHhgJjtlIpEZSTjydvvsAUv6jxLGX1g8yCQI/AARAoOZO3Fs+uOGpLopKSbfojeagnOW3EbeQVgZJeF7zYeVm2sh/hZNa/Q4iA0NyBlc84o/IB/y2QakMbGpkSWx8wM8hBweWCcWAgNmjdDPmZsAuzpktIZVTCRmTytMM/FOBdYeIWAojChQ11qtXuEG4KUAmSaEk8FK4GX+u8SOyIDjSbTqDQvBBzd2iJGmpHNyj3RGfalMIF0hHCW/IcAO21MqCJYkkjulvmzNZ8ARRUo2AuEJGUZa5TP3l9L5b4q5f6td33yElwdLoEoyTQdcEntwGl3VGqnvkgidRlDmRiIPpKSP3eRPxzzrP9+MS18Rz7L8B1KaqgiI6lqR0qOyj57uscifXhBcBvonZAduUiVgfKV2x2443MbkwUtm5cLDb7yRO4oN+chCfTvpHg5N3gzg5TM5O3ifHZ18JZOyEcT8P80VjVDcg7rTOQagOxlTkFpbMdoNZGCMWlJEOCrs/KBfZ3nC8O+5o7h8dkd4rXwG73PwijBRYYv1tZu6K/FoVZn2Dwk66gIggfxvMbRRsNg8otVYH0Y845ZNgEuB2OXUplLgPWj7gY9MN1P+N9WnyPomPfKyvy+znQd5eVVdaAW6v4NHi3yeTefZhNsfMoEWet0e+tD3hlVojpFBjJBGxBFceL2LHuAyQETuldUCN2BluCBjlTgK9W5H9jev9bfHGJF7d38r5qvJv9EbFt7+DLZ/lj0w4l7bMxWJ/ql/KB2BfhVoIZx/k21NpOBf4dIwL0XlHt8hUJmdOM0ucTHgp/wAbPZU5XJs94t++9ZA1q1JnaQkayYFG4ofClk+/VhbMLyIrpJKIIJw2nRocIZRegK9DeHZEfagtw48VutL4Ij2O+y9717USbQenFoJc2FxnGuOIfNTVfMvFdjrgPVHKXnIY99YzgW94vTp034avR4MxtbiQE1sHhPUrWco/YLFs3LNwHC3bekfWWyfVVHvx1tUPS1vYGAxmOPtrNJ6w4ecLBMGtDU7mmMDWUYBKbV0hfBtudYTmvRpEns8N9bqb//jQ0jrrsF33MJHRVzSlCkkSbveGbgI58X79ANF6RUnTWjVoZxys/hk6QSJ1fScsJVvTEBnVGRrKcDmnJ/+ObghnpExaWmNMfbPa4eB6Rtpq8TJmiuyai7yiHS4fMIKrGay5Rc7ZchCs28NhmkLpNsReDEY0aq1y73z052gyQnZKzm66PPh0aRekYKtV3cxZmkjfJnpFpK5DMjbNij8cvSqxStfATZd0i5X2H7GKqyY=
+sidebar_class_name: "delete api-method"
+info_path: site/openapi/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Delete an event"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"delete"}
+  path={"/api/2.0/community/event/{feedid}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Deletes an event with the ID specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"feedid","in":"path","description":"Feed ID","schema":{"type":"integer","format":"int32"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Deleted event","content":{"application/json":{"schema":{"type":"object","properties":{"Text":{"type":"string","example":"Text of feed"},"Poll":{"type":"object","properties":{"PollType":{"type":"integer","format":"int32","enum":["SimpleAnswer","MultipleAnswer"],"description":"[0 - SimpleAnswer, 1 - MultipleAnswer]","example":"0"},"EndDate":{"type":"string","example":"2020-12-07T13:56:02.2859248Z"},"StartDate":{"type":"string","example":"2020-12-07T13:56:02.2859248Z"},"Voted":{"type":"boolean","example":"false"},"Votes":{"type":"array","items":{"type":"object","properties":{"Id":{"type":"integer","format":"int64","example":"133"},"Name":{"type":"string","example":"Variant 1"},"Votes":{"type":"integer","format":"int32","example":"100"}},"title":"VoteWrapper"}}},"title":"PollWrapper"},"Id":{"type":"integer","format":"int64","example":"10"},"Title":{"type":"string","example":"Manager"},"Created":{"type":"string","example":"2020-12-07T13:56:02.2729203Z"},"Updated":{"type":"string","example":"2020-12-07T13:56:02.2729203Z"},"Type":{"type":"integer","format":"int32","enum":["None","News","Order","Advert","AllNews","Poll","All"],"description":"[0 - None, 1 - News, 2 - Order, 4 - Advert, 7 - AllNews, 8 - Poll, 15 - All]","example":"1"},"CreatedBy":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"}},"title":"EventWrapperFull"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

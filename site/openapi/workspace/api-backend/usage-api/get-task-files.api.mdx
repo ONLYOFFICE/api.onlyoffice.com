@@ -1,0 +1,71 @@
+---
+id: get-task-files
+title: "Get task files"
+description: "Returns a list of all the files attached to the task with the ID specified in the request."
+sidebar_label: "Get task files"
+hide_title: true
+hide_table_of_contents: true
+api: eJyVVG1P20AM/iun+7q2CaUbo9I0wWBaNTYhWjSJlw9e4rYHyd3tzgGyqv99dpIKEIhq9yHyOX7sxz7bK02wiHp8qX1wN5hR8tUUGPV1T0fMqmCo5p8rfVDR0gXzF8g4+w0hxyCgwJLu6Xu2Q329ZlSOMQvGi5ke6zOkKtioQBUmknJzBUWhaIlqLmEUEEG2xFyRa7QE8VbdG1o2t8mRih4zMzdsYWyjC/inwkgDjtqJhy5njiudOUtoSUTwvjBZwzW5icJkpSPHKUEkqj0yN/db8mU/nLnHQIbTlr9MweQiPU9lJtQmR2zf4Q2HW3AZ1s0ROtE7G1svwzR96eKkq0GTOzv6X8YQAtSM42KXcXsmP6HEJ1aRgrELtsIHKH0hKnlrZcWM+Z/7HAjzw3q750n+mt+5CyVwNrqqTP4sTtqd/iufzREKRyb6AurtxH+YW1QXYGsgfi2BzgwV20BgoXmwnj64A4IwLbkb38ZUoZDejGKpoEEJ/jQ4ecTzsAV+dZWwaV5lFEVEx+pWJ/ABRP/wuYoYPkFeGsvtEYCctBR3WZuQPmZXrkb8FcC35LuHejvyMB2m/Z1hP/0429kb7+6N093B7mg42n+/dyFOTlzbbW97GV3xGX2Q75NeecJOtMLMbwahp0fpzsvWP7fQbRAmLlYl8pVz0Ats+gtoyZcEvEmGgzTZbCOZxmTVzuT4Mu3vX79bJ5v52WyoqQxK25mv7qnHAfLmOzYTJJyW7e+ebrIaP8c2JGUSzx63zPGmLo9bIl2Ls7lrdF1NvriyrCzzUlMMdxjU2fF0pg5OJxyKr7GtSMFvGInD/APf6d3y
+sidebar_class_name: "get api-method"
+info_path: site/openapi/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get task files"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/project/task/{taskid:[0-9]+}/files"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns a list of all the files attached to the task with the ID specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"taskid":{"description":"Task ID","type":"integer"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"List of files","content":{"application/json":{"schema":{"type":"array","items":{"type":"object","properties":{"Name":{"type":"string","example":"File name"},"UpdatedBy":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"},"Updated":{"type":"string","example":"2020-12-08T17:37:03.3424957Z"},"Location":{"type":"string","example":"4\\\\46\\\\File name"}},"title":"FileWrapper"}}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

@@ -1,0 +1,71 @@
+---
+id: delete-a-tag
+title: "Delete a tag"
+description: "Deletes a tag with the ID specified in the request."
+sidebar_label: "Delete a tag"
+hide_title: true
+hide_table_of_contents: true
+api: eJydU01v2zAM/SsCz0adZTv5FiwBVnSHYUlPRQ6szdRq/aFJcrpM0H8fKTvp0qYDtoutDz7y8fEpgMcHB8UdtKibfCObbQaOysFqf+CLAIvB173Vv9DrvvtCWJEVgOUVZPDMcQTbyKiKXGm1kTAoYEkNeXIKFZdQz9rXytekrpfKGSr1TlOldJfOLP0YyPkrTmfQYss461LtjjecS0slLVkN+hpel2LanJePXVlTi1AE8AeTgJ2nB+abwa63Lfrx6OMcohC25EzfOXKCmM9m8rvURKVEHemDE5U95+y8xKIxjS6TLvmjE0D4JwoxZvBp9uFt2dsOJ9GpAoliSeq+4psqEUpCsRAF5Gh0Pr+a5Wl+Msw86CrCywzXQmhs8eIkT0Q50w0djkLX43V2HMEZNnHS3a5PcO0bifjct+3QcUW1Jrsnq76v1hu1+HbNSXjrxtYaZFN4YLzpnW8xiTbVGNUeHfN6yOFF+P+01tSmp58+Nw1yl0xisI3kHtW8Ew04kvXkrygqMHkTGRTsQbZMzaQlMIR7dHRrmxjlmItYeS283KPVeC+KsH8r7WTNk9th4+gvPZ08fJHmcUSdzGePzSA7Xj7xwNLziFuOqo+PM0wXi7Ik4/+AvHGsPIOTuZarr6vNisPFfefOeErOmBZS4CKjc5Mc6ck3Zu9AQhh9F+Mpfrx6F3Fy5tS8NMFP6Tcha5pp
+sidebar_class_name: "delete api-method"
+info_path: site/openapi/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Delete a tag"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"delete"}
+  path={"/api/2.0/mail/tags/{id}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Deletes a tag with the ID specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"id","in":"path","description":"Tag ID","schema":{"type":"integer","format":"int32"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Deleted mail tag","content":{"application/json":{"schema":{"type":"integer","format":"int32"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

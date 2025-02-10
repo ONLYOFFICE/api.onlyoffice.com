@@ -65,14 +65,14 @@ const config: Config = {
         config: {
           workspaceBackend: {
             specPath: "openapi/workspace/community-server.json",
-            outputDir: "site/openapi/workspace/API Backend/Usage API",
+            outputDir: "site/openapi/workspace/api-backend/usage-api",
             sidebarOptions: {
               groupPathsBy: "tag",
             },
           } satisfies OpenApiPlugin.Options,
           workspaceHosted: {
             specPath: "openapi/workspace/hosted-solutions.json",
-            outputDir: "site/openapi/workspace/For Hosting Providers/Usage API",
+            outputDir: "site/openapi/workspace/for-hosting-providers/usage-api",
             sidebarOptions: {
               groupPathsBy: "tag",
             },

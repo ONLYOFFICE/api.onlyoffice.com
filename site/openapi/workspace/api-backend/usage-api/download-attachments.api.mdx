@@ -1,0 +1,71 @@
+---
+id: download-attachments
+title: "Download attachments"
+description: "Downloads all the attachments from the message with the ID specified in the request."
+sidebar_label: "Download attachments"
+hide_title: true
+hide_table_of_contents: true
+api: eJy1VEtv2zAM/iuGzkGddjvlFqwFFgzFiqU9FTkwNhOrtSVNotN2hv/7SNmJnT6y7bCLrcfHhz5+ZKMItkHN7lUFukznRJAVFRoKajVRAbPaa3rh+0bNayqs17+AtDVfEXL0Yud5pSbqiXGoVi1b5Rgyr53A1Exd2idTWshDAmWZUIEJDEGSjbdVPKwwBNhi8qSpiAeLyyQ4zPRGY55oE888/qwx0BnHc+ChQkIfYnKGNxys97KQjLREd0CFep3SdR9rcclXISuwAjVrFL048aEN4ZbfNlEb6yug7ujThWrlcR6DsyZgEIuL6VR+x94HDhPwWaF3yK4yy14NCRqcK3UWWUwfgpg0b5Ow6wfMSN7prUNPugv4xVau5FfnI+ja2hLBMBafQa75jHyNqp2oxRgYyGuzPcLxPaOWBFSH08gew+gr760/De4gjL1Bn0Ux/QW9YwfnTKwkZmu2/0NiHYbR35moSOttBP9jxCMPp0MOsJaNSFM8veYGOtzs6WoF8Xl6/lYmdwb6huJqCorVXNhcNFvHwotyZyoFp9OLs2ka+7PXd0iHHkrzvsG4vdLm0ACtGtp3KerqBPRuEx/eyrG+4cu+d4ruerJvriPbmLI2GxvNewpYnlVtOGKyRL9Dn/y4Wt4m85sFO+Ft6F5eAnETC9/OBqogst3H2E+L8ZB43b/N0E3/a7r0fBA+U+pKYDo429qXErwrzL2QxUguDX+lOPLry8PLIQ1JfygR72bDlOKBUjAH4q5p1hDwzpdtK8ecipe5y8sdeA1rIZgHXa6DrFknGygDnqDmaMq9+6B91Y2UfAdlLTtePrIGxrO0XTG42E/8pr+fZxk6Glm+GWwyLw+qvrm7FVpqIW8suMcouH4h3t/N6lh7+xTl204+MGmaTs5te8B3Vx9aHATfoYWkFTfwbyIobr4=
+sidebar_class_name: "put api-method"
+info_path: site/openapi/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Download attachments"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"put"}
+  path={"/api/2.0/mail/messages/attachment/downloadall/{messageId}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Downloads all the attachments from the message with the ID specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"messageId","in":"path","description":"Message ID","schema":{"type":"integer","format":"int32"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Attachment archive","content":{"application/json":{"schema":{"type":"object","properties":{"Completed":{"type":"boolean","example":"true"},"Id":{"type":"string","example":"Id"},"Status":{"type":"string","example":"Status"},"Error":{"type":"string","example":"Error"},"Percents":{"type":"integer","format":"int32","example":"100"},"Source":{"type":"string","example":"Source"},"OperationType":{"type":"integer","format":"int32","example":"1"},"Operation":{"type":"string","example":"Operation"}},"title":"MailOperationStatus"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

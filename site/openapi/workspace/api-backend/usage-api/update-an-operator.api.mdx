@@ -1,0 +1,71 @@
+---
+id: update-an-operator
+title: "Update an operator"
+description: "Updates a phone number operator with the parameters specified in the request."
+sidebar_label: "Update an operator"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVUtz2jAQ/isanWlM05640SQzZTqTMgnpheEg7AUrsSVVkqHU4//eXdnGJrh02pSD0ePb3W+fKrkXW8cnSx7bPPqmZ3O+GnEHcWGlP+B5yaeFT7WVP4WXWn0GkYAlvMUVH/E94oCvKpRKwMVWGoLxCX8yifDgmGAm1QqYKvI1WKYNWOG1ZXvpU+ZTYEZYkYMH65gzEMuNhIRJFe4sfC/A+Ss01MECK4UbtNKqmxEXSXaN8Cl/TWY+SGF2i0AXp5ALPim5PxhS6byVaos3G21z4fGkKGTCK3Kx4fNJJweSiLXyoDwthTGZjEOMomdHRstz1Xr9DLEnZyyR8BJcwHnhi7A6ZX0P+45sAxq1uoS14kBOe8hdz4ZESltMUY8/Hn24RgdGXGSZ3n8t/Fajize4G7B6CxupMHFyw4Tq7AdRx3LxgqIhObrRw2JSxBCjtP8zwbXWGQgV+FiItU3+lkMt9TbLQrk92EW4uBj3GsiCircF30Iikbpf6PtQiMOGW9RJ23SWm+qswo90OqOVq+voejw+11n3YXJ0CFX9c9l66TM6mG5JvGbwcfx+wKgSzdSAJPiOnZvqhNqzCPVPTTrhkTAyur4aRzR8dlqaiFi6qOzauuLdOHokYrWrg0PpSBjVfoFDOxHS+nrUzowT2cCOPH/oWvvuh8hNBv3WXI5Xw92z9LaAVVfJ7b5fX0H4PPvHXBLPjQ78mwDf6DwvFLrMHsHusPwe7h4XbDqfoRe4dXWUMxqwnuSNdj4XIXuNk3Xa+93zeij2xtd/H9ZNHjz88JHJBKYBSRY2I6t17peUJERi9qkibU6eYQXgX6gB/J/0hjsGMEUfSa4s18LBk82qio7RpqWHCpc7YaVYUwDxgUikozWmZCMyBxecv/A4DPrRFpmiCtuJrKAdLl+w5E5epGqF6LR9McsGcFMbfreoJ0qr4KwTq1ErMY1jMP4idtVrsfnTArHr5o3KdUIiVuzxkL6Bqw5xCK0UzkosJrUtxJawtcowJQvKVb+vXkJfNQtyajAapy3Whoa+5NWgSFnWXVtVR3x99VuJY1/XaErOCln/AtQpDaU=
+sidebar_class_name: "put api-method"
+info_path: site/openapi/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Update an operator"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"put"}
+  path={"/api/2.0/crm/voip/opers/{operatorId}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Updates a phone number operator with the parameters specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"operatorId","in":"path","description":"Phone number operator ID","schema":{"type":"string","format":"uuid"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"status":{"description":"New operator status","type":"array","items":{"type":"integer","format":"int32"}},"allowOutgoingCalls":{"description":"Defines if an operator allows making the outgoing calls or not","type":"array","items":{"type":"boolean"}},"record":{"description":"Defines if an operator allows recording calls or not","type":"array","items":{"type":"boolean"}},"answerType":{"description":"New operator answer type","type":"array","items":{"type":"integer","format":"int32"}},"redirectToNumber":{"description":"New redirect phone number","type":"string"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Updated operator","content":{"application/json":{"schema":{"type":"object","title":"Agent"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

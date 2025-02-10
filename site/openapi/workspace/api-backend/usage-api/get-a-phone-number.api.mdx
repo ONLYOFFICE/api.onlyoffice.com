@@ -1,0 +1,71 @@
+---
+id: get-a-phone-number
+title: "Get a phone number"
+description: "Returns a phone number with the ID specified in the request."
+sidebar_label: "Get a phone number"
+hide_title: true
+hide_table_of_contents: true
+api: eJydksFOwzAMhl8l8pVpLROn3YBNouIybcCFcQitt2Zak5C4G6Pau2O3YxsCcSAnO7Z/f7HTAOllhOEz5KFKnlw2gZceRMzrYGjH9w1c11S6YD40GWfvUBcYJD+wBT3Ych7Cy56rCox5MF7SYAhTpDrYqLTypbOobF29YlBbQ6WiElU2UtFjbhYGC2VsexfwrcZIfdY9mDeuYIoGcmcJLYmpvV+bvKVJVlF6NRDzEistFu08cnf3usKcWMcH5zGQwSjRDiIrxP6OOzmHzEZceVCKFIxdwr49whW9s7GTG6Tp30os829yMrSWiydnfKsJHcFVevmz6aPVhzVhAZJVIbv8TlhiOwZNJTuJ9iYZ9NNEtr1h4aTjjEnzNZrhfL692MPpE8yEsHvvr1/hSM7a97jjSiNEZRfugdWVRL/VtogygulpzeN3XXl58fmajuMX1YVrux3mcuuqqrYMqGYYNry16Xj2oK4nGfdkN3aDWWtife73CTcrBJg=
+sidebar_class_name: "get api-method"
+info_path: site/openapi/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get a phone number"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/crm/voip/numbers/{numberId:\\w+}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns a phone number with the ID specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"numberId":{"description":"Phone number ID","type":"string"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Phone number","content":{"application/json":{"schema":{"type":"object","title":"VoipPhone"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

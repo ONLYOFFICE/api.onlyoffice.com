@@ -1,0 +1,71 @@
+---
+id: get-the-product-administrators
+title: "Get the product administrators"
+description: "Returns a list of all the administrators of the product with the ID specified in the request."
+sidebar_label: "Get the product administrators"
+hide_title: true
+hide_table_of_contents: true
+api: eJy1VEtv2zAM/iuGzl6dFTsFGIZgLbpgDxRNiwFLc2BtJlZjW5pEp80M//eRfiTxkran+WDTFD+Kj4+sFMHKq/FceSTSxcpHM4xLp2mrFiErO3k8r9SkpNQ4/QdIm+ILQoJOgI4lFaontkO1qBmVoI+dtmKmxuoGqXSFDyDItKfALAPIsoBSDCDJdcE6B2SclxPRWmeSMqbgSVPaKKYXgbcY66XGJNBFo3P4u0RPZ3yxBQc5EjrfRFnwD9/aedESmpYwLFCq/o3turtresFHPk4xBzWuFG2t+ODIuCJ8sjQuB2JNWbLDWnJ06K0pPHqxPx+N5DP0/a3Lts9nmC17jU1BWJAgwdpMx01ho0cv8Oo4HHAOtpIOYe4P9ObhEWOSSjhj0ZFug5omb6cSKnyG3GZiMuqedyde/aPqUF1obzPY/mjqfHzB3uF3vcbgFxRbIL/WAr3VlL0FggJWTCy2nmyAwM1ypsvrmNIxn0zgxTKABiV4bu5SZ3jn3oDf30cdD7yIaFjd6gR+Bt4+fyo9uo+DDjINQkVtQuqSXZkt4k8HVoKXJ1QfRu+PaXFXQDdHmDQ+mLup4V6pFTZNFJ6OVQRWR+dno2g3l/0sRoMwomrH9FrtB3Ym5Gl5cHJs96Sy+itu+yFJ2+Own6IBtolWF0vTwLvMP5s8Lwu+MZih26ALbi5nt8HkespO+Ne3SWdAPK3SFGs85dAQvLvjCmkw90dzMqhftR+b/75ZuhIRPlPElOcKcQJlS6e2TXOpH1tyo5rit6066AOLQ9aEarxfTbxHUq6H+KmqB/DC1boWNcfgZOuyuAGn4UGKzdst0V5kpssSMo+vFGew2k5m0jOgkCg3kJXyx+Ka+XC4QOsFG6f9vq+680kco6UD5NEOkzW5I/fV5a3UopSqHZJv3ZCvE8T7yaiGPOxDlHcdvgCpqpbadb2zb49eROzI31pLkRY8x38ByyxxEA==
+sidebar_class_name: "get api-method"
+info_path: site/openapi/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get the product administrators"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/settings/security/administrator/{productid}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns a list of all the administrators of the product with the ID specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"productid","in":"path","description":"Product ID","schema":{"type":"string","format":"uuid"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"List of product administrators","content":{"application/json":{"schema":{"type":"array","items":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"}}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

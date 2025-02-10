@@ -1,0 +1,71 @@
+---
+id: add-favorite-files-and-folders
+title: "Add favorite files and folders"
+description: "Adds files and folders with the IDs specified in the request to the favorite list."
+sidebar_label: "Add favorite files and folders"
+hide_title: true
+hide_table_of_contents: true
+api: eJy1VMtu2zAQ/BWCZzdyg558c9oANVogQeycDB9ocWUxoUSWpOy4gv69u6QUv5IAOVQHgeS+ZmeHbHkQG88nS14oDT67s+BEUKb2fDXiHvLGqbBHe8unTSiNU3+j+ScICY7iHK74iO/QD/iqwygJPnfKkhuf8KmUnsXkTNSSFUZjoGc7FUoWSmCzH555C7kqFEim6njo4E8DPrBg4rYQW0P5mVY+XGG13n5jJGJreW7qAHWgpbBWqzxizJ48IWi5z0uoBK3C3gJiMusnyAPmsc5gw0GBJ2vCNpNxc9rFbyzMTNHDJ9AY3WcTzok9bhFg5Y+q+OBUveFdN4rkfpwXHT6ZNX5Ehbc4rtTB9Xh8WePGGM22QjcwYcE1wFQRWTXDrJnCETR5Dt4Xjcaan+VzjRVA1Dwh+jb+egnisRa9fkBGSirArUSLNT6OQoQSd5mwKru+GmdJj8PkiZhBjXMqn/p9U5OvsDDVL4gcEoIymUe8FhVZT2IjJOrv4aCs2xdRWQ1nylgOE1gdjfVw2FG1wkQUKlA0/26qqqkROJuD26J6Hm7nCza9nyEW3PpEkBbYZeAYT4RUIjI9QJXycAcu7hI/u3JH9+H/3L6e3gAvIbNaILuIunGaSqcxLol79MRB8kQToTwME7kraezo2LZr4eHR6a6jY6zs6L3B5VY4JdZE4ZJoLYcnp+XPOFXiNXb5ZUFwyB0VHqd+pthuNERMUeM2fOi7OlLm/d18gc7r/pWpjKQYJ3b0AuF/wnFhbHou0SGetTjJetOIDfmmnKQtUv+pNJ+jNPsFdTWY6v0RwlOVjvpG6E9tvRnStkn4SOjgn0zvRrxejeRNA10h6n9mtBoj
+sidebar_class_name: "post api-method"
+info_path: site/openapi/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Add favorite files and folders"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/api/2.0/files/favorites"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Adds files and folders with the IDs specified in the request to the favorite list.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"folderIds":{"description":"List of folder IDs","type":"array","items":{"type":"string"}},"fileIds":{"description":"List of file IDs","type":"array","items":{"type":"string"}}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Bool value: true if the operation is successful","content":{"application/json":{"schema":{"type":"boolean"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

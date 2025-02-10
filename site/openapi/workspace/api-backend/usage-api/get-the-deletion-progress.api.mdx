@@ -1,0 +1,71 @@
+---
+id: get-the-deletion-progress
+title: "Get the deletion progress"
+description: "Returns the progress of the started data deletion for the user with the ID specified in the request."
+sidebar_label: "Get the deletion progress"
+hide_title: true
+hide_table_of_contents: true
+api: eJy9VMFy2jAQ/RWPzjSmmZ640YZJmV4yQE4MB2EvthJbUqU1hHr49+5KMoGW9tBDffCsrN3V2/ee3AuUlReTtbBgbAP5sweXlRKl2IyEh6JzCo+034tph7Vx6odEZfRXkCU4rnMUiZE4UB6IzYmqSvCFU5bTxEQsADunfYY1ZNaZyoH3mdmFtUfpEMpwXlZCA1yT7YwLux1DOSisw2r+kHkLhdopKlA6fHPwvQOPd3R+Cj+bktD2ojAaQSOH0tpGFQF1/uIZUy98UUMrOcKjBUJpti9QIPUhiBYcKvC8yxDmJUfXQwWW5g+Un+o9OqUrcQoPo/HWaB+b3I/Hv3d4GKYdOKFe/wwaFTYQuG7NHp5SxzlCKyKeT+OPN4bQMkkKpeCsFmhJ04oKAhUSa1rk0qr8/m6cJ4e4cEh+gXuwyZIBxplvmuUMnDp+gyNVKsZRx+2R0LLl3avaAIwZWLwLPHuTreWB3wU6C8A9dyaclUj5Ytq20wQvW4Lbk26L2XKVTZ/mdCItfSSjkUjdud4aj60MjCdAj4DBbuUNza4ovfDd//J9YhThDXPbSCKURuhcw2CigGummzJJQhY1iBguDMsYHR+Hoatb0+xc0fdb6eHZNacTf6bTHP8EKNxLp+SWiV1v6KR6+A/04pUUZbYDAR9WjIvTmy4q/oufT6OhYloUYPGvuZsLbz7OVpS7Tfe8NSWXOHngkeg9ERSYoEcwYvjWk7y66mTFubEl24rtf+3K1+DKFPBQw5Y+XgC8NugozcFvnupmSd9HzxOfQ37c+mPF+VbEbBZ2Q6h/AknA9so=
+sidebar_class_name: "get api-method"
+info_path: site/openapi/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get the deletion progress"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/people/remove/progress"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns the progress of the started data deletion for the user with the ID specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"userId":{"description":"User ID","type":"string"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Deletion progress","content":{"application/json":{"schema":{"type":"object","title":"RemoveProgressItem"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

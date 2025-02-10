@@ -1,0 +1,71 @@
+---
+id: add-a-tag-to-cases
+title: "Add a tag to cases"
+description: "Adds the selected tag to the group of cases with the parameters specified in the request."
+sidebar_label: "Add a tag to cases"
+hide_title: true
+hide_table_of_contents: true
+api: eJy1VMFu2zAM/RVBZ6/Oip1yy7oCGwZsRZOeAh8UmYnV2pYm0W0zI/8+UrJTp8027LAcHEoiqcfHR/US1S7I+Vpq3+QrtotMBtCdN7in/V4uOqysNz8VGtt+BlWCZ39PlszkE/mBLA4UVULQ3jh2k3O5KMsgsAIRoAaNUAq6SaCNeztvOyfsVmgVIIgng1Xcd8qrBhB8EMGBNltDcaaNZx5+dBDwgi4dzI+2JIi91LZFaJFN5VxtdISa3wcG0sugK2gUW7h3QNDs5p4QUR7nrQOPBsKYRmk0JS9Oi7lKR+LLJ4oashi6dEdcHDJpwlVtA5wLpPpEQIVdmAsdnYT1orX4kkh5r/a0JCKbMIG5sbYG1coD3ZC6dDZ7PPprsoDetLsx1zdi+W06ar9o+SR7E8U/5j0424ZE1+VsdjYFRf9rQybXZPLD7P3bvHetGmRILLMXqaSyRLh0NsRWKqxolStn8suLWc5yZnHlW1OTnnIqujbRcxT3klGkUs5K/IiOUn6FyCkjqdJxJiNT89PYCI3LvH1R6PWzalwNrxQ2m6pmjb6DIjvO4sBHMenVkSOGsbURnkFOS+Jsmq6lisQS/CN4cXu9XInFzRcCScuQGKwVEiCOZ8YaFTsx1lCWQo3zGUdSvhrnyZD918keKEd4xtzVihgnwJ2vGUFq8Zr7QZ7UZFaab/hLd9FfarWMrMVmE4EVy4OC+n5DTne+Phx4my70/LyR+ai8URtmcl3QZdX4wvXygbqeZp8Kf7diaOxed0kVr4R9yMaIhdbg8I++xUTBN9+XK3LeDK9ZY0uO8eqJXzr6ziUZNjYiqjXu9dTQdtepHfumnKw9npJT6T5E6Q4GVzUetfsJwlMVZ0Mh/OWyzob0fRoMInT0T0e/jTiOTvLm5haE+hfAUTrR
+sidebar_class_name: "post api-method"
+info_path: site/openapi/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Add a tag to cases"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/api/2.0/crm/case/filter/taglist"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Adds the selected tag to the group of cases with the parameters specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"contactid":{"description":"Contact ID","type":"integer"},"isClosed":{"description":"Case status: closed or not","type":"array","items":{"type":"boolean"}},"tags":{"description":"Case tags","type":"array","items":{"type":"string"}},"tagName":{"description":"Tag name","type":"string"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Tag","content":{"application/json":{"schema":{"type":"string"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      
