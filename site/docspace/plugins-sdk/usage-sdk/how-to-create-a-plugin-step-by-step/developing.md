@@ -135,7 +135,7 @@ For example, the **draw\.io** plugin contains two main UI elements - the modal w
   }
   ```
 
-- In the [Editor.ts](https://github.com/ONLYOFFICE/docspace-plugins/blob/master/draw.io/src/DrawIO/Editor.ts) file, configure the diagram editor. Create the *DiagramEditor* function with the following parameters:
+- In the [Editor.ts](https://github.com/ONLYOFFICE/docspace-plugins/blob/master/draw.io/src/DrawIO/editor.ts) file, configure the diagram editor. Create the *DiagramEditor* function with the following parameters:
 
   | Parameter      | Type    | Example                      | Description                                                       |
   | -------------- | ------- | ---------------------------- | ----------------------------------------------------------------- |
@@ -161,7 +161,7 @@ For example, the **draw\.io** plugin contains two main UI elements - the modal w
   | initializeEditor | Posts the *load* message to the editor. |
   | save             | Saves the given data.                   |
 
-  The full code for the *DiagramEditor* can be found [here](https://github.com/ONLYOFFICE/docspace-plugins/blob/master/draw.io/src/DrawIO/Editor.ts).
+  The full code for the *DiagramEditor* can be found [here](https://github.com/ONLYOFFICE/docspace-plugins/blob/master/draw.io/src/DrawIO/editor.ts).
 
 ## Step 5. Create plugin types
 

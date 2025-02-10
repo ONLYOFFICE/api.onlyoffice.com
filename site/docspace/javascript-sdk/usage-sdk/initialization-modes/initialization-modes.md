@@ -9,7 +9,7 @@ sidebar_position: -5
 - [file-selector](file-selector.md) - opens the file selector;
 - [editor](editor.md) - allows you to open the SDK as a document editor for editing by specifying the *id* parameter for a file;
 - [viewer](Viewer.md) - allows you to open the SDK as a document editor for viewing by specifying the *id* parameter for a file;
-- [system](System.md) - calls the system methods.
+- [system](system.md) - calls the system methods.
 
 To simplify working with modes, the SDK has methods that do not require you to specify the appropriate mode:
 

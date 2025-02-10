@@ -46,7 +46,7 @@ Example: false
 
 ## editorCustomization
 
-The parameters to customize editors. The parameters from [this section](../../../docs/Docs%20API/Usage%20API/Config/Editor/Customization/Customization%20-%20Standard%20branding.md) are used.
+The parameters to customize editors. The parameters from [this section](../../../docs/docs-api/usage-api/config/editor/customization/customization%20-%20Standard%20branding.md) are used.
 
 Type: object
 

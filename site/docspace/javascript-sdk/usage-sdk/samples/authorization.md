@@ -34,7 +34,7 @@ The API JavaScript file can normally be found in the following DocSpace folder: 
 
 ## Step 2. Initialize the System mode
 
-Add a script to initialize the [System](../initialization-modes/System.md) mode.
+Add a script to initialize the [System](../initialization-modes/system.md) mode.
 
 1. Add an event handler for [onAppReady](../events.md#onappready), which fires when initialization is successful:
 
