@@ -126,7 +126,7 @@ Let's see how to build the simplest [Hello world](https://github.com/ONLYOFFICE/
 
    Read the plugin [customization](../customization/context-menu.md) section to find out how the plugin can be displayed in the editor: as context menu items, toolbar buttons, windows, left or right panels, input helpers. Choose the option that is suitable for your plugin and customize it following our instructions.
 
-2. Add the ONLYOFFICE [style sheet](../structure/Styles.md) to the *index.html* file to adjust your plugin to the ONLYOFFICE editor style:
+2. Add the ONLYOFFICE [style sheet](../structure/styles.md) to the *index.html* file to adjust your plugin to the ONLYOFFICE editor style:
 
 ``` html
 <link rel="stylesheet" href="https://onlyoffice.github.io/sdkjs-plugins/v1/plugins.css">
@@ -160,7 +160,7 @@ Let's see how to build the simplest [Hello world](https://github.com/ONLYOFFICE/
 
    You can edit the plugin and reload it to see the changes.
 
-   To debug the plugin in the desktop editors, follow the instructions [here](../tutorials/Developing/for-desktop-editors.md#debugging).
+   To debug the plugin in the desktop editors, follow the instructions [here](../tutorials/developing/for-desktop-editors.md#debugging).
 
 ### To web editors
 
@@ -189,4 +189,4 @@ Let's see how to build the simplest [Hello world](https://github.com/ONLYOFFICE/
 
    The plugin will be displayed within the **Plugins** tab. You can edit the plugin and reload it to see the changes.
 
-   To debug the plugin in the web editors, follow the instructions [here](../tutorials/Developing/for-web-editors.md#debugging).
+   To debug the plugin in the web editors, follow the instructions [here](../tutorials/developing/for-web-editors.md#debugging).

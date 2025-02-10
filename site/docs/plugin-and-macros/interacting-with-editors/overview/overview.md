@@ -6,7 +6,7 @@ The plugins and macros can interact with the editors using different events, met
 
 - [How to attach events](how-to-attach-events.md)
 - [How to call methods](how-to-call-methods.md)
-- [How to call commands](How%20to%20call%20commands.md)
+- [How to call commands](how-to-call-commands.md)
 
 The main plugin code is placed to a *.js* file which describes what and how must be done by the plugin. This file is placed to the plugin root folder together with the [config.json](../../structure/manifest/manifest.md) and [index.html](../../structure/entry-point.md) files.
 

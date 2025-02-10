@@ -38,10 +38,10 @@ The questions concerning document sharing with various permissions are in this s
 
 The questions concerning inserting the document into a website page (embedding) are in this section.
 
-- [How to embed a document to a web site?](Embedding.md#how-to-embed-a-document-to-a-web-site)
-- [How to change the behavior of the buttons in the embedded mode?](Embedding.md#how-to-change-the-behavior-of-the-buttons-in-the-embedded-mode)
+- [How to embed a document to a web site?](embedding.md#how-to-embed-a-document-to-a-web-site)
+- [How to change the behavior of the buttons in the embedded mode?](embedding.md#how-to-change-the-behavior-of-the-buttons-in-the-embedded-mode)
 
-[More](Embedding.md)
+[More](embedding.md)
 
 ## Co-editing questions
 

@@ -8,7 +8,7 @@ Some plugins are installed by default. Switch to the **Plugins** tab to see the 
 
 ## How to adjust my plugin to the ONLYOFFICE style?
 
-ONLYOFFICE offers its own style sheet in the [plugin.css](https://onlyoffice.github.io/sdkjs-plugins/v1/plugins.css) file connected to the *index.html* file. Detailed instructions on connecting ONLYOFFICE styles to the editors can be found [here](../structure/Styles.md).
+ONLYOFFICE offers its own style sheet in the [plugin.css](https://onlyoffice.github.io/sdkjs-plugins/v1/plugins.css) file connected to the *index.html* file. Detailed instructions on connecting ONLYOFFICE styles to the editors can be found [here](../structure/styles.md).
 
 ## How to localize a plugin?
 

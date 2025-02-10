@@ -6,7 +6,7 @@ The plugin type is specified with the [type](./manifest.md#variationstype) param
 
 ## System
 
-The system plugin is not displayed in the editor interface and is started in the background with the server (or desktop editors start) not interfering with other plugins, so that they can work simultaneously. You don’t need to run such plugins. And unlike background plugins, they cannot be disabled. Samples of system plugins: [Settings](../../tutorials/samples/settings.md), [Search and replace on start](../../tutorials/samples/search-and-replace%20on%20start.md).
+The system plugin is not displayed in the editor interface and is started in the background with the server (or desktop editors start) not interfering with other plugins, so that they can work simultaneously. You don’t need to run such plugins. And unlike background plugins, they cannot be disabled. Samples of system plugins: [Settings](../../tutorials/samples/settings.md), [Search and replace on start](../../tutorials/samples/search-and-replace-on-start.md).
 
 ## Background
 
