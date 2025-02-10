@@ -8,7 +8,7 @@ Let's dive into the entire process of plugin development based on our plugin sam
 
 The plugin development lifecycle contains the following steps:
 
-1. [Planning](Planning.md). Define the plugin's purpose, think about where you will access it and what third-party services you need to connect.
-2. [Developing](Developing.md). Learn the Plugins SDK and generate the plugin's code.
-3. [Testing](Testing.md). Test the prepared plugin and fix bugs if found.
-4. [Using](Using.md). Upload your plugin to the DocSpace and use it.
+1. [Planning](planning.md). Define the plugin's purpose, think about where you will access it and what third-party services you need to connect.
+2. [Developing](developing.md). Learn the Plugins SDK and generate the plugin's code.
+3. [Testing](testing.md). Test the prepared plugin and fix bugs if found.
+4. [Using](using.md). Upload your plugin to the DocSpace and use it.
