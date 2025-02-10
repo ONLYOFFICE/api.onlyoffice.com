@@ -106,6 +106,12 @@ In this example we are removing shapes from the presentation.
 
 [More](Remove%20shapes%20from%20slides.md)
 
+## Reset all forms
+
+In this example we are resetting all forms.
+
+[More](Reset%20all%20forms.md)
+
 ## Insert unique id
 
 In this example we are inserting a unique id into a form document.
