@@ -17,7 +17,7 @@ export const DocsFeatures: Features = {
   items: [
     {
       title: 'Docs API',
-      link: 'Get Started/Basic concepts',
+      link: 'Docs API/Get Started/Basic concepts',
       description: (
         <>
           In this section, you will learn how to bring document editing and{" "}
@@ -29,7 +29,7 @@ export const DocsFeatures: Features = {
     },
     {
       title: 'Office API',
-      link: 'Get Started/Overview',
+      link: 'Office API/Get Started/Overview',
       description: (
         <>
           In this section, you will learn how to use our JavaScript library to{" "}
@@ -42,7 +42,7 @@ export const DocsFeatures: Features = {
     },
     {
       title: 'Plugin and Macros',
-      link: 'Get Started/Overview',
+      link: 'Plugin and Macros/Get Started/Overview',
       description: (
         <>
           In this section, you will learn how to extend the ONLYOFFICE Docs{" "}
@@ -54,7 +54,7 @@ export const DocsFeatures: Features = {
     },
     {
       title: 'Document Builder',
-      link: 'Get Started/Overview',
+      link: 'Document Builder/Get Started/Overview',
       description: (
         <>
           In this section, you will learn how to generate documents easily without{" "}
@@ -66,7 +66,7 @@ export const DocsFeatures: Features = {
     },
     {
       title: 'Desktop Editors',
-      link: 'Get Started/Overview',
+      link: 'Desktop Editors/Get Started/Overview',
       description: (
         <>
           In this section, you will learn how to extend the ONLYOFFICE Desktop{" "}
@@ -84,7 +84,7 @@ export const DocSpaceFeatures: Features = {
   items: [
     {
       title: 'JavaScript SDK',
-      link: 'Get Started/Basic concepts',
+      link: 'javascript-sdk/get-started/basic-concepts',
       description: (
         <>
           In this section, you will learn how to connect DocSpace as a frame to{" "}
@@ -96,7 +96,7 @@ export const DocSpaceFeatures: Features = {
     },
     {
       title: 'Plugins SDK',
-      link: 'Get Started/Basic concepts',
+      link: 'plugins-sdk/get-started/basic-concepts',
       description: (
         <>
           In this section, you will learn how to create your own plugins and add{" "}
@@ -107,7 +107,7 @@ export const DocSpaceFeatures: Features = {
     },
     {
       title: 'OAuth API',
-      link: 'Get Started/Basic concepts',
+      link: 'oauth-api/get-started/basic-concepts',
       description: (
         <>
           In this section, you will learn how to register a new OAuth application{" "}
@@ -118,7 +118,7 @@ export const DocSpaceFeatures: Features = {
     },
     {
       title: 'API Backend',
-      link: 'Get Started/Basic concepts',
+      link: 'api-backend/get-started/basic-concepts',
       description: (
         <>
           In this section, you will learn how to integrate ONLYOFFICE DocSpace into{" "}
@@ -130,7 +130,7 @@ export const DocSpaceFeatures: Features = {
     },
     {
       title: 'For Hosting Providers',
-      link: 'Get Started/Authentication',
+      link: 'for-hosting-providers/get-started/authentication',
       description: (
         <>
           In this section, you will learn how to provide the DocSpace portal as a{" "}
@@ -147,7 +147,7 @@ export const WorkspaceFeatures: Features = {
   items: [
     {
       title: 'API Backend',
-      link: 'get-started/basic-concepts',
+      link: 'api-backend/get-started/basic-concepts',
       description: (
         <>
           In this section, you will learn how to integrate ONLYOFFICE Workspace{" "}
@@ -161,7 +161,7 @@ export const WorkspaceFeatures: Features = {
     },
     {
       title: 'For Hosting Providers',
-      link: 'get-started/authentication',
+      link: 'for-hosting-providers/get-started/authentication',
       description: (
         <>
           In this section, you will learn how to provide the Workspace portal as a{" "}

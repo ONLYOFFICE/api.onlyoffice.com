@@ -73,7 +73,7 @@ function Feature({index, title, Image, description, features }: FeatureItem & { 
           {features.items.map(((item, index) => (
             <li className={styles.featuresListItem} key={index}>
               {item.icon}
-              <Link to={`${features.linkPrefix}/${item.title}/${item.link}`}>{item.title}</Link>
+              <Link to={`${features.linkPrefix}/${item.link}`}>{item.title}</Link>
             </li>
           )))}
         </ul>
