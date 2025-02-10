@@ -1,4 +1,4 @@
-ONLYOFFICE Docs [uses](../../Get%20Started/How%20It%20Works/Security.md) tokens generated using the JSON Web Tokens standard. The tokens are sent when performing the client-side [browser requests](Browser.md) to ONLYOFFICE Docs or the [HTTP requests](Request.md) to or from ONLYOFFICE Docs.
+ONLYOFFICE Docs [uses](../../Get%20Started/How%20It%20Works/Security.md) tokens generated using the JSON Web Tokens standard. The tokens are sent when performing the client-side [browser requests](Browser.md) to ONLYOFFICE Docs or the [HTTP requests](Request/Request.md) to or from ONLYOFFICE Docs.
 
 > This feature is used in ONLYOFFICE Docs starting with version 4.2
 
