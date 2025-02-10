@@ -6,7 +6,7 @@ This script checks all used cells for formula errors like "#DIV/0!" and comments
 - comment the cell (ApiRange/AddComment) if an error exists.
 
 This sample is available for the **C++ and .Net DocBuilder Frameworks**.
-Download the sample and get more information on the [Builder framework samples](../../../document-builder/builder-framework/Builder%20framework%20samples/Builder%20framework%20samples.md) page.
+Download the sample and get more information on the [Builder framework samples](../../../document-builder/builder-framework/builder-framework-samples/builder-framework-samples.md) page.
 
 ```ts document-builder={"document": {"url": "https://static.onlyoffice.com/assets/docs/samples/data_with_errors.xlsx"}, "documentType": "cell", "editorConfig": {"customization": {"zoom": 60}}}
 const oWorksheet = Api.GetActiveSheet()

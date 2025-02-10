@@ -17,7 +17,7 @@ export const DocsFeatures: Features = {
   items: [
     {
       title: 'Docs API',
-      link: 'docs-api/Get Started/Basic concepts',
+      link: 'docs-api/get-started/basic-concepts',
       description: (
         <>
           In this section, you will learn how to bring document editing and{" "}
@@ -29,7 +29,7 @@ export const DocsFeatures: Features = {
     },
     {
       title: 'Office API',
-      link: 'office-api/Get Started/overview',
+      link: 'office-api/get-started/overview',
       description: (
         <>
           In this section, you will learn how to use our JavaScript library to{" "}
@@ -42,7 +42,7 @@ export const DocsFeatures: Features = {
     },
     {
       title: 'Plugin and Macros',
-      link: 'plugin-and-macros/Get Started/overview',
+      link: 'plugin-and-macros/get-started/overview',
       description: (
         <>
           In this section, you will learn how to extend the ONLYOFFICE Docs{" "}
@@ -54,7 +54,7 @@ export const DocsFeatures: Features = {
     },
     {
       title: 'Document Builder',
-      link: 'document-builder/Get Started/overview',
+      link: 'document-builder/get-started/overview',
       description: (
         <>
           In this section, you will learn how to generate documents easily without{" "}
@@ -66,7 +66,7 @@ export const DocsFeatures: Features = {
     },
     {
       title: 'Desktop Editors',
-      link: 'desktop-editors/Get Started/overview',
+      link: 'desktop-editors/get-started/overview',
       description: (
         <>
           In this section, you will learn how to extend the ONLYOFFICE Desktop{" "}

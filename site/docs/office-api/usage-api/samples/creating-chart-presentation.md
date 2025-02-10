@@ -6,7 +6,7 @@ Create a chart presentation:
 - create a chart and add it to the specified slide (Api/CreateChart, ApiSlide/AddObject)
 
 This sample is available for the **C++ and .Net DocBuilder Frameworks**.
-Download the sample and get more information on the [Builder framework samples](../../../document-builder/builder-framework/Builder%20framework%20samples/Builder%20framework%20samples.md) page.
+Download the sample and get more information on the [Builder framework samples](../../../document-builder/builder-framework/builder-framework-samples/builder-framework-samples.md) page.
 
 ```ts document-builder={"documentType": "slide", "editorConfig": {"customization": {"zoom": 60}}}
 const oPresentation = Api.GetPresentation()

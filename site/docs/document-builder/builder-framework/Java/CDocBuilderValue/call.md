@@ -1,6 +1,6 @@
 # call
 
-Calls the specified Document Builder method. See the [Text document API](../../../../office-api/usage-api/text-document-api/text-document-api.md), [Spreadsheet API](../../../../office-api/usage-api/spreadsheet-api/spreadsheet-api.md), [Presentation API](../../../../office-api/usage-api/presentation-api/presentation-api.md) or [Form API](../../../../office-api/usage-api/Form%20API/Form%20API.md) sections for more information which methods are available for various document types.
+Calls the specified Document Builder method. See the [Text document API](../../../../office-api/usage-api/text-document-api/text-document-api.md), [Spreadsheet API](../../../../office-api/usage-api/spreadsheet-api/spreadsheet-api.md), [Presentation API](../../../../office-api/usage-api/presentation-api/presentation-api.md) or [Form API](../../../../office-api/usage-api/form-api/form-api.md) sections for more information which methods are available for various document types.
 
 > Please note, that for the `.docbuilder` file the `CDocBuilderValue.call` method is not used explicitly. The method itself is used instead. See the example below.
 
