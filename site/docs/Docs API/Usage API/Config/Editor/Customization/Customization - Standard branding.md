@@ -100,7 +100,7 @@ Example: "Close file"
 
 ## commentAuthorOnly
 
-Defines if the user can edit and delete only his comments. The default value is **false**. Deprecated since version 6.3, please use the [document.permissions.editCommentAuthorOnly](../Document/Permissions.md#editcommentauthoronly) and [document.permissions.deleteCommentAuthorOnly](../../Document/Permissions.md#deletecommentauthoronly) fields instead.
+Defines if the user can edit and delete only his comments. The default value is **false**. Deprecated since version 6.3, please use the [document.permissions.editCommentAuthorOnly](../../Document/Permissions.md#editcommentauthoronly) and [document.permissions.deleteCommentAuthorOnly](../../Document/Permissions.md#deletecommentauthoronly) fields instead.
 
 Type: boolean
 
