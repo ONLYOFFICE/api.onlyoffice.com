@@ -1243,6 +1243,14 @@ Example: false
 
 > Deprecated since version 7.0. Please use the [review.showReviewChanges](#review) parameter instead.
 
+## slidePlayerBackground
+
+Starting from version 8.3, defines the background color for the slide show in the presentation editor. Can be represented in the HEX, RGB, or RGBA formats. For example, *#ff0000*, *rgb(255, 0, 0)*, *rgba(255, 0, 0, 0.5)*.
+
+Type: string
+
+Example: "#000000"
+
 ## spellcheck
 
 Defines if the spell checker is automatically switched on or off when the editor is loaded. Spell checker will only be available for the document editor and the presentation editor. The default value is **true**.
@@ -1524,6 +1532,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
         trackChanges: true,
         hoverMode: false,
       },
+      slidePlayerBackground: "#000000",
       submitForm: {
         visible: true,
         resultMessage: "text",

@@ -4,6 +4,7 @@ The list of changes of ONLYOFFICE Docs API.
 
 <!--- Added conversion from [vsdm, vsdx, vssm, vssx, vstm, vstx](../Additional%20API/Conversion%20API/Conversion%20tables.md#diagram-document-file-formats) formats.
 - Added the *diagram* document type to the [documentType](../Usage%20API/Config.md#documenttype) parameter.-->
+- Added the [editorConfig.customization.slidePlayerBackground](../Usage%20API/Config/Editor/Customization.md#slideplayerbackground) parameter.
 - Added the [editorConfig.customization.wordHeadingsColor](../Usage%20API/Config/Editor/Customization.md#wordheadingscolor) parameter.
 - Added the [editorConfig.customization.mobile.info](../Usage%20API/Config/Editor/Customization.md#mobileinfo) parameter.
 - Added opening for [pages, key, numbers](../Usage%20API/Config.md#documenttype) formats.

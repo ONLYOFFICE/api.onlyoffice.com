@@ -207,6 +207,7 @@ const config = {
         trackChanges: true,
         hoverMode: false,
       },
+      slidePlayerBackground: "#000000",
       submitForm: {
         visible: true,
         resultMessage: "text",
