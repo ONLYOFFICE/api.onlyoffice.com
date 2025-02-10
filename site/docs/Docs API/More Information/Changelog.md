@@ -7,7 +7,7 @@ The list of changes of ONLYOFFICE Docs API.
 - Added the [editorConfig.customization.slidePlayerBackground](../Usage%20API/Config/Editor/Customization.md#slideplayerbackground) parameter.
 - Added the [editorConfig.customization.wordHeadingsColor](../Usage%20API/Config/Editor/Customization.md#wordheadingscolor) parameter.
 - Added the [editorConfig.customization.mobile.info](../Usage%20API/Config/Editor/Customization.md#mobileinfo) parameter.
-- Added opening for [pages, key, numbers](../Usage%20API/Config.md#documenttype) formats.
+- Added opening for [pages, key, numbers](../Usage%20API/Config/Config.md#documenttype) formats.
 - Added the [events.onUserActionRequired](../Usage%20API/Config/Events.md#onuseractionrequired) event.
 - Added the [refreshFile](../Usage%20API/Methods.md#refreshfile) method.
 - Added the [events.onRequestRefreshFile](../Usage%20API/Config/Events.md#onrequestrefreshfile) event.

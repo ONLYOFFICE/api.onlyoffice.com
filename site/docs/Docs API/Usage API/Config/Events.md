@@ -558,10 +558,10 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
 
 The function called instead of the [onOutdatedVersion](#onoutdatedversion) event in the following cases:
 
-- when the editor is opened with [key](../Document/index.md#key) that was already used to successfully save a file;
+- when the editor is opened with [key](./Document/Document.md#key) that was already used to successfully save a file;
 - when the editor reconnects to the server after losing the connection and interrupting the editing session.
 
-In these cases, the [refreshFile](../../Methods/index.md#refreshfile) method is called and the file version is updated without reloading the editor.
+In these cases, the [refreshFile](../Methods.md#refreshfile) method is called and the file version is updated without reloading the editor.
 
 Example:
 

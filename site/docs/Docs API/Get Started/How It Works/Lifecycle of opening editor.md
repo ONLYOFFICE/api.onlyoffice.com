@@ -49,7 +49,7 @@ Specify there the following events:
 
    Presence: required
 
-  > Please note that displaying a tooltip with a message is not supported in the embedded platform [type](../../Usage%20API/Config.md#type).
+  > Please note that displaying a tooltip with a message is not supported in the embedded platform [type](../../Usage%20API/Config/Config.md#type).
 
 2. When an error or some other specific event occurs, the [onError](../../Usage%20API/Config/Events.md#onerror)  event is executed:
 
@@ -67,7 +67,7 @@ Specify there the following events:
 
    For example, it may be a conversion error or an error loading a certain editor component. Further work will not be available.
 
-3. When the document is opened for editing with the old [document.key](../../Usage%20API/Config/Document.md#key) value, which was used to edit the previous document version and was successfully saved, the [onOutdatedVersion](../../Usage%20API/Config/Events.md#onoutdatedversion) event is executed:
+3. When the document is opened for editing with the old [document.key](../../Usage%20API/Config/Document/Document.md#key) value, which was used to edit the previous document version and was successfully saved, the [onOutdatedVersion](../../Usage%20API/Config/Events.md#onoutdatedversion) event is executed:
 
    ``` ts
    function onOutdatedVersion() {
@@ -85,7 +85,7 @@ Specify there the following events:
 
    This event is deprecated since version 8.3. Please use the [onRequestRefreshFile](../../Usage%20API/Config/Events.md#onrequestrefreshfile) event instead.
 
-   When the editor is opened with [key](../../Usage%20API/Config/Document.md#key) that was already used to successfully save a file, the `onRequestRefreshFile` event is executed instead of the `onOutdatedVersion` event:
+   When the editor is opened with [key](../../Usage%20API/Config/Document/Document.md#key) that was already used to successfully save a file, the `onRequestRefreshFile` event is executed instead of the `onOutdatedVersion` event:
 
    ``` ts
    function onRequestRefreshFile() {
