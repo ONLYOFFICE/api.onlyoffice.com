@@ -34,9 +34,9 @@ window.Asc.plugin.init = function init() {
 window.Asc.plugin.button = function button(id) {}
 ```
 
-When the plugin object is being initialized (*window.Asc.plugin.init = function () \{...\}*), the editor forms a paragraph with the *Hello World* phrase and then uses [Office JavaScript API](../../../Office%20API/get-started/overview.md) to create the document with this text in it (with the help of the window.Asc.plugin.callCommand method - *this.callCommand(function() \{...\})*).
+When the plugin object is being initialized (*window.Asc.plugin.init = function () \{...\}*), the editor forms a paragraph with the *Hello World* phrase and then uses [Office JavaScript API](../../../office-api/get-started/overview.md) to create the document with this text in it (with the help of the window.Asc.plugin.callCommand method - *this.callCommand(function() \{...\})*).
 
-> Please note, that all [Office JavaScript API](../../../Office%20API/get-started/overview.md) features are already included into all the versions (including the open source one) of ONLYOFFICE document editors, this is how the plugins interact with the editors. In case you want to create documents without any document editors, install the standalone **ONLYOFFICE Document Builder** version.
+> Please note, that all [Office JavaScript API](../../../office-api/get-started/overview.md) features are already included into all the versions (including the open source one) of ONLYOFFICE document editors, this is how the plugins interact with the editors. In case you want to create documents without any document editors, install the standalone **ONLYOFFICE Document Builder** version.
 
 The only OK button (*window.Asc.plugin.button = function (id) \{...\}*) is used to create the text and finish the work with the plugin.
 

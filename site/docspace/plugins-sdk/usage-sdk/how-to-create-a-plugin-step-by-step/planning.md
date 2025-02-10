@@ -36,7 +36,7 @@ sidebar_position: -4
    - [IPlugin](../coding-plugin/plugin-types/plugin.md). Required for each plugin. It contains the plugin [status](../coding-plugin/plugin-types/plugin.md#status) (PluginStatus) variable, used to embed the plugin into the DocSpace.
    - [IApiPlugin](../coding-plugin/plugin-types/apiplugin.md). Required as we implement a third-party service.
    - [ISettingsPlugin](../coding-plugin/plugin-types/SettingsPlugin.md) and [ISettings](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/settings/ISettings.ts). Used to add settings block for plugin's configuration. The users will access this block from **Settings -> Integration -> Plugins** to adjust the plugin's parameters.
-   - [IContextMenuPlugin](../coding-plugin/plugin-types/ContextMenuPlugin.md) and [IContextMenuItem](../coding-plugin/plugin-items/contextmenuItem.md). Used to implement a context menu action. In the **speech-to-text** plugin, it will be available for video and audio files allowing users to convert content into text.
+   - [IContextMenuPlugin](../coding-plugin/plugin-types/ContextMenuPlugin.md) and [IContextMenuItem](../coding-plugin/plugin-items/contextmenuitem.md). Used to implement a context menu action. In the **speech-to-text** plugin, it will be available for video and audio files allowing users to convert content into text.
 
    The list of interfaces may be longer. For example, in the **draw\.io** plugin:
 

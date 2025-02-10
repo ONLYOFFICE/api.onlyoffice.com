@@ -14,7 +14,7 @@ expression.Push(oElement);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| oElement | Required | [DocumentElement](../../Enumeration/documentElement.md) |  | The document element which will be added to the end of the container. |
+| oElement | Required | [DocumentElement](../../Enumeration/DocumentElement.md) |  | The document element which will be added to the end of the container. |
 
 ## Returns
 

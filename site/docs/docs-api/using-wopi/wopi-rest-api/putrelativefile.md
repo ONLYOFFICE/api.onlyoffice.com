@@ -19,13 +19,13 @@ This operation works as follows:
 
 | Name     | Type   | Description                                                                 |
 | -------- | ------ | --------------------------------------------------------------------------- |
-| file\_id | string | The [file ID](../Key%20concepts.md#file-id) that must be URL safe. |
+| file\_id | string | The [file ID](../key-concepts.md#file-id) that must be URL safe. |
 
 ## Query parameters
 
 | Name          | Type   | Description                                                                                                                          |
 | ------------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------ |
-| access\_token | string | An [access token](../Key%20concepts.md#access-token) that the host will use to determine whether the request is authorized. |
+| access\_token | string | An [access token](../key-concepts.md#access-token) that the host will use to determine whether the request is authorized. |
 
 ## Request headers
 
@@ -34,7 +34,7 @@ This operation works as follows:
 | X-WOPI-Override        | string  | required | The requested operation from the WOPI server (*PUT\_RELATIVE*).                                                                       |
 | X-WOPI-SuggestedTarget | string  | required | A file extension or a full file name, including the file extension in the format of the UTF-7 encoded string.                         |
 | X-WOPI-Size            | integer | optional | The size of the file in bytes.                                                                                                        |
-| X-WOPI-FileConversion  | boolean | optional | Indicates that the request is being made in the context of [binary document conversion](../Editing%20binary%20documents.md). |
+| X-WOPI-FileConversion  | boolean | optional | Indicates that the request is being made in the context of [binary document conversion](../editing-binary-documents.md). |
 
 ## Request body
 

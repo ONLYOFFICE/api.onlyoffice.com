@@ -4,30 +4,6 @@ sidebar_position: -2
 
 The work with document files in ONLYOFFICE Docs is quite a simple process but it requires some understanding of what is going on when you click your document link to open it in the browser, save the document or upload it from your computer to the document server.
 
-In this section you will learn how to:
-
-- [Open a file](opening-file.md)
-- [Save a file](saving-file.md)
-- [Co-edit a file](Co-editing.md)
-- [View the document history](document-history.md)
-- [Work with action links](Action%20link.md)
-- [Mention users](Mentions.md)
-- [Rename a file](Renaming%20files.md)
-- [Review a file](Reviewing.md)
-- [Work with inline editors](Inline%20editors.md)
-- [Convert and download a file](converting-and-downloading-file.md)
-- [Protect a document](Security.md)
-- [Set a name to an anonymous user](Anonymous%20users.md)
-- [Comment on a document](Commenting.md)
-- [Compare documents](Comparing%20documents.md)
-- [Viewing](Viewing.md)
-- [Mobile integration](Mobile%20integration/Mobile%20integration.md)
-- [Inserting external data](Inserting%20external%20data.md)
-- [Embedding forms into a web page](Embedding%20forms%20into%20a%20web%20page.md)
-- [Protecting ranges](Protecting%20ranges.md)
-- [Setting avatars](Setting%20avatars.md)
-- [Lifecycle of opening editor](Lifecycle%20of%20opening%20editor.md)
-
 ## User-document interaction
 
 The user-document interaction is done both at the client side and at the server side.
@@ -51,7 +27,7 @@ Please note, that ONLYOFFICE Docs includes the **document editor**, **document e
 
 ## Shard key
 
-Starting from version 8.1, the *shardkey* parameter is added to the URL *QueryString* when sending requests to the ONLYOFFICE Docs API, **document command service**, **document conversion service**, or **document builder service**. It is also added to the browser-server interaction during the collaborative editing as the [WOPISrc](../../using-wopi/Key%20concepts.md#wopisrc) query parameter.
+Starting from version 8.1, the *shardkey* parameter is added to the URL *QueryString* when sending requests to the ONLYOFFICE Docs API, **document command service**, **document conversion service**, or **document builder service**. It is also added to the browser-server interaction during the collaborative editing as the [WOPISrc](../../using-wopi/key-concepts.md#wopisrc) query parameter.
 
 The *key* field is used as a value. For example, *?shardkey=Khirz6zTPdfd7*. If there is no key in the body, you do not have to send it (for example, in the [getForgottenList](../../additional-api/command-service/getForgottenList.md) command).
 

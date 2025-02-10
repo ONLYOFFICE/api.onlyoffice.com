@@ -134,7 +134,7 @@ Let's see how to build the simplest [Hello world](https://github.com/ONLYOFFICE/
 
 3. [Localize](../structure/Localization.md) your plugin if needed.
 
-4. Create an informative **About** window for your plugin. Add a short description and the plugin version, the company developer name and link to its website. Follow the instructions [here](../structure/manifest/Variations.md) to create an **About** variation in the *config.json* file.
+4. Create an informative **About** window for your plugin. Add a short description and the plugin version, the company developer name and link to its website. Follow the instructions [here](../structure/manifest/variations.md) to create an **About** variation in the *config.json* file.
 
    ![About window](/assets/images/plugins/about-variation.png)
 

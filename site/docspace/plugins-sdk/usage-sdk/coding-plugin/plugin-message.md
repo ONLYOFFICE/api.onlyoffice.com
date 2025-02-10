@@ -16,7 +16,7 @@ Example: `[Actions.showToast, Actions.closeModal]`
 
 Defines the properties that update the state of the items which interact with the users. This parameter is used only with [Actions.updateProps](./events.md#updateprops).
 
-Type: [IInput](./plugin-components/input.md), [ICheckbox](./plugin-components/checkbox.md), [IToggleButton](./plugin-components/Togglebutton.md), [IButton](./plugin-components/button.md), [ITextArea](./plugin-components/TextArea.md), [IComboBox](./plugin-components/combobox.md)
+Type: [IInput](./plugin-components/input.md), [ICheckbox](./plugin-components/checkbox.md), [IToggleButton](./plugin-components/togglebutton.md), [IButton](./plugin-components/button.md), [ITextArea](./plugin-components/TextArea.md), [IComboBox](./plugin-components/combobox.md)
 
 Example: `{IInput}`
 
@@ -24,7 +24,7 @@ Example: `{IInput}`
 
 Defines the properties that display a toast notification after the user actions. This parameter is used only with [Actions.showToast](./events.md#showtoast).
 
-Type: array of [IToast](./plugin-components/Toast.md)
+Type: array of [IToast](./plugin-components/toast.md)
 
 Example: \[IToast]
 

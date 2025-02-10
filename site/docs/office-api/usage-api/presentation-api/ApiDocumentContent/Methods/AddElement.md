@@ -15,7 +15,7 @@ expression.AddElement(nPos, oElement);
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
 | nPos | Required | number |  | The position where the current element will be added. |
-| oElement | Required | [DocumentElement](../../Enumeration/documentElement.md) |  | The document element which will be added at the current position. |
+| oElement | Required | [DocumentElement](../../Enumeration/DocumentElement.md) |  | The document element which will be added at the current position. |
 
 ## Returns
 

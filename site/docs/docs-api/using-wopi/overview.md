@@ -7,15 +7,15 @@ Starting from version 6.4, ONLYOFFICE Docs offers support for the **Web Applicat
 This documentation describes:
 
 - WOPI protocol [configuration parameters](./config.md);
-- [key concepts](./Key%20concepts.md) that are vital to understand the requirements for integrating with WOPI clients;
+- [key concepts](./key-concepts.md) that are vital to understand the requirements for integrating with WOPI clients;
 - file properties that can be specified via [WOPI discovery](./wopi-discovery.md);
-- a [host page](./Host%20page.md) that must be built to create an iframe element within the online office;
-- [proof keys](./Proof%20keys.md) which are used to check that the request is received from the online office;
+- a [host page](./host-page.md) that must be built to create an iframe element within the online office;
+- [proof keys](./proof-keys.md) which are used to check that the request is received from the online office;
 - supported [WOPI REST API](./wopi-rest-api/wopi-rest-api.md) functions;
-- available messages that can be posted via [PostMessage](./PostMessage.md);
+- available messages that can be posted via [PostMessage](./postmessage.md);
 - request parameters for [converting](./conversion-api.md) different file formats in the online office;
-- a scheme for [editing binary document formats](./Editing%20binary%20documents.md);
-- [differences](./API%20vs%20WOPI.md) between ONLYOFFICE Docs API and WOPI.
+- a scheme for [editing binary document formats](./editing-binary-documents.md);
+- [differences](./api-vs-wopi.md) between ONLYOFFICE Docs API and WOPI.
 
 For further information on the WOPI protocol, please read the [WOPI documentation](https://docs.microsoft.com/en-us/microsoft-365/cloud-storage-partner-program/online/).
 

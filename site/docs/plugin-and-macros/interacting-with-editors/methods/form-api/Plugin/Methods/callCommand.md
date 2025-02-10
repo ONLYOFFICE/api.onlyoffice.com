@@ -15,7 +15,7 @@ This method is executed in its own context isolated from other JavaScript data. 
 expression.callCommand(func, isClose, isCalc, callback);
 ```
 
-`expression` - A variable that represents a [Plugin](../plugin.md) class.
+`expression` - A variable that represents a [Plugin](../Plugin.md) class.
 
 ## Parameters
 

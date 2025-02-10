@@ -2,7 +2,7 @@
 sidebar_position: -2
 ---
 
-A form document has exactly the same structure as a [text document](../Text%20Document%20API/Text%20Document%20API.md). The only difference is a new *forms* entity placed with other paragraph elements – text runs, inline text content controls and hyperlinks. There are seven form types: *text field*, *combo box*, *dropdown list*, *checkbox*, *radio button*, *picture form*, and *complex field*.
+A form document has exactly the same structure as a [text document](../text-document-api/text-document-api.md). The only difference is a new *forms* entity placed with other paragraph elements – text runs, inline text content controls and hyperlinks. There are seven form types: *text field*, *combo box*, *dropdown list*, *checkbox*, *radio button*, *picture form*, and *complex field*.
 
 ## Creating a new form document
 

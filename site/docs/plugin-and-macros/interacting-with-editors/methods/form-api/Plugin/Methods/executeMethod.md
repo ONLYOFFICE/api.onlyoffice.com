@@ -10,7 +10,7 @@ The callback is the result that the method returns. It is an optional parameter.
 expression.executeMethod(name, params, callback);
 ```
 
-`expression` - A variable that represents a [Plugin](../plugin.md) class.
+`expression` - A variable that represents a [Plugin](../Plugin.md) class.
 
 ## Parameters
 

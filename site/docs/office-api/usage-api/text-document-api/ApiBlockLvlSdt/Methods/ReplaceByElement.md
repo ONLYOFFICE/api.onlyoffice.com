@@ -14,7 +14,7 @@ expression.ReplaceByElement(oElement);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| oElement | Required | [DocumentElement](../../Enumeration/documentElement.md) |  | The element to replace the current content control with. |
+| oElement | Required | [DocumentElement](../../Enumeration/DocumentElement.md) |  | The element to replace the current content control with. |
 
 ## Returns
 

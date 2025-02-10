@@ -10,7 +10,7 @@ The plugin that is embedded in the context menu of files, folders, rooms, images
 
 ### contextMenuItems
 
-Stores a collection of elements where the keys are the *key* parameters from the [ContextMenuItem](../plugin-items/contextmenuItem.md) objects. A list for embedding into the context menu is generated based on this collection.
+Stores a collection of elements where the keys are the *key* parameters from the [ContextMenuItem](../plugin-items/contextmenuitem.md) objects. A list for embedding into the context menu is generated based on this collection.
 
 Type: collection of IContextMenuItem
 

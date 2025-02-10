@@ -8,7 +8,7 @@ Sends a message from the modal window to the plugin.
 expression.sendToPlugin(name, data);
 ```
 
-`expression` - A variable that represents a [Plugin](../plugin.md) class.
+`expression` - A variable that represents a [Plugin](../Plugin.md) class.
 
 ## Parameters
 

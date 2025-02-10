@@ -9,7 +9,7 @@ ONLYOFFICE Docs uses the following WOPI operations:
 - [CheckFileInfo](checkfileinfo.md) - returns information about the file properties, access rights and editor settings.
 - [GetFile](GetFile.md) - requests a message to retrieve a file for the `HTTP://server/<...>/wopi*/files/<id>/contents` operation.
 - [Lock](Lock.md) - locks file editing by an online office that requested the lock.
-- [RefreshLock](RefreshLock.md) - refreshes the lock on a file by resetting its automatic expiration timer to 30 minutes.
+- [RefreshLock](refreshlock.md) - refreshes the lock on a file by resetting its automatic expiration timer to 30 minutes.
 - [Unlock](Unlock.md) - allows for file editing.
 - [PutFile](PutFile.md) - requests a message to update a file for the `HTTP://server/<...>/wopi*/files/<id>/contents` operation.
 - [PutRelativeFile](PutRelativeFile.md) - creates a new file on the host based on the current file.

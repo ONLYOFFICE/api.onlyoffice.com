@@ -61,7 +61,7 @@ Create the [assets](https://github.com/ONLYOFFICE/docspace-plugins/tree/master/s
 
   <img alt="Plugin logo" src="/assets/images/docspace/plugin-logo.png" width="300px" />
 
-- The context menu plugin uses an [icon](../coding-plugin/plugin-items/contextmenuItem.md#icon) on the **Convert to text** button. The required icon size is 16x16 px. Otherwise, it will be compressed to this size.
+- The context menu plugin uses an [icon](../coding-plugin/plugin-items/contextmenuitem.md#icon) on the **Convert to text** button. The required icon size is 16x16 px. Otherwise, it will be compressed to this size.
 
   ![Convert to text](/assets/images/docspace/convert-to-text.png)
 
@@ -167,7 +167,7 @@ For example, the **draw\.io** plugin contains two main UI elements - the modal w
 
 Now that the default plugin is ready, you can start coding other plugin types.
 
-Each plugin type has specific plugin items. Define the [context menu item](../coding-plugin/plugin-items/contextmenuItem.md) that will be displayed when you right-click on audio or video files:
+Each plugin type has specific plugin items. Define the [context menu item](../coding-plugin/plugin-items/contextmenuitem.md) that will be displayed when you right-click on audio or video files:
 
 ``` ts
 export const contextMenuItem: IContextMenuItem = {

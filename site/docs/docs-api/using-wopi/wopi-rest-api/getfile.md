@@ -6,13 +6,13 @@ Retrieves a file from a host for the `HTTP://server/<...>/wopi*/files/<id>/conte
 
 	| Name     | Type   | Description                                                                 |
 | -------- | ------ | --------------------------------------------------------------------------- |
-| file\_id | string | The [file ID](../Key%20concepts.md#file-id) that must be URL safe. |
+| file\_id | string | The [file ID](../key-concepts.md#file-id) that must be URL safe. |
 
 ## Query parameters
 
 | Name          | Type   | Description                                                                                                                      |
 | ------------- | ------ | -------------------------------------------------------------------------------------------------------------------------------- |
-| access\_token | string | An [access token](../Key%20concepts.md#access-token) that the host uses to determine whether the request is authorized. |
+| access\_token | string | An [access token](../key-concepts.md#access-token) that the host uses to determine whether the request is authorized. |
 
 ## Request headers
 

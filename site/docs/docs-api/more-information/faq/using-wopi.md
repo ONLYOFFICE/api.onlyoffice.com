@@ -70,13 +70,13 @@ The host page must contain the following elements:
 
 - A *form* element via which the host must *POST* the *access\_token* and *access\_token\_ttl* parameters to the online office iframe for security purposes.
 
-- JavaScript code for interacting with the online office iframe using [PostMessage](../../using-wopi/PostMessage.md).
+- JavaScript code for interacting with the online office iframe using [PostMessage](../../using-wopi/postmessage.md).
 
 - Specific CSS styles for the body element and online office to avoid visual bags. In addition, the host page should set an appropriate favicon for the page using the favicon URL provided in [WOPI discovery](../../using-wopi/wopi-discovery.md).
 
 - A *viewport* meta tag to avoid visual and functional problems in mobile browsers.
 
-  An example of the host page code can be found [on this page](../../using-wopi/Host%20page.md).
+  An example of the host page code can be found [on this page](../../using-wopi/host-page.md).
 
 ## How to restrict public access to the data via WOPI?
 
@@ -84,7 +84,7 @@ To restrict public access to your data, a secure exchange of requests between an
 
 The integrator must check that the request is received from ONLYOFFICE Docs. It uses [proof keys](https://docs.microsoft.com/en-us/microsoft-365/cloud-storage-partner-program/online/scenarios/proofkeys) for this purpose. ONLYOFFICE Docs signs the request with a private key. The corresponding public key is written in the proof-key element in the [WOPI discovery XML](../../using-wopi/wopi-discovery.md). The integrator checks the private key with the public key. The signature is sent with every request in the **X-WOPI-Proof** and **X-WOPI-ProofOld** HTTP headers.
 
-More information about proof keys can be found [on this page](../../using-wopi/Proof%20keys.md).
+More information about proof keys can be found [on this page](../../using-wopi/proof-keys.md).
 
 ## Where can I find possible WOPI error codes and their descriptions?
 
@@ -92,11 +92,11 @@ Possible WOPI error codes and their description you can find [on this page](../.
 
 ## Which WOPI REST API operations are supported by ONLYOFFICE Docs?
 
-ONLYOFFICE Docs uses the following WOPI operations: [CheckFileInfo](../../using-wopi/wopi-rest-api/checkfileinfo.md), [GetFile](../../using-wopi/wopi-rest-api/GetFile.md), [Lock](../../using-wopi/wopi-rest-api/Lock.md), [RefreshLock](../../using-wopi/wopi-rest-api/RefreshLock.md), [Unlock](../../using-wopi/wopi-rest-api/Unlock.md), [PutFile](../../using-wopi/wopi-rest-api/PutFile.md), [RenameFile](../../using-wopi/wopi-rest-api/RenameFile.md). For more information about these operations, see the corresponding pages.
+ONLYOFFICE Docs uses the following WOPI operations: [CheckFileInfo](../../using-wopi/wopi-rest-api/checkfileinfo.md), [GetFile](../../using-wopi/wopi-rest-api/GetFile.md), [Lock](../../using-wopi/wopi-rest-api/lock.md), [RefreshLock](../../using-wopi/wopi-rest-api/refreshlock.md), [Unlock](../../using-wopi/wopi-rest-api/unlock.md), [PutFile](../../using-wopi/wopi-rest-api/putfile.md), [RenameFile](../../using-wopi/wopi-rest-api/renamefile.md). For more information about these operations, see the corresponding pages.
 
 ## How to restrict access to the use of ONLYOFFICE server via WOPI?
 
-You cannot restrict access to the use of ONLYOFFICE server via WOPI. Editing access cotrol is available only via ONLYOFFICE Docs API and based on JWT signature. The secret key is required to generate a [file open request](../../additional-api/signature/Browser.md).
+You cannot restrict access to the use of ONLYOFFICE server via WOPI. Editing access cotrol is available only via ONLYOFFICE Docs API and based on JWT signature. The secret key is required to generate a [file open request](../../additional-api/signature/browser.md).
 
 More information about signature can be found [here](../../additional-api/signature/signature.md).
 
@@ -108,16 +108,16 @@ To get information about the file properties, access rights and editor settings,
 
 In addition to the basic actions of viewing, editing and co-editing, you can also close the editor, switch from the viewing into the editing mode, rename a file, open a dialog of sharing access settings, open the document version history, insert images from the storage.
 
-Find out more about additional actions through event handling [on this page](../../using-wopi/PostMessage.md).
+Find out more about additional actions through event handling [on this page](../../using-wopi/postmessage.md).
 
 ## Which access rights can I set to the document via WOPI?
 
 You can set access rights for viewing, editing, renaming, reviewing and printing.
 
-Find out more about access rights [on this page](../../using-wopi/PostMessage.md).
+Find out more about access rights [on this page](../../using-wopi/postmessage.md).
 
 ## What are the difference between ONLYOFFICE Docs API and WOPI?
 
 You can integrate [ONLYOFFICE Docs](https://www.onlyoffice.com/office-suite.aspx) with any cloud service using either API or WOPI.
 
-The table [on this page](../../using-wopi/API%20vs%20WOPI.md) will help you find out the difference between these options.
+The table [on this page](../../using-wopi/api-vs-wopi.md) will help you find out the difference between these options.

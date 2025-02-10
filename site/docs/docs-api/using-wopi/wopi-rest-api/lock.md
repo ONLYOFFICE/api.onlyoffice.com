@@ -1,6 +1,6 @@
 `POST /wopi/files/(file_id)`
 
-Locks a file for editing by the WOPI client application instance that requested the [lock](../Key%20concepts.md#lock).
+Locks a file for editing by the WOPI client application instance that requested the [lock](../key-concepts.md#lock).
 
 This operation works as follows:
 
@@ -14,13 +14,13 @@ This operation works as follows:
 
 | Name     | Type   | Description                                                                 |
 | -------- | ------ | --------------------------------------------------------------------------- |
-| file\_id | string | The [file ID](../Key%20concepts.md#file-id) that must be URL safe. |
+| file\_id | string | The [file ID](../key-concepts.md#file-id) that must be URL safe. |
 
 ## Query parameters
 
 | Name          | Type   | Description                                                                                                                          |
 | ------------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------ |
-| access\_token | string | An [access token](../Key%20concepts.md#access-token) that the host will use to determine whether the request is authorized. |
+| access\_token | string | An [access token](../key-concepts.md#access-token) that the host will use to determine whether the request is authorized. |
 
 ## Request headers
 

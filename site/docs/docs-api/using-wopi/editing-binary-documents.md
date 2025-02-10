@@ -32,7 +32,7 @@ Sometimes, the users might be confused when opening their binary files without a
 
 **Option 1**. Displaying a notification message
 
-The host can display some UI to the user before the conversion start. When the **convert** action is executed, the host identifies it as an attempt to edit a binary document and displays a notification message to inform a user that the document will be converted. This scenario can be also applied to the **Edit** button by setting the [EditModePostMessage](./wopi-rest-api/checkfileinfo.md#editmodepostmessage) property to **true** and handling the [UI\_Edit](./PostMessage.md#ui_edit) PostMessage.
+The host can display some UI to the user before the conversion start. When the **convert** action is executed, the host identifies it as an attempt to edit a binary document and displays a notification message to inform a user that the document will be converted. This scenario can be also applied to the **Edit** button by setting the [EditModePostMessage](./wopi-rest-api/checkfileinfo.md#editmodepostmessage) property to **true** and handling the [UI\_Edit](./postmessage.md#ui_edit) PostMessage.
 
 **Option 2**. Handling converted documents differently
 

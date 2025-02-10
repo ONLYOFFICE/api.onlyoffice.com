@@ -1,6 +1,6 @@
 `POST /wopi/files/(file_id)`
 
-Releases the lock on a file. The WOPI client passes the lock ID established by that previous [Lock](./Lock.md) operation in the **X-WOPI-Lock** request header.
+Releases the lock on a file. The WOPI client passes the lock ID established by that previous [Lock](./lock.md) operation in the **X-WOPI-Lock** request header.
 
 This operation works as follows:
 
@@ -12,13 +12,13 @@ This operation works as follows:
 
 | Name     | Type   | Description                                                                 |
 | -------- | ------ | --------------------------------------------------------------------------- |
-| file\_id | string | The [file ID](../Key%20concepts.md#file-id) that must be URL safe. |
+| file\_id | string | The [file ID](../key-concepts.md#file-id) that must be URL safe. |
 
 ## Query parameters
 
 | Name          | Type   | Description                                                                                                                          |
 | ------------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------ |
-| access\_token | string | An [access token](../Key%20concepts.md#access-token) that the host will use to determine whether the request is authorized. |
+| access\_token | string | An [access token](../key-concepts.md#access-token) that the host will use to determine whether the request is authorized. |
 
 
 ## Request headers

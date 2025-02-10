@@ -8,7 +8,7 @@ Defines the method used to create an &#123;@link inputhelper input helper&#125; 
 expression.createInputHelper();
 ```
 
-`expression` - A variable that represents a [Plugin](../plugin.md) class.
+`expression` - A variable that represents a [Plugin](../Plugin.md) class.
 
 ## Parameters
 

@@ -21,7 +21,7 @@ The list of changes for ONLYOFFICE Plugins and Macros API.
 
 - Added the ability to [add custom functions](../Macros/Adding%20custom%20functions.md) to the spreadsheets using the **Macros** plugin.
 - Added the ability to add the plugin [toolbar menu items](../customization/Toolbar.md).
-- Added the ability to create [multiple left panels](../structure/manifest/Variations.md) for plugins.
+- Added the ability to create [multiple left panels](../structure/manifest/variations.md) for plugins.
 - Added the information about the current position of the context menu plugin event.
 - Added the onToolbarMenuClick event.
 - Added the ActivateWindow method to *window\.Asc.plugin.executeMethod*.

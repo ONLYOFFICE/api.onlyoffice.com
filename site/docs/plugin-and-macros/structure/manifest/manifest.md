@@ -97,7 +97,7 @@ Example: "John Smith"
 
 ## variations
 
-Plugin variations, or subplugins, that are created inside the origin plugin. More information you can find [here](Variations.md).
+Plugin variations, or subplugins, that are created inside the origin plugin. More information you can find [here](variations.md).
 
 Type: array of objects
 

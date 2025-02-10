@@ -36,7 +36,7 @@ The list of changes of ONLYOFFICE Docs API.
 - Added the possibility to [insert](../usage-api/methods.md#insertimage) the *tif* / *tiff* image type into the file.
 - Added the [startFilling](../usage-api/methods.md#startfilling) method.
 - Added the [events.onRequestStartFilling](../usage-api/config/events.md#onrequeststartfilling) event.
-- Added the [docs\_api\_config](../using-wopi/Host%20page.md#parameters) parameter to the *form* element of the WOPI host page.
+- Added the [docs\_api\_config](../using-wopi/host-page.md#parameters) parameter to the *form* element of the WOPI host page.
 - Added the [pdf](../additional-api/conversion-api/request.md#pdf) field to the conversion request.
 - Added the [events.onSubmit](../usage-api/config/events.md#onsubmit) event.
 - The *docxf* format is deprecated, please use the *pdf* format to create and edit forms.
@@ -54,7 +54,7 @@ The list of changes of ONLYOFFICE Docs API.
 
 ## Version 8.0
 
-- Added the [WOPISrc](../using-wopi/Key%20concepts.md#wopisrc) query parameter to the requests from the browser to the server.
+- Added the [WOPISrc](../using-wopi/key-concepts.md#wopisrc) query parameter to the requests from the browser to the server.
 - Added the [watermark](../additional-api/conversion-api/request.md#watermark) field to the conversion request.
 - Added the *pdf* document type to the [documentType](../usage-api/config/config.md#documenttype) parameter.
 - Added the [formsdataurl](../usage-api/callback-handler.md#formsdataurl) parameter to the *Callback handler*.
@@ -94,7 +94,7 @@ The list of changes of ONLYOFFICE Docs API.
 - Added the [events.onRequestReferenceData](../usage-api/config/events.md#onrequestreferencedata) event.
 - Added the [document.referenceData](../usage-api/config/document/document.md#referencedata) parameter.
 - Added the [UserCanNotWriteRelative](../using-wopi/wopi-rest-api/checkfileinfo.md#usercannotwriterelative) property to the *CheckFileInfo* WOPI operation.
-- Added a scheme for [editing binary document formats](../using-wopi/Editing%20binary%20documents.md).
+- Added a scheme for [editing binary document formats](../using-wopi/editing-binary-documents.md).
 - Added the [convert](../using-wopi/wopi-discovery.md#wopi-actions) action to the WOPI discovery.
 - Added the [PutRelativeFile](../using-wopi/wopi-rest-api/PutRelativeFile.md) WOPI operation.
 
@@ -112,11 +112,11 @@ The list of changes of ONLYOFFICE Docs API.
 ## Version 7.1
 
 - The *services.CoAuthoring.token.inbox.inBody* and *services.CoAuthoring.token.outbox.inBody* parameters for enabling [token in body](../additional-api/signature/request/token-in-body.md) are deprecated.
-- Added the *X-LOOL-WOPI-IsModifiedByUser*, *X-LOOL-WOPI-IsAutosave* and *X-LOOL-WOPI-IsExitSave* request headers to the [PutFile](../using-wopi/wopi-rest-api/PutFile.md) WOPI operation to distinguish between the type of document saving.
+- Added the *X-LOOL-WOPI-IsModifiedByUser*, *X-LOOL-WOPI-IsAutosave* and *X-LOOL-WOPI-IsExitSave* request headers to the [PutFile](../using-wopi/wopi-rest-api/putfile.md) WOPI operation to distinguish between the type of document saving.
 - The [editorConfig.customization.chat](../usage-api/config/editor/customization/customization-standard-branding.md#chat) parameter is deprecated, please use the [document.permissions.chat](../usage-api/config/document/permissions.md#chat) parameter instead.
 - Added conversion from [dps, dpt, et, ett, htm, mhtml, stw, sxc, sxi, sxw, wps, wpt, xlsb, xml](../additional-api/conversion-api/conversion-tables.md) format.
 - Added opening for [xlsb](../usage-api/config/config.md#documenttype) format.
-- The parameter list in the initialization config [signature](../additional-api/signature/Browser.md#opening-file) has become strictly regulated.
+- The parameter list in the initialization config [signature](../additional-api/signature/browser.md#opening-file) has become strictly regulated.
 - The [editorConfig.customization.spellcheck](../usage-api/config/editor/customization/customization-standard-branding.md#spellcheck) field is deprecated, please use the [editorConfig.customization.features.spellcheck](../usage-api/config/editor/customization/customization-standard-branding.md#features) field instead.
 - Added the [editorConfig.customization.features](../usage-api/config/editor/customization/customization-standard-branding.md#features) parameter section.
 - Added the [documentLayout](../additional-api/conversion-api/request.md#documentlayout) parameter to the conversion request.
@@ -148,7 +148,7 @@ The list of changes of ONLYOFFICE Docs API.
 - Added the [editorConfig.customization.review.hideReviewDisplay](../usage-api/config/editor/customization/customization-standard-branding.md#review) field.
 - Added the [editorConfig.customization.review.hoverMode](../usage-api/config/editor/customization/customization-standard-branding.md#review) field.
 - Added the possibility to view the [document history](../get-started/how-it-works/document-history.md) of the spreadsheet files.
-- Added the [UI\_InsertGraphic](../using-wopi/PostMessage.md#ui_insertgraphic) message for the PostMessage WOPI protocol.
+- Added the [UI\_InsertGraphic](../using-wopi/postmessage.md#ui_insertgraphic) message for the PostMessage WOPI protocol.
 
 ## Version 6.4
 
@@ -209,7 +209,7 @@ The list of changes of ONLYOFFICE Docs API.
 - Added conversion to [pdfa](../additional-api/conversion-api/conversion-tables.md#text-document-file-formats) format.
 - Added the [events.onRequestCompareFile](../usage-api/config/events.md#onrequestcomparefile) event.
 - Added the [setRevisedFile](../usage-api/methods.md#setrevisedfile) method.
-- Token in [methods](../additional-api/signature/Browser.md#methods) parameters.
+- Token in [methods](../additional-api/signature/browser.md#methods) parameters.
 - The [document.permissions.changeHistory](../usage-api/config/document/permissions.md#changehistory) field is deprecated, please add the [events.onRequestRestore](../usage-api/config/events.md#onrequestrestore) field instead.
 - Added the [editorConfig.customization.goback.requestClose](../usage-api/config/editor/customization/customization-standard-branding.md#goback) field.
 - Added the [events.onRequestSharingSettings](../usage-api/config/events.md#onrequestsharingsettings) event.
