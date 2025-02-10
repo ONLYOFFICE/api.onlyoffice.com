@@ -166,6 +166,12 @@ In this example we are hiding or unhiding specified rows and/or columns in the s
 
 [More](Hide%20or%20unhide%20rows%20and%20columns.md)
 
+## Mask card numbers
+
+In this example we are masking the card numbers.
+
+[More](Mask%20card%20numbers.md)
+
 ## Find company logos
 
 In this example we are finding company logos in a spreadsheet using the Logo API offered by API Ninjas.
