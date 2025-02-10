@@ -202,6 +202,12 @@ In this example we are converting currencies using the Currency Conversion API o
 
 [More](Currency%20conversion.md)
 
+## Set USA date format
+
+In this example we are setting all date formats to USA one.
+
+[More](Set%20USA%20date%20format.md)
+
 ## Support
 
 If you want to request a feature or report a bug regarding macros, use the issues section [on GitHub.](https://github.com/ONLYOFFICE/plugin-macros/issues)
