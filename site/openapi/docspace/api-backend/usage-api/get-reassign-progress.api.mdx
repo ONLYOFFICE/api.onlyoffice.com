@@ -1,0 +1,71 @@
+---
+id: get-reassign-progress
+title: "Get the reassignment progress"
+description: "Returns the progress of the started data reassignment for the user with the ID specified in the request."
+sidebar_label: "Get the reassignment progress"
+hide_title: true
+hide_table_of_contents: true
+api: eJztV0tv4zYQ/isCTy2gWLbsNIlvQbJZBG3RII9TYCxoaWxxI5MqSSW7K+i/d4akbGntbHvqXnxJRqPhzDcvWl/DLF8bNn9md6CqEqIkejKgo5xbzhYxUxVoboWStzmbszXYe+DGiLW802qtwRgWs4prvgELmvw0TOID2tboRuT4Wkh8qrgtUM7BZFpU5BCVLtLtdfRWKAMuZCRMpEMEoMMa/q6FRnFudQ0xM1kBG87mDbNfKwpjrBZyjZYrpTfcUuDahYUvfIMJoQLOJhN+ls9OVtNpdjL7LU9Pzk9PpyfATy9my4uz01XGWdsuKJqplDRgKEA6HtO/IeQu/Q1IG1W7GmRKWlQ5YPDFJlXJKe9mH7BafobMUtk0FdcKHw0xH0hqGPz2GlWyLku+pMR8RXZ5pun5OWtRo7XS/+7tgzP7kUOjNhBROuQVsWaYIV9Dz7XArNeg93zf7Yx7nUHradpvzSSdztC1MFeKFBb6RVgqVQKX+1XoWfd8EXj0ZSy3tauokvDXyk0kyHpDI36Fo+VP3ddS+pr0fV1xmUHpxBsuSlLiUPy4is/BaXQSBSmOgndUBSmOtmHIrpNRHSKSNohxFGKjLkiLwTh3WbTxNrNxPInTeBrPdnDf68zzuI900seYDrFNB6Bm78AZ095YYR20y4erEXrYKDl6LDBGjn5H14JKt6zx5CM3Lw++QS32iue5IFi8vOvtwoqXBoY+/d00uqzEnyqH0ozuw6JeWzUip91t1NP7CFVVisxdYMlno44bedzI40b+1I10v47HVTyu4nEVf+4qUozZeLL/ifskeW0LpcU3V0c0mu4b3Si9FHkO0mE1kNVa2K9uoLjJPpGHTy9ACkapYlHe0ADYgiry/Se1rbU0kS1g+0UdqZV7xoHV1G3HDXT/2xv3xlkQzYjehC3cE5IJU0EmVgIPCel0RCHA2BFiQJZSqEBkHHFBUjJnCa9Eko7GSeUqmXRxkg5N0ngy0zJKVb92TKfWJR4vrK3mSVKqjJdIZOz8fHyRJnuz9Qe9j/xxRlXoivZAl6C/54al2y474vsdFXFHrQZmgWBlSr0IcN0QcqXc6d6Q3IgSiKcQdo/nNXUXFwLecHcZB+cfwYayHWY6g6yaHfH5P/sY6tJjWpiK60YTmvpMRUNLbCs12jXW0Ukf2v/CdCnNA1fFplAD6XTTLLmBJ122LakxsqZhRvGVa+F/EXACcmFIzreL+W51frkPTPbX6D/Q3oMJdtMgqemvvKzpCUU3LB3fbhdoWeDK4ZQRQv/yMsugsr1jfc+L3mJ8/PCIVjRcw/nzkxYE8nsQzHeD6WPTX7qOD55oGj/cbbu196/ePRFy66xdAniZ/QNB5617
+sidebar_class_name: "get api-method"
+info_path: site/openapi/docspace/api-backend/usage-api/asc-files
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get the reassignment progress"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/people/reassign/progress/{userid}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns the progress of the started data reassignment for the user with the ID specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"userid","in":"path","description":"User ID whose data is reassigned","required":true,"schema":{"type":"string","format":"uuid","example":"e711a7d4-f33c-46d2-8553-ea594b975fca"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Reassignment progress","content":{"text/plain":{"schema":{"type":"object","properties":{"id":{"type":"string","description":"ID","nullable":true,"example":"2288"},"error":{"type":"string","description":"Error","nullable":true,"example":"some text"},"percentage":{"type":"integer","description":"Percentage","format":"int32","example":1234},"isCompleted":{"type":"boolean","description":"IsCompleted","example":true},"status":{"oneOf":[{"enum":["Created","Running","Completed","Canceled","Failted"],"type":"string","description":"[Created - Created, Running - Running, Completed - Completed, Canceled - Canceled, Failted - Failted]","example":"Created"},{"enum":[0,1,2,3,4],"type":"integer","description":"[0 - Created, 1 - Running, 2 - Completed, 3 - Canceled, 4 - Failted]","example":0}],"title":"ASC.Common.Threading.DistributedTaskStatus"}},"additionalProperties":false,"title":"ASC.People.ApiModels.ResponseDto.TaskProgressResponseDto"}},"application/json":{"schema":{"type":"object","properties":{"id":{"type":"string","description":"ID","nullable":true,"example":"2288"},"error":{"type":"string","description":"Error","nullable":true,"example":"some text"},"percentage":{"type":"integer","description":"Percentage","format":"int32","example":1234},"isCompleted":{"type":"boolean","description":"IsCompleted","example":true},"status":{"oneOf":[{"enum":["Created","Running","Completed","Canceled","Failted"],"type":"string","description":"[Created - Created, Running - Running, Completed - Completed, Canceled - Canceled, Failted - Failted]","example":"Created"},{"enum":[0,1,2,3,4],"type":"integer","description":"[0 - Created, 1 - Running, 2 - Completed, 3 - Canceled, 4 - Failted]","example":0}],"title":"ASC.Common.Threading.DistributedTaskStatus"}},"additionalProperties":false,"title":"ASC.People.ApiModels.ResponseDto.TaskProgressResponseDto"}},"text/json":{"schema":{"type":"object","properties":{"id":{"type":"string","description":"ID","nullable":true,"example":"2288"},"error":{"type":"string","description":"Error","nullable":true,"example":"some text"},"percentage":{"type":"integer","description":"Percentage","format":"int32","example":1234},"isCompleted":{"type":"boolean","description":"IsCompleted","example":true},"status":{"oneOf":[{"enum":["Created","Running","Completed","Canceled","Failted"],"type":"string","description":"[Created - Created, Running - Running, Completed - Completed, Canceled - Canceled, Failted - Failted]","example":"Created"},{"enum":[0,1,2,3,4],"type":"integer","description":"[0 - Created, 1 - Running, 2 - Completed, 3 - Canceled, 4 - Failted]","example":0}],"title":"ASC.Common.Threading.DistributedTaskStatus"}},"additionalProperties":false,"title":"ASC.People.ApiModels.ResponseDto.TaskProgressResponseDto"}}}},"401":{"description":"Unauthorized"},"403":{"description":"Forbidden"}}}
+>
+  
+</StatusCodes>
+
+
+      

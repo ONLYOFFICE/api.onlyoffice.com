@@ -1,0 +1,63 @@
+---
+id: settings
+title: "Get webhook settings"
+description: "Returns settings of all webhooks."
+sidebar_label: "Get webhook settings"
+hide_title: true
+hide_table_of_contents: true
+api: eJztVtFu2jAU/ZXIz4gw2k0db1W1VtWQNo1Ve0CoMsmFuDi2ZzvQLuLfd69NmIFVqtTH9gWIc87xufee4LTM86VjoymbgPdCLV2WZ79gXmm9cmzWY9qA5V5odVuyEXM7EOsxC85o5QDJLRsOBvRVgiusMARH8Fg4n+lFtolyWUIutPKgPHE8PPrcSC4UXbmigpqH9ScDKKLnD1B4pBhLVryIG4oywQgUW4JF0ELbmvu4dDbEBXjktZEI+nh+8WmLrnXjIaE6b9ESAlUjJZ8T0tsGEiJzuoaMXDLk1+ArXb5CoBQuovYKc60lcJWaJQXEKl6/yKsFXn5T8ul061u7ESobQ6WwPbR7OqDXCCc1oSwvS0GaXH5PprTg0iHJCx8ol5Orfpes/pW20F1FCWOkKELS8gen38PwlsMQ/hPeU/CmU0Ai54MPp8fKneINdtyKP1CyADo7BV1rOxdlCSqYcVA0Vng0PW0Zd8U9KdyvgBZCRVjoBgHAZtvZUUvYD/CNVW5/fNGRxqXsjjXXZ/8ywJYQgsl9hRc5NyIf9gd5R807DiNPdg3WBUuNlQivvDejPJe64LLSzo8uBp+HOTv2M6b7WaQzsttVN6EHJT4LhzXup4p+vuJCF6NDWI/REYxHs14JCG0TaqEDOxnXtZBA9sl79LMe0hQMGq55iNBO/Ab8/47+o7zt3wRe1OddHck7A24dutfumj6lIhGJbQ9N3u+7SV5qqLsEbds5d3Bn5XZLy78bsBQJ/LnmVsTYT2e4RYUZwW7TrEJH2WVRgKFRr7lsji3NkkDcfPmJKGry4Rxix3c/SLe7pZ4S1aMBxb3pc9t7htG2cchYUYePt55l7Grr0KEAfPr+AiGRdYQ=
+sidebar_class_name: "get api-method"
+info_path: site/openapi/docspace/api-backend/usage-api/asc-files
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get webhook settings"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/settings/webhooks"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns settings of all webhooks.
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"List of webhook settings","content":{"text/plain":{"schema":{"type":"object","properties":{"id":{"type":"integer","format":"int32","example":5486},"route":{"type":"string","nullable":true,"example":"some text"},"method":{"type":"string","nullable":true,"example":"some text"},"disable":{"type":"boolean","example":true},"name":{"type":"string","nullable":true,"readOnly":true,"example":"Irwin Lehner"},"description":{"type":"string","nullable":true,"readOnly":true,"example":"some text"}},"additionalProperties":false,"title":"ASC.Webhooks.Core.Webhook"}},"application/json":{"schema":{"type":"object","properties":{"id":{"type":"integer","format":"int32","example":5486},"route":{"type":"string","nullable":true,"example":"some text"},"method":{"type":"string","nullable":true,"example":"some text"},"disable":{"type":"boolean","example":true},"name":{"type":"string","nullable":true,"readOnly":true,"example":"Irwin Lehner"},"description":{"type":"string","nullable":true,"readOnly":true,"example":"some text"}},"additionalProperties":false,"title":"ASC.Webhooks.Core.Webhook"}},"text/json":{"schema":{"type":"object","properties":{"id":{"type":"integer","format":"int32","example":5486},"route":{"type":"string","nullable":true,"example":"some text"},"method":{"type":"string","nullable":true,"example":"some text"},"disable":{"type":"boolean","example":true},"name":{"type":"string","nullable":true,"readOnly":true,"example":"Irwin Lehner"},"description":{"type":"string","nullable":true,"readOnly":true,"example":"some text"}},"additionalProperties":false,"title":"ASC.Webhooks.Core.Webhook"}}}},"401":{"description":"Unauthorized"},"403":{"description":"Forbidden"}}}
+>
+  
+</StatusCodes>
+
+
+      

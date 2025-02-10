@@ -1,0 +1,63 @@
+---
+id: people-schemas
+title: "Get team templates"
+description: "Returns all portal team templates that allow users to name their organization (or group), add members, and define their activities within the portal."
+sidebar_label: "Get team templates"
+hide_title: true
+hide_table_of_contents: true
+api: eJztWEtPGzEQ/iuWT60UZQPtgeaGoFAElRAP9RBFyNmdZA3etWvPhscq/70z3oQm4VGSUw97ALL2zHzj+cbfhqklqkmQ/YG8BERdToJIxBWoQiAUziiEIIcdaR14hdqWJ5nsSwfWGbhMcyhUkB3pIThbBjLt13K31+M/GYTUa8c+5HGmAwo7pqDLkcW9xlxgDmJsjbH3BC+c8qoABM+BU1silMjxEB4wITdd8lOI2HH90QEB2NEtpEguznOuqJtkdLZkE9ATAtms5rZyWnFySAZlZYwaGXJCX0FHwoOibY6xs9fbkTOyoCQ3DR193gt+cgfiFEIw4BmjCuAP1DzWv6CuyVikc+v3QIItQHA1FxBhI4ywOcjE28p9GOSYrbcE+fhRIsoWZ+GCnduAm/ESUGG1BZqHySF1zofBLmBCF625qSLjntuujj9AZRsSZshlC7QKNqjlMVtvCbJBa0TzTWEIR2WZZhdlzpdEaKxMgPeFYUXzUGOMvX950P0Fo+6+0/zz02ZguhfwO2Z3iLbb6O/SSpOEc0ansQOS22BbtWzVslXLVi1btXxVLeO3ylYmW5lsZbKVyVYmX5dJTuMrKdSL/+qvS1Vhbr1+gkxGoy8vjY6sH+ksgzIeJ0BaeY2Psj+opQrpDUe4uQNeoM5UGSV7TwYgh7Phy07EypdBKGOEsx6VWR8oYK6Qt+29iCok0EaF5CGD9sL6iSr1U9PKn6wXsTE/dwRVWRRQjMiFHspMZDDW5cJNpainmisfJxa6jDOLJoMuJUxlzi0PRiYQ3xYKc3pIlNPJbreXhPlkJUmrgLYIz3MTynDK/HAtKm/IJ0d0/SQxNlUmJ0Xo7/W+7SYvuumM90XjLrlOi7JG+pq31Gpxn/uTkjqlhcXLZtWsI3m8IlNr7zREvnQ5ttF7qYGOtAFOn3Nv8pnuMv2OEi5UvAzz4MeAawytH6X+O+P5b+mdV25pAsWazXzVc64HXFayJLYjrQ3fPMBaYZyIYlLZvq5HKsC1N7MZL9N183wF6ONUed0Iw2BIODndCSKZWyQSKffTFBy32VSZaj2v4VIzHn+/IivmdpX+huj5B4672Cofl6Ku9UWDzb9nnTc86rrpLTrRwr7ZetNjfraFdTwAqc0fHZg0Uw==
+sidebar_class_name: "get api-method"
+info_path: site/openapi/docspace/api-backend/usage-api/asc-files
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get team templates"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/settings/customschemas"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns all portal team templates that allow users to name their organization (or group), add members, and define their activities within the portal.
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"List of team templates with the following parameters","content":{"text/plain":{"schema":{"type":"object","properties":{"id":{"type":"string","description":"Team template ID","nullable":true,"example":"1801"},"name":{"type":"string","description":"Team template name","nullable":true,"example":"Ike Kessler"},"userCaption":{"type":"string","description":"User caption","nullable":true,"example":"some text"},"usersCaption":{"type":"string","description":"Users caption","nullable":true,"example":"some text"},"groupCaption":{"type":"string","description":"Group caption","nullable":true,"example":"some text"},"groupsCaption":{"type":"string","description":"Groups caption","nullable":true,"example":"some text"},"userPostCaption":{"type":"string","description":"User status caption","nullable":true,"example":"some text"},"regDateCaption":{"type":"string","description":"Registration date caption","nullable":true,"example":"some text"},"groupHeadCaption":{"type":"string","description":"Group lead caption","nullable":true,"example":"some text"},"guestCaption":{"type":"string","description":"Guest caption","nullable":true,"example":"some text"},"guestsCaption":{"type":"string","description":"Guests caption","nullable":true,"example":"some text"}},"additionalProperties":false,"description":"Team template parameters","title":"ASC.Web.Api.ApiModel.RequestsDto.SchemaRequestsDto"}},"application/json":{"schema":{"type":"object","properties":{"id":{"type":"string","description":"Team template ID","nullable":true,"example":"1801"},"name":{"type":"string","description":"Team template name","nullable":true,"example":"Ike Kessler"},"userCaption":{"type":"string","description":"User caption","nullable":true,"example":"some text"},"usersCaption":{"type":"string","description":"Users caption","nullable":true,"example":"some text"},"groupCaption":{"type":"string","description":"Group caption","nullable":true,"example":"some text"},"groupsCaption":{"type":"string","description":"Groups caption","nullable":true,"example":"some text"},"userPostCaption":{"type":"string","description":"User status caption","nullable":true,"example":"some text"},"regDateCaption":{"type":"string","description":"Registration date caption","nullable":true,"example":"some text"},"groupHeadCaption":{"type":"string","description":"Group lead caption","nullable":true,"example":"some text"},"guestCaption":{"type":"string","description":"Guest caption","nullable":true,"example":"some text"},"guestsCaption":{"type":"string","description":"Guests caption","nullable":true,"example":"some text"}},"additionalProperties":false,"description":"Team template parameters","title":"ASC.Web.Api.ApiModel.RequestsDto.SchemaRequestsDto"}},"text/json":{"schema":{"type":"object","properties":{"id":{"type":"string","description":"Team template ID","nullable":true,"example":"1801"},"name":{"type":"string","description":"Team template name","nullable":true,"example":"Ike Kessler"},"userCaption":{"type":"string","description":"User caption","nullable":true,"example":"some text"},"usersCaption":{"type":"string","description":"Users caption","nullable":true,"example":"some text"},"groupCaption":{"type":"string","description":"Group caption","nullable":true,"example":"some text"},"groupsCaption":{"type":"string","description":"Groups caption","nullable":true,"example":"some text"},"userPostCaption":{"type":"string","description":"User status caption","nullable":true,"example":"some text"},"regDateCaption":{"type":"string","description":"Registration date caption","nullable":true,"example":"some text"},"groupHeadCaption":{"type":"string","description":"Group lead caption","nullable":true,"example":"some text"},"guestCaption":{"type":"string","description":"Guest caption","nullable":true,"example":"some text"},"guestsCaption":{"type":"string","description":"Guests caption","nullable":true,"example":"some text"}},"additionalProperties":false,"description":"Team template parameters","title":"ASC.Web.Api.ApiModel.RequestsDto.SchemaRequestsDto"}}}},"401":{"description":"Unauthorized"},"403":{"description":"Forbidden"}}}
+>
+  
+</StatusCodes>
+
+
+      

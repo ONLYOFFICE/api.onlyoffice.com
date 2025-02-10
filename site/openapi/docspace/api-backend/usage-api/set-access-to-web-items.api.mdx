@@ -1,0 +1,71 @@
+---
+id: set-access-to-web-items
+title: "Set the access settings to products"
+description: "Sets the access settings to the products with the IDs specified in the request."
+sidebar_label: "Set the access settings to products"
+hide_title: true
+hide_table_of_contents: true
+api: eJztWF1v0zAU/SuWH6E0ZfAAfRsbSBMgTesmHqpqcpPbxsONje1slKj/nXvtuEvXjrFJiD200tp83M9zjr2bNNyLuePDMR+B97KaO5axEeS1lX7JJz2uDVjhpa5OCj7kDvxhnoNz5/obTE88LBzvcQs/anD+gy6WfNjwXFceKk+Hwhgl8+CfXTld0TWXl7AQdOSXBjConl5B7jGOsZTNS3B0V4boO8xEUUiKKNTphkNrN9VagajQsKqVElOFF72tYdXjBbjcSkPOaIjeRZ17x26kL5lrm2aymmm7CDVvxehx+CkWhk7HDf8OS8JEL4B5+EmlXQtVp3ST1eq+WmdCObhbzlesRgFrwWRGWLEAD5YQ9tJTTn44Ouoj8P1DI+kPXUD1z6KHO/a6n1hJFHbucaqH6twz8RyY6C6NFy/3lPx3SqgiC87oykXIDgYD+tksJPkiJHG/xAI6G15YX0YJ+Sg2b2JhtMWuTZ23GJ7fA8TJ8Z/g582g/bza8ZU+K44d145AvE0rrBVLjJ0EtiWMLxLx1zMWHKM6fAlMhH8LzOtwtghV7lLZ3OraPClh9Hx8RqjotNi5CO5wayCXM+SEyVkI6u6SzYQF1gZk2rJKE5lr3NuM0o3qQOjjc0rXdsLwSDBXTwmXHanCKnlwET2wNKLYaWkkWe/anR67N+3VvFfz81Lzk6aevYz3Mn5OMqa4bwevt0eSi0rUvtRW/kJAg9GbbaNP2k5lUUAVFkTCMExqwuWXFOEyjGxjHIJEgV3doAHwyWqyhQ7gWNghe81Dy7rZGB3pyskxWrWYFjhDhovtLNfHVDjKlZqeL00d1qHwJZ5kwsjsoD/IUoIslZ3FzJwasddhrWAftVXoVXpvhlmmdC5UqZ0fvhu8P8i2KP5C91l059Rjij2i7SHuAJvA3C4OIz8DrY4KZ1A675qh0Ch8rvV3CQFr2nfObp+QPyaxrIf4vxiWKepMhxo64vkkFRAIhEDs6vqABGCw7YUIm11bIlJ2H2OJrbsIdZ7j/wHjLZSdcZm2PSKwaekfE85oiQIIPK+n7bV2cZlFGSB7xDT5NM1UOLiwarWiy5jPkqYnBKiVcQsaE54lihyZvwX/KHb76pwqW+O/PQitesmD3oSYDlcb3Uw6qj69OEeraft6BLcSMrbihl6d4PeQc3rPQimC7MK1hitRzWsxJ9uYOGwsNWHTlWIUXXtA7aRb1bLbxqZGYwP0Te3s9GiaqHMEMtnHW/d6tJAm64ACFv0bZINjOg==
+sidebar_class_name: "put api-method"
+info_path: site/openapi/docspace/api-backend/usage-api/asc-files
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Set the access settings to products"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"put"}
+  path={"/api/2.0/settings/security/access"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Sets the access settings to the products with the IDs specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"items":{"type":"object","additionalProperties":{"type":"boolean","nullable":true},"description":"Products with security information","nullable":true,"example":[{"key":"some text","value":true}]}},"additionalProperties":false,"description":"Module request parameters","title":"ASC.Web.Api.ApiModel.RequestsDto.WebItemsSecurityRequestsDto"}},"text/json":{"schema":{"type":"object","properties":{"items":{"type":"object","additionalProperties":{"type":"boolean","nullable":true},"description":"Products with security information","nullable":true,"example":[{"key":"some text","value":true}]}},"additionalProperties":false,"description":"Module request parameters","title":"ASC.Web.Api.ApiModel.RequestsDto.WebItemsSecurityRequestsDto"}},"application/*+json":{"schema":{"type":"object","properties":{"items":{"type":"object","additionalProperties":{"type":"boolean","nullable":true},"description":"Products with security information","nullable":true,"example":[{"key":"some text","value":true}]}},"additionalProperties":false,"description":"Module request parameters","title":"ASC.Web.Api.ApiModel.RequestsDto.WebItemsSecurityRequestsDto"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Security settings","content":{"text/plain":{"schema":{"type":"object","properties":{"webItemId":{"type":"string","description":"Module ID","nullable":true,"example":"{00000000-0000-0000-0000-000000000000}"},"users":{"type":"array","items":{},"description":"List of users with the access to the module","nullable":true},"groups":{"type":"array","items":{},"description":"List of groups with the access to the module","nullable":true},"enabled":{"type":"boolean","description":"Specifies if the security settings are enabled or not","example":true},"isSubItem":{"type":"boolean","description":"Specifies if this module is a subitem or not","example":false}},"additionalProperties":false,"title":"ASC.Web.Api.ApiModel.ResponseDto.SecurityDto"}},"application/json":{"schema":{"type":"object","properties":{"webItemId":{"type":"string","description":"Module ID","nullable":true,"example":"{00000000-0000-0000-0000-000000000000}"},"users":{"type":"array","items":{},"description":"List of users with the access to the module","nullable":true},"groups":{"type":"array","items":{},"description":"List of groups with the access to the module","nullable":true},"enabled":{"type":"boolean","description":"Specifies if the security settings are enabled or not","example":true},"isSubItem":{"type":"boolean","description":"Specifies if this module is a subitem or not","example":false}},"additionalProperties":false,"title":"ASC.Web.Api.ApiModel.ResponseDto.SecurityDto"}},"text/json":{"schema":{"type":"object","properties":{"webItemId":{"type":"string","description":"Module ID","nullable":true,"example":"{00000000-0000-0000-0000-000000000000}"},"users":{"type":"array","items":{},"description":"List of users with the access to the module","nullable":true},"groups":{"type":"array","items":{},"description":"List of groups with the access to the module","nullable":true},"enabled":{"type":"boolean","description":"Specifies if the security settings are enabled or not","example":true},"isSubItem":{"type":"boolean","description":"Specifies if this module is a subitem or not","example":false}},"additionalProperties":false,"title":"ASC.Web.Api.ApiModel.ResponseDto.SecurityDto"}}}},"401":{"description":"Unauthorized"},"403":{"description":"Forbidden"}}}
+>
+  
+</StatusCodes>
+
+
+      

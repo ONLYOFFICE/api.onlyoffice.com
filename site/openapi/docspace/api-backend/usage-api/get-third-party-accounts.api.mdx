@@ -1,0 +1,63 @@
+---
+id: get-third-party-accounts
+title: "Get third-party accounts"
+description: "Returns a list of all the connected third-party accounts."
+sidebar_label: "Get third-party accounts"
+hide_title: true
+hide_table_of_contents: true
+api: eJztWN9v2zYQ/lcEvs6RFMcoGr8FWRMMC9BiSdsBhmHQ0tliQ4kaeXLiGf7fd0cxjewkRV3vUX6wReru4/3+YG4EyqUT44m4UhpclER3hbL5SS0triNVISytRGUqMR0IU0O7+CMXY7EE9LKfWPQiy0xToRMDYcHVpnJAqBsxTFP+ycFlVtUeaCxulMPILKLMVBVkCHlUW7NSOVhHRy6MLdsjB4IkECpkCIRHTGotVcUrlxVQSr+/roEwzfwbQZEKQZGZqNrzZYPFLJf4E6LaLFvsIObQqmpJYlWjtZxr2kPbwEDAoyxr7UVMCREbJraEJp17MDY/DOL63JVfzt367xFjWPlwZ+7hGDMaq1/TbqNKO41VB/gU8nKEPbjnz1uJyjJwbrYvfehpFhZUf8XROPBYKwKa7VSEbwcKRieatPVuJDowp8OzEelnWlHdztSB1bBjQ8BwkFnAo2KSky8Zzjj1/1tpoCrBIb36ISS1HpywaDdGPBXen6Sjk9P0Ln03PkvHaRqn7ee3dEQrPkC5Dz4J3RDOjdEgKz9lZP6x0usXVvJyS+oyzxVPEak/dQptIbUDNh69IRe3l/EV5DzWIL/hARB/vKCRMUzbNjwMiCdofGksxIzxO08dTqOxteEDXvVj127yy5jS3SIpLH9OIWscUl7sLJjy6/Mr9Ppu0b5e82fDH+GGHvgOeA/rX7brkAR8hXlIwi3YlaKBEn+9vArP8TNZ0ZcsXYtd11plnm6Sb8703NJzS88tPbf03NJzy9Hc4v+x9KTSk0pPKj2p9KTSk8rxpMLoo/T05ZXa54qJw1j1L5WfFzp7KXRl7FzleSgTalPqHyRPJzTNXDbz1ONdn/hqJY8fSADEdDsd7EH9BdjYykUy0uEyT2odYQGdSz3s3CTKcD8YE2gJZGm4QeSxKrGgRSJrlQzjNFlwQBKv7HUFm2pXYJ231NOFKBDrcZJok0ldGIfj9+n5MBH7Zt7w+6hVF+zFk9O3TMdhkO+4/j3rZM6fwIdXsvTrrhg1O8Nnxtwr8NHke0uvvd9fJMu2t/ashr5wyeBS+kEdwK8BXw3XvkOb5xvRo1IQfOzcqT4TcZuPCQeAJCkj3ErBk05WKJgceJbcbObSwWert1ve/qcBy0VEjytpVdsxkymdUFBVMTdTGn2wxQWRaM1FsJK62bdo2imV6w93JMXx301Rm4zwwLhPr6p1B3Uvd+3Z/L0dvKGx2bT5J4+e5NtXb2oE356kvQPUr/8BwaEJUQ==
+sidebar_class_name: "get api-method"
+info_path: site/openapi/docspace/api-backend/usage-api/asc-files
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get third-party accounts"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/files/thirdparty"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns a list of all the connected third-party accounts.
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"List of connected providers information","content":{"text/plain":{"schema":{"type":"object","properties":{"auth_data":{"type":"object","properties":{"login":{"type":"string","nullable":true,"example":"some text"},"password":{"type":"string","nullable":true,"example":"G9smV9syX4"},"rawToken":{"type":"string","nullable":true,"example":"some text"},"url":{"type":"string","format":"uri","nullable":true,"example":"some text"},"provider":{"type":"string","nullable":true,"example":"some text"},"token":{"type":"object","properties":{"access_token":{"type":"string","nullable":true,"example":"some text"},"refresh_token":{"type":"string","nullable":true,"example":"some text"},"expires_in":{"type":"integer","format":"int64","example":1234},"client_id":{"type":"string","nullable":true,"example":"some text"},"client_secret":{"type":"string","nullable":true,"example":"some text"},"redirect_uri":{"type":"string","format":"uri","nullable":true,"example":"some text"},"timestamp":{"type":"string","format":"date-time","example":"2008-04-10T06:30:00.0000000+04:00"},"isExpired":{"type":"boolean","readOnly":true,"example":true}},"additionalProperties":false,"title":"ASC.FederatedLogin.OAuth20Token"}},"additionalProperties":false,"title":"ASC.Files.Core.AuthData"},"corporate":{"type":"boolean","example":true},"roomsStorage":{"type":"boolean","example":true},"customer_title":{"type":"string","nullable":true,"example":"some text"},"provider_id":{"type":"integer","format":"int32","nullable":true,"example":1234},"provider_key":{"type":"string","nullable":true,"example":"some text"}},"additionalProperties":false,"title":"ASC.Web.Files.Services.WCFService.ThirdPartyParams"}},"application/json":{"schema":{"type":"object","properties":{"auth_data":{"type":"object","properties":{"login":{"type":"string","nullable":true,"example":"some text"},"password":{"type":"string","nullable":true,"example":"G9smV9syX4"},"rawToken":{"type":"string","nullable":true,"example":"some text"},"url":{"type":"string","format":"uri","nullable":true,"example":"some text"},"provider":{"type":"string","nullable":true,"example":"some text"},"token":{"type":"object","properties":{"access_token":{"type":"string","nullable":true,"example":"some text"},"refresh_token":{"type":"string","nullable":true,"example":"some text"},"expires_in":{"type":"integer","format":"int64","example":1234},"client_id":{"type":"string","nullable":true,"example":"some text"},"client_secret":{"type":"string","nullable":true,"example":"some text"},"redirect_uri":{"type":"string","format":"uri","nullable":true,"example":"some text"},"timestamp":{"type":"string","format":"date-time","example":"2008-04-10T06:30:00.0000000+04:00"},"isExpired":{"type":"boolean","readOnly":true,"example":true}},"additionalProperties":false,"title":"ASC.FederatedLogin.OAuth20Token"}},"additionalProperties":false,"title":"ASC.Files.Core.AuthData"},"corporate":{"type":"boolean","example":true},"roomsStorage":{"type":"boolean","example":true},"customer_title":{"type":"string","nullable":true,"example":"some text"},"provider_id":{"type":"integer","format":"int32","nullable":true,"example":1234},"provider_key":{"type":"string","nullable":true,"example":"some text"}},"additionalProperties":false,"title":"ASC.Web.Files.Services.WCFService.ThirdPartyParams"}},"text/json":{"schema":{"type":"object","properties":{"auth_data":{"type":"object","properties":{"login":{"type":"string","nullable":true,"example":"some text"},"password":{"type":"string","nullable":true,"example":"G9smV9syX4"},"rawToken":{"type":"string","nullable":true,"example":"some text"},"url":{"type":"string","format":"uri","nullable":true,"example":"some text"},"provider":{"type":"string","nullable":true,"example":"some text"},"token":{"type":"object","properties":{"access_token":{"type":"string","nullable":true,"example":"some text"},"refresh_token":{"type":"string","nullable":true,"example":"some text"},"expires_in":{"type":"integer","format":"int64","example":1234},"client_id":{"type":"string","nullable":true,"example":"some text"},"client_secret":{"type":"string","nullable":true,"example":"some text"},"redirect_uri":{"type":"string","format":"uri","nullable":true,"example":"some text"},"timestamp":{"type":"string","format":"date-time","example":"2008-04-10T06:30:00.0000000+04:00"},"isExpired":{"type":"boolean","readOnly":true,"example":true}},"additionalProperties":false,"title":"ASC.FederatedLogin.OAuth20Token"}},"additionalProperties":false,"title":"ASC.Files.Core.AuthData"},"corporate":{"type":"boolean","example":true},"roomsStorage":{"type":"boolean","example":true},"customer_title":{"type":"string","nullable":true,"example":"some text"},"provider_id":{"type":"integer","format":"int32","nullable":true,"example":1234},"provider_key":{"type":"string","nullable":true,"example":"some text"}},"additionalProperties":false,"title":"ASC.Web.Files.Services.WCFService.ThirdPartyParams"}}}},"401":{"description":"Unauthorized"},"403":{"description":"Forbidden"}}}
+>
+  
+</StatusCodes>
+
+
+      

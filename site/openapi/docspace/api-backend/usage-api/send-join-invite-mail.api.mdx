@@ -1,0 +1,71 @@
+---
+id: send-join-invite-mail
+title: "Sends an invitation email"
+description: "Sends an invitation email with a link to the DocSpace."
+sidebar_label: "Sends an invitation email"
+hide_title: true
+hide_table_of_contents: true
+api: eJztVk1v2zAM/SuCjlsWB71sy2npx4BuK1Y0HXYIgoKxmVqtbGkS3TYI8t9H2k6rpusG7FagAZJYEkU+8j1KXmuCy6jHMz1FIlNfRpWpE4wRLjHq+UA7jwHIuPq40GMdsS6+OFMf1zeG8ASM1QMd8FeDkfZdsdLjtc5dTViTPIL31uTt9uwqulrmYl5iBfJEK4/s0y2uMCf244MEI8OBeZWN2PuDWaTA8NiswJgH48UpTx9VHYilCxVw0H7fQNeNtbCwvJVCgwONd1B5GepJUxh8P/q0gtK5Ye4qvRnovLHUBPx3wIPe8G8RoqtQEd6R3rBrKAojm8GeJhkuwUbcdX7WlVJ5CFAhYYiKE1NQVKY2DAiIR1VHj4o9YwyFDHWpTQ+GP3ExnHgj3xNXoB32TuMhueFEPPX87kPELeuJTYtZwL9S9qIoS5vtzdtX7l4Od4I6YPSujh0Ze6OR/D0G27tRsHANKTmJ2ZMCZU19rcgpPneXJlTqis9nWaES1aHLpx5yKV9yLLfN7S2YxwrZFdETCT1/MGy6JB4DnjLEqKBWRm6L1qdq5aJuDZUJ8hTpkKEyFaWT68a72CoVqORRBt5ke8NRtmUikyJ06cp1xJYRww2zyPfZWjeB9axLIj/OMutysCW7G38YfdzLnsjsm6yrbrvezMVT3gRDq6mk2LECMb+AhsqLa1wlwmVUX3mCBcoaknFqNtBSZC6+uzbYylNqd/ZwYx5tVXzfgn9omKRfUrGL86VroSSC/GwsikilEF1yN3tiK8WsoOWtR/osQbvlSS71/2e1L1ciPgbVkrTuGZ5JLdmSOW65vO+3HZ6ZHqFSNqzXC26rH8FuNjLNZQ3MzYwfbyCY7riYzTlQiVAwtSKMlj590GX07lxgibltOjZ3GmAz2O6Y5Dl6SmzTVOaJbE+/T8/ZbNG/EFV8LPBsgFt5WeLfsdbyYiUxWmG1c2ttob5suMN5vYssn98Wc2BL
+sidebar_class_name: "post api-method"
+info_path: site/openapi/docspace/api-backend/usage-api/asc-files
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Sends an invitation email"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/api/2.0/settings/sendjoininvite"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Sends an invitation email with a link to the DocSpace.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"email":{"type":"string","description":"Email","format":"email","nullable":true,"example":"Audie70@yahoo.com"},"culture":{"type":"string","description":"Culture","nullable":true,"example":"some text"}},"additionalProperties":false,"description":"Request parameters for administrator message settings","title":"ASC.Web.Api.ApiModel.RequestsDto.AdminMessageBaseSettingsRequestsDto"}},"text/json":{"schema":{"type":"object","properties":{"email":{"type":"string","description":"Email","format":"email","nullable":true,"example":"Audie70@yahoo.com"},"culture":{"type":"string","description":"Culture","nullable":true,"example":"some text"}},"additionalProperties":false,"description":"Request parameters for administrator message settings","title":"ASC.Web.Api.ApiModel.RequestsDto.AdminMessageBaseSettingsRequestsDto"}},"application/*+json":{"schema":{"type":"object","properties":{"email":{"type":"string","description":"Email","format":"email","nullable":true,"example":"Audie70@yahoo.com"},"culture":{"type":"string","description":"Culture","nullable":true,"example":"some text"}},"additionalProperties":false,"description":"Request parameters for administrator message settings","title":"ASC.Web.Api.ApiModel.RequestsDto.AdminMessageBaseSettingsRequestsDto"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Message about sending a link to confirm joining the DocSpace","content":{"text/plain":{"schema":{}},"application/json":{"schema":{}},"text/json":{"schema":{}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

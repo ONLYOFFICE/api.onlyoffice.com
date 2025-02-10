@@ -1,0 +1,71 @@
+---
+id: set-product-administrator
+title: "Set a product administrator"
+description: "Sets the selected user as a product administrator with the ID specified in the request."
+sidebar_label: "Set a product administrator"
+hide_title: true
+hide_table_of_contents: true
+api: eJztVktv2zgQ/isCj7u25ch21vEtbVog2BYbNA32EBjFWBxFbGWRS1JJU8P/fWdIyZHtBs2lpxbwgyLn+c03I26EhzsnFrfiGr1X9Z1L0uQa88Yq/yiWA6ENWvBK15dSLIRDf2W1bHJ/LteqVs7TobZiICz+16Dzr7R8FIuNyHXtsfa8BGMqlQcb6Wena95zeYlr4JV/NEiG9eoz5p7sGMsevULHpyY6Y987UfJJcZKoRJdbZdgwbbdxJZcXdFRouwbyLppGSXrGr7A2FWvnE1nIYjYb5jifDKdZPh3O53I+PMvGOMtkcXpSTMR2IBqH9iVub0juRz4n01M4kWezIeBkPpzOs2wIRbYa/iVB4hwmxcnpjH3CHqZPrldaVwj1ke+9GiT0qbXvO/a2wW2wKxWrQHXVQ7eAyuGhya70SVvPxICFNXq0jix75UNC59evR//ianRuFH/fa4nV6EPUcBdejzozvT3BkXj86n+T4BcnQX8g/PHnbzb8ymzgWCw6o2sXy5uNx/y3H8I/gQrJg/Jl4ktMuBKJ6+JSdcSZZBeJ2dV8EMV4Ad9HpfeSCoPJVKD2uXhI1yOyPj/UYm7T8clxOjc1NL7UVn1DKYLQ5FjorbYrJSXWoWe6ZOlNTW9Ul39iC5++IG8QgMDseiABFMvt8riC3gXcHFaEI8qIDLgEdnjtQ7RD+vIicQZzVSjSUnXYa3kwIpdEg1LzxcA0oVPBl/SQglFpNhqnrr1TpF34KRxcGyiOeyYSp9XYipRL780iTSudQ1Vq5xfz8VmWHhH9HZ8nUV1wyp2Lay5A5NI+Trveoej+po2BqInG/NwXGwimAFFDf1EYoOfKfni63bzpWmlvFL1siDzNkJcNgKP+D+3LIRY6JNRrvreqQm5IhjNCdJ8xuQxhuIbAzTZfosNzhT+EuXeR+4ksauvS60GetsyGTUupWy4aSRKpAmkirUSvLw6hIkYwe1h1s1mBwxtbbbe8TW4ttw0t78EqWDGEt0tyWVIfEZuYi4Ex4nVMfviRA2TxqokEOpgI20GncZ7naHxPtp/UstcwVzcfSWrVXpfXNC5p08IDX6XpdyEE373ZRaBy2NuICuq7Bu5YNjoOA6phiPr0jkRuF5xOd1Q/9tPY531MgH85ne9qbDaxdwjITj4ePavRQtpJBxQo6P8Bi5Y+Aw==
+sidebar_class_name: "put api-method"
+info_path: site/openapi/docspace/api-backend/usage-api/asc-files
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Set a product administrator"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"put"}
+  path={"/api/2.0/settings/security/administrator"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Sets the selected user as a product administrator with the ID specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"productId":{"type":"string","description":"Product ID","format":"uuid","example":"c3dfdf55-ce83-42c4-88d8-920e52df61f3"},"userId":{"type":"string","description":"User ID","format":"uuid","example":"346a1d95-ae38-4822-af2b-7dade8a3f165"},"administrator":{"type":"boolean","description":"Administrator or not","example":true}},"additionalProperties":false,"description":"Security request parameters","title":"ASC.Web.Api.ApiModel.RequestsDto.SecurityRequestsDto"}},"text/json":{"schema":{"type":"object","properties":{"productId":{"type":"string","description":"Product ID","format":"uuid","example":"c3dfdf55-ce83-42c4-88d8-920e52df61f3"},"userId":{"type":"string","description":"User ID","format":"uuid","example":"346a1d95-ae38-4822-af2b-7dade8a3f165"},"administrator":{"type":"boolean","description":"Administrator or not","example":true}},"additionalProperties":false,"description":"Security request parameters","title":"ASC.Web.Api.ApiModel.RequestsDto.SecurityRequestsDto"}},"application/*+json":{"schema":{"type":"object","properties":{"productId":{"type":"string","description":"Product ID","format":"uuid","example":"c3dfdf55-ce83-42c4-88d8-920e52df61f3"},"userId":{"type":"string","description":"User ID","format":"uuid","example":"346a1d95-ae38-4822-af2b-7dade8a3f165"},"administrator":{"type":"boolean","description":"Administrator or not","example":true}},"additionalProperties":false,"description":"Security request parameters","title":"ASC.Web.Api.ApiModel.RequestsDto.SecurityRequestsDto"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Object with the user security information: product ID, user ID, administrator or not","content":{"text/plain":{"schema":{}},"application/json":{"schema":{}},"text/json":{"schema":{}}}},"401":{"description":"Unauthorized"},"403":{"description":"Forbidden"}}}
+>
+  
+</StatusCodes>
+
+
+      
