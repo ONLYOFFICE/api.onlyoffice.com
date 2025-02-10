@@ -12,7 +12,7 @@ ONLYOFFICE Docs uses the following WOPI operations:
 - [RefreshLock](refreshlock.md) - refreshes the lock on a file by resetting its automatic expiration timer to 30 minutes.
 - [Unlock](unlock.md) - allows for file editing.
 - [PutFile](PutFile.md) - requests a message to update a file for the `HTTP://server/<...>/wopi*/files/<id>/contents` operation.
-- [PutRelativeFile](PutRelativeFile.md) - creates a new file on the host based on the current file.
+- [PutRelativeFile](putrelativefile.md) - creates a new file on the host based on the current file.
 - [RenameFile](RenameFile.md) - renames a file.
 
 ## Possible error codes and their description

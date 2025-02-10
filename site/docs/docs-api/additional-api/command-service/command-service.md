@@ -12,11 +12,11 @@ See the available command types below to find more about them.
 
 | Command                                       | Description                                                                                                                        |
 | --------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
-| [deleteForgotten](deleteForgotten.md)   | This command allows to delete a forgotten file.                                                                                    |
+| [deleteForgotten](deleteforgotten.md)   | This command allows to delete a forgotten file.                                                                                    |
 | [drop](drop.md)                         | This command allows to disconnect the specified users from the document editing service.                                           |
 | [forcesave](forcesave.md)               | This command allows to forcibly save the document being edited without closing it.                                                 |
-| [getForgotten](getForgotten.md)         | This command allows to request a forgotten file.                                                                                   |
-| [getForgottenList](getForgottenList.md) | This command allows to request a list of the forgotten files.                                                                      |
+| [getForgotten](getforgotten.md)         | This command allows to request a forgotten file.                                                                                   |
+| [getForgottenList](getforgottenlist.md) | This command allows to request a list of the forgotten files.                                                                      |
 | [info](info.md)                         | This command allows to request a document status and the list of the identifiers of the users who opened the document for editing. |
 | [license](license.md)                   | This command allows to request the license from ONLYOFFICE Docs with information about the server and user quota.                  |
 | [meta](meta.md)                         | This command allows to update the meta information of the document for all collaborative editors.                                  |

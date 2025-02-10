@@ -394,7 +394,7 @@ Presence: required by configuration
 
 ### url
 
-Defines the absolute URL to the document to be converted. Be sure to add a [token](../../get-started/how-it-works/Security.md) when using local links. Otherwise, an error will occur.
+Defines the absolute URL to the document to be converted. Be sure to add a [token](../../get-started/how-it-works/security.md) when using local links. Otherwise, an error will occur.
 
 Type: string
 

@@ -147,7 +147,7 @@ Asc.plugin.attachEvent("onContextMenuShow", (options) => {
 
 ## Clicking a context menu item
 
-1. [Subscibe](../Interacting%20with%20editors/overview/How%20to%20attach%20events.md) to the **onContextMenuClick** event which is called when the context menu button has been clicked.
+1. [Subscibe](../interacting-with-editors/overview/how-to-attach-events.md) to the **onContextMenuClick** event which is called when the context menu button has been clicked.
 
    Parameters:
 

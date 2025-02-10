@@ -263,7 +263,7 @@ public class WebEditor : IHttpHandler
 
 > *PATH\_FOR\_SAVE* is the absolute path to your computer folder where the file will be saved including the file name.
 
-On the [.Net example](../get-started/language-specific-examples/Net%20example.md) page, you will learn how to integrate ONLYOFFICE Docs into your web application written on .Net (C#) or .Net (C# MVC).
+On the [.Net example](../get-started/language-specific-examples/net-example.md) page, you will learn how to integrate ONLYOFFICE Docs into your web application written on .Net (C#) or .Net (C# MVC).
 
 ### Java document save example
 
@@ -306,7 +306,7 @@ public class IndexServlet extends HttpServlet {
 
 > *pathForSave* is the absolute path to your computer folder where the file will be saved including the file name.
 
-On the [Java example](../get-started/language-specific-examples/Java%20example.md) and [Java integration SDK](../get-started/language-specific-examples/Java%20integration%20SDK.md) pages, you will learn how to integrate ONLYOFFICE Docs into your web application written on Java.
+On the [Java example](../get-started/language-specific-examples/java-example.md) and [Java integration SDK](../get-started/language-specific-examples/java-integration-sdk.md) pages, you will learn how to integrate ONLYOFFICE Docs into your web application written on Java.
 
 ### Node.js document save example
 
@@ -346,7 +346,7 @@ app.post("/track", (req, res) => {
 
 > *pathForSave* is the absolute path to your computer folder where the file will be saved including the file name.
 
-On the [NodeJS example](../get-started/language-specific-examples/NodeJS%20example.md) page, you will learn how to integrate ONLYOFFICE Docs into your web application written on Node.js.
+On the [NodeJS example](../get-started/language-specific-examples/nodejs-example.md) page, you will learn how to integrate ONLYOFFICE Docs into your web application written on Node.js.
 
 ### PHP document save example
 
@@ -375,7 +375,7 @@ echo "{\"error\":0}";
 
 > *$path\_for\_save* is the absolute path to your computer folder where the file will be saved including the file name.
 
-On the [PHP example](../get-started/language-specific-examples/PHP%20example.md) page, you will learn how to integrate ONLYOFFICE Docs into your web application written on PHP.
+On the [PHP example](../get-started/language-specific-examples/php-example.md) page, you will learn how to integrate ONLYOFFICE Docs into your web application written on PHP.
 
 ### Ruby document save example
 
@@ -412,4 +412,4 @@ end
 
 > *path\_for\_save* is the absolute path to your computer folder where the file will be saved including the file name.
 
-On the [Ruby example](../get-started/language-specific-examples/Ruby%20example.md) page, you will learn how to integrate ONLYOFFICE Docs into your web application written on Ruby.
+On the [Ruby example](../get-started/language-specific-examples/ruby-example.md) page, you will learn how to integrate ONLYOFFICE Docs into your web application written on Ruby.

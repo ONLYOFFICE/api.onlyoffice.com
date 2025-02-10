@@ -101,7 +101,7 @@ The steps below explain the process of inserting data into the spreadsheet by an
    })
    ```
 
-   Where the **example.com** is the name of the server where **document manager** and **document storage service** are installed. See the [How it works](./Inserting%20external%20data.md) section to find out more on ONLYOFFICE Docs service client-server interactions.
+   Where the **example.com** is the name of the server where **document manager** and **document storage service** are installed. See the [How it works](./inserting-external-data.md) section to find out more on ONLYOFFICE Docs service client-server interactions.
 
 ## Working with external links
 

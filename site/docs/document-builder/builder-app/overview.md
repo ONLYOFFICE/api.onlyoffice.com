@@ -14,9 +14,9 @@ docbuilder.exe mydocument.docbuilder
 
 Here **docbuilder** is the name of **ONLYOFFICE Document Builder** executive file. It must be used together with the path if the command is run from the folder different from the one where the executive is placed. The command will look like **docbuilder.exe** for Windows version and **documentbuilder** for Linux. The **mydocument.docbuilder** parameter is the name of the script file that will form the document contents (use it with the path if needed).
 
-Visit the [.docbuilder](./Using%20.docbuilder%20file.md) file section for more information about the file structure and rules used when creating it.
+Visit the [.docbuilder](./using-docbuilder-file.md) file section for more information about the file structure and rules used when creating it.
 
-See the examples in some of the most popular programming languages at [this page](../Builder%20Server/overview.md).
+See the examples in some of the most popular programming languages at [this page](../builder-server/overview.md).
 
 ## Known issues
 

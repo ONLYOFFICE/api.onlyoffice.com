@@ -14,7 +14,7 @@ You can run multiple panel plugins at the same time. For each plugin, a separate
 
 To create a modal window / panel for the plugin:
 
-1. In the [plugin code](../Interacting%20with%20editors/overview/overview.md) file, specify the modal window / panel settings that are similar to [variations](../structure/manifest/manifest.md#variations) in the plugin config.
+1. In the [plugin code](../interacting-with-editors/overview/overview.md) file, specify the modal window / panel settings that are similar to [variations](../structure/manifest/manifest.md#variations) in the plugin config.
 
    Parameters:
 

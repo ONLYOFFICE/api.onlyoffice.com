@@ -2,7 +2,7 @@
 sidebar_position: -2
 ---
 
-**Connector** is a class that allows editing text documents, spreadsheets, presentations, and fillable forms from an external source. The examples of using Automation API can be found [here](../get-started/External%20access%20to%20the%20document%20editing/External%20access%20to%20the%20document%20editing.md).
+**Connector** is a class that allows editing text documents, spreadsheets, presentations, and fillable forms from an external source. The examples of using Automation API can be found [here](../get-started/external-access-to-the-document-editing/external-access-to-the-document-editing.md).
 
 To create the connector, use the [createConnector](./methods.md#createconnector) method of the **document editor** object:
 
@@ -18,7 +18,7 @@ The connector has the same interface as plugins. Below you can find methods that
 
 ## addContextMenuItem
 
-The function called to add an item to the context menu. The process of working with the context menu is the same as for [plugins](../../plugin-and-macros/customization/Context%20menu.md) except for the *onClick* method, which is used instead of subscribing by ID.
+The function called to add an item to the context menu. The process of working with the context menu is the same as for [plugins](../../plugin-and-macros/customization/context-menu.md) except for the *onClick* method, which is used instead of subscribing by ID.
 
 Parameters:
 
@@ -53,7 +53,7 @@ connector.attachEvent("onContextMenuShow", (options) => {
 
 ## addToolbarMenuItem
 
-The function called to add an item to the toolbar menu. The process of working with the toolbar menu is the same as for [plugins](../../plugin-and-macros/customization/Toolbar.md) except for the *onClick* method, which is used instead of subscribing by ID.
+The function called to add an item to the toolbar menu. The process of working with the toolbar menu is the same as for [plugins](../../plugin-and-macros/customization/toolbar.md) except for the *onClick* method, which is used instead of subscribing by ID.
 
 Parameters:
 

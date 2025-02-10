@@ -2,7 +2,7 @@
 sidebar_position: -1
 ---
 
-Use the guides for [C++](C++%20samples%20guide.md), [.Net](Net%20samples%20guide.md), [Python](Python%20samples%20guide.md), and [Java](Java%20samples%20guide.md) to run the samples.
+Use the guides for [C++](./c-samples-guide.md), [.Net](./net-samples-guide.md), [Python](./python-samples-guide.md), and [Java](./java-samples-guide.md) to run the samples.
 
 ## Filling spreadsheet
 

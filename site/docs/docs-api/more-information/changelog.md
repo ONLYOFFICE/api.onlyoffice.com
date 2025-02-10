@@ -49,7 +49,7 @@ The list of changes of ONLYOFFICE Docs API.
 - Added the *visible* field to the [editorConfig.customization.logo](../usage-api/config/editor/customization/customization-standard-branding.md#logo) parameter.
 - Added the [formsubmit](../using-wopi/wopi-discovery.md#wopi-actions) action to the WOPI discovery.
 - The [editorConfig.customization.goback.requestClose](../usage-api/config/editor/customization/customization-standard-branding.md#goback) field is deprecated, please use the [editorConfig.customization.close](../usage-api/config/editor/customization/customization-standard-branding.md#close) field instead.
-- Added the [Save Copy As](../using-wopi/wopi-rest-api/PutRelativeFile.md#save-copy-as) functionality to WOPI.
+- Added the [Save Copy As](../using-wopi/wopi-rest-api/putrelativefile.md#save-copy-as) functionality to WOPI.
 - Change the default value of the [editorConfig.customization.hideRightMenu](../usage-api/config/editor/customization/customization-standard-branding.md#hiderightmenu) parameter to *true*.
 
 ## Version 8.0
@@ -78,7 +78,7 @@ The list of changes of ONLYOFFICE Docs API.
 - The [events.onRequestCompareFile](../usage-api/config/events.md#onrequestcomparefile) event is deprecated, please use the [events.onRequestSelectDocument](../usage-api/config/events.md#onrequestselectdocument) event instead.
 - The [setRevisedFile](../usage-api/methods.md#setrevisedfile) method is deprecated, please use the [setRequestedDocument](../usage-api/methods.md#setrequesteddocument) method instead.
 - Added the [events.onRequestOpen](../usage-api/config/events.md#onrequestopen) event.
-- Added the [deleteForgotten](../additional-api/command-service/deleteForgotten.md), [getForgotten](../additional-api/command-service/getForgotten.md), and [getForgottenList](../additional-api/command-service/getForgottenList.md) commands.
+- Added the [deleteForgotten](../additional-api/command-service/deleteforgotten.md), [getForgotten](../additional-api/command-service/getforgotten.md), and [getForgottenList](../additional-api/command-service/getforgottenlist.md) commands.
 
 ## Version 7.4
 
@@ -96,7 +96,7 @@ The list of changes of ONLYOFFICE Docs API.
 - Added the [UserCanNotWriteRelative](../using-wopi/wopi-rest-api/checkfileinfo.md#usercannotwriterelative) property to the *CheckFileInfo* WOPI operation.
 - Added a scheme for [editing binary document formats](../using-wopi/editing-binary-documents.md).
 - Added the [convert](../using-wopi/wopi-discovery.md#wopi-actions) action to the WOPI discovery.
-- Added the [PutRelativeFile](../using-wopi/wopi-rest-api/PutRelativeFile.md) WOPI operation.
+- Added the [PutRelativeFile](../using-wopi/wopi-rest-api/putrelativefile.md) WOPI operation.
 
 ## Version 7.2
 
@@ -105,7 +105,7 @@ The list of changes of ONLYOFFICE Docs API.
 - Added the *theme-contrast-dark* theme id to the [editorConfig.customization.uiTheme](../usage-api/config/editor/customization/customization-standard-branding.md#uitheme) parameter.
 - Added the *phone* field to the [editorConfig.customization.customer](../usage-api/config/editor/customization/customization-standard-branding.md#customer) parameter.
 - Added the *connections\_view*, *users\_view\_count* and *users\_view* parameters to the [license response](../additional-api/command-service/license.md#response-parameters).
-- Added the [live viewer](../get-started/how-it-works/Viewing.md) mode to the text document, spreadsheet and presentation editors.
+- Added the [live viewer](../get-started/how-it-works/viewing.md) mode to the text document, spreadsheet and presentation editors.
 - Added the [embedview](../using-wopi/wopi-discovery.md#wopi-actions) action to the WOPI discovery.
 - The [services.CoAuthoring.secret.browser.string](../additional-api/signature/signature.md#parameters) parameter is deprecated, please use the [services.CoAuthoring.secret.inbox.string](../additional-api/signature/signature.md#parameters) parameter instead.
 
@@ -142,7 +142,7 @@ The list of changes of ONLYOFFICE Docs API.
 - Added the *ooxml* and *odf* values to the [outputtype](../additional-api/conversion-api/request.md#outputtype) parameter of the conversion request.
 - Added the *fileType* and *previous.fileType* parameters to the [setHistoryData](../usage-api/methods.md#sethistorydata) method.
 - Added the [filetype](../usage-api/callback-handler.md#filetype) parameter to the *Callback handler*.
-- Added the [fileType](../additional-api/conversion-api/Response.md#filetype) field to the conversion response.
+- Added the [fileType](../additional-api/conversion-api/response.md#filetype) field to the conversion response.
 - Added conversion to [docm, dotm, xlsm, xltm, pptm, potm](../additional-api/conversion-api/conversion-tables.md) formats.
 - The [editorConfig.customization.reviewDisplay](../usage-api/config/editor/customization/customization-standard-branding.md#reviewdisplay), [editorConfig.customization.showReviewChanges](../usage-api/config/editor/customization/customization-standard-branding.md#showreviewchanges), [editorConfig.customization.trackChanges](../usage-api/config/editor/customization/customization-standard-branding.md#trackchanges) parameters are deprecated, please use the [editorConfig.customization.review](../usage-api/config/editor/customization/customization-standard-branding.md#review) parameter instead.
 - Added the [editorConfig.customization.review.hideReviewDisplay](../usage-api/config/editor/customization/customization-standard-branding.md#review) field.
@@ -155,7 +155,7 @@ The list of changes of ONLYOFFICE Docs API.
 - Added opening for [oxps](../usage-api/config/config.md#documenttype) format.
 - Added support for [WOPI protocol](../using-wopi/overview.md).
 - Added the *simple* value to the [editorConfig.customization.reviewDisplay](../usage-api/config/editor/customization/customization-standard-branding.md#reviewdisplay) parameter.
-- Added the [threaded comments](../get-started/how-it-works/Commenting.md#threaded-comments-in-spreadsheets) saving in the spreadsheet files.
+- Added the [threaded comments](../get-started/how-it-works/commenting.md#threaded-comments-in-spreadsheets) saving in the spreadsheet files.
 - Added the [editorConfig.customization.uiTheme](../usage-api/config/editor/customization/customization-standard-branding.md#uitheme) field.
 - Added the possibility to view the [document history](../get-started/how-it-works/document-history.md) for the presentation files.
 - Added the [editorConfig.customization.hideNotes](../usage-api/config/editor/customization/customization-standard-branding.md#hidenotes) field.
@@ -301,7 +301,7 @@ The list of changes of ONLYOFFICE Docs API.
 - Added the [editorConfig.customization.forcesave](../usage-api/config/editor/customization/customization-standard-branding.md#forcesave) field.
 - Added the [editorConfig.customization.showReviewChanges](../usage-api/config/editor/customization/customization-standard-branding.md#showreviewchanges) field.
 - Added the [forcesavetype](../usage-api/callback-handler.md#forcesavetype) field in the callback handler request when force saving the file.
-- Added the [JSON format for response](../additional-api/conversion-api/Response.md) from document conversion service.
+- Added the [JSON format for response](../additional-api/conversion-api/response.md) from document conversion service.
 
 ## Version 4.2
 

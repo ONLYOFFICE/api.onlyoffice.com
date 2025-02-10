@@ -50,4 +50,4 @@ To remove any of these buttons simply do not include the corresponding parameter
 
 > If you decide to hide the **Download** button (*editorConfig.embedded.saveUrl* parameter), please do not forget to also set the *document.permission.download* parameter in the document configuration to **false** to completely disable the possibility to download the file.
 
-Further information about the embedding parameters can be found [at this page](../../usage-api/config/editor/Embedded.md).
+Further information about the embedding parameters can be found [at this page](../../usage-api/config/editor/embedded.md).

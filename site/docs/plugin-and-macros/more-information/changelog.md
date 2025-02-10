@@ -7,7 +7,7 @@ The list of changes for ONLYOFFICE Plugins and Macros API.
 ## Version 8.3
 
 - Added the ShowError method to *window\.Asc.plugin.executeMethod*.
-- Added the *isActivated* parameter to the [panel settings](../customization/Windows%20and%20panels.md#creating-a-window).
+- Added the *isActivated* parameter to the [panel settings](../customization/windows-and-panels.md#creating-a-window).
 
 ## Version 8.2
 
@@ -19,8 +19,8 @@ The list of changes for ONLYOFFICE Plugins and Macros API.
 
 ## Version 8.1
 
-- Added the ability to [add custom functions](../Macros/Adding%20custom%20functions.md) to the spreadsheets using the **Macros** plugin.
-- Added the ability to add the plugin [toolbar menu items](../customization/Toolbar.md).
+- Added the ability to [add custom functions](../macros/adding-custom-functions.md) to the spreadsheets using the **Macros** plugin.
+- Added the ability to add the plugin [toolbar menu items](../customization/toolbar.md).
 - Added the ability to create [multiple left panels](../structure/manifest/variations.md) for plugins.
 - Added the information about the current position of the context menu plugin event.
 - Added the onToolbarMenuClick event.
@@ -100,7 +100,7 @@ The list of changes for ONLYOFFICE Plugins and Macros API.
 - Added the AcceptReviewChanges method to *window\.Asc.plugin.executeMethod*.
 - Added the MoveToNextReviewChange method to *window\.Asc.plugin.executeMethod*.
 - Added the RejectReviewChanges method to *window\.Asc.plugin.executeMethod*.
-- Changed the plugin [localization](../structure/Localization.md) scheme.
+- Changed the plugin [localization](../structure/localization.md) scheme.
 - Added the [ONLYOFFICE Plugin Marketplace](../tutorials/installing/onlyoffice-docs-on-premises.md#adding-plugins-through-the-plugin-manager).
 - Added the ChangeOleObject method to *window\.Asc.plugin.executeMethod*.
 - Added the GetAllForms method to *window\.Asc.plugin.executeMethod*.

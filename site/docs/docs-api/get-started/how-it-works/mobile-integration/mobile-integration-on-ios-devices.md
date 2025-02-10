@@ -153,7 +153,7 @@ The full code for **DocumentServerEditorViewController** can be found [here](htt
 
 ## Integration based on the ONLYOFFICE Docs API
 
-This example demonstrates how to open the ONLYOFFICE editors via WKWebView using the editor configuration described in the [API documentation](../../basic-concepts.md) and the [configuration examples](../../Try%20Docs/Try%20Docs.md).
+This example demonstrates how to open the ONLYOFFICE editors via WKWebView using the editor configuration described in the [API documentation](../../basic-concepts.md) and the [configuration examples](../../try-docs/try-docs.md).
 
 ![iOS integration via api](/assets/images/editor/ios-api-config.png)
 
@@ -202,7 +202,7 @@ This example demonstrates how to open the ONLYOFFICE editors via WKWebView using
    })
    ```
 
-8. To start working with documents, display the ONLYOFFICE editor on your mobile device via the WKWebView component. To do this, specify the **EditorViewController** controller. Request the URL to the *editor.html* file, get its contents and replace the *"\{external\_config\}"* parameter with a config from the *samples.plist* file where all the sample configurations are categorized according to [API documentation Try page](../../Try%20Docs/Try%20Docs.md):
+8. To start working with documents, display the ONLYOFFICE editor on your mobile device via the WKWebView component. To do this, specify the **EditorViewController** controller. Request the URL to the *editor.html* file, get its contents and replace the *"\{external\_config\}"* parameter with a config from the *samples.plist* file where all the sample configurations are categorized according to [API documentation Try page](../../try-docs/try-docs.md):
 
    ``` swift
    private func load() {

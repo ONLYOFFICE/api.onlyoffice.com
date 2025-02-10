@@ -4,8 +4,8 @@ sidebar_position: -2
 
 The plugins and macros can interact with the editors using different events, methods, and commands. Here you will find how to use them.
 
-- [How to attach events](How%20to%20attach%20events.md)
-- [How to call methods](How%20to%20call%20methods.md)
+- [How to attach events](how-to-attach-events.md)
+- [How to call methods](how-to-call-methods.md)
 - [How to call commands](How%20to%20call%20commands.md)
 
 The main plugin code is placed to a *.js* file which describes what and how must be done by the plugin. This file is placed to the plugin root folder together with the [config.json](../../structure/manifest/manifest.md) and [index.html](../../structure/entry-point.md) files.
@@ -40,4 +40,4 @@ When the plugin object is being initialized (*window.Asc.plugin.init = function 
 
 The only OK button (*window.Asc.plugin.button = function (id) \{...\}*) is used to create the text and finish the work with the plugin.
 
-More existing open source plugin examples can be found [here](../../tutorials/Samples/Samples.md).
+More existing open source plugin examples can be found [here](../../tutorials/samples/samples.md).

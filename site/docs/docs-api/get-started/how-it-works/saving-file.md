@@ -26,7 +26,7 @@ The reference figure and the steps below explain the process of saving a documen
 
 2. Create an *html* file to [Open the document](./opening-file.md#how-this-can-be-done-in-practice).
 
-3. In the configuration script for Document Editor initialization specify the URL to the file with the *Callback handler* in the [parameter line](../../usage-api/config/editor/editor.md#callbackurl). Be sure to add a [token](./Security.md) when using local links. Otherwise, an error will occur.
+3. In the configuration script for Document Editor initialization specify the URL to the file with the *Callback handler* in the [parameter line](../../usage-api/config/editor/editor.md#callbackurl). Be sure to add a [token](./security.md) when using local links. Otherwise, an error will occur.
 
    ``` ts
    const docEditor = new DocsAPI.DocEditor("placeholder", {

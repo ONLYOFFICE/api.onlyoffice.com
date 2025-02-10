@@ -20,4 +20,4 @@ Manages review process from an external source.
 
 Fills in the empty cells in the form.
 
-[More](Filling%20out%20the%20form.md)
+[More](filling-out-the-form.md)

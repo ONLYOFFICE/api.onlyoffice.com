@@ -67,7 +67,7 @@ Example: "Example Document Title.docx"
 
 ## url
 
-Defines the absolute URL where the source viewed or edited document is stored. Be sure to add a [token](../../../get-started/how-it-works/Security.md) when using local links. Otherwise, an error will occur.
+Defines the absolute URL where the source viewed or edited document is stored. Be sure to add a [token](../../../get-started/how-it-works/security.md) when using local links. Otherwise, an error will occur.
 
 > This parameter is required.
 

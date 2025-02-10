@@ -56,7 +56,7 @@ The complete translations in the [config.json](./manifest/manifest.md) for the [
 
 ## Localizing index.html and plugin code files
 
-Find all the strings you want to be localized from the [index.html](./entry-point.md) and the [pluginCode.js](../Interacting%20with%20editors/overview/overview.md) files and create their list. Then create the *translations* folder in the plugin directory, so that the structure looked like this:
+Find all the strings you want to be localized from the [index.html](./entry-point.md) and the [pluginCode.js](../interacting-with-editors/overview/overview.md) files and create their list. Then create the *translations* folder in the plugin directory, so that the structure looked like this:
 
 ``` ini
 [translations]
@@ -117,7 +117,7 @@ Add the *id* attribute to it, so that it looked like this:
 <button id="button_new">New</button>
 ```
 
-After that add the window.Asc.plugin.onTranslate function to the [pluginCode.js](../Interacting%20with%20editors/overview/overview.md) file:
+After that add the window.Asc.plugin.onTranslate function to the [pluginCode.js](../interacting-with-editors/overview/overview.md) file:
 
 ``` ts
 window.Asc.plugin.onTranslate = () => {

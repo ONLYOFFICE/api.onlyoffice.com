@@ -40,7 +40,7 @@ After the editing is finished, the [document saving](./saving-file.md) process t
 
    Where the **documentserver** is the name of the server with the ONLYOFFICE Docs installed.
 
-4. Add the script initializing the **Document Editor** for the *div* element with the configuration for the document you want to open. Be sure to add a [token](./Security.md) when using local links. Otherwise, an error will occur.
+4. Add the script initializing the **Document Editor** for the *div* element with the configuration for the document you want to open. Be sure to add a [token](./security.md) when using local links. Otherwise, an error will occur.
 
    ``` ts
    const docEditor = new DocsAPI.DocEditor("placeholder", {

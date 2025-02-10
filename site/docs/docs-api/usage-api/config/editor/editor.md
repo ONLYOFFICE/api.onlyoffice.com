@@ -22,7 +22,7 @@ Example: `https://example.com/url-to-callback.ashx`
 
 Defines the co-editing mode (*Fast* or *Strict*) and the possibility to change it.
 
-This parameter is used to apply the [co-editing](../../../get-started/how-it-works/Co-editing.md#co-editing-modes) and [viewing](../../../get-started/how-it-works/Viewing.md) modes.
+This parameter is used to apply the [co-editing](../../../get-started/how-it-works/co-editing.md#co-editing-modes) and [viewing](../../../get-started/how-it-works/viewing.md) modes.
 
 Type: object
 

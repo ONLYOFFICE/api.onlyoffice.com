@@ -81,9 +81,9 @@ Where **example.com** is the name of the server where **document manager** and *
 | fileType        | string           | required | Defines a type of the image to be inserted into the file. Can be: *bmp*, *gif*, *jpe*, *jpeg*, *jpg*, *png*. Deprecated since version 7.0, please use the *images.fileType* parameter instead.                                                                                  |
 | images          | array of objects | required | Defines an array of images to be inserted.                                                                                                                                                                                                                                      |
 | images.fileType | string           | required | Defines a type of the image to be inserted into the file. Can be: *bmp*, *gif*, *jpe*, *jpeg*, *jpg*, *png*, *tif*, *tiff*.                                                                                                                                                     |
-| images.url      | string           | required | Defines an absolute URL where the source image is stored. Be sure to add a [token](../get-started/how-it-works/Security.md) when using local links.                                                                                                              |
+| images.url      | string           | required | Defines an absolute URL where the source image is stored. Be sure to add a [token](../get-started/how-it-works/security.md) when using local links.                                                                                                              |
 | token           | string           | optional | Defines the encrypted signature added to the parameter in the form of a [token](../additional-api/signature/browser.md#insertimage).                                                                                                                                 |
-| url             | string           | required | Defines an absolute URL where the source image is stored. Be sure to add a [token](../get-started/how-it-works/Security.md) when using local links. Otherwise, an error will occur. Deprecated since version 7.0, please use the *images.url* parameter instead. |
+| url             | string           | required | Defines an absolute URL where the source image is stored. Be sure to add a [token](../get-started/how-it-works/security.md) when using local links. Otherwise, an error will occur. Deprecated since version 7.0, please use the *images.url* parameter instead. |
 
   > Prior to version 7.0, this method allowed to insert only one image and had the following parameters:
   >
@@ -314,7 +314,7 @@ Where **example.com** is the name of the server where **document manager** and *
 | --------- | ------ | -------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | fileType  | string | required | Defines the type of spreadsheet for mail merge in the file. Can be: *csv*, *fods*, *ods*, *ots*, *xls*, *xlsm*, *xlsx*, *xlt*, *xltm*, *xltx*.                                                     |
 | token     | string | optional | Defines the encrypted signature added to the parameter in the form of a [token](../additional-api/signature/browser.md#setmailmergerecipients).                                         |
-| url       | string | required | Defines the absolute URL where the source data is stored. Be sure to add a [token](../get-started/how-it-works/Security.md) when using local links. Otherwise, an error will occur. |
+| url       | string | required | Defines the absolute URL where the source data is stored. Be sure to add a [token](../get-started/how-it-works/security.md) when using local links. Otherwise, an error will occur. |
 
 ## setReferenceData
 
@@ -420,7 +420,7 @@ Where **example.com** is the name of the server where **document manager** and *
 | c         | string | required | Defines a type of document selection from the event. Can be: *compare*, *combine*, or *insert-text*. The default value is "compare".                                                                   |
 | fileType  | string | required | Defines a type of the document to be selected. Can be: *doc*, *docm*, *docx*, *dot*, *dotm*, *dotx*, *epub*, *fodt*, *odt*, *ott*, *rtf*, *wps*.                                                       |
 | token     | string | optional | Defines the encrypted signature added to the parameter in the form of a [token](../additional-api/signature/browser.md#setrequesteddocument).                                               |
-| url       | string | required | Defines the absolute URL where the source document is stored. Be sure to add a [token](../get-started/how-it-works/Security.md) when using local links. Otherwise, an error will occur. |
+| url       | string | required | Defines the absolute URL where the source document is stored. Be sure to add a [token](../get-started/how-it-works/security.md) when using local links. Otherwise, an error will occur. |
 
 ## setRequestedSpreadsheet
 
@@ -442,7 +442,7 @@ Where **example.com** is the name of the server where **document manager** and *
 | c         | string | required | Defines a type of spreadsheet selection from the event. Can be *mailmerge*.                                                                                                                        |
 | fileType  | string | required | Defines the type of spreadsheet for mail merge in the file. Can be: *csv*, *fods*, *ods*, *ots*, *xls*, *xlsm*, *xlsx*, *xlt*, *xltm*, *xltx*.                                                     |
 | token     | string | optional | Defines the encrypted signature added to the parameter in the form of a [token](../additional-api/signature/browser.md#setrequestedspreadsheet).                                        |
-| url       | string | required | Defines the absolute URL where the source data is stored. Be sure to add a [token](../get-started/how-it-works/Security.md) when using local links. Otherwise, an error will occur. |
+| url       | string | required | Defines the absolute URL where the source data is stored. Be sure to add a [token](../get-started/how-it-works/security.md) when using local links. Otherwise, an error will occur. |
 
 ## setRevisedFile
 
@@ -464,7 +464,7 @@ Where **example.com** is the name of the server where **document manager** and *
 | --------- | ------ | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | fileType  | string | required | Defines the type of document for comparing. Can be: *doc*, *docm*, *docx*, *dot*, *dotm*, *dotx*, *epub*, *fodt*, *odt*, *ott*, *rtf*, *wps*.                                                          |
 | token     | string | optional | Defines the encrypted signature added to the parameter in the form of a [token](../additional-api/signature/browser.md#setrevisedfile).                                                     |
-| url       | string | required | Defines the absolute URL where the source document is stored. Be sure to add a [token](../get-started/how-it-works/Security.md) when using local links. Otherwise, an error will occur. |
+| url       | string | required | Defines the absolute URL where the source document is stored. Be sure to add a [token](../get-started/how-it-works/security.md) when using local links. Otherwise, an error will occur. |
 
 ## setSharingSettings
 

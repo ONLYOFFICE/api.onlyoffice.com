@@ -10,31 +10,31 @@ The following examples will show you how to use ONLYOFFICE macros and compare th
 
 In this example we are generating word definitions in our documents using the Dictionary API offered by API Ninjas.
 
-[More](Text%20document%20editor/Generate%20word%20definitions.md)
+[More](text-document-editor/generate-word-definitions.md)
 
 ### Insert text
 
 In this example we are inserting text into the document at the current cursor position.
 
-[More](Text%20document%20editor/Insert%20text.md)
+[More](text-document-editor/insert-text.md)
 
 ### Insert unique id
 
 In this example we are inserting a unique id into a form document.
 
-[More](Text%20document%20editor/Insert%20unique%20id.md)
+[More](text-document-editor/insert-unique-id.md)
 
 ### Remove extra spaces
 
 In this example we are removing extra spaces in the text document. 
 
-[More](Text%20document%20editor/Remove%20extra%20spaces.md)
+[More](text-document-editor/remove-extra-spaces.md)
 
 ### Replace words in document
 
 In this example we are replacing words in the text editor.
 
-[More](Text%20document%20editor/Replace%20words%20in%20document.md)
+[More](text-document-editor/replace-words-in-document.md)
 
 ## Spreadsheet editor
 
@@ -42,121 +42,121 @@ In this example we are replacing words in the text editor.
 
 In this example we are creating the chart from the data in the "C5:D7" cell range.
 
-[More](Spreadsheet%20editor/Add%20chart.md)
+[More](spreadsheet-editor/add-chart.md)
 
 ### Add comments and change cell colors in spreadsheet
 
 In this example we are adding comments and changing the background colors of selected cells.
 
-[More](Spreadsheet%20editor/Add%20comments%20and%20change%20cell%20colors%20in%20spreadsheet.md)
+[More](spreadsheet-editor/add-comments-and-change-cell-colors-in-spreadsheet.md)
 
 ### Change cell background color
 
 In this example we are seting the background color of the cell B3 to blue.
 
-[More](Spreadsheet%20editor/Change%20cell%20background%20color.md)
+[More](spreadsheet-editor/change-cell-background-color.md)
 
 ### Change cell font color
 
 In this example we are seting the font color of the cell B4 to red.
 
-[More](Spreadsheet%20editor/Change%20cell%20font%20color.md)
+[More](spreadsheet-editor/change-cell-font-color.md)
 
 ### Complete address information
 
 In this example we are completing address information in the spreadsheet.
 
-[More](Spreadsheet%20editor/Complete%20address%20information.md)
+[More](spreadsheet-editor/complete-address-information.md)
 
 ### Find company logos
 
 In this example we are finding company logos in a spreadsheet using the Logo API offered by API Ninjas.
 
-[More](Spreadsheet%20editor/Find%20company%20logos.md)
+[More](spreadsheet-editor/find-company-logos.md)
 
 ### Format range as table
 
 In this example we are formatting the range of cells as a table.
 
-[More](Spreadsheet%20editor/Format%20range%20as%20a%20table.md)
+[More](spreadsheet-editor/format-range-as-a-table.md)
 
 ### Hide or unhide rows and columns
 
 In this example we are hiding or unhiding specified rows and/or columns in the spreadsheet.
 
-[More](Spreadsheet%20editor/Hide%20or%20unhide%20rows%20and%20columns.md)
+[More](spreadsheet-editor/hide-or-unhide-rows-and-columns.md)
 
 ### Highlight duplicates
 
 In this example we are highlighting duplicates in the selected area with different colors to recognize duplicated values quickly.
 
-[More](Spreadsheet%20editor/Highlight%20duplicates.md)
+[More](spreadsheet-editor/highlight-duplicates.md)
 
 ### Import CSV/TXT data
 
 In this example we are importing data from remote CSV/TXT files into the spreadsheet.
 
-[More](Spreadsheet%20editor/Import%20CSV%20or%20TXT%20data.md)
+[More](spreadsheet-editor/import-csv-or-txt-data.md)
 
 ### Import hyperlinks
 
 In this example we are importing hyperlinks between different worksheets in the spreadsheet.
 
-[More](Spreadsheet%20editor/Import%20hyperlinks.md)
+[More](spreadsheet-editor/import-hyperlinks.md)
 
 ### Make cell font bold
 
 In this example we are seting the font of the cell A2 to bold.
 
-[More](Spreadsheet%20editor/Make%20cell%20font%20bold.md)
+[More](spreadsheet-editor/make-cell-font-bold.md)
 
 ### Merge cell range
 
 In this example we are merging selected cell range.
 
-[More](Spreadsheet%20editor/Merge%20cell%20range.md)
+[More](spreadsheet-editor/merge-cell-range.md)
 
 ### Next blank row
 
 In this example we are finding the next available blank row in a worksheet.
 
-[More](Spreadsheet%20editor/Next%20blank%20row.md)
+[More](spreadsheet-editor/next-blank-row.md)
 
 ### Recalculate worksheet values
 
 This macro repeatedly recalculates worksheet cell values within one-second intervals.
 
-[More](Spreadsheet%20editor/Recalculate%20worksheet%20values.md)
+[More](spreadsheet-editor/recalculate-worksheet-values.md)
 
 ### Set column width
 
 In this example we are setting the width for the second ("B") column.
 
-[More](Spreadsheet%20editor/Set%20column%20width.md)
+[More](spreadsheet-editor/set-column-width.md)
 
 ### Sum of highlighted cells
 
 In this example we are summing the answer of all highlighted cells in a spreadsheet.
 
-[More](Spreadsheet%20editor/Sum%20of%20Highlighted%20Cells.md)
+[More](spreadsheet-editor/sum-of-highlighted-cells.md)
 
 ### Unhide all rows and columns
 
 In this example we are unhiding all the rows and columns in a worksheet.
 
-[More](Spreadsheet%20editor/Unhide%20all%20rows%20and%20columns.md)
+[More](spreadsheet-editor/unhide-all-rows-and-columns.md)
 
 ### Unmerge cell range
 
 In this example we are unmerging selected cell range.
 
-[More](Spreadsheet%20editor/Unmerge%20cell%20range.md)
+[More](spreadsheet-editor/unmerge-cell-range.md)
 
 ### Write data to worksheet cell
 
 In this example we are writing the data (the "Hello world" phrase) to fourth column of the third row of the worksheet.
 
-[More](Spreadsheet%20editor/Write%20data%20to%20worksheet%20cell.md)
+[More](spreadsheet-editor/write-data-to-worksheet-cell.md)
 
 ## Presentation editor
 
@@ -164,13 +164,13 @@ In this example we are writing the data (the "Hello world" phrase) to fourth col
 
 In this example we are changing the font family and/or size in the presentation.
 
-[More](Presentation%20editor/Change%20font%20family%20and%20size.md)
+[More](presentation-editor/change-font-family-and-size.md)
 
 ### Remove shapes from slides
 
 In this example we are removing shapes from the presentation.
 
-[More](Presentation%20editor/Remove%20shapes%20from%20slides.md)
+[More](presentation-editor/remove-shapes-from-slides.md)
 
 ## Support
 

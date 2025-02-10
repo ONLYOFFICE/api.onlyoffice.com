@@ -75,7 +75,7 @@ Starting from version 7.2, the **live viewer** is added to the text document, sp
 
 In the following cases, only the common viewer is used:
 
-- in the [embedded mode](../../usage-api/config/editor/Embedded.md);
+- in the [embedded mode](../../usage-api/config/editor/embedded.md);
 - for [WOPI](../../using-wopi/overview.md);
 - when opening the *pdf/djvu/xps* formats.
 

@@ -26,7 +26,7 @@ The steps below explain the process of connecting several editors to the same ht
    <div id="placeholder3"></div>
    ```
 
-4. Add the script initializing the **Document Editor** for the *div* element with the configuration for the document you want to open. Be sure to add a [token](./Security.md) when using local links. Otherwise, an error will occur.
+4. Add the script initializing the **Document Editor** for the *div* element with the configuration for the document you want to open. Be sure to add a [token](./security.md) when using local links. Otherwise, an error will occur.
 
    Each editor has its own initialization script:
 

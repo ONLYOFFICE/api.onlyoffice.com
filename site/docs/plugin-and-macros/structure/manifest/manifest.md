@@ -245,7 +245,7 @@ Example:  `["word"]`
 
 ### variations.events
 
-Plugin events which are used in the current plugin code. Find out how to subscribe to events [here](../../Interacting%20with%20editors/overview/How%20to%20attach%20events.md).
+Plugin events which are used in the current plugin code. Find out how to subscribe to events [here](../../interacting-with-editors/overview/how-to-attach-events.md).
 
 Type: array of EventType
 
@@ -253,7 +253,7 @@ Example:  `["onClick"]`
 
 ### variations.icons
 
-URL to the plugin icon image file. This URL allows setting your own rules for theme (name, type), styles (normal, hover, active), and scaling. More information can be found [here](../Icons.md).
+URL to the plugin icon image file. This URL allows setting your own rules for theme (name, type), styles (normal, hover, active), and scaling. More information can be found [here](../icons.md).
 
 Type: string
 
@@ -261,7 +261,7 @@ Example:  "url_to_icon"
 
 ### variations.icons2
 
-Deprecated. Scalable icons for plugin extensions. More information can be found [here](../Icons.md).
+Deprecated. Scalable icons for plugin extensions. More information can be found [here](../icons.md).
 
 Type: array of objects
 
@@ -512,7 +512,7 @@ Example: `["resources/store/screenshots/screen\_1.png"]`
 
 ### variations.type
 
-Plugin [type](../manifest/Types.md). The following values are available:
+Plugin [type](../manifest/types.md). The following values are available:
 
 - **"system"**. The system plugin is not displayed in the editor interface and is started in the background with the server (or desktop editors start) not interfering with other plugins, so that they can work simultaneously. Such a plugin cannot be disabled in the editor window.
 - **"background"**. The background plugin runs continuously once started. Its state (enabled / disabled) persists between sessions. To access background plugins, click the **Background Plugins** button on the top toolbar.

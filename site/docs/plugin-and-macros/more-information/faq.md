@@ -18,7 +18,7 @@ To localize a plugin, you need to do the following:
 - Localize *index.html* and plugin code files.
 - Apply translations to plugin.
 
-Further information about the localization can be found [at this page](../structure/Localization.md).
+Further information about the localization can be found [at this page](../structure/localization.md).
 
 ## How can I create an About window for my plugin?
 
@@ -40,7 +40,7 @@ All the plugin files and subfolders must be at the archive root. To do it, unpac
 
 ## Can I use Microsoft Office macros in ONLYOFFICE editors?
 
-Microsoft Office macros use Visual Basic for Applications (VBA) scripting language, while ONLYOFFICE editors use JavaScript. But this is not difficult to convert your previously used macros into the new format. Some examples of converting MS VBA macros you can see [here](../Macros/Converting%20VBA%20macros.md).
+Microsoft Office macros use Visual Basic for Applications (VBA) scripting language, while ONLYOFFICE editors use JavaScript. But this is not difficult to convert your previously used macros into the new format. Some examples of converting MS VBA macros you can see [here](../macros/converting-vba-macros.md).
 
 ## Where can I find methods for writing macros?
 

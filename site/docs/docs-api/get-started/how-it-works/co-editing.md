@@ -90,7 +90,7 @@ In order to open a document for editing, the config initialization requires the 
 
 > The key characters can be used: **0-9**, **a-z**, **A-Z**, **-.\_=**. The maximal key length is **128** characters.
 
-Therefore, it is important that users have the same key to open the document for co-editing. The **document editing service** identifies the key of another user (or another tab/editing session for [inline editors](./Inline%20editors.md)) who is trying to open the document, and if that key matches the key of the file, the user is allowed to open it. If the key is different, then a new file, which is not related to other files and file versions, is opened.
+Therefore, it is important that users have the same key to open the document for co-editing. The **document editing service** identifies the key of another user (or another tab/editing session for [inline editors](./inline-editors.md)) who is trying to open the document, and if that key matches the key of the file, the user is allowed to open it. If the key is different, then a new file, which is not related to other files and file versions, is opened.
 
 Once the request for saving the file is sent (the *status* value is equal to *2*) and the operation completion is successful (the response value is equal *\{"error":0\}*), this key can’t be used to open the document for editing. The editor is loaded with an [error message](../../more-information/troubleshooting.md#key). However, it can be used for viewing the document from the cache if it exists.
 
@@ -100,7 +100,7 @@ If the user saves the document before the editing is finished (the *status* valu
 
 1. Add the script initializing the **Document Editor** with *key 1*. The key is unknown and the URL for opening the file is specified.
 
-   Be sure to add a [token](./Security.md) when using local links. Otherwise, an error will occur.
+   Be sure to add a [token](./security.md) when using local links. Otherwise, an error will occur.
 
    Close the **Document Editor**.
 

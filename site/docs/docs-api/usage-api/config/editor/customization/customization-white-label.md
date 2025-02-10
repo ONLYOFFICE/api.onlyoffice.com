@@ -18,7 +18,7 @@ Example: true
 
 Defines if the spell checker setting will be displayed or not. Spell checker setting is available in all editor types.
 
-> Please note that other fields of the `features` object are available for the standard branding and are described [here](Customization%20-%20Standard%20branding.md#features). Only the `features.spellcheck.change` field requires additional payment.
+> Please note that other fields of the `features` object are available for the standard branding and are described [here](customization-standard-branding.md#features). Only the `features.spellcheck.change` field requires additional payment.
 
 Type: boolean
 

@@ -12,13 +12,13 @@ There are several reasons why ONLYOFFICE uses JavaScript for macros:
 
 > Please note that starting from version 7.1, the access to the *window* and *document* objects and the *alert* function is restricted from the macros because the *"use strict"* mode was applied to the macro scripts. Don't forget to declare variables before using them so that the macros work correctly.
 
-You can find ready-to-use macros [here](./Samples/Samples.md) or create your own ones.
+You can find ready-to-use macros [here](./samples/samples.md) or create your own ones.
 
 How to start writing your macro:
 
 1. Open the **View** tab and click **Macros**.
 2. Consult the [API documentation](../../office-api/get-started/overview.md) to write the script.
-3. [Write](./Writing%20macros.md) code for your macro.
+3. [Write](./writing-macros.md) code for your macro.
 4. To rename the macro, click ![Dots icon](/assets/images/plugins/dots.svg) next to the macro name and select **Rename**. Enter a new name for the macro and click **Ok**.
 5. When ready, click ![Play icon](/assets/images/plugins/play.svg) to run your code in the document.
 

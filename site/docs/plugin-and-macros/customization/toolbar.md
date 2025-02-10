@@ -283,7 +283,7 @@ Plugins can be placed on the toolbar: create their own tabs and fill them, add b
 
    ![Toggled button](/assets/images/plugins/toggled-button.png)
 
-2. [Subscibe](../Interacting%20with%20editors/overview/How%20to%20attach%20events.md) to the **onToolbarMenuClick** event which is called when the toolbar menu button has been clicked.
+2. [Subscibe](../interacting-with-editors/overview/how-to-attach-events.md) to the **onToolbarMenuClick** event which is called when the toolbar menu button has been clicked.
 
    Parameters:
 

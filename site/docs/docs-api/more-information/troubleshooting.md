@@ -64,7 +64,7 @@ The editor is loaded with the "The document security token is not correctly form
 
 The **document editing service** requests an encrypted **signature**.
 
-Check if the [token](../usage-api/config/config.md#token) is correct. The token must be generated in accordance with the [JWT (JSON Web Tokens) standard](../get-started/how-it-works/Security.md) and present in **ONLYOFFICE Docs** config.
+Check if the [token](../usage-api/config/config.md#token) is correct. The token must be generated in accordance with the [JWT (JSON Web Tokens) standard](../get-started/how-it-works/security.md) and present in **ONLYOFFICE Docs** config.
 
 ## Deny access
 

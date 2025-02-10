@@ -6,7 +6,7 @@ The online office does not support editing files in the legacy binary formats su
 
 > Usually, conversion does not make any visible changes to the original document layout and formatting. But sometimes it can occur and users might wish to revert to the previous binary document format after it has been converted.
 
-The [convert](./wopi-discovery.md#wopi-actions) WOPI discovery action implements the possibility to convert a file in the binary format into the modern OOXML format. A host must also support the [PutRelativeFile](./wopi-rest-api/PutRelativeFile.md) WOPI operation. The process of the binary file editing consists of the following steps:
+The [convert](./wopi-discovery.md#wopi-actions) WOPI discovery action implements the possibility to convert a file in the binary format into the modern OOXML format. A host must also support the [PutRelativeFile](./wopi-rest-api/putrelativefile.md) WOPI operation. The process of the binary file editing consists of the following steps:
 
 1. The host runs the **convert** action on a binary file.
 2. The online office retrieves the file from the host and converts it.
@@ -36,10 +36,10 @@ The host can display some UI to the user before the conversion start. When the *
 
 **Option 2**. Handling converted documents differently
 
-The host can handle converted documents in a unique way, by handling the [PutRelativeFile](./wopi-rest-api/PutRelativeFile.md) operation differently when called during the conversion process. The **X-WOPI-FileConversion** header tells hosts when the operation is being called from the conversion flow, so the host can choose how best to handle those requests.
+The host can handle converted documents in a unique way, by handling the [PutRelativeFile](./wopi-rest-api/putrelativefile.md) operation differently when called during the conversion process. The **X-WOPI-FileConversion** header tells hosts when the operation is being called from the conversion flow, so the host can choose how best to handle those requests.
 
 **Option 3**. Redirecting to an interstitial page
 
-The online office navigates to the [HostEditUrl](./wopi-rest-api/checkfileinfo.md#hostediturl) that's returned in the [PutRelativeFile](./wopi-rest-api/PutRelativeFile.md) response, which the host controls. So, hosts can send the user to any URL after the conversion is finished. For example, a host might redirect the user to an interstitial page that informs them that their document has been converted.
+The online office navigates to the [HostEditUrl](./wopi-rest-api/checkfileinfo.md#hostediturl) that's returned in the [PutRelativeFile](./wopi-rest-api/putrelativefile.md) response, which the host controls. So, hosts can send the user to any URL after the conversion is finished. For example, a host might redirect the user to an interstitial page that informs them that their document has been converted.
 
 <img alt="Convert binary files" src="/assets/images/editor/convert-binary-files.jpg" width="300px" />

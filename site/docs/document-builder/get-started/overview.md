@@ -10,7 +10,7 @@ It allows you to build a document easily without the need to actually run a docu
 
 There are two ways to use ONLYOFFICE Document Builder in your own project:
 
-1. Integrate this library into your own application. To get ONLYOFFICE Document Builder, visit [this page](./Get%20document-builder.md).
+1. Integrate this library into your own application. To get ONLYOFFICE Document Builder, visit [this page](./get-document-builder.md).
 
    After you download and unpack the files, the library is ready for [integration](../builder-framework/overview.md).
 
@@ -24,4 +24,4 @@ ONLYOFFICE Document Builder consists of four components:
 | ---------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [Builder.Framework](../builder-framework/overview.md) | A software tool that contains a collection of libraries, classes, and functions used to develop applications. The following frameworks are available: [C++](../builder-framework/C++/C++.md), [COM](../builder-framework/COM/COM.md), [Java](../builder-framework/Java/Java.md), [.Net](../builder-framework/Net/Net.md), [Python](../builder-framework/Python/Python.md). |
 | [Builder.App](../builder-app/overview.md)             | The *docbuilder.exe* executable file that can be run from your application with the *.docbuilder* script file as a parameter to it.                                                                                                                                                                                                                                                                        |
-| [Builder.Server](../Builder%20Server/overview.md)       | The code for the sample of ONLYOFFICE Document Builder integration into your application.                                                                                                                                                                                                                                                                                                                  |
+| [Builder.Server](../builder-server/overview.md)       | The code for the sample of ONLYOFFICE Document Builder integration into your application.                                                                                                                                                                                                                                                                                                                  |

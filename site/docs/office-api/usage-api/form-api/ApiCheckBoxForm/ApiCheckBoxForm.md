@@ -6,7 +6,7 @@ Represents the ApiCheckBoxForm class.
 
 - [SetChecked](./Methods/SetChecked.md)
 - [IsChecked](./Methods/IsChecked.md)
-- [IsRadioButton](./Methods/IsRadiobutton.md)
+- [IsRadioButton](./Methods/IsRadioButton.md)
 - [GetRadioGroup](./Methods/GetRadioGroup.md)
 - [SetRadioGroup](./Methods/SetRadioGroup.md)
 - [GetClassType](./Methods/GetClassType.md)
