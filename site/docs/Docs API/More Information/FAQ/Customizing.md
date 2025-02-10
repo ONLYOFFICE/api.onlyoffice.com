@@ -49,7 +49,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
 })
 ```
 
-Further information about the customization can be found [at this page](../../Usage%20API/Config/Editor/Customization.md).
+Further information about the customization can be found [at this page](../../Usage%20API/Config/Editor/Customization/Customization%20-%20Standard%20branding.md).
 
 ## How to change the default language of the ONLYOFFICE Docs interface?
 
@@ -84,7 +84,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
 
 This will disable both the **Chat** and **Comments** buttons and their functionality.
 
-Further information about the customization can be found [at this page](../../Usage%20API/Config/Editor/Customization.md).
+Further information about the customization can be found [at this page](../../Usage%20API/Config/Editor/Customization/Customization%20-%20Standard%20branding.md).
 
 ## How to customize the editors interface, e.g. adjust the top toolbar view?
 
@@ -100,7 +100,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
 })
 ```
 
-Further information about the customization can be found [at this page](../../Usage%20API/Config/Editor/Customization.md).
+Further information about the customization can be found [at this page](../../Usage%20API/Config/Editor/Customization/Customization%20-%20Standard%20branding.md).
 
 ## How to view and change the document additional parameters, e.g. its owner or uploading date?
 

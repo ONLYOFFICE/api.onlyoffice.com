@@ -4,31 +4,31 @@ The list of changes of ONLYOFFICE Docs API.
 
 <!--- Added conversion from [vsdm, vsdx, vssm, vssx, vstm, vstx](../Additional%20API/Conversion%20API/Conversion%20tables.md#diagram-document-file-formats) formats.
 - Added the *diagram* document type to the [documentType](../Usage%20API/Config.md#documenttype) parameter.-->
-- Added the [editorConfig.customization.slidePlayerBackground](../Usage%20API/Config/Editor/Customization.md#slideplayerbackground) parameter.
-- Added the [editorConfig.customization.wordHeadingsColor](../Usage%20API/Config/Editor/Customization.md#wordheadingscolor) parameter.
-- Added the [editorConfig.customization.mobile.info](../Usage%20API/Config/Editor/Customization.md#mobileinfo) parameter.
+- Added the [editorConfig.customization.slidePlayerBackground](../Usage%20API/Config/Editor/Customization/Customization%20-%20Standard%20branding.md#slideplayerbackground) parameter.
+- Added the [editorConfig.customization.wordHeadingsColor](../Usage%20API/Config/Editor/Customization/Customization%20-%20Standard%20branding.md#wordheadingscolor) parameter.
+- Added the [editorConfig.customization.mobile.info](../Usage%20API/Config/Editor/Customization/Customization%20-%20Standard%20branding.md#mobileinfo) parameter.
 - Added opening for [pages, key, numbers](../Usage%20API/Config/Config.md#documenttype) formats.
 - Added the [events.onUserActionRequired](../Usage%20API/Config/Events.md#onuseractionrequired) event.
 - Added the [refreshFile](../Usage%20API/Methods.md#refreshfile) method.
 - Added the [events.onRequestRefreshFile](../Usage%20API/Config/Events.md#onrequestrefreshfile) event.
 - The document editing will be prohibited for all users editing the document with the specified *key*, if the *users* parameter is not specified for the [drop](../Additional%20API/Command%20service/drop.md) command.
-- The [editorConfig.customization.submitForm](../Usage%20API/Config/Editor/Customization.md#submitform) parameter can now be used as an object.
-- The [editorConfig.customization.compactToolbar](../Usage%20API/Config/Editor/Customization.md#compacttoolbar) parameter is now available for the viewer.
-- Added the [editorConfig.customization.pointerMode](../Usage%20API/Config/Editor/Customization.md#pointermode) parameter.
+- The [editorConfig.customization.submitForm](../Usage%20API/Config/Editor/Customization/Customization%20-%20Standard%20branding.md#submitform) parameter can now be used as an object.
+- The [editorConfig.customization.compactToolbar](../Usage%20API/Config/Editor/Customization/Customization%20-%20Standard%20branding.md#compacttoolbar) parameter is now available for the viewer.
+- Added the [editorConfig.customization.pointerMode](../Usage%20API/Config/Editor/Customization/Customization%20-%20Standard%20branding.md#pointermode) parameter.
 
 ## Version 8.2
 
-- The [editorConfig.customization.mobileForceView](../Usage%20API/Config/Editor/Customization.md#mobileforceview) parameter is deprecated, please use the [editorConfig.customization.mobile](../Usage%20API/Config/Editor/Customization.md#mobile) parameter instead.
+- The [editorConfig.customization.mobileForceView](../Usage%20API/Config/Editor/Customization/Customization%20-%20Standard%20branding.md#mobileforceview) parameter is deprecated, please use the [editorConfig.customization.mobile](../Usage%20API/Config/Editor/Customization/Customization%20-%20Standard%20branding.md#mobile) parameter instead.
 - Added the *Password* and *PasswordToOpen* request parameters to the [WOPI conversion API](../Using%20WOPI/Conversion%20API.md).
 - The [editorConfig.region](../Usage%20API/Config/Editor/Editor.md#region) field is now used to define the default measurement units in all editor types.
 - The [editorConfig.location](../Usage%20API/Config/Editor/Editor.md#location) field is deprecated, please use the [editorConfig.region](../Usage%20API/Config/Editor/Editor.md#region) field instead.
 - Added the *insert-text* type of document selection to the *c* parameter of the [setRequestedDocument](../Usage%20API/Methods.md#setrequesteddocument) method.
 - The `https://documentserver/coauthoring/CommandService.ashx` address of the [command service](../Additional%20API/Command%20service/Command%20service.md) is replaced with `https://documentserver/command`.
 - Added the *users* parameter to the response of the [info](../Additional%20API/Command%20service/info.md) command.
-- Added the [tabBackground](../Usage%20API/Config/Editor/Customization.md#featurestabbackground) field to the *editorConfig.customization.features* parameter.
-- Added the [tabStyle](../Usage%20API/Config/Editor/Customization.md#featurestabstyle) field to the *editorConfig.customization.features* parameter.
-- Added the [imageLight](../Usage%20API/Config/Editor/Customization.md#logoimagelight) field to the *editorConfig.customization.logo* parameter.
-- The [editorConfig.customization.toolbarNoTabs](../Usage%20API/Config/Editor/Customization.md#toolbarnotabs) field is deprecated, please use the [editorConfig.customization.features.tabStyle](../Usage%20API/Config/Editor/Customization.md#featurestabstyle) and [editorConfig.customization.features.tabBackground](../Usage%20API/Config/Editor/Customization.md#featurestabbackground) fields instead.
+- Added the [tabBackground](../Usage%20API/Config/Editor/Customization/Customization%20-%20Standard%20branding.md#featurestabbackground) field to the *editorConfig.customization.features* parameter.
+- Added the [tabStyle](../Usage%20API/Config/Editor/Customization/Customization%20-%20Standard%20branding.md#featurestabstyle) field to the *editorConfig.customization.features* parameter.
+- Added the [imageLight](../Usage%20API/Config/Editor/Customization/Customization%20-%20Standard%20branding.md#logoimagelight) field to the *editorConfig.customization.logo* parameter.
+- The [editorConfig.customization.toolbarNoTabs](../Usage%20API/Config/Editor/Customization/Customization%20-%20Standard%20branding.md#toolbarnotabs) field is deprecated, please use the [editorConfig.customization.features.tabStyle](../Usage%20API/Config/Editor/Customization/Customization%20-%20Standard%20branding.md#featurestabstyle) and [editorConfig.customization.features.tabBackground](../Usage%20API/Config/Editor/Customization/Customization%20-%20Standard%20branding.md#featurestabbackground) fields instead.
 
 ## Version 8.1
 
@@ -41,16 +41,16 @@ The list of changes of ONLYOFFICE Docs API.
 - Added the [events.onSubmit](../Usage%20API/Config/Events.md#onsubmit) event.
 - The *docxf* format is deprecated, please use the *pdf* format to create and edit forms.
 - Changed the [documentType](../Usage%20API/Config/Config.md#documenttype) of the *docxf* and *oform* formats to *pdf*.
-- Added the *roles* field to the [editorConfig.customization.features](../Usage%20API/Config/Editor/Customization.md#features) parameter.
+- Added the *roles* field to the [editorConfig.customization.features](../Usage%20API/Config/Editor/Customization/Customization%20-%20Standard%20branding.md#features) parameter.
 - Added the [shardkey](../Get%20Started/How%20It%20Works/How%20It%20Works.md#shard-key) parameter to the URL query string when sending requests to the ONLYOFFICE Docs API, document command service, document conversion service, or document builder service.
 - Added the [addContextMenuItem](../Usage%20API/Automation%20API.md#addcontextmenuitem), [addToolbarMenuItem](../Usage%20API/Automation%20API.md#addtoolbarmenuitem) and [updateContextMenuItem](../Usage%20API/Automation%20API.md#updatecontextmenuitem) methods to the *Automation API*.
 - Added the [-10 error code](../Additional%20API/Conversion%20API/Error%20codes.md) to the Conversion API.
-- The [editorConfig.customization.logo](../Usage%20API/Config/Editor/Customization.md#logo) parameter is now available for the mobile editors.
-- Added the *visible* field to the [editorConfig.customization.logo](../Usage%20API/Config/Editor/Customization.md#logo) parameter.
+- The [editorConfig.customization.logo](../Usage%20API/Config/Editor/Customization/Customization%20-%20Standard%20branding.md#logo) parameter is now available for the mobile editors.
+- Added the *visible* field to the [editorConfig.customization.logo](../Usage%20API/Config/Editor/Customization/Customization%20-%20Standard%20branding.md#logo) parameter.
 - Added the [formsubmit](../Using%20WOPI/WOPI%20discovery.md#wopi-actions) action to the WOPI discovery.
-- The [editorConfig.customization.goback.requestClose](../Usage%20API/Config/Editor/Customization.md#goback) field is deprecated, please use the [editorConfig.customization.close](../Usage%20API/Config/Editor/Customization.md#close) field instead.
+- The [editorConfig.customization.goback.requestClose](../Usage%20API/Config/Editor/Customization/Customization%20-%20Standard%20branding.md#goback) field is deprecated, please use the [editorConfig.customization.close](../Usage%20API/Config/Editor/Customization/Customization%20-%20Standard%20branding.md#close) field instead.
 - Added the [Save Copy As](../Using%20WOPI/WOPI%20REST%20API/PutRelativeFile.md#save-copy-as) functionality to WOPI.
-- Change the default value of the [editorConfig.customization.hideRightMenu](../Usage%20API/Config/Editor/Customization.md#hiderightmenu) parameter to *true*.
+- Change the default value of the [editorConfig.customization.hideRightMenu](../Usage%20API/Config/Editor/Customization/Customization%20-%20Standard%20branding.md#hiderightmenu) parameter to *true*.
 
 ## Version 8.0
 
@@ -62,13 +62,13 @@ The list of changes of ONLYOFFICE Docs API.
 - Added the *users.image* field to the [setUsers](../Usage%20API/Methods.md#setusers) method.
 - Added the *info* operation type to the [setUsers](../Usage%20API/Methods.md#setusers) method and [events.onRequestUsers](../Usage%20API/Config/Events.md#onrequestusers) event.
 - Added the *image* field to the [editorConfig.user](../Usage%20API/Config/Editor/Editor.md#user) parameter.
-- Added the [editorConfig.customization.mobileForceView](../Usage%20API/Config/Editor/Customization.md#mobileforceview) parameter.
+- Added the [editorConfig.customization.mobileForceView](../Usage%20API/Config/Editor/Customization/Customization%20-%20Standard%20branding.md#mobileforceview) parameter.
 - Added the *link* field to the *data* object which is sent to the [events.onRequestReferenceData](../Usage%20API/Config/Events.md#onrequestreferencedata) event.
 
 ## Version 7.5
 
 - Added the **3** type for the [forcesavetype](../Usage%20API/Callback%20handler.md#forcesavetype) parameter of the callback handler.
-- Added the [editorConfig.customization.submitForm](../Usage%20API/Config/Editor/Customization.md#submitform) parameter.
+- Added the [editorConfig.customization.submitForm](../Usage%20API/Config/Editor/Customization/Customization%20-%20Standard%20branding.md#submitform) parameter.
 - The [events.onRequestMailMergeRecipients](../Usage%20API/Config/Events.md#onrequestmailmergerecipients) event is deprecated, please use the [events.onRequestSelectSpreadsheet](../Usage%20API/Config/Events.md#onrequestselectspreadsheet) event instead.
 - The [setMailMergeRecipients](../Usage%20API/Methods.md#setmailmergerecipients) method is deprecated, please use the [setRequestedSpreadsheet](../Usage%20API/Methods.md#setrequestedspreadsheet) method instead.
 - Added the [setReferenceSource](../Usage%20API/Methods.md#setreferencesource) method.
@@ -100,10 +100,10 @@ The list of changes of ONLYOFFICE Docs API.
 
 ## Version 7.2
 
-- Added the [editorConfig.customization.integrationMode](../Usage%20API/Config/Editor/Customization.md#integrationmode) parameter.
+- Added the [editorConfig.customization.integrationMode](../Usage%20API/Config/Editor/Customization/Customization%20-%20Standard%20branding.md#integrationmode) parameter.
 - Added the [Connector](../Usage%20API/Automation%20API.md) class to interact with text documents, spreadsheets, presentations, and fillable forms from the outside.
-- Added the *theme-contrast-dark* theme id to the [editorConfig.customization.uiTheme](../Usage%20API/Config/Editor/Customization.md#uitheme) parameter.
-- Added the *phone* field to the [editorConfig.customization.customer](../Usage%20API/Config/Editor/Customization.md#customer) parameter.
+- Added the *theme-contrast-dark* theme id to the [editorConfig.customization.uiTheme](../Usage%20API/Config/Editor/Customization/Customization%20-%20Standard%20branding.md#uitheme) parameter.
+- Added the *phone* field to the [editorConfig.customization.customer](../Usage%20API/Config/Editor/Customization/Customization%20-%20Standard%20branding.md#customer) parameter.
 - Added the *connections\_view*, *users\_view\_count* and *users\_view* parameters to the [license response](../Additional%20API/Command%20service/license.md#response-parameters).
 - Added the [live viewer](../Get%20Started/How%20It%20Works/Viewing.md) mode to the text document, spreadsheet and presentation editors.
 - Added the [embedview](../Using%20WOPI/WOPI%20discovery.md#wopi-actions) action to the WOPI discovery.
@@ -113,12 +113,12 @@ The list of changes of ONLYOFFICE Docs API.
 
 - The *services.CoAuthoring.token.inbox.inBody* and *services.CoAuthoring.token.outbox.inBody* parameters for enabling [token in body](../Additional%20API/Signature/Request/Token%20in%20body.md) are deprecated.
 - Added the *X-LOOL-WOPI-IsModifiedByUser*, *X-LOOL-WOPI-IsAutosave* and *X-LOOL-WOPI-IsExitSave* request headers to the [PutFile](../Using%20WOPI/WOPI%20REST%20API/PutFile.md) WOPI operation to distinguish between the type of document saving.
-- The [editorConfig.customization.chat](../Usage%20API/Config/Editor/Customization.md#chat) parameter is deprecated, please use the [document.permissions.chat](../Usage%20API/Config/Document/Permissions.md#chat) parameter instead.
+- The [editorConfig.customization.chat](../Usage%20API/Config/Editor/Customization/Customization%20-%20Standard%20branding.md#chat) parameter is deprecated, please use the [document.permissions.chat](../Usage%20API/Config/Document/Permissions.md#chat) parameter instead.
 - Added conversion from [dps, dpt, et, ett, htm, mhtml, stw, sxc, sxi, sxw, wps, wpt, xlsb, xml](../Additional%20API/Conversion%20API/Conversion%20tables.md) format.
 - Added opening for [xlsb](../Usage%20API/Config/Config.md#documenttype) format.
 - The parameter list in the initialization config [signature](../Additional%20API/Signature/Browser.md#opening-file) has become strictly regulated.
-- The [editorConfig.customization.spellcheck](../Usage%20API/Config/Editor/Customization.md#spellcheck) field is deprecated, please use the [editorConfig.customization.features.spellcheck](../Usage%20API/Config/Editor/Customization.md#features) field instead.
-- Added the [editorConfig.customization.features](../Usage%20API/Config/Editor/Customization.md#features) parameter section.
+- The [editorConfig.customization.spellcheck](../Usage%20API/Config/Editor/Customization/Customization%20-%20Standard%20branding.md#spellcheck) field is deprecated, please use the [editorConfig.customization.features.spellcheck](../Usage%20API/Config/Editor/Customization/Customization%20-%20Standard%20branding.md#features) field instead.
+- Added the [editorConfig.customization.features](../Usage%20API/Config/Editor/Customization/Customization%20-%20Standard%20branding.md#features) parameter section.
 - Added the [documentLayout](../Additional%20API/Conversion%20API/Request.md#documentlayout) parameter to the conversion request.
 - Added the [documentRenderer](../Additional%20API/Conversion%20API/Request.md#documentrenderer) parameter to the conversion request.
 - Added conversion from [pdf/xps/oxps](../Additional%20API/Conversion%20API/Conversion%20tables.md#text-document-file-formats) formats to *docx*.
@@ -131,9 +131,9 @@ The list of changes of ONLYOFFICE Docs API.
 - Added the *.docxf* and *.oform* [document formats](../Usage%20API/Config/Config.md#documenttype).
 - Added conversion to and from [docxf](../Additional%20API/Conversion%20API/Conversion%20tables.md#text-document-file-formats) format.
 - The [callbackUrl](../Usage%20API/Callback%20handler.md) is used from the last tab of the same user.
-- Added the *logoDark* field to the [editorConfig.customization.customer](../Usage%20API/Config/Editor/Customization.md#customer) parameter.
-- Added the *imageDark* field to the [editorConfig.customization.logo](../Usage%20API/Config/Editor/Customization.md#logo) parameter.
-- The *imageEmbedded* field of the [editorConfig.customization.logo](../Usage%20API/Config/Editor/Customization.md#logo) parameter is deprecated, please use the *image* field instead.
+- Added the *logoDark* field to the [editorConfig.customization.customer](../Usage%20API/Config/Editor/Customization/Customization%20-%20Standard%20branding.md#customer) parameter.
+- Added the *imageDark* field to the [editorConfig.customization.logo](../Usage%20API/Config/Editor/Customization/Customization%20-%20Standard%20branding.md#logo) parameter.
+- The *imageEmbedded* field of the [editorConfig.customization.logo](../Usage%20API/Config/Editor/Customization/Customization%20-%20Standard%20branding.md#logo) parameter is deprecated, please use the *image* field instead.
 - Added a signature to the request for file changes specified with the *changesUrl* parameter of the [setHistoryData](../Usage%20API/Methods.md#sethistorydata) method.
 - Added the [document.permissions.protect](../Usage%20API/Config/Document/Permissions.md#protect) field.
 - Added the *fileType* parameter to the [onDownloadAs](../Usage%20API/Config/Events.md#ondownloadas), [onRequestRestore](../Usage%20API/Config/Events.md#onrequestrestore) and [onRequestSaveAs](../Usage%20API/Config/Events.md#onrequestsaveas) events.
@@ -144,9 +144,9 @@ The list of changes of ONLYOFFICE Docs API.
 - Added the [filetype](../Usage%20API/Callback%20handler.md#filetype) parameter to the *Callback handler*.
 - Added the [fileType](../Additional%20API/Conversion%20API/Response.md#filetype) field to the conversion response.
 - Added conversion to [docm, dotm, xlsm, xltm, pptm, potm](../Additional%20API/Conversion%20API/Conversion%20tables.md) formats.
-- The [editorConfig.customization.reviewDisplay](../Usage%20API/Config/Editor/Customization.md#reviewdisplay), [editorConfig.customization.showReviewChanges](../Usage%20API/Config/Editor/Customization.md#showreviewchanges), [editorConfig.customization.trackChanges](../Usage%20API/Config/Editor/Customization.md#trackchanges) parameters are deprecated, please use the [editorConfig.customization.review](../Usage%20API/Config/Editor/Customization.md#review) parameter instead.
-- Added the [editorConfig.customization.review.hideReviewDisplay](../Usage%20API/Config/Editor/Customization.md#review) field.
-- Added the [editorConfig.customization.review.hoverMode](../Usage%20API/Config/Editor/Customization.md#review) field.
+- The [editorConfig.customization.reviewDisplay](../Usage%20API/Config/Editor/Customization/Customization%20-%20Standard%20branding.md#reviewdisplay), [editorConfig.customization.showReviewChanges](../Usage%20API/Config/Editor/Customization/Customization%20-%20Standard%20branding.md#showreviewchanges), [editorConfig.customization.trackChanges](../Usage%20API/Config/Editor/Customization/Customization%20-%20Standard%20branding.md#trackchanges) parameters are deprecated, please use the [editorConfig.customization.review](../Usage%20API/Config/Editor/Customization/Customization%20-%20Standard%20branding.md#review) parameter instead.
+- Added the [editorConfig.customization.review.hideReviewDisplay](../Usage%20API/Config/Editor/Customization/Customization%20-%20Standard%20branding.md#review) field.
+- Added the [editorConfig.customization.review.hoverMode](../Usage%20API/Config/Editor/Customization/Customization%20-%20Standard%20branding.md#review) field.
 - Added the possibility to view the [document history](../Get%20Started/How%20It%20Works/Document%20history.md) of the spreadsheet files.
 - Added the [UI\_InsertGraphic](../Using%20WOPI/PostMessage.md#ui_insertgraphic) message for the PostMessage WOPI protocol.
 
@@ -154,11 +154,11 @@ The list of changes of ONLYOFFICE Docs API.
 
 - Added opening for [oxps](../Usage%20API/Config/Config.md#documenttype) format.
 - Added support for [WOPI protocol](../Using%20WOPI/Overview.md).
-- Added the *simple* value to the [editorConfig.customization.reviewDisplay](../Usage%20API/Config/Editor/Customization.md#reviewdisplay) parameter.
+- Added the *simple* value to the [editorConfig.customization.reviewDisplay](../Usage%20API/Config/Editor/Customization/Customization%20-%20Standard%20branding.md#reviewdisplay) parameter.
 - Added the [threaded comments](../Get%20Started/How%20It%20Works/Commenting.md#threaded-comments-in-spreadsheets) saving in the spreadsheet files.
-- Added the [editorConfig.customization.uiTheme](../Usage%20API/Config/Editor/Customization.md#uitheme) field.
+- Added the [editorConfig.customization.uiTheme](../Usage%20API/Config/Editor/Customization/Customization%20-%20Standard%20branding.md#uitheme) field.
 - Added the possibility to view the [document history](../Get%20Started/How%20It%20Works/Document%20history.md) for the presentation files.
-- Added the [editorConfig.customization.hideNotes](../Usage%20API/Config/Editor/Customization.md#hidenotes) field.
+- Added the [editorConfig.customization.hideNotes](../Usage%20API/Config/Editor/Customization/Customization%20-%20Standard%20branding.md#hidenotes) field.
 - Added the [editorConfig.coEditing](../Usage%20API/Config/Editor/Editor.md#coediting) field.
 - Added the [requestClose](../Usage%20API/Methods.md#requestclose) method.
 - Added the [document.permissions.commentGroups](../Usage%20API/Config/Document/Permissions.md#commentgroups) field.
@@ -167,9 +167,9 @@ The list of changes of ONLYOFFICE Docs API.
 ## Version 6.3
 
 - Added the [license](../Additional%20API/Command%20service/license.md) command.
-- Added the [editorConfig.customization.hideRulers](../Usage%20API/Config/Editor/Customization.md#hiderulers) field.
-- Added the [editorConfig.customization.anonymous](../Usage%20API/Config/Editor/Customization.md#anonymous) field.
-- The [editorConfig.customization.commentAuthorOnly](../Usage%20API/Config/Editor/Customization.md#commentauthoronly) field is deprecated, please use the [document.permissions.editCommentAuthorOnly](../Usage%20API/Config/Document/Permissions.md#editcommentauthoronly) and [document.permissions.deleteCommentAuthorOnly](../Usage%20API/Config/Document/Permissions.md#deletecommentauthoronly) fields.
+- Added the [editorConfig.customization.hideRulers](../Usage%20API/Config/Editor/Customization/Customization%20-%20Standard%20branding.md#hiderulers) field.
+- Added the [editorConfig.customization.anonymous](../Usage%20API/Config/Editor/Customization/Customization%20-%20Standard%20branding.md#anonymous) field.
+- The [editorConfig.customization.commentAuthorOnly](../Usage%20API/Config/Editor/Customization/Customization%20-%20Standard%20branding.md#commentauthoronly) field is deprecated, please use the [document.permissions.editCommentAuthorOnly](../Usage%20API/Config/Document/Permissions.md#editcommentauthoronly) and [document.permissions.deleteCommentAuthorOnly](../Usage%20API/Config/Document/Permissions.md#deletecommentauthoronly) fields.
 - Added the [setFavorite](../Usage%20API/Methods.md#setfavorite) method.
 - Added the *data.favorite* parameter to the [events.onMetaChange](../Usage%20API/Config/Events.md#onmetachange) event.
 - Added the [document.info.favorite](../Usage%20API/Config/Document/Info.md#favorite) field.
@@ -180,8 +180,8 @@ The list of changes of ONLYOFFICE Docs API.
 ## Version 6.2
 
 - Added a new [actions.type](../Usage%20API/Callback%20handler.md#actions) field value (*actions.type = 2*).
-- Added the [editorConfig.customization.trackChanges](../Usage%20API/Config/Editor/Customization.md#trackchanges) field.
-- Added the [editorConfig.customization.toolbarHideFileName](../Usage%20API/Config/Editor/Customization.md#toolbarhidefilename) field.
+- Added the [editorConfig.customization.trackChanges](../Usage%20API/Config/Editor/Customization/Customization%20-%20Standard%20branding.md#trackchanges) field.
+- Added the [editorConfig.customization.toolbarHideFileName](../Usage%20API/Config/Editor/Customization/Customization%20-%20Standard%20branding.md#toolbarhidefilename) field.
 - The *callbackUrl* for *status* **6** is selected based on [forcesavetype](../Usage%20API/Callback%20handler.md).
 - Added opening for [fb2](../Usage%20API/Config/Config.md#documenttype) format.
 
@@ -195,9 +195,9 @@ The list of changes of ONLYOFFICE Docs API.
 
 - Added the type of insertion in [events.onRequestInsertImage](../Usage%20API/Config/Events.md#onrequestinsertimage) event.
 - Added the [editorConfig.templates](../Usage%20API/Config/Editor/Editor.md#templates) field.
-- Added the [editorConfig.customization.plugins](../Usage%20API/Config/Editor/Customization.md#plugins) field.
-- Added the [editorConfig.customization.macros](../Usage%20API/Config/Editor/Customization.md#macros) field.
-- Added the [editorConfig.customization.macrosMode](../Usage%20API/Config/Editor/Customization.md#macrosmode) field.
+- Added the [editorConfig.customization.plugins](../Usage%20API/Config/Editor/Customization/Customization%20-%20Standard%20branding.md#plugins) field.
+- Added the [editorConfig.customization.macros](../Usage%20API/Config/Editor/Customization/Customization%20-%20Standard%20branding.md#macros) field.
+- Added the [editorConfig.customization.macrosMode](../Usage%20API/Config/Editor/Customization/Customization%20-%20Standard%20branding.md#macrosmode) field.
 - Added the [events.onRequestCreateNew](../Usage%20API/Config/Events.md#onrequestcreatenew) event.
 - Added the [document.permissions.copy](../Usage%20API/Config/Document/Permissions.md#copy) field.
 - The [document.permissions.rename](../Usage%20API/Config/Document/Permissions.md#rename) field is deprecated, please add the [events.onRequestRename](../Usage%20API/Config/Events.md#onrequestrename) field instead.
@@ -205,22 +205,22 @@ The list of changes of ONLYOFFICE Docs API.
 ## Version 5.5
 
 - The `https://documentserver/ConvertService.ashx` address of the [conversion service](../Additional%20API/Conversion%20API/Request.md) is replaced with `https://documentserver/converter`.
-- Added the [editorConfig.customization.spellcheck](../Usage%20API/Config/Editor/Customization.md#spellcheck) field.
+- Added the [editorConfig.customization.spellcheck](../Usage%20API/Config/Editor/Customization/Customization%20-%20Standard%20branding.md#spellcheck) field.
 - Added conversion to [pdfa](../Additional%20API/Conversion%20API/Conversion%20tables.md#text-document-file-formats) format.
 - Added the [events.onRequestCompareFile](../Usage%20API/Config/Events.md#onrequestcomparefile) event.
 - Added the [setRevisedFile](../Usage%20API/Methods.md#setrevisedfile) method.
 - Token in [methods](../Additional%20API/Signature/Browser.md#methods) parameters.
 - The [document.permissions.changeHistory](../Usage%20API/Config/Document/Permissions.md#changehistory) field is deprecated, please add the [events.onRequestRestore](../Usage%20API/Config/Events.md#onrequestrestore) field instead.
-- Added the [editorConfig.customization.goback.requestClose](../Usage%20API/Config/Editor/Customization.md#goback) field.
+- Added the [editorConfig.customization.goback.requestClose](../Usage%20API/Config/Editor/Customization/Customization%20-%20Standard%20branding.md#goback) field.
 - Added the [events.onRequestSharingSettings](../Usage%20API/Config/Events.md#onrequestsharingsettings) event.
-- Added the [editorConfig.customization.unit](../Usage%20API/Config/Editor/Customization.md#unit) field.
+- Added the [editorConfig.customization.unit](../Usage%20API/Config/Editor/Customization/Customization%20-%20Standard%20branding.md#unit) field.
 - Added the [region](../Additional%20API/Conversion%20API/Request.md#region) field.
 - Added the [spreadsheetLayout](../Additional%20API/Conversion%20API/Request.md#spreadsheetlayout) field.
 - Added [input error](../Additional%20API/Conversion%20API/Error%20codes.md) for conversion.
 - The [events.onRequestSendNotify](../Usage%20API/Config/Events.md#onrequestsendnotify) event and the [events.onRequestUsers](../Usage%20API/Config/Events.md#onrequestusers) event can be set independently.
-- Added the [editorConfig.customization.mentionShare](../Usage%20API/Config/Editor/Customization.md#mentionshare) field.
+- Added the [editorConfig.customization.mentionShare](../Usage%20API/Config/Editor/Customization/Customization%20-%20Standard%20branding.md#mentionshare) field.
 - The *callbackUrl* is selected based on [status](../Usage%20API/Callback%20handler.md).
-- Added the [editorConfig.customization.compatibleFeatures](../Usage%20API/Config/Editor/Customization.md#compatiblefeatures) field.
+- Added the [editorConfig.customization.compatibleFeatures](../Usage%20API/Config/Editor/Customization/Customization%20-%20Standard%20branding.md#compatiblefeatures) field.
 
 ## Version 5.4
 
@@ -242,11 +242,11 @@ The list of changes of ONLYOFFICE Docs API.
 ## Version 5.3
 
 - Added [conversion](../Additional%20API/Conversion%20API/Conversion%20tables.md) to the OOXML (dotx, xltx, potx) and ODF (ott, ots, otp) templates.
-- Added the [editorConfig.customization.reviewDisplay](../Usage%20API/Config/Editor/Customization.md#reviewdisplay) field.
-- The [editorConfig.customization.commentAuthorOnly](../Usage%20API/Config/Editor/Customization.md#commentauthoronly) field is now used to restrict comment deletion as well.
-- Added the [editorConfig.customization.compactHeader](../Usage%20API/Config/Editor/Customization.md#compactheader) field.
-- Added the [editorConfig.customization.hideRightMenu](../Usage%20API/Config/Editor/Customization.md#hiderightmenu) field.
-- Added the [editorConfig.customization.toolbarNoTabs](../Usage%20API/Config/Editor/Customization.md#toolbarnotabs) field.
+- Added the [editorConfig.customization.reviewDisplay](../Usage%20API/Config/Editor/Customization/Customization%20-%20Standard%20branding.md#reviewdisplay) field.
+- The [editorConfig.customization.commentAuthorOnly](../Usage%20API/Config/Editor/Customization/Customization%20-%20Standard%20branding.md#commentauthoronly) field is now used to restrict comment deletion as well.
+- Added the [editorConfig.customization.compactHeader](../Usage%20API/Config/Editor/Customization/Customization%20-%20Standard%20branding.md#compactheader) field.
+- Added the [editorConfig.customization.hideRightMenu](../Usage%20API/Config/Editor/Customization/Customization%20-%20Standard%20branding.md#hiderightmenu) field.
+- Added the [editorConfig.customization.toolbarNoTabs](../Usage%20API/Config/Editor/Customization/Customization%20-%20Standard%20branding.md#toolbarnotabs) field.
 - Added [conversion error](../Additional%20API/Conversion%20API/Error%20codes.md) for password protected documents.
 - Added the [editorConfig.actionLink](../Usage%20API/Config/Editor/Editor.md#actionlink) field.
 - Added the [setActionLink](../Usage%20API/Methods.md#setactionlink) method.
@@ -257,8 +257,8 @@ The list of changes of ONLYOFFICE Docs API.
 - Token in request [body](../Additional%20API/Signature/Request/Token%20in%20body.md) parameters.
 - [document.permissions.comment](../Usage%20API/Config/Document/Permissions.md#comment) is available in all types of editors.
 - Added the [document.permissions.fillForms](../Usage%20API/Config/Document/Permissions.md#fillforms) field.
-- Added the [editorConfig.customization.help](../Usage%20API/Config/Editor/Customization.md#help) field.
-- Added the possibility to make the [editorConfig.customization.logo](../Usage%20API/Config/Editor/Customization.md#logo) not clickable.
+- Added the [editorConfig.customization.help](../Usage%20API/Config/Editor/Customization/Customization%20-%20Standard%20branding.md#help) field.
+- Added the possibility to make the [editorConfig.customization.logo](../Usage%20API/Config/Editor/Customization/Customization%20-%20Standard%20branding.md#logo) not clickable.
 - Added for the [aspect](../Additional%20API/Conversion%20API/Request.md#thumbnailaspect) field value *2* for the conversion.
 
 ## Version 5.1
@@ -267,7 +267,7 @@ The list of changes of ONLYOFFICE Docs API.
 - Added the [document.permissions.modifyContentControl](../Usage%20API/Config/Document/Permissions.md#modifycontentcontrol) field.
 - Added conversion for [OpenDocument Template](../Additional%20API/Conversion%20API/Conversion%20tables.md) formats.
 - Added the [events.onRequestClose](../Usage%20API/Config/Events.md#onrequestclose) event.
-- Added the [editorConfig.customization.goback.blank](../Usage%20API/Config/Editor/Customization.md#goback) field.
+- Added the [editorConfig.customization.goback.blank](../Usage%20API/Config/Editor/Customization/Customization%20-%20Standard%20branding.md#goback) field.
 
 ## Version 5.0
 
@@ -297,19 +297,19 @@ The list of changes of ONLYOFFICE Docs API.
 
 - Added the [destroyEditor](../Usage%20API/Methods.md#destroyeditor) method.
 - Removed the [editorConfig.plugins.url](../Usage%20API/Config/Editor/Plugins.md#url) field from the plugin connection pattern.
-- Added the [editorConfig.customization.commentAuthorOnly](../Usage%20API/Config/Editor/Customization.md#commentauthoronly) field.
-- Added the [editorConfig.customization.forcesave](../Usage%20API/Config/Editor/Customization.md#forcesave) field.
-- Added the [editorConfig.customization.showReviewChanges](../Usage%20API/Config/Editor/Customization.md#showreviewchanges) field.
+- Added the [editorConfig.customization.commentAuthorOnly](../Usage%20API/Config/Editor/Customization/Customization%20-%20Standard%20branding.md#commentauthoronly) field.
+- Added the [editorConfig.customization.forcesave](../Usage%20API/Config/Editor/Customization/Customization%20-%20Standard%20branding.md#forcesave) field.
+- Added the [editorConfig.customization.showReviewChanges](../Usage%20API/Config/Editor/Customization/Customization%20-%20Standard%20branding.md#showreviewchanges) field.
 - Added the [forcesavetype](../Usage%20API/Callback%20handler.md#forcesavetype) field in the callback handler request when force saving the file.
 - Added the [JSON format for response](../Additional%20API/Conversion%20API/Response.md) from document conversion service.
 
 ## Version 4.2
 
 - The [firstname](../Usage%20API/Config/Editor/Editor.md#user) and [lastname](../Usage%20API/Config/Editor/Editor.md#user) fields is deprecated, please use the [name](../Usage%20API/Config/Editor/Editor.md#user) field instead.
-- Added the possibility to specify the values for the [editorConfig.customization.chat](../Usage%20API/Config/Editor/Customization.md#chat) and [editorConfig.customization.comments](../Usage%20API/Config/Editor/Customization.md#comments) in the Open Source version.
-- Added the [editorConfig.customization.compactToolbar](../Usage%20API/Config/Editor/Customization.md#compacttoolbar) field.
-- Added the [editorConfig.customization.zoom](../Usage%20API/Config/Editor/Customization.md#zoom) field.
-- Added the [editorConfig.customization.autosave](../Usage%20API/Config/Editor/Customization.md#autosave) field.
+- Added the possibility to specify the values for the [editorConfig.customization.chat](../Usage%20API/Config/Editor/Customization/Customization%20-%20Standard%20branding.md#chat) and [editorConfig.customization.comments](../Usage%20API/Config/Editor/Customization/Customization%20-%20Standard%20branding.md#comments) in the Open Source version.
+- Added the [editorConfig.customization.compactToolbar](../Usage%20API/Config/Editor/Customization/Customization%20-%20Standard%20branding.md#compacttoolbar) field.
+- Added the [editorConfig.customization.zoom](../Usage%20API/Config/Editor/Customization/Customization%20-%20Standard%20branding.md#zoom) field.
+- Added the [editorConfig.customization.autosave](../Usage%20API/Config/Editor/Customization/Customization%20-%20Standard%20branding.md#autosave) field.
 - The [changeshistory](../Usage%20API/Callback%20handler.md#changeshistory) field is removed, please use the [history](../Usage%20API/Callback%20handler.md#history) field instead.
 - Changed the [setHistoryData](../Usage%20API/Methods.md#sethistorydata) method.
 - Added the possibility to convert files to [thumbnail](../Additional%20API/Conversion%20API/Request.md#sample-of-json-object-sent-to-document-conversion-service-used-to-generate-png-thumbnail-of-file-in-docx-format) in the [document conversion service](../Additional%20API/Conversion%20API/Request.md).

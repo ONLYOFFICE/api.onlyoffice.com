@@ -79,6 +79,6 @@ If something went wrong, make sure that you have followed the installation instr
 ## Next steps
 
 - [How to enable document forcesaving](../How%20It%20Works/Saving%20file.md#force-saving)
-- [How to customize the editor](../../Usage%20API/Config/Editor/Customization.md)
+- [How to customize the editor](../../Usage%20API/Config/Editor/Customization/Customization%20-%20Standard%20branding.md)
 - [How to manage the editor through Automation API](../../Usage%20API/Automation%20API.md)
 - [How to install / disable plugins](../../Usage%20API/Config/Editor/Plugins.md)

@@ -18,7 +18,7 @@ There are several ways to initiate forced saving:
   }
   ```
 
-- Enabling the [editorConfig.customization.forcesave](../../Usage%20API/Config/Editor/Customization.md#forcesave) setting to **true** in the editor initialization configuration:
+- Enabling the [editorConfig.customization.forcesave](../../Usage%20API/Config/Editor/Customization/Customization%20-%20Standard%20branding.md#forcesave) setting to **true** in the editor initialization configuration:
 
   ``` ts
   const docEditor = new DocsAPI.DocEditor("placeholder", {
@@ -61,7 +61,7 @@ The details of how the conversion works and why it is needed can be found in [th
 
 ## How to enable or disable the 'Autosave' option?
 
-The **Autosave** option is enabled by default. To disable it, you need to set the [editorConfig.customization.autosave](../../Usage%20API/Config/Editor/Customization.md#autosave) parameter in the document configuration to **false**:
+The **Autosave** option is enabled by default. To disable it, you need to set the [editorConfig.customization.autosave](../../Usage%20API/Config/Editor/Customization/Customization%20-%20Standard%20branding.md#autosave) parameter in the document configuration to **false**:
 
   ``` ts
   const docEditor = new DocsAPI.DocEditor("placeholder", {
@@ -75,7 +75,7 @@ The **Autosave** option is enabled by default. To disable it, you need to set th
 
 > Please note, that disabling the **Autosave** will also disable the **Fast** co-editing mode which only works with the automatic document saving enabled.
 
-Further information about the autosaving can be found [at this page](../../Usage%20API/Config/Editor/Customization.md#autosave).
+Further information about the autosaving can be found [at this page](../../Usage%20API/Config/Editor/Customization/Customization%20-%20Standard%20branding.md#autosave).
 
 ## What is the conversion start delay time and how can it be changed?
 

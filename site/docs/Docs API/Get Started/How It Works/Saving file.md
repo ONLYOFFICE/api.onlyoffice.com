@@ -89,7 +89,7 @@ If you want to change it, you can use the *local.json* file, where all the edite
 
 - By the request to the [document command service](../../Additional%20API/Command%20service/Command%20service.md) with the [forcesave](../../Additional%20API/Command%20service/forcesave.md) value in the *c* parameter. The *forcesavetype* parameter will have the **0** value when sending the request to the **callback handler**.
 
-- Enable the [editorConfig.customization.forcesave](../../Usage%20API/Config/Editor/Customization.md#forcesave) mode setting it to **true** in the editor initialization configuration. In this case each time the user clicks the **Save** button, the forcesave will be done, and the *forcesavetype* parameter will have the **1** value when sending the request to the **callback handler**.
+- Enable the [editorConfig.customization.forcesave](../../Usage%20API/Config/Editor/Customization/Customization%20-%20Standard%20branding.md#forcesave) mode setting it to **true** in the editor initialization configuration. In this case each time the user clicks the **Save** button, the forcesave will be done, and the *forcesavetype* parameter will have the **1** value when sending the request to the **callback handler**.
 
 - You can enable [the repeating forcesave start](https://helpcenter.onlyoffice.com/installation/docs-developer-configuring.aspx#AutoAssembly) in the **ONLYOFFICE Docs** additional configuration file, which can be either found at (in case you have already created it) or placed to the following path:
 

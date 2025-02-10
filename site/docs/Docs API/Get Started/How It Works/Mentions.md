@@ -114,7 +114,7 @@ docEditor.setSharingSettings({
 })
 ```
 
-In the case when the [onRequestSendNotify](../../Usage%20API/Config/Events.md#onrequestsendnotify) event does not provide access to the file, the [mentionShare](../../Usage%20API/Config/Editor/Customization.md#mentionshare) parameter in the customization section of the editor configuration must be set to **false**.
+In the case when the [onRequestSendNotify](../../Usage%20API/Config/Events.md#onrequestsendnotify) event does not provide access to the file, the [mentionShare](../../Usage%20API/Config/Editor/Customization/Customization%20-%20Standard%20branding.md#mentionshare) parameter in the customization section of the editor configuration must be set to **false**.
 
 > Please note that it will only be available for the comments if the [onRequestSendNotify](../../Usage%20API/Config/Events.md#onrequestsendnotify) event is set.
 

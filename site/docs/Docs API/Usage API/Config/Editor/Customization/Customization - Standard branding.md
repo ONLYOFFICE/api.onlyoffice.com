@@ -1,16 +1,12 @@
+---
+sidebar_label: Standard branding
+---
+
 The customization section allows to customize the editor interface so that it looked like your other products (if there are any) and change the presence or absence of the additional buttons, links, change logos and editor owner details.
 
+On this page you will find the customization parameters available for the [standard branding](https://www.onlyoffice.com/developer-edition-prices.aspx?from=api) of ONLYOFFICE Docs Developer. If you have an extended white label license, please visit [White label page](Customization%20-%20White%20label.md) to find out what additional customization options are available.
+
 > Please note that only the following parameters are available for the mobile editors: [close](#close), [feedback](#feedback), [goback](#goback), [help](#help), [logo](#logo), [macrosMode](#macrosmode), [mobile](#mobile).
-
-## about
-
-Defines if the **About** menu button is displayed or hidden. The default value is **true**.
-
-> This parameter is an extended white label option for Developer Edition.
-
-Type: boolean
-
-Example: true
 
 ## anonymous
 
@@ -57,7 +53,7 @@ Example: true
 
 ## chat
 
-Defines if the **Chat** menu button is displayed or hidden. Please note that in case you hide the **Chat** button, the corresponding chat functionality will also be disabled. The default value is **true**. Deprecated since version 7.1, please use the [document.permissions.chat](../Document/Permissions.md#chat) parameter instead.
+Defines if the **Chat** menu button is displayed or hidden. Please note that in case you hide the **Chat** button, the corresponding chat functionality will also be disabled. The default value is **true**. Deprecated since version 7.1, please use the [document.permissions.chat](../../Document/Permissions.md#chat) parameter instead.
 
 Type: boolean
 
@@ -96,7 +92,7 @@ Type: string
 
 Example: "Close file"
 
-> Please note that it will only be available if the [onRequestClose](../Events.md#onrequestclose) event is set. If the event is not declared and the *close* parameter is not specified, the cross button will not be displayed.
+> Please note that it will only be available if the [onRequestClose](../../Events.md#onrequestclose) event is set. If the event is not declared and the *close* parameter is not specified, the cross button will not be displayed.
 
 > Please note that this parameter is also available for the mobile editors.
 
@@ -104,7 +100,7 @@ Example: "Close file"
 
 ## commentAuthorOnly
 
-Defines if the user can edit and delete only his comments. The default value is **false**. Deprecated since version 6.3, please use the [document.permissions.editCommentAuthorOnly](../Document/Permissions.md#editcommentauthoronly) and [document.permissions.deleteCommentAuthorOnly](../Document/Permissions.md#deletecommentauthoronly) fields instead.
+Defines if the user can edit and delete only his comments. The default value is **false**. Deprecated since version 6.3, please use the [document.permissions.editCommentAuthorOnly](../Document/Permissions.md#editcommentauthoronly) and [document.permissions.deleteCommentAuthorOnly](../../Document/Permissions.md#deletecommentauthoronly) fields instead.
 
 Type: boolean
 
@@ -154,7 +150,7 @@ Example: false
 
 Contains the information which will be displayed in the editor **About** section and visible to all the editor users.
 
-> This parameter is available for editing only for ONLYOFFICE Developer Edition.
+> This parameter is available for editing only for ONLYOFFICE Docs Developer.
 
 Type: object
 
@@ -252,7 +248,6 @@ const features = {
   roles: true,
   spellcheck: {
     mode: true,
-    change: true,
   },
   tabBackground: {
     mode: "header",
@@ -269,7 +264,7 @@ const features = {
 
 Defines if the role settings will be disabled in the pdf forms or not. If the parameter is equal to **false**, then the role manager is hidden and viewing the form on behalf of a specific role is disabled. In this case, the **Manage Roles** and **View Form** buttons on the **Forms** tab and a drop-down list for setting the field role in the right panel will not be displayed. The default value is **true**.
 
-> This parameter is available for editing only for ONLYOFFICE Developer Edition.
+> This parameter is available for editing only for ONLYOFFICE Docs Developer.
 
 Type: boolean
 
@@ -286,16 +281,6 @@ Example: true
 ### features.spellcheck.mode
 
 Defines if the spell checker is automatically switched on or off when the editor is loaded. This parameter will only be available for the document editor and the presentation editor.
-
-Type: boolean
-
-Example: true
-
-### features.spellcheck.change
-
-Defines if the spell checker setting will be displayed or not. Spell checker setting is available in all editor types.
-
-> This parameter is an extended white label option for Developer Edition.
 
 Type: boolean
 
@@ -385,42 +370,9 @@ Type: boolean
 
 Example: true
 
-## font
-
-Defines the font for the interface elements (buttons, tabs, etc.).
-
-> This parameter is an extended white label option for Developer Edition.
-
-Type:  object
-
-Example:
-
-``` ts
-const font = {
-  name: "Arial",
-  size: "11px",
-}
-```
-
-### font.name
-
-The font name.
-
-Type: string
-
-Example: "Arial"
-
-### font.size
-
-The font size.
-
-Type: string
-
-Example: "11px"
-
 ## forcesave
 
-Adds the request for the file force saving to the [callback handler](../../Callback%20handler.md#forcesavetype) when saving the document within the **document editing service** (e.g. clicking the **Save** button, etc.). The default value is **false**.
+Adds the request for the file force saving to the [callback handler](../../../Callback%20handler.md#forcesavetype) when saving the document within the **document editing service** (e.g. clicking the **Save** button, etc.). The default value is **false**.
 
 Type: boolean
 
@@ -458,7 +410,7 @@ Example: true
 
 ### goback.requestClose
 
-Defines that if the **Open file location** button is clicked, [events.onRequestClose](../Events.md#onrequestclose) event is called instead of opening a browser tab or window. Deprecated since version 8.1. Please use the [close](#close) parameter instead.
+Defines that if the **Open file location** button is clicked, [events.onRequestClose](../../Events.md#onrequestclose) event is called instead of opening a browser tab or window. Deprecated since version 8.1. Please use the [close](#close) parameter instead.
 
 Type: boolean
 
@@ -532,428 +484,11 @@ Type: string
 
 Example: "embed"
 
-## layout
-
-Defines the parameters that the user can use to hide the interface elements but not to disable features completely (for example, if this functionality is available from other elements such as context menu, or via hotkeys).
-
-> This parameter is an extended white label option for Developer Edition.
-
-Type:  object
-
-Example:
-
-``` ts
-const layout = {
-  header: {
-    editMode: true,
-    save: true,
-    users: true,
-  },
-  leftMenu: {
-    mode: true,
-    navigation: true,
-    spellcheck: true,
-  },
-  rightMenu: {
-    mode: true,
-  },
-  statusBar: {
-    actionStatus: true,
-    docLang: true,
-    textLang: true,
-  },
-  toolbar: {
-    collaboration: {
-      mailmerge: true,
-    },
-    draw: true,
-    file: {
-      close: true,
-      info: true,
-      save: true,
-      settings: true,
-    },
-    home: {},
-    layout: true,
-    plugins: true,
-    protect: true,
-    references: true,
-    save: true,
-    view: {
-      navigation: true,
-    },
-  },
-}
-```
-
-### layout.header
-
-Defines the editor header settings.
-
-Type: object
-
-Example:
-
-``` ts
-const header = {
-  editMode: true,
-  save: true,
-  users: true,
-}
-```
-
-### layout.header.editMode
-
-Defines if a button for switching editor modes will be displayed in the header or not. The default value is **true**.
-
-Type: boolean
-
-Example: true
-
-### layout.header.save
-
-Defines if the **Save** button in the editor header is displayed or hidden. The default value is **true**. Please note that this setting is used when the [compactHeader](#compactheader) parameter is set to **false**.
-
-Type: boolean
-
-Example: true
-
-### layout.header.users
-
-Defines if the button with the editing users is displayed or hidden. The default value is **true**.
-
-Type: boolean
-
-Example: true
-
-### layout.leftMenu
-
-Defines the left menu settings. If this parameter is a boolean value, then it specifies whether the left menu will be displayed or hidden. The default value is **true**.
-
-Type: object or boolean
-
-Example:
-
-``` ts
-const leftMenu = {
-  mode: true,
-  navigation: true,
-  spellcheck: true,
-}
-```
-
-### layout.leftMenu.mode
-
-Defines the initial value of the left panel visibility - displayed or hidden. It is used for the **Left panel** menu option on the **View** tab. The default value is **true**.
-
-Type: boolean
-
-Example: true
-
-### layout.leftMenu.navigation
-
-Defines if the **Navigation** button is displayed or hidden. The default value is **true**. This parameter will only be available for the document editor.
-
-Type: boolean
-
-Example: true
-
-### layout.leftMenu.spellcheck
-
-Defines if the **Spellcheck** button is displayed or hidden. The default value is **true**. This parameter will only be available for the spreadsheet editor.
-
-Type: boolean
-
-Example: true
-
-### layout.rightMenu
-
-Defines the right menu settings. If this parameter is a boolean value, then it specifies whether the right menu will be displayed or hidden. The default value is **true**.
-
-Type: object or boolean
-
-Example:
-
-``` ts
-const rightMenu = {
-  mode: true,
-}
-```
-
-### layout.rightMenu.mode
-
-Defines the initial value of the right panel visibility - displayed or hidden. It is used for the **Right panel** menu option on the **View** tab. The default value is **true**.
-
-Type: boolean
-
-Example: true
-
-### layout.statusBar
-
-Defines the status bar settings. If this parameter is a boolean value, then it specifies whether the status bar will be displayed or hidden. The default value is **true**.
-
-Type: object or boolean
-
-Example:
-
-``` ts
-const statusBar = {
-  actionStatus: true,
-  docLang: true,
-  textLang: true,
-}
-```
-
-### layout.statusBar.actionStatus
-
-Defines if an action status is displayed or hidden. The default value is **true**.
-
-Type: boolean
-
-Example: true
-
-### layout.statusBar.docLang
-
-Defines if a button for choosing the document language is displayed or hidden. The default value is **true**. This parameter will only be available for the document editor and the presentation editor.
-
-Type: boolean
-
-Example: true
-
-### layout.statusBar.textLang
-
-Defines if a button for choosing the text language is displayed or hidden. The default value is **true**. This parameter will only be available for the document editor and the presentation editor.
-
-Type: boolean
-
-Example: true
-
-### layout.toolbar
-
-Defines the toolbar settings. If this parameter is a boolean value, then it specifies whether the toolbar will be displayed or hidden. The default value is **true**.
-
-Type: object or boolean
-
-Example:
-
-``` ts
-const toolbar = {
-  collaboration: {
-    mailmerge: true,
-  },
-  draw: true,
-  file: {
-    close: true,
-    info: true,
-    save: true,
-    settings: true,
-  },
-  home: {},
-  layout: true,
-  plugins: true,
-  protect: true,
-  references: true,
-  save: true,
-  view: {
-    navigation: true,
-  },
-}
-```
-
-### layout.toolbar.collaboration
-
-Defines the **Collaboration** tab settings. If this parameter is a boolean value, then it specifies whether the **Collaboration** tab will be displayed or hidden. The default value is **true**.
-
-Type: object or boolean
-
-Example:
-
-``` ts
-const collaboration = {
-  mailmerge: true,
-}
-```
-
-### layout.toolbar.collaboration.mailmerge
-
-Defines if the button for choosing the mail merge base is displayed or hidden. The default value is **true**.
-
-Type: boolean
-
-Example: true
-
-### layout.toolbar.draw
-
-Defines if the **Draw** tab is displayed or hidden. The default value is **true**.
-
-Type: boolean
-
-Example: true
-
-### layout.toolbar.file
-
-Defines the **File** tab settings. If this parameter is a boolean value, then it specifies whether the **File** tab will be displayed or hidden. The default value is **true**.
-
-Type: object or boolean
-
-Example:
-
-``` ts
-const file = {
-  close: true,
-  info: true,
-  save: true,
-  settings: true,
-}
-```
-
-### layout.toolbar.file.close
-
-Defines if the **Close menu** option is displayed or hidden. The default value is **true**.
-
-Type: boolean
-
-Example: true
-
-### layout.toolbar.file.info
-
-Defines if the **Document info** option is displayed or hidden. The default value is **true**.
-
-Type: boolean
-
-Example: true
-
-### layout.toolbar.file.save
-
-Defines if the **Save** option is displayed or hidden. The default value is **true**.
-
-Type: boolean
-
-Example: true
-
-### layout.toolbar.file.settings
-
-Defines if the **Advanced settings** option is displayed or hidden. The default value is **true**.
-
-Type: boolean
-
-Example: true
-
-### layout.toolbar.home
-
-Defines the **Home** tab settings. This tab cannot be hidden.
-
-Type: object
-
-Example: {}
-
-### layout.toolbar.home.mailmerge
-
-Defines if the button for choosing the mail merge base is displayed or hidden. This parameter is deprecated, please use the *toolbar.collaboration.mailmerge* parameter instead.
-
-Type: boolean
-
-Example: true
-
-### layout.toolbar.layout
-
-Defines if the **Layout** tab is displayed or hidden. This parameter will only be available for the document editor and the spreadsheet editor. The default value is **true**.
-
-Type: boolean
-
-Example: true
-
-### layout.toolbar.plugins
-
-Defines if the **Plugins** tab is displayed or hidden. The default value is **true**.
-
-Type: boolean
-
-Example: true
-
-### layout.toolbar.protect
-
-Defines if the **Protection** tab is displayed or hidden. The default value is **true**.
-
-Type: boolean
-
-Example: true
-
-### layout.toolbar.references
-
-Defines if the **References** tab is displayed or hidden. This parameter will only be available for the document editor. The default value is **true**.
-
-Type: boolean
-
-Example: true
-
-### layout.toolbar.save
-
-Defines if the **Save** button on the toolbar is displayed or hidden. The default value is **true**. Please note that this setting is used when the [compactHeader](#compactheader) parameter is set to **true**.
-
-Type: boolean
-
-Example: true
-
-### layout.toolbar.view
-
-Defines the **View** tab settings. If this parameter is a boolean value, then it specifies whether the **View** tab will be displayed or hidden. The default value is **true**.
-
-Type: object or boolean
-
-Example:
-
-``` ts
-const view = {
-  navigation: true,
-}
-```
-
-### layout.toolbar.view.navigation
-
-Defines if the **Navigation** button is displayed or hidden. The default value is **true**. This parameter will only be available for the document editor.
-
-Type: boolean
-
-Example: true
-
-## leftMenu
-
-Defines if the left menu panel is displayed or hidden. The default value is **true**.
-
-> This parameter is an extended white label option for Developer Edition.
-
-> Deprecated since version 7.1. Please use the [layout.leftMenu](#layoutleftmenu) parameter instead.
-
-Type: boolean
-
-Example: true
-
-## loaderLogo
-
-Defines the path to the image logo which will be displayed while the document is being loaded (there are no special recommendations for this file, but it would be better if it were in .png format with transparent background). The image will be proportionally resized to the height of 160 pixels when displayed in the editors.
-
-> This parameter is an extended white label option for Developer Edition.
-
-Type: string
-
-Example: `https://example.com/loader-logo.png`
-
-## loaderName
-
-Defines the text which will be displayed while the document is being loaded.
-
-> This parameter is an extended white label option for Developer Edition.
-
-Type: string
-
-Example: "The document is loading, please wait..."
-
 ## logo
 
 Changes the image file at the top left corner of the editor header. The recommended image height is 20 pixels.
 
-> This parameter is available for editing only for ONLYOFFICE Developer Edition.
+> This parameter is available for editing only for ONLYOFFICE Docs Developer.
 
 Type: object
 
@@ -975,7 +510,7 @@ const logo = {
 
 ### logo.image
 
-Path to the image file used to show in the common work mode (i.e. in view and edit modes for all editors) or in the embedded mode (see the [config](../Config.md#type) section to find out how to define the **embedded** document type). The image must have the following size: 172x40.
+Path to the image file used to show in the common work mode (i.e. in view and edit modes for all editors) or in the embedded mode (see the [config](../../Config.md#type) section to find out how to define the **embedded** document type). The image must have the following size: 172x40.
 
 Type: string
 
@@ -999,7 +534,7 @@ Example: `https://example.com/light-logo.png`
 
 ### logo.imageEmbedded
 
-Path to the image file used to show in the embedded mode (see the [config](../Config.md#type) section to find out how to define the **embedded** document type). The image must have the following size: 248x40. Deprecated since version 7.0, please use the *image* field instead.
+Path to the image file used to show in the embedded mode (see the [config](../../Config.md#type) section to find out how to define the **embedded** document type). The image must have the following size: 248x40. Deprecated since version 7.0, please use the *image* field instead.
 
 Type: string
 
@@ -1055,7 +590,7 @@ Type: boolean
 
 Example: true
 
-> Please note that it will only be available for the comments if the [onRequestSendNotify](../Events.md#onrequestsendnotify) event is set.
+> Please note that it will only be available for the comments if the [onRequestSendNotify](../../Events.md#onrequestsendnotify) event is set.
 
 <img alt="Mention share" src="/assets/images/editor/mentionShare.png" width="379px" />
 
@@ -1115,7 +650,7 @@ Example: true
 
 ## plugins
 
-Defines if [plugins](../../../../Plugin%20and%20Macros/Get%20Started/Overview.md) will be launched and available. The default value is **true**.
+Defines if [plugins](../../../../../Plugin%20and%20Macros/Get%20Started/Overview.md) will be launched and available. The default value is **true**.
 
 Type: boolean
 
@@ -1173,7 +708,7 @@ Example: false
 
 ### review.reviewDisplay
 
-Defines the review editing mode which will be used when the document is opened for viewing. It will only be available for the document editor if [mode](../Editor/Editor.md#mode) is set to **view**. Can take the following values:
+Defines the review editing mode which will be used when the document is opened for viewing. It will only be available for the document editor if [mode](../../Editor/Editor.md#mode) is set to **view**. Can take the following values:
 
 - **markup** - the document is displayed with proposed changes highlighted;
 - **simple** - the document is displayed with proposed changes highlighted, but the balloons are turned off;
@@ -1196,7 +731,7 @@ Example: false
 
 ### review.trackChanges
 
-Defines if the document is opened in the review editing mode (**true**) or not (**false**) regardless of the [document.permissions.review](../Document/Permissions.md#review) parameter (the review mode is changed only for the current user). If the parameter is *undefined*, the *document.permissions.review* value is used (for all the document users).
+Defines if the document is opened in the review editing mode (**true**) or not (**false**) regardless of the [document.permissions.review](../../Document/Permissions.md#review) parameter (the review mode is changed only for the current user). If the parameter is *undefined*, the *document.permissions.review* value is used (for all the document users).
 
 Type: boolean
 
@@ -1220,18 +755,6 @@ Example: "original"
 > Deprecated since version 7.0. Please use the [review.reviewDisplay](#review) parameter instead.
 
 > Please note that in case this setting is changed in the editor interface, it will be stored in the browser local storage and will overwrite any values sent as the *editorConfig.customization.reviewDisplay* parameter.
-
-## rightMenu
-
-Defines if the right menu panel is displayed or hidden. The default value is **true**.
-
-> This parameter is an extended white label option for Developer Edition.
-
-> Deprecated since version 7.1. Please use the [layout.rightMenu](#layoutrightmenu) parameter instead.
-
-Type: boolean
-
-Example: true
 
 ## showReviewChanges
 
@@ -1262,18 +785,6 @@ Example: true
 > Deprecated since version 7.1. Please use the [features.spellcheck](#features) parameter instead.
 
 > Please note that in case this setting is changed in the editor interface, it will be stored in the browser local storage and will overwrite any values sent as the *editorConfig.customization.spellcheck* parameter.
-
-## statusBar
-
-Defines if the status bar is displayed or hidden. The default value is **true**.
-
-> This parameter is an extended white label option for Developer Edition.
-
-> Deprecated since version 7.1. Please use the [layout.statusBar](#layoutstatusbar) parameter instead.
-
-Type: boolean
-
-Example: true
 
 ## submitForm
 
@@ -1306,18 +817,6 @@ Type: string
 
 Example: "text"
 
-## toolbar
-
-Defines if the top toolbar is displayed or hidden. The default value is **true**.
-
-> This parameter is an extended white label option for Developer Edition.
-
-> Deprecated since version 7.1. Please use the [layout.toolbar](#layouttoolbar) parameter instead.
-
-Type: boolean
-
-Example: true
-
 ## toolbarHideFileName
 
 Defines if the document title is visible on the top toolbar (**false**) or hidden (**true**). The default value is **false**.
@@ -1340,7 +839,7 @@ Example: false
 
 ## trackChanges
 
-Defines if the document is opened in the review editing mode (**true**) or not (**false**) regardless of the [document.permissions.review](../Document/Permissions.md#review) parameter (the review mode is changed only for the current user). If the parameter is *undefined*, the *document.permissions.review* value is used (for all the document users). 
+Defines if the document is opened in the review editing mode (**true**) or not (**false**) regardless of the [document.permissions.review](../../Document/Permissions.md#review) parameter (the review mode is changed only for the current user). If the parameter is *undefined*, the *document.permissions.review* value is used (for all the document users). 
 
 Type: boolean
 
@@ -1407,7 +906,6 @@ Example: 100
 const docEditor = new DocsAPI.DocEditor("placeholder", {
   editorConfig: {
     customization: {
-      about: true,
       anonymous: {
         request: true,
         label: "Guest",
@@ -1435,7 +933,6 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
         roles: true,
         spellcheck: {
           mode: true,
-          change: true,
         },
         tabBackground: {
           mode: "header",
@@ -1450,10 +947,6 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
         url: "https://example.com",
         visible: true,
       },
-      font: {
-        name: "Arial",
-        size: "11px",
-      },
       forcesave: false,
       goback: {
         blank: true,
@@ -1465,49 +958,6 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
       hideRightMenu: true,
       hideRulers: false,
       integrationMode: "embed",
-      layout: {
-        header: {
-          editMode: true,
-          save: true,
-          users: true,
-        },
-        leftMenu: {
-          mode: true,
-          navigation: true,
-          spellcheck: true,
-        },
-        rightMenu: {
-          mode: true,
-        },
-        statusBar: {
-          actionStatus: true,
-          docLang: true,
-          textLang: true,
-        },
-        toolbar: {
-          collaboration: {
-            mailmerge: true,
-          },
-          draw: true,
-          file: {
-            close: true,
-            info: true,
-            save: true,
-            settings: true,
-          },
-          home: {},
-          layout: true,
-          plugins: true,
-          protect: true,
-          references: true,
-          save: true,
-          view: {
-            navigation: true,
-          },
-        },
-      },
-      loaderLogo: "https://example.com/loader-logo.png",
-      loaderName: "The document is loading, please wait...",
       logo: {
         image: "https://example.com/logo.png",
         imageDark: "https://example.com/dark-logo.png",
@@ -1547,4 +997,4 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
 })
 ```
 
-The **example.com** is the name of the server where **document manager** and **document storage service** are installed. See the [How it works](../../../Get%20Started/How%20It%20Works/How%20It%20Works.md) section to find out more on ONLYOFFICE Docs service client-server interactions.
+The **example.com** is the name of the server where **document manager** and **document storage service** are installed. See the [How it works](../../../../Get%20Started/How%20It%20Works/How%20It%20Works.md) section to find out more on ONLYOFFICE Docs service client-server interactions.

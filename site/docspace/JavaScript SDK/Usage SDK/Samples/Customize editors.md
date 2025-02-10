@@ -42,7 +42,7 @@ function onAppReady() {
 ```
 
 2. Create a configuration for the **Editor** mode. Go to the [editorCustomization](../Config.md#editorcustomization) section and configure the editors as needed.
-After that, copy the resulting config and paste it into the [customization](../../../../docs/Docs%20API/Usage%20API/Config/Editor/Customization.md) section, as shown below. In the config, pass the id of the file that will be opened in the editors:
+After that, copy the resulting config and paste it into the [customization](../../../../docs/Docs%20API/Usage%20API/Config/Editor/Customization/Customization%20-%20Standard%20branding.md) section, as shown below. In the config, pass the id of the file that will be opened in the editors:
 
 ``` ts
 const config = {

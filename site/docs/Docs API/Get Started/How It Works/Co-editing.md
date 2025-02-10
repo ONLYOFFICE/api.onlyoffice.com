@@ -157,7 +157,7 @@ If the user saves the document before the editing is finished (the *status* valu
 
 4. Add the script initializing another **Document Editor** with *key 1*. The key is known and the document is reopened from the editor cache. As this key and the key from the second scenario are the same, the document are opened in the co-editing mode.
 
-   Get the current document state without closing the document. The [forcesave](../../Usage%20API/Config/Editor/Customization.md#forcesave) parameter allows you to do it in the customization section of the editor initialization.
+   Get the current document state without closing the document. The [forcesave](../../Usage%20API/Config/Editor/Customization/Customization%20-%20Standard%20branding.md#forcesave) parameter allows you to do it in the customization section of the editor initialization.
 
    ``` ts
    const docEditor = new DocsAPI.DocEditor("placeholder", {

@@ -10,7 +10,7 @@ Defines the array of object received when the user takes an action with the docu
 
 - **0** - the user disconnects from the document co-editing;
 - **1** - the new user connects to the document co-editing;
-- **2** - the user clicks the [forcesave button](./Config/Editor/Customization.md#forcesave).
+- **2** - the user clicks the [forcesave button](./Config/Editor/Customization/Customization%20-%20Standard%20branding.md#forcesave).
 
 The *userid* field value is the user identifier.
 
@@ -39,9 +39,9 @@ Type: string
 Defines the type of initiator when the [force saving](../Get%20Started/How%20It%20Works/Saving%20file.md#force-saving) request is performed. Can have the following values:
 
 - **0** - the force saving request is performed to the [command service](../Additional%20API/Command%20service/forcesave.md);
-- **1** - the force saving request is performed each time the saving is done (e.g. the **Save** button is clicked), which is only available when the [forcesave](./Config/Editor/Customization.md#forcesave) option is set to *true*;
+- **1** - the force saving request is performed each time the saving is done (e.g. the **Save** button is clicked), which is only available when the [forcesave](./Config/Editor/Customization/Customization%20-%20Standard%20branding.md#forcesave) option is set to *true*;
 - **2** - the force saving request is performed by timer with the settings from the server config;
-- **3** - the force saving request is performed each time the form is submitted (e.g. the [Complete & Submit](./Config/Editor/Customization.md#submitform) button is clicked).
+- **3** - the force saving request is performed each time the form is submitted (e.g. the [Complete & Submit](./Config/Editor/Customization/Customization%20-%20Standard%20branding.md#submitform) button is clicked).
 
 The type is present when the *status* value is equal to **6** or **7** only.
 

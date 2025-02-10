@@ -219,7 +219,7 @@ The function called when the application is loaded into the browser. Deprecated 
 
 ## onRequestClose
 
-The function called when the user is trying to end the work with the editor and close it by clicking the cross button. If the method is not declared, the [editorConfig.customization.close](./Editor/Customization.md#close) parameter will not be available, and the cross button will not be displayed.
+The function called when the user is trying to end the work with the editor and close it by clicking the cross button. If the method is not declared, the [editorConfig.customization.close](../Editor/Customization/Customization%20-%20Standard%20branding.md#close) parameter will not be available, and the cross button will not be displayed.
 
 Example:
 

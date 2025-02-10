@@ -24,7 +24,7 @@ The reference figure and the steps below explain the process of setting a name t
 
 2. If the anonymous user’s name is specified, it is displayed on the top toolbar.
 
-3. If the user name is not specified, it will be requested. The request can be turned off with the *"request"=false* value of the [editorConfig.customization.anonymous](../../Usage%20API/Config/Editor/Customization.md#anonymous) parameter.
+3. If the user name is not specified, it will be requested. The request can be turned off with the *"request"=false* value of the [editorConfig.customization.anonymous](../../Usage%20API/Config/Editor/Customization/Customization%20-%20Standard%20branding.md#anonymous) parameter.
 
    ![Name request](/assets/images/editor/name-request.png)
 

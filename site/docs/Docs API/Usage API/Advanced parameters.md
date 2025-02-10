@@ -13,7 +13,7 @@ The parameters, which can be changed for ONLYOFFICE Docs, can be subdivided into
 
 - [**editorConfig**](./Config/Editor/Editor.md) - defines parameters pertaining to the editor interface: opening mode (viewer or editor), interface language, additional buttons, etc.;
 
-  - [**customization**](./Config/Editor/Customization.md) - allows to customize the editor interface so that it looked like your other products (if there are any) and change the presence or absence of the additional buttons, links, change logos and editor owner details;
+  - [**customization**](./Config/Editor/Customization/Customization%20-%20Standard%20branding.md) - allows to customize the editor interface so that it looked like your other products (if there are any) and change the presence or absence of the additional buttons, links, change logos and editor owner details;
   - [**embedded**](./Config/Editor/Embedded.md) - is used for the embedded document type only and allows to change the behavior of the buttons used to control the embedded mode;
   - [**plugins**](./Config/Editor/Plugins.md) - is used to connect the necessary [plugins](../../Plugin%20and%20Macros/Get%20Started/Overview.md) to your ONLYOFFICE Docs, so that they become visible to all document editor users;
 
