@@ -83,7 +83,7 @@ If necessary, define the plugin's UI elements. Consult our [Storybook](https://a
 
 For example, the **draw\.io** plugin contains two main UI elements - the modal window and the diagram editor. Create the files for configuring each element. For your convenience, you can put these files into a separate *DrawIO* folder.
 
-- In the [Dialog.ts](https://github.com/ONLYOFFICE/docspace-plugins/blob/master/draw.io/src/DrawIO/Dialog.ts) file, configure the modal window settings. Specify the [IFrame](../coding-plugin/plugin-components/IFrame.md) UI component that is used to embed the draw\.io website into a modal window:
+- In the [Dialog.ts](https://github.com/ONLYOFFICE/docspace-plugins/blob/master/draw.io/src/DrawIO/Dialog.ts) file, configure the modal window settings. Specify the [IFrame](../coding-plugin/plugin-components/iframe.md) UI component that is used to embed the draw\.io website into a modal window:
 
   ``` ts
   export const frameProps: IFrame = {

@@ -16,7 +16,7 @@ Example: `[Actions.showToast, Actions.closeModal]`
 
 Defines the properties that update the state of the items which interact with the users. This parameter is used only with [Actions.updateProps](./events.md#updateprops).
 
-Type: [IInput](./plugin-components/Input.md), [ICheckbox](./plugin-components/Checkbox.md), [IToggleButton](./plugin-components/Togglebutton.md), [IButton](./plugin-components/button.md), [ITextArea](./plugin-components/TextArea.md), [IComboBox](./plugin-components/Combobox.md)
+Type: [IInput](./plugin-components/input.md), [ICheckbox](./plugin-components/checkbox.md), [IToggleButton](./plugin-components/Togglebutton.md), [IButton](./plugin-components/button.md), [ITextArea](./plugin-components/TextArea.md), [IComboBox](./plugin-components/combobox.md)
 
 Example: `{IInput}`
 
@@ -67,7 +67,7 @@ Example: `{...acceptButtonProps, "isDisabled": false}`
 
 Defines the properties that display the default dialog box for creating a file/folder managed by the plugin. This parameter is used only with [Actions.showCreateDialogModal](./events.md#showcreatedialogmodal).
 
-Type: [ICreateDialog](./plugin-components/CreateDialog.md)
+Type: [ICreateDialog](./plugin-components/createdialog.md)
 
 Example: `{ICreateDialog}`
 

@@ -12,7 +12,7 @@ See the parameters of this component in [storybook](https://storybook.onlyoffice
 
 The box components.
 
-Type: array of [Components](./Component.md)
+Type: array of [Components](./component.md)
 
 Example: \[inputComponent]
 
