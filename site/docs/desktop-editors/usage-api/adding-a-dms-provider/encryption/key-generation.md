@@ -16,7 +16,7 @@ The steps below explain the process of document encryption in ONLYOFFICE.
    }))
    ```
 
-2. To monitor the password from the login page, send the desktop editors the *portal:checkpwd* command through the [execCommand](../execCommand.md) method. Parameters are specified in the format of a string with the serialized *json* as follows:
+2. To monitor the password from the login page, send the desktop editors the *portal:checkpwd* command through the [execCommand](../execcommand.md) method. Parameters are specified in the format of a string with the serialized *json* as follows:
 
    ``` json
    {

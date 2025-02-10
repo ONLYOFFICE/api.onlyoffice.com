@@ -6,7 +6,7 @@ Before you start working on documents stored within your cloud, you need to log 
 
 ## Login
 
-Use the [execCommand](./execCommand.md) method to display a cloud in the **Connected clouds** list. When the *portal:login* command is sent, the cloud is registered and listed on the **Connected clouds** page. Call the command on all the pages you can access after logging in to your cloud. Parameters are specified in the format of a string with the serialized *json* as follows:
+Use the [execCommand](./execcommand.md) method to display a cloud in the **Connected clouds** list. When the *portal:login* command is sent, the cloud is registered and listed on the **Connected clouds** page. Call the command on all the pages you can access after logging in to your cloud. Parameters are specified in the format of a string with the serialized *json* as follows:
 
 ``` json
 {
@@ -98,7 +98,7 @@ window.AscDesktopEditor.execCommand("portal:login", JSON.stringify(params))
 
 ## Logout
 
-Use the [execCommand](./execCommand.md) method to remove a cloud from the **Connected clouds** list. When the *portal:logout* command is sent, the cloud will be removed from the list on the **Connected clouds** page. Cookies for this domain will be cleared. Parameters are specified in the format of a string with the serialized *json* as follows:
+Use the [execCommand](./execcommand.md) method to remove a cloud from the **Connected clouds** list. When the *portal:logout* command is sent, the cloud will be removed from the list on the **Connected clouds** page. Cookies for this domain will be cleared. Parameters are specified in the format of a string with the serialized *json* as follows:
 
 ``` json
 {

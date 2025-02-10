@@ -34,7 +34,7 @@ The list of changes for ONLYOFFICE Desktop Editors API.
 ## Version 6.2
 
 - Added [config](../usage-api/adding-a-dms-provider/adding-a-dms-provider.md) with DMS integration parameters.
-- Added the [execCommand](../usage-api/adding-a-dms-provider/execCommand.md) method.
+- Added the [execCommand](../usage-api/adding-a-dms-provider/execcommand.md) method.
 - Added commands for [document opening](../usage-api/adding-a-dms-provider/opening-documents.md).
 
 ## Version 6.1

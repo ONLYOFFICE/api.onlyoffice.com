@@ -17,7 +17,7 @@ To open a document in a new window / tab correctly:
 
 **Option 1.** Use the *window\.open("http\://url.to.document")* JavaScript command, where URL to the document is validated by the *editorPage* value of the [config](./adding-a-dms-provider.md). The document will be opened upon successful validation.
 
-**Option 2.** Use the *open:document* command of the [execCommand](./execCommand.md) method. When this command is sent, the document is opened. Parameters are specified in the format of a string with the serialized *json* as follows:
+**Option 2.** Use the *open:document* command of the [execCommand](./execcommand.md) method. When this command is sent, the document is opened. Parameters are specified in the format of a string with the serialized *json* as follows:
 
 ``` json
 {

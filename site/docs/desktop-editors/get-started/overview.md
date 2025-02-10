@@ -22,4 +22,4 @@ For some Linux distributions, like Zorin OS, Linux Mint, Linkat, Linspire, etc.,
 
 ## What's new
 
-ONLYOFFICE Desktop Editors Api is constantly updated. To stay up to date with our new features and enhancements, visit the [Changelog](../more-information/Changelog.md) section.
+ONLYOFFICE Desktop Editors Api is constantly updated. To stay up to date with our new features and enhancements, visit the [Changelog](../more-information/changelog.md) section.
