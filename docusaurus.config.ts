@@ -278,6 +278,13 @@ const config: Config = {
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,
     },
+    algolia: {
+      appId: '59O6KESY1Y',
+      apiKey: 'b7dbab0357490826b892aeb2aad32810',
+
+      indexName: 'api-onlyoffice',
+      contextualSearch: true,
+    },
   } satisfies Preset.ThemeConfig,
 
   themes: ["docusaurus-theme-openapi-docs"],
