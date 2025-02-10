@@ -147,7 +147,7 @@ export const WorkspaceFeatures: Features = {
   items: [
     {
       title: 'API Backend',
-      link: 'Get Started/Basic concepts',
+      link: 'get-started/basic-concepts',
       description: (
         <>
           In this section, you will learn how to integrate ONLYOFFICE Workspace{" "}
@@ -161,7 +161,7 @@ export const WorkspaceFeatures: Features = {
     },
     {
       title: 'For Hosting Providers',
-      link: 'Get Started/Authentication',
+      link: 'get-started/authentication',
       description: (
         <>
           In this section, you will learn how to provide the Workspace portal as a{" "}
