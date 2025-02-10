@@ -10,7 +10,7 @@ The plugin that is embedded in the profile menu.
 
 ### profileMenuItems
 
-Stores a collection of elements where the keys are the *key* parameters from the [ProfileMenuItem](../plugin-items/ProfileMenuItem.md) objects. A list for embedding into the profile menu is generated based on this collection.
+Stores a collection of elements where the keys are the *key* parameters from the [ProfileMenuItem](../plugin-items/profilemenuitem.md) objects. A list for embedding into the profile menu is generated based on this collection.
 
 Type: collection of IProfileMenuItem
 

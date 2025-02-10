@@ -22,7 +22,7 @@ See the examples in some of the most popular programming languages at [this page
 
 If you use **ONLYOFFICE Document Builder** as both an application and a script, then you need to know some rules and limitations:
 
-1. To run ONLYOFFICE Document Builder executable in the C++ application, use the [CDocBuilder.Run](../Builder%20Framework/C++/CDocBuilder/Run.md) method in the following way:
+1. To run ONLYOFFICE Document Builder executable in the C++ application, use the [CDocBuilder.Run](../builder-framework/C++/CDocBuilder/Run.md) method in the following way:
 
    ```cpp
    CDocBuilder::Initialize(sWorkDirectory.c_str());
@@ -37,7 +37,7 @@ If you use **ONLYOFFICE Document Builder** as both an application and a script, 
    docbuilder.exe "path-to-script.docbuilder"
    ```
 
-2. To set an argument to the builder class which can be trasferred to the program outside the [CDocBuilder.ExecuteCommand](../Builder%20Framework/C++/CDocBuilder/ExecuteCommand.md) method, add it as an additional property when running **ONLYOFFICE Document Builder** executable file or as a part of program JavaScript code, but not included into the document file script:
+2. To set an argument to the builder class which can be trasferred to the program outside the [CDocBuilder.ExecuteCommand](../builder-framework/C++/CDocBuilder/ExecuteCommand.md) method, add it as an additional property when running **ONLYOFFICE Document Builder** executable file or as a part of program JavaScript code, but not included into the document file script:
 
    ### Sets the --argument property to CDocBuilder.Run
 

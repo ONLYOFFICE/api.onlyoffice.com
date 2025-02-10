@@ -8,7 +8,7 @@ The plugins and macros can interact with the editors using different events, met
 - [How to call methods](How%20to%20call%20methods.md)
 - [How to call commands](How%20to%20call%20commands.md)
 
-The main plugin code is placed to a *.js* file which describes what and how must be done by the plugin. This file is placed to the plugin root folder together with the [config.json](../../structure/manifest/manifest.md) and [index.html](../../structure/Entry%20point.md) files.
+The main plugin code is placed to a *.js* file which describes what and how must be done by the plugin. This file is placed to the plugin root folder together with the [config.json](../../structure/manifest/manifest.md) and [index.html](../../structure/entry-point.md) files.
 
 ## How it works
 
@@ -16,7 +16,7 @@ Any plugin has *window.Asc.plugin* object which in its turn has several methods 
 
 > Please note that starting from version 7.1, the access to the *window* and *document* objects and the *alert* function is restricted from the plugin command code because the *"use strict"* mode was applied to the plugin scripts. Don't forget to declare variables before using them so that the plugins work correctly.
 
-For the plugin to work the developer must specify two obligatory events for the *window.Asc.plugin* object: window.Asc.plugin.init and window.Asc.plugin.button. After that the window.Asc.plugin.callCommand method is used to send the data to the editors using the in-built **ONLYOFFICE Document Builder** [API](../../../document-builder/Builder%20Framework/C++/CDocBuilder/ExecuteCommand.md) features.
+For the plugin to work the developer must specify two obligatory events for the *window.Asc.plugin* object: window.Asc.plugin.init and window.Asc.plugin.button. After that the window.Asc.plugin.callCommand method is used to send the data to the editors using the in-built **ONLYOFFICE Document Builder** [API](../../../document-builder/builder-framework/C++/CDocBuilder/ExecuteCommand.md) features.
 
 If the plugin operates with an OLE object, window.Asc.plugin.callCommand method is used to manage it.
 

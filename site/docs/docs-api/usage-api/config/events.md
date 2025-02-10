@@ -162,7 +162,7 @@ The function called when the meta information of the document is changed via the
 
 The name of the document is sent in the *data.title* parameter. The *Favorite* icon highlighting state is sent in the *data.favorite* parameter.
 
-When the user clicks the *Favorite* icon, the [setFavorite](../methods.md#setfavorite) method is called to update the [information](./document/Info.md#favorite) about the *Favorite* icon highlighting state. If the method is not declared, the *Favorite* icon will not be changed.
+When the user clicks the *Favorite* icon, the [setFavorite](../methods.md#setfavorite) method is called to update the [information](./document/info.md#favorite) about the *Favorite* icon highlighting state. If the method is not declared, the *Favorite* icon will not be changed.
 
 Example:
 
@@ -181,7 +181,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
 
 ## onOutdatedVersion
 
-The function called after the [error](../../more-information/Troubleshooting.md#key) is shown, when the document is opened for editing with the old [document.key](./document/document.md#key) value, which was used to edit the previous document version and was successfully saved. When this event is called the editor must be reinitialized with a new *document.key*. Deprecated since version 8.3, please use [onRequestRefreshFile](#onrequestrefreshfile) instead.
+The function called after the [error](../../more-information/troubleshooting.md#key) is shown, when the document is opened for editing with the old [document.key](./document/document.md#key) value, which was used to edit the previous document version and was successfully saved. When this event is called the editor must be reinitialized with a new *document.key*. Deprecated since version 8.3, please use [onRequestRefreshFile](#onrequestrefreshfile) instead.
 
 Example:
 
@@ -788,7 +788,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
 
 The function called when the user is trying to manage document access rights by clicking *Change access rights* button.
 
-When the access rights is changed, you must call the [setSharingSettings](../methods.md#setsharingsettings) method to update the [information](./document/Info.md#sharingsettings) about the settings which allow to share the document with other users. If the method is not declared the *Change access rights* button will not be displayed.
+When the access rights is changed, you must call the [setSharingSettings](../methods.md#setsharingsettings) method to update the [information](./document/info.md#sharingsettings) about the settings which allow to share the document with other users. If the method is not declared the *Change access rights* button will not be displayed.
 
 ![onRequestSharingSettings](/assets/images/editor/onRequestSharingSettings.png)
 

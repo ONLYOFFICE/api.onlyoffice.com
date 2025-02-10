@@ -66,6 +66,6 @@ builder.SaveFile("xlsx", "example.xlsx")
 builder.CloseFile()
 ```
 
-As you can see you just need to use the *builder.OpenFile();* method of the [CDocBuilder](../../../document-builder/Builder%20Framework/C++/CDocBuilder/CDocBuilder.md) class with the path to the necessary spreadsheet as an argument to open it. In the above example we open **myspreadsheet.xlsx** spreadsheet, get its first sheet and change the sheet name, first column width and enter the new value into its A1 cell. The same way any other spreadsheet element can be changed.
+As you can see you just need to use the *builder.OpenFile();* method of the [CDocBuilder](../../../document-builder/builder-framework/C++/CDocBuilder/CDocBuilder.md) class with the path to the necessary spreadsheet as an argument to open it. In the above example we open **myspreadsheet.xlsx** spreadsheet, get its first sheet and change the sheet name, first column width and enter the new value into its A1 cell. The same way any other spreadsheet element can be changed.
 
 Use the appropriate API documentation sections to find out which methods allow you to change certain document and spreadsheet element formatting properties.

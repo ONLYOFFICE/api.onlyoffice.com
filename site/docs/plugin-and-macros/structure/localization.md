@@ -56,7 +56,7 @@ The complete translations in the [config.json](./manifest/manifest.md) for the [
 
 ## Localizing index.html and plugin code files
 
-Find all the strings you want to be localized from the [index.html](./Entry%20point.md) and the [pluginCode.js](../Interacting%20with%20editors/overview/overview.md) files and create their list. Then create the *translations* folder in the plugin directory, so that the structure looked like this:
+Find all the strings you want to be localized from the [index.html](./entry-point.md) and the [pluginCode.js](../Interacting%20with%20editors/overview/overview.md) files and create their list. Then create the *translations* folder in the plugin directory, so that the structure looked like this:
 
 ``` ini
 [translations]

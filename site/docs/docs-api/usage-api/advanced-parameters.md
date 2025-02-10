@@ -8,7 +8,7 @@ The parameters, which can be changed for ONLYOFFICE Docs, can be subdivided into
 
 - [**document**](./config/document/document.md) - contains all the parameters pertaining to the document (title, url, file type, etc.);
 
-  - [**info**](./config/document/Info.md) - contains additional parameters for the document (document owner, folder where the document is stored, uploading date, sharing settings);
+  - [**info**](./config/document/info.md) - contains additional parameters for the document (document owner, folder where the document is stored, uploading date, sharing settings);
   - [**permissions**](./config/document/permissions.md) - defines whether the document can be edited and downloaded or not;
 
 - [**editorConfig**](./config/editor/editor.md) - defines parameters pertaining to the editor interface: opening mode (viewer or editor), interface language, additional buttons, etc.;

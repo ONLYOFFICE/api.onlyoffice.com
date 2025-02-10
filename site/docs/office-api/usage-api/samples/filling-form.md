@@ -4,7 +4,7 @@ Fill a form with the data stored in the object:
 - run a loop for each form, check the form type and set the data corresponding to the form key (ApiFormBase/GetFormType,  ApiFormBase/GetFormKey, ApiPictureForm/SetImage, ApiComboBoxForm/SetText)
 
 This sample is available for the **C++ and .Net DocBuilder Frameworks**.
-Download the sample and get more information on the [Builder framework samples](../../../document-builder/Builder%20Framework/Builder%20framework%20samples/Builder%20framework%20samples.md) page.
+Download the sample and get more information on the [Builder framework samples](../../../document-builder/builder-framework/Builder%20framework%20samples/Builder%20framework%20samples.md) page.
 
 ```ts document-builder={"document": {"url": "https://static.onlyoffice.com/assets/docs/samples/purchase_order.pdf"}, "documentType": "pdf", "editorConfig": {"customization": {"zoom": 60}}}
 const oDocument = Api.GetDocument()

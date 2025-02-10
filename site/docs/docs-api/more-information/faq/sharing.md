@@ -298,7 +298,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
 })
 ```
 
-Further information about the permissions can be found [at this page](../../usage-api/config/document/Info.md).
+Further information about the permissions can be found [at this page](../../usage-api/config/document/info.md).
 
 ## How to restrict commenting?
 

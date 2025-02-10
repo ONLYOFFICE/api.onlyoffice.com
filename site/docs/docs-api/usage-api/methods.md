@@ -468,7 +468,7 @@ Where **example.com** is the name of the server where **document manager** and *
 
 ## setSharingSettings
 
-Update the [information](./config/document/Info.md#sharingsettings) about the settings which allow to share the document with other users. This method can be called after the [onRequestSharingSettings](./config/events.md#onrequestsharingsettings) events.
+Update the [information](./config/document/info.md#sharingsettings) about the settings which allow to share the document with other users. This method can be called after the [onRequestSharingSettings](./config/events.md#onrequestsharingsettings) events.
 
   ``` ts
   docEditor.setSharingSettings({

@@ -6,7 +6,7 @@ Create a presentation on a specific topic:
 - set the slide title and text in the specified style (Api/CreateParagraph, Api/CreateRGBColor, Api/CreateShape, Api/CreateSolidFill, ApiDocumentContent/RemoveAllElements ApiDocumentContent/Push, ApiDrawing/SetPosition, ApiParagraph/AddText, ApiParagraph/SetJc, ApiParagraph/SetSpacingAfter, ApiParagraph/SetSpacingBefore, ApiRun/SetBold, ApiRun/SetFill, ApiRun/SetFontFamily, ApiRun/SetFontSize, ApiShape/GetDocContent, ApiSlide/AddObject, ApiSlide/RemoveAllObjects).
 
 This sample is available for the **C++ and .Net DocBuilder Frameworks**.
-Download the sample and get more information on the [Builder framework samples](../../../document-builder/Builder%20Framework/Builder%20framework%20samples/Builder%20framework%20samples.md) page.
+Download the sample and get more information on the [Builder framework samples](../../../document-builder/builder-framework/Builder%20framework%20samples/Builder%20framework%20samples.md) page.
 
 ```ts document-builder={"documentType": "slide", "editorConfig": {"customization": {"zoom": 60}}}
 const oPresentation = Api.GetPresentation()

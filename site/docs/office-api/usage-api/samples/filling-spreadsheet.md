@@ -5,7 +5,7 @@ Fill an empty spreadsheet with the data stored in arrays:
 
 Check Exchanging data among files and Using command line arguments to learn more options for passing external data in the DocBuilder script.
 This sample is available for the **C++ and .Net DocBuilder Frameworks**.
-Download the sample and get more information on the [Builder framework samples](../../../document-builder/Builder%20Framework/Builder%20framework%20samples/Builder%20framework%20samples.md) page.
+Download the sample and get more information on the [Builder framework samples](../../../document-builder/builder-framework/Builder%20framework%20samples/Builder%20framework%20samples.md) page.
 
 ```ts document-builder={"documentType": "cell", "editorConfig": {"customization": {"zoom": 60}}}
 const oWorksheet = Api.GetActiveSheet()

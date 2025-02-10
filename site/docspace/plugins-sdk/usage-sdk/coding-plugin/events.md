@@ -188,7 +188,7 @@ The function called when sending a message to a frame. It does not work if the [
 
 ## saveSettings
 
-The function called when saving the data that was transferred in the [settings](./plugin-message.md#settings) parameter and returning it in the [setAdminPluginSettingsValue](./plugin-types/SettingsPlugin.md#setadminpluginsettingsvalue) method each time the plugin is requested. It functions only when the **Save** button is clicked in the **Settings** block.
+The function called when saving the data that was transferred in the [settings](./plugin-message.md#settings) parameter and returning it in the [setAdminPluginSettingsValue](./plugin-types/settingsplugin.md#setadminpluginsettingsvalue) method each time the plugin is requested. It functions only when the **Save** button is clicked in the **Settings** block.
 
   ``` ts
   const message: IMessage = {

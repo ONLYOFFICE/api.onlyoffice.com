@@ -6,7 +6,7 @@ Let's see how to build the simplest [Hello world](https://github.com/ONLYOFFICE/
 
 ## Building a plugin
 
-1. Create a plugin folder. Follow the plugin structure described [here](../structure/manifest/manifest.md). The plugin folder must contain three files required for the plugin to work: [config.json](../structure/manifest/manifest.md), [index.html](../structure/Entry%20point.md), [pluginCode.js](../Interacting%20with%20editors/overview/overview.md):
+1. Create a plugin folder. Follow the plugin structure described [here](../structure/manifest/manifest.md). The plugin folder must contain three files required for the plugin to work: [config.json](../structure/manifest/manifest.md), [index.html](../structure/entry-point.md), [pluginCode.js](../Interacting%20with%20editors/overview/overview.md):
 
    ![Structure](/assets/images/plugins/plugins-structure.png)
 

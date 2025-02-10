@@ -529,7 +529,7 @@ Example: "background"
 
 ### variations.url
 
-Plugin entry point, i.e. an HTML file which connects the *plugin.js* file (the base file needed for work with plugins) and launches the plugin code. See the [index.html](../Entry%20point.md) section for the detailed information.
+Plugin entry point, i.e. an HTML file which connects the *plugin.js* file (the base file needed for work with plugins) and launches the plugin code. See the [index.html](../entry-point.md) section for the detailed information.
 
 Type: string
 

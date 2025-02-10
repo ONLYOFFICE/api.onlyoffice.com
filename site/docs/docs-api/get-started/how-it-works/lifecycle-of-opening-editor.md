@@ -81,7 +81,7 @@ Specify there the following events:
    })
    ```
 
-   An [error](../../more-information/Troubleshooting.md#the-file-version-has-been-changed) will occur and further work will not be available. If the event is not processed, the file will be opened for viewing only. The editor must be reinitialized with a new key.
+   An [error](../../more-information/troubleshooting.md#the-file-version-has-been-changed) will occur and further work will not be available. If the event is not processed, the file will be opened for viewing only. The editor must be reinitialized with a new key.
 
    This event is deprecated since version 8.3. Please use the [onRequestRefreshFile](../../usage-api/config/events.md#onrequestrefreshfile) event instead.
 

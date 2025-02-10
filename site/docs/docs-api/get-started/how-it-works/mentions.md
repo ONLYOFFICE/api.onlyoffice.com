@@ -94,7 +94,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
 
 When the [onRequestSendNotify](../../usage-api/config/events.md#onrequestsendnotify) event is called, the software integrators provide access to the file, send notifications to the mentioned users with the action link which allows scrolling to the comment position in the document.
 
-In the case when the [document.info.sharingSettings](../../usage-api/config/document/Info.md#sharingsettings) field is used in the document initialization but the list of the users from the [onRequestSendNotify](../../usage-api/config/events.md#onrequestsendnotify) event is different, the [setSharingSettings](../../usage-api/methods.md#setsharingsettings) method must be called.
+In the case when the [document.info.sharingSettings](../../usage-api/config/document/info.md#sharingsettings) field is used in the document initialization but the list of the users from the [onRequestSendNotify](../../usage-api/config/events.md#onrequestsendnotify) event is different, the [setSharingSettings](../../usage-api/methods.md#setsharingsettings) method must be called.
 
 ![Sharing settings](/assets/images/editor/sharing_settings.png)
 

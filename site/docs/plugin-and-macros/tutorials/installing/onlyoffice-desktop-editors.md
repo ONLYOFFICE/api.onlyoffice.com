@@ -63,7 +63,7 @@ So, the folder name of this plugin will be *\{91EAC419-EF8B-440C-A960-B451C7DF3A
 
 ![Plugin folder](/assets/images/plugins/plugins_folder.png)
 
-**Step 4.** Start [ONLYOFFICE Desktop Editors](../../../Desktop%20Editors/get-started/overview.md). If everything is done correctly, the plugin will be displayed within the **Plugins** tab:
+**Step 4.** Start [ONLYOFFICE Desktop Editors](../../../desktop-editors/get-started/overview.md). If everything is done correctly, the plugin will be displayed within the **Plugins** tab:
 
 ![Extended comments](/assets/images/plugins/extended_comments.png)
 

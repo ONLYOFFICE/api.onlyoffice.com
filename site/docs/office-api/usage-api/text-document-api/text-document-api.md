@@ -79,6 +79,6 @@ builder.SaveFile("docx", "example.docx")
 builder.CloseFile()
 ```
 
-As you can see you just need to use the *builder.OpenFile();* method of the [CDocBuilder](../../../document-builder/Builder%20Framework/C++/CDocBuilder/CDocBuilder.md) class with the path to the necessary text document as an argument to open it. In the above example we open **mydocument.docx** document, get its first paragraph and change the text in it to the centered "Center" text. The same way any other text document element can be changed.
+As you can see you just need to use the *builder.OpenFile();* method of the [CDocBuilder](../../../document-builder/builder-framework/C++/CDocBuilder/CDocBuilder.md) class with the path to the necessary text document as an argument to open it. In the above example we open **mydocument.docx** document, get its first paragraph and change the text in it to the centered "Center" text. The same way any other text document element can be changed.
 
 Use the appropriate API documentation sections to find out which methods allow you to change certain document and spreadsheet element formatting properties.

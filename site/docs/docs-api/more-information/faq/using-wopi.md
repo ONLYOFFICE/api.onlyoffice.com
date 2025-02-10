@@ -92,7 +92,7 @@ Possible WOPI error codes and their description you can find [on this page](../.
 
 ## Which WOPI REST API operations are supported by ONLYOFFICE Docs?
 
-ONLYOFFICE Docs uses the following WOPI operations: [CheckFileInfo](../../using-wopi/wopi-rest-api/checkfileinfo.md), [GetFile](../../using-wopi/wopi-rest-api/GetFile.md), [Lock](../../using-wopi/wopi-rest-api/lock.md), [RefreshLock](../../using-wopi/wopi-rest-api/refreshlock.md), [Unlock](../../using-wopi/wopi-rest-api/unlock.md), [PutFile](../../using-wopi/wopi-rest-api/putfile.md), [RenameFile](../../using-wopi/wopi-rest-api/renamefile.md). For more information about these operations, see the corresponding pages.
+ONLYOFFICE Docs uses the following WOPI operations: [CheckFileInfo](../../using-wopi/wopi-rest-api/checkfileinfo.md), [GetFile](../../using-wopi/wopi-rest-api/getfile.md), [Lock](../../using-wopi/wopi-rest-api/lock.md), [RefreshLock](../../using-wopi/wopi-rest-api/refreshlock.md), [Unlock](../../using-wopi/wopi-rest-api/unlock.md), [PutFile](../../using-wopi/wopi-rest-api/putfile.md), [RenameFile](../../using-wopi/wopi-rest-api/renamefile.md). For more information about these operations, see the corresponding pages.
 
 ## How to restrict access to the use of ONLYOFFICE server via WOPI?
 

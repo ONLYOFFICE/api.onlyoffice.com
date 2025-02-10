@@ -119,7 +119,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
 
 This values will be displayed in the **File** > **Document Info...** menu option.
 
-Further information about these settings can be found [at this page](../../usage-api/config/document/Info.md).
+Further information about these settings can be found [at this page](../../usage-api/config/document/info.md).
 
 ## How to optimize the appearance of editors for a desktop computer, or for a mobile device, or for embedding into a web page?
 

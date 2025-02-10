@@ -18,4 +18,4 @@ To start integrating **ONLYOFFICE Document Builder** into your own application y
 
 3. Run the example on your computer to get acquainted with the basic **ONLYOFFICE Document Builder** features before you start creating your own application. If everything is alright you will see the example website page with the form elements like the ones below.
 
-Or you can try and write the application yourself using the [Builder.Framework](../Builder%20Framework/overview.md).
+Or you can try and write the application yourself using the [Builder.Framework](../builder-framework/overview.md).

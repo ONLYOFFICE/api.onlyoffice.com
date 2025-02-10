@@ -6,9 +6,9 @@ A form document has exactly the same structure as a [text document](../text-docu
 
 ## Creating a new form document
 
-To create a form document, the [CreateFile](../../../document-builder/Builder%20Framework/C++/CDocBuilder/CreateFile.md) method with the *"pdf"* extension must be used.
+To create a form document, the [CreateFile](../../../document-builder/builder-framework/C++/CDocBuilder/CreateFile.md) method with the *"pdf"* extension must be used.
 
-To save the ready document as a form, you need to use the [SaveFile](../../../document-builder/Builder%20Framework/C++/CDocBuilder/SaveFile.md) method with the *"pdf"* extension.
+To save the ready document as a form, you need to use the [SaveFile](../../../document-builder/builder-framework/C++/CDocBuilder/SaveFile.md) method with the *"pdf"* extension.
 
 The simplest example form document with a single text form containing the "John Smith" text can be built with the help of **ONLYOFFICE Document Builder** using the following code:
 
@@ -68,6 +68,6 @@ builder.SaveFile("pdf", "example.pdf")
 builder.CloseFile()
 ```
 
-As you can see you just need to use the *builder.OpenFile();* method of the [CDocBuilder](../../../document-builder/Builder%20Framework/C++/CDocBuilder/CDocBuilder.md) class with the path to the necessary form document as an argument to open it. In the above example we open **myformdocument.pdf** document, get its first paragraph and add the text form with the "John Smith" text to it. The same way any other form document element can be changed.
+As you can see you just need to use the *builder.OpenFile();* method of the [CDocBuilder](../../../document-builder/builder-framework/C++/CDocBuilder/CDocBuilder.md) class with the path to the necessary form document as an argument to open it. In the above example we open **myformdocument.pdf** document, get its first paragraph and add the text form with the "John Smith" text to it. The same way any other form document element can be changed.
 
 Use the appropriate API documentation sections to find out which methods allow you to change certain document and spreadsheet element formatting properties.

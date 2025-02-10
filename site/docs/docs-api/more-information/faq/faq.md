@@ -57,45 +57,45 @@ The questions concerning co-editing the documents with other users are in this s
 
 The questions concerning customizing the appearance of ONLYOFFICE Docs are in this section.
 
-- [How to whitelabel ONLYOFFICE Docs?](Customizing.md#how-to-whitelabel-onlyoffice-docs)
-- [How to change the default language of the ONLYOFFICE Docs interface?](Customizing.md#how-to-change-the-default-language-of-the-onlyoffice-docs-interface)
-- [How to enable or disable the chat and/or the comments panel in the editors?](Customizing.md#how-to-enable-or-disable-the-chat-andor-the-comments-panel-in-the-editors)
-- [How to customize the editors interface, e.g. adjust the top toolbar view?](Customizing.md#how-to-customize-the-editors-interface-eg-adjust-the-top-toolbar-view)
-- [How to view and change the document additional parameters, e.g. its owner or uploading date?](Customizing.md#how-to-view-and-change-the-document-additional-parameters-eg-its-owner-or-uploading-date)
-- [How to optimize the appearance of editors for a desktop computer, or for a mobile device, or for embedding into a web page?](Customizing.md#how-to-optimize-the-appearance-of-editors-for-a-desktop-computer-or-for-a-mobile-device-or-for-embedding-into-a-web-page)
-- [How to connect plugins to ONLYOFFICE Docs so that they become visible for all editor users?](Customizing.md#how-to-connect-plugins-to-onlyoffice-docs-so-that-they-become-visible-for-all-editor-users)
+- [How to whitelabel ONLYOFFICE Docs?](customizing.md#how-to-whitelabel-onlyoffice-docs)
+- [How to change the default language of the ONLYOFFICE Docs interface?](customizing.md#how-to-change-the-default-language-of-the-onlyoffice-docs-interface)
+- [How to enable or disable the chat and/or the comments panel in the editors?](customizing.md#how-to-enable-or-disable-the-chat-andor-the-comments-panel-in-the-editors)
+- [How to customize the editors interface, e.g. adjust the top toolbar view?](customizing.md#how-to-customize-the-editors-interface-eg-adjust-the-top-toolbar-view)
+- [How to view and change the document additional parameters, e.g. its owner or uploading date?](customizing.md#how-to-view-and-change-the-document-additional-parameters-eg-its-owner-or-uploading-date)
+- [How to optimize the appearance of editors for a desktop computer, or for a mobile device, or for embedding into a web page?](customizing.md#how-to-optimize-the-appearance-of-editors-for-a-desktop-computer-or-for-a-mobile-device-or-for-embedding-into-a-web-page)
+- [How to connect plugins to ONLYOFFICE Docs so that they become visible for all editor users?](customizing.md#how-to-connect-plugins-to-onlyoffice-docs-so-that-they-become-visible-for-all-editor-users)
 
-[More](Customizing.md)
+[More](customizing.md)
 
 ## Integrating questions
 
 The questions concerning integrating ONLYOFFICE Docs with your own website and some other popular services (ownCloud, Nextcloud, SharePoint, etc.) are in this section.
 
-- [Where can I find integration examples for ONLYOFFICE Docs?](Integrating.md#where-can-i-find-integration-examples-for-onlyoffice-docs)
-- [Which paths should I specify when integrating ONLYOFFICE Docs with my website?](Integrating.md#which-paths-should-i-specify-when-integrating-onlyoffice-docs-with-my-website)
-- [What settings should be used when connecting ONLYOFFICE to ownClowd/Nextcloud via a local and public network?](Integrating.md#what-settings-should-be-used-when-connecting-onlyoffice-to-ownclowdnextcloud-via-a-local-and-public-network)
+- [Where can I find integration examples for ONLYOFFICE Docs?](integrating.md#where-can-i-find-integration-examples-for-onlyoffice-docs)
+- [Which paths should I specify when integrating ONLYOFFICE Docs with my website?](integrating.md#which-paths-should-i-specify-when-integrating-onlyoffice-docs-with-my-website)
+- [What settings should be used when connecting ONLYOFFICE to ownClowd/Nextcloud via a local and public network?](integrating.md#what-settings-should-be-used-when-connecting-onlyoffice-to-ownclowdnextcloud-via-a-local-and-public-network)
 
-[More](Integrating.md)
+[More](integrating.md)
 
 ## Editing questions
 
 The questions concerning editing documents using ONLYOFFICE Docs are in this section.
 
-- [What is the 'Callback handler' and why do I need it?](Editing.md#what-is-the-callback-handler-and-why-do-i-need-it)
-- [What is the 'document.key' parameter?](Editing.md#what-is-the-documentkey-parameter)
-- [How to define the mode that the file should be opened in (viewing or editing)?](Editing.md#how-to-define-the-mode-that-the-file-should-be-opened-in-viewing-or-editing)
+- [What is the 'Callback handler' and why do I need it?](editing.md#what-is-the-callback-handler-and-why-do-i-need-it)
+- [What is the 'document.key' parameter?](editing.md#what-is-the-documentkey-parameter)
+- [How to define the mode that the file should be opened in (viewing or editing)?](editing.md#how-to-define-the-mode-that-the-file-should-be-opened-in-viewing-or-editing)
 
-[More](Editing.md)
+[More](editing.md)
 
 ## Managing versions questions
 
 The questions concerning working with versions of documents are in this section.
 
-- [Which methods can be used when working with the document history events?](Managing%20versions.md#which-methods-can-be-used-when-working-with-the-document-history-events)
-- [How to display a document with highlighted changes?](Managing%20versions.md#how-to-display-a-document-with-highlighted-changes)
-- [Why is a new version not shown in the document history after I forcefully save a document?](Managing%20versions.md#why-is-a-new-version-not-shown-in-the-document-history-after-i-forcefully-save-a-document)
+- [Which methods can be used when working with the document history events?](managing-versions.md#which-methods-can-be-used-when-working-with-the-document-history-events)
+- [How to display a document with highlighted changes?](managing-versions.md#how-to-display-a-document-with-highlighted-changes)
+- [Why is a new version not shown in the document history after I forcefully save a document?](managing-versions.md#why-is-a-new-version-not-shown-in-the-document-history-after-i-forcefully-save-a-document)
 
-[More](Managing%20versions.md)
+[More](managing-versions.md)
 
 ## Saving questions
 

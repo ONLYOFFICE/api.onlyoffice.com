@@ -172,7 +172,7 @@ The list of changes of ONLYOFFICE Docs API.
 - The [editorConfig.customization.commentAuthorOnly](../usage-api/config/editor/customization/customization-standard-branding.md#commentauthoronly) field is deprecated, please use the [document.permissions.editCommentAuthorOnly](../usage-api/config/document/permissions.md#editcommentauthoronly) and [document.permissions.deleteCommentAuthorOnly](../usage-api/config/document/permissions.md#deletecommentauthoronly) fields.
 - Added the [setFavorite](../usage-api/methods.md#setfavorite) method.
 - Added the *data.favorite* parameter to the [events.onMetaChange](../usage-api/config/events.md#onmetachange) event.
-- Added the [document.info.favorite](../usage-api/config/document/Info.md#favorite) field.
+- Added the [document.info.favorite](../usage-api/config/document/info.md#favorite) field.
 - Added the [document.permissions.reviewGroups](../usage-api/config/document/permissions.md#reviewgroups) field.
 - Added conversion to [epub, fb2, html](../additional-api/conversion-api/conversion-tables.md#text-document-file-formats) formats.
 - Added conversion from [xml](../additional-api/conversion-api/conversion-tables.md#text-document-file-formats) format.
@@ -225,8 +225,8 @@ The list of changes of ONLYOFFICE Docs API.
 ## Version 5.4
 
 - Added the [editorConfig.region](../usage-api/config/editor/editor.md#region) field.
-- The [document.info.created](../usage-api/config/document/Info.md#created) field is deprecated, please use the [document.info.uploaded](../usage-api/config/document/Info.md#uploaded) field instead.
-- The [document.info.author](../usage-api/config/document/Info.md#author) field is deprecated, please use the [document.info.owner](../usage-api/config/document/Info.md#owner) field instead.
+- The [document.info.created](../usage-api/config/document/info.md#created) field is deprecated, please use the [document.info.uploaded](../usage-api/config/document/info.md#uploaded) field instead.
+- The [document.info.author](../usage-api/config/document/info.md#author) field is deprecated, please use the [document.info.owner](../usage-api/config/document/info.md#owner) field instead.
 - The [events.onReady](../usage-api/config/events.md#onready) event is removed.
 - The *firstname* and *lastname* fields in the [editorConfig.user](../usage-api/config/editor/editor.md#user) object is removed.
 - Added the [events.onRequestSaveAs](../usage-api/config/events.md#onrequestsaveas) event.
