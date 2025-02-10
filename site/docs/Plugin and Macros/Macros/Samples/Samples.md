@@ -22,6 +22,12 @@ In this example we are seting the font color of the cell B4 to red.
 
 [More](Change%20cell%20font%20color.md)
 
+## Change background color
+
+In this example we are changing the background color of the slides.
+
+[More](Change%20background%20color.md)
+
 ## Make cell font bold
 
 In this example we are seting the font of the cell A2 to bold.
