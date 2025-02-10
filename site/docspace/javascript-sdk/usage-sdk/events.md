@@ -60,7 +60,7 @@ Example:
 
 ## onCloseCallback
 
-The function called only in the [room-selector](./Initialization%20Modes/Room%20Selector.md) and [file-selector](./Initialization%20Modes/File%20Selector.md) modes when the room or file selector is closed or the selection is canceled.
+The function called only in the [room-selector](./initialization-modes/room-selector.md) and [file-selector](./initialization-modes/file-selector.md) modes when the room or file selector is closed or the selection is canceled.
 
 Example:
 
@@ -78,7 +78,7 @@ Example:
 
 ## onDownload
 
-The function called when firing events to download items from the manager. It returns a link to the download object. This event is called only when the [downloadToEvent](./Config.md#downloadtoevent) parameter is specified in the config.
+The function called when firing events to download items from the manager. It returns a link to the download object. This event is called only when the [downloadToEvent](./config.md#downloadtoevent) parameter is specified in the config.
 
 Example:
 
@@ -114,7 +114,7 @@ Example:
 
 ## onSelectCallback
 
-The function called only in the [room-selector](./Initialization%20Modes/Room%20Selector.md) and [file-selector](./Initialization%20Modes/File%20Selector.md) modes when a room or file is selected.
+The function called only in the [room-selector](./initialization-modes/room-selector.md) and [file-selector](./initialization-modes/file-selector.md) modes when a room or file is selected.
 
 Example:
 

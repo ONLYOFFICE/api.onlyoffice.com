@@ -32,30 +32,30 @@ Now, the **npx** command is available, which will be used to create a plugin.
 
 3. Select the plugin scopes from the list by pressing *Space* on the necessary scopes (API, Settings, Context menu, etc.).
 
-More information about plugin settings and scopes can be found [here](../Usage%20SDK/Creating%20Plugin%20Template.md).
+More information about plugin settings and scopes can be found [here](../usage-sdk/creating-plugin-template.md).
 
 ![Creating template](/assets/images/docspace/creating-template.png)
 
 ## Step 3. Coding
 
-Develop a plugin. Follow the plugin structure described [here](../Usage%20SDK/Plugin%20Structure.md).
+Develop a plugin. Follow the plugin structure described [here](../usage-sdk/plugin-structure.md).
 
-- Write code for each [plugin type](../Usage%20SDK/Coding%20Plugin/Plugin%20Types/Plugin%20Types.md) using the corresponding variables, methods and [items](../Usage%20SDK/Coding%20Plugin/Plugin%20Items/Plugin%20Items.md). Put the scripts into the *src* folder. Specify the required [Plugin](../Usage%20SDK/Coding%20Plugin/Plugin%20Types/Plugin.md) interface for each plugin to be embedded in the portal.
+- Write code for each [plugin type](../usage-sdk/coding-plugin/plugin-types/plugin-types.md) using the corresponding variables, methods and [items](../usage-sdk/coding-plugin/plugin-items/plugin-items.md). Put the scripts into the *src* folder. Specify the required [Plugin](../usage-sdk/coding-plugin/plugin-types/Plugin.md) interface for each plugin to be embedded in the portal.
 
   ![Plugin structure](/assets/images/docspace/plugin-structure.png)
 
-- Specify [plugin messages](../Usage%20SDK/Coding%20Plugin/Plugin%20Message.md) that will be returned by the items. Use the appropriate [events](../Usage%20SDK/Coding%20Plugin/Events.md) that will be processed on the portal side.
+- Specify [plugin messages](../usage-sdk/coding-plugin/plugin-message.md) that will be returned by the items. Use the appropriate [events](../usage-sdk/coding-plugin/events.md) that will be processed on the portal side.
 
-- Learn which [plugin components](../Usage%20SDK/Coding%20Plugin/Plugin%20Components/Plugin%20Components.md) can be used for the DocSpace plugin interface and add them to your scripts.
+- Learn which [plugin components](../usage-sdk/coding-plugin/plugin-components/plugin-components.md) can be used for the DocSpace plugin interface and add them to your scripts.
 
 Code samples are available at [GitHub](https://github.com/ONLYOFFICE/docspace-plugins).
 
 ## Step 4. Building
 
-To build a plugin, you need the *yarn* package manager to be installed. Install all the necessary dependencies using the **yarn install** command in the plugin root folder (if this was not done previously in step 2). After that collect a plugin archive by running the **yarn build** command. The completed plugin will be located in the *dist* folder and can be uploaded to the DocSpace portal. More information can be found [here](../Usage%20SDK/Building%20Plugin.md).
+To build a plugin, you need the *yarn* package manager to be installed. Install all the necessary dependencies using the **yarn install** command in the plugin root folder (if this was not done previously in step 2). After that collect a plugin archive by running the **yarn build** command. The completed plugin will be located in the *dist* folder and can be uploaded to the DocSpace portal. More information can be found [here](../usage-sdk/building-plugin.md).
 
 ## Step 5. Uploading to the portal
 
-To upload a plugin to the DocSpace portal, follow the instructions [here](../Usage%20SDK/Adding%20Plugin.md).
+To upload a plugin to the DocSpace portal, follow the instructions [here](../usage-sdk/adding-plugin.md).
 
 The plugin will appear in the plugin list and start functioning automatically.

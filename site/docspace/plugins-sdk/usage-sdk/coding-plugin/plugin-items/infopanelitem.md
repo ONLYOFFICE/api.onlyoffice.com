@@ -47,7 +47,7 @@ Example: `() => {}`
 
 Defines the tab UI of the info panel.
 
-Type: [IBox](../Plugin%20Components/Box.md)
+Type: [IBox](../plugin-components/Box.md)
 
 Example: parentBox
 

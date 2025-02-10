@@ -2,11 +2,11 @@
 sidebar_position: -2
 ---
 
-The events from the [Actions](./Plugin%20Message.md#actions) collection are processed on the portal side. The specified actions are performed depending on the set of values:
+The events from the [Actions](./plugin-message.md#actions) collection are processed on the portal side. The specified actions are performed depending on the set of values:
 
 ## updateProps
 
-The function called when updating the state of the item which action was passed. It does not work if the [newProps](./Plugin%20Message.md#newprops) parameter is not passed to the message.
+The function called when updating the state of the item which action was passed. It does not work if the [newProps](./plugin-message.md#newprops) parameter is not passed to the message.
 
   ``` ts
   const message: IMessage = {
@@ -18,7 +18,7 @@ The function called when updating the state of the item which action was passed.
 
 ## updateContext
 
-The function called when updating the state of the the parent or child items which were passed. It does not work if the [contextProps](./Plugin%20Message.md#contextprops) parameter is not passed to the message.
+The function called when updating the state of the the parent or child items which were passed. It does not work if the [contextProps](./plugin-message.md#contextprops) parameter is not passed to the message.
 
   ``` ts
   const message: IMessage = {
@@ -110,7 +110,7 @@ The function called when updating all the event listener items.
 
 ## showToast
 
-The function called when displaying a toast notification after the user actions. It does not work if the [toastProps](./Plugin%20Message.md#toastprops) parameter is not passed to the message.
+The function called when displaying a toast notification after the user actions. It does not work if the [toastProps](./plugin-message.md#toastprops) parameter is not passed to the message.
 
   ``` ts
   const message: IMessage = {
@@ -122,7 +122,7 @@ The function called when displaying a toast notification after the user actions.
 
 ## showCreateDialogModal
 
-The function called when opening a modal window for creating certain item (file, folder, etc.). It does not work if the [createDialogProps](./Plugin%20Message.md#createdialogprops) parameter is not passed to the message.
+The function called when opening a modal window for creating certain item (file, folder, etc.). It does not work if the [createDialogProps](./plugin-message.md#createdialogprops) parameter is not passed to the message.
 
   ``` ts
   const message: IMessage = {
@@ -148,7 +148,7 @@ The function called when opening a modal window for creating certain item (file,
 
 ## showModal
 
-The function called when opening a modal window. It does not work if the [modalDialogProps](./Plugin%20Message.md#modaldialogprops) parameter is not passed to the message.
+The function called when opening a modal window. It does not work if the [modalDialogProps](./plugin-message.md#modaldialogprops) parameter is not passed to the message.
 
   ``` ts
   const message: IMessage = {
@@ -169,7 +169,7 @@ The function called when closing a modal window.
 
 ## sendPostMessage
 
-The function called when sending a message to a frame. It does not work if the [postMessage](./Plugin%20Message.md#postmessage) parameter is not passed to the message or the specified frame is not found.
+The function called when sending a message to a frame. It does not work if the [postMessage](./plugin-message.md#postmessage) parameter is not passed to the message or the specified frame is not found.
 
   ``` ts
   const message: IMessage = {
@@ -188,7 +188,7 @@ The function called when sending a message to a frame. It does not work if the [
 
 ## saveSettings
 
-The function called when saving the data that was transferred in the [settings](./Plugin%20Message.md#settings) parameter and returning it in the [setAdminPluginSettingsValue](./Plugin%20Types/SettingsPlugin.md#setadminpluginsettingsvalue) method each time the plugin is requested. It functions only when the **Save** button is clicked in the **Settings** block.
+The function called when saving the data that was transferred in the [settings](./plugin-message.md#settings) parameter and returning it in the [setAdminPluginSettingsValue](./plugin-types/SettingsPlugin.md#setadminpluginsettingsvalue) method each time the plugin is requested. It functions only when the **Save** button is clicked in the **Settings** block.
 
   ``` ts
   const message: IMessage = {

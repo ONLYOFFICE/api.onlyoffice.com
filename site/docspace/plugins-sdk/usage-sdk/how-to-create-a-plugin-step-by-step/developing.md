@@ -20,7 +20,7 @@ Create a plugin template and configure its settings which will be displayed in t
    > npm i -g @onlyoffice/docspace-plugin-sdk
    > ```
 
-2. Configure the plugin in the terminal by specifying settings in the dialog. All the settings are described [here](../Creating%20Plugin%20Template.md).
+2. Configure the plugin in the terminal by specifying settings in the dialog. All the settings are described [here](../creating-plugin-template.md).
 
    For the **speech-to-text** plugin, you can use the following values:
 
@@ -57,11 +57,11 @@ If you create a plugin yourself, without a template, for the plugin entry point,
 
 Create the [assets](https://github.com/ONLYOFFICE/docspace-plugins/tree/master/speech-to-text/assets) folder in the root plugin folder and add there all the plugin icons. The number of icons and their sizes will depend on the plugin types you implement. For the **speech-to-text** plugin, we need the following icons:
 
-- The default plugin type requires a [logo](../Config.md#image) image. It is equal to the *logo* parameter from the *package.json* file. The logo will be displayed in the DocSpace plugin settings. The required icon size is 48x48 px. Otherwise, it will be compressed to this size.
+- The default plugin type requires a [logo](../config.md#image) image. It is equal to the *logo* parameter from the *package.json* file. The logo will be displayed in the DocSpace plugin settings. The required icon size is 48x48 px. Otherwise, it will be compressed to this size.
 
   <img alt="Plugin logo" src="/assets/images/docspace/plugin-logo.png" width="300px" />
 
-- The context menu plugin uses an [icon](../Coding%20Plugin/Plugin%20Items/ContextMenuItem.md#icon) on the **Convert to text** button. The required icon size is 16x16 px. Otherwise, it will be compressed to this size.
+- The context menu plugin uses an [icon](../coding-plugin/plugin-items/ContextMenuItem.md#icon) on the **Convert to text** button. The required icon size is 16x16 px. Otherwise, it will be compressed to this size.
 
   ![Convert to text](/assets/images/docspace/convert-to-text.png)
 
@@ -69,11 +69,11 @@ Create the [assets](https://github.com/ONLYOFFICE/docspace-plugins/tree/master/s
 
   ![Main button icon](/assets/images/docspace/main-button-icon.png)
 
-  The **draw\.io** plugin also uses the specific file icon near the *.drawio* files, which are created with the file plugin type. The preferred icon size for the [table format](../Coding%20Plugin/Plugin%20Items/FileItem.md#filerowicon) is 32x32 px.
+  The **draw\.io** plugin also uses the specific file icon near the *.drawio* files, which are created with the file plugin type. The preferred icon size for the [table format](../coding-plugin/plugin-items/fileitem.md#filerowicon) is 32x32 px.
 
   ![File icon](/assets/images/docspace/file-icon.png)
 
-  In this plugin, the same file icon is also used for the [tile view](../Coding%20Plugin/Plugin%20Items/FileItem.md#filetileicon). But it is recommended to add another icon of the 96x96 px size in this case.
+  In this plugin, the same file icon is also used for the [tile view](../coding-plugin/plugin-items/fileitem.md#filetileicon). But it is recommended to add another icon of the 96x96 px size in this case.
 
   ![File icon tile](/assets/images/docspace/file-icon-tile.png)
 
@@ -83,7 +83,7 @@ If necessary, define the plugin's UI elements. Consult our [Storybook](https://a
 
 For example, the **draw\.io** plugin contains two main UI elements - the modal window and the diagram editor. Create the files for configuring each element. For your convenience, you can put these files into a separate *DrawIO* folder.
 
-- In the [Dialog.ts](https://github.com/ONLYOFFICE/docspace-plugins/blob/master/draw.io/src/DrawIO/Dialog.ts) file, configure the modal window settings. Specify the [IFrame](../Coding%20Plugin/Plugin%20Components/IFrame.md) UI component that is used to embed the draw\.io website into a modal window:
+- In the [Dialog.ts](https://github.com/ONLYOFFICE/docspace-plugins/blob/master/draw.io/src/DrawIO/Dialog.ts) file, configure the modal window settings. Specify the [IFrame](../coding-plugin/plugin-components/IFrame.md) UI component that is used to embed the draw\.io website into a modal window:
 
   ``` ts
   export const frameProps: IFrame = {
@@ -94,7 +94,7 @@ For example, the **draw\.io** plugin contains two main UI elements - the modal w
   }
   ```
 
-  Create the [IBox](../Coding%20Plugin/Plugin%20Components/Box.md) container to add the iframe to it:
+  Create the [IBox](../coding-plugin/plugin-components/Box.md) container to add the iframe to it:
 
   ``` ts
   const body: IBox = {
@@ -110,7 +110,7 @@ For example, the **draw\.io** plugin contains two main UI elements - the modal w
   }
   ```
 
-  Configure the [modal window](../Coding%20Plugin/Plugin%20Components/ModalDialog.md) properties:
+  Configure the [modal window](../coding-plugin/plugin-components/ModalDialog.md) properties:
 
   ``` ts
   export const drawIoModalDialogProps: IModalDialog = {
@@ -167,7 +167,7 @@ For example, the **draw\.io** plugin contains two main UI elements - the modal w
 
 Now that the default plugin is ready, you can start coding other plugin types.
 
-Each plugin type has specific plugin items. Define the [context menu item](../Coding%20Plugin/Plugin%20Items/ContextMenuItem.md) that will be displayed when you right-click on audio or video files:
+Each plugin type has specific plugin items. Define the [context menu item](../coding-plugin/plugin-items/ContextMenuItem.md) that will be displayed when you right-click on audio or video files:
 
 ``` ts
 export const contextMenuItem: IContextMenuItem = {
@@ -182,7 +182,7 @@ export const contextMenuItem: IContextMenuItem = {
 
 <img alt="Context menu item" src="/assets/images/docspace/context-menu-item.png" width="400px" />
 
-You can add more plugin types. For example, the **draw\.io** plugin can be accessed from the main button menu, so we need to specify the [main button item](../Coding%20Plugin/Plugin%20Items/MainButtonItem.md):
+You can add more plugin types. For example, the **draw\.io** plugin can be accessed from the main button menu, so we need to specify the [main button item](../coding-plugin/plugin-items/MainButtonItem.md):
 
 ``` ts
 const mainButtonItem: IMainButtonItem = {
@@ -223,7 +223,7 @@ When the main button item is clicked, the modal window appears where you can typ
 
 For the **draw\.io** plugin, you also need to configure the file plugin type which works when the user opens the specific *.drawio* file:
 
-1. Define the [file item](../Coding%20Plugin/Plugin%20Items/FileItem.md) that is represented as a file with the specific extension (*.drawio*) and icon:
+1. Define the [file item](../coding-plugin/plugin-items/fileitem.md) that is represented as a file with the specific extension (*.drawio*) and icon:
 
    ``` ts
    export const drawIoItem: IFileItem = {

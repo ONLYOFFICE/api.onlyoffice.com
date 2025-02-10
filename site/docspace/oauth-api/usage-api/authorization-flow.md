@@ -26,7 +26,7 @@ Click **Allow** or **Deny** to finish the authorization flow.
 
 ## Scenario 4. Error page
 
-If the authorization link contains non-existent [client_id](./Auth%20Button.md#client_id) and [redirect_uri](./Auth%20Button.md#redirect_uri), the user will be redirected to the DocSpace error page.
+If the authorization link contains non-existent [client_id](./auth-button.md#client_id) and [redirect_uri](./auth-button.md#redirect_uri), the user will be redirected to the DocSpace error page.
 
 <img alt="Error page" src="/assets/images/docspace/error-page.png" width="400px" />
 

@@ -73,6 +73,6 @@ Example: kNDpYrWzia4n6BoUewMVbnb5kQRIFgVdiaKwNGZ-_Wc
 
 > Please note that the code verifier will be generated anew each time the preview dialog is reopened.
 
-You can click the example button to go through the entire [authorization flow](./Authorization%20Flow.md).
+You can click the example button to go through the entire [authorization flow](./authorization-flow.md).
 
 <img alt="Authorization flow" src="/assets/images/docspace/authorization-flow.png" width="400px" />

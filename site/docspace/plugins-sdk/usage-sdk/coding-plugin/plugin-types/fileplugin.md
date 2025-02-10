@@ -10,7 +10,7 @@ The plugin that can interact with the file list.
 
 ### fileItems
 
-Stores a collection of elements where the keys are the *key* parameters from the [FileItem](../Plugin%20Items/FileItem.md) objects. A list for hooking interactions with files is generated based on this collection.
+Stores a collection of elements where the keys are the *key* parameters from the [FileItem](../plugin-items/fileitem.md) objects. A list for hooking interactions with files is generated based on this collection.
 
 Type: collection of IFileItem
 

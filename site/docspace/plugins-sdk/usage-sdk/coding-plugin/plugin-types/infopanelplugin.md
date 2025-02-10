@@ -10,7 +10,7 @@ The plugin that is embedded as a separate tab in the file info panel.
 
 ### infoPanelItems
 
-Stores a collection of elements where the keys are the key parameters from the [InfoPanelItem](../Plugin%20Items/InfoPanelItem.md) objects. A list for embedding into the info panel is generated based on this collection.
+Stores a collection of elements where the keys are the key parameters from the [InfoPanelItem](../plugin-items/InfoPanelItem.md) objects. A list for embedding into the info panel is generated based on this collection.
 
 Type: collection of IInfoPanelItem
 

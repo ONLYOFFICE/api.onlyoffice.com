@@ -4,12 +4,12 @@ The [OAuth 2.0](https://datatracker.ietf.org/doc/html/rfc6749) authorization pro
 
 This documentation describes:
 
-- How to [create a new OAuth application](../Usage%20API/Creating%20OAuth%20App.md)
-- How to [edit the application](../Usage%20API/Editing%20OAuth%20App.md)
-- How to preview the [authorization button](../Usage%20API/Auth%20Button.md) and embed it into your website
-- How to [generate a developer token](../Usage%20API/Developer%20Token.md)
-- How the [authorization flow](../Usage%20API/Authorization%20Flow.md) looks like
-- How to [view active authorizations](../Usage%20API/Viewing%20Active%20Authorizations.md)
+- How to [create a new OAuth application](../usage-api/creating-oauth-app.md)
+- How to [edit the application](../usage-api/editing-oauth-app.md)
+- How to preview the [authorization button](../usage-api/auth-button.md) and embed it into your website
+- How to [generate a developer token](../usage-api/developer-token.md)
+- How the [authorization flow](../usage-api/authorization-flow.md) looks like
+- How to [view active authorizations](../usage-api/viewing-active-authorizations.md)
 
 ## What OAuth apps can do
 

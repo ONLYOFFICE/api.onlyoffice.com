@@ -6,7 +6,7 @@ Each item which interacts with a user (onClick, onChange, onSelect, etc.) can re
 
 ## actions
 
-Defines a collection of [events](./Events.md) that will be processed on the portal side. The specified actions will be performed depending on the set of values.
+Defines a collection of [events](./events.md) that will be processed on the portal side. The specified actions will be performed depending on the set of values.
 
 Type: array of [Actions](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/enums/Actions.ts)
 
@@ -14,17 +14,17 @@ Example: `[Actions.showToast, Actions.closeModal]`
 
 ## newProps
 
-Defines the properties that update the state of the items which interact with the users. This parameter is used only with [Actions.updateProps](./Events.md#updateprops).
+Defines the properties that update the state of the items which interact with the users. This parameter is used only with [Actions.updateProps](./events.md#updateprops).
 
-Type: [IInput](./Plugin%20Components/Input.md), [ICheckbox](./Plugin%20Components/Checkbox.md), [IToggleButton](./Plugin%20Components/ToggleButton.md), [IButton](./Plugin%20Components/Button.md), [ITextArea](./Plugin%20Components/TextArea.md), [IComboBox](./Plugin%20Components/ComboBox.md)
+Type: [IInput](./plugin-components/Input.md), [ICheckbox](./plugin-components/Checkbox.md), [IToggleButton](./plugin-components/ToggleButton.md), [IButton](./plugin-components/Button.md), [ITextArea](./plugin-components/TextArea.md), [IComboBox](./plugin-components/ComboBox.md)
 
 Example: `{IInput}`
 
 ## toastProps
 
-Defines the properties that display a toast notification after the user actions. This parameter is used only with [Actions.showToast](./Events.md#showtoast).
+Defines the properties that display a toast notification after the user actions. This parameter is used only with [Actions.showToast](./events.md#showtoast).
 
-Type: array of [IToast](./Plugin%20Components/Toast.md)
+Type: array of [IToast](./plugin-components/Toast.md)
 
 Example: \[IToast]
 
@@ -32,7 +32,7 @@ Example: \[IToast]
 
 Defines the properties that update the state of the parent or child item after the event was executed.
 
-This parameter is used only with [Actions.updateContext](./Events.md#updatecontext) and works in the administator or owner settings block that is embedded in the modal window with the plugin description.
+This parameter is used only with [Actions.updateContext](./events.md#updatecontext) and works in the administator or owner settings block that is embedded in the modal window with the plugin description.
 
 Type: array of objects
 
@@ -65,23 +65,23 @@ Example: `{...acceptButtonProps, "isDisabled": false}`
 
 ## createDialogProps
 
-Defines the properties that display the default dialog box for creating a file/folder managed by the plugin. This parameter is used only with [Actions.showCreateDialogModal](./Events.md#showcreatedialogmodal).
+Defines the properties that display the default dialog box for creating a file/folder managed by the plugin. This parameter is used only with [Actions.showCreateDialogModal](./events.md#showcreatedialogmodal).
 
-Type: [ICreateDialog](./Plugin%20Components/CreateDialog.md)
+Type: [ICreateDialog](./plugin-components/CreateDialog.md)
 
 Example: `{ICreateDialog}`
 
 ## modalDialogProps
 
-Defines the properties that display the modal window. This parameter is used only with [Actions.showModal](./Events.md#showmodal).
+Defines the properties that display the modal window. This parameter is used only with [Actions.showModal](./events.md#showmodal).
 
-Type: [IModalDialog](./Plugin%20Components/ModalDialog.md)
+Type: [IModalDialog](./plugin-components/ModalDialog.md)
 
 Example: `{IModalDialog}`
 
 ## postMessage
 
-Defines the properties that are used to send a message to a frame. If the frame ID is not specified or the frame with such an ID does not exist, then nothing changes. This parameter is used only with [Actions.sendPostMessage](./Events.md#sendpostmessage).
+Defines the properties that are used to send a message to a frame. If the frame ID is not specified or the frame with such an ID does not exist, then nothing changes. This parameter is used only with [Actions.sendPostMessage](./events.md#sendpostmessage).
 
 Type: [IPostMessage](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/utils/index.ts)
 
@@ -89,7 +89,7 @@ Example: `{IPostMessage}`
 
 ## settings
 
-Defines a parameter that is used to save and transfer the administrator or owner plugin settings to all the portal users. This parameter is used only with [Actions.saveSettings](./Events.md#savesettings).
+Defines a parameter that is used to save and transfer the administrator or owner plugin settings to all the portal users. This parameter is used only with [Actions.saveSettings](./events.md#savesettings).
 
 Type: string
 

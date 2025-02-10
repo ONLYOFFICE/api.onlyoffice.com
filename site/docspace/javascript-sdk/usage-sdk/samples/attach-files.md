@@ -1,11 +1,11 @@
-Attaches files to a website using [File selector](../Initialization%20Modes/File%20Selector.md).
+Attaches files to a website using [File selector](../initialization-modes/file-selector.md).
 
 ![Attach files sample](/assets/images/docspace/js-sdk-attach-files.svg)
 
 ## Before you start
 
 Please make sure you are using a server environment to run the HTML file because the JavaScript SDK must be launched on the server.
-You need to [add the URL](../../Get%20Started/Basic%20concepts.md#step-1-specifying-the-docspace-url) of your server's root directory to the **Developer Tools** section of DocSpace.
+You need to [add the URL](../../get-started/basic-concepts.md#step-1-specifying-the-docspace-url) of your server's root directory to the **Developer Tools** section of DocSpace.
 
 ## Step 1. Set HTML structure
 
@@ -214,7 +214,7 @@ attachButton.addEventListener("click", () => {
 })
 ```
 
-2. Add the [onSelectCallback](../Events.md#onselectcallback) event handler that closes the modal window and sends the ID and name of the selected file in JSON format:
+2. Add the [onSelectCallback](../events.md#onselectcallback) event handler that closes the modal window and sends the ID and name of the selected file in JSON format:
 
 ``` ts
 function onSelectCallback() {
@@ -271,7 +271,7 @@ modalElement.addEventListener("close", () => {
 
 Add a script to initialize the **file selector**.
 
-1. Add an event handler for [onAppReady](../Events.md#onappready), which fires when initialization is successful:
+1. Add an event handler for [onAppReady](../events.md#onappready), which fires when initialization is successful:
 
 ``` ts
 function onAppReady() {
@@ -292,7 +292,7 @@ const config = {
 }
 ```
 
-3. Initialize the **file selector** with the [initFileSelector](../Methods.md#initfileselector) method:
+3. Initialize the **file selector** with the [initFileSelector](../methods.md#initfileselector) method:
 
 ``` ts
 const docSpace = DocSpace.SDK.initFileSelector(config)

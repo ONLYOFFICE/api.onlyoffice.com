@@ -1,11 +1,11 @@
-Opens a file in [ONLYOFFICE editors](../../Usage%20SDK/Initialization%20Modes/Editor.md) using the [file selector](../../Usage%20SDK/Initialization%20Modes/File%20Selector.md).
+Opens a file in [ONLYOFFICE editors](../../usage-sdk/initialization-modes/editor.md) using the [file selector](../../usage-sdk/initialization-modes/file-selector.md).
 
 ![Open editors sample](/assets/images/docspace/open-editors.svg)
 
 ## Before you start
 
 Please make sure you are using a server environment to run the HTML file because the JavaScript SDK must be launched on the server.
-You need to [add the URL](../../Get%20Started/Basic%20concepts.md#step-1-specifying-the-docspace-url) of your server's root directory to the **Developer Tools** section of DocSpace.
+You need to [add the URL](../../get-started/basic-concepts.md#step-1-specifying-the-docspace-url) of your server's root directory to the **Developer Tools** section of DocSpace.
 
 ## Step 1. Set HTML structure
 
@@ -31,9 +31,9 @@ The API JavaScript file can normally be found in the following DocSpace folder: 
 
 ## Step 2. Add the file selector
 
-Add a script to initialize the [file selector](../Initialization%20Modes/File%20Selector.md).
+Add a script to initialize the [file selector](../initialization-modes/file-selector.md).
 
-1. Add an event handler for [onAppReady](../Events.md#onappready), which fires when initialization is successful:
+1. Add an event handler for [onAppReady](../events.md#onappready), which fires when initialization is successful:
 
 ``` ts
 function onAppReady() {
@@ -41,7 +41,7 @@ function onAppReady() {
 }
 ```
 
-2. Add an event handler for [onSelectCallback](../Events.md#onselectcallback). When the user selects a file, **ONLYOFFICE editors** are initialized by passing the ID of the file selected in the **file selector** to the [initEditor](../Methods.md#initeditor) method:
+2. Add an event handler for [onSelectCallback](../events.md#onselectcallback). When the user selects a file, **ONLYOFFICE editors** are initialized by passing the ID of the file selected in the **file selector** to the [initEditor](../methods.md#initeditor) method:
 
 ``` ts
 function onSelectCallback() {
@@ -65,7 +65,7 @@ const config = {
 }
 ```
 
-4. Initialize the **file selector** with the [initFileSelector](../Methods.md#initfileselector) method:
+4. Initialize the **file selector** with the [initFileSelector](../methods.md#initfileselector) method:
 
 ``` ts
 const docSpace = DocSpace.SDK.initFileSelector(config)

@@ -22,7 +22,7 @@ Example: true
 
 ## destroyText
 
-The text that will be inserted into the *div* tag when the [destroyFrame](./Methods.md#destroyframe) method is called.
+The text that will be inserted into the *div* tag when the [destroyFrame](./methods.md#destroyframe) method is called.
 
 Type: string
 
@@ -38,7 +38,7 @@ Example: false
 
 ## downloadToEvent
 
-Specifies whether to switch the SDK to the mode of working with download links through the [onDownload](./Events.md#ondownload) event.
+Specifies whether to switch the SDK to the mode of working with download links through the [onDownload](./events.md#ondownload) event.
 
 Type: boolean
 
@@ -206,7 +206,7 @@ Example: null
 
 ## mode
 
-The SDK [initialization mode](./Initialization%20Modes/Initialization%20Modes.md) ("manager", "file-selector", "room-selector", "editor", "viewer", "system").
+The SDK [initialization mode](./initialization-modes/initialization-modes.md) ("manager", "file-selector", "room-selector", "editor", "viewer", "system").
 
 Type: string
 

@@ -5,7 +5,7 @@ Logs in to the DocSpace account using the specified email and password hash.
 ## Before you start
 
 Please make sure you are using a server environment to run the HTML file because the JavaScript SDK must be launched on the server.
-You need to [add the URL](../../Get%20Started/Basic%20concepts.md#step-1-specifying-the-docspace-url) of your server's root directory to the **Developer Tools** section of DocSpace.
+You need to [add the URL](../../get-started/basic-concepts.md#step-1-specifying-the-docspace-url) of your server's root directory to the **Developer Tools** section of DocSpace.
 
 ## Step 1. Set HTML structure
 
@@ -34,9 +34,9 @@ The API JavaScript file can normally be found in the following DocSpace folder: 
 
 ## Step 2. Initialize the System mode
 
-Add a script to initialize the [System](../Initialization%20Modes/System.md) mode.
+Add a script to initialize the [System](../initialization-modes/System.md) mode.
 
-1. Add an event handler for [onAppReady](../Events.md#onappready), which fires when initialization is successful:
+1. Add an event handler for [onAppReady](../events.md#onappready), which fires when initialization is successful:
 
 ``` ts
 function onAppReady() {
@@ -54,7 +54,7 @@ const config = {
 }
 ```
 
-3. Initialize the **System** mode with the [initSystem](../Methods.md#initsystem) method:
+3. Initialize the **System** mode with the [initSystem](../methods.md#initsystem) method:
 
 ``` ts
 const docSpace = DocSpace.SDK.initSystem(config)
@@ -62,8 +62,8 @@ const docSpace = DocSpace.SDK.initSystem(config)
 
 ## Step 3. Add a method to log in
 
-Add the **onButtonClick()** event handler for the button. Using the [getHashSettings](../Methods.md#gethashsettings) method, return the password hash settings
-and generate the password hash using the [createHash](../Methods.md#createhash) method. After this, authorize the user using the [login](../Methods.md#login) method:
+Add the **onButtonClick()** event handler for the button. Using the [getHashSettings](../methods.md#gethashsettings) method, return the password hash settings
+and generate the password hash using the [createHash](../methods.md#createhash) method. After this, authorize the user using the [login](../methods.md#login) method:
 
 ``` ts
 function onButtonClick() {

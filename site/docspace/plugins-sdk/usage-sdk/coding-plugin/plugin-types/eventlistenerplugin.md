@@ -10,7 +10,7 @@ The plugin that is given the access to the portal events.
 
 ### eventListenerItems
 
-Stores a collection of elements where the keys are the *key* parameters from the [EventListenerItem](../Plugin%20Items/EventListenerItem.md) objects. A list of event listeners is generated based on this collection.
+Stores a collection of elements where the keys are the *key* parameters from the [EventListenerItem](../plugin-items/EventListenerItem.md) objects. A list of event listeners is generated based on this collection.
 
 Type: collection of IEventListenerItem
 
