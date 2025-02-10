@@ -33,15 +33,15 @@ sidebar_position: -4
 
    For example, for the **speech-to-text** plugin, we use the following plugin interfaces:
 
-   - [IPlugin](../coding-plugin/plugin-types/Plugin.md). Required for each plugin. It contains the plugin [status](../coding-plugin/plugin-types/Plugin.md#status) (PluginStatus) variable, used to embed the plugin into the DocSpace.
-   - [IApiPlugin](../coding-plugin/plugin-types/APIPlugin.md). Required as we implement a third-party service.
+   - [IPlugin](../coding-plugin/plugin-types/plugin.md). Required for each plugin. It contains the plugin [status](../coding-plugin/plugin-types/plugin.md#status) (PluginStatus) variable, used to embed the plugin into the DocSpace.
+   - [IApiPlugin](../coding-plugin/plugin-types/apiplugin.md). Required as we implement a third-party service.
    - [ISettingsPlugin](../coding-plugin/plugin-types/SettingsPlugin.md) and [ISettings](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/settings/ISettings.ts). Used to add settings block for plugin's configuration. The users will access this block from **Settings -> Integration -> Plugins** to adjust the plugin's parameters.
-   - [IContextMenuPlugin](../coding-plugin/plugin-types/ContextMenuPlugin.md) and [IContextMenuItem](../coding-plugin/plugin-items/ContextMenuItem.md). Used to implement a context menu action. In the **speech-to-text** plugin, it will be available for video and audio files allowing users to convert content into text.
+   - [IContextMenuPlugin](../coding-plugin/plugin-types/ContextMenuPlugin.md) and [IContextMenuItem](../coding-plugin/plugin-items/contextmenuItem.md). Used to implement a context menu action. In the **speech-to-text** plugin, it will be available for video and audio files allowing users to convert content into text.
 
    The list of interfaces may be longer. For example, in the **draw\.io** plugin:
 
-   - [IMainButtonPlugin](../coding-plugin/plugin-types/MainButtonPlugin.md) and [IMainButtonItem](../coding-plugin/plugin-items/MainButtonItem.md). Used to implement the main button action. In the **draw\.io** plugin, we use the **Action button -> More** menu elements in the **My documents** section or in the selected room to create draw\.io diagrams.
-   - [IFilePlugin](../coding-plugin/plugin-types/FilePlugin.md) and [IFileItem](../coding-plugin/plugin-items/fileitem.md). Used to interact with the specified file types. In this case, with the *.drawio* files.
+   - [IMainButtonPlugin](../coding-plugin/plugin-types/mainbuttonplugin.md) and [IMainButtonItem](../coding-plugin/plugin-items/mainbuttonitem.md). Used to implement the main button action. In the **draw\.io** plugin, we use the **Action button -> More** menu elements in the **My documents** section or in the selected room to create draw\.io diagrams.
+   - [IFilePlugin](../coding-plugin/plugin-types/fileplugin.md) and [IFileItem](../coding-plugin/plugin-items/fileitem.md). Used to interact with the specified file types. In this case, with the *.drawio* files.
 
 3. Come up with the plugin's structure. All the required files are described [here](../plugin-structure.md). Everything else can be organized as you wish. For example, in the **draw\.io** plugin, we put the code for each plugin type in separate folders, while in the **speech-to-text** plugin, this code is placed in the *src* folder.
 

@@ -17,4 +17,4 @@ Please note that the UTC date and time without the offset are used in this case.
 
 ## Is the response data pagination supported?
 
-Yes. More information you can find in the [Request filtering](./Filtering.md) section.
+Yes. More information you can find in the [Request filtering](./filtering.md) section.

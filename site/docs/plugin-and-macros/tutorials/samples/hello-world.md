@@ -10,7 +10,7 @@ Inserts the *Hello world!* phrase when the user presses the button.
 
 ## Installation
 
-Download this plugin from [GitHub](https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/helloworld) and install it following the [desktop](../installing/onlyoffice-desktop-editors.md), [on-premises](../installing/ONLYOFFICE%20Docs%20on-premises.md), or [cloud](../installing/onlyoffice-cloud.md) installation instructions.
+Download this plugin from [GitHub](https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/helloworld) and install it following the [desktop](../installing/onlyoffice-desktop-editors.md), [on-premises](../installing/onlyoffice-docs-on-premises.md), or [cloud](../installing/onlyoffice-cloud.md) installation instructions.
 
 ## Usage
 

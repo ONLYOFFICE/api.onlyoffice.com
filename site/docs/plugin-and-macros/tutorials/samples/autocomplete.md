@@ -10,7 +10,7 @@ Helps the user to input text quickly.
 
 ## Installation
 
-Download this plugin from the [ONLYOFFICE App Directory](https://www.onlyoffice.com/en/app-directory/autocomplete) and install it following the [desktop](../installing/onlyoffice-desktop-editors.md), [on-premises](../installing/ONLYOFFICE%20Docs%20on-premises.md), or [cloud](../installing/onlyoffice-cloud.md) installation instructions.
+Download this plugin from the [ONLYOFFICE App Directory](https://www.onlyoffice.com/en/app-directory/autocomplete) and install it following the [desktop](../installing/onlyoffice-desktop-editors.md), [on-premises](../installing/onlyoffice-docs-on-premises.md), or [cloud](../installing/onlyoffice-cloud.md) installation instructions.
 
 ## Usage
 

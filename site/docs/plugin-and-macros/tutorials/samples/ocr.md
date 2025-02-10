@@ -12,7 +12,7 @@ Connects the [TesseractJS-Core library](https://tesseract.projectnaptha.com/) fo
 
 Available by default in the cloud, on-premises and desktop versions of ONLYOFFICE editors.
 
-You can remove it following the [desktop](../installing/onlyoffice-desktop-editors.md), [on-premises](../installing/ONLYOFFICE%20Docs%20on-premises.md), or [cloud](../installing/onlyoffice-cloud.md) installation instructions.
+You can remove it following the [desktop](../installing/onlyoffice-desktop-editors.md), [on-premises](../installing/onlyoffice-docs-on-premises.md), or [cloud](../installing/onlyoffice-cloud.md) installation instructions.
 
 The plugin guid: `{440EBF13-9B19-4BD8-8621-05200E58140B}`.
 

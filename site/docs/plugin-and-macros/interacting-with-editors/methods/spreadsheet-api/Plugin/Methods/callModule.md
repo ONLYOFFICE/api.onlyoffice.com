@@ -8,7 +8,7 @@ Defines the method used to execute a remotely located script following a link.
 expression.callModule(url, callback, isClose);
 ```
 
-`expression` - A variable that represents a [Plugin](../Plugin.md) class.
+`expression` - A variable that represents a [Plugin](../plugin.md) class.
 
 ## Parameters
 

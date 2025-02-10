@@ -12,7 +12,7 @@ Connects [youtube iframe\_api](https://developers.google.com/youtube/iframe_api_
 
 Available by default in the cloud, on-premises and desktop versions of ONLYOFFICE editors.
 
-You can remove it following the [desktop](../installing/onlyoffice-desktop-editors.md), [on-premises](../installing/ONLYOFFICE%20Docs%20on-premises.md), or [cloud](../installing/onlyoffice-cloud.md) installation instructions.
+You can remove it following the [desktop](../installing/onlyoffice-desktop-editors.md), [on-premises](../installing/onlyoffice-docs-on-premises.md), or [cloud](../installing/onlyoffice-cloud.md) installation instructions.
 
 The plugin guid: `{38E022EA-AD92-45FC-B22B-49DF39746DB4}`.
 

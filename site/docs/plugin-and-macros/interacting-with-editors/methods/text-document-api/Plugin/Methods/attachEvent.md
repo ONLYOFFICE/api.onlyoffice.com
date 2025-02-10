@@ -9,7 +9,7 @@ The list of all the available events can be found &#123;@link /plugin/events her
 expression.attachEvent(id, action);
 ```
 
-`expression` - A variable that represents a [Plugin](../Plugin.md) class.
+`expression` - A variable that represents a [Plugin](../plugin.md) class.
 
 ## Parameters
 

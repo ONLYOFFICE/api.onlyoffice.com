@@ -10,7 +10,7 @@ The plugin that is embedded in the main button.
 
 ### mainButtonItems
 
-Stores a collection of elements where the keys are the *key* parameters from the [MainButtonItem](../plugin-items/MainButtonItem.md) objects. A list for embedding into the main button menu is generated based on this collection.
+Stores a collection of elements where the keys are the *key* parameters from the [MainButtonItem](../plugin-items/mainbuttonitem.md) objects. A list for embedding into the main button menu is generated based on this collection.
 
 Type: collection of IMainButtonItem
 

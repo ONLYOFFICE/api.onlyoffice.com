@@ -40,7 +40,7 @@ More information about plugin settings and scopes can be found [here](../usage-s
 
 Develop a plugin. Follow the plugin structure described [here](../usage-sdk/plugin-structure.md).
 
-- Write code for each [plugin type](../usage-sdk/coding-plugin/plugin-types/plugin-types.md) using the corresponding variables, methods and [items](../usage-sdk/coding-plugin/plugin-items/plugin-items.md). Put the scripts into the *src* folder. Specify the required [Plugin](../usage-sdk/coding-plugin/plugin-types/Plugin.md) interface for each plugin to be embedded in the portal.
+- Write code for each [plugin type](../usage-sdk/coding-plugin/plugin-types/plugin-types.md) using the corresponding variables, methods and [items](../usage-sdk/coding-plugin/plugin-items/plugin-items.md). Put the scripts into the *src* folder. Specify the required [Plugin](../usage-sdk/coding-plugin/plugin-types/plugin.md) interface for each plugin to be embedded in the portal.
 
   ![Plugin structure](/assets/images/docspace/plugin-structure.png)
 

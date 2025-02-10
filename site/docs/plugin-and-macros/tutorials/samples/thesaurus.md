@@ -12,7 +12,7 @@ Connects [Big Huge Thesaurus](https://words.bighugelabs.com/) to search for word
 
 Available by default in the cloud, on-premises and desktop versions of ONLYOFFICE editors.
 
-You can remove it following the [desktop](../installing/onlyoffice-desktop-editors.md), [on-premises](../installing/ONLYOFFICE%20Docs%20on-premises.md), or [cloud](../installing/onlyoffice-cloud.md) installation instructions.
+You can remove it following the [desktop](../installing/onlyoffice-desktop-editors.md), [on-premises](../installing/onlyoffice-docs-on-premises.md), or [cloud](../installing/onlyoffice-cloud.md) installation instructions.
 
 The plugin guid: `{BE5CBF95-C0AD-4842-B157-AC40FEDD9840}`.
 

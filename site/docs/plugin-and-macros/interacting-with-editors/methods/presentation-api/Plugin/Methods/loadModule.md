@@ -8,7 +8,7 @@ Defines the method used to load a remotely located text resource.
 expression.loadModule(url, callback);
 ```
 
-`expression` - A variable that represents a [Plugin](../Plugin.md) class.
+`expression` - A variable that represents a [Plugin](../plugin.md) class.
 
 ## Parameters
 

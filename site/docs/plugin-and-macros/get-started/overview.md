@@ -27,7 +27,7 @@ Code samples are available at [GitHub](https://github.com/ONLYOFFICE/sdkjs-plugi
 
 If you are looking for ready-to-use plugins, please visit [ONLYOFFICE App Directory](https://www.onlyoffice.com/en/app-directory).
 
-To quickly install and update plugins, you can use [ONLYOFFICE Plugin Marketplace](../tutorials/installing/ONLYOFFICE%20Docs%20on-premises.md#adding-plugins-through-the-plugin-manager).
+To quickly install and update plugins, you can use [ONLYOFFICE Plugin Marketplace](../tutorials/installing/onlyoffice-docs-on-premises.md#adding-plugins-through-the-plugin-manager).
 
 ## How to create plugins
 

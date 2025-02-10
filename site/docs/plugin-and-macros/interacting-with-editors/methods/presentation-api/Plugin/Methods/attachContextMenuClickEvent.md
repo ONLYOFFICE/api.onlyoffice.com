@@ -8,7 +8,7 @@ Defines the method to add an event listener, a function that will be called when
 expression.attachContextMenuClickEvent(id, action);
 ```
 
-`expression` - A variable that represents a [Plugin](../Plugin.md) class.
+`expression` - A variable that represents a [Plugin](../plugin.md) class.
 
 ## Parameters
 

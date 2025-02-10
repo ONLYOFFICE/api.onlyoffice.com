@@ -75,7 +75,7 @@ Example: `{ICreateDialog}`
 
 Defines the properties that display the modal window. This parameter is used only with [Actions.showModal](./events.md#showmodal).
 
-Type: [IModalDialog](./plugin-components/ModalDialog.md)
+Type: [IModalDialog](./plugin-components/modaldialog.md)
 
 Example: `{IModalDialog}`
 

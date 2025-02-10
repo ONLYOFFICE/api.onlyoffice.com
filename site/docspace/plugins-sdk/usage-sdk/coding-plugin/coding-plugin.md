@@ -4,7 +4,7 @@ sidebar_position: -6
 
 Develop a plugin. Follow the plugin structure described [here](../plugin-structure.md).
 
-- Write code for each [plugin type](./plugin-types/plugin-types.md) using the corresponding variables, methods and [items](./plugin-items/plugin-items.md). Put the scripts into the *src* folder. Specify the required [Plugin](plugin-types/Plugin.md) interface for each plugin to be embedded in the portal.
+- Write code for each [plugin type](./plugin-types/plugin-types.md) using the corresponding variables, methods and [items](./plugin-items/plugin-items.md). Put the scripts into the *src* folder. Specify the required [Plugin](plugin-types/plugin.md) interface for each plugin to be embedded in the portal.
 
   ![Plugin structure](/assets/images/docspace/plugin-structure.png)
 

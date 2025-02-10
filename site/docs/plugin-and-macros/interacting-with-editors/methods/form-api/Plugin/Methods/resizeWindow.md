@@ -9,7 +9,7 @@ Defines the method used to change the window size updating the minimum/maximum s
 expression.resizeWindow(width, height, minW, minH, maxW, maxH);
 ```
 
-`expression` - A variable that represents a [Plugin](../Plugin.md) class.
+`expression` - A variable that represents a [Plugin](../plugin.md) class.
 
 ## Parameters
 

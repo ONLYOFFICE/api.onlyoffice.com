@@ -44,7 +44,7 @@ The API JavaScript file can normally be found in the following DocSpace folder: 
 
 ## Step 2. Initialize the Manager mode
 
-Add a script to initialize the [Manager](../initialization-modes/Manager.md) mode.
+Add a script to initialize the [Manager](../initialization-modes/manager.md) mode.
 
 1. Add an event handler for [onAppReady](../events.md#onappready), which fires when initialization is successful:
 

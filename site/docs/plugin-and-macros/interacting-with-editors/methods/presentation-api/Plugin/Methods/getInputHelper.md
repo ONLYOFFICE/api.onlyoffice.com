@@ -8,7 +8,7 @@ Defines the method used to get the &#123;@link inputhelper InputHelper object&#1
 expression.getInputHelper();
 ```
 
-`expression` - A variable that represents a [Plugin](../Plugin.md) class.
+`expression` - A variable that represents a [Plugin](../plugin.md) class.
 
 ## Parameters
 
