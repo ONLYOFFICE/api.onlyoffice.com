@@ -124,6 +124,12 @@ In this example we are adding comments and changing the background colors of sel
 
 [More](Add%20comments%20and%20change%20cell%20colors%20in%20spreadsheet.md)
 
+## Add state from zip code
+
+In this example we are adding the "State" label and the text form that prefilled with "CA" if the zip code of California is entered.
+
+[More](Add%20state%20from%20zip%20code.md)
+
 ## Remove extra spaces
 
 In this example we are removing extra spaces in the text document. 
