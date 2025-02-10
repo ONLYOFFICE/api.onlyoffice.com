@@ -172,6 +172,12 @@ In this example we are generating word definitions in our documents using the Di
 
 [More](Generate%20word%20definitions.md)
 
+## Currency conversion
+
+In this example we are converting currencies using the Currency Conversion API offered by currencyapi.
+
+[More](Currency%20conversion.md)
+
 ## Support
 
 If you want to request a feature or report a bug regarding macros, use the issues section [on GitHub.](https://github.com/ONLYOFFICE/plugin-macros/issues)
