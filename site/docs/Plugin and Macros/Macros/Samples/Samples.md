@@ -118,6 +118,12 @@ In this example we are replacing words in the text editor.
 
 [More](Replace%20words%20in%20document.md)
 
+## Generate hyperlinks
+
+In this example we are generating hyperlinks in the text editor.
+
+[More](Generate%20hyperlinks.md)
+
 ## Add comments and change cell colors in spreadsheet
 
 In this example we are adding comments and changing the background colors of selected cells.
