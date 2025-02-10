@@ -6,7 +6,7 @@ The ONLYOFFICE Hosted Solution is implemented as REST over HTTP using GET/POST. 
 
 ## Authentication
 
-Authentication in the ONLYOFFICE Hosted Solution is managed via the HTTP authentication, i.e. every request must include the Authorization HTTP header. For information and examples please visit the [Authentication](./Authentication.md) section.
+Authentication in the ONLYOFFICE Hosted Solution is managed via the HTTP authentication, i.e. every request must include the Authorization HTTP header. For information and examples please visit the [Authentication](./authentication.md) section.
 
 ## Making requests
 

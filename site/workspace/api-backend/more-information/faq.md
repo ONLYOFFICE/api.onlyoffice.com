@@ -23,4 +23,4 @@ E.g.: api/2.0/people.json
 
 ## Is the response data pagination supported?
 
-Yes. More information you can find in the [Request filtering](./Filtering.md) section.
+Yes. More information you can find in the [Request filtering](./filtering.md) section.
