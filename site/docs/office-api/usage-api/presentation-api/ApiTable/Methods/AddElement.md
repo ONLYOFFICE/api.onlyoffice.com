@@ -16,7 +16,7 @@ expression.AddElement(oCell, nPos, oElement);
 | ------------- | ------------- | ------------- | ------------- | ------------- |
 | oCell | Required | [ApiTableCell](../../ApiTableCell/ApiTableCell.md) |  | The cell where the specified element will be added. |
 | nPos | Required | number |  | The position in the cell where the specified element will be added. |
-| oElement | Required | [DocumentElement](../../Enumeration/DocumentElement.md) |  | The document element which will be added at the current position. |
+| oElement | Required | [DocumentElement](../../Enumeration/documentElement.md) |  | The document element which will be added at the current position. |
 
 ## Returns
 

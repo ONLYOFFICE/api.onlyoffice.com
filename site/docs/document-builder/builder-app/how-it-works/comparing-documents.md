@@ -21,7 +21,7 @@ If you need to compare two documents, you can use **Document Builder**. The step
 
    `https://example.com/file2.docx` - the path to the second file for comparing.
 
-2. Send the [POST request](../../../docs-api/Additional%20API/document-builder-api.md) to **https\://documentserver/docbuilder** with the following body in the JSON format:
+2. Send the [POST request](../../../docs-api/additional-api/document-builder-api.md) to **https\://documentserver/docbuilder** with the following body in the JSON format:
 
    ``` json
    {

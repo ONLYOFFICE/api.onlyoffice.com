@@ -8,7 +8,7 @@ Normally the final document version is compiled once all the users editing it cl
 
 There are several ways to initiate forced saving:
 
-- Sending the request to the [document command service](../../Additional%20API/Command%20service/Command%20service.md), using the [forcesave](../../Additional%20API/Command%20service/forcesave.md) value for the *c* parameter:
+- Sending the request to the [document command service](../../additional-api/command-service/command-service.md), using the [forcesave](../../additional-api/command-service/forcesave.md) value for the *c* parameter:
 
   ``` json
   {
@@ -18,7 +18,7 @@ There are several ways to initiate forced saving:
   }
   ```
 
-- Enabling the [editorConfig.customization.forcesave](../../usage-api/config/editor/customization/customization%20-%20Standard%20branding.md#forcesave) setting to **true** in the editor initialization configuration:
+- Enabling the [editorConfig.customization.forcesave](../../usage-api/config/editor/customization/customization-standard-branding.md#forcesave) setting to **true** in the editor initialization configuration:
 
   ``` ts
   const docEditor = new DocsAPI.DocEditor("placeholder", {
@@ -45,11 +45,11 @@ There are several ways to initiate forced saving:
   }
   ```
 
-Depending on which type of forced saving you need, you can select the correct implementation. More information about this can be found at [this page](../../get-started/how-it-works/Saving%20file.md#force-saving).
+Depending on which type of forced saving you need, you can select the correct implementation. More information about this can be found at [this page](../../get-started/how-it-works/saving-file.md#force-saving).
 
 ## How to save the created document?
 
-Please see the [Saving file](../../get-started/how-it-works/Saving%20file.md) section to find out how file saving works in ONLYOFFICE Docs and what is needed to save the created document.
+Please see the [Saving file](../../get-started/how-it-works/saving-file.md) section to find out how file saving works in ONLYOFFICE Docs and what is needed to save the created document.
 
 ## How to save the opened document to another document file type?
 
@@ -57,11 +57,11 @@ If the document of a format different from the OOXML (.txt or .ods) is opened, t
 
 To save the opened document to a format different from the default Office Open XML one, the POST request must be sent to the **document conversion service**.
 
-The details of how the conversion works and why it is needed can be found in [this section](../../get-started/how-it-works/Converting%20and%20downloading%20file.md). The POST request parameters and available responses to it can be found [here](../../Additional%20API/conversion-api/request.md).
+The details of how the conversion works and why it is needed can be found in [this section](../../get-started/how-it-works/converting-and-downloading-file.md). The POST request parameters and available responses to it can be found [here](../../additional-api/conversion-api/request.md).
 
 ## How to enable or disable the 'Autosave' option?
 
-The **Autosave** option is enabled by default. To disable it, you need to set the [editorConfig.customization.autosave](../../usage-api/config/editor/customization/customization%20-%20Standard%20branding.md#autosave) parameter in the document configuration to **false**:
+The **Autosave** option is enabled by default. To disable it, you need to set the [editorConfig.customization.autosave](../../usage-api/config/editor/customization/customization-standard-branding.md#autosave) parameter in the document configuration to **false**:
 
   ``` ts
   const docEditor = new DocsAPI.DocEditor("placeholder", {
@@ -75,7 +75,7 @@ The **Autosave** option is enabled by default. To disable it, you need to set th
 
 > Please note, that disabling the **Autosave** will also disable the **Fast** co-editing mode which only works with the automatic document saving enabled.
 
-Further information about the autosaving can be found [at this page](../../usage-api/config/editor/customization/customization%20-%20Standard%20branding.md#autosave).
+Further information about the autosaving can be found [at this page](../../usage-api/config/editor/customization/customization-standard-branding.md#autosave).
 
 ## What is the conversion start delay time and how can it be changed?
 
@@ -97,7 +97,7 @@ The time between the end of the editing and the conversion start is set in the *
   }
   ```
 
-Further information about the conversion start delay can be found [at this page](../../get-started/how-it-works/Saving%20file.md).
+Further information about the conversion start delay can be found [at this page](../../get-started/how-it-works/saving-file.md).
 
 ## How to specify the encoding type when converting from the csv or txt formats?
 
@@ -116,4 +116,4 @@ For this purpose the POST request with the parameters set in the request body is
   }
   ```
 
-Further information about using the codepage during conversion can be found [at this page](../../Additional%20API/conversion-api/request.md#codepage).
+Further information about using the codepage during conversion can be found [at this page](../../additional-api/conversion-api/request.md#codepage).

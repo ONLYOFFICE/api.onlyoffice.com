@@ -8,7 +8,7 @@ The "Download failed" message is displayed at the editors loading process.
 
 The **Document editing service** cannot upload the file for editing.
 
-Check if the link to the file specified in the [document.url](../usage-api/config/Document/Document.md#url) is correct. The link must be accessible from the **document editing service**.
+Check if the link to the file specified in the [document.url](../usage-api/config/document/document.md#url) is correct. The link must be accessible from the **document editing service**.
 
 ## No changes
 
@@ -36,7 +36,7 @@ The editor displays the "Connection is lost. Trying to connect. Please check con
 
 The **document editing service** is trying to update the file version without reloading the editor after the connection is lost.
 
-Do not forget that every time the document is edited and saved, the [document.key](../usage-api/config/Document/Document.md#key) must be generated anew.
+Do not forget that every time the document is edited and saved, the [document.key](../usage-api/config/document/document.md#key) must be generated anew.
 
 ## The file version cannot be opened
 
@@ -54,7 +54,7 @@ No co-editing is available when the document is opened for editing by different 
 
 The **document editing service** opens **two different** files for editing.
 
-Check if the [document.key](../usage-api/config/Document/Document.md#key) values coincide to be able to co-edit the same document. The *key* value must change after the save, must differ for different documents and coincide when co-editing one and the same document.
+Check if the [document.key](../usage-api/config/document/document.md#key) values coincide to be able to co-edit the same document. The *key* value must change after the save, must differ for different documents and coincide when co-editing one and the same document.
 
 ## Invalid token
 
@@ -77,7 +77,7 @@ This problem may occur due to the following reasons:
 1. This is an error of the editor, which passes such parameters that the server check considers a security violation.
 2. Changing access rights in the config for opening in the browser (may be an editor error related to incorrect filling of missing config fields).
 3. An attempt to save a document in the viewer or when the editor opens in the viewer by mistake.
-4. The [downloadAs](../usage-api/methods.md#downloadas) method is executed but the user doesn't have rights to [download](../usage-api/config/Document/Permissions.md#download) documents.
+4. The [downloadAs](../usage-api/methods.md#downloadas) method is executed but the user doesn't have rights to [download](../usage-api/config/document/permissions.md#download) documents.
 5. Changing the username (for anonymous users only).
 
 The reasons for the error are not limited to the examples provided. This list can be extended.

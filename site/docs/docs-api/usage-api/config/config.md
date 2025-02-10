@@ -31,7 +31,7 @@ Example: "100%"
 
 ## token
 
-Defines the encrypted signature added to the **ONLYOFFICE Docs** config in the form of a [token](../../Additional%20API/signature/Browser.md).
+Defines the encrypted signature added to the **ONLYOFFICE Docs** config in the form of a [token](../../additional-api/signature/Browser.md).
 
 Type: string
 

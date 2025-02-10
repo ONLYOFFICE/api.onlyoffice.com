@@ -12,7 +12,7 @@ All the available pricing plans for the connections are available at [this page]
 
 ## How to find the information about users who are currently editing the document?
 
-You can use the API to send a POST request to the **document command service**. Use the *c* parameter for that with the [info](../../Additional%20API/Command%20service/info.md) value and the *key* parameter identifying the document you want to find the information about. The parameters are sent as a part of the JSON object in the request body:
+You can use the API to send a POST request to the **document command service**. Use the *c* parameter for that with the [info](../../additional-api/command-service/info.md) value and the *key* parameter identifying the document you want to find the information about. The parameters are sent as a part of the JSON object in the request body:
 
   ``` json
   {
@@ -41,7 +41,7 @@ In case the document is being edited, for instance, by two users, the **document
 
 ## How to disconnect users who are currently editing the document before saving the document?
 
-To force disconnecting the users from the document before it can be saved, use the API to send a POST request to the **document command service**. Use the *c* parameter for that with the [drop](../../Additional%20API/Command%20service/drop.md) value and the *key* parameter identifying the document and the array of the IDs of the users you want to disconnect. The parameters are sent as a part of the JSON object in the request body:
+To force disconnecting the users from the document before it can be saved, use the API to send a POST request to the **document command service**. Use the *c* parameter for that with the [drop](../../additional-api/command-service/drop.md) value and the *key* parameter identifying the document and the array of the IDs of the users you want to disconnect. The parameters are sent as a part of the JSON object in the request body:
 
   ``` json
   {
@@ -53,4 +53,4 @@ To force disconnecting the users from the document before it can be saved, use t
 
 As a result the two users with the IDs in the request above ("6d5a81d0" and "78e1e841") will be disconnected from editing the document with the **Khirz6zTPdfd7** key.
 
-Further information about the use of requests from **document command service** can be found [at this page](../../Additional%20API/Command%20service/Command%20service.md).
+Further information about the use of requests from **document command service** can be found [at this page](../../additional-api/command-service/command-service.md).

@@ -53,7 +53,7 @@ Example: true
 
 ## chat
 
-Defines if the **Chat** menu button is displayed or hidden. Please note that in case you hide the **Chat** button, the corresponding chat functionality will also be disabled. The default value is **true**. Deprecated since version 7.1, please use the [document.permissions.chat](../../Document/Permissions.md#chat) parameter instead.
+Defines if the **Chat** menu button is displayed or hidden. Please note that in case you hide the **Chat** button, the corresponding chat functionality will also be disabled. The default value is **true**. Deprecated since version 7.1, please use the [document.permissions.chat](../../document/permissions.md#chat) parameter instead.
 
 Type: boolean
 
@@ -92,7 +92,7 @@ Type: string
 
 Example: "Close file"
 
-> Please note that it will only be available if the [onRequestClose](../../Events.md#onrequestclose) event is set. If the event is not declared and the *close* parameter is not specified, the cross button will not be displayed.
+> Please note that it will only be available if the [onRequestClose](../../events.md#onrequestclose) event is set. If the event is not declared and the *close* parameter is not specified, the cross button will not be displayed.
 
 > Please note that this parameter is also available for the mobile editors.
 
@@ -100,7 +100,7 @@ Example: "Close file"
 
 ## commentAuthorOnly
 
-Defines if the user can edit and delete only his comments. The default value is **false**. Deprecated since version 6.3, please use the [document.permissions.editCommentAuthorOnly](../../Document/Permissions.md#editcommentauthoronly) and [document.permissions.deleteCommentAuthorOnly](../../Document/Permissions.md#deletecommentauthoronly) fields instead.
+Defines if the user can edit and delete only his comments. The default value is **false**. Deprecated since version 6.3, please use the [document.permissions.editCommentAuthorOnly](../../document/permissions.md#editcommentauthoronly) and [document.permissions.deleteCommentAuthorOnly](../../document/permissions.md#deletecommentauthoronly) fields instead.
 
 Type: boolean
 
@@ -410,7 +410,7 @@ Example: true
 
 ### goback.requestClose
 
-Defines that if the **Open file location** button is clicked, [events.onRequestClose](../../Events.md#onrequestclose) event is called instead of opening a browser tab or window. Deprecated since version 8.1. Please use the [close](#close) parameter instead.
+Defines that if the **Open file location** button is clicked, [events.onRequestClose](../../events.md#onrequestclose) event is called instead of opening a browser tab or window. Deprecated since version 8.1. Please use the [close](#close) parameter instead.
 
 Type: boolean
 
@@ -590,7 +590,7 @@ Type: boolean
 
 Example: true
 
-> Please note that it will only be available for the comments if the [onRequestSendNotify](../../Events.md#onrequestsendnotify) event is set.
+> Please note that it will only be available for the comments if the [onRequestSendNotify](../../events.md#onrequestsendnotify) event is set.
 
 <img alt="Mention share" src="/assets/images/editor/mentionShare.png" width="379px" />
 
@@ -731,7 +731,7 @@ Example: false
 
 ### review.trackChanges
 
-Defines if the document is opened in the review editing mode (**true**) or not (**false**) regardless of the [document.permissions.review](../../Document/Permissions.md#review) parameter (the review mode is changed only for the current user). If the parameter is *undefined*, the *document.permissions.review* value is used (for all the document users).
+Defines if the document is opened in the review editing mode (**true**) or not (**false**) regardless of the [document.permissions.review](../../document/permissions.md#review) parameter (the review mode is changed only for the current user). If the parameter is *undefined*, the *document.permissions.review* value is used (for all the document users).
 
 Type: boolean
 
@@ -839,7 +839,7 @@ Example: false
 
 ## trackChanges
 
-Defines if the document is opened in the review editing mode (**true**) or not (**false**) regardless of the [document.permissions.review](../../Document/Permissions.md#review) parameter (the review mode is changed only for the current user). If the parameter is *undefined*, the *document.permissions.review* value is used (for all the document users). 
+Defines if the document is opened in the review editing mode (**true**) or not (**false**) regardless of the [document.permissions.review](../../document/permissions.md#review) parameter (the review mode is changed only for the current user). If the parameter is *undefined*, the *document.permissions.review* value is used (for all the document users). 
 
 Type: boolean
 

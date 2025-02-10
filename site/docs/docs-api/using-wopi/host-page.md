@@ -2,13 +2,13 @@
 sidebar_position: -7
 ---
 
-In order to create an online office session within your application, a host must create an HTML page that will host an iframe element within it pointing to a particular [WOPI action URL](./WOPI%20discovery.md#wopi-actions).
+In order to create an online office session within your application, a host must create an HTML page that will host an iframe element within it pointing to a particular [WOPI action URL](./wopi-discovery.md#wopi-actions).
 
 The host page must contain the following elements:
 
 - A *form* element via which the host must *POST* the [access\_token](#parameters) and [access\_token\_ttl](#parameters) parameters to the online office iframe for security purposes. The [docs\_api\_config](#parameters) parameter is optional.
 - JavaScript code for interacting with the online office iframe using [PostMessage](./PostMessage.md).
-- Specific CSS styles for the body element and online office to avoid visual bags. In addition, the host page should set an appropriate favicon for the page using the favicon URL provided in [WOPI discovery](./WOPI%20discovery.md).
+- Specific CSS styles for the body element and online office to avoid visual bags. In addition, the host page should set an appropriate favicon for the page using the favicon URL provided in [WOPI discovery](./wopi-discovery.md).
 - A *viewport* meta tag to avoid visual and functional problems in mobile browsers.
 
 ## Host page code
@@ -87,6 +87,6 @@ The host page must contain the following elements:
 | ------------------ | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | access\_token      | string  | An [access token](./Key%20concepts.md#access-token) that the host will use to determine the identity and permissions of the issuer of a WOPI request.                                                                                                                                                                                                                                                                                                                                                                                                                           |
 | access\_token\_ttl | integer | The time when an [access token expires](./Key%20concepts.md#the-access_token_ttl-property), represented as the number of milliseconds since January 1, 1970 UTC. It is recommended to set this parameter to 10 hours. This parameter can be also set to 0. This means for the client that the token expiry is either infinite or unknown. In this case, clients might disable any UI prompting users to refresh their sessions. This can lead to unexpected data loss due to access token expiry. So, this is strongly recommended to specify a value for *access\_token\_ttl*. |
-| docs\_api\_config  | string  | The optional [config](../usage-api/config/config.md) parameters for opening the editor via Docs API that are not supported by the WOPI protocol. For example, to enable the [forcesaving](../get-started/how-it-works/Saving%20file.md#force-saving) functionality by clicking the **Save** button, the [editorConfig.customization.forcesave](../usage-api/config/editor/customization/customization%20-%20Standard%20branding.md#forcesave) parameter must be passed in this object.                                                                                                           |
+| docs\_api\_config  | string  | The optional [config](../usage-api/config/config.md) parameters for opening the editor via Docs API that are not supported by the WOPI protocol. For example, to enable the [forcesaving](../get-started/how-it-works/saving-file.md#force-saving) functionality by clicking the **Save** button, the [editorConfig.customization.forcesave](../usage-api/config/editor/customization/customization-standard-branding.md#forcesave) parameter must be passed in this object.                                                                                                           |
 
 Further information about building a host page can be found [here](https://docs.microsoft.com/en-us/microsoft-365/cloud-storage-partner-program/online/hostpage).

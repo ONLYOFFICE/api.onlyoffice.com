@@ -21,7 +21,7 @@ CDocBuilderValue^ GetProperty(String^ sName);
 ### .Net
 
 ```cs
-string workDirectory = "C:/Program Files/ONLYOFFICE/DocumentBuilder";
+string workDirectory = "C:/Program Files/ONLYOFFICE/documentBuilder";
 CDocBuilder.Initialize(workDirectory);
 CDocBuilder oBuilder = new CDocBuilder();
 CContext oContext = oBuilder.GetContext();
@@ -45,7 +45,7 @@ There are two more ways to get a property of the `CDocBuilderValue` object:
    ### .Net
 
    ```cs
-   string workDirectory = "C:/Program Files/ONLYOFFICE/DocumentBuilder";
+   string workDirectory = "C:/Program Files/ONLYOFFICE/documentBuilder";
    CDocBuilder.Initialize(workDirectory);
    CDocBuilder oBuilder = new CDocBuilder();
    CContext oContext = oBuilder.GetContext();
@@ -67,7 +67,7 @@ There are two more ways to get a property of the `CDocBuilderValue` object:
    ### .Net
 
    ```cs
-   string workDirectory = "C:/Program Files/ONLYOFFICE/DocumentBuilder";
+   string workDirectory = "C:/Program Files/ONLYOFFICE/documentBuilder";
    CDocBuilder.Initialize(workDirectory);
    CDocBuilder oBuilder = new CDocBuilder();
    CContext oContext = oBuilder.GetContext();

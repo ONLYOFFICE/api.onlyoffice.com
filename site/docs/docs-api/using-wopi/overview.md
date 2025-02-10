@@ -8,10 +8,10 @@ This documentation describes:
 
 - WOPI protocol [configuration parameters](./config.md);
 - [key concepts](./Key%20concepts.md) that are vital to understand the requirements for integrating with WOPI clients;
-- file properties that can be specified via [WOPI discovery](./WOPI%20discovery.md);
+- file properties that can be specified via [WOPI discovery](./wopi-discovery.md);
 - a [host page](./Host%20page.md) that must be built to create an iframe element within the online office;
 - [proof keys](./Proof%20keys.md) which are used to check that the request is received from the online office;
-- supported [WOPI REST API](./WOPI%20REST%20API/WOPI%20REST%20API.md) functions;
+- supported [WOPI REST API](./wopi-rest-api/wopi-rest-api.md) functions;
 - available messages that can be posted via [PostMessage](./PostMessage.md);
 - request parameters for [converting](./conversion-api.md) different file formats in the online office;
 - a scheme for [editing binary document formats](./Editing%20binary%20documents.md);

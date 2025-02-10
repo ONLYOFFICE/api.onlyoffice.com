@@ -14,13 +14,13 @@ The reference figure and the steps below explain the process of opening a docume
 
 3. The **document editor** forms a request to the **document editing service** for document opening. The **document editor** uses the document identifier and its link received from the **document manager** (at step 2).
 
-4. The **document editing service** downloads the document file from the **document storage service** using the ID and link provided. At this step the [conversion](./Converting%20and%20downloading%20file.md) of the file into Office Open XML format is also performed for the **document editor** better performance and formats compatibility.
+4. The **document editing service** downloads the document file from the **document storage service** using the ID and link provided. At this step the [conversion](./converting-and-downloading-file.md) of the file into Office Open XML format is also performed for the **document editor** better performance and formats compatibility.
 
 5. When ready the **document editing service** transfers the document file to the browser-based **document editor**.
 
 6. The **document editor** displays the document file and/or (in case the appropriate rights are provided) allows its editing.
 
-After the editing is finished, the [document saving](./Saving%20file.md) process takes place.
+After the editing is finished, the [document saving](./saving-file.md) process takes place.
 
 ## How this can be done in practice
 

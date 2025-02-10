@@ -17,7 +17,7 @@ SDK consists of 5 main managers and 4 services.
 
 | Manager                                                                                                                                                 | Default implementation                                                                                                                                                           | Description                                                             |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------- |
-| [DocumentManager](https://github.com/ONLYOFFICE/docs-integration-sdk-java/blob/main/src/main/java/com/onlyoffice/manager/document/DocumentManager.java) | [DefaultDocumentManager](https://github.com/ONLYOFFICE/docs-integration-sdk-java/blob/main/src/main/java/com/onlyoffice/manager/document/DefaultDocumentManager.java) (abstract) | This manager is used for working with files and document formats.       |
+| [DocumentManager](https://github.com/ONLYOFFICE/docs-integration-sdk-java/blob/main/src/main/java/com/onlyoffice/manager/document/documentManager.java) | [DefaultDocumentManager](https://github.com/ONLYOFFICE/docs-integration-sdk-java/blob/main/src/main/java/com/onlyoffice/manager/document/DefaultDocumentManager.java) (abstract) | This manager is used for working with files and document formats.       |
 | [RequestManager](https://github.com/ONLYOFFICE/docs-integration-sdk-java/blob/main/src/main/java/com/onlyoffice/manager/request/requestManager.java)    | [DefaultRequestManager](https://github.com/ONLYOFFICE/docs-integration-sdk-java/blob/main/src/main/java/com/onlyoffice/manager/request/DefaultRequestManager.java)               | This manager is used to make requests to the ONLYOFFICE Docs.           |
 | [JwtManager](https://github.com/ONLYOFFICE/docs-integration-sdk-java/blob/main/src/main/java/com/onlyoffice/manager/security/JwtManager.java)           | [DefaultJwtManager](https://github.com/ONLYOFFICE/docs-integration-sdk-java/blob/main/src/main/java/com/onlyoffice/manager/security/DefaultJwtManager.java)                      | This manager is used for generating and verifying authorization tokens. |
 | [SettingsManager](https://github.com/ONLYOFFICE/docs-integration-sdk-java/blob/main/src/main/java/com/onlyoffice/manager/settings/SettingsManager.java) | [DefaultSettingsManager](https://github.com/ONLYOFFICE/docs-integration-sdk-java/blob/main/src/main/java/com/onlyoffice/manager/settings/DefaultSettingsManager.java) (abstract) | This manager is used to manage integration application settings.        |
@@ -66,7 +66,7 @@ Let's look at the [demo example](https://github.com/ONLYOFFICE/docs-integration-
    }
    ```
 
-   The full example code can be found [here](https://github.com/ONLYOFFICE/docs-integration-sdk-java/blob/main/demo-example/src/main/java/com/onlyoffice/demoexample/manager/DocumentManagerImpl.java).
+   The full example code can be found [here](https://github.com/ONLYOFFICE/docs-integration-sdk-java/blob/main/demo-example/src/main/java/com/onlyoffice/demoexample/manager/documentManagerImpl.java).
 
 3. Implement the **UrlManager** methods. To open the editor in the editing mode, you need to define:
 

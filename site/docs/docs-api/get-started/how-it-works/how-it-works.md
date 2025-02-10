@@ -7,7 +7,7 @@ The work with document files in ONLYOFFICE Docs is quite a simple process but it
 In this section you will learn how to:
 
 - [Open a file](opening-file.md)
-- [Save a file](Saving%20file.md)
+- [Save a file](saving-file.md)
 - [Co-edit a file](Co-editing.md)
 - [View the document history](document-history.md)
 - [Work with action links](Action%20link.md)
@@ -15,7 +15,7 @@ In this section you will learn how to:
 - [Rename a file](Renaming%20files.md)
 - [Review a file](Reviewing.md)
 - [Work with inline editors](Inline%20editors.md)
-- [Convert and download a file](Converting%20and%20downloading%20file.md)
+- [Convert and download a file](converting-and-downloading-file.md)
 - [Protect a document](Security.md)
 - [Set a name to an anonymous user](Anonymous%20users.md)
 - [Comment on a document](Commenting.md)
@@ -53,6 +53,6 @@ Please note, that ONLYOFFICE Docs includes the **document editor**, **document e
 
 Starting from version 8.1, the *shardkey* parameter is added to the URL *QueryString* when sending requests to the ONLYOFFICE Docs API, **document command service**, **document conversion service**, or **document builder service**. It is also added to the browser-server interaction during the collaborative editing as the [WOPISrc](../../using-wopi/Key%20concepts.md#wopisrc) query parameter.
 
-The *key* field is used as a value. For example, *?shardkey=Khirz6zTPdfd7*. If there is no key in the body, you do not have to send it (for example, in the [getForgottenList](../../Additional%20API/Command%20service/getForgottenList.md) command).
+The *key* field is used as a value. For example, *?shardkey=Khirz6zTPdfd7*. If there is no key in the body, you do not have to send it (for example, in the [getForgottenList](../../additional-api/command-service/getForgottenList.md) command).
 
 This is a recommendation when working with an editor server cluster to load balance requests during the collaborative editing: all users editing the same document are served by the same server.

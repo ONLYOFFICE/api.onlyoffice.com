@@ -23,7 +23,7 @@ docker run -itd -p 80:80 -v /absolutly_path_to_work_dir:/var/www/onlyoffice/docu
 
 ## Adding plugins through the config.json file
 
-In [ONLYOFFICE Docs config](../../../docs-api/usage-api/config/editor/Plugins.md), add the relative path to the *config.json* file of the created plugin to the *plugins.pluginsData* parameter:
+In [ONLYOFFICE Docs config](../../../docs-api/usage-api/config/editor/plugins.md), add the relative path to the *config.json* file of the created plugin to the *plugins.pluginsData* parameter:
 
 ``` ts
 const docEditor = new DocsAPI.DocEditor("placeholder", {
@@ -48,7 +48,7 @@ where **example.com** is the name of the server where document manager and docum
 
 If there is already a test example in the config, replace the following line */etc/onlyoffice/documentserver-example/local.json* with the path to the necessary plugin config.
 
-See the [ONLYOFFICE Docs API](../../../docs-api/usage-api/config/editor/Plugins.md) documentation for more information on where to find the config and what and how can be changed there.
+See the [ONLYOFFICE Docs API](../../../docs-api/usage-api/config/editor/plugins.md) documentation for more information on where to find the config and what and how can be changed there.
 
 ### Known issues
 
@@ -124,7 +124,7 @@ The path to the folder depends on the operating system you use:
 - For Linux - */var/www/onlyoffice/documentserver/sdkjs-plugins/*
 - For Windows - *%ProgramFiles%\ONLYOFFICE\DocumentServer\sdkjs-plugins\\*
 
-**Option 3.** Edit the [ONLYOFFICE Docs config](../../../docs-api/usage-api/config/editor/Plugins.md) by removing the corresponding plugin. The plugin will become unavailable for all portal users upon the editor next start:
+**Option 3.** Edit the [ONLYOFFICE Docs config](../../../docs-api/usage-api/config/editor/plugins.md) by removing the corresponding plugin. The plugin will become unavailable for all portal users upon the editor next start:
 
 ``` ts
 const docEditor = new DocsAPI.DocEditor("placeholder", {

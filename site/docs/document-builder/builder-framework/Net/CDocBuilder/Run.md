@@ -19,7 +19,7 @@ bool Run(String^ sPath);
 ### .Net
 
 ```cs
-string workDirectory = "C:/Program Files/ONLYOFFICE/DocumentBuilder";
+string workDirectory = "C:/Program Files/ONLYOFFICE/documentBuilder";
 CDocBuilder.Initialize(workDirectory);
 CDocBuilder oBuilder = new CDocBuilder();
 oBuilder.Run("path-to-script.docbuilder");

@@ -4,7 +4,7 @@ sidebar_position: -4
 
 ## Which methods can be used when working with the document history events?
 
-The document history can be shown using the [onRequestHistory](../../usage-api/config/Events.md#onrequesthistory) function (with the *events.onRequestHistory* event). Unless you use them, the **Version History** menu option (**Version History** button in the **Collaboration** tab) is not shown in the ONLYOFFICE Docs interface.
+The document history can be shown using the [onRequestHistory](../../usage-api/config/events.md#onrequesthistory) function (with the *events.onRequestHistory* event). Unless you use them, the **Version History** menu option (**Version History** button in the **Collaboration** tab) is not shown in the ONLYOFFICE Docs interface.
 
 Once you call this function in the configuration file (together with the [refreshHistory](../../usage-api/methods.md#refreshhistory) method), the menu option and button are shown and the program will display the existing document versions. The data which is shown in the document version history, can be taken from the **document editing service** [callback](../../usage-api/callback-handler.md#status-2-3).
 
@@ -82,7 +82,7 @@ const data = {
 
 The **document editing service** saves all the interim changes of the document into separate files and, once the version is compiled and *status* **2** is received, the link to the archive with all the changes between the versions is also sent to the callback handler.
 
-So, if you want to additionally show the difference between the versions, you will also have to use the [onRequestHistoryData](../../usage-api/config/Events.md#onrequesthistorydata) function (with the *events.onRequestHistoryData* event) which must contain data also returned by the **document editing service** [callback](../../usage-api/callback-handler.md#changeshistory).
+So, if you want to additionally show the difference between the versions, you will also have to use the [onRequestHistoryData](../../usage-api/config/events.md#onrequesthistorydata) function (with the *events.onRequestHistoryData* event) which must contain data also returned by the **document editing service** [callback](../../usage-api/callback-handler.md#changeshistory).
 
 In addition to the actions described in the [above question](#which-methods-can-be-used-when-working-with-the-document-history-events) you will need to:
 
@@ -130,4 +130,4 @@ In addition to the actions described in the [above question](#which-methods-can-
 
 ## Why is a new version not shown in the document history after I forcefully save a document?
 
-ONLYOFFICE Docs highlights the changes made from the beginning of the current document session, not from the beginning of the document version. And even if several document versions are created during one session, all changes from this session will be highlighted. Therefore, you cannot see the document versions created with the [force saving option](../../get-started/how-it-works/Saving%20file.md#force-saving) in the document history.
+ONLYOFFICE Docs highlights the changes made from the beginning of the current document session, not from the beginning of the document version. And even if several document versions are created during one session, all changes from this session will be highlighted. Therefore, you cannot see the document versions created with the [force saving option](../../get-started/how-it-works/saving-file.md#force-saving) in the document history.

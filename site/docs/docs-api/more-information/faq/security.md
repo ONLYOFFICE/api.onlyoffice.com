@@ -10,7 +10,7 @@ The **token** is added in the configuration when initializing ONLYOFFICE Docs an
 
 ONLYOFFICE Docs validates the token. If it is valid, the data from the *payload* is used instead of the corresponding data from the main parameters. If the token is invalid, the command is not executed and no parameters are used or changed.
 
-The token can be sent both in the request [header](../../Additional%20API/signature/request/token-in-header.md) or [body](../../Additional%20API/signature/request/token-in-body.md).
+The token can be sent both in the request [header](../../additional-api/signature/request/token-in-header.md) or [body](../../additional-api/signature/request/token-in-body.md).
 
 ## What's the difference between sending the token in header and in body?
 
@@ -18,4 +18,4 @@ Starting with version 5.2 of ONLYOFFICE Docs it is possible to send token both i
 
 To avoid this limitation, sending the token in the request body should be the preferred method of doing this. Starting from version 7.1, the incoming requests use the token in body if it exists. Otherwise, the header token is taken. The outgoing requests use both the token in body and token in header. They can be different. For example, the information about version history can be removed from the header token because of the size limit of the token in header.
 
-See the [Request with token in header](../../Additional%20API/signature/request/token-in-header.md) or [Request with token in body](../../Additional%20API/signature/request/token-in-body.md) sections for more details on this.
+See the [Request with token in header](../../additional-api/signature/request/token-in-header.md) or [Request with token in body](../../additional-api/signature/request/token-in-body.md) sections for more details on this.

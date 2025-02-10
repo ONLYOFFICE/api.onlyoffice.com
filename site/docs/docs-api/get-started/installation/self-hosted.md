@@ -56,7 +56,7 @@ To install it on your local server:
 
 4. Specify the additional non-obligatory parameters that can be changed to achieve different goals with your document (change access rights for the document, display different information about the document, etc.). See the [Advanced parameters](../../usage-api/advanced-parameters.md) section to find out what these parameters are and how you can change them.
 
-5. Add an encrypted signature to the requests in the form of [token](../../Additional%20API/signature/signature.md) to prevent the substitution of important parameters. 
+5. Add an encrypted signature to the requests in the form of [token](../../additional-api/signature/signature.md) to prevent the substitution of important parameters. 
 
 ## Before you start
 
@@ -78,7 +78,7 @@ If something went wrong, make sure that you have followed the installation instr
 
 ## Next steps
 
-- [How to enable document forcesaving](../how-it-works/Saving%20file.md#force-saving)
-- [How to customize the editor](../../usage-api/config/editor/customization/customization%20-%20Standard%20branding.md)
+- [How to enable document forcesaving](../how-it-works/saving-file.md#force-saving)
+- [How to customize the editor](../../usage-api/config/editor/customization/customization-standard-branding.md)
 - [How to manage the editor through Automation API](../../usage-api/automation-api.md)
-- [How to install / disable plugins](../../usage-api/config/editor/Plugins.md)
+- [How to install / disable plugins](../../usage-api/config/editor/plugins.md)

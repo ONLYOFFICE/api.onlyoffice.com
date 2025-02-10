@@ -87,9 +87,9 @@ If you want to change it, you can use the *local.json* file, where all the edite
 
 **Document editing service** allows to get the current document state before the editing is finished. The process is called *forcesave* in ONLYOFFICE Docs. When forcesave is initiated, **document editing service** performs request to the [callback handler](../../usage-api/callback-handler.md) with the link to the document as the *url* parameter and with the **6** value for the *status* parameter. The forcesave process can be initiated the following ways:
 
-- By the request to the [document command service](../../Additional%20API/Command%20service/Command%20service.md) with the [forcesave](../../Additional%20API/Command%20service/forcesave.md) value in the *c* parameter. The *forcesavetype* parameter will have the **0** value when sending the request to the **callback handler**.
+- By the request to the [document command service](../../additional-api/command-service/command-service.md) with the [forcesave](../../additional-api/command-service/forcesave.md) value in the *c* parameter. The *forcesavetype* parameter will have the **0** value when sending the request to the **callback handler**.
 
-- Enable the [editorConfig.customization.forcesave](../../usage-api/config/editor/customization/customization%20-%20Standard%20branding.md#forcesave) mode setting it to **true** in the editor initialization configuration. In this case each time the user clicks the **Save** button, the forcesave will be done, and the *forcesavetype* parameter will have the **1** value when sending the request to the **callback handler**.
+- Enable the [editorConfig.customization.forcesave](../../usage-api/config/editor/customization/customization-standard-branding.md#forcesave) mode setting it to **true** in the editor initialization configuration. In this case each time the user clicks the **Save** button, the forcesave will be done, and the *forcesavetype* parameter will have the **1** value when sending the request to the **callback handler**.
 
 - You can enable [the repeating forcesave start](https://helpcenter.onlyoffice.com/installation/docs-developer-configuring.aspx#AutoAssembly) in the **ONLYOFFICE Docs** additional configuration file, which can be either found at (in case you have already created it) or placed to the following path:
 

@@ -31,7 +31,7 @@ See the detailed guide to learn how to install ONLYOFFICE Docs [for Windows](htt
 
 ### Step 2. Download the Java code for the editors integration
 
-Download the [Java-Spring example](./Language-specific%20examples.md) from our site.
+Download the [Java-Spring example](./language-specific-examples.md) from our site.
 
 To connect the editors to your website, specify the path to the editors installation and the path to the storage folder in the *src/main/resources/application.properties* file:
 
@@ -135,7 +135,7 @@ To run the Java-Spring example code, install the Java version 11 appropriate for
 
 In case the example and ONLYOFFICE Docs are installed on different computers, make sure that your server with the example installed has access to the ONLYOFFICE Docs with the address which you specify instead of **documentserver** in the configuration files. Make sure that the ONLYOFFICE Docs in its turn has access to the server with the example installed with the address which you specify instead of **example.com** in the configuration files.
 
-If you integrated the editors successfully the result should look like the [demo preview](./Language-specific%20examples.md#demo-preview) on our site.
+If you integrated the editors successfully the result should look like the [demo preview](./language-specific-examples.md#demo-preview) on our site.
 
 ## For Linux
 
@@ -227,7 +227,7 @@ See the detailed guide to learn how to install ONLYOFFICE Docs [for Linux](https
 
 In case the example and ONLYOFFICE Docs are installed on different computers, make sure that your server with the example installed has access to the ONLYOFFICE Docs with the address which you specify instead of **documentserver** in the configuration files. Make sure that the ONLYOFFICE Docs in its turn has access to the server with the example installed with the address which you specify instead of **example.com** in the configuration files.
 
-If you integrated the editors successfully the result should look like the [demo preview](./Language-specific%20examples.md#demo-preview) on our site.
+If you integrated the editors successfully the result should look like the [demo preview](./language-specific-examples.md#demo-preview) on our site.
 
 ## For Docker
 
@@ -307,4 +307,4 @@ See the detailed guide to learn how to install ONLYOFFICE Docs [for Docker](http
 
 In case the example and ONLYOFFICE Docs are installed on different computers, make sure that your server with the example installed has access to the ONLYOFFICE Docs with the address which you specify instead of **documentserver** in the configuration files. Make sure that the ONLYOFFICE Docs in its turn has access to the server with the example installed with the address which you specify instead of **example.com** in the configuration files.
 
-If you integrated the editors successfully the result should look like the [demo preview](./Language-specific%20examples.md#demo-preview) on our site.
+If you integrated the editors successfully the result should look like the [demo preview](./language-specific-examples.md#demo-preview) on our site.

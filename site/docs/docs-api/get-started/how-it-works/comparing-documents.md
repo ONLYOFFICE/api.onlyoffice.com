@@ -17,7 +17,7 @@ The reference figure and the steps below explain the process of comparing docume
 
 1. Create an *html* file to [Open the document](./opening-file.md#how-this-can-be-done-in-practice).
 
-2. Specify the event handler for the *Document from Storage* button to be displayed in the *Compare* options in the configuration script for Document Editor initialization. When the user clicks the button, the [onRequestCompareFile](../../usage-api/config/Events.md#onrequestcomparefile) event is called and they can select the document for comparing from the Storage.
+2. Specify the event handler for the *Document from Storage* button to be displayed in the *Compare* options in the configuration script for Document Editor initialization. When the user clicks the button, the [onRequestCompareFile](../../usage-api/config/events.md#onrequestcomparefile) event is called and they can select the document for comparing from the Storage.
 
    ![onRequestCompareFile](/assets/images/editor/onRequestCompareFile.png)
 

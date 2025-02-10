@@ -33,7 +33,7 @@ namespace Test
     {
         public static void Main(string[] args)
         {
-            string workDirectory = "C:/Program Files/ONLYOFFICE/DocumentBuilder";
+            string workDirectory = "C:/Program Files/ONLYOFFICE/documentBuilder";
             string resultPath = "result.docx";
 
             // add the Docbuilder dlls to the path

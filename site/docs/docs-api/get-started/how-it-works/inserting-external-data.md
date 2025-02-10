@@ -18,7 +18,7 @@ The steps below explain the process of inserting data into the spreadsheet by an
 
 1. Create a source spreadsheet from where the data will be copied.
 
-2. Specify the [document.referenceData](../../usage-api/config/Document/Document.md#referencedata) parameter in the initialization config of the source spreadsheet:
+2. Specify the [document.referenceData](../../usage-api/config/document/document.md#referencedata) parameter in the initialization config of the source spreadsheet:
 
    ``` ts
    const docEditor = new DocsAPI.DocEditor("placeholder", {
@@ -34,12 +34,12 @@ The steps below explain the process of inserting data into the spreadsheet by an
 3. When the user copies the data from the source spreadsheet, the clipboard receives a list of the following values:
 
    - the sheet name and the range from where the data was copied which will be used later to refresh the copied data;
-   - the [document.referenceData](../../usage-api/config/Document/Document.md#referencedata) object which will be used to check the availability of insering data into the destination spreadsheet by the external link;
+   - the [document.referenceData](../../usage-api/config/document/document.md#referencedata) object which will be used to check the availability of insering data into the destination spreadsheet by the external link;
    - the file name which will be used to display a formula in the editor.
 
 4. Create a destination spreadsheet where the external data will be inserted.
 
-5. Specify the [onRequestReferenceData](../../usage-api/config/Events.md#onrequestreferencedata) event handler in the initialization config of the destination spreadsheet for the *Paste link* and *Update values* buttons to be displayed:
+5. Specify the [onRequestReferenceData](../../usage-api/config/events.md#onrequestreferencedata) event handler in the initialization config of the destination spreadsheet for the *Paste link* and *Update values* buttons to be displayed:
 
    ``` ts
    const docEditor = new DocsAPI.DocEditor("placeholder", {
@@ -69,7 +69,7 @@ The steps below explain the process of inserting data into the spreadsheet by an
 
    > Please note that you can enter a formula of the specified format in the cell, and the data from the extrenal file will be inserted as well. But in this case, the *onRequestReferenceData* event will be executed only with the *path* parameter.
 
-8. When the user is trying to refresh data from the source file by clicking the *Update values* button in the *External links* dialog box of the *Data* tab, the [onRequestReferenceData](../../usage-api/config/Events.md#onrequestreferencedata) event is called. An object with the unique file data received from the source file, the file path or name, and the file URL are sent in the *data* parameter.
+8. When the user is trying to refresh data from the source file by clicking the *Update values* button in the *External links* dialog box of the *Data* tab, the [onRequestReferenceData](../../usage-api/config/events.md#onrequestreferencedata) event is called. An object with the unique file data received from the source file, the file path or name, and the file URL are sent in the *data* parameter.
 
    > To send the data to the *setReferenceData* method, it is recommended to search for the file by the *referenceData* parameter first. If there is no such a field or a file cannot be found, then the *path* or *link* parameters are used.
 
@@ -105,7 +105,7 @@ The steps below explain the process of inserting data into the spreadsheet by an
 
 ## Working with external links
 
-1. Specify the event handler for the *Open source* button to be displayed in the configuration script for Document Editor initialization. When the user is trying to open an external link by clicking the *Open source* button, the [onRequestOpen](../../usage-api/config/Events.md#onrequestopen) event is called.
+1. Specify the event handler for the *Open source* button to be displayed in the configuration script for Document Editor initialization. When the user is trying to open an external link by clicking the *Open source* button, the [onRequestOpen](../../usage-api/config/events.md#onrequestopen) event is called.
 
    To open the editor with the external file referenced by the *path* or *referenceData* parameters in a new tab, you must pass a link to this tab by calling the [window.open](https://developer.mozilla.org/en-US/docs/Web/API/Window/open) method with the *path* and *windowName* parameters.
 
@@ -135,7 +135,7 @@ The steps below explain the process of inserting data into the spreadsheet by an
 
    Where the **example.com** is the name of the server where **document manager** and **document storage service** are installed. See the [How it works](./how-it-works.md) section to find out more on ONLYOFFICE Docs service client-server interactions.
 
-2. Specify the event handler for the *Change source* button to be displayed in the configuration script for Document Editor initialization. When the user is trying to change an external link by clicking the *Change source* button, the [onRequestReferenceSource](../../usage-api/config/Events.md#onrequestreferencesource) event is called.
+2. Specify the event handler for the *Change source* button to be displayed in the configuration script for Document Editor initialization. When the user is trying to change an external link by clicking the *Change source* button, the [onRequestReferenceSource](../../usage-api/config/events.md#onrequestreferencesource) event is called.
 
    An object with the unique file data and the file path or name are sent in the *data* parameter.
 

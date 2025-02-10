@@ -42,7 +42,7 @@ Argument.name === "ONLYOFFICE" // true
 ### .Net
 
 ```cs
-string workDirectory = "C:/Program Files/ONLYOFFICE/DocumentBuilder";
+string workDirectory = "C:/Program Files/ONLYOFFICE/documentBuilder";
 CDocBuilder.Initialize(workDirectory);
 CDocBuilder oBuilder = new CDocBuilder();
 oBuilder.SetProperty("--argument", L"{\"name\":\"ONLYOFFICE\"}");
@@ -64,7 +64,7 @@ It is also possible to update the font list when you either add new fonts or rem
 ### .Net
 
 ```cs
-string workDirectory = "C:/Program Files/ONLYOFFICE/DocumentBuilder";
+string workDirectory = "C:/Program Files/ONLYOFFICE/documentBuilder";
 CDocBuilder.Initialize(workDirectory);
 CDocBuilder oBuilder = new CDocBuilder();
 oBuilder.SetProperty("--check-fonts", L"true");

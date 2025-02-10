@@ -20,7 +20,7 @@ int OpenFile(String^ sPath, String^ sParams);
 ### .Net
 
 ``` cs
-string workDirectory = "C:/Program Files/ONLYOFFICE/DocumentBuilder";
+string workDirectory = "C:/Program Files/ONLYOFFICE/documentBuilder";
 CDocBuilder.Initialize(workDirectory);
 CDocBuilder oBuilder = new CDocBuilder();
 oBuilder.OpenFile(L"text-document.csv", "<m_nCsvTxtEncoding>46</m_nCsvTxtEncoding><m_nCsvDelimiter>4</m_nCsvDelimiter>");

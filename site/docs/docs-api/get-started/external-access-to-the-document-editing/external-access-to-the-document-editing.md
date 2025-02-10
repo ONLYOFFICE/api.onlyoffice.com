@@ -8,13 +8,13 @@ The following examples will show you how to edit text documents, spreadsheets, p
 
 Collects all the comments from the document and displays them in the custom interface.
 
-[More](Working%20with%20comments.md)
+[More](working-with-comments.md)
 
 ## Working with review changes
 
 Manages review process from an external source.
 
-[More](Working%20with%20review%20changes.md)
+[More](working-with-review-changes.md)
 
 ## Filling out the form
 

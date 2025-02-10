@@ -23,7 +23,7 @@ The reference figure and the steps below explain the process of viewing the hist
 
 1. Create an *html* file to [Open the document](./opening-file.md#how-this-can-be-done-in-practice).
 
-2. Specify the event handler for opening the [version history](../../usage-api/config/Events.md#onrequesthistory) list in the configuration script for Document Editor initialization. When the [onRequestHistory](../../usage-api/config/Events.md#onrequesthistory) event is called, the [refreshHistory](../../usage-api/methods.md#refreshhistory) method must be executed. This method contains document history for each document version, if the history parameter has been present for each version.
+2. Specify the event handler for opening the [version history](../../usage-api/config/events.md#onrequesthistory) list in the configuration script for Document Editor initialization. When the [onRequestHistory](../../usage-api/config/events.md#onrequesthistory) event is called, the [refreshHistory](../../usage-api/methods.md#refreshhistory) method must be executed. This method contains document history for each document version, if the history parameter has been present for each version.
 
    ``` ts
    function onRequestHistory() {
@@ -61,7 +61,7 @@ The reference figure and the steps below explain the process of viewing the hist
 
    <img alt="Opening File" src="/assets/images/editor/history_open.png" width="300px" />
 
-3. In the configuration script for Document Editor initialization, specify the event handler which will select the [version from history](../../usage-api/config/Events.md#onrequesthistorydata). When the [onRequestHistoryData](../../usage-api/config/Events.md#onrequesthistorydata) event is called, the [setHistoryData](../../usage-api/methods.md#sethistorydata) method must be executed. This method contains the absolute URL to the file of the corresponding version.
+3. In the configuration script for Document Editor initialization, specify the event handler which will select the [version from history](../../usage-api/config/events.md#onrequesthistorydata). When the [onRequestHistoryData](../../usage-api/config/events.md#onrequesthistorydata) event is called, the [setHistoryData](../../usage-api/methods.md#sethistorydata) method must be executed. This method contains the absolute URL to the file of the corresponding version.
 
    When calling the *setHistoryData* method to view the document history version, the token must be added to validate the parameters.
 
@@ -86,7 +86,7 @@ The reference figure and the steps below explain the process of viewing the hist
 
    ![History](/assets/images/editor/history.png)
 
-4. In the configuration script for Document Editor initialization, specify the event handler which will [restore](../../usage-api/config/Events.md#onrequestrestore) the file version when the user clicks the *Restore* button in the version history. When the [onRequestRestore](../../usage-api/config/Events.md#onrequestrestore) event is called, the [refreshHistory](../../usage-api/methods.md#refreshhistory) method must be executed to initialize version history again. This method contains document history for each document version, if the history parameter has been present for each version.
+4. In the configuration script for Document Editor initialization, specify the event handler which will [restore](../../usage-api/config/events.md#onrequestrestore) the file version when the user clicks the *Restore* button in the version history. When the [onRequestRestore](../../usage-api/config/events.md#onrequestrestore) event is called, the [refreshHistory](../../usage-api/methods.md#refreshhistory) method must be executed to initialize version history again. This method contains document history for each document version, if the history parameter has been present for each version.
 
    ``` ts
    function onRequestRestore(event) {
@@ -134,7 +134,7 @@ The reference figure and the steps below explain the process of viewing the hist
 
 6. Open the *Version History* option in the Document Editor menu.
 
-7. Specify the event handler for the *Close History* button to be displayed in the configuration script for Document Editor initialization. When the user is trying to go back to the document from viewing the document version history by clicking the *Close History* button, the [onRequestHistoryClose](../../usage-api/config/Events.md#onrequesthistoryclose) event is called and the version history list is hidden. When the function is called, the editor must be initialized again, in the editing mode.
+7. Specify the event handler for the *Close History* button to be displayed in the configuration script for Document Editor initialization. When the user is trying to go back to the document from viewing the document version history by clicking the *Close History* button, the [onRequestHistoryClose](../../usage-api/config/events.md#onrequesthistoryclose) event is called and the version history list is hidden. When the function is called, the editor must be initialized again, in the editing mode.
 
    ``` ts
    function onRequestHistoryClose() {
@@ -152,7 +152,7 @@ The reference figure and the steps below explain the process of viewing the hist
 
 ## Opening the document history with changes highlighting
 
-If the document version was created with the **document editor**, then the document changes can be displayed when viewing the document history. The additional data must be saved to the **document storage service** when [saving](./Saving%20file.md) the editing session beside the document versions themselves to achieve that. After editing in **document editor** the information about the changes during the editing session is sent together with the changed document:
+If the document version was created with the **document editor**, then the document changes can be displayed when viewing the document history. The additional data must be saved to the **document storage service** when [saving](./saving-file.md) the editing session beside the document versions themselves to achieve that. After editing in **document editor** the information about the changes during the editing session is sent together with the changed document:
 
 > When the server version is updated, the **document editor** does not use the *changes* data to highlight changes in the history. It only returns the changed document in the *changesurl* parameter.
 
@@ -190,7 +190,7 @@ If the document version was created with the **document editor**, then the docum
 
   Where the **serverVersion** is the *serverVersion* from [the history object](../../usage-api/callback-handler.md#history) returned after saving the document.
 
-  > ONLYOFFICE Docs highlights the changes made from the beginning of the current document session, not from the beginning of the document version. And even if several document versions are created during one session, all changes from this session will be highlighted. Therefore, you cannot see the document versions created with the [force saving option](./Saving%20file.md#forcesave) in the document history.
+  > ONLYOFFICE Docs highlights the changes made from the beginning of the current document session, not from the beginning of the document version. And even if several document versions are created during one session, all changes from this session will be highlighted. Therefore, you cannot see the document versions created with the [force saving option](./saving-file.md#forcesave) in the document history.
 
 - [changesurl](../../usage-api/callback-handler.md#changesurl) - the absolute URL to the file with the document editing data used to show the changes corresponding to the specific document version. The file must be saved and its address must be sent as changesUrl parameter using the [setHistoryData](../../usage-api/methods.md#sethistorydata) method. The link to the previous document version (*previous.url*) must be added into the object.
 

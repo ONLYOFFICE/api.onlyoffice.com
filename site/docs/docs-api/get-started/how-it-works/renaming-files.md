@@ -17,7 +17,7 @@ The reference figure and the steps below explain the process of renaming a docum
 
 1. Create an *html* file to [Open the document](./opening-file.md#how-this-can-be-done-in-practice).
 
-2. Specify the event handler for opening the *Rename...* menu in the configuration script for Document Editor initialization. When the [onRequestRename](../../usage-api/config/Events.md#onrequestrename) event is called, the new name of the document without extension is sent to the software integrators which rename the document in the document storage service.
+2. Specify the event handler for opening the *Rename...* menu in the configuration script for Document Editor initialization. When the [onRequestRename](../../usage-api/config/events.md#onrequestrename) event is called, the new name of the document without extension is sent to the software integrators which rename the document in the document storage service.
 
    <img alt="onRequestRename" src="/assets/images/editor/onRequestRename.png" width="282px" />
 
@@ -33,7 +33,7 @@ The reference figure and the steps below explain the process of renaming a docum
    })
    ```
 
-3. In order to update the name of the document for all collaborative editors, send the request to the [document command service](../../Additional%20API/Command%20service/Command%20service.md), using the [meta](../../Additional%20API/Command%20service/meta.md) value for the *c* parameter:
+3. In order to update the name of the document for all collaborative editors, send the request to the [document command service](../../additional-api/command-service/command-service.md), using the [meta](../../additional-api/command-service/meta.md) value for the *c* parameter:
 
    ``` json
    {
@@ -45,7 +45,7 @@ The reference figure and the steps below explain the process of renaming a docum
    }
    ```
 
-4. When the name of the document is changed via the [meta](../../Additional%20API/Command%20service/meta.md) command, the [onMetaChange](../../usage-api/config/Events.md#onmetachange) event must be called in the document editor of each user. This event sends the name of the document in the *data.title* parameter.
+4. When the name of the document is changed via the [meta](../../additional-api/command-service/meta.md) command, the [onMetaChange](../../usage-api/config/events.md#onmetachange) event must be called in the document editor of each user. This event sends the name of the document in the *data.title* parameter.
 
    ``` ts
    function onMetaChange(event) {

@@ -19,7 +19,7 @@ bool CreateFile(int nType);
 ### .Net
 
 ```cs
-string workDirectory = "C:/Program Files/ONLYOFFICE/DocumentBuilder";
+string workDirectory = "C:/Program Files/ONLYOFFICE/documentBuilder";
 CDocBuilder.Initialize(workDirectory);
 CDocBuilder oBuilder = new CDocBuilder();
 var doctype = (int)OfficeFileTypes.Document.DOCX;

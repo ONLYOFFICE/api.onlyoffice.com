@@ -2,7 +2,7 @@ In this section, we will look at the integration process via [WKWebView](https:/
 
 ## Integration based on the ONLYOFFICE test sample
 
-This example demonstrates how to integrate ONLYOFFICE mobile web editors with the ONLYOFFICE [test or DMS sample](../../Language-specific%20examples/Language-specific%20examples.md).
+This example demonstrates how to integrate ONLYOFFICE mobile web editors with the ONLYOFFICE [test or DMS sample](../../language-specific-examples/language-specific-examples.md).
 
 ![iOS integration via test sample](/assets/images/editor/ios-test-sample.png)
 
@@ -84,7 +84,7 @@ This example demonstrates how to integrate ONLYOFFICE mobile web editors with th
 
 7. For easy interaction with the editor, define the **Activity Indicator** and **Progress View** UI components.
 
-   The full code for **DocumentServerViewController** can be found [here](https://github.com/ONLYOFFICE/editors-webview-ios/blob/ad146259742d0cecb7b10e67e19b4594730663e0/editorWebViewDemo/PresentationLayer/UserStories/DocumentServerDemo/DocumentServerViewController.swift).
+   The full code for **DocumentServerViewController** can be found [here](https://github.com/ONLYOFFICE/editors-webview-ios/blob/ad146259742d0cecb7b10e67e19b4594730663e0/editorWebViewDemo/PresentationLayer/UserStories/documentServerDemo/documentServerViewController.swift).
 
    <img alt="Activity indicator" src="/assets/images/editor/activity-indicator.png" width="260px" />
 
@@ -149,7 +149,7 @@ func webView(_ webView: WKWebView,
 
 <img alt="Go back" src="/assets/images/editor/exit-button.png" width="260px" />
 
-The full code for **DocumentServerEditorViewController** can be found [here](https://github.com/ONLYOFFICE/editors-webview-ios/blob/ad146259742d0cecb7b10e67e19b4594730663e0/editorWebViewDemo/PresentationLayer/UserStories/DocumentServerEditor/DocumentServerEditorViewController.swift).
+The full code for **DocumentServerEditorViewController** can be found [here](https://github.com/ONLYOFFICE/editors-webview-ios/blob/ad146259742d0cecb7b10e67e19b4594730663e0/editorWebViewDemo/PresentationLayer/UserStories/documentServerEditor/documentServerEditorViewController.swift).
 
 ## Integration based on the ONLYOFFICE Docs API
 
@@ -237,7 +237,7 @@ This example demonstrates how to open the ONLYOFFICE editors via WKWebView using
 
 To work with documents (open, download, insert images, mention other users, etc.), use the API documentation with its events and methods:
 
-1. To track events and call appropriate methods, handle the [events](../../../usage-api/config/Events.md) of ONLYOFFICE editors in native code by the **EditorEventsHandler** controller and then delegate them to **EditorViewController**:
+1. To track events and call appropriate methods, handle the [events](../../../usage-api/config/events.md) of ONLYOFFICE editors in native code by the **EditorEventsHandler** controller and then delegate them to **EditorViewController**:
 
    ``` swift
    var delegate: EditorEventsDelegate?
@@ -268,7 +268,7 @@ To work with documents (open, download, insert images, mention other users, etc.
    }
    ```
 
-   Let's consider the [onDownloadAs](../../../usage-api/config/Events.md#ondownloadas) event as an example. Register an object as a handler for a particular message by calling *configuration.userContentController.add(self, name: messageName)* during the WKWebView configuration. Get the event parameters (file type and URL) and delegate the event handling to **EditorViewController**:
+   Let's consider the [onDownloadAs](../../../usage-api/config/events.md#ondownloadas) event as an example. Register an object as a handler for a particular message by calling *configuration.userContentController.add(self, name: messageName)* during the WKWebView configuration. Get the event parameters (file type and URL) and delegate the event handling to **EditorViewController**:
 
    ``` swift
    func onDownloadAs(fileType: String, url: String) {

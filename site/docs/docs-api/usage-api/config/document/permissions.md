@@ -2,7 +2,7 @@ The document permission section allows to change the permission for the document
 
 ## changeHistory
 
-Allows to display the *Restore* button when using the [onRequestRestore](../Events.md#onrequestrestore) event. The default value is **false**. Deprecated since version 5.5, please add the [onRequestRestore](../Events.md#onrequestrestore) field instead.
+Allows to display the *Restore* button when using the [onRequestRestore](../events.md#onrequestrestore) event. The default value is **false**. Deprecated since version 5.5, please add the [onRequestRestore](../events.md#onrequestrestore) field instead.
 
 Type: boolean
 
@@ -166,7 +166,7 @@ Example: true
 
 ## rename
 
-Allows to display the *Rename...* button when using the [onRequestRename](../Events.md#onrequestrename) event. The default value is **false**. Deprecated since version 6.0, please add the [onRequestRename](../Events.md#onrequestrename) field instead.
+Allows to display the *Rename...* button when using the [onRequestRename](../events.md#onrequestrename) event. The default value is **false**. Deprecated since version 6.0, please add the [onRequestRename](../events.md#onrequestrename) field instead.
 
 Type: boolean
 

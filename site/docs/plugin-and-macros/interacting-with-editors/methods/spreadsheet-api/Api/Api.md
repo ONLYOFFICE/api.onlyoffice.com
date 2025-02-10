@@ -34,7 +34,7 @@ Represents the Api class.
 - [RemovePlugin](./Methods/RemovePlugin.md)
 - [InstallPlugin](./Methods/InstallPlugin.md)
 - [UpdatePlugin](./Methods/UpdatePlugin.md)
-- [ShowButton](./Methods/ShowButton.md)
+- [ShowButton](./Methods/Showbutton.md)
 - [OnDropEvent](./Methods/OnDropEvent.md)
 - [GetDocumentLang](./Methods/GetDocumentLang.md)
 - [AddContextMenuItem](./Methods/AddContextMenuItem.md)

@@ -94,7 +94,7 @@ For example, the **draw\.io** plugin contains two main UI elements - the modal w
   }
   ```
 
-  Create the [IBox](../coding-plugin/plugin-components/Box.md) container to add the iframe to it:
+  Create the [IBox](../coding-plugin/plugin-components/box.md) container to add the iframe to it:
 
   ``` ts
   const body: IBox = {

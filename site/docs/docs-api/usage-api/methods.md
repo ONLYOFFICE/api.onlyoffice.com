@@ -40,7 +40,7 @@ Destroy *docEditor* object. This method can be called when you want to reinit do
 
 ## downloadAs
 
-Download the edited file. This method can be called only when the existence of the [onDownloadAs](./config/Events.md#ondownloadas) events. **Document editing service** asynchronously creates a document and triggers the **onDownloadAs** event with a link in parameter.
+Download the edited file. This method can be called only when the existence of the [onDownloadAs](./config/events.md#ondownloadas) events. **Document editing service** asynchronously creates a document and triggers the **onDownloadAs** event with a link in parameter.
 
   ``` ts
   docEditor.downloadAs(format)
@@ -48,13 +48,13 @@ Download the edited file. This method can be called only when the existence of t
 
 | Parameter | Type   | Presence | Description                                                                                                                                                                                                                                                                                                                                                                                        |
 | --------- | ------ | -------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| format    | string | optional | Defines the format in which a file will be downloaded. All the possible formats you can find in the [conversion tables](../Additional%20API/conversion-api/Conversion%20tables.md). But you cannot download a file in the image formats such as *bmp*, *gif*, *jpg*, *png*. If this parameter is undefined, the file will be downloaded in the OOXML format according to the file type. |
+| format    | string | optional | Defines the format in which a file will be downloaded. All the possible formats you can find in the [conversion tables](../additional-api/conversion-api/conversion-tables.md). But you cannot download a file in the image formats such as *bmp*, *gif*, *jpg*, *png*. If this parameter is undefined, the file will be downloaded in the OOXML format according to the file type. |
 
 > Please note that conversion from the *djvu*, *pdf*, *xps* formats are not available. The original format will be downloaded.
 
 ## insertImage
 
-Insert an image into the file. Starting from version 7.0, this method allows a user to insert several images. The *images* array is used to do it. This method must be called after the [onRequestInsertImage](./config/Events.md#onrequestinsertimage) events.
+Insert an image into the file. Starting from version 7.0, this method allows a user to insert several images. The *images* array is used to do it. This method must be called after the [onRequestInsertImage](./config/events.md#onrequestinsertimage) events.
 
   ``` ts
   docEditor.insertImage({
@@ -82,7 +82,7 @@ Where **example.com** is the name of the server where **document manager** and *
 | images          | array of objects | required | Defines an array of images to be inserted.                                                                                                                                                                                                                                      |
 | images.fileType | string           | required | Defines a type of the image to be inserted into the file. Can be: *bmp*, *gif*, *jpe*, *jpeg*, *jpg*, *png*, *tif*, *tiff*.                                                                                                                                                     |
 | images.url      | string           | required | Defines an absolute URL where the source image is stored. Be sure to add a [token](../get-started/how-it-works/Security.md) when using local links.                                                                                                              |
-| token           | string           | optional | Defines the encrypted signature added to the parameter in the form of a [token](../Additional%20API/signature/Browser.md#insertimage).                                                                                                                                 |
+| token           | string           | optional | Defines the encrypted signature added to the parameter in the form of a [token](../additional-api/signature/Browser.md#insertimage).                                                                                                                                 |
 | url             | string           | required | Defines an absolute URL where the source image is stored. Be sure to add a [token](../get-started/how-it-works/Security.md) when using local links. Otherwise, an error will occur. Deprecated since version 7.0, please use the *images.url* parameter instead. |
 
   > Prior to version 7.0, this method allowed to insert only one image and had the following parameters:
@@ -99,9 +99,9 @@ Where **example.com** is the name of the server where **document manager** and *
 
 ## refreshFile
 
-Updates the file version without reloading the editor. This method must be called after the [onRequestRefreshFile](./config/Events.md#onrequestrefreshfile) event.
+Updates the file version without reloading the editor. This method must be called after the [onRequestRefreshFile](./config/events.md#onrequestrefreshfile) event.
 
-This method must take the editor initialization configuration for the current file version. The configuration must contain all the parameters used for signing a request to [open a file](../Additional%20API/signature/Browser.md#opening-file) for editing. The following parameters cannot be changed in the config: [documentType](./config/config.md#documenttype), [type](./config/config.md#type), [events](./config/Events.md).
+This method must take the editor initialization configuration for the current file version. The configuration must contain all the parameters used for signing a request to [open a file](../additional-api/signature/Browser.md#opening-file) for editing. The following parameters cannot be changed in the config: [documentType](./config/config.md#documenttype), [type](./config/config.md#type), [events](./config/events.md).
 
 ``` ts
 refreshFile({
@@ -121,7 +121,7 @@ refreshFile({
 
 ## refreshHistory
 
-Show the document version history. This method must be called after the [onRequestHistory](./config/Events.md#onrequesthistory) events.
+Show the document version history. This method must be called after the [onRequestHistory](./config/events.md#onrequesthistory) events.
 
   ``` ts
   docEditor.refreshHistory({
@@ -207,7 +207,7 @@ Show an error message explaining why the version history cannot be displayed:
 
 ## requestClose
 
-Request to close the editor. It is recommended to call this method before the [destroyEditor](#destroyeditor) method to check if there is some unsaved data in the editor or not. If the unsaved data exists, then the dialog box will be displayed to ask the user whether they want to continue editing or close the editor losing all the unsaved data. If the *Close* option will be chosen, then the [onRequestClose](./config/Events.md#onrequestclose) event will be called.
+Request to close the editor. It is recommended to call this method before the [destroyEditor](#destroyeditor) method to check if there is some unsaved data in the editor or not. If the unsaved data exists, then the dialog box will be displayed to ask the user whether they want to continue editing or close the editor losing all the unsaved data. If the *Close* option will be chosen, then the [onRequestClose](./config/events.md#onrequestclose) event will be called.
 
   ``` ts
   docEditor.requestClose()
@@ -215,7 +215,7 @@ Request to close the editor. It is recommended to call this method before the [d
 
 ## setActionLink
 
-Set the link to the document which contains a bookmark. This method must be called after the [onMakeActionLink](./config/Events.md#onmakeactionlink) event. The software integrator must process the *ACTION\_DATA* received from the **document editing service** to set the link. The link is created by the software integrators who use ONLYOFFICE Docs in their **document manager**.
+Set the link to the document which contains a bookmark. This method must be called after the [onMakeActionLink](./config/events.md#onmakeactionlink) event. The software integrator must process the *ACTION\_DATA* received from the **document editing service** to set the link. The link is created by the software integrators who use ONLYOFFICE Docs in their **document manager**.
 
   ``` ts
   docEditor.setActionLink(link)
@@ -227,7 +227,7 @@ Set the link to the document which contains a bookmark. This method must be call
 
 ## setFavorite
 
-Change the *Favorite* icon state. This method must be called after the [onMetaChange](./config/Events.md#onmetachange) event.
+Change the *Favorite* icon state. This method must be called after the [onMetaChange](./config/events.md#onmetachange) event.
 
   ``` ts
   docEditor.setFavorite(favorite)
@@ -239,7 +239,7 @@ Change the *Favorite* icon state. This method must be called after the [onMetaCh
 
 ## setHistoryData
 
-Send the link to the document for viewing the version history. This method must be called after the [onRequestHistoryData](./config/Events.md#onrequesthistorydata) events.
+Send the link to the document for viewing the version history. This method must be called after the [onRequestHistoryData](./config/events.md#onrequesthistorydata) events.
 
   ``` ts
   docEditor.setHistoryData({
@@ -292,13 +292,13 @@ Send an error message explaining why the document version cannot be displayed:
 | previous.fileType | string  | optional | Defines an extension of the document specified with the *previous.url* parameter.                                                                                                                                                                                                                                           |
 | previous.key      | string  | required | Defines the document identifier of the previous version of the document.                                                                                                                                                                                                                                                    |
 | previous.url      | string  | required | Defines the url address of the previous version of the document.                                                                                                                                                                                                                                                            |
-| token             | string  | optional | Defines the encrypted signature added to the parameter in the form of a [token](../Additional%20API/signature/Browser.md#sethistorydata).                                                                                                                                                                          |
+| token             | string  | optional | Defines the encrypted signature added to the parameter in the form of a [token](../additional-api/signature/Browser.md#sethistorydata).                                                                                                                                                                          |
 | url               | string  | required | Defines the url address of the current document version. Can be downloaded by the *url* link from [the JSON object](./callback-handler.md#url) returned after saving the document. Be sure to add a [token](../get-started/how-it-works/how-it-works.md) when using local links. Otherwise, an error will occur. |
 | version           | integer | required | Defines the document version number.                                                                                                                                                                                                                                                                                        |
 
 ## setMailMergeRecipients
 
-Insert recipient data for mail merge into the file. This method must be called after the [onRequestMailMergeRecipients](./config/Events.md#onrequestmailmergerecipients) event. Deprecated since version 7.5, please use [setRequestedSpreadsheet](#setrequestedspreadsheet) instead.
+Insert recipient data for mail merge into the file. This method must be called after the [onRequestMailMergeRecipients](./config/events.md#onrequestmailmergerecipients) event. Deprecated since version 7.5, please use [setRequestedSpreadsheet](#setrequestedspreadsheet) instead.
 
   ``` ts
   docEditor.setMailMergeRecipients({
@@ -313,12 +313,12 @@ Where **example.com** is the name of the server where **document manager** and *
 | Parameter | Type   | Presence | Description                                                                                                                                                                                        |
 | --------- | ------ | -------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | fileType  | string | required | Defines the type of spreadsheet for mail merge in the file. Can be: *csv*, *fods*, *ods*, *ots*, *xls*, *xlsm*, *xlsx*, *xlt*, *xltm*, *xltx*.                                                     |
-| token     | string | optional | Defines the encrypted signature added to the parameter in the form of a [token](../Additional%20API/signature/Browser.md#setmailmergerecipients).                                         |
+| token     | string | optional | Defines the encrypted signature added to the parameter in the form of a [token](../additional-api/signature/Browser.md#setmailmergerecipients).                                         |
 | url       | string | required | Defines the absolute URL where the source data is stored. Be sure to add a [token](../get-started/how-it-works/Security.md) when using local links. Otherwise, an error will occur. |
 
 ## setReferenceData
 
-Refresh data by a link to a file which is specified with the *referenceData*, *path*, or *link* parameters. This method must be called after the [onRequestReferenceData](./config/Events.md#onrequestreferencedata) event.
+Refresh data by a link to a file which is specified with the *referenceData*, *path*, or *link* parameters. This method must be called after the [onRequestReferenceData](./config/events.md#onrequestreferencedata) event.
 
   > This parameter is available for editing only for ONLYOFFICE Developer Edition.
 
@@ -353,14 +353,14 @@ Show an error message explaining if any error occurred:
 | error         | string | optional | Defines the error message text.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
 | fileType      | string | optional | Defines an extension of the document specified with the *url* parameter.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 | key           | string | optional | Defines the unique document identifier used by the service to take the data from the co-editing session. In case the known key is sent, the document will be taken from the cache. Every time the document is edited and saved, the key must be generated anew. The document url can be used as the **key** but without the special characters and the length is limited to 128 symbol.                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
-| path          | string | required | Defines the file name or relative path for the formula editor. It is used to identify a file when the [onRequestReferenceData](./config/Events.md#onrequestreferencedata) event is executed.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
-| referenceData | object | optional | Defines an object that is generated by the integrator to uniquely identify a file in its system. This data must be the same as in the [document.referenceData](./config/Document/Document.md#referencedata) config parameter:<br/><br/>**fileKey** - the unique document identifier used by the service to get a link to the file. It must not be changed when the document is edited and saved (i.e. it is not equal to the [document.key](./config/Document/Document.md#key) parameter),<br/>**type**: string,<br/>**example**: "BCFA2CED";<br/><br/>**instanceId** - the unique system identifier. If the data was copied from a file on one system, and inserted into a file on another, then pasting by link will not be available and there will be no corresponding button in the context menu,<br/>**type**: string,<br/>**example**: `https://example.com`. |
-| token         | string | optional | Defines the encrypted signature added to the parameter in the form of a [token](../Additional%20API/signature/Browser.md#setreferencedata).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| path          | string | required | Defines the file name or relative path for the formula editor. It is used to identify a file when the [onRequestReferenceData](./config/events.md#onrequestreferencedata) event is executed.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| referenceData | object | optional | Defines an object that is generated by the integrator to uniquely identify a file in its system. This data must be the same as in the [document.referenceData](./config/document/document.md#referencedata) config parameter:<br/><br/>**fileKey** - the unique document identifier used by the service to get a link to the file. It must not be changed when the document is edited and saved (i.e. it is not equal to the [document.key](./config/document/document.md#key) parameter),<br/>**type**: string,<br/>**example**: "BCFA2CED";<br/><br/>**instanceId** - the unique system identifier. If the data was copied from a file on one system, and inserted into a file on another, then pasting by link will not be available and there will be no corresponding button in the context menu,<br/>**type**: string,<br/>**example**: `https://example.com`. |
+| token         | string | optional | Defines the encrypted signature added to the parameter in the form of a [token](../additional-api/signature/Browser.md#setreferencedata).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
 | url           | string | required | Defines the URL address to download the current file.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
 
 ## setReferenceSource
 
-Change a source of the external data. This method can be called after the [onRequestReferenceSource](./config/Events.md#onrequestreferencesource) event.
+Change a source of the external data. This method can be called after the [onRequestReferenceSource](./config/events.md#onrequestreferencesource) event.
 
   > Please note that this method is executed only when the user has permissions to the file from which the data is taken.
 
@@ -393,14 +393,14 @@ Show an error message explaining if any error occurred:
 | error         | string | optional | Defines the error message text.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
 | fileType      | string | optional | Defines an extension of the document specified with the *url* parameter.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 | key           | string | optional | Defines the unique document identifier used by the service to take the data from the co-editing session. In case the known key is sent, the document will be taken from the cache. Every time the document is edited and saved, the key must be generated anew. The document url can be used as the **key** but without the special characters and the length is limited to 128 symbol.                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
-| path          | string | required | Defines the file name or relative path for the formula editor. It is used to identify a file when the [onRequestReferenceSource](./config/Events.md#onrequestreferencesource) event is executed.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
-| referenceData | object | optional | Defines an object that is generated by the integrator to uniquely identify a file in its system. This data must be the same as in the [document.referenceData](./config/Document/Document.md#referencedata) config parameter:<br/><br/>**fileKey** - the unique document identifier used by the service to get a link to the file. It must not be changed when the document is edited and saved (i.e. it is not equal to the [document.key](./config/Document/Document.md#key) parameter),<br/>**type**: string,<br/>**example**: "BCFA2CED";<br/><br/>**instanceId** - the unique system identifier. If the data was copied from a file on one system, and inserted into a file on another, then pasting by link will not be available and there will be no corresponding button in the context menu,<br/>**type**: string,<br/>**example**: `https://example.com`. |
-| token         | string | optional | Defines the encrypted signature added to the parameter in the form of a [token](../Additional%20API/signature/Browser.md#setreferencesource).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| path          | string | required | Defines the file name or relative path for the formula editor. It is used to identify a file when the [onRequestReferenceSource](./config/events.md#onrequestreferencesource) event is executed.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| referenceData | object | optional | Defines an object that is generated by the integrator to uniquely identify a file in its system. This data must be the same as in the [document.referenceData](./config/document/document.md#referencedata) config parameter:<br/><br/>**fileKey** - the unique document identifier used by the service to get a link to the file. It must not be changed when the document is edited and saved (i.e. it is not equal to the [document.key](./config/document/document.md#key) parameter),<br/>**type**: string,<br/>**example**: "BCFA2CED";<br/><br/>**instanceId** - the unique system identifier. If the data was copied from a file on one system, and inserted into a file on another, then pasting by link will not be available and there will be no corresponding button in the context menu,<br/>**type**: string,<br/>**example**: `https://example.com`. |
+| token         | string | optional | Defines the encrypted signature added to the parameter in the form of a [token](../additional-api/signature/Browser.md#setreferencesource).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
 | url           | string | required | Defines the URL address to download the current file.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
 
 ## setRequestedDocument
 
-Select a document for comparing, combining, or inserting text. This method must be called after the [onRequestSelectDocument](./config/Events.md#onrequestselectdocument) event.
+Select a document for comparing, combining, or inserting text. This method must be called after the [onRequestSelectDocument](./config/events.md#onrequestselectdocument) event.
 
 > This parameter is available only for ONLYOFFICE Enterprise Edition and ONLYOFFICE Developer Edition.
 
@@ -419,12 +419,12 @@ Where **example.com** is the name of the server where **document manager** and *
 | --------- | ------ | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | c         | string | required | Defines a type of document selection from the event. Can be: *compare*, *combine*, or *insert-text*. The default value is "compare".                                                                   |
 | fileType  | string | required | Defines a type of the document to be selected. Can be: *doc*, *docm*, *docx*, *dot*, *dotm*, *dotx*, *epub*, *fodt*, *odt*, *ott*, *rtf*, *wps*.                                                       |
-| token     | string | optional | Defines the encrypted signature added to the parameter in the form of a [token](../Additional%20API/signature/Browser.md#setrequesteddocument).                                               |
+| token     | string | optional | Defines the encrypted signature added to the parameter in the form of a [token](../additional-api/signature/Browser.md#setrequesteddocument).                                               |
 | url       | string | required | Defines the absolute URL where the source document is stored. Be sure to add a [token](../get-started/how-it-works/Security.md) when using local links. Otherwise, an error will occur. |
 
 ## setRequestedSpreadsheet
 
-Insert recipient data for mail merge into the file. This method must be called after the [onRequestSelectSpreadsheet](./config/Events.md#onrequestselectspreadsheet) event.
+Insert recipient data for mail merge into the file. This method must be called after the [onRequestSelectSpreadsheet](./config/events.md#onrequestselectspreadsheet) event.
 
   ``` ts
   docEditor.setRequestedSpreadsheet({
@@ -441,12 +441,12 @@ Where **example.com** is the name of the server where **document manager** and *
 | --------- | ------ | -------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | c         | string | required | Defines a type of spreadsheet selection from the event. Can be *mailmerge*.                                                                                                                        |
 | fileType  | string | required | Defines the type of spreadsheet for mail merge in the file. Can be: *csv*, *fods*, *ods*, *ots*, *xls*, *xlsm*, *xlsx*, *xlt*, *xltm*, *xltx*.                                                     |
-| token     | string | optional | Defines the encrypted signature added to the parameter in the form of a [token](../Additional%20API/signature/Browser.md#setrequestedspreadsheet).                                        |
+| token     | string | optional | Defines the encrypted signature added to the parameter in the form of a [token](../additional-api/signature/Browser.md#setrequestedspreadsheet).                                        |
 | url       | string | required | Defines the absolute URL where the source data is stored. Be sure to add a [token](../get-started/how-it-works/Security.md) when using local links. Otherwise, an error will occur. |
 
 ## setRevisedFile
 
-Select a document for comparing. This method must be called after the [onRequestCompareFile](./config/Events.md#onrequestcomparefile) events. Deprecated since version 7.5, please use [setRequestedDocument](#setrequesteddocument) instead.
+Select a document for comparing. This method must be called after the [onRequestCompareFile](./config/events.md#onrequestcomparefile) events. Deprecated since version 7.5, please use [setRequestedDocument](#setrequesteddocument) instead.
 
 > This parameter is available only for ONLYOFFICE Enterprise Edition and ONLYOFFICE Developer Edition.
 
@@ -463,12 +463,12 @@ Where **example.com** is the name of the server where **document manager** and *
 | Parameter | Type   | Presence | Description                                                                                                                                                                                            |
 | --------- | ------ | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | fileType  | string | required | Defines the type of document for comparing. Can be: *doc*, *docm*, *docx*, *dot*, *dotm*, *dotx*, *epub*, *fodt*, *odt*, *ott*, *rtf*, *wps*.                                                          |
-| token     | string | optional | Defines the encrypted signature added to the parameter in the form of a [token](../Additional%20API/signature/Browser.md#setrevisedfile).                                                     |
+| token     | string | optional | Defines the encrypted signature added to the parameter in the form of a [token](../additional-api/signature/Browser.md#setrevisedfile).                                                     |
 | url       | string | required | Defines the absolute URL where the source document is stored. Be sure to add a [token](../get-started/how-it-works/Security.md) when using local links. Otherwise, an error will occur. |
 
 ## setSharingSettings
 
-Update the [information](./config/Document/Info.md#sharingsettings) about the settings which allow to share the document with other users. This method can be called after the [onRequestSharingSettings](./config/Events.md#onrequestsharingsettings) events.
+Update the [information](./config/document/Info.md#sharingsettings) about the settings which allow to share the document with other users. This method can be called after the [onRequestSharingSettings](./config/events.md#onrequestsharingsettings) events.
 
   ``` ts
   docEditor.setSharingSettings({
@@ -494,7 +494,7 @@ Update the [information](./config/Document/Info.md#sharingsettings) about the se
 
 ## setUsers
 
-Set a list of users to mention in the comments, grant the access rights to edit the specific sheet ranges, or set the user avatars. This method must be called after the [onRequestUsers](./config/Events.md#onrequestusers) events.
+Set a list of users to mention in the comments, grant the access rights to edit the specific sheet ranges, or set the user avatars. This method must be called after the [onRequestUsers](./config/events.md#onrequestusers) events.
 
   ``` ts
   docEditor.setUsers({
@@ -520,7 +520,7 @@ Where **example.com** is the name of the server where **document manager** and *
 
 | Parameter   | Type             | Presence | Description                                                                                                                                                                                                      |
 | ----------- | ---------------- | -------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| c           | string           | required | Defines the operation type from the [onRequestUsers](./config/Events.md#onrequestusers) event. It can take one of the following values - *mention*, *protect*, or *info*. The default value is *mention*. |
+| c           | string           | required | Defines the operation type from the [onRequestUsers](./config/events.md#onrequestusers) event. It can take one of the following values - *mention*, *protect*, or *info*. The default value is *mention*. |
 | users       | array of strings | optional | Defines the list of the users.                                                                                                                                                                                   |
 | users.email | string           | optional | Defines the email address of the user. This field is required when the *c* parameter is *mention*.                                                                                                               |
 | users.id    | string           | optional | Defines the identification of the user. This field is required when the *c* parameter is *protect*.                                                                                                              |
@@ -533,7 +533,7 @@ Where **example.com** is the name of the server where **document manager** and *
 
 ## showMessage
 
-Display a tooltip with a message. This method can be called only after the [onAppReady](./config/Events.md#onappready) events.
+Display a tooltip with a message. This method can be called only after the [onAppReady](./config/events.md#onappready) events.
 
   ``` ts
   docEditor.showMessage(message)
@@ -547,7 +547,7 @@ Display a tooltip with a message. This method can be called only after the [onAp
 
 ## startFilling
 
-Start filling out the ready forms and lock the pdf editing (only pdf viewing becomes available). This method can be called only after the [onRequestStartFilling](./config/Events.md#onrequeststartfilling) event.
+Start filling out the ready forms and lock the pdf editing (only pdf viewing becomes available). This method can be called only after the [onRequestStartFilling](./config/events.md#onrequeststartfilling) event.
 
   ``` ts
   docEditor.startFilling()

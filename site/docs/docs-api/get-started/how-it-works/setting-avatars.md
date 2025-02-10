@@ -30,7 +30,7 @@ The reference figure and the steps below explain the process of setting the avat
    })
    ```
 
-3. In the configuration script for Document Editor initialization, specify the event handler for setting the users' avatars. When the user opens the comments or a list of the co-editors, the [onRequestUsers](../../usage-api/config/Events.md#onrequestusers) event is called with the *data.id* parameter. The *data.c* parameter with the *info* operation type is also passed in this event.
+3. In the configuration script for Document Editor initialization, specify the event handler for setting the users' avatars. When the user opens the comments or a list of the co-editors, the [onRequestUsers](../../usage-api/config/events.md#onrequestusers) event is called with the *data.id* parameter. The *data.c* parameter with the *info* operation type is also passed in this event.
 
   <img alt="Avatars in comments" src="/assets/images/editor/avatars-comments.png" width="295px" />
 

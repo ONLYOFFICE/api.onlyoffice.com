@@ -21,7 +21,7 @@ static void Initialize(String^ sDirectory = 0);
 ### .Net
 
 ``` cs
-string workDirectory = "C:/Program Files/ONLYOFFICE/DocumentBuilder";
+string workDirectory = "C:/Program Files/ONLYOFFICE/documentBuilder";
 CDocBuilder.Initialize(workDirectory);
 CDocBuilder oBuilder = new CDocBuilder();
 CDocBuilder.Destroy();

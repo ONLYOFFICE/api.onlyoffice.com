@@ -8,7 +8,7 @@ The **Review option** allows you to review a document, change sentences, phrases
 
 ## Review access rights
 
-In order to enable the review option, the [review](../../usage-api/config/Document/Permissions.md#review) parameter in the permissions section of the document initialization must be set to **true**. The document **status bar** will contain the **Review** menu option.
+In order to enable the review option, the [review](../../usage-api/config/document/permissions.md#review) parameter in the permissions section of the document initialization must be set to **true**. The document **status bar** will contain the **Review** menu option.
 
 In case the *edit* parameter is set to **true** and the *review* parameter is also set to **true**, the user will be able to edit the document, accept or reject the changes and switch to the review mode him/herself.
 
@@ -50,7 +50,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
 })
 ```
 
-2. Specify the access rights using the [reviewGroups](../../usage-api/config/Document/Permissions.md#reviewgroups) parameter in the permissions section of the editor initialization.
+2. Specify the access rights using the [reviewGroups](../../usage-api/config/document/permissions.md#reviewgroups) parameter in the permissions section of the editor initialization.
 
    > If the **reviewGroups** parameter is specified in the editor config, the access rights to reviewing all changes are disabled. Otherwise, if the current user does not belong to any of the groups, he or she can review documents of all groups.
 
@@ -66,7 +66,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
 
    *\["Group1", "Group2"]* means that user can review changes made by users from *Group1* and *Group2*.
 
-   The [reviewGroups](../../usage-api/config/Document/Permissions.md#reviewgroups) parameter can take the value of an empty group. This means that the user can review changes made by users who do not belong to any of the groups (for example, the document that is reviewed in third-party editors).
+   The [reviewGroups](../../usage-api/config/document/permissions.md#reviewgroups) parameter can take the value of an empty group. This means that the user can review changes made by users who do not belong to any of the groups (for example, the document that is reviewed in third-party editors).
 
    ``` ts
    const docEditor = new DocsAPI.DocEditor("placeholder", {

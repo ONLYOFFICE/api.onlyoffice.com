@@ -25,7 +25,7 @@ The example below shows how *GlobalVariable* is used. For more information visit
 ## Example
 
 ``` ts
-builder.OpenFile("https://example.com/DocumentWithComments.docx")
+builder.OpenFile("https://example.com/documentWithComments.docx")
 const oDocument = Api.GetDocument()
 GlobalVariable["CommentsReport"] = oDocument.GetCommentsReport()
 builder.CloseFile()

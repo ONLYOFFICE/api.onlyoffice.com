@@ -4,7 +4,7 @@ sidebar_position: -6
 
 To restrict public access to your data, a secure exchange of requests between an online office and an integrator must be configured.
 
-The integrator must check that the request is received from ONLYOFFICE Docs. It uses [proof keys](https://docs.microsoft.com/en-us/microsoft-365/cloud-storage-partner-program/online/scenarios/proofkeys) for this purpose. ONLYOFFICE Docs signs the request with a private key. The corresponding public key is written in the proof-key element in the [WOPI discovery XML](./WOPI%20discovery.md). The integrator checks the private key with the public key. The signature is sent with every request in the **X-WOPI-Proof** and **X-WOPI-ProofOld** HTTP headers. Private and public keys are set up via the following config parameters:
+The integrator must check that the request is received from ONLYOFFICE Docs. It uses [proof keys](https://docs.microsoft.com/en-us/microsoft-365/cloud-storage-partner-program/online/scenarios/proofkeys) for this purpose. ONLYOFFICE Docs signs the request with a private key. The corresponding public key is written in the proof-key element in the [WOPI discovery XML](./wopi-discovery.md). The integrator checks the private key with the public key. The signature is sent with every request in the **X-WOPI-Proof** and **X-WOPI-ProofOld** HTTP headers. Private and public keys are set up via the following config parameters:
 
 ## Parameters
 

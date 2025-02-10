@@ -14,7 +14,7 @@ The reference figure and the steps below explain the process of working with lin
 
 1. Create an *html* file to [Open the document](./opening-file.md#how-this-can-be-done-in-practice).
 
-2. Specify the event handler for the *Get link* button to be displayed in the bookmark editing menu in the configuration script for Document Editor initialization. When the [onMakeActionLink](../../usage-api/config/Events.md#onmakeactionlink) event is called, the user request is sent to the software integrators which create the link in the document storage service.
+2. Specify the event handler for the *Get link* button to be displayed in the bookmark editing menu in the configuration script for Document Editor initialization. When the [onMakeActionLink](../../usage-api/config/events.md#onmakeactionlink) event is called, the user request is sent to the software integrators which create the link in the document storage service.
 
    ![onMakeActionLink](/assets/images/editor/onMakeActionLink.png)
 
@@ -46,7 +46,7 @@ The reference figure and the steps below explain the process of working with lin
 2. The **document manager** sends the initialization *editorConfig* to the **document editor**.
 3. The **document editor** scrolls the document to the bookmark.
 
-When the user follows the link, the **document editor** sends the initialization *editorConfig* to the **document editing service**. The ACTION\_DATA received from the [onMakeActionLink](../../usage-api/config/Events.md#onmakeactionlink) event is specified in the [data.actionLink](../../usage-api/config/editor/editor.md#actionlink) parameter of the *editorConfig*:
+When the user follows the link, the **document editor** sends the initialization *editorConfig* to the **document editing service**. The ACTION\_DATA received from the [onMakeActionLink](../../usage-api/config/events.md#onmakeactionlink) event is specified in the [data.actionLink](../../usage-api/config/editor/editor.md#actionlink) parameter of the *editorConfig*:
 
 ``` ts
 const docEditor = new DocsAPI.DocEditor("placeholder", {

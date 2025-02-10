@@ -59,7 +59,7 @@ To install the plugin, you will need Redmine version 4.2 or higher, or version 5
 
 6. Restart Redmine.
 
-Read more about the plugin installation on the Redmine [Wiki page](https://www.redmine.org/projects/redmine/wiki/Plugins#Installing-a-plugin).
+Read more about the plugin installation on the Redmine [Wiki page](https://www.redmine.org/projects/redmine/wiki/plugins#Installing-a-plugin).
 
 ## Configuring Redmine ONLYOFFICE integration plugin
 
@@ -79,7 +79,7 @@ Configure the plugin via the Redmine interface. Go to **Administration -> Plugin
 
 ### Security
 
-- **Secret key**. Starting from version 7.2, JWT is enabled by default and the secret key is generated automatically to restrict the access to ONLYOFFICE Docs and for security reasons and data integrity. Specify your secret key in the ONLYOFFICE Docs [config file](../../Additional%20API/signature/signature.md), then specify the same key in the settings page of the plugin. Leave blank to disable authentication.
+- **Secret key**. Starting from version 7.2, JWT is enabled by default and the secret key is generated automatically to restrict the access to ONLYOFFICE Docs and for security reasons and data integrity. Specify your secret key in the ONLYOFFICE Docs [config file](../../additional-api/signature/signature.md), then specify the same key in the settings page of the plugin. Leave blank to disable authentication.
 - Authorization header.
 - Disable certificate verification (insecure).
 

@@ -23,7 +23,7 @@ void WriteData(String^ sPath, String^ sValue, bool bAppend);
 ### .Net
 
 ```cs
-string workDirectory = "C:/Program Files/ONLYOFFICE/DocumentBuilder";
+string workDirectory = "C:/Program Files/ONLYOFFICE/documentBuilder";
 CDocBuilder.Initialize(workDirectory);
 CDocBuilder oBuilder = new CDocBuilder();
 oBuilder.WriteData("result.log", "Alert!", false);

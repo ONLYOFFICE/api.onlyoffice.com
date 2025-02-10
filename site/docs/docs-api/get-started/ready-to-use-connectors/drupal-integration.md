@@ -68,7 +68,7 @@ https://<documentserver>/
 
 where **documentserver** is the name of the server with the ONLYOFFICE Docs installed. The address must be accessible for the user browser and from the Drupal server. The Drupal server address must also be accessible from ONLYOFFICE Docs for correct work.
 
-Starting from version 7.2, JWT is enabled by default and the secret key is generated automatically to restrict the access to ONLYOFFICE Docs and for security reasons and data integrity. Specify your own **Secret key** in the Drupal administrative configuration. In the ONLYOFFICE Docs [config file](../../Additional%20API/signature/signature.md), specify the same secret key and enable the validation.
+Starting from version 7.2, JWT is enabled by default and the secret key is generated automatically to restrict the access to ONLYOFFICE Docs and for security reasons and data integrity. Specify your own **Secret key** in the Drupal administrative configuration. In the ONLYOFFICE Docs [config file](../../additional-api/signature/signature.md), specify the same secret key and enable the validation.
 
 ## Using Drupal ONLYOFFICE connector module
 

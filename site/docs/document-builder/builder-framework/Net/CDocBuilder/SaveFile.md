@@ -21,7 +21,7 @@ bool SaveFile(int nType, String^ sPath, String^ sParams);
 ### .Net
 
 ```cs
-string workDirectory = "C:/Program Files/ONLYOFFICE/DocumentBuilder";
+string workDirectory = "C:/Program Files/ONLYOFFICE/documentBuilder";
 string resultPath = "result.docx";
 var doctype = (int)OfficeFileTypes.Document.DOCX;
 CDocBuilder.Initialize(workDirectory);

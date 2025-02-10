@@ -79,7 +79,7 @@ https://<documentserver>/
 
 where the **documentserver** is the name of the server with **ONLYOFFICE Docs** installed. The address must be accessible from the user browser and from the Chamilo server. The Chamilo server address must also be accessible from **ONLYOFFICE Docs** for correct work.
 
-Starting from version 7.2, JWT is enabled by default and the secret key is generated automatically to restrict the access to ONLYOFFICE Docs and for security reasons and data integrity. Specify your own **Secret key** on the Chamilo **Settings** page. In the ONLYOFFICE Docs [config file](../../Additional%20API/signature/signature.md), specify the same secret key and enable the validation.
+Starting from version 7.2, JWT is enabled by default and the secret key is generated automatically to restrict the access to ONLYOFFICE Docs and for security reasons and data integrity. Specify your own **Secret key** on the Chamilo **Settings** page. In the ONLYOFFICE Docs [config file](../../additional-api/signature/signature.md), specify the same secret key and enable the validation.
 
 ## How it works
 
@@ -110,7 +110,7 @@ The ONLYOFFICE integration follows the API documented [here](../basic-concepts.m
 
 10. When all the users have finished editing, they close the editor window.
 
-11. After [10 seconds](../how-it-works/Saving%20file.md#save-delay), ONLYOFFICE Docs makes a POST request to *callbackUrl* with the information that editing has ended and sends a link to a new document version.
+11. After [10 seconds](../how-it-works/saving-file.md#save-delay), ONLYOFFICE Docs makes a POST request to *callbackUrl* with the information that editing has ended and sends a link to a new document version.
 
 12. Chamilo loads a new version of the document and overwrites the file.
 

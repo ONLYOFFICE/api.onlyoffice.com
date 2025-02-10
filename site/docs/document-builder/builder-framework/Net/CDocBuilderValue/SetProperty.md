@@ -22,7 +22,7 @@ void SetProperty(String^ sName, CDocBuilderValue^ sValue);
 ### .Net
 
 ```cs
-string workDirectory = "C:/Program Files/ONLYOFFICE/DocumentBuilder";
+string workDirectory = "C:/Program Files/ONLYOFFICE/documentBuilder";
 CDocBuilder.Initialize(workDirectory);
 CDocBuilder oBuilder = new CDocBuilder();
 CContext oContext = oBuilder.GetContext();
@@ -46,7 +46,7 @@ There are two more ways to set a property to the `CDocBuilderValue` object:
    ### .Net
 
    ```cs
-   string workDirectory = "C:/Program Files/ONLYOFFICE/DocumentBuilder";
+   string workDirectory = "C:/Program Files/ONLYOFFICE/documentBuilder";
    CDocBuilder.Initialize(workDirectory);
    CDocBuilder oBuilder = new CDocBuilder();
    CContext oContext = oBuilder.GetContext();
@@ -68,7 +68,7 @@ There are two more ways to set a property to the `CDocBuilderValue` object:
    ### .Net
 
    ```cs
-   string workDirectory = "C:/Program Files/ONLYOFFICE/DocumentBuilder";
+   string workDirectory = "C:/Program Files/ONLYOFFICE/documentBuilder";
    CDocBuilder.Initialize(workDirectory);
    CDocBuilder oBuilder = new CDocBuilder();
    CContext oContext = oBuilder.GetContext();

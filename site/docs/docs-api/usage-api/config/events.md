@@ -158,11 +158,11 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
 
 ## onMetaChange
 
-The function called when the meta information of the document is changed via the [meta](../../Additional%20API/Command%20service/meta.md) command.
+The function called when the meta information of the document is changed via the [meta](../../additional-api/command-service/meta.md) command.
 
 The name of the document is sent in the *data.title* parameter. The *Favorite* icon highlighting state is sent in the *data.favorite* parameter.
 
-When the user clicks the *Favorite* icon, the [setFavorite](../methods.md#setfavorite) method is called to update the [information](./Document/Info.md#favorite) about the *Favorite* icon highlighting state. If the method is not declared, the *Favorite* icon will not be changed.
+When the user clicks the *Favorite* icon, the [setFavorite](../methods.md#setfavorite) method is called to update the [information](./document/Info.md#favorite) about the *Favorite* icon highlighting state. If the method is not declared, the *Favorite* icon will not be changed.
 
 Example:
 
@@ -181,7 +181,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
 
 ## onOutdatedVersion
 
-The function called after the [error](../../more-information/Troubleshooting.md#key) is shown, when the document is opened for editing with the old [document.key](./Document/Document.md#key) value, which was used to edit the previous document version and was successfully saved. When this event is called the editor must be reinitialized with a new *document.key*. Deprecated since version 8.3, please use [onRequestRefreshFile](#onrequestrefreshfile) instead.
+The function called after the [error](../../more-information/Troubleshooting.md#key) is shown, when the document is opened for editing with the old [document.key](./document/document.md#key) value, which was used to edit the previous document version and was successfully saved. When this event is called the editor must be reinitialized with a new *document.key*. Deprecated since version 8.3, please use [onRequestRefreshFile](#onrequestrefreshfile) instead.
 
 Example:
 
@@ -219,7 +219,7 @@ The function called when the application is loaded into the browser. Deprecated 
 
 ## onRequestClose
 
-The function called when the user is trying to end the work with the editor and close it by clicking the cross button. If the method is not declared, the [editorConfig.customization.close](./editor/customization/customization%20-%20Standard%20branding.md#close) parameter will not be available, and the cross button will not be displayed.
+The function called when the user is trying to end the work with the editor and close it by clicking the cross button. If the method is not declared, the [editorConfig.customization.close](./editor/customization/customization-standard-branding.md#close) parameter will not be available, and the cross button will not be displayed.
 
 Example:
 
@@ -265,7 +265,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
 
 The function called when the user is trying to switch the document from the viewing into the editing mode by clicking the *Edit current file* button. This event also fires when the user clicks the *Edit PDF* button in the forms that are open in the *view* or *fillForms* mode. When the function is called, the editor must be initialized again, in editing mode. If the method is not declared the *Edit current file* and *Edit PDF* buttons will not be displayed.
 
-> **onRequestEditRights** parameter is obligatory when the [editorConfig](./editor/editor.md#mode) *mode* parameter is set to **view** and the *permission* to *edit* the document ([document permissions](./Document/Permissions.md#edit)) is set to **true** so that the user could switch to the editing mode.
+> **onRequestEditRights** parameter is obligatory when the [editorConfig](./editor/editor.md#mode) *mode* parameter is set to **view** and the *permission* to *edit* the document ([document permissions](./document/permissions.md#edit)) is set to **true** so that the user could switch to the editing mode.
 
 ![onRequestEditRights](/assets/images/editor/onRequestEditRights.png)
 ![Edit PDF button](/assets/images/editor/edit-pdf.png)
@@ -558,7 +558,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
 
 The function called instead of the [onOutdatedVersion](#onoutdatedversion) event in the following cases:
 
-- when the editor is opened with [key](./Document/Document.md#key) that was already used to successfully save a file;
+- when the editor is opened with [key](./document/document.md#key) that was already used to successfully save a file;
 - when the editor reconnects to the server after losing the connection and interrupting the editing session.
 
 In these cases, the [refreshFile](../methods.md#refreshfile) method is called and the file version is updated without reloading the editor.
@@ -592,7 +592,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
 
 The function called when the user is trying to rename the file by clicking the *Rename...* button.
 
-> Until version 6.0 the *Rename...* button is only available if the [document.permissions.rename](./Document/Permissions.md#rename) is set to **true**.
+> Until version 6.0 the *Rename...* button is only available if the [document.permissions.rename](./document/permissions.md#rename) is set to **true**.
 
 <img alt="onRequestRename" src="/assets/images/editor/onRequestRename.png" width="282px" />
 
@@ -618,7 +618,7 @@ The document version number is sent in the *data.version* parameter if it is cal
 
 When the function is called, you must call the [refreshHistory](../methods.md#refreshhistory) method to initialize version history again. If the method is not declared the *Restore* button will not be displayed.
 
-> The *Restore* button is displayed for the previous document versions only and hidden for the current one. Until version 5.5 the *Restore* button is only available if the [document.permissions.changeHistory](./Document/Permissions.md#changehistory) is set to **true**.
+> The *Restore* button is displayed for the previous document versions only and hidden for the current one. Until version 5.5 the *Restore* button is only available if the [document.permissions.changeHistory](./document/permissions.md#changehistory) is set to **true**.
 
 ![onRequestRestore](/assets/images/editor/onRequestRestore.png)
 
@@ -788,7 +788,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
 
 The function called when the user is trying to manage document access rights by clicking *Change access rights* button.
 
-When the access rights is changed, you must call the [setSharingSettings](../methods.md#setsharingsettings) method to update the [information](./Document/Info.md#sharingsettings) about the settings which allow to share the document with other users. If the method is not declared the *Change access rights* button will not be displayed.
+When the access rights is changed, you must call the [setSharingSettings](../methods.md#setsharingsettings) method to update the [information](./document/Info.md#sharingsettings) about the settings which allow to share the document with other users. If the method is not declared the *Change access rights* button will not be displayed.
 
 ![onRequestSharingSettings](/assets/images/editor/onRequestSharingSettings.png)
 

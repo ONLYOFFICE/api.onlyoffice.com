@@ -10,7 +10,7 @@ Defines the array of object received when the user takes an action with the docu
 
 - **0** - the user disconnects from the document co-editing;
 - **1** - the new user connects to the document co-editing;
-- **2** - the user clicks the [forcesave button](./config/editor/customization/customization%20-%20Standard%20branding.md#forcesave).
+- **2** - the user clicks the [forcesave button](./config/editor/customization/customization-standard-branding.md#forcesave).
 
 The *userid* field value is the user identifier.
 
@@ -30,18 +30,18 @@ Type: string
 
 ## filetype
 
-Defines an extension of the document that is downloaded from the link specified with the [url](#url) parameter. The file type is OOXML by default but if the [assemblyFormatAsOrigin](../get-started/how-it-works/Saving%20file.md#saving-in-original-format) server setting is enabled, the file will be saved in its original format.
+Defines an extension of the document that is downloaded from the link specified with the [url](#url) parameter. The file type is OOXML by default but if the [assemblyFormatAsOrigin](../get-started/how-it-works/saving-file.md#saving-in-original-format) server setting is enabled, the file will be saved in its original format.
 
 Type: string
 
 ## forcesavetype
 
-Defines the type of initiator when the [force saving](../get-started/how-it-works/Saving%20file.md#force-saving) request is performed. Can have the following values:
+Defines the type of initiator when the [force saving](../get-started/how-it-works/saving-file.md#force-saving) request is performed. Can have the following values:
 
-- **0** - the force saving request is performed to the [command service](../Additional%20API/Command%20service/forcesave.md);
-- **1** - the force saving request is performed each time the saving is done (e.g. the **Save** button is clicked), which is only available when the [forcesave](./config/editor/customization/customization%20-%20Standard%20branding.md#forcesave) option is set to *true*;
+- **0** - the force saving request is performed to the [command service](../additional-api/command-service/forcesave.md);
+- **1** - the force saving request is performed each time the saving is done (e.g. the **Save** button is clicked), which is only available when the [forcesave](./config/editor/customization/customization-standard-branding.md#forcesave) option is set to *true*;
 - **2** - the force saving request is performed by timer with the settings from the server config;
-- **3** - the force saving request is performed each time the form is submitted (e.g. the [Complete & Submit](./config/editor/customization/customization%20-%20Standard%20branding.md#submitform) button is clicked).
+- **3** - the force saving request is performed each time the form is submitted (e.g. the [Complete & Submit](./config/editor/customization/customization-standard-branding.md#submitform) button is clicked).
 
 The type is present when the *status* value is equal to **6** or **7** only.
 
@@ -95,7 +95,7 @@ Type: string
 
 ## userdata
 
-Defines the custom information sent to the command service for the [forcesave](../Additional%20API/Command%20service/forcesave.md) and [info](../Additional%20API/Command%20service/info.md) commands in case it was present in the request.
+Defines the custom information sent to the command service for the [forcesave](../additional-api/command-service/forcesave.md) and [info](../additional-api/command-service/info.md) commands in case it was present in the request.
 
 Type: string
 
@@ -128,7 +128,7 @@ Please note that the *status* **1** can be also received when the user is return
 
 ### Status 2 (3)
 
-It is received [10 seconds](../get-started/how-it-works/Saving%20file.md#save-delay) after the document is closed for editing with the identifier of the user who was the last to send the changes to the document editing service. The *callbackUrl* from the user who made the last changes to the file is used.
+It is received [10 seconds](../get-started/how-it-works/saving-file.md#save-delay) after the document is closed for editing with the identifier of the user who was the last to send the changes to the document editing service. The *callbackUrl* from the user who made the last changes to the file is used.
 
 ### Status 4
 
@@ -194,7 +194,7 @@ It is received when the force saving request is performed.The *callbackUrl* depe
 }
 ```
 
-### Sample of JSON object sent to the "callbackUrl" address by document editing service after the [forcesave](../Additional%20API/Command%20service/forcesave.md) command had been received
+### Sample of JSON object sent to the "callbackUrl" address by document editing service after the [forcesave](../additional-api/command-service/forcesave.md) command had been received
 
 <!-- The 'changes' and 'serverVersion' fields should be left as they are, since the information about the types of these properties is not known. -->
 
@@ -263,7 +263,7 @@ public class WebEditor : IHttpHandler
 
 > *PATH\_FOR\_SAVE* is the absolute path to your computer folder where the file will be saved including the file name.
 
-On the [.Net example](../get-started/Language-specific%20examples/Net%20example.md) page, you will learn how to integrate ONLYOFFICE Docs into your web application written on .Net (C#) or .Net (C# MVC).
+On the [.Net example](../get-started/language-specific-examples/Net%20example.md) page, you will learn how to integrate ONLYOFFICE Docs into your web application written on .Net (C#) or .Net (C# MVC).
 
 ### Java document save example
 
@@ -306,7 +306,7 @@ public class IndexServlet extends HttpServlet {
 
 > *pathForSave* is the absolute path to your computer folder where the file will be saved including the file name.
 
-On the [Java example](../get-started/Language-specific%20examples/Java%20example.md) and [Java integration SDK](../get-started/Language-specific%20examples/Java%20integration%20SDK.md) pages, you will learn how to integrate ONLYOFFICE Docs into your web application written on Java.
+On the [Java example](../get-started/language-specific-examples/Java%20example.md) and [Java integration SDK](../get-started/language-specific-examples/Java%20integration%20SDK.md) pages, you will learn how to integrate ONLYOFFICE Docs into your web application written on Java.
 
 ### Node.js document save example
 
@@ -346,7 +346,7 @@ app.post("/track", (req, res) => {
 
 > *pathForSave* is the absolute path to your computer folder where the file will be saved including the file name.
 
-On the [NodeJS example](../get-started/Language-specific%20examples/NodeJS%20example.md) page, you will learn how to integrate ONLYOFFICE Docs into your web application written on Node.js.
+On the [NodeJS example](../get-started/language-specific-examples/NodeJS%20example.md) page, you will learn how to integrate ONLYOFFICE Docs into your web application written on Node.js.
 
 ### PHP document save example
 
@@ -375,7 +375,7 @@ echo "{\"error\":0}";
 
 > *$path\_for\_save* is the absolute path to your computer folder where the file will be saved including the file name.
 
-On the [PHP example](../get-started/Language-specific%20examples/PHP%20example.md) page, you will learn how to integrate ONLYOFFICE Docs into your web application written on PHP.
+On the [PHP example](../get-started/language-specific-examples/PHP%20example.md) page, you will learn how to integrate ONLYOFFICE Docs into your web application written on PHP.
 
 ### Ruby document save example
 
@@ -412,4 +412,4 @@ end
 
 > *path\_for\_save* is the absolute path to your computer folder where the file will be saved including the file name.
 
-On the [Ruby example](../get-started/Language-specific%20examples/Ruby%20example.md) page, you will learn how to integrate ONLYOFFICE Docs into your web application written on Ruby.
+On the [Ruby example](../get-started/language-specific-examples/Ruby%20example.md) page, you will learn how to integrate ONLYOFFICE Docs into your web application written on Ruby.

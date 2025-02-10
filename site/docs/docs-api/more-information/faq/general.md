@@ -6,9 +6,9 @@ sidebar_position: -12
 
 If you do not know where to start with ONLYOFFICE Docs API, we suggest that you first read the [Basic concepts](../../get-started/basic-concepts.md) and [How it works](../../get-started/how-it-works/how-it-works.md) sections to have better understanding of how ONLYOFFICE Docs API is built. Once you are familiar with the main concepts, you can visit the [Try now](../../get-started/Try%20Docs/Try%20Docs.md) section to see the live examples of the main ONLYOFFICE Docs features in action.
 
-If you are interested in a specific programming language example, see the [Language-specific examples](../../get-started/Language-specific%20examples/Language-specific%20examples.md) which are available in several programming languages and explain how to install ONLYOFFICE Docs, where to get the example source files and how to install them and connect ONLYOFFICE Docs.
+If you are interested in a specific programming language example, see the [Language-specific examples](../../get-started/language-specific-examples/language-specific-examples.md) which are available in several programming languages and explain how to install ONLYOFFICE Docs, where to get the example source files and how to install them and connect ONLYOFFICE Docs.
 
-The users who use some document management systems (Nextcloud, ownCloud, SharePoint etc.) and simply want to know how to connect ONLYOFFICE Docs to these systems should visit the [Ready-to-use connectors](../../get-started/Ready-to-use%20connectors/Nextcloud%20integration.md) section where all the main plugins working with ONLYOFFICE Docs are explained.
+The users who use some document management systems (Nextcloud, ownCloud, SharePoint etc.) and simply want to know how to connect ONLYOFFICE Docs to these systems should visit the [Ready-to-use connectors](../../get-started/ready-to-use-connectors/nextcloud-integration.md) section where all the main plugins working with ONLYOFFICE Docs are explained.
 
 The detailed description of every API method is available in the larger **Documentation** module. All the methods are described in the appropriate sections, the list of them is available in the [Advanced parameters](../../usage-api/advanced-parameters.md).
 
@@ -16,7 +16,7 @@ The detailed description of every API method is available in the larger **Docume
 
 The current ONLYOFFICE Docs version number can be found at the **About** page of the Document, Presentation or Spreadsheet Editor, right below the logo and the editor name.
 
-You can use the API to send a POST request to the ****document command service****. Use the *c* parameter for that with the [version](../../Additional%20API/Command%20service/version.md) value, which is sent as a JSON object in the request body:
+You can use the API to send a POST request to the ****document command service****. Use the *c* parameter for that with the [version](../../additional-api/command-service/version.md) value, which is sent as a JSON object in the request body:
 
   ``` json
   {
@@ -33,7 +33,7 @@ The request result of version is returned in JSON form, like this:
   }
   ```
 
-More detailed information about the interaction with the **document command service** and the use of various commands to do that is available [at this page](../../Additional%20API/Command%20service/Command%20service.md).
+More detailed information about the interaction with the **document command service** and the use of various commands to do that is available [at this page](../../additional-api/command-service/command-service.md).
 
 ## I want to change some ONLYOFFICE Docs parameters from the default.json configuration file. How can I do that so that my changes were not lost after update?
 
@@ -55,8 +55,8 @@ So we strongly recommend that you **do not** alter the parameters in either *def
 
 The examples of *local.json* use can be found in the following sections:
 
-- [Save delay](../../get-started/how-it-works/Saving%20file.md#save-delay)
-- [Force saving](../../get-started/how-it-works/Saving%20file.md#force-saving)
-- [Request with token in body](../../Additional%20API/signature/request/token-in-body.md)
+- [Save delay](../../get-started/how-it-works/saving-file.md#save-delay)
+- [Force saving](../../get-started/how-it-works/saving-file.md#force-saving)
+- [Request with token in body](../../additional-api/signature/request/token-in-body.md)
 - [Enabling WOPI](../../using-wopi/overview.md#enabling-wopi)
 - [IP filter](../../using-wopi/overview.md#ip-filter)

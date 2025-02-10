@@ -10,7 +10,7 @@ The `payload` for the JSON Web Token contains the following fields:
 
 ### Request to receive the status of the edited document
 
-Validation is performed for incoming requests with the commands from the **document storage service** to the [document command service](../../Command%20service/Command%20service.md).
+Validation is performed for incoming requests with the commands from the **document storage service** to the [document command service](../../command-service/command-service.md).
 
 Sample payload of request to receive the status of the edited document:
 

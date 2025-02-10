@@ -15,7 +15,7 @@ The reference figure and the steps below explain the process of protecting range
 
 1. Create an empty *html* file to [Open the document](./opening-file.md#how-this-can-be-done-in-practice).
 
-2. In the configuration script for Document Editor initialization, specify the event handler to display the list of users for granting the access rights to edit the specified sheet range. When the user opens *Protection -> Protect Range*, clicks *New*, and starts typing in the *Who can edit* field, the [onRequestUsers](../../usage-api/config/Events.md#onrequestusers) event is called and the user can select other users to allow them to edit this range. The *data.c* parameter with the *protect* operation type is passed in this event.
+2. In the configuration script for Document Editor initialization, specify the event handler to display the list of users for granting the access rights to edit the specified sheet range. When the user opens *Protection -> Protect Range*, clicks *New*, and starts typing in the *Who can edit* field, the [onRequestUsers](../../usage-api/config/events.md#onrequestusers) event is called and the user can select other users to allow them to edit this range. The *data.c* parameter with the *protect* operation type is passed in this event.
 
    <img alt="Grant access" src="/assets/images/editor/protect-range.png" width="292px" />
 

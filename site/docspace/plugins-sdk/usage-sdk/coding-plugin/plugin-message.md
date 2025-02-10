@@ -16,7 +16,7 @@ Example: `[Actions.showToast, Actions.closeModal]`
 
 Defines the properties that update the state of the items which interact with the users. This parameter is used only with [Actions.updateProps](./events.md#updateprops).
 
-Type: [IInput](./plugin-components/Input.md), [ICheckbox](./plugin-components/Checkbox.md), [IToggleButton](./plugin-components/ToggleButton.md), [IButton](./plugin-components/Button.md), [ITextArea](./plugin-components/TextArea.md), [IComboBox](./plugin-components/ComboBox.md)
+Type: [IInput](./plugin-components/Input.md), [ICheckbox](./plugin-components/Checkbox.md), [IToggleButton](./plugin-components/Togglebutton.md), [IButton](./plugin-components/button.md), [ITextArea](./plugin-components/TextArea.md), [IComboBox](./plugin-components/Combobox.md)
 
 Example: `{IInput}`
 

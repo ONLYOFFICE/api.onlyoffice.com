@@ -49,7 +49,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
 })
 ```
 
-Further information about the customization can be found [at this page](../../usage-api/config/editor/customization/customization%20-%20Standard%20branding.md).
+Further information about the customization can be found [at this page](../../usage-api/config/editor/customization/customization-standard-branding.md).
 
 ## How to change the default language of the ONLYOFFICE Docs interface?
 
@@ -84,7 +84,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
 
 This will disable both the **Chat** and **Comments** buttons and their functionality.
 
-Further information about the customization can be found [at this page](../../usage-api/config/editor/customization/customization%20-%20Standard%20branding.md).
+Further information about the customization can be found [at this page](../../usage-api/config/editor/customization/customization-standard-branding.md).
 
 ## How to customize the editors interface, e.g. adjust the top toolbar view?
 
@@ -100,7 +100,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
 })
 ```
 
-Further information about the customization can be found [at this page](../../usage-api/config/editor/customization/customization%20-%20Standard%20branding.md).
+Further information about the customization can be found [at this page](../../usage-api/config/editor/customization/customization-standard-branding.md).
 
 ## How to view and change the document additional parameters, e.g. its owner or uploading date?
 
@@ -119,7 +119,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
 
 This values will be displayed in the **File** > **Document Info...** menu option.
 
-Further information about these settings can be found [at this page](../../usage-api/config/Document/Info.md).
+Further information about these settings can be found [at this page](../../usage-api/config/document/Info.md).
 
 ## How to optimize the appearance of editors for a desktop computer, or for a mobile device, or for embedding into a web page?
 
@@ -180,4 +180,4 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
 
 Where *editorConfig.plugins.autostart* is the array of the GUIDs for the plugins that you want to start automatically when ONLYOFFICE Docs is started (as defined in the plugin [config.json](../../../plugin-and-macros/structure/manifest/manifest.md#guid) file), and *editorConfig.plugins.pluginsData* is the array of the **config.json** configuration files for all the plugins that you want to be available to ONLYOFFICE Docs users.
 
-Further information about enabling the plugins for ONLYOFFICE Docs can be found [at this page](../../usage-api/config/editor/Plugins.md).
+Further information about enabling the plugins for ONLYOFFICE Docs can be found [at this page](../../usage-api/config/editor/plugins.md).

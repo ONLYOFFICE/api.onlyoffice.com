@@ -23,7 +23,7 @@ Either install it from [HumHub Marketplace](https://marketplace.humhub.com/modul
 
 In order to configure plugin, you must navigate to **Administation -> Modules**. Find ONLYOFFICE plugin and click **Configure**.
 
-Starting from version 7.2, JWT is enabled by default and the secret key is generated automatically to restrict the access to ONLYOFFICE Docs and for security reasons and data integrity. Specify your own **JWT Secret** on the HumHub configuration page. In the ONLYOFFICE Docs [config file](../../Additional%20API/signature/signature.md), specify the same secret key and enable the validation.
+Starting from version 7.2, JWT is enabled by default and the secret key is generated automatically to restrict the access to ONLYOFFICE Docs and for security reasons and data integrity. Specify your own **JWT Secret** on the HumHub configuration page. In the ONLYOFFICE Docs [config file](../../additional-api/signature/signature.md), specify the same secret key and enable the validation.
 
 ## How it works
 
@@ -56,7 +56,7 @@ The ONLYOFFICE integration follows the API documented [here](../basic-concepts.m
 
 10. When all users and client browsers are done with editing, they close the editing window.
 
-11. After [10 seconds](../how-it-works/Saving%20file.md#savedelay) of inactivity, ONLYOFFICE Docs sends a POST to *callbackUrl* letting HumHub know that the clients have finished editing the document and closed it.
+11. After [10 seconds](../how-it-works/saving-file.md#savedelay) of inactivity, ONLYOFFICE Docs sends a POST to *callbackUrl* letting HumHub know that the clients have finished editing the document and closed it.
 
 12. HumHub downloads a new version of the document, replacing the old one.
 

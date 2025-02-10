@@ -20,7 +20,7 @@ The reference figure and the steps below explain the process of document convers
 
 1. The users selects a file on the computer hard disk drive that is to be uploaded to the **document manager**.
 2. The **document manager** uploads the selected file to the **document storage service**.
-3. The **document storage service** sends the uploaded file to ONLYOFFICE Docs **document conversion service** for conversion into the Office Open XML format using the [conversion API](../../Additional%20API/conversion-api/request.md).
+3. The **document storage service** sends the uploaded file to ONLYOFFICE Docs **document conversion service** for conversion into the Office Open XML format using the [conversion API](../../additional-api/conversion-api/request.md).
 4. The **document conversion service** converts the selected file to the Office Open XML format.
 5. The **document storage service** downloads the converted document file.
 
@@ -34,7 +34,7 @@ The reference figure and the steps below explain the process of document export.
 
 1. The user selects the file in the **document manager** and the format the file must be downloaded in.
 2. The **document manager** transforms this user action into a request to the **document storage service**.
-3. The **document storage service** sends the uploaded file to ONLYOFFICE Docs **document conversion service** for conversion into the appropriate format using the [conversion API](../../Additional%20API/conversion-api/request.md).
+3. The **document storage service** sends the uploaded file to ONLYOFFICE Docs **document conversion service** for conversion into the appropriate format using the [conversion API](../../additional-api/conversion-api/request.md).
 4. The **document conversion service** converts the selected file to the appropriate format.
 5. When the conversion is finished the **document storage service** downloads the converted file.
 6. The **document storage service** notifies the **document manager** that the conversion is successfully performed.

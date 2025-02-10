@@ -37,7 +37,7 @@ Follow the steps [in this section](../../using-wopi/overview.md#ip-filter) to co
 
 The requests are sent to the `https://documentserver/hosting/discovery` address where the **documentserver** is the name of the server with the ONLYOFFICE Docs installed.
 
-More information about WOPI discovery can be found [here](../../using-wopi/WOPI%20discovery.md).
+More information about WOPI discovery can be found [here](../../using-wopi/wopi-discovery.md).
 
 ## How to customize the editor behavior via WOPI?
 
@@ -60,11 +60,11 @@ Example:
 
 The editor behavior such as language, theme or chat can be customized via the **discovery query parameters** which are the parameters that can be exposed by file storage in the *urlsrc* attribute.
 
-All the available discovery query parameters can be found [here](../../using-wopi/WOPI%20discovery.md#wopi-standard).
+All the available discovery query parameters can be found [here](../../using-wopi/wopi-discovery.md#wopi-standard).
 
 ## How to create an online office session within the application?
 
-In order to create an online office session within your application, a host must create an HTML page that will host an iframe element within it pointing to a particular [WOPI action URL](../../using-wopi/WOPI%20discovery.md#wopi-actions).
+In order to create an online office session within your application, a host must create an HTML page that will host an iframe element within it pointing to a particular [WOPI action URL](../../using-wopi/wopi-discovery.md#wopi-actions).
 
 The host page must contain the following elements:
 
@@ -72,7 +72,7 @@ The host page must contain the following elements:
 
 - JavaScript code for interacting with the online office iframe using [PostMessage](../../using-wopi/PostMessage.md).
 
-- Specific CSS styles for the body element and online office to avoid visual bags. In addition, the host page should set an appropriate favicon for the page using the favicon URL provided in [WOPI discovery](../../using-wopi/WOPI%20discovery.md).
+- Specific CSS styles for the body element and online office to avoid visual bags. In addition, the host page should set an appropriate favicon for the page using the favicon URL provided in [WOPI discovery](../../using-wopi/wopi-discovery.md).
 
 - A *viewport* meta tag to avoid visual and functional problems in mobile browsers.
 
@@ -82,27 +82,27 @@ The host page must contain the following elements:
 
 To restrict public access to your data, a secure exchange of requests between an online office and an integrator must be configured.
 
-The integrator must check that the request is received from ONLYOFFICE Docs. It uses [proof keys](https://docs.microsoft.com/en-us/microsoft-365/cloud-storage-partner-program/online/scenarios/proofkeys) for this purpose. ONLYOFFICE Docs signs the request with a private key. The corresponding public key is written in the proof-key element in the [WOPI discovery XML](../../using-wopi/WOPI%20discovery.md). The integrator checks the private key with the public key. The signature is sent with every request in the **X-WOPI-Proof** and **X-WOPI-ProofOld** HTTP headers.
+The integrator must check that the request is received from ONLYOFFICE Docs. It uses [proof keys](https://docs.microsoft.com/en-us/microsoft-365/cloud-storage-partner-program/online/scenarios/proofkeys) for this purpose. ONLYOFFICE Docs signs the request with a private key. The corresponding public key is written in the proof-key element in the [WOPI discovery XML](../../using-wopi/wopi-discovery.md). The integrator checks the private key with the public key. The signature is sent with every request in the **X-WOPI-Proof** and **X-WOPI-ProofOld** HTTP headers.
 
 More information about proof keys can be found [on this page](../../using-wopi/Proof%20keys.md).
 
 ## Where can I find possible WOPI error codes and their descriptions?
 
-Possible WOPI error codes and their description you can find [on this page](../../using-wopi/WOPI%20REST%20API/WOPI%20REST%20API.md).
+Possible WOPI error codes and their description you can find [on this page](../../using-wopi/wopi-rest-api/wopi-rest-api.md).
 
 ## Which WOPI REST API operations are supported by ONLYOFFICE Docs?
 
-ONLYOFFICE Docs uses the following WOPI operations: [CheckFileInfo](../../using-wopi/WOPI%20REST%20API/CheckFileInfo.md), [GetFile](../../using-wopi/WOPI%20REST%20API/GetFile.md), [Lock](../../using-wopi/WOPI%20REST%20API/Lock.md), [RefreshLock](../../using-wopi/WOPI%20REST%20API/RefreshLock.md), [Unlock](../../using-wopi/WOPI%20REST%20API/Unlock.md), [PutFile](../../using-wopi/WOPI%20REST%20API/PutFile.md), [RenameFile](../../using-wopi/WOPI%20REST%20API/RenameFile.md). For more information about these operations, see the corresponding pages.
+ONLYOFFICE Docs uses the following WOPI operations: [CheckFileInfo](../../using-wopi/wopi-rest-api/checkfileinfo.md), [GetFile](../../using-wopi/wopi-rest-api/GetFile.md), [Lock](../../using-wopi/wopi-rest-api/Lock.md), [RefreshLock](../../using-wopi/wopi-rest-api/RefreshLock.md), [Unlock](../../using-wopi/wopi-rest-api/Unlock.md), [PutFile](../../using-wopi/wopi-rest-api/PutFile.md), [RenameFile](../../using-wopi/wopi-rest-api/RenameFile.md). For more information about these operations, see the corresponding pages.
 
 ## How to restrict access to the use of ONLYOFFICE server via WOPI?
 
-You cannot restrict access to the use of ONLYOFFICE server via WOPI. Editing access cotrol is available only via ONLYOFFICE Docs API and based on JWT signature. The secret key is required to generate a [file open request](../../Additional%20API/signature/Browser.md).
+You cannot restrict access to the use of ONLYOFFICE server via WOPI. Editing access cotrol is available only via ONLYOFFICE Docs API and based on JWT signature. The secret key is required to generate a [file open request](../../additional-api/signature/Browser.md).
 
-More information about signature can be found [here](../../Additional%20API/signature/signature.md).
+More information about signature can be found [here](../../additional-api/signature/signature.md).
 
 ## How to get information about the file properties, access rights and editor settings via WOPI?
 
-To get information about the file properties, access rights and editor settings, use the **CheckFileInfo** method. All the available parameters you can find [on this page](../../using-wopi/WOPI%20REST%20API/CheckFileInfo.md).
+To get information about the file properties, access rights and editor settings, use the **CheckFileInfo** method. All the available parameters you can find [on this page](../../using-wopi/wopi-rest-api/checkfileinfo.md).
 
 ## What actions are supported via WOPI?
 

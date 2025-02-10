@@ -26,13 +26,13 @@ The *document.key* parameter is a unique document identifier which helps disting
 
 Each time the document is changed, the *document.key* parameter must also be generated anew as the documents with the known key are taken from cache.
 
-More information on this parameter is available [here](../../usage-api/config/Document/Document.md#key).
+More information on this parameter is available [here](../../usage-api/config/document/document.md#key).
 
 ## How to define the mode that the file should be opened in (viewing or editing)?
 
 To define the document opening mode the *editorConfig.mode* parameter is used. It can acquire two values:
 
-- **edit** is used by default and allows to open the document file for editing (if the corresponding [document.permissions](../../usage-api/config/Document/Permissions.md) parameters are also set to **true**);
+- **edit** is used by default and allows to open the document file for editing (if the corresponding [document.permissions](../../usage-api/config/document/permissions.md) parameters are also set to **true**);
 - **view** allows to open the document for viewing with the main toolbar and editing disabled.
 
 Set the mode using the *editorConfig* section of the configuration file:

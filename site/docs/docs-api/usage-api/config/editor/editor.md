@@ -2,7 +2,7 @@ The editorConfig section allows to change the parameters pertaining to the edito
 
 ## actionLink
 
-Specifies the data received from the **document editing service** using the [onMakeActionLink](../Events.md#onmakeactionlink) event or the [onRequestSendNotify](../Events.md#onrequestsendnotify) event in *data.actionLink* parameter, which contains the information about the action in the document that will be scrolled to.
+Specifies the data received from the **document editing service** using the [onMakeActionLink](../events.md#onmakeactionlink) event or the [onRequestSendNotify](../events.md#onrequestsendnotify) event in *data.actionLink* parameter, which contains the information about the action in the document that will be scrolled to.
 
 Type: object
 
@@ -57,7 +57,7 @@ Example: true
 
 ## createUrl
 
-Defines the absolute URL of the document where it will be created and available after creation. If not specified, there will be no creation button. Instead of this field, you can use the [onRequestCreateNew](../Events.md#onrequestcreatenew) event.
+Defines the absolute URL of the document where it will be created and available after creation. If not specified, there will be no creation button. Instead of this field, you can use the [onRequestCreateNew](../events.md#onrequestcreatenew) event.
 
 Type: string
 
@@ -141,7 +141,7 @@ Example: `https://example.com/exampledocument1.docx`
 
 Defines the default display format for currency and date and time (in the **Spreadsheet Editor** only). Is set using the four letter (**en-US**, **fr-FR**, etc.) language codes. For the default value the *lang* parameter is taken, or, if no regional setting corresponding to the *lang* value is available, **en-US** is used.
 
-Starting from version 8.2, this parameter also defines the default measurement units in all editor types. For the **...-US** or **...-CA** regions, inches are used by default if other values are not specified in the [editorConfig.customization.unit](../editor/customization/customization%20-%20Standard%20branding.md#unit) parameter.
+Starting from version 8.2, this parameter also defines the default measurement units in all editor types. For the **...-US** or **...-CA** regions, inches are used by default if other values are not specified in the [editorConfig.customization.unit](../editor/customization/customization-standard-branding.md#unit) parameter.
 
 Type: string
 
@@ -210,7 +210,7 @@ Example:
 
 > Please note that the request to the user's avatar is sent without authorization because the avatar URL is inserted into the HTML of the editor frame. Moreover, the CORS problem may occur. In this case, use the avatar in the base64 format. For example, *"data:image/png,base64,\*\*\*\*\*"*.
 
-> Please note that if you are subscribed to the [onRequestUsers](../Events.md#onrequestusers) event and send an avatar using the [setUsers](../../methods.md#setusers) method, the *user.image* field in the initialization config is not required. We especially don't recommend to specify this parameter if the avatar is sent in the base64 format and the initialization config is signed with JWT. In this case, the token will be too long.
+> Please note that if you are subscribed to the [onRequestUsers](../events.md#onrequestusers) event and send an avatar using the [setUsers](../../methods.md#setusers) method, the *user.image* field in the initialization config is not required. We especially don't recommend to specify this parameter if the avatar is sent in the base64 format and the initialization config is signed with JWT. In this case, the token will be too long.
 
 ### user.firstname
 

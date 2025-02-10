@@ -18,7 +18,7 @@ Example: "2010-07-07 3:46 PM"
 
 ## favorite
 
-Defines the highlighting state of the *Favorite* icon. When the user clicks the icon, the [onMetaChange](../Events.md#onmetachange) event is called. If the parameter is *undefined*, the *Favorite* icon is not displayed at the editor window header.
+Defines the highlighting state of the *Favorite* icon. When the user clicks the icon, the [onMetaChange](../events.md#onmetachange) event is called. If the parameter is *undefined*, the *Favorite* icon is not displayed at the editor window header.
 
 Type: boolean
 

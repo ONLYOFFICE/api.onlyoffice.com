@@ -14,7 +14,7 @@ expression.Push(element);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| element | Required | [DocumentElement](../../Enumeration/DocumentElement.md) |  | The type of the element which will be pushed to the current container. |
+| element | Required | [DocumentElement](../../Enumeration/documentElement.md) |  | The type of the element which will be pushed to the current container. |
 
 ## Returns
 

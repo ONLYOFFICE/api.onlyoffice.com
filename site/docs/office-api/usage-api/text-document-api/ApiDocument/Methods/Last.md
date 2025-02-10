@@ -16,7 +16,7 @@ This method doesn't have any parameters.
 
 ## Returns
 
-[DocumentElement](../../Enumeration/DocumentElement.md)
+[DocumentElement](../../Enumeration/documentElement.md)
 
 ## Example
 

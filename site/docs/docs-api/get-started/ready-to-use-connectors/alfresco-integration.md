@@ -79,7 +79,7 @@ Module configuration can be found inside **Alfresco Administration Console** or 
 
 > You can also add *onlyoffice.url* to **alfresco-global.properties**. Configuration made via settings page will override **alfresco-global.properties**.
 
-Starting from version 7.2, JWT is enabled by default and the secret key is generated automatically to restrict the access to ONLYOFFICE Docs and for security reasons and data integrity. Specify your own **Secret key** on the Alfresco configuration page or by adding *onlyoffice.jwtsecret* to **alfresco-global.properties**. In the ONLYOFFICE Docs [config file](../../Additional%20API/signature/signature.md), specify the same secret key and enable the validation.
+Starting from version 7.2, JWT is enabled by default and the secret key is generated automatically to restrict the access to ONLYOFFICE Docs and for security reasons and data integrity. Specify your own **Secret key** on the Alfresco configuration page or by adding *onlyoffice.jwtsecret* to **alfresco-global.properties**. In the ONLYOFFICE Docs [config file](../../additional-api/signature/signature.md), specify the same secret key and enable the validation.
 
 ## Compiling ONLYOFFICE Alfresco module package
 
@@ -149,7 +149,7 @@ The ONLYOFFICE integration follows the API documented [here](../basic-concepts.m
 
 9. When all users and client browsers are done with editing, they close the editing window.
 
-10. After [10 seconds](../how-it-works/Saving%20file.md#save-delay) of inactivity, ONLYOFFICE Docs sends a POST to *callbackUrl* letting Alfresco know that the clients have finished editing the document and closed it.
+10. After [10 seconds](../how-it-works/saving-file.md#save-delay) of inactivity, ONLYOFFICE Docs sends a POST to *callbackUrl* letting Alfresco know that the clients have finished editing the document and closed it.
 
 11. Alfresco downloads a new version of the document, replacing the old one.
 

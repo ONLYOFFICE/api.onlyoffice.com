@@ -45,10 +45,10 @@ Therefore, WOPI locks must:
 - be associated with a single file;
 - contain a lock ID of maximum length 1024 ASCII characters;
 - prevent all changes to that file unless a proper lock ID is provided;
-- expire after 30 minutes unless refreshed ([RefreshLock](./WOPI%20REST%20API/RefreshLock.md));
+- expire after 30 minutes unless refreshed ([RefreshLock](./wopi-rest-api/RefreshLock.md));
 - not be associated with a particular user.
 
-All WOPI operations that modify files, such as [PutFile](./WOPI%20REST%20API/PutFile.md), include a lock ID as a parameter in their request. Usually the expected lock ID is passed in the `X-WOPI-Lock` request header.
+All WOPI operations that modify files, such as [PutFile](./wopi-rest-api/PutFile.md), include a lock ID as a parameter in their request. Usually the expected lock ID is passed in the `X-WOPI-Lock` request header.
 
 WOPI requires that hosts compare the lock ID passed in a WOPI request with the lock ID currently on a file and respond appropriately when the lock IDs don't match. In particular, WOPI clients expect that when a lock ID does not match the current lock, the host sends back the current lock ID in the `X-WOPI-Lock` response header. This behavior is critical, because WOPI clients use the current lock ID in order to determine what further WOPI calls to make to the host.
 

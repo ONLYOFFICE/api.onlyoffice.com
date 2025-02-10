@@ -21,7 +21,7 @@ bool RunText(String^ sCommands);
 ### .Net
 
 ```cs
-string workDirectory = "C:/Program Files/ONLYOFFICE/DocumentBuilder";
+string workDirectory = "C:/Program Files/ONLYOFFICE/documentBuilder";
 CDocBuilder.Initialize(workDirectory);
 CDocBuilder oBuilder = new CDocBuilder();
 oBuilder.RunText(L"builder.SetTmpFolder(\"DocBuilderTemp\");\n\

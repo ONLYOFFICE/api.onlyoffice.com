@@ -57,7 +57,7 @@ There are three main variants how the document can be opened with the *track cha
   })
   ```
 
-Further information about the permissions can be found [at this page](../../usage-api/config/Document/Permissions.md).
+Further information about the permissions can be found [at this page](../../usage-api/config/document/permissions.md).
 
 ## How to open a document with "commenting" mode enabled?
 
@@ -130,7 +130,7 @@ There are the following main variants how the document can be opened with the co
   })
   ```
 
-Further information about the permissions can be found [at this page](../../usage-api/config/Document/Permissions.md).
+Further information about the permissions can be found [at this page](../../usage-api/config/document/permissions.md).
 
 ## How can the 'fillForms' parameter be used?
 
@@ -164,7 +164,7 @@ The first scenario can be used if the access to the document will be given only 
 
 The second scenario is more commonly used, when you have a document template with some fields not filled and want to give access to it to more users (put it to your website, for example, so that the users filled it right there without the need to download it each time, fill and upload it back again). In this case it will be more reasonable to have this document as a template for future changes and, once the users with the *fillForms* access edit the fields, save it under another name.
 
-Further information about the permissions can be found [at this page](../../usage-api/config/Document/Permissions.md).
+Further information about the permissions can be found [at this page](../../usage-api/config/document/permissions.md).
 
 ## How to enable both the editing and commenting mode for a document?
 
@@ -186,7 +186,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
 })
 ```
 
-Further information about the permissions can be found [at this page](../../usage-api/config/Document/Permissions.md).
+Further information about the permissions can be found [at this page](../../usage-api/config/document/permissions.md).
 
 ## Do the permission parameters influence each other?
 
@@ -200,7 +200,7 @@ You should bear this in mind when you set the necessary permissions and combine 
 
 See the interactive table below to find out how different parameters and parameter combinations influence each other and the resulting document permissions.
 
-Further information about the permissions can be found [at this page](../../usage-api/config/Document/Permissions.md).
+Further information about the permissions can be found [at this page](../../usage-api/config/document/permissions.md).
 
 ## How to open the document in a viewer without the option to edit it?
 
@@ -226,7 +226,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
 })
 ```
 
-Further information about the permissions can be found [at this page](../../usage-api/config/Document/Permissions.md).
+Further information about the permissions can be found [at this page](../../usage-api/config/document/permissions.md).
 
 ## How to disable/enable the possibility to download the file?
 
@@ -244,7 +244,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
 })
 ```
 
-Further information about the permissions can be found [at this page](../../usage-api/config/Document/Permissions.md).
+Further information about the permissions can be found [at this page](../../usage-api/config/document/permissions.md).
 
 ## How to prevent a document from being printed?
 
@@ -262,7 +262,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
 })
 ```
 
-Further information about the permissions can be found [at this page](../../usage-api/config/Document/Permissions.md).
+Further information about the permissions can be found [at this page](../../usage-api/config/document/permissions.md).
 
 ## How to view and change sharing settings for a certain document?
 
@@ -298,7 +298,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
 })
 ```
 
-Further information about the permissions can be found [at this page](../../usage-api/config/Document/Info.md).
+Further information about the permissions can be found [at this page](../../usage-api/config/document/Info.md).
 
 ## How to restrict commenting?
 

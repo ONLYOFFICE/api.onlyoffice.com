@@ -64,9 +64,9 @@ where the **documentserver** is the name of the server with the **ONLYOFFICE Doc
 
 > Please note, that if you have subsites set up with SharePoint, you will need to additionally configure ONLYOFFICE Docs connection with each of them, in order for it to work properly. Go to each subsite settings and enter the ONLYOFFICE Docs address to the proper field.
 
-Starting from version 7.2, JWT is enabled by default and the secret key is generated automatically to restrict the access to ONLYOFFICE Docs and for security reasons and data integrity. Specify your own **Secret key** in the SharePoint administrative settings. In the ONLYOFFICE Docs [config file](../../Additional%20API/signature/signature.md), specify the same secret key and enable the validation.
+Starting from version 7.2, JWT is enabled by default and the secret key is generated automatically to restrict the access to ONLYOFFICE Docs and for security reasons and data integrity. Specify your own **Secret key** in the SharePoint administrative settings. In the ONLYOFFICE Docs [config file](../../additional-api/signature/signature.md), specify the same secret key and enable the validation.
 
-If JWT protection is enabled, it is necessary to specify a custom header name since the SharePoint security policy blocks external **Authorization** headers. This header should be specified in the ONLYOFFICE Docs signature settings as well. Further information about signature can be found [here](../../Additional%20API/signature/signature.md).
+If JWT protection is enabled, it is necessary to specify a custom header name since the SharePoint security policy blocks external **Authorization** headers. This header should be specified in the ONLYOFFICE Docs signature settings as well. Further information about signature can be found [here](../../additional-api/signature/signature.md).
 
 ## Compiling ONLYOFFICE SharePoint integration solution
 
@@ -112,7 +112,7 @@ The ONLYOFFICE integration follows the API documented [here](../basic-concepts.m
 
 7. When all users and client browsers are done with editing, they close the editing window.
 
-8. After [10 seconds](../how-it-works/Saving%20file.md#save-delay) of inactivity, ONLYOFFICE Docs sends a POST to *callbackUrl* letting SharePoint ONLYOFFICE solution know that the clients have finished editing the document and closed it.
+8. After [10 seconds](../how-it-works/saving-file.md#save-delay) of inactivity, ONLYOFFICE Docs sends a POST to *callbackUrl* letting SharePoint ONLYOFFICE solution know that the clients have finished editing the document and closed it.
 
 9. SharePoint downloads a new version of the document, replacing the old one.
 

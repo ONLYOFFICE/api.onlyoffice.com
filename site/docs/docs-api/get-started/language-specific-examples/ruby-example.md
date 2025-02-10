@@ -91,4 +91,4 @@ The example is configured by changing environment variables.
 | JWT\_SECRET                    | your-256-bit-secret     | JWT authorization secret. Leave blank to disable authorization.         |
 | PORT                           | 80                      | The port on which the server should be running.                         |
 
-If you integrated the editors successfully the result should look like the [demo preview](./Language-specific%20examples.md#demo-preview) on our site.
+If you integrated the editors successfully the result should look like the [demo preview](./language-specific-examples.md#demo-preview) on our site.

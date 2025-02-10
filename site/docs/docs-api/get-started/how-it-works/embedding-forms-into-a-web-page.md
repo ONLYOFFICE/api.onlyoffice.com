@@ -12,7 +12,7 @@ ONLYOFFICE forms are available in the PDF format which is intended for creating 
 
 These instructions help you add an online form to your website, making it available for saving as PDF and filling in.
 
-> Please note that these instructions will only work when JWT is disabled. Starting from version 7.2, JWT is enabled by default, so you need to disable it. More information about token can be found [here](../../Additional%20API/signature/signature.md).
+> Please note that these instructions will only work when JWT is disabled. Starting from version 7.2, JWT is enabled by default, so you need to disable it. More information about token can be found [here](../../additional-api/signature/signature.md).
 
 ## Editing forms
 
