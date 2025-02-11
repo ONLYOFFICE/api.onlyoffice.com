@@ -1,4 +1,4 @@
-name: Publish
+name: Build & Publish Api
 
 run-name: "Publish (site_mode: ${{github.event.inputs.site_mode}})"
 
@@ -36,6 +36,7 @@ jobs:
       run: npm install
 
     - name: Build Packages
+      id: build
       env:
         EN: ${{github.event.inputs.english}}
         CN: ${{github.event.inputs.chinese}}
@@ -90,8 +91,45 @@ jobs:
         aws-region: ${{env.AWS_REGION}}
 
     - name: Sync AWS Bucket
+      id: sync
       working-directory: build
       run: aws s3 sync . ${{env.AWS_BUCKET_URL}} --delete
 
     - name: Invalidate AWS CloudFront Cache
       run: aws cloudfront create-invalidation --distribution-id ${{env.AWS_DISTRIBUTION_ID}} --paths '/*'
+
+    - name: Collect statuses
+      if: always()
+      env:
+        BUILD_STATUS: ${{ steps.build.outcome }}
+        SYNC_STATUS: ${{ steps.sync.outcome }}
+      run: |
+          if [[ "$BUILD_STATUS" == 'failure' ]]; then
+             echo "BUILD_STATUS=failure🔴" >> $GITHUB_ENV
+             echo "SYNC_STATUS=skipped" >> $GITHUB_ENV
+          fi
+          if [[ "$BUILD_STATUS" == 'success' ]]; then
+             echo "BUILD_STATUS=success🟢" >> $GITHUB_ENV
+             [[ "$SYNC_STATUS" == 'failure' ]] && echo "SYNC_STATUS=failure🔴" >> $GITHUB_ENV
+             [[ "$SYNC_STATUS" == 'success' ]] && echo "SYNC_STATUS=success🟢" >> $GITHUB_ENV
+          fi
+
+    - name: send default message
+      if: always()
+      uses: appleboy/telegram-action@master
+      with:
+        to: ${{ secrets.TELEGRAM_TO }}
+        token: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+        message: |
+            ${{ github.actor }} created commit:
+            Commit message: ${{ github.event.commits[0].message }}
+
+            Repository: ${{ github.repository }}
+            Action: ${{ github.event_name }}
+            Workflow: ${{ github.workflow }}
+            Mode: ${{ github.event.inputs.site_mode }}
+
+            Api build status: ${{ env.BUILD_STATUS }}
+            Api s3 sync status: ${{ env.SYNC_STATUS }}
+
+            See changes: https://github.com/${{ github.repository }}/commit/${{github.sha}}
