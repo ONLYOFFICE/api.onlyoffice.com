@@ -2,6 +2,8 @@
 sidebar_position: -3
 ---
 
+# ProfileMenuItem
+
 Describes an item that will be embedded in the profile menu.
 
 ## key

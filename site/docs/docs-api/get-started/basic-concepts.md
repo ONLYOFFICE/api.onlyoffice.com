@@ -2,6 +2,8 @@
 sidebar_position: -8
 ---
 
+# Basic concepts
+
 [ONLYOFFICE Docs](https://www.onlyoffice.com/download-docs.aspx?from=api#docs-developer) is an open-source office suite that includes editors for text documents, spreadsheets, presentations and fillable forms.
 
 This documentation describes:

@@ -2,6 +2,8 @@
 sidebar_position: -5
 ---
 
+# NodeJS example
+
 ## Overview
 
 This example will help you integrate ONLYOFFICE Docs into your web application on Node.js.

@@ -2,6 +2,8 @@
 sidebar_position: -12
 ---
 
+# General
+
 ## I am new to ONLYOFFICE Docs API. Where should I start?
 
 If you do not know where to start with ONLYOFFICE Docs API, we suggest that you first read the [Basic concepts](../../get-started/basic-concepts.md) and [How it works](../../get-started/how-it-works/how-it-works.md) sections to have better understanding of how ONLYOFFICE Docs API is built. Once you are familiar with the main concepts, you can visit the [Try now](../../get-started/try-docs/try-docs.md) section to see the live examples of the main ONLYOFFICE Docs features in action.

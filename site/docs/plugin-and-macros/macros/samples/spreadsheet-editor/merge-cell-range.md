@@ -1,6 +1,4 @@
----
-sidebar_position: -17
----
+# Merge cell range
 
 ## Description
 

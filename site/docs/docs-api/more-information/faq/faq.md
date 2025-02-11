@@ -1,3 +1,5 @@
+# FAQ
+
 ## General questions
 
 If you do not know which category below to select, simply start with this section.

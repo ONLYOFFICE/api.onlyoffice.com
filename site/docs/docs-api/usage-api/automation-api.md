@@ -2,6 +2,8 @@
 sidebar_position: -2
 ---
 
+# Automation API
+
 **Connector** is a class that allows editing text documents, spreadsheets, presentations, and fillable forms from an external source. The examples of using Automation API can be found [here](../get-started/external-access-to-the-document-editing/external-access-to-the-document-editing.md).
 
 To create the connector, use the [createConnector](./methods.md#createconnector) method of the **document editor** object:

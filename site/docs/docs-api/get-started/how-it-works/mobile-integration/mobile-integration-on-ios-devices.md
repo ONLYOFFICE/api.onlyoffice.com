@@ -1,3 +1,9 @@
+---
+sidebar_label: iOS
+---
+
+# Mobile integration on iOS devices
+
 In this section, we will look at the integration process via [WKWebView](https://developer.apple.com/documentation/webkit/wkwebview) using the mobile demo sample for iOS which is available on [GitHub](https://github.com/ONLYOFFICE/editors-webview-ios).
 
 ## Integration based on the ONLYOFFICE test sample

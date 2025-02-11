@@ -2,6 +2,8 @@
 sidebar_position: -2
 ---
 
+# Checking PDF forms
+
 PDF forms differ from standard PDF files in form metadata. It determines which editor opens a file: the form editor or the standard PDF editor.
 
 To distinguish standard PDF files from PDF forms, you can use the check functions. These functions take the first 300 bytes of the file and check if there is `"ONLYOFFICEFORM"` there. If `true`, then it is an extended PDF file. Otherwise, it is a standard PDF file.

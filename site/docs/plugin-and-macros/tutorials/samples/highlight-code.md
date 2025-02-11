@@ -1,3 +1,5 @@
+# Highlight code
+
 ## Description
 
 Connects the [highlight.js library](https://highlightjs.org/) for highlighting code syntax with the necessary language, style, and background color.

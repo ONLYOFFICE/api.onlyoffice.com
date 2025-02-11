@@ -1,3 +1,5 @@
+# getForgotten
+
 Requests a forgotten file.
 
 ## Request example

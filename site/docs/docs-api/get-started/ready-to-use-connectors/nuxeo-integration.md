@@ -1,3 +1,5 @@
+# Nuxeo integration
+
 This [plugin](https://github.com/ONLYOFFICE/onlyoffice-nuxeo) enables users to edit office documents from [Nuxeo](https://www.nuxeo.com/) using ONLYOFFICE Docs.
 
 ## Features

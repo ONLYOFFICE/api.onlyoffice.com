@@ -1,3 +1,5 @@
+# Reset all forms
+
 ## Description
 
 Clears all fields if necessary, for example after printing the document.

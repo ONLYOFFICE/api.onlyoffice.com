@@ -1,3 +1,5 @@
+# Mask card numbers
+
 ## Description
 
 Applies the mask to all forms with the specified form key to hide card numbers.

@@ -2,6 +2,8 @@
 sidebar_position: -3
 ---
 
+# Python example
+
 ## Overview
 
 This example will help you integrate ONLYOFFICE Docs into your web application written on Python.

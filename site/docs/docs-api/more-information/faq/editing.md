@@ -2,6 +2,8 @@
 sidebar_position: -5
 ---
 
+# Editing
+
 ## What is the 'Callback handler' and why do I need it?
 
 The **document editing service** informs the **document storage service** about the status of the document editing and sends the response with all the necessary data via the *callbackUrl*, which is specified in the configuration file like this:

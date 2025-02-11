@@ -2,6 +2,8 @@
 sidebar_position: -5
 ---
 
+# Login and logout
+
 Before you start working on documents stored within your cloud, you need to log in to it.
 
 ## Login

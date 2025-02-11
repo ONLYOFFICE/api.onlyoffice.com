@@ -2,6 +2,8 @@
 sidebar_position: -6
 ---
 
+# Getting started
+
 Macros are small scripts used to facilitate your day-to-day routine work with different types of documents. ONLYOFFICE macros use the JavaScript syntax and [Office JavaScript API](../../office-api/get-started/overview.md) scripting notation.
 
 There are several reasons why ONLYOFFICE uses JavaScript for macros:

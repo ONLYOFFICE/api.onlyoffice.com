@@ -1,3 +1,5 @@
+# Moodle integration
+
 This [plugin](https://github.com/ONLYOFFICE/moodle-mod_onlyofficeeditor) enables users to edit office documents from [Moodle](https://moodle.org/) using ONLYOFFICE Docs.
 
 ## Features

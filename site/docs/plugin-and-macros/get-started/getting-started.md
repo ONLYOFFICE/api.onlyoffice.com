@@ -2,6 +2,8 @@
 sidebar_position: -1
 ---
 
+# Getting started
+
 Let's see how to build the simplest [Hello world](https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/helloworld) plugin, which inserts the *Hello World!* phrase when you press the button.
 
 ## Building a plugin

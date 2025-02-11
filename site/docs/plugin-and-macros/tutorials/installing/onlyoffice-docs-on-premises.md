@@ -2,6 +2,8 @@
 sidebar_position: -2
 ---
 
+# ONLYOFFICE Docs on-premises
+
 <iframe src="https://www.youtube.com/embed/R7gvhLvGL44?wmode=transparent" class="video-frame" width="700px" height="400px" frameborder="0" allowfullscreen></iframe>
 
 There are three ways to add plugins: through the *sdkjs-plugins* folder, through the *config.json* file or through the plugin manager.

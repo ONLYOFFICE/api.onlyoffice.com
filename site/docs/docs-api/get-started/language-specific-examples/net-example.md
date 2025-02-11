@@ -3,6 +3,8 @@ sidebar_label: .Net example
 sidebar_position: -8
 ---
 
+# .Net example
+
 ## Overview
 
 This example will help you integrate ONLYOFFICE Docs into your web application written in .Net (C#) or .Net (C# MVC).

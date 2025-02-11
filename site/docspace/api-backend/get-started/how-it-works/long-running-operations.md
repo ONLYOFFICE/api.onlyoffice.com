@@ -2,6 +2,8 @@
 sidebar_position: -4
 ---
 
+# Long-running operations
+
 The user initiates a long-running operation by sending a request to the appropriate API endpoint, which returns an object containing information about the initiated operation. An example of such a request and response:
 
 Example Request:

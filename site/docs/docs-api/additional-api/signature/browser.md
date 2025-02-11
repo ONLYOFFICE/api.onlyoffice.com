@@ -1,3 +1,5 @@
+# Browser
+
 When performing the client-side browser requests to ONLYOFFICE Docs, a token must be added to the parameters to validate the data.
 
 ## Opening file

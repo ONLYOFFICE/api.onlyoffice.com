@@ -2,6 +2,8 @@
 sidebar_position: -6
 ---
 
+# C++
+
 For the integration of ONLYOFFICE Document Builder into any application, the C++ doctrenderer library is used.
 
 ## Classes

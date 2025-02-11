@@ -2,6 +2,8 @@
 sidebar_position: -3
 ---
 
+# Uploading large files
+
 In this article, you will learn how to upload large files to DocSpace using our API Backend.
 
 ## Step 1. Creating a file upload session

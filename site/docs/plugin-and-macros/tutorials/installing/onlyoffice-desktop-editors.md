@@ -2,6 +2,8 @@
 sidebar_position: -3
 ---
 
+# ONLYOFFICE Desktop Editors
+
 <iframe src="https://www.youtube.com/embed/bHTia-F0K3w?wmode=transparent" class="video-frame" width="700px" height="400px" frameborder="0" allowfullscreen></iframe>
 
 There are two ways to add plugins: through the plugin manager and through the plugin folder.

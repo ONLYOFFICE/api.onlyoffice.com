@@ -1,3 +1,5 @@
+# Search and replace
+
 ## Description
 
 Searches for target text and replaces it with something else.

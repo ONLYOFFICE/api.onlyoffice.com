@@ -2,6 +2,8 @@
 sidebar_position: -8
 ---
 
+# Co-editing
+
 ## How to check how many connections I need?
 
 The minimal number of connections you might need should be equal to the number of users who are going to use your Document Server. But you should bear in mind, that in most cases one user is not equal to one connection, as one and the same user can open more than one document in more than one browser.

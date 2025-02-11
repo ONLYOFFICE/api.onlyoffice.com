@@ -2,6 +2,8 @@
 sidebar_position: -3
 ---
 
+# ProfileMenuPlugin
+
 The plugin that is embedded in the profile menu.
 
 **Interface**: IProfileMenuPlugin.

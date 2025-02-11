@@ -2,6 +2,8 @@
 sidebar_position: -5
 ---
 
+# COM
+
 For the integration of ONLYOFFICE Document Builder into any application, the COM doctrenderer library is used.
 
 ## Classes

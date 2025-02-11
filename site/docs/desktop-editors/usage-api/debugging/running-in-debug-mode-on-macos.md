@@ -1,6 +1,9 @@
 ---
 sidebar_position: -1
+sidebar_label: macOS
 ---
+
+# Running in debug mode on macOS
 
 Use the terminal to run ONLYOFFICE Desktop Editors in debug mode on macOS:
 

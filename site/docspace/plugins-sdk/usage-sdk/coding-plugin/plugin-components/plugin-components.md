@@ -2,6 +2,8 @@
 sidebar_position: -1
 ---
 
+# Plugin components
+
 The following plugin UI components are available for DocSpace plugins:
 
 | Name                                  | Description                                                                                                                                                            |

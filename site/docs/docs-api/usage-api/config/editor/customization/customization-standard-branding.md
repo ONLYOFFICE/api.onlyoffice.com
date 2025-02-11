@@ -2,6 +2,8 @@
 sidebar_label: Standard branding
 ---
 
+# Customization - Standard branding
+
 The customization section allows to customize the editor interface so that it looked like your other products (if there are any) and change the presence or absence of the additional buttons, links, change logos and editor owner details.
 
 On this page you will find the customization parameters available for the [standard branding](https://www.onlyoffice.com/developer-edition-prices.aspx?from=api) of ONLYOFFICE Docs Developer. If you have an extended white label license, please visit [White label page](customization-white-label.md) to find out what additional customization options are available.

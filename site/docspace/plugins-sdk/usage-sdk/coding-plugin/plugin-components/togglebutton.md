@@ -1,3 +1,5 @@
+# ToggleButton
+
 Custom toggle button input.
 
 **Interface**: IToggleButton.

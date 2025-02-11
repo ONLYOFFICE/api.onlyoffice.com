@@ -1,3 +1,5 @@
+# HumHub integration
+
 This [plugin](https://github.com/ONLYOFFICE/onlyoffice-humhub) enables users to edit office documents from [HumHub](https://www.humhub.com/) using ONLYOFFICE Docs.
 
 The plugin is available in the official [HumHub Marketplace](https://marketplace.humhub.com/module/onlyoffice).

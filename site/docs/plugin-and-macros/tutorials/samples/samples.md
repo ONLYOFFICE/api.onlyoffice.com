@@ -2,6 +2,8 @@
 sidebar_position: -1
 ---
 
+# Samples
+
 ## Add comment in cell
 
 Adds comments to spreadsheets.

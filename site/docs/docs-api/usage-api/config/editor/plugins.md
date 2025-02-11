@@ -1,3 +1,5 @@
+# Plugins
+
 The plugins section allows to connect the special add-ons to your ONLYOFFICE Docs installation which will help you add additional features to document editors.
 
 ## autostart

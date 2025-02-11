@@ -2,6 +2,8 @@
 sidebar_position: -5
 ---
 
+# Editing OAuth app
+
 To edit the application settings:
 
 1. Left-click the application in the list.

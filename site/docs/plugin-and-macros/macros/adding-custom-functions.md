@@ -2,6 +2,8 @@
 sidebar_position: -4
 ---
 
+# Adding custom functions
+
 Starting from version 8.1, you can add custom functions to the spreadsheets using the **Macros** plugin:
 
 1. Open the **View** tab and select **Macros**. The macros window will pop up.

@@ -1,3 +1,5 @@
+# Permissions
+
 The document permission section allows to change the permission for the document to be edited and downloaded or not.
 
 ## changeHistory

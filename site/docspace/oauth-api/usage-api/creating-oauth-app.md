@@ -2,6 +2,8 @@
 sidebar_position: -6
 ---
 
+# Creating OAuth app
+
 To create a new OAuth application on your portal:
 
 1. Go to the DocSpace settings.

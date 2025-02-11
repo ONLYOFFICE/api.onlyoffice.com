@@ -2,6 +2,8 @@
 sidebar_position: -1
 ---
 
+# Buttons
+
 To process [buttons](../structure/manifest/manifest.md#variationsbuttons) which are specified in the plugin variations (not in the modal windows / panels), use the **button** method. This function is called when any of the plugin buttons is clicked.
 
 ## Parameters

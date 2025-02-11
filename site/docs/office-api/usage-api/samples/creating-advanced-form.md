@@ -1,3 +1,5 @@
+# Creating advanced form
+
 Create an advanced form with a table structure:
 
 - create a new document, create tables for the text and form inputs (Api/CreateParagraph, Api/CreateTable, ApiDocument/Push, ApiDocumentContent/GetElement, ApiParagraph/AddText, ApiTable/GetRow, ApiTableCell/GetContent, ApiTable/GetCell);

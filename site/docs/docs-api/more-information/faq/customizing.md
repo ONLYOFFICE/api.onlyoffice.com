@@ -2,6 +2,8 @@
 sidebar_position: -7
 ---
 
+# Customizing
+
 ## How to whitelabel ONLYOFFICE Docs?
 
 The below options can be edited for whitelabeling your version of ONLYOFFICE Docs, changing the information which will be displayed at the **About** page and visible to all editor users.

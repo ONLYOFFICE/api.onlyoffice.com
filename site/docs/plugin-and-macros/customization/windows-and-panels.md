@@ -2,6 +2,8 @@
 sidebar_position: -3
 ---
 
+# Windows and panels
+
 Plugins can be represented as modal windows or panels.
 
 ![Modal window](/assets/images/plugins/plugin-window.png)

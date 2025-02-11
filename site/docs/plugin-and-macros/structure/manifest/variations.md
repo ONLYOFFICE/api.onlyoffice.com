@@ -1,3 +1,5 @@
+# Variations
+
 Plugin variations - subplugins that are created inside the origin plugin for the following purposes:
 
 - to perform the main plugin actions;

@@ -1,3 +1,5 @@
+# Creating chart presentation
+
 Create a chart presentation:
 
 - get the first slide in the current presentation (Api/GetPresentation, ApiPresentation/GetSlideByIndex);

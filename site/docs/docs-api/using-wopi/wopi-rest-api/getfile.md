@@ -1,3 +1,5 @@
+# GetFile
+
 `GET /wopi/files/(file_id)/contents`
 
 Retrieves a file from a host for the `HTTP://server/<...>/wopi*/files/<id>/contents` operation.

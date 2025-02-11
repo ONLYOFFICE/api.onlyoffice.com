@@ -1,6 +1,4 @@
----
-sidebar_position: -1
----
+# Hide or unhide rows and columns
 
 ## Description
 

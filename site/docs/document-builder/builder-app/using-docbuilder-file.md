@@ -2,6 +2,8 @@
 sidebar_position: -3
 ---
 
+# Using .docbuilder file
+
 ## Structure used for .docbuilder file
 
 All **.docbuilder** files have simple structure which allows to create them easily. They consist of the following main parts each of them having the appropriate [CDocBuilder](../../document-builder/builder-framework/C++/CDocBuilder/CDocBuilder.md) class method used:

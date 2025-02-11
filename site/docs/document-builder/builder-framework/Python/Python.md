@@ -2,6 +2,8 @@
 sidebar_position: -2
 ---
 
+# Python
+
 For the integration of ONLYOFFICE Document Builder into any application, the Python doctrenderer library is used. 
 
 ## Classes

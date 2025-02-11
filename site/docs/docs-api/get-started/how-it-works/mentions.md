@@ -2,6 +2,8 @@
 sidebar_position: -17
 ---
 
+# Mentions
+
 The reference figure and the steps below explain the process of mentioning users in comments in ONLYOFFICE Docs.
 
 <img alt="Create mentions" src="/assets/images/editor/mentions-create.png" width="720px" />

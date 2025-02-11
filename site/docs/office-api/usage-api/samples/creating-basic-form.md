@@ -1,3 +1,5 @@
+# Creating basic form
+
 Create a basic form with the image and text inputs:
 
 - create a new document, add text to the first paragraph and style it as heading (ApiDocument, ApiStyle, ApiParagraph);

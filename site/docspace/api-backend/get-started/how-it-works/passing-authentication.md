@@ -2,6 +2,8 @@
 sidebar_position: -5
 ---
 
+# Passing authentication
+
 The user needs to perform several easy steps to pass authentication:
 
 1. Send POST request, containing the **UserName** and **Password** parameters to the api/2.0/authentication address:

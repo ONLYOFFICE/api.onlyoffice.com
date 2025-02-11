@@ -1,3 +1,5 @@
+# Commenting spreadsheet errors
+
 This script checks all used cells for formula errors like "#DIV/0!" and comments each error:
 
 - open an existing spreadsheet file to check for errors;

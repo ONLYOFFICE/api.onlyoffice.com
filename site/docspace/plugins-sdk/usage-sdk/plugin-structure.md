@@ -2,6 +2,8 @@
 sidebar_position: -7
 ---
 
+# Plugin structure
+
 Each DocSpace plugin is a folder with files. It must contain the following files required for the plugin to work:
 
 - **assets** - a folder for storing plugin images. Nesting is not supported. The following formats are curretly supported: *.jpg, .jpeg, .png, .svg*.

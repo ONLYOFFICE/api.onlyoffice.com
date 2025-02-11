@@ -1,3 +1,5 @@
+# Typograf
+
 ## Description
 
 Connects the [Typograf](https://github.com/typograf/typograf) assistant to prepare text for publishing by correcting typographical errors. It helps automatically place non-breaking spaces, remove extra spaces, correct minor typos, insert correct quotes, replace hyphens with dashes, and much more.

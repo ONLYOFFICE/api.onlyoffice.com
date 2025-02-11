@@ -2,6 +2,8 @@
 sidebar_position: -11
 ---
 
+# Security
+
 ## How to limit access to my Document Server?
 
 To prevent an unauthorized access to your documents and the substitution of important parameters in ONLYOFFICE Docs requests, it uses a JSON Web Token (JWT) compatible tokens to ensure security. The tokens are signed by the server key, so the client is able to verify that the token is legitimate.

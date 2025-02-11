@@ -2,6 +2,8 @@
 sidebar_position: -4
 ---
 
+# Auth button
+
 1. To preview an auth button in your application, click ![More icon](/assets/images/docspace/more-icon.png) to open the context menu and choose **Auth button**.
 
    ![Auth button](/assets/images/docspace/auth-button.png)

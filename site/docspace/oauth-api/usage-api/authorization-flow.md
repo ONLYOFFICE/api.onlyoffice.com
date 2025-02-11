@@ -2,6 +2,8 @@
 sidebar_position: -2
 ---
 
+# Authorization flow
+
 When the user goes to the authorization link, four scenarios are possible.
 
 ## Scenario 1. User authorization

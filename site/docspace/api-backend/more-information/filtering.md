@@ -2,6 +2,8 @@
 sidebar_position: -2
 ---
 
+# Filtering
+
 Every request to the API supports a certain number of parameters sent in the URL.
 
 For example, the api/2.0/people request can be appended with several parameters:

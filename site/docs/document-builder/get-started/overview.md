@@ -2,6 +2,8 @@
 sidebar_position: -3
 ---
 
+# Overview
+
 **ONLYOFFICE Document Builder** is a C++ library used to create and edit Office Open XML format files (documents, spreadsheets and presentations) and save them to DOCX, XSLX, PPTX and PDF formats.
 
 It allows you to build a document easily without the need to actually run a document processing editor. It also allows the developers to automate document building using the templates you create or inserting the data from some database of yours into a document or a set of documents. It has all the features of a common document editor but is lightweight and can be easily integrated into your document management system, CRM system, etc. using its [JavaScript API](../../../docs/office-api/get-started/overview.md).

@@ -2,6 +2,8 @@
 sidebar_position: -1
 ---
 
+# Debugging
+
 You can debug any Document Builder [component](../get-started/overview.md). To do this, follow the instructions below.
 
 ## Executing from a browser (for plugins and macros)

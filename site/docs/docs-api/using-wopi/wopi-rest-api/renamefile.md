@@ -1,3 +1,5 @@
+# RenameFile
+
 `POST /wopi/files/(file_id)`
 
 Renames a file.

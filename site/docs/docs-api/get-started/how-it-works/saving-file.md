@@ -2,6 +2,8 @@
 sidebar_position: -21
 ---
 
+# Saving file
+
 The reference figure and the steps below explain the process of saving a document in ONLYOFFICE Docs.
 
 <img alt="Saving file" src="/assets/images/editor/saving.jpg" width="720px" />

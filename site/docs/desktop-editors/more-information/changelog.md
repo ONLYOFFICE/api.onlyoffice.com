@@ -2,6 +2,8 @@
 sidebar_position: -2
 ---
 
+# Changelog
+
 The list of changes for ONLYOFFICE Desktop Editors API.
 
 ## Version 8.1

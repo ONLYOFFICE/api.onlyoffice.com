@@ -2,6 +2,8 @@
 sidebar_position: -2
 ---
 
+# Localization
+
 All the plugins are created in English by default. If you want them to be available in your language, you can add translations to them.
 
 ## Translating config.json sections

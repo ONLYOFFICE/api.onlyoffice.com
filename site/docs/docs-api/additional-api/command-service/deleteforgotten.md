@@ -1,3 +1,5 @@
+# deleteForgotten
+
 Deletes a forgotten file.
 
 ## Request example

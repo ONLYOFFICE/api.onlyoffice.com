@@ -1,3 +1,5 @@
+# Changelog
+
 The list of changes for Office JavaScript API.
 
 ## Version 8.3

@@ -1,6 +1,4 @@
----
-sidebar_position: -19
----
+# Change cell font color
 
 ## Description
 

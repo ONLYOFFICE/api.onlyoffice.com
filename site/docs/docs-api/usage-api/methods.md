@@ -2,6 +2,8 @@
 sidebar_position: -3
 ---
 
+# Methods
+
 After initializing **document editor** you will get the object that can be used to call the methods.
 
 ``` ts

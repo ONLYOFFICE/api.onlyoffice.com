@@ -2,6 +2,8 @@
 order: -1
 ---
 
+# Removed users
+
 Users removed from the DocSpace portal are specified with the `LostUser` constant, which is a `UserInfo` object in the following format:
 
 ``` cs

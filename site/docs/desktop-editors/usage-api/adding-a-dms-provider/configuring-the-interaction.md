@@ -2,6 +2,8 @@
 sidebar_position: -8
 ---
 
+# Configuring the interaction
+
 Once your DMS is [added](./adding-a-dms-provider.md) to the connection list, configure the DMS/Desktop Editors interaction:
 
 - [log in](./login-and-logout.md) to your DMS so that it will be displayed in the **Connected clouds** list,

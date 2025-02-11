@@ -1,6 +1,4 @@
----
-sidebar_position: -8
----
+# Import CSV/TXT data
 
 ## Description
 

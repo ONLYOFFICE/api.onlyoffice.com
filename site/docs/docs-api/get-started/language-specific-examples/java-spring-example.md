@@ -2,6 +2,8 @@
 sidebar_position: -6
 ---
 
+# Java Spring example
+
 ## Overview
 
 This example will help you integrate ONLYOFFICE Docs into your web application written in Java with Spring Boot.

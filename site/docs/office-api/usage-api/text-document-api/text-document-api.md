@@ -2,6 +2,8 @@
 sidebar_position: -5
 ---
 
+# Text Document API
+
 Although a text document consists of various elements, most of them are nested in each other and three main elements can be outlined: *paragraph*, *table* and *block content control*. All the other elements are a part of these three larger ones.
 
 The text itself can be added directly to a paragraph, block content control, inline text content control, range or table cell, which is a part of a table structure. But, for the sake of convenience (as it is always easier to work with smaller blocks than with larger ones) the text is usually divided into small text portions called *runs*. Each paragraph can consist either of only one text run or have dozens of them inside, depending on the paragraph complexity.

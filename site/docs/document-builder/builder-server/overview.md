@@ -2,6 +2,8 @@
 sidebar_position: -5
 ---
 
+# Overview
+
 To start integrating **ONLYOFFICE Document Builder** into your own application you need to do the following:
 
 1. Download **ONLYOFFICE Document Builder** application and install it to your computer:

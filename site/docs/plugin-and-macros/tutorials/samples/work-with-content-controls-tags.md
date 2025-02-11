@@ -1,3 +1,5 @@
+# Work with content controls tags
+
 ## Description
 
 Gets the list of content controls tags.

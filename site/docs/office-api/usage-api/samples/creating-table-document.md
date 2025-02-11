@@ -1,3 +1,5 @@
+# Creating table document
+
 Create a document with a styled table filled with array-based values:
 
 - create an empty document with a table (Api, ApiDocument/CreateTable)

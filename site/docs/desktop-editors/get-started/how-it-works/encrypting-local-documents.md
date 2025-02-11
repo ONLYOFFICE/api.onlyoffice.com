@@ -2,6 +2,8 @@
 sidebar_position: -2
 ---
 
+# Encrypting local documents
+
 To protect your local documents, spreadsheets and presentations, encrypt them with a simple symmetric encryption plugin. The steps below explain how to do it.
 
 ## Step 1. Creating the Encryption plugin for the editor

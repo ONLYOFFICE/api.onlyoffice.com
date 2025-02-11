@@ -2,6 +2,8 @@
 sidebar_position: -4
 ---
 
+# Config
+
 The *config.json* file is generated based on the data from the *package.json* file.
 
 ## author

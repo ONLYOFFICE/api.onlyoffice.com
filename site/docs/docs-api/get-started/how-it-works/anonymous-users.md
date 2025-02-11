@@ -2,6 +2,8 @@
 sidebar_position: -11
 ---
 
+# Anonymous users
+
 The reference figure and the steps below explain the process of setting a name to an anonymous user in ONLYOFFICE Docs.
 
 <img alt="Anonymous" src="/assets/images/editor/anonymous-user.png" width="720px" />

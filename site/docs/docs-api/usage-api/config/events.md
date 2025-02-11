@@ -1,3 +1,5 @@
+# Events
+
 The events section allows to change all the functions pertaining to the events.
 
 ## onAppReady

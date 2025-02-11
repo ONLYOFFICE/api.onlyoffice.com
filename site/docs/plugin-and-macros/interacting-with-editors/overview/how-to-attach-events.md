@@ -2,6 +2,8 @@
 sidebar_position: -1
 ---
 
+# How to attach events
+
 There are two options to attach events from the editor.
 
 ## Option 1. Using the attachEvent method (works for all versions)

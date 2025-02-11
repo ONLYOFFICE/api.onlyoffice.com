@@ -2,6 +2,8 @@
 sidebar_position: -9
 ---
 
+# Key concepts
+
 Learn the following concepts that are vital to understand the requirements for integrating with WOPI clients. More information can be found [here](https://learn.microsoft.com/en-us/microsoft-365/cloud-storage-partner-program/rest/concepts).
 
 ## File ID

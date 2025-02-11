@@ -2,6 +2,8 @@
 sidebar_position: -3
 ---
 
+# Developing
+
 Now that all the preparation work is done, you can start developing your plugin.
 
 ## Step 1. Create a plugin template

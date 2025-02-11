@@ -2,6 +2,8 @@
 sidebar_position: -2
 ---
 
+# Conversion tables
+
 Below you can find tables with formats that are available for conversion in different types of editors.
 
 ## Text document file formats

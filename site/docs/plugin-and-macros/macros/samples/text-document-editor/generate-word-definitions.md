@@ -1,6 +1,4 @@
----
-order:
----
+# Generate word definitions
 
 ## Description
 

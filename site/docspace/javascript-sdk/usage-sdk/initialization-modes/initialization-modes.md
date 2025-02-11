@@ -2,6 +2,8 @@
 sidebar_position: -5
 ---
 
+# Initialization modes
+
 *api.js* allows you to initialize the SDK in the following modes:
 
 - [manager](manager.md) - displays a list of entities depending on the specified *rootPath*;

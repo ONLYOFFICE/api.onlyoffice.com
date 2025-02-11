@@ -2,6 +2,8 @@
 sidebar_position: -10
 ---
 
+# Config
+
 For the WOPI protocol setup, it is necessary to edit the WOPI parameters in the configuration file, which can be found (or created) at the following path:
 
 For Linux - `/etc/onlyoffice/documentserver/local.json`.

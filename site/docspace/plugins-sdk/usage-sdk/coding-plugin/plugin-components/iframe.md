@@ -1,3 +1,5 @@
+# IFrame
+
 A component that is used to embed a third-party website into a modal window or the settings page.
 
 **Interface**: [IFrame](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/components/IFrame.ts).

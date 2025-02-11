@@ -2,6 +2,8 @@
 sidebar_position: -3
 ---
 
+# Debugging
+
 To debug ONLYOFFICE macros, follow the instructions below.
 
 1. Open the **View** tab and click **Macros**.

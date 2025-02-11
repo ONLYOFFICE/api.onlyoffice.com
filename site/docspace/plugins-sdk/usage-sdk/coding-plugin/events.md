@@ -2,6 +2,8 @@
 sidebar_position: -2
 ---
 
+# Events
+
 The events from the [Actions](./plugin-message.md#actions) collection are processed on the portal side. The specified actions are performed depending on the set of values:
 
 ## updateProps

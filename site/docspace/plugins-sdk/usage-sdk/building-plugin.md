@@ -2,6 +2,8 @@
 sidebar_position: -5
 ---
 
+# Building plugin
+
 To build a plugin, you need the *yarn* package manager to be installed. After that, follow the instructions below:
 
 1. Open the terminal and go to the plugin root folder:

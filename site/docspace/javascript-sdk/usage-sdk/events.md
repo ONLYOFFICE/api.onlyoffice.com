@@ -2,6 +2,8 @@
 sidebar_position: -3
 ---
 
+# Events
+
 When initializing the SDK frame, a number of events can be passed to the configuration, which will be executed at the appropriate moment:
 
 ## onAppError

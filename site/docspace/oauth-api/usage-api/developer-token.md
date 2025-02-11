@@ -2,6 +2,8 @@
 sidebar_position: -3
 ---
 
+# Developer token
+
 You can generate a developer access token that allows you to make API calls without authorization. To obtain access tokens for other users, apply the standard OAuth flow.
 
 For scoped apps, the token will have the same scope as the app.

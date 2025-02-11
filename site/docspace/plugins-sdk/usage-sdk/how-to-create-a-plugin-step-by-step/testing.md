@@ -2,6 +2,8 @@
 sidebar_position: -2
 ---
 
+# Testing
+
 To check the plugin's functionality and fix any bugs that may arise, test the plugin:
 
 1. Build the prepared plugin following the instructions [here](../building-plugin.md).

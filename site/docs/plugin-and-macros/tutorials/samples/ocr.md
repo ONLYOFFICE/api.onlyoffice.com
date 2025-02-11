@@ -1,3 +1,5 @@
+# OCR
+
 ## Description
 
 Connects the [TesseractJS-Core library](https://tesseract.projectnaptha.com/) for extracting text from an image (*.png* *.jpg*) and inserting it into the document. OCR supports more than 60 languages.

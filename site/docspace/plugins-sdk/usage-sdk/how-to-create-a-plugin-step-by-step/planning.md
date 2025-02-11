@@ -2,6 +2,8 @@
 sidebar_position: -4
 ---
 
+# Planning
+
 **Step 1**. Install all the necessary packages and programs
 
 - ONLYOFFICE DocSpace on-premises.

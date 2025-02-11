@@ -1,3 +1,5 @@
+# Key generation
+
 To check if the desktop app supports encryption, call the following command:
 
 ``` ts

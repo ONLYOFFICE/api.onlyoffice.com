@@ -1,3 +1,5 @@
+# Create file in selected folder
+
 Creates a file in the selected folder and opens it in the editors.
 
 ![Create file sample](/assets/images/docspace/js-sdk-create-file.svg)

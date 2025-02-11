@@ -1,3 +1,5 @@
+# Change background color
+
 ## Description
 
 Sets blue color as the background of even indexed slides, if it is odd sets an image.

@@ -1,3 +1,5 @@
+# Filling spreadsheet
+
 Fill an empty spreadsheet with the data stored in arrays:
 
 - create a loop for columns and nest another loop for rows;

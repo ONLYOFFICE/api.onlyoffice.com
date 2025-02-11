@@ -2,6 +2,8 @@
 sidebar_position: -1
 ---
 
+# Using WOPI
+
 ## How to enable WOPI?
 
 To enable WOPI, set the [wopi.enable](https://helpcenter.onlyoffice.com/installation/docs-developer-configuring.aspx#wopi-enable) parameter in the ONLYOFFICE Docs config to **true**.

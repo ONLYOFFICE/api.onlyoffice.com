@@ -2,6 +2,8 @@
 sidebar_position: -5
 ---
 
+# InfoPanelPlugin
+
 The plugin that is embedded as a separate tab in the file info panel.
 
 **Interface**: IInfoPanelPlugin.

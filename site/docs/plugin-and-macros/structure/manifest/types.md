@@ -2,6 +2,8 @@
 sidebar_position: -2
 ---
 
+# Types
+
 The plugin type is specified with the [type](./manifest.md#variationstype) parameter in the *config.json* file. The following plugin types can be distinguished.
 
 ## System

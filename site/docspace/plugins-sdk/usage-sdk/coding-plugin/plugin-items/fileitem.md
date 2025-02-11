@@ -2,6 +2,8 @@
 sidebar_position: -2
 ---
 
+# FileItem
+
 Describes an item that allows the plugin to control clicking on the specified file type. It does not work with the files that already have some actions.
 
 ## extension

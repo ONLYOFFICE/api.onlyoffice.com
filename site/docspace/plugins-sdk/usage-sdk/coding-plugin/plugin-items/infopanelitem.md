@@ -2,6 +2,8 @@
 sidebar_position: -5
 ---
 
+# InfoPanelItem
+
 Describes an item that will be embedded in the file info panel as a separate tab.
 
 ## key

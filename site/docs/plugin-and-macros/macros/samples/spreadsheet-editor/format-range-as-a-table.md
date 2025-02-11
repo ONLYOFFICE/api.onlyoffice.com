@@ -1,6 +1,4 @@
----
-sidebar_position: -14
----
+# Format range as table
 
 ## Description
 

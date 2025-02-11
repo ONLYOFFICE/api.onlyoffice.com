@@ -1,3 +1,5 @@
+# Document
+
 The document section allows to change all the parameters pertaining to the document (title, url, file type, etc.).
 
 ## fileType

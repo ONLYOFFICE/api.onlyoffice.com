@@ -2,6 +2,8 @@
 sidebar_position: -1
 ---
 
+# Using
+
 Now that your plugin is tested and works properly, you can [add](../adding-plugin.md#uploading-plugins) it to the DocSpace server version and start using it.
 
 If you have any questions about DocSpace plugins, ask our developers on [ONLYOFFICE forum](https://forum.onlyoffice.com/c/docspace/46) (registration required).

@@ -2,6 +2,8 @@
 sidebar_position: -2
 ---
 
+# How to call commands
+
 To call commands and send the data back to the editor, define the **callCommand** method. It allows the plugin to send structured data that can be inserted to the resulting document file (formatted paragraphs, tables, text parts, and separate words, etc.).
 
 *The callback is* the result that the command returns. It is an optional parameter. In case it is missing, the *window.Asc.plugin.onCommandCallback* function will be used to return the result of the command execution.

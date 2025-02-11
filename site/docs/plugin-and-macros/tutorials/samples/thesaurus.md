@@ -1,3 +1,5 @@
+# Thesaurus
+
 ## Description
 
 Connects [Big Huge Thesaurus](https://words.bighugelabs.com/) to search for word synonyms and antonyms.

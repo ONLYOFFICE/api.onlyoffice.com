@@ -2,6 +2,8 @@
 sidebar_position: -1
 ---
 
+# FilePlugin
+
 The plugin that can interact with the file list.
 
 **Interface**: IFilePlugin.

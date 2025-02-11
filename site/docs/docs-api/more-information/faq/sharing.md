@@ -2,6 +2,8 @@
 sidebar_position: -10
 ---
 
+# Sharing
+
 ## How to open a document with "track changes" mode enabled?
 
 To open the document with the *track changes* mode enabled, the *document.permissions* parameter is used (see the complete structure of ONLYOFFICE Docs configuration object [here](../../usage-api/advanced-parameters.md)).

@@ -1,3 +1,5 @@
+# Input
+
 Input field for single-line strings.
 
 **Interface**: IInput.

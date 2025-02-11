@@ -1,3 +1,5 @@
+# Chamilo integration
+
 This [plugin](https://github.com/ONLYOFFICE/onlyoffice-chamilo) enables users to edit office documents within [Chamilo](https://chamilo.org/en/) using ONLYOFFICE Docs.
 
 ## Features

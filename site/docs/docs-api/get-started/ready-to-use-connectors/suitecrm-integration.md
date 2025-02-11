@@ -1,3 +1,5 @@
+# SuiteCRM integration
+
 This [plugin](https://github.com/ONLYOFFICE/onlyoffice-suitecrm) enables users to edit office documents from [SuiteCRM](https://suitecrm.com/) using ONLYOFFICE Docs.
 
 ## Features

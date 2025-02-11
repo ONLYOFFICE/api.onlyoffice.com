@@ -1,6 +1,4 @@
----
-sidebar_position: -1
----
+# Sum of highlighted cells
 
 ## Description
 

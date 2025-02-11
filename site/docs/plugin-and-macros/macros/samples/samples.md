@@ -2,9 +2,23 @@
 sidebar_position: -1
 ---
 
+# Samples
+
 The following examples will show you how to use ONLYOFFICE macros and compare the JavaScript code with Microsoft Visual Basic for Applications code so that you could see the difference and understand what can be done to convert the VBA code to ONLYOFFICE macros.
 
 ## Text document editor
+
+### Add state from zip code
+
+In this example we are adding the "State" label and the text form prefilled with "CA" if the zip code of California is entered.
+
+[More](text-document-editor/add-state-from-zip-code.md)
+
+### Generate hyperlinks
+
+In this example we are generating and inserting hyperlinks instead of text URLs.
+
+[More](text-document-editor/generate-hyperlinks.md)
 
 ### Generate word definitions
 
@@ -24,6 +38,12 @@ In this example we are inserting a unique id into a form document.
 
 [More](text-document-editor/insert-unique-id.md)
 
+### Mask card numbers
+
+In this example we are applying the mask to all forms with the specified form key to hide card numbers.
+
+[More](text-document-editor/mask-card-numbers.md)
+
 ### Remove extra spaces
 
 In this example we are removing extra spaces in the text document. 
@@ -35,6 +55,18 @@ In this example we are removing extra spaces in the text document.
 In this example we are replacing words in the text editor.
 
 [More](text-document-editor/replace-words-in-document.md)
+
+### Reset all forms
+
+In this example we are clearing all fields if necessary, for example after printing the document. 
+
+[More](text-document-editor/reset-all-forms.md)
+
+### Set USA date format
+
+In this example we are setting all date form formats to USA one.
+
+[More](text-document-editor/set-usa-date-format.md)
 
 ## Spreadsheet editor
 
@@ -52,7 +84,7 @@ In this example we are adding comments and changing the background colors of sel
 
 ### Change cell background color
 
-In this example we are seting the background color of the cell B3 to blue.
+In this example we are setting the background color of the cell B3 to blue.
 
 [More](spreadsheet-editor/change-cell-background-color.md)
 
@@ -67,6 +99,12 @@ In this example we are seting the font color of the cell B4 to red.
 In this example we are completing address information in the spreadsheet.
 
 [More](spreadsheet-editor/complete-address-information.md)
+
+### Currency conversion
+
+In this example we are converting a base currency into multiple desired target currencies.
+
+[More](spreadsheet-editor/currency-conversion.md)
 
 ### Find company logos
 
@@ -159,6 +197,12 @@ In this example we are writing the data (the "Hello world" phrase) to fourth col
 [More](spreadsheet-editor/write-data-to-worksheet-cell.md)
 
 ## Presentation editor
+
+### Change background color
+
+In this example we are setting blue color as the background of even indexed slides, if it is odd sets an image.
+
+[More](presentation-editor/change-background-color.md)
 
 ### Change font family and size
 

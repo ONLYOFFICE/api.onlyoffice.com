@@ -1,3 +1,5 @@
+# Operations with encrypted files
+
 To perform operations with encrypted files, including file encryption, decryption, creation, editing and sharing, ONLYOFFICE uses the individual credentials of users (RSA key pair) and a document password (document encryption key). The processes of uploading and sharing encrypted files are described here.
 
 ## Uploading encrypted documents

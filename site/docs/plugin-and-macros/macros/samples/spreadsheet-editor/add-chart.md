@@ -1,6 +1,4 @@
----
-sidebar_position: -13
----
+# Add chart
 
 ## Description
 

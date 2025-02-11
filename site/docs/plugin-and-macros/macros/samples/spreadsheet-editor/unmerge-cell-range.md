@@ -1,6 +1,4 @@
----
-sidebar_position: -16
----
+# Unmerge cell range
 
 ## Description
 

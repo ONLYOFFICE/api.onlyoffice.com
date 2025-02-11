@@ -1,6 +1,4 @@
----
-sidebar_position: -2
----
+# Replace words in document
 
 ## Description
 

@@ -2,6 +2,8 @@
 sidebar_position: -6
 ---
 
+# ContextMenuItem
+
 Describes an item that will be embedded in the **Actions** item of the file context menu.
 
 <img alt="Context menu item" src="/assets/images/docspace/context-menu-plugin.png" width="400px" />

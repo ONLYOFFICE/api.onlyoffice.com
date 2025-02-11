@@ -1,6 +1,4 @@
----
-sidebar_position: -1
----
+# Add comments and change cell colors in spreadsheet
 
 ## Description
 

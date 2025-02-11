@@ -2,6 +2,8 @@
 sidebar_position: -7
 ---
 
+# Java example
+
 ## Overview
 
 This example will help you integrate ONLYOFFICE Docs into your web application written in Java.

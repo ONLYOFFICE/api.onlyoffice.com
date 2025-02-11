@@ -2,6 +2,8 @@
 sidebar_position: -1
 ---
 
+# Lifecycle of opening editor
+
 The lifecycle of [opening](./opening-file.md) an editor can be defined by the sequence of the events.
 
 Add the script initializing the Document Editor with the configuration for the document you want to open:

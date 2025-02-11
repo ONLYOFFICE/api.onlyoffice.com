@@ -2,6 +2,8 @@
 sidebar_position: -4
 ---
 
+# Config
+
 The configuration parameters describe the behavior and display options of the DocSpace elements.
 
 ## buttonColor

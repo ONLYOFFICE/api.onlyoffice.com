@@ -1,3 +1,5 @@
+# ModalDialog
+
 Modal dialog.
 
 **Interface**: IModalDialog.

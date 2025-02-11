@@ -1,3 +1,5 @@
+# SharePoint integration
+
 This [solution](https://github.com/ONLYOFFICE/onlyoffice-sharepoint) enables users to edit office documents from SharePoint using ONLYOFFICE Docs.
 
 ## Features

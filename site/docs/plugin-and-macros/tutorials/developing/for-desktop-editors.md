@@ -2,6 +2,8 @@
 sidebar_position: -1
 ---
 
+# For desktop editors
+
 To develop a plugin for ONLYOFFICE desktop editors, follow the instructions below.
 
 1. Create a folder on your machine and put there the [index.html](../../structure/entry-point.md) and [config.json](../../structure/manifest/manifest.md) files.

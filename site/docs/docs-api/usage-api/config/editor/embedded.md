@@ -1,3 +1,5 @@
+# Embedded
+
 The embedded section is for the **embedded** document type only (see the [config](../config.md#type) section to find out how to define the **embedded** document type). It allows to change the settings which define the behavior of the buttons in the embedded mode.
 
 ## embedUrl

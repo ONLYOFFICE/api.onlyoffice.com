@@ -2,6 +2,8 @@
 sidebar_position: -4
 ---
 
+# Java
+
 For the integration of ONLYOFFICE Document Builder into any application, the Java doctrenderer library is used.
 
 ## Classes

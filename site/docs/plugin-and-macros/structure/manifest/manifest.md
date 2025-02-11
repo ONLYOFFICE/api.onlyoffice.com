@@ -2,6 +2,8 @@
 sidebar_position: -5
 ---
 
+# Manifest
+
 The *config.json* file is plugin configuration file containing the information about the main plugin data needed to register the plugin in the editors.
 
 ## baseUrl

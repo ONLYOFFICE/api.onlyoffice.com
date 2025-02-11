@@ -1,6 +1,4 @@
----
-sidebar_position: -10
----
+# Insert text
 
 ## Description
 

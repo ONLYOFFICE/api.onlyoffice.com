@@ -1,6 +1,4 @@
----
-sidebar_position: -12
----
+# Highlight duplicates
 
 ## Description
 

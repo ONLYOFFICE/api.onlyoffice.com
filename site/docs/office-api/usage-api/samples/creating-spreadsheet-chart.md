@@ -1,3 +1,5 @@
+# Creating spreadsheet chart
+
 Creates a custom chart filled with array-based values in the spreadsheet:
 
 - create a spreadsheet and fill top cells with data (ApiRange/SetValue);

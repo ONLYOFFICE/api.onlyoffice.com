@@ -2,6 +2,8 @@
 sidebar_position: -2
 ---
 
+# Overview
+
 The plugins and macros can interact with the editors using different events, methods, and commands. Here you will find how to use them.
 
 - [How to attach events](how-to-attach-events.md)

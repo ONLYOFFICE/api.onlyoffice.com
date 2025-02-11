@@ -1,3 +1,5 @@
+# Symbol table
+
 ## Description
 
 Inserts special symbols into the document.

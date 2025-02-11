@@ -2,6 +2,8 @@
 sidebar_position: -1
 ---
 
+# Viewing active authorizations
+
 Each user can see the applications they have granted access to on the profile page, on the **Authorized apps** tab.
 
 ![Authorized apps](/assets/images/docspace/authorized-apps.png)

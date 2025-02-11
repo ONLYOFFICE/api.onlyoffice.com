@@ -2,6 +2,8 @@
 sidebar_position: -1
 ---
 
+# API vs WOPI
+
 You can integrate [ONLYOFFICE Docs](https://www.onlyoffice.com/office-suite.aspx) with any cloud service using either API or WOPI.
 
 The table below will help you find out the difference between these options.

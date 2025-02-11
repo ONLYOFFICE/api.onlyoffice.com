@@ -1,6 +1,9 @@
 ---
 sidebar_position: -3
+sidebar_label: Windows
 ---
+
+# Running in debug mode on Windows
 
 There are two ways to launch the application on Windows: through the shortcut or the terminal.
 

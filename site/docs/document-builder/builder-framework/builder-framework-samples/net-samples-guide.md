@@ -2,6 +2,8 @@
 sidebar_position: -3
 ---
 
+# .Net samples guide
+
 ## Before you start
 
 For the samples to work correctly, make sure that two conditions are met:

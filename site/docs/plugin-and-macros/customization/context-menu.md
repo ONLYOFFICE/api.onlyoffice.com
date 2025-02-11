@@ -2,6 +2,8 @@
 sidebar_position: -5
 ---
 
+# Context menu
+
 The plugin can be accessed via the context menu.
 
 ![Context menu item](/assets/images/plugins/context-menu-item.png)

@@ -1,3 +1,5 @@
+# info
+
 Requests a document status and the list of the identifiers of the users who opened the document for editing. The response will be sent to the [callback handler](../../usage-api/callback-handler.md).
 
 ## Request example

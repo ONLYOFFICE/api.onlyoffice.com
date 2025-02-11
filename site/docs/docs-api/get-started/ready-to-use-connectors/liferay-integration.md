@@ -1,3 +1,5 @@
+# Liferay integration
+
 This [plugin](https://github.com/ONLYOFFICE/onlyoffice-liferay) enables users to edit office documents from [Liferay](https://www.liferay.com/) using ONLYOFFICE Docs.
 
 ## Features

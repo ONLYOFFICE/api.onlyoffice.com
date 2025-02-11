@@ -2,6 +2,8 @@
 sidebar_position: 6
 ---
 
+# System
+
 Displays a blank page with the loader. It allows you to call system methods.
 
 ![System mode](/assets/images/docspace/system-mode.png)

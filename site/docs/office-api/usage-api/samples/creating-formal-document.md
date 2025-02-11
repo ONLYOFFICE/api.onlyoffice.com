@@ -1,3 +1,5 @@
+# Creating formal document
+
 Create a document following the structure of a formal paper:
 
 - create a title page with a document heading and subtitle (Api, ApiDocumentContent, ApiDrawing);

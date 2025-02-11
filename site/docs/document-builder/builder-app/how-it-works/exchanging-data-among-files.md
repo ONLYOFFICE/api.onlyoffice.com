@@ -2,6 +2,8 @@
 sidebar_position: -2
 ---
 
+# Exchanging data among files
+
 There is always a chance that you will need to exchange the data among the documents. For example, you might need to open some document, copy style from it, or some data values, close the document, create a new one and paste the copied data to it or use it to form some report.
 
 But once you close the file (using the [CDocBuilder.CloseFile](../../builder-framework/C++/CDocBuilder/CloseFile.md) method), all the variable data you worked with will be void and cleared, and you will not be able to use it with any other file.

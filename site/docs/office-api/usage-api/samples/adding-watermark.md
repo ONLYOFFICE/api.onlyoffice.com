@@ -1,3 +1,5 @@
+# Adding watermark
+
 Create a document with a watermark with custom settings:
 
 - create an empty page with a watermark (Api, ApiDocument/InsertWatermark);

@@ -2,6 +2,8 @@
 sidebar_position: -1
 ---
 
+# Changelog
+
 The list of changes for ONLYOFFICE Plugins and Macros API.
 
 ## Version 8.3

@@ -2,6 +2,8 @@
 sidebar_position: -20
 ---
 
+# Co-editing
+
 The reference figure and the steps below explain the process of co-editing a document in ONLYOFFICE Docs.
 
 <img alt="Co-editing scheme" src="/assets/images/editor/coedit.jpg" width="720px" />

@@ -2,6 +2,8 @@
 sidebar_position: -4
 ---
 
+# Toolbar
+
 Plugins can be placed on the toolbar: create their own tabs and fill them, add buttons to the standard tabs.
 
 ![Toolbar item](/assets/images/plugins/toolbar-plugins.png)

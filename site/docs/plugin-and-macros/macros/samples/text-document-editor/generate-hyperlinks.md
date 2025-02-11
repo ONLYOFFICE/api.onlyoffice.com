@@ -1,3 +1,5 @@
+# Generate hyperlinks
+
 ## Description
 
 Generates and inserts hyperlinks instead of text URLs.

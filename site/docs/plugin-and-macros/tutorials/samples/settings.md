@@ -1,3 +1,5 @@
+# Settings
+
 ## Description
 
 Protects a document using a watermark.
