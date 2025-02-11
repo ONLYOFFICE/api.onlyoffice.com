@@ -10,24 +10,6 @@ Starting from version 8.1, it is recommended to add the [shardkey](../../get-sta
 
 > In **ONLYOFFICE Docs** prior to version 4.2 the GET request with the parameters in the *QueryString* were used.
 
-- [async](#async)
-- [codePage](#codepage)
-- [delimiter](#delimiter)
-- [documentLayout](#documentlayout)
-- [documentRenderer](#documentrenderer)
-- [filetype](#filetype)
-- [key](#key)
-- [outputtype](#outputtype)
-- [password](#password)
-- [pdf](#pdf)
-- [region](#region)
-- [spreadsheetLayout](#spreadsheetlayout)
-- [thumbnail](#thumbnail)
-- [title](#title)
-- [token](#token)
-- [url](#url)
-- [watermark](#watermark)
-
 ## Request parameters and their description
 
 ### async
