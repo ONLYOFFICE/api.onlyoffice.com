@@ -4,7 +4,7 @@ sidebar_label: White label
 
 # Customization - White label
 
-The customization section allows to customize the editor interface so that it looked like your other products (if there are any) and change the presence or absence of the additional buttons, links, change logos and editor owner details.
+The customization section allows you to customize the editor interface so that it looks like your other products (if there are any) and change the presence or absence of additional buttons, links, change logos and other details of the editor's owner.
 
 On this page you will find the customization parameters available only for the [extended white label license](https://www.onlyoffice.com/developer-edition-prices.aspx?from=api) of ONLYOFFICE Docs Developer. To request a quote, please contact our sales team at [sales@onlyoffice.com](mailto:sales@onlyoffice.com).
 
