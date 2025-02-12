@@ -1,0 +1,63 @@
+---
+id: get-contact-types
+title: "Get contact types"
+description: "Returns a list of all the contact types available on the portal."
+sidebar_label: "Get contact types"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVN9P2zAQ/lci7zUipSBN4g0BYtUmbaJFe0A8XNNrY3Bi7+x0dFH+993ZaWlhIG1aH1Lb933387M7FWDl1dmdKqkuLmwToAxe3efKY9mSDhu2deq8DZUl/QuCts0nhAWScIhXKlc/GYfqvmfWAn1J2glMnakbDC01PoPMaB8yu8zAmCxUmJUpUhY2Dtm+Bm1gbjCzTTQ7SwHMEfsm9M42HjnHTo1HI/k7DPLlPdfsQfbYBCGCc0aXsYjiwQu7U76ssAZZCYH9ARFsmMc11X7v3M4fsAxscGQdUtAppxs07HCNE4Ff2DZFGjiaQ6+4V7laWqohpKOTMR/gE9TOCOhY9bma6SCbHdMH0s3qAJcgjL3cr/89xj6QeRfWWHqf8QE+LkvuMqOnPIOvFCf9D/VMLv+aNj45VT1TQ2qFGtQ4Yx/fiUfHDnr55ep0dPxaB7cNDCrFRfRTI28XbFlhHBuEijcFOF2Mj0aFCH7QShHzfNb8VDSRxvtH5T9rxenPGMUiGVTJnKsGarEecGNKulnaSN+VWNdtwxGzKdIaKbu5ms6y828TdsJbnypjgaEP0lVnfaghTn2IcY3hleIXh/rYXYD/cR+HwgM+hcIZ0FFYLRkJlDp8J11hJPdYbh/Vwx2EeHkinx+KiisRbNfNweMtmb6X4x8tkjw5vFwDaclBdhyj2r46nXrklnN3yxKduFyDadMwXtxueZB2Iri+mjFWJHI4v8c4v2Eh3remZrPn+3CU+ZCCfPv8DUrXJXVwYVt8Mr3J2OknoaW396z332Mq5/4=
+sidebar_class_name: "get api-method"
+info_path: site/openapi/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get contact types"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/crm/contact/type"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns a list of all the contact types available on the portal.
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"List of all the contact types","content":{"application/json":{"schema":{"type":"array","items":{"type":"object","properties":{"RelativeItemsCount":{"type":"integer","format":"int32","example":"1"},"Title":{"type":"string","example":"Title"},"Description":{"type":"string","example":"Description"},"Color":{"type":"string","example":"#a7fc00"},"SortOrder":{"type":"integer","format":"int32","example":"1"},"ID":{"type":"integer","format":"int32","example":"1234"}},"title":"ContactTypeWrapper"}}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

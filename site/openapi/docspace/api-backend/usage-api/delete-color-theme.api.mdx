@@ -1,0 +1,71 @@
+---
+id: delete-color-theme
+title: "Delete a color theme"
+description: "Deletes the portal color theme with the ID specified in the request."
+sidebar_label: "Delete a color theme"
+hide_title: true
+hide_table_of_contents: true
+api: eJztVktvGjEQ/isrnxFLIVJbbhEkUtRUikqiHiIUmV2TdeK1XXuWhK74752xd2GBPC49RTmEeOflme8be1wz4PeejW/ZTABIfe+TNJmYsjQ68Y2EzXvMWOE4SKMvcjZmuVACxMQo464LUQrWY5Y7XqLQUbCaafxAQ5mjSmpc/amEW+NHLnzmpKVQKL0yDrhKgIIkF1PU+wzXnI1rBmsbQmgQ98KhamlcySGKRkMUiGdeWoVGJ19Hmw1m6YS3RnvhyX84GNC/NzZsCxwnWeXBlElGFR0oe7hSIgORJ6jTBnqJkqUE3D8zmJuGkKx4htQqTrXWx0WYxQOGIJgcIQkyphh28h077hwnlCSIkuSbQ8Cuo0eP6UopvqDiwVWigwWCLymnL8PRCcIJDotAR2+wJsoSfRfGKMF1dN3McZO2xBdx389g1pq+RQhtjmEjUO/HvGwAfScgRuR5LsmJq6sOkkuuPGIAEsiWnc4m/d9i0T+1kv5+GuxX3//VNMcUTH8S+N41sG+7H5Us7GOtklno+PTBm09WPwSr4ZR+0vkx6KSdTgZfju/4G80rKIyTfxGAYDQ6Njo3biHzXOjQGF5klZOwDsxwn91RhLtHQQKcKpyAfEIDweY0Z/ZDTcM09DQ3EhvnS3eQPEkogu5imngrMrmUOEukDjIncDB66GN8nJ6F2U3XMFOhwO+UW5kO+4O0HUlpCA/N5PXCrdqxWzmFDgWAHaepMhlXhfEw/jb4PkyPCSV9Et0ZldWiMMu2Lb+Pxe4IWPlD0Blo5vyeWTPxM2MepQjwSr00wbvD/blU4YxQ7jGf1ZDYsphwycMJbYJHfBPeRfWwmHo3jP8XH02pncmO2QWA64aZW8IBLZGbwEPzXKKHwZYfhJUoIOO6XnAvbpzabEgcX0TEWi493RL59oy8Wtrxe+nFLANZ8fG14qoig0DwijsZ76NbulAKbGyknlKIHqdZJix0vLph550WnZ5dnl2foSGRvt8XsQOaBYVuVXrdCXzQMHF7+t30XvGo69h0CF5rH1WvejTlbeGgGvDW+AclNrwY
+sidebar_class_name: "delete api-method"
+info_path: site/openapi/docspace/api-backend/usage-api/asc-files
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Delete a color theme"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"delete"}
+  path={"/api/2.0/settings/colortheme"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Deletes the portal color theme with the ID specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"id","in":"query","description":"Portal theme ID","schema":{"type":"integer","format":"int32","example":473}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Portal theme settings: custom color theme settings, selected or not, limit","content":{"text/plain":{"schema":{"type":"object","properties":{"themes":{"type":"array","items":{},"description":"Themes","nullable":true,"example":[{"int":1234,"string":"some text","boolean":true}]},"selected":{"type":"integer","description":"Selected","format":"int32","example":1234},"limit":{"type":"integer","description":"Limit","format":"int32","example":1234}},"additionalProperties":false,"title":"ASC.Web.Api.ApiModels.ResponseDto.CustomColorThemesSettingsDto"}},"application/json":{"schema":{"type":"object","properties":{"themes":{"type":"array","items":{},"description":"Themes","nullable":true,"example":[{"int":1234,"string":"some text","boolean":true}]},"selected":{"type":"integer","description":"Selected","format":"int32","example":1234},"limit":{"type":"integer","description":"Limit","format":"int32","example":1234}},"additionalProperties":false,"title":"ASC.Web.Api.ApiModels.ResponseDto.CustomColorThemesSettingsDto"}},"text/json":{"schema":{"type":"object","properties":{"themes":{"type":"array","items":{},"description":"Themes","nullable":true,"example":[{"int":1234,"string":"some text","boolean":true}]},"selected":{"type":"integer","description":"Selected","format":"int32","example":1234},"limit":{"type":"integer","description":"Limit","format":"int32","example":1234}},"additionalProperties":false,"title":"ASC.Web.Api.ApiModels.ResponseDto.CustomColorThemesSettingsDto"}}}},"401":{"description":"Unauthorized"},"403":{"description":"Forbidden"}}}
+>
+  
+</StatusCodes>
+
+
+      

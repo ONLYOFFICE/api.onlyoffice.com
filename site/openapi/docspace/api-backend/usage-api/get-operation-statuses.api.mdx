@@ -1,0 +1,63 @@
+---
+id: get-operation-statuses
+title: "Get active operations"
+description: "Returns a list of all the active operations."
+sidebar_label: "Get active operations"
+hide_title: true
+hide_table_of_contents: true
+api: eJztV0tP4zAQ/iuWz94mLa+ltwoWhBbEClhxqCrkptPG4MRe2+mCqv73nXHSNi27K3Hj0EszM/G8vpl8qhc8yJnn/SG/UBo8S9itBSeDMqXnI8HNSrua8D6fQVi/vg8yVB48F9yBt3ge5f6C99KUHhPwmVOWTqLjtfKBmSmbYhJmNhkEz0wZoAzkEuA1JFZLVZLmsxwKGe1vFjCGGT9DFtDFOooQVJ1PTVpnfHCqnOGZstJajjXagqtAcHiVhSWVd0+Penwp+LoRcjcl3E4RhQWHsioIjhszB4xzZuwbPs5BQyD93PwutZETFG+kexn4O4jKVWGNC9GhnEOUziurVSbRDXHcrW8bniFlY18YPQSjnKjQQ7A6M6q1gIamAjI1omCbWijKWhGsrguNtUDBY30xfpQw4qpQCrmSR7wNWkRjKdbwpKIreuJAHIojcSxONg0qnOYM3PsO03V73XVvvVZbB1v9HO60cdTq4Lhd+8k/a06XVJUKsf7B/VnnEcaduOSde3BzlaHweHbRyPHNZvW31QfqbRkXb4a77lsLt+l3alwhQ2066LUr6aYpOoNzxn1sVZucWKmHj245+U5VqXy+5To2RoMs2+WRKx6unP5binVblVP/zehNAYw+4TqzhjZM0jlJ35EKUJB9uRuJfIyegPuYF1rkZKJoSFL/aPHCVGoP2/OvZ39mHHQGVt2YCWjfuWuo6zyY7Zmjgcfwtl4uNCXP3uypaU9Ne2raU9NnoKb4f2nPSXtO2nPSnpM+BSctKcP2Jt9BqFzpmWS6uQNKrVnIgcksqHn7NtjB2gsIuWmumsRdMuSoJNKqpNdJkwhU/DWWbo8e1zGCgFQUJ8LzEGw/SbTJpM6ND/2v6WkvefeBXdN7VrtzWn0PGY4svN0Tj9bDkD57klXIn17grQ2zVd+BcC5lEfX2MUSfwmfGvCiILK3KqYneu9jiWaq9rmceSdZiwYWMFNsEv4TwHqjdbhabW/RH8W56al29N7tdgz+khvEkws9Xm1o/aQSIHKFMxxaLsfTw0+nlksy/KnAI2xDFuXSq3sLhCMPnyFGIOs0sIssHWQaWxj2XutotZ9RaistvD4jpHwrhk0g=
+sidebar_class_name: "get api-method"
+info_path: site/openapi/docspace/api-backend/usage-api/asc-files
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get active operations"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/files/fileops"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns a list of all the active operations.
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"List of file operations","content":{"text/plain":{"schema":{"type":"object","properties":{"id":{"type":"string","nullable":true,"example":"1952"},"Operation":{"oneOf":[{"enum":["Move","Copy","Delete","Download","MarkAsRead","Import","Convert","Duplicate"],"type":"string","description":"[Move - Move, Copy - Copy, Delete - Delete, Download - Download, MarkAsRead - MarkAsRead, Import - Import, Convert - Convert, Duplicate - Duplicate]","example":"Move"},{"enum":[0,1,2,3,4,5,6,7],"type":"integer","description":"[0 - Move, 1 - Copy, 2 - Delete, 3 - Download, 4 - MarkAsRead, 5 - Import, 6 - Convert, 7 - Duplicate]","example":0}],"title":"ASC.Web.Files.Services.WCFService.FileOperations.FileOperationType"},"progress":{"type":"integer","format":"int32","example":100},"error":{"type":"string","nullable":true,"example":""},"processed":{"type":"string","nullable":true,"example":"1"},"finished":{"type":"boolean","example":true},"url":{"type":"string","format":"uri","nullable":true,"example":"some text"},"files":{"type":"array","items":{},"nullable":true},"folders":{"type":"array","items":{},"nullable":true}},"additionalProperties":false,"title":"ASC.Files.Core.ApiModels.ResponseDto.FileOperationDto"}},"application/json":{"schema":{"type":"object","properties":{"id":{"type":"string","nullable":true,"example":"1952"},"Operation":{"oneOf":[{"enum":["Move","Copy","Delete","Download","MarkAsRead","Import","Convert","Duplicate"],"type":"string","description":"[Move - Move, Copy - Copy, Delete - Delete, Download - Download, MarkAsRead - MarkAsRead, Import - Import, Convert - Convert, Duplicate - Duplicate]","example":"Move"},{"enum":[0,1,2,3,4,5,6,7],"type":"integer","description":"[0 - Move, 1 - Copy, 2 - Delete, 3 - Download, 4 - MarkAsRead, 5 - Import, 6 - Convert, 7 - Duplicate]","example":0}],"title":"ASC.Web.Files.Services.WCFService.FileOperations.FileOperationType"},"progress":{"type":"integer","format":"int32","example":100},"error":{"type":"string","nullable":true,"example":""},"processed":{"type":"string","nullable":true,"example":"1"},"finished":{"type":"boolean","example":true},"url":{"type":"string","format":"uri","nullable":true,"example":"some text"},"files":{"type":"array","items":{},"nullable":true},"folders":{"type":"array","items":{},"nullable":true}},"additionalProperties":false,"title":"ASC.Files.Core.ApiModels.ResponseDto.FileOperationDto"}},"text/json":{"schema":{"type":"object","properties":{"id":{"type":"string","nullable":true,"example":"1952"},"Operation":{"oneOf":[{"enum":["Move","Copy","Delete","Download","MarkAsRead","Import","Convert","Duplicate"],"type":"string","description":"[Move - Move, Copy - Copy, Delete - Delete, Download - Download, MarkAsRead - MarkAsRead, Import - Import, Convert - Convert, Duplicate - Duplicate]","example":"Move"},{"enum":[0,1,2,3,4,5,6,7],"type":"integer","description":"[0 - Move, 1 - Copy, 2 - Delete, 3 - Download, 4 - MarkAsRead, 5 - Import, 6 - Convert, 7 - Duplicate]","example":0}],"title":"ASC.Web.Files.Services.WCFService.FileOperations.FileOperationType"},"progress":{"type":"integer","format":"int32","example":100},"error":{"type":"string","nullable":true,"example":""},"processed":{"type":"string","nullable":true,"example":"1"},"finished":{"type":"boolean","example":true},"url":{"type":"string","format":"uri","nullable":true,"example":"some text"},"files":{"type":"array","items":{},"nullable":true},"folders":{"type":"array","items":{},"nullable":true}},"additionalProperties":false,"title":"ASC.Files.Core.ApiModels.ResponseDto.FileOperationDto"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

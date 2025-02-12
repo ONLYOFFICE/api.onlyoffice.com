@@ -1,0 +1,71 @@
+---
+id: save-auth-keys
+title: "Save the authorization keys"
+description: "Saves the authorization keys."
+sidebar_label: "Save the authorization keys"
+hide_title: true
+hide_table_of_contents: true
+api: eJztV81y0zAQfhWNjhDiUDhAbqWlM6UFOqQMh0ymo9ibWq1iCUlOGzJ5d3Ylu5GT/j1ADk0l+dv/b9fyintx7fhwzEfgvayuHcvYYe1LbeU/4aWu+KTHtQEbNqcFH3InFkCQM1g63uMW/tbg/BddLPlwxXNdeag8LYUxSuZBMLtxqArPXF7CXNDKLw2gNj29gdyjHmPJjJfg6Gkl5pCgnLfoHKIKcLmVJng25D8I1eNVrZSYKgR6W0OPw72YG9rybyAqdiacq9Ut8HWPe+nVKxRfBthzmqW+E6SwI/eS2uNk95xyp+fAPNx7siAr1Fbnr7NwmoBfbSEXFZY/UT7VWmHmdrSPDORyhiVicsZ8CUwgD7DaTZWZA7uQOTBUyKaAW8+0ZZWm+j7YJlfWsd4usSmsFUvESQ9zOt/OLT+XDtXNgs0HerLbyMJupGsUFkUhCSHURcKsmVAOtjX/ihRmRlgklAfr2Az97hpqYuMPHOKHo6P+H5j2D42kv++6ANVvdLljr/vUJaMolhxz8o5Sv2+KfVPsmyJpivSF8ebtvjv23bHvjrY7yD8LzujKRbofDAb0r+vWl1gFthCqhiGjwNK8d3PAhMW8l6K6hgJ9TG5u4e1klJCPN2Bb6+2efbJjU4Hn33wbJGE/Dt7vxvi7akNBtwPowy7oRNupLAqINh3ktZUeL6hjvJa6/Io0XGEO6OZrQVD4dwgAPllPdhiM9133RAr7KIjlLzVdjI12YSoJX+IuE0ZmB/1B5pqbdUbiG0rQCmkTXKqtQonSezPMMqVzoUrUNfw0+HyQ7XTUOT1nUZyTu210I0pmJEc3xk3DGIm3duJ+mJVdGI0NPMu1vpUQ0kZV+rW53n9t27GdtVuzckPzMOm2/d7Mj60B1XnSDpY4fZqOH1OvTsJgm+kQT9JPJ1IB9TNlM+pbHBAvqBxzUSXuUiWfKOS2t8mHzIsEaJKbNA1aDyVdNWQYU+YRiXQIlY+EwGVKCawkVZ3Qq9VUOPht1XpNx1gBS1TF5UJYGYfWmPJRIneRBcShUGl+FL1+d0k+ERznQCj8Vpeue63EYZ6D8Qk2jWOS0Pvi5+gSYdPmQ2+OswtPrbijj0D8HXJOn4pkI3AwnK24wvlSi2vCRsthatSUlpSXkYHNguJpH1XLNI4uYWME9EvxPCqxWkXSYyZbfHz0pEST0xYd0oBO/wciVU8D
+sidebar_class_name: "post api-method"
+info_path: site/openapi/docspace/api-backend/usage-api/asc-files
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Save the authorization keys"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/api/2.0/settings/authservice"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Saves the authorization keys.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"name":{"type":"string","description":"Name","nullable":true,"example":"Jean Kassulke"},"title":{"type":"string","description":"Title","nullable":true,"example":"iowa"},"description":{"type":"string","description":"Description","nullable":true,"example":"some text"},"instruction":{"type":"string","description":"Instruction","nullable":true,"example":"some text"},"canSet":{"type":"boolean","description":"Specifies if the authentication service can be set or not","example":true},"props":{"type":"array","items":{},"description":"List of authorization keys","nullable":true}},"additionalProperties":false,"description":"Request parameters for authorization service","title":"ASC.Web.Api.ApiModel.RequestsDto.AuthServiceRequestsDto"}},"text/json":{"schema":{"type":"object","properties":{"name":{"type":"string","description":"Name","nullable":true,"example":"Jean Kassulke"},"title":{"type":"string","description":"Title","nullable":true,"example":"iowa"},"description":{"type":"string","description":"Description","nullable":true,"example":"some text"},"instruction":{"type":"string","description":"Instruction","nullable":true,"example":"some text"},"canSet":{"type":"boolean","description":"Specifies if the authentication service can be set or not","example":true},"props":{"type":"array","items":{},"description":"List of authorization keys","nullable":true}},"additionalProperties":false,"description":"Request parameters for authorization service","title":"ASC.Web.Api.ApiModel.RequestsDto.AuthServiceRequestsDto"}},"application/*+json":{"schema":{"type":"object","properties":{"name":{"type":"string","description":"Name","nullable":true,"example":"Jean Kassulke"},"title":{"type":"string","description":"Title","nullable":true,"example":"iowa"},"description":{"type":"string","description":"Description","nullable":true,"example":"some text"},"instruction":{"type":"string","description":"Instruction","nullable":true,"example":"some text"},"canSet":{"type":"boolean","description":"Specifies if the authentication service can be set or not","example":true},"props":{"type":"array","items":{},"description":"List of authorization keys","nullable":true}},"additionalProperties":false,"description":"Request parameters for authorization service","title":"ASC.Web.Api.ApiModel.RequestsDto.AuthServiceRequestsDto"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Boolean value: true if the authorization keys are changed","content":{"text/plain":{"schema":{"type":"boolean"}},"application/json":{"schema":{"type":"boolean"}},"text/json":{"schema":{"type":"boolean"}}}},"401":{"description":"Unauthorized"},"403":{"description":"Forbidden"}}}
+>
+  
+</StatusCodes>
+
+
+      

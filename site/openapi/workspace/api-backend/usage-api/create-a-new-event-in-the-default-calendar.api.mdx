@@ -1,0 +1,71 @@
+---
+id: create-a-new-event-in-the-default-calendar
+title: "Create a new event in the default calendar"
+description: "Creates a new event in the default calendar with the parameters specified in the request."
+sidebar_label: "Create a new event in the default calendar"
+hide_title: true
+hide_table_of_contents: true
+api: eJzVV01v4zYQ/SuETl3AjmU5cbK+pYmBDbpoAn+0wAY+0BIdcUNRKknZ6wr+750hJUty7DgLtIfuISuRM8P5eE98LjxDX7Q3evZCKpiMqOqN10wa7S06nmZhrrjZwnbh3eYmThX/mxqeyi+MRkyhm4Inr+NtwI55ix14RUyHimdo5o28OzAwTBNKJNsQhrEJl8TEjERsRXNhSHUy2XAT252MKpoww5QmOmMhX3EWVV6K/ZUzbS7g0PLx1zSCFAsvTKWB8PhIs0zw0Kba+64xkcLTYcwSik9mmzFILV1+Z6GBOJlKM6YMZxp3JRyN/7frsF0hdq9TBdBGcfni7Q5qPu7aXDsSQRuqzD206pS/NSARWhxxhwa+5wzbJ10Vy2BEM7t83NtZEPQkv0wm869j4tyrmfA7KsgqVQk1n44dAQNW754gUwNDdgOz59RROAz1BbAGYbi+FeKebr+mEPZUm3NVRxkRKgQUviUCXEiq8KA69DJNBaPStj+mmOyjDaZPzsBZERqGTOsGTOuYVCm6hVegQ6KPgc1wI3Bh6mI9YQxv5/7hMHQGCTgkBr5/KhPBNQb7Wcifza5NhYeoYVOOE7D2gyaZraGPrZvzc1bB4HITUbS9K6l+LnD1SXi4R6/fS0aetndNsXZgf99m4zm3pjl4tzF2AJWm94oKbc+bIjXfPynwA7/bD7p+f+YPR4PhqO9f3Awvry5vgm8YYizPdORcgInl6CQXZzrlKmStfE9MvyLsARE7nmO6WxoErfBdgMSuBrltsD3uTwUAdTR+0Ih9Fp1pr1E5c5iRc6nzJQ5pyT7o9KDHETd0Kc457If4xFTCta7o/35r5popy1z9b5Nr39s851EbAatoxa6ur7uDMBh2L68Hw+7naPW5u7yiw5vBcnlzFfgfY8sf+D3ekm/b13TdGlejrF1zvdkbWH7cSLz8/+cFWt6aXH8Q4jJPUO/MANDwkV3jDXWXyhVXCcMyAKUhEwKe30igZ590yd6vQ/rwunftkABfK+9Fqw5b7heqb42hYZxYXfYWzm8It+eau1Mu/f7ba2QuaSnoIGW0gossTmFiXpbaqyWjJoa3Hs14L7jwe3t9aDWcV6vDKV4ybuJHNWLNj4z/xixBMIHYbXdKvdX2tRnhLTapJd64aksl0erJt0vbLzc0VQMllVKql5oKqF5tiBb/UHvgZ+ataHgudguUKXKV2rLLmdylSZJL6BSZMrVmikzG0xm5fXqAQ+BVu6wFymSDA8cBJFQ2CnUi+iMa+rAZDVX8n0rxcsSG/TC9TFBub9JcCczAIekZ5w+WgCUULnW+Dk/AmhiBB3ZFsaSazZXY7XAZzlD4EwQe19Bv901/xkbH1a+QwnsFYGGnba3dmVOQaypyB7wDabTrVB63oOQy867tosGNp8fpDIyX5S+OJI3QR9ENogj+wv3a8dJaRNq1AmYrX3L6grYuJsIb+ddmx6tlR/mAVVVbctvIsE2UTlkI/sWyjroUheMeNLSyd1snPfbsdNY4zwVk/Q8rvspD
+sidebar_class_name: "post api-method"
+info_path: site/openapi/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Create a new event in the default calendar"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/api/2.0/calendar/event"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Creates a new event in the default calendar with the parameters specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"name":{"description":"Event name","type":"string"},"description":{"description":"Event description","type":"string"},"startDate":{"description":"Event start date","type":"string"},"endDate":{"description":"Event end date","type":"string"},"repeatType":{"description":"Event repeat type (RRULE string in the iCal format)","type":"string"},"alertType":{"description":"Event notification type","type":"integer"},"isAllDayLong":{"description":"Event duration type: all day long or not","type":"boolean"},"sharingOptions":{"description":"Event sharing access parameters","type":"array","items":{"type":"object","title":"SharingParam"}}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Event list","content":{"application/json":{"schema":{"type":"array","items":{"type":"object","properties":{"Id":{"type":"string","example":"1"},"Uid":{"type":"string","example":"1234wda"},"CalendarId":{"type":"string","example":"calendarID"},"Name":{"type":"string","example":"Event Name"},"Description":{"type":"string","example":"Event Description"},"AllDayLong":{"type":"boolean","example":"false"},"Start":{"type":"string","example":"2020-12-01T06:36:10.8645482Z"},"End":{"type":"string","example":"2020-12-01T06:36:10.8645482Z"},"RepeatRule":{"type":"string","example":""},"Alert":{"type":"object","properties":{"Type":{"type":"integer","format":"int32","example":"-1"}},"title":"EventAlertWrapper"},"IsShared":{"type":"boolean","example":"true"},"CanUnsubscribe":{"type":"boolean","example":"true"},"IsEditable":{"type":"boolean","example":"false"},"Permissions":{"type":"object","properties":{"UserParams":{"type":"array","items":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"2fdfe577-3c26-4736-9df9-b5a683bb8520"},"Name":{"type":"string","example":"Valery Zykov"}},"title":"UserParams"}}},"title":"Permissions"},"Owner":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"2fdfe577-3c26-4736-9df9-b5a683bb8520"},"Name":{"type":"string","example":"Valery Zykov"}},"title":"UserParams"},"Status":{"type":"integer","format":"int32","enum":["Tentative","Confirmed","Cancelled"],"description":"[0 - Tentative, 1 - Confirmed, 2 - Cancelled]","example":"0"},"HasAttachments":{"type":"boolean"}},"title":"EventWrapper"}}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

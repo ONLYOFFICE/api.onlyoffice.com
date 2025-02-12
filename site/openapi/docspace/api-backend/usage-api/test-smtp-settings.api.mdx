@@ -1,0 +1,63 @@
+---
+id: test-smtp-settings
+title: "Test the SMTP settings"
+description: "Tests the SMTP settings for the current portal (sends test message to the user email)."
+sidebar_label: "Test the SMTP settings"
+hide_title: true
+hide_table_of_contents: true
+api: eJztVstu2zAQ/BWCpxZwLNfpofUtaJoiaIsGdXIKjICW1jYTimTJldtU8L93l5IcxUYC5FAgB19kk5qdfcxQYC1RLaOcXMsp5FXQeC8yMf1+eSEiIGpL72YD6TwEhdrZ80JOJELEaYl+2iEGMkD0zkYgplqORyP+KSDmQXsOo6DEueURERVWHJk7i2CRAxD+YOaN0pZXMV9BqdL+vQdicPNbyJFCfGAe1E223JXeAELRg86dM6AsYXeK8JDrBQUKvRC4ArFTlY5iSydcENZxPvijeE9OMFSwGUjdTxUx0Az2Mz0mPj8lhK2MUfOOqMcr6+hKOArKFq48Wla62EjKAyG48OJUTdRz2Zi7nf9LybeyPc9O+JxE7fNrknkJYS/BRQNVSxBusatHKwYjB3LhQqmwoToe93UZbSinKgrNSGUuev5YKBOpPNSYijuZfhqeeD3srDtkH6fHjy7pNLX4E35VZPN4ik4mdu+NzhMgu43u4NCDQ1+ZQ9PX82DNgzVfmzWZ//3o3f6V4MqqClcu6L/kvwQ63geduTDXRQE2mTy2lxS6sNRSxfyGGW7ugDfoEqIK6uw3AUDONrPdaV1yTQ/O7S44gmaTdok60DSFdwGVEW8i2ILwFCVKiJGnjC4hqwhB0AHT5u2QMpZAbfDNaAnpiClc0SJTXmfj4SiLNKEuWVpkzCm5m7CGEFMzVTAUs0L0kywzLldm5SJOPow+jrM93b/xe9GES260m8uUz31ztB9PZ2slKuorbZAJVZnWfRgdT6bPnbvTkAau7cKl6J4HzrQBtjHX3tSzHifjUsGlSt+flpwnvj/w3Xbqh0vg/9Oobb93x6SK09DrVrBrng0hSTLWpidau2QWFo7mzdpwRF3PVYSrYDYb3ibbB7Yi/V2roJszfj2jTCvyJmnFSic95Emeg2cTrJWpdiub9Tz15fMloViixyo2erV/mLd7Ze97rDvyNrn5uRk8EVHXjUWoow7fvHoyou2tQ6cG6NT/A32OSFE=
+sidebar_class_name: "get api-method"
+info_path: site/openapi/docspace/api-backend/usage-api/asc-files
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Test the SMTP settings"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/smtpsettings/smtp/test"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Tests the SMTP settings for the current portal (sends test message to the user email).
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"SMTP operation status","content":{"text/plain":{"schema":{"type":"object","properties":{"completed":{"type":"boolean","description":"Specifies if the SMTP operation is completed or not","example":true},"id":{"type":"string","description":"SMTP operation ID","nullable":true,"example":"{some-random-guid}"},"error":{"type":"string","description":"SMTP operation error","nullable":true,"example":""},"status":{"type":"string","description":"SMTP operation status","nullable":true,"example":""},"percents":{"type":"integer","description":"Percentage of SMTP operation completion","format":"int32","example":0}},"additionalProperties":false,"title":"ASC.Api.Settings.Smtp.SmtpOperationStatusRequestsDto"}},"application/json":{"schema":{"type":"object","properties":{"completed":{"type":"boolean","description":"Specifies if the SMTP operation is completed or not","example":true},"id":{"type":"string","description":"SMTP operation ID","nullable":true,"example":"{some-random-guid}"},"error":{"type":"string","description":"SMTP operation error","nullable":true,"example":""},"status":{"type":"string","description":"SMTP operation status","nullable":true,"example":""},"percents":{"type":"integer","description":"Percentage of SMTP operation completion","format":"int32","example":0}},"additionalProperties":false,"title":"ASC.Api.Settings.Smtp.SmtpOperationStatusRequestsDto"}},"text/json":{"schema":{"type":"object","properties":{"completed":{"type":"boolean","description":"Specifies if the SMTP operation is completed or not","example":true},"id":{"type":"string","description":"SMTP operation ID","nullable":true,"example":"{some-random-guid}"},"error":{"type":"string","description":"SMTP operation error","nullable":true,"example":""},"status":{"type":"string","description":"SMTP operation status","nullable":true,"example":""},"percents":{"type":"integer","description":"Percentage of SMTP operation completion","format":"int32","example":0}},"additionalProperties":false,"title":"ASC.Api.Settings.Smtp.SmtpOperationStatusRequestsDto"}}}},"401":{"description":"Unauthorized"},"403":{"description":"Forbidden"}}}
+>
+  
+</StatusCodes>
+
+
+      

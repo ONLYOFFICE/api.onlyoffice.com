@@ -1,0 +1,71 @@
+---
+id: delete-an-invoice
+title: "Delete an invoice"
+description: "Deletes an invoice with the ID specified in the request."
+sidebar_label: "Delete an invoice"
+hide_title: true
+hide_table_of_contents: true
+api: eJztWO9u2zYQfxVCX2fHsuxim4FhSGIXNdakge2iaNN8oKWzxVQiNf5J4xl+nL3InmxHUo6tzYmULdiGwf5gkOL95f3uSN460HSpgsF1EMu8M+Z3gsWggptWoCA2kukVrq2DU6NTIdkvVDPB3wBNQFoeiaOgFXxFOghuNsiVgIolKyxZMAiGkIEGRSgnzIsmX5lOiU6BjIdEFRCzBYMEV903CT8bUPoEZZbDM5GgBesgFlwD13ZIiyJjsbOkc6usnnWg4hRyakd6VQBqFvNbiDXKKaQoQGqGTuFqaQVL7KRqa+k72oVcpRSGSpfo6sb9rFGqEFx5WVEYPioFRbyQxVNNtVH1dDOmM9gjU1oyvkQyuKd5YZdKEnQDXdwRbn1sBQshc6r9p15UYe1GvX5gd0B7NVs/vXUfJHpot6kVXJp8brHxlB3OBKUMDKmuMTkKo7Ddjdrd/iyKBt3eoN89edX79ruo1/tkxcwACVHKzElo5BM3uYXuyNjliXFYr8bwOiRtgust0sUBktxUbAqt4nOMLo11g/jlNMteCy3ey+xpX43MiBZkgbRWwwUkzOR/hXPIFG7K6pLmdYCgyS0kCeNAzmicMukjcy7ygvLVHu9ciAworzAvaKYcmk5jrBjqLVP7u0GlpCukx8KQN0DvODlk6UPwjGFJNQblr33gb/t71lZcsC9APqHXVKsvzEGrPqEuKKdLj/vTO6qpdMFuFCtlKQl1XJb/SooFy6A21J8/d5A0MbFWdggCP/tvlv2EquL+R6NA/kCTnHGMiaRayErqjlCUWAHYrAW/NFZXkt1Vs/FQzLU0voCoaUolJE0h4qifn6OXgttKOsFT5oM7Yvz4kYy11GXKbhlaJCqnh1LYSAk8Xr1IbT1PMYsUkI8G98B6vMrnoiaWv/3qkDOfS7hj1LvypI7Lj97uTBsJ9Zg+v9zmM79DZ+g8ax7fM6pY3Cy8e9DabumYL8TeoXBO+ShhuqFypPb3hqbG/v3TrKzm6DTsm41HPVtygGOVP1b5Y5U/Vvljlf8fVvkR1+6VWwcPT/cHeB+IhygKIbXhVuiD+Erla2x9/9VOQgN0vhFYE1KRJcQ9OCnHik2sMslBE5WKolohnNy9nRi+xIvsLeVLg/Wy/gl4zMx/KjNH93GKYYFJNbrcv9X3YJgIY42s4LDlyuiVkShDwTuZgGz6yJ+BrFwLHiEb7lf5OuLXeAA+vxa0uy5yEnAH3tVoqUO4l3LWALfH+86/d9+x1/fKXbUR2kOP9v/8UVa23ypHmetQ9sPun5uS7zkt+7d4mbNUOeA0sVvg7UbgUp3ivEML1olOwo7tBpfN0s76oWs6uA7b3998swl27eGp7WN6uB9sEu/eCgX7CdxjwZqU+uVWwB2Iq7zORtsoneyawKPtZlSauOHGylsIp+fhmM9zd/ySKUgsvGQyms7I6dUYteFU+T2xXUPEx2bzO0+GqTs=
+sidebar_class_name: "delete api-method"
+info_path: site/openapi/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Delete an invoice"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"delete"}
+  path={"/api/2.0/crm/invoice/{invoiceid:[0-9]+}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Deletes an invoice with the ID specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"invoiceid":{"description":"Invoice ID","type":"integer"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Invoice","content":{"application/json":{"schema":{"type":"object","properties":{"Status":{"type":"object","properties":{"Title":{"type":"string","example":"Title"},"ID":{"type":"integer","format":"int32","example":"1234"}},"title":"InvoiceStatusWrapper"},"Number":{"type":"string","example":""},"IssueDate":{"type":"string","example":"2020-12-14T22:13:41.5378233Z"},"TemplateType":{"type":"integer","format":"int32","enum":["Eur","Rus"],"description":"[0 - Eur, 1 - Rus]","example":"0"},"Contact":{"type":"object","properties":{"SmallFotoUrl":{"type":"string","example":"url to foto"},"MediumFotoUrl":{"type":"string","example":"url to foto"},"DisplayName":{"type":"string","example":"Tadjeddine Bachir"},"IsCompany":{"type":"boolean","example":"false"},"AccessList":{"type":"array","items":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"}},"IsPrivate":{"type":"boolean","example":"true"},"IsShared":{"type":"boolean","example":"false"},"ShareType":{"type":"integer","format":"int32","enum":["None","ReadWrite","Read"],"description":"[0 - None, 1 - ReadWrite, 2 - Read]","example":"0"},"Currency":{"type":"object","properties":{"Title":{"type":"string","example":"Chinese Yuan"},"Symbol":{"type":"string","example":"¥"},"Abbreviation":{"type":"string","example":"CNY"},"CultureName":{"type":"string","example":"CN"},"IsConvertable":{"type":"boolean","example":"true"},"IsBasic":{"type":"boolean","example":"false"}},"title":"CurrencyInfoWrapper"},"CanEdit":{"type":"boolean","example":"true"},"CanDelete":{"type":"boolean","example":"true"},"ID":{"type":"integer","format":"int32","example":"1234"}},"title":"ContactBaseWrapper"},"Consignee":{"type":"object","properties":{"SmallFotoUrl":{"type":"string","example":"url to foto"},"MediumFotoUrl":{"type":"string","example":"url to foto"},"DisplayName":{"type":"string","example":"Tadjeddine Bachir"},"IsCompany":{"type":"boolean","example":"false"},"AccessList":{"type":"array","items":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"}},"IsPrivate":{"type":"boolean","example":"true"},"IsShared":{"type":"boolean","example":"false"},"ShareType":{"type":"integer","format":"int32","enum":["None","ReadWrite","Read"],"description":"[0 - None, 1 - ReadWrite, 2 - Read]","example":"0"},"Currency":{"type":"object","properties":{"Title":{"type":"string","example":"Chinese Yuan"},"Symbol":{"type":"string","example":"¥"},"Abbreviation":{"type":"string","example":"CNY"},"CultureName":{"type":"string","example":"CN"},"IsConvertable":{"type":"boolean","example":"true"},"IsBasic":{"type":"boolean","example":"false"}},"title":"CurrencyInfoWrapper"},"CanEdit":{"type":"boolean","example":"true"},"CanDelete":{"type":"boolean","example":"true"},"ID":{"type":"integer","format":"int32","example":"1234"}},"title":"ContactBaseWrapper"},"Entity":{"type":"object","properties":{"EntityType":{"type":"string","example":"opportunity"},"EntityId":{"type":"integer","format":"int32","example":"123445"},"EntityTitle":{"type":"string","example":"Household appliances internet shop"}},"title":"EntityWrapper"},"DueDate":{"type":"string","example":"2020-12-14T22:13:41.5378233Z"},"Language":{"type":"string","example":""},"Currency":{"type":"object","properties":{"Title":{"type":"string","example":"Chinese Yuan"},"Symbol":{"type":"string","example":"¥"},"Abbreviation":{"type":"string","example":"CNY"},"CultureName":{"type":"string","example":"CN"},"IsConvertable":{"type":"boolean","example":"true"},"IsBasic":{"type":"boolean","example":"false"}},"title":"CurrencyInfoWrapper"},"ExchangeRate":{"type":"number","format":"double","example":"1,0"},"PurchaseOrderNumber":{"type":"string","example":""},"Terms":{"type":"string","example":""},"Description":{"type":"string","example":""},"FileID":{"type":"integer","format":"int32","example":"-1"},"CreateOn":{"type":"string","example":"2020-12-14T22:13:41.5378233Z"},"CreateBy":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"},"Cost":{"type":"number","format":"double","example":"0,0"},"CanEdit":{"type":"boolean","example":"true"},"CanDelete":{"type":"boolean","example":"true"},"ID":{"type":"integer","format":"int32","example":"1234"}},"title":"InvoiceBaseWrapper"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

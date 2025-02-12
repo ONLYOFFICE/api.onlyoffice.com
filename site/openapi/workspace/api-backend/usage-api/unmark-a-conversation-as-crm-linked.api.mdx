@@ -1,0 +1,71 @@
+---
+id: unmark-a-conversation-as-crm-linked
+title: "Unmark a conversation as CRM linked"
+description: "Unmarks a conversation as CRM linked."
+sidebar_label: "Unmark a conversation as CRM linked"
+hide_title: true
+hide_table_of_contents: true
+api: eJyNVMlu2zAQ/RWCZyVK05tvqWMgQVs0yHJyjWAs0RZjbiWpJK6gf+8MKTuymxT1gR5qFr5588iOR1gHPplzDVKVU2uehQ8QpTWBLwoeRNV6GbcY0fGLNjbWy9/JfSWgFp4yPVq84C8YJ/iix6xahMpLR2F8wh+MBr8JDFg1Ks8gsOntd6ak2Yj6FAt48asVIX6xNR7XcQyOwkQywTklq5RWPgUq2vFQNUIDWXHrBB5jl0+iiljHeeuEj1IE8sr6UYsQYC1od4js+pLZFQOzZUNIYCtvNYuNOMCKRYdDJGJaY9t9wSuvHwkjVPFR1uHv6t9kiFSfusRGJCFi0qTqK6uUfZFmjZbXECesSyFbLDVhZwUbdnQs7vvTn4aNfrPkZeQNE/aJnbBpRlKwc9pAEAX7jNYP56yPraER7psA74G2OC8d3mMQiyv6MPV6qHsJEXiffwXXAoVQY4BrE+EQG9yU4GR5fnpWJimN+QslklW2SQf8TVR3NMI8pXeltQeGhb+KhJh4bbK74AY0eQ9yOeEjjdy+qWn2CtopcayGs3dmOO/6RU/nrGw6f0eE1TqRyO6Ex7bY7ezunl3cXCMK6jIPXEHEE0kbzoaoIel0AJkvwT/vAD+6OKMr8N93aCAsitdYOgXIF6JpvaJqeUxzYhMjcVC40qjw72BYPPGC6zAwvNAN9kOpXbdEaT141ff0GRn29DSg+QxewpLImhOBze516PgGJ0cMplZO7gkghas2T/boZtPzsZfXzcM9xi6HB0HbmlI8vNBjgeuEo2FdBo0B6VuHYzDrNk2Y55IkCWip+bGiNklRg0FAdy6zHQE8FFcxdENrX3yQ0nVZr8jRLj67PszYKzpH09QWiPoPuF3q5Q==
+sidebar_class_name: "put api-method"
+info_path: site/openapi/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Unmark a conversation as CRM linked"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"put"}
+  path={"/api/2.0/mail/conversations/crm/unmark"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Unmarks a conversation as CRM linked.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"id_message":{"description":"ID of any messages from the conversation","type":"integer"},"crm_contact_ids":{"description":"List of CRM entities in the following format: {entity_id: 0, entity_type: 0}.\n            Entity types: 1 - Contact, 2 - Case, 3 - Opportunity","type":"array","items":{"type":"object","title":"CrmContactData"}}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={undefined}
+>
+  
+</StatusCodes>
+
+
+      

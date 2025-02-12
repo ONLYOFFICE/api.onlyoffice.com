@@ -1,0 +1,71 @@
+---
+id: delete-a-currency-rate
+title: "Delete a currency rate"
+description: "Deletes a currency rate with the ID specified in the request."
+sidebar_label: "Delete a currency rate"
+hide_title: true
+hide_table_of_contents: true
+api: eJytUk1v2zAM/SsCr/NiJ+1luXVNhgW7DEmDHYocFJmJVVgfk+R1mZH/PtKOlxob0B7mgyGRfI+PT2whyWOE+SOoYPL7JgS0SmOEXQYRVRN0OlG2hbsmVS7oXzJpZz+jLDEwKtAJMnimOoTdmVAlRhW05zKYwwJrTBiFFKrnPokgE4pnnSqRKhSrhYgelT5oLIW2XSzg9wZjmhDx5fjRlSSjBeVsQpv4KL2vterk5E+Rm7UQVYVG8imdPFJ7t39ClYjHB+cxJJ6Msrrk/1jp/UjfakGgC4mmnkca99x9rCl6Z2NPNSuKV7iI6D/J/hScGahfVMcUtD1SNf6UxtccWm7XQEof3NvKt5sFl69Z7bXQNmZPY2dwcMFIUg+la/Y1jqDTyZSh5NcVOBj2Akmhm9kYOLu5BbYz6dQFBqms4lsgny6WZ3BbTP/2eGvlZSWx7HgM0rVkld3OsXsyVXTPpdf5bFLkvOLDGub8NDFvdTl/LN5/2L07w3XjN/wgvef/3Ps/kxLzFzwRUrOkqk9nYKXh7AjbaeQXX19Xejm40a9kcWaig+saDK44YxpLmsQGww8MYr3cPIi7rytqQ9fYm1HzMIla/AbNDk7o
+sidebar_class_name: "delete api-method"
+info_path: site/openapi/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Delete a currency rate"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"delete"}
+  path={"/api/2.0/crm/currency/rates/{id:[0-9]+}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Deletes a currency rate with the ID specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"id":{"description":"Currency rate ID","type":"integer"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Currency rate","content":{"application/json":{"schema":{"type":"object","properties":{"FromCurrency":{"type":"string","example":"EUR"},"ToCurrency":{"type":"string","example":"USD"},"Rate":{"type":"number","format":"double","example":"1.1"},"ID":{"type":"integer","format":"int32","example":"1234"}},"title":"CurrencyRateWrapper"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

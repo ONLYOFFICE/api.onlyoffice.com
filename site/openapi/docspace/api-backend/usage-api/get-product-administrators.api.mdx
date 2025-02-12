@@ -1,0 +1,71 @@
+---
+id: get-product-administrators
+title: "Get the product administrators"
+description: "Returns a list of all the product administrators with the ID specified in the request."
+sidebar_label: "Get the product administrators"
+hide_title: true
+hide_table_of_contents: true
+api: eJztV99v2zYQ/lcIPq2AbTlu1iZ+M5a2CNZsRb1iQAujOElniw1FaiTlxBP0v+9Okh05TrYFQd7sB5uijt/9/Oi7SgZYeTn9JucYgjIrLyIxx6R0KmzkYiBtgQ6CsuYylVO5wvDJ2bRMwizNlVE+0EvrvBzIAhzkGNAxWiUNPdCBopVWKUkowxsQMlqn6BOnCgamzQ5TXF7QK4d/lcohqQuuxIH0SYY5yGklw6ZgTFJKhpLk0rocAu2UZaMAbyEvNIucvDmLz9+eJsO3MU6Gp5OfT4YQv4mHZ+fxSXqevJ5MEGVdL1ibL6zx6FnBZDzmn33jPpKXwi5F54qAPc/FjQqZCBmKpdXa3pBloheKgUysCWhCYz/ehqjQwIGoDv2y8Q9MAofScdSDao0i157kezXuPsMHvrafWtaUBOXJms1vTaoOVZhSa4gZs03EnYordY3iK5gNBH+tGCqooJ8KAgZW6Pg0rCGAe9pxb3MUHNE7gN+dWikD+tlAV3D7fAxMVZk/G2aeg36iQ6XTIljh+aToQls3VbVUGr+458QnAz+7n6zYWo1g+kXIGCSt/MxYo/L/IcwOp6lizoH+1CPAErTHXYHJ2fyX0Z8Yj2aFGl3ZFLUfvSMYu0G8CFY2OEWhVdJcWtEPb49kO5LtSLaXIlvzn3Zk2ZFlR5a9GMsY6XR8ctiafjFQhsw69Te1y43Q60Oh99bFKk3RNHz1296em3TwyXdG+H6NvEHNMDDxbkgA5YLb432ozxhKZ7wAobummPPBze9/NceXF8IXmKilwlQo0+xxo48+jEgjdcuZ7QaMZpagIWEqIyhUNBmNI9/NJtHW+mhPT1TtxoxasotuvR1DSi4NmYVQTKNI2wR0Zn2Yno3PJ9HBGPKR34v2uGTvt+rmfK+1V9d+yHY1QJb+ShuD7dyzJ9aNPom11wqbLCiztM3pXgm8p0rmgYFtb+1ZT5oiJ4NzaO7XDvwDhn8J+n23qrsR5OUS2IWhN+GQ5WXLyzab3zhGJEn5bHLUZlT2KpLp0lNOz9O78ZGywZljnKqKwTPp65q3yQbH1UvLNTjVMp5ST38FvE53fHs0Kj997kbOV2JvEn3QqW3CDRu8Bl3yEy2beujNu/WC7xYiFNUSm9O+nyUJFqF3sg++6BHhw7s/OCAlh65fZW09dQvGfdCee+XX6ubvevDIiapqS7iud/Ltq0dPdL5tpRsH6Kr6B0bfkRo=
+sidebar_class_name: "get api-method"
+info_path: site/openapi/docspace/api-backend/usage-api/asc-files
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get the product administrators"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/settings/security/administrator/{productid}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns a list of all the product administrators with the ID specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"productid","in":"path","description":"Product ID","required":true,"schema":{"type":"string","format":"uuid","example":"168b974c-7be2-4251-ab6b-89b1d9c322ee"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"List of product administrators with the following parameters","content":{"text/plain":{"schema":{"type":"object","properties":{"id":{"type":"string","format":"uuid","example":"{00000000-0000-0000-0000-000000000000}"},"displayName":{"type":"string","nullable":true,"example":"Mike Zanyatski"},"title":{"type":"string","nullable":true,"example":"Manager"},"avatar":{"type":"string","nullable":true,"example":"some text"},"avatarOriginal":{"type":"string","nullable":true,"example":"some text"},"avatarMax":{"type":"string","nullable":true,"example":"some text"},"avatarMedium":{"type":"string","nullable":true,"example":"some text"},"avatarSmall":{"type":"string","nullable":true,"example":"url to small avatar"},"profileUrl":{"type":"string","nullable":true,"example":"some text"},"hasAvatar":{"type":"boolean","example":true},"isAnonim":{"type":"boolean","example":true}},"additionalProperties":false,"title":"ASC.Web.Api.Models.EmployeeDto"}},"application/json":{"schema":{"type":"object","properties":{"id":{"type":"string","format":"uuid","example":"{00000000-0000-0000-0000-000000000000}"},"displayName":{"type":"string","nullable":true,"example":"Mike Zanyatski"},"title":{"type":"string","nullable":true,"example":"Manager"},"avatar":{"type":"string","nullable":true,"example":"some text"},"avatarOriginal":{"type":"string","nullable":true,"example":"some text"},"avatarMax":{"type":"string","nullable":true,"example":"some text"},"avatarMedium":{"type":"string","nullable":true,"example":"some text"},"avatarSmall":{"type":"string","nullable":true,"example":"url to small avatar"},"profileUrl":{"type":"string","nullable":true,"example":"some text"},"hasAvatar":{"type":"boolean","example":true},"isAnonim":{"type":"boolean","example":true}},"additionalProperties":false,"title":"ASC.Web.Api.Models.EmployeeDto"}},"text/json":{"schema":{"type":"object","properties":{"id":{"type":"string","format":"uuid","example":"{00000000-0000-0000-0000-000000000000}"},"displayName":{"type":"string","nullable":true,"example":"Mike Zanyatski"},"title":{"type":"string","nullable":true,"example":"Manager"},"avatar":{"type":"string","nullable":true,"example":"some text"},"avatarOriginal":{"type":"string","nullable":true,"example":"some text"},"avatarMax":{"type":"string","nullable":true,"example":"some text"},"avatarMedium":{"type":"string","nullable":true,"example":"some text"},"avatarSmall":{"type":"string","nullable":true,"example":"url to small avatar"},"profileUrl":{"type":"string","nullable":true,"example":"some text"},"hasAvatar":{"type":"boolean","example":true},"isAnonim":{"type":"boolean","example":true}},"additionalProperties":false,"title":"ASC.Web.Api.Models.EmployeeDto"}}}},"401":{"description":"Unauthorized"},"403":{"description":"Forbidden"}}}
+>
+  
+</StatusCodes>
+
+
+      

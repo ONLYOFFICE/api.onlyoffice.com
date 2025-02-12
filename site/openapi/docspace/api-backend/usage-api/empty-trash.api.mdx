@@ -1,0 +1,63 @@
+---
+id: empty-trash
+title: "Empty the 'Trash' folder"
+description: "Deletes all the files and folders from the 'Trash' folder."
+sidebar_label: "Empty the 'Trash' folder"
+hide_title: true
+hide_table_of_contents: true
+api: eJztWF9v2zgM/yqCnn2xk7bbrW9FuwLDrdiwtthDVwyKzdRaZUknydlyQb77SMmJ7bQ7oNjLHvJSkxT//UiKrbrmQTx4fnrHL6UCz3L2wYITQRrt+X3GzZZ7V/FTDo0NqxsnfM0z7sBb1AK0XvNZUdCnAl86ackA1d9LH5hZsAW6Zqb3m/HS6AA6kEmAHyG3SkhNnC9raESUryygDzP/BmVAE+vIQ5ApnqwGOj44qR9QR7dKiblCWXAtZBx+iMYSy6dvTmZ8k/EdOjI3Gj4sEPuag24bKsKVWQL6OTd2hZ8LUBCIvzDftTKiQvJKuMcz/wki866xxoVooJcQqYvWKlkKNMPq7ec3Ls8dRWN/MfpkjGIiQ5+MpcjIJgIFXQYk6siM9bmQlx2TsZQXChNBzmN+0X+k0OM2UXK5pe/5sGixGptsV54im2az7Cg7zk6yV9nrHqDEbj6Ae4qw2MGb7rDNBrCORniO92CcDBC8Gub++pc5FxvKSoaY/9n1+eQzzCdxtCfX4JayROLz+WVHx5N+4MfsDWHbxMF7wFn3g4Hr8S6Ma0RIoqPZMJNpUaAxOGfcy0a1i4mZenjplJPtQmrp65Hp3BgFQg/TI1NUbp16LsQOVuvk/0b0pgFGVzhFVjAsk3BO0D2SARqSb/Y9kY1RFbiXWaFEVJWkJgn1cbAXFkJ5GPc/9f7cOJicWXllKlB+8qlbXRfBjHuOAh7d2zRcKMq/eXNYTYfVdFhNh9X0J6ym+PfSYScddtJhJx120h+xkyjAcTF9+v671aINtXHyPyxvVDp6qnRp3FxWFei43TyUWMOwimtG+PIrefj6CCTAF2dcI99RAfcFje7YVbomngmlWKghvjuR0xXrysYWzjTx6AuPz9gvvDuaoN8GMFl65to2blARamRyYWU+mxR59BZ/Guvz+BQO3VPY4/2IXcGk44jwOgR7mufKlELVxofTv4s3s/zJjX9P5yyZcwK0xX9Niz1Nx7gKfd+t/Aeo8Vo0kR+q4TiQ+9KYRwmxsFIvTLTebzbqUu4pn2Xc+hYTbkTc+Z3zt4T22cLtQ1r3b/vf7UcHdPAPgv4GpubcURVQE9vDt/cpfbFFdH37JmFtqQ9ks17PhYdbpzYbEv/bgqPxQnIpnEwX5+4eY9U4b4iQuhprz8/KEizNxlKodj+3+8EEfby9QS1qx7hjqTcdQX63R3o18LrXyhSbftIvl2ct1us0Dohoq5+OfmnRYdtqRwB4k38Cc8QGkw==
+sidebar_class_name: "put api-method"
+info_path: site/openapi/docspace/api-backend/usage-api/asc-files
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Empty the 'Trash' folder"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"put"}
+  path={"/api/2.0/files/fileops/emptytrash"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Deletes all the files and folders from the "Trash" folder.
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"List of file operations","content":{"text/plain":{"schema":{"type":"object","properties":{"id":{"type":"string","nullable":true,"example":"1952"},"Operation":{"oneOf":[{"enum":["Move","Copy","Delete","Download","MarkAsRead","Import","Convert","Duplicate"],"type":"string","description":"[Move - Move, Copy - Copy, Delete - Delete, Download - Download, MarkAsRead - MarkAsRead, Import - Import, Convert - Convert, Duplicate - Duplicate]","example":"Move"},{"enum":[0,1,2,3,4,5,6,7],"type":"integer","description":"[0 - Move, 1 - Copy, 2 - Delete, 3 - Download, 4 - MarkAsRead, 5 - Import, 6 - Convert, 7 - Duplicate]","example":0}],"title":"ASC.Web.Files.Services.WCFService.FileOperations.FileOperationType"},"progress":{"type":"integer","format":"int32","example":100},"error":{"type":"string","nullable":true,"example":""},"processed":{"type":"string","nullable":true,"example":"1"},"finished":{"type":"boolean","example":true},"url":{"type":"string","format":"uri","nullable":true,"example":"some text"},"files":{"type":"array","items":{},"nullable":true},"folders":{"type":"array","items":{},"nullable":true}},"additionalProperties":false,"title":"ASC.Files.Core.ApiModels.ResponseDto.FileOperationDto"}},"application/json":{"schema":{"type":"object","properties":{"id":{"type":"string","nullable":true,"example":"1952"},"Operation":{"oneOf":[{"enum":["Move","Copy","Delete","Download","MarkAsRead","Import","Convert","Duplicate"],"type":"string","description":"[Move - Move, Copy - Copy, Delete - Delete, Download - Download, MarkAsRead - MarkAsRead, Import - Import, Convert - Convert, Duplicate - Duplicate]","example":"Move"},{"enum":[0,1,2,3,4,5,6,7],"type":"integer","description":"[0 - Move, 1 - Copy, 2 - Delete, 3 - Download, 4 - MarkAsRead, 5 - Import, 6 - Convert, 7 - Duplicate]","example":0}],"title":"ASC.Web.Files.Services.WCFService.FileOperations.FileOperationType"},"progress":{"type":"integer","format":"int32","example":100},"error":{"type":"string","nullable":true,"example":""},"processed":{"type":"string","nullable":true,"example":"1"},"finished":{"type":"boolean","example":true},"url":{"type":"string","format":"uri","nullable":true,"example":"some text"},"files":{"type":"array","items":{},"nullable":true},"folders":{"type":"array","items":{},"nullable":true}},"additionalProperties":false,"title":"ASC.Files.Core.ApiModels.ResponseDto.FileOperationDto"}},"text/json":{"schema":{"type":"object","properties":{"id":{"type":"string","nullable":true,"example":"1952"},"Operation":{"oneOf":[{"enum":["Move","Copy","Delete","Download","MarkAsRead","Import","Convert","Duplicate"],"type":"string","description":"[Move - Move, Copy - Copy, Delete - Delete, Download - Download, MarkAsRead - MarkAsRead, Import - Import, Convert - Convert, Duplicate - Duplicate]","example":"Move"},{"enum":[0,1,2,3,4,5,6,7],"type":"integer","description":"[0 - Move, 1 - Copy, 2 - Delete, 3 - Download, 4 - MarkAsRead, 5 - Import, 6 - Convert, 7 - Duplicate]","example":0}],"title":"ASC.Web.Files.Services.WCFService.FileOperations.FileOperationType"},"progress":{"type":"integer","format":"int32","example":100},"error":{"type":"string","nullable":true,"example":""},"processed":{"type":"string","nullable":true,"example":"1"},"finished":{"type":"boolean","example":true},"url":{"type":"string","format":"uri","nullable":true,"example":"some text"},"files":{"type":"array","items":{},"nullable":true},"folders":{"type":"array","items":{},"nullable":true}},"additionalProperties":false,"title":"ASC.Files.Core.ApiModels.ResponseDto.FileOperationDto"}}}},"401":{"description":"Unauthorized"},"403":{"description":"Forbidden"}}}
+>
+  
+</StatusCodes>
+
+
+      

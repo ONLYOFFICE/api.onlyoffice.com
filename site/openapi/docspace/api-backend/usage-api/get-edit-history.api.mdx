@@ -1,0 +1,71 @@
+---
+id: get-edit-history
+title: "Get version history"
+description: "Returns the version history of a file with the ID specified in the request."
+sidebar_label: "Get version history"
+hide_title: true
+hide_table_of_contents: true
+api: eJztWN1P2zAQ/1ciP21aabKCNsgbAsambdoEjIchhExybbwltmdfOqoo//vu4tCFsq+i8VYeiO3e7779ay+NQDnzIr0Qr1QJPoqj7ikuR8JYcBKV0W9ykYoZ4FGu8LXyaNxCjISVTlaA4BjdCE0bEpsSmuRHQmnaWYkFrR18q5UDUoOuhpHwWQGVFGkjcGEZpTTCDByJTo2rJIaj7QkdwI2sbElCzyd7u217ydq8NdqTk6RgkiT8yMFnTln2lrDn5BStoiI4G+USJanKDJnR2NmFG4xtKdnL5r4/5voLZMhBOs4CqmBM5Wv7vL3TjsRXWAyAHp3SMxLTdVnKa5YLaVnChDcVROyjIPQ8RPMw0z342JnaPkxD7UluvdT8Q4Qvk8kuBxfaZh3kfi51dFRV4FRWiJZ0yJwak4KU5ceBT1NZegKiwgA7PRh3rT0+MA7Gg17er7Ewjp3JHEiE/O/R1pidqV87vswnNR1sIUtxy8r8gy4X96Oh/t3dSna2nidnyYt0O0mTZJyEv2fJDu3YL9by2Wj4MJ16wL9b9VbqP1pN2E6nfJ307VsVkkeLQ7LTpYDTVkg9A39LDQ/v9F7RQIN0TjLZKISKz9tVXXRA/Uldfn7vlqxn/YF9RKl4b3Io/fikp6VDNMPuom1Qbm2pso5P4y/ebHhnwzsb3tnwzqPzTvdLZ0M4G8LZEM6GcB6fcFrWf3caOwGsnfYRFhDNVyYzM41kxDNj9F1h0Ym8OYy8hUxNFeSR0t0ZD5DgcUwx0shZmH4g7aZQmjBTEUur4sk4iVmX7/7HTZhF2xjIybhYDq4hjWFqrV1J6ALRpnFcmkyWhfGY7iZ7k1isBvKOP48CXPAk6iGrncLFKdNqKKf02ZWke3Z1lwrJvbfAxvsx+Y5YPyxnxnxV0BVI6anp0Ku1EAOWFPMJ95IlhyvZ9UOv/BhwNdGrsTQ/h+H/XJ8+4MGAzdTKaW76Yl1wNkiSysUXug+Ln/RIly8QuGr0uA2A0s2lYXjTXEsPn1zZtnxMpvkyXtByLp0KF4BqmyvP63zZ2b/NwJOT/gXF0+h3EdzWUXMq57KseSf6b7zbtx7tJUkWREb8RUIehA/3swwsDmBDzZeDjj4+OqPq/wBVt+5E
+sidebar_class_name: "get api-method"
+info_path: site/openapi/docspace/api-backend/usage-api/asc-files
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get version history"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/files/file/{fileId}/edit/history"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns the version history of a file with the ID specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"fileId","in":"path","required":true,"schema":{"type":"integer","format":"int32","example":1298}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Version history data","content":{"text/plain":{"schema":{"type":"object","properties":{"id":{"type":"integer","format":"int32","example":1234},"key":{"type":"string","nullable":true,"example":"some text"},"version":{"type":"integer","format":"int32","example":1234},"versionGroup":{"type":"integer","format":"int32","example":1234},"user":{"type":"object","properties":{"id":{"type":"string","nullable":true,"example":"7028"},"name":{"type":"string","nullable":true,"example":"Adan Emmerich"}},"additionalProperties":false,"title":"ASC.Files.Core.EditHistoryAuthor"},"created":{"type":"object","properties":{"utcTime":{"type":"string","format":"date-time","readOnly":true,"example":"2008-04-10T06:30:00.0000000+04:00"},"timeZoneOffset":{"type":"string","format":"date-span","readOnly":true,"example":"00:00:00"}},"additionalProperties":false,"title":"ASC.Api.Core.ApiDateTime"},"changesHistory":{"type":"string","nullable":true,"example":"some text"},"changes":{"type":"array","items":{},"nullable":true},"serverVersion":{"type":"string","nullable":true,"example":"some text"}},"additionalProperties":false,"title":"ASC.Files.Core.ApiModels.ResponseDto.EditHistoryDto"}},"application/json":{"schema":{"type":"object","properties":{"id":{"type":"integer","format":"int32","example":1234},"key":{"type":"string","nullable":true,"example":"some text"},"version":{"type":"integer","format":"int32","example":1234},"versionGroup":{"type":"integer","format":"int32","example":1234},"user":{"type":"object","properties":{"id":{"type":"string","nullable":true,"example":"7028"},"name":{"type":"string","nullable":true,"example":"Adan Emmerich"}},"additionalProperties":false,"title":"ASC.Files.Core.EditHistoryAuthor"},"created":{"type":"object","properties":{"utcTime":{"type":"string","format":"date-time","readOnly":true,"example":"2008-04-10T06:30:00.0000000+04:00"},"timeZoneOffset":{"type":"string","format":"date-span","readOnly":true,"example":"00:00:00"}},"additionalProperties":false,"title":"ASC.Api.Core.ApiDateTime"},"changesHistory":{"type":"string","nullable":true,"example":"some text"},"changes":{"type":"array","items":{},"nullable":true},"serverVersion":{"type":"string","nullable":true,"example":"some text"}},"additionalProperties":false,"title":"ASC.Files.Core.ApiModels.ResponseDto.EditHistoryDto"}},"text/json":{"schema":{"type":"object","properties":{"id":{"type":"integer","format":"int32","example":1234},"key":{"type":"string","nullable":true,"example":"some text"},"version":{"type":"integer","format":"int32","example":1234},"versionGroup":{"type":"integer","format":"int32","example":1234},"user":{"type":"object","properties":{"id":{"type":"string","nullable":true,"example":"7028"},"name":{"type":"string","nullable":true,"example":"Adan Emmerich"}},"additionalProperties":false,"title":"ASC.Files.Core.EditHistoryAuthor"},"created":{"type":"object","properties":{"utcTime":{"type":"string","format":"date-time","readOnly":true,"example":"2008-04-10T06:30:00.0000000+04:00"},"timeZoneOffset":{"type":"string","format":"date-span","readOnly":true,"example":"00:00:00"}},"additionalProperties":false,"title":"ASC.Api.Core.ApiDateTime"},"changesHistory":{"type":"string","nullable":true,"example":"some text"},"changes":{"type":"array","items":{},"nullable":true},"serverVersion":{"type":"string","nullable":true,"example":"some text"}},"additionalProperties":false,"title":"ASC.Files.Core.ApiModels.ResponseDto.EditHistoryDto"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

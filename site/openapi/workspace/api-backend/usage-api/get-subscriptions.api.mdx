@@ -1,0 +1,65 @@
+---
+id: get-subscriptions
+title: "Get subscriptions"
+description: "Returns a list of all the subscriptions available to the current user."
+sidebar_label: "Get subscriptions"
+hide_title: true
+hide_table_of_contents: true
+api: eJzlWFFT4zYQ/isa941JiJNA4HhLAwNMr8CQpJ2B40Gx10SHLbmSHC6XyX/vSraDHULs0F7nepcHsKTdlfbbTytpF46mj8o5uXc8GgL3qWwNsg9FKPeJSibKkyzWTHDlPDQcBV4imZ6jzsLpJ3oqJPtKzfAFUB+ksSXxy2k4zygHzsMStXxYWXFOnFvQieQ4AQmZ0kQEhIYh0VMoT0fojLKQTkIgWthhnFoC1yRRIPc/8U98b+9KaNjbOyE3IVAFhGMTRam28rl5mKGWIozbXgkqRvNAnhlOOwECUazn+7jifAQRWTgd1zX/ykv/mFks49JwPME1zmEUaByHzLOQtD4ro7VwlDeFiJovPY8B7VAp6Rz1EKFIFfrF5DN4GgdiKWKQmqVruVR9z4NYg1+QnQiBTnMUhi80ikPTF9BQgbNsoMYVPFcIa5lY2XMpkrggq7Rk/LEkegMSXaEhWdHDKGJvxJSyGFT6cEo1rZbq5zG/zrB9P2b+dpcsS9GJKxrBdslblCSCh3MjfgoBTUJdE9pMeqjnYcUk6XJQRTNtO0zElUphsAOXa37vigeKVWHSCfwADo+Oml2v02seHHV7zQ9+8KE5OaS94+5kcnzYcZ1sKdW4nc1AzgXP+LjOsm2wDSg/81ldkIdTaubOoPr5iJEP3CQTzDwmNn9KzEKYjJebhwciDBEZq99wxphNb6ik/4hcGzENhIwoIuIkCfPfRbTqGPyBCUnOyd38ScxKaBTcKsGQZ7Bi8rIEHRZyet00y9DaWIbbl5iaN6JDjdGM6ufwC+b7UHsxuGv6CIb+XfgsmNckIvqN26fyYHkRNxvTJOiaCiP4opFvQm7H6JfA/ozGr9R7esRkwf06eq79pVtqU/g26OQMIEUNs9SUIbVULTENHhXJpJ2CNhK+KAgyvC084v4sbBHs6nY2x/X6mYP83+/BhjkP8Br27U50i/WYVUl1ugfPPk03TBrNKsP55fjytB4e1tEVRWrzMlVbI2U/DE/p/KNA2ZppYKip1Ntn6rgdt9nuNN32yO2ddHsnbXf/uHdweHDcubOR4lUXhQoDtxAD1bdJ1X5KPYTSet+I/siO7raFmu0SHS3AdrrVAblzAsQkO+bZ9X9SNwnWzpqrIO50tf7JTvC1k/tHSY+4b3WialKcJ5F5ao+Q0PjUnAH2DQQPmIzAuIEs9QAveb7z6vV975ImWek1SBubK9UG6Zhmrv1Q8sO6e0FVX2vqTaO1ZJ7T+dWGe7mM4hGL5+D3cAJ84wPAuLl7/rdaa+n/X0jmA2EEy7WDd5j5MbZZodvAXeRm9iSz58PaYfMfH0kjFsEdPpwveSCqV1GNzHg0qHNXzcSug0CB3tUvt4xt5kHBqexNn4/UOwgLJovPs8L71ogcuO3Xpboxp1l5EtL3cwTYRAicR7AgUj3FRovGrNXZd1urCuh6bS8veQ5NES+rUm0qfL4ktZj9BjarmXVM0+GGw22cyrp2YSwPc/5CFVGUcJyRDEHOQJLbs+GI9G8u0Qg2VepfSDUobZCNhdIRtcklm+Mc9KsSpV9OQ6uK5fdbjs3g1PiCbMUhZTYhJulrO43evcEaJTF+pgibRdDEbL1uPUWMjPxiMcGF4ZN9uTTdfyWYMrAfP2dUsvSGdv+A80zzcvbCecJgpmWX2BBnRsMkDfNaoddUulckOz8boayhYJkZT5YZ2Yexng/xecF2mSSNbAnm77LxhspikfIOHcvl06E3NVbMTKUNvg+4n/4GiIcEIA==
+sidebar_class_name: "get api-method"
+info_path: site/openapi/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get subscriptions"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/calendar/subscriptions"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns a list of all the subscriptions available to the current user.
+
+**Note**: Please note that the list of events in the response will be empty.
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"List of subscriptions","content":{"application/json":{"schema":{"type":"array","items":{"type":"object","properties":{"IsAccepted":{"type":"boolean","example":"false"},"IsNew":{"type":"boolean","example":"true"},"Group":{"type":"string","example":"Personal Calendars"},"Permissions":{"type":"object","properties":{"Data":{"type":"object","properties":{"AvailableOptions":{"type":"array","items":{"type":"object","properties":{"Id":{"type":"string","example":"read"},"Name":{"type":"string","example":"Read only"},"Default":{"type":"boolean","example":"true"},"DefaultStyle":{"type":"string","example":"read"}},"title":"AccessOption"}},"Items":{"type":"array","items":{"type":"object","properties":{"ItemId":{"type":"string","example":"2fdfe577-3c26-4736-9df9-b5a683bb8520"},"ItemName":{"type":"string","example":"Everyone"},"IsGroup":{"type":"boolean","example":"true"},"CanEdit":{"type":"boolean","example":"true"},"SharingOption":{"type":"object","properties":{"Id":{"type":"string","example":"read"},"Name":{"type":"string","example":"Read only"},"Default":{"type":"boolean","example":"true"},"DefaultStyle":{"type":"string","example":"read"}},"title":"AccessOption"}},"title":"PublicItemWrapper"}}},"title":"PublicItemCollection"},"UserParams":{"type":"array","items":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"2fdfe577-3c26-4736-9df9-b5a683bb8520"},"Name":{"type":"string","example":"Valery Zykov"}},"title":"UserParams"}}},"title":"CalendarPermissions"},"IsSubscription":{"type":"boolean","example":"false"},"iCalUrl":{"type":"string","example":""},"IsiCalStream":{"type":"boolean","example":"false"},"IsHidden":{"type":"boolean","example":"false"},"CanAlertModify":{"type":"boolean","example":"true"},"IsShared":{"type":"boolean","example":"true"},"IsEditable":{"type":"boolean","example":"true"},"TextColor":{"type":"string","example":"#ffffff"},"BackgroundColor":{"type":"string","example":"#000000"},"Description":{"type":"string","example":"Calendar Description"},"Title":{"type":"string","example":"Calendar Name"},"Id":{"type":"string","example":"1"},"IsTodo":{"type":"integer","format":"int32","example":"false"},"Owner":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"2fdfe577-3c26-4736-9df9-b5a683bb8520"},"Name":{"type":"string","example":"Valery Zykov"}},"title":"UserParams"},"Events":{"type":"array","items":{"type":"object","properties":{"Id":{"type":"string","example":"1"},"Uid":{"type":"string","example":"1234wda"},"CalendarId":{"type":"string","example":"calendarID"},"Name":{"type":"string","example":"Event Name"},"Description":{"type":"string","example":"Event Description"},"AllDayLong":{"type":"boolean","example":"false"},"Start":{"type":"string","example":"2020-12-01T06:36:10.8645482Z"},"End":{"type":"string","example":"2020-12-01T06:36:10.8645482Z"},"RepeatRule":{"type":"string","example":""},"Alert":{"type":"object","properties":{"Type":{"type":"integer","format":"int32","example":"-1"}},"title":"EventAlertWrapper"},"IsShared":{"type":"boolean","example":"true"},"CanUnsubscribe":{"type":"boolean","example":"true"},"IsEditable":{"type":"boolean","example":"false"},"Permissions":{"type":"object","properties":{"UserParams":{"type":"array","items":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"2fdfe577-3c26-4736-9df9-b5a683bb8520"},"Name":{"type":"string","example":"Valery Zykov"}},"title":"UserParams"}}},"title":"Permissions"},"Owner":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"2fdfe577-3c26-4736-9df9-b5a683bb8520"},"Name":{"type":"string","example":"Valery Zykov"}},"title":"UserParams"},"Status":{"type":"integer","format":"int32","enum":["Tentative","Confirmed","Cancelled"],"description":"[0 - Tentative, 1 - Confirmed, 2 - Cancelled]","example":"0"},"HasAttachments":{"type":"boolean"}},"title":"EventWrapper"}},"Todos":{"type":"array","items":{"type":"object","properties":{"Id":{"type":"string","example":"1"},"Uid":{"type":"string","example":"123wda"},"CalendarId":{"type":"string","example":"calendarID"},"Name":{"type":"string","example":"Todo Name"},"Description":{"type":"string","example":"Todo Description"},"Start":{"type":"string","example":"2020-12-01T06:36:10.8645482Z"},"Completed":{"type":"string","example":"2020-12-01T06:36:10.8645482Z"},"Owner":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"2fdfe577-3c26-4736-9df9-b5a683bb8520"},"Name":{"type":"string","example":"Valery Zykov"}},"title":"UserParams"}},"title":"TodoWrapper"}},"DefaultAlertType":{"type":"object","properties":{"Type":{"type":"integer","format":"int32","example":"-1"}},"title":"EventAlertWrapper"},"TimeZoneInfo":{"type":"object","properties":{"Name":{"type":"string","example":"UTC"},"Id":{"type":"string","example":"UTC"},"Offset":{"type":"integer","format":"int32","example":"0"}},"title":"TimeZoneWrapper"},"CanEditTimeZone":{"type":"boolean","example":"false"}},"title":"SubscriptionWrapper"}}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

@@ -1,0 +1,71 @@
+---
+id: get-the-document-service-url
+title: "Get the document service URL"
+description: "Returns the address of the connected editors."
+sidebar_label: "Get the document service URL"
+hide_title: true
+hide_table_of_contents: true
+api: eJydU01v2zAM/SuCzlmdFTvllg1FN2yHIR+nIAfFYmK1tqRJdNrM8H8fKTlfbVdg88GQzcfHRz6qk6h2UU5WcmtqiMUcEI2lP+uRjFC2weCBop2ctli5YH4rNM5+BaUhcFagkxzJJ8KBXPeUpSGWwXiGyYmcAbbBRoEVCKV1gBiF26bP0lkLJYIWoA26EG+IKMCvFiJ+dprKdpIwCBb5qLyvTZnKFw+RyTsZywoaxSc8eKBybvNAlMTjg/MQ0EDk6B5CNDnlWt7cQ2m2hEqKsg4xoAUdrWOygXzjXA3Kyj49rDV6Z2MucTsev6af5o6J4j8byYU+jT++5l5aNVgCWjKqAfrUFNlBmoDCij4K5U1xezMusr/alRHC3pQgzwbPuXpu402bT6qI6zscKNOwgiqHR9KqhqNXuUkStzc7O3r3rBpfw5UjGFromXDrUiGDDJBfXNO0lrSJOcmFIGZ384WY/vxG5U65slZI1JLyvYvYqDTLQc09YDKVOm4bGr0Y+hbL2Q/5Yk0vFu2fN3YYDcIzFr5WNBmS04aaWbMHK54bIckFeicfWMDZCbo1FelnZNdtVIRlqPuef9PoAt8/Ou5VMGrDw1mtqUJ1vIKdfCRLeGKpgw8L1sPwus2Wvdi2fnTMmJYleHwXu75Yq/u7BWE3w81snOaUoJ741tJ7Iung0kDTJqV/HVlkd63aMTZT8l7w5l6v1WNaq+HATR1D9nAh8HrDRkMf/Oau3kzpury0NM8jPof+mnFa64xmQ9ek+g9138cR
+sidebar_class_name: "get api-method"
+info_path: site/openapi/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get the document service URL"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/files/docservice"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns the address of the connected editors.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"version":{"description":"Specifies the editor version or not","type":"boolean"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Address","content":{"application/json":{"schema":{"type":"object"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

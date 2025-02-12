@@ -18,6 +18,17 @@ const config: Config = {
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
 
+  future: {
+    experimental_faster: {
+      mdxCrossCompilerCache: true,
+      swcJsLoader: false,
+      swcJsMinimizer: false,
+      swcHtmlMinimizer: false,
+      lightningCssMinimizer: false,
+      rspackBundler: false,
+    }
+  },
+
   i18n: {
     defaultLocale: 'en',
     path: './site',
@@ -54,28 +65,28 @@ const config: Config = {
         config: {
           workspaceBackend: {
             specPath: "openapi/workspace/community-server.json",
-            outputDir: "site/openapi/workspace/API Backend/Usage API",
+            outputDir: "site/openapi/workspace/api-backend/usage-api",
             sidebarOptions: {
               groupPathsBy: "tag",
             },
           } satisfies OpenApiPlugin.Options,
           workspaceHosted: {
             specPath: "openapi/workspace/hosted-solutions.json",
-            outputDir: "site/openapi/workspace/For Hosting Providers/Usage API",
+            outputDir: "site/openapi/workspace/for-hosting-providers/usage-api",
             sidebarOptions: {
               groupPathsBy: "tag",
             },
           } satisfies OpenApiPlugin.Options,
           docspaceBackend: {
             specPath: "openapi/docspace/docspace.json",
-            outputDir: "site/openapi/docspace/API Backend/Usage API",
+            outputDir: "site/openapi/docspace/api-backend/usage-api",
             sidebarOptions: {
               groupPathsBy: "tag",
             },
           } satisfies OpenApiPlugin.Options,
           docspaceHosted: {
             specPath: "openapi/docspace/hosted-solutions.json",
-            outputDir: "site/openapi/docspace/For Hosting Providers/Usage API",
+            outputDir: "site/openapi/docspace/for-hosting-providers/usage-api",
             sidebarOptions: {
               groupPathsBy: "tag",
             },
@@ -267,6 +278,13 @@ const config: Config = {
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,
     },
+    /*algolia: {
+      appId: '59O6KESY1Y',
+      apiKey: 'b7dbab0357490826b892aeb2aad32810',
+
+      indexName: 'api-onlyoffice',
+      contextualSearch: true,
+    },*/
   } satisfies Preset.ThemeConfig,
 
   themes: ["docusaurus-theme-openapi-docs"],

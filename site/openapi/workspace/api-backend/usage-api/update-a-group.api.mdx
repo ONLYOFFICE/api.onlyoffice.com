@@ -1,0 +1,71 @@
+---
+id: update-a-group
+title: "Update a group"
+description: "Updates the existing group changing the group manager, name, and/or members."
+sidebar_label: "Update a group"
+hide_title: true
+hide_table_of_contents: true
+api: eJztVktv4zYQ/iuCzlb8km3ZQFGkSdoGRRbBOkGBZnMYiZTNjSSqJJXEFfTfO0NKfmycpCn20EN9kEnO+5shZ2rfwEr7izt/pWRV+vc9X/OkUsJs8LD2Tyuzlkr8BUbI4lcOjCtiVrjye/4T8nH/vkEpxnWiREls/sK/LRkYrj2z5h5/FtqIYuVZC16yhmJFW6K5oxwKWHHV8wrIec+DgvWl8nKex1zpE7RTgkKKwZ11itjQiBUW5IcgmyWYtf+tI79YA5fnSNDJmufgL2rfbEqS10ahH0hJpcrB4ElVobqGwlH8z4pr85NkG5JIZGF4YWgJZZmJxOLR/6rJSP1StYy/8sSQ50qWXBnBNVGtx1cuWtof+vqJPx0CgvKHrjY9p+KTBeB1eQvQEeEW0uOiGabJk2nnQsu61QJKwYawNjzX/wRF+yMkdSkL7QAYDQYvjbtiYc4wKvpOYJ/vG3npLn+GvMzoaJ8RHe7AfV1gaRetvyhxDar1999hta87moxYGE/HwXw+gyCMgQcAsziI5nEczVg0YXHqE65niNlKqs3H1M/CdDyEaILqh3EQ8nkcxHMeBcAjHg1YOI3SCYV0yT6mNwXG5mk4D0bheBiE0+EggMkwCsYJzONxFI6TKCK9e8X/dvY+6sCg/QVHPt2PHDgXusxg836Sr8QD9/6AYgNGPwgSvREme0+oDQ+5Tx/BgFrmkGVvy1Qq84z0NHF6YKVsUSmZiozfqnfEv3zpIyurEqNpySUeuzMSPwFdPv9Yaa5+AJaLAu+4AiOVLSHjAvIvUJXccP67gtI5f7V7KN4p6f/T959L3z7N9j8iIOXnCmNxj3I4GB55hwtouz1n1gC23LVk1Form2FqsAu/D6Xoj04Gffv+9eu2DTf+bnRY0hPtCuHoALGrqlL8xjddB187cq9r8Aey1iPqAZ93rfmig/Hb1rpDeq9f7g63ffDOH6f4GqbTMJjMhrMgnExHQTxOk2CUzKfjdDqFFKY44ZCHqbSet8ieyTyvCgzWW3L1yJX3+WJ5451eX6J+3GqHaUZjkKGCKKU22NdJRRue63sebBsfO+xY2z74vcepFnzDn00fb5Owba9yleqSfEeZQU5Mc4ch/i+6iQsHpDWGQ3x1HYOmMm8aOsbUUEu6w+UjKAExYYUjGxOa1lhMKWSavxHr3sR21M+ucgoqm0fIKtrh8gHraDcTNpSydTev1i31zFkJbkjHTvrFlNH0OonTJOGleZP3fu+iXN/eIG/cTo25ZCSi4AkP6WsdlTZoeznsWY1FUqwqTBnSnUoqdbqLhzflwd6UdkFBHYXi8NJ0uNCXojoqUtfuHjbNlt+RXpXY3lTHTZm5R6//BjGQIKM=
+sidebar_class_name: "put api-method"
+info_path: site/openapi/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Update a group"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"put"}
+  path={"/api/2.0/group/{groupid}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Updates the existing group changing the group manager, name, and/or members.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"groupid","in":"path","description":"Group ID","schema":{"type":"string","format":"uuid"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"groupManager":{"description":"New group manager","type":"string"},"groupName":{"description":"New group name","type":"string"},"members":{"description":"New list of group members","type":"array","items":{"type":"string","format":"uuid"}}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Updated group","content":{"application/json":{"schema":{"type":"object","properties":{"Description":{"type":"string","example":"Description"},"Name":{"type":"string","example":"Sample group"},"Parent":{"type":"array","items":{"type":"string","format":"uuid","example":"852d4b63-997a-4bae-aa7b-89bb87d85dbf"}},"Category":{"type":"string","format":"uuid","example":"74f31a85-991b-4e9b-b9e8-ae8e80d468f5"},"Id":{"type":"string","format":"uuid","example":"fadd9f49-2431-4610-a518-3ca9b3843c88"},"Manager":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"},"Members":{"type":"array","items":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"}}},"title":"GroupWrapperFull"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

@@ -1,0 +1,71 @@
+---
+id: update-the-tfa-settings
+title: "Update the TFA settings"
+description: "Updates the two-factor authentication settings with the type specified in the request."
+sidebar_label: "Update the TFA settings"
+hide_title: true
+hide_table_of_contents: true
+api: eJy1VE1P20AQ/SurPbWS04QAoeWWVrRFrSpEklOUw8Yexwu2d7sfQGrlv3dm13ESoIgeyCHa9c7HmzdvpuFOrCw/n3MLzsl6ZfvTr2O2vfBFgg+pN9Kt0ajhY+8KZeQf4aSqv4PIwJCzwRNP+D3aAV9s0CsDmxqpyYyf85nOhAPLXAHM3ateLlKnDBMYDWon0xCuy8rupSui7VoDsxpSmUvImKzDVwO/PVj3ATO2x88qQ3wNT1XtMCAdhdZlG7h/YwlFw21aQCXoRIERl1reQOowjjZKg3ES7O61eVQEERMAvfulakjYpLIJwyrGWr/HEG1IiQhWyMoGvxhvHWSX2j4N9lNax1TOWht2ecVElhmwFiF0wYQxYo1XpLXaQ8atM0gU32CSStTIrTLrmQXzQiJPz4E6aTBfjsCJSyrqDgzyG7l6de6EY4hKINfce5kdYvlmlH+p6lV4f1M04UcCsVrVNvZ1OBg801bjgcmciZqRBqIUpWXWpym2I/clRv9fYS2VKkHUPII4GRw9zTurRTtM0LIHeM3wRfsgSeEKvPSFlv3hh0G/G1CXC8TAd5M5oeyxwmfns0OFoX5AYJEAFPE54bWo6PXANyCi8q53E3bxICpdwi7g4FDj8203Fk9lOefHufh4mo9OeqdnR2e9k9PRsLc8ztPeMP00Os5HI5GL0YHnVkSvdd1QXbkK8KQjnPyLqipfI0VsAgaFxa4vJlM2vrrEqvFqYydK2k2OJlYr6zA/hWhJiZurE2e3GB9tuL3V83bLru2igwfX16XAJiJkb0pKH9UypxajJeol6KMD22oG6S2wRDJsmqWwMDPlZkOfMYmhFY/HO2GkWBJ/c+K02G75ht+ieIjUUGlvSnDIvPRRXI/mYpNsPcY4Sdq9aLvY0//VbIq2y3anVyojFyPuad/j/znHgwrEB82Hbw12sV55sSLbGJIUTKQfDsBtGID2QEVtn+r1HsDDWUjaOuifqnrWpWnieCGfW/v49E+PbgCjNfVzgaj/AkWQmX8=
+sidebar_class_name: "put api-method"
+info_path: site/openapi/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Update the TFA settings"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"put"}
+  path={"/api/2.0/settings/tfaapp"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Updates the two-factor authentication settings with the type specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"type":{"description":"TFA type (None, Sms, or App)","type":"integer"},"trustedIps":{"description":"List of trusted IP addresses","type":"array","items":{"type":"string"}},"mandatoryUsers":{"description":"List of users required for the TFA verification","type":"array","items":{"type":"string","format":"uuid"}},"mandatoryGroups":{"description":"List of groups required for the TFA verification","type":"array","items":{"type":"string","format":"uuid"}}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"True if an operation is successful","content":{"application/json":{"schema":{"type":"boolean"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

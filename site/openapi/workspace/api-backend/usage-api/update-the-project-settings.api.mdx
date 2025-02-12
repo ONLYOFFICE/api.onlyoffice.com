@@ -1,0 +1,71 @@
+---
+id: update-the-project-settings
+title: "Update the project settings"
+description: "Updates the project settings with the parameters specified in the request."
+sidebar_label: "Update the project settings"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVUtz2jAQ/isanZ1ASE/c0oROmE5nmEBODAdhL1jBllxJzqMe/nt3JZnYgZbONByMHvv4dvfbVcOd2Fo+XvLK6CdI3WAOzkmFZ6uEW0hrI90b3jf8pna5NvKXcFKrexAZGNIzuOIJf0E54Ks9amVgUyMrEuNj/lhlwoFlLgcWfTAbfbAX6fJwI4wowYGxzFaQyo2EjEnl7wz8rMG6S/QSl191hpganmrlQDlaiqoqZOqxDZ4seW64TXMoBa3cWwWIRa/JPdpBIBUYJ8HSLTyDgTXavBXqFuPBQPC0H8Y8orJMbpgoioBaGycKVlvCnQrFUq/dxmmZNkxpchgBCGPEG24xV6XtAFtrXYBQfL9PeC4zmCgnCd1UzQRaz2bR4BlchAmiKuYWUa6Bob0MVJvMytv7P4TWCeN+6KwuTiQqnDNSG7MWd8IWwu7w707atLYWRelMlrAwIt0hF84jkFjrLXIu4RttSuHC0fXIQ9roAvk4zY7xfPM3bHr37iHSYO9/RCpbIZ7AhdFweGwjcDg74i+a/CQKTk5S8EPuEw6voqwo69yZGjiCvz/Dln8wMX8v58JLn085mlF1Se1/8JVwX2L879SYTrtFPpoOyyG76LDkCneRKSNc9thyTXcdY6teMFeeBpgHv2st3uqy1Oow0kK9vwyvTpRYiTjfIPOmcBrlGvnEq9qXS7gcNwNRycHocjhox2WHCu20nFPNQ1lPzsxDetHWd/BUJwR5uE64wkmI+56uh0SkenifgJM2+NMTbEn1XZ2bJ61Ur6eXw1Wvpci5VBvtsccUU2prheGyORh0zx4m8wW7mU0xAtzakNaCZr8jllXaulL4pogBhq46+TDwDzzpjPrPfVBiJRy8ukFVCCwEQq1NQS5DyZdUJpTEooeujf1rO+9kjrGRZNOshYVHU+z3dIxeDL2duHwWRoq1z+2KZnz7fDZ8hwygbPrwLnwDknhRB4Z8GCn7pNW4SVOo3F9lVx0Wzx4XKLuOD2epM1Ix4oUeVfyOOS60z7Ynrj9rsHxqW4styQaTxARqlD6Ld57FcUFBtVfqrQOwT+gkxkFfiuqkStOEHsF8tvLh6o8ahy4K0lTQFaL+DaN8GA4=
+sidebar_class_name: "put api-method"
+info_path: site/openapi/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Update the project settings"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"put"}
+  path={"/api/2.0/project/settings"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Updates the project settings with the parameters specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"everebodyCanCreate":{"description":"Specifies if all the portal users can create projects or not","type":"array","items":{"type":"boolean"}},"hideEntitiesInPausedProjects":{"description":"Specifies if the entities will be hidden in the paused projects or not","type":"array","items":{"type":"boolean"}},"startModule":{"description":"Module type: Projects, Tasks, Discussions, TimeTracking","type":"array","items":{"type":"integer","format":"int32"}},"folderId":{"description":"Folder ID","type":"object"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Updated project settings","content":{"application/json":{"schema":{"type":"object","properties":{"EverebodyCanCreate":{"type":"boolean","example":"true"},"HideEntitiesInPausedProjects":{"type":"boolean","example":"true"},"StartModuleType":{"type":"integer","format":"int32","enum":["Projects","Tasks","Discussions","TimeTracking"],"description":"[0 - Projects, 1 - Tasks, 2 - Discussions, 3 - TimeTracking]","example":"1"}},"title":"ProjectsCommonSettings"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

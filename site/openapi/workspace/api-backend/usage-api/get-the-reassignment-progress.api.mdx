@@ -1,0 +1,71 @@
+---
+id: get-the-reassignment-progress
+title: "Get the reassignment progress"
+description: "Returns the progress of the started data reassignment for the user with the ID specified in the request."
+sidebar_label: "Get the reassignment progress"
+hide_title: true
+hide_table_of_contents: true
+api: eJy9VLFy2zAM/RUdZzdyc528ua0v9XXJ2c6U80BLsMREIlkSiuPq/O8FSMqRU7dDh2rQgSIAPrz3qF6grLyYPQoLxjaQP3hwWSlRiu1EeCg6p/BI+72Yd1gbp35KVEZ/A1mC4zpHkZiIA+WB2J6oqgRfOGU5TczECrBz2mdYQ2adqRx4n5l9WHuUDqEM52XUyHtV6RY0ZnvjQkbHcA4K67Bafs28hULtFRUpHb45+NGBxxvCkMLPpiTEvSiMRurFobS2UUVAnj95xtULX9TQSo7waIGQmt0TFEh9CKYFhwo87zKEZcnR5WCBKUJ0qI2HOILy5ymASUmNPTqlK3EKD8P01mgfu99Op7+3Xo2pGEijfv88ESpsYNT4PvVcIrQiovo0/XhlRi2T6jQPZ7VASyJDVBCYkljTIpdW5bc30zyZaCAhH2EfvLRmkHH2q446g6ee3+FIlYqR1HF7IrRsefeiNkBjFlZvDli8ytby0G8KnoXgnnsTzkrEfDFt22mCl63BvZCwq8V6k83vl3QiLX2ko5FI3bneGo+tDKwnQHeAyY/XtbsgdmTO/3lBErMIr5jbRhKxNErnGgYUpXxk2imTxGR5g5zhZsWj4+WII9FNJ+cj1/T9Tnp4cM3pxJ/pPMf/DApfpFNyxxQ/bumsevht9OKZtGXeAw0fNoyM05suav/O3afJUDEvCrD419ztyKd3iw3l7tIvoTUllzh54KHoPRMUmKBKsGT41pPQuupkxbmxJRuMr8KlP5+DP1PAQw1b+jgCeGnVSZqD3zzV1ZK+j+4nPof8uPXHivP9iNks7ZZQ/wLGuAl0
+sidebar_class_name: "get api-method"
+info_path: site/openapi/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get the reassignment progress"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/people/reassign/progress"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns the progress of the started data reassignment for the user with the ID specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"userId":{"description":"User ID whose data is reassigned","type":"string"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Reassignment progress","content":{"application/json":{"schema":{"type":"object","title":"ReassignProgressItem"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

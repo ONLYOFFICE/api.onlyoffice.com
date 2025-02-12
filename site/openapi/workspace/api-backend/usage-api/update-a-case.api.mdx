@@ -1,0 +1,71 @@
+---
+id: update-a-case
+title: "Update a case"
+description: "Updates the selected case with the parameters specified in the request."
+sidebar_label: "Update a case"
+hide_title: true
+hide_table_of_contents: true
+api: eJztGO1u4kbwVSz/LQTzmQSpqgLhVNQLigLp6cLxY7HHYS+2191dJ+FQHqcv0ifrzK4xkNDgXCNVqo4faHa98/2xs7NyNbtVbnfq+jKu9ZkC5c4qrgI/k1wv8cPKPcv0Qkj+jWkukl+BBSAJQSLkVtwHPAfu7AmxAlC+5Ckdc7vudRowDcrRC3AUROBrCBwfOTgPXC/Mdsoki0GDVI5KwechxyM8Md8k/JGB0kfIIgd7IkCBVq4vEg2JJpClacR9I1jtqyK2K1f5C4gZQXqZAgoi5l+ROdJJpUhBao46EhkUhQcE7cpNRnCG53g+x+fI7hZ1fsIdriN4iTKCB6uZ/V5gKi15ckuIMcRzVPMl6keutCNCh5RivkbGipZkAUMRTaS5z1OWaLUhzKRkS1yi6WO1pepa1IobChkzbbeaDfcJZfAzpUX8gUMUENf9akRreYi5xXBCQinBPTc08eLqUvJ79P8/2Delr/6yawENjpBOIvSGx1yICFhCtmO+D0odFjlTFEgmuCyKo0VhyMPS587aMl2WYXxYbUZC83C5hz/tY0DlzEOJ5iKWuQBGNDYXmd4jSKGi+VGYq1QkykZnw/P2mw7x3ykBLjYxWc6xzwmMYxZFH4QW1zLaZ0h4ZHFK+eJmMiJnhHiWPHoBAc/i78E85yqN2HKEZeN1vAkLvkIQ8AScHvMX3KTvUPVFjKm03MJde2EbOWQRGhoRznZC7/usNAwOB9k2cy//Vff8rX9vMsUFvwPnBrVmWt1xQp2sy9grSCxhedE7wwRl0ji7lK8UnXSYwSL8SylCHsFBV3/5UsOjQeZrRSAI3LZ7hH7EVPr4C6XZzyyIeYI+kUwLaRI0r8vuAEmJJcAnyVKwn4bblegVn2uZgY2R8YJJCMqGiDk9MQcPl2GkkGQx3Z4jkVAqX+El+sncoBZ2X1yjU8+pOnS64tQRKhAqTiNfznbDh4TqZ1JC4i8PR2eJUOgvMIuwZn/ObD0eL+O5OODLv/40kTOfS7jnzKryKo/RZyt3pDMJh2O6P1rnc3KPyrB5VN6/Paa4X869W6G1NukwCQWFV2qTo8+SQcB1SeZ4+hxbofLBeF4yqgrMeqPZ2pXbNhaoNBRikyTYvmnolYiQH/Xrv6tfaz/tdcGGc8NreNV6o+qdTOrH3eZx12sdtY+bneZJ+6akvQaPCz7nlKjYit2yJG/38yyLhCpfEctW3B+37P8kSt9eBjcvkX/Rfg4SFGi54/hyJbLVxiLZaJIkH9kcDhisx6Ve0FOWzhuZf2dRdsCxezPytN5peZ2bgs7bu4YJPGqDinsEn2F1QHBsntc98YhwfwH+nQXprW4FOyfx97cWBUnbX6yp2vaiIFxxmrhc0644LVzl5CtOGxfEYbcRaZuoFIo/u/3L+cgk3wVTd6/b+b0uyU1APr8o34M6jVU2NOlTy6u/fN5dJywftYB9d8aAS4xvN81M+DO9wEWNpbzWOPJqNLKhJ2VtZWcZ3alXPZ399ORuBjhjegvadNk7xtnkXsp/A5N8JMnCfq64ial7u7hGNHpsXm3mMoO19pu5ircxQOG4Ygwy9WZ7BhLTFY2RtmYHVDB2BwBTtxmyk3bYaVXbx/XjaqvdaVTnzdCvNvzTTjPsdFjIOu5s+9FOVOgVj52b0bjojOI4S9BIGOYSu0jnajCeOGeXQxQUl8o6JaIhFg01/gb5zWQx
+sidebar_class_name: "put api-method"
+info_path: site/openapi/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Update a case"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"put"}
+  path={"/api/2.0/crm/case/{caseid:[0-9]+}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Updates the selected case with the parameters specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"caseid":{"description":"Case ID","type":"integer"},"title":{"description":"New case title","type":"string"},"members":{"description":"List of contact IDs of the case participants","type":"array","items":{"type":"integer","format":"int32"}},"customFieldList":{"description":"New list of case custom fields","type":"array","items":{"type":"object"}},"isPrivate":{"description":"Case privacy: private or not","type":"boolean"},"accessList":{"description":"New list of users with access to the case","type":"array","items":{"type":"string","format":"uuid"}},"isNotify":{"description":"Notifies users from the access list about the case","type":"boolean"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Case","content":{"application/json":{"schema":{"type":"object","properties":{"Members":{"type":"array","items":{"type":"object","properties":{"SmallFotoUrl":{"type":"string","example":"url to foto"},"MediumFotoUrl":{"type":"string","example":"url to foto"},"DisplayName":{"type":"string","example":"Tadjeddine Bachir"},"IsCompany":{"type":"boolean","example":"false"},"AccessList":{"type":"array","items":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"}},"IsPrivate":{"type":"boolean","example":"true"},"IsShared":{"type":"boolean","example":"false"},"ShareType":{"type":"integer","format":"int32","enum":["None","ReadWrite","Read"],"description":"[0 - None, 1 - ReadWrite, 2 - Read]","example":"0"},"Currency":{"type":"object","properties":{"Title":{"type":"string","example":"Chinese Yuan"},"Symbol":{"type":"string","example":"¥"},"Abbreviation":{"type":"string","example":"CNY"},"CultureName":{"type":"string","example":"CN"},"IsConvertable":{"type":"boolean","example":"true"},"IsBasic":{"type":"boolean","example":"false"}},"title":"CurrencyInfoWrapper"},"CanEdit":{"type":"boolean","example":"true"},"CanDelete":{"type":"boolean","example":"true"},"ID":{"type":"integer","format":"int32","example":"1234"}},"title":"ContactBaseWrapper"}},"CreateBy":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"},"Created":{"type":"string","example":"2020-12-08T17:37:04.5736385Z"},"Title":{"type":"string","example":"Exhibition organization"},"IsClosed":{"type":"boolean","example":"false"},"IsPrivate":{"type":"boolean","example":"false"},"AccessList":{"type":"array","items":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"}},"CanEdit":{"type":"boolean","example":"true"},"CustomFields":{"type":"array","items":{"type":"object","properties":{"EntityId":{"type":"integer","format":"int32","example":"14523423"},"Label":{"type":"string","example":"Birthdate"},"FieldValue":{"type":"string","example":"2020-12-08T17:37:04.5916406Z"},"FieldType":{"type":"integer","format":"int32","enum":["TextField","TextArea","SelectBox","CheckBox","Heading","Date"],"description":"[0 - TextField, 1 - TextArea, 2 - SelectBox, 3 - CheckBox, 4 - Heading, 5 - Date]","example":"5"},"Position":{"type":"integer","format":"int32","example":"10"},"Mask":{"type":"string","example":""},"ID":{"type":"integer","format":"int32","example":"1234"}},"title":"CustomFieldBaseWrapper"}},"ID":{"type":"integer","format":"int32","example":"1234"}},"title":"CasesWrapper"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

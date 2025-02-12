@@ -1,0 +1,73 @@
+---
+id: get-a-calendar-by-id
+title: "Get a calendar by ID"
+description: "Returns the detailed information about a calendar with the ID specified in the request."
+sidebar_label: "Get a calendar by ID"
+hide_title: true
+hide_table_of_contents: true
+api: eJzlWNty2zYQ/RUM++aRbEq+xNGbanscTdvYY0ntTBw/gOTSQkwCLADKYTX69y7Ai0hZNuk26TSJHmyS2AV2D87uArtyNL1XzujW8WkEPKDy4Kx4UITygKjUU75kiWaCK+eu5yjwU8l0hjorZ5zqhZDsL2qG3wENQJq5JD45PecR5cC5W6NWANUszsi5AZ1KroheAAlAUxZBQBgPhYztTIR6ItWEktIo8sj0wopPzolKwGchsyr2m4Q/U1B6/yP/yPf23gsNe3sjch0BVUA4vqIU1VY0YkoTERJYAtdqM4FK0D3AZaKIeEAgTnS2jy4kVNIYNEhl/eX4gvaXZk2Ml8x4lFC9cLbdLJFEo3FM+QuIqTNaOTpLzCxKS8bvnbXBp7RAmfGh65p/uyfDmXzBNZpvZGiSRMy3oB18UkZw9XQh4X0CXxtvpEhAapYvM1HT2ubW5D0hEDuOCvCZxklkvoU0UuCs0V00ZC6jp37UpY3gRBnRqUYyxF0nn6h3LAigszFnlI8j9Og3EbAwa9HSMi0WmS6ohKCj+DXImCll+d+K6TnVHZAfL5Hy1IvgqoirjQaVkmaGVRriDutNgpc3wkYiOvHeEvclyRuUJIJHmRE/h5Cmke6IUCE91VnUskhuDqpopu2Hse+DUjkMdmCy5fdr8UCxNkyGYRDC8Zs3/UN/eNI/enN40n8bhG/73jE9OT30vNPjoesUprTjdrEEmQleMOtSijTpCBuS9yJgXUE2nMW1r7aD9UchRjlwnXqY8cze/CEx+2HBWe8ePhNRhMhY/Z4zVyCvTTL/4sGWVy38kqYs+EdEa9+D3zH5y4x8yB7EsoFGza0GDGW1qCcvS1DDOJN5Ou7gDD5rBFLIl+37KbQ/o/Ez9R/uMQp40EXPtb+cK7tK0Q6dqqrWNYypueudVC3iBo+WKBnkoM1EIGqCDMvvPcj63uOnw+HuGnX1yEF+8+TqmUSHR6avV6os1nPWJjU8PHoMaJ4/q1PYiyrVae28Gx7W0YoinXmZq22RchxF5zT7VaBsxyPNVFOpX15p6A7d/mDYdwcz92R0eDIauPunJ0fHR6fDD3aneFsFbJngBhKg+iZti6fcQ2jY+8zuz+zo60KoP2jQ0QJsl6sy/6sPc1hz57y403hdk2DnrFlt4qvOjD9YadoqSd9LesS41anqSHGexuaePENC491tCfjtTPCQyRiMG8hSH/D0EjhPrs63LumTSq9HBvhaqfbI0LyW2ncNP6y776gaa039RbyVzEs6Pwm4zSkLSyzWwf9DBfjKBcC4+fr8b7W20v8XSOZnwghq+Jcp/fsIs9pnA3edm8Vdw9aHrWLzH5ekGYvhA94IJzwU7Va0IzOfnXU5qxZiV2GoQL/WL7eJbeFBzanislqOdCuEOy4ktUsbjh65g6edrjmnRVsR8jthDPiK3jv3YPEzvbaRc0ATdjDcdw+qzuVq05dbO5tO5dT0w4rGy65+5SadJewXyMqW3iIf7pVNv4autYuVG1z6KOI45bgimYJcgiQ3F9MZGV9PcBJ8Vbl7EdWgtME0EUrH1KaVYo1LaHQ9vSxvHQbNHFT1/76hRmoBscb75EESUWbTY5r3EfMNvTX4oyRuqelxbtqdo1q7FevhAlEz0quVh2bNZbRem89ouTRNaXxcUsny09otcosp84z0saR8Acxmu3anwSVRuGHJkkapPQX3nAekTaMtvL5D6UXZEF8VAqapkeia6pP2rekFV3S/vJihrAmGJkkfLEmLBzP7TrOafC1tNH/XvWdUVqs8BNbrSj4felajCpJc2qB0h5H9N+h4FlY=
+sidebar_class_name: "get api-method"
+info_path: site/openapi/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get a calendar by ID"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/calendar/{calendarId}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns the detailed information about a calendar with the ID specified in the request.
+
+**Note**: Please note that the list of events in the response will be empty.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"calendarId","in":"path","description":"Calendar ID","schema":{"type":"string"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Calendar","content":{"application/json":{"schema":{"type":"object","properties":{"IsSubscription":{"type":"boolean","example":"false"},"iCalUrl":{"type":"string","example":""},"IsiCalStream":{"type":"boolean","example":"false"},"IsHidden":{"type":"boolean","example":"false"},"CanAlertModify":{"type":"boolean","example":"true"},"IsShared":{"type":"boolean","example":"true"},"Permissions":{"type":"object","properties":{"Data":{"type":"object","properties":{"AvailableOptions":{"type":"array","items":{"type":"object","properties":{"Id":{"type":"string","example":"read"},"Name":{"type":"string","example":"Read only"},"Default":{"type":"boolean","example":"true"},"DefaultStyle":{"type":"string","example":"read"}},"title":"AccessOption"}},"Items":{"type":"array","items":{"type":"object","properties":{"ItemId":{"type":"string","example":"2fdfe577-3c26-4736-9df9-b5a683bb8520"},"ItemName":{"type":"string","example":"Everyone"},"IsGroup":{"type":"boolean","example":"true"},"CanEdit":{"type":"boolean","example":"true"},"SharingOption":{"type":"object","properties":{"Id":{"type":"string","example":"read"},"Name":{"type":"string","example":"Read only"},"Default":{"type":"boolean","example":"true"},"DefaultStyle":{"type":"string","example":"read"}},"title":"AccessOption"}},"title":"PublicItemWrapper"}}},"title":"PublicItemCollection"},"UserParams":{"type":"array","items":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"2fdfe577-3c26-4736-9df9-b5a683bb8520"},"Name":{"type":"string","example":"Valery Zykov"}},"title":"UserParams"}}},"title":"CalendarPermissions"},"IsEditable":{"type":"boolean","example":"true"},"TextColor":{"type":"string","example":"#ffffff"},"BackgroundColor":{"type":"string","example":"#000000"},"Description":{"type":"string","example":"Calendar Description"},"Title":{"type":"string","example":"Calendar Name"},"Id":{"type":"string","example":"1"},"IsTodo":{"type":"integer","format":"int32","example":"false"},"Owner":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"2fdfe577-3c26-4736-9df9-b5a683bb8520"},"Name":{"type":"string","example":"Valery Zykov"}},"title":"UserParams"},"Events":{"type":"array","items":{"type":"object","properties":{"Id":{"type":"string","example":"1"},"Uid":{"type":"string","example":"1234wda"},"CalendarId":{"type":"string","example":"calendarID"},"Name":{"type":"string","example":"Event Name"},"Description":{"type":"string","example":"Event Description"},"AllDayLong":{"type":"boolean","example":"false"},"Start":{"type":"string","example":"2020-12-01T06:36:10.8645482Z"},"End":{"type":"string","example":"2020-12-01T06:36:10.8645482Z"},"RepeatRule":{"type":"string","example":""},"Alert":{"type":"object","properties":{"Type":{"type":"integer","format":"int32","example":"-1"}},"title":"EventAlertWrapper"},"IsShared":{"type":"boolean","example":"true"},"CanUnsubscribe":{"type":"boolean","example":"true"},"IsEditable":{"type":"boolean","example":"false"},"Permissions":{"type":"object","properties":{"UserParams":{"type":"array","items":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"2fdfe577-3c26-4736-9df9-b5a683bb8520"},"Name":{"type":"string","example":"Valery Zykov"}},"title":"UserParams"}}},"title":"Permissions"},"Owner":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"2fdfe577-3c26-4736-9df9-b5a683bb8520"},"Name":{"type":"string","example":"Valery Zykov"}},"title":"UserParams"},"Status":{"type":"integer","format":"int32","enum":["Tentative","Confirmed","Cancelled"],"description":"[0 - Tentative, 1 - Confirmed, 2 - Cancelled]","example":"0"},"HasAttachments":{"type":"boolean"}},"title":"EventWrapper"}},"Todos":{"type":"array","items":{"type":"object","properties":{"Id":{"type":"string","example":"1"},"Uid":{"type":"string","example":"123wda"},"CalendarId":{"type":"string","example":"calendarID"},"Name":{"type":"string","example":"Todo Name"},"Description":{"type":"string","example":"Todo Description"},"Start":{"type":"string","example":"2020-12-01T06:36:10.8645482Z"},"Completed":{"type":"string","example":"2020-12-01T06:36:10.8645482Z"},"Owner":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"2fdfe577-3c26-4736-9df9-b5a683bb8520"},"Name":{"type":"string","example":"Valery Zykov"}},"title":"UserParams"}},"title":"TodoWrapper"}},"DefaultAlertType":{"type":"object","properties":{"Type":{"type":"integer","format":"int32","example":"-1"}},"title":"EventAlertWrapper"},"TimeZoneInfo":{"type":"object","properties":{"Name":{"type":"string","example":"UTC"},"Id":{"type":"string","example":"UTC"},"Offset":{"type":"integer","format":"int32","example":"0"}},"title":"TimeZoneWrapper"},"CanEditTimeZone":{"type":"boolean","example":"false"}},"title":"CalendarWrapper"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

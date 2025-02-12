@@ -1,0 +1,71 @@
+---
+id: create-member-photo-thumbnails
+title: "Create photo thumbnails"
+description: "Creates photo thumbnails by coordinates of the original image specified in the request."
+sidebar_label: "Create photo thumbnails"
+hide_title: true
+hide_table_of_contents: true
+api: eJztWEtv2zgQ/isCT7td23KUoHB8S5MWW+wGNfLYS2EYtDS22Eoil6QSu4L/+86QUizXaZ0YWKAHHWxI5LznG4ozFbN8adj4M5uAVBkEYTBJpZWGTXtMKtDcCll8TNiYxRq4hWvI56AdzV1a5vOCi8ywHlNc8xwsaBJWsQJfkKc0oEWC26LAN8Vtis8JmFgLRYJx8R5Jgo9XuK7h31JoQF1Wl9BjJk4h52xcMbtWJM1YLYolUsKK52gsLp2fnL9lm83Uc4Ox72SyJpZdJTumxrKwUFii4kplInY+hl8MkVb7auX8C8SWfNQUESvAuN1cfRBkxL59u8on6HZgZWBTCCzkSmqu18GCeHusKLOMz0mMd3rrmpE50a8s2/TYqqVGoPlL0Ht6/pRafEPfeBbEUupEFJgvpFpInXPrGU+jdvhOotMzFL5+gfB/yPH41aIfRYI5Pyz+KUGB53iB6BTEMrWvkl2zHBSO0nmSCOLn2aSV9QXPDPxYfo3BoFUMPWaFdfm8uL0c+CIbXChxLRPIzODGc1xZOdhitF5kZAcBoINmB81fEJrtw/PNHx1GO4z+ahglSzQYJQvjQRcNhz+5HOwqbl0T3CGsMi5ehXDE0xIznR2G+KeaMlB0r/oprBNY8DKzM7pZzRz5zIhvMDuJRsM+/Q0UKnB+WxR5WPeNpztG5+nbYR9/jcacrw6ru+YrkZd5QAKOUoop7OOvUToXy8NK34nlUbpGUX8UPbkHiSjzF3jo6Y7Rdzbqn40afSbn2Quwc+vIjkpf1D+tvTtUsQeK0FfYbhVecctxZe9L8drvRFdFXRV1VXR0K9CVT1c+Xfn4q+DZ8GT/9ndf8NKmdPeHhDmi032iD1LPRZJA4aw0EJda2LWbdHETz0jC7CvQAkKe08DrEQmATWkytSvq0o3RjK8ybGoaU4P5utUcmEAuXMfT1G8gcr6EwCiIxUJAEojC7dd35gEjbKAfNKlT0riDgMZtYxZyJcJoMAyVi1lY+aHcJnQWhLY9GsOdh2aEV2pMPEutVeMwzCQ2LynKHY+G51G4B4C/aT/w7IycbmJ0S+eUP4p2I/UEKTTvL1zoNTPDHbJ6coiB+SrABZ8OwJvtrO99g7BWR9nq/VzrR02Ja9P8Q91U+ZemDaq7IlEspJPVwhoJpeBQZLy3DxEhhcKcc3ca16b73O6l9vtoVdve4n+EQx3eVu+CNrukVjU0PlPskRLBQXBx8MCH8dPUtvkStFzB1BIMiLmq5tzAvc42G1pGxZoqAB8fuBb+GEAcJcLQc/J8+9eOxW839QT492A7FX7WjQY6BSHkgWclveGjQ1Yzdd5MXZvLE4QkGeI3L726/h2J2DLvXVE3vYbjIo5B2RZt25Zpq+4mn27vkGxej6BzPJlwVfNHGm7jvzNROsddQbi1imW8WJaYTdz3mt1JWO40/pgoXw71A/nzbBC+qx7vAf2TP89yVJWvQMxiQ++3fshRx7ShdmFAo/8DSKVlfA==
+sidebar_class_name: "post api-method"
+info_path: site/openapi/docspace/api-backend/usage-api/asc-files
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Create photo thumbnails"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/api/2.0/people/{userid}/photo/thumbnails"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Creates photo thumbnails by coordinates of the original image specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"userid","in":"path","description":"User ID","required":true,"schema":{"type":"string","example":"9196"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"description":"Thumbnails","content":{"application/json":{"schema":{"type":"object","properties":{"tmpFile":{"type":"string","description":"Path to the temporary file","nullable":true,"example":"some text"},"x":{"type":"integer","description":"Horizontal coordinate","format":"int32","example":1234},"y":{"type":"integer","description":"Vertical coordinate","format":"int32","example":1234},"width":{"type":"integer","description":"Thumbnail width","format":"int32","example":1234},"height":{"type":"integer","description":"Thumbnail height","format":"int32","example":1234}},"additionalProperties":false,"description":"Thumbnail request parameters","title":"ASC.People.ApiModels.RequestDto.ThumbnailsRequest"}},"text/json":{"schema":{"type":"object","properties":{"tmpFile":{"type":"string","description":"Path to the temporary file","nullable":true,"example":"some text"},"x":{"type":"integer","description":"Horizontal coordinate","format":"int32","example":1234},"y":{"type":"integer","description":"Vertical coordinate","format":"int32","example":1234},"width":{"type":"integer","description":"Thumbnail width","format":"int32","example":1234},"height":{"type":"integer","description":"Thumbnail height","format":"int32","example":1234}},"additionalProperties":false,"description":"Thumbnail request parameters","title":"ASC.People.ApiModels.RequestDto.ThumbnailsRequest"}},"application/*+json":{"schema":{"type":"object","properties":{"tmpFile":{"type":"string","description":"Path to the temporary file","nullable":true,"example":"some text"},"x":{"type":"integer","description":"Horizontal coordinate","format":"int32","example":1234},"y":{"type":"integer","description":"Vertical coordinate","format":"int32","example":1234},"width":{"type":"integer","description":"Thumbnail width","format":"int32","example":1234},"height":{"type":"integer","description":"Thumbnail height","format":"int32","example":1234}},"additionalProperties":false,"description":"Thumbnail request parameters","title":"ASC.People.ApiModels.RequestDto.ThumbnailsRequest"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Thumbnail parameters","content":{"text/plain":{"schema":{"type":"object","properties":{"original":{"type":"string","description":"Original photo","nullable":true,"example":"default_user_photo_size_1280-1280.png"},"retina":{"type":"string","description":"Retina","nullable":true,"example":"default_user_photo_size_360-360.png"},"max":{"type":"string","description":"Maximum size","nullable":true,"example":"default_user_photo_size_200-200.png"},"big":{"type":"string","description":"Big","nullable":true,"example":"default_user_photo_size_82-82.png"},"medium":{"type":"string","description":"Medium","nullable":true,"example":"default_user_photo_size_48-48.png"},"small":{"type":"string","description":"Small","nullable":true,"example":"default_user_photo_size_32-32.png"}},"additionalProperties":false,"title":"ASC.People.ApiModels.ResponseDto.ThumbnailsDataDto"}},"application/json":{"schema":{"type":"object","properties":{"original":{"type":"string","description":"Original photo","nullable":true,"example":"default_user_photo_size_1280-1280.png"},"retina":{"type":"string","description":"Retina","nullable":true,"example":"default_user_photo_size_360-360.png"},"max":{"type":"string","description":"Maximum size","nullable":true,"example":"default_user_photo_size_200-200.png"},"big":{"type":"string","description":"Big","nullable":true,"example":"default_user_photo_size_82-82.png"},"medium":{"type":"string","description":"Medium","nullable":true,"example":"default_user_photo_size_48-48.png"},"small":{"type":"string","description":"Small","nullable":true,"example":"default_user_photo_size_32-32.png"}},"additionalProperties":false,"title":"ASC.People.ApiModels.ResponseDto.ThumbnailsDataDto"}},"text/json":{"schema":{"type":"object","properties":{"original":{"type":"string","description":"Original photo","nullable":true,"example":"default_user_photo_size_1280-1280.png"},"retina":{"type":"string","description":"Retina","nullable":true,"example":"default_user_photo_size_360-360.png"},"max":{"type":"string","description":"Maximum size","nullable":true,"example":"default_user_photo_size_200-200.png"},"big":{"type":"string","description":"Big","nullable":true,"example":"default_user_photo_size_82-82.png"},"medium":{"type":"string","description":"Medium","nullable":true,"example":"default_user_photo_size_48-48.png"},"small":{"type":"string","description":"Small","nullable":true,"example":"default_user_photo_size_32-32.png"}},"additionalProperties":false,"title":"ASC.People.ApiModels.ResponseDto.ThumbnailsDataDto"}}}},"401":{"description":"Unauthorized"},"403":{"description":"Forbidden"}}}
+>
+  
+</StatusCodes>
+
+
+      

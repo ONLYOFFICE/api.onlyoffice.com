@@ -1,0 +1,63 @@
+---
+id: get-contact-statuses
+title: "Get contact statuses"
+description: "Returns a list of all the contact statuses available on the portal."
+sidebar_label: "Get contact statuses"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVMFu2zAM/RVDuxp1mhYY0FuRFl2wARuSFjsUObAOE6uVLU2is2aG/32k5KbJ1nbYsBwcSXyPFMlHdYpgHdTZrSp9XUxsQ1BSUItcBSxbr2nLtk6dt1RZr38Aadt8QFiiF47nlcrVd8ahWvTMWmIovXYCU2dqhtT6JmSQGR0os6sMjMmowqxMkbJAQG1AhmxAG7gzmNkmIpz1BOaI3XsMzjYMUmedGo9G8ncY59MfvLMTOcKGhAvOGV3GVIr7IA46FcoKa5AVbR2yS/AetszjzOqwd27v7rEkNjhvHXrS6VozNOxwg1OBT2ybIg0czaHXXLFcrayvgdLRyZgP8BFqZwR0rPpcXWuSzY4ZyOtmfYBLEMZe7JfgLcY+kHkTa6x/m/EO3q9KLjSj59yGzz72+x/ymV78NW18cqp6plIqhRo0OY+t/Oq5eeyil1+uTkfHv4vhpoFBrbiMnmrk7ZIta4yNA6p4U4DTxfhoVIjwB8EUSTDqWf1z0UVq8Ysz8KwXpz9iFIzcoUrmXDVQi/WAGy+lm5WN9F2add02HDGbo9+gz2aX8+vs/MuUnfA2pNxYZBhIKutsoBpi54cYV0gvCX95KJPdHPyn4RzSJ3ykwhnQUWKtNxIrVfpWasNIrrXMoa+HaYQ4RkPF+emoOCNBd90dBLzxpu/l+FuLXh4hXm7Aa7mF7DhK9fQOdeqBS89VLkt04nQDpk1N+WXS5YnayeHq8pqxIpbDPj7EPg4L8f5karZ7vg9bmg9XkG+fv0LpuqQSTuwJn0yvMnY6Smip7oKV/xMLzO/A
+sidebar_class_name: "get api-method"
+info_path: site/openapi/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get contact statuses"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/crm/contact/status"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns a list of all the contact statuses available on the portal.
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"List of all the contact statuses","content":{"application/json":{"schema":{"type":"array","items":{"type":"object","properties":{"RelativeItemsCount":{"type":"integer","format":"int32","example":"1"},"Title":{"type":"string","example":"Title"},"Description":{"type":"string","example":"Description"},"Color":{"type":"string","example":"#a7fc00"},"SortOrder":{"type":"integer","format":"int32","example":"1"},"ID":{"type":"integer","format":"int32","example":"1234"}},"title":"ContactStatusWrapper"}}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

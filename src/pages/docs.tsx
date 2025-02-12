@@ -14,10 +14,10 @@ const templateProps: FeaturePageTemplate.Props = {
     </>
   ),
   links: [
-    <>If you have any questions about ONLYOFFICE Docs, try the <Link href='docs/Docs API/More Information/FAQ'>FAQ</Link> section first.
+    <>If you have any questions about ONLYOFFICE Docs, try the <Link href='docs/docs-api/more-information/faq'>FAQ</Link> section first.
     </>,
     <>You can request a feature or report a bug by posting an issue on <a
-      href='https://github.com/ONLYOFFICE/DocumentServer/issues'>GitHub</a>.</>,
+      href='https://github.com/ONLYOFFICE/documentServer/issues'>GitHub</a>.</>,
     <>You can also ask our developers on <a href='https://forum.onlyoffice.com/c/document-api/39'>ONLYOFFICE forum</a> (registration
       required).</>,
   ],

@@ -1,0 +1,71 @@
+---
+id: set-rooms-notification-status
+title: "Set room notification status"
+description: "Sets a notification status for a room with the ID specified in the request."
+sidebar_label: "Set room notification status"
+hide_title: true
+hide_table_of_contents: true
+api: eJztV99P2zAQ/lcsP25dUwoPW98YDAmNbYiC9lBVyE2ujSGNPduBdVH/993ZCbg/ADHtCfWhVWyffXff9/kuqbkTM8sHIz4E52Q5syxh35WTU5kKJ1Vp+bjDlQbjR6cZH3AL7kKpuY3Nhk64yvION/CrAus+q2zBBzVPVemgdPQotC4a6+TGqpLmbJrDXNCTW2jAs9XkBlKH52hDTp0ES6uG/JHzmmdgUyM1HYP2FAg7PcYNZVUUYlLgIc5U0OHwW8w1DWsuKYC9/v5Bh1tnMElKQs2BOfhNviZKFSDKsHO57PB55SAKql3vrDkfakgRAbBMTpnLgVGYrIzRY8IAy6SlyDKmDK3yKLjWo8gySRtEcR4lPhWFhXWvFwFhpoURc3BgLJviwVv9M9uwij6ddOSRHw6Puj9h0j3Ukn7fVAaF7Tan2mOnuhvs2lYcjRUacYqa8Ntx+Ta4jK/nu/c7Ut8AqRS3AatxPbDU7/WeYOipmKL67S+7LoR8lTBaaH3IkbkwRizQWjrw88t1FM8kQqimHjLL7qXLPYIPVK2w+Jy8Rq/V1/hFvl9iKkC+lamWqG3X7rWXboft89j+U3vagfocqOTpoLe3WUWuSlG5XBn5BzLujfY3jU6Umcgsg9LTYyGtjHQLn7Gw6TWdcH0LNIF1S2SY6D0aAB8vxxulHRzW7rW65V9CfbEVodQ+sHB6zGzTDDImy1CMQ63sohss07mid1utrJeEcDmOEqFl0u/2krYiJrG/xDPNKRFzh1Xe51GZAjfmzulBkhQqFUWORw4+9j71k43+dEbrLGznlGMLyZDEGvS4CsyjHLX8CqTHEnsMjWMzVCkdnyp1K8FjTbfg4vHV/Mtj74069+tU13bhZiDLqfLxRVI7kQUQQIROyPiuT+IglOfCX8smfKRzW3NsvypWYIu+Kv6zDBpso06HwXpG60YSIwIeLVEUnviHRhlHQJ9BXhrIKLFP2+p6IixcmWK5pGl0aUjn+HgnjAx1YDRGdzkKH9VAWvKM86OQ7IdLCo7MiyoIYK1xLDvtjsM0Be0i2zihcaT28x/DS89r+FibYznAWSPuKQP8H3BOH3+hYpFWaK7mhShnlZiRbfDs609F+MT6DEpsHiifdqlcxHmsCjdkQP+Uz9YddR3Ej0i29mHpyR0Npq21hwGD/gueJEZZ
+sidebar_class_name: "post api-method"
+info_path: site/openapi/docspace/api-backend/usage-api/asc-files
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Set room notification status"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/api/2.0/settings/notification/rooms"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Sets a notification status for a room with the ID specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"roomsId":{"description":"Room ID","nullable":true,"example":{"int":1234,"string":"some text","boolean":true}},"mute":{"type":"boolean","description":"Specifies if the room notifications are disabled or not","example":true}},"additionalProperties":false,"description":"Request parameters for the room notification settings","title":"ASC.Web.Api.ApiModels.RequestsDto.RoomsNotificationsSettingsRequestDto"}},"text/json":{"schema":{"type":"object","properties":{"roomsId":{"description":"Room ID","nullable":true,"example":{"int":1234,"string":"some text","boolean":true}},"mute":{"type":"boolean","description":"Specifies if the room notifications are disabled or not","example":true}},"additionalProperties":false,"description":"Request parameters for the room notification settings","title":"ASC.Web.Api.ApiModels.RequestsDto.RoomsNotificationsSettingsRequestDto"}},"application/*+json":{"schema":{"type":"object","properties":{"roomsId":{"description":"Room ID","nullable":true,"example":{"int":1234,"string":"some text","boolean":true}},"mute":{"type":"boolean","description":"Specifies if the room notifications are disabled or not","example":true}},"additionalProperties":false,"description":"Request parameters for the room notification settings","title":"ASC.Web.Api.ApiModels.RequestsDto.RoomsNotificationsSettingsRequestDto"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Room notification settings","content":{"text/plain":{"schema":{"type":"object","properties":{"disabledRooms":{"type":"array","items":{},"description":"List of rooms with the disabled notifications","nullable":true,"example":[{"int":1234,"string":"some text","boolean":true}]}},"additionalProperties":false,"title":"ASC.Web.Api.ApiModels.ResponseDto.RoomsNotificationSettingsDto"}},"application/json":{"schema":{"type":"object","properties":{"disabledRooms":{"type":"array","items":{},"description":"List of rooms with the disabled notifications","nullable":true,"example":[{"int":1234,"string":"some text","boolean":true}]}},"additionalProperties":false,"title":"ASC.Web.Api.ApiModels.ResponseDto.RoomsNotificationSettingsDto"}},"text/json":{"schema":{"type":"object","properties":{"disabledRooms":{"type":"array","items":{},"description":"List of rooms with the disabled notifications","nullable":true,"example":[{"int":1234,"string":"some text","boolean":true}]}},"additionalProperties":false,"title":"ASC.Web.Api.ApiModels.ResponseDto.RoomsNotificationSettingsDto"}}}},"401":{"description":"Unauthorized"},"403":{"description":"Forbidden"}}}
+>
+  
+</StatusCodes>
+
+
+      

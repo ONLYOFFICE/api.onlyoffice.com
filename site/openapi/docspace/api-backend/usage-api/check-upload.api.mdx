@@ -1,0 +1,71 @@
+---
+id: check-upload
+title: "Checks upload"
+description: "Checks upload"
+sidebar_label: "Checks upload"
+hide_title: true
+hide_table_of_contents: true
+api: eJzlVU1z2jAQ/SuMTv2gmJIcim8pbWYybaeZkJwYJiPsBSuRLVWSSajH/727kg0GQttzewFZevvx3q5WFXN8ZVk8Y5dCgu1FvUslUzCWzftMaTDcCVVcpSxmSQbJ452WiqeszzQ3PAdHyHhWsQI/ELP0xlcEEAV+a+4yXBv4UQoD6MWZEvrMoq+cs7hibqPJThQOVmAQulQm5y5snY1wA555riWCxuPzcV3Pgzew7qNKN+QiUWhcOFpyraVIfMrRg1UF7R3FUosHSBxRMETQCbB0uiT+t8JRqC2WG8M3RMZBTqi6z4pSSr4gVOCyzW/GrMqh5+DZsXmNSJ6mglLh8roTacmlRTMXIrGL6WTgpR9MlIHBhRbfVArSDm4Cy09ODSY75ZtdRv4p0n9As1vUN2//db4UwYDVqrCBwGg4pL8UbGKEpsDo/gpPjYO0R/SQSOcO+K7QkouXZTqk3u5bZ0SxYvWh4if1/htHv+/QP3sgH+fD98f87wpeukwZ8ROHigedHYMulVmINIXCt5GFpDTCbfy44ja5Jw/3j0AbqLgfak8IAKwyDpl9V75Utle20w8nX6ZoKGplfc/RnItZxLWIRoNh5LsuqtpxWEfBMvIzlFEyZt2OztJINM2c03EUSZVwmaHT+MNwPIrYYSJf6bwXzBnl2dKakrqhY/bJ7eTW4guQ3s2s3oM18zpR6lGA14vKdrObtJ/b+7B/pfZvB3lZKh/z8B5gBGIcWKxHVDTSLue+N5qUDmXe496Z9EfAhmKn99G/F7ZqajMj/ojE6tAr06QUdx6srbNQJNSW6kCWVbXgFu6MrGvaRk0MdQ0u19yIMDWwkKmwtE63w+Bk+q9umgfxde9U8m3RCqrNmsuSvnDpa7p7Z2sSPcPuxXagHMLxJER6d0tOduZH97rutxYXSQLadbDdbOadhr/+Pr1F2KJ5fHOcarhr+BM98/jrk1Ses29Gv1cxyYtVyVeEDZH9nCmpMt0GDa3YLIjPizIcdG5gQL/E50WLqgrdjwVs8eHopEWjaYv2MmDSvwAgvSZq
+sidebar_class_name: "post api-method"
+info_path: site/openapi/docspace/api-backend/usage-api/asc-files
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Checks upload"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/api/2.0/files/{folderId}/upload/check"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Checks upload
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"folderId","in":"path","required":true,"schema":{"type":"integer","format":"int32","example":9949}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"filesTitle":{"type":"array","items":{},"nullable":true,"example":["some text"]}},"additionalProperties":false,"title":"ASC.Files.Core.ApiModels.RequestDto.CheckUploadRequest"}},"text/json":{"schema":{"type":"object","properties":{"filesTitle":{"type":"array","items":{},"nullable":true,"example":["some text"]}},"additionalProperties":false,"title":"ASC.Files.Core.ApiModels.RequestDto.CheckUploadRequest"}},"application/*+json":{"schema":{"type":"object","properties":{"filesTitle":{"type":"array","items":{},"nullable":true,"example":["some text"]}},"additionalProperties":false,"title":"ASC.Files.Core.ApiModels.RequestDto.CheckUploadRequest"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Inserted file","content":{"text/plain":{"schema":{"type":"array","items":{"type":"string"}}},"application/json":{"schema":{"type":"array","items":{"type":"string"}}},"text/json":{"schema":{"type":"array","items":{"type":"string"}}}}},"401":{"description":"Unauthorized"},"403":{"description":"Forbidden"}}}
+>
+  
+</StatusCodes>
+
+
+      

@@ -20311,7 +20311,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Configuration"
+                  "$ref": "#/components/schemas/configuration"
                 }
               }
             }
@@ -29094,7 +29094,7 @@
     "/api/2.0/mail/signature/{mailbox_id:[0-9]+}": {
       "get": {
         "tags": [
-          "mail/Signature"
+          "mail/signature"
         ],
         "security": [
           {
@@ -29141,7 +29141,7 @@
     "/api/2.0/mail/signature/update/{mailbox_id:[0-9]+}": {
       "post": {
         "tags": [
-          "mail/Signature"
+          "mail/signature"
         ],
         "security": [
           {

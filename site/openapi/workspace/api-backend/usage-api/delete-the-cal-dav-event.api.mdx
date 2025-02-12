@@ -1,0 +1,71 @@
+---
+id: delete-the-cal-dav-event
+title: "Delete the CalDav event"
+description: "Deletes the CalDav event from the calendar with the ID specified in the request."
+sidebar_label: "Delete the CalDav event"
+hide_title: true
+hide_table_of_contents: true
+api: eJy1VE2P2jAQ/SuRz3RDVz1xoxCpqD1UC5wQhyEZiJckdm0Hlkb8987YCRCW7aFSOaCxPR9v3rxJIxzsrBitRAoFVhmYODlg5axYD4TFtDbSnei5EePa5crI3+Ckqr4hZGg4zJAlBuJIfijWZ4rK0KZGanYTIzHFAh3ayOUYTaCYwiFCLhBtjSr9bVc4OkqX+5vZNLIaU7mVmEWy8ncGf9Vo3RPVas2vKiNkjUhV5Sghm6B1IVOPMH61XL8RNs2xBLbcSSMhUptXTB3l0UZpNE6i9WlaGLOMT/0mJh3E2ZTi2jzWGVntxHkgavkgxtMYLR9HGLRaVVZuilC8H7oAu496LpcUYAyc6Ehsl/amqS51+F0KhOzPw+EHReAIlMlQwn9kMVT7Mvz8vsCyglYymAn2KpGOxBT5sSZ4AuByOsegZfz8NIwvGiQjg4MXirjqcM4gQksP1XgBR/m+o6eJgeTheSAqKPm1F+uRcZcvV1Ulb1DqAu9V0ZHcDvx67E9z1T2szwxgqzww6TihmKiyrCvqJZqjOaCJXpL5Ihr/nFEaOtpAXQG0Mo6FopV1JfgRtOjDQr3bJ3G3eDd78T92sCXa4ZuLdQHEM++BKbhwmOqKp0CeNFeWV1sgmJfZ0ucipw7Zu2k2YHFpivOZr6mS4Q8PmQcwEjZM34opzbtvTyP2NGTm1Df6acGY2L2ogwjuZHwedBHjNEXt/uq7vtHrNPmRLBJy37SfnFJlHGXgyNOn/5EgQ3nqvTz9XUNzrHY17Ng3ZGWx8Vb0tbr3Wm0N7qt7qk43GPuyHbSt8D839jCkacImEKWdf3j6MOKyK8Gb57om1H8AIoscqQ==
+sidebar_class_name: "delete api-method"
+info_path: site/openapi/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Delete the CalDav event"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"delete"}
+  path={"/api/2.0/calendar/caldavevent"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Deletes the CalDav event from the calendar with the ID specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"calendarId":{"description":"Calendar ID","type":"string"},"uid":{"description":"Event UID","type":"string"},"responsibles":{"description":"Task responsibles","type":"array","items":{"type":"string"}}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Task awaiter","content":{"application/json":{"schema":{"type":"object"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

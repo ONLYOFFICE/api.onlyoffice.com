@@ -1,0 +1,71 @@
+---
+id: move-batch-items
+title: "Move to a folder"
+description: "Moves all the selected files and folders to the folder with the ID specified in the request."
+sidebar_label: "Move to a folder"
+hide_title: true
+hide_table_of_contents: true
+api: eJztWdtu2zgQ/RVBj7uqb0nabd7SZAME2yBF0qAPhlHQ0thmI4laknLqGv73nRnKEuU43XrRAItCLxI5GnIuPGcoUevQirkJT8fhpUzBBP3gpgAtrFS5CSdRqLa9qyQ8DTO1hHfCxosrC5kJo1DD3yUY+04lq/B0HcYqt5BbaoqiSGXMQ/tfjMpJZuIFZIJadlUAzqemXyC2OE+hyZCVYOjpTKUJ6KvEeKpCa7FCTcmWyUC+upmh47WGRNtz0KgDX0VWpCgbjo6ON1GtYayW+dxXCI3KILDw1YabySYK8zJNxZSeWF0CCmaYlf+FIwmm+bLKC1lVOfx8q7h+M1w1ewtGpUv4yON8W5CXGYHl7kEWONHNEvSjxkxg+6J0Cw4Em12L6H2sZUFoQPGYhgevArpFQT0JSup2FNTzobhuT1resxcUYOXWIBpGo8Z6k5Ed84Pa9rBtc/SsrcGG5pWW7Z7dnfc+wbTHlOndgV7KGBufzi+rNj9piMTd8z255XVNwcLZzKKjDcimSqUgct+DCgcexf5FF5VFkkjyQKQfPILNRGqgHY2L5Fxp6J0V8lqhV6Z368h9YVWPSd/0Q5qcYNNRu6N2R+1fjtr+5v3b7x3HO453HP+1OE7TazAFhudIOxoM6NZO9XtpbKBmAdEoUM2HQTsOeg8oUiEPKhIy8XRqoLV544Nl+PZkRAmvl2U/sq/xCwXnOVcFkfyCV4ca6jFPlUiweS30w5m5Be5cZYXSlgfkiCN7IBHIGmKOblFANrFDN4Q/WyY8cgMFlQckqppR0PhCs9SdKHB+odA1aHL2j+fn1g8xjLOxy7DoKDqOTqLX0Zsf5JoLb1jHNvLCOmrFc7wTxokXwWvf9zcvyNS6u+UoAm+OWPd3gSbemdKZsE50NGqV38EAB4PWSh8G1comemrgUJSHvGnl0ixaQ58vKKVO95mowyq1/K5Fbwtx2+X3Nsu9WyzvaoeN+gm1zZUuKm6tNd/3BnPo+0tXmrrS1JWmrjS9UGn6T+cmXU3qalJXk7qa9CI1iQwcD4ZPv//uc1HahdLyG6aXlY6eKl0qPZVJAjlXNwMx5tCuuMwIE3+mGT4/AAnwi5PLiDtzmBB021MRdUwg0jSwCwgMkia2kPDnJ4pzbLnsBVaxhusGj9IuuH91EZgCYjmTOErmLKt+UfXQbgYYDP3HKkqusMIusNMXheyPeoM+m+GrKkw/c6XRIHN4vTAcBk+4sLY47fdTFYt0oYw9/WPwdtR/Ugve0/PADQ8p1G1m7qjkO9y089MgopB/AUEiFxn3fTUECk0fK/UggVNOe8lt8yPuzy1YWydxYzpNijz8TrzTsX0P2ydWTmHvAdP2NKl1FOJ4U58SVOCX+UxxnLuAxeGUZZe5Je9cBaY2E7xvVWng7QNXXlTrvpty7//jSyOpWijv6KOpLQ5WY1pF1ERghdtK4e4ILsIiwQvTTAgi7fV6Kgzc63SzITFa0kQZbC6Flq4YjOmQb4EcogwjHhk1tBdT0K94NUg9LR2Idr6AaGNzI87iGArr6fpxTDyefLj/iFrT6u9uhsUEhVo8opCuWLvpD7E7E0IFlq3DVOTzUsxJ1xnmAlZSVnyIOzBXDe8kVOQrP4w29l0AdPVORtsj1mvHH0zkVt89enZEldKtNmcBnf4HTqF+Bw==
+sidebar_class_name: "put api-method"
+info_path: site/openapi/docspace/api-backend/usage-api/asc-files
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Move to a folder"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"put"}
+  path={"/api/2.0/files/fileops/move"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Moves all the selected files and folders to the folder with the ID specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"folderIds":{"type":"array","items":{"anyOf":[{"type":"integer","example":1234},{"type":"string","example":"some text"}]},"nullable":true},"fileIds":{"type":"array","items":{"anyOf":[{"type":"integer","example":1234},{"type":"string","example":"some text"}]},"nullable":true},"destFolderId":{"oneOf":[{"type":"integer","example":1234},{"type":"string","example":"some text"}]},"conflictResolveType":{"oneOf":[{"enum":["Skip","Overwrite","Duplicate"],"type":"string","description":"[Skip - Skip, Overwrite - Overwrite, Duplicate - Duplicate]","example":"Skip"},{"enum":[0,1,2],"type":"integer","description":"[0 - Skip, 1 - Overwrite, 2 - Duplicate]","example":0}],"title":"ASC.Web.Files.Services.WCFService.FileOperations.FileConflictResolveType"},"deleteAfter":{"type":"boolean","example":true},"content":{"type":"boolean","example":true}},"additionalProperties":false,"title":"ASC.Files.Core.ApiModels.RequestDto.BatchRequestDto"}},"text/json":{"schema":{"type":"object","properties":{"folderIds":{"type":"array","items":{"anyOf":[{"type":"integer","example":1234},{"type":"string","example":"some text"}]},"nullable":true},"fileIds":{"type":"array","items":{"anyOf":[{"type":"integer","example":1234},{"type":"string","example":"some text"}]},"nullable":true},"destFolderId":{"oneOf":[{"type":"integer","example":1234},{"type":"string","example":"some text"}]},"conflictResolveType":{"oneOf":[{"enum":["Skip","Overwrite","Duplicate"],"type":"string","description":"[Skip - Skip, Overwrite - Overwrite, Duplicate - Duplicate]","example":"Skip"},{"enum":[0,1,2],"type":"integer","description":"[0 - Skip, 1 - Overwrite, 2 - Duplicate]","example":0}],"title":"ASC.Web.Files.Services.WCFService.FileOperations.FileConflictResolveType"},"deleteAfter":{"type":"boolean","example":true},"content":{"type":"boolean","example":true}},"additionalProperties":false,"title":"ASC.Files.Core.ApiModels.RequestDto.BatchRequestDto"}},"application/*+json":{"schema":{"type":"object","properties":{"folderIds":{"type":"array","items":{"anyOf":[{"type":"integer","example":1234},{"type":"string","example":"some text"}]},"nullable":true},"fileIds":{"type":"array","items":{"anyOf":[{"type":"integer","example":1234},{"type":"string","example":"some text"}]},"nullable":true},"destFolderId":{"oneOf":[{"type":"integer","example":1234},{"type":"string","example":"some text"}]},"conflictResolveType":{"oneOf":[{"enum":["Skip","Overwrite","Duplicate"],"type":"string","description":"[Skip - Skip, Overwrite - Overwrite, Duplicate - Duplicate]","example":"Skip"},{"enum":[0,1,2],"type":"integer","description":"[0 - Skip, 1 - Overwrite, 2 - Duplicate]","example":0}],"title":"ASC.Web.Files.Services.WCFService.FileOperations.FileConflictResolveType"},"deleteAfter":{"type":"boolean","example":true},"content":{"type":"boolean","example":true}},"additionalProperties":false,"title":"ASC.Files.Core.ApiModels.RequestDto.BatchRequestDto"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"List of file operations","content":{"text/plain":{"schema":{"type":"object","properties":{"id":{"type":"string","nullable":true,"example":"1952"},"Operation":{"oneOf":[{"enum":["Move","Copy","Delete","Download","MarkAsRead","Import","Convert","Duplicate"],"type":"string","description":"[Move - Move, Copy - Copy, Delete - Delete, Download - Download, MarkAsRead - MarkAsRead, Import - Import, Convert - Convert, Duplicate - Duplicate]","example":"Move"},{"enum":[0,1,2,3,4,5,6,7],"type":"integer","description":"[0 - Move, 1 - Copy, 2 - Delete, 3 - Download, 4 - MarkAsRead, 5 - Import, 6 - Convert, 7 - Duplicate]","example":0}],"title":"ASC.Web.Files.Services.WCFService.FileOperations.FileOperationType"},"progress":{"type":"integer","format":"int32","example":100},"error":{"type":"string","nullable":true,"example":""},"processed":{"type":"string","nullable":true,"example":"1"},"finished":{"type":"boolean","example":true},"url":{"type":"string","format":"uri","nullable":true,"example":"some text"},"files":{"type":"array","items":{},"nullable":true},"folders":{"type":"array","items":{},"nullable":true}},"additionalProperties":false,"title":"ASC.Files.Core.ApiModels.ResponseDto.FileOperationDto"}},"application/json":{"schema":{"type":"object","properties":{"id":{"type":"string","nullable":true,"example":"1952"},"Operation":{"oneOf":[{"enum":["Move","Copy","Delete","Download","MarkAsRead","Import","Convert","Duplicate"],"type":"string","description":"[Move - Move, Copy - Copy, Delete - Delete, Download - Download, MarkAsRead - MarkAsRead, Import - Import, Convert - Convert, Duplicate - Duplicate]","example":"Move"},{"enum":[0,1,2,3,4,5,6,7],"type":"integer","description":"[0 - Move, 1 - Copy, 2 - Delete, 3 - Download, 4 - MarkAsRead, 5 - Import, 6 - Convert, 7 - Duplicate]","example":0}],"title":"ASC.Web.Files.Services.WCFService.FileOperations.FileOperationType"},"progress":{"type":"integer","format":"int32","example":100},"error":{"type":"string","nullable":true,"example":""},"processed":{"type":"string","nullable":true,"example":"1"},"finished":{"type":"boolean","example":true},"url":{"type":"string","format":"uri","nullable":true,"example":"some text"},"files":{"type":"array","items":{},"nullable":true},"folders":{"type":"array","items":{},"nullable":true}},"additionalProperties":false,"title":"ASC.Files.Core.ApiModels.ResponseDto.FileOperationDto"}},"text/json":{"schema":{"type":"object","properties":{"id":{"type":"string","nullable":true,"example":"1952"},"Operation":{"oneOf":[{"enum":["Move","Copy","Delete","Download","MarkAsRead","Import","Convert","Duplicate"],"type":"string","description":"[Move - Move, Copy - Copy, Delete - Delete, Download - Download, MarkAsRead - MarkAsRead, Import - Import, Convert - Convert, Duplicate - Duplicate]","example":"Move"},{"enum":[0,1,2,3,4,5,6,7],"type":"integer","description":"[0 - Move, 1 - Copy, 2 - Delete, 3 - Download, 4 - MarkAsRead, 5 - Import, 6 - Convert, 7 - Duplicate]","example":0}],"title":"ASC.Web.Files.Services.WCFService.FileOperations.FileOperationType"},"progress":{"type":"integer","format":"int32","example":100},"error":{"type":"string","nullable":true,"example":""},"processed":{"type":"string","nullable":true,"example":"1"},"finished":{"type":"boolean","example":true},"url":{"type":"string","format":"uri","nullable":true,"example":"some text"},"files":{"type":"array","items":{},"nullable":true},"folders":{"type":"array","items":{},"nullable":true}},"additionalProperties":false,"title":"ASC.Files.Core.ApiModels.ResponseDto.FileOperationDto"}}}},"401":{"description":"Unauthorized"},"403":{"description":"Forbidden"}}}
+>
+  
+</StatusCodes>
+
+
+      

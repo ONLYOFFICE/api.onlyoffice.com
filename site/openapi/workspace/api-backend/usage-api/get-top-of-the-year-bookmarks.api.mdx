@@ -1,0 +1,63 @@
+---
+id: get-top-of-the-year-bookmarks
+title: "Get top of the year bookmarks"
+description: "Returns a list of the most popular bookmarks for the current year with the bookmark titles, dates of creation and update, bookmark texts, and authors."
+sidebar_label: "Get top of the year bookmarks"
+hide_title: true
+hide_table_of_contents: true
+api: eJzNVVtv2zoM/iuCnt3YyYpuC3Bw0G1FN+yCYe1wgHV9YGw21mJLmiQ39Yz895GynSZnl2zYy5LAkcmPF/GjqE4GWHo5v5K5qetGq9CmT4xZ1eBWXl4n0mPeOJISpJOnTSiNU18gKKOfIxTo2NTRSiZyTTiU1xuyKtDnTlmGybl8h6Fx2gsQlfJBmBsRShS1obU1tqnAicUYU9wYF9UU1qEOokVSr1Uoo3TEiaBChT4RBQT07DKnLDieAF2IxrI82YHjXSA06yBuwk8oY4feGu2RCtDJWZbx337qr4aEt/mRVW50oMwYDNZWKo9x00+eLTrp8xJr4FVoLZIPcA5asqPq1H5HbhafMA+ksM5YdEH1ebwodjCKQi2pyomkutQQetHJMQnwDmpbMWg6lZtEXnJFdkx9cEov94DnxiwrFErnE7Z476qf48sQ7Pzjx5R+6/V6sozmE+qUGK9s6oUGdcAHBRHBEHkjmkyfMldY/Nxwls2yo+nsKDu5zB7OH5zMp8eTR1P6Pn7wIWYfOf5DJ8922T5cup3kn7S/SeXW6ZbJplHFXpBs+Bx95zF+YtbK2wraN1AfIPy1WqH4ALqF4FfqF7vkNWjgniP06S0EcBc1VAdYbnqWPSMFRCu2f+vMjarwYKNRgxG0aPLgeYmGxL2MzSfg7d2/jUf3DxS10nQmHQRDEShE6Dckz8iVaRH/c2BxXzUONFb1ug2rj7Pptwf+vYZhyFFrMapGeiUe5RIjwRBKeknBqnQ2ydL7sTmOiDQYm/LUkvfT84JnQt8T352h97PCqpcYhwUnU/bqROrI9L5tzE7pGxPNh60+HdMRF+hu0Yl3ZxeX4vTtC3JCr77fZMVDMzBBloZwDbH3hxjnGIhJO07pOH53p1+xf2K2w/DvnfJDaVmZ0rGhytLGm74lezqvuO6EJELjfB9qSOvRNbsxlp6RWLrhStoXG3bdAjw3+GbD4s8NOr4raXkLTsGCWbm6poDleF12ckUME5l5jpZb6haqpuf+f5cJ36Tb9js/uyQsb2u/XVaxXYYFex9Vut3xvd85yZACPzfJD0y6rm9G2tiI71U/tNi2a4/mQl/TSfsKOr7VMQ==
+sidebar_class_name: "get api-method"
+info_path: site/openapi/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get top of the year bookmarks"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/community/bookmark/top/year"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns a list of the most popular bookmarks for the current year with the bookmark titles, dates of creation and update, bookmark texts, and authors.
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"List of bookmarks","content":{"application/json":{"schema":{"type":"array","items":{"type":"object","properties":{"Id":{"type":"integer","format":"int64","example":"11"},"Title":{"type":"string","example":"Google inc."},"Url":{"type":"string","example":"http:\\/\\/www.google.com"},"Thumbnail":{"type":"string","example":"Url to thumbnail"},"Created":{"type":"string","example":"2020-12-06T07:36:14.8181893Z"},"Updated":{"type":"string","example":"2020-12-06T07:36:14.8181893Z"},"Description":{"type":"string","example":"Google"},"CreatedBy":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"}},"title":"BookmarkWrapper"}}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

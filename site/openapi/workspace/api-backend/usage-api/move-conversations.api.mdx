@@ -1,0 +1,71 @@
+---
+id: move-conversations
+title: "Move conversations"
+description: "Moves conversations with the IDs specified in the request to the selected folder."
+sidebar_label: "Move conversations"
+hide_title: true
+hide_table_of_contents: true
+api: eJy1VEtv2zAM/iuCzm6dpt0lt67rsGAbUDTpKchBselYrWVpkpzHDP/3kZLTxG03YB2Wg0OJr48fSbXci7XjkwVXQlbpja43YJ3wUteOLxPuIGus9Hu0aPl140tt5c+g/gIiB0ueFiWe8C3aAV926JWDy6w0ZMYn/LvegGPZaWi2lb5kvgQ2/eSYM5DJQkLOZB0uLfxowHnmdTg6qCDzqC50hTnPMVlv8VHnCK3lGNxD7UkUxlQyC2nSR0cAWu6yEpQgye8NICS9esSIGMdYbcB6CY60Mg9/Q/jfJCLRBVPgnFhHxIXVKkAbVIXx+vjCWrHHIzKi3EleiTDXyFrCC22V8PHqcsy7jq6qwOhLAJ/DPaMQE3bBzpClld4lbIyiw6oTdolSbkXhXcKuUPZWuDJhH8jACHXEdciP2RoHNkae5q9zPqC2pxsLfldhzaGy8KOWOYMkRabHo9E/Mv23LX9HSwLsq9HFG/TUot8FyEPvFOAReeSmCWMlfImHVBiZjs9HaViuQQWpwq3gxwWbEd7IzZtrdqzDyK8QCiEgZVQnvBaKtAPfgIwIuT9uy+1OKFPB87QvRsvj5I1ejgVqO8pU6IBAevLkN1qppkbQbAYWS2L3t7M5u76bIg6qMHJUCY85adSMdl6J0JYeJj0Jrzo6oPhkp//LA9Kz6WHnU1MJJJN2wlaUOXZvQVSjJfYPv9TBOHUDzKGLyGCJJZJL266EgwdbdR1dIwpLbyeKG2GlWBF/C+K0PDyfLX/CdhKpodyzOQEj86qJ7X4x211y8LjOMjD+j7bLk8m8e5ij7ap/MZXOycWKLb2m+J1wFLSJhaFBuGuxi/W6wWVEfQxJM0XDPxzJpzCSvUBFHVT1/gTgcDqTvg76UlVvurRtHHjk82AfVb/1eF6JaE2dXSLqXwkVXSk=
+sidebar_class_name: "put api-method"
+info_path: site/openapi/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Move conversations"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"put"}
+  path={"/api/2.0/mail/conversations/move"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Moves conversations with the IDs specified in the request to the selected folder.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"ids":{"description":"List of message IDs from the conversations","type":"array","items":{"type":"integer","format":"int32"}},"folder":{"description":"Folder type: 1 - inbox, 2 - sent, 3 - drafts, 4 - trash, 5 - spam","type":"integer"},"userFolderId":{"description":"User folder ID","type":"array","items":{"type":"integer","format":"uint32"}}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"List of message IDs from the conversations","content":{"application/json":{"schema":{"type":"array","items":{"type":"integer","format":"int32"}}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

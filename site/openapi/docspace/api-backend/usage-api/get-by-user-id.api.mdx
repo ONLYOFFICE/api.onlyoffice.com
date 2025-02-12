@@ -1,0 +1,71 @@
+---
+id: get-by-user-id
+title: "Get user groups"
+description: "Returns a list of groups for the user with the ID specified in the request."
+sidebar_label: "Get user groups"
+hide_title: true
+hide_table_of_contents: true
+api: eJztVt9P2zAQ/lciP21S25QWppI3NgZiY9MEQ5OGKuQk18bUjT3bKZQo//vu7LS0KzwgjTfykPrH3Xd3313uWjPHp5Yl1+zUqEqzcYcpDYY7ocqznCVsCu7j8sqCwV2HaW74HBwYUqlZiRuUqfBa0LUocae5K3Cdg82M0ASEh4QQnR3juYE/lTCA2M5U0GE2K2DOWVIzt9SEZp0R5RQlJ8rMuSP8yqPDPZ9rSSIj/uFD/3CYdmHvALr76WTYTdPRoDvay0fZ/mh4MJpw1jRjsma1Ki1YMjDo9+ln27NzYV2kJtGU4rdoJlOlg9J5j+DexVpyiqve9VSlt5A5osUQaU4EM+jsi6Kp++3TfeK1ehrWdFq+d7HLSkqeEljg9BHbZzX6TnqoP+cln4J5GcQXPoPeb/5QCGdnAmntMJ7ngujj8sdG5BMuLWo64bze0eWn3i9Ie0da9L6pHKTteW8uq/mcm+WxUwFLaykyX3DxrVVvTL8a076a3yh+PYoJbb+/t9tjrkpeuUIZ8YB9zwsNd4VOlElFnkPpvbKQVUa4pe+z3GY3hHAzAzrArsaJ9TsUADamPrcNdQGuMqWNeCS3uluEeYtcARF17OhOuMLvzo4jqyETEwF5JEp/Rm0arOuhGWz4hWpngZ8B2N8TFnMt4kGvHwfomCDjOoyChlEAZrGaE5WRqFE4p5M4lirjslDWJaP+4SDeGRXndB8FdUaxrai4pJINVblNyLoA0KWveLCqrW2xdjxlSs0EeI5FOVFeeyPJJ0ICTQHyPfizGFDKNDqMFUfiLfgpuMDjenJsxVE/DpL/nI822I3hhP55ius2OdfEBEpievC99o+s4E/SzmukltJA4nWdcgtXRjYNHaMpQ4WGywU3InxKmMdcWFrn68/j2YjfXbRj/n30OPqfdHyVupIytOCyoh0ufWZXfy2aMUoWWPX0vaMj4fIoy0C7DbVN5PFG4Z5+/olSVAnbxRLKol0Q7pPO/FNFwTa9m84zGnUdKrFp1vLh6lmNNraVtA8A+8lfqFczAA==
+sidebar_class_name: "get api-method"
+info_path: site/openapi/docspace/api-backend/usage-api/asc-files
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get user groups"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/groups/user/{userid}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns a list of groups for the user with the ID specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"userid","in":"path","description":"User ID","required":true,"schema":{"type":"string","format":"uuid","example":"8a66093b-e15e-4bf3-bb82-81d8c48358fa"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"List of groups","content":{"text/plain":{"schema":{"type":"object","properties":{"id":{"type":"string","format":"uuid","example":"{00000000-0000-0000-0000-000000000000}"},"name":{"type":"string","nullable":true,"example":"Group Name"},"manager":{"type":"string","nullable":true,"example":"Jake.Zazhitski"}},"additionalProperties":false,"title":"ASC.Web.Api.Models.GroupSummaryDto"}},"application/json":{"schema":{"type":"object","properties":{"id":{"type":"string","format":"uuid","example":"{00000000-0000-0000-0000-000000000000}"},"name":{"type":"string","nullable":true,"example":"Group Name"},"manager":{"type":"string","nullable":true,"example":"Jake.Zazhitski"}},"additionalProperties":false,"title":"ASC.Web.Api.Models.GroupSummaryDto"}},"text/json":{"schema":{"type":"object","properties":{"id":{"type":"string","format":"uuid","example":"{00000000-0000-0000-0000-000000000000}"},"name":{"type":"string","nullable":true,"example":"Group Name"},"manager":{"type":"string","nullable":true,"example":"Jake.Zazhitski"}},"additionalProperties":false,"title":"ASC.Web.Api.Models.GroupSummaryDto"}}}},"401":{"description":"Unauthorized"},"403":{"description":"Forbidden"}}}
+>
+  
+</StatusCodes>
+
+
+      

@@ -1,0 +1,71 @@
+---
+id: remove-webhook
+title: "Remove a webhook"
+description: "Removes the tenant webhook with the ID specified in the request."
+sidebar_label: "Remove a webhook"
+hide_title: true
+hide_table_of_contents: true
+api: eJztVsFuEzEQ/RXLJ5CibEiRCLkV2kpVC0INFQcUIWd30nXr2Is9m1JW++/M2JuwaVrggASHHtI49vh5Zt6z+xqJ6irI6Wc5A0Rtr4LIxCdYlM7dBDkfSFeBV6idPS3kVHpYuTV063IgK+XVChA8QzTS0g+K0gUtaUujSmFJ4wJC7nXFMDR5yssevtbaA4Gir2EgQ17CSslpI/GuiiAW4Qo8hS6dXylMUwdjmoBvalUZCpq8ej1p2zmjhcrZAIEBxqMRf+0e+hGssihuU+riVmMpNAaRO7vUV6JXyEDSHILFmAx8w6wyiqtp9pN0i2vIkRvhuVGoUwbUgIcKudeGo1/W9nIyOWgHXUu3YAE9kbSH9Z6jKLg2Ri14d2rqFky+gdqoUszysjY6oCTk2uvfA19enP4SN7gVCG4SIwbIPeAZ3P0edxZDxQ3F/jE8MUhB/dYunDOg7D56BbleEhlCLwWWsKE9COVBdDjCeWEd9nvOx3MdwfzJIbPzvb20WRWF5ghlPvQ0sVQmUGWoMdZ1OHs7pFs0PKw0f965AkwYXnQqPkI33NzBt1GfNCMjeFUZncf7mF0H9yTKJ1H+e1HGN/JJjU9q/A/UyPAvRy/2//9fWlVj6bz+Tu2JQQf7QSfOL3RRgI26Jq5IAHgXrY0K+RdG+MJ8kF3yoNjG3FIAyDl7kF2oi+iUQmwtPuA9eP70SISOhkJoG+fYF0HAIWGTHykduy6qnKxJtFtkp6YyU5XOxsNRFjrPlnXQWaOLVnLmfr3xZLUnpmSJWE2zzLhcmdIFnE5Gr8fZHmHnvC7SdslFbXow42udbu5uJ7YaoJzOklSTCdwJ6+xgTjlqiM3Vduni7h7dJ9oA+y/OPeWzHjNXFSW8UvF56cBTd4Xa9PR+Ic1PD/c3mOhK7JnB+DjEK5A4+cz1UySxEvufeGGBbBOc0pNHHeXuc3zTLFSAS2/alqfpLM/CouFaeZ3uOtFX6NBd6e5+PFrns4vOUj8X0WE/mPSGLMucrJWp+RcNI5f8KLdziipJ3CQAPj8tHOY5VNjb0ked96R6dHx+/PGYApn6XXUkHXQDhn4wl3uyScfz33bwyI6mSdJr2218Wnp0R1fetmqugV6OHzwDc5Y=
+sidebar_class_name: "delete api-method"
+info_path: site/openapi/docspace/api-backend/usage-api/asc-files
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Remove a webhook"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"delete"}
+  path={"/api/2.0/settings/webhook/{id}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Removes the tenant webhook with the ID specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"id","in":"path","description":"Id","required":true,"schema":{"type":"integer","format":"int32","example":8798}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Tenant webhook with its config parameters","content":{"text/plain":{"schema":{"type":"object","properties":{"id":{"type":"integer","description":"ID","format":"int32","example":4883},"name":{"type":"string","description":"Name","nullable":true,"example":"Beulah Schulist"},"uri":{"type":"string","description":"URI","nullable":true,"example":"some text"},"secretKey":{"type":"string","description":"Secret key","nullable":true,"example":"some text"},"enabled":{"type":"boolean","description":"Specifies if the webhooks are enabled or not","example":true},"ssl":{"type":"boolean","description":"SSL","example":true}},"additionalProperties":false,"title":"ASC.Web.Api.ApiModels.ResponseDto.WebhooksConfigDto"}},"application/json":{"schema":{"type":"object","properties":{"id":{"type":"integer","description":"ID","format":"int32","example":4883},"name":{"type":"string","description":"Name","nullable":true,"example":"Beulah Schulist"},"uri":{"type":"string","description":"URI","nullable":true,"example":"some text"},"secretKey":{"type":"string","description":"Secret key","nullable":true,"example":"some text"},"enabled":{"type":"boolean","description":"Specifies if the webhooks are enabled or not","example":true},"ssl":{"type":"boolean","description":"SSL","example":true}},"additionalProperties":false,"title":"ASC.Web.Api.ApiModels.ResponseDto.WebhooksConfigDto"}},"text/json":{"schema":{"type":"object","properties":{"id":{"type":"integer","description":"ID","format":"int32","example":4883},"name":{"type":"string","description":"Name","nullable":true,"example":"Beulah Schulist"},"uri":{"type":"string","description":"URI","nullable":true,"example":"some text"},"secretKey":{"type":"string","description":"Secret key","nullable":true,"example":"some text"},"enabled":{"type":"boolean","description":"Specifies if the webhooks are enabled or not","example":true},"ssl":{"type":"boolean","description":"SSL","example":true}},"additionalProperties":false,"title":"ASC.Web.Api.ApiModels.ResponseDto.WebhooksConfigDto"}}}},"401":{"description":"Unauthorized"},"403":{"description":"Forbidden"}}}
+>
+  
+</StatusCodes>
+
+
+      

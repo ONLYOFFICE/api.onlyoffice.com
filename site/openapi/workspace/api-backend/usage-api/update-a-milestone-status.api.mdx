@@ -1,0 +1,71 @@
+---
+id: update-a-milestone-status
+title: "Update a milestone status"
+description: "Updates a status of a milestone with the ID specified in the request."
+sidebar_label: "Update a milestone status"
+hide_title: true
+hide_table_of_contents: true
+api: eJztV1tv2jAU/iuWnzaNS8ig2pCmiVKkoakXFapJLX1wk0Nxm9iZ7ZQyxH/fcRxCUNGAdpX60DxEtvOd+2fneE4Nu9W0fUUTJe8gMPVjHoE2UoCm1xWqIUgVNzNEzGknNROp+B9muBQ/gIWgrKTCEa3QKeKAXi9QKgQdKJ5YGG3TiyRkBjRhRBtmUk3kGMfx0g6ZcjMhZgKkf0R0AgEfcwgJF9magt8p4mpoIB8eyhDdmdNACgPC2CFLkogHmVv1O22NzqkOJhAzOzKzBNANeWPjQz0YaQLKcIwQv/LQvtc9LnKALqFAroCjvVsMeYFpyQJ5KngC01JgebgfRvQ0ATGiRCoyot1IaghH9OMGzdljI9WJFNo56HveU0Mup+HKGCr7Twk5c0Q4nQpb3m3ofljCLOOo0LFUMTNu6bOPC/DI4iSyoIb/2aZwyI2dFrLaKC5u15CDbEByZlqhQZH3fSx6VrSvzxR/wKSVpG+kjICJNfCYRRqorYJxHtIBt5/ytPxSmFtHgiPkfcTFliB8z/eqDb/q+0Ov2W402q2DWrPZ+tLy/Uvn10+Y7eaTBZ9Iw8c747tM9EJu9oAfQQS75qhCO4HhDzBk+r4rU2H2pkIrs5ptiGcrcTrwEML9sH8pWge2FM3LkpLD2Z60L0wVXqYpD9cpmD/VDa/lk3GK6yRisxMWb6HVMb8HcsnEjBl9z3fcUMdMsPwE6+BWYGoQsyj6t0yqImIk0RZJWCZl5XE7jPHsuVBbxEejOkLDNDDaDkHisluz4jWmk8fvqQb1jYUxFxw1MCPV2v7roSo5A7BbzzlfFOq1ypAfry+jU67knU5vnU5FoV6rDM/4SXr7/SMdMvspldqEHQTLbcXLfrDnrmnhN2suvxP+DRK+VKrXKUTJetFLF51T1uI2vcaGrlaw/IqBZ69FxYBT9JAmacYhZiY4qbOE1/2aV1/eWYouuD7nYfvKq369/rSo50366hIzsB2w49/Gq0yRB9Rvm7IKUh1nE/e5QkXGqnXZzE3bYp+vbie9Zbbc7cJb3Re8hdU5lpmtPEFdGcepQPfIANQDKHLeGwxJ56yPFnGqXWoie4XCHnjxF7KPf0k=
+sidebar_class_name: "put api-method"
+info_path: site/openapi/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Update a milestone status"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"put"}
+  path={"/api/2.0/project/milestone/{id:[0-9]+}/status"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Updates a status of a milestone with the ID specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"id":{"description":"Milestone ID","type":"integer"},"status":{"description":"New milestone status (\"Open\" or \"Closed\")","type":"integer"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Updated milestone","content":{"application/json":{"schema":{"type":"object","properties":{"ProjectOwner":{"type":"object","properties":{"Id":{"type":"integer","format":"int32","example":"123"},"Title":{"type":"string","example":"Sample project"},"Status":{"type":"integer","format":"int32","example":"0"},"IsPrivate":{"type":"boolean","example":"false"}},"title":"SimpleProjectWrapper"},"Deadline":{"type":"string","example":"2020-12-22T04:11:56.4458522Z"},"IsKey":{"type":"boolean","example":"false"},"IsNotify":{"type":"boolean","example":"false"},"CanEdit":{"type":"boolean","example":"false"},"CanDelete":{"type":"boolean","example":"false"},"ActiveTaskCount":{"type":"integer","format":"int32","example":"15"},"ClosedTaskCount":{"type":"integer","format":"int32","example":"5"},"Created":{"type":"string","example":"2020-12-22T04:11:56.5658524Z"},"CreatedBy":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"},"CreatedById":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"Updated":{"type":"string","example":"2020-12-22T04:11:56.5658524Z"},"UpdatedBy":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"},"UpdatedById":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"Id":{"type":"integer","format":"int32","example":"10"},"Title":{"type":"string","example":"Sample Title"},"Description":{"type":"string","example":"Sample description"},"Status":{"type":"integer","format":"int32","example":"0"},"Responsible":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"},"ResponsibleId":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"}},"title":"MilestoneWrapper"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

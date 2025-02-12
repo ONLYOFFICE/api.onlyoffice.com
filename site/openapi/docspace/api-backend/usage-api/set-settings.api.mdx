@@ -1,0 +1,71 @@
+---
+id: set-settings
+title: "Enable notifications"
+description: "Enables the notification type specified in the request."
+sidebar_label: "Enable notifications"
+hide_title: true
+hide_table_of_contents: true
+api: eJztWEtvEzEQ/iuWj7Bk05QD5FYKlRCvqmnFoaqQsztJDM7a2N6WsMp/Z8beTZ2kBSSEVFV7SOLHeOabmW+ckRvuxdzx8SWfgPeymjuWs4/ay5kshJe6cvwq49qADbO3JR9zB74T5hm38L0G51/pcsXHDS905aHyNBTGqFZL/tXpitZcsYCloJFfGUBlevoVCo96jCUrXoK73W24ruDTDOE1HKp6SThfiXIOZPhM66U7Kry8ln6F89dCqtUJQInjCwezWqlzaQL+1pbzFkHjdgmusNIQMly+jCrZMxYHGdtSjethzkS7kLGNKdwLYzbDScYSs7jTzpjH6RVahR9iaRQBaX1YZxu3htlBNsoOb7FKDOMc7D7YYYLz4A5sox1Mh79DMlyTRekDqqPJ8eAzTAfH2sIgcGA1SKlwTsjWGZfuTSWmCgN9m8ap1gpEtQd3YqBABRhdOWN+AaxKFDI6zKRjEPUxbWk/BehtDWu0KcpS0hGhThOezIRysGsyhcxcx+qWpswIK5bgwRKFdj0/MpI+H3QJyg3O4hH32uutOHTkT/Y5YfTww/dE74n+6ImeXuxPnvaM7xn/uBlPKC04g91QpPBoOKSfvwCHSJKOKPxDGCVkXzB9wfyfgvkT7yOL7+P9XTd8f7/3dH3gdO07756nD5+nZOT58GC/c7ioRO0X2sqf6HAQOtwXOtF2KssSqsB4B0VtiZTEW+GKL6ThyzegBexVBDH0BgWAX1H8t1XF2Lp7guXaeJZMVkGk7a8GqBLbq4WmNyCjXago4Rc4y4WR+WgwzLu2J0/VcoJrr6kvI7S1VXhk4b0Z57nShVALVDZ+MXw5yveS+572WTzOyZPO8QlVeSzkbfc3fEFM74CqtsKukOapGFKM1Bdaf5MQIkrXx9ntW9abjh4bfZtbISFn4A7pmukgmbDkRKogTX5HX65HlFyK3FKEm6oFFrVtZcLtBiJ5WPuH9LWeJG0oAgr5aNpUXlLYUBKTGdK26WK3Eop5oJyReNNMhYMLq9ZrWkZTljiIw2thJQGlGZpZICkxh8SAkCd+HB16FmqexFUd07bTetAVFk8cFQUYn8imjlwl7Dz9NDlHsWn7JrnEKsVVK27ovRK/x5zTo2aMNAqEtYYrUc1rMSfZaDlcCzXFJWVV5E87IH+6rWqV+rFNt+gBfZM/d55omkhZjGQnH7fuPdHGtJMOYUDQvwB4hoH6
+sidebar_class_name: "post api-method"
+info_path: site/openapi/docspace/api-backend/usage-api/asc-files
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Enable notifications"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/api/2.0/settings/notification"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Enables the notification type specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"type":{"oneOf":[{"enum":["Badges","RoomsActivity","DailyFeed","UsefullTips"],"type":"string","description":"[Badges - Badges, RoomsActivity - Rooms activity, DailyFeed - Daily feed, UsefullTips - Usefull tips]","example":"Badges"},{"enum":[0,1,2,3],"type":"integer","description":"[0 - Badges, 1 - Rooms activity, 2 - Daily feed, 3 - Usefull tips]","example":0}],"title":"ASC.Web.Core.Notify.NotificationType"},"isEnabled":{"type":"boolean","description":"Specifies if the notification type is enabled or not","example":true}},"additionalProperties":false,"description":"Notification settings request parameters","title":"ASC.Web.Api.ApiModels.RequestsDto.NotificationSettingsRequestsDto"}},"text/json":{"schema":{"type":"object","properties":{"type":{"oneOf":[{"enum":["Badges","RoomsActivity","DailyFeed","UsefullTips"],"type":"string","description":"[Badges - Badges, RoomsActivity - Rooms activity, DailyFeed - Daily feed, UsefullTips - Usefull tips]","example":"Badges"},{"enum":[0,1,2,3],"type":"integer","description":"[0 - Badges, 1 - Rooms activity, 2 - Daily feed, 3 - Usefull tips]","example":0}],"title":"ASC.Web.Core.Notify.NotificationType"},"isEnabled":{"type":"boolean","description":"Specifies if the notification type is enabled or not","example":true}},"additionalProperties":false,"description":"Notification settings request parameters","title":"ASC.Web.Api.ApiModels.RequestsDto.NotificationSettingsRequestsDto"}},"application/*+json":{"schema":{"type":"object","properties":{"type":{"oneOf":[{"enum":["Badges","RoomsActivity","DailyFeed","UsefullTips"],"type":"string","description":"[Badges - Badges, RoomsActivity - Rooms activity, DailyFeed - Daily feed, UsefullTips - Usefull tips]","example":"Badges"},{"enum":[0,1,2,3],"type":"integer","description":"[0 - Badges, 1 - Rooms activity, 2 - Daily feed, 3 - Usefull tips]","example":0}],"title":"ASC.Web.Core.Notify.NotificationType"},"isEnabled":{"type":"boolean","description":"Specifies if the notification type is enabled or not","example":true}},"additionalProperties":false,"description":"Notification settings request parameters","title":"ASC.Web.Api.ApiModels.RequestsDto.NotificationSettingsRequestsDto"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Notification settings","content":{"text/plain":{"schema":{"type":"object","properties":{"type":{"oneOf":[{"enum":["Badges","RoomsActivity","DailyFeed","UsefullTips"],"type":"string","description":"[Badges - Badges, RoomsActivity - Rooms activity, DailyFeed - Daily feed, UsefullTips - Usefull tips]","example":"Badges"},{"enum":[0,1,2,3],"type":"integer","description":"[0 - Badges, 1 - Rooms activity, 2 - Daily feed, 3 - Usefull tips]","example":0}],"title":"ASC.Web.Core.Notify.NotificationType"},"isEnabled":{"type":"boolean","description":"Specifies if the notification type is enabled or not","example":true}},"additionalProperties":false,"title":"ASC.Web.Api.ApiModels.ResponseDto.NotificationSettingsDto"}},"application/json":{"schema":{"type":"object","properties":{"type":{"oneOf":[{"enum":["Badges","RoomsActivity","DailyFeed","UsefullTips"],"type":"string","description":"[Badges - Badges, RoomsActivity - Rooms activity, DailyFeed - Daily feed, UsefullTips - Usefull tips]","example":"Badges"},{"enum":[0,1,2,3],"type":"integer","description":"[0 - Badges, 1 - Rooms activity, 2 - Daily feed, 3 - Usefull tips]","example":0}],"title":"ASC.Web.Core.Notify.NotificationType"},"isEnabled":{"type":"boolean","description":"Specifies if the notification type is enabled or not","example":true}},"additionalProperties":false,"title":"ASC.Web.Api.ApiModels.ResponseDto.NotificationSettingsDto"}},"text/json":{"schema":{"type":"object","properties":{"type":{"oneOf":[{"enum":["Badges","RoomsActivity","DailyFeed","UsefullTips"],"type":"string","description":"[Badges - Badges, RoomsActivity - Rooms activity, DailyFeed - Daily feed, UsefullTips - Usefull tips]","example":"Badges"},{"enum":[0,1,2,3],"type":"integer","description":"[0 - Badges, 1 - Rooms activity, 2 - Daily feed, 3 - Usefull tips]","example":0}],"title":"ASC.Web.Core.Notify.NotificationType"},"isEnabled":{"type":"boolean","description":"Specifies if the notification type is enabled or not","example":true}},"additionalProperties":false,"title":"ASC.Web.Api.ApiModels.ResponseDto.NotificationSettingsDto"}}}},"401":{"description":"Unauthorized"},"403":{"description":"Forbidden"}}}
+>
+  
+</StatusCodes>
+
+
+      

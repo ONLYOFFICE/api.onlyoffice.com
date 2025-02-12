@@ -1,0 +1,71 @@
+---
+id: check-the-task-subscription
+title: "Check the task subscription"
+description: "Checks the subscription to the notifications about the actions performed with the selected task."
+sidebar_label: "Check the task subscription"
+hide_title: true
+hide_table_of_contents: true
+api: eJyVUk1v2zAM/SsCr0trr9hlubVdgRW7DE13KnKgbSZWa0uaRLXLjPz3kVaarOgu04nix3uPT5qAcZtg+QAh+kdqubrH9JRgvYBEbY6Wd1Kc4DJz76P9jWy9+0rYUdShKBEs4EX6CNZ7meootdEGbYMlXPfUPiXDPZmUm2PFsJ9zzrPd2HYGTQYbn3nOY1sygeLGx5E682K5LzA0iErJsOg8F+5IPzMlvvKdKJ2g9Y7JsYYYwnAArx6T6pkgtT2NqBHvAolC3+jWgiP7Cx1bSnNV0G2n0duF1B1z+0X6D/NW6LZixn4+KicFkV5QLur6PcSV9wOhM884ZFoajpnM2as9DXULs8EhaS67U1YY/3e1phBBEfap/vheyw+Hh4cVBu0aSa6yN2xpNgW5l0uFwVYX53X1+knUnmoqJi0f6rPP6w/76igWTp9npaKKGf/8QkexwvCNdjJpVVdfygtwOGr1zewsVLe+Oz39zS8cw0B/P129V7CNn3OWtQjXfhyzE11mRfGZorm7Wd2by++3QiXXVFwZkAVWaP4AngQZBA==
+sidebar_class_name: "get api-method"
+info_path: site/openapi/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Check the task subscription"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/project/task/{taskid:[0-9]+}/subscribe"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Checks the subscription to the notifications about the actions performed with the selected task.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"taskid":{"description":"Task ID","type":"integer"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Boolean value: true - subscribed, false - unsubscribed","content":{"application/json":{"schema":{"type":"boolean"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

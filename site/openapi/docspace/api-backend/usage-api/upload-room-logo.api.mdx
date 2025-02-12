@@ -1,0 +1,71 @@
+---
+id: upload-room-logo
+title: "Upload an image for room logo"
+description: "Uploads a temporary image to create a room logo."
+sidebar_label: "Upload an image for room logo"
+hide_title: true
+hide_table_of_contents: true
+api: eJztVk1v2zAM/SuGzqmdpj1subUZCgzrsKIfpyAoGJtJ1MqSJsldMyP/faRko26WHjb02BwS2XokHx8pKq0IsPZiOhcXUqHPiuzamNqLxUgYiw6CNPprJaaiscpAxZuXZm3ESDj82aAP56baimkrSqMD6sDLulFBWnChWBlXH1UQgF/7coN1XIWtRXJplg9YBnJlHccKEj3vXpDRzChFexR8gAfnYEtwGbBm5I4+I4G6NJXU68OmPmwV2zITsUsWDr012qdok/GYfyr0pZM2mYm7mGxGQEqFIg6SC/gcCqtA6n/JyTdlid4PgEtjFIImJD5DbZlkcA0SvV4v3SgFy35jgGuFZC7Hk5PTESXoYvLCmxozZkcue+fJJfmsKTiscRC/sxu9HWbgkV1AVUmWB9TVILUVKE9GQYZocnYzy2Mj5TPjMD+z8rupUPn8utP8SzB5Uvc6ikvPybu1Spax3YoHbz7EfU9xY89+qPquqrL/0/HxgdmhoQkb4+RvrEQEnfwNokG1lFWFOvL0WDZOBpqj81aAL+/Zw/0j8guaVlBRzr8IgGKxo8F8aFb5DCjv2hoHbpvJmpTLgslKsg5Ie44Gd6ZocueCpSWCPNSt8bHwEDb0VICVxSQfFyuWo2C0F8zOPaHzkVzjFAE3IdhpQYAS1IZcTD+NP08Ksc/skvezZC6YeJ/nDbdg6rLX2b6Meiu/Ic96DXV8HsLoBmD3pTGPEqOAUq9MtN6vKWGZe+LzNOF6cM41xKPQOe+mPehON7orXvTaz2pw0/2P9F1+g1uEKEVV264Mc06ekFQI+l51WaRikIasN4Padgke75za7fg13cWO24WWT+BkOh3zBTnfUP+Q/ly9qLGYJf5Ht0yF4aphSodu7d2oNzqjYWDDAD7MYDFoqasfN7fxOKe/BTWdpe76jR5HL8tEj6v6uvCpxN2CafdbejuIv9cRiSV/M+eDFm2buooE6/Fp602LTroeHVOlg/8HDmcr8g==
+sidebar_class_name: "post api-method"
+info_path: site/openapi/docspace/api-backend/usage-api/asc-files
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Upload an image for room logo"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/api/2.0/files/logos"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Uploads a temporary image to create a room logo.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"multipart/form-data":{"schema":{"type":"object","properties":{"FormCollection":{"type":"array","items":{}}}},"encoding":{"FormCollection":{"style":"form"}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Upload result","content":{"text/plain":{"schema":{"type":"object","properties":{"success":{"type":"boolean","example":true},"data":{"nullable":true,"example":{"int":1234,"string":"some text","boolean":true}},"message":{"type":"string","nullable":true,"example":"some text"}},"additionalProperties":false,"title":"ASC.Files.Core.ApiModels.ResponseDto.UploadResultDto"}},"application/json":{"schema":{"type":"object","properties":{"success":{"type":"boolean","example":true},"data":{"nullable":true,"example":{"int":1234,"string":"some text","boolean":true}},"message":{"type":"string","nullable":true,"example":"some text"}},"additionalProperties":false,"title":"ASC.Files.Core.ApiModels.ResponseDto.UploadResultDto"}},"text/json":{"schema":{"type":"object","properties":{"success":{"type":"boolean","example":true},"data":{"nullable":true,"example":{"int":1234,"string":"some text","boolean":true}},"message":{"type":"string","nullable":true,"example":"some text"}},"additionalProperties":false,"title":"ASC.Files.Core.ApiModels.ResponseDto.UploadResultDto"}}}},"401":{"description":"Unauthorized"},"403":{"description":"Forbidden"}}}
+>
+  
+</StatusCodes>
+
+
+      

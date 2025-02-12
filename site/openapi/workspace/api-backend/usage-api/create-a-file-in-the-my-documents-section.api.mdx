@@ -1,0 +1,73 @@
+---
+id: create-a-file-in-the-my-documents-section
+title: "Create a file in the 'My documents' section"
+description: "Creates a new file in the 'My documents' section with the title specified in the request."
+sidebar_label: "Create a file in the 'My documents' section"
+hide_title: true
+hide_table_of_contents: true
+api: eJztVktz2zYQ/isYHD20JMtqnWim0zqOM/U0cTSRPPXE0gEiVyIiEmAB0DLD0X/vLkDKku3KlxxyKA8YPPbxLfbbBWvuxNLy4R1fyAxs9wONfBZxC3FppKvwqObnpUu1kd+Fk1r9CSIBQyoGZzzia5QDPtugVgI2NrIgMT7kFyjgwDLBFKwZOWBSMZcCm/JPFUt0XOagnJ1yhu5Iia2lS72Ekw7FbQGxXEhIWkUD/5RgXWeqpuro6Fo7ODoasqsF+vD24cGBsmRJWpbIxQIMemALo3P2/vPFbff24/i2OxpNbplQCZpDAcucZloB0wvvY6X0Gr2hqQgBUJA2BXBMG4Yri/b8PbCFNrlwNmLSIe4sY3NgcSrUEuGixafu4libRKplVnUIMHl6DllptxM0esS9UnlEkVchqzsqrV+RJMHr1qy/wA6mp7mydzrBZNY81gqVHU1FUWQy9sF0v1lKWc1tnEIuaOaqAjCJev4Nc4N2CqMLME4iP+iUzNNkP+Uftq5Ro7FgncGw+cZ/hMcWWtlgpt/rPTdy/ciWcMe0Hf0o5Ncihx2pBl3E4UHkBcUUglAkhnBvigRJnLyrXrd8lbxkN4SAO2Upkz0/veY7fmFoP4LwXtoiE9XrwD/JFbCvQlVIy5Uk1UmbpgNKQoklFjRKn98LJ8w4F1l2WKc0GZHNkiQTXov0R0ZT3m7MK+rTaRdFkzLG2scpaNwOe6TeEbZ4+L20YH4TSS6VRAvCafSALhre8Us0pSuAv40oAvgmUYc993v93vFJ/7j3ZnJyNjw9G/ZOO6eD/uDtL2dfychHHVh12Mpgit/gVxp3uLKDjnYJmYfmWT/onTwn+o0STWdF3CSVAy4xBF5o6/klXIqrrihkt9/pdUOT/iOv/Iw/tukxkT+w8MVmvY0GLf0FFWpKApCG44j7CIb7uh4RVdeXxw5y2d7BtgNsy5tMLvTuyYXO81IhOjYGcw+GfbkcT9j56Aod4tKGS8jojXCkT0Hnwt99gye8IG1zf+Xx4E/en51e9/9T9FM8RQ0HKZ4udjSkIGa9DN0iUP2OCIqSSHZqnf5vJOJI+GZFvyYp1QZK1vVcWGo2mw1tYzYM/a7g9F4YKebEwbsZekjbP5aar5D7REzPi+MJ4SHxrAy18eRV2UStxnkcQ+EOys52ynf0eTxB4Xnz5uY6IR0j1vQe4zjkONGep75m/V6NpaCWJTZjPA82qQKpRewX8MoXcDOhqNojVe0g3K/lqAmERgrrRZW6Du0BL7SVD0f/qbFtIEGaMjpD1P8CaRGFWQ==
+sidebar_class_name: "post api-method"
+info_path: site/openapi/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Create a file in the 'My documents' section"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/api/2.0/files/@my/file"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Creates a new file in the "My documents" section with the title specified in the request.
+
+**Note**: If a file extension is different from DOCX/XLSX/PPTX and refers to one of the known text, spreadsheet or presentation formats, it will be changed to DOCX/XLSX/PPTX accordingly. If the file extension is not specified or is unknown, the DOCX extension will be added to the file title.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"title":{"description":"File title","type":"string"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"New file information","content":{"application/json":{"schema":{"type":"object","properties":{"Name":{"type":"string","example":"File name"},"UpdatedBy":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"},"Updated":{"type":"string","example":"2020-12-08T17:37:03.3424957Z"},"Location":{"type":"string","example":"4\\\\46\\\\File name"}},"title":"FileWrapper"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

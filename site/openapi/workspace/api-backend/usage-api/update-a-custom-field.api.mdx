@@ -1,0 +1,73 @@
+---
+id: update-a-custom-field
+title: "Update a custom field"
+description: "Updates the selected custom field with the parameters (entity type, field title, type, etc.) specified in the request."
+sidebar_label: "Update a custom field"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVW1P2zAQ/iuWPzEW2jRt2dZvvGrVNoaAbdqADyY5iCGxPdsBusJ/352Ttuko05BWKZXPvnvu/NyLp9yLK8dHpzy1ZXencl6X7FJCkTl+HnEHaWWln6DClG9VPtdW/hJeavUeRAaWDC2ueMTvUA/4+SNaZeBSKw2p8RH/YjLhwTGfA3NQQOohY2nLE7uTPg/HRlhRggfr2Booj46ZnxiIGj3cKFCot8CnnVfMGUglnmZMqgBh4WcFznfO1JlaXz/QHtbXR+y7rlgqFKtCLA2cvCQLC0zgpzSaFoJiwxhL9O46bHzJXJXm8x0G99L5iGlVTFghLqBgQmWsFO4GL1EU7AIaF1mHfSbw9pVmGvJKaYsaSFoT7bbOkOIpT7Xy6IeWwphCpoHq7rUjIqfcpTmUglZEAVKrL66RTsQxVhuwXoKjU5nR/3IW2qll4120aTAkurzCTD5GvKb8JOz/aX8Ad6yVkoW981aqKzIPhKy2bOVvlWU4ft7vUrEse29Fb7STtdHzEcx1VgFQGlcbh5MncYcf5dAZrVxNfRLHTyHqDlgueoT7T9k+orKVtzD2ULodXdWIf1wPOda2FL7e6ie4AfeiNAUpxXT7vZDccfZS495gmPQHSZ8wPs4qYJmptvq2tD4nOkh/n5j4KooK/m6UxEm80Us24rcnvTej/ptRPOgM3/U2B/HmjznOrH7+IXhVlTS5TuDe7zfJoPUWjjJcHochta3vcb2TQ3pTL2ni1YHtUvhP5txpzDbYHDJivUYk1IglKM2BI9ZHcYYdsQFKDXzEhiiQh/MlCoZ0z8NWib8oRyHDn5r6fp5n0sLZ8FJ0zD+nTqj7ezZrAg3fLJY2tVdolUHcW9EdSjQPC2QBBsdlrrEOualCtQufo9AVRnaTTtylh2q6GFWjNeojkfoH9IOt85Dq0gg1edDGaOsrhXoPqXDw6rFbN2Dov+5UZqPTeOPd+etHvnjojqnp6r5a+dzNmcFoPsAELSXdIa+PI65w2KO8ZBsuRV19tJj2ezP26mkdLw/fRW6ambrYaI3KuD3z4tn8ao1VqS51CHmWF12WgQ+sRHuLj9PR3vEJ2zocIy6Krs4HPYLOY9C/AXYewD0=
+sidebar_class_name: "put api-method"
+info_path: site/openapi/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Update a custom field"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"put"}
+  path={"/api/2.0/crm/{entityType:(contact|person|company|opportunity|case)}/customfield/{id:[0-9]+}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Updates the selected custom field with the parameters (entity type, field title, type, etc.) specified in the request.
+
+**Note**: You can update field if there are no related elements. If such elements exist, only label and mask will be updated. Other parameters will be ignored.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"id":{"description":"Custom field ID","type":"integer"},"entityType":{"description":"New entity type","type":"string"},"label":{"description":"New field title","type":"string"},"fieldType":{"description":"New custom field type","type":"integer"},"position":{"description":"New field position","type":"integer"},"mask":{"description":"New mask","type":"string"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Updated custom field","content":{"application/json":{"schema":{"type":"object","properties":{"RelativeItemsCount":{"type":"integer","format":"int32","example":"0"},"EntityId":{"type":"integer","format":"int32","example":"14523423"},"Label":{"type":"string","example":"Birthdate"},"FieldValue":{"type":"string","example":"2020-12-08T17:37:04.5916406Z"},"FieldType":{"type":"integer","format":"int32","enum":["TextField","TextArea","SelectBox","CheckBox","Heading","Date"],"description":"[0 - TextField, 1 - TextArea, 2 - SelectBox, 3 - CheckBox, 4 - Heading, 5 - Date]","example":"5"},"Position":{"type":"integer","format":"int32","example":"10"},"Mask":{"type":"string","example":""},"ID":{"type":"integer","format":"int32","example":"1234"}},"title":"CustomFieldWrapper"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

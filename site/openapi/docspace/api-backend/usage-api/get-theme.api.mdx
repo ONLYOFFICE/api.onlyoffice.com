@@ -1,0 +1,63 @@
+---
+id: get-theme
+title: "Get portal theme"
+description: "Returns a theme which is set to the current portal."
+sidebar_label: "Get portal theme"
+hide_title: true
+hide_table_of_contents: true
+api: eJztVU1z0zAQ/SsanU3sBA6QWym0w8AMHdIOh0ymo9jbWK0tCWmdNnjy39mV7TRpygFOPfRiWdLbtx9vJbUS1SrI6VxegHUViFRcllCDXCTSOvAKtTVfCjmVK8BuJ5EegrMmANm1cpJlPBQQcq8dwwk8IHNrEAwyAOEBU1cpbXgWckKouL5xQBZ2eQs5konz7Bd1x46RiH6sge83FGcrwTQ1B/xRBXbxSfk7GmabgFBz2D1hQK/NinYOI5uzmXgjeEgEG9OEh0R0FDTtfhZkCw+qpqqQXfS2TXbus2ScTB69acpzBf7YXbbzNd45mjzvI9syn8bo72R2OvoJy9Gp9TC6CuDDiI1jYWeASLmFS/a93SZSFYVmh6q62KvejarI7z8xdmzOVTqPyqe3wb7q9cL1iifrVaiXLhTzvcvGx5fllVENltbr31DICHp7DDqzfqmLAkyMK0DeeI2bqJsK+TUzXN8BL9D1rApK/54AdI9z7odUPwAbb4JQIjaBuC91XgodRAAUaHlVEL2ni1s461FVI6KrgWLsHwLuJoUlTVLldDoZZamLz0eK/cVPVVhTIWJ8ja8IWSK6aZpWNldVaQNO32cfJumRrt94X3TmkmMfUp1xY3e9e5jwrtMplK+0kEij6jjfhyWSHx56kOyd7rTV5sZG6z0Zz3RFLhLJsXfxrCcsiaOAaxUPWE9+DkNxxJDzQSLt49v3nwXvs9p7NymQWMu2r/6cUyYk1Z8ViQqw4fCAc5kZ1bZLOihXvtpueflXA54bhX7Xymu15PTnC2IvqXOo7CxaLK08yXNwLPdaVc3TaBZ7TXH++ZJQXO1DQbrS9z/MO2yZzR7rE6U63/zle+FZi7bt1KaMBny39VeLPrcBHROgM/kHrNcAXw==
+sidebar_class_name: "get api-method"
+info_path: site/openapi/docspace/api-backend/usage-api/asc-files
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get portal theme"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/people/theme"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns a theme which is set to the current portal.
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Theme","content":{"text/plain":{"schema":{"type":"object","properties":{"theme":{"oneOf":[{"enum":["Base","Dark","System"],"type":"string","description":"[Base - Base, Dark - Dark, System - System]","example":"Base"},{"enum":[0,1,2],"type":"integer","description":"[0 - Base, 1 - Dark, 2 - System]","example":0}],"title":"ASC.Web.Core.Users.DarkThemeSettingsType"}},"additionalProperties":false,"title":"ASC.Web.Core.Users.DarkThemeSettings"}},"application/json":{"schema":{"type":"object","properties":{"theme":{"oneOf":[{"enum":["Base","Dark","System"],"type":"string","description":"[Base - Base, Dark - Dark, System - System]","example":"Base"},{"enum":[0,1,2],"type":"integer","description":"[0 - Base, 1 - Dark, 2 - System]","example":0}],"title":"ASC.Web.Core.Users.DarkThemeSettingsType"}},"additionalProperties":false,"title":"ASC.Web.Core.Users.DarkThemeSettings"}},"text/json":{"schema":{"type":"object","properties":{"theme":{"oneOf":[{"enum":["Base","Dark","System"],"type":"string","description":"[Base - Base, Dark - Dark, System - System]","example":"Base"},{"enum":[0,1,2],"type":"integer","description":"[0 - Base, 1 - Dark, 2 - System]","example":0}],"title":"ASC.Web.Core.Users.DarkThemeSettingsType"}},"additionalProperties":false,"title":"ASC.Web.Core.Users.DarkThemeSettings"}}}},"401":{"description":"Unauthorized"},"403":{"description":"Forbidden"}}}
+>
+  
+</StatusCodes>
+
+
+      
