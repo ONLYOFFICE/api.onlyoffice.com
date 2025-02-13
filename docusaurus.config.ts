@@ -15,6 +15,8 @@ const config: Config = {
   organizationName: 'trofim24',
   projectName: 'trofim24.github.io',
 
+  trailingSlash: true,
+
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
 
