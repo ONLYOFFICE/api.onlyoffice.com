@@ -15,6 +15,8 @@ const config: Config = {
   organizationName: 'trofim24',
   projectName: 'trofim24.github.io',
 
+  trailingSlash: true,
+
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
 
@@ -278,13 +280,13 @@ const config: Config = {
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,
     },
-    /*algolia: {
+    algolia: {
       appId: '59O6KESY1Y',
       apiKey: 'b7dbab0357490826b892aeb2aad32810',
 
       indexName: 'api-onlyoffice',
       contextualSearch: true,
-    },*/
+    },
   } satisfies Preset.ThemeConfig,
 
   themes: ["docusaurus-theme-openapi-docs"],

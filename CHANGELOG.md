@@ -1,5 +1,14 @@
 # Change log
 
+## 3.0.0
+
+### New features
+
+#### Site
+
+* Added search
+* Enabled trailing slash
+
 ## 2.0.0
 
 ### New features
