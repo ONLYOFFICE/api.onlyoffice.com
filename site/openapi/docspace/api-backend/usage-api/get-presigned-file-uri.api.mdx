@@ -5,7 +5,7 @@ description: "Returns a link to download a file with the ID specified in the req
 sidebar_label: "Get file download link asynchronously"
 hide_title: true
 hide_table_of_contents: true
-api: eJztVktP3DAQ/iuRT60UbbZLVbV7Q9BSVA4IygmtkHFmN2a9tms7CzTKf++MneyLRXCpxIFL4tjfPL/xTBoW+Myz8TX7IRX4rMjim01yZiw4HqTRpyUbsxmEcwdezjSUBLlykuXMcscXEMCRioZp/EDsFM9RKGdS45flocJ1CV44aUkhbpKK7PQY9x38qaUDtBFcDTnzooIFZ+OGhUdL2qQOMAOH0KlxCx7S1sEIN+CBL6xC0JeDg7adkDJvjfYYAMqPhkN67TFcmnutDC8zJfUc9QiDNnSIRuEhFFZxcr156oy5vQMRKHJH+QkymaKIE2KF9MFJPdsfeITkTNdK8VvyP4W+Cod5s0AUusLanAUzB/2y5t8R9mqttVMv67xC0Ebe60j6qwygBV6WkvRwdb6RrClXHoWCDFHk8PJoEEtucGQcDH6CQqQfHBtRL5CSS3BLKeCGIGdEVlRsrZIi1mZx5807U2+WqXib3il6uxSR6s/DT0/75JXmdaiMk3+xNRPKg0CPw2Ns9NyLGzq/mQNtYN/l1O/vEQBsQp14W9sFhNppn/HYcbNg1i2YZ8R3di9DlYWKhkLmLQg5lVBmUsc9mhHgQ8b9oxaVM9rUXj0O0CIOn8p08ynOI5w1Y1ZwK4vRYFiQah+fRUNPWbaF7ccYo6Dcsh9ekUNWhWDHRaGM4KoyPoy/Dr+NnlB5RsdZkmYUbp+dS6rxVMbbOVoVB7r2CzfyflhuwbqRKYyZS4hpl3pqovQuxYgl15M/yxFVoUV/FzxWd6f8BEJK79bE28njbnTNeh7+P+K6bGyM2/U1SixeU6oQiTzStelipje+xonN2Dt6OpEGYowkm+aWe/xHUW1L2+iEozrF5ZI7me4bUl5KT+tydZGezcOHi+435WO2/nXZG0NPs6a8Lrmq6QuXsQr6X6N2gsgKLw2WDzmSDg+FABs2xDY1TzaK/eT7b0RR1WwXViqhbkF69zqzU3HJNj3b/BmJpklVi9ns8enoWYkuth4dA8Bm8w9MdZUC
+api: eJztVk1v2zAM/SuCThsQxFm6DltuRbt1xXoo2vVUBIViM7EaRdIkOW1m+L+XlOx8tQEGDL31EsvyI0U+Uo+peRAzz0d3/IdU4FnG4pOPe9xYcCJIoy8KPuIzCFcOvJxpKAhy6yTvcSucWEAARy5qrvEFsVP8jkY9LjW+WRFKXDv4U0kH6Cu4Cnrc5yUsBB/VPKwsWUkdYAYOoVPjFiKkraMhbsCTWFiFoOPjL0dNMyZv3hrtMVJ0MBwM6FGAz520FDLaUpCsMI9aGVEwJfUcHeUGD9EhngpPIbNKUIz1y2jM5AHyQCk6IiLIdBSllhBrpA9O6hkidaWUmFCYKcN11NybBTA6kDc9Hswc9H/YV069Zr0mrYqV+Sdn6E0UhSTGhLraSnQqlEejIEM0Obk57ce+6J8aB/2foBDp+2cmrxZI5w24pczhniCXRHR0bK2SeWyg7MGbd5bfhOXYxe/0vg295Prz4NNLbbnVogqlcfIv6lkEHb0iQMZNZFEgTeTHQ445hVXUSeHze/JwPwfaQDUTJJePCAA+Jn3bdXUNoXLaMxF1jAWzETbBqJrsUYaShRLYxRnzFnI5lVAwqeMeSS/4wIRf6bx0RpvKq1UfT0TtLk0r71HOUapHPBNWZsP+ICPXPv5mdRL1JrPdFOCUlFt22h8ryssQ7CjLlMmFKo0Po6+Db8OM7yd0Sd9ZMueUb0fPDbVw6tJdkta9grH9wo1eN2x2YO3IyY2ZS4i8Sz010Xq/CxBLsad4lkMqo8WAFyK2dev8HELid2eQ7BG5n129GTNvV7mWja0ptrlVqYx3RBUisZB0s9qc6YmP0XpGb+qJZaCSkWVdT4THGa+ahrYxCEeNisulcDJdSax5IT2ti/VdO8jDh+t2/H9kh4Lv6quJ0KVQFb3hMpa/+0/RjBFZ4nXBvqEI0seTPAcbtsy2PY+32vz8+29EUbvsdlTqnXZBfl8NZq/V0tn02/QOWNR1alekscOnTwct2tw6dEwAhegZEt5QhA==
 sidebar_class_name: "get api-method"
 info_path: site/openapi/docspace/api-backend/usage-api/asc-files
 custom_edit_url: null
@@ -28,7 +28,7 @@ import Heading from "@theme/Heading";
 
 <MethodEndpoint
   method={"get"}
-  path={"/api/2.0/files/file/{fileid}/presigned"}
+  path={"/api/2.0/files/file/{fileId}/presigned"}
   context={"endpoint"}
 >
   
@@ -47,7 +47,7 @@ Returns a link to download a file with the ID specified in the request asynchron
 </Heading>
 
 <ParamsDetails
-  parameters={[{"name":"fileId","in":"path","description":"File ID","required":true,"schema":{"type":"integer","format":"int32","example":633}}]}
+  parameters={[{"name":"fileId","in":"path","required":true,"schema":{"type":"integer","format":"int32","example":5563}}]}
 >
   
 </ParamsDetails>
@@ -62,7 +62,7 @@ Returns a link to download a file with the ID specified in the request asynchron
 <StatusCodes
   id={undefined}
   label={undefined}
-  responses={{"200":{"description":"File download link","content":{"text/plain":{"schema":{"type":"object","properties":{"filetype":{"type":"string","description":"File type","nullable":true,"example":"some text"},"token":{"type":"string","description":"Token","nullable":true,"example":"some text"},"url":{"type":"string","description":"Url","format":"uri","nullable":true,"example":"some text"}},"additionalProperties":false,"title":"ASC.Files.Core.Helpers.DocumentService_FileLink"}},"application/json":{"schema":{"type":"object","properties":{"filetype":{"type":"string","description":"File type","nullable":true,"example":"some text"},"token":{"type":"string","description":"Token","nullable":true,"example":"some text"},"url":{"type":"string","description":"Url","format":"uri","nullable":true,"example":"some text"}},"additionalProperties":false,"title":"ASC.Files.Core.Helpers.DocumentService_FileLink"}},"text/json":{"schema":{"type":"object","properties":{"filetype":{"type":"string","description":"File type","nullable":true,"example":"some text"},"token":{"type":"string","description":"Token","nullable":true,"example":"some text"},"url":{"type":"string","description":"Url","format":"uri","nullable":true,"example":"some text"}},"additionalProperties":false,"title":"ASC.Files.Core.Helpers.DocumentService_FileLink"}}}},"401":{"description":"Unauthorized"}}}
+  responses={{"200":{"description":"File download link","content":{"text/plain":{"schema":{"type":"object","properties":{"filetype":{"type":"string","nullable":true,"example":"some text"},"token":{"type":"string","nullable":true,"example":"some text"},"url":{"type":"string","format":"uri","nullable":true,"example":"some text"}},"additionalProperties":false,"title":"ASC.Files.Core.Helpers.DocumentService_FileLink"}},"application/json":{"schema":{"type":"object","properties":{"filetype":{"type":"string","nullable":true,"example":"some text"},"token":{"type":"string","nullable":true,"example":"some text"},"url":{"type":"string","format":"uri","nullable":true,"example":"some text"}},"additionalProperties":false,"title":"ASC.Files.Core.Helpers.DocumentService_FileLink"}},"text/json":{"schema":{"type":"object","properties":{"filetype":{"type":"string","nullable":true,"example":"some text"},"token":{"type":"string","nullable":true,"example":"some text"},"url":{"type":"string","format":"uri","nullable":true,"example":"some text"}},"additionalProperties":false,"title":"ASC.Files.Core.Helpers.DocumentService_FileLink"}}}},"401":{"description":"Unauthorized"},"403":{"description":"Forbidden"}}}
 >
   
 </StatusCodes>

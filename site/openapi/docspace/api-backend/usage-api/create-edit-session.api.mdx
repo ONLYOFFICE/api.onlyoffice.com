@@ -5,7 +5,7 @@ description: "Creates a session to edit the existing file with multiple chunks (
 sidebar_label: "Create the editing session"
 hide_title: true
 hide_table_of_contents: true
-api: eJy1VN9v0zAQ/lcsv7BJ1dK1A428TRtIE0ggykBoqio3uTVmiZ3ZTrcS5X/nzk7WhAYED7zkh3133913313NndhYHt/ytzIHyyLm33w54boEI5zU6jrlMU8MCAdvUukWYC2e8gkvhREFODAUoOYKf9DyDgOgy4RLhX+lcBl+p2ATI0sKh4eEwa6v8NzAQyUNIIIzFUy4TTIoBI9r7nYlRZPKwQYMmt5pUwgXjuYzPIAnUZQ5Gp3OX543zWSQwUL+gC6HhwrMbjwJi2ZMKrbeOaz6r/FfnQ3wZ/OzpllSNbbUymIkDDCbTuk1BL1WIQz+MbHWlWOB2JTZZ1oTjZjK+STgyUVlLqiMep8cFstFWeYy8ZGi71YfGnjfkRu6O5ueHuZ2o0TlMm2QkpR7o/mh0TddsVSrF45lYgsMlK42GUOpFNLnz5xmgCphLgNGjeCEZyGpjHQ7rxNhkxUhre6BDpA1QXJ5RAPgS+JxCHnpGbJMdBwNMOBJWifVxoOxR+kyVlS5k9gZlmSVurfsSAGkSDFSz77C+uriy/EJAqJ0M03aLrV1Xs4o1ZhHopTR7GQaUUDrn1FNT5k2EcGu9q2yYLad/CuTo3fmXBlHUa4TkWcYNz6fvp4daO89XbPgzanijqAF9SnoZ0jTsyAxu3dAam7FPjBrBZ9ofS8D8xIF572lI6nyi8XlSRjxCafUQz7bGTWceCiE10sbPFAfeMbKieZ98YOS6r1s/1vDWgZ6Q4FJe9rrtnm3RA9aYvtoYts6vQwnPA5NpMntdxHZp0aRc12vhYUbkzcNHYe9Qb1NpRXrnNbUncgt/KH20a0ymrhva39XbUVekZkXxFYYSZD/CH/0qV2ox2y/ZEfhOzmpXR+6nxYu8WaJlhnOJ8qUEgmXF0kCpeu59SMve4P18cPiM5qRPIcKDlptPyjwaDa/SDuA05N2/ahHXYfxwP519uHqtx5tcZ21rwBX5E+F82cY
+api: eJy1VMFu2zAM/RVBpxYI6jQtitW3oFuBYgM2LOt2KIJAsZlYqyOpkpw2M/zvIyW7sZsU2GUXy5LIR/LxiTX3Yu14+sBvZQmOJSysfD7i2oAVXmp1l/OUZxaEh0+59DNwDk/5iBthxQY8WAKoucINWq4QAF1GXCrcGeEL/LfwVEkLiORtBSPusgI2gqc19ztDXlJ5WINF05W2G+Hj0cUED+BFbEyJRtdX11dNMxpEmsk/0MV6qsDu+D+DX132wc8nF5dNM6dUndHKIQkIMBmPacnBZVYaYgN971SEwR0TS115FtnJmXvlJtMYU/mQBLz4xJSCcqz3yWElXBhTyiwgJb+dPjQIvkdu6O5yfH6Y270SlS+0RVpyHowuDo1utV3KPAfFCcdBVlnpd6GJwmULQlg8Ah0gG4J6+YwGwOfEzxDqJlTumOhqZ14zQJkwXwCDF+m8VGtGrWLP0hdsU5VeIuMsKyr16NiJAsiROqSU/YLlx+nP0zMMiLoqNAnPaOeD1lBHKU+EkcnkbJwQoAvfpI6KaxIKu9i3wIHddtqsbInehfcmTZJSZ6IsEDf9ML6eJPxtTV/onkV3TiV3DM2oAVEYQ55elYbpfQbSYCvRgVkr00zrRwmBeolKCt7Skwb5dHZzFh/giFPuMZ/thDpJRGxEEEILHrmPRGPpxPO++kFJ9V6P/61jLQM9tWPSgfe67d4D0YOW2D96im2dtOKSvs6NQRuRfeoUOdf1Uji4t2XT0HF87dTcXDqxLGm4rETpcLqEnvTHw1aUFSUXurkVVpL9cd93eTv53s6wU/ZetZ0I1K4fs58PFtjM0bLAZ4Xiogzi5TTLwPieWx953nsP377OfqAZiWqou6iw9oeAj2bzRpAxOH1prh71qOsoamS9s49X73q0xXXWoQKcWH8BqB4rQA==
 sidebar_class_name: "post api-method"
 info_path: site/openapi/docspace/api-backend/usage-api/asc-files
 custom_edit_url: null
@@ -28,7 +28,7 @@ import Heading from "@theme/Heading";
 
 <MethodEndpoint
   method={"post"}
-  path={"/api/2.0/files/file/{fileid}/edit_session"}
+  path={"/api/2.0/files/file/{fileId}/edit_session"}
   context={"endpoint"}
 >
   
@@ -47,7 +47,7 @@ Creates a session to edit the existing file with multiple chunks (needed for Web
 </Heading>
 
 <ParamsDetails
-  parameters={[{"name":"fileId","in":"path","description":"File ID","required":true,"schema":{"type":"integer","format":"int32","example":1358}},{"name":"fileSize","in":"query","description":"File size in bytes","schema":{"type":"integer","format":"int64","example":1234}}]}
+  parameters={[{"name":"fileId","in":"path","required":true,"schema":{"type":"integer","format":"int32","example":9696}},{"name":"fileSize","in":"query","schema":{"type":"integer","format":"int64","example":1234}}]}
 >
   
 </ParamsDetails>
@@ -62,7 +62,7 @@ Creates a session to edit the existing file with multiple chunks (needed for Web
 <StatusCodes
   id={undefined}
   label={undefined}
-  responses={{"200":{"description":"Information about created session","content":{"text/plain":{"schema":{}},"application/json":{"schema":{}},"text/json":{"schema":{}}}},"401":{"description":"Unauthorized"},"403":{"description":"You don't have enough permission to edit the file"}}}
+  responses={{"200":{"description":"Information about created session","content":{"text/plain":{"schema":{}},"application/json":{"schema":{}},"text/json":{"schema":{}}}},"401":{"description":"Unauthorized"},"403":{"description":"Forbidden"}}}
 >
   
 </StatusCodes>

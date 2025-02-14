@@ -5,7 +5,7 @@ description: "Uploads and inits migration"
 sidebar_label: "Uploads and inits migration"
 hide_title: true
 hide_table_of_contents: true
-api: eJyFU8tu2zAQ/BVhTy0gRK7bQ6tbEKBA0DYpmuYUGMFGoi3CEsmQlJtU4L93l5QMy07Si01SM/uY2R3A48ZBeQc/5Mail1rBKgdtRLpc1lBCb1qN9bmqL5X0kINBi53wwjJxAEUXQnUxgLZXfM1BKnoz6Bs618JVVpoYvRwzaZuphLTisZdWUCZve5GDqxrRIZQD+GfDkZ23Um0IKZ6wM2180p3IvHjyEMKKQzijlROOWcvFgv/mSa+3EHL4tPhw+ulWYe8bbeVfqiGCPp6CrnRGmnTSObq7zMfrWtsu8410GVYRF4juRNVb6Z+jNuiqe45+vxX8QIViTY38IYCAFZd+VEuUmuKpOpOktsu6vS85kOiNZkeMdskIkreEAo0slmeLYo8tmFsMkyUsdAAuze4m13rbErXx3pRF0eoK24aClp8XX5Ynjn3nz1liAxc99XjDViXV553uvaPSvtFDPk3JDDZOSaX1VooonlRrHdnSR5/Pby7OvsqWUuTApad6dkv2iUXoUDF8DP62erOeBsqqvFD+v7SxER62wrRIFVPuqN4wGnDHXRKSLGCTDrgyLUx5aATvF0vNvGF4QCdubRsCPz/2wvKY0HGHVuIDa0Be1dLxmZxfY+vEG628+zUu0/vseM1e7GNySbEZO2x7vtExmjhf6bAKBxP48/rmN+HYyrnbydfxwMW/mOJoDFI6/g35K4xhSKMUwh6fPr3KaGjXaF4nNDe8CiH8A+oDr5s=
+api: eJyFU8Fu2zAM/RWDpw0wai/bYfOtGFCg6LYOy3oqgoKx1VioLamSnLUz9O8jJSeIk7a7JJL8SD6+R47gceOguoXvcmPRS61glYM2Il0uG6hgMJ3G5lw1l0p6yMGgxV54YTlwBEUXQvUxgbY/+JqDVPRm0Ld0boSrrTQxezVV0jZTCWnF4yCtoEreDiIHV7eiR6hG8M+GMztvpdoQUjxhb7r4pHuRefHkIYQVp3BGKyccRy3Kkv/mRa+vIOTwqfxw+ulG4eBbbeVf4hBBH09BF9quZdMIRQWJoqgHK/1z7B9dfccZ7h4EPxAZbIjsHwIIWDG9o3pRTpehajJJirqs32ufAwnbalbdaJfEJgkrKNDIYnFWFntswbHFeCh7AKZmtztnBttRaOu9qYqi0zV2LSWtPpdfFsWJLd/4e5bCgVnvmlyyH0naeat7g4jbFT3ku1GYwaZRqLV+kCKqJ9W9jtHSRzPPl1/PLmRHJXJg7onPdsFmsAo9KoZPyd+Wb9bTSFWVF8r/N2xqhCeqMB0SY6od5RsnB265S0KSB+zSQaxMW1HNFoD0Y605bhzX6MSN7ULg58dBWJ4TOm7RSlyzBmRWIx2fyfp77Jx4o5V3v6aNeZ8d79KLfexcUmzGFruBb3SMJs73NqzCwQj+vF7+JhxbOXc7+TodmPyLJY7GIJXj35C/EjGOaZRC2OPTp1cjWlo2mtcdmhtehRD+AUwHpMo=
 sidebar_class_name: "post api-method"
 info_path: site/openapi/docspace/api-backend/usage-api/asc-files
 custom_edit_url: null
@@ -28,7 +28,7 @@ import Heading from "@theme/Heading";
 
 <MethodEndpoint
   method={"post"}
-  path={"/api/2.0/migration/init/{migratorname}"}
+  path={"/api/2.0/migration/init/{migratorName}"}
   context={"endpoint"}
 >
   
@@ -62,7 +62,7 @@ Uploads and inits migration
 <StatusCodes
   id={undefined}
   label={undefined}
-  responses={{"200":{"description":"Ok"},"401":{"description":"Unauthorized"},"403":{"description":"No permissions to perform this action"}}}
+  responses={{"200":{"description":"OK"},"401":{"description":"Unauthorized"},"403":{"description":"Forbidden"}}}
 >
   
 </StatusCodes>

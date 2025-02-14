@@ -5,7 +5,7 @@ description: "Returns an invitation link for joining the portal."
 sidebar_label: "Get an invitation link"
 hide_title: true
 hide_table_of_contents: true
-api: eJydVE1v2zAM/SuCTivgxW7aw+Zb0XVFsQIb+nEKgkJ1mFitLamSnLUz/N9HynZjJ94OvdgU9Ug9io+quRcbx9MF/6WtFwWL2b0D6/gy4tqAFV5qdbXiKd/AldpKD9dSPfOIG2FFCZ6g6aLmChcIgtIU+g3g7s0AgqRCnxE+R3sFLrPSUD50XnRA5hHJPp0VRcRutC7PVqVUUeAQsW86uzUig+A8whwWXippAel4W0HEXZZDKXhac63g5zowAVWVVA+mxIj3nGhfVuA8/kdpcU2HUb1EBak5b6XaHDBeYEL2mY2ZooNsJlra4QT0hf8ef3T36x5OB6Obfks8D14F3gpRIO5N9F5LEh1H8+gkOt2RlMrDBmkfsEx6jsd73OY7XicTXE6niCQNnSh9S+r2fHauLcyCQGYXw1Y3BLTgjFYOHDVkniT0G7MLCgqSYkUro0xjIcoT1MOrj00hSDT1rrVNE3FhTCGzEBg/OX0ICLETO7R3mhwfMrlXovK5tvIPqolQDrLKSv8WNCRc9kD7D89ADqxMrJDsbwQAX1Kt42w34CurHBOKyXGJbK0te9JSoaSYz4GZMGYzzIbTk+t2snwYKByTlMfCyHg+S+IWGFd02XHICnHdzxepoOHE2m77EaxsgfG59yaN40Jnosi18+mX5Ov8QCbXtM3aaE719OXf0t21HRxfQt0rD/n9QEfUj/wI1o18pvWzhHCvUq11iB6o6Lss8IiIE/WWz3aOeucG+ZYi9LBLfgl+4lL3y6l3MvpYK7rSBgpENuE+664vC6obkdgZ6lWIRCN0J1RN/UEjHXaIHhXqAYXX9aNwcG+LpiH3SwWWpIXmVlgpHulysIkr6chGWaxF4eA/hX666R7DI/axx3Sy6L7Jinq5FUVFKzSDBsbPe7NEfI6TgRIi6i3kLMvA+EHwMP9yoPrLiztEkXLG4mpl1BmUd5LSnuras+lLz+ZkRF23ym2ad3y79c+IrrYeHQrAF+UvWeZr8Q==
+api: eJydVU1P4zAQ/SuWT4uUbUrhsJsbYgGhRdoVH6eqQm46JQbXNrbThY3y33fGSdqk7XLg0vjjzfi9mWe34kE8eZ5N+W/jglAsZQ8enOezhBsLTgRp9PWCZ/wJrvVaBriR+oUn3AonVhAImk0rrnGCIFhZZd4B7t8tIEhqXLMiFDhegM+dtJQPFy9aIAuIZF/OlErYrTGrs8VK6iRySNgPk99ZkUNcPMIcDl5L6QDpBFdCwn1ewErwrOJGw69lZAK6XJEeTIkRm5w4pqT4GWTF+blRSswNSjWOZBMjZOiDk/ppj/gU87KvbEgYF2jMxJY9Lh0QgavdvAP3j8ft/nSGp8ObwFIRIRJUJxuB4+Q4mSQnyemWstQBnqLGHc7jjvHxDtPJhubJAWqnH/EZ13SwDA23u/PRuXEwiuYZXfRtUBPQgbdGe/DUrMl4TJ8hyeiuaDemGovlBvXoQNAAbyG1SpChqm3b6zrhwlol8xiYPnuzD4ixB3Zo73R8vM/kQYsyFMbJv+i0CDrZB10aN5eLBWhOeTzkpZPhPTpQ+PyRMjy+AC2gdrFAOX8QAHxG1RimuoVQOu2Z0EwOi8CW6IlnIzU6kYUCmI2XdITZ8O4VprmXIV5HvGQZT4WV6WQ0ThtgWlI70pgV0qp/O2tOrN26u8ClUxhfhGCzNFUmF6owPmTfxt8n6Z6hbmifNeGcBHX676i8TZOHVag6jyLBn7iQdC/GANa+GLkxLxJiYaVemhjdM9qlVHhEwol7w2c9oT5ZJLwSsc1t8isIB6q6K6faOu1zvWil9UyKbGJBq7YxU9KNSGwNNStG4iC2J6qmBuEgGzygWFhqAoVX1Vx4eHCqrmn5tQRH3sLhWjgp5lQc7OJCehqjL5ZCefhA6Jfb9i09Yp97iw+K7pqsqZdroUqa4TB6YPjvUM8QX+DVQAsR9QZyludgQy+4n3/Ws/3VxT2iyDlDczU2ageU9yClHdc1Z9MvPbAHI6qqcW5db/DN1n8jWm0dOgrAR+cfSx6CfA==
 sidebar_class_name: "get api-method"
 info_path: site/openapi/docspace/api-backend/usage-api/asc-files
 custom_edit_url: null
@@ -28,7 +28,7 @@ import Heading from "@theme/Heading";
 
 <MethodEndpoint
   method={"get"}
-  path={"/api/2.0/portal/users/invite/{employeetype}"}
+  path={"/api/2.0/portal/users/invite/{employeeType}"}
   context={"endpoint"}
 >
   
@@ -47,7 +47,7 @@ Returns an invitation link for joining the portal.
 </Heading>
 
 <ParamsDetails
-  parameters={[{"name":"employeeType","in":"path","description":"Employee type (All, RoomAdmin, User, DocSpaceAdmin)","required":true,"schema":{"oneOf":[{"enum":["All","RoomAdmin","Guest","DocSpaceAdmin","User"],"type":"string","description":"[All - All, RoomAdmin - Room admin, Guest - Guest, DocSpaceAdmin - DocSpace admin, User - User]","example":"All"},{"enum":[0,1,2,3,4],"type":"integer","description":"[0 - All, 1 - Room admin, 2 - Guest, 3 - DocSpace admin, 4 - User]","example":0}],"title":"ASC.Core.Users.EmployeeType"}}]}
+  parameters={[{"name":"employeeType","in":"path","description":"Employee type (All, RoomAdmin, User, DocSpaceAdmin)","required":true,"schema":{"oneOf":[{"enum":["All","RoomAdmin","User","DocSpaceAdmin","Collaborator"],"type":"string","description":"[All - All, RoomAdmin - Room admin, User - User, DocSpaceAdmin - DocSpace admin, Collaborator - Collaborator]","example":"All"},{"enum":[0,1,2,3,4],"type":"integer","description":"[0 - All, 1 - Room admin, 2 - User, 3 - DocSpace admin, 4 - Collaborator]","example":0}],"title":"ASC.Core.Users.EmployeeType"}}]}
 >
   
 </ParamsDetails>
@@ -62,7 +62,7 @@ Returns an invitation link for joining the portal.
 <StatusCodes
   id={undefined}
   label={undefined}
-  responses={{"200":{"description":"Invitation link","content":{"text/plain":{"schema":{}},"application/json":{"schema":{}},"text/json":{"schema":{}}}},"401":{"description":"Unauthorized"}}}
+  responses={{"200":{"description":"Invitation link","content":{"text/plain":{"schema":{}},"application/json":{"schema":{}},"text/json":{"schema":{}}}},"401":{"description":"Unauthorized"},"403":{"description":"Forbidden"}}}
 >
   
 </StatusCodes>

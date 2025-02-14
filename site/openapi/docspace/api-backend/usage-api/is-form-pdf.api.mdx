@@ -5,7 +5,7 @@ description: "Checks if the PDF file is form or not."
 sidebar_label: "Check the PDF file"
 hide_title: true
 hide_table_of_contents: true
-api: eJyNVMFu2zAM/RVBpw3w4izdgMW3rl2GYjsM63oqgoJxmFiLY6mSnLUz/O8lJbuNm3TrxZalR/Lx8cmN9LB2MruWM1WiE6kIbzlPpDZowStdXSxlJpWbabv9cT6TiTRgYYseLQc2sqIPQqwokKCJVBV9GfAFrZfocqsMp6FNzi0uzmnf4m2tLFJmb2tMpMsL3ILMGunvDWdTlcc1WoKuqC74uHUyoQ28g60pCfRxOj1p2zlnc0ZXjnhTgsl4zK9h5c9alwiV2EFZYya4qHgnfIGCWhJMXSgnuFQiVlC6Y6eV9gIChkjkmghWPjDGO5+aErjv5rCTRSwt2zaRYEyp8qBq+tvp/weE3K9AMvbD+P1h41cV1L7QVv0lsRnlMK+t8vdhdODyGz6/2SBvkJDAE/xDAJRzlnaY7azAfOOEWh2VTmjLIo0oA9mj0OybNfrgGHJDJlMwKp2MxilHufBMG36qZZsqxznMciWZpN319qptSaGF9yZL01LnUBba+ezTeDo5MNh3PhYxWjL9vttLli76Y9jzo5ZE7RttJL2dB7DO1LnWG4VBRlWtdIhWnq0oTy/PRvHqJJKpRz67iSSsIb5bCCPskgcdBxo+b6V5ctjrVe9a2TMkVQ/6Nd0IrrlPQtIQ+Gp1hDsCWRwFd/s4C9KQ5ebIplmAwytbti1v39Zo2TS03IFVsGAdaF5L5XhNww8X6R99vfnZ/QXeiqc/w9Ee+hlVPIpwh+mLlmGE/Z+nnROyIAfT7JlIPDzNczR+L2w/83zPqV+//CIUj3zoijj/bsF5j5J5ZpdYm59t8kJE00TLkZo9Ph69GNH11qNDA3TzHwD4S+vb
+api: eJyNVF1v1DAQ/CuWn0AKlzQFCfJWCocQPCBKn6qo8iWbi7lc7NrO0RLlv3fXTtr7hL7cOc7senZmnJ47sbQ8u+Fz2YBlMfP/PI+40mCEk6r9WvKMSztXZv3j05xHXAsj1uDAUGHPW3xARIWFCI24bPFJC1fj2sBdJw1gB2c6iLgtalgLnvXcPWiqkq2DJRiEVthfuLB1nuIG3Iu1bhCUvkvOhiGnblar1iI/bJAmCf2VYAsjNRHF2o9KNSBathFNBxmjQ9kb5mpgSJ0RRSYto6MiVonGHnvbKseExyCJQiHB1nnGcO9i3Qiarz+cZBGO5sMQcaF1IwuvXvzbqv8X+N4vQBL2bXJ2OPh1KzpXKyP/otgedH4IQgsXsiwhnGmh6Ix0D95EYYtb6nC7AtpAqQV5+QcBwHMSf7fVZQ3FyjJZHRWXKUMyzrADBqVWlKAlOJ8dzEXGY6FlnM6SmKqs/437kKAhlpZ66LLiRNJspqB1psHS2jmdxXGjCtHUyrrsffIhjfk+we/0noVyTvynca9I3RCh3aGf5EZu33AjmpK9AxvzXSi1kuB1lG2lfLV0lFZ+cXU5C7co4sQ98NmkZItGwmvhXR6beyF3RNwfpX8O4ctlH0fZyiye7gXsRw9uaE5Eogt0+0bCI4Hs+TY/mYEakt5U2fcLYeHaNMNA23cdGEoNLjfCSLEgHdCwUlpao/v+rv1jrlc/xw/Fa3aK/GROSx74+41PuPTeTV+fIUdkjdlF04lBeHlRFKDdVtl253wro18+/0IUeb0bh2D8uKC+R8ns5SScTb9DdKKi70PWUMYJH16drBhnm9B+APwqPAJOluz4
 sidebar_class_name: "get api-method"
 info_path: site/openapi/docspace/api-backend/usage-api/asc-files
 custom_edit_url: null
@@ -28,7 +28,7 @@ import Heading from "@theme/Heading";
 
 <MethodEndpoint
   method={"get"}
-  path={"/api/2.0/files/file/{fileid}/isformpdf"}
+  path={"/api/2.0/files/file/{fileId}/isformpdf"}
   context={"endpoint"}
 >
   
@@ -47,7 +47,7 @@ Checks if the PDF file is form or not.
 </Heading>
 
 <ParamsDetails
-  parameters={[{"name":"fileId","in":"path","description":"File ID","required":true,"schema":{"type":"integer","format":"int32","example":5993}}]}
+  parameters={[{"name":"fileId","in":"path","required":true,"schema":{"type":"integer","format":"int32","example":2501}}]}
 >
   
 </ParamsDetails>
@@ -62,7 +62,7 @@ Checks if the PDF file is form or not.
 <StatusCodes
   id={undefined}
   label={undefined}
-  responses={{"200":{"description":"Boolean value: true - the PDF file is form, false - the PDF file is not a form","content":{"text/plain":{"schema":{"type":"boolean"}},"application/json":{"schema":{"type":"boolean"}},"text/json":{"schema":{"type":"boolean"}}}},"401":{"description":"Unauthorized"}}}
+  responses={{"200":{"description":"Boolean value: true - the PDF file is form, false - the PDF file is not a form","content":{"text/plain":{"schema":{"type":"boolean"}},"application/json":{"schema":{"type":"boolean"}},"text/json":{"schema":{"type":"boolean"}}}},"401":{"description":"Unauthorized"},"403":{"description":"Forbidden"}}}
 >
   
 </StatusCodes>
