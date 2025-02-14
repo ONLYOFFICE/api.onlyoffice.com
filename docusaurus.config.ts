@@ -69,7 +69,7 @@ const config: Config = {
             specPath: "openapi/workspace/community-server.json",
             outputDir: "site/openapi/workspace/api-backend/usage-api",
             sidebarOptions: {
-              groupPathsBy: "tag",
+              groupPathsBy: "tagGroup",
             },
           } satisfies OpenApiPlugin.Options,
           workspaceHosted: {
