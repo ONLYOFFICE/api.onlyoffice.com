@@ -87,7 +87,7 @@ const config: Config = {
             },
           } satisfies OpenApiPlugin.Options,
           docspaceHosted: {
-            specPath: "openapi/docspace/hosted-solutions.json",
+            specPath: "openapi/docspace/asc.apisystem.swagger.json",
             outputDir: "site/openapi/docspace/for-hosting-providers/usage-api",
             sidebarOptions: {
               groupPathsBy: "tag",

@@ -1,0 +1,71 @@
+---
+id: check-domain
+title: "Checks domain"
+description: "Checks domain"
+sidebar_label: "Checks domain"
+hide_title: true
+hide_table_of_contents: true
+api: eJztVlFv2jAQ/ivIj1sGDK3SljfGJq1a21WFPiFUmeQgbh3bsx0Ki/jvu3OSNkDXrlIfeQFjn++7++47cyXzfOlYPGVj8F4oXM8ipg1Y7oVWpymLWZJBcvdN51woFjELvwtw/qtONywuWaKVB+VpyY2RIgn3erdOK9pzeDnntPIbA+hMz28h8ejHWELxAhydZtr5C54DrXO+PgO19BmLBycnEcuFan73o8aP8xajRT8puMQKQ6i4/QP9dBQ5ipgqpORzidbeFhAxWPPcyHBZ59DxsPZsu40YT1NB17m8bMW04NLBvvsrTB4BDLcI4cG6zkLbTtpw44UP/ofjUXdoxHjjPOTdc52CdN2KwfAjwBL+kaeXeWrL6t37I2GvImydyyNbL7fhkabXdeGRr+f5ImALzmjlKgYG/T597eJNMPCOWHRckSTgHEK0/k2DLo0k6GeZfja/JuRzkVjt9MJ3h85cgB9pC93zVdI9HSZ0+QpcIf1BoV9+bN8a/T//FN8WloA/9T8eFuha8cJn2oo/kIbwHCSFFR4nnynOOy65ofObO6ANLDhPMbZ7NAA228725TWiOco96gk1lmkasAzKmnqGUxOwnqsnsV4YvB7MHdgVajJAFxb7j2Xem7jXkzrhklos/tz/MjhomjM67lS3GUXVJDEmeit57qbywDc34iduYLOF5t01ixhJEyWr7wQEdqhuV4/j4femI9sPQLs7ycNCB7ynWgsRKOEqi9WA7ImpnAdx1CHtk7qTe2s8PTCsU2y1GfoPvJZ1JaasqQR1ZqsWyCElRBZlOecOrq3cbmkbc7ekBVyuuBXV+zSdoecMxYH8U/ECx2xURfZhQnGQuSwqyvfabxs1N4b4Shjfsm3HPmvp6fLXeIJm83pEz/FRwl3L72l8x8+YMZrxCSNUP+yVTHK1LPiSbCvk8BwUREVbEVXt6wXl0xypTTuPXalUGdAn5fPkjbKs5IZMNvbV0T9v1Jw21oEGDPovXXZ3Eg==
+sidebar_class_name: "post api-method"
+info_path: site/openapi/docspace/for-hosting-providers/usage-api/asc-apisystem
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Checks domain"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/settings/checkdomain"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Checks domain
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"hostName":{"maxLength":255,"minLength":0,"type":"string","description":"Host name","nullable":true,"example":"some text"}},"additionalProperties":false,"description":"Requst parameters for domain","title":"ASC.ApiSystem.Models.DomainModel"}},"text/json":{"schema":{"type":"object","properties":{"hostName":{"maxLength":255,"minLength":0,"type":"string","description":"Host name","nullable":true,"example":"some text"}},"additionalProperties":false,"description":"Requst parameters for domain","title":"ASC.ApiSystem.Models.DomainModel"}},"application/*+json":{"schema":{"type":"object","properties":{"hostName":{"maxLength":255,"minLength":0,"type":"string","description":"Host name","nullable":true,"example":"some text"}},"additionalProperties":false,"description":"Requst parameters for domain","title":"ASC.ApiSystem.Models.DomainModel"}},"application/xml":{"schema":{"type":"object","properties":{"hostName":{"maxLength":255,"minLength":0,"type":"string","description":"Host name","nullable":true,"example":"some text"}},"additionalProperties":false,"description":"Requst parameters for domain","title":"ASC.ApiSystem.Models.DomainModel"}},"text/xml":{"schema":{"type":"object","properties":{"hostName":{"maxLength":255,"minLength":0,"type":"string","description":"Host name","nullable":true,"example":"some text"}},"additionalProperties":false,"description":"Requst parameters for domain","title":"ASC.ApiSystem.Models.DomainModel"}},"application/*+xml":{"schema":{"type":"object","properties":{"hostName":{"maxLength":255,"minLength":0,"type":"string","description":"Host name","nullable":true,"example":"some text"}},"additionalProperties":false,"description":"Requst parameters for domain","title":"ASC.ApiSystem.Models.DomainModel"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"True if success","content":{"text/plain":{"schema":{"type":"object","additionalProperties":false,"title":"Microsoft.AspNetCore.Mvc.IActionResult"}},"application/json":{"schema":{"type":"object","additionalProperties":false,"title":"Microsoft.AspNetCore.Mvc.IActionResult"}},"text/json":{"schema":{"type":"object","additionalProperties":false,"title":"Microsoft.AspNetCore.Mvc.IActionResult"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      
