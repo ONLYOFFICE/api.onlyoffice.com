@@ -6,18 +6,18 @@
   },
   "servers": [
     {
-      "url": "http://localhost:8092/",
+      "url": "http://localhost:8092",
       "description": "Local server"
     }
   ],
   "paths": {
-    "/api/2.0/groups": {
+    "/api/2.0/group": {
       "get": {
         "tags": [
           "Group"
         ],
         "summary": "Get groups",
-        "description": "Returns the general information about all the groups, such as group ID and group manager.\n\n**Note**: This method returns partial group information.",
+        "description": "Returns the general information about all the groups, such as group ID and group manager.\n\n **Note**: This method returns partial group information.",
         "operationId": "getGroups",
         "parameters": [
           {
@@ -27,7 +27,7 @@
             "schema": {
               "type": "string",
               "format": "uuid",
-              "example": "79a82cb4-5ac8-4dce-92bf-557e154dbb2b"
+              "example": "ebc00c61-5c0a-480c-adb2-446da529aa5d"
             }
           },
           {
@@ -63,9 +63,6 @@
           },
           "401": {
             "description": "Unauthorized"
-          },
-          "403": {
-            "description": "Forbidden"
           }
         },
         "security": [
@@ -125,9 +122,6 @@
           },
           "401": {
             "description": "Unauthorized"
-          },
-          "403": {
-            "description": "Forbidden"
           }
         },
         "security": [
@@ -141,13 +135,13 @@
         "description": "Adds a new group with the group manager, name, and members specified in the request."
       }
     },
-    "/api/2.0/groups/{id}": {
+    "/api/2.0/group/{id}": {
       "get": {
         "tags": [
           "Group"
         ],
         "summary": "Get a group",
-        "description": "Returns the detailed information about the selected group.\n\n**Note**: This method returns full group information.",
+        "description": "Returns the detailed information about the selected group.\n\n **Note**: This method returns full group information.",
         "operationId": "getGroup",
         "parameters": [
           {
@@ -158,7 +152,7 @@
             "schema": {
               "type": "string",
               "format": "uuid",
-              "example": "6b0809de-873c-4bde-b351-22ffca648213"
+              "example": "6fcb6dfb-4245-463a-856c-0abdaedc26fa"
             }
           },
           {
@@ -192,11 +186,11 @@
               }
             }
           },
+          "404": {
+            "description": "Group not found"
+          },
           "401": {
             "description": "Unauthorized"
-          },
-          "403": {
-            "description": "Forbidden"
           }
         },
         "security": [
@@ -223,7 +217,7 @@
             "schema": {
               "type": "string",
               "format": "uuid",
-              "example": "af68362b-1b29-436d-82bb-403382db6e55"
+              "example": "54aa9123-a285-406a-b029-313baceff8a9"
             }
           }
         ],
@@ -268,11 +262,11 @@
               }
             }
           },
+          "404": {
+            "description": "Group not found"
+          },
           "401": {
             "description": "Unauthorized"
-          },
-          "403": {
-            "description": "Forbidden"
           }
         },
         "security": [
@@ -300,7 +294,7 @@
             "schema": {
               "type": "string",
               "format": "uuid",
-              "example": "ac58c7e8-789e-42ca-9c73-99e7a7066ecb"
+              "example": "121d0068-0248-4510-8cc8-45e31e32fcab"
             }
           }
         ],
@@ -325,11 +319,11 @@
               }
             }
           },
+          "404": {
+            "description": "Group not found"
+          },
           "401": {
             "description": "Unauthorized"
-          },
-          "403": {
-            "description": "Forbidden"
           }
         },
         "security": [
@@ -343,7 +337,7 @@
         "description": "Deletes a group with the ID specified in the request from the list of groups on the portal."
       }
     },
-    "/api/2.0/groups/user/{userid}": {
+    "/api/2.0/group/user/{userid}": {
       "get": {
         "tags": [
           "Group"
@@ -359,7 +353,7 @@
             "schema": {
               "type": "string",
               "format": "uuid",
-              "example": "8a66093b-e15e-4bf3-bb82-81d8c48358fa"
+              "example": "70c9ccda-66d5-466a-884f-6cbbfcdd1ef3"
             }
           }
         ],
@@ -386,9 +380,6 @@
           },
           "401": {
             "description": "Unauthorized"
-          },
-          "403": {
-            "description": "Forbidden"
           }
         },
         "security": [
@@ -402,7 +393,7 @@
         "description": "Returns a list of groups for the user with the ID specified in the request."
       }
     },
-    "/api/2.0/groups/{fromId}/members/{toId}": {
+    "/api/2.0/group/{fromid}/members/{toid}": {
       "put": {
         "tags": [
           "Group"
@@ -454,11 +445,11 @@
               }
             }
           },
+          "404": {
+            "description": "Group not found"
+          },
           "401": {
             "description": "Unauthorized"
-          },
-          "403": {
-            "description": "Forbidden"
           }
         },
         "security": [
@@ -472,7 +463,7 @@
         "description": "Moves all the members from the selected group to another one specified in the request."
       }
     },
-    "/api/2.0/groups/{id}/members": {
+    "/api/2.0/group/{id}/members": {
       "post": {
         "tags": [
           "Group"
@@ -488,7 +479,7 @@
             "schema": {
               "type": "string",
               "format": "uuid",
-              "example": "89e0914c-617c-4b07-9a40-799db16d7c75"
+              "example": "a6cf80d0-5000-4162-bea6-d758906e5d61"
             }
           }
         ],
@@ -535,9 +526,6 @@
           },
           "401": {
             "description": "Unauthorized"
-          },
-          "403": {
-            "description": "Forbidden"
           }
         },
         "security": [
@@ -565,7 +553,7 @@
             "schema": {
               "type": "string",
               "format": "uuid",
-              "example": "8a8f52ab-cfa9-4c7d-9b48-61dfb1270e63"
+              "example": "b4742ddb-01ec-4cd3-ad8b-5cc33a1a8b2c"
             }
           }
         ],
@@ -610,11 +598,11 @@
               }
             }
           },
+          "404": {
+            "description": "Group not found"
+          },
           "401": {
             "description": "Unauthorized"
-          },
-          "403": {
-            "description": "Forbidden"
           }
         },
         "security": [
@@ -642,7 +630,7 @@
             "schema": {
               "type": "string",
               "format": "uuid",
-              "example": "5f066f02-e3f0-42ab-a164-43ca0b7d4405"
+              "example": "6f13950e-8940-4ec0-92f4-0b454788bcf4"
             }
           }
         ],
@@ -687,11 +675,11 @@
               }
             }
           },
+          "404": {
+            "description": "Group not found"
+          },
           "401": {
             "description": "Unauthorized"
-          },
-          "403": {
-            "description": "Forbidden"
           }
         },
         "security": [
@@ -705,7 +693,7 @@
         "description": "Removes the group members specified in the request from the selected group."
       }
     },
-    "/api/2.0/groups/{id}/manager": {
+    "/api/2.0/group/{id}/manager": {
       "put": {
         "tags": [
           "Group"
@@ -721,7 +709,7 @@
             "schema": {
               "type": "string",
               "format": "uuid",
-              "example": "aa0f47f1-91a4-4554-b282-aab334e2e448"
+              "example": "3097313b-3ed4-487b-aa36-593bb8acdfb3"
             }
           }
         ],
@@ -766,11 +754,11 @@
               }
             }
           },
+          "404": {
+            "description": "User not found"
+          },
           "401": {
             "description": "Unauthorized"
-          },
-          "403": {
-            "description": "Forbidden"
           }
         },
         "security": [
@@ -800,7 +788,7 @@
             "schema": {
               "type": "integer",
               "format": "int32",
-              "example": 2598
+              "example": 8892
             }
           },
           {
@@ -815,7 +803,7 @@
         ],
         "responses": {
           "200": {
-            "description": "OK",
+            "description": "Ok",
             "content": {
               "text/plain": {
                 "schema": {
@@ -843,11 +831,11 @@
               }
             }
           },
+          "403": {
+            "description": "No permissions to perform this action"
+          },
           "401": {
             "description": "Unauthorized"
-          },
-          "403": {
-            "description": "Forbidden"
           }
         },
         "security": [
@@ -876,7 +864,7 @@
             "required": true,
             "schema": {
               "type": "string",
-              "example": "4689"
+              "example": "2570"
             }
           }
         ],
@@ -921,11 +909,14 @@
               }
             }
           },
+          "403": {
+            "description": "No permissions to perform this action"
+          },
+          "404": {
+            "description": "User not found"
+          },
           "401": {
             "description": "Unauthorized"
-          },
-          "403": {
-            "description": "Forbidden"
           }
         },
         "security": [
@@ -952,7 +943,7 @@
             "required": true,
             "schema": {
               "type": "string",
-              "example": "6242"
+              "example": "4640"
             }
           }
         ],
@@ -997,11 +988,14 @@
               }
             }
           },
+          "403": {
+            "description": "No permissions to perform this action"
+          },
+          "404": {
+            "description": "User not found"
+          },
           "401": {
             "description": "Unauthorized"
-          },
-          "403": {
-            "description": "Forbidden"
           }
         },
         "security": [
@@ -1028,7 +1022,7 @@
             "required": true,
             "schema": {
               "type": "string",
-              "example": "6936"
+              "example": "4833"
             }
           }
         ],
@@ -1073,11 +1067,14 @@
               }
             }
           },
+          "403": {
+            "description": "No permissions to perform this action"
+          },
+          "404": {
+            "description": "User not found"
+          },
           "401": {
             "description": "Unauthorized"
-          },
-          "403": {
-            "description": "Forbidden"
           }
         },
         "security": [
@@ -1089,6 +1086,54 @@
           }
         ],
         "description": "Updates the contact information of the user with the ID specified in the request merging the new data into the current portal data."
+      }
+    },
+    "/api/2.0/people/guests": {
+      "delete": {
+        "tags": [
+          "People / Guests"
+        ],
+        "summary": "Removes guests from the list and from rooms",
+        "operationId": "deleteGuests",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ASC.People.ApiModels.RequestDto.UpdateMembersRequestDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ASC.People.ApiModels.RequestDto.UpdateMembersRequestDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ASC.People.ApiModels.RequestDto.UpdateMembersRequestDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Request parameters for deleting guests"
+          },
+          "403": {
+            "description": "No permissions to perform this action"
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        },
+        "security": [
+          {
+            "asc_auth_key": [
+              "read",
+              "write"
+            ]
+          }
+        ],
+        "description": "Removes guests from the list and excludes them from rooms to which you have invited them"
       }
     },
     "/api/2.0/people/{userid}/password": {
@@ -1107,7 +1152,7 @@
             "schema": {
               "type": "string",
               "format": "uuid",
-              "example": "d5addeaa-c478-4b6e-b8e6-fafaf1cf0626"
+              "example": "185126b0-251e-4365-8193-d465ba6e25c9"
             }
           }
         ],
@@ -1152,11 +1197,17 @@
               }
             }
           },
-          "401": {
-            "description": "Unauthorized"
+          "400": {
+            "description": "Incorrect email"
           },
           "403": {
-            "description": "Forbidden"
+            "description": "The invitation link is invalid or its validity has expired"
+          },
+          "404": {
+            "description": "User not found"
+          },
+          "401": {
+            "description": "Unauthorized"
           }
         },
         "security": [
@@ -1210,6 +1261,9 @@
                 "schema": {}
               }
             }
+          },
+          "403": {
+            "description": "No permissions to perform this action"
           }
         },
         "description": "Reminds a password to the user using the email address specified in the request."
@@ -1230,7 +1284,7 @@
             "required": true,
             "schema": {
               "type": "string",
-              "example": "9196"
+              "example": "9022"
             }
           }
         ],
@@ -1275,11 +1329,14 @@
               }
             }
           },
+          "403": {
+            "description": "No permissions to perform this action"
+          },
+          "404": {
+            "description": "User not found"
+          },
           "401": {
             "description": "Unauthorized"
-          },
-          "403": {
-            "description": "Forbidden"
           }
         },
         "security": [
@@ -1308,7 +1365,7 @@
             "required": true,
             "schema": {
               "type": "string",
-              "example": "107"
+              "example": "4777"
             }
           }
         ],
@@ -1333,11 +1390,14 @@
               }
             }
           },
+          "403": {
+            "description": "No permissions to perform this action"
+          },
+          "404": {
+            "description": "User not found"
+          },
           "401": {
             "description": "Unauthorized"
-          },
-          "403": {
-            "description": "Forbidden"
           }
         },
         "security": [
@@ -1364,7 +1424,7 @@
             "required": true,
             "schema": {
               "type": "string",
-              "example": "8736"
+              "example": "1752"
             }
           }
         ],
@@ -1389,11 +1449,14 @@
               }
             }
           },
+          "403": {
+            "description": "No permissions to perform this action"
+          },
+          "404": {
+            "description": "User not found"
+          },
           "401": {
             "description": "Unauthorized"
-          },
-          "403": {
-            "description": "Forbidden"
           }
         },
         "security": [
@@ -1420,7 +1483,7 @@
             "required": true,
             "schema": {
               "type": "string",
-              "example": "272"
+              "example": "8524"
             }
           }
         ],
@@ -1465,11 +1528,14 @@
               }
             }
           },
+          "403": {
+            "description": "No permissions to perform this action"
+          },
+          "404": {
+            "description": "User not found"
+          },
           "401": {
             "description": "Unauthorized"
-          },
-          "403": {
-            "description": "Forbidden"
           }
         },
         "security": [
@@ -1496,12 +1562,11 @@
             "required": true,
             "schema": {
               "type": "string",
-              "example": "4894"
+              "example": "4326"
             }
           }
         ],
         "requestBody": {
-          "description": "Image data",
           "content": {
             "multipart/form-data": {
               "schema": {
@@ -1509,7 +1574,9 @@
                 "properties": {
                   "formCollection": {
                     "type": "array",
-                    "items": {},
+                    "items": {
+                      "$ref": "#/components/schemas/System.Collections.Generic.KeyValuePair.System.String.Microsoft.Extensions.Primitives.StringValues"
+                    },
                     "description": "Image data"
                   }
                 }
@@ -1545,9 +1612,6 @@
           },
           "401": {
             "description": "Unauthorized"
-          },
-          "403": {
-            "description": "Forbidden"
           }
         },
         "security": [
@@ -1561,35 +1625,16 @@
         "description": "Uploads a photo of the user with the ID specified in the request."
       }
     },
-    "/api/2.0/people/phone": {
-      "post": {
+    "/api/2.0/people/tokendiagnostics": {
+      "get": {
         "tags": [
           "People / Profiles"
         ],
-        "summary": "Send a notification to change a phone",
-        "operationId": "sendNotificationToChange",
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/ASC.People.ApiModels.RequestDto.UpdateMemberSimpleRequestDto"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/ASC.People.ApiModels.RequestDto.UpdateMemberSimpleRequestDto"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/ASC.People.ApiModels.RequestDto.UpdateMemberSimpleRequestDto"
-              }
-            }
-          }
-        },
+        "summary": "Gets claims",
+        "operationId": "getClaims",
         "responses": {
           "200": {
-            "description": "Notification",
+            "description": "Claims",
             "content": {
               "text/plain": {
                 "schema": {}
@@ -1604,9 +1649,6 @@
           },
           "401": {
             "description": "Unauthorized"
-          },
-          "403": {
-            "description": "Forbidden"
           }
         },
         "security": [
@@ -1617,7 +1659,7 @@
             ]
           }
         ],
-        "description": "Sends a notification to the user with the ID specified in the request to change their phone number."
+        "description": "Gets claims"
       }
     },
     "/api/2.0/people": {
@@ -1667,11 +1709,11 @@
               }
             }
           },
+          "403": {
+            "description": "The invitation link is invalid or its validity has expired"
+          },
           "401": {
             "description": "Unauthorized"
-          },
-          "403": {
-            "description": "Forbidden"
           }
         },
         "security": [
@@ -1713,9 +1755,6 @@
           },
           "401": {
             "description": "Unauthorized"
-          },
-          "403": {
-            "description": "Forbidden"
           }
         },
         "security": [
@@ -1776,11 +1815,11 @@
               }
             }
           },
+          "403": {
+            "description": "No permissions to perform this action"
+          },
           "401": {
             "description": "Unauthorized"
-          },
-          "403": {
-            "description": "Forbidden"
           }
         },
         "security": [
@@ -1839,11 +1878,11 @@
               }
             }
           },
+          "403": {
+            "description": "No permissions to perform this action"
+          },
           "401": {
             "description": "Unauthorized"
-          },
-          "403": {
-            "description": "Forbidden"
           }
         },
         "security": [
@@ -1872,7 +1911,7 @@
             "required": true,
             "schema": {
               "type": "string",
-              "example": "3901"
+              "example": "2572"
             }
           }
         ],
@@ -1897,11 +1936,14 @@
               }
             }
           },
+          "403": {
+            "description": "You don't have enough permission to perform the operation"
+          },
+          "404": {
+            "description": "User not found"
+          },
           "401": {
             "description": "Unauthorized"
-          },
-          "403": {
-            "description": "Forbidden"
           }
         },
         "security": [
@@ -1928,7 +1970,7 @@
             "required": true,
             "schema": {
               "type": "string",
-              "example": "3272"
+              "example": "9047"
             }
           }
         ],
@@ -1953,11 +1995,14 @@
               }
             }
           },
+          "400": {
+            "description": "Incorect UserId"
+          },
+          "404": {
+            "description": "User not found"
+          },
           "401": {
             "description": "Unauthorized"
-          },
-          "403": {
-            "description": "Forbidden"
           }
         },
         "security": [
@@ -1984,7 +2029,7 @@
             "required": true,
             "schema": {
               "type": "string",
-              "example": "443"
+              "example": "8251"
             }
           }
         ],
@@ -2029,11 +2074,17 @@
               }
             }
           },
-          "401": {
-            "description": "Unauthorized"
+          "400": {
+            "description": "Incorrect user name"
           },
           "403": {
-            "description": "Forbidden"
+            "description": "You don't have enough permission to perform the operation"
+          },
+          "404": {
+            "description": "User not found"
+          },
+          "401": {
+            "description": "Unauthorized"
           }
         },
         "security": [
@@ -2075,11 +2126,14 @@
               }
             }
           },
+          "403": {
+            "description": "You don't have enough permission to perform the operation"
+          },
+          "404": {
+            "description": "User not found"
+          },
           "401": {
             "description": "Unauthorized"
-          },
-          "403": {
-            "description": "Forbidden"
           }
         },
         "security": [
@@ -2121,9 +2175,6 @@
           },
           "401": {
             "description": "Unauthorized"
-          },
-          "403": {
-            "description": "Forbidden"
           }
         },
         "security": [
@@ -2150,9 +2201,11 @@
             "in": "query",
             "description": "User email address",
             "schema": {
+              "maxLength": 255,
+              "minLength": 0,
               "type": "string",
               "format": "email",
-              "example": "Israel_McCullough30@gmail.com"
+              "example": "Carlo_Schneider99@gmail.com"
             }
           }
         ],
@@ -2177,11 +2230,11 @@
               }
             }
           },
+          "404": {
+            "description": "User not found"
+          },
           "401": {
             "description": "Unauthorized"
-          },
-          "403": {
-            "description": "Forbidden"
           }
         },
         "security": [
@@ -2234,11 +2287,17 @@
               }
             }
           },
-          "401": {
-            "description": "Unauthorized"
+          "400": {
+            "description": "Incorrect userId or email"
           },
           "403": {
-            "description": "Forbidden"
+            "description": "No permissions to perform this action"
+          },
+          "404": {
+            "description": "User not found"
+          },
+          "401": {
+            "description": "Unauthorized"
           }
         },
         "security": [
@@ -2301,9 +2360,6 @@
           },
           "401": {
             "description": "Unauthorized"
-          },
-          "403": {
-            "description": "Forbidden"
           }
         },
         "security": [
@@ -2332,7 +2388,7 @@
             "required": true,
             "schema": {
               "type": "string",
-              "example": "1170"
+              "example": "7024"
             }
           }
         ],
@@ -2377,11 +2433,14 @@
               }
             }
           },
+          "403": {
+            "description": "You don't have enough permission to perform the operation"
+          },
+          "404": {
+            "description": "User not found"
+          },
           "401": {
             "description": "Unauthorized"
-          },
-          "403": {
-            "description": "Forbidden"
           }
         },
         "security": [
@@ -2442,11 +2501,11 @@
               }
             }
           },
+          "402": {
+            "description": "Failed to set quota per user. The entered value is greater than the total DocSpace storage"
+          },
           "401": {
             "description": "Unauthorized"
-          },
-          "403": {
-            "description": "Forbidden"
           }
         },
         "security": [
@@ -2507,11 +2566,14 @@
               }
             }
           },
-          "401": {
-            "description": "Unauthorized"
+          "402": {
+            "description": "Your pricing plan does not support this option"
           },
           "403": {
-            "description": "Forbidden"
+            "description": "The invitation link is invalid or its validity has expired"
+          },
+          "401": {
+            "description": "Unauthorized"
           }
         },
         "security": [
@@ -2536,16 +2598,18 @@
           {
             "name": "id",
             "in": "path",
+            "description": "ID",
             "required": true,
             "schema": {
               "type": "integer",
               "format": "int32",
-              "example": 3951
+              "example": 8355
             }
           },
           {
             "name": "employeeStatus",
             "in": "query",
+            "description": "Employee status",
             "schema": {
               "$ref": "#/components/schemas/ASC.Core.Users.EmployeeStatus"
             }
@@ -2553,6 +2617,7 @@
           {
             "name": "activationStatus",
             "in": "query",
+            "description": "Activation status",
             "schema": {
               "$ref": "#/components/schemas/ASC.Core.Users.EmployeeActivationStatus"
             }
@@ -2560,15 +2625,43 @@
           {
             "name": "excludeShared",
             "in": "query",
+            "description": "Exclude shared",
             "schema": {
               "type": "boolean",
               "example": true
+            }
+          },
+          {
+            "name": "invitedByMe",
+            "in": "query",
+            "description": "Invited by me",
+            "schema": {
+              "type": "boolean",
+              "example": true
+            }
+          },
+          {
+            "name": "inviterId",
+            "in": "query",
+            "description": "Inviter Id",
+            "schema": {
+              "type": "string",
+              "format": "uuid",
+              "example": "75a5f745-f697-4418-b38d-0fe0d277e258"
+            }
+          },
+          {
+            "name": "area",
+            "in": "query",
+            "description": "Area",
+            "schema": {
+              "$ref": "#/components/schemas/ASC.Core.Common.Core.Area"
             }
           }
         ],
         "responses": {
           "200": {
-            "description": "OK",
+            "description": "Ok",
             "content": {
               "text/plain": {
                 "schema": {
@@ -2590,11 +2683,11 @@
               }
             }
           },
+          "403": {
+            "description": "No permissions to perform this action"
+          },
           "401": {
             "description": "Unauthorized"
-          },
-          "403": {
-            "description": "Forbidden"
           }
         },
         "security": [
@@ -2658,9 +2751,6 @@
           },
           "401": {
             "description": "Unauthorized"
-          },
-          "403": {
-            "description": "Forbidden"
           }
         },
         "security": [
@@ -2729,12 +2819,12 @@
                     "enum": [
                       "All",
                       "RoomAdmin",
-                      "User",
+                      "Guest",
                       "DocSpaceAdmin",
-                      "Collaborator"
+                      "User"
                     ],
                     "type": "string",
-                    "description": "[All - All, RoomAdmin - Room admin, User - User, DocSpaceAdmin - DocSpace admin, Collaborator - Collaborator]",
+                    "description": "[All - All, RoomAdmin - Room admin, Guest - Guest, DocSpaceAdmin - DocSpace admin, User - User]",
                     "example": "All"
                   },
                   {
@@ -2746,7 +2836,7 @@
                       4
                     ],
                     "type": "integer",
-                    "description": "[0 - All, 1 - Room admin, 2 - User, 3 - DocSpace admin, 4 - Collaborator]",
+                    "description": "[0 - All, 1 - Room admin, 2 - Guest, 3 - DocSpace admin, 4 - User]",
                     "example": 0
                   }
                 ]
@@ -2803,6 +2893,33 @@
               "type": "boolean",
               "example": true
             }
+          },
+          {
+            "name": "invitedByMe",
+            "in": "query",
+            "description": "Invited by me",
+            "schema": {
+              "type": "boolean",
+              "example": true
+            }
+          },
+          {
+            "name": "inviterId",
+            "in": "query",
+            "description": "Inviter Id",
+            "schema": {
+              "type": "string",
+              "format": "uuid",
+              "example": "75a5f745-f697-4418-b38d-0fe0d277e258"
+            }
+          },
+          {
+            "name": "area",
+            "in": "query",
+            "description": "Area",
+            "schema": {
+              "$ref": "#/components/schemas/ASC.Core.Common.Core.Area"
+            }
           }
         ],
         "responses": {
@@ -2826,11 +2943,11 @@
               }
             }
           },
+          "403": {
+            "description": "No permissions to perform this action"
+          },
           "401": {
             "description": "Unauthorized"
-          },
-          "403": {
-            "description": "Forbidden"
           }
         },
         "security": [
@@ -2885,9 +3002,6 @@
           },
           "401": {
             "description": "Unauthorized"
-          },
-          "403": {
-            "description": "Forbidden"
           }
         },
         "security": [
@@ -2943,9 +3057,6 @@
           },
           "401": {
             "description": "Unauthorized"
-          },
-          "403": {
-            "description": "Forbidden"
           }
         },
         "security": [
@@ -3014,12 +3125,12 @@
                     "enum": [
                       "All",
                       "RoomAdmin",
-                      "User",
+                      "Guest",
                       "DocSpaceAdmin",
-                      "Collaborator"
+                      "User"
                     ],
                     "type": "string",
-                    "description": "[All - All, RoomAdmin - Room admin, User - User, DocSpaceAdmin - DocSpace admin, Collaborator - Collaborator]",
+                    "description": "[All - All, RoomAdmin - Room admin, Guest - Guest, DocSpaceAdmin - DocSpace admin, User - User]",
                     "example": "All"
                   },
                   {
@@ -3031,7 +3142,7 @@
                       4
                     ],
                     "type": "integer",
-                    "description": "[0 - All, 1 - Room admin, 2 - User, 3 - DocSpace admin, 4 - Collaborator]",
+                    "description": "[0 - All, 1 - Room admin, 2 - Guest, 3 - DocSpace admin, 4 - User]",
                     "example": 0
                   }
                 ]
@@ -3088,6 +3199,33 @@
               "type": "boolean",
               "example": true
             }
+          },
+          {
+            "name": "invitedByMe",
+            "in": "query",
+            "description": "Invited by me",
+            "schema": {
+              "type": "boolean",
+              "example": true
+            }
+          },
+          {
+            "name": "inviterId",
+            "in": "query",
+            "description": "Inviter Id",
+            "schema": {
+              "type": "string",
+              "format": "uuid",
+              "example": "75a5f745-f697-4418-b38d-0fe0d277e258"
+            }
+          },
+          {
+            "name": "area",
+            "in": "query",
+            "description": "Area",
+            "schema": {
+              "$ref": "#/components/schemas/ASC.Core.Common.Core.Area"
+            }
           }
         ],
         "responses": {
@@ -3111,11 +3249,11 @@
               }
             }
           },
+          "403": {
+            "description": "No permissions to perform this action"
+          },
           "401": {
             "description": "Unauthorized"
-          },
-          "403": {
-            "description": "Forbidden"
           }
         },
         "security": [
@@ -3145,7 +3283,7 @@
             "schema": {
               "type": "integer",
               "format": "int32",
-              "example": 2588
+              "example": 3183
             }
           },
           {
@@ -3172,11 +3310,38 @@
               "type": "boolean",
               "example": true
             }
+          },
+          {
+            "name": "invitedByMe",
+            "in": "query",
+            "description": "Invited by me",
+            "schema": {
+              "type": "boolean",
+              "example": true
+            }
+          },
+          {
+            "name": "inviterId",
+            "in": "query",
+            "description": "Inviter Id",
+            "schema": {
+              "type": "string",
+              "format": "uuid",
+              "example": "75a5f745-f697-4418-b38d-0fe0d277e258"
+            }
+          },
+          {
+            "name": "area",
+            "in": "query",
+            "description": "Area",
+            "schema": {
+              "$ref": "#/components/schemas/ASC.Core.Common.Core.Area"
+            }
           }
         ],
         "responses": {
           "200": {
-            "description": "OK",
+            "description": "Ok",
             "content": {
               "text/plain": {
                 "schema": {
@@ -3204,11 +3369,11 @@
               }
             }
           },
+          "403": {
+            "description": "No permissions to perform this action"
+          },
           "401": {
             "description": "Unauthorized"
-          },
-          "403": {
-            "description": "Forbidden"
           }
         },
         "security": [
@@ -3252,9 +3417,6 @@
           },
           "401": {
             "description": "Unauthorized"
-          },
-          "403": {
-            "description": "Forbidden"
           }
         },
         "security": [
@@ -3315,9 +3477,6 @@
           },
           "401": {
             "description": "Unauthorized"
-          },
-          "403": {
-            "description": "Forbidden"
           }
         },
         "security": [
@@ -3429,13 +3588,13 @@
         },
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "Ok"
+          },
+          "405": {
+            "description": "Error not allowed option"
           },
           "401": {
             "description": "Unauthorized"
-          },
-          "403": {
-            "description": "Forbidden"
           }
         },
         "security": [
@@ -3477,7 +3636,13 @@
         },
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "Ok"
+          },
+          "400": {
+            "description": "Incorrect email"
+          },
+          "403": {
+            "description": "The invitation link is invalid or its validity has expired"
           }
         },
         "description": "Creates a third-party account with the parameters specified in the request."
@@ -3507,9 +3672,6 @@
           },
           "401": {
             "description": "Unauthorized"
-          },
-          "403": {
-            "description": "Forbidden"
           }
         },
         "security": [
@@ -3539,7 +3701,7 @@
             "schema": {
               "type": "string",
               "format": "uuid",
-              "example": "e711a7d4-f33c-46d2-8553-ea594b975fca"
+              "example": "864deb32-e2d1-41a7-8530-42ee031e88a4"
             }
           }
         ],
@@ -3566,9 +3728,6 @@
           },
           "401": {
             "description": "Unauthorized"
-          },
-          "403": {
-            "description": "Forbidden"
           }
         },
         "security": [
@@ -3629,11 +3788,11 @@
               }
             }
           },
+          "400": {
+            "description": "Can not reassign data to user or from user"
+          },
           "401": {
             "description": "Unauthorized"
-          },
-          "403": {
-            "description": "Forbidden"
           }
         },
         "security": [
@@ -3696,9 +3855,6 @@
           },
           "401": {
             "description": "Unauthorized"
-          },
-          "403": {
-            "description": "Forbidden"
           }
         },
         "security": [
@@ -3728,7 +3884,7 @@
             "schema": {
               "type": "string",
               "format": "uuid",
-              "example": "0e69f83e-9337-4940-9812-d81b26393234"
+              "example": "af5408a0-556e-4672-a88d-97d1a48b3a8f"
             }
           }
         ],
@@ -3755,9 +3911,6 @@
           },
           "401": {
             "description": "Unauthorized"
-          },
-          "403": {
-            "description": "Forbidden"
           }
         },
         "security": [
@@ -3793,11 +3946,11 @@
               }
             }
           },
+          "403": {
+            "description": "No permissions to perform this action"
+          },
           "401": {
             "description": "Unauthorized"
-          },
-          "403": {
-            "description": "Forbidden"
           }
         },
         "security": [
@@ -3858,11 +4011,17 @@
               }
             }
           },
-          "401": {
-            "description": "Unauthorized"
+          "400": {
+            "description": "User exception"
           },
           "403": {
-            "description": "Forbidden"
+            "description": "No permissions to perform this action"
+          },
+          "404": {
+            "description": "User not found"
+          },
+          "401": {
+            "description": "Unauthorized"
           }
         },
         "security": [
@@ -3908,9 +4067,6 @@
           },
           "401": {
             "description": "Unauthorized"
-          },
-          "403": {
-            "description": "Forbidden"
           }
         },
         "security": [
@@ -3965,9 +4121,6 @@
           },
           "401": {
             "description": "Unauthorized"
-          },
-          "403": {
-            "description": "Forbidden"
           }
         },
         "security": [
@@ -4040,9 +4193,6 @@
           },
           "401": {
             "description": "Unauthorized"
-          },
-          "403": {
-            "description": "Forbidden"
           }
         },
         "security": [
@@ -4117,9 +4267,6 @@
           },
           "401": {
             "description": "Unauthorized"
-          },
-          "403": {
-            "description": "Forbidden"
           }
         },
         "security": [
@@ -4194,9 +4341,6 @@
           },
           "401": {
             "description": "Unauthorized"
-          },
-          "403": {
-            "description": "Forbidden"
           }
         },
         "security": [
@@ -4218,12 +4362,14 @@
         "properties": {
           "utcTime": {
             "type": "string",
+            "description": "UtcTime",
             "format": "date-time",
             "readOnly": true,
             "example": "2008-04-10T06:30:00.0000000+04:00"
           },
           "timeZoneOffset": {
             "type": "string",
+            "description": "TimeZoneOffset",
             "format": "date-span",
             "readOnly": true,
             "example": "00:00:00"
@@ -4282,6 +4428,15 @@
             "example": 0
           }
         ]
+      },
+      "ASC.Core.Common.Core.Area": {
+        "enum": [
+          0,
+          1,
+          2
+        ],
+        "type": "integer",
+        "format": "int32"
       },
       "ASC.Core.Payments": {
         "oneOf": [
@@ -4389,12 +4544,12 @@
             "enum": [
               "All",
               "RoomAdmin",
-              "User",
+              "Guest",
               "DocSpaceAdmin",
-              "Collaborator"
+              "User"
             ],
             "type": "string",
-            "description": "[All - All, RoomAdmin - Room admin, User - User, DocSpaceAdmin - DocSpace admin, Collaborator - Collaborator]",
+            "description": "[All - All, RoomAdmin - Room admin, Guest - Guest, DocSpaceAdmin - DocSpace admin, User - User]",
             "example": "All"
           },
           {
@@ -4406,7 +4561,7 @@
               4
             ],
             "type": "integer",
-            "description": "[0 - All, 1 - Room admin, 2 - User, 3 - DocSpace admin, 4 - Collaborator]",
+            "description": "[0 - All, 1 - Room admin, 2 - Guest, 3 - DocSpace admin, 4 - User]",
             "example": 0
           }
         ]
@@ -4438,16 +4593,11 @@
         "properties": {
           "contacts": {
             "type": "array",
-            "items": {},
+            "items": {
+              "$ref": "#/components/schemas/ASC.Web.Api.Models.Contact"
+            },
             "description": "List of user contacts",
-            "nullable": true,
-            "example": [
-              {
-                "int": 1234,
-                "string": "some text",
-                "boolean": true
-              }
-            ]
+            "nullable": true
           }
         },
         "additionalProperties": false,
@@ -4467,11 +4617,13 @@
         "type": "object",
         "properties": {
           "email": {
+            "maxLength": 255,
+            "minLength": 0,
             "type": "string",
             "description": "Email",
             "format": "email",
             "nullable": true,
-            "example": "Guido_Weimann@hotmail.com"
+            "example": "Meggie_Abshire25@yahoo.com"
           }
         },
         "additionalProperties": false,
@@ -4494,7 +4646,10 @@
           },
           "members": {
             "type": "array",
-            "items": {},
+            "items": {
+              "type": "string",
+              "format": "uuid"
+            },
             "description": "List of group member IDs",
             "nullable": true,
             "example": [
@@ -4513,15 +4668,10 @@
         "properties": {
           "invitations": {
             "type": "array",
-            "items": {},
-            "description": "List of user invitations",
-            "example": [
-              {
-                "int": 1234,
-                "string": "some text",
-                "boolean": true
-              }
-            ]
+            "items": {
+              "$ref": "#/components/schemas/ASC.People.ApiModels.RequestDto.UserInvitation"
+            },
+            "description": "List of user invitations"
           },
           "culture": {
             "type": "string",
@@ -4550,17 +4700,19 @@
         "type": "object",
         "properties": {
           "email": {
+            "maxLength": 255,
+            "minLength": 0,
             "type": "string",
             "description": "Email",
             "format": "email",
             "nullable": true,
-            "example": "Zachariah_Lesch5@gmail.com"
+            "example": "Daisha_Pagac@hotmail.com"
           },
           "password": {
             "type": "string",
             "description": "Password",
             "nullable": true,
-            "example": "hLY1ZeprtP"
+            "example": "NXAiQgPH4K"
           },
           "passwordHash": {
             "type": "string",
@@ -4576,17 +4728,19 @@
         "type": "object",
         "properties": {
           "email": {
+            "maxLength": 255,
+            "minLength": 0,
             "type": "string",
             "description": "Email",
             "format": "email",
             "nullable": true,
-            "example": "Jayson67@gmail.com"
+            "example": "Jamir.Bergnaum@hotmail.com"
           },
           "password": {
             "type": "string",
             "description": "Password",
             "nullable": true,
-            "example": "SiG8Ix1a7u"
+            "example": "bgsEgi9U9R"
           },
           "passwordHash": {
             "type": "string",
@@ -4604,20 +4758,27 @@
             "example": true
           },
           "firstName": {
+            "maxLength": 255,
+            "minLength": 0,
             "type": "string",
             "description": "First name",
             "nullable": true,
-            "example": "Leslie"
+            "example": "Luisa"
           },
           "lastName": {
+            "maxLength": 255,
+            "minLength": 0,
             "type": "string",
             "description": "Last name",
             "nullable": true,
-            "example": "Brown"
+            "example": "Terry"
           },
           "department": {
             "type": "array",
-            "items": {},
+            "items": {
+              "type": "string",
+              "format": "uuid"
+            },
             "description": "List of user departments",
             "nullable": true,
             "example": [
@@ -4625,16 +4786,18 @@
             ]
           },
           "title": {
+            "maxLength": 255,
+            "minLength": 0,
             "type": "string",
             "description": "Title",
             "nullable": true,
-            "example": "facilitate_wooden_rest"
+            "example": "bypass_upward_trending_navigating"
           },
           "location": {
             "type": "string",
             "description": "Location",
             "nullable": true,
-            "example": "747 Trent Meadows, Hansenchester, Malaysia"
+            "example": "15357 Daugherty Locks, Hettiehaven, French Guiana"
           },
           "sex": {
             "$ref": "#/components/schemas/ASC.People.ApiModels.RequestDto.SexEnum"
@@ -4653,16 +4816,11 @@
           },
           "contacts": {
             "type": "array",
-            "items": {},
+            "items": {
+              "$ref": "#/components/schemas/ASC.Web.Api.Models.Contact"
+            },
             "description": "List of user contacts",
-            "nullable": true,
-            "example": [
-              {
-                "int": 1234,
-                "string": "some text",
-                "boolean": true
-              }
-            ]
+            "nullable": true
           },
           "files": {
             "type": "string",
@@ -4692,6 +4850,12 @@
             "description": "Target",
             "format": "uuid",
             "example": "75a5f745-f697-4418-b38d-0fe0d277e258"
+          },
+          "spam": {
+            "type": "boolean",
+            "description": "Spam",
+            "nullable": true,
+            "example": true
           }
         },
         "additionalProperties": false,
@@ -4702,7 +4866,10 @@
         "properties": {
           "members": {
             "type": "array",
-            "items": {},
+            "items": {
+              "type": "string",
+              "format": "uuid"
+            },
             "description": "List of group member IDs",
             "nullable": true,
             "example": [
@@ -4720,7 +4887,7 @@
             "type": "string",
             "description": "User ID",
             "format": "uuid",
-            "example": "ddd83194-7fcf-4e9d-acfc-6fbb799d5858"
+            "example": "7c9f3a97-2cb4-4f14-9470-064cbb4a6317"
           }
         },
         "additionalProperties": false,
@@ -4764,20 +4931,20 @@
             "type": "string",
             "description": "First name",
             "nullable": true,
-            "example": "Zelda"
+            "example": "Ayana"
           },
           "lastName": {
             "type": "string",
             "description": "Last name",
             "nullable": true,
-            "example": "Zieme"
+            "example": "Considine"
           },
           "email": {
             "type": "string",
             "description": "Email address",
             "format": "email",
             "nullable": true,
-            "example": "Toby88@hotmail.com"
+            "example": "Aleen35@gmail.com"
           },
           "passwordHash": {
             "type": "string",
@@ -4832,7 +4999,7 @@
             "type": "string",
             "description": "User ID whose data is reassigned/removed",
             "format": "uuid",
-            "example": "c9ccbdc8-37af-4763-8a0c-fed325766a7c"
+            "example": "286329ac-8821-4c5a-b8e5-d70617a530e3"
           }
         },
         "additionalProperties": false,
@@ -4892,7 +5059,10 @@
           },
           "membersToAdd": {
             "type": "array",
-            "items": {},
+            "items": {
+              "type": "string",
+              "format": "uuid"
+            },
             "description": "List of user IDs to add to the group",
             "nullable": true,
             "example": [
@@ -4901,7 +5071,10 @@
           },
           "membersToRemove": {
             "type": "array",
-            "items": {},
+            "items": {
+              "type": "string",
+              "format": "uuid"
+            },
             "description": "List of user IDs to remove from the group",
             "nullable": true,
             "example": [
@@ -4916,17 +5089,19 @@
         "type": "object",
         "properties": {
           "email": {
+            "maxLength": 255,
+            "minLength": 0,
             "type": "string",
             "description": "Email",
             "format": "email",
             "nullable": true,
-            "example": "Dora.Kuvalis31@yahoo.com"
+            "example": "Karelle39@hotmail.com"
           },
           "password": {
             "type": "string",
             "description": "Password",
             "nullable": true,
-            "example": "hebDQ6czY6"
+            "example": "AeCNAMskLg"
           },
           "passwordHash": {
             "type": "string",
@@ -4944,20 +5119,27 @@
             "example": true
           },
           "firstName": {
+            "maxLength": 255,
+            "minLength": 0,
             "type": "string",
             "description": "First name",
             "nullable": true,
-            "example": "Terrell"
+            "example": "Glennie"
           },
           "lastName": {
+            "maxLength": 255,
+            "minLength": 0,
             "type": "string",
             "description": "Last name",
             "nullable": true,
-            "example": "Bins"
+            "example": "Torphy"
           },
           "department": {
             "type": "array",
-            "items": {},
+            "items": {
+              "type": "string",
+              "format": "uuid"
+            },
             "description": "List of user departments",
             "nullable": true,
             "example": [
@@ -4965,16 +5147,18 @@
             ]
           },
           "title": {
+            "maxLength": 255,
+            "minLength": 0,
             "type": "string",
             "description": "Title",
             "nullable": true,
-            "example": "accounts"
+            "example": "licensed_wooden_bacon_payment_synthesizing"
           },
           "location": {
             "type": "string",
             "description": "Location",
             "nullable": true,
-            "example": "707 Skiles Throughway, Carolynburgh, Lao People's Democratic Republic"
+            "example": "020 Thiel Mount, East Kamryn, China"
           },
           "sex": {
             "$ref": "#/components/schemas/ASC.People.ApiModels.RequestDto.SexEnum"
@@ -4993,16 +5177,11 @@
           },
           "contacts": {
             "type": "array",
-            "items": {},
+            "items": {
+              "$ref": "#/components/schemas/ASC.Web.Api.Models.Contact"
+            },
             "description": "List of user contacts",
-            "nullable": true,
-            "example": [
-              {
-                "int": 1234,
-                "string": "some text",
-                "boolean": true
-              }
-            ]
+            "nullable": true
           },
           "files": {
             "type": "string",
@@ -5033,11 +5212,17 @@
             "format": "uuid",
             "example": "75a5f745-f697-4418-b38d-0fe0d277e258"
           },
+          "spam": {
+            "type": "boolean",
+            "description": "Spam",
+            "nullable": true,
+            "example": true
+          },
           "userId": {
             "type": "string",
             "description": "User ID",
             "nullable": true,
-            "example": "882"
+            "example": "6177"
           },
           "disable": {
             "type": "boolean",
@@ -5049,25 +5234,15 @@
         "additionalProperties": false,
         "description": "Request parameters for updating user information"
       },
-      "ASC.People.ApiModels.RequestDto.UpdateMemberSimpleRequestDto": {
-        "type": "object",
-        "properties": {
-          "userId": {
-            "type": "string",
-            "description": "User ID",
-            "nullable": true,
-            "example": "2784"
-          }
-        },
-        "additionalProperties": false,
-        "description": "Request parameters for updating user contacts"
-      },
       "ASC.People.ApiModels.RequestDto.UpdateMembersQuotaRequestDto": {
         "type": "object",
         "properties": {
           "userIds": {
             "type": "array",
-            "items": {},
+            "items": {
+              "type": "string",
+              "format": "uuid"
+            },
             "description": "List of user IDs",
             "nullable": true,
             "example": [
@@ -5075,10 +5250,17 @@
             ]
           },
           "quota": {
-            "type": "integer",
-            "description": "Quota",
-            "format": "int64",
-            "example": 1234
+            "oneOf": [
+              {
+                "type": "integer",
+                "example": 1234
+              },
+              {
+                "type": "string",
+                "example": "some text"
+              }
+            ],
+            "description": "Quota"
           }
         },
         "additionalProperties": false,
@@ -5089,7 +5271,10 @@
         "properties": {
           "userIds": {
             "type": "array",
-            "items": {},
+            "items": {
+              "type": "string",
+              "format": "uuid"
+            },
             "description": "List of user IDs",
             "nullable": true,
             "example": [
@@ -5123,9 +5308,10 @@
         "properties": {
           "email": {
             "type": "string",
+            "description": "Email address",
             "format": "email",
             "nullable": true,
-            "example": "Breanna.Moen82@yahoo.com"
+            "example": "Rafael.Welch@gmail.com"
           },
           "type": {
             "$ref": "#/components/schemas/ASC.Core.Users.EmployeeType"
@@ -5197,7 +5383,7 @@
             "type": "string",
             "description": "Name",
             "nullable": true,
-            "example": "Chandler Schimmel"
+            "example": "Micheal Mante"
           },
           "parent": {
             "type": "string",
@@ -5216,7 +5402,7 @@
             "type": "string",
             "description": "ID",
             "format": "uuid",
-            "example": "db96df1a-108f-4162-a254-ff3b6f1d32cc"
+            "example": "a25d99c5-ce9c-4f00-98c4-999c52bdf5c6"
           },
           "isLDAP": {
             "type": "boolean",
@@ -5228,7 +5414,9 @@
           },
           "members": {
             "type": "array",
-            "items": {},
+            "items": {
+              "$ref": "#/components/schemas/ASC.Web.Api.Models.EmployeeFullDto"
+            },
             "description": "List of members",
             "nullable": true
           },
@@ -5254,7 +5442,7 @@
             "type": "string",
             "description": "ID",
             "nullable": true,
-            "example": "2288"
+            "example": "90"
           },
           "error": {
             "type": "string",
@@ -5326,11 +5514,13 @@
         "properties": {
           "type": {
             "type": "string",
+            "description": "Contact type",
             "nullable": true,
             "example": "GTalk"
           },
           "value": {
             "type": "string",
+            "description": "Contact value",
             "nullable": true,
             "example": "my@gmail.com"
           }
@@ -5342,55 +5532,66 @@
         "properties": {
           "id": {
             "type": "string",
+            "description": "ID",
             "format": "uuid",
             "example": "{00000000-0000-0000-0000-000000000000}"
           },
           "displayName": {
             "type": "string",
+            "description": "Display name",
             "nullable": true,
             "example": "Mike Zanyatski"
           },
           "title": {
             "type": "string",
+            "description": "Title",
             "nullable": true,
             "example": "Manager"
           },
           "avatar": {
             "type": "string",
+            "description": "Avatar",
             "nullable": true,
             "example": "some text"
           },
           "avatarOriginal": {
             "type": "string",
+            "description": "Original size avatar",
             "nullable": true,
             "example": "some text"
           },
           "avatarMax": {
             "type": "string",
+            "description": "Maximum size avatar",
             "nullable": true,
             "example": "some text"
           },
           "avatarMedium": {
             "type": "string",
+            "description": "Medium size avatar",
             "nullable": true,
             "example": "some text"
           },
           "avatarSmall": {
             "type": "string",
+            "description": "Small avatar",
             "nullable": true,
             "example": "url to small avatar"
           },
           "profileUrl": {
             "type": "string",
+            "description": "Profile URL",
             "nullable": true,
             "example": "some text"
           },
           "hasAvatar": {
             "type": "boolean",
+            "description": "Specifies if the user has an avatar or not",
             "example": true
           },
           "isAnonim": {
             "type": "boolean",
+            "description": "Specifies if the user is an anonim or not",
             "example": true
           }
         },
@@ -5401,81 +5602,99 @@
         "properties": {
           "id": {
             "type": "string",
+            "description": "ID",
             "format": "uuid",
             "example": "{00000000-0000-0000-0000-000000000000}"
           },
           "displayName": {
             "type": "string",
+            "description": "Display name",
             "nullable": true,
             "example": "Mike Zanyatski"
           },
           "title": {
             "type": "string",
+            "description": "Title",
             "nullable": true,
             "example": "Manager"
           },
           "avatar": {
             "type": "string",
+            "description": "Avatar",
             "nullable": true,
             "example": "some text"
           },
           "avatarOriginal": {
             "type": "string",
+            "description": "Original size avatar",
             "nullable": true,
             "example": "some text"
           },
           "avatarMax": {
             "type": "string",
+            "description": "Maximum size avatar",
             "nullable": true,
             "example": "some text"
           },
           "avatarMedium": {
             "type": "string",
+            "description": "Medium size avatar",
             "nullable": true,
             "example": "some text"
           },
           "avatarSmall": {
             "type": "string",
+            "description": "Small avatar",
             "nullable": true,
             "example": "url to small avatar"
           },
           "profileUrl": {
             "type": "string",
+            "description": "Profile URL",
             "nullable": true,
             "example": "some text"
           },
           "hasAvatar": {
             "type": "boolean",
+            "description": "Specifies if the user has an avatar or not",
             "example": true
           },
           "isAnonim": {
             "type": "boolean",
+            "description": "Specifies if the user is an anonim or not",
             "example": true
           },
           "firstName": {
             "type": "string",
+            "description": "First name",
             "nullable": true,
             "example": "Mike"
           },
           "lastName": {
             "type": "string",
+            "description": "Last name",
             "nullable": true,
             "example": "Zanyatski"
           },
           "userName": {
             "type": "string",
+            "description": "Username",
             "nullable": true,
             "example": "Mike.Zanyatski"
           },
           "email": {
             "type": "string",
+            "description": "Email",
             "format": "email",
             "nullable": true,
             "example": "my@gmail.com"
           },
           "contacts": {
             "type": "array",
-            "items": {},
+            "items": {
+              "$ref": "#/components/schemas/ASC.Web.Api.Models.Contact"
+            },
+            "description": "List of contacts",
             "nullable": true
           },
           "birthday": {
@@ -5483,6 +5702,7 @@
           },
           "sex": {
             "type": "string",
+            "description": "Sex",
             "nullable": true,
             "example": "male"
           },
@@ -5497,6 +5717,7 @@
           },
           "department": {
             "type": "string",
+            "description": "Department",
             "nullable": true,
             "example": "Marketing"
           },
@@ -5505,56 +5726,72 @@
           },
           "groups": {
             "type": "array",
-            "items": {},
+            "items": {
+              "$ref": "#/components/schemas/ASC.Web.Api.Models.GroupSummaryDto"
+            },
+            "description": "List of groups",
             "nullable": true
           },
           "location": {
             "type": "string",
+            "description": "Location",
             "nullable": true,
             "example": "Palo Alto"
           },
           "notes": {
             "type": "string",
+            "description": "Notes",
             "nullable": true,
             "example": "Notes to worker"
           },
           "isAdmin": {
             "type": "boolean",
+            "description": "Specifies if the user is an administrator or not",
             "example": false
           },
           "isRoomAdmin": {
             "type": "boolean",
+            "description": "Specifies if the user is a room administrator or not",
             "example": true
           },
           "isLDAP": {
             "type": "boolean",
+            "description": "Specifies if the LDAP settings are enabled for the user or not",
             "example": false
           },
           "listAdminModules": {
             "type": "array",
-            "items": {},
+            "items": {
+              "type": "string"
+            },
+            "description": "List of administrator modules",
             "nullable": true,
             "example": "[\"projects\", \"crm\"]"
           },
           "isOwner": {
             "type": "boolean",
+            "description": "Specifies if the user is a portal owner or not",
             "example": true
           },
           "isVisitor": {
             "type": "boolean",
+            "description": "Specifies if the user is a portal visitor or not",
             "example": true
           },
           "isCollaborator": {
             "type": "boolean",
+            "description": "Specifies if the user is a portal collaborator or not",
             "example": true
           },
           "cultureName": {
             "type": "string",
+            "description": "Language",
             "nullable": true,
             "example": "en-EN"
           },
           "mobilePhone": {
             "type": "string",
+            "description": "Mobile phone number",
             "nullable": true,
             "example": "some text"
           },
@@ -5563,6 +5800,7 @@
           },
           "isSSO": {
             "type": "boolean",
+            "description": "Specifies if the SSO settings are enabled for the user or not",
             "example": false
           },
           "theme": {
@@ -5570,31 +5808,42 @@
           },
           "quotaLimit": {
             "type": "integer",
+            "description": "Quota limit",
             "format": "int64",
             "nullable": true,
             "example": 1234
           },
           "usedSpace": {
             "type": "number",
+            "description": "Portal used space",
             "format": "double",
             "nullable": true,
             "example": 12345
           },
           "shared": {
             "type": "boolean",
+            "description": "Shared",
             "nullable": true,
             "example": true
           },
           "isCustomQuota": {
             "type": "boolean",
+            "description": "Specifies if the user has a custom quota or not",
             "nullable": true,
             "example": true
           },
           "loginEventId": {
             "type": "integer",
+            "description": "Current login event ID",
             "format": "int32",
             "nullable": true,
             "example": 1234
+          },
+          "createdBy": {
+            "$ref": "#/components/schemas/ASC.Web.Api.Models.EmployeeDto"
+          },
+          "registrationDate": {
+            "$ref": "#/components/schemas/ASC.Api.Core.ApiDateTime"
           }
         },
         "additionalProperties": false
@@ -5604,16 +5853,19 @@
         "properties": {
           "id": {
             "type": "string",
+            "description": "ID",
             "format": "uuid",
             "example": "{00000000-0000-0000-0000-000000000000}"
           },
           "name": {
             "type": "string",
+            "description": "Name",
             "nullable": true,
             "example": "Group Name"
           },
           "manager": {
             "type": "string",
+            "description": "Manager",
             "nullable": true,
             "example": "Jake.Zazhitski"
           }
@@ -5627,7 +5879,8 @@
             "$ref": "#/components/schemas/ASC.Web.Core.Users.DarkThemeSettingsType"
           }
         },
-        "additionalProperties": false
+        "additionalProperties": false,
+        "description": ""
       },
       "ASC.Web.Core.Users.DarkThemeSettingsType": {
         "oneOf": [
@@ -5674,7 +5927,9 @@
           },
           "value": {
             "type": "array",
-            "items": {},
+            "items": {
+              "type": "string"
+            },
             "example": [
               "some text"
             ]
@@ -5694,55 +5949,99 @@
   "tags": [
     {
       "name": "Group",
-      "description": "Operations for working with groups."
+      "description": "Operations for working with groups.",
+      "x-displayName": "Group"
     },
     {
       "name": "Group / Rooms",
-      "description": "Operations for getting groups with access rights to a room."
+      "description": "Operations for getting groups with access rights to a room.",
+      "x-displayName": "Rooms"
     },
     {
       "name": "People / Contacts",
-      "description": "Operations for working with user contacts."
+      "description": "Operations for working with user contacts.",
+      "x-displayName": "Contacts"
+    },
+    {
+      "name": "People / Guests",
+      "description": "Operations for workig with gursts",
+      "x-displayName": "Guests"
     },
     {
       "name": "People / Password",
-      "description": "Operations for working with user passwords."
+      "description": "Operations for working with user passwords.",
+      "x-displayName": "Password"
     },
     {
       "name": "People / Photos",
-      "description": "Operations for working with user photos."
+      "description": "Operations for working with user photos.",
+      "x-displayName": "Photos"
     },
     {
       "name": "People / Profiles",
-      "description": "Operations  for working with user profiles."
+      "description": "Operations  for working with user profiles.",
+      "x-displayName": "Profiles"
     },
     {
       "name": "People / Quota",
-      "description": "Operations for working with user quotas."
+      "description": "Operations for working with user quotas.",
+      "x-displayName": "Quota"
     },
     {
       "name": "People / Search",
-      "description": "Operations for searching users."
+      "description": "Operations for searching users.",
+      "x-displayName": "Search"
     },
     {
       "name": "People / Theme",
-      "description": "Operations for working with portal theme."
+      "description": "Operations for working with portal theme.",
+      "x-displayName": "Theme"
     },
     {
       "name": "People / Third-party accounts",
-      "description": "Operations for working with third-party accounts."
+      "description": "Operations for working with third-party accounts.",
+      "x-displayName": "Third-party accounts"
     },
     {
       "name": "People / User data",
-      "description": "Operations for working with user data."
+      "description": "Operations for working with user data.",
+      "x-displayName": "User data"
     },
     {
       "name": "People / User status",
-      "description": "Operations for working with user status."
+      "description": "Operations for working with user status.",
+      "x-displayName": "User status"
     },
     {
       "name": "People / User type",
-      "description": "Operations for working with user types."
+      "description": "Operations for working with user types.",
+      "x-displayName": "User type"
+    }
+  ],
+  "x-tagGroups": [
+    {
+      "name": "Group",
+      "tags": [
+        "Group",
+        "Group / Rooms"
+      ]
+    },
+    {
+      "name": "People",
+      "tags": [
+        "People / Contacts",
+        "People / Guests",
+        "People / Password",
+        "People / Photos",
+        "People / Profiles",
+        "People / Quota",
+        "People / Search",
+        "People / Theme",
+        "People / Third-party accounts",
+        "People / User data",
+        "People / User status",
+        "People / User type"
+      ]
     }
   ]
 }

@@ -6,7 +6,7 @@
   },
   "servers": [
     {
-      "url": "http://localhost:8092/",
+      "url": "http://localhost:8092",
       "description": "Local server"
     }
   ],
@@ -39,11 +39,11 @@
               }
             }
           },
+          "402": {
+            "description": "Your pricing plan does not support this option"
+          },
           "401": {
             "description": "Unauthorized"
-          },
-          "403": {
-            "description": "Forbidden"
           }
         },
         "security": [
@@ -104,11 +104,20 @@
               }
             }
           },
-          "401": {
-            "description": "Unauthorized"
+          "400": {
+            "description": "BackupStored must be 1 - 30 or backup can not start as dump"
+          },
+          "402": {
+            "description": "Your pricing plan does not support this option"
           },
           "403": {
-            "description": "Forbidden"
+            "description": "You don't have enough permission to create"
+          },
+          "404": {
+            "description": "The required folder was not found"
+          },
+          "401": {
+            "description": "Unauthorized"
           }
         },
         "security": [
@@ -150,11 +159,11 @@
               }
             }
           },
+          "402": {
+            "description": "Your pricing plan does not support this option"
+          },
           "401": {
             "description": "Unauthorized"
-          },
-          "403": {
-            "description": "Forbidden"
           }
         },
         "security": [
@@ -215,11 +224,20 @@
               }
             }
           },
-          "401": {
-            "description": "Unauthorized"
+          "400": {
+            "description": "Wrong folder type or backup can`t start as dump"
+          },
+          "402": {
+            "description": "Your pricing plan does not support this option"
           },
           "403": {
-            "description": "Forbidden"
+            "description": "You don't have enough permission to create"
+          },
+          "404": {
+            "description": "The required folder was not found"
+          },
+          "401": {
+            "description": "Unauthorized"
           }
         },
         "security": [
@@ -261,11 +279,11 @@
               }
             }
           },
+          "402": {
+            "description": "Your pricing plan does not support this option"
+          },
           "401": {
             "description": "Unauthorized"
-          },
-          "403": {
-            "description": "Forbidden"
           }
         },
         "security": [
@@ -307,11 +325,11 @@
               }
             }
           },
+          "402": {
+            "description": "Your pricing plan does not support this option"
+          },
           "401": {
             "description": "Unauthorized"
-          },
-          "403": {
-            "description": "Forbidden"
           }
         },
         "security": [
@@ -366,11 +384,11 @@
               }
             }
           },
+          "402": {
+            "description": "Your pricing plan does not support this option"
+          },
           "401": {
             "description": "Unauthorized"
-          },
-          "403": {
-            "description": "Forbidden"
           }
         },
         "security": [
@@ -412,11 +430,11 @@
               }
             }
           },
+          "402": {
+            "description": "Your pricing plan does not support this option"
+          },
           "401": {
             "description": "Unauthorized"
-          },
-          "403": {
-            "description": "Forbidden"
           }
         },
         "security": [
@@ -477,11 +495,20 @@
               }
             }
           },
-          "401": {
-            "description": "Unauthorized"
+          "400": {
+            "description": "Backup can not start as dump"
+          },
+          "402": {
+            "description": "Your pricing plan does not support this option"
           },
           "403": {
-            "description": "Forbidden"
+            "description": "You don't have enough permission to create"
+          },
+          "404": {
+            "description": "The required file or folder was not found"
+          },
+          "401": {
+            "description": "Unauthorized"
           }
         },
         "security": [
@@ -530,6 +557,28 @@
   },
   "components": {
     "schemas": {
+      "ASC.Api.Collections.ItemKeyValuePair.System.Object.System.Object": {
+        "type": "object",
+        "properties": {
+          "key": {
+            "nullable": true,
+            "example": {
+              "int": 1234,
+              "string": "some text",
+              "boolean": true
+            }
+          },
+          "value": {
+            "nullable": true,
+            "example": {
+              "int": 1234,
+              "string": "some text",
+              "boolean": true
+            }
+          }
+        },
+        "additionalProperties": false
+      },
       "ASC.Data.Backup.ApiModels.BackupDto": {
         "type": "object",
         "properties": {
@@ -537,26 +586,12 @@
             "$ref": "#/components/schemas/ASC.Data.Backup.Contracts.BackupStorageType"
           },
           "storageParams": {
-            "type": "object",
-            "additionalProperties": {
-              "nullable": true
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ASC.Api.Collections.ItemKeyValuePair.System.Object.System.Object"
             },
             "description": "Storage parameters",
-            "nullable": true,
-            "example": [
-              {
-                "key": {
-                  "int": 1234,
-                  "string": "some text",
-                  "boolean": true
-                },
-                "value": {
-                  "int": 1234,
-                  "string": "some text",
-                  "boolean": true
-                }
-              }
-            ]
+            "nullable": true
           },
           "dump": {
             "type": "boolean",
@@ -577,33 +612,15 @@
             "example": "some text"
           },
           "storageType": {
-            "type": "integer",
-            "description": "Storage type",
-            "format": "int32",
-            "nullable": true,
-            "example": 1234
+            "$ref": "#/components/schemas/ASC.Data.Backup.Contracts.BackupStorageType"
           },
           "storageParams": {
-            "type": "object",
-            "additionalProperties": {
-              "nullable": true
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ASC.Api.Collections.ItemKeyValuePair.System.Object.System.Object"
             },
             "description": "Storage parameters",
-            "nullable": true,
-            "example": [
-              {
-                "key": {
-                  "int": 1234,
-                  "string": "some text",
-                  "boolean": true
-                },
-                "value": {
-                  "int": 1234,
-                  "string": "some text",
-                  "boolean": true
-                }
-              }
-            ]
+            "nullable": true
           },
           "notify": {
             "type": "boolean",
@@ -621,26 +638,12 @@
             "$ref": "#/components/schemas/ASC.Data.Backup.Contracts.BackupStorageType"
           },
           "storageParams": {
-            "type": "object",
-            "additionalProperties": {
-              "nullable": true
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ASC.Api.Collections.ItemKeyValuePair.System.Object.System.Object"
             },
             "description": "Storage parameters",
-            "nullable": true,
-            "example": [
-              {
-                "key": {
-                  "int": 1234,
-                  "string": "some text",
-                  "boolean": true
-                },
-                "value": {
-                  "int": 1234,
-                  "string": "some text",
-                  "boolean": true
-                }
-              }
-            ]
+            "nullable": true
           },
           "backupsStored": {
             "type": "integer",
@@ -677,6 +680,7 @@
             "type": "integer",
             "description": "Day",
             "format": "int32",
+            "nullable": true,
             "example": 0
           }
         },
@@ -773,7 +777,7 @@
           "id": {
             "type": "string",
             "format": "uuid",
-            "example": "e8d23e31-3323-4a2e-94a6-912e238446af"
+            "example": "db460fe8-1641-4757-b043-a24a870c1391"
           },
           "fileName": {
             "type": "string",
@@ -900,7 +904,16 @@
   "tags": [
     {
       "name": "Backup",
-      "description": "Operations for working with backup"
+      "description": "Operations for working with backup",
+      "x-displayName": "Backup"
+    }
+  ],
+  "x-tagGroups": [
+    {
+      "name": "Backup",
+      "tags": [
+        "Backup"
+      ]
     }
   ]
 }

@@ -5,7 +5,7 @@ description: "Returns a list of groups for the user with the ID specified in the
 sidebar_label: "Get user groups"
 hide_title: true
 hide_table_of_contents: true
-api: eJztVt9P2zAQ/lciP21S25QWppI3NgZiY9MEQ5OGKuQk18bUjT3bKZQo//vu7LS0KzwgjTfykPrH3Xd3313uWjPHp5Yl1+zUqEqzcYcpDYY7ocqznCVsCu7j8sqCwV2HaW74HBwYUqlZiRuUqfBa0LUocae5K3Cdg82M0ASEh4QQnR3juYE/lTCA2M5U0GE2K2DOWVIzt9SEZp0R5RQlJ8rMuSP8yqPDPZ9rSSIj/uFD/3CYdmHvALr76WTYTdPRoDvay0fZ/mh4MJpw1jRjsma1Ki1YMjDo9+ln27NzYV2kJtGU4rdoJlOlg9J5j+DexVpyiqve9VSlt5A5osUQaU4EM+jsi6Kp++3TfeK1ehrWdFq+d7HLSkqeEljg9BHbZzX6TnqoP+cln4J5GcQXPoPeb/5QCGdnAmntMJ7ngujj8sdG5BMuLWo64bze0eWn3i9Ie0da9L6pHKTteW8uq/mcm+WxUwFLaykyX3DxrVVvTL8a076a3yh+PYoJbb+/t9tjrkpeuUIZ8YB9zwsNd4VOlElFnkPpvbKQVUa4pe+z3GY3hHAzAzrArsaJ9TsUADamPrcNdQGuMqWNeCS3uluEeYtcARF17OhOuMLvzo4jqyETEwF5JEp/Rm0arOuhGWz4hWpngZ8B2N8TFnMt4kGvHwfomCDjOoyChlEAZrGaE5WRqFE4p5M4lirjslDWJaP+4SDeGRXndB8FdUaxrai4pJINVblNyLoA0KWveLCqrW2xdjxlSs0EeI5FOVFeeyPJJ0ICTQHyPfizGFDKNDqMFUfiLfgpuMDjenJsxVE/DpL/nI822I3hhP55ius2OdfEBEpievC99o+s4E/SzmukltJA4nWdcgtXRjYNHaMpQ4WGywU3InxKmMdcWFrn68/j2YjfXbRj/n30OPqfdHyVupIytOCyoh0ufWZXfy2aMUoWWPX0vaMj4fIoy0C7DbVN5PFG4Z5+/olSVAnbxRLKol0Q7pPO/FNFwTa9m84zGnUdKrFp1vLh6lmNNraVtA8A+8lfqFczAA==
+api: eJztVt1P2zAQ/1ciP21S25SOddA3NjbEBtMEQ5OGKuQ6l8bUjT3bKZQo//vunLQ0o91e9sADeUj8cfe7j9/F55J5PnVsdM1OrC4MG3eYNmC5lzo/TdiITcG/X145sDjrMMMtn4MHSyoly3GCMgVuS9qWOc4M9xmOE3DCSkNAuEgI0ekxrlv4VUgLiO1tAR3mRAZzzkYl80tDaM5bmU9RMtV2zj3hFwEd7vncKBJ51xeHQiS8Oxwmb7v7wyHvHhzsp92hmExSkSR7kL5hVTUma87o3IEjA4N+nz5tz86k85FOoynF79CM0LmH3AeP4N7HRnGKq3zqqZ7cgvCUFktJ87I2g85uiaZtNaRid4Blv3m6W16rp2JVp6HgX+a+khQKF0rxCVmoc/9oMLAfBTEEnfOcT8H+G/e8Efwb9Gc+g95P/pBJ72YSaekwniSSELj6tpG5lCuHml76oHd0+aH3Aya9IyN75zoB5XrBy8tiPud2eex1jWWMkiIUbHzr9AtTz5ap8De9UPR8KSK0/f7e0zPyKueFz7SVD3huk5QDUVjpl6ELcCduaP9mBrSAZy4nAu5QANiYTuE22gX4wuYu4pFqnb0RUhj5DCLqJ9Gd9FmYnR5HzoCQqYQkknlYoyYCzvfQDLajTDedKnQo7D4jFnMj40GvHwfomBDjsu5TFSP/7WLVxAqrUCHz3oziWGnBVaadHx30DwdPKDqj7ajWZhTZKhGXVM51xbbTsSYdHfqCC6sia4s1rVNoPZMQMizzVAftDQI/SQXUocj12p/FgCrMoL9YZSTegJ+Ar7O47mqtOMrHJvef2WiC3Wic6F/IcNlQc02ZQEkkB9/BFn7JCH5GzVUCM0skkHRZTriDK6uqipbRkqUqw+GCW1n/JchiIh2Nk3Xl7wz41UVzA3kdPd5Ktvq9Yi4nghZcFTTDYSB2deupxiiZYcnTL46O1JtHQoDxG2qbyOONqj35+B2lqBDatVJXRTMg3K3O/FFEtW16V50dGmVZF2JVreXrrZ0aTWwr6RAAHhW/Aea8aCw=
 sidebar_class_name: "get api-method"
 info_path: site/openapi/docspace/api-backend/usage-api/asc-files
 custom_edit_url: null
@@ -28,7 +28,7 @@ import Heading from "@theme/Heading";
 
 <MethodEndpoint
   method={"get"}
-  path={"/api/2.0/groups/user/{userid}"}
+  path={"/api/2.0/group/user/{userid}"}
   context={"endpoint"}
 >
   
@@ -47,7 +47,7 @@ Returns a list of groups for the user with the ID specified in the request.
 </Heading>
 
 <ParamsDetails
-  parameters={[{"name":"userid","in":"path","description":"User ID","required":true,"schema":{"type":"string","format":"uuid","example":"8a66093b-e15e-4bf3-bb82-81d8c48358fa"}}]}
+  parameters={[{"name":"userid","in":"path","description":"User ID","required":true,"schema":{"type":"string","format":"uuid","example":"70c9ccda-66d5-466a-884f-6cbbfcdd1ef3"}}]}
 >
   
 </ParamsDetails>
@@ -62,7 +62,7 @@ Returns a list of groups for the user with the ID specified in the request.
 <StatusCodes
   id={undefined}
   label={undefined}
-  responses={{"200":{"description":"List of groups","content":{"text/plain":{"schema":{"type":"object","properties":{"id":{"type":"string","format":"uuid","example":"{00000000-0000-0000-0000-000000000000}"},"name":{"type":"string","nullable":true,"example":"Group Name"},"manager":{"type":"string","nullable":true,"example":"Jake.Zazhitski"}},"additionalProperties":false,"title":"ASC.Web.Api.Models.GroupSummaryDto"}},"application/json":{"schema":{"type":"object","properties":{"id":{"type":"string","format":"uuid","example":"{00000000-0000-0000-0000-000000000000}"},"name":{"type":"string","nullable":true,"example":"Group Name"},"manager":{"type":"string","nullable":true,"example":"Jake.Zazhitski"}},"additionalProperties":false,"title":"ASC.Web.Api.Models.GroupSummaryDto"}},"text/json":{"schema":{"type":"object","properties":{"id":{"type":"string","format":"uuid","example":"{00000000-0000-0000-0000-000000000000}"},"name":{"type":"string","nullable":true,"example":"Group Name"},"manager":{"type":"string","nullable":true,"example":"Jake.Zazhitski"}},"additionalProperties":false,"title":"ASC.Web.Api.Models.GroupSummaryDto"}}}},"401":{"description":"Unauthorized"},"403":{"description":"Forbidden"}}}
+  responses={{"200":{"description":"List of groups","content":{"text/plain":{"schema":{"type":"object","properties":{"id":{"type":"string","description":"ID","format":"uuid","example":"{00000000-0000-0000-0000-000000000000}"},"name":{"type":"string","description":"Name","nullable":true,"example":"Group Name"},"manager":{"type":"string","description":"Manager","nullable":true,"example":"Jake.Zazhitski"}},"additionalProperties":false,"title":"ASC.Web.Api.Models.GroupSummaryDto"}},"application/json":{"schema":{"type":"object","properties":{"id":{"type":"string","description":"ID","format":"uuid","example":"{00000000-0000-0000-0000-000000000000}"},"name":{"type":"string","description":"Name","nullable":true,"example":"Group Name"},"manager":{"type":"string","description":"Manager","nullable":true,"example":"Jake.Zazhitski"}},"additionalProperties":false,"title":"ASC.Web.Api.Models.GroupSummaryDto"}},"text/json":{"schema":{"type":"object","properties":{"id":{"type":"string","description":"ID","format":"uuid","example":"{00000000-0000-0000-0000-000000000000}"},"name":{"type":"string","description":"Name","nullable":true,"example":"Group Name"},"manager":{"type":"string","description":"Manager","nullable":true,"example":"Jake.Zazhitski"}},"additionalProperties":false,"title":"ASC.Web.Api.Models.GroupSummaryDto"}}}},"401":{"description":"Unauthorized"}}}
 >
   
 </StatusCodes>

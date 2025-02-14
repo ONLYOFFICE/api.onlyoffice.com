@@ -1,0 +1,63 @@
+---
+id: set-default-login-settings
+title: "Returns the portal login settings."
+description: "Returns the portal login settings."
+sidebar_label: "Returns the portal login settings."
+hide_title: true
+hide_table_of_contents: true
+api: eJztVstu2zAQ/BWCZ8FynBxa34IkBYomQJAHegiMgJJWFmNKZMmlnVTwv3dJSY3sIKgLtLccLEvk7O5wZyiq5SiWjs8f+C0gymbpWMou9VI2zPUDfJFwbcAKlLr5WvA5p5lzKIVXGJFDJE+4BWd044Aytnw2nYa/AlxupQnRFLuXO+G5bhAaDEiEZ0yNErIJTy6voBZx/MUAhersCXKkEGMDH5RdGYEItcEz7fssHVpS2iVYgu8SuBLPsvY1a3ydgWW6ZFgB847u+0yOoWZKLxnxSHipbS2wS3g8owF4FrVRVOJodnyyTXimdL66kzUcUPyOSiFBGWVlm0rm1Wv1jVSKZcBiPiiYKJFGfeN8noNzpVeBFDVvoHkIOephvroGK3XxN/SoARshMdIUbFCVlVbXkTDxXcf4PxKQrrfKqHymtQLRjNFoPWwJLopCBjJCXY9ELoVykHCUGLD89PZs8h2yyamR4XelC1BuctOzPEc92fElDfCY2xgl82jj9MnpD5N9mOzfmyy+wz7c9eGu/+CukP1kevT2UL1vhMdKW/kTiuhCB7m3El/oYCd3ufwxzD+uIAzQIS0KIr4hAPDFdrHfwhtAbxsXu2S0RTGoNpzaE4qugQqGjwEiDpSHLC2woudUGJnOJtN0QKcDmTRmGR39nQQukvRWUXCFaOYpAXOhKu1w/mn6efZG48swPQgY+A8VbsN+67fUzqJ/60bkvtFAwhtRx+cxjKQO6XOtVxJiH2VT6hg9ku2LVBDYB+odn/WME9YQ31rEfd8nP6iRO0trXz+HDovulzX6ciImsZdtL8hDWDMhSZLY8lH3e48kfFcYamjofQht20w4uLdquw3DPzzYYCG6XQsrRRaa8rCgkhV5isQISsaG81Pa8Sa86dZC+X2Ki5F/zi8uL+4uCBhk2FWq06S/CamHqeZllHhPwq58uG6TdyLatrMBLWrAd1PvRvTLG9BxDbQdfwHuqeLD
+sidebar_class_name: "delete api-method"
+info_path: site/openapi/docspace/api-backend/usage-api/asc-files
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Returns the portal login settings."}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"delete"}
+  path={"/api/2.0/settings/security/loginsettings"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns the portal login settings.
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Login settings","content":{"text/plain":{"schema":{"type":"object","properties":{"attemptCount":{"type":"integer","description":"Maximum number of the user attempts to log in","format":"int32","example":1234},"blockTime":{"type":"integer","description":"The time for which the user will be blocked after unsuccessful login attempts","format":"int32","example":1234},"checkPeriod":{"type":"integer","description":"The time to wait for a response from the server","format":"int32","example":1234},"isDefault":{"type":"boolean","example":true}},"additionalProperties":false,"title":"ASC.Web.Api.ApiModels.ResponseDto.LoginSettingsDto"}},"application/json":{"schema":{"type":"object","properties":{"attemptCount":{"type":"integer","description":"Maximum number of the user attempts to log in","format":"int32","example":1234},"blockTime":{"type":"integer","description":"The time for which the user will be blocked after unsuccessful login attempts","format":"int32","example":1234},"checkPeriod":{"type":"integer","description":"The time to wait for a response from the server","format":"int32","example":1234},"isDefault":{"type":"boolean","example":true}},"additionalProperties":false,"title":"ASC.Web.Api.ApiModels.ResponseDto.LoginSettingsDto"}},"text/json":{"schema":{"type":"object","properties":{"attemptCount":{"type":"integer","description":"Maximum number of the user attempts to log in","format":"int32","example":1234},"blockTime":{"type":"integer","description":"The time for which the user will be blocked after unsuccessful login attempts","format":"int32","example":1234},"checkPeriod":{"type":"integer","description":"The time to wait for a response from the server","format":"int32","example":1234},"isDefault":{"type":"boolean","example":true}},"additionalProperties":false,"title":"ASC.Web.Api.ApiModels.ResponseDto.LoginSettingsDto"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

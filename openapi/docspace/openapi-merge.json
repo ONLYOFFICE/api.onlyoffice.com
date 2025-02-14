@@ -12,6 +12,9 @@
     {
       "inputFile": "./asc.web.api.swagger.json"
     },
+    {
+      "inputFile": "./asc.apisystem.swagger.json"
+    }
   ],
   "output": "./docspace.json"
 }

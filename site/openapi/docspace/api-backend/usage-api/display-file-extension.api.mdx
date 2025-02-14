@@ -1,0 +1,71 @@
+---
+id: display-file-extension
+title: "Display a file extension"
+description: "Specifies whether to display a file extension or not."
+sidebar_label: "Display a file extension"
+hide_title: true
+hide_table_of_contents: true
+api: eJztVk1v2zAM/SuCjlsWZ8EOm2/px4BhG1A07akICsVmarWKpUl02szIfx8p262atkO3cy+OTJEU3+MTnVaiugoyv5BftYEgMjEHRF2TbTGS1oFXqG39rZS5LHVwRm3Z8fgOoQ60IUfSw68GAh7YcivzVha2pj3kpXLO6CImyK4DOZMtFBWsFa9w64Cy2uU1FEh5nOfjUEOIfoCJ09JaA4pPKyEUXjvOSfa5g0KvKETcVoAVeIFWUKigtQj9ZsmWiElYL2rLh8GdWjtDqdE3sNuNpCpLzUmVOUnqWCkT4MmhQ7YeuXDKqzUg+ECZUSPnlbP54ThyOj60HsYzp3/aEkwYn3ZRR2jHQ6YHk+RaEO7wjbB/ICwV2rv3b8y9ljmuxkNwtg4dFdPJhH8eF3HQMSI2yjSQC4Yh9Crivi9H6CCgVksDJRWWzICoZRob+vmWDGzvd/HFHqYBf78nD57s+2ny8Smy81o1WFmvf1PZ7BWgaLxGGmQXNL5Cccn7lzfABmJKMbhbcgC52C1epZB+aAolVtQhAcPg7PUxpoREYGV5wLomilNhRS+ZcjqbjicZx4Wsz8MvkAzfAH7DYuB6G28orkJ0eZYZWyhT2YD558mX6RM1/+Bt0UVLhjIgnzONnRge47/nler6ToaRrKn1/J66jSQ3mgRgbzRESrk/pw+fiOPhNvT3Ll4KjlrZeMa+pCkjA+yq3kwl+TpCtVax6X0JRy+QvA87+Tr9d7d6FhJdU0mR+rZv3QVTRJ7UPHquehTPNpCI5x5xTNsuVYBzb3Y7NhNhnlVHy43ymm8Wv9FZFcmQmsYdj42Rhx2mD2dcGbvTNY192rtOu9EQMSsKcJj4pmgWiSJPzs/Ia9l/2tc0Vcjo1S1/9umZS8l/EviIqJhoa6VR9VWjrti3Ozje7oa5SVXU6aVfMJxhq96mMB7LqwPAT4bzbETbdhIlIgf/buvFiJ7SwTuyQEX/AYhRMds=
+sidebar_class_name: "put api-method"
+info_path: site/openapi/docspace/api-backend/usage-api/asc-files
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Display a file extension"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"put"}
+  path={"/api/2.0/files/displayfileextension"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Specifies whether to display a file extension or not.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"set":{"type":"boolean","description":"Specifies whether to set the specified settings or not","example":true}},"additionalProperties":false,"description":"Settings request parameters","title":"ASC.Files.Core.ApiModels.RequestDto.SettingsRequestDto"}},"text/json":{"schema":{"type":"object","properties":{"set":{"type":"boolean","description":"Specifies whether to set the specified settings or not","example":true}},"additionalProperties":false,"description":"Settings request parameters","title":"ASC.Files.Core.ApiModels.RequestDto.SettingsRequestDto"}},"application/*+json":{"schema":{"type":"object","properties":{"set":{"type":"boolean","description":"Specifies whether to set the specified settings or not","example":true}},"additionalProperties":false,"description":"Settings request parameters","title":"ASC.Files.Core.ApiModels.RequestDto.SettingsRequestDto"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Boolean value: true if the parameter is enabled","content":{"text/plain":{"schema":{"type":"boolean"}},"application/json":{"schema":{"type":"boolean"}},"text/json":{"schema":{"type":"boolean"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

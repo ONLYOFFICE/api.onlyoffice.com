@@ -5,7 +5,7 @@ description: "Removes the third-party storage service account with the ID specif
 sidebar_label: "Remove a third-party account"
 hide_title: true
 hide_table_of_contents: true
-api: eJy1VE1zmzAQ/SuMTu0MNQ7OoeWWqZ0ZT3Po5OOU8WRksRg1gFRJkKQM/727Agdsx731YCyt3n69fVLLHN9Zljyya1mADaLgPpcm/aK5cW+BrBzsDHdSVWwTMqWh36xTlrAUCnDg4T8JzUKGXrxEo6GILatwg0BtVCNTMOgVMlmRhbsc1wZ+19IABnOmhpBZkUPJWdIy96bJ0+cHg9BMmZK73rSI0QCvvNQFgi7ixWXXbSia1aqyYClAPJ/TXwpWGKl9AwmbtpapAksK1kuMJRTmqZxPDK8u0gWnMtuxoK4LGde6kML3H/2y6hTgfT84obPL+cVpPQ8Vr12ujPyDHHjQ4hR0rcxWpilUjOJYELWRSDbxy614oghPz0AGZIATxS8IALYhTg5D3UKpGhyyywF/IxfWKcN3EFgwjRQQcCFUXbngRbrcg9fLwGoQMpOQoii8jYYH1s0wIY48V6MkvBBwwAmLuJZRPJtHGYkr8jl9yqgdRdExass0e9XUpkDX3DmdRFGhBC9yZV3ydf4tjthxSzd0HvTujDreE3RH/PdaOKTpXVxY2w8g1Q4yPYANQhVKPUvwzMsqU95bOpIdu7r7PvN3BrFUe19PE9MgNRZccq+DIXhPfcAPeB94Pm6qHQX530Y2cDCRO5btmW+H4T0SQYjE8dH9GzodR4ibZHKzkXoaE/m17ZZbeDBF15EZcxqSJy4bbiTfEn0451RaWqNuMl5Y+AcJn26Hh+JzcK70/UwrqqvhRU07XPqRT1+gboPoHC8K6oWq6AFXQoB2E9dp9M1E4cvVzep+hUBSyqGYetkMCwr9YU1HKuvT07cLz3i0ba/UrnvH90dnPYb29mjfA75CfwHZ8QVJ
+api: eJy1VMtunDAU/RXkVSvRYUKyaNlFnak0ahZRHqtoFDnmMrgB7NqGJEX8e+81zACZSXddZOLHua9zDm6Z4zvLkgf2QxZggyi4y6VJv2hu3FsgKwc7w51UFduGTGnoN5uUJSyFAhx4+DWhWcgwipd4aChjyyrcIFAb1cgUDEaFTFZ0wl2O6xSsMFL79Am7HmDBZoV3Bn7X0gAWcqaGkFmRQ8lZ0jL3pimr7w0MQjNlSu76o/MYD+CVl7pA0Fl8ftF1W8pmtaosWEoQL5f0b159OnamikMfQmGdyvnC8OoiXXAaoR0b6rqQca0LKTw30S+rjgE+9sQN3V0sz477ua947XJl5B/kgFAWRG0k0kzMcise6f7xGegA5+NE7gsCgG1p4nm2GyhVg/K6HPBvnNQ6ZfgOAgumkQICLoSqKxe8SJd78GYVWA1CZhJStIM/I2nAugUWRLFzNZrBWwClTVjEtYzixTLKyFaRr+lLRu3eDjLtGI1lmr1falNgaO6cTqKoUIIXubIu+br8Fh+55Yqugz6a0cB7fm6J3F7oOUsH52BrP4HsOvhzBhscKpR6luCJl1WmfLR05Cl2eft94T8WxFLrfT9NzBCrsd+Se5GH5D3zAZ/RPtD8fqh2dNt/U2zgYOJlbNsT3w7aPRBBiET16OMaJh0VxE0yakjvAqlEcW37xC3cm6Lr6BhrGnInLhtuJH8i+lDmVFpao20yXlj4BwmfboZX4HMwfx1OTrGXt6IWG17UtMOlV3/6CnVbROf4yaB1qKEecCkEaDcJnWbfTry+Wl+t79YIJNPMfdU7aFhQ6pM9vTNcX55+u/CDiLbtTdt1B3x/9WHEMN4e7WfA1+YvUqYHsA==
 sidebar_class_name: "delete api-method"
 info_path: site/openapi/docspace/api-backend/usage-api/asc-files
 custom_edit_url: null
@@ -28,7 +28,7 @@ import Heading from "@theme/Heading";
 
 <MethodEndpoint
   method={"delete"}
-  path={"/api/2.0/files/thirdparty/{providerId}"}
+  path={"/api/2.0/files/thirdparty/{providerid}"}
   context={"endpoint"}
 >
   
@@ -47,7 +47,7 @@ Removes the third-party storage service account with the ID specified in the req
 </Heading>
 
 <ParamsDetails
-  parameters={[{"name":"providerId","in":"path","required":true,"schema":{"type":"integer","format":"int32","example":1234}}]}
+  parameters={[{"name":"providerId","in":"path","description":"Provider ID","required":true,"schema":{"type":"integer","format":"int32","example":1234}}]}
 >
   
 </ParamsDetails>
@@ -62,7 +62,7 @@ Removes the third-party storage service account with the ID specified in the req
 <StatusCodes
   id={undefined}
   label={undefined}
-  responses={{"200":{"description":"Third-party folder ID","content":{"text/plain":{"schema":{}},"application/json":{"schema":{}},"text/json":{"schema":{}}}},"401":{"description":"Unauthorized"},"403":{"description":"Forbidden"}}}
+  responses={{"200":{"description":"Third-party folder ID","content":{"text/plain":{"schema":{}},"application/json":{"schema":{}},"text/json":{"schema":{}}}},"401":{"description":"Unauthorized"}}}
 >
   
 </StatusCodes>
