@@ -65,7 +65,8 @@ export default function CodeBlockString({
   const editorWord = location.pathname.includes("/docs/office-api/usage-api/text-document-api/") && "docx";
   const editorCell = location.pathname.includes("/docs/office-api/usage-api/spreadsheet-api/") && "xlsx";
   const editorSlide = location.pathname.includes("/docs/office-api/usage-api/presentation-api/") && "pptx";
-  const editorType = notExpression && (editorWord || editorCell || editorSlide);
+  const editorPdf = location.pathname.includes("/docs/office-api/usage-api/form-api/") && "pdf";
+  const editorType = notExpression && (editorWord || editorCell || editorSlide || editorPdf);
 
   const codeBlockContent = (
     <Container
