@@ -87,7 +87,7 @@ Converts a base currency into multiple desired target currencies. It can also fe
   })();
 ```
 
-Methods used: asc_calculate, GetActiveSheet, GetRange, SetValue, AutoFit
+Methods used: [GetActiveSheet](../../../../office-api/usage-api/spreadsheet-api/Api/Methods/GetActiveSheet.md), [GetRange](../../../../office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetRange.md), [SetValue](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/SetValue.md), [AutoFit](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/AutoFit.md)
 
 ## Result
 

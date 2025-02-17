@@ -52,4 +52,4 @@ Type: string | integer
 
 Value: `EmployeeActivationStatus.NotActivated`
 
-For example, when sending GET requests to the `api/2.0/people/email` or `api/2.0/people/{userid}` addresses, the `LostUser` ID is used to check if a user with the specified email or name exists. If the user ID is equal to the `LostUser` ID, this user is removed from the portal and a 404 status code is returned (`User not found`).
+For example, when sending GET requests to the [`api/2.0/people/email`](../../../../openapi/docspace/api-backend/usage-api/get-by-email.api.mdx) or [`api/2.0/people/{userid}`](../../../../openapi/docspace/api-backend/usage-api/get-by-id.api.mdx) addresses, the `LostUser` ID is used to check if a user with the specified email or name exists. If the user ID is equal to the `LostUser` ID, this user is removed from the portal and a 404 status code is returned (`User not found`).

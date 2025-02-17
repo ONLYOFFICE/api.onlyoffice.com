@@ -166,7 +166,7 @@ Parameters:
 | callback | function | The result that the method returns. It is an optional parameter.                                                                                                                                                                                                                                                                                                                 |
 | isNoCalc | boolean  | Defines whether the document will be recalculated or not. The **true** value is used to recalculate the document after executing the function in the *command* parameter. The **false** value will not recalculate the document (use it only when your edits surely will not require document recalculation). The default value is **false**.                                    |
 
-This method is executed in its context isolated from other JavaScript data. If some parameters or other data need to be passed to this method, use Asc.scope object.
+This method is executed in its context isolated from other JavaScript data. If some parameters or other data need to be passed to this method, use [Asc.scope](../../plugin-and-macros/interacting-with-editors/overview/how-to-call-commands.md#ascscope-object) object.
 
 Example:
 
@@ -231,7 +231,7 @@ connector.disconnect()
 
 ## executeMethod
 
-The function called to execute certain editor methods using the connector. The full list of these methods is the same as for the plugins.
+The function called to execute certain editor methods using the connector. The full list of these methods is the same as for the plugins. It can be found [here](../../plugin-and-macros/interacting-with-editors/methods/text-document-api/Api/Api.md).
 
 Parameters:
 

@@ -4,8 +4,8 @@ This script checks all used cells for formula errors like "#DIV/0!" and comments
 
 - open an existing spreadsheet file to check for errors;
 - create a loop for columns and nest another loop for rows;
-- get each cell (ApiWorksheet/GetRangeByNumber) and check the value for errors;
-- comment the cell (ApiRange/AddComment) if an error exists.
+- get each cell ([ApiWorksheet/GetRangeByNumber](../spreadsheet-api/ApiWorksheet/Methods/GetRangeByNumber.md)) and check the value for errors;
+- comment the cell ([ApiRange/AddComment](../spreadsheet-api/ApiRange/Methods/AddComment.md)) if an error exists.
 
 This sample is available for the **C++ and .Net DocBuilder Frameworks**.
 Download the sample and get more information on the [Builder framework samples](../../../document-builder/builder-framework/builder-framework-samples/builder-framework-samples.md) page.

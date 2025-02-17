@@ -85,7 +85,7 @@ Example: "plugin name"
 
 Translations for the name field. The object keys are the two letter language codes (ru, de, it, etc.) and the values are the plugin name translation for each language.
 
-Type: localeTranslate
+Type: [localeTranslate](../../interacting-with-editors/methods/text-document-api/Enumeration/localeTranslate.md)
 
 Example: `{ "fr": "french plugin name" }`
 
@@ -161,7 +161,7 @@ Example:
 
 The list of skinnable plugin buttons used in the plugin interface. This parameter is used only for plugin windows and panels, i.e. when the [type](#variationstype) parameter is *window*, *panel*, or *panelRight*.
 
-Type: array of Button
+Type: array of [Button](../../interacting-with-editors/methods/text-document-api/Enumeration/Button.md)
 
 Example:
 
@@ -233,7 +233,7 @@ Example: "plugin description"
 
 Translations for the description field. The object keys are the two letter language codes (fr, de, it, etc.) and the values are the plugin description translation for each language.
 
-Type: localeTranslate
+Type: [localeTranslate](../../interacting-with-editors/methods/text-document-api/Enumeration/localeTranslate.md)
 
 Example:  `{ "fr": "french plugin description" }`
 
@@ -241,7 +241,7 @@ Example:  `{ "fr": "french plugin description" }`
 
 The editors which the plugin is available for (**word**, **cell**, **slide**, or **pdf**).
 
-Type: array of editorType
+Type: array of [editorType](../../interacting-with-editors/methods/text-document-api/Enumeration/editorType.md)
 
 Example:  `["word"]`
 
@@ -249,7 +249,7 @@ Example:  `["word"]`
 
 Plugin events which are used in the current plugin code. Find out how to subscribe to events [here](../../interacting-with-editors/overview/how-to-attach-events.md).
 
-Type: array of EventType
+Type: array of [EventType](../../interacting-with-editors/methods/text-document-api/Enumeration/EventType.md)
 
 Example:  `["onClick"]`
 
@@ -283,7 +283,7 @@ Example:  "text"
 
 The data type selected in the editor and sent to the plugin (**text**, **html**, **ole**, **desktop**, **desktop-external**, **sign**, or **none**).
 
-Type: initDataType
+Type: [initDataType](../../interacting-with-editors/methods/text-document-api/Enumeration/initDataType.md)
 
 Example:  "ole"
 

@@ -29,7 +29,7 @@ Applies the mask to all forms with the specified form key to hide card numbers.
 })();
 ```
 
-Methods used: GetDocument, GetAllForms, GetFormKey, GetText, SetText
+Methods used: [GetDocument](../../../../office-api/usage-api/text-document-api/Api/Methods/GetDocument.md), [GetAllForms](../../../../office-api/usage-api/text-document-api/ApiDocument/Methods/GetAllForms.md), [GetFormKey](../../../../office-api/usage-api/text-document-api/ApiFormBase/Methods/GetFormKey.md), [GetText](../../../../office-api/usage-api/text-document-api/ApiFormBase/Methods/GetText.md), [SetText](../../../../office-api/usage-api/text-document-api/ApiTextForm/Methods/SetText.md)
 
 ## Result
 

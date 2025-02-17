@@ -2,9 +2,9 @@
 
 Create an advanced form with a table structure:
 
-- create a new document, create tables for the text and form inputs (Api/CreateParagraph, Api/CreateTable, ApiDocument/Push, ApiDocumentContent/GetElement, ApiParagraph/AddText, ApiTable/GetRow, ApiTableCell/GetContent, ApiTable/GetCell);
-- style tables (ApiTable/SetTableBorderTop, ApiTable/SetTableBorderBottom, ApiTable/SetTableBorderLeft, ApiTable/SetTableBorderRight, ApiTable/SetWidth, ApiTableRow/SetBackgroundColor);
-- create the text and image forms and add them to the tables (Api/CreatePictureForm, Api/CreateTextForm).
+- create a new document, create tables for the text and form inputs ([Api/CreateParagraph](../text-document-api/Api/Methods/CreateParagraph.md), [Api/CreateTable](../text-document-api/Api/Methods/CreateTable.md), [ApiDocument/Push](../text-document-api/ApiDocument/Methods/Push.md), [ApiDocumentContent/GetElement](../text-document-api/ApiDocumentContent/Methods/GetElement.md), [ApiParagraph/AddText](../text-document-api/ApiParagraph/Methods/AddText.md), [ApiTable/GetRow](../text-document-api/ApiTable/Methods/GetRow.md), [ApiTableCell/GetContent](../text-document-api/ApiTableCell/Methods/GetContent.md), [ApiTable/GetCell](../text-document-api/ApiTable/Methods/GetCell.md));
+- style tables ([ApiTable/SetTableBorderTop](../text-document-api/ApiTable/Methods/SetTableBorderTop.md), [ApiTable/SetTableBorderBottom](../text-document-api/ApiTable/Methods/SetTableBorderBottom.md), [ApiTable/SetTableBorderLeft](../text-document-api/ApiTable/Methods/SetTableBorderLeft.md), [ApiTable/SetTableBorderRight](../text-document-api/ApiTable/Methods/SetTableBorderRight.md), [ApiTable/SetWidth](../text-document-api/ApiTable/Methods/SetWidth.md), [ApiTableRow/SetBackgroundColor](../text-document-api/ApiTableRow/Methods/SetBackgroundColor.md));
+- create the text and image forms and add them to the tables ([Api/CreatePictureForm](../form-api/Api/Methods/CreatePictureForm.md), [Api/CreateTextForm](../form-api/Api/Methods/CreateTextForm.md)).
 
 This sample is available for the **C++ and .Net DocBuilder Frameworks**.
 Download the sample and get more information on the [Builder framework samples](../../../document-builder/builder-framework/builder-framework-samples/builder-framework-samples.md) page.
