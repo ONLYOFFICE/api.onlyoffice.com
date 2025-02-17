@@ -12,9 +12,6 @@ const config: Config = {
   url: 'https://api.onlyoffice.com',
   baseUrl: '/',
 
-  organizationName: 'trofim24',
-  projectName: 'trofim24.github.io',
-
   trailingSlash: true,
 
   onBrokenLinks: 'throw',
@@ -46,6 +43,8 @@ const config: Config = {
           sidebarPath: './sidebars.ts',
           path: './site',
           routeBasePath: '',
+
+          editUrl: 'https://github.com/ONLYOFFICE/api.onlyoffice.com/tree/master',
 
           docItemComponent: '@theme/ApiItem',
           //editUrl:
