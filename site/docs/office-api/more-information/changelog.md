@@ -39,6 +39,12 @@ The list of changes for Office JavaScript API.
 - Added the *Drawing* type to the simple type definitions.
 - Added the *DrawingForGroup* type to the simple type definitions.
 
+### Content control methods
+
+- Added the [ApiBlockLvlSdt/Copy](../usage-api/text-document-api/ApiBlockLvlSdt/Methods/Copy.md) method to Text document API.
+- Added the [ApiBlockLvlSdt/GetInternalId](../usage-api/text-document-api/ApiBlockLvlSdt/Methods/GetInternalId.md) method to Text document API.
+- Added the [ApiInlineLvlSdt/GetInternalId](../usage-api/text-document-api/ApiInlineLvlSdt/Methods/GetInternalId.md) method to Text document API.
+
 ### Document methods
 
 - Added the ApiDocument/GetCurrentPage method to Text document API.
@@ -74,7 +80,6 @@ The list of changes for Office JavaScript API.
 
 ### Other methods
 
-- Added the ApiBlockLvlSdt/Copy method to Text document API.
 - Added the ApiNumberingLevel/LinkWithStyle method to Text document API.
 - Moved the GetContent method of Text document from the ApiShape class to the ApiDrawing class.
 - Added the ApiLayout/GetName method to Presentation API.
