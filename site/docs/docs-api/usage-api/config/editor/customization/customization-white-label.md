@@ -135,7 +135,7 @@ Example: true
 
 ### layout.header.save
 
-Defines if the **Save** button in the editor header is displayed or hidden. The default value is **true**. Please note that this setting is used when the [compactHeader](#compactheader) parameter is set to **false**.
+Defines if the **Save** button in the editor header is displayed or hidden. The default value is **true**. Please note that this setting is used when the [compactHeader](customization-standard-branding.md#compactheader) parameter is set to **false**.
 
 Type: boolean
 
@@ -412,7 +412,7 @@ Example: true
 
 ### layout.toolbar.save
 
-Defines if the **Save** button on the toolbar is displayed or hidden. The default value is **true**. Please note that this setting is used when the [compactHeader](#compactheader) parameter is set to **true**.
+Defines if the **Save** button on the toolbar is displayed or hidden. The default value is **true**. Please note that this setting is used when the [compactHeader](customization-standard-branding.md#compactheader) parameter is set to **true**.
 
 Type: boolean
 

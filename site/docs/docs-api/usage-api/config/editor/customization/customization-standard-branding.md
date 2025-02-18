@@ -847,7 +847,7 @@ Type: boolean
 
 Example: true
 
-> Deprecated since version 7.0. Please use the [review.trackChanges](#review.trackchanges) parameter instead.
+> Deprecated since version 7.0. Please use the [review.trackChanges](#reviewtrackchanges) parameter instead.
 
 ## uiTheme
 

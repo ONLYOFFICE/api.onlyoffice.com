@@ -95,7 +95,7 @@ The list of changes of ONLYOFFICE Docs API.
 - Added the [setReferenceData](../usage-api/methods.md#setreferencedata) method.
 - Added the [events.onRequestReferenceData](../usage-api/config/events.md#onrequestreferencedata) event.
 - Added the [document.referenceData](../usage-api/config/document/document.md#referencedata) parameter.
-- Added the [UserCanNotWriteRelative](../using-wopi/wopi-rest-api/checkfileinfo.md#usercannotwriterelative) property to the *CheckFileInfo* WOPI operation.
+- Added the [UserCanNotWriteRelative](../using-wopi/wopi-rest-api/checkfileinfo.md#user-permissions-properties) property to the *CheckFileInfo* WOPI operation.
 - Added a scheme for [editing binary document formats](../using-wopi/editing-binary-documents.md).
 - Added the [convert](../using-wopi/wopi-discovery.md#wopi-actions) action to the WOPI discovery.
 - Added the [PutRelativeFile](../using-wopi/wopi-rest-api/putrelativefile.md) WOPI operation.
