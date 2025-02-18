@@ -8,12 +8,6 @@ The following examples will show you how to use ONLYOFFICE macros and compare th
 
 ## Text document editor
 
-### Add state from zip code
-
-In this example we are adding the "State" label and the text form prefilled with "CA" if the zip code of California is entered.
-
-[More](text-document-editor/add-state-from-zip-code.md)
-
 ### Generate hyperlinks
 
 In this example we are generating and inserting hyperlinks instead of text URLs.
@@ -38,12 +32,6 @@ In this example we are inserting a unique id into a form document.
 
 [More](text-document-editor/insert-unique-id.md)
 
-### Mask card numbers
-
-In this example we are applying the mask to all forms with the specified form key to hide card numbers.
-
-[More](text-document-editor/mask-card-numbers.md)
-
 ### Remove extra spaces
 
 In this example we are removing extra spaces in the text document. 
@@ -55,18 +43,6 @@ In this example we are removing extra spaces in the text document.
 In this example we are replacing words in the text editor.
 
 [More](text-document-editor/replace-words-in-document.md)
-
-### Reset all forms
-
-In this example we are clearing all fields if necessary, for example after printing the document. 
-
-[More](text-document-editor/reset-all-forms.md)
-
-### Set USA date format
-
-In this example we are setting all date form formats to USA one.
-
-[More](text-document-editor/set-usa-date-format.md)
 
 ## Spreadsheet editor
 
@@ -215,6 +191,32 @@ In this example we are changing the font family and/or size in the presentation.
 In this example we are removing shapes from the presentation.
 
 [More](presentation-editor/remove-shapes-from-slides.md)
+
+## PDF Forms
+
+### Add state from zip code
+
+In this example we are adding the "State" label and the text form prefilled with "CA" if the zip code of California is entered.
+
+[More](pdf-forms/add-state-from-zip-code.md)
+
+### Mask card numbers
+
+In this example we are applying the mask to all forms with the specified form key to hide card numbers.
+
+[More](pdf-forms/mask-card-numbers.md)
+
+### Reset all forms
+
+In this example we are clearing all fields if necessary, for example after printing the document. 
+
+[More](pdf-forms/reset-all-forms.md)
+
+### Set USA date format
+
+In this example we are setting all date form formats to USA one.
+
+[More](pdf-forms/set-usa-date-format.md)
 
 ## Support
 
