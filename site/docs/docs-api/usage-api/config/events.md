@@ -201,7 +201,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
 
 ## onPluginsReady
 
-Tthe function called when all plugins are loaded and can be used.
+The function called when all plugins are loaded and can be used.
 
 Example:
 
