@@ -1,5 +1,31 @@
 # Change log
 
+## 4.0.0
+
+### New features
+
+#### Site
+
+* Swizzled CodeBlock/Content
+* Added ONLYOFFICE Docs editor tab for code
+* Added edit page link on all doc pages
+* Added readme to generate OpenAPI docs
+* Added package to generate OpenAPI docs
+
+#### Docs
+
+* Added editor tab for office js api examples
+* Updated view of command to run desktop in debug mode for macOS
+
+#### Docspace
+
+* Updated docspace openAPI docs For Hosting Providers
+
+#### Workspace
+
+* Updated workspace openAPI docs, add tags and x-tagGroups
+* Grouped paths by tagGroup instead of tag for workspaceBackend
+
 ## 3.0.0
 
 ### New features

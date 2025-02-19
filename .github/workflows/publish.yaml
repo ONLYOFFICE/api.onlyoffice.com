@@ -14,16 +14,15 @@ on:
         #- development
         - testing
         - production
-      english:
-        description: 'Build english?'
-        required: true
-        default: true
-        type: boolean
       chinese:
         description: 'Build chinese?'
         required: true
         default: false
         type: boolean
+
+env:
+  CN: ${{ github.event.inputs.chinese }}
+  mode: ${{github.event.inputs.site_mode}}
 
 jobs:
   publish:
@@ -37,25 +36,20 @@ jobs:
 
     - name: Build Packages
       id: build
-      env:
-        EN: ${{github.event.inputs.english}}
-        CN: ${{github.event.inputs.chinese}}
       run: |
-        SUB_PARAMETERS=""
+        LOCALE="--locale en"
+        SUB_ARGS=""
 
-        if [[ "$CN" == "true" && "$EN" == "true" ]]; then
-           SUB_PARAMETERS="-- --locale en --locale zh-CN"
-        elif [[ "$CN" == "true" ]]; then
-           SUB_PARAMETERS="-- --locale zh-CN"
-        elif [[ "$EN" == "true" ]]; then
-           SUB_PARAMETERS="-- --locale en"
-        fi
+        # Build locale string
+        [[ "$CN" == "true" ]] && LOCALE="$LOCALE --locale zh-CN"
 
-        NODE_OPTIONS="--max-old-space-size=12288" npm run build ${SUB_PARAMETERS}
+        # Build sub-arguments string
+        [[ "$mode" == "testing" ]] && SUB_ARGS="--dev"
+
+        NODE_OPTIONS="--max-old-space-size=12288" npm run build -- ${SUB_ARGS} ${LOCALE}
     
     - name: Configure AWS Credentials
       env:
-        mode: ${{github.event.inputs.site_mode}}
         AWS_ACCESS_KEY_PROD: ${{secrets.AWS_ACCESS_KEY_PROD}}
         AWS_SECRET_KEY_PROD: ${{secrets.AWS_SECRET_KEY_PROD}}
         AWS_DISTRIBUTION_ID_PROD: ${{secrets.AWS_DISTRIBUTION_ID_PROD}}
@@ -93,7 +87,37 @@ jobs:
     - name: Sync AWS Bucket
       id: sync
       working-directory: build
-      run: aws s3 sync . ${{env.AWS_BUCKET_URL}} --delete
+      run: |
+          # Define all possible languages
+          # EN all time build by default and not specifyed in this array
+          ALL_LANGS=("zh-CN")
+
+          # Languages that were actually built
+          BUILT_LANGS=("en")  # Modify this dynamically
+          # Add dynamically built languages
+          [[ "$CN" == "true" ]] && BUILT_LANGS+=("zh-CN")
+
+          # Generate exclusion flags
+          EXCLUDE_FLAGS=()
+          for lang in "${ALL_LANGS[@]}"; do
+            should_exclude=true
+            for lg in "${BUILT_LANGS[@]}"; do
+              if [[ "$lang" == "$lg" ]]; then
+                should_exclude=false
+                break  # Stop checking once we find a match
+              fi
+            done
+
+            if [[ "$should_exclude" == true ]]; then
+              EXCLUDE_FLAGS+=("--exclude \"${lang}/*\"")
+            fi
+          done
+
+          # Convert array to string
+          EXCLUDE_STR=$(IFS=" " ; echo "${EXCLUDE_FLAGS[*]}")
+
+          # Execute the sync command
+          eval "aws s3 sync . ${{env.AWS_BUCKET_URL}} --include \"*\" --delete $EXCLUDE_STR"
 
     - name: Invalidate AWS CloudFront Cache
       run: aws cloudfront create-invalidation --distribution-id ${{env.AWS_DISTRIBUTION_ID}} --paths '/*'
