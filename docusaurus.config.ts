@@ -4,6 +4,8 @@ import type * as Preset from '@docusaurus/preset-classic';
 import type * as Plugin from "@docusaurus/types/src/plugin";
 import type * as OpenApiPlugin from "docusaurus-plugin-openapi-docs";
 
+const isDev = process.env.NODE_ENV === 'development';
+
 const config: Config = {
   title: 'ONLYOFFICE',
   tagline: 'ONLYOFFICE',
@@ -16,6 +18,11 @@ const config: Config = {
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
+
+  customFields: {
+    documentServer: isDev ? 'https://api.docs.teamlab.info/' : 'https://api.docs.onlyoffice.com/',
+    documentServerSecret: isDev ? 'MYSECRET' : 'NsOb2yUBaI9yme0wbkGAapi',
+  },
 
   future: {
     experimental_faster: {

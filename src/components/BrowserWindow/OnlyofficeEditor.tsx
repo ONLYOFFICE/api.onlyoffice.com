@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 
 interface OnlyOfficeEditorProps {
   fileType: string; // e.g., "docx", "xlsx", "pptx", "pdf"
@@ -72,7 +73,7 @@ const createDocumentConfig = (fileType: string): object => {
   };
 };
 
-const addScript = async (fileType: string, code: string): Promise<void> => {
+const addScript = async (secret: string, fileType: string, code: string): Promise<void> => {
   const scriptConfig = document.createElement("script");
   scriptConfig.type = "text/javascript";
 
@@ -84,7 +85,7 @@ const addScript = async (fileType: string, code: string): Promise<void> => {
     editorConfig: { callbackUrl: "" }
   };
 
-  const token = await createJWT(config, "MYSECRET");
+  const token = await createJWT(config, secret);
 
   scriptConfig.innerHTML = `
     if (window.docEditor) {
@@ -117,24 +118,33 @@ const OnlyOfficeEditor: React.FC<OnlyOfficeEditorProps> = ({
   code,
   height = "700px",
 }) => {
+  const {
+    siteConfig: {customFields},
+  } = useDocusaurusContext();
+
+  const documentServer = customFields.documentServer as string;
+  const documentServerSecret = customFields.documentServerSecret as string;
+
   useEffect(() => {
     if ("1" !== document.documentElement.getAttribute("data-script-api-state")) {
       if ("2" !== document.documentElement.getAttribute("data-script-api-state")) {
+        const apiUrl = new URL('/web-apps/apps/api/documents/api.js', documentServer);
+
         const scriptApi = document.createElement("script");
         scriptApi.type = "text/javascript";
-        scriptApi.src = "https://api.docs.teamlab.info/web-apps/apps/api/documents/api.js";
+        scriptApi.src = apiUrl.toString();
         scriptApi.onerror = () => {
           console.error("Failed to load OnlyOffice API script.");
         };
         scriptApi.onload = () => {
           document.documentElement.setAttribute("data-script-api-state", "2");
-          addScript(fileType, code);
+          addScript(documentServerSecret, fileType, code);
         };
   
         document.documentElement.setAttribute("data-script-api-state", "1");
         document.body.appendChild(scriptApi);
       } else {
-        addScript(fileType, code);
+        addScript(documentServerSecret, fileType, code);
       }
     }
 
