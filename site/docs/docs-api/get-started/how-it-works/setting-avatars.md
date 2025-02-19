@@ -51,7 +51,7 @@ The reference figure and the steps below explain the process of setting the avat
   })
   ```
 
-4. In order to set the users' avatars, the [setUsers](../../usage-api/methods.md#setUsers) method must be called:
+4. In order to set the users' avatars, the [setUsers](../../usage-api/methods.md#setusers) method must be called:
 
   ``` ts
   docEditor.setUsers({

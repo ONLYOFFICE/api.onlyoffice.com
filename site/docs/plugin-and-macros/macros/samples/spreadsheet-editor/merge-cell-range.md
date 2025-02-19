@@ -15,7 +15,7 @@ Merges the selected cell range.
 })();
 ```
 
-Methods used: GetActiveSheet, GetRange, Merge
+Methods used: [GetActiveSheet](../../../../office-api/usage-api/spreadsheet-api/Api/Methods/GetActiveSheet.md), [GetRange](../../../../office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetRange.md), [Merge](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/Merge.md)
 
 ## Reference Microsoft VBA macro code
 

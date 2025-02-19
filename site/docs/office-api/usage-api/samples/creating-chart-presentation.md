@@ -2,10 +2,10 @@
 
 Create a chart presentation:
 
-- get the first slide in the current presentation (Api/GetPresentation, ApiPresentation/GetSlideByIndex);
-- set the gradient background (Api/CreateGradientStop, ApiSlide/SetBackground);
-- set the slide title and text in the specified style (Api/CreateShape, ApiRun/AddText, ApiParagraph/SetJc, ApiTextPr/SetFill, ApiTextPr/SetFontFamily, ApiTextPr/SetFontSize,  ApiShape/GetDocContent, ApiSlide/AddObject);
-- create a chart and add it to the specified slide (Api/CreateChart, ApiSlide/AddObject)
+- get the first slide in the current presentation ([Api/GetPresentation](../presentation-api/Api/Methods/GetPresentation.md), [ApiPresentation/GetSlideByIndex](../presentation-api/ApiPresentation/Methods/GetSlideByIndex.md));
+- set the gradient background ([Api/CreateGradientStop](../presentation-api/Api/Methods/CreateGradientStop.md), [ApiSlide/SetBackground](../presentation-api/ApiSlide/Methods/SetBackground.md));
+- set the slide title and text in the specified style ([Api/CreateShape](../presentation-api/Api/Methods/CreateShape.md), [ApiRun/AddText](../presentation-api/ApiRun/Methods/AddText.md), [ApiParagraph/SetJc](../presentation-api/ApiParagraph/Methods/SetJc.md), [ApiTextPr/SetFill](../presentation-api/ApiTextPr/Methods/SetFill.md), [ApiTextPr/SetFontFamily](../presentation-api/ApiTextPr/Methods/SetFontFamily.md), [ApiTextPr/SetFontSize](../presentation-api/ApiTextPr/Methods/SetFontSize.md),  [ApiShape/GetDocContent](../presentation-api/ApiShape/Methods/GetDocContent.md), [ApiSlide/AddObject](../presentation-api/ApiSlide/Methods/AddObject.md));
+- create a chart and add it to the specified slide ([Api/CreateChart](../presentation-api/Api/Methods/CreateChart.md), [ApiSlide/AddObject](../presentation-api/ApiSlide/Methods/AddObject.md))
 
 This sample is available for the **C++ and .Net DocBuilder Frameworks**.
 Download the sample and get more information on the [Builder framework samples](../../../document-builder/builder-framework/builder-framework-samples/builder-framework-samples.md) page.

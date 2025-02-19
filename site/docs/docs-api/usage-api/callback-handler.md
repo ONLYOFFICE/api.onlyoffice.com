@@ -51,7 +51,7 @@ Type: integer
 
 ## formsdataurl
 
-Defines the URL to the JSON file with the submitted form data. The array structure with the form data is described here. This file contains the following parameters:
+Defines the URL to the JSON file with the submitted form data. The array structure with the form data is described [here](../../office-api/usage-api/text-document-api/Enumeration/FormData.md). This file contains the following parameters:
 
 | Parameter | Type   | Example      | Description                                                                                                   |
 | --------- | ------ | ------------ | ------------------------------------------------------------------------------------------------------------- |

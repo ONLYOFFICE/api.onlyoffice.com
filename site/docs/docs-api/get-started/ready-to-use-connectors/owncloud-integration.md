@@ -94,7 +94,7 @@ You will see a text either with information about the successful connection or t
 To enable work within **ownCloud Web**, register the connector in the ownCloud Web *config.json*:
 
 - If you installed ownCloud Web from the [official marketplace](https://marketplace.owncloud.com/apps/onlyoffice), the path is *\<owncloud-root-catalog>/config/config.json*.
-- If you compiled it from source code yourself using [this instruction](#install), the path is *\<owncloud-web-root-catalog>/config/config.json*.
+- If you compiled it from source code yourself using [this instruction](#installing-owncloud-onlyoffice-integration-app), the path is *\<owncloud-web-root-catalog>/config/config.json*.
 
 To register the connector, use these lines:
 

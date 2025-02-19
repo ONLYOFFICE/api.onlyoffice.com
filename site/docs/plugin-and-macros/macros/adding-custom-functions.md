@@ -29,7 +29,7 @@ Starting from version 8.1, you can add custom functions to the spreadsheets usin
 })();
 ```
 
-3. Write a description for your function, specify the parameters and return value if necessary. Add a script for your function. Use the Api.AddCustomFunction method to add a function to the system.
+3. Write a description for your function, specify the parameters and return value if necessary. Add a script for your function. Use the [Api.AddCustomFunction](../../office-api/usage-api/spreadsheet-api/Api/Methods/AddCustomFunction.md) method to add a function to the system.
 4. Click **Save**.
 
 ![Add custom function](/assets/images/plugins/add-custom-function.png)

@@ -124,7 +124,7 @@ Let's see how to build the simplest [Hello world](https://github.com/ONLYOFFICE/
    })(window)
    ```
 
-   Use plugin [methods](../interacting-with-editors/overview/how-to-call-methods.md) and events while writing the plugin code. For example, in the **Hello world** plugin, we use the `init` and `button` events, and the `callCommand` and `executeMethod` methods.
+   Use plugin [methods](../interacting-with-editors/overview/how-to-call-methods.md) and [events](../interacting-with-editors/overview/how-to-attach-events.md) while writing the plugin code. For example, in the **Hello world** plugin, we use the `init` and `button` events, and the `callCommand` and `executeMethod` methods.
 
    Read the plugin [customization](../customization/context-menu.md) section to find out how the plugin can be displayed in the editor: as context menu items, toolbar buttons, windows, left or right panels, input helpers. Choose the option that is suitable for your plugin and customize it following our instructions.
 

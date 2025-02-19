@@ -2,8 +2,8 @@
 
 Create a basic form with the image and text inputs:
 
-- create a new document, add text to the first paragraph and style it as heading (ApiDocument, ApiStyle, ApiParagraph);
-- create an image form and a text form, and add the form to the document (Api/CreatePictureForm, Api/CreateTextForm).
+- create a new document, add text to the first paragraph and style it as heading ([ApiDocument](../text-document-api/ApiDocument/ApiDocument.md), [ApiStyle](../text-document-api/ApiStyle/ApiStyle.md), [ApiParagraph](../text-document-api/ApiParagraph/ApiParagraph.md));
+- create an image form and a text form, and add the form to the document ([Api/CreatePictureForm](../form-api/Api/Methods/CreatePictureForm.md), [Api/CreateTextForm](../form-api/Api/Methods/CreateTextForm.md)).
 
 This sample is available for the **C++ and .Net DocBuilder Frameworks**.
 Download the sample and get more information on the [Builder framework samples](../../../document-builder/builder-framework/builder-framework-samples/builder-framework-samples.md) page.

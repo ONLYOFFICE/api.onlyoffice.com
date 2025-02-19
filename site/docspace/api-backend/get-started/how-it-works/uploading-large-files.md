@@ -8,7 +8,7 @@ In this article, you will learn how to upload large files to DocSpace using our 
 
 ## Step 1. Creating a file upload session
 
-To upload files with size greater than 10 Mb (10 485 760 bytes), you need to create a session by sending the POST request to the following endpoint:
+To upload files with size greater than 10 Mb (10 485 760 bytes), you need to create a session by sending the POST request to the following [endpoint](../../../../openapi/docspace/api-backend/usage-api/create-upload-session.api.mdx):
 
 ``` http
 POST /api/2.0/files/{folderid}/upload/create_session
