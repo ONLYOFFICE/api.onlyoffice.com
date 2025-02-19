@@ -44,11 +44,12 @@ const config: Config = {
           path: './site',
           routeBasePath: '',
 
-          editUrl: 'https://github.com/ONLYOFFICE/api.onlyoffice.com/tree/master',
+          editUrl:
+            isDev
+              ? 'https://git.onlyoffice.com/ONLYOFFICE/api.onlyoffice.com/src/branch/master'
+              : 'https://github.com/ONLYOFFICE/api.onlyoffice.com/tree/master',
 
           docItemComponent: '@theme/ApiItem',
-          //editUrl:
-          //  'https://github.com/trofim24/api.onlyoffice.com.3.0/',
         },
         theme: {
           customCss: './src/css/custom.css',
