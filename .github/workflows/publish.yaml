@@ -22,6 +22,7 @@ on:
 
 env:
   CN: ${{ github.event.inputs.chinese }}
+  mode: ${{github.event.inputs.site_mode}}
 
 jobs:
   publish:
@@ -36,15 +37,19 @@ jobs:
     - name: Build Packages
       id: build
       run: |
-        SUB_PARAMETERS="-- --locale en"
+        LOCALE="--locale en"
+        SUB_ARGS=""
 
-        [[ "$CN" == "true" ]] && SUB_PARAMETERS="$SUB_PARAMETERS --locale zh-CN"
+        # Build locale string
+        [[ "$CN" == "true" ]] && LOCALE="$LOCALE --locale zh-CN"
 
-        NODE_OPTIONS="--max-old-space-size=12288" npm run build ${SUB_PARAMETERS}
+        # Build sub-arguments string
+        [[ "$mode" == "testing" ]] && SUB_ARGS="--dev"
+
+        NODE_OPTIONS="--max-old-space-size=12288" npm run build -- ${SUB_ARGS} ${LOCALE}
     
     - name: Configure AWS Credentials
       env:
-        mode: ${{github.event.inputs.site_mode}}
         AWS_ACCESS_KEY_PROD: ${{secrets.AWS_ACCESS_KEY_PROD}}
         AWS_SECRET_KEY_PROD: ${{secrets.AWS_SECRET_KEY_PROD}}
         AWS_DISTRIBUTION_ID_PROD: ${{secrets.AWS_DISTRIBUTION_ID_PROD}}
