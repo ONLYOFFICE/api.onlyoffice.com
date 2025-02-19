@@ -8,6 +8,7 @@
 
 * Swizzled CodeBlock/Content
 * Added ONLYOFFICE Docs editor tab for code
+* Added edit page link on all doc pages
 * Added readme to generate OpenAPI docs
 * Added package to generate OpenAPI docs
 
