@@ -20311,7 +20311,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/configuration"
+                  "$ref": "#/components/schemas/Configuration"
                 }
               }
             }
@@ -29094,7 +29094,7 @@
     "/api/2.0/mail/signature/{mailbox_id:[0-9]+}": {
       "get": {
         "tags": [
-          "mail/signature"
+          "mail/Signature"
         ],
         "security": [
           {
@@ -29141,7 +29141,7 @@
     "/api/2.0/mail/signature/update/{mailbox_id:[0-9]+}": {
       "post": {
         "tags": [
-          "mail/signature"
+          "mail/Signature"
         ],
         "security": [
           {
@@ -52538,5 +52538,666 @@
         }
       }
     }
-  }
+  },
+  "tags": [
+    {
+      "name": "authentication",
+      "description": "Operations for authenticating users.",
+      "x-displayName": "Authentication"
+    },
+    {
+      "name": "calendar/Calendars and subscriptions",
+      "description": "Operations working with calendars and subscriptions.",
+      "x-displayName": "Calendars and subscriptions"
+    },
+    {
+      "name": "calendar/Events",
+      "description": "Operations working with calendars events.",
+      "x-displayName": "Events"
+    },
+    {
+      "name": "calendar/Tasks",
+      "description": "Operations working with calendars tasks.",
+      "x-displayName": "Tasks"
+    },
+    {
+      "name": "capabilities",
+      "description": "Operations for getting information about portal capabilities.",
+      "x-displayName": "Capabilities"
+    },
+    {
+      "name": "community",
+      "description": "Operations for with calendars community.",
+      "x-displayName": "Community"
+    },
+    {
+      "name": "community/Blogs",
+      "description": "Operations for with calendars community blogs.",
+      "x-displayName": "Blogs"
+    },
+    {
+      "name": "community/Bookmarks",
+      "description": "Operations for with calendars community bookmarks.",
+      "x-displayName": "Bookmarks"
+    },
+    {
+      "name": "community/Events",
+      "description": "Operations for with calendars community events.",
+      "x-displayName": "Events"
+    },
+    {
+      "name": "community/Forums",
+      "description": "Operations for with calendars community forums.",
+      "x-displayName": "Forums"
+    },
+    {
+      "name": "community/Wiki",
+      "description": "Operations for with calendars community wiki.",
+      "x-displayName": "Wiki"
+    },
+    {
+      "name": "crm/Cases",
+      "description": "Operations for managing CRM cases.",
+      "x-displayName": "Cases"
+    },
+    {
+      "name": "crm/Contacts",
+      "description": "Operations for managing CRM contacts.", 
+      "x-displayName": "Contacts"
+    },
+    {
+      "name": "crm/Currencies",
+      "description": "Operations for managing currencies in CRM.",
+      "x-displayName": "Currencies"
+    },
+    {
+      "name": "crm/Custom fields",
+      "description": "Operations for managing custom fields in CRM.",
+      "x-displayName": "Custom fields"
+    },
+    {
+      "name": "crm/Files",
+      "description": "Operations for working with CRM files.",
+      "x-displayName": "Files"
+    },
+    {
+      "name": "crm/History",
+      "description": "Operations for accessing CRM history.",
+      "x-displayName": "History"
+    },
+    {
+      "name": "crm/Invoices",
+      "description": "Operations for managing CRM invoices.",
+      "x-displayName": "Invoices"
+    },
+    {
+      "name": "crm/Opportunities",
+      "description": "Operations for managing sales opportunities in CRM.",
+      "x-displayName": "Opportunities"
+    },
+    {
+      "name": "crm/Organization",
+      "description": "Operations for managing organization settings in CRM.",
+      "x-displayName": "Organization"
+    },
+    {
+      "name": "crm/Reports",
+      "description": "Operations for generating and managing CRM reports.",
+      "x-displayName": "Reports"
+    },
+    {
+      "name": "crm/Tags",
+      "description": "Operations for managing CRM tags.",
+      "x-displayName": "Tags"
+    },
+    {
+      "name": "crm/Tasks",
+      "description": "Operations for managing CRM tasks.",
+      "x-displayName": "Tasks"
+    },
+    {
+      "name": "crm/VoIP",
+      "description": "Operations for VoIP functionality in CRM.",
+      "x-displayName": "VoIP"
+    },
+    {
+      "name": "feed",
+      "description": "Operations for working with feeds.",
+      "x-displayName": "Feed"
+    },
+    {
+      "name": "files/Files",
+      "description": "Operations for working with files.",
+      "x-displayName": "Files"
+    },
+    {
+      "name": "files/Folders",
+      "description": "Operations for managing folders.",
+      "x-displayName": "Folders"
+    },
+    {
+      "name": "files/Operations",
+      "description": "Operations for file management.",
+      "x-displayName": "Operations"
+    },
+    {
+      "name": "files/Settings",
+      "description": "Operations for file settings configuration.",
+      "x-displayName": "Settings"
+    },
+    {
+      "name": "files/Sharing",
+      "description": "Operations for file and folder sharing.",
+      "x-displayName": "Sharing"
+    },
+    {
+      "name": "files/Third-party integration",
+      "description": "Operations for third-party service integration.",
+      "x-displayName": "Third-party integration"
+    },
+    {
+      "name": "group",
+      "description": "Operations for working with feeds.",
+      "x-displayName": "Group"
+    },
+    {
+      "name": "mail/Accounts",
+      "description": "Operations for managing mail accounts.",
+      "x-displayName": "Accounts"
+    },
+    {
+      "name": "mail/Alerts",
+      "description": "Operations for managing mail alerts.",
+      "x-displayName": "Alerts"
+    },
+    {
+      "name": "mail/Attachments", 
+      "description": "Operations for working with mail attachments.",
+      "x-displayName": "Attachments"
+    },
+    {
+      "name": "mail/Autoreply",
+      "description": "Operations for configuring mail autoreply settings.",
+      "x-displayName": "Autoreply"
+    },
+    {
+      "name": "mail/Contacts",
+      "description": "Operations for managing mail contacts.",
+      "x-displayName": "Contacts" 
+    },
+    {
+      "name": "mail/Conversations",
+      "description": "Operations for managing mail conversations.",
+      "x-displayName": "Conversations"
+    },
+    {
+      "name": "mail/Filters",
+      "description": "Operations for managing mail filters.",
+      "x-displayName": "Filters"
+    },
+    {
+      "name": "mail/Folders",
+      "description": "Operations for managing mail folders.",
+      "x-displayName": "Folders"
+    },
+    {
+      "name": "mail/Help Center",
+      "description": "Operations for accessing mail help center.",
+      "x-displayName": "Help Center"
+    },
+    {
+      "name": "mail/Images",
+      "description": "Operations for handling mail images.",
+      "x-displayName": "Images"
+    },
+    {
+      "name": "mail/Messages",
+      "description": "Operations for working with mail messages.",
+      "x-displayName": "Messages"
+    },
+    {
+      "name": "mail/Operations",
+      "description": "Operations for mail management.",
+      "x-displayName": "Operations"
+    },
+    {
+      "name": "mail/Settings",
+      "description": "Operations for configuring mail settings.",
+      "x-displayName": "Settings"
+    },
+    {
+      "name": "mail/Signature",
+      "description": "Operations for managing mail signatures.",
+      "x-displayName": "Signature"
+    },
+    {
+      "name": "mail/Tags",
+      "description": "Operations for managing mail tags.",
+      "x-displayName": "Tags"
+    },
+    {
+      "name": "mailserver/Domains",
+      "description": "Operations for managing mail server domains.",
+      "x-displayName": "Domains"
+    },
+    {
+      "name": "mailserver/Mail groups",
+      "description": "Operations for managing mail server groups.",
+      "x-displayName": "Mail groups"
+    },
+    {
+      "name": "mailserver/Mailboxes",
+      "description": "Operations for managing mailboxes.",
+      "x-displayName": "Mailboxes"
+    },
+    {
+      "name": "mailserver/Notifications",
+      "description": "Operations for managing mail server notifications.",
+      "x-displayName": "Notifications"
+    },
+    {
+      "name": "mailserver/Servers",
+      "description": "Operations for managing mail servers.",
+      "x-displayName": "Servers"
+    },
+    {
+      "name": "people/Birthday",
+      "description": "Operations for managing people birthdays.",
+      "x-displayName": "Birthday"
+    },
+    {
+      "name": "people/Contacts",
+      "description": "Operations for managing people contacts.",
+      "x-displayName": "Contacts"
+    },
+    {
+      "name": "people/Email",
+      "description": "Operations for managing people email settings.",
+      "x-displayName": "Email"
+    },
+    {
+      "name": "people/Password",
+      "description": "Operations for managing people passwords.",
+      "x-displayName": "Password"
+    },
+    {
+      "name": "people/Photos",
+      "description": "Operations for managing people photos.",
+      "x-displayName": "Photos"
+    },
+    {
+      "name": "people/Profiles",
+      "description": "Operations for managing people profiles.",
+      "x-displayName": "Profiles"
+    },
+    {
+      "name": "people/Search",
+      "description": "Operations for searching people.",
+      "x-displayName": "Search"
+    },
+    {
+      "name": "people/User data",
+      "description": "Operations for managing user data.",
+      "x-displayName": "User data"
+    },
+    {
+      "name": "people/User status",
+      "description": "Operations for managing user statuses.",
+      "x-displayName": "User status"
+    },
+    {
+      "name": "people/User type",
+      "description": "Operations for managing user types.",
+      "x-displayName": "User type"
+    },
+    {
+      "name": "portal/Backup",
+      "description": "Operations for working with backup",
+      "x-displayName": "Backup"
+    },
+    {
+      "name": "portal/Quota",
+      "description": "Operations for getting information about portal quota.",
+      "x-displayName": "Quota"
+    },
+    {
+      "name": "portal/Search",
+      "description": "Operations for working with search",
+      "x-displayName": "Search"
+    },
+    {
+      "name": "portal/Settings",
+      "description": "Operations for getting information about portal settings.",
+      "x-displayName": "Settings"
+    },
+    {
+      "name": "portal/Users",
+      "description": "Operations for getting information about portal users.",
+      "x-displayName": "Users"
+    },
+    {
+      "name": "project/Comments",
+      "description": "Operations for managing project comments.",
+      "x-displayName": "Comments"
+    },
+    {
+      "name": "project/Discussions",
+      "description": "Operations for managing project discussions.",
+      "x-displayName": "Discussions"
+    },
+    {
+      "name": "project/Files",
+      "description": "Operations for managing project files.",
+      "x-displayName": "Files"
+    },
+    {
+      "name": "project/Milestones",
+      "description": "Operations for managing project milestones.",
+      "x-displayName": "Milestones"
+    },
+    {
+      "name": "project/Projects",
+      "description": "Operations for managing projects.",
+      "x-displayName": "Projects"
+    },
+    {
+      "name": "project/Reports",
+      "description": "Operations for managing project reports.",
+      "x-displayName": "Reports"
+    },
+    {
+      "name": "project/Settings",
+      "description": "Operations for managing project settings.",
+      "x-displayName": "Settings"
+    },
+    {
+      "name": "project/Tags",
+      "description": "Operations for managing project tags.",
+      "x-displayName": "Tags"
+    },
+    {
+      "name": "project/Tasks",
+      "description": "Operations for managing project tasks.",
+      "x-displayName": "Tasks"
+    },
+    {
+      "name": "project/Teams",
+      "description": "Operations for managing project teams.",
+      "x-displayName": "Teams"
+    },
+    {
+      "name": "project/Templates",
+      "description": "Operations for managing project templates.",
+      "x-displayName": "Templates"
+    },
+    {
+      "name": "project/Time",
+      "description": "Operations for managing project time tracking.",
+      "x-displayName": "Time"
+    },
+    {
+      "name": "security/Active connections",
+      "description": "Operations for managing active user connections.",
+      "x-displayName": "Active connections"
+    },
+    {
+      "name": "security/Audit trail data",
+      "description": "Operations for accessing audit trail data.",
+      "x-displayName": "Audit trail data" 
+    },
+    {
+      "name": "security/Impersonation",
+      "description": "Operations for managing user impersonation.",
+      "x-displayName": "Impersonation"
+    },
+    {
+      "name": "security/Login history",
+      "description": "Operations for accessing login history.",
+      "x-displayName": "Login history"
+    },
+    {
+      "name": "settings/Common settings",
+      "description": "Operations for managing common portal settings.",
+      "x-displayName": "Common settings"
+    },
+    {
+      "name": "settings/Custom navigation",
+      "description": "Operations for managing custom navigation.",
+      "x-displayName": "Custom navigation"
+    },
+    {
+      "name": "settings/Firebase",
+      "description": "Operations for configuring Firebase settings.",
+      "x-displayName": "Firebase"
+    },
+    {
+      "name": "settings/IP restrictions",
+      "description": "Operations for managing IP restrictions.",
+      "x-displayName": "IP restrictions"
+    },
+    {
+      "name": "settings/LDAP",
+      "description": "Operations for configuring LDAP settings.",
+      "x-displayName": "LDAP"
+    },
+    {
+      "name": "settings/Quota",
+      "description": "Operations for managing portal quotas.",
+      "x-displayName": "Quota"
+    },
+    {
+      "name": "settings/Security",
+      "description": "Operations for managing security settings.",
+      "x-displayName": "Security"
+    },
+    {
+      "name": "settings/SMTP",
+      "description": "Operations for configuring SMTP settings.",
+      "x-displayName": "SMTP"
+    },
+    {
+      "name": "settings/SSO",
+      "description": "Operations for configuring single sign-on.",
+      "x-displayName": "SSO"
+    },
+    {
+      "name": "settings/Statistics",
+      "description": "Operations for accessing portal statistics.",
+      "x-displayName": "Statistics"
+    },
+    {
+      "name": "settings/Storage",
+      "description": "Operations for managing storage settings.",
+      "x-displayName": "Storage"
+    },
+    {
+      "name": "settings/Telegram",
+      "description": "Operations for configuring Telegram integration.",
+      "x-displayName": "Telegram"
+    },
+    {
+      "name": "settings/TFA settings",
+      "description": "Operations for managing two-factor authentication settings.",
+      "x-displayName": "TFA settings"
+    },
+    {
+      "name": "settings/Tips",
+      "description": "Operations for managing portal tips.",
+      "x-displayName": "Tips"
+    }
+  ],
+  "x-tagGroups": [
+    {
+      "name": "Authentication",
+      "tags": [
+        "authentication"
+      ]
+    },
+    {
+      "name": "Calendar",
+      "tags": [
+        "calendar/Calendars and subscriptions",
+        "calendar/Events",
+        "calendar/Tasks"
+      ]
+    },
+    {
+      "name": "Capabilities",
+      "tags": [
+        "capabilities"
+      ]
+    },
+    {
+      "name": "Community",
+      "tags": [
+        "Community",
+        "community/Blogs",
+        "community/Bookmarks",
+        "community/Events",
+        "community/Forums",
+        "community/Wiki"
+      ]
+    },
+    {
+      "name": "CRM",
+      "tags": [
+        "crm/Cases",
+        "crm/Contacts",
+        "crm/Currencies",
+        "crm/Custom fields", 
+        "crm/Files",
+        "crm/History",
+        "crm/Invoices",
+        "crm/Opportunities",
+        "crm/Organization",
+        "crm/Reports",
+        "crm/Tags",
+        "crm/Tasks",
+        "crm/VoIP"
+      ]
+    },
+    {
+      "name": "Feed",
+      "tags": [
+        "feed"
+      ]
+    },
+    {
+      "name": "Files",
+      "tags": [
+        "files/Files",
+        "files/Folders",
+        "files/Operations",
+        "files/Settings",
+        "files/Sharing",
+        "files/Third-party integration"
+      ]
+    },
+    {
+      "name": "Group",
+      "tags": [
+        "group"
+      ]
+    },
+    {
+      "name": "Mail",
+      "tags": [
+        "mail/Accounts",
+        "mail/Alerts",
+        "mail/Attachments",
+        "mail/Autoreply",
+        "mail/Contacts",
+        "mail/Conversations",
+        "mail/Filters",
+        "mail/Folders",
+        "mail/Help Center",
+        "mail/Images",
+        "mail/Messages",
+        "mail/Operations",
+        "mail/Settings",
+        "mail/Signature",
+        "mail/Tags"
+      ]
+    },
+    {
+      "name": "Mailserver",
+      "tags": [
+        "mailserver/Domains",
+        "mailserver/Mail groups",
+        "mailserver/Mailboxes", 
+        "mailserver/Notifications",
+        "mailserver/Servers"
+      ]
+    },
+    {
+      "name": "People",
+      "tags": [
+        "people/Birthday",
+        "people/Contacts", 
+        "people/Email",
+        "people/Password",
+        "people/Photos",
+        "people/Profiles",
+        "people/Search",
+        "people/User data",
+        "people/User status",
+        "people/User type"
+      ]
+    },
+    {
+      "name": "Portal",
+      "tags": [
+        "portal/Backup",
+        "portal/Quota",
+        "portal/Search",
+        "portal/Settings",
+        "portal/Users"
+      ]
+    },
+    {
+      "name": "Project",
+      "tags": [
+        "project/Comments",
+        "project/Discussions",
+        "project/Files",
+        "project/Milestones",
+        "project/Projects", 
+        "project/Reports",
+        "project/Settings",
+        "project/Tags",
+        "project/Tasks",
+        "project/Teams",
+        "project/Templates",
+        "project/Time"
+      ]
+    },
+    {
+      "name": "Security",
+      "tags": [
+        "security/Active connections",
+        "security/Audit trail data",
+        "security/Impersonation",
+        "security/Login history"
+      ]
+    },
+    {
+      "name": "Settings",
+      "tags": [
+        "settings/Common settings",
+        "settings/Custom navigation",
+        "settings/Firebase",
+        "settings/IP restrictions",
+        "settings/LDAP",
+        "settings/Quota",
+        "settings/Security",
+        "settings/SMTP",
+        "settings/SSO",
+        "settings/Statistics", 
+        "settings/Storage",
+        "settings/Telegram",
+        "settings/TFA settings",
+        "settings/Tips"
+      ]
+    }
+  ]
 }

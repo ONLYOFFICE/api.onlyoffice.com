@@ -4,6 +4,8 @@ import type * as Preset from '@docusaurus/preset-classic';
 import type * as Plugin from "@docusaurus/types/src/plugin";
 import type * as OpenApiPlugin from "docusaurus-plugin-openapi-docs";
 
+const isDev = process.env.NODE_ENV === 'development';
+
 const config: Config = {
   title: 'ONLYOFFICE',
   tagline: 'ONLYOFFICE',
@@ -12,13 +14,15 @@ const config: Config = {
   url: 'https://api.onlyoffice.com',
   baseUrl: '/',
 
-  organizationName: 'trofim24',
-  projectName: 'trofim24.github.io',
-
   trailingSlash: true,
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
+
+  customFields: {
+    documentServer: isDev ? 'https://api.docs.teamlab.info/' : 'https://api.docs.onlyoffice.com/',
+    documentServerSecret: isDev ? 'MYSECRET' : 'NsOb2yUBaI9yme0wbkGAapi',
+  },
 
   future: {
     experimental_faster: {
@@ -47,6 +51,8 @@ const config: Config = {
           path: './site',
           routeBasePath: '',
 
+          editUrl: 'https://github.com/ONLYOFFICE/api.onlyoffice.com/tree/master',
+
           docItemComponent: '@theme/ApiItem',
           //editUrl:
           //  'https://github.com/trofim24/api.onlyoffice.com.3.0/',
@@ -69,7 +75,7 @@ const config: Config = {
             specPath: "openapi/workspace/community-server.json",
             outputDir: "site/openapi/workspace/api-backend/usage-api",
             sidebarOptions: {
-              groupPathsBy: "tag",
+              groupPathsBy: "tagGroup",
             },
           } satisfies OpenApiPlugin.Options,
           workspaceHosted: {
@@ -87,7 +93,7 @@ const config: Config = {
             },
           } satisfies OpenApiPlugin.Options,
           docspaceHosted: {
-            specPath: "openapi/docspace/hosted-solutions.json",
+            specPath: "openapi/docspace/asc.apisystem.swagger.json",
             outputDir: "site/openapi/docspace/for-hosting-providers/usage-api",
             sidebarOptions: {
               groupPathsBy: "tag",

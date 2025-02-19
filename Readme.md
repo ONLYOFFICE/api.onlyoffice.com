@@ -10,6 +10,70 @@ The documentation content is formatted in markdown and can be found in the [site
 
 To build the site from the source, ensure you're using the most recent versions of Node and Npm, and pull the latest from master. Next, run `npm install`, `npm run build` to build the docs files and `npm start` to launch the site in development mode.
 
+## Generating OpenAPI Docs
+
+### Merging OenAPI Docs for docspace backend
+
+To generate OpenAPI docs for docspace backend, you need to prepare a single file:
+
+```bash
+cd openapi/docspace
+npm i
+npx openapi-merge-cli
+```
+
+### Generating All files
+
+To generate all OpenAPI docs, run the following command from the root directory of your project:
+
+```bash
+yarn docusaurus gen-api-docs all
+```
+
+> This will generate API docs for all of the OpenAPI specification (OAS) files referenced in your `docusaurus-plugin-openapi-docs` config.
+
+### Generating a single file
+
+You may also generate OpenAPI docs for a single path or OAS by specifying the unique `id`:
+
+```bash
+yarn docusaurus gen-api-docs <id>
+```
+
+Example:
+
+```bash
+yarn docusaurus gen-api-docs docspaceBackend
+```
+
+> The example above will only generate API docs relative to `docspaceBackend`.
+
+## Cleaning OpenAPI Docs
+
+### Cleaning All files
+
+To clean/remove all API Docs, run the following command from the root directory of your project:
+
+```bash
+yarn docusaurus clean-api-docs all
+```
+
+### Cleaning a single file
+
+You may also remove a particular set of API docs by specifying the unique `id` of your desired spec instance.
+
+```bash
+yarn docusaurus clean-api-docs <id>
+```
+
+Example:
+
+```bash
+yarn docusaurus clean-api-docs docspaceBackend
+```
+
+> The example above will remove all API docs relative to `docspaceBackend`.
+
 ## Related
 
  - [ONLYOFFICE Documentation](https://api.onlyoffice.com/)
