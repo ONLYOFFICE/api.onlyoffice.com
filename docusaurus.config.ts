@@ -173,7 +173,7 @@ const config: Config = {
             {
               type: 'docSidebar',
               sidebarId: 'docsMacros',
-              label: 'Plugin and Macros',
+              label: 'Plugins and Macros',
               docsPluginId: 'api',
             },
             {
