@@ -6,9 +6,9 @@ sidebar_position: -8
 
 ## How to check how many connections I need?
 
-The minimal number of connections you might need should be equal to the number of users who are going to use your Document Server. But you should bear in mind, that in most cases one user is not equal to one connection, as one and the same user can open more than one document in more than one browser.
+The minimal number of connections you might need should be equal to the number of users who are going to use ONLYOFFICE Docs. But you should bear in mind, that in most cases one user is not equal to one connection, as one and the same user can open more than one document in more than one browser.
 
-So if you are sure that all your users are going to use the Document Server at one and the same time, have a surplus for the connection number equal of at least two times of your user number, otherwise the users with the lack of connections will be able to open the document in view-only mode.
+So if you are sure that all your users are going to use ONLYOFFICE Docs at one and the same time, have a surplus for the connection number equal of at least two times of your user number, otherwise the users with the lack of connections will be able to open the document in view-only mode.
 
 All the available pricing plans for the connections are available at [this page](https://www.onlyoffice.com/integration-edition-prices.aspx).
 
