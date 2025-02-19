@@ -15,7 +15,9 @@ Use the terminal to run ONLYOFFICE Desktop Editors in debug mode on macOS:
 
 4. In the command line, enter the path to the application, add a space and then type the *--ascdesktop-support-debug-info* flag:
 
-   *"/Applications/ONLYOFFICE.app/Contents/MacOS/ONLYOFFICE" --ascdesktop-support-debug-info*
+```bash
+"/Applications/ONLYOFFICE.app/Contents/MacOS/ONLYOFFICE" --ascdesktop-support-debug-info
+```
 
 ## Working in debug mode
 
