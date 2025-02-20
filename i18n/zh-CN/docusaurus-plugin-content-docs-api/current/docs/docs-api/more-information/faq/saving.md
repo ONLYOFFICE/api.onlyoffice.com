@@ -57,13 +57,13 @@ sidebar_position: -3
 
 如果打开了不同于 OOXML 格式的文档（.txt 或 .ods），则默认保存 OOXML 格式。
 
-要将打开的文档保存为不同于默认 Office Open XML 的格式，必须将 POST 请求发送到 **文档转换服务**。
+要将打开的文档保存为不同于默认 Office Open XML 的格式，必须将 POST 请求发送到**文档转换服务**。
 
 可以在 [此章节](../../get-started/how-it-works/converting-and-downloading-file.md) 中找到有关转换如何工作以及为什么需要转换的详细信息。可以在 [此处](../../additional-api/conversion-api/request.md) 找到 POST 请求参数和可用的响应。
 
 ## 如何启用或禁用'自动保存'选项？
 
-自动保存** 选项默认启用。要禁用它，您需要将文档配置中的 [editorConfig.customization.autosave](../../usage-api/config/editor/customization/customization-standard-branding.md#autosave) 参数设置为 **false**：
+**自动保存**选项默认启用。要禁用它，您需要将文档配置中的 [editorConfig.customization.autosave](../../usage-api/config/editor/customization/customization-standard-branding.md#autosave) 参数设置为 **false**：
 
   ``` ts
   const docEditor = new DocsAPI.DocEditor("placeholder", {

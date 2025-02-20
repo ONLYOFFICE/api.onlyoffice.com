@@ -158,7 +158,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
 
 *comment* 字段是可选的，因为只要启用了 *fillForms* 参数并禁用了 *edit* 和 *review* 参数，注释都被禁用了。
 
-通过上面的配置，文档将在启用表单填写模式并禁用所有其他模式的情况下打开，从而使有权访问它的用户只能填写特殊[内容控件](https://helpcenter.onlyoffice.com/ONLYOFFICE-Editors/ONLYOFFICE-Document-Editor/UsageInstructions/InsertContentControls.aspx?from=api)中的字段。
+通过上面的配置，文档将在启用表单填写模式并禁用所有其他模式的情况下打开，从而使有权访问它的用户只能填写特殊[内容控件](https://helpcenter.onlyoffice.com/ONLYOFFICE-Editors/ONLYOFFICE-Document-Editor/UsageInstructions/InsertContentControls.aspx?from=api) 中的字段。
 
 然后由您决定下一步做什么：对可编辑字段的更改将保存到同一个文档中，或者每次新用户访问和更改原始文档时都将创建一个新文档。
 
@@ -276,7 +276,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
 
 *document.info.sharingSettings.permissions* 也是一个字符串参数，它显示了与定义用户对当前文档的访问权限的规则集对应的访问权限的名称。
 
-> 请注意，最初没有任何预定义的文档访问规则集。如果您使用 **ONLYOFFICE 社区服务器**，将使用和显示几个访问权限规则（**完全访问**、 **只读**、 **拒绝访问**）。如果您设置自己的 **文档存储服务**，您将必须定义自己的一组规则及其名称（例如， **只读访问**：将参数 *document.permission.edit*、 *document.permission.review*、 *document.permission.fillForms* 设置为 **false**; 或 **只下载** ：将所有 *document.permission* 参数设置为 **false** 并且仅 *document.permission.download* 参数设置为 **true**等），并将它们发送到**文档编辑服务**，以便用户可以访问文档，并且这些设置显示在文档 **访问权限中...** 窗口中。
+> 请注意，最初没有任何预定义的文档访问规则集。如果您使用 **ONLYOFFICE 社区服务器**，将使用和显示几个访问权限规则（**完全访问**、**只读**、**拒绝访问**）。如果您设置自己的 **文档存储服务**，您将必须定义自己的一组规则及其名称（例如，**只读访问**：将参数 *document.permission.edit*、*document.permission.review*、*document.permission.fillForms* 设置为 **false**; 或 **只下载** ：将所有 *document.permission* 参数设置为 **false** 并且仅 *document.permission.download* 参数设置为 **true**等），并将它们发送到**文档编辑服务**，以便用户可以访问文档，并且这些设置显示在文档**访问权限中...**窗口中。
 
 *sharingSettings* 配置可能如下所示：
 

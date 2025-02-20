@@ -71,7 +71,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
 
 ## 如何启用或禁用编辑器中的聊天和/或评论面板？
 
-默认情况下聊天和评论是被启用的。要禁用它们，请使用 *document.permissions.comment* 和 *document.permissions.chat* 参数，并在配置文件中将它们的值分别设置为 **false** :
+默认情况下聊天和评论是被启用的。要禁用它们，请使用 *document.permissions.comment* 和 *document.permissions.chat* 参数，并在配置文件中将它们的值分别设置为 **false**:
 
 ``` ts
 const docEditor = new DocsAPI.DocEditor("placeholder", {

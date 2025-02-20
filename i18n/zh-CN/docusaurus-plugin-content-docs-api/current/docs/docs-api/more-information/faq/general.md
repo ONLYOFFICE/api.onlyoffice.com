@@ -12,7 +12,7 @@ sidebar_position: -12
 
 使用某些文档管理系统（如 Nextcloud、ownCloud、SharePoint 等）并希望了解如何将 ONLYOFFICE 文档连接到这些系统的用户，可以访问[即用型连接器](../../get-started/ready-to-use-connectors/nextcloud-integration.md) 部分。该部分详细介绍了与 ONLYOFFICE 文档配合使用的主要插件。
 
-每个API方法的详细描述可在更大的 **文档** 模块中找到。所有方法都在相应的部分中描述，它们的列表在 [高级参数](../../usage-api/advanced-parameters.md) 部分中可以找到。
+每个API方法的详细描述可在更大的**文档**模块中找到。所有方法都在相应的部分中描述，它们的列表在 [高级参数](../../usage-api/advanced-parameters.md) 部分中可以找到。
 
 ## 如何查看ONLYOFFICE 文档的当前版本号？
 

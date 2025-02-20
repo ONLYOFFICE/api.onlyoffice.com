@@ -71,7 +71,7 @@ const data = {
 
    - *currentVersion* 是最新版本号，将作为当前版本显示在编辑器界面中；
    - *history* 是对象数组，每个对象代表一个文档保存的单个版本：
-    - *history.changes* and *history.serverVersion* 和 *history.serverVersion* 是从**文档编辑服务**接收到的数据；
+    - *history.changes* 和 *history.serverVersion* 和 *history.serverVersion* 是从**文档编辑服务**接收到的数据；
     - *history.user.id* 是最后一个为指定版本保存文档更改的用户的id；
     - *history.created* 是文档指定版本编译的时间（对应收到 *status* 为 **2** 的时间）；
     - *history.version* 是指定版本的编号，将显示在文档编辑器界面的版本历史记录部分。

@@ -14,7 +14,7 @@ sidebar_position: -1
 | ----------- | ------- | ------- | ------------------------------------------------------------------ |
 | wopi.enable | boolean | true    | 定义是否启用 WOPI。默认值为 **false**。 |
 
-Example:
+示例:
 
   ``` json
   {
@@ -52,7 +52,7 @@ Example:
 | requires | 使用操作所需的 WOPI REST 端点。                             |
 | urlsrc   | 为了对特定文件调用操作而导航到的 URL。 |
 
-Example:
+示例:
 
   ``` xml
   <action name="edit" ext="docx" requires="locks,update"
