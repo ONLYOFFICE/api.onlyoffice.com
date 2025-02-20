@@ -37,7 +37,6 @@ const config: Config = {
 
   i18n: {
     defaultLocale: 'en',
-    path: './site',
     locales: ['en', 'zh-CN'],
   },
 
