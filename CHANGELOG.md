@@ -13,6 +13,7 @@
 * Added links to the dynamic pages
 * Added tabs for win/mac/linux
 * Added card list for ready-to-use connectors
+* Changed the Plugins and Macros section title
 
 ### Fixes
 
