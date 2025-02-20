@@ -1,7 +1,5 @@
 # Highlight duplicates
 
-## Description
-
 Highlights duplicates in the selected area with different colors to recognize duplicated values quickly.
 
 <!-- This code snippet is shown in the screenshot. -->

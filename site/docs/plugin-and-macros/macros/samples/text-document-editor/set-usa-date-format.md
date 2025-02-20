@@ -1,7 +1,5 @@
 # Set USA date format
 
-## Description
-
 Sets all date form formats to USA one.
 
 <!-- This code snippet is shown in the screenshot. -->

@@ -1,7 +1,5 @@
 # Merge cell range
 
-## Description
-
 Merges the selected cell range.
 
 <!-- This code snippet is shown in the screenshot. -->

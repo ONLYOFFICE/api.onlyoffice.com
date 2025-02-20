@@ -1,7 +1,5 @@
 # Add chart
 
-## Description
-
 Adds a new chart to the selected cell range.
 
 <!-- This code snippet is shown in the screenshot. -->

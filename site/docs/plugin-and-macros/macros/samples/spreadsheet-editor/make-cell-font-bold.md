@@ -1,7 +1,5 @@
 # Make cell font bold
 
-## Description
-
 Sets the font of the cell **A2** to bold.
 
 <!-- This code snippet is shown in the screenshot. -->

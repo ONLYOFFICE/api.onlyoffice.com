@@ -1,7 +1,5 @@
 # Change cell background color
 
-## Description
-
 Sets the background color of the cell **B3** to blue.
 
 <!-- This code snippet is shown in the screenshot. -->

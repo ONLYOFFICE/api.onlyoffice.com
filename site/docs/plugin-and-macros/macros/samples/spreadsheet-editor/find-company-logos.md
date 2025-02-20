@@ -1,7 +1,5 @@
 # Find company logos
 
-## Description
-
 Searches for a company logo throughout the spreadsheet using the [Logo API](https://api-ninjas.com/api/logo) offered by [API Ninjas](https://api-ninjas.com).
 
 > To use this macro, you need to obtain your own API key from API Ninjas.

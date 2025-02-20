@@ -1,7 +1,5 @@
 # Insert text
 
-## Description
-
 Inserts text into the document at the current cursor position.
 
 <!-- This code snippet is shown in the screenshot. -->

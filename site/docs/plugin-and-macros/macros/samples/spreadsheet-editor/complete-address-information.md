@@ -1,7 +1,5 @@
 # Complete address information
 
-## Description
-
 Completes the basic address data with detailed address information and inserts it into a spreadsheet.
 
 <!-- This code snippet is shown in the screenshot. -->

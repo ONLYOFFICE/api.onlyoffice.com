@@ -1,7 +1,5 @@
 # Sum of highlighted cells
 
-## Description
-
 Sums the answer of all highlighted cells in a spreadsheet.
 
 <!-- This code snippet is shown in the screenshot. -->

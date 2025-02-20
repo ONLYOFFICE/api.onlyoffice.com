@@ -1,7 +1,5 @@
 # Write data to worksheet cell
 
-## Description
-
 Writes the data (the *Hello world* phrase) to the worksheet third column of the fourth row.
 
 <!-- This code snippet is shown in the screenshot. -->

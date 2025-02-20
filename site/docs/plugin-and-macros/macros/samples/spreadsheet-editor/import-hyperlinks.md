@@ -1,7 +1,5 @@
 # Import hyperlinks
 
-## Description
-
 Imports hyperlinks between different worksheets in the spreadsheet.
 
 <!-- This code snippet is shown in the screenshot. -->
