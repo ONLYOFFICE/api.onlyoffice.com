@@ -1,5 +1,24 @@
 # Change log
 
+## 4.1.0
+
+### New features
+
+#### Site
+
+* Added develop edit url for pages
+
+#### Docs
+
+* Added links to the dynamic pages
+* Added tabs for win/mac/linux
+* Added card list for ready-to-use connectors
+
+### Fixes
+
+* Fixed anchors
+* Fixed customization description
+
 ## 4.0.0
 
 ### New features
