@@ -20,6 +20,7 @@
 * Fixed anchors
 * Fixed customization description
 * Fixed links in ready-to-use connectors
+* Fixed the jsValue argument
 
 ## 4.0.0
 
