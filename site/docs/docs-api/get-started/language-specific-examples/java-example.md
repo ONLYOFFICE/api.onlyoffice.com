@@ -139,8 +139,6 @@ To run the Java example code, install the Java version appropriate for your OS a
 
 In case the example and ONLYOFFICE Docs are installed on different computers, make sure that your server with the example installed has access to the ONLYOFFICE Docs with the address which you specify instead of **documentserver** in the configuration files. Make sure that the ONLYOFFICE Docs in its turn has access to the server with the example installed with the address which you specify instead of **example.com** in the configuration files.
 
-If you integrated the editors successfully the result should look like the [demo preview](./language-specific-examples.md#demo-preview) on our site.
-
 ## For Linux
 
 ### Step 1. Install ONLYOFFICE Docs
@@ -247,8 +245,6 @@ See the detailed guide to learn how to install ONLYOFFICE Docs [for Linux](https
 
 In case the example and ONLYOFFICE Docs are installed on different computers, make sure that your server with the example installed has access to the ONLYOFFICE Docs with the address which you specify instead of **documentserver** in the configuration files. Make sure that the ONLYOFFICE Docs in its turn has access to the server with the example installed with the address which you specify instead of **example.com** in the configuration files.
 
-If you integrated the editors successfully the result should look like the [demo preview](./language-specific-examples.md#demo-preview) on our site.
-
 ## For Docker
 
 ### Step 1. Install ONLYOFFICE Docs
@@ -305,5 +301,3 @@ See the detailed guide to learn how to install ONLYOFFICE Docs [for Docker](http
 ### Step 3. Check accessibility
 
 In case the example and ONLYOFFICE Docs are installed on different computers, make sure that your server with the example installed has access to the ONLYOFFICE Docs with the address which you specify instead of **documentserver** in the configuration files. Make sure that the ONLYOFFICE Docs in its turn has access to the server with the example installed with the address which you specify instead of **example.com** in the configuration files.
-
-If you integrated the editors successfully the result should look like the [demo preview](./language-specific-examples.md#demo-preview) on our site.

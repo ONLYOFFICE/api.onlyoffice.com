@@ -41,7 +41,7 @@ export const DocsFeatures: Features = {
       icon: <DocSpaceApiIcon/>,
     },
     {
-      title: 'Plugin and Macros',
+      title: 'Plugins and Macros',
       link: 'plugin-and-macros/get-started/overview',
       description: (
         <>

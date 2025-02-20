@@ -23,7 +23,7 @@ Unhides all the rows and columns in the active spreadsheet.
 })();
 ```
 
-Methods used: GetActiveSheet, GetRows, SetHidden, GetRange, SetValue
+Methods used: [GetActiveSheet](../../../../office-api/usage-api/spreadsheet-api/Api/Methods/GetActiveSheet.md), [GetRows](../../../../office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetRows.md), [SetHidden](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/SetValue.md), [GetRange](../../../../office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetRange.md), [SetValue](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/SetValue.md)
 
 ## Result
 

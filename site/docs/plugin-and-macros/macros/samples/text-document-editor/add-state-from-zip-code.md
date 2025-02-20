@@ -40,7 +40,7 @@ Adds the "State" label and the text form prefilled with "CA" if the zip code of 
 })();
 ```
 
-Methods used: GetDocument, GetAllForms, GetFormKey, GetText, CreateTextForm, SetText, CreateParagraph, AddTabStop, AddText, AddElement, InsertContent
+Methods used: [GetDocument](../../../../office-api/usage-api/text-document-api/Api/Methods/GetDocument.md), [GetAllForms](../../../../office-api/usage-api/text-document-api/ApiDocument/Methods/GetAllForms.md), [GetFormKey](../../../../office-api/usage-api/text-document-api/ApiFormBase/Methods/GetFormKey.md), [GetText](../../../../office-api/usage-api/text-document-api/ApiFormBase/Methods/GetText.md), [CreateTextForm](../../../../office-api/usage-api/form-api/Api/Methods/CreateTextForm.md), [SetText](../../../../office-api/usage-api/text-document-api/ApiTextForm/Methods/SetText.md),, [CreateParagraph](../../../../office-api/usage-api/text-document-api/Api/Methods/CreateParagraph.md), [AddTabStop](../../../../office-api/usage-api/text-document-api/ApiParagraph/Methods/AddTabStop.md), [AddText](../../../../office-api/usage-api/text-document-api/ApiParagraph/Methods/AddText.md), [AddElement](../../../../office-api/usage-api/text-document-api/ApiParagraph/Methods/AddElement.md), [InsertContent](../../../../office-api/usage-api/text-document-api/ApiDocument/Methods/InsertContent.md)
 
 ## Result
 

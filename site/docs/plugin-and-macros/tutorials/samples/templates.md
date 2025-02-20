@@ -61,8 +61,8 @@ Repository on GitHub: [templates](https://github.com/ONLYOFFICE/sdkjs-plugins/tr
 - button
 - init
 - onExternalMouseUp
-- callModule
-- info.recalculate
+- [callModule](../../interacting-with-editors/methods/text-document-api/Plugin/Methods/callModule.md)
+- [info.recalculate](../../interacting-with-editors/overview/how-to-call-commands.md#recalculate)
 
 ## Support
 

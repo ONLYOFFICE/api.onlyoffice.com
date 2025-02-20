@@ -123,14 +123,9 @@ export default function CodeBlockString({
   );
 
   return editorType ? (
-    <Tabs
-      defaultValue="code"
-      values={[
-        { label: 'Code', value: 'code' },
-        { label: 'Result', value: 'result' },
-      ]}>
-      <TabItem value="code">{codeBlockContent}</TabItem>
-      <TabItem value="result">
+    <Tabs>
+      <TabItem value="code" label="Code">{codeBlockContent}</TabItem>
+      <TabItem value="result" label="Result">
         <OnlyOfficeEditor code={code} fileType={editorType} />
       </TabItem>
     </Tabs>

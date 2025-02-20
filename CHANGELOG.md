@@ -1,5 +1,28 @@
 # Change log
 
+## 4.1.0
+
+### New features
+
+#### Site
+
+* Added develop edit url for pages
+
+#### Docs
+
+* Added links to the dynamic pages
+* Added tabs for win/mac/linux
+* Added card list for ready-to-use connectors
+* Added the Conversion API page
+* Changed the Plugins and Macros section title
+
+### Fixes
+
+* Fixed anchors
+* Fixed customization description
+* Fixed links in ready-to-use connectors
+* Fixed the jsValue argument
+
 ## 4.0.0
 
 ### New features

@@ -85,18 +85,18 @@ Repository on GitHub: [autocomplete](https://github.com/ONLYOFFICE/onlyoffice.gi
 
 - button
 - init
-- inputHelper\_onSelectItem
+- inputHelper_onSelectItem
 - onInputHelperClear
 - onInputHelperInput
-- createInputHelper
-- executeMethod ("InputText")
-- getInputHelper
-- InputHelper.createWindow
-- InputHelper.getItems
-- InputHelper.getScrollSizes
-- InputHelper.setItems
-- InputHelper.show
-- InputHelper.unShow
+- [createInputHelper](../../interacting-with-editors/methods/text-document-api/Plugin/Methods/createInputHelper.md)
+- [executeMethod ("InputText")](../../interacting-with-editors/methods/text-document-api/Api/Methods/InputText.md)
+- [getInputHelper](../../interacting-with-editors/methods/text-document-api/Plugin/Methods/getInputHelper.md)
+- [InputHelper.createWindow](../../interacting-with-editors/methods/text-document-api/InputHelper/Methods/createWindow.md)
+- [InputHelper.getItems](../../interacting-with-editors/methods/text-document-api/InputHelper/Methods/getItems.md)
+- [InputHelper.getScrollSizes](../../interacting-with-editors/methods/text-document-api/InputHelper/Methods/getScrollSizes.md)
+- [InputHelper.setItems](../../interacting-with-editors/methods/text-document-api/InputHelper/Methods/setItems.md)
+- [InputHelper.show](../../interacting-with-editors/methods/text-document-api/InputHelper/Methods/show.md)
+- [InputHelper.unShow](../../interacting-with-editors/methods/text-document-api/InputHelper/Methods/unShow.md)
 
 ## Support
 

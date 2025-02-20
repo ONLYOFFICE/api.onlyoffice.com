@@ -42,7 +42,7 @@ Type: JSON object
 
 ### targetOrigin
 
-The *otherWindow* origin that must be for the event to be dispatched. It will be set to the [PostMessageOrigin](./wopi-rest-api/checkfileinfo.md#postmessageorigin) property provided in *CheckFileInfo*.
+The *otherWindow* origin that must be for the event to be dispatched. It will be set to the [PostMessageOrigin](./wopi-rest-api/checkfileinfo.md#postmessage-properties) property provided in *CheckFileInfo*.
 
 \**otherWindow* is a reference to another window that *msg* will be posted to.
 
@@ -78,19 +78,19 @@ This message is posted by the host when it finishes loading. Then the online off
 
 ### UI\_Close
 
-This message is posted when the online office application is closing, either due to an error or a user action. To send this message, the [ClosePostMessage](./wopi-rest-api/checkfileinfo.md#closepostmessage) property in the *CheckFileInfo* response from the host must be set to **true**. Otherwise, the online office will not send this message.
+This message is posted when the online office application is closing, either due to an error or a user action. To send this message, the [ClosePostMessage](./wopi-rest-api/checkfileinfo.md#postmessage-properties) property in the *CheckFileInfo* response from the host must be set to **true**. Otherwise, the online office will not send this message.
 
 ### UI\_Edit
 
-This message is posted when the user activates the *Edit* UI in the online office. This UI is only visible when using the view action. To send this message, the [EditModePostMessage](./wopi-rest-api/checkfileinfo.md#editmodepostmessage) property in the *CheckFileInfo* response from the host must be set to **true**. Otherwise, the online office will not send this message and will redirect the inner iframe to the edit action URL instead.
+This message is posted when the user activates the *Edit* UI in the online office. This UI is only visible when using the view action. To send this message, the [EditModePostMessage](./wopi-rest-api/checkfileinfo.md#postmessage-properties) property in the *CheckFileInfo* response from the host must be set to **true**. Otherwise, the online office will not send this message and will redirect the inner iframe to the edit action URL instead.
 
 ### UI\_FileVersions
 
-This message is posted when the user activates the *Previous Versions* UI in the online office. The host should use this message to trigger any custom file version history UI. To send this message, the [FileVersionPostMessage](./wopi-rest-api/checkfileinfo.md#fileversionpostmessage) property in the *CheckFileInfo* response from the host must be set to **true**. Otherwise, the online office will not send this message.
+This message is posted when the user activates the *Previous Versions* UI in the online office. The host should use this message to trigger any custom file version history UI. To send this message, the [FileVersionPostMessage](./wopi-rest-api/checkfileinfo.md#postmessage-properties) property in the *CheckFileInfo* response from the host must be set to **true**. Otherwise, the online office will not send this message.
 
 ### UI\_Sharing
 
-This message is posted when the user activates the *Share* UI in the online office. The host should use this message to trigger any custom sharing UI. To send this message, the [FileSharingPostMessage](./wopi-rest-api/checkfileinfo.md#filesharingpostmessage) property in the *CheckFileInfo* response from the host must be set to **true**. Otherwise, the online office will not send this message.
+This message is posted when the user activates the *Share* UI in the online office. The host should use this message to trigger any custom sharing UI. To send this message, the [FileSharingPostMessage](./wopi-rest-api/checkfileinfo.md#postmessage-properties) property in the *CheckFileInfo* response from the host must be set to **true**. Otherwise, the online office will not send this message.
 
 ## Collabora specific
 
@@ -102,4 +102,4 @@ This message is posted to download an image from the URL and insert it into the 
 
 This message is posted to display a user interface element (for example, a dialog) allowing the user to pick an image from the integration. The integration is supposed to provide a temporary URL that may be downloaded once, and return it back via the [Action\_InsertGraphic](#action_insertgraphic) message with *Values* set to the temporary URL.
 
-> Please note that the PostMessage messages have the higher priority than the [CloseUrl](./wopi-rest-api/checkfileinfo.md#closeurl), [HostEditUrl](./wopi-rest-api/checkfileinfo.md#hostediturl), [FileSharingUrl](./wopi-rest-api/checkfileinfo.md#filesharingurl), [FileVersionUrl](./wopi-rest-api/checkfileinfo.md#fileversionurl) properties provided in *CheckFileInfo*.
+> Please note that the PostMessage messages have the higher priority than the [CloseUrl](./wopi-rest-api/checkfileinfo.md#file-url-properties), [HostEditUrl](./wopi-rest-api/checkfileinfo.md#file-url-properties), [FileSharingUrl](./wopi-rest-api/checkfileinfo.md#file-url-properties), [FileVersionUrl](./wopi-rest-api/checkfileinfo.md#file-url-properties) properties provided in *CheckFileInfo*.

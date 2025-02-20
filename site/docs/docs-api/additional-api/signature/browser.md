@@ -89,7 +89,7 @@ Sample token:
 
 ### refreshFile
 
-When calling the [refreshFile](../../usage-api/methods.md#refreshFile) method to update the file version, the token must be added to validate the parameters.
+When calling the [refreshFile](../../usage-api/methods.md#refreshfile) method to update the file version, the token must be added to validate the parameters.
 
 The `payload` for the JWT token in the JSON format must have the same structure as the [config](../../usage-api/advanced-parameters.md).
 

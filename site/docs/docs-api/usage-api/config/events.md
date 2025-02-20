@@ -183,7 +183,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
 
 ## onOutdatedVersion
 
-The function called after the [error](../../more-information/troubleshooting.md#key) is shown, when the document is opened for editing with the old [document.key](./document/document.md#key) value, which was used to edit the previous document version and was successfully saved. When this event is called the editor must be reinitialized with a new *document.key*. Deprecated since version 8.3, please use [onRequestRefreshFile](#onrequestrefreshfile) instead.
+The function called after the [error](../../more-information/troubleshooting.md#the-file-version-has-been-changed) is shown, when the document is opened for editing with the old [document.key](./document/document.md#key) value, which was used to edit the previous document version and was successfully saved. When this event is called the editor must be reinitialized with a new *document.key*. Deprecated since version 8.3, please use [onRequestRefreshFile](#onrequestrefreshfile) instead.
 
 Example:
 
@@ -201,7 +201,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
 
 ## onPluginsReady
 
-Tthe function called when all plugins are loaded and can be used.
+The function called when all plugins are loaded and can be used.
 
 Example:
 

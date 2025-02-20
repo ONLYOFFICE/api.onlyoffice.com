@@ -96,7 +96,7 @@ Completes the basic address data with detailed address information and inserts i
 })();
 ```
 
-Methods used: GetActiveSheet, GetRange, SetValue, GetText
+Methods used: [GetActiveSheet](../../../../office-api/usage-api/spreadsheet-api/Api/Methods/GetActiveSheet.md), [GetRange](../../../../office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetRange.md), [SetValue](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/SetValue.md), [GetText](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/GetText.md)
 
 > For the macros to function, replace *yourAPIkey* with the API key obtained from [Geoapify](https://www.geoapify.com/).
 

@@ -15,7 +15,7 @@ Formats the range of cells **A1:D10** as a table.
 })();
 ```
 
-Methods used: GetActiveSheet, FormatAsTable
+Methods used: [GetActiveSheet](../../../../office-api/usage-api/spreadsheet-api/Api/Methods/GetActiveSheet.md), [FormatAsTable](../../../../office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/FormatAsTable.md)
 
 ## Reference Microsoft VBA macro code
 

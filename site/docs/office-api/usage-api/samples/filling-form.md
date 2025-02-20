@@ -2,8 +2,8 @@
 
 Fill a form with the data stored in the object:
 
-- open an existing form document and get all forms (ApiDocument/GetAllForms);
-- run a loop for each form, check the form type and set the data corresponding to the form key (ApiFormBase/GetFormType,  ApiFormBase/GetFormKey, ApiPictureForm/SetImage, ApiComboBoxForm/SetText)
+- open an existing form document and get all forms ([ApiDocument/GetAllForms](../text-document-api/ApiDocument/Methods/GetAllForms.md));
+- run a loop for each form, check the form type and set the data corresponding to the form key ([ApiFormBase/GetFormType](../text-document-api/ApiFormBase/Methods/GetFormType.md),  [ApiFormBase/GetFormKey](../text-document-api/ApiFormBase/Methods/GetFormKey.md), [ApiPictureForm/SetImage](../text-document-api/ApiPictureForm/Methods/SetImage.md), [ApiComboBoxForm/SetText](../text-document-api/ApiComboBoxForm/Methods/SetText.md))
 
 This sample is available for the **C++ and .Net DocBuilder Frameworks**.
 Download the sample and get more information on the [Builder framework samples](../../../document-builder/builder-framework/builder-framework-samples/builder-framework-samples.md) page.
