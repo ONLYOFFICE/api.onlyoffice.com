@@ -18,6 +18,7 @@
 
 * Fixed anchors
 * Fixed customization description
+* Fixed links in ready-to-use connectors
 
 ## 4.0.0
 
