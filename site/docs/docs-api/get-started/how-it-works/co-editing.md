@@ -223,7 +223,7 @@ If the user saves the document before the editing is finished (the *status* valu
 
    Where **example.com** is the name of the server where **document manager** and **document storage service** are installed.
 
-7. Add the script initializing the **Document Editor** for editing the document created. *Key 1* cannot be used as it was changed after saving the file. An [error](../../more-information/troubleshooting.md#key) occurs.
+7. Add the script initializing the **Document Editor** for editing the document created. *Key 1* cannot be used as it was changed after saving the file. An [error](../../more-information/troubleshooting.md#the-file-version-has-been-changed) occurs.
 
    Close the **Document Editor**.
 
