@@ -27,4 +27,4 @@ End Sub
 
 ## Result
 
-![Background color](/assets/images/plugins/background-color.png)
+![Background color](/assets/images/plugins/background-color.png#gh-light-mode-only)![Background color](/assets/images/plugins/background-color.dark.png#gh-dark-mode-only)

@@ -93,4 +93,4 @@ Methods used: [GetActiveSheet](../../../../office-api/usage-api/spreadsheet-api/
 
 <!-- imgpath -->
 
-![Currency conversion](/assets/images/plugins/currency-conversion.png)
+![Currency conversion](/assets/images/plugins/currency-conversion.png#gh-light-mode-only)![Currency conversion](/assets/images/plugins/currency-conversion.dark.png#gh-dark-mode-only)

@@ -27,4 +27,4 @@ End Sub
 
 ## Result
 
-![Range as a table](/assets/images/plugins/range-as-a-table.png)
+![Range as a table](/assets/images/plugins/range-as-a-table.png#gh-light-mode-only)![Range as a table](/assets/images/plugins/range-as-a-table.dark.png#gh-dark-mode-only)

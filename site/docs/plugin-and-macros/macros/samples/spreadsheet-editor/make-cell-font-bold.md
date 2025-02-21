@@ -27,4 +27,4 @@ End Sub
 
 ## Result
 
-![Font bold](/assets/images/plugins/font-bold.png)
+![Font bold](/assets/images/plugins/font-bold.png#gh-light-mode-only)![Font bold](/assets/images/plugins/font-bold.dark.png#gh-dark-mode-only)

@@ -212,6 +212,11 @@
   /* --ifm-font-family-base: "Open Sans", "Open Sans Fallback", system-ui, sans-serif; */
 }
 
+[data-theme='light'] img[src$='#gh-dark-mode-only'],
+[data-theme='dark'] img[src$='#gh-light-mode-only'] {
+  display: none;
+}
+
 html[data-theme='light'] {
   /* --ifm-menu-color-background-active: var(--c-blue-0); */
   --ifm-menu-color: #444;

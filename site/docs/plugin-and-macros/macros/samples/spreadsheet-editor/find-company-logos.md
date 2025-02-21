@@ -67,4 +67,4 @@ Methods used: [GetActiveSheet](../../../../office-api/usage-api/spreadsheet-api/
 
 <!-- imgpath -->
 
-![Find Company Logos](/assets/images/plugins/find-company-logos.png)
+![Find Company Logos](/assets/images/plugins/find-company-logos.png#gh-light-mode-only)![Find Company Logos](/assets/images/plugins/find-company-logos.dark.png#gh-dark-mode-only)

@@ -105,4 +105,4 @@ End Sub
 
 ## Result
 
-![Change Background Color](/assets/images/plugins/change-background-color.png)
+![Change Background Color](/assets/images/plugins/change-background-color.png#gh-light-mode-only)![Change Background Color](/assets/images/plugins/change-background-color.dark.png#gh-dark-mode-only)

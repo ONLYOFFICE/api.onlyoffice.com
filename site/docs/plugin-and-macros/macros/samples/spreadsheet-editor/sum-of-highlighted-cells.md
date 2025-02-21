@@ -63,4 +63,4 @@ End Sub
 
 ## Result
 
-![Sum of highlighted cells](/assets/images/plugins/sum-of-highlighted-cells.png)
+![Sum of highlighted cells](/assets/images/plugins/sum-of-highlighted-cells.png#gh-light-mode-only)![Sum of highlighted cells](/assets/images/plugins/sum-of-highlighted-cells.dark.png#gh-dark-mode-only)
