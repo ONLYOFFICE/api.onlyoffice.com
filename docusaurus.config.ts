@@ -28,8 +28,8 @@ const config: Config = {
     experimental_faster: {
       mdxCrossCompilerCache: true,
       swcJsLoader: false,
-      swcJsMinimizer: false,
-      swcHtmlMinimizer: false,
+      swcJsMinimizer: true,
+      swcHtmlMinimizer: true,
       lightningCssMinimizer: false,
       rspackBundler: false,
     }
