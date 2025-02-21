@@ -142,7 +142,7 @@ JWT 令牌的有效载荷（JSON 格式）必须与[config](../../usage-api/adva
 
 ### setHistoryData
 
-在 ONLYOFFICE 文档服务器中调用 [setHistoryData](../../Usage%20API/Methods.md#sethistorydata) 方法查看文档 [历史](../../get-started/how-it-works/document-history.md) 版本时，必须添加令牌以验证参数。
+在 ONLYOFFICE 文档服务器中调用 [setHistoryData](../../usage-api/methods.md#sethistorydata) 方法查看文档 [历史](../../get-started/how-it-works/document-history.md) 版本时，必须添加令牌以验证参数。
 
 JSON 格式的 JWT 令牌的有效负载必须与方法参数具有相同的结构。要签名的参数列表没有严格规定，但我们建议您指定所有发送的参数：
 
