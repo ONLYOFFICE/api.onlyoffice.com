@@ -1,7 +1,5 @@
 # Unhide all rows and columns
 
-## Description
-
 Unhides all the rows and columns in the active spreadsheet.
 
 <!-- This code snippet is shown in the screenshot. -->

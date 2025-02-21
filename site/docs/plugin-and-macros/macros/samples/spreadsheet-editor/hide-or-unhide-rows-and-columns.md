@@ -1,7 +1,5 @@
 # Hide or unhide rows and columns
 
-## Description
-
 Hides or unhides the specified rows and/or columns in the spreadsheet.
 
 <!-- This code snippet is shown in the screenshot. -->

@@ -1,7 +1,5 @@
 # Replace words in document
 
-## Description
-
 Searches for a word throughout the document and replaces it with the given replacement word.
 
 <!-- This code snippet is shown in the screenshot. -->

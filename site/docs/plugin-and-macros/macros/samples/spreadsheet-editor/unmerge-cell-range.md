@@ -1,7 +1,5 @@
 # Unmerge cell range
 
-## Description
-
 Unmerges the selected cell range.
 
 <!-- This code snippet is shown in the screenshot. -->

@@ -1,7 +1,5 @@
 # Remove extra spaces
 
-## Description
-
 Removes extra spaces in text document.
 
 <!-- This code snippet is shown in the screenshot. -->

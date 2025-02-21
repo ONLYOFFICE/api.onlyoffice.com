@@ -1,7 +1,5 @@
 # Generate hyperlinks
 
-## Description
-
 Generates and inserts hyperlinks instead of text URLs.
 
 <!-- This code snippet is shown in the screenshot. -->
