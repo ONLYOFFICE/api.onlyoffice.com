@@ -61,12 +61,13 @@ export default function CodeBlockString({
     showLineNumbersProp ?? containsLineNumbers(metastring);
 
   const notExpression = !(code && code.includes("expression"));
+  const notBuilder = !(code && code.includes("builder"));
   const location = useLocation();
   const editorWord = location.pathname.includes("/docs/office-api/usage-api/text-document-api/") && "docx";
   const editorCell = location.pathname.includes("/docs/office-api/usage-api/spreadsheet-api/") && "xlsx";
   const editorSlide = location.pathname.includes("/docs/office-api/usage-api/presentation-api/") && "pptx";
   const editorPdf = location.pathname.includes("/docs/office-api/usage-api/form-api/") && "pdf";
-  const editorType = notExpression && (editorWord || editorCell || editorSlide || editorPdf);
+  const editorType = notExpression && notBuilder && (editorWord || editorCell || editorSlide || editorPdf);
 
   const codeBlockContent = (
     <Container

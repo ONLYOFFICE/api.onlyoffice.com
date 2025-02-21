@@ -46,13 +46,7 @@ builder.SaveFile("docx", "example.docx")
 builder.CloseFile()
 ```
 
-Actually in the above example the created text document will have two paragraphs, as the first paragraph is created by default for an empty text document, i.e. a new empty text document always contains at least one paragraph. You can address the first paragraph to change it using the *Api.GetElement(0)* method, so that line 4 of the above code looked like this:
-
-``` ts
-oParagraph = oDocument.GetElement(0)
-```
-
-and line 7 (*oDocument.Push(oParagraph);*) is not needed.
+Actually in the above example the created text document will have two paragraphs, as the first paragraph is created by default for an empty text document, i.e. a new empty text document always contains at least one paragraph. You can address the first paragraph to change it using the *Api.GetElement(0)* method, so that line 4 of the above code looked like this: *oParagraph = oDocument.GetElement(0)* and line 7 (*oDocument.Push(oParagraph);*) is not needed.
 
 ## Opening an existing text document
 
