@@ -401,3 +401,8 @@ main {
   line-height: 20px;
   transition: opacity .2s ease-out;
 }
+
+.clean-btn svg[class^='copyButtonSuccessIcon'], .clean-btn svg[class*=' copyButtonSuccessIcon'] {
+  top: 50%;
+  left: 50%;
+}
