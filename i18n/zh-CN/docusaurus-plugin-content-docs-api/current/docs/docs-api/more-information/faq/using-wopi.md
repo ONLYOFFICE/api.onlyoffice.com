@@ -26,13 +26,13 @@ sidebar_position: -1
 
 ## 如何将 ONLYOFFICE 文档配置为仅接受来自受信任的集成商的 WOPI 请求？
 
-此类可信集成商的 IP 地址必须包含在 [WOPI 域允许列表](https://docs.microsoft.com/en-us/microsoft-365/cloud-storage-partner-program/online/build-test-ship/settings#wopi-domain-allow-list)中。
+此类可信集成商的 IP 地址必须包含在 [WOPI 域允许列表](https://docs.microsoft.com/zh-cn/microsoft-365/cloud-storage-partner-program/online/build-test-ship/settings#wopi-domain-allow-list)中。
 
 按照[此章节中](../../using-wopi/overview.md#ip-filter)的步骤配置 ONLYOFFICE 文档 IP 过滤器。
 
 ## 为什么我需要discovery XML 以及如何获取它？
 
-[WOPI 发现](https://docs.microsoft.com/en-us/microsoft-365/cloud-storage-partner-program/online/discovery) 是通过从在线办公室请求discovery XML 来帮助 WOPI 服务器发现 WOPI 客户端的过程。WOPI 主机使用discovery XML 来指定如何与在线办公室进行交互。discovery XML的 **action** 元素表示：
+[WOPI 发现](https://docs.microsoft.com/zh-cn/microsoft-365/cloud-storage-partner-program/online/discovery) 是通过从在线办公室请求discovery XML 来帮助 WOPI 服务器发现 WOPI 客户端的过程。WOPI 主机使用discovery XML 来指定如何与在线办公室进行交互。discovery XML的 **action** 元素表示：
 
 - 在线办公室中可用的文档操作，
 - 支持的文件格式（扩展名）。
@@ -84,7 +84,7 @@ sidebar_position: -1
 
 要限制公众访问您的数据，必须配置在线办公室和集成商之间的安全请求交换。
 
-集成商必须检查是否从 ONLYOFFICE 文档收到请求。它为此目的使用 [证明密钥](https://docs.microsoft.com/en-us/microsoft-365/cloud-storage-partner-program/online/scenarios/proofkeys) 。ONLYOFFICE 文档使用私钥对请求进行签名。相应的公钥写在 [WOPI discovery XML](../../using-wopi/wopi-discovery.md) 的 proof-key 元素中。集成商使用公钥检查私钥。签名随 **X-WOPI-Proof** 和 **X-WOPI-ProofOld** HTTP 标头中的每个请求一起发送。
+集成商必须检查是否从 ONLYOFFICE 文档收到请求。它为此目的使用 [证明密钥](https://docs.microsoft.com/zh-cn/microsoft-365/cloud-storage-partner-program/online/scenarios/proofkeys) 。ONLYOFFICE 文档使用私钥对请求进行签名。相应的公钥写在 [WOPI discovery XML](../../using-wopi/wopi-discovery.md) 的 proof-key 元素中。集成商使用公钥检查私钥。签名随 **X-WOPI-Proof** 和 **X-WOPI-ProofOld** HTTP 标头中的每个请求一起发送。
 
 有关证明密钥的更多信息，请参见[此页面](../../using-wopi/proof-keys.md)。
 
