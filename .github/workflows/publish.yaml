@@ -40,8 +40,17 @@ jobs:
         LOCALE="--locale en"
         SUB_ARGS=""
 
-        # Build locale string
-        [[ "$CN" == "true" ]] && LOCALE="$LOCALE --locale zh-CN"
+        # Build CN locale string
+        if [[ "$CN" == "true" ]]; then
+           LOCALE="$LOCALE --locale zh-CN"
+           # Docusaurus link issues fix
+           # NOTE: Should be remove after the issue is be fixed
+           mkdir -p i18n/zh-CN/docusaurus-plugin-content-docs-api/current2
+           cp -r site/** i18n/zh-CN/docusaurus-plugin-content-docs-api/current2
+           cp -r i18n/zh-CN/docusaurus-plugin-content-docs-api/current/** i18n/zh-CN/docusaurus-plugin-content-docs-api/current2
+           rm -rf i18n/zh-CN/docusaurus-plugin-content-docs-api/current
+           mv i18n/zh-CN/docusaurus-plugin-content-docs-api/current2 i18n/zh-CN/docusaurus-plugin-content-docs-api/current
+        fi
 
         # Build sub-arguments string
         [[ "$mode" == "testing" ]] && SUB_ARGS="--dev"
