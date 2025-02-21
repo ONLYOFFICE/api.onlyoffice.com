@@ -25,4 +25,4 @@ End Sub
 
 ## Result
 
-![Unmerge-before](/assets/images/plugins/unmerge-cells-before.png) ![Unmerge-after](/assets/images/plugins/unmerge-cells-after.png)
+![Unmerge-before](/assets/images/plugins/unmerge-cells-before.png#gh-light-mode-only)![Unmerge-before](/assets/images/plugins/unmerge-cells-before.dark.png#gh-dark-mode-only) ![Unmerge-after](/assets/images/plugins/unmerge-cells-after.png#gh-light-mode-only)![Unmerge-after](/assets/images/plugins/unmerge-cells-after.dark.png#gh-dark-mode-only)

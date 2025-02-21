@@ -45,7 +45,7 @@ Type: number
 
 Example: 2
 
-![Plugin groups](/assets/images/plugins/plugin-groups.png)
+![Plugin groups](/assets/images/plugins/plugin-groups.png#gh-light-mode-only)![Plugin groups](/assets/images/plugins/plugin-groups.dark.png#gh-dark-mode-only)
 
 ## guid
 
@@ -63,7 +63,7 @@ Type: string
 
 Example: "url_to_help_page"
 
-![Plugin help](/assets/images/plugins/plugin-help.png)
+![Plugin help](/assets/images/plugins/plugin-help.png#gh-light-mode-only)![Plugin help](/assets/images/plugins/plugin-help.dark.png#gh-dark-mode-only)
 
 ## minVersion
 
@@ -179,7 +179,7 @@ Example:
 ]
 ```
 
-![Plugin buttons](/assets/images/plugins/plugin-buttons.png)
+![Plugin buttons](/assets/images/plugins/plugin-buttons.png#gh-light-mode-only)![Plugin buttons](/assets/images/plugins/plugin-buttons.dark.png#gh-dark-mode-only)
 
 ### variations.cryptoDisabledForExternalCloud
 
@@ -227,7 +227,7 @@ Type: string
 
 Example: "plugin description"
 
-![Plugin description](/assets/images/plugins/plugin-description.png)
+![Plugin description](/assets/images/plugins/plugin-description.png#gh-light-mode-only)![Plugin description](/assets/images/plugins/plugin-description.dark.png#gh-dark-mode-only)
 
 ### variations.descriptionLocale
 
@@ -277,7 +277,7 @@ Type: string
 
 Example:  "text"
 
-![Init data](/assets/images/plugins/init-data.png)
+![Init data](/assets/images/plugins/init-data.png#gh-light-mode-only)![Init data](/assets/images/plugins/init-data.dark.png#gh-dark-mode-only)
 
 ### variations.initDataType
 
@@ -457,7 +457,7 @@ Type: array of strings
 
 Example: `["specAbilities", "work"]`
 
-![Plugin categories](/assets/images/plugins/plugin-categories.png)
+![Plugin categories](/assets/images/plugins/plugin-categories.png#gh-light-mode-only)![Plugin categories](/assets/images/plugins/plugin-categories.dark.png#gh-dark-mode-only)
 
 ### variations.store.icons
 
@@ -510,7 +510,7 @@ Type: array of strings
 
 Example: `["resources/store/screenshots/screen\_1.png"]`
 
-![Plugin screenshots](/assets/images/plugins/plugin-screenshots.png)
+![Plugin screenshots](/assets/images/plugins/plugin-screenshots.png#gh-light-mode-only)![Plugin screenshots](/assets/images/plugins/plugin-screenshots.dark.png#gh-dark-mode-only)
 
 ### variations.type
 

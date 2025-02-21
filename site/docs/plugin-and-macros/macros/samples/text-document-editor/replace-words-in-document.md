@@ -43,4 +43,4 @@ End Sub
 
 <!-- imgpath -->
 
-![Replace Words in Document](/assets/images/plugins/replace-words-in-document.png)
+![Replace Words in Document](/assets/images/plugins/replace-words-in-document.png#gh-light-mode-only)![Replace Words in Document](/assets/images/plugins/replace-words-in-document.dark.png#gh-dark-mode-only)

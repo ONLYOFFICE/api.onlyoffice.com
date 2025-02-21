@@ -44,4 +44,4 @@ End Sub
 
 <!-- imgpath -->
 
-![Hide or unhide rows and columns](/assets/images/plugins/hide-unhide-rows-columns.png)
+![Hide or unhide rows and columns](/assets/images/plugins/hide-unhide-rows-columns.png#gh-light-mode-only)![Hide or unhide rows and columns](/assets/images/plugins/hide-unhide-rows-columns.dark.png#gh-dark-mode-only)

@@ -82,4 +82,4 @@ End Sub
 
 <!-- imgpath -->
 
-![Import hyperlinks](/assets/images/plugins/import-hyperlinks.png)
+![Import hyperlinks](/assets/images/plugins/import-hyperlinks.png#gh-light-mode-only)![Import hyperlinks](/assets/images/plugins/import-hyperlinks.dark.png#gh-dark-mode-only)

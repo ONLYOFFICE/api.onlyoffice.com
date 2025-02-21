@@ -6,7 +6,7 @@ sidebar_position: -4
 
 Plugins can be placed on the toolbar: create their own tabs and fill them, add buttons to the standard tabs.
 
-![Toolbar item](/assets/images/plugins/toolbar-plugins.png)
+![Toolbar item](/assets/images/plugins/toolbar-plugins.png#gh-light-mode-only)![Toolbar item](/assets/images/plugins/toolbar-plugins.dark.png#gh-dark-mode-only)
 
 ## Creating a toolbar item
 
@@ -224,7 +224,7 @@ Plugins can be placed on the toolbar: create their own tabs and fill them, add b
    }
    ```
 
-   ![Regular button](/assets/images/plugins/regular-button.png)
+   ![Regular button](/assets/images/plugins/regular-button.png#gh-light-mode-only)![Regular button](/assets/images/plugins/regular-button.dark.png#gh-dark-mode-only)
 
    #### Sample 2
 
@@ -239,7 +239,7 @@ Plugins can be placed on the toolbar: create their own tabs and fill them, add b
    }
    ```
 
-   ![Split and toggled button](/assets/images/plugins/split-toggle-button.png)
+   ![Split and toggled button](/assets/images/plugins/split-toggle-button.png#gh-light-mode-only)![Split and toggled button](/assets/images/plugins/split-toggle-button.dark.png#gh-dark-mode-only)
 
    #### Sample 3
 
@@ -254,7 +254,7 @@ Plugins can be placed on the toolbar: create their own tabs and fill them, add b
    }
    ```
 
-   ![Split button](/assets/images/plugins/split-button.png)
+   ![Split button](/assets/images/plugins/split-button.png#gh-light-mode-only)![Split button](/assets/images/plugins/split-button.dark.png#gh-dark-mode-only)
 
    #### Sample 4
 
@@ -269,7 +269,7 @@ Plugins can be placed on the toolbar: create their own tabs and fill them, add b
    }
    ```
 
-   ![Button with menu](/assets/images/plugins/button-with-menu.png)
+   ![Button with menu](/assets/images/plugins/button-with-menu.png#gh-light-mode-only)![Button with menu](/assets/images/plugins/button-with-menu.dark.png#gh-dark-mode-only)
 
    #### Sample 5
 
@@ -283,7 +283,7 @@ Plugins can be placed on the toolbar: create their own tabs and fill them, add b
    }
    ```
 
-   ![Toggled button](/assets/images/plugins/toggled-button.png)
+   ![Toggled button](/assets/images/plugins/toggled-button.png#gh-light-mode-only)![Toggled button](/assets/images/plugins/toggled-button.dark.png#gh-dark-mode-only)
 
 2. [Subscibe](../interacting-with-editors/overview/how-to-attach-events.md) to the **onToolbarMenuClick** event which is called when the toolbar menu button has been clicked.
 

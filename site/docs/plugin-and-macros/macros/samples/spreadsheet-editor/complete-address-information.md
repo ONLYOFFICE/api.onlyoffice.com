@@ -100,4 +100,4 @@ Methods used: [GetActiveSheet](../../../../office-api/usage-api/spreadsheet-api/
 
 ## Result
 
-![Write data](/assets/images/plugins/complete-address-information.png)
+![Write data](/assets/images/plugins/complete-address-information.png#gh-light-mode-only)![Write data](/assets/images/plugins/complete-address-information.dark.png#gh-dark-mode-only)

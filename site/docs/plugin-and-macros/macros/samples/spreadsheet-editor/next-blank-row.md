@@ -46,4 +46,4 @@ End Sub
 
 ## Result
 
-![Next blank row](/assets/images/plugins/next-blank-row.png)
+![Next blank row](/assets/images/plugins/next-blank-row.png#gh-light-mode-only)![Next blank row](/assets/images/plugins/next-blank-row.dark.png#gh-dark-mode-only)

@@ -61,4 +61,4 @@ End Sub
 
 <!-- imgpath -->
 
-![Remove extra spaces](/assets/images/plugins/remove-extra-spaces.png)
+![Remove extra space](/assets/images/plugins/remove-extra-spaces.png#gh-light-mode-only)![Remove extra space](/assets/images/plugins/remove-extra-spaces.dark.png#gh-dark-mode-only)

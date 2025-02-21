@@ -25,4 +25,4 @@ End Sub
 
 ## Result
 
-![Merge cells](/assets/images/plugins/merge-cells.png)
+![Merge cells](/assets/images/plugins/merge-cells.png#gh-light-mode-only)![Insert text](/assets/images/plugins/merge-cells.dark.png#gh-dark-mode-only)

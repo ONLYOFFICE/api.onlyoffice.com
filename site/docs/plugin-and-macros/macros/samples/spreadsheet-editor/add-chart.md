@@ -27,4 +27,4 @@ End Sub
 
 ## Result
 
-![Chart](/assets/images/plugins/add-chart.png)
+![Chart](/assets/images/plugins/add-chart.png#gh-light-mode-only)![Chart](/assets/images/plugins/add-chart.dark.png#gh-dark-mode-only)

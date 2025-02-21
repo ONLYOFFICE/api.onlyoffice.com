@@ -47,4 +47,4 @@ Methods used: [GetDocument](../../../../office-api/usage-api/text-document-api/A
 
 <!-- imgpath -->
 
-![Generate Hyperlinks](/assets/images/plugins/generate-hyperlinks.png)
+![Generate Hyperlinks](/assets/images/plugins/generate-hyperlinks.png#gh-light-mode-only)![Generate Hyperlinks](/assets/images/plugins/generate-hyperlinks.dark.png#gh-dark-mode-only)
