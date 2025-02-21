@@ -82,7 +82,7 @@ const addScript = async (secret: string, fileType: string, code: string): Promis
   const config = {
     document: documentConfig,
     documentType: getDocumentType(fileType),
-    editorConfig: { callbackUrl: "" }
+    editorConfig: { callbackUrl: "", customization: { anonymous: {request: false} }}
   };
 
   const token = await createJWT(config, secret);
