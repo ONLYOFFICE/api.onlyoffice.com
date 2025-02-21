@@ -14,7 +14,7 @@ sidebar_position: -8
 
 ## 如何找到当前正在编辑文档的用户的信息？
 
-您可以使用API向**文档命令服务**发送 POST 请求。将 *c<* 参数设置为[info](../../additional-api/command-service/info.md) 与 *key* 参数一起使用，以标识您要查找有关信息的文档。参数作为请求正文中JSON对象的一部分发送：
+您可以使用API向**文档命令服务**发送 POST 请求。将 *c* 参数设置为[info](../../additional-api/command-service/info.md) 与 *key* 参数一起使用，以标识您要查找有关信息的文档。参数作为请求正文中JSON对象的一部分发送：
 
   ``` json
   {
