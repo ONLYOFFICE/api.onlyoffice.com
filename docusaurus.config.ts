@@ -16,6 +16,8 @@ const config: Config = {
 
   trailingSlash: true,
 
+  noIndex: isDev,
+
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
 
