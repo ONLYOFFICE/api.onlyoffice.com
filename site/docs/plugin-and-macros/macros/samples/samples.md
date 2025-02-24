@@ -196,6 +196,12 @@ In this example we are writing the data (the "Hello world" phrase) to fourth col
 
 [More](spreadsheet-editor/write-data-to-worksheet-cell.md)
 
+### Apply conditional formatting rules
+
+In this example, we are applying multiple conditional formatting rules to a selection in the spreadsheet.
+
+[More](spreadsheet-editor/conditonal-formatting-rules.md)
+
 ## Presentation editor
 
 ### Change background color
@@ -215,6 +221,24 @@ In this example we are changing the font family and/or size in the presentation.
 In this example we are removing shapes from the presentation.
 
 [More](presentation-editor/remove-shapes-from-slides.md)
+
+### Change chart type on all slides
+
+In this example we are changing the chart type of all the charts throughout the presentation.
+
+[More](presentation-editor/remove-shapes-from-slides.md)
+
+### Apply a font style on all slides
+
+In this example we are applying a consistent font style to all the slides in the presentation.
+
+[More](presentation-editor/apply-font-style.md)
+
+### Convert all hyperlinks to qr codes
+
+In this example we are converting all the hyperlinks to qr codes in the presentation.
+
+[More](presentation-editor/hyperlinks-to-qr-codes.md)
 
 ## Support
 
