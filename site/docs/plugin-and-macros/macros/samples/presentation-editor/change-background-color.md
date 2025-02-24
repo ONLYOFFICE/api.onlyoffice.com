@@ -1,7 +1,5 @@
 # Change background color
 
-## Description
-
 Sets blue color as the background of even indexed slides, if it is odd sets an image.
 
 <!-- This code snippet is shown in the screenshot. -->
@@ -36,7 +34,7 @@ Sets blue color as the background of even indexed slides, if it is odd sets an i
 })();
 ```
 
-Methods used: GetPresentation, GetSlidesCount, CreateRGBColor, CreateSolidFill, CreateBlipFill, GetSlideByIndex, SetBackground
+Methods used: [GetPresentation](../../../../office-api/usage-api/presentation-api/Api/Methods/GetPresentation.md), [GetSlidesCount](../../../../office-api/usage-api/presentation-api/ApiPresentation/Methods/GetSlidesCount.md), [CreateRGBColor](../../../../office-api/usage-api/presentation-api/Api/Methods/CreateRGBColor.md), [CreateSolidFill](../../../../office-api/usage-api/presentation-api/Api/Methods/CreateSolidFill.md), [CreateBlipFill](../../../../office-api/usage-api/presentation-api/Api/Methods/CreateBlipFill.md), [GetSlideByIndex](../../../../office-api/usage-api/presentation-api/ApiPresentation/Methods/GetSlideByIndex.md), [SetBackground](../../../../office-api/usage-api/presentation-api/ApiSlide/Methods/SetBackground.md)
 
 ## Reference Microsoft VBA macro code
 
@@ -105,4 +103,4 @@ End Sub
 
 ## Result
 
-![Change Background Color](/assets/images/plugins/change-background-color.png)
+![Change Background Color](/assets/images/plugins/change-background-color.png#gh-light-mode-only)![Change Background Color](/assets/images/plugins/change-background-color.dark.png#gh-dark-mode-only)

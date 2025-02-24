@@ -168,7 +168,7 @@ Repository on GitHub: [zotero](https://github.com/ONLYOFFICE/onlyoffice.github.i
 - button
 - init
 - onTranslate
-- executeMethod ("PasteHtml")
+- [executeMethod ("PasteHtml")](../../interacting-with-editors/methods/text-document-api/Api/Methods/PasteHtml.md)
 
 ## Support
 

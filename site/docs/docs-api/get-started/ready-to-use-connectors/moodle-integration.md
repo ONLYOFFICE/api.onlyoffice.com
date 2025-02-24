@@ -19,7 +19,7 @@ The easiest way to install an instance of ONLYOFFICE Docs is to use [Docker](htt
 
 This plugin is an **activity module**.
 
-Follow the usual Moodle plugin installation steps to install this plugin into your *mod/onlyoffice* directory. Please see [Moodle Documentation](https://docs.moodle.org/311/en/installing_plugins) for more information.
+Follow the usual Moodle plugin installation steps to install this plugin into your *mod/onlyoffice* directory. Please see [Moodle Documentation](https://docs.moodle.org/311/en/Installing_plugins) for more information.
 
 The latest compiled package files are available [here](https://github.com/ONLYOFFICE/moodle-mod_onlyofficeeditor/releases).
 

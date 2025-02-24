@@ -4,6 +4,8 @@ import type * as Preset from '@docusaurus/preset-classic';
 import type * as Plugin from "@docusaurus/types/src/plugin";
 import type * as OpenApiPlugin from "docusaurus-plugin-openapi-docs";
 
+const isDev = process.env.NODE_ENV === 'development';
+
 const config: Config = {
   title: 'ONLYOFFICE',
   tagline: 'ONLYOFFICE',
@@ -14,8 +16,15 @@ const config: Config = {
 
   trailingSlash: true,
 
+  noIndex: isDev,
+
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
+
+  customFields: {
+    documentServer: isDev ? 'https://api.docs.teamlab.info/' : 'https://api.docs.onlyoffice.com/',
+    documentServerSecret: isDev ? 'MYSECRET' : 'NsOb2yUBaI9yme0wbkGAapi',
+  },
 
   future: {
     experimental_faster: {
@@ -30,7 +39,6 @@ const config: Config = {
 
   i18n: {
     defaultLocale: 'en',
-    path: './site',
     locales: ['en', 'zh-CN'],
   },
 
@@ -44,11 +52,12 @@ const config: Config = {
           path: './site',
           routeBasePath: '',
 
-          editUrl: 'https://github.com/ONLYOFFICE/api.onlyoffice.com/tree/master',
+          editUrl:
+            isDev
+              ? 'https://git.onlyoffice.com/ONLYOFFICE/api.onlyoffice.com/src/branch/master'
+              : 'https://github.com/ONLYOFFICE/api.onlyoffice.com/tree/master',
 
           docItemComponent: '@theme/ApiItem',
-          //editUrl:
-          //  'https://github.com/trofim24/api.onlyoffice.com.3.0/',
         },
         theme: {
           customCss: './src/css/custom.css',
@@ -165,7 +174,7 @@ const config: Config = {
             {
               type: 'docSidebar',
               sidebarId: 'docsMacros',
-              label: 'Plugin and Macros',
+              label: 'Plugins and Macros',
               docsPluginId: 'api',
             },
             {

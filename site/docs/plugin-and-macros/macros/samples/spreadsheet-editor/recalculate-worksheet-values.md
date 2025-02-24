@@ -1,7 +1,5 @@
 # Recalculate worksheet values
 
-## Description
-
 Repeatedly recalculates worksheet cell values within one-second intervals.
 
 <!-- This code snippet is shown in the screenshot. -->
@@ -20,8 +18,8 @@ Repeatedly recalculates worksheet cell values within one-second intervals.
 })();
 ```
 
-Methods used: GetActiveSheet, GetRange, SetValue
+Methods used: [GetActiveSheet](../../../../office-api/usage-api/spreadsheet-api/Api/Methods/GetActiveSheet.md), [GetRange](../../../../office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetRange.md), [SetValue](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/SetValue.md)
 
 ## Result
 
-![Recalculate worksheet values](/assets/images/plugins/recalculate-cell-values.png)
+![Recalculate worksheet values](/assets/images/plugins/recalculate-cell-values.png#gh-light-mode-only)![Recalculate worksheet values](/assets/images/plugins/recalculate-cell-values.dark.png#gh-dark-mode-only)

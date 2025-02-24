@@ -1,7 +1,5 @@
 # Sum of highlighted cells
 
-## Description
-
 Sums the answer of all highlighted cells in a spreadsheet.
 
 <!-- This code snippet is shown in the screenshot. -->
@@ -39,7 +37,7 @@ Sums the answer of all highlighted cells in a spreadsheet.
 })();
 ```
 
-Methods used: GetActiveSheet, GetRange, SetFillColor, CreateColorFromRGB, GetFillColor, ForEach, GetRGB, GetValue
+Methods used: [GetActiveSheet](../../../../office-api/usage-api/spreadsheet-api/Api/Methods/GetActiveSheet.md), [GetRange](../../../../office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetRange.md), [SetFillColor](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/SetFillColor.md), [CreateColorFromRGB](../../../../office-api/usage-api/spreadsheet-api/Api/Methods/CreateColorFromRGB.md), [GetFillColor](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/GetFillColor.md), [ForEach](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/ForEach.md), [GetRGB](../../../../office-api/usage-api/spreadsheet-api/ApiColor/Methods/GetRGB.md), [GetValue](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/GetValue.md)
 
 ## Reference Microsoft VBA macro code
 
@@ -63,4 +61,4 @@ End Sub
 
 ## Result
 
-![Sum of highlighted cells](/assets/images/plugins/sum-of-highlighted-cells.png)
+![Sum of highlighted cells](/assets/images/plugins/sum-of-highlighted-cells.png#gh-light-mode-only)![Sum of highlighted cells](/assets/images/plugins/sum-of-highlighted-cells.dark.png#gh-dark-mode-only)

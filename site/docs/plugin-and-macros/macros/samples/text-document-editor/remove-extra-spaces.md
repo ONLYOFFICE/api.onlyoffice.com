@@ -1,7 +1,5 @@
 # Remove extra spaces
 
-## Description
-
 Removes extra spaces in text document.
 
 <!-- This code snippet is shown in the screenshot. -->
@@ -39,7 +37,7 @@ Removes extra spaces in text document.
 })();
 ```
 
-Methods used: GetDocument, GetRangeBySelect, GetText, Delete, CreateParagraph, AddText, InsertContent
+Methods used: [GetDocument](../../../../office-api/usage-api/text-document-api/Api/Methods/GetDocument.md), [GetRangeBySelect](../../../../office-api/usage-api/text-document-api/ApiDocument/Methods/GetRangeBySelect.md), [GetText](../../../../office-api/usage-api/text-document-api/ApiRange/Methods/GetText.md), [Delete](../../../../office-api/usage-api/text-document-api/ApiRange/Methods/Delete.md), [CreateParagraph](../../../../office-api/usage-api/text-document-api/Api/Methods/CreateParagraph.md), [AddText](../../../../office-api/usage-api/text-document-api/ApiParagraph/Methods/AddText.md), [InsertContent](../../../../office-api/usage-api/text-document-api/ApiDocument/Methods/InsertContent.md)
 
 ## Reference Microsoft VBA macro code
 
@@ -63,4 +61,4 @@ End Sub
 
 <!-- imgpath -->
 
-![Remove extra spaces](/assets/images/plugins/remove-extra-spaces.png)
+![Remove extra space](/assets/images/plugins/remove-extra-spaces.png#gh-light-mode-only)![Remove extra space](/assets/images/plugins/remove-extra-spaces.dark.png#gh-dark-mode-only)

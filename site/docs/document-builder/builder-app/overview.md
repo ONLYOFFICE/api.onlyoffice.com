@@ -59,7 +59,7 @@ If you use **ONLYOFFICE Document Builder** as both an application and a script, 
    ``` ts
    const jsVar = "123.docx"
    builder.SaveFile("docx", jsVar) // Incorrect
-   builder.SaveFile("docx", jsValue(jsVar)) // Correct
+   builder.SaveFile("docx", "jsValue(jsVar)") // Correct
    ```
 
 4. For convenience, format types are replaced with strings.

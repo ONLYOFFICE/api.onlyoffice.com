@@ -4,7 +4,7 @@ sidebar_label: White label
 
 # Customization - White label
 
-The customization section allows you to customize the editor interface so that it looks like your other products (if there are any) and change the presence or absence of additional buttons, links, change logos and other details of the editor's owner.
+The customization section allows you to customize the editor interface according to your needs, as well as change the presence or absence of additional buttons, links, change logos and other details of the editor's owner.
 
 On this page you will find the customization parameters available only for the [extended white label license](https://www.onlyoffice.com/developer-edition-prices.aspx?from=api) of ONLYOFFICE Docs Developer. To request a quote, please contact our sales team at [sales@onlyoffice.com](mailto:sales@onlyoffice.com).
 
@@ -135,7 +135,7 @@ Example: true
 
 ### layout.header.save
 
-Defines if the **Save** button in the editor header is displayed or hidden. The default value is **true**. Please note that this setting is used when the [compactHeader](#compactheader) parameter is set to **false**.
+Defines if the **Save** button in the editor header is displayed or hidden. The default value is **true**. Please note that this setting is used when the [compactHeader](customization-standard-branding.md#compactheader) parameter is set to **false**.
 
 Type: boolean
 
@@ -412,7 +412,7 @@ Example: true
 
 ### layout.toolbar.save
 
-Defines if the **Save** button on the toolbar is displayed or hidden. The default value is **true**. Please note that this setting is used when the [compactHeader](#compactheader) parameter is set to **true**.
+Defines if the **Save** button on the toolbar is displayed or hidden. The default value is **true**. Please note that this setting is used when the [compactHeader](customization-standard-branding.md#compactheader) parameter is set to **true**.
 
 Type: boolean
 

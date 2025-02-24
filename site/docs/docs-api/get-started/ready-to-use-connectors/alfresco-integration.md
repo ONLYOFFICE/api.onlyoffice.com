@@ -2,7 +2,7 @@
 
 This [plugin](https://github.com/ONLYOFFICE/onlyoffice-alfresco) enables users to edit office documents from [Alfresco](https://www.alfresco.com/) Share using ONLYOFFICE Docs.
 
-The plugin is available in the official [Alfresco Add-ons directory](https://community.alfresco.com/docs/DOC-7918-onlyoffice-connector-for-alfresco).
+The plugin is available in the official [Alfresco Add-ons directory](https://connect.hyland.com/t5/alfresco-forum/onlyoffice-connector-for-alfresco/m-p/4606).
 
 ## Features
 

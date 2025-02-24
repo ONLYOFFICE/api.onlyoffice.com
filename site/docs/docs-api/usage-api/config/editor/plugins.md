@@ -73,7 +73,7 @@ Type: string
 
 Example: `https://example.com/plugins/`
 
-![Plugins](/assets/images/editor/plugins.png)
+![Plugins](/assets/images/editor/plugins.png#gh-light-mode-only)![Plugins](/assets/images/editor/plugins.dark.png#gh-dark-mode-only)
 
 ## Example
 

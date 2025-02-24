@@ -181,14 +181,14 @@ Repository on GitHub: [languagetool](https://github.com/ONLYOFFICE/onlyoffice.gi
 - init
 - onExternalMouseUp
 - onTranslate
-- callCommand
-- executeMethod ("GetSelectedText")
-- executeMethod ("GetSelectionType")
-- executeMethod ("GetVersion")
-- executeMethod ("PasteText")
-- Asc.scope object
-- info.editorType
-- info.recalculate
+- [callCommand](../../interacting-with-editors/methods/text-document-api/Plugin/Methods/callCommand.md)
+- [executeMethod ("GetSelectedText")](../../interacting-with-editors/methods/text-document-api/Api/Methods/GetSelectedText.md)
+- [executeMethod ("GetSelectionType")](../../interacting-with-editors/methods/text-document-api/Api/Methods/GetSelectionType.md)
+- [executeMethod ("GetVersion")](../../interacting-with-editors/methods/text-document-api/Api/Methods/GetVersion.md)
+- [executeMethod ("PasteText")](../../interacting-with-editors/methods/text-document-api/Api/Methods/PasteText.md)
+- [Asc.scope](../../interacting-with-editors/overview/how-to-call-commands.md#ascscope-object) object
+- [info.editorType](../../interacting-with-editors/overview/how-to-call-commands.md#editortype)
+- [info.recalculate](../../interacting-with-editors/overview/how-to-call-commands.md#recalculate)
 
 ## Support
 

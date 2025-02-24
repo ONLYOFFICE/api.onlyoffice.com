@@ -58,7 +58,7 @@ The ONLYOFFICE integration follows the API documented [here](../basic-concepts.m
 
 10. When all users and client browsers are done with editing, they close the editing window.
 
-11. After [10 seconds](../how-it-works/saving-file.md#savedelay) of inactivity, ONLYOFFICE Docs sends a POST to *callbackUrl* letting HumHub know that the clients have finished editing the document and closed it.
+11. After [10 seconds](../how-it-works/saving-file.md#save-delay) of inactivity, ONLYOFFICE Docs sends a POST to *callbackUrl* letting HumHub know that the clients have finished editing the document and closed it.
 
 12. HumHub downloads a new version of the document, replacing the old one.
 

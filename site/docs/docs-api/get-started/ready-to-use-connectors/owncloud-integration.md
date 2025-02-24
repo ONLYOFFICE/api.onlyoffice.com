@@ -94,7 +94,7 @@ You will see a text either with information about the successful connection or t
 To enable work within **ownCloud Web**, register the connector in the ownCloud Web *config.json*:
 
 - If you installed ownCloud Web from the [official marketplace](https://marketplace.owncloud.com/apps/onlyoffice), the path is *\<owncloud-root-catalog>/config/config.json*.
-- If you compiled it from source code yourself using [this instruction](#install), the path is *\<owncloud-web-root-catalog>/config/config.json*.
+- If you compiled it from source code yourself using [this instruction](#installing-owncloud-onlyoffice-integration-app), the path is *\<owncloud-web-root-catalog>/config/config.json*.
 
 To register the connector, use these lines:
 
@@ -153,7 +153,7 @@ The ONLYOFFICE integration follows the API documented [here](../basic-concepts.m
 
   > ownCloud recommends using *master encryption key* only on fresh installations with no existing data, or on systems where encryption has not already been enabled, as your files previously encrypted with the use of *per-user encryption keys* **might be lost forever** after you enable *master key* based encryption on them.
 
-- **Validating certificate**. If you are using a self-signed certificate for your Document Server, ownCloud will not validate such a certificate and will not allow connection to/from ONLYOFFICE Docs. This issue can be solved in two ways:
+- **Validating certificate**. If you are using a self-signed certificate for ONLYOFFICE Docs, ownCloud will not validate such a certificate and will not allow connection to/from ONLYOFFICE Docs. This issue can be solved in two ways:
 
   1. Check the **Disable certificate verification (insecure)** box on the ONLYOFFICE administration page, Server settings section, within your ownCloud.
   2. Change the ownCloud config file manually. Locate the ownCloud config file (*/owncloud/config/config.php*) and open it. Insert the following section to it:

@@ -1,7 +1,5 @@
 # Mask card numbers
 
-## Description
-
 Applies the mask to all forms with the specified form key to hide card numbers.
 
 <!-- This code snippet is shown in the screenshot. -->
@@ -29,8 +27,8 @@ Applies the mask to all forms with the specified form key to hide card numbers.
 })();
 ```
 
-Methods used: GetDocument, GetAllForms, GetFormKey, GetText, SetText
+Methods used: [GetDocument](../../../../office-api/usage-api/text-document-api/Api/Methods/GetDocument.md), [GetAllForms](../../../../office-api/usage-api/text-document-api/ApiDocument/Methods/GetAllForms.md), [GetFormKey](../../../../office-api/usage-api/text-document-api/ApiFormBase/Methods/GetFormKey.md), [GetText](../../../../office-api/usage-api/text-document-api/ApiFormBase/Methods/GetText.md), [SetText](../../../../office-api/usage-api/text-document-api/ApiTextForm/Methods/SetText.md)
 
 ## Result
 
-![Mask Card Numbers](/assets/images/plugins/mask-card-numbers.png)
+![Mask Card Numbers](/assets/images/plugins/mask-card-numbers.png#gh-light-mode-only)![Mask Card Numbers](/assets/images/plugins/mask-card-numbers.dark.png#gh-dark-mode-only)

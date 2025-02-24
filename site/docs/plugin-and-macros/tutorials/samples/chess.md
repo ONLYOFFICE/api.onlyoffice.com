@@ -163,16 +163,16 @@ Repository on GitHub: [chess](https://github.com/ONLYOFFICE/sdkjs-plugins/tree/m
 - button
 - init
 - onExternalMouseUp
-- executeMethod ("AddOleObject")
-- executeMethod ("EditOleObject")
-- info.data
-- info.guid
-- info.height
-- info.imgSrc
-- info.mmToPx
-- info.objectId
-- info.resize
-- info.width
+- [executeMethod ("AddOleObject")](../../interacting-with-editors/methods/text-document-api/Api/Methods/AddOleObject.md)
+- [executeMethod ("EditOleObject")](../../interacting-with-editors/methods/text-document-api/Api/Methods/EditOleObject.md)
+- [info.data](../../interacting-with-editors/overview/how-to-call-commands.md#data)
+- [info.guid](../../interacting-with-editors/overview/how-to-call-commands.md#guid)
+- [info.height](../../interacting-with-editors/overview/how-to-call-commands.md#height)
+- [info.imgSrc](../../interacting-with-editors/overview/how-to-call-commands.md#imgsrc)
+- [info.mmToPx](../../interacting-with-editors/overview/how-to-call-commands.md#mmtopx)
+- [info.objectId](../../interacting-with-editors/overview/how-to-call-commands.md#objectid)
+- [info.resize](../../interacting-with-editors/overview/how-to-call-commands.md#resize)
+- [info.width](../../interacting-with-editors/overview/how-to-call-commands.md#width)
 
 ## Support
 

@@ -4,7 +4,7 @@ sidebar_label: Standard branding
 
 # Customization - Standard branding
 
-The customization section allows you to customize the editor interface so that it looks like your other products (if there are any) and change the presence or absence of additional buttons, links, change logos and other details of the editor's owner.
+The customization section allows you to customize the editor interface according to your needs, as well as change the presence or absence of additional buttons, links, change logos and other details of the editor's owner.
 
 On this page you will find the customization parameters available for the [standard branding](https://www.onlyoffice.com/developer-edition-prices.aspx?from=api) of ONLYOFFICE Docs Developer. If you have an extended white label license, please visit the [White label page](customization-white-label.md) to find out what additional customization options are available.
 
@@ -314,7 +314,7 @@ Type: boolean
 
 Example: true
 
-![Tab background](/assets/images/editor/tab-background.png)
+![Tab background](/assets/images/editor/tab-background.png#gh-light-mode-only)![Tab background](/assets/images/editor/tab-background.dark.png#gh-dark-mode-only)
 
 ### features.tabStyle
 
@@ -340,7 +340,7 @@ Type: boolean
 
 Example: true
 
-![Tab style](/assets/images/editor/tab-style.png)
+![Tab style](/assets/images/editor/tab-style.png#gh-light-mode-only)![Tab style](/assets/images/editor/tab-style.dark.png#gh-dark-mode-only)
 
 ## feedback
 
@@ -847,7 +847,7 @@ Type: boolean
 
 Example: true
 
-> Deprecated since version 7.0. Please use the [review.trackChanges](#review.trackchanges) parameter instead.
+> Deprecated since version 7.0. Please use the [review.trackChanges](#reviewtrackchanges) parameter instead.
 
 ## uiTheme
 

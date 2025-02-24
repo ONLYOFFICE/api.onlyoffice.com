@@ -192,7 +192,7 @@ If the document version was created with the **document editor**, then the docum
 
   Where the **serverVersion** is the *serverVersion* from [the history object](../../usage-api/callback-handler.md#history) returned after saving the document.
 
-  > ONLYOFFICE Docs highlights the changes made from the beginning of the current document session, not from the beginning of the document version. And even if several document versions are created during one session, all changes from this session will be highlighted. Therefore, you cannot see the document versions created with the [force saving option](./saving-file.md#forcesave) in the document history.
+  > ONLYOFFICE Docs highlights the changes made from the beginning of the current document session, not from the beginning of the document version. And even if several document versions are created during one session, all changes from this session will be highlighted. Therefore, you cannot see the document versions created with the [force saving option](./saving-file.md#force-saving) in the document history.
 
 - [changesurl](../../usage-api/callback-handler.md#changesurl) - the absolute URL to the file with the document editing data used to show the changes corresponding to the specific document version. The file must be saved and its address must be sent as changesUrl parameter using the [setHistoryData](../../usage-api/methods.md#sethistorydata) method. The link to the previous document version (*previous.url*) must be added into the object.
 
