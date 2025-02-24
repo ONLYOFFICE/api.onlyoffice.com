@@ -1,7 +1,5 @@
 # Find company logos
 
-## Description
-
 Searches for a company logo throughout the spreadsheet using the [Logo API](https://api-ninjas.com/api/logo) offered by [API Ninjas](https://api-ninjas.com).
 
 > To use this macro, you need to obtain your own API key from API Ninjas.
@@ -67,4 +65,4 @@ Methods used: [GetActiveSheet](../../../../office-api/usage-api/spreadsheet-api/
 
 <!-- imgpath -->
 
-![Find Company Logos](/assets/images/plugins/find-company-logos.png)
+![Find Company Logos](/assets/images/plugins/find-company-logos.png#gh-light-mode-only)![Find Company Logos](/assets/images/plugins/find-company-logos.dark.png#gh-dark-mode-only)

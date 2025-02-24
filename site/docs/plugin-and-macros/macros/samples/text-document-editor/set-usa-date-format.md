@@ -1,7 +1,5 @@
 # Set USA date format
 
-## Description
-
 Sets all date form formats to USA one.
 
 <!-- This code snippet is shown in the screenshot. -->
@@ -30,4 +28,4 @@ Methods used: [GetDocument](../../../../office-api/usage-api/text-document-api/A
 
 <!-- imgpath -->
 
-![Set USA Date Format](/assets/images/plugins/set-usa-date-format.png)
+![Set USA Date Format](/assets/images/plugins/set-usa-date-format.png#gh-light-mode-only)![Set USA Date Format](/assets/images/plugins/set-usa-date-format.dark.png#gh-dark-mode-only)

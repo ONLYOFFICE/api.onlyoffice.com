@@ -1,7 +1,5 @@
 # Generate word definitions
 
-## Description
-
 Generates word definitions in your document using the [Dictionary API](https://api-ninjas.com/api/dictionary) offered by [API Ninjas](https://api-ninjas.com).
 
 > To use this macro, you need to obtain your own API key from API Ninjas.
@@ -40,4 +38,4 @@ Methods used: [GetDocument](../../../../office-api/usage-api/text-document-api/A
 
 <!-- imgpath -->
 
-![Generate word definitons](/assets/images/plugins/generate-word-definitions.png)
+![Generate word definitons](/assets/images/plugins/generate-word-definitions.png#gh-light-mode-only)![Generate word definitons](/assets/images/plugins/generate-word-definitions.dark.png#gh-dark-mode-only)

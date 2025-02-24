@@ -1,7 +1,5 @@
 # Sum of highlighted cells
 
-## Description
-
 Sums the answer of all highlighted cells in a spreadsheet.
 
 <!-- This code snippet is shown in the screenshot. -->
@@ -63,4 +61,4 @@ End Sub
 
 ## Result
 
-![Sum of highlighted cells](/assets/images/plugins/sum-of-highlighted-cells.png)
+![Sum of highlighted cells](/assets/images/plugins/sum-of-highlighted-cells.png#gh-light-mode-only)![Sum of highlighted cells](/assets/images/plugins/sum-of-highlighted-cells.dark.png#gh-dark-mode-only)

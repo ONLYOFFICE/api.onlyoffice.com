@@ -6,9 +6,9 @@ sidebar_position: -3
 
 Plugins can be represented as modal windows or panels.
 
-![Modal window](/assets/images/plugins/plugin-window.png)
+![Modal window](/assets/images/plugins/plugin-window.png#gh-light-mode-only)![Modal window](/assets/images/plugins/plugin-window.dark.png#gh-dark-mode-only)
 
-<img alt="Plugin left panel" src="/assets/images/plugins/plugin-left-panel.png" width="300px" />
+<img alt="Plugin left panel" src="/assets/images/plugins/plugin-left-panel.png#gh-light-mode-only" width="300px" /><img alt="Plugin left panel" src="/assets/images/plugins/plugin-left-panel.dark.png#gh-dark-mode-only" width="300px" />
 
 You can run multiple panel plugins at the same time. For each plugin, a separate button will appear on the left or right toolbar.
 

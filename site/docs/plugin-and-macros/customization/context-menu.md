@@ -6,7 +6,7 @@ sidebar_position: -5
 
 The plugin can be accessed via the context menu.
 
-![Context menu item](/assets/images/plugins/context-menu-item.png)
+![Context menu item](/assets/images/plugins/context-menu-item.png#gh-light-mode-only)![Context menu item](/assets/images/plugins/context-menu-item.dark.png#gh-dark-mode-only)
 
 ## Creating a context menu item
 

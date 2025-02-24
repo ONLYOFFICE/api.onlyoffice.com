@@ -314,7 +314,7 @@ Type: boolean
 
 Example: true
 
-![Tab background](/assets/images/editor/tab-background.png)
+![Tab background](/assets/images/editor/tab-background.png#gh-light-mode-only)![Tab background](/assets/images/editor/tab-background.dark.png#gh-dark-mode-only)
 
 ### features.tabStyle
 
@@ -340,7 +340,7 @@ Type: boolean
 
 Example: true
 
-![Tab style](/assets/images/editor/tab-style.png)
+![Tab style](/assets/images/editor/tab-style.png#gh-light-mode-only)![Tab style](/assets/images/editor/tab-style.dark.png#gh-dark-mode-only)
 
 ## feedback
 

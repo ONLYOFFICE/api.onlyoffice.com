@@ -1,7 +1,5 @@
 # Merge cell range
 
-## Description
-
 Merges the selected cell range.
 
 <!-- This code snippet is shown in the screenshot. -->
@@ -27,4 +25,4 @@ End Sub
 
 ## Result
 
-![Merge cells](/assets/images/plugins/merge-cells.png)
+![Merge cells](/assets/images/plugins/merge-cells.png#gh-light-mode-only)![Insert text](/assets/images/plugins/merge-cells.dark.png#gh-dark-mode-only)

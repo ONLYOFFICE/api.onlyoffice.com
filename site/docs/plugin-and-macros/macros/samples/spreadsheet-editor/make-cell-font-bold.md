@@ -1,7 +1,5 @@
 # Make cell font bold
 
-## Description
-
 Sets the font of the cell **A2** to bold.
 
 <!-- This code snippet is shown in the screenshot. -->
@@ -27,4 +25,4 @@ End Sub
 
 ## Result
 
-![Font bold](/assets/images/plugins/font-bold.png)
+![Font bold](/assets/images/plugins/font-bold.png#gh-light-mode-only)![Font bold](/assets/images/plugins/font-bold.dark.png#gh-dark-mode-only)

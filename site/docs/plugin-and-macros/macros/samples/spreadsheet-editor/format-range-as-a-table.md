@@ -1,7 +1,5 @@
 # Format range as table
 
-## Description
-
 Formats the range of cells **A1:D10** as a table.
 
 <!-- This code snippet is shown in the screenshot. -->
@@ -27,4 +25,4 @@ End Sub
 
 ## Result
 
-![Range as a table](/assets/images/plugins/range-as-a-table.png)
+![Range as a table](/assets/images/plugins/range-as-a-table.png#gh-light-mode-only)![Range as a table](/assets/images/plugins/range-as-a-table.dark.png#gh-dark-mode-only)

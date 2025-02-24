@@ -1,7 +1,5 @@
 # Change cell background color
 
-## Description
-
 Sets the background color of the cell **B3** to blue.
 
 <!-- This code snippet is shown in the screenshot. -->
@@ -27,4 +25,4 @@ End Sub
 
 ## Result
 
-![Background color](/assets/images/plugins/background-color.png)
+![Background color](/assets/images/plugins/background-color.png#gh-light-mode-only)![Background color](/assets/images/plugins/background-color.dark.png#gh-dark-mode-only)

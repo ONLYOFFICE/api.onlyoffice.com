@@ -212,6 +212,11 @@
   /* --ifm-font-family-base: "Open Sans", "Open Sans Fallback", system-ui, sans-serif; */
 }
 
+[data-theme='light'] img[src$='#gh-dark-mode-only'],
+[data-theme='dark'] img[src$='#gh-light-mode-only'] {
+  display: none;
+}
+
 html[data-theme='light'] {
   /* --ifm-menu-color-background-active: var(--c-blue-0); */
   --ifm-menu-color: #444;
@@ -395,4 +400,9 @@ main {
   letter-spacing: -.01em;
   line-height: 20px;
   transition: opacity .2s ease-out;
+}
+
+.clean-btn svg[class^='copyButtonSuccessIcon'], .clean-btn svg[class*=' copyButtonSuccessIcon'] {
+  top: 50%;
+  left: 50%;
 }

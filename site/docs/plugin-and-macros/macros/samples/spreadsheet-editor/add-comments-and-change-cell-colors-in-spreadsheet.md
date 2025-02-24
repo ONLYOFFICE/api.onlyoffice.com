@@ -1,7 +1,5 @@
 # Add comments and change cell colors in spreadsheet
 
-## Description
-
 Adds comments to the cells in the selection and can also change the background color of the cells.
 
 <!-- This code snippet is shown in the screenshot. -->
@@ -43,4 +41,4 @@ End Sub
 
 <!-- imgpath -->
 
-![Add comments and change cell colors in spreadsheet](/assets/images/plugins/add-comments-and-highlight-cells-spreadsheet.png)
+![Add comments and change cell colors in spreadsheet](/assets/images/plugins/add-comments-and-highlight-cells-spreadsheet.png#gh-light-mode-only)![Add comments and change cell colors in spreadsheet](/assets/images/plugins/add-comments-and-highlight-cells-spreadsheet.dark.png#gh-dark-mode-only)

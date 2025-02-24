@@ -1,7 +1,5 @@
 # Change cell font color
 
-## Description
-
 Sets the font color of the cell **B4** to red.
 
 <!-- This code snippet is shown in the screenshot. -->
@@ -27,4 +25,4 @@ End Sub
 
 ## Result
 
-![Font color](/assets/images/plugins/font-color.png)
+![Font color](/assets/images/plugins/font-color.png#gh-light-mode-only)![Font color](/assets/images/plugins/font-color.dark.png#gh-dark-mode-only)

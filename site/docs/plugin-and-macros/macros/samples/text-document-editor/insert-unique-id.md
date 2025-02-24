@@ -1,7 +1,5 @@
 # Insert unique id
 
-## Description
-
 Inserts a unique id into a form document.
 
 <!-- This code snippet is shown in the screenshot. -->
@@ -34,4 +32,4 @@ Methods used: [GetDocument](../../../../office-api/usage-api/text-document-api/A
 
 ## Result
 
-![Insert id](/assets/images/plugins/insert-id.png)
+![Insert id](/assets/images/plugins/insert-id.png#gh-light-mode-only)![Insert id](/assets/images/plugins/insert-id.dark.png#gh-dark-mode-only)

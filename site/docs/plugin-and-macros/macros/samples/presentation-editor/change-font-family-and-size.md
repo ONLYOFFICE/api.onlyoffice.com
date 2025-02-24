@@ -1,7 +1,5 @@
 # Change font family and size
 
-## Description
-
 Changes the font family and/or size on all the slides in your presentation.
 
 <!-- This code snippet is shown in the screenshot. -->
@@ -73,4 +71,4 @@ End Sub
 
 <!-- imgpath -->
 
-![Change font family and size](/assets/images/plugins/change-font-family-and-size.png)
+![Change font family and size](/assets/images/plugins/change-font-family-and-size.png#gh-light-mode-only)![Change font family and size](/assets/images/plugins/change-font-family-and-size.dark.png#gh-dark-mode-only)

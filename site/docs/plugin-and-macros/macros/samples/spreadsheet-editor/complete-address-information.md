@@ -1,7 +1,5 @@
 # Complete address information
 
-## Description
-
 Completes the basic address data with detailed address information and inserts it into a spreadsheet.
 
 <!-- This code snippet is shown in the screenshot. -->
@@ -102,4 +100,4 @@ Methods used: [GetActiveSheet](../../../../office-api/usage-api/spreadsheet-api/
 
 ## Result
 
-![Write data](/assets/images/plugins/complete-address-information.png)
+![Write data](/assets/images/plugins/complete-address-information.png#gh-light-mode-only)![Write data](/assets/images/plugins/complete-address-information.dark.png#gh-dark-mode-only)

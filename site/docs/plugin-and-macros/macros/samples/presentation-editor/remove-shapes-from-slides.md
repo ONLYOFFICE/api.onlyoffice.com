@@ -1,7 +1,5 @@
 # Remove shapes from slides
 
-## Description
-
 Removes shapes from slides in a presentation.
 
 <!-- This code snippet is shown in the screenshot. -->
@@ -24,4 +22,4 @@ Methods used: [GetPresentation](../../../../office-api/usage-api/presentation-ap
 
 ## Result
 
-![Next blank row](/assets/images/plugins/remove-shapes.png)
+![Remove shapes](/assets/images/plugins/remove-shapes.png#gh-light-mode-only)![Remove shapes](/assets/images/plugins/remove-shapes.dark.png#gh-dark-mode-only)

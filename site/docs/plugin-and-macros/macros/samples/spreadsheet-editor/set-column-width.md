@@ -1,7 +1,5 @@
 # Set column width
 
-## Description
-
 Sets the width for the column **B**.
 
 <!-- This code snippet is shown in the screenshot. -->
@@ -27,4 +25,4 @@ End Sub
 
 ## Result
 
-![Column width](/assets/images/plugins/column-width.png)
+![Column width](/assets/images/plugins/column-width.png#gh-light-mode-only)![Column width](/assets/images/plugins/column-width.dark.png#gh-dark-mode-only)

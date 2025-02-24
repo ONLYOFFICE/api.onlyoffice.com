@@ -1,7 +1,5 @@
 # Add state from zip code
 
-## Description
-
 Adds the "State" label and the text form prefilled with "CA" if the zip code of California is entered. It can be extended by using API to prefill "State" when entering the zip code.
 
 <!-- This code snippet is shown in the screenshot. -->
@@ -44,4 +42,4 @@ Methods used: [GetDocument](../../../../office-api/usage-api/text-document-api/A
 
 ## Result
 
-![Add State From ZipCode](/assets/images/plugins/add-state-from-zipcode.png)
+![Add State From ZipCode](/assets/images/plugins/add-state-from-zipcode.png#gh-light-mode-only)![Add State From ZipCode](/assets/images/plugins/add-state-from-zipcode.dark.png#gh-dark-mode-only)

@@ -706,7 +706,7 @@ To select a document for comparing, combining, or inserting text, you must call 
 
 ![onRequestSelectDocument](/assets/images/editor/onRequestSelectDocument.png)
 
-![Insert text](/assets/images/editor/insert-text.png)
+![Insert text](/assets/images/editor/insert-text.png#gh-light-mode-only)![Insert text](/assets/images/editor/insert-text.dark.png#gh-dark-mode-only)
 
 Example:
 

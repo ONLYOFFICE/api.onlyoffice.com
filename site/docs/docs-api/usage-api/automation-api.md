@@ -36,7 +36,7 @@ Parameters:
 | *text*     | string                   | The item caption.                                                                                                          |
 | *data*     | string                   | The item data (this data will be sent to the click event callback).                                                        |
 | *disabled* | boolean                  | Specifies if the current item is disabled or not.                                                                          |
-| *icons*    | string                   | The item icons (see the plugins [config](../../plugin-and-macros/structure/manifest/manifest.md#icons) documentation). |
+| *icons*    | string                   | The item icons (see the plugins [config](../../plugin-and-macros/structure/manifest/manifest.md#variationsicons) documentation). |
 | *onClick*  | function                 | The click event callback.                                                                                                  |
 | *items*    | Array.\<ContextMenuItem> | An array containing the context menu items for the current item.                                                           |
 

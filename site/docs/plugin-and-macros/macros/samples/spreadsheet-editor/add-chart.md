@@ -1,7 +1,5 @@
 # Add chart
 
-## Description
-
 Adds a new chart to the selected cell range.
 
 <!-- This code snippet is shown in the screenshot. -->
@@ -29,4 +27,4 @@ End Sub
 
 ## Result
 
-![Chart](/assets/images/plugins/add-chart.png)
+![Chart](/assets/images/plugins/add-chart.png#gh-light-mode-only)![Chart](/assets/images/plugins/add-chart.dark.png#gh-dark-mode-only)

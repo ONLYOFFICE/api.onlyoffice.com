@@ -1,7 +1,5 @@
 # Highlight duplicates
 
-## Description
-
 Highlights duplicates in the selected area with different colors to recognize duplicated values quickly.
 
 <!-- This code snippet is shown in the screenshot. -->
@@ -112,4 +110,4 @@ End Sub
 
 ## Result
 
-![Highlight duplicates](/assets/images/plugins/highlight-duplicates.png)
+![Highlight duplicates](/assets/images/plugins/highlight-duplicates.png#gh-light-mode-only)![Highlight duplicates](/assets/images/plugins/highlight-duplicates.dark.png#gh-dark-mode-only)

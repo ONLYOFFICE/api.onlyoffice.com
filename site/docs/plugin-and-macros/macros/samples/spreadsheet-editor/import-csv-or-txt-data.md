@@ -1,7 +1,5 @@
 # Import CSV/TXT data
 
-## Description
-
 Imports data from remote CSV/TXT files into the spreadsheet.
 
 > This macro is operational only with the desktop versions of the ONLYOFFICE editors.
@@ -48,4 +46,4 @@ Methods used: [GetActiveSheet](../../../../office-api/usage-api/spreadsheet-api/
 
 ## Result
 
-![Import CSV/text data](/assets/images/plugins/import-csv-macro.png)
+![Import CSV/text data](/assets/images/plugins/import-csv-macro.png#gh-light-mode-only)![Import CSV/text data](/assets/images/plugins/import-csv-macro.dark.png#gh-dark-mode-only)

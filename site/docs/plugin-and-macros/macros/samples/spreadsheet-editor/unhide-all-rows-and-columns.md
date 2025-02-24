@@ -1,7 +1,5 @@
 # Unhide all rows and columns
 
-## Description
-
 Unhides all the rows and columns in the active spreadsheet.
 
 <!-- This code snippet is shown in the screenshot. -->
@@ -27,4 +25,4 @@ Methods used: [GetActiveSheet](../../../../office-api/usage-api/spreadsheet-api/
 
 ## Result
 
-![Unhide all rows](/assets/images/plugins/unhide-all-rows.png)
+![Unhide all rows](/assets/images/plugins/unhide-all-rows.png#gh-light-mode-only)![Unhide all rows](/assets/images/plugins/unhide-all-rows.dark.png#gh-dark-mode-only)
