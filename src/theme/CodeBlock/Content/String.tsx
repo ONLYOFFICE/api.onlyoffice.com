@@ -124,7 +124,7 @@ export default function CodeBlockString({
   );
 
   return editorType ? (
-    <Tabs>
+    <Tabs lazy>
       <TabItem value="code" label="Code">{codeBlockContent}</TabItem>
       <TabItem value="result" label="Result">
         <OnlyOfficeEditor code={code} fileType={editorType} />
