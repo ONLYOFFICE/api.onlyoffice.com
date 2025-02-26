@@ -132,6 +132,7 @@ const config = {
         size: "11px",
       },
       forcesave: false,
+      forceWesternFontSize: false,
       goback: {
         blank: true,
         text: "Open file location",

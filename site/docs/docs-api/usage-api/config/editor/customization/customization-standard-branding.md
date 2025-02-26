@@ -382,6 +382,14 @@ Example: false
 
 > Please note that in case this setting is changed in the editor interface, it will be stored in the browser local storage and will overwrite any values sent as the *editorConfig.customization.forcesave* parameter.
 
+## forceWesternFontSize
+
+Defines if the Western (**true**) or Chinese (**false**) font size is used in the Chinese (Simplified) UI. The default value is **false**.
+
+Type: boolean
+
+Example: false
+
 ## goback
 
 Defines settings for the **Open file location** menu button and upper right corner button.
@@ -950,6 +958,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
         visible: true,
       },
       forcesave: false,
+      forceWesternFontSize: false,
       goback: {
         blank: true,
         text: "Open file location",
