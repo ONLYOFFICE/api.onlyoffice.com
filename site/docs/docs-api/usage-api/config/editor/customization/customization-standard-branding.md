@@ -817,6 +817,14 @@ In case this setting is changed in the editor interface, it will be stored in th
 Deprecated since version 7.0. Please use the [review.reviewDisplay](#review) parameter instead.
 :::
 
+## showHorizontalScroll
+
+`Type: boolean`
+
+Starting from version 8.3, defines if the horizontal scroll is automatically displayed or hidden when the spreadsheet editor is loaded. The default value is **true**.
+
+**Example**: `true`
+
 ## showReviewChanges
 
 `Type: boolean`
@@ -828,6 +836,14 @@ Deprecated since version 7.0. Please use the [review.showReviewChanges](#review)
 :::
 
 **Example**: `false`
+
+## showVerticalScroll
+
+`Type: boolean`
+
+Starting from version 8.3, defines if the vertical scroll is automatically displayed or hidden when the spreadsheet editor is loaded. The default value is **true**.
+
+**Example**: `true`
 
 ## slidePlayerBackground
 
@@ -1062,6 +1078,8 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
         trackChanges: true,
         hoverMode: false,
       },
+      showHorizontalScroll: true,
+      showVerticalScroll: true,
       slidePlayerBackground: "#000000",
       submitForm: {
         visible: true,
