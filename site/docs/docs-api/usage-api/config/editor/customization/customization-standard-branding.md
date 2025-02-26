@@ -265,6 +265,7 @@ Defines the parameters that the user can disable or customize if possible.
 
 ``` ts
 const features = {
+  featuresTips: true,
   roles: true,
   spellcheck: {
     mode: true,
@@ -279,6 +280,14 @@ const features = {
   },
 }
 ```
+
+### features.featuresTips
+
+`Type: boolean`
+
+Defines if the tooltips about new editor features will be displayed or hidden on first loading. The default value is **true**.
+
+**Example**: `true`
 
 ### features.roles
 
@@ -1010,6 +1019,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
         www: "example.com",
       },
       features: {
+        featuresTips: true,
         roles: true,
         spellcheck: {
           mode: true,
