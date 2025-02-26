@@ -64,12 +64,15 @@ function CardLayout({
 }): ReactNode {
   return (
     <CardContainer href={href}>
-      <Heading
-        as="h2"
-        className={clsx('text--truncate', styles.cardTitle)}
-        title={title}>
-        {icon} {title}
-      </Heading>
+      <div className={styles.cardHeader}>
+        {icon}
+        <Heading
+          as="h2"
+          className={clsx('text--truncate', styles.cardTitle)}
+          title={title}>
+          {title}
+        </Heading>
+      </div>
       {description && (
         <p
           className={clsx('text--truncate', styles.cardDescription)}
@@ -101,7 +104,9 @@ function CardCategory({item}: {item: PropSidebarItemCategory}): ReactNode {
 }
 
 function CardLink({item}: {item: PropSidebarItemLink}): ReactNode {
-  const icon = isInternalUrl(item.href) ? '📄️' : '🔗';
+  const icon = item?.customProps?.icon
+      ? <img src={item?.customProps?.icon as string} alt={item.label} className={styles.customIcon} />
+      : (isInternalUrl(item.href) ? '📄️' : '🔗');
   const doc = useDocById(item.docId ?? undefined);
   return (
     <CardLayout

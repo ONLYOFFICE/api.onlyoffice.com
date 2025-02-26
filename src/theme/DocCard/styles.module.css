@@ -25,3 +25,15 @@
 .cardDescription {
   font-size: 0.8rem;
 }
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-bottom: 3px;
+}
+
+.customIcon {
+  width: 30px;
+  height: 30px;
+}
