@@ -27,6 +27,7 @@ The complete *config* with all the additional parameters looks the following way
 const config = {
   document: {
     fileType: "docx",
+    isForm: true,
     info: {
       favorite: true,
       folder: "Example Files",

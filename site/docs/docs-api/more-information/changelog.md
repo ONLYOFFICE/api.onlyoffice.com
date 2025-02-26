@@ -56,6 +56,7 @@ The list of changes of ONLYOFFICE Docs API.
 
 ## Version 8.0
 
+- Added the [document.isForm](../usage-api/config/document/document.md#isform) parameter.
 - Added the [WOPISrc](../using-wopi/key-concepts.md#wopisrc) query parameter to the requests from the browser to the server.
 - Added the [watermark](../additional-api/conversion-api/request.md#watermark) field to the conversion request.
 - Added the *pdf* document type to the [documentType](../usage-api/config/config.md#documenttype) parameter.

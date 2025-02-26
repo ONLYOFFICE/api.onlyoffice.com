@@ -10,6 +10,16 @@ Defines the type of the file for the source viewed or edited document. Must be l
 
 **Example**: `"docx"`
 
+## isForm
+
+`Type: true`
+
+Defines if the PDF file is a PDF form or a standard PDF file. The default value is **true**.
+
+If this parameter is not specified, then the [internal checking of PDF files](../../../get-started/how-it-works/checking-pdf-forms.md) is started.
+
+**Example**: `true`
+
 ## key
 
 `Type: string` | **required**
@@ -78,6 +88,7 @@ Defines the absolute URL where the source viewed or edited document is stored. B
 const docEditor = new DocsAPI.DocEditor("placeholder", {
   document: {
     fileType: "xlsx",
+    isForm: true,
     key: "Khirz6zTPdfd7",
     referenceData: {
       fileKey: "BCFA2CED",

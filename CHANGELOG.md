@@ -1,5 +1,11 @@
 # Change log
 
+### New features
+
+#### Docs API
+
+* Added the document.isForm parameter
+
 ## 4.2.0
 
 ### New features
