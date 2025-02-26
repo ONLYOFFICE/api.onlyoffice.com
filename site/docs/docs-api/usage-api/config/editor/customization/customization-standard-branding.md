@@ -758,6 +758,14 @@ Example: "original"
 
 > Please note that in case this setting is changed in the editor interface, it will be stored in the browser local storage and will overwrite any values sent as the *editorConfig.customization.reviewDisplay* parameter.
 
+## showHorizontalScroll
+
+Starting from version 8.3, defines if the horizontal scroll is automatically displayed or hidden when the spreadsheet editor is loaded. The default value is **true**.
+
+Type: boolean
+
+Example: true
+
 ## showReviewChanges
 
 Defines if the review changes panel is automatically displayed or hidden when the editor is loaded. The default value is **false**.
@@ -767,6 +775,14 @@ Type: boolean
 Example: false
 
 > Deprecated since version 7.0. Please use the [review.showReviewChanges](#review) parameter instead.
+
+## showVerticalScroll
+
+Starting from version 8.3, defines if the vertical scroll is automatically displayed or hidden when the spreadsheet editor is loaded. The default value is **true**.
+
+Type: boolean
+
+Example: true
 
 ## slidePlayerBackground
 
@@ -984,6 +1000,8 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
         trackChanges: true,
         hoverMode: false,
       },
+      showHorizontalScroll: true,
+      showVerticalScroll: true,
       slidePlayerBackground: "#000000",
       submitForm: {
         visible: true,

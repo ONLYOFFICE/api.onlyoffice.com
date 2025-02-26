@@ -1,5 +1,12 @@
 # Change log
 
+### New features
+
+#### Docs API
+
+* Added the editorConfig.customization.showHorizontalScroll parameter
+* Added the editorConfig.customization.showVerticalScroll parameter
+
 ## 4.1.0
 
 ### New features

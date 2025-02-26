@@ -209,6 +209,8 @@ const config = {
         trackChanges: true,
         hoverMode: false,
       },
+      showHorizontalScroll: true,
+      showVerticalScroll: true,
       slidePlayerBackground: "#000000",
       submitForm: {
         visible: true,
