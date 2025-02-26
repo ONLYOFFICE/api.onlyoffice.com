@@ -7,6 +7,25 @@
 * Added the editorConfig.customization.showHorizontalScroll parameter
 * Added the editorConfig.customization.showVerticalScroll parameter
 
+## 4.2.0
+
+### New features
+
+#### Docs API
+
+* Updated documentation in Chinese
+* Added the Frontend frameworks page
+
+### Fixes
+
+* Added screenshots for dark mode
+
+#### Docs
+
+* Updated Macro samples page
+* Fixed Office API usage page
+* Added the editorConfig.customization.anonymous.request parameter to the editor config
+
 ## 4.1.0
 
 ### New features

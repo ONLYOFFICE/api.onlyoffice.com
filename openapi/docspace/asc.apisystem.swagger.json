@@ -4,12 +4,6 @@
     "title": "ASC.ApiSystem",
     "version": "v2"
   },
-  "servers": [
-    {
-      "url": "http://localhost:8092",
-      "description": "Local server"
-    }
-  ],
   "paths": {
     "/people/find": {
       "post": {
