@@ -2,6 +2,10 @@
 
 The list of changes of ONLYOFFICE Docs API.
 
+## Version 8.4
+
+- Added the [editorConfig.customization.layout.header.user](../usage-api/config/editor/customization/customization-white-label.md#layoutheaderuser) parameter.
+
 ## Version 8.3
 
 <!--- Added conversion from [vsdm, vsdx, vssm, vssx, vstm, vstx](../additional-api/conversion-api/conversion-tables.md#diagram-document-file-formats) formats.

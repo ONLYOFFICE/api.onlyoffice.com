@@ -1,5 +1,11 @@
 # Change log
 
+### New features
+
+#### Docs API
+
+Added the editorConfig.customization.layout.header.user parameter
+
 ## 4.2.0
 
 ### New features
