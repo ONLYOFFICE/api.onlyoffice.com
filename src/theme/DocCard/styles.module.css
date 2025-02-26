@@ -29,8 +29,8 @@
 .cardHeader {
   display: flex;
   align-items: center;
-  gap: 5px;
-  margin-bottom: 3px;
+  gap: 6px;
+  margin-bottom: 6px;
 }
 
 .customIcon {
