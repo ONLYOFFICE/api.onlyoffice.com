@@ -70,6 +70,7 @@ const layout = {
   header: {
     editMode: true,
     save: true,
+    user: true,
     users: true,
   },
   leftMenu: {
@@ -136,6 +137,14 @@ Example: true
 ### layout.header.save
 
 Defines if the **Save** button in the editor header is displayed or hidden. The default value is **true**. Please note that this setting is used when the [compactHeader](customization-standard-branding.md#compactheader) parameter is set to **false**.
+
+Type: boolean
+
+Example: true
+
+### layout.header.user
+
+Defines if the icon with the user's avatar/initials in the editor header is displayed or hidden. The default value is **true**.
 
 Type: boolean
 
@@ -516,6 +525,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
         header: {
           editMode: true,
           save: true,
+          user: true,
           users: true,
         },
         leftMenu: {
