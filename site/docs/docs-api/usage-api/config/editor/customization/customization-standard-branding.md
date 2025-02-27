@@ -294,7 +294,7 @@ This parameter is available for editing only for ONLYOFFICE Docs Developer.
 
 ### features.spellcheck
 
-`Type: object or boolean`
+`Type: object | boolean`
 
 Defines if the spell checker is automatically switched on or off when the editor is loaded. If this parameter is a boolean value, then it is set as the initial spell checker value and the spell checker setting will not be hidden. The default value is **true**.
 
@@ -314,7 +314,7 @@ In case *spellcheck* setting is changed in the editor interface, it will be stor
 
 ### features.tabBackground
 
-`Type: object or string`
+`Type: object | string`
 
 Defines the background of the top toolbar tabs. If this parameter is a string value (**header** or **toolbar**), then it is set as the initial tab background value and the tab background setting will not be hidden. The default value is **header**.
 
@@ -340,7 +340,7 @@ Defines if the tab background setting will be displayed in the **File -> Advance
 
 ### features.tabStyle
 
-`Type: object or string`
+`Type: object | string`
 
 Defines the style of the top toolbar tabs. If this parameter is a string value (**fill** or **line**), then it is set as the initial tab style value and the tab style setting will not be hidden. The default value is **fill**.
 
@@ -366,7 +366,7 @@ Defines if the tab style setting will be displayed in the **File -> Advanced set
 
 ## feedback
 
-`Type: boolean or object`
+`Type: boolean | object`
 
 Defines settings for the **Feedback & Support** menu button. Can be either boolean (simply displays or hides the **Feedback & Support** menu button) or object.
 
@@ -870,7 +870,7 @@ Deprecated since version 7.1. Please use the [features.spellcheck](#features) pa
 
 ## submitForm
 
-`Type: object or boolean`
+`Type: object | boolean`
 
 Starting from version 8.3, defines the **Complete & Submit** button settings. If this parameter is a boolean value, then it specifies whether the **Complete & Submit** button will be displayed or hidden on the top toolbar. Button will only be available for the *pdf* format. The default value is **true**.
 
