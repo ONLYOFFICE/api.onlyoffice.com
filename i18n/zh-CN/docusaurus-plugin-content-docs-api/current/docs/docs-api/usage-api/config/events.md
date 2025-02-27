@@ -58,7 +58,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
 
 ## onDocumentStateChange
 
-修改文档时调用的函数。使用以下参数调用它：*{"data": true}* --适用于当前用户正在编辑文档时。使用以下参数调用它：*{"data": false}* --适用于当前用户的更改发送到 **文档编辑服务**时。
+修改文档时调用的函数。使用以下参数调用它：*\{"data": true\}* --适用于当前用户正在编辑文档时。使用以下参数调用它：*\{"data": false\}* --适用于当前用户的更改发送到 **文档编辑服务**时。
 
 示例:
 
@@ -928,7 +928,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
 
 ## onWarning
 
-发生警告时调用的函数。警告消息在 *data* 参数中发送。可以在 [此处](https://github.com/ONLYOFFICE/sdkjs/blob/master/common/errorCodes.js)rrorCodes.js" target="_blank">此处</a>
+发生警告时调用的函数。警告消息在 *data* 参数中发送。可以在 [此处](https://github.com/ONLYOFFICE/sdkjs/blob/master/common/errorCodes.js) 此处。
 
 示例:
 
