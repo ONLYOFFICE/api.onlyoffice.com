@@ -5,9 +5,9 @@ description: "Changes the ability to share a file externally."
 sidebar_label: "Change the external sharing ability"
 hide_title: true
 hide_table_of_contents: true
-api: eJzVVU1P3DAQ/SuWj22abLc9tLnBUqSqrYRYOCGEJsksMXhj13YWttH+9844CYQFeuiNSz4m8/XevHE6GeDay/xCHiuNXmRiiSGohmyXiTQWHQRlmu+VzCXeB3QN6GUNDmUiHf5u0YdDU21l3snSNAGbwI9grVZljMxuvGnY5ssa18BPYWuR0pniBstAeazjOkGhj34YJk6FMRqhIS+8h7XVZAuuxd0ukVBViiuAPpkkWIH2mMigAvvKg+UijcjShXGYHlj1y1SofXraN38UTHqkvNWwfbRITh8I7pttfjqAd+/fJgou4NBb0/i+rflsxrcKfemU5bqU/bDvTmxAt5gL7kyolQg1CgsO1kiaFcoLbKDQWBGKiU7jjKmwepmeEfk+o6/yOQ34t34ePdn38+zjc2TnDbShNk79obaj06fnTsfGFaqqsK/psWydCrSOF7SEvrziDFe3yAbiEhj+HTmgvNzRej9NtaihuaYjgKmDQmnKI4IRnrddgFjRCMV4BOhtSqmI3NrwyWDbKCIINb1kYFU2T2cZR/jMD+dJNsZK7tNt0PnYZus0BdUh2DzLtClB18aH/Mvs6zyT+z3+5O+iD5cMYUS8ZIJ7mTzF/cA4dfWDDIlsSBT8PnVLJEuApGFuFUYqeXKnjwfct1H6w3bEDeColYk19rVOGRlh3/VmzvOzBGsNUQ5DCz3jkfCRnEg30TVOYJ+ByTH7HwMbqJjInvqKA+iG6V0wT+RJ86PraoAyzjCeAcMUiXweFId0XQEez53e7dhMpDlWHD1uCAzvHb9RqZokSIPjscfhyEUP5sMZN8butMRxVnvLtkvGiIOyRBsmvlMwlxNNnpyfkVcx/JzWdOSQ0cEd/7jomkvJ/zcuEVUTbZ3URGkL1+zbF4673zI1UyX1mhkeGM74qdlOYTyVWA+ArwznxYiu62VKRI7+/adXIwZKR+/IAjX9F7CJtrk=
+api: eJydVMFu2zAM/RVB58zOip1ya7MNGIYBRdNihyIoaJup1SqSJslpM8P/PlKyW7fdBmwXW6ZJ6r3HJ/Uywm2Qq2v5WWkMohQbjFEZim0X0jr0EJU1Xxq5kvgY0RvQmxY8yoX0+KPDEM9sc5SrXtbWRDSRl+CcVnWqLO+CNRwLdYt74FU8OqR2trrDOlIf53mfqDCkPIyzpMpajWAoq8FQe+W4J8U3Dmu1oxLx0GJs0YtoBZUKWosw/mw4ksgI64WxvBk+wt5pah19h8OwkNA0ipuCPp/h2IEO+GbTqdvIXDjwsEdSJVDnqCL3laebdZHELNbWY3Hq1DfboA7FRa76GG3xUQWn4fgckcPAYDwGZ03ISpwsl/x6ieEsCyIOoDtcCWYh1C7RfkIjVBBooNLYEK5/ncskeUb0Yfn+LYgrA11srVc/aQfOClh3XkXywTXtEuob/n9zjxwgUsA4HigB5XbYvpZ13YK5pUkyB6iUpj5pmmwzAWJHWorJe/pYUCti2Vq2pOuSgSC29FGCU+VJsSy5IpTT7MupVj7j3DDprPJLtE8qUK+vFFhIQ5ry9zxtIRUDr629V5gEYDUvns/Dp8llo5+T2bhqZ9MeM6t8x4o9Qj0P5KOsyOFEUrazIe4hDWkEkZVKQk2kkkxEc1Lu9UmZncv/EHoUI1K0JMMSa8LVec19s+rXrBRlku70TMonncdLZPF0a/B90hIjLun7CgJeeT0MHCbZPDuFlgciw8blL9qqJeugT65K45HrTObdJQPjdDoFaVqvjD0sporTukYX/5q7nTnq/OqScqvxTtvTyaWghwe+7+i5kpKvRS5O7kmxXmoStoNbzs0t083SsUBzR2XvjAsmNf0yxznAl1bLNPjJpH5b0ffZriTnlJ9//bFiFHbK5sFuCfQv/y4YUA==
 sidebar_class_name: "put api-method"
-info_path: site/openapi/docspace/api-backend/usage-api/asc-files
+info_path: site/openapi/docspace/api-backend/usage-api/asc-web-api
 custom_edit_url: null
 ---
 
@@ -54,7 +54,7 @@ Changes the ability to share a file externally.
 
 <RequestSchema
   title={"Body"}
-  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"set":{"type":"boolean","example":true}},"additionalProperties":false,"title":"ASC.Files.Core.ApiModels.RequestDto.DisplayRequestDto"}},"text/json":{"schema":{"type":"object","properties":{"set":{"type":"boolean","example":true}},"additionalProperties":false,"title":"ASC.Files.Core.ApiModels.RequestDto.DisplayRequestDto"}},"application/*+json":{"schema":{"type":"object","properties":{"set":{"type":"boolean","example":true}},"additionalProperties":false,"title":"ASC.Files.Core.ApiModels.RequestDto.DisplayRequestDto"}}}}}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"set":{"type":"boolean","description":"Specifies whether to set the specified settings or not","example":true}},"additionalProperties":false,"description":"Settings request parameters","title":"ASC.Files.Core.ApiModels.RequestDto.DisplayRequestDto"}}}}}
 >
   
 </RequestSchema>
@@ -62,7 +62,7 @@ Changes the ability to share a file externally.
 <StatusCodes
   id={undefined}
   label={undefined}
-  responses={{"200":{"description":"Boolean value: true if the parameter is enabled","content":{"text/plain":{"schema":{"type":"boolean"}},"application/json":{"schema":{"type":"boolean"}},"text/json":{"schema":{"type":"boolean"}}}},"401":{"description":"Unauthorized"},"403":{"description":"Forbidden"}}}
+  responses={{"200":{"description":"Boolean value: true if the parameter is enabled","content":{"application/json":{"schema":{"type":"boolean"}}}},"401":{"description":"Unauthorized"}}}
 >
   
 </StatusCodes>

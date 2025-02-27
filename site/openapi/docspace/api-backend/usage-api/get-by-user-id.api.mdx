@@ -5,9 +5,9 @@ description: "Returns a list of groups for the user with the ID specified in the
 sidebar_label: "Get user groups"
 hide_title: true
 hide_table_of_contents: true
-api: eJztVt9P2zAQ/lciP21S25QWppI3NgZiY9MEQ5OGKuQk18bUjT3bKZQo//vu7LS0KzwgjTfykPrH3Xd3313uWjPHp5Yl1+zUqEqzcYcpDYY7ocqznCVsCu7j8sqCwV2HaW74HBwYUqlZiRuUqfBa0LUocae5K3Cdg82M0ASEh4QQnR3juYE/lTCA2M5U0GE2K2DOWVIzt9SEZp0R5RQlJ8rMuSP8yqPDPZ9rSSIj/uFD/3CYdmHvALr76WTYTdPRoDvay0fZ/mh4MJpw1jRjsma1Ki1YMjDo9+ln27NzYV2kJtGU4rdoJlOlg9J5j+DexVpyiqve9VSlt5A5osUQaU4EM+jsi6Kp++3TfeK1ehrWdFq+d7HLSkqeEljg9BHbZzX6TnqoP+cln4J5GcQXPoPeb/5QCGdnAmntMJ7ngujj8sdG5BMuLWo64bze0eWn3i9Ie0da9L6pHKTteW8uq/mcm+WxUwFLaykyX3DxrVVvTL8a076a3yh+PYoJbb+/t9tjrkpeuUIZ8YB9zwsNd4VOlElFnkPpvbKQVUa4pe+z3GY3hHAzAzrArsaJ9TsUADamPrcNdQGuMqWNeCS3uluEeYtcARF17OhOuMLvzo4jqyETEwF5JEp/Rm0arOuhGWz4hWpngZ8B2N8TFnMt4kGvHwfomCDjOoyChlEAZrGaE5WRqFE4p5M4lirjslDWJaP+4SDeGRXndB8FdUaxrai4pJINVblNyLoA0KWveLCqrW2xdjxlSs0EeI5FOVFeeyPJJ0ICTQHyPfizGFDKNDqMFUfiLfgpuMDjenJsxVE/DpL/nI822I3hhP55ius2OdfEBEpievC99o+s4E/SzmukltJA4nWdcgtXRjYNHaMpQ4WGywU3InxKmMdcWFrn68/j2YjfXbRj/n30OPqfdHyVupIytOCyoh0ufWZXfy2aMUoWWPX0vaMj4fIoy0C7DbVN5PFG4Z5+/olSVAnbxRLKol0Q7pPO/FNFwTa9m84zGnUdKrFp1vLh6lmNNraVtA8A+8lfqFczAA==
+api: eJytVF1v0zAU/SuRn0Bqm7Zs0ujbYGgaMIRWJiSmarpJbhqvaWxsp1sX5b9zr5O2C23ZC3lw/HF87te5roSDuRWTO3FpVKnFrCeURgNOquIqERMxR/dhfWvR0KonNBhYokPDVypR0IIwJR1LPpYFrTS4jOYJ2thIzUS0yQzB1QXtG/xdSoPE7UyJPWHjDJcgJpVwa81s1hlZzAmZKrMEx/ylZ8cnWOqcIQA4wtHwXT+K4bT/PoVRP4KzuH8yHp6eRScQpeMzUdcztma1KixaNjAeDvnX9eyrtC5QaTDn+C2ZiVXhsHCMBK1zGftkhA+W4dW+vyp6wNhxcgynzsnGGLl8IKaubZ+Q42FWw/brHxg2Xy3qXluI18x9YxSByzyHiC00FdgZ9BoIPIxIl1DAHM3rvNct8F/Un2GBg1/wnElnF5KK0xOQJJIZIP/+InMp5JZuOun8vfPpx8FPjAbnWg6uVYK5HXgvp+VyCWZ94RRxMdvJcLRf3NsCSpcpI59JcIyyGJdGurWXL9j4ns/vF8gbJBbgAjwSAMWM5dNlu0FXmsIGEOQd0QRUwsBlGHAjBI/SZX51dRFYjbFMJSaBLPweqx+tG5AZ6qNMtS3mW4vaZiJC0DIcD4ahpw6ZMayaBqvFzv8pq7ARWjeKba2I5wttbLTRhbWtGiu1kOgTI4tU+dv7eSf0ijq+ycFqzNLQyjqSB19o6S/RNeFv+6iTu2rXVv85jW24Dp9cqHOguMi/0uRss8npHeeCkJRVGr0t+rMR+k3ax4uKnVFQjK6qCCzemryueZssGZYHTVdgZCNvUk8iLc+TrWSPBvzmpn3z3ga7d/Cg35vaFVyiFeQlr2jqS7t5Z+sZITPSKvcmOdIcnscxavfi2t7jxYLeiu7y0w/CsiC6mmnU0U6Y/aBLf4mp8YDHunfkRlU1gqzrLb45OnqjjXCD5gTNqNP/AI7oPQA=
 sidebar_class_name: "get api-method"
-info_path: site/openapi/docspace/api-backend/usage-api/asc-files
+info_path: site/openapi/docspace/api-backend/usage-api/asc-web-api
 custom_edit_url: null
 ---
 
@@ -28,7 +28,7 @@ import Heading from "@theme/Heading";
 
 <MethodEndpoint
   method={"get"}
-  path={"/api/2.0/groups/user/{userid}"}
+  path={"/api/2.0/group/user/{userid}"}
   context={"endpoint"}
 >
   
@@ -47,7 +47,7 @@ Returns a list of groups for the user with the ID specified in the request.
 </Heading>
 
 <ParamsDetails
-  parameters={[{"name":"userid","in":"path","description":"User ID","required":true,"schema":{"type":"string","format":"uuid","example":"8a66093b-e15e-4bf3-bb82-81d8c48358fa"}}]}
+  parameters={[{"name":"userid","in":"path","description":"User ID","required":true,"schema":{"type":"string","format":"uuid","example":"aae1e103-bca5-9fa1-ba8c-42058b4abf28"}}]}
 >
   
 </ParamsDetails>
@@ -62,7 +62,7 @@ Returns a list of groups for the user with the ID specified in the request.
 <StatusCodes
   id={undefined}
   label={undefined}
-  responses={{"200":{"description":"List of groups","content":{"text/plain":{"schema":{"type":"object","properties":{"id":{"type":"string","format":"uuid","example":"{00000000-0000-0000-0000-000000000000}"},"name":{"type":"string","nullable":true,"example":"Group Name"},"manager":{"type":"string","nullable":true,"example":"Jake.Zazhitski"}},"additionalProperties":false,"title":"ASC.Web.Api.Models.GroupSummaryDto"}},"application/json":{"schema":{"type":"object","properties":{"id":{"type":"string","format":"uuid","example":"{00000000-0000-0000-0000-000000000000}"},"name":{"type":"string","nullable":true,"example":"Group Name"},"manager":{"type":"string","nullable":true,"example":"Jake.Zazhitski"}},"additionalProperties":false,"title":"ASC.Web.Api.Models.GroupSummaryDto"}},"text/json":{"schema":{"type":"object","properties":{"id":{"type":"string","format":"uuid","example":"{00000000-0000-0000-0000-000000000000}"},"name":{"type":"string","nullable":true,"example":"Group Name"},"manager":{"type":"string","nullable":true,"example":"Jake.Zazhitski"}},"additionalProperties":false,"title":"ASC.Web.Api.Models.GroupSummaryDto"}}}},"401":{"description":"Unauthorized"},"403":{"description":"Forbidden"}}}
+  responses={{"200":{"description":"List of groups","content":{"application/json":{"schema":{"type":"object","properties":{"id":{"type":"string","description":"ID","format":"uuid","example":"{00000000-0000-0000-0000-000000000000}"},"name":{"type":"string","description":"Name","nullable":true,"example":"Group Name"},"manager":{"type":"string","description":"Manager","nullable":true,"example":"Jake.Zazhitski"}},"additionalProperties":false,"title":"ASC.Web.Api.Models.GroupSummaryDto"}}}},"401":{"description":"Unauthorized"}}}
 >
   
 </StatusCodes>

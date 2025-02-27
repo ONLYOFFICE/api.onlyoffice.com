@@ -5,9 +5,9 @@ description: "Deletes the backup history of the current portal."
 sidebar_label: "Delete the backup history"
 hide_title: true
 hide_table_of_contents: true
-api: eJydU02P2yAQ/SuIsxW7aQ+tb/uRVavubbunKFoRPKlpCFDAaVPL/70z4GTz0VVXe8EG3ryZeW/oeRTfA6/n/FrIdef4ouDWgRdRWfOl4TVvQEOEfPtZhWj9jhfcQ3DWBMDQnk+rij4NBOmVo0iMu7ZWgzBsK3QHNYu+A6ZWLLbADgmYCix0UkIIq04jrbQmgonEFuF3LJ0WytAuyBY2Ip3vHCD9MtPzYSi4cE4rmRjLH8H+PyBxvwJJ2A/Vu8vmHo3oYmu9+gMNT6D3l6A765eqaSDnDCA7r+IOte65CPKJGJ7WQAcop2iw/V8IAL4Y0IRTqttkQkjqLZMVrM1eMJs1RXKPyjFnfRR6gmQbwAqfHcQTJ2KL+1I4VU4nVZmZynyfN+3B4QB+Cz6kcjuvMa6N0dVlqa0UurUh1h+rT9OSn9d6T/csh3NqZd/5AwmdJ+a0/4PyWNhXoORGbNL+GFZwGgUcEbtWkCRVZmVTtIqa4FcPN5M7pTFFwan2XM92Sg45LHgjkuEjedb0H5Ked9Q/j+WbjBibOxporCdJ2o+WzKlzRKIpuGbeVMWlMagnaU8xfb8UAR69HgY6/tmBp2HC363wSixJk/kCc7U4XegFOZn05lf45FwklehxntW2OBqd29n97NsMgeTCqVHZkvGHqPdXZndEfOZgTk/rULwQ0fd5CrCpPT5fvRgxtrdHpx7w6f4FQqSpfQ==
+api: eJydk01v2zAMhv+KoLMRZ8FOuaVrgA3drSuGIQgKWWZqNY6kSVS2zPB/HykladOsl/lg6+Pl10N6kKieopyv5I3S2+TlupLOQ1BonP3SyrlsoQeEcvvZRHThICsZIHpnI5DpIGfTKX9aiDoYz5Zkd+NcD8qKveoTzAWGBMJsBHYgzgGEiSImrSHGTerJrXYWwSJ7U973RmdZ/RzZ5SCj7mCneIUHDxSkKUHkSE8lP04/XOfxYFXCzgXzB1qZRbNr0Q+XgvDBaGOfhO8p7dZBFNYh5ee9C0iJU7KuGHCwCDoFgwdiR8lG/chhHrfAB4RHtVTOLxKAXI8E9TLebYYaM40moxVdYStcYUTOA5EQHFv1E3K2AyrjpSN04hV2tK+VN/VsMq2Lp7rcl0137tgp33tmWPp2mfUZKrm7Azaxapf3r2WVNFyAdm5rIIMwduOytcGe5Yv7T5Pv0EwW3pB6DyGWmvczxu9dxJ3K3Ty6Lyz+gUK+oTa8jMd/ATyWh/Aba+ox1UH5pNCz54JyxbWTkmDSu/jNWVwDpZZ2VArbDEOjIjyEfhz5+GeCwENAy70KRjVMZbWmWB1NBYQ8MJm4XNDoe2RK/JNk9G+Gnkfn3Pjb5dfltyXJuRuXDSutOS44wOnKHl67v+xkSYLfY/WOxTCUaaDSTvpy9a7FsciTmimv6e/8CzVgg80=
 sidebar_class_name: "delete api-method"
-info_path: site/openapi/docspace/api-backend/usage-api/asc-files
+info_path: site/openapi/docspace/api-backend/usage-api/asc-web-api
 custom_edit_url: null
 ---
 
@@ -54,7 +54,7 @@ Deletes the backup history of the current portal.
 <StatusCodes
   id={undefined}
   label={undefined}
-  responses={{"200":{"description":"Boolean value: true if the operation is successful","content":{"text/plain":{"schema":{"type":"boolean"}},"application/json":{"schema":{"type":"boolean"}},"text/json":{"schema":{"type":"boolean"}}}},"401":{"description":"Unauthorized"},"403":{"description":"Forbidden"}}}
+  responses={{"200":{"description":"Boolean value: true if the operation is successful","content":{"application/json":{"schema":{"type":"boolean"}}}},"401":{"description":"Unauthorized"},"402":{"description":"Your pricing plan does not support this option"}}}
 >
   
 </StatusCodes>

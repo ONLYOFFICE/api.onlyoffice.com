@@ -5,9 +5,9 @@ description: "Uploads a portal license specified in the request."
 sidebar_label: "Upload a license"
 hide_title: true
 hide_table_of_contents: true
-api: eJydVMFu2zAM/RVDZ7dO0x623LYCBYYN2IC0pyIoFJmt1cqSJtFdM8P/PlKyF6dpgWGXgBEfqcfHJ/cC5UMUq1uxBkRtH2JRFd+0AhtBbErhPASJ2tkvtViJzhsn6yldigA/O4j42dU7sepFDVEF7RlO4BFWSESpmhYsRipRziKFDG87g9rLgNW9C+1JLVHycVQNtCnCnQdq5LaPoJBqfWA6qCFy9kqbHIwwGYLcEUojtHw+lP9ECF5k6w01uO2FZmJny/OLUkQMpAZVRddCgfDCBLbOGZDUC0MHw2YY6A6wytUJOqMUccctBQ8mhiEBA0Tv6P4EWC4W7yp2qBJfXXkjtT0QhztK741WaT3VY3THgFT7RoZzF4uzYwY3VnbYuKB/Qy0S6PwYdOXCVtc1WMF9IqguaNwlAWVUd9zh7gn4gGaWNY3ziwBkp2HzeiU3yVCxkIV3AaUpzLij6EHpew11oW2BDRSj1U6pWwtEke3oXUy2kNjQv0p6XS1PF1UcnVyZv3pGCM8QYuLYBUPoBtGvqso4JU1DfVYfFh+XlTjyDOeLXC6Y/zTumtXMuzwceu9Hr78CG9LKNv2fw8im3F4596Qh6ajtvUvVGpN1Pq0vT7OfSsHcM5/nJa+FB29l2urYPAtJOu5nPhik31vq/0Qfh5q5kXgkKftxAbc8MSFpBUnxvAQKzf5zwkozsu+3MsJNMMPAx3RLYL9Q+CyDltv0Hjd0Q0MGIuV5b0ldcZnHOLlmPgw3HfN661sylFPRJ6XA4ww+H2Mzc9SP7+vr9M7zB6119fSKU8dyH2Z6vM/DlefljgHTnlJ2N7v/lRcyS/5lzm9W9H32Ewk24XPq3YpRugmdRqWX/wd8uQiS
+api: eJydVMFuEzEQ/RXL5zRbAlx6K5WQEEhUSiuEoqjyeiddt17b2LOFEOXfmbF3mw0JFy6J134z8+bNs3cS1WOSVyu5BETjHpOoxBejwSWQ65n0AaJC492nRl7JPlivmvF4JiP86CHhB99s5dVOau8QHPKy6y2aoCJWGx+7i0ah4u2kW+jyCrcBKKOvn0AjpQqRS6GBxKcfjS2LAaZiVFtCGYRuup8wEmc64CqKKsvaOBW3cj+TDSQdTWDytD+QFgpR6bYjmknu9wQDp33DSaZlE24t5+e0DGNghBQ8pciAxeUl/52tQXQmSqgQrNFZw+opMW4iQ8n87lyyuxZE0RsasSFiQvveNsJ5FDWIje9dI3Pwm9Pge6d6bH00v2EAvT0F3fqIyoprrSGlgnp/ivru+yhCNJo0EsEqJxoPKdNIfQiUQ2BrkvAlgPtJoPtokDyxov6TfmAyD8/AGySjakihnwQgh+3Xfw/qPvechBKh8LPD5FIAbTaG1DCOSoIY3DenbB1Qt+zQ4FN2k8KWvioVTLWYX1ZpMHdlX0c0klzyLMpQj6kezBfMZ2D3OdXl7ymMPMmstffPBnL3xm18jjaYPXS9vJl/g3p+HQyhXyCm0ujLgjVnwp3KrhjSFwGo/wPXI4Um9+z/xBraQviFFQ2U+BOPPlpOXYRbcc+EJOmyUkU8WtrDy9Cy0oTc7WqV4D7a/Z63qUrkOdPyRUWjatZgtaYKLQ0eYvZE1lfelDYu7pgPw23PvM49HfvZGMRuDTiBn9wvttSrH26/Lu8IXA8vVOeb8VrnvLPDspDkuR6Pvgx5WDD58chtpyyOPVG48i8zPxux2xVfkWwjvhz9M2IQcETz3Nb0fvwBCwL4nA==
 sidebar_class_name: "post api-method"
-info_path: site/openapi/docspace/api-backend/usage-api/asc-files
+info_path: site/openapi/docspace/api-backend/usage-api/asc-web-api
 custom_edit_url: null
 ---
 
@@ -54,7 +54,7 @@ Uploads a portal license specified in the request.
 
 <RequestSchema
   title={"Body"}
-  body={{"description":"License attachments","content":{"multipart/form-data":{"schema":{"type":"object","properties":{"Files":{"type":"array","items":{},"description":"License attachments","example":[{"int":1234,"string":"some text","boolean":true}]}}},"encoding":{"Files":{"style":"form"}}}}}}
+  body={{"content":{"multipart/form-data":{"schema":{"type":"object","properties":{"Files":{"type":"array","items":{"type":"string","format":"binary"},"description":"License attachments"}}},"encoding":{"Files":{"style":"form"}}}}}}
 >
   
 </RequestSchema>
@@ -62,7 +62,7 @@ Uploads a portal license specified in the request.
 <StatusCodes
   id={undefined}
   label={undefined}
-  responses={{"200":{"description":"License","content":{"text/plain":{"schema":{}},"application/json":{"schema":{}},"text/json":{"schema":{}}}},"401":{"description":"Unauthorized"},"403":{"description":"Forbidden"}}}
+  responses={{"200":{"description":"License","content":{"application/json":{"schema":{}}}},"400":{"description":"The uploaded file could not be found"},"401":{"description":"Unauthorized"},"403":{"description":"Portal Access"},"405":{"description":"Your pricing plan does not support this option"}}}
 >
   
 </StatusCodes>

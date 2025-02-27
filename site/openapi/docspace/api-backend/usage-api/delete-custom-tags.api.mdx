@@ -5,9 +5,9 @@ description: "Deletes a bunch of custom tags specified in the request."
 sidebar_label: "Delete tags"
 hide_title: true
 hide_table_of_contents: true
-api: eJzdVclu2zAQ/RWCx9aVXLeH1rfEcYAiKVpkORlBQFNjiwlFsiTlxBX8750h5S1BTr3lIlHkm+XNvKE6HsUy8PGMnysNgZXsytom8LsBtw68iMqaHxUf8wo0RJi0IdrmhkwG3MOfFkI8tdWajzsurYlgIi2Fc1rJZFw+BGtoL8gaGkGruHaAHu38AWREP85TqKgg0KkRTV70MOG9WCNKRWhofzPgptVazDWeRt/CgMOzaBx9zniwDbAIz5HfbRApqkpRFkL/PgiyEDqgWVSRjPjJ9aRI7IuJ9VCcOPXTIt1QXGWCZ9EWpyLKmnjv9zgFoFDvnOJhMz98fM9cKYSH4KwJOefRcEivCoL0ylFk9P/rgiPu6/Dz66NbI9pYW6/+QpVBX16Dzq2fq6oCk6obQLZeRZygGc5NkPfk4f4RaAOTERXW6gkBgBXAoTx2dZaGMjDB5q2RNbMLJtOEMppqFhxItVBQMWVYrIH1E1ugzwYw0f1gU99ErPG7FE6Vo2JYLqiGZcyzHsCvwIeUZes14uoY3bgstZVC1zbE8bfh91HJX6Z4Secsm3NisCV8TQLKZT6mvZeKUxdAWiEN0fchDBVE7qW1jwpSJUmZV/srabpV0U6Dx3IiBwubwr0UDjonspnAakSddMiwEWbrbVd71tfniPTBXfg/LerLkK4YpwXyxURS8bu+WTOqESKxXfhc9LmnlLDS1BXCdN1cBLj1erOhbfTvSV24XAmv8uTNqCA1yg27RD1OneCTTOPTDWVCcN3mxry43qmvO0GdTS+nN1OEz/sfQ4Pjh/tePNFPA59jzun3Qvap/2mv41qYZSuWhM1e08i3RPRQE7n7/YJy3R6Z9WGOx2LJfOi5Gbxh0XVZcFilLT4fvWnR12uLpgbhNbX5B51RhMc=
+api: eJylVE1v2zAM/SuCLrtkTtbtlFubZsCwDRv6gWEIikKxmVitLWkSnTYz/N9HSnbitOhpF1uinsinxye1EtU2yPlKftYVBDEVV9bWQd5NpHXgFWprvhRyLguoAGHRBLT1DW+ZSA9/Ggh4YYu9nLcytwbBIA+Vc5XO4+bpQ7CGYyEvoVY8wr0DymjXD5Aj5XGeS6GGwKtG1WnQw5T3ak8ojVCP4wG9NlvZTYhayL12XI3iRE6kHBNpmqpS64rg6BuYSHhWtePpSgZbg0B4RnnXUQ5VFJoTqOrniM1GVQFeFrhKxxZOeSqD4IPYWC84g9kKTNqgRq4jz68XWVQ2W1gP2bnT3y1JGbI+yyXa7EJhXrKmx5jsOmblIThrQtLjbDbj3ymZH4+swKfZh9dLt0Y1WFqv/0KRQB9fg37bRhTWvENRqh0IMLbZloIEqHUIBBFoeUYHrAWWIA6mkMwvQN54jdT+FTU95Pdc8f4ROEDkVUFKPBEASOS7lzpeRkcFocS6MXkp7Ebk0V5RQxEc5HqjoRDaxNK93TLKSbKX9uhK9pDCkuZT5fT0LJtNN6z5tG/GQPOaLZjEPCV7NJvTX4Hdxg7i+RhGHmTeubWPGuL52dtXx1uwHOx1cPGpzzjBxsZyI3v8gjX7gtLvyEtJm90Zd8zZgLUyQ76DZoPJTvQcXcD/kbYXghlPXaXoxESk8RUXSCKvWCVCksz0jULzPqZEPS6JM2Padq0C3Pqq6zhM+T27goY75XW6lCuWpCSbgI8Oir2Qi3SM9zfMhOFVk1rz4k1hRx2McLn8trxZEnzdv0Y1XTOKe/XELxV951Lym8b7owNirJWVMttGbRmbssbXoOGDjl2R+t8PmOuwZPZjjqd2Sefhbzd5Y0fbJsuRSgM+Lb25o9drQHOD6AXr/gGPqvsD
 sidebar_class_name: "delete api-method"
-info_path: site/openapi/docspace/api-backend/usage-api/asc-files
+info_path: site/openapi/docspace/api-backend/usage-api/asc-web-api
 custom_edit_url: null
 ---
 
@@ -54,7 +54,7 @@ Deletes a bunch of custom tags specified in the request.
 
 <RequestSchema
   title={"Body"}
-  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"names":{"type":"array","items":{},"nullable":true,"example":["some text"]}},"additionalProperties":false,"title":"ASC.Files.Core.ApiModels.RequestDto.BatchTagsRequestDto"}},"text/json":{"schema":{"type":"object","properties":{"names":{"type":"array","items":{},"nullable":true,"example":["some text"]}},"additionalProperties":false,"title":"ASC.Files.Core.ApiModels.RequestDto.BatchTagsRequestDto"}},"application/*+json":{"schema":{"type":"object","properties":{"names":{"type":"array","items":{},"nullable":true,"example":["some text"]}},"additionalProperties":false,"title":"ASC.Files.Core.ApiModels.RequestDto.BatchTagsRequestDto"}}}}}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"names":{"type":"array","items":{"type":"string"},"description":"Tag names","nullable":true,"example":["some text"]}},"additionalProperties":false,"description":"Request parameters for adding tags","title":"ASC.Files.Core.ApiModels.RequestDto.BatchTagsRequestDto"}}}}}
 >
   
 </RequestSchema>
@@ -62,7 +62,7 @@ Deletes a bunch of custom tags specified in the request.
 <StatusCodes
   id={undefined}
   label={undefined}
-  responses={{"200":{"description":"OK"},"401":{"description":"Unauthorized"},"403":{"description":"Forbidden"}}}
+  responses={{"200":{"description":"Ok"},"401":{"description":"Unauthorized"},"403":{"description":"You don't have enough permission to perform the operation"}}}
 >
   
 </StatusCodes>

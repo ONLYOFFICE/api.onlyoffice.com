@@ -5,9 +5,9 @@ description: "Returns the two-factor authentication application codes."
 sidebar_label: "Get the TFA codes"
 hide_title: true
 hide_table_of_contents: true
-api: eJylU8GO2jAQ/ZXI5xSntIeWG1qVVdU9ld0TQivjDMTdYLv2hC2N8u+dcRI1QPfUC9iZ9ybz3pu0AtUhisVGrAHR2EPMZPa4WmZxuIptLpyHoNA4+7UUC4F7tfT+HvDOlRBFLgJE72yk86IV86LgP6roYDyTiPJgImZunxor72ujU7tMDx20swgWmYjwC6WvlbF8i7qCo6JT1+ViwpQ/orsFJO4/Klz7WLy/nevJqgYrF8xvKEUCfbgFrVzYmbIEK7hPBN0Eg2eyrBUq6mfu8PwC/ICcUCXJeSUAiG1H1l22+g7YBBszrCDDV/durzS6kHELkj+6cuPQjHoegQZl+w+AdPUKK7pI5Y2czwo5xiUpHeKPxkYIJwgxDduEmhgVol9IWTut6spFXHwqPs+luJ70getZTxcsZNS9Zlv7qC/VU3RnD0Slkb7Rg1xYdUz3KSwXHCwF7l4MJEON3bvENlgzfLm+m61Mncbn2ft5TnPOx9PAR5XiHZrTGiY3ebNG0RdK2r/L9T/2D9om20njJEfbIYsNCyckpZGMHz6fXEwTISPZdEa37U5FeAp11/Hjnw0E3iE6nlQwasdmbLb0loqWikLgCJPRYqk1eF6Ck6qb66m2k1W5//JIKJZ3GU8fxHDgvmPJniddr3Lr382/Xf4Go2377EnRiO9LbzIGbSM6CaDP9Q8pcpBQ
+api: eJylU02P2jAQ/SuWzymhqL1wQ6t2VbWnsqseVmg1mIG4G2zXnmRLo/z3zjjJFhbtqRzAY7/5eO8NnSY4JL180Gsksu6QVKnuPq9UGkO9KbQPGIGsd192eqlpD6sQbpFu/A6TLnTEFLxLfF52ejGfyw+/mGiDJHHKN5tI+X0uDCHU1uRyyowVjHeEjiTx7Ln8mSS708lUeAQ+9fwp9If5++sW9w4aqny0f3CnM+jjNeh1/4mkgojKeVLQgq1hW6OWRglNEy2dWB4eLJlHafH4hHLBrGHHoz8zAPWmZ5kue31HaqJLiipU9Ozf7cGQj0pKMNVpgis1ZlzziMxEpD4gcRiAKg5KCLZczOblNHXJTnD+JOI07VrUGsy4nLnTdArIlbjQV74otINjjs9hhbYyvvH+yQ4yWLf3OdtSLfDV+mb2A7ezVbCMbjGmgXG7EOGDT3SE7NtYnlclqyDqT8NeaNX9W4D/kW1kR/ibylAD0+BxmlhLg0HDB6HOSFYxCzaueKHPlWQnK+Yg6K7bQsL7WPe9XP9qMIr3fGwh2rwnHHGXipcBY96TLLVeGYNBzGuhbgbNX+21bMyL0bef7hgrJC9tGgwZD1J9enKn89qX/g0TyHdfvJHRdcMOMK8JPzy9mTEynNAi7ob/jX8BLMdzhQ==
 sidebar_class_name: "get api-method"
-info_path: site/openapi/docspace/api-backend/usage-api/asc-files
+info_path: site/openapi/docspace/api-backend/usage-api/asc-web-api
 custom_edit_url: null
 ---
 
@@ -54,7 +54,7 @@ Returns the two-factor authentication application codes.
 <StatusCodes
   id={undefined}
   label={undefined}
-  responses={{"200":{"description":"List of TFA application codes","content":{"text/plain":{"schema":{}},"application/json":{"schema":{}},"text/json":{"schema":{}}}},"401":{"description":"Unauthorized"},"403":{"description":"Forbidden"}}}
+  responses={{"200":{"description":"List of TFA application codes","content":{"application/json":{"schema":{}}}},"401":{"description":"Unauthorized"},"405":{"description":"TFA application settings are not available"}}}
 >
   
 </StatusCodes>

@@ -5,9 +5,9 @@ description: "Deletes a group with the ID specified in the request from the list
 sidebar_label: "Delete a group"
 hide_title: true
 hide_table_of_contents: true
-api: eJzVVUtPGzEQ/isrn1opZENCm8cNBahQAVVQTihCjneSNThr1/YG6Gr/e2fsTdgQOPbAJRmPvxnPN6+tmOdLxyZ37IfVpWGzDtMGLPdSF+cZm7AMFHiIlx1muOUrPFsyqViBB8TIDK9kgZLhPkc5AyesNOQElcE4OT/BCwt/SmkBHXtbQoc5kcOKs0nF/IshV85bWSwRudB2xT1qyjK4h2e+MoogXHwbiSGMDoajMRwc9QU/GIvh4GA8hiEf9r5/BzFndT2j15zRhQNHD/R7PfrbDe1KJ0IXHgqPT2wkigaefWoUJ1LVfpR6/gCCTIylbHkZn3Ce+9JNdQYtrESnS7BtSqga9NucDvuDo7ruMJ5lkiLj6lfL8YIrh7ny0gf+l1JY7fTCd4+duQI/1Ra6l2vRvdLTyOAaXKk8Cx6NUVKEcqYPTn92OqEun54H+TzqHe63423BS59rK//iiATQYB90pu1cZhkUISMORGmlfwnzyJ24Jw/3j0AKHABOs/OEAGAzGoldVydhuF3Ck2WY0Sfp88TngMOaOANCLiRkiSyCjmYXnE8WVq+CQkk86UW0dYmOMKOt56qLz+KiyPXrDgnrA9fDhKXcyLTf7aXRMq1kVjOiYtebzVJahcDcezNJU6UFV7l2fjLqjfvp3oK5oPskmjNiuUnKDXVIbILd1GzbACP5iYrOZpXtwJqlJrR+lBCyLYuFDtZN0Y9vpt0zqfCJDqPYYzzrPhXPYMArHjq1cR7Tvcn2WxrV6wL6z4VpuLeWHIYbMl41JbqjxCASi4S/0Q8KE1zFmF4qBWGqas4d3FpV16TGKCy1HYprbiWfU4qwlpl0JGfbkfmQ9pfr5vvwNWl9NN4Nd1O/gsq05qqkE4qhvPRFqmeIynEAsCcoinhxLAQY3zJpe521evbk9OL09ykCqRt2Gya2RiOQ63djedNJ8Xn6rTsfWFRV7Ma63uLj1YcWDb0ta+KA2+UfrlCogg==
+api: eJy1VF1P2zAU/SuRnzapTT8oEutbVdCENtDEhvaAKnTj3DSGNPZsp8Ci/Pfda7elpfC4l8S+Pvfr3GO3wsPSiemd+Gp1Y8SiJ7RBC17p+jIXU5FjhR7jYU8YsLCivWWXVtS0IYzK6UjVtDLgS1rn6KRVhoOQMTgnl+d0YPFPoyxSYG8b7AknS1yBmLbCvxgO5bxV9ZKQhbYr8GRpmhAen2FlKoYA4AhHw5N+JuG0/6WAUT+DM9mfjIenZ9kEsmJ8Jrpuwdmc0bVDxwnGwyH/Dku71onUtcfaU4rtilBgTKVkYGHw4BjaHteqsweU7Ggsc+ZVTOQ8+MbNdY57WEWhl2j3GyPTyXi/s9H4ZNJ1PQF5rjgzVD/2AhdQOWLMKx9YuFLSaqcLn86cuUY/1xbTq7VMr/U89nGDrqk8McExJ8PRcfe3NTS+1Fb9pYkE0OQYFKdXa58UuqkJR0CHsrHKvwQRgJP3HOf+EdlArAMP7IkAKBY8h8OA50FRLoFkGUI/KV8mvkRSSOIMSlUozBNVBxsLBh3ltnoVDJWinS6ir0t0hBltPVQppSV1lvpVuEGzpMmpGIBRg3E6HATPQavyTrx28pOHG+d32M9uguT+jQy9regPYBv5S60fFQaKVF3o4L2Z1+znPP2NWTozitBrukGRjfWYmTfa+RUEmW3CR5a2JL29U+2rWP8zn5vuPT77gamA2qRyG1txDZHZO6aGkMQtfbflTunW0uhLaowhbZuBw1tbdR2bqQjLYqHlGqyCjDkiLeXK8Trfyf3Drj/dbJ6Sz8ne+/JutdsB1jynNVQN72gZ5suPV7cgVEmypQvKVcSDmZRo/J7L0aPA2t7p7fzi+8WvC4KzKA51ExWyWXCCdyt6I6hYBH+73gcebRtF2XU7fDz60GPT5K537oHeh383tAeO
 sidebar_class_name: "delete api-method"
-info_path: site/openapi/docspace/api-backend/usage-api/asc-files
+info_path: site/openapi/docspace/api-backend/usage-api/asc-web-api
 custom_edit_url: null
 ---
 
@@ -28,7 +28,7 @@ import Heading from "@theme/Heading";
 
 <MethodEndpoint
   method={"delete"}
-  path={"/api/2.0/groups/{id}"}
+  path={"/api/2.0/group/{id}"}
   context={"endpoint"}
 >
   
@@ -47,7 +47,7 @@ Deletes a group with the ID specified in the request from the list of groups on 
 </Heading>
 
 <ParamsDetails
-  parameters={[{"name":"id","in":"path","description":"Group ID","required":true,"schema":{"type":"string","format":"uuid","example":"ac58c7e8-789e-42ca-9c73-99e7a7066ecb"}}]}
+  parameters={[{"name":"id","in":"path","description":"Group ID","required":true,"schema":{"type":"string","format":"uuid","example":"aae1e103-bca5-9fa1-ba8c-42058b4abf28"}}]}
 >
   
 </ParamsDetails>
@@ -62,7 +62,7 @@ Deletes a group with the ID specified in the request from the list of groups on 
 <StatusCodes
   id={undefined}
   label={undefined}
-  responses={{"200":{"description":"No content","content":{"text/plain":{"schema":{"type":"object","properties":{"statusCode":{"type":"integer","format":"int32","example":1234}},"additionalProperties":false,"title":"Microsoft.AspNetCore.Mvc.NoContentResult"}},"application/json":{"schema":{"type":"object","properties":{"statusCode":{"type":"integer","format":"int32","example":1234}},"additionalProperties":false,"title":"Microsoft.AspNetCore.Mvc.NoContentResult"}},"text/json":{"schema":{"type":"object","properties":{"statusCode":{"type":"integer","format":"int32","example":1234}},"additionalProperties":false,"title":"Microsoft.AspNetCore.Mvc.NoContentResult"}}}},"401":{"description":"Unauthorized"},"403":{"description":"Forbidden"}}}
+  responses={{"200":{"description":"No content","content":{"application/json":{"schema":{"type":"object","properties":{"statusCode":{"type":"integer","format":"int32","example":1234}},"additionalProperties":false,"title":"Microsoft.AspNetCore.Mvc.NoContentResult"}}}},"401":{"description":"Unauthorized"},"404":{"description":"Group not found"}}}
 >
   
 </StatusCodes>

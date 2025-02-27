@@ -5,9 +5,9 @@ description: "Returns the cookies lifetime value in minutes."
 sidebar_label: "Get cookies lifetime"
 hide_title: true
 hide_table_of_contents: true
-api: eJztVU1v2zAM/SuCzkGcJj1suRXdWgzbgKFpsUMRFIrNxGplSZPorJmR/z5Stls3QYHt0FsP+ZBEPj6+R8uNRLWJcn4rF4Co7SaKTJw796AhyuVIOg9BoXb2SyHncgPYnvXBciQDRO9spPB5I6eTCf8UEPOgPedR1je9BtQViK0yNQhtRaVtjcDZubMIFjkJ4REzb5S2vIp5CZVK+zsPhOJW95AjpfjApFC3FQ2BXxP4IFIT5AYChf47j7ULlcI2eTalDXhUlTcEdzKdne5pbdXKQDEos3LOgLJHZRYecr0mekKvBZYg8iSZiL3AKoDo4IQLwjoc1sNQw54KqqLQjKjMj0HDa2UijCRq5Fh5tjgf/4TV+Mxr/nx3BZg4vuos+YRu/NIv2pEJ3Huj82Rsdh/du+Jvrnia7nep315qhj+dnBxfQzdW1Vi6oP9Qpylodhx04cJKFwXYZFqEvA4ad3Q/NlLF/I4R7h6AN+jiUwX19psCQC73y0OprgDrYONApSjMay6NCakCotddszwKCktaZMrrbDqeZL3EWQf2fAVHCFsIMbGsg6GkEtHPs8y4XJnSRZx/mHycZsdDw+eiTZfcQd/wgge0ncGXbT8NCLH6ShsjaVWV1sOwkeRLXLZEk5Larl3KHnh7oU0aT+be8tlO2RhPhCuVHpQO/BLwSMLDZprnd8n/S981NXgFEY8kZdP5cMsdUyQ5kRR/Ev/ADRKRBeeEplmpCDfB7Pe8/auGwINDf7cqaH5EeEWFSpokMoDtSyLLszwHzzOQuB4QWw4m5fLzNUWx7i+taU3o/jBuf2R3A9QDz9ra/L0fvZLRNK3v1FEf3x69mtH11kenBugZ/QvA/O1t
+api: eJyVU01v2zAM/SuCzoGdpj3lFnRDMWwDhqbFDkVQKDYdq5UlTaKzdob/+0h/pE6CANshjj4eH8n3qEai2kW5fJJrQNR2F0Uqbp171RDlZiadh6BQO/sll0u5A+zvRrCcyQDROxsJvmzkYj7nvxxiFrTnOIr6pgtAXYHYK1OD0FZU2tYIHJ05i2CRg5T3RmddsvQlcmQjY1ZCpXiF7x6Iy21fIEMK9IFLQ93nNZTigVJMkJqIdxAI+u/VFC5UCvvg6wUdwJuqvCG6q8X1TUt7q7YG8kmarXMGlD1Ls/aQ6YLKE7oQWILIOuFEHGVWAcRAJ1wQ1uE0H4YaWkqo8lwzozI/Jg0XykSYSdTIWLla3yY/YZusvObfd5eDicn9YMwndMmxa3Qi25bpb+ZX5349WlVj6YL+Q50yKkJWB43vNCZkU8ye+f75FfiA/Fc5Vf6bACA37eZUiHvAOtg40SAKc8mDhJgqoOTDtLHRCkvapMrrdJHM01HAdCD7mMSxzDUPTT8Xx8UeTCOur3Qwk1ZV3X4Km5H7dNbTd/1rW7gu+lxvQu8hxL7V/UIS2ruIlerGd6C/Azxr/XRgmo+n8P+SDW0hvGHqjaL6qY46GKbt9XvinglJCnZKHUQ7UZHsK6l+DmiarYrwGEzb8vGvGgIbTsu9CpoHl3eUqKQJoIfGw9HJLFdZBp6962rt9D552jwmB5/vPj8QlvU/tqg3Y1gw+3hl36fcx971FfC3nV2IaJref+prxPdXFyOGDkc067uh9/MXRpHNcA==
 sidebar_class_name: "get api-method"
-info_path: site/openapi/docspace/api-backend/usage-api/asc-files
+info_path: site/openapi/docspace/api-backend/usage-api/asc-web-api
 custom_edit_url: null
 ---
 
@@ -54,7 +54,7 @@ Returns the cookies lifetime value in minutes.
 <StatusCodes
   id={undefined}
   label={undefined}
-  responses={{"200":{"description":"Lifetime value in minutes","content":{"text/plain":{"schema":{"type":"object","properties":{"lifeTime":{"type":"integer","description":"Lifetime value in minutes","format":"int32","example":1234},"enabled":{"type":"boolean","description":"Specifies if the cookie settings are enabled or not","example":true}},"additionalProperties":false,"title":"ASC.Web.Api.ApiModels.ResponseDto.CookieSettingsDto"}},"application/json":{"schema":{"type":"object","properties":{"lifeTime":{"type":"integer","description":"Lifetime value in minutes","format":"int32","example":1234},"enabled":{"type":"boolean","description":"Specifies if the cookie settings are enabled or not","example":true}},"additionalProperties":false,"title":"ASC.Web.Api.ApiModels.ResponseDto.CookieSettingsDto"}},"text/json":{"schema":{"type":"object","properties":{"lifeTime":{"type":"integer","description":"Lifetime value in minutes","format":"int32","example":1234},"enabled":{"type":"boolean","description":"Specifies if the cookie settings are enabled or not","example":true}},"additionalProperties":false,"title":"ASC.Web.Api.ApiModels.ResponseDto.CookieSettingsDto"}}}},"401":{"description":"Unauthorized"},"403":{"description":"Forbidden"}}}
+  responses={{"200":{"description":"Lifetime value in minutes","content":{"application/json":{"schema":{"type":"object","properties":{"lifeTime":{"type":"integer","description":"Lifetime value in minutes","format":"int32","example":1234},"enabled":{"type":"boolean","description":"Specifies if the cookie settings are enabled or not","example":true}},"additionalProperties":false,"title":"ASC.Web.Api.ApiModels.ResponseDto.CookieSettingsDto"}}}},"401":{"description":"Unauthorized"}}}
 >
   
 </StatusCodes>

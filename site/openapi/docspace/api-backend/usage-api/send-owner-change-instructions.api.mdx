@@ -5,9 +5,9 @@ description: "Sends the instructions to change the DocSpace owner."
 sidebar_label: "Send the owner change instructions"
 hide_title: true
 hide_table_of_contents: true
-api: eJztVl1P2zAU/SuRH7e2KaVdS98YDAltCERBe6gq5CS3jSG1PdsBuqj/fffaCUvpkCaeeWjq+F7fj3OO7VTM8ZVl0zmbgXNCrmwUR5dPEgxbdJjSYLgTSp5nbMosyMybTnIuV3AurTNlSmbLOszArxKs+6qyDZtWLFXSgXQ05FoXIvVx4nurJM3ZNIc1p5HbaMDgKrmH1GEcbSirE2DJqigfZX9xxKRYJjpmYFMjNIXFaV9YdH6KhqUya46ZWVmKDN/hma91QWvHIz5ajoej7vLL0bg7HB5MusnhJOv2l9DPBuMxDEYTtt12GM8yQYF5cdUqZ8kLC68Tv+BWAxBpbvgaHBhCxQnnMx/PTno/Iekda0G/C5VB0bsOK+ypU73L0GgTrTahxdfj4Nl9YPc+7Nry+/T5A8R3gEgVGbAad3pAZdDv099uIRdgLV9BxBNVuiilQwIjRS6HSCvjeBF5MLGo1uHgla0LLnZZeU3cHm1v74pQ7rB/sF/hreSly5URvyFj3ulw3+lMmURkGUhPhIW0NMLhmTbHk8ymdxTh7gFoAjHhxO8TOgBbbBf71MjMegBE67CMnArogDedqnSmeQoBnR7GQ/JyRSeuVtYrkrsc32KuRTzo9WNbcxQ3eFowj0Q31ViaAn1z5/Q0jguV8iLHKNNJ/2gQ74n2B9mjsJxR/U27M0IzcL3b9Ms2wGK+40SHSRQbvbfdOoz4RJ7VgwCPI9F0/feK+NZsidYO+8/dQbGXylfS0vaZKID0TjiE3h4H5EsQrrlXSF0okeKB94kbJsTubbYDU+s2ey+lNWgttWNtnqqqpndOiKInEuwZDRTjUDW3MfFIflWVcAu3pthuaRoxNaRGHD5yI3hCmMwXGD9HeeJSUoXnjp2ENro3VA25F2Wg8tVG23aaFcdpCtq1fNsdLFpSvbqc3aBbUl//azxfcNbwJ/o0wOeUUSs64IsOfq5iBWJW4qGB9pDZb/ySAGkrLWiqHlA/jUlu2n3sSjB0QE/q558rqirIGJFs/IPpzRU1po23hwGL/gOx3CoC
+api: eJydVE1z2jAQ/SsenQETAiXllkIPmU4mmZBMDwyTkeUFKzGSKsn5qIf/3l3JTk1oO5keMLJ2tfv2vSfXzPOtY7MVW4L3Um1dkiZXzwosW/eYNmC5l1pd5GzGHKg8hOYFV1u4UM7bSlDYsR6z8KMC57/o/JXNaia08qA8LbkxpRShTvrgtKI9JwrYcVr5VwNYXGcPIDzWMZa6egmOopr6Ufe3RGyKMDExByesNFQWtwOw5GKBgY22O46dWVXJHN/hhe9MSWenEz7ZTMeT/ubT52l/PD4562enZ3l/uIFhPppOYTQ5Y/t9j/E8l1SYl9cdOBteOnjf+I23hoDEcMt34MESK1760Pl8OR98h2xwbiT9LnUO5eAmnnALrwdXcdC2WhPCCOIhRBacQaIjK6PhkP4OgVyCc3wLCc905RNBGmGlxBeQGG09L5NAJoL6qDax83h4ctzsTvHKF9rKn5CzkHR6nDTXZYlo0ELaJoKrRGmfZIhQNVCovANRWenRNCuE48Q9Fb5/BNrAqTkp+IwJwNb79TH5KndhRNlxY+J1nB9CaKHF0nABsekA66E8hSZLG+2C57gv8C3lRqajwTB1jQppy1gLcknURA0Oob7ZE0t8w40eU2gCeu+m9Zgk1ELrRwlheuL85vfN+dpateP8D7qWam90QHLsOez8hIaMpD2NKJtG3/EgeAOVyAyEhdYtg/Lwmh/w37nm/ytFQ5uHF5+akiM/iK2yJRWPsqyIU8xEYYISURpc6vYzVZCKmFfXGXdwZ8v9nraRVUsuwuUTt5JnxMpqjfULtBUeJccF9dCpYYz+LaGh9LKKYr67Hftee+JcCDD+n7nrjtGur5a3mJw1X8cd3n/ctfyZvpz4nDEayESWMSHs1axE5iq81BiPNcPHqSJauo6L3moWNFUbUq9dhIdWjHPQk6b644m6jnZGPtv8GPrriYbZNpvkXCPoX490LmA=
 sidebar_class_name: "post api-method"
-info_path: site/openapi/docspace/api-backend/usage-api/asc-files
+info_path: site/openapi/docspace/api-backend/usage-api/asc-web-api
 custom_edit_url: null
 ---
 
@@ -54,7 +54,7 @@ Sends the instructions to change the DocSpace owner.
 
 <RequestSchema
   title={"Body"}
-  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"ownerId":{"type":"string","description":"Owner ID","format":"uuid","example":"75a5f745-f697-4418-b38d-0fe0d277e258"}},"additionalProperties":false,"description":"Settings request parameters","title":"ASC.Web.Api.ApiModel.RequestsDto.OwnerIdSettingsRequestDto"}},"text/json":{"schema":{"type":"object","properties":{"ownerId":{"type":"string","description":"Owner ID","format":"uuid","example":"75a5f745-f697-4418-b38d-0fe0d277e258"}},"additionalProperties":false,"description":"Settings request parameters","title":"ASC.Web.Api.ApiModel.RequestsDto.OwnerIdSettingsRequestDto"}},"application/*+json":{"schema":{"type":"object","properties":{"ownerId":{"type":"string","description":"Owner ID","format":"uuid","example":"75a5f745-f697-4418-b38d-0fe0d277e258"}},"additionalProperties":false,"description":"Settings request parameters","title":"ASC.Web.Api.ApiModel.RequestsDto.OwnerIdSettingsRequestDto"}}}}}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"ownerId":{"type":"string","description":"Owner ID","format":"uuid","example":"75a5f745-f697-4418-b38d-0fe0d277e258"}},"additionalProperties":false,"description":"Settings request parameters","title":"ASC.Web.Api.ApiModel.RequestsDto.OwnerIdSettingsRequestDto"}}}}}
 >
   
 </RequestSchema>
@@ -62,7 +62,7 @@ Sends the instructions to change the DocSpace owner.
 <StatusCodes
   id={undefined}
   label={undefined}
-  responses={{"200":{"description":"Message about changing the portal owner","content":{"text/plain":{"schema":{}},"application/json":{"schema":{}},"text/json":{"schema":{}}}},"401":{"description":"Unauthorized"},"403":{"description":"Forbidden"}}}
+  responses={{"200":{"description":"Message about changing the portal owner","content":{"application/json":{"schema":{}}}},"401":{"description":"Unauthorized"},"403":{"description":"Collaborator can not be an owner"}}}
 >
   
 </StatusCodes>

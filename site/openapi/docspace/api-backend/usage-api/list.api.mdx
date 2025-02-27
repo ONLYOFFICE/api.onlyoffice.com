@@ -5,9 +5,9 @@ description: "Gets migration list"
 sidebar_label: "Gets migration list"
 hide_title: true
 hide_table_of_contents: true
-api: eJylU0Fu2zAQ/IqxZyFSnR5S3YKiCYK0yCHNyTACmtpaTCiSJSm3rqC/d5eSEtmpL83F1pKzw9kZsoMotgHKFXxTWy+isgbWGViHQ3FTQQlahQgZeAzOmoAE72BZFPxXYZBeudRXwt0twaQ1EU3k3Yi/Y+60UIarIGtsRFrfOyS48F7sqUNFbMJsPUSvzBb6vs9AOKeVTFryp2D/nyhpeQcDc3wsPrwd+sGINtbWqz9YQQKdvwVdWb9RVYUGmCegbL2Ke/K9AxHkIzM8PiMvkM2iIiW/CICw7imNQ6prjGHRTGktxnAaJA0c1ha5dCLWVOTCqXx5VuQv+HzEB/Q79CEpaL0mbB2jK/NcWyl0bUMsL4pPyxyOj//K+4uhHVjdNMw9ezpcjsORXk126hbZZSOaVM9h5D3TS2ufFSaXlPlhU7eKmuGX95/PrpSmIzJg7YOe3ZJNdyS4ESnbkfzfNh3M0r3e1RPwUfjsHtNZya5utHjFUxGSTOYUXh5RNrwa8oe9ZFzXbUTAB6/7npd/tug5b/rcCa/EhmdcrYm/pgtA3nIyyT+4lBIdy9kJ3R7rWc+yv/7ynVBs6aHrg7/jB/NOW2Y/Yz2KYzibf/vsREfXDZHSRBN+2DrZMc42odMA9LT+AmQOhzU=
+api: eJx1k8Fu2zAMhl/F0NmIs2yn3IJiKIah26EtdgiCQlHYWI1tqSKdLTP87iUlO43XJYdElH5SPz8qnSK9R7Vcqzu7D5qsa9QmV85DCr7t1FJVFknlKgB61yCwvFOL+Vx+doAmWB/zlurngWXGNQQNyan2vrImFipeUCSdQlNCrWVFJw+cpEPQJ86zBDVe7CMF2+xVL59cfZl/+njfY6NbKl2wf2GnoujzR9EPl3E3tUXkGDOK4bMLdUalxUybqJM7EEwbLJ0YB3tH8yTVnw4gG9y93rHL3ywAtekZ0vSaWyDM6hFiNjCrgf0Jwz1I6DWVHBTa22IxmxdnfTHoRwv3QimRnhp5x+btdxBuja5jfCljmuLJOHewEHuzzbOL2ZYqka/ub2a/YDtbecvqIwRMbRwXAtI7pFrHeQ3l/9/eBEH3Pvor8sE6wR8qfKXZI9/VhkpyE5q19MVKhiP0zm8yT4+QqZdsTXRdt9UIj6Hqe9l+bSHInHh51MHqrXS53nD9kgcHIc40ElQrY8CLnaOu2oTyn2cq0z1P7vbrA2sF7ZR+4jwspPp41Jwua0/HkhzId59fyei6NFrua9Sno6sZQ4ejWrBu+E/zBgdbTgc=
 sidebar_class_name: "get api-method"
-info_path: site/openapi/docspace/api-backend/usage-api/asc-files
+info_path: site/openapi/docspace/api-backend/usage-api/asc-web-api
 custom_edit_url: null
 ---
 
@@ -54,7 +54,7 @@ Gets migration list
 <StatusCodes
   id={undefined}
   label={undefined}
-  responses={{"200":{"description":"OK","content":{"text/plain":{"schema":{"type":"array","items":{"type":"string"}}},"application/json":{"schema":{"type":"array","items":{"type":"string"}}},"text/json":{"schema":{"type":"array","items":{"type":"string"}}}}},"401":{"description":"Unauthorized"},"403":{"description":"Forbidden"}}}
+  responses={{"200":{"description":"Ok","content":{"application/json":{"schema":{"type":"array","items":{"type":"string"}}}}},"401":{"description":"Unauthorized"},"403":{"description":"No permissions to perform this action"}}}
 >
   
 </StatusCodes>

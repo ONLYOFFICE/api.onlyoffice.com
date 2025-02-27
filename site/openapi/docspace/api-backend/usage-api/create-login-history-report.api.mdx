@@ -5,9 +5,9 @@ description: "Generates the login history report."
 sidebar_label: "Generate the login history report"
 hide_title: true
 hide_table_of_contents: true
-api: eJyNU0Fu2zAQ/IqwZ8F0nR5a34ICaYMaaBE3J8MIaGoTsaFJlqRcu4L+3l1KQhUnBnqRRHJmOTuzaiHJpwjLDaxRNUGnUyGKlXvStqh1TC6cYFuC8xhk0s7eVrAEFVAmzKAvPeYOvQsJSggYvbMRqWILi/mcXxVGFbRnOpHv71ZFckWqsTiaeCxCphaP2iDxlbMJbWJawmMS3khteRVVjXtJX11XgvTeaJUFiZ/RvQZk7hsnfPZ+/u4NVVY2qXZB/8EKMujqNejGhZ2uKrTAdeLgF3nXgozqgSs8PCNvkA+yonZ+EwBh25GFL0t9RsuOYsxGmKnfgyMzou+RNLHj3kV218tU00pIr8ViNhejBCGbSieRy4gwZhExHDDErK8Jhoh1Sn4pCKekqank8sP840LAubgVnxc9HVj7eM+aneyzfdkwpXXySFRS9pU2SrByn9dTWAmcJWXsnjVmD7V9dJmtk2H49frT7IYmIRKWtfd6DguOhD3Yy5zoUHw08aKH5521/+brPxMY2prMIinJZrZDGhvumZCUB0yGgoaUM6F3Lp1/jSyJ7GTrmdi2OxnxPpiu4+1fDQYeHvo8yKDlji3ZbOnCmqaJouAgs91wrRR6Ln6QpjkXuJ0Mzvdv6x9ZC0udptTnMXxw4fHIniZlz+LrL+dnV15gtG0/AtTSiO+PLjKG5kZ07oB+1L+2wZI0
+api: eJyNU8Fu2zAM/RWBZyPOgp56C3bYhhZo0awYhiAoFJmN1TqSJslZMsP/PlKyN6ddgOUQy/Z75HuPdAdR7gJcr2GFqvU6nkQpbu1OG1HrEK0/waYA69DLqK35UsE1KI8yYgJ9zpgHdNZHKMBjcNYEpIodLOZzvlQYlNeO6UR+fLgV0YpYozg24Sh8oopn3SDxlTURTWSadK7RKnUtXwJzOwiqxr2kU0+/Aq7mH/7RwMg21tbrX1hBAi3eg77b1gvntdJmJ1wjjagsBmFsFKF1SVEk/8JmAjcLQz6UFYkL6onbPL0iPyDfsiL5PwmAsOkpsvN+n9BwgtSCjTfTfIcEZkTfIwnnhJ0NnKaTsaa7UjpdLmbzcpRQyrbSsUxlSj9mP75dcUh5AucyO4gnh1SQ6t3QgwKM3Kf7KawAzYqVta8ak3Ntnm1i69gwfLn6OPuG29nSaUIf0Ids8rDgvFn7XqZxDeVH8xe9w5u4ur978J/JDcYiHmNJ4yQHpKT1DdfKKa7ZNSEpx0lWdExZ0jWVTiucJNEIa54CEbtuKwM++qbv+fGPFj0PnY4H6bXccijrDTWsaQvQpwVJgcNSKXRc/CCbNif/Zql5Vf6M/f5u9TUpYsHTaeW5DAcuP74yp2nx8zFmCfzfFxcYXZdXgYyN+PzqImOwOKI56A19i78BmMh3TA==
 sidebar_class_name: "post api-method"
-info_path: site/openapi/docspace/api-backend/usage-api/asc-files
+info_path: site/openapi/docspace/api-backend/usage-api/asc-web-api
 custom_edit_url: null
 ---
 
@@ -54,7 +54,7 @@ Generates the login history report.
 <StatusCodes
   id={undefined}
   label={undefined}
-  responses={{"200":{"description":"URL to the xlsx report file","content":{"text/plain":{"schema":{}},"application/json":{"schema":{}},"text/json":{"schema":{}}}},"401":{"description":"Unauthorized"},"403":{"description":"Forbidden"}}}
+  responses={{"200":{"description":"URL to the xlsx report file","content":{"application/json":{"schema":{}}}},"401":{"description":"Unauthorized"},"402":{"description":"Your pricing plan does not support this option"}}}
 >
   
 </StatusCodes>

@@ -5,9 +5,9 @@ description: "Creates thumbnails for the files with the IDs specified in the req
 sidebar_label: "Create thumbnails"
 hide_title: true
 hide_table_of_contents: true
-api: eJztVsFu2zAM/RVDxy2Ls2yHLbc23YBiHVqs3SkICsamY7WypUl02yDwv4+Us1ZJsdsOHdAcYot6Iqn3SMlbRbAOarZQX7XBkOVZfKrlSFmHHkjb9rRUM1V4BMKrumtWLWgT1Eh5/NVhoGNbbtRsqwrbErYkr+Cc0UVcnN8E24otFDU2IG+0ccge7eoGC2I/zkso0hyWZytrSvSnZUig4D1sGKkJm2iHdnNecdaPCM2x1+gZgw/QOMO299MPH/vRIyKQ1+06BahgG8wIH0j1y36k2s4YWMkM+Q7ZUDEVLyARtkBZamETzEVCVgUm4EiRpujl6HI+juqN59bj+Mjp77ZEE8Y/BqFOyI6PIeAxUFE/2ZQEkOCvUv0XUqXN9ebtq2YvXzMJ4TE424ZBhOlkIo8SQ+G1k8js/0wHymyVCS3Z6YmcsMmRGhvUGdD7ah8WxLNy+Htz90Ni+0nM4zEfMno86LPKeh5izCtk95rqOOQMs+Cw0JXGMtNtNO6uhDHn3iDVVm4OZ0MsQ6CaRzk4nU/Hkzy6yym9UAL6O/Qh6t15w+iayM3y3NgCTM1+Zp8mn6e5Osz6TOazYTlrLJ6KzmvaXMpmB84hFNfQUX19i5u05Jz+hlJzLTRxnMK4EsV9Ye2txth8wuKPp3vvy58a22ushZTkKCm7ZVLszyd7CVPZmNRhrXEKQsmwzbupYqzw2UDUcpfzIFq2x+UeQcnl/A8V3jGYVCZnF3Xb7tReCL2MZL3VQIGkluTJxIisgtxuV9w8P73pezFzFM86Lfj1Drwe+nUhXNUITHQskiilmg97e3cl+QjcdIOyB20hh8Sw4qgo0FGCTfewTGr34vzyimGr3SdOww3PVg/38vnD/zOl5ENJYsQii7atMtCuO1gLdogsv986lT0L
+api: eJzNVE1v2zAM/SuCzpndZTvl1qYbUGxDi7bDDkFQ0DIdq5UtTZLbBoH/+0gpbZ1u2HbYYTnEFs2Px8dH7WSETZCLlfyoDQZRivSU65m0Dj1EbfuzWi6k8ggRr9uhq3rQJsiZ9Ph9wBBPbL2Vi51Uto/YR34F54xWKbi8DbZnW1AtdsBvceuQMtrqFlWkPM5zqaipLH1trKnRn9Vh4grew5Y8dcQu2aHfnjeE+tlDU+0NevLBR+icIdvb+bv34+zZI0Sv+83UQQbboYj4GOW4HmeyxqC8doyaPn7WIQrbiIxHnJ1yy/1gDFQcHP2AFNMQW/8RVkLza6QUAnWt2R/MxYTwBkzA1/lOIKCoIKpW7IcsHHjoMKLn5FHHBOr4alkkvRRL67E4dvqLrdGE4jJHnUZbcK4TTvVik+PIgDwGZ/uQxz4/OuLHH/v6W5WNucZhvmUScRDxWcY0Xk9HTCWCeNCxTUcqJoJDpRuNtdB9Mu65KAgGUdFa3gtnQ9IwxJZOJThdzoujMqUr43RdAqrB67i9Yoi5aQjqBobY3tzhdiohpz8ha6gnyvk8dSNlcSvK2juNknvk3i9fdvHDk2YOdmnFEptNZLSeiPfnjyOXaWwCNRn2N6x4ygTinpSQSb2fS/JmHjpIM9ijzmSLAw4OxjG5Mv7hZPYcchulM0BkEbrBG66Xp7RigsmT5iQzCUnTLziJmpbHSp67XUX6/erNOLKZqnia1Ipe78HrvGArZqtFIKrTmqdhymXu7c0142F3M+TZvhItr32OOFYKXfyt73qivIvzq2tyrvbXb0ebR1YPD3w10/9CSr7EOTqJLdl20kC/GWDDvjkn/34AH0sRmA==
 sidebar_class_name: "post api-method"
-info_path: site/openapi/docspace/api-backend/usage-api/asc-files
+info_path: site/openapi/docspace/api-backend/usage-api/asc-web-api
 custom_edit_url: null
 ---
 
@@ -54,7 +54,7 @@ Creates thumbnails for the files with the IDs specified in the request.
 
 <RequestSchema
   title={"Body"}
-  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"folderIds":{"type":"array","items":{"anyOf":[{"type":"integer","example":1234},{"type":"string","example":"some text"}]},"nullable":true},"fileIds":{"type":"array","items":{"anyOf":[{"type":"integer","example":1234},{"type":"string","example":"some text"}]},"nullable":true}},"additionalProperties":false,"title":"ASC.Files.Core.ApiModels.RequestDto.BaseBatchRequestDto"}},"text/json":{"schema":{"type":"object","properties":{"folderIds":{"type":"array","items":{"anyOf":[{"type":"integer","example":1234},{"type":"string","example":"some text"}]},"nullable":true},"fileIds":{"type":"array","items":{"anyOf":[{"type":"integer","example":1234},{"type":"string","example":"some text"}]},"nullable":true}},"additionalProperties":false,"title":"ASC.Files.Core.ApiModels.RequestDto.BaseBatchRequestDto"}},"application/*+json":{"schema":{"type":"object","properties":{"folderIds":{"type":"array","items":{"anyOf":[{"type":"integer","example":1234},{"type":"string","example":"some text"}]},"nullable":true},"fileIds":{"type":"array","items":{"anyOf":[{"type":"integer","example":1234},{"type":"string","example":"some text"}]},"nullable":true}},"additionalProperties":false,"title":"ASC.Files.Core.ApiModels.RequestDto.BaseBatchRequestDto"}}}}}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"folderIds":{"type":"array","items":{"anyOf":[{"type":"integer","example":1234},{"type":"string","example":"some text"}]},"description":"List of folder IDs","nullable":true},"fileIds":{"type":"array","items":{"anyOf":[{"type":"integer","example":1234},{"type":"string","example":"some text"}]},"description":"List of file IDs","nullable":true}},"additionalProperties":false,"description":"Base batch request parameters","title":"ASC.Files.Core.ApiModels.RequestDto.BaseBatchRequestDto"}}}}}
 >
   
 </RequestSchema>
@@ -62,7 +62,7 @@ Creates thumbnails for the files with the IDs specified in the request.
 <StatusCodes
   id={undefined}
   label={undefined}
-  responses={{"200":{"description":"List of file IDs","content":{"text/plain":{"schema":{}},"application/json":{"schema":{}},"text/json":{"schema":{}}}}}}
+  responses={{"200":{"description":"List of file IDs","content":{"application/json":{"schema":{}}}}}}
 >
   
 </StatusCodes>

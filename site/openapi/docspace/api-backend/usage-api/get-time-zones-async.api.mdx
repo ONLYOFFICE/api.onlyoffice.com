@@ -5,9 +5,9 @@ description: "Returns a list of all the available portal time zones."
 sidebar_label: "Get time zones"
 hide_title: true
 hide_table_of_contents: true
-api: eJztVd1P2zAQ/1csP1dN1zFt61sFA6GxaeJDk4Yq5CYHMTi2Z18KJer/vjsn2dIiJm3ikYemiX13/n1cLo1EdRPl7FKeAaK2N1FkYt9VlbMidityMZLOQ1ConT0u5EzeAJ7rCn44C3Ee1zaXIxkgemcjULFGTicT/isg5kF7zqOsEx1RuGuhjBFYglArpY1aGhBIxcQjVxP3Gkve1UEcH0ShbCEKHb1Ra2FVRdVHMncWwSIfgPCAGW1qy08xL6FSaX3tgU50y1vIkVJ8YAKoW3S6GMREDESSYrbBnveQCAZt2tokqHKGoYaRhAdVeX6U7/feTeWG0luUXwnkv1QfkvvrOdFRCvOVGzpNFYXmWsp8G1C7ViZSEmpMKfOz/fF3WI7nXvPviyvAjE/hZw0R4wG6McNIsg8W2/LeG50nw7Pb6F7VfVF1U9e+yvqysvIBe5M3T8fOhVU1li7oRyhkCnr7NOjQhaUuCrAJaIS8DhrXNBcbqWJ+xRWu7oAXaNCpgkjfUwDIxWaxK9MpYB0sjS5hnh143gVUZjD3xlSxAoLZjVe2X2FJD5nyOpuOJ1k/jjPsBZCMNKwgxAS0DobiS0Q/yzLjcmVKF3H2YfJxmj0x84T3RZsumUTP+Yz7sW25bea/24MAfaYF8j21zXbYSPIsphnt7jQkMbW9dil7YPChNgk+Y2/xrFI/egJcqfRedMWPAAcy7dJo/nwM/l/3jtbgW0JIkphNZ8Ilc6ZIsiFp3n0XuWl7K0hBVptjm2apIlwEs9nwMjVp4Mah25UKun1RLhd0RkmdROqzd0lhOc9z8Oz9Spl6F9Ni0CFHn84pikXf9qV1oLvhuv2WXQ+q7hjWns3XzeiZjKZpTSdGfXy79WxGx62PTgToHf0FJMjnog==
+api: eJydU11rGzEQ/CtCz+bONaG0fjNJCKEflNih0GCCfLf2KdFJqrTnxDn837t7H8nZwYX2wfZZ2p2dnZmrJapNlNM7OQdEbTdRpOLclaWzInYncjmSzkNQqJ29zuVUbgAXuoRfzkKcxZ3N5EgGiN7ZCARWy8l4zD85xCxoz33U9VVHFG4tlDECCxBqq7RRKwMCCUy8MJp40ljwrQ7i+iIKZXOR6+iN2gmrSkIfycxZBIs8QHlvdNYQSx8iT6llzAooFT/hzgPNdasHyJAafeA1ULccdT6oiRhoVao5pLzoiREZurSVaQjLKYYKRhKeVen5r/z86eyj3FN7y/U7Uf0X9OGKf50THbUgPKPc0zSV55qxlPkxWG2tTKQm1Ni0zObnyU9YJTOv+fPN5WCSG/hdQcR4gS5hGo34g0OC5wFn4w/vfby1qsLCBf0CeUMjQlYFjTuKEVkSs3u+v38EPqBcqJxWeqICkMv98liEG8AqWHJamJP58C6gMoOYJIRYApHo0sjmKizoT6q8TifJOO3Tm2K/nnxjOueMtDE45PtqGcF8oQPyorHysGwkNVPPnHvU0Eig7do13e9Fp+othNhuu51wSryLWKomrR38FeBgveOk1G+Z/3+9usU4PCmFjTYgJlUwDN+Kd8dbUyXJ12jVvf4cpV5Csq8g8lxb1ysV4TaY/Z6PKTqBDafHrQq6je/dkmYUlAAITTgajeUsy8CzZ1tlqlbso9eYY/Lq79XlgmpZ/EN/Wie6B0bvr+xuiH1oXMuAv/ejEx113ZpPe/X17dXJjm7DvpqlXdL78wfuVdbS
 sidebar_class_name: "get api-method"
-info_path: site/openapi/docspace/api-backend/usage-api/asc-files
+info_path: site/openapi/docspace/api-backend/usage-api/asc-web-api
 custom_edit_url: null
 ---
 
@@ -54,7 +54,7 @@ Returns a list of all the available portal time zones.
 <StatusCodes
   id={undefined}
   label={undefined}
-  responses={{"200":{"description":"List of all the available time zones with their IDs and display names","content":{"text/plain":{"schema":{"type":"object","properties":{"id":{"type":"string","description":"Time zone ID","nullable":true,"example":"7452"},"displayName":{"type":"string","description":"Time zone display name","nullable":true,"example":"some text"}},"additionalProperties":false,"title":"ASC.Web.Api.ApiModel.RequestsDto.TimezonesRequestsDto"}},"application/json":{"schema":{"type":"object","properties":{"id":{"type":"string","description":"Time zone ID","nullable":true,"example":"7452"},"displayName":{"type":"string","description":"Time zone display name","nullable":true,"example":"some text"}},"additionalProperties":false,"title":"ASC.Web.Api.ApiModel.RequestsDto.TimezonesRequestsDto"}},"text/json":{"schema":{"type":"object","properties":{"id":{"type":"string","description":"Time zone ID","nullable":true,"example":"7452"},"displayName":{"type":"string","description":"Time zone display name","nullable":true,"example":"some text"}},"additionalProperties":false,"title":"ASC.Web.Api.ApiModel.RequestsDto.TimezonesRequestsDto"}}}},"401":{"description":"Unauthorized"},"403":{"description":"Forbidden"}}}
+  responses={{"200":{"description":"List of all the available time zones with their IDs and display names","content":{"application/json":{"schema":{"type":"object","properties":{"id":{"type":"string","description":"Time zone ID","nullable":true,"example":"9846"},"displayName":{"type":"string","description":"Time zone display name","nullable":true,"example":"some text"}},"additionalProperties":false,"title":"ASC.Web.Api.ApiModel.RequestsDto.TimezonesRequestsDto"}}}},"401":{"description":"Unauthorized"}}}
 >
   
 </StatusCodes>

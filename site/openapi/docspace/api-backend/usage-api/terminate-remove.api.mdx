@@ -5,9 +5,9 @@ description: "Terminates the data deletion for the user with the ID specified in
 sidebar_label: "Terminate the data deletion"
 hide_title: true
 hide_table_of_contents: true
-api: eJztVk1PGzEQ/SsrH9skmyaUQG4UioRoVQTkFEVo4p1kDbtr1/Ym0FX+e2e8mw8SIfVSTlwSezy237z3bG8lPMydGI7FDWqTYRRHI4c2SsCDmLSENmjBK11cJWIoPNpcFeDxFnO9QNESFn+X6Pw3nbyIYSWkLjwWnptgTKZkmBs/Ol1wzMkUc+CWfzFIC+rpI0pP6xjLO3mFjkdLgsAbbvKct6qYU16CTlpleFUKB6hXF9Ey1Q4D5ki5yCI4p+YFJrENOBOaONM2BwImylJxH58hp3opIE+lnCbypN0fwKx9NDjut0+gK9szTPq9r4PjYxhIsVq1BCSJ4o0hu9lBO4PM4T6w25qWyICFHIk2FxGAaM0f1RL5FDdIc+IsIgokOkfYvPIB2dndeaeWpXNm1E+dYOY6zdIXXnfut3KsYwGox2f/wfn7cr5r90+fP8h/R/IZqkVndOFqNnvdLv+9RvjrWlDeUffL4dCogNKn2qo/xFxI6h8mXWo7VUmCRaDGoSyt8nTpjemqc/KBV3h4Qg4QGGDGl5SAYrKa7JO1KcMFUoKMVCrycE0bRdkS0VL5NPRIc2dQqpnCJFJFQ2YgoUNbEeWp5hvalMFc4FPqxGBU3Ot0YxM4bcwRb25xwXXYBYkVyihtRpNS780wjjMtISOX+eFJ97QXHzjxB49H9XTBJa4ZuWPL1zq85mXjbUJ1TYGWKMgq3N9NawnFy0utnxQGqvks3W6fme9rH29PzT86mpee6QBkx2+XKkP2INNQl7boca6h2nMIp7jBuZHtULV9enZewv+gdsNjuOZNBkQY4Q3qVY30YyaZMkl8tkOQP7zWzbO9tQApxyrzlKqagsORzVYrDtN2lu1MzQVYBVOmbDyhrVLyN6nOngnKivO62PY9A+P0rKyF3vsEYJ9srHozuqfcafPlkNNhp6CFJeOk36EQ/PnBk4OZQqwSGRTzEuacWy8ZLqqSi941WG2lpsFA10PFyy7A186ri+HfVeuNGVVVu5coWufXQ2/OaMhaZ7NYEwL9FwhJQlA=
+api: eJy1VMFu2zAM/RVB5yROshbocuvaHYpiWNE22CEICtpmYrW2pUly0s7Iv4+UHCdNUWCXXRKLosjH957USg9rJ2cLeYfalCgSMXdoRQ4e5HIgtUELXun6Jpcz6dFWqgaP91jpDcqBtPi7Qee/6fxNzlqZ6dpj7fkTjClVFs4mz07XHHNZgRXwl38zSAV1+oyZpzrGciev0PFuQxC4YZ/nvFX1mvJydJlVhqtSOEC9uRbbQjsMmIVywiI4p9Y15okNOHM6uNK2AgImm0bxGl+honkpAIATnIy/DNMMzodfVzAZpnCRDc+m4/OL9AzS1fRC7nYDCXmuuDGUd0doV1A6PAV2H2kRBixUSLQ5QQDEnj+aRfgCe6QVcSaIggydI2xe+YDs8uFqFGUZXRr1Q+dYulFX+trr0eNBjn2MgDJUi87o2kU2p+Mx/71H+PNWUt7ZePJxa15D4wtt1R9ijqs5zBqrPCm8IF1d9sT7Ty/IAWoFzOeWElAud8tTKnqQLowcRKJBkLcjKRRlwcVW+SKsSFFnMFMrhblQdUdVGHFErYjQQrMdTROsA76gRQJGJdPRODGBsU76pLesPMzxwDaM3Lyfpvcb1bqlwEDWJB+vj9MGUvFgmdYvCgNB7O/7w034vvfWwcn/6DIuvdIByJEHfmHKBqDGG3JSpHUz5Wyjna8g3K0OaU/3R7ZPr8/Rdf0PKnVMenz1iSmBKCO8jS25b5RswTRTJonGMgbZwpPSvS0H6chUdMM9H2nbFBzObbnbcZjaWbYhfW7AKkiZtMWSWhXkS7TBskFbeRWHHT4yME4vmyj1yTvFFu4tdjd/pNy0e94quoIUtLBlnPQ7k5LfSD4c7BRirSyhXjew5txYMjwfDQ99bLFopu6Dge636rdjgO+9F4fh393gkxNtG/1LFO3z49anJzqy9tks1pJA/wXnPhas
 sidebar_class_name: "put api-method"
-info_path: site/openapi/docspace/api-backend/usage-api/asc-files
+info_path: site/openapi/docspace/api-backend/usage-api/asc-web-api
 custom_edit_url: null
 ---
 
@@ -54,7 +54,7 @@ Terminates the data deletion for the user with the ID specified in the request.
 
 <RequestSchema
   title={"Body"}
-  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"userId":{"type":"string","description":"User ID whose data is reassigned/removed","format":"uuid","example":"c9ccbdc8-37af-4763-8a0c-fed325766a7c"}},"additionalProperties":false,"description":"Request parameters for terminating the reassignment process","title":"ASC.People.ApiModels.RequestDto.TerminateRequestDto"}},"text/json":{"schema":{"type":"object","properties":{"userId":{"type":"string","description":"User ID whose data is reassigned/removed","format":"uuid","example":"c9ccbdc8-37af-4763-8a0c-fed325766a7c"}},"additionalProperties":false,"description":"Request parameters for terminating the reassignment process","title":"ASC.People.ApiModels.RequestDto.TerminateRequestDto"}},"application/*+json":{"schema":{"type":"object","properties":{"userId":{"type":"string","description":"User ID whose data is reassigned/removed","format":"uuid","example":"c9ccbdc8-37af-4763-8a0c-fed325766a7c"}},"additionalProperties":false,"description":"Request parameters for terminating the reassignment process","title":"ASC.People.ApiModels.RequestDto.TerminateRequestDto"}}}}}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"userId":{"type":"string","description":"User ID whose data is reassigned/removed","format":"uuid","example":"aae1e103-bca5-9fa1-ba8c-42058b4abf28"}},"additionalProperties":false,"description":"Request parameters for terminating the reassignment process","title":"ASC.People.ApiModels.RequestDto.TerminateRequestDto"}}}}}
 >
   
 </RequestSchema>
@@ -62,7 +62,7 @@ Terminates the data deletion for the user with the ID specified in the request.
 <StatusCodes
   id={undefined}
   label={undefined}
-  responses={{"200":{"description":"OK"},"401":{"description":"Unauthorized"},"403":{"description":"Forbidden"}}}
+  responses={{"200":{"description":"OK"},"401":{"description":"Unauthorized"}}}
 >
   
 </StatusCodes>

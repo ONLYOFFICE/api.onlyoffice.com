@@ -5,9 +5,9 @@ description: "Changes the access to the third-party settings."
 sidebar_label: "Change the third-party settings access"
 hide_title: true
 hide_table_of_contents: true
-api: eJzVVU1T2zAQ/SseHdsQp2kPrW+QlplO2xkGwimTYRR7gwWKpUrrQOrJf++uZIMI0ENvXPwhP+3ue/tW7gTKay+KhThVGnyWZxeAqBpaW46EseAkKtN8r0Qhylo213BcluD93Mxr5SorHe7ESDj43YLHE1PtRNGJ0jQIDfKjtFarMgTJb7xpeM2XNWwkP+HOAkU2qxsokeJYxylRgQ84wAS0MkaDbAgF93JjNa2ha2G/HwlZVYozSH2WBFhL7WEkUCFjxfHFbBxIjmfGwfjYql+mAu3H57H4r2jGA/nHJcHxEe7x7VaftuDd+zdKgzM48NY0PtY1nUz4VoEvnbKcmMKfxPKyrdQtFBmXlql1hjVkD17OlM98G1y8bjUxSdwaGm21VC9LNLA/VPVVTdMN/zbRI5KxnyYfnpO7bGSLtXHqD1QigD4+B50at1JVBTGnh7J1ika0WNAo+vKKI1zdAi+QnLIi+ncEALHc07w/DTUL8+6DejLolaEJb8izfxSGP/N9t8YUagNUHx8Vtg1GkljTSy6tyqfjSb7mxueYHhwe3BacD/W1ThO6RrRFnmtTSl0bj8XnyZdpLg6L+8nfs7hdcO0D1QtWNlrkKeEHqamcH8DJG7kJ7ylsJLj35AlzqyBoyC07fzzfvg2+70cj2J93rU3IcWh0isgMY9XbKTfOEq2NDD7oS4hSv6ptL/+hCMlB+x/N6tVILE+lhR50fecWLBUhqXd0Xfdskv6R7NwiRnbdSnq4dHq/52WSy7HJ6HErnZIrFmWxpAw1uY5axg0PbRGzyOFozvUwnEY3dOlgvvajYQf/giwm2JTDMrHh2eWcUKv+r7Shk4YWnbzjPxZdCyH4H8cpgl/CWic0KdnKa8bGxGHcW1Yk9VB0S//AdIZPzS6l8dRckQBfmc6LO7ouGpSEHPDx06s7ekkHdFCBiv4Le1650A==
+api: eJydVMFu2zAM/RVB59TOip1ya7MNGIYBRZNghyAoFJuJ1SqWJtFpM8P/PlKyU7ddB2wXW6bJp8fHJ7US1T7I2Vp+0QaCyMUCEHVNsc1EWgdeobb111LOZFGpeg9XRQEhLO2y0r50yuNJTqSHnw0EvLblSc5aWdgaoUZeKueMLiJIfh9szbFQVHBQvMKTA0K223sokHCc5y1RQ4h5gKOkrbUGVE1ZJYTCa8eYFF84KPSOSsRjBViBF2gFlQpai9D/LDkS+xLWi9ryZvCkDs4QNPoGum4iVVlqBlXmZsRjp0yAN5sOaH3ngpRQB0DwgZBRI+PKq8U8i7pmc+shu3L6uy3BhOw2VX1Cmw1IzyHZdczGQ3C2DkmKy+mUXy9JXCdFxFGZBmaC2xB6F/s+T07oIEITZ7ZrDHH719kMsidSH6cf3vJY1arBynr9C0rJWQGKxmtyxmxNu4Tijv/fPQAHqC9VEo9HSgC56TavpZ1Hm4XYhorEeaD8hWy5i+i58zgzgiLdK8sOdU00kcKKPnLldH6ZTfMdTyDHsV8HggvuNin8kua5fQL5BlxS03j5e5w2kZoZF9Y+aIids4y3z4fh82Cx3szRaVy1s3GPkU9+wJYNQphHMlGS4ngpKdvZgAcVp9OTSBK9q0kv2+uTMjqX/yFyrwfCE+bOKGqcqDXeMG5SfM1iUSZpTs+oOtc9606jrqgXzmzbrQqw8qbrOEyCeTYHLY/Ka7VlWdYb2qEit4CPRoqDkfPUw8WS+XA6eT/O6ZWXu8lQwTeWw7/mbkYmulktKXfbX2UHOrAU9OqRrzl6zqTki5GLo29irJWG9GzUnnMTZLxQGtZl7KXkmn7BTQ2/6tOY4EuTpTb4yU39saJtk1FJziE//Xq3ohd2yOZ5boj0bxFWGnE=
 sidebar_class_name: "put api-method"
-info_path: site/openapi/docspace/api-backend/usage-api/asc-files
+info_path: site/openapi/docspace/api-backend/usage-api/asc-web-api
 custom_edit_url: null
 ---
 
@@ -54,7 +54,7 @@ Changes the access to the third-party settings.
 
 <RequestSchema
   title={"Body"}
-  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"set":{"type":"boolean","example":true}},"additionalProperties":false,"title":"ASC.Files.Core.ApiModels.RequestDto.SettingsRequestDto"}},"text/json":{"schema":{"type":"object","properties":{"set":{"type":"boolean","example":true}},"additionalProperties":false,"title":"ASC.Files.Core.ApiModels.RequestDto.SettingsRequestDto"}},"application/*+json":{"schema":{"type":"object","properties":{"set":{"type":"boolean","example":true}},"additionalProperties":false,"title":"ASC.Files.Core.ApiModels.RequestDto.SettingsRequestDto"}}}}}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"set":{"type":"boolean","description":"Specifies whether to set the specified settings or not","example":true}},"additionalProperties":false,"description":"Settings request parameters","title":"ASC.Files.Core.ApiModels.RequestDto.SettingsRequestDto"}}}}}
 >
   
 </RequestSchema>
@@ -62,7 +62,7 @@ Changes the access to the third-party settings.
 <StatusCodes
   id={undefined}
   label={undefined}
-  responses={{"200":{"description":"Boolean value: true if the operation is successful","content":{"text/plain":{"schema":{"type":"boolean"}},"application/json":{"schema":{"type":"boolean"}},"text/json":{"schema":{"type":"boolean"}}}},"401":{"description":"Unauthorized"},"403":{"description":"Forbidden"}}}
+  responses={{"200":{"description":"Boolean value: true if the operation is successful","content":{"application/json":{"schema":{"type":"boolean"}}}},"401":{"description":"Unauthorized"}}}
 >
   
 </StatusCodes>

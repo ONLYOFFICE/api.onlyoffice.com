@@ -1,0 +1,71 @@
+---
+id: delete-guests
+title: "Removes guests from the list and from rooms"
+description: "Removes guests from the list and excludes them from rooms to which you have invited them"
+sidebar_label: "Removes guests from the list and from rooms"
+hide_title: true
+hide_table_of_contents: true
+api: eJy1VU1PGzEQ/SuWz/kiQENzo4AqVKgQH+ohQsjZnd01eG3X9gbSaP97Z+yELEGoXHpJ7PF4/ObNm9kVD6L0fDrjV2CsAjZk3xvwwfP7HjcWnAjS6POcT3kOCgKsT3vcwW9afjP5kk9XPDM6gA60FNYqmcWLw0dvNNl8VkEtaBWWFjCamT9CFjCOdfRMkODptPHgznPfcRTOiSX6yQB11+6Dk7rEg8K4WuDDvGlkztseAvWZk5beR+uF9IGZglFkdn5K0HWjlJgrjBJcAz0OL6K2tJ3xyaE4LCYHh/3iy9dJ/+Bg76g/3z/K+6MCRvl4MoHx4RG/byl9Dzo/VqoDaW6MAqH5LoQbC5ksMEP2XEGoEEcwLAVgUi9kiFwxpDeA83QolGLoGEF7ZhzThrh6BUq4W0Qh8lzSXaGuOjQWQnnYBXGd6sWscKKG+BAyxxqb4+u6TPxIndikKz0eZKDH+PHNySDJY3Bs5aVBJfjBOt5pMIM7igGXUM8x6tbO27ZNTFmjfarveDSiv09Bi4IjaGXSHMY6GO29v36nRRMq4+QfyJPT/nunn4YhP7X0HveRY9xSssiz9Exk0Y/wesgaJwOqeoZa9tkDRX94AjJgMiJHZp7RAVAH9+9Zrs0CC50gs8KZOhZSkQoF1hteMtXgHbLW6dwZU0dEz5XMKrY0DavEApI0II+e+CYyU5ltI1LriFDhfiisHI4Ho6GNNRqWmxbdZHJDzZf4f5vPtsms/AHUZRoLQPuuG/YepZYZ8yQhUkRdfb3t/7ONLDv9+9lWetNJUdb0XGEiuI7+fsGcxIdgFqiPRPZiTOW2xodaxCmzRv/PImxp3+3VziD7n7Vc0x7gJQytEsgvJtK4OExSVWdUE/TEulKlY2VxUb4O5wrTJrfVai483DnVtmTGojhSKi4Xwsk05mY0sSqULrio6lh8fpIy7d8SGHJXTdLCzvgmlb+K7/Ts4uz2DN3n68Ff4zhAuxPP9FHA3ynn9Omg+1Fy0bbiSuiyESX5pqhxfjWUa1eGSXDrBWHdHOllF+NbfaZ86LftfXBjtUoaR5Y2/unowxtrvjbeVKN7BP0Xtnt4hg==
+sidebar_class_name: "delete api-method"
+info_path: site/openapi/docspace/api-backend/usage-api/asc-web-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Removes guests from the list and from rooms"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"delete"}
+  path={"/api/2.0/people/guests"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Removes guests from the list and excludes them from rooms to which you have invited them
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"userIds":{"type":"array","items":{"type":"string","format":"uuid"},"description":"List of user IDs","nullable":true,"example":["75a5f745-f697-4418-b38d-0fe0d277e258"]},"resendAll":{"type":"boolean","description":"Specifies whether to resend invitation letters to all the users or not","example":true}},"additionalProperties":false,"description":"Request parameters for updating user information","title":"ASC.People.ApiModels.RequestDto.UpdateMembersRequestDto"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Request parameters for deleting guests"},"401":{"description":"Unauthorized"},"403":{"description":"No permissions to perform this action"}}}
+>
+  
+</StatusCodes>
+
+
+      

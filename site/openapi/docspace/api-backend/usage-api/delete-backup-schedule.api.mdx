@@ -5,9 +5,9 @@ description: "Deletes the backup schedule of the current portal."
 sidebar_label: "Delete the backup schedule"
 hide_title: true
 hide_table_of_contents: true
-api: eJydU01v2zAM/SsCz0bsZTtsvvUjBYb11vUUBIViM7MW2dIkOVtm+L+PlJzmoy027CJb0uMj+R41QJDfPJRLuJbVtrewysBYdDIo032uoYQaNQZMtw9Vg3WvETJw6K3pPFLsAPOi4E+NvnLKcigFXhujUXZiJ3WPpQiuR6E2IjQonjMI5YXvqwq93/SaaCvTBewCswX8FXKrpep45yl1K+P53iLRrxM9jGMG0lqtqsiYf/fm7wGR+x+QjP1QvHvZ3GMn+9AYp35jDRH0/iXozri1qmtMOT1WvVNhT2IPIH31xAxPW+QDklPW1P5PAiCsRnLhnOo2uuCjeuvohfCTGcIkUYndkXTCGheknhFbi1Ti0UM6sTI0tM+lVfl8VuSJKk/3aeOPHnt0O3Q+Ftw7TYFNCLbMc20qqRvjQ/mx+DTP4bLae74XKRy4mUPvPEBtmplzBZ61p8q+0EEGnWzj/hSWAQ8DDYnZKoyiqm5jYrQKmuFXDzezO6UpRQZce6pnN2ePLBXcymj5RJ5UfU3Uy5aG42T+nxdTeydDTRVFUYfJlSX3TkjyhdZEHMt4xRuSlOXnoGFYS4+PTo8jH//o0fFE0e9OOiXXLMtyRckaGjGyg82MksMVvTsbWCh+oRfFrU7G53Zxv/i6ICAbce5VcmX6YerDVbc/Ib4wMaXndczeiBiGNAjU1AGfrt6MmNo7oGMP9H7/AKW2qt8=
+api: eJydU8tu2zAQ/BWCZ8FyjZx8cxofiuaWBkVhGAFFrSPWFMny4dYV9O/dJWU7zuNSHSQ+dmdnZ1YDj+I58OWG3wq5T45vK24deBGVNV9avuQtaIhQbh9kB23SwCvuIThrAmDuwBfzOX1aCNIrR6mYeGutBmHYQegESxZ9AqZ2LHbAzhWYCiwkKSGEXdIIK62JYCKhCee0kjms/hkIcuABCfSCVvHoAIs0pQgf8an4zfzTWx6PRqTYWa/+Qstz0OJt0A+bPHNeSWWemdNIu7UQmLER+TlnfUTiSNaWBCoWQCav4hHFQ7JBPlGZpz3QAcojWmznNwYA346o6nW9u6xqyGo0WVsWJnGZLSIhukcpGBUXeoZoPWAfF0/wxInY4b4WTtWL2bwuUHW5L5tw8ezEmGzsi3PXvM+yIt5XPKi4EX3evwyruKIWpLV7BVkKZXY2Z6uoKXz18Hn2HZrZyimMPoAPpevDggxwNsReZD8n+KLGe2LwV8INlwn5Pw2nBiP8iTX6jJ0go+Q1QRc1N9Q9RqKe+C7AmcY7mqKvHXZDScPQiACPXo8jHf9K4GkScHkQXomGhNlssViHowE+T00Wna9w/l0koehPyeq/mnyan7P5d+v79bc1hpMh154Vd6YFFThdmeNL+GszCwl6j9UHGcNQBgJbO8WXqw8zpiZP0STzFn/Rf8xMhS8=
 sidebar_class_name: "delete api-method"
-info_path: site/openapi/docspace/api-backend/usage-api/asc-files
+info_path: site/openapi/docspace/api-backend/usage-api/asc-web-api
 custom_edit_url: null
 ---
 
@@ -54,7 +54,7 @@ Deletes the backup schedule of the current portal.
 <StatusCodes
   id={undefined}
   label={undefined}
-  responses={{"200":{"description":"Boolean value: true if the operation is successful","content":{"text/plain":{"schema":{"type":"boolean"}},"application/json":{"schema":{"type":"boolean"}},"text/json":{"schema":{"type":"boolean"}}}},"401":{"description":"Unauthorized"},"403":{"description":"Forbidden"}}}
+  responses={{"200":{"description":"Boolean value: true if the operation is successful","content":{"application/json":{"schema":{"type":"boolean"}}}},"401":{"description":"Unauthorized"},"402":{"description":"Your pricing plan does not support this option"}}}
 >
   
 </StatusCodes>

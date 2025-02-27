@@ -5,9 +5,9 @@ description: "Sets order of a file with ID specified in the request"
 sidebar_label: "Sets order of a file with ID specified in the request"
 hide_title: true
 hide_table_of_contents: true
-api: eJzdVUtT2zAQ/isanfpw45BwaH2jUGYY2oEhcGIyjGJvYoFiqZIcoB7/9+5KdkhIcyhHLra02v20377UcC8Wjme3/FQqcCxl4c+nCdcGrPBSV2cFz7gDf2ELsDzhRlixBA+W7Bpe4QYV5miHmgmXFe6M8CWuLfyupQUE8LaGhLu8hKXgWcP9syErWXlYBNS5tkvho2g8QgE8iaVRqHQwHh+27TSigfPfdfFMELlG48rTUhijZB68Te+drki2c5ee3UPuiYAlbl4iTzzVgdZ/ujQilxIuikLSpUJdbmDOhXJI1ktPuvxocjwIUR0cawuDIyN/6QKUG1xFPideD0JsX/acwD08+ffDZjNFnz6/E1oEb8EZXbno52g4pF8BLrfS0K2IfXHOUe9weLB7dFOJ2pfayj/YJEFpvKt0qu1MFgVUIZAO8tpK/xyaT7j8jhDuHoAE6IygHnxEBeBTapptqAl4x0IwmZ4zwahr2aP0JTs7Yc5ALucSCiYr5ktgXcMhIPZ7qWkOmDokh9o746kwMh0NhinBuLSJM6BNdTcpHNhVPyZqq9Ci9N5kaap0LlSpnc++Dr+NUv7azZ90zqI5JxY96QnVSwz1NvV1ZaBL5yhI+rm0pdZNp1zrBwkhmlSIVy9z5UdfPOuSC1VEdnMdbnldL4hJHKPfqxEl0SCxpQj13Tnx1rBvRWVj4r0ZsAtSGC1GCYwG+htS03RJvaUIoiamlbqro5itx3sMC6aE0kfqTTMTDm6salsS402WShGXK2GlmFG4MP+FdLQu1p23l9uHq+7V+Mj2edznuqKUroSqaYfLUAr9U9ROUbPEhqA0ogfx8Dje8+WaIF6Md14Qqrp11V/eXKPurHt4ljgZUGjFIz1x+A1360AllGaQNVyJalGLBelGyDCNaoryZrnGwuwW5Og/2b2q40iGvm2yx6JpYi9gXnr9eLTXogtWr02xnqLTfwH2usLM
+api: eJydVNtu2zAM/RVBL9sAL84NbZe3rl2BYthW9IJhKIJCsZlYrW1pkpxeDP/7SMnOZUle+pJINHlEHh6y5k4sLJ/c8wuZg2Ux8/98GnGlwQgnVXmZ8gm34H6ZFAyPuBZGFODAUFzNS7ygwxzj0DPissSbFi7Dcwo2MVITChoJml2eo93A30oaQGBnKoi4TTIoBJ/U3L1qQpOlg4V/ba5MIVwwjYZogBdR6BydvpyMj5pmGtDAuq8qfSWI7Ue7rBOFkKUjB6F1LhNfW/xoyavezUDNHiFxVK4hJpxEVvCr8nB4KMSLLKqCT4aD8fH4ZHQ0Po54IctgHES7lezP63B9g+Fo3DQRF2kqKUjkVxupzEVuYS8oa/lgG43CdKQjUH56c9bzPe6dKQO9Uy1/qBRy27sOUedO9TzM+s6bhvIwYLUqbeBh2O8f4JpJy1AtHCPG/cGu010pKpcpI9+w/95ptOv0R1UsVeUHxzKxBAalqhYZw+ILaS26MKfoRuQxlwFbiTUgjncRfyrHLlRV4pvoYiGpjHSvXsHCJg+U08MTkAELFSTkZ3QAPiWFbUPdgLPMC4GpOROMpM+epctQ3MxqSORcQspk6VNru4GA2ItM0TDpyguLZmTCY6FlPOz1Y4KxcR0GqYlVK5Au1RtSaCB/O+GVZBHoOxqibiS33NrBTJR6kuA5IOlfr0fnW6e7lci9AClurvwrGwr6DTOSDqIuUV6BluWQyNfKukL4mWrTeC9dW6TX6wF+N2BLk4MXF+tcSC+WyuSEHppxTxyiJ7aDRtOvwghnrdttgRgURIZVkntdz4SFO5M3DZnxJUMSwuNSGClmRBgqLJWWzun+sd2s7eN1uxo/sfW63Jt41/SSersUeUU3PHpNdOu4maJnhnqmfmIi4eNZeO7zLUGsg3f2Ikl/Jdqru1v0nbVLtsClgUYjnmmd469/W/mKvEa9rea5KBeVWJBvgPQbrSKyN3UbFNoeKNG91f0n6FAM/TbRgYi6DkOB7en8w6eDES1ZnTdxPcWk/wEydGpT
 sidebar_class_name: "put api-method"
-info_path: site/openapi/docspace/api-backend/usage-api/asc-files
+info_path: site/openapi/docspace/api-backend/usage-api/asc-web-api
 custom_edit_url: null
 ---
 
@@ -47,14 +47,14 @@ Sets order of a file with ID specified in the request
 </Heading>
 
 <ParamsDetails
-  parameters={[{"name":"fileId","in":"path","required":true,"schema":{"type":"integer","format":"int32","example":1334}}]}
+  parameters={[{"name":"fileId","in":"path","description":"File ID","required":true,"schema":{"type":"integer","format":"int32","example":9846}}]}
 >
   
 </ParamsDetails>
 
 <RequestSchema
   title={"Body"}
-  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"order":{"type":"integer","format":"int32","example":1234}},"additionalProperties":false,"title":"ASC.Files.Core.ApiModels.RequestDto.OrderRequestDto"}},"text/json":{"schema":{"type":"object","properties":{"order":{"type":"integer","format":"int32","example":1234}},"additionalProperties":false,"title":"ASC.Files.Core.ApiModels.RequestDto.OrderRequestDto"}},"application/*+json":{"schema":{"type":"object","properties":{"order":{"type":"integer","format":"int32","example":1234}},"additionalProperties":false,"title":"ASC.Files.Core.ApiModels.RequestDto.OrderRequestDto"}}}}}
+  body={{"description":"Order","content":{"application/json":{"schema":{"type":"object","properties":{"order":{"maximum":2147483647,"minimum":1,"type":"integer","description":"Order","format":"int32","example":1234}},"additionalProperties":false,"description":"Order request parameters","title":"ASC.Files.Core.ApiModels.RequestDto.OrderRequestDto"}}}}}
 >
   
 </RequestSchema>
@@ -62,7 +62,7 @@ Sets order of a file with ID specified in the request
 <StatusCodes
   id={undefined}
   label={undefined}
-  responses={{"200":{"description":"OK"},"401":{"description":"Unauthorized"},"403":{"description":"Forbidden"}}}
+  responses={{"200":{"description":"Order is set"},"401":{"description":"Unauthorized"},"403":{"description":"You don't have enough permission to perform the operation"},"404":{"description":"Not Found"}}}
 >
   
 </StatusCodes>

@@ -5,9 +5,9 @@ description: "Returns an invitation link for joining the portal."
 sidebar_label: "Get an invitation link"
 hide_title: true
 hide_table_of_contents: true
-api: eJydVU1P4zAQ/SuWT4uUbUrhsJsbYgGhRdoVH6eqQm46JQbXNrbThY3y33fGSdqk7XLg0vjjzfi9mWe34kE8eZ5N+W/jglAsZQ8enOezhBsLTgRp9PWCZ/wJrvVaBriR+oUn3AonVhAImk0rrnGCIFhZZd4B7t8tIEhqXLMiFDhegM+dtJQPFy9aIAuIZF/OlErYrTGrs8VK6iRySNgPk99ZkUNcPMIcDl5L6QDpBFdCwn1ewErwrOJGw69lZAK6XJEeTIkRm5w4pqT4GWTF+blRSswNSjWOZBMjZOiDk/ppj/gU87KvbEgYF2jMxJY9Lh0QgavdvAP3j8ft/nSGp8ObwFIRIRJUJxuB4+Q4mSQnyemWstQBnqLGHc7jjvHxDtPJhubJAWqnH/EZ13SwDA23u/PRuXEwiuYZXfRtUBPQgbdGe/DUrMl4TJ8hyeiuaDemGovlBvXoQNAAbyG1SpChqm3b6zrhwlol8xiYPnuzD4ixB3Zo73R8vM/kQYsyFMbJv+i0CDrZB10aN5eLBWhOeTzkpZPhPTpQ+PyRMjy+AC2gdrFAOX8QAHxG1RimuoVQOu2Z0EwOi8CW6IlnIzU6kYUCmI2XdITZ8O4VprmXIV5HvGQZT4WV6WQ0ThtgWlI70pgV0qp/O2tOrN26u8ClUxhfhGCzNFUmF6owPmTfxt8n6Z6hbmifNeGcBHX676i8TZOHVag6jyLBn7iQdC/GANa+GLkxLxJiYaVemhjdM9qlVHhEwol7w2c9oT5ZJLwSsc1t8isIB6q6K6faOu1zvWil9UyKbGJBq7YxU9KNSGwNNStG4iC2J6qmBuEgGzygWFhqAoVX1Vx4eHCqrmn5tQRH3sLhWjgp5lQc7OJCehqjL5ZCefhA6Jfb9i09Yp97iw+K7pqsqZdroUqa4TB6YPjvUM8QX+DVQAsR9QZyludgQy+4n3/Ws/3VxT2iyDlDczU2ageU9yClHdc1Z9MvPbAHI6qqcW5db/DN1n8jWm0dOgrAR+cfSx6CfA==
+api: eJydVE1v2zAM/SuCTi2gxW7aU25BVxTFBmzoB3YIgkJxmFitLamSnLUz/N9HynYSJ9kOzSGi6CfqkXxUzYNcez6Z8Z/GBVmwhD15cJ7PBTcWnAzK6Lsln/A13OmNCvBd6VcuuJVOlhAIOpnVXOMGQVDawnwAPH5YQJDS6LMy5GgvwWdOWYqHzpsOyAIi2dm0KAS7N6acLkulReQg2FeTPViZQXSeYwwHb5VygHSCq0Bwn+VQSj6pudHwYxWZgK5KygdD4oltTLRvK/AB10FY3NNllC9RQWo+OKXXR4xnGJB9YUOm6CCbyZZ2vAF9cT3gj+5+38PpYnTTMsf74F1iVYgCcW/ENpdUXIixuBRXO5JKB1gj7SOWac/x4oDbeMfr8gSXq1NE0oZuVKEl9XA9ujYORlEgo5v9VjcEdOCt0R48NWScprQM2UUFRUmxopVRZjARHQgqrS1UFr8mL57w9a7BDf4Ev0ovjoM+aVmF3Dj1B4VBKA9Z5VT4iHKQPnum78+vQA4kKZd4728EAJ8T7WG0ewiV055JzdSQLVsZx16M0qgOFnJgNk7MCKPhIOSmHZIQZwMVP+GJtCoZj9KkBSYV1S2JUSGp90el4TvWD5RyW8Mh97rvPYb9hg7RD90A1g1dZsyrglgOpVcmnt7r4y9YjKZWIXqDnNrMN2PUHLfGh1LG4nfhbyGcqMah8updKz9Xwy65AO8hsYXELJBN5QoK3RZ0RpkjEktKRY4n0YhljXlTYdGYDF4h7HCOOdHxul5ID0+uaBpyv1XgSBNobqRTckHlQckslScb+7mShYf/JHp23z1I5+xzD9rJpPs2a+rmRhYV7dCMKhg+sc0c8TlKGp8Cot5CplkGNuwdPhot0v1WtLc3j4glBQ1F1sqpMyj6SWIH6msZ0D89YCdP1HWr4KbZ4ttP/zzRZdijqUxzfBD+AvRKQvY=
 sidebar_class_name: "get api-method"
-info_path: site/openapi/docspace/api-backend/usage-api/asc-files
+info_path: site/openapi/docspace/api-backend/usage-api/asc-web-api
 custom_edit_url: null
 ---
 
@@ -47,7 +47,7 @@ Returns an invitation link for joining the portal.
 </Heading>
 
 <ParamsDetails
-  parameters={[{"name":"employeeType","in":"path","description":"Employee type (All, RoomAdmin, User, DocSpaceAdmin)","required":true,"schema":{"oneOf":[{"enum":["All","RoomAdmin","User","DocSpaceAdmin","Collaborator"],"type":"string","description":"[All - All, RoomAdmin - Room admin, User - User, DocSpaceAdmin - DocSpace admin, Collaborator - Collaborator]","example":"All"},{"enum":[0,1,2,3,4],"type":"integer","description":"[0 - All, 1 - Room admin, 2 - User, 3 - DocSpace admin, 4 - Collaborator]","example":0}],"title":"ASC.Core.Users.EmployeeType"}}]}
+  parameters={[{"name":"employeeType","in":"path","description":"Employee type (All, RoomAdmin, User, DocSpaceAdmin)","required":true,"schema":{"oneOf":[{"enum":["All","RoomAdmin","Guest","DocSpaceAdmin","User"],"type":"string","description":"[All - All, RoomAdmin - Room admin, Guest - Guest, DocSpaceAdmin - DocSpace admin, User - User]","example":"All"},{"enum":[0,1,2,3,4],"type":"integer","description":"[0 - All, 1 - Room admin, 2 - Guest, 3 - DocSpace admin, 4 - User]","example":0}],"title":"ASC.Core.Users.EmployeeType"}}]}
 >
   
 </ParamsDetails>
@@ -62,7 +62,7 @@ Returns an invitation link for joining the portal.
 <StatusCodes
   id={undefined}
   label={undefined}
-  responses={{"200":{"description":"Invitation link","content":{"text/plain":{"schema":{}},"application/json":{"schema":{}},"text/json":{"schema":{}}}},"401":{"description":"Unauthorized"},"403":{"description":"Forbidden"}}}
+  responses={{"200":{"description":"Invitation link","content":{"application/json":{"schema":{}}}},"401":{"description":"Unauthorized"}}}
 >
   
 </StatusCodes>

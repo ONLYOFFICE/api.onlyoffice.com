@@ -5,9 +5,9 @@ description: "Returns a link to download a file with the ID specified in the req
 sidebar_label: "Get file download link asynchronously"
 hide_title: true
 hide_table_of_contents: true
-api: eJztVk1v2zAM/SuCThsQxFm6DltuRbt1xXoo2vVUBIViM7EaRdIkOW1m+L+XlOx8tQEGDL31EsvyI0U+Uo+peRAzz0d3/IdU4FnG4pOPe9xYcCJIoy8KPuIzCFcOvJxpKAhy6yTvcSucWEAARy5qrvEFsVP8jkY9LjW+WRFKXDv4U0kH6Cu4Cnrc5yUsBB/VPKwsWUkdYAYOoVPjFiKkraMhbsCTWFiFoOPjL0dNMyZv3hrtMVJ0MBwM6FGAz520FDLaUpCsMI9aGVEwJfUcHeUGD9EhngpPIbNKUIz1y2jM5AHyQCk6IiLIdBSllhBrpA9O6hkidaWUmFCYKcN11NybBTA6kDc9Hswc9H/YV069Zr0mrYqV+Sdn6E0UhSTGhLraSnQqlEejIEM0Obk57ce+6J8aB/2foBDp+2cmrxZI5w24pczhniCXRHR0bK2SeWyg7MGbd5bfhOXYxe/0vg295Prz4NNLbbnVogqlcfIv6lkEHb0iQMZNZFEgTeTHQ445hVXUSeHze/JwPwfaQDUTJJePCAA+Jn3bdXUNoXLaMxF1jAWzETbBqJrsUYaShRLYxRnzFnI5lVAwqeMeSS/4wIRf6bx0RpvKq1UfT0TtLk0r71HOUapHPBNWZsP+ICPXPv5mdRL1JrPdFOCUlFt22h8ryssQ7CjLlMmFKo0Po6+Db8OM7yd0Sd9ZMueUb0fPDbVw6tJdkta9grH9wo1eN2x2YO3IyY2ZS4i8Sz010Xq/CxBLsad4lkMqo8WAFyK2dev8HELid2eQ7BG5n129GTNvV7mWja0ptrlVqYx3RBUisZB0s9qc6YmP0XpGb+qJZaCSkWVdT4THGa+ahrYxCEeNisulcDJdSax5IT2ti/VdO8jDh+t2/H9kh4Lv6quJ0KVQFb3hMpa/+0/RjBFZ4nXBvqEI0seTPAcbtsy2PY+32vz8+29EUbvsdlTqnXZBfl8NZq/V0tn02/QOWNR1alekscOnTwct2tw6dEwAhegZEt5QhA==
+api: eJy1VMtu2zAQ/BWBpxYQLNcNita3IGnToD0EeaCHwAhoam0xpkiWpJy4gv49u6T8Shwkl14kipodcmdnt2WBzz0b37IfUoHPiiy+2SRnxoLjQRp9XrIxm0O4cODlXENJkBsnWc4sd7yGAI4oWqbxA7Ez/I9BOZMavywPFa5L8MJJS4S4SRTZ+SnuO/jbSAd4RnAN5MyLCmrOxi0LK0tsUgeYg0PozLiah7T1eYQb8MhrqxD07evRl66bEJu3RnvMAAlGwyG9DpxcmgetDC8zJfUCiYTBQ3QgNLdWSRETL+49hbQv72Sm9yACCeBIpiDTgZR4QmyQPjip54fzj5Cc6UYpPqU0kgKbrJg3NaLgMbAuZ8EsQL/NfB1h72ZtnHqb8wZBO/I3sfbvOgBP4GUpiYerix2xZlx5DAoyxJDjq5NBdN7gxDgY/ASFSD84NaKpsTBX4JZSwB1BflPJuo6oj4afXhb4RvMmVMbJf2gqQnkQeOOwihblXtzR/7sF0AYahpNTHxAAbEIW2me7hNA47TMerZIFs/UOz6je2YMMVRYqsnPmLQg5k1BmUsc9cjf4kHG/0qJyRpvGq9UAT8S2qUzfWbGTsEvGrOBWFqPBsCBqH59Fm/qpK+y6Adk2qSuyZnLffmqbmiLjL9zI1925B+t7VBizkBDVknpmYvROZf7AdHBsqehLrEoSZjki+1jjQ82jLXv6MwhJl70eeybAc4e12w78f4r3epAxC6s4Jr71f5L/lsRCJBaA/B4nYXrja7wZa9s6oF0qVIAi23bKPY5F1XW0jZdwZDBcLrmTqVHQf6X0tC43HfCqDh8u+8n4MdtOy4M5rAutSdclVw194TL6YD2NuwkiK3Q7jlK6SPp5LATYsBP2YvxRS2y8evb9GrHknn2DJSv1C2I/eKVnzks3oGeXvxLRtsm9qOkan369GtFnuEaTQBOcFU+aE1qn
 sidebar_class_name: "get api-method"
-info_path: site/openapi/docspace/api-backend/usage-api/asc-files
+info_path: site/openapi/docspace/api-backend/usage-api/asc-web-api
 custom_edit_url: null
 ---
 
@@ -47,7 +47,7 @@ Returns a link to download a file with the ID specified in the request asynchron
 </Heading>
 
 <ParamsDetails
-  parameters={[{"name":"fileId","in":"path","required":true,"schema":{"type":"integer","format":"int32","example":5563}}]}
+  parameters={[{"name":"fileId","in":"path","description":"File ID","required":true,"schema":{"type":"integer","format":"int32","example":9846}}]}
 >
   
 </ParamsDetails>
@@ -62,7 +62,7 @@ Returns a link to download a file with the ID specified in the request asynchron
 <StatusCodes
   id={undefined}
   label={undefined}
-  responses={{"200":{"description":"File download link","content":{"text/plain":{"schema":{"type":"object","properties":{"filetype":{"type":"string","nullable":true,"example":"some text"},"token":{"type":"string","nullable":true,"example":"some text"},"url":{"type":"string","format":"uri","nullable":true,"example":"some text"}},"additionalProperties":false,"title":"ASC.Files.Core.Helpers.DocumentService_FileLink"}},"application/json":{"schema":{"type":"object","properties":{"filetype":{"type":"string","nullable":true,"example":"some text"},"token":{"type":"string","nullable":true,"example":"some text"},"url":{"type":"string","format":"uri","nullable":true,"example":"some text"}},"additionalProperties":false,"title":"ASC.Files.Core.Helpers.DocumentService_FileLink"}},"text/json":{"schema":{"type":"object","properties":{"filetype":{"type":"string","nullable":true,"example":"some text"},"token":{"type":"string","nullable":true,"example":"some text"},"url":{"type":"string","format":"uri","nullable":true,"example":"some text"}},"additionalProperties":false,"title":"ASC.Files.Core.Helpers.DocumentService_FileLink"}}}},"401":{"description":"Unauthorized"},"403":{"description":"Forbidden"}}}
+  responses={{"200":{"description":"File download link","content":{"application/json":{"schema":{"type":"object","properties":{"filetype":{"type":"string","description":"File type","nullable":true,"example":"some text"},"token":{"type":"string","description":"Token","nullable":true,"example":"some text"},"url":{"type":"string","description":"Url","format":"uri","nullable":true,"example":"some text"}},"additionalProperties":false,"title":"ASC.Files.Core.Helpers.DocumentService_FileLink"}}}},"401":{"description":"Unauthorized"}}}
 >
   
 </StatusCodes>

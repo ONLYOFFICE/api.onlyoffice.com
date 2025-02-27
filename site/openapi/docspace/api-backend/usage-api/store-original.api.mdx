@@ -5,9 +5,9 @@ description: "Changes the ability to upload documents in the original formats as
 sidebar_label: "Change the ability to upload original formats"
 hide_title: true
 hide_table_of_contents: true
-api: eJzVVUtz0zAQ/isaHSHEIXCA3NpAZxhg6PRxymQ6G3sTq5UtIcl94Ml/Z1eyGydtOXHpxVHWn/bx7bfrVgbYeDlbyBOl0YtMnGMIqibbciSNRQdBmfpbIWfSB+Pwl1MbVYOWI+nwd4M+HJviQc5amZs6YB34CNZqlceb2bU3Ndt8XmIFfAoPFsmdWV1jHsiPdRwnKPQRh2EAWhmjEWpC4T1UVpMtuAa325GEolAcAfTpwMEatMeRDCowVh6dz8exsvGckh8fWfXTFKj9+Cwl/yWYcV/xziTZf8D78HqzH7bgzdtXWgZHcOitqX3KazqZ8E+BPnfKcmByf5zSE7egG5wJTk2otQglikcBC+WFb/IcvV83LN6BWmOjrQb1PEV99Yesvsjp8MK/RbRDMvbj5P3T4i5raEJpnPqDhYygD09BJ8atVFFgiukxb5wKNJQLGkWfX7GHqxtkA9EJBZV/RwCUyy0N+b6reQn1hhYBswcrpcmPCEY0VhsoRGHypiLavFB1IrhbB2JtXAVkBy/uUOsxxaiQEufFYZuoMAgl/cnAqmw6nmRrVkQWl4rZLRWP7hadj7k3TtOFMgQ7yzJtctCl8WH2afJ5msnDxH/we5GuS66rp+GcWU/y2SfjsQ2U0XcyjGQNVfw/hI0k64L0Ym4URn65nWe73fe1n4lubOJo8K21iTEOh4A8coUp69spN9VSWRVEjXQppDa80IVD0g+5GOzi/9nPjq3BuFDqsUdt19wFU0lIai891121+y2mznAXGdy2K/B46fR2y2Zi1LFG6XgLTsGKeVssKUhJoqWusiZi5+Q81ffuglNiOE1+bOTBeG5H/Y0jmn0bBthhGcuBWE8vLwi16j5qFS0qMjq44w8ePWdS8neRQ0RJRVsrNbHcwIaxKXDcFg2TMpRZElR34HL6V/XDsIx9/aUC+MnlPHujbZOGicgen169eKOjtEdHFijpvxwbzPo=
+api: eJytVE1v2zAM/SuCzlmcFTvl1mYbMAzDiqbFDkFQMDYTq1UkTZLTdob/+0jJbp10HTBgF0eh+Pneo1oZYRfkfCU/K41BFGKJMSpDtvVEWoceorLmSyXnMkTr8btXO2VAy4n0+LPBEC9s9STnrSytiWgiH8E5rcoUWdwFa9gWyhr3wKf45JDS2c0dlpHyOM91osKQ/DCOnDbWagRDXhWG0ivHOcm+dFiqLYWIhxpjjV5EKyhU0FmE/rJiSxpGWC+M5WL4CHunKXX0DXbdREJVKU4K+nLUxxZ0wFdFh2z95MKBhz1G9IEyRxU5rzxfLqYJzOmC8JqeO/XNVqjD9CpHfYx2OmR6Mcmu4248BmdNyFCczWb8c9zERUZEHEA3OBc8hlDbNPczXUIFEZqyxBC2DVP1r9wMsOemPszev+7jxkATa+vVL6wkewUsG68iaWFFVUJ5y/e398gGmgsq6uOBHFCuu/UptIsazI7Y5DFgozTlYUYbpy1UorJls6f+g1AmT9qrUGyt3wPZgYSAWk+pBhFSW9ara5K6INb0pwCnirPprNgyNUXSsn3R8tD8kpHI6B+P8AwN5flKhok0RD3/H7tNpOJpSmvvFSZUGOKrl0X5NMivF3pSIUdtbaox0tAP3LB4KOeBBJZhOpxJ8nY2xD0k5vomMnxvoHcK1ukyjVb3f/LQ4xXxMRZOAwFDrTdec8FMyorBJE+ihb6JGKbiiBpSSk3jsnPbbiDgjdddx2bC1LO26HgAr2DDyK3WVKQmsaFPOkzcyUWe7901t8TutDqJypNV6CZDxDktj4t/9V2PpHZ5c02+m/4l3NO+k9HDA7+S9J1LyY8pBydpJVsrNWHdwI59c8r0HjUMzVhuWVj9gYcarszTuMFjHeYx+MtD/TGibbOWCc7BP1+9GdEDO3gzpWtq+jfQNC2b
 sidebar_class_name: "put api-method"
-info_path: site/openapi/docspace/api-backend/usage-api/asc-files
+info_path: site/openapi/docspace/api-backend/usage-api/asc-web-api
 custom_edit_url: null
 ---
 
@@ -54,7 +54,7 @@ Changes the ability to upload documents in the original formats as well.
 
 <RequestSchema
   title={"Body"}
-  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"set":{"type":"boolean","example":true}},"additionalProperties":false,"title":"ASC.Files.Core.ApiModels.RequestDto.SettingsRequestDto"}},"text/json":{"schema":{"type":"object","properties":{"set":{"type":"boolean","example":true}},"additionalProperties":false,"title":"ASC.Files.Core.ApiModels.RequestDto.SettingsRequestDto"}},"application/*+json":{"schema":{"type":"object","properties":{"set":{"type":"boolean","example":true}},"additionalProperties":false,"title":"ASC.Files.Core.ApiModels.RequestDto.SettingsRequestDto"}}}}}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"set":{"type":"boolean","description":"Specifies whether to set the specified settings or not","example":true}},"additionalProperties":false,"description":"Settings request parameters","title":"ASC.Files.Core.ApiModels.RequestDto.SettingsRequestDto"}}}}}
 >
   
 </RequestSchema>
@@ -62,7 +62,7 @@ Changes the ability to upload documents in the original formats as well.
 <StatusCodes
   id={undefined}
   label={undefined}
-  responses={{"200":{"description":"Boolean value: true if the operation is successful","content":{"text/plain":{"schema":{"type":"boolean"}},"application/json":{"schema":{"type":"boolean"}},"text/json":{"schema":{"type":"boolean"}}}},"401":{"description":"Unauthorized"},"403":{"description":"Forbidden"}}}
+  responses={{"200":{"description":"Boolean value: true if the operation is successful","content":{"application/json":{"schema":{"type":"boolean"}}}},"401":{"description":"Unauthorized"}}}
 >
   
 </StatusCodes>

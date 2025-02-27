@@ -5,9 +5,9 @@ description: "Returns a list of rooms with the disabled notifications"
 sidebar_label: "Get room notification settings"
 hide_title: true
 hide_table_of_contents: true
-api: eJztVU1v2zAM/SuCzkGcpT1suRXbWgz7wNCu2CEICsVmarWypEl02szwfx8p26uTIodhPfYQx5L4nh75aKmRqG6jXCzlFSBqextFJr451BudK9TORrmaSOchpNGnQi7kLeClc1Uchw1oOZEBoiccEGsj57MZ/xUQ86A9RxIBo4UdoUV8gufOIlhkFMIjZt4obXkU8xIqleZ3HojGre8gR4L4wAJRd1sWOqq1gSJpHIWrENSOojVCmm8nB7K+6IjCbURgoHjQWAosQQx8e4pZqa2N4RW5wFDDRMKjqjwPl43UnMGb+cnpREYMlBrxR1eB4JwIu3bOgLIdtF21JEYVhWZqZb6P8tkoE4kbNTKzPLt6P/0J6+mZ1/z76gowcXrZl/wDuulRa2hRpn28N/1Sdhfda21fsLapY1+L+pJF5Z1OZ2+enyLXVtVYuqB/QyFT0MnzoHMX1roowCZ7IuR10LhLGauY3zDDzT3wBJ1bqqBEHygA5KpdHVb7ErAONgolzD/WvQLS2Z+c7L7CkgaZ8jqbT2fZcPhlY1yWyCVrDlsIMUmugyFgiegXWWZcrkzpIi7ezt7NM/msO3hddHDJ6QzZX3Ffdq23X4OnzvP6M3DrWVWl8TiMGpLpc+fuNaSyartxCT3y/FwbYPmsvdOznbNLngRXKn0fPfkFYKrk0RthL63m6YL4D0f6PEcXDElL1W16e5ZcBIokg5IJf9WMqfi2SzZRddkJhjXNWkW4DqZtefpXDYHbi163Kuju81uuaLuS+o2cYV9T9eVZnoPnBtkqUx/KW43a6OLjD4piQ/Y969zpX5h3WLK7EeuBmd3e/GwnRxBN0zUEZTTEd0tHEX1uQ3RKgL7kP99p8fQ=
+api: eJylU8tu2zAQ/BWBZ8Fy3Jx8M9oiCPpAYTfowTACWlpbTCiSJVdOXEH/3l1KjiUHPhQ9WCbFndHOzrARKPdBzNdiBYjK7EOSJd8tqp3KJSprgtikwjrwcXdfiLnYAy6trcKw7IQWqfAQHOGAWBsxm075r4CQe+W4kggYnZgBOglneG4NgkFGSed0X5E9BYY2IuQlVJJXeHRAZHb7BDkS0HluE1X34UIFudVQxE4H5dJ7eaRqhTB639O06UWvX1XAxO4SzzzJi8IywRKSE/1IBrdvaq35RMzR15AKeJWV4+26EYpl3cw+3KYioCe9xB9sBQnCKyvYWqtBmg7ablpqRhaFYmqpfwzk7aQOxI0KmVksVh8nv2A7WTjFv2+2AB0my96HT2gnV/2iQ9G2/KXb6c17px6MrLG0Xv2BQnBVgLz2Co9Rjwz5I58/PgO/IOdlQTJeqADEpt1cznIJWHsTEpnof5xqBdRFnz22WmJJm0w6lc0m0+wUn2yIyyK5OPe84uh06Rh3fg6HU1+A02FkFffDMsoMi8itfVYQh6HMzkb0ex+o+gA+dLoPM86VswErGUPc098BxglcvQuj8TXnq/Efk+yVcuIypyVJotZqr5m/G+uax0CVNNg4vLduhlR8z+N4yeSShDGsabYywIPXbcuvf9fgORa0PEivukux3tDnSsoJ+BihOH+xyHNwbOxB6roz4uLmc5jeQnD3+SfVsjFj7zqX+gWzn47Mccg9NrXrgJ9tegXRNF0wSNepvju6iugVnqp5ynSd27+oVOKu
 sidebar_class_name: "get api-method"
-info_path: site/openapi/docspace/api-backend/usage-api/asc-files
+info_path: site/openapi/docspace/api-backend/usage-api/asc-web-api
 custom_edit_url: null
 ---
 
@@ -54,7 +54,7 @@ Returns a list of rooms with the disabled notifications
 <StatusCodes
   id={undefined}
   label={undefined}
-  responses={{"200":{"description":"Room notification settings","content":{"text/plain":{"schema":{"type":"object","properties":{"disabledRooms":{"type":"array","items":{},"description":"List of rooms with the disabled notifications","nullable":true,"example":[{"int":1234,"string":"some text","boolean":true}]}},"additionalProperties":false,"title":"ASC.Web.Api.ApiModels.ResponseDto.RoomsNotificationSettingsDto"}},"application/json":{"schema":{"type":"object","properties":{"disabledRooms":{"type":"array","items":{},"description":"List of rooms with the disabled notifications","nullable":true,"example":[{"int":1234,"string":"some text","boolean":true}]}},"additionalProperties":false,"title":"ASC.Web.Api.ApiModels.ResponseDto.RoomsNotificationSettingsDto"}},"text/json":{"schema":{"type":"object","properties":{"disabledRooms":{"type":"array","items":{},"description":"List of rooms with the disabled notifications","nullable":true,"example":[{"int":1234,"string":"some text","boolean":true}]}},"additionalProperties":false,"title":"ASC.Web.Api.ApiModels.ResponseDto.RoomsNotificationSettingsDto"}}}},"401":{"description":"Unauthorized"},"403":{"description":"Forbidden"}}}
+  responses={{"200":{"description":"Room notification settings","content":{"application/json":{"schema":{"type":"object","properties":{"disabledRooms":{"type":"array","items":{"type":"object"},"description":"List of rooms with the disabled notifications","nullable":true,"example":[{"int":1234,"string":"some text","boolean":true}]}},"additionalProperties":false,"title":"ASC.Web.Api.ApiModels.ResponseDto.RoomsNotificationSettingsDto"}}}},"401":{"description":"Unauthorized"}}}
 >
   
 </StatusCodes>

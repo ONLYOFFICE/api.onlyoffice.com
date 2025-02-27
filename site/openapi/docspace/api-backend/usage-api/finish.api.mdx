@@ -5,9 +5,9 @@ description: "Finishes migration"
 sidebar_label: "Finishes migration"
 hide_title: true
 hide_table_of_contents: true
-api: eJzlVU1T2zAQ/SuZPbZunKY9tL5RSmYYysAQGA6ZDCPbSyyQLVWS+agn/51dyUkdCH+gPcSRpber9/at5A68WDnIFnAqV1Z4qRtYJqANxpfjEjK4lY10FSRg8XeLzv/Q5TNkHRS68dh4HgpjlCxCSHrnKAnNuaLCWvDIPxukPDq/w8JTHmN5Ay/R8ap0c2zKa1SFrvGoFlINYnKtFYqGgkp0hZUmUMzg2I0cRY0eY9gIQ1wC+CRqoyjS2xbX6wREWUqOEep8sOutUA4T8NIzFg7mh+NrzMcHRvLvVJeo3PgiynU/vR7PQg1oBJzU45P/H3QObf3w8Z8XzGktOqMbFxVMJxP+22V4dgKE+zr5/HbpqhGtr7SVf7CMoC9vQTNtc1mW2IQSOyxaKz0dqAUdI1fccIabe+QJIiNK0v5IAITlevm6WJE8ulG9Pb0J1EgU+Nwa7YIpwlf0lgoj0+l4km6x6fZgO7QPaF3g0FqyCSrvTZamShdCVZQn+zb5Pk3fuPWL10cxHJjfRs6ceyQWcVfUtgGIzglNJNCIOrwPYQlITl9ofS8x1Imb7+Lv/XO0aYf9bRaahJPc6rDloB1mUhGvBFhwFPEwZa+4WrUIDd4z2lvdHf2DO3A/utca7gujBIminUKFu96XBReCkOQMezeI7d2horIBjOy6XDi8smq95mkqhuU2oeGDsFLkrHGxpB0q6hsyhO0MRYfDSPPTJfNhuGqjB6+ubbZw2z/nZ/NLAuf9dV/T4aFZKx75U0DPDIA/FRwdjA5zHSjRrFqxYmzMGU5ry2KH5keb+wEz3Sw1z0OGu10R1fBznbwT0XWxs6hGG3xcejeir9YGzSYtifQLwsN0dg==
+api: eJx1VE1v2zAM/SsGz16cZTvl1rUdUAxdi6ZFD0FQyDYTq7EtT5STdob/+0gpyZwmPdjWxyP1+B7lDpxaEUzncKtXVjltaljEYBoMk5scprDUtaYCYrD4p0VyP0z+DtMOMlM7rJ0MVdOUOvMhyStxEl6jrMBKyci9N8h5TPqKmeM8jZUDnEaSXU0zrPNnLDNT4XWldDmISY0pUdUclCNlVjee4hRuKCKOirYhLEIfFwO+qaopOdLZFvs+BpXnWmJUeT84dalKwhicdoKFi9nl6BnT0UWj5bk1OZY0egjl0pUzo59eAx5B30tai9SYmkIFk/FYPscM79bAuO/jr6dbT7VqXWGs/ot5AH07Bf02EdOtNBHPKXJ+ujS2ilyhKVKZxwkXwqy12rEnc3aCshfJ/rJGWWCiKmddtgxAWPSLj0KGwpCi6tAAMVTI9MT6xpA3TLmCZ4lqdDIZjZMDNjn0xp7ETFwPshxTOVjKSX7xQgy1qvx8CItBC6vMmLVGX52008P/xrveG3y+cbztkmRp/JGnBvMRG7QUqt9MRH+pslK+aXeczqpyJNyg/c+jd9U6fHNJUyoui09qrW/uoOdcpGAkKyqaD2J3qrJZhRjAyK5LFeGTLftellkOK/bycKOsVqlUOV/wCQX7jda3gpcdLgPNL4/CR+BlG1z4cGOlNQ6+39/NHhmc7m56xReCV63ayl+A31MA+UtItLfar3VQqnrVqpVgQ05/A1spdmh/MHo3EKb7rfp9yPC4L0I18u7jTyK6LvQWa7THh61PI3Zq7dFi0oJJ/wM8Or7s
 sidebar_class_name: "post api-method"
-info_path: site/openapi/docspace/api-backend/usage-api/asc-files
+info_path: site/openapi/docspace/api-backend/usage-api/asc-web-api
 custom_edit_url: null
 ---
 
@@ -54,7 +54,7 @@ Finishes migration
 
 <RequestSchema
   title={"Body"}
-  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"isSendWelcomeEmail":{"type":"boolean","description":"Is send welcome email","example":true}},"additionalProperties":false,"title":"ASC.Web.Api.ApiModels.RequestsDto.FinishDto"}},"text/json":{"schema":{"type":"object","properties":{"isSendWelcomeEmail":{"type":"boolean","description":"Is send welcome email","example":true}},"additionalProperties":false,"title":"ASC.Web.Api.ApiModels.RequestsDto.FinishDto"}},"application/*+json":{"schema":{"type":"object","properties":{"isSendWelcomeEmail":{"type":"boolean","description":"Is send welcome email","example":true}},"additionalProperties":false,"title":"ASC.Web.Api.ApiModels.RequestsDto.FinishDto"}}}}}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"isSendWelcomeEmail":{"type":"boolean","description":"Is send welcome email","example":true}},"additionalProperties":false,"title":"ASC.Web.Api.ApiModels.RequestsDto.FinishDto"}}}}}
 >
   
 </RequestSchema>
@@ -62,7 +62,7 @@ Finishes migration
 <StatusCodes
   id={undefined}
   label={undefined}
-  responses={{"200":{"description":"OK"},"401":{"description":"Unauthorized"},"403":{"description":"Forbidden"}}}
+  responses={{"200":{"description":"Ok"},"401":{"description":"Unauthorized"},"403":{"description":"No permissions to perform this action"}}}
 >
   
 </StatusCodes>

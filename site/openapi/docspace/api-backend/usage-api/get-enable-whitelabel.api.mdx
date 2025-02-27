@@ -5,9 +5,9 @@ description: "Checks if the white label is enabled or not."
 sidebar_label: "Check the white label availability"
 hide_title: true
 hide_table_of_contents: true
-api: eJyVU02P0zAQ/SuWz1ETCgfIbVntIgQnyorDqlpNktnG1LWN7XQpUf47M04KbaPl49L6483zm/cmvYywCbK8lyuMUZlNELn4hJUH09BOrjNpHXqIypr3jSzlBuONgUrjl1ZF1FChlpn0GJw1AYmpl8ui4L8GQ+2V40qqe2utRjBiD7rDUkTfoVCPIrYonphJJCqhgsBE3xBrbU1EE5ks4veYOw3K8C7ULe4gnR8cEns1ssthyCQ4p1WdFOdfg/17QeL+ByRjXxUv5r3dGehia736QbIT6OUcdGt9pZoGxzcD1p1X8UDO9xJC/cAMD1vkA3ITuP0nAqBcD5TBOdV1i/U2/Nk+Yb0wNi6IZ4ckbsqOtg5iS5scnMqXiyIPU/A5znMN6PfoQ1LZeU1lbYyuzHNta9CtDbF8XbxZ5vJS4ke+F2O55A6ODa/Y33FOztv+ZTjp+kAHmTSwS/tTWCZ5Amgy7FZhclKZR5uqVdQMv1pdL26VpicyydpHPfslB+NI8A5SzhN5snJmI+xB0UppTuiitf73WP5vEFODJ7NMmpKt/ZTKPXdPSMoluT8mQ8tZNmQp288lfV9BwDuvh4GPv3XoeYxouQevuI539FRLc0VxcJjJcnlV1+h4JtJXeSFtfTI5724+E4pTOA9qjGRaMO/xyhxOWC8SHN/m3yF7pqLvxymgjo748erZiqm3Izo1QF/sTwoXqDY=
+api: eJyVU8FuGjEQ/RXL5xVLUU/caBRVVW+lUQ4RimbNhHUxtmt7l9LV/ntn7CWFoFQqBxjbM2/mvTcMMsEuyuWTXGNK2u6iqMU3bALYLZ3kppLOY4Cknf2ylUu5w3RvoTH42OqEBho0spIBo3c2IiENcjGf888WowracyXVfXLOIFjRg+lwKVLoUOgXkVoUR0YSGUroKDDDbwlVOZvQJgYD741WeYz6R2TEQUbV4gE4SieP1KMpPeRIn0p+nH+4HePBQpdaF/Rv6sBZEVUXdDqRBNQlqmd+f94jXxAt4DmOlIByM5IY12h3Lap9/DcP4YKwLs0I54DUehKRjh5SS4cavK4Xs3kdJwfqUnm8FPg85po5F5mvh30VgdC+0kUlLRzy+TKtkprnVs7tNWb+2r64XK2T4fTV+m72iM1s5TVl9xhiodovJGV7F9MBsvoTfJbghj70oCnShpV9o9rw19f/FXCimPBXqr0B4kIzdcEwaFHziflTJumZVSuKUnijKZnZEhsuGYYGIj4EM458/bPDwPZT2EPQXMcnatXSPmDIq5JFlyul0LOXea2z+m/2lJfm1ffP998pl924NqxYMwWMfn6yp0vsayfLBPw9Vu9UDEPZBuJ1zi9P71ZMDM/ZrPCG/k1/AKvraZg=
 sidebar_class_name: "get api-method"
-info_path: site/openapi/docspace/api-backend/usage-api/asc-files
+info_path: site/openapi/docspace/api-backend/usage-api/asc-web-api
 custom_edit_url: null
 ---
 
@@ -28,7 +28,7 @@ import Heading from "@theme/Heading";
 
 <MethodEndpoint
   method={"get"}
-  path={"/api/2.0/settings/enableWhitelabel"}
+  path={"/api/2.0/settings/enablewhitelabel"}
   context={"endpoint"}
 >
   
@@ -54,7 +54,7 @@ Checks if the white label is enabled or not.
 <StatusCodes
   id={undefined}
   label={undefined}
-  responses={{"200":{"description":"Boolean value: true if the white label is enabled","content":{"text/plain":{"schema":{"type":"boolean"}},"application/json":{"schema":{"type":"boolean"}},"text/json":{"schema":{"type":"boolean"}}}},"401":{"description":"Unauthorized"},"403":{"description":"Forbidden"}}}
+  responses={{"200":{"description":"Boolean value: true if the white label is enabled","content":{"application/json":{"schema":{"type":"boolean"}}}},"401":{"description":"Unauthorized"}}}
 >
   
 </StatusCodes>

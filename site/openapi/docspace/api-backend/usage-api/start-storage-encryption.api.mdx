@@ -5,9 +5,9 @@ description: "Starts the storage encryption process."
 sidebar_label: "Start the storage encryption process"
 hide_title: true
 hide_table_of_contents: true
-api: eJztVsFy0zAQ/RWNjhDiEDiAb21pZxhg6DR0OGQyHdnexGoVS0hy2+DJv7Mr2a2atMCltx7iyNJb7e57u5I77sXK8XzOZ+C9bFaOZey4Ke3GeKkbvhhxbcAKevlc8Zw7L6yfeW3FChLciFv41YLzh7ra8LzjpW48NJ6Gwhgly7BFdukQjHOurGEtaOQ3BnBfXVxC6XEfY8mhl+BotdFeLjfnDqxLwIXWCgR5rcCVVsYYcj4zUMolmjK5ZL4G1pIhu5FKsQJY2ExCxUShWx8AcJcCQ8clOMe0JSDg5nAr1kahQ29b2G5HXFSVJKxQp0mUS6Ec7IUSKUod9AwxI6xYg6eURtxLTx74wexo/BOK8YGR9PumK1Djs2jhPnk93uM8WeQUnIdb/8Lv8/GblvGr1y9EPxPRFJ4FZ3TjInPTyYT+HkZ1GIlj10K1kDPKa6Dq7rxi0jHXlsTFslUYYnImhWYxSsjHRRx02dX9SdVTg7834j2SsO8nb/eTO29E62tt5W+oeAC92wedaFvIqoLo00HZWunx6J3jgevKC9rh4gpoAukUFaZ/gwDgi+1iX2I8010gz+2r3ZfTGHdAsWtNt4DRLpS48DW+ZcLIbDqeZK6/Q7J78yxcGJwitNeh+DHA1io0q703eZYpXQpV44b5h8nHabbXC19pnUVzTsEPuc6I2lgjDzO+4xrj+oITI95gndJ7ChtxEh+LQl9JCCSSZmf319jx0DU73RuaiKyXOvhKCv9EKqBmoExj9NdTUpD4WotQEH0ogfN/UL5LRXKr/r9mPRVJwWM8QYCu129OPCESFQw6RQ3p2Ejv96gj0k9SkVHXFcLBuVXbLU0jbZaqDYfXwkpRECnzBTqrsfxQOhI+yMOPYhZvflBoBMceDmrtNNp2NFgcYBcbn2DTdBZJYZ5+n/1AWNF/hazx9MFZK27oCwWfOef0RUM+QuGEuY4r0axa5BDXo+fQ+C2xkxZTLJt+QPkMS80mzeNhlcUM6En5PGrRdbFSkckBH5eetOg5HdCBBgz6D7Ezd0Y=
+api: eJyVVE1v2zAM/SuCzl6cZdslt67rYRi6FU2LYQiCQrbpRK1saZKcNDP830dKduPW+zw0tSR+PD4+suVebB1frvkKvJf11rGUXdS5PRovdc03CdcGrKDDx4IvufPC+pXXVmxhZJdwC98bcP69Lo582fJc1x5qT5/CGCXzECK9d2iMdy7fQSXoyx8NYFyd3UPuMY6xlNBLcPRaay/L460D60bGmdYKBGUtwOVWRgxLvjKQyxJdmSyZ3wFryJEdpFIsAxaCSSiYyHTjgwE8lcAwcQ7OMW3JEDA4PIrKKEzobQNdl3BRFJJshboaoSyFcjCBEikaJ+gZYkZYUYGnkhLupacM/Gx1PvsK2ezMSPq71AWo2XX0cB+8nk04Hz3yriN4FpzRtYvMLeZz+vcc1ftIHNsL1cCSUV0DVU9tZtIx1+TERdkohPi/rRy6E0G9nb+e4ritReN32sofUPBgtJgafdONxa7IHGXJjELYhcbWYnMQnzHaUgsRrI4OIcybaZjPmmFplXQOz475cCy1raK3yE/e76bel4A4i5BUKKUPhBdtHeSNlR6lvkZWXH5H9dw9AF1gH0SBvB3QAPim20y1gTPkAutuKpNehzOMUIXk6GG0C7Mh/A5PqTAyXczmqetnNj25p2FA+QnhitoTJfEc51O/MNonvEh4jbKk89gs4ZIg51o/SAilU9+vT8N+MQzJi2ENM0PepQ65pjrH2Hs0jZzsF9QCqrMSQVY9mMDVX6h6uQdG2+ffue7J8PDoUxSbDJJorKJwkfc1MYWWyHzgN3JPe2K8ByP/2PMd9Qyd2jYTDm6t6jq6RuIsqQQ/98JKkREt6w0m26FswAZFhQbx81jFqxuCRuY4tKFfL4awSwaPMxxb4/9ouxnJ6urL6gaNs35nV7h08NaKA+1z/F1yTvufvIOAwl3LcRS3DTKJ7zFm2I0NcTQWVZRP/0FVDU/1cYzwudpiHfRLVf3So22jYpHPwT4+/dajZ3awpt5uEPRPJV1x+A==
 sidebar_class_name: "post api-method"
-info_path: site/openapi/docspace/api-backend/usage-api/asc-files
+info_path: site/openapi/docspace/api-backend/usage-api/asc-web-api
 custom_edit_url: null
 ---
 
@@ -54,7 +54,7 @@ Starts the storage encryption process.
 
 <RequestSchema
   title={"Body"}
-  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"notifyUsers":{"type":"boolean","description":"Specifies if the users will be notified about the encryption process or note","example":true}},"additionalProperties":false,"description":"Storage encryption request parameters","title":"ASC.Web.Api.ApiModel.RequestsDto.StorageEncryptionRequestsDto"}},"text/json":{"schema":{"type":"object","properties":{"notifyUsers":{"type":"boolean","description":"Specifies if the users will be notified about the encryption process or note","example":true}},"additionalProperties":false,"description":"Storage encryption request parameters","title":"ASC.Web.Api.ApiModel.RequestsDto.StorageEncryptionRequestsDto"}},"application/*+json":{"schema":{"type":"object","properties":{"notifyUsers":{"type":"boolean","description":"Specifies if the users will be notified about the encryption process or note","example":true}},"additionalProperties":false,"description":"Storage encryption request parameters","title":"ASC.Web.Api.ApiModel.RequestsDto.StorageEncryptionRequestsDto"}}}}}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"notifyUsers":{"type":"boolean","description":"Specifies if the users will be notified about the encryption process or note","example":true}},"additionalProperties":false,"description":"Storage encryption request parameters","title":"ASC.Web.Api.ApiModel.RequestsDto.StorageEncryptionRequestsDto"}}}}}
 >
   
 </RequestSchema>
@@ -62,7 +62,7 @@ Starts the storage encryption process.
 <StatusCodes
   id={undefined}
   label={undefined}
-  responses={{"200":{"description":"Boolean value: true if the operation is successful","content":{"text/plain":{"schema":{"type":"boolean"}},"application/json":{"schema":{"type":"boolean"}},"text/json":{"schema":{"type":"boolean"}}}},"401":{"description":"Unauthorized"},"403":{"description":"Forbidden"}}}
+  responses={{"200":{"description":"Boolean value: true if the operation is successful","content":{"application/json":{"schema":{"type":"boolean"}}}},"401":{"description":"Unauthorized"},"402":{"description":"Your pricing plan does not support this option"},"403":{"description":"No permissions to perform this action"},"405":{"description":"Method not allowed"}}}
 >
   
 </StatusCodes>

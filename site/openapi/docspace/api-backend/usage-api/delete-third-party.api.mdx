@@ -5,9 +5,9 @@ description: "Removes the third-party storage service account with the ID specif
 sidebar_label: "Remove a third-party account"
 hide_title: true
 hide_table_of_contents: true
-api: eJy1VE1zmzAQ/SuMTu0MNQ7OoeWWqZ0ZT3Po5OOU8WRksRg1gFRJkKQM/727Agdsx731YCyt3n69fVLLHN9Zljyya1mADaLgPpcm/aK5cW+BrBzsDHdSVWwTMqWh36xTlrAUCnDg4T8JzUKGXrxEo6GILatwg0BtVCNTMOgVMlmRhbsc1wZ+19IABnOmhpBZkUPJWdIy96bJ0+cHg9BMmZK73rSI0QCvvNQFgi7ixWXXbSia1aqyYClAPJ/TXwpWGKl9AwmbtpapAksK1kuMJRTmqZxPDK8u0gWnMtuxoK4LGde6kML3H/2y6hTgfT84obPL+cVpPQ8Vr12ujPyDHHjQ4hR0rcxWpilUjOJYELWRSDbxy614oghPz0AGZIATxS8IALYhTg5D3UKpGhyyywF/IxfWKcN3EFgwjRQQcCFUXbngRbrcg9fLwGoQMpOQoii8jYYH1s0wIY48V6MkvBBwwAmLuJZRPJtHGYkr8jl9yqgdRdExass0e9XUpkDX3DmdRFGhBC9yZV3ydf4tjthxSzd0HvTujDreE3RH/PdaOKTpXVxY2w8g1Q4yPYANQhVKPUvwzMsqU95bOpIdu7r7PvN3BrFUe19PE9MgNRZccq+DIXhPfcAPeB94Pm6qHQX530Y2cDCRO5btmW+H4T0SQYjE8dH9GzodR4ibZHKzkXoaE/m17ZZbeDBF15EZcxqSJy4bbiTfEn0451RaWqNuMl5Y+AcJn26Hh+JzcK70/UwrqqvhRU07XPqRT1+gboPoHC8K6oWq6AFXQoB2E9dp9M1E4cvVzep+hUBSyqGYetkMCwr9YU1HKuvT07cLz3i0ba/UrnvH90dnPYb29mjfA75CfwHZ8QVJ
+api: eJy1VMtu2zAQ/BWBpxZQLcfJSTejdgGjPQR5oIfACNbU2mIjiSxJKUkF/Xt3KcWy8uitBmyT1OxrZqhWeDg4kd6Jb6pAFyXRTa5s9sWA9c+RqjweLHilK7GNhTbYbzaZSEWGBXoM8EtGi1hQFJR0aDljKyraENBY3agMLUXFQlV8Aj6ndYZOWmVC+lRcDrBos6JnFn/XyiIV8rbGWDiZYwkibYV/Npw19IaWoHttS/D90fmCDvAJSlMQ6GxxftF1W87mjK4cOk6wmM/5b1r9dOy9Lo59SE11Ks8BYEyhZCAg+eU4qh3b6ugTi4v52dvUtxXUPtdW/aFxGOVQ1lYRY0wSOHnPz+8fkA+oVWCeHgmAYsvNT7NdYakbUsrnSN+xaee1hQNGDm2jJEYgpa4rHz0qnwfwZhU5g1LtFWakbDhjltH5GRUk3XI96hrUJJVSkYBRyWI2T/bskCTUDCWTdlS2E+NY18xJT/V0uKN2lPE7smEGh0xgg0ek1g8KA1+q2usQrTyrKpbXX2c/cTdbGkXohuzWU9MsBKGNdr6EoM6QvqcsgglfAz+vbdiOiv83qgcWPD75xBRA41LbtS24ek/6HVNESKKdDc7Ec9yRetqkJ9eKTJLT1BzXtjtweGuLruNjqmnZVrRswCrYMYHkukw5XpPeeygc/oOET1fDTfwcTW/ou1O8CFxxiw0UNe9oGfQ/fRN0W0Ln5HW6wtxQD1hKicafhL65c3whjlZdrX+sb9YEZ/NM/dU7aVhwgXc7e2W8vgn+7eIPItq2N2/XHfH9ow8jhiFf0MzTll4WfwGFZt6m
 sidebar_class_name: "delete api-method"
-info_path: site/openapi/docspace/api-backend/usage-api/asc-files
+info_path: site/openapi/docspace/api-backend/usage-api/asc-web-api
 custom_edit_url: null
 ---
 
@@ -47,7 +47,7 @@ Removes the third-party storage service account with the ID specified in the req
 </Heading>
 
 <ParamsDetails
-  parameters={[{"name":"providerId","in":"path","required":true,"schema":{"type":"integer","format":"int32","example":1234}}]}
+  parameters={[{"name":"providerId","in":"path","description":"Provider ID","required":true,"schema":{"type":"integer","format":"int32","example":1234}}]}
 >
   
 </ParamsDetails>
@@ -62,7 +62,7 @@ Removes the third-party storage service account with the ID specified in the req
 <StatusCodes
   id={undefined}
   label={undefined}
-  responses={{"200":{"description":"Third-party folder ID","content":{"text/plain":{"schema":{}},"application/json":{"schema":{}},"text/json":{"schema":{}}}},"401":{"description":"Unauthorized"},"403":{"description":"Forbidden"}}}
+  responses={{"200":{"description":"Third-party folder ID","content":{"application/json":{"schema":{}}}},"401":{"description":"Unauthorized"}}}
 >
   
 </StatusCodes>
