@@ -1,3 +1,6 @@
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 # OpenFile
 
 Opens the document file which will be edited and saved afterwards.
@@ -17,18 +20,19 @@ int OpenFile(const wchar_t* sPath, const wchar_t* sParams);
 
 ## Example
 
-### C++
-
-```cpp
-std::wstring sWorkDirectory = NSUtils::GetBuilderDirectory();
-CDocBuilder::Initialize(sWorkDirectory.c_str());
-CDocBuilder oBuilder;
-oBuilder.OpenFile(L"text-document.csv", "<m_nCsvTxtEncoding>46</m_nCsvTxtEncoding><m_nCsvDelimiter>4</m_nCsvDelimiter>");
-CDocBuilder::Dispose();
-```
-
-### .docbuilder
-
-```ts
-builder.OpenFile("text-document.csv", "<m_nCsvTxtEncoding>46</m_nCsvTxtEncoding><m_nCsvDelimiter>4</m_nCsvDelimiter>")
-```
+<Tabs>
+    <TabItem value="cpp" label="C++">
+        ```cpp
+        std::wstring sWorkDirectory = NSUtils::GetBuilderDirectory();
+        CDocBuilder::Initialize(sWorkDirectory.c_str());
+        CDocBuilder oBuilder;
+        oBuilder.OpenFile(L"text-document.csv", "<m_nCsvTxtEncoding>46</m_nCsvTxtEncoding><m_nCsvDelimiter>4</m_nCsvDelimiter>");
+        CDocBuilder::Dispose();
+        ```
+    </TabItem>
+    <TabItem value="builder" label=".docbuilder">
+        ```ts
+        builder.OpenFile("text-document.csv", "<m_nCsvTxtEncoding>46</m_nCsvTxtEncoding><m_nCsvDelimiter>4</m_nCsvDelimiter>")
+        ```
+    </TabItem>
+</Tabs>

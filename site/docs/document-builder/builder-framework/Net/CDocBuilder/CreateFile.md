@@ -1,3 +1,6 @@
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 # CreateFile
 
 Creates a new file. The type of the file which will be created needs to be set.
@@ -16,19 +19,20 @@ bool CreateFile(int nType);
 
 ## Example
 
-### .Net
-
-```cs
-string workDirectory = "C:/Program Files/ONLYOFFICE/documentBuilder";
-CDocBuilder.Initialize(workDirectory);
-CDocBuilder oBuilder = new CDocBuilder();
-var doctype = (int)OfficeFileTypes.Document.DOCX;
-oBuilder.CreateFile(doctype);
-CDocBuilder.Destroy();
-```
-
-### .docbuilder
-
-```ts
-builder.CreateFile("docx")
-```
+<Tabs>
+    <TabItem value="net" label=".Net">
+        ``` cs
+        string workDirectory = "C:/Program Files/ONLYOFFICE/documentBuilder";
+        CDocBuilder.Initialize(workDirectory);
+        CDocBuilder oBuilder = new CDocBuilder();
+        var doctype = (int)OfficeFileTypes.Document.DOCX;
+        oBuilder.CreateFile(doctype);
+        CDocBuilder.Destroy();
+        ```
+    </TabItem>
+    <TabItem value="builder" label=".docbuilder">
+        ```ts
+        builder.CreateFile("docx")
+        ```
+    </TabItem>
+</Tabs>

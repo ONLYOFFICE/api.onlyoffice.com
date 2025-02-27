@@ -1,3 +1,6 @@
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 # SetPropertyW
 
 Sets an argument in the Unicode format which can be trasferred to the program outside the [CDocBuilder.ExecuteCommand](./ExecuteCommand.md) method, i.e. either as an additional property when running ONLYOFFICE Document Builder executable file or as a part of program code, but not included into the document file script.
@@ -39,21 +42,22 @@ Argument.name === "ONLYOFFICE" // true
 
 ## Example
 
-### C++
-
-```cpp
-std::wstring sWorkDirectory = NSUtils::GetBuilderDirectory();
-CDocBuilder::Initialize(sWorkDirectory.c_str());
-CDocBuilder oBuilder;
-oBuilder.SetPropertyW("--argument", L"{\"name\":\"ONLYOFFICE\"}");
-CDocBuilder::Dispose();
-```
-
-### .docbuilder
-
-```sh
-docbuilder.exe "--argument={\"name\":\"ONLYOFFICE\"}" test.docbuilder
-```
+<Tabs>
+    <TabItem value="cpp" label="C++">
+        ```cpp
+        std::wstring sWorkDirectory = NSUtils::GetBuilderDirectory();
+        CDocBuilder::Initialize(sWorkDirectory.c_str());
+        CDocBuilder oBuilder;
+        oBuilder.SetPropertyW("--argument", L"{\"name\":\"ONLYOFFICE\"}");
+        CDocBuilder::Dispose();
+        ```
+    </TabItem>
+    <TabItem value="builder" label=".docbuilder">
+        ```ts
+        docbuilder.exe "--argument={\"name\":\"ONLYOFFICE\"}" test.docbuilder
+        ```
+    </TabItem>
+</Tabs>
 
 ## Adding or removing fonts
 
@@ -61,18 +65,19 @@ It is also possible to update the font list when you either add new fonts or rem
 
 ## Example
 
-### C++
-
-```cpp
-std::wstring sWorkDirectory = NSUtils::GetBuilderDirectory();
-CDocBuilder::Initialize(sWorkDirectory.c_str());
-CDocBuilder oBuilder;
-oBuilder.SetPropertyW("--check-fonts", L"true");
-CDocBuilder::Dispose();
-```
-
-### .docbuilder
-
-```sh
-docbuilder.exe "--check-fonts=true" test.docbuilder
-```
+<Tabs>
+    <TabItem value="cpp" label="C++">
+        ```cpp
+        std::wstring sWorkDirectory = NSUtils::GetBuilderDirectory();
+        CDocBuilder::Initialize(sWorkDirectory.c_str());
+        CDocBuilder oBuilder;
+        oBuilder.SetPropertyW("--check-fonts", L"true");
+        CDocBuilder::Dispose();
+        ```
+    </TabItem>
+    <TabItem value="builder" label=".docbuilder">
+        ```ts
+        docbuilder.exe "--check-fonts=true" test.docbuilder
+        ```
+    </TabItem>
+</Tabs>

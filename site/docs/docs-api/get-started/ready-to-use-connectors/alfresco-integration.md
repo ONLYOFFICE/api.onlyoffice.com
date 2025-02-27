@@ -1,3 +1,6 @@
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 # Alfresco integration
 
 This [plugin](https://github.com/ONLYOFFICE/onlyoffice-alfresco) enables users to edit office documents from [Alfresco](https://www.alfresco.com/) Share using ONLYOFFICE Docs.
@@ -36,21 +39,22 @@ To start using ONLYOFFICE Docs with Alfresco, the following steps must be perfor
 
 2. Use the **Module Management Tool (MMT)** to install modules, run this commands:
 
-   **Alfresco**
-
-   ``` sh
-   java -jar /usr/local/tomcat/alfresco-mmt/alfresco-mmt.jar install /usr/local/tomcat/amps/onlyoffice-integration-repo.amp /usr/local/tomcat/webapps/alfresco
-   ```
-
-   **Share**
-
-   ``` sh
-   java -jar /usr/local/tomcat/alfresco-mmt/alfresco-mmt.jar install /usr/local/tomcat/amps_share/onlyoffice-integration-share.amp /usr/local/tomcat/webapps/share
-   ```
+   <Tabs>
+      <TabItem value="alfresco" label="Alfresco">
+         ``` sh
+         java -jar /usr/local/tomcat/alfresco-mmt/alfresco-mmt.jar install /usr/local/tomcat/amps/onlyoffice-integration-repo.amp /usr/local/tomcat/webapps/alfresco
+         ```
+      </TabItem>
+      <TabItem value="share" label="Share">
+         ``` sh
+         java -jar /usr/local/tomcat/alfresco-mmt/alfresco-mmt.jar install /usr/local/tomcat/amps_share/onlyoffice-integration-share.amp /usr/local/tomcat/webapps/share
+         ```
+      </TabItem>
+   </Tabs>
 
    More details about using MMT can be found at the following address - `https://docs.alfresco.com/content-services/latest/install/zip/amp/`.
 
-3. Make sure that ONLYOFFICE Docs will be able to POST to Alfresco.
+1. Make sure that ONLYOFFICE Docs will be able to POST to Alfresco.
 
    You may need to change these lines in **alfresco-global.properties** or you can set it using [configuration page](#configuring-onlyoffice-alfresco-module-package):
 
@@ -66,7 +70,7 @@ To start using ONLYOFFICE Docs with Alfresco, the following steps must be perfor
 
    > Probably located here */usr/local/tomcat/shared/classes/alfresco-global.properties*
 
-4. Restart Alfresco:
+2. Restart Alfresco:
 
    ``` sh
    sudo ./alfresco.sh stop
