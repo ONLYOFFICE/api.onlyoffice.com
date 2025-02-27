@@ -4,6 +4,12 @@
     "title": "ASC.Web.Api",
     "version": "v2"
   },
+  "servers": [
+    {
+      "url": "http://localhost:8092",
+      "description": "Local server"
+    }
+  ],
   "tags": [
     {
       "name": "Authentication",
@@ -31843,7 +31849,7 @@
   },
   "x-tagGroups": [
     {
-      "name": "Web.Api",
+      "name": "Api",
       "tags": [
         "Authentication",
         "Capabilities",
@@ -31915,7 +31921,7 @@
       ]
     },
     {
-      "name": "Data.Backup",
+      "name": "Backup",
       "tags": [
         "Backup"
       ]

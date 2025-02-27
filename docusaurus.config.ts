@@ -91,7 +91,7 @@ const config: Config = {
             specPath: "openapi/docspace/docspace-backend.json",
             outputDir: "site/openapi/docspace/api-backend/usage-api",
             sidebarOptions: {
-              groupPathsBy: "tag",
+              groupPathsBy: "tagGroup",
             },
           } satisfies OpenApiPlugin.Options,
           docspaceHosted: {
