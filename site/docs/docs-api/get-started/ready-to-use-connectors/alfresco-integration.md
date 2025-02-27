@@ -1,3 +1,8 @@
+---
+sidebar_custom_props:
+  icon: /assets/images/editor/connectors/alfresco.svg
+---
+
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
