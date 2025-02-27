@@ -192,31 +192,31 @@ In this example we are removing shapes from the presentation.
 
 [More](presentation-editor/remove-shapes-from-slides.md)
 
-## PDF Forms
+## PDF editor
 
 ### Add state from zip code
 
 In this example we are adding the "State" label and the text form prefilled with "CA" if the zip code of California is entered.
 
-[More](pdf-forms/add-state-from-zip-code.md)
+[More](pdf-editor/add-state-from-zip-code.md)
 
 ### Mask card numbers
 
 In this example we are applying the mask to all forms with the specified form key to hide card numbers.
 
-[More](pdf-forms/mask-card-numbers.md)
+[More](pdf-editor/mask-card-numbers.md)
 
 ### Reset all forms
 
 In this example we are clearing all fields if necessary, for example after printing the document. 
 
-[More](pdf-forms/reset-all-forms.md)
+[More](pdf-editor/reset-all-forms.md)
 
 ### Set USA date format
 
 In this example we are setting all date form formats to USA one.
 
-[More](pdf-forms/set-usa-date-format.md)
+[More](pdf-editor/set-usa-date-format.md)
 
 ## Support
 
