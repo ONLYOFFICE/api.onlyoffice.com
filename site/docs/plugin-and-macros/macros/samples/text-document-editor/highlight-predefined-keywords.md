@@ -1,6 +1,4 @@
----
-sidebar_position: 
----
+# Highlight predefined keywords
 
 ## Description
 
@@ -29,7 +27,6 @@ Highlights predefined keywords in text document.
         console.log("Error: " + error.message);
     }
 })();
-
 ```
 
 Methods used: GetDocument, Search, SetHighlight

@@ -39,7 +39,7 @@ Removes all custom formatting and applies a default style.
 })();
 ```
 
-Methods used: GetDocument, SetFontSize, SetFontFamily, SetBold, SetItalic, SetHighlight, SetColor, SetUnderline, GetAllParagraphs, SetTextPr
+Methods used: GetDocument, CreateTextPr, SetFontSize, SetFontFamily, SetBold, SetItalic, SetHighlight, SetColor, SetUnderline, GetAllParagraphs, SetTextPr
 
 ## Reference Microsoft VBA macro code
 
