@@ -1,6 +1,6 @@
 ---
 sidebar_custom_props:
-  icon: /assets/images/editor/connectors/humHub.svg
+  icon: /assets/images/editor/connectors/humhub.svg
 ---
 
 # HumHub integration
