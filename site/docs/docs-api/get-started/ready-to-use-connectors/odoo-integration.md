@@ -1,3 +1,8 @@
+---
+sidebar_custom_props:
+  icon: /assets/images/editor/connectors/odoo.svg
+---
+
 # Odoo integration
 
 This [app](https://github.com/ONLYOFFICE/onlyoffice-odoo) enables users to edit and collaborate on office documents within [Odoo](https://www.odoo.com/) Documents using ONLYOFFICE Docs.

@@ -1,3 +1,8 @@
+---
+sidebar_custom_props:
+  icon: /assets/images/editor/connectors/chamilo.svg
+---
+
 # Chamilo integration
 
 This [plugin](https://github.com/ONLYOFFICE/onlyoffice-chamilo) enables users to edit office documents within [Chamilo](https://chamilo.org/en/) using ONLYOFFICE Docs.
