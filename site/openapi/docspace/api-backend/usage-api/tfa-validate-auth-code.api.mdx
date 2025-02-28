@@ -5,9 +5,9 @@ description: "Validates the two-factor authentication code specified in the requ
 sidebar_label: "Validate the TFA code"
 hide_title: true
 hide_table_of_contents: true
-api: eJztVk1z0zAQ/SseHSGNQ+AAuYVCZxhg6DQpHDKZjmJvYrWKJaR1P/Dkv7Mr2URt2p449pDElt9+vfckpxUoN15MFmIGiKre+CzP5ifTzHe3YjkQxoKTqEz9pRQTgWv5U2pVSoRpg9WxKUEMhIPfDXj8aMo7MWlFYWqEGvlSWqtVEeLzS29qXvNFBVvJV3hngZKa1SUUSHms42qowMc0lHyP8uioJ0KV4AunLOekZe63iG3UjdZypQmMroGBgFu5tTrEmi1kCLcodruBkGWpOFrq06TgWmoPj2W/jgPTQtYNmlnp5BYQnKeyqDAUmc6Oh79gNZxaxZ/v1JQensUI/wnNcL4nL1kOLXFvLwQ9Q1BqpFevX5h6iiluyoG3pvZx9PFoxD8PeqGhMrXOsIIwcaZ87I16SHZvcKXVUj1O9soYDbI+0OdJddKA5x2/RzL23ejN4QzntaQTyDj1B0oRQG8PQSfGrVRZQqzpoWicQjqkFnQ0+eKCM1xcAS8Qa5LHvyEAiOVu+VC/nm8fWMMbc7SWBRqXcRIirJs+8uktFGqtoMxUHfCd3EOqQGpXhg9Ta3ywqsSK7nJpVT4ejvL+9M3psCVa8840bEsP7pqdwv03TlNUhWgnea5NIXVF+SbvRx/G+YG1v/HzLIYLnq2nYsbMR6fcJ+SfFNTWV1qgPUE+5fsUNhDsDfKMuVIQOGZJz/bvg8/9xuk3YbqBOHptQq3E+CdKA28GnjR2fz1mLNO1lcEvXSu9JIHhZPfemz15H/0/DTtukg1CDQZF2k7PBRNHSFI0CNe9UQciqsrz9bqSHCwdx7TtSno4d3q342Wq59icS0Y7FU+kxZJqVeRWkpKNEOQSx3HIozl3FpI3Ub0H+3I36COmRQEWE2w6zTLx6emP2Zxgq+71vo06OnnDr376ngjB/xO4RjBSWGuFlvWmkRvGxsrhnGiYnNRc0UbdBc/TP6rv0jnuuy5OwN88z6MRbRudS0z2+PjoyYiO0x4daKCm/wJ7OCuX
+api: eJytVF1v0zAU/SuRn7OmVDz1rYwhIUBMawcPVTS5zm3jzY2NfdNtRP3v3GsnLN0GEhIPTRP7fpx7zrE7gXIXxHwtloCom13Iimz1YZGF/lOUubAOvERtm4+VmAvcym/S6EoiLFqsz20FIhcefrQQ8J2tHsW8E8o2CA3yq3TOaBXzi9tgG14Lqoa95Dd8dEBF7eYWFFId57kbagipDBV/igroCRNFVRCU145r0jLjVQlG0xojN4aC0beQC3iQe2dirt1DhvCA4njMhawqzdnSXI4abqUJ8Fr1QxqYFrJ+0MxJL/eA4AO1RY2xyWJ5PvkOm8nCaf59IVBmcpUywnu0k9UTeaNlgsSgPARnm5BGn02n/PcMCw2V6W2GNcSJMx0SNsLwr5RvrDUgm7732+mbl+2uG0kKW69/QhVpC6Bar5EkXlOXoG54/+YOeIHgS8ZxTwEgymP5nMhh8BDh470920qF1mdchJD3iNNgwYHSWw1VppsY3/M+oQ5Ee23Zis6G6BmJNX0V0uliNpkWg3cLsipRUfTqsT8C+ANLxvhbbyirRnTzojBWSVOneqewP/NOlhIFTzWQsGRGk1inVPymmAB9ogWyJVmFv8dhudBcXll7pyGyy1JdPZ2ji8G7wzkYe5iztzb2euk9qs1TJvyHGUczVXsZndCDGeSI7I6O0Mn0o5P8//Tr2eFBCmck0UAAoxpdr+WaqaNIUjOK1t9FuUiK8nyDpiRIlI1yum4jA1x7czzyMvXzbMySo71O18K6pF41OZXEZBNEwcR5GvJsxchi8Tbp9+wcHfMhY6EUOPxrbDly6uXX5YqCN/31uE96ennPVyc950LwPcvZ0VBxrRNGNrtW7jg21Yx3V8sUjU2W7NS/8FTDVvM4RnjqvjQHP3mqVzO6LjmY+Bzi09YfM3pmh2iWtiTQvwCCJjT8
 sidebar_class_name: "post api-method"
-info_path: site/openapi/docspace/api-backend/usage-api/asc-files
+info_path: site/openapi/docspace/api-backend/usage-api/asc-web-api
 custom_edit_url: null
 ---
 
@@ -54,7 +54,7 @@ Validates the two-factor authentication code specified in the request.
 
 <RequestSchema
   title={"Body"}
-  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"code":{"type":"string","description":"TFA code","nullable":true,"example":"some text"}},"additionalProperties":false,"description":"TFA validation request parameters","title":"ASC.Web.Api.ApiModel.RequestsDto.TfaValidateRequestsDto"}},"text/json":{"schema":{"type":"object","properties":{"code":{"type":"string","description":"TFA code","nullable":true,"example":"some text"}},"additionalProperties":false,"description":"TFA validation request parameters","title":"ASC.Web.Api.ApiModel.RequestsDto.TfaValidateRequestsDto"}},"application/*+json":{"schema":{"type":"object","properties":{"code":{"type":"string","description":"TFA code","nullable":true,"example":"some text"}},"additionalProperties":false,"description":"TFA validation request parameters","title":"ASC.Web.Api.ApiModel.RequestsDto.TfaValidateRequestsDto"}}}}}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"code":{"type":"string","description":"TFA code","nullable":true,"example":"some text"}},"additionalProperties":false,"description":"TFA validation request parameters","title":"ASC.Web.Api.ApiModel.RequestsDto.TfaValidateRequestsDto"}}}}}
 >
   
 </RequestSchema>
@@ -62,7 +62,7 @@ Validates the two-factor authentication code specified in the request.
 <StatusCodes
   id={undefined}
   label={undefined}
-  responses={{"200":{"description":"True if the code is valid","content":{"text/plain":{"schema":{"type":"boolean"}},"application/json":{"schema":{"type":"boolean"}},"text/json":{"schema":{"type":"boolean"}}}},"401":{"description":"Unauthorized"},"403":{"description":"Forbidden"}}}
+  responses={{"200":{"description":"True if the code is valid","content":{"application/json":{"schema":{"type":"boolean"}}}},"401":{"description":"Unauthorized"}}}
 >
   
 </StatusCodes>

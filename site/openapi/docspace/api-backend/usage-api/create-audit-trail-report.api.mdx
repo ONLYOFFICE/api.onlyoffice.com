@@ -5,9 +5,9 @@ description: "Generates the audit trail report."
 sidebar_label: "Generate the audit trail report"
 hide_title: true
 hide_table_of_contents: true
-api: eJyNU0Fu2zAQ/IrAs2Cqbg+tb0aBFEEDtIiTk2EEa2lTMaFJlqRUu4L+3l1KQhQnBnqRRHJmOTuz6kSEX0GstmKDZeNVPGUyWzeViln0oHRWQQSxy4V16CEqa64rsRKlR4iYcHcMu0VnfRS58BicNQGpZCeWRcGvCkPplWMyUe9vb7Jos1hjdtThmPlEzR6VRuKX1kQ0kWkRj1E6DcrwKpQ1HoC++j4X4JxWZZIjn4J9C0jcd0747FPx4R1VBppYW6/+YiUS6ONb0JX1e1VVaATXCaNhZF4nIJQPXOHhGXmDfICK2vlDABS7ngx8XeobGvYTQzICZoYPfiyIfEBSxG47G9hbB7GmlQSn5HJRyEmATHSJLRkXpJ+iCOhb9CHJa7wmZh2jW0mpbQm6ppqrz8WXpRTn2m74PBvogqVPF23YyCHa1/1SWCeHRCVp32kjFwYOaT2H5YKjpIjts8JkoTKPNrFV1Axfb74urmgQAmFZ+6CnXXIibMIBUqBj8cnDCxae99W9DNd/2T+2NBtDUpGM7MYottwvISkMMZsHmk8uSO8hkvRbJEXkJfvOzK7bQ8B7r/uet3836Hlw6LMFr2DPfmx3dGNNk0Q5cIrJa7EuS3RcvQXdnCvczcbm54/NXRLDWucRDWGMH1x4OjKnWdmz7IbL+dnnFxhdN+RPLU344egiY2xuQqcO6Cf9B0PBkA4=
+api: eJyNVMGO0zAQ/RXLFy5RUwqn3ioOCLESaLsrhKpq5TqzjdnUNvYktET9d2bsZEmXrUQPjeO8N37z3iS9RLWPcrmRa9BtMHgSpVi1lUGBQZlGVAqV3BbSeQgKjbOfKrmUOoBCSLg7ht2CdwFlIQNE72wEKtnLxXzOlwqiDsYzmaj3tzcCncAaxLGJRxESVTyaBoivnUWwyDTlfWN0OrP8EZnby6hrOChanelXyPfzt68cYFWLtQvmN1QygRb/gr67NggfjDZ2L3yjrKgcRGEditj6pAhrE4XLhFTm3atliGjfoKhVBwKsa/e1IKsOJkaCcKfZK8l64+Ax+U39Rf3ASh+egDfIOlWRA78IAHJ7Js8vz/oIliMgleydmmSULZwR+QDUOQfkXeQ4vMKa7krlTbmYzctRQJnoJXTkdSzDmF6E0EGISV4bGmLWiH5Zlo3TqqlzzUtVN/xEZKJk0eMRa44qz8Flp73EkweikqjPtFFIqw7pfgorpOHy2rknk80z9tEltsGG4av1h9k32M1W3hCadWdF3YLjYgMOKg3NUH7074p9Lzvr/87if1k/NIVwxJIGyqShSSb2Qwwb7piQFISczEIhU0G65jjSW5QUkZvJc2L2/U5FuA/N+czbP1sIPDS07FQwaseObLZ0Yk1TRElwgsltudIaPFfvVNNm21+8V5za8+B8/bK+S5JY8TSqHMqw4PLjI3uaFr/MMEvg/3NxhdH3eQ6osRGfH11lDC2OaHZ6S5+DPzN1pDY=
 sidebar_class_name: "post api-method"
-info_path: site/openapi/docspace/api-backend/usage-api/asc-files
+info_path: site/openapi/docspace/api-backend/usage-api/asc-web-api
 custom_edit_url: null
 ---
 
@@ -54,7 +54,7 @@ Generates the audit trail report.
 <StatusCodes
   id={undefined}
   label={undefined}
-  responses={{"200":{"description":"URL to the xlsx report file","content":{"text/plain":{"schema":{}},"application/json":{"schema":{}},"text/json":{"schema":{}}}},"401":{"description":"Unauthorized"},"403":{"description":"Forbidden"}}}
+  responses={{"200":{"description":"URL to the xlsx report file","content":{"application/json":{"schema":{}}}},"401":{"description":"Unauthorized"},"402":{"description":"Your pricing plan does not support this option"},"403":{"description":"You don't have enough permission to create"}}}
 >
   
 </StatusCodes>

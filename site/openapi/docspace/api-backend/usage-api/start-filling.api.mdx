@@ -5,9 +5,9 @@ description: "Starts filling a file with the ID specified in the request."
 sidebar_label: "Starts filling"
 hide_title: true
 hide_table_of_contents: true
-api: eJylVE1r3DAQ/StCpxbM2nF6SH0rLYGQQku3OYUlaO3xWsQrqZK8SWr03zsj2Uu86fbSi/X1ZvTmvZFH7sXO8eqeX8seHMtZHPkm49qAFV5qddPwijsvrMezXqodz7gRVuzBg6XYkStcIKjFWERnXCpcGeE7nFv4NUgLmMTbATLu6g72glcj9y+GoqTysAOL0FbbvfBp67LEDXgWe9Mj6KIsrkLYUDZntHJIEROURUFDA6620hBXjP12y0PGPxQXb4/ulBh8p638jXQi6PIt6FrbrWwaUDwgxEE9WOlfYpnC1Q+U4eERaAPJCKr2CQHAN0RvmWpNojnWJtmYoBmwJ+k75jtgN1+YM1DLVkLDpIp7pBY4v8K0qG+nSXsz+Cg5ylnxXBiZl6sip1wufvMxCR/y6FJ7dMmBPcwWDbbH6M57U+V5r2vRd9r56qr4WOb8lPhXOmcpnFNdswxrMi+JvxTj6CbSu8WNbO6JBWzqjFrrRwlRX6laHaOlJ5/5p/XnVWrBjBP3xOdQkl0GCe+FIviUfCnwaRkjXoS9pfx/WzHV5uHZ56YXWATSiYqOky/3VDgi0Rlq5KkCGnGojg9jYRDqSh5Q8DhuhYM724dA23ixpQ7D6UFYKbakDZrYSEdzbIpW9A7+Ue+7H9Oze8/O8Z8NU+TLQfQDrXAa/ZzfctiEV534/e4nAsjOpePJ22lCRP+a+6QV0j30DdmZiHFM7YSqzPh0dDaiwycZ/yUJTZVuQgh/AHHGpOU=
+api: eJylVN9v0zAQ/lcsP4EUNaWbEORtYkKqQAJRKoSmanKTa2M1sY196TYi/+/cOW1H1o0XXmL7/N2v7zunl6i2QRY38qNuIIhcpFWuMmkdeIXamnklCxlQeaS7RputzKRTXrWA4Nm3l4YOBNqQL6EzqQ2dnMKa9hWE0mvHkcjI4cX8muwefnXaAwVH30EmQ1lDq2TRS3xwHE0bhC14gm6sbxUOposZGeBeta4h0Pt3l29jXHG04KwJVDoFmE2nvIwzf9nJmMnL6Zvzq6VRHdbW699UTgJdnIN+2k5UVhiLolZ7EGBst60FsdTqEAgTBFoBlUaBNQjmQkYKFqDsvMaHRJQK5S3nut0BG6hsxXzdEQDkihsZJ10w7YGDMfFCpbDiTmOdksyvRXBQ6o2GSmiTbMwrBJxQWFKotqye6zCJRoIUMldO57PJNOdYIX3zfpAu5knnzUnnAH5/FLnzDXnXiK7I88aWqqltwDOFP/ONGBwld3QkYMECDwKNaTgpToV9IkN2nKcR7DBVpbU7PTCrzcYmb408C/Jq8WHyA9aTK6cJzXUPFe1nLKqjYltl2OEQfkzu00Z6SkUTaPC/ZTh0h3CPuWsUtUHlJDb7gyY33DohSRUe9/QEh5WW4vSsRuIQs4l/cu77tQqw9E2MbKbEnqeLtnvltVozOyRgpQPvaSA2qgnwj35ffTs8ztfi8cE+28ZROcMC7VXT8Ym2SdjjDyGu4l/D+HX5nQCs61j6QeTDhut9NvaTmRjy8DdmL3j0/TBXRM4RP1y96FHTq0w/ngHNna5ijH8AiSq9fA==
 sidebar_class_name: "put api-method"
-info_path: site/openapi/docspace/api-backend/usage-api/asc-files
+info_path: site/openapi/docspace/api-backend/usage-api/asc-web-api
 custom_edit_url: null
 ---
 
@@ -47,7 +47,7 @@ Starts filling a file with the ID specified in the request.
 </Heading>
 
 <ParamsDetails
-  parameters={[{"name":"fileId","in":"path","required":true,"schema":{"type":"integer","format":"int32","example":1208}}]}
+  parameters={[{"name":"fileId","in":"path","description":"File ID","required":true,"schema":{"type":"integer","format":"int32","example":9846}}]}
 >
   
 </ParamsDetails>
@@ -62,7 +62,7 @@ Starts filling a file with the ID specified in the request.
 <StatusCodes
   id={undefined}
   label={undefined}
-  responses={{"200":{"description":"OK"},"401":{"description":"Unauthorized"},"403":{"description":"Forbidden"}}}
+  responses={{"200":{"description":"Ok"},"401":{"description":"Unauthorized"},"403":{"description":"You do not have enough permissions to edit the file"}}}
 >
   
 </StatusCodes>
