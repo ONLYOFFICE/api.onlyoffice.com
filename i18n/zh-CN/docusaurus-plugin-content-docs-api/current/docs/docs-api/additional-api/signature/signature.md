@@ -1,4 +1,4 @@
-﻿# Signature
+﻿# 签名
 
 ONLYOFFICE 文档服务器[使用](../../get-started/how-it-works/security.md) 令牌，这些令牌是使用 JSON Web Tokens 标准生成的。当执行客户端[浏览器请求](browser.md)到 ONLYOFFICE 文档，或与 ONLYOFFICE 文档 之间进行 [HTTP 请求](request/request.md) 时，会发送这些令牌。
 

@@ -2,7 +2,7 @@
 sidebar_position: -1
 ---
 
-# Error codes
+# 错误代码
 
 转换过程中可能会发生 [错误](./response.md#error)。下面您可以找到可能的错误代码及其描述。
 

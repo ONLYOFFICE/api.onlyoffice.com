@@ -1,4 +1,4 @@
-﻿# Document Builder API
+﻿# 文档生成器 API
 
 对于与 **Web 文档生成器服务** 的交互，使用 POST 请求。请求参数在请求正文中以 JSON 格式输入。请求被发送到 `https://documentserver/docbuilder` 地址，其中 **documentserver** 是安装了 ONLYOFFICE 文档的服务器的名称。
 

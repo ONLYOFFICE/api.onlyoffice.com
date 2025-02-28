@@ -1,4 +1,4 @@
-﻿# Command service
+﻿# 命令服务
 
 与**文档命令服务**的交互使用 POST 请求。请求参数以 JSON 格式填写在请求正文中。请求被发送至`https://documentserver/command`地址，其中**文档服务器**指安装了 ONLYOFFICE 文档的服务器名称。
 
