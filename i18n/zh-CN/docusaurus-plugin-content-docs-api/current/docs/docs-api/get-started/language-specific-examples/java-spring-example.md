@@ -145,7 +145,7 @@ files.docservice.url.site=https://documentserver/
 
 [获取 ONLYOFFICE 编辑器](https://www.onlyoffice.com/download-docs.aspx?from=api#docs-developer)
 
-请参阅详细指南以了解如何安装[适用于Linux](https://helpcenter.onlyoffice.com/installation/docs-developer-install-ubuntu.aspx?from=api_java_example) 的 ONLYOFFICE 文档。
+请参阅详细指南以了解如何安装[适用于 Linux](https://helpcenter.onlyoffice.com/installation/docs-developer-install-ubuntu.aspx?from=api_java_example) 的 ONLYOFFICE 文档。
 
 ### 步骤 2. 安装先决条件并使用编辑器运行网站
 
