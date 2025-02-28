@@ -24,7 +24,7 @@ editorConfig 部分允许更改与编辑器界面有关的参数：打开模式�
 
 定义共同编辑模式（*Fast* 或 *Strict*）以及更改它的可能性。
 
-此参数用于应用 [共同编辑](../../../get-started/how-it-works/co-editing.md#co-editing-modes) 和 [查看](../../../get-started/how-it-works/viewing.md) 模式。
+此参数用于应用[共同编辑](../../../get-started/how-it-works/co-editing.md#co-editing-modes)和[查看](../../../get-started/how-it-works/viewing.md)模式。
 
 类型: object
 
@@ -79,7 +79,7 @@ editorConfig 部分允许更改与编辑器界面有关的参数：打开模式�
 
 ## 位置
 
-定义默认测量单位。指定 **us** 或 **ca** 以设置英寸。默认值为 **""**。自 8.2 版起已弃用，请改用 [地区](#region) 参数。
+定义默认测量单位。指定 **us** 或 **ca** 以设置英寸。默认值为 **""**。自 8.2 版起已弃用，请改用[地区](#region)参数。
 
 类型: string
 
@@ -232,7 +232,7 @@ editorConfig 部分允许更改与编辑器界面有关的参数：打开模式�
 
 ### user.id
 
-用户的标识。长度限制为 128 个符号。此信息被存储并用于区分共同作者, 在保存和突出显示历史记录（在 [更改](../../callback-handler.md#users) 列表中）时指出最后更改的 [作者](../../callback-handler.md#changeshistory))，并根据用户数量计算有权访问许可证的用户。我们建议使用一些唯一的匿名哈希。不要在此字段中使用敏感数据，例如姓名或电子邮件。
+用户的标识。长度限制为 128 个符号。此信息被存储并用于区分共同作者, 在保存和突出显示历史记录（在[更改](../../callback-handler.md#users)列表中）时指出最后更改的 [作者](../../callback-handler.md#changeshistory))，并根据用户数量计算有权访问许可证的用户。我们建议使用一些唯一的匿名哈希。不要在此字段中使用敏感数据，例如姓名或电子邮件。
 
 类型: string
 
@@ -301,4 +301,4 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
 })
 ```
 
-此处的 **example.com** 表示安装**文档管理器**和**文档存储服务**的服务器名称。要深入了解 ONLYOFFICE 文档服务的客户端-服务器交互机制，请参阅[工作原理](../../../get-started/how-it-works/how-it-works.md) 章节。
+此处的 **example.com** 表示安装**文档管理器**和**文档存储服务**的服务器名称。要深入了解 ONLYOFFICE 文档服务的客户端-服务器交互机制，请参阅[工作原理](../../../get-started/how-it-works/how-it-works.md)章节。

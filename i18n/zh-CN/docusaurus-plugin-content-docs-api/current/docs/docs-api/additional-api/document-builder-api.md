@@ -39,7 +39,7 @@
 
 ### 令牌
 
-以 [令牌](./signature/request/token-in-body.md#request-to-document-builder-service)的形式定义添加到 **ONLYOFFICE 文档** 配置的加密签名。
+以[令牌](./signature/request/token-in-body.md#request-to-document-builder-service)的形式定义添加到 **ONLYOFFICE 文档**配置的加密签名。
 
 类型: string
 
@@ -57,11 +57,11 @@
 
 > 请注意，*.docbuilder* 脚本文件可以包含多个输出文件。文件生成完成后，它们的 URL 将在请求响应中返回。
 
-您可以在 [此处](../../document-builder/builder-app/using-docbuilder-file.md) 找到有关 *.docbuilder* 文件语法的更多信息。请阅读 [Office JavaScript API 文档](../../office-api/get-started/overview.md) 了解使用哪些类和方法借助 *.docbuilder* 文件生成文档的详细信息。
+您可以在[此处](../../document-builder/builder-app/using-docbuilder-file.md)找到有关 *.docbuilder* 文件语法的更多信息。请阅读 [Office JavaScript API 文档](../../office-api/get-started/overview.md)了解使用哪些类和方法借助 *.docbuilder* 文件生成文档的详细信息。
 
 ## 示例
 
-### 发送到 **文档生成器服务** 的 JSON 对象示例，用于第一个异步请求
+### 发送到**文档生成器服务**的 JSON 对象示例，用于第一个异步请求
 
 ``` json
 {

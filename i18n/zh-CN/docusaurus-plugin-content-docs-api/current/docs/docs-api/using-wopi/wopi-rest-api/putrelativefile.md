@@ -27,7 +27,7 @@
 
 | 名称          | 类型   | 描述                                                                                                                          |
 | ------------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------ |
-| access\_token | string | [访问令牌](../key-concepts.md#access-token) 主机将用它确定请求是否被授权。 |
+| access\_token | string | [访问令牌](../key-concepts.md#access-token)主机将用它确定请求是否被授权。 |
 
 ## 请求标头
 
@@ -36,7 +36,7 @@
 | X-WOPI-Override        | string  | 必需的 | 来自 WOPI 服务器的请求操作 (*PUT_RELATIVE*)。                                                                      |
 | X-WOPI-SuggestedTarget | string  | 必需的 | 文件扩展名或完整文件名，包括 UTF-7 编码字符串格式的文件扩展名。                         |
 | X-WOPI-Size            | integer | 可选的 | 文件的大小（以字节为单位）。                                                                                                        |
-| X-WOPI-FileConversion  | boolean | 可选的 | 表明请求是在 [二进制文档转换](../editing-binary-documents.md) 的上下文中进行的。|
+| X-WOPI-FileConversion  | boolean | 可选的 | 表明请求是在[二进制文档转换](../editing-binary-documents.md)的上下文中进行的。|
 
 ## 请求正文
 
@@ -55,8 +55,8 @@
 | ----------- | ------ | -------- | --------------------------------------------------------------------------------------------------------------------------------- |
 | Name        | string | 必需的 | 文件名，包括扩展名，没有路径。                                                                               |
 | Url         | string | 必需的 | URI，其形式为 *http\://server/\<...\>/wopi/files/(file\_id)?access\_token=(access token)*, 在主机上新创建的文件。 |
-| HostViewUrl | string | 可选的 | 主机页面的 URI，该页面为新创建文件加载 [查看](../wopi-discovery.md#wopi-actions) WOPI 操作。    |
-| HostEditUrl | string | 可选的 | 主机页面的 URI，该页面为新创建的文件加载 [编辑](../wopi-discovery.md#wopi-actions) 操作。             |
+| HostViewUrl | string | 可选的 | 主机页面的 URI，该页面为新创建文件加载[查看](../wopi-discovery.md#wopi-actions) WOPI 操作。    |
+| HostEditUrl | string | 可选的 | 主机页面的 URI，该页面为新创建的文件加载[编辑](../wopi-discovery.md#wopi-actions)操作。             |
 
 ## 另存为
 

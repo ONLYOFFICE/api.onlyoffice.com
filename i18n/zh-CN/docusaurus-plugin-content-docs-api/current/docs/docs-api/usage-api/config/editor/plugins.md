@@ -1,4 +1,4 @@
-﻿# Plugins
+﻿# 插件
 
 插件部分允许将特殊附加组件连接到您的 ONLYOFFICE 文档安装，这将帮助您向文档编辑器添加其他功能。
 
@@ -101,4 +101,4 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
 })
 ```
 
-此处的 **example.com** 表示安装**文档存储服务**的服务器名称。要深入了解ONLYOFFICE 文档服务的客户端-服务器交互机制，请参阅[工作原理](../../../get-started/how-it-works/how-it-works.md) 章节。
+此处的 **example.com** 表示安装**文档存储服务**的服务器名称。要深入了解ONLYOFFICE 文档服务的客户端-服务器交互机制，请参阅[工作原理](../../../get-started/how-it-works/how-it-works.md)章节。

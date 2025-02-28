@@ -2,7 +2,7 @@
 sidebar_position: -1
 ---
 
-# Callback handler
+# 回调处理程序
 
  **文档编辑服务**用 [JavaScript API](../get-started/basic-concepts.md) 的 *callbackUrl* 通知**文档存储服务**有关文档编辑的状态。**文档编辑服务**使用POST 请求，请求信息在正文中。
 
@@ -12,7 +12,7 @@ sidebar_position: -1
 
 - **0** - 用户断开与文档共同编辑的连接，
 - **1** - 新用户连接到文档共同编辑，
-- **2** - 用户单击 [强制保存按钮](./config/editor/customization/customization-standard-branding.md#forcesave)。
+- **2** - 用户单击[强制保存按钮](./config/editor/customization/customization-standard-branding.md#forcesave)。
 
  *userid* 字段值是用户标识符。
 
@@ -38,9 +38,9 @@ sidebar_position: -1
 
 ## forcesavetype
 
- 定义执行 [强制保存](../get-started/how-it-works/saving-file.md#force-saving) 请求时的启动器类型。可以有以下值：
+ 定义执行[强制保存](../get-started/how-it-works/saving-file.md#force-saving)请求时的启动器类型。可以有以下值：
 
-- **0** - 为 [命令服务](../additional-api/command-service/forcesave.md)执行强制保存请求，
+- **0** - 为[命令服务](../additional-api/command-service/forcesave.md)执行强制保存请求，
 - **1** - 每次保存完成时都会执行强制保存请求（例如单击 **保存** 按钮），这仅在 [forcesave](./config/editor/customization/customization-standard-branding.md#forcesave) 选项设置为 *true*时可用，
 - **2** - 强制保存请求由计时器按服务器配置中的设置执行，
 - **3** - 每次提交表单时都会执行强制保存请求 [Complete & Submit](./config/editor/customization/customization-standard-branding.md#submitform) 按钮被点击 )。
@@ -51,7 +51,7 @@ sidebar_position: -1
 
 ## formsdataurl
 
-用提交的表单数据,定义 JSON 文件的 URL。[此处](../../office-api/usage-api/text-document-api/Enumeration/FormData.md) 描述了包含表单数据的数组结构。此文件包含以下参数：
+用提交的表单数据,定义 JSON 文件的 URL。[此处](../../office-api/usage-api/text-document-api/Enumeration/FormData.md)描述了包含表单数据的数组结构。此文件包含以下参数：
 
 | 参数 | 类型   | 例子      | 描述                                                                                                   |
 | --------- | ------ | ------------ | ------------------------------------------------------------------------------------------------------------- |
@@ -130,7 +130,7 @@ sidebar_position: -1
 
 ### 状态 2 (3)
 
-它在编辑文档关闭后 [10 秒](../get-started/how-it-works/saving-file.md#save-delay) 收到，该用户的标识符是最后一个将更改发送到文档编辑服务的用户。对文件进行最后更改的用户的 *callbackUrl* 被使用。
+它在编辑文档关闭后 [10 秒](../get-started/how-it-works/saving-file.md#save-delay)收到，该用户的标识符是最后一个将更改发送到文档编辑服务的用户。对文件进行最后更改的用户的 *callbackUrl* 被使用。
 
 ### Status 4
 
@@ -379,7 +379,7 @@ echo "{\"error\":0}";
 
 在 [PHP example](../get-started/language-specific-examples/php-example.md) 页面上，您将了解如何将 ONLYOFFICE 文档集成到您用 PHP 编写的 Web 应用程序中。
 
-### Ruby document save example
+### Ruby 文档保存示例
 
 ``` rb
 class ApplicationController < ActionController::Base

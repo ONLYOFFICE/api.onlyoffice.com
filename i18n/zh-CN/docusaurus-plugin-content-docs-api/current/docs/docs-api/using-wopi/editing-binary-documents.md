@@ -2,7 +2,7 @@
 sidebar_position: -2
 ---
 
-# Editing binary documents
+# 编辑二进制文档格式
 
 在线办公不支持对 *doc*、 *ppt*、 *xls*等传统二进制格式的文件进行编辑。但是，它可以将此类格式的文档相应地转换为 *docx*、 *pptx*、 *xlsx* 格式，让用户在在线办公中编辑自己的内容。
 
@@ -20,13 +20,13 @@ sidebar_position: -2
 
 ## 查看模式
 
-可能还有另一种情况，主机首先在查看器中打开文档，然后使用**“编辑”**按钮将文档转换为 OOXML 格式并进行编辑。使用 [查看](./wopi-discovery.md#wopi-actions) 操作打开二进制文件的过程应如下所示：
+可能还有另一种情况，主机首先在查看器中打开文档，然后使用**“编辑”**按钮将文档转换为 OOXML 格式并进行编辑。使用[查看](./wopi-discovery.md#wopi-actions)操作打开二进制文件的过程应如下所示：
 
 1. 将 [UserCanWrite](./wopi-rest-api/checkfileinfo.md#usercanwrite) 属性设置为 **true**。
 2. 将 [UserCanNotWriteRelative](./wopi-rest-api/checkfileinfo.md#usercannotwriterelative) 属性设置为**false**（或简单地忽略它）。
 3. 将 [HostEditUrl](./wopi-rest-api/checkfileinfo.md#hostediturl) 属性设置为在加载时执行**转换**操作的主机URL。
 
-如果满足所有这些条件， **编辑**按钮将显示在查看器中。当用户单击它时，为二进制文件提供的 **HostEditUrl** 将打开并开始转换过程。最后，用户被重定向到新转换文档的 **HostEditUrl**。
+如果满足所有这些条件，**编辑**按钮将显示在查看器中。当用户单击它时，为二进制文件提供的 **HostEditUrl** 将打开并开始转换过程。最后，用户被重定向到新转换文档的 **HostEditUrl**。
 
 ## 定制
 

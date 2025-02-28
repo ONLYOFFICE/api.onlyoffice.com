@@ -1,4 +1,4 @@
-﻿# Events
+﻿# 事件
 
 事件部分允许更改与事件有关的所有功能。
 
@@ -100,7 +100,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
 
 ## onError
 
-发生错误或其他特定事件时调用的函数。错误消息在 *data* 参数中发送。可以在 [此处](https://github.com/ONLYOFFICE/sdkjs/blob/master/common/errorCodes.js) 找到错误代码列表。
+发生错误或其他特定事件时调用的函数。错误消息在 *data* 参数中发送。可以在[此处](https://github.com/ONLYOFFICE/sdkjs/blob/master/common/errorCodes.js)找到错误代码列表。
 
 示例:
 
@@ -164,7 +164,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
 
 文档的名称在 *data.title* 参数中发送。*收藏* 图标高亮状态在 *data.favorite* 参数中发送。
 
-当用户点击 *收藏* 图标时，调用 [setFavorite](../methods.md#setfavorite) 方法更新*收藏*图标高亮状态 [信息](./document/info.md#favorite) 如果未声明该方法，则*收藏*图标不会更改。
+当用户点击 *收藏* 图标时，调用 [setFavorite](../methods.md#setfavorite) 方法更新*收藏*图标高亮状态[信息](./document/info.md#favorite)如果未声明该方法，则*收藏*图标不会更改。
 
 示例:
 
@@ -265,9 +265,9 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
 
 ## onRequestEditRights
 
-当用户尝试通过单击*编辑当前文件*按钮将文档从查看模式切换到编辑模式时调用的函数。当用户在 *view* 或 *fillForms* 模式下打开的表单中单击 *编辑 PDF* 按钮时，也会触发此事件。调用该函数时，必须在编辑模式下再次初始化编辑器。如果未声明该方法，则不会显示*编辑当前文件* 和 *编辑 PDF* 按钮。
+当用户尝试通过单击*编辑当前文件*按钮将文档从查看模式切换到编辑模式时调用的函数。当用户在 *view* 或 *fillForms* 模式下打开的表单中单击*编辑 PDF* 按钮时，也会触发此事件。调用该函数时，必须在编辑模式下再次初始化编辑器。如果未声明该方法，则不会显示*编辑当前文件*和*编辑 PDF* 按钮。
 
-> 当 [editorConfig](./editor/editor.md#mode) *模式*参数设置为 **view** 并且*编辑**文档的*权限* ([文档权限](./document/permissions.md#edit)) 设置为 **true** 时，**onRequestEditRights** 参数是强制性的，以便用户可以切换到编辑模式。
+> 当 [editorConfig](./editor/editor.md#mode) *模式*参数设置为 **view** 并且*编辑**文档的*权限*([文档权限](./document/permissions.md#edit))设置为 **true** 时，**onRequestEditRights** 参数是强制性的，以便用户可以切换到编辑模式。
 
 ![onRequestEditRights](/assets/images/editor/onRequestEditRights.png)
 ![Edit PDF button](/assets/images/editor/edit-pdf.png)
@@ -333,9 +333,9 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
 })
 ```
 
-其中 **changes** 是保存文档后返回的 [历史对象](../callback-handler.md#history) 的*更改*。
+其中 **changes** 是保存文档后返回的[历史对象](../callback-handler.md#history)的*更改*。
 
-其中 **serverVersion** 是保存文档后返回的 [历史对象](../callback-handler.md#history) 中的 *serverVersion*。
+其中 **serverVersion** 是保存文档后返回的[历史对象](../callback-handler.md#history)中的 *serverVersion*。
 
 ## onRequestHistoryClose
 
@@ -396,7 +396,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
 
 其中 [JSON 对象](../callback-handler.md#changesurl) 中的 *changesUrl*。
 
- 其中 **example.com** 是安装了**文档管理器**和**文档存储服务**的服务器的名称。有关 ONLYOFFICE 文档服务客户端交互的更多信息，请参阅 [工作原理](../../get-started/how-it-works/how-it-works.md) 部分。
+ 其中 **example.com** 是安装了**文档管理器**和**文档存储服务**的服务器的名称。有关 ONLYOFFICE 文档服务客户端交互的更多信息，请参阅[工作原理](../../get-started/how-it-works/how-it-works.md)部分。
 
 ## onRequestInsertImage
 
@@ -435,7 +435,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
 })
 ```
 
-其中 **example.com** 是安装了**文档管理器**和**文档存储服务**的服务器的名称。有关 ONLYOFFICE 文档服务客户端交互的更多信息，请参阅 [工作原理](../../get-started/how-it-works/how-it-works.md) 部分。
+其中 **example.com** 是安装了**文档管理器**和**文档存储服务**的服务器的名称。有关 ONLYOFFICE 文档服务客户端交互的更多信息，请参阅[工作原理](../../get-started/how-it-works/how-it-works.md)部分。
 
 ## onRequestMailMergeRecipients
 
@@ -471,7 +471,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
 })
 ```
 
-其中 **example.com** 是安装了**文档管理器**和**文档存储服务**的服务器的名称。有关 ONLYOFFICE 文档服务客户端交互的更多信息，请参阅 [工作原理](../../get-started/how-it-works/how-it-works.md) 部分。
+其中 **example.com** 是安装了**文档管理器**和**文档存储服务**的服务器的名称。有关 ONLYOFFICE 文档服务客户端交互的更多信息，请参阅[工作原理](../../get-started/how-it-works/how-it-works.md)部分。
 
 ## onRequestReferenceData
 
@@ -616,7 +616,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
 
 当用户尝试通过单击版本历史记录中的*恢复*按钮来恢复文件版本时调用的函数。
 
-如果从历史记录中调用文档版本，则文档版本号将在 *data.version* 参数中发送。此外，如果从 [历史对象](../callback-handler.md#history). 此链接指定的文档类型在 *data.fileType* 参数中发送。
+如果从历史记录中调用文档版本，则文档版本号将在 *data.version* 参数中发送。此外，如果从[历史对象](../callback-handler.md#history)。此链接指定的文档类型在 *data.fileType* 参数中发送。
 
 调用该函数时，必须调用 [refreshHistory](../methods.md#refreshhistory) 方法再次初始化版本历史记录。如果未声明该方法，则不会显示*恢复*按钮。
 
@@ -666,15 +666,15 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
 })
 ```
 
-其中 **changes** 保存文档后返回的 [历史对象](../callback-handler.md#history) 的 *更改*。
+其中 **changes** 保存文档后返回的[历史对象](../callback-handler.md#history)的*更改*。
 
-其中 **serverVersion** 是保存文档后返回的 [历史对象](../callback-handler.md#history) 中的 *serverVersion*。
+其中 **serverVersion** 是保存文档后返回的[历史对象](../callback-handler.md#history)中的 *serverVersion*。
 
-其中 **example.com** 是安装了**文档管理器**和**文档存储服务**的服务器的名称。有关 ONLYOFFICE 文档服务客户端交互的更多信息，请参阅 [工作原理](../../get-started/how-it-works/how-it-works.md) 部分。
+其中 **example.com** 是安装了**文档管理器**和**文档存储服务**的服务器的名称。有关 ONLYOFFICE 文档服务客户端交互的更多信息，请参阅[工作原理](../../get-started/how-it-works/how-it-works.md)部分。
 
 ## onRequestSaveAs
 
-当用户试图通过单击 *另存为...* 按钮来保存文件时调用的函数。文档的标题、其类型和要下载的文档的绝对 URL 在 *data* 参数中发送。如果未声明该方法，将不会显示 *另存为...* 按钮。
+当用户试图通过单击*另存为...*按钮来保存文件时调用的函数。文档的标题、其类型和要下载的文档的绝对 URL 在 *data* 参数中发送。如果未声明该方法，将不会显示*另存为...*按钮。
 
 ![onRequestSaveAs](/assets/images/editor/onRequestSaveAs.png)
 
@@ -727,7 +727,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
 })
 ```
 
-其中 **example.com** 是安装了**文档管理器**和**文档存储服务**的服务器的名称。有关 ONLYOFFICE 文档服务客户端交互的更多信息，请参阅 [工作原理](../../get-started/how-it-works/how-it-works.md) 部分。
+其中 **example.com** 是安装了**文档管理器**和**文档存储服务**的服务器的名称。有关 ONLYOFFICE 文档服务客户端交互的更多信息，请参阅[工作原理](../../get-started/how-it-works/how-it-works.md)部分。
 
 ## onRequestSelectSpreadsheet
 
@@ -758,7 +758,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
 })
 ```
 
-其中 **example.com** 是安装了**文档管理器**和**文档存储服务**的服务器的名称。有关 ONLYOFFICE 文档服务客户端交互的更多信息，请参阅 [工作原理](../../get-started/how-it-works/how-it-works.md) 部分。
+其中 **example.com** 是安装了**文档管理器**和**文档存储服务**的服务器的名称。有关 ONLYOFFICE 文档服务客户端交互的更多信息，请参阅[工作原理](../../get-started/how-it-works/how-it-works.md)部分。
 
 ## onRequestSendNotify
 
@@ -928,7 +928,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
 
 ## onWarning
 
-发生警告时调用的函数。警告消息在 *data* 参数中发送。可以在 [此处](https://github.com/ONLYOFFICE/sdkjs/blob/master/common/errorCodes.js) 此处。
+发生警告时调用的函数。警告消息在 *data* 参数中发送。可以在[此处](https://github.com/ONLYOFFICE/sdkjs/blob/master/common/errorCodes.js)此处。
 
 示例:
 

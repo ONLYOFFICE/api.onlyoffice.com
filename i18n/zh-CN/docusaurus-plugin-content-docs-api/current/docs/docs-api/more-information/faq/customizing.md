@@ -2,7 +2,7 @@
 sidebar_position: -7
 ---
 
-# Customizing
+# 定制问题
 
 ## 如何对 ONLYOFFICE 文档进行白标？
 
@@ -55,7 +55,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
 
 ## 如何更改 ONLYOFFICE 文档界面的默认语言？
 
-如果界面语言出现在[可用的 ONLYOFFICE 文档语言列表](https://helpcenter.onlyoffice.com/server/document/available-languages.aspx) 中，您可以简单地使用配置文件中的 *editorConfig.lang* 属性将其设置为必要的语言环境，如下所示：
+如果界面语言出现在[可用的 ONLYOFFICE 文档语言列表](https://helpcenter.onlyoffice.com/server/document/available-languages.aspx)中，您可以简单地使用配置文件中的 *editorConfig.lang* 属性将其设置为必要的语言环境，如下所示：
 
 ``` ts
 const docEditor = new DocsAPI.DocEditor("placeholder", {
@@ -86,7 +86,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
 
 这将禁用**聊天**和**评论**按钮及其功能。
 
-有关定制的更多信息，请参见 [此页面](../../usage-api/config/editor/customization/customization-standard-branding.md)。
+有关定制的更多信息，请参见[此页面](../../usage-api/config/editor/customization/customization-standard-branding.md)。
 
 ## 如何自定义编辑器界面，例如调整顶部工具栏视图？
 
@@ -121,7 +121,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
 
 该值将显示在**文件** > **文档信息...**菜单选项中。
 
-有关这些设置的更多信息，请参见 [此页面](../../usage-api/config/document/info.md)。
+有关这些设置的更多信息，请参见[此页面](../../usage-api/config/document/info.md)。
 
 ## 如何优化桌面计算机、移动设备或嵌入网页的编辑器的外观？
 

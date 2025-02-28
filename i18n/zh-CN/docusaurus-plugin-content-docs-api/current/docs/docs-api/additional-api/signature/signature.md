@@ -1,6 +1,6 @@
 ﻿# 签名
 
-ONLYOFFICE 文档服务器[使用](../../get-started/how-it-works/security.md) 令牌，这些令牌是使用 JSON Web Tokens 标准生成的。当执行客户端[浏览器请求](browser.md)到 ONLYOFFICE 文档，或与 ONLYOFFICE 文档 之间进行 [HTTP 请求](request/request.md) 时，会发送这些令牌。
+ONLYOFFICE 文档服务器[使用](../../get-started/how-it-works/security.md)令牌，这些令牌是使用 JSON Web Tokens 标准生成的。当执行客户端[浏览器请求](browser.md)到 ONLYOFFICE 文档，或与 ONLYOFFICE 文档 之间进行 [HTTP 请求](request/request.md)时，会发送这些令牌。
 
 > 此功能从 ONLYOFFICE 文档 4.2 版本开始使用。
 
@@ -32,9 +32,9 @@ supervisorctl restart all
 | ------------------------------------------------ | ------- | ------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | services.CoAuthoring.secret.browser.string       | string  | secret  | 定义用于在客户端[浏览器请求](browser.md)中生成发送到 ONLYOFFICE 文档的令牌的密钥。                                                                                                                        |
 | services.CoAuthoring.secret.inbox.string         | string  | secret  | 定义用于生成[传入 HTTP 请求](request/token-in-body.md#incoming-request)中的令牌的*密钥*，这些请求带有来自**文档存储服务**到**文档命令服务**、**文档转换服务**和**文档生成服务**的命令。|
-| services.CoAuthoring.secret.outbox.string        | string  | secret  | 定义 *密钥* 用以通过文档编辑服务的在[outgoing HTTP requests](request/token-in-body.md#outgoing-requests) 到 `callbackUrl`* **地址中生成令牌**。                                                                                                                                                                                                          |
+| services.CoAuthoring.secret.outbox.string        | string  | secret  | 定义 *密钥* 用以通过文档编辑服务的在 [outgoing HTTP requests](request/token-in-body.md#outgoing-requests) 到 `callbackUrl`* **地址中生成令牌**。                                                                                                                                                                                                          |
 | services.CoAuthoring.token.enable.browser        | boolean | false   | 定义是否启用客户端[浏览器请求](browser.md)中的令牌。                                                                                                                                                                                                                                                                                         |
-| services.CoAuthoring.token.enable.request.inbox  | boolean | false   | 定义是否启用 [传入HTTP请求](request/token-in-body.md#incoming-request)中的令牌。                                                                                                                                                                                                                                                                               |
+| services.CoAuthoring.token.enable.request.inbox  | boolean | false   | 定义是否启用[传入HTTP请求](request/token-in-body.md#incoming-request)中的令牌。                                                                                                                                                                                                                                                                               |
 | services.CoAuthoring.token.enable.request.outbox | boolean | false   | 定义[传出HTTP请求](request/token-in-body.md#outgoing-requests) 中的令牌是否已启用。                                                                                                                                                                                                                                                                               |
 
 ## 示例 local.json 配置

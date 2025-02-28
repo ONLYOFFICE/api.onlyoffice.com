@@ -2,7 +2,7 @@
 sidebar_position: -4
 ---
 
-# Config
+# 配置
 
 config base 部分允许更改使用的平台类型、文档显示大小（宽度和高度）和打开文档的类型。
 
@@ -33,7 +33,7 @@ config base 部分允许更改使用的平台类型、文档显示大小（宽�
 
 ## 令牌
 
-以[令牌](../../additional-api/signature/browser.md)的形式定义添加到 **ONLYOFFICE 文档** 配置的加密签名。
+以[令牌](../../additional-api/signature/browser.md)的形式定义添加到 **ONLYOFFICE 文档**配置的加密签名。
 
 类型: string
 

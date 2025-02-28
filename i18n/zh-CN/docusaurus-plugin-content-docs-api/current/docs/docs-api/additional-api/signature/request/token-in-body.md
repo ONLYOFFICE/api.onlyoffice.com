@@ -15,7 +15,7 @@ JSON Web 令牌的 `payload` 包含请求正文参数。
 
 ### 请求接收已编辑文档的状态
 
-使用从**文档存储服务**到[文档命令服务](../../command-service/command-service.md) 的命令对传入请求执行验证。
+使用从**文档存储服务**到[文档命令服务](../../command-service/command-service.md)的命令对传入请求执行验证。
 
 示例参数，用于请求接收编辑文档状态:
 
@@ -44,7 +44,7 @@ Content-Type: application/json
 
 ### 请求转换文档
 
-使用从**文档存储服务**到[文档转换服务](../../conversion-api/request.md) 的命令对传入请求执行验证。
+使用从**文档存储服务**到[文档转换服务](../../conversion-api/request.md)的命令对传入请求执行验证。
 
 请求转换文档的示例参数:
 
@@ -76,7 +76,7 @@ Content-Type: application/json
 
 ### 请求文档生成器服务
 
-使用从**文档存储服务**到[文档生成器服务](../../../get-started/how-it-works/how-it-works.md) 的命令对传入请求执行验证。
+使用从**文档存储服务**到[文档生成器服务](../../../get-started/how-it-works/how-it-works.md)的命令对传入请求执行验证。
 
 请求文档生成器服务的示例参数:
 

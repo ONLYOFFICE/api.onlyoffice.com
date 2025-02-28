@@ -4,7 +4,7 @@ sidebar_position: -4
 
 # PostMessage
 
-[PostMessage](https://learn.microsoft.com/zh-cn/microsoft-365/cloud-storage-partner-program/online/scenarios/postmessage) 是 [HTML5 Web 消息传递](https://html.spec.whatwg.org/multipage/web-messaging.html#posting-messages) 协议，它允许在 iframe 存储和 ONLYOFFICE 文档之间在浏览器中交换消息。它允许online office框架与其父主机页面进行通信。
+[PostMessage](https://learn.microsoft.com/zh-cn/microsoft-365/cloud-storage-partner-program/online/scenarios/postmessage) 是 [HTML5 Web 消息传递](https://html.spec.whatwg.org/multipage/web-messaging.html#posting-messages)协议，它允许在 iframe 存储和 ONLYOFFICE 文档之间在浏览器中交换消息。它允许online office框架与其父主机页面进行通信。
 
 ``` ts
 otherWindow.postMessage(msg, targetOrigin)

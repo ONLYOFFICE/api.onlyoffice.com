@@ -43,7 +43,7 @@ sidebar_position: -4
 - **1251** - 西里尔字母 (Windows);
 - **65001** - Unicode (UTF-8).
 
- 您可以在 [此文件](https://github.com/ONLYOFFICE/server/blob/master/Common/sources/commondefines.js)中找到所有支持的值。
+ 您可以在[此文件](https://github.com/ONLYOFFICE/server/blob/master/Common/sources/commondefines.js)中找到所有支持的值。
 
 类型: integer
 
@@ -100,7 +100,7 @@ sidebar_position: -4
 
 ### documentRenderer
 
-定义从 *pdf*, *xps*, *oxps*转换时的文档渲染器。
+定义从 *pdf*, *xps*, *oxps* 转换时的文档渲染器。
 
 类型: object
 
@@ -170,7 +170,7 @@ Type: string
 
 #### pdf.form
 
-定义文档是否转换为 *pdf* 格式 (**true**) 或常规 *pdf* 文件 (**false**)。如果省略此参数，则不会更改文档内容。如果文档包含字段，则它们将保留在转换后的文档中。如果没有，则转换后的文档也不会包含它们。例如，在将 *docxf*。  和 *oform* 格式转换为 *pdf* 时无需指定此参数。它们将始终转换为 *pdf* 格式。
+定义文档是否转换为 *pdf* 格式 (**true**) 或常规 *pdf* 文件 (**false**)。如果省略此参数，则不会更改文档内容。如果文档包含字段，则它们将保留在转换后的文档中。如果没有，则转换后的文档也不会包含它们。例如，在将 *docxf*。和 *oform* 格式转换为 *pdf* 时无需指定此参数。它们将始终转换为 *pdf* 格式。
 
 类型: boolean
 
@@ -178,7 +178,7 @@ Type: string
 
 ### region
 
-定义从*电子表格*格式转换为 *pdf*时货币、日期和时间的默认显示格式。使用四个字母（**en-US**、 **fr-FR**等）语言代码设置。默认值为 **en-US**。
+定义从*电子表格*格式转换为 *pdf*时货币、日期和时间的默认显示格式。使用四个字母（**en-US**、**fr-FR**等）语言代码设置。默认值为 **en-US**。
 
 类型: string
 
@@ -370,7 +370,7 @@ Type: string
 
 ### 令牌
 
-以 [令牌](../signature/request/token-in-body.md#request-to-convert-the-document)的形式定义添加到**文档服务器**配置的加密签名。
+以[令牌](../signature/request/token-in-body.md#request-to-convert-the-document)的形式定义添加到**文档服务器**配置的加密签名。
 
 类型: string
 
@@ -378,7 +378,7 @@ Type: string
 
 ### url
 
-定义要转换的文档的绝对 URL。使用本地链接时请务必添加 [令牌](../../get-started/how-it-works/security.md)。否则会出现错误。
+定义要转换的文档的绝对 URL。使用本地链接时请务必添加[令牌](../../get-started/how-it-works/security.md)。否则会出现错误。
 
 类型: string
 

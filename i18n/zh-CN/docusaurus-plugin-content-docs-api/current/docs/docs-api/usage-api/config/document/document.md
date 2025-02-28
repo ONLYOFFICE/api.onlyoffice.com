@@ -69,7 +69,7 @@
 
 ## url
 
-定义存储查看或编辑的源文档的绝对 URL。使用本地链接时请务必添加 [令牌](../../../get-started/how-it-works/security.md)。否则会出现错误。
+定义存储查看或编辑的源文档的绝对 URL。使用本地链接时请务必添加[令牌](../../../get-started/how-it-works/security.md)。否则会出现错误。
 
 > 此参数是必需的。
 
@@ -94,4 +94,4 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
 })
 ```
 
-其中 **example.com** 是安装了**文档管理器**和**文档存储服务**的服务器的名称。有关 ONLYOFFICE 文档服务客户端交互的更多信息，请参阅 [工作原理](../../../get-started/how-it-works/how-it-works.md) 部分。
+其中 **example.com** 是安装了**文档管理器**和**文档存储服务**的服务器的名称。有关 ONLYOFFICE 文档服务客户端交互的更多信息，请参阅[工作原理](../../../get-started/how-it-works/how-it-works.md)部分。

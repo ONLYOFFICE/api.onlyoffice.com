@@ -2,7 +2,7 @@
 sidebar_position: -3
 ---
 
-# Methods
+# 方法
 
 初始化**文档编辑器**后，您将获得可用于调用方法的对象。
 
@@ -50,7 +50,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config)
 
 | 参数 | 类型   | 出现 | 描述                                                                                                                                                                                                                                                                                                                                                                                        |
 | --------- | ------ | -------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| format    | string | 可选的 | 定义下载文件的格式。您可以在 [转换表](../additional-api/conversion-api/conversion-tables.md) 中找到所有可能的格式。但是您不能下载 *bmp*, *gif*, *jpg*, *png* 等图像格式的文件。 如果未定义该参数，则根据文件类型以OOXML格式下载文件。 |
+| format    | string | 可选的 | 定义下载文件的格式。您可以在[转换表](../additional-api/conversion-api/conversion-tables.md)中找到所有可能的格式。但是您不能下载 *bmp*, *gif*, *jpg*, *png* 等图像格式的文件。 如果未定义该参数，则根据文件类型以OOXML格式下载文件。 |
 
 > 请注意从 *djvu*, *pdf*, *xps* 格式的转换不可用。将下载原始格式。
 
@@ -75,7 +75,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config)
   })
   ```
 
-其中 **example.com** 是安装了**文档管理器**和**文档存储服务**的服务器的名称。有关 ONLYOFFICE 文档服务客户端交互的更多信息，请参阅 [工作原理](../../get-started/how-it-works/how-it-works.md) 部分。
+其中 **example.com** 是安装了**文档管理器**和**文档存储服务**的服务器的名称。有关 ONLYOFFICE 文档服务客户端交互的更多信息，请参阅[工作原理](../../get-started/how-it-works/how-it-works.md) 部分。
 
 | 参数       | 类型             | 出现 | 描述                                                                                                                                                                                                                                                                     |
 | --------------- | ---------------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -83,9 +83,9 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config)
 | fileType        | string           | 必需的 | 定义要插入文件的图像类型。 可以是：*bmp*, *gif*, *jpe*, *jpeg*, *jpg*, *png*。自 7.0 版起已弃用，请改用 *images.fileType* 参数。                                                                                  |
 | images          | array of objects | 必需的 | 定义要插入的图像数组。                                                                                                                                                                                                                                      |
 | images.fileType | string           | 必需的 | 定义要插入文件的图像类型。可以是：*bmp*, *gif*, *jpe*, *jpeg*, *jpg*, *png*, *tif*, *tiff*.                                                                                                                                                     |
-| images.url      | string           | 必需的 | 定义存储源图像的绝对 URL。使用本地链接时请务必添加 [令牌](../get-started/how-it-works/security.md)。                                                                                                              |
-| token           | string           | 可选的 | 定义以 [令牌](../additional-api/signature/browser.md#insertimage) 形式添加到参数的加密签名。                                                                                                                                |
-| url             | string           | 必需的 | 定义存储源图像的绝对 URL。使用本地链接时请务必添加 [令牌](../get-started/how-it-works/security.md) 否则会出现错误。 自 7.0 版起已弃用，请改用 *images.url* 参数。 |
+| images.url      | string           | 必需的 | 定义存储源图像的绝对 URL。使用本地链接时请务必添加[令牌](../get-started/how-it-works/security.md)。                                                                                                              |
+| token           | string           | 可选的 | 定义以[令牌](../additional-api/signature/browser.md#insertimage) 形式添加到参数的加密签名。                                                                                                                                |
+| url             | string           | 必需的 | 定义存储源图像的绝对 URL。使用本地链接时请务必添加[令牌](../get-started/how-it-works/security.md) 否则会出现错误。 自 7.0 版起已弃用，请改用 *images.url* 参数。 |
 
   > 在 7.0 版本之前，此方法只允许插入一张图片，并具有以下参数：
   >
@@ -181,9 +181,9 @@ refreshFile({
   })
   ```
 
-其中 **changes** 是保存文档后返回的  [历史对象](./callback-handler.md#history) 的 *更改* 。
+其中 **changes** 是保存文档后返回的[历史对象](./callback-handler.md#history)的 *更改* 。
 
-其中 **serverVersion** 是保存文档后返回的 [历史对象](./callback-handler.md#history) 中的 *serverVersion*。
+其中 **serverVersion** 是保存文档后返回的[历史对象](./callback-handler.md#history)中的 *serverVersion*。
 
 显示错误消息，解释为什么无法显示版本历史记录。
 
@@ -237,7 +237,7 @@ refreshFile({
 
 | 参数 | 类型    | 出现 | 描述                                                                  |
 | --------- | ------- | -------- | ---------------------------------------------------------------------------- |
-| favorite  | boolean | true     | 定义 *收藏夹* 图标是否突出显示 (**true**) 或不突出显示 (**false**)。 |
+| favorite  | boolean | true     | 定义*收藏夹*图标是否突出显示 (**true**) 或不突出显示 (**false**)。 |
 
 ## setHistoryData
 
@@ -253,7 +253,7 @@ refreshFile({
   })
   ```
 
-其中 **example.com** 是安装了**文档管理器**和**文档存储服务**的服务器的名称。有关 ONLYOFFICE 文档服务客户端交互的更多信息，请参阅 [工作原理](../../get-started/how-it-works/how-it-works.md) 部分。
+其中 **example.com** 是安装了**文档管理器**和**文档存储服务**的服务器的名称。有关 ONLYOFFICE 文档服务客户端交互的更多信息，请参阅[工作原理](../../get-started/how-it-works/how-it-works.md)部分。
 
 如果在编辑和保存文档后，返回到包含更改数据的文件的 *changesurl* 链接，请通过此链接下载文件，并在 *changesurl* 参数中发送文件URL。文档上一版本的绝对 URL 地址必须在 *previous.url* 参数中发送。
 
@@ -273,7 +273,7 @@ refreshFile({
   })
   ```
 
-其中 **example.com** 是安装了**文档管理器**和**文档存储服务**的服务器的名称。有关 ONLYOFFICE 文档服务客户端交互的更多信息，请参阅 [工作原理](../../get-started/how-it-works/how-it-works.md) 部分。
+其中 **example.com** 是安装了**文档管理器**和**文档存储服务**的服务器的名称。有关 ONLYOFFICE 文档服务客户端交互的更多信息，请参阅[工作原理](../../get-started/how-it-works/how-it-works.md)部分。
 
 发送错误消息，说明文档版本无法显示的原因:
 
@@ -294,8 +294,8 @@ refreshFile({
 | previous.fileType | string  | 可选的 | 定义使用 *previous.url* 参数指定的文档的扩展。                                                                                                                                                                                                                                           |
 | previous.key      | string  | 必需的 | 定义文档先前版本的文档标识符。                                                                                                                                                                                                                                                    |
 | previous.url      | string  | 必需的 | 定义上一版本文档的 url 地址。                                                                                                                                                                                                                                                            |
-| token             | string  | 可选的 | 定义以 [令牌](../additional-api/signature/browser.md#sethistorydata) 形式添加到参数的加密签名。                                                                                                                                                                        |
-| url               | string  | 必需的 | 定义当前文档版本的 url 地址。可以从保存文档后返回的 [JSON](./callback-handler.md#url) 对象中的 *url* 链接下载。使用本地链接时请务必添加 [令牌](../get-started/how-it-works/how-it-works.md)。 否则会出现错误。 |
+| token             | string  | 可选的 | 定义以[令牌](../additional-api/signature/browser.md#sethistorydata)形式添加到参数的加密签名。                                                                                                                                                                        |
+| url               | string  | 必需的 | 定义当前文档版本的 url 地址。可以从保存文档后返回的 [JSON](./callback-handler.md#url) 对象中的 *url* 链接下载。使用本地链接时请务必添加[令牌](../get-started/how-it-works/how-it-works.md)。否则会出现错误。 |
 | version           | integer | 必需的 | 定义文档版本号。                                                                                                                                                                                                                                                                                        |
 
 ## setMailMergeRecipients
@@ -310,13 +310,13 @@ refreshFile({
   })
   ```
 
-其中 **example.com** 是安装了**文档管理器**和**文档存储服务**的服务器的名称。有关 ONLYOFFICE 文档服务客户端交互的更多信息，请参阅 [工作原理](../../get-started/how-it-works/how-it-works.md) 部分。
+其中 **example.com** 是安装了**文档管理器**和**文档存储服务**的服务器的名称。有关 ONLYOFFICE 文档服务客户端交互的更多信息，请参阅[工作原理](../../get-started/how-it-works/how-it-works.md)部分。
 
 | 参数 | 类型   | 出现 | 描述                                                                                                                                                                                        |
 | --------- | ------ | -------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | fileType  | string | 必需的 | 定义文件中邮件合并的电子表格类型。可以是：*csv*, *fods*, *ods*, *ots*, *xls*, *xlsm*, *xlsx*, *xlt*, *xltm*, *xltx*。                                                    |
-| token     | string | 可选的 | 定义以 [令牌](../additional-api/signature/browser.md#setmailmergerecipients) 形式添加到参数的加密签名。                                         |
-| url       | string | 必需的 | 定义存储源数据的绝对 URL。使用本地链接时请务必添加 [令牌](../get-started/how-it-works/security.md)。否则会出现错误。 |
+| token     | string | 可选的 | 定义以[令牌](../additional-api/signature/browser.md#setmailmergerecipients)形式添加到参数的加密签名。                                         |
+| url       | string | 必需的 | 定义存储源数据的绝对 URL。使用本地链接时请务必添加[令牌](../get-started/how-it-works/security.md)。否则会出现错误。 |
 
 ## setReferenceData
 
@@ -340,7 +340,7 @@ refreshFile({
   })
   ```
 
-其中 **example.com** 是安装了**文档管理器**和**文档存储服务**的服务器的名称。有关 ONLYOFFICE 文档服务客户端交互的更多信息，请参阅 [工作原理](../../get-started/how-it-works/how-it-works.md) 部分。
+其中 **example.com** 是安装了**文档管理器**和**文档存储服务**的服务器的名称。有关 ONLYOFFICE 文档服务客户端交互的更多信息，请参阅[工作原理](../../get-started/how-it-works/how-it-works.md)部分。
 
 显示错误消息，说明是否有错误发生：
 
@@ -357,7 +357,7 @@ refreshFile({
 | key           | string | 可选的 | 定义服务用于从共同编辑会话获取数据的唯一文档标识符。如果发送已知密钥，将从缓存中获取文档。每次编辑并保存文档时，都必须重新生成密钥。 文档 url 可以用作**key**，但不能包含特殊字符，且长度限制为 128 个符号。                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
 | path          | string | 必需的 | 定义公式编辑器的文件名或相对路径。它用于在执行 [onRequestReferenceData](./config/events.md#onrequestreferencedata) 事件时识别文件。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
 | referenceData | object | 可选的 | 定义由集成商生成的对象，用于唯一标识其系统中的文件。此数据必须与 [document.referenceData](./config/document/document.md#referencedata) 配置参数中的相同：<br/><br/>**fileKey** - 服务用来获取文件链接的唯一文档标识符。在编辑和保存文档时不得更改它（即它不等于 [document.key](./config/document/document.md#key) 参数）,<br/>**type**: string,<br/>**example**: "BCFA2CED";<br/><br/>**instanceId** -  唯一的系统标识符。 如果数据是从一个系统上的文件复制的，然后插入到另一个系统上的文件中，那么通过链接粘贴将不可用，并且上下文菜单中将没有相应的按钮，<br/>**type**: string,<br/>**example**: `https://example.com`. |
-| token         | string | 可选的 | 以 [令牌](../additional-api/signature/browser.md#setreferencedata) 的形式定义添加到参数的加密签名。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| token         | string | 可选的 | 以[令牌](../additional-api/signature/browser.md#setreferencedata)的形式定义添加到参数的加密签名。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
 | url           | string | 必需的 | 定义下载当前文件的 URL 地址。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
 
 ## setReferenceSource
@@ -380,7 +380,7 @@ refreshFile({
   })
   ```
 
-其中 **example.com** 是安装了**文档管理器**和**文档存储服务**的服务器的名称。有关 ONLYOFFICE 文档服务客户端交互的更多信息，请参阅 [工作原理](../../get-started/how-it-works/how-it-works.md) 部分。
+其中 **example.com** 是安装了**文档管理器**和**文档存储服务**的服务器的名称。有关 ONLYOFFICE 文档服务客户端交互的更多信息，请参阅[工作原理](../../get-started/how-it-works/how-it-works.md)部分。
 
 显示一条错误消息，解释是否发生任何错误：
 
@@ -397,7 +397,7 @@ refreshFile({
 | key           | string | 可选的 | 定义服务用于从共同编辑会话获取数据的唯一文档标识符。如果发送已知密钥，将从缓存中获取文档。每次编辑并保存文档时，都必须重新生成密钥。文档 url 可以用作**key**，但不能包含特殊字符，且长度限制为 128 个符号。                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
 | path          | string | 必需的 | 定义公式编辑器的文件名或相对路径。 它用于在执行 [onRequestReferenceSource](./config/events.md#onrequestreferencesource) 事件时识别文件。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
 | referenceData | object | 可选的 | 定义由集成商生成的对象，用于唯一标识其系统中的文件。此数据必须与 [document.referenceData](./config/document/document.md#referencedata) 配置参数中的相同：<br/><br/>**fileKey** - 服务用来获取文件链接的唯一文档标识符。在编辑和保存文档时不得更改它（即它不等于 [document.key](./config/document/document.md#key) 参数),<br/>**type**: string,<br/>**example**: "BCFA2CED";<br/><br/>**instanceId** - 唯一的系统标识符。 如果数据是从一个系统上的文件复制的，然后插入到另一个系统上的文件中，那么通过链接粘贴将不可用，并且上下文菜单中将没有相应的按钮，<br/>**type**: string,<br/>**example**: `https://example.com`. |
-| token         | string | 可选的 | 定义以 [令牌](../additional-api/signature/browser.md#setreferencesource) 形式添加到参数的加密签名。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| token         | string | 可选的 | 定义以[令牌](../additional-api/signature/browser.md#setreferencesource)形式添加到参数的加密签名。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
 | url           | string | 必需的 | 定义下载当前文件的 URL 地址。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
 
 ## setRequestedDocument
@@ -415,14 +415,14 @@ refreshFile({
   })
   ```
 
-其中 **example.com** 是安装了**文档管理器**和**文档存储服务**的服务器的名称。有关 ONLYOFFICE 文档服务客户端交互的更多信息，请参阅 [工作原理](../../get-started/how-it-works/how-it-works.md) 部分。
+其中 **example.com** 是安装了**文档管理器**和**文档存储服务**的服务器的名称。有关 ONLYOFFICE 文档服务客户端交互的更多信息，请参阅[工作原理](../../get-started/how-it-works/how-it-works.md)部分。
 
 | 参数 | 类型   | 出现 | 描述                                                                                                                                                                                            |
 | --------- | ------ | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | c         | string | 必需的 | 定义从事件中选择的文档类型。 可以是： *compare*、*combine*、*insert-text*. 默认值为"compare"。                                                                   |
 | fileType  | string | 必需的 | 您定义要选择的文档的类型。可以是：*doc*, *docm*, *docx*, *dot*, *dotm*, *dotx*, *epub*, *fodt*, *odt*, *ott*, *rtf*, *wps*.                                                       |
-| token     | string | 可选的 | 以 [令牌](../additional-api/signature/browser.md#setrequesteddocument) 的形式定义添加到参数的加密签名。                                             |
-| url       | string | 必需的 | 定义存储源文档的绝对 URL。 使用本地链接时，请务必添加 [令牌](../get-started/how-it-works/security.md)。否则会出现错误。 |
+| token     | string | 可选的 | 以[令牌](../additional-api/signature/browser.md#setrequesteddocument)的形式定义添加到参数的加密签名。                                             |
+| url       | string | 必需的 | 定义存储源文档的绝对 URL。 使用本地链接时，请务必添加[令牌](../get-started/how-it-works/security.md)。否则会出现错误。 |
 
 ## setRequestedSpreadsheet
 
@@ -437,14 +437,14 @@ refreshFile({
   })
   ```
 
-其中 **example.com** 是安装了**文档管理器**和**文档存储服务**的服务器的名称。有关 ONLYOFFICE 文档服务客户端交互的更多信息，请参阅 [工作原理](../../get-started/how-it-works/how-it-works.md) 部分。
+其中 **example.com** 是安装了**文档管理器**和**文档存储服务**的服务器的名称。有关 ONLYOFFICE 文档服务客户端交互的更多信息，请参阅[工作原理](../../get-started/how-it-works/how-it-works.md)部分。
 
 | 参数 | 类型   | 出现 | 描述                                                                                                                                                                                        |
 | --------- | ------ | -------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | c         | string | 必需的 | 定义从事件中选择的电子表格类型。 可以是 *mailmerge*。                                                                                                                        |
 | fileType  | string | 必需的 | 定义文件中邮件合并的电子表格类型。可以是：*csv*, *fods*, *ods*, *ots*, *xls*, *xlsm*, *xlsx*, *xlt*, *xltm*, *xltx*.                                                     |
-| token     | string | 可选的 | 以 [令牌](../additional-api/signature/browser.md#setrequestedspreadsheet) 的形式定义添加到参数的加密签名。                                        |
-| url       | string | 必需的 | 定义存储源数据的绝对 URL。 使用本地链接时，请务必添加 [令牌](../get-started/how-it-works/security.md) 令牌。否则会出现错误。 |
+| token     | string | 可选的 | 以[令牌](../additional-api/signature/browser.md#setrequestedspreadsheet)的形式定义添加到参数的加密签名。                                        |
+| url       | string | 必需的 | 定义存储源数据的绝对 URL。 使用本地链接时，请务必添加[令牌](../get-started/how-it-works/security.md)令牌。否则会出现错误。 |
 
 ## setRevisedFile
 
@@ -465,8 +465,8 @@ refreshFile({
 | 参数 | 类型   | 出现 | 描述                                                                                                                                                                                            |
 | --------- | ------ | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | fileType  | string | 必需的 | 定义要比较的文档类型。可以是：*doc*, *docm*, *docx*, *dot*, *dotm*, *dotx*, *epub*, *fodt*, *odt*, *ott*, *rtf*, *wps*.                                                          |
-| token     | string | 可选的 | 定义以 [令牌](../additional-api/signature/browser.md#setrevisedfile) 形式添加到参数的加密签名。                                                   |
-| url       | string | 必需的 | 定义存储源文档的绝对 URL。使用本地链接时请务必添加 [令牌](../get-started/how-it-works/security.md)。否则会出现错误。 |
+| token     | string | 可选的 | 定义以[令牌](../additional-api/signature/browser.md#setrevisedfile)形式添加到参数的加密签名。                                                   |
+| url       | string | 必需的 | 定义存储源文档的绝对 URL。使用本地链接时请务必添加[令牌](../get-started/how-it-works/security.md)。否则会出现错误。 |
 
 ## setSharingSettings
 
@@ -518,7 +518,7 @@ refreshFile({
   })
   ```
 
-其中 **example.com** 是安装了**文档管理器**和**文档存储服务**的服务器的名称。有关 ONLYOFFICE 文档服务客户端交互的更多信息，请参阅 [工作原理](../../get-started/how-it-works/how-it-works.md) 部分。
+其中 **example.com** 是安装了**文档管理器**和**文档存储服务**的服务器的名称。有关 ONLYOFFICE 文档服务客户端交互的更多信息，请参阅[工作原理](../../get-started/how-it-works/how-it-works.md)部分。
 
 | 参数   | 类型             | 出现 | 描述                                                                                                                                                                                                      |
 | ----------- | ---------------- | -------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -545,7 +545,7 @@ refreshFile({
 | --------- | ------ | -------- | ------------------------- |
 | message   | string | 必需的 | 定义消息文本。 |
 
-> 请注意，嵌入式平台 [类型](./config/config.md#type) 不支持显示带有消息的工具提示。
+> 请注意，嵌入式平台[类型](./config/config.md#type)不支持显示带有消息的工具提示。
 
 ## startFilling
 

@@ -150,7 +150,7 @@ const close = {
 
 ## 客户
 
-包含将在编辑器 **关于** 部分中显示的信息，并对所有编辑器用户可见。
+包含将在编辑器**关于**部分中显示的信息，并对所有编辑器用户可见。
 
 > 此参数仅适用于 ONLYOFFICE 文档开发者版的编辑。
 
@@ -512,7 +512,7 @@ const logo = {
 
 ### logo.image
 
-用于在通用工作模式（即所有编辑器的查看和编辑模式）或嵌入模式（请参阅 [配置](../../config.md#type) 部分以了解如何定义**嵌入**文档类型）中显示的图像文件的路径。图片必须具有以下尺寸：172x40.
+用于在通用工作模式（即所有编辑器的查看和编辑模式）或嵌入模式（请参阅[配置](../../config.md#type)部分以了解如何定义**嵌入**文档类型）中显示的图像文件的路径。图片必须具有以下尺寸：172x40.
 
 类型: string
 
@@ -536,7 +536,7 @@ const logo = {
 
 ### logo.imageEmbedded
 
-用于以嵌入模式显示的图像文件的路径（请参阅 [配置](../../config.md#type)  部分以了解如何定义**嵌入**文档类型）。图片必须具有以下尺寸：248x40。自 7.0 版起已弃用，请改用*图像*字段。
+用于以嵌入模式显示的图像文件的路径（请参阅[配置](../../config.md#type)部分以了解如何定义**嵌入**文档类型）。图片必须具有以下尺寸：248x40。自 7.0 版起已弃用，请改用*图像*字段。
 
 类型: string
 
@@ -710,7 +710,7 @@ const review = {
 
 ### review.reviewDisplay
 
-定义打开文档进行查看时将使用的审阅编辑模式。如果 [模式](../../editor/editor.md#mode) 设置为 **view**，它将仅对文档编辑器可用。
+定义打开文档进行查看时将使用的审阅编辑模式。如果[模式](../../editor/editor.md#mode)设置为 **view**，它将仅对文档编辑器可用。
 
 - **markup** - 显示文档，并突出显示建议的更改；
 - **simple** - 显示文档并突出显示建议的更改，但气球已关闭；
@@ -801,7 +801,7 @@ const review = {
 
 ### submitForm.visible
 
-定义顶部工具栏上是否显示或隐藏**Complete & Submit**按钮。按钮仅适用于 *pdf* 格式。 默认值为**true**。
+定义顶部工具栏上是否显示或隐藏 **Complete & Submit** 按钮。按钮仅适用于 *pdf* 格式。 默认值为**true**。
 
 类型: boolean
 
@@ -858,7 +858,7 @@ const review = {
 
 第一个选项具有更高的优先级。
 
-除了可用的编辑器主题外，用户还可以为应用程序界面自定义自己的 [颜色主题](https://helpcenter.onlyoffice.com/installation/docs-developer-change-theme.aspx)。
+除了可用的编辑器主题外，用户还可以为应用程序界面自定义自己的[颜色主题](https://helpcenter.onlyoffice.com/installation/docs-developer-change-theme.aspx)。
 
 类型: string
 
@@ -999,4 +999,4 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
 })
 ```
 
-此处的 **example.com** 表示安装**文档管理器**和**文档存储服务**的服务器名称。要深入了解 ONLYOFFICE 文档服务的客户端-服务器交互机制，请参阅[工作原理](../../../../get-started/how-it-works/how-it-works.md) 章节。
+此处的 **example.com** 表示安装**文档管理器**和**文档存储服务**的服务器名称。要深入了解 ONLYOFFICE 文档服务的客户端-服务器交互机制，请参阅[工作原理](../../../../get-started/how-it-works/how-it-works.md)章节。

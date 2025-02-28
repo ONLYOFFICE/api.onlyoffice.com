@@ -39,7 +39,7 @@ curl -F "data=sample.txt" https://documentserver/cool/convert-to/docx > result.d
 
 其中 **documentserver** 是安装了 ONLYOFFICE 文档的服务器的名称。
 
-### 带有 *格式* 参数的转换请求示例
+### 带有*格式*参数的转换请求示例
 
 ``` sh
 curl -F "data=sample.odt" -F "format=pdf" "PDFVer=PDF/A-2b" https://documentserver/cool/convert-to > result.pdf

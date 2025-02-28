@@ -135,7 +135,7 @@ const header = {
 
 ### layout.header.save
 
-定义编辑器标题中的**保存**按钮是显示还是隐藏。默认值为 **true**。 请注意，当 [compactHeader](#compactheader) 参数设置为 **false**时，将使用此设置。
+定义编辑器标题中的**保存**按钮是显示还是隐藏。默认值为 **true**。请注意，当 [compactHeader](#compactheader) 参数设置为 **false**时，将使用此设置。
 
 类型: boolean
 
@@ -560,4 +560,4 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
 })
 ```
 
-此处的 **example.com** 表示安装**文档管理器**和**文档存储服务**的服务器名称。要深入了解 ONLYOFFICE 文档服务的客户端-服务器交互机制，请参阅[工作原理](../../../../get-started/how-it-works/how-it-works.md) 章节。
+此处的 **example.com** 表示安装**文档管理器**和**文档存储服务**的服务器名称。要深入了解 ONLYOFFICE 文档服务的客户端-服务器交互机制，请参阅[工作原理](../../../../get-started/how-it-works/how-it-works.md)章节。
