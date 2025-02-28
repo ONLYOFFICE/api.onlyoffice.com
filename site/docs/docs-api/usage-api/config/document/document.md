@@ -34,7 +34,6 @@ The key characters can be used: **0-9**, **a-z**, **A-Z**, **-.\_=**. The maxima
 
 **Example**: `"Khirz6zTPdfd7"`
 
-
 ## referenceData
 
 `Type: object`

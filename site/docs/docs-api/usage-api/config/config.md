@@ -8,6 +8,8 @@ The config base section allows to change the platform type used, document displa
 
 ## documentType
 
+`Type: string`
+
 Defines the document type to be opened:
 
 - **word** - text document (*.doc, .docm, .docx, .dot, .dotm, .dotx, .epub, .fb2, .fodt, .htm, .html, .hwp, .hwpx, .mht, .mhtml, .odt, .ott, .pages, .rtf, .stw, .sxw, .txt, .wps, .wpt, .xml*);
@@ -17,29 +19,31 @@ Defines the document type to be opened:
 
 <!--- **diagram** - diagram document (*.vsdm, .vsdx, .vssm, .vssx, .vstm, .vstx*)-->
 
-Type: string
+:::note
+**text**, **spreadsheet** and **presentation** values are deprecated since version 6.1. Please use new values instead.
+:::
 
-Example: "cell"
-
-> **text**, **spreadsheet** and **presentation** values are deprecated since version 6.1. Please use new values instead.
+**Example**: `"cell"`
 
 ## height
 
+`Type: string`
+
 Defines the document height (**100%** by default) in the browser window.
 
-Type: string
-
-Example: "100%"
+**Example**: `"100%"`
 
 ## token
 
+`Type: string`
+
 Defines the encrypted signature added to the **ONLYOFFICE Docs** config in the form of a [token](../../additional-api/signature/browser.md).
 
-Type: string
-
-Example: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.e30.LwimMJA3puF3ioGeS-tfczR3370GXBZMIL-bdpu4hOU"
+**Example**: `"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.e30.LwimMJA3puF3ioGeS-tfczR3370GXBZMIL-bdpu4hOU"`
 
 ## type
+
+`Type: string`
 
 Defines the platform type used to access the document. Can be:
 
@@ -49,19 +53,15 @@ Defines the platform type used to access the document. Can be:
 
 The default value is **desktop**.
 
-Type: string
-
-Example: "desktop"
+**Example**: `"desktop"`
 
 ## width
 
+`Type: string`
+
 Defines the document width (**100%** by default) in the browser window.
 
-Type: string
-
-Example: "100%"
-
-**Example**
+**Example**: `"100%"`
 
 ## Example
 
