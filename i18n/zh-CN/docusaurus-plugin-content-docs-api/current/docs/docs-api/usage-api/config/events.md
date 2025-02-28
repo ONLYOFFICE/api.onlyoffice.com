@@ -928,7 +928,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
 
 ## onWarning
 
-发生警告时调用的函数。警告消息在 *data* 参数中发送。可以在 [此处](https://github.com/ONLYOFFICE/sdkjs/blob/master/common/errorCodes.js)rrorCodes.js" target="_blank">此处</a>
+发生警告时调用的函数。警告消息在 *data* 参数中发送。可以在[此处](https://github.com/ONLYOFFICE/sdkjs/blob/master/common/errorCodes.js)此处。
 
 示例:
 

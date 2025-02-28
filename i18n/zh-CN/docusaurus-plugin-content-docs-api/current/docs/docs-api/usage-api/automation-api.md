@@ -166,7 +166,7 @@ connector.attachEvent("onChangeContentControl", (obj) => {
 | callback | function | 方法返回的结果。这是一个可选参数。                                                                                                                                                                                                                                                                                                                 |
 | isNoCalc | boolean  | 定义是否可以重新计算文档。**true** 值用于在执行 *command* 参数中的函数后重新计算文档。**false** 值不会重新计算文档 （仅当您的编辑肯定不需要重新计算文档时才使用它）。默认值为 **false**。                                    |
 
-此方法在与其他JavaScript数据隔离的上下文中执行。此方法在与其他JavaScript数据隔离的上下文中执行。如果需要将某些参数或其他数据传递给此方法，请使用 Asc.scope</a> 对象。
+此方法在与其他JavaScript数据隔离的上下文中执行。此方法在与其他JavaScript数据隔离的上下文中执行。如果需要将某些参数或其他数据传递给此方法，请使用 [Asc.scope](../../plugin-and-macros/interacting-with-editors/overview/how-to-call-commands.md#ascscope-object) 对象。
 
 示例:
 
