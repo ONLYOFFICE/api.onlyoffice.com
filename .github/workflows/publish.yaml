@@ -128,6 +128,10 @@ jobs:
           # Execute the sync command
           eval "aws s3 sync . ${{env.AWS_BUCKET_URL}} --include \"*\" --delete $EXCLUDE_STR"
 
+          # Compress main.js manualy
+          gzip -9 -k main.js
+          aws s3 cp main.js.gz ${{ env.AWS_BUCKET_URL }}/main.js --content-encoding gzip --content-type application/javascript
+
     - name: Invalidate AWS CloudFront Cache
       run: aws cloudfront create-invalidation --distribution-id ${{env.AWS_DISTRIBUTION_ID}} --paths '/*'
 
