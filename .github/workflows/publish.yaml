@@ -57,7 +57,7 @@ jobs:
 
         NODE_OPTIONS="--max-old-space-size=12288" npm run build -- ${SUB_ARGS} ${LOCALE}
     
-    - name: Configure AWS Credentials
+    - name: Configure AWS Environment
       env:
         AWS_ACCESS_KEY_PROD: ${{secrets.AWS_ACCESS_KEY_PROD}}
         AWS_SECRET_KEY_PROD: ${{secrets.AWS_SECRET_KEY_PROD}}
@@ -151,7 +151,7 @@ jobs:
              [[ "$SYNC_STATUS" == 'success' ]] && echo "SYNC_STATUS=success🟢" >> $GITHUB_ENV
           fi
 
-    - name: send default message
+    - name: Send alert message
       if: always()
       uses: appleboy/telegram-action@master
       with:
