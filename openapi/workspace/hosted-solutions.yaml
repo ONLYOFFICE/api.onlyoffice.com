@@ -2,6 +2,9 @@ openapi: 3.1.0
 info:
   title: Hosted Solutions
   version: latest
+servers:
+  - url: http://localhost
+    description: Local server
 paths:
   /api/portal/get:
     get:

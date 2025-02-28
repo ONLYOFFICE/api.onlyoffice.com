@@ -2,6 +2,9 @@ openapi: 3.0.1
 info:
   title: ASC.ApiSystem
   version: v2
+servers:
+  - url: http://localhost
+    description: Local server
 paths:
   /people/find:
     post:

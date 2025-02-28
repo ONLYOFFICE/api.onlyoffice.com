@@ -3,7 +3,7 @@ info:
   title: ASC.Web.Api
   version: v2
 servers:
-  - url: http://localhost:8092
+  - url: http://localhost
     description: Local server
 tags:
   - name: Authentication
