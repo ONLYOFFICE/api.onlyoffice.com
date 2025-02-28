@@ -74,28 +74,28 @@ const config: Config = {
         docsPluginId: "api",
         config: {
           workspaceBackend: {
-            specPath: "openapi/workspace/community-server.json",
+            specPath: "openapi/workspace/community-server.yaml",
             outputDir: "site/openapi/workspace/api-backend/usage-api",
             sidebarOptions: {
               groupPathsBy: "tagGroup",
             },
           } satisfies OpenApiPlugin.Options,
           workspaceHosted: {
-            specPath: "openapi/workspace/hosted-solutions.json",
+            specPath: "openapi/workspace/hosted-solutions.yaml",
             outputDir: "site/openapi/workspace/for-hosting-providers/usage-api",
             sidebarOptions: {
               groupPathsBy: "tag",
             },
           } satisfies OpenApiPlugin.Options,
           docspaceBackend: {
-            specPath: "openapi/docspace/docspace.json",
+            specPath: "openapi/docspace/docspace-backend.yaml",
             outputDir: "site/openapi/docspace/api-backend/usage-api",
             sidebarOptions: {
-              groupPathsBy: "tag",
+              groupPathsBy: "tagGroup",
             },
           } satisfies OpenApiPlugin.Options,
           docspaceHosted: {
-            specPath: "openapi/docspace/asc.apisystem.swagger.json",
+            specPath: "openapi/docspace/asc.apisystem.swagger.yaml",
             outputDir: "site/openapi/docspace/for-hosting-providers/usage-api",
             sidebarOptions: {
               groupPathsBy: "tag",

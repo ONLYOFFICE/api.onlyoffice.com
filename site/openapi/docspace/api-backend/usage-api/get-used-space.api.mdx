@@ -5,9 +5,9 @@ description: "Returns the used space of the current portal."
 sidebar_label: "Get the used portal space"
 hide_title: true
 hide_table_of_contents: true
-api: eJydU02P0zAQ/SvRnKMmFA7Q2wqxKwQHoOxpVa2myXRj1rGN7RRKlP/OjJPQD9gDe2n98d74zXuTHiI+BFjdwSfrI+qsyD53NiJscrCOPEZlzfsaVvBA8TZQvXZYEeTgKThrAjG3h2VZyl9NofLKCYUJgs7cWDVMrMqaSCYKONLPWDiNysguVA21mM4PjphtunZLnik761tkBtS222qCYcgBndOqStqKb8E+o0J6/TlUIb8qX/yjXYNdbKxXv6iGBHr5N+ja+q2qazJJRKCq8yoe2P4eMFT3UuH+keSADcaaFfxgAMFm4DzOS32h2HkTsthQ1onVyePM7tIJF/Zs9OT/ggu1xOqmIHnrMDa8KdCpYrkoixFYSKU5rEB+Tz4kdZ3XjG5idKui0LZC3dgQV6/LN8sCLqV9lPtspIMonxtdi9HjyJy3+8d5lvOBD3Iw2Kb9KSwHGRYeIvuoxhiV2dnEVlEL/Gr9dnGtND+Rg2gf9eyXEohjwS2mwKfiNxSP9l1M6llH/XFw/9v3qbGTcWctyc5+CuFOumYkxyDBJCYvjlGwg+K2IPt+i4FuvR4GOf7ekZdp4eUevUKZUd7xCw2PD7sv2SWH4aqqyEnye9TdpaLNyXzcvPvKKDH9PJcxgWkhdecrczipehHY+Lb8DvkTjL4fQ+eOZvx49SRj6m1Gpwb4w/wNWiqfzg==
+api: eJyVU02P0zAQ/SvRnKOmVJx6qxBaITgAZcVhVa1cZ7ox69jGH4US5b8zYyfbzYo90EPrjzfP896bDhDFQ4DtHXy2PgpdNdWXZKOAQw3WoRdRWfOhhS08YLwN2O6dkAg1eAzOmoBUO8BmveafFoP0ynEJFTC6coU1TFXSmogmMlg4p5XM/M2PwBUDBNlhL3gVLw6Jw6T+iJ4KT9b3guqgtemoEUb61PB2/eYf7xqRYme9+oMtMCqgTF7FC6mkZ4O85/v7R+QD0iFa4v9FAITDSLKXbF8xJm9CFTusEivKUip7yidE7EnPJHNFRD3S25NftHUidrRphFPNZrVuCrBhptmTgP6MPuTukteE7mJ026bRVgrd2cA8y6Y+8U1VCoF7niXu2cCSyVLok6PUyEc6qMGIPu+fw2pQTC+tfVSYvVPmZHO1iprhu/271Xc8rnZOEZr7Lh2dN0BoR832Ikc50d9gvFr3YhgWmobrbPy355O0iL9j47QgDdRLtnKYArhj3YSkCDiUXEmLawzkYXaakMNwFAFvvR5HPv6Z0POk0PIsvBI8fbSjFzoaHfKfc8sew05KdJzWWehUzH4x45zV04TcvP9GWDZ/mU9JYlow+3xlLs+5l8GVDvh7rF+pGIYSPuma8eXq1YpJ4YxmYw/0x/sLwhNtiA==
 sidebar_class_name: "get api-method"
-info_path: site/openapi/docspace/api-backend/usage-api/asc-files
+info_path: site/openapi/docspace/api-backend/usage-api/asc-web-api
 custom_edit_url: null
 ---
 
@@ -54,7 +54,7 @@ Returns the used space of the current portal.
 <StatusCodes
   id={undefined}
   label={undefined}
-  responses={{"200":{"description":"Used portal space","content":{"text/plain":{"schema":{"type":"number","format":"double"}},"application/json":{"schema":{"type":"number","format":"double"}},"text/json":{"schema":{"type":"number","format":"double"}}}},"401":{"description":"Unauthorized"},"403":{"description":"Forbidden"}}}
+  responses={{"200":{"description":"Used portal space","content":{"application/json":{"schema":{"type":"number","format":"double"}}}},"401":{"description":"Unauthorized"}}}
 >
   
 </StatusCodes>

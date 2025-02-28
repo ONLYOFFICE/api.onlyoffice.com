@@ -5,9 +5,9 @@ description: "Returns a list of the available providers."
 sidebar_label: "Get providers"
 hide_title: true
 hide_table_of_contents: true
-api: eJzNU99v0zAQ/lcsP1ahKYUHyNtgrEJMgNgGQts0XZNrY+baxnbDuqj/O3dOqv7SJF4mkYfEl/vh7+77rpUR5kEW1/JMaQwiF5e18tULBz6uhDIR5x6iskbeZrLCUHrlklnIbxiX3gQBQqsQhZ2JWKOABpSGqUbhvG1UhT4Mb8yNGQw+24iDQSFOjiLEPa5CIU69dVP78H2ciXf2IRM/cHoKTSZ+gqmQ7C8GT71qMBMXNXj8agleJibWzvXGcZ++Q5lJ67AD/rEirCU4mCqtosJATo/BWRPoXLRyPBrxZ7+5876lPYiUWVoaiYmcEPEh5k6DMmyFssYFpP8rh1QBvIcVZaiIi/AP/0P0yszlmp5MgnNalQl//ivYZ7ghoX+O0lz89ejl8UivDCxjbb16xEqmoFfHQWfWT1VVoZFcJ2C59CquSJ+thFDecYU7ooIF6xEqgvKHAlDerkmfC6T6TPccI3kcxJqMHJzKx8NRPmOF55H1neSdH6gioG9IrumypdeUWsfoijzXtgRd2xCLN6O341websI5+0WXLhnIBvcFz7VT2T767UCd+oQ8UQOLZO+G0Zy5fGntvcI0EGVmNmWrqDn85OL9MC0uxTL2Dk8z5vk6AryAxG9ffIJxu5WHXbRbbf/nq92Pbmf/qNtEWNtzfs1zpUhind6zfkBb5nmRd7knypheTmzbKQS88nq95t+/l+hZbXRswCvujS26sCb5Ed0slkSpPClLdKy7BvTyEOCuOicfLimKWd4XQkd5f+C6G5dZ7VQ9UEh3N7/X2RMZbdupjDraxHeuJzP63jbRqQFa7L8YKxqh
+api: eJzNU12P0zAQ/CuWH6vQlIqnvhUKFQIBoncgdFedtsm2MXVtY7uhJep/v10npR+nk3ikD6md3bFnZyaNjLAKcnQn3ymNQeTiplK+fOHAx71QJuLKQ1TWyHkmSwyFVy5tR/Irxq03QYDQKkRhlyJWKKAGpWGhUThva1WiD/17c29Er/fJRuz1RmL8pEWscR9GYuKtW9jdt2EmXttdJr7jYgJ1Jn6AKZH2nw1OvKoxE7MKPH6xxC8TU2tX+lhYp/++zKR12DJ/XxLZAhwslFZRYaCix+CsCbQeNXI4GPDf5XQfu5kuKBKysKSJiQwA57Qq0h35z8CoRoaiwg3wKu4d0jngPewJpyJuwj+8D9Ers5KH9Mvkq8HLp9xuDWxjZb36g6XkroDF1qu4Jx+JVigeuP5AjNlYj1DSRb+pAeX8QD5ukNCsygojVRzEijY5OJUP+4N8yUnII+cgxSC/Ei+gr8nWdNnWa4JWMbpRnmtbgK5s4EOv1OSKaIGSKRwZz1iv1oZL3iehnPqArJSBTdqft5F+fHxh7VphkkKZpU1oFTW3j2dv+pSj/tgp6mbeLaN6KKnbEdkNJOe646cYT8m9nqM52f+/x79TL+Iu5k4DyUTjJreazvA7lpY6yXJ6JtMZ99d2Dvu58eRa8paATbOAgLdeHw78+tcWPUeNljV4xbPxji6sKHvkOCcluSrHRYGO81GD3rb2Xn1EFwGdvr2hXrb7MhGt992CTz+WzP787MuotAz4ecieQTRNGzea69jflp5FdBMeu1nnOX25j8X30rg=
 sidebar_class_name: "get api-method"
-info_path: site/openapi/docspace/api-backend/usage-api/asc-files
+info_path: site/openapi/docspace/api-backend/usage-api/asc-web-api
 custom_edit_url: null
 ---
 
@@ -38,7 +38,7 @@ import Heading from "@theme/Heading";
 
 Returns a list of the available providers.
 
-**Note**: Available provider keys: DropboxV2, Box, WebDav, Yandex, OneDrive, SharePoint, GoogleDrive, kDrive.
+ **Note**: Available provider keys: DropboxV2, Box, WebDav, Yandex, OneDrive, SharePoint, GoogleDrive, kDrive.
 
 <ParamsDetails
   parameters={undefined}
@@ -56,7 +56,7 @@ Returns a list of the available providers.
 <StatusCodes
   id={undefined}
   label={undefined}
-  responses={{"200":{"description":"List of provider keys","content":{"text/plain":{"schema":{"type":"array","items":{"type":"array","items":{"type":"string"}}}},"application/json":{"schema":{"type":"array","items":{"type":"array","items":{"type":"string"}}}},"text/json":{"schema":{"type":"array","items":{"type":"array","items":{"type":"string"}}}}}},"401":{"description":"Unauthorized"},"403":{"description":"Forbidden"}}}
+  responses={{"200":{"description":"List of provider keys","content":{"application/json":{"schema":{"type":"array","items":{"type":"array","items":{"type":"string"}}}}}},"401":{"description":"Unauthorized"}}}
 >
   
 </StatusCodes>

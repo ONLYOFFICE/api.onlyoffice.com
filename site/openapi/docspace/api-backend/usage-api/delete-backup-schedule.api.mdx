@@ -5,9 +5,9 @@ description: "Deletes the backup schedule of the current portal."
 sidebar_label: "Delete the backup schedule"
 hide_title: true
 hide_table_of_contents: true
-api: eJydU01v2zAM/SsCz0bsZTtsvvUjBYb11vUUBIViM7MW2dIkOVtm+L+PlJzmoy027CJb0uMj+R41QJDfPJRLuJbVtrewysBYdDIo032uoYQaNQZMtw9Vg3WvETJw6K3pPFLsAPOi4E+NvnLKcigFXhujUXZiJ3WPpQiuR6E2IjQonjMI5YXvqwq93/SaaCvTBewCswX8FXKrpep45yl1K+P53iLRrxM9jGMG0lqtqsiYf/fm7wGR+x+QjP1QvHvZ3GMn+9AYp35jDRH0/iXozri1qmtMOT1WvVNhT2IPIH31xAxPW+QDklPW1P5PAiCsRnLhnOo2uuCjeuvohfCTGcIkUYndkXTCGheknhFbi1Ti0UM6sTI0tM+lVfl8VuSJKk/3aeOPHnt0O3Q+Ftw7TYFNCLbMc20qqRvjQ/mx+DTP4bLae74XKRy4mUPvPEBtmplzBZ61p8q+0EEGnWzj/hSWAQ8DDYnZKoyiqm5jYrQKmuFXDzezO6UpRQZce6pnN2ePLBXcymj5RJ5UfU3Uy5aG42T+nxdTeydDTRVFUYfJlSX3TkjyhdZEHMt4xRuSlOXnoGFYS4+PTo8jH//o0fFE0e9OOiXXLMtyRckaGjGyg82MksMVvTsbWCh+oRfFrU7G53Zxv/i6ICAbce5VcmX6YerDVbc/Ib4wMaXndczeiBiGNAjU1AGfrt6MmNo7oGMP9H7/AKW2qt8=
+api: eJydU01vGjEQ/SuWzyuWop64kYZD1NySqKoQiox3yLp4bccftHS1/70z9gKBJJdyWPzxZubNe+OeR/ES+HzFb4TcJcfXFbcOvIjKmruGz3kDGiKU2wfZQpM08Ip7CM6aABjb89l0Sn8NBOmVo1AMvLFWgzBsL3SCOYs+AVNbFltgpwpMBRaSlBDCNmlMK62JYCJlE85pJTOs/hUoZc8DEugEreLBARbZlCJ8wF/Fv06/vOfxZESKrfXqLzQ8g2bvQT9t8sx5JZV5YU4j7cZCYMZG5Oec9RGJI1lbAqhYAJm8igcUD8kG+UxlnndAByiPaLCd3wgAvh5Q1ct6t1nVkNXYZG1ZGMVltoiE2T1Kwai40BPM1gH2cfYET5yILe5r4VQ9m0zrkqou92UTzp4F8HvwIRNOXmNgG6Ob17W2UujWhsived7TDSuBnNo4dk2j0BX3L3s/WYOcvuNBxY3o8v4trOKK0ktrdwqynMpsbY5WURN88fBt8gM2k4VTiCbehdF+RiY6JNuJPBNj+qLoR4JeN9Wfp+z/fBgbjPAn1jgr2AkyyoL2oyMr6h6R6Al+S+JM4wNfUNQsPQb1/UYEePJ6GOj4NYGnacLlXnglNiTMao3FWhwvNISMzKLzBb4hR/bl15bVv3o9ZN5pgG6X98vHJcLJkEvPijvjggocr8zhbfpLMwsJ+g7VJxF9XwYCWzviy9WnEWOTRzTJvMZn/g/HYJz9
 sidebar_class_name: "delete api-method"
-info_path: site/openapi/docspace/api-backend/usage-api/asc-files
+info_path: site/openapi/docspace/api-backend/usage-api/asc-web-api
 custom_edit_url: null
 ---
 
@@ -54,7 +54,7 @@ Deletes the backup schedule of the current portal.
 <StatusCodes
   id={undefined}
   label={undefined}
-  responses={{"200":{"description":"Boolean value: true if the operation is successful","content":{"text/plain":{"schema":{"type":"boolean"}},"application/json":{"schema":{"type":"boolean"}},"text/json":{"schema":{"type":"boolean"}}}},"401":{"description":"Unauthorized"},"403":{"description":"Forbidden"}}}
+  responses={{"200":{"description":"Boolean value: true if the operation is successful","content":{"application/json":{"schema":{"type":"boolean"}}}},"401":{"description":"Unauthorized"},"402":{"description":"Your pricing plan does not support this option"}}}
 >
   
 </StatusCodes>

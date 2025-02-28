@@ -5,9 +5,9 @@ description: "Requests the new backup codes for the two-factor authentication ap
 sidebar_label: "Update the TFA codes"
 hide_title: true
 hide_table_of_contents: true
-api: eJytU02P0zAQ/SvRnENTCgforVppJQRCiG5PVbVynenGNLWNPWkpUf47M04i+sHeuLQez7zxvPcmLZB6iTBfwxKJjH2JWZE9PS6yOISwycF5DIqMs59KmAPt1ML77/izwUhf8fTgSoyQQ8DonY18nrcwm07ljzM6GC9YRnJxtlV63/hMDyDtLKElqSX8RYWvlbESRV3hQfGp63JQ3tdGpxGKH9HdFyTsPzKSez99ez/KyqqGKhfMbywhFb27L3p0YWvKEi1In4i6CYbOLFYLKupn6fC8R7lg8qpkOicuQNh0LNp1q0GumFGFmb3RIdu5kBJ0cm92ShOH0pyFGVhnFwpM+J0D8vBihm+IQ6+o4qBQ3hSzybQYzSvYK0bye6PeEcMRQ0wcmlAzqCLy86KonVZ15SLNP0w/zgq4JfBF8lkPB+E3yrEUtXvTr0VhR88eGcpTfeaLHKw6pPiyLAfxm/fA7Q0mnY3duYQ2VEv5YvkweTR1Gl9m7+c5zsQ2zwMfVHJ9aL7ypSJMasoaj7yvyLR/1+5/GzNQvthlnjIJ3Q4urUUPrmSfkh/DZ5bDjVcssdghgLbdqoirUHedXPPAQZaOj0cVjNqKTOsNP1TxFrI9Ym6yABZao5cNOaq6uR1sc7FH31ZPXCXcro3rLRoO0ndM2fNF1xtH+7flt8tfQbRtvxXMaKzvU68iBm5jdSLA3/cfLgKhLg==
+api: eJytVE2P2jAQ/SuWzymhqL1wi1aqVLWqqrKohxVaDc6wcQmxa0+gNOK/d8ZJdgmrvZUDeOI3H++9CZ0meIp6+aBXSGSbp6hydf+pUHEI9SbTzmMAsq75XOqlph0U3v/A3y1G+oanO1di1JkOGL1rIp+XnV7M5/LDNyZYL7mcyWC1BbNvvTJDknENYUOCBe9ra1Kf/FeUhE5HU+EB+HThT6Y/zN+/rrpuoKXKBfsXS51AH1+DhNJVg2d6CgKqxpGCI9gatjVqaRTRtMHSmYXhwaJ5lBaPe5QHTBRKHv3EANSbCws07TVIExVVXPuGs9q5kC7o5N7twBCHUpxFGGe7mnPGfQ7I7ER43xKHHqjiIAdv88Vsno9McvaFM7nfqG3EcMQQE4c21JxUEfllntfOQF25KOWmo3+VG9UnamE2CrESI3prp3J0ms4eOZXn+cIPMt3AIcXXsExbKW+c29teYdvsXMq2VAu8WN3NfuJ2VnjLaJm7n+i4EE89D3uAtBJD+bUvgTApKd6OnCd0upf1+t+mDKQJ/1Dua2B2PGUSuRscehBFGMkeJS+G1ynTNz6xyMkKTui6LURch/pykcc8cJCF4+MRgk3LyRE3qngD2SAxNpmgC2PQi51HqNvejZuXScx83qTv63vGCsOpgb1Vw0Gqj1fN+br21Nl+Avm+ZG9kdF2/HcxrxPdXb2YMDEe06Lvhv4B/ht6cMQ==
 sidebar_class_name: "put api-method"
-info_path: site/openapi/docspace/api-backend/usage-api/asc-files
+info_path: site/openapi/docspace/api-backend/usage-api/asc-web-api
 custom_edit_url: null
 ---
 
@@ -54,7 +54,7 @@ Requests the new backup codes for the two-factor authentication application.
 <StatusCodes
   id={undefined}
   label={undefined}
-  responses={{"200":{"description":"New backup codes","content":{"text/plain":{"schema":{}},"application/json":{"schema":{}},"text/json":{"schema":{}}}},"401":{"description":"Unauthorized"},"403":{"description":"Forbidden"}}}
+  responses={{"200":{"description":"New backup codes","content":{"application/json":{"schema":{}}}},"401":{"description":"Unauthorized"},"405":{"description":"TFA application settings are not available"}}}
 >
   
 </StatusCodes>
