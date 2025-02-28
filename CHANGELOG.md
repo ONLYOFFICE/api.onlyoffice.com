@@ -7,6 +7,7 @@
 * Added the document.isForm parameter
 * Added the editorConfig.customization.showHorizontalScroll parameter
 * Added the editorConfig.customization.showVerticalScroll parameter
+* Added opening for hwp, hwpx formats
 
 ## 4.2.0
 

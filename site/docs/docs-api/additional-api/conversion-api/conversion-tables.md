@@ -6,6 +6,10 @@ sidebar_position: -2
 
 Below you can find tables with formats that are available for conversion in different types of editors.
 
+:::note
+In the [onlyoffice-docs-formats.json](https://github.com/ONLYOFFICE/document-formats/blob/master/onlyoffice-docs-formats.json) file, you can find a list of all file formats supported by ONLYOFFICE editors with their properties (possible actions, MIME, etc.).
+:::
+
 ## Text document file formats
 
 |       | bmp | docm | docx | docxf | dotm | dotx | epub | fb2 | gif | html | jpg | odt | ott | pdf | pdfa | png | rtf | txt |
@@ -23,6 +27,8 @@ Below you can find tables with formats that are available for conversion in diff
 | fodt  | +   | +    | +    | +     | +    | +    | +    | +   | +   | +    | +   | +   | +   | +   | +    | +   | +   | +   |
 | htm   | +   | +    | +    | +     | +    | +    | +    | +   | +   | +    | +   | +   | +   | +   | +    | +   | +   | +   |
 | html  | +   | +    | +    | +     | +    | +    | +    | +   | +   |      | +   | +   | +   | +   | +    | +   | +   | +   |
+| hwp   | +   | +    | +    | +     | +    | +    | +    | +   | +   | +    | +   | +   | +   | +   | +    | +   | +   | +   |
+| hwpx  | +   | +    | +    | +     | +    | +    | +    | +   | +   | +    | +   | +   | +   | +   | +    | +   | +   | +   |
 | mht   | +   | +    | +    | +     | +    | +    | +    | +   | +   | +    | +   | +   | +   | +   | +    | +   | +   | +   |
 | mhtml | +   | +    | +    | +     | +    | +    | +    | +   | +   | +    | +   | +   | +   | +   | +    | +   | +   | +   |
 | odt   | +   | +    | +    | +     | +    | +    | +    | +   | +   | +    | +   |     | +   | +   | +    | +   | +   | +   |
