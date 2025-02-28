@@ -1,3 +1,8 @@
+---
+sidebar_custom_props:
+  icon: /assets/images/editor/connectors/wordpress.svg
+---
+
 # WordPress integration
 
 This [plugin](https://github.com/ONLYOFFICE/onlyoffice-wordpress) enables users to edit and view office documents from [WordPress](https://wordpress.org/) pages on site and admin panel using ONLYOFFICE Docs.

@@ -1,3 +1,8 @@
+---
+sidebar_custom_props:
+  icon: /assets/images/editor/connectors/plone.svg
+---
+
 # Plone integration
 
 This [plugin](https://github.com/ONLYOFFICE/onlyoffice-plone) allows users to edit office documents within [Plone](https://plone.org/) using ONLYOFFICE Docs.

@@ -1,3 +1,8 @@
+---
+sidebar_custom_props:
+  icon: /assets/images/editor/connectors/mattermost.svg
+---
+
 # Mattermost integration
 
 This [plugin](https://github.com/ONLYOFFICE/onlyoffice-mattermost) enables users to edit office documents from [Mattermost](https://mattermost.com/) using ONLYOFFICE Docs.
