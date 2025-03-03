@@ -1,5 +1,13 @@
 # Change log
 
+## 4.4.0
+
+### New features
+
+#### Docs API
+
+* Added the editorConfig.customization.features.featuresTips parameter
+
 ## 4.3.0
 
 ### New features
