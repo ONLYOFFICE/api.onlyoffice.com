@@ -6,53 +6,45 @@ The following examples will show you how to use ONLYOFFICE macros and compare th
 
 ## Text document editor
 
-### Generate word definitions
+### Generate word definitions  
+In this example we are generating word definitions in our documents using the Dictionary API offered by API Ninjas.  
 
-In this example we are generating word definitions in our documents using the Dictionary API offered by API Ninjas.
+[More](text-document-editor/generate-word-definitions.md)  
 
-[More](text-document-editor/generate-word-definitions.md)
+### Highlight predefined keywords  
+In this example we are highlighting predefined keywords in the text editor.  
 
-### Insert text
+[More](text-document-editor/highlight-predefined-keywords.md)  
 
-In this example we are inserting text into the document at the current cursor position.
+### Insert text  
+In this example we are inserting text into the document at the current cursor position.  
 
-[More](text-document-editor/insert-text.md)
+[More](text-document-editor/insert-text.md)  
 
-### Insert unique id
+### Insert unique id  
+In this example we are inserting a unique id into a form document.  
 
-In this example we are inserting a unique id into a form document.
+[More](text-document-editor/insert-unique-id.md)  
 
-[More](text-document-editor/insert-unique-id.md)
+### Items list to table  
+In this example we are converting a list of items into a table.  
 
-### Remove extra spaces
+[More](text-document-editor/items-list-to-table.md)  
 
-In this example we are removing extra spaces in the text document. 
+### Remove custom formatting  
+In this example we are removing all custom formatting and applying a default style.  
 
-[More](text-document-editor/remove-extra-spaces.md)
+[More](text-document-editor/remove-custom-formatting.md)  
 
-### Replace words in document
+### Remove extra spaces  
+In this example we are removing extra spaces in the text document.  
 
-In this example we are replacing words in the text editor.
+[More](text-document-editor/remove-extra-spaces.md)  
 
-[More](text-document-editor/replace-words-in-document.md)
+### Replace words in document  
+In this example we are replacing words in the text editor.  
 
-### Highlight predefined keywords
-
-In this example we are highlighting predefined keywords in the text editor.
-
-[More](text-document-editor/highlight-predefined-keywords.md)
-
-### Remove custom formatting
-
-In this example we are removing all custom formatting and applying a default style.
-
-[More](text-document-editor/remove-custom-formatting.md)
-
-### Items list to table
-
-In this example we are converting a list of items into a table.
-
-[More](text-document-editor/items-list-to-table.md)
+[More](text-document-editor/replace-words-in-document.md)  
 
 ## Spreadsheet editor
 
