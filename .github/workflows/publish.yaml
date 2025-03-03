@@ -128,9 +128,23 @@ jobs:
           # Execute the sync command
           eval "aws s3 sync . ${{env.AWS_BUCKET_URL}} --include \"*\" --delete $EXCLUDE_STR"
 
-          # Compress main.js manualy
-          gzip -9 -k main.js
-          aws s3 cp main.js.gz ${{ env.AWS_BUCKET_URL }}/main.js --content-encoding gzip --content-type application/javascript
+          # Compress files more than 10mb manually
+          echo "🔹 Find files that more than 10MB"
+          BUILD_DIR="."
+          find "$BUILD_DIR" -type f ! -name "*.gz" ! -name "*.br" \
+            ! -name "*.png" ! -name "*.jpg" ! -name "*.jpeg" \
+            ! -name "*.webp" ! -name "*.gif" ! -name "*.mp4" ! -name "*.mp3" \
+            ! -name "*.zip" ! -name "*.rar" ! -name "*.7z" \
+            ! -name "*.woff" ! -name "*.woff2" ! -name "*.ttf" ! -name "*.eot" \
+            -size +10M \
+            | while read -r file; do
+            echo "📦 Compress: $file"
+            gzip -9 -c "$file" > "$file.gz" && mv "$file.gz" "$file"
+            MIME_TYPE=$(file --mime-type -b "$file")
+            echo "🚀 Upload compressed file to s3: $file"
+            aws s3 cp "$file" "${{ env.AWS_BUCKET_URL }}/${file#./}" \
+            --content-encoding gzip --content-type "$MIME_TYPE"
+          done
 
     - name: Invalidate AWS CloudFront Cache
       run: aws cloudfront create-invalidation --distribution-id ${{env.AWS_DISTRIBUTION_ID}} --paths '/*'
