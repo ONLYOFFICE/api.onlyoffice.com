@@ -21,13 +21,13 @@ expression.SetShowDataLabels(bShowSerName, bShowCatName, bShowVal, bShowPercent)
 
 ## Returns
 
-This method doesn't return any data.
+boolean
 
 ## Example
 
 This example specifies which chart data labels are shown for the chart.
 
-```javascript
+```javascript editor-pptx
 var oPresentation = Api.GetPresentation();
 var oSlide = oPresentation.GetSlideByIndex(0);
 oSlide.RemoveAllObjects();

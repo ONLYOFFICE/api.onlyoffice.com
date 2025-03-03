@@ -14,7 +14,7 @@ expression.TRIM(arg1);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| arg1 | Required | [ApiRange](../../ApiRange/ApiRange.md) | [ApiName](../../ApiName/ApiName.md) | string |  | The text from which the spaces will be removed. |
+| arg1 | Required | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| string |  | The text from which the spaces will be removed. |
 
 ## Returns
 
@@ -22,9 +22,13 @@ string
 
 ## Example
 
+This example shows how to remove all spaces from a text string except for single spaces between words.
 
+```javascript editor-xlsx
+// How to delete unneccessary spaces from the text.
 
-```javascript
+// Use a function to clear spaces from a string.
+
 var oWorksheet = Api.GetActiveSheet();
 var oFunction = Api.GetWorksheetFunction();
 oWorksheet.GetRange("A1").SetValue(oFunction.TRIM("  Online Office"));

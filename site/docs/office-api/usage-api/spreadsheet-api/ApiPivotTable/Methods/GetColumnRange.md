@@ -16,13 +16,17 @@ This method doesn't have any parameters.
 
 ## Returns
 
-[ApiRange](../../ApiRange/ApiRange.md) | null
+[ApiRange](../../ApiRange/ApiRange.md) \| null
 
 ## Example
 
+This example shows how to get column range of a pivot table.
 
+```javascript editor-xlsx
+// How to get column range from a pivot table.
 
-```javascript
+// Create a pivot table, add data to it then get its column range and select them.
+
 var oWorksheet = Api.GetActiveSheet();
 
 oWorksheet.GetRange('B1').SetValue('Region');

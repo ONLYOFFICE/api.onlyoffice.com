@@ -22,17 +22,17 @@ expression.SetWrappingStyle(sType);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sType | Required | "inline" | "square" | "tight" | "through" | "topAndBottom" | "behind" | "inFront" |  | The wrapping style type available for the object. |
+| sType | Required | "inline" \| "square" \| "tight" \| "through" \| "topAndBottom" \| "behind" \| "inFront" |  | The wrapping style type available for the object. |
 
 ## Returns
 
-This method doesn't return any data.
+boolean
 
 ## Example
 
 This example creates a shape with wrapping style "square".
 
-```javascript
+```javascript editor-docx
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 paragraph.AddText("This is a paragraph with a shape. ");

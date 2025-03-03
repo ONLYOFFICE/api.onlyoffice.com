@@ -16,13 +16,13 @@ This method doesn't have any parameters.
 
 ## Returns
 
-This method doesn't return any data.
+boolean
 
 ## Example
 
 This example deletes the run.
 
-```javascript
+```javascript editor-docx
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 let run1 = Api.CreateRun();

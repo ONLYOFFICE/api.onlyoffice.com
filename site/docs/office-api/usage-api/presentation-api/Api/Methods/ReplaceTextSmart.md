@@ -20,13 +20,13 @@ expression.ReplaceTextSmart(textStrings, tab, newLine);
 
 ## Returns
 
-This method doesn't return any data.
+boolean
 
 ## Example
 
 This example replace text from two paragraphs to another text.
 
-```javascript
+```javascript editor-pptx
 var oPresentation = Api.GetPresentation();
 var oSlide = oPresentation.GetSlideByIndex(0);
 oSlide.RemoveAllObjects();

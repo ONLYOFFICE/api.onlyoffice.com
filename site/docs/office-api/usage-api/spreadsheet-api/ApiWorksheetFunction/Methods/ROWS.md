@@ -14,7 +14,7 @@ expression.ROWS(arg1);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| arg1 | Required | [ApiRange](../../ApiRange/ApiRange.md) | [ApiName](../../ApiName/ApiName.md) | array |  | A range of cells or an array for which the number of rows will be returned. |
+| arg1 | Required | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| array |  | A range of cells or an array for which the number of rows will be returned. |
 
 ## Returns
 
@@ -22,9 +22,13 @@ number
 
 ## Example
 
+This example shows how to return the number of rows in a range.
 
+```javascript editor-xlsx
+// How to count number of rows.
 
-```javascript
+// Use a function to count number of rows.
+
 var oWorksheet = Api.GetActiveSheet();
 var oFunction = Api.GetWorksheetFunction();
 var column1 = [13, 14, 15];

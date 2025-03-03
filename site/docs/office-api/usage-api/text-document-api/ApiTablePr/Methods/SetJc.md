@@ -14,17 +14,17 @@ expression.SetJc(sJcType);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sJcType | Required | "left" | "right" | "center" |  | The alignment type used for the current table placement. |
+| sJcType | Required | "left" \| "right" \| "center" |  | The alignment type used for the current table placement. |
 
 ## Returns
 
-This method doesn't return any data.
+boolean
 
 ## Example
 
 This example specifies the alignment of the table with respect to the text margins in the current section.
 
-```javascript
+```javascript editor-docx
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 paragraph.AddText("The table is aligned at the center of the page horizontally:");

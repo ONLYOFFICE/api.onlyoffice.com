@@ -14,7 +14,7 @@ expression.KURT(args);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| args | Required | [ApiRange](../../ApiRange/ApiRange.md) | number[] | [ApiName](../../ApiName/ApiName.md) |  | Up to 255 numeric values for which the kurtosis will be calculated. Arguments can be numbers, names, ranges, or arrays of numbers. |
+| args | Required | [ApiRange](../../ApiRange/ApiRange.md) \| number[] \| [ApiName](../../ApiName/ApiName.md) |  | Up to 255 numeric values for which the kurtosis will be calculated. Arguments can be numbers, names, ranges, or arrays of numbers. |
 
 ## Returns
 
@@ -22,9 +22,13 @@ number
 
 ## Example
 
+This example shows how to return the kurtosis of a data set.
 
+```javascript editor-xlsx
+// How to know a data set kurtosis.
 
-```javascript
+// Use a function to find out kurtosis of a data set.
+
 const oWorksheet = Api.GetActiveSheet();
 var oFunction = Api.GetWorksheetFunction();
 var kurtosis = oFunction.KURT(3, 89, 34, 2, 45, 4, 45, 13);

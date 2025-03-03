@@ -14,18 +14,22 @@ expression.IFERROR(arg1, arg2);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| arg1 | Required | [ApiRange](../../ApiRange/ApiRange.md) | [ApiName](../../ApiName/ApiName.md) | number | string | boolean |  | The value, expression, or reference that is checked for an error. |
-| arg2 | Required | [ApiRange](../../ApiRange/ApiRange.md) | [ApiName](../../ApiName/ApiName.md) | number | string | boolean |  | The value to be returned if the formula evaluates to an error. The following errors are evaluated: **#N/A**, **#VALUE!**, **#REF!**, **#DIV/0!**, **#NUM!**, **#NAME?**, **#NULL!**. |
+| arg1 | Required | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number \| string \| boolean |  | The value, expression, or reference that is checked for an error. |
+| arg2 | Required | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number \| string \| boolean |  | The value to be returned if the formula evaluates to an error. The following errors are evaluated: **#N/A**, **#VALUE!**, **#REF!**, **#DIV/0!**, **#NUM!**, **#NAME?**, **#NULL!**. |
 
 ## Returns
 
-number | string | boolean
+number \| string \| boolean
 
 ## Example
 
+This example shows how to check if there is an error in the formula in the first argument. The function returns the result of the formula if there is no error, or the value specified in the second argument if there is one.
 
+```javascript editor-xlsx
+// How to check a formula.
 
-```javascript
+// Use a function to get a result from a formula if an error occurs show specified error message.
+
 var oWorksheet = Api.GetActiveSheet();
 var oFunction = Api.GetWorksheetFunction();
 var stock = ["Stock", 0, 84];

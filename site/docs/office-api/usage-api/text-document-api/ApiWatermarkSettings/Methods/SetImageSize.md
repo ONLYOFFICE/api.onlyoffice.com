@@ -19,13 +19,13 @@ expression.SetImageSize(nWidth, nHeight);
 
 ## Returns
 
-This method doesn't return any data.
+boolean
 
 ## Example
 
 This example sets the parameters of the watermark settings and apply them to the document.
 
-```javascript
+```javascript editor-docx
 let doc = Api.GetDocument();
 let watermarkSettings = doc.GetWatermarkSettings();
 watermarkSettings.SetType("image");

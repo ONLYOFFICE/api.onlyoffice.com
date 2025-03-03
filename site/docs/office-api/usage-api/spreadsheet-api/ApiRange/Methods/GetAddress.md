@@ -22,13 +22,17 @@ expression.GetAddress(RowAbs, ColAbs, RefStyle, External, RelativeTo);
 
 ## Returns
 
-string | null
+string \| null
 
 ## Example
 
 This example shows how to get the range address.
 
-```javascript
+```javascript editor-xlsx
+// How to get an address of a range.
+
+// Get an address of one range and set it for another one.
+
 var oWorksheet = Api.GetActiveSheet();
 oWorksheet.GetRange("A1").SetValue("1");
 oWorksheet.GetRange("B1").SetValue("2");

@@ -24,6 +24,10 @@ This method doesn't return any data.
 
 This example creates a new worksheet.
 
-```javascript
+```javascript editor-xlsx
+// How to create a new worksheet.
+
+// Create a worksheet.
+
 var oSheet = Api.AddSheet("New sheet");
 ```

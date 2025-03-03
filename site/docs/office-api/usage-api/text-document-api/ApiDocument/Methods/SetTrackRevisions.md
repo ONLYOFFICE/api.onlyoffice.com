@@ -18,13 +18,13 @@ expression.SetTrackRevisions(isTrack);
 
 ## Returns
 
-This method doesn't return any data.
+boolean
 
 ## Example
 
 This example sets the change tracking mode.
 
-```javascript
+```javascript editor-docx
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 doc.SetTrackRevisions(true);

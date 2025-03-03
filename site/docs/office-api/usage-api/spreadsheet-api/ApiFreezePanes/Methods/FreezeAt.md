@@ -14,7 +14,7 @@ expression.FreezeAt(frozenRange);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| frozenRange | Required | [ApiRange](../../ApiRange/ApiRange.md) | String |  | A range that represents the cells to be frozen. |
+| frozenRange | Required | [ApiRange](../../ApiRange/ApiRange.md) \| String |  | A range that represents the cells to be frozen. |
 
 ## Returns
 
@@ -24,7 +24,11 @@ This method doesn't return any data.
 
 This example freezes the specified range in top-and-left-most pane of the worksheet.
 
-```javascript
+```javascript editor-xlsx
+// How to freeze a specified range of panes.
+
+// Get freeze panes and freeze the specified part.
+
 var oWorksheet = Api.GetActiveSheet();
 var oFreezePanes = oWorksheet.GetFreezePanes();
 var oRange = Api.GetRange('H2:K4');

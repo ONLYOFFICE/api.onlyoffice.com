@@ -22,7 +22,11 @@ number
 
 This example shows how to get the parent object for the specified collection.
 
-```javascript
+```javascript editor-xlsx
+// How to get a parent of the collection.
+
+// Find a collection parent of the selected range.
+
 var oWorksheet = Api.GetActiveSheet();
 var oRange = oWorksheet.GetRange("B1:D1");
 oRange.SetValue("1");

@@ -15,17 +15,21 @@ expression.GetDataFields(field);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| field | Required | number | string | undefined |  | The name or index of the field to be returned. |
+| field | Required | number \| string \| undefined |  | The name or index of the field to be returned. |
 
 ## Returns
 
-[ApiPivotDataField[]](../../ApiPivotDataField/ApiPivotDataField.md) | [ApiPivotDataField](../../ApiPivotDataField/ApiPivotDataField.md) | null
+[ApiPivotDataField[]](../../ApiPivotDataField/ApiPivotDataField.md) \| [ApiPivotDataField](../../ApiPivotDataField/ApiPivotDataField.md) \| null
 
 ## Example
 
+This example shows how to get data fields.
 
+```javascript editor-xlsx
+// How to get data fields from a pivot table.
 
-```javascript
+// Create a pivot table, add data to it then get data fields from it.
+
 var oWorksheet = Api.GetActiveSheet();
 
 oWorksheet.GetRange('B1').SetValue('Region');

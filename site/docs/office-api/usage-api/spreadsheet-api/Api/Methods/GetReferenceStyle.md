@@ -22,7 +22,11 @@ This method doesn't have any parameters.
 
 This example gets reference style.
 
-```javascript
+```javascript editor-xlsx
+// Get style of a reference.
+
+// Insert a reference style into the cell.
+
 var oWorksheet = Api.GetActiveSheet();
 oWorksheet.GetRange("A1").SetValue(Api.GetReferenceStyle());
 ```

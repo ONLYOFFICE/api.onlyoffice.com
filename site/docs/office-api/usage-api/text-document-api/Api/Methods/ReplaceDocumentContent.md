@@ -18,13 +18,13 @@ expression.ReplaceDocumentContent(documentContent);
 
 ## Returns
 
-This method doesn't return any data.
+boolean
 
 ## Example
 
 This examle shows how to reaplace document content with mail merge data.
 
-```javascript
+```javascript editor-docx
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 let fields = ["Greeting line", "First name", "Last name"];

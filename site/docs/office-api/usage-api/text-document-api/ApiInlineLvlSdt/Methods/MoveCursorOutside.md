@@ -18,13 +18,13 @@ expression.MoveCursorOutside(isAfter);
 
 ## Returns
 
-This method doesn't return any data.
+boolean
 
 ## Example
 
 
 
-```javascript
+```javascript editor-docx
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 let inlineLvlSdt = Api.CreateInlineLvlSdt();

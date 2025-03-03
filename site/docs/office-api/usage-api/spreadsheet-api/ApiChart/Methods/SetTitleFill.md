@@ -24,7 +24,11 @@ boolean
 
 This example sets the fill to the chart title.
 
-```javascript
+```javascript editor-xlsx
+// How to color a chart title.
+
+// Add a solid color for a chart title.
+
 var oWorksheet = Api.GetActiveSheet();
 oWorksheet.GetRange("B1").SetValue(2014);
 oWorksheet.GetRange("C1").SetValue(2015);

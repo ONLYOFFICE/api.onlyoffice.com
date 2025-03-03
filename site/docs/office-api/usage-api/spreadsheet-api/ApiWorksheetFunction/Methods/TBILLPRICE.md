@@ -14,9 +14,9 @@ expression.TBILLPRICE(arg1, arg2, arg3);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| arg1 | Required | [ApiRange](../../ApiRange/ApiRange.md) | [ApiName](../../ApiName/ApiName.md) | number |  | The settlement date of the Treasury bill, expressed as a serial date number. |
-| arg2 | Required | [ApiRange](../../ApiRange/ApiRange.md) | [ApiName](../../ApiName/ApiName.md) | number |  | The maturity date of the Treasury bill, expressed as a serial date number. |
-| arg3 | Required | [ApiRange](../../ApiRange/ApiRange.md) | [ApiName](../../ApiName/ApiName.md) | number |  | The discount rate of the Treasury bill. |
+| arg1 | Required | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number |  | The settlement date of the Treasury bill, expressed as a serial date number. |
+| arg2 | Required | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number |  | The maturity date of the Treasury bill, expressed as a serial date number. |
+| arg3 | Required | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number |  | The discount rate of the Treasury bill. |
 
 ## Returns
 
@@ -24,9 +24,13 @@ number
 
 ## Example
 
+This example shows how to return the price per $100 face value for a Treasury bill.
 
+```javascript editor-xlsx
+// How to return the price per $100 face value for a Treasury bill.
 
-```javascript
+// Use a function to calculate the price per $100 face value.
+
 var oWorksheet = Api.GetActiveSheet();
 var oFunction = Api.GetWorksheetFunction();
 oWorksheet.GetRange("A1").SetValue(oFunction.TBILLPRICE("1/1/2018", "1/1/2019", "3.00%"));

@@ -14,17 +14,17 @@ expression.SetVerticalAlign(sType);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sType | Required | "top" | "center" | "bottom" |  | The available types of the vertical alignment for the text contents of the current table cell. |
+| sType | Required | "top" \| "center" \| "bottom" |  | The available types of the vertical alignment for the text contents of the current table cell. |
 
 ## Returns
 
-This method doesn't return any data.
+boolean
 
 ## Example
 
 This example specifies the vertical alignment for the text contents within the table cell.
 
-```javascript
+```javascript editor-docx
 let doc = Api.GetDocument();
 let tableStyle = doc.CreateStyle("CustomTableStyle", "table");
 tableStyle.SetBasedOn(doc.GetStyle("Bordered"));

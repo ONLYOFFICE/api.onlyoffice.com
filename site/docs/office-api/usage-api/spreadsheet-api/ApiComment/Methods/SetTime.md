@@ -14,7 +14,7 @@ expression.SetTime(nTimeStamp);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| nTimeStamp | Required | Number | String |  | The timestamp of the comment creation in the current time zone format. |
+| nTimeStamp | Required | Number \| String |  | The timestamp of the comment creation in the current time zone format. |
 
 ## Returns
 
@@ -24,7 +24,11 @@ This method doesn't return any data.
 
 This example sets the timestamp of the comment creation in the current time zone format.
 
-```javascript
+```javascript editor-xlsx
+// How to change a time when a comment was created.
+
+// Add a comment then update its creation time and show it in the worksheet.
+
 var oWorksheet = Api.GetActiveSheet();
 oWorksheet.GetRange("A1").SetValue("1");
 var oRange = oWorksheet.GetRange("A1");

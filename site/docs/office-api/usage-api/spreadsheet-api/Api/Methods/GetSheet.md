@@ -14,17 +14,21 @@ expression.GetSheet(nameOrIndex);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| nameOrIndex | Required | string | number |  | Sheet name or sheet index. |
+| nameOrIndex | Required | string \| number |  | Sheet name or sheet index. |
 
 ## Returns
 
-[ApiWorksheet](../../ApiWorksheet/ApiWorksheet.md) | null
+[ApiWorksheet](../../ApiWorksheet/ApiWorksheet.md) \| null
 
 ## Example
 
 This example shows how to get an object that represents a sheet.
 
-```javascript
+```javascript editor-xlsx
+// How to get a sheet knowing its name.
+
+// Find and get a sheet object by its name.
+
 var oWorksheet = Api.GetSheet("Sheet1");
 oWorksheet.GetRange("A1").SetValue("This is a sample text on 'Sheet1'.");
 ```

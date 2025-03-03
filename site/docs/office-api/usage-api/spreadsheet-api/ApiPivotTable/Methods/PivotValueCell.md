@@ -19,13 +19,17 @@ expression.PivotValueCell(rowLine, colLine);
 
 ## Returns
 
-number | string | null
+number \| string \| null
 
 ## Example
 
+This example shows how to get a pivot value cell using its position.
 
+```javascript editor-xlsx
+// How to get a pivot value cell.
 
-```javascript
+// Create a pivot table, add data to it then get its value cell.
+
 var oWorksheet = Api.GetActiveSheet();
 
 oWorksheet.GetRange('B1').SetValue('Region');

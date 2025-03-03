@@ -14,7 +14,7 @@ expression.SetAxieNumFormat(sFormat, sAxiePos);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sFormat | Required | [NumFormat](../../Enumeration/NumFormat.md) | String |  | Numeric format (can be custom format). |
+| sFormat | Required | [NumFormat](../../Enumeration/NumFormat.md) \| String |  | Numeric format (can be custom format). |
 | sAxiePos | Required | [AxisPos](../../Enumeration/AxisPos.md) |  | Axis position in the chart. |
 
 ## Returns
@@ -25,7 +25,11 @@ boolean
 
 This example sets the specified numeric format to the axis values.
 
-```javascript
+```javascript editor-xlsx
+// How to format numbers of the axis.
+
+// Apply number format for the chart axis using an expression.
+
 var oWorksheet = Api.GetActiveSheet();
 oWorksheet.GetRange("B1").SetValue(2014);
 oWorksheet.GetRange("C1").SetValue(2015);

@@ -14,7 +14,7 @@ expression.MONTH(arg1-);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| arg1- | Required | [ApiRange](../../ApiRange/ApiRange.md) | [ApiName](../../ApiName/ApiName.md) | number |  | A number in the date-time code. |
+| arg1- | Required | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number |  | A number in the date-time code. |
 
 ## Returns
 
@@ -22,9 +22,13 @@ number
 
 ## Example
 
+This example shows how to return the month, a number from 1 (January) to 12 (December).
 
+```javascript editor-xlsx
+// How to get the month from a date.
 
-```javascript
+// Use a function to get a month.
+
 const oWorksheet = Api.GetActiveSheet();
 
 var oFunction = Api.GetWorksheetFunction();

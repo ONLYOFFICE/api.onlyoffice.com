@@ -14,7 +14,7 @@ expression.GetRowFields(field);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| field | Required | number | string | undefined |  | The name or index of the field to be returned. |
+| field | Required | number \| string \| undefined |  | The name or index of the field to be returned. |
 
 ## Returns
 
@@ -22,9 +22,13 @@ expression.GetRowFields(field);
 
 ## Example
 
+This example shows how to get row fields of a pivot table.
 
+```javascript editor-xlsx
+// How to get table row fields as an array of fields.
 
-```javascript
+// Create a pivot table, add data to it then get its row fields.
+
 var oWorksheet = Api.GetActiveSheet();
 
 oWorksheet.GetRange('B1').SetValue('Region');

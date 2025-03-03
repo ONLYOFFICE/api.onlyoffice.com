@@ -14,8 +14,8 @@ expression.COUNTIF(arg1, arg2);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| arg1 | Required | [ApiRange](../../ApiRange/ApiRange.md) | [ApiName](../../ApiName/ApiName.md) |  | The range of cells to count nonblank cells. |
-| arg2 | Required | [ApiRange](../../ApiRange/ApiRange.md) | [ApiName](../../ApiName/ApiName.md) | number | string |  | The condition in the form of a number, expression, or text that defines which cells will be counted. |
+| arg1 | Required | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) |  | The range of cells to count nonblank cells. |
+| arg2 | Required | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number \| string |  | The condition in the form of a number, expression, or text that defines which cells will be counted. |
 
 ## Returns
 
@@ -23,9 +23,13 @@ number
 
 ## Example
 
+This example shows how to count a number of cells within a range that meet the given condition.
 
+```javascript editor-xlsx
+// How to find a number of cells that satisfies some condition.
 
-```javascript
+// Use function to get cells if a condition is met.
+
 var oWorksheet = Api.GetActiveSheet();
 var oFunction = Api.GetWorksheetFunction();
 var fruits = ["Apples", "Oranges", "Bananas"];

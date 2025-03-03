@@ -22,13 +22,13 @@ expression.SetShd(sType, r, g, b, isAuto);
 
 ## Returns
 
-This method doesn't return any data.
+boolean
 
 ## Example
 
 This example specifies the shading applied to the contents of the table cell.
 
-```javascript
+```javascript editor-docx
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 paragraph.AddText("We create a 3x3 table and add add an orange shading to all cells:");

@@ -14,7 +14,7 @@ expression.Replace(What, Replacement, LookAt, SearchOrder, SearchDirection, Matc
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| What | Required | string | undefined |  | The data to search for. |
+| What | Required | string \| undefined |  | The data to search for. |
 | Replacement | Required | string |  | The replacement string. |
 | LookAt | Required | [XlLookAt](../../Enumeration/XlLookAt.md) |  | Specifies whether the whole search text or any part of the search text is matched. |
 | SearchOrder | Required | [XlSearchOrder](../../Enumeration/XlSearchOrder.md) |  | Range search order - by rows or by columns. |
@@ -30,7 +30,11 @@ This method doesn't return any data.
 
 This example replaces specific information to another one in a range.
 
-```javascript
+```javascript editor-xlsx
+// How to replace one data value with another in a range.
+
+// Create a range and replace its data field value with a new one.
+
 var oWorksheet = Api.GetActiveSheet();
 oWorksheet.GetRange("B1").SetValue(2014);
 oWorksheet.GetRange("C1").SetValue(2015);

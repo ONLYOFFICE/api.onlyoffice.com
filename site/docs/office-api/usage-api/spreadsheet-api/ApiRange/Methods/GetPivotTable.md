@@ -16,13 +16,17 @@ This method doesn't have any parameters.
 
 ## Returns
 
-[ApiPivotTable](../../ApiPivotTable/ApiPivotTable.md) | null
+[ApiPivotTable](../../ApiPivotTable/ApiPivotTable.md) \| null
 
 ## Example
 
+This example shows how to get a pivot table of the current range.
 
+```javascript editor-xlsx
+// How to get a pivot table of a cell.
 
-```javascript
+// Get a range, get its pivot table and add some data fields to it.
+
 var oWorksheet = Api.GetActiveSheet();
 
 oWorksheet.GetRange('B1').SetValue('Region');

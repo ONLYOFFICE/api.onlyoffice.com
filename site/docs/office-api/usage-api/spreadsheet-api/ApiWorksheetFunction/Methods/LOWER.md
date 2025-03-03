@@ -14,7 +14,7 @@ expression.LOWER(arg1);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| arg1 | Required | [ApiRange](../../ApiRange/ApiRange.md) | [ApiName](../../ApiName/ApiName.md) | string |  | The text to convert to lowercase. The text characters that are not letters are not changed. |
+| arg1 | Required | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| string |  | The text to convert to lowercase. The text characters that are not letters are not changed. |
 
 ## Returns
 
@@ -22,9 +22,13 @@ string
 
 ## Example
 
+This example shows how to convert all letters in a text string to lowercase.
 
+```javascript editor-xlsx
+// How to make all characters uncapitalized.
 
-```javascript
+// Use a function to make a text string to lowercase.
+
 var oWorksheet = Api.GetActiveSheet();
 var oFunction = Api.GetWorksheetFunction();
 oWorksheet.GetRange("A1").SetValue(oFunction.LOWER("Day"));

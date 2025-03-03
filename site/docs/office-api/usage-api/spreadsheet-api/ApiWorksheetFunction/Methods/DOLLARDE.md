@@ -14,8 +14,8 @@ expression.DOLLARDE(arg1, arg2);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| arg1 | Required | [ApiRange](../../ApiRange/ApiRange.md) | [ApiName](../../ApiName/ApiName.md) | number |  | A number expressed as a fraction. |
-| arg2 | Required | [ApiRange](../../ApiRange/ApiRange.md) | [ApiName](../../ApiName/ApiName.md) | number |  | The integer to use in the denominator of the fraction. |
+| arg1 | Required | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number |  | A number expressed as a fraction. |
+| arg2 | Required | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number |  | The integer to use in the denominator of the fraction. |
 
 ## Returns
 
@@ -23,9 +23,13 @@ number
 
 ## Example
 
+This example shows how to convert a dollar price, expressed as a fraction, into a dollar price, expressed as a decimal number.
 
+```javascript editor-xlsx
+// How to convert a dollar price from farction to decimal.
 
-```javascript
+// Use function to get decimal from fraction price.
+
 var oWorksheet = Api.GetActiveSheet();
 var oFunction = Api.GetWorksheetFunction();
 oWorksheet.GetRange("A1").SetValue(oFunction.DOLLARDE(1.03, 16));

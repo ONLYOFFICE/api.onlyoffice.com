@@ -18,13 +18,13 @@ expression.SetVertAxisTickLabelPosition(sTickLabelPosition);
 
 ## Returns
 
-This method doesn't return any data.
+boolean
 
 ## Example
 
 This example spicifies tick label position for the vertical axis.
 
-```javascript
+```javascript editor-pptx
 var oPresentation = Api.GetPresentation();
 var oSlide = oPresentation.GetSlideByIndex(0);
 oSlide.RemoveAllObjects();

@@ -19,13 +19,17 @@ expression.AddProtectedRange(sTitle, sDataRange);
 
 ## Returns
 
-[ApiProtectedRange](../../ApiProtectedRange/ApiProtectedRange.md) | null
+[ApiProtectedRange](../../ApiProtectedRange/ApiProtectedRange.md) \| null
 
 ## Example
 
-This example adds a new name to a range of cells.
+This example adds a new protected range.
 
-```javascript
+```javascript editor-xlsx
+// How to add the protected ApiRange object.
+
+// Insert a protected range to the worksheet.
+
 var oWorksheet = Api.GetActiveSheet();
 oWorksheet.GetRange("A1").SetValue("1");
 oWorksheet.GetRange("B1").SetValue("2");

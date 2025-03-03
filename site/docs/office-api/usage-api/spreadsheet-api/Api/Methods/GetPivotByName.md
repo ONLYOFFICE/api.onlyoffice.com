@@ -18,13 +18,17 @@ expression.GetPivotByName(name);
 
 ## Returns
 
-[ApiPivotTable](../../ApiPivotTable/ApiPivotTable.md) | null
+[ApiPivotTable](../../ApiPivotTable/ApiPivotTable.md) \| null
 
 ## Example
 
+This example shows how to get pivot by its name.
 
+```javascript editor-xlsx
+// How to get pivot knowing its pivot table name.
 
-```javascript
+// Update pivot getting it by its name.
+
 var oWorksheet = Api.GetActiveSheet();
 
 oWorksheet.GetRange('B1').SetValue('Region');

@@ -17,7 +17,7 @@ expression.SetVertAlign(sType);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sType | Required | "baseline" | "subscript" | "superscript" |  | The vertical alignment type applied to the text contents. |
+| sType | Required | "baseline" \| "subscript" \| "superscript" |  | The vertical alignment type applied to the text contents. |
 
 ## Returns
 
@@ -27,7 +27,7 @@ expression.SetVertAlign(sType);
 
 This example specifies the alignment which will be applied to the contents of the run in relation to the default appearance of the run text.
 
-```javascript
+```javascript editor-pptx
 var oPresentation = Api.GetPresentation();
 var oSlide = oPresentation.GetSlideByIndex(0);
 oSlide.RemoveAllObjects();

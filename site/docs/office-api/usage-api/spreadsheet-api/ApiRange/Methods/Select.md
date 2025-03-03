@@ -22,7 +22,11 @@ This method doesn't return any data.
 
 This example selects the current range.
 
-```javascript
+```javascript editor-xlsx
+// How to select a range.
+
+// Select a range and get a selection from the worksheet.
+
 var oWorksheet = Api.GetActiveSheet();
 var oRange = oWorksheet.GetRange("A1:C1");
 oRange.SetValue("1");

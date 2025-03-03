@@ -24,7 +24,11 @@ boolean
 
 This example sets the outline to the chart legend.
 
-```javascript
+```javascript editor-xlsx
+// How to change the outline of the chart legend using a stoke.
+
+// Outline the chart legend creating a solid stroke.
+
 var oWorksheet = Api.GetActiveSheet();
 oWorksheet.GetRange("B1").SetValue(2014);
 oWorksheet.GetRange("C1").SetValue(2015);

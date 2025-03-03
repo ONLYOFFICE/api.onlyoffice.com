@@ -15,17 +15,21 @@ expression.GetPivotFields(field);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| field | Optional | string | number |  | The name or index of the field to be returned. |
+| field | Optional | string \| number |  | The name or index of the field to be returned. |
 
 ## Returns
 
-[ApiPivotField[]](../../ApiPivotField/ApiPivotField.md) | [ApiPivotField](../../ApiPivotField/ApiPivotField.md) | [ApiPivotDataField](../../ApiPivotDataField/ApiPivotDataField.md) | null
+[ApiPivotField[]](../../ApiPivotField/ApiPivotField.md) \| [ApiPivotField](../../ApiPivotField/ApiPivotField.md) \| [ApiPivotDataField](../../ApiPivotDataField/ApiPivotDataField.md) \| null
 
 ## Example
 
+This example shows how to get pivot fields of a pivot table.
 
+```javascript editor-xlsx
+// How to get table pivot fields as an array of fields.
 
-```javascript
+// Create a pivot table, add data to it then get its pivot fields.
+
 var oWorksheet = Api.GetActiveSheet();
 
 oWorksheet.GetRange('B1').SetValue('Region');

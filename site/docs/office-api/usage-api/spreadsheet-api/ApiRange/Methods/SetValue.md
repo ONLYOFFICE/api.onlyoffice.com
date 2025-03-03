@@ -14,7 +14,7 @@ expression.SetValue(data);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| data | Required | string | bool | number | Array[] | Array[][] |  | The general value for the cell or cell range. |
+| data | Required | string \| bool \| number \| Array[] \| Array[][] |  | The general value for the cell or cell range. |
 
 ## Returns
 
@@ -24,7 +24,11 @@ boolean
 
 This example sets a value to cells.
 
-```javascript
+```javascript editor-xlsx
+// How to add underline to the cell value.
+
+// Get a range and add underline its text.
+
 var oWorksheet = Api.GetActiveSheet();
 oWorksheet.GetRange("B1").SetValue("2");
 oWorksheet.GetRange("B2").SetValue("2");

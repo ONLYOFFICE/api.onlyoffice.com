@@ -14,7 +14,7 @@ expression.PHI(arg1);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| arg1 | Required | [ApiRange](../../ApiRange/ApiRange.md) | [ApiName](../../ApiName/ApiName.md) | number |  | The number for which the density of the standard normal distribution will be returned. |
+| arg1 | Required | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number |  | The number for which the density of the standard normal distribution will be returned. |
 
 ## Returns
 
@@ -22,9 +22,13 @@ number
 
 ## Example
 
+This example shows how to return the value of the density function for a standard normal distribution.
 
+```javascript editor-xlsx
+// How to return the value of the density function.
 
-```javascript
+// Use a function to claculate the value of the density function.
+
 const oWorksheet = Api.GetActiveSheet();
 
 //method params

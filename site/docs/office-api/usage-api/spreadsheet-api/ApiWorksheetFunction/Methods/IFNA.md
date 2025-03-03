@@ -14,18 +14,22 @@ expression.IFNA(arg1, arg2);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| arg1 | Required | [ApiRange](../../ApiRange/ApiRange.md) | [ApiName](../../ApiName/ApiName.md) | number | string | boolean |  | The value, expression, or reference that is checked for an error. |
-| arg2 | Required | [ApiRange](../../ApiRange/ApiRange.md) | [ApiName](../../ApiName/ApiName.md) | number | string | boolean |  | The value to return if the formula evaluates to the &lt;em&gt;#N/A&lt;/em&gt; error value. |
+| arg1 | Required | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number \| string \| boolean |  | The value, expression, or reference that is checked for an error. |
+| arg2 | Required | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number \| string \| boolean |  | The value to return if the formula evaluates to the &lt;em&gt;#N/A&lt;/em&gt; error value. |
 
 ## Returns
 
-number | string | boolean
+number \| string \| boolean
 
 ## Example
 
+This example shows how to check if there is an error in the formula in the first argument. The function returns the specified value if the formula returns the N/A error value, otherwise returns the result of the formula.
 
+```javascript editor-xlsx
+// How to check whether a formula result is N/A.
 
-```javascript
+// Use a function to get a result from a formula if an error occurs show specified error message.
+
 var oWorksheet = Api.GetActiveSheet();
 var oFunction = Api.GetWorksheetFunction();
 var ids = ["ID", 1, 2, 3, 4, 5];

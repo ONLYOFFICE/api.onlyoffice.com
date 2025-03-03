@@ -22,7 +22,11 @@ boolean
 
 This example deletes the paragraph.
 
-```javascript
+```javascript editor-xlsx
+// How to remove a paragraph.
+
+// Delete the paragraph from the shape content.
+
 var oWorksheet = Api.GetActiveSheet();
 var oFill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
 var oStroke = Api.CreateStroke(0, Api.CreateNoFill());

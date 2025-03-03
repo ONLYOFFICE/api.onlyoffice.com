@@ -18,13 +18,13 @@ expression.SetName(sStyleName);
 
 ## Returns
 
-This method doesn't return any data.
+boolean
 
 ## Example
 
 This example sets a name of the current style.
 
-```javascript
+```javascript editor-docx
 let doc = Api.GetDocument();
 let tableStyle = doc.GetStyle("Bordered");
 tableStyle.SetName("My Custom Style");

@@ -14,8 +14,8 @@ expression.CHITEST(arg1, arg2);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| arg1 | Required | [ApiRange](../../ApiRange/ApiRange.md) | [ApiName](../../ApiName/ApiName.md) | number | string | boolean |  | The range of data that contains observations to test against expected values. |
-| arg2 | Required | [ApiRange](../../ApiRange/ApiRange.md) | [ApiName](../../ApiName/ApiName.md) | number | string | boolean |  | The range of data that contains the ratio of the product of row totals and column totals to the grand total. |
+| arg1 | Required | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number \| string \| boolean |  | The range of data that contains observations to test against expected values. |
+| arg2 | Required | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number \| string \| boolean |  | The range of data that contains the ratio of the product of row totals and column totals to the grand total. |
 
 ## Returns
 
@@ -23,9 +23,13 @@ number
 
 ## Example
 
+This example shows how to return the test for independence: the value from the chi-squared distribution for the statistic and the appropriate degrees of freedom.
 
+```javascript editor-xlsx
+// How to return the value from the chi-squared distribution for the statistic and the appropriate degrees of freedom.
 
-```javascript
+// Use function to return the value from the chi-squared distribution for the statistic and the appropriate degrees of freedom.
+
 var oWorksheet = Api.GetActiveSheet();
 var oFunction = Api.GetWorksheetFunction();
 var actual1 = ["Actual", 58, 11, 10];

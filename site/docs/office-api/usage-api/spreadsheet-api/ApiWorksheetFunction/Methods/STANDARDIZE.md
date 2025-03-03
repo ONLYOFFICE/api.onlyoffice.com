@@ -14,9 +14,9 @@ expression.STANDARDIZE(arg1, arg2, arg3);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| arg1 | Required | [ApiRange](../../ApiRange/ApiRange.md) | [ApiName](../../ApiName/ApiName.md) | number |  | The value to normalize. |
-| arg2 | Required | [ApiRange](../../ApiRange/ApiRange.md) | [ApiName](../../ApiName/ApiName.md) | number |  | The arithmetic mean of the distribution. |
-| arg3 | Required | [ApiRange](../../ApiRange/ApiRange.md) | [ApiName](../../ApiName/ApiName.md) | number |  | The standard deviation of the distribution, a positive number. |
+| arg1 | Required | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number |  | The value to normalize. |
+| arg2 | Required | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number |  | The arithmetic mean of the distribution. |
+| arg3 | Required | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number |  | The standard deviation of the distribution, a positive number. |
 
 ## Returns
 
@@ -24,19 +24,25 @@ number
 
 ## Example
 
+This example shows how to return a normalised value from a distribution characterised by a mean and standard deviation.
 
+```javascript editor-xlsx
+// How to calculate the normalised value from a distribution.
 
-```javascript
+// Use a function to get the normalised value from a distribution by different parameters.
+
 const oWorksheet = Api.GetActiveSheet();
 
 var valueArr = [5, -2, 10];
 
 // Place the numbers in cells
+
 for (var i = 0; i < valueArr.length; i++) {
   oWorksheet.GetRange("A" + (i + 1)).SetValue(valueArr[i]);
 }
 
 // method params
+
 var x = oWorksheet.GetRange("A1");
 var mean = oWorksheet.GetRange("A2");
 var stdDev = oWorksheet.GetRange("A3");

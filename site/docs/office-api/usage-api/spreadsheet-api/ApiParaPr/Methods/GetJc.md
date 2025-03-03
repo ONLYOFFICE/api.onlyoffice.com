@@ -16,13 +16,17 @@ This method doesn't have any parameters.
 
 ## Returns
 
-"left" | "right" | "both" | "center" | undefined
+"left" \| "right" \| "both" \| "center" \| undefined
 
 ## Example
 
 This example shows how to get the paragraph contents justification.
 
-```javascript
+```javascript editor-xlsx
+// How to know the justification type of a paragraph.
+
+// Create a paragraph set justification type, get it and display in the worksheet.
+
 var oWorksheet = Api.GetActiveSheet();
 var oFill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
 var oStroke = Api.CreateStroke(0, Api.CreateNoFill());

@@ -19,13 +19,17 @@ expression.AddComment(sText, sAuthor);
 
 ## Returns
 
-[ApiComment](../../ApiComment/ApiComment.md) | null
+[ApiComment](../../ApiComment/ApiComment.md) \| null
 
 ## Example
 
 This example adds a comment to the document.
 
-```javascript
+```javascript editor-xlsx
+// How to add comments in a worksheet.
+
+// Insert a comment into a cell.
+
 Api.AddComment("Comment 1", "Bob");
 Api.AddComment("Comment 2" );
 var arrComments = Api.GetComments();

@@ -18,13 +18,13 @@ expression.SetCellSpacing(nValue);
 
 ## Returns
 
-This method doesn't return any data.
+boolean
 
 ## Example
 
 This example specifies the default table cell spacing.
 
-```javascript
+```javascript editor-docx
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 paragraph.AddText("We create a 3x3 table and set the cell spacing to half an inch:");

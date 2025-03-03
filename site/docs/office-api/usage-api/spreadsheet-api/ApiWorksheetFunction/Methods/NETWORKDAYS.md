@@ -14,9 +14,9 @@ expression.NETWORKDAYS(arg1, arg2, arg3);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| arg1 | Required | [ApiRange](../../ApiRange/ApiRange.md) | [ApiName](../../ApiName/ApiName.md) | number |  | A serial date number that represents the start date. |
-| arg2 | Required | [ApiRange](../../ApiRange/ApiRange.md) | [ApiName](../../ApiName/ApiName.md) | number |  | A serial date number that represents the end date. |
-| arg3 | Required | [ApiRange](../../ApiRange/ApiRange.md) | number[] |  | An optional range or array of one or more serial date numbers to exclude from the working calendar, such as state and federal holidays and floating holidays. |
+| arg1 | Required | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number |  | A serial date number that represents the start date. |
+| arg2 | Required | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number |  | A serial date number that represents the end date. |
+| arg3 | Required | [ApiRange](../../ApiRange/ApiRange.md) \| number[] |  | An optional range or array of one or more serial date numbers to exclude from the working calendar, such as state and federal holidays and floating holidays. |
 
 ## Returns
 
@@ -24,9 +24,13 @@ number
 
 ## Example
 
+This example shows how to return the number of whole workdays between two dates.
 
+```javascript editor-xlsx
+// How to get the number of whole workdays between two dates.
 
-```javascript
+// Use a function to get number of days between two dates.
+
 const oWorksheet = Api.GetActiveSheet();
 
 var oFunction = Api.GetWorksheetFunction();

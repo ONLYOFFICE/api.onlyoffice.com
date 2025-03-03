@@ -14,7 +14,7 @@ expression.OR(args);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| args | Required | number | string | [ApiRange](../../ApiRange/ApiRange.md) | [ApiName](../../ApiName/ApiName.md) | boolean |  | A condition to check. |
+| args | Required | number \| string \| [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| boolean |  | A condition to check. |
 
 ## Returns
 
@@ -22,9 +22,13 @@ boolean
 
 ## Example
 
+This example shows how to check whether any of the arguments are true. Returns false only if all arguments are false.
 
+```javascript editor-xlsx
+// How to use OR logical operator.
 
-```javascript
+// Use a function to apply OR operation.
+
 const oWorksheet = Api.GetActiveSheet();
 
 oWorksheet.GetRange("A1").SetValue(12);

@@ -14,19 +14,23 @@ expression.LOOKUP(arg1, arg2, arg3);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| arg1 | Required | number | string | boolean | [ApiRange](../../ApiRange/ApiRange.md) | [ApiName](../../ApiName/ApiName.md) |  | A value that is searched for in the first vector. It can be a number, text, a logical value, or a name or reference to a value. |
-| arg2 | Required | [ApiRange](../../ApiRange/ApiRange.md) | [ApiName](../../ApiName/ApiName.md) |  | A range that contains only one row or one column of text, numbers, or logical values, placed in ascending order. |
-| arg3 | Required | [ApiRange](../../ApiRange/ApiRange.md) | [ApiName](../../ApiName/ApiName.md) |  | A range that contains only one row or column. It must be the same size as the first vector. |
+| arg1 | Required | number \| string \| boolean \| [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) |  | A value that is searched for in the first vector. It can be a number, text, a logical value, or a name or reference to a value. |
+| arg2 | Required | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) |  | A range that contains only one row or one column of text, numbers, or logical values, placed in ascending order. |
+| arg3 | Required | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) |  | A range that contains only one row or column. It must be the same size as the first vector. |
 
 ## Returns
 
-number | string | boolean
+number \| string \| boolean
 
 ## Example
 
+This example shows how to look up a value either from a one-row or one-column range. Provided for backwards compatibility.
 
+```javascript editor-xlsx
+// How to look up a value from a one-row or one-column range.
 
-```javascript
+// Use a function to find a value from a row or a column range.
+
 var oWorksheet = Api.GetActiveSheet();
 var oFunction = Api.GetWorksheetFunction();
 var ids = ["ID", 1, 2, 3, 4, 5];

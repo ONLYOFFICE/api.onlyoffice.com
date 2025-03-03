@@ -19,13 +19,13 @@ expression.Split(nRow, nCol);
 
 ## Returns
 
-[ApiTable](../../ApiTable/ApiTable.md) | null
+[ApiTable](../../ApiTable/ApiTable.md) \| null
 
 ## Example
 
 This example splits the cell into a given number of rows and columns.
 
-```javascript
+```javascript editor-docx
 let doc = Api.GetDocument();
 let tableStyle = doc.CreateStyle("CustomTableStyle", "table");
 tableStyle.SetBasedOn(doc.GetStyle("Bordered"));

@@ -16,13 +16,17 @@ This method doesn't have any parameters.
 
 ## Returns
 
-[twips](../../Enumeration/twips.md) | [line240](../../Enumeration/line240.md) | undefined
+[twips](../../Enumeration/twips.md) \| [line240](../../Enumeration/line240.md) \| undefined
 
 ## Example
 
 This example shows how to get the paragraph line spacing value.
 
-```javascript
+```javascript editor-xlsx
+// How to get spacing line value between sentences of a paragraph.
+
+// Create a paragraph set spacing line between the sentences and retrieve the value.
+
 var oWorksheet = Api.GetActiveSheet();
 var oFill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
 var oStroke = Api.CreateStroke(0, Api.CreateNoFill());

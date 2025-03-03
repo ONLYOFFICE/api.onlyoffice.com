@@ -14,8 +14,8 @@ expression.Move(type, index);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| type | Required | [PivotMoveFieldType](../../Enumeration/PivotMoveFieldType.md) | [PivotFieldOrientationType](../../Enumeration/PivotFieldOrientationType.md) |  | The direction to move the pivot table field, or the pivot field orientation type. |
-| index | Required | number | undefined |  | The field index in a new category. |
+| type | Required | [PivotMoveFieldType](../../Enumeration/PivotMoveFieldType.md) \| [PivotFieldOrientationType](../../Enumeration/PivotFieldOrientationType.md) |  | The direction to move the pivot table field, or the pivot field orientation type. |
+| index | Required | number \| undefined |  | The field index in a new category. |
 
 ## Returns
 
@@ -23,9 +23,13 @@ This method doesn't return any data.
 
 ## Example
 
+This example shows how to move a pivot field.
 
+```javascript editor-xlsx
+// How to change the position a pivot field.
 
-```javascript
+// Create a pivot table, add data to it then move a specified pivot field by columns.
+
 var oWorksheet = Api.GetActiveSheet();
 
 oWorksheet.GetRange('B1').SetValue('Region');
