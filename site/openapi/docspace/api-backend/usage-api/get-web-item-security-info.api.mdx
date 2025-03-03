@@ -5,9 +5,9 @@ description: "Returns the availability of the module with the ID specified in th
 sidebar_label: "Get the module availability"
 hide_title: true
 hide_table_of_contents: true
-api: eJytVE1v2zAM/SuCThvg1G6WNqlv3UeLYDs1K3YogkK2mVqrYmmSnLYz/N9Hyk7mNO22wy6JTD2Sj+SjGu7FnePpDV+A97K6cyxmC8hrK/0TX0ZcG7DCS13NC57yO/DfIJt7WG8x82qlecSNsGINHizFaniFHwiXBV7JCk9G+BLPBbjcSkPx0Dinaws/amkBo3tbQ8RdXsJa8LTh/slQEOct8kLkStu18Gip6xAYHsXaKIKczMaTSXYyGWWr8Xg0mWXJ6CxPpqNpfnI8S6Znp6cAvG2XlM0ZXTlwlGCcJPS3T+q91gpExTZC1ZAyIsVGbK2LWgGTjkElMgVFxFZCuf2rQrpwh9xyXXmofCgDHn1slKA+NIflZV0+pBdxYYySeWh3/N3pvzuE2P+AJOwkOT6s9roStS+1lT+RdgC9OwRdaJvJooAup9uqgwYtXH5LEW7vgQzYX0HlPyAA+JI6vh/qCnxtK8d8CUxshFQikwqDMb0Ktr6ZD9KX4Xv+kTkDuVxJKJisgo0UA84fYR6UXKl7YQYVospSHgsj4/FRErte0/GWc9zIouVUg91stVpbhT6l9yaNY6VzoUrtfDpLzsbxgWS/0D3r3DmVt428oOZ3strvyW4aSOozGqLtcuzB+jXJtb6XENosabHIW/qg8fPFh6MLqTBFxIl7x2czpqkZJLwWQQR98Evww34OW/28pua3WP/3ePrKBxuAZEO/m35WN9QWROK0wli6efGByiKe4rZjp2kq5NA0mXBwbVXbkhmTWZIeHjfCSlrAMNbdMqZhUf9Q9Jur/gl6y8KL9CLr7RArYhTeBvzCY5gxPXTtElElyh+FQfm7i/M8B+MHLsOoy4GALz99RRTpYV8ynTj6A8V9kcgzLXW56beNXvFomk6PbbvDd1evevS17UqmAvBh+QUpxBx1
+api: eJytVMtu2zAQ/BWCpxaQLdtNgFS39IHAaE9xix4CI1hJq4iNJLIk5SQV9O/dpSTXjpOeerGpfc7uDNlJD3dOJjdyg96r5s6JWGwwa63yT3IbSW3Qgle6WecykXfof2C69lhPMeum0DKSBizU6NFyrU429EHhKieXauhkwJd0ztFlVhmuR8Y1uy3+apVFqu5ti5F0WYk1yKST/slwEect4aLIQtsaPFnaNhTGR6hNxSEAuMTl4t0szeB89r6A5SyFi2x2tlqcX6RnkBarC9n3W+7mjG4cOm6wWiz47xjUB60rhEbsoGoxEQxKzESt87ZCoZzABtIK80gUULljV65c8BG2TDceG8/lwZhKZWGH8U/HPbrTIdOhK4Hs+0ieLZanwL430PpSW/WbOnCUm2jijYPLbtl/e49soEGBcTxQAMotj35c7Rp9axsnfIkCdqAqSFVFxYQugm2c6kH5MnyvPwlnMFOFwlyoJtiYOnR+Tn2I+1KPCglyILoTGYNR8Wq+iN0ornjCHHcq7yXPYHeTaFpbUU7pvUniuNIZVKV2/kQ1X9kjhkTJg001N7zUgdnjbey3THC+kCGa9HkUNio10/peYViwYm1ztvJBZpebj3OS//zSKIpm3AOi3UpStCGwNQR6x/JX6A93ebjm51N1fxXzv6kZZ/f46GNTAQ1JYMOuu5GnG14MRRJTgZKBK3mgsEgmdOVo14ERSui6FBx+t1Xfs5maWZYdHXdgFd+CQOn+RiThtvxj6DfX4zvwVoRn4UXUE40NIwoXlL7oGFjm16bfUlRJ0idpcP/BcZllaPxBysmVZBntJXz1+RvFsi6OpTOIZDxw9RfhPNPUgIB/++iVjK4bdNn3+/jB9WrGOOF+cB6AHo4/Hqr2sA==
 sidebar_class_name: "get api-method"
-info_path: site/openapi/docspace/api-backend/usage-api/asc-files
+info_path: site/openapi/docspace/api-backend/usage-api/asc-web-api
 custom_edit_url: null
 ---
 
@@ -47,7 +47,7 @@ Returns the availability of the module with the ID specified in the request.
 </Heading>
 
 <ParamsDetails
-  parameters={[{"name":"id","in":"path","description":"Id","required":true,"schema":{"type":"string","format":"uuid","example":"58244b54-bf22-48b0-9c07-7c51807966ee"}}]}
+  parameters={[{"name":"id","in":"path","description":"Id","required":true,"schema":{"type":"string","format":"uuid","example":"aae1e103-bca5-9fa1-ba8c-42058b4abf28"}}]}
 >
   
 </ParamsDetails>
@@ -62,7 +62,7 @@ Returns the availability of the module with the ID specified in the request.
 <StatusCodes
   id={undefined}
   label={undefined}
-  responses={{"200":{"description":"Boolean value: true - module is enabled, false - module is disabled","content":{"text/plain":{"schema":{"type":"boolean"}},"application/json":{"schema":{"type":"boolean"}},"text/json":{"schema":{"type":"boolean"}}}},"401":{"description":"Unauthorized"},"403":{"description":"Forbidden"}}}
+  responses={{"200":{"description":"Boolean value: true - module is enabled, false - module is disabled","content":{"application/json":{"schema":{"type":"boolean"}}}},"401":{"description":"Unauthorized"}}}
 >
   
 </StatusCodes>

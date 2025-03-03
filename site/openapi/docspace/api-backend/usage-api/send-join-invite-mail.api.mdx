@@ -5,9 +5,9 @@ description: "Sends an invitation email with a link to the DocSpace."
 sidebar_label: "Sends an invitation email"
 hide_title: true
 hide_table_of_contents: true
-api: eJztVk1v2zAM/SuCjlsWB71sy2npx4BuK1Y0HXYIgoKxmVqtbGkS3TYI8t9H2k6rpusG7FagAZJYEkU+8j1KXmuCy6jHMz1FIlNfRpWpE4wRLjHq+UA7jwHIuPq40GMdsS6+OFMf1zeG8ASM1QMd8FeDkfZdsdLjtc5dTViTPIL31uTt9uwqulrmYl5iBfJEK4/s0y2uMCf244MEI8OBeZWN2PuDWaTA8NiswJgH48UpTx9VHYilCxVw0H7fQNeNtbCwvJVCgwONd1B5GepJUxh8P/q0gtK5Ye4qvRnovLHUBPx3wIPe8G8RoqtQEd6R3rBrKAojm8GeJhkuwUbcdX7WlVJ5CFAhYYiKE1NQVKY2DAiIR1VHj4o9YwyFDHWpTQ+GP3ExnHgj3xNXoB32TuMhueFEPPX87kPELeuJTYtZwL9S9qIoS5vtzdtX7l4Od4I6YPSujh0Ze6OR/D0G27tRsHANKTmJ2ZMCZU19rcgpPneXJlTqis9nWaES1aHLpx5yKV9yLLfN7S2YxwrZFdETCT1/MGy6JB4DnjLEqKBWRm6L1qdq5aJuDZUJ8hTpkKEyFaWT68a72CoVqORRBt5ke8NRtmUikyJ06cp1xJYRww2zyPfZWjeB9axLIj/OMutysCW7G38YfdzLnsjsm6yrbrvezMVT3gRDq6mk2LECMb+AhsqLa1wlwmVUX3mCBcoaknFqNtBSZC6+uzbYylNqd/ZwYx5tVXzfgn9omKRfUrGL86VroSSC/GwsikilEF1yN3tiK8WsoOWtR/osQbvlSS71/2e1L1ciPgbVkrTuGZ5JLdmSOW65vO+3HZ6ZHqFSNqzXC26rH8FuNjLNZQ3MzYwfbyCY7riYzTlQiVAwtSKMlj590GX07lxgibltOjZ3GmAz2O6Y5Dl6SmzTVOaJbE+/T8/ZbNG/EFV8LPBsgFt5WeLfsdbyYiUxWmG1c2ttob5suMN5vYssn98Wc2BL
+api: eJydVU1v2zAM/SuCzl5cZN1hOa1fh27rNjQddiiKgpHZWK0seRLdJgjy30fKTue2WzEsQBJ9kNTze4/yRhMsk55d6jkSWb9MqlRnmBIsMemrQocWI5AN/rTSM53QVx+D9af+3hKegXW60BF/dpjoMFRrPdtoEzyhJxlC2zprcnp5m4KXtWRqbEBGtG6Ra4bFLRriOm2Uw8jywbzLQVydBw2sPqNfUq1n03fvCt1Yv5vvFbsiiSKD5yIVJhNtK0fy8knTQ7wJsQGGNFQttO+cg4XjVIodFhpX0LQy1fN15XF9fR4WjCXtf6gDSc7EhEZvC206R13EEf6/HH00BL52VgoNKsIV6S2Xhqqykgzu24iJG3AJnxc/7ylXLURokDAmxY+ooGJyLAMC4lnTy6jSoCxDIUv54IP50eQHLiYHrZXvWajQTYai6ZjC5EAqDT44hIQ7d4xiGLOgjpja4FMv2nRvT/6egh3KKFiEjpRYiCspUM76O0VBsWFubGzULRtLdqhGdRzMvAUj9P2rn3o4+39CcOpNiJFdprL+isnpB+AiQrVWuGLWks75b1/mfwmK9WhsSjxPgpmn4inGapMCk+Mke/r+ZfZOLGcbS4rjcWUQK6yy6k9j58wOF/TKSoflJx2gPliqR6SNSZowS+yCOkiLtiHlZgJpEF1Ca8vpZK/cmaAU/numpYU5MmG8ZwPxHbDRXeSW0zVROytLFwy4ui/3FOVn2VF9ot5eSQ3TRUvruYjRWwGSuYaO6us7XI+6hfF84gXuCjauzMdhhbZS3oRwZzGzIyqf/75fTnat83g/vNqvo3Yd95occxMyqJf9wElCR/+g91OJFkobyG4bUP9VpudUja7D/9d2oE7Al60Dm62WpdoMOl8KrxzJSmdFHxv+mdosVRaUEzabBff19+i2W1lmiiPrdMnDe4i2v68ur/igmjuEZRZ7ZCn1Uf9Eby4EloS7rlf2WXNui13GgTHY0quxVyMLf/s6v+DgxfBCafh24tUID/Ky4d+Z1vJikuxstby20Q78suOLhvf7mvL5BYvnZhQ=
 sidebar_class_name: "post api-method"
-info_path: site/openapi/docspace/api-backend/usage-api/asc-files
+info_path: site/openapi/docspace/api-backend/usage-api/asc-web-api
 custom_edit_url: null
 ---
 
@@ -54,7 +54,7 @@ Sends an invitation email with a link to the DocSpace.
 
 <RequestSchema
   title={"Body"}
-  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"email":{"type":"string","description":"Email","format":"email","nullable":true,"example":"Audie70@yahoo.com"},"culture":{"type":"string","description":"Culture","nullable":true,"example":"some text"}},"additionalProperties":false,"description":"Request parameters for administrator message settings","title":"ASC.Web.Api.ApiModel.RequestsDto.AdminMessageBaseSettingsRequestsDto"}},"text/json":{"schema":{"type":"object","properties":{"email":{"type":"string","description":"Email","format":"email","nullable":true,"example":"Audie70@yahoo.com"},"culture":{"type":"string","description":"Culture","nullable":true,"example":"some text"}},"additionalProperties":false,"description":"Request parameters for administrator message settings","title":"ASC.Web.Api.ApiModel.RequestsDto.AdminMessageBaseSettingsRequestsDto"}},"application/*+json":{"schema":{"type":"object","properties":{"email":{"type":"string","description":"Email","format":"email","nullable":true,"example":"Audie70@yahoo.com"},"culture":{"type":"string","description":"Culture","nullable":true,"example":"some text"}},"additionalProperties":false,"description":"Request parameters for administrator message settings","title":"ASC.Web.Api.ApiModel.RequestsDto.AdminMessageBaseSettingsRequestsDto"}}}}}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"email":{"maxLength":255,"minLength":0,"type":"string","description":"Email","format":"email","nullable":true,"example":"Sydney_Roberts4@hotmail.com"},"culture":{"type":"string","description":"Culture","nullable":true,"example":"some text"}},"additionalProperties":false,"description":"Request parameters for administrator message settings","title":"ASC.Web.Api.ApiModel.RequestsDto.AdminMessageBaseSettingsRequestsDto"}}}}}
 >
   
 </RequestSchema>
@@ -62,7 +62,7 @@ Sends an invitation email with a link to the DocSpace.
 <StatusCodes
   id={undefined}
   label={undefined}
-  responses={{"200":{"description":"Message about sending a link to confirm joining the DocSpace","content":{"text/plain":{"schema":{}},"application/json":{"schema":{}},"text/json":{"schema":{}}}}}}
+  responses={{"200":{"description":"Message about sending a link to confirm joining the DocSpace","content":{"application/json":{"schema":{}}}},"400":{"description":"Incorrect email or email already exists"},"403":{"description":"No permissions to perform this action"},"429":{"description":"Request limit is exceeded"}}}
 >
   
 </StatusCodes>

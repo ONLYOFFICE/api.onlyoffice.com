@@ -5,9 +5,9 @@ description: "Removes files with the IDs specified in the request from the templ
 sidebar_label: "Delete template files"
 hide_title: true
 hide_table_of_contents: true
-api: eJytVMty2zAM/BUOj60bOU4OrW55ODOZ5pQ4J48nQ0uQxYYSWRJy4mr87wUoOZbz6CW96AEuAexiyVaiWgWZzuWVNhBEIuJbLkbSOvAKta2vc5nKHAwgzKByRiEBRtLD7wYCntt8I9NWZrZGqJE/lXNGZ3Fv8ivYmmMhK6FS/IUbB5RQea82lEYjVNRAux1JeFaUnhbnx5OT08WWQgjP+Nkcw3a+fP1UMk7nIThbB2CMnIzH/MohZF47LkGZzq01oGqxVqaBVKBvQOhCYAniRVShgwhNlkEIRWOo7EC/SJp01u83uuzSy9fcPmQ23PBvQfdIxp6Oj9+Su69Vg6X1+g/kMoJO3oKurF/qPIeuZoCs8RrJJnMyR8geOMPDI3CA5FQ50X8iAMjFlox3mOoWKrsmZxbRn08ayyjk9SXp5yDThYZc6DoGe0uKwtsqBrD3qzA64BGVqYB63/uZIk5hSf+JcjqZHI2TWCfBgdED+DX4ELtvvCFwiejSJDE2U6a0AdPv4x+TRL5u/YbXRbddMrOdEHese2egQzn2ZnT6J7Aba1XF/yGMPMrpM2sfNUSFeaC3+/M4PfQt4wsbs2vksDy7uzjqDvpIMreu3/WEB+qIUKWiP/ril1GrvZhFv/OA7eAG+M8z6yUZnArqMg6i7ac3Z70ISfOj5669/QxJAR4TA9t2qQLce7Pdcphqe7Yhfa6V12oZVVtQgZJ8SWPjocfRyIuO3rcZt8NwOtxxUq9O4Ha023FGx9vhADuksBiY8XJ6M51NCbjsL9PK5oz36okvWnqmUvKNzFWibWKslUbVq0atGNvVjndCw5oMrdSZpv9gRrulejNkcuixjgM/mdG7O9q28ylpucN3Sx/u6FXdoaMQ1PRfR+o5QA==
+api: eJytVMFy2jAQ/RWNzhQTkhM3EuhMpjklZHpgmIyw11iNbKnSGkI9/Ht3ZRMDaXrolIOxV29Xu+89qZGoNkFOlvKrNhBEIuK/XA2kdeAValvdZ3IiMzCAsIDSGYUEGEgPP2sIeGuzvZw0BAip144TCM5VxP2McamtECpkjHLO6DQWTX4EBjYypAWUit9w74BSlfdqT3kaoQwncU1lNuBpJbe+VNiGrsfyMPh8c3hT1DGlL6/G1zerA/248+BsFSBWH49GH9u/tdaAqsRWmRomAn0NQucCCxDvtAgdRKjTFELIa/MPg67bTWTb1M3o6mMfz5WqsbBe/4JMMipAWnuNxPiSdgnpC6+/vAIHaC6VUR87AoBcHVaXvDxCabckch6l3mks4kTElAgOUp1ryISuYrBTV+TeljGAnfTC6IBD2qYE6qy3BkWcwoK+E+V0Mh6OkrhPgieeCeC34EPsvvaGwAWimySJsakyhQ0oL5t+4BXRJkqe6UjBE/PZanhORO8kp78BW6lSZfw+hZHBuHxq7auGyC0L9diben5uHcbnNlbXyGE5fbobfof1cOo0VeO52o630ZKOhilVVL7bfhZ56omM9FzO2/Q2+s96daQgvGFCKzQ9dRlFaDrllswYIUk7PmVde71+xEGUiIBNs1YBnr05HDhMe3u2IL1ulddqHXlb0QYFeZKEY8GjOPKuHe/LgtthOJ2wqNXFiTkMjhlTOmMO/4pdndhxNn+YL+YEX3c3U2kzzvJqx7cWPSdS8vXG+dE+MdZIo6pNrTaMbauyKdgv55ZqzdO98FzHpWp/2uO519pJ+Mlz/TGjaVq/EqNHfLv0aUbH7RHNivIN9xt3F/yO
 sidebar_class_name: "delete api-method"
-info_path: site/openapi/docspace/api-backend/usage-api/asc-files
+info_path: site/openapi/docspace/api-backend/usage-api/asc-web-api
 custom_edit_url: null
 ---
 
@@ -54,7 +54,7 @@ Removes files with the IDs specified in the request from the template list.
 
 <RequestSchema
   title={"Body"}
-  body={{"content":{"application/json":{"schema":{"type":"array","items":{},"example":[1234]}},"text/json":{"schema":{"type":"array","items":{},"example":[1234]}},"application/*+json":{"schema":{"type":"array","items":{},"example":[1234]}}}}}
+  body={{"description":"File IDs","content":{"application/json":{"schema":{"type":"array","items":{"type":"integer","format":"int32"},"description":"File IDs","example":[1234]}}}}}
 >
   
 </RequestSchema>
@@ -62,7 +62,7 @@ Removes files with the IDs specified in the request from the template list.
 <StatusCodes
   id={undefined}
   label={undefined}
-  responses={{"200":{"description":"Boolean value: true if the operation is successful","content":{"text/plain":{"schema":{"type":"boolean"}},"application/json":{"schema":{"type":"boolean"}},"text/json":{"schema":{"type":"boolean"}}}},"401":{"description":"Unauthorized"},"403":{"description":"Forbidden"}}}
+  responses={{"200":{"description":"Boolean value: true if the operation is successful","content":{"application/json":{"schema":{"type":"boolean"}}}},"401":{"description":"Unauthorized"}}}
 >
   
 </StatusCodes>

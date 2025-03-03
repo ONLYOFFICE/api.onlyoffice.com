@@ -1,3 +1,8 @@
+---
+sidebar_custom_props:
+  icon: /assets/images/editor/connectors/nextcloud.svg
+---
+
 # Nextcloud integration
 
 <iframe src="https://www.youtube.com/embed/vN9v9sJ0HVw?wmode=transparent" class="video-frame" width="700px" height="400px" frameborder="0" allowfullscreen></iframe>

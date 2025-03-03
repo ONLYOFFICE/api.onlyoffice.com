@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
+import {useColorMode} from '@docusaurus/theme-common';
 
 interface OnlyOfficeEditorProps {
   fileType: string; // e.g., "docx", "xlsx", "pptx", "pdf"
@@ -73,7 +74,7 @@ const createDocumentConfig = (fileType: string): object => {
   };
 };
 
-const addScript = async (secret: string, fileType: string, code: string): Promise<void> => {
+const addScript = async (secret: string, fileType: string, code: string, theme: string): Promise<void> => {
   const scriptConfig = document.createElement("script");
   scriptConfig.type = "text/javascript";
 
@@ -82,7 +83,13 @@ const addScript = async (secret: string, fileType: string, code: string): Promis
   const config = {
     document: documentConfig,
     documentType: getDocumentType(fileType),
-    editorConfig: { callbackUrl: "", customization: { anonymous: {request: false} }}
+    editorConfig: {
+      callbackUrl: "",
+      customization: {
+        anonymous: {request: false},
+        uiTheme: theme === "dark" ? "theme-dark" : "theme-light"
+      }
+    }
   };
 
   const token = await createJWT(config, secret);
@@ -122,6 +129,7 @@ const OnlyOfficeEditor: React.FC<OnlyOfficeEditorProps> = ({
     siteConfig: {customFields},
   } = useDocusaurusContext();
 
+  const {colorMode} = useColorMode();
   const documentServer = customFields.documentServer as string;
   const documentServerSecret = customFields.documentServerSecret as string;
 
@@ -138,13 +146,13 @@ const OnlyOfficeEditor: React.FC<OnlyOfficeEditorProps> = ({
         };
         scriptApi.onload = () => {
           document.documentElement.setAttribute("data-script-api-state", "2");
-          addScript(documentServerSecret, fileType, code);
+          addScript(documentServerSecret, fileType, code, colorMode);
         };
   
         document.documentElement.setAttribute("data-script-api-state", "1");
         document.body.appendChild(scriptApi);
       } else {
-        addScript(documentServerSecret, fileType, code);
+        addScript(documentServerSecret, fileType, code, colorMode);
       }
     }
 

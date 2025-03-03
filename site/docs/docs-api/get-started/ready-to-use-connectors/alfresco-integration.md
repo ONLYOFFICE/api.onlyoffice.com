@@ -1,3 +1,8 @@
+---
+sidebar_custom_props:
+  icon: /assets/images/editor/connectors/alfresco.svg
+---
+
 # Alfresco integration
 
 This [plugin](https://github.com/ONLYOFFICE/onlyoffice-alfresco) enables users to edit office documents from [Alfresco](https://www.alfresco.com/) Share using ONLYOFFICE Docs.

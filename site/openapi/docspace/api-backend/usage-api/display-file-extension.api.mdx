@@ -1,0 +1,71 @@
+---
+id: display-file-extension
+title: "Display a file extension"
+description: "Specifies whether to display a file extension or not."
+sidebar_label: "Display a file extension"
+hide_title: true
+hide_table_of_contents: true
+api: eJydVE1v2zAM/SuCzpmdFTvl1q8BwzagaFrsUAQFYzO1WsXSJDptZvi/j5Tt1v0atl0SmSKp9/ie1GqCm6gXV/qzsRhVrpZIZGqOrWbaeQxAxtVfSr3QpYnewl4STx8I68gbeqYD/mww0pEr93rR6sLVvEeyBO+tKVKD/DZyMsdiUeEWZEV7j9zVrW+xIO7jgxxHBmPKQ5okrZ2zCHJaibEIxktPji89FmbDJeq+QqowKHKKSxWvVRw2S4kkTsoFVTs5DB9g6y23ptBg1800lKWRpmDPJjg2YCO+OnTsNjBXHgJskTBE7kyGpK8+XB5naabZsQuYHXrz3ZVoY3beV52Qy8ZOTyHddYImYPSujv0oDuZz+XsO4qifiNqBbXChhIYym8T7EY4yUWENa4slA/tXYcaZ94g+zT++BnFZQ0OVC+YXnyBZEYsmGGIjXPEpsbiW/es7lACTAsFxzwmoV93qr8QcTKdAbXiYCkfjDVJm3JC5Vk4M6pvkI6CKP3LwJj/I5rnUxXzoIx84MW/EsBPdBG8TLNdVRH6R59YVYCsX6ZXnvsmO6gu1sBhJL2WCvWTPqT+OlCF95cBM1yyQfE/TZtpI+8K5O4NpmiLN+dPtOh09O9yOZF2p2rh0xsR4P3AtjuOewq7HvTvQnO2Z0haS4gOIk3cm/JL45Gr/t1TDHIj3cs5lwgwpzb0ddLuSIXEmK8e/STsB8pZ6PPokENe07RoiXgbbdRLmkQWxHC93EIzcAPnisyr2IMsmcidp9HHP6cOFIJN0vk5JqRc3pJuNFYdFgZ7+mLuamPLs8oJz18PruOU3gIMB7uXl5N+F1vLOSnFyToq12kJ908CN5PYt0xvVyISmbup9MyyE1LhV76cAn9uspyG/QurNirbtrcrjHPP7rXcrhsGO2aLsikH/BqQNNs0=
+sidebar_class_name: "put api-method"
+info_path: site/openapi/docspace/api-backend/usage-api/asc-web-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Display a file extension"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"put"}
+  path={"/api/2.0/files/displayfileextension"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Specifies whether to display a file extension or not.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"set":{"type":"boolean","description":"Specifies whether to set the specified settings or not","example":true}},"additionalProperties":false,"description":"Settings request parameters","title":"ASC.Files.Core.ApiModels.RequestDto.SettingsRequestDto"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Boolean value: true if the parameter is enabled","content":{"application/json":{"schema":{"type":"boolean"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      
