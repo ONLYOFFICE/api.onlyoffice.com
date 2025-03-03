@@ -131,8 +131,8 @@ jobs:
           # Compress files more than 10mb manually
           echo "🔹 Find files that more than 10MB"
           BUILD_DIR="."
-          find "$BUILD_DIR" -type f \( -name *.js -o -name *.json -o -name *.htm \
-            -o -name *.html -o -name *.css -o -name *.bin -o -name *.wasm -o -name *.dic -o -name *.aff -o -name *.svg \) \
+          find "$BUILD_DIR" -type f \( -name "*.js" -o -name "*.json" -o -name "*.htm" \
+            -o -name "*.html" -o -name "*.css" -o -name "*.bin" -o -name "*.wasm" -o -name "*.dic" -o -name "*.aff" -o -name "*.svg" \) \
             -size +10M \
             | while read -r file; do
             echo "📦 Compress: $file"
