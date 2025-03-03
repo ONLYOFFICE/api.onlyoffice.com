@@ -1,6 +1,4 @@
----
-sidebar_position: 
----
+# Items list to table
 
 ## Description
 
@@ -72,7 +70,7 @@ Converts a selected list of items into a table.
 })();
 ```
 
-Methods used: GetDocument, GetAllNumberedParagraphs, GetNumbering, GetLevelIndex, GetText, CreateTable, GetCell, GetContent, GetElement, AddText
+Methods used: [GetDocument](../../../../office-api/usage-api/text-document-api/Api/Methods/GetDocument.md), [GetAllNumberedParagraphs](../../../../office-api/usage-api/text-document-api/ApiDocument/Methods/GetAllNumberedParagraphs.md), [GetNumbering](../../../../office-api/usage-api/text-document-api/ApiParagraph/Methods/GetNumbering.md), [GetLevelIndex](../../../../office-api/usage-api/text-document-api/ApiNumberingLevel/Methods/GetLevelIndex.md), [GetText](../../../../office-api/usage-api/form-api/ApiTextForm/Methods/GetText.md), [CreateTable](../../../../office-api/usage-api/text-document-api/Api/Methods/CreateTable.md), [GetCell](../../../../office-api/usage-api/text-document-api/ApiTableRow/Methods/GetCell.md), [GetContent](../../../../office-api/usage-api/text-document-api/ApiTableCell/Methods/GetContent.md), [GetElement](../../../../office-api/usage-api/text-document-api/ApiParagraph/Methods/GetElement.md), [AddText](../../../../office-api/usage-api/text-document-api/ApiRun/Methods/AddText.md)
 
 ## Reference Microsoft VBA macro code
 

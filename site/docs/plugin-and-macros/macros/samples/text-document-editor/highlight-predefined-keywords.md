@@ -31,21 +31,6 @@ Highlights predefined keywords in text document.
 
 Methods used: [GetDocument](../../../../office-api/usage-api/text-document-api/Api/Methods/GetDocument.md), [Search](../../../../office-api/usage-api/text-document-api/ApiDocument/Methods/Search.md), [SetHighlight](../../../../office-api/usage-api/text-document-api/ApiTextPr/Methods/SetHighlight.md)
 
-## Reference Microsoft VBA macro code
-
-<!-- code generated with AI -->
-
-```vb
-Sub HighlightWords()
-    Selection.Find.ClearFormatting
-    Selection.Find.Highlight = True
-    Selection.Find.Text = "example"
-    While Selection.Find.Execute
-        Selection.Range.HighlightColorIndex = wdYellow
-    Wend
-End Sub
-```
-
 ## Result
 
 <!-- imgpath -->

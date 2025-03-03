@@ -1,6 +1,4 @@
----
-sidebar_position: 
----
+# Remove custom formatting 
 
 ## Description
 
@@ -39,7 +37,7 @@ Removes all custom formatting and applies a default style.
 })();
 ```
 
-Methods used: GetDocument, CreateTextPr, SetFontSize, SetFontFamily, SetBold, SetItalic, SetHighlight, SetColor, SetUnderline, GetAllParagraphs, SetTextPr
+Methods used: [GetDocument](../../../../office-api/usage-api/text-document-api/Api/Methods/GetDocument.md), [CreateTextPr](../../../../office-api/usage-api/text-document-api/Api/Methods/CreateTextPr.md), [SetFontSize](../../../../office-api/usage-api/text-document-api/ApiTextPr/Methods/SetFontSize.md), [SetFontFamily](../../../../office-api/usage-api/text-document-api/ApiTextPr/Methods/SetFontFamily.md), [SetBold](../../../../office-api/usage-api/text-document-api/ApiTextPr/Methods/SetBold.md), [SetItalic](../../../../office-api/usage-api/text-document-api/ApiTextPr/Methods/SetItalic.md), [SetHighlight](../../../../office-api/usage-api/text-document-api/ApiTextPr/Methods/SetHighlight.md), [SetColor](../../../../office-api/usage-api/text-document-api/ApiTextPr/Methods/SetColor.md), [SetUnderline](../../../../office-api/usage-api/text-document-api/ApiTextPr/Methods/SetUnderline.md), [GetAllParagraphs](../../../../office-api/usage-api/text-document-api/ApiDocument/Methods/GetAllParagraphs.md), [SetTextPr](../../../../office-api/usage-api/text-document-api/ApiRange/Methods/SetTextPr.md)  
 
 ## Reference Microsoft VBA macro code
 
