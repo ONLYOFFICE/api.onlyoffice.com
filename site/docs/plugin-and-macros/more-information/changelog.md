@@ -8,7 +8,9 @@ The list of changes for ONLYOFFICE Plugins and Macros API.
 
 ## Version 8.3
 
+- Added the [GetSelectedContent](../interacting-with-editors/methods/text-document-api/Api/Methods/GetSelectedContent.md) method to *window\.Asc.plugin.executeMethod*.
 - Added the [ShowError](../interacting-with-editors/methods/text-document-api/Api/Methods/ShowError.md) method to *window\.Asc.plugin.executeMethod*.
+- Added the *Shd* and *Border* properties to the [ContentControlProperties](../interacting-with-editors/methods/text-document-api/Enumeration/ContentControlProperties.md) object.
 - Added the *isActivated* parameter to the [panel settings](../customization/windows-and-panels.md#creating-a-window).
 
 ## Version 8.2
