@@ -7,6 +7,7 @@
 #### Docs API
 
 * Added the editorConfig.customization.features.featuresTips parameter
+* Added opening for hwp, hwpx formats
 
 ## 4.3.0
 
