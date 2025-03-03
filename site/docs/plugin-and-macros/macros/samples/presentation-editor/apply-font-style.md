@@ -1,6 +1,4 @@
----
-sidebar_position: 
----
+# Apply font style
 
 ## Description
 
@@ -35,7 +33,7 @@ Applies a consistent font style across all the slides.
 })();
 ```
 
-Methods used: GetPresentation, GetSlidesCount, GetSlideByIndex, GetAllShapes, GetDocContent, GetAllParagraphs, SetFontFamily
+Methods used: [GetPresentation](../../../../office-api/usage-api/presentation-api/Api/Methods/GetPresentation.md), [GetSlidesCount](../../../../office-api/usage-api/presentation-api/ApiPresentation/Methods/GetSlidesCount.md), [GetSlideByIndex](../../../../office-api/usage-api/presentation-api/ApiPresentation/Methods/GetSlideByIndex.md), [GetAllShapes](../../../../office-api/usage-api/presentation-api/ApiSlide/Methods/GetAllShapes.md), [GetDocContent](../../../../office-api/usage-api/presentation-api/ApiShape/Methods/GetDocContent.md), [GetAllParagraphs](), [SetFontFamily](../../../../office-api/usage-api/presentation-api/ApiRun/Methods/SetFontFamily.md)  
 
 ## Reference Microsoft VBA macro code
 

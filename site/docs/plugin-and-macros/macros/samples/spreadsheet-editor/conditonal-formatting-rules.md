@@ -1,6 +1,4 @@
----
-sidebar_position: 
----
+# Conditional formatting rules
 
 ## Description
 
@@ -41,7 +39,7 @@ Applies multiple conditional formatting rules to the selected range.
 })();
 ```
 
-Methods used: GetSelection, CreateColorFromRGB, ForEach, GetValue, SetFillColor, AddComment
+Methods used: [GetSelection](../../../../office-api/usage-api/spreadsheet-api/Api/Methods/GetSelection.md), [CreateColorFromRGB](../../../../office-api/usage-api/spreadsheet-api/Api/Methods/CreateColorFromRGB.md), [ForEach](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/ForEach.md), [GetValue](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/GetValue.md), [SetFillColor](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/SetFillColor.md), [AddComment](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/AddComment.md)
 
 ## Result
 

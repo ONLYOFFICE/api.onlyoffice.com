@@ -1,6 +1,4 @@
----
-sidebar_position: 
----
+# Change chart type
 
 ## Description
 
@@ -23,7 +21,7 @@ Changes the chart type of all the charts in the spreadsheet.
 })();
 ```
 
-Methods used: GetActiveSheet, GetAllCharts, GetAllSeries, ChangeChartType
+Methods used: [GetActiveSheet](../../../../office-api/usage-api/spreadsheet-api/Api/Methods/GetActiveSheet.md), [GetAllCharts](../../../../office-api/usage-api/presentation-api/ApiSlide/Methods/GetAllCharts.md), [GetAllSeries](../../../../office-api/usage-api/presentation-api/ApiChart/Methods/GetAllSeries.md), [ChangeChartType](../../../../office-api/usage-api/presentation-api/ApiChartSeries/Methods/ChangeChartType.md)  
 
 ## Reference Microsoft VBA macro code
 
