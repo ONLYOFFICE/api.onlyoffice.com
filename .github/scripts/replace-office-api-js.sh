@@ -115,7 +115,7 @@ function push_changes() {
     cp -r ./office-js-api/Plugins/Slide/* ./api.onlyoffice.com/site/docs/plugin-and-macros/interacting-with-editors/methods/presentation-api/
     cp -r ./office-js-api/Plugins/Word/*  ./api.onlyoffice.com/site/docs/plugin-and-macros/interacting-with-editors/methods/text-document-api/
     
-    CHANGES=$(cd ./api.onlyoffice.com && git diff-index HEAD --)
+    CHANGES=$(cd ./api.onlyoffice.com && git diff)
     if [[ ! -z "${CHANGES}" ]]; then
       echo "${COLOR_BLUE}Changes exist, push them to api.onlyoffice.com${COLOR_RESET}"
       cd ./api.onlyoffice.com
