@@ -20,7 +20,7 @@ sidebar_label: White label
 
 定义拼写检查器设置是否显示拼写检查器设置在所有编辑器中可用。
 
-> 请注意，`features` 对象的其他字段可用于标准品牌，并在 [here](customization-standard-branding.md#features) 中描述。只有 `features.spellcheck.change` 字段需要额外付款。
+> 请注意，`features` 对象的其他字段可用于标准品牌，并在 [此处](customization-standard-branding.md#features) 中描述。只有 `features.spellcheck.change` 字段需要额外付款。
 
 类型: boolean
 

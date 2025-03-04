@@ -801,7 +801,7 @@ const review = {
 
 ### submitForm.visible
 
-定义顶部工具栏上是否显示或隐藏 **Complete & Submit** 按钮。按钮仅适用于 *pdf* 格式。 默认值为**true**。
+定义顶部工具栏上是否显示或隐藏 **Complete & Submit** 按钮。按钮仅适用于 *pdf* 格式。默认值为**true**。
 
 类型: boolean
 
