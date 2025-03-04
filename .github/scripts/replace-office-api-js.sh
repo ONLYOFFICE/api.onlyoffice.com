@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
 
-#set -eux
-
 MAIN_DIR="${GITHUB_WORKSPACE}/replace-js"
 
 # github.event_name CAN BE ACCESSED via bash variable: ${EVENT}
@@ -122,16 +120,10 @@ function push_changes() {
       echo "${COLOR_BLUE}Changes exist, push them to api.onlyoffice.com${COLOR_RESET}"
       cd ./api.onlyoffice.com
       
-      ### SHOULD BE REMOVE
-      echo "${COLOR_BLUE}Add changes via git add .${COLOR_RESET}"
       git add .
 
-      ### SHOULD BE REMOVE
-      echo "${COLOR_BLUE}Commit with git commit -m${COLOR_RESET}"     
       git commit -m "Add changes from office-js-api"
 
-      ### SHOULD BE REMOVE
-      echo "${COLOR_BLUE}Push changes with git push origin${COLOR_RESET}" 
       if [[ "${head_branch_exist}" == 'true' ]]; then
         echo "${COLOR_BLUE}Push when branch exist${COLOR_RESET}"
         git push 
@@ -140,8 +132,6 @@ function push_changes() {
         git push --set-upstream origin feature/replace-office-js-bot-${branch//\//-}
       fi
 
-      ### SHOULD BE REMOVE
-      echo "${COLOR_BLUE}Push changes with curl POST ${COLOR_RESET}"
       curl -X POST "https://${URL_PRIVATE_REPO}/api/v1/repos/ONLYOFFICE/api.onlyoffice.com/pulls"  \
            -H "Content-Type: application/json"  \
            -H "Authorization: token ${TOKEN_PRIVATE_REPO}"  \
