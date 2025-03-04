@@ -2,6 +2,9 @@
 sidebar_position: -3
 ---
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 # ONLYOFFICE Desktop Editors
 
 <iframe src="https://www.youtube.com/embed/bHTia-F0K3w?wmode=transparent" class="video-frame" width="700px" height="400px" frameborder="0" allowfullscreen></iframe>
@@ -44,9 +47,23 @@ The plugin will be added to the opened editors and all the editors you will open
 
 **Step 1.** Create a new folder in the *sdkjs-plugins* directory. The path to the folder depends on the operating system you use:
 
-- For Linux - */opt/onlyoffice/desktopeditors/editors/sdkjs-plugins/*
-- For Windows - *%ProgramFiles%\ONLYOFFICE\DesktopEditors\editors\sdkjs-plugins\\*
-- For macOS - *~/Library/Application Support/asc.onlyoffice.ONLYOFFICE/data/sdkjs-plugins/*
+<Tabs>
+  <TabItem value="win" label="Windows">
+      ``` bash
+      %ProgramFiles%\ONLYOFFICE\DesktopEditors\editors\sdkjs-plugins\
+      ```
+  </TabItem>
+  <TabItem value="mac" label="macOS">
+      ``` bash
+      ~/Library/Application Support/asc.onlyoffice.ONLYOFFICE/data/sdkjs-plugins/
+      ```
+  </TabItem>
+  <TabItem value="lin" label="Linux">
+      ``` bash
+      /opt/onlyoffice/desktopeditors/editors/sdkjs-plugins/
+      ```
+  </TabItem>
+</Tabs>
 
 **Step 2.** Use a plugin **GUID** as the folder name. You can find the plugin GUID in the *config.json* file.
 

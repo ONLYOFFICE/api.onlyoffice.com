@@ -1,3 +1,6 @@
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 # OpenFile
 
 Opens the document file which will be edited and saved afterwards.
@@ -18,19 +21,20 @@ HRESULT OpenFile([in] BSTR path, [in] BSTR params, [out, retval] VARIANT_BOOL* r
 
 ## Example
 
-### COM
-
-```cpp
-CoInitialize(NULL);
-IONLYOFFICEDocBuilder* oBuilder = NULL;
-VARIANT_BOOL b;
-oBuilder->Initialize();
-oBuilder->OpenFile("text-document.csv", "<m_nCsvTxtEncoding>46</m_nCsvTxtEncoding><m_nCsvDelimiter>4</m_nCsvDelimiter>", &b);
-oBuilder->Dispose();
-```
-
-### .docbuilder
-
-```ts
-builder.OpenFile("text-document.csv", "<m_nCsvTxtEncoding>46</m_nCsvTxtEncoding><m_nCsvDelimiter>4</m_nCsvDelimiter>")
-```
+<Tabs>
+    <TabItem value="com" label="COM">
+        ```cpp
+        CoInitialize(NULL);
+        IONLYOFFICEDocBuilder* oBuilder = NULL;
+        VARIANT_BOOL b;
+        oBuilder->Initialize();
+        oBuilder->OpenFile("text-document.csv", "<m_nCsvTxtEncoding>46</m_nCsvTxtEncoding><m_nCsvDelimiter>4</m_nCsvDelimiter>", &b);
+        oBuilder->Dispose();
+        ```
+    </TabItem>
+    <TabItem value="builder" label=".docbuilder">
+        ```ts
+        builder.OpenFile("text-document.csv", "<m_nCsvTxtEncoding>46</m_nCsvTxtEncoding><m_nCsvDelimiter>4</m_nCsvDelimiter>")
+        ```
+    </TabItem>
+</Tabs>

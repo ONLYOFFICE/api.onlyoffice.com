@@ -1,3 +1,6 @@
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 # CreateFile
 
 Creates a new file. The type of the file which will be created needs to be set.
@@ -17,19 +20,20 @@ HRESULT CreateFile([in] BSTR type, [out, retval] VARIANT_BOOL* result);
 
 ## Example
 
-### COM
-
-```cpp
-CoInitialize(NULL);
-IONLYOFFICEDocBuilder* oBuilder = NULL;
-VARIANT_BOOL b;
-oBuilder->Initialize();
-oBuilder->CreateFile(_bstr_t("docx"), &b);
-oBuilder->Dispose();
-```
-
-### .docbuilder
-
-```ts
-builder.CreateFile("docx")
-```
+<Tabs>
+    <TabItem value="com" label="COM">
+        ```cpp
+        CoInitialize(NULL);
+        IONLYOFFICEDocBuilder* oBuilder = NULL;
+        VARIANT_BOOL b;
+        oBuilder->Initialize();
+        oBuilder->CreateFile(_bstr_t("docx"), &b);
+        oBuilder->Dispose();
+        ```
+    </TabItem>
+    <TabItem value="builder" label=".docbuilder">
+        ```ts
+        builder.CreateFile("docx")
+        ```
+    </TabItem>
+</Tabs>

@@ -1,3 +1,6 @@
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 # SaveFile
 
 Saves the file after all the changes are made. The type of the file which will be saved needs to be set.
@@ -18,19 +21,20 @@ def SaveFile(self, int | str type, str path, str | None params = None);
 
 ## Example
 
-### Python
-
-``` py
-builder = docbuilder.CDocBuilder()
-dstPath = os.getcwd() + "/result.docx"
-builder.SaveFile("docx", dstPath)
-```
-
-### .docbuilder
-
-```ts
-builder.SaveFile("docx", "result.docx")
-```
+<Tabs>
+    <TabItem value="python" label="Python">
+        ``` py
+        builder = docbuilder.CDocBuilder()
+        dstPath = os.getcwd() + "/result.docx"
+        builder.SaveFile("docx", dstPath)
+        ```
+    </TabItem>
+    <TabItem value="builder" label=".docbuilder">
+        ```ts
+        builder.SaveFile("docx", "result.docx")
+        ```
+    </TabItem>
+</Tabs>
 
 ## Saving into images
 
@@ -45,14 +49,15 @@ ONLYOFFICE Document Builder allows to save your document files into image files 
 
 ## Example
 
-### Python
-
-``` py
-builder.SaveFile(OFFICESTUDIO_FILE_IMAGE, L"thumbnail.png", "<m_oThumbnail><format>4</format><aspect>1</aspect><first>false</first><width>1000</width><height>1000</height></m_oThumbnail>")
-```
-
-### .docbuilder
-
-```ts
-builder.SaveFile("image", "./thumbnail.png", "<m_oThumbnail><format>4</format><aspect>1</aspect><first>false</first><width>1000</width><height>1000</height></m_oThumbnail>")
-```
+<Tabs>
+    <TabItem value="python" label="Python">
+        ``` py
+        builder.SaveFile(OFFICESTUDIO_FILE_IMAGE, L"thumbnail.png", "<m_oThumbnail><format>4</format><aspect>1</aspect><first>false</first><width>1000</width><height>1000</height></m_oThumbnail>")
+        ```
+    </TabItem>
+    <TabItem value="builder" label=".docbuilder">
+        ```ts
+        builder.SaveFile("image", "./thumbnail.png", "<m_oThumbnail><format>4</format><aspect>1</aspect><first>false</first><width>1000</width><height>1000</height></m_oThumbnail>")
+        ```
+    </TabItem>
+</Tabs>
