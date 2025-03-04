@@ -172,3 +172,8 @@ export const WorkspaceFeatures: Features = {
     },
   ]
 }
+
+export const SamplesFeatures: Features = {
+  linkPrefix: 'samples',
+  items:[]
+}
