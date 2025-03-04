@@ -83,4 +83,4 @@ Methods used: GetPresentation, GetSlidesCount, GetSlideByIndex, GetAllDrawings, 
 
 <!-- imgpath -->
 
-![](/assets/images/plugins/auto-placeholder.png)
+![AutoPlaceholder](/assets/images/plugins/auto-placeholder.png#gh-light-mode-only)![AutoPlaceholder](/assets/images/plugins/auto-placeholder.dark.png#gh-dark-mode-only)

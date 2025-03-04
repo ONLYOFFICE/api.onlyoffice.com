@@ -42,4 +42,4 @@ Methods used: GetDocument, GetSections, RemoveHeader, RemoveFooter, GetHeader, G
 
 <!-- imgpath -->
 
-![](/assets/images/plugins/custom-header-footer-generation.md)
+![CustomHeaderFooterGeneration](/assets/images/plugins/custom-header-footer-generation.png#gh-light-mode-only)![CustomHeaderFooterGeneration](/assets/images/plugins/custom-header-footer-generation.dark.png#gh-dark-mode-only)

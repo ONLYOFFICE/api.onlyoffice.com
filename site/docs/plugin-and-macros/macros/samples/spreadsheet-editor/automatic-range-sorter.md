@@ -68,5 +68,4 @@ Methods used: GetActiveSheet, GetUsedRange, GetRange, GetSelection, GetValue, Se
 
 <!-- imgpath -->
 
-![](/assets/images/plugins/automatic-range-sorter.png)
-
+![AutomaticRangeSorter](/assets/images/plugins/automatic-range-sorter.png#gh-light-mode-only)![AutomaticRangeSorter](/assets/images/plugins/automatic-range-sorter.dark.png#gh-dark-mode-only)

@@ -57,4 +57,4 @@ End Sub
 
 <!-- imgpath -->
 
-![](/assets/images/plugins/automatic-bookmark-generation.png)
+![AutomaticBookmarkGeneration](/assets/images/plugins/automatic-bookmark-generation.png#gh-light-mode-only)![AutomaticBookmarkGeneration](/assets/images/plugins/automatic-bookmark-generation.dark.png#gh-dark-mode-only)

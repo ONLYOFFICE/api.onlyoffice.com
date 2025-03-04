@@ -65,4 +65,4 @@ Methods used: GetActiveSheet, GetRange, SetValue
 
 <!-- imgpath -->
 
-![](/assets/images/plugins/custom-average-function.png)
+![CustomAverageFunction](/assets/images/plugins/custom-average-function.png#gh-light-mode-only)![CustomAverageFunction](/assets/images/plugins/custom-average-function.dark.png#gh-dark-mode-only)

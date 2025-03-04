@@ -59,4 +59,4 @@ Methods used: GetPresentation, GetSlidesCount, GetSlideByIndex, GetWidth, GetHei
 
 <!-- imgpath -->
 
-![](/assets/images/plugins/content-alignment-tool.png)
+![ContentAlignmentTool](/assets/images/plugins/content-alignment-tool.png#gh-light-mode-only)![ContentAlignmentTool](/assets/images/plugins/content-alignment-tool.dark.png#gh-dark-mode-only)

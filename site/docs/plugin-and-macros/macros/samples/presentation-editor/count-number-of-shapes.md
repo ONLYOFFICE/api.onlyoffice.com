@@ -69,6 +69,4 @@ End Sub
 
 ## Result
 
-<!-- imgpath -->
-
-![](/assets/images/plugins/count-number-of-shapes.png)
+![CountNumberOfShapes](/assets/images/plugins/count-number-of-shapes.png#gh-light-mode-only)![CountNumberOfShapes](/assets/images/plugins/count-number-of-shapes.dark.png#gh-dark-mode-only)

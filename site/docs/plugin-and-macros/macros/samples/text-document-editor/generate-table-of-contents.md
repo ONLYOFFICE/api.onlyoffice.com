@@ -84,6 +84,4 @@ End Sub
 
 ## Result
 
-<!-- imgpath -->
-
-![](/assets/images/plugins/generate-table-of-contents.png)
+![GenerateTableOfContents](/assets/images/plugins/generate-table-of-contents.png#gh-light-mode-only)![GenerateTableOfContents](/assets/images/plugins/generate-table-of-contents.dark.png#gh-dark-mode-only)

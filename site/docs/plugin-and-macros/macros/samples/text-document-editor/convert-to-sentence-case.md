@@ -86,4 +86,4 @@ End Sub
 
 <!-- imgpath -->
 
-![](/assets/images/plugins/convert-to-sentence-case.png)
+![ConvertToSentenceCase](/assets/images/plugins/convert-to-sentence-case.png#gh-light-mode-only)![ConvertToSentenceCase](/assets/images/plugins/convert-to-sentence-case.dark.png#gh-dark-mode-only)
