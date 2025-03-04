@@ -9,7 +9,7 @@ env:
   EVENT: ${{ github.event_name }}
   REF: ${{ github.ref_name }}
   TOKEN_PUBLICK_REPO: ${{ secrets.TOKEN_PUBLICK_REPO }}
-  USER_PRIVATE_REPO: ${{ secrets.USER_PRIVATE_REPO }}
+  USER_PRIVATE_NAME: ${{ secrets.USER_PRIVATE_NAME }}
   TOKEN_PRIVATE_REPO: ${{ secrets.TOKEN_PRIVATE_REPO }} 
   URL_PRIVATE_REPO: ${{ secrets.URL_PRIVATE_REPO }} 
   
