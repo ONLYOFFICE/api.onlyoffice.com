@@ -1,0 +1,29 @@
+name: Sync office-js-api
+
+on:
+  workflow_dispatch:
+  schedule: 
+    - cron: '* 21 * * *'
+  
+env:
+  EVENT: ${{ github.event_name }}
+  REF: ${{ github.ref_name }}
+  TOKEN_PUBLICK_REPO: ${{ secrets.TOKEN_PUBLICK_REPO }}
+  USER_PRIVATE_REPO: ${{ secrets.USER_PRIVATE_REPO }}
+  TOKEN_PRIVATE_REPO: ${{ secrets.TOKEN_PRIVATE_REPO }} 
+  URL_PRIVATE_REPO: ${{ secrets.URL_PRIVATE_REPO }}
+  
+jobs:
+  sync:
+    name: "Sync"
+    runs-on: ubuntu-latest
+    steps:
+    - name: Master error handler
+      if: ( github.event_name == 'workflow_dispatch' && github.ref_name == 'master' )
+      run: echo "Can't run from master manualy" && exit 1
+
+    - name: Sync
+      shell: bash
+      run: |
+         wget https://raw.githubusercontent.com/ONLYOFFICE/api.onlyoffice.com/refs/heads/master/.github/scripts/replace-office-api-js.sh
+         bash ./replace-office-api-js.sh
