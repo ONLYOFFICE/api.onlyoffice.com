@@ -1,7 +1,5 @@
 # Unhide all rows and columns
 
-## Description
-
 Unhides all the rows and columns in the active spreadsheet.
 
 <!-- This code snippet is shown in the screenshot. -->
@@ -23,8 +21,8 @@ Unhides all the rows and columns in the active spreadsheet.
 })();
 ```
 
-Methods used: GetActiveSheet, GetRows, SetHidden, GetRange, SetValue
+Methods used: [GetActiveSheet](../../../../office-api/usage-api/spreadsheet-api/Api/Methods/GetActiveSheet.md), [GetRows](../../../../office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetRows.md), [SetHidden](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/SetValue.md), [GetRange](../../../../office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetRange.md), [SetValue](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/SetValue.md)
 
 ## Result
 
-![Unhide all rows](/assets/images/plugins/unhide-all-rows.png)
+![Unhide all rows](/assets/images/plugins/unhide-all-rows.png#gh-light-mode-only)![Unhide all rows](/assets/images/plugins/unhide-all-rows.dark.png#gh-dark-mode-only)

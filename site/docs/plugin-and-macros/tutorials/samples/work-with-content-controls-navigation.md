@@ -119,7 +119,7 @@ Repository on GitHub: [example_work_with_content_controls_navigation](https://gi
 - executeMethod ("GetAllContentControls")
 - executeMethod ("GetCurrentContentControl")
 - executeMethod ("MoveCursorToContentControl")
-- executeMethod ("PasteText")
+- [executeMethod ("PasteText")](../../interacting-with-editors/methods/text-document-api/Api/Methods/PasteText.md)
 - executeMethod ("SelectContentControl")
 
 ## Support

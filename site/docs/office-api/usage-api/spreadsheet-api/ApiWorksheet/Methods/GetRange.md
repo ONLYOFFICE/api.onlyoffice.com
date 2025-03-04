@@ -15,18 +15,22 @@ expression.GetRange(Range1, Range2);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| Range1 | Required | string | [ApiRange](../../ApiRange/ApiRange.md) |  | The range of cells from the current sheet. |
-| Range2 | Required | string | [ApiRange](../../ApiRange/ApiRange.md) |  | The range of cells from the current sheet. |
+| Range1 | Required | string \| [ApiRange](../../ApiRange/ApiRange.md) |  | The range of cells from the current sheet. |
+| Range2 | Required | string \| [ApiRange](../../ApiRange/ApiRange.md) |  | The range of cells from the current sheet. |
 
 ## Returns
 
-[ApiRange](../../ApiRange/ApiRange.md) | null
+[ApiRange](../../ApiRange/ApiRange.md) \| null
 
 ## Example
 
 This example shows how to get an object that represents the selected range of the sheet.
 
-```javascript
+```javascript editor-xlsx
+// How to get a range using address.
+
+// Get range and set its horizontal alignment.
+
 var oWorksheet = Api.GetActiveSheet();
 oWorksheet.GetRange("A2").SetValue("2");
 var oRange = oWorksheet.GetRange("A1:D5");

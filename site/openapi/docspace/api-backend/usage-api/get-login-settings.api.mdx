@@ -5,9 +5,9 @@ description: "Returns the portal login settings."
 sidebar_label: "Get login settings"
 hide_title: true
 hide_table_of_contents: true
-api: eJztVk1v2zAM/SuCzkacpT1suRXdWgxrgaIf2KEICtlmYjWypUl00s7Ifx8p22uSolh2zyGJLT+Sj49PkVuJahHk9FHeAaKuF0Gk4soudC1CvyBnibQOvEJt6++FnMoFYIQMITKRHoKzdQBK1crJeMw/BYTca8dhFLSXNJG5rRFqZCTCC6bOKF3zXchLqFRcf3VAoTZ7hhwpxHkmgroroxChcnhumz5Lh9aUdgGe4LsErtWLrppK1E2VgRd2LrAE0QS67jMFgVYYuxDEI5Fz6yuFXcKTCS3Ai6qcoRKfJienm0RmxubLe13BAcXvqRQSVFBWsS51Xr5VX2tjRAYi5oNCqDnSalOHJs8hhHljmBSJN9A8hBxpmC9vwGtb/A89EmCtNEaaSgxTFXNvq0iY+K5i/D8IEANVFJrTK3OzNba5MgESiRoZK8/uzkc/IRudOc2fa1uACaPbvu5XtKMdp9GCjLmdMzqPjkyfgz3a5mibQ2wT/2eOfjn65SC/cPbT8af3R9lDrRosrde/oZARdPIedGF9posC6ui8AHnjNb7SSUuOCvkTZ3haAi/Q4akKam1NAJCzzWxftlvAxtchKuOsRzVMajhNRxRdAVHqT2f2sMKSblLldDoZjdMBmg5MUrN3hHeah8iw8YaCS0Q3TQmYK1PagNPP4y+T9N1Ur/j5MDJmP5S44x3Wb6Kdlv8ahdj9oIVE1qqK99uwRPL7AL0n2KWGqKKu5zZGb431Qhtg+sy947Oa8FAcEa5U3Ol98kvAPd32W2nfXkoOE71vY+v9hSpH8dp+Ao/cIyFpBlHjLbl7RyRydxIkIIvNoW2bqQAP3mw2vPyrAc+GocuV8lplLMLjjEqW5CASn0cXBZZntKcd+2ClTLNPcbbllstv94RizXfH0g2gv+C8w6P6dSvr3ry62vy9ST6IaNtu5tTRgO8efRjR9zagYwO0N/8ABDWy/A==
+api: eJyVVF1P4zAQ/CuWn6OmFJ54Q3BC6EBCfOgeUIWcZNOYOrHP3rRwUf777ToJtEXouIe2rjM7O55Zp5OoVkGePsl7QNTNKohUXNuVbkQYN+QykdaBV6htc1XIU7kCjJCpRCbSQ3C2CUBUnVzM5/xTQMi9dlxGRQekicxtg9AgI5VzRuexQfoSGN7JkFdQK17hmwMisNkL5EiFzrMc1EMzhQi1w3PbDlwjWhP5CjzB92XcqFddt7Vo2joDL2wpsALRBlqPTEGgFcauhG6ourS+VjgQHi9oA15V7Qy1OFocn/SJzIzN1w+6hm80f6BWSFBBrGJb6bz66L7VxogMROSDQqgSabdtQpvnEELZGhZFFk4yvyOOPMzXt+C1Lf5HHhmwVRqjTCWmbEXpbR0Fk95NrP+nAB0uoFSt2Y0ms9aAanbR6FvoCa6KQrMYZW53Qi6VCZBI1MhYeXZ/PvsF2ezMaf7c2AJMmN2NKi/QzvamkzZk3zP7yfzo81w+NqrFynr9BwrJqAB56zW+0aWg6Qr5Mz9/XgNv0JyrgoRvCQBy2S8PLbwDbH0TokvOelRTatPgz6i6Bmo4XiSeZ4UV/UmV0+liNk8naDopSSPFztUZ/A9RYesNFVeI7jQlYK5MZQN+yvaan0zBse6J/J7v2XiV9g77nhfp+kkbiWxUHf/vwihips+tXWuI/ummtLH6c1yEZt2Dos1CEtqR2FrFGz/SXwIeeHZ4mO7j3fE9w8eDILxi6owixdQ5GteN7j/xKQlJ/kd/d6wepyGR+ymQhdFoKu26TAV49Kbveft3C56HhZYb5bXK2IanJbWsaHrIfo4tWizP6G47DmujTDt4ffAm5Kje5+XyxwNh2fv9eIYgxgWzT4+at13u/dwGBfzdJ19UdN2QPZ1rwg+PvqwYTzih2ekl3b2/1T80ZA==
 sidebar_class_name: "get api-method"
-info_path: site/openapi/docspace/api-backend/usage-api/asc-files
+info_path: site/openapi/docspace/api-backend/usage-api/asc-web-api
 custom_edit_url: null
 ---
 
@@ -28,7 +28,7 @@ import Heading from "@theme/Heading";
 
 <MethodEndpoint
   method={"get"}
-  path={"/api/2.0/settings/security/loginSettings"}
+  path={"/api/2.0/settings/security/loginsettings"}
   context={"endpoint"}
 >
   
@@ -54,7 +54,7 @@ Returns the portal login settings.
 <StatusCodes
   id={undefined}
   label={undefined}
-  responses={{"200":{"description":"Login settings","content":{"text/plain":{"schema":{"type":"object","properties":{"attemptCount":{"type":"integer","description":"Maximum number of the user attempts to log in","format":"int32","example":1234},"blockTime":{"type":"integer","description":"The time for which the user will be blocked after unsuccessful login attempts","format":"int32","example":1234},"checkPeriod":{"type":"integer","description":"The time to wait for a response from the server","format":"int32","example":1234}},"additionalProperties":false,"title":"ASC.Web.Api.ApiModels.ResponseDto.LoginSettingsDto"}},"application/json":{"schema":{"type":"object","properties":{"attemptCount":{"type":"integer","description":"Maximum number of the user attempts to log in","format":"int32","example":1234},"blockTime":{"type":"integer","description":"The time for which the user will be blocked after unsuccessful login attempts","format":"int32","example":1234},"checkPeriod":{"type":"integer","description":"The time to wait for a response from the server","format":"int32","example":1234}},"additionalProperties":false,"title":"ASC.Web.Api.ApiModels.ResponseDto.LoginSettingsDto"}},"text/json":{"schema":{"type":"object","properties":{"attemptCount":{"type":"integer","description":"Maximum number of the user attempts to log in","format":"int32","example":1234},"blockTime":{"type":"integer","description":"The time for which the user will be blocked after unsuccessful login attempts","format":"int32","example":1234},"checkPeriod":{"type":"integer","description":"The time to wait for a response from the server","format":"int32","example":1234}},"additionalProperties":false,"title":"ASC.Web.Api.ApiModels.ResponseDto.LoginSettingsDto"}}}},"401":{"description":"Unauthorized"},"403":{"description":"Forbidden"}}}
+  responses={{"200":{"description":"Login settings","content":{"application/json":{"schema":{"type":"object","properties":{"attemptCount":{"type":"integer","description":"Maximum number of the user attempts to log in","format":"int32","example":1234},"blockTime":{"type":"integer","description":"The time for which the user will be blocked after unsuccessful login attempts","format":"int32","example":1234},"checkPeriod":{"type":"integer","description":"The time to wait for a response from the server","format":"int32","example":1234},"isDefault":{"type":"boolean","example":true}},"additionalProperties":false,"title":"ASC.Web.Api.ApiModels.ResponseDto.LoginSettingsDto"}}}},"401":{"description":"Unauthorized"}}}
 >
   
 </StatusCodes>

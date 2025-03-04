@@ -1,7 +1,5 @@
 # Change font family and size
 
-## Description
-
 Changes the font family and/or size on all the slides in your presentation.
 
 <!-- This code snippet is shown in the screenshot. -->
@@ -38,7 +36,7 @@ Changes the font family and/or size on all the slides in your presentation.
 })();
 ```
 
-Methods used: GetPresentation, GetSlidesCount, GetSlideByIndex, GetAllShapes, GetDocContent, GetElementsCount, GetElement, SetFontSize, SetFontFamily
+Methods used: [GetPresentation](../../../../office-api/usage-api/presentation-api/Api/Methods/GetPresentation.md), [GetSlidesCount](../../../../office-api/usage-api/presentation-api/ApiPresentation/Methods/GetSlidesCount.md), [GetSlideByIndex](../../../../office-api/usage-api/presentation-api/ApiPresentation/Methods/GetSlideByIndex.md), [GetAllShapes](../../../../office-api/usage-api/presentation-api/ApiSlide/Methods/GetAllShapes.md), [GetDocContent](../../../../office-api/usage-api/presentation-api/ApiShape/Methods/GetDocContent.md), [GetElementsCount](../../../../office-api/usage-api/presentation-api/ApiDocumentContent/Methods/GetElementsCount.md), [GetElement](../../../../office-api/usage-api/presentation-api/ApiDocumentContent/Methods/GetElement.md), SetFontSize, SetFontFamily
 
 ## Reference Microsoft VBA macro code
 
@@ -73,4 +71,4 @@ End Sub
 
 <!-- imgpath -->
 
-![Change font family and size](/assets/images/plugins/change-font-family-and-size.png)
+![Change font family and size](/assets/images/plugins/change-font-family-and-size.png#gh-light-mode-only)![Change font family and size](/assets/images/plugins/change-font-family-and-size.dark.png#gh-dark-mode-only)

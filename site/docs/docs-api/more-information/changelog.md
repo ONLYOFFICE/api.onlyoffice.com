@@ -6,10 +6,12 @@ The list of changes of ONLYOFFICE Docs API.
 
 <!--- Added conversion from [vsdm, vsdx, vssm, vssx, vstm, vstx](../additional-api/conversion-api/conversion-tables.md#diagram-document-file-formats) formats.
 - Added the *diagram* document type to the [documentType](../usage-api/config.md#documenttype) parameter.-->
+- Added the [editorConfig.customization.features.featuresTips](../usage-api/config/editor/customization/customization-standard-branding.md#featuresfeaturestips) parameter.
+- Added the [editorConfig.customization.showHorizontalScroll](../usage-api/config/editor/customization/customization-standard-branding.md#showhorizontalscroll) and [editorConfig.customization.showVerticalScroll](../usage-api/config/editor/customization/customization-standard-branding.md#showverticalscroll) parameters.
 - Added the [editorConfig.customization.slidePlayerBackground](../usage-api/config/editor/customization/customization-standard-branding.md#slideplayerbackground) parameter.
 - Added the [editorConfig.customization.wordHeadingsColor](../usage-api/config/editor/customization/customization-standard-branding.md#wordheadingscolor) parameter.
 - Added the [editorConfig.customization.mobile.info](../usage-api/config/editor/customization/customization-standard-branding.md#mobileinfo) parameter.
-- Added opening for [pages, key, numbers](../usage-api/config/config.md#documenttype) formats.
+- Added opening for [pages, key, numbers, hwp, hwpx](../usage-api/config/config.md#documenttype) formats.
 - Added the [events.onUserActionRequired](../usage-api/config/events.md#onuseractionrequired) event.
 - Added the [refreshFile](../usage-api/methods.md#refreshfile) method.
 - Added the [events.onRequestRefreshFile](../usage-api/config/events.md#onrequestrefreshfile) event.
@@ -56,6 +58,7 @@ The list of changes of ONLYOFFICE Docs API.
 
 ## Version 8.0
 
+- Added the [document.isForm](../usage-api/config/document/document.md#isform) parameter.
 - Added the [WOPISrc](../using-wopi/key-concepts.md#wopisrc) query parameter to the requests from the browser to the server.
 - Added the [watermark](../additional-api/conversion-api/request.md#watermark) field to the conversion request.
 - Added the *pdf* document type to the [documentType](../usage-api/config/config.md#documenttype) parameter.
@@ -95,7 +98,7 @@ The list of changes of ONLYOFFICE Docs API.
 - Added the [setReferenceData](../usage-api/methods.md#setreferencedata) method.
 - Added the [events.onRequestReferenceData](../usage-api/config/events.md#onrequestreferencedata) event.
 - Added the [document.referenceData](../usage-api/config/document/document.md#referencedata) parameter.
-- Added the [UserCanNotWriteRelative](../using-wopi/wopi-rest-api/checkfileinfo.md#usercannotwriterelative) property to the *CheckFileInfo* WOPI operation.
+- Added the [UserCanNotWriteRelative](../using-wopi/wopi-rest-api/checkfileinfo.md#user-permissions-properties) property to the *CheckFileInfo* WOPI operation.
 - Added a scheme for [editing binary document formats](../using-wopi/editing-binary-documents.md).
 - Added the [convert](../using-wopi/wopi-discovery.md#wopi-actions) action to the WOPI discovery.
 - Added the [PutRelativeFile](../using-wopi/wopi-rest-api/putrelativefile.md) WOPI operation.

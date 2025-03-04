@@ -1,7 +1,5 @@
 # Highlight duplicates
 
-## Description
-
 Highlights duplicates in the selected area with different colors to recognize duplicated values quickly.
 
 <!-- This code snippet is shown in the screenshot. -->
@@ -67,7 +65,7 @@ Highlights duplicates in the selected area with different colors to recognize du
 })();
 ```
 
-Methods used: CreateColorFromRGB, GetActiveSheet, GetSelection, ForEach, GetValue, SetFillColor
+Methods used: [CreateColorFromRGB](../../../../office-api/usage-api/spreadsheet-api/Api/Methods/CreateColorFromRGB.md), [GetActiveSheet](../../../../office-api/usage-api/spreadsheet-api/Api/Methods/GetActiveSheet.md), [ForEach](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/ForEach.md), [GetValue](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/GetValue.md), [SetFillColor](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/SetFillColor.md)
 
 ## Reference Microsoft VBA macro code
 
@@ -112,4 +110,4 @@ End Sub
 
 ## Result
 
-![Highlight duplicates](/assets/images/plugins/highlight-duplicates.png)
+![Highlight duplicates](/assets/images/plugins/highlight-duplicates.png#gh-light-mode-only)![Highlight duplicates](/assets/images/plugins/highlight-duplicates.dark.png#gh-dark-mode-only)

@@ -1,7 +1,5 @@
 # Replace words in document
 
-## Description
-
 Searches for a word throughout the document and replaces it with the given replacement word.
 
 <!-- This code snippet is shown in the screenshot. -->
@@ -29,7 +27,7 @@ Searches for a word throughout the document and replaces it with the given repla
 })();
 ```
 
-Methods used: GetDocument, GetRangeBySelect, GetText, Delete, CreateParagraph, AddText, InsertContent
+Methods used: [GetDocument](../../../../office-api/usage-api/text-document-api/Api/Methods/GetDocument.md), [GetRangeBySelect](../../../../office-api/usage-api/text-document-api/ApiDocument/Methods/GetRangeBySelect.md), [GetText](../../../../office-api/usage-api/text-document-api/ApiRange/Methods/GetText.md), [Delete](../../../../office-api/usage-api/text-document-api/ApiRange/Methods/Delete.md), [CreateParagraph](../../../../office-api/usage-api/text-document-api/Api/Methods/CreateParagraph.md), [AddText](../../../../office-api/usage-api/text-document-api/ApiParagraph/Methods/AddText.md), [InsertContent](../../../../office-api/usage-api/text-document-api/ApiDocument/Methods/InsertContent.md)
 
 ## Reference Microsoft VBA macro code
 
@@ -45,4 +43,4 @@ End Sub
 
 <!-- imgpath -->
 
-![Replace Words in Document](/assets/images/plugins/replace-words-in-document.png)
+![Replace Words in Document](/assets/images/plugins/replace-words-in-document.png#gh-light-mode-only)![Replace Words in Document](/assets/images/plugins/replace-words-in-document.dark.png#gh-dark-mode-only)

@@ -13,7 +13,7 @@ This documentation describes:
 - How to [build](../structure/manifest/manifest.md), [localize](../structure/localization.md), run, [test](../tutorials/developing/for-web-editors.md) and [publish](../tutorials/publishing.md) a plugin
 - How to customize plugins: create [context menu items](../customization/context-menu.md), [toolbar buttons](../customization/toolbar.md), [windows and panels](../customization/windows-and-panels.md), [input helpers](../customization/input-helper.md), process [buttons](../customization/buttons.md)
 - How to [write](../macros/writing-macros.md), [debug](../macros/debugging.md) and run a macro, add a custom function, or [convert](../macros/converting-vba-macros.md) VBA macros to use in ONLYOFFICE
-- How to [interact with the editors](../interacting-with-editors/overview/overview.md), use ONLYOFFICE [methods](../interacting-with-editors/overview/how-to-call-methods.md) and events
+- How to [interact with the editors](../interacting-with-editors/overview/overview.md), use ONLYOFFICE [methods](../interacting-with-editors/overview/how-to-call-methods.md) and [events](../interacting-with-editors/overview/how-to-attach-events.md)
 - Where to find guides and [plugin](../tutorials/samples/samples.md)/[macro](../macros/samples/samples.md) code samples to get started
 
 ## What plugins can do

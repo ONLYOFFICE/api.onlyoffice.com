@@ -20,13 +20,13 @@ expression.AddColumns(oCell, nCount, isBefore);
 
 ## Returns
 
-This method doesn't return any data.
+[ApiTable](../../ApiTable/ApiTable.md)
 
 ## Example
 
 This example adds the new columns to the table.
 
-```javascript
+```javascript editor-docx
 let doc = Api.GetDocument();
 let tableStyle = doc.CreateStyle("CustomTableStyle", "table");
 tableStyle.SetBasedOn(doc.GetStyle("Bordered"));

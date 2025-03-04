@@ -24,7 +24,11 @@ This method doesn't return any data.
 
 This example sets the user ID to the comment author.
 
-```javascript
+```javascript editor-xlsx
+// How to change a comment author ID.
+
+// Replace a comment author ID to a new one.
+
 var oWorksheet = Api.GetActiveSheet();
 oWorksheet.GetRange("A1").SetValue("1");
 var oRange = oWorksheet.GetRange("A1");

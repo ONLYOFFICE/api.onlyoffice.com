@@ -64,4 +64,4 @@ Starting from version 8.1, the *Save Copy As* functionality is added to the WOPI
 
 When the *PutRelativeFile* operation is executed to save a copy of the current file, the *X-WOPI-FileConversion* header is not sent in the request.
 
-To restrict the *Save Copy As* functionality, set the [UserCanNotWriteRelative](./checkfileinfo.md#usercannotwriterelative) property in *CheckFileInfo* to *true*.
+To restrict the *Save Copy As* functionality, set the [UserCanNotWriteRelative](./checkfileinfo.md#user-permissions-properties) property in *CheckFileInfo* to *true*.

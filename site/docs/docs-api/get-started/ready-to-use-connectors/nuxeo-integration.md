@@ -1,3 +1,8 @@
+---
+sidebar_custom_props:
+  icon: /assets/images/editor/connectors/nuxeo.svg
+---
+
 # Nuxeo integration
 
 This [plugin](https://github.com/ONLYOFFICE/onlyoffice-nuxeo) enables users to edit office documents from [Nuxeo](https://www.nuxeo.com/) using ONLYOFFICE Docs.

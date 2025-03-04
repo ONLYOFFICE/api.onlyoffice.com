@@ -30,7 +30,7 @@ To debug ONLYOFFICE macros, follow the instructions below.
 
    > Please note that the **debugger** command will only work if the development tools are open. Otherwise, the browser will ignore it.
 
-   ![Debugger](/assets/images/plugins/debugger.png)
+   ![Debugger](/assets/images/plugins/debugger.png#gh-light-mode-only)![Debugger](/assets/images/plugins/debugger.dark.png#gh-dark-mode-only)
 
 The **debugger** command works as a breakpoint and pauses the execution at the script point where this command is inserted.
 

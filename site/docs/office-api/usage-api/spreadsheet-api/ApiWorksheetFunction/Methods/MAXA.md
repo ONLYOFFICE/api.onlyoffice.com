@@ -14,7 +14,7 @@ expression.MAXA(args);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| args | Required | number | string | boolean | [ApiRange](../../ApiRange/ApiRange.md) | array | [ApiName](../../ApiName/ApiName.md) |  | Up to 255 values (number, text, logical value) for which the largest value will be returned. The first argument is required, subsequent arguments are optional. Arguments can be numbers, logical values and text representations of numbers, names, ranges, or arrays. |
+| args | Required | number \| string \| boolean \| [ApiRange](../../ApiRange/ApiRange.md) \| array \| [ApiName](../../ApiName/ApiName.md) |  | Up to 255 values (number, text, logical value) for which the largest value will be returned. The first argument is required, subsequent arguments are optional. Arguments can be numbers, logical values and text representations of numbers, names, ranges, or arrays. |
 
 ## Returns
 
@@ -22,9 +22,13 @@ number
 
 ## Example
 
+This example shows how to return the largest value in a set of values. Does not ignore logical values and text.
 
+```javascript editor-xlsx
+// How to get a maximum from a list including text and logical values.
 
-```javascript
+// Use a function to find a maximum from a list of objects.
+
 const oWorksheet = Api.GetActiveSheet();
 var oRange = oWorksheet.GetRange("A1:A5").GetValue();
 var oFunction = Api.GetWorksheetFunction();

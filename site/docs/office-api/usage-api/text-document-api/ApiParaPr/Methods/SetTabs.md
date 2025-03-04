@@ -20,13 +20,13 @@ expression.SetTabs(aPos, aVal);
 
 ## Returns
 
-This method doesn't return any data.
+boolean
 
 ## Example
 
 This example sets a sequence of custom tab stops which will be used for any tab characters in the paragraph.
 
-```javascript
+```javascript editor-docx
 let doc = Api.GetDocument();
 let myStyle = doc.CreateStyle("My document style");
 let paraPr = myStyle.GetParaPr();

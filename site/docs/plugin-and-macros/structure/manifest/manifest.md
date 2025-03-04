@@ -45,7 +45,7 @@ Type: number
 
 Example: 2
 
-![Plugin groups](/assets/images/plugins/plugin-groups.png)
+![Plugin groups](/assets/images/plugins/plugin-groups.png#gh-light-mode-only)![Plugin groups](/assets/images/plugins/plugin-groups.dark.png#gh-dark-mode-only)
 
 ## guid
 
@@ -63,7 +63,7 @@ Type: string
 
 Example: "url_to_help_page"
 
-![Plugin help](/assets/images/plugins/plugin-help.png)
+![Plugin help](/assets/images/plugins/plugin-help.png#gh-light-mode-only)![Plugin help](/assets/images/plugins/plugin-help.dark.png#gh-dark-mode-only)
 
 ## minVersion
 
@@ -85,7 +85,7 @@ Example: "plugin name"
 
 Translations for the name field. The object keys are the two letter language codes (ru, de, it, etc.) and the values are the plugin name translation for each language.
 
-Type: localeTranslate
+Type: [localeTranslate](../../interacting-with-editors/methods/text-document-api/Enumeration/localeTranslate.md)
 
 Example: `{ "fr": "french plugin name" }`
 
@@ -161,7 +161,7 @@ Example:
 
 The list of skinnable plugin buttons used in the plugin interface. This parameter is used only for plugin windows and panels, i.e. when the [type](#variationstype) parameter is *window*, *panel*, or *panelRight*.
 
-Type: array of Button
+Type: array of [Button](../../interacting-with-editors/methods/text-document-api/Enumeration/Button.md)
 
 Example:
 
@@ -179,7 +179,7 @@ Example:
 ]
 ```
 
-![Plugin buttons](/assets/images/plugins/plugin-buttons.png)
+![Plugin buttons](/assets/images/plugins/plugin-buttons.png#gh-light-mode-only)![Plugin buttons](/assets/images/plugins/plugin-buttons.dark.png#gh-dark-mode-only)
 
 ### variations.cryptoDisabledForExternalCloud
 
@@ -227,13 +227,13 @@ Type: string
 
 Example: "plugin description"
 
-![Plugin description](/assets/images/plugins/plugin-description.png)
+![Plugin description](/assets/images/plugins/plugin-description.png#gh-light-mode-only)![Plugin description](/assets/images/plugins/plugin-description.dark.png#gh-dark-mode-only)
 
 ### variations.descriptionLocale
 
 Translations for the description field. The object keys are the two letter language codes (fr, de, it, etc.) and the values are the plugin description translation for each language.
 
-Type: localeTranslate
+Type: [localeTranslate](../../interacting-with-editors/methods/text-document-api/Enumeration/localeTranslate.md)
 
 Example:  `{ "fr": "french plugin description" }`
 
@@ -241,7 +241,7 @@ Example:  `{ "fr": "french plugin description" }`
 
 The editors which the plugin is available for (**word**, **cell**, **slide**, or **pdf**).
 
-Type: array of editorType
+Type: array of [editorType](../../interacting-with-editors/methods/text-document-api/Enumeration/editorType.md)
 
 Example:  `["word"]`
 
@@ -249,7 +249,7 @@ Example:  `["word"]`
 
 Plugin events which are used in the current plugin code. Find out how to subscribe to events [here](../../interacting-with-editors/overview/how-to-attach-events.md).
 
-Type: array of EventType
+Type: array of [EventType](../../interacting-with-editors/methods/text-document-api/Enumeration/EventType.md)
 
 Example:  `["onClick"]`
 
@@ -277,13 +277,13 @@ Type: string
 
 Example:  "text"
 
-![Init data](/assets/images/plugins/init-data.png)
+![Init data](/assets/images/plugins/init-data.png#gh-light-mode-only)![Init data](/assets/images/plugins/init-data.dark.png#gh-dark-mode-only)
 
 ### variations.initDataType
 
 The data type selected in the editor and sent to the plugin (**text**, **html**, **ole**, **desktop**, **desktop-external**, **sign**, or **none**).
 
-Type: initDataType
+Type: [initDataType](../../interacting-with-editors/methods/text-document-api/Enumeration/initDataType.md)
 
 Example:  "ole"
 
@@ -457,7 +457,7 @@ Type: array of strings
 
 Example: `["specAbilities", "work"]`
 
-![Plugin categories](/assets/images/plugins/plugin-categories.png)
+![Plugin categories](/assets/images/plugins/plugin-categories.png#gh-light-mode-only)![Plugin categories](/assets/images/plugins/plugin-categories.dark.png#gh-dark-mode-only)
 
 ### variations.store.icons
 
@@ -510,7 +510,7 @@ Type: array of strings
 
 Example: `["resources/store/screenshots/screen\_1.png"]`
 
-![Plugin screenshots](/assets/images/plugins/plugin-screenshots.png)
+![Plugin screenshots](/assets/images/plugins/plugin-screenshots.png#gh-light-mode-only)![Plugin screenshots](/assets/images/plugins/plugin-screenshots.dark.png#gh-dark-mode-only)
 
 ### variations.type
 

@@ -17,17 +17,17 @@ expression.SetLock(lockType);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| lockType | Required | "contentLocked" | "sdtContentLocked" | "sdtLocked" |  | The type of the lock applied to the block text content control. |
+| lockType | Required | "contentLocked" \| "sdtContentLocked" \| "sdtLocked" |  | The type of the lock applied to the block text content control. |
 
 ## Returns
 
-This method doesn't return any data.
+boolean
 
 ## Example
 
 This example sets the lock to the block text content control.
 
-```javascript
+```javascript editor-docx
 let doc = Api.GetDocument();
 let blockLvlSdt = Api.CreateBlockLvlSdt();
 blockLvlSdt.GetContent().GetElement(0).AddText("This is a block text content control with the content lock set to it.");

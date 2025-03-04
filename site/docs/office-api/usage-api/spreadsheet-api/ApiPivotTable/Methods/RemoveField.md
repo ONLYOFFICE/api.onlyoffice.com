@@ -14,7 +14,7 @@ expression.RemoveField(identifier);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| identifier | Required | number | string |  | The index number or name of the field. |
+| identifier | Required | number \| string |  | The index number or name of the field. |
 
 ## Returns
 
@@ -22,9 +22,13 @@ This method doesn't return any data.
 
 ## Example
 
+This example shows how to remove a field from a table using a name.
 
+```javascript editor-xlsx
+// How to delete specified fields from a table.
 
-```javascript
+// Create a pivot table, add data to it then remove a field from it.
+
 var oWorksheet = Api.GetActiveSheet();
 
 oWorksheet.GetRange('B1').SetValue('Region');

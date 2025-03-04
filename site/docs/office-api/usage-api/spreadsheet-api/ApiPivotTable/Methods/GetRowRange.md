@@ -16,13 +16,17 @@ This method doesn't have any parameters.
 
 ## Returns
 
-[ApiRange](../../ApiRange/ApiRange.md) | null
+[ApiRange](../../ApiRange/ApiRange.md) \| null
 
 ## Example
 
+This example shows how to get row range of a pivot table.
 
+```javascript editor-xlsx
+// How to get table row range.
 
-```javascript
+// Create a pivot table, add data to it then get its row range and select it.
+
 var oWorksheet = Api.GetActiveSheet();
 
 oWorksheet.GetRange('B1').SetValue('Region');

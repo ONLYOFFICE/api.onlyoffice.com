@@ -16,13 +16,17 @@ This method doesn't have any parameters.
 
 ## Returns
 
-string | number
+string \| number
 
 ## Example
 
+This example shows how to get a current page of a pivot field.
 
+```javascript editor-xlsx
+// How to get a pivot field current page.
 
-```javascript
+// Create a pivot table, add data to it then get a current page of a specified pivot field.
+
 var oWorksheet = Api.GetActiveSheet();
 
 oWorksheet.GetRange('B1').SetValue('Region');

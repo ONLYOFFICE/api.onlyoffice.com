@@ -22,7 +22,7 @@ Then close the document and open or create a new one where this variable can be 
 const oCommentsReport = GlobalVariable["CommentsReport"]
 ```
 
-The example below shows how *GlobalVariable* is used. For more information visit the ApiDocument.GetCommentsReport and ApiDocument.GetReviewReport sections.
+The example below shows how *GlobalVariable* is used. For more information visit the [ApiDocument.GetCommentsReport](../../../office-api/usage-api/text-document-api/ApiDocument/Methods/GetCommentsReport.md) and [ApiDocument.GetReviewReport](../../../office-api/usage-api/text-document-api/ApiDocument/Methods/GetReviewReport.md) sections.
 
 ## Example
 
