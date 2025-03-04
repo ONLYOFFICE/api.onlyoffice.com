@@ -17,33 +17,9 @@ The following examples will show you how to use ONLYOFFICE macros and compare th
 
 <DocCardList items={[...[...useCurrentSidebarCategory().items[1].items]]} />
 
-### Apply conditional formatting rules
-
-In this example, we are applying multiple conditional formatting rules to a selection in the spreadsheet.
-
-[More](spreadsheet-editor/conditonal-formatting-rules.md)
-
 ## Presentation editor
 
 <DocCardList items={[...[...useCurrentSidebarCategory().items[2].items]]} />
-
-### Change chart type on all slides
-
-In this example we are changing the chart type of all the charts throughout the presentation.
-
-[More](presentation-editor/remove-shapes-from-slides.md)
-
-### Apply a font style on all slides
-
-In this example we are applying a consistent font style to all the slides in the presentation.
-
-[More](presentation-editor/apply-font-style.md)
-
-### Convert all hyperlinks to qr codes
-
-In this example we are converting all the hyperlinks to qr codes in the presentation.
-
-[More](presentation-editor/hyperlinks-to-qr-codes.md)
 
 ## Support
 
