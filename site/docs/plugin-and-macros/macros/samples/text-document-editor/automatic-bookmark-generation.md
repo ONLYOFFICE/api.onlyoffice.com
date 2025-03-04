@@ -1,8 +1,4 @@
----
-sidebar_position: 
----
-
-## Description
+# Automatic bookmark generation
 
 Automatically generates bookmarks for all heading paragraphs in the document, using the heading text as the bookmark name.
 

@@ -1,8 +1,4 @@
----
-sidebar_position: 
----
-
-## Description
+# Content alignment tool
 
 Automatically aligns elements to the left and spaces them consistently.
 

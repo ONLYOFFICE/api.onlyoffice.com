@@ -1,8 +1,4 @@
----
-sidebar_position: 
----
-
-## Description
+# Sheet merger
 
 Merges data from all sheets into the active sheet by copying the used range of each sheet and appending it.
 

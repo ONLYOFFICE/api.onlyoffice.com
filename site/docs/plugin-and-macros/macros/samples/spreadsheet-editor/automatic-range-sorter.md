@@ -1,8 +1,4 @@
----
-sidebar_position:
----
-
-## Description
+# Automatic range sorter
 
 Automatically sorts a selected range or the entire used range in a spreadsheet.
 

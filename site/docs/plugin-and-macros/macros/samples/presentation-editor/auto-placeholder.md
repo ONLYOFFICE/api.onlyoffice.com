@@ -1,8 +1,4 @@
----
-sidebar_position: 
----
-
-## Description
+# Auto placeholder
 
 Automatically fills empty text boxes on slides with placeholder content and arranges texts in a structured format.
 

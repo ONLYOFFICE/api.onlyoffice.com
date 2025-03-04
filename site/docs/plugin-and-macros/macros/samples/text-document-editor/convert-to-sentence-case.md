@@ -1,8 +1,4 @@
----
-sidebar_position: 
----
-
-## Description
+# Convert to sentence case
 
 Converts a sentence into sentence case (capitalises the first letter of a sentence).
 

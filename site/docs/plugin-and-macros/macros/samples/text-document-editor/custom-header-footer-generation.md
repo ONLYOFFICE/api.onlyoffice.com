@@ -1,8 +1,4 @@
----
-sidebar_position: 
----
-
-## Description
+# Custom header footer generation
 
 Applies predefined headers and footers to all pages in the document.
 

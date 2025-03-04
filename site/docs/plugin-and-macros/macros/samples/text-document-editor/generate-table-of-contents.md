@@ -1,8 +1,4 @@
----
-sidebar_position: 
----
-
-## Description
+# Generate table of contents
 
 Generates a Table of Contents by scanning the document for headings.
 

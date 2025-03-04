@@ -1,8 +1,4 @@
----
-sidebar_position: 
----
-
-## Description
+# Custom average function
 
 Creates a custom function to calculate a weighted average.
 
