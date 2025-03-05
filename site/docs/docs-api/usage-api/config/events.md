@@ -254,7 +254,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
 The function called when the user is trying to select document for comparing by clicking the *Document from Storage* button.
 
 :::note
-This event is available only for ONLYOFFICE Enterprise Edition and ONLYOFFICE Developer Edition.
+This event is available only for ONLYOFFICE Docs Enterprise and ONLYOFFICE Docs Developer.
 :::
 :::danger[Deprecated]
 Starting from version 7.5, please use [onRequestSelectDocument](#onrequestselectdocument) instead.
@@ -730,7 +730,7 @@ The type of document selection is specified in the *data.c* parameter.
 To select a document for comparing, combining, or inserting text, you must call the [setRequestedDocument](../methods.md#setrequesteddocument) method.
 
 :::note
-This event is available only for ONLYOFFICE Enterprise Edition and ONLYOFFICE Developer Edition.
+This event is available only for ONLYOFFICE Docs Enterprise and ONLYOFFICE Docs Developer.
 :::
 
 ![onRequestSelectDocument](/assets/images/editor/onRequestSelectDocument.png)

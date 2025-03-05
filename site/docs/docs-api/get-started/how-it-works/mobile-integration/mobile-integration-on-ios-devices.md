@@ -14,7 +14,7 @@ This example demonstrates how to integrate ONLYOFFICE mobile web editors with th
 
 ### Opening ONLYOFFICE editors
 
-1. Download and install ONLYOFFICE Docs [Enterprise](https://www.onlyoffice.com/docs-enterprise.aspx) or [Developer](https://www.onlyoffice.com/developer-edition.aspx) edition.
+1. Download and install ONLYOFFICE Docs [Enterprise](https://www.onlyoffice.com/docs-enterprise.aspx) or [Developer](https://www.onlyoffice.com/developer-edition.aspx).
 
 2. Download the mobile demo sample for iOS from [GitHub](https://github.com/ONLYOFFICE/editors-webview-ios).
 
@@ -165,7 +165,7 @@ This example demonstrates how to open the ONLYOFFICE editors via WKWebView using
 
 ### Opening ONLYOFFICE editors
 
-1. Download and install ONLYOFFICE Docs [Enterprise](https://www.onlyoffice.com/docs-enterprise.aspx) or [Developer](https://www.onlyoffice.com/developer-edition.aspx) edition.
+1. Download and install ONLYOFFICE Docs [Enterprise](https://www.onlyoffice.com/docs-enterprise.aspx) or [Developer](https://www.onlyoffice.com/developer-edition.aspx).
 
 2. Download the mobile demo sample for iOS from [GitHub](https://github.com/ONLYOFFICE/editors-webview-ios).
 

@@ -14,7 +14,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config)
 
 Create the [connector](./automation-api.md) to interact with text documents, spreadsheets, presentations, and fillable forms from the outside.
 
-> This parameter is available for editing only for ONLYOFFICE Developer Edition.
+> This parameter is available for editing only for ONLYOFFICE Docs Developer.
 
   ``` ts
   docEditor.createConnector()
@@ -322,7 +322,7 @@ Where **example.com** is the name of the server where **document manager** and *
 
 Refresh data by a link to a file which is specified with the *referenceData*, *path*, or *link* parameters. This method must be called after the [onRequestReferenceData](./config/events.md#onrequestreferencedata) event.
 
-  > This parameter is available for editing only for ONLYOFFICE Developer Edition.
+  > This parameter is available for editing only for ONLYOFFICE Docs Developer.
 
   > Please note that this method is executed only when the user has permissions to the file from which the data is taken.
 
@@ -404,7 +404,7 @@ Show an error message explaining if any error occurred:
 
 Select a document for comparing, combining, or inserting text. This method must be called after the [onRequestSelectDocument](./config/events.md#onrequestselectdocument) event.
 
-> This parameter is available only for ONLYOFFICE Enterprise Edition and ONLYOFFICE Developer Edition.
+> This parameter is available only for ONLYOFFICE Docs Enterprise and ONLYOFFICE Docs Developer.
 
   ``` ts
   docEditor.setRequestedDocument({
@@ -450,7 +450,7 @@ Where **example.com** is the name of the server where **document manager** and *
 
 Select a document for comparing. This method must be called after the [onRequestCompareFile](./config/events.md#onrequestcomparefile) events. Deprecated since version 7.5, please use [setRequestedDocument](#setrequesteddocument) instead.
 
-> This parameter is available only for ONLYOFFICE Enterprise Edition and ONLYOFFICE Developer Edition.
+> This parameter is available only for ONLYOFFICE Docs Enterprise and ONLYOFFICE Docs Developer.
 
   ``` ts
   docEditor.setRevisedFile({
