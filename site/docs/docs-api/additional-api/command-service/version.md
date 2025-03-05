@@ -1,3 +1,5 @@
+# version
+
 Requests the current version number of ONLYOFFICE Docs.
 
 ## Request example

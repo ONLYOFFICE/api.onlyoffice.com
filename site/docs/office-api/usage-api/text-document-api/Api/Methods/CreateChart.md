@@ -21,7 +21,7 @@ expression.CreateChart(chartType, series, seriesNames, catNames, width, height, 
 | width | Required | [EMU](../../Enumeration/EMU.md) |  | The chart width in English measure units. |
 | height | Required | [EMU](../../Enumeration/EMU.md) |  | The chart height in English measure units. |
 | styleIndex | Required | number |  | The chart color style index (can be 1 - 48, as described in OOXML specification). |
-| numFormats | Required | [NumFormat[]](../../Enumeration/NumFormat.md) | String[] |  | Numeric formats which will be applied to the series (can be custom formats). The default numeric format is "General". |
+| numFormats | Required | [NumFormat[]](../../Enumeration/NumFormat.md) \| String[] |  | Numeric formats which will be applied to the series (can be custom formats). The default numeric format is "General". |
 
 ## Returns
 
@@ -31,7 +31,7 @@ expression.CreateChart(chartType, series, seriesNames, catNames, width, height, 
 
 This example shows how to create a chart and paste it into the document.
 
-```javascript
+```javascript editor-docx
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 let chart = Api.CreateChart("bar3D", [

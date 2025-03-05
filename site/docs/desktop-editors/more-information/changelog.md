@@ -2,6 +2,8 @@
 sidebar_position: -2
 ---
 
+# Changelog
+
 The list of changes for ONLYOFFICE Desktop Editors API.
 
 ## Version 8.1
@@ -16,7 +18,7 @@ The list of changes for ONLYOFFICE Desktop Editors API.
 
 ## Version 7.1
 
-- Added the *--ascdesktop-support-debug-info-keep* flag to [run](../usage-api/debugging/running-in-debug-mode-on-windows.md##running-the-application) the application.
+- Added the *--ascdesktop-support-debug-info-keep* flag to [run](../usage-api/debugging/running-in-debug-mode-on-windows.md#running-the-application) the application.
 
 ## Version 7.0
 

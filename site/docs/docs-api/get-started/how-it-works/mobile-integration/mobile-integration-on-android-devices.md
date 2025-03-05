@@ -1,3 +1,9 @@
+---
+sidebar_label: Android
+---
+
+# Mobile integration on Android devices
+
 In this section, we will look at the integration process via [WebView](https://developer.android.com/reference/android/webkit/WebView) using the mobile demo sample for Android which is available on [GitHub](https://github.com/ONLYOFFICE/editors-webview-android).
 
 ## Integration based on the ONLYOFFICE test sample

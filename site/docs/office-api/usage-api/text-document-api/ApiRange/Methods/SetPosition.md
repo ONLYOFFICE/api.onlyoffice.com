@@ -19,13 +19,13 @@ expression.SetPosition(nPosition);
 
 ## Returns
 
-[ApiRange](../../ApiRange/ApiRange.md) | null
+[ApiRange](../../ApiRange/ApiRange.md) \| null
 
 ## Example
 
 This example specifies the amount by which text is raised or lowered for the Range in relation to the default baseline of the surrounding non-positioned text.
 
-```javascript
+```javascript editor-docx
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 paragraph.AddText("This is just a sample text. ");

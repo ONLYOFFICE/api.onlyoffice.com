@@ -2,6 +2,8 @@
 sidebar_position: -7
 ---
 
+# APIPlugin
+
 The plugin that is provided with the origin, proxy, and prefix to make requests to the portal server.
 
 **Interface**: IApiPlugin.

@@ -2,6 +2,8 @@
 sidebar_position: -18
 ---
 
+# Action link
+
 The reference figure and the steps below explain the process of working with links in ONLYOFFICE Docs.
 
 <img alt="Action link" src="/assets/images/editor/actionLink-create.png" width="720px" />

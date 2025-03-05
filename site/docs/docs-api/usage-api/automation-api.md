@@ -2,6 +2,8 @@
 sidebar_position: -2
 ---
 
+# Automation API
+
 **Connector** is a class that allows editing text documents, spreadsheets, presentations, and fillable forms from an external source. The examples of using Automation API can be found [here](../get-started/external-access-to-the-document-editing/external-access-to-the-document-editing.md).
 
 To create the connector, use the [createConnector](./methods.md#createconnector) method of the **document editor** object:
@@ -34,7 +36,7 @@ Parameters:
 | *text*     | string                   | The item caption.                                                                                                          |
 | *data*     | string                   | The item data (this data will be sent to the click event callback).                                                        |
 | *disabled* | boolean                  | Specifies if the current item is disabled or not.                                                                          |
-| *icons*    | string                   | The item icons (see the plugins [config](../../plugin-and-macros/structure/manifest/manifest.md#icons) documentation). |
+| *icons*    | string                   | The item icons (see the plugins [config](../../plugin-and-macros/structure/manifest/manifest.md#variationsicons) documentation). |
 | *onClick*  | function                 | The click event callback.                                                                                                  |
 | *items*    | Array.\<ContextMenuItem> | An array containing the context menu items for the current item.                                                           |
 
@@ -164,7 +166,7 @@ Parameters:
 | callback | function | The result that the method returns. It is an optional parameter.                                                                                                                                                                                                                                                                                                                 |
 | isNoCalc | boolean  | Defines whether the document will be recalculated or not. The **true** value is used to recalculate the document after executing the function in the *command* parameter. The **false** value will not recalculate the document (use it only when your edits surely will not require document recalculation). The default value is **false**.                                    |
 
-This method is executed in its context isolated from other JavaScript data. If some parameters or other data need to be passed to this method, use Asc.scope object.
+This method is executed in its context isolated from other JavaScript data. If some parameters or other data need to be passed to this method, use [Asc.scope](../../plugin-and-macros/interacting-with-editors/overview/how-to-call-commands.md#ascscope-object) object.
 
 Example:
 
@@ -229,7 +231,7 @@ connector.disconnect()
 
 ## executeMethod
 
-The function called to execute certain editor methods using the connector. The full list of these methods is the same as for the plugins.
+The function called to execute certain editor methods using the connector. The full list of these methods is the same as for the plugins. It can be found [here](../../plugin-and-macros/interacting-with-editors/methods/text-document-api/Api/Api.md).
 
 Parameters:
 
@@ -265,7 +267,7 @@ Parameters:
 | text     | string                   | The item text.                                                                                                             |
 | data     | string                   | The item data (this data will be sent to the click event callback).                                                        |
 | disabled | boolean                  | Specifies if the current item is disabled or not.                                                                          |
-| icons    | string                   | The item icons (see the plugins [config](../../plugin-and-macros/structure/manifest/manifest.md#icons) documentation). |
+| icons    | string                   | The item icons (see the plugins [config](../../plugin-and-macros/structure/manifest/manifest.md#variationsicons) documentation). |
 | items    | array of ContextMenuItem | An array containing the context menu items for the current item.                                                           |
 
 Example:

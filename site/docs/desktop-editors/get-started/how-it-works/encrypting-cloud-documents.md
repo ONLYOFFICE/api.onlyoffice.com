@@ -2,6 +2,8 @@
 sidebar_position: -1
 ---
 
+# Encrypting cloud documents
+
 Online editing and collaboration have the related gaps in file security - in real-time data transfer and authorized sharing. Overcoming these limitations of previously existing individual document protection is the key objective of the encryption scheme in question.
 
 Two-layer encryption model used in ONLYOFFICE involves:

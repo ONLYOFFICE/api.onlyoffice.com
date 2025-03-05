@@ -1,3 +1,5 @@
+# Invoices
+
 ## Description
 
 Inserts template fields for invoice information.
@@ -57,7 +59,7 @@ Repository on GitHub: [invoices](https://github.com/ONLYOFFICE/sdkjs-plugins/tre
 
 - button
 - init
-- info.recalculate
+- [info.recalculate](../../interacting-with-editors/overview/how-to-call-commands.md#recalculate)
 
 ## Support
 

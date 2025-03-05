@@ -1,3 +1,5 @@
+# Work with content controls content
+
 ## Description
 
 Inserts the content of one content control into another.
@@ -99,9 +101,9 @@ Repository on GitHub: [example_work_with_content_controls_content](https://githu
 - button
 - init
 - executeMethod ("GetAllContentControls")
-- executeMethod ("PasteText")
+- [executeMethod ("PasteText")](../../interacting-with-editors/methods/text-document-api/Api/Methods/PasteText.md)
 - executeMethod ("SelectContentControl")
-- Asc.scope object
+- [Asc.scope](../../interacting-with-editors/overview/how-to-call-commands.md#ascscope-object) object
 
 ## Support
 

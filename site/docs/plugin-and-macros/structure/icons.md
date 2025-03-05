@@ -2,6 +2,8 @@
 sidebar_position: -3
 ---
 
+# Icons
+
 Plugin icon image files that are specified in the [config.json](./manifest/manifest.md#variationsicons) file as the URL to the icon. This URL allows you to set the rules for theme (name, type), state (normal, hover, active), and scaling in the following format:
 
 ``` ini

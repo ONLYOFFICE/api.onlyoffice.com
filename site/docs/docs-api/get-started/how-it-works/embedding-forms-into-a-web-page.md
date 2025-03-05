@@ -2,6 +2,8 @@
 sidebar_position: -5
 ---
 
+# Embedding forms into a web page
+
 Starting from version 7.0, ONLYOFFICE Docs offers the possibility to create, edit and collaborate on online forms, fill them out, and save forms as PDF.
 
 ONLYOFFICE forms are available in the PDF format which is intended for creating form templates from blank or any existing DOCX file and used for filling out the ready forms.

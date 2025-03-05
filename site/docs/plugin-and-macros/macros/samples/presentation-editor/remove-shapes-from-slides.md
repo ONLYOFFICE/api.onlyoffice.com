@@ -1,8 +1,4 @@
----
-sidebar_position: -5
----
-
-## Description
+# Remove shapes from slides
 
 Removes shapes from slides in a presentation.
 
@@ -22,8 +18,8 @@ Removes shapes from slides in a presentation.
 })();
 ```
 
-Methods used: GetPresentation, GetSlideByIndex, GetAllShapes
+Methods used: [GetPresentation](../../../../office-api/usage-api/presentation-api/Api/Methods/GetPresentation.md), [GetSlideByIndex](../../../../office-api/usage-api/presentation-api/ApiPresentation/Methods/GetSlideByIndex.md), [GetAllShapes](../../../../office-api/usage-api/presentation-api/ApiSlide/Methods/GetAllShapes.md)
 
 ## Result
 
-![Next blank row](/assets/images/plugins/remove-shapes.png)
+![Remove shapes](/assets/images/plugins/remove-shapes.png#gh-light-mode-only)![Remove shapes](/assets/images/plugins/remove-shapes.dark.png#gh-dark-mode-only)

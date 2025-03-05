@@ -2,6 +2,8 @@
 sidebar_position: -1
 ---
 
+# How to create a plugin step by step
+
 [ONLYOFFICE DocSpace Plugins SDK](../../get-started/basic-concepts.md) is an npm package based on TypeScript engines which provides interfaces allowing you to create your own plugins and embed them into the DocSpace portal. To illustrate how to use our Plugins SDK, we created a repository with the [plugin samples](https://github.com/ONLYOFFICE/docspace-plugins).
 
 Let's dive into the entire process of plugin development based on our plugin samples.

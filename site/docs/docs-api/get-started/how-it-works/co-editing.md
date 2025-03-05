@@ -2,6 +2,8 @@
 sidebar_position: -20
 ---
 
+# Co-editing
+
 The reference figure and the steps below explain the process of co-editing a document in ONLYOFFICE Docs.
 
 <img alt="Co-editing scheme" src="/assets/images/editor/coedit.jpg" width="720px" />
@@ -92,7 +94,7 @@ In order to open a document for editing, the config initialization requires the 
 
 Therefore, it is important that users have the same key to open the document for co-editing. The **document editing service** identifies the key of another user (or another tab/editing session for [inline editors](./inline-editors.md)) who is trying to open the document, and if that key matches the key of the file, the user is allowed to open it. If the key is different, then a new file, which is not related to other files and file versions, is opened.
 
-Once the request for saving the file is sent (the *status* value is equal to *2*) and the operation completion is successful (the response value is equal *\{"error":0\}*), this key can’t be used to open the document for editing. The editor is loaded with an [error message](../../more-information/troubleshooting.md#key). However, it can be used for viewing the document from the cache if it exists.
+Once the request for saving the file is sent (the *status* value is equal to *2*) and the operation completion is successful (the response value is equal *\{"error":0\}*), this key can’t be used to open the document for editing. The editor is loaded with an [error message](../../more-information/troubleshooting.md#the-file-version-has-been-changed). However, it can be used for viewing the document from the cache if it exists.
 
 If the user saves the document before the editing is finished (the *status* value is equal to *6*), the key can’t be changed. Otherwise, the co-editing stops. Please note that after the force saving procedure the key also can’t be changed for the new users who are just entering the current editing session.
 
@@ -179,7 +181,7 @@ If the user saves the document before the editing is finished (the *status* valu
 
    Where **example.com** is the name of the server where **document manager** and **document storage service** are installed.
 
-5. Add the script initializing another **Document Editor**. The key is not changed for the new users of the current editing session after the successful procedure of [force saving](./saving-file.md#forcesave). Therefore, *key 1* must be used to get to the same co-editing session as the users from the second and the fourth scenarios.
+5. Add the script initializing another **Document Editor**. The key is not changed for the new users of the current editing session after the successful procedure of [force saving](./saving-file.md#force-saving). Therefore, *key 1* must be used to get to the same co-editing session as the users from the second and the fourth scenarios.
 
    Close all the three editing sessions with *key 1*. All changes are successfully saved. As the document is saved, the key must be generated anew.
 
@@ -221,7 +223,7 @@ If the user saves the document before the editing is finished (the *status* valu
 
    Where **example.com** is the name of the server where **document manager** and **document storage service** are installed.
 
-7. Add the script initializing the **Document Editor** for editing the document created. *Key 1* cannot be used as it was changed after saving the file. An [error](../../more-information/troubleshooting.md#key) occurs.
+7. Add the script initializing the **Document Editor** for editing the document created. *Key 1* cannot be used as it was changed after saving the file. An [error](../../more-information/troubleshooting.md#the-file-version-has-been-changed) occurs.
 
    Close the **Document Editor**.
 

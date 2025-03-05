@@ -1,3 +1,5 @@
+# getForgottenList
+
 Requests a list of the forgotten files.
 
 ## Request example

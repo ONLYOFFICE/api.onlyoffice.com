@@ -2,6 +2,8 @@
 sidebar_position: -1
 ---
 
+# EventListenerItem
+
 Describes an item that allows the plugin to respond to the built-in DocSpace events (creating a room/file, etc.). Each event can have several listeners. When the event is activated, the dialog cannot be hooked.
 
 ## key

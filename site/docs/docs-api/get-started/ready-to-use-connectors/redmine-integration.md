@@ -1,3 +1,10 @@
+---
+sidebar_custom_props:
+  icon: /assets/images/editor/connectors/redmine.svg
+---
+
+# Redmine integration
+
 This [plugin](https://github.com/ONLYOFFICE/onlyoffice-redmine) enables users to edit attachments from [Redmine](https://www.redmine.org/) using ONLYOFFICE Docs.
 
 The plugin is available in the official [Redmine Plugins Directory](https://www.redmine.org/plugins/onlyoffice_redmine).

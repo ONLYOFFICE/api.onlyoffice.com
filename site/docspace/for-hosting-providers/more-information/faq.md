@@ -2,6 +2,8 @@
 sidebar_position: -3
 ---
 
+# FAQ
+
 ## What is the date/time format used in the response to the requests?
 
 The response to the requests uses the **Roundtrip** format: 2008-04-10T06:30:00.0000000-07:00\

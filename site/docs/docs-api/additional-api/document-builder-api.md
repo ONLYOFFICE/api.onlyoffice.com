@@ -1,3 +1,5 @@
+# Document Builder API
+
 For the interaction with the **web document builder service** the POST requests are used. The request parameters are entered in JSON format in the request body. The requests are sent to the `https://documentserver/docbuilder` address where **documentserver** is the name of the server with the ONLYOFFICE Docs installed.
 
 Starting from version 8.1, it is recommended to add the [shardkey](../get-started/how-it-works/how-it-works.md#shard-key) parameter to the URL *QueryString* with the *key* value in it. For example, *?shardkey=Khirz6zTPdfd7*. This allows you to load balance requests.
@@ -37,7 +39,7 @@ Presence: required
 
 ### token
 
-Defines the encrypted signature added to the **ONLYOFFICE Docs** config in the form of a [token](./signature/request/token-in-body.md#builder).
+Defines the encrypted signature added to the **ONLYOFFICE Docs** config in the form of a [token](./signature/request/token-in-body.md#request-to-document-builder-service).
 
 Type: string
 

@@ -1,3 +1,5 @@
+# Attach files
+
 Attaches files to a website using [File selector](../initialization-modes/file-selector.md).
 
 ![Attach files sample](/assets/images/docspace/js-sdk-attach-files.svg)

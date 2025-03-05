@@ -2,6 +2,8 @@
 sidebar_position: -8
 ---
 
+# SettingsPlugin
+
 The plugin that manages settings for the administrator or owner.
 
 **Interface**: ISettingsPlugin.

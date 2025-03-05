@@ -16,13 +16,17 @@ This method doesn't have any parameters.
 
 ## Returns
 
-string | string[][]
+string \| string[][]
 
 ## Example
 
 This example shows how to get a value of the specified range.
 
-```javascript
+```javascript editor-xlsx
+// How to get a cell value.
+
+// Get a range, get its value and show it in the worksheet.
+
 var oWorksheet = Api.GetActiveSheet();
 oWorksheet.GetRange("A1").SetValue("1");
 var sValue = oWorksheet.GetRange("A1").GetValue();

@@ -16,13 +16,17 @@ This method doesn't have any parameters.
 
 ## Returns
 
-[ApiProtectedRangeUserInfo[]](../../ApiProtectedRangeUserInfo/ApiProtectedRangeUserInfo.md) | null
+[ApiProtectedRangeUserInfo[]](../../ApiProtectedRangeUserInfo/ApiProtectedRangeUserInfo.md) \| null
 
 ## Example
 
+This example gets all users of a protected range.
 
+```javascript editor-xlsx
+// How to get an array of users of a protected range.
 
-```javascript
+// Get an active sheet, add protected range to it and diplay its first user. 
+
 var oWorksheet = Api.GetActiveSheet();
 oWorksheet.GetRange("A1").SetValue("1");
 oWorksheet.GetRange("B1").SetValue("2");

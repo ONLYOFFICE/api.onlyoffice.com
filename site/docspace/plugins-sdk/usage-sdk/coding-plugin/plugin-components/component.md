@@ -1,3 +1,5 @@
+# Component
+
 A component that is used to add components into [Box](./box.md). Only components that are embedded into DOM can be wrapped (toast, modal dialog, etc. cannot be wrapped).
 
 **Interface**: [Component](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/components/Component.ts).

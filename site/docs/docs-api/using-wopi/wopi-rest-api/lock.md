@@ -1,3 +1,5 @@
+# Lock
+
 `POST /wopi/files/(file_id)`
 
 Locks a file for editing by the WOPI client application instance that requested the [lock](../key-concepts.md#lock).

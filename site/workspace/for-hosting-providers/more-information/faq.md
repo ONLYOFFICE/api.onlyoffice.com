@@ -2,6 +2,8 @@
 sidebar_position: -3
 ---
 
+# FAQ
+
 ## What is the date/time format used in the response to the requests?
 
 The response to the requests uses the **Roundtrip** format: 2008-04-10T06:30:00.0000000-07:00\
@@ -19,7 +21,7 @@ Please note that the UTC date and time without the offset are used in this case.
 
 You can get *json* or *xml* format adding *.json* or *.xml* to the request or pointing the request *Content-Type* in application/json or text/xml.
 
-E.g.: api/2.0/people.json
+E.g.: [api/2.0/people.json](../../../openapi/workspace/api-backend/usage-api/get-profiles.api.mdx)
 
 ## Is the response data pagination supported?
 

@@ -2,6 +2,8 @@
 sidebar_position: -3
 ---
 
+# Setting avatars
+
 The reference figure and the steps below explain the process of setting the avatars for the users in ONLYOFFICE Docs.
 
 <img alt="Setting avatars" src="/assets/images/editor/avatars.png" width="720px" />
@@ -49,7 +51,7 @@ The reference figure and the steps below explain the process of setting the avat
   })
   ```
 
-4. In order to set the users' avatars, the [setUsers](../../usage-api/methods.md#setUsers) method must be called:
+4. In order to set the users' avatars, the [setUsers](../../usage-api/methods.md#setusers) method must be called:
 
   ``` ts
   docEditor.setUsers({

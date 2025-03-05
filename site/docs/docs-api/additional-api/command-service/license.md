@@ -1,3 +1,5 @@
+# license
+
 Requests the license from ONLYOFFICE Docs with information about the server and user quota.
 
 ## Request example

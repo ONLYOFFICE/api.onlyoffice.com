@@ -19,13 +19,17 @@ expression.AddComment(sText, sAuthor);
 
 ## Returns
 
-[ApiComment](../../ApiComment/ApiComment.md) | null
+[ApiComment](../../ApiComment/ApiComment.md) \| null
 
 ## Example
 
 This example adds a comment to the range.
 
-```javascript
+```javascript editor-xlsx
+// How to comment a range.
+
+// Get a range from the worksheet, add a comment to it and then show the comments text.
+
 var oWorksheet = Api.GetActiveSheet();
 var oRange = oWorksheet.GetRange("A1");
 oRange.SetValue("1");

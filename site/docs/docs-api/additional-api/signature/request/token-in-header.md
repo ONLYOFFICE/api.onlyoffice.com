@@ -1,3 +1,5 @@
+# Token in header
+
 When performing the HTTP requests from or to ONLYOFFICE Docs an authorization header with the token is added to validate the request.
 
 The `payload` for the JSON Web Token contains the following fields:

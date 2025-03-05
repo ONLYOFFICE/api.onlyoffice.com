@@ -14,10 +14,10 @@ expression.BINOM_DIST_RANGE(arg1, arg2, arg3, arg4);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| arg1 | Required | [ApiRange](../../ApiRange/ApiRange.md) | [ApiName](../../ApiName/ApiName.md) | number |  | The number of independent trials. |
-| arg2 | Required | [ApiRange](../../ApiRange/ApiRange.md) | [ApiName](../../ApiName/ApiName.md) | number |  | The probability of success on each trial. |
-| arg3 | Required | [ApiRange](../../ApiRange/ApiRange.md) | [ApiName](../../ApiName/ApiName.md) | number |  | The minimum number of successes in the trials to calculate probability for, a numeric value greater than or equal to 0. |
-| arg4 | Required | [ApiRange](../../ApiRange/ApiRange.md) | [ApiName](../../ApiName/ApiName.md) | number |  | The maximum number of successes in the trials to calculate probability for, a numeric value greater than the minimum number of successes and less than or equal to trials. |
+| arg1 | Required | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number |  | The number of independent trials. |
+| arg2 | Required | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number |  | The probability of success on each trial. |
+| arg3 | Required | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number |  | The minimum number of successes in the trials to calculate probability for, a numeric value greater than or equal to 0. |
+| arg4 | Required | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number |  | The maximum number of successes in the trials to calculate probability for, a numeric value greater than the minimum number of successes and less than or equal to trials. |
 
 ## Returns
 
@@ -25,9 +25,13 @@ number
 
 ## Example
 
+This example shows how to return the probability of a trial result using a binomial distribution.
 
+```javascript editor-xlsx
+// How to get a probability of a trial result.
 
-```javascript
+// Use function to get a probability of a trial result using binomial distribution.
+
 var oWorksheet = Api.GetActiveSheet();
 var oFunction = Api.GetWorksheetFunction();
 oWorksheet.GetRange("A1").SetValue(oFunction.BINOM_DIST_RANGE(60, 0.75, 45, 50));

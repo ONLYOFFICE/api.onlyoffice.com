@@ -1,3 +1,5 @@
+# React
+
 The ONLYOFFICE Docs React [component](https://github.com/ONLYOFFICE/document-editor-react) integrates ONLYOFFICE Docs into [React](https://react.dev/) projects.
 
 ## Prerequisites

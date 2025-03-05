@@ -2,6 +2,8 @@
 sidebar_position: -3
 ---
 
+# Working with comments
+
 Collects all the comments from the document and displays them in the custom interface.
 
 ## How it works

@@ -1,3 +1,5 @@
+# Toast
+
 Toast.
 
 **Interface**: IToast.

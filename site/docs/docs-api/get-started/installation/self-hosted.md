@@ -1,6 +1,9 @@
 ---
 sidebar_position: -1
+sidebar_label: Self-hosted
 ---
+
+# Installation - Self-hosted
 
 ONLYOFFICE Docs is available for Windows, Linux and Docker.
 

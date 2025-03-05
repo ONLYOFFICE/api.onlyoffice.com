@@ -24,7 +24,11 @@ boolean
 
 This example sets the outline to the chart title.
 
-```javascript
+```javascript editor-xlsx
+// How to outline a chart title.
+
+// Add a stroke for the chart title outline.
+
 var oWorksheet = Api.GetActiveSheet();
 oWorksheet.GetRange("B1").SetValue(2014);
 oWorksheet.GetRange("C1").SetValue(2015);

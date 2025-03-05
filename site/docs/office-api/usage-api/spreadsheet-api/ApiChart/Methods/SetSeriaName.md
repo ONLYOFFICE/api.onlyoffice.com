@@ -25,7 +25,11 @@ boolean
 
 This example sets a name to the specified series.
 
-```javascript
+```javascript editor-xlsx
+// How to name chart series.
+
+// Set seria name for a chart.
+
 var oWorksheet = Api.GetActiveSheet();
 oWorksheet.GetRange("B1").SetValue(2014);
 oWorksheet.GetRange("C1").SetValue(2015);

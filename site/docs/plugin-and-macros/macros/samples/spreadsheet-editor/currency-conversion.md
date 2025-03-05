@@ -1,4 +1,4 @@
-## Description
+# Currency conversion
 
 Converts a base currency into multiple desired target currencies. It can also fetch historical currency values for a specific date. Uses the Currency Conversion API from [currencyapi](https://app.currencyapi.com/).
 
@@ -85,10 +85,10 @@ Converts a base currency into multiple desired target currencies. It can also fe
   })();
 ```
 
-Methods used: asc_calculate, GetActiveSheet, GetRange, SetValue, AutoFit
+Methods used: [GetActiveSheet](../../../../office-api/usage-api/spreadsheet-api/Api/Methods/GetActiveSheet.md), [GetRange](../../../../office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetRange.md), [SetValue](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/SetValue.md), [AutoFit](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/AutoFit.md)
 
 ## Result
 
 <!-- imgpath -->
 
-![Currency conversion](/assets/images/plugins/currency-conversion.png)
+![Currency conversion](/assets/images/plugins/currency-conversion.png#gh-light-mode-only)![Currency conversion](/assets/images/plugins/currency-conversion.dark.png#gh-dark-mode-only)

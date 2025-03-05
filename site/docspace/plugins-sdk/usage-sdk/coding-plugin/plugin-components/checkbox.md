@@ -1,3 +1,5 @@
+# Checkbox
+
 Custom checkbox input.
 
 **Interface**: ICheckBox.

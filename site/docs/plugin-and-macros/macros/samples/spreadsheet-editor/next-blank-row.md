@@ -1,8 +1,4 @@
----
-sidebar_position: -11
----
-
-## Description
+# Next blank row
 
 Finds the next available blank row in a worksheet. This macro allows you to get the blank at the very end of your data (not between it).
 
@@ -36,7 +32,7 @@ Finds the next available blank row in a worksheet. This macro allows you to get 
 })();
 ```
 
-Methods used: GetActiveSheet, GetRangeByNumber, Select
+Methods used: [GetActiveSheet](../../../../office-api/usage-api/spreadsheet-api/Api/Methods/GetActiveSheet.md), [GetRangeByNumber](../../../../office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetRangeByNumber.md), [Select](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/Select.md)
 
 ## Reference Microsoft VBA macro code
 
@@ -50,4 +46,4 @@ End Sub
 
 ## Result
 
-![Next blank row](/assets/images/plugins/next-blank-row.png)
+![Next blank row](/assets/images/plugins/next-blank-row.png#gh-light-mode-only)![Next blank row](/assets/images/plugins/next-blank-row.dark.png#gh-dark-mode-only)

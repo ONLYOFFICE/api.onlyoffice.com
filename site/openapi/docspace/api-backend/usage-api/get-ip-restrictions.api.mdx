@@ -5,9 +5,9 @@ description: "Returns the IP portal restrictions."
 sidebar_label: "Get the IP portal restrictions"
 hide_title: true
 hide_table_of_contents: true
-api: eJztVcFu2zAM/RVD5yBO0x663IphLYL1UDTrqQgKxmZitbKlSXTWzsi/j5SczUnRYQO2Wy+JJL/3RPLRdKcINkHN7tUCiXSzCVmezW8yj4G8LkjbJqjlSFmHHmQ3L9VMbZDm7nYIGSlmOF4hi3VqOpnIX4mh8NoJhFnXOlBm18fymQMPNRJ6kSlsQ9iQsAmfKXcGdCO7UFRYQzx/cchydvWIBTHFeYmOdLpauwFGbmk2jGlaY2Bl+Ix8iyOFz1A7EyG2xkyuUruRWlt/Udbpwl5iZa1BaNSAIxIM1uUApjnsDXoVNWqgdHQ6HfLOT87PmMf5QUPzv2WfTE/PdkyHstRSODA3g8TXYALnRZpiVheLj+P5zQKL1mt64eXALRVVnDO6iJbmj8G+l/jflzj273tt/0NtRedscvJ6xNw10FJlvf6OpYqg09egS+tXuiwxuRT6S3gGdgpC8SAKD08oBzzUoOQkvjEA1XLHg/BQ6hap9TzCqEIZa856AnMw3cZM5+FW2X5uiuFAFW9ycDqfjid56Cdvrp0/nKkB/VbGooTWesOkisjN8tzYAkxlA83OJx+muTqO61qeZ4muJOx9lgtpw9Rph7n+9JKj+swH3HM8lGU/hHHXiHxh7ZPGWD7drG1kD5y71AYlfIk9xbOdihuOA64hdmcvfoX0m9odp9X9+jr8YeX7nAZfEg4jVrLrbbiXhBnJRsSCJyskUXf8DZR6C6HrVhDwzpvdTo6/tuilWXi5Ba/Ta3q/5Isq7h6uv7gXa6wuigKdtMAWTHsc2HLQKFefvjBKyn7oTPKgX4ju/lHzMlA9sizdLb+70RuMrku2c0Z7fHr0JqPPbY+OCfB7+QO1hdPG
+api: eJyVVMGO2jAQ/ZXIZ0RYFlUtN1RVK9Qe0NJVDwithmQg3nVi157QpVH+vTNx2AaqrdoLOPZ7LzPzntMogkNQ841aI5GuDiFJk+Uq8RjI64y0rYLajpR16EGelrmaqwPS0t0PISPFDMcrZLFGTScT+csxZF47gTDriw6U2P21fOLAQ4mEXmQyWxFWJGxwzuise2v6FESiUSErsARZ0ckhi9rdE2bEROelRtKxAO0GGHlXdWBMVRsDO8N75GscKXyB0pkOYktMCF9ItSO1t36Rl7oaSOysNQiVGnBEgsE6H8A0F39ArzqNEihu3U6HvA/vZ++Yx11CRcv/Zd9Mb2ct0yHPtUwGzGrQ+B5M4L5IU9fVYv1xvFytMau9phMvB56pthWd2eTmT6ceKqipsF7/xFwJKvQSHBT2JWSPcv74jLLBzkPOJf5gAKpty2m5VLtHqj37TAWK9856AnMRgTHTOQGF7cMldgIV/JCC0+l0PElDH89UO38ZvID+KNmR0mpvmFQQuXmaGpuBKWwQuaskykkSiUoKPve3lnjFBF12+eoR1/OZNzhLnFl5HsI4DSKfWfussRucrva2Yw8c+Ya78cJpRkvdsaLjVILnuNgSutz18ndIf5nbdWPN7+vzj1Pvu5Lkp84Al89ldFNsegs20jIj2YRu2NEGadVdfyS6WTOhaXYQ8MGbtpXt7zV6CQovj+B1vICbLb+o4OSwA+JcN2W1yDJ04tcRTB3HffUNELdeo3L36StjZfyXDkUv+oWon4+q01D70rpYgfy2ozcYTRPt577O+Hj0JqPv8IyW+W753v0C09DeFw==
 sidebar_class_name: "get api-method"
-info_path: site/openapi/docspace/api-backend/usage-api/asc-files
+info_path: site/openapi/docspace/api-backend/usage-api/asc-web-api
 custom_edit_url: null
 ---
 
@@ -54,7 +54,7 @@ Returns the IP portal restrictions.
 <StatusCodes
   id={undefined}
   label={undefined}
-  responses={{"200":{"description":"List of IP restrictions parameters","content":{"text/plain":{"schema":{"type":"object","properties":{"ip":{"type":"string","nullable":true,"example":"some text"},"forAdmin":{"type":"boolean","example":true},"id":{"type":"integer","format":"int32","example":8184},"tenantId":{"type":"integer","format":"int32","example":1234}},"additionalProperties":false,"title":"ASC.IPSecurity.IPRestriction"}},"application/json":{"schema":{"type":"object","properties":{"ip":{"type":"string","nullable":true,"example":"some text"},"forAdmin":{"type":"boolean","example":true},"id":{"type":"integer","format":"int32","example":8184},"tenantId":{"type":"integer","format":"int32","example":1234}},"additionalProperties":false,"title":"ASC.IPSecurity.IPRestriction"}},"text/json":{"schema":{"type":"object","properties":{"ip":{"type":"string","nullable":true,"example":"some text"},"forAdmin":{"type":"boolean","example":true},"id":{"type":"integer","format":"int32","example":8184},"tenantId":{"type":"integer","format":"int32","example":1234}},"additionalProperties":false,"title":"ASC.IPSecurity.IPRestriction"}}}},"401":{"description":"Unauthorized"},"403":{"description":"Forbidden"}}}
+  responses={{"200":{"description":"List of IP restrictions parameters","content":{"application/json":{"schema":{"type":"object","properties":{"ip":{"type":"string","nullable":true,"example":"some text"},"forAdmin":{"type":"boolean","example":true},"id":{"type":"integer","format":"int32","example":9846},"tenantId":{"type":"integer","format":"int32","example":1234}},"additionalProperties":false,"title":"ASC.IPSecurity.IPRestriction"}}}},"401":{"description":"Unauthorized"}}}
 >
   
 </StatusCodes>

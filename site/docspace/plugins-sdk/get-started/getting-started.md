@@ -2,6 +2,8 @@
 sidebar_position: -1
 ---
 
+# Getting started
+
 Here are the fundamental steps for building plugins:
 
 1. Preparing

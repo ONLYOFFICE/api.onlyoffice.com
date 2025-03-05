@@ -2,6 +2,8 @@
 sidebar_position: -4
 ---
 
+# MainButtonItem
+
 Describes an item that will be embedded in the **More** item of the main button menu. It is available only inside a room (folder) and is not available for the room list.
 
 <img alt="Main button item" src="/assets/images/docspace/main-button-plugin.png" width="400px" />

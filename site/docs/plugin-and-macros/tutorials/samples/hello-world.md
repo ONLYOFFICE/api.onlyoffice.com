@@ -1,3 +1,5 @@
+# Hello world
+
 ## Description
 
 Inserts the *Hello world!* phrase when the user presses the button.
@@ -80,9 +82,9 @@ Repository on GitHub: [helloworld](https://github.com/ONLYOFFICE/sdkjs-plugins/t
 
 - button
 - init
-- callCommand
-- Asc.scope object
-- info.recalculate
+- [callCommand](../../interacting-with-editors/methods/text-document-api/Plugin/Methods/callCommand.md)
+- [Asc.scope](../../interacting-with-editors/overview/how-to-call-commands.md#ascscope-object) object
+- [info.recalculate](../../interacting-with-editors/overview/how-to-call-commands.md#recalculate)
 
 ## Support
 

@@ -2,6 +2,8 @@
 sidebar_position: -4
 ---
 
+# Request
+
 For the interaction with the **document conversion service** the POST requests are used. The request parameters are entered in JSON format in the request body. The requests are sent to the `https://documentserver/converter` address where **documentserver** is the name of the server with the ONLYOFFICE Docs installed.
 
 > Please note that prior to version 5.5, the `https://documentserver/ConvertService.ashx` address was used to send requests.
@@ -384,7 +386,7 @@ Presence: required
 
 ### watermark
 
-Defines a JSON object containing the properties of a watermark which is inserted into the pdf and image files during conversion.
+Defines a JSON object containing the [properties](../../../plugin-and-macros/interacting-with-editors/methods/text-document-api/Enumeration/watermark_on_draw.md) of a watermark which is inserted into the pdf and image files during conversion.
 
 Type: object
 
@@ -400,7 +402,7 @@ Presence: optional
 
 #### watermark.type
 
-Defines the shape type which specifies the preset shape geometry for the current watermark.
+Defines the [shape type](../../../office-api/usage-api/text-document-api/Enumeration/ShapeType.md) which specifies the preset shape geometry for the current watermark.
 
 Type: string
 

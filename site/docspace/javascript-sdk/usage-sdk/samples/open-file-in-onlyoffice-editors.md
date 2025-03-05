@@ -1,3 +1,5 @@
+# Open file in ONLYOFFICE editors
+
 Opens a file in [ONLYOFFICE editors](../../usage-sdk/initialization-modes/editor.md) using the [file selector](../../usage-sdk/initialization-modes/file-selector.md).
 
 ![Open editors sample](/assets/images/docspace/open-editors.svg)

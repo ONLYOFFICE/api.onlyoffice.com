@@ -14,7 +14,7 @@ expression.DEVSQ(args);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| args | Required | [ApiRange](../../ApiRange/ApiRange.md) | [ApiName](../../ApiName/ApiName.md) | number | number[] |  | Up to 255 numerical values for which to find the sum of squares of deviations. The first argument is required, subsequent arguments are optional. Arguments can be numbers, names, or arrays of numbers. |
+| args | Required | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number \| number[] |  | Up to 255 numerical values for which to find the sum of squares of deviations. The first argument is required, subsequent arguments are optional. Arguments can be numbers, names, or arrays of numbers. |
 
 ## Returns
 
@@ -22,9 +22,13 @@ number
 
 ## Example
 
+This example shows how to get the sum of squares of deviations of data points from their sample mean.
 
+```javascript editor-xlsx
+// How to get sum of squares of deviations.
 
-```javascript
+// Use function to get the sum of squares of deviations of data points from their sample mean.
+
 var oWorksheet = Api.GetActiveSheet();
 var argumentsArrA = [34, 244];
 var argumentsArrB = [769, 445];
@@ -33,6 +37,7 @@ var argumentsArrD = [89, 56];
 var argumentsArrE = [98, 13];
 
 // Place the numbers in cells
+
 for (var a = 0; a < argumentsArrA.length; a++) {
     oWorksheet.GetRange("A" + (a + 1)).SetValue(argumentsArrA[a]);
 }
@@ -50,6 +55,7 @@ for (var e = 0; e < argumentsArrE.length; e++) {
 }
 
 // Analyze the range of data 
+
 var oFunction = Api.GetWorksheetFunction();
 var ans = oFunction.DEVSQ(oWorksheet.GetRange("A1:E2"));
 oWorksheet.GetRange("E3").SetValue(ans);

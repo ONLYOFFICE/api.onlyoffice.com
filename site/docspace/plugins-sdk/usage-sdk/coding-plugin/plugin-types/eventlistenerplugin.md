@@ -2,6 +2,8 @@
 sidebar_position: -2
 ---
 
+# EventListenerPlugin
+
 The plugin that is given the access to the portal events.
 
 **Interface**: IEventListenerPlugin.

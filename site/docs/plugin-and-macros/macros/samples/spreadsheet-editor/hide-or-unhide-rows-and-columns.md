@@ -1,8 +1,4 @@
----
-sidebar_position: -1
----
-
-## Description
+# Hide or unhide rows and columns
 
 Hides or unhides the specified rows and/or columns in the spreadsheet.
 
@@ -31,7 +27,7 @@ Hides or unhides the specified rows and/or columns in the spreadsheet.
 })();
 ```
 
-Methods used: GetActiveSheet, GetRange, GetRows, GetHidden, GetCols, SetHidden
+Methods used: [GetActiveSheet](../../../../office-api/usage-api/spreadsheet-api/Api/Methods/GetActiveSheet.md), [GetRange](../../../../office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetRange.md), [GetRows](../../../../office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetRows.md), [GetHidden](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/GetHidden.md), [GetCols](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/GetCols.md), [SetHidden](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/SetHidden.md)
 
 ## Reference Microsoft VBA macro code
 
@@ -48,4 +44,4 @@ End Sub
 
 <!-- imgpath -->
 
-![Hide or unhide rows and columns](/assets/images/plugins/hide-unhide-rows-columns.png)
+![Hide or unhide rows and columns](/assets/images/plugins/hide-unhide-rows-columns.png#gh-light-mode-only)![Hide or unhide rows and columns](/assets/images/plugins/hide-unhide-rows-columns.dark.png#gh-dark-mode-only)

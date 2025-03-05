@@ -1,3 +1,5 @@
+# Zotero
+
 ## Description
 
 Connects a Zotero account for adding references to the document in full accordance with the chosen style guides.
@@ -166,7 +168,7 @@ Repository on GitHub: [zotero](https://github.com/ONLYOFFICE/onlyoffice.github.i
 - button
 - init
 - onTranslate
-- executeMethod ("PasteHtml")
+- [executeMethod ("PasteHtml")](../../interacting-with-editors/methods/text-document-api/Api/Methods/PasteHtml.md)
 
 ## Support
 

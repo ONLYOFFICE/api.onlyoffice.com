@@ -2,6 +2,8 @@
 sidebar_position: -4
 ---
 
+# Spreadsheet API
+
 A spreadsheet document has a more simple structure than that of a text document, most of the spreadsheet elements are nested within the *worksheet* element with all the other elements placed on it.
 
 The *cells* can be given various values, some of the cell text properties can also be changed.

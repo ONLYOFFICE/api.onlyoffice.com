@@ -2,6 +2,8 @@
 sidebar_position: -4
 ---
 
+# MainButtonPlugin
+
 The plugin that is embedded in the main button.
 
 **Interface**: IMainButtonPlugin.

@@ -1,3 +1,10 @@
+---
+sidebar_custom_props:
+  icon: /assets/images/editor/connectors/strapi.svg
+---
+
+# Strapi integration
+
 This [plugin](https://github.com/ONLYOFFICE/onlyoffice-strapi) enables users to edit office documents from [Strapi](https://strapi.io/) using ONLYOFFICE Docs.
 
 ## Features

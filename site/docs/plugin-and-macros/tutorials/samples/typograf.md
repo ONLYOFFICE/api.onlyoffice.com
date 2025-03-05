@@ -1,3 +1,5 @@
+# Typograf
+
 ## Description
 
 Connects the [Typograf](https://github.com/typograf/typograf) assistant to prepare text for publishing by correcting typographical errors. It helps automatically place non-breaking spaces, remove extra spaces, correct minor typos, insert correct quotes, replace hyphens with dashes, and much more.
@@ -126,12 +128,12 @@ Repository on GitHub: [typograf](https://github.com/ONLYOFFICE/onlyoffice.github
 - init
 - onExternalMouseUp
 - onTranslate
-- executeMethod ("GetSelectedText")
-- executeMethod ("GetVersion")
-- executeMethod ("PasteText")
-- executeMethod ("ReplaceTextSmart")
-- Asc.scope object
-- info.editorType
+- [executeMethod ("GetSelectedText")](../../interacting-with-editors/methods/text-document-api/Api/Methods/GetSelectedText.md)
+- [executeMethod ("GetVersion")](../../interacting-with-editors/methods/text-document-api/Api/Methods/GetVersion.md)
+- [executeMethod ("PasteText")](../../interacting-with-editors/methods/text-document-api/Api/Methods/PasteText.md)
+- [executeMethod ("ReplaceTextSmart")](../../interacting-with-editors/methods/text-document-api/Api/Methods/ReplaceTextSmart.md)
+- [Asc.scope](../../interacting-with-editors/overview/how-to-call-commands.md#ascscope-object) object
+- [info.editorType](../../interacting-with-editors/overview/how-to-call-commands.md#editortype)
 
 ## Support
 

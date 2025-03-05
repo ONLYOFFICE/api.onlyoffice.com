@@ -1,3 +1,5 @@
+# Changelog
+
 The list of changes for ONLYOFFICE DocSpace API.
 
 ## Version 2.0

@@ -2,6 +2,8 @@
 sidebar_position: -2
 ---
 
+# Overview
+
 **ONLYOFFICE Desktop Editors** is an open-source office suite for working with documents stored on your computer. This application allows you to create, edit and view text documents, spreadsheets and presentations without constant connection to the Internet. Most popular formats are supported: DOCX, ODT, XLSX, ODS, CVS, PPTX, ODP, etc.
 
 This documentation describes:

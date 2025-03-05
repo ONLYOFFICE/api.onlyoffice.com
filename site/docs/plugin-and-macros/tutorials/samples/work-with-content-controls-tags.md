@@ -1,3 +1,5 @@
+# Work with content controls tags
+
 ## Description
 
 Gets the list of content controls tags.
@@ -108,7 +110,7 @@ Repository on GitHub: [https://github.com/ONLYOFFICE/sdkjs-plugins/tree/develop/
 - init
 - onMethodReturn
 - executeMethod ("GetAllContentControls")
-- executeMethod ("PasteText")
+- [executeMethod ("PasteText")](../../interacting-with-editors/methods/text-document-api/Api/Methods/PasteText.md)
 - executeMethod ("SelectContentControl")
 
 ## Support

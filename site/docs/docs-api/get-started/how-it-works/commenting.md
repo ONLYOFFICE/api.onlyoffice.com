@@ -2,6 +2,8 @@
 sidebar_position: -10
 ---
 
+# Commenting
+
 The **Comment option** allows you to leave comments on the specific words, phrases, sentences and other document parts, edit and remove these comments. All the comments will be saved and shown to other document users.
 
 ![Comment](/assets/images/editor/comment.png)

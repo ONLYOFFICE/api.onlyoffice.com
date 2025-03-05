@@ -2,6 +2,8 @@
 sidebar_position: -1
 ---
 
+# Batching
+
 The standard version of the ONLYOFFICE API is designed to make it really easy to get data for an individual object and to browse connections between objects. It also includes a limited ability to retrieve data for several objects in a single request.
 
 If your application needs the ability to access significant amounts of data in a single go - or you need to make changes to several objects at once, it is often more efficient to batch your queries rather than make multiple individual HTTP requests.

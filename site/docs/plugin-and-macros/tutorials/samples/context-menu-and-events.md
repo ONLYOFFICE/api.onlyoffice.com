@@ -1,3 +1,5 @@
+# Context menu and events
+
 ## Description
 
 Tracks the events of calling the context menu and clicking on its items. It also tracks the cursor position changes.
@@ -211,9 +213,9 @@ window.Asc.plugin.event_onTargetPositionChanged = function event_onTargetPositio
 - button
 - init
 - onTargetPositionChanged
-- attachContextMenuClickEvent
-- executeMethod ("AddContextMenuItem")
-- executeMethod ("InputText")
+- [attachContextMenuClickEvent](../../interacting-with-editors/methods/text-document-api/Plugin/Methods/attachContextMenuClickEvent.md)
+- [executeMethod ("AddContextMenuItem")](../../interacting-with-editors/methods/text-document-api/Api/Methods/AddContextMenuItem.md)
+- [executeMethod ("InputText")](../../interacting-with-editors/methods/text-document-api/Api/Methods/InputText.md)
 
 ## Support
 

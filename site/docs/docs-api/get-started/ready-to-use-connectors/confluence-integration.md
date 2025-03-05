@@ -1,3 +1,10 @@
+---
+sidebar_custom_props:
+  icon: /assets/images/editor/connectors/confluence.svg
+---
+
+# Confluence integration
+
 This [plugin](https://github.com/ONLYOFFICE/onlyoffice-confluence) enables users to edit office documents from [Confluence](https://www.atlassian.com/software/confluence/) using ONLYOFFICE Docs.
 
 The connector is available in the official [Atlassian Marketplace](https://marketplace.atlassian.com/1218214).

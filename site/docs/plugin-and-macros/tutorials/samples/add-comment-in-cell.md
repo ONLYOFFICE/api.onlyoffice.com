@@ -1,3 +1,5 @@
+# Add comment in cell
+
 ## Description
 
 Adds comments to a cell of the spreadsheet.
@@ -99,8 +101,8 @@ Repository on GitHub: [example_add_comment_in_cell](https://github.com/ONLYOFFIC
 
 - button
 - init
-- callCommand
-- Asc.scope object
+- [callCommand](../../interacting-with-editors/methods/text-document-api/Plugin/Methods/callCommand.md)
+- [Asc.scope](../../interacting-with-editors/overview/how-to-call-commands.md#ascscope-object) object
 
 ## Support
 

@@ -1,8 +1,4 @@
----
-sidebar_position: -13
----
-
-## Description
+# Add chart
 
 Adds a new chart to the selected cell range.
 
@@ -17,7 +13,7 @@ Adds a new chart to the selected cell range.
 })();
 ```
 
-Methods used: GetActiveSheet, AddChart
+Methods used: [GetActiveSheet](../../../../office-api/usage-api/spreadsheet-api/Api/Methods/GetActiveSheet.md), [AddChart](../../../../office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/AddChart.md)
 
 ## Reference Microsoft VBA macro code
 
@@ -31,4 +27,4 @@ End Sub
 
 ## Result
 
-![Chart](/assets/images/plugins/add-chart.png)
+![Chart](/assets/images/plugins/add-chart.png#gh-light-mode-only)![Chart](/assets/images/plugins/add-chart.dark.png#gh-dark-mode-only)

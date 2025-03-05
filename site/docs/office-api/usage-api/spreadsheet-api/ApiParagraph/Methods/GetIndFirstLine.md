@@ -16,13 +16,17 @@ This method doesn't have any parameters.
 
 ## Returns
 
-[twips](../../Enumeration/twips.md) | undefined
+[twips](../../Enumeration/twips.md) \| undefined
 
 ## Example
 
 This example shows how to get the paragraph first line indentation.
 
-```javascript
+```javascript editor-xlsx
+// How to get first line indent of a paragraph.
+
+// Get paragraph lines using the indent order.
+
 var oWorksheet = Api.GetActiveSheet();
 var oFill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
 var oStroke = Api.CreateStroke(0, Api.CreateNoFill());

@@ -2,6 +2,8 @@
 sidebar_position: -4
 ---
 
+# Managing versions
+
 ## Which methods can be used when working with the document history events?
 
 The document history can be shown using the [onRequestHistory](../../usage-api/config/events.md#onrequesthistory) function (with the *events.onRequestHistory* event). Unless you use them, the **Version History** menu option (**Version History** button in the **Collaboration** tab) is not shown in the ONLYOFFICE Docs interface.

@@ -2,6 +2,8 @@
 sidebar_position: -1
 ---
 
+# Error codes
+
 An [error](./response.md#error) can occur during the conversion. Below you can find possible error codes and their description.
 
 | Error code | Description                                                                                                                                                                                                                                                                               |

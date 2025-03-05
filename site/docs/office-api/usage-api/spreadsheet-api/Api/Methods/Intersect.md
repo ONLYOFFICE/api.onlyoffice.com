@@ -19,13 +19,17 @@ expression.Intersect(Range1, Range2);
 
 ## Returns
 
-[ApiRange](../../ApiRange/ApiRange.md) | null
+[ApiRange](../../ApiRange/ApiRange.md) \| null
 
 ## Example
 
 This example shows how to get the ApiRange object that represents the rectangular intersection of two or more ranges.
 
-```javascript
+```javascript editor-xlsx
+// How to find intersection of two ranges and highlight it.
+
+// Find common cells of two ranges and fill them with a color.
+
 var oWorksheet = Api.GetActiveSheet();
 var oRange1 = oWorksheet.GetRange("A1:C5");
 var oRange2 = oWorksheet.GetRange("B2:B4");

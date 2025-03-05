@@ -25,7 +25,11 @@ string[][]
 
 This example shows how to get the mail merge data.
 
-```javascript
+```javascript editor-xlsx
+// Get mail merge data from the worksheet.
+
+// How to get mail merge information using index.
+
 var oWorksheet = Api.GetActiveSheet();
 oWorksheet.SetColumnWidth(0, 20);
 oWorksheet.GetRange("A1").SetValue("Email address");

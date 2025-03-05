@@ -2,6 +2,8 @@
 sidebar_position: -4
 ---
 
+# Plugin items
+
 Each plugin type has the specific plugin items that are described in this section:
 
 | Type                                            | Description                                                                                                                                                                                                        |

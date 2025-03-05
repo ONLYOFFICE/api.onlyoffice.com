@@ -1,3 +1,5 @@
+# Request
+
 When performing the HTTP requests from or to ONLYOFFICE Docs, the token is added to the parameters to validate the data. The token can be sent:
 
 - [in body](token-in-body.md);

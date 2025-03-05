@@ -19,13 +19,13 @@ expression.attachEvent(eventName, callback);
 
 ## Returns
 
-This method doesn't return any data.
+boolean
 
 ## Example
 
 This example shows how to subscribe on hyperlink click event.
 
-```javascript
+```javascript editor-docx
 Api.attachEvent("asc_onHyperlinkClick", function() {
 	console.log("HYPERLINK!!!");
 });

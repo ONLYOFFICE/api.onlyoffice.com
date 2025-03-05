@@ -2,6 +2,8 @@
 sidebar_position: -5
 ---
 
+# Advanced parameters
+
 The parameters, which can be changed for ONLYOFFICE Docs, can be subdivided into the following main sections:
 
 [**config**](./config/config.md) - allows to change the platform type used, document display size (width and height) and type of the document opened;
@@ -25,6 +27,7 @@ The complete *config* with all the additional parameters looks the following way
 const config = {
   document: {
     fileType: "docx",
+    isForm: true,
     info: {
       favorite: true,
       folder: "Example Files",
@@ -107,6 +110,7 @@ const config = {
         www: "example.com",
       },
       features: {
+        featuresTips: true,
         roles: true,
         spellcheck: {
           mode: true,
@@ -207,6 +211,8 @@ const config = {
         trackChanges: true,
         hoverMode: false,
       },
+      showHorizontalScroll: true,
+      showVerticalScroll: true,
       slidePlayerBackground: "#000000",
       submitForm: {
         visible: true,

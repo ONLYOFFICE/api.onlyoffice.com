@@ -2,6 +2,8 @@
 sidebar_position: -6
 ---
 
+# Integrating
+
 ## Where can I find integration examples for ONLYOFFICE Docs?
 
 The examples of integration of ONLYOFFICE Docs with your own website can be found [here](../../get-started/language-specific-examples/language-specific-examples.md). You can choose among different web development programming languages:

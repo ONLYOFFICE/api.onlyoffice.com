@@ -2,6 +2,8 @@
 sidebar_position: -1
 ---
 
+# Encryption
+
 Starting from version 5.6, ONLYOFFICE Desktop Editors offers support for Private Rooms, secure workspace where every symbol you type is encrypted end-to-end even if you co-edit documents in real time. Using ONLYOFFICE Desktop Editors makes it possible to encrypt and decrypt the data on the client, ensuring endpoint security.
 
 ## Processing desktop editors commands

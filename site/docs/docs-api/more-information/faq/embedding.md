@@ -2,6 +2,8 @@
 sidebar_position: -9
 ---
 
+# Embedding
+
 ## How to embed a document to a web site?
 
 There are three main appearances of the editors, optimized for different use:

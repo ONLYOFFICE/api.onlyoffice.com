@@ -2,6 +2,8 @@
 sidebar_position: -22
 ---
 
+# Opening file
+
 The reference figure and the steps below explain the process of opening a document in ONLYOFFICE Docs.
 
 ![Opening File](/assets/images/editor/opening.svg)

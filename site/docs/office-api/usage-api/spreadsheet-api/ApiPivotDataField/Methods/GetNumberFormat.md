@@ -16,13 +16,17 @@ This method doesn't have any parameters.
 
 ## Returns
 
-string | null
+string \| null
 
 ## Example
 
+This example shows how to get a number format of a data field.
 
+```javascript editor-xlsx
+// How to get a table element format.
 
-```javascript
+// Create a pivot table, add data to it then display a custom data field's number format.
+
 var oWorksheet = Api.GetActiveSheet();
 
 oWorksheet.GetRange('B1').SetValue('Region');

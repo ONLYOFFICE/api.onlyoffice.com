@@ -2,6 +2,8 @@
 sidebar_position: -6
 ---
 
+# ContextMenuPlugin
+
 The plugin that is embedded in the context menu of files, folders, rooms, images, video (audio).
 
 **Interface**: IContextMenuPlugin.

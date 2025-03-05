@@ -2,6 +2,8 @@
 sidebar_position: -1
 ---
 
+# Ruby example
+
 ## Introduction
 
 To integrate **ONLYOFFICE Document Builder** into your own application on **Ruby** you need to download and install **ONLYOFFICE Document Builder** to your computer and use the [Ruby example](./overview.md) for the integration. We will show how to run the Ruby example on Linux OS.

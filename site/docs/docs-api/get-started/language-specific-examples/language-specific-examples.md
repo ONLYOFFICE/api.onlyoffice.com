@@ -2,6 +2,8 @@
 sidebar_position: -5
 ---
 
+# Language-specific examples
+
 With ONLYOFFICE Docs, any of collaborative solutions can be enhanced with document editing and co-editing. In this section, you will learn how to integrate ONLYOFFICE Docs into your own website.
 
 Each ONLYOFFICE Docs instance includes online editors for text documents, spreadsheets, presentations, and fillable forms, plus a test example.

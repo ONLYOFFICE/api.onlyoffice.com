@@ -1,3 +1,5 @@
+# Button
+
 A component that is used for an action on a page.
 
 **Interface**: IButton.

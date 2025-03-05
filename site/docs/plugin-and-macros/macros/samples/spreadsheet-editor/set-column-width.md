@@ -1,8 +1,4 @@
----
-sidebar_position: -15
----
-
-## Description
+# Set column width
 
 Sets the width for the column **B**.
 
@@ -17,7 +13,7 @@ Sets the width for the column **B**.
 })();
 ```
 
-Methods used: GetActiveSheet, SetColumnWidth
+Methods used: [GetActiveSheet](../../../../office-api/usage-api/spreadsheet-api/Api/Methods/GetActiveSheet.md), [SetColumnWidth](../../../../office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/SetColumnWidth.md)
 
 ## Reference Microsoft VBA macro code
 
@@ -29,4 +25,4 @@ End Sub
 
 ## Result
 
-![Column width](/assets/images/plugins/column-width.png)
+![Column width](/assets/images/plugins/column-width.png#gh-light-mode-only)![Column width](/assets/images/plugins/column-width.dark.png#gh-dark-mode-only)

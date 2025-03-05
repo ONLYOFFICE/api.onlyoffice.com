@@ -1,8 +1,4 @@
----
-sidebar_position: -20
----
-
-## Description
+# Change cell background color
 
 Sets the background color of the cell **B3** to blue.
 
@@ -17,7 +13,7 @@ Sets the background color of the cell **B3** to blue.
 })();
 ```
 
-Methods used: GetActiveSheet, GetRange, SetFillColor, CreateColorFromRGB
+Methods used: [GetActiveSheet](../../../../office-api/usage-api/spreadsheet-api/Api/Methods/GetActiveSheet.md), [GetRange](../../../../office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetRange.md), [SetFillColor](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/SetFillColor.md), [CreateColorFromRGB](../../../../office-api/usage-api/spreadsheet-api/Api/Methods/CreateColorFromRGB.md)
 
 ## Reference Microsoft VBA macro code
 
@@ -29,4 +25,4 @@ End Sub
 
 ## Result
 
-![Background color](/assets/images/plugins/background-color.png)
+![Background color](/assets/images/plugins/background-color.png#gh-light-mode-only)![Background color](/assets/images/plugins/background-color.dark.png#gh-dark-mode-only)

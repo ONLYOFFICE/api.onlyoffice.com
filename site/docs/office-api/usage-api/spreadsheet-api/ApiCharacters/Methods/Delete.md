@@ -22,7 +22,11 @@ This method doesn't return any data.
 
 This example deletes the ApiCharacters object.
 
-```javascript
+```javascript editor-xlsx
+// How to delete characters from an array.
+
+// Remove all characters.
+
 var oWorksheet = Api.GetActiveSheet();
 var oRange = oWorksheet.GetRange("B1");
 oRange.SetValue("This is just a sample text.");

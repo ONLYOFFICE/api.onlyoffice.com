@@ -2,6 +2,8 @@
 sidebar_position: -6
 ---
 
+# Getting started
+
 Macros are small scripts used to facilitate your day-to-day routine work with different types of documents. ONLYOFFICE macros use the JavaScript syntax and [Office JavaScript API](../../office-api/get-started/overview.md) scripting notation.
 
 There are several reasons why ONLYOFFICE uses JavaScript for macros:
@@ -22,7 +24,7 @@ How to start writing your macro:
 4. To rename the macro, click ![Dots icon](/assets/images/plugins/dots.svg) next to the macro name and select **Rename**. Enter a new name for the macro and click **Ok**.
 5. When ready, click ![Play icon](/assets/images/plugins/play.svg) to run your code in the document.
 
-![Macros window](/assets/images/plugins/macro-window.png)
+![Macros window](/assets/images/plugins/macro-window.png#gh-light-mode-only)![Macros window](/assets/images/plugins/macro-window.dark.png#gh-dark-mode-only)
 
 To add more macros, click ![Plus icon](/assets/images/plugins/plus.svg).
 

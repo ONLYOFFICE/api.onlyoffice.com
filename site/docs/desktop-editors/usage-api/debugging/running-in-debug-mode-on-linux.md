@@ -1,6 +1,9 @@
 ---
 sidebar_position: -2
+sidebar_label: Linux
 ---
+
+# Running in debug mode on Linux
 
 Use the terminal to run ONLYOFFICE Desktop Editors in debug mode on Linux:
 

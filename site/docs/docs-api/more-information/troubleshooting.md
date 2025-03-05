@@ -1,3 +1,5 @@
+# Troubleshooting
+
 The most common problems with the editors integration and the ways to solve them.
 
 ## Download failed

@@ -1,3 +1,5 @@
+# CheckFileInfo
+
 `GET /wopi/files/(file_id)`
 
 The *CheckFileInfo* operation must be implemented for all WOPI actions. This operation returns information about a file, a user's permissions on that file, and general information about the capabilities that the WOPI host has on the file. Also, some CheckFileInfo properties can influence the appearance and behavior of WOPI clients.

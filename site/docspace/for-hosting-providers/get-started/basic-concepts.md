@@ -2,6 +2,8 @@
 sidebar_position: -2
 ---
 
+# Basic concepts
+
 The ONLYOFFICE Hosted Solution is implemented as REST over HTTP using GET/POST. All the resources, like client creation, portal registration, etc, have their own URLs and are designed to be manipulated in isolation.
 
 ## Authentication

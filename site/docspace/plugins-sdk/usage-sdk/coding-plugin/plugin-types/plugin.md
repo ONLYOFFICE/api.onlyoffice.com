@@ -2,6 +2,8 @@
 sidebar_position: -9
 ---
 
+# Plugin
+
 The default plugin.
 
 **Interface**: IPlugin.

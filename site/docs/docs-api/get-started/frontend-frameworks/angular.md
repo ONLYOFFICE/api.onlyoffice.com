@@ -1,3 +1,5 @@
+# Angular
+
 The ONLYOFFICE Docs Angular [component](https://github.com/ONLYOFFICE/document-editor-angular-workspace) integrates ONLYOFFICE Docs into [Angular](https://angularjs.org/) projects.
 
 ## Prerequisites

@@ -2,6 +2,8 @@
 sidebar_position: -2
 ---
 
+# Ruby example
+
 ## Overview
 
 This example will help you integrate ONLYOFFICE Docs into your web application written on Ruby.
@@ -90,5 +92,3 @@ The example is configured by changing environment variables.
 | EXAMPLE\_URL                   | `http://proxy`          | The URL through which ONLYOFFICE Docs will communicate with the server. |
 | JWT\_SECRET                    | your-256-bit-secret     | JWT authorization secret. Leave blank to disable authorization.         |
 | PORT                           | 80                      | The port on which the server should be running.                         |
-
-If you integrated the editors successfully the result should look like the [demo preview](./language-specific-examples.md#demo-preview) on our site.

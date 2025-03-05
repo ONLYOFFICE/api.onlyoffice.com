@@ -1,3 +1,5 @@
+# Authorization
+
 Logs in to the DocSpace account using the specified email and password hash.
 
 ![Authorization sample](/assets/images/docspace/js-sdk-authorization-sample.svg)

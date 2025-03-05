@@ -1,3 +1,5 @@
+# Customize editors
+
 Customizes the editor interface so that it looks like your other products (if there are any), and changes the presence or absence of the additional buttons, links, logos and editor owner details.
 
 ![Customization sample](/assets/images/docspace/customization-of-editors.svg)

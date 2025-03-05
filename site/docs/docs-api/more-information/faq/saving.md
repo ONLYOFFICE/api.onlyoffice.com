@@ -2,6 +2,8 @@
 sidebar_position: -3
 ---
 
+# Saving
+
 ## How to forcefully save the document to my storage when editing it?
 
 Normally the final document version is compiled once all the users editing it close the document and the delay time (about 10 seconds) passes. But this behavior can be overriden. To do that the **forcesave** option is available.

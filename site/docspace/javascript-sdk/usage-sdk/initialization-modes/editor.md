@@ -2,6 +2,8 @@
 sidebar_position: 4
 ---
 
+# Editor
+
 Allows you to open the SDK as a document editor for editing by specifying the [id](../config.md#id) parameter for a file.
 
 ![Editor mode](/assets/images/docspace/editor-mode.png)

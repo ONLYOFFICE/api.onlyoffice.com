@@ -2,6 +2,8 @@
 sidebar_position: -2
 ---
 
+# Publishing
+
 If you want your plugin to be available to other users in the ONLYOFFICE Plugin Marketplace, suggest it for publishing:
 
 1. Sing in to an existing [GitHub](https://github.com/) account or create a new one.

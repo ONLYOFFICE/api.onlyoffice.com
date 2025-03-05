@@ -2,6 +2,8 @@
 sidebar_position: -4
 ---
 
+# PHP example
+
 ## Overview
 
 This example will help you integrate ONLYOFFICE Docs into your web application written on PHP.
@@ -90,5 +92,3 @@ The example is configured by changing environment variables.
 | DOCUMENT\_SERVER\_PUBLIC\_URL  | `http://localhost:8080` | The URL through which a user will communicate with ONLYOFFICE Docs.     |
 | EXAMPLE\_URL                   | `http://proxy`          | The URL through which ONLYOFFICE Docs will communicate with the server. |
 | JWT\_SECRET                    | your-256-bit-secret     | JWT authorization secret. Leave blank to disable authorization.         |
-
-If you integrated the editors successfully the result should look like the [demo preview](./language-specific-examples.md#demo-preview) on our site.

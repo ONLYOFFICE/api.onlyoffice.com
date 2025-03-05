@@ -24,7 +24,11 @@ This method doesn't return any data.
 
 This example deletes the Range object.
 
-```javascript
+```javascript editor-xlsx
+// How to remove a range from the worksheet.
+
+// Get a range from the worksheet and delete it specifying the direction.
+
 var oWorksheet = Api.GetActiveSheet();
 oWorksheet.GetRange("B4").SetValue("1");
 oWorksheet.GetRange("C4").SetValue("2");

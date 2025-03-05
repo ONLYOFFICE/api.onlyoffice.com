@@ -2,6 +2,8 @@
 sidebar_position: -2
 ---
 
+# Input helper
+
 Plugins can create its own window that appears and disappears when you type text. Its location is tied to the cursor.
 
 ![Input helper](/assets/images/plugins/input-helper.png)

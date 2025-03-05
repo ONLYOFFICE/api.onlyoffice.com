@@ -2,6 +2,8 @@
 sidebar_position: -2
 ---
 
+# Renaming
+
 ## How to rename the created document?
 
 Please see the [Renaming file](../../get-started/how-it-works/renaming-files.md) section to find out how file renaming works in ONLYOFFICE Docs and what is needed to rename the created document.

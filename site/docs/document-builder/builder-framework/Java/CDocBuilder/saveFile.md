@@ -1,3 +1,6 @@
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 # saveFile
 
 Saves the file after all the changes are made. The type of the file which will be saved needs to be set.
@@ -18,21 +21,22 @@ int saveFile(int | String type, String path, String params);
 
 ## Example
 
-### Java
-
-``` java
-String resultPath = "result.docx";
-CDocBuilder.initialize("");
-CDocBuilder builder = new CDocBuilder();
-builder.saveFile(FileTypes.Document.DOCX, resultPath);
-CDocBuilder.dispose();
-```
-
-### .docbuilder
-
-```ts
-builder.SaveFile("docx", "result.docx")
-```
+<Tabs>
+    <TabItem value="java" label="Java">
+        ``` java
+        String resultPath = "result.docx";
+        CDocBuilder.initialize("");
+        CDocBuilder builder = new CDocBuilder();
+        builder.saveFile(FileTypes.Document.DOCX, resultPath);
+        CDocBuilder.dispose();
+        ```
+    </TabItem>
+    <TabItem value="builder" label=".docbuilder">
+        ```ts
+        builder.SaveFile("docx", "result.docx")
+        ```
+    </TabItem>
+</Tabs>
 
 ## Saving into images
 
@@ -47,14 +51,15 @@ ONLYOFFICE Document Builder allows to save your document files into image files 
 
 ## Example
 
-### Java
-
-``` java
-builder.saveFile(FileTypes.Document.DOCX, L"thumbnail.png", "<m_oThumbnail><format>4</format><aspect>1</aspect><first>false</first><width>1000</width><height>1000</height></m_oThumbnail>");
-```
-
-### .docbuilder
-
-```ts
-builder.SaveFile("image", "./thumbnail.png", "<m_oThumbnail><format>4</format><aspect>1</aspect><first>false</first><width>1000</width><height>1000</height></m_oThumbnail>")
-```
+<Tabs>
+    <TabItem value="java" label="Java">
+        ``` java
+        builder.saveFile(FileTypes.Document.DOCX, L"thumbnail.png", "<m_oThumbnail><format>4</format><aspect>1</aspect><first>false</first><width>1000</width><height>1000</height></m_oThumbnail>");
+        ```
+    </TabItem>
+    <TabItem value="builder" label=".docbuilder">
+        ```ts
+        builder.SaveFile("image", "./thumbnail.png", "<m_oThumbnail><format>4</format><aspect>1</aspect><first>false</first><width>1000</width><height>1000</height></m_oThumbnail>")
+        ```
+    </TabItem>
+</Tabs>

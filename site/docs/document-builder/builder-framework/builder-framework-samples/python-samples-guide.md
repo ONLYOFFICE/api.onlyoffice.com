@@ -2,6 +2,8 @@
 sidebar_position: -2
 ---
 
+# Python samples guide
+
 ## Before you start
 
 For the samples to work correctly, make sure that two conditions are met:

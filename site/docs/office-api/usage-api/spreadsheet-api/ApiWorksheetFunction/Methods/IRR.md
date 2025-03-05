@@ -14,8 +14,8 @@ expression.IRR(arg1, arg2);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| arg1 | Required | number[] | [ApiRange](../../ApiRange/ApiRange.md) |  | A range or array of cells that contain numbers for which the internal rate of return will be calculated. |
-| arg2 | Required | [ApiRange](../../ApiRange/ApiRange.md) | [ApiName](../../ApiName/ApiName.md) | number |  | An estimate at what the internal rate of return will be. If it is omitted, the function will assume guess to be 0.1 (10 percent). |
+| arg1 | Required | number[] \| [ApiRange](../../ApiRange/ApiRange.md) |  | A range or array of cells that contain numbers for which the internal rate of return will be calculated. |
+| arg2 | Required | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number |  | An estimate at what the internal rate of return will be. If it is omitted, the function will assume guess to be 0.1 (10 percent). |
 
 ## Returns
 
@@ -23,9 +23,13 @@ number
 
 ## Example
 
+This example shows how to return the internal rate of return for a series of cash flows.
 
+```javascript editor-xlsx
+// How to calculate the internal rate of the return for a series of cash flows.
 
-```javascript
+// Use a function to get the internal rate.
+
 var oWorksheet = Api.GetActiveSheet();
 var oFunction = Api.GetWorksheetFunction();
 var values = ["Values", "-$40,000.00", "$10,000.00", "$15,000.00", "$20,000.00"];

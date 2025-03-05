@@ -1,3 +1,5 @@
+# Unlock
+
 `POST /wopi/files/(file_id)`
 
 Releases the lock on a file. The WOPI client passes the lock ID established by that previous [Lock](./lock.md) operation in the **X-WOPI-Lock** request header.

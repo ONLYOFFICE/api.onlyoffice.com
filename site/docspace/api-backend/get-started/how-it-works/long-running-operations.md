@@ -2,43 +2,49 @@
 sidebar_position: -4
 ---
 
-The user initiates a long-running operation by sending a request to the appropriate API endpoint, which returns an object containing information about the initiated operation. An example of such a request and response:
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
-Example Request:
+# Long-running operations
 
-``` http
-PUT /api/2.0/files/rooms/1234/archive
-Host: yourportal.onlyoffice.com
-Content-Type: application/json
-Accept: application/json
+The user initiates a long-running operation by sending a request to the appropriate API endpoint, which returns an object containing information about the initiated operation. An [example](../../../../openapi/docspace/api-backend/usage-api/archive-room.api.mdx) of such a request and response:
 
-{
-  "DeleteAfter": true
-}
-```
+<Tabs>
+  <TabItem value="request" label="Request">
+    ``` http
+    PUT /api/2.0/files/rooms/1234/archive
+    Host: yourportal.onlyoffice.com
+    Content-Type: application/json
+    Accept: application/json
 
-Example Response:
-
-``` json
-{
-  "error": "",
-  "finished": false,
-  "id": "00000000-0000-0000-0000-000000000000",
-  "operation": 0,
-  "processed": "0",
-  "progress": 0
-}
-```
+    {
+      "DeleteAfter": true
+    }
+    ```
+  </TabItem>
+  <TabItem value="response" label="Response">
+    ``` json
+    {
+      "error": "",
+      "finished": false,
+      "id": "00000000-0000-0000-0000-000000000000",
+      "operation": 0,
+      "processed": "0",
+      "progress": 0
+    }
+    ```
+  </TabItem>
+</Tabs>
 
 The following endpoints return the operation status:
 
-- `PUT api/2.0/files/rooms/{id}/archive`
-- `PUT api/2.0/files/fileops/delete`
-- `DELETE api/2.0/files/file/{fileid}`
+- [`PUT api/2.0/files/rooms/{id}/archive`](../../../../openapi/docspace/api-backend/usage-api/archive-room.api.mdx)
+- [`PUT api/2.0/files/fileops/delete`](../../../../openapi/docspace/api-backend/usage-api/delete-batch-items.api.mdx)
+- [`DELETE api/2.0/files/file/{fileid}`](../../../../openapi/docspace/api-backend/usage-api/delete-file.api.mdx)
 
 ## Monitoring the operation status
 
-To track the operation progress, you must periodically execute a GET request to the following endpoint:
+To track the operation progress, you must periodically execute a GET request to the following [endpoint](../../../../openapi/docspace/api-backend/usage-api/get-operation-statuses.api.mdx):
 
 ``` http
 GET /api/2.0/files/fileops

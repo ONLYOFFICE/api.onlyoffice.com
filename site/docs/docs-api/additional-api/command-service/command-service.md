@@ -1,3 +1,5 @@
+# Command service
+
 For the interaction with the **document command service** the POST requests are used. The request parameters are entered in JSON format in the request body. The requests are sent to the `https://documentserver/command` address where the **documentserver** is the name of the server with the ONLYOFFICE Docs installed.
 
 > Please note that prior to version 8.2, the `https://documentserver/coauthoring/CommandService.ashx` address was used to send requests.
@@ -10,8 +12,8 @@ See the available command types below to find more about them.
 
 ## Command types
 
-| Command                                       | Description                                                                                                                        |
-| --------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
+| Command                                 | Description                                                                                                                        |
+| --------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
 | [deleteForgotten](deleteforgotten.md)   | This command allows to delete a forgotten file.                                                                                    |
 | [drop](drop.md)                         | This command allows to disconnect the specified users from the document editing service.                                           |
 | [forcesave](forcesave.md)               | This command allows to forcibly save the document being edited without closing it.                                                 |
@@ -32,9 +34,9 @@ The JSON Web Token should be sent in the JSON object format to **document comman
 
 ## Parameters
 
-| Name  | Type   | Presence                  | Description                                                                                                                                                                    |
-| ----- | ------ | ------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| token | string | required by configuration | Defines the encrypted signature added to the **ONLYOFFICE Docs** config in the form of a [token](../../additional-api/signature/request/token-in-body.md#command). |
+| Name  | Type   | Presence                  | Description                                                                                                                                                                                                     |
+| ----- | ------ | ------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| token | string | required by configuration | Defines the encrypted signature added to the **ONLYOFFICE Docs** config in the form of a [token](../../additional-api/signature/request/token-in-body.md#request-to-receive-the-status-of-the-edited-document). |
 
 The **document editing service** informs the **document storage service** about the result caused by command and sends the response with all the necessary data via the [callback handler](../../usage-api/callback-handler.md).
 

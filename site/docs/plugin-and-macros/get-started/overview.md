@@ -2,6 +2,8 @@
 sidebar_position: -2
 ---
 
+# Overview
+
 ONLYOFFICE [Docs](https://www.onlyoffice.com/office-suite.aspx) and [Desktop Editors](https://www.onlyoffice.com/desktop.aspx) offer support for plugins allowing developers to add specific features to the editors that are not directly related to the OOXML format.
 
 Plugin is an HTML page that is embedded in the editor and uses API to work with it.
@@ -11,7 +13,7 @@ This documentation describes:
 - How to [build](../structure/manifest/manifest.md), [localize](../structure/localization.md), run, [test](../tutorials/developing/for-web-editors.md) and [publish](../tutorials/publishing.md) a plugin
 - How to customize plugins: create [context menu items](../customization/context-menu.md), [toolbar buttons](../customization/toolbar.md), [windows and panels](../customization/windows-and-panels.md), [input helpers](../customization/input-helper.md), process [buttons](../customization/buttons.md)
 - How to [write](../macros/writing-macros.md), [debug](../macros/debugging.md) and run a macro, add a custom function, or [convert](../macros/converting-vba-macros.md) VBA macros to use in ONLYOFFICE
-- How to [interact with the editors](../interacting-with-editors/overview/overview.md), use ONLYOFFICE [methods](../interacting-with-editors/overview/how-to-call-methods.md) and events
+- How to [interact with the editors](../interacting-with-editors/overview/overview.md), use ONLYOFFICE [methods](../interacting-with-editors/overview/how-to-call-methods.md) and [events](../interacting-with-editors/overview/how-to-attach-events.md)
 - Where to find guides and [plugin](../tutorials/samples/samples.md)/[macro](../macros/samples/samples.md) code samples to get started
 
 ## What plugins can do

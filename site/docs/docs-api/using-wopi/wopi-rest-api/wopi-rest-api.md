@@ -2,6 +2,8 @@
 sidebar_position: -5
 ---
 
+# WOPI REST API
+
 [WOPI REST API](https://docs.microsoft.com/en-us/microsoft-365/cloud-storage-partner-program/rest/) specifies a set of operations that enables a client to access and change files stored on a server.
 
 ONLYOFFICE Docs uses the following WOPI operations:

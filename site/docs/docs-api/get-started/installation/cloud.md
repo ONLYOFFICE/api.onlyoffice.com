@@ -1,6 +1,9 @@
 ---
 sidebar_position: -2
+sidebar_label: Cloud
 ---
+
+# Installation - Cloud
 
 To install ONLYOFFICE Docs in the cloud:
 

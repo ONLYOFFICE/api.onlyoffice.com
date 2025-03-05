@@ -2,6 +2,8 @@
 sidebar_position: -4
 ---
 
+# Overview
+
 **Builder.App** is the *docbuilder.exe* executable file which can be run from your application with the *.docbuilder* script file as a parameter to it.
 
 If you are going to use **ONLYOFFICE Document Builder** with an application written in any programming language, run Document Builder executable from your application and use the **.docbuilder** script file for the document to be created as a parameter to it. It is much more flexible and allows to change the document script files (especially if there are more than one of them) independently of your application in future. You will only need to recompile your application if you need to add more document script files to it.
@@ -57,7 +59,7 @@ If you use **ONLYOFFICE Document Builder** as both an application and a script, 
    ``` ts
    const jsVar = "123.docx"
    builder.SaveFile("docx", jsVar) // Incorrect
-   builder.SaveFile("docx", jsValue(jsVar)) // Correct
+   builder.SaveFile("docx", "jsValue(jsVar)") // Correct
    ```
 
 4. For convenience, format types are replaced with strings.

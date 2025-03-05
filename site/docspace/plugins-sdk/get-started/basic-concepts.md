@@ -2,6 +2,8 @@
 sidebar_position: -2
 ---
 
+# Basic concepts
+
 **DocSpace Plugins SDK** allows developers to create their own plugins and add them to the DocSpace portal.
 
 This documentation describes:

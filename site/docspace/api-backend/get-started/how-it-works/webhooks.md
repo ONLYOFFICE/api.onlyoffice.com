@@ -2,13 +2,15 @@
 sidebar_position: -2
 ---
 
+# Webhooks
+
 Webhooks are the HTTP/HTTPS callbacks triggered by the events of the API requests, such as POST, PUT, and DELETE. The SSL verification is set when configuring webhooks.
 
 The DocSpace administrator can create webhooks, subscribe to them, and configure webhooks so that events on the portal trigger actions on external services. This approach can be useful for synchronizing and tracking certain events.
 
 The instructions on how to create and configure webhooks can be found [here](https://helpcenter.onlyoffice.com/administration/docspace-webhooks.aspx).
 
-The API methods for working with webhooks can be found in this section.
+The API methods for working with webhooks can be found [in this section](../../../../openapi/docspace/api-backend/usage-api/get-tenant-webhooks.api.mdx).
 
 ## Webhook request
 

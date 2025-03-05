@@ -1,3 +1,5 @@
+# TextArea
+
 Custom textarea.
 
 **Interface**: ITextArea.

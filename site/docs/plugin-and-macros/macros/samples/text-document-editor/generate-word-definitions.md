@@ -1,8 +1,4 @@
----
-order:
----
-
-## Description
+# Generate word definitions
 
 Generates word definitions in your document using the [Dictionary API](https://api-ninjas.com/api/dictionary) offered by [API Ninjas](https://api-ninjas.com).
 
@@ -36,10 +32,10 @@ Generates word definitions in your document using the [Dictionary API](https://a
 })();
 ```
 
-Methods used: GetDocument, GetRangeBySelect, GetText, CreateParagraph, AddText, InsertContent
+Methods used: [GetDocument](../../../../office-api/usage-api/text-document-api/Api/Methods/GetDocument.md), GetRangeBySelect, GetText, [CreateParagraph](../../../../office-api/usage-api/text-document-api/Api/Methods/CreateParagraph.md), [AddText](../../../../office-api/usage-api/text-document-api/ApiParagraph/Methods/AddText.md), [InsertContent](../../../../office-api/usage-api/text-document-api/ApiDocument/Methods/InsertContent.md)
 
 ## Result
 
 <!-- imgpath -->
 
-![Generate word definitons](/assets/images/plugins/generate-word-definitions.png)
+![Generate word definitons](/assets/images/plugins/generate-word-definitions.png#gh-light-mode-only)![Generate word definitons](/assets/images/plugins/generate-word-definitions.dark.png#gh-dark-mode-only)

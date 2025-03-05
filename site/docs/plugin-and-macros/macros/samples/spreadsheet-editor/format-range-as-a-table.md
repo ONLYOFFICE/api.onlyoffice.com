@@ -1,8 +1,4 @@
----
-sidebar_position: -14
----
-
-## Description
+# Format range as table
 
 Formats the range of cells **A1:D10** as a table.
 
@@ -17,7 +13,7 @@ Formats the range of cells **A1:D10** as a table.
 })();
 ```
 
-Methods used: GetActiveSheet, FormatAsTable
+Methods used: [GetActiveSheet](../../../../office-api/usage-api/spreadsheet-api/Api/Methods/GetActiveSheet.md), [FormatAsTable](../../../../office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/FormatAsTable.md)
 
 ## Reference Microsoft VBA macro code
 
@@ -29,4 +25,4 @@ End Sub
 
 ## Result
 
-![Range as a table](/assets/images/plugins/range-as-a-table.png)
+![Range as a table](/assets/images/plugins/range-as-a-table.png#gh-light-mode-only)![Range as a table](/assets/images/plugins/range-as-a-table.dark.png#gh-dark-mode-only)

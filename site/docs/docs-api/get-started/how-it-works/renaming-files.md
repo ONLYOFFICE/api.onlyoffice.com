@@ -2,6 +2,8 @@
 sidebar_position: -16
 ---
 
+# Renaming files
+
 The reference figure and the steps below explain the process of renaming a document in ONLYOFFICE Docs.
 
 ![Renaming File](/assets/images/editor/rename.svg)

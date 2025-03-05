@@ -2,6 +2,8 @@
 sidebar_position: -5
 ---
 
+# Text Document API
+
 Although a text document consists of various elements, most of them are nested in each other and three main elements can be outlined: *paragraph*, *table* and *block content control*. All the other elements are a part of these three larger ones.
 
 The text itself can be added directly to a paragraph, block content control, inline text content control, range or table cell, which is a part of a table structure. But, for the sake of convenience (as it is always easier to work with smaller blocks than with larger ones) the text is usually divided into small text portions called *runs*. Each paragraph can consist either of only one text run or have dozens of them inside, depending on the paragraph complexity.
@@ -44,13 +46,7 @@ builder.SaveFile("docx", "example.docx")
 builder.CloseFile()
 ```
 
-Actually in the above example the created text document will have two paragraphs, as the first paragraph is created by default for an empty text document, i.e. a new empty text document always contains at least one paragraph. You can address the first paragraph to change it using the *Api.GetElement(0)* method, so that line 4 of the above code looked like this:
-
-``` ts
-oParagraph = oDocument.GetElement(0)
-```
-
-and line 7 (*oDocument.Push(oParagraph);*) is not needed.
+Actually in the above example the created text document will have two paragraphs, as the first paragraph is created by default for an empty text document, i.e. a new empty text document always contains at least one paragraph. You can address the first paragraph to change it using the *Api.GetElement(0)* method, so that line 4 of the above code looked like this: *oParagraph = oDocument.GetElement(0)* and line 7 (*oDocument.Push(oParagraph);*) is not needed.
 
 ## Opening an existing text document
 
