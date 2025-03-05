@@ -287,6 +287,7 @@ const config: Config = {
     prism: {
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,
+      additionalLanguages: ["bash", "php", "csharp", "java"],
     },
     algolia: {
       appId: '59O6KESY1Y',
