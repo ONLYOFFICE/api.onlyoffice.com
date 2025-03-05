@@ -2,7 +2,7 @@
 sidebar_position: -7
 ---
 
-# Java example
+# Java 示例
 
 ## 概述
 

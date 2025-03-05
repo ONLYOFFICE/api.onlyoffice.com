@@ -2,7 +2,7 @@
 sidebar_position: -9
 ---
 
-# Key concepts
+# 关键概念
 
 理解以下概念对实现 WOPI 客户端集成至关重要，更多详细信息可参考[微软官方文档](https://learn.microsoft.com/zh-cn/microsoft-365/cloud-storage-partner-program/rest/concepts)。
 
@@ -47,7 +47,7 @@ WOPI 访问令牌必须遵循[此处](https://learn.microsoft.com/zh-cn/microsof
 - 必须与单个文件相关联；
 - 包含锁 ID，该 ID 为最大1024个 ASCII 字符的字符串；
 - 在未提供正确锁 ID 的情况下，禁止对文件进行任何修改；
-- 锁的有效期为30分钟，除非进行[刷新](./wopi-rest-api/refreshlock.md)操作；
+- 锁的有效期为30分钟，除非进行([刷新](./wopi-rest-api/refreshlock.md))操作；
 - 锁不应与特定用户绑定。
 
 所有涉及文件修改的 WOPI 操作（例如 [PutFile](./wopi-rest-api/putfile.md)）都会在请求中附带一个锁 ID 作为参数，该 ID 通常通过`X-WOPI-Lock`请求头进行传递。

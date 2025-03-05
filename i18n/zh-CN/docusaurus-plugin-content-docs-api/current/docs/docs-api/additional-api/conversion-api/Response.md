@@ -2,7 +2,7 @@
 sidebar_position: -3
 ---
 
-# Response
+# 响应
 
  请求结果以 XML 格式返回。要接收 JSON 格式的响应，您需要在 HTTP 请求中使用 **application/json** 值指定 *Accept* 标头（从 4.3 版开始提供）。在形成结果文件的链接时，使用与转换请求相同的服务器名称。
 

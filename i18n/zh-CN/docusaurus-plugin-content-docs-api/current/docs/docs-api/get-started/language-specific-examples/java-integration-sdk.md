@@ -2,7 +2,7 @@
 sidebar_position: -1
 ---
 
-# Java integration SDK
+# Java 集成软件开发工具包（SDK）
 
 [ONLYOFFICE 文档集成 SDK](https://central.sonatype.com/artifact/com.onlyoffice/docs-integration-sdk) 提供通用接口和默认实现，用于将 ONLYOFFICE 文档集成到您自己的 Java 网站或应用程序中。
 

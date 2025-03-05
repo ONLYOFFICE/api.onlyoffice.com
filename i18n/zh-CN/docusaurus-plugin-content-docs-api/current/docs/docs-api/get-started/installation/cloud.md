@@ -3,7 +3,7 @@ sidebar_position: -2
 sidebar_label: Cloud
 ---
 
-# Installation - Cloud
+# 安装 - 云端
 
 要在云端安装ONLYOFFICE 文档：
 

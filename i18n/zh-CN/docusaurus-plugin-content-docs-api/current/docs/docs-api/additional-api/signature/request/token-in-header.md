@@ -1,4 +1,4 @@
-﻿# Token in header
+﻿# 请求头中的令牌
 
 在从或向 ONLYOFFICE 文档执行 HTTP 请求时，系统会添加一个包含令牌的授权头以验证请求的合法性。
 
@@ -115,7 +115,7 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImFze
 
 ### 当最后一个用户关闭编辑的没有更改的文档时，文档编辑服务向 "callbackUrl" 地址发送请求
 
-对**文档编辑服务**向 "[callbackUrl](.../.../.../usage-api/config/editor/editor.md#callbackurl)" 地址发出的请求进行验证。
+对**文档编辑服务**向 "[callbackUrl](../../../usage-api/config/editor/editor.md#callbackurl)" 地址发出的请求进行验证。
 
 当最后一个用户关闭编辑的没有更改的文档时，文档编辑服务对 "callbackUrl" 地址发送的请求示例参数:
 

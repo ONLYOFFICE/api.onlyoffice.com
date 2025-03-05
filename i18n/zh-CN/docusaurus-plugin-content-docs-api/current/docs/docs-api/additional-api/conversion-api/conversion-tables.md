@@ -2,7 +2,7 @@
 sidebar_position: -2
 ---
 
-# Conversion tables
+# 转换表
 
 下面您可以找到可在不同类型的编辑器中转换的表格格式。
 

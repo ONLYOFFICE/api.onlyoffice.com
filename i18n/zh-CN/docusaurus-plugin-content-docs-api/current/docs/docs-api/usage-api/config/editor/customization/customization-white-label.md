@@ -2,7 +2,7 @@
 sidebar_label: White label
 ---
 
-# Customization - White label
+# 定制 - 白标定制
 
 自定义部分允许自定义编辑器界面，使其看起来像您的其他产品（如果有），并更改是否出现附加按钮、链接、更改徽标和编辑器所有者详细信息。
 
@@ -135,7 +135,7 @@ const header = {
 
 ### layout.header.save
 
-定义编辑器标题中的**保存**按钮是显示还是隐藏。默认值为 **true**。请注意，当 [compactHeader](#compactheader) 参数设置为 **false**时，将使用此设置。
+定义编辑器标题中的**保存**按钮是显示还是隐藏。默认值为 **true**。请注意，当 [compactHeader](customization-standard-branding.md#compactheader) 参数设置为 **false**时，将使用此设置。
 
 类型: boolean
 
@@ -412,7 +412,7 @@ const file = {
 
 ### layout.toolbar.save
 
-定义工具栏上的**保存**按钮是显示还是隐藏。默认值为 **true**。请注意，当 [compactHeader](#compactheader)  参数设置为 **true**时，将使用此设置。
+定义工具栏上的**保存**按钮是显示还是隐藏。默认值为 **true**。请注意，当 [compactHeader](customization-standard-branding.md#compactheader) 参数设置为 **true**时，将使用此设置。
 
 类型: boolean
 

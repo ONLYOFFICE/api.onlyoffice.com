@@ -2,7 +2,7 @@
 sidebar_position: -4
 ---
 
-# PHP example
+# PHP 示例
 
 ## 概述
 
@@ -25,7 +25,7 @@ PHP示例提供了多种安装选项，但我们强烈建议为此使用Docker�
 
 ### 选项1.使用Docker
 
-要使用 [Docker](https://www.docker.com/) 运行实例，您将需要 [Docker Desktop 4.17.0](https://docs.docker.com/desktop/) 或 [Docker Engine 20.10.23](https://docs.docker.com/engine/) 以及 [Docker Compose 2.15.1](https://docs.docker.com/compose/)。另外，您可能需要考虑安装 [GNU Make 4.4.1](https://www.gnu.org/software/make/)，不过这是可选的。这些是工具所需的最低版本。
+要使用[Docker](https://www.docker.com/)运行实例，您将需要[Docker Desktop 4.17.0](https://docs.docker.com/desktop/)或[Docker Engine 20.10.23](https://docs.docker.com/engine/)以及[Docker Compose 2.15.1](https://docs.docker.com/compose/)。另外，您可能需要考虑安装[GNU Make 4.4.1](https://www.gnu.org/software/make/)，不过这是可选的。这些是工具所需的最低版本。
 
 安装好所有内容后，下载发行版压缩包并解压：
 
@@ -51,7 +51,7 @@ make compose-prod
 
 [获取ONLYOFFICE文档](https://www.onlyoffice.com/download-docs.aspx?from=api#docs-developer)
 
-查看详细指南，了解如何在 [Windows](https://helpcenter.onlyoffice.com/installation/docs-developer-install-windows.aspx?from=api_php_example)，[Linux](https://helpcenter.onlyoffice.com/installation/docs-developer-install-ubuntu.aspx?from=api_php_example)，和[Docker](https://helpcenter.onlyoffice.com/installation/docs-developer-install-docker.aspx?from=api_php_example)上安装它。
+查看详细指南，了解如何在[Windows](https://helpcenter.onlyoffice.com/installation/docs-developer-install-windows.aspx?from=api_php_example)，[Linux](https://helpcenter.onlyoffice.com/installation/docs-developer-install-ubuntu.aspx?from=api_php_example)，和[Docker](https://helpcenter.onlyoffice.com/installation/docs-developer-install-docker.aspx?from=api_php_example)上安装它。
 
 要在您的本地计算机上运行示例，您将需要[PHP8.2.11](https://www.php.net/)和[Composer2.6.5](https://getcomposer.org/)。另外，您可能需要考虑安装[GNU Make4.4.1](https://www.gnu.org/software/make/)，不过这是可选的。这些是工具所需的最低版本。
 

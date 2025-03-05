@@ -2,7 +2,7 @@
 sidebar_position: -4
 ---
 
-# Request
+# 请求
 
  对于与**文档转换服务**的交互，使用 POST 请求。请求参数在请求正文中以 JSON。格式输入请求被发送到`https://documentserver/converter` 其中 **documentserver** 是安装了ONLYOFFICE 文档的服务器的名称。
 
@@ -55,7 +55,7 @@ sidebar_position: -4
 
 支持的值：
 
-- **0** -  没有定界符;
+- **0** - 没有定界符;
 - **1** - 制表符;
 - **2** - 分号;
 - **3** - 冒号;
@@ -490,7 +490,7 @@ Type: string
 
 #### watermark.paragraphs.fill
 
-以 RGB 格式定义段落突出显示。 空数组[]表示该段落不突出显示。
+以 RGB 格式定义段落突出显示。空数组[]表示该段落不突出显示。
 
 类型: array of integers
 

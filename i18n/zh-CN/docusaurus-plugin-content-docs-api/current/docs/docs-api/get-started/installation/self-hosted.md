@@ -3,7 +3,7 @@ sidebar_position: -1
 sidebar_label: Self-hosted
 ---
 
-# Installation - Self-hosted
+# 安装 - 自托管
 
 ONLYOFFICE 文档支持在 Windows、Linux 和 Docker 环境部署。
 

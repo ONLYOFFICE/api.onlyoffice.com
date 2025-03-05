@@ -2,7 +2,7 @@
 sidebar_position: -5
 ---
 
-# Language-specific examples
+# 特定语言示例
 
 借助ONLYOFFICE文档，任何协作解决方案都可以通过文档编辑和协同编辑功能得到增强。在本节中，您将了解如何将ONLYOFFICE文档集成到您自己的网站中。
 
@@ -38,7 +38,7 @@ sidebar_position: -5
    - [Python.Example](https://github.com/ONLYOFFICE/document-server-integration/releases/latest/download/Python.Example.zip)
    - [Ruby.Example](https://github.com/ONLYOFFICE/document-server-integration/releases/latest/download/Ruby.Example.zip)
 
-   或者查找源代码：[integration example](https://github.com/ONLYOFFICE/document-server-integration)。
+   或者查找源代码：[集成示例](https://github.com/ONLYOFFICE/document-server-integration)。
 
 3. 编辑示例中的配置文件，将默认路径更改为第1步中安装的编辑器的路径，以及更改编辑器配置中可用的其他参数。
 
