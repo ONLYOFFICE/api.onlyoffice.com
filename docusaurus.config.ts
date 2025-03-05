@@ -295,6 +295,39 @@ const config: Config = {
       indexName: 'api-onlyoffice',
       contextualSearch: true,
     },
+    languageTabs: [
+      {
+        highlight: "bash",
+        language: "curl",
+        logoClass: "curl",
+      },
+      {
+        highlight: "python",
+        language: "python",
+        logoClass: "python",
+      },
+      {
+        highlight: "javascript",
+        language: "javascript",
+        logoClass: "javascript",
+      },
+      {
+        highlight: "php",
+        language: "php",
+        logoClass: "php",
+      },
+      {
+        highlight: "csharp",
+        language: "csharp",
+        logoClass: "csharp",
+      },
+      {
+        highlight: "java",
+        language: "java",
+        logoClass: "java",
+        variant: "unirest",
+      },
+    ],
   } satisfies Preset.ThemeConfig,
 
   themes: ["docusaurus-theme-openapi-docs"],
