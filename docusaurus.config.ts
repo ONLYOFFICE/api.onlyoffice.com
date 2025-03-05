@@ -142,13 +142,13 @@ const config: Config = {
             {
               type: 'docSidebar',
               sidebarId: 'docspaceApiBackend',
-              label: 'API Backend',
+              label: 'API backend',
               docsPluginId: 'api',
             },
             {
               type: 'docSidebar',
               sidebarId: 'docspaceHosting',
-              label: 'For Hosting Providers',
+              label: 'For hosting providers',
               docsPluginId: 'api',
             },
           ],
@@ -174,7 +174,7 @@ const config: Config = {
             {
               type: 'docSidebar',
               sidebarId: 'docsMacros',
-              label: 'Plugins and Macros',
+              label: 'Plugins and macros',
               docsPluginId: 'api',
             },
             {
@@ -200,13 +200,13 @@ const config: Config = {
             {
               type: 'docSidebar',
               sidebarId: 'workspaceBackend',
-              label: 'API Backend',
+              label: 'API backend',
               docsPluginId: 'api',
             },
             {
               type: 'docSidebar',
               sidebarId: 'workspaceHosting',
-              label: 'For Hosting Providers',
+              label: 'For hosting providers',
               docsPluginId: 'api',
             },
           ],
@@ -227,7 +227,7 @@ const config: Config = {
       style: 'dark',
       links: [
         {
-          title: 'Get Information',
+          title: 'Get information',
           items: [
             {
               label: 'Blog for developers',
@@ -248,7 +248,7 @@ const config: Config = {
           ],
         },
         {
-          title: 'Get Help',
+          title: 'Get help',
           items: [
             {
               label: 'Forum',
