@@ -1,7 +1,5 @@
 # Remove custom formatting 
 
-## Description
-
 Removes all custom formatting and applies a default style.
 
 <!-- This code snippet is shown in the screenshot. -->
@@ -55,4 +53,4 @@ End Sub
 
 <!-- imgpath -->
 
-![](/assets/images/plugins/remove-custom-formatting.png)
+![Remove custom formatting](/assets/images/plugins/remove-custom-formatting.png#gh-light-mode-only)![Remove custom formatting](/assets/images/plugins/remove-custom-formatting.dark.png#gh-dark-mode-only)

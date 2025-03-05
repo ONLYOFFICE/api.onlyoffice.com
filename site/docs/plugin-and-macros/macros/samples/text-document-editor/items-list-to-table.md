@@ -1,7 +1,5 @@
 # Items list to table
 
-## Description
-
 Converts a selected list of items into a table.
 
 <!-- This code snippet is shown in the screenshot. -->
@@ -101,4 +99,4 @@ End Sub
 
 <!-- imgpath -->
 
-![items-list-to-table](/assets/images/plugins/items-list-to-table.png)
+![Items list to table](/assets/images/plugins/items-list-to-table.png#gh-light-mode-only)![Items list to table](/assets/images/plugins/items-list-to-table.dark.png#gh-dark-mode-only)

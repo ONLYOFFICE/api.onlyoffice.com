@@ -1,7 +1,5 @@
 # Highlight predefined keywords
 
-## Description
-
 Highlights predefined keywords in text document.
 
 <!-- This code snippet is shown in the screenshot. -->
@@ -35,4 +33,4 @@ Methods used: [GetDocument](../../../../office-api/usage-api/text-document-api/A
 
 <!-- imgpath -->
 
-![Highlight predifined keywords](/assets/images/plugins/highlight-predefined-keywords.png)
+![Highlight predifined keywords](/assets/images/plugins/highlight-predefined-keywords.png#gh-light-mode-only)![Highlight predifined keywords](/assets/images/plugins/highlight-predefined-keywords.dark.png#gh-dark-mode-only)
