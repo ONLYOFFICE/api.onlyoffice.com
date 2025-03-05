@@ -3,8 +3,12 @@ info:
   title: Community Server REST API
   version: latest
 servers:
-  - url: http://localhost
-    description: Local server
+  - url: https://{host}:{port}
+    variables:
+      host:
+        default: localhost
+      port:
+        default: '8092'
 paths:
   /api/2.0/calendar/calendars/{startDate}/{endDate}:
     get:
