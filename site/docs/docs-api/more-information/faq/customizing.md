@@ -8,7 +8,7 @@ sidebar_position: -7
 
 The below options can be edited for whitelabeling your version of ONLYOFFICE Docs, changing the information which will be displayed at the **About** page and visible to all editor users.
 
-> Please note that changing these options is only available to the [ONLYOFFICE Developer Edition](https://www.onlyoffice.com/developer-edition-prices.aspx) users.
+> Please note that changing these options is only available to the [ONLYOFFICE Docs Developer](https://www.onlyoffice.com/developer-edition-prices.aspx) users.
 
 - *editorConfig.customization.customer* options:
 
