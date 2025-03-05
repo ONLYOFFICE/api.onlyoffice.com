@@ -1,0 +1,63 @@
+---
+id: get-an-invoice-sample
+title: "Get an invoice sample"
+description: "Returns the detailed information about an invoice sample."
+sidebar_label: "Get an invoice sample"
+hide_title: true
+hide_table_of_contents: true
+api: eJztWW1PIzcQ/iuWPweSLJxaRaoqSHJ3qMBdSU6nO44Pzu6QNezaW7+kpFF+Tv9If1nH9iZkuUCWgNqqCh+C154Zz8sz47cZNWysaeeSxipvnoiJ5DFoetWgGmKruJni2IweWZNKxf9ghkvxHlgCyvEobNEG/R3pgF7NkSsBHSteODLaoRdgrBKamBRIAobxDBLCxbVUuZdE2EhaQ5jATj8z0SwvMthHoQp0IYVGZTozGrVa7l9Veqkt0sZSGBDGkbCiyHjspTdvtKObUR2nkDPXMtMCkFOObiA2yFgoWYAyPMxSCjzlInyX1EwpNkViNDLXtaWc9FZIOeo3Rp81aLA9dB1E2AF33mTsadF5Y8mNc71MwpDdtV8sIdpSwkAq80F5lGzB3VsN85JfG8XFuEK9Soh8v1omjIfskknYfFSdM5F2lEF10oaf9qNyaNqOt8d1LG2A4Bbsz3dzOzo4pHNkRYN9xwp4PyvMAhTghgeGGVsDtcMg5ilvB5JX1TZot9S3Qc+D057Uw6ugtYUeMxtUjlpRa68d7bUPh1HUaR90Dtv7bw5++DE6OPjqxAwBCVHK0EuoZROG1ZW+vnXDF9bXympdumyRPYLjDdLGBpJcfQ/xLlYsFpvNcRnkLMveSiM/qexpW63KiJHkGmndDGeQcJtvw4lYRqdMz1m+CRAsuYEkQcSRYxanXIXIdGVeMLGahSMpM2CiwnzNMu3RdBTjiqNPuTYvqLnJOk2XwbOWJ9UYlH97a34Wf89yxRm/BfIVrWZG33IPrc0JdcYEGwfcH02YYcoHu1astKMkzHOF2iWvcXXdGOpv35pImtjYaNcEid2hz7HvM13c/Ww1qJ9YknOBMVHMSFVJ3T6KklPwVaYsMicaa+ekmo3rYm6UDQVED1KmIKkLEU/9/Bw9l8JV2wvcpXz2W5TQfiRjHXWZsguGBonKz3UpbJUCEU9fpbZ2U7fpAPIFlzBv8TQfyQ2x/OtPj5zRSMGEs82rZff8S9A7w10ZbMZ093yRz2KCxrBRVj++x0zzuF54V6C1cOkJbhFXFoUuE/2Em5qTI3UPMqgPxpevZmU1R6NhVW3cvvKxANhV+V2V31X5XZXfVfn/YZXvPzxyPgKPQPcA3mviIYsCD89WOKFL8ZXKV1v7wzf3Emqg873EmpDKLCH+EoUJrNjETaYEGKJTWVQrhJe74onea5zITpkYW6yXm4+Au8z8pzKzfxenGBa4qEa31gVHu7xbsQplaPCXQnUP+UNQlW3BI2S1r4sc8VtcAJ9fC/baPnIK0AMfNsyyCeFBynEN3O72O//efsdt3/W213n/+aWsvH67vyh0g4et9veX7J8EK+/+cSPnqHLATwQmHYNHLDMpfjRZwZvRfqvpnhHKy/xmuMyn7i1BYQXT/inBumDS1Jii02xmMmZZ6hz9cLN26kZIYKTzlfeIgbvMD/mx9lXi/nBR8F/Any6cvDQMN6jwqK/yesPcu4RnXy73ee6XYTLwWpCL/mBIjj6eoBBnTdDT3R6i+shfoBk588WhnOMdrHnbeGjp7P714kXvJaXVBu5ME7Ob+2XMhswJQbp0LkFKDBP+YqC8bxZvKKV26GkfD6SezUZYsTH55nPX/ZsF5V6DsDlhiofl6PIKZ0kXD0Izeose7/jDXuFiOmGZDbF48CrjIrpE0rv+EGkdzqrhu/XhKxtO+mJITFdkVyPZKFVwv/PGIyyzWQAHGragD0OPcizhE6idd68waf4GlaYKyQ==
+sidebar_class_name: "get api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get an invoice sample"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/crm/invoice/sample"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns the detailed information about an invoice sample.
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Invoice","content":{"application/json":{"schema":{"type":"object","properties":{"InvoiceLines":{"type":"array","items":{"type":"object","properties":{"InvoiceID":{"type":"integer","format":"int32","example":"0"},"InvoiceItemID":{"type":"integer","format":"int32","example":"0"},"InvoiceTax1ID":{"type":"integer","format":"int32","example":"0"},"InvoiceTax2ID":{"type":"integer","format":"int32","example":"0"},"SortOrder":{"type":"integer","format":"int32","example":"0"},"Description":{"type":"string","example":"Description"},"Quantity":{"type":"number","format":"double","example":"0,0"},"Price":{"type":"number","format":"double","example":"0,0"},"Discount":{"type":"number","format":"double","example":"0,0"},"ID":{"type":"integer","format":"int32","example":"1234"}},"title":"InvoiceLineWrapper"}},"Status":{"type":"object","properties":{"Title":{"type":"string","example":"Title"},"ID":{"type":"integer","format":"int32","example":"1234"}},"title":"InvoiceStatusWrapper"},"Number":{"type":"string","example":""},"IssueDate":{"type":"string","example":"2020-12-14T22:13:41.5378233Z"},"TemplateType":{"type":"integer","format":"int32","enum":["Eur","Rus"],"description":"[0 - Eur, 1 - Rus]","example":"0"},"Contact":{"type":"object","properties":{"SmallFotoUrl":{"type":"string","example":"url to foto"},"MediumFotoUrl":{"type":"string","example":"url to foto"},"DisplayName":{"type":"string","example":"Tadjeddine Bachir"},"IsCompany":{"type":"boolean","example":"false"},"AccessList":{"type":"array","items":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"}},"IsPrivate":{"type":"boolean","example":"true"},"IsShared":{"type":"boolean","example":"false"},"ShareType":{"type":"integer","format":"int32","enum":["None","ReadWrite","Read"],"description":"[0 - None, 1 - ReadWrite, 2 - Read]","example":"0"},"Currency":{"type":"object","properties":{"Title":{"type":"string","example":"Chinese Yuan"},"Symbol":{"type":"string","example":"¥"},"Abbreviation":{"type":"string","example":"CNY"},"CultureName":{"type":"string","example":"CN"},"IsConvertable":{"type":"boolean","example":"true"},"IsBasic":{"type":"boolean","example":"false"}},"title":"CurrencyInfoWrapper"},"CanEdit":{"type":"boolean","example":"true"},"CanDelete":{"type":"boolean","example":"true"},"ID":{"type":"integer","format":"int32","example":"1234"}},"title":"ContactBaseWrapper"},"Consignee":{"type":"object","properties":{"SmallFotoUrl":{"type":"string","example":"url to foto"},"MediumFotoUrl":{"type":"string","example":"url to foto"},"DisplayName":{"type":"string","example":"Tadjeddine Bachir"},"IsCompany":{"type":"boolean","example":"false"},"AccessList":{"type":"array","items":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"}},"IsPrivate":{"type":"boolean","example":"true"},"IsShared":{"type":"boolean","example":"false"},"ShareType":{"type":"integer","format":"int32","enum":["None","ReadWrite","Read"],"description":"[0 - None, 1 - ReadWrite, 2 - Read]","example":"0"},"Currency":{"type":"object","properties":{"Title":{"type":"string","example":"Chinese Yuan"},"Symbol":{"type":"string","example":"¥"},"Abbreviation":{"type":"string","example":"CNY"},"CultureName":{"type":"string","example":"CN"},"IsConvertable":{"type":"boolean","example":"true"},"IsBasic":{"type":"boolean","example":"false"}},"title":"CurrencyInfoWrapper"},"CanEdit":{"type":"boolean","example":"true"},"CanDelete":{"type":"boolean","example":"true"},"ID":{"type":"integer","format":"int32","example":"1234"}},"title":"ContactBaseWrapper"},"Entity":{"type":"object","properties":{"EntityType":{"type":"string","example":"opportunity"},"EntityId":{"type":"integer","format":"int32","example":"123445"},"EntityTitle":{"type":"string","example":"Household appliances internet shop"}},"title":"EntityWrapper"},"DueDate":{"type":"string","example":"2020-12-14T22:13:41.5378233Z"},"Language":{"type":"string","example":""},"Currency":{"type":"object","properties":{"Title":{"type":"string","example":"Chinese Yuan"},"Symbol":{"type":"string","example":"¥"},"Abbreviation":{"type":"string","example":"CNY"},"CultureName":{"type":"string","example":"CN"},"IsConvertable":{"type":"boolean","example":"true"},"IsBasic":{"type":"boolean","example":"false"}},"title":"CurrencyInfoWrapper"},"ExchangeRate":{"type":"number","format":"double","example":"1,0"},"PurchaseOrderNumber":{"type":"string","example":""},"Terms":{"type":"string","example":""},"Description":{"type":"string","example":""},"FileID":{"type":"integer","format":"int32","example":"-1"},"CreateOn":{"type":"string","example":"2020-12-14T22:13:41.5378233Z"},"CreateBy":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"},"Cost":{"type":"number","format":"double","example":"0,0"},"CanEdit":{"type":"boolean","example":"true"},"CanDelete":{"type":"boolean","example":"true"},"ID":{"type":"integer","format":"int32","example":"1234"}},"title":"InvoiceWrapper"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

@@ -1,0 +1,71 @@
+---
+id: update-a-topic
+title: "Update a topic"
+description: "Updates a topic with the ID specified in the request, changing a topic subject, making it sticky, or closing it."
+sidebar_label: "Update a topic"
+hide_title: true
+hide_table_of_contents: true
+api: eJztV21v2zYQ/isEPyuRrDTdYmAY0jTFgq1BUDsY0NQfGIm2GEsiR1JJXEH/fXekZNm1Y7vLgG3ADEOgyHuO9667mlo2M3R4RxNZFFUp7CL8IHVVGDoJqOFJpWELzmt6XtlMavGVWSHLXzhLuUachhUN6BPQcTppAJVyk2ihkIwO6a1KmeWGMGKlEgl5EjYjNuPk6j0xiidiKnhKROn2NP+j4sYGJMlYORPlbAkz1f0DT+CkYHPcF5YYK5L5IiBSkySXxu8egyyKaVZwy7VxgpfwAoI4PgJlFSiXYjaj3wo7dnddvYcDk2S8YHRYU7tQiBel5TPQOaBTqQtm/dZJTBtUupX8nUwXiEkkUJcWl0ypXCTOauGDwWvqTebSaYeya6m4toIbR+e1xuW6oNf8qTMJgFomxmowAm1AeGeaTdhHNl9xRUu1xN9LmXNWIgM0KE83GVzg/pLDFqj7oTmMkqXxWsRRtMnJx0W6ZPQ3WexGGmtWyJjWDFWE6CzMfvhVeojHA8qfWaFyJBrEJ2iwUe+pdW+s0o7cYuk4gI358x4MKkQskgH5BWSb5eluRBzF0dEgPop+GA9Ohqdvh1F8fBK/PRuc/fgZmbSWfx2TVpJ3i++06fKqpUmryiVlf3XU/o62PLofivBeGJWzxbVL7126fBRzTj6zcsGsmQtndmHzfSBWMnQ+UJ8/Msv0qGB5vhtT6RzimRikJMyhEH+j5VTk/FbvgX/5EgJpWiXW4JJL2PZ7CD9mRj3/XBmuf2JpIUoBHJiVcANcYb1C9BJYyQXnv2umvPDjDCv0AQp7ElTXWpZkBSTjKxLp3xOp++MDCpCtND9+UK54XvhKNHb0u3CigAgJHxR3sJH4yr+/eMQnb05djODn6JDgwlBYc7n7XLsPF5aK3nkYAi4GXibuSYK/UvmiA1OpLXu+0r+uip2exYP4tbHRM9lffseZMAT+xuugwGort/9f/v4z5U/s07isQD/MY8tsZQ5MhrIqsAm+xoMcNi5834RcXG+10Q7fReSIePKADGDtEQGJYe1Bk/VwcFqs16IDJLoq/RHc6gS7kaDddmnWSL1QSL1NDDcr7P0kbEsjNhsE8IhfKkdtKfrgnOBo3kSDLV1jydoxBKyMVNDnZzLFIl651HNllIZMiTA+jsJ+qpniVaGrQWHdzgIN9vlcP3aTQoUhSjNr1TAMc5mwPMN8/9Zqv+EJ8UDarMxJI2xSfdZvnZZ6yynxK190o0jmj4NuUlnDOi2xC/7UTxiXnV1XJoTe6l3zb3XF+04e3xq8cCqdIK0HLjoDkZHTh3y6HI3J+c0VMEK7eI1zHOFc4cMCWDDXkrfS+lK4MhKsGWtlFPonRsHW3tg/h1AthRtuKl+JfKzcoTOAEqLFTSGtOXxuQS4FtNNr2E2Q4HEXF4Ct63tmsLQ1DW6DyBqnZVg+Mi3YPdoYAisVBtfghinLDd9ho5UJdKvsXQCVKOEjyyt8g+UcwqmfcZsJkGbdjF63p21jc+SqSY/eGLeaoEOcJwlXdiftZCUHb27HQHvfzsCFTBGi2RNs4tMJKp3SLkfcXg3BVc4q+NjAuWeJEY9pvp4wc5cw7QKV2mqK9dzp7IJP1GorpK59OjbNkt4fvYhYJqynRs9MQOo/AcOtvg0=
+sidebar_class_name: "put api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Update a topic"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"put"}
+  path={"/api/2.0/community/forum/topic/{topicid}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Updates a topic with the ID specified in the request, changing a topic subject, making it sticky, or closing it.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"topicid","in":"path","description":"Topic ID","schema":{"type":"integer","format":"int32"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"subject":{"description":"New subject","type":"string"},"sticky":{"description":"Makes a topic sticky","type":"boolean"},"closed":{"description":"Closes a topic","type":"boolean"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Updated topic","content":{"application/json":{"schema":{"type":"object","properties":{"Posts":{"type":"array","items":{"type":"object","properties":{"Id":{"type":"integer","format":"int32","example":"123"},"Subject":{"type":"string","example":"Sample subject"},"Text":{"type":"string","example":"Post text"},"Created":{"type":"string","example":"2020-12-07T13:56:02.3269198Z"},"Updated":{"type":"string","example":"2020-12-07T13:56:02.3269198Z"},"CreatedBy":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"},"ThreadTitle":{"type":"string","example":"Title"},"Attachments":{"type":"array","items":{"type":"object","properties":{"Created":{"type":"string","example":"2020-12-07T13:56:02.3269198Z"},"Updated":{"type":"string","example":"2020-12-07T13:56:02.3269198Z"},"Name":{"type":"string","example":"picture.jpg"},"ContentType":{"type":"string","example":"image/jpeg"},"Size":{"type":"integer","format":"int32","example":"122345"},"Path":{"type":"string","example":"url to file"}},"title":"ForumTopicPostAttachmentWrapper"}}},"title":"ForumTopicPostWrapper"}},"Id":{"type":"integer","format":"int32","example":"10"},"Title":{"type":"string","example":"Sample topic"},"Created":{"type":"string","example":"2020-12-07T13:56:02.3259212Z"},"Updated":{"type":"string","example":"2020-12-07T13:56:02.3259212Z"},"Text":{"type":"string","example":"This is sample post"},"UpdatedBy":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"},"ThreadTitile":{"type":"string","example":"null"},"Status":{"type":"integer","format":"int32","enum":["Normal","Closed","Sticky"],"description":"[0 - Normal, 1 - Closed, 2 - Sticky]","example":"0"},"Type":{"type":"integer","format":"int32","enum":["Informational","Poll"],"description":"[0 - Informational, 1 - Poll]","example":"0"},"Tags":{"type":"array","items":{"type":"string","example":"Tag1,Tag2"}}},"title":"ForumTopicWrapperFull"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

@@ -1,0 +1,63 @@
+---
+id: get-my-projects
+title: "Get my projects"
+description: "Returns a list of all the projects in which the current user participates."
+sidebar_label: "Get my projects"
+hide_title: true
+hide_table_of_contents: true
+api: eJy1Vd9P2zAQ/lcsP3e0sD0hTRtiFUMbE6KgSYM+XJNrY5rYnu0Uuqj/++7stEsYDCZteWgd+7778Z3vSyMDLLw8vJbWmVvMwvA8/Xs5HUiPWe1UWNN5I4/qUBinfkBQRn9EyNExztFKDuQd2aGcbgiVo8+csmwmD+UFhtppL0CUygdh5gLKUoQCRRvRC6XFXaGyIu5SRIc6iNqjExZcUJmyENDvURSH3hrtkTJu5MFoxH/9cJ/bIFvnBMqMDuSRbcHaUmWxguGtZ0AjfVZgBbwKa4vkApyDNeGooMp39s2MPdIB+bZIiaU0jkGPcxU6hjNjSgRNlngPlS15bw6lR7kZyFN/7tSKCnoxIO9YKiplQcQP5Ny4CkLaen3Qg+6PGHepQtkN4oNTetEznMSFSJYE+dCl8gXALvUEnwQItf/bbGOyF6mxatZL+QnGe4zsstuFqGuV9yO0z6tHfrZPLF95W8L6C1TP8Hamlii+gV5D8Ev1QrLPQAOTQdZH1H9wk4om4c+Y2tGoGOHZUkBEMZ5mdK5KvHLPwG9ueJzzmuaAl2hoO+0xfA+8vX/Hc/YW8kppmhwHwVAEChFSQXJMrswa8asDm5LvtOr/NKITvRUjDh6j8zOQb0b7vw/+lYZWoDCPPiqkV0pQLjBeIQgFvQzBquHB3mi41bv3Hsu5ZK1zK3Q+Sl3NxMoiBHs4HJYmg7Iwnp080Bo+EQkoNx29nLCkpLv6qGr+khqrPmHUGvZXpOOB1PEG9rGxJqXnJsJbfo5NVdWaIopJzEJcjCeX4uj8lJxwNSnPkuUzcO8slVFBHO42xgkGUa27cpn3RWCnnv9WyVsCAt6HIQ2digJSpwudWnXN7JAlNSspQKsFqWHEduwJmTXNDDwPw2bD299rdPzFouUKnIIoKddTcl9sP1qNXBLrRHCWoWWfKyjr1I8H3wfu6u4inYwvyZavWb+Fy9jCdsHet0d63fHd7+agTYF/N4MnIE2TLggVtrVPR08idlcoWTOtU5qZnwIgp3U=
+sidebar_class_name: "get api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get my projects"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/project/@self"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns a list of all the projects in which the current user participates.
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"List of projects","content":{"application/json":{"schema":{"type":"array","items":{"type":"object","properties":{"CanEdit":{"type":"boolean","example":"false"},"IsPrivate":{"type":"boolean","example":"false"},"Id":{"type":"integer","format":"int32","example":"10"},"Title":{"type":"string","example":"Sample Title"},"Description":{"type":"string","example":"Sample description"},"Status":{"type":"integer","format":"int32","example":"0"},"Responsible":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"},"ResponsibleId":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"}},"title":"ProjectWrapper"}}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

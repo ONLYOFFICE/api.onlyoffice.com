@@ -1,0 +1,71 @@
+---
+id: get-the-default-account-settings
+title: "Get the default account settings"
+description: "Returns the default settings for an account with the email address specified in the request."
+sidebar_label: "Get the default account settings"
+hide_title: true
+hide_table_of_contents: true
+api: eJzVV91v2zYQ/1cIPq2A4q+mKOC3pM06Y/kwYncviWHQEm2zlUiOpJp4Wv733ZGUI8WOYwwbsOlBoMjffR/vThV1bGXp8I4WTOTdszRVpXSWzhJqeVoa4TZwWNGz0q2VEX8wJ5T8hbOMGyQysKIJfQAcp7MnoMq4TY3QCKNDestdaaQlbs1JxpeszB2x3DkhV5YslSFMEhZkkgfh1h7IURXCssxwa4nVPBVLwTMipD82/PeSW9cBuXF5rjLQsqKpko5Lh0umdS5Sr233m0VdKmrTNbDGldtoDtqpxTeeOuCjjdLcOMEtnnr5uGjbEn3TVg+IIzPrDFhFnxLK0kDxksF0nxOQengvSeO5pyvu5qJgeq6VntfQe0pOCJx4J4yuzsYE/De+GT/z+snvbj+Z4UQbocy75FUBlpsf3ADrP3d358syz3elhsOtmL28g94vWD9v7nIOdrQYd9qMm97btdP4RIMkWWxqVGc3Nv7BtLFaSRuiPej1Xo+1z8mXMQO+/1CmXUEmnavHUdaACuC8gtuVULgfBXNh6/0ANvgjK3SOoD7m2QWS/yb4Q4M6WtrE+nztKJlvOqkqkPCaFfwwjUQEIKMfDoPjBUb8mFn7oEx2mEDXKKCY+KAfxofE8OjC6aMoADdvk42VcRN3DJ0GZE11lAM8VcMLXtxRngjymu5AmVBrG2QLpXLO5B6JiEOnH2NZbdSFTM1G1wXqiJyTZYGV/lpJDp+TySW+HTNuejmhOwX/rgeXGrEJ6cMK4AkZ4CJSzHbTGE3+T2k18JkPzoUbHm/239LqUq0Ehu2TYcVV9gFWN8gVkdcuL95U09Mn5BSWkUVCPsBH4JKQj4gGRnu0r9Po/2vBCPrQG5fAmdIXqXMOUj4zt7embU3MAHDiRMHbsnqD3km/d9LrT/sfh73T4ftBpxcer4W9OeI21orcchSbuiPhvn6P5M8qz96qZ76Gz4WcLwPYqzblrMjZ4g1pws5dBGLvc8L57dh6wG2Mhq542uvvNsKvksXJj2eevuDwCVUNOzr2M4beoV2mRRc81/VTZCyFtgsds9TYL0Mptn6ULA0MV3TtnB52u7lKWb5WFnm1JV/iCalreGMenWBzDf1z71S69Qbo9CvfAGOB/NbhOAm9bdim9aZh9759nigvahduJ8LnyNQjXmPqE3KpvPDo4E+qKEoJ+pLQsMjtxWRKzsYjIEdfBPocstL6wqzBCQXz9zRq+CXORvX8UQ/KjTmk5bLGAPxvD97Rw44/uq7OGTgYLPCBrWJK3KH7AQlJAW/vv6SeFEJG+NSAuProA76qFszyryZ/esJtkGXw3wOWP5gRbIFevZuBnHX9+1HR7xBfdLU3+2SKWiE8L0P8X0xmT0lNAW2da3cQO2vk+peLKWAX8TejUBmSGPaAvyDwHlJYKB8Fn5Z+r4LYylXJVogNLDHJWLucgJO++xyNCzSqPpKbhoLtdE2iHfhGq/aSVFW4AeDPGh+OXqXY3pGAxrDOQOu/ADbyuAg=
+sidebar_class_name: "get api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get the default account settings"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/mail/accounts/setups"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns the default settings for an account with the email address specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"email":{"description":"Account email address","type":"string"},"action":{"description":"The default settings type:\n            \"get_imap_pop_settings\" - get the IMAP or POP settings (IMAP settings are prior),\n            \"get_imap_server\" | \"get_imap_server_full\" - get the IMAP server settings,\n            \"get_pop_server\" | \"get_pop_server_full\" - get the POP server settings.\n            The default IMAP settings are returned by default.","type":"string"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Account with default settings","content":{"application/json":{"schema":{"type":"object","properties":{"MailBoxId":{"type":"integer","format":"int32","example":"1"},"EMailView":{"type":"string","example":"email.only.com"},"Name":{"type":"string","example":"name"},"Account":{"type":"string","example":"account"},"Password":{"type":"string","example":"password"},"Server":{"type":"string","example":"server"},"SmtpServer":{"type":"string","example":"smtp_server"},"SmtpPortStr":{"type":"string","example":"smtp_port"},"SmtpAccount":{"type":"string","example":"smtp_account"},"SmtpPassword":{"type":"string","example":"smtp_password"},"SmtpAuth":{"type":"boolean","example":"smtp_auth"},"PortStr":{"type":"string","example":"port"},"Encryption":{"type":"integer","format":"int32","enum":["None","SSL","StartTLS"],"description":"[0 - None, 1 - SSL, 2 - StartTLS]","example":"1"},"SmtpEncryption":{"type":"integer","format":"int32","enum":["None","SSL","StartTLS"],"description":"[0 - None, 1 - SSL, 2 - StartTLS]","example":"2"},"Authentication":{"type":"integer","format":"int32","enum":["None","Login","CramMd5","OAuth2","Ntlm"],"description":"[0 - None, 1 - Login, 4 - CramMd5, 5 - OAuth2, 7 - Ntlm]","example":"2"},"SmtpAuthentication":{"type":"integer","format":"int32","enum":["None","Login","CramMd5","OAuth2","Ntlm"],"description":"[0 - None, 1 - Login, 4 - CramMd5, 5 - OAuth2, 7 - Ntlm]","example":"2"},"Imap":{"type":"boolean","example":"true"},"BeginDate":{"type":"string","format":"date-time","example":"2020-10-01T17:04:32.0000000"},"IsOAuth":{"type":"boolean","example":"true"},"Restrict":{"type":"boolean","example":"true"},"EMailInFolder":{"type":"string","example":"email_in_folder"},"IsTeamlab":{"type":"boolean","example":"is_teamlab"}},"title":"MailBoxData"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

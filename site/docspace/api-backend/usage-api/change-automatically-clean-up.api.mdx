@@ -1,0 +1,71 @@
+---
+id: change-automatically-clean-up
+title: "Update the trash bin auto-clearing setting"
+description: "Updates the trash bin auto-clearing setting."
+sidebar_label: "Update the trash bin auto-clearing setting"
+hide_title: true
+hide_table_of_contents: true
+api: eJztVk1v2zgQ/SsEz4qVuGkPvrlJCxTdokXjoIfAKGhpbLGRSC5JxXUF//fOkJQtf6TbBXrsxaZGM8P3Zt5Q7LgXK8cnD/ytrMGxnN2B91KhbZ5xbcAKL7V6V/IJLyqhVjBtvW7QWIi63tzUINS94Rm38G8Lzr/W5YZPOl5o5UF5WgpjavSmNPk3pxXZXFFBI2jlNwYwt158g8JjHmNpUy/BBT/wA6eF1rQfepXgCisN5UT7GyUWBN5XwATCuyjQzSIJpi1TmtLCd9GYGpN428I24ythKLFW8HGJ7DsOqm2oDB8VfAF4xJDZWtPK4RKNH5BQRdZKWr+5FRsXXYI9rCsLkJ6wdAmy84TjBPFD2oZdMFyxNS4z1m+IRlwGo8tYv3dybWiNvjsY5B0eWIlPIUtEkdKEALLv8YUQfErv5sP67AqwzXZFucrG2YvsOnuZvdozk9jgFdhTalcHpMaHbF4c0rg+Rv/yCPWrX2G92hIc6QPu6d3NKGh4dKMtjG6Fh5kmsfYa3WLbRVlKwinqTwOdLUXt4JjH9EBISd7MCCsa8GCp5c9sPTXygy6hdqPPMerW69EOSWv2VsREqCw4o5WLkh9fXtLfIZjZibJdHFO2n5fJWe1nTDAvG2DUL/skarauQJ0ZlbWsa7YAhtmW2jZQIsE/NMXSDfvw3/N8Z6CQSwxmcnkGaU9dOgZh8su/c/53zn9/zp8b230OTCrSbF5fXp2O471CRVbayh84JuTloGit9JsgMeGKr/T+6yOQAcdb0DCt0QH4nLgcZTMlkoifL2+Fq9hCqvOaH2EePH4qTd9j04ZRE6jXCc+Fkfl4dJkviVGe/F1OaYp47nDCaZ/o7CKYra0xrvLeTPK81vg9r7TzJ33+h96wGMgJfM/1jqY/Dvgh4918I6T3aMi4wjOTnoduGSqLLhVaP0oIRaRj5fP+GvGmb3+6BtBEp4EeiBezLHXYc9DVL7CgUxj3ILaRx9OYvA1SbEQ4vRKoWP3fKf5xaQa3nP/bw1QgD999bmqBlUBsoSFdaugDVQ89saX4G5oa+pcuZyjxQWOxK6F3GNV1C+Hg3tbbLZmxmpZEiMsnREGnJT3hbhWqEjtKSghd4zeRzMWMsJF73cYmHh38dGDEiGlRgPG/9J0P9Prpfoa+i3RDbPATiUYr1nR7xN8J53TjpOAgqmDreI2XzlasyDemDPPdUo2GQouSSgsi1b9SmyHAQwVGGvRLpM5GdF1UMZaz94+vno1Ihe29qbdzBP0TKNXkGA==
+sidebar_class_name: "put api-method"
+info_path: site/docspace/api-backend/usage-api/asc-web-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Update the trash bin auto-clearing setting"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"put"}
+  path={"/api/2.0/files/settings/autocleanup"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Updates the trash bin auto-clearing setting.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"set":{"type":"boolean","description":"Enables the auto-clearing or not","example":true},"gap":{"oneOf":[{"enum":["OneWeek","TwoWeeks","OneMonth","ThirtyDays","TwoMonths","ThreeMonths"],"type":"string","description":"[OneWeek - One week, TwoWeeks - Two weeks, OneMonth - One month, ThirtyDays - Thirty days, TwoMonths - Two months, ThreeMonths - Three months]","example":"OneWeek"},{"enum":[1,2,3,4,5,6],"type":"integer","description":"[1 - One week, 2 - Two weeks, 3 - One month, 4 - Thirty days, 5 - Two months, 6 - Three months]","example":1}],"title":"ASC.Files.Core.DateToAutoCleanUp"}},"additionalProperties":false,"description":"Auto-clearing request parameters","title":"ASC.Files.Core.ApiModels.RequestDto.AutoCleanupRequestDto"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"The auto-clearing setting properties: auto-clearing or not, a time interval when the auto-clearing will be performed","content":{"application/json":{"schema":{"type":"object","properties":{"isAutoCleanUp":{"type":"boolean","description":"Specifies if the auto-clearing setting is enabled or not","example":true},"gap":{"oneOf":[{"enum":["OneWeek","TwoWeeks","OneMonth","ThirtyDays","TwoMonths","ThreeMonths"],"type":"string","description":"[OneWeek - One week, TwoWeeks - Two weeks, OneMonth - One month, ThirtyDays - Thirty days, TwoMonths - Two months, ThreeMonths - Three months]","example":"OneWeek"},{"enum":[1,2,3,4,5,6],"type":"integer","description":"[1 - One week, 2 - Two weeks, 3 - One month, 4 - Thirty days, 5 - Two months, 6 - Three months]","example":1}],"title":"ASC.Files.Core.DateToAutoCleanUp"}},"additionalProperties":false,"title":"ASC.Files.Core.AutoCleanUpData"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

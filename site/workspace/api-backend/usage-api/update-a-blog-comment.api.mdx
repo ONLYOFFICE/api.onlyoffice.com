@@ -1,0 +1,71 @@
+---
+id: update-a-blog-comment
+title: "Update a blog comment"
+description: "Updates a blog comment specified in the request changing its content."
+sidebar_label: "Update a blog comment"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVE1v2zAM/SuCzlmdFTv5lnYFVmwYiiY5FTkoNhOrtS1NkpNmhv/7SEl24iQrMGA5BLTEj8fHR7Xcia3l6QvPVFU1tXSH5K5UeLSacAtZY/AEr1s+a1yhjPwtnFT1NxA5GAozaPEJ36Mf8FWHUTnYzEhNbjzlS50LB5YJtsa0jKpA7ZjVkMmNhJzJmrkCmIFfDVjHskLUW1lvmXQWvWuH3jdYQAsjKnBgrEdT4wdmj+kkQZBUTgtX8HMM97Ho41e8slkBleBpy91BUw7rDNbjHWGPKO5UfiCPWJ9MoXUpM9988mopbXuZSq1fIXOE1igNxkmwZ2nGwH7CfmDEwTtFnoOiH+GyWtU2pLudTi9TBZ7zEcuY7l87OKk74V+mn68UqkVUAuScvHAqhcqJ+8a3ThNIeSK0TG5vpslRVwQtidCSdhhdR0MBs+tH25gS4wvndJokpcpEWSjrLob6g25YCOTdiVrn1FNg6qpmh14R4Xc49MopwvWkl9Yo1jdKpD0fBfLwLipdwmjAA3+UdKN8MenIyYvQ88DmHjN7fpgv2OzpEUtS76GrkpbFUbzGpivhpxQRhRGfbdI5L6dg/tfuRb5IoYkuBdKF+PyY2jjuFyITPXHgXnSxVbSpcjwKaNPjzuLQ/GgxvG3XwsLSlF1Hx4jH0LOD5k4YKdZEIWojl5ZsVNtGlBY+6H2081cb6FVQE8ydKBv6QvMNNXH6snQrdC76B6+N9/eh0qcFZTnGXyxZN+kjZlkG2n3ouzrZpqflguiLL1GlcgoxYo+H9O+hKt+4l7o/a1E/9bYRW/INKUm4tLBj3b953UeDmrpKxngFembon7q6GtK2Yau6bvAPV3+NGPYueNNsVoj6D8ucRh8=
+sidebar_class_name: "put api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Update a blog comment"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"put"}
+  path={"/api/2.0/community/blog/comment/{commentid}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Updates a blog comment specified in the request changing its content.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"commentid","in":"path","description":"Comment ID","schema":{"type":"string"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"content":{"description":"New comment text","type":"string"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Updated blog comment","content":{"application/json":{"schema":{"type":"string"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

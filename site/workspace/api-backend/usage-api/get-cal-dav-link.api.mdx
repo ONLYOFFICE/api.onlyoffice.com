@@ -1,0 +1,71 @@
+---
+id: get-cal-dav-link
+title: "Get CalDav link"
+description: "Returns a link to the CalDav related to the calendar with the ID specified in the request."
+sidebar_label: "Get CalDav link"
+hide_title: true
+hide_table_of_contents: true
+api: eJy1VU1z2jAQ/SsenWlM0564pYRJM+2hA8mpw2GxF6zESKq0JqEe//fuyjbgQHNqcyBitR9v374VtSLYBDX5qTIo0eTg02l3CAmYPAnVKmReO9LWBLUcqYBZ5TXtOaZWNxUV1uvfINdfEXL0ksvzSY3UC/uhWjYcleMhi5qoOVLlDRdISm2eE7IJFZhw4VvYJR5LIMx7a48redFURMv9bRIcZnqt2UubaPP4q8JAV1zVgYctEvoQIRr+wiX7NPcCTAsIB1Sot8j65rkI34WswC2oSa1o7yRLIK/NRjXSUlfyi8334pFZQ2hIjuBcqbPISfoUJG99nsqunjAjweutQ08ag9wyt/LvDarKe86dPM7vOeAtFvkTOMHxiNos1+PxhSwtv0I5Z/lHeKd260pmOz9xXVlbIhjFqBYEVIWpzfHkXnPlDStlpNbWb4Fa06drCbgFukT4SM28t/7SKJgQTaWYuLt5x4JqSfk8/njOw6OBTraMWrxYLYXlBtQGY4MijIlKwen0+mqcHjajPoqoEWsOu8qXohP0u15vYpmogshN0rS07FbYQGdC+y43SRuompO9WgjxLbcXt+tAAMP7hvtezUV7Per1PoiNXcpk50fNzl5BJnfQ3AnV2qxtLNTxyjPeVoaxJYuIN5nPFg/JzQ8Ro/TddiRby41yvOOGtxBl1KG5Q0qG8huwcbI9//dt6KgjfKXUlaCjRuPE6m7sP4VX9uTBy5J0Bfg4Gbwgx+nz6OKAObKuVxDw0ZdNI2au6uWZ5OMOvIaVkMkKyXWQMwtuDWXAd7gYvkYXwfdiMKKEHZSVfOPjM0tj8Oo1S/Yu+ie67hymba0PD5LmmODsRWhGfcRNlqGjd32XJyt1N3tg31X3SG7jQ6A8vLBRPiNW2/26sEO01awls6lgI75tShGwbO1Q/89R/91BmrrIxnAVemrkU7q6GFLX7XbxIHv/9uqvEYf9a71lOEtG/QfGiIW2
+sidebar_class_name: "get api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get CalDav link"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/calendar/{calendarId}/caldavurl"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns a link to the CalDav related to the calendar with the ID specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"calendarId","in":"path","description":"Calendar ID","schema":{"type":"string"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"uri":{"description":"Current URI","type":"string"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"CalDav link","content":{"application/json":{"schema":{"type":"object","properties":{"Completed":{"type":"boolean"},"StatusCode":{"type":"integer","format":"int32"},"Data":{"type":"string"},"Error":{"type":"string"}},"title":"DavResponse"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

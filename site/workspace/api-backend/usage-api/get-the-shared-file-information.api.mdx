@@ -1,0 +1,71 @@
+---
+id: get-the-shared-file-information
+title: "Get the shared file information"
+description: "Returns the detailed information about the shared file with the ID specified in the request."
+sidebar_label: "Get the shared file information"
+hide_title: true
+hide_table_of_contents: true
+api: eJy1VMFu2zAM/RVD56DOip18C9auC7bD0LTYociBsZlarW1pEp0uE/zvI2U7iZd0t+VgKyKfSL735KAInr3KntRWV+jTVQlON89qPVMe89Zp2nMwqEVLpXH6N5A2zReEAp2AHK/UTL1xHqp1x6gCfe60lTSVqXuk1jU+oRKTAgm4RpHoZmtcHU9KYGNaimHPlTkobSRvmsq4ubxJvMVcb3XExT2HP1v0dMV1LTiokdD52GTDf7ioHLGUtrS0YIFK9Xdfn6XK8ob3fV5iDSoLivZW0J4iAZ0M49Bb03j0Er+ez+U1PWh10vXJXHxwbhrChgQC1lY6j4H0xQsunNcF52AvTRPW/mTfbF4wJw6QpgqH3mPZH44PZh06+c3Ux/mH8/4eGxiUw0JJFtNVmoIjz0iRQWYnUylYnV5fzdPeBfJMQ89jl0ZlhCp0u5Hq1lUMK4lslqaVyaEqjacznr9JJOmBqjsx1UrG73m9aK0jLVZ/xf0oZtmHZ6PUE2ycT0SI8IGtT6au24YrJqvYRXJ/u3pIFt+XfIhM0/dZAbGlFOMtj1FDlGiocYfnBp1KPZk5HJX/3/YfKCL8RamtgBniAaIyYRD2SfjjTJaWn1Hc4c2v7HBReoVZnigio0LYgMdHV3WdbHNFJ98BXu74+wAboZZdUGgva7bTFiqP/2DieOEuNj2K3YjSO6ha+cfLV5b+cKG7NWeW47cnDMFFnqOlE9jZbRPfHWx/d/vAuXIppiZ7jSYbFnL6xZamfhv7k2c3ewcSQm9hZnLM70PvIg4m77OFoTXf8D9L0+7d
+sidebar_class_name: "get api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get the shared file information"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/files/file/{fileId}/share"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns the detailed information about the shared file with the ID specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"fileId","in":"path","description":"File ID","schema":{"type":"string"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Shared file information","content":{"application/json":{"schema":{"type":"array","items":{"type":"object","title":"FileShareWrapper"}}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

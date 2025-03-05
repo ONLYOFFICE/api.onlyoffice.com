@@ -1,0 +1,71 @@
+---
+id: update-the-phone-number-settings
+title: "Update the phone number settings"
+description: "Updates the settings of the phone number with the ID specified in the request."
+sidebar_label: "Update the phone number settings"
+hide_title: true
+hide_table_of_contents: true
+api: eJydVcFO3DAQ/RXL167IFvW0NwpIrEpbBIULcPA6sxtDYru2Q9iu9t87Yyck0aaoIiePM555741nvONBbDxf3HPpquzOLK/444x7kLVTYYv7O35Sh8I49UcEZfQFiBwc+Ttc8Rlv0A/44x5P5eClU5bc+ILf2lwE8CwUwDyEoPTGM7OOti2MBqbragWONSoUcXd5xrwFqdYKcqZ03HPwuwYfjjBTu/xqcsS149LoADrQUlhbKhnxZU+esu+4lwVUglZhawHxmNUTyIBxrDMWXFDg6W8CscxpPSZwNQS5PMOTbSQfHJLh+xnfOAAidnj4BzRsrZwPrPNBOiIwKcoSnGcFCGReQGS5jdssGDSUH6kzlbUwZX5rp3NWtVeSGc3I6d2UwmEdSiF7rRuhIlCUuYapxOQwnfb2+pLgN4WSqZay9sFUKBzycZArh9pjpkgR2ItRElglVIlXw72Q0QF7QxFUBaYOFABeJUAO+RSmGOo7RvqHHuC92MA7SoxpsxL0Bu+jcQjvdQRmiIQJnSeebUhSU6xKIIYliBe0EstIskUxqalxz7i8MLXz0xTGzZLcsbzkj+cxv2l+1mFjcPsUrYkoZ7BWGltRrRHVKFw87ZHqc7qhwEwbKjLzpIM2oQcunBNbNLHpKz/orpUxSFvz/Z4aVRo30VADGAdDoAWSjnZYPg5BlEr8j5zJ76As8SMi3hrt06A4ns8PA6Yhl4+DdtMO4354SAUVStq4M8rGQcQTpC/zzxMotGhnNPYIeVWAJlaA2zpOPBEKNDJhVXZ8NM9o1OPltFkC7LNdNwUXDw/Np302YED9CXQ18SWoHXYZL0KwiywrDZanMJ4SjOFc0h+WDvL94Dm5IbpJzclH5U0GBPoNYo0pXpF+z7gWFf0dnY18Sc/r/nk4fxWVJfmG470r7nBq93vdTO130rDr7cGg6Tenuu8+uBoe+zbo7PZODnpf6bWJrNtin5qqqjUKxW6ieOz6/OYXO7laUnosQpK3pGc1IO+//gC7Sg==
+sidebar_class_name: "put api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Update the phone number settings"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"put"}
+  path={"/api/2.0/crm/voip/numbers/{numberId:\\w+}/settings"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Updates the settings of the phone number with the ID specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"numberId":{"description":"Phone number ID","type":"string"},"greeting":{"description":"New first greeting that callers hear when they call to this phone number","type":"string"},"holdUp":{"description":"New music on hold that callers hear when they are placed in the waiting queue","type":"string"},"wait":{"description":"New URL to which the customer is redirected to the voice mail service when the waiting timeout is exceeded","type":"string"},"voiceMail":{"description":"New message that callers hear when the waiting queue length or max waiting time is exceeded and the callers are able to leave a voicemail message","type":"string"},"workingHours":{"description":"New phone number working hours"},"allowOutgoingCalls":{"description":"Defines if a phone number allows making the outgoing calls or not","type":"array","items":{"type":"boolean"}},"record":{"description":"Defines if the phone number allows recording the calls or not","type":"array","items":{"type":"boolean"}},"alias":{"description":"New phone number alias","type":"string"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Updated phone number settings","content":{"application/json":{"schema":{"type":"object","title":"VoipPhone"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

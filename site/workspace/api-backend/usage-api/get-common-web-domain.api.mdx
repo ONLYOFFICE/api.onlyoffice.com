@@ -1,0 +1,63 @@
+---
+id: get-common-web-domain
+title: "Get common web domain"
+description: "Returns the common web domain."
+sidebar_label: "Get common web domain"
+hide_title: true
+hide_table_of_contents: true
+api: eJzdVU1v4jAQ/SuRz1FDaU/cqlK1aD9UlbaXioNJBuKS2F7bobAR/31n7PARaKFadS97Acd+b2bejD1TM8enlvVeWMlFYcHMwSR9hR/SslHMLKSVEW6JiJpdVS5XRvzmTih5BzwDQ0yDKxazN8QBG62QlYFNjdAEYz32AK4y0kYuhyhVZalk9AbjKPNezpBpwGolLWAcNet2OvTXNnG9T0NWqqQD6QjMtS5E6sNKXi0xambTHEpOK7fUgDbU+BVSh0RtlAbjRPA3yHYwAk1OUVXMJsqU3IWtiy5uwIKXuvCgjK1iNrDDnBvIQrJ2bIyVKoDLFsWZCoj0k5ewA7XOCDltIT0CkX1p/0Xs592LSzL/Y/EAqTLZaR93yrrjIXsE2rw3QoW78ncxDewzGDERkH0qm8hwwvmNob+3oRJrZX3uOFkd6slnpZ6ujmyq88yL6gR07iFfJgvvQ1tXfybKzwobQoHbyhyPeIOiWlZjfFHfYHmcsoV9ndCNro1Sv3+dQzr7Lyt51OwRK4H/0Xk4pOPLzvlhR32SvOnm6JZQJeAnRsCm4PPJXY4fCdci6Z51kp3xEDqwTUIvZzQkaN/6GVGZAmm5c7qXJIVKeZFTe9ifCd/pJApEttoZNENq26GI746bTYIwMLp3MaPmy/JwHIe69tpcr0/IifL0Jlk0UiqJHqOQtujhZvgYXd0P0AipCXEW3EHobhpllNw3+sbHLbjDebavtN7OqdODsJHmYOESXZA1dOwzWjcFeSHdiMSS4O+2KOS2mdo0GX1hMKs+90iq6zG38GSK1Yq2f1VgaKTjcs6N4GPKyMsIneXrqV6zGT1+dpWmoKl+4RX0DmctVW9zeW5vHhFLV6tdqpkvVbMg6+sjudyx3a5a3IQw8+3lA0pdh4uAwtb49Xv9gLG5KgFNSR7hO/kD2iQS9g==
+sidebar_class_name: "get api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get common web domain"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/mailserver/domains/common"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns the common web domain.
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Common web domain","content":{"application/json":{"schema":{"type":"object","properties":{"Id":{"type":"integer","format":"int32","example":"id"},"IsSharedDomain":{"type":"boolean","example":"true"},"Name":{"type":"string","example":"Name"},"Dns":{"type":"object","properties":{"Id":{"type":"integer","format":"int32","example":"1234"},"MxRecord":{"type":"object","properties":{"Host":{"type":"string","example":"Host"},"Priority":{"type":"integer","format":"int32","example":"1234"},"IsVerified":{"type":"boolean","example":"true"}},"title":"ServerDomainMxRecordData"},"SpfRecord":{"type":"object","properties":{"Name":{"type":"string","example":"name"},"Value":{"type":"string","example":"value"},"IsVerified":{"type":"boolean","example":"true"}},"title":"ServerDomainDnsRecordData"},"DkimRecord":{"type":"object","properties":{"Selector":{"type":"string","example":"Selector"},"PublicKey":{"type":"string","example":"PublicKey"},"IsVerified":{"type":"boolean","example":"true"}},"title":"ServerDomainDkimRecordData"},"DomainCheckRecord":{"type":"object","properties":{"Name":{"type":"string","example":"name"},"Value":{"type":"string","example":"value"},"IsVerified":{"type":"boolean","example":"true"}},"title":"ServerDomainDnsRecordData"},"IsVerified":{"type":"boolean"}},"title":"ServerDomainDnsData"}},"title":"ServerDomainData"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

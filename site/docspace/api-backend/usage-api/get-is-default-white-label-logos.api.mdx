@@ -1,0 +1,71 @@
+---
+id: get-is-default-white-label-logos
+title: "Check the default white label logos"
+description: "Specifies if the white label logos are default or not."
+sidebar_label: "Check the default white label logos"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVctuGzEM/BVBZ8PrBj35FiRFETQFiriBD4ERyLu0V4ksqRI3ibvwv5fUPvxM06Y95EGJGg9nSLqWqJZRju/kBBC1XUaRiRuYB2ULiuRsIJ2HoFA7e1XIsVwCXsVLWKjK4LTUCNdqDubaLV2UA+lVUCtACAxZS0sBvaEHKjzStbYU/aggrCkoIOZBe0am04mHXC80RKEXAksQhiCFjmLhglCiIAA+XoGg2DokgJhTrOS4lrj2/Dlz5wwoS1fwolbe0BmGCjabwS6Vhvu/sWkwBIJVFt/DiHQNEL2zESLnn41G/GefxQ0Qu4jCB/YAmY5biGdWXRiWPdFi3XNniQsyhPLe6DwZlj1ExqmPebn5A+TMeAvNt41IfVbEwD1wKM70gIBIzwbSVoYOuxp3SpZTbUlMU4hbjwSxYcTGhVNSvWHFYf1sS2dI78RhA0hVFJoRlfm2U/JCmUhMUWPieT65GE5hPjz3mn++ugJMHN60Rl2iG77W+3QnNxv+oI+jD8dO3lpVYemC/gmF5KwIeRU0rtOYqJjf8/39I/ABdYYqqIZnSgA54175S0miUAEORBkSIo1m6dopTtOKJQWZ8jo7G46y2K6ALOEluCzBZToW/dhECE/dgFfBEECJ6McZpebKlC7ikYfXfCOah5Lr6cqfcGM2vbcvQt8WxO0L8IC2A7yX1s5w7tyjhqQrNZpLr48dpWzm3TB6OuMu9ER2pey29eVFCXlaNL16p8Ztr7p6O33vd6atFuEFM2+UTkOS1K1bm+5YCsoko5IJjVXcJr1ZFHQMt4aR2skTAqjruYpwG8xmw8fN6mMbCx15cIt+IP68wLfX9MnSksnbL4YnZSpOkryq/x+bV9b07xn1jb4lNeMg6Ga53c0ou6QRpV5m8ZqH53kOfvfV0R5mlH4AP3/6TrncyPu93nR1+w+jd1d2vYu9PwQNA/7N8p18UdfNIJHzXX5z9eqLtsIum0Wa0YL7BYl40fI=
+sidebar_class_name: "get api-method"
+info_path: site/docspace/api-backend/usage-api/asc-web-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Check the default white label logos"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/settings/whitelabel/logos/isdefault"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Specifies if the white label logos are default or not.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"IsDark","in":"query","description":"Specifies if the logo is for a dark theme or not","schema":{"type":"boolean","example":true}},{"name":"IsDefault","in":"query","description":"Specifies if the logo is for a default tenant or not","schema":{"type":"boolean","example":true}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Request properties of white label logos","content":{"application/json":{"schema":{"type":"object","properties":{"name":{"type":"string","description":"White label logo name","nullable":true,"example":"Winfield Upton"},"default":{"type":"boolean","description":"Specifies if the white label logo is default or not","example":true}},"additionalProperties":false,"title":"ASC.Web.Api.ApiModels.ResponseDto.IsDefaultWhiteLabelLogosDto"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

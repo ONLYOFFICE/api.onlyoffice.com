@@ -1,0 +1,63 @@
+---
+id: get-third-party-accounts
+title: "Get third-party accounts"
+description: "Returns a list of all the connected third-party accounts."
+sidebar_label: "Get third-party accounts"
+hide_title: true
+hide_table_of_contents: true
+api: eJylVl1v2jwU/iuWb0dJStE0cVd16zTtlVqNTrtACJnkhHh14sx2aBniv+8cO0CgtE3fcgExec5zvo/PmjuxsHw04ddSgWURu8ulSc8qYdyKydLBwggndcmnPa4rCIdvKR/xBTiPvSXoZZLounSW97gBW+nSArKu+SCO6ScFmxhZeaIR/09ax3TGEl2WkDhIWWX0UqZgLKrMtCmCyh5HhIPSEYWoKiUT/yL6bYlnzW2SQyHoya0qQGY9/42EKIiEaKyTwQpRu3yWCtcBqvRCli2YdUaWC4QdueBhPV7WSom5QqQzNfQ4PIqiUl5QF8AcPDq+QR3C2gdt0teJb7fIl7iXWZENljfn3ysiN+LhTt9DB6t/iAfmPLSz5bVRr/P+RFCPh8ThsTbyDaFpUt8hNFtkZ253FJbnyiNJwNrZMXpnRkdtBjKs/fzdPPBYSSSaHdShb0Xv+y7M+NfHIW/RnA8uhiifKIk9M5Mnq62jDQ2HhcSAe1dMUvQlcTOqiRM0/69mnCzAOnz1IiU2PJwRtB0jmkifzuLh2Xl8F38cXcSjOO7H4fMhHuKJFEj7xSehHcK51gpE6SecSG9KtXpiJR03KC7SVFLRCnXbKrRMKAtkvPOGXI6v+teQ0kiF1M+T/s0lDqpBHLr5bUQ0vftX2kCfOD7TrKM0alNpUnDSj8P2GleQyAwVMJkxl0v8tUywHQUTYcYzbVipHT/2G+OidWHHDtGLdygkFmYDy/O6khohBZhZE4XXhsdVg2cB/+bxdNhO+248PaLYt89HnXoxeEln07k7Zfew6j4PGaE7OvSWmvoF86auxmCWEmdk/9fVdfPc39/9+CUKi9zEPozPn174P0u6gbWRf7GjCIVzBRveoZMTHL82mfkb2ns98e2F/jwgAPh0M31yi4GrTUmloppFQiiFBQSthcK1tpimbm0fSQtAO5rthe4B4XI8RKKS0aAfRxm5G3lhL8vJVLPExcRb6i9DnjtXjaJI6USoXFt3YjnANywIcrJ/6+6Y9pXmzjlwepdqNOR7yKYo/LkNw7lE9InW9xJ8HGlb8tJHabusaJqS3cGi5cDXMhpbCH+rNPRfwZ0M1bFL6/0m9q7wN15SLUaVEujOfsUIuZhQCBCJ2aAOonyQ3D4jGE4fdESu13NhAZePzYb+/lODoQLCx6UwMvTCZIoacqwo2jAwhT7cHNdVqChxS6HqEPej7ZLStiuWr1/uEEt5OExVSErzQOzbV+WqzX2Yw2ABfW96z0is16EO0K8tPrx6VqLxcIumwE6xH/8B1EcXXw==
+sidebar_class_name: "get api-method"
+info_path: site/docspace/api-backend/usage-api/asc-web-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get third-party accounts"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/files/thirdparty"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns a list of all the connected third-party accounts.
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"List of connected providers information","content":{"application/json":{"schema":{"type":"object","properties":{"auth_data":{"type":"object","properties":{"login":{"type":"string","description":"Login","nullable":true,"example":"some text"},"password":{"type":"string","description":"Password","nullable":true,"example":"vfmf2vO1Kp"},"rawToken":{"type":"string","description":"Raw token","nullable":true,"example":"some text"},"url":{"type":"string","description":"Url","format":"uri","nullable":true,"example":"some text"},"provider":{"type":"string","description":"Provider","nullable":true,"example":"some text"},"token":{"type":"object","properties":{"access_token":{"type":"string","nullable":true,"example":"some text"},"refresh_token":{"type":"string","nullable":true,"example":"some text"},"expires_in":{"type":"integer","format":"int64","example":1234},"client_id":{"type":"string","nullable":true,"example":"some text"},"client_secret":{"type":"string","nullable":true,"example":"some text"},"redirect_uri":{"type":"string","format":"uri","nullable":true,"example":"some text"},"timestamp":{"type":"string","format":"date-time","example":"2008-04-10T06:30:00.0000000+04:00"},"isExpired":{"type":"boolean","readOnly":true,"example":true}},"additionalProperties":false,"title":"ASC.FederatedLogin.OAuth20Token"}},"additionalProperties":false,"title":"ASC.Files.Core.AuthData"},"corporate":{"type":"boolean","description":"Specifies if this is a corporate account or not","example":true},"roomsStorage":{"type":"boolean","description":"Specifies if this is a room storage or not","example":true},"customer_title":{"type":"string","description":"Customer title","nullable":true,"example":"some text"},"provider_id":{"type":"integer","description":"Provider ID","format":"int32","nullable":true,"example":1234},"provider_key":{"type":"string","description":"Provider key","nullable":true,"example":"some text"}},"additionalProperties":false,"title":"ASC.Web.Files.Services.WCFService.ThirdPartyParams"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

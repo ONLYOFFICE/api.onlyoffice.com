@@ -1,0 +1,71 @@
+---
+id: start-storage-encryption
+title: "Start the storage encryption process"
+description: "Starts the storage encryption process."
+sidebar_label: "Start the storage encryption process"
+hide_title: true
+hide_table_of_contents: true
+api: eJyVVctu2zAQ/BWCZ9dK3fbiW5LmULRpgzhBURhGQFFrmwklsiRlxxX0790lpUSO+jxYFsl9zM7sUg0PYuP5fMkXEIKqNp5l7KKS7mCDMhVfTbix4AQtPhR8zn0QLiyCcWIDA7sJd/C9Bh/OTHHg84ZLUwWoAr0Ka7WSMUR279EY97zcQinoLRwsYFyT34MMGMc6ShgUeDqtTFDrw60H5wfGuTEaBGUtwEunEoY5X1iQao2uTK1Z2AKryZHtldYsBxaDKSiYyE0dogE8lcAwsQTvmXFkCBgcHkVpNSYMroa2nXBRFIpshb4aoFwL7WEEJVE0TNAxxKxwooRAJU14UIEy8NPF+fQr5NNTq+h3aQrQ0+vk4d8HMx1xPjjkbUvwHHhrKp+Ym52c0N8xqrNEHNsJXcOcUV09VU8yM+WZryVxsa41QvxfKXt1Eqi3J6/HOG4rUYetceoHFDwazcZG30ztUBUlsS2Z1Qi7MCgtioP4rDWOJESwJjnEMG/GYT4bhqWVyntcexbicm1cmbyFfPZ+N/a+BMRZxKRCa7MnvGjrQdZOBWz1JbLi5R3Vc/cAtIE6iAJ526MB8FW7GvcGzpCPrPtxm3R9OMUIZUyOHtb4OBsibHGVCauy2fQk893MZs/uWRxQTgjdLk4NAqydRrdtCHaeZdpIobcp4DGuT3TCkiMn2H2VC5I4tdVxrU+aI6KPuDHhFbY2rYdmE64ovDTmQUGkj3rn+vnCuOgH7cXAx7kj77WJucazgrGpyoR/NyMZiatSxNbswES+/0L3SzIGN9i/69WREeAxZNiwKrZVJL/ptFsSU2iJ6kWNkn501wzv0qQhChBlQqemyYWHW6fblraROEedhq874ZTIiZblCpNtsfVQPBI9CsTPUxWvbggamePgR71eDHI76T1OcfRt+KPtatCaV18WN2icd/d+iRcX7jqxp28CPuec0zeEvGMDxb2G4zhvamQSz1PMeL/WxNGwqVL7dC9UVX9UHYYIj7st1UFPquqXHk2TOhb57O3T0W89OmZ7a9J2haB/AtS5icY=
+sidebar_class_name: "post api-method"
+info_path: site/docspace/api-backend/usage-api/asc-web-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Start the storage encryption process"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/api/2.0/settings/encryption/start"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Starts the storage encryption process.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"notifyUsers":{"type":"boolean","description":"Specifies if the users will be notified about the encryption process or note","example":true}},"additionalProperties":false,"description":"Storage encryption request parameters","title":"ASC.Web.Api.ApiModel.RequestsDto.StorageEncryptionRequestsDto"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Boolean value: true if the operation is successful","content":{"application/json":{"schema":{"type":"boolean"}}}},"401":{"description":"Unauthorized"},"402":{"description":"Your pricing plan does not support this option"},"403":{"description":"No permissions to perform this action"},"405":{"description":"Method not allowed"}}}
+>
+  
+</StatusCodes>
+
+
+      

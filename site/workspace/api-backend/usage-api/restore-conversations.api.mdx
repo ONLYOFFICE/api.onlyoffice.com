@@ -1,0 +1,71 @@
+---
+id: restore-conversations
+title: "Restore conversations"
+description: "Restores the conversations with the IDs specified in the request to their original folders."
+sidebar_label: "Restore conversations"
+hide_title: true
+hide_table_of_contents: true
+api: eJy1VE1v2zAM/SuCzlmddTvl1rUFVmyHoklPQQ6MzcRqrY9JctvM8H8fKTltnKUDNmA5OLJIiu89PrmTEbZBzpZSg2qKS2ue0AeIypogVxMZsGy9ijvK6ORFG2vr1c8U/opQoedKTys5kc+Uh3LVU1WFofTKcZqcyTsM0XoMItYoysMO4lnFOm3fXAURHJZqo7ASyqRNjz9aqhXR8qvygppvlYFGbGxDzcMZtR2SvtiKQHaSzo9oIi/BuUaVqVPxEBhKJ0NZowZexZ1DAmfXD1hGOsd569BHhYGjqkp/YyLfFYGxmxEHRk7Vw2ngPezolZTQ4aCLIlBbUmsiN9ZriHnr07ns+4lsELyZO9ALD8qwpseN54MyJFiNJIVnSQKaSmgMAbasbdKINAQtIp+jzJb0EsbGN3hra6mZoa78Y+2CozFkyufT6fuUfZ5hdYr730r+DyIltJ+nH38HeG9gcCVWSU1NAtmKIq5NY4VY00sBThXnZ9Mi2XxkwmLgJtntnveT2VvfUF0do5sVRWNLaGob+MQjgTgicqHsD27MnGlnZU/emzc5nPqGSQ8+r87hiTSgOTqqTQRZ17s301+/gHYNvpp2OV2dslT0LfbcY2NTbxW5Rl5arVtDcMU8URB31/OFuLi9IQQsRSbZQKRukuodaaAhzXUAONzu8cU+lungXv7nz8EgasSXWLiGyDPqNMtu8MKSFadMcgM92Q/ZwyP0e0+QlmnsVNV1awh475u+523C4vmzSMsn8ArWrOdyRd3q/Zexk480WBY5cf+wYGyc3rR58EeXpZ/sKy7KEl38Y+7qwOq39wvKXQ+fQG0rLvHwzEToOZO0sC5zo4S019FUzbaljwfF85HsLr5NY3M+JnMOCya1D5ndAcCxTycDD34yq5MlXZetT3ru83Po3YrXy5GzebgrQv0LudNZ5A==
+sidebar_class_name: "put api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Restore conversations"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"put"}
+  path={"/api/2.0/mail/conversations/restore"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Restores the conversations with the IDs specified in the request to their original folders.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"ids":{"description":"List of conversation IDs","type":"array","items":{"type":"integer","format":"int32"}},"learnSpamTrainer":{"description":"Specifies whether to send messages to the spam training or not","type":"boolean"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"List of restored conversation IDs","content":{"application/json":{"schema":{"type":"array","items":{"type":"integer","format":"int32"}}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

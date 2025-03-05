@@ -1,0 +1,71 @@
+---
+id: save-naming-settings
+title: "Save the naming settings"
+description: "Saves the names from the team template with the ID specified in the request."
+sidebar_label: "Save the naming settings"
+hide_title: true
+hide_table_of_contents: true
+api: eJzNVm1v2jAQ/iuRPzPCqmra+NaWaav2VpVW/VChyiQHcevEnn2BdYj/vjs7aaHtGKBJ2wdCYj93z735zguBcupF/1oMAVFVU5+kyQXIMkEorZYIXow6wlhwEpWpTnPRF17O4KssCd0KiY5w8L0Gj8cmvxf9hchMhVAhv0prtcqCeHrrTcVrPiuglPyG9xZIpxnfQoakxzomQ0XEtKvyFYxHR2SEycFnTlnWSMtr5ianAwJUtdZyrEkIXQ0dAT8kbbOOd28P34jlsiNknitWIPXZCuNEag+bCax0sgQEx16jwqD2aHjSvYJx98gq/n0xOejueQyJH6DpDoPDx9LDyioZwqY48NZUPnp80Ovx3yYL5gqLBAtIJkZrM6eYrBv1f8eeEGTqrqqDzCblV6qaKNB5cmmR5Imm9uBOZKPuT2yXBE6yBr2Jx5sSyKwf2FL4nTj87iRTZ2q7NckHRu9Jsr0rgWUPXzhgZ8bjbnnxKLHeg83BdEDFszXZOUwVbYXjkuRcdvvF8SPIfMeEaRLZg407yfZMjN6TZIfSCPBdaf5VR37ejQ97r5834MtK1lgYp35CHoz1kNVOIc26a+qyPrvh/Zs74AWqO5mTKXMCgBgtR0/NH9IA9aGDc1vzycSZMnziy33+dJB4C5miBpcnqgprzbztEg/5XhgezJZOFrdxiQV9pdKq9KDbS30zpdOs9mjK2P85VnS2Zhw19qF2mmQKRNtPU20yqYuobd30z7yTREHBnrWBCOGMg2M9HA/1QuZ8ooW2/6/DOkKx+syYOwUhwjyuzh8vFe/bqomD6WGYUNs3geR53kkpuxcNnx0wmiNUylDFjRWcizYVPEn945VmzfOVK83fzl8THz4IKUmqOL04H4sml9ccPEJSNkPaHkxczyilIySN8IvFmO4al04vl7xMXI5Lk15n0ql4HK9HxFNQrVIquQRCusRJdPPVBVvFcF3H7D25SSw7rcRRloHFjdjRSpWefRteEHjc3BRLOpm06uScb5H07AvBN06WDuUU1hZCy2payyljo87QM2oOz2qJxWJqXtirdqu6X7VwvfaiH/xkr16UWCxi/VI8W3zc+q1EE9kWzWkdkdG/AH+z+0c=
+sidebar_class_name: "post api-method"
+info_path: site/docspace/api-backend/usage-api/asc-web-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Save the naming settings"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/api/2.0/settings/customschemas"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Saves the names from the team template with the ID specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"id":{"type":"string","description":"Team template ID","nullable":true,"example":"9846"}},"additionalProperties":false,"description":"Team template parameters","title":"ASC.Web.Api.ApiModel.RequestsDto.SchemaBaseRequestsDto"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Team template with the following parameters","content":{"application/json":{"schema":{"type":"object","properties":{"id":{"type":"string","description":"Team template ID","nullable":true,"example":"9846"},"name":{"type":"string","description":"Team template name","nullable":true,"example":"Winfield Upton"},"userCaption":{"type":"string","description":"User caption","nullable":true,"example":"some text"},"usersCaption":{"type":"string","description":"Users caption","nullable":true,"example":"some text"},"groupCaption":{"type":"string","description":"Group caption","nullable":true,"example":"some text"},"groupsCaption":{"type":"string","description":"Groups caption","nullable":true,"example":"some text"},"userPostCaption":{"type":"string","description":"User status caption","nullable":true,"example":"some text"},"regDateCaption":{"type":"string","description":"Registration date caption","nullable":true,"example":"some text"},"groupHeadCaption":{"type":"string","description":"Group lead caption","nullable":true,"example":"some text"},"guestCaption":{"type":"string","description":"Guest caption","nullable":true,"example":"some text"},"guestsCaption":{"type":"string","description":"Guests caption","nullable":true,"example":"some text"}},"additionalProperties":false,"description":"Team template parameters","title":"ASC.Web.Api.ApiModel.RequestsDto.SchemaRequestsDto"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

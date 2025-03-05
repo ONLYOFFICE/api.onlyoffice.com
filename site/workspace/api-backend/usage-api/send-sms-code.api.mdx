@@ -1,0 +1,71 @@
+---
+id: send-sms-code
+title: "Send SMS code"
+description: "Sends SMS with an authentication code."
+sidebar_label: "Send SMS code"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVU1v2zAM/SuCThvg1K77sca3biuwYVsX1OllQQ6KzcZqbcmT5KRZkP8+UnaauOmKHhYkgSyST+J7JL3mTswtTyZcNK4A5WQmnNSKTwOeg82MrP1jwlNQuWXpj5QtpSuYUKwfwTKdwxEPuIHfDVj3Uecrnqx5ppVDL1qKui477/DeEuqa26yAStDKrWrAc/TsHjKHOLXRNRgnwZK1sWCuRQW07l/sFi1MoYlpwxBLlhjcgVlnpJrzDaIJa5fa5Ifxo63lpSijFzIHcxiV6kyKklWQS8G2bswDvIAjsgysHesHUC9c4Cna2w/C/Yd4tbVWtqUjjqJDoMu+ILlwInmu0mzlNUSqlHYBqwutgKmmmoEJvAUea2laXycryuY/KfiUfT+9gMOjqOqStsQsy+E4Pjk9I9Ku6CZt7L9D4iiOBsfHg/h0HJ0lJ+dJHB2dxtH5xfDDLwJJq32AmdYlCNVDcKYB8hwRFddaWnj9xIt3w+HwPf4G/kuh4zvxxkPQ8xusXj8ACciXgpPmTjq/1VfWM/kZ1eVdaVTgCo2lzWttPfHCFfgUilqG8VEU9msgtNTKyEvAsXUWYKj/scNMiTGFc3UShqXORFm0aP0i+04W1gbyzZQwssZIt0qpDlq56LrayD/+uC8gug7qUsZbEQcBl4RXtOaAK9/d/VhPAhXazW6oXG2J2h8KOx53jb6399TGu71eS+61qlR32l+2o/6TrqpGYX4s9Tmzm6t0zC5HXxGDuGtZKYXD6/mRgaRVwhd6lxFNTt9aNCGf87k3IN8+YjsiHTy6sC4F8ogHe/3WnfYTYhk9UX3KtT/bSbO2AlA+LzL6r9czYeHWlJsNbSPdBut0gsuFMFLMiIzJFM/pBKOSeaBSRoZ8AoNxO/wWomxamZ/Nik2wjbhE7mv3qu90r6pHP9MxOs+6N0pFNCbciCW9bfA/4bjQnlBffn5vjZqoeSPm5Nti0ucv59xe1g==
+sidebar_class_name: "post api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Send SMS code"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/api/2.0/authentication/sendsms"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Sends SMS with an authentication code.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"userName":{"description":"User name or email","type":"string"},"password":{"description":"Password","type":"string"},"provider":{"description":"Social media provider type","type":"string"},"accessToken":{"description":"Provider token","type":"string"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Authentication data: authentication by SMS or not, phone number, SMS expiration time","content":{"application/json":{"schema":{"type":"object","properties":{"Token":{"type":"string","example":"abcde12345"},"Expires":{"type":"string","example":"2020-11-24T05:36:20.4206897Z"},"Sms":{"type":"boolean","example":"true"},"PhoneNoise":{"type":"string","example":"8(999)999-99-99"},"Tfa":{"type":"boolean","example":"true"},"TfaKey":{"type":"string","example":"123dwa"}},"title":"AuthenticationTokenData"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

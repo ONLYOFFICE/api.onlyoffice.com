@@ -1,0 +1,71 @@
+---
+id: delete-an-operator
+title: "Delete an operator"
+description: "Deletes an operator from the phone number with the ID specified in the request."
+sidebar_label: "Delete an operator"
+hide_title: true
+hide_table_of_contents: true
+api: eJyVU01v2zAM/SsCrzWqrNgpt64pNmM7BM26y9qDKjO1CutjEt00NfLfR9ppm2AFtvlEieTj49PzAGTuC8x/gs1e/4j1Em4rKGj77GjL9wOc99TG7J4NuRi+oGkwS33mCCrYcB3C7Y67Giw2uyRlMIcFdkhYlAkqJsyGYlbrHL2iFlVqY0AVen+HWW0cteNtvVAloXVrh41yYbzL+KvHQqc8ah9+ig0TG8DGQBhIQpNS5+xIUD8UGT9AsS16IxFtEzKhePeAlhgnZSFEDotkJxJ1I/HxBstDkvWCO/dIhbIL97CrQID+0vi6/Ofr9zDGT3YrKYYyUTqbzf4RlPH+V4b94ArWMXvDfdD3roGJxsfZhz8nXweztwBKXQUe+ciCcZ28sUhqqOWzNsnps9OZFjM9Rpf0xLfo4UXm+c3N5mSnR+HEaPmR06PP+twxREuU5lp30ZqujUXe65jNN8moqRF2B2ZdyaaTgO9a9lUBJvkVtwzsBK+d0hUE4yV71DuuK1JevXnv8sn41OGxd95knSxx4BEX1nGc7ki64CJ63wcmrFbjEurqcvVdnS9rbhYxpjU7wz8P8fzfn7lFag==
+sidebar_class_name: "delete api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Delete an operator"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"delete"}
+  path={"/api/2.0/crm/voip/numbers/{numberId:\\w+}/oper"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Deletes an operator from the phone number with the ID specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"numberId":{"description":"Phone number ID","type":"string"},"oper":{"description":"Phone number operator GUID","type":"string"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Phone number operator","content":{"application/json":{"schema":{"type":"string","format":"uuid"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

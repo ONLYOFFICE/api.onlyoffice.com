@@ -1,0 +1,71 @@
+---
+id: get-the-i-cal-event-by-uid
+title: "Get the iCal event by UID"
+description: "Returns the iCal event by its UID from the history."
+sidebar_label: "Get the iCal event by UID"
+hide_title: true
+hide_table_of_contents: true
+api: eJydVm1zm0YQ/ivMfdYYyYnHYzqdiSIxDq0leRByJk794QQrcQ5w9O5wQxn+e/cOUCGSrTb6IB3cs8++76oiiu4lcb6SkCaQRVTY7gtkSpKnEZEQFoKpEq8rMi1UzAX7myrGs09AIxBaTOCJjMhfiAPyVKNUBDIULNcw4hAfVCEyaakYLDajiQWa3tqWFlPS2nhzayd4aq5jJhUX5QXS5VTQFBQIaXRn+IBcRnTDtD6muXOqYvKjQmO+JsYbGcaQUuJURJW5ZpBKsGxPam2nAJnzTILU95fjsf45RdWahXQhzxS+0UCa5wkLTSzsZ6nR1bE2vn2GUGl3BM9BKNbomrWR9qIeliH1HkM6IjsuUqqaV+8u8QV8p2meaNCE1KPGKh2FI7f60IJFkw88S0q+27EQLkKeHoR/UvECxB4iL5Rva/7o3npL52E2vXOX86n/R2b1Pg+uv/ZWS+fyYjy8uPdXc2/uDC0eQlpi98FdBsMbzLZzwuEhaB6sg+ni3pnc3FyPryfvg8n1GD+PQ9TKv50uvUfX/2W2/PU3HmfWnIOzmHp3wcp5xueLiMOH1ttXlPjBGSXzAEPTYa6C8burm6ubHzDrzWIx9b84H6lULEnAmtPSuqdClUOcZjoVE/O+S4JO34xmbsRUL3lbzhOg2SB7ShTQopdcsV35H/Fny0LyFCwF35VGByyFR56Bl+34+YZZmvZ/i3wTzIwRZ5qiha12Ownq//bAGMfGiCimzFPnwWeBowBFTciavj5vboe0zGDr05r+/NRMnAN1rRHvx5PjCbXJaDuWITI8ODRjjlEgezBx1BPSITbNmY0tZx+GvBml0q66kVrb7ZjbloUZsBLESzd+C5EgSaxU7th2wpEk5lIdTd47fWM1gqTu7Y+1HoxNKk9ukUOo0MzfoezGe9xcj7rxP5A13rKufNrozXiaFhlqtNbGCst314E1vfeQRHvT2JlQBdKUYY5upNQM71bHLagTq6rZJgNvq3+3wU/uuNZn3RJ2nlB0GS0yoa7avH3VAUEkZk5vnzZ3upKaFT0iTm8lDhKI0Tc5Qo6q2lIJG5HUtX79ZwFCb3Q8vlDB6FZHDpMcManPWDs7mkh4w93+hj3pRJfNTKfyhSaFfsLjN8xtb4vXT4iNu38SVXs9DUPIVU/waNXq0jrU+a0bIFZ3wbCOvpk6ag+a/aRRw5LqLNTf9egVkapqqhSj2eGbq1clDnXcoHWMnrCl/wFd0hAL
+sidebar_class_name: "get api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get the iCal event by UID"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/calendar/events/{eventUid}/historybyuid"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns the iCal event by its UID from the history.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"eventUid","in":"path","description":"Event UID","schema":{"type":"string"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Event history","content":{"application/json":{"schema":{"type":"object","properties":{"CalendarId":{"type":"integer","format":"int32","example":"1"},"EventUid":{"type":"string","example":"uid1@onlyoffice.com"},"EventId":{"type":"integer","format":"int32","example":"1"},"MergedIcs":{"type":"string","example":"BEGIN:VCALENDAR\n            VERSION:2.0\n            PRODID:onlyoffice.com\n            BEGIN:VEVENT\n            UID:uid1@onlyoffice.com\n            DTSTAMP:19970714T170000Z\n            ORGANIZER;CN=John Doe:MAILTO:john.doe@example.com\n            DTSTART:19970714T170000Z\n            DTEND:19970715T035959Z\n            SUMMARY:Bastille Day Party\n            END:VEVENT\n            END:VCALENDAR"},"CanEdit":{"type":"boolean","example":"true"},"CanNotify":{"type":"boolean","example":"true"},"Ics":{"type":"string","example":"some text"},"TimeZoneInfo":{"type":"object","properties":{"Name":{"type":"string","example":"UTC"},"Id":{"type":"string","example":"UTC"},"Offset":{"type":"integer","format":"int32","example":"0"}},"title":"TimeZoneWrapper"},"CalendarName":{"type":"string","example":"Calendar name"}},"title":"EventHistoryWrapper"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

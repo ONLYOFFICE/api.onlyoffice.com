@@ -1,0 +1,63 @@
+---
+id: get-events
+title: "Get events"
+description: "Returns a list of all the portal events with the event titles, dates of creation and update, event texts, and authors."
+sidebar_label: "Get events"
+hide_title: true
+hide_table_of_contents: true
+api: eJzVVt9v4jgQ/lcsP4cSAqVd3qoW7Va3uqsK3Elb8TAkQ+Ot4+Rshy6H+N9vxgFKttulDyud7gXs8feN56cnG+nh0cnRg0zLoqiN8uvueIXGOzmPpMO0tiSi8428qn1eWvUPeFWaTwgZWuZZWslIPhMO5XxLrAxdalXFMDmS9+hra5wAoZXzolwK0Fr4HEVVWg9aYLhOPCufB3HYC6+8RheJDDw6ZqV0EasUYDJRVyyP9lj85gnKBxCMdGdkkUVXlcYhebeRSRzzX9u0zzuDGguIkpbG05KRUFVapeHG7lfH8I10aY4F8MqvKyQFYC2siUeuF+5IXi6+YurpoLJlhdarxojb7AjjvFXmkTD4DYpKs6gnt5GcqVOopD94zoCx16DRZGBPKU73uBtm/Q4F/hwfKkAEHOFvjoN2mnYMJ/aV1jew/lwS9oW8KEuNYFrsJWgX7pt4sP7nNyVxEnd6SSfuTePhqD8c9eKzy+HgfHCZfGEVY3MiIqcU3GNF5XZf6xORajzElr1vZH8aTg8oRaX2SC0UyWVpC/CNqJ+01HeoJOiG0Az7AIfr/rJUoMSmw1s3ycFidiK83tbY1IyZGVcvOEkLfCfp1o0z5WGhTxEOSbxDWyjnqAje0Rgzh/YOLLSa6Jc01yG2da2ydgUssyWeX1x0+mky7Awu+sPOh2z5obM4h+Flf7G4PE/i93XLn9Rddi2+rJ/KVStdR25tj+XHsSHxH8+Gn9L/uYOhb33t3lnipi54ekypoOmRXSHJrkuzVLZAdoOqNEWtaf1qoDzEoiMOvEj0aHugRiLh7Z49b/kR3P0E7sp7SPMiPPqvy/lVwx16bRuyOIh7r0fJzMBuPJLJjCqQtpQx+YghleBz2nShUt3kLO6+TNswfCTPWrtC68Kora0mcO59Nep2dUnPd146Bn03v/hENES5PZrXEx5UTdX8cGq/9FilfsPQZKwvb44jaUJJtLnBK2WWZaDv4nO9d0NMghXifjyZiqu7W1LC3jR2ap7hnoNfkRsFhDGyu+Mj+pf5m7UnzWEc/3cfEbs48WG30qDCSAvp2exy+sBBJCRlNXxB7ALChRcyS2kJySPgZrMAhzOrt1sW/11TV5GcliuwqnldH+Z0Qb7/utrIJ0oPZSJNseICWIGum8R993nC6T/U3MfxlLDsRjvXTyHXuwVr3x+Z9ZHudtqjnQn8u43eoGw2TSWRY3t8c/Qm41BrDZoDO6f2+hd1EYaX
+sidebar_class_name: "get api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get events"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/community/event"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns a list of all the portal events with the event titles, dates of creation and update, event texts, and authors.
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"List of events","content":{"application/json":{"schema":{"type":"array","items":{"type":"object","properties":{"Id":{"type":"string","example":"1"},"Uid":{"type":"string","example":"1234wda"},"CalendarId":{"type":"string","example":"calendarID"},"Name":{"type":"string","example":"Event Name"},"Description":{"type":"string","example":"Event Description"},"AllDayLong":{"type":"boolean","example":"false"},"Start":{"type":"string","example":"2020-12-01T06:36:10.8645482Z"},"End":{"type":"string","example":"2020-12-01T06:36:10.8645482Z"},"RepeatRule":{"type":"string","example":""},"Alert":{"type":"object","properties":{"Type":{"type":"integer","format":"int32","example":"-1"}},"title":"EventAlertWrapper"},"IsShared":{"type":"boolean","example":"true"},"CanUnsubscribe":{"type":"boolean","example":"true"},"IsEditable":{"type":"boolean","example":"false"},"Permissions":{"type":"object","properties":{"UserParams":{"type":"array","items":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"2fdfe577-3c26-4736-9df9-b5a683bb8520"},"Name":{"type":"string","example":"Valery Zykov"}},"title":"UserParams"}}},"title":"Permissions"},"Owner":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"2fdfe577-3c26-4736-9df9-b5a683bb8520"},"Name":{"type":"string","example":"Valery Zykov"}},"title":"UserParams"},"Status":{"type":"integer","format":"int32","enum":["Tentative","Confirmed","Cancelled"],"description":"[0 - Tentative, 1 - Confirmed, 2 - Cancelled]","example":"0"},"HasAttachments":{"type":"boolean"}},"title":"EventWrapper"}}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

@@ -1,0 +1,71 @@
+---
+id: update-an-event
+title: "Update an event"
+description: "Updates the existing event in the selected calendar with the parameters specified in the request."
+sidebar_label: "Update an event"
+hide_title: true
+hide_table_of_contents: true
+api: eJzVV9tu4zYQ/RVCTy1gr2U7cbJ+SxMDGzTYDRy7BTbwAy3RETcSpZKUE1fQv3eG1NU3pUVRoHkIZHJunDkzPMwcTV+UM312PBoy4VM5mG2Z0MpZ9RzFvFRyvYPtzLlJdRBL/ifVPBZfGPWZRDUJX07PeQM55qxy0PKZ8iRPUMyZOsvEp5opogNG2DtXmosXwtAF4cKsKhYyTzOflBGQN64Ds5VQSSOmmVREJczjGw5ihZpkf6RM6U/gvBYzkQr4AZ5Lc/cYH8dYEqoDZz/A29Lr/R3sKS9gEXWmmaN3CVpRWkLETp73KsMm+g6rJoknTHKh2Qtkr+dsYhlRbZfGI3AC6SvO9Uvs71DHi0FaaPykSRJyz+R/8EOhm+zQeLz+AdnEpMg4YVJzpnDXhp7tRfmVvRW1MPu9/UPvneq0enP9iBWlqdR3gINzNowQQbQcMwE16jIAIifVJUsY1QuzfNqClSKoTX6az5cPM2JNlKDjgBZiq/bzMTeAJdnpRcQakGwLaXzVlkpogCmubsLwju4eYjB9LvWprC1NCQ1DSMKOhKBGYonOavPrOA4ZFaYkAcWgvxmD6mxdrCShnseUavRkbZdKSXfYD5pF6hgYNdchLjxZW49oA3sKkaHT8+6txGGKzB9WViVwAgvzkese2rIjyCchTB8Sb6xdtPh3e6vzmO2egxFxMEcAyO80SkwyhliHJe+SGo0v3nyKsrf1RDurUk2+O9T6WrT+aXk7rIwcyN+1W75LrSkO2m3Q7uGuqb2hoTL+nrDvz3sauSO3Pxz13eHCnUzHk+nQ/XQ9ubi8uB59RxMz0ZGRLgNz0/jzNOzIlD0ha8V7ovrlFOga+k3z/aFpirJbTIKNu98lANTOhXuFTcT8jvRqmTKLGbEUKl1jkdbsg0r3auZzTddhl0JVxEcmI65UOUvOp2apmDQjQP3bzVXlNk2530bAxt+wy6ur/tgbTfoXV+NJ/7O/+dxfX9LJ9Xi9vr4cuR/rlt9wyO/I991rvG2Vq3GsvLnezA0sf3sTSJ3+5wc0fVuM7g9AXKQRssUFABqG7BavvNtYbLiMGB4DUOqxMITvAwL57JI+qfR6ZAg/K9UeGeHPUnvVOoc57heqbrSmXhCZoX8I54OGq3rN3i8X7vDIlSJoQYchZJSCGzGIfWSDqSklcsKpM6AJH4w+uYOKXGc1K80HWcEkc2SJTG5LApvKEJQDrZPpYBDGoBLESh9wzAfcIVbRyRt8/QkvLouio6y97rmE/8p2JZEN7Hav5LktXXNKvBnnNT+dlamuqHGFpnak1XKDCDaQV1K7eqlJ1+rVBrty9wkSjq5DVvOcmbwUSHWRVolNbDJQlPw2jqJUQNLIk0kkmc+eFuTm8R78YUHsAUJ8w2jEUwKViKhonNnSC0KFJRb7h29Q+P/kMVSUVrN3PUhCys2tbBCVFbB8xrqDJAATSVDhCD6nrSfTtHznQAYN/kAxy9ZUsaUM8xyXwanE1yF8biHx9sIAAPtc4Tf0g7kgzmSk/fo6GnuJVYFA3dIwNRdxz3kF5LZeefhE+7jnxgvtH7gtc5OvQDQoX8NZsXtrvfQXltyX2gckEyO2GjdArhN9VnbVmDKPywXIros3YhT7qCLpG7YO/DeBxjW1N2sZoFi8pPQFZa1J7GkcZO2R8GpGQvGBhzqaivZ0KPOC//FUR1WyzA6cPK/k7dZJjWokWWmszAqi/gtZy6XG
+sidebar_class_name: "put api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Update an event"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"put"}
+  path={"/api/2.0/calendar/{calendarId}/{eventId}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Updates the existing event in the selected calendar with the parameters specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"calendarId","in":"path","description":"Calendar ID","schema":{"type":"string"}},{"name":"eventId","in":"path","description":"Event ID","schema":{"type":"integer","format":"int32"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"name":{"description":"New event name","type":"string"},"description":{"description":"New event description","type":"string"},"startDate":{"description":"New event start date","type":"string"},"endDate":{"description":"New event end date","type":"string"},"repeatType":{"description":"New event repeat type (RRULE string in the iCal format)","type":"string"},"alertType":{"description":"New event notification type","type":"integer"},"isAllDayLong":{"description":"New event duration type: all day long or not","type":"boolean"},"sharingOptions":{"description":"New event sharing access parameters","type":"array","items":{"type":"object","title":"SharingParam"}},"status":{"description":"New event status","type":"integer"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Updated list of events","content":{"application/json":{"schema":{"type":"array","items":{"type":"object","properties":{"Id":{"type":"string","example":"1"},"Uid":{"type":"string","example":"1234wda"},"CalendarId":{"type":"string","example":"calendarID"},"Name":{"type":"string","example":"Event Name"},"Description":{"type":"string","example":"Event Description"},"AllDayLong":{"type":"boolean","example":"false"},"Start":{"type":"string","example":"2020-12-01T06:36:10.8645482Z"},"End":{"type":"string","example":"2020-12-01T06:36:10.8645482Z"},"RepeatRule":{"type":"string","example":""},"Alert":{"type":"object","properties":{"Type":{"type":"integer","format":"int32","example":"-1"}},"title":"EventAlertWrapper"},"IsShared":{"type":"boolean","example":"true"},"CanUnsubscribe":{"type":"boolean","example":"true"},"IsEditable":{"type":"boolean","example":"false"},"Permissions":{"type":"object","properties":{"UserParams":{"type":"array","items":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"2fdfe577-3c26-4736-9df9-b5a683bb8520"},"Name":{"type":"string","example":"Valery Zykov"}},"title":"UserParams"}}},"title":"Permissions"},"Owner":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"2fdfe577-3c26-4736-9df9-b5a683bb8520"},"Name":{"type":"string","example":"Valery Zykov"}},"title":"UserParams"},"Status":{"type":"integer","format":"int32","enum":["Tentative","Confirmed","Cancelled"],"description":"[0 - Tentative, 1 - Confirmed, 2 - Cancelled]","example":"0"},"HasAttachments":{"type":"boolean"}},"title":"EventWrapper"}}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

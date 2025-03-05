@@ -1,0 +1,71 @@
+---
+id: get-invoice-converter-data
+title: "Get invoice converter data"
+description: "Returns information about the generation of the invoice pdf file."
+sidebar_label: "Get invoice converter data"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVE1v2zAM/SuCzlmdFTvl1q3FFqzAiqQ9FTkoMhOrtSVNotNmRv77SMlO47bbYZgPhizy8ePx0Z1EtY1ydi91aIq53TmjIcrVREbQbTC4J1snL1qsXDC/FBpnv4EqITAm0ElO5BP5gVwdCFVC1MF4dpMzuQBsg43C2I0LTQILtXYtCqxAbMFCyJduk25Mzi98uREbU8MZBQ/ws4WIn11JpXRSO4tgkY/K+9roFKB4iJywk1FX0Cg+4d4DleDWD6CR4vjgPAQ01B1Z+0zzkj/GRfckiPklofoohpJuqecD8YIuqC3chfotdJlt4m5x/YKNGIzdMjTAzkTyfC/roreN0g7Q9DA+emdj7uB8On0b5YuzO2oSgigVKgr0z3ShwRpOI15ywFzHp+nHt6nvrOpFAqVkrwbokzqV3sU0AIUVfRXKm+L8bFqw4PoxFHrIUvR1Rwh0EZP4WqZaVoh+VhS106qucsRxAddsERkoDycKXnKTmbR3dXxsnir7DnsKbDhelc0TaVXD1hE2dcgsLl7kefWsGs+kjeQ1HUtmmOlYDSci4V1JNR0H0DStpTbEMrUmFlfLW3FxM6cQTFFuvlZIVTCe2W5Umm5f+FfA42bp1wIZcXiyXv9ld3teEZ6x8LUiWqnANm9OlsM9k06eJAhWa2gS+ylSVm+ulgvlemmqafaE67q1iszp4cDXNIXA/yo67lQwas3k3a8oXzX8rjr5SNNNkuYeP9xydexet3n6r/bjMBkQF1qDx7/6rk4Ef/NjeUvO6/6X1biSMUE98dTpPZN0cInzpMp019EM7bYlnZA9x2SN8VKNJfqYJNofuKvBZPcnFY7VOukb4Te39S6k6/ICEKGDfzb9EXFckezN811R1b8BPwQuqA==
+sidebar_class_name: "post api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get invoice converter data"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/api/2.0/crm/invoice/converter/data"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns information about the generation of the invoice pdf file.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"invoiceId":{"description":"Invoice ID","type":"integer"},"storageUrl":{"description":"Storage URL","type":"string"},"revisionId":{"description":"Revision ID","type":"string"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Converter data","content":{"application/json":{"schema":{"type":"object","title":"ConverterData"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

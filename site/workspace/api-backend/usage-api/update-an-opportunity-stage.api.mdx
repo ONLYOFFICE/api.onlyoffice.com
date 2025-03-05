@@ -1,0 +1,71 @@
+---
+id: update-an-opportunity-stage
+title: "Update an opportunity stage"
+description: "Updates the selected opportunity stage with the parameters (title, description, success probability, etc.) specified in the request."
+sidebar_label: "Update an opportunity stage"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVVFP2zAQ/iuW97JpgYSCNK1vrCANja2IMvGA+mCcKzFKYs92YKzqf+fODm1CAxrT+lA55/s+353vPi+5FzeOj6+4tFU6NUZb39TKK3B8nnAHsrHKP6DDkh82vtBW/RFe6foriBwsAS2ueMLv0Q/4fIWoHJy0ypAbH/OfJhceHPMFMAclSA850+uTHpjDEIDdK18EHyOsqMCDdey9V76EhHUIE+YaKcE5Zqy+FteqRIqEgZe7H5gzINVCIb+qA5eFXw04v4vxtcsvOsdsllzq2kPtaSmMKZUMWaW3jmJecicLqASt/IMBzEJf32LkyIPHGrChQLircvrvJzzdyu3kCIEtkcJzb7ByK7RQdtv4H3Df4qLDGuq8VfUNIXuAl/Fd+wCL1KW2r+GjwwCyvYOzzRW8RjNwY4P1CN4XwfxKTWh/Gx1+dMvO6NrFyxll2TZTbMeBDuTJ/2qKcygReAcnHio30U1kfBZxwhfaVsJH0/4IDfBbVIY6gu9ROWaDRX4LzSgLPN2y/gW8biqa66kB6ppJqR3kh3V+qXufp9p5vjXsVxnbYYRM2B6uuuCEjboWws970YZgL55mot9zXb/ogr5H/Sl4GdF1RNzkqe9fRrwTnxYyi+XDNpnaIHb/cIk4+m+FjfYP+GojDxi9KL+rEsVL13BpsTPbhk/4QbY30OG1aJUa8kCEalpoFCpumtCswhf4kQqj0tFulpLyd6YhDdOQLlU+vsp2Ps8/rjg9BPYOFTm8A40tEV54b8ZpWmopyoJ64XkrnNIOi0C+6jwmMxqjOCmDT8q6XBjgNyCpUMRXxO2E1/g84HcPG/KkOT3fyPzxU0mjTGebiq4vvB/x2twK48YwpHdZT7CyFYW50CH89piJrqooMLNQBXZ+PLtgh2cnyEjVjKeW9Dp6TOARltuZ7A==
+sidebar_class_name: "put api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Update an opportunity stage"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"put"}
+  path={"/api/2.0/crm/opportunity/stage/{id:[0-9]+}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Updates the selected opportunity stage with the parameters (title, description, success probability, etc.) specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"id":{"description":"Opportunity stage ID","type":"integer"},"title":{"description":"New stage title","type":"string"},"description":{"description":"New stage description","type":"string"},"color":{"description":"New stage color","type":"string"},"successProbability":{"description":"New stage success probability","type":"integer"},"stageType":{"description":"New stage type","type":"integer"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Updated opportunity stage","content":{"application/json":{"schema":{"type":"object","properties":{"RelativeItemsCount":{"type":"integer","format":"int32","example":"1"},"SuccessProbability":{"type":"integer","format":"int32","example":"20"},"StageType":{"type":"integer","format":"int32","enum":["Open","ClosedAndWon","ClosedAndLost"],"description":"[0 - Open, 1 - ClosedAndWon, 2 - ClosedAndLost]","example":"0"},"Title":{"type":"string","example":"Title"},"Description":{"type":"string","example":"Description"},"Color":{"type":"string","example":"#a7fc00"},"SortOrder":{"type":"integer","format":"int32","example":"1"},"ID":{"type":"integer","format":"int32","example":"1234"}},"title":"DealMilestoneWrapper"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

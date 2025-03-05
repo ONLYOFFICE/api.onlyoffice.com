@@ -1,0 +1,71 @@
+---
+id: add-favorite-files-and-folders
+title: "Add favorite files and folders"
+description: "Adds files and folders with the IDs specified in the request to the favorite list."
+sidebar_label: "Add favorite files and folders"
+hide_title: true
+hide_table_of_contents: true
+api: eJy1VMtu2zAQ/BWCZzdyg558c9oANVogQeycDB9ocWUxoUSWpOy4gv69u6QUv5IAOdQHg9S+Zmdn2fIgNp5PlrxQGnx2Z8GJoEzt+WrEPeSNU2GP9pZPm1Aap/5G808QEhzFOTzxEd+hH/BVh1ESfO6UJTc+4VMpPYvJmaglK4zGQM92KpQslMBmPzzzFnJVKJBM1fGjgz8N+MCCiddCbA3lZ1r5cIXVevuNkYit5bmpA9SBjsJarfKIMXvyhKDlPi+hEnQKewuIyayfIA+YxzqDDQcFnqwJ20zGy2kXv7EwM0UPn0BjdJ9NOCf2eEWAlT+q4oNT9YZ33SiS+3FedPhk1vgjKrzFcaUOrsfjyxo3xmi2FbqBCQuuAaaKyKoZZs0UjqDJc/C+aDTW/Cyfa6wAouYJ0bfx10sQj7Xo9QMyUlIBXiVarPFxFCKUeMuEVdn11ThLehwmT8R4cFuUThRj4zQ6lyHYSZZpkwtdpjRn9JKFpUDeHSl6Ti0kzt7U9WtrCOcXxDlQvjKZR7wWFVlPYmNbxNHDQZ23L6KyGs7UtRymuDqSxuFjR9UKE1GoQNH8u6mqpkbgbB6bYQ+38wWb3s8QC5GS2tUCmQoc44nUSsRpDVClPOzRxT6eM3e0U/9ng3t6A7yEzGqB7CLqONW2l8KSuEdPFANPNBHKgyCQuzhzdGzbtfDw6HTX0Wes7OjNwuNWOCXWROGSaC2HZ6vlzzhV4jV2+WVBcMgdtyRO/Uz13WiImOKe2PCh7+pI3fd38wU6r/uXqjKSYpzY0SuG/xOOB2PTk4sO8VuLk6w3jdiQb8pJ2qINOpXmc5Rmf6CuBlO9P0J4qtJR3wj9U1tvhrRtEj4SOvgn07sRr6uRvGmgK0T9Dwf2MfE=
+sidebar_class_name: "post api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Add favorite files and folders"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/api/2.0/files/favorites"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Adds files and folders with the IDs specified in the request to the favorite list.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"folderIds":{"description":"List of folder IDs","type":"array","items":{"type":"string"}},"fileIds":{"description":"List of file IDs","type":"array","items":{"type":"string"}}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Bool value: true if the operation is successful","content":{"application/json":{"schema":{"type":"boolean"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

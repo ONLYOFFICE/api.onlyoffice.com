@@ -1,0 +1,63 @@
+---
+id: get-backup-history
+title: "Get the backup history"
+description: "Returns the history of the started backup."
+sidebar_label: "Get the backup history"
+hide_title: true
+hide_table_of_contents: true
+api: eJy1Vd9v2zYQ/lcIvk62ZccpMr9ladENK9qiSTEMgVGcqLPNRhI5ksriCf7fd0cqtmWnQ/dQP1gkdd/9+L7jqZMB1l4u7uUvoB5aK5eZNBYdBG2a30q5kGsM6dWv2gfjtjKTDr01jUfCdXKW5/wo0SunLcMI9I5shVmJIiLFJkGFQ2Vc6cmFMk3AJjASrK20igEnXz3DO+nVBmvgVdhaJIem+IoqENA6Ti/oFFyXRzY+ON2syWZlXA3kW7YtGWQSn6C2FZsA4BSn+cWoUHA5+nkF01EBV2o0n+WXV8UcitXsSu7Ig67wPdT4kvemrSoo2F1wLR5796ZGEfApsAuuGNZ4F9GdNA1+WBHPncSmrZnw10a1NXHAdNxtnC4tuLA9Pr1pyUl9U5mWq3hnFFT0fA0Bbsk5Rpx25UfG3ZAgBHQs4GnGQ23u9yHESOzXmXghBzI4nIryYHuUGdmknVC8zUTMk07jMxP7dDkarQUTgxzuNPUYjQ5TNNWfLgcCHujZZXsq82yazbKLbJ5dHqrX1GBr4uOs/HxY9vSbRc7OSrs4lDU/KefyO7LPd5yeDrGS69ubMTsYp9s1JhaCAxV8f3B71D/UTsohBCw/NP/Z8CXZjIKucUAaXdGrUT4fTfO7/NXiIl/k+ThPv5/yOe04AD5ZTRf7RwWgCFCWmkWA6uPRJV5B5fH7aemn0Kc4ScgtO57n0/MR9LmBNmyM0/9gKaPR7NzoT9M6YZ1WVKawFTSkP3rRmCB8a61xQQQaXsIkAAfzqFqnwzbeZfDqC4f58oB8QJMR+Kr+TQYolyz3MN4nDK1rPDnF/VCkMclbH6hxsOxH5pi81Ej59yOYJx+EDW0mYPVkNs4nyXBCL9Nqs5/PHt0jOh8zbF1FoE0IdjGZVNy7G+PD2a1IlzYBJef9XOYtT+I0bIfF7puE8vkdOWwTB+bQLKN7SGfKmAeNkT/drExEHwn+Bxbja6vJmvNOGT3OWDVLydYQe7J3/xZD5Gv4aTktqDt8Yf4f6X1RPMUn1BCUPWURSex6Be65YrIkDeg/IWlxpgORGKkmQNcV4PGzq3Y7Pv6rRcftQstHcDp9TO6XFGhD/UMCsHCRZHmtFFqW6xGqNrF98rVksfad8vbNHdky+0OBkhT9gr0/v2q2x76HyqUM+J9n7YuIrkvqU13P9unVNxF9hc/WzO+SLvG/esPf3g==
+sidebar_class_name: "get api-method"
+info_path: site/docspace/api-backend/usage-api/asc-web-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get the backup history"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/backup/getbackuphistory"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns the history of the started backup.
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"List of backup history records","content":{"application/json":{"schema":{"type":"object","properties":{"id":{"type":"string","format":"uuid","example":"aae1e103-bca5-9fa1-ba8c-42058b4abf28"},"fileName":{"type":"string","nullable":true,"example":"some text"},"storageType":{"oneOf":[{"enum":["Documents","ThridpartyDocuments","CustomCloud","Local","DataStore","ThirdPartyConsumer"],"type":"string","description":"[Documents - Documents, ThridpartyDocuments - Thridparty documents, CustomCloud - Custom cloud, Local - Local, DataStore - Data store, ThirdPartyConsumer - Thirdparty consumer]","example":"Documents"},{"enum":[0,1,2,3,4,5],"type":"integer","description":"[0 - Documents, 1 - Thridparty documents, 2 - Custom cloud, 3 - Local, 4 - Data store, 5 - Thirdparty consumer]","example":0}],"title":"ASC.Data.Backup.Contracts.BackupStorageType"},"createdOn":{"type":"string","format":"date-time","example":"2008-04-10T06:30:00.0000000+04:00"},"expiresOn":{"type":"string","format":"date-time","example":"2008-04-10T06:30:00.0000000+04:00"}},"additionalProperties":false,"title":"ASC.Data.Backup.Contracts.BackupHistoryRecord"}}}},"401":{"description":"Unauthorized"},"402":{"description":"Your pricing plan does not support this option"}}}
+>
+  
+</StatusCodes>
+
+
+      

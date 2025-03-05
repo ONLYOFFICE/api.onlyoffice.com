@@ -1,0 +1,71 @@
+---
+id: delete-color-theme
+title: "Delete a color theme"
+description: "Deletes the portal color theme with the ID specified in the request."
+sidebar_label: "Delete a color theme"
+hide_title: true
+hide_table_of_contents: true
+api: eJztVk1v2zAM/SuGdg3sJM0+mluX5BCsA4qlxQ5FUSi2UquVLU2i03aG//tI2c5H0yQdtt12aGqL5BP5SOm5ZMDvHBtes5kAkPmdC6JgpLNM54FrVthNh2kjLAep82nChiwRSoAYaaXtZSoywTrMcMszXLQEVrIcX9BRJmiSOT79KIR9xpdEuNhKQ1C4eqEtcBUAgQTTMdpdjM+cDUsGz8ZD5CDuhEXTQtuMQ7100scF8cQzo9Dp9NPgQ1VhmlY4o3MnHAH0u136d2DHtsJhEBcOdBbEVNILYweflIhBJAHacg2dQMlMAiYQa0wuB9qFG6Nk7CmK7h1tVe7Wouf3CERsWSIUZJ2o389t+HFrOZElQWTueDyy/Bpf24VfrjneT2Sv6jStW+E5sMjCHjjviyGFUnxOAGALsYHH5qoQDEEzLvPjhfA4bug8vPmZ96u7dXD7d4OPn3rjHmUwLwBwNI6Df/aObwF/3z89nXRZheg8SSTFc3WxUdGCK4chIMEHnM1G4XcxD0faivAKpJLwHLbnLhz5EVwfKtda/NIUR4HKAPEE/4n8YyL/8U5tt145M26HCvRrb5g3nONZ63rwHPdPBghb31PHMc+b++wI4O+SdmYk/X3VqBcu/NbczWPQ+4lDIzaHdhp0e7u391XOC0i1lT+RgMoTFxcWe+JFh7v4luy3D4IWUA040fSIDoLdkD5so429jDm67wNT68KmADxKSL1tOg6cEbFcSNQAmfs1K1DRHISIj7KX6rUsejGEFN8jbmTUD7tRKyWRh4dGMp2wy1YvC6swIAUwwyhSOuYq1Q52G0WWoA5kVFBb/yxeacg2C2tNMfKLIFFppHnLrRHpWOsHKTyxMl9oH73bU/SmvOuMln2ac4PJZtzf8A18zW3ANxl9WU65FtC/1YumWLolI6NIdDA7T27ZdOWamEBP7IvvQfONQ2K+6g0S6+lH57KccyeurKoqWq4/Y6hjiXR0hJPV9O8tbfcj59UsfbvqL6YlJ9kcMt/iJbeyviyub9AtxaHG5lMKdQTd4QY2onY+RQhlNaTjyfnkcoLu1Pzt+agnoXmgDVpT/rwJvz04dRL0W3X2RJRlPXxIYetfm/ZGNEWuSKEa8Fb4BUz3qdA=
+sidebar_class_name: "delete api-method"
+info_path: site/docspace/api-backend/usage-api/asc-web-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Delete a color theme"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"delete"}
+  path={"/api/2.0/settings/colortheme"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Deletes the portal color theme with the ID specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"id","in":"query","description":"Portal theme ID","schema":{"type":"integer","format":"int32","example":9846}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Portal theme settings: custom color theme settings, selected or not, limit","content":{"application/json":{"schema":{"type":"object","properties":{"themes":{"type":"array","items":{"type":"object","properties":{"id":{"type":"integer","description":"Theme ID","format":"int32","example":1},"name":{"type":"string","description":"Theme name","nullable":true,"example":"blue"},"main":{"type":"object","properties":{"accent":{"type":"string","description":"Accent color","nullable":true,"example":"#4781D1"},"buttons":{"type":"string","description":"Button color","nullable":true,"example":"#5299E0"}},"additionalProperties":false,"title":"ASC.Web.Core.Utility.Settings.CustomColorThemesSettingsColorItem"},"text":{"type":"object","properties":{"accent":{"type":"string","description":"Accent color","nullable":true,"example":"#4781D1"},"buttons":{"type":"string","description":"Button color","nullable":true,"example":"#5299E0"}},"additionalProperties":false,"title":"ASC.Web.Core.Utility.Settings.CustomColorThemesSettingsColorItem"}},"additionalProperties":false,"title":"ASC.Web.Core.Utility.Settings.CustomColorThemesSettingsItem"},"description":"Themes","nullable":true},"selected":{"type":"integer","description":"Selected","format":"int32","example":1234},"limit":{"type":"integer","description":"Limit","format":"int32","example":1234}},"additionalProperties":false,"title":"ASC.Web.Api.ApiModels.ResponseDto.CustomColorThemesSettingsDto"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

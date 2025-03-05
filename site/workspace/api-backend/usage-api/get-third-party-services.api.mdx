@@ -1,0 +1,63 @@
+---
+id: get-third-party-services
+title: "Get third-party services"
+description: "Returns a list of all the connected third-party services."
+sidebar_label: "Get third-party services"
+hide_title: true
+hide_table_of_contents: true
+api: eJylVE1T2zAQ/SsenV2cMj3lxlCGMuXAQDgxGWZjb2KBLKmSHEg9/u/dlZzEgUI60xwcS3rvaT/euhMBVl5MH8RSKvTFrJau+mLBhU0mdcCVgyCNFvNceCxbJ8OGwJ04a0NtnPwdT38gVOhYxNGbyMUL4VDMe2JV6EsnbRSZilsMrdM+g0xJHzKzzECpLNSYlUZrLANWtNqH4NGtZYn+hEQdemu0R4q2E6eTCf8dqp/vNKwza0kxeeKRckAdGA7WKlnGmIsnz5xO+LLGBvgtbCySCjgHG+JRCo0f7ZvFE4nTAYlbdEGmSLgS3yHAceS1WUk9gvngpF4RDF+hsYq3VIT0ubgB71+Mqz6H2y2KGDPzjEfUQ4QQ9t6pz5EtAXoCBhniepck7Z0bZw3ZAkcSC2MUgj7QWILyGAmtD6ZBN0tin91bDtDHdDEXYujk1bFSDLhHWY1pP3Hzj7xnQo5TjpNwwy6kB5ATev7l4tvk63vn3WsYBgKrqNIgLSlkscJoBAg1LQqwsjg9mRRp2KLTo9EFj5dbs2F5urj8U1GHYKdFoUwJqjaedQ5vveaTLBFFPxrRO/b03p7vBnXvdSu5QmR21qvTcS40NNuu77gxLamXJtKHIp2bpmk13ZjdxSiy24u7WXZ2c0UinE2KU5FZKHziW0qjgWjT4Y5LDH+d+LfJdvs5/q+vyJB4wNdQWAVp2to0D6lLD1wVQlKf6Bk7xbx9r6jQsR2E7LoFeKRx6nve/tWi4+8jva7BSVhwkR7mdEO9/UR2go1GtS1LtNzSNag2teLNt4kburPR5cWMsGyyw+49x+4NL6y+PdKbkfZhI/MhhOj4/ANK1yVvUGJbfDr6kLFzT0JzZec0MX8Ao/EyiQ==
+sidebar_class_name: "get api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get third-party services"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/files/thirdparty"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns a list of all the connected third-party services.
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Connected providers","content":{"application/json":{"schema":{"type":"array","items":{"type":"object","properties":{"AuthData":{"type":"object","properties":{"Login":{"type":"string","example":"login"},"Password":{"type":"string","example":"password"},"Token":{"type":"string","example":"token"},"Url":{"type":"string","example":"url"}},"title":"AuthData"},"Corporate":{"type":"boolean","example":"false"},"CustomerTitle":{"type":"string","example":"customer_title"},"ProviderId":{"type":"string","example":"provider_id"},"ProviderKey":{"type":"string","example":"provider_key"}},"title":"ThirdPartyParams"}}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

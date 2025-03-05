@@ -1,0 +1,71 @@
+---
+id: send-join-invite-mail
+title: "Sends an invitation email"
+description: "Sends an invitation email with a link to the DocSpace."
+sidebar_label: "Sends an invitation email"
+hide_title: true
+hide_table_of_contents: true
+api: eJydVU1v2zAM/SuCzl5cZN1hOa1fh27rNjQddiiKgpHZWK0seRLdJgjy30fKTue2WzEsQBJ9kNTze4/yRhMsk55d6jkSWb9MqlRnmBIsMemrQocWI5AN/rTSM53QVx+D9af+3hKegXW60BF/dpjoMFRrPdtoEzyhJxlC2zprcnp5m4KXtWRqbEBGtG6Ra4bFLRriOm2Uw8jywbzLQVydBw2sPqNfUq1n03fvCt1Yv5vvFbsiiSKD5yIVJhNtK0fy8knTQ7wJsQGGNFQttO+cg4XjVIodFhpX0LQy1fN15XF9fR4WjCXtf6gDSc7EhEZvC206R13EEf6/HH00BL52VgoNKsIV6S2Xhqqykgzu24iJG3AJnxc/7ylXLURokDAmxY+ooGJyLAMC4lnTy6jSoCxDIUv54IP50eQHLiYHrZXvWajQTYai6ZjC5EAqDT44hIQ7d4xiGLOgjpja4FMv2nRvT/6egh3KKFiEjpRYiCspUM76O0VBsWFubGzULRtLdqhGdRzMvAUj9P2rn3o4+39CcOpNiJFdprL+isnpB+AiQrVWuGLWks75b1/mfwmK9WhsSjxPgpmn4inGapMCk+Mke/r+ZfZOLGcbS4rjcWUQK6yy6k9j58wOF/TKSoflJx2gPliqR6SNSZowS+yCOkiLtiHlZgJpEF1Ca8vpZK/cmaAU/numpYU5MmG8ZwPxHbDRXeSW0zVROytLFwy4ui/3FOVn2VF9ot5eSQ3TRUvruYjRWwGSuYaO6us7XI+6hfF84gXuCjauzMdhhbZS3oRwZzGzIyqf/75fTnat83g/vNqvo3Yd95occxMyqJf9wElCR/+g91OJFkobyG4bUP9VpudUja7D/9d2oE7Al60Dm62WpdoMOl8KrxzJSmdFHxv+mdosVRaUEzabBff19+i2W1lmiiPrdMnDe4i2v68ur/igmjuEZRZ7ZCn1Uf9Eby4EloS7rlf2WXNui13GgTHY0quxVyMLf/s6v+DgxfBCafh24tUID/Ky4d+Z1vJikuxstby20Q78suOLhvf7mvL5BYvnZhQ=
+sidebar_class_name: "post api-method"
+info_path: site/docspace/api-backend/usage-api/asc-web-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Sends an invitation email"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/api/2.0/settings/sendjoininvite"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Sends an invitation email with a link to the DocSpace.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"email":{"maxLength":255,"minLength":0,"type":"string","description":"Email","format":"email","nullable":true,"example":"Sydney_Roberts4@hotmail.com"},"culture":{"type":"string","description":"Culture","nullable":true,"example":"some text"}},"additionalProperties":false,"description":"Request parameters for administrator message settings","title":"ASC.Web.Api.ApiModel.RequestsDto.AdminMessageBaseSettingsRequestsDto"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Message about sending a link to confirm joining the DocSpace","content":{"application/json":{"schema":{}}}},"400":{"description":"Incorrect email or email already exists"},"403":{"description":"No permissions to perform this action"},"429":{"description":"Request limit is exceeded"}}}
+>
+  
+</StatusCodes>
+
+
+      

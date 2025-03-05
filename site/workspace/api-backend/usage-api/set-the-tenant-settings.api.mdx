@@ -1,0 +1,71 @@
+---
+id: set-the-tenant-settings
+title: "Set the tenant settings"
+description: "Sets the tenant settings specified in the request to the portal."
+sidebar_label: "Set the tenant settings"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVE1v2zAM/SuCThuQ1OlXuuXWdR02dIeiSbFDkANt07E6W9IkuW1m5L+PlJ02aboNA5aDIYVfj4+PamWApZeTucxcnVwYHSALXi4G0mPWOBVWZGvleRNK49RPCMrozwg5Oo5xdJID+UB+KBdrisrRZ05ZdpMTOcXgRShRBNSgg/AYgtJLL7zFTBUKc6F0dHD4o0EfRDDxao0LUB1Q7t7wweSEpJUZIUQd+AjWViqLiJI7z/Va6bMSa+BTWFkkBCa9wyxQHuuMRRcU+j5NoZaNw5xvu6A/YqE0eqGKLShCefEcJIwT2nDavgw4Byu6Eg+13yqfGlMhaLleE0uYfjKuvsLVfs1vmHqK5RI8AFGQo/iOq79X8MERo2TgECBiZNOonArGH/PnrdG+a/toNNqvPdubD5ff7n3TeORa3EPVoHgTHH3Jr4DK41sC8K+jeeaGcZ6MDveh3WrohYd55LBGutLMpG3iUCGUdEnAquToYJSwhjcakyxhd4/ORwU3riLPMgQ7SZLKZFCVxnOO3Ypf2SK6QLneWoMpw+9YfHUZntoiLFdxcIrzlZ15IDXUbN2JjS0xPzfPIr98hNpW+FKkc6Z7sSuiuTwu4N1pMT4Znp4dng1PTsdHw/S4yIZH2fvxcTEeQwFj2kvGUpiIUQXOLS9MXTea2hLT2Kq4uZzOxPn1F0LKlHVkVBAIlaR4S1zVEOfYN0Kr/dpmvyR0a2P/x2vQcxzwMSS2AqKYwMXRtr0Y5jwA8iQ5sCZdHXXQgyMC49TJq21T8HjrqvWa/6Z6jiml4z04BSnTNGfqys1r10peSOYuNjScMRZ2p3WIc3+h+fVgE3GeZWjDH30XW9q+vp2Rb9q/eLXJOcTBA7+G9J1IOpjIb5Rj/K+lYellA0v27VKyuHh9drXZPSr9gZvamPRqC+CuTAd9H/zlrl4NadtO+cTnxr8z/TbiaTc6bx7mglD/At6WQpY=
+sidebar_class_name: "put api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Set the tenant settings"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"put"}
+  path={"/api/2.0/crm/settings"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Sets the tenant settings specified in the request to the portal.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"configured":{"description":"Defines if the portal is configured or not","type":"array","items":{"type":"boolean"}},"webFormKey":{"description":"Website contact form key","type":"array","items":{"type":"string","format":"uuid"}}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"The tenant setting for the portal configuration value (true or false)","content":{"application/json":{"schema":{"type":"boolean"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

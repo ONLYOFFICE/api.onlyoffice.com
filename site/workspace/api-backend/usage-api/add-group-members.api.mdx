@@ -1,0 +1,71 @@
+---
+id: add-group-members
+title: "Add group members"
+description: "Adds new group members to the group with the ID specified in the request."
+sidebar_label: "Add group members"
+hide_title: true
+hide_table_of_contents: true
+api: eJztFstu4zbwVwSerfgl27KBonCTtA26WQTrBAWazWEkUhY3kqiSVBJX8L93hpJqZ+3GTbGHHqoDQc37yZmaWVgbtrhna62qkj30mBFxpaXdILBmy8qmSss/wEpV/CyAC03EGm+sx56RTrCHLXJxYWItSyJjC7bk3HiFePacVC8XeSS08azybCpa4LO0qfu9uvBMKWKZSME9WTiYFr9XwtgzVFKChlxY5HcWFfiDGpwMSUZIUliCTdnXVvzk9FxdIMLEqciBLWpmNyXxG6tlsUZMonQOFiFVheK25Eur/AfFN8QRq8KKwtIVyjKTsQtG/4shJfWhaBV9EbEly7UqhbZSGMK2QaDrazM/SGM9lbh4dUS9ThhoDRvy0orc/BP73Uc+mFIVplE9GgwO1TbRkUUjgGC9b+Xqxb6iQ5PFC+RlRqB9QjT6o8vtWwwrd2kqiDhuQLf2/rt47csOJyMeRNOxP5/PwA8iED7ALPLDeRSFMx5OeJQwiu05WLFWevM+8bMgGQ8hnKD4YeQHYh750VyEPohQhAMeTMNkQi5d8ffJTYDzeRLM/VEwHvrBdDjwYTIM/XEM82gcBuM4DEnuNRSwpvY9lb33GjBoP//I0X1kwIU0ZQab00m+lo/C+w2KDVjzKIn1VtrsFFPrHlIvn8CCXuWQZW/zVDqjN8kQpQeOyxWVVonMxJ0+wf75cx9JeRVbQ1ehENzAiP0MTPnyfWWE/g54Lgvscg1WaVdCtnGIXaIotRHiVw1lY/z17pk4UdL/p+8/l759nHtfCYGYHyv0pXmYg8Hw8C2+K6AdtII7BTjwUsVpsFUuwzTeFqwPpeyPzgZ99/7163YIbvu7sYH2PnWjsqIIsNTactHvZyqGLFXGHozJD4TxGka23dsAVvTcN0V1dA/YVWgpfxGbbhanDbrXjepXvM47miefdkP2skvJ3pC8Z+MEH8tkGviT2XDmB5PpyI/GSeyP4vl0nEynkMAUdw9SmihnTBv4c5XnVYH2eyvnk/fpcnXrLW+u0CSKTeN1ho84BgP5SwxKDm5SdRZz/npz+Tpme0vBN9112nha8WL72GzSTcWqKeSmBu4p2EiJVYBnMwd7bLFbhzqLMY8u28hR1xEY6oftlsCojWbXPV6fQEuIKGpYLlwaumPVJZAZ8YbLe4vVUYu7siioJp4gq+gPr49YJLvVbUvJS7udsm6x540W/5Zk7LgP1pFtr+NYxrEo7Zu0D3sddXN3i7RRu9zlihOLhmcE0ukMVc5pV/kOVmO5FOsKXyjENyKpjqlpX7fBo2uD9kJOHQ3F647o4kIneXWUpa6bJsMUdvQN6m85/mrDhpoy84BW/wmIOwAa
+sidebar_class_name: "put api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Add group members"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"put"}
+  path={"/api/2.0/group/{groupid}/members"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Adds new group members to the group with the ID specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"groupid","in":"path","description":"Group ID","schema":{"type":"string","format":"uuid"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"members":{"description":"List of new members","type":"array","items":{"type":"string","format":"uuid"}}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Group information","content":{"application/json":{"schema":{"type":"object","properties":{"Description":{"type":"string","example":"Description"},"Name":{"type":"string","example":"Sample group"},"Parent":{"type":"array","items":{"type":"string","format":"uuid","example":"852d4b63-997a-4bae-aa7b-89bb87d85dbf"}},"Category":{"type":"string","format":"uuid","example":"74f31a85-991b-4e9b-b9e8-ae8e80d468f5"},"Id":{"type":"string","format":"uuid","example":"fadd9f49-2431-4610-a518-3ca9b3843c88"},"Manager":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"},"Members":{"type":"array","items":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"}}},"title":"GroupWrapperFull"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

@@ -1,0 +1,63 @@
+---
+id: get-company-white-label-settings
+title: "Get the company white label settings"
+description: "Returns the company white label settings."
+sidebar_label: "Get the company white label settings"
+hide_title: true
+hide_table_of_contents: true
+api: eJyVVdtu2zAM/RVBz0acFX3K04K2KIZ1Q5Gs6EMRFIrN1GplSZPktJnhfx8pX5o0y5ICudgWz+HlkHTNg3jyfPLA5xCC1E+epWwGSyd0jnd8kXBjwYkgjf6W8wl/gnBhSiv05r6QAW7EElQP5Ql34K3RHpCy5mfjMf3l4DMnLVEgQYdmrwRnivDMvxNkRgfQgXDCWiWz6Dp99gSuuc8KKAVdhY0FpDPLZ8gCAq2jQINsXWetl5+ihC1jHxwllRwISZN1wnWlMCyFgOAqSDi8idKqiDclsABvgTcJ9xj/ce45WZ3MiblJdZz0KpolfGVcKbBWHe5/buabXMPmcWaWWCR//rUwgTAjLBQ5FnmO0vnjrqed4ckp2cLoE+p0S2ZMVyXGdzq59DcyA+2N2/KwNEaB0PtSWMjkChuEyRUTrGsRJj3eqI6G4Ucb6qfBIwUQXV3CSlQqfNZTKMDD0OJMOGB5y3TIWauHJDKhbrf6eiWUx2IEGWIppvOL0T0sR1Mr6fvD5KD8aNaN4GUwo4Ojioe8acjT+fjL/pDeaVGFwjj5B3JOVh6yysmwwU2Bg+mzRzp/fAF6gEMvckzi1VGvL5rFx3LMIFROe6rEUPV/jf8ISUpAv92ioakWocCbVFiZno3GaW+aumFHpR0lpyjdGpyPQVYOB4kXIdhJmiqTCVUYH/akuqET1gI5hd5nOqdN0y6T3XwH9TGm70Bu496Y7JphwxB9ZsyLhFhCqVcmovfVQ2uKu41ofRbHBoMtRdx5Hf01hKMV/Jhe/b5PP6VClyGNWWqVwFQwpFjRupPkgdJHSxQlFn7rDTC8PJJ+DdNrJFYfYXW9FB7unGoaevy7AkdNhJdr4WQ78w8LdFdgV6EmpGWsO59mGVhScC1U1Qrw4QVB+g0NdH31C21JkF3NWnW6C2Lvj2ILDdy7YrYR0G+THEDUddsQmFdv3x4dRHQZ9tZU5QXO5F+wdaAs
+sidebar_class_name: "get api-method"
+info_path: site/docspace/api-backend/usage-api/asc-web-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get the company white label settings"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/settings/rebranding/company"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns the company white label settings.
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Company white label settings","content":{"application/json":{"schema":{"type":"object","properties":{"companyName":{"type":"string","description":"Company name","nullable":true,"example":"some text"},"site":{"type":"string","description":"Site","nullable":true,"example":"some text"},"email":{"type":"string","description":"Email","format":"email","nullable":true,"example":"Sydney_Roberts4@hotmail.com"},"address":{"type":"string","description":"Address","nullable":true,"example":"some text"},"phone":{"type":"string","description":"Phone number","nullable":true,"example":"some text"},"isLicensor":{"type":"boolean","description":"Specifies if a company is a licensor or not","example":true},"isDefault":{"type":"boolean","description":"Specifies if these settings are default or not","example":true}},"additionalProperties":false,"title":"ASC.Web.Api.ApiModels.ResponseDto.CompanyWhiteLabelSettingsDto"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

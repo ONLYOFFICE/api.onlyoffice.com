@@ -1,0 +1,71 @@
+---
+id: apply-a-filter
+title: "Apply a filter"
+description: "Applies a filter to the existing messages."
+sidebar_label: "Apply a filter"
+hide_title: true
+hide_table_of_contents: true
+api: eJyVVE1z0zAQ/SsanT11WjjlloECHWDokPbU6UFxNrFa2RLSOiR4/N/ZlezUadpAL4msfW93336olajWQU7vZKW0yT9pg+CDvM9kgKLxGndka+WswdJ6/UehtvUXUEvwzPF0kpn8TTiQ9x2xlhAKrx3D5FTOnDMaglBiFR0LtAJLELDVAXW9FhWEoNYQzsiLU15VEMNzyJo+yIXmAJqdOYWlfB4hJSyuPpIlFCVUSk5biTsXuTXCmjLN5Mr6SmG6enchO07VQ3C2DhCYcTGZ8N+h8+9UEmEd+ChbBFTYBPJWWHJcIxMUKyyiPX8IzGqP87CLByiQJXr2hjrF/GArZ0jwcgRdWGtA1YSFrWIz3aFvQHaZvBoDA3oq4AGO7ISapyxPInsMoS+9t/40OEEIew2+INnhfyo8dnBOteXEbEP8fySWMIT+MZT9JoLfGPHAw+mQT7COSKgx3nLr95ahXB0j3k/Ojyfltlb9hlA3GUWDXFrql1xDbDzP7lTmyun84mySx2VLOxHyVi+7nAdpx0MMfjOsQOMNkUpEN81zYwtlShvwaAe+sUUkouxGqzvnQUyz9uIC78tCaX2F3bBoZTJnwwoecKM6Xa9spPfVokmumpoiinnMQvy8nN+I2fUVOWE1KU+jECh94juSUanYmCEGy9+/E88ltk8r97Y3pdeHsMXcGUXyKHosa9v35I7FE5K6Qr/cFx6t/hnM5DS+P6k5VNlYf+K07UIFuPWm6/j6VwOeH0o6bpTXasFVoQYudeAzzcFKmQAnVI3fsReTHjpVc5s2yjT8RcdH6lt8Jbt7QpXD09z2hllRgMMR5ejB4oHZT+vnyxuW23BlxtPxGKejP7D3F9M5HJQhN/7tslcobZtmj+o44JPpVcZ+OnvlrIAW8y8O+0pa
+sidebar_class_name: "get api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Apply a filter"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/mail/filters/{id}/apply"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Applies a filter to the existing messages.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"id","in":"path","description":"Filter ID","schema":{"type":"integer","format":"int32"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Mail operation status","content":{"application/json":{"schema":{"type":"object","properties":{"Completed":{"type":"boolean","example":"true"},"Id":{"type":"string","example":"Id"},"Status":{"type":"string","example":"Status"},"Error":{"type":"string","example":"Error"},"Percents":{"type":"integer","format":"int32","example":"100"},"Source":{"type":"string","example":"Source"},"OperationType":{"type":"integer","format":"int32","example":"1"},"Operation":{"type":"string","example":"Operation"}},"title":"MailOperationStatus"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

@@ -1,0 +1,71 @@
+---
+id: get-remove-progress
+title: "Get the deletion progress"
+description: "Returns the progress of the started data deletion for the user with the ID specified in the request."
+sidebar_label: "Get the deletion progress"
+hide_title: true
+hide_table_of_contents: true
+api: eJy9Vktv2zgQ/isCT1tAtvzqIvUtiLtFsLvYwEnQQ2AUI2lssZFJLUk57Qr67ztDSbZUO21PvSSj4cw3T350JRzsrFg+iTvURY5BFDxaNEEKDsQmFLpAA05qdZuKpdihW+NeH/DO6J1Ba0UoCjCwR4eGUSqh6IMsSwKRKR1LRV8FuIzkFG1iZMFwpPRxblfBS6Yt+oCBtIFBsFbuFLKzwX9LaUhcOlNiKGyS4R7EshLua8FhrDNS7chyq80eHAcufVj8AnsqhxQAOMXpZD6KE3g7ereF6SiGq2S0mE3eXsULiLezK1HXG45mC60sWg4wm0z43zDlFebIYlCc6k+0cqgcG0NR5DLx7Yo+W/aozlPW8WdMHDfOcHOdbOJR1hfKGoa/XZFKlXkOMZfW9ORU6burxe+iJo0x2vwY7b03+x6g1XsMHH5xjEq5JlQn7LAHLan2HZoz7LuTcW82ZD2f9Ycznc0XBC3tjWaFw34TYq1zBHXehZ51D4uTJyzrwJW+o1rhP1u/k6jKPa/4DS1X47UulWp60se6AZXQhFn8A2TOSlqL73fxqQUNRkErhUGLTqpWCoNjGLbrZFK3EVnbimHQxiZdK20GC91VUYfHyibhNJyF83BxSve1yTxN+plO+znOhrnNB0ktXklnwjfHSedTu76/GRPCXqvxQ0YxUsIdryS3Li7J8wHs830zoJpmBWkqOS3I73p3YQu5xSFmw03j60L+rVPM7XjdXtWV02MG7fiop6cIHGMxmZ7f40cFpcu0kf9xH3lrMCmNdF/9uoBNPvH5p2dkheBCqOQXMkCx4XqHaGt0pVE2cBkeiSHQW/9N62h4lp7e0o4+6Eb4U2bJ4EW6zH8RF9oCE7mV5CCV1zEDonVjik8km+mWhT3vEqcuRQSFjGbjSVT4HkXG83PU5RFVDRPXgos0h46mS5OTc+ZcsYyiXCeQEwu7s235i0+CxlFw5V2j7pnWGuYatut4fSmvP0kRdi/CwKx9FxKtnyX6CUi11d67N/aPGPPMyZrzbjI6zDwZUbJ78ATbwn9A5xuWXqDoQU3VibF/1eTajjCTRkUOVDqV4CdQtWN84naRJQ2SR+tH6d8/HmbzVnTFLNunlYbhR0a+VRWDxUeT1zWrKa7hxSXxAEY23E4zT6VlOT1esVf78tu6fXjfBD/xSl8sr9sCxcM+QF7yF4l+SbqfB/WGLDO6XrRdnGFzeJ0kWLie29m7ypt4vA4f3j+QLa/WcPuaPWsFRr+Y0jdr2WTAf5leL3pUVbPadX20b45e9Wgr7Ky5QRsip/8BMBk3rA==
+sidebar_class_name: "get api-method"
+info_path: site/docspace/api-backend/usage-api/asc-web-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get the deletion progress"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/people/remove/progress/{userid}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns the progress of the started data deletion for the user with the ID specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"userid","in":"path","description":"User ID whose data is reassigned","required":true,"schema":{"type":"string","format":"uuid","example":"aae1e103-bca5-9fa1-ba8c-42058b4abf28"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Deletion progress","content":{"application/json":{"schema":{"type":"object","properties":{"id":{"type":"string","description":"ID","nullable":true,"example":"9846"},"error":{"type":"string","description":"Error","nullable":true,"example":"some text"},"percentage":{"type":"integer","description":"Percentage","format":"int32","example":1234},"isCompleted":{"type":"boolean","description":"IsCompleted","example":true},"status":{"oneOf":[{"enum":["Created","Running","Completed","Canceled","Failted"],"type":"string","description":"[Created - Created, Running - Running, Completed - Completed, Canceled - Canceled, Failted - Failted]","example":"Created"},{"enum":[0,1,2,3,4],"type":"integer","description":"[0 - Created, 1 - Running, 2 - Completed, 3 - Canceled, 4 - Failted]","example":0}],"title":"ASC.Common.Threading.DistributedTaskStatus"}},"additionalProperties":false,"title":"ASC.People.ApiModels.ResponseDto.TaskProgressResponseDto"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

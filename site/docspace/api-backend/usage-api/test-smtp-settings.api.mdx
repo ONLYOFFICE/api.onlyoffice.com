@@ -1,0 +1,63 @@
+---
+id: test-smtp-settings
+title: "Test the SMTP settings"
+description: "Tests the SMTP settings for the current portal (sends test message to the user email)."
+sidebar_label: "Test the SMTP settings"
+hide_title: true
+hide_table_of_contents: true
+api: eJy1VF1v0zAU/SuWn0DqmlJ46tvEEJoAMdFNCFXV5Dq3rTcnNvZN2Yjy37nXSbq01SbtgZc2cc499+Oc61qi2kQ5W8g56CoYfBSZmH+7vhIREE1J35Yj6TwEhcaVl7mcSYSI8wL9vEeMZIDoXRmBmGo5nUz4L4eog/EcRkGJc88jIiqsOFK7EqFEDlDeW6PT9+wuclQto95CofgJHz0Qj1vdgUYK9IHZ0LQ5tSu8BYR8AF05Z0GVhD0qxYM2awoUZi1wC+KoNhPFnk64IErH+eBB8ZmcYaigGUkzTBUx0CROMx0SX14QoqysVaueaMAr6+gKOAuqzF1xtqlM3kjKAyG48OpUbdRL2Zi7U+G15HvxXmYnvCZph/yGxN5AOElw1ULVBoRbH+vRicHIkVy7UChsqd5Ph7pMGsqp8twwUtmrgT/WykYqDw2m4s7nH8fn3ox7A4/Zzenne590nlr8Ab8rMnu8QCebhvk/TN6devumVBVuXTB/yX8JND0F/XJVED4YTRmFt6oUuSMLkrlErLx3AcmLZD3XBnCy2K0krSdtR9S3nOb2HviAVk7l1P4fAoBcNsvjkV5z4U/27tdZ0ADTKVEHGrngzMqKNxHKnPAUJQqIkaVAl5BVhCBoC419O6aMBVCvfA9sIO2hwi29ZMqbbDqeZJHG2CdLLxlzSu4m7CDE1EwVLMVsEf0sy6zTym5dAh328JW/iDZQcov9ROZ8LbSbfziXvdOonC90QB5VRXofwmh7mV47d28gjdqUa5eiBxb5CSu2CaG57rai3TQ5m4otVLqgOnqe9umwjxuqn667/6dPNwCEB8zIZ9QpVZwGXndiLXg6hCS5WJeBYN0rs7BoNPGkC0XU9UpFuAm2afiY9iKwDelxp4JpL4HFkjJtyZekFqucFJHnWoNnbXfKVq00R/c8K7t31edP14RlqQ7VbHXrHpi9/1Q+DrkPZW4r4N9m9ExEXbdWob56fPvp2Yiuwx7NA17S5fAP/2yEXw==
+sidebar_class_name: "get api-method"
+info_path: site/docspace/api-backend/usage-api/asc-web-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Test the SMTP settings"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/smtpsettings/smtp/test"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Tests the SMTP settings for the current portal (sends test message to the user email).
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"SMTP operation status","content":{"application/json":{"schema":{"type":"object","properties":{"completed":{"type":"boolean","description":"Specifies if the SMTP operation is completed or not","example":true},"id":{"type":"string","description":"SMTP operation ID","nullable":true,"example":"{some-random-guid}"},"error":{"type":"string","description":"SMTP operation error","nullable":true,"example":""},"status":{"type":"string","description":"SMTP operation status","nullable":true,"example":""},"percents":{"type":"integer","description":"Percentage of SMTP operation completion","format":"int32","example":0}},"additionalProperties":false,"title":"ASC.Api.Settings.Smtp.SmtpOperationStatusRequestsDto"}}}},"401":{"description":"Unauthorized"},"402":{"description":"Your pricing plan does not support this option"}}}
+>
+  
+</StatusCodes>
+
+
+      

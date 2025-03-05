@@ -1,0 +1,71 @@
+---
+id: add-contact-information
+title: "Add contact information"
+description: "Adds the information with the parameters specified in the request to the contact with the selected ID."
+sidebar_label: "Add contact information"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVW1T2zAM/is+f10gaWEv9NPKy0ZhcIwyuB3XD24iGkNie7YD63r975OctKSU7bq79UMq29KjR5Ilz7gXE8d7tzy1ZXyglRepd3wUcQdpZaWf4tmM9yufayt/CS+1OgaRgSUbixKP+BPqAR/N0SoDl1ppSI33eD/LHPM5MKnutC2DNXuSPg+bRlhRggfrmDOQyjsJGWqGMws/KnCeeR2WaU3s2dZBAalH/cHhNjJo1Pd1hnxnnNRBeRKFMYVMg+f43hGrGXdpDqUgyU8NIE89vkc0xDFWG7BeglvAoFeZ0WI1siZT6B6tGhSJTieYmHnEKd6rsPsnw3ZGgv1rMJnwYh3iHJ5YOFmaOG+lmgTH7sLKUtjpZp5labT1QqXQY6Y2ZNoypf0z+FjrAoQidMwjTPSm4EvtNZ7hR1VzRitXJ7ubJBvBItp/Ku+gVaQXuY947a/e2uniBqiqpDt/kWtF1ToqhSzw/wbGjq5/xIcPdR2v8Jb6APJFqgfIBsT5k0gBM/mAInYFRu7C+SOc6MoqQUhn06FBLZQ+n9XY+4We1HS+i1xr0hme43dw8BW/J2I8Dof9wRl+r0/5WgPeJmyLBcYR66AYSEesi2LDO2I7uAjUI7aLYsM+Ym9xsQggYu9wtYghYu9x1YQRsQ9BcRlJxPZwowkG3RKFEBDKxKEJCldEIwSGMrHA4FAiEhggSsSgDhIXRAADRYmcX5+OqCY/RWkKKlyHrudB63puUNClcULGh02vrV7VtpqrDHXLR62Kqb67kylsp7psOz7HefZ3jGONGmgxaPfpi0Zr63tb1fqH/xpUp7uzy6nLvPRho+kluvU3FvuGRkxow92ks95535RoZj5kAQYnda5xEnKjXegl4XNcxcLIuLudxPR+NAMzni0nZ+822dobvZnHzcByYB9x4IdHpbIFAuTem14cFzoVRV5DrzL5QiesNuTz1ss0pD6vW/nV92mZL6R4CjSGJOHl9XHEVajWqm0IlQbJ5fOLcrTI6cqLkLSnfLKY1c81b01iKmJ7eLbnNUIEpssilWWlMDg2DAGzy6PhFetfDBCRElenpEAozNR8/hvcg5av
+sidebar_class_name: "post api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Add contact information"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/api/2.0/crm/contact/{contactid:[0-9]+}/data"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Adds the information with the parameters specified in the request to the contact with the selected ID.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"contactid":{"description":"Contact ID","type":"integer"},"infoType":{"description":"Contact information type","type":"integer"},"data":{"description":"New data","type":"string"},"isPrimary":{"description":"Contact information importance: primary or not","type":"boolean"},"category":{"description":"Contact information category","type":"string"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Contact information","content":{"application/json":{"schema":{"type":"object","properties":{"InfoType":{"type":"integer","format":"int32","enum":["Phone","Email","Website","Skype","Twitter","LinkedIn","Facebook","Address","LiveJournal","MySpace","GMail","Blogger","Yahoo","MSN","ICQ","Jabber","AIM","VK"],"description":"[0 - Phone, 1 - Email, 2 - Website, 3 - Skype, 4 - Twitter, 5 - LinkedIn, 6 - Facebook, 7 - Address, 8 - LiveJournal, 9 - MySpace, 10 - GMail, 11 - Blogger, 12 - Yahoo, 13 - MSN, 14 - ICQ, 15 - Jabber, 16 - AIM, 17 - VK]","example":"1"},"Category":{"type":"integer","format":"int32","example":"0"},"Data":{"type":"string","example":"support@onlyoffice.com"},"CategoryName":{"type":"string","example":"Home"},"IsPrimary":{"type":"boolean","example":"true"},"ID":{"type":"integer","format":"int32","example":"1234"}},"title":"ContactInfoWrapper"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

@@ -1,0 +1,63 @@
+---
+id: get-mailboxes
+title: "Get mailboxes"
+description: "Returns a list of all the mailboxes associated with the tenant."
+sidebar_label: "Get mailboxes"
+hide_title: true
+hide_table_of_contents: true
+api: eJzNVclu2zAQ/RWCZ8FynJx8atAYadAFRZZT4MNYmlhMKJIlKSeuoH/vcPGWNA1QtEUvNkW+N5w3bzTquYel49Nb3oKQDu0KbfmZlgv9hI7PC+6w6qzwa8L0/LTzjbbiO3ih1QeEGm3gWlrxgj8SDvl8IFaNrrLCBBif8kv0nVWOAZPCeabvGEjJfIOs3VzFwDldCfBYs0fhm3jqUYHyIwpt0RmtHKU07flkPA5/h3d8ypFzRFaDB3anbQxEEiwqnwNSvEorWvsQBoyRooqKynsXYvXcVQ22EFZ+bZCig7WwJh4JbN3evl7cYxUCGqsNWi9Shhf1HkbQVUsqVMEpnRZ82jqe0AY+QWtkAB1Njk/4UPAb8uCA7bwVanmAzZiMPhPOSFh/gRbfpu2DiX9a11TZvyroTJMj6vf5s2Dor4VFyDut5HpU6ZYPxPLCx6Or2NEphyz2jBojBH67YNsqSQG59f51O/yn1XsJyjNjcxwAJ+Ojl6/pjYI8Q7COd7VIj6SPLzEWDnxDDyUYUU5G43JvLG1nRZmgadvFwdRZUskb7820LKWuQDbaBdCzIRFOWCLyYW+6XYUXPpn10xm3c96IjxitD/GadFxwFZvpkBvlCXWnIz1X671u207RjSzVjV3Orq7Z6dcLChLUpDwlzUFKn/iGZLQQh1K+4xz9bmw+V9jvJtsfmLpZs8cnX9LYIMmUUSx1n426DQUhJFlFvzuz8sMmx2AYVTt6Qpy+X9ALdWPlMITtbx3a8H2h5QqsgEWo1O2c7mo2n5ieP1DVqcBVhSb4ugLZJT+eTe/g6ranzmfXhA0dd2jhQ7QwL0L0zZFa78U+dLPIKYTfoXiF0vepQUjYBp+OXmVsWyihQ43n9Pr8AEhZkXA=
+sidebar_class_name: "get api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get mailboxes"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/mailserver/mailboxes/get"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns a list of all the mailboxes associated with the tenant.
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"List of mailbox data for the current tenant","content":{"application/json":{"schema":{"type":"array","items":{"type":"object","properties":{"Id":{"type":"integer","format":"int32","example":"1234"},"UserId":{"type":"string","example":"UserId"},"UserDisplayName":{"type":"string","example":"UserDisplayName"},"Address":{"type":"object","properties":{"Id":{"type":"integer","format":"int32","example":"1234"},"DomainId":{"type":"integer","format":"int32","example":"1234"},"Email":{"type":"string","example":"Email@only.com"}},"title":"ServerDomainAddressData"},"Name":{"type":"string","example":"Name"},"Aliases":{"type":"array","items":{"type":"object","properties":{"Id":{"type":"integer","format":"int32","example":"1234"},"DomainId":{"type":"integer","format":"int32","example":"1234"},"Email":{"type":"string","example":"Email@only.com"}},"title":"ServerDomainAddressData"}}},"title":"ServerMailboxData"}}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

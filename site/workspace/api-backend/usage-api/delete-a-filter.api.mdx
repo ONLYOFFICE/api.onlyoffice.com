@@ -1,0 +1,71 @@
+---
+id: delete-a-filter
+title: "Delete a filter"
+description: "Deletes a filter with the ID specified in the request."
+sidebar_label: "Delete a filter"
+hide_title: true
+hide_table_of_contents: true
+api: eJydU01z0zAQ/SuaPXvqEDj5liFh6NADQ9pTJwfV3tSisi0kOSVo9N/Zle2QNAkzcLFl79uv954CePnsoHiERiqdf1Lao3WwycBh2Vvl9xQLsOh93Vn1S3rVtZ9RVmg5x9IJMnglHMImUlaFrrTKMAwKWKJGj05IsU2FxavytfA1itulcAZLtVVYCdWmfxZ/9Oj8DVU00soG0yjcvqUPKqe4meLCRvoa3nYbhqfSFHFljY2EIoDfm5TbenymqTPYdraRfvj1fg6Rx7boTNc6dJwxn834db142VGx1jNIGqNVmWjJvztGhn/qHWMGH2bvzvs9tHLkHCtgFNFRdxVFqkRqIolIKCCXRuXzm1meFByIdnlQVWQe0O4mFnurCV57b4o8110pdd05f0bjHUfEkAjxyAlr3mug6KIfDvvSQF9wP2lVD+FsUvEkN62m2m2X0pXXjPjYNU3fUkexTlOIb6v1vVh8vaUivM0wp5ZkLQ+Ub2iNRibuxx6D8Q6+e7tj+CPh/3t0XNbjT58bLWlXGiVxHEZpHpkJQpI49GR52ALjFcugID8TvUkEwobwJB0+WB0j/6Y+li8fHXfSKvnE1JCKlXJ8JidspXb4l82OLXtx2EmulrXaSd3zFx1fSLx02+KGUPV03cMYWJQlGn+UcnYJ2DUHvy5Xd6v7FcHZ0KcueUkuGQ/c4OJEp4aZxuNnzK6khDB4MMYDfghdzTi4dFyel6Db+Rtt97nE
+sidebar_class_name: "delete api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Delete a filter"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"delete"}
+  path={"/api/2.0/mail/filters/{id}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Deletes a filter with the ID specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"id","in":"path","description":"Filter ID","schema":{"type":"integer","format":"int32"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Filter ID","content":{"application/json":{"schema":{"type":"integer","format":"int32"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

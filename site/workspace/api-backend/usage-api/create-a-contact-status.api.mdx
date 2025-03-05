@@ -1,0 +1,71 @@
+---
+id: create-a-contact-status
+title: "Create a contact status"
+description: "Creates a new contact status with the parameters (title, description, etc.) specified in the request."
+sidebar_label: "Create a contact status"
+hide_title: true
+hide_table_of_contents: true
+api: eJy9VVFr2zAQ/itCe9nAq9O0MMhblxZWNmhpMvZQ8qDIl1itbXmS3DQz/u+7k+zUztKFwlgegix99+nuvrtTzZ1YWz6559Lk8VQXTkhn+SLiFmRllNviWc0vKpdqo34Jp3TxBUQChmwMrnjEN4gDvmjQKgErjSoJxid8igAHlglWwIbJwM6sE66ybKNcylwKrBRG5ODAWPbeKZdBxHo0EQMnTz4wW4JUKwUJU4U3M/CzAutO0IF2+Vkn6G7N6SIoHC1FWWZKerfjB0tO1dzKFHJBK7ctAd3UyweQDnlKo0swToH1p+QLLfaCGoYRUFHHZZ1RxZo3e6k4QtI/PEAldabNUZKAOmButXE3xmt2hIKQTHvojkdhMte40fgfJduWurAhR+PR6Bgpj/6VIHeQoeETXDvI7VRXgXHPzYivtMmFC1tnY9yAZ5GXJCU/pXTMO12HierjAgSxl0MRX7foA9Fu2in2usU78WklMX2InvUFenM815dvNhufnXPSsi3xTrGZF+yHQZFawSN+Pjr9U+HvhWgnAiSeCPs31QmelNp64YRL8SsWpYrHJ6OYpkvb//GuLCyYJ+x6P2EqkyE+da6cxHGmpcjSwDS8+BudsGDIm96YmlENhTI5OKx2CUKPvsIWiRXxpeE44gWOIPwe2PrIqEjvXubLVZfE3Xx40Xbo6m677d6XjV4/jhpyZKX7fFOd51WBMbGZj5PdXc3m7OL2Gk0pX4E+o8nqSH9KeS58fbZRhLmLY1fud+LeUNo15n8b1a0KDp5dXGZC+W7x4tdt0dyTRIjEsqHkmbwdIMJPhDYSVN7XB6LreiksfDdZ09A23mTo0cLlkzBKLCmn9wu8Je3erZo/YgWEqsfoP87JJ4JnVaiQvRHVRJ3FhZRQur9iF71muL2ZzRG8bN+lXCdkY8SG3iz8n3BcaJ87X7l+r0Zpi3Ul1oQNnFSH1HDDMn70ZdwuKKruqNj2PBxWdNQGQv8U1kGTug5Nggnt8OHoVYtdGwU0qbpAr38DOGvgUg==
+sidebar_class_name: "post api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Create a contact status"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/api/2.0/crm/contact/status"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Creates a new contact status with the parameters (title, description, etc.) specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"title":{"description":"Contact status title","type":"string"},"description":{"description":"Contact status description","type":"string"},"color":{"description":"Contact status color","type":"string"},"sortOrder":{"description":"Contact status sort order","type":"integer"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Contact status","content":{"application/json":{"schema":{"type":"object","properties":{"RelativeItemsCount":{"type":"integer","format":"int32","example":"1"},"Title":{"type":"string","example":"Title"},"Description":{"type":"string","example":"Description"},"Color":{"type":"string","example":"#a7fc00"},"SortOrder":{"type":"integer","format":"int32","example":"1"},"ID":{"type":"integer","format":"int32","example":"1234"}},"title":"ContactStatusWrapper"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

@@ -1,0 +1,63 @@
+---
+id: get-audit-settings
+title: "Get the audit trail settings"
+description: "Returns the audit trail settings."
+sidebar_label: "Get the audit trail settings"
+hide_title: true
+hide_table_of_contents: true
+api: eJyVVMFu2zAM/RVDZyNO055yC4qhG9bDsKQYhiAoFJuJ1dqSJtFZM8P/PlKyUyddge4S2zIf+fjec1qBcu/FfC2WkDdO4THJkkVTKEzQSVUlhUQpNqkwFpxEZfSXQszFHjAULQFRaWqQCgfeGu2BmrViNp3ypQCfO2UZRqDY1r9CcqMRNHKltLZSeRiQPXkub4XPS6gl3+HRAjUw2yfIkYDWMR1UcVhl9kp/Vh6NO96rHaxUDSOUoiF7cAQ7p3PPsKSMuKQiIDIwFTvjaokReT2jA3iRta2o19Xs+qZLheRFVizPf4wbi/rxYTytICD1kNW30do7WXlIBSrkWrFY3k5ujYPJCrTU6PvruUldx/1upldvvXnQssHSOPUHChGKZm+LfprGJdapnLoltpI6KQz4RBtytbHWONqP9ExMBPAw36eKEkYm+/yRxzw+Ax9QZGRBG/+mAhCbbnMp2XfAxmlPTSGRI/mGCE0IXAPR7iPJyZBY0kMmrcpmk2k2zM8CPhuQ2cgBD+4AzgeGjasIXSLaeZZVJpdVaTz+Izr0JolAwbyHMUuObEzl+bKneBCxr3SQCi3r8DwuSykFdJYb86wg6Kf0zgT0yOcfsJ0srKJq5h0ZHWbsmiWytQwfT9/+DvBd+S7Xal8/yA9J32+E8IIZpYGoE4WgYNv7sOZ1qZKcEKMs9F9QODpROTlCcgbRCd22W+nhwVVdx8e/GnAcHLo9SKfkliVZb2hqSUkiK9jCILdY5DlYnnCQVRN1v/iDYdtO4bn7tAqsmPTYqmhKf8Pdh1f6OO597mFkwL9d+g6ibWMOaK+hPr56F9FvOFSz2Bv6nP8C0Jz5ww==
+sidebar_class_name: "get api-method"
+info_path: site/docspace/api-backend/usage-api/asc-web-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get the audit trail settings"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/security/audit/settings/lifetime"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns the audit trail settings.
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Audit settings","content":{"application/json":{"schema":{"type":"object","properties":{"loginHistoryLifeTime":{"type":"integer","description":"Login history lifetime","format":"int32","example":1234},"auditTrailLifeTime":{"type":"integer","description":"Audit trail lifetime","format":"int32","example":1234}},"additionalProperties":false,"title":"ASC.Core.Tenants.TenantAuditSettings"}}}},"401":{"description":"Unauthorized"},"402":{"description":"Your pricing plan does not support this option"}}}
+>
+  
+</StatusCodes>
+
+
+      

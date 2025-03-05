@@ -1,0 +1,71 @@
+---
+id: delete-web-plugin
+title: "Deletes web plugins by name specified in request"
+description: "Deletes web plugins by name specified in request"
+sidebar_label: "Deletes web plugins by name specified in request"
+hide_title: true
+hide_table_of_contents: true
+api: eJydU0Fu2zAQ/ArBUwsIluv2pFvQ+BAkaIu6Rg6BEVDSxiJMUyxJ2XEF/r27pORETdJDLhJFzQ5nZ5Y992LreHHHV+C91FvHcnYLpVHdVmrHNxlvDVjhZauval7wGhR4QMSPiOAZN8KKPe5Zoum5xg/ExVfGEVEgwje4rsFVVhqiws1vCWDhdyctILW3HWTcVQ3sBS967k+GiJy3KAuR8Cj2RtHWrdQPElTN1sYjVwgb4nGm1Q4clS7mc3pND/y+4yHjX+afXv5aa9H5prXyDwqJoM8vQalhx2rpRKkIiEgHVWelP8XWhavuieh+B7SBmkSNwo8IAL4hlVPGy+ilY0co2WA4K0+MrGPOQCWxy5pJzcgkcB650Oimfcoh2o/mFjwXRuaL2Tx3Q4758Zxi3hNl4CTXHsagOquwrvHeFHmu2kqopo1nTEXe0B+WCjn1MLa8oqSS39PGz9GhpGvcyMaZmMCG2ajadicheomptrFa+hjzxerrDAdtdmEkokl3UnRYUEYGxe6FpoKB/h12TlrtUYz2oP37uIamPTz63CiB3aHKaHI/hHRHjiASY4pZpKBoQp4uXMaL2A4aHePAor4vhYO1VSHQNp5nabxweRBW0izGPM9zWTwI5eA/zX34OVy6j2y4ha9qH1PUFNZBqI6+cBlDTqaHTXg2k5fLm+WvJSIo5OkcpMSHBal9lfyfAUkH0TNkb1T0fRqyEM749OvNigYvJU7yiKZWNyGEv3EQtb8=
+sidebar_class_name: "delete api-method"
+info_path: site/docspace/api-backend/usage-api/asc-web-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Deletes web plugins by name specified in request"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"delete"}
+  path={"/api/2.0/settings/webplugins/{name}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Deletes web plugins by name specified in request
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"name","in":"path","description":"Name","required":true,"schema":{"type":"string","example":"Winfield Upton"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Ok"},"401":{"description":"Unauthorized"},"403":{"description":"Plugins disabled"}}}
+>
+  
+</StatusCodes>
+
+
+      

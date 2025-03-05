@@ -1,0 +1,63 @@
+---
+id: get-the-portal-settings
+title: "Get the portal settings"
+description: "Returns a list of all the available portal settings with the current values for each parameter."
+sidebar_label: "Get the portal settings"
+hide_title: true
+hide_table_of_contents: true
+api: eJy9VE1v2zAM/SuCzm7sphtQ5FZkRTts2IYmwQ5FDorDxGplSZPktJnh/z5Sdty4abfbLolkPj5+PFI1D2Lr+eSeewhB6q1Pp6YsjWaHO18maMsrJ8MecTW/qkJhnPwtgjT6FsQaHPk7PPGEPyEO+LJBrzX43ElLMD7hdxAqpz0TTEkfmNkwoRQLBTCxE1KJlQJmjQtC9aHZkwxFhGB4BzqwnVAVeLYxjoHIC2aFEyUEcCMM7cBboz1gOTUfZxn9DXOYHWpKeG50QEbCCGuVzGM56YMnYM19XkAp6BT2FtDVrB4gD+honbHggmzDzGUJv42GI6QPDmMgEp5FaRV9WsynvEn43FU+wPqTKYXU/shFOCf26IGtK/3fqcr9OrqPclPy5oR0Hh17AolFblGfhGPLShHaTxdjotRVSbp9o+wTPkUWZEz4lVL8RLz7jJ0xQibsHE8tOGFjPCN+Ocgwo1KnlUK5/9EW0GeLGaEXIf++2aDsb+H7zAP22luhBxxn2eXkIptkWcdzayrnT8iw1tWwDWtT4cQNqS5HH2NLgwzxw2FcfjocEXRvGrJ+yM5PJ2uhRbcWsI4cOJWFWaNlC3FqRCjwkgor0/EoS/tt47RdbgfOx+WqnEJYEYKdpKkyuVCF8UQwDPeVLKx15M3Rhs5obtvRfHNPX0bOyi8QZ474itaccI3rhPeBb6xH6o2J7l1v6JWoNEZks5gFu7uezdnVj89IQtW0eSoRANNHf4tllCLuVhfjBkLc7VdL/7rW+mVV/8Mb0nUnwHNIrcKNotyjKHWn4T21DpGoYtSuz5q2JoqFkLpeCQ8Lp5qGPv+qwNHjicedcJLypBtSF4f3s+aPKAd2Ps/BkuAxzSjUq9eJ5O6n6+Z6jliavaG2j1Hb7kDsB5PeH3EPZU66FOi3Sd5xqet2crCwA741vevRz1aLppYucZH+AP0cMqw=
+sidebar_class_name: "get api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get the portal settings"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/settings/"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns a list of all the available portal settings with the current values for each parameter.
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Settings","content":{"application/json":{"schema":{"type":"object","properties":{"Timezone":{"type":"string","example":"UTC"},"TrustedDomains":{"type":"array","items":{"type":"string","example":"mydomain.com"}},"TrustedDomainsType":{"type":"integer","format":"int32","enum":["None","Custom","All"],"description":"[0 - None, 1 - Custom, 2 - All]","example":"0"},"Culture":{"type":"string","example":"en-US"},"UtcOffset":{"type":"string","format":"timespan","example":"-08:30:00"},"UtcHoursOffset":{"type":"number","format":"double","example":"-8.5"}},"title":"SettingsWrapper"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

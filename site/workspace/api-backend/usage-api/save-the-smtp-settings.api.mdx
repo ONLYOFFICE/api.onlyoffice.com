@@ -1,0 +1,71 @@
+---
+id: save-the-smtp-settings
+title: "Save the SMTP settings"
+description: "Saves the SMTP settings for the current portal."
+sidebar_label: "Save the SMTP settings"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVcFu2zAM/RVDZy/Osu2S07KuQId1XVCn2KHIQbGZWK1saRLdLjP87yNlp3XSLAWG9RDIEvn4SD6yjUC58WJ6Kzwgqmrjk/TbYi6WMV1ktVO4pcdGzGosjFO/JSpTXYDMwbGTo5OIxSPZgVi25JWDz5yybCamIpUP4CMsIGLUaBcjWhsXbimCgwojaxxKPSIoBz9r8PjJ5BS4EZmpkAz4KK3VKgsEkjvP8I3wWQGl5BNuLVBAs7qDDAnHOmPBoQIf7Eq0aR+cvw9YDrmJNvwxE29N5TuAyXj8ml/8v8heGI8DK4+O8MkKfsnSar4qpdKj/nOUmVIQ3TmVcOAlnZNbcqLGlH5wr4jihpoXC+pBKbG7ejfZw598EFyBFCrq8yzPqRT+NKPKoFpvPx5w6gA+K2+13F7JEk6DzCnxUlbseeYgp1Iqqf2NB/e673ECBzBz6f2jcflpqMb2Zi1DnFdypSFNLwdOK2M0ENGh15piwLMDD8wrHujq4EDMrlCXR6y5CagwWKcDCf9wpC9qYifU9+O3L7V5U8l+ZCEPOCXQJ2UuLMuLNCeZoEikVclkNE6e5p9nRfD4uwdwPkx/7TSZFoh2miTaZFIXHch+zEt+iTpH0Q5WSMrK78R9dJE8q9aqrxBky3hF9xyLKrR/3zckxaN1/bwxzne1bVqGWJsA3RfwzJRlXRGbKA0Mo+vzdBHN5l8oAGfa5aAlEhi3xfZqJIg+Pm+zl8vssAyDpfUP+68vBMIvTGhqVJiGUP+mb9ktV4ksqWmhTU8sQuOo6qE3ZNY0K+nhxum25WuqkuNlTscH6RSLlL8Ivtjt80bcU/W5VCGBNwsmw+a67rpzsNTaeOcxyzKweNJ2OdDg/Hu6IONVv+VLk7OPk4/8H4B+p4IOJhQ0qCbcNdScalPLDdt2mKwBuT9pVJz7IKH+wFntnqrtgOG+muI+Ef7ltI66NE0nUCrozr57+qvHk4Q7a27nklj/ATuPkUs=
+sidebar_class_name: "post api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Save the SMTP settings"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/api/2.0/settings/smtp"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Saves the SMTP settings for the current portal.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"smtpSettings":{"description":"SMTP settings"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"SMTP settings","content":{"application/json":{"schema":{"type":"object","properties":{"Host":{"type":"string","example":"mail.example.com"},"Port":{"type":"array","items":{"type":"integer","format":"int32","example":"25"}},"SenderAddress":{"type":"string","example":"notify@example.com"},"SenderDisplayName":{"type":"string","example":"Postman"},"CredentialsUserName":{"type":"string","example":"notify@example.com"},"CredentialsUserPassword":{"type":"string","example":"{password}"},"EnableSSL":{"type":"boolean","example":"false"},"EnableAuth":{"type":"boolean","example":"true"},"UseNtlm":{"type":"boolean"}},"title":"SmtpSettingsWrapper"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

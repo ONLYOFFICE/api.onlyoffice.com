@@ -1,0 +1,63 @@
+---
+id: get-the-mail-server
+title: "Get the mail server"
+description: "Returns the mail server associated with the current tenant."
+sidebar_label: "Get the mail server"
+hide_title: true
+hide_table_of_contents: true
+api: eJzdVsFS2zAQ/RWPzhmcBnrJjSEMMIWWIcCFyUFxNrGILbnSGpJ68u/dlRwTQwjQ0ksvsSK9fbtvd611JVDOnOjfiVyqzIF9ABsP/cOJUUc4SEqrcEmIShyWmBqrfklURp+CnIBlS0sr0RGPhAMxWpHVBFxiVcEw0RdXgKXVLsIUIvYSBTeRdM4kSiJMokeFqT8nbxY0RghaatwjWguuMNoBBVmJXrfLjzb/xQbnRKKMpsZuISOuxGhaI1PIoshU4pXE9455KuGSFHLJK1wWQMxmfA8JGxbWFGBRhSjOJhsYRZQzSkRHkNtcYtja79EGLGReZAz60ts/EKuOGGj3L+kvFleQGDt528epcbiBcmiVnrU4PYI4L60yoQP+LKYzdwtWTRVsRjU2JgOpWwZoSxArskCFfiO04cBQz+i1sgHVl1mHxfS9Ur/LHHZL1Ywg0luZlW9AHzzk02RRP7R1DeYqf6+wIWS0bezuiBsU17IcU9N/g+VukyfY5wltdDVK/f5RCsn8v6zkTtodLE2H++1zlSt8x53Bd+DYLC7k4siUGi/B3jiwH31nv24JzEfQiNJhc1tAa7M6lBpIRj9K/LDVy/z4CFZ8cND98nII3GhZTydKOKNyoL+UezEDny6JKf2JZaHi3l433hh34SF42IW5x7OutBnBU8SiH8eZSWSW8oX4fLad80k9fMRqY2AOeZaE2mwdm00mKCB+0zpUDnYYjjuhk/ttW69L6anx5nV6jkyel5o8RiFR0dXx8Do6vDwjElYT4sxozIb7vCAZufTzrvZxAvh8Nj/XWT2Nzr8c57VqhAXGRUYtzzH5ZFd1je44JYSkKtHvU52aAvF3iS8GQatqLB3c2Gy14u2fJVj+VqHlg7RKjjlFdyNyka4/Vyox5/tPHCYJFFzQcBH0X34RcDmbLjo5viYs91i7dnNfu3rB7OsjvdzgbpexU4cw9zfsKyZVFTqDhK3x6yvrFYumdwKaUzuiF+Y3V/9gfg==
+sidebar_class_name: "get api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get the mail server"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/mailserver/server"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns the mail server associated with the current tenant.
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Mail server data for the current tenant","content":{"application/json":{"schema":{"type":"object","properties":{"Id":{"type":"integer","format":"int32","example":"1234"},"Dns":{"type":"object","properties":{"Id":{"type":"integer","format":"int32","example":"1234"},"MxRecord":{"type":"object","properties":{"Host":{"type":"string","example":"Host"},"Priority":{"type":"integer","format":"int32","example":"1234"},"IsVerified":{"type":"boolean","example":"true"}},"title":"ServerDomainMxRecordData"},"SpfRecord":{"type":"object","properties":{"Name":{"type":"string","example":"name"},"Value":{"type":"string","example":"value"},"IsVerified":{"type":"boolean","example":"true"}},"title":"ServerDomainDnsRecordData"},"DkimRecord":{"type":"object","properties":{"Selector":{"type":"string","example":"Selector"},"PublicKey":{"type":"string","example":"PublicKey"},"IsVerified":{"type":"boolean","example":"true"}},"title":"ServerDomainDkimRecordData"},"DomainCheckRecord":{"type":"object","properties":{"Name":{"type":"string","example":"name"},"Value":{"type":"string","example":"value"},"IsVerified":{"type":"boolean","example":"true"}},"title":"ServerDomainDnsRecordData"},"IsVerified":{"type":"boolean"}},"title":"ServerDomainDnsData"},"ServerLimits":{"type":"object","properties":{"MailboxMaxCountPerUser":{"type":"integer","format":"int32","example":"5"}},"title":"ServerLimitData"},"InServer":{"type":"object","title":"MailboxServer"},"OutServer":{"type":"object","title":"MailboxServer"}},"title":"ServerData"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

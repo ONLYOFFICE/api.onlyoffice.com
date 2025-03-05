@@ -1,0 +1,71 @@
+---
+id: create-thumbnails
+title: "Create thumbnails"
+description: "Creates thumbnails for the files with the IDs specified in the request."
+sidebar_label: "Create thumbnails"
+hide_title: true
+hide_table_of_contents: true
+api: eJzNVU1v2zAM/SuCzpndZTvl1qYbUGxDi7bDDkFQMDYTq5UtTaLbBoH/+0gpbZ1u2HbYYTnEFvX4ocdHeacJNlHPFvqjsRhVqdJTLyfaeQxAxnVntZ7pKiAQXjd9u+rA2KgnOuD3HiOduHqrZztduY6wI3kF762pknN5G10ntlg12IK80dYjR3SrW6yI4/ggqchwWt5dO1tjOKvjCAohwJaRhrBNdui252uu+hlhOPcGA2PwEVpv2fZ2+u79MHlGRAqm24wBOroWFeEj6WE5THSNsQrGS9W8+dlEUm6tcj3q7FSO3PXWwkqcKfTIPmtm6z+qlav5daXsAnVtBA/2YkT4GmzE1/FOIKJaAVWN2jdZeQjQImGQ4GQoFXV8NS+SXoq5C1gce/PF1WhjcZm9TskVEutEQr3Y9DBIQQGjd13MbZ8eHcnjj+f6W5UNOcdhvHkScVT0LGNub+AlphRRPRhq0pKTqeixMmuDtTJdMu65KLgMpqJxMhfexaRhoIZXJXhTToujMoUraTwuEcO90CdK6INldEPkZ2VpXQW2yXFenV92VHbkvkuMqg+GtldyzEwcxOoGempu7nA7lqE3n1B02HHbZD2GsTolfOXcnUEtPAl/ly/z/OFJdwfzuBCZTkZSXI4G4OfNQdKsXSpqJJhvuBKlcBFCRz7o/VQzWrhsIfVxX3VumDrg8YCi0bXzD7u751COUXoLTBZXl3q223d6IQQzknutMwlpLl7qZGpSSxm52614Br4GOwxi5iyBO7Xg13sIJg/pQthqEJjqJJDUTD3PZ3tzLfUI3Pa5t6+EL1dH9jiuKvT0W+xypN6L86trBq/2V3jL08vWAA9yvfP/TGv5EIh3Eluy7bSFbtPDRrA5pvx+ACcaKWY=
+sidebar_class_name: "post api-method"
+info_path: site/docspace/api-backend/usage-api/asc-web-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Create thumbnails"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/api/2.0/files/thumbnails"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Creates thumbnails for the files with the IDs specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"folderIds":{"type":"array","items":{"anyOf":[{"type":"integer","example":1234},{"type":"string","example":"some text"}]},"description":"List of folder IDs","nullable":true},"fileIds":{"type":"array","items":{"anyOf":[{"type":"integer","example":1234},{"type":"string","example":"some text"}]},"description":"List of file IDs","nullable":true}},"additionalProperties":false,"description":"Base batch request parameters","title":"ASC.Files.Core.ApiModels.RequestDto.BaseBatchRequestDto"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"List of file IDs","content":{"application/json":{"schema":{}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

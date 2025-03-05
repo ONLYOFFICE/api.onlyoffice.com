@@ -1,0 +1,71 @@
+---
+id: delete-a-contact-avatar
+title: "Delete a contact avatar"
+description: "Deletes an avatar of the contact with the ID specified in the request."
+sidebar_label: "Delete a contact avatar"
+hide_title: true
+hide_table_of_contents: true
+api: eJyVU8Fu2zAM/RVB13m1V+yy3LqlwIIN2NB0pyIH1mZiFbKkSXSzzPC/j5SdrGm7w3yiRT3yvefnQRPskl7c6Tp25SfvCGpKelPohHUfDR24N+irnlofzW8g491nhAajYCJXutB7vod6MzKqwVRHE+SaXuglWiRMCpyCRyCIym8VtajqaZHaG2rzwWqpUsDabA02yrh8FvFnj4kueMNcfvQN8xm0wNGRlBCCNXXmVT4k2TroVLfYgVR0CMg8/P0D1sRzQvQBIxlMxzHMYtXIyznz2Qnmxah5iuGlOxY+FkfkbW78C5thJ3SiaNxOwH2wHppvzh5eYpe4NY4d27fIFkRFXk3XFSiH+5ONDFY+KrDJqya7LCZ723DrydJ77y2C02N+xMcUvEuT/MuqepUA9JZUaD15Xfy31UeZed376t3LDT8czGnCRsutjqV6/gZ6EiKfCajl9xKCKS8vqlKyOVteDnNhmsVd9fbD5s1YTqZoyWx8xJhyZPtoeURLFBZlaX0NtvVJMnDO5qt01ATU45Pcr0XZZNSr6T8pZpJf8MCDjcxrp3ahHXTSPcNmuWLdzd88X/+CLlh8lsfqWcaOvp6nh2KPoyze+kzIkAziAHZd71iDWmdd6uZ6fauuvq8YLv5Myi3wr0lM6Q/vP2iV
+sidebar_class_name: "delete api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Delete a contact avatar"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"delete"}
+  path={"/api/2.0/crm/contact/{contactid:[0-9]+}/avatar"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Deletes an avatar of the contact with the ID specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"contactId":{"description":"Contact ID","type":"integer"},"contactType":{"description":"Contact type","type":"string"},"uploadOnly":{"description":"Defines whether to upload a new avatar only or also delete an old one","type":"boolean"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Default photo","content":{"application/json":{"schema":{"type":"string"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

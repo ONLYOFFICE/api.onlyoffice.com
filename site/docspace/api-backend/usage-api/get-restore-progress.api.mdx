@@ -1,0 +1,63 @@
+---
+id: get-restore-progress
+title: "Get the restoring progress"
+description: "Returns the progress of the started restoring process."
+sidebar_label: "Get the restoring progress"
+hide_title: true
+hide_table_of_contents: true
+api: eJydVMFu2zAM/RVBpw3w4jTdKbeuLYpiA1a0HXYIgoJRmFiNLWkSHbQw8u+jZDtx0u3QnixLfOTje5QaSbAOcjqT30BtaifnmbQOPZC25nYpp3KNdI+BrMc7b9ceQ5CZ5I+zJiAjGzkZj+NniUF57SKQYW064TrMVChbuRIJl8J6YSxl+zPB9RQaJoKZQO+tzwShAUPi9ioTi+NMQhNW4lObPxMdt0w8ejBhhf5zJkptNkxSWcNpKHID50qtUlP5c4gEGxlUgRXEFb06ZMp28YyKGMilmBLptj0dLnvqg+CFtSWC4Wh8gXgsp+Rr3CV0K9MhWDORNXoOXllfAbVb55Mh+mxy/pXRqf8BNJDXZs2Bpi5LWPR1BkAZbIUs2AtJxqfePw5vdb9dfox8a1U/J9emrmIea/DnikeskZh29rOWyc49XvX2xQE85X48WbNutL6IkxngnTfTwHv9cj4k3FPYZXtW4+wsmxyqH9o+KT8eVD4b1pz8r9h4F9NqSoUvHi5HV0AwanOMLnlKPSgK3caRetERCJsjP95nKWeA5VJH8lDeDQZ7BWXA99PijLuY9FiUe6TamyCowMNFtav0Hwh8vPY+6cTUY4TigBH3UCEVtntm4s0DKvgnB6fzyWictwOV82GLRnd4gwL6LfqQBqv2JcMKIjfN89IqKAsb6I13P+KJaIEymhJQ1V7T60N8C9rrDkE9QU3F0wZfB6ozo++8wapDlf6HYRlPC+8pazcak+barGxCD+T9jYvRhdMcHXm3jLaT6LFjshWkV6lLf4OUxDsSre/8qKnm8M593IauyTgyuSuBu2FWSdSm82QWFeBIdkX2F50X/3CGZU3iM6RpFhDwly93u7j9p0bPms54uQWv29mdzblUgbBkS6KVSXZ5oRS6aOAWyrrV/+QFj/btp+fm+pFl/wuVmFbI
+sidebar_class_name: "get api-method"
+info_path: site/docspace/api-backend/usage-api/asc-web-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get the restoring progress"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/backup/getrestoreprogress"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns the progress of the started restoring process.
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Backup progress: completed or not, progress percentage, error, tenant ID, backup progress item (Backup, Restore, Transfer), link","content":{"application/json":{"schema":{"type":"object","properties":{"isCompleted":{"type":"boolean","example":true},"progress":{"type":"integer","format":"int32","example":1234},"error":{"type":"string","nullable":true,"example":"some text"},"link":{"type":"string","nullable":true,"example":"some text"},"tenantId":{"type":"integer","format":"int32","example":1234},"backupProgressEnum":{"oneOf":[{"enum":["Backup","Restore","Transfer"],"type":"string","description":"[Backup - Backup, Restore - Restore, Transfer - Transfer]","example":"Backup"},{"enum":[0,1,2],"type":"integer","description":"[0 - Backup, 1 - Restore, 2 - Transfer]","example":0}],"title":"ASC.Data.Backup.Contracts.BackupProgressEnum"},"taskId":{"type":"string","nullable":true,"example":"some text"}},"additionalProperties":false,"title":"ASC.Data.Backup.Contracts.BackupProgress"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

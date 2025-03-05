@@ -1,0 +1,71 @@
+---
+id: delete-favorite-files-and-folders
+title: "Delete favorite files and folders"
+description: "Removes files and folders with the IDs specified in the request from the favorite list."
+sidebar_label: "Delete favorite files and folders"
+hide_title: true
+hide_table_of_contents: true
+api: eJy1VE1v2zAM/SuCzlmdFTvl1q4BVqzAhn6cghwYm47VypYmyWkzw/99pGQ3X22BHuaDIYmk+Pj4qE4GWHs5W8hSafTZL4sOgjKNl8uJ9Ji3ToUt2Tt50YbKOPU3mn8gFOg4ztFKTuQz+aFc9hRVoM+dsuwmZ/IWa7NBL+L9AppClEZTrBfPKlQiVCiur7zwFnNVKiyEauKhwz8t+iBKZ+p4UMLGcBKhlQ9nlHLwuDQFAexkbpqATeAlWKtVHoFmj55hdNLnFdbAq7C1SMDM6hHzQPdYZ6jqoNCzNaG7LuLmsJQbSixMORTAsCl6uA2cgy1tCWDt97L44FSzln0/iQx/fC85fPLW+DEV3lLPUgXn0+lpjktjtNiAbnEmgmtRqDKyasaGC0VNaPMcvS9bTTk/y+eKMiA0MiH6Nv16CuKhgUFEWERKaqRtQZYCNZJ+qBkQKtpnYFV2fjbNkizH3jM1Ht2G5BM12TpNzlUIdpZl2uSgK+O5p0cEs0WkQNnvCfuOi0isvSnv1+IIzk+MneD7qmSeyAZqth7ExsKYpdudPucvUFuNR/pajH1c7oljd9hzttJEFCpwtPxu6rptCLi4i8WI2/ndvbj4fU1YmJRUrgZiKkiKt8RGDbFfA9SrSPRumE7G8pi8vcH6j7M80BzwJWRWA7FM6GN3u0ESC+4BeZIoZKKLoe6EQRzG3pNj163A44PTfc/HlNvxE0bLDTgFK6ZywfRW4yvWySfqLvMbS/1yz3DYneYldv9I//1kjLigibHhQ9/lns6v5jfz+zm5r4ZXqzYFRzl45heN/jNJC2PTG0wO8ayjnjbrFtbsm25llfE0HYr0KYp0WHBdo6nZ7mE81OtkKIX/XNibIV2XRoAoHf2T6d2I1yFJ3tzSJaH+ByloOME=
+sidebar_class_name: "delete api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Delete favorite files and folders"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"delete"}
+  path={"/api/2.0/files/favorites"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Removes files and folders with the IDs specified in the request from the favorite list.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"folderIds":{"description":"List of folder IDs","type":"array","items":{"type":"string"}},"fileIds":{"description":"List of file IDs","type":"array","items":{"type":"string"}}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Bool value: true if the operation is successful","content":{"application/json":{"schema":{"type":"boolean"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

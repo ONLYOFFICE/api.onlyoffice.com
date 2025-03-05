@@ -1,0 +1,71 @@
+---
+id: get-user-accounts
+title: "Get user accounts"
+description: "Returns a list of all the user mailboxes, aliases, and groups."
+sidebar_label: "Get user accounts"
+hide_title: true
+hide_table_of_contents: true
+api: eJy1Vktv2zgQ/isCz0os2wUW8GmziZsa+8hu7J6KHMby2GJLkVqSSuMV/N93hpQd2c1DQVsfDIr85v2RM43wsHFi8kmUINXgIs9Nrb0Td6lwmNdW+i0dNuKi9oWx8j/w0ugPCCu0LGRpJVLxlXAo7nYktUKXW1kxTEzELfraapdAoqTziVknoFTiC0xqhzZhm0vzgC6lfQkuLPQq2VhTV+6cNFv8t0bnfzMr8qMRudEeteclVJWSefBn8NmxtUa4vMASeOW3FZJ9s/yMuSc9lTUVWi/R8Skb11Air48d/shuhaN0r8N5K/VG7MKPPXKV0S4qGmXZtzr+aEN9JsROhGTkrRGBtbAlOUp46V6P9M9ofrbqQCVZ3FD9UrE2tgQft8Yj2sAHKCvFoOFIULBTdr8j2uaiC0SG/Gq02p7npgxCGpYKuxaXxigEfSTnbY2M/qutw/MWQjkIecMkvDRaU6AypqeH/rncaCAW4s9M1jhk64MvX0lWwQhCztwFxXCPvWIgvJc+bLCHh4CuwAMro7QYi5Xa/sQIx2O2tKDLfNM38TdECaqWh9y7V0TWoBw+GlgYCq1fblLx3pryBH5I/CGgFQHOvAzX+lHFKBtlZ8PsLBsuhr9MsneT8eg8i7/gzKkbP0jvvI7FeZEprgW9gVYnPDnQYs+TKe/O9Hujwuv94qU+gpLsP7XxMLXW2L6l5Mv6JoGZu+ZHsWfZ6Qbxc9obvUAoFSzbC9Bb7ArXUCvfGz8vwOLqytCjqN9mi7l2Sf3UH72czz33L1Fx9w0TYlePPIhd7F02fKL5aWjbPPnAqBLpk9wRGwxvCfiCPgZQyQExehBGBtiPDDwx2Hu0LgwMtVWBmL6aDAbK5KAK41jJSa/kkyQKil1n6phz44uP1pOzx2OGKvk7hhSxviIep7FpTI5lQ0zcWW8fp4rpvhDdqeDQ81nr2gRrbT4vTVnWmhxM5sHp5HY6XyQXf8/IJgcfw1JUDBcub0VRlxDezFb3Nfo4GnQyd5SUzpjz/QNUmyWPD35QKWIlOxWK07T1/MQpJCRVlP5Dw08FdAbBUDiCNc2SLHy0arfjbUqh5eGQlvdgJfd8/iL1xX4+bMQXKg0nLcRztmBnGK7qWLqTgWeX7iWIslj5F7F3HX5eTxeEXbZTYmlWLGLhK0+Q9D8RtDAhvYFRYa+hKulNDRvGRpXMD74Cx/T6EujVLjio/ZHedhw8ZlraxsH/HNWTIk0TyUv53OPj0bMSB3pHNFfzjrz+H3/A+CU=
+sidebar_class_name: "get api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get user accounts"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/mail/accounts"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns a list of all the user mailboxes, aliases, and groups.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"username":{"description":"User name","type":"string"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"List of user mailboxes, aliases and groups","content":{"application/json":{"schema":{"type":"array","items":{"type":"object","properties":{"MailboxId":{"type":"integer","format":"int32","example":"12"},"Email":{"type":"string","example":"email@only.com"},"Enabled":{"type":"boolean","example":"true"},"Name":{"type":"string","example":"name"},"OAuthConnection":{"type":"boolean","example":"true"},"Signature":{"type":"object","properties":{"MailboxId":{"type":"integer","format":"int32","example":"132"},"Html":{"type":"string","example":"html"},"IsActive":{"type":"boolean","example":"true"}},"title":"MailSignatureData"},"Autoreply":{"type":"object","properties":{"MailboxId":{"type":"integer","format":"int32","example":"33"},"TurnOn":{"type":"boolean","example":"true"},"OnlyContacts":{"type":"boolean","example":"false"},"TurnOnToDate":{"type":"boolean","example":"true"},"FromDate":{"type":"string","format":"date-time","example":"2020-10-01T17:04:32.0000000"},"ToDate":{"type":"string","format":"date-time","example":"2020-10-01T17:04:32.0000000"},"Subject":{"type":"string","example":"subject"},"Html":{"type":"string","example":"html"}},"title":"MailAutoreplyData"},"EMailInFolder":{"type":"string","example":"eMailInFolder"},"QuotaError":{"type":"boolean","example":"false"},"AuthError":{"type":"boolean","example":"false"},"IsGroup":{"type":"boolean","example":"true"},"IsAlias":{"type":"boolean","example":"true"},"IsTeamlabMailbox":{"type":"boolean","example":"true"},"IsDefault":{"type":"boolean","example":"true"},"IsSharedDomainMailbox":{"type":"boolean","example":"true"},"DateCreated":{"type":"array","items":{"type":"string","format":"date-time"}}},"title":"MailAccountData"}}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

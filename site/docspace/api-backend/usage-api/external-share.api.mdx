@@ -1,0 +1,71 @@
+---
+id: external-share
+title: "Change the external sharing ability"
+description: "Changes the ability to share a file externally."
+sidebar_label: "Change the external sharing ability"
+hide_title: true
+hide_table_of_contents: true
+api: eJydVMFu2zAM/RVBZ8/Oip1ya9MNGLYBRdNihyIoaJup1SqSJslpM8P/PlK2U7fdBmyXRKZI6vG9J3Uywl2Qyxv5SWkMohBrjFEZim0yaR16iMqaz7VcSnyK6A3odQMeZSY9/mgxxDNbH+Syk5U1EU3kJTinVZUqi/tgDcdC1eAOeBUPDqmdLe+xitTHeT4nKgwpD+MsqbRWIxjKqjFUXjnuSfG1w0ptqUQ8Nhgb9CJaQaWC1iKMmzVH0jDCemEsH4ZPsHOaWkffYt9nEupacVPQFzMcW9AB3xw6dRsnFw487JBYCdQ5qsh95el6lScy85X1mJ869c3WqEN+OVSdR5ufq+A0HJ4jsu8ZjMfgrAkDEyeLBf+9xHA2ECL2oFtcCp5CqG0a+4hGqCDQQKmxJlz/qstE+YDow+L9WxDXBtrYWK9+0gmcFbBqvYrkgxs6JVS3vH/7gBygoYBxPFICyk2/eU3rqgFzR0ryDFAqTX2SmmwzAWJLXIrJe/qQUyuasrFsSdcmA0Fs6KMAp4qTfFFwRSgm7YupVjJOv2e1GGbrNRU1MbplUWhbgW5siG+c9pV3xFAoGfw065qJG5R6OfGRScLzhQKZNKQLf8/TMqm4fWXtg8JEIity+XynPk5OHe9EMixXbW06Y2a371iyz6gnTzfg3p9IynY00g6S0COIge1E9kRMopqomth/zcHsbv+HWCMZkaIFmZ6mJlyJ/G5U7oaZokzSjn6Tekmr8SHKji8Pv0lJJCrpuhICXnvd9xwm2jy7jZZ7GobNz190VEP2I+lY8iSPXA3DvLtiYJxONymp9epy9NlUcVpV6OJfczczV15cX1FuOb6LO7r9FPTwyG8m/S6l5KeVi5N7UqyTmoht4Y5zh5bpdWqZoLmjBu+MCx5q2jKHOcCXVhvG4F8e6rcVXTfYleic8oetP1aMxE7ZLOyGQP8CXcIwHg==
+sidebar_class_name: "put api-method"
+info_path: site/docspace/api-backend/usage-api/asc-web-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Change the external sharing ability"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"put"}
+  path={"/api/2.0/files/settings/external"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Changes the ability to share a file externally.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"set":{"type":"boolean","description":"Specifies whether to set the specified settings or not","example":true}},"additionalProperties":false,"description":"Settings request parameters","title":"ASC.Files.Core.ApiModels.RequestDto.DisplayRequestDto"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Boolean value: true if the parameter is enabled","content":{"application/json":{"schema":{"type":"boolean"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

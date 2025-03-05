@@ -1,0 +1,71 @@
+---
+id: upload-files
+title: "Upload files"
+description: "Uploads the selected files to the wiki page 'Files' section."
+sidebar_label: "Upload files"
+hide_title: true
+hide_table_of_contents: true
+api: eJylVVtv2jAU/iuRX/oCJKVs3ZCmiW6dVq3bqgKqVMrDITHgksSe7bTNIv77zrFDgY6CpuXBcuxz+c53Lq6YhZlh3RGLZZYVubBleCMWgo0bzPC40HiAtxXrFXYutfgNVsj8K4eEa9LSuGMN9ohynI2XqJVwE2uhSIx12VClEhIT2DkPDE95bHkSTEXK8Ui600f0FiiY8eDoC50foVxM2i20q/mvght7JhNEUSHG3PLc0haUSkXs0IT3hnxVzMRzngHtbKk4epeTe7SFdpSWimsruKFb558221gvhbGBnK7hFQ48qtfmQGso8RdjzcyGG2O1yGd4MZU6A4THJiIHXbKl/ygOo2RuvNd2FB1wjqb+NdTXsL1CwQ/I+K4I+BNkKqUjSkaQkxjiH6oEMHNn5WHLF8leZopCJFt+ovpr7lhWH0H4LIxKoTwM/LtY8OAW8hKswUJG1YGw6SElyLEENUn3HsCC7meQpvt1Cp1SlRiSDMBpkf6VlpTEoT6gfncXomhSxNbQlks89mek3gKjnj4WhusPkGQix/LQYCV6QBfWB8TO0ZQsOb/RoDz4OlH7PbejdtQ8bjejd4Pj0+7JaTc6aZ102p33b05vycil9NW230rnDr/OW1o3amUDHZ0SMgfN90EnOv679Ic51MMFgZNUxvEXY2BKGldgYOf4F4ISYbsVhetRRcMjJLoYjSv9wLVx06og8tncWtUNwxTDSefe1Iumo5vAK7LlxsjrU3v5et45+NZtp8Q37vqO7M39dYM5Lrrbui406t/r9VA7X7H5PJRGK6rHSzI6lc5ZzeinVeBB32EOrs/7g6B3dYEuKXYfVYoVgMGiPvGXgctjjcjP4+cps0XHxnz937lds2P5kw2xa5EcRFP4jvDZHBF1KIn5dNOuDozeEnp+Go4PeoVc4lC8qiZgqKuWSzpGCjW9TLh9AC1gQgSNiLT56nGq2AJTQ6y5qJoDAkXiaeFT92KsLhsrjV4cc2X3yo43yvTqZ3+AwpP6lcpkQjoaHukFw7XLcCMdy66k3FmFecpnBRKI994mFQi1wnZ9LVx91RuKanWVlxsIt0utUQdCK4W1U6WqfPUioSt5f/WqxnN9e2lK6xhR/wFljstJ
+sidebar_class_name: "post api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Upload files"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/api/2.0/community/wiki/file"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Uploads the selected files to the wiki page 'Files' section.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"files":{"description":"List of files to upload","type":"array","items":{"type":"string","format":"binary"}}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"List of files","content":{"application/json":{"schema":{"type":"array","items":{"type":"object","properties":{"Name":{"type":"string","example":"File name"},"UpdatedBy":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"},"Updated":{"type":"string","example":"2020-12-08T17:37:03.3424957Z"},"Location":{"type":"string","example":"4\\\\46\\\\File name"}},"title":"FileWrapper"}}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

@@ -1,0 +1,71 @@
+---
+id: get-bookmark-comments
+title: "Get bookmark comments"
+description: "Returns a list of all the comments on the bookmark with the ID specified in the request."
+sidebar_label: "Get bookmark comments"
+hide_title: true
+hide_table_of_contents: true
+api: eJy1VV1v1DoQ/SuWn7dNdim9sBJCpVRQwUWIboUE9GGazDZmk9jYk9Ilyn9nxknaLl3aB9Q8JI49Z77nuNUEF0HPv+rMVlVTG1onr6xdVeBXQZ9NdMCs8bzLIq0+aKiw3vwCMrZ+i5CjF6jnlZ7onyyH+qxjVI4h88aJmJ7rT0iNr4MCVZpAyi4VlKWiApUYxZqCsnX8Px9Mq5+Girhz/FoFh5lZGsyV6aU8/mgw0C7bdOChQkIfooM1/7BBI+4YMe2ACv2nP2OArJzPQlZgBXrealq7iK4JLziyiV5aXwH1W/t7upPQPAZn64BBELM0lc+m+vdDkNfBjFGyxsyy8poEBM6VJoupTL4HQbZ3fQHvYS3BEFbh1r49/44ZSQK8dejJ9P4s8IpuSQXypr5gKbyCypWyNfiiSCS7iT7k4hHm94Nm6Szdmc520v1F+t/8yf58urf7bPp0+nw6/SJKTl3+70qOt+KvS9A0sao3+tLh2dnyGh/R+xE8B/xY2of8vVo/XJzHcuG1Ca6E9YfY+/dV4H+zQvUF6jVQWBmBLgyVD4GgBpkGlj64BAJ/UvH03o9pPI+3VUEkFURUrIS3S1PiqX8A/u1bwqJ5k1GQJVre7vcEvgvBXb1sAvoXkFem5mnzQJYtsAnqA9JHrMquET97cLh5NE7/YT8JItGLdCK1l07vTvRpDQPzcZOLFFNOYbmc+gJjnYVl5joBZ5LZbprccOnIAUlr8i4Zhk9IB/3lSFqN5EMXRG6eJKXNoCxsoDus9V5OVA/U3S1qPhHS6FtsK0HfkIkz73A9UmPRH09G0tzAxihNvbQRPmTucAxLnUQv1Kejk4U6+HjMSiSa3s+S5yFEbnEcRgWR2AYbb5C20uJGpO0NSz7m1TEkRYgw4fnhnLDLTd+bfUG/SsZYkksaqXuIntejMV7O49SOleWyxOIxtm3PIUizd51ss10vtygvL8EbOJeUcvVzE2TNzbSEMuA9udi8tra6Pxa6FicvoWzkj5crLnu8FrszlirGm7sdDg6yDB3dgty5m6Tfrpv+zdGCZWUkNptrFZtrWIj2re5s9tnom7y7yV8gbdu3LmdylO+P/oq4bu4hcomA5/s32gnz4Q==
+sidebar_class_name: "get api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get bookmark comments"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/community/bookmark/{id}/comment"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns a list of all the comments on the bookmark with the ID specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"id","in":"path","description":"Bookmark ID","schema":{"type":"integer","format":"int64"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"List of bookmark comments","content":{"application/json":{"schema":{"type":"array","items":{"type":"object","properties":{"Text":{"type":"string","example":"comment text"},"Created":{"type":"string","example":"2020-12-06T07:36:14.8151911Z"},"Updated":{"type":"string","example":"2020-12-06T07:36:14.8151911Z"},"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"ParentId":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"CreatedBy":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"}},"title":"BookmarkCommentWrapper"}}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

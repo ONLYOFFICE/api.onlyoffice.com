@@ -1,0 +1,71 @@
+---
+id: reindex-a-page
+title: "Reindex a page"
+description: "Reindexes a page during the search process."
+sidebar_label: "Reindex a page"
+hide_title: true
+hide_table_of_contents: true
+api: eJydU8Fu2zAM/RVBZ6/Oip1yy4YCKzpgRZKeghwYmY3V2pImyW0yw/8+UnLSpO0GrDk4skk+ku899TLCNsjpSjrrIzTlAsGrWq4LGVB1Xsc9BXs562Jtvf4NUVvzHaFCz0WeTrKQz5SHcj1QVYVBee04TU7lHLWpcIdBgHCwRVERpNmKWKMIqZNw3ioM4YJgPP7qMMSvtqKmvVTWRDSRj+Bco1VqXj4Ehu5lUDW2wKe4d0jN7OYBVSQcgnToo8bAUQMt8v/5ZNc8l0ix4gAQIg8nh/TjcYKzJmSUy8nkLUgmS2hzb32bpiOwD46de36ZfH7b5s7ASD9WkrNapNeKIs6GtDDEmt5KcLq8vJiUo5aZ4dJnESRL6p/Qh6Ro5xsqqWN007JsrIKmzmDnvX9wRORCOZzYYsF7ZG7eNcdxPxrqBvcErBmvzuFilOW8Ni3HRM1fnHC1g9Y1+KLkUSZGvLepk46cIb/Ztu0MDScWaWAxv1osxez2mvrx4nmlBiJhcz3T14I5wR4NO9r1NRsnnvxPa49cRNzF0jVAVFD7JEE/qrdioiiT9GNFk4JJsnQf2Y1ZRZIgCUUFfb+BgHe+GQb+TJR5vq10fAKvYcOcrNbUqD5c2F4+khRMVFrj05LH4vSmy1K98utQHCpmSqGL/8xdnxjz9udiScmb8Sq3tuIaD8+8CT2nkg420ZoslL71JI3Zdkz8VGZMNgSb/9xPj8lP44G3OoTM/mTCc2sV4yL85LXeLen77FYi9JCfQ3+tOPo5Z7Owa5r6D6+q1Ts=
+sidebar_class_name: "post api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Reindex a page"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/api/2.0/portal/search/reindex"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Reindexes a page during the search process.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"name":{"description":"Index name","type":"string"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Search information","content":{"application/json":{"schema":{"type":"object"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

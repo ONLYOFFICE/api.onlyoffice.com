@@ -1,0 +1,71 @@
+---
+id: add-a-tag-to-opportunities
+title: "Add a tag to opportunities"
+description: "Adds the selected tag to the group of opportunities with the parameters specified in the request."
+sidebar_label: "Add a tag to opportunities"
+hide_title: true
+hide_table_of_contents: true
+api: eJy9VU1T2zAQ/SsanV2c0p5ySwszZdopDElPGR8UexMLbEmVZCD15L93V7KDDQ5ML80hI2u/d99btdyLnePzNc9tna7onCXcQd5Y6fd43/JF40tt5R/hpVbfQBRgSd/iiSf8EfWAZwe0KsDlVhpS43O+KArHfAnMQQW5h4JhJOZ1uNtZ3Rimt0wbo61vlPQSHHuUvgxyI6yowYN1zBnI5VaivVRBZuF3A86fYfDu+EUXmGrLc608KE9HYUwl85ByeucooZa7vIRa0MnvDWCKenOHmaEfY7UBSymQ1IIzWjm5qUAWdDEu7PqY8p4NVNnVBXrqPDtvpdrxQ8KfC9wvsQHg3nPpSGvkTGJVO2w6eovDess8aBxNhbVij584o9oNKu/zQ5fUNJH7qbS+RtGpZEKmq3D9fkHB/N28eu8J32pbCx+vPp0PM11UTl+5G4HzyqURcd7j8EchfVMCvnFzbM09IIgQgiLPdaP8S/SVYCFArIvEpGOCsNhHYtoypf37dWy0rkCokPbW6vpC+IkuISCsZwXJJpDj9bTVpSpO24jdTyTOayNkNlMkeWUUfkkP+siA89ls0gVP/pljgzAJ/zz7+NrvLyW6DQNFaBgSv9QIR260C+wUvsSvVBiZnp/NUtpUA1qlW1nhpkix9koGAwf2AVdH2F6NrdC29N7M07TSuajK6HWcxA+SsGjID4MVuKSCYlcmF+GxUMzuOwQskL8yihMemj4f24YqqWO3z/vr8knUpoKJ/dO38MQumSXHFd4pZiNSz0ZEXc+yt4i09raBbIjZ5+g9Hgc3PdoGCJRqq0NXpKdqcIfUddwDy9Bcdnu5XLHFzRXa05Bi+yv0jFNBe5p5LQKW+tYVBbKwezxGjH05xcEL8F+en27yHp58aiqBg8cCAuDaDrRrggVqImyJO7YeT5H2XABvbGaAL3Y/IBRt23YjHPyy1eFA1xjX0pOMxwdhpdhQg9cZxiz7V7nl94jBuLmxDx9Wces+iKqJGH3B2EPSWyzyHIx/UzcbUPPmerlC5U338ta6IBsrHulVxv85D5WSdXxT6a7FOatdg2BEefRJTCD6j4l0H4jUHaiqXqT2gwzHnEq6Quifypo0adtIU2xorx9FJy2ORI7aNOMMs/4LBJA2Zw==
+sidebar_class_name: "post api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Add a tag to opportunities"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/api/2.0/crm/opportunity/filter/taglist"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Adds the selected tag to the group of opportunities with the parameters specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"responsibleid":{"description":"Opportunity responsible ID","type":"string"},"opportunityStagesid":{"description":"Opportunity stage ID","type":"integer"},"tags":{"description":"Opportunity tags","type":"array","items":{"type":"string"}},"contactid":{"description":"Contact ID","type":"integer"},"stageType":{"description":"Opportunity stage type","type":"array","items":{"type":"integer","format":"int32"}},"contactAlsoIsParticipant":{"description":"Participation status: take into account opportunities where the contact is a participant or not","type":"array","items":{"type":"boolean"}},"fromDate":{"description":"Start date","type":"string"},"toDate":{"description":"End date","type":"string"},"tagName":{"description":"Tag name","type":"string"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Tag","content":{"application/json":{"schema":{"type":"string"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

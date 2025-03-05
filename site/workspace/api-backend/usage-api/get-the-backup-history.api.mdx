@@ -1,0 +1,63 @@
+---
+id: get-the-backup-history
+title: "Get the backup history"
+description: "Returns the history of the started backup."
+sidebar_label: "Get the backup history"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVFlv2zAM/iuCnu3aOXrlrUu7ttiwFU36FORBsZlYrW1pktw1M/LfS8rO4R4DBgwwEkkkPx4fyZo7sbJ8NONaGSfy6ItInirN5wG3kFRGujUKa35RuUwZ+Uc4qcobECkYMjJ44gH/jXrA5xu0SsEmRmpS4yN+D64ypWUuA5ZJ65RZM7X0V+uEcZCyhXd4hCgGrFalBQyn5v04pr8uXBPcFglNElU6KB1pCq1zmfj4okdL6jW3SQaFoJNba0AAYYwgOwy3sAfvavEIiUOBNkqDcbIJ4jY90LHOyHKFOktlCoE+eVVJyh5eRKFzUhmcJfFyeDIMlz04DYfnAwjP0vPjME2GAGf4DYaCbwL+VebwQxTwEfoebaeFFhNMWKxg6pV3RhKzXyETBzHh06BPMGVVEEOXKqkKLJHFt2lmZKqx7OvD13GF1SzGuaoome8qETn+XwonyCl4O2nSO7IbIz9oaPg7pmcxC9kONmA9vH7gL2B9FBy4DNgAH7zXgA0JY+s4YMce463veadIParOGPsQe+ln+Ve6UtQJnSygA9CPe+dhfBr2T6ZxPPIfQV69aIkN+f8gEdNJ5+VNG980XXwPiTIpyjekMox779v+oRTt+EHqgQrAK/YmX4FvWuEyvERCy6h/FEftKKOwGa79vFgwz2CsH+nK5GiUOadHUZQTAZmyBNd17qlhjSHfHOyFCQ1XMycfbof90Gn5DfzUEV7WiANe+gHo2vrsZLlU3rwt11gVRVWiRzbxUbD7q8mUXdzdIghl08SZIxUYPtprTKMQnrjWxzU4v3MWb/dHJ9V6v07+bXG1eTp4cZHOBaaJUfjy1i03MyoCaiI7xJfnBw/vGMLyehLQoK4XwsKDyTcbev5VgaFVjMdnYaRYUGlmc3SUbbdxzZ+wzFjRJAFNRD6LvGoIeLMaicZdD11fTVGXOqzL2ZPnrD0Q+lZUrg+wu/QFbQj0uwk+ManrpiMwsa1+I/rUYtczjTYVeI7j8gpG6UKR
+sidebar_class_name: "get api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get the backup history"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/portal/getbackuphistory"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns the history of the started backup.
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Backup history","content":{"application/json":{"schema":{"type":"array","items":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"38c0f464-f1e7-493e-8d95-dc4ee8ee834a"},"FileName":{"type":"string","example":"FileName"},"StorageType":{"type":"integer","format":"int32","enum":["Documents","ThridpartyDocuments","CustomCloud","Local","DataStore","ThirdPartyConsumer"],"description":"[0 - Documents, 1 - ThridpartyDocuments, 2 - CustomCloud, 3 - Local, 4 - DataStore, 5 - ThirdPartyConsumer]","example":"1"},"CreatedOn":{"type":"string","format":"date-time","example":"2019-07-26T00:00:00"},"ExpiresOn":{"type":"string","format":"date-time","example":"2019-07-26T00:00:00"}},"title":"BackupHistoryRecord"}}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

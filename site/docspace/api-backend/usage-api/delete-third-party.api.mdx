@@ -1,0 +1,71 @@
+---
+id: delete-third-party
+title: "Remove a third-party account"
+description: "Removes the third-party storage service account with the ID specified in the request."
+sidebar_label: "Remove a third-party account"
+hide_title: true
+hide_table_of_contents: true
+api: eJy1VMtu2zAQ/BWBpxZQLcfJSbcgdgGjOQR5oIfACNbU2mIjiSxJKUkF/Xt3KfmhOOmtBmxT5OxrZqhWeNg6kT6K76pAFyXRfa5s9s2A9W+RqjxuLXilK7GKhTbYPywzkYoMC/QY4DeMFrGgKChp03LGVlT0QEBjdaMytBQVC1XxDvic1hk6aZUJ6VNxM8Ci5ZzOLP6ulUUq5G2NsXAyxxJE2gr/Zjhr6A0tQTfaluD7rfMZbeArlKYg0Nns/KLrVpzNGV05dJxgNp3y37j68dgbXez7kJrqVJ4DwJhCyUBA8stxVHtoq6NPLC6mZ6epHyqofa6t+kPjMMqhrK0ixpgkcPKJz5+ekTeoVWCeXgiAYsXNj7PdYqkbUsrnSN9D085rC1uMHNpGSYxASl1XPnpRPg/g5TxyBqXaKMxI2bDHLKPzEypIuuX6oGtQk1RKRQJGJbPJNNmwQ5JQM5RM2oOyneCxbLOTvrYFhebemzRJCi2hyLXzJ5pf80nUBwqedUfNHfPayzUmaK8/dfUD2XSDy0awwWdS62eFgXNVbXSIVp6dIS7vriY/cT25NIrQ3HffUTMThDbUbAlB4SF9T3sEI84Hjt+P1R5c89/kGljw+OoTUwCNS20H1ttBuEemiJAkHV8SFo/j9vLRQ3p0NYn8IBHFte0aHD7Yout4m2patiYtG7AK1kwgaZwpx2vyzAYKh/8g4cvtcJu/RuNb/uEUO4ErbrGBouYnWgb9j98m3YrQOd0XMg831AMupUTjj0JP7i0bbW/3+eJ6cb8gOJtn7K/eScOCC3zY2Tvj9U3wbxd/EtG2vXm7bo/vjz6NGIbcoZmnFb1w/gKtJvZ0
+sidebar_class_name: "delete api-method"
+info_path: site/docspace/api-backend/usage-api/asc-web-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Remove a third-party account"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"delete"}
+  path={"/api/2.0/files/thirdparty/{providerId}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Removes the third-party storage service account with the ID specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"providerId","in":"path","description":"Provider ID","required":true,"schema":{"type":"integer","format":"int32","example":1234}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Third-party folder ID","content":{"application/json":{"schema":{}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

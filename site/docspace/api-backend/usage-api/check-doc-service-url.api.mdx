@@ -1,0 +1,71 @@
+---
+id: check-doc-service-url
+title: "Check the document service URL"
+description: "Checks the document service location."
+sidebar_label: "Check the document service URL"
+hide_title: true
+hide_table_of_contents: true
+api: eJy1Vk1v2zAM/SuCzpndFTvl1rUbVqwDiibdDkVQKDbTqJUlTZLTdkH++0jJjhOnTT+GXQxbIsVH8vFZSx7EjefDK/5VKvAsZyMIQWpcmwy4seBEkEaflnzIizkUdyemGIFbyAIuneID7uB3DT58NuUjHy55YXQAHehVWKtkEd3zW280rXk8oxL0Fh4t4JlmegtFwHOso2BBgqfdcitKZ+6DQ2xoXoIvnLR0OC6P58AQWF1haEaO4JgoSwfeo62ulRJThf7B1TDg8CAqq+JxpgIW4CHw1WA75imm4bT4t9hMahZwW5lCKGadXIgATEO4N+7uncDOjQuvhXVsqqrWMjy+syYYGz0knSjU+UaDZkJ56Ee8SExgVjhRAZbPs5lxLLIGEcZKlG2hfEoolib6D3iQIQI4Gh1nkYzZsXGQHVn5w5SgfNYEOAkmO96hYreJuAk5JmqN9olPhwcHkVZbgE/6YKRGwFXEM4xwn+nrYN/m3qYnzz19efX80NxJByWNbkeQxI40mWVvUre+sar9pTXlB1z6E5iJWtFgIj5P9UI52D+zreGL1PzZGL5vAAj5iyGwN+uu1k4xEdN9T7g3x/rvgtPPTXZ9e3Pgji9vCmuj29uy7TjVhZoao0DonVinnpVrAq7Po+Nf1KRXqEjSBZKRLQXppOPTU2pxqhdCyRLLbetAqfv8h3yAkh0VQS5oqOPkMumZNoEJpcw9lBn7Nh6fj9biQIrYFw70WE9zjP5xN/qlFnWYGyf/kBFaeShqhxKC849S4Ytr2r++A1pAcRAlVu4eDYBPVpN+faN8+v2KnOEBKONzQ79+TJnmXYQ5fuQ4TflhdpDPqL45ntD4coJFKfmIiugx5PMQ7DDPoxzOjQ87zT6LQpkcOWFtUxuR2CVt2U5wzR8E8h0XkIP4x6HvTTOkHB1fGHMnIdaMVPSiu698aYm1c9/YYO6zY/q8TfuL7vEffy4R+gZBf8E0S0q8Fk++OCRri5WqRBTTJrfYs6dbdnlx1q/qxk3s1d1uikqAc6sEVg+B1EkbUuuveBJSbD4+Y/tT8i0BsHuxx2i5XE6Fp3KsVrSMVXfETXxdCCeTYFxNMMIcyYqdJ8bE7vJmkj6MCQ+Zqzo1u/c/XA1aj6OiABv22k422Hx+OUbbaXNlrVAXcNGJe7rO4nPIOV19yTmSL64tuRL6phY3ZJuOjFpUU102CZmo17xQUu2WftwEuM3UlAY9KaknPZbLxHYsZ2uftp71aArbWlM/Jwj6L1YFMN4=
+sidebar_class_name: "put api-method"
+info_path: site/docspace/api-backend/usage-api/asc-web-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Check the document service URL"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"put"}
+  path={"/api/2.0/files/docservice"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Checks the document service location.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"docServiceUrl":{"type":"string","description":"The Document Server address","nullable":true,"example":"some text"},"docServiceUrlInternal":{"type":"string","description":"The Document Server address in the local private network","nullable":true,"example":"some text"},"docServiceUrlPortal":{"type":"string","description":"The Community Server address","nullable":true,"example":"some text"}},"additionalProperties":false,"description":"Request parameters for checking the document service location","title":"ASC.Files.Core.ApiModels.RequestDto.CheckDocServiceUrlRequestDto"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Document service information: the Document Server address, the Document Server address in the local private network, the Community Server address","content":{"application/json":{"schema":{"required":["docServicePortalUrl","docServiceUrl","docServiceUrlApi","docServiceUrlInternal","isDefault","version"],"type":"object","properties":{"version":{"type":"string","description":"Version","nullable":true,"example":"some text"},"docServiceUrlApi":{"type":"string","description":"Doc service url api","nullable":true,"example":"some text"},"docServiceUrl":{"type":"string","description":"Doc service url","nullable":true,"example":"some text"},"docServiceUrlInternal":{"type":"string","description":"Doc service url internal","nullable":true,"example":"some text"},"docServicePortalUrl":{"type":"string","description":"Doc service portal url","nullable":true,"example":"some text"},"isDefault":{"type":"boolean","description":"Is default","example":true}},"additionalProperties":false,"title":"ASC.Files.Core.ApiModels.ResponseDto.DocServiceUrlDto"}}}},"400":{"description":"Invalid input urls/Mixed Active Content is not allowed. HTTPS address for Document Server is required"},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

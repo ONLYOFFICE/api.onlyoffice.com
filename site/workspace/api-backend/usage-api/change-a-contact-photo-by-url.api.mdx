@@ -1,0 +1,71 @@
+---
+id: change-a-contact-photo-by-url
+title: "Change a contact photo by URL"
+description: "Changes a photo using its URL for the contact with the ID specified in the request."
+sidebar_label: "Change a contact photo by URL"
+hide_title: true
+hide_table_of_contents: true
+api: eJyVUktT2zAQ/iuavTZgw/TS3Cgw0wwcmAROTA5C3sRibEmV1tDg8X/vruyGBNpDfdJrv5e/HkhvE8wfwcS2uPSOtKEE6xkkNF20tOO7Hi46qn20b5qsdz9QVxhlJvIKZvDK7xDWA09VmEy0QZ7BHC5r7baYlFah9uRVl6zbKktJPSxv1cZHRTUqM7KqV0t1PlhcqRTQ2I3FSlmXzyL+7DDRKdNNy+++YnE9yDg6kqUOobEmiyyek0joIZkaWy0r2gVkUf7pGQ0xTog+YCSL6Q8Mq7CVbD7YmAQurnhqQrFMuuUUBsYRb11s/j04umfP7/OJImcBQ/7EUwrepVHKeVl+xrrTko4/SizjMub/RnBAPoOv5dlntgenp1+OFcirFnnL2UDocnashjeFDrY4Py0Lac+kquj3Uc4fy5Nv6y9DYXIRstynnUQl/YovGFOuVw4PaqIwL4rGG93UPgnNsahbuVHjIAwHHV2JwTG7vzZ1b5zl3uCOga3g1eP1DJxu5fZoNruWBJfvdbv+pdvQ4Ie6lIcV2GcrHBufuS3JDLehbTvHctUqW1DL69W9urhbsAKJYjTZaGI2Zv8NYfBDqg==
+sidebar_class_name: "put api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Change a contact photo by URL"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"put"}
+  path={"/api/2.0/crm/contact/{contactid:[0-9]+}/changephotobyurl"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Changes a photo using its URL for the contact with the ID specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"contactid":{"description":"Contact ID","type":"integer"},"photourl":{"description":"Contact photo URL","type":"string"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Path to the contact photo","content":{"application/json":{"schema":{"type":"string"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

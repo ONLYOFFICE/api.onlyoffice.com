@@ -1,0 +1,71 @@
+---
+id: save-additional-white-label-settings
+title: "Save the additional white label settings"
+description: "Saves the additional white label settings specified in the request."
+sidebar_label: "Save the additional white label settings"
+hide_title: true
+hide_table_of_contents: true
+api: eJytV91z2kYQ/1du7pki18kTb8RNOp16koyJ6wcPk1lJC1ws6a53JxzK8L939w6BBNgWpS+gj93ffv52T2vpYe7k6FFO0HtVzZ1IxB2mFqqc7uR0ILVBC17p6o9cjqSDJY7zXPEDKB4WyuMtpFg06nIgLf5do/MfdL6So7XMdOWx8nwJxhQqC2DJD6crfuayBZbAV35lkCzo9AdmnnCMZdNeoQtyjYG3JT1Y/5vO3McK0gLzlkaqdYFQkUqOLrPKsCv0fGIwUzPSF2om/AJFwBC5zuqSfBfKCYxgQltRaTaKP6E0BaF6W+NmIBdYmBsSRnuBXQYRWUDpZXSGmKeQPY2rfFIbo63/j8YbIEGFFy5CCbAoYAmqYMhznLi3RcsB5y330qH9T6dM3t/dkmBVF8FmNNGyKJ0uUXj86SUZrh3aT9rW5QUZZwwxY5BeCd+Z7BXi/R78rMCWKkf9e02/lzRxQBHzABNq+WZ0Lbu94vurbeGsCB0UFFtJvfW2lQnLCgzCvQ2k9apfie5uhdfCwIoLFfLGjQhnmKKZhpXD8dwi8ri4pGZbLAE7sH6VO/KhV/C3x9bOqCKZhd0q+NqawTMoHCl55YPKeHIzfMB0eKMtDvcrY/jqHnkTvRvJHks8M5goGE24/Vq6xJsHS6sLLTnFbll0RlPawra5vrriv643H2K5xRKKGkeCc9gUeLdOedy4OsvQuVnN3Xbuomx6Kjr1/pQfu6XOo600fiWD5K/HkvcV1H6hrfqH+jYIvTsW+kw8QVsq5+jeBdqgJdaUFBlZgCzIsTcOs9oqsjd6pGhc9p3Rvz8hP6D8QU7xPpMAyulmesz3JRGCkwWvV1W4LX1yoaqgsD17DAm+RIqHjyxGu3BIAL+guwSMSq6HV0kDktjdcSfZ25Mcg12idSGEmtkkF96bUZIUOoNiEVEP+MRvRFSUHFiThwkXLzZMNxu7apJbf9IDoh6U4b4tNpCK4TOtnxSGBHNX3O0PWh8bfnYPSsdHoUjnE2eV+OKV88RLAmHQtMbCqbUcdbu7s6NyauFFpcOV1FFrb5HOi2b6dx6+PKejqdMz9GDiqWqmQ9kOxsnYKI6DGia2wvKaacS9V0Lg77au3Nx9evuwt1oH6f+JINvG48gSUwB1GJ9v4tqIZHnkriRJokvgQ+uIv/tCaE9p/lwIvCDN9ToFh5TBzYYfk1XL5KfLJVgVd8vjNJybISe2MMsCI+RNjPOXb+wfi9MMDQQ5mImbQaMxpilq/Kuy09ZA+Ppl8o17ZPuBUuqcdSw8c2T0O5KSP3tYO7AoPFvLAqp5DXOWjZhhRdWcqDaLI1+3FxxV86patT3s0jvGwb8c1UmN9TqOCMpnIx9fvaixzWwjzQWektP/An796BA=
+sidebar_class_name: "post api-method"
+info_path: site/docspace/api-backend/usage-api/asc-web-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Save the additional white label settings"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/api/2.0/settings/rebranding/additional"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Saves the additional white label settings specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"settings":{"type":"object","properties":{"startDocsEnabled":{"type":"boolean","description":"Specifies if the start document is enabled or not","example":true},"helpCenterEnabled":{"type":"boolean","description":"Specifies if the help center is enabled or not","example":true},"feedbackAndSupportEnabled":{"type":"boolean","description":"Specifies if feedback and support are available or not","example":true},"feedbackAndSupportUrl":{"type":"string","description":"Feedback and support URL","nullable":true,"example":"some text"},"userForumEnabled":{"type":"boolean","description":"Specifies if the user forum is enabled or not","example":true},"userForumUrl":{"type":"string","description":"User forum URL","nullable":true,"example":"some text"},"videoGuidesEnabled":{"type":"boolean","description":"Specifies if the video guides are enabled or not","example":true},"videoGuidesUrl":{"type":"string","description":"Video guides URL","nullable":true,"example":"some text"},"salesEmail":{"type":"string","description":"Sales email","nullable":true,"example":"some text"},"buyUrl":{"type":"string","description":"URL to pay for the portal","nullable":true,"example":"some text"},"licenseAgreementsEnabled":{"type":"boolean","description":"Specifies if the license agreements are enabled or not","example":true},"licenseAgreementsUrl":{"type":"string","description":"License agreements URL","nullable":true,"example":"some text"}},"additionalProperties":false,"title":"ASC.Web.Core.WhiteLabel.AdditionalWhiteLabelSettings"}},"additionalProperties":false,"description":"Additional white label settings","title":"ASC.Web.Core.WhiteLabel.AdditionalWhiteLabelSettingsWrapper"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Boolean value: true if the operation is successful","content":{"application/json":{"schema":{"type":"boolean"}}}},"400":{"description":"Settings is empty"},"401":{"description":"Unauthorized"},"403":{"description":"No permissions to perform this action"}}}
+>
+  
+</StatusCodes>
+
+
+      

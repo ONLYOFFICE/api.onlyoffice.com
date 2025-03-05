@@ -1,0 +1,71 @@
+---
+id: get-file-properties
+title: "Get file properties"
+description: "Returns file properties of the specified file."
+sidebar_label: "Get file properties"
+hide_title: true
+hide_table_of_contents: true
+api: eJyVVE2P2jAQ/SuRz2hDVz1xQxS2qK2EFva04mDCQLwY27UntDTKf++MkxC+dqteEifz3nhm3rNLgXIbxOBVbJSGkE74KZY9ESArvMIjhUoxLDC3Xv2RqKz5CnINnimeVqInfhEOxLIi1hpC5pVjmBiIZ8DCm5Bw6sR568CjgpDYTYI5JMFBpjYK1hHwQJmc9HIPCD7EbQ19UBqOTnkjxUmdxFxc78RlJ9Mv9D9kOeylGJQCj47ZAb0yW1FxeR6CsyZQhxR/7Pf5dSdRVyolzKxBMMhQ6ZxWWRxC+hYYX97uZ1dvkCE302Wh6MT6PSXXXMs/wSOrNf1nPPPOCCtrNUgjqp5Y2InVpASN5rbbLjzjed0DjEg+hBq0UKjhIxSN5YcMu3tz7Qms2ec9zrp+zhFjg/54EePo5/6nWyVejGxcB+uYg4yRW+pVbCFOLPYlUulU+vjQT2v/lrVZqvRCwwD+0Jqq8JpoOaIbpKm2mdS5DXjjqO8cSWqiqM4OxJwFr2W6eyxOA6LCvsGxtW1eh3utqS+4sT9lNjbSm1mN7H5fGNoxmccqkufxfJEMZ1NKwt3UdWpSh8onvqM29jKastnjCfD67F33WXb+/v/j2jSK8BtTp6WKtozzLRt5XnkKhCSB6BklovfgdKLPCqMRRyGIU5YrGeDF66ri3z8L8HwP0fIgvZIrHg8puVaB12SJjdQBPuisux7ultwKZlitg9QFf9FyR/Kdrp9qSci8vfvKJjjMMnB4Rru5I9g7J+s+jReEZWNfGmUXjdIsOPvdki4909bHz6r3DqUsaxvSJFt8HXqXcTJqjeYJLemU/gXGphwm
+sidebar_class_name: "get api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get file properties"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/files/{fileId}/properties"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns file properties of the specified file.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"fileId","in":"path","description":"File ID","schema":{"type":"string"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"File properties","content":{"application/json":{"schema":{"type":"object","properties":{"FormFilling":{"type":"object","properties":{"CollectFillForm":{"type":"boolean"},"ToFolderId":{"type":"string"},"ToFolderPath":{"type":"string"},"CreateFolderTitle":{"type":"string"},"CreateFileMask":{"type":"string"}},"title":"FormFillingProperties"}},"title":"EntryProperties"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

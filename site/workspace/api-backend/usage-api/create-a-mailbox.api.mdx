@@ -1,0 +1,71 @@
+---
+id: create-a-mailbox
+title: "Create a mailbox"
+description: "Creates a mailbox with the parameters specified in the request."
+sidebar_label: "Create a mailbox"
+hide_title: true
+hide_table_of_contents: true
+api: eJzlVk1T2zAQ/SsaXXpxcQicciolzJTpF0PgxGQYxVZigS2pkkxIPfnv3ZVkbENIpx16KgejSO+t9uNJq4Y6trJ0ckMrJkrLzQM36VcYLtQjt3SeUMuz2gi3AUxDT2pXKCN+MieU/MRZzg1yDYxoQteA43S+BVbObWaERhid0FMAOG4JI1UwTdbCFcQVnGhmWMUdN5ZYzTOxFDwnQvo1w3/U3LoDMB2HH1UOjjQ0U9Jx6XDItC5F5h1K7yxu11CbFbxiOHIbzcEBtbjjmQM72ijNjRMQG6xK2Br/D72N4RO/mrQmrDNCrug2oaXKWHkLjrvXuR5DPGaHhVxBHuStyF83ECDkfNrxBcS8goSDgRoqtZN+DQsDUrepVE4sN6e1MTFzQ+YsZt+SdcEh+4Y4RQLHFyMLRIJbv7OEYyURKntVFZZkvtQ5UQbJnR8LpUrOZOfIhVFLUe5I/x86ooOdv3HF/6G2rFbSBkmMR6M9RWGOEWatyoS3/KRiECOTuMUbCfM872Hauid0qUzFXJg6GsMEf2SVxiTSw/HRMSYXBTBgRwH0sRET0VNhdck23+JZ2E/rg4F/kueQPfsvA5r6g/D3/DNUxP7APOSDkuXmIFMVRU044fzSzN+IwYcY7BREgIZ/n7CnLJWCRXlFMDOGbQAL92X1P2bvJSgesXYZ1o9HhzvuN8liC+K53wp6R6EgPKqV9YljroBfKdMiHR+M0l5bq9q2lrIc21WYtr6x1QaipIVzepKm/vIugr3h9l/8tR6IdNvrjjM82KFYO3tkV3ktPnNferRXhOUkdqIh18eHN8dl1/zO2rS3zaurSL8tdbO9VjPq9Y0O8KwtOFPzF1c0Tm7R5aXyocTKnaqqqiVET0INyeXZ7IqcXJyDWcxsyFmJrd+hmLBEFZM958PDoLu2nye81+nf4BERS+D4o0vhFhO+G/nKN1E3N1gfQIJy4NtpJ/4Ij6KEon6g+F4iwGmaBZzva1NutzgN+xl8LsHwgRnBFpismznsVbQvpobegwgwgz6691foGcLLOojkWevYJi3jJMu4dnux896puPg+uwLwIr6bKpUjx7A1vqngO6EwUD7bXrx+roGayVXNVogNNlGKePKGSr73So4DjKpdkpueh0NRJzEQ/GJYOylNE84JJLTFh6VXGU8nKaCxtnPw+hcYfroA
+sidebar_class_name: "post api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Create a mailbox"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/api/2.0/mailserver/mailboxes/add"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Creates a mailbox with the parameters specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"name":{"description":"Mailbox name","type":"string"},"local_part":{"description":"Mailbox local part","type":"string"},"domain_id":{"description":"Mailbox domain ID","type":"integer"},"user_id":{"description":"User ID","type":"string"},"notifyCurrent":{"description":"Specifies whether to notify the current user's email when a mailbox is created or not","type":"boolean"},"notifyProfile":{"description":"Specifies whether to notify the current user's profile when a mailbox is created or not","type":"boolean"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Mailbox data associated with the tenant","content":{"application/json":{"schema":{"type":"object","properties":{"Id":{"type":"integer","format":"int32","example":"1234"},"UserId":{"type":"string","example":"UserId"},"UserDisplayName":{"type":"string","example":"UserDisplayName"},"Address":{"type":"object","properties":{"Id":{"type":"integer","format":"int32","example":"1234"},"DomainId":{"type":"integer","format":"int32","example":"1234"},"Email":{"type":"string","example":"Email@only.com"}},"title":"ServerDomainAddressData"},"Name":{"type":"string","example":"Name"},"Aliases":{"type":"array","items":{"type":"object","properties":{"Id":{"type":"integer","format":"int32","example":"1234"},"DomainId":{"type":"integer","format":"int32","example":"1234"},"Email":{"type":"string","example":"Email@only.com"}},"title":"ServerDomainAddressData"}}},"title":"ServerMailboxData"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

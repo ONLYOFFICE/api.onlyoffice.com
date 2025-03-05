@@ -1,0 +1,71 @@
+---
+id: create-an-invoice-line
+title: "Create an invoice line"
+description: "Creates an invoice line with the parameters (invoice ID, invoice item ID, etc.) specified in the request."
+sidebar_label: "Create an invoice line"
+hide_title: true
+hide_table_of_contents: true
+api: eJy9Vt9P2zAQ/lciP21SRkLhqW+MMq0aEoUW7QH1wU1MY0hiYztQFvV/353tpElb2IBpfagc+77z/fjuzjUxdKnJ8IYkqojG5aPgCdNkHhLNkkpx8wxnNTmpTCYU/0UNF+V3RlOmEKNgRULyBHKMzNeASplOFJcoRobkFAQM0wEtA+5UBzkvWfDETRaYjAWSKloww5QOPjUS41HYSoPewm4wkxx8DrRkCb/lLAUBi1fsoWLaHIARfvlVpGByTRJRGlYaXFIpc55Y06M7jYbVRCcZKyiuzLNkYKpY3LHEgB6phGTKcIgCnHpDxil+9J0bt/YCymvhcOkSYrMOWyR48Brae/iaihldHe5T8Y0rbdpQGbr6s57BPj1TBsFK/0aRFspcKJv8HSVwFAh7tg/ZE97GjjpfLVgbxcslYh8qWhrLxG3gZXPSosqqWLgbpQJndiETu71HPuU6EZVjzJZ5zckOyv6QelqKUjvGDOL45Wwj+0HNPyKn1wrJ2og2MQ/JrVAFNW7raAAbbEULmaNQjA6POwT9kAbLz49qGLxTw7RLyTejR31a9qnXle4KAu6yQ8k+Jzp3pqJa5Kx/aWivnTTcfAd21OHpO+BvD/Ph4OiYIM3BYbvhk3YOXP6pgL++EkJyHB/uUv+6pH54sNSqgX6fCWhDRAptOU1NBl8RlTwaHMQRDiLfi3y5aKYeYUTYSVSpHIQzY+QwinKR0Dxzavq3nuNJ4IBk3RlnU6wtVz57h1obGzDnB8POwlFf5o5DUsK8gu8e1rqFxXu1mUFnTfx6MyTemQvxTpuPdxp23Ou88bavLV03jTJu+1/c7WyxHQa3wrrps3kqiqIqARVMbbSCq7PpLDiZjEEhRt3dkeMcN7avQrgLasvFx8JN+e0hv52Szkj+r+8Cn07DViaSOeW2fi2Lak+9G8w1SAL5sDergrQZsI4AeyzHQLCuF1Sza5Wv17gNlyh8IMHykSpOsebgCy7ImjdSTe6BRRhm6/yXGZqD4nnlWLbV/tdhgzhJEibNq7LzTjVNLqYzEF74908hUsQo+oRvI/gfElgImwzLfrtXQ2LLZUWXKOt0IpexYvulcG9LwS/Qq+aofO5Y2K+K0DuC/+jWXkhdu0KDgDby7uhFRFuKThoTOgerfwPre6b/
+sidebar_class_name: "post api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Create an invoice line"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/api/2.0/crm/invoiceline"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Creates an invoice line with the parameters (invoice ID, invoice item ID, etc.) specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"invoiceId":{"description":"Invoice ID","type":"integer"},"invoiceItemId":{"description":"Invoice item ID","type":"integer"},"invoiceTax1Id":{"description":"First invoice tax ID","type":"integer"},"invoiceTax2Id":{"description":"Second invoice tax ID","type":"integer"},"sortOrder":{"description":"Sort order","type":"integer"},"description":{"description":"Description","type":"string"},"quantity":{"description":"Quantity","type":"number"},"price":{"description":"Price","type":"number"},"discount":{"description":"Discount","type":"number"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Invoice line","content":{"application/json":{"schema":{"type":"object","properties":{"InvoiceID":{"type":"integer","format":"int32","example":"0"},"InvoiceItemID":{"type":"integer","format":"int32","example":"0"},"InvoiceTax1ID":{"type":"integer","format":"int32","example":"0"},"InvoiceTax2ID":{"type":"integer","format":"int32","example":"0"},"SortOrder":{"type":"integer","format":"int32","example":"0"},"Description":{"type":"string","example":"Description"},"Quantity":{"type":"number","format":"double","example":"0,0"},"Price":{"type":"number","format":"double","example":"0,0"},"Discount":{"type":"number","format":"double","example":"0,0"},"ID":{"type":"integer","format":"int32","example":"1234"}},"title":"InvoiceLineWrapper"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

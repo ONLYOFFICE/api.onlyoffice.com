@@ -1,0 +1,71 @@
+---
+id: update-task-statuses
+title: "Update task statuses"
+description: "Updates the task statuses with the values specified in the request."
+sidebar_label: "Update task statuses"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVE1v2zAM/SuGzl6dFTvllg0FNmwYiiY5BTkoNhursS1NopNmgv/7SMlu7SYbMGw+GJTEj8fHJ3mBcu/EfCOM1U+QY7aS7uDENhUO8tYqPNOhF4sWS23VT4lKN59BFmA5yJIlUnEiPxDbjqIKcLlVht3EXKxNIRFcgiUkSIkThxJbRzsnhWXYPsqqpbUzkKtHBUWimrBv4Qft4w2l782PuiAwXuS6QWiQTWlMpfIAKntyXNILl5dQS7bwbIBA6B03RnmoRQMWFbjg10Nhe4r6O5ymaCm2zyWtlWdaUr+1u1YDFVa88al1qGsmcxmSiC5+3I0zuukL385ml/Uja8UFhr9t/B/BpuLD7P0VdI3sxQCFYK8aaFnQiWkDyxJLWmTSqOz2ZpYNwho14sAewbqgrNZW5F0imnmWVTqXVakd55lW/cYnSQwU3UieS+46knlVpK9sGPUVAh2cr4zHqWhkzaeT2NAW0/rwqry7Z1kbZmusnI3vth1nfNSh0sCnruu2IXDJMgBOHu6Wq2Rx/4XqceOxpYqvBgqKN9RxLcMQezhRAhcKmHAyugn/6aL1TCE8Y2YqSUQRuDAg3491wzSSJw02XqheSS8YaTJhfuTp/U46WNuq63ibqlh+TMg8SqvkjqnaMH3l8J54caAJMX+hr3crxsPuhDxM8I3ou3SIWOQ5GPyj73ak1Pv1inx3/YNS64JDrDzxY0P/uSBDB5qDsMKep4E1+1bu2TemZJnwZZiq7BBU1hvc1HDUnEcAp4JL+z74z11dDfE+apj4HPzj0W8jXlQevXmgW0L9C29jELI=
+sidebar_class_name: "put api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Update task statuses"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"put"}
+  path={"/api/2.0/project/statuses"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Updates the task statuses with the values specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"statuses":{"description":"New task statuses","type":"array","items":{"type":"object","title":"CustomTaskStatus"}}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Updated task statuses","content":{"application/json":{"schema":{"type":"array","items":{"type":"object","title":"CustomTaskStatus"}}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

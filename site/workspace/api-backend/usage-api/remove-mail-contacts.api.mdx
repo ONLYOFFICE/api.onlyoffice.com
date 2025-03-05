@@ -1,0 +1,71 @@
+---
+id: remove-mail-contacts
+title: "Remove mail contacts"
+description: "Removes the mail contacts with the IDs specified in the request."
+sidebar_label: "Remove mail contacts"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVE1z2jAQ/Ssend2Y0p640SQzzbSHDB8nhsNiL1iJbamSDKEe//fuSiLBlHSmnXIwa+3X27dP7oSDnRWTlahBVtmtahzkzop1KizmrZHuSM5OTFtXKiN/gpOq+YpQoOEkQ5ZIxYHiUKx7yirQ5kZqDhMTMcNa7dEmrsSEGyR5bJAcpCv98cOdTazGXG4lFols/KHBHy1ad0O1o/lFFYSkE1wAG8cmaF3J3CPKniz364TNS6yBLXfUSAjU5glzR3W0URqNk2jZKwv/N0T7XVqXqO0AKeOj7FgNjIEjvdK4tT3rIgnUjihJxVaZGlw4+jQWffjxGFarxobu49Ho/e7Gc1ZcQ/G3w/8b3FR8Hn38Hd+ygSgCLARH1UivBXl06wkGV9JLBlpm45tR5gV12ncWphIsK7NHY72qWlNRRumcnmRZpXKoSmW51gUz7ElCoujPpDnngQOlVwX6RoSW39AzwfXK4E5FAzV7B7l+NGZ09ia8+xeodYWvwlmN1j3X2irfQzr2iVtV121DsJK5h5rM7ueLZPr4QJ145DBMBY6qCsrXNGsNfnMRSLguw5tyycbZFfgf1ysS5PDFZboC4oeQ+b10caMrZo8iaaf05DZRiRFd3CytxS+P4rtuAxaXpup7PqZehr8iZO7BSNgwWytmsDx9SDrxTOthCv1oHxaMisOrNqzvQux9esqY5jlq98fY9ZlUH5cLit3Ej0mtCk4xcOA56DkRZCjPtFeVP+toZ82uhR3HhpKsEb4NQ4k9e4lFg4c6uZrjGcCh2tI4Bz95qqspXRcETHye4oPr3YxXiYdoXuuaUP8Cw5wH5Q==
+sidebar_class_name: "put api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Remove mail contacts"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"put"}
+  path={"/api/2.0/mail/contacts/remove"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Removes the mail contacts with the IDs specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"ids":{"description":"List of mail contact IDs","type":"array","items":{"type":"integer","format":"int32"}}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"List of removed mail contact IDs","content":{"application/json":{"schema":{"type":"array","items":{"type":"integer","format":"int32"}}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

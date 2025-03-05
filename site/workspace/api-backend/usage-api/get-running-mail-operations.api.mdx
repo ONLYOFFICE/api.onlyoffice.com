@@ -1,0 +1,63 @@
+---
+id: get-running-mail-operations
+title: "Get running mail operations"
+description: "Returns all the running mail operations."
+sidebar_label: "Get running mail operations"
+hide_title: true
+hide_table_of_contents: true
+api: eJyVVMFO3DAQ/ZXI54gstCduqEKA2qqIhRPagzc7bAxO7NoTyjbKv/eNk102tGxFDonjefNmPPPGnWK9jur0XtXa2OKHp6DZuCaqRa4ilW0wvIG5U2ctVy6Y38l8SXpFQdwCVipXv4AjtejhtaJYBuMFpk7VDXEbmphpazOuKAtt05hmnUm4zO3CHYEjUPRYEtLp1MlsJp8p2TcTOXMP75GAo3QNU8Piqr23pkyW4jGKf6diWVGtZcUbT2DUIegN/JB9Hff23fKRSobBB+FnM2T1xdXeEtNqD7p0zpJugKUXLWbscWhJ9bm62gdGDkh6goMdqDlrbuNh5IgB+jwEFw6DBwiw1xRKlGOf26BAa/QuVw8u1JqHrU8nE4JjVF8Scy38/5PYgAF6J57bBP5gxAnD4ZCvsB5ObDjtfocYdpZtueTJ1efZ8d9iumv0KGm0U1A14RcNU2tKnddc4afQ3hQnR7MiDchEbJHCM4WYxqMNFuCK2Z8WhXWltpWLQvNGwWLJBkfV783YXJQ5iOyfk/aqWG++UpKs8FWDOVeNrsU68U2nMs2DS+5jmSDhum0QMZunLLKb8/ltdnZ9BRI5zZCn1UxIH/4ex6h16sgY44L4wAROztu9DuRHboLxqEwvXHircVIkkircjW25lzoAicbgLRT4uMntleoPYNctdaS7YPtetn+2FORGw/JZB6OXUpX7BQJU20utU0+oMIpZluSlh8/atkPt31wp0sGdbC7Ob4EVUU3b9ZTaNS6EfWtqNnvc087lYwry7vN3XLpuEAMOtsUPpnc9dnIZ0FLYBSbkD9MqDUs=
+sidebar_class_name: "get api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get running mail operations"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/mail/operations"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns all the running mail operations.
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"List of running mail operations","content":{"application/json":{"schema":{"type":"array","items":{"type":"object","properties":{"Completed":{"type":"boolean","example":"true"},"Id":{"type":"string","example":"Id"},"Status":{"type":"string","example":"Status"},"Error":{"type":"string","example":"Error"},"Percents":{"type":"integer","format":"int32","example":"100"},"Source":{"type":"string","example":"Source"},"OperationType":{"type":"integer","format":"int32","example":"1"},"Operation":{"type":"string","example":"Operation"}},"title":"MailOperationStatus"}}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

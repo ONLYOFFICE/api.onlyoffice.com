@@ -1,0 +1,71 @@
+---
+id: unlink-account
+title: "Unlink a third-pary account"
+description: "Unlinks a third-party account specified in the request from the user profile."
+sidebar_label: "Unlink a third-pary account"
+hide_title: true
+hide_table_of_contents: true
+api: eJytU01v2zAM/SuCzmmcBTvlFmw5DC3QAm2xQxEUjM3UQmRJk2SvmeH/PlJygny0O+0SR+Ij+fge1csIb0EuXuQDWqdRFOKpVr66ceDjXkBZ2tbEINcTaR16iMqaH5VcyNZoZXbLHJcTSXhoMKLnYr00dCCU87ZTFXoCKEPnXy36PR0qDKVXjqvR7cOIEilrIkNZYwNy0cu4d1wmRK/MG0XwHRpiyVe2QRHxPcphIHIeg7MmYOCs+WzGn/Mm97dymMivsy/XoWcDbaytV3+wonJEAMvWq7hPo0AoXzn+ukO+oFZQEZXfBEC55uaX1ViZIEDEayVFcFiqrcJKKEMAFB5JlBDF1tsmXbSBlCDhtkrjlBqRqrVlySvUJHDSOtZ0LsCpYj6dFS5ZV6R2qVuR3YGjO1SyO1jTek3JdYxuURTalqBrG+KVKXccETlR8pQHUR7ZnSz0uTRHu4jXLbLN4xacwcZNKK3dKUxqK7O1KVvFZO3y8dv0J26mS6cIzbwzo27ODjoi24DhhLF8FvxU76Pcl1P11NdEpMD/92kcnneycBpoSmKbxO5Hx15YGUKSZ+xico0Tj77R4dw5kj2ZQ6l9v4GAz14PA1/nl8R+VirARtPmLragA/5j4st39iHjZOXpw+1AtwxLS9CBV9yNOq+Hk938vrpbPa0IzT6fr0I2ffzDhA8hsz+pfrEjmQX/DpNPMvo+7xnpccDn0KcZNb3cNFJG87zrYRj+Ao+tuFI=
+sidebar_class_name: "delete api-method"
+info_path: site/docspace/api-backend/usage-api/asc-web-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Unlink a third-pary account"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"delete"}
+  path={"/api/2.0/people/thirdparty/unlinkaccount"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Unlinks a third-party account specified in the request from the user profile.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"provider","in":"query","description":"Provider name","schema":{"type":"string","example":"some text"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"OK"},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

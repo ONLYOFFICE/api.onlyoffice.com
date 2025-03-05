@@ -1,0 +1,71 @@
+---
+id: check-files-and-folders-for-conflicts
+title: "Check files and folders for conflicts"
+description: "Checks a batch of files and folders for conflicts when moving or copying them to the folder with the ID specified in the request."
+sidebar_label: "Check files and folders for conflicts"
+hide_title: true
+hide_table_of_contents: true
+api: eJzNVttu4zYQ/RWCz07kOG7TGiiK7CbbBt1uFxsHBTbxAy3RFteSyJJUElfwv/cMKcWKk9jYt+pB4mXmcC5nhmq4F0vHJ7d8oQrpkr+MtMIrXTk+G3An09oqv8Z+w89rn2ur/g3bv0uRSUt6FiM+4A+Qk3y2gVYmXWqVITE+4e9zma4cE2wufJozvWDhJCaqjC10ARSHr2WprhaFSr1jD7msWKnvVbVkYcOsaehzWTKv6dsqsgfl8zC/umDOyFQtlMyYqsKalf/U0vljGNcO3+kMrjQcR3lZeRoKY3BocCn55sjghrsUJwka+bWRcEHPv8nUA8dYjfh4JR3twk//IRhylbXznt8X2FVVQO7MvboARovpvIVTfDPgixbCvcT4qJwPEev03RZAWCvWmCLspesZ2wETMgK9HxcC34kaHoqoMyBJDMRoOHx5BmC3yQ6Jesow8L83BW/Z9UZqPolSvrR+wOWjKE1BSx/I9YrE4M2NyYSX2bv1YeSY6l1cELgU8IbXtcqenTNsn6NXXt1DJlwoZwqxPmz4n2ol2VdRrYV3K0WqU+WLQ0qiEkvUK6TP74UX9roURbFfp7YFlZsjSSaCFul/tppyemMPqN/dJRDNauSbhlJjOa6R+rFw5vHX2kn7i8hKVYGQ6DvaBt766BC/BJReS/m3FSYa3yZq/8mj4Wh4dDI6Gv40PTmbnJ5NhqfHp+PR+Ocfzr4SyEcd2bYfZXyHZ/wjvXtc6VlHq2RZMC1WxXh48rIQbirRdk4YTlKlxBQ+8KUM/BI+xyQRRiWj42ESGzG9tXEJ+qDk1IntPTplaMQ1hZ7n3ptJkhRwpsi1I6SdIqcdFhX5ptfNr6m4Iptf7enbojPqDxmqjvDyuD3gIRKT57rBMareL9tWe9nFcrdV9uvmqffddquzXuPaLm7IioUO1rUJeK/Lsq7gELsOTrIvl9dTdv75CsAUrBiGAoRBdKBvEKVShLS3LoS76dB9tBvY3v3xv7jc2mR5+egTtBDkCr7WsTwjt24pk5AEu3gMrmu/YBhGgWMIe6ARpJtmLhxV+GZDyzjJ0i8AhvfCKjGn6N9SRvLuL6DhKxCFUhIiczQlm0i8qCORdlr8ZtBpnKepNH6v7KxXMr9dTiE7by/yUmekYsUDXfJ4TzgG2sQfGAiEtQYcqJY1GiD2IySxlaryOdlXgeztgJzqtqp1z8DnvB+0ftCbvHpVpWliKSGenXzcelPjqdiiNCV1Bqv/A2TtSr4=
+sidebar_class_name: "get api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Check files and folders for conflicts"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/files/fileops/move"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Checks a batch of files and folders for conflicts when moving or copying them to the folder with the ID specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"destFolderId":{"description":"Destination folder ID","type":"string"},"folderIds":{"description":"List of folder IDs","type":"array","items":{"type":"string"}},"fileIds":{"description":"List of file IDs","type":"array","items":{"type":"string"}}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"IDs of files with conflicts","content":{"application/json":{"schema":{"type":"array","items":{"type":"object","properties":{"Name":{"type":"string","example":"File name"},"UpdatedBy":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"},"Updated":{"type":"string","example":"2020-12-08T17:37:03.3424957Z"},"Location":{"type":"string","example":"4\\\\46\\\\File name"}},"title":"FileWrapper"}}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

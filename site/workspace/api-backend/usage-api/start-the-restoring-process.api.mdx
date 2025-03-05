@@ -1,0 +1,71 @@
+---
+id: start-the-restoring-process
+title: "Start the restoring process"
+description: "Starts the data restoring process for the current portal with the parameters specified in the request."
+sidebar_label: "Start the restoring process"
+hide_title: true
+hide_table_of_contents: true
+api: eJy9VU1z2jAQ/SsandoZWmiaE7eEZKZMM1MmkBNwELbACrblSnII9fi/961kx4Z8nDrlwEjaD719+7SuuBM7y8dLXmjjRDq8FtG+LPh6wK2MSqPcEcaKX5Uu0Ub9EU7p/IcUsTQUZLDiA36An+TrGlGxtJFRBbnxMZ87YZxlLpEsFk4wI61DmnzHCqMjaS3bauPNuMvI3LEAgx2US/x5IYzIpJPGMlvISG2VjJnKvc3I3yUSfgWCZnmtY+CteKRzh2y0FEWRqsjjHj5aQlVxGyUyE7Ryx0ICp948ysghD2AV0jglLVk3noxpTOvTwgJNbHqDmCaHdVQYr8EcahQ7ufDn55HzYGQUxT6t+I2OygxY7YoP2IovEqNiFO2OZ4ZJibTZJNVlHA7udCTSsLwBt5RX0haEUhpl4hmlmejcIo9Z8c8dVgV6dmhhB3ZGPNv34XZ96LIIY8QRWzQ/hJ6yWSN7rp3aHt9I2/TSskMi0UuIQLPg7FtbWuq42OjS+X3oBNUGpw7BRutUihxX0Y9kYAvUG7p3MRq9vvi+r8Ad/KmefySXqZ3orEjBUtxzbjEOuHwWZMbZVqRWEvuzFkTn3/ZmwPE2MuHC0feLkwSXlxR9a4w2vdBGgn3HvExTcr1T+f5jT+9BJDrl/EHQ+AvCwPDl6NtrUh9y0cwHVE5eUEqiQQKmivU8CZdgNxSFGl58HQ2bYWNpPISZIDlNHPNEAqOBU5oUAYlzxXg4TEnqSUh1erN/BCwE8ro3tebUs9CWN2fXCxOA9FN6FVO+JJghXKgd+5NYXxqJ4r6bNrctf/1p0dF7MgpGr17bsiLM7SNxppQ1AdlqD7DpA0SVlTlqYnNfJ7u/nS/Y1WyK/MRXYCIVDpCo1cR5Jrxymyr8GG5G5tkAPme0Nzv/3/RuWuHksxsWqUAnUIZXQNVIZ0l9gifEQ3Ly13h6ewICk14jcK6qjbDywaR1Tce4yNB3DMsnYZTYEK/LNS5J2k9ZxfdQAZHtq//iO0buaRlUcjYW6kEbcRVFsnAf+q57L2L2a76A86b5UmU6phgjDvQVw/+YY6F9N7x6/VmF9ua7EsqBPeQkLdKrO5Xy3ku5WVBVrSk/9hCeqnrQFEL/VNabIVUVHgoIbf2D6d2Il6cUvKmpa6D+CyrD7dE=
+sidebar_class_name: "post api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Start the restoring process"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/api/2.0/portal/startrestore"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Starts the data restoring process for the current portal with the parameters specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"backupId":{"description":"Backup ID","type":"string"},"storageType":{"description":"Storage type (\"Documents\", \"ThridpartyDocuments\", \"CustomCloud\", \"Local\", \"DataStore\", or \"ThirdPartyConsumer\")","type":"integer"},"storageParams":{"description":"Storage parameters","type":"array","items":{"type":"object"}},"notify":{"description":"Specifies whether to notify the users about the backup or not","type":"boolean"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Restoring progress","content":{"application/json":{"schema":{"type":"object","properties":{"IsCompleted":{"type":"boolean","example":"false"},"Progress":{"type":"integer","format":"int32","example":"44"},"Error":{"type":"string","example":"null"},"Link":{"type":"string","example":"Link"}},"title":"BackupProgress"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

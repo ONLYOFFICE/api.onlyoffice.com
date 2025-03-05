@@ -1,0 +1,71 @@
+---
+id: add-a-topic-to-a-thread
+title: "Add a topic to a thread"
+description: "Adds a new topic to the existing thread with a subject, content and topic type specified in the request."
+sidebar_label: "Add a topic to a thread"
+hide_title: true
+hide_table_of_contents: true
+api: eJztV21v2zYQ/isEPyuRLDfdYmAY0jTFgm2dUTsY0NQfGImOmEgiR1JJXEH/fXekZMuJ37oMwwbMMASKvIe8e3h3uqupZbeGjq5pIouiKoVdhB+krgpDZwE1PKk0TMF6Tc8qm0ktvjIrZPkTZynXiNMwogF9BDlOZw2gUm4SLRSK0RE9S1NDGCn5I7FSiQSexGac8CdhrChv4QW3II/CZiBnqps7ntiAJLK0vLSElWkHXChOjOKJmAueElG6fTT/o+LGHoMOimlWcMu1cQqX8AIK+P0FKilQIcVsRp9rOfVKXL6HFZNkvGB0VFM8ERYFaHIL1gZ0LnXBrJ8axrRBc1sF3sl0gZhWbxwypXKROL7CO4Pn1C83l85e1F5LxbUV3Dg5zwMOn2nquOiWg24bYzWQSZugr8AmpOVPG2GO46mb3QLEteA5J437IQtGydJ45eMoerkLOAJvr5IGfxdNY2ms6YkxrdkCb9rywuyHX6aHXHNA+RMrVI5Cg3iIbE1W17POZF924gbLuwLYFMnfiUGD/B2B+Dk4peXpbkQcxdHRID6KvpsOhqOTt6MoPh7Gb08Hp99/xk2uVPr6TVpN3i2+kdPlUUtKq8qF4uroqP0dbXh0P1ThvTAqZ4uPLqp32fKruOfkMysXzJp74WgXNt8HYiVz/hzQswdmmZ4ULM93YyqdYzYzKEmYQyF+rOVc5PxK74F/+RKCaFol1uCQS5j2cwg/ZkY9/VgZrn9gaSFKyJaaWYkRB0HoDaIXsJVccP67Zsor7xPZAQZ7ETTXWpZkBQTjKwLp3+Op+/0DEpCtND++Uy7xnftM1KW+7ThRgIeEd4o72ER85d+ePOLhmxPnI/gROsS50BXWrtx9nV1GxlSxujx0AeUT8jbhlUjwVzJfdGAotWnPZ/rXZbGT03gQv9Y3VpvsT7/TTBgCf+NtUMBa7/T/099/Jv2JfRaXFdiHcWyZrcyBwVBWBda8H3Ehh4nzXBqO9zmxIrlf0BfV73VEjogXD8gAxh4RkBjGHjRbdwdnxXouOkCjy9IvwalOsbEE6zZrsybqlULpTWq41mDvJ2FTGLHbQQCPeFs6alPRB3cJTuZNNHhZM16VrO06gGWUgvI+kykmcYzMwBfzIxoyJcL4OApXXcwczwrrrvpvsLDn+qFrDip0T5pZq0ZhmMuE5ZnfcV2BX3CFeCBtei3RBAtUH/EbG6MVa0r8zBdd85H55aBrTtawzkKsgD+tWoqLjtNeS7BifFlFr6Z6dXzU4Klz6bRpr+C8I4hMnFHk08VkSs7GlwBFcrzZOWQ7n/mQ54K5mrxTOU2hT1v2cqxt4J5T1+uE/skesGUdK+gQ8iWQDkZUPhd5Z7nGKwFJcBfHYMuHjy6IpoCOli0jXLhzCwDV9Q0zmNWaBqfhQI19MQwfmBbsBtkFv0qFwTG46Jzlhu8gpd9ybtS6c6ASdXtgeYVvMLwHd+q1tc0MZLOuH6/b5baqOZr6rq2Dv+i1mqBDnCUJV3an7KwXgOPfJlMQvmnb3kKmiNHsESbx6VSVzm4XJW6uBs8qbyv41MC63xN9HoN8PWTuXci0A7RqIxnr0dMxg080ayOkrn1ANs1S3i9tRSxD1kvj3cxA6z8BLCy4EA==
+sidebar_class_name: "post api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Add a topic to a thread"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/api/2.0/community/forum/{threadid}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Adds a new topic to the existing thread with a subject, content and topic type specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"threadid","in":"path","description":"Thread ID","schema":{"type":"integer","format":"int32"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"subject":{"description":"Topic subject","type":"string"},"content":{"description":"Topic text","type":"string"},"topicType":{"description":"Topic type","type":"integer"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Added topic","content":{"application/json":{"schema":{"type":"object","properties":{"Posts":{"type":"array","items":{"type":"object","properties":{"Id":{"type":"integer","format":"int32","example":"123"},"Subject":{"type":"string","example":"Sample subject"},"Text":{"type":"string","example":"Post text"},"Created":{"type":"string","example":"2020-12-07T13:56:02.3269198Z"},"Updated":{"type":"string","example":"2020-12-07T13:56:02.3269198Z"},"CreatedBy":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"},"ThreadTitle":{"type":"string","example":"Title"},"Attachments":{"type":"array","items":{"type":"object","properties":{"Created":{"type":"string","example":"2020-12-07T13:56:02.3269198Z"},"Updated":{"type":"string","example":"2020-12-07T13:56:02.3269198Z"},"Name":{"type":"string","example":"picture.jpg"},"ContentType":{"type":"string","example":"image/jpeg"},"Size":{"type":"integer","format":"int32","example":"122345"},"Path":{"type":"string","example":"url to file"}},"title":"ForumTopicPostAttachmentWrapper"}}},"title":"ForumTopicPostWrapper"}},"Id":{"type":"integer","format":"int32","example":"10"},"Title":{"type":"string","example":"Sample topic"},"Created":{"type":"string","example":"2020-12-07T13:56:02.3259212Z"},"Updated":{"type":"string","example":"2020-12-07T13:56:02.3259212Z"},"Text":{"type":"string","example":"This is sample post"},"UpdatedBy":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"},"ThreadTitile":{"type":"string","example":"null"},"Status":{"type":"integer","format":"int32","enum":["Normal","Closed","Sticky"],"description":"[0 - Normal, 1 - Closed, 2 - Sticky]","example":"0"},"Type":{"type":"integer","format":"int32","enum":["Informational","Poll"],"description":"[0 - Informational, 1 - Poll]","example":"0"},"Tags":{"type":"array","items":{"type":"string","example":"Tag1,Tag2"}}},"title":"ForumTopicWrapperFull"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

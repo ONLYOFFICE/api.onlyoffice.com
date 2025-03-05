@@ -1,0 +1,71 @@
+---
+id: delete-a-category
+title: "Delete a category"
+description: "Deletes a category with the ID specified in the request."
+sidebar_label: "Delete a category"
+hide_title: true
+hide_table_of_contents: true
+api: eJy1Vm1v2zYQ/isCPzuRraQLImAo0tjDgrVDUTsY0DYfLtI5YiOJHEml8QT9992Rli0nbpYmmD/YNO957p08tsLBjRXpF5Gpqmpq6Vbxb8o0lRVXI2ExawxtkbwVZ40rlJH/gJOq/h0hR8M8QysxEt8Jh+KqI1aONjNSM0ykYoolOrQRRBk4vFFmFX2XrohcgdHFNLIaM7mUmEey9nsG/27QukPSqcFARWRjvQM1/SGFvRrJZiWb0OAK8dDueW/tYkoymxVYgUhb4VaatciaxBTBSCyVqcCFraNEdByCQatVbdEyIxmP+We/elKQKdJVO8aA1qXMfIbib5aB7WPT6vobZo7jM0qjcTKYucif495I4D1UumTQWHQjsZCO/2yY1hlZ3+zg5n4ROY8kyjnVzGH+NCkZJ+ODSXIwPllMjtI3v6Tj5PDo+M3p5OT0Myu51PnrlUyHOX1GCH3tfeAFt54d8MAY4IJQJ1b2/0j45LkZX1AjB/9eEqXbMF9eqeT4dHJ68spKDZR8wox6fKG0zF6Qt+To+IGSn2hbhg/ieLf6ydJuVG88bBp/eQxO0vpzsOer//hKSqtLWP3pb6KnfP8gbzH6DPUKnL2Vz+yaD1AD55LQZ3fgwMwrKMunOY0pKUORZWQEnsX8j0YtZYmX5j/oX7/GBM2bzFleoqLtsMf0Q7D6/m1j0fwKeSVrSRrAKbJAJsJ1kooZqVIrxL8MaNwV+UkSzgFLg/ihvL9JBwiCHI8njy/dyxrWQ4jamVE0HQpFtSYcTxk/M2gWpCIGLePkcBxvx9qSjcX9DRK32znS8YBAc9cPmoazJgrndBrHpcqgLJR1jybMe5ZEgSi6wbic840fGnHv0NxeWFr+gat+jBVBPOoH3Q7XhyvrpfL0df7O++Ciufci+jSbL6KzjxekhKMJfpYUKLlPfE1hVOAvobWNMJ0Hw/lhlO12vL1mlK8DdnjvYjpBFC+504TuDCX7wtkgJBXNz9R1ZOHYNhXvbV1MB48ASrwvD2lo22uw3PRdx9tk3fDbhZZ3YCRcc9Kovrm0vKa+WUJp8YmIdx8Re4PoS1mzX3dQNvyPlrdU2J3HSndF6KJ/N7VrwFmWoXYD6qMnBHfWps+ns/ezxYzgfBB2O+nWd9J6wQb2erbbVL2b/N2NfkBp29CnXbfBB9EPGZtODmhO1BWd6n8BOWV3GA==
+sidebar_class_name: "delete api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Delete a category"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"delete"}
+  path={"/api/2.0/community/forum/category/{categoryid}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Deletes a category with the ID specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"categoryid","in":"path","description":"Category ID","schema":{"type":"integer","format":"int32"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Category","content":{"application/json":{"schema":{"type":"object","properties":{"Id":{"type":"integer","format":"int32","example":"0"},"Title":{"type":"string","example":"Sample title"},"Created":{"type":"string","example":"2020-12-07T13:56:02.3459179Z"},"Updated":{"type":"string","example":"2020-12-07T13:56:02.3459179Z"},"Description":{"type":"string","example":"Sample category"},"Threads":{"type":"array","items":{"type":"object","properties":{"Id":{"type":"integer","format":"int32","example":"10"},"Title":{"type":"string","example":"The Thread"},"Description":{"type":"string","example":"Sample thread"},"Created":{"type":"string","example":"2020-12-07T13:56:02.3249197Z"},"Updated":{"type":"string","example":"2020-12-07T13:56:02.3249197Z"},"RecentTopicId":{"type":"integer","format":"int32","example":"1234"},"RecentTopicTitle":{"type":"string","example":"Sample topic"},"UpdatedBy":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"}},"title":"ForumThreadWrapper"}}},"title":"ForumCategoryWrapper"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

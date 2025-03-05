@@ -1,0 +1,71 @@
+---
+id: remove-a-tag-from-the-conversations
+title: "Remove a tag from the conversations"
+description: "Removes a tag specified in the request from the conversations."
+sidebar_label: "Remove a tag from the conversations"
+hide_title: true
+hide_table_of_contents: true
+api: eJylVE1v2zAM/SuGzlmdZTvllnUFVqyHok1PQTAwNhOrtSxNktNmhv/7SMl24yYrNswHQZb48cj3qEZ42DkxXwkFskwvdbVH68BLXTmxngiHWW2lP5BFIxa1L7SVv8L1N4QcLXta2omJeCY7FOuWvHJ0mZWGzcRc3KHSe3QJJJQrcQYzuZWYJ7JKfIGJxZ81Op9srVbhIDsGcUGRDVhQ6OkswKjoh8JSsB+SE0tOYsAX4m3mJeW7/krHLitQgZg3wh8MO8vK447gT8RWWwU+Hn2aiZbxd5C+6PzAPgTIY+V5C8aUMgvQ0kfHSZrT4HrziJln4FYbtF6i41uFzsEu7sc4byTVr7ejygm4oxBdSLAWDlyrR+X+ro7wcS3OUB9j2tl0epp96NK/1vlu8on4PP14muyhgk5FmAu2ImILnTODdWgZ8zgXKRiZzi6maZDlSBEpEZ82kf02rak09nNo971AaltSiMJ7M0/TUmdQFtr5E3Xc8E0SHUV7JPZ7LjQ27KzkhwYQyO946CVYxOtJL9CRb6iVO3n3qq2rF1CmxLE2VtN1ywG3OiSSng3EpVaqrghbch/wJndX98tkcXtN6bjuWFEJnkIL8jdUsIJAW4cmTmE3hOdn7W2HjpT//0Pctczji09NCdQxghmYajrSV9xPsiTaaWXioyZHACk7rfNh+CP/RF6gmGI0zQYcPtiybfmYYFl+vWi7Bythw+0kjeTS8Z6Et4XS4TuVD+NxtoJeCRXLYA9lzX+0fSJdDG9Uy5QW/YPZdJeXMcWHJYd4dT4ZvXbSeyyyDI1/13Z9NFG3D0uy3XSvmNI5u1h4pkNeA05tYmfJIJw1JKJqV5MW6T6GZOXy0I6F/xSE3224qLOdGM9A3xZeuaqzLk0Tx4r46+3j1R89hsGL1kzMmlD/BshqWIc=
+sidebar_class_name: "put api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Remove a tag from the conversations"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"put"}
+  path={"/api/2.0/mail/conversations/tag/{tag_id}/unset"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Removes a tag specified in the request from the conversations.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"tag_id","in":"path","description":"Tag ID","schema":{"type":"integer","format":"int32"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"messages":{"description":"List of conversation IDs","type":"array","items":{"type":"integer","format":"int32"}}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Tag ID","content":{"application/json":{"schema":{"type":"integer","format":"int32"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

@@ -1,0 +1,71 @@
+---
+id: update-tips-settings
+title: "Update the tip settings"
+description: "Updates the tip settings with a parameter specified in the request."
+sidebar_label: "Update the tip settings"
+hide_title: true
+hide_table_of_contents: true
+api: eJzFVE1v2zAM/SuCzpmdFTvl1nU7DNuAommxQxAMis3EahVJk+imneH/PlKyW6fpdiqwQxx9PFLke0/qJKpdlIuVXAKitrsoSnGtfZTrmXQegkLt7JdaLmTra4XAeyNUzmSAXy1E/OjqR7noZOUsgkUeKu+NrlJ4eRud5bVYNbBXPMJHD5TTbW6hQsrjAx+GGmLCNe4wQW2cM6AswWqIVdCek9L60kOltxQjDg1gA0GgExwrkKoUW0cLDYg20g6NreOT4EHtvaG0GFro+5lUda05oTKXkyK2ykQ4OXDkaGhbeBXUHhACc4EaOa88X14UP2BTnHvNv++uBlNc5Yj4CV3BHA5zmsq+5zICRO9szASczef8d3z6TRKg5uZEfJbgf3Gut4ndRPVBGyM2kMi3b8P1K4Qusa21Ky5cgOLIh5nBD/P3r5BmVYuNC/o31JJREao2aCS7roiwWP3k/Z93wAskgqrp4AMBQK779cuisgRxbPxJBiIAG6Ge/SDiwFMttE3wwTIFpSdE4/hK+TbpoLChSam8Ls+KeTkmLZlayRWHe3YYF9wGQ9AG0S/K0rhKmcZFPFHpG++IHCi5jbHrJbshC37c+5PwVMVXWphJS53wfAqbSc3pK+fuNCQ62WZXz4/A51Hx0VBJeQ7bunTI6R2hpNxeLvz+TBLaU097lew7VJGJP+H9ZeOTF+iNtBpYQXjA0htF7VN9SYVuEG7FlBGSpEtiPVWGwzOaFCJY121UhJtg+p6X6YjApqPhvQpabZiY1ZrSN+RC0o31TtrIi9zUu2suhuGmzVK9uO79bIw4ryrw+E/semLEy5trwm6GV3xPLxYtBnXgF56+6Ta6xHGyTlrrpFF216odY3PKdMVbJmVqp2ycYcBNjVv2cVrgsc9yG/zlpl6N6LrsVaJzxOetv0YMxI5oFnNNRf8BW6Rvog==
+sidebar_class_name: "put api-method"
+info_path: site/docspace/api-backend/usage-api/asc-web-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Update the tip settings"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"put"}
+  path={"/api/2.0/settings/tips"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Updates the tip settings with a parameter specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"show":{"type":"boolean","description":"Specifies whether to show tips for the user or not","example":true}},"additionalProperties":false,"description":"Settings request parameters","title":"ASC.Web.Api.ApiModel.RequestsDto.TipsRequestDto"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Updated tip settings","content":{"application/json":{"schema":{"type":"object","properties":{"show":{"type":"boolean","description":"Specifies if the tips will be shown or not","example":true}},"additionalProperties":false,"description":"","title":"ASC.Web.Studio.Core.TipsSettings"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

@@ -1,0 +1,71 @@
+---
+id: create-an-opportunity-stage
+title: "Create an opportunity stage"
+description: "Creates an opportunity stage with the parameters (title, description, success probability, etc.) specified in the request."
+sidebar_label: "Create an opportunity stage"
+hide_title: true
+hide_table_of_contents: true
+api: eJzFVt9v0zAQ/lcs8wJSWLIOCalvo0xiYqjTWsTD1Ac3uS3ektjYzsaI+r9zZydt0qWIIST6ULn2fef78d3nNtyJW8un1zw1ZTzXWhlXV9JJsHwVcQtpbaR7QoOGn9YuV0b+FE6q6hOIDAwBDa54xB/RDvhqg6gMbGqkJjM+5TM0cGCZqJja+n9iFi8G9ihdzlwOTAsjSnBgLHvtpCsgYj03EbN1moK1TBu1FmtZoIuIgUuP3jCrIZU3EjImK+/LwPcarDvCqNrlB5VhDg1PVeWgcrQUWhcy9bnEd5YibbhNcygFrdyTBoxdre8gdegHr9VgfFnolAKkxTDThU8pHEadC+uMrG75Zq8s49j+3oiHVBXKHMKGwxFUW7rLXeUOuRgp8s6hxNLdYsvJI1kv/faBGtDZc6T/UFOsVpUNtZwkyXMv832i8Ohf9e4KCgQ+wLmD0s5UHTzuRRrxG2VK4cLWyQQ34IcoNXWdH1MJFqNFfYmbSeL99Ev5B/CqLmno5hqIIbNCWchOq+ybGvy8UNbxZ5N4nbC3jJARO8ZVHxyxSX+H8KtBtD7YZcf7Icf6dsEEbT8O2X4Y0TdE3Kzj+GHEK/H+Jk1C+ZAmc+OV6C+aeP7xxbDJyTtOHG4lAKMXxRdZoMaoCr4ZZGZL9Ii/S46fM/trJVoZhcw7QtHLVYYnmnqGbBUux1+x0DKeHCUx6XJPN+NuHCyYB1RLr8y1KRCSO6encVyoVBR5cDa8+4JOWADyTU/eFzQ7YTxGRX5bIwzqM5AmSPKXh+OIVyjd+HuA9cnRcF7tJPisq+NWQnftHYa63W4lb7cxpmbJQJKSDcV3o/rXzFRZBjlZ+PTZ1dliyU4vz9EjlTHcWtBD5YgZ1IxSeOa2yYVnbPQV24++987839ev7ZqDHy7WhZB+wDxZmpZn19RStESmUbFNid+9OHlbWNISTykENM1aWPhqis2GtvEyQ/8PcPkgjBRrqvf1Ci/Ku78IDb9H0lATfFXeLsPr8CCKOpBqT803UYc4xbS1+63tqjdCl/PFEo3X7WtfqowwRjzSPwH8nnKfHqE92f1eg22vbmvKcsqDT6IujemQ+fee+e2CsuqOqqdehMMhiNpE6JvSGoU0TZgrLGhnH44OIraTF6ypsSuM+hd5CF3g
+sidebar_class_name: "post api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Create an opportunity stage"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/api/2.0/crm/opportunity/stage"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Creates an opportunity stage with the parameters (title, description, success probability, etc.) specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"title":{"description":"Stage title","type":"string"},"description":{"description":"Stage description","type":"string"},"color":{"description":"Stage color","type":"string"},"successProbability":{"description":"Stage success probability","type":"integer"},"stageType":{"description":"Stage type","type":"integer"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Opportunity stage","content":{"application/json":{"schema":{"type":"object","properties":{"RelativeItemsCount":{"type":"integer","format":"int32","example":"1"},"SuccessProbability":{"type":"integer","format":"int32","example":"20"},"StageType":{"type":"integer","format":"int32","enum":["Open","ClosedAndWon","ClosedAndLost"],"description":"[0 - Open, 1 - ClosedAndWon, 2 - ClosedAndLost]","example":"0"},"Title":{"type":"string","example":"Title"},"Description":{"type":"string","example":"Description"},"Color":{"type":"string","example":"#a7fc00"},"SortOrder":{"type":"integer","format":"int32","example":"1"},"ID":{"type":"integer","format":"int32","example":"1234"}},"title":"DealMilestoneWrapper"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

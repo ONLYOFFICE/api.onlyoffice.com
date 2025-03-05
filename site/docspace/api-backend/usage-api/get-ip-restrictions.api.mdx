@@ -1,0 +1,63 @@
+---
+id: get-ip-restrictions
+title: "Get the IP portal restrictions"
+description: "Returns the IP portal restrictions."
+sidebar_label: "Get the IP portal restrictions"
+hide_title: true
+hide_table_of_contents: true
+api: eJyVVMGO2jAQ/ZXIZ0RYFlUtN1RVK9Qe0NJVDwithmQg3nVi157QpVH+vTNx2AaqrdoLOPZ7LzPzntMogkNQ841aI5GuDiFJk+Uq8RjI64y0rYLajpR16EGelrmaqwPS0t0PISPFDMcrZLFGTScT+csxZF47gTDriw6U2P21fOLAQ4mEXmQyWxFWJGxwzuise2v6FESiUSErsARZ0ckhi9rdE2bEROelRtKxAO0GGHlXdWBMVRsDO8N75GscKXyB0pkOYktMCF9ItSO1t36Rl7oaSOysNQiVGnBEgsE6H8A0F39ArzqNEihu3U6HvA/vZ++Yx11CRcv/Zd9Mb2ct0yHPtUwGzGrQ+B5M4L5IU9fVYv1xvFytMau9phMvB56pthWd2eTmT6ceKqipsF7/xFwJKvQSHBT2JWSPcv74jLLBzkPOJf5gAKpty2m5VLtHqj37TAWK9856AnMRgTHTOQGF7cMldgIV/JCC0+l0PElDH89UO38ZvID+KNmR0mpvmFQQuXmaGpuBKWwQuaskykkSiUoKPve3lnjFBF12+eoR1/OZNzhLnFl5HsI4DSKfWfussRucrva2Yw8c+Ya78cJpRkvdsaLjVILnuNgSutz18ndIf5nbdWPN7+vzj1Pvu5Lkp84Al89ldFNsegs20jIj2YRu2NEGadVdfyS6WTOhaXYQ8MGbtpXt7zV6CQovj+B1vICbLb+o4OSwA+JcN2W1yDJ04tcRTB3HffUNELdeo3L36StjZfyXDkUv+oWon4+q01D70rpYgfy2ozcYTRPt577O+Hj0JqPv8IyW+W753v0C09DeFw==
+sidebar_class_name: "get api-method"
+info_path: site/docspace/api-backend/usage-api/asc-web-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get the IP portal restrictions"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/settings/iprestrictions"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns the IP portal restrictions.
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"List of IP restrictions parameters","content":{"application/json":{"schema":{"type":"object","properties":{"ip":{"type":"string","nullable":true,"example":"some text"},"forAdmin":{"type":"boolean","example":true},"id":{"type":"integer","format":"int32","example":9846},"tenantId":{"type":"integer","format":"int32","example":1234}},"additionalProperties":false,"title":"ASC.IPSecurity.IPRestriction"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

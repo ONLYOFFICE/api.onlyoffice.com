@@ -1,0 +1,71 @@
+---
+id: retry-webhook
+title: "Retry a webhook"
+description: "Retries a webhook with the ID specified in the request."
+sidebar_label: "Retry a webhook"
+hide_title: true
+hide_table_of_contents: true
+api: eJylVm1PGzEM/iunfNq00jtKNbF+Q/BhaDAhXrQPCKFw53KB6yVLfIXu1P8+O0mPlxZoNyQgl9iP/diOnVagvHVidCnOAFHVty5Jk19wU2p978RVT2gDVqLS9WEhRsIC2lk8Fj1hpJUTQLCM0IqaPkhIFXSkaloZiSWtC3C5VYZRaPOQjy38bpQFwkTbQE+4vISJFKNW4Mx4kBrhFiyJjrWdSAxbOwPagEc5MRUJfdsdfp3PrxjNGV07cAwwyDL+99LokSZmepxgCclD8D+ROaqpQkVqPZFrMlgja0pjKpV70umdY/V22T99cwc5cgwsh8ij0ClxX8XhVQQOPqblPRqr258+ph2kQ0tJWkLc97KJT0BP1E1VyRuGCsHtkIXTE0gQHlGwAQue5Llay0SUTlB5I53/hUTYiptPligLu1vZcGs7O8++jnayUZb1s/DzJRvSF3tAtVPq4mPbx0FubWZWN7gGpVMvtj4q1Sw4/A6y8BX/IXyQT8qosKmhEzmrtFwjPAtDJipsYCjcmw0oBYV/4RQ0NyAVTW3MyqHExq1xD8+C4Ht3cXuwM5yzXqWmYGcfu30QJd+9Jm8TWePakDuyKBTbk9XJs+4zlpUjMFToofbO9vvUqvt7RvHvsSYSrr8I6wHq/qLPU3OkT0Jm7OGq9nlYJKrOtbXc87zQ9rLQRS0buqdW/aG+7oWGK5AQJkmtMRnrpi48Gwd5YxXO/AyRLr9mmOt74A2qG5/6BxIAccXN/nWZUB7AJbJr6w8KS9/nDw8SZyBXYwXsvt+LV6svnpqPMI3v4zyrRiKVRqWDfpa6OA/TiJu2qpinfgAK9tlOF2OvsRUplohmlKaVzmVVaodLlXHEJ0lQFExkwfuMZ0sYHy/Zd7VGPv0ANhsn7AuxOGtz8lGBD6iqx9prL1cCSbPfwaPpgNNkyNmJ9FMuwnNMZ08Rfc2kfRqW/xH+SI0vbWoqSRzIFx/KNubiknmTJGXDRzzkg4uh82ukwmOCk0IR9XEnvba9kQ4ubDWf8zbZ5Kt7ScuptCrcPEpcoRyvi+7qvEnz02l8r3xO/PNlpfOLZNWck6msGv6ipc8lvwzmVyQVOqe3Hw728hwMPlNZen9wsXTVenJxTrKc/ZcFEkohLhh9pTuvKid4wH/nvTc02jZUH4VyIR+O3tSIDDviTIBay19nEoUy
+sidebar_class_name: "put api-method"
+info_path: site/docspace/api-backend/usage-api/asc-web-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Retry a webhook"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"put"}
+  path={"/api/2.0/settings/webhook/{id}/retry"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Retries a webhook with the ID specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"id","in":"path","description":"Id","required":true,"schema":{"type":"integer","format":"int32","example":9846}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Logs of the webhook activities","content":{"application/json":{"schema":{"type":"object","properties":{"id":{"type":"integer","description":"ID","format":"int32","example":9846},"configName":{"type":"string","description":"Config name","nullable":true,"example":"some text"},"creationTime":{"type":"string","description":"Creation time","format":"date-time","example":"2008-04-10T06:30:00.0000000+04:00"},"method":{"type":"string","description":"Method","nullable":true,"example":"some text"},"route":{"type":"string","description":"Route","nullable":true,"example":"some text"},"requestHeaders":{"type":"string","description":"Request headers","nullable":true,"example":"some text"},"requestPayload":{"type":"string","description":"Request payload","nullable":true,"example":"some text"},"responseHeaders":{"type":"string","description":"Response headers","nullable":true,"example":"some text"},"responsePayload":{"type":"string","description":"Response payload","nullable":true,"example":"some text"},"status":{"type":"integer","description":"Status","format":"int32","example":1234},"delivery":{"type":"string","description":"Delivery time","format":"date-time","nullable":true,"example":"2008-04-10T06:30:00.0000000+04:00"}},"additionalProperties":false,"title":"ASC.Web.Api.ApiModels.ResponseDto.WebhooksLogDto"}}}},"400":{"description":"Id incorrect"},"401":{"description":"Unauthorized"},"404":{"description":"Item not found"}}}
+>
+  
+</StatusCodes>
+
+
+      

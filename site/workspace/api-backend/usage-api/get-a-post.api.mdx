@@ -1,0 +1,71 @@
+---
+id: get-a-post
+title: "Get a post"
+description: "Returns the detailed information on the blog post with the ID specified in the request."
+sidebar_label: "Get a post"
+hide_title: true
+hide_table_of_contents: true
+api: eJy1VW1P2zAQ/iuRPxcSOgSs0jTxNob2IgRFk3j5cCQHMSSxZztAF+W/785OSgulTJqoqsa9u+fe/aQRDm6sGJ2LVJVlXUk3iXcKRaLLgbCY1oYkpG7Edu1yZeQfcFJVXxEyNAwzdBID8UB2KC5bQmVoUyM1m4mROEZXm8pGLscoQweywCyS1bUypfcU0Zd1VxQ00sq66EG63IsO9yKrMZXX0kO8zODvGq1bpZAaDJTo0FifX0V/KB67kJyR5OgaXC6ep3TEUQ73SG7THEsQo0a4iWa0dUZWN6QJ+ZGkrslby3UZtFpVFi3bD5OEHwscz9RGflJVOawc24LWhUy9Ir61DGheJqCubjF1XJ1RGo2TIdwYH92iNPERSl1gH9uxWTsQY+lYuMx+P5x8yxmyS4N0mC0HDZNhsrI2XEk2xsnm6MPGaG19dfPj1trWMDljJ6c6+38nhwvx8wOZ9Zd0n5UFP/1npsKdydvtfq8U9qTVBUx++lVd1qMf8g6jM6gm4Oyd/MeR/oAKbuhWkvX2PTgwJyUUxXJMbYrIqciyZQQexfgjo67ppp6aN+AXFzGZZnXqLB9RkTjIGL4KVj9+ri2aT5CVspLkAZyiCBTChYLEPrlSE8RfBjTOq5iIeK9ZRbovNVXTtmyxnqy9vH6nFXQchZn3Q+yQKxqluEE/YyaDkYhBy3i4msRPjMfkEzeBOlrmBTT3Pa/U3AORO6dHcVyoFIqcr8xzUvnOmigARTtDnid8xcNaLaTQaXsprW846ZkrD+pBz2tzWF8dE42Hd93a7cuJTnwW0fH+yTjaPjokJ1xNyLOgOxBuPJdbgqehLsYBuggCIzwrr3kisndk9K4RzGIx3RPqA6VZhx0MwzvnLpEljc+Ta1cxnTkaPUYd/9MA/JgI0TRXYHmV25bFFM3wG42O92AkXHHzaM6ZtHymdbmGwuKSBjy9PxYm3I+z4rTuoaj5Hx3vaLjT91N7SZZ5/xZtOuV2mqJ2M7AX7wzerOlaH+yPyZaXfn6N7vwadQf2vjCl+Y3q8+PfdvAKpGnCkrbt1D6oXkVM1zhYc4cu6Qb/BXXf0Uo=
+sidebar_class_name: "get api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get a post"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/community/blog/{postid}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns the detailed information on the blog post with the ID specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"postid","in":"path","description":"Post ID","schema":{"type":"string","format":"uuid"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Post information","content":{"application/json":{"schema":{"type":"object","properties":{"Text":{"type":"string","example":"Post text"},"Title":{"type":"string","example":"Example post"},"Created":{"type":"string","example":"2020-12-06T07:36:14.7981820Z"},"Updated":{"type":"string","example":"2020-12-06T07:36:14.7981820Z"},"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"CreatedBy":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"}},"title":"BlogPostWrapperFull"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

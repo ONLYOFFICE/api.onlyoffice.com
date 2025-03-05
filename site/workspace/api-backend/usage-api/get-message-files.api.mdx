@@ -1,0 +1,71 @@
+---
+id: get-message-files
+title: "Get message files"
+description: "Returns the detailed information about files attached to the discussion message with the ID specified in the request."
+sidebar_label: "Get message files"
+hide_title: true
+hide_table_of_contents: true
+api: eJyVVG1P2zAQ/iuWv65tQunGiDRNMJhWDRCioEm8fDiSa2NIYs92gKzqf9+dk0I7ENX8IXLse5577nx3c+lh5mRyJY3Vd5j66Lsq0MmbnnSY1lb5hi7ncq/2ubbqD3ilqx8IGVoGWdrJnnwkO5Q3C0Jl6FKrDJvJRJ6hr23lhM9RZOiBuDOhqqm2ZWAScKtrL6bsU4D3kOZk4HULUC6tnWOzEp2DGYpH5fNwNz4QzmCqpioQhjOLv2t0fkCCuu2+zkj+XKa68lh53oIxhUqD8+jOsci5dOS1BN75xiDJ1recCuKhpBi0XlFG6LZToTL+WQ/0uBM4PiBUx6LI6YzytAiLRTmjK9dyDeP4NcuRcl7o6XO4IS9E+L/6wVpoCEevUrrNcZ1AiStWzltVzcgKn6A0BR9xUYiKzSiOC5OBx2y/2cw8zt7ibZ+fTupaZWt+4m713/gsF0s4UM4U0GwWfqzuUVxC1YB394qh58oXm0BQQXi4ntx7AA92UkJRvI+pbcF169hSQEAx/tRqfsQLuwF+fR2RaVan3vEWNR23ZwwfgDNPX2uH9gtkpaqoTCx4zaVF1dYGJA+JSjeIvyyYVnz3UO97HsbDuL817Mefz7d2ku2dJN4ebI+Go92PO5dMcqTbanufZXRNa/SJvyu1sqKOT1mZWTZET47irdctcFFBN2pIOFuVSL8Ug5xhqC/wOf1EYFQ0HMTRcmx1LRPNn5s0uYr7uzcfFtGyiyh9D2hdmGc1P4jMvTdJFBUUYpFrx/z/NCTfiBYoFytDccIt19b4m6PxpRWN+omhF5kvb697MuQnWceGcLmnz16m1+Eyw2vTJ14w31QHP12Cv+myrCuSJiZBrjg7nJyLvdMxeeOw24AKKgiKc7H4CycpChY=
+sidebar_class_name: "get api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get message files"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/project/message/{messageid:[0-9]+}/files"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns the detailed information about files attached to the discussion message with the ID specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"messageid":{"description":"Message ID","type":"integer"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"List of message files","content":{"application/json":{"schema":{"type":"array","items":{"type":"object","properties":{"Name":{"type":"string","example":"File name"},"UpdatedBy":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"},"Updated":{"type":"string","example":"2020-12-08T17:37:03.3424957Z"},"Location":{"type":"string","example":"4\\\\46\\\\File name"}},"title":"FileWrapper"}}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

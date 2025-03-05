@@ -1,0 +1,71 @@
+---
+id: send-sms-code
+title: "Send SMS code"
+description: "Sends SMS with an authentication code."
+sidebar_label: "Send SMS code"
+hide_title: true
+hide_table_of_contents: true
+api: eJy9WO1v4jYY/1csf12AlLJp49MYPemmeykqdPtQVZVJHOJrYme2Q8sh/vc9jx0gAQrpdFqlO4LzvPv3vLGmli0MHT7QUWlTLq2ImBVK0seAqoJr9+XPmA6p4TKe5masYk4Dqvk/JTf2DxWv6HBNIyUtMOMjK4qsEtL7ZkASnJko5TnDJ7sqOAhT8288siCn0KjFCm7wbWm4/spyXqM0Vgu5AMqYm0iLwhk3pPdAKYGS9AhIFhkQyDLL2DwDJqtLHlD+yvIiczIUEFr+aukGNDJjXpSOL+uYbCnPyV4medJf3l59KurCPzKTtldAUiRv74FWSxFz3UJBRUkcWWsFLIq4MTP1zOU7dHguYh1ba11wj4Jl4juPQVAishZ3P92xEAQMKSrG1jojxPBFNbMX1UlYZBW41sgNEvkceIe2W8yuyyoxuUgCChfcWiAg7P3hNEao+rXNlco4kyei6CjJnBkI5IGHYIJUmJ87NajVOSMTofMbZluks8/Mi15/QDLC4liDSfAWApAzqCX0cmZPV7Hkq6c7NQetZvB7qizydCOVYzTAVGNbxGLkocskgliV0rpLgIgQJ4FYASHexeRNc6oYPfPVZac/AVHLW8WMjGOBjCyb1CKcsMwAkxXWsYym4+7ffN4dFQL/fQEwZd07X6jNjVXdce3yNljDI1bYKGUzZ+maKslvE+gFcHOyzLEp3PCElRk6PZKxViL+qw/P4nbqPtOx58dmcd7bh0oQ6ZDqKSA7iXC4ew6IEw5H7jMgWx1wsn18rONyZ+Im2JkdBldBP7jeWyWgOy2gYB6ZFdYNumoaUjPi+i3t4ebxOP5jpTnEvR7cerTvuCmUNC0qkObj0WQ2/jgiesvTvuqAS6VuoWRcEf4gMB4kVrOsVFMDKZiG3m25xnRvDV8UVvsOtmxcXH1oXMXphyF+nDUiRvgHP2pkse265IENl6s6m0cxv+pfD37G2+SvhdCVwvNNCwUTR15pgtJVr6ngPe9Uh3ttELdfO+GgcxXOwl+G1+EwDLuh//spHMA311ty06avFDwSCUSHiMSV0BPNkwhDYJ60ZL4i0y/TE+3GoQlnnRSK0lcl2qTLBGkJlIC5S/W3Y4vO2IT9F2dsbSjYowb9KbGNvu0I6PvUpi+8PXU8X+gYdN+e73WLtlt1Ay/ctVpyf/e5jpVSi/+pR/kU3ib53mkH532uD06l93ZpCMh2+sZrqJ5xEMfb4XlhVxihQf+3YxEzpUjO5IpkaiFgCLAW6U2XTAAVBnzUK8IWDF5lkD7auXs4TcnYOCy/CJu6SeIY9l2IJpS9VOE+VSjjqgnDwZD2WCF6/W7Ya7L1cOvCvHOD8hILJrbnEu+XptYWw14vUxHLUi+tadRnfEM8I8VOZXgEd2pXUyxuvpwwEz2hzqfm1ALmVBOKW8eaZDABoPhIqWfBXTCwat7tV8IPW4jUV7oaXOpbWH2DOlygmiy7tadx3FhWGm9OrBaN934NODqqZvUDUdVY7VPgYAqu5tyz0+huGPUSXLSbHftgHKvNXidGh6bV217fFChkotyVHuceMCGYPEyWfbdVAoIgB5ChunPEtIN0te80wFXb+duDvwIXGtgrMsgnVFz6YuUT4QGRB5SQCni3zd8kArpNB8CyQzzQr9e4wUDF22zwGDCoIbQP8LhkcP+ucD08gp6UM4ceyB8f/bF3oDPzy/GSZaWH/sE0gJOl58A9obBnaR9rKT65nc6AeF79SJJ7vGn2gncK/0PNxl9ZkNvlojtb04zJRckWSOtl4t+/1wMY0A==
+sidebar_class_name: "post api-method"
+info_path: site/docspace/api-backend/usage-api/asc-web-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Send SMS code"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/api/2.0/authentication/sendsms"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Sends SMS with an authentication code.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"userName":{"type":"string","description":"Username / email","nullable":true,"example":"some text"},"password":{"type":"string","description":"Password","nullable":true,"example":"vfmf2vO1Kp"},"passwordHash":{"type":"string","description":"Password hash","nullable":true,"example":"some text"},"provider":{"type":"string","description":"Provider type","nullable":true,"example":"some text"},"accessToken":{"type":"string","description":"Provider access token","nullable":true,"example":"some text"},"serializedProfile":{"type":"string","description":"Serialized user profile","nullable":true,"example":"some text"},"code":{"type":"string","description":"Two-factor authentication code","nullable":true,"example":"some text"},"codeOAuth":{"type":"string","description":"Code for getting a token","nullable":true,"example":"some text"},"session":{"type":"boolean","description":"Session based authentication or not","example":true},"confirmData":{"type":"object","properties":{"email":{"type":"string","description":"Email address","format":"email","nullable":true,"example":"Sydney_Roberts4@hotmail.com"},"first":{"type":"boolean","description":"Access an account for the first time or not","nullable":true,"example":true},"key":{"type":"string","description":"Key","nullable":true,"example":"some text"}},"additionalProperties":false,"title":"ASC.Web.Api.ApiModel.RequestsDto.ConfirmData"},"recaptchaType":{"oneOf":[{"enum":["Default","AndroidV2","iOSV2","hCaptcha"],"type":"string","description":"[Default - Default, AndroidV2 - AndroidV2, iOSV2 - iOSV2, hCaptcha - hCaptcha]","example":"Default"},{"enum":[0,1,2,3],"type":"integer","description":"[0 - Default, 1 - AndroidV2, 2 - iOSV2, 3 - hCaptcha]","example":0}],"title":"ASC.Web.Core.RecaptchaType"},"recaptchaResponse":{"type":"string","description":"reCAPTCHA response","nullable":true,"example":"some text"},"culture":{"type":"string","description":"Culture","nullable":true,"example":"some text"}},"additionalProperties":false,"description":"Authentication request parameters","title":"ASC.Web.Api.ApiModel.RequestsDto.AuthRequestsDto"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Authentication data","content":{"application/json":{"schema":{"type":"object","properties":{"token":{"type":"string","description":"Authentication token","nullable":true,"example":"abcde12345"},"expires":{"type":"string","description":"Token expiration time","format":"date-time","example":"2008-04-10T06:30:00.0000000+04:00"},"sms":{"type":"boolean","description":"Specifies if the authentication code is sent by SMS or not","example":false},"phoneNoise":{"type":"string","description":"Phone number","nullable":true,"example":""},"tfa":{"type":"boolean","description":"Specifies if the two-factor application is used or not","example":false},"tfaKey":{"type":"string","description":"Two-factor authentication key","nullable":true,"example":""},"confirmUrl":{"type":"string","description":"Confirmation email URL","format":"uri","nullable":true,"example":"some text"}},"additionalProperties":false,"title":"ASC.Web.Api.ApiModel.ResponseDto.AuthenticationTokenDto"}}}},"400":{"description":"userName, password or passworHash is empty"},"429":{"description":"Too many login attempts. Please try again later"}}}
+>
+  
+</StatusCodes>
+
+
+      

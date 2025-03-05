@@ -1,0 +1,63 @@
+---
+id: get-filters
+title: "Get filters"
+description: "Returns a list of filters used in all the mails."
+sidebar_label: "Get filters"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVktz4zYM/iscntW1492Tb548tmnX8U6cbQ+ZHGgZsbihSJWkvHE1+u8FSPot18m2F4kP4CPwASTQcC8Wjg8feSmk6t1I5cE6/pRxB3ltpV/hXsNHtS+MlX8LL43+FcQcLOlYHPGM/0A54E8tas3B5VZWJMaH/B58bbVjginpPDPP7DkewGoHcyY1E0oxXwCj090HxLLgKqMdoE0NH/T79NsH/XIA9aOQecGkYxYq1AbtEVo49tt0coeAucEF7QlHVJWSefCh990RWMNdXkApaORXFSC8sFasUA9dKt3Oupl9h9zjRmVNBdbLaOLtfEdG4lELpCbjz8aWwseljwNcgFdRVoqELnib8TtRwo6i81bqxZ6YJgmU/GqcjJ6/75gBKV9rMVOwa+LMGAVC74l6W4ejLo2eh7Pcz/PxO6zeaKmuS8qhG2tKnD6Yib3MwwA/YTSt4xFHafXYZ78w0svYBY6iasYGYZyxj/in+Sf8J4yn4whM0GjxDmKTuWPhMWMcrtwZv50gdV5IndY3s27Tk1q0fgsTPVjrRj92wDp8+EOo+kwaLYNIi8Je+rAyxqs2lbCEeNk3Qb8SXgTBUf4fcyACvI/XK1Dg4cZYNIwEx2YJIRXGwr48iEUajdxtWRnrhfablXt6hbqZ3kONfEfgyHXCjlQfwMf82Z7QQX9g7F/Zn685PUF+ZGrD/KQ6ZP4EwyFjxrXysvPOvoHvO6MhMIhAI6U2Q/8FhPMT3OxmlPQSkUl1TeWedgdbI3x9VxjSs87dGDWnInQ+/9763rZZIH5mXuF/hv1TevTai7wosci8MwZBWc/pZ2q/C3MMHFcOxLpDdBI2xu0AOYbvWPgogqezOKVtCnDM5ozfLjTeuwlWd/um+nMW/+rMZUr7LYl86l8cdw7ftEh9DJZEkioBp1gd+QJCGgpf4KQnKtkbfOj3QkuU2gxOHZFdhrzEhqi2CiUL76thr6dMLlRhHGEc9Cq0w6Iib3e6qim1Hem17OqttjlaSSqpmKSEV8TtLHYHw33d4JLUz/GKJY4uTVnWGk9k02AFu7+ePrDR11sEIW+inUp4QPNRv0I3ShEe73TGZ/BsS8Kef822u/qZXi+56OHV9yqFNY4MCMw2KRaP5D9KYjTwS4p0n7ZNaiAdpZpmJhx8s6ptafmvGiw1rjhcCiupB6IZohfr3rXhL9SpYK3KoaLAxUI5PG4SKWybRPl8/YCylEb7MXoJMUoDQl9v6dUO9n64smQCfdvshErTxAxAx9byqaSf0tjkSJQmVp/wTvwD8qX6yA==
+sidebar_class_name: "get api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get filters"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/mail/filters"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns a list of filters used in all the mails.
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"List of filters which is represented as JSON","content":{"application/json":{"schema":{"type":"array","items":{"type":"object","properties":{"Id":{"type":"integer","format":"int32","example":"1"},"Name":{"type":"string","example":"name"},"Position":{"type":"integer","format":"int32","example":"2"},"Enabled":{"type":"boolean","example":"true"},"Conditions":{"type":"array","items":{"type":"object","properties":{"Key":{"type":"integer","format":"int32","enum":["From","ToOrCc","To","Cc","Subject"],"description":"[0 - From, 1 - ToOrCc, 2 - To, 3 - Cc, 4 - Subject]","example":"1"},"Operation":{"type":"integer","format":"int32","enum":["Matches","NotMatches","Contains","NotContains"],"description":"[0 - Matches, 1 - NotMatches, 2 - Contains, 3 - NotContains]","example":"1"},"Value":{"type":"string","example":"value"}},"title":"MailSieveFilterConditionData"}},"Actions":{"type":"array","items":{"type":"object","properties":{"Action":{"type":"integer","format":"int32","enum":["DeleteForever","MoveTo","MarkTag","MarkAsImportant","MarkAsRead"],"description":"[0 - DeleteForever, 1 - MoveTo, 2 - MarkTag, 3 - MarkAsImportant, 4 - MarkAsRead]","example":"1"},"Data":{"type":"string","example":"data"}},"title":"MailSieveFilterActionData"}},"Options":{"type":"object","properties":{"MatchMultiConditions":{"type":"integer","format":"int32","enum":["None","MatchAll","MatchAtLeastOne"],"description":"[0 - None, 1 - MatchAll, 2 - MatchAtLeastOne]","example":"1"},"ApplyTo":{"type":"object","properties":{"Folders":{"type":"array","items":{"type":"integer","format":"int32","example":"1"}},"Mailboxes":{"type":"array","items":{"type":"integer","format":"int32","example":"1"}},"WithAttachments":{"type":"integer","format":"int32","enum":["WithAndWithoutAttachments","WithAttachments","WithoutAttachments"],"description":"[0 - WithAndWithoutAttachments, 1 - WithAttachments, 2 - WithoutAttachments]","example":"1"}},"title":"MailSieveFilterOptionsApplyToData"},"IgnoreOther":{"type":"boolean","example":"true"}},"title":"MailSieveFilterOptionsData"}},"title":"MailSieveFilterData"}}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

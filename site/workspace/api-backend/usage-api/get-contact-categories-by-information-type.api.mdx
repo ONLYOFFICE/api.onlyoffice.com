@@ -1,0 +1,71 @@
+---
+id: get-contact-categories-by-information-type
+title: "Get contact categories by information type"
+description: "Returns a list of all the available contact categories of the specified information type."
+sidebar_label: "Get contact categories by information type"
+hide_title: true
+hide_table_of_contents: true
+api: eJy1Vdty2jAQ/RWNnt2YXHrjjWbSlFw6aUjS6WR4EPaCVXyrJEipx//es7JNoJC8NQ9mJe2uztk9q1TSqZmV/UcZmSw8LXKnImflOJCWooXRboWzSg4WLimM/qOcLvIvpGIyHGNgyUA+wY/kuEZUTDYyumQ32Ze35BYmt0KJVFsniqlQaSpcQkItlU7VJCURNXeKSDma4Q6y7Mc+tqRITzXFQufTwmT+cuFWJR3g0lIZlZEjYz3CHAvcyJ538ICDZgSlcon8F1ZLcyctHG2UUKZkv5J+gxMCFtgGsvFtto6PsEH5IuMq3CRFzrFnGTjh9ztNLBckkKN5k/XuSTvnk1zpfE7xMIf5WUU0KYo5zEEcG7LWny/pokDRFGe6Xo1KeME6v25yf0qLWQPnh0qKgn1GX/Ednn7D90JNJv5wMLzG9+FS7rTksSfeCI84EIcwPehAHMFscQfiGAsPPRAnMFv0gXiLRUcgEO+w6jgE4j1WLY1AfPCOayaB+IiNlgyuZQieEGzG0JLCimF4YrAZBcjBYhAgCIsRNCSxYAAgCosvf7gcy5olCAhlkVuy3MWjXo9/tmtw1YpxV3ooGm9S7jhKlWWqI6+P8Kfl0GpXIMoYtWK5Ocrsxr51RuczQMJfIE96h7s47nPVzhXFkr2g56SIcTIj5yUO8fZlqEodHh30Qh7RFnMYK6fCqpN7HbYcGIkls+zGYmFSZEicK/thmBaRSpPCup2JuOIT0QTKemP6R0y3KeXeN+C5DKW+pFU3dklzHHRjuRXrqTJyH65dSn4ms2yR40Yx8ijE7dnoTgxuhkjCbBqcKVgCPuJL0MiUb0l7xzm5fY/JZLVvzrfoV89N/69PVlsqR79dWKYKlQIR36Gq7fUj1xGe6DZL0WStIHEbg0bP8dPfeOTWbUfPfGeRoqomytK9Seuat38tyPArDnOpjGYGXhqxtmxDblOVWnqlJq+8l3spdZLIWQ9LlS54BXMOgWw80fUYvkn3z6RqjwdRRKXbCNyZQtbnelLOz+7gy3O0Lca5F2NrcPa9oLZ12SHkbx28EFJVjdRR3M6/OXoxYj0MHX9mXtd/Ad8le1I=
+sidebar_class_name: "get api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get contact categories by information type"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/crm/contact/data/{infoType}/category"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns a list of all the available contact categories of the specified information type.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"infoType","in":"path","description":"Contact information type","schema":{"type":"integer","format":"int32","enum":["Phone","Email","Website","Skype","Twitter","LinkedIn","Facebook","Address","LiveJournal","MySpace","GMail","Blogger","Yahoo","MSN","ICQ","Jabber","AIM","VK"],"description":"[0 - Phone, 1 - Email, 2 - Website, 3 - Skype, 4 - Twitter, 5 - LinkedIn, 6 - Facebook, 7 - Address, 8 - LiveJournal, 9 - MySpace, 10 - GMail, 11 - Blogger, 12 - Yahoo, 13 - MSN, 14 - ICQ, 15 - Jabber, 16 - AIM, 17 - VK]"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"List of contact categories","content":{"application/json":{"schema":{"type":"array","items":{"type":"string"}}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

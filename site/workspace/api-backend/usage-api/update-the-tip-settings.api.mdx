@@ -1,0 +1,71 @@
+---
+id: update-the-tip-settings
+title: "Update the tip settings"
+description: "Updates the tip settings with a parameter specified in the request."
+sidebar_label: "Update the tip settings"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVE1z2jAQ/SsanWlMMz1xSzuZSac9ZAKcGA7CXrASW1KldQj1+L93V5IpENpTOMCi/Xr79km9RLULcraSARC12YVioV2Q6wkdlJ3XeCBnL+86rK3XvxVqax5AVeA5yZMlJ3JPcSDXA2VVEEqvHYfJmVy6SiEEgTUI1E6MTcReYy2UcMqrFhC8CA5KvdVQCW1iuIdfHQS8ofLZ/GorAtPL0hoEg2wq5xpdRlDFc+CWvQxlDa1iCw8OCITdPEOJVMd568CjhhDjarvn33PE84yDINZAOLxAKziU8QextT6i6wJ5yDaWC+dGG2sbUEYO8cO4g7MmpHa30+n7bomf6owbqvdBE87zhBfwJhLeVOsaPkPfgWSsqDEe8PbnI5I0xpfp5yvIjcqSgCoWoDXWtiKP6yIShTX9KZTTxe3NtDjKi2mUrC7/Cj5EcXW+odAa0c2KorGlamobuMh5y5/sESlRDicKnTMfaeSrOj0yQGB+wIEKa65XJ/dEGtIg/T/LjTMx4U9/xXc/0jaKh9kbuNrWxi6Zw2+2bTtDwMQ8ghVP9/OFuHv8Tr146DROwzcDJeU7mrZVcbUZStLFu2tzScnJXfigq5aJQnjDwjWKeCJ8cT99XumKWaRIWmpc4xEZ5ncj7o7C+n6jAix9Mwx8TC08vyVkviqv1YapWq2pfD0+J718oe0wf3GoTwsGw+FNl7Z3cRWGyZhxV5bg8L+x6xOJPi4XFLvJ70lrK07xas9vDX3PJBk2chxFFc96WpjZdWrHsakkS4RvwbnCXqLCssFDjS5zOAF4LrZJnoO/eaqrKX2f9Et8jvHJ9c+Mo8JTNG9zTaj/AGCSD20=
+sidebar_class_name: "put api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Update the tip settings"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"put"}
+  path={"/api/2.0/settings/tips"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Updates the tip settings with a parameter specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"show":{"description":"Specifies whether to show tips for the user or not","type":"boolean"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Updated tip settings","content":{"application/json":{"schema":{"type":"object","properties":{"Show":{"type":"boolean","example":"true"}},"title":"TipsSettings"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

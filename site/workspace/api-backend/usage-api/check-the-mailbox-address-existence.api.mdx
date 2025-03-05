@@ -1,0 +1,71 @@
+---
+id: check-the-mailbox-address-existence
+title: "Check the mailbox address existence"
+description: "Checks if the mailbox address is already registered or not."
+sidebar_label: "Check the mailbox address existence"
+hide_title: true
+hide_table_of_contents: true
+api: eJylVMlu2zAQ/RWCZyVyg558S9KgDdoCRZZTYBRjaSIxoUiWpBK7gv69M6SU2FkKFPVB5jLbe/OGg4zQBLm8kR0oHdA/oC+/03JtNxjkqpABq96ruCWbQR73sbVe/YaorPmCUKNnX08rWchHskO5GsmrxlB55dhMLuVpi9V9EOpWxBZFl8MLqGuPgY6DAM0htsJjo0JEj7WwXhgbDymsx189hnhiaypikJU1EU3kJTinVZWKKe8CpxpkqFrsgFdx65CS2/UdVpHiOG8d+qgIF91qW4H+6cCnSPv1TgSIZCOSTTGHC9Er08iRMFpCYn6q+v0A2UScf3r2V1R9Q7SN6cfogrMm5KKOFovXwU6s1QhGPIDucSmi71EcPLGHG2IsFOIWqH0757XFwAxmA8r/r7ytc1qZy/y4+PC6smsDkyCwlmzVIW2JD9lgYhxiS5sSnCqPDhfljsa6WWMlaAWhzDAk643vQ5Jb7zW5tzG6ZVmmZrQ2Ydkv41tqU3aU445mLxlTZvZN5T5hpQK/4pYCK47X5utCGuj4ds834WTSLp5lebaBzml8KatZK3tSWYyc5dam7Cqylzy1XdcbKlhcJhDi4uzyShz/OCdXJiPD1BApHyvPEQsdpLZNJaYJe3O6ErFoKnxJ284k/eeATiRG3MTSaQLKNabeDZMEbphhsiQR0PdZBtMmPzaFTFKg/0kM1MnUb3IfhjUEvPZ6HPmYmPf8ItHyAbyCNdN4s6K07fwoDfKeOsrcJpAHV1wkm9MQpY6/GIGxmD2Oqwpd/Kvtakfqn8+uyHY9vU6drdnFwyO/XPRdSlrYxHkSYjojnYBpemjYNodkWfE07avyPqlyWjCo+cpsdwrcF2gx4eAvo3rTZRiy5onP2T5fvevxNBXZmru8oqr/AEmUKbM=
+sidebar_class_name: "get api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Check the mailbox address existence"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/mailserver/mailboxes/alias/exists"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Checks if the mailbox address is already registered or not.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"local_part":{"description":"Mailbox local part","type":"string"},"domain_id":{"description":"Mailbox domain ID","type":"integer"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Boolean value: true - address exists, false - address does not exist","content":{"application/json":{"schema":{"type":"boolean"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

@@ -1,0 +1,71 @@
+---
+id: update-an-opportunity-stage-color
+title: "Update an opportunity stage color"
+description: "Updates the selected opportunity stage with a color specified in the request."
+sidebar_label: "Update an opportunity stage color"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVE1PGzEQ/SuWe+zCLgGpam40IBWVNogEcUA5GO+ENfLaru2FplH+OzN2SDekraBqDpE/5s08z755Sx7FXeDDGy59W46dsz52RkUFgc8KHkB2XsUFBiz5cRcb69VPEZU1n0HU4AnoccUL/ohxwGcrRNUQpFeOwviQX7laRAgsNsACaJARamY3lRYsIAVgjyo2TDBptfUsOJBqrjBQmQT08L2DEPex0Hr5ydZIa8mlNRFMpKVwTiuZ6JX3gYoveZANtIJWceEA6djbe6SAeZy3Dnx6Kd6qmv63mY93SJ6dIHCdSGHdO2zBquCJ9C7+GzyucTlgAw3RK3PHV+lHLwrOmpCJDKrqNUxSu6gzXWpvvSnxn/pxCRqBD3AWoQ0j2+WML55e8Ln1rYj56HCAB/BDtE5T0AF1ZtJJCSFceHsrbpVOUnpbmkGV8tCjpwn2KrjpWtLm2IHB7UjbAPWxqa/t1vbchsh3BHtTsT1GyIId4KoPLtigf0L42RbbRHaqou4TXX/uflwOwdiTfum/IfqBiBs9S+7PiHfiw1xWuX2onrFPA/sPHxFV/1bY4PCIk7RjbgWyF/qr0ji31sC1R2XS5CT1H1UHu4K/MmLtNlCnRC3gFmeUuy6JVcQGN6VwqhzsVyW5V89TyjQk5VLVw5tq7+Ps/ap8no8A/gF8SI7WeY1JmhjdsCy1lUI3pIiXgjinG5aBfNWzxQkNU56X35rjpmlI8wssMLGifE2+LrgRLd1uYdNraVovf/nc6XNjs09VG8fZOAllnttUcd3xkW3bbBiTRJxdnk6m7PjiDOtSA/LTNFlzxJpPLn8QtA==
+sidebar_class_name: "put api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Update an opportunity stage color"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"put"}
+  path={"/api/2.0/crm/opportunity/stage/{id:[0-9]+}/color"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Updates the selected opportunity stage with a color specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"id":{"description":"Opportunity stage ID","type":"integer"},"color":{"description":"New stage color","type":"string"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Opportunity stage with the updated color","content":{"application/json":{"schema":{"type":"object","properties":{"RelativeItemsCount":{"type":"integer","format":"int32","example":"1"},"SuccessProbability":{"type":"integer","format":"int32","example":"20"},"StageType":{"type":"integer","format":"int32","enum":["Open","ClosedAndWon","ClosedAndLost"],"description":"[0 - Open, 1 - ClosedAndWon, 2 - ClosedAndLost]","example":"0"},"Title":{"type":"string","example":"Title"},"Description":{"type":"string","example":"Description"},"Color":{"type":"string","example":"#a7fc00"},"SortOrder":{"type":"integer","format":"int32","example":"1"},"ID":{"type":"integer","format":"int32","example":"1234"}},"title":"DealMilestoneWrapper"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

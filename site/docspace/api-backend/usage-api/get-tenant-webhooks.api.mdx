@@ -1,0 +1,63 @@
+---
+id: get-tenant-webhooks
+title: "Get webhooks"
+description: "Returns a list of the tenant webhooks."
+sidebar_label: "Get webhooks"
+hide_title: true
+hide_table_of_contents: true
+api: eJy1VMFOGzEQ/RXL5yibBlS13BBUCEGrihBxiCLk7E6yBmft2rMBusq/d8bewCYRkEsPSTbeN88zb95MI1EtgjyZyBEg6moRRCbuYFZa+xjktCetA69Q2+qykCdyAXgLlarwFdKTHoKzVQBiaeRwMOCfAkLuteM4irrWAYWdC4yh4qmNFU8aS4ElaC9yW831Qjjl1RIQPBPTGUUg8ynnjM5jHtlDYNJGhryEpeInfHFA19jZA+RIgc5z1qhTSok6fA7URQej6e4FeAJt13J5Tkdz65cKE+poSAfwrJbOUNz3b8df1z1ZURUdsoCepN3j+sUoAtfGqBlHo6+hQybvNKUOphBjhxRBxLXXn/OOby4/pA12CdSMZ2TGALkHvIKXz3lHESoeCXswPbWcQF1lZ9YaUNU+u4NcU7lB6Dm74s0nyoNoeYT1orLYlZyv5zqCOeSS0fVeLAWrotCMUOZ3xxJzZQJVhhpjXaejsz75vn/qNH9+2gJM6N+09j9H299MxVm0HJ1EgVFhHQ6w1igBP7LXl+HR8X/L947GMeUQM1/zRceDL/vzPK5UjaX1+i81dp08RMZEstCEZjXk9/z+nn1Ci8WDKqiGJwKAnK6nu2XfANa+oi4Ls9kTJezuij4x0GIobbuFeHgVlvQnU05nw/4gC+0Cy9oYyXn5Fe8STqv25A9ZIrqTLDM2V6a0AfeacM1vRAqUnOymthGvm7Qotit87SslcpVGI07/NqxHzaSznBLTEEWj2bYxer9dhOa8U0arIbvIUbJLFRdfS38Bb/LsltG8Lc/D9W3L4MnNnFG6XThxrJLYE66RkCR3VDcJzs1tJSe9oqqEbJqZCjD2Zr3m4z81eLYDPa6U12lzTKZ0Q0n+IK25R1FPeZrn4LgzK2XqJOzO9ue+vLrh4sctYVno7V4k1dsHZt+8ql663NtNShnw97r3TkTTpEZTXRt8evVuRFvhBs3CTmm6/gHypJEV
+sidebar_class_name: "get api-method"
+info_path: site/docspace/api-backend/usage-api/asc-web-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get webhooks"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/settings/webhook"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns a list of the tenant webhooks.
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"List of tenant webhooks with their config parameters","content":{"application/json":{"schema":{"type":"object","properties":{"configs":{"type":"object","properties":{"id":{"type":"integer","description":"ID","format":"int32","example":9846},"name":{"type":"string","description":"Name","nullable":true,"example":"Winfield Upton"},"uri":{"type":"string","description":"URI","nullable":true,"example":"some text"},"secretKey":{"type":"string","description":"Secret key","nullable":true,"example":"some text"},"enabled":{"type":"boolean","description":"Specifies if the webhooks are enabled or not","example":true},"ssl":{"type":"boolean","description":"SSL","example":true}},"additionalProperties":false,"title":"ASC.Web.Api.ApiModels.ResponseDto.WebhooksConfigDto"},"status":{"type":"integer","description":"Status","format":"int32","example":1234}},"additionalProperties":false,"title":"ASC.Web.Api.ApiModels.ResponseDto.WebhooksConfigWithStatusDto"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

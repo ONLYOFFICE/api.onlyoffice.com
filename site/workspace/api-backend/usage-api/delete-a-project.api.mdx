@@ -1,0 +1,71 @@
+---
+id: delete-a-project
+title: "Delete a project"
+description: "Deletes a project with the ID specified in the request from the portal."
+sidebar_label: "Delete a project"
+hide_title: true
+hide_table_of_contents: true
+api: eJztWG1v2zYQ/isCv86JZSUpNgPDkOYFM9YOQexgQNt8uEhnm7VEciTV1DP833cnyi+ag8RyF6Afqg8yTd1z9/DueOJpITxMnOh/FMbqz5j67k34deK+IxympZV+Ts8X4rz0U23lP+ClVr8jZGgZZ2kkOuKR5FDcLwmVoUutNCwm+uISc/ToIohqC9Gj9NPITzEaXEbOYCrHErNIqmrO4t8lOh+NrS6qCaOth/yYTNSP3uqMCC1EqpVH5XkIxuQyrYh1Pzs2uxAunWIBPPJzg0REP7B10kM8DFov0fFTmfG9ybn2AREk8RouydqElrysLmbjjFYuKEnieFdLWHm2Wjep+p8oX4C6yqTfEnzQOkdQJIlfoTA5z40hdyiIKYkHKvsChuuw78HkghLA43uZU2i02tvGBonOwaQ9bgRu1h4kCxwaVFkLJLt6hFC0gNzSnrhmj7TErL3YGhic2BbGPmyDeSfV7IJyGNI2yceWalQbY6+a4gM3UPsHlQBe+mqmLg2rLTJQY8366ulrnVdlcXffbHT2TpKT08DhxsovsD9pDteFLtW2W1ZlqSPG2hbgw9RJ0tAQN9AjTQX1IBXr/DycxaV0aekclb3DddwAFaBUGlD+G9xBpWBkIZ1JNfmvR5y3NNvA7IrzYnRaFlTQ3eE0Bo5yJtePL+RAHcHJ9gYCa2FOUvTiLdwL7AnZ6/A9qbI5VMPseVASJ/FRLzlKklF82u/1+mdvjs/enP18lpx+EBslb/d4TwyeNLX2TVnKrLnc+jp64ra66mwyOcz/hAKfX8t7OcPoA6g5eDeTIf7Vhn4WBAqqV35HnNM+BTssIH8hT0qbR15HjiUjqFB1fRjT5rmzL8A/feIDWFZSqeQhapoOcww/Bme+/lY6tL9CVkglSQN4bRsV6opU6TniXxZMIL8O1GuF4c5k355OtZIf6fS9p9M6UK8VhobevUppL94zBsNqEAVJjvj2iX0P4PYJn0/KHnzpDir8t6F/kA8Nyj8S/jtM+K1QvU4gds+XbJysX5fkr9Bvnsa93RbzTkHdlVP1ZakC6S9xJLnqOEyJBH5K/7tgZDc5jrurPn8hs/7H+OiX+5+Wgjt9+wWtqxr9kp0spt6bfreb6xTyqXack03b7/hJFIBiufW1YMhtbMjbJ78ZbA4wRv6B1QmG9U3D445QVTY2sdXiuE++3XwEuFp5OTTx8ZIV0XGcDdTevNBFUSriFA0rntHt1XAUnd8MyAyvN6wkp3JGC1wu/wV8bKUR
+sidebar_class_name: "delete api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Delete a project"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"delete"}
+  path={"/api/2.0/project/{id:[0-9]+}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Deletes a project with the ID specified in the request from the portal.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"id":{"description":"Project ID","type":"integer"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Deleted project","content":{"application/json":{"schema":{"type":"object","properties":{"CanEdit":{"type":"boolean","example":"false"},"CanDelete":{"type":"boolean","example":"false"},"Security":{"type":"object","properties":{"CanCreateMilestone":{"type":"boolean","example":"false"},"CanCreateMessage":{"type":"boolean","example":"false"},"CanCreateTask":{"type":"boolean","example":"false"},"CanCreateTimeSpend":{"type":"boolean","example":"false"},"CanEditTeam":{"type":"boolean","example":"false"},"CanReadFiles":{"type":"boolean","example":"false"},"CanReadMilestones":{"type":"boolean","example":"false"},"CanReadMessages":{"type":"boolean","example":"false"},"CanReadTasks":{"type":"boolean","example":"false"},"CanLinkContact":{"type":"boolean","example":"false"},"CanReadContacts":{"type":"boolean","example":"false"},"CanEdit":{"type":"boolean","example":"false"},"CanDelete":{"type":"boolean","example":"false"},"IsInTeam":{"type":"boolean","example":"false"}},"title":"ProjectSecurityInfo"},"ProjectFolder":{"type":"object","example":"13234"},"IsPrivate":{"type":"boolean","example":"false"},"TaskCount":{"type":"integer","format":"int32","example":"0"},"TaskCountTotal":{"type":"integer","format":"int32","example":"0"},"MilestoneCount":{"type":"integer","format":"int32","example":"0"},"DiscussionCount":{"type":"integer","format":"int32","example":"0"},"ParticipantCount":{"type":"integer","format":"int32","example":"0"},"TimeTrackingTotal":{"type":"string","example":"TimeTrackingTotal"},"DocumentsCount":{"type":"integer","format":"int32","example":"0"},"IsFollow":{"type":"boolean","example":"0"},"Tags":{"type":"array","items":{"type":"string","example":"Tags1,Tags2"}},"Created":{"type":"string","example":"2020-12-22T04:11:56.5658524Z"},"CreatedBy":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"},"CreatedById":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"Updated":{"type":"string","example":"2020-12-22T04:11:56.5658524Z"},"UpdatedBy":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"},"UpdatedById":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"Id":{"type":"integer","format":"int32","example":"10"},"Title":{"type":"string","example":"Sample Title"},"Description":{"type":"string","example":"Sample description"},"Status":{"type":"integer","format":"int32","example":"0"},"Responsible":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"},"ResponsibleId":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"}},"title":"ProjectWrapperFull"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

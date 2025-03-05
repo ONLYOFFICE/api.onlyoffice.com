@@ -1,0 +1,71 @@
+---
+id: get-a-signature
+title: "Get a signature"
+description: "Returns a signature of a mailbox with the ID specified in the request."
+sidebar_label: "Get a signature"
+hide_title: true
+hide_table_of_contents: true
+api: eJytU01v2zAM/SuCrstqN9tluWVLgRrtgCHeTkVRKDZjq7AlTaLbZob/+0jZ+TC643wSxcfH9yi6l6iqIFcPslW6SXJdGYWdB/m4kAGKzms8ULaX6w5r6/UfhdqaW1AleK7ydJIL+Uo4qhmoqoRQeO0YJldyC8RmglAiHKmF3VPI7Xb2TbxqrAXWILKNCA4KvddQCm3inYffHQS8og7T8astSU8vC2sQDPJROdfoIupKngN37WUoamgVn/DggHTY3TMUSDzOWwceNQTOTiqedMnRXPr3SWG2obKJRlPXipwP8WNVwVkTRrJlmr5nyc+2jxL+k/ZJX1ZeQI/6FnJvfatwvPq0pAt4U61rGHRNMWm/xba5KA3otalmwJoRhMzCukD9AhfonbUNKDODo+9A8lRQY7xghSf/G4VKjlP7nF6/H9Qvo6YVgzKytEAhmZMVRPMKawoS5XSyvEqTuK+npUr681OuHtKPXx4/DJJX2L+AD3GDO99ET+hWSdLYQjW1Dcw813HPGTEWyuHiN8j5XcbR//NnOM2GFN7BgYg189VjeiGNajk7q41G+eG35/W+OQ50vp7pwIR7GxtNA/5m27YzpE3kUa/Y3uQ/xfpHRu3Y9+ioUUjU1Oovon1czQ==
+sidebar_class_name: "get api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get a signature"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/mail/signature/{mailbox_id:[0-9]+}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns a signature of a mailbox with the ID specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"mailbox_id":{"description":"Mailbox ID","type":"integer"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Signature object","content":{"application/json":{"schema":{"type":"object","properties":{"MailboxId":{"type":"integer","format":"int32","example":"132"},"Html":{"type":"string","example":"html"},"IsActive":{"type":"boolean","example":"true"}},"title":"MailSignatureData"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

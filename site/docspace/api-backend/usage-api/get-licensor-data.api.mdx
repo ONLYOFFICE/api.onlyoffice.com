@@ -1,0 +1,63 @@
+---
+id: get-licensor-data
+title: "Get the licensor data"
+description: "Returns the licensor data."
+sidebar_label: "Get the licensor data"
+hide_title: true
+hide_table_of_contents: true
+api: eJylVV1r4zAQ/CtGzybOhfYlTxd6pZQLR2mu3EMJRbE3sVpZ0knrtDmT/367sp3mg5ZCICSWrB3Nzu5OGoFyFcT4UcwAUZlVSLLkHhZemoJWYp4K68BLVNbcFmIsVoBTlYMJ1v+QKEUqPARnTQBCacRoOOSfAkLuleMoipmqgIldJrmtnDSb5LVUCImWC9BJ6K4loNwaBIMcL53TKo+3Zs+BQRoR8hIqyU+4cUCwdvEMOVKg88wRVUuhu+WXrICXlXybgllhKcajy8tUVMr062HaQwX0nG16RPyqI2wYKxWm1kRaUwD6GlIBb7JyOsbbChKENxTbVATK7tybZ4yRiqX1lSRFRO3V1wmQTEqfy+CaQRJZFFTfsE+lRf+MzGxTGNg83dsFVSVcfC8tcsyAKsP0eswzCU521L4oiyutObswdxFkTw6Ez8U4oHAb+uHZ6+OFtRqkOe0BB7laUlcnapnI3fSoQAvdwST0MZaHYHcjE9i2MitGkvpubz6WUgfihwoju8nsavAHFoMr62Hwh+dyymM56Dr/fae3B7HdMvjF8NvpnD8YWWNpvfoHheBTAXJqXNyQv9BMh/yJ3z+9AG+Qb8iCeL96bvX5dn6c/j1g7U1IsIT3dAvynAFFVUAXdX7EDiC5eCKTTmWjwTDrXSXrRIuOEw1HMCu/Bh8iqdrToIgS0Y2zTNtc6tIGPCnFlN8kbaBgqn1mMzal1ncO89tVlyj9pA1qkWhIh8dSoRg+t/ZFQZRMmaWN0UcFmjg2AObdMlqPYksT2UpGe+zgbwBPFTvOp3n32s9l7nLg9s2clkSWLo2aNZ3mj5wgnSTVo7R7bn6sPMkWxaWYplnIAA9eb7e8/bcGzz1Bj2vpVTtIj3O6q6QmIcm5VFFWMclzcFygtdR1q+/RXwWXZ9ceN9e/6SzrfViSVvzugdH7V2azj31Yq5YBf2/TDyKapq035dWfb199GNFl2J9miec0Yv8BqheY4w==
+sidebar_class_name: "get api-method"
+info_path: site/docspace/api-backend/usage-api/asc-web-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get the licensor data"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/settings/companywhitelabel"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns the licensor data.
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"List of company white label settings","content":{"application/json":{"schema":{"type":"object","properties":{"companyName":{"maxLength":255,"minLength":0,"type":"string","description":"Company name","nullable":true,"example":"some text"},"site":{"maxLength":255,"minLength":0,"type":"string","description":"Site","format":"uri","nullable":true,"example":"some text"},"email":{"maxLength":255,"minLength":0,"type":"string","description":"Email address","format":"email","nullable":true,"example":"Sydney_Roberts4@hotmail.com"},"address":{"maxLength":255,"minLength":0,"type":"string","description":"Address","nullable":true,"example":"some text"},"phone":{"maxLength":255,"minLength":0,"type":"string","description":"Phone","format":"tel","nullable":true,"example":"some text"},"IsLicensor":{"type":"boolean","description":"Specifies if a company is a licensor or not","example":true}},"additionalProperties":false,"title":"ASC.Web.Core.WhiteLabel.CompanyWhiteLabelSettings"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

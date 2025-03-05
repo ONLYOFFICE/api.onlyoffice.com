@@ -1,0 +1,71 @@
+---
+id: get-the-module-availability
+title: "Get the module availability"
+description: "Returns the availability of the module with the ID specified in the request."
+sidebar_label: "Get the module availability"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVMFu2zAM/RVBZ6/Oip18y9aiC7YBQ9Oegh4Um4m1ypIm0ekyw/8+UrazpEl32qWVRVJ8j+8xnUS1jbJYyQiI2m5jvoSyDRr38imjy/FcrDo5b7F2Qf9WqJ39DKqCwIWBTjKTL5QH8qmnqgpiGbTnNFnIe8A22CiwBqF2Shu11obeFG6T7hpXtQbEi8Y6fS9uRPRQ6o2GSmib7gL8bCHiFfXxKqgGEEJMoCx9UBPNEDS38wpr+RrDt6HH4oYisayhUbLoJO4910YMRJwiGxcahXTTtvRez1QCRO9shMj517MZ/zt9+qNzBpQVO2VaKASGFsS7iZSOAqxaG6gysVEmnoYqHVOMWpfOIljk55X3RpdpyPmPyD26c8zroSuB7PtMfpi9Pwf2aNUoGDCZTNLUaldRZAuYBkmDKmSuvM6vr2b5wQCT6Hmnq54HBmE3jbsNhmpqRF/kuXGlMrWLeDbvrxwRQ6Hsj4y0ZCLDNC/a6UCQUH2B/SRqPYSzSe6T2kRO241L5RoNZ3xyTdNattkyoRD3t8sHMf++oEeYzYDTKCRbSar3RKNRadhjjzvAY38eW/c13+6vfv/b7uM4EH5h7o2iaRDYpEI3KrjiWVEmaZjEGlSUR8ubyYL8TCokraig69YqwmMwfc/X1CzwitNxp4JmTyaxD/4sknf/Qfp4vy4inlS1jCatCn3R8Zk0TtvbP1FWPf2odGNgXpbg8ajkbDnYXAdj390+UC7b/tRJz8lJ44Ffvwjn1FQTNv7bZ2+UdN3g074/5A+hNysOTh6ZMwPa4T/9J+Ng
+sidebar_class_name: "get api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get the module availability"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/settings/security/{id}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns the availability of the module with the ID specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"id","in":"path","description":"Module ID","schema":{"type":"string","format":"uuid"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Boolean value: true - module is enabled, false - module is disabled","content":{"application/json":{"schema":{"type":"boolean"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

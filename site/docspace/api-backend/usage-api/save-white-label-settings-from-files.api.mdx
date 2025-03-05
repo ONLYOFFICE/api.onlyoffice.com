@@ -1,0 +1,71 @@
+---
+id: save-white-label-settings-from-files
+title: "Save the white label settings from files"
+description: "Saves the white label settings from files."
+sidebar_label: "Save the white label settings from files"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVE1PGzEQ/SuWz1E2pb00N1qEhIraqinigCI02Z1lXRzbtb2BdJX/3hl7N7B8qbTlAIw98/bNm+fpZISrIOcXcoExKnMVRCG+4cqDqSiSy4m0Dj1EZc1JJecywAbPGxXxFFaoh6Jjb9fHSmOQE+nAwxojeobtpKGA6k7CEfhrulaGop8t+i0FFYbSK8fodLpwWKpaYRCqFrFBoe2VFSqI2noBoiIAPl6joNjYSAChpBjkvJNx6/g7K2s1gqErvIW103QWfYu73eQ+Fayh1fHf2GQMEdGAiX/DiLT1GJw1gXSj/IPZjP+MWXzI1WIDusW54MqBz34wTCq0JYZQt5q+U1pDrCKDgXNalSmr+BEYsXue4Y5+JvLd7M1jGmcG2thYr35hJVPS28dJn60gSmsVAsVBxBSSWmuiSxShTHmp+v2T1cq4Noo6GYmpBCxbr+I2GQlCeckkLq+RD0g7qKjZG0pAuWQ1H8yPnBqSUDfsV6HZsCIMNq/JsvlTU0IhwzaW/e1siMnEsaGoAKeKg+msGMqKhJWgCn4KjFL3xg/oN4PrW6+pvInRzYtC2xJ0k4HHHE/5RuRCyS0MHS94RtkW4773QyNmn5Bd27t6lNYbu7T2WmGSUpnapmoV2YHycPFxeo6r6aFTlM28M6PNAQ+IVVhDcksPz2r+iZgPW+zu3Pi6ifRtRryNhdOgknGSrF0/nQvWgDJpPkn9DMOW2M+Iz0dTIonTIKi461YQ8Mzr3Y6P8xLg2VUqwEqTz+c16IAvNfT6hfVkW2mydysyvXU6kLy0/h+bZxbWy4z2m/KO1JIDr5gV6bWk7IaeIhmYxcuFh2WJ7n7Voz3EKPtH9/XL4jsls33HDs9e7v9h+OHKbO+Dj62fKfBv1u/Jiq7Lz4dGP+Tnq2cr+haHbFZpSevyN/eufVM=
+sidebar_class_name: "post api-method"
+info_path: site/docspace/api-backend/usage-api/asc-web-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Save the white label settings from files"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/api/2.0/settings/whitelabel/savefromfiles"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Saves the white label settings from files.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"IsDark","in":"query","description":"Specifies if the logo is for a dark theme or not","schema":{"type":"boolean","example":true}},{"name":"IsDefault","in":"query","description":"Specifies if the logo is for a default tenant or not","schema":{"type":"boolean","example":true}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Boolean value: true if the operation is sucessful","content":{"application/json":{"schema":{"type":"boolean"}}}},"401":{"description":"Unauthorized"},"403":{"description":"No permissions to perform this action"},"409":{"description":"No input files"}}}
+>
+  
+</StatusCodes>
+
+
+      

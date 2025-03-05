@@ -1,0 +1,71 @@
+---
+id: get-member-photo
+title: "Get a user photo"
+description: "Returns a photo of the user with the ID specified in the request."
+sidebar_label: "Get a user photo"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVclu2zAQ/RWCpxawLccxCte3tCmKoE0bZEEPgWHQ0thiK4ksOcom+N87Q0pOXCdIYfRgmctwljePj41EtfJyei3PwNgCRCLOcoPGy1lPGgtOoTbVSSancgV4CuUCXDCQPWmVUyUgOD7fyIomZFZ7cDqjbV3RzCrMaZyBT5227IsWr8hEnBzTuoPftXZA7tHV0JM+zaFUctpIvLfszaPT1Yos4U6VlB8tvZ+M38n1esanvTWVB88HRsMh/21HuszrclEpXYjHZKfCOL3SlaJFrqQnHCBNe6JUd7qsS+H1A3R7C72iDch0XfaEL1VRUDKpqRAq5HjK2kKnAaXkp+egzW4VZvETUmTIHGOKOqbc5fFcvdt1fN/KmLaruijUgvGIwD3Ck8FS1QXOuQ/zYD7neuYHo8mwz5+BpQBrRo+rfj32ebTbJ+bhu2Gffl1Ewvf1cKdPmrBXUCJCn35dUGrg60E/6NVesSaj/mS0KS+w5B8qjHb7xBtP+uNJFy+y8dVwFy1p92jfqH/YVkfhVJZpdqmKsycsXqrCkzPUGFwdXXwcRCUZHFl9ajIo/OC8vafHaAabG+mPFSpaId/sfTw82L2+V5WqMadr8kASEYwOd42+GUHZlNp7mnuBYbo0rhSYay9UGuzC6fEzIViLKoNiaeoqC4V6SGun8T6omvLpnJOY/wJeoFujWNxuyQDkjFVo57bUjtJQ8aoKs6Q0QDC04lZjHmYnx8JbSPVSQyZ0FdZYCsHjQDKRqOhWcoPOkoZOZaKsTkaDYWIDvkkTlXaddJpA05tOjGtHzJA5op0mSWFSVeTG4w43vvKOiAclF9PVfsESFlVqG4EN2yibL7TQ63R/y6xV/9SYXxoCqLpamnD6CVF+wIJZQtacd8zoZsStspRsqYKYtu4/AxKmAcau3q1SmkdR/i89aKtEuMPEFkoHBgVUm7Yh1wwBWVJLuEmhKTSYbh7AmCeBGqAn+6ZZKA9XrliveZliOeYUDW+U0/FuUu8y7XmcbS7Xi4W+OW/fz7fi8U19NvOuaRX35kYVNc9oGHravdnrGVnmRHAiAycSN4/SFCw+Obbz5DFxNpz9/OmSbJkJ22SJtGgH7P3ZlP5iUcyAv+veCyeaJjKRMO3s49aLJ9oKO2sGaEYa9Ac9LRpS
+sidebar_class_name: "get api-method"
+info_path: site/docspace/api-backend/usage-api/asc-web-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get a user photo"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/people/{userid}/photo"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns a photo of the user with the ID specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"userid","in":"path","description":"User ID","required":true,"schema":{"type":"string","example":"9846"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Thumbnail parameters: original photo, retina, maximum size photo, big, medium, small","content":{"application/json":{"schema":{"type":"object","properties":{"original":{"type":"string","description":"Original photo","nullable":true,"example":"default_user_photo_size_1280-1280.png"},"retina":{"type":"string","description":"Retina","nullable":true,"example":"default_user_photo_size_360-360.png"},"max":{"type":"string","description":"Maximum size","nullable":true,"example":"default_user_photo_size_200-200.png"},"big":{"type":"string","description":"Big","nullable":true,"example":"default_user_photo_size_82-82.png"},"medium":{"type":"string","description":"Medium","nullable":true,"example":"default_user_photo_size_48-48.png"},"small":{"type":"string","description":"Small","nullable":true,"example":"default_user_photo_size_32-32.png"}},"additionalProperties":false,"title":"ASC.People.ApiModels.ResponseDto.ThumbnailsDataDto"}}}},"401":{"description":"Unauthorized"},"403":{"description":"No permissions to perform this action"},"404":{"description":"User not found"}}}
+>
+  
+</StatusCodes>
+
+
+      

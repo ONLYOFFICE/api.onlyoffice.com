@@ -1,0 +1,71 @@
+---
+id: add-a-custom-navigation-item
+title: "Add a custom navigation item"
+description: "Adds a custom navigation item with the parameters specified in the request."
+sidebar_label: "Add a custom navigation item"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVltzokgU/isWr5sZjZpskq19aAgRL2gQSUJm8tBCCy2XJtCojOV/n9ONJiaTmd2HUCUcu79zb77DVuE4KJSrb0pBOKdpUDS1suAsaaR4RQPMKUuVpxPY9cqc8gqQWwWVPGQ5/SF3DYJ9kgsLOUjKibIGHFGedqDlk8LLaSaNXCnI94sGbnjv7TcAnzTWlIcNHpJGhnOcEE7yolFkxKMLSvwGTeVeTp5LUvCv4GYvqsyHoLaKx1JOUi5EnGUx9aTp5rIQrrdK4YUkwULiVUYgGDZfEo+DnSxnGck5JYXYFaGI59vI+yLA17iUnbxEDEXG0qJWbbdav2r+UkyZLLj9pHj7/hGm4Dl0EDALlicYbCtlSUVLyAYnWSwgrf315YPb4VIgsxGek/gj06+maghgnfw/kAIAOJUG/ST4M9THHF/RBAfk+/dmlgb/zHFBzrsn9E6dTNetYS9gCK6x7YS6E4DUs+CmRigw5frS6BhCuL5RzTvdEdKg8tL9L6HlmMt91Jnas9hEi64GjrA9kquVHuvW3bT7UHbGhdXRTNXWu245v1G7NDYsEvg9e3mPtJWe9ZheqS4dtc6Qnz44PYPFm9NWvLhom8kkW4wIO3PYwAnVOBtGUy0Nnerv+eWDdh89W6YTufHDnWEvLqLZKjKGz0Mrt1OWBWf2dDMzo3iU2KfmGtv3WaLZ1qlZTX7c9x41N9dN/SYqUNd6jtFNORi4qqcNN0uzc2NWNukvdFNr++ZkMtZ6j49B4uencdWZ2fnAHF7q1UDFuJcbFo3cgiM6eJy6dkUt3a/A84W+8iIaQjnc28IrfLJsGee+15q5664sme3cTabDM83t9/8V/bQTHMef31FVOrM05Irn4gLULkMhOk7dHXRvurA41M4YPDyk314am00w9OxM6+kjF11XZVs/T5C1HG/UGN3fjjeR4a97kdo3O0PXvXZQ3n7UkP4XMy5IuczRw3WBWlFbR4hfP6DeaNM1swJdO8Eqmg6d+HkhY9Ljm1lkl1aiaTL/kK37qUnS8qgCc8ZigtM3JeB5SQ4Kk9RgCbmFcvwvJdDilMuFmkrGL0wiSEmpeajbOv2VepwU73ma+NIQkFfIgC+UjBWSSTAP4V8TZ7TZ/tpqvkyAmqFfOavpAbUDp4sxkK8EAYopUIrXXgk5z66azZh5OA5ru2/DGImdRq2o7I5GiS0ormaxDwfKS3UgviGpwDAV9sJ6+0RJgY3FVDnWlXkKDp2+Tgf9UNLtTphYMGn6UFSWJGUK0TRsGWFjqtuzBrrtgwORaZ1DDNlDaqAvSpdgSdEH/77/26H2vhhHY+qTp+G+VJxseDOLMVQKgi1rYq77/E3UEZDQadnIutdiEr3rtliq+w3Nki0F3e1WvLZA5LudWAa/ufgWAHGFc4rnopjfnsBnePgc2CoRNE1UWGb8ZSYiFPC4rJv6bujtTg4ayPNIxv+IfTo6zbcTewbg+f5DIGG+0MnxWnwkwP1KAYHJDsjDJte20NM0KOVrqNQ2xdERb8zbkxfJk7cXRFaHrbQ6ivDtITzZJyLuIq0PVbbb+lxDQQ/4euu3Gi8nv0aLHj9B1D8BzGlMRg==
+sidebar_class_name: "post api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Add a custom navigation item"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/api/2.0/settings/customnavigation/create"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Adds a custom navigation item with the parameters specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"item":{"description":"Item parameters"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Custom navigation item","content":{"application/json":{"schema":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"Label":{"type":"string","example":"Label"},"Url":{"type":"string","example":"Url"},"BigImg":{"type":"string","example":"data:image\\/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkAgMAAAANjH3HAAAADFBMVEUAAADJycnJycnJycmiuNtHAAAAA3RSTlMAf4C\\/aSLHAAAAyElEQVR4Xu3NsQ3CMBSE4YubFB4ilHQegdGSjWACvEpGoEyBYiL05AdnXUGHolx10lf82MmOpfLeo5UoJUhBlpKkRCnhUy7b9XCWkqQMUkYlXVHSf8kTvkHKqKQrSnopg5SRxTMklLmS1MwaSWpmCSQ1MyOzWGZCYrEMEFksA4QqlAFuJJYBcCKxjM3FMySeIfEMC2dMOONCGZZgmdr1ly3TSrJMK9EyJBaaGrHQikYstAiJZRYSyiQEdyg5S8Evckih\\/YPscsdej0H6dc0TYw4AAAAASUVORK5CYII="},"SmallImg":{"type":"string","example":"data:image\\/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8\\/9hAAAAUUlEQVR4AWMY\\/KC5o\\/cAEP9HxxgKcSpCGELYADyu2E6mAQjNxBlAWPNxkHdwGkBIM3KYYDUAr2ZCAE+oH8eujrAXDsA0k2EAAtDXAGLx4MpsADUgvkRKUlqfAAAAAElFTkSuQmCC"},"ShowInMenu":{"type":"boolean","example":"true"},"ShowOnHomePage":{"type":"boolean","example":"true"}},"title":"CustomNavigationItem"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

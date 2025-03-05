@@ -1,0 +1,73 @@
+---
+id: create-a-file
+title: "Create a file"
+description: "Creates a new file in the specified folder with the title specified in the request."
+sidebar_label: "Create a file"
+hide_title: true
+hide_table_of_contents: true
+api: eJztVk1v4zYQ/SuEjoFjOU7a3RooimySRYNus8HaQYPd5EBL44gbmVRJKo5r+L/3DSklip06lwK9VAdZJufjzbyZIVeJl3cuGX1LZqokl37kd3LbSxxltVV+ia1Vclz7wlj1l/TK6F9J5mRZxeIr6SULyFFyu4ZWTi6zqmKxZJScQMCTE1JoWgh2IJQWviDhKsrUTFEuZqaENbFQvgg7Xvmyu98oWPqzJuf7N/pG7+1dGE97eyNxPoPtYJcePWkHt0I5kavZjCxpL2bWzMXp55Pr9PrT+Dq9vJxcC6lzmIOAE94Io0mYWfBxr80C3mCqBwAcnCuIvDBW4J+DvRA/INu59K4nlAfushRTElkh9R3gwuKmuywzNlf6rlz2GTB72oasje8EDY9Yq3VA1AsqbLWj0vqVeR69PpkNCeyDlkpaOSePOAOHGn/AScz3OfOmmKNK+iLZJO5jJOX8FDsuK2guk9Eq8cuKLThvEU2yZr4bWj6YfMkSmdEA6PlTVlWpspCw9Ltjq6ttU2b6nTLPWK2pyHqF2uNdDoE/NlA9hQeNDTBYoHlVotwQ2pbmpNmLGQphbemTltOSzpBhq2WJ320z44YgJxYFIeGWEy/L0ixC+jMudyYH9USNnQ5locGYWnD9DGBqTElSI538cEZdZbSLiRgOBtsoLp57KVYiL/f+rdxfhDLZJBvpeZTIIbU0hGoC3KsqR17zD8u3LUdiNu3GELBS1yp/4WfQPPuvvNqHIZwqB3KXbwP/Xd2T+Cr1Es17r1h10hbaDiWp5R3GHaSPH6SXdjwH47t1altyZTiWFDJosf6lNczblX1D/eYmhWheZ97xJxksxzVW70tXPf5SO7I/y3yutIIF6Q08cBPEgJIzmDJLoj+srCL4hqjdnoeD4WD/YLg/eD85eDc6fDcaHPYPj4ZHP/3w7isb+WRiVe22cnSD5+hHfndqpYOOVxlZgBaq/mhwsF3oV1o25w5wsxSmWWFyHlrGhfri2TVKUlmpdNgfpPEIW7Ujbh0WeISRfWjHYM3ZTwrvq1GaloinLKKxl7450lJExWTdOQ/H3EexoF89FZ8SA1C/0bIds0Xc7rVj+IVuCI4b9cvzOD1r0/k0Dp9T3R11HQK2B5i3Na0Zwcx0DZ2Y+bzWCEaMQ4Diy9l4Io4vz2GFExVTwB6QGehzuucysN7Ajyd7c/huJq9zDvx/BfhPrwBNKXI8KSoGlQg26zh/YvN84zqFJNqHh3G4/fWSUeeWEBhGA4Q2gfxqNZWOh9h6zcvgxPIlEZ8P0iouwdBnuXL8jQqdydLRjhLpXjZeBdw2lOZuepBlzf/weY/26lxo1reQLdrL6arZPol+9ids5Fl964hc91qN4yyjyu+Uve3MosvP4wmEp80VaG5y1rFygUV+B6gmxB2mRlhbobv0XY2TBfvRJs8AnncvR8h9GCHNB0f1ajJeTpM2M/zmsF5VWa3igAKLrXzc+keNpxEWpZmbW6D+G4opMIs=
+sidebar_class_name: "post api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Create a file"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/api/2.0/files/{folderId}/file"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Creates a new file in the specified folder with the title specified in the request.
+
+**Note**: If a file extension is different from DOCX/XLSX/PPTX and refers to one of the known text, spreadsheet or presentation formats, it will be changed to DOCX/XLSX/PPTX accordingly. If the file extension is not specified or is unknown, the DOCX extension will be added to the file title.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"folderId","in":"path","description":"Folder ID","schema":{"type":"string"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"title":{"description":"File title","type":"string"},"templateId":{"description":"Template file ID","type":"string"},"enableExternalExt":{"description":"Specifies whether to allow the creation of external extension files or not","type":"boolean"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"New file information","content":{"application/json":{"schema":{"type":"object","properties":{"Name":{"type":"string","example":"File name"},"UpdatedBy":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"},"Updated":{"type":"string","example":"2020-12-08T17:37:03.3424957Z"},"Location":{"type":"string","example":"4\\\\46\\\\File name"}},"title":"FileWrapper"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

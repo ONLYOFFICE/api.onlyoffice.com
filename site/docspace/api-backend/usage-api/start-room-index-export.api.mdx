@@ -1,0 +1,71 @@
+---
+id: start-room-index-export
+title: "Starts room index export"
+description: "Starts room index export"
+sidebar_label: "Starts room index export"
+hide_title: true
+hide_table_of_contents: true
+api: eJyVVt9v2zgM/lcEPe0AL07TbNjlrZeuQHG7a5F02EMRDIrNNFplyZPkrpvh//1IyXHsJc12Ly1DkR8//pDomnvx4Pjsnl9JBY6lbGFM4fgq4aYEK7w0+jrnM+68sJ7OrnUOz++fS2M9T3gprCjAgyWMmmv8gcYyxyOpUSqF36Kcg8usLAkNlQTDrsnGwtdKWsAA3laQcJdtoRB8VnP/vQxI2sMDWDTdGFsIH1XnE1TAsyhKhUZ/vpu+bZoVobnSaAeOACbjMf0bRr55RMfMIKj2dCrKUsksZJl+cWRSH3Iw6y+QhWQt1cTLGACT3Ns4b6V+OMg0JKkrpcSamMYkO+KcmPMGNdYa+2u098HsFKAzBTAPz55QkWuGeYoHOFrQIfbt3vhUrc8m51OElm5uSOGhX4S1MQqEPqyCY1ln3gMj9giGo+WrUFKj4WYTBgl0VdBUzi2I6LWotI5Fmfew5kJnoIJ4JaQiJQ7C6TLet6DsNWulhLXoqGqlhHVhyG4no7qNSNpWTFgbG3WttOrn2WXRJF1m4+QsmSTnyXRP96XW3I/7TM/6HCdDbucDUtMX6IzprnjpA7WL5XyECIXRo7stxsgRd3QpqXTrCj3vhHtcxgY14YZVytNTcZ0f3q5FOGUbPGby5OTXlGycpmTXpv70Jt0sxSEZhP43PDK/uix9MuFZ+u17s4/00ar/F6hCh9+Mg4FEnksCEeq297JshHIwbFB4m7FNFkYXpfzH5KDcaNG+dpfejC5NVhV4ff+qpMrBUtNQjUEozHR8dtirj1pUfmus/BHmkr85ZnRlCI1JevLpdkjHfGU1DrrZbEIKDrLKSv89XFrhss+E+vkRSMFpnLAc39AA+Iqmbgi/pJ3imKV1EGIw2O0V3ClbQ3unNC7uGdwjM56KUqaT0TilaruUPF1ay7xJg3/n7sA+7XYS9WTGt96XszRVJhNqGzGHZD7QCYuOnLjuUlvSPohP/jDBbjCQ1N+oSHbrb2DWLsLMmEcJoWZSb0zw7nX4E6yptWhNvCOjp0l4xZFsIcJmauFPlG2QUr3fdKd82iRoKtNSCWSLUas4+bHs95QhWmLhaTlQ6Wl3hw+FhM/abb+vPxYvlBgd63otHN2jpiH11wosjQaKT8LKeEmwR7l0JOfd9L+YyKtF+8nwB9t/RhxNYdccTT14EqqiXyiG3tH2blZotcUZxYYTiXhwkWVQ+p7LwTcCDUc3n7c3yzs0pnYPJyL2vhUI/iifn0YlUqC/tCqOetR1HDcs6M4+Hr3o0abYZU4Z4MPwHw/EYT4=
+sidebar_class_name: "post api-method"
+info_path: site/docspace/api-backend/usage-api/asc-web-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Starts room index export"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/api/2.0/files/rooms/{id}/indexexport"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Starts room index export
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"id","in":"path","description":"Room Id","required":true,"schema":{"type":"integer","format":"int32","example":9846}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Ok","content":{"application/json":{"schema":{"type":"object","properties":{"id":{"type":"string","description":"Id","nullable":true,"example":"9846"},"error":{"type":"string","description":"Error","nullable":true,"example":"some text"},"percentage":{"type":"integer","description":"Percentage","format":"int32","example":1234},"isCompleted":{"type":"boolean","description":"Is completed","example":true},"status":{"oneOf":[{"enum":["Created","Running","Completed","Canceled","Failted"],"type":"string","description":"[Created - Created, Running - Running, Completed - Completed, Canceled - Canceled, Failted - Failted]","example":"Created"},{"enum":[0,1,2,3,4],"type":"integer","description":"[0 - Created, 1 - Running, 2 - Completed, 3 - Canceled, 4 - Failted]","example":0}],"title":"ASC.Common.Threading.DistributedTaskStatus"},"resultFileId":{"description":"Result file id","nullable":true,"example":{"int":1234,"string":"some text","boolean":true}},"resultFileName":{"type":"string","description":"Result file name","nullable":true,"example":"some text"},"resultFileUrl":{"type":"string","description":"Result file url","nullable":true,"example":"some text"}},"additionalProperties":false,"title":"ASC.Files.Core.ApiModels.ResponseDto.DocumentBuilderTaskDto"}}}},"401":{"description":"Unauthorized"},"501":{"description":"Folder indexing is turned off"}}}
+>
+  
+</StatusCodes>
+
+
+      

@@ -1,0 +1,71 @@
+---
+id: create-an-o-auth-account
+title: "Create an OAuth account"
+description: "Creates a mail account with OAuth (only Google OAuth is supported)."
+sidebar_label: "Create an OAuth account"
+hide_title: true
+hide_table_of_contents: true
+api: eJy1Vk1v2zgQ/SsCT7uAHMl2gQV8ajZxW2M/0tbOqciBliYWG4rUklQSV/B/7wwp2VaSTRQg9UGmyDfDmTeP4jTM8Y1ls2+s5EImp1mma+Usu4qZhaw2wm1xsWGntSu0ET+4E1p9Ap6DISODIxazO8QBu9qhVQ42M6IiGJuxMwQ4sBGPyH3Eg/voTrgiuiCf0W9ayW30UeuNhHZK2MjWVaWNg/z3E3Rv4L8arPtT5xhMwzKtHChHQ15VUmQ+qOS7pS0bZrMCSk4jt60Ag9Dr75A59FMZXYFxAmxwkwP99yMOIfi1uHNgnRFqw3bdxNM2FsytyCAizCxKo1F0qW6UvlNxNMaXkOLBaRvVzv8oR1tpZUNokzR9vEvgMu9IRE9vRMQ/WJq1vl/kR1CBnjdY45hda1NyF6amE5yAe15WkkDjCXEyp9IembZsHQOBIO+p0ieZLr2R4msJxzuutZbAVc/OmRoI/S8v4fkdFCEQ6UtxppXCREWgYYD/pdgo7moDv5KsqWfrkytfIKsgBCIX9hRzuIVBOZA2hfMTFOE+oXPuODlDWrSBSm5/YYbTKe20qo26GEr8BUoCq+V45uwLJtdcWjhssNKY2jBuYvbB6PIBfE/8PqEcASMnSui5mKSTdDROR+l4Nf5jlr6bTScnafj5YB6G8UZ+l3UozrNKsS3oFbJ6oJO9LDqdzGl2oT5o6b/wzx7qHhRtv9Ta8bkx2gwtJR3WVxks7Eej62pg2fEEScFfEtYBvQJeSr5uD8Bgs3O45rV0g/HLghvIzzV+FNXr9iKttdfAkQU3hm8Rj3dwaQdKcfdICeFWCTrwq+/S8eNL6FLxthPAEAhVAr5iNKzS1n9LuCvwLeGVSFDRiW8r2ivLJpqsGfUW5haM9a1FbaSXp6tmSSJ1xmURXPV3/ptWomDIdkf9yZKuufDperJLOfBUib/AE0X+irAch6tj1rf1qdE9+vXQesy7cnStw4Hgti0gI6Gutd+z5fZMl2WtMMxo6UOPvs6Xq+j08wLNiIKQnKQuyR9korHk/vvZBhYKHnHVtkeH+79H0FFf9EZtV0ubg3uXVBLFSvH5ajVtmb8Rp4jEQuPT9wEx64qNw1BurJWvKMKbZs0tXBq529E0cmuov8ThLTeCWgJ6w22KrsVs2A3WjHj0yY1WFBTBZR1q+qDv2cWdBSoaKvcs9upIv58vlisEr9smswwlNvyOGlB8zhgl5Mn2WvNzDVZObWq+IWzwSSLwafeEd+OF1w4oq25JbY8i7GswbhOhJ6X1pEnTBFkjoR0+LP2vxV74AU1lvcKofwKsSwyX
+sidebar_class_name: "post api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Create an OAuth account"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/api/2.0/mail/accounts/oauth"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Creates a mail account with OAuth (only Google OAuth is supported).
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"code":{"description":"OAuth code","type":"string"},"type":{"description":"OAuth service type: 0 - Unknown, 1 - Google","type":"object"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Created account","content":{"application/json":{"schema":{"type":"object","properties":{"MailboxId":{"type":"integer","format":"int32","example":"12"},"Email":{"type":"string","example":"email@only.com"},"Enabled":{"type":"boolean","example":"true"},"Name":{"type":"string","example":"name"},"OAuthConnection":{"type":"boolean","example":"true"},"Signature":{"type":"object","properties":{"MailboxId":{"type":"integer","format":"int32","example":"132"},"Html":{"type":"string","example":"html"},"IsActive":{"type":"boolean","example":"true"}},"title":"MailSignatureData"},"Autoreply":{"type":"object","properties":{"MailboxId":{"type":"integer","format":"int32","example":"33"},"TurnOn":{"type":"boolean","example":"true"},"OnlyContacts":{"type":"boolean","example":"false"},"TurnOnToDate":{"type":"boolean","example":"true"},"FromDate":{"type":"string","format":"date-time","example":"2020-10-01T17:04:32.0000000"},"ToDate":{"type":"string","format":"date-time","example":"2020-10-01T17:04:32.0000000"},"Subject":{"type":"string","example":"subject"},"Html":{"type":"string","example":"html"}},"title":"MailAutoreplyData"},"EMailInFolder":{"type":"string","example":"eMailInFolder"},"QuotaError":{"type":"boolean","example":"false"},"AuthError":{"type":"boolean","example":"false"},"IsGroup":{"type":"boolean","example":"true"},"IsAlias":{"type":"boolean","example":"true"},"IsTeamlabMailbox":{"type":"boolean","example":"true"},"IsDefault":{"type":"boolean","example":"true"},"IsSharedDomainMailbox":{"type":"boolean","example":"true"},"DateCreated":{"type":"array","items":{"type":"string","format":"date-time"}}},"title":"MailAccountData"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

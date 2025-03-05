@@ -1,0 +1,71 @@
+---
+id: initialize-migration
+title: "Initialize migration"
+description: "Uploads a backup of a migrator specified in the request and initializes the import."
+sidebar_label: "Initialize migration"
+hide_title: true
+hide_table_of_contents: true
+api: eJy1VEtv2zAM/iuCzl497JhbVxRYsVfQtKciB8ZWYjWypUl02tTwfx8p2c6j6W7LwaYlPj5+/JhOImyCnD3JWm88oLaNXGYyqKL1Gvd00cnrFivr9Vu8/aagVJ4DPFkyky/kp+Syp6hShcJrF5PM5KMzFsogQKyg2LZO2DXZqYz1IjhV6LVWpdCNwEoJr/60KqCAho80ajD6TYV4p2tnPV5ROQceaoXKh4itoQ+qNWb9xZ+Z1FzfAVbyHNTPsXyTPENRqRrkrJO4d5wpoNfNRvbcz4Doqy337FHYBlWDbIJzRheRkPw5cObufSq7elYFMmZvnfKoVeDbiIvep8DmdCrQxm4HvtbaMMRzYPzLJHFQ2ZLbtCHWiFllDk7nX64+59M4c+Yy744Z6rlx5Xcjia03FFohulmeG1uAqVLSU4g/+EakQNkfqWTBnafmLmplYoTAfVf7cUBVus7GIZ7ESm6Sqb0/DOH2FWpHnEwkTqRwxrWNlTSyh7yxdd1S53uxiIDF/e3iQVzP76geN55aMoCUm+OZxhriIAc4d5MGxWE3zjg5EsV/0vvAHKpXzJ0BIo7AxoGNJDwxreRJU6fnMVTOSq/ZyXbQ3OJ0Ka7rVhDUozd9z8cEx/PGk7kDr2HFRJI8Sh3YJrGtwQT1DwrOt+si+FELDQthB6blLzK3pIyzTe6X5F+N/zjd4HKT6n164ESHFO92kiU6rcn89+KBnFfDLte25BgPL3TIzwjBxp6ikONZRwJpNi1s2DflZFlCmzb4oOptVPVgMNKLTZ4KfOyYn332QUjXpZ3p+8k/XX0YMW1V8mbOl4T6L3pxCa8=
+sidebar_class_name: "post api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Initialize migration"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/api/2.0/migration/init/{migratorName}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Uploads a backup of a migrator specified in the request and initializes the import.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"migratorName","in":"path","description":"Migrator name","schema":{"type":"string"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"path":{"description":"Path to the backup file","type":"string"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={undefined}
+>
+  
+</StatusCodes>
+
+
+      

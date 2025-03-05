@@ -1,0 +1,63 @@
+---
+id: get-overdue-milestones
+title: "Get overdue milestones"
+description: "Returns a list of all the overdue milestones in the portal projects."
+sidebar_label: "Get overdue milestones"
+hide_title: true
+hide_table_of_contents: true
+api: eJztV01v2zgQ/SsCz05kq3axMFAs0jRog266QexggaQ5TKyxzVoitSTlxhX83ztDyoqcphu73QA9VAebIufNDOeDeqyEg5kVw2tRGP0JJy4+kxlapxVacdMRFielkW5FEpU4Kt1cG/kFnNTqHUKKhpGGRqIjPpMcips1oVK0EyMLFhNDcYGuNMpGEGXSukhPI8iyyM0x0ks0aYlR3tiMpPIrhTYOsqh2yh6SfoO20MqSX8NKJN0u/20b+qtWf6+OYBOtHCrH0lAUmZx47+NPliGVsJM55sAjtyqQlIAxsCIcbSa3rXl9y57QAvlUoHEyOHIePPz7s+JgPCV9mrZkJDk2I1RHTLXJwYWpFwlN4B3kRcZCveSFWHfEWDp+bbDWGalmW5IjP9iEjEEjB660+1rsMvTUnhu5BNe2eat1hqC2hKeQWRRrQrjgoRhJXqrD8o+hmJNBWn9DVZJJ9cQmkm7SPeglB0ky7vaHvd5w8PKw3x/8MUiSq+DXe1zt5hMLf9BOTneWPwZ1kkq3h/gbzHDXGHXE0cTJJY7BLo51qdzepTDwVjNtMf1hJUEHtazDdP9UDF5yKvpXLSWvV3uWfWOq8bIsZbpdgvVz8MjP5vE1JW2RweoD5E+U1ZlcYHQFagXOLuSODXUGCmaheI+oFcCMcjq4/htTGjrZdGRZMgKPYjy1w5QOpUvzBPzjx5hE05KOPB6ipukwx/BDsMXdn6VF8wrSXCo67gw4bbb674RU6RUit15wvknUc6Xhskh/vpxqJb/L6VcvpyZRz5WGH/hIdvf7RgZJ/1Fq8YcdgG2+8XMf2IvAZuTtlsu/C/4XLPhWqp4nES3rDftumBM/HdHv9r7lu5cKakZOhy9L5Uiv5KKYoS8icHN6iaGQcXLYjTcUv+HHccYMj1m+ISZuPckvOcZi7lwxjONMTyCba8vaHnBtXokCUKxbN4URE+pQto/eF+6JdiGZyxHTZn3zsNwRyhfjNtZvTqqp9vA6VMc6z0tFFqOR9yK6OBmNo6PzU1LCuwl+8g6tZ8MFbSMH3+e1jbfoHrmCPNxqdX+F+L+uMnUEHN65mBpQ+sOkDMUdknbN4SFJSls4DepzoVFPY588irzPDyGq6hYs98h6zdP/lmj43kbDJRgJ/qS5viFL883VrRILZtNETCdYsPolZGXIzYObEme4qa63J2OS5drbTufCp7MesPbNklq1dG9ntlO7wL/rzncgVRWKhTa2kQ9L30U05RSkOcI31EhfASUv6Cg=
+sidebar_class_name: "get api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get overdue milestones"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/project/milestone/late"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns a list of all the overdue milestones in the portal projects.
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"List of milestones","content":{"application/json":{"schema":{"type":"array","items":{"type":"object","properties":{"ProjectOwner":{"type":"object","properties":{"Id":{"type":"integer","format":"int32","example":"123"},"Title":{"type":"string","example":"Sample project"},"Status":{"type":"integer","format":"int32","example":"0"},"IsPrivate":{"type":"boolean","example":"false"}},"title":"SimpleProjectWrapper"},"Deadline":{"type":"string","example":"2020-12-22T04:11:56.4458522Z"},"IsKey":{"type":"boolean","example":"false"},"IsNotify":{"type":"boolean","example":"false"},"CanEdit":{"type":"boolean","example":"false"},"CanDelete":{"type":"boolean","example":"false"},"ActiveTaskCount":{"type":"integer","format":"int32","example":"15"},"ClosedTaskCount":{"type":"integer","format":"int32","example":"5"},"Created":{"type":"string","example":"2020-12-22T04:11:56.5658524Z"},"CreatedBy":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"},"CreatedById":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"Updated":{"type":"string","example":"2020-12-22T04:11:56.5658524Z"},"UpdatedBy":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"},"UpdatedById":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"Id":{"type":"integer","format":"int32","example":"10"},"Title":{"type":"string","example":"Sample Title"},"Description":{"type":"string","example":"Sample description"},"Status":{"type":"integer","format":"int32","example":"0"},"Responsible":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"},"ResponsibleId":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"}},"title":"MilestoneWrapper"}}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

@@ -1,0 +1,63 @@
+---
+id: get-rooms-notification-settings
+title: "Get room notification settings"
+description: "Returns a list of rooms with the disabled notifications"
+sidebar_label: "Get room notification settings"
+hide_title: true
+hide_table_of_contents: true
+api: eJylVMtu2zAQ/BWCZ8Ny3Zx8C9oiKPpAkTTowTCCtbSOmFAiS66cuIL+vbuUlMgOfCh6sCyKO6OZnaVaTXAf9Wqtb5DI1PdRZeq7I7MzOZBxddSbmXYeQ1p9LvRK3yNdO1fFadmI1jMdMHrGIbO2erlYyF+BMQ/GSyUTCFrVE7SKr/Dc1YQ1CQq8t0NF9hAF2uqYl1iB3NHBI5O57QPmxEAfRCaZ/sWFibC1WCSlk3IIAQ5cbQiPng803exE61cTSbmdCsKjngyVikpUI/2RDZFfN9bKjl5RaHCm8RkqL8t1q43Yerd8fzHTkQL7Zf7oKlSEz+Jg65xFqHtot+lYDBSFEWqwPyb2dmAjc5MhYdaXNx/mv3A7v/RGft9cgTbOr4ccPpKbn82LN3XXyZsuFu/eJnVbQ0OlC+YPFlqqIuZNMHRIfiDmd7J/94jygJOHgm08cQHqTbc57eU1UhPqqEDZf+xqhaximD2JGqjkRQbeZMv5IhvHJ5viskSuRXPYY4hJchMsA0siv8oy63KwpYtCeZK67KgeqMXI6PtGxq+fsGP3rwPmzReUCauhSutpGc+d0OfOPRpMDTX1ziX02yy5WnT3ivZLmU3PYitIB2Ggv0JKXTx7no6Mta/H6z/SGJzK1GbeAltiaamz7RDNWtrAlRxOCuBFzZRKvhUpIu5vSoFhbbuFiLfBdp08/t1gkNHi2z0E0x+s9YZfV/KscTaSaeq/vsxz9JLkHmzTB3Hy9ZAcXwbp6tNPrpVgjrPrUxpuhH3cqg9T7uNQewVy7WZnEG3bDwb7Guv7rbOIweFYLV3mT0L3FzOr+nw=
+sidebar_class_name: "get api-method"
+info_path: site/docspace/api-backend/usage-api/asc-web-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get room notification settings"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/settings/notification/rooms"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns a list of rooms with the disabled notifications
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Room notification settings","content":{"application/json":{"schema":{"type":"object","properties":{"disabledRooms":{"type":"array","items":{"type":"object"},"description":"List of rooms with the disabled notifications","nullable":true,"example":[{"int":1234,"string":"some text","boolean":true}]}},"additionalProperties":false,"title":"ASC.Web.Api.ApiModels.ResponseDto.RoomsNotificationSettingsDto"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

@@ -1,0 +1,63 @@
+---
+id: get-auth-services
+title: "Get the authorization services"
+description: "Returns the authorization services."
+sidebar_label: "Get the authorization services"
+hide_title: true
+hide_table_of_contents: true
+api: eJzFVcFu2zAM/RVD58DOih2G3IJ2KIq1w7A066EIAkVmYrWypEly28zIv4+UncSe1zan7RBEsslH8vGRrlngG88m92wGIUi98UmWTKtQGCd/8SCNZosRMxZcvFzlbMI2EMhiBu5JCvBsxBx4a7TH86RmZ+Mx/eXghZM2QkxYDzLxR1dhdAAdyINbq6SIFtmDJ7eaeVFAyekUthYQyKweQAR0tI6yCrIJqnkJHSsfHNaCVv0svpLViOlKKb5SaBhcBSMGL7y0dGV3Uq8lqDyZ24AeuxELMqgTkG+j2VvQCjZcbJcfxp/GdulLrtTy2Zgc9LI0lQeK1YN8L+JF5/ZWXG9KSAK8BIogNaJV4rQIVx3jkyMIrlFJHfCVMQq4HqDPLAiJZPtErpNQQMJRIqiEVgF7jSQImKwAryExLtGGen+ITansGi34TkzuHN+inQxQ+v8onieuqhOQf0Szkyn+d5LEYDzPJQFy9a3D2ZorD4dM2HR2nt7BKp2FKpcmnWPvznGunVE+veGab6DEzqa0BL7AdiB1di09dncdJXDcEo+w9YP8382pj/wdflaA4JY7bF8A55M1yoj/bR2xYUFTK+l3g6SotMXyF8GknQXYeYyMUX4fxx+GG3Cu90Ehj8x6EJWTYYvLF3efF0t6v8SiaRs74Dnm84wGwBa7xbCuUDntD4Mz3K0pumPFhWlXNqmehwIvGbcyO0vHmW9XfkYIRxLohETFvCqn0KMIwU6yTBnBVWF8GGjtmt4kjSOjbPfFzWh/N1PWL/E4q1aSJkbtFPbNaGPhM2HMo2z0iDNmovewU2hNeTcZPZ2RzCwmW3J9HHJ2iXvkddL+LKw+fp9OpLytimY1s4rLuAcii3XL/z2VjJbYgUh20wM8druAFEai0bquV9zD3Kndjh6j2BxJZEHrxclmMu4XGKVAzSD91LZIMZsKAZaa1e6h4ReWWnUQyeXn2zaLfnuaRrQHQt+/0tsudr9vTQaPcdpf8ajrpvdY196+efWqR1vh3prIXeDE/QbYbg/X
+sidebar_class_name: "get api-method"
+info_path: site/docspace/api-backend/usage-api/asc-web-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get the authorization services"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/settings/authservice"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns the authorization services.
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Authorization services","content":{"application/json":{"schema":{"type":"object","properties":{"name":{"type":"string","description":"Name","nullable":true,"example":"Winfield Upton"},"title":{"type":"string","description":"Title","nullable":true,"example":"legacy_1080p_small_wooden_mouse"},"description":{"type":"string","description":"Description","nullable":true,"example":"some text"},"instruction":{"type":"string","description":"Instruction","nullable":true,"example":"some text"},"canSet":{"type":"boolean","description":"Specifies if the authentication service can be set or not","example":true},"props":{"type":"array","items":{"type":"object","properties":{"name":{"type":"string","description":"Name","nullable":true,"example":"Winfield Upton"},"value":{"type":"string","description":"Value","nullable":true,"example":"some text"},"title":{"type":"string","description":"Title","nullable":true,"example":"legacy_1080p_small_wooden_mouse"}},"additionalProperties":false,"title":"ASC.Web.Studio.UserControls.Management.AuthKey"},"description":"List of authorization keys","nullable":true}},"additionalProperties":false,"description":"Request parameters for authorization service","title":"ASC.Web.Api.ApiModel.RequestsDto.AuthServiceRequestsDto"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

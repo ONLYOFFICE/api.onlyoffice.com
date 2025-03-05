@@ -1,0 +1,71 @@
+---
+id: get-topic-posts
+title: "Get topic posts"
+description: "Returns a list of all the posts of the selected forum topic with the dates of creation and update, post texts, and authors."
+sidebar_label: "Get topic posts"
+hide_title: true
+hide_table_of_contents: true
+api: eJztV21v2zYQ/isEPyuRrDTdYmAY0jTtgnVFUDsY0DQfLjJjMdELR1JpXEH/fXdHOY4Tx3abD9uAGYZNkfcc747PnY6t9DB1cngus7osm0r7Wfyutk3p5EUkncoai1O43srDxue11d/A67r6TcFEWcJZHMlIfkU5JS86RE2Uy6w2JCaH8pPyja2cAFFo50V9JaAohM+VMLXzjibowalCZV5NxBXtLnxtdCa+ap/z6gS8YtEMtyPFAqqJaAzNR6xIeHXnXcTzwJa6XTTLgIVSeWUd+1DhA9rE2jWZrclEAz6Xj+0eswUnb3HBZbkqQQ5b6WeG8LryaoruRxKtLcGHqb1UduS/Vc7UlVOOEGmS0N+y7g99JIKXHAfUldWotvIkDsYUOmNP42tHmPapFfXlNYaMnLS1UdbrsOMpq1uIgbUwI1e9Kt1m+MlkG0cjqe6gNAUJDdI92UVy1ASFC7TzVlfTJdkRD4TrZRE2xnNbjzmdHy+JHxEB1GQ9Ik3SZGeQ7iQ/jQd7w/3XwyTd3UtfHwwOfv5MSs6YOC9U0lvyZvadMb3f6j6kTcNcXGyd9J+dFT/zD5nwVjtTwOwjs3qdL3/oGyU+QzUD7240h137YhMIKqDDR+nDW/BgRyWm7npMYzG3a+FIUgCjCH9q6ytdqDO7Af7lS4yikybzjoaqxukwR/BdcObu18Yp+wtMSl1hFlnwNe6AW/jgkDxGVfVMqT8tmGD8OKcatYXDQYTc9R6yvMRkfEEi/XuYupkfWIawSqvdazNlaodKNGb5dThdIkPia6MYNtLf1PcXj3Tv1T5zhKrwNuQiKiwdOb+wuF5TqVgcHlGAOfC88EIk+pHKl2yZSn3Z43r/wiq2f5AO0pdyY6Fkc/kd59oJ/LrgA72tHuz+f/n7z5Q/vcnjqkH/KI89+MZtmQxVU1Ib+JEWCpw4Kmqn6DxHXmc3M/mkITxPxI4I4pEY4DggIpHiOIAulunAXizXoi0sOqnCEu7Khp3W6N1qa5ZEg1EkvcoM7pY3vhJWpRFMBxH+pM+Vo74UveNDYJlXyeBp73hWQd+IY5RJCtvbvMYMk1PFqcdlVMZgdJzuJvGir+fOOuYaFLd9C9xRe6vs7bxBboiiMvfeDOO4qDMocsr3x1H7QCsiAGX34KYwoiY1ZP3K+8Iickb/rmbzDjwPy9G8QV/Cspcaj4jhfdyO5m6JEVshPh2PxuLw9ASVkDfBzoLuDVyuqGyVwI10v8d75R814Es+tot+/B++w/QRo8UY6x0GDP1pQi0Jp31O4URJPG++R/ShCdmB2RCFGw/+D+dXHzwzPlnEtu0lOCpOXUfTfzXK0o0Ph7dgNVxSvJEaE+1ojEy7gsKpNeF6cHVaafucAhVZeAtFQ084vEFCLC5n3QWK5vN7ZtuvHmaZMv4B7slVieh4nxPvj8coS8Fc5t4Nc68fkPaVNi3TcG4g/XbRM5C2Dczuunv5sPQs4p77QZpCdIHp/zdwQye5
+sidebar_class_name: "get api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get topic posts"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/community/forum/topic/{topicid}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns a list of all the posts of the selected forum topic with the dates of creation and update, post texts, and authors.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"topicid","in":"path","description":"Topic ID","schema":{"type":"integer","format":"int32"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"List of topic posts","content":{"application/json":{"schema":{"type":"object","properties":{"Posts":{"type":"array","items":{"type":"object","properties":{"Id":{"type":"integer","format":"int32","example":"123"},"Subject":{"type":"string","example":"Sample subject"},"Text":{"type":"string","example":"Post text"},"Created":{"type":"string","example":"2020-12-07T13:56:02.3269198Z"},"Updated":{"type":"string","example":"2020-12-07T13:56:02.3269198Z"},"CreatedBy":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"},"ThreadTitle":{"type":"string","example":"Title"},"Attachments":{"type":"array","items":{"type":"object","properties":{"Created":{"type":"string","example":"2020-12-07T13:56:02.3269198Z"},"Updated":{"type":"string","example":"2020-12-07T13:56:02.3269198Z"},"Name":{"type":"string","example":"picture.jpg"},"ContentType":{"type":"string","example":"image/jpeg"},"Size":{"type":"integer","format":"int32","example":"122345"},"Path":{"type":"string","example":"url to file"}},"title":"ForumTopicPostAttachmentWrapper"}}},"title":"ForumTopicPostWrapper"}},"Id":{"type":"integer","format":"int32","example":"10"},"Title":{"type":"string","example":"Sample topic"},"Created":{"type":"string","example":"2020-12-07T13:56:02.3259212Z"},"Updated":{"type":"string","example":"2020-12-07T13:56:02.3259212Z"},"Text":{"type":"string","example":"This is sample post"},"UpdatedBy":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"},"ThreadTitile":{"type":"string","example":"null"},"Status":{"type":"integer","format":"int32","enum":["Normal","Closed","Sticky"],"description":"[0 - Normal, 1 - Closed, 2 - Sticky]","example":"0"},"Type":{"type":"integer","format":"int32","enum":["Informational","Poll"],"description":"[0 - Informational, 1 - Poll]","example":"0"},"Tags":{"type":"array","items":{"type":"string","example":"Tag1,Tag2"}}},"title":"ForumTopicWrapperFull"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      
