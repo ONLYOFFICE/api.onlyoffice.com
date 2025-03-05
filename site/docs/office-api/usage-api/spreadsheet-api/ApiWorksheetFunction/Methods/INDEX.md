@@ -14,20 +14,24 @@ expression.INDEX(arg1, arg2, arg3, arg4);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| arg1 | Required | [ApiRange](../../ApiRange/ApiRange.md) | [ApiName](../../ApiName/ApiName.md) | array |  | A range of cells or an array constant. |
-| arg2 | Required | [ApiRange](../../ApiRange/ApiRange.md) | [ApiName](../../ApiName/ApiName.md) | number |  | The row in the range from which to return a value. If omitted, the column number is required. |
-| arg3 | Required | [ApiRange](../../ApiRange/ApiRange.md) | [ApiName](../../ApiName/ApiName.md) | number |  | The column in the range from which to return a value. If omitted, the row number is required. |
-| arg4 | Required | [ApiRange](../../ApiRange/ApiRange.md) | [ApiName](../../ApiName/ApiName.md) | number |  | An area to use in case the range contains several ranges. If it is omitted, the function will assume argument to be 1. |
+| arg1 | Required | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| array |  | A range of cells or an array constant. |
+| arg2 | Required | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number |  | The row in the range from which to return a value. If omitted, the column number is required. |
+| arg3 | Required | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number |  | The column in the range from which to return a value. If omitted, the row number is required. |
+| arg4 | Required | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number |  | An area to use in case the range contains several ranges. If it is omitted, the function will assume argument to be 1. |
 
 ## Returns
 
-number | string
+number \| string
 
 ## Example
 
+This example shows how to return an index of a complex numbers.
 
+```javascript editor-xlsx
+// How to get an index of a complex numbers.
 
-```javascript
+// Use a function to get the index.
+
 var oWorksheet = Api.GetActiveSheet();
 var oFunction = Api.GetWorksheetFunction();
 var ids = ["ID", 1, 2, 3, 4, 5];

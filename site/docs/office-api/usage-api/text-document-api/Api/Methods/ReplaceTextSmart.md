@@ -20,13 +20,13 @@ expression.ReplaceTextSmart(textStrings, tab, newLine);
 
 ## Returns
 
-This method doesn't return any data.
+boolean
 
 ## Example
 
 This example replaces text while preserving formatting and other things.
 
-```javascript
+```javascript editor-docx
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 paragraph.AddText("This is the normal text. ");

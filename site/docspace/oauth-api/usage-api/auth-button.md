@@ -4,13 +4,13 @@ sidebar_position: -4
 
 # Auth button
 
-1. To preview an auth button in your application, click ![More icon](/assets/images/docspace/more-icon.png) to open the context menu and choose **Auth button**.
+1. To preview an auth button in your application, click ![More icon](/assets/images/docspace/more-icon.png#gh-light-mode-only)![More icon](/assets/images/docspace/more-icon.dark.png#gh-dark-mode-only) to open the context menu and choose **Auth button**.
 
-   ![Auth button](/assets/images/docspace/auth-button.png)
+   ![Auth button](/assets/images/docspace/auth-button.png#gh-light-mode-only)![Auth button](/assets/images/docspace/auth-button.dark.png#gh-dark-mode-only)
 
 2. In the opened window, copy HTML, CSS, and JavaScript code blocks and use them to embed a button into your website.
 
-    <img alt="Preview" src="/assets/images/docspace/preview.png" width="400px" />
+    <img alt="Preview" src="/assets/images/docspace/preview.png#gh-light-mode-only" width="400px" /><img alt="Preview" src="/assets/images/docspace/preview.dark.png#gh-dark-mode-only" width="400px" />
 
 3. Copy the **Authorize link** and assign it to the authorization button. This link contains the following parameters:
 

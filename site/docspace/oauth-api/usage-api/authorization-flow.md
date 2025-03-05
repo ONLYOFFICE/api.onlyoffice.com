@@ -24,13 +24,13 @@ If the user is already authorized on the portal, they will be redirected to a co
 
 Click **Allow** or **Deny** to finish the authorization flow.
 
-<img alt="Consent page" src="/assets/images/docspace/consent-page.png" width="400px" />
+<img alt="Consent page" src="/assets/images/docspace/consent-page.png#gh-light-mode-only" width="400px" /><img alt="Consent page" src="/assets/images/docspace/consent-page.dark.png#gh-dark-mode-only" width="400px" />
 
 ## Scenario 4. Error page
 
 If the authorization link contains non-existent [client_id](./auth-button.md#client_id) and [redirect_uri](./auth-button.md#redirect_uri), the user will be redirected to the DocSpace error page.
 
-<img alt="Error page" src="/assets/images/docspace/error-page.png" width="400px" />
+<img alt="Error page" src="/assets/images/docspace/error-page.png#gh-light-mode-only" width="400px" /><img alt="Error page" src="/assets/images/docspace/error-page.dark.png#gh-dark-mode-only" width="400px" />
 
 ## How it works
 

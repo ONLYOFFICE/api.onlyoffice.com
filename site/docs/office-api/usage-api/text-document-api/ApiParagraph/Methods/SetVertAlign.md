@@ -17,17 +17,17 @@ expression.SetVertAlign(sType);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sType | Required | "baseline" | "subscript" | "superscript" |  | The vertical alignment type applied to the text contents. |
+| sType | Required | "baseline" \| "subscript" \| "superscript" |  | The vertical alignment type applied to the text contents. |
 
 ## Returns
 
-[ApiParagraph](../../ApiParagraph/ApiParagraph.md) | null
+[ApiParagraph](../../ApiParagraph/ApiParagraph.md) \| null
 
 ## Example
 
 This example creates two paragraphs. One with vertical aligment "subscript" and another one with vertical aligment "superscript".
 
-```javascript
+```javascript editor-docx
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 paragraph.AddText("This is a paragraph with the text aligned below the baseline vertically.");

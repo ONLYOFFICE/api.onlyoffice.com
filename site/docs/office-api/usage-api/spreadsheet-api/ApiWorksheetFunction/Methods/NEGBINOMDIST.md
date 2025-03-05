@@ -14,9 +14,9 @@ expression.NEGBINOMDIST(arg1, arg2, arg3);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| arg1 | Required | [ApiRange](../../ApiRange/ApiRange.md) | [ApiName](../../ApiName/ApiName.md) | number |  | The number of failures. |
-| arg2 | Required | [ApiRange](../../ApiRange/ApiRange.md) | [ApiName](../../ApiName/ApiName.md) | number |  | The threshold number of successes. |
-| arg3 | Required | [ApiRange](../../ApiRange/ApiRange.md) | [ApiName](../../ApiName/ApiName.md) | number |  | The probability of a success; a number between 0 and 1. |
+| arg1 | Required | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number |  | The number of failures. |
+| arg2 | Required | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number |  | The threshold number of successes. |
+| arg3 | Required | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number |  | The probability of a success; a number between 0 and 1. |
 
 ## Returns
 
@@ -24,14 +24,19 @@ number
 
 ## Example
 
+This example shows how to return the negative binomial distribution, the probability that there will be the specified number of failures before the last success, with the specified probability of a success.
 
+```javascript editor-xlsx
+// How to return the negative binomial distribution.
 
-```javascript
+// Use a function to get the probability of the specified number of failures before the last success (negative binomial distribution).
+
 const oWorksheet = Api.GetActiveSheet();
 
 var valueArr = [6, 32, 0.7];
 
 // Place the numbers in cells
+
 for (var i = 0; i < valueArr.length; i++) {
   oWorksheet.GetRange("A" + (i + 1)).SetValue(valueArr[i]);
 }

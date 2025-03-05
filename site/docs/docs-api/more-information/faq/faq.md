@@ -14,7 +14,7 @@ If you do not know which category below to select, simply start with this sectio
 
 The questions concerning ONLYOFFICE Docs security issues are in this section.
 
-- [How to limit access to my ONLYOFFICE Docs?](security.md#how-to-limit-access-to-my-document-server)
+- [How to limit access to ONLYOFFICE Docs?](security.md#how-to-limit-access-to-onlyoffice-docs)
 - [What's the difference between sending the token in header and in body?](security.md#whats-the-difference-between-sending-the-token-in-header-and-in-body)
 
 [More](security.md)

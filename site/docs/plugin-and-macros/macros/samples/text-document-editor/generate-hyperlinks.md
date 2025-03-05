@@ -1,7 +1,5 @@
 # Generate hyperlinks
 
-## Description
-
 Generates and inserts hyperlinks instead of text URLs.
 
 <!-- This code snippet is shown in the screenshot. -->
@@ -43,10 +41,10 @@ Generates and inserts hyperlinks instead of text URLs.
 })();
 ```
 
-Methods used: GetDocument, GetAllParagraphs, GetText, RemoveAllElements, CreateRun, AddText, AddElement, AddHyperlink
+Methods used: [GetDocument](../../../../office-api/usage-api/text-document-api/Api/Methods/GetDocument.md), [GetAllParagraphs](../../../../office-api/usage-api/text-document-api/ApiDocument/Methods/GetAllParagraphs.md), [GetText](../../../../office-api/usage-api/text-document-api/ApiParagraph/Methods/GetText.md), [RemoveAllElements](../../../../office-api/usage-api/text-document-api/ApiParagraph/Methods/RemoveAllElements.md), [CreateRun](../../../../office-api/usage-api/text-document-api/Api/Methods/CreateRun.md), [AddText](../../../../office-api/usage-api/text-document-api/ApiRun/Methods/AddText.md), [AddElement](../../../../office-api/usage-api/text-document-api/ApiParagraph/Methods/AddElement.md), [AddHyperlink](../../../../office-api/usage-api/text-document-api/ApiRun/Methods/AddHyperlink.md)
 
 ## Result
 
 <!-- imgpath -->
 
-![Generate Hyperlinks](/assets/images/plugins/generate-hyperlinks.png)
+![Generate Hyperlinks](/assets/images/plugins/generate-hyperlinks.png#gh-light-mode-only)![Generate Hyperlinks](/assets/images/plugins/generate-hyperlinks.dark.png#gh-dark-mode-only)

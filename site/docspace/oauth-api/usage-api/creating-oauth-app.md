@@ -14,7 +14,7 @@ To create a new OAuth application on your portal:
 
 4. Click **Register a new application**.
 
-   ![OAuth new app](/assets/images/docspace/oauth-new-app.png)
+   ![OAuth new app](/assets/images/docspace/oauth-new-app.png#gh-light-mode-only)![OAuth new app](/assets/images/docspace/oauth-new-app.dark.png#gh-dark-mode-only)
 
 5. Specify the settings for your application:
 
@@ -57,17 +57,17 @@ Presence: optional
 
 ### Redirects URLS 
 
-The URLs where the user will be redirected after successfully passing the consent screen. Enter the address and press the **Add** button. You can specify several URLs by clicking ![Plus icon](/assets/images/docspace/plus.png). For example, for test and production versions.
+The URLs where the user will be redirected after successfully passing the consent screen. Enter the address and press the **Add** button. You can specify several URLs by clicking ![Plus icon](/assets/images/docspace/plus.png#gh-light-mode-only)![Plus icon](/assets/images/docspace/plus.dark.png#gh-dark-mode-only). For example, for test and production versions.
 
 Presence: required
 
 ### Allowed origins
 
-The URLs of sources that will be able to make requests to the DocSpace API without CORS blocking. Enter the address and press the **Add** button. You can specify several URLs by clicking ![Plus icon](/assets/images/docspace/plus.png).
+The URLs of sources that will be able to make requests to the DocSpace API without CORS blocking. Enter the address and press the **Add** button. You can specify several URLs by clicking ![Plus icon](/assets/images/docspace/plus.png#gh-light-mode-only)![Plus icon](/assets/images/docspace/plus.dark.png#gh-dark-mode-only).
 
 Presence: required
 
-![Basic info](/assets/images/docspace/basic-info.png)
+![Basic info](/assets/images/docspace/basic-info.png#gh-light-mode-only)![Plus icon](/assets/images/docspace/basic-info.dark.png#gh-dark-mode-only)
 
 ## Access scopes
 
@@ -83,7 +83,7 @@ Defines the capabilities of a third-party application in relation to Docspace AP
 
 Check **Read** or **Write** options near each scope. When selecting the **Write** capability, the **Read** option is automatically enabled.
 
-![Access scopes](/assets/images/docspace/access-scopes.png)
+![Access scopes](/assets/images/docspace/access-scopes.png#gh-light-mode-only)![Access scopes](/assets/images/docspace/access-scopes.dark.png#gh-dark-mode-only)
 
 ## Support & Legal info
 
@@ -99,6 +99,6 @@ The terms and conditions that users must comply with when using this application
 
 Presence: required
 
-![Support and legal info](/assets/images/docspace/support-and-legal-info.png)
+![Support and legal info](/assets/images/docspace/support-and-legal-info.png#gh-light-mode-only)![Support and legal info](/assets/images/docspace/support-and-legal-info.dark.png#gh-dark-mode-only)
 
 When all settings are specified, click **Save**. A new application will appear in the application list.

@@ -2,6 +2,9 @@
 sidebar_position: -1
 ---
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 # For desktop editors
 
 To develop a plugin for ONLYOFFICE desktop editors, follow the instructions below.
@@ -14,10 +17,24 @@ To develop a plugin for ONLYOFFICE desktop editors, follow the instructions belo
 
    The plugin will appear in the *sdkjs-plugins* directory. The path to the folder depends on the operating system you use:
 
-   - For Linux - *home/\<username>/.local/share/onlyoffice/desktopeditors/sdkjs-plugins/*
-   - For Windows - *C:\Users\\\<username>\AppData\Local\ONLYOFFICE\DesktopEditors\data\sdkjs-plugins\\*
-   - For macOS - *Users/\<username>/Library/Application Support/asc.onlyoffice.ONLYOFFICE/sdkjs-plugins/*
-
+   <Tabs>
+      <TabItem value="win" label="Windows">
+            ``` bash
+            C:\Users\<username>\AppData\Local\ONLYOFFICE\DesktopEditors\data\sdkjs-plugins\
+            ```
+      </TabItem>
+      <TabItem value="mac" label="macOS">
+            ``` bash
+            Users/<username>/Library/Application Support/asc.onlyoffice.ONLYOFFICE/sdkjs-plugins/
+            ```
+      </TabItem>
+      <TabItem value="lin" label="Linux">
+            ``` bash
+            home/<username>/.local/share/onlyoffice/desktopeditors/sdkjs-plugins/
+            ```
+      </TabItem>
+   </Tabs>
+   
    A plugin **GUID** will be used as the folder name. For example, *\{07FD8DFA-DFE0-4089-AL24-0730933CC80A\}*.
 
    ![Sdkjs-plugins folder](/assets/images/plugins/sdkjs-plugins-folder.png)

@@ -1,5 +1,105 @@
 # Change log
 
+## 4.4.0
+
+### New features
+
+#### Docs API
+
+* Added the editorConfig.customization.features.featuresTips parameter
+* Added opening for hwp, hwpx formats
+
+## 4.3.0
+
+### New features
+
+#### Docs API
+
+* Added the document.isForm parameter
+* Added the editorConfig.customization.showHorizontalScroll parameter
+* Added the editorConfig.customization.showVerticalScroll parameter
+* Added logos for connectors
+* Updated documentation in Chinese
+* Updated docs config page 
+
+#### Docspace
+
+* Updated Docspace openAPI docs
+
+### Fixes
+
+* Fixed loading for ONLYOFFICE Docs editor tab
+* Fixed ONLYOFFICE Docs editor tab in the dark mode
+* Fixed anchors
+ 
+## 4.2.0
+
+### New features
+
+#### Docs API
+
+* Updated documentation in Chinese
+* Added the Frontend frameworks page
+
+### Fixes
+
+* Added screenshots for dark mode
+
+#### Docs
+
+* Updated Macro samples page
+* Fixed Office API usage page
+* Added the editorConfig.customization.anonymous.request parameter to the editor config
+
+## 4.1.0
+
+### New features
+
+#### Site
+
+* Added develop edit url for pages
+
+#### Docs
+
+* Added links to the dynamic pages
+* Added tabs for win/mac/linux
+* Added card list for ready-to-use connectors
+* Added the Conversion API page
+* Changed the Plugins and Macros section title
+
+### Fixes
+
+* Fixed anchors
+* Fixed customization description
+* Fixed links in ready-to-use connectors
+* Fixed the jsValue argument
+
+## 4.0.0
+
+### New features
+
+#### Site
+
+* Swizzled CodeBlock/Content
+* Added ONLYOFFICE Docs editor tab for code
+* Added edit page link on all doc pages
+* Added readme to generate OpenAPI docs
+* Added package to generate OpenAPI docs
+
+#### Docs
+
+* Added editor tab for office js api examples
+* Updated view of command to run desktop in debug mode for macOS
+
+#### Docspace
+
+* Updated docspace openAPI docs For Hosting Providers
+
+#### Workspace
+
+* Updated workspace openAPI docs, add tags and x-tagGroups
+* Grouped paths by tagGroup instead of tag for workspaceBackend
+
 ## 3.0.0
 
 ### New features

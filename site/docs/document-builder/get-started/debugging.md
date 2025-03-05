@@ -2,6 +2,9 @@
 sidebar_position: -1
 ---
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 # Debugging
 
 You can debug any Document Builder [component](../get-started/overview.md). To do this, follow the instructions below.
@@ -41,17 +44,18 @@ The **debugger** command works as a breakpoint and pauses the execution at the s
 
 2. Set the **V8\_USE\_INSPECTOR** environment variable to 1:
 
-   **Windows**
-
-   ```sh
-   SET V8_USE_INSPECTOR=1
-   ```
-
-   **Linux**
-
-   ```sh
-   export  V8_USE_INSPECTOR=1
-   ```
+   <Tabs>
+      <TabItem value="win" label="Windows">
+         ``` bash
+         SET V8_USE_INSPECTOR=1
+         ```
+      </TabItem>
+      <TabItem value="lin" label="Linux">
+         ``` bash
+         export  V8_USE_INSPECTOR=1
+         ```
+      </TabItem>
+   </Tabs>
 
 3. Run the Builder script with the **docbuilder** command:
 

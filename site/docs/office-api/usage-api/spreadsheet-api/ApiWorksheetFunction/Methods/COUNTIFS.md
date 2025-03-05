@@ -14,10 +14,10 @@ expression.COUNTIFS(arg1, arg2, arg3, arg4);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| arg1 | Required | [ApiRange](../../ApiRange/ApiRange.md) | [ApiName](../../ApiName/ApiName.md) |  | The first range of cells to count nonblank cells. |
-| arg2 | Required | [ApiRange](../../ApiRange/ApiRange.md) | [ApiName](../../ApiName/ApiName.md) | number | string |  | The first condition in the form of a number, expression, or text that defines which cells will be counted. |
-| arg3 | Required | [ApiRange](../../ApiRange/ApiRange.md) | [ApiName](../../ApiName/ApiName.md) |  | Up to 127 additional ranges of cells to count nonblank cells. This argument is optional. |
-| arg4 | Required | [ApiRange](../../ApiRange/ApiRange.md) | [ApiName](../../ApiName/ApiName.md) | number | string |  | Up to 127 additional conditions in the form of a number, expression, or text that define which cells will be counted. |
+| arg1 | Required | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) |  | The first range of cells to count nonblank cells. |
+| arg2 | Required | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number \| string |  | The first condition in the form of a number, expression, or text that defines which cells will be counted. |
+| arg3 | Required | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) |  | Up to 127 additional ranges of cells to count nonblank cells. This argument is optional. |
+| arg4 | Required | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number \| string |  | Up to 127 additional conditions in the form of a number, expression, or text that define which cells will be counted. |
 
 ## Returns
 
@@ -25,9 +25,13 @@ number
 
 ## Example
 
+This example shows how to count a number of cells specified by a given set of conditions or criteria.
 
+```javascript editor-xlsx
+// How to find a number of cells that satisfy a list of conditions.
 
-```javascript
+// Use function to get cells if conditions are met.
+
 var oWorksheet = Api.GetActiveSheet();
 var oFunction = Api.GetWorksheetFunction();
 var buyer = ["Buyer", "Tom", "Bob", "Ann", "Kate", "John"];

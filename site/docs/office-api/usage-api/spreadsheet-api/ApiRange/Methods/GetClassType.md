@@ -22,7 +22,11 @@ This method doesn't have any parameters.
 
 This example gets a class type and inserts it into the table.
 
-```javascript
+```javascript editor-xlsx
+// How to get a class type of ApiRange.
+
+// Get a class type of ApiRange and display it in the worksheet.
+
 var oWorksheet = Api.GetActiveSheet();
 var oRange = oWorksheet.GetRange("A1");
 oRange.SetValue("This is just a sample text in the cell A1.");

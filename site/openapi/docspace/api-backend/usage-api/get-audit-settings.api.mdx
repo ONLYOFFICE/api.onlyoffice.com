@@ -5,9 +5,9 @@ description: "Returns the audit trail settings."
 sidebar_label: "Get the audit trail settings"
 hide_title: true
 hide_table_of_contents: true
-api: eJztVMFu2zAM/RVDZyNO0x623Ipi7Yb1MCzpqQgKxmZitbLkSXTWzMi/j5Tt1klRYMCuvcQxzff0+EixVQTboOb3aoF54zXtkyy5bApNCXnQJimAQK1S5Wr0QNrZb4Waqy1STFogkbZMkCqPoXY2IJO1ajadyqPAkHtdC4xBHW14heTOElqSTMJnymoD2spbyEusIMb3NTLUrR8xJ4bUXoSQ7o4xbqvtVx3I+f2t3uBSVzhCaabfomfYxvkKqAudzziAz1DVhpPOZucXh1SBaFtKxf/DI0QFE3G9YH6MpG7ABEwVaZJcdbm4mlw5j5MlWrAU+uexpZGtro3Oo+/ZY3Af5ozNiTPz4cqRK8J3MT17e/nuLDRUOq//YKFi0vnbpGvn17oo0EZ/Q78ReDu0CkL+IAwPTygBvu5QcDG/OQHV6sAb4pjqJ1LjbUioxARG+2S4/hMGV8iK+nUijQIq+SWDWmezyTQbzs8iPhuQmWG7SewWiX6HPkSFjTeMLonqeZYZl4MpXaD5p+nnWaZO5d3K96SDK1E/HLaQOepG5bjkl9ayvO8cSJWFKr6P01IlG4w3m3vSGF3UduMietTIa21QFqBo7/TsZtKUmgVXEOe5J79BetfC06La14X6T/b39YxWL0uILrZ9L+6lWM7kbqjRPPSzH0MvUl66wmaK8YJu2zUEvPPmcJDwrwa9DA//3YHXsBZD7ld8asnTxI2QNkaz1WWeYy0n7MA0pypXo9G5+bKMekTuuEVdM/o/wjt8svsR60nvurPl95C+g2jbrv9c0ZDffXoX0dc2ZMcC+J7+Bb+QjvQ=
+api: eJyVVMFu2zAM/RVDZyNO055yC4qhG9bDsKQYhiAoFJuJ1dqSJtFZM8P/PlKyUyddge4S2zIf+fjec1qBcu/FfC2WkDdO4THJkkVTKEzQSVUlhUQpNqkwFpxEZfSXQszFHjAULQFRaWqQCgfeGu2BmrViNp3ypQCfO2UZRqDY1r9CcqMRNHKltLZSeRiQPXkub4XPS6gl3+HRAjUw2yfIkYDWMR1UcVhl9kp/Vh6NO96rHaxUDSOUoiF7cAQ7p3PPsKSMuKQiIDIwFTvjaokReT2jA3iRta2o19Xs+qZLheRFVizPf4wbi/rxYTytICD1kNW30do7WXlIBSrkWrFY3k5ujYPJCrTU6PvruUldx/1upldvvXnQssHSOPUHChGKZm+LfprGJdapnLoltpI6KQz4RBtytbHWONqP9ExMBPAw36eKEkYm+/yRxzw+Ax9QZGRBG/+mAhCbbnMp2XfAxmlPTSGRI/mGCE0IXAPR7iPJyZBY0kMmrcpmk2k2zM8CPhuQ2cgBD+4AzgeGjasIXSLaeZZVJpdVaTz+Izr0JolAwbyHMUuObEzl+bKneBCxr3SQCi3r8DwuSykFdJYb86wg6Kf0zgT0yOcfsJ0srKJq5h0ZHWbsmiWytQwfT9/+DvBd+S7Xal8/yA9J32+E8IIZpYGoE4WgYNv7sOZ1qZKcEKMs9F9QODpROTlCcgbRCd22W+nhwVVdx8e/GnAcHLo9SKfkliVZb2hqSUkiK9jCILdY5DlYnnCQVRN1v/iDYdtO4bn7tAqsmPTYqmhKf8Pdh1f6OO597mFkwL9d+g6ibWMOaK+hPr56F9FvOFSz2Bv6nP8C0Jz5ww==
 sidebar_class_name: "get api-method"
-info_path: site/openapi/docspace/api-backend/usage-api/asc-files
+info_path: site/openapi/docspace/api-backend/usage-api/asc-web-api
 custom_edit_url: null
 ---
 
@@ -54,7 +54,7 @@ Returns the audit trail settings.
 <StatusCodes
   id={undefined}
   label={undefined}
-  responses={{"200":{"description":"Audit settings","content":{"text/plain":{"schema":{"type":"object","properties":{"loginHistoryLifeTime":{"type":"integer","format":"int32","example":1234},"auditTrailLifeTime":{"type":"integer","format":"int32","example":1234}},"additionalProperties":false,"title":"ASC.Core.Tenants.TenantAuditSettings"}},"application/json":{"schema":{"type":"object","properties":{"loginHistoryLifeTime":{"type":"integer","format":"int32","example":1234},"auditTrailLifeTime":{"type":"integer","format":"int32","example":1234}},"additionalProperties":false,"title":"ASC.Core.Tenants.TenantAuditSettings"}},"text/json":{"schema":{"type":"object","properties":{"loginHistoryLifeTime":{"type":"integer","format":"int32","example":1234},"auditTrailLifeTime":{"type":"integer","format":"int32","example":1234}},"additionalProperties":false,"title":"ASC.Core.Tenants.TenantAuditSettings"}}}},"401":{"description":"Unauthorized"},"403":{"description":"Forbidden"}}}
+  responses={{"200":{"description":"Audit settings","content":{"application/json":{"schema":{"type":"object","properties":{"loginHistoryLifeTime":{"type":"integer","description":"Login history lifetime","format":"int32","example":1234},"auditTrailLifeTime":{"type":"integer","description":"Audit trail lifetime","format":"int32","example":1234}},"additionalProperties":false,"title":"ASC.Core.Tenants.TenantAuditSettings"}}}},"401":{"description":"Unauthorized"},"402":{"description":"Your pricing plan does not support this option"}}}
 >
   
 </StatusCodes>

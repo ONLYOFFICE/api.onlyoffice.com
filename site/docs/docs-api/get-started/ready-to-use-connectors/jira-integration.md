@@ -1,3 +1,8 @@
+---
+sidebar_custom_props:
+  icon: /assets/images/editor/connectors/jira.svg
+---
+
 # Jira integration
 
 This [app](https://github.com/ONLYOFFICE/onlyoffice-jira) enables users to edit office documents from [Jira Software](https://www.atlassian.com/software/jira) using ONLYOFFICE Docs.

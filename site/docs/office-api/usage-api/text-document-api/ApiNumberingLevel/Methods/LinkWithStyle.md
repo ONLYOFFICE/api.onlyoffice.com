@@ -18,13 +18,13 @@ expression.LinkWithStyle(oStyle);
 
 ## Returns
 
-This method doesn't return any data.
+boolean
 
 ## Example
 
 This shows how to link numbering level with the specified heading style.
 
-```javascript
+```javascript editor-docx
 var oDocument = Api.GetDocument();
 let aHeadings = [];
 for (var nLvl = 0; nLvl < 3; ++nLvl) {

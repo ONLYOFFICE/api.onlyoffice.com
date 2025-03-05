@@ -14,7 +14,7 @@ expression.GetColumnFields(field);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| field | Required | number | string | undefined |  | The name or index of the field to be returned. |
+| field | Required | number \| string \| undefined |  | The name or index of the field to be returned. |
 
 ## Returns
 
@@ -22,9 +22,13 @@ expression.GetColumnFields(field);
 
 ## Example
 
+This example shows how to get column fields of a pivot table.
 
+```javascript editor-xlsx
+// How to get all column fields from a pivot table.
 
-```javascript
+// Create a pivot table, add data to it then get all its column fields.
+
 var oWorksheet = Api.GetActiveSheet();
 
 oWorksheet.GetRange('B1').SetValue('Region');

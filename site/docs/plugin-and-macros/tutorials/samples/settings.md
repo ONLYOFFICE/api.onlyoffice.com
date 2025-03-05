@@ -55,7 +55,7 @@ Repository on GitHub: [settings](https://github.com/ONLYOFFICE/sdkjs-plugins/tre
 
 - button
 - init
-- executeMethod ("SetProperties")
+- [executeMethod ("SetProperties")](../../interacting-with-editors/methods/text-document-api/Api/Methods/SetProperties.md)
 
 ## Support
 

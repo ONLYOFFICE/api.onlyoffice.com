@@ -18,13 +18,13 @@ expression.SetHorAxisMinorTickMark(sTickMark);
 
 ## Returns
 
-This method doesn't return any data.
+boolean
 
 ## Example
 
 This example specifies the minor tick mark for the horizontal axis.
 
-```javascript
+```javascript editor-docx
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 let chart = Api.CreateChart("scatter", [

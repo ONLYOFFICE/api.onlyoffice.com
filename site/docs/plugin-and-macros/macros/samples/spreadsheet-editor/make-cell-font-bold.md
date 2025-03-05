@@ -1,7 +1,5 @@
 # Make cell font bold
 
-## Description
-
 Sets the font of the cell **A2** to bold.
 
 <!-- This code snippet is shown in the screenshot. -->
@@ -15,7 +13,7 @@ Sets the font of the cell **A2** to bold.
 })();
 ```
 
-Methods used: GetActiveSheet, GetRange, SetBold
+Methods used: [GetActiveSheet](../../../../office-api/usage-api/spreadsheet-api/Api/Methods/GetActiveSheet.md), [GetRange](../../../../office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetRange.md), [SetBold](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/SetBold.md)
 
 ## Reference Microsoft VBA macro code
 
@@ -27,4 +25,4 @@ End Sub
 
 ## Result
 
-![Font bold](/assets/images/plugins/font-bold.png)
+![Font bold](/assets/images/plugins/font-bold.png#gh-light-mode-only)![Font bold](/assets/images/plugins/font-bold.dark.png#gh-dark-mode-only)

@@ -21,7 +21,7 @@ Now that you know how macros work, try to write your own macro. We have a table 
 
 3. Let's consult the [Office API documentation](../../office-api/usage-api/spreadsheet-api/spreadsheet-api.md) to see what we need to complete our task:
 
-   - First, get the current worksheet using the GetActiveSheet method:
+   - First, get the current worksheet using the [GetActiveSheet](../../office-api/usage-api/spreadsheet-api/Api/Methods/GetActiveSheet.md) method:
 
      ``` ts
      const oWorksheet = Api.GetActiveSheet()
@@ -42,7 +42,7 @@ Now that you know how macros work, try to write your own macro. We have a table 
      const rowEven = i + 1
      ```
 
-   - Now that we can access both the odd and even rows, let's color them in proper colors. Set the desired colors using the CreateColorFromRGB method. Get the cell range within the row using the GetRange method and set the color for the odd rows:
+   - Now that we can access both the odd and even rows, let's color them in proper colors. Set the desired colors using the [CreateColorFromRGB](../../office-api/usage-api/spreadsheet-api/Api/Methods/CreateColorFromRGB.md) method. Get the cell range within the row using the [GetRange](../../office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetRange.md) method and set the color for the odd rows:
 
      ``` ts
      oWorksheet.GetRange(`A${rowOdd}:S${rowOdd}`).SetFillColor(Api.CreateColorFromRGB(138, 181, 155))
@@ -78,7 +78,7 @@ Paste the code above to the macros window and click ![Play icon](/assets/images/
 
 ## Subscribing to events
 
-To subscribe to the specified event and call the callback function when the event fires, use the attachEvent method.
+To subscribe to the specified event and call the callback function when the event fires, use the [attachEvent](../../office-api/usage-api/text-document-api/Api/Methods/attachEvent.md) method.
 
 For example, to subscribe to an event when a hyperlink in a document is clicked, use the following lines:
 

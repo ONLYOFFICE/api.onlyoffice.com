@@ -14,8 +14,8 @@ expression.EOMONTH(arg1, arg2);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| arg1 | Required | [ApiRange](../../ApiRange/ApiRange.md) | [ApiName](../../ApiName/ApiName.md) | number |  | A serial date number that represents the start date. |
-| arg2 | Required | [ApiRange](../../ApiRange/ApiRange.md) | [ApiName](../../ApiName/ApiName.md) | number |  | The number of months before or after the start date. |
+| arg1 | Required | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number |  | A serial date number that represents the start date. |
+| arg2 | Required | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number |  | The number of months before or after the start date. |
 
 ## Returns
 
@@ -23,9 +23,13 @@ number
 
 ## Example
 
+This example shows how to return the serial number of the last day of the month before or after the specified number of months.
 
+```javascript editor-xlsx
+// How to get a date of the last day of the month before or after specified months.
 
-```javascript
+// Use function to get the serial number of the last day of the month before or after the specified number of months.
+
 const oWorksheet = Api.GetActiveSheet();
 
 var oFunction = Api.GetWorksheetFunction();

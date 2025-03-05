@@ -2,29 +2,42 @@
 sidebar_position: -10
 ---
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 # Config
 
 For the WOPI protocol setup, it is necessary to edit the WOPI parameters in the configuration file, which can be found (or created) at the following path:
 
-For Linux - `/etc/onlyoffice/documentserver/local.json`.
-
-For Windows - `%ProgramFiles%\ONLYOFFICE\DocumentServer\config\local.json`.
+<Tabs>
+  <TabItem value="windows" label="Windows">
+      ``` bash
+      %ProgramFiles%\ONLYOFFICE\DocumentServer\config\local.json
+      ```
+  </TabItem>
+  <TabItem value="linux" label="Linux">
+      ``` bash
+      /etc/onlyoffice/documentserver/local.json
+      ```
+  </TabItem>
+</Tabs>
 
 > The default values are available in the `default.json` configuration file, which is available in the folders above (for Linux and Windows). Please do not edit the contents of the `default.json` file directly. The default values will be restored each time you restart Docker container or upgrade ONLYOFFICE Docs to a new version and all your changes will be lost.
 
 Restart the services for the config changes to take effect:
 
-For RPM/DEB packages:
-
-``` sh
-systemctl restart ds-*
-```
-
-For Docker:
-
-``` sh
-supervisorctl restart all
-```
+<Tabs>
+  <TabItem value="rpm-deb" label="RPM/DEB packages">
+      ``` bash
+      systemctl restart ds-*
+      ```
+  </TabItem>
+  <TabItem value="docker" label="Docker">
+      ``` bash
+      supervisorctl restart all
+      ```
+  </TabItem>
+</Tabs>
 
 ## Parameters
 

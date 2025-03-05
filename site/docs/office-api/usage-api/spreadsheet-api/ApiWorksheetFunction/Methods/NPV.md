@@ -14,8 +14,8 @@ expression.NPV(arg1, args);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| arg1 | Required | [ApiRange](../../ApiRange/ApiRange.md) | [ApiName](../../ApiName/ApiName.md) | number |  | The discount rate. |
-| args | Required | number | [ApiRange](../../ApiRange/ApiRange.md) | number[] |  | Up to 255 arguments representing future payments (negative values) and income (positive values). The first argument is required, the subsequent values are optional. Arguments can be numbers, ranges, arrays of numbers. |
+| arg1 | Required | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number |  | The discount rate. |
+| args | Required | number \| [ApiRange](../../ApiRange/ApiRange.md) \| number[] |  | Up to 255 arguments representing future payments (negative values) and income (positive values). The first argument is required, the subsequent values are optional. Arguments can be numbers, ranges, arrays of numbers. |
 
 ## Returns
 
@@ -23,9 +23,13 @@ number
 
 ## Example
 
+This example shows how to return the net present value of an investment based on a discount rate and a series of future payments (negative values) and income (positive values).
 
+```javascript editor-xlsx
+// How to get the net present value of an investment.
 
-```javascript
+// Use a function to get the net present value of an investment based on different parameters.
+
 var oWorksheet = Api.GetActiveSheet();
 var oFunction = Api.GetWorksheetFunction();
 oWorksheet.GetRange("A1").SetValue("Rate");

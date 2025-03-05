@@ -60,13 +60,11 @@ export default function CodeBlockString({
   const showLineNumbers =
     showLineNumbersProp ?? containsLineNumbers(metastring);
 
-  const notExpression = !(code && code.includes("expression"));
-  const location = useLocation();
-  const editorWord = location.pathname.includes("/docs/office-api/usage-api/text-document-api/") && "docx";
-  const editorCell = location.pathname.includes("/docs/office-api/usage-api/spreadsheet-api/") && "xlsx";
-  const editorSlide = location.pathname.includes("/docs/office-api/usage-api/presentation-api/") && "pptx";
-  const editorPdf = location.pathname.includes("/docs/office-api/usage-api/form-api/") && "pdf";
-  const editorType = notExpression && (editorWord || editorCell || editorSlide || editorPdf);
+  const editorWord = metastring && metastring.includes("editor-docx") && "docx";
+  const editorCell = metastring && metastring.includes("editor-xlsx") && "xlsx";
+  const editorSlide = metastring && metastring.includes("editor-pptx") && "pptx";
+  const editorPdf = metastring && metastring.includes("editor-pdf") && "pdf";
+  const editorType = editorWord || editorCell || editorSlide || editorPdf;
 
   const codeBlockContent = (
     <Container
@@ -123,14 +121,9 @@ export default function CodeBlockString({
   );
 
   return editorType ? (
-    <Tabs
-      defaultValue="code"
-      values={[
-        { label: 'Code', value: 'code' },
-        { label: 'Result', value: 'result' },
-      ]}>
-      <TabItem value="code">{codeBlockContent}</TabItem>
-      <TabItem value="result">
+    <Tabs lazy>
+      <TabItem value="code" label="Code">{codeBlockContent}</TabItem>
+      <TabItem value="result" label="Result">
         <OnlyOfficeEditor code={code} fileType={editorType} />
       </TabItem>
     </Tabs>

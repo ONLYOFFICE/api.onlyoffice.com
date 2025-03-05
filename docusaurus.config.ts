@@ -4,6 +4,8 @@ import type * as Preset from '@docusaurus/preset-classic';
 import type * as Plugin from "@docusaurus/types/src/plugin";
 import type * as OpenApiPlugin from "docusaurus-plugin-openapi-docs";
 
+const isDev = process.env.NODE_ENV === 'development';
+
 const config: Config = {
   title: 'ONLYOFFICE',
   tagline: 'ONLYOFFICE',
@@ -14,8 +16,15 @@ const config: Config = {
 
   trailingSlash: true,
 
+  noIndex: isDev,
+
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
+
+  customFields: {
+    documentServer: isDev ? 'https://api.docs.teamlab.info/' : 'https://api.docs.onlyoffice.com/',
+    documentServerSecret: isDev ? 'MYSECRET' : 'NsOb2yUBaI9yme0wbkGAapi',
+  },
 
   future: {
     experimental_faster: {
@@ -30,7 +39,6 @@ const config: Config = {
 
   i18n: {
     defaultLocale: 'en',
-    path: './site',
     locales: ['en', 'zh-CN'],
   },
 
@@ -44,11 +52,12 @@ const config: Config = {
           path: './site',
           routeBasePath: '',
 
-          editUrl: 'https://github.com/ONLYOFFICE/api.onlyoffice.com/tree/master',
+          editUrl:
+            isDev
+              ? 'https://git.onlyoffice.com/ONLYOFFICE/api.onlyoffice.com/src/branch/master'
+              : 'https://github.com/ONLYOFFICE/api.onlyoffice.com/tree/master',
 
           docItemComponent: '@theme/ApiItem',
-          //editUrl:
-          //  'https://github.com/trofim24/api.onlyoffice.com.3.0/',
         },
         theme: {
           customCss: './src/css/custom.css',
@@ -65,28 +74,28 @@ const config: Config = {
         docsPluginId: "api",
         config: {
           workspaceBackend: {
-            specPath: "openapi/workspace/community-server.json",
+            specPath: "openapi/workspace/community-server.yaml",
             outputDir: "site/openapi/workspace/api-backend/usage-api",
             sidebarOptions: {
               groupPathsBy: "tagGroup",
             },
           } satisfies OpenApiPlugin.Options,
           workspaceHosted: {
-            specPath: "openapi/workspace/hosted-solutions.json",
+            specPath: "openapi/workspace/hosted-solutions.yaml",
             outputDir: "site/openapi/workspace/for-hosting-providers/usage-api",
             sidebarOptions: {
               groupPathsBy: "tag",
             },
           } satisfies OpenApiPlugin.Options,
           docspaceBackend: {
-            specPath: "openapi/docspace/docspace.json",
+            specPath: "openapi/docspace/docspace-backend.yaml",
             outputDir: "site/openapi/docspace/api-backend/usage-api",
             sidebarOptions: {
-              groupPathsBy: "tag",
+              groupPathsBy: "tagGroup",
             },
           } satisfies OpenApiPlugin.Options,
           docspaceHosted: {
-            specPath: "openapi/docspace/asc.apisystem.swagger.json",
+            specPath: "openapi/docspace/asc.apisystem.swagger.yaml",
             outputDir: "site/openapi/docspace/for-hosting-providers/usage-api",
             sidebarOptions: {
               groupPathsBy: "tag",
@@ -165,7 +174,7 @@ const config: Config = {
             {
               type: 'docSidebar',
               sidebarId: 'docsMacros',
-              label: 'Plugin and Macros',
+              label: 'Plugins and Macros',
               docsPluginId: 'api',
             },
             {

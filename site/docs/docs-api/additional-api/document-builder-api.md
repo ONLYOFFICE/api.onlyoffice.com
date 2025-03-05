@@ -39,7 +39,7 @@ Presence: required
 
 ### token
 
-Defines the encrypted signature added to the **ONLYOFFICE Docs** config in the form of a [token](./signature/request/token-in-body.md#builder).
+Defines the encrypted signature added to the **ONLYOFFICE Docs** config in the form of a [token](./signature/request/token-in-body.md#request-to-document-builder-service).
 
 Type: string
 
