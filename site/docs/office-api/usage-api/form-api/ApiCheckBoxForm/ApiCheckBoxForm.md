@@ -14,9 +14,9 @@ Represents the ApiCheckBoxForm class.
 | [GetFormType](./Methods/GetFormType.md) | [FormType](../Enumeration/FormType.md) | Returns a type of the current form. |
 | [GetRadioGroup](./Methods/GetRadioGroup.md) | string | Returns the radio group key if the current checkbox is a radio button. |
 | [GetText](./Methods/GetText.md) | string | Returns the text from the current form.\nReturns the value as a string if possible for the given form type* |
-| [GetTextPr](./Methods/GetTextPr.md) | [ApiTextPr](../../Word/ApiTextPr/ApiTextPr.md) | Returns the text properties from the current form.\nUsed if possible for this type of form* |
+| [GetTextPr](./Methods/GetTextPr.md) | [ApiTextPr](../../text-document-api/ApiTextPr/ApiTextPr.md) | Returns the text properties from the current form.\nUsed if possible for this type of form* |
 | [GetTipText](./Methods/GetTipText.md) | string | Returns the tip text of the current form. |
-| [GetWrapperShape](./Methods/GetWrapperShape.md) | [ApiShape](../../Word/ApiShape/ApiShape.md) | Returns a shape in which the form is placed to control the position and size of the fixed size form frame.\nThe null value will be returned for the inline forms. |
+| [GetWrapperShape](./Methods/GetWrapperShape.md) | [ApiShape](../../text-document-api/ApiShape/ApiShape.md) | Returns a shape in which the form is placed to control the position and size of the fixed size form frame.\nThe null value will be returned for the inline forms. |
 | [IsChecked](./Methods/IsChecked.md) | boolean | Returns the state of the current checkbox (checked or not). |
 | [IsFixed](./Methods/IsFixed.md) | boolean | Checks if the current form is fixed size. |
 | [IsRadioButton](./Methods/IsRadioButton.md) | boolean | Checks if the current checkbox is a radio button. |

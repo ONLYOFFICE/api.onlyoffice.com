@@ -16,7 +16,7 @@ This method doesn't have any parameters.
 
 ## Returns
 
-[ApiTextPr](../../../Word/ApiTextPr/ApiTextPr.md)
+[ApiTextPr](../../../text-document-api/ApiTextPr/ApiTextPr.md)
 
 ## Example
 

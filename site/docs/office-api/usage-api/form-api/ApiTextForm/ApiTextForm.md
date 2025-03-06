@@ -14,9 +14,9 @@ Represents the ApiTextForm class.
 | [GetFormKey](./Methods/GetFormKey.md) | string | Returns the current form key. |
 | [GetFormType](./Methods/GetFormType.md) | [FormType](../Enumeration/FormType.md) | Returns a type of the current form. |
 | [GetText](./Methods/GetText.md) | string | Returns the text from the current form.\nReturns the value as a string if possible for the given form type* |
-| [GetTextPr](./Methods/GetTextPr.md) | [ApiTextPr](../../Word/ApiTextPr/ApiTextPr.md) | Returns the text properties from the current form.\nUsed if possible for this type of form* |
+| [GetTextPr](./Methods/GetTextPr.md) | [ApiTextPr](../../text-document-api/ApiTextPr/ApiTextPr.md) | Returns the text properties from the current form.\nUsed if possible for this type of form* |
 | [GetTipText](./Methods/GetTipText.md) | string | Returns the tip text of the current form. |
-| [GetWrapperShape](./Methods/GetWrapperShape.md) | [ApiShape](../../Word/ApiShape/ApiShape.md) | Returns a shape in which the form is placed to control the position and size of the fixed size form frame.\nThe null value will be returned for the inline forms. |
+| [GetWrapperShape](./Methods/GetWrapperShape.md) | [ApiShape](../../text-document-api/ApiShape/ApiShape.md) | Returns a shape in which the form is placed to control the position and size of the fixed size form frame.\nThe null value will be returned for the inline forms. |
 | [IsAutoFit](./Methods/IsAutoFit.md) | boolean | Checks if the text field content is autofit, i.e. whether the font size adjusts to the size of the fixed size form. |
 | [IsComb](./Methods/IsComb.md) | boolean | Checks if the text field is a comb of characters with the same cell width. |
 | [IsFixed](./Methods/IsFixed.md) | boolean | Checks if the current form is fixed size. |

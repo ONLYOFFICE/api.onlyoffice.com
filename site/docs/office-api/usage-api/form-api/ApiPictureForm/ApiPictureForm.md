@@ -16,9 +16,9 @@ Represents the ApiPictureForm class.
 | [GetPicturePosition](./Methods/GetPicturePosition.md) | [percentage](../Enumeration/percentage.md)[] | Returns the picture position inside the current form. |
 | [GetScaleFlag](./Methods/GetScaleFlag.md) | [ScaleFlag](../Enumeration/ScaleFlag.md) | Returns the current scaling condition of the picture form. |
 | [GetText](./Methods/GetText.md) | string | Returns the text from the current form.\nReturns the value as a string if possible for the given form type* |
-| [GetTextPr](./Methods/GetTextPr.md) | [ApiTextPr](../../Word/ApiTextPr/ApiTextPr.md) | Returns the text properties from the current form.\nUsed if possible for this type of form* |
+| [GetTextPr](./Methods/GetTextPr.md) | [ApiTextPr](../../text-document-api/ApiTextPr/ApiTextPr.md) | Returns the text properties from the current form.\nUsed if possible for this type of form* |
 | [GetTipText](./Methods/GetTipText.md) | string | Returns the tip text of the current form. |
-| [GetWrapperShape](./Methods/GetWrapperShape.md) | [ApiShape](../../Word/ApiShape/ApiShape.md) | Returns a shape in which the form is placed to control the position and size of the fixed size form frame.\nThe null value will be returned for the inline forms. |
+| [GetWrapperShape](./Methods/GetWrapperShape.md) | [ApiShape](../../text-document-api/ApiShape/ApiShape.md) | Returns a shape in which the form is placed to control the position and size of the fixed size form frame.\nThe null value will be returned for the inline forms. |
 | [IsFixed](./Methods/IsFixed.md) | boolean | Checks if the current form is fixed size. |
 | [IsLockAspectRatio](./Methods/IsLockAspectRatio.md) | boolean | Checks if the aspect ratio of the current picture form is locked or not. |
 | [IsRequired](./Methods/IsRequired.md) | boolean | Checks if the current form is required. |
