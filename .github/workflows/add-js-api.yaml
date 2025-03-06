@@ -10,6 +10,7 @@ env:
   REF: ${{ github.ref_name }}
   TOKEN_PUBLICK_REPO: ${{ secrets.TOKEN_PUBLICK_REPO }}
   USER_PRIVATE_NAME: ${{ secrets.USER_PRIVATE_NAME }}
+  USER_PRIVATE_MAIL: ${{  secrets.USER_PRIVATE_MAIL }}
   TOKEN_PRIVATE_REPO: ${{ secrets.TOKEN_PRIVATE_REPO }} 
   URL_PRIVATE_REPO: ${{ secrets.URL_PRIVATE_REPO }} 
   
@@ -25,10 +26,27 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v4
 
-    - name: Get office-api-js branch
+    - name: Build and push changes
+      id: build
       shell: bash
       run: |
          mkdir -p ${GITHUB_WORKSPACE}/replace-js
-         mv ${GITHUB_WORKSPACE}/.github/scripts/replace-office-api-js.sh ${GITHUB_WORKSPACE}/replace-js/replace-office-api-js.sh
          cd ${GITHUB_WORKSPACE}/replace-js
+         wget https://raw.githubusercontent.com/ONLYOFFICE/api.onlyoffice.com/refs/heads/master/.github/scripts/replace-office-api-js.sh
          bash ./replace-office-api-js.sh
+
+    - name: Send alert message
+      if: ${{ env.CHANGES == 'exist' }}
+      uses: appleboy/telegram-action@master
+      with:
+        to: ${{ secrets.TELEGRAM_TO }}
+        token: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+        message: |
+            Changes from office-js-api was pushed in releas/hotfix branches
+            Please check it!
+
+            Repository: ${{ github.repository }}
+            Action: ${{ github.event_name }}
+            Workflow: ${{ github.workflow }}
+
+            See changes: https://${{ github.server_url }}/${{ github.repository }}/pulls/

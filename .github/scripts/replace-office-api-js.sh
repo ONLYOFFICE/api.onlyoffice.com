@@ -111,6 +111,16 @@ function push_changes() {
     python generate_docs_plugins_md.py
     cd ${working_dir}
     
+    # Clean-up target folder before copy
+    rm -rf ./api.onlyoffice.com/site/docs/office-api/usage-api/text-document-api/*
+    rm -rf ./api.onlyoffice.com/site/docs/office-api/usage-api/presentation-api/*
+    rm -rf ./api.onlyoffice.com/site/docs/office-api/usage-api/spreadsheet-api/*
+    rm -rf ./api.onlyoffice.com/site/docs/office-api/usage-api/form-api/*
+    rm -rf ./api.onlyoffice.com/site/docs/plugin-and-macros/interacting-with-editors/methods/spreadsheet-api/*
+    rm -rf ./api.onlyoffice.com/site/docs/plugin-and-macros/interacting-with-editors/methods/form-api/*
+    rm -rf ./api.onlyoffice.com/site/docs/plugin-and-macros/interacting-with-editors/methods/presentation-api/*
+    rm -rf ./api.onlyoffice.com/site/docs/plugin-and-macros/interacting-with-editors/methods/text-document-api/*
+
     # Replace main api files
     echo "${COLOR_BLUE}Replace main api files...${COLOR_RESET}"
     cp -r ./office-js-api/Word/*  ./api.onlyoffice.com/site/docs/office-api/usage-api/text-document-api/
@@ -128,6 +138,9 @@ function push_changes() {
     CHANGES=$(cd ./api.onlyoffice.com && git diff)
     if [[ ! -z "${CHANGES}" ]]; then
       echo "${COLOR_BLUE}Changes exist, push them to api.onlyoffice.com${COLOR_RESET}"
+
+      echo "CHANGES=exist" >> "$GITHUB_ENV"
+
       cd ./api.onlyoffice.com
       
       git add .
