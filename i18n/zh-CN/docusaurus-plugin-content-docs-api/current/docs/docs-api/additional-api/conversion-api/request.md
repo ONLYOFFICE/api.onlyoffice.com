@@ -143,7 +143,7 @@ Type: string
 
 定义生成的转换文档类型。从 7.0 版开始，可以指定文件格式而不是扩展名。当我们事先不知道需要什么扩展时使用它们：
 
-- **ooxml** - 定义文件将被转换为 *docx*, *docm*, *xlsx*, *xlsm*, *pptx* 或 *pptm*。例如，将 *doc* 文件转换为 OOXML 格式时，如果该文件包含宏，则生成的文件可以是 *docx* 或 *docm*（*xls* 和 *ppt* 也一样）。它也适用于将 XML 文件转换为 OOXML 格式（*docx*, *xlsx* 或 *pptx* ，具体取决于内容）；
+- **ooxml** - 定义文件将被转换为 *docx*, *docm*, *xlsx*, *xlsm*, *pptx* 或 *pptm*。例如，将 *doc* 文件转换为 OOXML 格式时，如果该文件包含宏，则生成的文件可以是 *docx* 或 *docm*（*xls* 和 *ppt* 也一样）。它也适用于将 XML 文件转换为 OOXML 格式（*docx*，*xlsx* 或 *pptx*，具体取决于内容）；
 - **odf** - 定义文件将被转换为 *odt*, *ods* 或 *odp*。例如，它用于将 XML 文件转换为 ODF 格式（*odt*, *ods* 或 *odp*，具体取决于内容）。
 
 > 下表展示了文档转换为各种知名格式的可能性，其中**输入格式**列对应于**filetype**参数值，**输出格式**列对应于**outputtype**参数值。

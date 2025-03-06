@@ -6,7 +6,7 @@ sidebar_label: White label
 
 自定义部分允许自定义编辑器界面，使其看起来像您的其他产品（如果有），并更改是否出现附加按钮、链接、更改徽标和编辑器所有者详细信息。
 
-在此页面上，您将找到仅适用于 ONLYOFFICE 文档开发者版的 [extended white label license](https://www.onlyoffice.com/developer-edition-prices.aspx?from=api) 的定制参数。要索取报价，请联系我们的销售团队 [sales@onlyoffice.com](mailto:sales@onlyoffice.com)。
+在此页面上，您将找到仅适用于 ONLYOFFICE 文档开发者版的 [扩展白标许可证](https://www.onlyoffice.com/developer-edition-prices.aspx?from=api) 的定制参数。要索取报价，请联系我们的销售团队 [sales@onlyoffice.com](mailto:sales@onlyoffice.com)。
 
 ## 关于
 

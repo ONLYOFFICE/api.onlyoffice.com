@@ -6,7 +6,7 @@ sidebar_label: Standard branding
 
 自定义部分允许自定义编辑器界面，使其看起来像您的其他产品（如果有），并更改是否出现附加按钮、链接、更改徽标和编辑器所有者详细信息。
 
-在此页面上，您将找到 ONLYOFFICE 文档开发者版的 [standard branding](https://www.onlyoffice.com/developer-edition-prices.aspx?from=api) 可用的自定义参数。如果您拥有扩展的白标许可证，请访问 [White label page](customization-white-label.md) 以了解可用的其他自定义选项。
+在此页面上，您将找到 ONLYOFFICE 文档开发者版的 [白标定制](https://www.onlyoffice.com/developer-edition-prices.aspx?from=api) 可用的自定义参数。如果您拥有扩展的白标许可证，请访问[白标页面](customization-white-label.md)以了解可用的其他自定义选项。
 
 :::请注意，
 只有以下参数可用于移动编辑器：[close](#close), [feedback](#feedback), [goback](#goback), [help](#help), [logo](#logo), [宏模式](#macrosmode), [mobile](#mobile).
@@ -69,15 +69,15 @@ const anonymous = {
 
 **示例**: `true`
 
-![Chat](/assets/images/editor/chat.png)
+![聊天](/assets/images/editor/chat.png)
 
 ## 关闭
 
+ `类型: object`
+ 
  定义用于关闭编辑器的关闭按钮的设置。
 
-`类型: object`
-
-**示例**:
+ **示例**:
 
 ``` ts
 const close = {
@@ -170,7 +170,7 @@ const close = {
 
 包含将在编辑器**关于**部分中显示的信息，并对所有编辑器用户可见。
 
-:::note
+:::请注意，
 此参数仅适用于 ONLYOFFICE 文档开发者版的编辑。
 :::
 
@@ -247,9 +247,9 @@ const customer = {
 
 ### customer.www
 
-上述公司或个人的主页地址。
+`类型: string`
 
-类型: string
+上述公司或个人的主页地址。
 
 **示例**: `"example.com"`
 
@@ -286,7 +286,7 @@ const features = {
 
 定义是否在 pdf 表单中禁用角色设置。如果该参数等于 **false**，则隐藏角色管理器，并禁用代表特定角色查看表单。在这种情况下，**表单**选项卡上的**管理角色**和**查看表单**按钮以及右侧面板中用于设置字段角色的下拉列表将不会显示。默认值为 **true**。
 
-:::note
+:::请注意，
 此参数仅适用于 ONLYOFFICE 文档开发者版的编辑。
 :::
 
@@ -302,9 +302,9 @@ const features = {
 
 ### features.spellcheck.mode
 
-定义在加载编辑器时拼写检查器是自动打开还是关闭。此参数仅适用于文档编辑器和演示文稿编辑器。
-
 `类型: boolean`
+
+定义在加载编辑器时拼写检查器是自动打开还是关闭。此参数仅适用于文档编辑器和演示文稿编辑器。
 
 :::请注意，
 如果在编辑器界面中更改*拼写检查*设置，它将存储在浏览器本地存储中，并将覆盖作为 *editorConfig.customization.features.spellcheck* 参数发送的任何值。
@@ -322,11 +322,11 @@ const features = {
 
 ### features.tabBackground.mode
 
-类型: `string`
+`类型: string`
 
 定义顶部工具栏选项卡的背景是否与标题背景（**header**）或工具栏背景（*toolbar**）匹配。默认值为 **header**。首次打开编辑器时使用此值。
 
-**示例**: "header"
+**示例**: `"header"`
 
 ### features.tabBackground.change
 
@@ -414,7 +414,7 @@ const features = {
 
 定义**打开文件位置**菜单按钮和右上角按钮的设置。
 
-:::note
+:::请注意，
 请注意，此参数也适用于移动编辑器。
 :::
 
@@ -472,7 +472,7 @@ const goback = {
 
 定义**帮助**菜单按钮是显示还是隐藏。默认值为 **true**。
 
-:::note
+:::请注意，
 请注意，此参数也适用于移动编辑器。
 :::
 
@@ -508,9 +508,9 @@ const goback = {
 
 ## hideRulers
 
-定义编辑器标尺是显示还是隐藏。此参数可用于文档和演示文稿编辑器。文档编辑器的默认值为 **false**，演示文稿的默认值为 **true**。
+`类型: boolean`
 
-类型: boolean
+定义编辑器标尺是显示还是隐藏。此参数可用于文档和演示文稿编辑器。文档编辑器的默认值为 **false**，演示文稿的默认值为 **true**。
 
 **示例**: `false`
 
@@ -530,7 +530,7 @@ const goback = {
 
 更改编辑器标题左上角的图像文件。推荐的图像高度为 20 像素。
 
-:::note
+:::请注意，
 此参数仅适用于 ONLYOFFICE 文档开发者版的编辑。
 
 请注意，此参数也适用于移动编辑器。
@@ -646,9 +646,9 @@ const logo = {
 
 ## mobile
 
-定义移动文档编辑器设置。
-
 `类型: object`
+
+定义移动文档编辑器设置。
 
 :::请注意，
 此参数仅适用于移动编辑器。
@@ -682,7 +682,7 @@ const mobile = {
 
 ### mobile.standardView
 
-类型: `boolean`
+`类型: boolean`
 
 定义编辑器是否在**标准视图**而不是**移动视图**中打开。
 
@@ -694,7 +694,7 @@ const mobile = {
 
 定义移动文档编辑器在启动时是否以查看/编辑模式打开。默认值为 **true**。
 
-:::note
+:::请注意，
 请注意，此参数仅适用于移动编辑器。
 :::
 :::danger[Deprecated]
@@ -789,7 +789,7 @@ const review = {
 
 ### review.trackChanges
 
-类型: `boolean`
+`类型: boolean`
 
 无论 [document.permissions.review](../../document/permissions.md#review) 参数如何，定义是否以审阅编辑模式 (**true**) 打开文档 (**false**) （审阅模式仅针对当前用户更改）。如果参数 *未定义*，则使用 *document.permissions.review* 值（对于所有文档用户）。
 
@@ -821,7 +821,7 @@ const review = {
 
 `类型: boolean`
 
-Starting from version 8.3, defines if the horizontal scroll is automatically displayed or hidden when the spreadsheet editor is loaded. 默认值为 **true**.
+从 8.3 版本开始，定义在加载电子表格编辑器时是否自动显示或隐藏水平滚动条。默认值为 **true**.
 
 **示例**: `true`
 
@@ -841,7 +841,7 @@ Starting from version 8.3, defines if the horizontal scroll is automatically dis
 
 `类型: boolean`
 
-Starting from version 8.3, defines if the vertical scroll is automatically displayed or hidden when the spreadsheet editor is loaded. 默认值为 **true**.
+从 8.3 版本开始，定义在加载电子表格编辑器时是否自动显示或隐藏垂直滚动条。默认值为 **true**.
 
 **示例**: `true` 
 
@@ -876,8 +876,8 @@ Starting from version 8.3, defines if the vertical scroll is automatically displ
 
 **示例**: `true`
 
-![Submit button](/assets/images/editor/submitForm.png)
-![Submit button](/assets/images/editor/submitForm-message.png)
+![提交按钮](/assets/images/editor/submitForm.png)
+![提交按钮](/assets/images/editor/submitForm-message.png)
 
 ### submitForm.visible
 
