@@ -43,20 +43,6 @@ const FeatureList: FeatureItem[] = [
     features: DocsFeatures,
   },
   {
-    title: 'Workspace',
-    Image: require('@site/static/assets/images/workspace-preview.png').default,
-    description: (
-      <>
-        In this section, you will learn how to integrate ONLYOFFICE Workspace{" "}
-        into your own application and interact with its backend using the{" "}
-        Workspace API Backend. This solution is provided without editors, you{" "}
-        need to install ONLYOFFICE Docs separately. You can also host a portal{" "}
-        and interact with it using our methods for hosting providers.
-      </>
-    ),
-    features: WorkspaceFeatures,
-  },
-  {
     title: 'Samples',
     Image: require('@site/static/assets/images/samples-preview.png').default,
     description: (

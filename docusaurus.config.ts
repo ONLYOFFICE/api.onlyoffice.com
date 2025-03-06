@@ -192,26 +192,6 @@ const config: Config = {
           ],
         },
         {
-          type: 'dropdown',
-          label: 'Workspace',
-          position: 'left',
-          to: 'workspace',
-          items: [
-            {
-              type: 'docSidebar',
-              sidebarId: 'workspaceBackend',
-              label: 'API Backend',
-              docsPluginId: 'api',
-            },
-            {
-              type: 'docSidebar',
-              sidebarId: 'workspaceHosting',
-              label: 'For Hosting Providers',
-              docsPluginId: 'api',
-            },
-          ],
-        },
-        {
           type: 'docSidebar',
           sidebarId: 'samples',
           label: 'Samples',
