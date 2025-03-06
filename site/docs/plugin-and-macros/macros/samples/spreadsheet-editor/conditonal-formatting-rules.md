@@ -1,7 +1,5 @@
 # Conditional formatting rules
 
-## Description
-
 Applies multiple conditional formatting rules to the selected range.
 
 <!-- This code snippet is shown in the screenshot. -->
@@ -10,7 +8,7 @@ Applies multiple conditional formatting rules to the selected range.
 
 ```ts
 (function () {
-    //Get selected range
+    //Get thevselected range
     var ranges = Api.GetSelection();
 
     //Declare colors
@@ -23,7 +21,7 @@ Applies multiple conditional formatting rules to the selected range.
         if (!value) {
             return;
         }
-        //If value is between 300 to 1000 fill the cell with green
+        //If value is between 300 and 1000, fill the cell with green
         if (value >= 300 && value <= 1000) {
             range.SetFillColor(green);
         } else if (value < 50) {
@@ -31,7 +29,7 @@ Applies multiple conditional formatting rules to the selected range.
             range.SetFillColor(red);
         }
 
-        //If value equals zero add comment to the cell
+        //If value equals to zero, adda a comment to the cell
         if (value == 0) {
             range.AddComment("Check your formula or inputs, value should not be zero");
         }
@@ -45,4 +43,4 @@ Methods used: [GetSelection](../../../../office-api/usage-api/spreadsheet-api/Ap
 
 <!-- imgpath -->
 
-![](/assets/images/plugins/conditional-formatting-rules.png)
+![Conditional formatting rules](/assets/images/plugins/conditional-formatting-rules.png#gh-light-mode-only)![Conditional formatting rules](/assets/images/plugins/conditional-formatting-rules.dark.png#gh-dark-mode-only)

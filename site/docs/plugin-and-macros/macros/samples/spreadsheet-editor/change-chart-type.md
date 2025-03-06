@@ -1,7 +1,5 @@
 # Change chart type
 
-## Description
-
 Changes the chart type of all the charts in the spreadsheet.
 
 <!-- This code snippet is shown in the screenshot. -->
@@ -21,7 +19,7 @@ Changes the chart type of all the charts in the spreadsheet.
 })();
 ```
 
-Methods used: [GetActiveSheet](../../../../office-api/usage-api/spreadsheet-api/Api/Methods/GetActiveSheet.md), [GetAllCharts](../../../../office-api/usage-api/presentation-api/ApiSlide/Methods/GetAllCharts.md), [GetAllSeries](../../../../office-api/usage-api/presentation-api/ApiChart/Methods/GetAllSeries.md), [ChangeChartType](../../../../office-api/usage-api/presentation-api/ApiChartSeries/Methods/ChangeChartType.md)  
+Methods used: [GetActiveSheet](../../../../office-api/usage-api/spreadsheet-api/Api/Methods/GetActiveSheet.md), [GetAllCharts](../../../../office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetAllCharts.md), [GetAllSeries](../../../../office-api/usage-api/spreadsheet-api/ApiChart/Methods/GetAllSeries.md), [ChangeChartType](../../../../office-api/usage-api/spreadsheet-api/ApiChartSeries/Methods/ChangeChartType.md)  
 
 ## Reference Microsoft VBA macro code
 
@@ -50,4 +48,4 @@ End Sub
 
 <!-- imgpath -->
 
-![](/assets/images/plugins/change-chart-type.png)
+![Change chart type](/assets/images/plugins/change-chart-type.png#gh-light-mode-only)![Change chart type](/assets/images/plugins/change-chart-type.dark.png#gh-dark-mode-only)
