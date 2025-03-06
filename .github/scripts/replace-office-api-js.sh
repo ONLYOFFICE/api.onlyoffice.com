@@ -111,15 +111,21 @@ function push_changes() {
     python generate_docs_plugins_md.py
     cd ${working_dir}
     
-    # Clean-up target folder before copy
-    rm -rf ./api.onlyoffice.com/site/docs/office-api/usage-api/text-document-api/*
-    rm -rf ./api.onlyoffice.com/site/docs/office-api/usage-api/presentation-api/*
-    rm -rf ./api.onlyoffice.com/site/docs/office-api/usage-api/spreadsheet-api/*
-    rm -rf ./api.onlyoffice.com/site/docs/office-api/usage-api/form-api/*
-    rm -rf ./api.onlyoffice.com/site/docs/plugin-and-macros/interacting-with-editors/methods/spreadsheet-api/*
-    rm -rf ./api.onlyoffice.com/site/docs/plugin-and-macros/interacting-with-editors/methods/form-api/*
-    rm -rf ./api.onlyoffice.com/site/docs/plugin-and-macros/interacting-with-editors/methods/presentation-api/*
-    rm -rf ./api.onlyoffice.com/site/docs/plugin-and-macros/interacting-with-editors/methods/text-document-api/*
+    clean_up_paths=(
+            "api.onlyoffice.com/site/docs/office-api/usage-api/text-document-api"
+            "api.onlyoffice.com/site/docs/office-api/usage-api/presentation-api"
+            "api.onlyoffice.com/site/docs/office-api/usage-api/spreadsheet-api"
+            "api.onlyoffice.com/site/docs/office-api/usage-api/form-api"
+            "api.onlyoffice.com/site/docs/plugin-and-macros/interacting-with-editors/methods/text-document-api"
+            "api.onlyoffice.com/site/docs/plugin-and-macros/interacting-with-editors/methods/presentation-api"
+            "api.onlyoffice.com/site/docs/plugin-and-macros/interacting-with-editors/methods/spreadsheet-api"
+            "api.onlyoffice.com/site/docs/plugin-and-macros/interacting-with-editors/methods/form-api"
+    )
+
+    # Remove only internal dirrectories
+    for path in ${clean_up_paths[@]}; do
+        find ./${path}/* -type d -exec rm -rf {} +
+    done
 
     # Replace main api files
     echo "${COLOR_BLUE}Replace main api files...${COLOR_RESET}"
