@@ -20,14 +20,10 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to use built-in functions using worksheet function objects.
+
 
 ```javascript editor-xlsx
-// How to use system functions in a spreadsheets.
-
-// Use built-in functions in a worksheet.
-
-var oWorksheet = Api.GetActiveSheet();
-var oFunction = Api.GetWorksheetFunction();
-oWorksheet.GetRange("A1").SetValue(oFunction.ASC("text"));
+let worksheet = Api.GetActiveSheet();
+let func = Api.GetWorksheetFunction();
+worksheet.GetRange("A1").SetValue(func.ASC("text"));
 ```

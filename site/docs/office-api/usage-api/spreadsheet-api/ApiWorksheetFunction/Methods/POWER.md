@@ -23,14 +23,10 @@ number
 
 ## Example
 
-This example shows how to return the result of a number raised to a power.
+
 
 ```javascript editor-xlsx
-// How to raise a number to a power.
-
-// Use a function to calculate the result after raising a number to the power.
-
-var oWorksheet = Api.GetActiveSheet();
-var oFunction = Api.GetWorksheetFunction();
-oWorksheet.GetRange("A1").SetValue(oFunction.POWER(23, 4));
+let worksheet = Api.GetActiveSheet();
+let func = Api.GetWorksheetFunction();
+worksheet.GetRange("A1").SetValue(func.POWER(23, 4));
 ```

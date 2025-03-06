@@ -23,14 +23,10 @@ number
 
 ## Example
 
-This example shows how to return the effective annual interest rate.
+
 
 ```javascript editor-xlsx
-// How to get an effective annual interest rate.
-
-// Use function to get effective annual interest rate.
-
-var oWorksheet = Api.GetActiveSheet();
-var oFunction = Api.GetWorksheetFunction();
-oWorksheet.GetRange("A1").SetValue(oFunction.EFFECT(0.57, 4));
+let worksheet = Api.GetActiveSheet();
+let func = Api.GetWorksheetFunction();
+worksheet.GetRange("A1").SetValue(func.EFFECT(0.57, 4));
 ```

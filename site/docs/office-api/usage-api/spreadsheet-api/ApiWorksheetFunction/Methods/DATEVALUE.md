@@ -22,18 +22,14 @@ number
 
 ## Example
 
-This example shows how to convert a date in the form of text to a number that represents the date in the date-time code.
+
 
 ```javascript editor-xlsx
-// How to convert a date from the form of text.
+const worksheet = Api.GetActiveSheet();
 
-// Use function to get the date from a text.
+let func = Api.GetWorksheetFunction();
+let ans = func.DATEVALUE("2018-3-16"); 
 
-const oWorksheet = Api.GetActiveSheet();
-
-var oFunction = Api.GetWorksheetFunction();
-var ans = oFunction.DATEVALUE("2018-3-16"); 
-
-oWorksheet.GetRange("C1").SetValue(ans);
+worksheet.GetRange("C1").SetValue(ans);
 
 ```

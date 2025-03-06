@@ -25,12 +25,8 @@ This method doesn't return any data.
 This example sets the specified font family as the font name for the cell range.
 
 ```javascript editor-xlsx
-// How to change a cell font family.
-
-// Get a range and set its font family using its name.
-
-var oWorksheet = Api.GetActiveSheet();
-oWorksheet.GetRange("A2").SetValue("2");
-var oRange = oWorksheet.GetRange("A1:D5");
-oRange.SetFontName("Arial");
+let worksheet = Api.GetActiveSheet();
+worksheet.GetRange("A2").SetValue("2");
+let range = worksheet.GetRange("A1:D5");
+range.SetFontName("Arial");
 ```

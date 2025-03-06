@@ -24,23 +24,19 @@ number
 
 ## Example
 
-This example shows how to calculate the Poisson distribution.
+
 
 ```javascript editor-xlsx
-// How to return the Poisson distribution.
-
-// Use a function to calculate the Poisson distribution.
-
-const oWorksheet = Api.GetActiveSheet();
+const worksheet = Api.GetActiveSheet();
 
 //method params
-var x = 9;
-var mean = 12;
-var cumulative = false;
+let x = 9;
+let mean = 12;
+let cumulative = false;
 
-var oFunction = Api.GetWorksheetFunction();
-var ans = oFunction.POISSON(x, mean, cumulative);
+let func = Api.GetWorksheetFunction();
+let ans = func.POISSON(x, mean, cumulative);
 
-oWorksheet.GetRange("C1").SetValue(ans);
+worksheet.GetRange("C1").SetValue(ans);
 
 ```

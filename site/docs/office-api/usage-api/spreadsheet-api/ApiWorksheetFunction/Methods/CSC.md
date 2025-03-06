@@ -22,14 +22,10 @@ number
 
 ## Example
 
-This example shows how to get the cosecant of an angle.
+
 
 ```javascript editor-xlsx
-// How to return cosecant.
-
-// Use function to get the cosecant of an angle.
-
-var oWorksheet = Api.GetActiveSheet();
-var oFunction = Api.GetWorksheetFunction();
-oWorksheet.GetRange("A1").SetValue(oFunction.CSC(0.785398));
+let worksheet = Api.GetActiveSheet();
+let func = Api.GetWorksheetFunction();
+worksheet.GetRange("A1").SetValue(func.CSC(0.785398));
 ```

@@ -14,7 +14,7 @@ expression.ReplaceTextSmart(arrString, sParaTab, sParaNewLine);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| arrString | Required | Array |  | An array of replacement strings. |
+| arrString | Required | string[] |  | An array of replacement strings. |
 | sParaTab | Optional | string | "\t" | A character which is used to specify the tab in the source text. Any symbol can be used. The default separator is "\t". |
 | sParaNewLine | Optional | string | "\r\n" | A character which is used to specify the line break character in the source text. Any symbol can be used. The default separator is "\r\n". |
 
@@ -24,7 +24,7 @@ boolean
 
 ## Example
 
-```javascript editor-docx
+```javascript
 window.Asc.plugin.executeMethod ("ReplaceTextSmart", [Asc.scope.arr, String.fromCharCode(9), String.fromCharCode(13)], function (isDone) {
     if (!isDone)
         window.Asc.plugin.callCommand (function () {

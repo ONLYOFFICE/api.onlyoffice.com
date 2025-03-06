@@ -22,14 +22,10 @@ number
 
 ## Example
 
-This example shows how to return the unit matrix for the specified dimension.
+
 
 ```javascript editor-xlsx
-// How to get a unit matrix.
-
-// Use a function to get a unit matrix specifying dimension.
-
-var oWorksheet = Api.GetActiveSheet();
-var oFunction = Api.GetWorksheetFunction();
-oWorksheet.GetRange("A1").SetValue(oFunction.MUNIT(3));
+let worksheet = Api.GetActiveSheet();
+let func = Api.GetWorksheetFunction();
+worksheet.GetRange("A1").SetValue(func.MUNIT(3));
 ```

@@ -18,7 +18,7 @@ expression.SetLabel(sLabel);
 
 ## Returns
 
-boolean
+This method doesn't return any data.
 
 ## Example
 

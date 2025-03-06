@@ -18,7 +18,7 @@ expression.SetTextPr(oTextPr);
 
 ## Returns
 
-boolean
+This method doesn't return any data.
 
 ## Example
 

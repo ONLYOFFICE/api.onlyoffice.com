@@ -20,17 +20,13 @@ string \| null
 
 ## Example
 
-This example gets name of a protected range user.
+This example changes the user protected range.
 
 ```javascript editor-xlsx
-// How to get a user info of a protected range and show its name.
-
-// Get a user name of a protected range and add it to the worksheet.
-
-var oWorksheet = Api.GetActiveSheet();
-oWorksheet.AddProtectedRange("protectedRange", "$A$1:$B$1").AddUser("userId", "name", "CanView");
-var protectedRange = oWorksheet.GetProtectedRange("protectedRange");
-var userInfo = protectedRange.GetUser("userId");
-var userName = userInfo.GetName();
-oWorksheet.GetRange("A3").SetValue("Name: " + userName);
+let worksheet = Api.GetActiveSheet();
+worksheet.AddProtectedRange("protectedRange", "$A$1:$B$1").AddUser("userId", "name", "CanView");
+let protectedRange = worksheet.GetProtectedRange("protectedRange");
+let userInfo = protectedRange.GetUser("userId");
+let userName = userInfo.GetName();
+worksheet.GetRange("A3").SetValue("Name: " + userName);
 ```

@@ -22,15 +22,11 @@ boolean
 
 ## Example
 
-This example shows how to check whether a value is a reference, and returns true or false.
+
 
 ```javascript editor-xlsx
-// How to know whether a value is a reference.
-
-// Use a function to find out whether a value is a reference.
-
-var oWorksheet = Api.GetActiveSheet();
-var oFunction = Api.GetWorksheetFunction();
-oWorksheet.GetRange("A1").SetValue(oFunction.ISREF("A3"));
-oWorksheet.GetRange("A2").SetValue(oFunction.ISREF(oWorksheet.GetRange("A3")));
+let worksheet = Api.GetActiveSheet();
+let func = Api.GetWorksheetFunction();
+worksheet.GetRange("A1").SetValue(func.ISREF("A3"));
+worksheet.GetRange("A2").SetValue(func.ISREF(worksheet.GetRange("A3")));
 ```

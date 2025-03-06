@@ -18,7 +18,7 @@ expression.FromJSON(message);
 
 ## Returns
 
-object
+This method doesn't return any data.
 
 ## Example
 

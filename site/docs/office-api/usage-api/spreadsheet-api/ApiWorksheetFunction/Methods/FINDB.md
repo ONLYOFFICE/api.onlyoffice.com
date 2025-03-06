@@ -16,7 +16,7 @@ expression.FINDB(arg1, arg2, arg3);
 | ------------- | ------------- | ------------- | ------------- | ------------- |
 | arg1 | Required | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| string |  | The text to find. Use double quotes (empty text) to match the first character in the search string. Wildcard characters are not allowed. |
 | arg2 | Required | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| string |  | The text containing the text to find. |
-| arg3 | Required | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number |  | Specifies the character at which to start the search. The first character in the search string is character number 1. If omitted, this parameter is equal to 1. |
+| arg3 | Optional | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number |  | Specifies the character at which to start the search. The first character in the search string is character number 1. If omitted, this parameter is equal to 1. |
 
 ## Returns
 
@@ -24,14 +24,10 @@ number
 
 ## Example
 
-This example shows how to find the specified substring within another string and is intended for languages that use the double-byte character set (DBCS) like Japanese, Chinese, Korean etc.
+
 
 ```javascript editor-xlsx
-// How to get an index of a substring from a string and its double-byte character language.
-
-// Use function to find out a starting position of a substring containing in another text and its character set (DBCS).
-
-var oWorksheet = Api.GetActiveSheet();
-var oFunction = Api.GetWorksheetFunction();
-oWorksheet.GetRange("A1").SetValue(oFunction.FINDB("line", "Online Office"));
+let worksheet = Api.GetActiveSheet();
+let func = Api.GetWorksheetFunction();
+worksheet.GetRange("A1").SetValue(func.FINDB("line", "Online Office"));
 ```

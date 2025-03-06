@@ -1,7 +1,6 @@
 # SetOrientation
 
-Sets a pivot field orientation value that represents the location
-of the field in the specified pivot table report.
+Sets a pivot field orientation value that represents the locationof the field in the specified pivot table report.
 
 ## Syntax
 
@@ -23,36 +22,32 @@ This method doesn't return any data.
 
 ## Example
 
-This example shows how to set an orientation of a pivot field.
+
 
 ```javascript editor-xlsx
-// How to change a pivot field orientation.
+let worksheet = Api.GetActiveSheet();
 
-// Create a pivot table, add data to it then change an orientation a specified pivot.
+worksheet.GetRange('B1').SetValue('Region');
+worksheet.GetRange('C1').SetValue('Style');
+worksheet.GetRange('D1').SetValue('Price');
 
-var oWorksheet = Api.GetActiveSheet();
+worksheet.GetRange('B2').SetValue('East');
+worksheet.GetRange('B3').SetValue('West');
+worksheet.GetRange('B4').SetValue('East');
+worksheet.GetRange('B5').SetValue('West');
 
-oWorksheet.GetRange('B1').SetValue('Region');
-oWorksheet.GetRange('C1').SetValue('Style');
-oWorksheet.GetRange('D1').SetValue('Price');
+worksheet.GetRange('C2').SetValue('Fancy');
+worksheet.GetRange('C3').SetValue('Fancy');
+worksheet.GetRange('C4').SetValue('Tee');
+worksheet.GetRange('C5').SetValue('Tee');
 
-oWorksheet.GetRange('B2').SetValue('East');
-oWorksheet.GetRange('B3').SetValue('West');
-oWorksheet.GetRange('B4').SetValue('East');
-oWorksheet.GetRange('B5').SetValue('West');
+worksheet.GetRange('D2').SetValue(42.5);
+worksheet.GetRange('D3').SetValue(35.2);
+worksheet.GetRange('D4').SetValue(12.3);
+worksheet.GetRange('D5').SetValue(24.8);
 
-oWorksheet.GetRange('C2').SetValue('Fancy');
-oWorksheet.GetRange('C3').SetValue('Fancy');
-oWorksheet.GetRange('C4').SetValue('Tee');
-oWorksheet.GetRange('C5').SetValue('Tee');
-
-oWorksheet.GetRange('D2').SetValue(42.5);
-oWorksheet.GetRange('D3').SetValue(35.2);
-oWorksheet.GetRange('D4').SetValue(12.3);
-oWorksheet.GetRange('D5').SetValue(24.8);
-
-var dataRef = Api.GetRange("'Sheet1'!$B$1:$D$5");
-var pivotTable = Api.InsertPivotNewWorksheet(dataRef);
+let dataRef = Api.GetRange("'Sheet1'!$B$1:$D$5");
+let pivotTable = Api.InsertPivotNewWorksheet(dataRef);
 
 pivotTable.AddFields({
 	rows: ['Region', 'Style'],
@@ -60,15 +55,13 @@ pivotTable.AddFields({
 
 pivotTable.AddDataField('Price');
 
-var pivotWorksheet = Api.GetActiveSheet();
+let pivotWorksheet = Api.GetActiveSheet();
 pivotWorksheet.GetRange('A12').SetValue('The Style field orientation will change soon');
 
-var pivotField = pivotTable.GetPivotFields('Style');
+let pivotField = pivotTable.GetPivotFields('Style');
 
 setTimeout(function () {
 	pivotField.SetOrientation("Columns");
 }, 5000);
-
-
 
 ```

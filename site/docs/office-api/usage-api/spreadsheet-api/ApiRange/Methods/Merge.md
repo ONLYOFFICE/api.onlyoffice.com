@@ -25,11 +25,7 @@ This method doesn't return any data.
 This example merges the selected cell range into a single cell or a cell row.
 
 ```javascript editor-xlsx
-// How to get a range using cell addresses and merge them into one.
-
-// Get a range, merge its cells into one cell.
-
-var oWorksheet = Api.GetActiveSheet();
-oWorksheet.GetRange("A3:E8").Merge(true);
-oWorksheet.GetRange("A9:E14").Merge(false);
+let worksheet = Api.GetActiveSheet();
+worksheet.GetRange("A3:E8").Merge(true);
+worksheet.GetRange("A9:E14").Merge(false);
 ```

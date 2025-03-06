@@ -20,7 +20,7 @@ expression.AddColumns(oCell, nCount, isBefore);
 
 ## Returns
 
-[ApiTable](../../ApiTable/ApiTable.md)
+This method doesn't return any data.
 
 ## Example
 

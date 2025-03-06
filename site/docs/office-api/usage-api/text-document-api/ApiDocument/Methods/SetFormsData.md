@@ -14,11 +14,11 @@ expression.SetFormsData(arrData);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| arrData | Required | [FormData[]](../../Enumeration/FormData.md) |  | An array of form data to set to the specified forms. |
+| arrData | Required | [FormData](../../Enumeration/FormData.md)[] |  | An array of form data to set to the specified forms. |
 
 ## Returns
 
-boolean
+This method doesn't return any data.
 
 ## Example
 

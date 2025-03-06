@@ -22,14 +22,10 @@ string
 
 ## Example
 
-This example shows how to remove all the nonprintable characters from the text.
+
 
 ```javascript editor-xlsx
-// How to remove all the nonprintable characters from the text.
-
-// Use function to clean all nonprintable characters.
-
-var oWorksheet = Api.GetActiveSheet();
-var oFunction = Api.GetWorksheetFunction();
-oWorksheet.GetRange("A1").SetValue(oFunction.CLEAN("\ntext"));
+let worksheet = Api.GetActiveSheet();
+let func = Api.GetWorksheetFunction();
+worksheet.GetRange("A1").SetValue(func.CLEAN("\ntext"));
 ```

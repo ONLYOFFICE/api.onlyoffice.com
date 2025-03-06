@@ -18,7 +18,7 @@ expression.MoveCursorOutside(isAfter);
 
 ## Returns
 
-boolean
+This method doesn't return any data.
 
 ## Example
 

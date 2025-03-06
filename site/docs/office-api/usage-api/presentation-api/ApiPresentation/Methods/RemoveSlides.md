@@ -1,7 +1,6 @@
 # RemoveSlides
 
-Removes a range of slides from the presentation.
-Deletes all the slides from the presentation if no parameters are specified.
+Removes a range of slides from the presentation.Deletes all the slides from the presentation if no parameters are specified.
 
 ## Syntax
 
@@ -15,7 +14,7 @@ expression.RemoveSlides(nStart, nCount);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| nStart | Optional | Number | false | The starting position for the deletion range. |
+| nStart | Optional | Number | 0 | The starting position for the deletion range. |
 | nCount | Optional | Number | ApiPresentation.GetSlidesCount() | The number of slides to delete. |
 
 ## Returns

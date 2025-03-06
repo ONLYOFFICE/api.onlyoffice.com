@@ -22,18 +22,14 @@ boolean
 
 ## Example
 
-This example shows how to check whether all conditions in a test are true.
+
 
 ```javascript editor-xlsx
-// How to apply logical AND operation for a list of conditions.
+const worksheet = Api.GetActiveSheet();
 
-// Use logical AND to evaluate an expression.
+let func = Api.GetWorksheetFunction();
+let ans = func.AND(12 < 100, 34 < 100, 50 < 100); //AND logical function
 
-const oWorksheet = Api.GetActiveSheet();
-
-var oFunction = Api.GetWorksheetFunction();
-var ans = oFunction.AND(12 < 100, 34 < 100, 50 < 100); //AND logical function
-
-oWorksheet.GetRange("C1").SetValue(ans);
+worksheet.GetRange("C1").SetValue(ans);
 
 ```

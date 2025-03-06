@@ -22,18 +22,14 @@ boolean
 
 ## Example
 
-This example shows how to check whether a value is a logical value (true or false), and returns true or false.
+
 
 ```javascript editor-xlsx
-// How to check if the cell contains a logical value.
+const worksheet = Api.GetActiveSheet();
+worksheet.GetRange("B3").SetValue("66");
 
-// Use a function to check whether a range data is a logical value.
-
-const oWorksheet = Api.GetActiveSheet();
-oWorksheet.GetRange("B3").SetValue("66");
-
-var oFunction = Api.GetWorksheetFunction();
-var result = oFunction.ISLOGICAL(oWorksheet.GetRange("B3"));
-oWorksheet.GetRange("C3").SetValue(result);
+let func = Api.GetWorksheetFunction();
+let result = func.ISLOGICAL(worksheet.GetRange("B3"));
+worksheet.GetRange("C3").SetValue(result);
 
 ```

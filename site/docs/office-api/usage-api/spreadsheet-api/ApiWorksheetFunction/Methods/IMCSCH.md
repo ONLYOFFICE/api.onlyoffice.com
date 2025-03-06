@@ -22,14 +22,10 @@ number
 
 ## Example
 
-This example shows how to return the hyperbolic cosecant of a complex number.
+
 
 ```javascript editor-xlsx
-// How to get the hyperbolic cosecant.
-
-// Use a function to get the hyperbolic cosecant of a complex number.
-
-var oWorksheet = Api.GetActiveSheet();
-var oFunction = Api.GetWorksheetFunction();
-oWorksheet.GetRange("A1").SetValue(oFunction.IMCSCH("-2+2.5i"));
+let worksheet = Api.GetActiveSheet();
+let func = Api.GetWorksheetFunction();
+worksheet.GetRange("A1").SetValue(func.IMCSCH("-2+2.5i"));
 ```

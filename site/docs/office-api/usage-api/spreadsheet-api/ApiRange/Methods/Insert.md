@@ -14,7 +14,7 @@ expression.Insert(shift);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| shift | Required | string |  | Specifies which way to shift the cells ("right", "down"). |
+| shift | Optional | string |  | Specifies which way to shift the cells ("right", "down"). |
 
 ## Returns
 
@@ -25,15 +25,11 @@ This method doesn't return any data.
 This example inserts a cell or a range of cells into the worksheet or macro sheet and shifts other cells away to make space.
 
 ```javascript editor-xlsx
-// How to insert a range or a cell into a worksheet.
-
-// Insert a range or a cell into a worksheet specifying its shift direction.
-
-var oWorksheet = Api.GetActiveSheet();
-oWorksheet.GetRange("B4").SetValue("1");
-oWorksheet.GetRange("C4").SetValue("2");
-oWorksheet.GetRange("D4").SetValue("3");
-oWorksheet.GetRange("C5").SetValue("5");
-var oRange = oWorksheet.GetRange("C4");
-oRange.Insert("down");
+let worksheet = Api.GetActiveSheet();
+worksheet.GetRange("B4").SetValue("1");
+worksheet.GetRange("C4").SetValue("2");
+worksheet.GetRange("D4").SetValue("3");
+worksheet.GetRange("C5").SetValue("5");
+let range = worksheet.GetRange("C4");
+range.Insert("down");
 ```

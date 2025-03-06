@@ -18,7 +18,7 @@ expression.SetLegendPos(sLegendPos);
 
 ## Returns
 
-boolean
+This method doesn't return any data.
 
 ## Example
 
