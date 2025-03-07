@@ -1,0 +1,71 @@
+---
+id: remove-webhook
+title: "Remove a webhook"
+description: "Removes the tenant webhook with the ID specified in the request."
+sidebar_label: "Remove a webhook"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVcFuGjEQ/RXLp1ZCLKVRlXKLQg4oaVVBohwiFJndgXWyrF17loSu9t87Yy8EAmly6AFY7PHzzHvzZmuJauHl4E5OAFGXCy8ScQuz3JhHL6cdaSw4hdqUo0wOpIOlWUG7LzvSKqeWgOAYopYl/aEondGWLunJKszpOQOfOm0ZhhZHvO3gd6UdECi6CjrSpzkslRzUEtc2gJQIC3AUOjduqTAufe3TAjyrpS0o6PvpybemmTKat6b04Bmg3+vxz/6l11CqEsVTTF08acyFRi9SU871QuwU0pG0hlAigyhrC50GApIHz0j1Yapm9gApMh2O6UId8yAajpXziozh+xV2WmK3YB4dSXWA9ZOjKLgqCjXj05HaLZi81VQsFJm4sUgnCLhy+n3cm/Hon7DeLEEgPCMjekgd4CWs38edhFDxSLEfhicZKWiX2ZkxBajyEN1CqqlcL/RcYA4b7b1QDkSLI4wTpcFdyvl6rsMXH7lkcnVwlg6rLNMcoYpfOy0xV4WnylBjqOtsct4lK3XPrObPD5NB4bvjtpWHaLobI56HJqUV2TQMf9L7ctjhN6WqMDdO/yF6mqgEyYvrYE3l03vev2e2ye4OFNvwiQJATtlD+2jj4HQfiMMj3uH10VD4luRM6DKssa/BY5ewyU+54alBdZG1wrigcTCQibI66Xd7iW9nTtJCJ7XOGsmZu9VmplSOdJA5ovWDJKlz47EZ1NY45MiVcpqFDIbjvcjLXFUF+6kwqSrCMvHBZ/a3T3vf+0zp9IWsCZs7wu1Ttm0FSv4ydmycdnth7dxLqRgNQQWynAmnD1Xn/KnMSPiqH3P0uFRhzLTwUQihNvS/bsH6ZVz9D9HaItluiS2UbqdE8EKU744ZoEgSMEgVJeRe2iY4oNFHnEY97mRdz5SHG1c0DS/TXY57cPoiX1A60771dmuUN+v8NG7fHp9FeJkcTXojV7kOfVJU/I8eg5o8nJspReXkAxrLfH/cOEtTsLhz5OAVwO2y7e3hxdXF9QWFcwvsd0nsh/aBLzia0av2iUnwd9N540RdxxZsmm183HrzRFvktnaugdr+LzyZt8Y=
+sidebar_class_name: "delete api-method"
+info_path: site/docspace/api-backend/usage-api/asc-web-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Remove a webhook"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"delete"}
+  path={"/api/2.0/settings/webhook/{id}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Removes the tenant webhook with the ID specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"id","in":"path","description":"Id","required":true,"schema":{"type":"integer","format":"int32","example":9846}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Tenant webhook with its config parameters","content":{"application/json":{"schema":{"type":"object","properties":{"id":{"type":"integer","description":"ID","format":"int32","example":9846},"name":{"type":"string","description":"Name","nullable":true,"example":"Winfield Upton"},"uri":{"type":"string","description":"URI","nullable":true,"example":"some text"},"secretKey":{"type":"string","description":"Secret key","nullable":true,"example":"some text"},"enabled":{"type":"boolean","description":"Specifies if the webhooks are enabled or not","example":true},"ssl":{"type":"boolean","description":"SSL","example":true}},"additionalProperties":false,"title":"ASC.Web.Api.ApiModels.ResponseDto.WebhooksConfigDto"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

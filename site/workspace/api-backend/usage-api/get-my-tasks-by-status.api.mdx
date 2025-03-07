@@ -1,0 +1,71 @@
+---
+id: get-my-tasks-by-status
+title: "Get my tasks by status"
+description: "Returns a list with the detailed information about the tasks for the current user with a status specified in the request."
+sidebar_label: "Get my tasks by status"
+hide_title: true
+hide_table_of_contents: true
+api: eJztGNly2zbwVzDsSztDW5edQzOdRpadxknsupYTTw4/rEjIRAwCLAA6UWV/Tn+kX9ZdgLKk2BEZNzPtQ/jAWRC7i70X3Fnk4NxG/XdRYfQHnrjWCdgLG53FkeVJaYSb4uYsGpQu00b8CU5o9YxDyg0RGYSiOPqIeDw6u0aqlNvEiILQon50zF1plGXApLCOfRQuYy7jLOUOhOQpE2qiTe65Mhjr0vltRzIw3PErFMNw5VhpuQksgFkHrrTMFjwRE+EZeVzD/yi5dZsoVAXu6BRVmEWJVg65EAhFIUXiD219sCToLLJJxnMgyE0LjqLrMZkD+aBhCm6c4Nbj+YMJWtWUzFZJhTQVD4FHnqOlrv1DItlCKxs4ddvt22xekpn0JFgAGX2t1GAMTJEO/ZHbem2G6EDHd6b1mPvpEo51RqhzxAnOwy9lKSgQ+CfIC0ko7erZuOM1fyI0ya6whYTpIeT8rgMWDA/EBWdvQU3B2QtBpCfCyToiUOAdEEeDS3BgRjlIuZ6mNJI5zSxhMvBURH9k9ARD9pWpIX//voWoaZk4SyDX+Dl8I/JNsMWnXyiSf4Y0FwrdbcBpChGMmqBQtIes9JTzUwNFED746U4XLE7utrvtjU53o/PgpN3rdzr97a3N3vbD3nav89YzwViCxNX7ei/H5GwQEpi7Jx5j9nnAL0UGfup1SU5V5lQyjjKtOK7DIXF0yseWqkccjS6ICfoVc9x5Ji+FuuDpvkLwKSR8rPUFgoM0xUSyfv+SP9dYYYA4HUxHBWIh9OtB4L0j9XkQ5w1kWhPO6BDf+8Pf8f0cxmO/Odg/wPfrF9Gt+vWuzTaYlzhmHQS90DHrIljJHbMeLrzoMdtCsJI+Ztu4mCsQswe4musQs4e4qtSI2SOPeKNJzB7jh0oZPJZE8AohTDJUSuGKxPCKIUxSoHIIkRCoIEIkQVASFyQAKooQHf76xdlK7HR8gGCMnWszbejQRa77RMZEWR+ftiwKbdwTreRUTyYi4ZuJzpcPrq8CzzRiIMW+PTIihxVZ0bSSg1rBd6YM+Ltfq1Sn29taycoqfSjqKTGrzPQF5al2urYwVHVlgrhEeMBTUeb3oWxcMk8g/cDTVCjOdiDJhAmWG+q8wDpaY7kJSOtNN0gSDFNqTPfvM9+7x3/XPebZgrLwptliRxmYlX6zNkQ89te3gsPQCY7xEnlqQg8g+Atl+PCmCt8QhEpMy7PbBWnor41Jg7tNg1AYZphFlrM3JdqANJ7mY13jy7//8pEzHht+KSCosvaMwzdBbomXZl4f08PDeT6rS1QGxrK5f3fAiqSZe5dLYGXSz2rgENReKlzDwxF7l0vePBi/WelGpfkp/j/4Lr4kfwP/j7hK8bcD+1XOTSJA4iV9Eqh3l0N1HY9lRE8HKd4Pag6uu9QNJLr+Nciyae6ttvzj8EciVmPnexX/31Vxn+hS29qivEizW5e5L7k1R/scgcvWK1UA/bxrJgi9oe0Dyr9IkqGWaJi1FD/Aw0kSAmmE18vfjJ9N3CMXvkGhoSnA3PC+2iyKzJ5yfphS+/Pl8T5rpneorf1lulTE9Ib9SoY2VmFre8GhgVOfaYzdTEssiDSSAIX3Q0aHGcUds5kuViPZ8713u/hGXrk5P0xittqd28OXVwqqMRdmGWHlHJdo0uice0f5HIlaUIhWd7Pdmo/MaFjTemK5nLRmYQTU/1Fp7DgJL9wVOlddJT51r1JhqU1flSqRYK0fXV0hqlA5Fgbr8Irz03VEszeDLd360VtJ1SbKnCtsv9WaZdq66/6MnE+Yl2AEsfSxQ3tBrQngLQLJpE5A+s+oDtGsbj9qP+6SSZbGfSMaKQV2dw79Fr8AhXjB/T8A2S4L23GkfBVfpfXGpJnV8WImtzf312Km1r4mZhPtD7lp3Xnug5yNvE3Y8d7ohA2O9kl3NFHwnMScIx2v/wFCjeri
+sidebar_class_name: "get api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get my tasks by status"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/project/task/@self/{status:(notaccept|open|closed|disable|unclassified|notinmilestone)}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns a list with the detailed information about the tasks for the current user with a status specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"status":{"description":"Task status","type":"integer"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"List of tasks","content":{"application/json":{"schema":{"type":"array","items":{"type":"object","properties":{"CreateBy":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"},"Created":{"type":"string","example":"2020-12-16T03:11:54.3573531Z"},"Contact":{"type":"object","properties":{"Email":{"type":"object","properties":{"InfoType":{"type":"integer","format":"int32","enum":["Phone","Email","Website","Skype","Twitter","LinkedIn","Facebook","Address","LiveJournal","MySpace","GMail","Blogger","Yahoo","MSN","ICQ","Jabber","AIM","VK"],"description":"[0 - Phone, 1 - Email, 2 - Website, 3 - Skype, 4 - Twitter, 5 - LinkedIn, 6 - Facebook, 7 - Address, 8 - LiveJournal, 9 - MySpace, 10 - GMail, 11 - Blogger, 12 - Yahoo, 13 - MSN, 14 - ICQ, 15 - Jabber, 16 - AIM, 17 - VK]","example":"1"},"Category":{"type":"integer","format":"int32","example":"0"},"Data":{"type":"string","example":"support@onlyoffice.com"},"CategoryName":{"type":"string","example":"Home"},"IsPrimary":{"type":"boolean","example":"true"},"ID":{"type":"integer","format":"int32","example":"1234"}},"title":"ContactInfoWrapper"},"SmallFotoUrl":{"type":"string","example":"url to foto"},"MediumFotoUrl":{"type":"string","example":"url to foto"},"DisplayName":{"type":"string","example":"Tadjeddine Bachir"},"IsCompany":{"type":"boolean","example":"false"},"AccessList":{"type":"array","items":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"}},"IsPrivate":{"type":"boolean","example":"true"},"IsShared":{"type":"boolean","example":"false"},"ShareType":{"type":"integer","format":"int32","enum":["None","ReadWrite","Read"],"description":"[0 - None, 1 - ReadWrite, 2 - Read]","example":"0"},"Currency":{"type":"object","properties":{"Title":{"type":"string","example":"Chinese Yuan"},"Symbol":{"type":"string","example":"¥"},"Abbreviation":{"type":"string","example":"CNY"},"CultureName":{"type":"string","example":"CN"},"IsConvertable":{"type":"boolean","example":"true"},"IsBasic":{"type":"boolean","example":"false"}},"title":"CurrencyInfoWrapper"},"CanEdit":{"type":"boolean","example":"true"},"CanDelete":{"type":"boolean","example":"true"},"ID":{"type":"integer","format":"int32","example":"1234"}},"title":"ContactBaseWithEmailWrapper"},"Title":{"type":"string","example":"Send a commercial offer"},"Description":{"type":"string","example":"Description"},"DeadLine":{"type":"string","example":"2020-12-16T03:11:54.3573531Z"},"AlertValue":{"type":"integer","format":"int32","example":"1"},"Responsible":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"},"IsClosed":{"type":"boolean","example":"true"},"Category":{"type":"object","properties":{"ImagePath":{"type":"string","example":"path to image"},"Title":{"type":"string","example":"Title"},"Description":{"type":"string","example":"Description"},"Color":{"type":"string","example":"#a7fc00"},"SortOrder":{"type":"integer","format":"int32","example":"1"},"ID":{"type":"integer","format":"int32","example":"1234"}},"title":"TaskCategoryBaseWrapper"},"Entity":{"type":"object","properties":{"EntityType":{"type":"string","example":"opportunity"},"EntityId":{"type":"integer","format":"int32","example":"123445"},"EntityTitle":{"type":"string","example":"Household appliances internet shop"}},"title":"EntityWrapper"},"CanEdit":{"type":"boolean","example":"true"},"ID":{"type":"integer","format":"int32","example":"1234"}},"title":"TaskWrapper"}}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

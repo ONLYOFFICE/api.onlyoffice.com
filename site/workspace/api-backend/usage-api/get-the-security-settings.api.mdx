@@ -1,0 +1,71 @@
+---
+id: get-the-security-settings
+title: "Get the security settings"
+description: "Returns the security settings for the modules specified in the request."
+sidebar_label: "Get the security settings"
+hide_title: true
+hide_table_of_contents: true
+api: eJy1Vttu4zYQ/RWBz97YDfrQGiiKtGuk6Q2LOMEC6/XDWBpbXEsiSw6z8Qr6986QkmMnToJuWz1IFOd2ZuZoqFYRbLyaLpRHIt1s/HiOeXCadmo54s1+PV206iJQaZz+AqRN8wtCgU4MHa/USH1mPVTLjq0K9LnTVtTUVF0jBdf4jErMBn/ZEC1bGxcltSlChT7zFnO91lhkuokCh38F9HTGIfrlT6ZgQK3KTUPYkCzB2krnEdj4k5ewrfJ5iTXIinYWGYhZfcKc2I91xqIjjV6kuoiPY9C/a0+ZWfewsqu3nu16P+Ac7PiV8639gX9PjlNSXboErrem8SnK+WTyNMr8cTnY6z/N6jk0z2T7HldXrHlVPAU+UngPta1ka9Jfb07chktxjrcenf96NKdhMCdq4AqoEHTxVbDeam8r2P0JNb6c5x96i9kHaHZAfqvF9EZT9ZoRNLBh8rP2xR0QuHkNVfWyTXBVRibzoplBtBL7d86sdYW37hXzjx/HrFqEnLws0fB22hPzM/D2/sfAvfgBilo3TF4HZDgCh6CUkJqxK7NDfO/AYhJdOhPsv2jf6/WNEbKox/H+r3YPDXkRyq+wxbMP8KXUqdUHpYkopS6c2zzUNbhdlM8aWFV4CHplTIXQHDkmF1J2fh7ix/WK/hoqj0fxhznQQ1D9APl28s3TmXHbQD+HGZho1civjFFtMHYIqOSXMVg9Pj+bjPdzfT/LZay7u/jd8lQPQj1VElk/HY/b0njqpq01jjrWvAOnpQax3SJLgNYQKulYZXKo4jYDEZtj8XeT788lmYOTZC7zK7k7eZ48UNHq3zByUbIuk3ikmki5Y9tYBhmQ1w8HxGwodz/gFwMllp24XJsYqq//z6auQyODeB4rk13P5jfZxbsrqQAXKlW+AsIhU081xHnc47lEOn3AqUfH4cGx9R+ejH3NCO9pzIOPS8YoQxoqiRALKShrMiUiAfbo/MFxnxq8UG27Ai9Dqetkm8M4+QVYPvBB3jhEOfwFtGrLzZJKxuTe3AggUa9Cauajk6wbDRYXeY6WXtRdHpD8cnbDuqv+F4BrIyYOPsvvAd+nihcm1jpyLO613LpmE3hEsDy5FMbId3RMuG0kXL+QpAZRszsAeMy9UZ+H3CWrkyZtm+jcdXv9JHrWYk/4pC0dXTLqvwHyB0Sq
+sidebar_class_name: "get api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get the security settings"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/settings/security"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns the security settings for the modules specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"ids":{"description":"List of module IDs","type":"array","items":{"type":"string"}}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Security settings","content":{"application/json":{"schema":{"type":"array","items":{"type":"object","properties":{"WebItemId":{"type":"string","example":"00000000-0000-0000-0000-000000000000"},"Users":{"type":"array","items":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"}},"Groups":{"type":"array","items":{"type":"object","properties":{"Name":{"type":"string","example":"Group Name"},"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"Manager":{"type":"string","example":"Jake.Zazhitski"}},"title":"GroupWrapperSummary"}},"Enabled":{"type":"boolean","example":"true"},"IsSubItem":{"type":"boolean","example":"false"}},"title":"SecurityWrapper"}}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

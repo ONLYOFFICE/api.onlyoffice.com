@@ -16,11 +16,11 @@ expression.SetVerAxisTitle(sTitle, nFontSize, bIsBold);
 | ------------- | ------------- | ------------- | ------------- | ------------- |
 | sTitle | Required | string |  | The title which will be displayed for the vertical axis of the current chart. |
 | nFontSize | Required | [pt](../../Enumeration/pt.md) |  | The text size value measured in points. |
-| bIsBold | Required | bool |  | Specifies if the vertical axis title is written in bold font or not. |
+| bIsBold | Required | boolean |  | Specifies if the vertical axis title is written in bold font or not. |
 
 ## Returns
 
-boolean
+This method doesn't return any data.
 
 ## Example
 

@@ -1,6 +1,6 @@
 # ISNA
 
-Checks whether a value is &lt;em&gt;#N/A&lt;/em&gt;, and returns **true** or **false**.
+Checks whether a value is &lt;em&gt;#N/A&lt;/em&gt;, and returns -**true** or -**false**.
 
 ## Syntax
 
@@ -14,7 +14,7 @@ expression.ISNA(arg1);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| arg1 | Required | [ApiRange](../../ApiRange/ApiRange.md) \| string \| number \| boolean \| [ApiName](../../ApiName/ApiName.md) |  | The value to test. The value can be an empty cell, error, logical value, text, number, range, or range name. |
+| arg1 | Required | [ApiRange](../../ApiRange/ApiRange.md) \| string \| number \| boolean \| [ApiName](../../ApiName/ApiName.md) |  | The value to test.\ The value can be an empty cell, error, logical value, text, number, range, or range name. |
 
 ## Returns
 
@@ -22,16 +22,12 @@ boolean
 
 ## Example
 
-This example shows how to check whether a value is N/A, and returns true or false.
+
 
 ```javascript editor-xlsx
-// How to check if the cell contains N/A value.
-
-// Use a function to check whether a range data is an N/A value.
-
-var oWorksheet = Api.GetActiveSheet();
-var oFunction = Api.GetWorksheetFunction();
-oWorksheet.GetRange("A1").SetValue(oFunction.ISNA("#N/A"));
-oWorksheet.GetRange("A2").SetValue(oFunction.ISNA(255));
-oWorksheet.GetRange("A3").SetValue(oFunction.ISNA("www.example.com"));
+let worksheet = Api.GetActiveSheet();
+let func = Api.GetWorksheetFunction();
+worksheet.GetRange("A1").SetValue(func.ISNA("#N/A"));
+worksheet.GetRange("A2").SetValue(func.ISNA(255));
+worksheet.GetRange("A3").SetValue(func.ISNA("www.example.com"));
 ```

@@ -1,0 +1,77 @@
+---
+id: upload-a-file
+title: "Upload a file"
+description: "Uploads a file to the CRM module with the parameters specified in the request."
+sidebar_label: "Upload a file"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVlFz2zYM/is8Pey6zLYUx1saLesubZJbbm3Xi+3brXEeYImy2EqkSlJJVdf/fQApx/bs2C/Tg08GgY8fgI+g5oGFmQniuyDRZXgtCm6C+05geFJrYRtcmAcXtc2VFt/ACiX/4JByTQEa34JO8Ih+PLhfYFTKTaJFRW5BHIyrQkFqGLAMYZlVzOacvbl9x0qV1mh5FDZ3tgo0lNxybZipeCIywVMmpFvT/EvNje1N5EQeHb1Xlh8dxcxjswQkm3KWKsnJv89SkWVcc2nZIzQmnki2/pyr4tWm6bwQr4ZCzpCNI1k73B77R9XM5KouUma49cSVtAjcHTUVZz9AWf36ZLoUplJGUN4sd/UxlK7PpfHIEjNkIJGzD2IWcTrOYjj+tFXazJpNVdr0zkNkuc17bJA4MxYhQFtW1oUVWEkbZkqX3RQsMCxqrtKdACHWArvXbvQa9wniedCSo1eoqkIkrufhJ0MdnQcmyXkJ9Ebsscdq+oknFnEqrSqurUD54CpCoHhGzmf+H1nc8gIs9tf7uDJgfItnrMakgkWnhRDpQYCby1W4QPYzVCfGUzV3xfq6ClnVFmuHGi5X4W02GN3WYXcGG0rw/d6DsSaO56G2FbQLMXPHcwvkrcCMVOYEZNhjziVDMCoRmF2yWEGD1tDgXzzBpVlra9sG3BFjAOUQTIUE3QQLZGGs0vwvLWZoKmhiXBcw22Z1yTMhkY/InKJTldQlpmqWElctAvN74JzQeEAKg+eGNkjRgUllV2SnShUcJHKgh6SLNZPGV6QfRdsUrv2J8huQqfN/Cfw9nuZd9eJfcTCQ8PzedOipceMqJcm+bg4j36R7+1DXIt3YJ2qf7o6f5UMUSGEFNIeJvxOfOfsIssGefBYUOhK2OBQEEtqDd/GAEtPDEopif0ytCzclyZOBi6L4D1qRkMf6QPhkEqJrWifW0CtXaPY2Cu+Bqb7+Xhuuf4O0FBKPiAbUlVOw9QkFVwilGs7/1lB58m2j9u/cj/pR97jfjV6Ojk/jk9M4OumdDPqDs59PPxLIW+VVtR9lMMFn8Av9rmlljR1ZiZmj5hQ/iI63RT6W0N7PyJu8/NDHFRoCpC+wOf4LoRJhvxeFdNHPVxM6fkFnAhL7XVWV0raWuPA9AcN/XCz9RBrfRd2z+58WoRsyob8nA/pQ0A943bnvhJpaFuTWViYOw3mO2y/iOWEu0PMBtIBpO8BozaeSAQ4oDCuwaIUzYwoUs7n8MjrrUxXWvk2GdFY93M4vlKfiY+J/cjfmqF5P49UVPN6MdQWkYXC7uhevli3bvNfWevp0VUVP987WHfLchbAa63dLxPtnZ6zVNV9QHply+bVKeaPK0rWNDV072O3VcMQuPtxQ2bE7Xih0a1J5F/8CmtdqUw==
+sidebar_class_name: "post api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Upload a file"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/api/2.0/crm/{entityType:(contact|opportunity|case)}/{entityid:[0-9]+}/files/upload"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Uploads a file to the CRM module with the parameters specified in the request.
+
+**Note**: Upload can be done in 2 different ways:
+             <ol>
+            <li>Single file upload. You should set the Content-Type &amp; Content-Disposition headers to specify file name and content type, and send a file in the request body.</li>
+            <li>Using standart multipart/form-data method.</li>
+            </ol>
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"entityType":{"description":"Related entity type","type":"string"},"entityid":{"description":"Related entity ID","type":"integer"},"file":{"description":"Request input stream","type":"object"},"contentType":{"description":"Content-Type header","type":"object"},"contentDisposition":{"description":"Content-Disposition header","type":"object"},"files":{"description":"List of files when posted as multipart/form-data","type":"array","items":{"type":"string","format":"binary"}},"storeOriginalFileFlag":{"description":"Defines if the documents in the original formats are also stored or not","type":"boolean"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"File information","content":{"application/json":{"schema":{"type":"object","properties":{"Name":{"type":"string","example":"File name"},"UpdatedBy":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"},"Updated":{"type":"string","example":"2020-12-08T17:37:03.3424957Z"},"Location":{"type":"string","example":"4\\\\46\\\\File name"}},"title":"FileWrapper"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

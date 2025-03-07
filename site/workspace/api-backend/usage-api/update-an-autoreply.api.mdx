@@ -1,0 +1,71 @@
+---
+id: update-an-autoreply
+title: "Update an autoreply"
+description: "Updates or creates an autoreply with the parameters specified in the request."
+sidebar_label: "Update an autoreply"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVU1T2zAQ/SsaXZtgJ2GmJTcKdGBaSoekJ4aDYitYjCypkkxIM/nv3ZWc2E4CtB18kndXb7+edlfUswdHx3e0ZEImp5XXlhu5pPc96nhWWeGXoF1R0BTait/MC60uOcu5xVsWTrRHF2DH6f0abuXcZVYYNKNj+tPkzHNHtCUZ2OKRKcI2bshC+IL4ghPDLCu559YRZ3gm5oLnRKigs/xXxZ0/Akf18bPOIawVzbTyXHk8MmOkyEJ4yaND5yvqsoKXDE9+aTiEo2ePPPOAY6w23HrBHWox95l+vsrxp5vAdVSRq3O4VaMIcPoA+a9BUll1o/avfeeLVpbOM1+5BmCmteRMIYBWcnkGWbDMu32YSV0KRxYFh1JY4jVxXOXdKiIIarBYWQ2GJVfaH3Qao57qc2jIfzv1QsrgsekX9vo1v3Ory8M+sV5QJetrjHm7euBaqIcG0XmL/5jICykgHAb8T2Cuiux4q5nVhkR7CIUv5VvXa8q6Dbkvp9ffyFzbkh2ADB+y3hmtXCTrME33fcR3lrf8CBVBUd97r4dy3X4oO68B2huzCKLREAT8mZVGotFohPWZbl/LDjfapt5WHI1vdl7GK1fmTDreOGiI/RduvrQ42a1+KyEsbt+Lkncghukw7Q/SfjqYDj6O0+PxaHiUxi8EsxvGO+FOGp7uAjcYG5aC/WXNypeNA2+RaF74IMA+b3cBZMFoJOJxOjjAPcXq5cDzgAJzvNBAEWq0CxxivoC/hBmRQCZJWDVbpiZV4G6y2k7h8V3aP7n/sKa4g+wT7ISwgiorQ6zeuHGSrAoAX49XRluPlk/MCjaTkaeoi4HOWSWx0lJnTAYxBIh3uupP6ckQc2ytvQm+iQh3cPltCwppfeVLCEFgNYqo7lEF+wz+O3dDefDR3TZ77GLThs4eSpvdgkzdXRRR1p3jUdbM2KbTmzHZSLazrhHF4dWaZjhBQpo1Kc50WVYKKkMmoSvk9mIyJac/rrD60KTIBolLHqq8/gMG3eG1
+sidebar_class_name: "post api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Update an autoreply"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/api/2.0/mail/autoreply/update/{mailboxId:[0-9]+}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Updates or creates an autoreply with the parameters specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"mailboxId":{"description":"Mailbox ID","type":"integer"},"turnOn":{"description":"New autoreply status","type":"boolean"},"onlyContacts":{"description":"Specifies whether to send an autoreply only to the contacts or not","type":"boolean"},"turnOnToDate":{"description":"Specifies whether to send an autoreply till the specified date or not","type":"boolean"},"fromDate":{"description":"New start date of autoreply sending","type":"string"},"toDate":{"description":"New end date of autoreply sending","type":"string"},"subject":{"description":"New autoreply subject","type":"string"},"html":{"description":"New autoreply contents in the HTML format","type":"string"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Updated autoreply information","content":{"application/json":{"schema":{"type":"object","properties":{"MailboxId":{"type":"integer","format":"int32","example":"33"},"TurnOn":{"type":"boolean","example":"true"},"OnlyContacts":{"type":"boolean","example":"false"},"TurnOnToDate":{"type":"boolean","example":"true"},"FromDate":{"type":"string","format":"date-time","example":"2020-10-01T17:04:32.0000000"},"ToDate":{"type":"string","format":"date-time","example":"2020-10-01T17:04:32.0000000"},"Subject":{"type":"string","example":"subject"},"Html":{"type":"string","example":"html"}},"title":"MailAutoreplyData"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

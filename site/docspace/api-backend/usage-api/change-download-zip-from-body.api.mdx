@@ -1,0 +1,71 @@
+---
+id: change-download-zip-from-body
+title: "Change the archive format (using body parameters)"
+description: "Changes the format of the downloaded archive from .zip to .tar.gz. This method uses the body parameters."
+sidebar_label: "Change the archive format (using body parameters)"
+hide_title: true
+hide_table_of_contents: true
+api: eJy9VU2P2jAQ/SuWT61EE4p6aLlRtiutqkqrZVGlIrQyyYR418Su7UAhyn/vjB2WwLaV2kMvYI/n6715dhruxdrx8YJfSwWOpWwG3ssKbcsB1was8FJXNzkf86wU1Rqu9K5SWuTfpLm2evNR53s+4Ba+1+B82I0bnunKQ+VpKYxRMgtZ0kenK7K5rISNoJXfG8DUevUImcc8xlJNL8EFP/A9p5XWCkSFXjm4zEpDOdE+M5DJAkPYrgRfgmVeMwxluGauO8zJEoAxbVmlqRj8EBujMLW3NbTtgIs8l5RUqNteH4VQDl4UPWbrkDMjrNiAB+sws5ee8vLJbJoEYpOptpBMjPyic1AuuYtRV14nV9IZJfYnC29basaCM7pykYnRcEh/5z1MbFbKLWC9f+b7LxDHaoiZTZVwjs0r5DUWYjdY3hYigwvsX2HVxz/VG4OwXHJzXHVY3w3fvoQ3r0TtS23lAXJOXg6y2kqPClsgTpc90PnDE5AB6RI5Vt+hA/Blu7xsfxrU64IoCm03wjNdhF3eKRo1IiKjrEBls+QgDUkp8cIm60PC7kvpGM641DmrXZdrhZLvDT/BHqIL1jR10LTwJW5SYWQ6SoZpQYSkRzmmx/JYZX3ghNJuSUUEsrYKI0vvjRunaVNq59txY7T1LXpuhZVipaJC6CxyWIha4ZIrnQkVzMgdxZwfvx9+GBH9yxOxM9JJTHdO77NwEMNnoAtfIV7a990GXBLTmdZPEsLESIB3p6fh0/HCdVc73DuKKnSocaEcvC6EEsmII9yOIhLnNyLoumsijjZM43mAccKvakeCvZjR68snpPdg/U+ddJx6+OFTfAKQPIQXRt50olkQ4eiJssHfIJygkO6JRhhn4sFRRhkseNOshIO5VW1LZhyBpWuyPKmGdlivxHsDNqgtjJpPIxVv7qk7cld1nPzFu9IOjhGTLAPj/+i77N2K2/k9+q66T8UGH0Q0WrGjzwj+jjmnLw8FByUGW8MVjqUWa/KNKcODXRNLfXVGHXYLAnU8qvb9Bs9lG2HQL4H6ZUTTROm37bN/PPptREfs0Zumu8SmfwKNapZv
+sidebar_class_name: "put api-method"
+info_path: site/docspace/api-backend/usage-api/asc-web-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Change the archive format (using body parameters)"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"put"}
+  path={"/api/2.0/files/settings/downloadtargz"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Changes the format of the downloaded archive from .zip to .tar.gz. This method uses the body parameters.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"set":{"type":"boolean","description":"Specifies whether to set the specified settings or not","example":true}},"additionalProperties":false,"description":"Settings request parameters","title":"ASC.Files.Core.ApiModels.RequestDto.DisplayRequestDto"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Archive","content":{"application/json":{"schema":{"type":"object","additionalProperties":false,"description":"Archiving Class Unification Interface","title":"ASC.Web.Files.Core.Compress.ICompress"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

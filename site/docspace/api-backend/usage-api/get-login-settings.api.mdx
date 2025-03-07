@@ -1,0 +1,63 @@
+---
+id: get-login-settings
+title: "Get login settings"
+description: "Returns the portal login settings."
+sidebar_label: "Get login settings"
+hide_title: true
+hide_table_of_contents: true
+api: eJyVVE1P3DAQ/SuWz9FmWTi03BBUqGqREB/qAa2Qk0w2Zp04tccsNMp/74yTsB8IlR42m4zfzDy/N3YnUa28PH2Qt4Com5UXqfhpV7oRfgzIZSJtC06hts33Qp7KFWCETCkykQ58axsPVKqTi/mc/wrwudMtp1HSQdFE5rZBaJCRqm2NzmOD9MkzvJM+r6BW/IavLVABmz1BjpTYOqaDemimEKFu8dyGodaI1lR8BY7g+zSu1IuuQy2aUGfghC0FViCCp/exkhdohbEroRvKLq2rFQ4FjxcUgBdVt4ZaHC2OT/pEZsbm6ztdwyea31ErJKigqmJT6bzadt9oY0QGItaDQqgSKRoaH/IcvC+DYVIk4UTzM+RIw3x9DU7b4n/okQAbpTHSVGLyVpTO1pEw8X2O+f8koP0FlCqYXWsyaw2oZheNLkBPcFUUmskoc71jcqmMh0SiRsbKs9vz2S/IZmet5t+VLcD42c3I8gLtbG86KSD7nqufzI/ez+V9owJW1uk/UEhGeciD0/hKh4Kmy+ePvP64Bg7QnKuCiG8IAHLZLw8lvAEMrvFRpdY6VJNr0+DPKLsGajgeJJ5nhRV9pKrV6WI2TydoOjFJY4mdozPo7yPD4AwlV4itP03TrrIe+9OOe/eEfFZOq8wMR4XXBgFGSyTNmjIxTBvnnP3lL/OvC9ZuuVXllo/lePL2tHmzl7bxgwKJbFQdv3dhNBEsU27tWkOUWzeljdnv3WX+tM1B2efFwNFjreIFMZa/BDyQ+HCuu+1V8zl/xo0gvGDaGkWMqXPUuRvNeuBdEpLsinbsODMOTyL3TSMJB/kfZNdlysO9M33P4d8BHM/WcusWf1HLioaNjhm7HCWWZ3QVtBhtNWHQ+uDiZKvexuvy2x1hWft9ewYjxheuPi01r7u1930bGPCzTz7I6LrB+75/ww9LH2aMO5zQrPSS5u0vnvJEZw==
+sidebar_class_name: "get api-method"
+info_path: site/docspace/api-backend/usage-api/asc-web-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get login settings"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/settings/security/loginsettings"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns the portal login settings.
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Login settings","content":{"application/json":{"schema":{"type":"object","properties":{"attemptCount":{"type":"integer","description":"Maximum number of the user attempts to log in","format":"int32","example":1234},"blockTime":{"type":"integer","description":"The time for which the user will be blocked after unsuccessful login attempts","format":"int32","example":1234},"checkPeriod":{"type":"integer","description":"The time to wait for a response from the server","format":"int32","example":1234},"isDefault":{"type":"boolean","example":true}},"additionalProperties":false,"title":"ASC.Web.Api.ApiModels.ResponseDto.LoginSettingsDto"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

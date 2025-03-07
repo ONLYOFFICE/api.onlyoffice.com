@@ -1,0 +1,71 @@
+---
+id: set-the-audit-trail-settings
+title: "Set the audit trail settings"
+description: "Sets the audit trail settings for the current portal."
+sidebar_label: "Set the audit trail settings"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVE1v2zAM/SuGzl6ddTtsuWVDgQ4rsKJJT0UOis3EamVJk+i2meD/PlJ2XKdrh21YDoEsfj0+PioKlLsg5jciQNl6hfti0VYKM/RS6aySKMU6H43kGMWixdp69UOisuYcZAWeE3g6iVw8kB+IdUdRFYTSK8duYi6WgCHDGjI5KRAAUZldyLbWJyPV8WAwc9aj1CeU0MP3FgJ+shWVj6K0BsmBj9I5rcoEo7gNXCSKUNbQSD7h3gGVtZtbKJHyOG8deFQQkt9QmM/HOBcvwBNd+jGY4KwJfY7T2ewPw/P/BfvC7pQ5VwGt31+oLaxUA5MoRUV2NI5cEJ+NxP7q3akg6AnYinH9VSBFokLNTisw0mDKs5wSk4v3s7e/MnFt5KAUqFKeBuizIouzIbUmsaavQjpVnJ7MilGCSSHFgb1CE15kvCxEfw8+JB22XlN0jejCvChiTUm7eWThdOR5L72SG93TxrYe4Fa2mrvTtpQ6XRMwjjk2f5h95N67ifaXPKI+3YsbMHJJ7XyFPUFQzELdm3NhJDN+HJtoYQ1cPYn87FE2jvmOHafY2pR6GMFn2zStITTZMjGRXZ0tV9ni8gt3TMT0zGuJcOgsYCOTxIb6NLlXt1A829nJtv3z+g6kIDxi4bQkTghWGl0cBHDDjJEnSUBMnppcpErpaoQ3SoEG0w/1RsS4kQGuve46viYiPT9U6ycN8BdVrQ9vVRR3NCBmM3X3ZsUY2V23/QCfLWiXHyIWZQkOf+u7ngj98ttyRc6b4e1qbMUxXj7wu0b/c0EHm9hOwkp3keZndq3csW+fk2XCy3SssruksuHAXR1MZj9BeCy4fGiE/7mtF0Ni7DXcdaN/b3o1YlR5781TXhPqn3i3NNA=
+sidebar_class_name: "post api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Set the audit trail settings"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/api/2.0/security/audit/settings/lifetime"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Sets the audit trail settings for the current portal.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"settings":{"description":"Audit trail settings"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Audit trail settings","content":{"application/json":{"schema":{"type":"object","properties":{"LoginHistoryLifeTime":{"type":"integer","format":"int32"},"AuditTrailLifeTime":{"type":"integer","format":"int32"}},"title":"TenantAuditSettings"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

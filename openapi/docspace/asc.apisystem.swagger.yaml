@@ -3,8 +3,12 @@ info:
   title: ASC.ApiSystem
   version: v2
 servers:
-  - url: http://localhost
-    description: Local server
+  - url: https://{host}:{port}
+    variables:
+      host:
+        default: localhost
+      port:
+        default: '8092'
 paths:
   /people/find:
     post:

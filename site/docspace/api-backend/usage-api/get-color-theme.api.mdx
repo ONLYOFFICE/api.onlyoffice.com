@@ -1,0 +1,63 @@
+---
+id: get-color-theme
+title: "Get a color theme"
+description: "Returns the portal color theme."
+sidebar_label: "Get a color theme"
+hide_title: true
+hide_table_of_contents: true
+api: eJztVU1v2zAM/SuGdg3s1O2wNrcuLYpiGzA0HXYIikKxmVitbGkSXTQw/N9Hys5Hl7XJMOy2QxBbIh/J92iyESgXXoymYgKIqlr4KInGpixNFfn+RNwNhLHgJCpTXediJBaAY6ONuy2gBDEQDrw1lQcCakQ6HPJfDj5zyrIPeazRzTzCAiJrHErNjyV5DURmKoQK2VFaq1UWgiUPnr0b4TMylPyESwuEZ2YPkCE5Wsepoepi93gbO+mcXJKZQij9fn+Vb9koSmkBjoxe1hKqjq4v6GJuXCmxsz1O6QCeZWk1eR+1A1FJYmeD59ERBa/ABVtyqbWWMwZAV8MWnpjpGgSBllJV+wuRWdbT+Xbw82AXZazmm+HfnXw4Pbo44gxmNSKpvR/8YzA8BPx9enZ2ORQtocs8V+wv9detiuZSe3JBhcHhfDKOv8MsHhsH8TdUWuEyXvVYPK49mnLToX51E46uqRW4DIRn/E/kXxP5jyOt1PrNN+N3qCA7D5pkhEO+48nK9M3vOD0+IVitSoUHYH4OdnsB/5S0c6v498XkoH1804/bCzSvE0eXJE7b7nB3A1i7ym+P4dBY3TCOKdcSsDD9nOcPQmJBL4m0KknjYbLaC0lww34HeHBP4HiVNKJ2mhwKROtHSdIUxmM7ajhYS5ZP0inWLDQ+33XrYi5rzYxpk0kdjil19nl5fTo8S7mwOw6Z1Y7aaJKtx7702b2ssbh/hOX2GrDqE/Ae6EbySzPaDsxLZsyjgtDQqpqb4L0rA+dPZXZUPqVdjh5LGYZyD38FGMltVn/tk2az8A7Qoy+CB1ZiNc9/iho4bnpxplwhWZI8QYp+cfNeXUtEhHVkT0XTzKSHb063LR//qMERW9O7jTb8RkEKkDl1OWsaCA1jzmIQkffRaHdbszDrBrq6vCVCfwJZTORv
+sidebar_class_name: "get api-method"
+info_path: site/docspace/api-backend/usage-api/asc-web-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get a color theme"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/settings/colortheme"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns the portal color theme.
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Settings of the portal themes","content":{"application/json":{"schema":{"type":"object","properties":{"themes":{"type":"array","items":{"type":"object","properties":{"id":{"type":"integer","description":"Theme ID","format":"int32","example":1},"name":{"type":"string","description":"Theme name","nullable":true,"example":"blue"},"main":{"type":"object","properties":{"accent":{"type":"string","description":"Accent color","nullable":true,"example":"#4781D1"},"buttons":{"type":"string","description":"Button color","nullable":true,"example":"#5299E0"}},"additionalProperties":false,"title":"ASC.Web.Core.Utility.Settings.CustomColorThemesSettingsColorItem"},"text":{"type":"object","properties":{"accent":{"type":"string","description":"Accent color","nullable":true,"example":"#4781D1"},"buttons":{"type":"string","description":"Button color","nullable":true,"example":"#5299E0"}},"additionalProperties":false,"title":"ASC.Web.Core.Utility.Settings.CustomColorThemesSettingsColorItem"}},"additionalProperties":false,"title":"ASC.Web.Core.Utility.Settings.CustomColorThemesSettingsItem"},"description":"Themes","nullable":true},"selected":{"type":"integer","description":"Selected","format":"int32","example":1234},"limit":{"type":"integer","description":"Limit","format":"int32","example":1234}},"additionalProperties":false,"title":"ASC.Web.Api.ApiModels.ResponseDto.CustomColorThemesSettingsDto"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

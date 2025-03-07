@@ -1,0 +1,71 @@
+---
+id: update-a-history-category
+title: "Update a history category"
+description: "Updates the selected history category with the parameters (title, description, etc.) specified in the request."
+sidebar_label: "Update a history category"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVcFu2zAM/RVDu2yYV7tpga25dUmBBAO6oumwQ5GDajOxCtvSJLpdZ+TfR0pO4jTp0ALLIRBIvifykaJbgXLpxPBWZLZKJsqhtk9iHgsHWWMVPpGrFecNFtqqPxKVricgc7AMsXQSsXikOBDzFaFycJlVhsPEUPwwuURwERYQOSghQ8ijItwRZeRa8uFRYeFDjLSyAgTroveosIQ46vHFEWB29CFyBjK1UMSkag+z8KsBh0eUSXf8qnPKuxWZrhFq5KM0plSZzz+5d5xdK1xWQCX5hE8GKF99d085Eo+x2oBFBY69Kuf/3dImz6uYjgnX8Si6dkkSrcjCdezDL+FxX4gQu2FxaFW9ZJId7Kuo+iEHCFUll3BJYh+m8+6oJn+kF17j5xccInXa4nfrR+NVOWofuy+a/3EvndG1Cy0YpOk+axiv/Ykizv/U+WsoCfgAU4TKjXQTGJ8lHIuFtpXEYDoZkAF+y8pw38UxKzNlPa8kFj10p1s/1kh+CDrIz7ib9fC8jAkhFDvenZGXEf1Awo10qe2/Ee/k50VGDaDoWb/Hb9dh/GbY4ORUrLbvaP3uRl2rf1pqbzc0sThNjw9MSS277QW5p6IVU+ic9W58x31fRCKNSgZHacJ7sJuoZD1RSavy4W366Wz+cSV4N9oH2lJ+NTa2JHSBaNwwSdpCO1wNW0M6ceSDtErelWGa2BfyW8im5IJLncnSmykvxuy6v6RnAy6tt45nPLmB7uBS3shL5XwDfgqKRSiCOxa1f/S7WK8KP43r7fq8WLcgrL9024HNgOzKvDH3dsvW2NsNKe+feqF9rh3nSFdVU1N50cxLG11fzG6i86spS0hKhytK/piQVKu/8v9Tjg==
+sidebar_class_name: "put api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Update a history category"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"put"}
+  path={"/api/2.0/crm/history/category/{id:[0-9]+}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Updates the selected history category with the parameters (title, description, etc.) specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"id":{"description":"History category ID","type":"integer"},"title":{"description":"New history category title","type":"string"},"description":{"description":"New history category description","type":"string"},"imageName":{"description":"New image name of the history category","type":"string"},"sortOrder":{"description":"New history category order","type":"integer"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Updated history category","content":{"application/json":{"schema":{"type":"object","properties":{"RelativeItemsCount":{"type":"integer","format":"int32","example":"1"},"ImagePath":{"type":"string","example":"path to image"},"Title":{"type":"string","example":"Title"},"Description":{"type":"string","example":"Description"},"Color":{"type":"string","example":"#a7fc00"},"SortOrder":{"type":"integer","format":"int32","example":"1"},"ID":{"type":"integer","format":"int32","example":"1234"}},"title":"HistoryCategoryWrapper"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

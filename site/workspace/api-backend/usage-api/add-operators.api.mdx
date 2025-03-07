@@ -1,0 +1,71 @@
+---
+id: add-operators
+title: "Add operators"
+description: "Adds the operators to the phone number with the ID specified in the request."
+sidebar_label: "Add operators"
+hide_title: true
+hide_table_of_contents: true
+api: eJyVk01v2zAMhv+KweucOs2H2+aWrgUW7BI02y5tD4pMxypsS5PkZJnh/z7S9hIXXTHUJ4oiqZcP6Rq82DlYPIK0RfRDr9bwHIJDWVnlj+SvYVn5TFv1W3ilyy8oErQcb8mCEA4Uh/DcUFaCTlplOAwWsEwSF/gMA23QCq8tnXTrMJkuMSirYos2OCiftd7VXeAMSpUqTAJVtj6LPyt0/oLe6c1bnZCqGqQuPZaeTWFMrmSrLnpx/HYNTmZYCLb80SCp0dsXlJ7qGMt6vELHt52IVcL2a/nrocjVHWX2lZy3qtxBE8Kpsf9kn+NORYS14khHYle4gcy+eAiptoWg9qCqVAJN9zEFZ3TpOvGT8fjty4Sd+Jn33v8ot/eEnnh65XN2LHdctpc5G1++Vfa9FP0mIXcUQoF0JPRgqnYywmd0iIRR0eRiHPFC7rUyUdeGi+q/01o8PR0+NRH3Bbysdo88BNrVyuZUIvPeuEUU1Zl2vlnURlvfUOReWCW2eUeP7zqRqahyRp1rKfLWTeI45/X19fhmwg0O/o8N4+rK/fMvOWM06iu2HJlE1l2HUIqiZTfMbdHwPB7OG3//SxSGMQ839rwsg0V8hGkqrudpPBvNry6vRrN5PBltp6kcTeRNPE3jWKQipv+VpaS6ldhP8LMuiqqkroJNSzR4uN98C5brFZMjwN0Uc+GRCTV/AHRudkE=
+sidebar_class_name: "put api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Add operators"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"put"}
+  path={"/api/2.0/crm/voip/numbers/{numberId:\\w+}/oper"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Adds the operators to the phone number with the ID specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"numberId":{"description":"Phone number ID","type":"string"},"operators":{"description":"Phone number operators","type":"array","items":{"type":"string","format":"uuid"}}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Added phone number operators","content":{"application/json":{"schema":{"type":"array","items":{"type":"object","title":"Agent"}}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

@@ -20,36 +20,32 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to get subtotals of a pivot field.
+
 
 ```javascript editor-xlsx
-// How to get a pivot field's subtotals.
+let worksheet = Api.GetActiveSheet();
 
-// Create a pivot table, add data to it then get subtotals of a specified pivot field as an array.
+worksheet.GetRange('B1').SetValue('Region');
+worksheet.GetRange('C1').SetValue('Style');
+worksheet.GetRange('D1').SetValue('Price');
 
-var oWorksheet = Api.GetActiveSheet();
+worksheet.GetRange('B2').SetValue('East');
+worksheet.GetRange('B3').SetValue('West');
+worksheet.GetRange('B4').SetValue('East');
+worksheet.GetRange('B5').SetValue('West');
 
-oWorksheet.GetRange('B1').SetValue('Region');
-oWorksheet.GetRange('C1').SetValue('Style');
-oWorksheet.GetRange('D1').SetValue('Price');
+worksheet.GetRange('C2').SetValue('Fancy');
+worksheet.GetRange('C3').SetValue('Fancy');
+worksheet.GetRange('C4').SetValue('Tee');
+worksheet.GetRange('C5').SetValue('Tee');
 
-oWorksheet.GetRange('B2').SetValue('East');
-oWorksheet.GetRange('B3').SetValue('West');
-oWorksheet.GetRange('B4').SetValue('East');
-oWorksheet.GetRange('B5').SetValue('West');
+worksheet.GetRange('D2').SetValue(42.5);
+worksheet.GetRange('D3').SetValue(35.2);
+worksheet.GetRange('D4').SetValue(12.3);
+worksheet.GetRange('D5').SetValue(24.8);
 
-oWorksheet.GetRange('C2').SetValue('Fancy');
-oWorksheet.GetRange('C3').SetValue('Fancy');
-oWorksheet.GetRange('C4').SetValue('Tee');
-oWorksheet.GetRange('C5').SetValue('Tee');
-
-oWorksheet.GetRange('D2').SetValue(42.5);
-oWorksheet.GetRange('D3').SetValue(35.2);
-oWorksheet.GetRange('D4').SetValue(12.3);
-oWorksheet.GetRange('D5').SetValue(24.8);
-
-var dataRef = Api.GetRange("'Sheet1'!$B$1:$D$5");
-var pivotTable = Api.InsertPivotNewWorksheet(dataRef);
+let dataRef = Api.GetRange("'Sheet1'!$B$1:$D$5");
+let pivotTable = Api.InsertPivotNewWorksheet(dataRef);
 
 pivotTable.AddFields({
 	columns: ['Style'],
@@ -58,15 +54,15 @@ pivotTable.AddFields({
 
 pivotTable.AddDataField('Price');
 
-var pivotWorksheet = Api.GetActiveSheet();
-var pivotField = pivotTable.GetPivotFields('Region');
+let pivotWorksheet = Api.GetActiveSheet();
+let pivotField = pivotTable.GetPivotFields('Region');
 
-var subtotals = pivotField.GetSubtotals();
+let subtotals = pivotField.GetSubtotals();
 pivotWorksheet.GetRange('A11').SetValue('Region subtotals');
 let k = 12;
-for (var i in subtotals) {
-	pivotWorksheet.GetRangeByNumber(k, 0).SetValue(i);
-	pivotWorksheet.GetRangeByNumber(k++, 1).SetValue(subtotals[i]);
+for (let i in subtotals) {
+    pivotWorksheet.GetRangeByNumber(k, 0).SetValue(i);
+    pivotWorksheet.GetRangeByNumber(k++, 1).SetValue(subtotals[i]);
 }
 
 ```

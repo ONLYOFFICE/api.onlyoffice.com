@@ -1,0 +1,71 @@
+---
+id: delete-a-custom-field
+title: "Delete a custom field"
+description: "Deletes a custom field with the ID specified in the request."
+sidebar_label: "Delete a custom field"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVG1P2zAQ/iuWP21aStK05SXfgIJWbZMQdJs01A8mOYghiTPbAUqa/747J32jExrS/Ols3z1399xLza24Mzy65rHO/dPKWJWzWwlZYvjM4wbiSks7R4WaH1c2VVq+CCtV8RlEApoMNUrc40+oB3zWoFUCJtayJDUe8TFkYMEwweINePYkbcpsCmwyZqaEWOJzwmTh3jT8rsDYPcTtxBOVYBQ1j1VhobAkirLMZOyi8e8N+aq5iVPIBUl2XgJ6Vzf3EFvEKbUqQVsJhn4RAtOaOp36VcBn7o85AG+JY6yWxR1vPO7Cl8mu3bnLazJeG0mM9Q5ZatyhXEypCtOGEAbBLsZmBRDnP2V7CRkaPsLEQm5OVdUivgoSM1M6F7Z9GoT4AM8iLzNSCijzlphJ8l7j/nAUDobhgDC+ihvINgA6XjfVT6S2aSKwm1DfkfpDZBW8bRQGYdDrh73gcNo/iAYHUTDcGx3194fB/q8VzrLe/xB8UeXU3FN4tuddMUg+xm5H8Qp7OsaefEb5NIX4oRVpKNrAxhT+zihcB6zHVpAe63dXQvVYiLcVsMcGeF1ie2yItw7eYyO8kIfZFgUjyvNCGdl6e2eNXIW/CfPwNs+khS3+XnSsP6cJwAZyD22fOxp+amztbkg8Pgz6u1PxvRDd7oHEweSAV+xD1KPlQg0vbIp3X5TSD/cCn9ZZvZ7y6AONkojtAl3h9CxilZeimC9UWSptqwL1FrEw8LHx2zXlRtCvu2mProPe0exTw2kn6kfEcCux0tjLPLW2NJHv16kytolqQiTNR6GluMnaGaS/NrNbUWVEU6ZikblnzIhstr8Pg6OQSNlYw1c07y3cX5fxqijIwheYYwiS6Evbb48XIqffLVvHJy2Uy/WiPVsWbntRrvthtQODhnzcKud7WVuV545Q7Gaiil2eXU3Z8cWEKEHm2priRgJKvfkD0ccxdg==
+sidebar_class_name: "delete api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Delete a custom field"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"delete"}
+  path={"/api/2.0/crm/{entityType:(contact|person|company|opportunity|case)}/customfield/{fieldid:[0-9]+}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Deletes a custom field with the ID specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"entityType":{"description":"Entity type","type":"string"},"fieldid":{"description":"Field ID","type":"integer"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Custom field","content":{"application/json":{"schema":{"type":"object","properties":{"RelativeItemsCount":{"type":"integer","format":"int32","example":"0"},"EntityId":{"type":"integer","format":"int32","example":"14523423"},"Label":{"type":"string","example":"Birthdate"},"FieldValue":{"type":"string","example":"2020-12-08T17:37:04.5916406Z"},"FieldType":{"type":"integer","format":"int32","enum":["TextField","TextArea","SelectBox","CheckBox","Heading","Date"],"description":"[0 - TextField, 1 - TextArea, 2 - SelectBox, 3 - CheckBox, 4 - Heading, 5 - Date]","example":"5"},"Position":{"type":"integer","format":"int32","example":"10"},"Mask":{"type":"string","example":""},"ID":{"type":"integer","format":"int32","example":"1234"}},"title":"CustomFieldWrapper"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

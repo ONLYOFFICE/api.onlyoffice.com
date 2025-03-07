@@ -1,0 +1,71 @@
+---
+id: create-a-folder-structure
+title: "Create a folder structure"
+description: "Creates a new folder structure specified in the request in a folder with a specific ID."
+sidebar_label: "Create a folder structure"
+hide_title: true
+hide_table_of_contents: true
+api: eJy1Vmtv2joY/iuWP4dBuXQd37rSauioGyrdOR8qNJnEId6SOMd2YJwo//28r+0EGBSxaavU1rGf936tqGErTccvNBYp190HmUZcaboIqOZhqYTZwmNFb0uTSCX+Y0bI/ANnAEIiBSca0A3gOF3UQBVxHSpRIIyO6R0ADNeEkZxvSGyZE21UGZpScaILHopY8IiInJiEE8X/Lbk2+Mka+EaYBL48NiTTyRsQWTDFMm5QV9Qvhw+Q50imqJNA+QUzCf1RqRlTPDcN++kEADpMeMbouKJmWyAj0FHkK1qjSV6p9zLaIiKUuQF6PLKiSEVofdL9qpF5dcxKLr/y0KDKShZcGcE1viqeAuGaz0BFe3Go5JN/JmiCJkaS0Ppy55fWjcDai2JKsS3abnimT1ljf9AiXchcO0X6vd6x+EcGIfCCvMEaGP8m25+lYekDJtweVgDrFaRVAFFUGTPuatCHC/6dZUWKoBEF9S35vFw2yforPOYJZAFb4kVLvZQy5Sw/AIOTOeI/8s2DVI/8Z4UNkNgp+lmlxzHZx3p/l4ADoql+YGtpK+tYRXyfnHL0jttVf7CJWAd+N9ZpwhwYe0K+sRDAurJ9vz0Fb20tSxEdkEfD3vL6Jup1Rsub687wpj/oLPt91olHb+Nh/108YnG8z33uWJ5ViUWZyHdEn/JLiFylfJGW8FFGtsVcRpp59A/Ef8oVO/4/5Yx7paQ6j0XYbRhyfWl55GWGHf2jzLGhPEFj/8fmnjvbfyjGJtnfTGEl491a8A0c7mSWYWOAXBdpCpWS4fNdqY3M4Ab6ND0aDi890iEoLyBXcGpFBqTvPwMysCcnOCBD+HKyAzKyLyg+INdw9hoE5C18tEoE5Abf9vRYHJen7QXRhY1gpuRauCHzK62gIf+Ln0ypHbrwwC/fANn2kGk0EbpI2faS2reNbsJTGJPRjINeOTgo3b5eCRaebydyk6eSnfKIR6DHDjm0AEC4PjL2KlM3c4a9q+Mx8zlnfrEA/yMKRnoiIzRfajs3cICPaZcVott/0+u6LcU1St2tmnlf4wznat2sA9hCxzQxptDjbrdKgFk9rgqpDCLXoDy2flsa+OYUi1mZYuRSGbLUXoNCSHP4fNN710eb9lakOc49x+7kotR6CczAwPvtJHHPQbO9HNBad+BgfdqtH/dNgI/Wh5cmhIsamcfSCvVxwNIoc9CTzK2PyNP9/JnczqboC3CZi0WKm5q3WRtIFmThNbs7s3scRHRvPfqDy5/3puHfTReKwTXF0o1XlzEv6GpAQs5gUdpVI/ADFk/jdlOEMLoUeKFVtWSaw5iua7wGbRRuv4tdxtjkioTGM2RpzFLNz3jgxKZ5UvUmO/Ktzc60tB08oFj6e0ttjcFNmuW78s93TlznGZnsyI/2szpoKHAuFOYsdrFXirNP82cAL/3+CyMSaRTDvo9/rarSmu82W7yrIJ/yVclWiHU8MaGx3A/r4ZutB39Aq04647A0Gs+41vgKSVW5aqvrFu+eXqVo69GhMTYL0Pp/PBtruA==
+sidebar_class_name: "post api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Create a folder structure"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/api/2.0/files/folders/{folderId}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Creates a new folder structure specified in the request in a folder with a specific ID.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"folderId","in":"path","description":"Parent folder ID","schema":{"type":"string"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"relativePaths":{"description":"Relative paths to create a folder structure","type":"array","items":{"type":"string"}}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Main folder contents","content":{"application/json":{"schema":{"type":"object","properties":{"TotalFiles":{"type":"integer","format":"int32","example":"5"},"TotalSubFolders":{"type":"integer","format":"int32","example":"5"},"Shareable":{"type":"boolean","example":"true"},"NewForMe":{"type":"integer","format":"int32","example":"3"},"FolderUrl":{"type":"string","example":"folder url"},"IsFavorite":{"type":"boolean"},"ID":{"type":"object","example":"123wda-wdaw"},"Title":{"type":"string","example":"title"},"CreateBy":{"type":"string","format":"uuid","example":"d40b68d0-5b86-4823-b22a-f57f429f5aff"},"CreateByString":{"type":"string","example":"admin"},"CreateOnString":{"type":"string","example":"create_on"},"ModifiedOnString":{"type":"string","example":"modified_on"},"ModifiedBy":{"type":"string","format":"uuid","example":"d40b68d0-5b86-4823-b22a-f57f429f5aff"},"ModifiedByString":{"type":"string","example":"admin"},"Error":{"type":"string","example":""},"Access":{"type":"integer","format":"int32","enum":["None","ReadWrite","Read","Restrict","Varies","Review","Comment","FillForms","CustomFilter"],"description":"[0 - None, 1 - ReadWrite, 2 - Read, 3 - Restrict, 4 - Varies, 5 - Review, 6 - Comment, 7 - FillForms, 8 - CustomFilter]","example":"3"},"Shared":{"type":"boolean","example":"true"},"ProviderId":{"type":"integer","format":"int32","example":"3"},"ProviderKey":{"type":"string","example":"provider_key"},"FolderIdDisplay":{"type":"object","example":"123wda5"},"DeletedPermanentlyOnString":{"type":"string"},"DenyDownload":{"type":"boolean"},"DenySharing":{"type":"boolean"}},"title":"Folder"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

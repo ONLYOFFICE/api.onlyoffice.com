@@ -1,0 +1,65 @@
+---
+id: capabilities
+title: "Get providers"
+description: "Returns a list of the available providers."
+sidebar_label: "Get providers"
+hide_title: true
+hide_table_of_contents: true
+api: eJzNU1Fv0zAQ/iuWH6vQlIoHyFthMCEQILaB0FZNbnJtzFzb2JewEuW/c+e067JpEo/kwbF999l33/e5k6g2URaX8p02EEUuzmsdqmdeBdwJbRE2QaF2Vi4zWUEsg/ZpWcivgE2wUShhdETh1gJrEKpV2qiVAeGDa3UFIU6v7JUVk8knhzCZFGLxKEXcwC4W4iQ4v3K33+aZeO1uM/EdVieqzcQPZSug9WcLJ0G3kImzWgX44qi+TJw6tzGHwE36T2UmnYeh8vcVFVsqr1baaNQQKRggemcjzYtOzmcz/o27+7jvaVQiIUtHnFhkgPLe6DLdkf+MjOpkLGvYKp7hzgOdo0JQO8JphG38h/2IQduN7NOXyRez549ru7CqwdoF/QcqyVkRyiZo3JGOVFYsrzl+TRWzsAFURRf9pgSQy5503AKhmZUNIEW8wpoWufI6n09n+ZqdkCP7INkgf0BehNCSrOmyJhiC1og+Fnne1S5iX3TeBewps1VBs9CpQY4NvaxVY2gqjSuVSdvUA2PG4ZezV3MmYnls8IzpHY4bt3nk1esPwMRatU3r+2lEN/NXOnejITGn7doltEbD6YuzN1Oy3XThNddPbQ6Ut/OhxohblYTeH38KeDS6fPBEuqNb/vfXsmcP4RZzbxTRRO0mcbu9Py6ZWsokh9CYPMK4O5fw27jvE1JtUPxSdt1KRbgIpu95+1cDgZ25PBqEV3RhTVaFkIyVVJWLsgSPyUmmGeR98OZGfj59e065LPfYEYP2+wmffgjZ3f2zx1YZKuCxz55AdN1gt76/yx9CTyL2HR6ymeclWfwvxNbiuw==
+sidebar_class_name: "get api-method"
+info_path: site/docspace/api-backend/usage-api/asc-web-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get providers"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/files/thirdparty/capabilities"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns a list of the available providers.
+
+ **Note**: Available provider keys: DropboxV2, Box, WebDav, Yandex, OneDrive, SharePoint, GoogleDrive, kDrive.
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"List of provider keys","content":{"application/json":{"schema":{"type":"array","items":{"type":"array","items":{"type":"string"}}}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

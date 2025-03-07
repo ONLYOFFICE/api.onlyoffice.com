@@ -1,0 +1,71 @@
+---
+id: update-a-contact-status
+title: "Update a contact status"
+description: "Updates the selected contact status with the parameters (title, description, etc.) specified in the request."
+sidebar_label: "Update a contact status"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVE1P3DAQ/SuRe2nVdBMWpJa90QWpqFJbsaAeEAfjzBKjJHbtCZRG+e+dsfcj4UNdpO5h5Yzfe5l5M5lOoLzxYnYplKuzuWlQKvTiKhUeVOs0PtBdJ45aLI3TfyRq03wBWYBjjqOTSMU94UBc9cQqwCunLcPETFzYQiL4BEtIPFSgEIpExZckHiW2PrnXWAaAlU7WgOB88hY1VpAmA7U0AVSTd4m3oPRSk45uAs3BrxY8TiiP1fGzKSjrTvCLoEE+SmsrrUL22a3n3DrhVQm15BM+WKBszfUtZUg61hkLDjV4vtUF/48Lm49rOD0m1kpF00tvyJ6eIlzFU/I3uH9sQkRuNDw63dywxIi5g9AQ8IycMpVxOwlF5DMS3jj87sIA7CDD6MQE+FOHwo/b5q1pfHR7muf/sluk/6u1Z1AR8Q5OEWo/N21UfJRmKpbG1RJjaH9KAfgta8utFXtsyfm6z2OzhrgIIezxuKEvM4ZA4s3XnXuZ8UZ+XCqyj9CLYZNeXQ+N82tp0/0D0W9Hft2xRWjYT0dNWjU8FQf53tMOXzRytWKgCEK0CUpDX56wbeibxJIeMml1Np3kGW+r1ahlcSqyThezy/zD4dX7XvD6cne0SsL2al1F3BLR+lmWdaXx2M86Sx4x8k46La+rOBF8F7NbyrbiYiujZBXClBVzxtef8sMpFzbYmAuevij37N7cWEvFfIUHSkGzBWW8TkVDa5CeR9zgCY/32XbHnaztjzsq37q/GY6xyZvwag1sA4OPOu85n6UJeW66WddtQ6Uli2BrcnayOE+OfpyyfeRylK9415NN/V8GkjE9
+sidebar_class_name: "put api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Update a contact status"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"put"}
+  path={"/api/2.0/crm/contact/status/{id:[0-9]+}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Updates the selected contact status with the parameters (title, description, etc.) specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"id":{"description":"Contact status ID","type":"integer"},"title":{"description":"New contact status title","type":"string"},"description":{"description":"New contact status description","type":"string"},"color":{"description":"New contact status color","type":"string"},"sortOrder":{"description":"New contact status sort order","type":"integer"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Contact status","content":{"application/json":{"schema":{"type":"object","properties":{"RelativeItemsCount":{"type":"integer","format":"int32","example":"1"},"Title":{"type":"string","example":"Title"},"Description":{"type":"string","example":"Description"},"Color":{"type":"string","example":"#a7fc00"},"SortOrder":{"type":"integer","format":"int32","example":"1"},"ID":{"type":"integer","format":"int32","example":"1234"}},"title":"ContactStatusWrapper"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

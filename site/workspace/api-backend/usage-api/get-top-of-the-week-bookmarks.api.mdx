@@ -1,0 +1,63 @@
+---
+id: get-top-of-the-week-bookmarks
+title: "Get top of the week bookmarks"
+description: "Returns a list of the most popular bookmarks for the current week with the bookmark titles, dates of creation and update, bookmark texts, and authors."
+sidebar_label: "Get top of the week bookmarks"
+hide_title: true
+hide_table_of_contents: true
+api: eJzNVW1v2zYQ/isEPyuW7AZZa2Ao0i7Iiq1D0aQY0DQfztLZYi2JHEnF8QT9992RkmN1bb1hX2YbMnX33AvvHh476WHj5PJO5rqu20b5ffpK620NduvkfSId5q0lKUE6edn6Ulv1J3ilm58RCrRsamklE7kjHMr7nqwKdLlVhmFyKd+jb23jBIhKOS/0WvgSRa1pbbRpK7BiNcYUa22DmsJabLzYIW7FTvkySEec8MpX6BJRgEfHLnPKguMJaArRGpYnR3B89IRmHYRNuBllbNEZ3TikAnRykWX8N0391yHhQ35klevGU2YMBmMqlYe46WfHFp10eYk18MrvDZIPsBb2ZEfVqd2RXK8+Y+5JYaw2aL2KebwpjjCKQm2oyomkutTgo+jinAT4CLWpGDSfyz6Rt1yRI1PnrWo2E+C11psKhWryGVt8sNX38aX3ZvnpU0q/3W432wTzGTElxCvbetWAOuGDggivqXkjmkxfc6+w+L7hIltkZ/PFWXZxm/2wfHaxnJ/Pns/p++LZx5B96PF/dPLTcbdPl+4o+Vf7f9nKg9NDJ9tWFZMg2fA5+8pj/ISslTMV7H+D+kTD36otio/Q7MG7rfqHLHkLDTDnCH35AB7sTQ3ViS63scuOkQKCFdu/s3qtKjxJNCIYQYs2946XqEkcZWw+A2ceX7YO7Y9Q1KqhM2nBa4pAIXzckLwiV3qP+LsFg1PVONBYFXU9q8+z+d8P/IcGhiFH1GJUjfRKfZQbDA0GX9JLCkali1mWPo3NcUSkXpuUp5bk6Wkf0LowPFsuQjhSbpmmXUnjr192RlvfE/IBrIJVFXnDupjaGtqKqVLpHKogppTYZqp+nr1Y8LaOBvYNj6Ho7qtj+2k8GfULhvnE+y+jOpFNINfUNhRENWsdzIfqvh4rIG7CbsX7q5tbcfnuDe+KNh/rWvGcHrJ3voZw3IYY1+iJPGa8GMLEPx64xfSQHubv//diGUrLypROKlWWNt7GUxAZdMd1JyRxKFwpQw1pPbpmN9rwvcpcos5GVtzJrluB4zPV9yz+o0XL1/P9E4n4jQKW4w3dyS11mJqZ52h8YFvVxt5/cX8xgw6Mv766JSxva0qXbaDLsGDvo6rZH/meMicZUuBnn3zDpOsiGfv+gI+qb1oc6BrRXOh7Ogd/AZVx/Ok=
+sidebar_class_name: "get api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get top of the week bookmarks"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/community/bookmark/top/week"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns a list of the most popular bookmarks for the current week with the bookmark titles, dates of creation and update, bookmark texts, and authors.
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"List of bookmarks","content":{"application/json":{"schema":{"type":"array","items":{"type":"object","properties":{"Id":{"type":"integer","format":"int64","example":"11"},"Title":{"type":"string","example":"Google inc."},"Url":{"type":"string","example":"http:\\/\\/www.google.com"},"Thumbnail":{"type":"string","example":"Url to thumbnail"},"Created":{"type":"string","example":"2020-12-06T07:36:14.8181893Z"},"Updated":{"type":"string","example":"2020-12-06T07:36:14.8181893Z"},"Description":{"type":"string","example":"Google"},"CreatedBy":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"}},"title":"BookmarkWrapper"}}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

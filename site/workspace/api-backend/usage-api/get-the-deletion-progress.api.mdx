@@ -1,0 +1,71 @@
+---
+id: get-the-deletion-progress
+title: "Get the deletion progress"
+description: "Returns the progress of the started data deletion for the user with the ID specified in the request."
+sidebar_label: "Get the deletion progress"
+hide_title: true
+hide_table_of_contents: true
+api: eJy9VDtz2zAM/is6zm7k5jq03tIml/q65PKYch5oCbaYUCJLQklcnv57AVB+tW6HDvXgA4kHP3z4oKRQr6OaPSoPzlsoHyKEotao1WKiIlR9MLghf1IXPTYumB8ajeu+gq4hcF4gS03UK8WBWgyUVUOsgvEcpmbqFrAPXSywgcIHtw4QY+FWco6oA0It7xU1WOCcYuWCeHuG8mqwkdP8sogeKrMylGA6uQvwvYeIZ/T+aH52NaFNqnIdQodsau+tqQR1+RQZU1KxaqDVbOHGA6F0yyeokOoQRA8BDUT2MoR5zdZxU8LS/JLix/yIwXRrNciP0UTvupiLnE+nv1e43Ha75YRq/TNoNGhBuG7dC9yMFecIrcp4Pkzfn2ii0+NIoVYc1QIdqVu1BqFCY0OHUntTnp9Ny1EhQR4pD3ATGS8QoqikD5ZyGkQfZ2WZGhdxmCXvAg4U+aKD0UubeWFfRrXSvSVTWVdpK9eEhnOO3R+nn865oQNl3jEnudxJfe64oia+wYYgGG69ye6J6nTL3qNc4YJJv91r6upNt5453mtiN3OuuXLy1jiHL65t+47gFXdCTXF7dXdfXNzMmQJiKvNvNcK21YitliGPgK4BReH1CZkcTfFA6v9r1UZGEd6w9FYTodSCzD2NmnlkuimSVMM6Et3IjrJy8pLlZmiSWQWPKqWljvAQ7DDwNb0W+Luz2IuGT/RSs/30JPVME2W2hYB394yLw22fJ/7LCg2TbcZFVYHHv8YuDtbh+uqeYpfjp6V1NacE/cot0f9MkeFkHiJEuUs03m7d6zXH5pIsK964Y1U+iypHg5vaurrNAcBjgU7GPvifuzqZklLW/DDs4rPrjxm7rcjRPNgFof4Jt3ceqg==
+sidebar_class_name: "get api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get the deletion progress"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/people/remove/progress"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns the progress of the started data deletion for the user with the ID specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"userId":{"description":"User ID","type":"string"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Deletion progress","content":{"application/json":{"schema":{"type":"object","title":"RemoveProgressItem"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

@@ -1,0 +1,71 @@
+---
+id: change-version-history
+title: "Change version history"
+description: "Changes version history of a file with the ID specified in the request."
+sidebar_label: "Change version history"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVm1v2zgM/iuCPqe1m/auW4DD0HU9rLgXFEt6A9bmA2MrsRZb8klyUp/h/36kZOelzRIccP6gKhJJPSQfkm24g4Xloyc+l7mw0a+08umAW5FURroarxp+U7lMG/kPOKnVZwGpMKRicMcHfI1ygk9b1EqFTYwsSYyP+G0GaiEsWwlj8YRl0jptaqbnDBi9x9bSZcxlgt1/YrYUiZxLkTKp/JkRf1fCunN8ogQDhXBox+NR+APtk4l7QiDptRJcxl9DIH/QOJ7bJBMF8FHDXV2StnVGqgVvCXf31Eed1iSRaOWEcrSFssxl4h2Pvluy2bw1pWffReIIp9GlME5iDPG285u2+6g+d4HoBQa9IYnvLjC47cBjkKoSf/3IyLiLl2XrTGC8DHOa9Vo+gJhBg25s4g8qZQWYJZOOgcUcGLGS/kYblmA2ncBDJdZMK7EFNdM6F6AwUvRRsGyplQ0+DuP4LTQf9S7bfPCfwwnGAOkhrQp7Osx/eja8zuuAixcoylz0eDxpEP5jmaKj6cf6tGUk1wG7c20KQG94Vcl07524+84OLP1HED5JW+ZQnwb+h1wK9g1UDc4uJalOpMtPKYGCjkQ3K3BgxgXk+XGdyuREH0uSDLwW6T8YTUX2aE6oPz9HKJpWibO0FRqPwxmpn4MtXz5UVphfIC2kQmIYQG5wYpMLDvE7NKVrIb4aKAP4LlHHXx7Gw/jsYngWv5tcXI8ur0fx5fnl1fDq/U/X38jI7zqw7biVq2f8rn6mdYcrO+jolJB5aKEMruKLt8x/VND1SgROUti1Mp1Se6o8v6hJjXgEpYyG53EUui6tURPaWRttCwcjtup7XkU54JlzpR1FUZNp69pRU2rjWpRcgZEwywNt6S5Am0OVE1NzjELujxES6exfv4vfD8mtnb4/pqIM5g52/22xlvI3UfdNOAvXg75F7+n6gFDVf9m227s+BzvtMj7Q/ZypREuPzLV/vMvLrS6KSiFeNvaxYl/uxhN283BPMel1eY486n23rgDPhg5hGFKvZ9TrQbIzE/7HsdaF0IkXF2FDwAgixCoUW2DKE8UXJZEr1Hn8dA5/8c9oMwB71JjAkPwn3jQzsFS5bUvH+KahYT7dcsXTKpWW9sjQOeRWHHF7O0oPwu7poGpPx7yiX7hdIjk2o7qdomTW/wPRdJe34Y2zCZnYKr+ZFe2g17hJElG6o7LTndp7eJyg7Kyb7oVOScXAGg9p9Ti1d9kT3p81yBq1qLCT4n0wSfSl8t5n/9Kzv9uQUwcjsV8IfVhoJa8OqjRNqK223ciHqx9qbKovSFNipoj6X2qZXIY=
+sidebar_class_name: "put api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Change version history"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"put"}
+  path={"/api/2.0/files/file/{fileId}/history"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Changes version history of a file with the ID specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"fileId","in":"path","description":"File ID","schema":{"type":"string"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"version":{"description":"History version","type":"integer"},"continueVersion":{"description":"Specifies whether to continue the current version and mark it as a revision or create a new one","type":"boolean"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"File history","content":{"application/json":{"schema":{"type":"array","items":{"type":"object","properties":{"Name":{"type":"string","example":"File name"},"UpdatedBy":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"},"Updated":{"type":"string","example":"2020-12-08T17:37:03.3424957Z"},"Location":{"type":"string","example":"4\\\\46\\\\File name"}},"title":"FileWrapper"}}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

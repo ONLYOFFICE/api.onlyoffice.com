@@ -1,0 +1,71 @@
+---
+id: get-bookmark-comments
+title: "Get bookmark comments"
+description: "Returns a list of all the comments on the bookmark with the ID specified in the request."
+sidebar_label: "Get bookmark comments"
+hide_title: true
+hide_table_of_contents: true
+api: eJy1VW1P20gQ/ivWfg7YyVGutVSdKEUtuhdVJahSKR8Ge4K3sb17u2OKz/J/v5m1nZAjhQ8n8iHZzD7PvM9spwhuvUqvVGaqqqk1tfE7Y9YVuLVX1zPlMWscSxnSqZOGCuP0P0Da1B8RcnRCdXxSM/WDcaiue2bl6DOnrcBUqj4jNa72EUSl9hSZVQRlGVGBkRjFmnxk6vD/ZjQd/dBUBMn5+8hbzPRKYx7pAeXw7wY9HbJNCw4qJHQ+OFjzHzaoxR0tpi1Qof7rzxQgK+c7nxVYgUo7Ra0N7JrwliObqZVxFdAgOj5SvYTm0FtTe/TCWCSJ/Oyq/2MMchPMFCVrzAwrr0lIYG2ps5DK+LsXZvfYF3AOWgmGsPIP5ObmO2YkCXDGoiM9+LPEe3qA8uR0fcsovIfKliIafYlIkP1MnXLxCPOnSYtkkRzMFwfJ8TL5Nf3lOJ0fHb6ev5q/mc+/ipJLm/9/Jed7+ZsSNE2o6lZfMn4O9nxNH9H7CRwH/FLax/y9a58vzku58F57W0L7V+j9pyrwp15j9BXqFsivtVCXmsrnSFCDTAOjT+6AwF1UPL1PcxrH420iL8gIAitUwpmVLvHSPUP/9i1maN5k5OWIhsWDTOiH4O39b41H9xbyStc8bQ7IsAU2QUNA6oxVmRbxiwOLu1fT9J8OkyCIAdIL6iiZP57oyxrGzcdNLiheOYXhcqpbDHWWLZOqGKyOF4dJvN2l0w6IO5338Th8snTQ3U1Lq5F8qILI+jSOu8J46tPOGkc9I+/AabgphxaSu8G9FTSldE1pMiiDmN0Szu716+TNQkJ7sMkvZMcM6vbu8+3usfp3bKdNWgzXs2nH7nBDUnS9MoE+Jvp0ykJ0EaKNPp9dLKOTT+cSFQc/5Lbk8Zm891RB2IOjjQ9Ie7foTnW67VJ9yZdmTIrszZjHjXPCLjdDKw/1v5KMMZI7IGz6MXo+T8b4mIYhnxqByzKU9Ep13Q14mY2+FzHbdfLoXm87IDRLrr2cufdWUHp8Ihe7r9xe96dC121otLKRf3xcc9nDK9pfM6qYHvpuvDjJMrT0gPLoKZN+28zIh7MlY2WCdptrHZprPIj2ve7s9tnkm3z3s59Qum5o3b7f4IernzI2zT1GLhHw1PwLz2kD8w==
+sidebar_class_name: "get api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get bookmark comments"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/community/bookmark/{id}/comment"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns a list of all the comments on the bookmark with the ID specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"id","in":"path","description":"Bookmark ID","schema":{"type":"integer","format":"int64"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"List of bookmark comments","content":{"application/json":{"schema":{"type":"array","items":{"type":"object","properties":{"Text":{"type":"string","example":"comment text"},"Created":{"type":"string","example":"2020-12-06T07:36:14.8151911Z"},"Updated":{"type":"string","example":"2020-12-06T07:36:14.8151911Z"},"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"ParentId":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"CreatedBy":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"}},"title":"BookmarkCommentWrapper"}}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

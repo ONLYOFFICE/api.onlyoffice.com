@@ -1,6 +1,6 @@
 # GetTextPr
 
-Returns the text properties from the current form.
+Returns the text properties from the current form.\
 Used if possible for this type of form*
 
 ## Syntax
@@ -17,7 +17,7 @@ This method doesn't have any parameters.
 
 ## Returns
 
-ApiTextPr
+[ApiTextPr](../../../text-document-api/ApiTextPr/ApiTextPr.md)
 
 ## Example
 

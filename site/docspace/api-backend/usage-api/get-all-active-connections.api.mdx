@@ -1,0 +1,63 @@
+---
+id: get-all-active-connections
+title: "Get active connections"
+description: "Returns all the active connections to the portal."
+sidebar_label: "Get active connections"
+hide_title: true
+hide_table_of_contents: true
+api: eJy1Vm1v2zgM/iuGvl4SO2k2pPnW64ahuBtWrCkGXBEMss0k2mTLJ8nZMsP/faTktHa8Lt6AFWirl4cPH5GU6IpZvjVs+cDuICm1sIcgDK4SK/YQJCrPAYcqN2w9YqoAzWl2k7Il24K9ktIjr1vAEdNgChwBslZsFkX0LwWTaFEQBG0b/kJpy2XHzYjhzEJuyYgXhRSJcxl+MmRZMZPsIOM0socCkEvFn9AYDQtNAq3wfqXaivz1vmFqsAKpt6AR3NXzL4EDcOgR2yidcevhFzNcgK88KyQSTGcX83rEhIXMtGi51vzA+uvPSBPpAEkY458puVzMX6ISjBTP7c0QwpWDBuLnvM0JSwO6w2qsFvm2R3qPuBPKsnTzR0bGOUxhGl2M44S/GF9u+HQc80Uyns+iF4t4zuPNbMHQZ6ZiQQaPPmOlJPC85/StB7Z8WF0C5aU4r/imwKW8lJLHR8u2WKMyCCx8taQoUWVu9eE86XUDHM6M92wALaEGc8ZafcF0nKf9uwEOZi4kt5Tf89S3R+Rg7pRbOH9lSpusRAYDCrIBtgqSPIytX9TA03e5PPRF4Tu1GEfz8TRaRS+XF9EyiiaR//krmuOMxBLLfyqHd5uNAXtezaqLPxVlClfdz4uKSIbzjc55mgri5fK2FZsNlwZImXUWV3fXk6tCTK6VBhq8Qj8uIJRGvh0QwVtCDUzfr6j6ALFThr9vVQrSTN43feKVVZNeH7nBtxQ3XIl0L7B7ZE8F/kkpTkZNHubRtN/M7nNe2p3S4hukLiSmaaTYVLGHmeQj7X/8DLTgko3qvyAA2Lpenx7vPdhS5ybgUgZ2BwHvteLAKrfju+cEyTJA/01PpqvD7Q4nIS9EOJtE4VFP6Lm67RYfgj1o47SWWqLdztrCLMOw2ilj62VFfmpE7rkWFHB3IWnPh2LDS0kVLVXCpVumUkOb7vYiupxRFNdP8bmjVu7pulF6aqyF+AfcE8gzN2/D8L2ngCVKfRbgAi/yjXLW/VyTfjymj/F+5jUam3H3UdHQvwH7g3if3pDq6RPlt7LVnI1uUIgvKx6CGi6FvmpS90AHRyQmj7XKCSu8l0AMp0/FA6uqmBu417Kuafn/Eqh1PayfMkcz9LXDEqQ+gRl34cbPsQQK61IsSx/3kw8vSttjlb15vSItJUltp8onpRkQ+3ErP7S5uzn0CuhvPXrGoqp8HdT1I95vPWvRnPCIphCvsfa+A5J+uGY=
+sidebar_class_name: "get api-method"
+info_path: site/docspace/api-backend/usage-api/asc-web-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get active connections"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/security/activeconnections"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns all the active connections to the portal.
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Active portal connections","content":{"application/json":{"schema":{"type":"object","properties":{"loginEvent":{"type":"integer","description":"Login event","format":"int32","example":1234},"items":{"type":"array","items":{"type":"object","properties":{"id":{"type":"integer","description":"Id","format":"int32","example":9846},"tenantId":{"type":"integer","description":"Tenant id","format":"int32","example":1234},"userId":{"type":"string","description":"User id","format":"uuid","example":"aae1e103-bca5-9fa1-ba8c-42058b4abf28"},"mobile":{"type":"boolean","description":"Mobile","example":true},"ip":{"type":"string","description":"Ip","nullable":true,"example":"some text"},"country":{"type":"string","description":"Country","nullable":true,"example":"some text"},"city":{"type":"string","description":"City","nullable":true,"example":"some text"},"browser":{"type":"string","description":"Browser","nullable":true,"example":"some text"},"platform":{"type":"string","description":"Platform","nullable":true,"example":"some text"},"date":{"type":"object","properties":{"utcTime":{"type":"string","description":"UtcTime","format":"date-time","readOnly":true,"example":"2008-04-10T06:30:00.0000000+04:00"},"timeZoneOffset":{"type":"string","description":"TimeZoneOffset","format":"date-span","readOnly":true,"example":"00:00:00"}},"additionalProperties":false,"title":"ASC.Api.Core.ApiDateTime"},"page":{"type":"string","description":"Page","nullable":true,"example":"some text"}},"additionalProperties":false,"title":"ASC.Web.Api.ApiModels.ResponseDto.ActiveConnectionsItemDto"},"description":"Items","nullable":true}},"additionalProperties":false,"title":"ASC.Web.Api.ApiModels.ResponseDto.ActiveConnectionsDto"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

@@ -1,0 +1,71 @@
+---
+id: update-a-filter
+title: "Update a filter"
+description: "Updates the selected filter with the parameters specified in the request."
+sidebar_label: "Update a filter"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVt9z4jYQ/lc0evYdhLuHljeaH1OmJWRC0j5keBC2wLrYlirJJNTj/727ksB2MEcyDQ9mJe2udr9dSV9FLdsYOn6iORPZ4EZklmtDlxE1PC61sDtYq+iktKnU4l9mhSx+5yzhGm00SDSiL6DH6bIGq4SbWAuFanRMH1XCLDfEppwYnvHY8oSs3R7kRdjULSimWc5xW2IUj8VagJIo3Jrm/5Tc2K+wSRB/kwmEVNFYFpYXFkWmVCZiF9rgh8GNK2rilOcMJbtTHEKRqx+wPfhRWiqureAGV30wKHUjv+Uv+0Cb+MZkehWRAkYRUdII1I0IL9gq40lEIKTEzZmIsDgI0nk0tHY/TMMoGPvdR8Ph8dYetD1OEPEnpTpNWjoCXG6c97XUObN+6tsIJvgry1WGShcUAr6FdFuGxmpRbDpqCAhq3gVIPrrNCI2vPYot25WUGWdFR9Xq0m11eYC6ZcC0ZjtQh2bMzXk8/uC7d0ZalDl2+42WOQwf5Fxfxk6Aj5MWpd/i6AA8DckXgnYRuQDJm0Zk5OSIfIN/HH+H/+BjeVyBOQTNPgBsCHfGLHSGgZlbaZsBQGeZKML8YdQfejDz0TdufAZ7W59Hy1lPDn+xrDzTRlungmfECutmZnAlLQTfcn8tHYp+xSxzipP4f/aAd/AxXK/gIrP8RmoIDBVncstdK8yYfn5gmyBNzDRXUltW2MPMPd6X/Uh3vHq8vWOPdfDtoX7j3vdPs0MP/A6xn6Kf7DE9Ab5H6oD8XL1F/gTCrmNmZWZF75l9B963suAOQXA0ybKDaP/kzNg5LPYjinYByGC6h7Jj3YPWBG7ZHZT0bHI3MkvwuTzff++9b+vIAb+Sr/yT3f4N7+3EWhanOTwmH6yBMy4S/JOlbbs5duxn3qj1l+ikW1+3N559+Y6Vjyp4uotD24YC+26O6HRTwLmbA+HQ73p/zvq/OnOYwjpqfB9e9FCAggXCBS8iagH/SCU8jlSVrguZTWEwYEoMRl+HA8fd1oG7IXXTW9eWwNxKnYFmaq0y48GgSqWx9bjCm6MGzS3TAt9d1w645mNZMziwYJbJmGVuGmJAm+7yL8NfR5hGiy0ukIyEu7WPMzYdrQQ+wNDSmHDqlyPPJcZdW4cAsp37hgJe70tS1ehi7Q9rQPtS5nlZQDRk4ZAg99eLBzK5m2LGAIwHOUNqGjIzNmfuGQj7ew5GWEPCOgVq0c9P5bgBG8tf7UBl8JRidK6CVaj5EwIHmlB1+GLd8dg2rN3X8IlW1YoZ/qizusZp2EEjk182JccReE/3ZL6iz0iIHD+AzL48YCxReJXHx8yzjvYWkzjmyv5Ud9lq4bvHB9BdBR6fywRNNHtBjg/fMQVBNs+Lm6ugWsWmZBvU9S6xKfCUdHvq2fVUEDCp/VKxawXYba8o5IFfzKrXpKp8x9b1QT8QllMWh5722ljMJUT9H1vwh7k=
+sidebar_class_name: "put api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Update a filter"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"put"}
+  path={"/api/2.0/mail/filters"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Updates the selected filter with the parameters specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"filter":{"description":"New filter parameters: ID, name, position, enabled, conditions, actions, options"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Updated filter","content":{"application/json":{"schema":{"type":"object","properties":{"Id":{"type":"integer","format":"int32","example":"1"},"Name":{"type":"string","example":"name"},"Position":{"type":"integer","format":"int32","example":"2"},"Enabled":{"type":"boolean","example":"true"},"Conditions":{"type":"array","items":{"type":"object","properties":{"Key":{"type":"integer","format":"int32","enum":["From","ToOrCc","To","Cc","Subject"],"description":"[0 - From, 1 - ToOrCc, 2 - To, 3 - Cc, 4 - Subject]","example":"1"},"Operation":{"type":"integer","format":"int32","enum":["Matches","NotMatches","Contains","NotContains"],"description":"[0 - Matches, 1 - NotMatches, 2 - Contains, 3 - NotContains]","example":"1"},"Value":{"type":"string","example":"value"}},"title":"MailSieveFilterConditionData"}},"Actions":{"type":"array","items":{"type":"object","properties":{"Action":{"type":"integer","format":"int32","enum":["DeleteForever","MoveTo","MarkTag","MarkAsImportant","MarkAsRead"],"description":"[0 - DeleteForever, 1 - MoveTo, 2 - MarkTag, 3 - MarkAsImportant, 4 - MarkAsRead]","example":"1"},"Data":{"type":"string","example":"data"}},"title":"MailSieveFilterActionData"}},"Options":{"type":"object","properties":{"MatchMultiConditions":{"type":"integer","format":"int32","enum":["None","MatchAll","MatchAtLeastOne"],"description":"[0 - None, 1 - MatchAll, 2 - MatchAtLeastOne]","example":"1"},"ApplyTo":{"type":"object","properties":{"Folders":{"type":"array","items":{"type":"integer","format":"int32","example":"1"}},"Mailboxes":{"type":"array","items":{"type":"integer","format":"int32","example":"1"}},"WithAttachments":{"type":"integer","format":"int32","enum":["WithAndWithoutAttachments","WithAttachments","WithoutAttachments"],"description":"[0 - WithAndWithoutAttachments, 1 - WithAttachments, 2 - WithoutAttachments]","example":"1"}},"title":"MailSieveFilterOptionsApplyToData"},"IgnoreOther":{"type":"boolean","example":"true"}},"title":"MailSieveFilterOptionsData"}},"title":"MailSieveFilterData"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

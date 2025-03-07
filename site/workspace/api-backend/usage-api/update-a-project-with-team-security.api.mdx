@@ -1,0 +1,71 @@
+---
+id: update-a-project-with-team-security
+title: "Update a project with team security"
+description: "Updates the existing project with team security using all the parameters (project ID, title, description, responsible ID, etc) specified in the request."
+sidebar_label: "Update a project with team security"
+hide_title: true
+hide_table_of_contents: true
+api: eJztWF9v2zgM/yqCnjZc2jhpO2wBhkOXtrjgbruiyXDA2j6ottJotSWfJLfNBfnuR0qO/zReEncrsIflwZEl/kiKpGiKC2rZraGDS5pq9ZWHtnvu/w297lDDw0wLO4f1BT3O7Exp8R+zQsk/OIu4RpyGEe3QB6Dj9HoJqIibUIsUyeiAfk4jZrkhdsYJfxTGCnlLcmHkQdgZsZwlZCWKZAYJWBw7RMo0S7jl2pBXK9DopEOssDHvkIqoDtHcpEoacRNzR8Nt+JqYlIdiKnhEhHQcNf8348bug8758IOKYIcLGippubQ4ZGkai9DttPvV4D4W1IQznjAc2XnKYWfqBtUBPqBYyrUV3OCqiPBZN8J5oTqQ53AB0m7BhkuYwd2soz7xh8JSnqQAG6vBTIitQTZxqK408KlYb9SwgyqnuqGbmPmg2rgfpGhAgsOtCEXKpN3CoUqZBxK4V8ip0onzHGE3KrM4K3QZX1rczmxFNNOazeEVwjcxTd7NnUPPS3l0CZoay2y2RUdPQ15d0b9TLq9oh1wBn8zwCMdKw+swVu719XaVVhHToX6Pfuqg79RJtbiHg7auzzg/AYaIKRhDmEI7N3QoVEUqu12FG6VizqSTCAAxnW8S+DDjYH1NrCKemLBCeMIkg82UTipWWIiMzJpOpWz8FRHrT10/CNY18bknWnEGVj/ojA+ZPI2EbTBMh/JHlqQuYqYsNhyDGshPeMy9d3YBjIvEu4MmQ0jBln8UMeQyJXeWUSK5MeCK1rgJM3ftQSLhECAyaoFEU0/gI9ECcgFfpTO0SEtMYcXWQG/EtjC0YRvMX0LeDSGG4Yy0lJSj2gh70RAfmZHc3anLSh72h3l1REaQ8JFfPn2mYleYrJ+bkmfvoH9w6HU4L7PmLkqju4Yqk3aXrFzlENTQE2VZ/CwWRXw+X4sTYcLMGEh7z+dR+RZ+hzkgFUw0C+/g0//UInlBUMWsk+NmVJglkNDN89UYGYiZWD1siYHcg7fVA/Str2ST9oDsdfDpP9c+G0abQf2gH+z1+nv9/iQ4HPR6g6M3+0dvjt4e9Q+/0JLJhx2+E6NGUYVtskxE9e3mv72Gx+qXR1Mas/knqNI37+WjuOPkC5NzZs2d8P7Pq94NIF8kIPUxnFOmxwncDDZjMh1jwWGQkjCHyvPDFA7PZ70FfnWFV6Aog1SJQ65g2s8hfJ+Z9PF3KOD0exYlQsJ9RjOrdC1DnQIrNef8H81Sr3zhqJdyQ17pfF845Ux+hdPPHk6Fo17KDTW+O6XSXrCjD8ZuQDwlerx+f90KrFb4WCkXt7DWif+ivMb+CvifO+AvnjYnfrQj1utLFA7SzzKwl79vHga9hiumZHlfDLIvUiVw5VWgI00zF0XMzuCly1LR7e8H3VWbbSGiwWWw9+76t2UXmxe1chY7b/qea+MabxmanM6sTc2g213MlLHLwSJV2i6B8p5pwW7ymw6ueR2nLIvRHrEKWeymsUcAmPry2+Ad1iPLSrNvjHdgz66x5VdWP6n4k7vyBw0x88sdKl0o17HOMnjJvihbbqcrF/mWWVB6oPBq3dTF9JNWVbng207le72ZdLlw28wTxmVwXWmaXFqd8euyp4GvS9wZeAN3nGs2VEmSSWwjjZ2DyMXpeEKOz0foCPCXVzTGhic2if4H89Mqsg==
+sidebar_class_name: "put api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Update a project with team security"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"put"}
+  path={"/api/2.0/project/{id:[0-9]+}/withSecurityInfo"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Updates the existing project with team security using all the parameters (project ID, title, description, responsible ID, etc) specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"id":{"description":"Project ID","type":"integer"},"title":{"description":"New project title","type":"string"},"description":{"description":"New project description","type":"string"},"responsibleId":{"description":"New project responsible ID","type":"string"},"tags":{"description":"New project tags","type":"string"},"participants":{"description":"New project participants with the information about their security rights","type":"array","items":{"type":"object","title":"Participant"}},"status":{"description":"New project status (\"Open\", \"Paused\", or \"Closed\")","type":"array","items":{"type":"integer","format":"int32"}},"private":{"description":"Specifies if this project is private or not","type":"array","items":{"type":"boolean"}},"notify":{"description":"Specifies whether to notify a project manager about the project actions or not","type":"boolean"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Updated project","content":{"application/json":{"schema":{"type":"object","properties":{"CanEdit":{"type":"boolean","example":"false"},"CanDelete":{"type":"boolean","example":"false"},"Security":{"type":"object","properties":{"CanCreateMilestone":{"type":"boolean","example":"false"},"CanCreateMessage":{"type":"boolean","example":"false"},"CanCreateTask":{"type":"boolean","example":"false"},"CanCreateTimeSpend":{"type":"boolean","example":"false"},"CanEditTeam":{"type":"boolean","example":"false"},"CanReadFiles":{"type":"boolean","example":"false"},"CanReadMilestones":{"type":"boolean","example":"false"},"CanReadMessages":{"type":"boolean","example":"false"},"CanReadTasks":{"type":"boolean","example":"false"},"CanLinkContact":{"type":"boolean","example":"false"},"CanReadContacts":{"type":"boolean","example":"false"},"CanEdit":{"type":"boolean","example":"false"},"CanDelete":{"type":"boolean","example":"false"},"IsInTeam":{"type":"boolean","example":"false"}},"title":"ProjectSecurityInfo"},"ProjectFolder":{"type":"object","example":"13234"},"IsPrivate":{"type":"boolean","example":"false"},"TaskCount":{"type":"integer","format":"int32","example":"0"},"TaskCountTotal":{"type":"integer","format":"int32","example":"0"},"MilestoneCount":{"type":"integer","format":"int32","example":"0"},"DiscussionCount":{"type":"integer","format":"int32","example":"0"},"ParticipantCount":{"type":"integer","format":"int32","example":"0"},"TimeTrackingTotal":{"type":"string","example":"TimeTrackingTotal"},"DocumentsCount":{"type":"integer","format":"int32","example":"0"},"IsFollow":{"type":"boolean","example":"0"},"Tags":{"type":"array","items":{"type":"string","example":"Tags1,Tags2"}},"Created":{"type":"string","example":"2020-12-22T04:11:56.5658524Z"},"CreatedBy":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"},"CreatedById":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"Updated":{"type":"string","example":"2020-12-22T04:11:56.5658524Z"},"UpdatedBy":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"},"UpdatedById":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"Id":{"type":"integer","format":"int32","example":"10"},"Title":{"type":"string","example":"Sample Title"},"Description":{"type":"string","example":"Sample description"},"Status":{"type":"integer","format":"int32","example":"0"},"Responsible":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"},"ResponsibleId":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"}},"title":"ProjectWrapperFull"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

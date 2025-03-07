@@ -1,7 +1,7 @@
 # SetStyle
 
-The paragraph style base method.
-💡 This method is not used by itself, as it only forms the basis for the &#123;@link ApiParagraph#SetStyle&#125; method which sets the selected or created style for the paragraph.
+The paragraph style base method.\
+💡 This method is not used by itself, as it only forms the basis for the [ApiParagraph#SetStyle](../../ApiParagraph/Methods/SetStyle.md) method which sets the selected or created style for the paragraph.
 
 ## Syntax
 
@@ -19,7 +19,7 @@ expression.SetStyle(oStyle);
 
 ## Returns
 
-boolean
+This method doesn't return any data.
 
 ## Example
 

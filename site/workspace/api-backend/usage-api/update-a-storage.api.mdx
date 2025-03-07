@@ -1,0 +1,71 @@
+---
+id: update-a-storage
+title: "Update a storage"
+description: "Updates a storage with the parameters specified in the request."
+sidebar_label: "Update a storage"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVE1v2zAM/SuGzlmdFTtsvnVFgQ3DhqJpT0EOis3Gam1Lk+immeD/PlKS7aTtdmoOAS1+6PHxUV6g3DlRrIUDRNXtXL5CbeUOxGZBZ2VvFR7I78VFj7W26o9EpbtvICuwnGfJEguxpzjKGSirAldaZThMFOLOVBLBZTJzsXC2V1hnWENmpJUtIFiXOQOluldQZaoLPgu/e3B4RqWT+VVXBMSLUncIHbIpjWlUGQDlD46v88KVNbSSLTwYIAB6+wAlUh1jtQGLChx7W131DbB1ije1n3UEjZJSEYeWyBFDrOJep/2C/dTg0UVTAWmtPNAnsdS61+iG+ONmndGdixjPl8vXN0VCq/E2qvlOjPycGDlteiHgWbaGXWMMAb0eeXhZdA6OIdwVKgwnidxV0pqIPX9afnyjzU4mwUEVapBSal2Rx/QBu8SaPnJpVH5+tswn/c68OLBPJK6g3t42FF0jGlfkua+1w6HwRlscKPJJWiW3TeSBfRHPvewbMkWjS9mEYxYA5Zy6Py+/nHMrRxuzYs5juTf3ZqKN4P+AIAxuuo7uhQjqK05zAws81Jt5Ia5GsmdBz2NLUl37YTPwBfc6XJxmcanbtu8Ia7YKPGU3V6vb7OL6O/NBtMUxNLy8qW+HrQyKSuiiEufNFi92/2hX3+EZSIQhPGNuGkl8EagwVp/EsGY2KZLkEKafREbm/KTF4a6F91vp4M42w8DHdIvlZ24za4G/6IZ6fOm8eKRBMW+hpw+3jIfDmz4O8sXmDYsx46IsweB/YzdH+r6+u6XYbXruaKycYuWen0L6LwQZOlAc9BXOPA2q2/XcZCFiSVYLr9Cp2B6D2JLBTY2u7nAE8FR3i9QH/3NXb6Z4H6U8DFN8dP0zYxJ7jOaBbgj1X/OtRM4=
+sidebar_class_name: "put api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Update a storage"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"put"}
+  path={"/api/2.0/settings/storage"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Updates a storage with the parameters specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"module":{"description":"Storage name","type":"string"},"props":{"description":"New storage properties","type":"array","items":{"type":"object"}}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Updated storage","content":{"application/json":{"schema":{"type":"object","properties":{"Module":{"type":"string","example":"Module"},"Props":{"type":"object","example":"Props"}},"title":"StorageSettings"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

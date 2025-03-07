@@ -1,0 +1,71 @@
+---
+id: check-user-impersonation
+title: "Check user impersonation"
+description: "Checks if a user with the ID specified in the request can be impersonated or not."
+sidebar_label: "Check user impersonation"
+hide_title: true
+hide_table_of_contents: true
+api: eJy1VEtz0zAQ/isanU0dOhzAt9J2IMOFIc2pk4PibGpRWxLSuiVo/N/ZlR95lhuXRNa+vv32W0WJ6inI4lEGKFuvcZfPGwc+WKNQWyNX2WQhryhvWqys13+S9SuoDXiO9nSSmXwlP5CrjqI2EEqvXUpSyNsKyucg9FYo0Qbw4lVjJbACMb8TwUGptxo2Qpt05+FXCwFFqYxYg9ATInKxXhiLV1TMKa8aQDIlZIY+qBJnnzMWzXWdwkqeglkygPkd3YeygkbJIkrcOY4O6LV5IsvW+kYh52v1RnbckYfgrAkQ2P96NuO/48Sfra2BML+ouoVCoG9BvEsdpZ4vtJOJrarDqRc1eOpIkEprEAxyWeVcrcs0g/xn4NrxvJd1j4bAd10mP8zenwNeGjXME7jJTBKfld2Q5QkwUUz0FTJXTufXV7N8EskBtDz2lHfMJ/iXcR6trym0QnShyPNY2YBdEZ31yJ4vymu1rnsy2daD26q2ZtZrW6o6XRMojjk2f5x9uua+DtS54Pb7dBc1OtFCvXyD3SiQqjdno3yOYhMl2mxtCtdYs8etbZrWUEWxSN2KH/eLB3Hzfc5dUfM9szUxM6IP2Kg0oqFGWoZ+2Ppo2U6EGvcj/y8LNBCC8BtzVyvig+CmscVh8o/MFnnS7OXBQ0Ck7DPSVzEsHY2jH+WjjHGtAix93XV8TXA8PyCr/eSTSDY68JkUl/bgHwTsl/Yi7HG4ZpfERftHX3R8plFPj0K3Is9qfLTiYLwpS3B4EHa2XayzaTO+3D+QL+/Nsaiek6iGA2e/COlYXyM+/u2yN0Ji7CXbdZN/b3ozYhJ1780MrWhb/gJPLwcu
+sidebar_class_name: "get api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Check user impersonation"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/security/impersonate/{userId}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Checks if a user with the ID specified in the request can be impersonated or not.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"userId","in":"path","description":"User ID","schema":{"type":"string","format":"uuid"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Boolean value: true - the user can be impersonated, false - the user cannot be impersonated","content":{"application/json":{"schema":{"type":"boolean"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

@@ -1,0 +1,63 @@
+---
+id: settings
+title: "Get webhook settings"
+description: "Returns settings of all webhooks."
+sidebar_label: "Get webhook settings"
+hide_title: true
+hide_table_of_contents: true
+api: eJyVVNtu2zAM/RVDz0GcZcXQ5q1oh6LYFcuKPQRBodhMrFaxNInuZYb/faRku3azot1LYkmHh+Q5lGqBcufFYiWWgKjKnU/S5BdsCmNuvVhPhLHgJCpTXuZiIXwLEhPhwFtTeqDgWsxnM/7LwWdOWYYT+LPymJhtch/pkkFwZkqEEjlGWqtVFlKkN54Da+GzAvaSv/DRAlGZzQ1kSIHWcUGoYlqVDzCKKHfgCDQu4/KctrbG7SVG1Ps5bcCD3FtNcSfHRx8aasdUCAM2j45qPSD7EWATUVZayw3Ho6tgQCe82UOC8ICCWPeAhclfp/0ScW/mzZWPqJ54Y4wGWR4wLy1kakt6JWqbyN4L5ZOWI0+MS0qDQ004N2Up5f4Nknxl1GHlDmT+rdSPh538UiUVpPPkyiIxNM8IX8t3Plj9T9qBgJRS5rliCqm/D0ZqK7WnIFQYQk6XZ9PuMkzPjINuRRRMcjR7dzj2V6WsyE2n/kAeUnnIKqeQSlrRuPvsms+vb4E3Qr3Uxj0BQKyb9cHAAVau9P3l4Qslte6M9FPxNGViB+GOSCxokUqr0vl0lnahaRcjuCZ3B86HkiqnCV4gWr9I07owHptFbY3DhpB30ikWOFw4Posdb2Wl+T5pk0kdtqlTjhkfH89O5izW+kmGJV/uSDcWozeeCv9EG90AjmETusK0l1EjCoK+NE4mRI9dm55axfVTm1HKu3ms0eNehjlr6S8A//VGPRvK/sl6kyVtJzxuqdVShTEPQtetPytuk5DkUPCjz3s/eH2j3itR1xvp4crppuHt3xU4np71kz28ohQFjRO9gWxr0FScZhlYDD7qKor77L1lb/oJuvj4k7As9tiPqHz7wezdUfk45B4bFSvg32byQkRdR7ObpsfHoxcj2g47NCu7pgH7C5fyUuM=
+sidebar_class_name: "get api-method"
+info_path: site/docspace/api-backend/usage-api/asc-web-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get webhook settings"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/settings/webhooks"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns settings of all webhooks.
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"List of webhook settings","content":{"application/json":{"schema":{"type":"object","properties":{"id":{"type":"integer","description":"ID","format":"int32","example":9846},"route":{"type":"string","description":"Route","nullable":true,"example":"some text"},"method":{"type":"string","description":"Method","nullable":true,"example":"some text"},"disable":{"type":"boolean","description":"Specifies if a webhook is disabled or not","example":true},"name":{"type":"string","description":"Name","nullable":true,"readOnly":true,"example":"Winfield Upton"},"description":{"type":"string","description":"Description","nullable":true,"readOnly":true,"example":"some text"}},"additionalProperties":false,"title":"ASC.Webhooks.Core.Webhook"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

@@ -1,0 +1,63 @@
+---
+id: get-the-custom-navigation-items
+title: "Get the custom navigation items"
+description: "Returns a list of the custom navigation items."
+sidebar_label: "Get the custom navigation items"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVdtyozgQ/RUXr+sdO7aTTbK1D0AI+IIdjElCMnmQQQYZgYgQjhmX/31a4FycndnZrVqqAKE+3S31Ead3ikBRoVw+KgUWgmRR0dHLQrC0laENiZAgLFOe2mANSk5EBcidopYiZpx8q60WRiHmMgKHkdJWXgCHlac9eIW4CDjJ6yCXyhyLkmdFC7UoKUSLrVoixq3gc7oWuKfFF4jEcZGzrMCwvp3S63bl6zjk5NeBIE7AMoEzId1RnlMS1ObOupAxdkoRxDhFciSqHENUxDmqwK/xf59nyzUOBBhyznLMBWlWNgw/YArBoYqAWTGeIsiplCWRZcFblOZUQrqH6/cfPF4vZd9WJmiJ6Y9Cv4dqIID1+C+QEgA4jUTDNPpnaIgEuiQpivDXr508i/5cogKfDdrkVpvNX7pjM2IqXFPXiw0vgpHpwENL1Miu59dW35KDq2vNvjU8ORpVQXa4U1JORW1X+3N3QW11NdAhEXIn9WxlUMO5nQ/uy/60cPq6rbnGwC+X19qAUMvBUWi66ztV3xi5yYxK88mke6qG2b1nWoxuT7p0dd6z01m+mmB26rGRF2s0HydzPYu96o/lxb1+lzw7tpf49P7WclfnyWKTWOPnscPdjOXRqTvfLuyETlL3xH5B7l2e6q5zYlezb3fmg+5zwzauk0IdOM9UvS5HI18L9PF2bfev7crFw5Vh673Qns2muvnwEKUhP6FVf+HykT2+MKqRhpDJLYckfiFUMnqY+25FHCOsIPO5sQkSEkM5/JsiKEK87lpnYdBd+C+DumSudzubj091fzj8S/LppojS/59RrU7m6Kov36tzcLuI5dDzGnbUO9uHybF+yuAVqMbNhbXdRuPAzXXTmPjqVVX2jLNUddbTrUbVu5vpNrHCFzPRhnZ/7PtXnsp7D7pq/Masc1yuuXp/VajdpGeoqri6V83JdmDnhXrlRZtkPvbo86pek0GvF4lbOqmu1/uP2csws3FWfqjAkjGKUXZUAsFL/OowyyyW4hsox79yAi9BRD3RaOP0TWKGoBAA2EvMoHvyd4HyMnQQSxzWkVIMnyAYSoRrJUEiho8Oykmn96XbeVPhRs3exawDeKBakVLMN5gXtRKX8rdXYiHy4rLT2cWsEPvLXc642ANygzhBS9qolLQ161uhkkphoixAtJ6GdUmfY/N596In9/ZB/V2plE24H/aAdwXNyRjXEiqLEDfmtpKhVFqPfOuqkGzFavfXOrM0LTPI2HLr3bbmhrtoqTdDuSvYfFNcigR+XX0hUlSr+SGHicUvusIRUbv3JvHf+9Rh0wJvRSenCPYMSyobRW4IfpQVASRQXDPYkCxb0yeaYepANJS9oexR2e3k/woKvt/L6ecSc9mIn94Zll+QM37txTslgfJDpYMA56I+CrRsiPnU/yS9b2fSNBaAlSf2mMuk5vIwkNFfTVn1IfYxre3DEuRz3/6Jy27XnJT9/g3fmH7q8XaWGrSs9RMc0u/cr/IH
+sidebar_class_name: "get api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get the custom navigation items"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/settings/customnavigation/getall"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns a list of the custom navigation items.
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"List of the custom navigation items","content":{"application/json":{"schema":{"type":"array","items":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"Label":{"type":"string","example":"Label"},"Url":{"type":"string","example":"Url"},"BigImg":{"type":"string","example":"data:image\\/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkAgMAAAANjH3HAAAADFBMVEUAAADJycnJycnJycmiuNtHAAAAA3RSTlMAf4C\\/aSLHAAAAyElEQVR4Xu3NsQ3CMBSE4YubFB4ilHQegdGSjWACvEpGoEyBYiL05AdnXUGHolx10lf82MmOpfLeo5UoJUhBlpKkRCnhUy7b9XCWkqQMUkYlXVHSf8kTvkHKqKQrSnopg5SRxTMklLmS1MwaSWpmCSQ1MyOzWGZCYrEMEFksA4QqlAFuJJYBcCKxjM3FMySeIfEMC2dMOONCGZZgmdr1ly3TSrJMK9EyJBaaGrHQikYstAiJZRYSyiQEdyg5S8Evckih\\/YPscsdej0H6dc0TYw4AAAAASUVORK5CYII="},"SmallImg":{"type":"string","example":"data:image\\/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8\\/9hAAAAUUlEQVR4AWMY\\/KC5o\\/cAEP9HxxgKcSpCGELYADyu2E6mAQjNxBlAWPNxkHdwGkBIM3KYYDUAr2ZCAE+oH8eujrAXDsA0k2EAAtDXAGLx4MpsADUgvkRKUlqfAAAAAElFTkSuQmCC"},"ShowInMenu":{"type":"boolean","example":"true"},"ShowOnHomePage":{"type":"boolean","example":"true"}},"title":"CustomNavigationItem"}}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

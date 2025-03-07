@@ -1,0 +1,63 @@
+---
+id: reset-smtp-settings
+title: "Reset the SMTP settings"
+description: "Resets the SMTP settings of the current portal."
+sidebar_label: "Reset the SMTP settings"
+hide_title: true
+hide_table_of_contents: true
+api: eJydVlFv2zgM/iuCno0ky66HXZ4WrAV2uLYI5haHQxEUis002mRLk+S2OcP/faRkJ46zpt0emkbSR37kR4pKzb14cHx2x1PIKiv9lo1ZenWzYA68lyWeLROuDVjhpS7/zvmMW8CztPAm7SAJ7RldOkBXNZ9OJvQvB5dZacgOrc5hLSrlB84TnunSQ+nJQBijZBaIxl8dWdXcZRsoBH3zWwPoR6++QubR0FgKy8vIudHO91DOW/SPqMMgPhMq4WWllFgpBHpbQcLhWRSGlrwQUo3a5SjTBW+QSNvguhDPsqgKPvvz7Oz9WcILWcb1u6SjlZjLA9gj3gW5SPha20L4iHs/PRXI9AyJHZQ52Hmeo7ru9eTSAGeixZ9Ks9RerrcfB4lGvnPpjBLba1HAmznzaMNKMjpFvMACFKIktsxCjoWXQrlbB7bjQ5UvoXzwGxIhqtytJ8kr0Xzau2QV+nw1nJ/rMIhsIZx70jZ/XY0hPzOd6akg6g7VEDmUhErTyx7dSmsFqNqQ7yJgHUM005ZhNrzneI1hwM7jvCIJ3+xSIJxSidfxJ94pC3SOaV57VbzBc2ogk2u8ruxpA+jcMq9JJXZ9c3l1Inzp2tGxGze/wiXXDLkYzjaL6ewGDxMWWN6OpJe4kRwvkySfQi164yYcH3EOBpuXPpR3nn4a/Qur0dxI+rvSOajRl3Zenns96o9SXPOmIeY/Ju+Oh+htSXXRVv4POQ+g6THoP11h51mZoUOG17JkuUYlMEXmKkPTDCWRjulo0ISbH4c/PgQ4hl12TzT334A2cLYLauAnBABfNsth4l/oPXBB5gMNmD7UnpiFGqGrAuuv6SlBKcDTFTWCupOPhZHj6WgydqhJ5ycsOAVpH8G6EGNlFcI3HlGz8bim6d/MamJoEPkorAxt3H8Z2mqjmdKZUGG7N933xx8mf02pCMu9Lim9QtHdoTq7TsTA/8ENvOdhjh3CsIlJqEzrbxKC4LJc62B93CQUP6YZtX2cxhjj1ESD1n3Q/Fjy4UWo98/rb5SpTc3Dsx9jH8kwtoPydVuwO8obkVgyKlCvaO2Sfj3EAtzxul4JB7dWNQ1tf6/AUn8t9/WiFVJssOHwEaU6B5H5PMvA+FBYVUW1B78UqFi7rjq/uLy4uUC4OJx5GGusRvuFCLqjctt3f1i8GAR9NskLFnUdG6Bpdvh49KJFm2SHJnGX2HQ/AJ7eUDM=
+sidebar_class_name: "delete api-method"
+info_path: site/docspace/api-backend/usage-api/asc-web-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Reset the SMTP settings"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"delete"}
+  path={"/api/2.0/smtpsettings/smtp"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Resets the SMTP settings of the current portal.
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Default SMTP settings","content":{"application/json":{"schema":{"type":"object","properties":{"host":{"type":"string","description":"Host","nullable":true,"example":"mail.example.com"},"port":{"maximum":65535,"minimum":1,"type":"integer","description":"Port","format":"int32","nullable":true,"example":25},"senderAddress":{"type":"string","description":"Sender address","nullable":true,"example":"notify@example.com"},"senderDisplayName":{"type":"string","description":"Sender display name","nullable":true,"example":"Postman"},"credentialsUserName":{"maxLength":255,"minLength":0,"type":"string","description":"Credentials username","nullable":true,"example":"notify@example.com"},"credentialsUserPassword":{"type":"string","description":"Credentials user password","nullable":true,"example":"{password}"},"enableSSL":{"type":"boolean","description":"Enables SSL or not","example":false},"enableAuth":{"type":"boolean","description":"Enables authentication or not","example":true},"useNtlm":{"type":"boolean","description":"Specifies whether to use NTLM or not","example":false},"isDefaultSettings":{"type":"boolean","description":"Specifies if the current settings are default or not","example":false}},"additionalProperties":false,"description":"SMTP settings","title":"ASC.Web.Api.ApiModel.ResponseDto.SmtpSettingsDto"}}}},"401":{"description":"Unauthorized"},"402":{"description":"Your pricing plan does not support this option"}}}
+>
+  
+</StatusCodes>
+
+
+      

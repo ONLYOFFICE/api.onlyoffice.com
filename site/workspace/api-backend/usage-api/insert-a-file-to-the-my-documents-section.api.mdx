@@ -1,0 +1,71 @@
+---
+id: insert-a-file-to-the-my-documents-section
+title: "Insert a file to the 'My documents' section"
+description: "Inserts a file specified in the request to the 'My documents' section by single file uploading."
+sidebar_label: "Insert a file to the 'My documents' section"
+hide_title: true
+hide_table_of_contents: true
+api: eJy9Vm1v2zYQ/isEPzuR4nhLa2Do0jbFgq1dEDso0NgfaImO2Egkx5c4mqD/vjtStuXac/qhqD7ohbyX5+6eO6qhjj1YOr6nS1Fym3xQZc6NpfMBtTzzRrgaNht66V2hjPiXOaHkH5yBECoZeKMDugI5TuctaOXcZkZoFKNjei0tN84SRtA8sZpnYil4ToQkruDE8H88t444FT5n9GNNcpX5iktnZ5QABrREFjWxQj6AiWDH61KxHBZOwXln463KAWpDMyUdaOMr07oUWYCcfLUIqKE2K3jF8M3VmgNEtfgKTsCONkoDWMEt7qIffO7Gc9vhFVJ7R6yD+CtQ3TXVwoJwh9Q/IHjJKr7VARsQB+pkYMzxT3x1vbx6Ftbtq0+69FmyKjjky2DeohpkWPJVzI5YEuEIK7E4NeFoyxJliFRu65cZw2r4hMJVtpeOhVIlZ5K2gOiRc/1OySfIysQx5+13QkK9UM8AJ4sWIEpIGFrZw7L1iRdW1GoFzAn+hmm67zbyCngUyjT4UUX/hKXZSnW1GVD+zCqNBe1VEHDe6RxSn7+tX7Z8nR+yu1SmYoCaei/yHT9pd50cuK0vhPBeWF2y+mXgH8UjJ1+YrJmzjwJVp2uOHlFikj1Ap4P05RNzzEwqVpbHdbwpkQMWJQkLWqh/YxTW6s68oD6bJSCa+wz6H165guW4huqnzOrnNx6K/xvLKyGB2oY5ZQJdu6ajV2BK1Zx/NkxH8F2hjnsepsP05Gx4kr6anl2Mzy/G6fnp+Wg4ev3LxRc08peKrDpuZTSDa/Qr3ntc6aHDVUQWoAW6j9KzfYbfSdaNXMCNUhW0l4IQqFY28Iu5Ar4SpkUyPE2TOL9/r+pEhOagOMHNEw5zHOAeE08L57QdJ0lTgJF23GhlXAuST8wItigjV3EvAloyXyI9Swi9DMsABHV2t1+lr4cYS+/QmGDHRXMHj45NCgH+nzwMIoy6iNsDGtI23tUNacCWvt1O/Kt14jcTu5fqTXn2R+u9M57PD4443GkRz1IFnJ2xd6qqvITQyCSkldxeTabk8uYa0wdZjmUrwc86TdZVLLClCyYOrfVZ+MKRR785SnsH2085VbvyOP7sEpgwUB2IycfujdS7x9qBJJAPRxnSD55AwFDMQEFIcCTTPW2aBbPY/m2LywDQ4J/FfMs9/AIfxfrnooHi1CHxIe6TKSJC8dJH4nwz59vBWuMyy7h2R2XnvYa6+XsyBeFF9wNRqRx1DFvhzwXcxxReVKhDIHRYa6DU8sHDeIT9aBPpiU27y+7HwO7uBaNab8m6h3CX6IMuELxjWAdVmib2Tttu5OPW/2psuitKY03ngPo/kMhrrw==
+sidebar_class_name: "post api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Insert a file to the 'My documents' section"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/api/2.0/files/@my/insert"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Inserts a file specified in the request to the "My documents" section by single file uploading.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"file":{"description":"Request input stream","type":"object"},"title":{"description":"File name","type":"string"},"createNewIfExist":{"description":"Specifies whether to create a new file if it already exists or not","type":"array","items":{"type":"boolean"}},"keepConvertStatus":{"description":"Specifies whether to keep the file converting status or not","type":"boolean"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Inserted file","content":{"application/json":{"schema":{"type":"object","properties":{"Name":{"type":"string","example":"File name"},"UpdatedBy":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"},"Updated":{"type":"string","example":"2020-12-08T17:37:03.3424957Z"},"Location":{"type":"string","example":"4\\\\46\\\\File name"}},"title":"FileWrapper"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

@@ -16,7 +16,7 @@ expression.EXPONDIST(arg1, arg2, arg3);
 | ------------- | ------------- | ------------- | ------------- | ------------- |
 | arg1 | Required | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number |  | The value of the x function, a nonnegative number. |
 | arg2 | Required | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number |  | The lambda parameter value, a positive number. |
-| arg3 | Required | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| boolean |  | A logical value that determines the function form. If this parameter is **true**, the function will return the cumulative distribution function, if it is **false**, it will return the probability density function. |
+| arg3 | Required | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| boolean |  | A logical value that determines the function form. If this parameter is -**true**,\ the function will return the cumulative distribution function, if it is -**false**, it will return the probability density function. |
 
 ## Returns
 
@@ -24,15 +24,11 @@ number
 
 ## Example
 
-This example shows how to return the exponential distribution.
+
 
 ```javascript editor-xlsx
-// How to get the exponential distribution.
-
-// Use function to calculate an exponential distribution.
-
-var oWorksheet = Api.GetActiveSheet();
-var oFunction = Api.GetWorksheetFunction();
-var ans = oFunction.F_DIST(10, 6, 4, false);
-oWorksheet.GetRange("B2").SetValue(ans);
+let worksheet = Api.GetActiveSheet();
+let func = Api.GetWorksheetFunction();
+let ans = func.F_DIST(10, 6, 4, false);
+worksheet.GetRange("B2").SetValue(ans);
 ```

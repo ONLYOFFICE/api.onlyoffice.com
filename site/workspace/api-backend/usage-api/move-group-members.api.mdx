@@ -1,0 +1,71 @@
+---
+id: move-group-members
+title: "Move group members"
+description: "Moves all the members from the selected group to another one specified in the request."
+sidebar_label: "Move group members"
+hide_title: true
+hide_table_of_contents: true
+api: eJztVm1v2zYQ/isCP1uRXxPZQFEETbcFQ4qgTjBgqT+cpJPNRhI1kkriCfrvu6Pk2G7ceOkwYB/mDzbNe3t4d+RztbCwNGJ2J5ZaVaVY9ITBuNLSrmmzFueVXSkt/wQrVfELQoKalTWtRE88kh6KRUNWCZpYy5LVxExcqQc0HmSZZ1fo5ZhHqI2XapW7DYMZxhYTzwX1rPKgUCTQnipIWmIsU0liWTh1jX9UaOwJRSxBQ46WvDl4Bf2hcM6NZESSo5dgV+JbSD+7UJcXHC0neA4NaZl4hTmIWS3sumRnxmpZLEmSKp2DpZ2qIt9N03uOV+DjD4W06k0BKa0aTakKg4b1h/0+/+wH+YSPXRpl0Trg/Z6IVWGxsGwAZZnJ2AmCr4at6pcoVPSVasIp1qpEbWUb82I32EvI+AR5mfHWrmLTE59cpl4zmLtFi50trkF3eDsb0BrWnGCLuTmer13f4WSYjKPTkT+dnoE/jgB9gLPID6dRFJ4l4SSJUq6o+AAWl0qv3+b+bJyOBhBOyP0g8sc4jfxoiqEPGGLYT8anYTrhI10mb/ObQpJM0/HUH45HA398Ouj7MBmE/iiGaTQKx6M4DNnvFRSw5Jt4rHpvBdDvPv6Br82HAVxIU2awPl7kK3mP3u9QrMGae8mmN9Jmx4y645H2+QNY0POcnpLXbSqd8TUzrOmBs3JNpVUqM7zVR8y/fAlINalia3iJirbbPTY/AVM+va8M6neQ5LKQ5AGs0q6FbHsg8ZFcqTXibxrKFvxV++79jZb+v3z/ufLtytxDzgKS/FTRWRonHvcHL9/j2wI6zkRHGoLoaqUS5ojKVZiZYiYCKGUwPOkH7v0L6o5PmqAjy6DekkzDrIH6YcN6FadDrKwtzSwI6pUytpnVpdKWNR9AS4iytoNY1mJMocq4aTIVQ+a2CRvb7IvD/nTIx9sZBOZMFa27g+PAtrtL+SuuN5S4asW9DWnu2brMMGE58y7NH1SeVwVF9ObutN7nj/Mb7/z6kk9Fh28TnNGTvUFvbA6Ol7oYPHd0bNjl8VtSrrfE+O9NKV0+LD7ZgC6adIxYtU3c1v+Ok0Wa1AH03XJgT8y2U8UW/mxn2qCqtBW9E3UdgeGb0TS8TbGZxe4W2wZwvZJIw2vqvxQyg69k43sD0sHDbCperF3HZRX/o+U91X87j/HI9A8AuHHpB8LvJKxZkPZqM7fWncJ5HGNpd0xfTEjc/88X9/r2hnT5Wu83+71r9m7B3g/C2u/7DUb+5vQcNKnr9io1zbN+K/quxfNla7U5Swu6xX8BJbj8qA==
+sidebar_class_name: "put api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Move group members"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"put"}
+  path={"/api/2.0/group/{groupid}/members/{newgroupid}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Moves all the members from the selected group to another one specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"groupid","in":"path","description":"Group ID to move from","schema":{"type":"string","format":"uuid"}},{"name":"newgroupid","in":"path","description":"Group ID to move to","schema":{"type":"string","format":"uuid"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"New group information","content":{"application/json":{"schema":{"type":"object","properties":{"Description":{"type":"string","example":"Description"},"Name":{"type":"string","example":"Sample group"},"Parent":{"type":"array","items":{"type":"string","format":"uuid","example":"852d4b63-997a-4bae-aa7b-89bb87d85dbf"}},"Category":{"type":"string","format":"uuid","example":"74f31a85-991b-4e9b-b9e8-ae8e80d468f5"},"Id":{"type":"string","format":"uuid","example":"fadd9f49-2431-4610-a518-3ca9b3843c88"},"Manager":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"},"Members":{"type":"array","items":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"}}},"title":"GroupWrapperFull"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

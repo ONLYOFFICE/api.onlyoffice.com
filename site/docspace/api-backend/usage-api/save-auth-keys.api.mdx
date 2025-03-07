@@ -1,0 +1,71 @@
+---
+id: save-auth-keys
+title: "Save the authorization keys"
+description: "Saves the authorization keys."
+sidebar_label: "Save the authorization keys"
+hide_title: true
+hide_table_of_contents: true
+api: eJzFVstu2zoQ/RWCa1/LNbpovUvTLorbF+qkRWEYBi2NLTYUyZJUUlfQv3eGlGMpvk7cze0iDh/zOJw5M6OGB7H1fLbgcwhB6q1nGbuoQ2mc/CWCNJovR9xYcHHztuAz7sUtkMi/sPN8xB38qMGHV6bY8VnDc6MD6EBLYa2SeVTMvns0hWc+L6EStAo7C2jNrL9DHtCOdeQmSPB0q0UFPSkfHIJDqQJ87qSNyGb8A0mNuK6VEmuFgsHVMOLwU1SWtvyr1BsJqmDXNqBGO+JBBnWG5aso9phpBVuR71bPJi8mduUrodTqzpgC9KoytQfyNTD5lMfXvd1jfr2pgAX4GciD1Gitzs/z8LYnfLaHXGikRs/42hgFQh9Zn1vIJQbbM7lhoQQmkCPIhI4BzIO7lTkwNMjWgNvAjGPaUO7vfROUNnHB93wK58QO5WSAyv9F8twKVZ9h+UsUOzvE/x8l0ZkoCkkGhfrUi9lGKA/3SPjF/HL8FdbjeagLacbXmLtLrGtnlB+/F1psocLMjrsucER1/k56zO4mUuC+k7Cb1DCG+J/ENLT8OXUbZoXD9AVwnm2QRkNHHdX48YMurKS/9xgUNe5s+dfBxKfMk1rvGCNG+Bx4a7RP5JpOJvRvCOtVKgoWCTJj9LB+GQxjwITDMiiF3kKBGP+0Y+4LMGF7/p9wRJGiHQWeHQtc6z0shBCFpsdC30ztmHUyRzYyq/B5hcHyxpJlvrbWuIAPlJ6ZpEBoPOS1kwEnwQJf4/MVuVkhFBoxDgS99w4FgC/b5VEHwcHiT8RsjIqY79LQBLLGx6IXocRdJqzMpuNJ5rsRlpH6gQO0Qp5ESLVTqFGGYP0sy5oSDbWzhp7ScipvJ4mZMc90l2KyEbUKVF4mFyoeU4tCneH1i8nLKSVleQjDnHKXzA2DcehsVlIFjbqeNRSj/o5nuTE3MlUvkeLzYeC+2Zf+vuc97FmHCniqNzxMxqFDPZgyg5v9dEidqGvbi9NougY6sHEuwnYZB97GxPAdFzaZxzwnkLfTlCQfKqF78SGOnaDYwxD0vmWepGaXTXpRhpUi47SIZGs6mi4o1SiJRI2cTFTFZZ+sSJ1EuwVvmrXwcO1U29IxptxRES0PLKUdeimxqsDFqEdq8cuE+p8rwnQI+VFvaUd7jYs8BxselV32yu/Tx/kVCq+7L74Kc4SnTtzR1yD+zjinb0bSjtSPZw3HBrKtcXTgfbIZW39NwemXQyJ+t6BX7a/0ro9wWCfpHTdxFp3QaJpUa217L5+uTmp0kd1LU1KXCPo3MXjncw==
+sidebar_class_name: "post api-method"
+info_path: site/docspace/api-backend/usage-api/asc-web-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Save the authorization keys"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/api/2.0/settings/authservice"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Saves the authorization keys.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"name":{"type":"string","description":"Name","nullable":true,"example":"Winfield Upton"},"title":{"type":"string","description":"Title","nullable":true,"example":"legacy_1080p_small_wooden_mouse"},"description":{"type":"string","description":"Description","nullable":true,"example":"some text"},"instruction":{"type":"string","description":"Instruction","nullable":true,"example":"some text"},"canSet":{"type":"boolean","description":"Specifies if the authentication service can be set or not","example":true},"props":{"type":"array","items":{"type":"object","properties":{"name":{"type":"string","description":"Name","nullable":true,"example":"Winfield Upton"},"value":{"type":"string","description":"Value","nullable":true,"example":"some text"},"title":{"type":"string","description":"Title","nullable":true,"example":"legacy_1080p_small_wooden_mouse"}},"additionalProperties":false,"title":"ASC.Web.Studio.UserControls.Management.AuthKey"},"description":"List of authorization keys","nullable":true}},"additionalProperties":false,"description":"Request parameters for authorization service","title":"ASC.Web.Api.ApiModel.RequestsDto.AuthServiceRequestsDto"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Boolean value: true if the authorization keys are changed","content":{"application/json":{"schema":{"type":"boolean"}}}},"400":{"description":"Bad keys"},"401":{"description":"Unauthorized"},"402":{"description":"Your pricing plan does not support this option"}}}
+>
+  
+</StatusCodes>
+
+
+      

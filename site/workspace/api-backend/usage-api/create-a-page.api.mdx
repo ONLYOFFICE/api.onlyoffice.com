@@ -1,0 +1,71 @@
+---
+id: create-a-page
+title: "Create a page"
+description: "Creates a new wiki page with the page name and content specified in the request."
+sidebar_label: "Create a page"
+hide_title: true
+hide_table_of_contents: true
+api: eJy1VVFP2zAQ/iuRnwsJhQ2oNE3AkDZN2xAtQgL6YJKDGBLbsx0gi/Lfd2cntIFCX7Y8JI5939135/Pnhjl+a9nkkqWqLCspXB2fi3vB5iNmIa0MTuBqww4qlysj/nAnlPwKPANDKIMjNmKPaAds3iIqA5saocmMTdgRGjiwEY8kPEaP6DnS/BZw5PLI5RD+JC8h4jKLUiUdSBdZDam4EZBFQnozA78rsG4TY3XDQ5Uhs4Z1EBpyrQuReobxnaX4DbNpDiWnkas1ICN1fQepQz/aKA3GCbC0ShToO6R/0rND+w5vnRHylrUjdt0xWAHpSb1C+YdysFpJG0KPk+QNN0LeKFP6hNDVP8r0Z5fpkNmIwRMvdQGDrJHq0SLqGkTPD0FnOsNtzw7r9XS+Zatch7xxpqpENgiVdM/Gilf/EIUvwuqC1+uz/SHuIbrgsubOYuMjdCZcsQ7EJaZsyPrggTtupiUvivcxlSkipyJLlhH3KMKfGHUjCjgza+BXVzGaZlXqLA1B4XSYI/gmt/rpc2XBfOJZKaRAD9wpjIAhXEiIHaMrVQOcG64D+W6j3o88TsbJxtZ4I9mbbe1Otncnyfbm9tbHnf2PHy4G/qkNyLd37ht9J9l63dtnkndqgpHJqgT8RRJMK+s7hLsc/2KuRTzeTOKFNpGCMJIm8wDGemWqqHAsd07bSRw3ObpoJ41WxrVo+cCN4NdF6DVaC3RueFVQexUq5YWfRhqEGS7vJftjymRJDad0zIK7lZr4XEgk/x1qpCAo5zwsjzqhGWJ9Eegcny607bgvf69Ni50JwrOkRKQTPnK3D0d9vaKpL1R0ejydRQcn36ggWLewDQUpc5e4dSWXS7GCbqNskz6zF6q+JLr/Q+C7+jl4cjEeYSwfUqzC8QidcUnFRUvsDa+LXbZ0EXV3V9jpS9Y019zS2WpbmsYYhu6z+aIx6A/95/2V1rB7qH0NPdONGbEh86IKu/pCedtRjzhIU9DuXdv5Uq+f/JrO2OIWKVVGGMMf6Y7D94ThQPmS+27zcw3umrytaFMmLPik3qHzNGy9e9963YCy6pdkvcRw2IWjLhF6U1orIU0TGrttn+3D0puI59YP1rSfc2T9FynJ34E=
+sidebar_class_name: "post api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Create a page"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/api/2.0/community/wiki"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Creates a new wiki page with the page name and content specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"name":{"description":"Page name","type":"string"},"body":{"description":"Page content","type":"string"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Page information","content":{"application/json":{"schema":{"type":"object","properties":{"Name":{"type":"string","example":"Page name"},"Content":{"type":"string","example":"Page content"},"UpdatedBy":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"},"Updated":{"type":"string","example":"2020-12-08T17:37:03.3164965Z"}},"title":"PageWrapper"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

@@ -1,0 +1,71 @@
+---
+id: save-mobile-phone
+title: "Set a mobile phone"
+description: "Sets a mobile phone for the current user."
+sidebar_label: "Set a mobile phone"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVttu1DAQ/RXLr+wlLAVB3srlAUGh6hbxsKrQJJl0TZ3Y2E5htcq/M2OnarKVtoCItBc745kz58xMspcBrr3MN/K0C1tsgyohKNPKq5k0Fl1cvK9kLj3c4pkplMbzrWlRzqTDHx368NpUO5nvZWnaQA74L1irB0fL75680Z4vt9gA/ws7i+TQFN+xDOTHOo4UFHq+24xi3Bv74FR7TcYV+tIpGzHmMgESdkDUdlpDoelAcB3OJP6Cxup43jQoAv4Ksu9nEqpKsQfQ56PYNWiPxyKIIWNhwUGDAZ2noEGFGOJ0/WbxFYvFqVX8OTMV6sVFOuHfBrNIrkY7hIXROPTWtD6lv8oy/pmCmGojKghAgf8T4cHcYPs41QcY0qljlENRVvh09ezkuex53yo3BDwa55Idi2g+RFINa1sb1wAlKyl7nA+b99GIt5fz7GT+NLvMXuTPsjzLFlm6nmQntGIQvhkDKIzRCO0DBGuLpaqJHaFqQUkLmKZekrJCeeFpTxQ7sT5bC+NEa8IYUawmihkr55NR/g/KOVa9aLumQHeUW04m1PAvyYSfZl5DGQjxqGo4n85jdSQRivcBd38g4CjAlLgbOv5YVlTUtXLNF6cfj/Qm2SbnVOtKiy8XH8e10jn1v8bCI22eWpjbfNoosZzver1/oA4GL0A04yFD4KNQZeccVxjJ4haUBQ2creFJbI2PXQxhS6slWLVcLbLllOylx3A3FsnBLc+qfLMnRohYuQ3B+ny53G/JV5/vrXGhJ8tbcIqZim3C99IsqqHTTKc2Jei4zYVNZ6a3X2avVpznFYck+Crs1jyEkjvw5TfG+O1mUkUE/0OqCxqpvB6bzaRimkpjbhRGjXi6Xdw/eN7dSXnw4Bgry05qE0M+1JCTJm6SHLerlJgPDcSROGAimQ5UOqzF0ePvr0QdSGCgS6uBsiUAXSr+JPCGGSJLkpi+pyJHbQeZifQk2Ebu9wV4pBbqe94mshwxvrm615dXFGiLUNGk4bqIonBHcRLzS4bF5rpLGh08XvrZ3YnTskQbjtpejWr3/PP6koyL4Z2hoe6hXQc/+X2CvmkI8IsHn45FE/f2UkN73cE12yaffP0GrgwFcQ==
+sidebar_class_name: "post api-method"
+info_path: site/docspace/api-backend/usage-api/asc-web-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Set a mobile phone"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/api/2.0/authentication/setphone"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Sets a mobile phone for the current user.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"mobilePhone":{"type":"string","description":"Mobile phone","nullable":true,"example":"some text"}},"additionalProperties":false,"description":"Mobile phone request parameters","title":"ASC.Web.Api.ApiModel.RequestsDto.MobileRequestsDto"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Authentication data","content":{"application/json":{"schema":{"type":"object","properties":{"token":{"type":"string","description":"Authentication token","nullable":true,"example":"abcde12345"},"expires":{"type":"string","description":"Token expiration time","format":"date-time","example":"2008-04-10T06:30:00.0000000+04:00"},"sms":{"type":"boolean","description":"Specifies if the authentication code is sent by SMS or not","example":false},"phoneNoise":{"type":"string","description":"Phone number","nullable":true,"example":""},"tfa":{"type":"boolean","description":"Specifies if the two-factor application is used or not","example":false},"tfaKey":{"type":"string","description":"Two-factor authentication key","nullable":true,"example":""},"confirmUrl":{"type":"string","description":"Confirmation email URL","format":"uri","nullable":true,"example":"some text"}},"additionalProperties":false,"title":"ASC.Web.Api.ApiModel.ResponseDto.AuthenticationTokenDto"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

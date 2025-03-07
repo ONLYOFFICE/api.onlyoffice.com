@@ -1,0 +1,71 @@
+---
+id: delete-an-account
+title: "Delete an account"
+description: "Deletes an account by email address specified in the request."
+sidebar_label: "Delete an account"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVE1v2zAM/SuGzl6dZjtsuXVrgBXbsKJpT0UOis3Eam3Jk+i2meH/PlJSErvtMgxbDoEsPlKPjx+dQLlxYnYraqmq7CzPTavRiWUqHOStVbglYyfOWiyNVT8lKqM/gyzAspOlk0jFI+FALHvyKsDlVjUMEzNxDhUguETqRIbQyWqbAL+VyKKw4FziGsjVWkGRKJ1gCYmFHy04PKHA8fjRFESjE7nRCBr5KJumUrmnk905fqwTLi8pNJ9w2wA9b1Z3kCPFaaxpwKICx1b/Ph/GZGPyY3rkHIM5tEpvRO9/TM01RrsQcTqZvIz3nZ70BBOHElsO9Z8S+GTqhoUtBtCVMRVITVh4kmymO7QtCOJ6MQTGPIY4shNqEVgeRUYMoefWGnscHCCEvQSbA7fVAa5IiA01USrWxtYSw9Xb6SjAKcnKxExL/n8gFjCE3st+7cF/+eIowvEnDzDuB1Tob79R8+wtO7l8x7ybnL5skhst42hRNRlVA31SvQjHJebaSyzpO5ONyqYnk8xPqtxNKg+qfQDr/Jy2lhpblIiNm2VZVxqH/axrjMWekA/SKrmqQhOxLfBZy7ZiOSqTy8pfEw/2GZvfTz5MOZXBblhww4Zwr26IvXzE/QtsiYLipMtgToWWNVtHvl4Fnoirw/DPd6Lvh3c/jhxybfxTsQI0HXWriV2y8MokV/PFdXJ2ecEKkFBB+ErSYoqZOqylL3bkE9bWYGuJZ4ttsIr+ecdFhRCeMGsqSQIRJ1/HLpb+luUjJBWf/n3+qZCDVR1KeSu6biUd3Niq7/manrC8vpeHyvMXhS93G7wT91QW1syn88bPDMOrNpTt2ZLq050HbUto8Ch2Oejm8/nX+fWc4Ku4y2tTsJeVj7zn6X8m6GC8wL6h/F1HddKbVm4YG6Jye/DMjLvr3ndXPHBeO5PeDjiOGy2NqfA/J/aqS9eF3u37PT6Yfuux7+6A5oIuifUvTk6Ipg==
+sidebar_class_name: "delete api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Delete an account"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"delete"}
+  path={"/api/2.0/mail/accounts"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Deletes an account by email address specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"email":{"description":"Account email address","type":"string"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Operation status","content":{"application/json":{"schema":{"type":"object","properties":{"Completed":{"type":"boolean","example":"true"},"Id":{"type":"string","example":"Id"},"Status":{"type":"string","example":"Status"},"Error":{"type":"string","example":"Error"},"Percents":{"type":"integer","format":"int32","example":"100"},"Source":{"type":"string","example":"Source"},"OperationType":{"type":"integer","format":"int32","example":"1"},"Operation":{"type":"string","example":"Operation"}},"title":"MailOperationStatus"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

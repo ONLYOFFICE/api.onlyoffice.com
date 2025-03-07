@@ -402,6 +402,12 @@ main {
   transition: opacity .2s ease-out;
 }
 
+button svg[class*='copyButtonSuccessIcon'] {
+  top: 50%;
+  left: 50%;
+  opacity: 0;
+}
+
 button[class*='copyButtonCopied'] svg[class*='copyButtonSuccessIcon'] {
   top: 50%;
   left: 50%;

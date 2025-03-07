@@ -16,7 +16,7 @@ expression.POISSON_DIST(arg1, arg2, arg3);
 | ------------- | ------------- | ------------- | ------------- | ------------- |
 | arg1 | Required | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number |  | The number of events. |
 | arg2 | Required | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number |  | The expected numeric value, a positive number. |
-| arg3 | Required | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| boolean |  | A logical value (**true** or **false**) that determines the function form. If it is **true**, the function returns the cumulative Poisson probability. If it is **false**, the function returns the Poisson probability mass function. |
+| arg3 | Required | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| boolean |  | A logical value (-**true** or -**false**) that determines the function form.\ If it is -**true**, the function returns the cumulative Poisson probability.\ If it is -**false**, the function returns the Poisson probability mass function. |
 
 ## Returns
 
@@ -24,23 +24,19 @@ number
 
 ## Example
 
-This example shows how to calculate the Poisson distribution.
+
 
 ```javascript editor-xlsx
-// How to return the Poisson distribution.
-
-// Use a function to calculate the Poisson distribution.
-
-const oWorksheet = Api.GetActiveSheet();
+const worksheet = Api.GetActiveSheet();
 
 //method params
-var x = 9;
-var mean = 12;
-var cumulative = false;
+let x = 9;
+let mean = 12;
+let cumulative = false;
 
-var oFunction = Api.GetWorksheetFunction();
-var ans = oFunction.POISSON_DIST(x, mean, cumulative);
+let func = Api.GetWorksheetFunction();
+let ans = func.POISSON_DIST(x, mean, cumulative);
 
-oWorksheet.GetRange("C1").SetValue(ans);
+worksheet.GetRange("C1").SetValue(ans);
 
 ```

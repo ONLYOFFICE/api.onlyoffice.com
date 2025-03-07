@@ -1,0 +1,71 @@
+---
+id: update-tips-settings
+title: "Update the tip settings"
+description: "Updates the tip settings with a parameter specified in the request."
+sidebar_label: "Update the tip settings"
+hide_title: true
+hide_table_of_contents: true
+api: eJzFVcFu2zAM/RVD58zOgh223Lpsh2EYUDQtdgiMQraZWK1iaRLdtDP87yMlO3HabqcCOySRqUeKfO9Z6QTKnRfLjVgDomp2PsmSa2W9yGfCWHASlWm+VWIpWltJBN4boWImHPxqweNnUz2JZSdK0yA0yEtprVZlSM/uvGk45ssa9pJX+GSBapriDkqkOtbxYajAB1xtDhNUYYwG2RCsAl86ZbkoxdcWSrWlnORQA9bgEjQJ5yZIXSZbQ4EaktbTDq0bwyfBo9xbTWXRtdD3MyGrSnFBqS8nTWyl9vDiwJGjYezESif3gOCYC1TIdcXFepX+hCK9sIo/P0wFOr2KGf4LmpQ5HJ7pUfQ9t+HAW9P4SMBiPuef89NvggAVD5f4kwT/i3O1DewGqg9K66SAQH7zNly/Quga20qZdGUcpGc+jAx+mL9/hbRGtlgbp35DJRjloWydQrLrhgjz5S3v394DB0gEWdHBBwKAyPv8eVNRAj8OfpSBCMA6kSc/JH7gqUpUE+CDZVIqT4ja8Ctl26CDxJoeMmlVtkjn2Vg0Y2oFd+we2GHccOs0QWtE65dZ1tXGY7/srHHYE/JBOiULHQXlvcjHVraalkKbUuoQJh4453z74/zTgqnMTySt2Tyx3DlVR59Q098pMBMNDc7PU9hMKGatNOZeQWCfXXl1ujO+jgYZ/ReMwmlbEw55+UrxmMRG1ONhEUfxuJfB7UMXUacXMj138+TCeiNpB1YQHjGzWtL41F8QrRt03jBlhCSlg7bHznC4daNuG9F1hfRw43Tfc5iOcOzR/CQzP1H5mkwLLtgjaCNWcah319wMw3UbpXp2O/SzMeOiLMHiP7H5xLeXN9eELYZLf08XHAWdPPAfAn2Hl9cEjoN1QqwTWja7Vu4YG0uGG6FlUqZ2isYZFjzUuNU8TRs891kcg795qFczui56te+P+Lj114yB2BHNYubU9B/pBH+l
+sidebar_class_name: "put api-method"
+info_path: site/docspace/api-backend/usage-api/asc-web-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Update the tip settings"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"put"}
+  path={"/api/2.0/settings/tips"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Updates the tip settings with a parameter specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"show":{"type":"boolean","description":"Specifies whether to show tips for the user or not","example":true}},"additionalProperties":false,"description":"Settings request parameters","title":"ASC.Web.Api.ApiModel.RequestsDto.TipsRequestDto"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Updated tip settings","content":{"application/json":{"schema":{"type":"object","properties":{"show":{"type":"boolean","description":"Specifies if the tips will be shown or not","example":true}},"additionalProperties":false,"description":"","title":"ASC.Web.Studio.Core.TipsSettings"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

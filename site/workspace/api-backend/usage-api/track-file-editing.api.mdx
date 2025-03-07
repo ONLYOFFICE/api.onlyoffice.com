@@ -1,0 +1,71 @@
+---
+id: track-file-editing
+title: "Track file editing"
+description: "Tracks file changes when editing."
+sidebar_label: "Track file editing"
+hide_title: true
+hide_table_of_contents: true
+api: eJydVE1v2zAM/SuGzlmdBTtsuXVtsxW7DE16KnJQbCZWY0uaRLfNDP/3kZId52vFsBwUWeKjyMdHNgLlxovpk1irEnw641UsR8JDVjuFO7pqxHWNhXHqt0Rl9HeQOTiGONqJkXglOxDLllA5+Mwpy2ZiKhZOZlufsOckK6TegE9eC9AJ5AqV3lwR2EonK0BwPryk6YOQDLln34r9WImFOHXOkSb3t3TuswIqKaaNwJ1ltEdH3kXLETn4VYPHrybfsUVmNIJG3kprS5WFlNJnzz6bc1dm9QwZcpzOWHCoiB2+lSsKjzYnCctVDOkkEIrdZD9gNzMucHKOvDVZXVFgyRZ2ydq4BNmOwZednXuYF9JBnqDZgr4EUn6mtPLFBaSFTK1VLA4WQI8bKhobx9r1sSQUlzY4eF8ZU4LUxDT/mGxvjfaRo8l4fP7W7EAL5Oc/yxFf+zT+eP7Ao5adWCEXbEXiKgzVSmwg1JG1NBWptCqdXI3TKHte0yaqrk1DvqxRPmCBgXvpBVq7kuAFovXTNG0K47GdNtY4bMnyRTolV2UkgO9igGtZl7QVpclkGY4pMMYcX38ef5lwbgftN2cGoruLTbhnhvIhgfUdU8TrUd9PR9hAC1P8MPTG3ZusLCU7aLuXzrl2j24OPweJoauBNafXJrhUyL7FjamqWlNayTxQmjzczRfJ9c97po4YjiUsJUJPkcdKBil0iYQQoiq7IXI6GA56/J8GUMcfwhumtpREHz0cqtx0YnlicsmS5EJrEEz3T3/T/ag6Vg3VMNb/STTNSnp4dGXb8jFx7nisLge5BGXlyvOeqF/L0sM7aQ2j72LwvSL0LiiyrPmLtjRahtHaLsmy6Ed5013exDc+LNjFAD7rzXbUI66zDCy+a7s8aMJvdwuyXXXTuDI5Q5x8pUNeQ5wmpBw0H84aUoTe1HLDttElK5j7/LgBtqEBug0ndZGJ417oaeGVs7oIaZrYXm27t49Xf0XsGzBac2GWFPUf/QuJuA==
+sidebar_class_name: "get api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Track file editing"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/files/file/{fileId}/trackeditfile"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Tracks file changes when editing.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"fileId","in":"path","description":"File ID","schema":{"type":"string"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"tabId":{"description":"Tab ID","type":"string"},"docKeyForTrack":{"description":"Document key for tracking","type":"string"},"doc":{"description":"Shared token","type":"string"},"isFinish":{"description":"Specifies whether to finish file tracking or not","type":"boolean"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"File changes","content":{"application/json":{"schema":{"type":"object"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

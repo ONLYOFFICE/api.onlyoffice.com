@@ -16,7 +16,7 @@ This method doesn't have any parameters.
 
 ## Returns
 
-boolean
+This method doesn't return any data.
 
 ## Example
 

@@ -23,18 +23,14 @@ number
 
 ## Example
 
-This example shows how to return the serial number of the last day of the month before or after the specified number of months.
+
 
 ```javascript editor-xlsx
-// How to get a date of the last day of the month before or after specified months.
+const worksheet = Api.GetActiveSheet();
 
-// Use function to get the serial number of the last day of the month before or after the specified number of months.
+let func = Api.GetWorksheetFunction();
+let ans = func.EOMONTH("3/16/2018", 10); 
 
-const oWorksheet = Api.GetActiveSheet();
-
-var oFunction = Api.GetWorksheetFunction();
-var ans = oFunction.EOMONTH("3/16/2018", 10); 
-
-oWorksheet.GetRange("C1").SetValue(ans);
+worksheet.GetRange("C1").SetValue(ans);
 
 ```

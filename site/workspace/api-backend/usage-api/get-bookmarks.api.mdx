@@ -1,0 +1,63 @@
+---
+id: get-bookmarks
+title: "Get bookmarks"
+description: "Returns a list of all the portal bookmarks with the bookmark titles, dates of creation and update, bookmark texts, and authors."
+sidebar_label: "Get bookmarks"
+hide_title: true
+hide_table_of_contents: true
+api: eJzNVdtu2zgQ/RWCz4olu0G2NVAUaTdIi15QNCkKNM3DWKIt1hLJJak4XkH/vjOk5Ei9JC36srYhUzNzOLfDYcs9bBxfXvFc13WjpN+nz7Xe1mC3jl8n3Im8sShFk5afNr7UVv4LXmr1UkAhLEEtrnjCd2gn+HWHqEK43EpDZnzJPwjfWOUYsEo6z/SaQVUxXwpmtPVQsdXgke2kL4NmEDEvfSVcwgrwwhE2R3e0MQNVsMaQPBmZi1uP1qSDEK2bYWhWOKOVE5hpyxdZRn/TGN+MIjuEg8hcKy+UJwAYU8k8+E6/OkK13OWlqIFWfm8E7gPWwh5xWIrajeR69VXkHhXGaiOslzGWV8XIRqKrDZY04Wtta/BRdHKMAnELtanIaD7nXcIvqSojqPNWqs3E8FzrTSWYVPmMEB9tdb996b1ZfvmS4m+32802AT5DWgR/ZVOvFMgH9kAnzGts4GCN0BfUL1HcD1xki+xovjjKTi6zv5aPTpbz49njOX6fPPocog99/sNN/h53/OHSjYJ/vv/NVh42PXSyaWQxcZL1n6MfPIZPiFo6U8H+HdQPNPyt3Ar2GdQevNvKX2TJW1BAnEPr0xvwYC9qPAL3Y5rYZUeWDAKK8O+tXstKPEg0JBiaFk3uHS2FRnGUEXwGztw+a5ywT6GopcJzacFr9IAufEyIn+FWei/EJwtGTFXD9CJV1HWkPs7m3x/6jwr6iYbUIqta4Cv2kW9EaDD4El9SMDJdzLL0bkYOI4LThLQ3wrowIBvKPZwkt0zTttTOd8uWplyHljdgJayqSBfSxYjW0FTEkErnUAUxRkKYqfpx9mRB2YyG8gVNn7jdD0fz3VQy8rUIY4nSLqM64SpwaooNdZBqrQO8L+qLIXF2EbJlH84uLtnp+1eUFSYfy1nRiO6jd76GcMp6H+fCT+ZqMT2LhzH7P7gs+pqRMsWThyXDjJrI6siIKyooWiInwhXRFwfXB15gl2KHr3jbrsDRseg6Ev/TCEvX6fUdIegNfZTDjdryLXYLG5PnwvjAnKqJffzmCiI2HEh7fnaJtpTJtPXb0Pp+QbsPKrUf7T1lQdKHQM8u+QmkbSOxuu5gH1U/RRyoF62pttfI6f8AnXTgDQ==
+sidebar_class_name: "get api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get bookmarks"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/community/bookmark"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns a list of all the portal bookmarks with the bookmark titles, dates of creation and update, bookmark texts, and authors.
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"List of all bookmarks","content":{"application/json":{"schema":{"type":"array","items":{"type":"object","properties":{"Id":{"type":"integer","format":"int64","example":"11"},"Title":{"type":"string","example":"Google inc."},"Url":{"type":"string","example":"http:\\/\\/www.google.com"},"Thumbnail":{"type":"string","example":"Url to thumbnail"},"Created":{"type":"string","example":"2020-12-06T07:36:14.8181893Z"},"Updated":{"type":"string","example":"2020-12-06T07:36:14.8181893Z"},"Description":{"type":"string","example":"Google"},"CreatedBy":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"}},"title":"BookmarkWrapper"}}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

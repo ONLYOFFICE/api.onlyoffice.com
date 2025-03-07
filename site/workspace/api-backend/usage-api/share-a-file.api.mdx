@@ -1,0 +1,73 @@
+---
+id: share-a-file
+title: "Share a file"
+description: "Sets the sharing settings to a file with the ID specified in the request."
+sidebar_label: "Share a file"
+hide_title: true
+hide_table_of_contents: true
+api: eJztVktz4jgQ/isqnXZSJjDkzS2bydSmtjaVCsnOIeEg7AZrxpa8kgzDuPzft1sSYALz2PtywHq0Wq2v+/ukhjsxt3z0wmeyANsf58JINeeThFtIayPdCicbfl27XBv5TTip1R8gMjC0yGCLJ3yJdsAnLa7KwKZGVmTGR3wMzjKXA7PBL7PgHH5xUDPBaE+2lC73NncfmK0glTMJGZPKjxn4pwbrjl/Vqzo6utcOjo5G7FakOdOzHc+VMKIEB8aysraOpVo5QV6Wmi1EgV5G7JXT+eBJv3LWo/2ij9qCCXEsc12yJQYllKMYyTvESBNcf52mYK1fLnyTuVWF5rnEiDrr5nIB9N14/+0RoUoY/X8itBIGLn13jOBtA/dIK+wgcrThHWErCcdKuJy/BfcjoXf3AcdtmkMp+KjhFA1OWeez2FJGIoS/62xFFoQLKEdNUVWFTH1K+58t+Wz2XenpZ0gdxWl0BcZJsN6OgKHGbkw3uijQHDuE7X5u0E/0K4wRKzqfg9L+fL+YuP0zJnymTSnwQLyuJSEGX0VZFWQynGUzOLu46J2kw/Pe6cXJee8qm131pmfi/PJkOr08Gw54m8SsdnxLxGiOJd5xjkMnQ/Ku6pJK/14rwO4mobHtPxSaP8PfeH6wfmwhYYmNG12WBH9C6Ss+oneavsGK1SWOIEZ8j0UvAyw32i9h77HVqaFh7CbsxLfCxgk7xV7YO2Fnfoa2T9g5tmMECbvAziaIhF3SXCeOyQ6UiBMC5aTzPSo9n5EHyqz1c0o7OVvtl8Q9jWMkngeWiamu3Ya5yHQvAtowXL+tjqnWBQhFyYlF9BdmSMwPlFyc8GwFlSEXQbEQDNXewf22G62ZknCRLYRKIRtHidrf6TpabFUs8B4rNZdT6bCBVYITCcv0UhVaZL6T6sqHQkEEIREYZ5oLNfea+EYbEU36EXNtpZUNBBgOBvsRjTsQShVqlWaS/0zzn9JxL/WfDDrGco3Bng7e78f3rES8OCDzRYIqkOuMFK32HCddG/G+qGR/eDzoh0uI/vtNUMC2H5SG7iOzWItkbQpcljtX2VG/3+TaunbUVNq4Fi0XiKeYFgE3mguBzURdEJMLnYrCD2NAtGZ3+nJwNaRDda7AMaEV3B28CLcoVvJPWK1VOw/TyVrTd9Z6OCgdj1t9vl3TbaOvLx3l+zU526oZcXay5aUzNeyzqUMAKiB/lphpEopa4fHZ2EPPHm/HT+z64Y4gxkyEFBfCwRpK60rhyyseeNy5Pd9eX52b6P9nwi88E2KFOfjq+lWBIRPkngdNpNELlR9aIpHo4iIqxS9+RpsHRagsLIzAjBfeNFNh4dkUbUvDiKShR99kSyRfh5m01EbyzkRh4Qfp3D5MDga95opaea4i5tjD5hdkzubh007QMl8/NJs4eRP26D2Ri+3iPYVrk/UKykTlfmg76cjSw/MT2k7jW6nUGS0xgm5u+vdxan9krwZ+rEEOqHkd6BRcErdJ+Xal4YuXhtigQx1EYlcl1rDQP53q4JKmCcLTthv7MPXdFRtpCtaUmAlG/S/19BRd
+sidebar_class_name: "put api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Share a file"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"put"}
+  path={"/api/2.0/files/file/{fileId}/share"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Sets the sharing settings to a file with the ID specified in the request.
+
+**Note**: Each of the sharing parameters must contain two values: "ShareTo" - ID of the user with whom we want to share a file, "Access" - access type which we want to give to the user (Read, ReadWrite, etc).
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"fileId","in":"path","description":"File ID","schema":{"type":"string"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"share":{"description":"Collection of sharing parameters","type":"array","items":{"type":"object","properties":{"ShareTo":{"type":"string","format":"uuid","example":"2fdfe577-3c26-4736-9df9-b5a683bb8520"},"Access":{"type":"integer","format":"int32","enum":["None","ReadWrite","Read","Restrict","Varies","Review","Comment","FillForms","CustomFilter"],"description":"[0 - None, 1 - ReadWrite, 2 - Read, 3 - Restrict, 4 - Varies, 5 - Review, 6 - Comment, 7 - FillForms, 8 - CustomFilter]","example":"0"}},"title":"FileShareParams"}},"notify":{"description":"Notifies users about the shared file or not","type":"boolean"},"sharingMessage":{"description":"Message to send when notifying about the shared file","type":"string"},"advancedSettings":{"description":"Advanced settings which prohibit printing, downloading, copying the file, and changing sharing settings"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Shared file information","content":{"application/json":{"schema":{"type":"array","items":{"type":"object","title":"FileShareWrapper"}}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

@@ -1,0 +1,71 @@
+---
+id: update-the-trash-bin-auto-clearing-setting
+title: "Update the trash bin auto-clearing setting"
+description: "Updates the trash bin auto-clearing setting."
+sidebar_label: "Update the trash bin auto-clearing setting"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVcFu2zAM/RVBpw1w6zTtgC23rCu2YihWNAl2CHJQbCZ2a0uaJDfNDP/7SElpnKYbNmA5GBJJUeR7T0zLnVhbPprzVVmBTSfgXCnRski4hawxpduit+XjxhXKlD+FK5X8AiIHQ6cMrnjCNxgHfNHhqRxsZkpNYXzEZzoXDixzBTBnhC3YspRMNE6dZBUIg3cxG+48xTwGfjRg3UeV460tz5R0IB0thdZVmfnb03tLuVtuswJqQSu31YC3qeU9ZA7zaKM0GFeC9XHgUxxWdiXFsoqVHdajDJOKssSsS6XQJXmX8LXQx5nGzJU1sBJrNY+iYpsC5CtpN2VVsSUwLGylTA05e6MksA3AQ8LcRvmVTRgZa2y8CFa/RLMrDESHfbsvjm5dIxed/xGCVitpQ+PDweC43OlRZZEA1kMt+V/YX1tUjrokAGe6F94D9bPoO3YNJZxQEi6YzodoANnUJLpvEr4jVmiZbhStqF403hA4weqXZJ4SbHF3pM75GTthMVvChrjZJUzYeXDdBCYugu8mkvGOtvvMC07Qu9JV1EGv4U/CCR6IuRicHXMxkyK+K8h9jhpwm6NHNx5LgQ2NeCp0mQ5PB2l4pJEvmxKNxKJsNKf3ah7BWP9cG1PhucI5bUdp2hbKum7UamVch5GPyLtXP1VEvlDZSjQV4V2pTFTejBXRmUP3+8GHITXVGxETUkNI9+qgeGYXG/kKWyyhpPaL4E64FHVEbn/W40Fyu9sPhasnUWsCOT5qZxqIr3LQUdKV8pdFJi5VXTcS62MTjw27u5pM2fj2mjBAqAIJFU2o2Kt1tfD6jhWF+fU344u/EFdvev3rFIxYOXhyqa5E6V+JZ7SNipgTkBiJmqCHQqrwAojDO+F9ZSBPgeM5b9ulsDAzVdeRGXE1NN4Xe0nQDm8rdhO+5Q/IF0HpmzmZUm0UXjWBzxejoUt2J8ZZBtr9MXbRE/ztbIqxyzj5a5XTESM29K+A3xHHhfLYepl5W4vcyXUj1hQbUpJo6E0dau7Bay4uqKmdS257BR7KL4l90Je6evVI2wZFd91zfHD99sSz5kM0kbvAqn8Bn7uWKw==
+sidebar_class_name: "put api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Update the trash bin auto-clearing setting"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"put"}
+  path={"/api/2.0/files/settings/autocleanup"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Updates the trash bin auto-clearing setting.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"set":{"description":"Enables the auto-clearing or not","type":"boolean"},"gap":{"description":"A time interval when the auto-clearing will be performed (one week, two weeks, one month, two months, three months)","type":"integer"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"The auto-clearing setting properties","content":{"application/json":{"schema":{"type":"object","properties":{"IsAutoCleanUp":{"type":"boolean"},"Gap":{"type":"integer","format":"int32","enum":["OneWeek","TwoWeeks","OneMonth","TwoMonths","ThreeMonths"],"description":"[1 - OneWeek, 2 - TwoWeeks, 3 - OneMonth, 4 - TwoMonths, 5 - ThreeMonths]"}},"title":"AutoCleanUpData"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

@@ -1,0 +1,71 @@
+---
+id: add-a-tag-to-the-entities
+title: "Add a tag to the entities"
+description: "Adds a tag to the entities with the IDs specified in the request."
+sidebar_label: "Add a tag to the entities"
+hide_title: true
+hide_table_of_contents: true
+api: eJyVU01v00AQ/SurPYFk1SZwAN8CRKICIdSEU5XDdD2Jt7K9y+64Jbj+78ysU+I2veDT7Hy8efNmPGiCfdTltTahzTdibzMd0fTB0oH9g172VLtg/wBZ131BqDBIfmBLZ/qe81BvR66qMJpgvaTpUi+rKipQDK/IKapRYUeWLEZ1b6lOnsvPUUWPxu4sVsp2yRnwV4+RLhj8aH50FVMZtHEdMYiY4H1jTaKU30ZpOOhoamxBLDp4ZAru5hYNMY4PzmOQ3hJNPA6blDM8Y71KMZUAskecSMF2ez1mx1JbnRd+s5GU201DHmSyUz2EAAd+slJtnPGzPM6e1cz0zoUWaHK9XeiRW7Fw36F9gSIvSXUSOeOXPlEtetfFadhFUbwIwdX/K+esTabfFW/OcX92cDwWrNIQLfKT1dLexbQIoJpfOXibLy6KXI5uOO2jfCWcwNCD894F6jsOPBiI+HrMWZDGJpSI4Q5DTNfZh4YBayIfyzwfau4zloMUj5x5B8HCTTNJIbGJ8w76RtRunIEmuZmr1DwNvy8+yC7G2R+xFlEmuBf/i39i8YRfMS1dhKmncKbT4sqntUkpUf3qdO6r39D6Bp+f6+MO5pd4XWxn1zI7VtvtXGJkSZD0J9e2SVG1TgKqq9V6o5Y/LkUo1nPaYQOEIsj4FxaTby8=
+sidebar_class_name: "post api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Add a tag to the entities"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/api/2.0/crm/{entityType:(contact|opportunity|case)}/taglist"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Adds a tag to the entities with the IDs specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"entityType":{"description":"Entity type","type":"string"},"entityid":{"description":"List of entity IDs","type":"array","items":{"type":"integer","format":"int32"}},"tagName":{"description":"Tag name","type":"string"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Tag","content":{"application/json":{"schema":{"type":"string"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

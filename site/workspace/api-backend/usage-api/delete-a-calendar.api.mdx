@@ -1,0 +1,71 @@
+---
+id: delete-a-calendar
+title: "Delete a calendar"
+description: "Deletes a calendar with the ID specified in the request."
+sidebar_label: "Delete a calendar"
+hide_title: true
+hide_table_of_contents: true
+api: eJylVE2P2jAQ/SuRz2hDaQ9tbmhBKmoPVWFPiMOQDBsvJnFtZym1/N874yRAFraXXsB4Pt68N8944eDZimwtclBYFWDSx+5gE6iKxDZbmxupnawrKzYjYTFvjHQnqvFi2riyNvIPcPgrQoGGexk6iZE4Uh6KTaCqAs9dRCZmqNAhASQ9anKUrkxciclilliNudxJLBJZxTuDvxq07oF6ajBwoGJj4wAV/aCGfZsFw0qG0OBK8Ra3p0YgFLN5iQcQmRfupLmLrBw+E4OR2NXmAK69+jgRgSkYtJo0QMsVk/GYv4btV2D3CRyBWHOTvKZ+leM80FrJPKqUvlhO9rfw9fYFc0dgIYzEp/GHW4CnCjrBsRCcRUqUdUGRIioa9SHemUhBy3TyME7Pa/UXjQKTR/Pai9gYRSWlc9pmaerL2rqQeV0bx5mvYCRsVcubY+1cO2gUK6RqahyvaR6uGYY/j7+wfuHKOUsm3ra765+zIMThG576jZZteNTvfFAb1ZDVro7l0inOeKwPh6YixGQZ2SY/58tVMv2xYFZEvhVVAVmxm966A8TldBitUa98+tZS/rLl/3F1R9jhb5dqBcSXxolr8d1G16wGZdJO2VqXcbIr75PI7YLWwvstWHwyKgS+JiTDT3Zz2WdcfSEtn8lCO1AW/8Fu+HbuDtyvrTpF26iGf9FxT0scvNGwoeyy/7vwXcI0z1G7q9KbV8MuOlt+Nv8+X80pnd/E0DX76JruwAB3JxsaqB+TP8PonRLvW0+GcM5vQ+9WnF3bZrNQG3oOfwHvq9uV
+sidebar_class_name: "delete api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Delete a calendar"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"delete"}
+  path={"/api/2.0/calendar/{calendarId}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Deletes a calendar with the ID specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"calendarId","in":"path","description":"Calendar ID","schema":{"type":"integer","format":"int32"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Task awaiter","content":{"application/json":{"schema":{"type":"object"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

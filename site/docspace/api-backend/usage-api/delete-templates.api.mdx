@@ -1,0 +1,71 @@
+---
+id: delete-templates
+title: "Delete template files"
+description: "Removes files with the IDs specified in the request from the template list."
+sidebar_label: "Delete template files"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVE1v2zAM/SuGzlmcpj1svvUjA4rt1A/sEBiDYtOxVtnSJDptZvi/j5TcOmnXHYbl4NjUo0i+96ReoNx6ka3FZ6XBJ2kS/kU+E8aCk6hMe12KTJSgAeEOGqslEmAmHPzswOOFKfci6wngC6csJxCcd0murxhXmBahRcZIa7UqwqbpD8/AXviihkbyG+4tUKp0Tu4pTyE0/iCuaJstOFqpjGskxtDpUgyz94vDk6SOKX19sjw9ywf6cefemtZD2H25WLxt/8IYDbJNdlJ3kCXoOkhUlWANyQstifKJ74oCvK86/Q+DbmIREZs6W5y87eO+lR3WxqlfUApGeSg6p5AYX1MVX3zn9e8PwAGaS5bUxyMBQORD/pqXG2jMjkSugtSPCuswETGVeAuFqhSUiWpDcFQ3qZxpQgBH6ROtPM6pTAPU2WQNiliJNX2n0qp0OV+koU6KB57x4HbgfOi+c5rANaL1WZr2tfE4ZL01DgdC7qRTcqOjRrwWyalkp1l5bQqpQ5hI4Zzj5Y+LT0vmNZ8Yu2X643bHvE3Gs+oLsPNa2YTvQxj5kSksjHlQEKRgXW+mM7A6dhrjKxN2V8hhcX57Of8Gm/m5VTwf0RBV2S3jDB4bGYwylr8KtE68BzbFK037yXX/Wd6RFIQnTGmFpqcug2b9KPSaGSMkSc2Hcmxvkps4iMKtRd9vpId7p4eBw1TbsWPzSWf+ogI1WZjOOPsjiCMu43gf7rgdhtOBDFq9OmDD7DnjnI6kxb9i8wP3Xq2+ru5WBN+MF1ljSs5y8pEvOXpmQvBtyPnBPiHWCy3bbSe3jI27sinYL8eWiuYZX3iu56V2f9jjsdfiJPzkuf6Y0ffRr8Pwgo9L72aM3D6jWVG+EH8DMP0MoA==
+sidebar_class_name: "delete api-method"
+info_path: site/docspace/api-backend/usage-api/asc-web-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Delete template files"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"delete"}
+  path={"/api/2.0/files/templates"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Removes files with the IDs specified in the request from the template list.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"description":"File IDs","content":{"application/json":{"schema":{"type":"array","items":{"type":"integer","format":"int32"},"description":"File IDs","example":[1234]}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Boolean value: true if the operation is successful","content":{"application/json":{"schema":{"type":"boolean"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

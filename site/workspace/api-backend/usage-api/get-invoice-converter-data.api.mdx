@@ -1,0 +1,71 @@
+---
+id: get-invoice-converter-data
+title: "Get invoice converter data"
+description: "Returns information about the generation of the invoice pdf file."
+sidebar_label: "Get invoice converter data"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVE1v2zAM/SuGzlmdFTtsuXVtsQUbsCJpT0UOiszEam1Jk+i0meH/PlKyk7jtdhiWQyCJX4+Pj24Fym0Qs3uhfJ3Pzc5qBUGsJiKAarzGPdlacdFgab3+JVFb8xVkAZ5jPJ3ERDyRH4hVR1EFBOW1YzcxEwvAxpuQabOxvo7BmVzbBjMsIduCAZ8e7Sa+6FQ/c8Um2+gKzii5h58NBPxsC4LSCmUNgkE+SucqrWKC/CFwwVYEVUIt+YR7BwTBrh9AIeVx3jrwqKk7svaV5gVfxqB7ErL5FUX1WTQV3VLPHfGC1sst3Pnqdegy2bK7xfdjbECvzZZDPex0IM+3qi5626jsEBp/HB+cNSF1cD6dvs5yac2OmgSfFRIlJfpnulBjBacZrzhhwvFh+v516Tsje5FAIdirBrpSp8LZEAcgsaRbLp3Oz8+mOQuuH0Ouhip5jzuAp4cQxdcw1aJEdGGW521J6bpZ66zHjjx30mu5rhIpbEvQNrKp6Cgqq2QVnwkSx4zNH6efzrmrE8EvmZOU7k3ZH7iiRr7BniBo7r9M5okwsmbrKDYSwqQvjmq+fpa1Y45HapyOFTZIYCyeE03xakVMh3nVdWOojWwZKcwW18vb7OJmzlQRo2lYlUQYKAlYyyiGHvgXwMMiqpd6Gs38ZBv/y6r3vCI8Y+4qSbQSwCYtWlLPPZNOnqQfFrevI/sxUxJ7QstAGS9NNSniXrTtWgbmtOv4mabg+dO2OgqIb1SvHL5urXik6cYN4B7f3TI6dq+aNP0X69RNhogLpcDhX31XJ/tx82N5S87r/gtX24JjvHziqdP/TNDBRs6jKuNbSzM024Z0QvaUkzXGOziW6GOUaH/grgaT2Z8gHKt10jfC/9zWmyFtmxag6w7+yfTHiMOKJG+e74pQ/wai9j6r
+sidebar_class_name: "post api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get invoice converter data"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/api/2.0/crm/invoice/converter/data"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns information about the generation of the invoice pdf file.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"invoiceId":{"description":"Invoice ID","type":"integer"},"storageUrl":{"description":"Storage URL","type":"string"},"revisionId":{"description":"Revision ID","type":"string"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Converter data","content":{"application/json":{"schema":{"type":"object","title":"ConverterData"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

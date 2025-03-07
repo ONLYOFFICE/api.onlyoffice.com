@@ -1,0 +1,71 @@
+---
+id: delete-a-post
+title: "Delete a post"
+description: "Deletes a post with the ID specified in the request from blogs."
+sidebar_label: "Delete a post"
+hide_title: true
+hide_table_of_contents: true
+api: eJy1VW1P2zAQ/iuRPxcSOsRLpGkC2mloY0KjaBLQD0dyJYYk9myH0UX577uLk0KhlEnb+qF17557Pz+uhYMbK+JLkaiiqErp5uFhrkg0HQiLSWVIQupaHFQuU0b+AidV+QkhRcNmhk5iIH4SDsW0IasUbWKkZpiIxQhzdGgDCLSyLvgpXRa4DIPjUWA1JnImMQ1k2coM/qiQQDOjiuCas9gk1xoMFOTD2DaPkv6QX/YmObLkKBpcJp6HPuWAxyOS2yTDAkRcCzfXbG2dkeUNaWbKFOBIUlXkreH8DVqtSouW8cMo4p9VNaVtReQjUaXD0jEOtM5l0rYovLUMrl8GV9e3mLChNkqjcdKHmuCDW5UiPkChc+wLcgxrBmIiHQvX4cf+5PMkkyMaFuW93mgYDaONreFGtDOJduN3O/HW9ubu/t7W3jC6YCfnOv17J8cr7ZeH8dRf1H02Vnz1nycVHs7fbvf/SmEkrc5h/rVd03U9OpF3GFxAOQdn7+QfjvQESrihm0fog3twYM4KyPP1NpXJA6cCy8gAWiu2PzVqJnM8N2+YX12FBE2rxFk+oiKxl7H5Jlj98KGyaN5DWshSkgdwiiJQCOcLEmNypeaI3w1oXFYx2fBes4p0HyuqpmkYsR1tvbx65yV0PIRp64eYIVM0SsLxpWz5grggFiFoGQ43o/CR2JhSwtozR8O0gOa+p5WK2yAy57SNw7DOCNTEhDWOkfdgJFznfnNY5zObQZXzsuQqgTzrbhnbLKv3ov0hF/WEUs+YFLy7lcS6GAhV8RnnPc9lXj3oWXDJtu2HLGeqNe/6e9RXH5y11QbfxmeT4OD0mKui4n1bc7o1ffbWFdASVxfDs11H4M9Jtn5kv39A9V3NTHEhXSIqmTKq/IL6sV5yQwhJg22ZtyuOzuyEfuLuYaBe+zldirq+Bst73jQspsCGn7Tp41jbDUil5TPt0gxyi2sKfXxYVibcT66ct5uTV/yPjnc0x8XD1UwJmfXPaN0pD5IEtXti9uJB4SVa7Pxo/GU8GROcL8Xy0ty1S9MdOMDKrJb3p0+Rv5vBKyZ17VeyaRZ4r3rVYrG0Hs1NmtJt+A1urNAr
+sidebar_class_name: "delete api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Delete a post"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"delete"}
+  path={"/api/2.0/community/blog/{postid}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Deletes a post with the ID specified in the request from blogs.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"postid","in":"path","description":"Post ID","schema":{"type":"string","format":"uuid"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Deleted post","content":{"application/json":{"schema":{"type":"object","properties":{"Text":{"type":"string","example":"Post text"},"Title":{"type":"string","example":"Example post"},"Created":{"type":"string","example":"2020-12-06T07:36:14.7981820Z"},"Updated":{"type":"string","example":"2020-12-06T07:36:14.7981820Z"},"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"CreatedBy":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"}},"title":"BlogPostWrapperFull"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

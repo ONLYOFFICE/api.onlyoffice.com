@@ -1,0 +1,71 @@
+---
+id: invite-users
+title: "Invite users"
+description: "Invites users specified in the request to the current portal."
+sidebar_label: "Invite users"
+hide_title: true
+hide_table_of_contents: true
+api: eJylV9tu4zYQ/RWCz4rtOHlo/VQ3CRZBN5vATlCggRHQEm1zQ5EsSXnjCvr3zpCSLcfxZTd6kETqcG48nBmV1LO5o4Nn+sC1kZx0yYPVMyG5o5OEasMt80Kr24wOqFBL4fmT49bRhFr+b8Gd/1NnKzooaaqV58rjKzNGijSs6353WuGcSxc8Z/iG64TlGSoNEgMwqPMrw0GPnn7nqQcVxqIBXoAxsLANhmENZtayFWDBsrw9v0cIGCFkC+a8FWoOsIy71AqD4mH6BmGEZZnlDp2daZszcK5en1BVSMmmEkR4W/CE8jeWGxzS8SpTfPUy0lPQ6i7/WGiPazqpzmnV+FhSrfj9DGIAJqkix2AMJQoeaZ0Ps1woeP+CAYbntU7HhqW8mcctaMVrjw/PIJCcEbgnZC0VJvAdXINBQoIGmAvPhGwpgulm3MBRMUzjY0LbTqPtVbL2pZecJ/3kIrncGCmAHnMwe8fKXmPj+Tvb+hu7Lj6w5fIjQ3oVahQ+GjW+6lxpyzuBsp0bgOgV549oUAVbAdsr0AomH1ocmTHp+LaQeDY6QyPudMal64wi96+9DrJv18zEHd7276uAAOsZKTB0bQoDMi2kLyw/TserGniId07nnHj+5o/7ti28doYYZlnOPYSKAN2jrWBMsBzPwKkRud2kic0sGIVmwXEy4Hw8i/1eDx/744VaT84rR5JHdjzKt9ftk14UsKYd4LJXX2cf3JqrCgwQzki2+gbhPK71OoKJQvShDb4Tr5z8w9SKefcqQi6JO3JMw2OAHRTNFMPDicRZMs/scaHDiDuRkY3ceyvmAkh5XH6DJE78B2f+l7TdsbfjigAk8iL/lB6eCcx7R1UF3Gc0jXMmTwhegJ2iorCSeE1cG1+Fs4M9wJM9QVfdL5Cn0dfTvVkwN3xPtKnWkjO164zhqZjBOSZiRvyCx1QKEghTtc0E8pXSvn1cUT0oEm6otBL5L+sRUU0Qsk/Nz9SSv/kU02anzptNUdqkyMve+W5WfFKs8AttgTkZDaCLXdA3TUBzLpzDAoP7CkPMZ+ANupHGCgXLHU8LK/wq9B/MpS8o/eWV4wTkaIaJ7wcAOJ1gQX2XJkN+dzFDE1dHLYOCEaJW94WoHoegyEL+JkZbz2QHBEONWWjsJ40O3Y1hfgGjLjOi2+/0uibUlm7sNikaa5dYC9DWAhlJF94bN+h2ywVIqAYlyq4AuWRWIPlCxsdvMUYzBuUTlkmdMhmmkeKwZvvzb73f+7gHk018xlhdorjtKG3aTyP+4th/hvQ92IYB/TBgqdavIrYcWLZGm8b5pqHRu+72ed2oHmwn181VaL8mrYZi+7QJNdPB5l0eYtQguHFnl/0YGQcqQnWtnYo7vi7JW3Rodf6fZkbtDZrdhZooQjtVxCQUWfKMAQck8ASZE5gSwhy4AhGIu/5My3LKHCawqsJpUGyR3JMNSXCEmQjYDpUPQx52ll5Fd85Cm4hwWcSNftd8YLsbVwzTlBt/EDtp0f7hfvwI4Gn945RDIoBZy37gTxXcB5Tin9f6RyfMlVQyNS+gSsP3KDOknQKj0mZj5F39gl41n9SqbeE2TaMfeEevPlxRlpHqVbXGx097V9SRbdC4mxMw+n8LSvRL
+sidebar_class_name: "post api-method"
+info_path: site/docspace/api-backend/usage-api/asc-web-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Invite users"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/api/2.0/people/invite"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Invites users specified in the request to the current portal.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"required":["invitations"],"type":"object","properties":{"invitations":{"type":"array","items":{"type":"object","properties":{"email":{"type":"string","description":"Email address","format":"email","nullable":true,"example":"Sydney_Roberts4@hotmail.com"},"type":{"oneOf":[{"enum":["All","RoomAdmin","Guest","DocSpaceAdmin","User"],"type":"string","description":"[All - All, RoomAdmin - Room admin, Guest - Guest, DocSpaceAdmin - DocSpace admin, User - User]","example":"All"},{"enum":[0,1,2,3,4],"type":"integer","description":"[0 - All, 1 - Room admin, 2 - Guest, 3 - DocSpace admin, 4 - User]","example":0}],"title":"ASC.Core.Users.EmployeeType"}},"additionalProperties":false,"title":"ASC.People.ApiModels.RequestDto.UserInvitation"},"description":"List of user invitations"},"culture":{"type":"string","description":"Culture","nullable":true,"example":"some text"}},"additionalProperties":false,"description":"Request parameters for inviting users","title":"ASC.People.ApiModels.RequestDto.InviteUsersRequestDto"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"List of users","content":{"application/json":{"schema":{"type":"object","properties":{"id":{"type":"string","description":"ID","format":"uuid","example":"{00000000-0000-0000-0000-000000000000}"},"displayName":{"type":"string","description":"Display name","nullable":true,"example":"Mike Zanyatski"},"title":{"type":"string","description":"Title","nullable":true,"example":"Manager"},"avatar":{"type":"string","description":"Avatar","nullable":true,"example":"some text"},"avatarOriginal":{"type":"string","description":"Original size avatar","nullable":true,"example":"some text"},"avatarMax":{"type":"string","description":"Maximum size avatar","nullable":true,"example":"some text"},"avatarMedium":{"type":"string","description":"Medium size avatar","nullable":true,"example":"some text"},"avatarSmall":{"type":"string","description":"Small avatar","nullable":true,"example":"url to small avatar"},"profileUrl":{"type":"string","description":"Profile URL","nullable":true,"example":"some text"},"hasAvatar":{"type":"boolean","description":"Specifies if the user has an avatar or not","example":true},"isAnonim":{"type":"boolean","description":"Specifies if the user is an anonim or not","example":true}},"additionalProperties":false,"title":"ASC.Web.Api.Models.EmployeeDto"}}}},"401":{"description":"Unauthorized"},"403":{"description":"No permissions to perform this action"}}}
+>
+  
+</StatusCodes>
+
+
+      

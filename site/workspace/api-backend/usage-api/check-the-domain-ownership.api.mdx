@@ -1,0 +1,71 @@
+---
+id: check-the-domain-ownership
+title: "Check the domain ownership"
+description: "Checks if a web domain specified in the request belongs to the current user or not."
+sidebar_label: "Check the domain ownership"
+hide_title: true
+hide_table_of_contents: true
+api: eJy1VD1v2zAQ/SsEZyVyjQ6ttyQN2qJLkQ90CDxQ0tliQpEsScVxCf333pGyLcdpgQ71IJPiu9O7d+8YeRBrzxcPvBNSeXDP4MpPBjfa82XBPdS9k2GLiMgv+tAaJ3+JII3+AqIBR5EOV7zgG8QBXw4Y1YCvnbQE4wt+1UL95JlcMcE2ULEmpWfeQi1XEhqGm9ACc/CzBx9YBcrotWfBpNdIwIEOrEd2zDimTTjHz43oS9MguchrowOiaCmsVbJOJMtHTxQi93ULnaBV2FpAUqZ6hDpgHuuMBRckeDrVogP6P67gx4F1AhS7LD44qdd8SD/i5K3RPqeaz2anmS6NUSA0exaqhwULrgd2dlyi9Kns8Xtmo8EVbCWwOW8gUYwTNNL7VzWqTIvnMt7P3p0yv9dibD80nFAd4LbBkzUkHUVocVMKK8v5+ayc+CmT82Vi51tpy5oswcleBPDJXb1TGN+GYP2iLGNrfBgW0RoXBkQ+CydFpbK0dJYZrkSvcMmVqYVKr5EZxRwff5h9nFNxE0ffkgY53Zu+3muDBX2DLVKQJEObj4vRKcexSRcS+eZgzusX0VkFB3PtTUMZVyZ9SQZC8CvTdb1Gcuw2CcNurm/v2MX3ryQA6pQ7oUSAXaE+dEJPcqdZO3EEac5fjeVkZP7ThI76BXgJpVWYkCinLsfRLQ8kLiLRL/g8OIa4jndQwacVZN9gF7MDHniMlfBw79Qw0Guk5+iuWh4MQzv8bru7riJ/wm6S1qn6sztiSXAcyNTtV+MyFLuIi7oGG/6KXU7G4vP1HWKr8X7qTEMhTmzo7sLnglNtqRnJhOldxObqdS/WhM0pyVI0eceOfEqOHBdU1O5IbycEj81ZjHXQk6p6MyTG7Pdh2OPz0R8j9hOR0dTmJbL+DTYBMYg=
+sidebar_class_name: "get api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Check the domain ownership"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/mailserver/domains/ownership/check"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Checks if a web domain specified in the request belongs to the current user or not.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"name":{"description":"Web domain name","type":"string"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Boolean value: true - current user is the domain owner, false - current user is not the domain owner","content":{"application/json":{"schema":{"type":"boolean"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

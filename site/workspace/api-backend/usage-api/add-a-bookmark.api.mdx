@@ -1,0 +1,71 @@
+---
+id: add-a-bookmark
+title: "Add a bookmark"
+description: "Adds a bookmark with the title, description and tags specified in the request."
+sidebar_label: "Add a bookmark"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVm1v2zYQ/isCPzuW7AZZK2AYnC7Yiq1dEDsY0NQfzhJtsZZEjqTieIL+++5IyZYSp96wKoFMHe/luTcea2ZhY1j8wBJZFFUp7D68lnJbgN4athwxw5NKIxVZajarbCa1+BuskOWvHFKuSVTjio3YDvk4WzYolXKTaKGIjcVslqYmgGDV6g12wmaBzXhghc35KOhxB1CmAUEKjOKJWAueBqJ0zJr/VXFjx2ipXV7LFHHVCL20vLS0BKVykTh84VdD1mtmkowXQCu7VxzxyNVXnljUo7RUXFvBDe1WOqefZ9hXRuaV5cH93e+BlQ7JwREFG45qWrXGalFuWIME8uulri6w3u9TggP+V8X75FPWXUZfN+6iyxVosBhdlwzDC5HI/JQ+91DIjZKl8ZGaRtFLA5/4Lt8HkKaotIsQqvtOyfmQ9ngEqtxg7Y3YWuoCrCddXSKBP0GhKPhsMqFgLLpUDN3qM/4i5SbnWGbJmCTufRm8zp9Zq+IvX0L83+12440TH2P/OHtZVaxKEGd0oBFfTR03ir7HPsKMfFtwGk2ji8n0IrpaRD/Eb67iyeX47QT/3r357NCr9P8r+XlYhudC1wN/vf+PqTwoPWSyqkQ6MBK1z8WJV/c41MKoHPafoDiT8I9iy4PPUO7Bmq34l1XyEUqgmkPu2SNY0PMC8jNZrnyWDXEG4KRI/lbLtcj52ULDAkPWtEqsoSWXSPY0Eh+DUU8/VYbrHyEtRClQA1iJFo4nELtBVXLP+Z8aFB9udQcCbfk92r2MJi9b+76E9uTHyiKuguMnppEpaVyCwWb4FYIS4XQchcdh0jsJEOkj18ZNEnfWuk4ycRjWGapp4lpJbRvkfAQtYJX7cqE9D2kNVU4VkssEckdGKCQz3H4bvZuSN73pNadTxqs7OcMOWUAHfuN7hCDI78xvj1jpamoo6wJBx9jdcRrddLnrPDxktYv6gTCM8JHPHd6901yUa+kAtgred6EN5i6ewd3NfBHMbj9Q3DC8Xl+OzdjFx9gCXB93XqRpbxo/h9Ibp99/cLdRtvzJhtirGGRE2M5dX0MPlALkxCpyw6N1FtcHwJhXXxMPrK5XYKiRmobIaEfTTWV5LCH6QhtZd1mp2RbzS2F0Tl4sCBGx55XP/7MR1Yw6iVmScGW/ybvsdcbtH/OFQ+3vKIVMSUbDju4v+I4ZLqSLnatLR6sxceWmomtFzLxOqjLqvmGRbl2Rtgvyqtsq9z2Ew3odtY7Qm9w6KVLXvgWa5sDvt16VODSJ56acLhH1P0xYgp0=
+sidebar_class_name: "post api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Add a bookmark"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/api/2.0/community/bookmark"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Adds a bookmark with the title, description and tags specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"url":{"description":"Absolute URL to the bookmark page","type":"string"},"title":{"description":"Bookmark title","type":"string"},"description":{"description":"Bookmark description","type":"string"},"tags":{"description":"Bookmark tags separated with semicolon","type":"string"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Newly added bookmark","content":{"application/json":{"schema":{"type":"object","properties":{"Id":{"type":"integer","format":"int64","example":"11"},"Title":{"type":"string","example":"Google inc."},"Url":{"type":"string","example":"http:\\/\\/www.google.com"},"Thumbnail":{"type":"string","example":"Url to thumbnail"},"Created":{"type":"string","example":"2020-12-06T07:36:14.8181893Z"},"Updated":{"type":"string","example":"2020-12-06T07:36:14.8181893Z"},"Description":{"type":"string","example":"Google"},"CreatedBy":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"}},"title":"BookmarkWrapper"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

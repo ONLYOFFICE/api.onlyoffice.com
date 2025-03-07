@@ -1,6 +1,6 @@
 # GetFormsData
 
-Returns the data from all forms present in the current document.
+Returns the data from all forms present in the current document.\
 If a form was created and not assigned to any part of the document, it won't appear in this list.
 
 ## Syntax
@@ -17,7 +17,7 @@ This method doesn't have any parameters.
 
 ## Returns
 
-[FormData[]](../../Enumeration/FormData.md)
+[FormData](../../Enumeration/FormData.md)[]
 
 ## Example
 

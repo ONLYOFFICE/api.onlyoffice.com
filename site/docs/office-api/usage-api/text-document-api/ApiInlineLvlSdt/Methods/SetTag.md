@@ -18,7 +18,7 @@ expression.SetTag(sTag);
 
 ## Returns
 
-boolean
+This method doesn't return any data.
 
 ## Example
 

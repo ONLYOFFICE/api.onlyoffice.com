@@ -28,8 +28,8 @@ The list of changes for ONLYOFFICE Plugins and Macros API.
 - Added the ability to create [multiple left panels](../structure/manifest/variations.md) for plugins.
 - Added the information about the current position of the context menu plugin event.
 - Added the onToolbarMenuClick event.
-- Added the [ActivateWindow](../interacting-with-editors/methods/text-document-api/Api/Methods/ActivateWindow.md) method to *window\.Asc.plugin.executeMethod*.
-- Added the [AddToolbarMenuItem](../interacting-with-editors/methods/text-document-api/Api/Methods/AddToolbarMenuItem.md) method to *window\.Asc.plugin.executeMethod*.
+- Added the [ActivateWindow](../customization/windows-and-panels.md#activating-a-window) method to *window\.Asc.plugin.executeMethod*.
+- Added the [AddToolbarMenuItem](../customization/toolbar.md#creating-a-toolbar-item) method to *window\.Asc.plugin.executeMethod*.
 - Added the [GetSelectedOleObjects](../interacting-with-editors/methods/text-document-api/Api/Methods/GetSelectedOleObjects.md) method to *window\.Asc.plugin.executeMethod*.
 - Added the [SetPluginsOptions](../interacting-with-editors/methods/text-document-api/Api/Methods/SetPluginsOptions.md) method to *window\.Asc.plugin.executeMethod*.
 - Added the GetAllComments method to *window\.Asc.plugin.executeMethod* for Spreadsheet Api.
@@ -63,11 +63,11 @@ The list of changes for ONLYOFFICE Plugins and Macros API.
 ## Version 7.4
 
 - Added the ability to download ready-to-use plugins from [ONLYOFFICE Plugin Marketplace](../tutorials/installing/onlyoffice-desktop-editors.md#adding-plugins-through-the-plugin-manager) in ONLYOFFICE Desktop Editors.
-- Added the [sendToPlugin](../interacting-with-editors/methods/text-document-api/Plugin/Methods/sendToPlugin.md) method to the *Plugin* object.
+- Added the [sendToPlugin](../customization/windows-and-panels.md#interacting-with-a-window) method to the *Plugin* object.
 - Added the onContextMenuClick event.
 - Added the onContextMenuShow event.
-- Added the [AddContextMenuItem](../interacting-with-editors/methods/text-document-api/Api/Methods/AddContextMenuItem.md) method to *window\.Asc.plugin.executeMethod*.
-- Added the [CloseWindow](../interacting-with-editors/methods/text-document-api/Api/Methods/CloseWindow.md) method to *window\.Asc.plugin.executeMethod*.
+- Added the [AddContextMenuItem](../customization/context-menu.md#creating-a-context-menu-item) method to *window\.Asc.plugin.executeMethod*.
+- Added the [CloseWindow](../customization/windows-and-panels.md#closing-a-window) method to *window\.Asc.plugin.executeMethod*.
 - Added the GetCurrentSentence method to *window\.Asc.plugin.executeMethod*.
 - Added the GetCurrentWord method to *window\.Asc.plugin.executeMethod*.
 - Added the [GetDocumentLang](../interacting-with-editors/methods/text-document-api/Api/Methods/GetDocumentLang.md) method to *window\.Asc.plugin.executeMethod*.
@@ -75,10 +75,10 @@ The list of changes for ONLYOFFICE Plugins and Macros API.
 - Added the [MouseUpWindow](../interacting-with-editors/methods/text-document-api/Api/Methods/MouseUpWindow.md) method to *window\.Asc.plugin.executeMethod*.
 - Added the ReplaceCurrentSentence method to *window\.Asc.plugin.executeMethod*.
 - Added the ReplaceCurrentWord method to *window\.Asc.plugin.executeMethod*.
-- Added the [ResizeWindow](../interacting-with-editors/methods/text-document-api/Api/Methods/ResizeWindow.md) method to *window\.Asc.plugin.executeMethod*.
-- Added the [SendToWindow](../interacting-with-editors/methods/text-document-api/Api/Methods/SendToWindow.md) method to *window\.Asc.plugin.executeMethod*.
-- Added the [ShowWindow](../interacting-with-editors/methods/text-document-api/Api/Methods/ShowWindow.md) method to *window\.Asc.plugin.executeMethod*.
-- Added the [UpdateContextMenuItem](../interacting-with-editors/methods/text-document-api/Api/Methods/UpdateContextMenuItem.md) method to *window\.Asc.plugin.executeMethod*.
+- Added the [ResizeWindow](../customization/windows-and-panels.md#interacting-with-a-window) method to *window\.Asc.plugin.executeMethod*.
+- Added the [SendToWindow](../customization/windows-and-panels.md#interacting-with-a-window) method to *window\.Asc.plugin.executeMethod*.
+- Added the [ShowWindow](../customization/windows-and-panels.md#showing-a-window) method to *window\.Asc.plugin.executeMethod*.
+- Added the [UpdateContextMenuItem](../customization/context-menu.md#updating-a-context-menu-item) method to *window\.Asc.plugin.executeMethod*.
 - Added the *backup* parameter to the [RemovePlugin](../interacting-with-editors/methods/text-document-api/Api/Methods/RemovePlugin.md) method of *window\.Asc.plugin.executeMethod*.
 - Added the *NewLineSeparator* parameter to the [GetSelectedText](../interacting-with-editors/methods/text-document-api/Api/Methods/GetSelectedText.md) method of *window\.Asc.plugin.executeMethod*.
 - Added the *replaceMode* parameter to the [ImageData](../interacting-with-editors/methods/text-document-api/Enumeration/ImageData.md) object.

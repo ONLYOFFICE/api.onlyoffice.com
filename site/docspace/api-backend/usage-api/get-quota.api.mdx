@@ -1,0 +1,63 @@
+---
+id: get-quota
+title: "Get a portal quota"
+description: "Returns the current portal quota."
+sidebar_label: "Get a portal quota"
+hide_title: true
+hide_table_of_contents: true
+api: eJytWN9T4zYQ/lc0eugTJSFJOeCNwvWG6ZWjBKYPTOZmI8tEh20ZSaZwHv/v3ZXs4EADtoeXJJZ2v29/Sd5NyR3cWn50wy+0cZCwEfu70A74YofrXBpwSmdnET/it9KFnR1upM11ZiXqlXwyHtNXJK0wKidxFD4pjJGZY3kAva8Vhc4cLpM85HmihIcf/bCkVHIrVjIF+uWecokwevlDCoeKuSFjnAqUiAGZI6vWkgqBb6VB0U1DrrwoOzvFnVibFFwQnk5wQT5CmieovjeZzqodnkEqW5jWGZXdvoI8JykULpIElqTtTCFbYPxUxlAkjldktxJtyKxIl/9j5YUXa1kY6YKg2yaOG7gQW/E0f0qXOnnfXg/ORK3FbFB7ywGrU8mcfKxd0FEhNqO9lcmLhmhvhz88mO0T8oOyyguscZdaJxKyV8DzXAoVY/aZiplbkXE+rb6umLKshmLasEy7dtyIHLliCa4wdfm86cRVG3qt1jlcKTz+oRI5Vz9lh/L8Cx5VWqQsRhVmSWezTPdnbV8m+5O92Ww8DjRXaGDSk8eRzvtEh5PJdPppMp7uH/w2+/Rpf+w5hS4yd20R/n3Cc1/oTMfNFVCgnu1yCD3LpdbpcZSqbAiVQWUGpK0wx+B0N2Jv4VlG1L1YPV1/93pzdILPdIanMFbuI04VguUebPu5wjMEyUdweaA3zq+RH3JREM52liKPwH0IT0CKtlNBEQ1LklfEcIFKiAge8Ae8efdFWtjPqKR01p+QUvPCt1PEYzIAbmdNIsiH+Pf19PiCWekcXs7onpFdXLRWD+Gaz7/1p3LYtFinxBDCtXJv2qWBLKL31QDWRrc3qSis06n6CcNqh7qOFkBv+kTF0ql00IHE5lJii0r12sC85+dwB1mkU1AZu7782vFMQuH07yDuivxSIoIZ5COB4OsAqylA/VJjNW1LR1s04qz68n8jpY4Edds/l2BEbyIf5QCABUQIHVnx7jLRBRj3NOhCJ+1fc1JnIPxbmyopu6Nz1MUASnIULklILlrzSwyJxf7RKee7x+P5ye4JJm03NJ62/g6zVlURzmy893rEus4oA9pgLxdxLzR9LXSuGfKmylp8xpvcP1ITEW52EF6OOKzECUFRrG5wOLPiO6F/v5O0gAMfROjgvygg+aJavIzepcRyI/xVM2hsjn67qJxKtLYeJGmiA6o5PoJcjSa741EQHzWTIrZTD9RRkTWFwQ6Dr5zL7dFoVK60ddVRSQoVSj4Adg6YB9/a016IQhjBjniiBSR+mWYZ1NncPhgfTijKi+cIzGkKDXCbcVgXEdr8Jy40A+Om2A6nrhVrXt8p6UOrsji8nVoZ/0cud49zRfajmyGKD5Ngo3Up+Nu2hv8iHYOXo/RGAsrnybpTLmo/aGYZ5QneXETsw1zWibkhJ1ESU8ND3IBmxvvmv4EQ6Btelkuw8tokVUXL94U0VDGL57zQE6KvsIRocsB8+mDyYyFk7nwCkyJE9cU/ApSUddV8+XzF/bW52kxECHn9g9Cbreypjb2ZoWABfVY7WzTKMmS5qtbyYWurRu1hI01BXWBl/Qc+jAUj
+sidebar_class_name: "get api-method"
+info_path: site/docspace/api-backend/usage-api/asc-web-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get a portal quota"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/portal/quota"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns the current portal quota.
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Current portal quota","content":{"application/json":{"schema":{"type":"object","properties":{"tenantId":{"type":"integer","description":"Tenant ID","format":"int32","example":1234},"name":{"type":"string","description":"Name","nullable":true,"example":"Default"},"price":{"type":"number","description":"Price","format":"double","example":10},"priceCurrencySymbol":{"type":"string","description":"Price currency symbol","nullable":true,"example":"some text"},"productId":{"type":"string","description":"Product ID","nullable":true,"example":"9846"},"visible":{"type":"boolean","description":"Specifies if the tenant quota is visible or not","example":true},"features":{"type":"string","description":"Tenant quota features","nullable":true,"example":"some text"},"maxFileSize":{"type":"integer","description":"Maximum file size","format":"int64","example":26214400},"maxTotalSize":{"type":"integer","description":"Maximum total size","format":"int64","example":9223372036854776000},"countUser":{"type":"integer","description":"Number of portal users","format":"int32","example":1234},"countRoomAdmin":{"type":"integer","description":"Number of portal room administrators","format":"int32","example":1234},"usersInRoom":{"type":"integer","description":"Number of room users","format":"int32","example":1234},"countRoom":{"type":"integer","description":"Number of rooms","format":"int32","example":1234},"nonProfit":{"type":"boolean","description":"Specifies if the tenant quota is nonprofit or not","example":true},"trial":{"type":"boolean","description":"Specifies if the tenant quota is trial or not","example":true},"free":{"type":"boolean","description":"Specifies if the tenant quota is free or not","example":true},"update":{"type":"boolean","description":"Specifies if the tenant quota is updated or not","example":true},"audit":{"type":"boolean","description":"Specifies if the audit trail is available or not","example":true},"docsEdition":{"type":"boolean","description":"Specifies if this tenant quota is Docs edition or not","example":true},"ldap":{"type":"boolean","description":"Specifies if the LDAP settings are available or not","example":true},"sso":{"type":"boolean","description":"Specifies if the SSO settings are available or not","example":true},"statistic":{"type":"boolean","description":"Specifies if the statistic settings are available or not","example":true},"branding":{"type":"boolean","description":"Specifies if the branding settings are available or not","example":true},"customization":{"type":"boolean","description":"Specifies if the customization settings are available or not","example":true},"lifetime":{"type":"boolean","description":"Specifies if the license is lifetime or not","example":true},"custom":{"type":"boolean","description":"Specifies if the custom domain URL is available or not","example":true},"autoBackupRestore":{"type":"boolean","description":"Specifies if the automatic Backup&Restore feature is available or not","example":true},"oauth":{"type":"boolean","description":"Specifies if Oauth is available or not","example":true},"contentSearch":{"type":"boolean","description":"Specifies if the content search is available or not","example":true},"thirdParty":{"type":"boolean","description":"Specifies if the third-party accounts linking is available or not","example":true}},"additionalProperties":false,"title":"ASC.Core.Tenants.TenantQuota"}}}},"401":{"description":"Unauthorized"},"403":{"description":"No permissions to perform this action"}}}
+>
+  
+</StatusCodes>
+
+
+      

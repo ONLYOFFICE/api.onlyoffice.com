@@ -16,7 +16,7 @@ expression.InsertPivotExistingWorksheet(dataRef, pivotRef, confirmation);
 | ------------- | ------------- | ------------- | ------------- | ------------- |
 | dataRef | Required | [ApiRange](../../ApiRange/ApiRange.md) |  | The source data range. |
 | pivotRef | Required | [ApiRange](../../ApiRange/ApiRange.md) |  | A range in which the pivot table will be located. |
-| confirmation | Required | bool |  | Specifies whether to replace the data in the specified pivot table range (if it exists) or create a dialog box for this (if it exists). |
+| confirmation | Required | boolean |  | Specifies whether to replace the data in the specified pivot table range (if it exists) or create a dialog box for this (if it exists). |
 
 ## Returns
 
@@ -24,24 +24,20 @@ expression.InsertPivotExistingWorksheet(dataRef, pivotRef, confirmation);
 
 ## Example
 
-This example shows how to insert PivotTable on existing worksheet.
+
 
 ```javascript editor-xlsx
-// How to insert a pivot table into a range of an existing worksheet using references.
+let worksheet = Api.GetActiveSheet();
 
-// Get a pivot table and insert it to the range.
+worksheet.GetRange('B1').SetValue('Region');
+worksheet.GetRange('C1').SetValue('Price');
+worksheet.GetRange('B2').SetValue('East');
+worksheet.GetRange('B3').SetValue('West');
+worksheet.GetRange('C2').SetValue(42.5);
+worksheet.GetRange('C3').SetValue(35.2);
 
-var oWorksheet = Api.GetActiveSheet();
-
-oWorksheet.GetRange('B1').SetValue('Region');
-oWorksheet.GetRange('C1').SetValue('Price');
-oWorksheet.GetRange('B2').SetValue('East');
-oWorksheet.GetRange('B3').SetValue('West');
-oWorksheet.GetRange('C2').SetValue(42.5);
-oWorksheet.GetRange('C3').SetValue(35.2);
-
-var dataRef = Api.GetRange("'Sheet1'!$B$1:$C$3");
-var pivotRef = oWorksheet.GetRange('A7');
-var pivotTable = Api.InsertPivotExistingWorksheet(dataRef, pivotRef);
+let dataRef = Api.GetRange("'Sheet1'!$B$1:$C$3");
+let pivotRef = worksheet.GetRange('A7');
+let pivotTable = Api.InsertPivotExistingWorksheet(dataRef, pivotRef);
 
 ```

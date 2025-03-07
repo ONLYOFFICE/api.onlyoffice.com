@@ -1,0 +1,71 @@
+---
+id: add-a-blog-comment
+title: "Add a blog comment"
+description: "Adds a blog comment with the comment text specified in the request. The parent comment ID can be also specified if needed."
+sidebar_label: "Add a blog comment"
+hide_title: true
+hide_table_of_contents: true
+api: eJzFVm1v4jgQ/iuRPxNeUuAI0unE3nV11a3uUKGfuqgy8dB4m8Q522nLRvz3nXESCJTSO+mk4wNyxvOM5+XxjEtm+aNh03sWqTQtMmm3vU+JQtGqwwxEhUYJbpdsVthYafmdW6my34EL0ATTuGId9oJ6wFY7RAkwkZY5qbEpmwlhPO6t0aZHR0BmvRdpY8/GsBdYeLWeySGSGwnCk5nb1fB3AcZ2vSV+5FyTZoO4+c2LeOatweOJUW3sxssABIguelVb+KQExlBiiJlFMC15nicycrH0vhnytGQmiiHltLLbHNB3tf4GkUU7uVY5aCvB0G7lSu2JFCQ6jnl+6iuaqE0aq2X2yHYdRli7PQe/djsU4ksMGiNsJS5JXMwCAzxntBXhsc1fW5l+C3Q/SpfJVWaqKIN+/30zMtsonbr0sc5/ldfaOKbroFp7iOl65WmekGgQBONBOAx9sR4H/vAqCvx1OBr74QAGQTQcBGLEKRd3BvR5W5XvKCkKKY5tj8LJKBpc+VyEA3+4CSI/DCZjP9qE4WA4nMBP4bixPVfGXvY0K5Kk0f6M6z95CpcRM5HKTOIGt0rvD9JqIxP4IrOny+ivX3uoK4rIGlqCQnElI3yXm/z1lwIN/szPHTN75pbrObfxh6eYJ5nREQI2vEgsrmTKH6EleqBzHvJYWfVg5Hd4mAT+JOjmFU3rSjf38v2zBEebRb/fdxW9yXhk5XM7h2ulEuDZEWiDLQGcvrml7nRZ2+qiVr4W0s5Bp9IYpK/5x7jb+tr8e+xSprCwKF1Y/QHpR9Or0FsqwbetBH6RRxTc36u3FJxZy6OYMG3fuNZor8Owd6fm4wv6GVl0nsN4Am2eJw+1lhOPsANJWzF+7xhzPaiRN80AGw2rutOwP3jbkO4yXs8lbIiklQJ+Ys1ZTtcTI3AusR7PZS/o9nuHMUcjqVd3VkbDTj+DNm7WFTpBTGxtbqa9Xhmjqd20zJW2O9R85lrydVLlJK67QM17hCUq4okTozuEOd6e9MOAImrN1wU1yMrc2Sl7qFcu/wBXMIo9rrY7LHM1Oca6ZFAHvj3MwOumCGdmWIt0+8F0kO07fKvgNAOcb62Kucx6C5dK7/Z6sfRm8xtKGWa2KljCLTSpMTblbkI0AQhx8lRgJ8+J1gz/f18WdUHIfC9PONYDI3K0KWvK3VO1UBNJ5xJYJwfX5HEtokiQCBWJ7llZrrmBO53sdiRGJzU9vlYHztEXnhQ376+SPSEhKPkuLf6S/CL1pKgIczKOd50GMYsiyO1F3VXrOs3/WizJ97plp0oQRvMXembh/5ThQrkyOSI7WYnlzh4LHA24X9kkWtKVPWb1k2N1vaComq1s2/LwmOCdOhD6p7DOQsqyujO73V6/2noXsb9VlTZVdoVe/wCShNJN
+sidebar_class_name: "post api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Add a blog comment"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/api/2.0/community/blog/comment"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Adds a blog comment with the comment text specified in the request. The parent comment ID can be also specified if needed.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"parentcommentid":{"description":"Parent comment ID","type":"string"},"entityid":{"description":"Entity ID where a comment will be added","type":"string"},"content":{"description":"Comment text","type":"string"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Comment information","content":{"application/json":{"schema":{"type":"object","properties":{"CommentID":{"type":"string","example":"12261949-db62-43c2-b956-91e12c412d5a"},"UserID":{"type":"string","format":"uuid","example":"15985c13-ad91-4f2c-9286-cf991448e796"},"UserPost":{"type":"string","example":"null"},"UserFullName":{"type":"string","example":"Administrator"},"UserProfileLink":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"},"UserAvatarPath":{"type":"string","example":"\\/skins\\/default\\/images\\/default_user_photo_size_82-82.png"},"CommentBody":{"type":"string","example":"das\\u000a"},"Inactive":{"type":"boolean","example":"false"},"IsRead":{"type":"boolean","example":"true"},"IsEditPermissions":{"type":"boolean","example":"true"},"IsResponsePermissions":{"type":"boolean","example":"true"},"TimeStampStr":{"type":"string","example":"15:39 Today"},"CommentList":{"type":"object","example":"null"},"Attachments":{"type":"array","items":{"type":"object","properties":{"FileName":{"type":"string"},"FilePath":{"type":"string"}},"example":"null","title":"Attachment"}}},"title":"CommentInfo"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

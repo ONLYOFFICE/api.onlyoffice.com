@@ -1,0 +1,71 @@
+---
+id: get-contacts-by-search-query
+title: "Get contacts by search query"
+description: "Returns a list of filtered mail contacts by the search query specified in the request."
+sidebar_label: "Get contacts by search query"
+hide_title: true
+hide_table_of_contents: true
+api: eJzlVkF32zYM/it8PGuxm/aw6ZatWZe3tS8vdndxfIAl2GIrkRpJpXH19N8LkJItxUnWZW+n+eBHkQABfPgIoJUedk6mK1mBKme/GO0h806uE+kwa6zyezps5UXjC2PVV/DK6N8QcrSsZGklE/mF5FCuO9LK0WVW1SwmU3mDvrHaCRClcl6Yrdiq0qPFXLA9kfX2xGYvfIHCIdisEH81aPfC1ZiprSJZpcOpRTpw/ows9sufTU7+tZLvQe15CXVdqiz4Ofvk2ItWuqzACnjl9zWSX2bzCTNP99TW1Gi9QhfkgnleTcNY4r0X3gzukTu940JDhU4YK5DjcXRjb8F5q/ROdonsRZdh/+HNPeAiaB2UwVrY0yehWrmR24qi3BHyidwaW4GPW6/PZUd2atjhQn19xMiHptqgZfQPeJuIKOv8S7Nba6orneP9qd1rul3oYPxoZLiMVJ2x3thApYeqCzoS4YypwSifiUWAlHy29EkkSsWtBJehzmn7VnIWbsM1w85pNsKP2eNqo11M+vl8fmr/j4d0HZCTyT8m21OwPkHCnhJX+fdkIJF4D1VdstCr89dvGNYPBM9It499LMl4suTbcczPKYzBIb3LSPYXh/jy2P6Esvmb4O6CCMleuWurKrD7kfzGmBJBTxS8ZXlS8MqHjSEDemvC/nVhNMZH9P8JeqhXL3F4UUFZ/mq8+WjL5/12Y0nSfI+5aqrvUq0mouNQ3hM7+3DeggfZv/o381enD/2jhr61YR4uodJSGEqV3GHIIXhqCHIGtZqdn81noU2OioFDexdoQU2yYZdl4X3t0tmsLYzzXdrWVMo6krwDq2BTRjLwWXRmC03JaJYmgzJscy0nnenxj/OfuN52o8a84EITr3u0PR+JWqvfMTCVIy7icRKrQDrVDRBwJbs5NtjLAfJjgzzmY9LdVvP1uA+Fz1F/mE9K/qhFKiYd+3vgYlU1mkIUiwCvuLlcLMXF9RXDSGjH1JXgcYDL+QpCDeuDeod+MlyMBwv5YEoZjQ//3cDSp8LTJDGrS1ChjjaR45FjK84TSRLL6J+tHeENA1nkzEq27QYcEum7jrdjTOlqfaQYf9H1xTCntfIz5T++cYrzh2WcNmLRSE+7WJcMGhdZhrV/VnY9ejPvLpcku+mnssrkrGLhC09s9J9ySzYB9kDbsNdSIvWu4UkklfFKJiE/yymHPwcO9wsOajjS+5GDUzonfRz8z1E9qtK28YV03UF+qKdPaBzeUJTmbK7J62+Q4tuJ
+sidebar_class_name: "get api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get contacts by search query"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/mail/contacts"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns a list of filtered mail contacts by the search query specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"search":{"description":"Text to search in contact names or emails","type":"string"},"contactType":{"description":"Contact type","type":"array","items":{"type":"integer","format":"int32"}},"pageSize":{"description":"Number of contacts on the page","type":"array","items":{"type":"integer","format":"int32"}},"fromIndex":{"description":"Page number","type":"integer"},"sortorder":{"description":"Sort order by name. String parameter: \"ascending\" or \"descending\"","type":"string"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"List of filtered contacts","content":{"application/json":{"schema":{"type":"array","items":{"type":"object","properties":{"ContactId":{"type":"integer","format":"int32","example":"1234"},"Name":{"type":"string","example":"name"},"Description":{"type":"string","example":"description"},"Emails":{"type":"array","items":{"type":"object","properties":{"Id":{"type":"integer","format":"int32","example":"1234"},"Value":{"type":"string","example":"value"},"IsPrimary":{"type":"boolean","example":"true"}},"title":"ContactInfo"}},"PhoneNumbers":{"type":"array","items":{"type":"object","properties":{"Id":{"type":"integer","format":"int32","example":"1234"},"Value":{"type":"string","example":"value"},"IsPrimary":{"type":"boolean","example":"true"}},"title":"ContactInfo"}},"Type":{"type":"integer","format":"int32","example":"1234"},"SmallFotoUrl":{"type":"string","example":"smallFotoUrl"},"MediumFotoUrl":{"type":"string","example":"mediumFotoUrl"}},"title":"MailContactData"}}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

@@ -1,0 +1,63 @@
+---
+id: get-contact-statuses
+title: "Get contact statuses"
+description: "Returns a list of all the contact statuses available on the portal."
+sidebar_label: "Get contact statuses"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVFFP2zAQ/iuR9xqRUpC29Q0BYmiTNlHQHqo+HOm1MTixZ186uij/fXd2KO0GTJvGQ4l933fnu++zO0WwCmoyU6Wvi1PbEJQU1DxXAcvWa9pwrFMnLVXW6x9A2jYfEBboheP5S+XqO+NQzXtmLTCUXjuBqYm6Qmp9EzLIjA6U2WUGxmRUYVamSlkgoDYgQ9agDdwazGwTEc56AnPA6T0GZxsGqUmnxqOR/Nuv8+kP2TmJbGFDwgXnjC5jK8VdkASdCmWFNcgXbRxySvAeNszjzuqws29v77AkDjhvHXrS6VhXaDjhGi8FfmrbVGngaC694onlaml9DZS2jsa8gQ9QOyOgQ9Xn6lqTLLbMQF43qz1cgjD2bHcErzF2gcw7tcb61xlv4O2y5EEzesoyfPZR73/o5/Lsr2njo2PVM5XSKNTgyWmU8qtn8ThFL3+5Oh4d/m6GmwYGt+IiZqqRlwuOrDAKB1TxogCni/HBqBDjD4YpkmGUuN+v0Ydo/tYbxldELkyKoqtsoH7SiT97Rq7Ba/FttIHE0omW0Brp0NgSTNzmkwhnP/xu9H4s3excuKlYMaV79to9WdTpjxg9Km1XKZyrBmqJ7nHjHHSztJG+nWxdtw1XzKax2+zqfHqdnXy5lK64+TRO9jU+nj5QDdFsQ40LpOfu2mLfmdur95/eg6F9wgcqnAEdXR1F6gZxZzIbRrK8cvV9PTwAEG/uIDKPPMk1U113CwFvvOl72f7Wopd3b/6krqy4SvX49HXqnkfPUy5LdBRtYNokyi+Pi0i7deDF+TVjxZ/7Ot5HHYcPyf4YajY7ufclzYcjyG+fv0DpuuSSvt/iU+hFxtZHCS3TnbNBfwJqdBeg
+sidebar_class_name: "get api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get contact statuses"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/crm/contact/status"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns a list of all the contact statuses available on the portal.
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"List of all the contact statuses","content":{"application/json":{"schema":{"type":"array","items":{"type":"object","properties":{"RelativeItemsCount":{"type":"integer","format":"int32","example":"1"},"Title":{"type":"string","example":"Title"},"Description":{"type":"string","example":"Description"},"Color":{"type":"string","example":"#a7fc00"},"SortOrder":{"type":"integer","format":"int32","example":"1"},"ID":{"type":"integer","format":"int32","example":"1234"}},"title":"ContactStatusWrapper"}}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

@@ -23,18 +23,14 @@ This method doesn't return any data.
 
 ## Example
 
-This example shows how to subscribe to the "onWorksheetChange" event.
+This example shows how to subscribe on "onWorksheetChange" event.
 
 ```javascript editor-xlsx
-// Attach an event.
-
-// How to start event handling.
-
-var oWorksheet = Api.GetActiveSheet();
-var oRange = oWorksheet.GetRange("A1");
-oRange.SetValue("1");
-Api.attachEvent("onWorksheetChange", function(oRange){
-	console.log("onWorksheetChange");
-	console.log(oRange.GetAddress());
+let worksheet = Api.GetActiveSheet();
+let range = worksheet.GetRange("A1");
+range.SetValue("1");
+Api.attachEvent("onWorksheetChange", function(range){
+    console.log("onWorksheetChange");
+    console.log(range.GetAddress());
 });
 ```

@@ -1,0 +1,71 @@
+---
+id: get-custom-navigation-item
+title: "Get a custom navigation item by ID"
+description: "Returns a custom navigation item by the ID specified in the request."
+sidebar_label: "Get a custom navigation item by ID"
+hide_title: true
+hide_table_of_contents: true
+api: eJy1Vtly4jgU/RWXn2ZqSNgzhKl5MMZhNQSMQ5zuVJewhS28yJFkgpvi30eS6ZCFXqpmJlXB8tW9567W0V5lwKdq+5NqQcZQ4lOlrOgZZThWJmCLfMAQTtTHkopTSOTLwFPbqg9ZoXVSGjAYqyU1BQTEkEEiUPdqwl+4PvL4Fkr4KgUs4GsPUpegVKK31YHYJvApQwRyeEYyWFKpG8AYqO29yvJUgFBGeIRcc41JDBiXZJkEhjsQp5FQAQBWYbVSv1i5oHlxvQbVixVouReNWqXZWjXAal1rqYfDo/BGU5xQSIWDWqUiHm+DOpYheclQQUWKLk4YTJiwAGkaIVfuljdUmO0/xo1XG+gyURsiqshQ4ZSHfia3M4X5t+mW1AisYPRzb2OpVlKTLOIWwkPRiZPDQoMjZuQX8Oz5+IdoNpFYK+QPYv/ncB3kKygGPvwhqAcYaEu1z5/LaeL/tQIUXjVK6K4znT9XRj0fa/xvYtmBYft81Zvxn06o+aaUb/r1vlh0bzrmnWGL1TB3k+N/jLIJk/tafW4tIlNbN3TuCFhjKc2NyJjdzRv3WX1CZ3Xd7FhGw8lWN50Givoz6Hs9a7PU9K2R9rCRdxw0rjQ1L7m3e30c7aqVaN2qmfE0XY8hbtp4aAedKB2Fcz0J7PzP1fW9vgyfZqYdOtH9Xd9at8LFNuyPnkYzYiU49ZvWfLcww2gcW1XzGVjLNNatWdXMp1+XvQfdIYZp3IRUa8yeIu0mGw6djquPdhuzfmPmFhysDVOveeZ0OtF7Dw9+7JFqlNcXFhmao2sjH3YA6JH+DIUOZRoaPswdK0czw8u555axdUMU8HI4t9SlHtxU+leeW1k4zw1ZMsu+m85HTd0ZDP4WnacxiKJf6r0lNP+P7ndkYDNdc8Rz3eJm14FY2nbRSW1pOlw40puYP1zNuL3u73b+yLVSvWeMHa2bZzXjKtZmm8muE2nL28ku7HvPvbAzMOsjx+naGqk96JrxB+63YLYh2n2XapWwZmga695rvfGuYaZU69r+NpyP7OhpLWMyoptFaGWzWNdlrQL8PEhMmGSvqrXCOIIg+VgurqygRIm5uoKJkmD2+uAQVTtCTpM+juGtqOsvwvKDMOAmSsptvofNwYHnIWEGottXx94aRBS+h/140r5ikZLKEJO91Sz9cglXlxbLPIQvdUzg5VkWOhxEAI1K9eOhbicgYwEm6CsnGqFFoZsRxHLJVoC6X8T+lxAKAScJIA7cZ64A1UdBG2/R5pBlJKEKUNyzZKGscoUFUBl0FZpCF60R9ERbhEzQHaTskuPzTAN8pFVJoZwi22oZpKhcu6yU6ZGay4WTk48y1y/vkXdQRR5k+4105eGsBoyltF0u7wNM2aG9TzFhQnMLCBIfjyQhsVdUaQ2ySJBMhF0QSTGvjrB5u92qXNdEgR9PpbME4RVwbwv4Mk88kxEXlL5dB96oHS8GLsYhgrInKFljaf2u8VqKRPw8zaL821oRI2UxkNR7hO9B9sOWDLrvJ3t/IvX/qqnH1BncsXIaAZ7jiTaLDn8SdeGavMeygUWXxQXjXZ+5qJiMNud/XviiaZ/U/V6cbpxFDwch5q6JGNvHU4/lOHiIirV3/ut7nfpv8+Md7HdF3jzO5vCtp0kuhynKxBtfypaLW83hkWsF/NOBRPovNjTXhSl7ZfLh7iRm6uVT6BkLriuG5O0cFRNzXAj0s+G8G7AiAvF7KH3HYr8vhvRweNEvtr5rcczwJXGRAP8w/gGYP9Bz
+sidebar_class_name: "get api-method"
+info_path: site/docspace/api-backend/usage-api/asc-web-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get a custom navigation item by ID"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/settings/customnavigation/get/{id}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns a custom navigation item by the ID specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"id","in":"path","description":"Id","required":true,"schema":{"type":"string","format":"uuid","example":"aae1e103-bca5-9fa1-ba8c-42058b4abf28"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Custom navigation item","content":{"application/json":{"schema":{"type":"object","properties":{"id":{"type":"string","description":"Id","format":"uuid","example":"aae1e103-bca5-9fa1-ba8c-42058b4abf28"},"label":{"type":"string","description":"Label","nullable":true,"example":"Label"},"url":{"type":"string","description":"URL","nullable":true,"example":"Url"},"bigImg":{"type":"string","description":"Big image","nullable":true,"example":"data:image\\/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkAgMAAAANjH3HAAAADFBMVEUAAADJycnJycnJycmiuNtHAAAAA3RSTlMAf4C\\/aSLHAAAAyElEQVR4Xu3NsQ3CMBSE4YubFB4ilHQegdGSjWACvEpGoEyBYiL05AdnXUGHolx10lf82MmOpfLeo5UoJUhBlpKkRCnhUy7b9XCWkqQMUkYlXVHSf8kTvkHKqKQrSnopg5SRxTMklLmS1MwaSWpmCSQ1MyOzWGZCYrEMEFksA4QqlAFuJJYBcCKxjM3FMySeIfEMC2dMOONCGZZgmdr1ly3TSrJMK9EyJBaaGrHQikYstAiJZRYSyiQEdyg5S8Evckih\\/YPscsdej0H6dc0TYw4AAAAASUVORK5CYII="},"smallImg":{"type":"string","description":"Small image","nullable":true,"example":"data:image\\/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8\\/9hAAAAUUlEQVR4AWMY\\/KC5o\\/cAEP9HxxgKcSpCGELYADyu2E6mAQjNxBlAWPNxkHdwGkBIM3KYYDUAr2ZCAE+oH8eujrAXDsA0k2EAAtDXAGLx4MpsADUgvkRKUlqfAAAAAElFTkSuQmCC"},"showInMenu":{"type":"boolean","description":"Show in menu or not","example":true},"showOnHomePage":{"type":"boolean","description":"Show on home page or not","example":true}},"additionalProperties":false,"description":"Custom navigation parameters","title":"ASC.Web.Studio.Core.CustomNavigationItem"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

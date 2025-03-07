@@ -1,0 +1,71 @@
+---
+id: get-i-cal-link
+title: "Get iCal link"
+description: "Returns a link to the iCal related to the calendar with the ID specified in the request."
+sidebar_label: "Get iCal link"
+hide_title: true
+hide_table_of_contents: true
+api: eJy1VE1z2jAQ/SsanZmYMj20vmXSTMr00gnJKcNBsResImRVWielGv337so2wQnJrRdYtJ/vvV2iRLUNsnyQlTJga+WLq8EIQtlahO4xVF471K0Ncj2TAarOazxQTpSXHTat138Vu7+DqsFzLU+WnMlnigO5TpRVw7GKLOUtYOctNRBG253AVmADQlNn4cEohHp8G6cSzxqb/LL8JoKDSm80RWmb3zz87iDgBfV0yqs9IPiQB7T0gxqOZZY8luYRnMJGvp5rhE5NyBeqBvZKllHiwXGVgF7brUwMyENwxAgE9i/mc/6aFstwGB+VqlqLYJGDlHNGV5mw4lfgyPhBp5Rm8vP809vq91YN3EMtOYpAN21Nni1g5oHwlbJQTheLi3lxlDe+cJEKGsR03jBY8E8jafxSygbRhbIoYtMGTGV0rcdEkU/Ka/VoeuTs64fbqM6QKU1LNfMzDcU5U/eX+dcF4zrZpBWj78ud3acjK4TlBxxGBZvePRs1nuRmSrTdtDldo+GIq3a/7yx1FKuMVtxer+7E5c8loyLwPbO8f+P0AfcqKzT0uAEUp7pONIkvMv/PDR/IQPiDhTOKuKBRs2RxUP2BmaJI0p13b2hAZjm9g0F8kqKX8UHG+KgC3HuTEj9TT8+Hvn5RPS9IrQPbtG0bZQJ8wMP0os6OPoprD3m5TMe/yNyR1JPLTWuKbsY/mTgEXFYVODxJfXNgvGvH67i5vqNYvp3pYu3yYg0GVz871nTHxhn5M83eSYmxX9uUjvG9692M42L30czSmi7mH9hR7mI=
+sidebar_class_name: "get api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get iCal link"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/calendar/{calendarId}/icalurl"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns a link to the iCal related to the calendar with the ID specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"calendarId","in":"path","description":"Calendar ID","schema":{"type":"string"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"iCal link","content":{"application/json":{"schema":{"type":"string"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

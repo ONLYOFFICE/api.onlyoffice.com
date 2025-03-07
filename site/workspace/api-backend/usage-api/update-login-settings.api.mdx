@@ -1,0 +1,71 @@
+---
+id: update-login-settings
+title: "Update login settings"
+description: "Updates the login settings with the parameters specified in the request."
+sidebar_label: "Update login settings"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVT1v2zAQ/SsEZzVS0w6ttyQI0KItEMTOFHigJdpiTIkseazjCvrvvSNlx7LdtEM8GBR5H+/euyM7DmLl+eSRe1kGp2Cbfzcr1bJaeTBuy+fZ/gStOn4VoDZO/RagTPtFiko68na44hnfoJ3k8x69KulLpyyZ8Ql/sJUA6RnUkumYwEsA1a482yio474VTjQSpPPMW1mqpZIVQ0s6c/JnkB4uMMewvDYVIup4aVqQLdBSWKtVGZHlT57ydtyXtWwErWBrJSIxiydZAsaxzljpQEkffQFkY8HfmJCCjfH/EM+qCQ1rQ7OQjpllRBU8rneeDAyVhogx+JBMIbYVMtRnfKFNuZ6pRp4Gn2EowBO2NI5talXWL9E3Smu2kCy6Ix9iiQSx0PpQltL7ZdADnzsYZ5MjCeX6TjplqlfSYwEboSDCEEi5t6b1iMqZJgJCPL8w3mmC+CNlkkck9LIoTlOlNqiOWgAjvpGKV4mEvYhHQDOOpTUC0taHS6Lm+lCX/7C/GVP5Tw90AQWajOJkTXdFJ84+Fu/P0NSKYcxkFSPgWNSUj9sQixZQ40curMovL4p8P7uR1wNak2I+Tm5wGn1qAOsned7VxkM/6axx0KPlL+GUWOhEI50lVEsRNBWDJAkdtxEN+YyPPxWfqdT+4LaYkmSDKufujD11WMQ3uUUIikqv03HGW0GSjH0jF9QT9y93wO2zaKyWZ2a4GA1dcTQFRU8ZlyYiGQS6MU0TWgTPppE4dn87nbGru69EEPKY1NF0kw1EeGhE7NABbmrw0/4e6Xtwab3lxTjwCfIZcqsF0okQo+rd0DGPRDZaYs/wg3s94+O+QRVTBzzyrlsILx+c7nvaxlyO3oH5S8PQF+apd09Bx9eoJnEZS3w3I1RkrkNS+2i6+2zncYU3moVXbecHo3D3MEPbxfAMNKYiFyc29ETg/4TjwkTGYxPGvQ7Fa1dBrMg2haSWomkbd+Q6duSwoKJ2R+32AOC4ObOhDvqnqs66dF3q977f26ejv3rsJyJZk6xzRP0HsZevcA==
+sidebar_class_name: "put api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Update login settings"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"put"}
+  path={"/api/2.0/security/loginsettings"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Updates the login settings with the parameters specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"attemptsCount":{"description":"Maximum number of the user attempts to log in","type":"integer"},"blockTime":{"description":"The time for which the user will be blocked after unsuccessful login attempts","type":"integer"},"checkPeriod":{"description":"The time to wait for a response from the server","type":"integer"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Updated login settings","content":{"application/json":{"schema":{"type":"object","properties":{"AttemptCount":{"type":"integer","format":"int32"},"BlockTime":{"type":"integer","format":"int32"},"CheckPeriod":{"type":"integer","format":"int32"}},"title":"LoginSettings"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

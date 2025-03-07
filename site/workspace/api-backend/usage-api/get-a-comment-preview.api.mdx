@@ -1,0 +1,71 @@
+---
+id: get-a-comment-preview
+title: "Get a comment preview"
+description: "Returns a comment preview with the content specified in the request."
+sidebar_label: "Get a comment preview"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVttu4zYQ/RWBz1ZkK7ZrGSgKt812g6atYTvoQ9YIaGkccSOJKkk5yQr+985QlC+J47TA+sGg5sbDmcMZ1szwB83GdyyWeV4VwrwEf4tHwZYdpiGuFApQW7NJZVKpxDduhCw+A09AkZfCFeuwJ7QDttyiVwI6VqIkMzZmMzCVKrTHPYoPhfFKBRsBT96TMKlnUkBFYUihS4jFWkDiicIqFPxTgTYXGN8tf5YJoqmZc6ElL8tMxBZV8FXTnjXTcQo5p5V5KQFRyNVXiA3GKZUsQRkBugljIYmEPo5x/+LQXv+KXi6KNkoUD2zbYanJMwPP5n0/0rbn+Lz448ZbS5Vz8zaY/dEBdSkL3eAKu933I4uiCUXSzvfKhAuOp92bOoQdBs88LzMS9cJw2Iv6kZ+shqHfv4xDfxUNhn7Ug14Y93thMuCUn1sN6nQsl4YxqyqRHMceRKNB3Lv0eRL1/P46jP0oHA39eB1FvX5/BD9Ewzb2VGpzHmlRZVlr/QnXf/IczntMklwUAhXcSLXbSMm1yOBGFI/nvb98CdA2qWKjaQkSxY2M/C+4Lp9/qjDgj/zUNpMNN1xNuUk/3EU/ioK2SGDNq8zgSuT8AQ5E97TPfZlKI++1+Ab3o9AfhRdlQ11X6fYmvb9XwjFm1e12bUWvCx4bsTnM4UrKDHhx5LTmmQZrr2fUGc5bG1U546tEmCmoXGiN9NX/2W/mrs3/912IHOYGpXOjPiD9YHwZeQuZ8JeDBN6IIwru7tVbCk6M4XFKPofYuFIYr8Owb+b64wv6CVl0msO4AylPk4dayytE2IGEaRi/A8ZsD2rlbTPARsOa7tTv9t42pNuCu5kAid0oB/zEmrOSrieewEJiAS9FEF50g/2EecIJE7juG7iBwGjgqA0obedNpTL0TY0p9TgI6hRDbsd1KZXZouWGK8FXWZOb1HUDx390y2TMMytGWORzrB51o5BOdjDj5tQom3AnJ92+bqX4HWzhKAdpo+6wwtbm2NcmhTrxbD+9rtpiHE2fPe32k+WgvtTyLYSDAtlEenObMW92NV94k+k1ZQYT2NQn4wbaDGiTczsQHM7fwLwdyezV8D6Ys99rjrsk0gmDMuOYQ4RnS107utxRhtESCWPHmzspvTHoWdJp02ZvSAMby9hQ4I7V9YpruFXZdkti3FfR82W5Zwx90QRvXzA1e8RyUk4ten9BCMk8q5pyvxqq207rMYljKM1Z2+XBpZj+NV+g8co13lwm5KM4pZ3+xwwX0qbe0tDKaqxi8VBhg0d9E5NIRRfvmJOPlpNuQadqVcXLAcJjenbcQeifjnXSpa4bxm+3O/tG9a7H7k401lTjJaL+FwI0kPQ=
+sidebar_class_name: "post api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get a comment preview"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/api/2.0/community/wiki/comment/preview"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns a comment preview with the content specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"commentid":{"description":"Comment ID","type":"string"},"htmltext":{"description":"Comment text in the HTML format","type":"string"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Comment information","content":{"application/json":{"schema":{"type":"object","properties":{"CommentID":{"type":"string","example":"12261949-db62-43c2-b956-91e12c412d5a"},"UserID":{"type":"string","format":"uuid","example":"15985c13-ad91-4f2c-9286-cf991448e796"},"UserPost":{"type":"string","example":"null"},"UserFullName":{"type":"string","example":"Administrator"},"UserProfileLink":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"},"UserAvatarPath":{"type":"string","example":"\\/skins\\/default\\/images\\/default_user_photo_size_82-82.png"},"CommentBody":{"type":"string","example":"das\\u000a"},"Inactive":{"type":"boolean","example":"false"},"IsRead":{"type":"boolean","example":"true"},"IsEditPermissions":{"type":"boolean","example":"true"},"IsResponsePermissions":{"type":"boolean","example":"true"},"TimeStampStr":{"type":"string","example":"15:39 Today"},"CommentList":{"type":"object","example":"null"},"Attachments":{"type":"array","items":{"type":"object","properties":{"FileName":{"type":"string"},"FilePath":{"type":"string"}},"example":"null","title":"Attachment"}}},"title":"CommentInfo"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

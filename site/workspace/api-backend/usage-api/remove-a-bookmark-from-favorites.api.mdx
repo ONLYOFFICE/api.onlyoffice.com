@@ -1,0 +1,71 @@
+---
+id: remove-a-bookmark-from-favorites
+title: "Remove a bookmark from favorites"
+description: "Removes a bookmark from favorites. If after removing the user bookmark, its rating is 0, then the bookmark will be removed completely."
+sidebar_label: "Remove a bookmark from favorites"
+hide_title: true
+hide_table_of_contents: true
+api: eJzNVu1v0zwQ/1csf86atEwDIj16nsEqmHgRYkOPxNiHa+I0pkkcbKddiPK/c2cn7cq6DcQX2qp1fL8738vvzu24haXh8RVPVFk2lbRt+EKpVQl6Zfh1wI1IGo27COn4aWNzpeV3sFJVrwWkQpOqxhUP+AZxgl/3qJUKk2hZE4zH/KMo1VoYBmwxmGaZViXLYK1Ix0zYecYgs0IzTVhZLZnNBWsM7ow6AZPWMI1no1QaFgWEqRxwa3cji4IthDcjUoZR1YWwomgn6GENGkp80saFU+EDuifJeUmO1mBz/rP3YzrY+RnKTJKLEnjccdvWTruyYol5CHimdAnWb50c854SoYWpVWWEIY1ZFNHPYfNoIFFoq7KEgbouZOLyHH41BOzuHq0WX0ViKS6taqGt9Mecp7/iXsDFDVBycGc65X3AL6Wlp62qsRpTvQd8pdSyEExWyYQ0PuniYXxubR1/+RLiZ7PZTJZOfYJFceflTbmoQD5iAw9hVmGZRzSqvkTKWZE+rDiLZtHRdHYUnVxGT+MnJ/H0ePJsiu/nTz477+v0z42c3S7m46m75fyL9jdLuTW6rWTTOO7uDomG19GBr/HlvJamLqB97xrgIa/fyZVgn6FqwZqV/EWWvIMKiHOIPl2DBX1RQvFIlRtfZUNIBk6L9D9olclCPEo0JBhC0yaxhpZC4bbfI/UJmPrmX5om/0BaykqiBbAKT8AjrA+Iz9GUaoX4X0Mt9kVjj5LIy0h6HE3vtvOnCoYhicwiFM6bXGEZEUeDyE0hnDIxD6GW4WwShbvJO46x8D8cjSbsZNrTyBF6PY6shhLh2srEYdjlytg+7mqlLSHXoCUsCs8dknn/MmgKokuhEijcNvpFOvviZ9HzGYV2a+pf0Mjx5g7O/m1JMJY3oh3naO7FwThh93RdVmSVKac+ZPjlmAN24aJlH+cXl+z0wzlFhcH75BbYN6P3xpbgWm44w18y998xP8/1bjdu/54LasimFTc2xAbFZGKsjSe/p80VpRqRSBx3Ywxpw/Vid5E4+uBvjOMBq+mZcMW7bgGGeqnvaftbIzTd69c74jiOpdLQGjmbQWHEA3nbvxoPOj/yo2odP4uGnnC5Qra4q7e/RlQ+/pfoBsFpkoja3lK5cyESTbe9dTZ/O7+cI5yab5+WK0fLYUEHHPRon6Gje/TdB/eodJ0nfd9v8V50r8a2LYbgKQjstx8BzzNV
+sidebar_class_name: "delete api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Remove a bookmark from favorites"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"delete"}
+  path={"/api/2.0/community/bookmark/@favs/{id}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Removes a bookmark from favorites. If after removing the user bookmark, its rating is 0, then the bookmark will be removed completely.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"id","in":"path","description":"Bookmark ID","schema":{"type":"integer","format":"int64"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Bookmark","content":{"application/json":{"schema":{"type":"object","properties":{"Id":{"type":"integer","format":"int64","example":"11"},"Title":{"type":"string","example":"Google inc."},"Url":{"type":"string","example":"http:\\/\\/www.google.com"},"Thumbnail":{"type":"string","example":"Url to thumbnail"},"Created":{"type":"string","example":"2020-12-06T07:36:14.8181893Z"},"Updated":{"type":"string","example":"2020-12-06T07:36:14.8181893Z"},"Description":{"type":"string","example":"Google"},"CreatedBy":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"}},"title":"BookmarkWrapper"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

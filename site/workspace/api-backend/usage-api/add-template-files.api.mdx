@@ -1,0 +1,71 @@
+---
+id: add-template-files
+title: "Add template files"
+description: "Adds files with the IDs specified in the request to the template list."
+sidebar_label: "Add template files"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVMFu2zAM/RVB56zOgh223NKuw4oNWNG0pyAHxaZjtbKlSXTazPC/j5TsJmm7AQPmgyGJpPj4+KhOotoGOV/JUhsI2Rf+y/VEBshbr3FPpk4uWqys178Uatt8BVWA5xBPKzmRj+QHct1TVAEh99qxm5zLRVEEEe8VjxorgRWIq89BBAe5LjUUQjfx0MPPFgIKtHGLUDujEITRAc8ow2A/twXh6WRuG4QGeamcMzqPuLL7wFk7GfIKasUr3DsgHHZzDznSPc5bBx41lUhWRnZVxOUp7u+UVtgyQmfAFDncpLxXe9pSwXU4yhDQ62Yr+/Qx4OBsE1Ke2XT6Ose5tUbslGlhLtC3IHQZa2eAsRyhiag2zyGEsjWU81+r3lAGUI1MiD5M378GcdeoobNQSPaqgbYFWZwNkTCFFe0y5XQ2O5tmSSRjf5iYAH4HPkSZtN6Qc4XowjzLuoru6Oedsx578twpr9XGJE7YlvCUqjW0lMbmysRjwsExp+aP008zLuVImkuuOF33pkCfmSD03yC2jYuuknkiG1Wz9SQ2ssCU3hwkd/mkqF44kcxqbPm652tLG9NpZDd5Yeu6bQihWEZ2xM3l8lYsrq+YBSIrkR8ZHKoNWKvYxRFTURymIJIuXwzX0RT8vzkb+EJ4wowsRBehi13tBimsmEzyJDHQf0R2EAS1J7V2JbtuowLcedP3fEyZPb8m64MSeEcJqvFB6eQDtYn5i5W9u2U47E5TEtv4QvX9ZIxY0Jw4/Kvv+kjd1z+Wt+S8Gd6T2hYc49UjvzX0n0ta2Mh0lFc866hjzbZVW/ZNd7JYeIJOtfYQtTYsuKrR1OyPEJ7KbjIUwn8u682QrktK7vtn/2T6Y8Sz1pM3N3RNqH8DPJwMEQ==
+sidebar_class_name: "post api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Add template files"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/api/2.0/files/templates"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Adds files with the IDs specified in the request to the template list.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"fileIds":{"description":"List of file IDs","type":"array","items":{"type":"string"}}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Bool value: true if the operation is successful","content":{"application/json":{"schema":{"type":"boolean"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

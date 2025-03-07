@@ -1,0 +1,71 @@
+---
+id: set-the-product-administrator
+title: "Set the product administrator"
+description: "Sets the selected user as an administrator of a product with the ID specified in the request."
+sidebar_label: "Set the product administrator"
+hide_title: true
+hide_table_of_contents: true
+api: eJy1VMFu2zAM/RVB56zOih223Lq2wIodVjTtKchBsZlYrSxpEt00M/zvI2U7idNshwHLIaAlUnx8fGQjUW2inC1kBERtNzGbQ14HjTu5nNBhb88WjbyqsXRB/1Konf0GqoDAgYEsOZFb8gO5bCmqgJgH7dlNzuQcMAosQUQwkCMUoo4QhIpCWaGKSlsdMSh0Qbi1UMIHV9Q5iq3GMsXd3YjoIddrTbHaprMAP2uIeEGJe/OrKwhmI3NnESyyqbw3Ok9ws+fIYBoZ8xIqxRbuPBA8t3omVPQO5fUQUEPk2x6FLvhjXNB9D/DuhqL6V6gCIk+2E8nFnYt64qLPh4xIeB8574uPQjM/ib2tNkas4IiuEyaDsA4PyVbOGVBWtunHpEXvbOxqvZxO32f9kXg5dCGlHfRAbVi7UCVqKck/ct5B+TT9eIYtq3q1QSHZqwL6JFqlr1OzFJb0kSmvs8uLabZX74AwG5PKUg6vEGJSch0MBZeIPs6yrCldxHbWeBewJc9XFbRamY4bvuvgrVVtyJTG5cqkY4LFMePrz9Mvl1zZ0fTMuf7uubMztOeFqvkOO4KgmYOyu55Iqyq+HcUmUpjgh4P8b99U5Q2cyHcQ2kGah5MT5WGooeXsa5dQaeTX5LWrqtpy2+eJRPFwO38UV/d3TBZx2rXMKISBlIiVSq3vodMOSCI6K1Z5sjGOZvi/L4+eeIQ3zLxRxDuPMMuj6TW24K6QJ6ksqajTmTzajac0Uuc71Sxk06xUhKdg2paPKW3gXbo8iIy/KGU5rNNGvpACmPNEwYdHBsjupu4UcjJe7WSIuMpz8PhX3+XRHN0/PZLvqt+alSs4JKgtb1T6n0kyXOpIEm46a6jJdlOrDft2T7IMeVTHKn5JKu4NLmq4srsjgGNBT/o6+J+rOhvSNN2MtO3ev7v6Y8R+ijpv7vCSUP8G1k9tBg==
+sidebar_class_name: "put api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Set the product administrator"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"put"}
+  path={"/api/2.0/settings/security/administrator"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Sets the selected user as an administrator of a product with the ID specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"productid":{"description":"Product ID","type":"string"},"userid":{"description":"User ID","type":"string"},"administrator":{"description":"Specifies if a user will be a product administrator or not","type":"boolean"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Object with the user security information","content":{"application/json":{"schema":{"type":"object"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

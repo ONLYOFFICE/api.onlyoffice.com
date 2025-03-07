@@ -1,0 +1,71 @@
+---
+id: resend-email-invitations
+title: "Resend room invitations"
+description: "Resends the email invitations to a room with the ID specified in the request to the selected users."
+sidebar_label: "Resend room invitations"
+hide_title: true
+hide_table_of_contents: true
+api: eJy9VVFv0zAQ/iuRn0Bqm9J1tOvb2ECqBhraQDxMFXKTS2NwYmM720rk/86dnbXpViSeeImc8+e783ffnVvm+MayxR37ICTYJE1ulKosWw2Y0mC4E6pe5mzBDFio8/cVF3JZ3wsXdiwbMM0Nr8CBIS8tq/EH4SLHLVHjSnNX4joHmxmh6RQaKUiyJIyBX40wgCGcaWDAbFZCxdmiZW6rg6fawQYMQgtlKu6i6WSCBnjklZYIOptP33q/it7Auncq35KLw6BfLZhE7JJHB5lC57UjKNdaiixspD8s4duXuaj1D8gcXdoQO06Apd0GHdtlbntIbgzfEgUOqr7dOiPqTf8yTYNc+ecEfRTWJapIyHWyvCSi60ZKvqbrRqZ2t79js1N+Wsymp8Pi7dlsOJ2+mQ/XJ/N8OC5gnE9mM5icztnKD7oqnkvZS2mtlARev6xRwCYcwb1gFNujJ57ngoBcfu5xUXBp4bmjZ7wnPcUMmBOO3LLz24tRkODoQhkYnWvxSeUg7egmlvTSqRE52ouPee/jlTQqMVZiMh6/rPv1FfE7Hb85IomaN65URvxGBZI3C1ljhNsGLXObfaf97z+BDBiKk2QfEABI5+o4YzZxJSRAndK7NVpVwhNDwn8Qrgyg5WViNWSiEJAjNtg6CROcfi1IlBxuB5GNMDxSVypqSa1s0CI12IKlXIt0MhqnBbGYUiCbtiL3aSw6o8uZ+6c+bQxqgJXOabtI07ZEX37RamWcR+Q9N4K0FkilvUhdwRtJmpUq4zKYkTI6c7g9H59NqDqrPZ+31ErR3SGr+47R4gqoZboJcgDrZkmm1E8BoVDUozf7bn//pM9+N/5rYxz0RRA4xStUyK6nz2+wJmESPxgi1vx+EjmwruJhaHTpd90T6i0OBuaBZtr9DPpP8unodvDoUi058or5BzW0nZTuqBaIRDHRoCI50aAO78KALUQc20FTSF1Uxx1r2zW38NVI78mMWRhqmtVeTEF3ubC0zo/Pij4dr266p+F1sn8ujmb/pKB6G6QrG/rDZRAYPUWeZl+J3YvvCCURNy5iqOEXOr4/+OIlIB3vmu7z9e0XBK+7F6bCIUWvI38gUvAbAisdi42AYGuZ5PWm4RvCRp9hhjZEd78Dota7BWV69GrPWiPehr5+8JcTbRvby/sdPm799UTH1o5EogGT/gMPlMZA
+sidebar_class_name: "post api-method"
+info_path: site/docspace/api-backend/usage-api/asc-web-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Resend room invitations"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/api/2.0/files/rooms/{id}/resend"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Resends the email invitations to a room with the ID specified in the request to the selected users.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"id","in":"path","description":"Room Id","required":true,"schema":{"type":"integer","format":"int32","example":9846}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"description":"User invitation","content":{"application/json":{"schema":{"type":"object","properties":{"usersIds":{"type":"array","items":{"type":"string","format":"uuid"},"description":"List of user IDs","nullable":true,"example":["75a5f745-f697-4418-b38d-0fe0d277e258"]},"resendAll":{"type":"boolean","description":"Resend all","example":true}},"additionalProperties":false,"description":"User invitation parameters","title":"ASC.Files.Core.ApiModels.RequestDto.UserInvitation"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"OK"},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

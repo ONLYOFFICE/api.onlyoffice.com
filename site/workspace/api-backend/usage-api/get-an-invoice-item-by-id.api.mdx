@@ -1,0 +1,71 @@
+---
+id: get-an-invoice-item-by-id
+title: "Get an invoice item by ID"
+description: "Returns the detailed information about an invoice item with the ID specified in the request."
+sidebar_label: "Get an invoice item by ID"
+hide_title: true
+hide_table_of_contents: true
+api: eJztV8Fu2zgQ/RWB1yaWLKfY1sCiSOwAFYqmbexg0TY5jKSxxUYitSTlRGv4c/ZH+mUdUk4iIYGVol1gD9bBoMn3hm+GM5RmzQwsNRt/ZYkq/EisJE9Qs6sDpjGpFDc1ra3ZcWUyqfg/YLgUbxFSVJajaMQO2A3hkF1tiJWiThQvLYyN2TmaSgntmQy9FA3wHFOPi4VUhbPkQSwr44GgSbezR4YK74abzHGiqadLTPiCO56bU/h3hdoMaN/t8ESmpHLNEikMCmOHUJY5T9we/jdttayZTjIswI5MXSKpk/E3TAzZKZUsURlOjtPqVopVwlM70fUpaiuNpkTfmuO0+5LisnGPVadLKXRjNAyC3abIzm/SP+cmxxZMG8XFkmB4C0Vpl7YQ0jgzMrl+h1gS4kJws5v2CE0Wpm2PdpHbQOJ9VOR5iyGqIqbgHbAmOWgmlVVMzLaN4SC03EmlFIqk/i2xmGRcoEbvcwVO2KwuYpnv5nz/1yKP41jhikO/75Ozz43unOoBz6Do03Rm4ZGeSLEiZyDuOBFLmSOJbTOMqrDhnIDmSQ96AbkmOOFNE6D7kEZUnH8pSj+byNv8+ESRMe4m+LnTCpvTmitIrinVUUhVP9eNpjLmcDvsP+T+eDrELyTrOZifzlXHsYdOl6TBDz0bhkEYHA7Dw+HRPAzHw9H4aDh4OfrjVTgafXmwcvKMlI/Sp3a6V1pVPO3sHGyfwyd+7h4XO67LHOr+YL/n1+h9AVGD0dfcZUB/Fb4HAcsm545XYEDNCsh7qrBSuWekpy3SA8dqbha5oBfNheqhX176BE2rxGg7REnTzZylD0CXt28qjepPSAsuOFkAI1Wnak7JlKwRbcU04icgTtPOPborzQk9xRw7ybWzLKYt4N37pnW4NDUKuzdmODrqSH6orFaZP0yG+3Lbl9u+3P7bctvn6D5H/385GlEXcp+kroM5CoaPm5YLAdtmEFNnpkD6SxnGluhSD0xGf3wouR8OAt/2la2Wyl93+qvx1+Dw9dWLDbMNp6KPXe36zcqeFMuMKfXY99eZ1GYzXpdSGYtcgeL2m9glt11rVC6Avq+JlssEcjdN6iynu/wqeB1aB1s97sy2Vo25Jzvd+wCTU++wJgnchiJrlg+YcBXQ5brY2N7t/KFLPb07hEddZrCxNhfS7XX3TS6LoqI2q/ZmLjTe+els7h1/jGwIKFLNeeR0CVhXNz8AVo9JCw==
+sidebar_class_name: "get api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get an invoice item by ID"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/crm/invoiceitem/{invoiceitemid:[0-9]+}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns the detailed information about an invoice item with the ID specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"invoiceitemid":{"description":"Invoice item ID","type":"integer"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Invoice item","content":{"application/json":{"schema":{"type":"object","properties":{"Title":{"type":"string","example":"Title"},"StockKeepingUnit":{"type":"string","example":"StockKeepingUnit"},"Description":{"type":"string","example":"Description"},"Price":{"type":"number","format":"double","example":"1.2"},"Currency":{"type":"object","properties":{"Title":{"type":"string","example":"Chinese Yuan"},"Symbol":{"type":"string","example":"¥"},"Abbreviation":{"type":"string","example":"CNY"},"CultureName":{"type":"string","example":"CN"},"IsConvertable":{"type":"boolean","example":"true"},"IsBasic":{"type":"boolean","example":"false"}},"title":"CurrencyInfoWrapper"},"StockQuantity":{"type":"number","format":"double","example":"2.2"},"TrackInvenory":{"type":"boolean","example":"true"},"InvoiceTax1":{"type":"object","properties":{"Name":{"type":"string","example":"Name"},"Description":{"type":"string","example":"Description"},"Rate":{"type":"number","format":"double","example":"Rate"},"CreateOn":{"type":"string","example":"2020-12-14T22:13:41.5378233Z"},"CreateBy":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"},"CanEdit":{"type":"boolean","example":"true"},"CanDelete":{"type":"boolean","example":"true"},"ID":{"type":"integer","format":"int32","example":"1234"}},"title":"InvoiceTaxWrapper"},"InvoiceTax2":{"type":"object","properties":{"Name":{"type":"string","example":"Name"},"Description":{"type":"string","example":"Description"},"Rate":{"type":"number","format":"double","example":"Rate"},"CreateOn":{"type":"string","example":"2020-12-14T22:13:41.5378233Z"},"CreateBy":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"},"CanEdit":{"type":"boolean","example":"true"},"CanDelete":{"type":"boolean","example":"true"},"ID":{"type":"integer","format":"int32","example":"1234"}},"title":"InvoiceTaxWrapper"},"CreateOn":{"type":"string","example":"2020-12-14T22:13:41.5378233Z"},"CreateBy":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"},"CanEdit":{"type":"boolean","example":"true"},"CanDelete":{"type":"boolean","example":"true"},"ID":{"type":"integer","format":"int32","example":"1234"}},"title":"InvoiceItemWrapper"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

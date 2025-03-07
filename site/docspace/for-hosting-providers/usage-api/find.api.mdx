@@ -1,0 +1,71 @@
+---
+id: find
+title: "Find"
+description: "Find"
+sidebar_label: "Find"
+hide_title: true
+hide_table_of_contents: true
+api: eJztVk1T2zAQ/SsZHdt8kSZN8C1lygzToTAETpkMo9jrRKBYqiQHUo//O7uSQxyghUOOXBJ7tdrd9/at5II5vrAsmrJLUFoCmzWZ0mC4Eyo7S1jEUpElrMkM/MnBuh8q2bCoYLHKHGSOHrnWUsR+Q+fOqoxsNl7CitOT22jAKGp+B7HDONpQeCfA0mpuwZwltubIjeEb9BMOVnW7dUZkC1xIlVlxTMzyXCSsbLIEbGyEpvxovcGIDYEhmyzLpeRzxBQ5k0OTwSNfEUQEOxzwQTrsD1rp9+Nhq98/GrXm30ZJq5tCN+kNh9AbjNisxOg8SQSF5vKyVnnKpYWXqa8CRQ3NDV+BA2MbWGxDB2KbzAlH2dl4ctIeazHZWMTYPlcJSNs+RZpDC7yBUW4Hj+6T0oNSWhfrl6+f3B6OW8puwGqV2UBWr9ulv/2kF/cYuXZ4eIlrycU7ffgvrm2l5yI2yqrUtcdW/wZ3ogy0z9dx+2wc0+YrsLl0r3TwvgoOnf2Dg33YtJS43z163ZObjOduqYz4C4kvz0KcG+HwoJ/i8W7jW1q/vQcyYI853QcP6IC3RTl7KavTcF+gopaK7g+trB8k7pb41gny6lS3Cqp/jcLziXIj0WHpnLZRp1MscV8ZFVoZV6LnmhtB0+GlRWsBR8oJXMSkirn0Zqyf9uwvj7rHPaJgtgM3IdpDuH2Iu9nW4hfQcGc4H/Red8ORJ7SxUvcCPGvUz6vdLflzO761Y+PDk0zRU+VreWsKiQ+kLRC+7gXM1q24F1RVbtWIve7ULu7tegW2NogYzfeiqJo2Zc9ngm8bkhgaMGVFMecWbowsSzIjeEMime36RW8YcImqAeP77ElmJ6GO1jWlJ3eZB85fzGXZ3O4YxzFoV/OtlzyrKe7yYnKNbvPqU2WFBxRaDX+gzxj8jRijjxzK4dvvbQWTPFvkfEG+IbM/J3JioC6J0PzqgfBsl7JNHce+VgIC+iU8b+4oiqC3snz2D0v/3FFxuvX2NGDRT6ZrWGY=
+sidebar_class_name: "post api-method"
+info_path: site/docspace/for-hosting-providers/usage-api/asc-apisystem
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Find"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/people/find"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Find
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"userIds":{"type":"array","items":{"type":"string","format":"uuid"},"description":"User ids","nullable":true,"example":["75a5f745-f697-4418-b38d-0fe0d277e258"]}},"additionalProperties":false,"description":"Request parameters for people","title":"ASC.ApiSystem.Models.FindPeopleModel"}},"text/json":{"schema":{"type":"object","properties":{"userIds":{"type":"array","items":{"type":"string","format":"uuid"},"description":"User ids","nullable":true,"example":["75a5f745-f697-4418-b38d-0fe0d277e258"]}},"additionalProperties":false,"description":"Request parameters for people","title":"ASC.ApiSystem.Models.FindPeopleModel"}},"application/*+json":{"schema":{"type":"object","properties":{"userIds":{"type":"array","items":{"type":"string","format":"uuid"},"description":"User ids","nullable":true,"example":["75a5f745-f697-4418-b38d-0fe0d277e258"]}},"additionalProperties":false,"description":"Request parameters for people","title":"ASC.ApiSystem.Models.FindPeopleModel"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Ok","content":{"text/plain":{"schema":{"type":"object","additionalProperties":false,"title":"Microsoft.AspNetCore.Mvc.IActionResult"}},"application/json":{"schema":{"type":"object","additionalProperties":false,"title":"Microsoft.AspNetCore.Mvc.IActionResult"}},"text/json":{"schema":{"type":"object","additionalProperties":false,"title":"Microsoft.AspNetCore.Mvc.IActionResult"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

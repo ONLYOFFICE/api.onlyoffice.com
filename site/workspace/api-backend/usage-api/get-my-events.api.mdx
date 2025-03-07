@@ -1,0 +1,63 @@
+---
+id: get-my-events
+title: "Get my events"
+description: "Returns a list of all the events for the current user with the event titles, dates of creation and update, event texts, and author."
+sidebar_label: "Get my events"
+hide_title: true
+hide_table_of_contents: true
+api: eJzVVktz4kYQ/itTcxZGCIwxp7hsateVrcRlIKlaF4dBalmzHj0yM8JLVPrv6R4JgeJ48SGH5AKa7q+nX1+rVXErng2fP/EwT9Myk3Y/XOwgs4ZvPG4gLDWKUF/xm9ImuZZ/Civz7DOICDTZaXziHn9FHPBNjVYRmFDLgmB8zh/BljozTDAljWV5zIRSzCbAwPlhca7dEV1pFLDSgGav0iZHELPSKjAei4QFQ3eE6JYcMJFFrCxI7h2w8N0ilBTChXyB4WkwRZ4ZwFQrHvg+/fXj/NJG10SFJmGeWXwkpCgKJUPncPjNELziJkwgFfRk9wXgBUJrsUc7rENqTuT59huEFhWFzgvQVjZB3EcnGGO1zJ4RA99FWigSjXjt8bU8hwrGk9dIEPZWKMgioc9dHB5wd2T1i0jhx3hHB+ZwiL87Ldp5s1M4Wt8odSf2X3LEHo23ea5AZD3rWCjj/C2t0PbHngI/8AejYOCPVv50Pp7OR/7FbDq5nMyCr3TFIjtTkXMXPEKBbHss1ZlKNRlCL953ur9y2g4lkWrPOE8ex2lIhW1E46B3/QApgR7cLBwK7Nz9rpGgaI3Ke7NMhIboTHmtLqHhTLbOTLmlJm3hg0b3ZhFJK7bqnEHXxAfQqTQGSfCBwVjj/D8ILXpD9K8MV1fbspRRnwFxFMPl1dVgHAbTweRqPB1cR/H1YHspprPxdju7DPyPTctvOF16z77uX/Jdr10nadWn8tPaoPjX14zeq//zBN3c2tJ8kOJZmdIqWSGh8SW7A5Td5lksdQqUBrI0BKXw+c12efLZgHV2HhvhsTP1WEDHg/Wml4dL97MwN9aKMEndS/8tnd8MXDdrtevixB+9XSXrTLS7EkMmVAp4xI7xZ3CtFDbBw1AUchhc+MPj6nXLZ/iTARVzWr96B9q47VtqhSaJtYWZD4dVkhtbz6si17ZG5E5oSQPpUiBdE1QsSkWFVjm+9J0YgyGbvnrmXweU0MnGX9J2a677x71/HMxC/gxuMinzpFF7PHM86tu6Usgszp15W9TbQ+5s6bJlj4vlit083FNWmHxTUUV7v43e2FS43dP6+ASWpfvj3o76G6pb4/+RL5G2bqQbFkpItxddd6uWGE9UVEQiNdxnSFsgYi9di/8NQbBdTaufeFVthYG1VnVN4j9KHFGUb47MoBM6Sg7fbRV/wbZhh8IQCusopMqmoX/71iFadAT+tFghlrLpc+DFcaB9oNsPqmx/cnefDl4bAv3W3jsmVdUwrK47fKN616LjYIOmAm+Q3H8BQXGlXQ==
+sidebar_class_name: "get api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get my events"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/community/event/@self"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns a list of all the events for the current user with the event titles, dates of creation and update, event texts, and author.
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"List of events","content":{"application/json":{"schema":{"type":"array","items":{"type":"object","properties":{"Id":{"type":"string","example":"1"},"Uid":{"type":"string","example":"1234wda"},"CalendarId":{"type":"string","example":"calendarID"},"Name":{"type":"string","example":"Event Name"},"Description":{"type":"string","example":"Event Description"},"AllDayLong":{"type":"boolean","example":"false"},"Start":{"type":"string","example":"2020-12-01T06:36:10.8645482Z"},"End":{"type":"string","example":"2020-12-01T06:36:10.8645482Z"},"RepeatRule":{"type":"string","example":""},"Alert":{"type":"object","properties":{"Type":{"type":"integer","format":"int32","example":"-1"}},"title":"EventAlertWrapper"},"IsShared":{"type":"boolean","example":"true"},"CanUnsubscribe":{"type":"boolean","example":"true"},"IsEditable":{"type":"boolean","example":"false"},"Permissions":{"type":"object","properties":{"UserParams":{"type":"array","items":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"2fdfe577-3c26-4736-9df9-b5a683bb8520"},"Name":{"type":"string","example":"Valery Zykov"}},"title":"UserParams"}}},"title":"Permissions"},"Owner":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"2fdfe577-3c26-4736-9df9-b5a683bb8520"},"Name":{"type":"string","example":"Valery Zykov"}},"title":"UserParams"},"Status":{"type":"integer","format":"int32","enum":["Tentative","Confirmed","Cancelled"],"description":"[0 - Tentative, 1 - Confirmed, 2 - Cancelled]","example":"0"},"HasAttachments":{"type":"boolean"}},"title":"EventWrapper"}}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

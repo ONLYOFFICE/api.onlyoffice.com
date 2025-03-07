@@ -1,0 +1,71 @@
+---
+id: get-web-plugins
+title: "Gets web plugins"
+description: "Gets web plugins"
+sidebar_label: "Gets web plugins"
+hide_title: true
+hide_table_of_contents: true
+api: eJylV2FPGzkQ/SuWvx4kW4pOvXzLFdRWLS0qcJUORZXZnSQuXnvP9gbS1f73m7E3m4QAcWkkEmw/vxnPjO3nhnsxc3x0zS/Ae6lnjg3ZN7ipVD2T2vHJATcVWOGl0R8KPuIz8Dh83g0f8EpYUYIHSyQN19hAFGhxo6DAcamx+V8NdomNAlxuZUVk2Hvag1w+h1LwUcP9sqL5N8YoEBqH4F6UlcI+b2toW/THgquMduAIf5Rl9LNNjA6yuAAkyI32oD2hRFUpmYe1DH84gja7ps3ND8g9rczSyr2MhuLCepTzFoO1s6TPhDrgulaK1ha93lgE/yb1VIIq2FXlcUZ7wBcYOhl9eZ77nw74HL0zJTAP956Yt6bvYz/ZaCVbwGgCZmI/+6cOmMwsaj83dj/xOOKSeefYOBezBJff07SKoMnkseY+J1XK+RqbzO9yrEi3n/si4pJ5ZZkUkQ/lL0UjtyA8/L3cv7dkkWD8BLumxpYCtzKva1lsHg68ybrP4SNfq08bdoV0lRLLtCydRDDT+/J0Jm+B/Sv0Unh3K8mOl14lWLgMsGephca427ArFsKLlF0Rcem7LeC/WIklKdR+/hWSOfkTmHiRtTNxv98QgmRZl79lBwpZlwmmAu53LF2UQiUEL8BSTNRWMW+Y28S3Ye9MpYIrm2DrPGLZ1ddPv3BGCjd+WGjrC/nBYirIJd5ojskp83NgtQPLkIEJ3fnMjGXa+J27HM8dN9ZGy/LFdmQ0E0ieMkPpKQpJPEKdb5w7U6Ec9PuUjy/eDlA4DMaVHJyZApQbnCKNWQKceLM+0L4kXKZvA5KFq7Q/swrsOvQyHCTryKOAeXOYHR++yi6zP0evs1GWDbrj6o/sGFtkeSWn9sdprakeBtstnYekUEfgLkOdUnFUlukXWqc5EzbNCpnI/ZKs41+X+K+dxMTED3q1G6qgJebj7NWu6LzSUbPg+VHwAHq9C+p0M8NLKOapDVHIayv9Mgho4fLvRPT9FqgD1a6gbN4hAPiE9O824zvwjt31gpcChHJ8bjqtHhS6n2NjKCo5PBpkw1XQh3drmU9O2MVKxIdE87n3lRsNh83cON+OmspY3yJyIawk50PWaCwucypqRWWuTC5U6KazCudsD7/J/jqiME7W674gCR7ptlffFwW6/hHoAdE9L7Zg3RsjN+ZWQggoamwTZu8mmW8Ibr44ij46Xwq9FvmPxfSBlu4fFY9hO6epEIeoHmSQ+d3micm4phUhEtPBN3YBpnnr5RWDe82b5kY4OvDblrrja4oS1ZfRqqyfdHN9LjzqXQj3xqttIVRNKE55WiUcTU7oesCKRDlC9uO0cZ5D5Tdm7byziKWvynenlzwK/O0Mx1x2/xD7akgvN7m3Ux89oO/24IkZTRPLp217fBx6cka3whWaQjTBkv0ffyAvNA==
+sidebar_class_name: "get api-method"
+info_path: site/docspace/api-backend/usage-api/asc-web-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Gets web plugins"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/settings/webplugins"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Gets web plugins
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"enabled","in":"query","description":"Enabled","schema":{"type":"boolean","example":true}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Web plugin","content":{"application/json":{"schema":{"type":"object","properties":{"name":{"type":"string","description":"Name","nullable":true,"example":"Winfield Upton"},"version":{"type":"string","description":"Version","nullable":true,"example":"some text"},"description":{"type":"string","description":"Description","nullable":true,"example":"some text"},"license":{"type":"string","description":"License","nullable":true,"example":"some text"},"author":{"type":"string","description":"Author","nullable":true,"example":"some text"},"homePage":{"type":"string","description":"Home page","nullable":true,"example":"some text"},"pluginName":{"type":"string","description":"PluginName","nullable":true,"example":"some text"},"scopes":{"type":"string","description":"Scopes","nullable":true,"example":"some text"},"image":{"type":"string","description":"Image","nullable":true,"example":"some text"},"createBy":{"type":"object","properties":{"id":{"type":"string","description":"ID","format":"uuid","example":"{00000000-0000-0000-0000-000000000000}"},"displayName":{"type":"string","description":"Display name","nullable":true,"example":"Mike Zanyatski"},"title":{"type":"string","description":"Title","nullable":true,"example":"Manager"},"avatar":{"type":"string","description":"Avatar","nullable":true,"example":"some text"},"avatarOriginal":{"type":"string","description":"Original size avatar","nullable":true,"example":"some text"},"avatarMax":{"type":"string","description":"Maximum size avatar","nullable":true,"example":"some text"},"avatarMedium":{"type":"string","description":"Medium size avatar","nullable":true,"example":"some text"},"avatarSmall":{"type":"string","description":"Small avatar","nullable":true,"example":"url to small avatar"},"profileUrl":{"type":"string","description":"Profile URL","nullable":true,"example":"some text"},"hasAvatar":{"type":"boolean","description":"Specifies if the user has an avatar or not","example":true},"isAnonim":{"type":"boolean","description":"Specifies if the user is an anonim or not","example":true}},"additionalProperties":false,"title":"ASC.Web.Api.Models.EmployeeDto"},"createOn":{"type":"string","description":"Create on","format":"date-time","example":"2008-04-10T06:30:00.0000000+04:00"},"enabled":{"type":"boolean","description":"Enabled","example":true},"system":{"type":"boolean","description":"System","example":true},"url":{"type":"string","description":"Url","nullable":true,"example":"some text"},"settings":{"type":"string","description":"Settings","nullable":true,"example":"some text"}},"additionalProperties":false,"title":"ASC.Web.Api.ApiModels.ResponseDto.WebPluginDto"}}}},"401":{"description":"Unauthorized"},"403":{"description":"Plugins disabled"}}}
+>
+  
+</StatusCodes>
+
+
+      

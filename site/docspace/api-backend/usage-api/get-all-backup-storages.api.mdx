@@ -1,0 +1,63 @@
+---
+id: get-all-backup-storages
+title: "Get the backup storages"
+description: "Returns a list of all the backup storages."
+sidebar_label: "Get the backup storages"
+hide_title: true
+hide_table_of_contents: true
+api: eJy9VV2P0zgU/SuWn6ukVGg19K3ACqFdVivKgFajqnKT28aMYxv7ZoYS9b9zr+O2UzofwMM+VHXi+3nOvSe9RLWJcnol54Co7SaKUszRBbUBuRhJ5yEo1M6+reVUbgBnxrxU1XXns1GUIxkgemcjnae9nIzH/FdDrIL27EqOf+uIwq0FNiBWyV3E7C9uNTbpYu2McbdUg/AqqBYQAkevnEWwyEGV90ZXqZ7yc+TIvYxVA63iE249UC63+gwVkqMPXD3qoS5d37GJGCgP2ZyW+fY1vbKdMWplyAxDByMJX1Xr+VG+uHj+h9yNJGrk56eifUhmjwU0sFHVdvlsfDH2y9gqY5a3ztVgl63rInCu0yZyQhWC2lJkjdDGp1u3BObT5f7DVo9V+0nbtQZTi0uP5EHF3SjT/UTkj8nssdDRtSAQvuL/Cy8lU3WtOaAy/97BbK1MhEMlcjZ/VXyCVTHHrtauuIwQXtFUBmdi8U5ZGuOWJrSYddj8BVvu4f7xV2RAhnmExTVs41kD5Fx1IeSJzxCsnDOg7BkGcw+VJlKi0Lxcmv5j2qUcYr9lwgVhHU/GAZ2cS0da/N/KtA9dKStWICLgQ1l+FeaZ1/x7R1SZ4n0Wl9foiqw5dCTuOOzz8bNzsbm0jLML+hvUMhlNzo3+c10QPugq6Y2hHmpHzVH5Inbeu4BDl25w4GQRCFWNW1JLkqJYLTnNkkhk+Qygamr8lgxIOHeLH/F7D9gFG4USZj8MxtynhwVFIe1rXBZc3maFDT2UyutyUozLmKW6zD7lEEJyieGGVZMr7IIhpwbRx2lZ9o2LuJv23NlO8uoGzUOXBILvBojWqjPIq+MqZdJr1iDyOb2+GL+YMAWLIypz1uEh3Ck2R9XymrdjlPXo1IwmkWGqnLvWw2aS2rjkfT4dXD+1OSB7MxlqjNgqe5Q7+QbwPnx/nOz++IH5NZJyV6xaJQ2QToqYQO8zY1fcMlkSZ4mbgTU+5g/sSGbmCMeBgyvZ9ysV4TKY3Y5ff+kg8IAtjpTxE6VqaOIgJKoTznJWVeBRHmT5/HPJfB1m682fH8iWCTjlaGAjHzj6/spu78Y+JW+o4DqJ3wMefT8MwG53sB+uHvTIHe6tGeEFDd13hBgCSw==
+sidebar_class_name: "get api-method"
+info_path: site/docspace/api-backend/usage-api/asc-web-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get the backup storages"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/settings/storage/backup"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns a list of all the backup storages.
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"List of the backup storages with the following parameters","content":{"application/json":{"schema":{"type":"object","properties":{"id":{"type":"string","description":"ID","nullable":true,"example":"9846"},"title":{"type":"string","description":"Title","nullable":true,"example":"legacy_1080p_small_wooden_mouse"},"properties":{"type":"array","items":{"type":"object","properties":{"name":{"type":"string","description":"Name","nullable":true,"example":"Winfield Upton"},"value":{"type":"string","description":"Value","nullable":true,"example":"some text"},"title":{"type":"string","description":"Title","nullable":true,"example":"legacy_1080p_small_wooden_mouse"}},"additionalProperties":false,"title":"ASC.Web.Studio.UserControls.Management.AuthKey"},"description":"List of authentication keys","nullable":true},"current":{"type":"boolean","description":"Specifies if this is the current storage or not","example":true},"isSet":{"type":"boolean","description":"Specifies if this storage can be set or not","example":true}},"additionalProperties":false,"title":"ASC.Web.Api.ApiModel.ResponseDto.StorageDto"}}}},"401":{"description":"Unauthorized"},"402":{"description":"Your pricing plan does not support this option"}}}
+>
+  
+</StatusCodes>
+
+
+      

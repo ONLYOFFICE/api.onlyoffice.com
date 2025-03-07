@@ -1,0 +1,77 @@
+---
+id: chunked-upload
+title: "Chunked upload"
+description: "Creates a session to upload large files in multiple chunks to the folder with the ID specified in the request."
+sidebar_label: "Chunked upload"
+hide_title: true
+hide_table_of_contents: true
+api: eJztV01v4zYQ/SuEjoEbOQEKtIZhIE1S1NjFJoiz6CEbLChpZHGXIlWScuIV/N87Q1KRv5IWPfUQHwJJHD6++XqcdInjS5tMHpJSSLDpTQOGO6GVTR5HSQE2N6Kh92SSXBrgDizjzIK1+I05zdpGal4wyc0SmMdgQrG6lU40Elheteq7JUNX4bqWBRj2JFzl3+dXzDaQi1JAQdvom4G/WrDu9Iv6ok5OPmkHJycTds3zKoCxnCtW8RWwQpQlGFCOSVBLhMxa5yHiq610KwuWwUBHl2yazX4+O5+m2YxxVbCld8owbRgezCVRRZOzMaszMjplH7l1+0dztWZW/ABkybZ+FyVBEQWhhBOIZsA2GEzoIxC9G0KAZ52Px+zmg2dkHXetHbG1bpE02i0huDSFeiZ17lMzTfEFYw3o3IrLFuNqdB3hw3GnbAHoHJeSoMxOGoRlPdIe/a0g+8MxcpbCGzMDzzx3GKgi+hhBedMAN70RlcDRqBjIQayEWjJ4OWbkt1gwK18Vso9XMcQnb40JHEptas+a8UzHTMfq6+tRlExpBsZoY5nO/d5ij82fFQSmqq0zSnzJsjWVdcCiQrRDKRwzpORsx2XItc/tjlPRH7uX8DMWmqnYyrovR8QtwglvOYwkfZyTUdJww2vAAFMTd4nCF2zV0GjzAg0EtW7DXZXs9/PvoRvnV7hi8wpqnky6xK0bQrDOYK6SzQZlIDr2my7WZJFr5dB9esTcSxFqKf1mCbU7hNLZN8gdcTUa5cUJsLRKHnzydLt9YrjCvCejfTojv22BrffKttj7mBqfrAFBIOklGIIwIJHyCm4pKgcwd3GVUdB2lesYH1C5WTeYykOkRdQ2zH4FiGIILdqjipInpDtKuwE401oCVxh4+hHX0NE+ZKgUh6fMDwolD7X10hZPlcgpJLlscetktx+mrZztfZFihlUqiomvzlYJTD9pNXaAl4/drpumaH8UIfIIMJ/vL5kTNVAsVGyRSI/bnvLrWPDcCPMvsEhEgm1Ug16lTBSzDDBcqMcVdx7j9SN7lYxn3n2k43Cr7/9wt1C7BoVV8BxvidcBfUV+7Vs4wL6qQsgyeBaKKO+jPr/6pwOcdlwGdP94cEaoBx+qbJCUY7ApFgfW5n/s+FjCKE+VLkiFtPUy4NsuSXkj0vPTcRomj67XrE0aGKWhJr7G1JJIeU0NQtcaiRiVc42dpGlXIfRm0jXauA1arrgRPJOha2gttE3JcRDAbZRZ6T8jPdqzu/zL+NdzIv9IR+IlItx6QS4GuIsW3THih4/BH8BJFwbX0akPsO51twrLo16Xd/YmFByK4d2gr9fPvMZBZVcfe7XZFr/xvowNRluK5EwLG+JSas9ROMJOLnVdY1u7NY4J/pq6u17cs4vbOYUOIxyERdK0F0NkXc19rqMjl1TpWKUhVftXy9Yd8T41vk+N71Pj/21qjGLl8NJKG8lRq7DLvaR2UZ4fSMnQEgU66g7NUpOtwfKl9fd0GlUzKO5D0nUZt/DZyM2GPqOjBifIh8dBoL2WF8LSM+pVyaWFN8Rke2Q96kOvwmrtbwEsc3zDx++oyVtj8eYRbaM4E4OwfBnO+emeQIbtB1feZtTvuMhzaNybto9bF+DtzeIejbM4SNe6oD2GP+FH+uup6ib8/40G/luHQqyWLV+SbcCk39904VuY
+sidebar_class_name: "post api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Chunked upload"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/api/2.0/files/{folderId}/upload/create_session"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Creates a session to upload large files in multiple chunks to the folder with the ID specified in the request.
+
+**Note**: Each chunk can have different length but the length should be multiple of <b>512</b> and greater or equal to <b>10 mb</b>. Last chunk can have any size.
+            After the initial response to the request with the <b>200 OK</b> status, you must get the <em>location</em> field value from the response. Send all your chunks to this location.
+            Each chunk must be sent in the exact order the chunks appear in the file.
+            After receiving each chunk, the server will respond with the current information about the upload session if no errors occurred.
+            When the number of bytes uploaded is equal to the number of bytes you sent in the initial request, the server responds with the <b>201 Created</b> status and sends you information about the uploaded file.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"folderId","in":"path","description":"Folder ID","schema":{"type":"string"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"fileName":{"description":"File name","type":"string"},"fileSize":{"description":"File length in bytes","type":"integer"},"relativePath":{"description":"Relative path to the folder","type":"string"},"encrypted":{"description":"Specifies whether to encrypt a file or not","type":"boolean"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Information about created session which includes:\n            <ul>\n            <li><b>id:</b> unique ID of this upload session</li>\n            <li><b>created:</b> UTC time when the session was created</li>\n            <li><b>expired:</b> UTC time when the session will expire if no chunks are sent before that time</li>\n            <li><b>location:</b> URL where you should send your next chunk</li>\n            <li><b>bytes_uploaded:</b> number of bytes uploaded for the specific upload ID</li>\n            <li><b>bytes_total:</b> total number of bytes which will be uploaded</li>\n            </ul>","content":{"application/json":{"schema":{"type":"object"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

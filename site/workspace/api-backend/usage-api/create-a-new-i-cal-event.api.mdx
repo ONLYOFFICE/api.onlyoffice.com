@@ -1,0 +1,71 @@
+---
+id: create-a-new-i-cal-event
+title: "Create a new iCal event"
+description: "Creates a new iCal event in the selected calendar with the parameters specified in the request."
+sidebar_label: "Create a new iCal event"
+hide_title: true
+hide_table_of_contents: true
+api: eJzVVm1v4jgQ/iuRP0MJoaUt33ot0lZ3ulYF7qSt+GAS03ib2DnbgWWj/PebsRNIyltXWp10fEB+mRnPPDOTeQpi6Jsmo1cS0oSJiKreeMWE0WTeIZqFueJmA9cFuctNLBX/QQ2X4gujEVOopmBFOmQNcozMS9CKmA4Vz1CMjMg9CBimPeoJtvb4PU08hg94XHgmZp5mCQsNi7z6fW/NTWyvMqpoygxT2tMZC/mSg1ilptg/OdPmAp6ulr/JCBwtSCiFAfu4pFmW8NA63Pum0Z2C6DBmKcWV2WQMHJSLb+AA2MmUzJgynGlrpnLnMcLdh5hqVx8fQK+yw+HZN8Ck7BAe6n2lcTNqi8NSqpSanQVtFBdvaADsKzO1p4fNCGkADheaZ9UP+aFjihafrO5Rlyopj4Yh07qB+s4mVYpuYAs5TvUh7Aw3CR5MnK1ntEFKcMHmesYPgOgenzUhrAGwP0yszsBvl4/A94/YAP2fzfnZeNq14Gqg7SSE9p2mmY26j2BXQZ6QCgaX64ii7H2ruI6rbIvwAbX+hLyclneYWjmQf2hidV6tKQ7ad0nyQDd/SJDdKS+kTBgVLe0lTbR9b2KoMqdfCvzA7/aDrt+f+sPRYDjq+xc3w8ury5vgK5oYizOInDPwwjL43rzkyRmkXISs5e+R7Nd9+KG/OqTqX3s0CFrmu31b/XVbWIDtc38rKFDXnY8au4VFZ+A1KmeuZsRM6HyBSVqwTyo96nHEDV0k5xS2SXxmKuVa1x+M09DMNFO21/Wvbq4ttnnOo3YFLKMlu7q+7g7CYNi9vB4Mu7fR8ra7uKLDm8FicXMV+J/rlr/wM7vxvm7e5aqVrkZYZfO8iQ0cP60FzsD/eYC2b02uP1niIk9x7E+hoOEju8LBcy/FkquUYRhQpSFLEljvMYFX3+t6W72O14ftVrXjBbitteetOGy4X6i+M4aGcWrpyX457zXcttfcOLn0+/sTZCZoxWvAZZSC0RdLyBjJpLa5pCaGXY9mvBdc+L0tTYIhz6rxA2iucF4iTcpVAuKxMZke9XpFDFbKUZFJZUqQXMF4xG60/uOd82hJ8wRRTiSYt8fgCeq0r2/82wCjaVCzCY42Z+4gQdt1ZcZ/Z7YtMezYXXeIsEXU1rU44Ox82TGrcZ2MNjPyK7Kzq74GdfH3Gchrgc7vSEGD83CxlNbfKoX3Mk1zASF6Ewuv9zKeTL2750eEEdB2+UuQXFZwaZNSO+mqoBz13GOe5ENhNijjf8BWq3QY9t30soRyO2tt0RRVrb1irkASqg2pTfUQsUi7AABCVzuvpCgWVLOZSsoSj+EZhXR9vis13METcc3YC/IOdYD42qC7U8ceVzTJXZ184E9lp9a4A4KYmZOy80YDPT9NpiC8qHh5KiPUUXSNnB3+YQh3iNxxU3tWQEbFW07fUNbZxGrEJm0X87st5mqBUdVXYtPwsF3XnSoQ/MewDqoUhWuVstzKu6ujGttmctKY0jl4/S9GH33b
+sidebar_class_name: "post api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Create a new iCal event"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/api/2.0/calendar/icsevent"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Creates a new iCal event in the selected calendar with the parameters specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"calendarId":{"description":"Calendar ID","type":"integer"},"ics":{"description":"Event in the iCal format","type":"string"},"alertType":{"description":"Event notification type","type":"integer"},"sharingOptions":{"description":"Event sharing access parameters","type":"array","items":{"type":"object","title":"SharingParam"}},"eventUid":{"description":"Event UID","type":"string"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Event","content":{"application/json":{"schema":{"type":"array","items":{"type":"object","properties":{"Id":{"type":"string","example":"1"},"Uid":{"type":"string","example":"1234wda"},"CalendarId":{"type":"string","example":"calendarID"},"Name":{"type":"string","example":"Event Name"},"Description":{"type":"string","example":"Event Description"},"AllDayLong":{"type":"boolean","example":"false"},"Start":{"type":"string","example":"2020-12-01T06:36:10.8645482Z"},"End":{"type":"string","example":"2020-12-01T06:36:10.8645482Z"},"RepeatRule":{"type":"string","example":""},"Alert":{"type":"object","properties":{"Type":{"type":"integer","format":"int32","example":"-1"}},"title":"EventAlertWrapper"},"IsShared":{"type":"boolean","example":"true"},"CanUnsubscribe":{"type":"boolean","example":"true"},"IsEditable":{"type":"boolean","example":"false"},"Permissions":{"type":"object","properties":{"UserParams":{"type":"array","items":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"2fdfe577-3c26-4736-9df9-b5a683bb8520"},"Name":{"type":"string","example":"Valery Zykov"}},"title":"UserParams"}}},"title":"Permissions"},"Owner":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"2fdfe577-3c26-4736-9df9-b5a683bb8520"},"Name":{"type":"string","example":"Valery Zykov"}},"title":"UserParams"},"Status":{"type":"integer","format":"int32","enum":["Tentative","Confirmed","Cancelled"],"description":"[0 - Tentative, 1 - Confirmed, 2 - Cancelled]","example":"0"},"HasAttachments":{"type":"boolean"}},"title":"EventWrapper"}}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

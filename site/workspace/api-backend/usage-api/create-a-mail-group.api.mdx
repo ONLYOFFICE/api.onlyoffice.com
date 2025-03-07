@@ -1,0 +1,71 @@
+---
+id: create-a-mail-group
+title: "Create a mail group"
+description: "Creates a mail group with the parameters specified in the request."
+sidebar_label: "Create a mail group"
+hide_title: true
+hide_table_of_contents: true
+api: eJzlVd9P2zAQ/lcsP3ekFB62Pq0DtKFtGqLwVFWTm1wbQ2J7tgN0Uf733dkJSSlM08Se1ofUyX13vvvuV8292Dg+XfBSyMKBvQObfMUj21hdGceXI+4graz0W0TVfFb5XFv5U3ip1ScQGVjStnjiI36POODLBrUycKmVhmB8yk8Q4MExwcpH4+xe+pz5HJgRVpTgwTrmDKRyLSFjUgWZhR8VOH+A1tvjB52hLzVPtfKgPB2FMYVMg0/JjaMba+7SHEpBJ781gD7o1Q2kHu0Yqw1YL8GRVOHV9L/r8BwUhsaCcNRZcN5KteENRqcxDvVdZvuap0HEzk97PYmObpAoVBRZZsE51HT7ql+k80yvWQtCG643IqwVW3xFhks3CKszPuJrbUvh46ejCW/ij3hzRisXw52Mx/sX9xlnmfCCCed0KjFjWZ8k5Fooou+VeD/P/iSIEYcHUZqCQIeTo2PicBbp+ZdXxCT+vf4ZlflAua2cITRA3mtVbA9SXXJKlJc+iOahD6MPbbCnmJZB7DCM/qXK+F9YeQn0kQq6gyDmeHy4X/rXSrQjDbJwHQ6iXGOI3GgXyBM+x7dEGJlMDsbJYFCGjmmbNcF/TsOSJC7MyspisDz33rhpktQ52mumtdHWN4i8E1aKVRFzQrLo21pUBbFY6FQU4TP6RDq74rfjd6HDB/N5To0XzT07pft6MfIzhIIhAvIoHrWDcFc3MEKdfdnP3rMuWd3s7PM4GIvjJ7NuMV42dONaB0/adJ3osqwUOs9i4tjl2fyKzS7OiSDkMeaooN3REuF8KdTg7rhZdhYLf7J9BqvidRZRy6OHB5+YAiMm10K267ZcFkQyIrFg8NmXDL4Mi4YHkmjJxgJY8LpeCQfXtmga+oxXWlq8y75e6A2vy7vdW/NbTCZRGWJ8c0XOEbyoYrKfjOhm1GnM0hSM/y12OeiHi2/zKwSv2vVb6ox0rLin1YzPKceDDpyHIgzfakye2lRiQ9hok0qKem63Im9DRbYHiqoTqe3Aw93iHLWB0JPCelalrmO9N80jPope1HjsiIim9C7R61+rnR5H
+sidebar_class_name: "post api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Create a mail group"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/api/2.0/mailserver/groupaddress/add"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Creates a mail group with the parameters specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"name":{"description":"Sender name","type":"string"},"domain_id":{"description":"Domain ID","type":"integer"},"address_ids":{"description":"List of address IDs","type":"array","items":{"type":"integer","format":"int32"}}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Mail group data associated with the tenant","content":{"application/json":{"schema":{"type":"object","properties":{"Id":{"type":"integer","format":"int32","example":"1234"},"Address":{"type":"object","properties":{"Id":{"type":"integer","format":"int32","example":"1234"},"DomainId":{"type":"integer","format":"int32","example":"1234"},"Email":{"type":"string","example":"Email@only.com"}},"title":"ServerDomainAddressData"},"Addresses":{"type":"array","items":{"type":"object","properties":{"Id":{"type":"integer","format":"int32","example":"1234"},"DomainId":{"type":"integer","format":"int32","example":"1234"},"Email":{"type":"string","example":"Email@only.com"}},"title":"ServerDomainAddressData"}}},"title":"ServerDomainGroupData"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

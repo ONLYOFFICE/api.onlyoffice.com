@@ -1,0 +1,71 @@
+---
+id: get-filtered-login-events
+title: "Get filtered login events"
+description: "Returns a list of the login events by the parameters specified in the request."
+sidebar_label: "Get filtered login events"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVMFu2zAM/RVB56zOih223LIt6Ir1MDQtdihyUGzGVmtLmkS3zQz/+0jJSZw2HTBgOSSMyEeRj4/qJKoyyNmdDJC3XuM2u7KlNqLSAa3fytVk76GoTs5brKzXvxVqa76BKsAz2pMlJ/KJ4kCuekIVEHKvHYfJmbwGbL0JQomaEgu7EViBqONV8AgGg1hv45lTXjWA4IMIDnK90VAIimKfh18tBDyjmwbzsy2ork7m1iBlYVM5V+s81pfdB769kyGvoFFs4dYB1WPX95Aj5XHeOvCoIbC3DeAvC7aOy7+lc3H5leIHfECvTSn7iVR5inkJmafzPUJTgSWRRZCNt81rwBKVR1EoIvDENWhfIxameCM+fpik4KwJqbfz6fR1iqthGhtdE+XE9HgklPdfeVXeqy3hSAZNOMU3aqz5IKpswdf89JSZiUk1f5i+P8G/UYPuoJAcRQqpLA1KlhCnqLCiP5lyOjs/m2Z7Mau20JjFprLUo2RB+0fSV9Rz62sCVoguzLKsq2zAftY567GnyEfltVrXiUD2pdI2qq3JlLXNVR2PqSTGHLs/Tj+dc1ujHVoyYSndyU06EOn0d4hMcv9Vck+kod1gcY2xkRCeyPVhJxbPqnFM9EHTO3EcJDvdSfHgYpmNVKfNJupuN7UvtmlaQ32IZeRQXC+WN2L+45K5IkrTtGrS5I6TgI2KUhkqvwB8U2xHMx/t9P9/PQaSEZ4xc7UijqnYKIVu0NIdT4AiSU1y9AQSeawo+o230++gKppx0sed7Lq1CnDr677nY7rU89u5OsiJ/9GF1e757OQDzZrpjR2/u+HyOLxukxZebF4/2SHmeQ4O/xq7Gm3LxeKGYtfDo9nYgiFePfGDSt8zSYaNA4gSjWcdzdOUrSo5NqVkwfFCHuv1Iep1MLipnctsRwUeS3cy9MHf3NVJSNelbej7fXxyvYnY70uK5vmuqOo/m7ViEg==
+sidebar_class_name: "get api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get filtered login events"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/security/audit/login/filter"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns a list of the login events by the parameters specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"userId":{"description":"User ID","type":"string"},"action":{"description":"Action","type":"integer"},"from":{"description":"Start date","type":"string"},"to":{"description":"End date","type":"string"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"List of filtered login events","content":{"application/json":{"schema":{"type":"array","items":{"type":"object","title":"LoginEventWrapper"}}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

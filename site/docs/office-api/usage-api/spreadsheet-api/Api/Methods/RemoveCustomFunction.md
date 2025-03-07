@@ -25,10 +25,6 @@ boolean
 This example clear current custom function.
 
 ```javascript editor-xlsx
-// How to delete custom created function from the library.
-
-// Remove custom function library.
-
 Api.AddCustomFunctionLibrary("LibraryName", function(){
     /**
      * Function that returns the argument
@@ -40,9 +36,9 @@ Api.AddCustomFunctionLibrary("LibraryName", function(){
         return first + second;
     });
 });
-var oWorksheet = Api.GetActiveSheet();
-oWorksheet.GetRange("A1").SetValue("=ADD(1, 2)");
+let worksheet = Api.GetActiveSheet();
+worksheet.GetRange("A1").SetValue("=ADD(1, 2)");
 Api.RemoveCustomFunction("add");
-oWorksheet.GetRange("A3").SetValue("The ADD custom function was removed.");
+worksheet.GetRange("A3").SetValue("The ADD custom function was removed.");
 
 ```

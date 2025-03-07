@@ -186,11 +186,11 @@ Repository on GitHub: [photoeditor](https://github.com/ONLYOFFICE/onlyoffice.git
 - button
 - init
 - onTranslate
-- [callCommand](../../interacting-with-editors/methods/text-document-api/Plugin/Methods/callCommand.md)
+- [callCommand](../../interacting-with-editors/overview/how-to-call-commands.md#callcommand)
 - [executeMethod ("GetImageDataFromSelection")](../../interacting-with-editors/methods/text-document-api/Api/Methods/GetImageDataFromSelection.md)
 - [executeMethod ("GerVersion")](../../interacting-with-editors/methods/text-document-api/Api/Methods/GetVersion.md)
 - [executeMethod ("PutImageDataToSelection")](../../interacting-with-editors/methods/text-document-api/Api/Methods/PutImageDataToSelection.md)
-- [resizeWindow](../../interacting-with-editors/methods/text-document-api/Plugin/Methods/resizeWindow.md)
+- [resizeWindow](../../customization/windows-and-panels.md#interacting-with-a-window)
 - [Asc.scope](../../interacting-with-editors/overview/how-to-call-commands.md#ascscope-object) object
 - [info.editorType](../../interacting-with-editors/overview/how-to-call-commands.md#editortype)
 

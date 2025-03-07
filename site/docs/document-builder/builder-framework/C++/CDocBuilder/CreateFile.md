@@ -1,3 +1,6 @@
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 # CreateFile
 
 Creates a new file. The type of the file which will be created needs to be set.
@@ -16,18 +19,19 @@ bool CreateFile(sExtension);
 
 ## Example
 
-### C++
-
-```cpp
-std::wstring sWorkDirectory = NSUtils::GetBuilderDirectory();
-CDocBuilder::Initialize(sWorkDirectory.c_str());
-CDocBuilder oBuilder;
-oBuilder.CreateFile("docx");
-CDocBuilder::Dispose();
-```
-
-### .docbuilder
-
-```ts
-builder.CreateFile("docx")
-```
+<Tabs>
+    <TabItem value="cpp" label="C++">
+        ```cpp
+        std::wstring sWorkDirectory = NSUtils::GetBuilderDirectory();
+        CDocBuilder::Initialize(sWorkDirectory.c_str());
+        CDocBuilder oBuilder;
+        oBuilder.CreateFile("docx");
+        CDocBuilder::Dispose();
+        ```
+    </TabItem>
+    <TabItem value="builder" label=".docbuilder">
+        ```ts
+        builder.CreateFile("docx")
+        ```
+    </TabItem>
+</Tabs>

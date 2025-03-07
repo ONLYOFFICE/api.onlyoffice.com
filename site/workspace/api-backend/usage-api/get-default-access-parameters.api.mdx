@@ -1,0 +1,63 @@
+---
+id: get-default-access-parameters
+title: "Get default access parameters"
+description: "Returns the default values for the sharing access parameters."
+sidebar_label: "Get default access parameters"
+hide_title: true
+hide_table_of_contents: true
+api: eJzlVclu2zAQ/RWBZztynd03wzVSo0AbxAl6CHygpHGkhCJZknLjCvr3zlD0ojSpU/TYiy1xFs68N/NUM8cfLBvds5QLkBk38SQ82IjLLLJVYlNTaFcoadmixyyklSncGmNqNq5crkzxk5P5E/AMDOUy+MR67Af6AVs0GJXBNgsbsRtwlZE2cjlEGSx5JVy04qICGy2V8cc256aQDxFPU7A20tzwEhwYe4SJDViN5QAWXrPhYEB/3Rs+hqxvpsEsqZIOpKNgrrUoUt9F/GgpQ81smkPJ6cmtNWBOlTxC6jBQG6XBuKK9f7ziheCJgK8BpF0EN4avMQBhKO3hTLNsz8c6Khx94JmXWtCRh7XpsS/Yw589b9AzUlKsyT1gsReRKCWAy06IMxXsec/dWhy4pC0HQ1zh/MHYg9zC4A2zF33/LR7odgiT4TJbwun5ef84HZ71T86Pz/qX2fKyn5zys4vjJLk4HQ5YKOUwbtMVmLWSHoiZvTKq0u+EbcLlNCveC/K8HcsA1f83GBvDdZXg3hE33wzuIKpH87p5ooRAZNp4cjkZfPh96+8kD4IEbQG467lC8NgDeFS5y/El5rqIh0eDeKt5QSYYyZtZkTyQulVGoHfunLajOK5zZV0zqrUyrkHPFYbQ2nuGyNbWEyBlQmF2f4x1UEzXfDG4HFIre4o6J8EJmvKaru7WSBefwe8RNZ235h6Tnv1urEehkEvlwwOsE1WWlcQbo7nvNrqZzm+j8fWMusLmWzAFd7Cp3rqS+zkNd1yB2wr3a9LaoaXeKe0/K39AwMGzi7XgCADW53mqA7v3BA96Ir+k8YFhYjZwjIi3bN2zuk64hTsjmoaOv1e4/Xi+2JFLb3hDvvm01ewJkW8nWjs/BVi85+TFF4SY3Y7f1fQWfWk4uzQ+eRrDA2XfmOR6L3eX0V4ogX6b3hshdd0OSdNs/VvTmxHbMWq9CdkFzucvvSzF4Q==
+sidebar_class_name: "get api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get default access parameters"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/calendar/sharing"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns the default values for the sharing access parameters.
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Default sharing access parameters","content":{"application/json":{"schema":{"type":"object","properties":{"AvailableOptions":{"type":"array","items":{"type":"object","properties":{"Id":{"type":"string","example":"read"},"Name":{"type":"string","example":"Read only"},"Default":{"type":"boolean","example":"true"},"DefaultStyle":{"type":"string","example":"read"}},"title":"AccessOption"}},"Items":{"type":"array","items":{"type":"object","properties":{"ItemId":{"type":"string","example":"2fdfe577-3c26-4736-9df9-b5a683bb8520"},"ItemName":{"type":"string","example":"Everyone"},"IsGroup":{"type":"boolean","example":"true"},"CanEdit":{"type":"boolean","example":"true"},"SharingOption":{"type":"object","properties":{"Id":{"type":"string","example":"read"},"Name":{"type":"string","example":"Read only"},"Default":{"type":"boolean","example":"true"},"DefaultStyle":{"type":"string","example":"read"}},"title":"AccessOption"}},"title":"PublicItemWrapper"}}},"title":"PublicItemCollection"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

@@ -22,24 +22,20 @@ expression.GetPivotByName(name);
 
 ## Example
 
-This example shows how to get a pivot table by its name.
+
 
 ```javascript editor-xlsx
-// How to find a pivot table.
+let worksheet = Api.GetActiveSheet();
 
-// Get a pivot table and by its name and update its fields.
+worksheet.GetRange('B1').SetValue('Region');
+worksheet.GetRange('C1').SetValue('Price');
+worksheet.GetRange('B2').SetValue('East');
+worksheet.GetRange('B3').SetValue('West');
+worksheet.GetRange('C2').SetValue(42.5);
+worksheet.GetRange('C3').SetValue(35.2);
 
-var oWorksheet = Api.GetActiveSheet();
-
-oWorksheet.GetRange('B1').SetValue('Region');
-oWorksheet.GetRange('C1').SetValue('Price');
-oWorksheet.GetRange('B2').SetValue('East');
-oWorksheet.GetRange('B3').SetValue('West');
-oWorksheet.GetRange('C2').SetValue(42.5);
-oWorksheet.GetRange('C3').SetValue(35.2);
-
-var dataRef = Api.GetRange("'Sheet1'!$B$1:$C$3");
-var pivotTable = Api.InsertPivotNewWorksheet(dataRef);
+let dataRef = Api.GetRange("'Sheet1'!$B$1:$C$3");
+let pivotTable = Api.InsertPivotNewWorksheet(dataRef);
 
 Api.GetActiveSheet().GetPivotByName(pivotTable.GetName()).AddFields({
     rows: 'Region',

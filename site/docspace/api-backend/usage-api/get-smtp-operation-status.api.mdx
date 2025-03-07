@@ -1,0 +1,63 @@
+---
+id: get-smtp-operation-status
+title: "Get the SMTP test process status"
+description: "Returns the SMTP test process status."
+sidebar_label: "Get the SMTP test process status"
+hide_title: true
+hide_table_of_contents: true
+api: eJyVVMFu2zAM/RVB5zTOsh223Ip1KIphWNG0GIYiKBSZSdTalibRXTvD/z5SchwnWYv1kljS4yPF96hGoloHObuVc9C1N/gsMjH/dn0pAiCais4WI2kdeIXGVhe5nMk14LxE9327OUeFdZAj6SE4WwUgvkZOJxP+yyFobxzjKDQy92wibCO1rRAq5ADlXGF0PM/uA0c1MugNlIq/8NkB8djlPWikQOeZDU3KqW3pCkDIB9CltQWoirAHpTjQZkWBwqwEbkAc1GaC6OmE9aKynA+eFO/JGfoa2pE0w1QBPXXsONM+8cUZIaq6KNRySzTglU2wJZx4VeW2PFnXJm8l5QHvrX9zqhT1Wjbm7lR4K3kv3uvshNck7ZDfkNhr8EcJLhNUrUHY1aEenRiMHMmV9aXCRPV+OtRl0lJOleeGkaq4HPhjpYpA5aHBWNzp/PP41JnxvDP6mE09/oezr+BXDQHDGVrZtsz/YfLu2Ns3lapxY735Q/6LoOkx6KetvXDeaMooXKEqkVuyIJlLhNo565G8SNazKYCThW4waUhpOoK+4zR3D8AbNHIqp+v/JgDIRbs4bOkVYO2rsDM40k2oAKshhE7CMRGUQKV3w81jpXBDi0w5k03HkyxQV7YPQlxkzJP1FgjgH8GHWGLtCwrdIEXMsqzZ2IDtrOGrtYR8VN6wWaIf+Cz1aKXqgvUsrFZF3GbrUMz+8cfJpylrsNi1Zc5vQ6Lbb05vN7rEV9ogo6oyrocwGmHuk7b2wUDst6lWNkYPfPIDluwVrp+umVr7OE01BixVfKU6+nPAV9t9aPtm9/r9t1zdzRCeMCMX0RWolNj4ptPulq9NSFKP9Rno1y2ZhchlP//U06THrWyapQpw44u25W2yv2e3LXby8YpSbsh+NMgse+y5PNUaHEadizo1/+A5Z+16t51/uSYsi7GvV1Km+2D27VH1POTeFzJVwL/t6IWIpklmaNsen45ejOhuuEVzpxdkwL+94H2N
+sidebar_class_name: "get api-method"
+info_path: site/docspace/api-backend/usage-api/asc-web-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get the SMTP test process status"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/smtpsettings/smtp/test/status"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns the SMTP test process status.
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"SMTP operation status","content":{"application/json":{"schema":{"type":"object","properties":{"completed":{"type":"boolean","description":"Specifies if the SMTP operation is completed or not","example":true},"id":{"type":"string","description":"SMTP operation ID","nullable":true,"example":"{some-random-guid}"},"error":{"type":"string","description":"SMTP operation error","nullable":true,"example":""},"status":{"type":"string","description":"SMTP operation status","nullable":true,"example":""},"percents":{"type":"integer","description":"Percentage of SMTP operation completion","format":"int32","example":0}},"additionalProperties":false,"title":"ASC.Api.Settings.Smtp.SmtpOperationStatusRequestsDto"}}}},"401":{"description":"Unauthorized"},"402":{"description":"Your pricing plan does not support this option"}}}
+>
+  
+</StatusCodes>
+
+
+      

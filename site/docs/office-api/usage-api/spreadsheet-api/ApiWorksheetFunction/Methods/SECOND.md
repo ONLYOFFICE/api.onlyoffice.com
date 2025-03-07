@@ -22,18 +22,14 @@ number
 
 ## Example
 
-This example shows how to return the second, a number from 0 to 59.
+
 
 ```javascript editor-xlsx
-// How to get seconds from time.
+const worksheet = Api.GetActiveSheet();
 
-// Use a function to return seconds from time object.
+let func = Api.GetWorksheetFunction();
+let ans = func.SECOND("16:39:35"); 
 
-const oWorksheet = Api.GetActiveSheet();
-
-var oFunction = Api.GetWorksheetFunction();
-var ans = oFunction.SECOND("16:39:35"); 
-
-oWorksheet.GetRange("C1").SetValue(ans);
+worksheet.GetRange("C1").SetValue(ans);
 
 ```

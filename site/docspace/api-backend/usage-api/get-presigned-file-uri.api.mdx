@@ -1,0 +1,71 @@
+---
+id: get-presigned-file-uri
+title: "Get file download link asynchronously"
+description: "Returns a link to download a file with the ID specified in the request asynchronously."
+sidebar_label: "Get file download link asynchronously"
+hide_title: true
+hide_table_of_contents: true
+api: eJy1VU1v2zAM/SuGThtgxFlWDF1uRbt1xXYo+oEdiqBQbCZWo0iaRKfNDP/3kVI+2xTtZZfYlh4pke89phUop0EM78R3pSFkRRafYpQL68BLVNZcVGIopoCXHoKaGqgYcuuVyIWTXs4BwXOKVhj6IOyE9ikoF8rQl5NY03sFofTKcUJa5BTZxRmte/jTKA90BvoGchHKGuZSDFuBS8fZlEGYgifoxPq5xLT0eUAL8CTnThPo6/HRl64bcbbgrAlUASUY9Pv8OHByZR+NtrLKtDIzSlRaOsQgo6VzWpWx8OIhcEj78k52/AAlcgM8twlVOpALT4gNMqBXZnq4/gjJhWm0lmMuI3VgU5UIdk4oeELR5QLtDMzbmW8i7N1ZG6/fznlLoJ32N5H7dx1AJ8iqUpxH6sudZk2kDhSECmPIyfVpLyqvd2o99H6AJmTondmymRMx1+AXqoR7hvxiyrqOUx/1P70k+NbIBmvr1V8SFaMClHRjXEaJylDe8/79DHiBBCNZqY8EADFiCe1nuwJsvAmZjFLJ0G61IzPmO3tUWGdYs5yz4KBUEwVVpkxcY3VDwEyGpSlrb41tgl726ESyTW1XzopOIpcMRSGdKga9fsGpQ/wt2uSnrnBrAwouyi/WtoscihrRhWFRtLUN2A1bZz12hFxIr5inqFDeSy2byEYzmdqWUsdlahXH7G8f978OuNujbR+v2Q0p3X43NzKiIn7SQr4eCHuw1VgorZ0piAQpM7ExekcMv2HcO3GsMy4zcbEYpDsGnMvohFX6c8BExZ6tn/X8uajbren/H8mrfrAXCqclFb61XGL8jptFSOKcLRaHb3rSY7iZpFvqiYhE4p1o27EMNIl11/EyXcKzpkdbzqM8KhX4vdqY7tU+fLhaDeOP2XZAH6xhTbRZRoXphr/oNepg/QfQjQhZk8FoevNF0uZJWYLDnbAXE5fFtrHH+bcbwrJ69gWWpLR64ewHr/RMeekG/Nvlr0S0bVJv123waevViFWFazQ3aESO+Qdn7YJ4
+sidebar_class_name: "get api-method"
+info_path: site/docspace/api-backend/usage-api/asc-web-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get file download link asynchronously"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/files/file/{fileId}/presigned"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns a link to download a file with the ID specified in the request asynchronously.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"fileId","in":"path","description":"File ID","required":true,"schema":{"type":"integer","format":"int32","example":9846}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"File download link","content":{"application/json":{"schema":{"type":"object","properties":{"filetype":{"type":"string","description":"File type","nullable":true,"example":"some text"},"token":{"type":"string","description":"Token","nullable":true,"example":"some text"},"url":{"type":"string","description":"Url","format":"uri","nullable":true,"example":"some text"}},"additionalProperties":false,"title":"ASC.Files.Core.Helpers.DocumentService_FileLink"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

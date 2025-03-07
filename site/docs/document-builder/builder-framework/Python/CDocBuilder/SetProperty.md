@@ -1,3 +1,6 @@
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 # SetProperty
 
 Sets an argument in the UTF8 format to the builder class which can be trasferred to the program outside the [CDocBuilder.ExecuteCommand](../CDocBuilder/ExecuteCommand.md) method, i.e. either as an additional property when running ONLYOFFICE Document Builder executable file or as a part of program code, but not included into the document file script.
@@ -39,18 +42,19 @@ Argument.name === "ONLYOFFICE" # true
 
 ## Example
 
-### Python
-
-``` py
-builder = docbuilder.CDocBuilder()
-builder.SetProperty("--argument", L"{\"name\":\"ONLYOFFICE\"}")
-```
-
-### .docbuilder
-
-```sh
-docbuilder.exe "--argument={\"name\":\"ONLYOFFICE\"}" test.docbuilder
-```
+<Tabs>
+    <TabItem value="python" label="Python">
+        ``` py
+        builder = docbuilder.CDocBuilder()
+        builder.SetProperty("--argument", L"{\"name\":\"ONLYOFFICE\"}")
+        ```
+    </TabItem>
+    <TabItem value="builder" label=".docbuilder">
+        ```ts
+        docbuilder.exe "--argument={\"name\":\"ONLYOFFICE\"}" test.docbuilder
+        ```
+    </TabItem>
+</Tabs>
 
 ## Adding or removing fonts
 
@@ -58,15 +62,16 @@ It is also possible to update the font list when you either add new fonts or rem
 
 ## Example
 
-### Python
-
-``` py
-builder = docbuilder.CDocBuilder()
-builder.SetProperty("--check-fonts", L"true")
-```
-
-### .docbuilder
-
-```sh
-docbuilder.exe "--check-fonts=true" test.docbuilder
-```
+<Tabs>
+    <TabItem value="python" label="Python">
+        ``` py
+        builder = docbuilder.CDocBuilder()
+    builder.SetProperty("--check-fonts", L"true")
+        ```
+    </TabItem>
+    <TabItem value="builder" label=".docbuilder">
+        ```ts
+        docbuilder.exe "--check-fonts=true" test.docbuilder
+        ```
+    </TabItem>
+</Tabs>

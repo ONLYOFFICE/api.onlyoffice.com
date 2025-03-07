@@ -22,18 +22,14 @@ number
 
 ## Example
 
-This example shows how to return the ISO week number in the year for a given date.
+
 
 ```javascript editor-xlsx
-// How to get the ISO week number.
+const worksheet = Api.GetActiveSheet();
 
-// Use a function to get an ISO week number in the year.
+let func = Api.GetWorksheetFunction();
+let ans = func.ISOWEEKNUM("9/1/2017"); 
 
-const oWorksheet = Api.GetActiveSheet();
-
-var oFunction = Api.GetWorksheetFunction();
-var ans = oFunction.ISOWEEKNUM("9/1/2017"); 
-
-oWorksheet.GetRange("C1").SetValue(ans);
+worksheet.GetRange("C1").SetValue(ans);
 
 ```

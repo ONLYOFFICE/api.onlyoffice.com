@@ -1,3 +1,6 @@
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 # createFile
 
 Creates a new file. The type of the file which will be created needs to be set.
@@ -16,17 +19,19 @@ boolean createFile(int | String type);
 
 ## Example
 
-### Java
 
-``` java
-CDocBuilder.initialize("");
-CDocBuilder builder = new CDocBuilder();
-builder.createFile(FileTypes.Document.DOCX);
-CDocBuilder.dispose();
-```
-
-### .docbuilder
-
-```ts
-builder.CreateFile("docx")
-```
+<Tabs>
+    <TabItem value="java" label="Java">
+        ``` java
+        CDocBuilder.initialize("");
+        CDocBuilder builder = new CDocBuilder();
+        builder.createFile(FileTypes.Document.DOCX);
+        CDocBuilder.dispose();
+        ```
+    </TabItem>
+    <TabItem value="builder" label=".docbuilder">
+        ```ts
+        builder.CreateFile("docx")
+        ```
+    </TabItem>
+</Tabs>

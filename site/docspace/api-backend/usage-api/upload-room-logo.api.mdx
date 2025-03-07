@@ -1,0 +1,71 @@
+---
+id: upload-room-logo
+title: "Upload an image for room logo"
+description: "Uploads a temporary image to create a room logo."
+sidebar_label: "Upload an image for room logo"
+hide_title: true
+hide_table_of_contents: true
+api: eJydVU1z0zAQ/SsenVM7TXuA3EpLmQ4UMg2FQybTUex1ola2hCSHGo//O7uSkzhtgAyXxLb24+m9p1XDHF9aNp6xayHBRkl0p1Rh2XzAlAbDnVDlTcbGrNJS8YwWP6mlYgNm4EcF1r1TWc3GDUtV6aB09FhU0gnNjUtyZYqTjDtOn226gsI/uVoDllSLR0gdltKGejkBllavMelSSYlr2LwXz43hNYYLB4X9d50nqHtB1hlRLjGorKTkC4nfnKlgwOCZF1r6EFVA5ODZsXbA1lxWcETzrm7bKzTrVZq3uMKzTNBeuJz0EOZcWuzvhPPdp7XF0vFu5zb+ACUYkcYfof5GcCZcmLiLm/q+8a1IjbIqd/H7Z+Tf+ryJEQU2XIPtwny2JZAZ2NQIHZhlNwVfQuQFagkolKnKaDsHZbCu9khJVYqnDANWY8vA+Gg4pL/9HvfeOBEGoi2QwJ5RuNZSpN5jyaPtmhzpElulKdi+EgulJPCSvdzkVEMqckyLRB65FURbY0fCRl2dvJKRMlGpqNNWSXIIkdY5eL/uFX39i58aJmibp6Oz88HGJn2TDbaIQx9sVCASVOSQbfd733aBR9r5WA9eTC9jPwfQhgbiCy1uVQbSxnedzFdOxUHQO68nvrNghPPh6QHtS165lTLiF2TMB529DvqsIsRTCOvNGzn/Sh5DsVAgHvxHPSyklREOj/UMzWPTB6r+4M/5DJ3IM+TjJwYAHrv5S8oCbKyHnBRaGW7qSHj/Y8cUsx3gmsEBF0mccDEjORA8DT+trHcgdyt8S7gWySgeJjlRlVC0ZYTOrMFYD64yEgNXzmk7TpJmhfntuMGurmU0W4wgzbx7aS2QknM6IWMmVcql/4x7ppz95TfDtyMifb4jZEqHJpTbp2U3vrTAKUJ+4YV/74fhVCOGUqWeBHimRZkrn90zxndYkCMIP24zkLoeBYzWFdwf3658d+h52VGMcu6ofenm3uXxPyp1OySnJ1py3ApC8gI0nWIz2j5Gomb461XD/6AbshgUmLGmWXAL90a2LX3G682Qs+Y7wegNi6/QamC80J5ldhnwn3wlKNu74+BF2A42SRc4eLTrhb8ahyTx1oOTL9OvfmaE+7bAg9nN4iwMou1jAEnq7hsgSN09EPjNUln3Uew7I2ClX0J+MKNpgrvadhsflv6Y0RG4iSbJ8KJsfwPCePW5
+sidebar_class_name: "post api-method"
+info_path: site/docspace/api-backend/usage-api/asc-web-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Upload an image for room logo"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/api/2.0/files/logos"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Uploads a temporary image to create a room logo.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"multipart/form-data":{"schema":{"type":"object","properties":{"FormCollection":{"type":"array","items":{"type":"object","properties":{"key":{"type":"string","nullable":true,"example":"some text"},"value":{"type":"array","items":{"type":"string"},"example":["some text"]}},"additionalProperties":false,"title":"System.Collections.Generic.KeyValuePair.System.String.Microsoft.Extensions.Primitives.StringValues"},"description":"Image data"}}},"encoding":{"FormCollection":{"style":"form"}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Upload result","content":{"application/json":{"schema":{"type":"object","properties":{"success":{"type":"boolean","description":"Specifies if the operation is successful or not","example":true},"data":{"description":"Data","nullable":true,"example":{"int":1234,"string":"some text","boolean":true}},"message":{"type":"string","description":"Message","nullable":true,"example":"some text"}},"additionalProperties":false,"title":"ASC.Files.Core.ApiModels.ResponseDto.UploadResultDto"}}}},"401":{"description":"Unauthorized"},"403":{"description":"No permissions to perform this action"}}}
+>
+  
+</StatusCodes>
+
+
+      

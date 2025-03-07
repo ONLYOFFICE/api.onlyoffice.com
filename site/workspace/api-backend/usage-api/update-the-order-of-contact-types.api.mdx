@@ -1,0 +1,71 @@
+---
+id: update-the-order-of-contact-types
+title: "Update the order of contact types"
+description: "Updates the order of the contact types with a list specified in the request."
+sidebar_label: "Update the order of contact types"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVd1v2jAQ/1ci75U1lFbaxltHKw1t0qoC2gPiwSQHcZvEnu1AWZT/fXe2U5J+IHUaD8j2ff/ud5eaWb41bLxkiS7iiSwtT6xhqwEzkFRa2APKanZV2Uxq8YdbIctvwFPQZKPxxAZsj3rAVg1apWASLRSpsTFbqJRbMJHNIJIajSK5cZfEB4rsQaF4L2wW8SgXxkZGQSI2AtJIlE5Vw+8KjD3DOOH4VaaYVc3ICZSWjlypXCQuu/jeUOyamSSDgtOJomA2cn0PiUU/SksF2gowTips7k/95H9QOphvN9coKA9an1xrfsArAlCYTixjtSi3rPE/St0oWRofZzQcvgw36UESii9h74HDEO8t963U3oDhDnJ0uIMpqU9k5SMFG4Ghty6LjdQFt/7pYoQP8MgLlZPSOcNC5wTQSyC6el4Fda+7AJyy6Cqi3UTmUp+2+MA/bRKEGbVnUtufDsN/qWd6/W6z0cUlo55bD0Xb2Tn6+KWxdeggsOJyeP6SCIuSh2mD1PkpAK8pSlTl2sZthpeYKxGPzoYxDW7gaEx5xhpayhjQO9DGjXClc7TKrFVmHMd1Jo1txrVCcBrU3HEt+DrMAcl8Xhte5VRlLhOeu2fMh2z64s/DLyOqqbM2ZkRH7+7V5XGkqRLfwfGUis+8eMBKXpC0Z+vQIL7fHRfBTYv7cZCXLSFWDXndyCeha0ZRVCUmGM0cONHdzWweXd1OCQTEyvcgp7UVijW24I6fISW/1Po7rbfP2LM12NlU/3sjBgwtPNpY5Vy48XCdrgNPlgQwaiJTaIfoImwS7laAs6ft5BmD/fO9X7K6XnMDC503DT1jRE2fgtWRKnTDaFn7NajZA/bR0x2L/Tj3vnc8r3yfn+2sZtBaXCUJKHtSd9UZg9vFHHXX4StQyJRMNN9TIfg/ZniQDntHP/dWY0vLbcW3pOtdEplo0vpcfHBcDAcqqhWVh06CfVoOQh30T1W9alLXnulN86TvRW9aPM2C16bmrjDrv8Fgoak=
+sidebar_class_name: "put api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Update the order of contact types"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"put"}
+  path={"/api/2.0/crm/contact/type/reorder"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Updates the order of the contact types with a list specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"titles":{"description":"List of contact type titles","type":"array","items":{"type":"string"}}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Contact types in the new order","content":{"application/json":{"schema":{"type":"array","items":{"type":"object","properties":{"RelativeItemsCount":{"type":"integer","format":"int32","example":"1"},"Title":{"type":"string","example":"Title"},"Description":{"type":"string","example":"Description"},"Color":{"type":"string","example":"#a7fc00"},"SortOrder":{"type":"integer","format":"int32","example":"1"},"ID":{"type":"integer","format":"int32","example":"1234"}},"title":"ContactTypeWrapper"}}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

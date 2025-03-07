@@ -1,0 +1,63 @@
+---
+id: get-web-domains
+title: "Get web domains"
+description: "Returns a list of all the web domains associated with the current tenant."
+sidebar_label: "Get web domains"
+hide_title: true
+hide_table_of_contents: true
+api: eJzdVktT2zAQ/isenTM4DRza3BjCANPHMAS4MDko9iYWkSVVkoHU4//eXclJ7AKB6dBLL4ke3z6/1a5r5vnSsfEdK7mQDuwD2HSicaMcmw2Yg6yywq8RUbPjyhfail/cC63OgedgSdLiig3YI+KAzRqUysFlVhiCsTG7Al9Z5RKeSOF8ohcJlzLxBSSPME/yaCzhzulMcA958ih8Ee7RtgXlEw+KK3+ARiw4o5UDdLlmo+GQ/vrWvrU2uroX2r6gD9VlWuHakxZujBRZCC29d6SqZi4roOS08msDqJxby9coh5GWrnOu5/eQkUJjtQHrRXTwIu9gBJpaYsYGDN0puY9HhyM8gCdeGhlAOWsG7MJNC24hj0R0dMy1lsBVT8TbCkjoBy+hA3XeCrXsIQMCkRP1T3z/NDo8IvXfn64g0zZ/28a5dn6/ywGBOi+t0LEO/86nC3cLViwE5O/KJkp44cPBNLyJyMQmsgn3nLROzeK9ob7NjmrZueWyegP6ECAfFhbWQz+uyUqU7w1sChKPtd3v8RZFXFZzfGlfYb1fZAf7uEC3cW0jDecnBWSr/5LJvWr3aInyr93Hy4buj4afnvfgG8XbUYF2CVUCbtEFtoSQUO4L3KTciHR0MEw7s6dt2WkExkMXpk9lJcoU3hs3TtO6wM7QjGujrW8Q+cCt4HMZKSravpLDgleSOoPUGZdF20xIpn/9efhlRBF1Jt6Uen9U9+Lc280EI6hIcShQ6EW8HsQiGPdlQy6EWugg3mb2RJdlpdBiEnOcXJ1Or5PjywuKCoOPKZU4GTfeO1/yMBVaG2fgu+OO/TGA692Y+9BZ3Mbv4cmnRtKgQu8CS3XL8B0lB5HIMf7uWCYPt74S05j3yNkdq+s5d3BjZdPQ8c8KLH19zHYU0w4tFZsPkJqtqJew4ywD40MthHf3fKQTv9tSPDu9RiwVap/MVSCzXZD2zZVad3T3eR20LqxCt3pFpK5jqTTNFr95/q9IbIspoinDM6zS3wnWT0Y=
+sidebar_class_name: "get api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get web domains"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/mailserver/domains/get"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns a list of all the web domains associated with the current tenant.
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"List of web domains for the current tenant","content":{"application/json":{"schema":{"type":"array","items":{"type":"object","properties":{"Id":{"type":"integer","format":"int32","example":"id"},"IsSharedDomain":{"type":"boolean","example":"true"},"Name":{"type":"string","example":"Name"},"Dns":{"type":"object","properties":{"Id":{"type":"integer","format":"int32","example":"1234"},"MxRecord":{"type":"object","properties":{"Host":{"type":"string","example":"Host"},"Priority":{"type":"integer","format":"int32","example":"1234"},"IsVerified":{"type":"boolean","example":"true"}},"title":"ServerDomainMxRecordData"},"SpfRecord":{"type":"object","properties":{"Name":{"type":"string","example":"name"},"Value":{"type":"string","example":"value"},"IsVerified":{"type":"boolean","example":"true"}},"title":"ServerDomainDnsRecordData"},"DkimRecord":{"type":"object","properties":{"Selector":{"type":"string","example":"Selector"},"PublicKey":{"type":"string","example":"PublicKey"},"IsVerified":{"type":"boolean","example":"true"}},"title":"ServerDomainDkimRecordData"},"DomainCheckRecord":{"type":"object","properties":{"Name":{"type":"string","example":"name"},"Value":{"type":"string","example":"value"},"IsVerified":{"type":"boolean","example":"true"}},"title":"ServerDomainDnsRecordData"},"IsVerified":{"type":"boolean"}},"title":"ServerDomainDnsData"}},"title":"ServerDomainData"}}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

@@ -23,10 +23,6 @@ This method doesn't have any parameters.
 This example shows how to get an object that represents the selected range.
 
 ```javascript editor-xlsx
-// How to get selected range.
-
-// Get selection from the worksheet and set its value.
-
-var oWorksheet = Api.GetActiveSheet();
-oWorksheet.GetSelection().SetValue("selected");
+let worksheet = Api.GetActiveSheet();
+worksheet.GetSelection().SetValue("selected");
 ```

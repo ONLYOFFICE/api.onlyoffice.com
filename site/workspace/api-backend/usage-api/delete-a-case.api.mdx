@@ -1,0 +1,71 @@
+---
+id: delete-a-case
+title: "Delete a case"
+description: "Deletes a case with the ID specified in the request."
+sidebar_label: "Delete a case"
+hide_title: true
+hide_table_of_contents: true
+api: eJztV9tuGzcQ/RViXytbq4tvAorAlhVUaGwYttIgdvww2h15ae+SW5LrWBX0Of2RfllnuLo6grVODBQoogdhyJ0ZnrmSMwkc3NmgcxNEJqt3waINbmuBxagw0o3pwyQ4LlyijfwLnNTqN4QYDQsYooJa8JX4MLidklSMNjIyZ7agE5xiig6tABGRWvFVukS4BEX/VNgcIzmSGAup/J7BPwu0bpf0zcgTHdPpkyDSyqFyTEKepzLyKOr3ls+YBDZKMAOm3DhHOlUP7zFypCc3OkfjJBnEagiCjJlaB8kWEyLin8lLOu6ODJz6H8OxuVa21NIMw80qSP6NgJ5hNkRjVxjBGBgTH7k5s9sVXGWQpu+10x9NusJtnZHqjrjxCbI85a3CpMJpMSLegCw9w1gW2fdInkqbpzA+hwxflhtAfI9xLBWKE4gSaVi6b7s6y0GNV2SHWqcIak14BCk5mgSOowit/SCt+34v9eNNSEfaZODYwELGa4eHs9/Ohr/571WuOJMPKK7JanD2QbLoQLp0mxAo8MlJTngEB8YHu1KsLHMK8FIsf2H0SKa4NdRfvtSJNS4iZ5lETdvlHovvgs2f3hUWza8QZ1JRTAw4zeVDFVUaFPRIlR4jfjKQY/mpby+MJCy4JebOFFjmyFUCBuOqKeK5B55x8ryyV8JMW60ma1BFxi3tXCsu5UvqbJ98Wyvp4JvedhOKHcHcNdEgaiFQE83Z8nY9fRhUtzAGVTTenp0VUqGbUBVR7/pckA/Y4nE21Fti+c/fPnOGQ4OPEkpTXjzj/HOJO3WFwe053T2f17N6JGNgmFaP7wlYGVUL70pqzV3aVyPN6ZWXxdEF1Yulq3g4cZd3VVWwpxWzaiHZaLba67jpsoDIkdG4gM1I6E51eFIhQ372r/+uf83jtDEEy5ObYTPcaTR3wsNB46DTOuiE7d29g9Z+63DvuqK/ek+JHEouVKHNHajZG2xWZam21Tti1Y7785b9n2Tp69tgYZ3O3ktM4x94fvYUARqvBb5ai2zvUZNsthjJBxjiFoedSOOSmNOZ+D3mPyAttgR2Y0UeNfbb4f71Qs/rXw0DfHJelPaYPqbuQOQV3SnU4vUT0d0Eo4eS5AGqBHbK8Dc/LRYqy/fFXGv5vFgorokWLee6a6JNq5n6mtijBZ+w/hDZ81mprXx2+1eLkS++M7APL/v5rS7JZUI+vyjfQjvPukud/KkdNr4d7z4qmM2/1GyZK0NaUn4Tn380UAWAS2hdh1zWm7thnUdpHjjrk3Ls7NyEO0e3v0wDHqzNox/vaK4uuCsEiXO57dTrk0RbN+1Mcm0ccz6CkfyC8lXF30poI6DXGImlOoLUbxMklln/fBgeNdmqlVn+iifQUt3GiX5Z8bn8HX3Js/1J+bkWKN9t12W9Q3jEvVxO7b25z5dTdzhlZSPtD1k8gbKsUISL8pl9Ii57VwNxfNFn28lFpfdTymC2cfov1w+HIA==
+sidebar_class_name: "delete api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Delete a case"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"delete"}
+  path={"/api/2.0/crm/case/{caseid:[0-9]+}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Deletes a case with the ID specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"caseid":{"description":"Case ID","type":"integer"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Case","content":{"application/json":{"schema":{"type":"object","properties":{"Members":{"type":"array","items":{"type":"object","properties":{"SmallFotoUrl":{"type":"string","example":"url to foto"},"MediumFotoUrl":{"type":"string","example":"url to foto"},"DisplayName":{"type":"string","example":"Tadjeddine Bachir"},"IsCompany":{"type":"boolean","example":"false"},"AccessList":{"type":"array","items":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"}},"IsPrivate":{"type":"boolean","example":"true"},"IsShared":{"type":"boolean","example":"false"},"ShareType":{"type":"integer","format":"int32","enum":["None","ReadWrite","Read"],"description":"[0 - None, 1 - ReadWrite, 2 - Read]","example":"0"},"Currency":{"type":"object","properties":{"Title":{"type":"string","example":"Chinese Yuan"},"Symbol":{"type":"string","example":"¥"},"Abbreviation":{"type":"string","example":"CNY"},"CultureName":{"type":"string","example":"CN"},"IsConvertable":{"type":"boolean","example":"true"},"IsBasic":{"type":"boolean","example":"false"}},"title":"CurrencyInfoWrapper"},"CanEdit":{"type":"boolean","example":"true"},"CanDelete":{"type":"boolean","example":"true"},"ID":{"type":"integer","format":"int32","example":"1234"}},"title":"ContactBaseWrapper"}},"CreateBy":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"},"Created":{"type":"string","example":"2020-12-08T17:37:04.5736385Z"},"Title":{"type":"string","example":"Exhibition organization"},"IsClosed":{"type":"boolean","example":"false"},"IsPrivate":{"type":"boolean","example":"false"},"AccessList":{"type":"array","items":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"}},"CanEdit":{"type":"boolean","example":"true"},"CustomFields":{"type":"array","items":{"type":"object","properties":{"EntityId":{"type":"integer","format":"int32","example":"14523423"},"Label":{"type":"string","example":"Birthdate"},"FieldValue":{"type":"string","example":"2020-12-08T17:37:04.5916406Z"},"FieldType":{"type":"integer","format":"int32","enum":["TextField","TextArea","SelectBox","CheckBox","Heading","Date"],"description":"[0 - TextField, 1 - TextArea, 2 - SelectBox, 3 - CheckBox, 4 - Heading, 5 - Date]","example":"5"},"Position":{"type":"integer","format":"int32","example":"10"},"Mask":{"type":"string","example":""},"ID":{"type":"integer","format":"int32","example":"1234"}},"title":"CustomFieldBaseWrapper"}},"ID":{"type":"integer","format":"int32","example":"1234"}},"title":"CasesWrapper"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

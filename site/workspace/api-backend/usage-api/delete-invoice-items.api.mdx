@@ -1,0 +1,71 @@
+---
+id: delete-invoice-items
+title: "Delete invoice items"
+description: "Deletes a group of invoice items with the IDs specified in the request."
+sidebar_label: "Delete invoice items"
+hide_title: true
+hide_table_of_contents: true
+api: eJztWN1u2zYUfhWB105syxnWGRgGJzEwo23Wxg6GNvUFLR3brCVSIyknmuDH2YvsyXYOKdtS82MH64BdxBcyRX6H5+87lI5KZvnCsP4ti3TaHsm1EhEYNm0xA1GuhS1wrWSD3C6VFn9yK5T8FXgMmmQ0jliL3SEO2HSDUjGYSIuMYKzPLiEBCybgwUKrPAvUPBBeRYASqQnuhF0GdgnB6NIEJoNIzAXECHKTGv7IwdhTVFENz1WMBpUsUtKCtDTkWZaIyBnW/mpIbclMtISU08gWGaAhavYVIov7ZFploK1AH3FVxO6vafQ7Yey3lpJ9KF3txrXmBd46H2paBBq1wMi02FzplFs/1QvZxv/IDZMpabz2sNM5TjupfqnHT9n4RCQmwiZQgxmrhVwgDO55mtFSBUEnxlZFq7cAGSJupLDPiz1A4w6XdZefE64DUe6DxpDUJGSezprxjlU+Q8n6Ht3TkGQvcq1BRsV3icXFUkgwEHzKuTNsXKQzlTwv8/dfhBzMZhrWgh/2/eLqk7c7sbmGK54esumK4CNzoeQaneGzhhMzpRJAY+sSVufgZc65EdEB9JwnBuGItz5Au5CO5Fz9rpGWmIstPz5iZKw7Pl6WrdBna6J5tMLjCKTSxbFu+JKZ8Pvu4SQfjqdD/AuyXnP7Yq46GUo6nqwWfjugMOyEnZNueNI9m4Rhv9vrn3VPf+j9+Cbs9T7vdzk/gvKj+DFNO0vzXMQNzZ3qd/LIZftzsRMmS3hxONjvxQqCz1wW3JqVcAw4XIXvueQLz7nBmluuxylPDlRhrpPAqsAQMuBOyp8sai4SuNEHxL98aSM0ziNraAgKp/0ciZ9yk93/khvQP/M4FRLPcs2t0o2qGeJWqgCgivHGX3A5jBvn6HM0R7R/rh5bFpfHPKIaJ2bYO2uYvK+sWpnvJ8PXcnstt9dy+2/L7ZWjrxz9/3F0hO3FjqS+xznrdB+2NTeSVy0kxG6fFPA2pmPZG47043aJ922eiXZ42mlTQ1p1QdTEMGpJNb7ZGteR5pQWtrQ2M/12u1wqYzf9MlPabhC55lrQC7BjMq15i+YcX6ZRLFERT9w0WkIyzeU3nZ9cz1brgsfUX/ntHu2F931XJt6Ca7zI7aVfbjHp6N6UdXGgBu5639wOtxGvmtPbznRDe82V07F98VZpmmMvVQRjF5LgejieBIMPI3IdI+RjnmClb100NuXu6KgM8XR50GXGzYfvrun8jp18FScL97aNB4FwD+/cF5mnwC0FEZFIAmp8deqiuScCpsWn9JaV5YwbKtHNhqZRCXULt9M9A+gOFSy33yxKtsL0UAidaycTMofgSe7T901vvWltJQZRBJl9Fjut8fpy+G44GSJ8Vn2zSFVMUprf0fcMvPYZDpQLtiOWmysxbXKR4yGG635XoglVT5NlK8eyakB+bZdkUbOxSbhW5QpdybFHRcrSc3iz2eH90pMSO5Z7NKV0ilb/A8JbIeo=
+sidebar_class_name: "delete api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Delete invoice items"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"delete"}
+  path={"/api/2.0/crm/invoiceitem"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Deletes a group of invoice items with the IDs specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"ids":{"description":"List of invoice item IDs","type":"array","items":{"type":"integer","format":"int32"}}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"List of invoice items","content":{"application/json":{"schema":{"type":"array","items":{"type":"object","properties":{"Title":{"type":"string","example":"Title"},"StockKeepingUnit":{"type":"string","example":"StockKeepingUnit"},"Description":{"type":"string","example":"Description"},"Price":{"type":"number","format":"double","example":"1.2"},"Currency":{"type":"object","properties":{"Title":{"type":"string","example":"Chinese Yuan"},"Symbol":{"type":"string","example":"¥"},"Abbreviation":{"type":"string","example":"CNY"},"CultureName":{"type":"string","example":"CN"},"IsConvertable":{"type":"boolean","example":"true"},"IsBasic":{"type":"boolean","example":"false"}},"title":"CurrencyInfoWrapper"},"StockQuantity":{"type":"number","format":"double","example":"2.2"},"TrackInvenory":{"type":"boolean","example":"true"},"InvoiceTax1":{"type":"object","properties":{"Name":{"type":"string","example":"Name"},"Description":{"type":"string","example":"Description"},"Rate":{"type":"number","format":"double","example":"Rate"},"CreateOn":{"type":"string","example":"2020-12-14T22:13:41.5378233Z"},"CreateBy":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"},"CanEdit":{"type":"boolean","example":"true"},"CanDelete":{"type":"boolean","example":"true"},"ID":{"type":"integer","format":"int32","example":"1234"}},"title":"InvoiceTaxWrapper"},"InvoiceTax2":{"type":"object","properties":{"Name":{"type":"string","example":"Name"},"Description":{"type":"string","example":"Description"},"Rate":{"type":"number","format":"double","example":"Rate"},"CreateOn":{"type":"string","example":"2020-12-14T22:13:41.5378233Z"},"CreateBy":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"},"CanEdit":{"type":"boolean","example":"true"},"CanDelete":{"type":"boolean","example":"true"},"ID":{"type":"integer","format":"int32","example":"1234"}},"title":"InvoiceTaxWrapper"},"CreateOn":{"type":"string","example":"2020-12-14T22:13:41.5378233Z"},"CreateBy":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"},"CanEdit":{"type":"boolean","example":"true"},"CanDelete":{"type":"boolean","example":"true"},"ID":{"type":"integer","format":"int32","example":"1234"}},"title":"InvoiceItemWrapper"}}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

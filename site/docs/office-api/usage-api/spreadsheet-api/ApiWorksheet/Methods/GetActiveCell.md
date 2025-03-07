@@ -20,14 +20,10 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to get an object that represents an active cell.
+
 
 ```javascript editor-xlsx
-// How to get selected active cell.
-
-// Get an active cell and insert data to it.
-
-var oWorksheet = Api.GetActiveSheet();
-var oActiveCell = oWorksheet.GetActiveCell();
-oActiveCell.SetValue("This sample text was placed in an active cell.");
+let worksheet = Api.GetActiveSheet();
+let activeCell = worksheet.GetActiveCell();
+activeCell.SetValue("This sample text was placed in an active cell.");
 ```

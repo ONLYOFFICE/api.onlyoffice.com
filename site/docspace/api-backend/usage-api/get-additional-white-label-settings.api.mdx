@@ -1,0 +1,63 @@
+---
+id: get-additional-white-label-settings
+title: "Get the additional white label settings"
+description: "Returns the additional white label settings."
+sidebar_label: "Get the additional white label settings"
+hide_title: true
+hide_table_of_contents: true
+api: eJylVk1v2zgQ/SsEz4HlDfawzc1o2mCxWaCwm+0hMIqRNLbZUCJLjtx6Bf33naH8oSSbVm4O/qA4897MvBGHrSZYR311rxdIZOp1VJmaYx6gLnmllxfaeQxAxtV/lvpKr5FmZWlkDfbTxhDeQo724K0vdMDoXR2RUVt9OZ3KT4mxCMaLF2OcANQ3QVBWIFQ8YRSuJqxJXMF7a4oUQPYlin+rY7HBCuQf7Twyosu/YEHs6IOES6ZnjwSBrl0R39WQWywHHrlzFqFml8exLTwWZsX+yqwUbVAlDFW6oqk4ImWiwh5MuaBqJ6T4HSpvGZVCg92F3qD1b9kYwyt4BUQVCWUU6QqxzKF4mNXlovHeBfpF8gOQ4hZQsYdSEFDBFowVyHOCuAt2EECkIF31lP/9/1HezW/ZsG5s4uwpBow6ugoV4XfSTNxEDO9daKpXVFww1EpARhX8SDkqxbsT+FmJbU2J7qbh79c0cUJR6wSTtPxpdgPeUfn9M2Q4K8MIlnOruLd+zrIQW4XJmLvNhQr4kNCHByMZ82Y3TrP5rSKnPOxEuVRI6Uw4g4qPLuSzcLYOiHJ+vEbEPZaCI9g4KU28xhU0ln6BlOkOx3IiK3ukl8meJTyq0rfPUzujh5gWjiPlw2ACrMBGdiJDyWW2eDv5hPlk5o18/nYl2jiZ7+fVNbnJj0Yb7zOVkP0+/e35ULuroaGNC+ZfVlesIhZNMLTj4cpTLBafZf/zA8oDHpJQcnrf2AD1sls+LcgcqQl1TLrDj8flhHEqZOr9eJYpCLThRQbeZJeTaXYwzcJxsmcnVC2xhi2GmEJtRDC9IfLxKsvajYvUXbXS+B1bbiEYESTNV9nrK7HvL21dATY95gqIz+PtP6ZvLqWIy1N5FjLLe7jHRTr2DGfxFz/gZoAqrYdm3N5Sr8K5B4Op7qZeueT9XHWJn9PsS7y97GOMVEG6Vezhb5DGlP1pD7enS8u56u3zlGbOvAVOSMZL/970Ut5LEdiSxUxqDS5bx6va8CWQe1svzr1u2xwi8mvYdfL4a4NBWnB50lJW6doCJYbUA0kAPSsK9JREt02vxJO7mAh57L2bdx8liEYCHorXy7T/I+iHrXo3xH6sah+BfHcXL3i0bd8ZXXe077de9NhneLCWQi+5G/8DA2XZ2w==
+sidebar_class_name: "get api-method"
+info_path: site/docspace/api-backend/usage-api/asc-web-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get the additional white label settings"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/settings/rebranding/additional"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns the additional white label settings.
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Additional white label settings","content":{"application/json":{"schema":{"type":"object","properties":{"startDocsEnabled":{"type":"boolean","description":"Specifies if the start document is enabled or not","example":true},"helpCenterEnabled":{"type":"boolean","description":"Specifies if the help center is enabled or not","example":true},"feedbackAndSupportEnabled":{"type":"boolean","description":"Specifies if feedback and support are available or not","example":true},"feedbackAndSupportUrl":{"type":"string","description":"Feedback and support URL","nullable":true,"example":"some text"},"userForumEnabled":{"type":"boolean","description":"Specifies if the user forum is enabled or not","example":true},"userForumUrl":{"type":"string","description":"User forum URL","nullable":true,"example":"some text"},"videoGuidesEnabled":{"type":"boolean","description":"Specifies if the video guides are enabled or not","example":true},"videoGuidesUrl":{"type":"string","description":"Video guides URL","nullable":true,"example":"some text"},"salesEmail":{"type":"string","description":"Sales email","format":"email","nullable":true,"example":"some text"},"buyUrl":{"type":"string","description":"URL to pay for the portal","nullable":true,"example":"some text"},"licenseAgreementsEnabled":{"type":"boolean","description":"Specifies if the license agreements are enabled or not","example":true},"isDefault":{"type":"boolean","description":"Specifies if these settings are default or not","example":true},"licenseAgreementsUrl":{"type":"string","description":"License agreements URL","nullable":true,"example":"some text"}},"additionalProperties":false,"title":"ASC.Web.Api.ApiModels.ResponseDto.AdditionalWhiteLabelSettingsDto"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

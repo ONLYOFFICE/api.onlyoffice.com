@@ -128,7 +128,7 @@ Repository on GitHub: [youtube](https://github.com/ONLYOFFICE/onlyoffice.github.
 - onTranslate
 - [executeMethod ("AddOleObject")](../../interacting-with-editors/methods/text-document-api/Api/Methods/AddOleObject.md)
 - [executeMethod ("EditOleObject")](../../interacting-with-editors/methods/text-document-api/Api/Methods/EditOleObject.md)
-- [resizeWindow](../../interacting-with-editors/methods/text-document-api/Plugin/Methods/resizeWindow.md)
+- [resizeWindow](../../customization/windows-and-panels.md#interacting-with-a-window)
 - [info.data](../../interacting-with-editors/overview/how-to-call-commands.md#data)
 - [info.guid](../../interacting-with-editors/overview/how-to-call-commands.md#guid)
 - [info.height](../../interacting-with-editors/overview/how-to-call-commands.md#height)

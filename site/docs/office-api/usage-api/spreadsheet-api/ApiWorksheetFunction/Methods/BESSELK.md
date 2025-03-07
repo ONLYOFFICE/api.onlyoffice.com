@@ -23,14 +23,10 @@ number
 
 ## Example
 
-This example shows how to return the modified Bessel function Kn(x).
+
 
 ```javascript editor-xlsx
-// How to get a result from Bessel function Kn(x).
-
-// Use function to get the Bessel function Kn(x).
-
-var oWorksheet = Api.GetActiveSheet();
-var oFunction = Api.GetWorksheetFunction();
-oWorksheet.GetRange("A1").SetValue(oFunction.BESSELK(1.5, 1));
+let worksheet = Api.GetActiveSheet();
+let func = Api.GetWorksheetFunction();
+worksheet.GetRange("A1").SetValue(func.BESSELK(1.5, 1));
 ```

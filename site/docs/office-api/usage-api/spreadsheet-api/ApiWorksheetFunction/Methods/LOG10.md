@@ -22,14 +22,10 @@ number
 
 ## Example
 
-This example shows how to return the base-10 logarithm of a number.
+
 
 ```javascript editor-xlsx
-// How to get the logarithm to the base 10.
-
-// Use a function to return the logarithm with the base-10.
-
-var oWorksheet = Api.GetActiveSheet();
-var oFunction = Api.GetWorksheetFunction();
-oWorksheet.GetRange("A1").SetValue(oFunction.LOG10(56));
+let worksheet = Api.GetActiveSheet();
+let func = Api.GetWorksheetFunction();
+worksheet.GetRange("A1").SetValue(func.LOG10(56));
 ```

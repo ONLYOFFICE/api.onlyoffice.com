@@ -23,14 +23,10 @@ number
 
 ## Example
 
-This example shows how to return the annual nominal interest rate.
+
 
 ```javascript editor-xlsx
-// How to calculate the annual nominal interest rate.
-
-// Use a function to get the annual nominal interest rate.
-
-var oWorksheet = Api.GetActiveSheet();
-var oFunction = Api.GetWorksheetFunction();
-oWorksheet.GetRange("A1").SetValue(oFunction.NOMINAL(0.7, 4));
+let worksheet = Api.GetActiveSheet();
+let func = Api.GetWorksheetFunction();
+worksheet.GetRange("A1").SetValue(func.NOMINAL(0.7, 4));
 ```

@@ -23,7 +23,7 @@ expression.SetCellBorderTop(sType, nSize, nSpace, r, g, b);
 
 ## Returns
 
-boolean
+This method doesn't return any data.
 
 ## Example
 

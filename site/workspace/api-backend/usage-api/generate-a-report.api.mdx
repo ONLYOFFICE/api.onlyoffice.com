@@ -1,0 +1,71 @@
+---
+id: generate-a-report
+title: "Generate a report"
+description: "Runs the report generation task with the parameters specified in the request."
+sidebar_label: "Generate a report"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVE1v2zAM/SuGzkntpm3a5tYNxTYMw4qkPQU5MDYdq7UtTZLbZob/+0jJ+Wy7w7AcAskkH8nHR7XCwcqKyVykpoqnqJVxViwGwmLaGOnWZGrFTeMKZeRvcFLVXxEyNBxi6CQG4oX8UCw6isrQpkZqdhMTMW1qG7kCI+NxoxXWaDxG5MA+RS/SFd6uwUCFDo2NrMZU5hKzSNZ97K8GrTuhRP3xk8qorFakqnZYOz6C1qVMPXT8aDl5K2xaYAV8cmuNVI5aPmLqCEcbpdE4iXZnbY9rDyV742CDICnhinrv6Ius8A6NVNnHseQS6eDzHkQFNdDRvgX4sbFsw8AYWNOVmK72qhbWGVmvyJArUwFxIZpGZqILP6bMalXb0OkoST4s1jpwDSf8Z1addCVuAWeEhyIUcZ6cvs37UEOvKuR6iQ6kK7EptLJ+SuAKusWgZTw6SWIWaBBS3AuJJ2PRPHsOSaaNKSmgcE7bSRy3BeF0k5YjOvJ8BiNhWQYq2BZqyqEpmbdSpVD6z1QLxxyar5LrEbeztxozpiLAvbsgW4qog+/op8eNF8E8EDVpnu4HsZ4J5nq60/rtK1S6xB1gcii/ZF9Kc3GWw9VFPj4fXlyeXg7PL8aj4fIsT4ej9Hp8lo/HkMOYtpWryZUH7Qf3WVVVU1Nj0cyTGk1vZ/fRzd03Jo/Aw9xK4n1DknWUmCH6Vr70c4mgX3lx9CTsLe1/fx16sh2+uliXQFxTjV4Sba+lOU+CPElNLHRT+Telr3OrKZpwUMdctO0SLD6Ysuv4M6Uy/CAudmLiG6UpNm9iK55o0sylb3N4H96PZyiboISjjeoGm4ibNEXt/uq72FuSu5+ze3Je9m9hpTKOMfDCPdH/RNBBedq9Qv23lqZXrxqSCtkDJuuNF/FQrk9erv2Bu9qY6vVehYfKHfSN8D+39W5I24Zl6LqtfzB9GLFdl+DNY11Q1X8A1O5OEA==
+sidebar_class_name: "post api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Generate a report"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/api/2.0/crm/report/generate"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Runs the report generation task with the parameters specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"type":{"description":"Report type","type":"integer"},"timePeriod":{"description":"Report time period","type":"integer"},"managers":{"description":"Managers","type":"array","items":{"type":"string","format":"uuid"}}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Report status","content":{"application/json":{"schema":{"type":"object","title":"ReportState"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

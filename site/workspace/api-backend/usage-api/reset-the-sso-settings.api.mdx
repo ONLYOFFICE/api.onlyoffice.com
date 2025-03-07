@@ -1,0 +1,63 @@
+---
+id: reset-the-sso-settings
+title: "Reset the SSO settings"
+description: "Resets the SSO settings of the current portal."
+sidebar_label: "Reset the SSO settings"
+hide_title: true
+hide_table_of_contents: true
+api: eJztV99v2zYQ/lcMPju1axTb6jc3dtBg2RZEaV+CPNDS2WJDkRxJZfEE/++9IyVHchJbSfe2AgFikd93d7zv+OMq5vnasekNc+C9UGs3SpK/2O0Qv9PSCr/BuYrNSp9rK/7lXmj1GXgGljgWf7Eh+wdxwG63yMrApVYYgrEpuwK06gY+hwFaHTQuBnoVxtCBBeUHRlvP5Tu0ZMEZrRxgRBWbjMf0r2tyDiteSt+xh8RUK4+mCM+NkSINkY6+OSJVzKU5FJx++Y0BNKOX3yD1SDRWG7BeRJcLxZcSEqdb0KXWErhCLDzwwkga87YEth2y88wkTRA9jHvM53nWQjpvkdsxvUOheQzki5WH8TUmoj8JlRHgGKPBEUv28CF3PmRPH7Lt409ewHl2pm3B/WFeB7lFKiajCbqd7Jj7U0ruisSGdv65tXyDZrEqix66JCBXiVgryHqqfmqPrIIAiPsdNodxBEDcLI3FfQhaYxA91wUXihJ1mNHCkXCeWz/HRD1HWtXKsAwBJ14gpW1pMn7/8WT868nkl+vxeBr+yOTiwQgL2X9ptCt4S94w1VV8lt1zlXZEe0Hgr2DFajOTazzCfF4cTts+GP3WQ3gGXjXnE9VLz2qJ7Au91qW/gr9LcP7t9Ne7n0NqN8b3XP0+yzlKI/rs5e3Jfn1OLipGg+sR6oIv4djJ00YG5s89/7/a88nbtjxpiyH1rPonaHKMY3HLxy3bs06I1t3rbyC2HkE9mAv1Izv8dazG16FzYU/R5xVEzJkAmf2Bz7Xua+IFRc+Edf74DniEoYcL3oeyQ9H6cP8cOZIiBLHXcY2HsBFCkej4Ij0SSYNCxmWu1RHrEbKX7k5WceqzyIDq+JKv4Q2HePPi+jrBGZr7MH7/9FX+RfG6QyBpEVUAfmZ0EIAET6eA4T7H7xE3YjR5Nx7t+g3n9P2EUcNh78G60G+U9CJluffGTUejKtfOb6cV9QlbRN5zK+idHuqC5mJAoTFAmsQsyjCMgRCnO/3b+GNYS6vHSag9iOae7XQebxkj6PzGa4ZWncfpIVOhxrrckAahVrGVqBN6qouiVOhxkITVDq4WyfVgdnlOq8LFx2xKutvq6J0veKia2kdoqZ50VGyv86oeG6LXN2H1Wj08+JGReJ9QJGXsEaKKN5QIRKKOQbhdEFFLzGxU5YZV1ZI7wOZhu6VhPBEtdZS3jyLSF9rPm6ayYnd0heLll4LxQW1Zxtzv9XWk4K7O5ouLxfUC4VSIXcXugmL1D3LQTKlNy3xXvGEdxV24rV+gVFWsh+12h49TLzJ2FRPRlNpbLMXvTQNHSA==
+sidebar_class_name: "delete api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Reset the SSO settings"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"delete"}
+  path={"/api/2.0/settings/ssov2"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Resets the SSO settings of the current portal.
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Default SSO settings","content":{"application/json":{"schema":{"type":"object","properties":{"EnableSso":{"type":"boolean","example":"true"},"IdpSettings":{"type":"object","properties":{"EntityId":{"type":"string","example":"EntityId"},"SsoUrl":{"type":"string","example":"SsoUrl"},"SsoBinding":{"type":"string","example":"SsoBinding"},"SloUrl":{"type":"string","example":"SloUrl"},"SloBinding":{"type":"string","example":"SloBinding"},"NameIdFormat":{"type":"string","example":"NameIdFormat"}},"title":"SsoIdpSettings"},"IdpCertificates":{"type":"array","items":{"type":"object","properties":{"SelfSigned":{"type":"boolean","example":"true"},"Crt":{"type":"string","example":"Crt"},"Key":{"type":"string","example":"Key"},"Action":{"type":"string","example":"Action"},"DomainName":{"type":"string","example":"DomainName"},"StartDate":{"type":"string","format":"date-time","example":"2019-07-26T00:00:00"},"ExpiredDate":{"type":"string","format":"date-time","example":"2019-07-26T00:00:00"}},"title":"SsoCertificate"}},"IdpCertificateAdvanced":{"type":"object","properties":{"VerifyAlgorithm":{"type":"string","example":"VerifyAlgorithm"},"VerifyAuthResponsesSign":{"type":"boolean","example":"true"},"VerifyLogoutRequestsSign":{"type":"boolean","example":"true"},"VerifyLogoutResponsesSign":{"type":"boolean","example":"true"},"DecryptAlgorithm":{"type":"string","example":"true"},"DecryptAssertions":{"type":"boolean","example":"true"}},"title":"SsoIdpCertificateAdvanced"},"SpLoginLabel":{"type":"string","example":"SpLoginLabel"},"SpCertificates":{"type":"array","items":{"type":"object","properties":{"SelfSigned":{"type":"boolean","example":"true"},"Crt":{"type":"string","example":"Crt"},"Key":{"type":"string","example":"Key"},"Action":{"type":"string","example":"Action"},"DomainName":{"type":"string","example":"DomainName"},"StartDate":{"type":"string","format":"date-time","example":"2019-07-26T00:00:00"},"ExpiredDate":{"type":"string","format":"date-time","example":"2019-07-26T00:00:00"}},"title":"SsoCertificate"}},"SpCertificateAdvanced":{"type":"object","properties":{"SigningAlgorithm":{"type":"string","example":"SigningAlgorithm"},"SignAuthRequests":{"type":"boolean","example":"true"},"SignLogoutRequests":{"type":"boolean","example":"true"},"SignLogoutResponses":{"type":"boolean","example":"true"},"EncryptAlgorithm":{"type":"string","example":"true"},"DecryptAlgorithm":{"type":"string","example":"true"},"EncryptAssertions":{"type":"boolean"}},"title":"SsoSpCertificateAdvanced"},"FieldMapping":{"type":"object","properties":{"FirstName":{"type":"string","example":"FirstName"},"LastName":{"type":"string","example":"LastName"},"Email":{"type":"string","example":"Email"},"Title":{"type":"string","example":"Title"},"Location":{"type":"string","example":"Location"},"Phone":{"type":"string","example":"Phone"}},"title":"SsoFieldMapping"},"HideAuthPage":{"type":"boolean","example":"true"}},"title":"SsoSettingsV2"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

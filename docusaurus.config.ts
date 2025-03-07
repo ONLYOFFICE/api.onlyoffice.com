@@ -75,28 +75,28 @@ const config: Config = {
         config: {
           workspaceBackend: {
             specPath: "openapi/workspace/community-server.yaml",
-            outputDir: "site/openapi/workspace/api-backend/usage-api",
+            outputDir: "site/workspace/api-backend/usage-api",
             sidebarOptions: {
               groupPathsBy: "tagGroup",
             },
           } satisfies OpenApiPlugin.Options,
           workspaceHosted: {
             specPath: "openapi/workspace/hosted-solutions.yaml",
-            outputDir: "site/openapi/workspace/for-hosting-providers/usage-api",
+            outputDir: "site/workspace/for-hosting-providers/usage-api",
             sidebarOptions: {
               groupPathsBy: "tag",
             },
           } satisfies OpenApiPlugin.Options,
           docspaceBackend: {
             specPath: "openapi/docspace/docspace-backend.yaml",
-            outputDir: "site/openapi/docspace/api-backend/usage-api",
+            outputDir: "site/docspace/api-backend/usage-api",
             sidebarOptions: {
               groupPathsBy: "tagGroup",
             },
           } satisfies OpenApiPlugin.Options,
           docspaceHosted: {
             specPath: "openapi/docspace/asc.apisystem.swagger.yaml",
-            outputDir: "site/openapi/docspace/for-hosting-providers/usage-api",
+            outputDir: "site/docspace/for-hosting-providers/usage-api",
             sidebarOptions: {
               groupPathsBy: "tag",
             },
@@ -287,6 +287,7 @@ const config: Config = {
     prism: {
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,
+      additionalLanguages: ["bash", "php", "csharp", "java"],
     },
     algolia: {
       appId: '59O6KESY1Y',
@@ -295,6 +296,39 @@ const config: Config = {
       indexName: 'api-onlyoffice',
       contextualSearch: true,
     },
+    languageTabs: [
+      {
+        highlight: "bash",
+        language: "curl",
+        logoClass: "curl",
+      },
+      {
+        highlight: "python",
+        language: "python",
+        logoClass: "python",
+      },
+      {
+        highlight: "javascript",
+        language: "javascript",
+        logoClass: "javascript",
+      },
+      {
+        highlight: "php",
+        language: "php",
+        logoClass: "php",
+      },
+      {
+        highlight: "csharp",
+        language: "csharp",
+        logoClass: "csharp",
+      },
+      {
+        highlight: "java",
+        language: "java",
+        logoClass: "java",
+        variant: "unirest",
+      },
+    ],
   } satisfies Preset.ThemeConfig,
 
   themes: ["docusaurus-theme-openapi-docs"],

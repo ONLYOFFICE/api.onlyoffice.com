@@ -1,7 +1,7 @@
 # SetContextualSpacing
 
-Specifies that any space before or after this paragraph set using the 
-&#123;@link ApiParaPr#SetSpacingBefore&#125; or &#123;@link ApiParaPr#SetSpacingAfter&#125; spacing element, should not be applied when the preceding and 
+Specifies that any space before or after this paragraph set using the \
+[ApiParaPr#SetSpacingBefore](../../ApiParaPr/Methods/SetSpacingBefore.md) or [ApiParaPr#SetSpacingAfter](../../ApiParaPr/Methods/SetSpacingAfter.md) spacing element, should not be applied when the preceding and \
 following paragraphs are of the same paragraph style, affecting the top and bottom spacing respectively.
 
 ## Syntax
@@ -20,7 +20,7 @@ expression.SetContextualSpacing(isContextualSpacing);
 
 ## Returns
 
-boolean
+This method doesn't return any data.
 
 ## Example
 

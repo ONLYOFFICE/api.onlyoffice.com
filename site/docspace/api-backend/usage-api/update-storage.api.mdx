@@ -1,0 +1,71 @@
+---
+id: update-storage
+title: "Update a storage"
+description: "Updates a storage with the parameters specified in the request."
+sidebar_label: "Update a storage"
+hide_title: true
+hide_table_of_contents: true
+api: eJy1Vk1z0zAQ/SsenYsdAgfIrbQcGAamQygcMpmOYm9igWwJad0SPP7v7Ep24qSBFgYOTW1pP96+fVq5FSg3XswWYg6Iqt74JEvmaJzcgFieCWPBSVSmflOImWhsIRGG7TPh4FsDHl+ZYitmrchNjVAjP0prtcqDZ/bFm5rXfF5CJfkJtxYonFl9gRwpjnWcBxV43q1M0WgY2Xl0hIzsCvC5U5aj0nKPI6llxWDqRmu5Ykd0DZwJ+C4rq4O/qSBB+I6ii7n8KLh0Tm7JXSFU/mFwX2F7Ctkjk99K3Zys7FH+FEAWheLypb4awVpL7ckJFQaX8/lFem5VemG0phrI3KdvqLy3sP3EAK6kcul862kpnQcEh2+M9DTVIy6OMT+I7nREP8iu11JipaN+IjhOMa7oM6xCVfT3zhSg0w/Rw1+iSftwoyWiiyE58Jbqj82bTib87xDJdRB1kfgjRJT+vwv6LzW7y3Oa8IfydL9JvOglPgKwk+0Y1PKP1HgpUQ49IlnWa7Vp4lwZVofx07ft+alOvYs8hu2nJxpZywZL49QPKKLRs/tG701CQCvlPR+LBMPr2rgqwVL5RIbjEo6ah7xxCreBE+nzG45+E8hZkKxkQcTckQHNyW55LO8oKoq3k9WdwpJywEjgibeQq7Ui8ak67PWHIKXQZFIaHrq2CYqSWNJLJq3KpukkG1Sa+d009uBu+dgw3sZpsi4RrZ9lWVsaj92stcZhF/rpFHc/aIX3Ik9r2Wh6FNrkUodl1h75HG6/mLyccpuWe47mfBJiuEOm9mPWKho/LEWe1rNDM5q+TFpuzFcFgXw+Yh/2t8vrQZ77w3Qg0P6APF68nHFtAr77I4adiMjYydtpZMFjJcOp7wuIHd43+Ph6Gl2H/0ANPYsMP7NaEl0EKjS57aWxYIrJksQRtLAbYn5/m8dWL0TbrqSHa6e7jpcpi2NVL/fK4DfKUJLMwY2IvYg1PfnIePbc3puO3dngcZ7nYPG3tsuR2q+uP5Ltqv+ioGazi5N3/LVBvzMh+KMk3GlsENZaoWW9abjImYghw3RqmJexAqPW+gcuatiqt2OAh9KMZfAvF3XSo22jvLtuZx+3funREztYcz9ponY/AYckUvA=
+sidebar_class_name: "put api-method"
+info_path: site/docspace/api-backend/usage-api/asc-web-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Update a storage"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"put"}
+  path={"/api/2.0/settings/storage"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Updates a storage with the parameters specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"module":{"type":"string","description":"Storage name","nullable":true,"example":"some text"},"props":{"type":"array","items":{"type":"object","properties":{"key":{"type":"string","nullable":true,"example":"some text"},"value":{"type":"string","nullable":true,"example":"some text"}},"additionalProperties":false,"title":"ASC.Api.Collections.ItemKeyValuePair.System.String.System.String"},"description":"Storage properties","nullable":true}},"additionalProperties":false,"description":"Storage settings request parameters","title":"ASC.Web.Api.ApiModel.RequestsDto.StorageRequestsDto"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Updated storage settings","content":{"application/json":{"schema":{"type":"object","properties":{"module":{"type":"string","nullable":true,"example":"some text"},"props":{"type":"object","additionalProperties":{"type":"string","nullable":true},"nullable":true,"example":[{"key":"some text","value":"some text"}]}},"additionalProperties":false,"title":"ASC.Data.Storage.Configuration.StorageSettings"}}}},"400":{"description":"Module"},"401":{"description":"Unauthorized"},"403":{"description":"No permissions to perform this action"}}}
+>
+  
+</StatusCodes>
+
+
+      

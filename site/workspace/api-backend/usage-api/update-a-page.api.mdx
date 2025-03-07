@@ -1,0 +1,71 @@
+---
+id: update-a-page
+title: "Update a page"
+description: "Updates a wiki page with the name and content specified in the request."
+sidebar_label: "Update a page"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVd9P2zAQ/lciPxcSyja2SNMEDGnTNIRG0aSxPhzJlXgksWc7QBblf9+dnVBKC32hD8HY9+O783efO+Hg2or0UmSqqppaujb+KW+kmE+ExawxtEGnnThsXKGM/AdOqvoLQo6GvQytxETckR2KeU9eOdrMSM1mIhUXOgeHNoLojqJGGq6RVq6IXIFRDRVGUOdRpmqHtYusxkwuJOaRrL2Fwb8NWrdLKTQYMndorMfDvhTf/5kIybk0uEI8BXCKdyHrYGmzAisQaSdcqzmCdUbW16Jn7EO6I5W3bDHA4iVoXcrMFx//sRy5Ww+lrv5g5hirURqNk2j59GoI9wywMctkDRH/GJTVqrYh1jRJ1kOdcRhZL5SpPEIK9UrQT32Xn/ZqIvAeKl3imNv3lqAeL7Nu8RjxkVOgSH7UbofzNd8UOtRNO00j85VUyfDb2fAZfwzhs7S6hHZ7td/lDUa/oG7BWRoScp1JV25zgppKNmx9eAsOzHkFZfmyT2PKyKnIsmUE3ov9z4xayBIvzBb3379jMs2bzFleoqLtsMfuu2D1/afGovkIeSVrSRHAKcpAKVwoSJxQKNUi/jSgA/jhol7OPE2myc7edCd5P9s7SPcP0mR/d3/v3ZsP797+WonPNODYPrgn+ptkb53bFzUMykOZ2Yo0oFA5j3vjCcJDn4oYtIynu0m8lDEWnLhjavY892huR+1ouH2icE7bNI67QlnXp51WxrHlLRgJV2VgHJ8FUAtoSiZZqTIo/TaBYZ/V4/fJhynX80g/z3nYQriNKvrQTqrhG7ajnBXheDJK3YqvbwVP84+lZJ2MlzBKzoOScMSF8pmG7h+PbYrOfWOiHyfns+jw7Cs3gPoUml+ydg+FWleB144BTmADCTuL2FPZfaSdr/gEDG1yeO9imlfqEiFrwiwEHlxyD8mSmOBFcCiSXyh+1CYi9ejpcsLFXoquuwLLA9X3vE25DD948yUPPGVyaXlNvFtAafGFcp8+OBtBjxdet55wZcP/0fIG2/FR6+dkV4wPbTccDQq7M+MAS9c1je8no8dhlqF2L9rOH03V2cWMbMcnq1I5uxi4o03+epTKl+0J7fc6Ikp93TAPUhFCMj15cFfZfePZPSy4qI19WCX62BT+clUbXbouzE7fP9iHo2c9HqYrWPO1zAn1f/nTEUE=
+sidebar_class_name: "put api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Update a page"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"put"}
+  path={"/api/2.0/community/wiki/{name}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Updates a wiki page with the name and content specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"name","in":"path","description":"New page name","schema":{"type":"string"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"body":{"description":"New page content","type":"string"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Page information","content":{"application/json":{"schema":{"type":"object","properties":{"Name":{"type":"string","example":"Page name"},"Content":{"type":"string","example":"Page content"},"UpdatedBy":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"},"Updated":{"type":"string","example":"2020-12-08T17:37:03.3164965Z"}},"title":"PageWrapper"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

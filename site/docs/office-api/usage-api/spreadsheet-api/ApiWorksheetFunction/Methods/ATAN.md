@@ -22,14 +22,10 @@ number
 
 ## Example
 
-This example shows how to return the arctangent of a number.
+
 
 ```javascript editor-xlsx
-// How to get an arctangent of a number.
-
-// Use function to get an arctangent of a number.
-
-var oWorksheet = Api.GetActiveSheet();
-var oFunction = Api.GetWorksheetFunction();
-oWorksheet.GetRange("A1").SetValue(oFunction.ATAN(0.25));
+let worksheet = Api.GetActiveSheet();
+let func = Api.GetWorksheetFunction();
+worksheet.GetRange("A1").SetValue(func.ATAN(0.25));
 ```

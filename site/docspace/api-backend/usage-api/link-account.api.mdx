@@ -1,0 +1,71 @@
+---
+id: link-account
+title: "Link a third-pary account"
+description: "Links a third-party account specified in the request to the user profile."
+sidebar_label: "Link a third-pary account"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVMtu2zAQ/BWBZ8VyjRZofUvTHIq2qJEHejCMYC2tLcaUyJJUElfQv3eXlC3ZaW692OK+d2bIVnjYOjFfigVqozDJkrtS2uLCgPX7BPJcN7V3YpUKbdCCl7r+Woi5ULLeXUavSIXF3w06/1kXezFvRa5rj+SgTzBGyTzkZY9O12xzeYkV8JffG6Riev2IOdcxlrt4iS7EoZWg5B8sFlZvpMJRivNW1ltKKdDlVhpuQObx8CYmJbJOfInJUC3ZaFsB96sbpWDNhb1tMBX4ApVRob6uMPH44kXXpQKKQnIHUIvRhBtQDs8nuIlQJDQDVOjROm6XMF408IBoKrz0odXl7dUkoj+5NPKHLlC5SV/mi9eT7wPUg5XG4sEsOqNrF/GaTaf8dzrPz52guPfTd69d9zU0vtSWMYlBH14HXVtL49faJ6CUfib0dHRxe4d5Y6Un0pdEtcsfuODDDtlAs0FBaz5TAIpVtzpHivdyCRA5rwSXOIO53Ejq1rPXKyzxOhwbYvNA8ISaENKlZl2aJugIfEmHDIzMZpNpZgK8WegUGmXMBxz1S9WeiKmwRmMVpZbeGzfPsrbUznfz1mjrO4p8AlIRKSYAzr6I2AYa5fla6BxUMBM6nHPq/jj9NGPmVgN0t3wZYrlTAI9SpyW+kYHUSoLi8zgsFZKxzLXeSQyc8C27Ge7j9UHS/7xPY51zqY0OjUfK/IVrliWvTghF5p5mcT3nKwg3up+MGR0TeuTz/J6Onoj/KoMeMd4nMwoIGpozENr2mlgynBRJqmCdBF1w4lEZdBhrg5iKLC9F267B4b1VXcdmGsSyzleDKPhEDUsSPtogpsCkuIrLXtzxeByumkjs2dvIujgqeXF/R7Hr/kmt6Fkgo4Vnfm7pdy4Ev8mcHMQTbK1QUG8b2HJsLBmer4ZXHwsqSqf/4EEPrno/HvBUaXEZ/u3SNzLaNqq1647x0fVmRg/WIZopW9HQfwFc30pe
+sidebar_class_name: "put api-method"
+info_path: site/docspace/api-backend/usage-api/asc-web-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Link a third-pary account"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"put"}
+  path={"/api/2.0/people/thirdparty/linkaccount"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Links a third-party account specified in the request to the user profile.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"serializedProfile":{"type":"string","description":"Third-party profile in the serialized format","nullable":true,"example":"some text"}},"additionalProperties":false,"description":"Request parameters for linking accounts","title":"ASC.People.ApiModels.RequestDto.LinkAccountRequestDto"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Ok"},"401":{"description":"Unauthorized"},"405":{"description":"Error not allowed option"}}}
+>
+  
+</StatusCodes>
+
+
+      

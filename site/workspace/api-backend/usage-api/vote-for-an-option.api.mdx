@@ -1,0 +1,73 @@
+---
+id: vote-for-an-option
+title: "Vote for an option"
+description: "Sends a vote for a certain option in a poll-type event with the ID specified in the request."
+sidebar_label: "Vote for an option"
+hide_title: true
+hide_table_of_contents: true
+api: eJzNV1tP4zgU/itWXlZCKU0DDFBpteoAq0UrLpoWVhrog0nc1kNiZ22nkIny3/ccO2kTKGXY2YftQ3V6bj5X+2vpGTrX3vDOi2Sa5oKbon+2ZMJob+p7mkW5AhbIS2+Um4VU/Ds1XIo/GI2ZQjsFlOd7T6DHvGkFVjHTkeIZqnlDb8xErAklS2kYmUkFZMSUoVwQaXUIUJRkMkl6psgYYXg8eeJmQcyCkfNTojMW8RlnMaoiT7G/c6bN7r24Fzs7l+B5Z2dIzmeEitqcayKkqf36aCRIIfNfkoTMmbF6Skm1C5FnVNGUGaa0TVPADwh7xljMMTGOSWTULLyXmdk6QXwg0NGCpdQblh6mADIuDJtDgXwPUk6pcay90KuwQnX8n2VcoE0kQVsYJGmWJTyyJe5/03hM+dq5fPjGIoOhK5lBLTnTKF1SxSl2DuhupFeW0GBRe6BK0QKTMyzV74b9aR/Cth8MXWfgyp0YBsHrw2xZwMN/lNWEPZuWljaKizlosWeaZgmyUIPIGcGWeRDiNbT8fb+oNbEa7zcNThN5itM+5njoSOgnq3eRJ4avGa+G/y4gPdK28ckAOF2zaSebAFM4E/EpNWx73mEQBr1B2AsOJ4O94cGnYRDuhkcHx+H+0Vd0MjZUmZ93cwvrFbdcPEiZMCo6PmY00axRbg/UW4P2RlPO4x8ZxvbJg709PPfSbu22NG/ddpDBpjC3dX59FEw7roDhxnkEJ38pmG0wrNoCHK2VwP83SdkhmDh325K6oILO3SkncBF3G/WjvT4Mj8Ngz/b6Jot/3snHt+pSCgY/L9kT3lFXKrbqo3gJk4FEktQiu9qW8cauoSe3Y2jhkxAo688n+0A6lz45RNp59ckR/Li2z8TgwPG7Gzlolfdz8cEhXtVvlXye23eltfH1p7fhq/lgCKdcZwkt3h/1C/7IyFcqCmr0I//4KI2WFK6OcUo79+gGm1wlxEiiUZNQa2UvYCVnPGE36h3z+/s+qMZ5ZDSSTALb8dB8l+rs+bdcM/UrjVMuOHigRqrODp6BK1kwu4fshQjfoXoNf88hFfeA7QeD12/WjaA1usEnBLQAECxkjC+/1LbDCACGXp9mvB/uBv01WrJ4o186vFD1EeYgIGBq2SCKHOvgLYzJ9LDfLxfgsRqWmVSmAk37aj8kbnRQ5qKbUXgjwCyREU0sG6JCm674KDhGTFG1wNoYH1bnbiNkW9/NGf+TFQ3EWTix3wCgjq2tCb7cX9bI5azpYxt53AXTCh3OpD2obsVJUy0ytnUhX87GEzK6Psf8oUyuCQksWJOnNim1MKGO5naFHhvY+BKOtWDU/x9z1h0wgFz6sNPQAMg6d/viRu0O2wOaMGwWS9UFxP2p8dVwBVHtzMEEuOm588rygWpcv6pCNsStEMJP18Nm5zLmGmmYcvt8b6lnC+lujLwZKFHYgU5y/AXkI4zXCkpXOBmL5n9DWQtP3CE9+2isjV8hxspvLEZRxDKzVXfaWuDrq/EElB9qrJ3KGG0UfQImfttAZQ2QQcHyShhGMc/hQgS584kbgJdEd4Ee7QLVBGa1sRTdXWrqgt+Y1kaTsnTrWVUrfSd602K1wE4bOzOFqP8B0amVjw==
+sidebar_class_name: "post api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Vote for an option"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/api/2.0/community/event/{feedid}/vote"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Sends a vote for a certain option in a poll-type event with the ID specified in the request.
+
+**Note**: If an event is not a poll, then you'll get an error.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"feedid","in":"path","description":"Event ID","schema":{"type":"integer","format":"int32"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"variants":{"description":"Options","type":"array","items":{"type":"integer","format":"int64"}}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Event","content":{"application/json":{"schema":{"type":"object","properties":{"Text":{"type":"string","example":"Text of feed"},"Poll":{"type":"object","properties":{"PollType":{"type":"integer","format":"int32","enum":["SimpleAnswer","MultipleAnswer"],"description":"[0 - SimpleAnswer, 1 - MultipleAnswer]","example":"0"},"EndDate":{"type":"string","example":"2020-12-07T13:56:02.2859248Z"},"StartDate":{"type":"string","example":"2020-12-07T13:56:02.2859248Z"},"Voted":{"type":"boolean","example":"false"},"Votes":{"type":"array","items":{"type":"object","properties":{"Id":{"type":"integer","format":"int64","example":"133"},"Name":{"type":"string","example":"Variant 1"},"Votes":{"type":"integer","format":"int32","example":"100"}},"title":"VoteWrapper"}}},"title":"PollWrapper"},"Id":{"type":"integer","format":"int64","example":"10"},"Title":{"type":"string","example":"Manager"},"Created":{"type":"string","example":"2020-12-07T13:56:02.2729203Z"},"Updated":{"type":"string","example":"2020-12-07T13:56:02.2729203Z"},"Type":{"type":"integer","format":"int32","enum":["None","News","Order","Advert","AllNews","Poll","All"],"description":"[0 - None, 1 - News, 2 - Order, 4 - Advert, 7 - AllNews, 8 - Poll, 15 - All]","example":"1"},"CreatedBy":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"}},"title":"EventWrapperFull"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

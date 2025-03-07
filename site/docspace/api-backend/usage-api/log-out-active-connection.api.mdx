@@ -1,0 +1,71 @@
+---
+id: log-out-active-connection
+title: "Log out from the connection"
+description: "Logs out from the connection with the ID specified in the request."
+sidebar_label: "Log out from the connection"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVE1v2zAM/SuCThtgxFlaDK1vWbtDsQ0b1hU7BEGhOHSt1bY0iU7bGf7vIyXnq253Wg+pTD1R5HtP7CSqOy+zhbyGvHUan0Qq5jnqDYjcNA3Q0jReLhNpLDjFX1drmcnK3H1tMSIvdkCZSKucqgHBcdZONvQR4br5uIEG6XQidUMxq7Ck9Rp87rQNxzP5mYECGCmuLmnbwe9WO6A70bWQSJ+XUCuZdRKfLKfWDcIdOIIWxtUKY+hkRgF4VLWtCHR+dvq+75eczVvqBzwnmE2n/O+4gA/GVKAasVFVC5ngS4UuBJYgdgwI7YVv8xy8L9qKLiKqkCrmbMraSucBlv7ynLIb17yKl8ie/hJ5On03ruOmUS2Wxuk/1HsAnYxBX4Aga9EYFGqjdKVW1C2n9IOaQQPl81tOdnsPHCASFIvwQACQS6ZlpIEXpkVROFOHzvdWEA8ayxC7uhTeQq4LDWtBmnGMxQKPE8peh9JY5haDLUjsTKbK6nQ2mabbAlMVLHTgtZS8Qpen3aFnesk9uc3WVq2rKFuJaH2Wpl1pPPZZZ41DRm6U00xFUJn3InOFaisMZsxVFcLEFJ853j6bns9YmeWexmsWMKY7JnOnKPX1iQLJ1vBHsMHwuTH3Ouqjm8KE0xrZn3J+fTH5CavJ3Gqun9qMUmxmsUaPtQpWGtKTRK8p9PxJdXt3/h9lh44RHjG1laLWqMQgSDfIvGA6CElCywMvJnIkNsWi3LTIjoYEsR+VW8iuWykPN67qew5TIY59vNwLHTyx1p7X5LlCVR7+QcOb78NQeStG8+bF7rYiN0/BXTQZ6IuWwQPHw61fEr6kF0YjiauKkDkNC4sHh0djgu22ezPfbn4wWy2TeWixaKZhwdlfLOyZ92IF/Nsnr5zouujfvt/h49arJ4YOt2imaUlv5i+o/im2
+sidebar_class_name: "put api-method"
+info_path: site/docspace/api-backend/usage-api/asc-web-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Log out from the connection"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"put"}
+  path={"/api/2.0/security/activeconnections/logout/{loginEventId}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Logs out from the connection with the ID specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"loginEventId","in":"path","description":"Login event ID","required":true,"schema":{"type":"integer","format":"int32","example":9846}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Boolean value: true if the operation is successful","content":{"application/json":{"schema":{"type":"boolean"}}}},"401":{"description":"Unauthorized"},"403":{"description":"Method not available"}}}
+>
+  
+</StatusCodes>
+
+
+      

@@ -2,6 +2,9 @@
 sidebar_position: -2
 ---
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 # Get Document Builder
 
 **ONLYOFFICE Document Builder** is available for Windows and Linux.
@@ -13,15 +16,16 @@ You can download it from our website or compile from source codes and deploy the
 
 The Linux OS versions of **ONLYOFFICE Document Builder** require the following dependencies to be installed:
 
-**Debian/Ubuntu:**
-
-```sh
-sudo apt-get install libstdc++6 libcurl3-gnutls libc6 libxml2 libcurl3 fonts-dejavu fonts-opensymbol
-sudo apt-get install fonts-liberation ttf-mscorefonts-installer fonts-crosextra-carlito
-```
-
-**RedHat/CentOS:**
-
-```sh
-sudo yum install glibc libcurl libxml2 dejavu-lgc-sans-fonts dejavu-lgc-sans-mono-fonts dejavu-lgc-serif-fonts dejavu-sans-fonts dejavu-sans-mono-fonts dejavu-serif-fonts libreoffice-opensymbol-fonts
-```
+<Tabs>
+  <TabItem value="debian-ubuntu" label="Debian/Ubuntu">
+    ``` bash
+    sudo apt-get install libstdc++6 libcurl3-gnutls libc6 libxml2 libcurl3 fonts-dejavu fonts-opensymbol
+    sudo apt-get install fonts-liberation ttf-mscorefonts-installer fonts-crosextra-carlito
+    ```
+  </TabItem>
+  <TabItem value="redhat-centos" label="RedHat/CentOS">
+    ``` bash
+    sudo yum install glibc libcurl libxml2 dejavu-lgc-sans-fonts dejavu-lgc-sans-mono-fonts dejavu-lgc-serif-fonts dejavu-sans-fonts dejavu-sans-mono-fonts dejavu-serif-fonts libreoffice-opensymbol-fonts
+    ```
+  </TabItem>
+</Tabs>

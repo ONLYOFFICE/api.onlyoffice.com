@@ -1,0 +1,63 @@
+---
+id: get-recent-messages
+title: "Get recent messages"
+description: "Returns a list of the recent discussion messages from a project with the ID specified in the request."
+sidebar_label: "Get recent messages"
+hide_title: true
+hide_table_of_contents: true
+api: eJztV21P3DgQ/iuWPy9sNmWr3krViaOoRS13iAVVKuXDkMzuuiRxznaAvSj//WbsbJrcURau4tQPjdCS2PN4Xp4n9qSWDpZWzi5kafQXTNz4jbJJZa3ShZWXI2kxqYxyazKp5X7lVtqov8DR9DuEFA1DDd3JkbwlO5SXDaFStIlRJZvJmTxFV5nCChCZsk7ohXArFAYTLJxIO38iR2thiVYsjM7Jug1J3Cq38pCjN8KWmKiFwlSool3mzwqt26UADNqSwkbKp5ZxFPG/YSQfWv+t741Dwia6cDTEECjLTCU+x/EXy7ha2mSFOfCdW5dIK4ExsCYcpZzb3ri+4pBpgoIv0TgVojkJqfxxW3DJtlkfpT0bRYEtCTWSC21ycGHoRUwDeAd5mbHRJH4hm5E8U44fO6x1RhXLgeXc32xqy6C5A1fZp3qMGHpkT4y6Adf3eaV1hlAMjBeQWZQNIVyIUM4VT7Vl+Wio5uSQM8A793AC7zDL9Ii4V1bQnw35tFTyEgdQHJAkHR7oPG853R6bxx2mapu5M1WwDovbA10NXDyqeFO/gg8yfTjbOIqjnUm8E8dn0d5sMplNX+5OX05fTeO9T71Ffls/UVWdqy7KqlLpkOH22rnnZ3NxCLRjlBmsf4d8i/SO1TWKT1Cswdlr9Ui9HkMBy6CNfVIamHkOWfYwpjKZcFpYthTgUYwntS1UhudmC/zz5zGZplXiLN+ipuEwxvBdsOXdr5VF8xrSXBW0pRhw2gzkfUhL6TUiKzsE3xH1XDScl+n3y6ld5KecfnQ5dUQ9Fw3/4QyKnnYEBUtmvH9GPwLYP9O/7/w6DR2DuhqE/FPwP6Dge1Q9DxE978ehmejaEr5Gci+a/LujPC+gbYpp62WrHOmRApRL9BICt6KHMZRqHO9G402bvelXuMM2N2isb7ArLq1cOVfa2Xhcr7R1zawutXENWd6AUUD5ezXyXAhnAVXGeWc6gcwPUxiMGU6/in6JOZVeUz/nrjYsd29r/7XbLdV79O0u57wK0yNZeMkOsb4IqlhoD28Lys1SVZBHMffZitPD+ZnYPznirCj5UMuMdrRN9Nbl4HeD1sdbdPd07elw5+ia+P/tk6Otj6OudUwvsfIbUhVekED9BRePLIn8sKO0e8tGAERHoPJC1vUVWH69moaHyYnh767Lr8zzEzlYbT69anlNtBADSYKl8xLJqkDYP75hmPZOmm8Pz8iWhTvk+Npz3N7w6pupYt1be0j3qA2Bf5vRNyB1HRTUNJ19mPomotNYsObCXpJ4/wYc/dmG
+sidebar_class_name: "get api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get recent messages"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/project/message"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns a list of the recent discussion messages from a project with the ID specified in the request.
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"List of recent messages","content":{"application/json":{"schema":{"type":"array","items":{"type":"object","properties":{"ProjectOwner":{"type":"object","properties":{"Id":{"type":"integer","format":"int32","example":"123"},"Title":{"type":"string","example":"Sample project"},"Status":{"type":"integer","format":"int32","example":"0"},"IsPrivate":{"type":"boolean","example":"false"}},"title":"SimpleProjectWrapper"},"Text":{"type":"string","example":"Hello, this is sample message"},"CanCreateComment":{"type":"boolean","example":"false"},"CanEdit":{"type":"boolean","example":"true"},"CommentsCount":{"type":"integer","format":"int32","example":"5"},"Created":{"type":"string","example":"2020-12-22T04:11:56.5658524Z"},"CreatedBy":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"},"CreatedById":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"Updated":{"type":"string","example":"2020-12-22T04:11:56.5658524Z"},"UpdatedBy":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"},"UpdatedById":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"Id":{"type":"integer","format":"int32","example":"10"},"Title":{"type":"string","example":"Sample Title"},"Description":{"type":"string","example":"Sample description"},"Status":{"type":"integer","format":"int32","example":"0"},"Responsible":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"},"ResponsibleId":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"}},"title":"MessageWrapper"}}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

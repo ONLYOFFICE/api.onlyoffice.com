@@ -1,0 +1,71 @@
+---
+id: remove-folder-messages
+title: "Remove folder messages"
+description: "Removes all the messages from the trash or spam folder."
+sidebar_label: "Remove folder messages"
+hide_title: true
+hide_table_of_contents: true
+api: eJyVUsFu2zAM/RVB17m1l3XA6lu7dVixy5B0pyIH1mFiFZKlSXS2zPC/j5SabsGGAfWJJqnH9x45aYJd0u29dmBs/dHbDcak15VO2I3R0IFrk74aqffR/AQyfviEwE3yJnKkK/2d+1CvZ361wdRFE6RNt3qJzu8xKbBWUY/KYUqw48Q2epczFCH1ykeVAji1zePPGTLitxETXfsNE5h05wfCgSSEEKzpMpH6McmYSaeuRwcS0SEgD/YPj9gR44ToA0YymKRa8M1G4lOmRbi6/dCqC3Wm7oRWpd5yuGJiDPQEbJjHjsXP+ROeKfghFfhF0/wHmUFeKuM4rWLm0QGV1JuFLsMvmtd/z/s6wNOycKOlyyH/smTus8h7YlOAev6vIZh6cd7UefXFm1RPR5Pa++bscv1qro9b03IUcS/3ITcxRssgPVFIbV1PvU80t1PwkWbu3EM08GCLMVIrTLcwWpFhfQc2p5mhvDktv2sus8g/7nAl5hS4f17js2ms6jMemIIRO/pSrvQATqonb7M/4v7y97nd/AAXLJ6eSzML3NbnMYakrN9758aBmalVdkUtb1Z36urLrahnk8o6LBCKyvkX33YuWw==
+sidebar_class_name: "delete api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Remove folder messages"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"delete"}
+  path={"/api/2.0/mail/folders/{folderid:[0-9]+}/messages"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Removes all the messages from the trash or spam folder.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"folderid":{"description":"Folder ID: 4 - Trash, 5 - Spam","type":"integer"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Folder ID","content":{"application/json":{"schema":{"type":"integer","format":"int32"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

@@ -22,14 +22,10 @@ number
 
 ## Example
 
-This example shows how to return the argument Theta, an angle expressed in radians.
+
 
 ```javascript editor-xlsx
-// How to get an angle expressed in radians.
-
-// Use a function to get an angle expressed in radians.
-
-var oWorksheet = Api.GetActiveSheet();
-var oFunction = Api.GetWorksheetFunction();
-oWorksheet.GetRange("A1").SetValue(oFunction.IMARGUMENT("-2+2.5i"));
+let worksheet = Api.GetActiveSheet();
+let func = Api.GetWorksheetFunction();
+worksheet.GetRange("A1").SetValue(func.IMARGUMENT("-2+2.5i"));
 ```

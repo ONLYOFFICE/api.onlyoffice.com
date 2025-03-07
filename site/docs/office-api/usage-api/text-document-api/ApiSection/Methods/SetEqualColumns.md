@@ -19,7 +19,7 @@ expression.SetEqualColumns(nCount, nSpace);
 
 ## Returns
 
-boolean
+This method doesn't return any data.
 
 ## Example
 

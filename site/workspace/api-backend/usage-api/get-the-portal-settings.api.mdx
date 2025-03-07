@@ -1,0 +1,63 @@
+---
+id: get-the-portal-settings
+title: "Get the portal settings"
+description: "Returns a list of all the available portal settings with the current values for each parameter."
+sidebar_label: "Get the portal settings"
+hide_title: true
+hide_table_of_contents: true
+api: eJy9VMFu2zAM/RVBZzdx0w3ociuyoh0GbEOTYIcgB8VhYrWy5El028zwv4+UnTRu2u22SyJLj08k36NqiWob5HghAyBquw3DiSsKZ8X+Wy4TOssqr3FHuFpeVZg7r38r1M7eglqD53hPK5nIJ8KBXDYUtYaQeV0yTI7lHWDlbRBKGB1QuI1QxgjMQahHpY1aGRCl86jM4WrxpDGPELreg0XxqEwFQWycF6CyXJTKqwIQ/ICu9hBKZwNQObUcpSn/9XOY7mtKZOYsEiNjVFkancVyhveBgbUMWQ6F4hXuSqBQt7qHDCmw9K4Ej7q9ZqYL+O0sHCEDerqDkPCsitLw1nw2kU0iZ74KCOvPrlDahqMQ5b3aUQS1rgh/pyp26xg+yFwhmxPSWQw8EGgqckv6JJJaVihsty5GTGmrgnX7xtknckIsxJjIK2PkiXiLVJwJRibinFYtOBEjWhN+2csw5VInlSG5/9EWsGfzKaPnmH3fbEj2t/CHzJF6HUplexxn6eX4Ih2nacdz6yofTsio1lW/DWtXkeP6VJeDj7GlqDFu7O3y05NFKLxp+PRDen7qrLlV3VjAOnKQK3O3ppMtRNcozOljqEo9HA3S4WHaJE+XfwQf4nBV3hAsRyzDeDiscxewGdc8Fw0hH5XXPCjRI3zWJrJR1G0KMy5TJm5TAhzTP75MP424hqOBnrLNW7o3x/rFoaX+CtGiXG3eHifS0vTRdy82lq/txsXwrpX8qFSWbhTTWK24u57OxNWPL1wVFd920SiEffYBCxVHsbvjBjA+Ba/eCPnKqvXLZP+HJ6frDsIzDktDA8i5Rw3rTvIFt46QJHqU+pA1D1kr4ULW9UoFmHvTNLz9qwLPb+3yRXH+Iup8/9zW8oHkoM5nGZQYrUFpRqFePWYs98GMN9czwrJV+9o+RG27BbPvj+zuiLsvc9KlwL9N8k5IXbfOaZoDvj16N+LgrRbNLV2Saf8AFfNCrw==
+sidebar_class_name: "get api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get the portal settings"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/settings/"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns a list of all the available portal settings with the current values for each parameter.
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Settings","content":{"application/json":{"schema":{"type":"object","properties":{"Timezone":{"type":"string","example":"UTC"},"TrustedDomains":{"type":"array","items":{"type":"string","example":"mydomain.com"}},"TrustedDomainsType":{"type":"integer","format":"int32","enum":["None","Custom","All"],"description":"[0 - None, 1 - Custom, 2 - All]","example":"0"},"Culture":{"type":"string","example":"en-US"},"UtcOffset":{"type":"string","format":"timespan","example":"-08:30:00"},"UtcHoursOffset":{"type":"number","format":"double","example":"-8.5"}},"title":"SettingsWrapper"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

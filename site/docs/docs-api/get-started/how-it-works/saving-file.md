@@ -2,6 +2,9 @@
 sidebar_position: -21
 ---
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 # Saving file
 
 The reference figure and the steps below explain the process of saving a document in ONLYOFFICE Docs.
@@ -57,9 +60,18 @@ Once the document editing is finished, the **document editing service** informs 
 
 The conversion start delay is necessary to allow to return to the file editing session without the file saving, e.g. when reloading the browser page with the file opened for editing. The default conversion start delay time is defined with the [services.CoAuthoring.server.savetimeoutdelay](https://helpcenter.onlyoffice.com/installation/docs-developer-configuring.aspx#services-CoAuthoring-server-savetimeoutdelay) parameter in **ONLYOFFICE Docs** configuration file, which can be found at the following path:
 
-For Linux - */etc/onlyoffice/documentserver/**default.json***.
-
-For Windows - *%ProgramFiles%\ONLYOFFICE\DocumentServer\config\\**default.json***.
+<Tabs>
+  <TabItem value="windows" label="Windows">
+      ``` bash
+      %ProgramFiles%\ONLYOFFICE\DocumentServer\config\default.json
+      ```
+  </TabItem>
+  <TabItem value="linux" label="Linux">
+      ``` bash
+      /etc/onlyoffice/documentserver/default.json
+      ```
+  </TabItem>
+</Tabs>
 
 If you want to change it, you can use the *local.json* file, where all the edited parameters should be stored. This file is located in the same directory as the *default.json* file and the **whole object structure** for the necessary parameter **must be retained** (see the examples below).
 
@@ -95,9 +107,18 @@ If you want to change it, you can use the *local.json* file, where all the edite
 
 - You can enable [the repeating forcesave start](https://helpcenter.onlyoffice.com/installation/docs-developer-configuring.aspx#AutoAssembly) in the **ONLYOFFICE Docs** additional configuration file, which can be either found at (in case you have already created it) or placed to the following path:
 
-  For Linux - */etc/onlyoffice/documentserver/**local.json***.
-
-  For Windows - *%ProgramFiles%\ONLYOFFICE\DocumentServer\config\\**local.json***.
+  <Tabs>
+    <TabItem value="windows" label="Windows">
+        ``` bash
+        %ProgramFiles%\ONLYOFFICE\DocumentServer\config\local.json
+        ```
+    </TabItem>
+    <TabItem value="linux" label="Linux">
+        ``` bash
+        /etc/onlyoffice/documentserver/local.json
+        ```
+    </TabItem>
+  </Tabs>
 
   ### Parameters
 

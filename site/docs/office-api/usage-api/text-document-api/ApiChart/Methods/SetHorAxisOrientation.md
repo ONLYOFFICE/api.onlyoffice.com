@@ -18,7 +18,7 @@ expression.SetHorAxisOrientation(bIsMinMax);
 
 ## Returns
 
-boolean
+This method doesn't return any data.
 
 ## Example
 

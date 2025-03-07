@@ -2,6 +2,9 @@
 sidebar_position: -2
 ---
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 # Encrypting local documents
 
 To protect your local documents, spreadsheets and presentations, encrypt them with a simple symmetric encryption plugin. The steps below explain how to do it.
@@ -170,8 +173,18 @@ window.addEventListener("load", () => {
 
 Copy the folders with plugins to the *sdkjs-plugins* directory. The path to the folder depends on the operating system you use:
 
-- For Linux - */opt/onlyoffice/desktopeditors/editors/sdkjs-plugins/*
-- For Windows - *%ProgramFiles%\ONLYOFFICE\DesktopEditors\sdkjs-plugins\\*
+<Tabs>
+  <TabItem value="windows" label="Windows">
+      ``` bash
+      %ProgramFiles%\ONLYOFFICE\DesktopEditors\sdkjs-plugins\
+      ```
+  </TabItem>
+  <TabItem value="linux" label="Linux">
+      ``` bash
+      /opt/onlyoffice/desktopeditors/editors/sdkjs-plugins/
+      ```
+  </TabItem>
+</Tabs>
 
 It is important that you use plugins GUID as a folder name.
 

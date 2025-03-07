@@ -25,16 +25,12 @@ This method doesn't return any data.
 This example unsubscribes from the "onWorksheetChange" event.
 
 ```javascript editor-xlsx
-// Detach from an event.
-
-// How to stop event handling.
-
-var oWorksheet = Api.GetActiveSheet();
-var oRange = oWorksheet.GetRange("A1");
-oRange.SetValue("1");
-Api.attachEvent("onWorksheetChange", function(oRange){
+let worksheet = Api.GetActiveSheet();
+let range = worksheet.GetRange("A1");
+range.SetValue("1");
+Api.attachEvent("onWorksheetChange", function(range){
     console.log("onWorksheetChange");
-    console.log(oRange.GetAddress());
+    console.log(range.GetAddress());
 });
 Api.detachEvent("onWorksheetChange");
 ```

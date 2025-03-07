@@ -19,7 +19,7 @@ expression.AddElement(nPos, oElement);
 
 ## Returns
 
-boolean
+This method doesn't return any data.
 
 ## Example
 

@@ -1,0 +1,71 @@
+---
+id: set-the-module-security-settings
+title: "Set the module security settings"
+description: "Sets the security settings to the module with the ID specified in the request."
+sidebar_label: "Set the module security settings"
+hide_title: true
+hide_table_of_contents: true
+api: eJy1Vm1v2zYQ/isCP9uR6yRua2AYsiXYvK1DUCcoUNcfztLJZi2JGl+SuIL/++5IyZYTJ8G6TR8Ekvf23AvvWAsLSyPGM2HQWlkuTTzFxGlpN2Leo8NmPZ7V4sLZldLyG1ipyl8RUtQsqGkleuKe+FDMtySVokm0rJhNjMUUrYnsCqNWWdSaiqzyhEKlLsfoXtqV308uI1NhIjOJaSRLf6bxL4fGnpClZvmTSglXLRJVWiwtL6Gqcpl4fPFXw9ZrYZIVFsAru6mQ8KjFV0ws6am0qlBbiYapMuX/IfQPAdjkkrgbaWM1QRfbnsASFjkekZo22E0ks8bxnCySL42j0kSNcKR0VCq7V79QKkcoWb9xHqh5auAPaWykssgZ1PFSK1cRRLNXAlrDhraUkMJ0PG+w90SmdAEUMeEcub0NHwfWVKo0IR7DweCIa49TSMr+afyfQ/dMXj7hYkKck/SYI/gARZXz0aD5+kd+7cdRvaWYme9HcxzGYTy/B9alNFUOmz+hwJf9/CDXGH2GcgPWrCWL3kibvyYEJSzpthL3xR1Y0NMC8vxlGadzvp+GOSPwUix/rVUmc7zVr4h/+RITa+qogHmJio7DGYufgKkefuT6/QHSQpZU0BqsIgtkwgaHxBWpUhvETxoqDKRfuNj/Rfpej6+3EHk+svd/pbtNyItQfoM1nnyGbysZUt0JjUfJcSHfpq4oQG88/Wrfkx41lK5iq13wzkydv1yv8GeQGzyw3/aBBoJoGsjZ4M3TnnFbQjM4MPVKCqQtYRSV8xkCu6JNDJWMhyeDeDeIdsOH55C+8/eWxpDj0hMrayszjuN6pYzdjutKabslzjvQkmPg0820ACgDl3PGcpVA7o8JCMsckt8N3g/Zmc7om3L/CuqODsB9KVbyd/S1yF6vArknSl9yh7I+DNwgP+5H2VUb7jCKOgXR5pTT1h0LM3GawbvzbHTWP3/75m3/7Hw07C9Os6Q/TN6PTrPRCDIY0UhmSJnyUJv8/ayKwpXcyKc+stHHq+lNdHE94QhSoEPmcrDYRsrYAnw/b/yhqd6d3U9mu3j0DOjM6f/+RdBkwOKDjamNSj8/XWhRobxmnB7ipALz5bQDaTqvnVAuM1HXCzDc4rZbPiYzml9A83118Y5MrNpHUC3WlHqOq/exf8OAmD13oTQezcVtr5W4SBKs7Iu8886Vub69Id5F8/ShMLGIhnt+FtF/LGihfMh9xfqzmhJZLh01HKIHlVx/fCsPy3fty7dZsFMtqdx0AB5Wcq/xg//s1VGRug6XY7vd8QfSsxK76xO4OaNzQv03hxCYPw==
+sidebar_class_name: "put api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Set the module security settings"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"put"}
+  path={"/api/2.0/settings/security"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Sets the security settings to the module with the ID specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"id":{"description":"Module ID","type":"string"},"enabled":{"description":"Specifies if the selected module is enabled or not","type":"boolean"},"subjects":{"description":"List of user/group IDs","type":"array","items":{"type":"string","format":"uuid"}}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Security settings","content":{"application/json":{"schema":{"type":"array","items":{"type":"object","properties":{"WebItemId":{"type":"string","example":"00000000-0000-0000-0000-000000000000"},"Users":{"type":"array","items":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"}},"Groups":{"type":"array","items":{"type":"object","properties":{"Name":{"type":"string","example":"Group Name"},"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"Manager":{"type":"string","example":"Jake.Zazhitski"}},"title":"GroupWrapperSummary"}},"Enabled":{"type":"boolean","example":"true"},"IsSubItem":{"type":"boolean","example":"false"}},"title":"SecurityWrapper"}}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

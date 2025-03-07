@@ -1,0 +1,63 @@
+---
+id: get-backup-progress
+title: "Get the backup progress"
+description: "Returns the progress of the started backup."
+sidebar_label: "Get the backup progress"
+hide_title: true
+hide_table_of_contents: true
+api: eJydVU1v2zAM/SuCThvgJanXw5ZbvzAUO2zoVgxDEBSKwyRabEmT6K6d4f8+UnISO9kO3aWRKT7ykXxiG4lqHeR0Ji9Vsa2dnGfSOvAKtTW3SzmVa8B09dnbtYcQZCbpx1kTgICNzCcT/llCKLx2jCNUggjXYaaisJUrAWEprBfGYra/E5SuAEM8IBPgvfWZQDDKoLi9zsRiGElohEq8SvEzcQcBrSfgV69MWIF/nYlSmy2RLKyhMMjclHOlLmJN4x+BCTYyFBuoFJ/w2QFRtosfUCABKRVRQp3K0+FqR73nvLC2BGXIG54UX8sp+hraiE5tOjhrIrIGT84r6yuFyfQ276PP8rfnhI7196ABvTZrcjR1WarFLk8PKIOtgBr2hJLwsfb/h6e+3y7/j/xioJMbU1ccxxr4tCKFNRKiZS+1THbTo9NufKy/Y+5DZc06ab0RRxogy4kayLY7zvuEdxTabM9qkp1l+SH7oeyj9JNe5rN+zvxfySYth9UYE198uRpdK1SjFGN0RSr1qsAwujztHk9Ehe1gHi8bKUVQy6Vm8qr83BP2SpUBXk6LInLM88nZ6Zu/N6rGjfX6Nz2V6JSfOn23tafHrAsqQrhSGbG0EHgjiFA7Zz0K3OggbAJwsgBF7TU+Rw2pUDxwmoctsIFWkVpSM36RA8g5d3qY7w6w9iZQUDjsELuK3wGV542UdDuiMBVQAd3W402gcEMfY+X0OB9NxslxTJfp5A4rMYB/BB8ix9qXhNogujAdj5uNDdhOG66tJc9H5TXPLW4IvktNWqm65MdV2kKV0czLhDDD63eT9zkPYX7oyxfeZCncsDt7zRD/j2QgzagqfvfdMtI62Qprtxpiw7VZ2YjuieMbLEYXTjN/KjP19jFPHANWKu7ULvwHwNjfo9V9/Jaaw4p+4Zi6sljiY9IQ8ScesetNN7MZ10yeNDW5W0x0OJ0c9THNYCabZqEC3Puybdn8swbPEpsfRsZflGlDmqPVwKOOfZYXRQEO42zLOjX86B8Oz2svrg83X8mXBzCcUZpGd+Douyvz3I89HF5iwH95mf0V0TRJAG27909X/0R0Fe68ucFzEt0feKXLgQ==
+sidebar_class_name: "get api-method"
+info_path: site/docspace/api-backend/usage-api/asc-web-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get the backup progress"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/backup/getbackupprogress"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns the progress of the started backup.
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Backup progress: completed or not, progress percentage, error, tenant ID, backup progress item (Backup, Restore, Transfer), link","content":{"application/json":{"schema":{"type":"object","properties":{"isCompleted":{"type":"boolean","example":true},"progress":{"type":"integer","format":"int32","example":1234},"error":{"type":"string","nullable":true,"example":"some text"},"link":{"type":"string","nullable":true,"example":"some text"},"tenantId":{"type":"integer","format":"int32","example":1234},"backupProgressEnum":{"oneOf":[{"enum":["Backup","Restore","Transfer"],"type":"string","description":"[Backup - Backup, Restore - Restore, Transfer - Transfer]","example":"Backup"},{"enum":[0,1,2],"type":"integer","description":"[0 - Backup, 1 - Restore, 2 - Transfer]","example":0}],"title":"ASC.Data.Backup.Contracts.BackupProgressEnum"},"taskId":{"type":"string","nullable":true,"example":"some text"}},"additionalProperties":false,"title":"ASC.Data.Backup.Contracts.BackupProgress"}}}},"401":{"description":"Unauthorized"},"402":{"description":"Your pricing plan does not support this option"}}}
+>
+  
+</StatusCodes>
+
+
+      

@@ -1,0 +1,63 @@
+---
+id: get-all-storages
+title: "Get storages"
+description: "Returns a list of all the portal storages."
+sidebar_label: "Get storages"
+hide_title: true
+hide_table_of_contents: true
+api: eJy9VU1v2zAM/SuCzoGddsXQ5Ra0QzHsA8OyrociCBSbibXKlibR7TIj/32krCRNs7brDjsEsSzykXwknzuJahnk6FpOAFE3yyByMUHr1RLkdCCtA69Q2+ZdKUdyCTg2Jl0HOZAegrNNoOdRJ4+HQ/4rIRReO3Yilw86oLALEZKTuNNYCaxALKwx9o5CCqe8qgHBM2RhG4QGGUk5Z3QRw+ffA8N1MhQV1IqfcOWAAtj5dyiQHJ3nZFH3yejynk1AT3HIZj+3d+f0qmmNUXNDZuhbGEj4qWrHR/nm9OS1XA8kauTzc2hfo9lTgAaWqljNjoanQzcLtTJmdmdtCc2stm0AjrVfRAqovFcrQtYIdXi+9IbIfD7dT2z1VLZXulloMKW4dEgelNytMu1fIH+LZk9BB1uDQPiJ/5deCqbKUjOgMp/vcbZQJsA2EzmenGVXMM8m2JbaZpcB/BlNpbcmZB9VQ2Nc04Rm4xar97DiGv4884oMyDCNsLiBVTgogJyL1vs08YmCubUGVHPAwcRBoakpQegF7ZCm/xB3KUFstkxYLxrLk7FlJ8XSgfb8nyJtoAvViDmIAPhYlJfSPHaafx+pVSb7khTlHG2WhIYeqXcMezI8OlSYy4Z5tl7/glJGo1eHRp+soDRqHQKdibN4XFhf98WpItpxjABEpsYVaSIpUChmjD6j3rFIelAl1XtHBiSP6+lD2r4Atp7wlTCbGTAmdshZj8psZTAjFJK8yiZZ5SVWWNEhV07nx9kwD0mQ8+QjOTd/yyrJqbXekHWF6MIoz7vKBlyPOg6zlryqXvOQRUHgu56ShWoN8qrYQpn4mjWHfPavT4dvjpny6Y6OCetuD7dPyk6lnOZtGCT92TejyWN+CmtvdL+JpC42eh9OA+dPZfaU3h73OQasVbOTN3kB23EPD8e3231FXtaSVApLU+6M0lH2ItNd6s8110mW1KHYkL5H/Lj7aPZ8X8uum6sAl96s1/z6Rwuep2i6aw+fKEJFYwU+tjVyKsdFAQ7lVnIPP4Xcm+0AXbz9SrZM9n4/eubTA6NvrprVfez9RvUZ3ERhe8Sj6/pmr9db+/7qUY9U4caaiZ3SgP0GfynvQw==
+sidebar_class_name: "get api-method"
+info_path: site/docspace/api-backend/usage-api/asc-web-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get storages"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/settings/storage"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns a list of all the portal storages.
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"List of storages with the following parameters","content":{"application/json":{"schema":{"type":"object","properties":{"id":{"type":"string","description":"ID","nullable":true,"example":"9846"},"title":{"type":"string","description":"Title","nullable":true,"example":"legacy_1080p_small_wooden_mouse"},"properties":{"type":"array","items":{"type":"object","properties":{"name":{"type":"string","description":"Name","nullable":true,"example":"Winfield Upton"},"value":{"type":"string","description":"Value","nullable":true,"example":"some text"},"title":{"type":"string","description":"Title","nullable":true,"example":"legacy_1080p_small_wooden_mouse"}},"additionalProperties":false,"title":"ASC.Web.Studio.UserControls.Management.AuthKey"},"description":"List of authentication keys","nullable":true},"current":{"type":"boolean","description":"Specifies if this is the current storage or not","example":true},"isSet":{"type":"boolean","description":"Specifies if this storage can be set or not","example":true}},"additionalProperties":false,"title":"ASC.Web.Api.ApiModel.ResponseDto.StorageDto"}}}},"401":{"description":"Unauthorized"},"403":{"description":"No permissions to perform this action"}}}
+>
+  
+</StatusCodes>
+
+
+      

@@ -25,16 +25,12 @@ This method doesn't return any data.
 
 ## Example
 
-This example pastes data from theclipboard (if it is possible) with the specified options.
+This example pastes data from clipboard(if it possible) with options.
 
 ```javascript editor-xlsx
-// How to paste the copied or cut data from the clipboard using the special paste options.
-
-// Create a range, copy its value and paste it into another one with the specified properties.
-
-var oWorksheet = Api.GetActiveSheet();
-var oRange = oWorksheet.GetRange("A1");
-oRange.SetValue("test");
-oWorksheet.GetRange("A1").Copy();
-oWorksheet.GetRange("B1").PasteSpecial("xlPasteAll", "xlPasteSpecialOperationNone", false, false);
+let worksheet = Api.GetActiveSheet();
+let range = worksheet.GetRange("A1");
+range.SetValue("test");
+worksheet.GetRange("A1").Copy();
+worksheet.GetRange("B1").PasteSpecial("xlPasteAll", "xlPasteSpecialOperationNone", false, false);
 ```

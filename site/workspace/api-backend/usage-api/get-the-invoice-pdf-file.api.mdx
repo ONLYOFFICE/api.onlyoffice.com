@@ -1,0 +1,71 @@
+---
+id: get-the-invoice-pdf-file
+title: "Get the invoice pdf file"
+description: "Returns the pdf file related to an invoice with the ID specified in the request."
+sidebar_label: "Get the invoice pdf file"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVNtO3DAQ/ZXIr93dhLAtEKmqoFB11YsQC6rE5WFIZjeGxHZtZyGN8u+dSQLdFYh9qR8ix55z5szF0wgPSyeSK5HaMpyplZYpOnEzEg7Tykpf010jDiufayv/gJdafUXI0DLG0k6MxAPZobhpCZWhS600bCYScYa+ssoFPsfAZItgIQsMLBbgMQu8DkAFsncZPEifd3az48AZTOVCko1U3ZnF3xU6PyFfw/ZIZ6SsEalWHpXnLRhTyLRTGN459t8Il+ZYAu98bZAU6ds7TD3xGKsNWi8pWLodVMiMfzZjGHJCugg1sEhyuqQUtN1iUc5o5XquOIpespwO0RPHf5L8E0pcs3LeSrUkK3yE0hR89IWzrdiMJF6YjLN+VG9nnmWv8S60LYFUi6qS2YafaFjjVz5PiyUcS2cKqLcL/yHvMbgEVYN395Kh59IX20CgoKvJSByuwIOdl1AUb2MqW3AbOrYMoEMx/tRqrtWF3QK/vg7JNKtS73iLmo77M4ZPwJnHT5VD+xGyUipJDOA1dw01Uh+QOCEqXSP+smB68UOh3vYcR3E03onH0f75zl6yu5dEu5PdaTw9eL93ySTfdd9Vb7NMr2lNP/B3rVfW1PEpKzNDr4/ENNp52dwXCob5QLrZqkT6pRDEErv2Ap/TTwhGhvEkCnnUDC8ubJ6fXnIVjQ9u3rUhTQrB88eu0Lpu/FRcCZF7b1wShk2unW+TxmjrW7JcgZVwW/TNy3e9wgVUBfdrQbkoumNSxpjN6/3oIObg1kbenJ9gT/fq4HvOKQX0DWuSIDkNeX89El0ek01slxd+42f/BtjJUyU2BlDUMt9Cd36GQnzWZVkpkhbMu7QEZyfz8+DwdMbhU5b6OvBc5TDbv2le+0U=
+sidebar_class_name: "get api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get the invoice pdf file"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/crm/invoice/{invoiceid:[0-9]+}/pdf"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns the pdf file related to an invoice with the ID specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"invoiceid":{"description":"Invoice ID","type":"integer"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Pdf file","content":{"application/json":{"schema":{"type":"object","properties":{"Name":{"type":"string","example":"File name"},"UpdatedBy":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"},"Updated":{"type":"string","example":"2020-12-08T17:37:03.3424957Z"},"Location":{"type":"string","example":"4\\\\46\\\\File name"}},"title":"FileWrapper"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

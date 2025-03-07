@@ -1,0 +1,63 @@
+---
+id: get-currency-rates
+title: "Get currency rates"
+description: "Returns a list of all the currency rates."
+sidebar_label: "Get currency rates"
+hide_title: true
+hide_table_of_contents: true
+api: eJyVVE1T2zAQ/SsenT04BA5tbkyhlGkPnYRMD0wOirOJBfrqSqakHv/37so22FBm2hwcWbtvtfvekxsR5SGIxZ0o0RSfakSwpYIgNrkIUNao4pGijbioY+VQ/ZZROfsF5A6QUUgrkYtflAdi0xJqB6FE5TlNLMQSYo02ZDLTKsTM7TOpdRYryMrurGOGMkI4oSIIwTsb6PBFI+azGf9Nq33ra0yxBC2djWAjI6T3WpWpzeI+MKwRoazASF7FowcqJBHlkXDUtQmjfbe9hzJSwKPzgFF1zXxGZ3pujqPsEFHZA2XDkzRe89bVeinaXNy6f0tfry45fUljjBJtbbZEby72Do2kqcTO1VsCjKGnJ6cMvbkcARWxcJgiaetsPgXOz85FS9CoYtoYWuUufiDxRxVa/uXifHb6VoW1lb0ZYJcKGaDXHUUOkLiTsaKXQnpVzE9mBTtrUKwYFAuAj4AheatGTflVjD4siqKpXIjtovEOY0uZjxKVpOmTEhzrOtrLWvOA2pVSp23qhDHT8IfZxzlPM/Lzit3Qlfurq19c4tVXSDbhsasunAsrDUcn2MSDsnuX4AOxzpja0onZKk2bLa9Wt9nF9xueiobv6NTMSN99iEYmx/ZnXEN8a/aJGs2L9//rsvUjRniKhdeSJqQGkhBNL+Adz0+ZJCHfMDT8HFxNtzV1Q7R2ktyJptnKAGvUbcvbP2tA/nRsXhTkNzqlGr4ejXggeonJsgQfk9S67oh/dYdZvmeXXV/dUi57cKrVQ9KqX3D1IWSPo9pT2fK+BX62+TuQpumc0LbP+V3oXcSzV7psZndDJvwDMQTWaw==
+sidebar_class_name: "get api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get currency rates"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/crm/currency/rates"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns a list of all the currency rates.
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"List of currency rates","content":{"application/json":{"schema":{"type":"array","items":{"type":"object","properties":{"FromCurrency":{"type":"string","example":"EUR"},"ToCurrency":{"type":"string","example":"USD"},"Rate":{"type":"number","format":"double","example":"1.1"},"ID":{"type":"integer","format":"int32","example":"1234"}},"title":"CurrencyRateWrapper"}}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

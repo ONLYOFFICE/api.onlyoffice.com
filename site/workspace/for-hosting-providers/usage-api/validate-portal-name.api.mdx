@@ -1,0 +1,71 @@
+---
+id: validate-portal-name
+title: "Validate portal name"
+description: "Checks if the specified name is available to create a portal."
+sidebar_label: "Validate portal name"
+hide_title: true
+hide_table_of_contents: true
+api: eJztWEtv4zYQ/isET7uAEgfbB1rfgiJFAxTbRZLtJfaBpsYWNxSpkJQd19B/7wwpOZKsDRYo0KKAT7HI4cw337wYHngQG8/nj/yTdUFovsx4Dl46VQVlDZ/zXwqQT56pNQsFMF+BVGsFOTOiBKY8E1uhtFhpYMEy6UAEYIJVUdslz3glHEoGcGTlwOkYak37H+kj44rsPNfg9nxsPaGKxnDPwXOtHOR8HlwNGfeygFLw+YGHfUVqfXDKbFASXkRZaVrqfjXNkhT4yhoPns58uLqiP0ODd60Ek9YEoQyqY8qsrSsFSTCxsnWIVFSv0DoSlFZhT07TYTCB1Iuq0krGw7MvnmwcTnHb1ReQgdhytgIXVEIIzlk36Z6pSwpaEsh6dN6UVdgPV16UD4OVWyOtc8lgsPa+wJ2bqOkk+rfrE18p5hrjnO9ZEE9gmHXMW9ywKOlYhMSslDWayFleE+SohKIHPmTtR8tzcp3tlNasEFuIu0nJE+xxPRTMGpRLSNZWa7sjlVuhUd18YS5a8QvMuw0YcIg0riRLPYeSlRWwjdoicGWiQAneiw062WVqRjpHlKL2CSKAtjK2tzUzgN5iCXgweeIjAuyMvKr7uh0K1LSdAeFDe7KwFmkUJtGPVI3UHqM9obpNcp8AywKRSSpVtiuULJhwwFAvmkfO0dy7nkQyFwph2EoggN8xxQ3TEOKuQBJytVHBv49wBmk27SOKME8yGVOBSWHIMsZKY3iSnR97CC8XZlDm4wpoMt7Gdap+vinJu8Y2nbBd1qQk7SfvogfmjsL2YO9gg7EFt+ApK7JE3075fr5PZaoyUtc5cq8MBrufrlHRJTm6FU4JE3zPU+GcOO2mtwZ59Z05yt/nGj1GxYtxw1jwkdsRkNDeJkcF05StWJWYHMkHOkaFWdmORsyrIFxcjHVMYpHetbNlvydQz1QBSv+tvbxpjuvxjK+lRF7WtT5t6ffHvaM3nEhD+kj4mCZfDxsnc7V5y8jn3u6kmbaXTzTmVwDttOuqPTLqeT/Aj0cOlk2TaPj+PMbOY+w8xs5j7DzGzmPs/zzGvjuF86t1K5XnYP6FYTS0jF24DljG6q80MC/Y9eC715kr672if4DRXQTj59g2WG2ejN2ZkZYIMpZl7SHPaOaQhqEQlSJKlArVms0bQkElXTjKo5RgO2cxSVsFZKLtL+2cHaigKfmak8OtLig/TN0tbjEOzmCA78FtsXnetNP7vw7QEZdPuFJ72BU4InOQNu8G+AmRl9TaXVskH2H3AAbTtOvx12Z8GcCpEqOdDpBagXNs1z169Ef5NY3nKVidsrcCRO8VU6DoQHfP6XWVuNR0ocPRXNg8Vmq6N4lQ4NdMVGqWgM6wqFUuAqTP9o0loUyPNbXDFsGLECo/n80OBWpq5gcSb7pyXrWdi/ZSqqxFrfEn11YKHZebdGsbbv909fMHQruk95+1jQFXIXryGx5Cmu+tromH2DoQUoq7RsCdTh9KEXOrfVX6s3WoPwPHiXN4zdN//LbVZmiAlzCrNN5ACFYk7dDyjSGt1PHWmhrpmHNkILH3yA8HuoR8drppaDm9iVEkcuUJB8ZzjcML3vDp3V37SPaeDR/PJsFi9o9f49pWzzmFposxgliieIENHecIIUonr3FYVKF36qTyScsxFz/9cf+AQf8bkSNR2w==
+sidebar_class_name: "post api-method"
+info_path: site/workspace/for-hosting-providers/usage-api/hosted-solutions
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Validate portal name"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/api/portal/validateportalname"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Checks if the specified name is available to create a portal.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"portalName","in":"query","description":"Portal name","required":true,"schema":{"type":"string","example":"example"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Response containing information about the portal name availability.","content":{"application/json":{"schema":{"type":"object","properties":{"error":{"type":"string","enum":["error","portalNameEmpty","portalNameExist","portalNameIncorrect","tooShortError"],"description":"If the portal name is already taken or some other error occurred during the request, the response object will have the error key with one of the following values:\n- error - a general error, the description will be given in the message parameter,\n- portalNameEmpty - the portal name is empty, you need to send some value in the portalName parameter,\n- portalNameExist - the portal name is already taken, you need to choose another one,\n- portalNameIncorrect - the portal name contains some characters which are not allowed (characters other than base Latin letters and digits),\n- tooShortError - the portal name is too short, it cannot be less than 6 characters.\n","example":"portalNameEmpty"},"message":{"type":"string","description":"If the portal name is available, the response object message key will have the \"portalNameReadyToRegister\" value, otherwise the error description will be included into the message value."},"variants":{"type":"array","description":"In case error is equal to \"portalNameExist\", the response will also have a list of all the existing potal names starting with the name from the request.","items":{"type":"string","example":"example"}}}},"examples":{"successful":{"description":"Successful response","value":{"message":"portalNameReadyToRegister"}},"unsuccessful":{"description":"Unsuccessful response","value":{"error":"portalNameExist","message":"Portal already exists","variants":["example"]}}}}}},"400":{"description":"Response containing information about the portal name availability.","content":{"application/json":{"schema":{"type":"object","properties":{"error":{"type":"string","enum":["error","portalNameEmpty","portalNameExist","portalNameIncorrect","tooShortError"],"description":"If the portal name is already taken or some other error occurred during the request, the response object will have the error key with one of the following values:\n- error - a general error, the description will be given in the message parameter,\n- portalNameEmpty - the portal name is empty, you need to send some value in the portalName parameter,\n- portalNameExist - the portal name is already taken, you need to choose another one,\n- portalNameIncorrect - the portal name contains some characters which are not allowed (characters other than base Latin letters and digits),\n- tooShortError - the portal name is too short, it cannot be less than 6 characters.\n","example":"portalNameEmpty"},"message":{"type":"string","description":"If the portal name is available, the response object message key will have the \"portalNameReadyToRegister\" value, otherwise the error description will be included into the message value."},"variants":{"type":"array","description":"In case error is equal to \"portalNameExist\", the response will also have a list of all the existing potal names starting with the name from the request.","items":{"type":"string","example":"example"}}}},"examples":{"successful":{"description":"Successful response","value":{"message":"portalNameReadyToRegister"}},"unsuccessful":{"description":"Unsuccessful response","value":{"error":"portalNameExist","message":"Portal already exists","variants":["example"]}}}}}},"403":{"description":"Forbidden","content":{"application/json":{"schema":{"type":"object","properties":{"error":{"type":"string","description":"- authorization - Authorization error, the possible reasons: an unknown authorization scheme is used, or the authorization key is missing, or the authorization key time is out, or a wrong key is used.\n","enum":["authorization"],"example":"authorization"}}}}}},"500":{"description":"Internal Server Error","content":{"application/json":{"schema":{"type":"object","properties":{"error":{"type":"string","description":"- authorization - Internal server error when decoding the authorization key.\n- registerNewTenantError - An error occurred while registering a new portal.\n- error - An internal server error occurred.\n","enum":["authorization","registerNewTenantError","error"],"example":"error"}}}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

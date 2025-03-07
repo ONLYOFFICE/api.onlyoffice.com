@@ -1,0 +1,71 @@
+---
+id: update-a-currency
+title: "Update a currency"
+description: "Updates the default CRM currency with the currency specified in the request."
+sidebar_label: "Update a currency"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVEtu2zAQvYrAVQu4lRt00XrnGAEaFA2C2EERBF5Q0thiIpEsOUriCjpOL9KTdYaUHLlNk028MCjO7828N2wFyq0Xs2uRuzpdNM6BzhV4sZ4ID3njFO7I2op5g6Vx6qdEZfQXkAU4jnJ0EhNxT34g1h1FFeBzpyy7iZm4tIVE8AmWkBSwkU2FyeLiW5LHSrvkXmEZrPsbbyFXGwVFonSwOPjRgMf3VKc/HpuCULUiNxpBIx+ltZXKA7r0xnPtVvi8hFryCXcWCI3JbiBHymOdseCQG+U0fWk+H8JfDKDeyCxzcKdCgbeUoc/o0Sm9FV34MT5vjfYx7dF0+m/GOJBi3y6leqUuVgorGLn10CYCHmRt2SQWpdLgIblqpBYEd7mrM1M9H/P7F3vOR+2/UOPsigMWxHTj4EzWL2E6Y/dTvzD6jpqR2UETmTEVENhxBLoGYsyx9Cp/wXsjK0/u5I9xQHtST/XGfHc0cpJypO/j9MMTjGnZax+KkKcG+izIYpvAgsSSPlJpVXr0fpryInlApEZ9OqLZg6MGfdimxtHURYlo/SxN29J47GatNQ478ryTTvEcAq1si6DC9lBYZXJZhWsCwzGH5k/Tz0fcz2iDlyyhmO7JPd4PkHr4CgxWcedlNE+EDiwexoZRsEYvHnfyZJj6eKf2O8JZNyZUG5gwdd1oApgsw3CSi5PlKpmfn/IQaFaRgIpfkL5Zj7UMAuwhxXVK5HifDugbPRKv/Rj1M0N4wNRWUoWVCsy2vSiueaDkSbLgPXd1kEGUBl8MmImqSPO1aNtMerh0VdfxNRVz/ACvH1XBX1SoHN7gVtzCLgwz9PluxbDYvWoipX89Kd1kiJjnOVh81nc9kvv55Yp8s/7trU3BIU7e87tM/zNBBxPGHpQW7lpiT28buWXfmJJ1wxt1KLvbILv+wE0NJr0bATxU4KTvg/+5qydD2jaKuuv2/tH034i97KM387om1H8ARjx4OQ==
+sidebar_class_name: "put api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Update a currency"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"put"}
+  path={"/api/2.0/crm/settings/currency"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Updates the default CRM currency with the currency specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"currency":{"description":"Currency (abbreviation)","type":"string"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Updated currency","content":{"application/json":{"schema":{"type":"object","properties":{"Title":{"type":"string","example":"Chinese Yuan"},"Symbol":{"type":"string","example":"¥"},"Abbreviation":{"type":"string","example":"CNY"},"CultureName":{"type":"string","example":"CN"},"IsConvertable":{"type":"boolean","example":"true"},"IsBasic":{"type":"boolean","example":"false"}},"title":"CurrencyInfoWrapper"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

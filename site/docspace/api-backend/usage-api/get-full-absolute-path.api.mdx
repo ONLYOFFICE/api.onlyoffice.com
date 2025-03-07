@@ -1,0 +1,71 @@
+---
+id: get-full-absolute-path
+title: "Get a path to the portal"
+description: "Returns the full absolute path to the current portal."
+sidebar_label: "Get a path to the portal"
+hide_title: true
+hide_table_of_contents: true
+api: eJydU8Fu2zAM/RVD5yDOgh0234JhLYZdimXFDkFQMA5Ta1UsTaKzZob/faSkpHWb7rAcEkd8pB7fe+4VwX1Q1UrdWE9girJYIpFu+XA9UdahB9K2/bJVlbpHuuqMWWyCNR3hDVCjJsqBhz0SehnTq5b/MPagPXVgMka3fPSrQ3/kP1sMtddOxvJpvjfjC5caQt3gHlTVKzo6mRfIMymu4CPsnYlHdo8F4SOpYWCuHoOzbcAgXfPZTH4uXpWvqG1L2JLAwDmj67ho+TMItn9iMPBnot7P3r0eeNtCR431+g9ulaAC1p3XdIxKQKjvpH73gHLABGHL9/5mAKq1UB5P+4bU+TYU1GCxY50LyEJHxgXZWOELPNMuXFxmygNZ/MZmf6IfvF6lSnC6nE9nZQKWJ2HRH05Wdd4wsCFyoSrLvrGBhqoX/MDIA3gNG5P0lFrafwed4UdlbA0mHvPe0jMuf5h9nLMksuVJlKUomsaNpTmbzJS/okQkh2gEyymqrX3QGNXW7c7Gbk0xEIvlp+kP3EwXTgt/XjMJe5gnjoH2EL3N46+RChiJm7R6mdH+KSv/bVLeUOJaOgO8ClOKBvTZsZWsz0j2TCVFI5NYZBWTAyvV9xsIeOvNMMhxeqnEza0OYhcHYQcm4D92uPzKXWQY/XnxMh/AdIJUYu4pJUxhzfiGM44+8kmti7pGR8+6Xr1rMuUc4evP3xkrno9jkQKQH2T6qdQen88e5yUxkO9h8kZH36fMDcMZn0pvduQNT2iRac05/wvAH83i
+sidebar_class_name: "get api-method"
+info_path: site/docspace/api-backend/usage-api/asc-web-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get a path to the portal"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/portal/path"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns the full absolute path to the current portal.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"virtualPath","in":"query","description":"Portal virtual path","schema":{"type":"string","example":"some text"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Portal path","content":{"application/json":{"schema":{}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

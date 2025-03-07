@@ -1,0 +1,63 @@
+---
+id: get-impersonation-settings
+title: "Get impersonation settings"
+description: "Returns the impersonation settings for the current portal."
+sidebar_label: "Get impersonation settings"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVEtv2zAM/iuGzl6dZjtsuRVd2xUb0KFpsUOQg+KwsVpZ0iS6XWb4v4+UHdtJ08OwXRKLj4/kx0ctUG6CmC1EgLzyCrfZdenAB2skKmvEMu01ZFWLswoL69XvqP0Ccg2evT19iVS8kB2IZUNeawi5Vy6CzMQtYOVNSLCARI0DJAEQldmE5MH6qKZgHgwmznqU+oRQPQRnTQDKsxbTyYT/9uGvj0KSa24NEhh7SOe0yqNF9hjYrRYhL6CU/IVbBwRkV4+QIzk6bwkSVRv0wsiVhvXIcGWtBmlEk3bKuyjv9YriboibVFBdpcRW9H5KAjBVyZx9VoEdL60/W5fKcLotFEu0vqy0PlD8UFh8U6XCIF4xvJgk75JDyDQ5Jelx1DSZ9roBeMkV3Ri9JfObF3PlbeXC8boJzb7AustxMJHeyy3lTKNQjuUBPXVlzEhVqbVoCOoWWJlzKfeBOvnf0F7l/9dwhIcKNRxO2Xw3ZE20+TA5fT2W90Z26wJtZiXQk8ZIbCAOmcSCHpl0KpueTLJ+B4cVgWw0zUTNc2SHFrHymlwLRBdmWVYXNmAzq3lpGrJ8ll5xY2OJrGuTe5CV5tq0zaWOYkqKffbVHyefplzXaPnnvCkt3NETMBDs1FeIDDMDRatOhZEla/d8IyXKPNjo3pF8bsuyMhQxmcdqk9uL+V1y9v2aq6LiW2Y1MbPLPmAp4zZ3Ma4A37gx4mBp6uE+/NuF6mpH+IWZ01LF/YgdqrsmL5gYsqQ2i9FJpfqHVkdFlylR37ZtIep6JQPce900LP5ZgedbvBy6zC8KWOzOcS2eqAXEdp6DwzgOumqbc3ADucX9UF5d3JEtj+x+P59iP7sPRt+pzHaEvd/atEuBf5v0DZe6bqelaXr7VvWmRz9PrTUTvaRB/QM7Blkr
+sidebar_class_name: "get api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get impersonation settings"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/security/impersonate/settings"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns the impersonation settings for the current portal.
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Impersonation settings","content":{"application/json":{"schema":{"type":"object","properties":{"Enabled":{"type":"boolean"},"EnableType":{"type":"integer","format":"int32","enum":["DisableForAdmins","EnableForAllFullAdmins","EnableWithLimits"],"description":"[0 - DisableForAdmins, 1 - EnableForAllFullAdmins, 2 - EnableWithLimits]"},"OnlyForOwnGroups":{"type":"boolean"},"AllowedAdmins":{"type":"array","items":{"type":"string","format":"uuid"}},"RestrictionUsers":{"type":"array","items":{"type":"string","format":"uuid"}},"RestrictionGroups":{"type":"array","items":{"type":"string","format":"uuid"}}},"title":"ImpersonationSettings"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

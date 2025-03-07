@@ -1,0 +1,71 @@
+---
+id: delete-a-contact-type
+title: "Delete a contact type"
+description: "Deletes a contact type with the ID specified in the request."
+sidebar_label: "Delete a contact type"
+hide_title: true
+hide_table_of_contents: true
+api: eJytU11v0zAU/SuWeSQsWTcJ1rfRTqLiAdQW8TD1wXNuGk9JbOybjhLlv3Nv3JaWoUqbyJNjn3PuuV+dRLUOcnwvta/TiW1QaQxylcgAuvUGt/TWydsWS+vNL4XGNp9A5eCZ4+kkE/lEOJCrnlg5BO2NY5gcyylUgBCEEjoqC9w6EE8GS4EliNlUBAfaFAZyYZrhzsOPFgJekO7u+NHm5KKTrAEN8lE5Vxk9uEkfA8fqZNAl1IpPHISi24dH0Eg6zlsHHg2EvQxZWRLI5Hxx6nly7HQ2JfpOzlD0NeXdDx+7C842IYqOsuy8FOn8J/9zqIi4gRlCHSa2jYp/mUxkYX2tMF5djegCfqraVQy6lGR/aZB/DsyA3jTrE1yEEHZ6nNY5xjGQeBNbWX+e8Ua9LzQVj9AL6/GLH0brFflQq15KG11dS+4kxlLs+8WT8d1Ti3bNTuR1dvm8u98atdsKyAeZGuiXJopwPPbcOIUl/afKmXR0kaW8Y7vxS9lp2p0M4/g+e3ezettL3j6/AR+G5Wt9RSIlogvjNO1KG7Afd46qxciN8kY9VHE2+C06LVRbcdqV1aoarskhc06fP2Q3I07yaOEXPIdR7p9rfygyZfUZtmTBcDnK+JzIRtX8esId6sODPv+z0nf7RjxbyaxnzcIOsQ69qeu2IXtiMZRGzO8WS3H7dcYloErFntBmAKfa/wYckKqw
+sidebar_class_name: "delete api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Delete a contact type"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"delete"}
+  path={"/api/2.0/crm/contact/type/{contactTypeid:[0-9]+}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Deletes a contact type with the ID specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"contactTypeid":{"description":"Contact type ID","type":"integer"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Contact type","content":{"application/json":{"schema":{"type":"object","properties":{"RelativeItemsCount":{"type":"integer","format":"int32","example":"1"},"Title":{"type":"string","example":"Title"},"Description":{"type":"string","example":"Description"},"Color":{"type":"string","example":"#a7fc00"},"SortOrder":{"type":"integer","format":"int32","example":"1"},"ID":{"type":"integer","format":"int32","example":"1234"}},"title":"ContactTypeWrapper"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

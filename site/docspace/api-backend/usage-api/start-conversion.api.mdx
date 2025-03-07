@@ -1,0 +1,71 @@
+---
+id: start-conversion
+title: "Start file conversion"
+description: "Starts a conversion operation of a file with the ID specified in the request."
+sidebar_label: "Start file conversion"
+hide_title: true
+hide_table_of_contents: true
+api: eJytV0tv2zgQ/iuETruAajtOmra+ZZ0UMIpsAjtBD4FRMPLIYiOLWpKy4wr67ztD6ulH4gK92ORwOJznN6PcM3ypvdGT91XEoFmf3aWguBEy0d7c92S1myy8kacNV2YskzUojTTP91Ku+AoM7lFG7iW4Qb4QZeEF3xMJ7lJuIlwvQAdKpCQMifQcm1wjXcF/mVCA8o3KwPd0EMGKe6PcM9uUpInEwBIUsoZSrbhxpPMhEuCVr9IYmb58vrgsirmTBtr8IxdbEtF9dBxB8MKCtgG4MZAY4uVpGovAWtv/qelCvq+MfP4JgSHLFfnGCNB0Wlp8SOljdr9jDDpimwQtic9SxsCTPYmzFAIRoh5MhMxE0LKPoZIBaDzRjKRFSiYy00wqlkjTfpJcT082ATa/9fQmAnxaMSOZlcH4ITWOvlvF40T/NeE77sSz4flFQQmq9Uaqdmi0USJZ7km+rzh9L8nimD9X+rWEeutwFQ7Xd2ffUg+Fy8ykmXmwYt8Tf2d5mWV66wUtV8AMvBp6IFDADfwLm0l48yr0KTEZ2yssgQ3lA9AtvedxFM0XC0FXeHzfyuSQxxp2RU5dTbGm2Bn63QUaTWWU/N2qMsJYY65m454Flt5YKuhdpeJWLiDWvVLktZE9W5QNqLROZlttYNWb2NAWBWmtQKcITa7ohoPBgRpv0g6Zs9j8uSIXJ2RRDZ+uyI/HmYqcQlxfINkygbvQIikk2Ypg+VauKV/GMt3i3zXE6H9ayE0SS07JesvVy5Wegt1MVqlUxl5wRYysmbMYCM/fVv6JXmMfGP35jN7EDf35zL2MW7dAQqkBkcqlzxpdSEq98ZnTC4luQcKtfla+XaHESlESWa3n7dx13ij82j0D/8wf+uf+hf/Rv/Q/NQYeg4+nQW3eWW3bsGXWeceeix0zPrYsuGzr/umozgPqSu16+A7PZU3MQK0FAmPv+/hrubYnTQvubi3QFDYrl5jb+gS4bNKxvnQCaGqZqeAETJtZPlv/p2NaWZV7hTu19ApP3pKXk+JOWb9Srf2IX4NjjXaglFTvG3Rj2U42pexrcAIu7HXperKi5lwLalrkSSr8Lo6Th5kMO4jtlKjV6Z0G3w6GLX63xLgXkFrC9cXgbD/QjwnPTCSV+IWOIy4NQaaE2Vrg4zr4Qec/XoAImC4W2DbIgAhGxbTjWOpCujtvNL5FW7mzdiNMZB0/uWa6DMaCicTSyqmRbMcGF0kadrFb2wEXh9eR1+ep6A97gz7J0va3n7uhr+gH1ME6/U9jNVczcaZiFBAZk+pRv59HUptilBOGFMi55kpQmG0x05nzV8htjXixDHhsyZRuUu0cfx58sZ1x3jhxRs3Mieu6ss5QNOUbUDcpp/UOWzmzB1K+CLDRoS45babqm6YKq6GXWlk1rpYzfGeOdLR6xnN12wxm7aGqO1N1anp/FiqHR5GE0pq3A7KYrl7rWW89dE7UZsVtty3ttxl0YIjp5FneDBF/POXKuJCd/TTmGADU06ZNXubfEwUNOTEDCb8pB8t//BvVn1u7iYhp4VLqycvzZ67hUcVFQWR8W1F5zZsMtMm6EJrWi8MI0nbCX9Pyu+1v1nzTHLSkSrtka/M9zmiHS5uVVRIVc+SMsNaxiZEi7nDsnvvw4Kbm6vLeEEcjgbtxFQSQmjd5560iv398sO3CfS2uEN2QqPiGvkvx1+opU/c5jAyWlnsxT5YZXxKvE2mBOKNItavM1VO5IKMOemKn/JwZ9EtGHbyR566Ei6Lmd0dHb5SOrbgpLnNU+n/ZuHnd
+sidebar_class_name: "put api-method"
+info_path: site/docspace/api-backend/usage-api/asc-web-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Start file conversion"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"put"}
+  path={"/api/2.0/files/file/{fileId}/checkconversion"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Starts a conversion operation of a file with the ID specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"fileId","in":"path","description":"File ID","required":true,"schema":{"type":"integer","format":"int32","example":9846}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"description":"Check conversion","content":{"application/json":{"schema":{"type":"object","properties":{"fileId":{"type":"integer","description":"File ID","format":"int32","example":9846},"sync":{"type":"boolean","description":"Specifies if the conversion process is synchronous or not","example":true},"startConvert":{"type":"boolean","description":"Specifies whether to start a conversion process or not","example":true},"version":{"type":"integer","description":"File version","format":"int32","example":1234},"password":{"type":"string","description":"Password","nullable":true,"example":"vfmf2vO1Kp"},"outputType":{"type":"string","description":"Output type","nullable":true,"example":"some text"},"createNewIfExist":{"type":"boolean","description":"Create new if exists","example":true}},"additionalProperties":false,"description":"Request parameters for starting file conversion","title":"ASC.Files.Core.ApiModels.RequestDto.CheckConversionRequestDto.System.Int32"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Conversion result","content":{"application/json":{"schema":{"type":"object","properties":{"id":{"type":"string","description":"Operation ID","nullable":true,"example":"9846"},"Operation":{"oneOf":[{"enum":["Move","Copy","Delete","Download","MarkAsRead","Import","Convert","Duplicate"],"type":"string","description":"[Move - Move, Copy - Copy, Delete - Delete, Download - Download, MarkAsRead - MarkAsRead, Import - Import, Convert - Convert, Duplicate - Duplicate]","example":"Move"},{"enum":[0,1,2,3,4,5,6,7],"type":"integer","description":"[0 - Move, 1 - Copy, 2 - Delete, 3 - Download, 4 - MarkAsRead, 5 - Import, 6 - Convert, 7 - Duplicate]","example":0}],"title":"ASC.Web.Files.Services.WCFService.FileOperations.FileOperationType"},"progress":{"type":"integer","description":"Operation progress","format":"int32","example":1234},"source":{"type":"string","description":"Source file","nullable":true,"example":"some text"},"result":{"description":"Resulting file","nullable":true,"example":{"int":1234,"string":"some text","boolean":true}},"error":{"type":"string","description":"Error","nullable":true,"example":"some text"},"processed":{"type":"string","description":"Specifies if the operation is processed or not","nullable":true,"example":"some text"}},"additionalProperties":false,"description":"Result of file conversation operation.","title":"ASC.Files.Core.ApiModels.ResponseDto.ConversationResultDto"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

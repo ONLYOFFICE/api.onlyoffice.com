@@ -1,0 +1,71 @@
+---
+id: track-edit-file
+title: "Track file editing"
+description: "Tracks file changes when editing."
+sidebar_label: "Track file editing"
+hide_title: true
+hide_table_of_contents: true
+api: eJydVd9v2zYQ/lcIvmwDHMtznNrxW9Y2RbGXYs42DIFR0NTJYiORLEllNQT977sj5V+1Y2R9MU3yjvfdfXefWh7E2vP5I79XFXiWsbjy5YAbC04EZfTHnM95cEI+vc9VoHs+4FY4UUMAR84t17hBqwIv0XzAlcadFaHE/zl46ZSlp/CQ/NnHd3ju4GujHODrwTUw4F6WUAs+b3nYWHpN6QBrcGhaGFeLkI6ux3gA30RtEcj8djZ503WDHYIgVnsAXxtwmxMED2KVAJwE9MEpvT6M1zQqPwzHpzfipphObq6KN7fTq8nk19nV6nqWX40KGOXj6RTGNzN+CCg38nfY3Bv3QBW8jOydkU0NOrAn2DDEwGLVE6SXwe7BeVMDC/AtHCFQ/l5p5cvLsRcWpCoU9sC/JYQSMLhhRXRkROsOC0Nc2oRzkFbGVCD0ISaituuWxLa3RnvsLbQfj0a0nOkMWQq9RqMBlwbp14HshLWVkrEZsy+ejNvT4Gb1BSTBso5aN6gUCkv5CoQD/iyqBs6VVzdVJVZbyxfLzUWO04EIRfXpAEAhKo9OQYXostj4APXwrakqBIvWfvgBNDglh9glfxGGT0K5YW/3W4K73S4Spq6jeJPR9WkN/zENy43+KbBSPAMDbZp1yRBNrbxHEyIVd9TfDElmuyGPKXw3J0S4T+T3tFBvaAaUqF4PsTgoAaUhfVhDLD1N/JxnwqpsPBxl5Ovjb9Ymbeiy2Ef0RJGUxIN73spI4yp0L0Owfp5lbWl86OatNS50nChyipiIvNJdyr8QTUWzWhkpqniMqZDP8fVsdDum0i0ppGycCpsF9VB6Tnj5WTSh/HzcL5gI8kJdkGbpyKyfJ2nMk4JYQKULE717uu8Wb4d/w2p4ZxXhxzRTaZ/HCaMPtYjd3D8fS54q3hf5+zlt93PxKoL6PKhLM1sJBIyBY5nbnq1HShItkS9Svij/acVlvlP0Y9qwiImAR962K+HhT1d1HR0ndSEyc+WJrXw3BC8nslXks2gjIzth7+eUc1K414e4JK0Xop6o9w+G/wF1vYDqQNH3eJb7Afmf5f/5j/5L/Avbf53Pht9Ohd4cht7C6nulW6JlCSLHTzcBSZd3UoINB24nok4Z7PTkw/sHnKj/AKOi7ZY=
+sidebar_class_name: "get api-method"
+info_path: site/docspace/api-backend/usage-api/asc-web-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Track file editing"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/files/file/{fileId}/trackeditfile"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Tracks file changes when editing.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"fileId","in":"path","description":"File ID","required":true,"schema":{"type":"integer","format":"int32","example":9846}},{"name":"tabId","in":"query","description":"Tab ID","schema":{"type":"string","format":"uuid","example":"75a5f745-f697-4418-b38d-0fe0d277e258"}},{"name":"docKeyForTrack","in":"query","description":"Document key for tracking","schema":{"type":"string","example":"some text"}},{"name":"isFinish","in":"query","description":"Specifies whether to finish file tracking or not","schema":{"type":"boolean","example":true}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"File changes","content":{"application/json":{"schema":{"type":"object","properties":{"key":{"type":"boolean","example":true},"value":{"type":"string","nullable":true,"example":"some text"}},"additionalProperties":false,"title":"System.Collections.Generic.KeyValuePair.System.Boolean.System.String"}}}},"403":{"description":"You don't have enough permission to perform the operation"}}}
+>
+  
+</StatusCodes>
+
+
+      

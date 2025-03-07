@@ -1,0 +1,71 @@
+---
+id: get-rooms-primary-external-link
+title: "Get primary external link"
+description: "Returns the primary external link of a room with the ID specified in the request."
+sidebar_label: "Get primary external link"
+hide_title: true
+hide_table_of_contents: true
+api: eJy1Vktv4zYQ/iuETi3A+hVvNvEtyCZB0H0hTrqHwFjQEh1xI5EqScVJBf33zgxlWbYVJD30IpHD4Ty+eXCqyIsHF83uo0uVSceG7MaY3EULHplCWuGV0ddJNIsepKeT71blwr5cPHtptcg+K/0Y8agQVuQSSCiqijRs4I5K4EhpWBXCp7BOpIutKlAoEFEeu0YeK/8ulZWgx9tS8sjFqcxFNKsi/1KQJO3lg7TAujI2Fz6QjiZAkM8iLzJgOj2ZHtf1AqW5wmgnHQqYjEb469HsZFxa5V+Y0kEonvEoNqBLe7wkiiJTMR0Mfzm8WR2aZpa/ZOwRA4uIeRX0ijiWjlZGy28rgkXqMkeovwIJLtxIkfwACzZr+jlvFYn7S1gUhbQnJdewODd5jpZxjFV2CTbj8XnpvMmB4gkfdO2L0CKgdZEor/QDXSa3zq0U3liMb2M/KiSOXYju0Uj2B8MfZ62pQME1EzphaySEs4aMm+AAEcKSs+AKkMICudAl4sEFZ41rQGlWnLU+AhHXDIMEd7v+Ij9t2Yr2nHXcR/EY5zxsOWvAAHqzQr1dVEg9EVgcKItugoW41bwN5IiP+YQf8Sn/wI/5R37CT/kYiOMtutvE3YN31GI77sF00gJ6tIPktAPihw5+x13kPu4hdnII0+kBOONRF5fx+A0sRlhoXnnC5Wx+PqD2MTg3Vg7mTWERbZ4Ki6BFDhfJrTmsxjNWOgjXOjUsFY75VLJQPcwb2rlCxmqlZIL2Y7XoMsvEEnWHftGaVSHg0Ww8OZryTWZDiptcMi+fsXSWxmRS6HCzBruU+2ziR+w9bUlvePaDNm/scEytyDA0hynHMpLAli9AhS25A+mkje9ithKZk6Tx21pDTvxnhRvR8BeaGRTCzKoHoh7l5C50N6ExyGdtd3rTglj2WABimAQ5bwbrdUtcSY3zlvT3dck7F1rY7ktzZU1ZwP9aPylPrbk56HuY3u5yqARSHX/QIDp3sRqaLctgzxlpBjL9Ods1AOhbQnOhxyJga6hMdqXv9hnyvK/PvLOvBG/Ghy5MtuYf9Vk8fZd976r9eSe8WGYiwd5iQOD3zjtJJfGqsLNCfTGJzNzgpnnSP3mz7SqwAdEofDoaH7aVOy1Knxqr/oHiJqbpIdNX49mlKXVCRm5GAspD4eKfKOHno0QCjBX0RFOHjhaIwd5QIX1pdehfRR+IWKuCWWy7a+VTYrz+1CkYpYmG0xB0/AEog5kqNc34RWMWjFGzaCgKNZwMRkOsMDdEiW5YqaQeZqEWIP5Pm1mstBlcSb0v3Gw4rFLjfD2rCmN9DZxP8JhgJ6VegGcBopUoMxyyoLGJjMiADt7ZPT4ZnU4wBIstdHOcj5oRaAfAttWA8X8CgW+mxB22Zl6MjXlUIXFwOqPbnRz5IZeYHGg/uBngf5oEG53PBU1qjfgr6fvDsV871Xb0+19i2biP79CwyAT4CfZSdKomsPeIDXBCaHHSxeDicEwDOY9mNE5nTV8LsbqPqmopnLyzWV0jGbRZzNbFNrSUBYlyuE7aknvV9d9ummH8d7Yd0Htt38RTv1AiZSXuYEnhxuG/XgBXCmWDjx0YEQ7w7Sl858rBmI351Gb+1cUt8GKC7OZQyJZmgdJ7zdlLrmABfrG99t6oqpCgdd3yh6NXbzQeto6jA1AU/wKvW4Am
+sidebar_class_name: "get api-method"
+info_path: site/docspace/api-backend/usage-api/asc-web-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get primary external link"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/files/rooms/{id}/link"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns the primary external link of a room with the ID specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"id","in":"path","description":"Room Id","required":true,"schema":{"type":"integer","format":"int32","example":9846}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Room security information","content":{"application/json":{"schema":{"type":"object","properties":{"access":{"oneOf":[{"enum":["None","ReadWrite","Read","Restrict","Varies","Review","Comment","FillForms","CustomFilter","RoomManager","Editing","ContentCreator"],"type":"string","description":"[None - None, ReadWrite - Read and write, Read - Read, Restrict - Restrict, Varies - Varies, Review - Review, Comment - Comment, FillForms - Fill forms, CustomFilter - Custom filter, RoomManager - Room manager, Editing - Editing, ContentCreator - Content creator]","example":"None"},{"enum":[0,1,2,3,4,5,6,7,8,9,10,11],"type":"integer","description":"[0 - None, 1 - Read and write, 2 - Read, 3 - Restrict, 4 - Varies, 5 - Review, 6 - Comment, 7 - Fill forms, 8 - Custom filter, 9 - Room manager, 10 - Editing, 11 - Content creator]","example":0}],"title":"ASC.Files.Core.Security.FileShare"},"sharedTo":{"description":"A user who has the access to the specified file","nullable":true,"example":{"int":1234,"string":"some text","boolean":true}},"isLocked":{"type":"boolean","description":"Specifies if the file is locked by this user or not","example":false},"isOwner":{"type":"boolean","description":"Specifies if this user is an owner of the specified file or not","example":true},"canEditAccess":{"type":"boolean","description":"Spceifies if this user can edit the access to the specified file or not","example":true},"subjectType":{"oneOf":[{"enum":["User","ExternalLink","Group","InvitationLink","PrimaryExternalLink"],"type":"string","description":"[User - User, ExternalLink - External link, Group - Group, InvitationLink - Invitation link, PrimaryExternalLink - Primary external link]","example":"User"},{"enum":[0,1,2,3,4],"type":"integer","description":"[0 - User, 1 - External link, 2 - Group, 3 - Invitation link, 4 - Primary external link]","example":0}],"title":"ASC.Files.Core.Security.SubjectType"}},"additionalProperties":false,"title":"ASC.Files.Core.ApiModels.ResponseDto.FileShareDto"}}}},"401":{"description":"Unauthorized"},"404":{"description":"Not Found"}}}
+>
+  
+</StatusCodes>
+
+
+      

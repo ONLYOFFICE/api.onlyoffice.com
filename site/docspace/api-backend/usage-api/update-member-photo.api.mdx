@@ -1,0 +1,71 @@
+---
+id: update-member-photo
+title: "Update a user photo"
+description: "Updates a photo of the user with the ID specified in the request."
+sidebar_label: "Update a user photo"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVllv2zgQ/isEn3YB23Ido3D9ljZ9CHazG+TAPgSGQUtjm60kckkqRwX9984MJR+JWxdGHyTwGPKbmW8O1jKolZfTB3kNxuYgEnG9NsF4OetJY8GpoE15mcmprGymAlxBsQDHMrInrXKqgACOrqhliROS9OB0htu6xJlVYY3jDHzqtKXrcPEeRcTlBa47+L/SDhAhuAp60qdrKJSc1jK8WLrNB6fLFUrCsypQRVz6MBm/l00zi6fBh48me6Ejr0BYY2FbZVNTBigDySlrc52ybckXT8L1W2Cz+AJpICsdeSJo8LS71HkcvNZvH/z8UQXlIri4v/kbBcoqz9WCLIimbg3ypgAR4DmgVT2pskzTLSq/3kFeqtzDa5SbaL/YEiGWxgnmCrUSRMXGAUEHRju//TSIdA/Orb4yGeR+0N50Ecwg+o05jnS3e6gcqefAW1P66ITRcPgjx2cirKtiUSqd7+g3FcbplUbjol494QBVVT1RqGddVIXw+ht0ewu9wg3IdFX0hC9Unv8+Ijs9jnP5757GP2Uyg6Wq8jAnx89ZfE72zN+NJsM+/QYWAdiLZPVx7Jsodwrm2fthH78OEf17HO5qh4STQDEg+vh1oEjgcdCPenUS1mTUn4w25nGU/IKFUe4UvPGkP550eDEaj8LdtkF7An2j/llr3bGicCSzY75Sat91GekvsDzhSpvT4+G7A2lcqiqsMU2+YXlmobO3Qv8YgdoU2nucexF4ijWowOzXXqiU5fj0+AAE1afSBKxaVZmxoR7Syunwwh1F+XROSsy/Ai1g1ihqLE8oAHJGHeBQ5UHYtvCaJaoBsQw+6bDm2eWF8BZSvdRYo3TJa20jGUgKJDSaOp6tuGhQ/5rKRFmdjAbDxLJ/kzp2uSbpagJOH7tGWDmMDLkOwfppktRr40Mzra1xoUHJR+U0hQJXIdqLfuEowGO5SVXOy+gNOrO/PRl+GBFrs62rbqnixev2HbYJTlT+L1zodS16T6xt1KkxXzUwB1RKb7at9XMXq5vut9ux6PjSMNhOGP4HC4pBMhe9Etl5HEWTfCgUl+pWm7ZRq/12tcdsva36v4Xk1i9kQWJzpTlEmba6ZfyBnIaSyDlFAbOOg+nmdRP1RBoihQ+yrhfKw73Lm4aWEctR0M62jHNwZNrTODvc0ncN/eOmfRz9KbYPpoOadzSXLxxfeUUzHHIUdA+yZoaSa8wgcKxI3PwU4fp3dMX28JvO2vS6E+dpCjb8VHa2k0bX93cou2ifaAUWJVx06okef/hnPQ1bzxHMa7XMVbmq1Ipk45VcBCtiZjeqY/y2AzLqoCdehXs0g/5k1METdR1Tpmk28nHrhydax3bSxMsMlf4OlgDukA==
+sidebar_class_name: "put api-method"
+info_path: site/docspace/api-backend/usage-api/asc-web-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Update a user photo"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"put"}
+  path={"/api/2.0/people/{userid}/photo"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Updates a photo of the user with the ID specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"userid","in":"path","description":"User ID","required":true,"schema":{"type":"string","example":"9846"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"description":"Update photo","content":{"application/json":{"schema":{"type":"object","properties":{"files":{"type":"string","description":"Avatar photo URL","nullable":true,"example":"some text"}},"additionalProperties":false,"description":"Request parameters for updating user photo","title":"ASC.People.ApiModels.RequestDto.UpdatePhotoMemberRequest"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Updated thumbnail parameters: original photo, retina, maximum size photo, big, medium, small","content":{"application/json":{"schema":{"type":"object","properties":{"original":{"type":"string","description":"Original photo","nullable":true,"example":"default_user_photo_size_1280-1280.png"},"retina":{"type":"string","description":"Retina","nullable":true,"example":"default_user_photo_size_360-360.png"},"max":{"type":"string","description":"Maximum size","nullable":true,"example":"default_user_photo_size_200-200.png"},"big":{"type":"string","description":"Big","nullable":true,"example":"default_user_photo_size_82-82.png"},"medium":{"type":"string","description":"Medium","nullable":true,"example":"default_user_photo_size_48-48.png"},"small":{"type":"string","description":"Small","nullable":true,"example":"default_user_photo_size_32-32.png"}},"additionalProperties":false,"title":"ASC.People.ApiModels.ResponseDto.ThumbnailsDataDto"}}}},"401":{"description":"Unauthorized"},"403":{"description":"No permissions to perform this action"},"404":{"description":"User not found"}}}
+>
+  
+</StatusCodes>
+
+
+      

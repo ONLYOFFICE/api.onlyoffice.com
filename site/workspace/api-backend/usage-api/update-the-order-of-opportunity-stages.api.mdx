@@ -1,0 +1,71 @@
+---
+id: update-the-order-of-opportunity-stages
+title: "Update the order of opportunity stages"
+description: "Updates the available order of opportunity stages with a list specified in the request."
+sidebar_label: "Update the order of opportunity stages"
+hide_title: true
+hide_table_of_contents: true
+api: eJy1Vd9P2zAQ/lcs7zWQUJC29Y0VpKExgYCKh6oPbnJtDE7s2Q6si/K/785OIeXXxqT1IfWP+87fnb87t9yLlePjGc9tlZ4Zo61vauklOD5PuIO8sdKv0aDlh40vtZW/hJe6/gqiAEtAiyOe8Hu0Az7vEFWAy600ZMbHfGoK4cExXwITd0IqsVDAtEU400umH85cM4dk0PJe+pIJpqTzzBnI5VJCwWQdXFj40YDzu3hkP/yiCyTY8lzXHmpPQ2GMknkgmt44otFyl5dQCRr5tQEkphc3kHv0Y6w2YEPMuCuL8LcdxClxeYktOzly6KJ3KawVa5xiKio3OEoisxWmK+FLbSvh49L+iHfxR7E4o2sXKYyy7DmFs+eJ6lNSw33MJ/p/bxJeY/xKci5AocM7OCHziW7iSX+KMuHwU1RGkdEex2gvmzwH586tXoiFVEFh73MzyoIfysNVgP0VvG4qkuyZgRqnE6UdFId1ca23pqfaef5Mx7OM7TBCJmwPR0NwwkbDFcLPt9gGslfSqyFR562sV1t20QRtj4ZHv4UYGiJuopW2byM+iI/LPIvpQ0GdBeH8yyWeHL0bNto/4KR2H1OB7IX6LhUWsa7h2qJi0UVfEQfZ3vMimNai70JQBE8V4LTAHdMEtQpf4iQVRqaj3Sylrjao2TQUTmphUy4O7B1YF/pbYxVCS++NG6dpW+ItduOWsB1a3gkrqXOFMqC9SG4pGkXBKp0LFZaRFGG2tz9ln0OxD3rqJZVidPdiZ30sUSO/QahRykAZtxNei4p2t7AhJVTrF4+t8XiT/r61zbJ5R76WOpzR38REV1XsLZchJezi+PKKHZ6fUOiYoZh+RZ28D9H5SgRx9kRinw8N6Y3mzp+U1aBt/8eXos+kh58+NUrIUCvhvtteMjNKM1qiaKiL2gq/gwNJKnRkeHWiePAqowxmvG0XwsHUqq6jZTzW0pM5f1QNzfDIcvNqtvwWr5TSHoLfCT2MzFUTr/xJ6+6SDeIQO6fxb9rOB2VxPr1C20X/RFa6IIgV9xQIfsc8xEngoMSw1uI916uGwh3z6JJ0RZW3LcvbIMt+QEFttur1gOC2QpM+DvpSVC9C2jaKvuse7OPWq4iHsojWdMNzZP0bChkHBg==
+sidebar_class_name: "put api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Update the order of opportunity stages"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"put"}
+  path={"/api/2.0/crm/opportunity/stage/reorder"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Updates the available order of opportunity stages with a list specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"ids":{"description":"List of opportunity stage IDs","type":"array","items":{"type":"integer","format":"int32"}}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Opportunity stages in the new order","content":{"application/json":{"schema":{"type":"array","items":{"type":"object","properties":{"RelativeItemsCount":{"type":"integer","format":"int32","example":"1"},"SuccessProbability":{"type":"integer","format":"int32","example":"20"},"StageType":{"type":"integer","format":"int32","enum":["Open","ClosedAndWon","ClosedAndLost"],"description":"[0 - Open, 1 - ClosedAndWon, 2 - ClosedAndLost]","example":"0"},"Title":{"type":"string","example":"Title"},"Description":{"type":"string","example":"Description"},"Color":{"type":"string","example":"#a7fc00"},"SortOrder":{"type":"integer","format":"int32","example":"1"},"ID":{"type":"integer","format":"int32","example":"1234"}},"title":"DealMilestoneWrapper"}}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

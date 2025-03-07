@@ -1,0 +1,71 @@
+---
+id: move-a-subtask
+title: "Move a subtask"
+description: "Moves a subtask with the ID specified in the request to another task."
+sidebar_label: "Move a subtask"
+hide_title: true
+hide_table_of_contents: true
+api: eJztVltP2zAU/iuRX9c2aWjRqDRNXCqtmpgQBU3i8nCauMSQxJ7tFLqo/33nOGlJtArYBYkH8lC59vnO+c4lzlcyCzeGjS6Z0vKWR9Y/A3Nn2HWHGR4VWtglHpZsv7CJ1OInWCHzLxxirgmkccU67B7tOLteISrmJtJCkRkbsWO54MYDzxQzi369e2ETzybcmxx5RvFIzAWPPZG7Pc1/FNxYz0oPcok72iNQDwPURwcyRjoli2RueW5pCUqlInK0/FtDQUtmooRnQCu7VBxpyBmlhn4wScW1Fdy4U/QuYlq1WVMJkCHa13iB4W4w4xVWpcpkG2xaJ7kV6R5KxCiZmyp+GAS/ezlXMVgsSh0IXf2nbA8hH8fCNgxnUqYccrTkD5CplPbmkBpOiVIRJnHDep1Kh82lzsBWWzthC94PdwaEPsTJwCwacGO1yG9axmEQBt1+2A3Ds2Aw6vdHw93ecHf4cRgOLhpODpbPJzfZGmpDtChE3Aod1E93y8/6IQpHwqgUlt8g40/ncizuuHcB+RIsTocroLDpcyDIoZ6r/QVY0NMM0vRpTKFTekMMWXrgUIQ/0XIuUn6un4FfXfloGheRNbTkErerPYL3wKiHz4Xh+hPEmcgFegAraX5xpKuE2BhdySXn3zWoivymUa/Vhvql+Ldxqp28j9NbH6dNo16rDX9xrwUv7MHULbzKkjrevNxfAGx+DBA+tWAL86dsHdnT6lMjZi3K7wP/Bge+0arXaUQjeq1SKLiqhUmHDYL+FiWSQ6368OYlq4zjX+THVOEmCGyCf3xQwg97gb9WkOTeLyuVNLoMunvXH1Z+uRFOm60MxSEjnakXXBsnMwsqP0usVWbk+2UijV2NSiW1XaHlArQArJGbWDqrOM+hSKk2qYwgddvIlTDt44/BXkjpNqTtlKRT5W6rwN00AlP8ypdIQVBhkuq4w3I31m2sqxRps9NHzTpet+tRcwYtKRmsyPVcOou6UYcyy4ocWXpTVyHvdDw98/ZPJlQJLFjVpBRvSsp49QswTeDw
+sidebar_class_name: "put api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Move a subtask"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"put"}
+  path={"/api/2.0/project/task/{taskid:[0-9]+}/{subtaskid:[0-9]+}/move"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Moves a subtask with the ID specified in the request to another task.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"taskid":{"description":"Task ID","type":"integer"},"subtaskid":{"description":"Subtask ID","type":"integer"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Updated subtask","content":{"application/json":{"schema":{"type":"object","properties":{"CanEdit":{"type":"boolean","example":"false"},"TaskId":{"type":"integer","format":"int32","example":"1234"},"Created":{"type":"string","example":"2020-12-22T04:11:56.5658524Z"},"CreatedBy":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"},"CreatedById":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"Updated":{"type":"string","example":"2020-12-22T04:11:56.5658524Z"},"UpdatedBy":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"},"UpdatedById":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"Id":{"type":"integer","format":"int32","example":"10"},"Title":{"type":"string","example":"Sample Title"},"Description":{"type":"string","example":"Sample description"},"Status":{"type":"integer","format":"int32","example":"0"},"Responsible":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"},"ResponsibleId":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"}},"title":"SubtaskWrapper"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

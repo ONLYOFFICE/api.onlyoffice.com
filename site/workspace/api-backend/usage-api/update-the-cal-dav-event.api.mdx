@@ -1,0 +1,71 @@
+---
+id: update-the-cal-dav-event
+title: "Update the CalDav event"
+description: "Updates the existing CalDav event in the calendar with the ID specified in the request."
+sidebar_label: "Update the CalDav event"
+hide_title: true
+hide_table_of_contents: true
+api: eJy1VEtv2zAM/iuGzlmdFTtsuXVNgQW7FG1yCnJgbCZWa0uaJCfNDP/3kZLtPJruMGA5BJT5/viRjfCwdWKyFBmUqHKw6cMOlXdiNRIOs9pKfyB1I+5qX2grf4OXWv1AyNGymyVJjMSe7FCsWvLK0WVWGjYTE7EwOXh0iS8wwTfpvFTb5B7KKewS5EyJVEHZ50/20hfhy2yaOIOZ3EjMeyuLv2p0/oZSduJ3nVOBjci08hSORTCmlFkoNH1xXEYjXFZgBSz5g0EqTK9fMPMUx1ht0HqJLoTpypjl/Drv5b4vcTYlvy6O85ZaEu1I1PKKT0AzWVz3oHjWv/eZ4kYqwqzQ+6QCdUgqqWoGcY0bbTFiGeICAUJKmgXBVpZkkOTSmRIOmB8TSkJmS+NqGTRntHJyXcZ2zxPPwb0mZyZDDLAWDvSkMVfuBMa+mfgbEsTot+PxB0lgDxTJUsB/nFvM9mX8+X2ChYKOqwQCW1VIT5qNMHUYOPiCHikYmd7ejNOB+STksAvICma/3aF1gfy1Lcmj8N64SZo2hXa+nTRGW9+S5Q6shB5R1sWaNlCXJIpSU+DwmWphn3P11/G3W27nZOGeuekY7uraDWBQCz8xjIUbL6J6JBRUrD3zDUgwqk/HvXl4g8qUeMn7fqgdpY/Pjq/jSx4te5NVy6VsdChReg4t7nVV1Yq6Sp4DosnTw/M8uXucMXIEcBxayVeiQ8h5Yj2H6PqINyTQ/vRyiItbc3ID/uPZ6ZD3+OZTWjQCnlef+dF0zFryWMiSuMX87hJEceAXTTsyZSmaZg0OF7ZsW/5MmSyf3NWRWPyiLEV/dRvxSlNnaEO/n+ZcE5uXdWTFxR61o97jLsvQ+L/ark4W5nExJ9t1d2IrnbOLhT2fX/qfCBJ0gD+QNXxraJZqW8OWbWNIph7v5DlzXwNzO4Gb6lXqcFLgOYlHXR/8z11ddWmauBdtO9hH1Ycew+ZEax7qiqr+A72+c9M=
+sidebar_class_name: "put api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Update the CalDav event"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"put"}
+  path={"/api/2.0/calendar/caldavevent"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Updates the existing CalDav event in the calendar with the ID specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"calendarId":{"description":"Calendar ID","type":"string"},"uid":{"description":"Event UID","type":"string"},"alert":{"description":"Defines how many minutes before the event a reminder will be displayed","type":"integer"},"responsibles":{"description":"Task responsibles","type":"array","items":{"type":"string"}}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Task awaiter","content":{"application/json":{"schema":{"type":"object"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

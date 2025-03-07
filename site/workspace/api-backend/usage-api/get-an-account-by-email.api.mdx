@@ -1,0 +1,71 @@
+---
+id: get-an-account-by-email
+title: "Get an account by email"
+description: "Returns the account information by the email address specified in the request."
+sidebar_label: "Get an account by email"
+hide_title: true
+hide_table_of_contents: true
+api: eJzVVk1v2zgQ/SsCz3Ikuym661uSum2waRrE7l4CI6Clsc1WIrUk1cQV9N93hqRcOXEdo+hhVweBEt98PQ5npmGWrwwb37GSiyI5yzJVS2vYPGYGsloLu8HNhp3Vdq20+M6tUPID8Bw0CWlcsZg9IA7YvEWpHEymRUUwNma3YGstTWTXEHGvOxJyqXTpFEWLjdsCMh7xPNdgTGQqyMRSQI5Qt63hnxqMPUFLYXmucvSrYZmSFqSlJa+qQmRObfLFkPWGmWyNqmllNxWgP2rxBTKLeiqtKtBWgKFdZ58Wu94HNnbdQ+GgzFgt5Iq17iHXTKWk8RpHafpzfT0GUNtviuEj+niuHi/zHlSg5hWeVMy8Qf/r1Qh/wCMvq4JAQ4bOT0j8bwEPPekQXx/rmDhRsticZKokwWtewmEZSQhEhugPg0OSEP6GG/OgdH5YoOpQKDEF/Y3y8hDeeAyhS1sdJYG4+12xG6Xt1B4jVyGykzqKACfVY8GZO4oJb69PB9nEe9sTWyhVAJd7LBKOSD8msi6oicz0JiT3UTkn65KqxrWSgJ/T6RW9Ldd2djVlz4rHXRoNIsLG0RBXCI+jES2CxPx5GlPI/ymvRi7zkVy84eFm/5JXV2ol6NguNC8/5q9x9Ym0EvLaFuWLbjr5ODrFZVARR6/xw2uJozeERkV7vO/S6P8bwWXJqxcugdW1K1LngFbecru3pm1DzBEwsKKEXVvpKB0M00E6nA3fjNPT8avRSeof54X5dMRt7By5BTKb2SPhrn5fyneqyF+qZ66G3wt5v/Rg59oMeFnwxQvWhLm3AUgdzwrrfofWg7Rx5nvhaTp83v4+Sx6mCMidfAn4iVWNrcD1M07ssIRXIkHmEjeRhFJoEoNxFES4L8XGjSW1xrbN1tZWZpwkzVoZ244bqk8tIr9xLfii8P2R9rxPS14XdIqFynjhfqMvrqbtbP+R/jmicHqj0JR6sVe3dyDakoch/AUbdEFQ4Gu/HftWON6VdUxQs7/9MdpMOsa3o8l22CCVS+VMBfYvVFnWEr2LfDeLbifTWXR2c0kMIFGe/AJTtovU2JK7Sxz8eQ824nI7oOFQ5q0+uZG9cev3D3aBOAuPNqkKjryhq+54m5AYd8QqIjE18B0c7NKD8sInCB6XP+o71jQLbuCzLtqWfqMtTdPs/Edm0BfaWXcDbcO+4rERpy7QwYy8InhR+2N9Mp+1cSeBzR0qexA772X8+8kMsYswxpYqJxHNH2jExfeY4UI53l22uX8NHqJc1XxFWK+ScofvFhUk6atLvbCgoLotuek5uJuFcYiD3hTVXpGm8Yndtlu83/qpxDb1PZqOdY5e/wvQgCh5
+sidebar_class_name: "get api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get an account by email"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/mail/accounts/single"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns the account information by the email address specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"email":{"description":"Account email address","type":"string"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Account information","content":{"application/json":{"schema":{"type":"object","properties":{"MailBoxId":{"type":"integer","format":"int32","example":"1"},"EMailView":{"type":"string","example":"email.only.com"},"Name":{"type":"string","example":"name"},"Account":{"type":"string","example":"account"},"Password":{"type":"string","example":"password"},"Server":{"type":"string","example":"server"},"SmtpServer":{"type":"string","example":"smtp_server"},"SmtpPortStr":{"type":"string","example":"smtp_port"},"SmtpAccount":{"type":"string","example":"smtp_account"},"SmtpPassword":{"type":"string","example":"smtp_password"},"SmtpAuth":{"type":"boolean","example":"smtp_auth"},"PortStr":{"type":"string","example":"port"},"Encryption":{"type":"integer","format":"int32","enum":["None","SSL","StartTLS"],"description":"[0 - None, 1 - SSL, 2 - StartTLS]","example":"1"},"SmtpEncryption":{"type":"integer","format":"int32","enum":["None","SSL","StartTLS"],"description":"[0 - None, 1 - SSL, 2 - StartTLS]","example":"2"},"Authentication":{"type":"integer","format":"int32","enum":["None","Login","CramMd5","OAuth2","Ntlm"],"description":"[0 - None, 1 - Login, 4 - CramMd5, 5 - OAuth2, 7 - Ntlm]","example":"2"},"SmtpAuthentication":{"type":"integer","format":"int32","enum":["None","Login","CramMd5","OAuth2","Ntlm"],"description":"[0 - None, 1 - Login, 4 - CramMd5, 5 - OAuth2, 7 - Ntlm]","example":"2"},"Imap":{"type":"boolean","example":"true"},"BeginDate":{"type":"string","format":"date-time","example":"2020-10-01T17:04:32.0000000"},"IsOAuth":{"type":"boolean","example":"true"},"Restrict":{"type":"boolean","example":"true"},"EMailInFolder":{"type":"string","example":"email_in_folder"},"IsTeamlab":{"type":"boolean","example":"is_teamlab"}},"title":"MailBoxData"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

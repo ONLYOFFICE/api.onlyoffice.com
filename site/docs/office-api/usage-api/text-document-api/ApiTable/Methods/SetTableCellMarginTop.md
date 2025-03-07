@@ -1,6 +1,6 @@
 # SetTableCellMarginTop
 
-Specifies an amount of space which will be left between the top extent of the cell contents and the top border
+Specifies an amount of space which will be left between the top extent of the cell contents and the top border\
 of all table cells within the parent table (or table row).
 
 ## Syntax
@@ -19,7 +19,7 @@ expression.SetTableCellMarginTop(nValue);
 
 ## Returns
 
-boolean
+This method doesn't return any data.
 
 ## Example
 

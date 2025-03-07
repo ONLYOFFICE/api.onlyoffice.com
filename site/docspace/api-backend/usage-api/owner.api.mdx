@@ -1,0 +1,71 @@
+---
+id: owner
+title: "Update the portal owner"
+description: "Updates the current portal owner with a new one specified in the request."
+sidebar_label: "Update the portal owner"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVE1vGjEQ/SuWz8ASCoVwS5MeoqpKlA/1gFBkdmdZJ8Z2bW9outr/3hl7IYQ0Ug89sNjz5ec3z9PwINaezxf8FkKQeu1Zxq62Ghxf9rix4ESQRl8WfM5NNPe4g581+PDFFC983vDc6AA60FJYq2QeM7JHbzTZfF7BRtAqvFigMqtHyAPWsY7qBwmevLE6nbMP9MEhIAwswOdOWiqL5oiOXV6gozRuI/BkXteywD38EhurKHc6EZNyOp70y8+n0/54fDLrrz7Niv6whGExmk5hNJnxtu1xURSSCgt1fQCnFMrD8cF7hjoCmBVObCCA83h2kCGefHZ7PvgBq8GZlfT7bgpQg5uU4S+CGVyli+6qdS70IB5C5MBbo31iZTQc0t8RA08c48Z/c91VwGqP/OSmVgXTJrAVsNLUukg5J+9z7rWoQ2Wc/A1d0On7oEiWh7x2MmDbF9hsnz9Q4sMTkAFxC+rBFgOAL9vlMX33thABPAsIEcs41AyzxgWhWOw928pQMcE0bJnRwLyFXJYSCiZ1TOpoH+AhyHplSJO2jkoSocJNJqzMRoNh5jtus51kkZFnahPhrp3C2CoE6+dZ1lTGh3beEJIWI5+Fk2KlEvvkS1SUolYkNGVyoaIZ6aCct+7Z8HREbVy+cnVL+k/l3jK21zmi/oaGHteoJtofhvW4JPJyY54kxCbQw7p5fYJfd5o/eEL/KH+qXZqI5L14iQukLPXueZTu68NGxFfdQU09jd05bOXxmz0YEv9VBh2BAX6FzCqBTCHK2N+m08SC2MVIVEWUQdIFLs1uxqUeL3jTrISHe6falsx4hiNZL18lQTusX6HOMZWkFPvIz9Pd+neEhsJVndp6NAxJFXvhXt/fYeyqm6EbnBJodGJL8xW/+OBo/FJylE60NVwJva7FmmJTyTjCarrpoZyScLoFAd259MshwLc6S5ehb9v7IKNpklbbdh+fXB9mdGTtoqlDSwT9B+/rL+w=
+sidebar_class_name: "put api-method"
+info_path: site/docspace/api-backend/usage-api/asc-web-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Update the portal owner"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"put"}
+  path={"/api/2.0/settings/owner"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Updates the current portal owner with a new one specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"ownerId":{"type":"string","description":"Owner ID","format":"uuid","example":"75a5f745-f697-4418-b38d-0fe0d277e258"}},"additionalProperties":false,"description":"Settings request parameters","title":"ASC.Web.Api.ApiModel.RequestsDto.OwnerIdSettingsRequestDto"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Ok"},"400":{"description":"The user could not be found"},"401":{"description":"Unauthorized"},"409":{"description":""}}}
+>
+  
+</StatusCodes>
+
+
+      

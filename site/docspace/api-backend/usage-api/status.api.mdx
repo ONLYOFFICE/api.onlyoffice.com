@@ -1,0 +1,63 @@
+---
+id: status
+title: "Gets migration status"
+description: "Gets migration status"
+sidebar_label: "Gets migration status"
+hide_title: true
+hide_table_of_contents: true
+api: eJztWUtv4zYQ/isCz6rtOEbR+tQgmwZBuw/ECfZgGAEtjS1uKFElqWRVQf+9M6Qty69svE568iG2SM18M/PNcMjQFbN8bthwzD6KueZWqIxNQqZy8IObmA2ZsdwWhoVMg8lVZgAVKtbv9egrBhNpkTvNIfv8iGKRyixklt7yPJciclDdb4ZEKmaiBFJOT7bMAZXU9BtEFhVzTYat8AZwNEeLpiWZFekUNEquW218DxqdkM2UTjk6wWJVTCXgDHznaY5Pw7MaB1or3YI2Vots/gK0VwjRByk5AQ6tLqCFyoxKIbDw3TLEz7k2cAumkPbHoabOitKfeAq7fHqlzSZtR2DMuJAQX+goEU/Q5p5rzUvEERZSs22gfsHCuGVigoKFAf0a6D1smUQVMr5Jc6Xb3E6VksCzdqLJD7T3COURjGCxCrlLv6kwL/ES4KiMMygfbhWWrzWDPxJlSacTqZRMxMLkkpdHpn8mtLGHY3wV2UyAjAlC8p9CKFPkfZHYO6dWMZXB5xnmvmKAy5aK4EISSbdKpRdxKihR1wUYyu8HFY1yHsFy/h5xqA+9vDbHCBj8EuBnGDSoOEHPAadBGDgLOOe+w2DNEE4vx0txMozT9DVpF5LzvQ6bWHrhWdgPz8PBykmBTW++ozmNe0sfzzZ866/8Ot/hy2CXI72aLArrnRpddi6Vhg6Jmc4ViqgSwGUAs+G7CjL3Jy7pV6yrmZIx4lyqImuvq1VgTcHj1Hl/raP2zweuAtHQEfrT0oK5U5bLH+r/OtjSRwAex4J45/JLK7QZlwbWaWv6uifwo4pBms5FLpZvsjkOPHHvAOwKfKtl4sSzsNjd7BV1h/tTmzy1yVObPLXJU5vcbJPwXRh76o+n/njqj6f+eOqPW/1xrlWR/5+90Rk8svGkKi4kHAlCveNexH/j/vAelxdvn8NrYm5nEoWj/wuuJTK2ufr258LrjRKuIf5JLb+ED9C7VGmqskOtIYFUfoeqXW9W934FU0QRGAPx5mHhkHbkrsSOAdiI7w2v0tyt5Ltgv2mlqwwHN9lMkQMCeztZtBDvzOH6xjfKIRJ4sjDBcwI2wY0VP4K0uZcVJogauM0COCSIrzB1LuPfIoDbxX33B6tWgYzcbThOYUMn/EHvbPse/D7jBf4jr8W/4A5Eg975ttAnFaA/qTAGxyawbkjFhBFiVDxycmTDQFRoYUt3DuImeiD0B3ceHTMNnAJ/RgHAvE02CbwGa1p8Nbf5KbKp6H5/Dm4D4DbBQZfnotvv9LqNRrfRwBXw5BYBelFo3FxZYm1uht1ulShj62FFq7NGySeuBdWYq0B656OfcXcdzqSKuHTTdFO+2GNWr3/r/d4ndieryEf0o4GHW49/Vfi5+Auo8jO3gayLYdERFZFSjwIcpYKKkbS3K4D8xzA9e09976OxdDhFhQX8PlbXuK9Wv4XsVVi4T6uui6d34U/A2h1dfE7GFBtKYlZYcxxTtFIWIMiT53jMqmrKDdxrWdc0/U8BmopkskoJjdBCglWD3YtS6XhkF9goc+tyJwtP6MZvN5SPpmiur+5Qlghez4Fne/FA6MtXWdnGXk+O94A+6XC8U6OqfILrupH3r/ZqLCJcShOx2NXq/wCv8TOG
+sidebar_class_name: "get api-method"
+info_path: site/docspace/api-backend/usage-api/asc-web-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Gets migration status"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/migration/status"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Gets migration status
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Ok","content":{"application/json":{"schema":{"type":"object","properties":{"progress":{"type":"number","description":"Migration progress","format":"double","example":1},"error":{"type":"string","description":"Migration error","nullable":true,"example":"some text"},"parseResult":{"type":"object","properties":{"migratorName":{"type":"string","nullable":true,"example":"some text"},"operation":{"type":"string","nullable":true,"example":"some text"},"failedArchives":{"type":"array","items":{"type":"string"},"nullable":true,"example":["some text"]},"users":{"type":"array","items":{"type":"object","properties":{"shouldImport":{"type":"boolean","example":true},"key":{"type":"string","nullable":true,"example":"some text"},"email":{"type":"string","format":"email","nullable":true,"example":"Sydney_Roberts4@hotmail.com"},"displayName":{"type":"string","nullable":true,"example":"some text"},"firstName":{"type":"string","nullable":true,"example":"Winfield"},"lastName":{"type":"string","nullable":true,"example":"Wyman"},"userType":{"oneOf":[{"enum":["All","RoomAdmin","Guest","DocSpaceAdmin","User"],"type":"string","description":"[All - All, RoomAdmin - Room admin, Guest - Guest, DocSpaceAdmin - DocSpace admin, User - User]","example":"All"},{"enum":[0,1,2,3,4],"type":"integer","description":"[0 - All, 1 - Room admin, 2 - Guest, 3 - DocSpace admin, 4 - User]","example":0}],"title":"ASC.Core.Users.EmployeeType"},"migratingFiles":{"type":"object","properties":{"foldersCount":{"type":"integer","format":"int32","example":1234},"filesCount":{"type":"integer","format":"int32","example":1234},"bytesTotal":{"type":"integer","format":"int64","example":1234}},"additionalProperties":false,"title":"ASC.Migration.Core.Models.Api.MigratingApiFiles"}},"additionalProperties":false,"title":"ASC.Migration.Core.Models.Api.MigratingApiUser"},"nullable":true},"withoutEmailUsers":{"type":"array","items":{"type":"object","properties":{"shouldImport":{"type":"boolean","example":true},"key":{"type":"string","nullable":true,"example":"some text"},"email":{"type":"string","format":"email","nullable":true,"example":"Sydney_Roberts4@hotmail.com"},"displayName":{"type":"string","nullable":true,"example":"some text"},"firstName":{"type":"string","nullable":true,"example":"Winfield"},"lastName":{"type":"string","nullable":true,"example":"Wyman"},"userType":{"oneOf":[{"enum":["All","RoomAdmin","Guest","DocSpaceAdmin","User"],"type":"string","description":"[All - All, RoomAdmin - Room admin, Guest - Guest, DocSpaceAdmin - DocSpace admin, User - User]","example":"All"},{"enum":[0,1,2,3,4],"type":"integer","description":"[0 - All, 1 - Room admin, 2 - Guest, 3 - DocSpace admin, 4 - User]","example":0}],"title":"ASC.Core.Users.EmployeeType"},"migratingFiles":{"type":"object","properties":{"foldersCount":{"type":"integer","format":"int32","example":1234},"filesCount":{"type":"integer","format":"int32","example":1234},"bytesTotal":{"type":"integer","format":"int64","example":1234}},"additionalProperties":false,"title":"ASC.Migration.Core.Models.Api.MigratingApiFiles"}},"additionalProperties":false,"title":"ASC.Migration.Core.Models.Api.MigratingApiUser"},"nullable":true},"existUsers":{"type":"array","items":{"type":"object","properties":{"shouldImport":{"type":"boolean","example":true},"key":{"type":"string","nullable":true,"example":"some text"},"email":{"type":"string","format":"email","nullable":true,"example":"Sydney_Roberts4@hotmail.com"},"displayName":{"type":"string","nullable":true,"example":"some text"},"firstName":{"type":"string","nullable":true,"example":"Winfield"},"lastName":{"type":"string","nullable":true,"example":"Wyman"},"userType":{"oneOf":[{"enum":["All","RoomAdmin","Guest","DocSpaceAdmin","User"],"type":"string","description":"[All - All, RoomAdmin - Room admin, Guest - Guest, DocSpaceAdmin - DocSpace admin, User - User]","example":"All"},{"enum":[0,1,2,3,4],"type":"integer","description":"[0 - All, 1 - Room admin, 2 - Guest, 3 - DocSpace admin, 4 - User]","example":0}],"title":"ASC.Core.Users.EmployeeType"},"migratingFiles":{"type":"object","properties":{"foldersCount":{"type":"integer","format":"int32","example":1234},"filesCount":{"type":"integer","format":"int32","example":1234},"bytesTotal":{"type":"integer","format":"int64","example":1234}},"additionalProperties":false,"title":"ASC.Migration.Core.Models.Api.MigratingApiFiles"}},"additionalProperties":false,"title":"ASC.Migration.Core.Models.Api.MigratingApiUser"},"nullable":true},"groups":{"type":"array","items":{"type":"object","properties":{"shouldImport":{"type":"boolean","example":true},"groupName":{"type":"string","nullable":true,"example":"some text"},"moduleName":{"type":"string","nullable":true,"example":"some text"},"userUidList":{"type":"array","items":{"type":"string"},"nullable":true,"example":["some text"]}},"additionalProperties":false,"title":"ASC.Migration.Core.Models.Api.MigratingApiGroup"},"nullable":true},"importPersonalFiles":{"type":"boolean","example":true},"importSharedFiles":{"type":"boolean","example":true},"importSharedFolders":{"type":"boolean","example":true},"importCommonFiles":{"type":"boolean","example":true},"importProjectFiles":{"type":"boolean","example":true},"importGroups":{"type":"boolean","example":true},"successedUsers":{"type":"integer","format":"int32","example":1234},"failedUsers":{"type":"integer","format":"int32","example":1234},"files":{"type":"array","items":{"type":"string"},"nullable":true,"example":["some text"]},"errors":{"type":"array","items":{"type":"string"},"nullable":true,"example":["some text"]}},"additionalProperties":false,"title":"ASC.Migration.Core.Models.Api.MigrationApiInfo"},"isCompleted":{"type":"boolean","description":"Specifies whether the migration is completed","example":true}},"additionalProperties":false,"title":"ASC.Web.Api.ApiModels.ResponseDto.MigrationStatusDto"}}}},"401":{"description":"Unauthorized"},"403":{"description":"No permissions to perform this action"}}}
+>
+  
+</StatusCodes>
+
+
+      

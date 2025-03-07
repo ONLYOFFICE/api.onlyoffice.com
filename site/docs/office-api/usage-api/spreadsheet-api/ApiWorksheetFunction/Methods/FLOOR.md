@@ -23,14 +23,10 @@ number
 
 ## Example
 
-This example shows how to round a number down to the nearest multiple of significance.
+
 
 ```javascript editor-xlsx
-// How to round a number down to the nearest multiple of significance.
-
-// Use function to round down.
-
-var oWorksheet = Api.GetActiveSheet();
-var oFunction = Api.GetWorksheetFunction();
-oWorksheet.GetRange("A1").SetValue(oFunction.FLOOR(5.786, 0.7));
+let worksheet = Api.GetActiveSheet();
+let func = Api.GetWorksheetFunction();
+worksheet.GetRange("A1").SetValue(func.FLOOR(5.786, 0.7));
 ```

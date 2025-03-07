@@ -1,0 +1,71 @@
+---
+id: add-an-entity-comment
+title: "Add an entity comment"
+description: "Adds a comment to the selected entity with the content specified in the request."
+sidebar_label: "Add an entity comment"
+hide_title: true
+hide_table_of_contents: true
+api: eJy1VluP4jYU/iuRn8kAGaAEqVrRdlYdddWigVEfZtHIxGbiJYlT25nLRvz3Pcd2IOxkmK3U8oCcc798Psc1MfRBk9kdSWSeV4UwL/2/xU6QdY9onlQKCMCtybwyqVTiKzVCFr9zyrhCLQUn0iNPIMfJeg9ajOtEiRLFyIzMGdMBDdA4L0xgZGBSHmie8cRwFgANHARPwqSWkcjCoJwueSK2AiREYRmK/1NxbS7Alz/+IhlEVhOvgkdalplIbIT9Lxr910QnKc8pnsxLySEiufkCvsFOqWTJlRFcI7ekCqz4OAVD0mkmv/oUnGBw/RuY8Ca1UaJ4IPsecfl0qV+5TLvVWjl0OzX82bxWtD8siC5loV0e0WDwthlRbKXKbYFI77+qnDcOmR1FfYRQkGealxmShlE0GcajOGSbSRSOLpMo3MTjSRgP+TBKRsOIjSnW4lZz1W3LxQ6UqhLs1PY4no6T4WVIWTwMR9soCeNoOgmTbRwPR6Mp/ymeNLYXUpvzkRZVljXSH+H8J835eY05y0UhgEGNVAdHSm5Fxj+JYnde+/PnPsiyKjEaj1wC2dFQ/4Lq8vlDBQZ/pl1u5o/UULWgJn3Xi96JAl0wvqVVZuAkcvrAW6R79HNfptLIey2+8vtpFE6ji9LB1He6uXlv+2IUbFaDwcB29LqgiRGP7RpupMw4LU6UtjTT3MrrG5wq56WNqrzwFRNmwVUutAb46h/Wu/HX5t/rrkTOlwaoS6PeAf14dhkHK8noS6uAn8QJBA/36jUE58bQJEWddmxUKbDXIzBzc/3+Bf0IKOrGMHhAZjd4cLR8FxFMIGEc4g+BETuDGnozDGDQEDedRoPh64F0W1C/TzizjnIOn9BzUuL1hAxsSKRPS9GPLgb943Z6gu3U93Oa4JJSj1xpu6MqlYFOakypZ/1+nYKp/awupTJ7kHykStBN5mqS+ingcQ9qmUxoZskQDuqcsqeDOMKMWntxiQPSmevcjsd+leIPbhuGuaeO3SOF7cmpri0GTuCb45a7aprQsaVaoDusniPtMOFbDccdYGNrdcxWNljaUgY3V8tVMF9cY8mgsq5hGTW8KY02ObUbokmAsYAWzS4/tuak5a1F/X88CnylcU/2y4xCoSFUi4faY+kO2wCSgCZbGZ81Pl7wveNIGB902KHjjtT1hmp+q7L9HsngTeFraH0EE36Bp7R5ENVkB53GqtqYwxXGheJZ5ZDw3Z7d9xqNeZLw0pyVXbfuyeKv5QqEN34W55KhjqJP+EKC/xmBg7TFtwi1tBr6WDxUMPOB72wi3vAunsJ1Z+HqD5hVwypeWhGeIrfnE8F/TKtTpa7dZdjvD/KO9abG4bo4aezsGqL+Bk9frGE=
+sidebar_class_name: "post api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Add an entity comment"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/api/2.0/community/wiki/comment"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Adds a comment to the selected entity with the content specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"parentcommentid":{"description":"Comment parent ID","type":"string"},"entityid":{"description":"Entity ID","type":"string"},"content":{"description":"Comment text","type":"string"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Comment information","content":{"application/json":{"schema":{"type":"object","properties":{"CommentID":{"type":"string","example":"12261949-db62-43c2-b956-91e12c412d5a"},"UserID":{"type":"string","format":"uuid","example":"15985c13-ad91-4f2c-9286-cf991448e796"},"UserPost":{"type":"string","example":"null"},"UserFullName":{"type":"string","example":"Administrator"},"UserProfileLink":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"},"UserAvatarPath":{"type":"string","example":"\\/skins\\/default\\/images\\/default_user_photo_size_82-82.png"},"CommentBody":{"type":"string","example":"das\\u000a"},"Inactive":{"type":"boolean","example":"false"},"IsRead":{"type":"boolean","example":"true"},"IsEditPermissions":{"type":"boolean","example":"true"},"IsResponsePermissions":{"type":"boolean","example":"true"},"TimeStampStr":{"type":"string","example":"15:39 Today"},"CommentList":{"type":"object","example":"null"},"Attachments":{"type":"array","items":{"type":"object","properties":{"FileName":{"type":"string"},"FilePath":{"type":"string"}},"example":"null","title":"Attachment"}}},"title":"CommentInfo"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

@@ -1,3 +1,6 @@
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 # call
 
 Calls the specified Document Builder method. See the [Text document API](../../../../office-api/usage-api/text-document-api/text-document-api.md), [Spreadsheet API](../../../../office-api/usage-api/spreadsheet-api/spreadsheet-api.md), [Presentation API](../../../../office-api/usage-api/presentation-api/presentation-api.md) or [Form API](../../../../office-api/usage-api/form-api/form-api.md) sections for more information which methods are available for various document types.
@@ -19,20 +22,21 @@ CDocBuilderValue call(String name, Object p1, Object p2, Object p3, Object p4, O
 
 ## Example
 
-### Java
-
-``` java
-CDocBuilder.initialize("");
-CDocBuilder builder = new CDocBuilder();
-CDocBuilderContext context = builder.getContext();
-CDocBuilderValue global = context.getGlobal();
-CDocBuilderValue api = global.get("Api");
-CDocBuilderValue document = api.call("GetDocument");
-CDocBuilder.dispose();
-```
-
-### .docbuilder
-
-```ts
-const oDocument = Api.GetDocument()
-```
+<Tabs>
+    <TabItem value="java" label="Java">
+        ``` java
+        CDocBuilder.initialize("");
+        CDocBuilder builder = new CDocBuilder();
+        CDocBuilderContext context = builder.getContext();
+        CDocBuilderValue global = context.getGlobal();
+        CDocBuilderValue api = global.get("Api");
+        CDocBuilderValue document = api.call("GetDocument");
+        CDocBuilder.dispose();
+        ```
+    </TabItem>
+    <TabItem value="builder" label=".docbuilder">
+        ```ts
+        const oDocument = Api.GetDocument()
+        ```
+    </TabItem>
+</Tabs>
