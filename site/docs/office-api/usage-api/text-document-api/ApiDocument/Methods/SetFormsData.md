@@ -14,17 +14,17 @@ expression.SetFormsData(arrData);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| arrData | Required | [FormData[]](../../Enumeration/FormData.md) |  | An array of form data to set to the specified forms. |
+| arrData | Required | [FormData](../../Enumeration/FormData.md)[] |  | An array of form data to set to the specified forms. |
 
 ## Returns
 
-This method doesn't return any data.
+boolean
 
 ## Example
 
 This example shows how to set data to forms.
 
-```javascript
+```javascript editor-docx
 let doc = Api.GetDocument();
 let paragraph1 = doc.GetElement(0);
 let checkBox = Api.CreateCheckBoxForm({key: "BestCompany"});

@@ -28,8 +28,8 @@ This method doesn't return any data.
 
 This example sets the width of the specified column.
 
-```javascript
-var oWorksheet = Api.GetActiveSheet();
-oWorksheet.SetColumnWidth(0, 10);
-oWorksheet.SetColumnWidth(1, 20);
+```javascript editor-xlsx
+let worksheet = Api.GetActiveSheet();
+worksheet.SetColumnWidth(0, 10);
+worksheet.SetColumnWidth(1, 20);
 ```

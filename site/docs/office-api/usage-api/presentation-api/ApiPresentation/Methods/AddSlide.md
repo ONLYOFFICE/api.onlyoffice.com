@@ -14,7 +14,7 @@ expression.AddSlide(oSlide);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| oSlide | Required | [ApiSlide](../../ApiSlide/ApiSlide.md) |  | The slide created using the &#123;@link Api#CreateSlide&#125; method. |
+| oSlide | Required | [ApiSlide](../../ApiSlide/ApiSlide.md) |  | The slide created using the [Api#CreateSlide](../../Api/Methods/CreateSlide.md) method. |
 
 ## Returns
 
@@ -24,7 +24,7 @@ This method doesn't return any data.
 
 This example appends a new slide to the end of the presentation.
 
-```javascript
+```javascript editor-pptx
 var oPresentation = Api.GetPresentation();
 var oSlide = Api.CreateSlide();
 var oGs1 = Api.CreateGradientStop(Api.CreateRGBColor(255, 213, 191), 0);

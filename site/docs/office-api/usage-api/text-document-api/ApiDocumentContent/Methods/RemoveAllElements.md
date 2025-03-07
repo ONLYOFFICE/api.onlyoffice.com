@@ -2,7 +2,7 @@
 
 Removes all the elements from the current document or from the current document element.
 💡 When all elements are removed, a new empty paragraph is automatically created. If you want to add
-content to this paragraph, use the &#123;@link ApiDocumentContent#GetElement&#125; method.
+content to this paragraph, use the [ApiDocumentContent#GetElement](../../ApiDocumentContent/Methods/GetElement.md) method.
 
 ## Syntax
 
@@ -18,13 +18,13 @@ This method doesn't have any parameters.
 
 ## Returns
 
-This method doesn't return any data.
+boolean
 
 ## Example
 
 This example removes all the elements from the current document or from the current document content.
 
-```javascript
+```javascript editor-docx
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 let fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));

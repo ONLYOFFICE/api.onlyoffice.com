@@ -16,17 +16,17 @@ expression.SetTitle(sTitle, nFontSize, bIsBold);
 | ------------- | ------------- | ------------- | ------------- | ------------- |
 | sTitle | Required | string |  | The title which will be displayed for the current chart. |
 | nFontSize | Required | [pt](../../Enumeration/pt.md) |  | The text size value measured in points. |
-| bIsBold | Required | bool |  | Specifies if the chart title is written in bold font or not. |
+| bIsBold | Required | boolean |  | Specifies if the chart title is written in bold font or not. |
 
 ## Returns
 
-This method doesn't return any data.
+boolean
 
 ## Example
 
 This example specifies the chart title.
 
-```javascript
+```javascript editor-docx
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 let chart = Api.CreateChart("bar3D", [

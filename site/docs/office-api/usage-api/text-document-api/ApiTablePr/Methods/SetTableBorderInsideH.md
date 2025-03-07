@@ -24,13 +24,13 @@ expression.SetTableBorderInsideH(sType, nSize, nSpace, r, g, b);
 
 ## Returns
 
-This method doesn't return any data.
+boolean
 
 ## Example
 
 This example specifies the border which will be displayed on all horizontal table cell borders which are not on the outmost edge of the parent table.
 
-```javascript
+```javascript editor-docx
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 paragraph.AddText("We add the inside horizontal 4 point black border:");
