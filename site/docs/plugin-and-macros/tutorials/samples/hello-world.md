@@ -82,7 +82,7 @@ Repository on GitHub: [helloworld](https://github.com/ONLYOFFICE/sdkjs-plugins/t
 
 - button
 - init
-- [callCommand](../../interacting-with-editors/methods/text-document-api/Plugin/Methods/callCommand.md)
+- [callCommand](../../interacting-with-editors/overview/how-to-call-commands.md#callcommand)
 - [Asc.scope](../../interacting-with-editors/overview/how-to-call-commands.md#ascscope-object) object
 - [info.recalculate](../../interacting-with-editors/overview/how-to-call-commands.md#recalculate)
 
