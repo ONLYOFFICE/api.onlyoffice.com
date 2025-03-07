@@ -15,7 +15,7 @@ expression.GetHeader(sType, isCreate);
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
 | sType | Required | [HdrFtrType](../../Enumeration/HdrFtrType.md) |  | Header type to get the content from. |
-| isCreate | Optional | boolean | false | Specifies whether to create a new header or not with the specified header type in case no header with such a type could be found in the current section. |
+| isCreate | Optional | boolean | false | Specifies whether to create a new header or not with the specified header type in case\ no header with such a type could be found in the current section. |
 
 ## Returns
 
@@ -25,7 +25,7 @@ expression.GetHeader(sType, isCreate);
 
 This example shows how to get the content for the specified header type.
 
-```javascript
+```javascript editor-docx
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 paragraph.AddText("This is a page with a header. ");

@@ -1,6 +1,6 @@
 # SetCellMarginBottom
 
-Specifies an amount of space which shall be left between the bottom extent of the cell contents and the border
+Specifies an amount of space which shall be left between the bottom extent of the cell contents and the border\
 of a specific individual table cell within a table.
 
 ## Syntax
@@ -15,7 +15,7 @@ expression.SetCellMarginBottom(nValue);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| nValue | Required | [twips](../../Enumeration/twips.md) |  | If this value is &lt;code&gt;null&lt;/code&gt;, then default table cell bottom margin shall be used, otherwise override the table cell bottom margin with specified value for the current cell. |
+| nValue | Required | [twips](../../Enumeration/twips.md) |  | If this value is &lt;code&gt;null&lt;/code&gt;, then default table cell bottom margin shall be used,\ otherwise override the table cell bottom margin with specified value for the current cell. |
 
 ## Returns
 
@@ -25,7 +25,7 @@ This method doesn't return any data.
 
 This example shows how to specifies an amount of space which shall be left between the bottom extent of the cell contents and the border of a specific individual table cell within a table.
 
-```javascript
+```javascript editor-pptx
 var oPresentation = Api.GetPresentation();
 var oTable = Api.CreateTable(2, 4);
 var oRow = oTable.GetRow(0);

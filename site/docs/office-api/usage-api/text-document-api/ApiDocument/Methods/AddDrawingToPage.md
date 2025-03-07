@@ -1,7 +1,7 @@
 # AddDrawingToPage
 
-Adds a shape to the specified page.
-💡 This method can be a little bit slow, because it runs the document calculation
+Adds a shape to the specified page.\
+💡 This method can be a little bit slow, because it runs the document calculation\
 process to arrange tables on the specified page.
 
 ## Syntax
@@ -29,7 +29,7 @@ boolean
 
 This example shows how to get a collection of tables on a given absolute page.
 
-```javascript
+```javascript editor-docx
 let doc = Api.GetDocument();
 let drawing = Api.CreateImage("https://static.onlyoffice.com/assets/docs/samples/img/onlyoffice_logo.png", 60 * 36000, 35 * 36000);
 let paragraph = Api.CreateParagraph();

@@ -15,7 +15,7 @@ expression.AddColumn(oCell, isBefore);
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
 | oCell | Optional | [ApiTableCell](../../ApiTableCell/ApiTableCell.md) |  | The cell after which a new column will be added. If not specified, a new column will be added at the end of the table. |
-| isBefore | Optional | boolean | false | Adds a new column before (false) or after (true) the specified cell. If no cell is specified, then this parameter will be ignored. |
+| isBefore | Optional | boolean | false | Adds a new column before (false) or after (true) the specified cell. If no cell is specified,\ then this parameter will be ignored. |
 
 ## Returns
 
@@ -25,7 +25,7 @@ This method doesn't return any data.
 
 This example adds a new column to the table.
 
-```javascript
+```javascript editor-docx
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 paragraph.AddText("We create a 2x2 table and add a new column, so that it becomes 3x2:");
