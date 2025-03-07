@@ -37,7 +37,7 @@ Merges data from all sheets into the active sheet by copying the used range of e
 })();
 ```
 
-Methods used: [GetSheets](), [GetActiveSheet](), [GetName](), [GetUsedRange](), [GetValue](), [GetRange](), [SetValue]()
+Methods used: [GetSheets](../../../../office-api/usage-api/spreadsheet-api/Api/Methods/GetSheets.md), [GetActiveSheet](../../../../office-api/usage-api/spreadsheet-api/Api/Methods/GetActiveSheet.md), [GetName](../../../../office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetName.md), [GetUsedRange](../../../../office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetUsedRange.md), [GetValue](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/GetValue.md), [GetRange](../../../../office-api/usage-api/spreadsheet-api/Api/Methods/GetRange.md), [SetValue](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/SetValue.md)
 
 ## Reference Microsoft VBA macro code
 

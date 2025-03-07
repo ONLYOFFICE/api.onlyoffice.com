@@ -59,7 +59,7 @@ Creates a custom function to calculate a weighted average.
 })();
 ```
 
-Methods used: [GetActiveSheet](), [GetRange](), [SetValue]()
+Methods used: [GetActiveSheet](../../../../office-api/usage-api/spreadsheet-api/Api/Methods/GetActiveSheet.md), [GetRange](../../../../office-api/usage-api/spreadsheet-api/Api/Methods/GetRange.md), [SetValue](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/SetValue.md)
 
 ## Result
 

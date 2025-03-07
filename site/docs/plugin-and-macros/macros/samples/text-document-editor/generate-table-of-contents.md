@@ -50,7 +50,7 @@ function generateTableOfContents() {
 })();
 ```
 
-Methods used: [GetDocument](), [GetAllParagraphs](), [GetText](), [GetStyle](), [CreateParagraph](), [AddText](), [SetBold](), [SetFontSize](), [InsertContent](), [AddTableOfContents]()
+Methods used: [GetDocument](../../../../office-api/usage-api/text-document-api/Api/Methods/GetDocument.md), [GetAllParagraphs](../../../../office-api/usage-api/text-document-api/ApiDocument/Methods/GetAllParagraphs.md), [GetText](../../../../office-api/usage-api/text-document-api/ApiParagraph/Methods/GetText.md), [GetStyle](../../../../office-api/usage-api/text-document-api/ApiParagraph/Methods/GetStyle.md), [CreateParagraph](../../../../office-api/usage-api/text-document-api/Api/Methods/CreateParagraph.md), [AddText](../../../../office-api/usage-api/text-document-api/ApiParagraph/Methods/AddText.md), [SetBold](../../../../office-api/usage-api/text-document-api/ApiParagraph/Methods/SetBold.md), [SetFontSize](../../../../office-api/usage-api/text-document-api/ApiParagraph/Methods/SetFontSize.md), [InsertContent](../../../../office-api/usage-api/text-document-api/ApiDocument/Methods/InsertContent.md), [AddTableOfContents](../../../../office-api/usage-api/text-document-api/ApiDocument/Methods/AddTableOfContents.md)
 
 ## Reference Microsoft VBA macro code
 

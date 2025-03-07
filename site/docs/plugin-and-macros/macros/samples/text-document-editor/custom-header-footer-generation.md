@@ -36,7 +36,7 @@ Applies predefined headers and footers to all pages in the document.
 })();
 ```
 
-Methods used: [GetDocument](), [GetSections](), [RemoveHeader](), [RemoveFooter](), [GetHeader](), [GetFooter](), [GetElement](), [AddText](), [SetJc](), [AddPageNumber]()
+Methods used: [GetDocument](../../../../office-api/usage-api/text-document-api/Api/Methods/GetDocument.md), [GetSections](../../../../office-api/usage-api/text-document-api/ApiDocument/Methods/GetSections.md), [RemoveHeader](../../../../office-api/usage-api/text-document-api/ApiSection/Methods/RemoveHeader.md), [RemoveFooter](../../../../office-api/usage-api/text-document-api/ApiSection/Methods/RemoveFooter.md), [GetHeader](../../../../office-api/usage-api/text-document-api/ApiSection/Methods/GetHeader.md), [GetFooter](../../../../office-api/usage-api/text-document-api/ApiSection/Methods/GetFooter.md), [GetElement](../../../../office-api/usage-api/text-document-api/ApiDocumentContent/Methods/GetElement.md), [AddText](../../../../office-api/usage-api/text-document-api/ApiParagraph/Methods/AddText.md), [SetJc](../../../../office-api/usage-api/text-document-api/ApiParagraph/Methods/SetJc.md), [AddPageNumber](../../../../office-api/usage-api/text-document-api/ApiParagraph/Methods/AddPageNumber.md)
 
 ## Result
 

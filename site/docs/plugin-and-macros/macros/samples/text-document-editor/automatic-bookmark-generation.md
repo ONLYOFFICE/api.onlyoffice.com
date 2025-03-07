@@ -26,7 +26,7 @@ Automatically generates bookmarks for all heading paragraphs in the document, us
 })();
 ```
 
-Methods used: [GetDocument](), [GetAllHeadingParagraphs](), [GetText](), [GetRange](), [AddBookmark]()
+Methods used: [GetDocument](../../../../office-api/usage-api/text-document-api/Api/Methods/GetDocument.md), [GetAllHeadingParagraphs](../../../../office-api/usage-api/text-document-api/ApiDocument/Methods/GetAllHeadingParagraphs.md), [GetText](../../../../office-api/usage-api/text-document-api/ApiParagraph/Methods/GetText.md), [GetRange](../../../../office-api/usage-api/text-document-api/ApiParagraph/Methods/GetRange.md), [AddBookmark](../../../../office-api/usage-api/text-document-api/ApiRange/Methods/AddBookmark.md)
 
 ## Reference Microsoft VBA macro code
 
