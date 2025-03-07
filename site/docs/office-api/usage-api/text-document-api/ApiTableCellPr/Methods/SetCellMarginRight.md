@@ -14,7 +14,7 @@ expression.SetCellMarginRight(nValue);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| nValue | Required | [twips](../../Enumeration/twips.md) |  | The value for the amount of space to the right extent of the cell measured in twentieths of a point (1/1440 of an inch). If this value is &lt;code&gt;null&lt;/code&gt;, then default table cell right margin will be used, otherwise the table cell right margin will be overridden with the specified value for the current cell. |
+| nValue | Required | [twips](../../Enumeration/twips.md) |  | The value for the amount of space to the right extent of the cell measured in twentieths\ of a point (1/1440 of an inch). If this value is &lt;code&gt;null&lt;/code&gt;, then default table cell right margin will be used, otherwise\ the table cell right margin will be overridden with the specified value for the current cell. |
 
 ## Returns
 
@@ -24,7 +24,7 @@ This method doesn't return any data.
 
 This example specifies an amount of space which will be left between the right extent of the cell contents and the border of a specific table cell within a table.
 
-```javascript
+```javascript editor-docx
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 let tableStyle = doc.CreateStyle("CustomTableStyle", "table");

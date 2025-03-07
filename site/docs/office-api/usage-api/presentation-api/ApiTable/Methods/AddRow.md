@@ -15,7 +15,7 @@ expression.AddRow(oCell, isBefore);
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
 | oCell | Optional | [ApiTableCell](../../ApiTableCell/ApiTableCell.md) |  | If not specified, a new row will be added to the end of the table. |
-| isBefore | Optional | boolean | false | Adds a new row before or after the specified cell. If no cell is specified, then this parameter will be ignored. |
+| isBefore | Optional | boolean | false | Adds a new row before or after the specified cell. If no cell is specified,\ then this parameter will be ignored. |
 
 ## Returns
 
@@ -25,7 +25,7 @@ expression.AddRow(oCell, isBefore);
 
 This example adds a new row to the table.
 
-```javascript
+```javascript editor-pptx
 var oPresentation = Api.GetPresentation();
 var oTable = Api.CreateTable(2, 4);
 oTable.AddRow(1, true);

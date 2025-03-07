@@ -1,6 +1,6 @@
 # FormType
 
-Form type.
+Form type.\
 The available form types.
 
 ## Type
@@ -21,6 +21,6 @@ Enumeration
 
 This example returns a type of the current form.
 
-```javascript
+```javascript editor-docx
 let formType = textForm.GetFormType();
 ```

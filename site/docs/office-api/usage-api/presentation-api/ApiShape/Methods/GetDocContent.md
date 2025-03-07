@@ -1,6 +1,6 @@
 # GetDocContent
 
-Deprecated in 6.2.
+Deprecated in 6.2.\
 Returns the shape inner contents where a paragraph or text runs can be inserted.
 
 ## Syntax
@@ -23,7 +23,7 @@ This method doesn't have any parameters.
 
 This example shows how to get the shape inner contents where a paragraph or text runs can be inserted.
 
-```javascript
+```javascript editor-pptx
 var oPresentation = Api.GetPresentation();
 oPresentation.SetSizes(254 * 36000, 190 * 36000);
 var oSlide = oPresentation.GetCurrentSlide();

@@ -14,7 +14,7 @@ expression.SetFooterDistance(nDistance);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| nDistance | Required | [twips](../../Enumeration/twips.md) |  | The distance from the bottom edge of the page to the bottom edge of the footer measured in twentieths of a point (1/1440 of an inch). |
+| nDistance | Required | [twips](../../Enumeration/twips.md) |  | The distance from the bottom edge of the page to the bottom edge of the footer measured\ in twentieths of a point (1/1440 of an inch). |
 
 ## Returns
 
@@ -24,7 +24,7 @@ This method doesn't return any data.
 
 This example specifies the distance from the bottom edge of the page to the bottom edge of the footer.
 
-```javascript
+```javascript editor-docx
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 paragraph.AddText("This is a page with a footer. ");

@@ -14,7 +14,7 @@ expression.SetLabel(sLabel);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sLabel | Required | string |  | The label which will be added to the current inline text content control. Can be a positive or negative integer from **-2147483647** to **2147483647**. |
+| sLabel | Required | string |  | The label which will be added to the current inline text content control. Can be a positive or negative integer from -**-2147483647** to -**2147483647**. |
 
 ## Returns
 
@@ -24,7 +24,7 @@ This method doesn't return any data.
 
 This example sets a string label to the inline text content control.
 
-```javascript
+```javascript editor-docx
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 let inlineLvlSdt = Api.CreateInlineLvlSdt();
