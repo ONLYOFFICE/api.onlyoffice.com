@@ -1,4 +1,4 @@
-# Custom average function
+# Weighted average function
 
 Creates a custom function to calculate a weighted average.
 
@@ -65,4 +65,4 @@ Methods used: [GetActiveSheet](../../../../office-api/usage-api/spreadsheet-api/
 
 <!-- imgpath -->
 
-![CustomAverageFunction](/assets/images/plugins/custom-average-function.png#gh-light-mode-only)![CustomAverageFunction](/assets/images/plugins/custom-average-function.dark.png#gh-dark-mode-only)
+![WeightedAverageFunction](/assets/images/plugins/weighted-average-function.png#gh-light-mode-only)![WeightedAverageFunction](/assets/images/plugins/weighted-average-function.dark.png#gh-dark-mode-only)
