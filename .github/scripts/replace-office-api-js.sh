@@ -2,6 +2,8 @@
 
 MAIN_DIR="${GITHUB_WORKSPACE}/replace-js"
 
+#set -eux 
+
 # github.event_name CAN BE ACCESSED via bash variable: ${EVENT}
 # github.ref_name CAN BE ACCESSED via bash variable: ${REF}
 # github user token CAN BE ACCESSED via bash variable: ${TOKEN_PUBLICK_REPO}
@@ -13,9 +15,18 @@ MAIN_DIR="${GITHUB_WORKSPACE}/replace-js"
 
 repos=(
    "api.onlyoffice.com"
-   "office-js-api"
    )
-   
+
+if [[ "${EVENT}" == "workflow_dispatch" ]]; then
+    if [[ "${REF}" =~ hotfix || "${REF}" =~ release ]]; then
+       echo "Action event_name: ${EVENT}"
+       echo "Choosed REF: ${REF}"
+    else
+       echo "Can run manually only from hotfix/release branches... exit 1"
+       exit 1
+    fi
+fi
+
 if [[ "${EVENT}" == "schedule" ]]; then
     BUILD_TOOLS_BRANCHES=($(curl -s -L \
               -H "Accept: application/vnd.github+json" \
@@ -43,18 +54,28 @@ function get_colors() {
     export COLOR_YELLOW
 }
 
+function check_branch() {
+  local target_repo
+  target_repo=$1
+  local target_branch
+  target_branch=$2
+  local branch_status
+  branch_status=$(curl -s -L \
+              -H "Accept: application/vnd.github+json" \
+              -H "Authorization: Bearer ${TOKEN_PUBLICK_REPO}" \
+              -H "X-GitHub-Api-Version: 2022-11-28" \
+              https://api.github.com/repos/ONLYOFFICE/${target_repo}/branches | \
+              jq -r --arg target_branch "$target_branch" '.[] | select(.name | startswith($target_branch)) | .name')
+  echo "${branch_status}"
+}
+
 function make_branches() {
   # Check that branches exist in repos and make it if not exist
   for repo in ${repos[@]}; do
     echo "Check branches in repo: ${COLOR_GREEN}${repo}${COLOR_RESET}"
     for branch in ${BRANCHES[@]}; do
         echo "Check branch: ${COLOR_GREEN}${branch}${COLOR_RESET}"
-        exist_branch=$(curl -s -L \
-              -H "Accept: application/vnd.github+json" \
-              -H "Authorization: Bearer ${TOKEN_PUBLICK_REPO}" \
-              -H "X-GitHub-Api-Version: 2022-11-28" \
-              https://api.github.com/repos/ONLYOFFICE/${repo}/branches | \
-              jq -r --arg branch "$branch" '.[] | select(.name | startswith($branch)) | .name')
+        exist_branch=$(check_branch ${repo} ${branch})
          if [[ -z "${exist_branch}" ]]; then
              echo "${COLOR_YELLOW}Branch ${branch} is not exist in repo ${repo}. Make it...${COLOR_RESET}"
             [[ ! -d ${repo} ]] && git clone https://${USER_PRIVATE_NAME}:${TOKEN_PRIVATE_REPO}@${URL_PRIVATE_REPO}/ONLYOFFICE/${repo}.git
@@ -91,6 +112,18 @@ function push_changes() {
        git checkout ${branch} 
        cd ${working_dir}
     done
+    
+    # Get office-js-api
+    git clone https://${USER_PRIVATE_NAME}:${TOKEN_PRIVATE_REPO}@${URL_PRIVATE_REPO}/ONLYOFFICE/office-js-api.git
+    exist_office_js_branch=$(check_branch "office-js-api" ${branch})
+    if [[ -z "${exist_office_js_branch}" ]]; then
+        echo "${COLOR_YELLOW}Branch ${branch} is not exist in repo office-js-api. Get from master${COLOR_RESET}"
+    else
+        echo "${COLOR_GREEN}Branch ${branch} is exist in repo office-js-api. Fetch ${branch}${COLOR_RESET}"
+        cd ./office-js-api
+        git checkout ${branch}
+        cd ${working_dir}
+    fi
 
     cd ./api.onlyoffice.com
     if [[ $( git ls-remote origin feature/replace-office-js-bot-${branch//\//-}) ]]; then
@@ -129,17 +162,17 @@ function push_changes() {
 
     # Replace main api files
     echo "${COLOR_BLUE}Replace main api files...${COLOR_RESET}"
-    cp -r ./office-js-api/Word/*  ./api.onlyoffice.com/site/docs/office-api/usage-api/text-document-api/
-    cp -r ./office-js-api/Slide/* ./api.onlyoffice.com/site/docs/office-api/usage-api/presentation-api/
-    cp -r ./office-js-api/Cell/*  ./api.onlyoffice.com/site/docs/office-api/usage-api/spreadsheet-api/
-    cp -r ./office-js-api/Forms/* ./api.onlyoffice.com/site/docs/office-api/usage-api/form-api/
+    cp -r ./office-js-api/text-document-api/*  ./api.onlyoffice.com/site/docs/office-api/usage-api/text-document-api/
+    cp -r ./office-js-api/presentation-api/* ./api.onlyoffice.com/site/docs/office-api/usage-api/presentation-api/
+    cp -r ./office-js-api/spreadsheet-api/*  ./api.onlyoffice.com/site/docs/office-api/usage-api/spreadsheet-api/
+    cp -r ./office-js-api/form-api/* ./api.onlyoffice.com/site/docs/office-api/usage-api/form-api/
 
     # Replace plugins api files
     echo "${COLOR_BLUE}Replace plugins api files...${COLOR_RESET}"
-    cp -r ./office-js-api/Plugins/Cell/*  ./api.onlyoffice.com/site/docs/plugin-and-macros/interacting-with-editors/methods/spreadsheet-api/
-    cp -r ./office-js-api/Plugins/Forms/* ./api.onlyoffice.com/site/docs/plugin-and-macros/interacting-with-editors/methods/form-api/
-    cp -r ./office-js-api/Plugins/Slide/* ./api.onlyoffice.com/site/docs/plugin-and-macros/interacting-with-editors/methods/presentation-api/
-    cp -r ./office-js-api/Plugins/Word/*  ./api.onlyoffice.com/site/docs/plugin-and-macros/interacting-with-editors/methods/text-document-api/
+    cp -r ./office-js-api/plugins/spreadsheet-api/*  ./api.onlyoffice.com/site/docs/plugin-and-macros/interacting-with-editors/methods/spreadsheet-api/
+    cp -r ./office-js-api/plugins/form-api/* ./api.onlyoffice.com/site/docs/plugin-and-macros/interacting-with-editors/methods/form-api/
+    cp -r ./office-js-api/plugins/presentation-api/* ./api.onlyoffice.com/site/docs/plugin-and-macros/interacting-with-editors/methods/presentation-api/
+    cp -r ./office-js-api/plugins/text-document-api/*  ./api.onlyoffice.com/site/docs/plugin-and-macros/interacting-with-editors/methods/text-document-api/
     
     CHANGES=$(cd ./api.onlyoffice.com && git diff)
     if [[ ! -z "${CHANGES}" ]]; then

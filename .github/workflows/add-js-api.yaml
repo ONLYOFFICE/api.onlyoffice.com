@@ -49,4 +49,4 @@ jobs:
             Action: ${{ github.event_name }}
             Workflow: ${{ github.workflow }}
 
-            See changes: https://${{ github.server_url }}/${{ github.repository }}/pulls/
+            See changes: ${{ github.server_url }}/${{ github.repository }}/pulls/
