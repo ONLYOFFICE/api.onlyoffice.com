@@ -1,6 +1,6 @@
 # AddComment
 
-Adds a comment to the current run.
+Adds a comment to the current run.\
 💡 Please note that this run must be in the document.
 
 ## Syntax
@@ -27,7 +27,7 @@ expression.AddComment(sText, sAuthor, sUserId);
 
 This example adds a comment to the run.
 
-```javascript
+```javascript editor-docx
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 let run = Api.CreateRun();
