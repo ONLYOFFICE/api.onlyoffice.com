@@ -36,7 +36,7 @@ Applies predefined headers and footers to all pages in the document.
 })();
 ```
 
-Methods used: GetDocument, GetSections, RemoveHeader, RemoveFooter, GetHeader, GetFooter, GetElement, AddText, SetJc, AddPageNumber
+Methods used: [GetDocument](), [GetSections](), [RemoveHeader](), [RemoveFooter](), [GetHeader](), [GetFooter](), [GetElement](), [AddText](), [SetJc](), [AddPageNumber]()
 
 ## Result
 

@@ -59,7 +59,7 @@ Creates a custom function to calculate a weighted average.
 })();
 ```
 
-Methods used: GetActiveSheet, GetRange, SetValue
+Methods used: [GetActiveSheet](), [GetRange](), [SetValue]()
 
 ## Result
 

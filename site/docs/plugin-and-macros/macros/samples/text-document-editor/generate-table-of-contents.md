@@ -50,7 +50,7 @@ function generateTableOfContents() {
 })();
 ```
 
-Methods used: GetDocument, GetAllParagraphs, GetText, GetStyle, CreateParagraph, AddText, SetBold, SetFontSize, InsertContent, AddTableOfContents
+Methods used: [GetDocument](), [GetAllParagraphs](), [GetText](), [GetStyle](), [CreateParagraph](), [AddText](), [SetBold](), [SetFontSize](), [InsertContent](), [AddTableOfContents]()
 
 ## Reference Microsoft VBA macro code
 

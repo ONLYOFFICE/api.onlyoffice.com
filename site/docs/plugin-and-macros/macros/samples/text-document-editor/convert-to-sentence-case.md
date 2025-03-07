@@ -63,7 +63,7 @@ Converts a sentence into sentence case (capitalises the first letter of a senten
 })();
 ```
 
-Methods used:
+Methods used: [Api.GetDocument](), [editor.GetAllParagraphs](), [paragraph.GetText](), [paragraph.RemoveAllElements](), [Api.CreateRun](), [run.AddText](), [paragraph.AddElement]()
 
 ## Reference Microsoft VBA macro code
 

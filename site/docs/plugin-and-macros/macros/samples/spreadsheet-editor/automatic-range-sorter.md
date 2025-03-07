@@ -62,7 +62,7 @@ Automatically sorts a selected range or the entire used range in a spreadsheet.
 })();
 ```
 
-Methods used: GetActiveSheet, GetUsedRange, GetRange, GetSelection, GetValue, SetValue
+Methods used: [GetActiveSheet](), [GetUsedRange](), [GetRange](), [GetSelection](), [GetValue](), [SetValue]()
 
 ## Result
 

@@ -53,7 +53,7 @@ Automatically aligns elements to the left and spaces them consistently.
 })();
 ```
 
-Methods used: GetPresentation, GetSlidesCount, GetSlideByIndex, GetWidth, GetHeight, GetAllDrawings, SetPosition  
+Methods used: [GetPresentation](), [GetSlidesCount](), [GetSlideByIndex](), [GetWidth](), [GetHeight](), [GetAllDrawings](), [SetPosition]()
 
 ## Result
 

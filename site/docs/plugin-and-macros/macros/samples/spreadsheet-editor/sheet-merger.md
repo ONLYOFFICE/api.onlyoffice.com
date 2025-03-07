@@ -37,7 +37,7 @@ Merges data from all sheets into the active sheet by copying the used range of e
 })();
 ```
 
-Methods used: GetSheets, GetActiveSheet, GetName, GetUsedRange, GetValue, GetRange, SetValue
+Methods used: [GetSheets](), [GetActiveSheet](), [GetName](), [GetUsedRange](), [GetValue](), [GetRange](), [SetValue]()
 
 ## Reference Microsoft VBA macro code
 

@@ -39,7 +39,7 @@ Counts the total number of shapes in a presentation by iterating through all sli
 })();
 ```
 
-Methods used: GetPresentation, GetSlidesCount, GetSlideByIndex, GetAllShapes, CreateSlide, CreateShape, SetPosition, CreateParagraph, AddText, SetColor, GetDocContent, Push, AddObject, AddSlide
+Methods used: [GetPresentation](), [GetSlidesCount](), [GetSlideByIndex](), [GetAllShapes](), [CreateSlide](), [CreateShape](), [SetPosition](), [CreateParagraph](), [AddText](), [SetColor](), [GetDocContent](), [Push](), [AddObject](), [AddSlide]()
 
 ## Reference Microsoft VBA macro code
 
