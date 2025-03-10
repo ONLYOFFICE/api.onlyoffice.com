@@ -181,4 +181,4 @@ jobs:
             Api s3 sync status: ${{ env.SYNC_STATUS }}
 
             See commit changes: https://github.com/${{ github.repository }}/commit/${{github.sha}}
-            See action run logs: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+            See action run logs: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_number }}
