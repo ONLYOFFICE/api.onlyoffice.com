@@ -89,7 +89,7 @@
 
 ### refreshFile
 
-在调用 [refreshFile](../../usage-api/methods.md#refreshFile) 方法更新文件版本时，必须添加令牌以验证参数。
+在调用 [refreshFile](../../usage-api/methods.md#refreshfile) 方法更新文件版本时，必须添加令牌以验证参数。
 
 JWT 令牌的有效载荷（JSON 格式）必须与 [config](../../usage-api/advanced-parameters.md) 结构相同。
 
