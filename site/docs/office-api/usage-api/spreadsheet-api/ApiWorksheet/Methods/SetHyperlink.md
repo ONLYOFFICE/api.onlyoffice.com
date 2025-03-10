@@ -16,9 +16,9 @@ expression.SetHyperlink(sRange, sAddress, subAddress, sScreenTip, sTextToDisplay
 | ------------- | ------------- | ------------- | ------------- | ------------- |
 | sRange | Required | string |  | The range where the hyperlink will be added to. |
 | sAddress | Required | string |  | The link address. |
-| subAddress | Required | string |  | The link subaddress to insert internal sheet hyperlinks. |
-| sScreenTip | Required | string |  | The screen tip text. |
-| sTextToDisplay | Required | string |  | The link text that will be displayed on the sheet. |
+| subAddress | Optional | string |  | The link subaddress to insert internal sheet hyperlinks. |
+| sScreenTip | Optional | string |  | The screen tip text. |
+| sTextToDisplay | Optional | string |  | The link text that will be displayed on the sheet. |
 
 ## Returns
 
