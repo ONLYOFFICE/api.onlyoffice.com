@@ -85,9 +85,32 @@ Example: "plugin name"
 
 Translations for the name field. The object keys are the two letter language codes (ru, de, it, etc.) and the values are the plugin name translation for each language.
 
-Type: [localeTranslate](../../interacting-with-editors/methods/text-document-api/Enumeration/localeTranslate.md)
+Type: [localeTranslate](#localetranslate)
 
 Example: `{ "fr": "french plugin name" }`
+
+#### localeTranslate
+
+The translations for the text field. The object keys are the two letter language codes (ru, de, it, etc.) and the values are the button label translation for each language.
+
+Type: object
+
+Example:
+
+``` json
+{
+  "variations": [
+      {
+          "name": "plugin name",
+          "nameLocale": {
+              "fr": "french plugin name",
+              "es": "spanish plugin name"
+          },
+          ...
+      }
+  ]
+};
+```
 
 ## offered
 
@@ -161,7 +184,7 @@ Example:
 
 The list of skinnable plugin buttons used in the plugin interface. This parameter is used only for plugin windows and panels, i.e. when the [type](#variationstype) parameter is *window*, *panel*, or *panelRight*.
 
-Type: array of [Button](../../interacting-with-editors/methods/text-document-api/Enumeration/Button.md)
+Type: array of [Button](#button)
 
 Example:
 
@@ -180,6 +203,44 @@ Example:
 ```
 
 ![Plugin buttons](/assets/images/plugins/plugin-buttons.png#gh-light-mode-only)![Plugin buttons](/assets/images/plugins/plugin-buttons.dark.png#gh-dark-mode-only)
+
+#### Button
+
+The skinnable plugin button used in the plugin interface (used for visual plugins with their own window only, i.e. `isVisual == true` and `isInsideMode == false`).
+
+Type: object
+
+Properties:
+
+| Name       | Type            | Description                                                                                                                                                              |
+| ---------- | --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| text       | string          | The label which is displayed on the button.                                                                                                                              |
+| primary    | boolean         | Defines if the button is primary or not. The primary flag affects the button skin only.                                                                                  |
+| isViewer   | boolean         | Defines if the button is shown in the viewer mode only or not.                                                                                                           |
+| textLocale | [localeTranslate](#localetranslate) | Translations for the text field. The object keys are the two letter language codes (ru, de, it, etc.) and the values are the button label translation for each language. |
+
+Example:
+
+``` json
+{
+  "variations": [
+      {
+          "buttons": [
+              { 
+                  "text": "Cancel",
+                  "primary": false,
+                  "isviewer": false,
+                  "textLocale": {
+                      "fr": "Annuler",
+                      "es": "Cancelar"
+                  }
+              }
+          ],
+          ...
+      }
+  ]
+};
+```
 
 ### variations.cryptoDisabledForExternalCloud
 
@@ -233,7 +294,7 @@ Example: "plugin description"
 
 Translations for the description field. The object keys are the two letter language codes (fr, de, it, etc.) and the values are the plugin description translation for each language.
 
-Type: [localeTranslate](../../interacting-with-editors/methods/text-document-api/Enumeration/localeTranslate.md)
+Type: [localeTranslate](#localetranslate)
 
 Example:  `{ "fr": "french plugin description" }`
 
@@ -241,17 +302,60 @@ Example:  `{ "fr": "french plugin description" }`
 
 The editors which the plugin is available for (**word**, **cell**, **slide**, or **pdf**).
 
-Type: array of [editorType](../../interacting-with-editors/methods/text-document-api/Enumeration/editorType.md)
+Type: array of [editorType](#editortype)
 
 Example:  `["word"]`
+
+#### editortype
+
+The editors which the plugin is available for:
+
+- `word` - text document editor,
+- `cell` - spreadsheet editor,
+- `slide` - presentation editor,
+- `pdf` - pdf editor.
+
+Type: enumeration
+
+Example:
+
+``` json
+{
+  "variations": [
+      {
+          "EditorsSupport": ["word", "cell", "slide"],
+          ...
+      }
+  ]
+};
+```
 
 ### variations.events
 
 Plugin events which are used in the current plugin code. Find out how to subscribe to events [here](../../interacting-with-editors/overview/how-to-attach-events.md).
 
-Type: array of [EventType](../../interacting-with-editors/methods/text-document-api/Enumeration/EventType.md)
+Type: array of [EventType](#eventtype)
 
 Example:  `["onClick"]`
+
+#### EventType
+
+Plugin event ("onDocumentContentReady", "onTargetPositionChanged", onClick", "onInputHelperClear", "onInputHelperInput", etc.).
+
+Type: string
+
+Example:
+
+``` json
+{
+  "variations": [
+      {
+          "events": ["onClick"],
+          ...
+      }
+  ]
+};
+```
 
 ### variations.icons
 
@@ -283,9 +387,36 @@ Example:  "text"
 
 The data type selected in the editor and sent to the plugin (**text**, **html**, **ole**, **desktop**, **desktop-external**, **sign**, or **none**).
 
-Type: [initDataType](../../interacting-with-editors/methods/text-document-api/Enumeration/initDataType.md)
+Type: [initDataType](#initdatatype)
 
 Example:  "ole"
+
+#### initDataType
+
+The data type selected in the editor and sent to the plugin:
+
+- `text` - the text data,
+- `html` - HTML formatted code,
+- `ole` - OLE object data,
+- `desktop` - the desktop editor data,
+- `destop-external` - the main page data of the desktop app (system messages),
+- `none` - no data will be send to the plugin from the editor,
+- `sign` - the sign for the keychain plugin.
+
+Type: enumeration
+
+Example:
+
+``` json
+{
+  "variations": [
+      {
+          "initDataType": "ole",
+          ...
+      }
+  ]
+};
+```
 
 ### variations.initOnSelectionChanged
 

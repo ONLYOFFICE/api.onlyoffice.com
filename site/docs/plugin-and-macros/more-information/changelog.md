@@ -38,11 +38,11 @@ The list of changes for ONLYOFFICE Plugins and Macros API.
 - Added the GetAllComments method to *window\.Asc.plugin.executeMethod* for Presentation Api.
 - Added the [OLEProperties](../interacting-with-editors/methods/text-document-api/Enumeration/OLEProperties.md) type to the simple type definitions.
 - Added the [PluginOptions](../interacting-with-editors/methods/text-document-api/Enumeration/PluginOptions.md) type to the simple type definitions.
-- Added the [ToolbarMenuItem](../interacting-with-editors/methods/text-document-api/Enumeration/ToolbarMenuItem.md) type to the simple type definitions.
-- Added the [ToolbarMenuMainItem](../interacting-with-editors/methods/text-document-api/Enumeration/ToolbarMenuMainItem.md) type to the simple type definitions.
-- Added the [ToolbarMenuTab](../interacting-with-editors/methods/text-document-api/Enumeration/ToolbarMenuTab.md) type to the simple type definitions.
-- Added the [ToolbarMenuItemType](../interacting-with-editors/methods/text-document-api/Enumeration/ToolbarMenuItemType.md) type to the simple type definitions.
-- Added the *icons* and *data* parameters to the [ContextMenuItem](../interacting-with-editors/methods/text-document-api/Enumeration/ContextMenuItem.md) object.
+- Added the [ToolbarMenuItem](../customization/toolbar.md#toolbarmenuitem) type to the simple type definitions.
+- Added the [ToolbarMenuMainItem](../customization/toolbar.md#toolbarmenumainitem) type to the simple type definitions.
+- Added the [ToolbarMenuTab](../customization/toolbar.md#toolbarmenutab) type to the simple type definitions.
+- Added the [ToolbarMenuItemType](../customization/toolbar.md#toolbarmenuitemtype) type to the simple type definitions.
+- Added the *icons* and *data* parameters to the [ContextMenuItem](../customization/context-menu.md#contextmenuitem) object.
 - Added the [menu](../structure/manifest/manifest.md#variationsmenu) config parameter.
 
 ## Version 8.0
