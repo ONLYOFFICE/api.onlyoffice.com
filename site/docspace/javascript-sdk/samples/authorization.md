@@ -2,6 +2,46 @@
 
 Logs in to the DocSpace account using the specified email and password hash.
 
+``` html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>DocSpace JavaScript SDK</title>
+    <script src="{PORTAL_SRC}/static/scripts/sdk/1.0.0/api.js"></script>
+  </head>
+  <body>
+    <label>Login</label><br />
+    <input type="text" id="login"><br />
+    <label>Password</label><br />
+    <input type="text" id="password" style="-webkit-text-security: circle"><br />
+    <button id="startButton" onclick="onButtonClick()" style="margin-top: 20px;">Login</button>
+    <div id="ds-frame"></div>
+    <script>
+      function onButtonClick() {
+        const frame = DocSpace.SDK.frames["ds-frame"]
+        const login = document.querySelector("#login").value
+        const password = document.querySelector("#password").value
+        const hashSettings = await frame.getHashSettings()
+        const passwordHash = await frame.createHash(password, hashSettings)
+        frame.login(login, passwordHash)
+      }
+
+      function onAppReady() {
+        const frame = DocSpace.SDK.frames["ds-frame"]
+      }
+
+      const config = {
+        events: {
+          onAppReady,
+        },
+      }
+      const docSpace = DocSpace.SDK.initSystem(config);   
+    </script>
+  </body>
+</html>
+```
+
 ![Authorization sample](/assets/images/docspace/js-sdk-authorization-sample.svg)
 
 ## Before you start
@@ -81,45 +121,5 @@ function onButtonClick() {
 ## Step 4. Add a method to log in
 
 Run our HTML file and make sure everything works.
-
-``` html
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <title>DocSpace JavaScript SDK</title>
-    <script src="{PORTAL_SRC}/static/scripts/sdk/1.0.0/api.js"></script>
-  </head>
-  <body>
-    <label>Login</label><br />
-    <input type="text" id="login"><br />
-    <label>Password</label><br />
-    <input type="text" id="password" style="-webkit-text-security: circle"><br />
-    <button id="startButton" onclick="onButtonClick()" style="margin-top: 20px;">Login</button>
-    <div id="ds-frame"></div>
-    <script>
-      function onButtonClick() {
-        const frame = DocSpace.SDK.frames["ds-frame"]
-        const login = document.querySelector("#login").value
-        const password = document.querySelector("#password").value
-        const hashSettings = await frame.getHashSettings()
-        const passwordHash = await frame.createHash(password, hashSettings)
-        frame.login(login, passwordHash)
-      }
-
-      function onAppReady() {
-        const frame = DocSpace.SDK.frames["ds-frame"]
-      }
-
-      const config = {
-        events: {
-          onAppReady,
-        },
-      }
-      const docSpace = DocSpace.SDK.initSystem(config);   
-    </script>
-  </body>
-</html>
-```
 
 <img alt="Authorization sample" src="/assets/images/docspace/gifs/js-sdk-authorization-sample.gif" width="720px" />

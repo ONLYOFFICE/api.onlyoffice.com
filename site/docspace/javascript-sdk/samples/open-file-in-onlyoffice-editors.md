@@ -2,6 +2,45 @@
 
 Opens a file in [ONLYOFFICE editors](../../usage-sdk/initialization-modes/editor.md) using the [file selector](../../usage-sdk/initialization-modes/file-selector.md).
 
+``` html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>DocSpace JavaScript SDK</title>
+    <script src="{PORTAL_SRC}/static/scripts/sdk/1.0.0/api.js"></script>
+    ...
+  </head>
+  <body>
+    <div id="ds-frame"></div>
+    ...
+  </body>
+  <script>
+    function onSelectCallback() {
+      docSpace = DocSpace.SDK.initEditor({
+        id: e.id,
+        height: "700px",
+      })
+    }
+
+    function onAppReady() {
+      const frame = DocSpace.SDK.frames["ds-frame"]
+    }
+
+    const config = {
+      events: {
+        onSelectCallback,
+        onAppReady,
+      },
+      height: "700px",
+      width: "100%",
+    }
+
+    const docSpace = DocSpace.SDK.initFileSelector(config)
+  </script>
+</html>
+```
+
 ![Open editors sample](/assets/images/docspace/open-editors.svg)
 
 ## Before you start
@@ -76,44 +115,5 @@ const docSpace = DocSpace.SDK.initFileSelector(config)
 ## Step 3. Run the sample
 
 Run our HTML file and make sure everything works.
-
-``` html
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <title>DocSpace JavaScript SDK</title>
-    <script src="{PORTAL_SRC}/static/scripts/sdk/1.0.0/api.js"></script>
-    ...
-  </head>
-  <body>
-    <div id="ds-frame"></div>
-    ...
-  </body>
-  <script>
-    function onSelectCallback() {
-      docSpace = DocSpace.SDK.initEditor({
-        id: e.id,
-        height: "700px",
-      })
-    }
-
-    function onAppReady() {
-      const frame = DocSpace.SDK.frames["ds-frame"]
-    }
-
-    const config = {
-      events: {
-        onSelectCallback,
-        onAppReady,
-      },
-      height: "700px",
-      width: "100%",
-    }
-
-    const docSpace = DocSpace.SDK.initFileSelector(config)
-  </script>
-</html>
-```
 
 <img alt="Authorization sample" src="/assets/images/docspace/gifs/open-editors.gif" width="720px" />

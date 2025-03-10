@@ -2,6 +2,77 @@
 
 Creates a file in the selected folder and opens it in the editors.
 
+``` html
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>DocSpace JavaScript SDK</title>
+    <script src="{PORTAL_SRC}/static/scripts/sdk/1.0.0/api.js"></script>
+    <style>
+      .holder {
+        margin: auto;
+        width: 800px;
+      }
+    </style>
+    ...
+  </head>
+  <body>
+    <div id="holder-buttons" class="holder" style="width: 400px; margin-top: 300px;">
+      <label for="combobox"><b>Folders</b></label><br />
+      <select id="combobox" onclick="onComboboxClick()" style="height: 25px; width: 405px;"></select><br />
+      <label for="fileName"><b>File name</b></label><br />
+      <input type="text" id="fileName" name="fileName" value="" style="width: 400px;"><br />
+      <button onclick="onButtonClick()" style="margin-top: 20px;">Create File</button>
+    </div>
+    <div id="holder-frame" class="holder" style="display: none;">
+      <div id="ds-frame"></div>
+    </div>
+    ...
+  </body>
+  <script>
+    const combobox = document.querySelector("#combobox")
+
+    function onAppReady() {
+      const frame = DocSpace.SDK.frames["ds-frame"]
+    }
+
+    const config = {
+      events: {
+        onAppReady,
+      },
+      rootPath: "/rooms/personal/",
+      height: "700px",
+    }
+
+    function onComboboxClick(e) {
+      const data = await frame.getFolders()
+      for (const item of data) {
+        const option = document.createElement("option")
+        option.value = item.id
+        option.textContent = item.title
+        combobox.append(option)
+      }
+    }
+
+    function onButtonClick() {
+      const frame = DocSpace.SDK.frames["ds-frame"]
+      const selectedFolder = document.querySelector("#combobox").value
+      const fileName = document.querySelector("#fileName").value
+
+      const res = await frame.createFile(selectedFolder, fileName)
+      const docSpace = DocSpace.SDK.initEditor({
+        id: res.id,
+        height: "700px",
+      })
+
+      document.querySelector("#holder-buttons").style.display = "none"
+      document.querySelector("#holder-frame").style.display = "block"
+    }
+
+    const docSpace = DocSpace.SDK.initManager(config)
+  </script>
+```
+
 ![Create file sample](/assets/images/docspace/js-sdk-create-file.svg)
 
 ## Before you start
@@ -113,76 +184,5 @@ function onButtonClick() {
 ```
 
 ## Step 5. Run the sample
-
-``` html
-<html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <title>DocSpace JavaScript SDK</title>
-    <script src="{PORTAL_SRC}/static/scripts/sdk/1.0.0/api.js"></script>
-    <style>
-      .holder {
-        margin: auto;
-        width: 800px;
-      }
-    </style>
-    ...
-  </head>
-  <body>
-    <div id="holder-buttons" class="holder" style="width: 400px; margin-top: 300px;">
-      <label for="combobox"><b>Folders</b></label><br />
-      <select id="combobox" onclick="onComboboxClick()" style="height: 25px; width: 405px;"></select><br />
-      <label for="fileName"><b>File name</b></label><br />
-      <input type="text" id="fileName" name="fileName" value="" style="width: 400px;"><br />
-      <button onclick="onButtonClick()" style="margin-top: 20px;">Create File</button>
-    </div>
-    <div id="holder-frame" class="holder" style="display: none;">
-      <div id="ds-frame"></div>
-    </div>
-    ...
-  </body>
-  <script>
-    const combobox = document.querySelector("#combobox")
-
-    function onAppReady() {
-      const frame = DocSpace.SDK.frames["ds-frame"]
-    }
-
-    const config = {
-      events: {
-        onAppReady,
-      },
-      rootPath: "/rooms/personal/",
-      height: "700px",
-    }
-
-    function onComboboxClick(e) {
-      const data = await frame.getFolders()
-      for (const item of data) {
-        const option = document.createElement("option")
-        option.value = item.id
-        option.textContent = item.title
-        combobox.append(option)
-      }
-    }
-
-    function onButtonClick() {
-      const frame = DocSpace.SDK.frames["ds-frame"]
-      const selectedFolder = document.querySelector("#combobox").value
-      const fileName = document.querySelector("#fileName").value
-
-      const res = await frame.createFile(selectedFolder, fileName)
-      const docSpace = DocSpace.SDK.initEditor({
-        id: res.id,
-        height: "700px",
-      })
-
-      document.querySelector("#holder-buttons").style.display = "none"
-      document.querySelector("#holder-frame").style.display = "block"
-    }
-
-    const docSpace = DocSpace.SDK.initManager(config)
-  </script>
-```
 
 <img alt="Authorization sample" src="/assets/images/docspace/gifs/js-sdk-create-file.gif" width="720px" />

@@ -2,6 +2,57 @@
 
 Customizes the editor interface so that it looks like your other products (if there are any), and changes the presence or absence of the additional buttons, links, logos and editor owner details.
 
+``` html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="UTF-8">
+  <title>DocSpace JavaScript SDK</title>
+  <script src="{PORTAL_SRC}/static/scripts/sdk/1.0.0/api.js"></script>
+    ...
+  </head>
+  <body>
+    <div id="ds-frame"></div>
+    ...
+  </body>
+  <script>
+    function onAppReady() {
+      const frame = DocSpace.SDK.frames["ds-frame"]
+    }
+    const config = {
+      editorCustomization: {
+        autosave: true,
+        comments: true,
+        compactHeader: true,
+        compactToolbar: false,
+        compatibleFeatures: false,
+        forcesave: false,
+        help: true,
+        hideRightMenu: false,
+        hideRulers: false,
+        integrationMode: "embed",
+        macros: true,
+        macrosMode: "Warn",
+        mentionShare: true,
+        mobileForceView: true,
+        plugins: true,
+        toolbarHideFileName: false,
+        toolbarNoTabs: false,
+        uiTheme: "theme-light",
+        unit: "cm",
+        zoom: 100,
+      },
+      events: {
+        onAppReady,
+      },
+      height: "700px",
+      id: "361797",
+    }
+    var docSpace = DocSpace.SDK.initEditor(config);   
+  </script>
+</html>
+```
+
 ![Customization sample](/assets/images/docspace/customization-of-editors.svg)
 
 ## Before you start
@@ -87,56 +138,5 @@ const docSpace = DocSpace.SDK.initEditor(config)
 ## Step 3. Run the sample
 
 Run our HTML file and make sure everything works.
-
-``` html
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-  <meta charset="UTF-8">
-  <title>DocSpace JavaScript SDK</title>
-  <script src="{PORTAL_SRC}/static/scripts/sdk/1.0.0/api.js"></script>
-    ...
-  </head>
-  <body>
-    <div id="ds-frame"></div>
-    ...
-  </body>
-  <script>
-    function onAppReady() {
-      const frame = DocSpace.SDK.frames["ds-frame"]
-    }
-    const config = {
-      editorCustomization: {
-        autosave: true,
-        comments: true,
-        compactHeader: true,
-        compactToolbar: false,
-        compatibleFeatures: false,
-        forcesave: false,
-        help: true,
-        hideRightMenu: false,
-        hideRulers: false,
-        integrationMode: "embed",
-        macros: true,
-        macrosMode: "Warn",
-        mentionShare: true,
-        mobileForceView: true,
-        plugins: true,
-        toolbarHideFileName: false,
-        toolbarNoTabs: false,
-        uiTheme: "theme-light",
-        unit: "cm",
-        zoom: 100,
-      },
-      events: {
-        onAppReady,
-      },
-      height: "700px",
-      id: "361797",
-    }
-    var docSpace = DocSpace.SDK.initEditor(config);   
-  </script>
-</html>
-```
 
 <img alt="Authorization sample" src="/assets/images/docspace/customization-of-editors.svg" width="720px" />
