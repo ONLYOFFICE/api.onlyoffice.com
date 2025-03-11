@@ -1,0 +1,71 @@
+---
+id: create-member-photo-thumbnails
+title: "Create photo thumbnails"
+description: "Creates photo thumbnails by coordinates of the original image specified in the request."
+sidebar_label: "Create photo thumbnails"
+hide_title: true
+hide_table_of_contents: true
+api: eJy1VluP2jgU/iuWn3YlIAygivI2ndnVVqvZornsPowQMskB3Cax13Zmhkb57z3HTiAUOkzR7gMots/9fOdScidWlk8e+RSUToFFbLpWTlk+63ClwQgnVf4x4RMeGxAObiBbgPE09+siW+RCppZ3uBZGZODAkLCS53hAnsKCkQk+yxxPWrg1fidgYyM1CcbLByRhH6/x3sC/hTSAupwpoMNtvIZM8EnJ3UaTNOuMzFdICS8iQ2Px6v149I5X1Sxwg3UfVLIhln0le6bGKneQO6ISWqcy9j5Gny2Rlodq1eIzxI58NBQRJ8H610z/LsmIQ/v2lU/RbeYUc2tgDjKtjDAbtiTeDs+LNBULEhOc3rlmVUb0L45XHf7SUiPR/BWYAz1/KCO/om8iZbFSJpE55guplspkwgXG4aAdvovBcITCN28Q/jc5Hv+06GeZYM5Pi98miAWON4heg1yt3U/JrllOCkfpIkkk8Yt02sr6UqQWfiy/xiBrFUOHO+l8Pi/vrnqhyHqXWt6oBFLbuw0c1071dhitLxHXZIkBq1VuA+gG/f4r6N5X/B/hHFG1wnynp4H+qaZkmtrDq+BOYCmK1M2pQcw9+dzKrzC/GIz7XfrraVTgvXco8rTu20B3js7hu34Xf43GTLycVncjXmRWZIwEnKUUE9nFX6N0IVenlX6Qq7N0jQfd8WDrHiSyyN7gYaA7R99o3B2NG302E+kbsHPnyc5K36A7rL07VbcnSjHU2X4tXgsn8KauxVH/4rD8HnJRuDU1X5xdnmh4SPSXYmhNJq3Fs6VxgEdqQzgWpGUi9nSee3REBQ3JXDm2VEWeeEctxIWRbuPHrbDxnIyYfwG6wKoRNHWfkQD4jMbjvrwrP8ttKFS0oPGWLTatBm+ZWvqp1bQAJjOxAmY1xHIpIWEy9+913+txgheGgtYFrazvJTTzJzwSWkaDXj/SPuxRGTaDKvIWRK49n/HlqdkjCoPY4WvntJ1EUblGodWkxBHqKqR8EkYSWHyforcQOY8TZEsVDix/jfEinv3ncf/9gPI62wXzjnpiELcf0i180Y8/8aLTbDh7ZPWegxH8IsFniZrt7W4z+a1Bc2t9aA16P+dpAvmZHD7qCRoOzcyrR6DMl8rLauH6H1gQqCk6GMSQ7qdBiIB1mfC9vzY+wOAABd8XZ7kbJf8jcuoAUyAinQrpq8Hnv6xR9EjRR0rEESHLIwk/Jtsts5k7LVcwuQEYj7wsF8LCg0mriq5RsaFime1w5CGXSEvfyfFp347FL7f1xvor222xR91owJNvPGrTgk746bHVbMnVzG81IsEdhgwJj1dBXfeeROyYDyZ61Wk4LuMYtHuVdtYq1Omnu3skXtSLc4bdEG+NeKaVHP+9ocq77wvD35U8FfmqwJzie5Dpu2+xt+1hukJZ1B/k1dFQfFdFwQ/6J6+OcpRlqMSq2tKHpx9y1JFtqCkxMzT6G+KEebU=
+sidebar_class_name: "post api-method"
+info_path: site/docspace/api-backend/usage-api/asc-web-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Create photo thumbnails"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/api/2.0/people/{userid}/photo/thumbnails"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Creates photo thumbnails by coordinates of the original image specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"userid","in":"path","description":"User ID","required":true,"schema":{"type":"string","example":"9846"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"description":"Thumbnails","content":{"application/json":{"schema":{"type":"object","properties":{"tmpFile":{"type":"string","description":"Path to the temporary file","nullable":true,"example":"some text"},"x":{"type":"integer","description":"Horizontal coordinate","format":"int32","example":1234},"y":{"type":"integer","description":"Vertical coordinate","format":"int32","example":1234},"width":{"type":"integer","description":"Thumbnail width","format":"int32","example":1234},"height":{"type":"integer","description":"Thumbnail height","format":"int32","example":1234}},"additionalProperties":false,"description":"Thumbnail request parameters","title":"ASC.People.ApiModels.RequestDto.ThumbnailsRequest"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Thumbnail parameters","content":{"application/json":{"schema":{"type":"object","properties":{"original":{"type":"string","description":"Original photo","nullable":true,"example":"default_user_photo_size_1280-1280.png"},"retina":{"type":"string","description":"Retina","nullable":true,"example":"default_user_photo_size_360-360.png"},"max":{"type":"string","description":"Maximum size","nullable":true,"example":"default_user_photo_size_200-200.png"},"big":{"type":"string","description":"Big","nullable":true,"example":"default_user_photo_size_82-82.png"},"medium":{"type":"string","description":"Medium","nullable":true,"example":"default_user_photo_size_48-48.png"},"small":{"type":"string","description":"Small","nullable":true,"example":"default_user_photo_size_32-32.png"}},"additionalProperties":false,"title":"ASC.People.ApiModels.ResponseDto.ThumbnailsDataDto"}}}},"401":{"description":"Unauthorized"},"403":{"description":"No permissions to perform this action"},"404":{"description":"User not found"}}}
+>
+  
+</StatusCodes>
+
+
+      

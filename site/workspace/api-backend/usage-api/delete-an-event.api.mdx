@@ -1,0 +1,71 @@
+---
+id: delete-an-event
+title: "Delete an event"
+description: "Deletes an event with the ID specified in the request."
+sidebar_label: "Delete an event"
+hide_title: true
+hide_table_of_contents: true
+api: eJylVlFz2jgQ/isaPTvBmKRJmOnccIXOZe6Sdg7Sm2nKg2KLWI0t+SSZhPP4v3dXsgEnBC4tDyBW336r1e5qt6KW3Rs6vKWxyvNSCrvqTZZcWkPnATU8LjWIYL+io9KmSov/mBVK/sFZwjXqaVjRgD4CjtN5DVoJN7EWBcLokI55xi03hEnCkZg8CpsSm3JyOSam4LFYCJ4QIZ1M839LbuwxMBZMsxxUtXHmJfwBugXniUCDAskLZlP63OJHgAA5yE2c8pzRYUXtqkBtIS2/h3MHdKF0zqwXDSJa48E1N4WShhvUiMIQf3Y5k3hPgCVWQAgrALKiyETsLqf33SC6emlf3X3nMSoWWhVcW+FtzfiT3UIZq4W8BxR/YnmRoQgRRC0Iuk/rgH5WWXaYF1Ezhzh8A2BNljlGdCrQ6EiaR4e7KjMrNoIXAb4NyRHZ1glIHyRdtXnHmxBdmMhkzCzf73cURuFRPzoKz2b9wfD03TCMjqPz04vo5Pwrkkwt0/bXab4oiOoWxZ1SGWeyw7FgmeEt2GyBmdZshRlpeW4OB+UyORiOdycdy/3BAO1euwrY5+YXpgWDEuvvOua+yG9MQdbXoGyF9YxA8o+G3AbFensDU2u9EfyMUy4JZp5un1NXTLJ7b+UDPDbdQP3fWJ9FF1E4cLG+KZJfJ3l7VV0ryeHvNX808PNJJw4+SpaQGbjIsmbLlbYTvFJryORrDDUCEsHK8QXkBJaeMiBnuPasATmHP0gMeqde3q3I/tb1/r56YxKv72/tfFm6N3qr4pvP0Y6v9oNHGAtTZGx1ONWvxAMnX5lcMWsexNtTabRk8HRMc9Z5R3folDojVhGDSMKclnuAtVqIjN/oA+rfvvUAmpSxNbjkCsRehurHzBRPv5WG6/csyYUUwMCs0p0anACVWnFXh/zZFvahpgw/luBK7Yr0JOy/7F03kjUdHFsIoKC5pgriCDjsaq7lQjsd0h4rRC86DnubmcA1vF7lu2+NrZXrZduaS7wEmlpbmGGvV6XK2HpYFUpbRC7xUbrLfN7gnj/agkGDALVMxSxzYjgS6nS3z8ML7M711jQyxa7q6XbOJJuHuRB/8lU7K6R+O2gniY6uuxAhF8qpN7f7oXWfTJ235O/JdEZGny/RK3De32sGNdOe3ticuc7f2PDzwnr2eT6qVJsB4ufnpMZZCxNCD2oHfIWjlD4vfUBv8SYACSF1M0vjFeZpc6phM1bBLfsI3dKqumMG87uuUQzmNM6B801AXewTYXANaeT64x4HN2PZzhO3MZMrlzNZif9g+QARXI999RyQaTt7Vs3mKI55YbfUXsximD7rdB9P/prMJgDHeuimy4NLl2aBBnaeqps57RHxuw5eUakqn4x1vcb7rVc11unq0XhJc6iDH8Np0vc=
+sidebar_class_name: "delete api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Delete an event"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"delete"}
+  path={"/api/2.0/community/event/{feedid}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Deletes an event with the ID specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"feedid","in":"path","description":"Feed ID","schema":{"type":"integer","format":"int32"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Deleted event","content":{"application/json":{"schema":{"type":"object","properties":{"Text":{"type":"string","example":"Text of feed"},"Poll":{"type":"object","properties":{"PollType":{"type":"integer","format":"int32","enum":["SimpleAnswer","MultipleAnswer"],"description":"[0 - SimpleAnswer, 1 - MultipleAnswer]","example":"0"},"EndDate":{"type":"string","example":"2020-12-07T13:56:02.2859248Z"},"StartDate":{"type":"string","example":"2020-12-07T13:56:02.2859248Z"},"Voted":{"type":"boolean","example":"false"},"Votes":{"type":"array","items":{"type":"object","properties":{"Id":{"type":"integer","format":"int64","example":"133"},"Name":{"type":"string","example":"Variant 1"},"Votes":{"type":"integer","format":"int32","example":"100"}},"title":"VoteWrapper"}}},"title":"PollWrapper"},"Id":{"type":"integer","format":"int64","example":"10"},"Title":{"type":"string","example":"Manager"},"Created":{"type":"string","example":"2020-12-07T13:56:02.2729203Z"},"Updated":{"type":"string","example":"2020-12-07T13:56:02.2729203Z"},"Type":{"type":"integer","format":"int32","enum":["None","News","Order","Advert","AllNews","Poll","All"],"description":"[0 - None, 1 - News, 2 - Order, 4 - Advert, 7 - AllNews, 8 - Poll, 15 - All]","example":"1"},"CreatedBy":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"}},"title":"EventWrapperFull"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

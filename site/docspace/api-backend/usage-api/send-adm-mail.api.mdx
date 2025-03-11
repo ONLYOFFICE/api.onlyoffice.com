@@ -1,0 +1,71 @@
+---
+id: send-adm-mail
+title: "Send a message to the administrator"
+description: "Sends a message to the administrator email when unauthorized users encounter issues accessing DocSpace."
+sidebar_label: "Send a message to the administrator"
+hide_title: true
+hide_table_of_contents: true
+api: eJy9VVFP2zAQ/iuWn7OmqkAafVoHPKANDVGmPaAKXZ1rY0hiz3agXdT/vjsngRQYQ5o0JCCx7+67u++7SyMDrL2cXss5hqCrtRepOEfvYY1eLhJpLDoI2lRnmZxKj1U2y8pz0IVMpMOfNfrw2WRbOW2kMlXAKvAjWFtoFf3SW28qPvMqxxL4KWwtUjCzvEUVKI51jBI0IdItGVF0eihh8xWrdcjldHJ4mMhSV/37OOmD+OAoawqSoVdOW4ak49OyTXFlXAmUUhc1kVVdFLAsyDW4GhOJGygtv8r5Nqtwe3NplpSLP/iUm8A+I2VKuUukqotQOxzk/wfo487wLSxvShQBN4Ejl227/7XkjrX34hIwZJlmZyguBgysoPD4PPhlS7Ww4KDEgM4Laq2AjDLUlBAEeusKEb6TEqUSdIjAs/nx6AcuRzOr+ffcZFiMuqD+JJjRjCN1JfRSHNxTvpyxQ29N5VuhTMZj/vdqFwQsTR1EyFGQDzEizEqweimugD5TSvC9om3xD16DPKuUcY6kLKLIxKAT3GqhPV3YsGWuDyZHLwP0zS10qVvzjULMMIss7dvOqQb/VIEIJha5T0Sbx0OOlagrqENunP6Fmag9E4eUb01VO4LyBCxAKYrGnTkxam5B4UiyLMmPh94aH6cUWIYyBavTyWic9iyn3FbC7waMIO4JhVZKI2tHgyzzEKyfpmmTU6DdtLHGhR1Z3oPTLNNIJt+1nVkB0UVuhVFQxGNqAvvsX38cH01YFQuGVLXTYTtnstpw4NUNF35zh9vByFLuX+iARoRUzO9Ds0Rq7rAy5k5jbD2r4PJpyZ32c/S4pN5cGoOdMRi8wbzvrwFdrUxM9eXIcLOop60C7idtQzwhRY12tbAy/iKM5ztjsLP/o7A6Lrju1BZATad6olSaTmTXTBRZksyioh7XyVBqRHwrmmvZNEvw+N0Vux0fE2GOWL9ePGmM3wglR8jQRW1GYcjjtv4PV5wTmxd1q5Nnq2CX9B4zqsmGN20Xg+G5+Da/IuNl940safHRqYMH/n7S36mU/JFl7yjceNbIAqp13Yqkjck/vwHJx665
+sidebar_class_name: "post api-method"
+info_path: site/docspace/api-backend/usage-api/asc-web-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Send a message to the administrator"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/api/2.0/settings/sendadmmail"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Sends a message to the administrator email when unauthorized users encounter issues accessing DocSpace.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"email":{"maxLength":255,"minLength":0,"type":"string","description":"Email","format":"email","nullable":true,"example":"Sydney_Roberts4@hotmail.com"},"culture":{"type":"string","description":"Culture","nullable":true,"example":"some text"},"message":{"maxLength":255,"minLength":0,"type":"string","description":"Message","nullable":true,"example":"some text"}},"additionalProperties":false,"description":"Request parameters for administrator message settings","title":"ASC.Web.Api.ApiModel.RequestsDto.AdminMessageSettingsRequestsDto"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Message about the result of sending a message","content":{"application/json":{"schema":{}}}},"400":{"description":"Incorrect email or message text is empty"},"429":{"description":"Request limit is exceeded"}}}
+>
+  
+</StatusCodes>
+
+
+      

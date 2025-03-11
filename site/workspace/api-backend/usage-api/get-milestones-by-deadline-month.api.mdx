@@ -1,0 +1,71 @@
+---
+id: get-milestones-by-deadline-month
+title: "Get milestones by deadline month"
+description: "Returns a list of all the milestones with the deadline month specified in the request."
+sidebar_label: "Get milestones by deadline month"
+hide_title: true
+hide_table_of_contents: true
+api: eJztV1FP3EgM/ivRPC9kSaHqrXQ6UYp66I4eYkEnQXkYEi87JZnJzThAGuW/nz2ThF2gdJcKqQ/Nw+5kbI899mfHbgTKKycm56K05gukGB+qHBwaDU5cjISDtLIKa+JoxG6Fc2PVV4nK6D9BZmBZ0tJKjMQt8YG4aEkqA5daVTKbmIhjwMpqF8koVw4jM4tknkc4h6gYdEW3Cud+L6PTcqWJaDRtuRJSNVOQRUp7uoX/KhLaJI2ltLIABOu8eZpeSF0N0hJRsepS4lw8tOdDr6HjdOkcCikmjcC65BOURrgCJs2MLSSGrTeJaNvRoMabt5qennUdReRFC6402lEgSCIZj/lvWcPfnT/v/UhHpaQNNDK3LMtcpT5c8RfHIs1jI6S1suaLIBRuYd9cMh7YzdaUYFEFQ44CTv651Rz973EfZKtcdyTgThZlzkxbyRvRjsSJQn4dZB1apa+WOKd+EXXAZaEpSqzcuhrHLHrgjqy6kbio89KYHKReYp7J3AEDQWCwUEwVkzq3/GvJ56SQ6H34n79EMk7GG1vJRpKcjLcnW1uTnbeb29s773aS5CzY9RfUq9nEzJ8MqtnK/HtS72cK12D/ADms6qOR2E1R3cCJdNd7ptK4NhR2vNbcOMhefEg4g2oUQrZ+KHbecii2zxYOeV+vCftB1WBlValsGYLds/HET/94TClX5rL+5EvQc3c5VNcQnUldS3TXasWEOpRaXgXw7lIqSDstqFI/L1NZKuUmcswZSS/F8pQOMypKp/Y74p8/x8SaVSk6XoKh7bDH4pvSlXd/VA7s7zIrlKZyZyUau5R/+3SUqQE49YLxQ6BeKwynZfbjcOoO+QWnnx1OQ6BeKwwv+EiO1/tGBk7/UVroH1YQXOw3fuwDexy6GXW5ZPIvwP+EgF8I1esEYkH7MG4MnRM/I7E93nrc755q2Y0gVHyZi7r/uSETxRV4EHEbPhGxLFWcbI7jfqYZ+uO44Z6/jRvfkrfck4O96QeIir0t5oilm8RxMzcO20lTGovMeSOtkuQSD1CmBftmssrZFblJZe63yS6WWSa/G//GbX27MFNNuRMPxz05Wd136KXiJrCbNeaBPOoHkSVZ7xWlZ8aLdz7eM0VRadIYTf1to+P96Um0e3TAt6LLB+fmVOR66x0W0heITsdHwMVh7bJ+MKY9nH2a+ynk9ca/zjsIdxhTVitfoaqQMQEJ5+w64iQshBLTFZtBMa0n3RQ4CReh+ITYnoumuZSOU7BteZv0Wp6DL+6h4FGTKcdrQqHve5/xxMPB88kL9DHXtcdcXvEbLa95DAjDLU+hL9DaR+oFaoNoe0GM837ubzrabppCiQtSj6ZOBv2QqR/3T4iX83gZ4dce4d2CT3/SomWw9+bxLzvlSZGmCfnTtgN/IH1TYsiwwM0OuqDU/R9Y3Kmg
+sidebar_class_name: "get api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get milestones by deadline month"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/project/milestone/{year}/{month}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns a list of all the milestones with the deadline month specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"year","in":"path","description":"Deadline year","schema":{"type":"integer","format":"int32"}},{"name":"month","in":"path","description":"Deadline month","schema":{"type":"integer","format":"int32"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"List of milestones","content":{"application/json":{"schema":{"type":"array","items":{"type":"object","properties":{"ProjectOwner":{"type":"object","properties":{"Id":{"type":"integer","format":"int32","example":"123"},"Title":{"type":"string","example":"Sample project"},"Status":{"type":"integer","format":"int32","example":"0"},"IsPrivate":{"type":"boolean","example":"false"}},"title":"SimpleProjectWrapper"},"Deadline":{"type":"string","example":"2020-12-22T04:11:56.4458522Z"},"IsKey":{"type":"boolean","example":"false"},"IsNotify":{"type":"boolean","example":"false"},"CanEdit":{"type":"boolean","example":"false"},"CanDelete":{"type":"boolean","example":"false"},"ActiveTaskCount":{"type":"integer","format":"int32","example":"15"},"ClosedTaskCount":{"type":"integer","format":"int32","example":"5"},"Created":{"type":"string","example":"2020-12-22T04:11:56.5658524Z"},"CreatedBy":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"},"CreatedById":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"Updated":{"type":"string","example":"2020-12-22T04:11:56.5658524Z"},"UpdatedBy":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"},"UpdatedById":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"Id":{"type":"integer","format":"int32","example":"10"},"Title":{"type":"string","example":"Sample Title"},"Description":{"type":"string","example":"Sample description"},"Status":{"type":"integer","format":"int32","example":"0"},"Responsible":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"},"ResponsibleId":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"}},"title":"MilestoneWrapper"}}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

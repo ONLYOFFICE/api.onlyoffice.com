@@ -1,0 +1,71 @@
+---
+id: create-an-event
+title: "Create an event"
+description: "Creates a new event with the parameters (title, content, type) specified in the request."
+sidebar_label: "Create an event"
+hide_title: true
+hide_table_of_contents: true
+api: eJy1Vltv2zYU/isEnzZAjmUlaRIDw+C2HlYMSYPa6YCmfmAkOmIjkRpJ2XEF/fedQ0q2lDgJ0m5+sOlzv3yHPBW17NbQ8TWNVZ6XUtjNcLri0hq6CKjhcamBBPyKTkqbKi2+MyuU/JOzhGvU03CiAV2DHKeLGrQSbmItChSjY/oOBCw3hBHJ14SjbbIWNiU25aRgmuXccm3IL1bYjAckVtKCTEDspuC/ElPwWCwFT4iQTkXzf0pu7AH4bI5vVQIRVrTRxCMrikzELtLhN4NxVNTEKc8ZntAyRKZuvvHYgp1Cq4JrK7hxXIwDD/08XFWIZwatCWO1kLe0DrrO9+m17D2anvCEO+RtdQTYuIWq1+6D+ZtCSePDjsLwsZULvs42JHYtSHzxafBfFWrO721HqskooPye5QWW0EkQtSRLzhNM9VJl2ct2UWreFOVB5gFdKp0z60mHEXqTZY44nAl0OpFm7eTOy8yKHeERLK9DMiBdnYCMgNJXW/SyCTGFqUzeQzGfzzsKo3AwigbhyXx0OD5+Mw6jg+j0+Cw6Ov2CRmaWafvzZj4r6GrHxI1SGWeyZ2PJMsNbYdMRZlqzDYjC2Obm5aZ8SF5sx5ujnufR4SH6vYABfz7Nz0wLBmAf7Qvzuc7vXAH2cSCa0XVG/taAbT8sOwZCa8sIfiQpB4J5e0U8ndQ5k+zWe/E3YPIDvT6JzqLw0PX6qkh+3sjrp+pCSbyA4B4x8PNRJ058kqwAGXjIsoblRtsRnpg1tORnDDUCEsHJ2QvIERy9yYCc4NlbDcgp/EHDoHfs6f2JHHXK+3bzShBv67dNvixF0p/45jPY89V+MIT3whQZ27wM9XNxx8kXJjfMmjvxeihNVgyujlnOevfoHp1SZ8QqYlCSMKflLmCtliLjV/oF9a9fhyCalLE1eOQKyJ6G6gfMFPe/l4br31iSCynAArNK92ZwCqbUhrs55A9Y+A41Y/hHCan45+woHD1+wa4ka/YOfEJACtaFVEEfaaGM6zCzKfwbskIMo4NwuNtj2ucO4gRsGbfElJg5Ta0tzHg4rFKwUY+rQmlbg+QKb6KbzIMFeT6eJYNXAdQyFbPMkSEO1OmzT8OzCFPpLE4zfEq9ub3r0+42LsRf3F3HmHTq2QGVDlF9XVcFfKs/7dafadu57fqy6+r2td+RvNOwRndL1dV611aPzFzVyKfpbE4mlx+wOlBE35QMN7qmCsbmzK0NTax+HAmT23Wj19DOmvZ/roZNWS0sIEMYTagqBFt62HvEXGPNQRIw44rU5I1j4OKGLnoEXNOqumEGh6aukQxONK7Eix1g8B84SNutuKJ30E0sp4t4MPd73Iplpe/2g62rDlqNSRzzwj4ru+gMweXH2RyEb5oVOFcJ6mi2xvUYvscUDsrV3qHQ0SpooLwt4VIBvreJmMJB60PyzkGyOWBWLUtuOhH20Rk0ieA3prVXpao84Ot6K+9ZT2psR8JLY0MXEPW/8JQ4Fw==
+sidebar_class_name: "post api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Create an event"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/api/2.0/community/event"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Creates a new event with the parameters (title, content, type) specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"title":{"description":"Event title","type":"string"},"content":{"description":"Event content","type":"string"},"type":{"description":"Event type","type":"integer"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Newly created event","content":{"application/json":{"schema":{"type":"object","properties":{"Text":{"type":"string","example":"Text of feed"},"Poll":{"type":"object","properties":{"PollType":{"type":"integer","format":"int32","enum":["SimpleAnswer","MultipleAnswer"],"description":"[0 - SimpleAnswer, 1 - MultipleAnswer]","example":"0"},"EndDate":{"type":"string","example":"2020-12-07T13:56:02.2859248Z"},"StartDate":{"type":"string","example":"2020-12-07T13:56:02.2859248Z"},"Voted":{"type":"boolean","example":"false"},"Votes":{"type":"array","items":{"type":"object","properties":{"Id":{"type":"integer","format":"int64","example":"133"},"Name":{"type":"string","example":"Variant 1"},"Votes":{"type":"integer","format":"int32","example":"100"}},"title":"VoteWrapper"}}},"title":"PollWrapper"},"Id":{"type":"integer","format":"int64","example":"10"},"Title":{"type":"string","example":"Manager"},"Created":{"type":"string","example":"2020-12-07T13:56:02.2729203Z"},"Updated":{"type":"string","example":"2020-12-07T13:56:02.2729203Z"},"Type":{"type":"integer","format":"int32","enum":["None","News","Order","Advert","AllNews","Poll","All"],"description":"[0 - None, 1 - News, 2 - Order, 4 - Advert, 7 - AllNews, 8 - Poll, 15 - All]","example":"1"},"CreatedBy":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"}},"title":"EventWrapperFull"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

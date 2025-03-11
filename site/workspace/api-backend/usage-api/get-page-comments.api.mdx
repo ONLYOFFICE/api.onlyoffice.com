@@ -1,0 +1,71 @@
+---
+id: get-page-comments
+title: "Get page comments"
+description: "Returns a list of all the comments on the wiki page with the name specified in the request."
+sidebar_label: "Get page comments"
+hide_title: true
+hide_table_of_contents: true
+api: eJzFVVtvEzsQ/isrP6fdbdojINLRUcWpONUBhEgREiUP082ka7prG3u2NKz2vzNj7zYJTcsTIg+JY8/lm29unSK4Dmp2qUrbNK3RtM4/6hutFhMVsGw9X/Brp05bqqzX34G0Nf8hLNGLlueTmqhvLIdq0bPWEkPptRMxNVPvkVpvQgZZrQNldpVBXWdUYSb+0FDIrIn/v7HXzMG1nKiKVwYazILDUq80LjOdBD1+bTHQIbt14FmE0IeIUeTZpxjhR23imSr1M6h34iUKc5BlhQ2oWado7UQ7kNfmWvUSi8fgrAkY5H1aFPKza+r1ENUYDVssrSE+iiw4V+syUpZ/CaLQPXQI3sNa8BI2YeveXn3BkiRKbx160gnG+fIh2IlaWd8A+1RtqyUheAeNq0WkGD4He77Gj+onTIpn1L/POudkj+WNpbnlZMfUsfjLDYePa7xMnGcj4ayXqvTPkfivDq6G9dtYiE9hf6NvMPsEZg0UuNtY9UJT/SslMMyPj4HeAoGfN9xNT+u0ntvNZkEkM4haMR/ernSNH/wv1D9/zll02ZYU5IiWr9OdqB9CcHf/tAH937BstOFm8ECcgJ5dUApInbEpu0b86MEl8K8h0Bu7jF39tPtpMS0OjqYHxfOLo2ez42ez4vjw+Lg4efHXySexdG6gJH27zduVtTWC2TGzgjrgDqihdgRTBCWfiTopjh62+AcDw+xjtCLFE6eyDFxdY6wsGTEzlYPT+fSwyDeDVEZa3klN9/kwIGTioL8dJ1Yr/KuKyIVZnneVDdTPOmc99Sx5C17DVZ1KVt4SuBW0tVRpbUuo4zWDEp3d5+fFi6kEtjXJ5zJ7krm983wzk5z+H9fjEK3S82QcsDu6kRJtVjaqb9EbOcjmMdrs/dn8Ijt9dy5RcfCJ2RoIR/SBGojzcfDxCiltg63JupOXbjNof/OWGTghvKOcu5spYcRt6pyU/EshjCU5/XEBDMHLYpRdOlGzYSeNVcA5Sfm8VF13BUEase/lmr162biLTfpjpSx1kDOXXSzmJ8jY3m57oY85NutYY3Ur//h4wxkftme/YLlq3PLd8HRaluhoS+nBfpNiu2+PV2cXLCvNs1tZN7GyhoNY3wtot8hGdPLdTx5R6bpUt31/L5+eHtW4r+wkLfwsuGV+AC59BKI=
+sidebar_class_name: "get api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get page comments"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/community/wiki/{page}/comment"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns a list of all the comments on the wiki page with the name specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"page","in":"path","description":"Page name","schema":{"type":"string"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"List of comments","content":{"application/json":{"schema":{"type":"array","items":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"ParentId":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"Page":{"type":"string","example":"Some page"},"Content":{"type":"string","example":"Comment content"},"Author":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"},"LastModified":{"type":"string","example":"2020-12-08T17:37:03.3304954Z"},"Inactive":{"type":"boolean","example":"false"}},"title":"CommentWrapper"}}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

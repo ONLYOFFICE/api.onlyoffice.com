@@ -1,0 +1,71 @@
+---
+id: delete-an-uploaded-file
+title: "Delete an uploaded file"
+description: "Deletes an uploaded file with the name specified in the request."
+sidebar_label: "Delete an uploaded file"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVE1v2zAM/SuGzl6dFTtsuWVtgBUbhqJNeylyUGwmVitbmkSnzQT/95GS89luA4bl4Ejihx75HhUEypUX4wdRuqa4N1fXYp4LD2XnFG7oPIhJh7Vx6qdEZdovICtw7O9oJXLxTH4g5j1FVeBLpyy7ibG4BA0IPpNt1lltKKzKlkpD9qywzrCGrJUNZN5CqZaKjKqNpw5+dODxjHIPy8+mIiRBlKZFaJGX0lqtyoioePR8XxC+rKGRvMKNBUJgFo9QIuWxzlhwqMDH2K5SZhZdwgnmCZuyGJ5vsyi6dEUl97lg+N8J9OvAu6MKubB9Ao9OtSvRxx8X5a1pfcJyPhr9JRnl+ee6UaHmg3ujbEoqEoYPo/dvXNvKgWlgv1w0QNuKLFWkkhspsaZ9Ia0qzs9GBWtmTcmLxLAXLB23BuejcjqnybtGtH5cFKE2HvtxsMZhT55r6ZRc6NQItiVIS9lpWgptSqnjMUHhmGPzx9Gnc67mQK233IiU7k3N7hpE8L/ChiAorrtO5lxE2sbHsbER3OmbvRanL7KxGk60NDrUx450vmNp4t0DGRemabqW4Ga3sVXZzfR2lk2ur7gl1LlEhpY0O0PpHhsZmR4Apsl6NVjiZAIPBuZ/DOPQO4QXLKyW1DoCFxkOgy4euLHkScpg1bqGKyJ10N9WH8RWYvpBhLCQHu6c7ns+pnscvzfzvTB4R3fU2ycniCdijTsYy3o3S3O6lrpLrJ7MRp9vIyZlCRb/6Ds/0Pvl9Nt0NiX3xfDyNKbiKCef+VWi71jQwsRGR73Fs0CstatOrtg3ZWX18FQdi+8pim9YcF1bU7s5wHisw3wohb9c2JshISRp9/3OP5l+G7ETf/JmVueE+hdprxYv
+sidebar_class_name: "delete api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Delete an uploaded file"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"delete"}
+  path={"/api/2.0/crm/voip/uploads"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Deletes an uploaded file with the name specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"audioType":{"description":"Audio type","type":"integer"},"fileName":{"description":"Uploaded file name","type":"string"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Uploaded file","content":{"application/json":{"schema":{"type":"object","title":"VoipUpload"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

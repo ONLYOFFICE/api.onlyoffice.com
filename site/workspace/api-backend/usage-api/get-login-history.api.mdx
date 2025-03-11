@@ -1,0 +1,63 @@
+---
+id: get-login-history
+title: "Get login history"
+description: "Returns all the latest user login activity including successful logins and failed attempts with an indication of reasons."
+sidebar_label: "Get login history"
+hide_title: true
+hide_table_of_contents: true
+api: eJzFVE1v2zAM/SuCzkadBTtsuRVD0Q3rYegHdghyUGwmVitLmkSnywT/95GSkybtel4OESXyUeTjk5NEtY1ysZQRmiFo3Nc3bqut6HREF/ZyVR09FJXk5YCdC/qPQu3sV1AtBEYHsmQlnykO5GokVAuxCdpzmFzIW8Ah2CiUMQI7EEYhRBRDhCBMvlA1qHd0i9C2MUOr7VbEoWkgxs1gSgzBbSs2ShtohUKE3mMUzxo7chCu1U0uS7iNoIKis/GCigoQPZlAbSY5n814Oa/uhpplUKkEdmAxErBxFsnkeOW9mbLXj5FBScamg16xhXsPlEaFoPaEIw76eHLu1o/QIDlQo+GDTPEVX/MzUGaicORfJT/OPryt7sGqiXRoJUf1QNuWPFvgrF5hR5taeV3PL2b1cZKKaMQ6N1UbFTmW+N5BiHmUQzAE6xB9XNR16lzEcZG8CzhS5E4FrdamsMa+UthGDYZMaVyjTD6mghhz7v40+zznpk7kc8d0lXT/FNELjV5/h8wjd98VdyWt6tl7hs10aLtxGT6x+8X1/WBZSne5W3F7dXcvLn98466o+cJqUWCpPmKv8kinO64BJy0cnsErPacXbfxXaU+MIfzG2htFhFE/ea5pksWS6aRIEoY8ecqVzOKgNV/PKwuExlVGvZQprVWEh2DGkY9/DRD4C7B6UQbv6Lru8BFI8onGRhOi1jxmCZmhDPTV42FZHEV8fXWfy+FqTzXwlDUwGZz94LL7k9zncqimEvh/rN6BpFQUNo7H+OJ6F3HUYIlmmlck7r/dmdD0
+sidebar_class_name: "get api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get login history"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/security/audit/login/last"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns all the latest user login activity including successful logins and failed attempts with an indication of reasons.
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"List of login events","content":{"application/json":{"schema":{"type":"array","items":{"type":"object","title":"LoginEventWrapper"}}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

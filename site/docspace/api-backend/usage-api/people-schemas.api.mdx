@@ -1,0 +1,63 @@
+---
+id: people-schemas
+title: "Get team templates"
+description: "Returns all portal team templates that allow users to name their organization (or group), add members, and define their activities within the portal."
+sidebar_label: "Get team templates"
+hide_title: true
+hide_table_of_contents: true
+api: eJzNVk1v2zAM/SuCThsQxFlRDG1uRTt0xTag6Ad2KIJCsZlYrWxpEt0vw/99pJSkcYt2TU47JLElku+JfCLTSlTzIMdX8hwQdT0PIhMXoCqBUDmjEIKcDKR14BVqW58UciwdWGfgPC+hUkEOpIfgbB3IdNzKndGIfwoIudeOfcjjpw4o7IyCrkcW9xpLgSWImTXG3hO8cMqrChA8B85tjVAjx1POGZ1HDtlN4KCtDJEBP+GjA4Kx0xvIkRydZ8aoEyVdrNkE9IRDNn2GvTOLkyMyqBtj1NSQE/oGBhIeFG1zjP293a+yIwuiumno6PNe8N+6nmkwhbh0SP4E0wTwh2oR7l9ol2Qs8oX1ezjBVkC0HnAJETbCCJuDzL1t3IdBjtl6S5CPHyWibHEWTtipDbhZXQIqbLZA8zA/IvF8GOwM5nTj0pUVBctuuzx+B1VsWDBDLlugNbBBLo/ZekuQDaQRzTeFIRxVFJpdlDld60MzZQK83xt6zQ81xtgH54fD3zAdHjjNn1+2ADM8gz+R3RHaYWrEaytEgmnsjr687sSXtWqwtF4/QRHJBsgbr/GRZgB12ZBf8/71LfAC6U4VROWeDEBOuslrnWHj6yCUMcJZj8q8bPFYKuRtey9ijxFoYwvktq+9sH6uav2UhPrJehFl93kgKIeigmpKLvRSF6KAma6XbipHfac5r3GG6DpOkcRgSIQpiaXlUTWHOA4UlvSSKaezneEoC4tZl+VNQFuF1SQjhnecfc5F4w35lIgujLOsLemyd+OWMTqyvFNesxbigOG9lOqZagw9SmNzZeIypZh9+tt7o/0drtLkOf+xiilcvwormRL7H7SwHDt9s4HUXJDc2lsNsbA0Rmz0fq0j5k/HTDW820kcA1Yq3opF+GPAF8V8eUPa5wH93yphkTu+mxkR0WmgcmnbhSyuOLFkScKICkjS4H8fPXFQqVKZr2TbTlWAS2+6jpfp3nm+LZNnVfAb4ZR0fcBHNcVSyoM8B4dRPqZJNX3xt4YlsVLv8bcLsuUa92WQCr544OjLrfpxPXZfH4kBf3eDNzzaNmms61b2aetNj8UJl9ac3gnp+i9PM5xD
+sidebar_class_name: "get api-method"
+info_path: site/docspace/api-backend/usage-api/asc-web-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get team templates"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/settings/customschemas"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns all portal team templates that allow users to name their organization (or group), add members, and define their activities within the portal.
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"List of team templates with the following parameters","content":{"application/json":{"schema":{"type":"object","properties":{"id":{"type":"string","description":"Team template ID","nullable":true,"example":"9846"},"name":{"type":"string","description":"Team template name","nullable":true,"example":"Winfield Upton"},"userCaption":{"type":"string","description":"User caption","nullable":true,"example":"some text"},"usersCaption":{"type":"string","description":"Users caption","nullable":true,"example":"some text"},"groupCaption":{"type":"string","description":"Group caption","nullable":true,"example":"some text"},"groupsCaption":{"type":"string","description":"Groups caption","nullable":true,"example":"some text"},"userPostCaption":{"type":"string","description":"User status caption","nullable":true,"example":"some text"},"regDateCaption":{"type":"string","description":"Registration date caption","nullable":true,"example":"some text"},"groupHeadCaption":{"type":"string","description":"Group lead caption","nullable":true,"example":"some text"},"guestCaption":{"type":"string","description":"Guest caption","nullable":true,"example":"some text"},"guestsCaption":{"type":"string","description":"Guests caption","nullable":true,"example":"some text"}},"additionalProperties":false,"description":"Team template parameters","title":"ASC.Web.Api.ApiModel.RequestsDto.SchemaRequestsDto"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

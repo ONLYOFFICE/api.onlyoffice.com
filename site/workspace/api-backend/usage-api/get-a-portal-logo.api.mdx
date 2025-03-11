@@ -1,0 +1,71 @@
+---
+id: get-a-portal-logo
+title: "Get a portal logo"
+description: "Returns the portal logo image URL."
+sidebar_label: "Get a portal logo"
+hide_title: true
+hide_table_of_contents: true
+api: eJyVVE1z0zAQ/SsanUMdOhwgt8J0CgOHTtKeOjko9iZWK0tCWrcNGv93diXnqy0M5OBI3u/33jpJVJsoZ3cyAqK2m1h9cV3nrNjd5XJCtroPGrfkl+RFj60L+pdC7exXUA0Ejg90khP5RH4glwNFNRDroD27yZmcA/bBRoEtCO8CKiOM2zihO7UBcTv/cUbRAX72EPGza6hWkrWzCBb5qLw3us41q/vIGZOMdQud4hNuPVANt7qHGimPD85DQA2RrY0KD/n/pKGFh1qvyUXo9auunrQxYgWij9CItQvZgfPwoQNBb6zjSmPllXMGlJVD/vEg0TsbS/3z6fR1+eu3MKCE/ztzxEA0yVL2w/T960q3Vo2UQSPZqwO6NmTZQAZLYUuXSnldnZ9Nq70SuDfJ7IdHCDGT3wdDri2ij7OqSq2LOMwSIzeQ56MKWq1MmZptpZm16g0dpXG1Mvk1NcExp+aP00/nPMeR4BY8bUn3puz2KFDv32FLLWieuC3mibSqY+tJbIaA4ZwfxHb5rDpv4CAWDD0MnG3tchWNbJW8G72lxsQigyLml4sbcXH9jYcnjArgRiHshozYqUzc2MoVoFDHUpMvFuVI9f+2MyMCCM9YeaMIACqceUojtXcMD3kSuZnOcbEnMtcnuAtVdzKllYpwG8ww8GuCJ/DOLw/M8o3St7u1T/KBYGdgcs/vbrgZdjd9oeWFgofJLuKirsHjX32XR1K9urwh39X4YehcwyFBPfFHg54zSQeXIcxqye8SMWE3PWFF9pKSuedtOJXOQ5bOeOChdia7PWrwVEWTcQ5+8lRvhqRUhDkMe/9i+mPEXrrFm9lcUte/ARSj8JY=
+sidebar_class_name: "get api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get a portal logo"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/settings/logo"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns the portal logo image URL.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"dark":{"description":"Specifies if the portal logo will be used for the dark theme or not","type":"boolean"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Portal logo image URL","content":{"application/json":{"schema":{"type":"string"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

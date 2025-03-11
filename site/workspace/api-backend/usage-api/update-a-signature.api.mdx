@@ -1,0 +1,71 @@
+---
+id: update-a-signature
+title: "Update a signature"
+description: "Updates a signature of a mailbox with the ID specified in the request."
+sidebar_label: "Update a signature"
+hide_title: true
+hide_table_of_contents: true
+api: eJytlN9v0zAQx/8Vy08gypIVHljfCp3UCobQOp6maXKTa+MpsY19aVei/O/cOWmbskm80Jfavh/+3ud8aSSqTZCTe1kpXSZLvTEKaw/yYSQDZLXXuCdrI6c1Ftbr3wq1NXNQOXiO8rSSI7kjP4ppKSqHkHnt2E1O5E+XK4QglAiH1MKuacvXreyz2GksBBYgFjMRHGR6rSEX2sQzD79qCHhBN/TLzzYnPY3MrEEwyEvlXKmzqCt5CnxrI0NWQKV4hXsHpMOuniBDyuO8deBRQ2Brr+JR57w7l37TK1zMKKxPo+nWDVXejmSBVfky6DvsBpVuVVnDoZj53c03sba+UnhKGNBrs+F8OjyqDPUW/pU0IP0H8abzFtYLY/HtKeXK2hKUkW38MbngrAldweM0fZm/a1I+bNEB13/i3LNc5APXA8uR7KHEow9jOoBnVbmSnS5pTzXMe9jn1IaOsR3kuQjTI8W/gAzd0dcgmQ5qjAes8Pj6ZwqV7Oh9TC9fAWZUPw6QxywV0JaKk86GWL3CgnaJcjoZX6RJHK4j3qSOwJPm9Pwm9+n7q4d3reSx81vwIU5d7ctYG7owSZKmoOztpHHWI3tulddqVXaI2dYpXau6ZJqlzVQZj0khx5ybP6VXYy5yMOlLbmeX7tV5PyKlur7CniRoxlF05pE0qmLrWWzkw+/l9jTB14c+nE9gepiqU4MHU8Et4zkxaxuV9I37YquqNiReLCM4cXu9vBPTHwsGRBy7jpX8FSIQ7R8DJreO
+sidebar_class_name: "post api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Update a signature"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/api/2.0/mail/signature/update/{mailbox_id:[0-9]+}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Updates a signature of a mailbox with the ID specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"mailbox_id":{"description":"Mailbox ID","type":"integer"},"html":{"description":"New signature value in the HTML format","type":"string"},"is_active":{"description":"New signature status (active or not)","type":"boolean"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Updated signature object","content":{"application/json":{"schema":{"type":"object","properties":{"MailboxId":{"type":"integer","format":"int32","example":"132"},"Html":{"type":"string","example":"html"},"IsActive":{"type":"boolean","example":"true"}},"title":"MailSignatureData"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

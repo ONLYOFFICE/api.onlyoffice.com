@@ -1,0 +1,71 @@
+---
+id: external-share-social-media
+title: "Change the external sharing ability on social networks"
+description: "Changes the ability to share a file externally on social networks."
+sidebar_label: "Change the external sharing ability on social networks"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVMFu2zAM/RVB5yzOgh223Np0A4ahQNG02CEIBsZmarWKpUly0szwv4+U7MRpuwEDdklkinwi33tSIwM8eDlbyi9KoxeZWGAIqqLYaiSNRQdBmeprIWcSnwO6CvSiBIcLkyvQ11gokCPp8GeNPlya4iBnjcxNFbAKvARrtcojSPboTcUxn5e4BV6Fg0VCNutHzAPhWMdHBoU+5mEYJK2N0QgVZRXoc6csY1J8YTFXGyoR+xJDiU4EI6hU0Fr4brPgSJxLGCcqw4fhM2ytJujgamzbkYSiUAwK+mbQxwa0x1eH9mjd5MKCgy0SQZ6QgwqMKy8W83HkdTw3DscXVl2bArUf36aqq2DGV8pbDYdTRLYtN+PQW1P5xMR0MuG/8x4uEyFiB7rGmeAphNrEsY/dCOUFVrDWWFBf/6pLT3nq6MPk/esm7iuoQ2mc+kUncJbHvHYqkA+WdIrPf/D+jyfkAA0F3MeeElCu2tVLWuclVA+kJM8Aa6UJJ6rJjhMgNsSl6G2oD8JUwkcfigrD3rgnPyZ0Grw0bFhbR09BKOkjA6uy6XiSMYjPejtkPVwC2naG9uh2rCUPUTtN9WUI1s+yrCmND+2sscaFljJ34BTzG3XivcTRBmpNS6lNDjqGiRuuOd/+OPk0ZXpXJ+IWrEKCO6fvKAtN8o0CI1mRyPw9TBtJxUzmxjwpjIqwvLenC/q5t313waL7uWpj4hkD737HNZuWpyQykkS7aZrEhy1E13RNJOmicj2lUTci+Sjla71e3ubB2/F/zNBRFigxo3tG3FD3UdGmc8aS+aRM8gb9RndEA3TP4Ei+5RDSK2m9lE2zBo/3Trcth4lnx15fnazBX3RqSeZHFy0V9ZTzNOq7O+6R0+keR3lfXM121Fdc5Dna8Nfc1eAC3NzfUe66e5W39PZQ0MGeX2z6nUnJbzwXR7vFWCM10V7DA+cmyPg21szV0ILJbN2Ch+q3qsOwwXNvpjH4l4d6s6Jpkr/b9piftv5Y0RHbZ7PGK2r6N6EQYvE=
+sidebar_class_name: "put api-method"
+info_path: site/docspace/api-backend/usage-api/asc-web-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Change the external sharing ability on social networks"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"put"}
+  path={"/api/2.0/files/settings/externalsocialmedia"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Changes the ability to share a file externally on social networks.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"set":{"type":"boolean","description":"Specifies whether to set the specified settings or not","example":true}},"additionalProperties":false,"description":"Settings request parameters","title":"ASC.Files.Core.ApiModels.RequestDto.DisplayRequestDto"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Boolean value: true if the parameter is enabled","content":{"application/json":{"schema":{"type":"boolean"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

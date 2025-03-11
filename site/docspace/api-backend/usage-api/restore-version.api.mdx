@@ -1,0 +1,71 @@
+---
+id: restore-version
+title: "Restore a file version"
+description: "Restores a file version specified in the request."
+sidebar_label: "Restore a file version"
+hide_title: true
+hide_table_of_contents: true
+api: eJztV+tv2zYQ/1cIftowxVIdo0j1LUj6CNa1Q57YAqNgRNpiK4ssSXk1BP3vuyMVW37FSoBhX5oPkUnd+3d3uqupY1NL03v6ThbCkpj4Jx1HVGlhmJOqvOA0pUZYp4y4FcbCFY2oZobNhIMzcNe0hAOQTYAb6CMqSzhp5nL4zYXNjNQoCy5RAbk4h3sjvlfSCBDvTCUiarNczBhNa+oWGqXJ0ompMEA6UWbGXLg6HsKF+MFmugCiNyej100TLS2YLy30JnyvhFnstmFF+SLFr4bHo67iyhT9lZKby4+7FFtnZDntqqFWzQRx4oejTTPGoFmtSgsYAdcwSfCxrqfFiOQSIVsQzhxLySSEPSLfxCIKp9aWaGnU1KhKR4SRygpD/skVqTRwCw5XyBGRzAifE8TJGRwfVWQ5K6eQPhJe5IIEL0iIXUQKoCJqskkdEdACqjtAZAoCXzr0iWldyMwri79adKzeDpd6+Coyh9loMF2dDGGRfCeW+/LwAMYRhZDtwmhd3u8CIS+romAPyBtyeieO0TJLe5q5itBBW1vS9whlD/G3Xej7yMfUeCYCewLm+8T+eGFhY6hCeR0S9gmpnhJ3J8uJFAUnN9oBB1QuZZxLZGfFnx3jJ6ywwOmk83ynV2cD3xMHZ9D/Bm+B5UPI49PK5cqgib4qBD8clspl17KPOzctYQcQLMQjFy5BH/9cFottN6EjnBwlo6NXyXXyOj1O0iQZJOHvt2QEJ7QXpfytSvF5MrHCHbbmep1+0yirWfmkUQma4XU/J+qnWoaYw49z0OMDgtEO7aNF4bD1H3o0qf6V20rpqGXGMCx96cTM9siBnwX0s4D+xwJ6IW4g4w/FRWEHl+0Ecu5UF82zUBh3Br7cwqO6HoOPu6eArZwDxjAX3G59I/dE92pzjOhVyv9VHOAIwlH8aNd09kmF4Utyogx0n4KD6XBw6p3/fcEJx7F6JktBIPnnkodojpLjbWl/qYpwRUrlSM7mgohSVdOcaOS3GA0LgokA63zPQ83e83Upl2G4t+2Yt5wHrRaZhKLnjz0TJ3agHUCMYfbPFW4GU5/QftRPacy0jIeDJEY51v+P67AUNHG7Q3Tmbg9cWCBwfE5p7py2aRzXubKuSWutjGuAcs6MRER9E8B3IRQTVhVYRYXKWOGvwTfkWX99krwZIiZjVJlVRrrFFY6SQRyz2RcGrejL+pgHnrQjXZjv18jaQT9T6psMEYXuqDx3J23uxAPmC+3Me3Q+DDZaN2M+t1vxLQYbEGzmer0akV+EWusbVkCsCwZO4EiHoa9bCO/RcaAEELFP+W0wPOGRLve7DSwhsgGVe1rXD8yKG1M0DV6HXQgR5tIihHxZYXs925h5dxrtwepse3NWVEhFcSV7map2KXtCXdjxVqrGq8x8pou/XLbL769ktYjs1PyYjuWiq/rRohaQZgyUOXw/cLYAQ8LL0ywT2nXYtpYq9GBZye/fXkMq/wtO1Xjz
+sidebar_class_name: "get api-method"
+info_path: site/docspace/api-backend/usage-api/asc-web-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Restore a file version"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/files/file/{fileId}/restoreversion"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Restores a file version specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"fileId","in":"path","description":"File ID","required":true,"schema":{"type":"integer","format":"int32","example":9846}},{"name":"version","in":"query","description":"File version","schema":{"type":"integer","format":"int32","example":1234}},{"name":"url","in":"query","description":"File version URL","schema":{"type":"string","example":"some text"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Version history data: file ID, key, file version, version group, a user who updated a file, creation time, history changes in the string format, list of history changes, server version","content":{"application/json":{"schema":{"type":"object","properties":{"id":{"type":"integer","description":"File ID","format":"int32","example":1234},"key":{"type":"string","description":"Key","nullable":true,"example":"some text"},"version":{"type":"integer","description":"File version","format":"int32","example":1234},"versionGroup":{"type":"integer","description":"Version group","format":"int32","example":1234},"user":{"type":"object","properties":{"id":{"type":"string","description":"Id","nullable":true,"example":"9846"},"name":{"type":"string","description":"Name","nullable":true,"example":"Winfield Upton"}},"additionalProperties":false,"title":"ASC.Files.Core.EditHistoryAuthor"},"created":{"type":"object","properties":{"utcTime":{"type":"string","description":"UtcTime","format":"date-time","readOnly":true,"example":"2008-04-10T06:30:00.0000000+04:00"},"timeZoneOffset":{"type":"string","description":"TimeZoneOffset","format":"date-span","readOnly":true,"example":"00:00:00"}},"additionalProperties":false,"title":"ASC.Api.Core.ApiDateTime"},"changesHistory":{"type":"string","description":"History changes in the string format","nullable":true,"example":"some text"},"changes":{"type":"array","items":{"type":"object","properties":{"user":{"type":"object","properties":{"id":{"type":"string","description":"Id","nullable":true,"example":"9846"},"name":{"type":"string","description":"Name","nullable":true,"example":"Winfield Upton"}},"additionalProperties":false,"title":"ASC.Files.Core.EditHistoryAuthor"},"created":{"type":"object","properties":{"utcTime":{"type":"string","description":"UtcTime","format":"date-time","readOnly":true,"example":"2008-04-10T06:30:00.0000000+04:00"},"timeZoneOffset":{"type":"string","description":"TimeZoneOffset","format":"date-span","readOnly":true,"example":"00:00:00"}},"additionalProperties":false,"title":"ASC.Api.Core.ApiDateTime"}},"additionalProperties":false,"title":"ASC.Files.Core.ApiModels.ResponseDto.EditHistoryChangesWrapper"},"description":"List of history changes","nullable":true},"serverVersion":{"type":"string","description":"Server version","nullable":true,"example":"some text"}},"additionalProperties":false,"title":"ASC.Files.Core.ApiModels.ResponseDto.EditHistoryDto"}}}},"400":{"description":"No file id or folder id toFolderId determine provider"},"403":{"description":"You do not have enough permissions to edit the file"}}}
+>
+  
+</StatusCodes>
+
+
+      

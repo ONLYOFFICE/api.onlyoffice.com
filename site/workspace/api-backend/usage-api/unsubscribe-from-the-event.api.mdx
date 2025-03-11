@@ -1,0 +1,71 @@
+---
+id: unsubscribe-from-the-event
+title: "Unsubscribe from the event"
+description: "Unsubscribes the current user from the event with the ID specified in the request."
+sidebar_label: "Unsubscribe from the event"
+hide_title: true
+hide_table_of_contents: true
+api: eJy1VE1v2zAM/SuGzkGddTtsvhVrgBXbYVjbU5GDYjO1GlnSJLpdJui/j5TtfDRpb7skkvjxyMdHR4HyMYjqQdRSg2mkLxfPYDCI5UwEqHuvcEvmKK56bK1XfyUqa76BbMBzmKeTmIkX8gOxTBTVQKi9cuwmKnFvQr/ihxWEAlsoKKUngKIP4Iu1t11+BQYtXhS2+XpzXQQHtVoraApl8puH3z0EvCA0J73sAMGHXJqhC0HlHDdcjWJkJ7EVr8vJzVF6MoS6hU6KKgrcOo5XBuGRupqJtfWdxOHp46VI3JaH4KwJEDjicj7nv+PcdzJsCvkiiQlOUlvKZ5D9pHNa1Zm58imwczyFt6snqJHAUpqJT/MPpwD3Ro5DgEawF3HQ2oYsDWiiIzNDTVeilE6VlxfzcjfVTE4o40hSKvv9YJgM8M8Tnb3XlKJFdKEqy9jagKmKznpM5PksvZIrPfDAtqHOtew1M6YtQeZnqo9jjs2f51+Yz3SgrlsmYkh3VmM7gqin77CdxtsO5tk0/aPYzI4ya5vDFWr2+Gq7rjeEWNzmbotfi9u74urnDXdFzQ8ka4kwVR+wk3lYI8aBmF9J97XQ4n78/2cFRk4Q/mDptCRKqOI8uTiK4IEJI0+SAatxFAIdBynQodpvzKEaaDbDXB9EjCsZ4N7rlPiZ0D1/DZZ7GWTFNCrwmZS4ljrAO1wc7N/ZDqZRm22Wmu75RscNDX6/4WlJru30DYqj9aquweFB3Mnasex2O3O9+LG4W5A7L9WxzDZZZuOBAc6Wday4qUb+TbM3QmIcRJzSzn8wvRmxk/ngzSwtaX/+AZ4g9MQ=
+sidebar_class_name: "delete api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Unsubscribe from the event"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"delete"}
+  path={"/api/2.0/calendar/events/{eventId}/unsubscribe"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Unsubscribes the current user from the event with the ID specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"eventId","in":"path","description":"Event ID","schema":{"type":"integer","format":"int32"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Task awaiter","content":{"application/json":{"schema":{"type":"object"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

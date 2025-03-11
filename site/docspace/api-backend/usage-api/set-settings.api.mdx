@@ -1,0 +1,71 @@
+---
+id: set-settings
+title: "Enable notifications"
+description: "Enables the notification type specified in the request."
+sidebar_label: "Enable notifications"
+hide_title: true
+hide_table_of_contents: true
+api: eJztVk1vGjEQ/SuWzxuWkB5abvmqVFVtopCoB4QiszuwTszatb0kdLX/vTP2AgskaaVKPeUQYnvGM2/evDHU3Iu548MxH4H3spw7lrLv2suZzISXunR8knBtwIbdl5wPuQO/duYJt/CzAufPdL7iw5pnuvRQeloKY1QbJX1wuqQzlxWwELTyKwMYTE8fIPMYx1jK4iW4rbXmuoSrGcKrOZTVgnCeiXwOlPhG64U7zbxcSr/C/YWQavUZIMf1nYNZpdStNAF/m8t5i6DRnIPLrDSEDI/HMSQ7YnGRsJ3QeB72TLQHCdukQltYsxluEtZJi5Z2xzxuJ5gVnsXCKALS1tAkm7L6yXEySE62WCXSOAd7CLbfwXn8ArbBHqaTt5D0G8oofUB1Ojrv/YBp71xb6AUNrHpdKdwSsibh0l2WYqqQ6G0bp1orEOUB3JGBDAMgu3LGfAGs7ARkdJlJxyDGY9qSvQvQ2woazCnyXNIVoa47OpkJ5WA/ZRcyc2tVtzJlRlixAA+WJLRf+amR9PdN56Bc7yZecRde7/CwFn/HzpuGUFpwBkcmSnjQ79O/vwCHSN7H5n1s/vfY/En9UcuvqX+r+g/940Oh35Wi8oW28hcWTF4OssqS5EiVwmX3ZL9/BDrAwRGkvyd0AD4hdnejRebcK1S4lq2cyTK4tMPew5A464Wmby2jXZgX4QvcpcLIdNDrp+sZTLthOcG1S3okCG1lFV4pvDdumKZ1gZGaYW209Q16LoWVAR2RQLZIxkxUCpdc6UyocIwk0J1d88f+pwHxONkyNKJhj+F2edrIBsF/BRreEt8y2nfdUGlEWab1o4RAPb0iN9uv6cu1SjbxNo9DR6NBQhRrpoPnoViodqQodmg5iPU5vxDhyWqhxXg7TXP7cu/8aviHTre1eHj2qVECSUBAoXV12/UxEYee2PfQ4c3ru9N77ETs4pjX9VQ4uLOqaegYU1mS62TbdNphmgL1i68OiSV0ip/Hgo7C8JO7qmLj9t52esvijdMsA+Pf9J105Hx9NbpF52n7s2uBQ4unVjzRTzL8HHJOv9si3+gQzmquRDmvxJx8Y8zwSlTETlddUUftgqpam8pVF+Gu7GId9ElVvXijrqN0m2bjH02v3miZXXtTVycI+jcJx7Aj
+sidebar_class_name: "post api-method"
+info_path: site/docspace/api-backend/usage-api/asc-web-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Enable notifications"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/api/2.0/settings/notification"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Enables the notification type specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"type":{"oneOf":[{"enum":["Badges","RoomsActivity","DailyFeed","UsefullTips"],"type":"string","description":"[Badges - Badges, RoomsActivity - Rooms activity, DailyFeed - Daily feed, UsefullTips - Usefull tips]","example":"Badges"},{"enum":[0,1,2,3],"type":"integer","description":"[0 - Badges, 1 - Rooms activity, 2 - Daily feed, 3 - Usefull tips]","example":0}],"title":"ASC.Web.Core.Notify.NotificationType"},"isEnabled":{"type":"boolean","description":"Specifies if the notification type is enabled or not","example":true}},"additionalProperties":false,"description":"Notification settings request parameters","title":"ASC.Web.Api.ApiModels.RequestsDto.NotificationSettingsRequestsDto"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Notification settings","content":{"application/json":{"schema":{"type":"object","properties":{"type":{"oneOf":[{"enum":["Badges","RoomsActivity","DailyFeed","UsefullTips"],"type":"string","description":"[Badges - Badges, RoomsActivity - Rooms activity, DailyFeed - Daily feed, UsefullTips - Usefull tips]","example":"Badges"},{"enum":[0,1,2,3],"type":"integer","description":"[0 - Badges, 1 - Rooms activity, 2 - Daily feed, 3 - Usefull tips]","example":0}],"title":"ASC.Web.Core.Notify.NotificationType"},"isEnabled":{"type":"boolean","description":"Specifies if the notification type is enabled or not","example":true}},"additionalProperties":false,"title":"ASC.Web.Api.ApiModels.ResponseDto.NotificationSettingsDto"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

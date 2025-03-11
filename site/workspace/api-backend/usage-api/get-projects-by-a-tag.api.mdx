@@ -1,0 +1,71 @@
+---
+id: get-projects-by-a-tag
+title: "Get projects by a tag"
+description: "Returns the detailed list of all the projects with a tag specified in the request."
+sidebar_label: "Get projects by a tag"
+hide_title: true
+hide_table_of_contents: true
+api: eJy1Vd1v1DgQ/1ciPy/N0uOBWwmdKq4qCDhV3aKTruzDbDLbmCaxsSelIcr/zoydbJN+0XsgD4njmZ/n++dOEVx6tbpQ1pmvmFF6Lv+bhfKYNU5Ty7JOHTVUGKd/AGlTv0PI0QnG8Uot1HfWQ7XpGZWjz5y2oqZW6gypcbVPqMAkRwJdYp6U2lNidgmUZRAMhn3yXVORQMIOJd5ipneatXUdlBx+a9DTAVuz4KBCQueDazX/sClGsUyLVQtUqLuucFhJUOXIsgIrUKtOUWsF68np+lL1EoBDb03t0Yv8cLmUz/ykj4P/o998YmZqwppEF6wtdRbylH71AujuGwTnoBV3CSs/2TdbOVFidMaiIx3deAv1ca5porg1pkSoWRNvoLKl7O2g9Kj6hXrvT52+Bi7JcwH5RFNzKJdc3oXaGVcBxa0/DmfQl0vBnWsq8X4ep4rrsEiiJkP+nqbyGcBp6hm+JqDG/19vg7NnsbB6O3P5kYzPMrL3bm+iaXQ+tzA8Lx54jU8IX3tbQvtP6Nmnwv+krzD5D+oWyF/pZyb7E9QgyWDtI64/uHXFQ/Y0pnE8hSbxoplAQAn+1JkdT+tn9wv4ly8pq+YNz4Es0fB23BP4AXh781fj0b2BvNI1T44DMmyBTVAMSB3zUaZF/NeBjc5PSvV7CjGxfhqnWIwH6/Is1Kvly/uD/7mGgQYxD2cwCxWGHVSXGFpIeGelUrA6PTxYpiOjMjWlHb964R501yNzNZJcVRBZv0rTrjCe+lVnjSPRvAangTMQ+lFk0aEdNKVEXpoMyrDNjghmLn69/PNQgpkQ+VpYKB73IJ3fspPVH7Ad2bSI4sVItDNsSIOudybAh5S+NVXV1GwxWYdok7Pj9XlydPpeouLgYzZLJqjRe08VBD4YbJwg3V4L2zZeCncpvbul3d9z0QzpILyhlKdWBwZq4kTEWl9IrliTqx0pZCCT6O1KPlyAWLwL1XVb8DJSfS/bbMfJ7bq5rXVoi1x7WXNfBYJ+IurJnfagr2M96zb0U9nIHy+vuLrxxuw3rFaM93k3SI6yDC1NMPcuNemrffefHJ+zrszGvImuQhMNCzn9QX/m/TQ6J+9+8Qik62KL9v1eP4oeReybOGpLejY8HT8BAR8Dpg==
+sidebar_class_name: "get api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get projects by a tag"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/project/tag/{tag}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns the detailed list of all the projects with a tag specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"tag","in":"path","description":"Tag name","schema":{"type":"string"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"List of projects","content":{"application/json":{"schema":{"type":"array","items":{"type":"object","properties":{"CanEdit":{"type":"boolean","example":"false"},"IsPrivate":{"type":"boolean","example":"false"},"Id":{"type":"integer","format":"int32","example":"10"},"Title":{"type":"string","example":"Sample Title"},"Description":{"type":"string","example":"Sample description"},"Status":{"type":"integer","format":"int32","example":"0"},"Responsible":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"},"ResponsibleId":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"}},"title":"ProjectWrapper"}}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

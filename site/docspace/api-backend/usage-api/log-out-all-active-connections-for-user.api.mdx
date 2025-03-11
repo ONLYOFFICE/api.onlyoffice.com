@@ -1,0 +1,71 @@
+---
+id: log-out-all-active-connections-for-user
+title: "Log out for the user by ID"
+description: "Logs out from all the active connections of the user with the ID specified in the request."
+sidebar_label: "Log out for the user by ID"
+hide_title: true
+hide_table_of_contents: true
+api: eJy1VFFv2jAQ/iuWnzYpkEBbieYNtZpUbVOndWgPCFWX4BCrTpzZDi2L8t93Z4cCo93bXsA+f7777r4v7riDjeXpkj+IvDXS7VjM5rmTW8FyXdcCl7q2fBVx3QgDtLtb85Qrvblv3VypAL45YD9ps7DC8Ig3YKASThgq0PEaN3izxUNMEXFZ464BV+J6LWxuZEMJMEj32d0txo341UojsKIzrYi4zUtRAU877nYNZbPOyHqDyEKbChzlbyVlFy9QNYogAGIiJsnFKMvhanRdwGSUwSwfXU6Tq1l2CVkxnfG+X1E122AHwlKBaZLQ3ymz+yfeR/wymZwfLWpoXamN/I10PejiHPRVIGTNau0YbEEqyJBij2g7jN9PCmz+SMkenwQFkBdQS88IEHxFTE+zftEby3TrWGF0xUAp5krB4ExGpgt/QhKwZ+lKv7u7ZbYRuSykWDNZ+xjNXVg3xqqVp0xStc6LioKlPIZGxtNxEu+Jx6HcUbUYPYKkkE7cBdF7To2a7d4RrVGYqnSusWkcd6W2rk+7RhtHyC0YSfPxatBZGGcBrXLegTkoH8bx0Z3T41lyPcXJ0rD2FB/IPCHd6YRf3YRNfcZAtPfqCWxwbK71kwyiybrQ/rZ03mnzh5vxT5GN540k/thm0Gc7DRytq6CmC0N61C3Ips1Bl2wXrH8icYdlaydq97/VHgbhxIuLGwXYMTL3OnWD9EuaEiJRfH7k24ifGQBjrxbAdTp8+ahIUHPJuy4DKxZG9T2FkYUhw68O4nufrKWlNZqwAGXFP2bz4fvwYHxkh0fkzZ72itc7bzXV0g6X3hD7R6pf9UcfwLfFD2qzpSkcWyaYY1gQ3zdz/+WlUId+++idG10X/Nj3r/hw9O6NEh8K//QGNHW6wm/gD7/OAI8=
+sidebar_class_name: "put api-method"
+info_path: site/docspace/api-backend/usage-api/asc-web-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Log out for the user by ID"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"put"}
+  path={"/api/2.0/security/activeconnections/logoutall/{userId}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Logs out from all the active connections of the user with the ID specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"userId","in":"path","description":"User ID","required":true,"schema":{"type":"string","format":"uuid","example":"aae1e103-bca5-9fa1-ba8c-42058b4abf28"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Ok"},"401":{"description":"Unauthorized"},"403":{"description":"Method not available"}}}
+>
+  
+</StatusCodes>
+
+
+      

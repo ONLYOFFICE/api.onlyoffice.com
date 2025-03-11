@@ -1,0 +1,71 @@
+---
+id: delete-a-user-photo
+title: "Delete a user photo"
+description: "Deletes a photo of the user with the ID specified in the request."
+sidebar_label: "Delete a user photo"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVd9v2jAQ/lciP0NDaTUx3rqBtGqbVpVWe+gQMslB3DqxZ1/asij/++6chJZB+4D2kOD47r779d1RCZRrL8Z3woKxGuKrzKDxYt4THpLSKdyQsBIXJWbGqT8SlSm+gEzBsZGjk+iJJ9IDMa/JKgWfOGVZTYzFBDQg+EhGlnEjs4owg6j04KInhVn4upxE3kKiVgrSSBXhzsHvEjyeELiVTuaE4nyIpKAPQmYIxb4V+7ESM/Gv81v2cjmhe59kkEsxrgRuLFt7dKpYi5ojduCtKTx4lg8HA/45lEXahB0SIczEFAgFsra0VqsklCa+92xS7bs0y3tIkPNxxoJD1Tj84dRaFVLvB9cT8Cxz6gldpbCSpcYFR7AIESy8+gOL0+Fo0OfXieV0euIakNCOAzv7MOjT00F9l8/H4VAN+/R0OJ/U+jic0bA/Gm6jgVSV+ftAv96EOh/1z0cd1CyX+sh6nw37Z21IBIQKg/ZNVubLQirtJxLlT0d8oPGoa9Y5H5zuE+q2kO08QRqQiN+ZSYNjplpgPTF6LGJpVTw8GcTteFYN7+u4oyF9PnajUTpKS2SI1o/juMqMx3pcWeOwJs1H6ZRc6oZ2LGviComSmTaJ1OGa4mGbXfFo8HHIKb1aDDOmeAN3cD1sC0w5fIVNN6tZI+51k7xjG6qhipUJ5m19P5s8LwvyGM1CttH1dHYTXVxdclaUfFNULWnTtNF7zGUYw9ZHM8G0hnZGeKcp1ctE/5e11eaO8Iyx1ZJSp8hCh6q2uXdcGNKk9nLDQ4PpMN6utiZOqnjTrTtRVUvp4dbpuuZr8uV4Pc9fmht4kCrPZ+LTSmoP7yT6siIPhtv1r9gE/uiSv+j4QN3cruB6TppZ95dQtcKLJAGLr8z2liRTacv7yfTb9GZK6jwYu9R5CNRpD+zgYFS7LOpC5Hfde8Okqhpi1vVWvxG9abGlbqPNRZrTTPwFnwp7jQ==
+sidebar_class_name: "delete api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Delete a user photo"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"delete"}
+  path={"/api/2.0/people/{userid}/photo"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Deletes a photo of the user with the ID specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"userid","in":"path","description":"User ID","schema":{"type":"string"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Deleted user photo","content":{"application/json":{"schema":{"type":"object","properties":{"Original":{"type":"string","example":"default_user_photo_size_1280-1280.png"},"Retina":{"type":"string","example":"default_user_photo_size_360-360.png"},"Max":{"type":"string","example":"default_user_photo_size_200-200.png"},"Big":{"type":"string","example":"default_user_photo_size_82-82.png"},"Medium":{"type":"string","example":"\"default_user_photo_size_48-48.png"},"Small":{"type":"string","example":"default_user_photo_size_32-32.png"}},"title":"ThumbnailsDataWrapper"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

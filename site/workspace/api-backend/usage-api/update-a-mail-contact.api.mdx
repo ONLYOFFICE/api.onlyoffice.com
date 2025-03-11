@@ -1,0 +1,71 @@
+---
+id: update-a-mail-contact
+title: "Update a mail contact"
+description: "Updates a mail contact with the ID specified in the request."
+sidebar_label: "Update a mail contact"
+hide_title: true
+hide_table_of_contents: true
+api: eJzlVktzmzAQ/iuMzm5wnBxa39I6nXo6yXjy6MXjgwyyUYKQKom4LsN/764kMNjOY9LeyoER0n77/LRLRSxdGzKeE0F5Hn+RhaWJNWQxIIYlpeZ2C4cVuShtJjX/TS2XxTdGU6YRpGFFBmQDcowsakClzCSaKxQjY3KvUmqZiWiE6qPEq4823GaRzVg0nURGsYSvOEsjXrg9zX6WzNgT0BuWn2UKXlQE4aywuKRK5Txx3sQPBm1VxCQZExRXdqsYWJfLB5ZY0KO0VExbzgye8hTffUevuu5NJ4AJOjiYXEOw9YAUVLBD5DXbtEAn0UKN1bxYI7KHeElB9+SIHoZZNMdV5NzYSK5aVUG21UK1plv4hEoJ00lSox3Uq0wW7LoUS6bfaMQhoiJA3m7LPVhfo2RhfFlGw+Gh0Wmxklq4Okd0KUsblY5SaeMCWPlHtAjcn6Yd0ab6A+Ld8FtnI9hgv6hQOQqdjs7OsTrXgR/9YLuSjh8gOenz4XlANxmAu2zr/0qinwnx/bH9oHn5SnBPTgRkp2amuaB625FfSpkzWvQAVqM8ACy3bqOpANTc7c/2+PhfBH3nsO9z+FbQPP8qrbzX+ct+m64kIK9YykvxJqjoiXZDwSYawplQS4m/5OfD08N7fV/QMFFY6nQIBp9QKaJKV0JqM/iIqeLx6GQYu+kUrnzsWwDBEaWfHDdgQpXoN8msVWYcx1Umja3HlZLa1iD5RDWny9wzAs+8Syta5pjSXCY0d9vYBgHTP/44/DTCaDpT8Ra7ild3dDbu2Kr4d+boinFn/rgZJn2sSwS2rZvd3Lts8u7n1rBFtpXpJ3ZXsNAr5s3WYr/B705q9A74h163tBSiLCDQ6NYlObq5vL2LLmZTTCbAvbUcp3tImrGCunYWHPSzf2/07/vbGep/+7MQ8m3ZLxurnHLXMUvPZk+nORYDJIFQ8EYjYXp4xwKtIE+eIHNSVUtqGNC8rnEbTOH9ni92fMIvMJM1f0QVeYRi+1sNUX1wt3kQ2sT4cD7VgwZxkSRM2RdlF51rMru/A9ll+DMSMkWIphv8a4L3mMBCuiQ7jrq9CupVrEu6RlmvEhmHN7FP2EdH2LDAoJqjYttxsM/dQYgD3xjVUUhV+etQ161800GfQbQXxktjVRfg9R+Z1abX
+sidebar_class_name: "put api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Update a mail contact"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"put"}
+  path={"/api/2.0/mail/contact/update"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Updates a mail contact with the ID specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"id":{"description":"Mail contact ID","type":"integer"},"name":{"description":"New contact name","type":"string"},"description":{"description":"New contact description","type":"string"},"emails":{"description":"New list of contact emails","type":"array","items":{"type":"string"}},"phoneNumbers":{"description":"New list of contact phone numbers","type":"array","items":{"type":"string"}}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Information about updated contact","content":{"application/json":{"schema":{"type":"object","properties":{"ContactId":{"type":"integer","format":"int32","example":"1234"},"Name":{"type":"string","example":"name"},"Description":{"type":"string","example":"description"},"Emails":{"type":"array","items":{"type":"object","properties":{"Id":{"type":"integer","format":"int32","example":"1234"},"Value":{"type":"string","example":"value"},"IsPrimary":{"type":"boolean","example":"true"}},"title":"ContactInfo"}},"PhoneNumbers":{"type":"array","items":{"type":"object","properties":{"Id":{"type":"integer","format":"int32","example":"1234"},"Value":{"type":"string","example":"value"},"IsPrimary":{"type":"boolean","example":"true"}},"title":"ContactInfo"}},"Type":{"type":"integer","format":"int32","example":"1234"},"SmallFotoUrl":{"type":"string","example":"smallFotoUrl"},"MediumFotoUrl":{"type":"string","example":"mediumFotoUrl"}},"title":"MailContactData"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

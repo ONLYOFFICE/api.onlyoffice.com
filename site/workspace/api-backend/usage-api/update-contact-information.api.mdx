@@ -1,0 +1,71 @@
+---
+id: update-contact-information
+title: "Update contact information"
+description: "Updates the contact information with the parameters specified in the request."
+sidebar_label: "Update contact information"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVltTEzEU/iuZvBrYbUGFPomAUhEGKcI4nT6ku2k3sJvEJAvWTv+75yTbsoWKOiMPy0lyLt+5d049nzraG9LMVsmhVp5n3tERo05ktZV+Bm9zelD7Qlv5k3up1YngubAoY4GijD4An6CjBUjlwmVWGmSjPfrV5NwLR3whSBZ1E6km2lZBEXmQvgiPhlteCS+sI86ITE6kyIEzvFnxvRbOb4Ohhnyvc4A1p6hSKI8kN6aUWdCa3Do0PqcuK0TFkfIzIwCOHt+KzIMeY7UR1kvh8FXm+F1HfrgBrRWZtjnpH4GGRqMEAFOIxYLRxr+XlP1GEm1chdungufiYWPcgo6VKm4tn8ERklC5lrtLE4xGyXi106ULMAqJ4ZsNhpeVcuetVNMA011YWXE7+3ucsjLaeq4y0SMmChNtidL+z+jHWpeCqwAWEium+l8srySeORL+sJSc0crFCuim6XPVsXjzTeop+1+112/l/k9pY1SousK+uyi0wgI4rrgs4f+NGDtsQUYHd7E0rqC1fFDyWao7kfcR8weeCQjrHZAHeQ4RcOH9XnzStVUcNZ3NBga4gPp4FnW/L/U0wvnGC62RZ3AO3/7hF/h+4uNxeDzon8H3+pQ+GwLDlGyRgJiRDpABNCNdIBvcjOzAIUBnZBfIBj0jr+GwdICRN3Ba+sDIWzg1bjCyFxhXnjCyDxeNM2AWIQSHgEYMjVNwQhjBMaARBTgHFIIAB4FCBNFJOCAAcBQoNH59OsKc/OCVKTFxHeySw1ap/kVCV8IpCh81Tblesm02VxtsqXdalTM9mchMbGe6ahs+h0H6so4TDRwg0W839JOua/N7W0f+o391qtPd2Q0N7KUPF80kxKq/sdA3OABDO+6mnQ0dqHizd0Qe1MCKKDQMWGrq0ErcF3BIuJFJdztNcIU13ZrMV/O4N0y39kevFgkOtmT+eEFxydl7WDphx9W2BGWF98b1kmReaOcXvTlGGznvuZV8XMauxbcId8LrEn0vdcbLcA0wUWb9eS/dx7G7aO3VAU6IqG7jdl1FGrw7FWFCYkyK+MyoCnlelw1BwhF0+bgoj5fZiIsuXdtUaXv7DNPRci88lk1r6g+xEEbtadzeDqAmgF5luqpqBX6SQYgxuTweXJGDiz7GEkIeM1zizwOI2eIXaX3aMQ==
+sidebar_class_name: "put api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Update contact information"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"put"}
+  path={"/api/2.0/crm/contact/{contactid:[0-9]+}/data/{id:[0-9]+}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Updates the contact information with the parameters specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"id":{"description":"Contact information record ID","type":"integer"},"contactid":{"description":"Contact ID","type":"integer"},"infoType":{"description":"New contact information type","type":"array","items":{"type":"integer","format":"int32"}},"data":{"description":"New data","type":"string"},"isPrimary":{"description":"New contact information importance: primary or not","type":"array","items":{"type":"boolean"}},"category":{"description":"New contact information category","type":"string"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Updated contact information","content":{"application/json":{"schema":{"type":"object","properties":{"InfoType":{"type":"integer","format":"int32","enum":["Phone","Email","Website","Skype","Twitter","LinkedIn","Facebook","Address","LiveJournal","MySpace","GMail","Blogger","Yahoo","MSN","ICQ","Jabber","AIM","VK"],"description":"[0 - Phone, 1 - Email, 2 - Website, 3 - Skype, 4 - Twitter, 5 - LinkedIn, 6 - Facebook, 7 - Address, 8 - LiveJournal, 9 - MySpace, 10 - GMail, 11 - Blogger, 12 - Yahoo, 13 - MSN, 14 - ICQ, 15 - Jabber, 16 - AIM, 17 - VK]","example":"1"},"Category":{"type":"integer","format":"int32","example":"0"},"Data":{"type":"string","example":"support@onlyoffice.com"},"CategoryName":{"type":"string","example":"Home"},"IsPrimary":{"type":"boolean","example":"true"},"ID":{"type":"integer","format":"int32","example":"1234"}},"title":"ContactInfoWrapper"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

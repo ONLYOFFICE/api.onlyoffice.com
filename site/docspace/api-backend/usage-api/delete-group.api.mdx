@@ -1,0 +1,71 @@
+---
+id: delete-group
+title: "Delete a group"
+description: "Deletes a group with the ID specified in the request from the list of groups on the portal."
+sidebar_label: "Delete a group"
+hide_title: true
+hide_table_of_contents: true
+api: eJy1VF1P2zAU/SuRnzapbdpQJMhbVdCENtAEQ3tAFXKcm8aQxp7tFFiU/7577fSLwuNeEvv63M9z7JY5vrQsfWDfjGo0WwyY0mC4k6q+ylnKcqjAQTgcMM0NX+HekEvLatwgRuZ4JGtcae5KXOdghZGagqDRO0dXF3hg4E8jDWBgZxoYMCtKWHGWtsy9aQplnZH1EpGFMivu0NI0Pjy88pWuCMI5TGAyPhlmgp8Ozws+GWb8TAynyfj0LJvyrEjOWNctKJvVqrZgKUEyHtPvsLQbFQlVO6gdptisEMW1rqTwU4ifLEHb41pV9gSCHLWhmTkZElnHXWPnKoc9rMTQSzD7jaHpJNnvbJKcTLtuwHieS8rMq597gQteWZyYk85P4VoKo6wq3Ghm9Q24uTIwul6L0Y2ahz5uwTaVw0lQzOl4ctz9fc0bVyoj/yIjHjQ9BgX2auWiQjU14hBoQTRGujcvAm7FI8V5fAYy4NQ5EfaCAGAL4uEw4IVXlI14tPShX6QrI1cCKiSyGoQsJOSRrL2NBAMWcxu18oZK4k4VwddGKsC0Mo5XI0yL6izVTrhes6jJlMVcyzgZjWPvGbcy7xh1YtYbNTemQlzpnLZpHLelsq5LWwpNyDU3kmdV4JjOwqgKTkNOWaUEr7wZ50M+h8dn4/OEqFjshndHegrhDke4FQ1W/B0Ng809O4D1N04o9SzBsyLrQnnvXiKzu/noN2SjmZZUP7YZCFgnoUbrVtwruw8fiNnw8v4at7v78Z8p7Lt38OpiXXFsE8v15LQ9mQ80GkQinfjdlJviQ4HzDdw8sLbNuIV7U3UdmbEIQ/pc7Kj0rOfS0jrf3rBPu/5y279eX6O9J+3DajcE1m9eOVVDO1x6fum97BaIKvGm4JtAVYSDmRCg3Z7L0TtEAtpK/OLyx+WvS4STKA51ExTSLyjBhxW9E1Qogr7d4BOPtg2i7LotPhx96tE3ue2desCL8A9i1S9f
+sidebar_class_name: "delete api-method"
+info_path: site/docspace/api-backend/usage-api/asc-web-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Delete a group"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"delete"}
+  path={"/api/2.0/group/{id}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Deletes a group with the ID specified in the request from the list of groups on the portal.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"id","in":"path","description":"Group ID","required":true,"schema":{"type":"string","format":"uuid","example":"aae1e103-bca5-9fa1-ba8c-42058b4abf28"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"No content","content":{"application/json":{"schema":{"type":"object","properties":{"statusCode":{"type":"integer","format":"int32","example":1234}},"additionalProperties":false,"title":"Microsoft.AspNetCore.Mvc.NoContentResult"}}}},"401":{"description":"Unauthorized"},"404":{"description":"Group not found"}}}
+>
+  
+</StatusCodes>
+
+
+      

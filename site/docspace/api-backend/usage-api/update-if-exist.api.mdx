@@ -1,0 +1,71 @@
+---
+id: update-if-exist
+title: "Update a file version if it exists"
+description: "Updates a file version if a file with such a name already exists."
+sidebar_label: "Update a file version if it exists"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVF1v0zAU/SuWn0tTKh6gb9sY0oSQpnUVD1OF3ORm8ebGxr5pV6L8d+61kzXdBhISL4l9fT/POXYrUd0HubiTX7SBIDKxBERdk209kdaBV6htfVXIhWxcoRCuyssnHVBOpIefDQQ8t8VBLlqZ2xqhRl4q54zOY2T2EGzNtpBXsFW8woMDSmc3D5BzHue5DmoI0Q9w5LSx1oCqyauAkHvtOCfZlw5yXVKI2FeAFXiBVlCooLUI/WHBljiMsF7UlovBk9o6Q6nRN9B1E6mKQnNSZa5HfZTKBHhVdMjWTy6c8moLCD5QZtTIeeXZ8mIawZxeWA/TM6e/2QJMmN6kqM9op0Omo0l2HXfjIThbhwTFfDbj32kT5wkRsVOmgYXgMYQu49zPdAkdRGjyHEIoG0O9/Ss3A+ypqQ+z96/7WNWqwcp6/QsKyV4B8sZrJC3cUZWQ/+DzH4/ABppLFdTHnhxArrv1S2hXUVtBKFESdGJHkMY5ysGy11jxTBUZagJdKMM5DwJYjWFKyYmJyrJQXRNlpbCiTaaczubTWcZpQpZErEvoRRzAc7HYdOMNBVSILiyyrK1swG7ROuuxI8+d8lptTKKGzxImpWoMLaWxuTLRTFhwzOnxx9mnOcO5PgK1ZNRTulO4nmmg1r+SYSJ5Yt6P3SZSM3K5tY8aIgNM583xUl4OUu8vVVQ8R5U21hjp9TtsWKg8ZUKe7Lt5miTgVkWV9E0kqt5gSmNPxsvbOnob/gvRPToIT5g5owgGajSS1/as3zF05Em80zcyT/9T7omJxOKdbNuNCrDypuvYTAh6Vu36SDrvqEhFnYCPYolMyYs02Ltbbond6VJG4l5csm4yRJzRtXT4V9/1SMvXq1vy3fRv7JZeEjJ6tef3l74LKfmZ5uAopGhrpVH1faPu2TeljC9dw9CMxZVk1C94qOGoPowbPFVdGoO/PNSbEW2blNt1z/7p6I8RPbCDN1O6pqZ/A6mOSiU=
+sidebar_class_name: "put api-method"
+info_path: site/docspace/api-backend/usage-api/asc-web-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Update a file version if it exists"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"put"}
+  path={"/api/2.0/files/updateifexist"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Updates a file version if a file with such a name already exists.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"set":{"type":"boolean","description":"Specifies whether to set the specified settings or not","example":true}},"additionalProperties":false,"description":"Settings request parameters","title":"ASC.Files.Core.ApiModels.RequestDto.SettingsRequestDto"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Boolean value: true if the operation is successful","content":{"application/json":{"schema":{"type":"boolean"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

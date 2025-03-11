@@ -1,0 +1,71 @@
+---
+id: get-contact-information-by-id
+title: "Get contact information by ID"
+description: "Returns the detailed contact information with the ID specified in the request."
+sidebar_label: "Get contact information by ID"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVNtS2zAQ/RWNXiuwCbSFPJVbS6AwlFCYDsODYiuxwLZcSYamnvx7z8pOSArD0JnmwdmV9nLOrnYb7uXE8f4NT2wR7ZvSy8Q7fiu4U0lttZ/iruG7tc+M1b+l16Y8UjJVlnwsJC74I+wUv53BK1UusboiM97nF8rXtnTMZ4qlykudq5QlbRKmy7GxRYjIHrXPgtXggLlKJXqsYanLcGbVz1o5v45MnbhnUuBqOIVSpSdRVlWukxAtunOUveEuyVQhSfLTSgGPGd2pxCNOZU2lrNfKzcMAkU5JWWXQVQS44NVF0Ug6QQFmgr/msszvRffwI06uMqVrofTi+E0REe4/kR8g6GWwaP5GKHibrz3a7OFAlXVBnT/PTKmgHxZoKv6v1cjRIxB8eE9BBL9ET30I8lWX9yodEObPMlEjY+4h7qYpmLtw/6CODR6KpEin02EFK0hfTtvYe7mZtHB+yMwYshme4TvY/4bvsRyNwuXu4BTfqxP+7BnexGyNBcSCbUAMoAXrQexwC7YJJUAXbAtih16w91DmBAT7AG3OQbCP0Doagm0HwwUTwXZw0JFBWoIQCEEmDB0paAQjEINMKEAOEoEAQUiEoCUJhQCAKCRKfnVySz35JYsqp8Zt0Jvcl+iesdM3NnThHJPzgfTLb8Z5q8vJipmrq8pY/8mU+dSMxzpR64kplhOfyUK9HuPIwAIeA3dudSFXsKK0uZLlir23dWt/8K+kNnqbW5ymzGsfDrpZold/bTE33SAKvhVvPJ+876XsNp9KQ5hCQcXQ84kKoyR9BiWSlY5663FES7TbJlGzWCv9m3ht5/bdLEpR3ah5OuC0Zu2Dsi5s2drmCJZ5X7l+FDWZcX7Wb6jaZPkgrZajvJ1aumvhjmWdE/fcJDIPx4BJPqvX2/FOj5gubfYhbYg23Iv7fVFpsDtRU0DQVJOsvRa8DH1e9Q1FohV08bSpD+fdWNm0cbs9Y9qiaEZIt+hRUdQlELJhqA67OBxest3zAVUBxWp7k+O5EdvZH+rkO08=
+sidebar_class_name: "get api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get contact information by ID"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/crm/contact/{contactid:[0-9]+}/data/{id:[0-9]+}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns the detailed contact information with the ID specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"contactid":{"description":"Contact ID","type":"integer"},"id":{"description":"Contact information ID","type":"integer"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Contact information","content":{"application/json":{"schema":{"type":"object","properties":{"InfoType":{"type":"integer","format":"int32","enum":["Phone","Email","Website","Skype","Twitter","LinkedIn","Facebook","Address","LiveJournal","MySpace","GMail","Blogger","Yahoo","MSN","ICQ","Jabber","AIM","VK"],"description":"[0 - Phone, 1 - Email, 2 - Website, 3 - Skype, 4 - Twitter, 5 - LinkedIn, 6 - Facebook, 7 - Address, 8 - LiveJournal, 9 - MySpace, 10 - GMail, 11 - Blogger, 12 - Yahoo, 13 - MSN, 14 - ICQ, 15 - Jabber, 16 - AIM, 17 - VK]","example":"1"},"Category":{"type":"integer","format":"int32","example":"0"},"Data":{"type":"string","example":"support@onlyoffice.com"},"CategoryName":{"type":"string","example":"Home"},"IsPrimary":{"type":"boolean","example":"true"},"ID":{"type":"integer","format":"int32","example":"1234"}},"title":"ContactInfoWrapper"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

@@ -1,0 +1,71 @@
+---
+id: delete-a-phone-number
+title: "Delete a phone number"
+description: "Deletes a phone number with the ID specified in the request."
+sidebar_label: "Delete a phone number"
+hide_title: true
+hide_table_of_contents: true
+api: eJydUk1v2zAM/SsCrwtqN9hh861bCszYJWi2XtYeFJupVdiSJtHJMsP/faSUdQk27FCdKH48Pj5yAtJPEapv0IShuHf1Gh4XELEZg6Ej+ye4GalzwfzUZJz9hLrFIPmBLVjAgfMQHmeuajE2wXhJgwpW2CNhVFr5zllUdhy2GNTBUKeoQ1WvVPTYmJ3BVhmbfAG/jxjpinFP5gfXMosJGmcJLYmpve9Nk9gUz1F6TRCbDgctFh09cne3fcaGGMcH5zGQwSjRTKJuxb6kuz4nWa+48oQUKRj7BHN6wit6Z2OGW5bl/5EY5tXMyVAvjntnfMKEzOBtef13069Wn9aELUjWgPzlOTlP9iBKaOr4X2hviuVVWcjC94xdZKqxmH6rUz08HN7MIHcQ9hxJZzCGnqs7Ih+ropg6F2muJu8CSeZeB6O3fZZFYpniTo89m9C7RvfJzdSk5jL8rny/lOnOTm8jumS4fx7gi148zmc8MgUjOnQ5vACrB4le1CZhRPi7P8d1+0MPXnQ+P46XpQvqzqVup218dMMwWiaoNkkcdXe7+aJu1rWIwFrldfSaT5+HnX8BRvAtbw==
+sidebar_class_name: "delete api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Delete a phone number"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"delete"}
+  path={"/api/2.0/crm/voip/numbers/{numberId:\\w+}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Deletes a phone number with the ID specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"numberId":{"description":"Phone number ID","type":"string"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Phone number","content":{"application/json":{"schema":{"type":"object","title":"VoipPhone"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

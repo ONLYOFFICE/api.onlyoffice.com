@@ -1,0 +1,71 @@
+---
+id: add-a-thread-to-a-category
+title: "Add a thread to a category"
+description: "Adds a thread to the category with the ID specified in the request."
+sidebar_label: "Add a thread to a category"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVlFv4zYM/iuGnjYgqR23260BhiHX67BiuK1oUhxwvTyoNhPraluaJLfNDP/3IyXbtdM2u23nB0Om+FHkR4p0zSzfGja/YYksiqoUdhf+KnVVGLaeMANJpVGE+zVbVDaTWvzNrZDlb8BT0ITTuGIT9oB6wNYNolIwiRaK1NicLdLUBDywGSkGVuIKgoRb2Eq9Cx6EzZzk4l1gFCRiIyANROlkGv6qwNgjNN8u38oUnanR2dJCaWnJlcpF4pwKPxs6smYmyaDgtLI7BeiEvP0MiUU7SksF2gowzkzrxkVKX2O/zzoX0bPvprNgIzWGUcJD7/z3aK+1L9CdLfLRTHqbf/ACDlgtabvHG6tFuSW45+ll8MpzeBj6bgh5xcJQ+MyQe4hxo2RpPFFxFD03hpnFXPlT0cw3yonPxR6vE4b0F9x60XGMAnjkhcpJaRZR9CthcxhA23CGiiusKc8AAfaIeh22dIsuUESe4cJCehgVR3E0ncXT6M1qdjz/4cd5FB8dxyens9M3H8nItUr/v5ErSJDylVQi+Q+8xccne0a+gsSODVIfxPF29y9T25vuPawqkY6Oitpn+sKre1wmhVE572/c676/F3cQfOTljltzJ76yat7zkrd3e3HPLdfLguf5YUylc2p1hjQD7lCEv9RyI3K41v8A//QpRNW0SqyhJUgUexnBj7hRj79UBvTPPC1EKdACtxJPoCbgA2LnaEruAD5ormC85fq7vwe067dJ4SSaPb/l1yVvGz8WK2kVgJ+YSaakcTnmNsOvkCsRxkdR+DRINnQQozGi70EbN0Uqip1l1iozD8M6QxvNvFZS2wY177kW/Db35UJ73p8Nr3KqkFwmPHdi9IMw4+2fotOYQhlMriV1HW/uxfnVZwG9/x126IKgoDO/PWGu187HWMcCtbWrp6F03uVuPFSi/XnwlO1ho9+XjlrToMOLciOdz20mzzqqg6WjOLg6X66CxeUFUYmMe3yOHnSUGVtw1+66wNJ0NJx5P93Y3iAfDN1vNNNb5i082hDvLxKPLlb+bviiuqG0oCaWlRswbbS+aWBpYaJ9kdywur7lhm5W05AYD9H027J+qin6wgOy7s+lZneYcCLRhTVdkTuknle+IPZmWDPpEIskAWUP6q4H9+Tyz+UKlW/bf5dCpoTR/IH+a/A9Z7iQjmZXqE5WY9rKbYWdB/e9TSo7uovjqr1zVdsuKKpuq9wNPBwX8KQNhN4U1ouQuvZ3oml6fb/1KqK/NV6bErpGr78AGtGB/A==
+sidebar_class_name: "post api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Add a thread to a category"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/api/2.0/community/forum"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Adds a thread to the category with the ID specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"categoryId":{"description":"Category ID (-1 for a new category)","type":"integer"},"categoryName":{"description":"Category name","type":"string"},"threadName":{"description":"Thread name","type":"string"},"threadDescription":{"description":"Thread description","type":"string"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Added thread","content":{"application/json":{"schema":{"type":"object","properties":{"Id":{"type":"integer","format":"int32","example":"10"},"Title":{"type":"string","example":"The Thread"},"Description":{"type":"string","example":"Sample thread"},"Created":{"type":"string","example":"2020-12-07T13:56:02.3249197Z"},"Updated":{"type":"string","example":"2020-12-07T13:56:02.3249197Z"},"RecentTopicId":{"type":"integer","format":"int32","example":"1234"},"RecentTopicTitle":{"type":"string","example":"Sample topic"},"UpdatedBy":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"}},"title":"ForumThreadWrapper"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

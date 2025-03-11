@@ -1,0 +1,71 @@
+---
+id: delete-an-attachment
+title: "Delete an attachment"
+description: "Deletes the selected attachment from the message with the ID specified in the request."
+sidebar_label: "Delete an attachment"
+hide_title: true
+hide_table_of_contents: true
+api: eJyVU01v2zAM/SuGrstqL9thzS1bCiwYBgxNdypyYB06UmFZmkQnywz/95Gym482l/lEi3zke09Upwi2Uc0elQVT53MiKLXFhqJaT1TEsg2GDpzv1Lwl7YL5C2Rc8w1hg0FwgSM1UXuuQ7XuGbXBWAbjpUzN1AJrJIwZacwixyXhJoPjnKwKzqakxRhhi9nekE4Hy0UWPZamMowwTToL+LvFSDc8cQy/uA3z61TpGuJ+EoL3tSkTz/w5CotOxVKjBYno4JF5uadn5sJ9fHAeAxmMkh1ZmI38XCr5MRJcLhg1djE8dMtG9BN10nQNfHL2Oj59Iip618SBy7Qo3jZ6OLOKHdprU+pzP/cQ2SXrdijX8r+uvPCZqMoFCzQcfZyqgd6n4sNbRr8aGFeDR0qVRf5lD7hO7l48BtL8n4M3+fSmyNOyjSpi3h1Nnz0W72/X7/r8JIjT586+VCjZzrDDENNytqHm/prIx1med9pF6medd4GkcgfBwFM9uCq5QUQFbS0Ka1dCnY6ZvGAu05+L26T/7EGsxLeh3dVncfSTBX/HA1Mw4pQe0hPVgJXsBTZZJxdzf1rsuz9gfY2vFrN4vWxFLwMqlwYbEoD66qxtG+aarZJP2f3d6iGb/1yKH2zbcHc18Ntk3f0/NONp5A==
+sidebar_class_name: "delete api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Delete an attachment"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"delete"}
+  path={"/api/2.0/mail/messages/{messageid:[0-9]+}/attachments/{attachmentid:[0-9]+}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Deletes the selected attachment from the message with the ID specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"messageid":{"description":"Message ID","type":"integer"},"attachmentid":{"description":"Attachment ID","type":"integer"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"The message ID which attachment was removed","content":{"application/json":{"schema":{"type":"integer","format":"int32"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

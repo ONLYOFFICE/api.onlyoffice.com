@@ -1,0 +1,71 @@
+---
+id: delete-a-template
+title: "Delete a template"
+description: "Deletes a template with the ID specified in the request from the portal."
+sidebar_label: "Delete a template"
+hide_title: true
+hide_table_of_contents: true
+api: eJy1VVFP2zAQ/iuWX1dI6PYwKk0TDKShiQ3RokkDHo7kSgxJ7NkXoET977uz264VaDBp80Nkn++7++6zfek1wXXQo3PtvL3BgrIJNq4GwqAvBzpg0XlDM3bo9V5HlfXmEcjY9jNCiV6Anmd6oO/ZD/XlnFElhsIbJ256pA+wRg6nQNEitLo3VCmqUB0dqOCwMFODpTJttHn82WEgNfW2iQZnPUG9zTkWW/u2ZEa9LmxL2JJMwbnaFJFZdhMkb69DUWEDMqOZQ2Zir6RCjsO1OvRkuEjeNaV8N0kvVWCG7L/AG053zUXP4xA6wdk2pCjDPH8aJtVerirnWP+I9FG55rMkNtBT6xugZHo7ZAM+AKcWp51cM+eJIVmtoIG8aa83HMdxopInQw7WS3oFcF0Cho8JqAt/yzaSPU0Cm6sNyq9RZMVulaLrTLmZYTG2nvksRyzfBD672VdoXtDt2Nyi+gHtDCjcmleKfQwtxDs10Ht3QODHDdT1nzGdrxVZFcRTQUQJ/sTbqanxzL8Av7jI2LXsCgoyRcvmZBP4NgT38LEL6D9A2ZjWcAQgK7eeH0IqSB9yKDtD/O7BJfJrR/V/DmIt+7d4ASQ3J9+HgDq9x3f5ztMneNbCom9hGaM0yEumyH7yOOUeAVW8zsCZbLidZ8tWuHy1WW/K0Xm+tXv5Zq6lKfo79CH2xE7E1hWRC6Ms6ysbaD7qpWOJ5x14A6xIvJ+yl+hNoatFidoWUEcz0xLM5vb7fHcola314bF0hxTu2W68kp1L+YIzpmBEgyptD3QbL/EmNooi7ef0d3c9XB5O6o75XAJNbUywOIRPtmm6ljmpcdRDnR6OJ2rv5EjqZnmS+vFPwvXNfwE0YyrJ
+sidebar_class_name: "delete api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Delete a template"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"delete"}
+  path={"/api/2.0/project/template/{id:[0-9]+}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Deletes a template with the ID specified in the request from the portal.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"id":{"description":"Template ID","type":"integer"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Deleted template","content":{"application/json":{"schema":{"type":"object","properties":{"Id":{"type":"integer","format":"int32","example":"10"},"Title":{"type":"string","example":"Sample Title"},"Description":{"type":"string","example":"Sample description"},"Status":{"type":"integer","format":"int32","example":"0"},"Responsible":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"},"ResponsibleId":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"}},"title":"ObjectWrapperBase"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

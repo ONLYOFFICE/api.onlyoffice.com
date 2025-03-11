@@ -1,0 +1,71 @@
+---
+id: save-the-ldap-settings
+title: "Save the LDAP settings"
+description: "Saves the LDAP settings specified in the request and starts importing/synchronizing users and groups by LDAP."
+sidebar_label: "Save the LDAP settings"
+hide_title: true
+hide_table_of_contents: true
+api: eJy9VmFv0zwQ/iuWP4HUkawgYP3WdwyBQDCtG++HqR/c5NoYEtvYzkYX5b9z57htspWtr4Teaaoc+7nz3XOPfW64FyvHJ9fcgfdSrVzy+d30nM9HOJHVVvo1LjZ8WvtCW3knvNTqA4gcLBlZHPERv0Uc8HmLVjm4zEpDMD7hM3EDjvkCGHllmz2YM5DJpYScSRWWLfyswXkmVM6cF9Y7JiujLcETt1ZZYbWSd/jFagfWBeDK6to4tlgH7y8wkOjmH51j2A3PtPKgPA2FMaXMQvjJd0fBNdxlBVSCRn5tAMPVi++QefRjrDaAm4MLuBg2jYf5DbOKuWB8UpTyDigVSyEvta0E+Y37dNO8HXGRZWD8Ke21pPDg4R6zyBX6XzLBsh2W3cqyZAtgnRfc75m3NTxn2jKlPXu2FKWD57t9F1qXIBRvwx/R5YxWrstynKYPN/+KNATSqCq+dujrL5F6qitTAgbdg27iG3H4JWgZ5ygjYupjHxgJ3IebdXEehD2zVtvDoP8Kq2jtIPA52Awp6kchkbQVHpoRj2IIUy/He+17ejjVailtddEJ+2lapwa/bw5mNfo9GD8L2v5SVwt4grgBkurnXA32i6jgcbsejvarQ5pPm/WBaPcND2D+3upqn9W2AjkSfOQlmvRdjdPjk6P0zdH49WWaTsL/1uWV8rL8ez4/CFc8nldADCURVNvXlrBWrNEKL+HqP2vumIerwEsfPj/nwvxZflQRXaO4nyhGh0H09v64DODHjIbQ+zFtV+P57i6wV+nxwzvrSonYrVDWhKoAP1Hh3GgXTozwyDpPhJHJ+EWabFtfiRtx6nz2BohhbHy1xXLzwnvjJknSFOihnTTUmVpE3ggU+aLsjh6tddEsRV0S26XORBmmMQqyGS6/TU/GlEiv2c7o9owneV/L3dXcyE8Qik4pF93yiKtwUIa2gQO6ni923fFsQ3u/u+2qsqct0Q3Q0nZLHcKItcFrvKoVRs5mgTV2cTa7ZNPzj8QOktiVpEQXGxacr0ToFDFWeiM8fCLwe0+JXjP/318VkXIPv3xiSoGMYyJBGE3U0jXVA5GopqCfbQ5BUVjfThvXvGkWwsGVLduWpjE8Sw+s+U5K9IXui80bq+E/sM5EdEj/KJwOgpd1p4N7LbgdbSymoYiPYue9w3H+dXaJ4EV8O1U6Jxsrbuldhb8TjgMdyhH0GeYaLK1a1WJF2M4nqY0O4FCsP4JY44Cy2iypdS/CoW5HMRH6pbT2mjRNdxTadovvlv5osT0sHZrKOceofwOXycg2
+sidebar_class_name: "post api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Save the LDAP settings"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/api/2.0/settings/ldap"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Saves the LDAP settings specified in the request and starts importing/synchronizing users and groups by LDAP.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"settings":{"description":"LDAP settings in the serialized string format","type":"string"},"acceptCertificate":{"description":"Specifies if a certificate will be accepted (true) or not (false)","type":"boolean"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Operation status","content":{"application/json":{"schema":{"type":"object","properties":{"Completed":{"type":"boolean","example":"true"},"Id":{"type":"string","example":"true"},"Status":{"type":"string","example":"true"},"Error":{"type":"string","example":"true"},"Warning":{"type":"string","example":"true"},"Percents":{"type":"integer","format":"int32","example":"true"},"CertificateConfirmRequest":{"type":"object","properties":{"Approved":{"type":"boolean","example":"true"},"Requested":{"type":"boolean","example":"true"},"SerialNumber":{"type":"string","example":"SerialNumber"},"IssuerName":{"type":"string","example":"IssuerName"},"SubjectName":{"type":"string","example":"SubjectName"},"ValidFrom":{"type":"string","format":"date-time","example":"2019-07-26T00:00:00"},"ValidUntil":{"type":"string","format":"date-time","example":"2019-07-26T00:00:00"},"Hash":{"type":"string","example":"Hash"},"CertificateErrors":{"type":"array","items":{"type":"integer","format":"int32","example":"1"}}},"title":"LdapCertificateConfirmRequest"},"Source":{"type":"string","example":"Source"},"OperationType":{"type":"string","example":"OperationType"}},"title":"LdapOperationStatus"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

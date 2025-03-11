@@ -1,3 +1,6 @@
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 # CreateFile
 
 Creates a new file. The type of the file which will be created needs to be set.
@@ -16,15 +19,16 @@ def CreateFile(self, int | str type);
 
 ## Example
 
-### Python
-
-``` py
-builder = docbuilder.CDocBuilder()
-builder.CreateFile("docx")
-```
-
-### .docbuilder
-
-``` ts
-builder.CreateFile("docx")
-```
+<Tabs>
+    <TabItem value="python" label="Python">
+        ``` py
+        builder = docbuilder.CDocBuilder()
+        builder.CreateFile("docx")
+        ```
+    </TabItem>
+    <TabItem value="builder" label=".docbuilder">
+        ```ts
+        builder.CreateFile("docx")
+        ```
+    </TabItem>
+</Tabs>

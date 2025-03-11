@@ -6,7 +6,11 @@ The document info section allows to change additional parameters for the documen
 
 `Type: string`
 
-Defines the name of the document author/creator. Deprecated since version 5.4, please use [owner](#owner) instead.
+Defines the name of the document author/creator.
+
+:::danger[Deprecated]
+Starting from version 5.4, please use [owner](#owner) instead.
+:::
 
 **Example**: `"John Smith"`
 
@@ -14,7 +18,11 @@ Defines the name of the document author/creator. Deprecated since version 5.4, p
 
 `Type: string`
 
-Defines the document creation date. Deprecated since version 5.4, please use [uploaded](#uploaded) instead.
+Defines the document creation date.
+
+:::danger[Deprecated]
+Starting from version 5.4, please use [uploaded](#uploaded) instead.
+:::
 
 **Example**: `"2010-07-07 3:46 PM"`
 

@@ -6,7 +6,7 @@ The events section allows to change all the functions pertaining to the events.
 
 The function called when the application is loaded into the browser.
 
-Example:
+**Example**:
 
 ``` ts
 function onAppReady() {
@@ -24,7 +24,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
 
 The function called when the document is co-edited by the other user in the *strict* co-editing mode.
 
-Example:
+**Example**:
 
 ``` ts
 function onCollaborativeChanges() {
@@ -42,7 +42,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
 
 The function called when the document is loaded into the document editor.
 
-Example:
+**Example**:
 
 ``` ts
 function onDocumentReady() {
@@ -60,7 +60,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
 
 The function called when the document is modified. It is called with the parameter: *\{"data": true\}* when the current user is editing the document and with the parameter: *\{"data" : false\}* when the current user's changes are sent to the **document editing service**.
 
-Example:
+**Example**:
 
 ``` ts
 function onDocumentStateChange(event) {
@@ -82,7 +82,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
 
 The function called with the absolute URL to the edited file when the [downloadAs](../methods.md#downloadas) method is being called. The absolute URL to the document to be downloaded and its type are sent in the *data* parameter.
 
-Example:
+**Example**:
 
 ``` ts
 function onDownloadAs(event) {
@@ -102,7 +102,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
 
 The function called when an error or some other specific event occurs. The error message is sent in the *data* parameter. A list of error codes can be found [here](https://github.com/ONLYOFFICE/sdkjs/blob/master/common/errorCodes.js).
 
-Example:
+**Example**:
 
 ``` ts
 function onError(event) {
@@ -120,7 +120,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
 
 The function called when the application opened the file. The mode is sent in the *data.mode* parameter. Can be **view** or **edit**.
 
-Example:
+**Example**:
 
 ``` ts
 function onInfo(event) {
@@ -142,7 +142,7 @@ To set the bookmark link, you must call the [setActionLink](../methods.md#setact
 
 ![onMakeActionLink](/assets/images/editor/onMakeActionLink.png)
 
-Example:
+**Example**:
 
 ``` ts
 function onMakeActionLink(event) {
@@ -166,7 +166,7 @@ The name of the document is sent in the *data.title* parameter. The *Favorite* i
 
 When the user clicks the *Favorite* icon, the [setFavorite](../methods.md#setfavorite) method is called to update the [information](./document/info.md#favorite) about the *Favorite* icon highlighting state. If the method is not declared, the *Favorite* icon will not be changed.
 
-Example:
+**Example**:
 
 ``` ts
 function onMetaChange(event) {
@@ -183,9 +183,13 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
 
 ## onOutdatedVersion
 
-The function called after the [error](../../more-information/troubleshooting.md#the-file-version-has-been-changed) is shown, when the document is opened for editing with the old [document.key](./document/document.md#key) value, which was used to edit the previous document version and was successfully saved. When this event is called the editor must be reinitialized with a new *document.key*. Deprecated since version 8.3, please use [onRequestRefreshFile](#onrequestrefreshfile) instead.
+The function called after the [error](../../more-information/troubleshooting.md#the-file-version-has-been-changed) is shown, when the document is opened for editing with the old [document.key](./document/document.md#key) value, which was used to edit the previous document version and was successfully saved. When this event is called the editor must be reinitialized with a new *document.key*.
 
-Example:
+:::danger[Deprecated]
+Starting from version 8.3, please use [onRequestRefreshFile](#onrequestrefreshfile) instead.
+:::
+
+**Example**:
 
 ``` ts
 function onOutdatedVersion() {
@@ -203,7 +207,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
 
 The function called when all plugins are loaded and can be used.
 
-Example:
+**Example**:
 
 ``` ts
 function onPluginsReady() {}
@@ -217,13 +221,17 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
 
 ## onReady
 
-The function called when the application is loaded into the browser. Deprecated since version 5.0, please use [onAppReady](#onappready) instead
+The function called when the application is loaded into the browser.
+
+:::danger[Deprecated]
+Starting from version 5.0, please use [onAppReady](#onappready) instead.
+:::
 
 ## onRequestClose
 
 The function called when the user is trying to end the work with the editor and close it by clicking the cross button. If the method is not declared, the [editorConfig.customization.close](./editor/customization/customization-standard-branding.md#close) parameter will not be available, and the cross button will not be displayed.
 
-Example:
+**Example**:
 
 ``` ts
 function onRequestClose() {
@@ -243,15 +251,20 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
 
 ## onRequestCompareFile
 
-The function called when the user is trying to select document for comparing by clicking the *Document from Storage* button. Deprecated since version 7.5, please use [onRequestSelectDocument](#onrequestselectdocument) instead.
+The function called when the user is trying to select document for comparing by clicking the *Document from Storage* button.
 
-> This event is available only for ONLYOFFICE Enterprise Edition and ONLYOFFICE Developer Edition.
+:::note
+This event is available only for ONLYOFFICE Enterprise Edition and ONLYOFFICE Developer Edition.
+:::
+:::danger[Deprecated]
+Starting from version 7.5, please use [onRequestSelectDocument](#onrequestselectdocument) instead.
+:::
 
 ## onRequestCreateNew
 
 The function called when the user is trying to create document by clicking the *Create New* button. This method is used instead of the [createUrl](./editor/editor.md#createurl) field. If the method is not declared and the *createUrl* is not specified the *Create New* button will not be displayed.
 
-Example:
+**Example**:
 
 ``` ts
 function onRequestCreateNew() {}
@@ -267,12 +280,14 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
 
 The function called when the user is trying to switch the document from the viewing into the editing mode by clicking the *Edit current file* button. This event also fires when the user clicks the *Edit PDF* button in the forms that are open in the *view* or *fillForms* mode. When the function is called, the editor must be initialized again, in editing mode. If the method is not declared the *Edit current file* and *Edit PDF* buttons will not be displayed.
 
-> **onRequestEditRights** parameter is obligatory when the [editorConfig](./editor/editor.md#mode) *mode* parameter is set to **view** and the *permission* to *edit* the document ([document permissions](./document/permissions.md#edit)) is set to **true** so that the user could switch to the editing mode.
+:::note
+**onRequestEditRights** parameter is obligatory when the [editorConfig](./editor/editor.md#mode) *mode* parameter is set to **view** and the *permission* to *edit* the document ([document permissions](./document/permissions.md#edit)) is set to **true** so that the user could switch to the editing mode.
+:::
 
 ![onRequestEditRights](/assets/images/editor/onRequestEditRights.png)
 ![Edit PDF button](/assets/images/editor/edit-pdf.png)
 
-Example:
+**Example**:
 
 ``` ts
 function onRequestEditRights() {
@@ -295,7 +310,7 @@ To show the document version history you must call the [refreshHistory](../metho
 
 <img alt="onRequestHistory" src="/assets/images/editor/onRequestHistory.png" width="282px" />
 
-Example:
+**Example**:
 
 ``` ts
 function onRequestHistory() {
@@ -343,7 +358,7 @@ The function called when the user is trying to go back to the document from view
 
 ![onRequestHistoryClose](/assets/images/editor/onRequestHistoryClose.png)
 
-Example:
+**Example**:
 
 ``` ts
 function onRequestHistoryClose() {
@@ -367,7 +382,7 @@ To show the changes corresponding to the specific document version you must call
 
 ![onRequestHistoryData](/assets/images/editor/onRequestHistoryData.png)
 
-Example:
+**Example**:
 
 ``` ts
 function onRequestHistoryData(event) {
@@ -408,7 +423,7 @@ To insert an image into the file you must call the [insertImage](../methods.md#i
 
 ![onRequestInsertImage](/assets/images/editor/onRequestInsertImage.png)
 
-Example:
+**Example**:
 
 ``` ts
 function onRequestInsertImage(event) {
@@ -439,7 +454,11 @@ Where the **example.com** is the name of the server where **document manager** a
 
 ## onRequestMailMergeRecipients
 
-The function called when the user is trying to select recipients data by clicking the *Mail merge* button. Deprecated since version 7.5, please use [onRequestSelectSpreadsheet](#onrequestselectspreadsheet) instead.
+The function called when the user is trying to select recipients data by clicking the *Mail merge* button.
+
+:::danger[Deprecated]
+Starting from version 7.5, please use [onRequestSelectSpreadsheet](#onrequestselectspreadsheet) instead.
+:::
 
 ## onRequestOpen
 
@@ -451,7 +470,7 @@ An object with the unique file data, the file path, and a new browser tab name a
 
 <img alt="Open source" src="/assets/images/editor/open-source.png" width="498px" />
 
-Example:
+**Example**:
 
 ``` ts
 function onRequestOpen(event) {
@@ -481,7 +500,9 @@ An object with the unique file data from the source file, the file path or name,
 
 To refresh data by a link to a file which is specified with the event parameters, you must call the [setReferenceData](../methods.md#setreferencedata) method. When calling this method, the token must be added to validate the parameters. If the event is not declared, the *Paste link* and *Update values* buttons will not be displayed.
 
-> To send the data to the *setReferenceData* method, it is recommended to search for the file by the *referenceData* parameter first. If there is no such a field or a file cannot be found, then the *path* or *link* parameters are used.
+:::note
+To send the data to the *setReferenceData* method, it is recommended to search for the file by the *referenceData* parameter first. If there is no such a field or a file cannot be found, then the *path* or *link* parameters are used.
+:::
 
 <img alt="Paste link" src="/assets/images/editor/paste-link.png" width="400px" />
 
@@ -489,7 +510,7 @@ To refresh data by a link to a file which is specified with the event parameters
 
 This event also fires when the user runs the [IMPORTRANGE](https://helpcenter.onlyoffice.com/onlyoffice-editors/onlyoffice-spreadsheet-editor/Functions/importrange.aspx?from=api) function. The URL of the source spreadsheet which is used in the *IMPORTRANGE* parameters is passed to the *onRequestReferenceData* event in the *event.data.link* parameter.
 
-Example:
+**Example**:
 
 ``` ts
 function onRequestReferenceData() {
@@ -525,11 +546,13 @@ An object with the unique file data and the file path or name are sent in the *d
 
 When the button is clicked, you must call the [setReferenceSource](../methods.md#setreferencesource) method to change a source of the external data. When calling this method, the token must be added to validate the parameters. If the event is not declared, the *Change source* button will not be displayed.
 
-> To send the data to the *setReferenceSource* method, it is recommended to search for the file by the *referenceData* parameter first. If there is no such a field or a file cannot be found, then the *path* parameter is used.
+:::note
+To send the data to the *setReferenceSource* method, it is recommended to search for the file by the *referenceData* parameter first. If there is no such a field or a file cannot be found, then the *path* parameter is used.
+:::
 
 <img alt="Change source" src="/assets/images/editor/change-source.png" width="498px" />
 
-Example:
+**Example**:
 
 ``` ts
 function onRequestReferenceSource() {
@@ -565,7 +588,7 @@ The function called instead of the [onOutdatedVersion](#onoutdatedversion) event
 
 In these cases, the [refreshFile](../methods.md#refreshfile) method is called and the file version is updated without reloading the editor.
 
-Example:
+**Example**:
 
 ``` ts
 function onRequestRefreshFile() {
@@ -594,11 +617,13 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
 
 The function called when the user is trying to rename the file by clicking the *Rename...* button.
 
-> Until version 6.0 the *Rename...* button is only available if the [document.permissions.rename](./document/permissions.md#rename) is set to **true**.
+:::note
+Until version 6.0 the *Rename...* button is only available if the [document.permissions.rename](./document/permissions.md#rename) is set to **true**.
+:::
 
 <img alt="onRequestRename" src="/assets/images/editor/onRequestRename.png" width="282px" />
 
-Example:
+**Example**:
 
 ``` ts
 function onRequestRename(event) {
@@ -620,11 +645,13 @@ The document version number is sent in the *data.version* parameter if it is cal
 
 When the function is called, you must call the [refreshHistory](../methods.md#refreshhistory) method to initialize version history again. If the method is not declared the *Restore* button will not be displayed.
 
-> The *Restore* button is displayed for the previous document versions only and hidden for the current one. Until version 5.5 the *Restore* button is only available if the [document.permissions.changeHistory](./document/permissions.md#changehistory) is set to **true**.
+:::note
+The *Restore* button is displayed for the previous document versions only and hidden for the current one. Until version 5.5 the *Restore* button is only available if the [document.permissions.changeHistory](./document/permissions.md#changehistory) is set to **true**.
+:::
 
 ![onRequestRestore](/assets/images/editor/onRequestRestore.png)
 
-Example:
+**Example**:
 
 ``` ts
 function onRequestRestore(event) {
@@ -678,7 +705,7 @@ The function called when the user is trying to save file by clicking *Save Copy 
 
 ![onRequestSaveAs](/assets/images/editor/onRequestSaveAs.png)
 
-Example:
+**Example**:
 
 ``` ts
 function onRequestSaveAs(event) {
@@ -702,13 +729,15 @@ The type of document selection is specified in the *data.c* parameter.
 
 To select a document for comparing, combining, or inserting text, you must call the [setRequestedDocument](../methods.md#setrequesteddocument) method.
 
-> This event is available only for ONLYOFFICE Enterprise Edition and ONLYOFFICE Developer Edition.
+:::note
+This event is available only for ONLYOFFICE Enterprise Edition and ONLYOFFICE Developer Edition.
+:::
 
 ![onRequestSelectDocument](/assets/images/editor/onRequestSelectDocument.png)
 
 ![Insert text](/assets/images/editor/insert-text.png#gh-light-mode-only)![Insert text](/assets/images/editor/insert-text.dark.png#gh-dark-mode-only)
 
-Example:
+**Example**:
 
 ``` ts
 function onRequestSelectDocument() {
@@ -739,7 +768,7 @@ To select recipient data, you must call the [setRequestedSpreadsheet](../methods
 
 ![onRequestSelectSpreadsheet](/assets/images/editor/onRequestMailMergeRecipients.png)
 
-Example:
+**Example**:
 
 ``` ts
 function onRequestSelectSpreadsheet() {
@@ -768,9 +797,11 @@ The message and the list of emails is sent in the *data* parameter. The comment 
 
 The list of users to be mentioned should be completed by [setUsers](../methods.md#setusers) method.
 
-> In version 5.4, **onRequestSendNotify** event can only be used if [onRequestUsers](#onrequestusers) event is set. Starting from version 5.5, there is no such dependency between **onRequestSendNotify** and **onRequestUsers** - both can be set independently.
+:::note
+In version 5.4, **onRequestSendNotify** event can only be used if [onRequestUsers](#onrequestusers) event is set. Starting from version 5.5, there is no such dependency between **onRequestSendNotify** and **onRequestUsers** - both can be set independently.
+:::
 
-Example:
+**Example**:
 
 ``` ts
 function onRequestSendNotify(event) {
@@ -794,7 +825,7 @@ When the access rights is changed, you must call the [setSharingSettings](../met
 
 ![onRequestSharingSettings](/assets/images/editor/onRequestSharingSettings.png)
 
-Example:
+**Example**:
 
 ``` ts
 function onRequestSharingSettings() {
@@ -826,7 +857,7 @@ The function called when the user is trying to start filling out the ready forms
 
 When the user clicks the *Start filling* button, the [startFilling](../methods.md#startfilling) method is called to lock the pdf editing (only pdf viewing becomes available).
 
-Example:
+**Example**:
 
 ``` ts
 function onRequestStartFilling() {
@@ -854,7 +885,7 @@ To set a list of users, you must call the [setUsers](../methods.md#setusers) met
 
 <img alt="Protect range" src="/assets/images/editor/protect-range.png" width="292px" />
 
-Example:
+**Example**:
 
 ``` ts
 function onRequestUsers(event) {
@@ -891,7 +922,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
 
 The function called when the force saving request of the *3* [forcesavetype](../callback-handler.md#forcesavetype) is successfully performed, i.e. when the **Complete & Submit** button is clicked and the form is submitted.
 
-Example:
+**Example**:
 
 ``` ts
 function onSubmit(event) {
@@ -913,7 +944,7 @@ The function called when a user action is required to open a document in the fol
 - when the user needs to select an encoding for the *txt* file;
 - when the user needs to select an encoding and a delimiter for the *csv* file.
 
-Example:
+**Example**:
 
 ``` ts
 function onUserActionRequired() {
@@ -930,7 +961,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
 
 The function called when a warning occurs. The warning message is sent in the *data* parameter. A list of error codes can be found [here](https://github.com/ONLYOFFICE/sdkjs/blob/master/common/errorCodes.js).
 
-Example:
+**Example**:
 
 ``` ts
 function onWarning(event) {

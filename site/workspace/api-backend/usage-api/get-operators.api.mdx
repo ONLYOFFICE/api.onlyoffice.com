@@ -1,0 +1,71 @@
+---
+id: get-operators
+title: "Get operators"
+description: "Returns the operators of the phone number with the ID specified in the request."
+sidebar_label: "Get operators"
+hide_title: true
+hide_table_of_contents: true
+api: eJyVUk2P0zAQ/SvRXInWoeIAuS3sSkRcqha4sHtwk0njVWIbe9JSovx3Zpyy2wokhE/j+Xh+8/wmIL2PUH6DOgzqq6vW8JhDxHoMhk6cn+B2pM4F81OTcfYj6gaD9AeOIIcj9yE8zjzVYKyD8dIGJWyQxmBjRh1mzmPQ5ELMXJsSvnMWMzsOOwzZ0VCXstVdFj3WpjXYZMamXMDvI0a64afO4XvXMLEJamcJLUmove9NnQiqpyjPTxDrDgctEZ08MiG3e8KaGMcH4UMGo1QXElUj8fUG60uS1R1PnpEiBWP3MKcjvKJ3Ni5wq6L4B9KzGAz4vzvoEPSJ51jzIV7kz4xyaF0YNOPBOJoGzgTfFK//5PTF6vPHojTmMCBfWQbYY1JJU8cXpb1Rq5tCiT8Ozni1rBHV9Fu58uHh+GpWsheId8KBy8k6Y+gZoiPysVRq6lykuZy8CzRz50EHo3f9opvUFpKtHnvZoHe17lOaycnMdflt8W4lC17YdStyLXB/Ne2LjN58wqSjKNEt5RysHqR6NZukkf/YvLjv/ocefI/X7nl2haC2Lr1mSLrggxuG0TLBbJvEyTb328/Z7boSEVir5UN6TSjLzr8AZkVAjw==
+sidebar_class_name: "get api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get operators"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/crm/voip/numbers/{numberId:\\w+}/oper"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns the operators of the phone number with the ID specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"numberId":{"description":"Phone number ID","type":"string"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Phone number operators","content":{"application/json":{"schema":{"type":"array","items":{"type":"string","format":"uuid"}}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

@@ -1,0 +1,71 @@
+---
+id: get-the-shared-file-information
+title: "Get the shared file information"
+description: "Returns the detailed information about the shared file with the ID specified in the request."
+sidebar_label: "Get the shared file information"
+hide_title: true
+hide_table_of_contents: true
+api: eJy1VD1v2zAQ/SsCZyNygw6tNqNJU6NLESfoEHigpbPFhJJY8pTUJfjfe0dKthUn3epBonlf7969kxcod04UD2KrNLh8VUur2p1Yz4SDsrcK92T0YtFj3Vn1R6Lq2m8gK7AcZOkkZuKF/ECsA0VV4EqrDLuJQtwC9rZ1GdaQVYCSalSZaredbWKmTG66HqPZUWUyMozsRWEdL5dXmTNQqq2KcfHOwq8eHF5QXSOtbADBugiypT9UlFMsGZZiCEZiLV7j+spVlld078oaGikKL3BvONphJCBwMxac6VoHju2X8zm/polWJ6hP+qLEZdcitMgh0hitymjIHx3H+fO60lq5Z9AIjTu57zaPUCIZUKGGAXss+9NSYppD4N9MfJx/OMd338phclAJ9iK66q4iyw4wMkjsFCKXRuWXF/M8qYCfuU88hjxOhqkC+zxS3VtNYTWicUWe+7pzGApvOouBPJ9JRHKjE29sS8C2std0FLorpY7XBIhjpuZP88+X3NSJBlfMVkr3phKPLBr1Hfbj7Otkno3KmMRGOnhmMXwg90vXNH1LFbNV7Da7vV7dZYsfS+6Kmk+saokwonfYyDjRocYNnOt5qozJhPxRKP97WwaKEH5jbrQkhqiBOEg/6OCB+SNPUgI9oxaGN72Kw14lQdB40mgfhPcb6eDe6hD4mipa/mysj0qIoqmU4zOpbyu1g38wcdzPN0GPw273UWy65390fKLRH/Y/rMmzHj9VfjAuyhIMnoSdLSfr7rAlN9d35Ms7NBXZUxTZcODsb0Ka6m3Ex88weyfE+yThEA7+yfRuxEHkyZsZWtP2/AViNP7g
+sidebar_class_name: "get api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get the shared file information"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/files/file/{fileId}/share"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns the detailed information about the shared file with the ID specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"fileId","in":"path","description":"File ID","schema":{"type":"string"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Shared file information","content":{"application/json":{"schema":{"type":"array","items":{"type":"object","title":"FileShareWrapper"}}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

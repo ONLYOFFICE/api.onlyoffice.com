@@ -1,0 +1,71 @@
+---
+id: authenticate-a-user-by-code
+title: "Authenticate a user by code"
+description: "Authenticates the current user by SMS or two-factor authentication code."
+sidebar_label: "Authenticate a user by code"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVd9P2zAQ/lcsv7BJLQmBMZo3xpA2TYOKlJdVfXATtzU4cWY7lC7K/747J6EJLd0eiNrI8f3w3XffnUtq2dLQcEpZYVc8syJmVqiMzgY04SbWInefIb3cyrkhsCZxoTXskMJwTeYbEv2MiNLErtVwwWILy75PEquEH9MBzZlmKbdc48ElzeADDkApCAUeljO7oq8jmBx0DOomXvGU0bCkdpOjS2O1yJa0qiAbzX8X3NgvKtmgRqwyCx5wyfJcNp68B4NHlbuu1PyBxxaD1yrn2gpuUIq537j4y1fR3iMqmBpiAr6EBONXcSEUxqyVTnbtx61kn5VWTyLhetcqUrFgkqQ8EYy0asQ52OOHxTE3ZqIeebYngBdrJ99jjrDfIi92ja9ARBaQ+ZJbC+qEveXGPVgek6vM1KgGvr/r8u3yO8/wRiYSkTlyHmFcSos/TuWIrDjDXNZgR2ImJcZ0Of4OSIFaYujgvRjxgmY/zwHlzyzNJW6xeZzwk+D07BOieP2cC13bvm0S+IE/PDkZBmcT/1N4eh4G/vFZ4J9fjD7/QidR2nUwV0pylvU8WF1w1ByvVMZvlDD88IkXH0aj0Uf4D90PTScL9p+HgOYPvjl8AACQrBnF4lth3dZlr64Oya/MMtpwpK4VjgdlHPA4JULqsVx4wbHv9WnhlcjPCucC10/tsCm0BJOVtbkJPa9cgacqLHOlLWo+MS3YXNbVQFlNwwUrJCypVEAdt41NCDZ98YU/CjDWGR4J01HYTYSsqd31CPnN0bEDEOSAiDXzr2YrfDWzsWfrIENa3m1H2nULa3ckbVHfjpnO3ssQ2e71BsJ2u9PonfYX2UK5DJrqXak0LTJImkQOcHJ3HU2wyRBYwL9uY4n3RwOgsSlzvdJJs71jYGK0F0sz3nvjoDPB3/Nqaqph+bP1csmgGBCo40zZ0G2KpQJNIBwC1r81BzR0wQIDavZMaVnOmeH3WlYVbkPFNDTGdLYlm+NlIgyuoUILJg0/kO0/r8G9ObQ0yzaO5rLAL1g+YpvWd281A72GeRhSLbqqDx5O6jukNd0ZkdWgtbgEEuX2oO6s08zj22gCyvPmYk4xlJBqtoZNfLswlQPC9ZHbK4FH2bJgS9StfeLzFyimBlk=
+sidebar_class_name: "post api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Authenticate a user by code"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/api/2.0/authentication/{code}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Authenticates the current user by SMS or two-factor authentication code.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"code","in":"path","description":"Two-factor authentication code","schema":{"type":"string"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"userName":{"description":"User name or email","type":"string"},"password":{"description":"Password","type":"string"},"provider":{"description":"Social media provider type","type":"string"},"accessToken":{"description":"Provider token","type":"string"},"codeOAuth":{"description":"Code for getting a token","type":"string"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Two-factor authentication token to use in the 'Authorization' header when calling API methods","content":{"application/json":{"schema":{"type":"object","properties":{"Token":{"type":"string","example":"abcde12345"},"Expires":{"type":"string","example":"2020-11-24T05:36:20.4206897Z"},"Sms":{"type":"boolean","example":"true"},"PhoneNoise":{"type":"string","example":"8(999)999-99-99"},"Tfa":{"type":"boolean","example":"true"},"TfaKey":{"type":"string","example":"123dwa"}},"title":"AuthenticationTokenData"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

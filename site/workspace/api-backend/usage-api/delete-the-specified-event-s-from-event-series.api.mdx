@@ -1,0 +1,71 @@
+---
+id: delete-the-specified-event-s-from-event-series
+title: "Delete the specified event(s) from event series"
+description: "Deletes the specified event(s) from the series of repeating events."
+sidebar_label: "Delete the specified event(s) from event series"
+hide_title: true
+hide_table_of_contents: true
+api: eJzVV11v4jgU/SuRn3alUEJoactblyJNtaPdqoVdaSoeTOI0njpx1nboMFH++95rJyQUpnSleVkeINj3+55rn1TE0GdNpk8kooLlMVXD+YblRpOVTzSLSsXNFrYrclOaVCr+nRou80+MxkyhmoIn4pNXkGNkVYNWzHSkeIFiZEpumWCGac+kzNMFi3jCWewx9PGL/tVLlMzcHlMcxGTiKVYwcJI/Oyl9BuYLqmgGdpS2seTwB2zb/Tt0z9FVQU1K3vq32Xh3t7Cho5RllEwrYrYF6vPcsGdIwyeJVBk1bmkckhrzUOyfkmnzm4y3qBNJkM4NPtKiEDyyhRh+1eimOjQu119ZZDB2JQumDGSHuzGFOuHvfpVg1TPSWzMvtgWLu8q8qQdYbDxoo2CV1O3CW6MLULYqziYseig49QJv4GoO6qKR8b0RrFIh7E4ihZCvXQ98L+ztOqOuY2ddPG05ISAMfkZFTDePTG0QKQcZs4Tn0HCeNEnaYntcd4mDgVu6QT9gwZPKy2Uv+7WUgtEcvQFIDx3MSqUwzOXD3WHJ7AdbrAuZa9eZMAgOrSwLbFi8l7IXQXWgtyjh/2dcUKXoFiFrWKZP4wXg3ck04fuEfaNZIXBphAVY8lNS4fj8NaYoO2vm/JTh9jyA0QGtP+zEvSfvBs3Kgfxtv4qn1frioH0joPPbzxJkO+W24X3thApt/T0aqsz7nsIgDAajcBCMFsFkOp5MR8HZ1eT84vwq/IIm5vmJipwy8GAH9aEUJyrlMmR78f6g+4tmsE8dWH3zA4AEngncdAW27v5WAFA3n3f6MaWKxSfKa1TJHGbyZa7LNTZpzT6odKfnMTd0LU4p7Jp4z1TGtQYQfGAwljCM93gt6J89XLvaliWP9xGQxAm7uLwcjKNwMji/HE8G13FyPVhf0MnVeL2+ugiDj03LXzBdaut92b7IzV67emnV/fV+bWD5z9fcnar/6wTt3JpSfxDieZkh5VgAoOGQ3TBYm8k84SpjmAagNGJwMsfkgIU84ZW303N33U7VXW477dVeHjbdT1TfGEOjNLPU6BDOBwO3mzV30ZwHoyN3S04bTgUhoxQwnFRCx4jjAJb3AKWZkiEt+DA8C4Y7kuau5WHVUKB6GJXayAxZjr0uHU8qlQDt1JhCT4fDKpXa1NOqkMrUILmhiuN42oRwz4WY0FJg2YUEb3YZQkOd/e2r4BqJUt3jiY941zlzR9liN6YF/51tW96Wum2/pXV7urYweJk+dHRs3nanpVMdAJ2D4BgDwXOp4Qo96sTzRNrImu7NZJaVOSTjOT3vYf648G7ukURgXV3rBLhtC6NNRu0l14TvGO+7hLfPJt4y1h7T/EnkuSm6Yd/MsBCUN5xJoC8HsCfsCEgCxJDRNCDDOXDvAj6Zdly7QRr03WHmiVTVmmq2VKKucRn6pPCdYdVBzKIx5hqfAeD2xH8n7x5pPxp8C6N8a2EsSnut+uQFQNW9FtQrEE3bN5Wq2Z05LwN7tXbaB9yt9luNmyhihXlXdtUb3tv55/liDuLr5s0hkzFqKfoKi/htY5U2bzssdq0CUOXPJX1GWWcVoY9HxP7kvNjJaR4wr6PV2B+itjT4jYkdVakqN5d1vZN3Wz/U2E2uk8bmrCDqfwFru9Cl
+sidebar_class_name: "delete api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Delete the specified event(s) from event series"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"delete"}
+  path={"/api/2.0/calendar/events/{eventId}/custom"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Deletes the specified event(s) from the series of repeating events.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"eventId","in":"path","description":"Event ID","schema":{"type":"integer","format":"int32"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"date":{"description":"Date to be deleted from the repeating event","type":"string"},"type":{"description":"The event deletion type: 0 - the single event, 1 - all the following events, 2 - all the event series.","type":"integer"},"fromCaldavServer":{"description":"Defines if the request is from the CalDav server or not","type":"boolean"},"uri":{"description":"Current URI","type":"string"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Updated event series collection","content":{"application/json":{"schema":{"type":"array","items":{"type":"object","properties":{"Id":{"type":"string","example":"1"},"Uid":{"type":"string","example":"1234wda"},"CalendarId":{"type":"string","example":"calendarID"},"Name":{"type":"string","example":"Event Name"},"Description":{"type":"string","example":"Event Description"},"AllDayLong":{"type":"boolean","example":"false"},"Start":{"type":"string","example":"2020-12-01T06:36:10.8645482Z"},"End":{"type":"string","example":"2020-12-01T06:36:10.8645482Z"},"RepeatRule":{"type":"string","example":""},"Alert":{"type":"object","properties":{"Type":{"type":"integer","format":"int32","example":"-1"}},"title":"EventAlertWrapper"},"IsShared":{"type":"boolean","example":"true"},"CanUnsubscribe":{"type":"boolean","example":"true"},"IsEditable":{"type":"boolean","example":"false"},"Permissions":{"type":"object","properties":{"UserParams":{"type":"array","items":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"2fdfe577-3c26-4736-9df9-b5a683bb8520"},"Name":{"type":"string","example":"Valery Zykov"}},"title":"UserParams"}}},"title":"Permissions"},"Owner":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"2fdfe577-3c26-4736-9df9-b5a683bb8520"},"Name":{"type":"string","example":"Valery Zykov"}},"title":"UserParams"},"Status":{"type":"integer","format":"int32","enum":["Tentative","Confirmed","Cancelled"],"description":"[0 - Tentative, 1 - Confirmed, 2 - Cancelled]","example":"0"},"HasAttachments":{"type":"boolean"}},"title":"EventWrapper"}}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

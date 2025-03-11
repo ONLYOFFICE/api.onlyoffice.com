@@ -1,0 +1,71 @@
+---
+id: store-original
+title: "Change the ability to upload original formats"
+description: "Changes the ability to upload documents in the original formats as well."
+sidebar_label: "Change the ability to upload original formats"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVF1v0zAU/SuWn0tTKh6gb1sBCSHEtG7ioaqm2+Sm8ebGxna6jSj/nXvttE07hoTES2Jf389zjt3KABsvZ0v5WWn0IhMLDEHVZFuNpLHoIChTfynkTPpgHH53aqNq0HIkHf5s0IdLUzzLWStzUwesAy/BWq3yGJnde1OzzecVboFX4dkipTPre8wD5bGO6wSFPvphGDitjdEINXkV6HOnLOck+8JirkoKEY8VhgqdCEZQqKC18P1hwZY4jDBO1IaL4RNsrabUwTXYdSMJRaE4KeirQR8laI8viu6z9ZMLCw62GNB5yhxU4LzyYjEfRzDHc8JrfGHVN1Og9uPrFPUxmPE+09Eku467ceitqX2CYjqZ8O+0icuEiNiBbnAmeAyhyjj3gS6hvPBNnqP3ZcNU/Ss3e9hTU+8mb1/2cVtDEyrj1C8sJHt5zBunAmlhSVV8fsfndw/IBpoLCurjkRxQrrrVObTzCuoNscljwFppysOMNlYbKERh8mZL/Xuh6jRpr0JRGrcFsgMJAbUeUw0ipDKsV9tEdUGoaJOBVdl0PMlKpiaLWjZHLXt0O6aRe2+cpoAqBOtnWdZWxodu1lrjQkeeO3AK1joxxGcJmhIaTUupTQ46mgkSjjk9fj/5MGVUV0e8Fgx+SneK2oENav0rGUayJrXxfug2kooBzI15UBiJYFavj3fz017x/d2Kwueo0sQaA9n+wDXrlackMBIzu2maxIctRLH0TSTGXiHsnJ/z+zt4Lf4n9T1eAZ9CZjUQMNR6pLPtdbBkMMmTlEDfqAVm/0QNxE3idSnbdg0eb53uOjYTpo7lvDrKgHdUpCJ9o4vyidzJeZrvzQ23xO50WyOVZ7evG+0jLui+2vBX39VA3Ve3N+S77h/fLT0xZHTwyA8zfWdS8vvNwVFa0dZKTVg3sGHflDI+gQ1DM5RbEla/4KH2R/XzsMFTHaYx+MtD/TGibZOWu+7gn45ejeiB3XszpStq+jcpE1Vs
+sidebar_class_name: "put api-method"
+info_path: site/docspace/api-backend/usage-api/asc-web-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Change the ability to upload original formats"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"put"}
+  path={"/api/2.0/files/storeoriginal"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Changes the ability to upload documents in the original formats as well.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"set":{"type":"boolean","description":"Specifies whether to set the specified settings or not","example":true}},"additionalProperties":false,"description":"Settings request parameters","title":"ASC.Files.Core.ApiModels.RequestDto.SettingsRequestDto"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Boolean value: true if the operation is successful","content":{"application/json":{"schema":{"type":"boolean"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

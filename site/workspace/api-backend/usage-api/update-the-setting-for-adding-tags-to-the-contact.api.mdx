@@ -1,0 +1,71 @@
+---
+id: update-the-setting-for-adding-tags-to-the-contact
+title: "Update the setting for adding tags to the contact"
+description: "Updates the setting for adding tags to the contact with the parameter specified in the request."
+sidebar_label: "Update the setting for adding tags to the contact"
+hide_title: true
+hide_table_of_contents: true
+api: eJy9VMFS2zAQ/RWPTu1MilOmhzY3oEzb6YWBcMrksLE3sUC2VGkNpB7/e3clAQmlDFyaQ0by7krvvX2rQRFsgpotVOXb8sR2BBUFtZyogFXvNW05Nqijnhrr9W8gbbvvCDV6qfG8UhN1y3moliNX1Rgqr52kqZm6dDUQhoIaLAIS6W5TrK0voK5lKVcXZGO4SlcXt5qa+MGBhxYJfREcVnqtsS50F0Mef/UY6ICvzstjWzPQQckp2JEswTmjqwi4vAoCZ1CharAFWdHWIQO0qyusiM9x3jr0pDHE2rqew2Zusx7fvO0dS2Alts/wK651xwz1ugDhU+gg7BjrE17A5S2jqcCYbcEadFbuzTjAe9jylnVsww6+lbUGoVNj+gnf4GwXEszD6fRvREnz+rV6vyPf46RYgwkYYfXGvGckb1XyVQwm6tP04zOQO8j+wlpJFve9sTVHXB+bA9TwpgSny8ODaSlWzfhL5lRmqkGJa/0N+hBN23vDVQ2RC7OyHBobaJwNznoaOfMGvIaVSUpKLOFaQ294qYzlTsXPjEdq9sOfp18OhdPOoFyIJOm4Z8flUSqnf2LUSsg3KTxRHdud93u1UQ3R/PzR56d30DqDL/t0IW1djnLHOtqWNEmNOrFt23cMt7iIUhXnpxfz4ujsh0jCyqWOGBnbTD1QC7HnGWAy2BtmWj15FnbG9D+8EFl0wjsqnQHWnFlFawzZWAvpCGeytcT4vs32T9AZQvRVthg3PJlloYZhBQEvvRlH+cw3enktl4/ekh3f1tw/mIO65sZLEyL/D3PBJummT8Z4Mmjj5L7iqKrQ0Yu5y525Obucc+4qv4qtraXEw628mPw/U7ywsR3Rr/HbwF3vNj1sJDcdKe6T0dw373U0b14IqftQt90BuO/jSeYh/8Lq2ZJhSKMxjg/5KfTPiofhSdnS3CWj/gOifF6q
+sidebar_class_name: "put api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Update the setting for adding tags to the contact"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"put"}
+  path={"/api/2.0/crm/contact/tag/settings"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Updates the setting for adding tags to the contact with the parameter specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"addTagToContactGroupAuto":{"description":"Defines if a tag is added to the contact automatically or not","type":"array","items":{"type":"boolean"}}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Updated setting for adding tags to the contact (true, false or null)","content":{"application/json":{"schema":{"type":"array","items":{"type":"boolean"}}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

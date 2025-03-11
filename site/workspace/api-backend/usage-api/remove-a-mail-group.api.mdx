@@ -1,0 +1,71 @@
+---
+id: remove-a-mail-group
+title: "Remove a mail group"
+description: "Deletes a mail group with the ID specified in the request."
+sidebar_label: "Remove a mail group"
+hide_title: true
+hide_table_of_contents: true
+api: eJylVMtu2zAQ/BWBZyNy3R5a3YzaQIO2QBEnJ8OHjbS22FAiS1JOXYL/3l1KfsYJUPQik9znzM46CA8bJ4qlaEAqh3aLNv9Ox2xjdWecWI2Ew7Kz0u/IK4hp52tt5R/wUrdfECq0HG3pJEbimfxQrCJFVehKKw27iULMUKFHl0HWHJJnz9LXma8xu51lzmAp1xKrTLbpzeKvDp2/oawGLDQUbl1qoaULpZRcUHJyA74WlxWPICg9WV1ZYwOiCMLvTIpvPW6o+5FYa9uA75/eT0Tk9i06o1uHjiMm4zH/vF2g1JSw9ewIxihZJoryn469wz/Vj3EkPozfvaz50MLAP1aCvYiWWldkqRLBiSwioxA5GJlPbsb5yVxTs1BVhM3lFhu9xTzIKjI7yaPnt7OKEtTeG1fkeai187EIRlvPnluwEh5VTwzb+i7X0CmGoHQJKj1Tdxxzbv44/pQAnshqwcT06a6K60AYIfqKu/3Q69482svhLDZxI9u1TuHSK/b4rJuma6litkhos7v54j6b/rhlVAS+p1gB6XTo3vkG0vCGGneJszMRX+ouHHXwf6IfQHv87XOjgDBTS2k0YZjxkhkhT5oyfY9zpsvppAWLmfumQ0FLQ9T3Y1uKEB7B4YNVMfIz1ba85avjlJMgKun4TDJbA9V4A/HlTlwFsR9nu0tyUh3f6PhEw01rHVfkVe//W8JgmJYlGn8S8mLLWFWHhZjNv83v5+TOG3OuoqekouHABa52dC6ofXv8jaNXQkLoNRrjwb83vRpxUPEAnkHQevwFplnlfA==
+sidebar_class_name: "delete api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Remove a mail group"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"delete"}
+  path={"/api/2.0/mailserver/groupaddress/remove/{id}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Deletes a mail group with the ID specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"id","in":"path","description":"Mail group ID","schema":{"type":"integer","format":"int32"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Mail group ID","content":{"application/json":{"schema":{"type":"integer","format":"int32"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

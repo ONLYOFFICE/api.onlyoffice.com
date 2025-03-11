@@ -1,0 +1,63 @@
+---
+id: get-my-favorite-bookmarks
+title: "Get my favorite bookmarks"
+description: "Returns a list of favorite bookmarks for the current user with the bookmark titles, dates of creation and update, bookmark texts, and authors."
+sidebar_label: "Get my favorite bookmarks"
+hide_title: true
+hide_table_of_contents: true
+api: eJzNVe9v0zwQ/lcsf86atEwDKiEYvNNAvLxCbAiJsQ/XxG1ME9vYzroQ5X/nzk66FgYF8eVtq9S5e8736/G54x5Wjs+veK7rulHSt+lzrdc12LXj1wl3Im8sShHS8dPGl9rKr+ClVi8FFMKSqcUVT/gGcYJf92hVCJdbaQjG5/yd8I1VjgGrpPNML9kSbjSh2WL0xZbaMl8Khu6sUJ41Tli2kb4M0hHHvPSVcAkrwAtHW+XonfwwUAVrDMmTHbi49YgmHYTg3QQjtcIZrZzAxDs+yzL62w/53yHQbXxolWvlMTICgzGVzIPf9LMji467vBQ10Mq3RuAeYC20aId51m5HrhefRe5RYaw2wnoZ43hV7GAkulphdROOdanBR9HJMQrELdSmItB0yvuEX1JFdkydt1Kt9oDnWq8qwaTKJ2Tx3la/xpfem/mnTyn+NpvNZBXMJ8iQ4K9s6oUCeWAPdMK8xuaNaDR9Qb0Sxa8NZ9ksO5rOjrKTy+zh/MHJfHo8eTTF7+MHH0P0ocd/uck/u90+XLqd4J+3f9jK7abbTjaNLPacZMPn6J7H+AlRS2cqaP+D+kDD38i1YB9BteDdWv4mS96AAuIcok9vwIO9qKE60OUmdtkRkkGwIvu3Vi9lJQ4SDQmG0KLJvaOl0CiOMjKfgDO3T2kQPIGilgrPpAWv0QO68DEhfoZb6VaIDxaM2FeNg4xUUdeT+jib/njg3ysYhhtSi1C1wFfsI1+J0GDwJb6kYGQ6m2Tp3bgcR0T6DKcazQmM90ZYFyZmQxUI58nN07QrtfP9vDPa+h6RN2AlLKpIGtLFuJbQVMSTSudQBTHGQzb76kfZ4xnltDOlL2gGxe3undV3s8nI1yIMJ0q+jOqEq8CsfdtQDamWOpgPpX0xps8uQrbs3dnFJTt9+4qywuRjUSsa0kP0ztcQztrg41x4Vrf33AT8u+ujuxu8/7+bZCgnKVM8mlhNTLaJtI+UuaJaIxJJE+6QoW64HrfGZaQONjKS4Ip33QIcnZ++J/GXRli6gq/vOENv6Kscb+GOr7Gh2Ls8F8YHclVNbPV3dxURZsvu87NLxFJG++xYB3YMC9p9VKl2Z+99oiRDCPTsk5+YdF3kXt9v8VH1U4stOyOaanyNtP8GK6bzdQ==
+sidebar_class_name: "get api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get my favorite bookmarks"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/community/bookmark/@favs"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns a list of favorite bookmarks for the current user with the bookmark titles, dates of creation and update, bookmark texts, and authors.
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"List of bookmarks","content":{"application/json":{"schema":{"type":"array","items":{"type":"object","properties":{"Id":{"type":"integer","format":"int64","example":"11"},"Title":{"type":"string","example":"Google inc."},"Url":{"type":"string","example":"http:\\/\\/www.google.com"},"Thumbnail":{"type":"string","example":"Url to thumbnail"},"Created":{"type":"string","example":"2020-12-06T07:36:14.8181893Z"},"Updated":{"type":"string","example":"2020-12-06T07:36:14.8181893Z"},"Description":{"type":"string","example":"Google"},"CreatedBy":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"}},"title":"BookmarkWrapper"}}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

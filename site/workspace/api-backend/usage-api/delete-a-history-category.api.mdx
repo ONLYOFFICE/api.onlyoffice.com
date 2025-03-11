@@ -1,0 +1,71 @@
+---
+id: delete-a-history-category
+title: "Delete a history category"
+description: "Deletes a history category with the ID specified in the request."
+sidebar_label: "Delete a history category"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVE1vEzEQ/SuWORK627QSNLeSVErEgSop4lDl4HonWVe7a2PPppTV/ndm7A0kBQWByCGa9bz3PJ/uJKptkJN7qX2dzU1A65/leiQD6NYbfCZXJ69bLK033xQa28xBFeCZ4smSI/lEOJDrnlgFBO2NY5icyBlUgBCEEmUSFlohbNl4MlgKLEEsZiI40GZjoBCmiWcevrQQ8Iy0B/O9LSiSTmrbIDTIpnKuMjpGlD0Gvq+TQZdQK7bw2QFFYB8eQSPpOG8deDQQ2GsK/j8Odv4yxMWMeIOOoWu3lHQffxxWcLYJSW2c53+WI63/FPwSKiLuYIFQh6ltk+KLQEdyY32tMB1djOkAvqraVQw6l5TColZbuFVYHrADetNsj7BOcaOsMAxn3p1BdpziJAhhZ4clOcU4BBJvaivrTzNeqbcbTYUn9Mp6/OjjTP5LHWZ/TRtfXEqeAkyl2Pd6OrT6s6f2DsMykpf5+a/T8alRw0pBEaVqoE+aSsLxznDTY2tkppzJxmd5xvs5rFG2H6qsM8XkPn9ztX7dS95ZvwMf4sq2viJ2iejCJMu60gbsJ52jUjFyp7xRD1UaKPalEDeqrTjnympVxWMKjTnH7nf51ZizO3gmVjy8Se63j8WPClM6H4C3wXAdyuQeyUbV7D3ixsLwdix/PgI3+y6kJc57FtrYeMHQjamt67ahmMQq1kMsb1Z34vp2wXlTeVIHaIeA8+u/A4AeuF0=
+sidebar_class_name: "delete api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Delete a history category"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"delete"}
+  path={"/api/2.0/crm/history/category/{id:[0-9]+}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Deletes a history category with the ID specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"id":{"description":"History category ID","type":"integer"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"History category","content":{"application/json":{"schema":{"type":"object","properties":{"RelativeItemsCount":{"type":"integer","format":"int32","example":"1"},"ImagePath":{"type":"string","example":"path to image"},"Title":{"type":"string","example":"Title"},"Description":{"type":"string","example":"Description"},"Color":{"type":"string","example":"#a7fc00"},"SortOrder":{"type":"integer","format":"int32","example":"1"},"ID":{"type":"integer","format":"int32","example":"1234"}},"title":"HistoryCategoryWrapper"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

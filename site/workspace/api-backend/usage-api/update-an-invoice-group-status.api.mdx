@@ -1,0 +1,71 @@
+---
+id: update-an-invoice-group-status
+title: "Update an invoice group status"
+description: "Updates a status of invoices with the IDs specified in the request."
+sidebar_label: "Update an invoice group status"
+hide_title: true
+hide_table_of_contents: true
+api: eJydU8Fy0zAQ/RWNrpjaBA6QW4HOkIFhmIaekhy29rpWx7aEtE4IHv87u5KnTRpO5BKtdvft26fnURM8BL3c6NJ3+arfW1Ni0LtMBywHb+jIuVFfD9RYb/4AGdt/QajQS4/nk870getQ7ybuqjCU3jgp00t95yogDApUIKAhKFsrM89QB0ONogbV6nNQwWFpaoMV5+Olx18DBrpi+Pn40VZMZtSl7Ql7kiM415oyksofg4wcdSgb7EBOdHTIJOz9I5bEOM5bh54M78fZmYepYnTO+5sJdMJVGHL/jAfew5FD3rkLJ3MM03pgXTJdW98Bpau3Cz1NrGbc/3LSdzw8TZlrspeAU/yJDsHZPiT6i6K4RJvfjxETBbnN/lewNPRd8eZyzl0PsyGwiut1yGHFGTdEpYEaDnJwJl9cFbl4a94yT1vmY/pfbrbbw3Zbvd69mrSYzu/Rh+i5wbeM0RC5sMzzsbGBpuXorCep3IM3cN8mMSSXWNYwtKJ8a0to4zWzk57z9Pvig7zLdOLztciQ4P7p9id5eKmvGA0gUjQpnekeOsme9UZtROfbZwvf/IbOtfjSgpti9+ySYhL02saphqRaf7JdN/RMVK2jSOr2Zv1TXf9YiRisWXqZVr43ebu/m+RYrw==
+sidebar_class_name: "put api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Update an invoice group status"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"put"}
+  path={"/api/2.0/crm/invoice/status/{status:[\\w\\d-]+}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Updates a status of invoices with the IDs specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"invoiceids":{"description":"List of invoice IDs","type":"array","items":{"type":"integer","format":"int32"}},"status":{"description":"New invoice status","type":"integer"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Invoice information","content":{"application/json":{"schema":{"type":"object"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

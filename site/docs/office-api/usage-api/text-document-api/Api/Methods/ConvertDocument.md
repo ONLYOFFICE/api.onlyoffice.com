@@ -14,11 +14,11 @@ expression.ConvertDocument(convertType, htmlHeadings, base64img, demoteHeadings,
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| convertType | Optional | "markdown" | "html" | "markdown" | Conversion type. |
+| convertType | Optional | "markdown" \| "html" | "markdown" | Conversion type. |
 | htmlHeadings | Optional | boolean | false | Defines if the HTML headings and IDs will be generated when the Markdown renderer of your target platform does not handle Markdown-style IDs. |
 | base64img | Optional | boolean | false | Defines if the images will be created in the base64 format. |
 | demoteHeadings | Optional | boolean | false | Defines if all heading levels in your document will be demoted to conform with the following standard: single H1 as title, H2 as top-level heading in the text body. |
-| renderHTMLTags | Optional | boolean | false | Defines if HTML tags will be preserved in your Markdown. If you just want to use an occasional HTML tag, you can avoid using the opening angle bracket in the following way: \&lt;tag&gt;text\&lt;/tag&gt;. By default, the opening angle brackets will be replaced with the special characters. |
+| renderHTMLTags | Optional | boolean | false | Defines if HTML tags will be preserved in your Markdown. If you just want to use an occasional HTML tag, you can avoid using the opening angle bracket\ in the following way: \&lt;tag&gt;text\&lt;/tag&gt;. By default, the opening angle brackets will be replaced with the special characters. |
 
 ## Returns
 
@@ -28,7 +28,7 @@ string
 
 This example shows how to gets your document as Markdown and paste the result into the document.
 
-```javascript
+```javascript editor-docx
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 paragraph.AddText("Heading 1");

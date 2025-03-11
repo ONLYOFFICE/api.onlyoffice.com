@@ -1,0 +1,71 @@
+---
+id: save-smtp-settings
+title: "Save the SMTP settings"
+description: "Saves the SMTP settings for the current portal."
+sidebar_label: "Save the SMTP settings"
+hide_title: true
+hide_table_of_contents: true
+api: eJztV99v6jYU/lcsPzPgcse08TTWXmnT2g7dtJqmCl2Z5AC+14kz22nLovzvO8dOICGUdnvmoTS2P5/f57Ndcic2ls8eeQRxYaTbsRGLbu8XzIJzMsO15YDrHIxwUme/JXzGrXiCKHV51CAG3MDfBVj3i052fFbyWGcOMkefIs+VjP3m0VerM5qz8RZSQV9ulwNK1KuvEDuUkxtS5SRYWt1q61oo6wyqQ1QCNjYyJ5k4/SuhBjwrlBIrhUBnChhweBFpTkOeCqmG9XAY65RXqEgbLzoVLzItUj77YTr9OB3wVGZh/GHQqJXoywZMT++CRAz4WptUuID7ODlnyGSKii1kCZh5khiw9m3nIg9nosafczPTTq53Px85GvRdS5srsbsTKbxbZxL2sIw2nVO8wASkIiNtsYEEEy+Fsg8WTKMPo3wD2cZtKQghys14PHjDmquDSFagzDfNOR2HI8sWwtpnbZK3o3Gsn+XN1nNGlA2qIuWQESqKblrqVlorwKgd6/vksZYhmmnD0BveErxGM2AvcV5QCN8tUiCcXAnteEI6eYHC0c07p9J3SI5yiOUa25U9bwGFG+Y0RYnd3d/cnjFf2mtYi0K5PYf8F11yzVAXQ74y6M6eqZgwwJIg91XdqBybSZJMoRYtuvHLPZ0dJsRSlc6ndx5dDf+E1XCeS/q71Qmo4Wewuc4sXDs9bPMjjnlVkWZTI7y7k/GY/p1XeGHSC5NemPTCpBcm7TLp9+MPffJ8yCgv2sh/IOEeNOmD/tIFVp6RMQpk2JYZSzRGAl1ktsiJzTAk0jIdNlS+88PVGK/JSMM2/kJqvnwDmkBOF1TAzwgAvqyWPcfxtmx9lDshYMh2ndiTZqGGKCrF/Gu6aOeBj3NBtclHIpejyXA8shiRRowfcDLRPIGx3sLCKIRvHaJmo1FJ3F/NSpJfIfJJGOmLuH0u1LnGbUrHQvnpFrcfln8c/zShFCwPUYnoDAriurHZ1yEa/jtOYJd7FuvCsIQpTLHW3yT4cNPh9vnwoPjUlF1jbv8YaiydTHvHwikSO8nle/J9hXtPC3qVDNu81aGtujvatBMob88VNeJEZ++bPltrH99+E1GGsRBC7T1NQhaDY7ihTgDVZL8kj3mi9Y77H1Vc597BixthlKU/1XxplnVFP1JhIBJrmlLSqup6SE/PkPJHXpYrYeHBqKqiaawOQ+23PBQ0jVDFFvsR7xjUCL4K+VVw4rt7MojgqghFeXSdqgbNjnkcQ+7OYpetNl38Ed0jeFU/flOkMJw14pkexvg745ye0LTbd4mfKzlSz6YQG8IGmZ5Ru+cQBij0SP1BXjVL2a5tYbelgh/0S16d3FGWoS2rao8PS6/uqCPboCmjSzT6XwD/q8c=
+sidebar_class_name: "post api-method"
+info_path: site/docspace/api-backend/usage-api/asc-web-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Save the SMTP settings"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/api/2.0/smtpsettings/smtp"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Saves the SMTP settings for the current portal.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"host":{"type":"string","description":"Host","nullable":true,"example":"mail.example.com"},"port":{"maximum":65535,"minimum":1,"type":"integer","description":"Port","format":"int32","nullable":true,"example":25},"senderAddress":{"type":"string","description":"Sender address","nullable":true,"example":"notify@example.com"},"senderDisplayName":{"type":"string","description":"Sender display name","nullable":true,"example":"Postman"},"credentialsUserName":{"maxLength":255,"minLength":0,"type":"string","description":"Credentials username","nullable":true,"example":"notify@example.com"},"credentialsUserPassword":{"type":"string","description":"Credentials user password","nullable":true,"example":"{password}"},"enableSSL":{"type":"boolean","description":"Enables SSL or not","example":false},"enableAuth":{"type":"boolean","description":"Enables authentication or not","example":true},"useNtlm":{"type":"boolean","description":"Specifies whether to use NTLM or not","example":false},"isDefaultSettings":{"type":"boolean","description":"Specifies if the current settings are default or not","example":false}},"additionalProperties":false,"description":"SMTP settings","title":"ASC.Web.Api.ApiModel.ResponseDto.SmtpSettingsDto"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"SMTP settings","content":{"application/json":{"schema":{"type":"object","properties":{"host":{"type":"string","description":"Host","nullable":true,"example":"mail.example.com"},"port":{"maximum":65535,"minimum":1,"type":"integer","description":"Port","format":"int32","nullable":true,"example":25},"senderAddress":{"type":"string","description":"Sender address","nullable":true,"example":"notify@example.com"},"senderDisplayName":{"type":"string","description":"Sender display name","nullable":true,"example":"Postman"},"credentialsUserName":{"maxLength":255,"minLength":0,"type":"string","description":"Credentials username","nullable":true,"example":"notify@example.com"},"credentialsUserPassword":{"type":"string","description":"Credentials user password","nullable":true,"example":"{password}"},"enableSSL":{"type":"boolean","description":"Enables SSL or not","example":false},"enableAuth":{"type":"boolean","description":"Enables authentication or not","example":true},"useNtlm":{"type":"boolean","description":"Specifies whether to use NTLM or not","example":false},"isDefaultSettings":{"type":"boolean","description":"Specifies if the current settings are default or not","example":false}},"additionalProperties":false,"description":"SMTP settings","title":"ASC.Web.Api.ApiModel.ResponseDto.SmtpSettingsDto"}}}},"401":{"description":"Unauthorized"},"402":{"description":"Your pricing plan does not support this option"}}}
+>
+  
+</StatusCodes>
+
+
+      

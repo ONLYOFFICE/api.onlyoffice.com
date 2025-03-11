@@ -1,0 +1,71 @@
+---
+id: log-out-for-the-user-by-id
+title: "Log out for the user by ID"
+description: "Logs out from all the active connections for the user with the ID specified in the request."
+sidebar_label: "Log out for the user by ID"
+hide_title: true
+hide_table_of_contents: true
+api: eJy1Uz1v2zAQ/SsEZyMKMrXajKZAjXYI6ngyPDDSySJCiSp5dOoS/O+9oyzFTpxuXaQj7+u9u8coUe29LLfSQxWcxmOxrFAfQFS274FM23u5W8xuCo1yGbC1Tv9R7P4GqgbHJRxZciFfKA7kLlFWDb5yeuAwWcofdu+FDSgaZzuhjBHYglDv+onGuuwKHpx40djm0+pe+AEq3Wiohe7znYNfATzeUNtBOdUBgvMZY08H6sklVoxKM4JBYSvfwtpwl9U93fuqhU7JMko8Dpzt0el+Tx5C1CnkekHXMjE36tXamosGzO2pdCkLNeji7ua2mOc58jujVxi7pykQ/yKO8BL3BneYsAdnqFSLOPiyKGJrPaYyDtYhRx6U0+rJgGeg7ON/DY0KhhEaWymTrxOhopxL96fbz3dEIJ3tdM20x3JXNzuPg7h9h+M0zHZ0L6ZRX+RSCw5rbE7XaDjii+260FNHsc5sxc+v60exfFgxKyI/7sMohAm9x071XOLUgyQ0KuhcIU/HcX0Xa42SRo7Q438X3mk4CL+xGIyi2RD0vMJ4UsWWJ0eRpAt59pQW8p026G5WB9nlSb60rHHRWxnjk/KwcSYlviYUjh/l7lUXWUK19myTPhtlPPxjOK/yv0pkWn1/zNIzgU9kPpMQ5ueVdunsQTxsHplbYOrn2nnO2jkZDPJq7UsZTY34mxYfpMQ4KjOlOX50fZgxa3eMZqo7ehR/AfQhu2Q=
+sidebar_class_name: "put api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Log out for the user by ID"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"put"}
+  path={"/api/2.0/security/activeconnections/logoutall/{userId}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Logs out from all the active connections for the user with the ID specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"userId","in":"path","description":"User ID","schema":{"type":"string","format":"uuid"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={undefined}
+>
+  
+</StatusCodes>
+
+
+      

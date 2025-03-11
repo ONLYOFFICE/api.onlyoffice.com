@@ -1,0 +1,63 @@
+---
+id: get-common-third-party-services
+title: "Get common third-party services"
+description: "Returns a list of the third-party services connected to the 'Common' section."
+sidebar_label: "Get common third-party services"
+hide_title: true
+hide_table_of_contents: true
+api: eJy1Vltz2jgU/isaPZtCDKSUtzSXbman3UxItw8p0xG2HKuVJa8kQ6mH/77nSMbgQDq0M31gkKXvO+foXFVTx54snT7STEhu+w+5MGmvZMatiVCOPxnmhFZ0HlHLk8oItwZwTS8ql2sjfvjTvzhLuUEhBlY0oivAcTrfACvlNjGi9EKm9J67yihLGJHCOqIz4nIOv51Sy81SJNySRCvFE8dT4rRHfaaXuii0+kwBlKDAV6DKcFtqZTncoabxYIB/XZ2B1VGSaQkGW6CDFseVQxYrSykSf6H+V4vUmtok5wXDlVuXHIQxY9gaeHC/wu7t68VXsAkOSqNLbpwIBj1ox+QNenYP6/0K/opopk3BXNgaxrDBv7OilAga000U6LNqcdPY+zsyZjmDqCxwo2UvtJacqQ7YmYoj/gNf3Wjznv+qsiGSg6EfjdxjW2eEeupgg/9JBTgg3dobttQ+ZQ5NxPOrY47eSTuLh6uU9eC38k4TrnPZI/qdhwD2Elzj+Nv1MXh716oSaYeejgaL80k66I0Xk/PeaBIPe4s4Zr1s/DobxW+yMcuyfemzIPKnJrG0EGpH+kedQko89ov2xPc6FZng6WnUokE/I/8pV+zk/5Izro3R5udYhF0k0DFOLQ9VFdiqPmjF4fMeOtYnn3th7f9QjU+yf5nBSsa9peArWGA3wYYBuS6khEop8Piysk4XsONA6UHXexyQHkF9ETmDVasyInHzGZGhXwXFERnBV9AdkbE/QfUROYd1Y0FEXsNHa0REJni2Z8f8sDx9L0hPbAR3Ri8FlOlt+lutYEv/mx9NqR26bIBfvgGy7SG36ZWwpWTrU2rfN7orLjmMizsOdilwkFy/XAkertZXeqWkZsc80iDQY10JLQAQoY9MG5Nha4O7o8HZ4RT6qFgzMiEAiCo4fIJm+sT93GAuh48+K0U/fjXoh3Hsh5afWf3EjzGKc9gs/TCAMYwddEpz50o77ffrXFu3mdalNm4DyCXYjp3fVwaeBbMyVkkMnNQJk34bzEFO93gyeBPjlfZG/wzHYRB39AGwG5OlwLjDnMS75+E4oooVeNrhemcIlWlPbxyKOV4p0Ehm/rbk/nr2QC7ubvFWcPngUwnNb2u9dRB1FNHoeMcdSQ4n//Z5QZ/VaL17CfyBR0rjFce/uz7kdOhtVZiSIfCP6DJAQuixtvyLAXht+P1TxScAhCOE8pHW9YJZDtN2s8Ht/ypu8HU230Uev0BVvn2g1RSLbOobZul8isgqBOzZ4wfD3qbou+sHwGICd2P8zce4WaD07ZFa78nuhjtqTAjV/gKlrkMGbTYtPhy9yGhzLKDRxXNI3v8Bz/CkTw==
+sidebar_class_name: "get api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get common third-party services"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/files/thirdparty/common"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns a list of the third-party services connected to the "Common" section.
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Common third-party folders","content":{"application/json":{"schema":{"type":"array","items":{"type":"object","properties":{"TotalFiles":{"type":"integer","format":"int32","example":"5"},"TotalSubFolders":{"type":"integer","format":"int32","example":"5"},"Shareable":{"type":"boolean","example":"true"},"NewForMe":{"type":"integer","format":"int32","example":"3"},"FolderUrl":{"type":"string","example":"folder url"},"IsFavorite":{"type":"boolean"},"ID":{"type":"object","example":"123wda-wdaw"},"Title":{"type":"string","example":"title"},"CreateBy":{"type":"string","format":"uuid","example":"d40b68d0-5b86-4823-b22a-f57f429f5aff"},"CreateByString":{"type":"string","example":"admin"},"CreateOnString":{"type":"string","example":"create_on"},"ModifiedOnString":{"type":"string","example":"modified_on"},"ModifiedBy":{"type":"string","format":"uuid","example":"d40b68d0-5b86-4823-b22a-f57f429f5aff"},"ModifiedByString":{"type":"string","example":"admin"},"Error":{"type":"string","example":""},"Access":{"type":"integer","format":"int32","enum":["None","ReadWrite","Read","Restrict","Varies","Review","Comment","FillForms","CustomFilter"],"description":"[0 - None, 1 - ReadWrite, 2 - Read, 3 - Restrict, 4 - Varies, 5 - Review, 6 - Comment, 7 - FillForms, 8 - CustomFilter]","example":"3"},"Shared":{"type":"boolean","example":"true"},"ProviderId":{"type":"integer","format":"int32","example":"3"},"ProviderKey":{"type":"string","example":"provider_key"},"FolderIdDisplay":{"type":"object","example":"123wda5"},"DeletedPermanentlyOnString":{"type":"string"},"DenyDownload":{"type":"boolean"},"DenySharing":{"type":"boolean"}},"title":"Folder"}}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

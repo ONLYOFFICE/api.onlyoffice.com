@@ -1,0 +1,71 @@
+---
+id: get-shorten-link
+title: "Get a shortened link"
+description: "Returns a link specified in the request in the shortened format."
+sidebar_label: "Get a shortened link"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVE1vEzEQ/Ssrn0M2RBwgt9IihACpalpxiKJqsjvJunXWxp7tB6v978zYm2STQsWBQzb2eD7fe3arCDZBzRbq0noCk+XZHIl0zcblSFmHHkjb+kupZmqDNK/YDetvur5XI+XxZ4OBPtryWc1aVdiaz0iW4JzRRQzN74KtxRaKCrcgK3p2yPns6g4L4jzOSyHSGOTUSPKDVyDP7bBXiaHw2klONvct1I0xsDLsSL7BkcIn2DoT4+wWM8InUl03UlCWWiLBXA6KrcEEPM3cz4hlJp1k/ZCZAw9bJPSBy5KmWORsfj7+gavxmdPy+25LNOOrFBEuyI4HgA3M3JI05TE4W4c09nQykb/XeuHC/4pxKvBu8vZlzpsaGuK8+heWEZuAReM1MYcLzhqKWzm/vUcxcI9Qct1HdkC17JanaF0hNb4OGSS0gsNCrzU3rOuMKtzD12/DfqC19VugMedmVCsrAnNNVANQxZscnM6n40nuojJzVl8f3EMR0D8IG9J14w2HVEQuzPK8rWygbtZKZMeeD+C1iCTiLGcJlDU0hpfK2AJMNDMYEnN8/H7yYSqELQ9IzQXmlO4Yr71qufmvbGCBsmhkP3QbKS3QFdbea4wUCH9Xh9v0aafi3W0Yqlmi1zbWeqlCmZZBSdw8TNNEgbYQ5dE38xmJ+Qqn2joidnCd/wfHPSwyQe4M8PzcWWSt7QlfCGbsyZSrRAMYXpzQziQkAheqbVcQ8MabrhMzt+BFscsD37LjMhVLGH3USSRJnafJ3lxLU+JumsTZyYXqRruIs6JAR6/6LgdCvry5Zt9V/y5u+VVgo4dHeTP5O1NK3lYJjhqKNqYa6k0DG/FNKePD1Qg4Q10lBfULGWp3VD8PGzwWXBpDvjLUHyPaNom26/b+6eivET2wO28hdclN/wZWyTAa
+sidebar_class_name: "put api-method"
+info_path: site/docspace/api-backend/usage-api/asc-web-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get a shortened link"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"put"}
+  path={"/api/2.0/portal/getshortenlink"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns a link specified in the request in the shortened format.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"link":{"type":"string","description":"Link","nullable":true,"example":"some text"}},"additionalProperties":false,"description":"Shortened link request parameters","title":"ASC.Web.Api.ApiModel.RequestsDto.ShortenLinkRequestsDto"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Shortened link","content":{"application/json":{"schema":{}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

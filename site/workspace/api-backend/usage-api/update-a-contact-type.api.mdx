@@ -1,0 +1,71 @@
+---
+id: update-a-contact-type
+title: "Update a contact type"
+description: "Updates the selected contact type with the parameters specified in the request."
+sidebar_label: "Update a contact type"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVE1v2zAM/SuGdlxWu2mBrbl1aYEFA7YhabFDkYNqM7EK2dIkOllm+L+PlPLhLEOGAsshkEU+8vGRVCtQLr0YPYncVenY1Chz9GI+EB7yxinckK0Vtw2WxqlfEpWpP4EswDHG0UkMxJr8QMw7QhXgc6csu4mReLSFRPAJlpB40JAjFEkekyS4sZCsFZbBbKWTFSA4n3gLuVooclV1sDn40YDHC0q1PX40BRFrBceCGvkordUqDwTTF8/pW+HzEirJJ05GhMzzC5GgONYZCw4VeLaqgv+PuY/7NCd3hNnGUJRySfV3dKNQwyn0C6yPq4x++wgenaqXHMAbh19dUPOfQUzwO6URfqyMt6b2saBhlp2viOL8J+2moAm4gglC5cemiRH/IDkQC+MqifHqakgX8FNWltUTl6zEw07KY436ftGFfO/6ZZ1D9B0JNzbauPOIN/L9IifxyHvW782r66GJeS1seHUtusNU7fr1QDG+O2rRttkDcZ1dnnb3sZbbJYUihKFtKg0NtrBN6JrEkj5SaVU6vMhS3vftfKVMM21VMXrK3t3M33aC19+taBnD9jdOE7JEtH6Upm1pPHaj1pI+7LmSTslnHaeBbZHbQjaaC9UmlzpcEyfGHJs/ZDdDLqv34sx48mK4v747e1mplM+wIQqKBSijeSBqekjo+wgbFOHRnh4ekPud9PEByA7K7wejt59Zx3kWJuTfd6iqmpooJ7MgVzK9nz0kt98mLAupFzuj+Q2k8rvfkcLdug==
+sidebar_class_name: "put api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Update a contact type"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"put"}
+  path={"/api/2.0/crm/contact/type/{id:[0-9]+}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Updates the selected contact type with the parameters specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"id":{"description":"Contact type ID","type":"integer"},"title":{"description":"New contact type title","type":"string"},"sortOrder":{"description":"New contact type order","type":"integer"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Contact type","content":{"application/json":{"schema":{"type":"object","properties":{"RelativeItemsCount":{"type":"integer","format":"int32","example":"1"},"Title":{"type":"string","example":"Title"},"Description":{"type":"string","example":"Description"},"Color":{"type":"string","example":"#a7fc00"},"SortOrder":{"type":"integer","format":"int32","example":"1"},"ID":{"type":"integer","format":"int32","example":"1234"}},"title":"ContactTypeWrapper"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

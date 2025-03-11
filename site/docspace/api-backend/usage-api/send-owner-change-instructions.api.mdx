@@ -1,0 +1,71 @@
+---
+id: send-owner-change-instructions
+title: "Send the owner change instructions"
+description: "Sends the instructions to change the DocSpace owner."
+sidebar_label: "Send the owner change instructions"
+hide_title: true
+hide_table_of_contents: true
+api: eJydVE1z2jAQ/SsenQETAiXhliY9ZDqZZEIyPTBMRpYXrERYqiTnox7/9+5KNoHQdjI9YGztavfte0+qmedrx2YLNgfvZbl2SZpcv5Rg2bLHtAHLvdTlZc5mzEGZh9B5wcs1XJbO20pQ2LEes/CzAue/6vyNzWomdOmh9PTKjVFShDrpo9MlrTlRwIbTm38zgMV19gjCYx1jqauX4CiqqR913yZiU4SJiTk4YaWhsrgcgCWXFxhYabvh2JlVlczxG175xijaO53wyWo6nvRXX06n/fH46KSfHZ/k/eEKhvloOoXR5IQ1TY/xPJdUmKubHTgrrhx8bLzlrSUgMdzyDXiwxIqXPnQ+m58PfkA2ODOSflc6BzW4jTvchdeD6zhoV60NYQTxECILziDRkZXRcEh/+0CuwDm+hoRnuvKJII2wUuILSIy2nqskkImgPqtN7DweHh02uy955Qtt5S/IWUg6Pkw610ohGrSQtongZVJqn2SIsGyhUHkHorLSo2kWCMeJByr88AS0gFNzUvAFE4Atm+Uh+WXuwohyx42J13F+CKELLeaGC4hNB1gP5Sk0WdpoFzzHfYFfKTcyHQ2GqWtVSDvGHNhnEpQwVlZhbuG9cbM0rQss0cxqorjBzGduJc9U1IlikZYVrxRZUmnBVVjG0WnPfvhkeDoiwZfvvMxJjVhun53tiUDU33Ghx0r0HX3vpvWYJKKE1k8SAuEk8+37Yf3WnY6dw/bJg0K1VzogObQ5cYGURZ2eR3Fe5zc8eKyFSvoFjULrTjS5f7PsSb5zs/yv+i1tHl59ahRHfhBbULVunbAgTjETvRDEj27AV93djFHZBavrjDu4t6ppaBlZtWTc5bsR6AvrF+hk3EoGCurh4Qhj9O8IDaWrKor54UA2vW7HmRBg/D9zlzvevrme32Fy1l7IG7xycNXyF7qs8TljNJCJLGNCWKuZQuYqvEcwHmuG+7AiWnYdF73VvtBUXah820W4b8U4Bz1pqj/uqOto56bZ5sfQX3e0zHbZJOcSQf8GeEJWMQ==
+sidebar_class_name: "post api-method"
+info_path: site/docspace/api-backend/usage-api/asc-web-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Send the owner change instructions"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/api/2.0/settings/owner"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Sends the instructions to change the DocSpace owner.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"ownerId":{"type":"string","description":"Owner ID","format":"uuid","example":"75a5f745-f697-4418-b38d-0fe0d277e258"}},"additionalProperties":false,"description":"Settings request parameters","title":"ASC.Web.Api.ApiModel.RequestsDto.OwnerIdSettingsRequestDto"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Message about changing the portal owner","content":{"application/json":{"schema":{}}}},"401":{"description":"Unauthorized"},"403":{"description":"Collaborator can not be an owner"}}}
+>
+  
+</StatusCodes>
+
+
+      

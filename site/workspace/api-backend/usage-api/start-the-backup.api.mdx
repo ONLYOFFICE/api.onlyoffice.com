@@ -1,0 +1,71 @@
+---
+id: start-the-backup
+title: "Start the backup"
+description: "Starts the backup of the current portal with the parameters specified in the request."
+sidebar_label: "Start the backup"
+hide_title: true
+hide_table_of_contents: true
+api: eJy1VU1T2zAQ/SsandoZl6SUQ5sbBGbKlE4zBE6Qg2IrsUC23NUaSD3+792VbOIQ4NTmkJG0H9p972ndSFRrLyc3snKAyo5OVHpfV3KRSK/TGgxuyNjI4xpzB+aPQuPK71plGjgIaCUT+Uh+Wi5aisq0T8FU7CYnco4K0AvMtViGxMKtwo5Sgy5RxFvFo8E8nFcKVKFRgxe+0qlZGZ0JUwYb6N+19nhAF3bLE5dReY1MXYmUjZeqqqxJQ5mjO89FNNKnuS4Ur3BTaSrLLe90ipSnAldpQKN98EMHaq2vglOz10owCk4hPtzKU5fWBV3qb2UibuVVDiaj6nHzwjCtKW0xta7O4sGFS5WNy1OFivNq3joIaQxkM04zdaWnPHArP1KhXeGG+lwT9G3SFztjwPzb5W4B3WZRAGpDWyIthu7C0lL2yNZPZewrqTtivDCRzILcPHForVhqYiu1dRZoQ7dDPYjS4baMpXNWq5Lu4x+T6itqOnJxOB7v3xzFKYi1NTlzR/+I+XM/dUVlCads4NwXmEj9pNhMZytlvWb8Z30RW/+enUSuHBQK49GXw50ER0ccfQbgYBDqEUy53nEsa2vZ9cKU9+97Bg9GEA2Gg4jTc4UR3qPx531Er0vVvWzqnL1IK7kjEGge+ICTwpx2I1WZ0eHBeNSNCc8PO/IqeVTAAyuMJ0UNJBmZI1Z+Mho1OaVpJw2HteT5oMCopY2osy2WtFK1Zbgsv41wTKVwzK756/jbIXczmE5zZjime3VGPeNGDfzQQfXcdx7NiSzpddB+JzYAwRK63I6Zsx7tF2NivPcSbxqub/iAEGrd8sUrFwrqWCLJFXVJPYh5wE9cns2vxPHsnHEiOCNDVqHu8fBYqKDrruowXgdPTL6Yv4PJ+N9GcQcv6iccVVYRulRqEEHTieeGsSdPko9Muu8Mi2YgIQIsiuFGNs1SeX0Ntm35mO4B/gQtttrhHd2R91+hRt4TsYxn6PVTIIbdbR2JfzEX2qSPOE5TXeG7vovBk5j9ml+R87L76hQu4xhQj/xFov+JpIUL2AdBhrOGGCzXNQmE7DEny4uf3a4674M6uwV31ZvKzaDCXaEmXSP8z229GtI0Uftt++wfTW9GPL+O6M2cLqjqvxTZ0tA=
+sidebar_class_name: "post api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Start the backup"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/api/2.0/portal/startbackup"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Starts the backup of the current portal with the parameters specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"storageType":{"description":"Storage type (\"Documents\", \"ThridpartyDocuments\", \"CustomCloud\", \"Local\", \"DataStore\", or \"ThirdPartyConsumer\")","type":"integer"},"storageParams":{"description":"Storage parameters","type":"array","items":{"type":"object"}},"backupMail":{"description":"Specifies if the mails will be included into the backup or not","type":"boolean"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Backup progress","content":{"application/json":{"schema":{"type":"object","properties":{"IsCompleted":{"type":"boolean","example":"false"},"Progress":{"type":"integer","format":"int32","example":"44"},"Error":{"type":"string","example":"null"},"Link":{"type":"string","example":"Link"}},"title":"BackupProgress"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

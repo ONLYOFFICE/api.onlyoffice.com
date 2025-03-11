@@ -1,0 +1,71 @@
+---
+id: set-a-conversation-status
+title: "Set a conversation status"
+description: "Sets a status to the conversations with the IDs specified in the request."
+sidebar_label: "Set a conversation status"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVFFv0zAQ/iuRn0AKSxk8QN/GmMQEQtO6PbV9uCZu4y2xjX1ZV6L8d+7stE3YQIDoQ2qf73zfffedW4Gw8WI6FzWoKjs3+kE6D6iM9mKZCi/zxinckUcrzhosjVPfw/EnCYV0HOloJVKxJT8plh1FFdLnTll2E1Mxk+gTSDwCNj5Bk2Apk3yYKdkqLIP58qNPvJW5WitZJEoHo5PfGunxhJL0yw+mIEitoFtQauQlWFupPNyX3XlO3Aqfl7IGXuHOSoJiVncyR7rHOmOlQyU9n6oi/I1hf1EeE7MeIWV8FN3fBs7BjrZUd+0HWRSB2hA3qVgbVwNG05tT0XXEaKDhabqvcrun6MUicLoQabIQjT6uVW2NQ9DIW+PIojlBtRAvj6g8OqU3lIt/zJi3RHEs9HQy+bNCBy3JS9AbakYPPP1r0v+BpoD87eT1U7C3GnoVyiLwWUvaFnRim9BYwJI2GViVnZ5MsiDrUWVkcveCpe3YGJTduIqCSkTrp1nWlsZjN22Z7I48H8ApWFWRQj6LsNbQVAy6MjlUwUxwOGZ8/G7yPpQ0mKYZUxSve3amjtRZ9VkG7rj2Mh6nQkPNp6PYQAb34Po4IhePUNtKHiQ+nyyPAjwIhW9fm5BVIXuLc1PXjSagySyQlFxfzG6Ss6tLJoM4i62oAOW+aI81hO730GjmaeRHo3PQz6ihgxn+rw9FTyDKR8xsBcQf4QxtbnuNzJld8iSV0Jd1ErU9eADZTFoh0mLX56JtV+Dlrau6js2UzvHbuDyKhHeUqtw/j624pw4yp6HMVzcMjN2rJnb4pwnq0n3EWZ5Li7/1XQ70f3V7Q76r/mWsTcEhDrb8atJ3KmhhbCyMHIKtpSbqTQMb9o1Xsox4xMYqvA8q7Bdc1P5I7wYAx4JM+zr4y1U9G9K2UeNdd/CPR7+MOExB9ObOLgn1D3ZFVWU=
+sidebar_class_name: "put api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Set a conversation status"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"put"}
+  path={"/api/2.0/mail/conversations/mark"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Sets a status to the conversations with the IDs specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"ids":{"description":"List of conversation IDs","type":"array","items":{"type":"integer","format":"int32"}},"status":{"description":"New status (\"read\", \"unread\", \"important\", or \"normal\")","type":"string"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"List of conversations with the changed status","content":{"application/json":{"schema":{"type":"array","items":{"type":"integer","format":"int32"}}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

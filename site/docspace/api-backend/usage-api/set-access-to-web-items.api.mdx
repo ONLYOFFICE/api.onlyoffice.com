@@ -1,0 +1,71 @@
+---
+id: set-access-to-web-items
+title: "Set the access settings to products"
+description: "Sets the access settings to the products with the IDs specified in the request."
+sidebar_label: "Set the access settings to products"
+hide_title: true
+hide_table_of_contents: true
+api: eJzVV91v4kYQ/1dW+8wZmutDyxuXnE5pL9coJK10CJ0Ge4G92F53P5L4kP/3zuzaYCABh7QPRQrB6/me38zOrLiFheHDCR8La2W+MKzPxiJ2WtqST3tcFUKDlSq/TPiQG2FHcSyMuVV/idmlFZnhPa7F304Y+0ElJR+ueKxyK3JLP6EoUhl7/v53o3I6M/FSZEC/bFkIFKpm30VsUU6hSZuVwtBb6aVvyEBrKJFq9/wF9ntRtoiM1egcEuUuTWGW4pnVTvS4eIKsSD2JygSz4snyqscfIHWixT9TKhWQ8xYD8VdICkkiyUFIr1sGzCE1KN5K64WPxufRqJDRuUpTtBbJTUTh+12Uf5Kqa5A6GpcGj6Kxt7V5+lBrRk2JMLGWBXGjSNSWuNga9ijtkpk6Z0zmc6UzH/I9d4+au63hChWkgtXpZQVoyIQVmnLedgyh4J3DP2QRaXQTOMyFVVGDkwZUrXe8qsgiLUyB8QhpOxsM6N+2IQ0vehlAigb8Syh7DOYRuvfB8mw4Li8Owmg1qD/vnvlqPhWl0xkK5ckAlx1M9rYGPOCTc8hzmq2JNEUK5RcEwHGtF4GY5UR9KFZX8l6wr5CXYM29JD01rI5puPVkB0VDDguhSSY8gAV9XOgo0HXuEUHuH1ouJFbTcfkNJTPyh2BwkrYreOoAVHiSmcvepEck0mUdVHm6t2gaZ5B2CJ4n66LC6ZRZxUybvvK1M5epuNMddF0HWnZ387m7N0swo12gbW6NHWcKEcs51jGTc2aXglErYCiBQV7bzJRmubJ7Fw62BzPKVS6zk/XIoMYLeUnNa+61pv373m+ijyhGlUL4Br9r0WeJF4mae0Pqm4vsAj9UUN7oKfONdv/26vGFVq74v/TMvFOz/HKsSX4in5knQ6FZ3dc6NIFAeEj0b3Avoq/wYylD/31D1r2VY5dloMuDmQ8pfH3qRU6PySmoN7vjAwMtWC3wUKGNnR8OXq8TSyx44ouNGTcjgD6jygf2pLi3hq0wPtGw1QxKm+Hq58FP+/PUXQ7OLpXGrp1wT/S+w9Dlo4aDQAgbVgi1EbQ1Z4XSFm9A0tfEGlcKHMxM/I00ffPD+AQnPaBiekQCwafVdC+KAsfZFijWmmt0FFsjL51cXiBVHfsEZ19/WA+sEarCeXWpaHMpnO8GYJf40IdC9s+iQb9R0G/M7gfNnBzRD34+Qz8c3Rp8aW1hhv3+aqmMrYYr8rritCtoSTHxHYbehVjOwaXUQVIVQ+qP6RpCnu3Xvwx+PaNcTTexG9PsGsRtR3DT9gqJmwNvesw2GSKXghkrdS+FTwoNxTebJe1jg771kjWp96XWlbbegXw1TKkecLPwNuyjkagxWCGLD2fBU2OxWRFDbSRm96XkNondravWMvkfgKMOJrnbx4FV+iXLhQkhIGVCkUZKxIqHxHr7WMMcKzcgBvMXcj/hq9UMDI0aVUXHqE8T/KcbqNATzQxYD9TL1+E/D96+uyXL1hnYX3CqXsNB63hhD9JOW2VwfXeLtLN6U8ceRSwaHmmLx+8h57Ty+/2UCPzZiqeQLxzeJvg+iPQdy1GE2pAM4Kt/kFPNq7xsG7iN1eAGfZNTz3KsVgHvVbWmD69e5KgD21BTZqdo9D9+zdM+
+sidebar_class_name: "put api-method"
+info_path: site/docspace/api-backend/usage-api/asc-web-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Set the access settings to products"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"put"}
+  path={"/api/2.0/settings/security/access"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Sets the access settings to the products with the IDs specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"items":{"type":"array","items":{"type":"object","properties":{"key":{"type":"string","nullable":true,"example":"some text"},"value":{"type":"boolean","example":true}},"additionalProperties":false,"title":"ASC.Api.Collections.ItemKeyValuePair.System.String.System.Boolean"},"description":"Products with security information","nullable":true}},"additionalProperties":false,"description":"Module request parameters","title":"ASC.Web.Api.ApiModel.RequestsDto.WebItemsSecurityRequestsDto"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Security settings","content":{"application/json":{"schema":{"type":"object","properties":{"webItemId":{"type":"string","description":"Module ID","nullable":true,"example":"{00000000-0000-0000-0000-000000000000}"},"users":{"type":"array","items":{"type":"object","properties":{"id":{"type":"string","description":"ID","format":"uuid","example":"{00000000-0000-0000-0000-000000000000}"},"displayName":{"type":"string","description":"Display name","nullable":true,"example":"Mike Zanyatski"},"title":{"type":"string","description":"Title","nullable":true,"example":"Manager"},"avatar":{"type":"string","description":"Avatar","nullable":true,"example":"some text"},"avatarOriginal":{"type":"string","description":"Original size avatar","nullable":true,"example":"some text"},"avatarMax":{"type":"string","description":"Maximum size avatar","nullable":true,"example":"some text"},"avatarMedium":{"type":"string","description":"Medium size avatar","nullable":true,"example":"some text"},"avatarSmall":{"type":"string","description":"Small avatar","nullable":true,"example":"url to small avatar"},"profileUrl":{"type":"string","description":"Profile URL","nullable":true,"example":"some text"},"hasAvatar":{"type":"boolean","description":"Specifies if the user has an avatar or not","example":true},"isAnonim":{"type":"boolean","description":"Specifies if the user is an anonim or not","example":true}},"additionalProperties":false,"title":"ASC.Web.Api.Models.EmployeeDto"},"description":"List of users with the access to the module","nullable":true},"groups":{"type":"array","items":{"type":"object","properties":{"id":{"type":"string","description":"ID","format":"uuid","example":"{00000000-0000-0000-0000-000000000000}"},"name":{"type":"string","description":"Name","nullable":true,"example":"Group Name"},"manager":{"type":"string","description":"Manager","nullable":true,"example":"Jake.Zazhitski"}},"additionalProperties":false,"title":"ASC.Web.Api.Models.GroupSummaryDto"},"description":"List of groups with the access to the module","nullable":true},"enabled":{"type":"boolean","description":"Specifies if the security settings are enabled or not","example":true},"isSubItem":{"type":"boolean","description":"Specifies if this module is a subitem or not","example":false}},"additionalProperties":false,"title":"ASC.Web.Api.ApiModel.ResponseDto.SecurityDto"}}}},"401":{"description":"Unauthorized"},"403":{"description":"Security settings are disabled for an open portal"}}}
+>
+  
+</StatusCodes>
+
+
+      

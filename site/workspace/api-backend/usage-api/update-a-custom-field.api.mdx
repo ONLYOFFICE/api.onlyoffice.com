@@ -1,0 +1,73 @@
+---
+id: update-a-custom-field
+title: "Update a custom field"
+description: "Updates the selected custom field with the parameters (entity type, field title, type, etc.) specified in the request."
+sidebar_label: "Update a custom field"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVW1T2zgQ/isafWqpiR0ntMXfgNK5zLVcB+jdtJQPwt5gtbakSjKQC/nv3ZWdxIFwc8w0M87oZffZ1bNvc+7FtePZBc9tHR81zuuaTSVUheOXEXeQN1b6GQrM+UHjS23lv8JLrf4AUYAlRYsrHvFblAN+uUCtAlxupSExnvHPphAeHPMlMAcV5B4KlvcssVvpy3BthBU1eLCOvQDl0TDzMwNRJ4cHFW7aI/D54CVzBnKJtwWTKkBY+NmA84Nv6pva2TnRHnZ2MvZFNywXijXBlw5OTknDAhP4KY2qlSDf0McarbsBm0yZa/JydcLgTjofMa2qGavEFVRMqILVwv3AR1QVu4LORDFgfxF4/0lLCXmttEUJJK3z9lAXSPGc51p5tENLYUwl80B1/N0RkXPu8hJqQSuiAKnVV9+RTsQxVhuwXoKjW1nQ/2YU+qFlk3eo02FINHmNkVxEvKX8PJw/1D+BW9YLyVrfeSvVNakHQrZr9uK3TTNcP213I1k2rfe8N9rJVulpD1Yy2wAojNuVw80jv8OPYuiMVq6lPk2SxxBtBWwmPcL9pmifUtrKG5h4qN2RblrEB89DjrWthW+PRikewJ2oTUVCCb3+OAR3UjxXeTjeS0fjdEQYH5YZsMlUX/xQWl8SHST/npj4W1QN/LdSmqTJ7jDdTd6eD99kozdZMh7s7Q9fj5PXX1c4y/z5H86rpqbOdQ53/n0XDFofYCvD5VloUof6DtdHJeQ/2iV1vNaxd+T+oz53kbBdtoKM2LDbEmrEUtytgCM2wu0SO2Jj3HXwEdvDDVm43KBgj975qZfiz4pRiPDHLr+f5pmksDc8Fx3jz6kS2vpe9ppAwz8WU5vKK5TKOBluqQ4lusECRYDBdllqzENumpDtwpe4iYWRcTpIYhpU83Wryl5QHYnc36MdLJ37XNdGqNm9NkZb3yiUu8+Fg5eLuC3AUH/xXBbZRbK7f/lqwWnQ2RtUD3OusZjDvPTeuCyO56V2fpHNCYwkb4SV4qpqa4/u2hdNRVMRPZXORRWOQ0uyD67fJvspkdGbrWdU5y3c1gm7CgYS8CfM0AVJtJXtdcQVzhfcb+gGHqmRnK4HzPEyYO2ASDb7/Toduja+Puh156TfZpNly+x1cqmmOri8TAVd1yEEmPzEMDs9PjtnB58mxCQS3qYAzV1ibPELW/roDg==
+sidebar_class_name: "put api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Update a custom field"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"put"}
+  path={"/api/2.0/crm/{entityType:(contact|person|company|opportunity|case)}/customfield/{id:[0-9]+}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Updates the selected custom field with the parameters (entity type, field title, type, etc.) specified in the request.
+
+**Note**: You can update field if there are no related elements. If such elements exist, only label and mask will be updated. Other parameters will be ignored.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"id":{"description":"Custom field ID","type":"integer"},"entityType":{"description":"New entity type","type":"string"},"label":{"description":"New field title","type":"string"},"fieldType":{"description":"New custom field type","type":"integer"},"position":{"description":"New field position","type":"integer"},"mask":{"description":"New mask","type":"string"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Updated custom field","content":{"application/json":{"schema":{"type":"object","properties":{"RelativeItemsCount":{"type":"integer","format":"int32","example":"0"},"EntityId":{"type":"integer","format":"int32","example":"14523423"},"Label":{"type":"string","example":"Birthdate"},"FieldValue":{"type":"string","example":"2020-12-08T17:37:04.5916406Z"},"FieldType":{"type":"integer","format":"int32","enum":["TextField","TextArea","SelectBox","CheckBox","Heading","Date"],"description":"[0 - TextField, 1 - TextArea, 2 - SelectBox, 3 - CheckBox, 4 - Heading, 5 - Date]","example":"5"},"Position":{"type":"integer","format":"int32","example":"10"},"Mask":{"type":"string","example":""},"ID":{"type":"integer","format":"int32","example":"1234"}},"title":"CustomFieldWrapper"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

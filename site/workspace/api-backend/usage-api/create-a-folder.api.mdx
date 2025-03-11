@@ -1,0 +1,71 @@
+---
+id: create-a-folder
+title: "Create a folder"
+description: "Creates a new folder with the title specified in the request. The parent folder ID can be also specified."
+sidebar_label: "Create a folder"
+hide_title: true
+hide_table_of_contents: true
+api: eJztV9tu4zYQ/RWCz4ovshNnDRSF4zhI0OYCX7rAZv1AS3TMjSSqJOXEFfzvnSEl2Y69ThZdFH2oHyxeZoaHM3PIYU4Ne9K0+0jnIuK6fiWjkCtNpx7VPMiUMCuYzGkvMwupxF/MCJlccwZCqKSgRT36AnKcTtegFXIdKJGiGO3SPggYrgkjCX8hc2ucvAizIGbBiREm4kSnPBBzwUMiEjus+J8Z16ZGxtBJmeKJKVVvLknAEjLjhEVablRrAAIkWcwNokfECXQAgVO8QZQCEaXMLOhbmA9vFgEBHSx4zGg3p2aVoiFtlEie6Bo3WSC8kOEKJQKZGNDHJkvTSATWS/VvGo3n+6bk7BsPDEJWMuXKCK7tLLoDG7vgXEics0DnLRz8ISKdykQ7Q36jsW/mbhOAAq8Gaz8JunMgePmAJH9lcYobo83zdqPTPmt3TilAvsKE68vMrV5oCYDzBLnlQeBUzIwbavnH7LiU/QmWbvRoARthMxeGwtBMyoizZEfPqIw7jSu2lDb79xVw/h2PnJ92zs/afqeNwuMy/rsh3pYfydjSBlxXM68GtXpBwLX+4MaTLEba3skEU2kI7P1swbu2/eCqFuUfTGF0cWwp+As0+jKOMVls7KIrsI7T/UwbGcMIUI/unQCPDXJCcD2PNKFVLekRv+h6pGVbbmGPtKHn1vbIqZ3B5T1yBu0CgUc60KlAeOQc57ZwTHejjH6yoQ3fiescjhUbWHdwhcej4Tf8xknTP2m2xs1Ot9nqtpq1008Nv+N3vmwZuVi9T6Cbg0tVAcwyEe4s3Sh+Jwf+yh9CuBQ6jdjqzh6Gx/ZyK545+cKSFTP6WXwwHW9ZwjDVMA2XzDA1ilkUHdfJVEQMHN0oSZjVQv0HJfEGmqh31L9+rYNomAVGY5NLGHZjqF5jOn39NdNc/cLCWCQCLDAjYQVYojhf6QBMyRXnnxVLHfhJGv7zaA+lNO4sGlsbP0LIy8FVb/L7GNl0f3t7fweNi8ld/xq+42FvhN/JaDCEz+i6NxxQ6y9MJCRgeQQ5rgaOoWMOsJkbfFBiyYLVd8hZrO346ZZ35LQIHDstCEdHxOHIaKE47pVowAiarBBB37E+sKxtotkKGfRbVtei26WsvxWW//nzX+cPaC8FllmGxx+8OUuV3/jqOOCm32qHO4uEP3zLgwkbTJ6sLuVLEkl26CIoJPCiQBAHBLac4JiOLrA+sEVYu9Hcr7smCStqZzhgUApq1IUMsRSV2iYyVqRdWmepqPu1Rt0V4q5Uq+dl/brGmpSrZVneZhhoujAm1d16PV+ArXU3T6UyKLmELWAZY7mBcw7XnGURuiiSAYvsMOBBnd3p88YnH7e09QgYYSHozB18ClS+gl1gSItqe+GmvbIa39G13sBKc7gppwdl0KpyuKp00eRcbs9gNZAlgI6MrGfIcDAak97DDXoAHOUCYM+aYqfaxMwWtgUed0PD88S5+e3DYKu0/1efMoUvDX81dTh+hM3NzFHbpcsjOhokIWEw9zFlLAeKXXSrZw/E0MX/keb5jGk8IdZrHAZkCh9300262MwKhcY2ZKitho645MCz6SDyMjWSlU3NKMMeNJ+R+5sX2noKsovybZkX03233Im9VDfqe6+VtVdqYEWcmqOy0y0aPtyP8OKdFY+5WIaooxhWvPhvoUq7fZv/diyHtEqeMji9Yd7ZxGxGqu+S4dmSoWjgrg46Y5cXpWfwH7d1UCXPHdXW60reTX1XoyKjk8bYTAH1324aQgo=
+sidebar_class_name: "post api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Create a folder"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/api/2.0/files/folder/{folderId}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Creates a new folder with the title specified in the request. The parent folder ID can be also specified.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"folderId","in":"path","description":"Parent folder ID","schema":{"type":"string"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"title":{"description":"Folder title","type":"string"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"New folder contents","content":{"application/json":{"schema":{"type":"object","properties":{"ParentId":{"type":"object","example":"1840746475"},"FilesCount":{"type":"integer","format":"int32","example":"1840746475"},"FoldersCount":{"type":"integer","format":"int32","example":"1840746475"},"IsShareable":{"type":"boolean","example":"true"},"IsFavorite":{"type":"boolean"},"Id":{"type":"object","example":"857864274"},"Title":{"type":"string","example":"Some titile.txt"},"Access":{"type":"integer","format":"int32","enum":["None","ReadWrite","Read","Restrict","Varies","Review","Comment","FillForms","CustomFilter"],"description":"[0 - None, 1 - ReadWrite, 2 - Read, 3 - Restrict, 4 - Varies, 5 - Review, 6 - Comment, 7 - FillForms, 8 - CustomFilter]","example":"1"},"Shared":{"type":"boolean","example":"false"},"Created":{"type":"string","example":"2020-12-13T17:13:31.5902727Z"},"CreatedBy":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"},"Updated":{"type":"string","example":"2020-12-13T17:13:31.5902727Z"},"RootFolderType":{"type":"integer","format":"int32","enum":["DEFAULT","COMMON","BUNCH","TRASH","USER","SHARE","Projects","Favorites","Recent","Templates","Privacy"],"description":"[0 - DEFAULT, 1 - COMMON, 2 - BUNCH, 3 - TRASH, 5 - USER, 6 - SHARE, 8 - Projects, 10 - Favorites, 11 - Recent, 12 - Templates, 13 - Privacy]","example":"2"},"UpdatedBy":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"},"ProviderItem":{"type":"boolean","example":"true"},"ProviderKey":{"type":"string","example":"1234d"},"ProviderId":{"type":"integer","format":"int32","example":"1234"},"DenyDownload":{"type":"boolean"},"DenySharing":{"type":"boolean"}},"title":"FolderWrapper"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

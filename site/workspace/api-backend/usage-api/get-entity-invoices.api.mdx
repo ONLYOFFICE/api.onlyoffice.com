@@ -1,0 +1,71 @@
+---
+id: get-entity-invoices
+title: "Get entity invoices"
+description: "Returns a list of all the invoices related to the entity with the ID and type specified in the request."
+sidebar_label: "Get entity invoices"
+hide_title: true
+hide_table_of_contents: true
+api: eJztWO9u2zYQfxVBnzbMjmU7xVoDw5DELmqsSQPHRdGm+UBLZ4upRGr848Zz/Dh7kT3Z7igpttYkUrpiGwb7g0GRd8e73/0heWvfsIX2B5d+qNLOWCwlD0H7Vy1fQ2gVNytcW/tH1sRS8d+Y4VK8AhaBIh6FI7/lf0Y68K82yBWBDhXPiMwf+BMwVgntMS/h2nhy7rEk8UwMHi928hQkzEDkGenmQRjc0/vMTey+x0OPCVxdZeDpDEI+50jMhVtU8KsFbQ5QhWJ4LCNUeO2HUhgURUOWZQkPneKda01qrX0dxpAyGpFgVFTOriE0KCdTMgNlOGKAq7k2U0ez/ottBValxk5Qq5SnjeJi4W9ahQge1QoYD7fsHLVfIMQb9yPrdCaFzpXqBcGXwl4X+Ja4oqynYsCUYivkQ1+muh6bC8OMbUA35SaBHbICGkTmhqUZLRUkaCdisCUsQWj5c6lSZvKpfq/C2u31D32CyOTblKjm2r1TaDnh2PLPbDqjoH1MD6eC1haGGJKPk/aCXtDu9trdw2mvN+j2B4fdg2f9H5/3+v0PJGYKSIhSythpYJOwKeXUyNLyxLokrDr5MvDaHq63vC4OkOSqolNAG5+g11loGvgvxVx8KY18q5LHbbUqofScIy3tcAoRt+nXcA65RlBWZyytCwgWXUMUcQHeMQtjrnLPnMg0Y2K1wzuTMgEmKsxzlmgXTUchJoKmzPj6KB9H92l65zxreVT1QfFr3/NX/p4ExSn/BN4HtJoZ/Ym70KpPqFMm2CKP+6MlM0w5ZzfylSZKjzku4j9Xcs4TqHX1x48dJI1saDQNQeJ0PkfsB0xnNz9bDeonFqVcoE8UM1JVUneEouQKgLIW8qWxPld8Wc3G+3xulM0LiL6ImYKoaYg46qfn6JkUVOwnePy9c2dfPn4gY4m6SNmSoeX1is/7UtgqBSJcfZPaehJjFmnw3lvEgCxepTNZ48s/fneRM5spWHKWm/LoHmfvc70TPO6hPqZPzsp8Fks0hs2S5v49ZpqHzdy7E1olpGMxlzuHwgkTo4ibhpsj9RASaB6Mf/80K6o5Gg27auNdgC8EwL7K76v8vsrvq/y+yv8Pq/zIvQvrw2NUeaQ+7A+ZZVIZK0jonfhK5Wus/eGzrYQG0flKYk2IZRJ57iHKBD38aTMlwHg6llm1Qji5O0gMv8WL7DUTC4v1sv4JuM/MfyozRzdhjG6BSdW7In+r74RhJC0pWYnDliuj51ahDA1vVASq6SN/CqpyLXiAbLhb5euIX+IB+PRa0O46zylABN7U7FIX4bmU4wZxu7/v/Hv3Hbq+V+6qjaI9yKP9P3+UFe23ylGW9zAPg+6Xbcu3ghWdZbzNEVUK+InR6S/AhS0zMX50WMY7vYOgQ03q9bYrO/guzI/OW9xIS3Eb5m+H252z7vtNp2iKUg+65ObR4DJov7j6YeNTq1thHdSu020pJPzYmEwPOp11jL7aDNYkjSiXTHEqly6L4sKPEcwZll5kS2TIEjeNphBPdfl58KJHcOx01y+oC5uLu7fHvn3RZPwXcE8awi3Ol1u+cKlW5XVAUpt3sm2Kj0qXVZvaOzF/16cONrTJXLrN724oaerQ9C4cVt5kdDH1js7HhAlCl3uTGp5k++ZPruokqg==
+sidebar_class_name: "get api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get entity invoices"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/crm/{entityType:(contact|person|company|opportunity)}/invoicelist/{entityid:[0-9]+}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns a list of all the invoices related to the entity with the ID and type specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"entityType":{"description":"Invoice entity type","type":"string"},"entityid":{"description":"Invoice entity ID","type":"integer"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"List of invoices","content":{"application/json":{"schema":{"type":"array","items":{"type":"object","properties":{"Status":{"type":"object","properties":{"Title":{"type":"string","example":"Title"},"ID":{"type":"integer","format":"int32","example":"1234"}},"title":"InvoiceStatusWrapper"},"Number":{"type":"string","example":""},"IssueDate":{"type":"string","example":"2020-12-14T22:13:41.5378233Z"},"TemplateType":{"type":"integer","format":"int32","enum":["Eur","Rus"],"description":"[0 - Eur, 1 - Rus]","example":"0"},"Contact":{"type":"object","properties":{"SmallFotoUrl":{"type":"string","example":"url to foto"},"MediumFotoUrl":{"type":"string","example":"url to foto"},"DisplayName":{"type":"string","example":"Tadjeddine Bachir"},"IsCompany":{"type":"boolean","example":"false"},"AccessList":{"type":"array","items":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"}},"IsPrivate":{"type":"boolean","example":"true"},"IsShared":{"type":"boolean","example":"false"},"ShareType":{"type":"integer","format":"int32","enum":["None","ReadWrite","Read"],"description":"[0 - None, 1 - ReadWrite, 2 - Read]","example":"0"},"Currency":{"type":"object","properties":{"Title":{"type":"string","example":"Chinese Yuan"},"Symbol":{"type":"string","example":"¥"},"Abbreviation":{"type":"string","example":"CNY"},"CultureName":{"type":"string","example":"CN"},"IsConvertable":{"type":"boolean","example":"true"},"IsBasic":{"type":"boolean","example":"false"}},"title":"CurrencyInfoWrapper"},"CanEdit":{"type":"boolean","example":"true"},"CanDelete":{"type":"boolean","example":"true"},"ID":{"type":"integer","format":"int32","example":"1234"}},"title":"ContactBaseWrapper"},"Consignee":{"type":"object","properties":{"SmallFotoUrl":{"type":"string","example":"url to foto"},"MediumFotoUrl":{"type":"string","example":"url to foto"},"DisplayName":{"type":"string","example":"Tadjeddine Bachir"},"IsCompany":{"type":"boolean","example":"false"},"AccessList":{"type":"array","items":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"}},"IsPrivate":{"type":"boolean","example":"true"},"IsShared":{"type":"boolean","example":"false"},"ShareType":{"type":"integer","format":"int32","enum":["None","ReadWrite","Read"],"description":"[0 - None, 1 - ReadWrite, 2 - Read]","example":"0"},"Currency":{"type":"object","properties":{"Title":{"type":"string","example":"Chinese Yuan"},"Symbol":{"type":"string","example":"¥"},"Abbreviation":{"type":"string","example":"CNY"},"CultureName":{"type":"string","example":"CN"},"IsConvertable":{"type":"boolean","example":"true"},"IsBasic":{"type":"boolean","example":"false"}},"title":"CurrencyInfoWrapper"},"CanEdit":{"type":"boolean","example":"true"},"CanDelete":{"type":"boolean","example":"true"},"ID":{"type":"integer","format":"int32","example":"1234"}},"title":"ContactBaseWrapper"},"Entity":{"type":"object","properties":{"EntityType":{"type":"string","example":"opportunity"},"EntityId":{"type":"integer","format":"int32","example":"123445"},"EntityTitle":{"type":"string","example":"Household appliances internet shop"}},"title":"EntityWrapper"},"DueDate":{"type":"string","example":"2020-12-14T22:13:41.5378233Z"},"Language":{"type":"string","example":""},"Currency":{"type":"object","properties":{"Title":{"type":"string","example":"Chinese Yuan"},"Symbol":{"type":"string","example":"¥"},"Abbreviation":{"type":"string","example":"CNY"},"CultureName":{"type":"string","example":"CN"},"IsConvertable":{"type":"boolean","example":"true"},"IsBasic":{"type":"boolean","example":"false"}},"title":"CurrencyInfoWrapper"},"ExchangeRate":{"type":"number","format":"double","example":"1,0"},"PurchaseOrderNumber":{"type":"string","example":""},"Terms":{"type":"string","example":""},"Description":{"type":"string","example":""},"FileID":{"type":"integer","format":"int32","example":"-1"},"CreateOn":{"type":"string","example":"2020-12-14T22:13:41.5378233Z"},"CreateBy":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"},"Cost":{"type":"number","format":"double","example":"0,0"},"CanEdit":{"type":"boolean","example":"true"},"CanDelete":{"type":"boolean","example":"true"},"ID":{"type":"integer","format":"int32","example":"1234"}},"title":"InvoiceBaseWrapper"}}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

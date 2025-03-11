@@ -1,0 +1,71 @@
+---
+id: get-the-folder-path
+title: "Get the folder path"
+description: "Returns a path to the folder with the ID specified in the request."
+sidebar_label: "Get the folder path"
+hide_title: true
+hide_table_of_contents: true
+api: eJztV0tv4zYQ/isEz0pky06cNVAUXsfZBG2ygR9dYLM+MBIdcyOJKkk5UQX9986QsiM3ymPRPfRQHyw+5vFxZj5qVFLD7jQd3tCViLn2z2QccaXp0qOah7kSpoDNko5ys5ZK/MWMkOk5ZyCESgpG1KMPIMfpsgKtiOtQiQzF6JBOuclVqgkjGTNrYiQxa05W1gl5ELgE84tTojMeipXgERGpXVP8z5xrcwjWM6ZYwg3CQigpTMC0M3KB7gW6Qgf0n/7dccAB7OhwzRNGhyU1RYYWtFEivaMVwlZcZzLVXON+0Ongo9VU7SaUqeGpQTGWZbEIbWD87xply+e+mFKsQKiGJ7qxLm+/89DgIZXMuDLCIbhmCqzD4Vok+SNLshiXuif9zqB/3B8c0cqjZ5jAscwdqlpLAMw7yJUH8VIJM26pF7xmx5XAT7B0oWdrOAi7xb2doVspY87SPT2jcu40zthG2mp6roD7b0Tk5GhwctwPBn0Unguz57jOd1N+JhNOjDAQukPzaFBrFIZc63cePM0TpMGVTDlMp8CGLxa8G9sHerUo/2AKs4trG8EfYDCWSYJFZHMXn4F13B7n2sgEVqDi6TNG3XTIAUF/HunCaOfSI0E99UjPjpxjj/Rh5nx75MjuoHuPHMO4RuCRAUx2IDxygnsNHMv9LGOcbGqjN/K6YrG2iR1DGZg98ZZsBJ2gc9ANDrq9eXcw7PaGve7h0YdOMAgGXxtGPhZvE+ii1dUugXkuoj3Xnfp30PK3/SGEU6GzmBVX9g567SyX4p6TrywtmNH34p3leMlShqWGZbhhhqlZwuL4dZ1cxXivapQkzGqh/rWSeKMv1Bvq3775IBrlodE45BKW3RqqHzKdPf6aa65+YVEiUgEWmJHgAVwYdyA6AVOy4PyLYpkDv8iif5/tqZTG3UVza+NHCHk6ORstfp8jmz5fXn6+gsHHxdX4HJ7z6WiGz8VsMoXH7Hw0nVAbLywkJOD2CnJcDR1D5xxgM7d4rcSGhcUL5Kx9O346946cFoFjpwXh6Ig4HBktFMe9LRowgiZ3iGDuWB9a1nbR7A4ZzHtW16Lbp2zQSMv//Pmv8we0NwK7G+gW3vnm3Kr8xovXAXeDXj/acxL98FseTNhk8rQ4lQ9pLFnbi6CWwBcFgmgRaATBMR1DYGOAP4/2O93njdgiZXUzCjcMSkFvuJYAgN5xW8jYoQ2pzzLhB4cd3zW2rl30y23bWPl1Jwe52WxbyxyzTdfGZHro++VaalMNy0wqU4HkBs6BvYwlCO45bCuWxxinWIYstsuACXX2t086HwI8V6OznmGX6My19tdP3WMmMK91p7t22962E97TtRER6Upa9Tq4+JrPU/BIZva0ZDqZzcno+gJPBYd3gbWXSI1em4TZTrb28YmbZuve1myXT03xz+n768Mb/mh8uDSErajcEdIl+QYjA5KQZqxYTLSt3NjFZ9j4RrAKEHuXtxtalrdMI72rCpfBqcIvneVTmm1FRELjGKrLtjKvHLn5qdGKfJvLtLC1FOc4g+E9Mvbpc6Zagux6+4VV1tvYlWamofjsqwMLa8eETxN89yFP9qvo3lZRPUDrraD2C2qLEP8r7wWVsnQ1WlU7ebf1osauip00xmgJ9Pgbbte+hg==
+sidebar_class_name: "get api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get the folder path"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/files/folder/{folderId}/path"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns a path to the folder with the ID specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"folderId","in":"path","description":"Folder ID","schema":{"type":"string"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Folder path","content":{"application/json":{"schema":{"type":"array","items":{"type":"object","properties":{"ParentId":{"type":"object","example":"1840746475"},"FilesCount":{"type":"integer","format":"int32","example":"1840746475"},"FoldersCount":{"type":"integer","format":"int32","example":"1840746475"},"IsShareable":{"type":"boolean","example":"true"},"IsFavorite":{"type":"boolean"},"Id":{"type":"object","example":"857864274"},"Title":{"type":"string","example":"Some titile.txt"},"Access":{"type":"integer","format":"int32","enum":["None","ReadWrite","Read","Restrict","Varies","Review","Comment","FillForms","CustomFilter"],"description":"[0 - None, 1 - ReadWrite, 2 - Read, 3 - Restrict, 4 - Varies, 5 - Review, 6 - Comment, 7 - FillForms, 8 - CustomFilter]","example":"1"},"Shared":{"type":"boolean","example":"false"},"Created":{"type":"string","example":"2020-12-13T17:13:31.5902727Z"},"CreatedBy":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"},"Updated":{"type":"string","example":"2020-12-13T17:13:31.5902727Z"},"RootFolderType":{"type":"integer","format":"int32","enum":["DEFAULT","COMMON","BUNCH","TRASH","USER","SHARE","Projects","Favorites","Recent","Templates","Privacy"],"description":"[0 - DEFAULT, 1 - COMMON, 2 - BUNCH, 3 - TRASH, 5 - USER, 6 - SHARE, 8 - Projects, 10 - Favorites, 11 - Recent, 12 - Templates, 13 - Privacy]","example":"2"},"UpdatedBy":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"},"ProviderItem":{"type":"boolean","example":"true"},"ProviderKey":{"type":"string","example":"1234d"},"ProviderId":{"type":"integer","format":"int32","example":"1234"},"DenyDownload":{"type":"boolean"},"DenySharing":{"type":"boolean"}},"title":"FolderWrapper"}}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

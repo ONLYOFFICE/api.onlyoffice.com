@@ -1,0 +1,71 @@
+---
+id: get-dns-records-by-domain-id
+title: "Get DNS records by domain ID"
+description: "Returns DNS records related to the domain with the ID specified in the request."
+sidebar_label: "Get DNS records by domain ID"
+hide_title: true
+hide_table_of_contents: true
+api: eJzdVktP20AQ/ivWnlMcAoc2N0oQRFURIsAF5bCxJ/ES2+vujoHU8n/vzK6d2AICquilSDj7+Obx7czObCVQrqwY34tMqtSCeQQTTjRNcivmA2EhKo3CDSEqcVJioo36LVHp/AJkDIYlDY3EQDwRDsS8JqkYbGRUwTAxFteApcltMLmcBQYibWJLv6lEiAPUASYQxM5i8KQwcfPpJLAFRGqpCEMbvGbgVwkWD8hUM/yuY3KsEpHOEXLkoSyKVEXOwfDBsvlK2CiBTPIINwWQQ3rxABGSnsLoAgwqsLyrYv72ffdHQf4QupFWZGxFzGv3x87YQufW6xgNh68o6RCX1upIOe5btp49WfgkItO4g2ndHYilNplEv3Q0ogV4llmRMuhwdHQsiMvP52vn5/s2LrTFDsqiUfmqp9MhSOeVUdqn0N/5NLV3YFwmdDQstE5B5j0BNCUIjggqdAszl84+hC2ziUTJWmfF8qNUL2UG+6nmjCCldzIt34E+Osin0Zrkts9rslbZR4nNIKVlbfZ7vEVxLMsFZeUP2OwX2cE+j+iW15apWz9NIFr/l5Hcq3aPFi/vStPx8PBlNbrNZVPHSTOjMqApGRErcEcmMaFJKAsVjg6GYacx+EJlw5j+PdhvWNceSpOSXIJY2HEYVgnd/3pcFdpgTchHaZRcpD4QSVM9YljKMuX7n+pIpklTMlimv/11+G3EpDotacbV0Kt7tTFtz4yIcCoOqMawf3574EM97su68+Bye73rMGdt/HyHGNasaKmdgSYCpzrLypx8Cnwsguuz2U1wcjVl3nQ8/uC547X8LGbS1fTGi3PAXn9cbNqe6FpPL4KdhvcPemtzaAjPGBYp9yVy2IW2alLjnk+UkJQc9N2lB/vZvBxo5L6cJBQyH+57UVULaeHWpHXNy2TT8MtivssOnpG9pH1cVGLNxYZO2DH+csPeDZq7N37ZJetBK3ESRVDgXuy8k/vnZzeEXTQvikzHLGLkE7826DsWNNAuAC7j3FpFIc1XpVwx1qvk/OHr1U+/tUu/ZsCk2q1803Gwn4mDhsfaVdE3RKrKJ3ddb/FtWXpDYpv+Hs3hnZPXfwDPEG0W
+sidebar_class_name: "get api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get DNS records by domain ID"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/mailserver/domains/dns/get"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns DNS records related to the domain with the ID specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"id":{"description":"Domain ID","type":"integer"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"DNS records associated with the domain","content":{"application/json":{"schema":{"type":"object","properties":{"Id":{"type":"integer","format":"int32","example":"1234"},"MxRecord":{"type":"object","properties":{"Host":{"type":"string","example":"Host"},"Priority":{"type":"integer","format":"int32","example":"1234"},"IsVerified":{"type":"boolean","example":"true"}},"title":"ServerDomainMxRecordData"},"SpfRecord":{"type":"object","properties":{"Name":{"type":"string","example":"name"},"Value":{"type":"string","example":"value"},"IsVerified":{"type":"boolean","example":"true"}},"title":"ServerDomainDnsRecordData"},"DkimRecord":{"type":"object","properties":{"Selector":{"type":"string","example":"Selector"},"PublicKey":{"type":"string","example":"PublicKey"},"IsVerified":{"type":"boolean","example":"true"}},"title":"ServerDomainDkimRecordData"},"DomainCheckRecord":{"type":"object","properties":{"Name":{"type":"string","example":"name"},"Value":{"type":"string","example":"value"},"IsVerified":{"type":"boolean","example":"true"}},"title":"ServerDomainDnsRecordData"},"IsVerified":{"type":"boolean"}},"title":"ServerDomainDnsData"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      
