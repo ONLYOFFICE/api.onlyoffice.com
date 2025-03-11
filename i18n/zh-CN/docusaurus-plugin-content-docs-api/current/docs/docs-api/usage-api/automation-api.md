@@ -36,7 +36,7 @@ const connector = docEditor.createConnector()
 | *text*     | string                   | 项目标题。                                                                                                       |
 | *data*     | string                   | 项目数据（此数据将发送到点击事件回调）。                                                        |
 | *disabled* | boolean                  | 指定当前项是否已禁用。                                                                          |
-| *icons*    | string                   | 项目图标（请参阅插件 [config](../../plugin-and-macros/structure/manifest/manifest.md#icons) documentation)文档）。 |
+| *icons*    | string                   | 项目图标（请参阅插件 [config](../../plugin-and-macros/structure/manifest/manifest.md#variationsicons)文档）。 |
 | *onClick*  | function                 | 点击事件回调。                                                                                                  |
 | *items*    | Array.\<ContextMenuItem> | 包含当前项的上下文菜单项的数组。                                                           |
 
@@ -267,7 +267,7 @@ connector.executeMethod("GetCurrentWord", [], (word) => {
 | text     | string                   | 项目文本。                                                                                                             |
 | data     | string                   | 项目数据（此数据将发送到点击事件回调）。                                                        |
 | disabled | boolean                  | 指定当前项目是否已禁用。                                                                          |
-| icons    | string                   | 项目图标（请参阅插件 [config](../../plugin-and-macros/structure/manifest/manifest.md#icons) 文档）。 |
+| icons    | string                   | 项目图标（请参阅插件 [config](../../plugin-and-macros/structure/manifest/manifest.md#variationsicons) 文档）。 |
 | items    | array of ContextMenuItem | 包含当前项的上下文菜单项的数组。                                                         |
 
 示例:

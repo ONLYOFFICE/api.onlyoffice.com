@@ -6,10 +6,12 @@ ONLYOFFICE 文档 API 的更改列表。
 
 <!--- 添加了从 [vsdm、vsdx、vssm、vssx、vstm、vstx](../additional-api/conversion-api/conversion-tables.md#diagram-document-file-formats) 格式的转换。
 - 将 *diagram* 文档类型添加到 [documentType](../usage-api/config.md#documenttype) 参数。-->
+- 添加了 [editorConfig.customization.features.featuresTips](../usage-api/config/editor/customization/customization-standard-branding.md#featuresfeaturestips) 参数。
+- 添加了 [editorConfig.customization.showHorizontalScroll](../usage-api/config/editor/customization/customization-standard-branding.md#showhorizontalscroll) 和 [editorConfig.customization.showVerticalScroll](../usage-api/config/editor/customization/customization-standard-branding.md#showverticalscroll) 参数。
 - 添加了 [editorConfig.customization.slidePlayerBackground](../usage-api/config/editor/customization/customization-standard-branding.md#slideplayerbackground) 参数。
 - 添加了 [editorConfig.customization.wordHeadingsColor](../usage-api/config/editor/customization/customization-standard-branding.md#wordheadingscolor) 参数。
 - 添加了 [editorConfig.customization.mobile.info](../usage-api/config/editor/customization/customization-standard-branding.md#mobileinfo) 参数。
-- 添加了 [pages, key, numbers](../usage-api/config/config.md#documenttype) 格式的打开方式。
+- 添加了 [pages, key, numbers, hwp, hwpx](../usage-api/config/config.md#documenttype) 格式的打开方式。
 - 添加了 [events.onUserActionRequired](../usage-api/config/events.md#onuseractionrequired) 事件。
 - 添加了 [refreshFile](../usage-api/methods.md#refreshfile) 方法。
 - 添加了 [events.onRequestRefreshFile](../usage-api/config/events.md#onrequestrefreshfile) 事件。
@@ -56,6 +58,7 @@ ONLYOFFICE 文档 API 的更改列表。
 
 ## 版本 8.0
 
+- 添加了 [document.isForm](../usage-api/config/document/document.md#isform) 参数。
 - 在浏览器向服务器的请求中添加了 [WOPISrc](../using-wopi/key-concepts.md#wopisrc) 查询参数。
 - 向转化请求添加了 [watermark](../additional-api/conversion-api/request.md#watermark) 字段。
 - 在 [documentType](../usage-api/config/config.md#documenttype) 参数中添加了 *pdf* 文档类型。
@@ -95,7 +98,7 @@ ONLYOFFICE 文档 API 的更改列表。
 - 添加了 [setReferenceData](../usage-api/methods.md#setreferencedata) 方法。
 - 添加了 [events.onRequestReferenceData](../usage-api/config/events.md#onrequestreferencedata) 事件。
 - 添加了 [document.referenceData](../usage-api/config/document/document.md#referencedata) 参数。
-- 向 *CheckFileInfo* WOPI 操作添加了 [UserCanNotWriteRelative](../using-wopi/wopi-rest-api/checkfileinfo.md#usercannotwriterelative) 属性。
+- 向 *CheckFileInfo* WOPI 操作添加了 [UserCanNotWriteRelative](../using-wopi/wopi-rest-api/checkfileinfo.md#user-permissions-properties) 属性。
 - 添加了 [编辑二进制文档格式](../using-wopi/editing-binary-documents.md) 的方案。
 - 向 WOPI 发现添加了 [convert](../using-wopi/wopi-discovery.md#wopi-actions) 操作。
 - 添加了 [PutRelativeFile](../using-wopi/wopi-rest-api/putrelativefile.md) WOPI 操作。

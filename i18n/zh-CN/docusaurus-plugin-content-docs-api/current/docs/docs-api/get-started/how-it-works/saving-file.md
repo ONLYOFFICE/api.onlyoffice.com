@@ -2,6 +2,9 @@
 sidebar_position: -21
 ---
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 # 保存文件
 
 参考图和以下步骤说明了在 ONLYOFFICE 文档中保存文档的过程。
@@ -57,9 +60,18 @@ sidebar_position: -21
 
 转换开始延迟对于允许在不保存文件的情况下返回文件编辑会话是必要的，例如在打开文件进行编辑的情况下重新加载浏览器页面时。默认转换开始延迟时间由 [services.CoAuthoring.server.savetimeoutdelay](https://helpcenter.onlyoffice.com/installation/docs-developer-configuring.aspx#services-CoAuthoring-server-savetimeoutdelay) 参数在 **ONLYOFFICE 文档**配置文件中定义, 配置文件可以在以下路径中找到:
 
-对于 Linux - */etc/onlyoffice/documentserver/**default.json***。
-
-对于 Windows - *%ProgramFiles%\ONLYOFFICE\DocumentServer\config\\**default.json***。
+<Tabs>
+  <TabItem value="windows" label="Windows">
+      ``` bash
+      %ProgramFiles%\ONLYOFFICE\DocumentServer\config\default.json
+      ```
+  </TabItem>
+  <TabItem value="linux" label="Linux">
+      ``` bash
+      /etc/onlyoffice/documentserver/default.json
+      ```
+  </TabItem>
+</Tabs>
 
 如果要更改它，可以使用 *local.json* 文件，该文件应存储所有已编辑的参数。此文件与 *default.json* 文件位于同一目录中，并且**必须保留**必要参数的**完整对象结构**（请参见下面的示例）。
 
@@ -95,9 +107,18 @@ sidebar_position: -21
 
 - 您可以在 **ONLYOFFICE 文档**附加配置文件中启用[开始重复强制保存](https://helpcenter.onlyoffice.com/installation/docs-developer-configuring.aspx#AutoAssembly)，该文件可以在以下路径中找到或被放置（如果您已经创建了它）：
 
-  对于 Linux - */etc/onlyoffice/documentserver/**local.json***.
-
-  对于 Windows - *%ProgramFiles%\ONLYOFFICE\DocumentServer\config\\**local.json***.
+  <Tabs>
+    <TabItem value="windows" label="Windows">
+        ``` bash
+        %ProgramFiles%\ONLYOFFICE\DocumentServer\config\local.json
+        ```
+    </TabItem>
+    <TabItem value="linux" label="Linux">
+        ``` bash
+        /etc/onlyoffice/documentserver/local.json
+        ```
+    </TabItem>
+  </Tabs>
 
   ### 参数
 
