@@ -2,7 +2,7 @@
 sidebar_position: 2
 ---
 
-# Room Selector
+# Room selector
 
 Opens the room selector and allows you to select a room from a list of the available rooms.
 

@@ -20,7 +20,7 @@ Here the `https://example.com/url-to-callback.ashx` is the address of the specia
 
 All the parameters which can be sent to the callback handler and their description can be found at [this page](../../usage-api/callback-handler.md).
 
-There are also examples in several programming languages of how this handler can be implemented: [.Net (C#)](../../usage-api/callback-handler.md#net-c-document-save-example), [Java](../../usage-api/callback-handler.md#java-document-save-example), [Node.js](../../usage-api/callback-handler.md#nodejs-document-save-example), [PHP](../../usage-api/callback-handler.md#php-document-save-example), [Ruby](../../usage-api/callback-handler.md#ruby-document-save-example).
+There are also [examples](../../usage-api/callback-handler.md#document-save-examples) in several programming languages of how this handler can be implemented: .Net (C#), Java, Node.js, PHP, Ruby.
 
 ## What is the 'document.key' parameter?
 
