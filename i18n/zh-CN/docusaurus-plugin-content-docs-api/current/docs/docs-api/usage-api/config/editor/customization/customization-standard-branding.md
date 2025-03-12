@@ -1,5 +1,6 @@
 ﻿---
 sidebar_label: Standard branding
+
 ---
 
 # 定制 - 白标定制
@@ -265,6 +266,7 @@ const customer = {
 
 ``` ts
 const features = {
+  featuresTips: true,
   roles: true,
   spellcheck: {
     mode: true,
@@ -279,6 +281,14 @@ const features = {
   },
 }
 ```
+
+### features.featuresTips
+
+`类型: boolean`
+
+Defines if the tooltips about new editor features will be displayed or hidden on first loading. 默认值为 **true**。
+
+**示例**: `true`
 
 ### features.roles
 
@@ -727,6 +737,12 @@ const mobile = {
 
 包含有关审阅模式的信息。
 
+:::请注意，
+如果在编辑器界面中更改此设置，它将存储在浏览器本地存储中，并将覆盖作为 *editorConfig.customization.review.hoverMode* 和 *editorConfig.customization.review.reviewDisplay* 参数发送的任何值。
+
+[showReviewChanges](#showreviewchanges), [reviewDisplay](#reviewdisplay), [trackChanges](#trackchanges) 参数自 7.0 版起已弃用。请改用 *review* 参数。
+:::
+
 **示例**:
 
 ``` ts
@@ -738,13 +754,6 @@ const review = {
   hoverMode: false,
 }
 ```
-
-:::请注意，
-如果在编辑器界面中更改此设置，它将存储在浏览器本地存储中，并将覆盖作为 *editorConfig.customization.review.hoverMode* 和 *editorConfig.customization.review.reviewDisplay* 参数发送的任何值。
-:::
-:::danger[Deprecated]
-[showReviewChanges](#showreviewchanges), [reviewDisplay](#reviewdisplay), [trackChanges](#trackchanges) 参数自 7.0 版起已弃用。请改用 *review* 参数。
-:::
 
 ![审阅显示](/assets/images/editor/reviewDisplay.png)
 
@@ -808,14 +817,14 @@ const review = {
 
 查看器的默认值是 **original**, 编辑器的默认值是 **markup**。                                                       
 
-**示例**: `"original"`
-
 :::请注意，
 如果在编辑器界面中更改此设置，它将存储在浏览器本地存储中，并将覆盖作为 *editorConfig.customization.reviewDisplay* 参数发送的任何值。
 :::
 :::danger[Deprecated]
-自 7.0 版起已弃用。请改用 [review.reviewDisplay](#review) 参数。
+自 7.0 版起已弃用。请改用 [review.reviewDisplay](#reviewreviewdisplay) 参数。
 :::
+
+**示例**: `"original"`
 
 ## showHorizontalScroll
 
@@ -832,7 +841,7 @@ const review = {
 定义在加载编辑器时是否自动显示或隐藏审阅更改面板。默认值为 **false**。
 
 :::danger[Deprecated]
-自 7.0 版起已弃用。请改用 [review.showReviewChanges](#review) 参数。
+自 7.0 版起已弃用。请改用 [review.showReviewChanges](#reviewshowreviewchanges) 参数。
 :::
 
 **示例**: `false`
@@ -863,7 +872,7 @@ const review = {
 如果在编辑器界面中更改此设置，它将存储在浏览器本地存储中，并将覆盖作为 *editorConfig.customization.spellcheck* 参数发送的任何值。
 :::
 :::danger[Deprecated]
-自 7.1 版起已弃用。请改用 [features.spellcheck](#features) 参数。
+自 7.1 版起已弃用。请改用 [features.spellcheck](#featuresspellcheck) 参数。
 :::
 
 **示例**: `true`
@@ -932,7 +941,7 @@ const review = {
 无论 [document.permissions.review](../../document/permissions.md#review) 参数如何， 定义是(**true**)否(**false**)以审阅编辑模式打开文档（仅针对当前用户更改审阅模式）。如果参数是 *未定义*，则使用 *document.permissions.review* 值（对于所有文档用户）。
 
 :::danger[Deprecated]
-自 7.0 版起已弃用。请改用 [review.trackChanges](#review.trackchanges) 参数。
+自 7.0 版起已弃用。请改用 [review.trackChanges](#reviewtrackchanges) 参数。
 :::
 
 **示例**: `true`
@@ -1026,6 +1035,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
         www: "example.com",
       },
       features: {
+        featuresTips: true,
         roles: true,
         spellcheck: {
           mode: true,

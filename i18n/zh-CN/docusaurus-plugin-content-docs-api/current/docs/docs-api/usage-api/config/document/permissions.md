@@ -26,7 +26,7 @@
 
 `类型: boolean`
 
-`定义是否可以评论文档。如果评论权限设置为 **"true"**，文档**侧栏**将包含**评论**菜单选项；如果 [mode](../editor/editor.md#mode) 参数设置为 **edit**，文档注释将仅对文档编辑器可用。默认值与 [edit](#edit) 参数的值一致。
+定义是否可以评论文档。如果评论权限设置为 **"true"**，文档**侧栏**将包含**评论**菜单选项；如果 [mode](../editor/editor.md#mode) 参数设置为 **edit**，文档注释将仅对文档编辑器可用。默认值与 [edit](#edit) 参数的值一致。
 
 :::请注意
 如果 *edit* 设置为 **"true"** 并且 *comment* 也设置为 **"true"**，用户将能够编辑文档和评论。如果 *edit* 设置为 **"true"**，*comment* 设置为 **"false"**，用​户将只能编辑，相应的评论功能将只能查看，评论的添加和编辑将不可用。如果 *edit* 设置为 **"false"** 并且 *comment* 设置为 **"true"**，该文档将仅用于评论。如果 *edit* 设置为 **"false"**，*review* 设置为 **"false"**，*comments* 设置为 **"true"**，则不考虑 *fillForms* 值并且无法填写表单。
@@ -129,7 +129,7 @@ const config = {
 定义是否可以填写表单。仅当[mode](../editor/editor.md#mode)参数设置为 **edit**时，文档编辑器和 pdf编辑器才可以填写表单。默认值与[edit](#edit) 或 [review](#review) 参数的值一致。
 
 :::请注意
-如果 *edit* 设置为 **"true"** 或 *review* 设置为 **"true"**，则不考虑 *fillForms* 值并且可以填写表单。|如果 *edit* 设置为 **"false"** 并且 *review* 设置为 **"false"** 并且fillForms也设置为 **"true"**，用户只能填写文档中的表单。如果 *edit* 设置为 **"false"** 并且 *review* 设置为 **"false"** 而且 *fillForms* 设置为 **"true"**，不考虑 *comments* 值并且评论不可用。仅填写表单模式目前仅适用于**文档编辑器**。
+如果 *edit* 设置为 **"true"** 或 *review* 设置为 **"true"**，则不考虑 *fillForms* 值并且可以填写表单。如果 *edit* 设置为 **"false"** 并且 *review* 设置为 **"false"** 并且fillForms也设置为 **"true"**，用户只能填写文档中的表单。如果 *edit* 设置为 **"false"** 并且 *review* 设置为 **"false"** 而且 *fillForms* 设置为 **"true"**，不考虑 *comments* 值并且评论不可用。仅填写表单模式目前仅适用于**文档编辑器**。
 :::
 
 **示例**: `true`
@@ -192,7 +192,7 @@ const config = {
 
 `类型: boolean`
 
-Defines if the document can be reviewed or not. In case the reviewing permission is set to **true** the document **status bar** will contain the **Review** menu option; the document review will only be available for the document editor if the [mode](../editor/editor.md#mode) parameter is set to **edit**. The default value coincides with the value of the [edit](#edit) parameter.
+定义是否可以查看文档。如果审阅权限设置为 **true**，文档**状态栏**将包含**审阅**菜单选项；如果 [mode](../editor/editor.md#mode) 参数设置为 **edit**，文档审阅将仅对文档编辑器可用。默认值与 [edit](#edit) 参数的值一致。
 
 :::请注意
 如果 *edit* 设置为 **"true"** 并且 *review* 也设置为 **"true"**，用户将能够编辑文档，接受/拒绝所做的更改并切换到他/她自己的审阅模式。如果 *edit* 设置为 **"true"** 并且 *review* 设置为 **"false"**，用户将只能进行编辑。如果 *edit* 设置为 **"false"** 并且 *review* 设置为 **"true"**，文档将仅在审阅模式下可用。

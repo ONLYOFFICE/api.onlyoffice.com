@@ -4,43 +4,43 @@
 
 ## embedUrl
 
+`类型: string`
+
 定义文档的绝对 URL，作为嵌入网页的文档的源文件。
 
-类型: string
-
-示例: `https://example.com/embedded?doc=exampledocument1.docx`
+**示例**: `https://example.com/embedded?doc=exampledocument1.docx`
 
 ## fullscreenUrl
 
+`类型: string`
+
 定义将以全屏模式打开的文档的绝对 URL。
 
-类型: string
-
-示例: `https://example.com/embedded?doc=exampledocument1.docx#fullscreen`
+**示例**: `https://example.com/embedded?doc=exampledocument1.docx#fullscreen`
 
 ## saveUrl
 
+`类型: string`
+
 定义允许将文档保存到用户个人计算机上的绝对 URL。
 
-类型: string
-
-示例: `https://example.com/download?doc=exampledocument1.docx`
+**示例**: `https://example.com/download?doc=exampledocument1.docx`
 
 ## shareUrl
 
+`类型: string`
+
 定义允许其他用户共享此文档的绝对 URL。
 
-类型: string
-
-示例: `https://example.com/view?doc=exampledocument1.docx`
+**示例**: `https://example.com/view?doc=exampledocument1.docx`
 
 ## toolbarDocked
 
+`类型: string`
+
 定义嵌入式查看器工具栏的位置，可以是 **top** 或 **bottom**。
 
-类型: string
-
-示例: "top"
+**示例**: "top"
 
 ![Embedded](/assets/images/editor/embedded.png)
 

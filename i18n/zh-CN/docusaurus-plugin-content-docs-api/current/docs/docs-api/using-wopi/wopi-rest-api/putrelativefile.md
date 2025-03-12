@@ -64,4 +64,4 @@
 
 执行 *PutRelativeFile* 操作保存当前文件的副本时，请求中不会发送 *X-WOPI-FileConversion* 标头。
 
-要限制*另存为*功能，请将 *CheckFileInfo* 中的 [UserCanNotWriteRelative](./checkfileinfo.md#usercannotwriterelative) 属性设置为 *true*。
+要限制*另存为*功能，请将 *CheckFileInfo* 中的 [UserCanNotWriteRelative](./checkfileinfo.md#user-permissions-properties) 属性设置为 *true*。
