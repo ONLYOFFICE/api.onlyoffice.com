@@ -1,0 +1,71 @@
+---
+id: import-the-i-cal-events-to-the-default-calendar
+title: "Import the iCal events to the default calendar"
+description: "Imports the events from the iCal files to the default calendar."
+sidebar_label: "Import the iCal events to the default calendar"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVE1v2zAM/SuGzlmddTtsubVFgRU7rGjSU5ADYzOxWutjktw2E/zfR0pO4nTtgAHzwZDEDz0+PiqKAFsvZktRQYu6BldeP6EOXqwmwmPVORl2ZI7ioguNcfIXBGn0N4QaHYc5WomJeCY/FKueomr0lZOW3cRM3ChrXPBFaLDAlLnYOKPSXl5BW2xki2Q26aTGDXRtKPZgzii1w58d+nBpagISRWV0oDS8BGtbWSVA5YPn66LwVYMKeBV2FgmAWT9gFSiPdcaiCxI9W9O1vDiFuziF9SxDM4JOWYas4BzsaEtVKz+6zQcn9ZYMG+MUEEqxlhrcTvT543K8Ndrny8+n07cx6E6t0RVmU8hEINZHCP/KgCT3LXVrBIqOPp2LDOjz9OOfGO41DP3GWrCXQtrWZLHGJzYhNLQrwcry/GxaHuST8QpWj3tC55N4OteScxOC9bOyjA3l6GeRHXvyfAInYT30g20ZT5IChbWGkqdjwpGSn5i/TL+mUkaCnTMFOd2bsj1QQ+i/Y+ojF91k80RoUGw9iU0sMMd3Rz1ev4CyLY70tNwrYNVz0o1Jl8nATuLKKNVpwlfMEzfF3fV8UVzc3jAHRFWmvoWA+1p9UJCaOiDK03QcnmGi3pke8WoYR8PzH+ZyoDDgSyhtC8QgQU6NjoM6lswveZI+WLZHVINGqGO520sR4xo83ru27/mYGHb87KyO4uAdXdDsX54oHqlzTGoq6cOC4bB72+XOvpqMfrKPuKgqtOGvvquR4G9/zBfkvB7eH2VqjnHwzG8T/WeCFiZRnBSXziK1UW872LJvzsn64aE6ld9jkt+w4Kr2Jr0bITxV4mQohP9c1pshMWZx9/3BP5vejTjIP3tzQ1eE+jc6Nhv4
+sidebar_class_name: "post api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Import the iCal events to the default calendar"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/api/2.0/calendar/import"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Imports the events from the iCal files to the default calendar.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"files":{"description":"The iCal files with the events","type":"array","items":{"type":"string","format":"binary"}}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"The number of imported events","content":{"application/json":{"schema":{"type":"integer","format":"int32"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

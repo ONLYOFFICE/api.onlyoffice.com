@@ -1,6 +1,6 @@
 # SetPosition
 
-Specifies an amount by which text is raised or lowered for this paragraph in relation to the default
+Specifies an amount by which text is raised or lowered for this paragraph in relation to the default\
 baseline of the surrounding non-positioned text.
 
 ## Syntax
@@ -15,7 +15,7 @@ expression.SetPosition(nPosition);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| nPosition | Required | [hps](../../Enumeration/hps.md) |  | Specifies a positive (raised text) or negative (lowered text) measurement in half-points (1/144 of an inch). |
+| nPosition | Required | [hps](../../Enumeration/hps.md) |  | Specifies a positive (raised text) or negative (lowered text)\ measurement in half-points (1/144 of an inch). |
 
 ## Returns
 
@@ -25,7 +25,7 @@ expression.SetPosition(nPosition);
 
 This example specifies an amount by which text is raised or lowered for this paragraph in relation to the default baseline of the surrounding non-positioned text.
 
-```javascript
+```javascript editor-docx
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 paragraph.AddText("This is just a sample text. ");

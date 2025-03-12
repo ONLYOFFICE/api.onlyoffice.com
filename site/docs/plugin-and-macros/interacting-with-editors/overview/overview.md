@@ -14,13 +14,13 @@ The main plugin code is placed to a *.js* file which describes what and how must
 
 ## How it works
 
-Any plugin has *window.Asc.plugin* object which in its turn has several [methods](../methods/text-document-api/Plugin/Plugin.md) for it to interact with ONLYOFFICE document, spreadsheet and presentation editors.
+Any plugin has *window.Asc.plugin* object which in its turn has several methods for it to interact with ONLYOFFICE document, spreadsheet and presentation editors.
 
 > Please note that starting from version 7.1, the access to the *window* and *document* objects and the *alert* function is restricted from the plugin command code because the *"use strict"* mode was applied to the plugin scripts. Don't forget to declare variables before using them so that the plugins work correctly.
 
-For the plugin to work the developer must specify two obligatory events for the *window.Asc.plugin* object: window.Asc.plugin.init and window.Asc.plugin.button. After that the [window.Asc.plugin.callCommand](../methods/text-document-api/Plugin/Methods/callCommand.md) method is used to send the data to the editors using the in-built **ONLYOFFICE Document Builder** [API](../../../document-builder/builder-framework/C++/CDocBuilder/ExecuteCommand.md) features.
+For the plugin to work the developer must specify two obligatory events for the *window.Asc.plugin* object: window.Asc.plugin.init and window.Asc.plugin.button. After that the [window.Asc.plugin.callCommand](how-to-call-commands.md#callcommand) method is used to send the data to the editors using the in-built **ONLYOFFICE Document Builder** [API](../../../document-builder/builder-framework/C++/CDocBuilder/ExecuteCommand.md) features.
 
-If the plugin operates with an OLE object, [window.Asc.plugin.callCommand](../methods/text-document-api/Plugin/Methods/callCommand.md) method is used to manage it.
+If the plugin operates with an OLE object, [window.Asc.plugin.callCommand](how-to-call-commands.md#callcommand) method is used to manage it.
 
 Let's see how this is done in the *helloworld.js* plugin:
 
@@ -36,7 +36,7 @@ window.Asc.plugin.init = function init() {
 window.Asc.plugin.button = function button(id) {}
 ```
 
-When the plugin object is being initialized (*window.Asc.plugin.init = function () \{...\}*), the editor forms a paragraph with the *Hello World* phrase and then uses [Office JavaScript API](../../../office-api/get-started/overview.md) to create the document with this text in it (with the help of the [window.Asc.plugin.callCommand](../methods/text-document-api/Plugin/Methods/callCommand.md) method - *this.callCommand(function() \{...\})*).
+When the plugin object is being initialized (*window.Asc.plugin.init = function () \{...\}*), the editor forms a paragraph with the *Hello World* phrase and then uses [Office JavaScript API](../../../office-api/get-started/overview.md) to create the document with this text in it (with the help of the [window.Asc.plugin.callCommand](how-to-call-commands.md#callcommand) method - *this.callCommand(function() \{...\})*).
 
 > Please note, that all [Office JavaScript API](../../../office-api/get-started/overview.md) features are already included into all the versions (including the open source one) of ONLYOFFICE document editors, this is how the plugins interact with the editors. In case you want to create documents without any document editors, install the standalone **ONLYOFFICE Document Builder** version.
 

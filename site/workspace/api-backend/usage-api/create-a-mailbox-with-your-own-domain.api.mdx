@@ -1,0 +1,71 @@
+---
+id: create-a-mailbox-with-your-own-domain
+title: "Create a mailbox with your own domain"
+description: "Creates a mailbox with your own domain name."
+sidebar_label: "Create a mailbox with your own domain"
+hide_title: true
+hide_table_of_contents: true
+api: eJzlVU1v2zAM/SuGzlmdpj1sOS1rC6wYthVNewpyYGw1Vmt9TJKbZob/+0hJSZx+YsN2Wg+pLD1SfOQT2TIPS8fGMyZB1I7be27zr7hc6Afu2HzAHC8aK/waMS2bNL7SVvwEL7T6zKHklmwtrtiArRDH2bxDq5K7wgpDMDZmJwjw3GWQyeg6WwlfZWvd2EyvVFZq3FeZAskP0I/lPxru/Cdd4q0tK7TyXHlagjG1KMLt+a0j3y1zRcUl0MqvDcfb9OKWFx79GKsNt14gETwl7/R/P7TENdyNJsmF81aoJevCHwXkjFYu+hkNhy+7KcFDBs7pQiDjMvL0Fc+QASgK6i+xOS97GIEul1iKAbvRVoKPW0cj3OAPIE1NoMPR0TFDMtdY5T3rRLaPTZiEPhXO1LD+lhL4ulkfjPaTssTsuX9J6DSo58/tz0iUrxMLkI9a1euDQktGmvDCh6NpeDMxhkT2FEVAjt9O2DZLtYAkrwQGa2GNWHxR8n/M3lNQemKbYzw/Hh4+fYnXClKT4mW4SnL8RHrMaBcSB77CrxyMyEcHw7zX+OSm8eVQlpLSHw9caH6NRZ6s8t64cZ63Fbrrxq3R1neIvAcrYFHHctBZDO0GmpoSWOsC6rCNIZHN/vH74YcRseo13Cl1guju2ba7k4oRX3jQCvGv4vEg9bt925AQajWXuxZ7tqnTpkVuux95vNHhplSJEy1lozC4LNYkuzybXmWTi3NKAOYplqCmZp+IOi9B9XzHUfDGJGCPBkhvBvzuLEk58vzB59iX0DeGFSrZJiXMKIGIRC3g704N6SMOwgGLisD6xNrOWNsu8M1e27rraBvzaWlIzndSoC+8rdrMyZbdYZ0oi4HMuyuKjeB1E+v4aBx0g43FpCi48a9i5z2lX3yfXiF4kQao1CXZWFjRcMXfMcOFDskN+gp7LdZNLRtYEjb6JLXQa9oX210QW1oQq82RWvci3NfdIBGhX6L1rEnbRil33RYfj1602Io9oqm6c4z6F5D4/+8=
+sidebar_class_name: "post api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Create a mailbox with your own domain"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/api/2.0/mailserver/mailboxes/addmy"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Creates a mailbox with your own domain name.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"name":{"description":"Mailbox name","type":"string"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Mailbox data associated with the tenant","content":{"application/json":{"schema":{"type":"object","properties":{"Id":{"type":"integer","format":"int32","example":"1234"},"UserId":{"type":"string","example":"UserId"},"UserDisplayName":{"type":"string","example":"UserDisplayName"},"Address":{"type":"object","properties":{"Id":{"type":"integer","format":"int32","example":"1234"},"DomainId":{"type":"integer","format":"int32","example":"1234"},"Email":{"type":"string","example":"Email@only.com"}},"title":"ServerDomainAddressData"},"Name":{"type":"string","example":"Name"},"Aliases":{"type":"array","items":{"type":"object","properties":{"Id":{"type":"integer","format":"int32","example":"1234"},"DomainId":{"type":"integer","format":"int32","example":"1234"},"Email":{"type":"string","example":"Email@only.com"}},"title":"ServerDomainAddressData"}}},"title":"ServerMailboxData"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

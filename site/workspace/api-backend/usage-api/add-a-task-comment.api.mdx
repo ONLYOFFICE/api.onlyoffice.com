@@ -1,0 +1,71 @@
+---
+id: add-a-task-comment
+title: "Add a task comment"
+description: "Adds a comment to the selected task with the comment text and parent comment ID specified in the request."
+sidebar_label: "Add a task comment"
+hide_title: true
+hide_table_of_contents: true
+api: eJzFVe9P2zAQ/Vcif13bhJYJqDRNHSCtGkwTLZrEjw9Hcm0MTuzZTqGr+r/vzklpOzr4smn5EDn2vfO75/PLQniYOtG/Fsbqe0x9PAb34MRtSzhMKyv9nBYXYlD5XFv5E7zU5WeEDC2DLI1ESzxSHIrbJaEydKmVhsNEXwyyzEUQpboosPSR15HPMXKoaCfMIk97RY/S52H6OQqffARlFhmw/L2aH55EzmAqJ5KgsgwYiz8qdL5DJJrhJ50R5YVIdekJxUMwRsk0UI/vHRNbCJfmWACP/NwgUdV3XD7lISEMWi/RhVWiKDMebVfGMhEjim/wkrabkirL1ubW26DjjQrXSOetLKcMrAvetd2336V4CQ8Py+CMLl3NvpskL3OdSecjPVklc6L1t8QaZhsxDa+WmGhbAOUWVSW5W/AJCqM4JGme9o7X6mFd6ur/XfYp7sq8zjTSBVI3UhiFH6+1+jNiddIrYQlXX6H/J+KJdEbB/CsUb1R7Lh8wuoJyDp56n6Fj6dVbICihaf/BDDzYUQFKvY6prGJLcBwZQUCF87B6IhVe2jfgNzcxhWZV6h0PUdN0PcfwDjjz9LFyaD9AVsiSmt6CpwPgS+LrgsQppdJzxO8WTE3+DJw/11kwmde37ybdpL3XbSeH472Dfu+gn/Q6vV6yf/R+/4ozDUtIvZxt6nantUIot9JMQDncItX0DnMKpMK13k/2Xt7kyxIaXyayHFUgfRJvYbQLnQU+p68YjIy7nSRemTy7Wryova1/nbSPbt8t48YPBFu/naF1wfkrPgaRe29cP44XOSVe9hdGW7+kyBlYCXeq7lxeq0lOoFLcrEqnoMI0uxthtpcPk6Mu17fxtxmx1dTpdv5znrWkkr7gnChIViKvl1uiDO29jQ3SsJddrH8Rp6sDWFt8suGD6wNfe/KGUctyogN048iqkuhHoyBddHE6GkeDb0OWiJSsj0uBR5Zi+QtXSH8z
+sidebar_class_name: "post api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Add a task comment"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/api/2.0/project/task/{taskid:[0-9]+}/comment"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Adds a comment to the selected task with the comment text and parent comment ID specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"taskid":{"description":"Task ID","type":"integer"},"content":{"description":"Comment text","type":"string"},"parentid":{"description":"Parent comment ID","type":"string"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"List of comments","content":{"application/json":{"schema":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"ParentId":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"Page":{"type":"string","example":"Some page"},"Content":{"type":"string","example":"Comment content"},"Author":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"},"LastModified":{"type":"string","example":"2020-12-08T17:37:03.3304954Z"},"Inactive":{"type":"boolean","example":"false"}},"title":"CommentWrapper"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

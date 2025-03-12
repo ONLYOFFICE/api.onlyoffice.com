@@ -1,0 +1,71 @@
+---
+id: link-a-conversation-to-crm
+title: "Link a conversation to CRM"
+description: "Links a conversation to the CRM entities. All the new mails will be added to the CRM history."
+sidebar_label: "Link a conversation to CRM"
+hide_title: true
+hide_table_of_contents: true
+api: eJy1VE1T2zAQ/SsanU0c6KX1jQZmypROGT5OaYbZ2EoskCxXkgmpxv+9u5ITHBqOzcFZab+e3j4pcA9rx4s51yBVPjPNi7AOvDSN44uMO1F2VvotRgR+3vnaWPknur8JqISlTIsWz/gG4wRf9JhVCVda2VIYL/i1bJ4dA1aOijNvmK8Fm93+YKLx0kvhJuxcqbjbiA0jPI5tJG4tBYOqEtU4qZbOG7udYGMrfnfC+a+mQpiBYxuPJcmEtlWyjA3zJ0dgAndlLTSQ5betQHhm+SRKj3Vaa1phCQl5ZfWohXOwFrQ6PNHVBTMrBs2WDSFsZY2O2MaHxJpDD4mQ1shWn/HS6keCCKV/lJX7t/g1nozKj6lhsonVV0Yps5HNGi2rwRcsxJAtlirYNGPDitriup/8atjodxm9jLyuYKfshM0Skoyd0QKcyNgntH62rbG+a2jy+0OAtUBLHLN2xwjE4oo2ZlYPdS/AA+/TL+NaoH4qDGi7yDf4Ghc5tDI/m0zzqMAxfy5HsnKF8uGkREuOKMTOKkysvW9dkeehNs73RSDIPUa+gJWwVGmM5Escr6BTaHJlSlBxGyFRzqH78/TLGUEeif+OJJPKHb0CeybwJN9FpIgGWSd3xhvQ5D3I5UQIafL2Tb2Xr6BbJd6rb3pENPPQL3rqszKx/455o3WcGruLdLHby7t7dn5zRbQge0lhCrzYHd95DfFeDCDpsh65qyhG/u5ej27af7/iA79evPq8VYD0IviogjDIaE7kYyQKCb9UGf8OxMQjjfiNgsLxJmnMeQhLFP6DVX1P2zgOS+/d4k1JtMKG9e7JC/wZx0x0RwJO7gkehasuyeDds0Ni2ov/5uEeY5fDa6VNRSkWNvSS4bfgaJg2QcaAuBdwZs26i3LgqSTpBzo6+lh+z1F+g0FAd65mOwJ4qMRsOA19++yDlBCSuPt+H59cH2bs5Z+iaWYLRP0XT1czyA==
+sidebar_class_name: "put api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Link a conversation to CRM"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"put"}
+  path={"/api/2.0/mail/conversations/crm/link"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Links a conversation to the CRM entities. All the new mails will be added to the CRM history.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"id_message":{"description":"ID of any message from the conversation","type":"integer"},"crm_contact_ids":{"description":"List of CRM entities in the following format: {entity_id: 0, entity_type: 0}.\n            Entity types: 1 - Contact, 2 - Case, 3 - Opportunity","type":"array","items":{"type":"object","title":"CrmContactData"}}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={undefined}
+>
+  
+</StatusCodes>
+
+
+      

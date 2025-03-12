@@ -1,0 +1,71 @@
+---
+id: delete-backup
+title: "Delete the backup"
+description: "Deletes the backup with the ID specified in the request."
+sidebar_label: "Delete the backup"
+hide_title: true
+hide_table_of_contents: true
+api: eJylVE1v2zAM/SuCThuQxK6XLKlv3dpDsZ3WFcNQBIVi07VWxdIkOW1n+L+PlNx8NO0uuyQSxY9Hvkd33Is7x/Mb/kkU963hyxHXBqzwUjeXJc95CQo8DK8jboQVazRYCup4gxd0kiU+yQZPRvgazyW4wkpDWdAYo9kleVn43UoLmNrbFkbcFTWsBc877p8M5XLeyuYOPStt18KjpW1DfngUa6PIZT4Ts2o+nY2rj6fz8XR6shivPizKcVpBWmbzOWSzBe/7JVVzRjcOHBXI0pT+XmDTWoFo2EaoFnJGoJismK+BbQfBpGOuLQpwrmoVQil046HxlE0Yo2QR3JJfjlJ2xz2tYhHE1PcjPk1PjnFcN6L1tbbyD84mOGXHTj91a5mxssAJMaMQdqnBsUZ7xGeMth6BI1gdA6iYg6K10j8FuoQrbqnM7T2QAccjaLIP6AB8SQM7rHceyHdhGqtI4oP0dbhfnjNnoJCVhJLJJtiIXHB+gjlRJLXeCShIB6WR80QYmWSTNIkJk/g+XDpZ9pxA282zxFqrMKr23rg8SbpaO9/nHfVKnhthpVipSDC9xaFVolUkHaULoYIZR0Exh8+L9DQjUpa7OV0RdzHd4bS2ZCL+L2gYPYv/wG1Yg0LrewmBANlUOkRLH8R7dvV58gNWkzMjCT+2GWe9ySJG59ciqGhIHznYo+DlenU7Of4PYUN3Hh59gtLCNhBOGH43UHdDraMnkoe/e2B2BOI1x2XFeUYubnjXrYSDa6v6nsxYzpL0ljvqAsuldHRGwVRCOfhHi+++DV+Q92z/u/Iq/GfGmqcgFdxwvOExEEpfrX6JXjVuAdgAIz6c4aobvxdytOSkmK3Czy++Xny/QHdSwaFQoiSGAxV4FdELBUUQ9NuP3ojouqjCvt/6x6c3I4Ymt71TD6j8v0FPBbc=
+sidebar_class_name: "delete api-method"
+info_path: site/docspace/api-backend/usage-api/asc-web-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Delete the backup"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"delete"}
+  path={"/api/2.0/backup/deletebackup/{id}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Deletes the backup with the ID specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"id","in":"path","description":"Backup Id","required":true,"schema":{"type":"string","format":"uuid","example":"75a5f745-f697-4418-b38d-0fe0d277e258"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Boolean value: true if the operation is successful","content":{"application/json":{"schema":{"type":"boolean"}}}},"401":{"description":"Unauthorized"},"402":{"description":"Your pricing plan does not support this option"}}}
+>
+  
+</StatusCodes>
+
+
+      

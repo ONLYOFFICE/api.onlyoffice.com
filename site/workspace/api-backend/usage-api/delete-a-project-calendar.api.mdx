@@ -1,0 +1,71 @@
+---
+id: delete-a-project-calendar
+title: "Delete a project calendar"
+description: "Deletes a project calendar with the ID specified in the request."
+sidebar_label: "Delete a project calendar"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVE1v2zAM/SuCzlmdFTtsuXVtgBXboWjTU5ADY7OxWtvSJLlpJvi/j5TkfLTdDsNyCGiJH4+PjwrSw8bJ2VKW0GBXgS0us+EEdJVw/dqVVhmvdOfkaiIdlr1VfkcxQV70vtZW/QK+/oZQoeVcliw5kVvyQ7kaKKrCfRY5k1fYoEcqIIzVj1h6MVYXW+Vr4WsU11fCGSzVg8JKqC6eWfzZo/NnlDubX3VFSIIsdeex82yCMY0qI6Li0XG9IF1ZYwts+Z1BQqDXXJbyEACD1it0MU2GcV3x1ynokRdCRnE5j/NWdRs50AFC+zboJvcXb/dRYC3s6JPoad0RqjFb+nGTzhDtCdv5dPo2/wLck4AtUCZLCf+RhlTt0/Tj2wL3HeQZYyXZq0X6JHrIj4fIFIKv6bsAo4rzs2mxVxIZFTzziMmSLB37jNZF5fS2oZjae+NmRRFq7fwwC0ZbP5DnM1gF6yY1zncJ2AP0DZmy0ZQwHhMgjjm9/jz9cs49Han1jjtP6d7V7J4RauI7xtlw93W6nsgOWr49iY10MLW3By3OX6A1Db7W0jjZUSbL8WA1cKUHHREoz5HyUrdt3xFocRcJE7fzu4W4uLlmYoi/NJgGaIMyAc63EAecYab9eme95KtNPFqc/7GUmUOPL74wDRCFBC9OOmSVLJlg8iSdsFwPsE61QpNLU1/KENbg8N42w8DHVMvy27M6iIS/qE49Pj9BPtEEmcfY2ocFo2L3pk8TfrUYw2SMuChLNP6vvqujDbia/5gv5uS+zq9QqyuOsrDlF4r+Z5IMnR9PcohngWbXbXrYsG/KykriPTsV4lMUYja4r/Gq2x1hPNXkJLfC/9zYuyEhJJkPw94/Xf0xYr8IyZsnuyLUvwHeByWv
+sidebar_class_name: "delete api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Delete a project calendar"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"delete"}
+  path={"/api/2.0/calendar/caldavprojcal"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Deletes a project calendar with the ID specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"calendarId":{"description":"Calendar ID","type":"string"},"team":{"description":"Project team","type":"array","items":{"type":"string"}}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Task awaiter","content":{"application/json":{"schema":{"type":"object"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

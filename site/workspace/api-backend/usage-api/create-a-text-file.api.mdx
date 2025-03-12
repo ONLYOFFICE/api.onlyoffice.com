@@ -1,0 +1,71 @@
+---
+id: create-a-text-file
+title: "Create a text file"
+description: "Creates a text (.txt) file in the selected folder with the title and contents specified in the request."
+sidebar_label: "Create a text file"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVMlu2zAQ/RWCpwS1LcVxm0RAUWQrGnRBEDsokOUwkeiIiSSyJOXYVfzvnaHkrXHtS3UQKM684eOb0au4g0fLo1semzz4LDNh+X2LWxGXRroJBip+XLpUGfkbnFTFFwGJMAQwuOIt/oJ5gt9PEZUIGxupKY1H/BQTnLAMmBNjx3Y6bux22RCPYLJgLhXMikzETiRsqDIsyl6kS33ASYdZUCQsVoUThbPMahHLocTkBmzEr1JY10EKzfJEJUi44g2GlqB1JmNPPHiyRKviNk5FDrRyEy2QqHp4QhpYRxulhXESNcAolkAFBj6n+utuVyIDIl7nMF+oNatnnZHFI5+2mhIy2Vrg4mwBl8j+ESVGvNfhLZjaVGu07tCl66+BzQR9i/QPiWm1KmytQTcM/1FHFkNlcq8sb/0vyX9ALpayGmao4xhyTUrUZxeUhlSvdUIinky2V75I1tWtr4A7ZSmTlXPC5mmvec0eonAmrc5gsp34d/ks2A0UE3D2WRJ0MGvuBhAU0IzC8QgcmH4OWbYZU5qMOcUsZTLwKMJfGkW/3rXZAr+7CzA1KWNnaSkUbtd7BO+A1eNPpRXmIyS5LCRWAKfwhMW08nMspSZC/DSga/JNozaf3A27YXuv2w4PB3sH0f5BFO539nvd3tH7gxsq8k3VU7W5Su8On94Hei/NyhI72iVmnpqf+F6493bIrwtobA95U1Yu8BOvwLWyfr7ApfgVgJZBtxMG5J/VwjOiHfonIHavSmtlXFlg4DUGK3anszyZRLdh++j+3TQgcW1ARsnJfc1IGOvNt6SG8dQ5baMgqFI8fBpVVHGKmSMwEh6yesYpVl9kCGVGY52hZJnfxgsQZjV8GB51SYMlw+/Tn1qXW2v7c+nx2l/FBClIUiutwy3u5Y5WsV4+soKrhU+fzxq26rNLHZ1bZ7jo3Tw695sl3yNH8gSb5FOV51511vd6sqvz/oAdX16Qbihv3WeyYdJn+gefH2pu
+sidebar_class_name: "post api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Create a text file"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/api/2.0/crm/{entityType:(contact|opportunity|case)}/{entityid:[0-9]+}/files/text"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Creates a text (.txt) file in the selected folder with the title and contents specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"entityType":{"description":"Related entity type","type":"string"},"entityid":{"description":"Related entity ID","type":"integer"},"title":{"description":"File title","type":"string"},"content":{"description":"File contents","type":"string"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"File information","content":{"application/json":{"schema":{"type":"object","properties":{"Name":{"type":"string","example":"File name"},"UpdatedBy":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"},"Updated":{"type":"string","example":"2020-12-08T17:37:03.3424957Z"},"Location":{"type":"string","example":"4\\\\46\\\\File name"}},"title":"FileWrapper"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

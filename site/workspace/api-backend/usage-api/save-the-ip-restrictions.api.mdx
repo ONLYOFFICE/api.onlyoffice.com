@@ -1,0 +1,71 @@
+---
+id: save-the-ip-restrictions
+title: "Save the IP restrictions"
+description: "Saves the new portal IP restrictions specified in the request."
+sidebar_label: "Save the IP restrictions"
+hide_title: true
+hide_table_of_contents: true
+api: eJylVE2P2jAQ/SuRz+mGoh5abmy1UlGlCsHuCXEwyUC8m8SuPYGlVv57Z+zwubRqtRzC2PPhN2+e7QXKjROjhXCAqJqNyybTxIJDq3JUunFimZIvb63CPcV5MW6x1Fb9kuz+BrIAy/mWLJGKHcWBWHaUVYDLrTIcJkZiLrfgEiwhaWCXGG1RVsnVWYkzkKu1giJRTYi18LOlgDuq3Jv3uiAcXuS6QWiQTWlMpfKAJ3t2fJoXLi+hlmzh3gCdr1fPkCPVMVYbsKjAsVeZ8HeJ9QchvKYhPRSS1so9LanP2t06ABVWvDGZzk4F7qUD0cUf9+IMFY0QhoPBv0L436bfizUVnwYf34J7amQvAigER9VAy4I8pg0USyxpkUmjsuHdIDtqS5mrhhzYLVgXhNXaipJKRONGWeZL7bAbeVZKR5FbaZVcVZEy9kVYa9lWZIpK57IK2wSHcy7dnwdfhtzSmZjnTFYsd1PSJxKN+g6BRe69jO5UNLJm70VuIIOnMTuJ9eFV1oZJ7sW28N2y42JrHQ7pJ/BV13XbEK5kHjhJZg/zx2Q8nXDvRFFkvpIIhx4d1jKMvUfCNyxcmre6uRjf2d15/63sOUJ4xcxUkigibGGSvpfBggmkSBJCGHiUAtNprt+ZONaF8H5FEnyyVdfxNh1m+e1ZnlTAKzqoPDw/XrzQiJjF0NmHR4bF4VUbR3h1Wbr0kDHOczD419jlmcCnT48Uu+ofoVoXnGLljh8o+o4EGdrEjigg7HkaW7Np5YZjY0nWCd+hS5m9BJn1Bjd1cDX7M4CXikv7PvjLXd1M8T6KuOuO8dH1x4yjzGM0z3VJqH8Dl4YjYA==
+sidebar_class_name: "put api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Save the IP restrictions"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"put"}
+  path={"/api/2.0/settings/iprestrictions"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Saves the new portal IP restrictions specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"ips":{"description":"New IP restrictions","type":"array","items":{"type":"object","title":"IPRestrictionBase"}}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"New IP restrictions","content":{"application/json":{"schema":{"type":"array","items":{"type":"object","title":"IPRestrictionBase"}}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

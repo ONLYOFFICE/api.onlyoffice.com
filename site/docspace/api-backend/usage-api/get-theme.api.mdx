@@ -1,0 +1,63 @@
+---
+id: get-theme
+title: "Get portal theme"
+description: "Returns a theme which is set to the current portal."
+sidebar_label: "Get portal theme"
+hide_title: true
+hide_table_of_contents: true
+api: eJydVE1v2zAM/SuCzl7sBjtsuXXdUAw7rFhS7BAEheIwsVrZ0iQ6bWb4v4+UnKRuu8N2sT5IvkfyUe4kql2Qs6W8AesMiFwsKqhBrjJpHXiF2jZfN3Imd4DJkkkPwdkmAMV1cloUvGwglF47difno2dpG4QG2UE5Z3QZ8fL7wF6dDCX5Kd7hwQHF2fU9lEiBzjM76sSBEY42toHvW8q2k9C0Naf9SQUm+qz8Ay3zQ0CoOfkBMKDXzY4s4/yWHCbeCV4ywcF04CUTCYKOabOiWHhSNfWG4iJbn53oi+wim57ZNFW7A/+arjhxXZyIpm9zFD3jaYx8l/OryU9YT66sh8ltAB8mHBzbOwdEqi0smLvvM6k2G82Eytw8695WGeJ9kZD8NwqCZ4L3xcVrqW8b1WJlvf4Nm5hGgLL1Gg9RJhXKO7bfPQBf0OioDZE/kgPNGJc6RvsB2PomCCWi5uKx0mUldBABUKDlW0HwnoZKOOtRmQnB1UAZDEPKw6OwokOunM6nkyJ3cbRzHIaSatxTmTG/1hvyrBBdmOV5V9mA/axj5J4898prtTZpCNmWyt+q1tBWGlsqE6+pbI4Zmz8UH6fcudW5J3Me+AQ37szpBVDO3+gik42q4/m5W0YTRneltQ86aa6brY3RL9S8dJrzpzJTX/fTlGPAWsWnN8Bfw7GP4tiekSDd+Qn/pzZDXQhPmDujqABKJLa9G4RactHkSVKxeFEsDjz+h1Ljl7Lr1vSEbr3pe77+1YLnmVqddeIToVc0ZPQKWd/YXHlZluAwCmra1OUXPyMW6TRF118W5MtdHwuTJBg2jH40NYfn2GPFUgb85f/GmxFdl1Tv+5N/Mv01Yqjw6M1NXdGk/QFZ2PLA
+sidebar_class_name: "get api-method"
+info_path: site/docspace/api-backend/usage-api/asc-web-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get portal theme"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/people/theme"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns a theme which is set to the current portal.
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Theme","content":{"application/json":{"schema":{"type":"object","properties":{"theme":{"oneOf":[{"enum":["Base","Dark","System"],"type":"string","description":"[Base - Base, Dark - Dark, System - System]","example":"Base"},{"enum":[0,1,2],"type":"integer","description":"[0 - Base, 1 - Dark, 2 - System]","example":0}],"title":"ASC.Web.Core.Users.DarkThemeSettingsType"}},"additionalProperties":false,"description":"","title":"ASC.Web.Core.Users.DarkThemeSettings"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

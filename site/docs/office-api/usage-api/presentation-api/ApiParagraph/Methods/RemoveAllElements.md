@@ -1,8 +1,8 @@
 # RemoveAllElements
 
-Removes all the elements from the current paragraph.
-💡 When all the elements are removed from the paragraph, a new empty run is automatically created. If you want to add
-content to this run, use the &#123;@link ApiParagraph#GetElement&#125; method.
+Removes all the elements from the current paragraph.\
+💡 When all the elements are removed from the paragraph, a new empty run is automatically created. If you want to add\
+content to this run, use the [ApiParagraph#GetElement](../../ApiParagraph/Methods/GetElement.md) method.
 
 ## Syntax
 
@@ -24,7 +24,7 @@ This method doesn't return any data.
 
 This example removes all the elements from the paragraph.
 
-```javascript
+```javascript editor-pptx
 var oPresentation = Api.GetPresentation();
 var oSlide = oPresentation.GetSlideByIndex(0);
 oSlide.RemoveAllObjects();

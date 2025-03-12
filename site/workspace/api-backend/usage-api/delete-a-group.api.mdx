@@ -1,0 +1,71 @@
+---
+id: delete-a-group
+title: "Delete a group"
+description: "Deletes a group with the ID specified in the request from the list of groups on the portal."
+sidebar_label: "Delete a group"
+hide_title: true
+hide_table_of_contents: true
+api: eJztVktv4zYQ/isCz1b8khPZwKII1m4btCkWdRYLNJvDSBrZ3EiiSlLZeAX9985QUuxsvDFyKNBDdZAozjfDeZEfa2FhY8TiVmy0qkpxNxAG40pLu6PJWlxWdqu0/AZWquJXhAQ1gzWNxEB8JRyKu4a0EjSxliXDxEIsMUOLxgPPmfW+Srv17Ba9q6VnSoxlKjHxZOHmNP5dobFeqlXuJjJJfyptdY2nWliptIXsjJYtQUNO9rVxPhb0Q2s6tGS3JLtQgt2K7/36xXlztSSBibeYg1jUwu5K1jdWy2JDklTpHCzNVBWZazg6jaZUhUHD+MloxJ8jlkk5VoXFwjIAyjKTscvc8IthVP1yVRV9wdhyUFqVqK1s11geGn/pIj5CXmboMr0HNgPxh8vFawprN2hzyxofQHf+djqgNew4ixZzczo/h7bD2SQJovOpP59fgB9EgD7AReSH8ygKL5JwlkQpJXQg3oPFjdK7t5m/CNLpGMIZmR9HfoDzyI/mGPqAIYajJDgP0xmHdJW8zW4KSTJPg7k/CaZjPzgfj3yYjUN/GsM8mobBNA5DtnsNBWx4A5yq3lsdGHWPf+TVP+zAUpoyg93pIl/Le/T+gmIH1txLVr2RNjul1IVH6MsHsKDXOWTZ6zqVzjyrPMNID5yWayqtUpnhR31C/fPnIUGTKraGh6houp1j9TMw5eNPlUH9DpJcFnQsaLBKuxaybUBiRabUDvGThrJ1/hrzyJ0NJ1v6//L958p3KHNnKgtI8nNFsTROHIzGL8/fjwV0VIWJW4AIYquokIRjLnK0QYywEEMo5XByNhq6I3BYd7zRMCegfuhZpeLgxdba0iyGw3qrjG0WNZMQIx9AS4iytl9Y1nqUQpVxi2QqhsxNkyes81wcjuYTDuaAbddMDK25o5y77+VS/oa7nuW2rXjQk+AzXZcHWaTKqXdJfa/yvCpoRW/tovX+XK1vvMsPVxwVBd+mM6MDuvfe2BwcC3VrtOTec/v3HFvvKfBfvgZ0CbH4aIe0r6QjwKrt2bbWt5wtQlK16d27u+hvCpT+tnS3oq4jMNzwTcPT5AmT0+3dvtKuKRJpeExtlUJm8JXQD24aR/3sq1nsXDdlFf/R8J5qu7/LNHcE3fbXrrqTXsYxlvZA78VNgzvraQMsV7+vblYE5x3yvJPuXSd1A17gqFvPm6r3kd/N4Acqdd32adM84VvRDzWeOrlFc5buaIv8AzADjSU=
+sidebar_class_name: "delete api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Delete a group"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"delete"}
+  path={"/api/2.0/group/{groupid}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Deletes a group with the ID specified in the request from the list of groups on the portal.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"groupid","in":"path","description":"Group ID","schema":{"type":"string","format":"uuid"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Group","content":{"application/json":{"schema":{"type":"object","properties":{"Description":{"type":"string","example":"Description"},"Name":{"type":"string","example":"Sample group"},"Parent":{"type":"array","items":{"type":"string","format":"uuid","example":"852d4b63-997a-4bae-aa7b-89bb87d85dbf"}},"Category":{"type":"string","format":"uuid","example":"74f31a85-991b-4e9b-b9e8-ae8e80d468f5"},"Id":{"type":"string","format":"uuid","example":"fadd9f49-2431-4610-a518-3ca9b3843c88"},"Manager":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"},"Members":{"type":"array","items":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"}}},"title":"GroupWrapperFull"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

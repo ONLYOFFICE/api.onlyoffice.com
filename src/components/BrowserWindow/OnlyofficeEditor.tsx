@@ -87,7 +87,8 @@ const addScript = async (secret: string, fileType: string, code: string, theme: 
       callbackUrl: "",
       customization: {
         anonymous: {request: false},
-        uiTheme: theme === "dark" ? "theme-dark" : "theme-light"
+        uiTheme: theme === "dark" ? "theme-dark" : "theme-light",
+        features:   {featuresTips: false}
       }
     }
   };

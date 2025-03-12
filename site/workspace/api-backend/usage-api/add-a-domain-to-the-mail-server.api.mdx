@@ -1,0 +1,71 @@
+---
+id: add-a-domain-to-the-mail-server
+title: "Add a domain to the mail server"
+description: "Adds a web domain to the current tenant."
+sidebar_label: "Add a domain to the mail server"
+hide_title: true
+hide_table_of_contents: true
+api: eJzdVk1z0zAQ/SsenQ0OKQfIrZDONMMAnabAoZNhFGsTq7ElI8lNg8f/nV3JTmxK08L0RA+pLL39ervSbs0cX1s2uWYFl7kFcwsmmWr8UJYtYmYhrYx0O0TU7LRymTbyJ3dSq3PgAgxJGlyxmG0RB2zRoJQAmxpZEoxN2KkQNuLRFpaR8JojpyOXQYSqDSgXOVBcuZeow8CPCqx7pwVarFmqFZ45WvKyzGXqLSc3lvTWzKYZFJxWblcCWtLLG0gd6imNLsE4CZZOFS+A/g/d+nbwxwPiTot1Rqo1a2ImxXeh7H3R6ad5NJseJCS6uUYyGv9HYdhSKxusj0ejo8YFdzzi1upUcgci2kqXeXoCLWjlmWiYiR6mczlmK20K7sLWyRg34I4XZe5BgliY2XnGDYhQFj0dS61z4Gog4kwFJPSp5XzIaR/pEYicBoaf2/dX45PXpP7j3SWk2ojHbZxr64677BGo88JIHW7Fv/k0s1/ByJUE8SQ2UcJJ5zfm/oaGTHSRTbGASOu8XD011Mezo9rsfOV59Qj01kOeLSysh2Fc040snhrYHHLc1ua4x3sU5bJa4o36ALvjIgfY8wW6j2sfqd9/n0G6+S8zeVTtES1B/qHzcEjHr0ev7j+1XxRv+xaaJVQB+IkesJKuMxLKXYZfCS9lMn45SnqdMDzRNuGCOlzYtL4XViZHmcy50k6SpM5QVTOpS21cg8hbbiRf5iFFWfuuCFjxKqeXIdcpz7P2MSGZ4fGb0dsxRdTrv3N644O6P3bhPZsYBBUp9i6KPQvHcdsCh7KeDGoil4eue9ZltuuahzLpmuGIGqNaaW+0zcd7XRSVQj+jkJno8mx+FZ1ezIgLpCxkIsf+1sVsXcFVzwwOCTgjDOcDSkQUSGe/DRW92eBv5ouWJAd3Lilz6mbojE9l3ZbBNTGISCwE/D2UAjnQjkUxo3LA5ITEXrO6XnILX0zeNLSNZBoamBaHOqAvtJR1M1PNNvTgIG8+iBdX5Ffc3r/J/S7fxJ3EaZpC6Y5iF70Sv/g8v0Lwsh2oCi1IxvAtDVv4O2G40J5UX1x+r8ZMqXXF14QNOqlU6BoNK23jK61dUFTdkdr1PBwWXdwGsvFP6QMidR3quGn2+O5tekBiX+kBTZldoNe/AHBRs/4=
+sidebar_class_name: "post api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Add a domain to the mail server"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/api/2.0/mailserver/domains/add"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Adds a web domain to the current tenant.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"name":{"description":"Web domain name","type":"string"},"id_dns":{"description":"DNS ID","type":"integer"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Web domain data associated with the tenant","content":{"application/json":{"schema":{"type":"object","properties":{"Id":{"type":"integer","format":"int32","example":"id"},"IsSharedDomain":{"type":"boolean","example":"true"},"Name":{"type":"string","example":"Name"},"Dns":{"type":"object","properties":{"Id":{"type":"integer","format":"int32","example":"1234"},"MxRecord":{"type":"object","properties":{"Host":{"type":"string","example":"Host"},"Priority":{"type":"integer","format":"int32","example":"1234"},"IsVerified":{"type":"boolean","example":"true"}},"title":"ServerDomainMxRecordData"},"SpfRecord":{"type":"object","properties":{"Name":{"type":"string","example":"name"},"Value":{"type":"string","example":"value"},"IsVerified":{"type":"boolean","example":"true"}},"title":"ServerDomainDnsRecordData"},"DkimRecord":{"type":"object","properties":{"Selector":{"type":"string","example":"Selector"},"PublicKey":{"type":"string","example":"PublicKey"},"IsVerified":{"type":"boolean","example":"true"}},"title":"ServerDomainDkimRecordData"},"DomainCheckRecord":{"type":"object","properties":{"Name":{"type":"string","example":"name"},"Value":{"type":"string","example":"value"},"IsVerified":{"type":"boolean","example":"true"}},"title":"ServerDomainDnsRecordData"},"IsVerified":{"type":"boolean"}},"title":"ServerDomainDnsData"}},"title":"ServerDomainData"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

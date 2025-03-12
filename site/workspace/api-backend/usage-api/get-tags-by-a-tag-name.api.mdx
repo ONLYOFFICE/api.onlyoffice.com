@@ -1,0 +1,71 @@
+---
+id: get-tags-by-a-tag-name
+title: "Get tags by a tag name"
+description: "Returns a list of all the tags by the tag name specified in the request."
+sidebar_label: "Get tags by a tag name"
+hide_title: true
+hide_table_of_contents: true
+api: eJy1VW1v2zYQ/isEP7uRm/XDZmAo0jZoi61bETsY0NQfztLZYiOJHHlK4wr677sjJUdu0zYFOn0QSN7bcy982GmCXdCLK+28/YA5ZSvZr2c6YN56Q3uWdfqspdJ68wnI2OYVQoFebDyv9Ex/ZD3U656tCgy5N07U9EJfILW+CQpUZQIpu1VQVYpKVBJVbfbjWjVQowoOc7M1WCjTRInHf1sMdMIxhuUzWzCiTue2IWxIluBcZfKILPsQJG6nQ15iDbKivUNGYjeSHPvhNB16MhiiFHZ/cWRZHiNfDZjYYvAQyJtmp/v4CZ7gbBOSm9P5/EsXfw4pxwLPfhgxeA97tuPS1uH7mbwuJjqGQ+24RTO9tb4GSke/nPIB3kLtKlF6PNecx8pQhRPTIc2p4jIuVNJkkxfTNB9gOC0Lmy8JqA0/ijaCvUhFN5sjyA+pyAHdIUTbmuI4wvA9uuc3fjF9E1wF+3Fuvp7+G3ON6h00e6BwbR5Y7DfQgBSDtc9ugMAva74z37ZpPV8qq4JoKohWYv/W262p8NJ/x/z9+4xVizanIEu0fJzOxPwEgrt92gb0v0NRm4an2gNZjsAhKCWkz9mV3SP+48El8JNW/T+NmET/Ow6AxObgzyCgHi7pk/njL+/lZQMDm2ER3dTIW8aodxinCKjkTQbOZKcn82wkRr7HWUDweamFHf0N+hDJsZUC65LIhUWWdaUN1C86Zz31rHkD3gBXIc6kyBKiLbSVZF/ZHKp4zEjE5lj86/y3U8lmQshLYYrk7l5avmMQZ/7ASCGSdpnEMx1pbXFsG+sgVHRxR7PnY0MmNHlgQXG6tVE2NOG5reu2YXxqGWujLs6XK3X29rXUgEuVil8B4ZhroBoigwyIXiId3gU4vAr6s0dlwv0/830ZakZ4SxlfbxOpqk1XJ03ElRSUNXkmEtcMrMPu40DEyeA+pR5f6a7b8Cjy7et7OeZIXh7T9d1IyI6jlON72ulr7peUMib4aCWYRL1qUz8/ezb62Whxlufo6Ju668mgvzxfse5meEtrW4iJh4/yzvJ/oXlhY73jmMWzjnvX7FomJ5YnlzI0cpeOZ+46ztywkKRGUbOfADwev9mQh/wlq3tNui5NdN8f9JPoqxaHmU/a0tQ1o/4Pd/sDYA==
+sidebar_class_name: "get api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get tags by a tag name"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/project/tag/search"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns a list of all the tags by the tag name specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"tagName":{"description":"Tag name","type":"string"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"List of tags","content":{"application/json":{"schema":{"type":"array","items":{"type":"object","properties":{"Id":{"type":"integer","format":"int32","example":"10"},"Title":{"type":"string","example":"Sample Title"},"Description":{"type":"string","example":"Sample description"},"Status":{"type":"integer","format":"int32","example":"0"},"Responsible":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"},"ResponsibleId":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"}},"title":"ObjectWrapperBase"}}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

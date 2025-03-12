@@ -1,0 +1,71 @@
+---
+id: create-the-backup-schedule
+title: "Create the backup schedule"
+description: "Creates the backup schedule for the current portal with the parameters specified in the request."
+sidebar_label: "Create the backup schedule"
+hide_title: true
+hide_table_of_contents: true
+api: eJy9VEtv2zAM/iuCThvgzUFPW25tWmDDVixoslOSg2wzsVrZ8vRomwn+7yMlN68m1/lgUOJDH8mPDNyJjeXjBe+0cULlN6J88h1fZdxC6Y10W1QGfu1drY38K5zU7TcQFRhyMijxjL+gHfBVj14V2NLIjsz4mE/QwIFlrgZWxMjMljVUXgFbaxPv8RUDrWMJAHuRro73nTCiAQfGMttBKdcSKibbqDPwx4N1n/HtQbzRFSINvNStw2gkiq5TsoyI80dLeAKn1xtBktt2gAh18Qilwzid0R0YJ8FGO6eN2MA8GoWTrGZJySgE+7Dkt7r0DT5qlzxjSz6vjawQvdueKCYewzYTpX2VLn7qUqgk3gonKC7QEStDYaSpphRmoluLccySf0SgA3CJeW6wC332BnZKBbOX4e4Luo8ijBFbPGL/kutxWXqMnvpmI7jqffR78Sob37DWNwUYpte7RkcHVuqOanoOd2l0ewn0BHWHiHdA7oVUZ3IcGGKZXEeGNGhmkUxKsQKQNqXyVeSP04dsxEq32u3RFVorEC0mTl/G8fVaY9Y4HjayRLgaT7noZH71eZQPU1NGng+VGgjOaYTMM4GnCfIGYfPauc6O8zzUGK8fB/Lv0fJZGCkKlchHupTiWniFIldElHiNmMjnWP1l9PWKIB9M7YyInsKdnd1dpzGTHxApQHWskzrjLRYez0e+kQ40SQ/7mbt7FU2n4N3MjN7RchEI3wmbRsdtdcZDT1DWOkKUjkLziW4a32JWbBYryh7uZnN2Pf1OlcMCJw4oWjVDhaxrRBz4IY+0iM7tIX6ysw5WyP9YX0MXHLy6vFMCm4D4I1fCQLYFtQgtkW48G9Y0p+E5QzkscCLPgodQCAu/jep7usYHDa3y1Z5rdMLH6rdtHvgTEoGqHfP/FBtJ5sonopysU2rnbj6mv2ZzNC6GNdzoinyMeKEVjf8xR0HHGkdSxruAPWs3HkmC+hSTKCY85X3I0KfI0EEgpG+qdnuA8Jis2ZAO/fvsgksIif99v7NPqoseuwlJ1tSwFaL+Byr8ifk=
+sidebar_class_name: "post api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Create the backup schedule"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/api/2.0/portal/createbackupschedule"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Creates the backup schedule for the current portal with the parameters specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"storageType":{"description":"Storage type (\"Documents\", \"ThridpartyDocuments\", \"CustomCloud\", \"Local\", \"DataStore\", or \"ThirdPartyConsumer\")","type":"integer"},"storageParams":{"description":"Storage parameters","type":"array","items":{"type":"object"}},"backupsStored":{"description":"Maximum number of backup stored copies","type":"integer"},"cronParams":{"description":"Cron parameters"},"backupMail":{"description":"Specifies if the mails will be included into the backup or not","type":"boolean"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={undefined}
+>
+  
+</StatusCodes>
+
+
+      

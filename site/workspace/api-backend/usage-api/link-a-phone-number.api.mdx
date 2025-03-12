@@ -1,0 +1,71 @@
+---
+id: link-a-phone-number
+title: "Link a phone number"
+description: "Links a new phone number with the ID specified in the request to the VoIP provider."
+sidebar_label: "Link a phone number"
+hide_title: true
+hide_table_of_contents: true
+api: eJy1VE1v2zAM/SuCzlmdFTtsuXVrgQUbsKBpdylyUGw2VmtLmkQnzQT/95GSk8Zb18OA+WBQ4oceH58UJapNkLM7Wfq2+G7nC7mayABl5zXuaT/Kiw5r6/VPhdqaz6Aq8BzvyZITuaM4kKuesioIpdeOw+RMftXmMQglDOyEq60BYbp2DV7sNNYCaxDzSxEclPpeQyW0SXsefnQQUKBNSwYknLdbTaee0XGD/6OtCFyUpTUIBtlUzjW6TCCLh8AQogxlDa1iC/cOCJRdP0CJVIdqOvCoIbBXV/wf41+cYp5fUs5QI6DXZiP79DGi4KwJudD5dPp6JSrzz5hRY8Mb3612qabMCN5N3/556K1Rw9ygkhzVAi2pT+lsSAworGlVKKeL87NpwfPfUuUiAw1FQwOUrAW/pWWSQucbSqkRXZgVRaypUj+LznrsKXKrvFbrJjPBvozqXnUNmbKxpWrSNqHhnLH7/fTDOTd0Ir8lU5HLvSjCI0XUwxfYEwTNrdfZPZFGtewd5SYumOvrZyVdPanWMbVZCccJc717m84ZqP9k27YzBE0sEy3i+mp5Iy4Wc26fWMrcNwrh0GbAVqW5DmD4WtCtcGNNjGZ3Iuv/dIsG2hCesHCNItYIaxpuHHRxx5xSJCmDJetbbpDUwaxmfZCVFELzyrO+kzGuVYBb3/Q9bxMGz0/I6lkavKKj6sMrEuUjzY15TQ2/uWFgHN50ea6/3Y9+csi4KEtw+Grs6kT0i2/LGwpeD+9GayvO8WrHbwr9Z5IMmwaQ9Jb2Ik3SbDq14dhck9XDF2ssvsckvsHgrg4usz9BONbhZGiE/9zWiykxZmn3/TE+u/6acRR/jubRrgj1L8P3BKs=
+sidebar_class_name: "post api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Link a phone number"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/api/2.0/crm/voip/numbers/link"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Links a new phone number with the ID specified in the request to the VoIP provider.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"id":{"description":"Phone number ID","type":"string"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Phone number","content":{"application/json":{"schema":{"type":"object","title":"VoipPhone"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

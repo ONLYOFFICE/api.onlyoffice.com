@@ -1,0 +1,71 @@
+---
+id: delete-an-invoice-item
+title: "Delete an invoice item"
+description: "Deletes an invoice item with the ID specified in the request."
+sidebar_label: "Delete an invoice item"
+hide_title: true
+hide_table_of_contents: true
+api: eJztV9tu2zgQ/RWBr00sWc5iWwPFIrEDrFA0bWMHRS95GEvjiI1EaknKidbw5+yP9Ms6JJ1EQgMrxbZAH6wHgybPGZ4ZzlCaNTNwpdn4E0tVGSZiJXmKml0eMI1prbhpaG3NjmuTS8X/BcOl+BshQ2U5ikbsgN0QDtnlhlgZ6lTxysLYmE2xQIM6ABFwbzogZBnccJMHJscgmQa6wpQvOWYEcXMK/6lRmwEZ3g5PZEYy1iyVwqAwdghVVfDUyQm/aLvZmuk0xxLsyDQV0vZy8QVTQ3YqJStUhpNntMoz+9tVmrTlJVPibG1w2vKKvN24x0rSlRTaW4qjaLcpsvOTRM+5KbAF00ZxcUUwvIWysktbCGmcGZlev0KsCHEhuNlN+w5NFqZtj3aR20DivVXkeYsh6nJBwTtgS6lKICEsk/WCmG0bw0FsuZNaKRRp81NiMcm5QI3BhxqcsFlTLmSxm/P1P4s8XiwUrjj0+z45++B1F6ZWeAZln6YzC0/0RIoVOQOLjhMLKQsksW2GUTV6zglonvagl1BoghPe+ADdhzQRS/leUfrZRN7mxzuKjHH1/WOnFfvTmitIrynVUUjVPNUNXxlzuB32H3J/PB3ifyTrOZgfzlXHsYdOV5/BNz0bxlEcHQ7jw+HRPI7Hw9H4aDj4Y/Tn83g0+vhg5eQJKZ9kj+10r7SuedbZOdo+h4/83D0udlxXBTT9wX7NrzH4CKIBo6+5y4D+KnwNAq58zh2vwICalVD0VGGtisDIQFtkAI7lbxa55AVeqB76588hQbM6NdoOUdK0n7P0Aejq9q9ao3oJWckFJwtgpOpUzSmZkg2irRgvfgLiNOvco7vSnND+xffUspi2gHfvm9bh0tQo7t6Y8eioI/mhslpl/jAZ78ttX277cvu15bbP0X2O/n45mlAXcp+kroM5iobfNy0XArYtHmbOTIn0N7O3stdN2Qcmp/8hVDyMB1FoG8ZtV2dbnXDNs/Gn6PDF5bMNs+2joo9c7brH2p4Qy42p9DgM17nUZjNeV1IZi1yB4vZb2CW1XfPqlkDf1UQrZAqFmyZVltNdfh69iK1jrY51Zlsqb+7RvvU+sOTJK2xIArchyP3yARMu87tcFxPbs50/tKSnd8H3LWW0sYaW0m1w9wEuy7KmnqoJZi4ewfnpbB4cv02s3xQeH/yCKt76t/kGty4wfw==
+sidebar_class_name: "delete api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Delete an invoice item"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"delete"}
+  path={"/api/2.0/crm/invoiceitem/{id:[0-9]+}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Deletes an invoice item with the ID specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"id":{"description":"Invoice item ID","type":"integer"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Invoice item","content":{"application/json":{"schema":{"type":"object","properties":{"Title":{"type":"string","example":"Title"},"StockKeepingUnit":{"type":"string","example":"StockKeepingUnit"},"Description":{"type":"string","example":"Description"},"Price":{"type":"number","format":"double","example":"1.2"},"Currency":{"type":"object","properties":{"Title":{"type":"string","example":"Chinese Yuan"},"Symbol":{"type":"string","example":"¥"},"Abbreviation":{"type":"string","example":"CNY"},"CultureName":{"type":"string","example":"CN"},"IsConvertable":{"type":"boolean","example":"true"},"IsBasic":{"type":"boolean","example":"false"}},"title":"CurrencyInfoWrapper"},"StockQuantity":{"type":"number","format":"double","example":"2.2"},"TrackInvenory":{"type":"boolean","example":"true"},"InvoiceTax1":{"type":"object","properties":{"Name":{"type":"string","example":"Name"},"Description":{"type":"string","example":"Description"},"Rate":{"type":"number","format":"double","example":"Rate"},"CreateOn":{"type":"string","example":"2020-12-14T22:13:41.5378233Z"},"CreateBy":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"},"CanEdit":{"type":"boolean","example":"true"},"CanDelete":{"type":"boolean","example":"true"},"ID":{"type":"integer","format":"int32","example":"1234"}},"title":"InvoiceTaxWrapper"},"InvoiceTax2":{"type":"object","properties":{"Name":{"type":"string","example":"Name"},"Description":{"type":"string","example":"Description"},"Rate":{"type":"number","format":"double","example":"Rate"},"CreateOn":{"type":"string","example":"2020-12-14T22:13:41.5378233Z"},"CreateBy":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"},"CanEdit":{"type":"boolean","example":"true"},"CanDelete":{"type":"boolean","example":"true"},"ID":{"type":"integer","format":"int32","example":"1234"}},"title":"InvoiceTaxWrapper"},"CreateOn":{"type":"string","example":"2020-12-14T22:13:41.5378233Z"},"CreateBy":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"},"CanEdit":{"type":"boolean","example":"true"},"CanDelete":{"type":"boolean","example":"true"},"ID":{"type":"integer","format":"int32","example":"1234"}},"title":"InvoiceItemWrapper"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

@@ -1,0 +1,71 @@
+---
+id: set-currency-rates
+title: "Set currency rates"
+description: "Sets currency rates to the currency specified in the request."
+sidebar_label: "Set currency rates"
+hide_title: true
+hide_table_of_contents: true
+api: eJzNVU1P3DAQ/SuRT62UkmXh0O6NAlVRKxXth3pY7cFJZjeGJHZtB9hG+e/M2AlJgNKiqlL3sHLsmfGbeW/GNbN8Z9hszRJdRKeV1lAmAgzbhMxAUmlh93has5PKZlKLn9wKWX4GnoImL40rFrJbtAO2adArBZNoociMzdgCrAkSH3YfaG7BBFYGNoN+1yhIxFZAGojSnWj4UYGxBxi4XX6UKcKoWSJLC6WlJVcqF4mDE10ZuqxmJsmg4LSyewV4vYyvILEYR2mpQFvKjMK0V9N6jPe0A/WGx7GGG+EueIsR2ojGalHuWIPQKJmnEb4KYwO5fZR0H4Brzff4iQUrzO+hftKyOB3AHcMIGdzxQuW0tR1aIr6l/DM/K4dec0Q7sC+rIkamQ7aVuuBYeJbKKka/YYTDg0NyvTgbOAokajf2xK2j6dhxenTMGnS1wrqNDolD0fgficAoWRpfkOlk8gJtovTX0Xb4arn8M27OV/PXULJanP1fXHzXWD+M0BJyPDl8ysGq5O2MgNQFKgA/UzxR0rjicZvhV8SViKYHk4gmTtclkQHbNYoBfQPauLFT6RxdMmuVmUVRnWGkZlYrqW2DljdcC44VcGzQmUe15VVOSeYy4bnbRjTkMz5+P/kwpYwGo25BivDhnh14vVKU+AJOKpR65o9DVvKCTke+rhYkuXk/y867sg9nUa+EdrSsH0ts3ONjPQ37uJOOU4MXQ8vvpiHIW+lS6YiWRVGVmH2wcJUP5ueLZXByeUEVRiI8vTlhaitpbMFdB7X54pR/Ou9G6hiM7r9+E1oKLNzZSOUcGUBQTih1q7E18YOWqDKaArqg/744D1pD5r1q1qyuY25gpfOmoW28TNPDt+lFRl94Uda9fTW7hr0rn0vs3ZJgkXleeYU8GjhN2HmcJAko+6LtZtA+l98WSzSO2zewkCn5aH7rlHKLa1xIV2inXLdXI2HlruI7svUxSYfUomMZXzsZtwvKqjsq9wOEY0WHbSL0T2k961LXvkma5sHeH/3S46GNvDURu0HU99df8eg=
+sidebar_class_name: "post api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Set currency rates"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/api/2.0/crm/currency/setrates"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Sets currency rates to the currency specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"currency":{"description":"Currency (abbreviation)","type":"string"},"rates":{"description":"List of currency rates","type":"array","items":{"type":"object","properties":{"FromCurrency":{"type":"string","example":"fromCurrency"},"ToCurrency":{"type":"string","example":"toCurrency"},"Rate":{"type":"number","format":"double","example":"1.1"},"ID":{"type":"integer","format":"int32","example":"1234"}},"title":"CurrencyRate"}}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Currency information","content":{"application/json":{"schema":{"type":"array","items":{"type":"object","properties":{"FromCurrency":{"type":"string","example":"EUR"},"ToCurrency":{"type":"string","example":"USD"},"Rate":{"type":"number","format":"double","example":"1.1"},"ID":{"type":"integer","format":"int32","example":"1234"}},"title":"CurrencyRateWrapper"}}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

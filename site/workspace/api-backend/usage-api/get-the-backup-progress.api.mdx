@@ -1,0 +1,63 @@
+---
+id: get-the-backup-progress
+title: "Get the backup progress"
+description: "Returns the progress of the started backup."
+sidebar_label: "Get the backup progress"
+hide_title: true
+hide_table_of_contents: true
+api: eJyVVE1v2zAM/SuGzkadZT1suXVF0RXboejHqchBcZhYjSxpEt01E/zfR0qOE6/rgF0SSXykyPeeHAXKbRCLJ+GsR6mrL7LedU4sSxGg7rzCPQWjuOiwsV79kqis+QpyDZ6TPK1EKX4SDsSyp6w1hNorxzCxEHeAnTehwAYK5+3WQwiF3aR9QOkR1sUq3XhGZSjqrAlA/UQxn834b1ovdzeWopzaGgSDDJXOaVWnDqvnwPgoQt1AK3mFewdUwa6eoUZKpBoOPKp82024tK3TQA2dgFfWapCG0PAqOUxnG6kDiL4Ut4cmjnhFvWyJmVJsrG8l5qOP80mB83POvvLe+pPUgF6Z7QRoOq0Z+l2Z3b+RCdETFBWmg8zT2GHfc/B89uEto49GDtLS5IxqgbZEgthCokliQ5tKOlXNz2bVYBMKZt1OpAjgX8CH5JfOa8pqEF1YVFVsbMB+ETm5J+SL9EqudKaeY7mvjew0c6ZtLXU6pn44Zxr+NPs855FOPHrPMudyf3XqSB6N8Q321ILi4ZscLoWRLUcnuYkNZTY2pQ/EkkvaztCNxX2atri7un8oLm5veCoaPpOqJcKh+4CtTFYc7rgGTPZfvbHyRJh4dPZ/vqJhUoRXrJyWNCj1kfSIg5pPTAMhSU9RDg+fFm81JYazOk8ixpUM8Oh13/Pxjw48fxmWRzF5Rzc1h49DFDtimkita3CYVNdd1uCPd8pKjra7vnogLJtyKtsuyTYsuPohZPYntacKlkML/NuX76TEmE3R9yM+h97NGG2T0czwkvz4G2Lzz5Q=
+sidebar_class_name: "get api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get the backup progress"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/portal/getbackupprogress"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns the progress of the started backup.
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Backup progress","content":{"application/json":{"schema":{"type":"object","properties":{"IsCompleted":{"type":"boolean","example":"false"},"Progress":{"type":"integer","format":"int32","example":"44"},"Error":{"type":"string","example":"null"},"Link":{"type":"string","example":"Link"}},"title":"BackupProgress"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

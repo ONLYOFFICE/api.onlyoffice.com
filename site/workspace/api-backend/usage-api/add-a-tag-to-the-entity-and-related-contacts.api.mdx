@@ -1,0 +1,71 @@
+---
+id: add-a-tag-to-the-entity-and-related-contacts
+title: "Add a tag to the entity and related contacts"
+description: "Adds the selected tag to the entity (company or person) specified in the request and to all the related contacts."
+sidebar_label: "Add a tag to the entity and related contacts"
+hide_title: true
+hide_table_of_contents: true
+api: eJyVU8Fu1DAQ/RXLJxChCSsONLeFrtQKCaHucqr24NqzG1eObWynsIT8OzNOlk3b5UBOE8/MmzfPzz1PYh95fcdlaMsNxduCR5Bd0OmA5z1fdqlxQf8SSTt7DUJBoPqAES/4D6wDvh2wS0GUQXsq4zVfKhVZaoBFMCATKIaTWHL5DGxCePZKutYLe2AuMA8hOvuaRQ9S7zTWa5trA3zvICYmrKJ2Ycx0bAShSmeTkCleIJmp9KNTSL3nlMJJFArvjZZ5hfIhEsGeR9lAKyhKBw9I2d0/IFPE8cEhnaQhUnYku8k1/bMtV+MiGaA44sQUtN3zoZhatfpn483VqU0j2z2Ki30o1RfRnpmHN8QsZV4Myx9JEL2zcWS+qKqzENj9v9rMxhT8ffXuJe43KyangOJU1QL+4urcu5hVFanBv1J4XS4uqpIc15/ErY9u+D1ZYThmtarvqreX2zdDicKU++A6z8ml4RErs0m7YBC6ScnHuiz7BicOde9dSANWPoqgxb0ZRaHcyH4nOoMhN04Kk4+RNfU8TX+oLhe0+OxhrEmeEe7s8/grG+76GQ5IQZNEzZgueL7C+mlv1oz0vz25ePVTtN7Acxceb2NusGrmmpkDtd25zEcnwuGfXNt2lqy3zvKx29V6w5Zfb0gmVHO8S3paJMfwByQlcgo=
+sidebar_class_name: "post api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Add a tag to the entity and related contacts"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/api/2.0/crm/{entityType:(company|person)}/{entityid:[0-9]+}/tag/group"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Adds the selected tag to the entity (company or person) specified in the request and to all the related contacts.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"entityType":{"description":"Entity type","type":"string"},"entityid":{"description":"Entity ID","type":"integer"},"tagName":{"description":"Tag name","type":"string"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Tag","content":{"application/json":{"schema":{"type":"string"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

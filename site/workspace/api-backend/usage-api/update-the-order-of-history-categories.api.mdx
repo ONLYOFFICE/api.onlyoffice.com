@@ -1,0 +1,71 @@
+---
+id: update-the-order-of-history-categories
+title: "Update the order of history categories"
+description: "Updates the order of the history categories with a list specified in the request."
+sidebar_label: "Update the order of history categories"
+hide_title: true
+hide_table_of_contents: true
+api: eJy1VcFu2zAM/RVBu2Z1mhbYlluXFmixASuaFDsEOSg2E6u1LU2Sm2WG/32kJDdO0wbogOUQSOKjSD4+0Q13Ym35eM5TUybX0jpltnwx4BbS2ki3RVPDL2qXKyP/CCdVdQ0iA0MuBld8wDeIA75o0SsDmxqpCcbH/F5nwoFlLgemDDoxtfKbPMRhKZrXeDFiNtLlTLACLcxqSOVKQsZk5fEGftVg3QkGi8uvKsPUGp6qykHlaCm0LmTqU0weLCXQcJvmUApaua0GTEktHyB1eI82SoNxGNpbpSvCar+C75QOJv0i4S2LDoPuXmGM2OIWmShtL551RlZr3oYfpW+1qmyINRoOD0NeH3ITWahgE2jEOO+t+6383uDjDgq88AluCD5RdYgUfSSGXvssVsqUwoWjsxEewG9R6oJApxyrvSnFGm6Fyw8Z6WM1IphTTBKc/GbE7nGfAEHsZZ+9Yx59IPpNVKHMcY8P4tMqxR4heqqM++G5/yceLt/tNjo75yQYF6joZDGJAvxpsO14SZTV+fD0UEn3lYjvFjJ/Vwm4zYjw2rfcN4YnQstkdDJMaAJEoSed0BMDneQsmCcw1g+E2hTomTun7ThJmlxZ144bjSS1iHwSRoplfFBkC7mtRF1QtYVKReGPMSfy2Td/Hn4ZUV29ITQlOYfrXh1FO5lr+Q28zomAPJgHvBIlWfd8PSP0Xu52E+Wq4383EeadMBYt3bpSz0a8cKLKsq4wQTb15LC7q+mMXdzeEAnIVehDQUMwFmtdKbxOY0phRO5PyMPpyF9M1t7c+y9DNrLp4LdLdCGkfzC+501UzZyoRiTqhqaRKfE/BqR9VI+f10E/2M2ghDlvmqWwcG+KtqVjjGroM7PYCYd2GDHvvjQNf8SuEt++6o8zyo/gRR26/mICtoPO4yJNQbuj2EXvYdzezxC7jB+XUmXkYsSGCsH/MceF8k3wYvRnDTa4Wtc0usY8XEnSore3r8xHr8y4oKI6U7XtJbgv0kGsg/6pqlddmibovm2f8cH0psfzywhoavACs/4L7e3Dmg==
+sidebar_class_name: "put api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Update the order of history categories"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"put"}
+  path={"/api/2.0/crm/history/category/reorder"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Updates the order of the history categories with a list specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"titles":{"description":"List of history category titles","type":"array","items":{"type":"string"}}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"History categories in the new order","content":{"application/json":{"schema":{"type":"array","items":{"type":"object","properties":{"RelativeItemsCount":{"type":"integer","format":"int32","example":"1"},"ImagePath":{"type":"string","example":"path to image"},"Title":{"type":"string","example":"Title"},"Description":{"type":"string","example":"Description"},"Color":{"type":"string","example":"#a7fc00"},"SortOrder":{"type":"integer","format":"int32","example":"1"},"ID":{"type":"integer","format":"int32","example":"1234"}},"title":"HistoryCategoryWrapper"}}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

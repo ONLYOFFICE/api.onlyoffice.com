@@ -1,0 +1,71 @@
+---
+id: delete-an-alert
+title: "Delete an alert"
+description: "Deletes an alert with the ID specified in the request."
+sidebar_label: "Delete an alert"
+hide_title: true
+hide_table_of_contents: true
+api: eJydVMtu2zAQ/BWCZ8NyjaBodTNqAzXaQ1Enp8CHjbSO2FASS1JJXYL/3l3qETtxCrQXS+K+ZnaGDtLDvZP5raxB6Wyl0Xon9zPpsOis8kcKBbnqfNVa9Ru8apvPCCVaLrH0JmfyifJQ7iNVlegKqwynyVyuUaNHJ6ARwI3Fk/KV8BWK7Vo4g4U6KCyFatKZxZ8dOj+njgYs1FRqXRrf0Ae1UzxMcWMDvpIvpyXs1JkCrqiwBpkH6Y8mlTYe7wn0TB5aW4Pvj95fycioLTrTNg4dVywXC35cYlIONLbrudgRJgHuFLmYYNOcoqWRjedWYIxWRdpd9sNxv/BPCGOcyavFu9eobhoYhMFSchYNr9qSImXCmzZJm8plBkZly/kiSyonFllQZeRdoX0cF91ZTcmV98blWRaq1vmYB9Naz5mPYBXc6X5NHOsRHaDTDFe3Beh0TEi45jz8YfFxyWROvLXjJfTtLjpsWg6h/4LHUf2qD89GX5zVpj2o5tCmcuU1Z3xq67praKLYJbbi+2Z3LVbftsyKyPfr1EBmHdA7X0MSapjRG2By8kvzhWe9/9/1A1mPv3xmNBBXgpIkCYOOt7wJyiQl6Ze1pMcIKKf7QcvthbmVIdyBwxurY+RjmmL5Mu+fdUySl8rxO5nmANrhX3id3K+LSEetmmPyiu74i14fSLl0eeOesqrx3yMMgVVRoPEnJa+uC1tmcvZ683VzvWHaHW/k1CIPySLDCw+4iOjcLSM8/o2zN0pC6A0Y45Tfh96smCw6kGcS5P0/OcrUgQ==
+sidebar_class_name: "delete api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Delete an alert"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"delete"}
+  path={"/api/2.0/mail/alert/{id}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Deletes an alert with the ID specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"id","in":"path","description":"Alert ID","schema":{"type":"integer","format":"int64"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Deleted alert ID. Same as the request parameter","content":{"application/json":{"schema":{"type":"integer","format":"int64"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

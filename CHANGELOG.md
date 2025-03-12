@@ -1,5 +1,36 @@
 # Change log
 
+## 4.4.0
+
+### New features
+
+#### Docs
+
+* Updated Office API usage page
+* Updated Plugins and Macros pages
+
+#### Docs API
+
+* Added the editorConfig.customization.features.featuresTips parameter
+* Added opening for hwp, hwpx formats
+* Updated docs config page
+
+#### Docspace
+
+* Updated list of languages for OpenAPI
+* Added host and port for server url as parameters
+
+### Fixes
+
+* Added tabs for convenient display of OS/services/languages
+* Fixed loading for ONLYOFFICE Docs editor tab
+* Fixed anchors
+* Fixed Docspace and Workspace sidebars
+ 
+#### Docs API
+
+* Updated conversion tables
+
 ## 4.3.0
 
 ### New features

@@ -1,0 +1,71 @@
+---
+id: get-currency-summary-table
+title: "Get currency summary table"
+description: "Returns a summary table with the rates for the currency specified in the request."
+sidebar_label: "Get currency summary table"
+hide_title: true
+hide_table_of_contents: true
+api: eJy1Vc1u2zAMfhVDpw3w5rTYYcstzYquGFAMSYuhKHKQbSZWa/1Mkttmhh9nL7InGyk5idN2DXZYDoEsfaTIjx+plnm+cmx8wwors2ljLahCgGOLlDkoGiv8Gk9bNml8pa34yb3Q6gvwEixZWVyxlD0gDtiiQ6sSXGGFIRgbsxn4xiqX8MQ1UnK7TjzPa0gehK8SX0FiuQeXLLUNX0UMYJ04A4VYCigToSIOfjTg/Hu8rF+e6BJDa1mhlQflacmNqUURQsxuHQXQMldUIDmt/NoAhqTzWyg8+jFWG7CesiU3/dW03s9hugnqDc9zC/ciXPAWPfQenbdCrVgXfhSfM1q56PZ4NHru8bMoaEV06OUu6X0udhRsQ0v/OVluLSc7LI90h0mYYQQDlGpkjnVOGcYkOd7KSt1g+XAHHrk0NYGO0iOGWV8KXw9te1KGyGklFDhIrhuuyGS+lrmuX7f5/YuQkwHxB+64uCaDaVOj8OCCy0MxXRD83E21ukceSJwDg1zrGjDYoYW3DUSbE+5EcQC95LVDOOJ9JGgrJ+L6XC31d4uVRJZ79XwYHT0XzJXiff9BGZxJwM8ST1YQqsh9hR8ZNyI7fj/KqJkdeI/Zumwjn6xvwZgk9bfFlF1o78ZiHVjlvXHjLGsr7Xw3bo22vkPkPbeCjIJG6CxGuOTIMprVuuB12MbIyGb/+OPo0zFlNxgpc9JpdPfiYNnp14ivEARMNFTxOGUq1HXfNvBCjTDbzYfTTR2G/b3tV/K61OG2TW20lI3CAJN5ICeZnc4vk8m3cyIBuYrVqKlP+2SdlzxIsg/pDPxgig1nHnsyGweT67+MyZ5BD48+MzUXoeVCndteLzdELyJRMTRarAyiiKqhjd3Y2VMO1jFq4Ia1bc4dXNm662gb77b0XCx2kqEvvLfavBgtu4N1YDrk/u6SoiR43cR6PxlqXbqxmBQFGP8qdjFojLPTS8Tm/SMhdUkmlj/QA4L/Y4YLHUoRZBj2WiytWjV8RdjokkRFvbevybugyX5BSW2O1HoQ4L480z4P+qesXjRp26j4rtvi49FfLbY9EdFU5gVG/Qc8+bWe
+sidebar_class_name: "get api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get currency summary table"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/crm/settings/currency/summarytable"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns a summary table with the rates for the currency specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"currency":{"description":"Currency (abbreviation)","type":"string"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Dictionary of currency rates for the specified currency","content":{"application/json":{"schema":{"type":"array","items":{"type":"object","properties":{"Rate":{"type":"number","format":"double","example":"1,1"},"Title":{"type":"string","example":"Chinese Yuan"},"Symbol":{"type":"string","example":"¥"},"Abbreviation":{"type":"string","example":"CNY"},"CultureName":{"type":"string","example":"CN"},"IsConvertable":{"type":"boolean","example":"true"},"IsBasic":{"type":"boolean","example":"false"}},"title":"CurrencyRateInfoWrapper"}}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

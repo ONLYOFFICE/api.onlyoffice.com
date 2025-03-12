@@ -1,0 +1,71 @@
+---
+id: update-a-task
+title: "Update a task"
+description: "Updates the existing task with the parameters specified in the request."
+sidebar_label: "Update a task"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVcFu2zgQ/RWCZzuW5cRxfMvWBRoU2A0auwUa+EBLVMRGIrkkFccr6N87Q8q21DrJtrs+GBT5Zjjz5s2wpo49WDq/pwkruEyZGS2ZfbR0PaCWJ5URbgenNb2uXK6M+Ic5oeQHzlJu0MrAig7oFnCcrhuwSrlNjNAIo3O60ilz3BKXc8KfhXVCPhAHN5CtcLnf1sywkjtuLLGaJyITPCVC+jPD/664dWdwRbv8Q6UQUE0TJR2XDpdM60IkPrDRN4vX1tQmOS8ZrtxOcwhEbb7xxIEfbZTmxglu/alK1U2Kq37cSAK5WQC+tbfOQOi0GRyIOmX2rj17wVQk9oWr2nwFOCCZMiVzp+wzo0pALNjTHTdPWIEfnS14JiTwLbIuf0RYgrZ+Lzgg1nsgyhCpOpdtlCo4k7TxP6TdaiVtYCuOop+vDCVOfVXBz68WhhnDdmAHAirt2wULrPeZGVD+zEpd4NYYeVqJt1DxZJsyhL7rVfNli0PVF2j1Jyj2dfwShEU8DOCLLmFvWnXRYHznmHGvm8VRHA3H8TAaL6PpfDKdj6Oz2fT84nwWf/VJKgRCkf6bm7+2Mmjud0rUqnpOq0qk/WuzNOMXl5fDSRJPh+eXk+nwKs2uhpsLNp1NNpvZRRz9O9I/Q5HMjnzdPaoniup1wvmDFaj9FueM7W0j3V8MyBTSavV+Ho1PSFyydvwBhYiCeZUrSJPqyufPXA4fI6bFKD6LRodZCg2PE4biMMV2s36WVqYAdO6ctvPRqM6Vdc281sq4BpBPzAi2KQKXeBbiyVhVIH2FAu9+G+JAm/7xLLqKMZfO/L7DlgvuTk7xYytq8ZH7XsSk83A8oNLz3rf1LGBPfzqO5ff7OhzH6rFI3al53PUDsaORn+abMxXHwSkz5f22hQNBl5WE3EgAkk/v75bk+vYG+QOaQ9kKfHpanqwrmW++NpswtQjbj62036KHKfY/vmAty44/u5EumPDd7bVQtwq6xxIAEjTUoSzw5HUEVQ2KuKd1vWGWr0zRNLgNtxh8qddHAeEX3JDvH+uaPkJ1kTyf23CJ8SC8qEL1f5jWzWBvcZ0kXLtXsetOU9yuloDdtC91qVI0MWyLrzj8zykslKfai9Lv1VAt+VCxB8QGlygx7Lu+Qh+9QtsFJrU/krtOgH2xDto88B+zOmlS10H/TXPAh6MXLQ4dEtBY0DVE/R2ssCUl
+sidebar_class_name: "put api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Update a task"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"put"}
+  path={"/api/2.0/calendar/icstodo"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Updates the existing task with the parameters specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"todoId":{"description":"Task ID","type":"string"},"calendarId":{"description":"Calendar ID","type":"string"},"ics":{"description":"Task in the iCal format","type":"string"},"fromCalDavServer":{"description":"Defines if the request is from the CalDav server or not","type":"boolean"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Updated task","content":{"application/json":{"schema":{"type":"array","items":{"type":"object","properties":{"Id":{"type":"string","example":"1"},"Uid":{"type":"string","example":"123wda"},"CalendarId":{"type":"string","example":"calendarID"},"Name":{"type":"string","example":"Todo Name"},"Description":{"type":"string","example":"Todo Description"},"Start":{"type":"string","example":"2020-12-01T06:36:10.8645482Z"},"Completed":{"type":"string","example":"2020-12-01T06:36:10.8645482Z"},"Owner":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"2fdfe577-3c26-4736-9df9-b5a683bb8520"},"Name":{"type":"string","example":"Valery Zykov"}},"title":"UserParams"}},"title":"TodoWrapper"}}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

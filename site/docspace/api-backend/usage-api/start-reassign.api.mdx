@@ -1,0 +1,71 @@
+---
+id: start-reassign
+title: "Start the data reassignment"
+description: "Starts the data reassignment for the user with the ID specified in the request."
+sidebar_label: "Start the data reassignment"
+hide_title: true
+hide_table_of_contents: true
+api: eJy1Vt9P4zgQ/lcsP6c/KGULfeNgV0Kn01YUdA+oWrnJpPGS2DnbgeWi/O83Y6dt0qXASbsvrTMej78Zf/PZNXdiY/n8gS9AlzmwEbu3YFginOCriOsSjHBSq5uEz7l1wrhbENbKjeIRN/BPBdb9oZMXPq95rJUD5WgoyjKXsV85+m61IpuNMygEjdxLCRhOr79D7DBOaWgfJ8HSbGp0QSBoy52vdUaqDfomYGMjS4qMZg/25po9Z9qCR82eZZ6zNTDT4oSEOc2E0i5D3woXYJRUm0IgUl5VMsFv+CEKTB8NszNxls6mZ4P008VsMJ2enA/Wp+fJYJzCOJnMZjA5O+dNxJ3+vxgRBcIsmEB8iOUY2l+CLoEcHCyMTiWt20Fca52DUD9hXJYQyxQPACGCLxSiDUGYYGWIQ3NqD30LucAz3+WRSiVthjXXhmHJu+CdqaBBbCJJJG0r8kXn3FORWziEdRsIxkphRIFYjGVYG+Z5iKX2WHowEGkM1uK2Tjpfscvl1TBwe3hZyr80JmWHbdxrp4fLLqf3dt40hNWALbWygZiT8Zj+DiH2t9+YsP8vagb5AYLdXKNJVXku1ts6dzlzcT79RJwAY7R5P9pn7/ZWQKsLYA5+OIqKWGPMU2y6NJOY+8Y3Wj/2Yu/cYTl6n066TDmZnE4xtLRXmgwOkg9Q+Kbjfci6iKTLVb6iWsHXFBWv5qCqgqTvCikUVt1WSoWadGNdCRVjK9Dwi5A5GVEa367iQxuUDVg7ilgbHU3tKGK7bchvO0ZzuyNZ22HE2r3R1o5WPWnYZtFEu8zG0Uk0iU6j6R7usZN5GHeRnnQxTvrYTnugpkfgjJtVvwcxQqHV8C7DPRKMO7yWVLp1hSvvhH1chgN6VyDe6evQrtTYFHTR9mPH3jb29LVexrRItHaSEnQOlZBuDVI0uprCFeJDnPwc4l6JymXayH/pKIh4EFdGuhfPOGHjbzT/7RHIwKkWWLVndAC+opIdyDKJkz0iuaSENOPBPUuX+S+8aGwr5gmTqpVIL2tD3ApVNNN0l5faerURLsOvkSjlaDIcj0pf0tF2o5GXWk5pmCeUX59FZXJckjlX2vloVOPV65p5XWrjGvR8EkaSbvhmo7lQpFRUOTV7rmORezOJB67pT5+PLyZ0RKt95ZYklSFcv347SUDwf6IBNQtvCfruuqGOUCljrR8l+CMhDb7dP10+bznbf3p87K7tPgQ+uuLgcm4VSqpU+5w6BP8b1sRuqioWP3DiaRIqZ10h/FXSJu258jpVDru981T7DRRrD4UuiFGZC6w+4vWcqVu6PdCJoScSjijoKeefk7uXZaAdkiAQ6IHX9VpYuDd505AZNzPUQas93+gLN8qwpbA/iaeeJKjkPtXBHcEi97wKnDm4lEk3w4rLOIbSvem76nTS4uvyDp3X7Su4QClCqxHPlBL+zjmnhzSt9iT2tprnQm0qf23yENNLX0X16RI7ULgdUFbbKfXSRdhnfMiDfimrV1fUdeiaptn5h6mjK9rKbr3pXFcI+j/WHSii
+sidebar_class_name: "post api-method"
+info_path: site/docspace/api-backend/usage-api/asc-web-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Start the data reassignment"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/api/2.0/people/reassign/start"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Starts the data reassignment for the user with the ID specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"fromUserId":{"type":"string","description":"User ID whose data will be reassigned to another user","format":"uuid","example":"75a5f745-f697-4418-b38d-0fe0d277e258"},"toUserId":{"type":"string","description":"User ID to whom all the data will be reassigned","format":"uuid","example":"75a5f745-f697-4418-b38d-0fe0d277e258"},"deleteProfile":{"type":"boolean","description":"Specifies whether to delete a profile when the data reassignment will be finished or not","example":true}},"additionalProperties":false,"description":"Request parameters for starting the reassignment process","title":"ASC.People.ApiModels.RequestDto.StartReassignRequestDto"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Reassignment progress","content":{"application/json":{"schema":{"type":"object","properties":{"id":{"type":"string","description":"ID","nullable":true,"example":"9846"},"error":{"type":"string","description":"Error","nullable":true,"example":"some text"},"percentage":{"type":"integer","description":"Percentage","format":"int32","example":1234},"isCompleted":{"type":"boolean","description":"IsCompleted","example":true},"status":{"oneOf":[{"enum":["Created","Running","Completed","Canceled","Failted"],"type":"string","description":"[Created - Created, Running - Running, Completed - Completed, Canceled - Canceled, Failted - Failted]","example":"Created"},{"enum":[0,1,2,3,4],"type":"integer","description":"[0 - Created, 1 - Running, 2 - Completed, 3 - Canceled, 4 - Failted]","example":0}],"title":"ASC.Common.Threading.DistributedTaskStatus"}},"additionalProperties":false,"title":"ASC.People.ApiModels.ResponseDto.TaskProgressResponseDto"}}}},"400":{"description":"Can not reassign data to user or from user"},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

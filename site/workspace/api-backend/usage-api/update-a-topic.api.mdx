@@ -1,0 +1,71 @@
+---
+id: update-a-topic
+title: "Update a topic"
+description: "Updates a topic with the ID specified in the request, changing a topic subject, making it sticky, or closing it."
+sidebar_label: "Update a topic"
+hide_title: true
+hide_table_of_contents: true
+api: eJztV21v2zYQ/isEPyuRrDRdY2AY0iTFgqFBUDsY0NQfGIm2GEsiR1JNXEH/vXekZNmzY7vLgG3ADEOgyHuO9667mlo2M3R4TxNZFFUp7CL8IHVVGDoJqOFJpWELzmt6XtlMavGNWSHLXzlLuUachhUN6BPQcTppAJVyk2ihkIwO6Z1KmeWGMGKlEgl5EjYjNuPk+pIYxRMxFTwlonR7mv9RcWMDkmSsnIlytoSZ6uGRJ3BSsDnuC0uMFcl8ERCpSZJL43ePQRbFNCu45do4wUt4AUEcH4GyCpRLMZvRPws7dnddX8KBSTJeMDqsqV0oxIvS8hnoHNCp1AWzfuskpg0q3Ur+XqYLxCQSqEuLS6ZULhJntfDR4DX1JnPptEPZtVRcW8GNo/Na43Jd0Bv+1JkEQC0TYzUYgTYgvDPNJuwjm6+4oqVa4h+kzDkrkQEalKebDC5wf8lhC9T90BxGydJ4LeIo2uTk4yJdMvqbLHYrjTUrZExrhipCdBZmP/w6PcTjAeXPrFA5Eg3iEzTYqPfUujdWaUdusXQcwMb8eQ8GFSIWyYD8ArLN8nQ3Io7i6GgQH0U/jQcnw9O3wyg+Ponfng3O3n1GJq3lX8ekleT94gdturxqadKqcknZXx21v6Mtj+6HIlwKo3K2uHHpvUuXj2LOyWdWLpg1c+HMLmy+D8RKhs4H6vOvzDI9Klie78ZUOod4JgYpCXMoxN9qORU5v9N74F++hECaVok1uOQStv0ewo+ZUc+/VIbrn1laiFIAB2Yl3ABXWK8QvQJWcsH575opL/w4wwp9gMKeBNW1liVZAcn4ikT690Tq/viAAmQrzY8flSueF74SjR39LpwoIELCR8UdbCS+8R8vHvHJm1MXI/g5OiS4MBTWXO4+1+7DhaWidx6GgIuBl4l7kuCvVL7owFRqy56v9K+rYqdn8SB+bWz0TPaX33EmDIG/8ToosNrK7f+Xv/9M+RP7NC4r0A/z2DJbmQOToawKbIJv8CCHjQvfNyEX11tttMP3ETkinjwgA1h7REBiWHvQZD0cnBbrtegAia5LfwS3OsFuJWi3XZo1Ui8UUm8Tw80Kez8J29KIzQYBPOKXylFbij44JziaN9FgS9dYsnYMASsjFfT5mUyxiFcu9VwZpSFTIoyPo7CfaqZ4VehqUFi3s0CDfT7XX7tJocIQpZm1ygzDsM4g2ZthraS2SPmVacEecp/VeObFm7IqRw/kMmF51tYHxKwfv4vOnPIrY9UIe1rPbutw1Rtaid/4optcMn8cdIPNGtYZBZvmT/1ActW5YWWg6J3UzQpWV7xv/PGtwQun0gnSOuyisycZObuRT1ejMTm/vUb7gBm9l3Kc+Fo7GFsw18G30vrKuTJBrDl4ZXL6JybH1t7YbodQXIWbhSpfuHxo3aMzgBKCyw0trTl8KkLqBbTTa9gNnOBxHy33tK4fmMFK2DS4DSJrHK4nfXC5OEyFwTW4Ycpyw3fYaGVg3Sp7F0DlwgVwXuEbLOcQTv1I3EyANOtG+ro9bfugI1d8evTGdNYEHeI8SbiyO2knKyl7ezcG2od2ZC5kihDNnmATn05Q6ZR2OeL2agiuclbBtwnOPUuMeKwK6wkzdwnTLlCpraZYz53OLvhErbZC6tqnY9Ms6f3Ri4hlwnpq9MwEpP4OsXrOEA==
+sidebar_class_name: "put api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Update a topic"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"put"}
+  path={"/api/2.0/community/forum/topic/{topicid}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Updates a topic with the ID specified in the request, changing a topic subject, making it sticky, or closing it.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"topicid","in":"path","description":"Topic ID","schema":{"type":"integer","format":"int32"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"subject":{"description":"New subject","type":"string"},"sticky":{"description":"Makes a topic sticky","type":"boolean"},"closed":{"description":"Closes a topic","type":"boolean"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Updated topic","content":{"application/json":{"schema":{"type":"object","properties":{"Posts":{"type":"array","items":{"type":"object","properties":{"Id":{"type":"integer","format":"int32","example":"123"},"Subject":{"type":"string","example":"Sample subject"},"Text":{"type":"string","example":"Post text"},"Created":{"type":"string","example":"2020-12-07T13:56:02.3269198Z"},"Updated":{"type":"string","example":"2020-12-07T13:56:02.3269198Z"},"CreatedBy":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"},"ThreadTitle":{"type":"string","example":"Title"},"Attachments":{"type":"array","items":{"type":"object","properties":{"Created":{"type":"string","example":"2020-12-07T13:56:02.3269198Z"},"Updated":{"type":"string","example":"2020-12-07T13:56:02.3269198Z"},"Name":{"type":"string","example":"picture.jpg"},"ContentType":{"type":"string","example":"image/jpeg"},"Size":{"type":"integer","format":"int32","example":"122345"},"Path":{"type":"string","example":"url to file"}},"title":"ForumTopicPostAttachmentWrapper"}}},"title":"ForumTopicPostWrapper"}},"Id":{"type":"integer","format":"int32","example":"10"},"Title":{"type":"string","example":"Sample topic"},"Created":{"type":"string","example":"2020-12-07T13:56:02.3259212Z"},"Updated":{"type":"string","example":"2020-12-07T13:56:02.3259212Z"},"Text":{"type":"string","example":"This is sample post"},"UpdatedBy":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"},"ThreadTitile":{"type":"string","example":"null"},"Status":{"type":"integer","format":"int32","enum":["Normal","Closed","Sticky"],"description":"[0 - Normal, 1 - Closed, 2 - Sticky]","example":"0"},"Type":{"type":"integer","format":"int32","enum":["Informational","Poll"],"description":"[0 - Informational, 1 - Poll]","example":"0"},"Tags":{"type":"array","items":{"type":"string","example":"Tag1,Tag2"}}},"title":"ForumTopicWrapperFull"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

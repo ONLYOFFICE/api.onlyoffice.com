@@ -1,0 +1,71 @@
+---
+id: delete-color-theme
+title: "Delete a color theme"
+description: "Deletes the portal color theme with the ID specified in the request."
+sidebar_label: "Delete a color theme"
+hide_title: true
+hide_table_of_contents: true
+api: eJztVk1z2jAQ/Sse9crYQGgbuKXAgWk6kynJ9JBhMsIWQYlsudKaNPX4v3dXsvkIAdJpe+shxNbuPu2+Xem5ZMDvLRvcsqkAkNm9DaJgqNNUZ4GtV9isxXQuDAeps0nCBiwRSoAYaqXN9VKkgrVYzg1PcdEQWMkyfEFHmaBJZvj0vRDmGV8SYWMjc4LC1SttgKsACCSYjNBuY3zmbFAyeM4dRAbiXhg0LbRJOfilsy4uiB88zRU69c97H6oK0zTC5jqzwhJAt92mf0d2bCocBHFhQadBTCW9MLbwSYkYRBKgLdPQCpRMJWACscbkMqBdeJ4rGTuKogdLW5X7tej5AwIRW4YIBekTdfvZLT9uDCeyJIjUno5Hll/ja7fw6w3Hh4nsVK26dWs8CwZZOADnfDGkUIrPCQBMIbbw2FwVgiFoymV2uhAexzWdxze/cH6+W0e3f9f7eN4ZdSiDeQGAo3Ea/JNzfAv4+26/P26zCtF5kkiK5+pqq6IFVxZDQIILuJgOw29iHg61EeENSCXhOWzOXTh0I7g5VLaxuKUJjgKVAeIH/Cfyj4n8xzs13XrlzNg9KtCvuWHecI6njevRc9w96yGsv6dOY17W99kJwN8l7SKX9PdFo17Y8Gt9N49AHyYOjdgc2qnX7uzf3jcZL2CpjfyJBFSOuLgw2BMnOtzGd2S/exS0gGrAiaYndBBsRvqwizZyMmbpvg9yrwvbAvAkYelsk1FgcxHLhUQNkJlbMwIVzUKI+Ch7S72RRSeGsMT3iOcy6obtqJGSyMFDLZlWmFWjl4VRGLAEyO0gisqltlANSkqqQs8VN5LmxR06snlmFrxQ1C2lY67cMjJCMbvm83a/S6TONnRN47Xk7JK2kaBcfhakQbWS77jVmh5r/SiF64PMFtpF748A5Y9lespXXZ+jhZQ7QajhfSsCvt2Al2NabvT2b7WuLpYu1ShXpFGYnetFWTfxlphAT2yja1n9SUTav24lEuubcsvKcs6tuDGqqmjZf/VQgxNpqYPJ+rAcLG3/m+jVLF27/AfWipPKDhijFjezgrvO0G2JZwBPPKXgI+jKz2Erau/LhVDWMz0aX46vx+hOzd+dDz8J9QNt0Jiy52343cHxSdBv1ToQUZZ++Kpq7e9NByPqItekUA048L8A7JK50w==
+sidebar_class_name: "delete api-method"
+info_path: site/docspace/api-backend/usage-api/asc-web-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Delete a color theme"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"delete"}
+  path={"/api/2.0/settings/colortheme"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Deletes the portal color theme with the ID specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"id","in":"query","description":"Portal theme ID","schema":{"type":"integer","format":"int32","example":9846}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Portal theme settings: custom color theme settings, selected or not, limit","content":{"application/json":{"schema":{"type":"object","properties":{"themes":{"type":"array","items":{"type":"object","properties":{"id":{"type":"integer","description":"Theme ID","format":"int32","example":1},"name":{"type":"string","description":"Theme name","nullable":true,"example":"blue"},"main":{"type":"object","properties":{"accent":{"type":"string","description":"Accent color","nullable":true,"example":"#4781D1"},"buttons":{"type":"string","description":"Button color","nullable":true,"example":"#5299E0"}},"additionalProperties":false,"title":"ASC.Web.Core.Utility.Settings.CustomColorThemesSettingsColorItem"},"text":{"type":"object","properties":{"accent":{"type":"string","description":"Accent color","nullable":true,"example":"#4781D1"},"buttons":{"type":"string","description":"Button color","nullable":true,"example":"#5299E0"}},"additionalProperties":false,"title":"ASC.Web.Core.Utility.Settings.CustomColorThemesSettingsColorItem"}},"additionalProperties":false,"title":"ASC.Web.Core.Utility.Settings.CustomColorThemesSettingsItem"},"description":"Themes","nullable":true},"selected":{"type":"integer","description":"Selected","format":"int32","example":1234},"limit":{"type":"integer","description":"Limit","format":"int32","example":1234}},"additionalProperties":false,"title":"ASC.Web.Api.ApiModels.ResponseDto.CustomColorThemesSettingsDto"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

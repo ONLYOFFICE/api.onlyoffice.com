@@ -1,0 +1,71 @@
+---
+id: get-custom-fields
+title: "Get custom fields"
+description: "Returns a list of descriptions for all the existing custom fields."
+sidebar_label: "Get custom fields"
+hide_title: true
+hide_table_of_contents: true
+api: eJyVVNtu2zAM/RVBTxvg1o6T9OK33oYF64AizTZgRR9Um4nV2pYmyV0yJ/8+UnbSZB26xU+USR6Sh5eGOzGzPLnjqSnDi9o6VbKphCKz/D7gFtLaSLdAg4af1S5XRv4STqrqI4gMDDkalHjAf6Id8PsVemVgUyM1mfGEj8HVprJMsEJax9SUbektmyrDRFEwlwODOVrIasbS7UQOEd3AjxqsO1cZ5tLwVFUOKkei0LqQqc8pfLQUseE2zaEUJLmFBsxBPTxC6hBHG6XBOAmWtAiBxU28TfNH2ldexzxAsMaxzmB6fOU/yspqrKEFi6PoNcp1V/JOQYi3bwHCGLFAP+S4tP8ubAwFAj7DiMwvVN1G6nwkhp5h7wKO3JfCtb/6Mf6AuSh1QUYRx/paDkbZvs69wTDuD+I+YVyLByi2ADoKt83PpXF5JnB80P4DUfRVFDW87RRHcXTQiw+ik0nvOOkfJ9HgcHjaOxpER983OOvW/kfyVV3SNE9g7rwr/iP5DMcbxVsokOdzNUf5Iof0qRVpC9rELin9V7N/F7EDtoEMWK97EmrAYnxtgAPWx+caO2ADfHXwARvigyLc71AwpDpvlJVttD175Dv8Wdint3kmq9Hl3ujYf04rggPkf7SnxdPwzeDII0C3RIOo93pvvlSiuzaQeZwS8ImDyGfgx124HB+h0DKMD6OQrlfzss7JO1owkbolBsKdWqaq1KJaLJXWyri6QrtlKiy8X4XtavrNDDOYysrTSUtqwTyjuz9+tcEh5rlz2iZh2OTKulXSENgKLZ+FkeKhaJePdG1FU1EXxE+hUlH431gJ+eyqT6LTmNjYOri3dABauL+e3ZfDoOUn8JeBaMtbdcArUZJ2x9fzSBdm/HJMr9Yd2z2Gm0NHuFPl460bqcrS84ejS/Sw8dXthJ3djIgGZKvtH54foHJXvwGOmSh4
+sidebar_class_name: "get api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get custom fields"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/crm/{entityType:(contact|person|company|opportunity|case)}/customfield/definitions"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns a list of descriptions for all the existing custom fields.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"entityType":{"description":"Entity type","type":"string"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"List of custom fields","content":{"application/json":{"schema":{"type":"array","items":{"type":"object","properties":{"RelativeItemsCount":{"type":"integer","format":"int32","example":"0"},"EntityId":{"type":"integer","format":"int32","example":"14523423"},"Label":{"type":"string","example":"Birthdate"},"FieldValue":{"type":"string","example":"2020-12-08T17:37:04.5916406Z"},"FieldType":{"type":"integer","format":"int32","enum":["TextField","TextArea","SelectBox","CheckBox","Heading","Date"],"description":"[0 - TextField, 1 - TextArea, 2 - SelectBox, 3 - CheckBox, 4 - Heading, 5 - Date]","example":"5"},"Position":{"type":"integer","format":"int32","example":"10"},"Mask":{"type":"string","example":""},"ID":{"type":"integer","format":"int32","example":"1234"}},"title":"CustomFieldWrapper"}}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

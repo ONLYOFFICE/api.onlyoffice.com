@@ -1,0 +1,71 @@
+---
+id: get-projects-by-status
+title: "Get projects by status"
+description: "Returns a list of all the projects with a status specified in the request."
+sidebar_label: "Get projects by status"
+hide_title: true
+hide_table_of_contents: true
+api: eJy1VVFP2zAQ/iuWn4bU0dLtYas0TYxVGtrYqhY0aSsPR3JtDI7t2Q7Qlf733TkpJIINeFge2ot9n++773yXtYywDHL0UzpvzzGL/Un9H+RpTwbMKq/iivbXcr+KhfXqN0RlzSeEHD3jPFmyJ6/ID+XphlA5hswrx25yJKcYK2+CAKFViMIuBGgtYoGiiRjElYoF7YcIsQoiOMzUQmEulEl+Hn9VGOIuRWnMDzYnTmuZWRPRRDbBOa2yxK1/HjjyWoaswBLYiiuHxMWecUA6h0I79FFhSH4pMFtd6o0UW2Iv5vKbQzOXPTGXE6gC5mxbT68H2qbXHTq8CaaI25I02qSHuQdnTahDDgeD+/G+NAJthaGznpsheA8rwlExyvB45gdgxrmKLcczazWCIU+8htJpXluADigphcMw8eoSqNBPBeQtz60gPbmwvoRYL70adqB7A8Ydq6jbQUL0yiw7jrNkiNqTIB/bUj4B2Jae4LPbO/ActonstC6sOutQ/oviHUVu2d2GqCqVdyM0z8sHfrZPSl8Fp2H1FcpHdDtSFyh+gFlBDBfqiWIfgYF0l3tyn+oPflZSF/8bU3lqcysCewpIKMZTUy2UxhP/CHw+51GUV9QHbKKl5XqN4bsQ3PV7akH/DvJSGeocD9Fyt1ED1gnJMR1lV4jfPbiafKtU/6cQrejN9ODgbjsGevL1YO9+458YaIYr5umMEumVCMolpisEsaCXPjjVH+4O+ttZva4n0+gF3TBz49JIusnSKNrZSJ7f/hJ9SOO7YsFlEaMLo35/XdgQN6O1sz6y5yV4BaRKuqO8V5NcQKVZDW0z0GmZyDGmu/1m8HbICbY+GTOeTPVxD3447iaWU58xjSxWoqi3e9Kki9zFJml49E3vPgPjbYHuxvhgw4ctbArSFOPAlmVliJeYJU3EdDw7FvuTQ86dJKrroGm0cY6bP1oIZxY=
+sidebar_class_name: "get api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get projects by status"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/project/{status:(open|paused|closed)}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns a list of all the projects with a status specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"status":{"description":"Project status (\"Open\", \"Paused\", or \"Closed\")","type":"integer"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"List of projects","content":{"application/json":{"schema":{"type":"array","items":{"type":"object","properties":{"CanEdit":{"type":"boolean","example":"false"},"IsPrivate":{"type":"boolean","example":"false"},"Id":{"type":"integer","format":"int32","example":"10"},"Title":{"type":"string","example":"Sample Title"},"Description":{"type":"string","example":"Sample description"},"Status":{"type":"integer","format":"int32","example":"0"},"Responsible":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"},"ResponsibleId":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"}},"title":"ProjectWrapper"}}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

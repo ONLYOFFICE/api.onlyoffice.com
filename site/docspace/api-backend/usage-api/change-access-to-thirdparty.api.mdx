@@ -1,0 +1,71 @@
+---
+id: change-access-to-thirdparty
+title: "Change the third-party settings access"
+description: "Changes the access to the third-party settings."
+sidebar_label: "Change the third-party settings access"
+hide_title: true
+hide_table_of_contents: true
+api: eJydVMFu2zAM/RVB5zTOgh0239psA4ZhQNGk2CEICsVmarWKpUl02szwv4+UnMRp1wHbJZEpknp870mtRHUfZL6UX7SBIDIxB0RdU2w1ktaBV6ht/bWUuSwqVd/DZVFACAu7qLQvnfK4lyPp4WcDAa9suZd5KwtbI9TIS+Wc0UVskj0EW3MsFBVsFa9w74A62/UDFEh9nOcjUUOIeYCDpLW1BlRNWSWEwmvHPSk+d1DoDZWIpwqwAi/QCioVtBah3yw5EucS1ova8mHwrLbOUGv0DXTdSKqy1NxUmesBjo0yAV4deujWTy6ICbUFBB+oM2rkvvJyPhtHXscz62F86fR3W4IJ45tU9Qnt+NDpFJJdx2g8BGfrkKiYTib8dw7iKjEidso0kAseQ+hNnPuonNBBhCZqtmkMYftXbQ60J1DvJ+9e47itVYOV9foXlJKzAhSN1+SMfEmnhOKO9+8egQM0lyoJxxMlgFx1q5fUzqLNQhxDReAsKH8hW+4ieu4o55haEe+VZYe6JppIYUUfmXI6m44n2YYVyHDo1wB+x1IxvsYbyq4QXcizrK1swC5vnfXYUeZOea3WJqnAe2n8jWoMLaWxhTIxTGNzzfn2h8nHKTO3OnEyZ4JTu3NmjowT7m/AKGtyFH8P00ZSM0mFtY8aItms3M3p/n0+uLq/P9HcXLWx8YyBNX/Amj3JUxIZif3dNE0ScKuiIXoQSZU3ZeiVenk5B0/Bf+ja84HwjJkzigYnaFGuthd5yWRRJslMv1ForjtJTcQn0ZaybdcqwK03XcdhIsyzH1cnjfmLTqjIoOCjN6IwcpZmuFgwHk6n6xZ1enF9utGhgh9Jh3/NXQ18e327oNx1/3pu6Y2goFdP/LLSby4lv8VcHH0TY600xGej7jk3tYxvWMO8DL2UXNMveKjDVr0fAjw3WRqDf3moP1a0bTJq1x3z09abFT2xh2zWc0WgfwMx5EJC
+sidebar_class_name: "put api-method"
+info_path: site/docspace/api-backend/usage-api/asc-web-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Change the third-party settings access"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"put"}
+  path={"/api/2.0/files/thirdparty"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Changes the access to the third-party settings.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"set":{"type":"boolean","description":"Specifies whether to set the specified settings or not","example":true}},"additionalProperties":false,"description":"Settings request parameters","title":"ASC.Files.Core.ApiModels.RequestDto.SettingsRequestDto"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Boolean value: true if the operation is successful","content":{"application/json":{"schema":{"type":"boolean"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

@@ -1,0 +1,71 @@
+---
+id: check-upload
+title: "Checks upload"
+description: "Checks upload"
+sidebar_label: "Checks upload"
+hide_title: true
+hide_table_of_contents: true
+api: eJydVdtu2zAM/RVDTxuQxVlWDK3funQFimFY0Qv2EASFYjOJWtnSJLltZujfR0pO7Fx2wV4cm6IOycNDpmGOLy3LpuxSSLBJmlwqWYCxbDZgSoPhTqjqqmAZy1eQP91rqXjBBkxzw0tw5JlNG1bhB/oswuUrchAVfmvuVvhegM2N0ASFxhghubrAEwM/amEA8Z2pYcAsRik5yxrm1poQReVgCQZdF8qU3EXThzEa4JWXWqLT2enJR+9nEQ2s+6SKNUHshr3eZpwgVBLKEdUyWYTC61AYfiNwrjBo5QiCay1FHkhIHy3hNIc5qvkj5I5IMUSZE2DpNADfCUcpbn25MXxN9Dgobc9unaHg/oAsBElcABmwqpaSzwkvsrVlYMqsKtEPXh2beQThRSEIgcvrXk4LLi3sR/h3XmIaGTu/nQyDXIYTZWB4rsVXVYC0w5vI/4VTw0mnltbKvKfMDFitKhspGo9Gh426wlPjoAgZ/Ec7/kZxzONk9P4w9H3Fa7dSRvxESZKXhbw2wq2DyLnNH+j84QnIgKWEUXhBB0DaZ/vMBg42FKIjsrxSNEpa2SAXmo6MpVyLdDwcpYHxtNkMkU/jzTS0hFEy5nkzcLWReHXlnLZZmjYrRPRZo5VxHj2fuREklFA+ncVSF7yWNEFS5VwGM5ZId3aPT0dnY6Jp1tV/SyRHuF0WOta1+AJEe7sKdtzadZAr9SQgEEvdu+nG9fNGybtjs6trQlmoELOnxO8wJwlS1UhOZP55HCuzruRBJG1S+x3Z6VfTKe3AsS2SEkm15FgN4oceNG0bp8QAemIjaVlREfib9TbiFiz2E9mNnZmypplzC/dGek9mZMWQwGZdI0PPC2HpvTg+yP3039y0e/Vt0t+2R6vY9K9aB+HImr7wNbS32+ie+F+h4nEZUzLxeBJDvrsjkO76wZz6webGeZ6Ddn/0nfVG5frb7R06z9uVXuKiQavhL/Tngc+QqgoUBHUGW8Mkr5Y1X5JvxAxLsaZG9RUbtdm+UFVHydiTcqyDnlTV0RtNE8fB+61/PPrtjZbZjTe1Bhe5/wU6yJsR
+sidebar_class_name: "post api-method"
+info_path: site/docspace/api-backend/usage-api/asc-web-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Checks upload"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/api/2.0/files/{folderId}/upload/check"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Checks upload
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"folderId","in":"path","description":"Folder ID","required":true,"schema":{"type":"integer","format":"int32","example":9846}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"description":"Parameters for checking files uploading","content":{"application/json":{"schema":{"type":"object","properties":{"filesTitle":{"type":"array","items":{"type":"string"},"description":"File title","nullable":true,"example":["some text"]}},"additionalProperties":false,"description":"Parameters for checking files uploading","title":"ASC.Files.Core.ApiModels.RequestDto.CheckUploadRequest"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Inserted file","content":{"application/json":{"schema":{"type":"array","items":{"type":"string"}}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

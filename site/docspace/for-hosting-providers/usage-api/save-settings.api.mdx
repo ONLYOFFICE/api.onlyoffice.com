@@ -1,0 +1,71 @@
+---
+id: save-settings
+title: "Saves settings"
+description: "Saves settings"
+sidebar_label: "Saves settings"
+hide_title: true
+hide_table_of_contents: true
+api: eJztWN1v2jAQ/1eQHzcGlLbSljdW7aHa2lWl3QtClUkOcOvEnu3Qsij/++6cBJLSL2llT3kB2/d997tL4ow5vrAsmLAxOCcSXE+7TGkw3AmVnEYsYJavYEPtMgO/U7Duq4rWLMhYqBIHiaMl11qK0Av2b61K6MyGS4g5rdxaA2pTs1sIHerRhsw4AZaoWhnH5TmPgXYxf/gBycItWTA8Pu6yWCTVftCtNFln0CXUFIENjdBkF48vvKZOQqq6LEml5DOJ/M6k0GXwwGMtvbiKoePgwbEcVULCE0fhbhwVGNcCzI7+K8/aERFS5srE3BXMh8OXzB0MD4/Qzh2s/zW+76jizXGtuEyhFtQzOn95tjdqRbU8igSJcnlRq+KcSwuPVV8WcOlobrAiDoztYNY6dgsoJ5w3MRqf9EZajNfWQdw7UxFI26uA57feNjnRwquF157gVR9iHz62OGtxtn+cPcSyBVkLsj09K1t0tej6D4/KFmYtzPYAM7JuwGqV2AI4w8GA/ppGa9+ntQ9SP/605OKVd7gXo6u8PROhUVbNXW9k9Tm4E2Wgd7YKe6ejkIQvwabS7TTG62+Q7239jR9I72uWDB8NDnYrc53w1C2VEX8g8u5ZCFMjHLbFJGPchjdEv/F9MsFKc2qze2QANs2nj8E15iuwdSwhwpaKbim0sn7IcOop1q9Y+nR7wciqWSEUvdHU4KRiS+e0Dfr9bImSeZDRQMoZdZAR1BIebEQrYppzCjRgUoVc+mOMhWSa5M+DL0NKx3Qb6JhKUKhrhrupCdeibHI/DptsXUbwRVirOwE+g1Tby+0tzLeqZ5tDtdbB9XFHc6kcSw2OcnA0p4lI5sr7+VTHkhCmtCjMaljkw7qYe+CVoewUrFHP2vXRLmeZnFoTowVfu6ws84TV2H2hMe1FySYsy2bcwrWReU7HmC5DEJtuK0w7VLlEzOHYJ2QUaTkpfPp0RQ5sM7PT1Xm3khiFIeh6FutOT2sovfg5vkK2WXl5FuOQw1PD7+liDX8Dxuj6jWx4wPizjEmeLFK+IN7Csp8yKeWgDqICLuWC4qlIyboeRxNdRQT0S/E8KZFlBULzfMNfkJ6VKHNacfs0oNN/AQLoCz0=
+sidebar_class_name: "post api-method"
+info_path: site/docspace/for-hosting-providers/usage-api/asc-apisystem
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Saves settings"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/settings/save"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Saves settings
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"portalName":{"maxLength":255,"minLength":0,"type":"string","description":"Portal name","nullable":true,"example":"some text"},"tenantId":{"type":"integer","description":"Tenant id","format":"int32","nullable":true,"example":1234},"key":{"maxLength":255,"minLength":0,"type":"string","description":"Key","nullable":true,"example":"some text"},"value":{"type":"string","description":"Value","nullable":true,"example":"some text"}},"additionalProperties":false,"description":"Request parameters for settings","title":"ASC.ApiSystem.Models.SettingsModel"}},"text/json":{"schema":{"type":"object","properties":{"portalName":{"maxLength":255,"minLength":0,"type":"string","description":"Portal name","nullable":true,"example":"some text"},"tenantId":{"type":"integer","description":"Tenant id","format":"int32","nullable":true,"example":1234},"key":{"maxLength":255,"minLength":0,"type":"string","description":"Key","nullable":true,"example":"some text"},"value":{"type":"string","description":"Value","nullable":true,"example":"some text"}},"additionalProperties":false,"description":"Request parameters for settings","title":"ASC.ApiSystem.Models.SettingsModel"}},"application/*+json":{"schema":{"type":"object","properties":{"portalName":{"maxLength":255,"minLength":0,"type":"string","description":"Portal name","nullable":true,"example":"some text"},"tenantId":{"type":"integer","description":"Tenant id","format":"int32","nullable":true,"example":1234},"key":{"maxLength":255,"minLength":0,"type":"string","description":"Key","nullable":true,"example":"some text"},"value":{"type":"string","description":"Value","nullable":true,"example":"some text"}},"additionalProperties":false,"description":"Request parameters for settings","title":"ASC.ApiSystem.Models.SettingsModel"}},"application/xml":{"schema":{"type":"object","properties":{"portalName":{"maxLength":255,"minLength":0,"type":"string","description":"Portal name","nullable":true,"example":"some text"},"tenantId":{"type":"integer","description":"Tenant id","format":"int32","nullable":true,"example":1234},"key":{"maxLength":255,"minLength":0,"type":"string","description":"Key","nullable":true,"example":"some text"},"value":{"type":"string","description":"Value","nullable":true,"example":"some text"}},"additionalProperties":false,"description":"Request parameters for settings","title":"ASC.ApiSystem.Models.SettingsModel"}},"text/xml":{"schema":{"type":"object","properties":{"portalName":{"maxLength":255,"minLength":0,"type":"string","description":"Portal name","nullable":true,"example":"some text"},"tenantId":{"type":"integer","description":"Tenant id","format":"int32","nullable":true,"example":1234},"key":{"maxLength":255,"minLength":0,"type":"string","description":"Key","nullable":true,"example":"some text"},"value":{"type":"string","description":"Value","nullable":true,"example":"some text"}},"additionalProperties":false,"description":"Request parameters for settings","title":"ASC.ApiSystem.Models.SettingsModel"}},"application/*+xml":{"schema":{"type":"object","properties":{"portalName":{"maxLength":255,"minLength":0,"type":"string","description":"Portal name","nullable":true,"example":"some text"},"tenantId":{"type":"integer","description":"Tenant id","format":"int32","nullable":true,"example":1234},"key":{"maxLength":255,"minLength":0,"type":"string","description":"Key","nullable":true,"example":"some text"},"value":{"type":"string","description":"Value","nullable":true,"example":"some text"}},"additionalProperties":false,"description":"Request parameters for settings","title":"ASC.ApiSystem.Models.SettingsModel"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Settings","content":{"text/plain":{"schema":{"type":"object","additionalProperties":false,"title":"Microsoft.AspNetCore.Mvc.IActionResult"}},"application/json":{"schema":{"type":"object","additionalProperties":false,"title":"Microsoft.AspNetCore.Mvc.IActionResult"}},"text/json":{"schema":{"type":"object","additionalProperties":false,"title":"Microsoft.AspNetCore.Mvc.IActionResult"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

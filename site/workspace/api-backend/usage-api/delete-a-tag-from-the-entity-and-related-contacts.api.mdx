@@ -1,0 +1,71 @@
+---
+id: delete-a-tag-from-the-entity-and-related-contacts
+title: "Delete a tag from the entity and related contacts"
+description: "Deletes the selected tag from the entity (company or person) specified in the request and from all the related contacts."
+sidebar_label: "Delete a tag from the entity and related contacts"
+hide_title: true
+hide_table_of_contents: true
+api: eJyVU8Fu2zAM/RVBpw3zai/YYfWtawOsGDAMTXYqclBlJlYhS5pEd8s8//tIOWnSNjvUJ1okHx+fngaJapNkfSt17Molx6tCJtB9NLil80Fe9Nj6aP4oNN59AdVA5PpIkSzkL6oDuRqpq4GkowlcJmt5BRYQksAWRKJYIzSChol19F0+BYc0Q7zRvgvKbYWPIkBM3r0VKYA2a0MdxuXaCD97SCiUayYAZe0uYRUja+9QaUxnxGlX/Nk3tMEgOUWzOFQhWKPzJuV9Yp6DTLqFTnGE2wDE3N/dE1vCCdETITSQODvRXeaa4dmy82mVDFDscRJG4zZyLHatpvlv4/XVoc0Q2w1pTH0k1zfVnZhHFyUcZ14Myx9LkIJ3aWI+q6qTENT9Wm2OxhTyY/XhJe4Pp3aGgUZyVQf0S6tTHTuCdVXY0n+pgilnZ1XJ1hsO8tZ7R/zd2WHcZ01T31bvz1fvxpKkKTfR90GyXeMDVWa39tESdIsYUl2WQ+sTjvUQfMSRKh9UNOrOTrJwbuK/Vr2lUFqvlc3HxJt7nqY/VeczXv3ohSxYoAnu5Dt5FI52/QpbomBYpHZKFzJfYv20N6vGN3Bz8PH8t+qChec+3N/HscWqI98cedC4tc98DDKOvPRd1zs23yLLJ27mi6W4+H7NMpGa023y42I5xn/of3Wj
+sidebar_class_name: "delete api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Delete a tag from the entity and related contacts"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"delete"}
+  path={"/api/2.0/crm/{entityType:(company|person)}/{entityid:[0-9]+}/tag/group"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Deletes the selected tag from the entity (company or person) specified in the request and from all the related contacts.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"entityType":{"description":"Entity type","type":"string"},"entityid":{"description":"Entity ID","type":"integer"},"tagName":{"description":"Tag name","type":"string"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Tag","content":{"application/json":{"schema":{"type":"string"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

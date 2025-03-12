@@ -1,6 +1,6 @@
 # AddEndnoteCrossRef
 
-Adds an endnote cross-reference to the current paragraph.
+Adds an endnote cross-reference to the current paragraph.\
 💡 Please note that this paragraph must be in the document.
 
 ## Syntax
@@ -28,7 +28,7 @@ boolean
 
 This example adds an endnote cross-reference to the paragraph.
 
-```javascript
+```javascript editor-docx
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0); 
 paragraph.AddText("This is just a sample text.");

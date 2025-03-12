@@ -1,6 +1,6 @@
 # PI
 
-Returns the mathematical constant **pi**, equal to **3.14159265358979**, accurate to 15 digits.
+Returns the mathematical constant -**pi**, equal to -**3.14159265358979**, accurate to 15 digits.
 
 ## Syntax
 
@@ -22,8 +22,8 @@ number
 
 
 
-```javascript
-var oWorksheet = Api.GetActiveSheet();
-var oFunction = Api.GetWorksheetFunction();
-oWorksheet.GetRange("A1").SetValue(oFunction.PI());
+```javascript editor-xlsx
+let worksheet = Api.GetActiveSheet();
+let func = Api.GetWorksheetFunction();
+worksheet.GetRange("A1").SetValue(func.PI());
 ```

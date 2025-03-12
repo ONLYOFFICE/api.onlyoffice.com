@@ -3,8 +3,12 @@ info:
   title: Hosted Solutions
   version: latest
 servers:
-  - url: http://localhost
-    description: Local server
+  - url: https://{host}:{port}
+    variables:
+      host:
+        default: localhost
+      port:
+        default: '8092'
 paths:
   /api/portal/get:
     get:

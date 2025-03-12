@@ -1,0 +1,71 @@
+---
+id: send-congratulations
+title: "Send congratulations"
+description: "Sends congratulations to the user after registering the portal."
+sidebar_label: "Send congratulations"
+hide_title: true
+hide_table_of_contents: true
+api: eJytlN9v2jAQx/8Vy89AshQGzVvV7aGatFZi1R4Qqo7EIRZO7NkOKoryv+/OyZYCW7WHPYHvh+/u+zmn5R72jqcb/qStB8Ui9uyEdXw74doIC17q+iHnKXeizu91vUdTo4LZ8Qk3YKESnjLSTctrPGAsXSFzdMsaTz8aYU94yIXLrDSUOsSwh09od1kpKuBpy/3JULrzVtZ79BTaVuDR0jThOvEKlVEUslzAoljOF9Pi4+1yOp9/WE13N6t8GhcizpPlUiSLFe+6ye+WvojT+/18rkAqdghhf+9o7MDpSjAvXj2WQbGscAYlEY6ykjimn/MCjwfeTfg8vrl2fdUMta6kcyQr8+FIwzNfSscgC3E4zkXeGpk4lp1ToXRfCtaQwFAgG2bFXjr8gzMElwmsZzgPsis14TXa+cDTl3iKwMgomcVRHxkR/OwKPhY4/iLfWIV5pffGpVHUlnhdl7aU3mHkEayEnerVIV+vQQGNIrxKZ6CCGUeknHP3Kr5NcHqS2YmssdKf1kSovw5c9gKNL1+I3YgMJ+iZDwtwFjZsQqb1QYogrKwLHbKlD3jv1vez72I3uzOS+scxe8mPSd+j8xXUlDBcTyguSVzuWIsFay9q/1/QDXPSCkZGAQ6EjQUM7YBxQyJgJILkva6gArZrmChtj2XD23YHTjxb1XVk7l8LIc6lI4a4LQUoJ94Zbnzbf2wygBo/EkdQDQVxeq7/XuTtg32nTL8EY43tuI041bZ78waeHtffcBl+Amt3uV4=
+sidebar_class_name: "post api-method"
+info_path: site/docspace/api-backend/usage-api/asc-web-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Send congratulations"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/api/2.0/portal/sendcongratulations"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Sends congratulations to the user after registering the portal.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"Userid","in":"query","description":"User ID","schema":{"type":"string","format":"uuid","example":"75a5f745-f697-4418-b38d-0fe0d277e258"}},{"name":"Key","in":"query","description":"Email key","schema":{"type":"string","example":"some text"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Ok"},"403":{"description":"No permissions to perform this action"}}}
+>
+  
+</StatusCodes>
+
+
+      

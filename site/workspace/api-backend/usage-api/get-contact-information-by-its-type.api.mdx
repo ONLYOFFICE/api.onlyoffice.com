@@ -1,0 +1,71 @@
+---
+id: get-contact-information-by-its-type
+title: "Get contact information by its type"
+description: "Returns the detailed contact information by the information type specified in the request."
+sidebar_label: "Get contact information by its type"
+hide_title: true
+hide_table_of_contents: true
+api: eJyVVEtT2zAQ/isaXSuwCbQF3wKlbaB0KKF0OkwOir3EAltSJTk09fi/d1d2IDx6aA7O7mp39X37UMuDXHieXfPc1cmR0UHmwfOZ4B7yxqmwwrOWj5tQGqf+yKCM/gyyAEcxDiUu+D36AZ91GFWAz52y5MYzfgGhcdqzUAIrIEhVQcHy/hKm9I1xdczI5qvos2kKKwvMW8jVjcIopaOHg18N+LCNt1rpZA0BnI8QNSp4JaW4xFB0UATBylDy57iOXoEQ+iCfl1BLnrU8GihhgAXSFbz37U27IzSAbmoqw3lpNMUe18gQ/3/A3FNFBJ/e9Vkv71UIMckXpe+gmGgUP8oc5sbcoTguCgfex/MlnBismqRMZ6upRS+UPp31uQ8rs+jh/JSlMeQz/YrfydE3/J7I+Twejidn+L065S96cp2yLRYRC7aDYgQt2AjFAbdgu6hE6ILtoTigF+wtKmsCgr1Dbc1BsPeoDTQE24+OD0wEO0DDQAavJQiREMqEYSCFGsGIxFAmFEgOJQKBBFEiBD1JVAgAEkWJLr86nfGOZnCYkUNTrKiPNG+gA4nS2krlsd/JradytC8bbua3kAcaMGcsuKDAr9PgzKiClNfHafIBo56NTRd/BMpbo32fa5Sm/86yMZSY7n/RS+fkioY/QO037D44pRd8QLOX7rwE8F3LYc2h4OSF21Ua5MsXEOtBq5TxRFqVjLbThF6MoSpJ+1Ce7DrdOpi96ZJCBpm0633saLfALdfr2rgKc5UhWJ8lSVsaH7qstcYF8lxKp+S86qtFZz3aG9lUtICVyWUVzYiSYp4e76cHI2K68YpNqU59ulffssf6WXUKq/XrUfbHYv26PImNNaJGXDwO3PFvWdsKng1M2on4MMV7VKBzbHddNxqhsWksC7s4nl6y8fmE6GOV+p5UMgDR7P4CwkfhIg==
+sidebar_class_name: "get api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get contact information by its type"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/crm/contact/{contactid:[0-9]+}/data/{infoType}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns the detailed contact information by the information type specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"infoType","in":"path","description":"Contact information type","schema":{"type":"integer","format":"int32","enum":["Phone","Email","Website","Skype","Twitter","LinkedIn","Facebook","Address","LiveJournal","MySpace","GMail","Blogger","Yahoo","MSN","ICQ","Jabber","AIM","VK"],"description":"[0 - Phone, 1 - Email, 2 - Website, 3 - Skype, 4 - Twitter, 5 - LinkedIn, 6 - Facebook, 7 - Address, 8 - LiveJournal, 9 - MySpace, 10 - GMail, 11 - Blogger, 12 - Yahoo, 13 - MSN, 14 - ICQ, 15 - Jabber, 16 - AIM, 17 - VK]"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"contactid":{"description":"Contact ID","type":"integer"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Contact information","content":{"application/json":{"schema":{"type":"array","items":{"type":"string"}}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

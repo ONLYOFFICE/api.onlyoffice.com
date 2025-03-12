@@ -1,0 +1,71 @@
+---
+id: convert-a-currency
+title: "Convert a currency"
+description: "Returns a result of converting one currency into another."
+sidebar_label: "Convert a currency"
+hide_title: true
+hide_table_of_contents: true
+api: eJylVEuP0zAQ/iuWz2VTVhygt1JWgLigfZxWPbjutPFubAd7st0S5b8zYyd9g0D0UDme1zfffONWolpHOXmUOthi1oQAThuIcj6SEXQTDG7J2sppg6UP5qdC490XUEsIHBXoJEdyQ34g5x1FLSHqYGp2kxN5C9gEF4USAWJTofArob17gYDGrYV3IHQuuhXGoRfKeSwhXFHSAD8aiPjRLwlCKykMwSEfVV1XRicoxVPkQq2MugSr+ITbGqi0XzyBRspTB19zPeqKY61vcpZjpNN0LwhCj48i+0yusQtqtxvJVfB2wHueYjZ0cilJxEAdcxL0f5EikbEpjS4F8SGI+rVxqtqztTFVJRYwFILlean0Yx5j7V3M7V+Px+dVP4E2lpJfmhGl/Vfme76ILh+soji59M2iApnxvBu/PYfw4FSvMOqEvSzQ55Isa0hDVFjSR6FqU1xfjQuWawRkhLEYSCn2rEcIdIpJu02oKLRErOOkKNrSR+wmbe0DduT5ooJRhC7Rw7YMbqWICgqrvFZVuiZQHHNsfj/+cM19HezLHfOR013cmh1P1Ms32BIEwwyU2TySTlm2HsUmSpjw2/1S3LwqWxOrB6Ien0p00MKx6g7EaNzKJ0gGOZWceWsbR12Iu8SguL25uxfT71+ZKSI0T6tSCAMjEa1KOuhxz/IMaOV3BU9ehYNd/q8HoqcR4RWLulLEIgFKw257vTwyx+RJimEdB5uUkVXDF3uAg3JojlkDj7JtFyrCQ6i6jq+J98Bv4XwvGf6ikuXwHLbyGbaZAm7vzT0DZPeqyfM+WZ5uNERMtYYa/+g7P9iJzzf35LvoX0brlxwS1IZfTfqfSDr4xHaSYbpraWpu3ag1++aULCpeu2NNPidN9gduajC57QHAY3mO+j74n7u6GNK2WfFdt/PPpt9G7HYie/OE54T6FwBwVRw=
+sidebar_class_name: "get api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Convert a currency"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/crm/settings/currency/convert"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns a result of converting one currency into another.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"amount":{"description":"Amount to convert","type":"number"},"fromcurrency":{"description":"Currency to convert","type":"string"},"tocurrency":{"description":"Currency into which the original currency will be converted","type":"string"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Decimal result of converting","content":{"application/json":{"schema":{"type":"number","format":"double"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

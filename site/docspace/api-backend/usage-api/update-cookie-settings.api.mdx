@@ -1,0 +1,71 @@
+---
+id: update-cookie-settings
+title: "Update cookies lifetime"
+description: "Updates the cookies lifetime value in minutes."
+sidebar_label: "Update cookies lifetime"
+hide_title: true
+hide_table_of_contents: true
+api: eJyVVd9v2jAQ/lcsPzNCaR823rpuD9NWqSpF04RQZZID3Ca2Z19ouyj/++7sUAKs0/YCyfl+fPd9d04jUa2DnMzlFBC1WQeRiStrHzUEuRhI68Ar1NZ8KeRE1q5QCOl45y8H0sPPGgJ+tMWLnDQytwbBID8q50qdxwTZQ7CGbSHfQKX4CV8cUFa7fIAcKY/zXA65NJ2WegV3uoKep6bEa/DkWkDIvXacmOzfyBXJVWxVWYPQRlTa1AgMbmV9pTAFn4/JAM+qciWlOxufX7T0btSyhKJXZmltCcqclJk6yPWK4Am9ErgBkUcmRNhRpzyILp2wXhiL/Xroa2ipoCoKzRlVedNreKXKAMcVOyX2FTqqhVNeVYDguUXUyPnl5fRq+B2Ww0unh9e2gDIMD7W6TdHhE1rZtozFQ3DWhMT4eDTiv0MI1xCCWoNQS1tj7Jpi6hKFXYmgtpRWGHh6RUhw/lX/hOBidHZadGZUjRvr9S8SJjqNT51+2NoL53XOGFypjCgscUWsi1A7Zz3D1UHYFMDFAuS110hjOidwIb/nMvePwAbiQhUE/4kcQC7axbEYszj9oad8EOVbkzekTCTQxvLeuDqOt8INvWTK6Ww8HGU7yrIu2Z7BAH7L0jLK2pcUtEF0YZJlzcYGbCcNd9eS51Z5zfMW9eOzRNNKkUIUVtpcldFMzXPM4fH70YcxD8Jiz8yU1UnpDvl53Q6C/5UMA2lUFd/7bgNaM7KljiLlLPvt/oL4vNuG/oLzJvYWMS4KZ1rZWPd0vLlzIijpsh2n7gJWKk5YByzpdSLV8Vr3Lqz/l7jjBOEZMxpBap6gRMmaTu85E0aepHhUtrcmB6qTBkm/uWyapQow82Xbspm48zygi73c/EaFNjSxdB3ymESN6L6Inby7Y1jsToijZEdr2A52EZd5Dg7/6rvoTfLN7I58l91NX9ElQ0avnvgrQL8TKfmbwcFxhKKNlFZmXdMlQucpZbwGa6anP1ZpgLoHbmp3ZF76AA/nLbXBv9zUHyOaJs1s2776p6M3Izpid94s64JA/wb243zO
+sidebar_class_name: "put api-method"
+info_path: site/docspace/api-backend/usage-api/asc-web-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Update cookies lifetime"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"put"}
+  path={"/api/2.0/settings/cookiesettings"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Updates the cookies lifetime value in minutes.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"lifeTime":{"type":"integer","description":"Lifetime value in minutes","format":"int32","example":1234},"enabled":{"type":"boolean","description":"Specifies if the cookie settings are enabled or not","example":true}},"additionalProperties":false,"description":"Cookies settings request parameters","title":"ASC.Web.Api.Models.CookieSettingsRequestsDto"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Message about the result of saving new settings","content":{"application/json":{"schema":{}}}},"401":{"description":"Unauthorized"},"402":{"description":"Your pricing plan does not support this option"}}}
+>
+  
+</StatusCodes>
+
+
+      

@@ -1,0 +1,71 @@
+---
+id: get-the-previous-or-next-message-id
+title: "Get the previous or next message ID"
+description: "Returns the previous or next message ID filtered with the parameters specified in the request."
+sidebar_label: "Get the previous or next message ID"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVt9v2zYQ/lcIPiWYW7tZN7R+65YMC4YNRdI9JYZBS1TEjiI1kkriev7f9x0pWbKtZmtTPxgU73i/77vb8CDuPJ/f8EooPf1dei/upOeLCfcya5wKaxA3/F0TSuvUJxGUNb9KkUtHjxxOfMIfwCf5YotXufSZUzWx8Tm/kqFxxrNQSlY7ea9s45l1zMjHwKqkjF2es0LpIJ3M2YMKZeIWTlQSl575WmaqUKAqE2lO/t1IH15Cc3v8yeawc8Mza4I0gY6irrXKor3Tj56s2XCflbISdArrWsI+u/ooswA5tbO1dEHBdVBVTv/7rpDTQ5NtEW1BjBw0Mmi+h7FRH+S18hXMuUOotgiMclClkiH7os9loYz0TBVPB0p5fMtc5nN2y4nrlrMCTN2DCa7pQXtNx94UH5wyd2RJYXVM36EZv8R7Rvxz9oq9QLhX9nHCznD08HHCfqBTLapeqnBOrPGJ/Fd+ENjOcdLmKhHS1fdnfAsDGhPr5siAtvqYDyI0fs4SHzsJrpGnE5Y+CqE9fcFBoTU7MY3Wp12I/H9btrJWS2GiISIEkZUVfPNPZkXsUlAKzwavYopsmKe6HRI6o4lgm7BP+5Y+oGyVzZeFs9WxD9dBuIDkCZeVLHGyXKBXvzKBP74e6gz2WOOFyb+9PlXV1gWRGvvAwxYcYp6s0Wu2Y94FFElAlFeS5crXWqyBJClvXxZpCvFS5LmD2JHiBX6ylsqIlT2UClEQTMsAHGMPKB1AgFT3Mh9ry2D/p/Bgx0RTh46JJVxHGy/HMO0KsasVwVfLBWB7Zm+ncXKo6PLcR8AEkWll/kIG4AWBHQr0Tu5S9UzlqfCO1X8gFIXCtjDbMdL19MrmVD+CKreJA8GPBbIG79KrT/JY/h9NtUIa4OGu5Kxpx9jznUI1WzeK2NcgsUhjq3VsNJoMwmfS5LAacwB1fhsfdTdjnhFGLTOhwSPGtAxbbBA4DzS8l6jC7ulXdVXjpVumkTRao3+CzhL9udUZf7Qz+Noan0b92Wx2rPP951cVyP3SJeMJaCNzXs9ejXhtRLtxASyIC7tQaREejm6hfUUE1DmfilpNz17OpnF76/Iy3ah8fjN78Xbx3Xa62S0e8xPy5R/aFk63nLrF0coS97vGaYgrQ6j9fDrdlNaH7XxDQEqc98IpsdIpYkRLBhei0eSNtqiAeE1tgjf75DeztzH6g53ymmKUxI1ulrvYwb/fZEwzRaVM5Ak32A3xvfc2homScNXvhBePoqq17Ha62d4a1nVAvxHdzBb9dnJDE3xxsCR0l3tTNz4bzMT4PZhZ3aP9AdKrHyJ/fzsE7iix3dRnix7oeu4BOiWOHjV6poNG7+w6bEEIoKFrijjfgwoUQf6zrarGIHnsOhYOu7q4/sDevb+kAkEdpZhqgBAVwvZfrZBIfQ==
+sidebar_class_name: "get api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get the previous or next message ID"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/mail/messages/{id:[0-9]+}/{direction:(next|prev)}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns the previous or next message ID filtered with the parameters specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"id":{"description":"Head message ID of the current conversation","type":"integer"},"direction":{"description":"Defines if the previous or next message is needed: \"prev\" for previous, \"next\" for next","type":"string"},"folder":{"description":"Folder type: 1 - inbox, 2 - sent, 5 - spam","type":"array","items":{"type":"integer","format":"int32"}},"unread":{"description":"Message status: unread (true), read (false), or all (null) messages","type":"array","items":{"type":"boolean"}},"attachments":{"description":"Defines if a message has attachments or not: with attachments (true), without attachments (false), or all (null) messages","type":"array","items":{"type":"boolean"}},"period_from":{"description":"Start search period date","type":"array","items":{"type":"integer","format":"int64"}},"period_to":{"description":"End search period date","type":"array","items":{"type":"integer","format":"int64"}},"important":{"description":"Specifies if only important messages will be displayed or not","type":"array","items":{"type":"boolean"}},"from_address":{"description":"Mail address from which a letter was received","type":"string"},"to_address":{"description":"Mail address to which a letter was sent","type":"string"},"mailbox_id":{"description":"Recipient mailbox ID","type":"array","items":{"type":"integer","format":"int32"}},"tags":{"description":"IDs of tags linked to the target message","type":"array","items":{"type":"integer","format":"int32"}},"search":{"description":"Text to search in the message bodies and subjects","type":"string"},"page_size":{"description":"Number of messages on the page","type":"array","items":{"type":"integer","format":"int32"}},"sortorder":{"description":"Sort order by date: \"ascending\" or \"descending\"","type":"string"},"with_calendar":{"description":"Specifies if the messages have a calendar or not","type":"array","items":{"type":"boolean"}},"user_folder_id":{"description":"User folder ID","type":"array","items":{"type":"integer","format":"int32"}}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Previous or next message ID","content":{"application/json":{"schema":{"type":"integer","format":"int64"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

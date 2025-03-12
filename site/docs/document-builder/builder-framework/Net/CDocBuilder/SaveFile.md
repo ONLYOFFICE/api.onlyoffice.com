@@ -1,3 +1,6 @@
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 # SaveFile
 
 Saves the file after all the changes are made. The type of the file which will be saved needs to be set.
@@ -18,23 +21,24 @@ bool SaveFile(int nType, String^ sPath, String^ sParams);
 
 ## Example
 
-### .Net
-
-```cs
-string workDirectory = "C:/Program Files/ONLYOFFICE/documentBuilder";
-string resultPath = "result.docx";
-var doctype = (int)OfficeFileTypes.Document.DOCX;
-CDocBuilder.Initialize(workDirectory);
-CDocBuilder oBuilder = new CDocBuilder();
-oBuilder.SaveFile(doctype, resultPath);
-CDocBuilder.Destroy();
-```
-
-### .docbuilder
-
-```ts
-builder.SaveFile("docx", "result.docx")
-```
+<Tabs>
+    <TabItem value="net" label=".Net">
+        ``` cs
+        string workDirectory = "C:/Program Files/ONLYOFFICE/documentBuilder";
+        string resultPath = "result.docx";
+        var doctype = (int)OfficeFileTypes.Document.DOCX;
+        CDocBuilder.Initialize(workDirectory);
+        CDocBuilder oBuilder = new CDocBuilder();
+        oBuilder.SaveFile(doctype, resultPath);
+        CDocBuilder.Destroy();
+        ```
+    </TabItem>
+    <TabItem value="builder" label=".docbuilder">
+        ```ts
+        builder.SaveFile("docx", "result.docx")
+        ```
+    </TabItem>
+</Tabs>
 
 ## Saving into images
 
@@ -49,14 +53,15 @@ ONLYOFFICE Document Builder allows to save your document files into image files 
 
 ## Example
 
-### .Net
-
-```cs
-oBuilder.SaveFile(OFFICESTUDIO_FILE_IMAGE, L"thumbnail.png", "<m_oThumbnail><format>4</format><aspect>1</aspect><first>false</first><width>1000</width><height>1000</height></m_oThumbnail>");
-```
-
-### .docbuilder
-
-```ts
-builder.SaveFile("image", "./thumbnail.png", "<m_oThumbnail><format>4</format><aspect>1</aspect><first>false</first><width>1000</width><height>1000</height></m_oThumbnail>")
-```
+<Tabs>
+    <TabItem value="net" label=".Net">
+        ``` cs
+        oBuilder.SaveFile(OFFICESTUDIO_FILE_IMAGE, L"thumbnail.png", "<m_oThumbnail><format>4</format><aspect>1</aspect><first>false</first><width>1000</width><height>1000</height></m_oThumbnail>");
+        ```
+    </TabItem>
+    <TabItem value="builder" label=".docbuilder">
+        ```ts
+        builder.SaveFile("image", "./thumbnail.png", "<m_oThumbnail><format>4</format><aspect>1</aspect><first>false</first><width>1000</width><height>1000</height></m_oThumbnail>")
+        ```
+    </TabItem>
+</Tabs>

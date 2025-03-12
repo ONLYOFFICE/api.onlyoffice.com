@@ -1,0 +1,71 @@
+---
+id: set-open-editor-in-same-tab
+title: "Open document in same browser tab"
+description: "Change the ability to open in a document in the same browser tab"
+sidebar_label: "Open document in same browser tab"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVF9P2zAQ/yqWn7umQ3vY+gYdk9A0DVHQHqoKOcmVGFzbsy8tLMp3352T0BTYpEl7SZzz3fl+f+JGorqLcr6SX7SBKDKxBERtKbaeSOchKNTOXpRyLiPgdw/2vNTowoVdqi1cq1xOZICfNUQ8c+WTnDeycBbBIi+V90YXqUV2H53lWCwq2Cpe4ZMH6uvyeyiQ+vjAB6KGmPIAR0m5cwaUpawSYhG0554UX3oo9IZKxL4CrCAIdIJKBa1F7DdLjiRUwgVhHR8Gj2rrDbXGUEPbTqQqCRg1VeZyNMdGmQivDh269ciFV4HYQAiROqNG7itPl4tpYnW6cAGmp15/cyWYOL3qqj6jmw6dDiHZtjxNgOidjR0VJ7MZv46HOOsYETtlapgLhiH0JuF+HkfoKMCq3EBJg/2rMAPn3UQfZu9fD3FjVY2VC/oXncBZEYo6aCQjrOiUWNzy/u0DcIBAKZ5jTwkg1+36Ja+LStk7SBBUrg21YTVJDCu0FUqUrqi3hIC/kr6EUuTB7SPrnrxIsCvHbvV1spTCij4y5XV2Mp1lG9YjG9yQcWtIftaWm3U9qNuOpWQIdTBUXyH6OM+ypnIR23njXcCWMncqaGY3qcR7HUMbVRtaSuMKZVKYmOGa4+2Ps08nTO76QNuSNejaHZP3LAoh+UqBibQ0L3+P0yZSM4+Fcw8akh4s7tXh/zwfXN//X8n8XLVx6YyRdX9Azp5llERGJ9DupEMScauSZ/oh+F44UucNZY6kHt0S/0P1nhuER8y8UUQCjZmka3oLrJg4yiQT0DPZICndX3bprntlBRKmE3UlmyZXEW6CaVsOE6GBLb0+eIC/6NSKPA4heScJJxcd0HfXPCOn0++adHzxB7aToeK0KMDjX3PXI6df3lxTbt7fvlu6YygY1J5vZnrOZULHxclXKdZIQ6TX6o5zu5bpDqyZq7HXOlf1CwY1bNmn8YDHJuxg8JNBvVnRNJ2R2/Y5v9v6Y0VP7JDNGq9p6N++b1fC
+sidebar_class_name: "put api-method"
+info_path: site/docspace/api-backend/usage-api/asc-web-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Open document in same browser tab"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"put"}
+  path={"/api/2.0/files/settings/openeditorinsametab"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Change the ability to open in a document in the same browser tab
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"set":{"type":"boolean","description":"Specifies whether to set the specified settings or not","example":true}},"additionalProperties":false,"description":"Settings request parameters","title":"ASC.Files.Core.ApiModels.RequestDto.SettingsRequestDto"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Boolean value: true if the parameter is enabled","content":{"application/json":{"schema":{"type":"boolean"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

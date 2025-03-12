@@ -1,0 +1,63 @@
+---
+id: reset-the-smtp-settings
+title: "Reset the SMTP settings"
+description: "Resets SMTP settings of the current portal."
+sidebar_label: "Reset the SMTP settings"
+hide_title: true
+hide_table_of_contents: true
+api: eJyVVE1v2zAM/SuGzkacZRuw5bSiDdBhXRHULXYoclBsplYrW5pEt80M//eRspPYWT+wS2JJfI9fj2wEyjsv5rfCA6Kq7nyS/rxeilVMF1ntFG7psREnNRbGqT8SlanOQebgGOToS8TiiexArFpC5eAzpyybibm4AqL1EVNGOweR2URYQETsDiqMrHEo9YRoHHhrKg8UTyNm0yn/jfnOYCNrjWNCQmamQuJigLRWqyzEmdx7RjXCZwWUkr9wa4F4zPoeMiSgdcaCQ9X5PDceB1YeHfGTFTzL0mq+KqXSk/44yUwp2lgsKYEBSjontwSikpR+cK8oxDsqWyw2xpUSu6uPsxH/7LNoiTKFiip8kudUEv92RJVBtdl+O4qpIzhT3mq5vZQlvE2ypMRLWTHy1EFOpVRS+xsP7n3sywEc0Syl90/G5W9TNbY3a5liUcm1hjS9GIDWxmigQIeoDfmAA4Cl+g4CXR0AFNkl6vIFa24CKgzWaYk27bX2y5G+qIltyxafph/+1ehNJfthgTzwlEBHypzsNNCckOokhygSaVUym0yT/ex5ciV49NwjOB8mr3aaTAtE6+dJ0hTUqXbe8NC0ZPkoneKkg0iKXr55NyUE0yaTOlxTHLbX6eH5y/TrjFMZTHvKo9LRvTjzB5lb9QOCzjnponuORRX0MsaGKqhqYwK8r+qpKcu6Io9RGrKNrhbpdXSy/M5ZUfJdMbVE2EXfSZQoeh9huYRVcrwORg1pDtvhP/dRnynCMyY0RyrMR+hH07fwlstAltTE0LZ9BKGRVNauJbeiadbSw43TbcvXv2twvFhXhw7yieiL3W5txAOVlyqZZWAxtFrXXeGPFhy3b6+xs8XF4npB5nI8BhTnQ2hX/8EOdk/VdkA/7lzcR8G/bfwKpGk6MbTt3r57ehWxl0tnzZVdkQ7/AoB1Pmg=
+sidebar_class_name: "delete api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Reset the SMTP settings"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"delete"}
+  path={"/api/2.0/settings/smtp"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Resets SMTP settings of the current portal.
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Default SMTP settings","content":{"application/json":{"schema":{"type":"object","properties":{"Host":{"type":"string","example":"mail.example.com"},"Port":{"type":"array","items":{"type":"integer","format":"int32","example":"25"}},"SenderAddress":{"type":"string","example":"notify@example.com"},"SenderDisplayName":{"type":"string","example":"Postman"},"CredentialsUserName":{"type":"string","example":"notify@example.com"},"CredentialsUserPassword":{"type":"string","example":"{password}"},"EnableSSL":{"type":"boolean","example":"false"},"EnableAuth":{"type":"boolean","example":"true"},"UseNtlm":{"type":"boolean"}},"title":"SmtpSettingsWrapper"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

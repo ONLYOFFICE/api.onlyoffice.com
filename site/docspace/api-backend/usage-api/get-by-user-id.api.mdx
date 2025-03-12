@@ -1,0 +1,71 @@
+---
+id: get-by-user-id
+title: "Get user groups"
+description: "Returns a list of groups for the user with the ID specified in the request."
+sidebar_label: "Get user groups"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVN9v2jAQ/lciP20SEGCt1PLWrVPVbZ2mddWkVag6wkFcQuzZl7Y0yv++OydAM2B9WR6S2L777sf3nUtFMPdqdKsunCmsGneUseiAtMkvp2qk5kjvVzceHa86yoKDJRI6cSlVzgu2KfhYy7HOeWWBUv6fok+ctgLEm4IQXZ7zvsPfhXbI2OQK7CifpLgENSoVraygeXI6n7PlzLglkOAXAR2fYGkzMQHAAQ7677qTBI67pzMYdCdwknSPhv3jk8kRTGbDE1VVY4nmrck9egkw7Pfl087si/YUmVk0l/o9h0lMTpiTWIK1mU5CM+J7L+blbr5mco8JSXOctI50HYxT3lNTO3ZoyOEyy37zdPe81k+lqk5DxGvhvooVGxdZBhOJUDOwDRg0EAUzBl1CDnN0r+NeNYb/gv4EC+z9gudUk19oJqejYDrVggDZtxedm0Hm2ZM0Bb+z6w+9nzjpnVnduzJTzHwvZHldLJfgVudkGEvQjvqDXXJvcigoNU4/s+DEymNSOE2rIF/wyZ2c3y1QNlgsIAQ8sgGqscinjfYdqXC5jyDKWqKJmMKIUoxkEKJHTWlYXZ5H3mKiZxqnkc7DnqgfPfU4DM9RapoRC6PFYzNSMVgdD3v9OEDHghiX9YBVSvJ3D+vpK1zGDimR9aM4LlPjqRqV1jgSywdwWqgIYpSzujszKDIRW2YSyMI2d0V82scn/dOhNHa8bdm1CL+GazduIw9O/TNvrOXYNmtuh8SYhcbAhc5nJnjvUi35c5l12x+GdY6eWJHi0MBfINUd34xui65yO8n/mbmmXMInim0GXBfnF9goGxpvpRdsyUTyO8TirwThz6i5L7m3NS+3qiwn4PHGZVUl2xzJiSLHWxoD41Pt5X+6mZKDBb/53lyzb6Pt1bs37zV3+SqIJitkxb+B2vXVXo3ZMuXxkOuAE6kPz5IELb1w27kvRT8bnV98/MG2Ioi2Zmp1ND+Cvjelv8RUZyDvqnPAoyxrQVbVxr4+OujRVLi2lgaNeQj+AG8/ZNE=
+sidebar_class_name: "get api-method"
+info_path: site/docspace/api-backend/usage-api/asc-web-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get user groups"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/group/user/{userid}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns a list of groups for the user with the ID specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"userid","in":"path","description":"User ID","required":true,"schema":{"type":"string","format":"uuid","example":"aae1e103-bca5-9fa1-ba8c-42058b4abf28"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"List of groups","content":{"application/json":{"schema":{"type":"object","properties":{"id":{"type":"string","description":"ID","format":"uuid","example":"{00000000-0000-0000-0000-000000000000}"},"name":{"type":"string","description":"Name","nullable":true,"example":"Group Name"},"manager":{"type":"string","description":"Manager","nullable":true,"example":"Jake.Zazhitski"}},"additionalProperties":false,"title":"ASC.Web.Api.Models.GroupSummaryDto"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

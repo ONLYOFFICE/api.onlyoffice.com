@@ -1,0 +1,71 @@
+---
+id: get-the-utc-offset
+title: "Get the UTC offset"
+description: "Returns the time offset in the specified time zone compared to Coordinated Universal Time (UTC) for the particular dates."
+sidebar_label: "Get the UTC offset"
+hide_title: true
+hide_table_of_contents: true
+api: eJzFVcFu2zAM/RVDpw3I6qzYYcutS4ut2GFFk1wW5KDYTKzWljSJbpsa/veRkuPEbTZguywHgxbJZz7yUWkEyq0Xk6XIZAk6ly6ddoZPpM4TX6995pRFZbQXq5HwkNVO4Y5yGnFRY2Gcepbs/goyB8dYjiwxEo8UB2LVUlYOPYqYiFvA2mmfYAEJqgoSs9l4wETpcOQtZGqjII/OZ6MhyUxlpeMjk0yNcbnSEul1odUDOC/LZM6xbxbz6dtkY1wAogxUWV1Kl+QU7c+oKAc/a/D42eREoRGZ0Qga2ZTWlioLVNI7z4U2wmcFVJIt3Fmg0s36DjIkHOuMBYIHH7z08R9UJ9tDrvOewvUlpXUwHp3SW9FSP5GKvKTqXqfO2BUqZ9Y5ILhKERBTix07BUjDOw13ReP8O7Dw45Z5S9OPTM/H4xMkCYQ6fzRHwq6p44T5jx2On/4wfv/6awstO91BLjiqAnrNyWOND7ORWNBbKq1Kz8/Gaa/tGrOeqwfHygk6rl1J8QWi9ZM0bQqCaSeNNQ5binyQTsl1GfmzL5a0kXVJpigN4YdjKoVzhu6P40/nzOZod2bMOcKd3KC+F0TgG+yoBMW8i+geCS0r9g5yQyO4qbcHgV89ycqWMBTofroD6R0Oe/kcSUrpjYkgyGhiaqqq1kQkmYUmJrdXs3lycXPNzaKexjGVvHJdUzxWMoy7K/0LqQQHohEvLomj1fyv90U3CYQnTG0paRBEKOil6XS25DFRJCmN5d5pjcyD2mj2UTdL0TRr6WHhyrblY5qV47t0dZAZv9E3iv112oh70gB3PfTj3Zwr4vCyjhp5sVTtaJ9xkWVg8Y+xq6Ptufk+m1PwursaK5NzjpOPfG3ScyLIMN1fAQWEs4bmrLe13HJsxGQl8oYOhXwfhNwZzGrv0rujCoeaHnVE+Mm0TqY0TVyTtu3jo+u3Gf0ixWie6Yqq/gWGWG+V
+sidebar_class_name: "post api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get the UTC offset"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/api/2.0/calendar/utcoffset"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns the time offset in the specified time zone compared to Coordinated Universal Time (UTC) for the particular dates.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"timeZone":{"description":"Time zone ID","type":"string"},"startDate":{"description":"Start date to determine the offset","type":"string"},"endDate":{"description":"End date to determine the offset","type":"string"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"The UTC offset in minutes","content":{"application/json":{"schema":{"type":"object"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

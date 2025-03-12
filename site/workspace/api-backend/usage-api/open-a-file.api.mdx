@@ -1,0 +1,71 @@
+---
+id: open-a-file
+title: "Open a file"
+description: "Returns the initialization configuration of a file to open it in the editor."
+sidebar_label: "Open a file"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVEtzmzAQ/iuMzm7w+NRyS/NoPT20Y7snjw8yrEGJQKq0pHEZ/nt3JfAjzvgUDkJoX99+fKtOoCy9yNZipzT49JFXsZmIAnzulEVlGpGJBWDrGp9gBYlqFCqp1T/JxiQ3zU6VrYtfZpfIhFMlaBJjoUkUUkQIhEKhcTdiIqx0sgYEx5U70dAHFeGweUFmxSWtxEq8xcHwkvk9nfu8glqKrBO4txzt0ammFH1P4B38acHjV1Ps2YMgIjTIW2mtVnnAmj55ztldpjLbJ8iRcTpqwaEiSsj6QnhVDHkH1WidjFkUFS3BiZ6aMPll1LKSDgri6RlOog5t8MOdeGsaHwHMptPLNHen/FOeD2r23uRtTXlWwestyxMBr7K2mo+KU0+CzO9ldLsaFyzcIyoMB+edDASQTCpTkLWEAJJVkYlUWpXObqZpVC2vaRf106csO9YaqwTcy6iy1mmKrBCtz9K0q4zHPuuscdiT54t0Sm51bJ5tkemdbDVthTa51OGYMHHMufnz9MuMEW+4ZN46hfslEx3T3bbUgxsG5jvIglRxpIZa+QH7UfZVNE/GoTiLDXTxn1wcBf4wEnoi0OkguYOaOPnOhKIHsuu6pUneJ8vAUbJ4WK6S219z5mLMI7REGHv2WMsgoQHZT57uOOxv5/Rk5D766hhIQ3jF1GpJnBG48Gu7QRxrZpQ8SR60BoEMb3plh0vmoBL6Z/F/r0XXbaWH3073PR8Tx44ukPXmKI+gpEJ53pMqd1J7uNL88b56F/eogGYfFKhb/qLtM+nhcB/2G/IcZMHVo/Eu1vgUpu4YfDHy/WSMuM1zsHjVd3Myb98eVuS7Ha7Q2hQc4uRfOuQ14DSh5aDxcNaRYJqylSX7xpT8/AcN1TLo
+sidebar_class_name: "get api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Open a file"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/files/file/{fileId}/openedit"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns the initialization configuration of a file to open it in the editor.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"fileId","in":"path","description":"File ID","schema":{"type":"string"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"version":{"description":"File version","type":"integer"},"doc":{"description":"Shared token","type":"string"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Configuration","content":{"application/json":{"schema":{"type":"object","properties":{"DocumentType":{"type":"string","example":"documentType"},"TypeString":{"type":"string","example":"type"}},"title":"Configuration"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

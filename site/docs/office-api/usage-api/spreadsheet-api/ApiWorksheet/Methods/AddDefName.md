@@ -15,7 +15,7 @@ expression.AddDefName(sName, sRef, isHidden);
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
 | sName | Required | string |  | The range name. |
-| sRef | Required | string |  | Must contain the sheet name, followed by sign ! and a range of cells. Example: "Sheet1!$A$1:$B$2". |
+| sRef | Required | string |  | Must contain the sheet name, followed by sign ! and a range of cells.\ Example: "Sheet1!$A$1:$B$2". |
 | isHidden | Required | boolean |  | Defines if the range name is hidden or not. |
 
 ## Returns
@@ -26,10 +26,10 @@ boolean
 
 This example adds a new name to the worksheet.
 
-```javascript
-var oWorksheet = Api.GetActiveSheet();
-oWorksheet.GetRange("A1").SetValue("1");
-oWorksheet.GetRange("B1").SetValue("2");
-oWorksheet.AddDefName("numbers", "Sheet1!$A$1:$B$1");
-oWorksheet.GetRange("A3").SetValue("We defined a name 'numbers' for a range of cells A1:B1.");
+```javascript editor-xlsx
+let worksheet = Api.GetActiveSheet();
+worksheet.GetRange("A1").SetValue("1");
+worksheet.GetRange("B1").SetValue("2");
+worksheet.AddDefName("numbers", "Sheet1!$A$1:$B$1");
+worksheet.GetRange("A3").SetValue("We defined a name 'numbers' for a range of cells A1:B1.");
 ```

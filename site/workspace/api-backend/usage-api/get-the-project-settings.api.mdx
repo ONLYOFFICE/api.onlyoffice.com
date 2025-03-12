@@ -1,0 +1,63 @@
+---
+id: get-the-project-settings
+title: "Get the project settings"
+description: "Returns the common project settings."
+sidebar_label: "Get the project settings"
+hide_title: true
+hide_table_of_contents: true
+api: eJyNVE1v2zAM/SuGzl6dpjtsuRVd0BbDgKBJT0EOis3UamRJk+iumeH/PlL+SNKuQC+2JPI9kXykGoHyKYjZWjhvnyHHbAmIytDZJhUB8torPJC9Edc1ltarvxKVNXcgC/CM87QSqfhDfiA2LaEKCLlXjt3ETDwA1t6EBEtIcltV1iT9VUnor7ogvIfgrAlAsTRiOpnw75xo0aN6kgFM2NwaBIMMkc5plccQs+fAuEaEvIRK8goPDojJbpmIgBSIA4+qu3X+Ah62tjjcSHNDaVE+R8zWWg3SEAheZeU0n6GvQbSpuFMFzA0qJro3C1kHKPpowycplig9/rJFrWEVvUeUotyeqNSp2FlfSeyOrqZMY+qKJRjvSsVKhj3/f6iQ1yFQGeKpqmDlZb6ngol3Cq0nyZdk4EiTS9pFmjSZ0vKEKU2u2HZCtjlL5lK0lArVIe4Gxpuo19hWbctOXyeX7xV+NLLvMSgiVQW0LcjyBFEuiSVtMulUNr2YZEPLnrRCAE8qhtiwtdfkXSK6MMuyprQB21njrMeWPF+kV3KrO+nZ1sWzk7XmGmubSx2PKQ7GnJu/Tb5POZWTIVlym3V0/x2VUVEK/yccKATFSZedORVGVmw9w8YqKLOzEd4XlgtaG7oxWcZsk4f5cpVcL+45K0q+K6am/h2iD1jJOAr9HbeAcR7fDqJ40xrNcbQ+O8d9jgivmDktKUWKICrR9PqtuQDkSQp2I9gPYzh5eDo91qJptjLAo9dty8e/a/D8GG2O8vGObiiH96gRe6otlTHPwWHUWddd1d+8DKzd2GC38xX5cvudC7WPQvULZh9M5nDCfa5Z2ofA3zb9ANI0XRu07ejfmT5EjI3SeXNlN9SB/wCSp/kB
+sidebar_class_name: "get api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get the project settings"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/project/settings"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns the common project settings.
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Project common settings","content":{"application/json":{"schema":{"type":"object","properties":{"EverebodyCanCreate":{"type":"boolean","example":"true"},"HideEntitiesInPausedProjects":{"type":"boolean","example":"true"},"StartModuleType":{"type":"integer","format":"int32","enum":["Projects","Tasks","Discussions","TimeTracking"],"description":"[0 - Projects, 1 - Tasks, 2 - Discussions, 3 - TimeTracking]","example":"1"}},"title":"ProjectsCommonSettings"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

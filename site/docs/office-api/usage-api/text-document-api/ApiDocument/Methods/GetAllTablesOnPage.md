@@ -1,7 +1,7 @@
 # GetAllTablesOnPage
 
-Returns a collection of tables on a given absolute page.
-💡 This method can be a little bit slow, because it runs the document calculation
+Returns a collection of tables on a given absolute page.\
+💡 This method can be a little bit slow, because it runs the document calculation\
 process to arrange tables on the specified page.
 
 ## Syntax
@@ -20,13 +20,13 @@ expression.GetAllTablesOnPage(nPage);
 
 ## Returns
 
-[ApiTable[]](../../ApiTable/ApiTable.md)
+[ApiTable](../../ApiTable/ApiTable.md)[]
 
 ## Example
 
 This example shows how to get a collection of tables on a given absolute page.
 
-```javascript
+```javascript editor-docx
 let doc = Api.GetDocument();
 let tableStyle = doc.GetStyle("Bordered");
 let table = Api.CreateTable(3, 3);

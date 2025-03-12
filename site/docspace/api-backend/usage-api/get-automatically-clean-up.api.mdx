@@ -1,0 +1,63 @@
+---
+id: get-automatically-clean-up
+title: "Get the trash bin auto-clearing setting"
+description: "Returns the trash bin auto-clearing setting."
+sidebar_label: "Get the trash bin auto-clearing setting"
+hide_title: true
+hide_table_of_contents: true
+api: eJyVVe9v2jAQ/Vcsf04J0B/a+IbarZqmqdNo1Q8IVSZciFvHzmynjEX533fnBEignbYv1DnfPb937+xW3Iu145M5/ywVOBazGXgvNcYWETcFWOGl0V9WfMLX4KelNzlGEqHU9lqB0A8Fj7gFVxjtAIEqPh4O6c8KXGJlQdVYe58BE1h8lmCRRXzmmnNYYekUL8FNjjKMZdr4iAnmZQ5Mag/2VSi2yUAzfwK4kUqxJTBES43NYYXEEoNF2hMfURQKeROf+NkRqYq7JINc0MpvC0CaZvkMicfCAyvalY6E7/Qe0pfGUAzz+2pnBSQyxWIm0zeY7qRLx0CLpYJVqxWB4JfIC4Xg3pZQR3wtwoFGw12KNlUcdJmTX3caHgFesOR+Y2jlcInBbyg5o2gmrd/eiK1rUkI8rDML0H6hx60U54naiZJ5eww7Y7hiG1xGbHcgBnEZgi5iu7Pb1JzWmLunQdnhg63wK6A0LFqYUEDxA79Qgl/t3qLbn30D6mjflFE0js6ji+gyujooo7lZgz2VNuqJGvfVnPdlXByzvzxiffU3rqOa6EgfeE9n14Nw2QbXxsLgRni4N935qtF2sVpJ4inU984kpkI5eBepg4GgAnEI6WI4Or2ODxonMjNW/sZrQlkOktJKvw0jJlzyRPtPL0ABvN6CLtMGE4AvSEsf7Qf40moXJt1b4TK2lPrtmR8gTg54dPug0FUTOK8THotCxuPBME5JUdzmu5hgCEWX9NI4fALAukCztArrMu8LN4njKjPO15OqMNbXmPmK59LdCheY9poupKJUuOTK4BsWwqieavrbH4Yfx9TAxaE1M3osGrh+g/bPASr4ioGIa5GH725ahIOIscSYFwmh51KnJlR37HyE5WBaSOKPMpv2vo4bjs7nIjxbLfwt+H9p+fHgV4dX8X+da3V6+OXjQgkUhMSCDVVr45yagJloJP4GK4Nr7f8UHOyOndjcxpg5r6qlcPBgVV1T+GcJlkZvcfCRvvC0DGcRLzP5H5rPp0kChQ+Gq7Jx4eihJxP3M3f76b5hkfWNayxqF4S+29LbLnbf0YYB/dIj9GZFVTVTUdf7/Gbr3YpW4S6bmrzASfwDzF6dFw==
+sidebar_class_name: "get api-method"
+info_path: site/docspace/api-backend/usage-api/asc-web-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get the trash bin auto-clearing setting"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/files/settings/autocleanup"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns the trash bin auto-clearing setting.
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"The auto-clearing setting properties: auto-clearing or not, a time interval when the auto-clearing will be performed","content":{"application/json":{"schema":{"type":"object","properties":{"isAutoCleanUp":{"type":"boolean","description":"Specifies if the auto-clearing setting is enabled or not","example":true},"gap":{"oneOf":[{"enum":["OneWeek","TwoWeeks","OneMonth","ThirtyDays","TwoMonths","ThreeMonths"],"type":"string","description":"[OneWeek - One week, TwoWeeks - Two weeks, OneMonth - One month, ThirtyDays - Thirty days, TwoMonths - Two months, ThreeMonths - Three months]","example":"OneWeek"},{"enum":[1,2,3,4,5,6],"type":"integer","description":"[1 - One week, 2 - Two weeks, 3 - One month, 4 - Thirty days, 5 - Two months, 6 - Three months]","example":1}],"title":"ASC.Files.Core.DateToAutoCleanUp"}},"additionalProperties":false,"title":"ASC.Files.Core.AutoCleanUpData"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

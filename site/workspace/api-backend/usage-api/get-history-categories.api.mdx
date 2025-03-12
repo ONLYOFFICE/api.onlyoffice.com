@@ -1,0 +1,63 @@
+---
+id: get-history-categories
+title: "Get history categories"
+description: "Returns a list of all the history categories available on the portal."
+sidebar_label: "Get history categories"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVFFP2zAQ/iuW9xqRUpC29Q0VBGiThihoD6gPJr02Bif27EtHF+W/785OS7MB06b1IU1833fnu++zW4lqFeTkTha+yi90QOs3cp7JAEXjNW4o1MqTBkvr9Q+F2tYXoBbgmeLpTWbyO+FAzjtiLSAUXjuGyYm8Bmx8HYQShhILuxTKGIEliDIVEoVCWFFmINBaaaPuDQhbR4yzHpU5oAIegrN1ANpnK8ejEf8NK33+Y35KU9gaoUZmK+eMLmI7+UPgFK0MRQmV4jfcOKCkynu1IR51V4W9dXv/AAVSwHnrwKNOG7sGQwnXcMnwqW1SpZ6jqfSKppbJpfWVwrR0NKYFeFKVMww6lF0mLyu1giuF5R47oNf1aoB1hBBohWY48240cuAtToIQ9nR/eG8x9oHEm1pj/duMd+r9siCJCD0jAb/46JV/mcPpX9PGR8eyIyqmUcjeztNkgs1XT7JTko5/mTweHf5upNta9V6HRcxVAX0uKLKCKHkURubK6Xx8MMr51PRmy3uzsWUC+DX4EA9P4w0xSkQXJnneljZgN2nZ3R0h18prdn20EMfSnpaqMdylsYUycZn2wpxh+MPo45j72TuwM7ZxSvfisX22t9OfIPqbGy9TOJO1qjg64MZJ6HppI72f7tRWVVNTRTGL3Yrrs9mNOLm65K6o+TRQOhOw3X3ASkXD9TXOAV8+qYuhP3cH97/dKP0IEJ4wd0bp6O4oVNtLfMfzISSJzFeHr+jZ1+DvrdQ0+CTanWzbexXg1puu4+VvDXi+PefPGvMX1Sm3F2grH0kAmnVRgMNoBtMkaX65nljgnRPPz24Iyz4dqvkY1exfOPs2VG/2cg+Fzfot8LPLXqG0bfJK1+3wKfQqY+emhOb5zsmmPwHcADAN
+sidebar_class_name: "get api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get history categories"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/crm/history/category"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns a list of all the history categories available on the portal.
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"List of all the history categories","content":{"application/json":{"schema":{"type":"array","items":{"type":"object","properties":{"RelativeItemsCount":{"type":"integer","format":"int32","example":"1"},"ImagePath":{"type":"string","example":"path to image"},"Title":{"type":"string","example":"Title"},"Description":{"type":"string","example":"Description"},"Color":{"type":"string","example":"#a7fc00"},"SortOrder":{"type":"integer","format":"int32","example":"1"},"ID":{"type":"integer","format":"int32","example":"1234"}},"title":"HistoryCategoryWrapper"}}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      
