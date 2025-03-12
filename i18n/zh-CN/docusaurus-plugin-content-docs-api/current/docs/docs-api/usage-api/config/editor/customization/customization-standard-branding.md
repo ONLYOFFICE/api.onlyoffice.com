@@ -286,7 +286,7 @@ const features = {
 
 `类型: boolean`
 
-Defines if the tooltips about new editor features will be displayed or hidden on first loading. 默认值为 **true**。
+定义在首次加载时，关于编辑器新功能的提示框是显示还是隐藏。默认值为**true**。
 
 **示例**: `true`
 

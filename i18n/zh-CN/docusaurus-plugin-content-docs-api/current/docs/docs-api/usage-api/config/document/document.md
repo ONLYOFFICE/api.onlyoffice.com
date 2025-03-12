@@ -14,9 +14,9 @@
 
 `类型: true`
 
-Defines if the PDF file is a PDF form or a standard PDF file. The default value is **true**.
+定义该 PDF 文件是 PDF 表单还是标准 PDF 文件。默认值为 **true**。
 
-If this parameter is not specified, then the [internal checking of PDF files](../../../get-started/how-it-works/checking-pdf-forms.md) is started.
+如果未指定此参数，则会启动[对 PDF 文件的内部检查](../../../get-started/how-it-works/checking-pdf-forms.md)。
 
 **示例**: `true`
 
