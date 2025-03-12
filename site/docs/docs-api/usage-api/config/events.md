@@ -729,10 +729,6 @@ The type of document selection is specified in the *data.c* parameter.
 
 To select a document for comparing, combining, or inserting text, you must call the [setRequestedDocument](../methods.md#setrequesteddocument) method.
 
-:::note
-This event is available only for ONLYOFFICE Enterprise Edition and ONLYOFFICE Developer Edition.
-:::
-
 ![onRequestSelectDocument](/assets/images/editor/onRequestSelectDocument.png)
 
 ![Insert text](/assets/images/editor/insert-text.png#gh-light-mode-only)![Insert text](/assets/images/editor/insert-text.dark.png#gh-dark-mode-only)
