@@ -29,10 +29,11 @@ const config: Config = {
   future: {
     experimental_faster: {
       mdxCrossCompilerCache: true,
+      lightningCssMinimizer: true,
+
       swcJsLoader: false,
       swcJsMinimizer: false,
       swcHtmlMinimizer: false,
-      lightningCssMinimizer: false,
       rspackBundler: false,
     }
   },
