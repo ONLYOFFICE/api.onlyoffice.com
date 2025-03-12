@@ -25,12 +25,6 @@ To install ONLYOFFICE Docs in the cloud:
 3. Specify the page code containing the changeable parameters:
 
    ``` ts
-   const docEditor = new DocsAPI.DocEditor("placeholder", config)
-   ```
-
-   Where *config* is an object:
-
-   ``` ts
    const config = {
      document: {
        fileType: "docx",
@@ -42,7 +36,9 @@ To install ONLYOFFICE Docs in the cloud:
      editorConfig: {
        callbackUrl: "https://example.com/url-to-callback.ashx",
      },
-   }
+   };
+
+   const docEditor = new DocsAPI.DocEditor("placeholder", config);
    ```
 
    Where **example.com** is the public IP address or public DNS provided by your cloud where **document manager** and **document storage service** are installed. See the [How it works](../how-it-works/how-it-works.md) section to find out more on ONLYOFFICE Docs service client-server interactions.
