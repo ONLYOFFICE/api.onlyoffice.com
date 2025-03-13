@@ -19,16 +19,12 @@ sidebar_label: Cloud
    **documentserver** 是您的云服务提供的公共 IP 地址或公共 DNS。该地址由系统自动分配，可在云控制台的**实例**部分查看。
 
    `https://documentserver/web-apps/apps/api/documents/api.js` 是 API JavaScript 文件的默认访问地址。
-
+   
+   :::info
    从 8.1 版本开始，建议在 URL *QueryString* 中添加 [shardkey](../how-it-works/how-it-works.md#shard-key) 参数，并赋予其 *key* 值。例如：*?shardkey=Khirz6zTPdfd7*。此参数可用于请求负载均衡。
+   :::
 
 3. 指定包含可变参数的页面代码：
-
-   ``` ts
-   const docEditor = new DocsAPI.DocEditor("placeholder", config)
-   ```
-
-   其中 *config* 为配置对象：
 
    ``` ts
    const config = {
@@ -42,7 +38,9 @@ sidebar_label: Cloud
      editorConfig: {
        callbackUrl: "https://example.com/url-to-callback.ashx",
      },
-   }
+   };
+
+   const docEditor = new DocsAPI.DocEditor("placeholder", config);
    ```
 
    此处 **example.com** 是您的云服务提供的公共 IP 或公共 DNS，需确保已在此地址部署**文档管理器**和**文档存储服务**。关于 ONLYOFFICE 文档服务端与客户端的交互细节，请参阅[工作原理](../how-it-works/how-it-works.md)章节。

@@ -18,7 +18,7 @@
 
 >**文档编辑服务**无法将数据发送到**文档存储服务**。
 
- 检查 [editorConfig.callbackUrl](../usage-api/config/editor/editor.md#callbackurl) 链接是否正确。**文档管理器**中的保存必须通过[回调处理程序](../usage-api/callback-handler.md#net-c-document-save-example)实现。
+ 检查 [editorConfig.callbackUrl](../usage-api/config/editor/editor.md#callbackurl) 链接是否正确。**文档管理器**中的保存必须通过[回调处理程序](../usage-api/callback-handler.md#document-save-examples)实现。
 
 ## 无法保存
 
@@ -28,7 +28,7 @@
 
 **文档编辑服务**无法连接到 [editorConfig.callbackUrl](../usage-api/config/editor/editor.md#callbackurl) 地址的**文档存储服务**。
 
-检查[回调处理程序](../usage-api/callback-handler.md#net-c-document-save-example)是否正常工作。**文档存储服务**必须返回 [\{"error": 0\}](../usage-api/callback-handler.md#response-from-the-document-storage-service)作为响应。
+检查[回调处理程序](../usage-api/callback-handler.md#document-save-examples)是否正常工作。**文档存储服务**必须返回 [\{"error": 0\}](../usage-api/callback-handler.md#response-from-the-document-storage-service)作为响应。
 
 ## 文件版本已更改
 
