@@ -63,6 +63,7 @@ Represents the Api class.
 | [MoveToNextReviewChange](./Methods/MoveToNextReviewChange.md) | None | Navigates through the review changes. |
 | [OnDropEvent](./Methods/OnDropEvent.md) | None | Implements the external drag&drop emulation. |
 | [OnEncryption](./Methods/OnEncryption.md) | None | Encrypts the document. |
+| [OnWindowDockChangedCallback](./Methods/OnWindowDockChangedCallback.md) | None | Callback from dockChangedEvents. |
 | [OpenFile](./Methods/OpenFile.md) | None | Opens a file with fields. |
 | [PasteHtml](./Methods/PasteHtml.md) | None | Pastes text in the HTML format into the document. |
 | [PasteText](./Methods/PasteText.md) | None | Pastes text into the document. |

@@ -33,6 +33,7 @@ Represents the Api class.
 | [MouseUpWindow](./Methods/MouseUpWindow.md) | None | Sends an event to the plugin when the mouse button is released inside the plugin iframe. |
 | [OnDropEvent](./Methods/OnDropEvent.md) | None | Implements the external drag&drop emulation. |
 | [OnEncryption](./Methods/OnEncryption.md) | None | Encrypts the document. |
+| [OnWindowDockChangedCallback](./Methods/OnWindowDockChangedCallback.md) | None | Callback from dockChangedEvents. |
 | [PasteHtml](./Methods/PasteHtml.md) | None | Pastes text in the HTML format into the document. |
 | [PasteText](./Methods/PasteText.md) | None | Pastes text into the document. |
 | [PutImageDataToSelection](./Methods/PutImageDataToSelection.md) | None | Replaces the first selected drawing with the image specified in the parameters. If there are no drawings selected, the method inserts the image at the current position. |

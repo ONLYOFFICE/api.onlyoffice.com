@@ -73,7 +73,6 @@ Represents the ApiWorksheet class.
 | [GetTopMargin](./Methods/GetTopMargin.md) | number | Returns the top margin of the sheet. |
 | [GetUsedRange](./Methods/GetUsedRange.md) | [ApiRange](../ApiRange/ApiRange.md) | Returns the ApiRange object that represents the used range on the specified worksheet. |
 | [GetVisible](./Methods/GetVisible.md) | boolean | Returns the state of sheet visibility. |
-| [GroupDrawings](./Methods/GroupDrawings.md) | [ApiGroup](../ApiGroup/ApiGroup.md) | Groups an array of drawings in the current worksheet. |
 | [Move](./Methods/Move.md) | None | Moves the current sheet to another location in the workbook. |
 | [Paste](./Methods/Paste.md) | None | Pastes the contents of the clipboard to the current sheet. |
 | [RefreshAllPivots](./Methods/RefreshAllPivots.md) | None | Refreshes all pivot tables on the current worksheet. |
