@@ -193,26 +193,6 @@ const config: Config = {
           ],
         },
         {
-          type: 'dropdown',
-          label: 'Workspace',
-          position: 'left',
-          to: 'workspace',
-          items: [
-            {
-              type: 'docSidebar',
-              sidebarId: 'workspaceBackend',
-              label: 'API backend',
-              docsPluginId: 'api',
-            },
-            {
-              type: 'docSidebar',
-              sidebarId: 'workspaceHosting',
-              label: 'For hosting providers',
-              docsPluginId: 'api',
-            },
-          ],
-        },
-        {
           type: 'localeDropdown',
           position: 'right',
         },
