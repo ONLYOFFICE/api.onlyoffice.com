@@ -39,7 +39,7 @@ The **debugger** command works as a breakpoint and pauses the execution at the s
 
 ## Executing from Builder.Framework or Builder.App
 
-> This instruction can also be used for any [Builder.Framework](../usage-api//overview.md) version: C++, COM, .Net.
+> This instruction can also be used for any [Builder.Framework](../builder-framework/overview.md) version: C++, COM, .Net.
 
 1. Open a terminal in the *DocumentBuilder* folder.
 

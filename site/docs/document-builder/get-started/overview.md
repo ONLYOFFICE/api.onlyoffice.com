@@ -19,4 +19,4 @@ It enables document generation without running a full editor, automating content
 - **.Net**. Develop cross-platform applications for Windows, Linux, and macOS using the .NET SDK.
 
 Integrate SDK into your own application. To install ONLYOFFICE Document Builder, visit [this page](./installing/installing.md).
-After you download and unpack the files, the library is ready for [integration](../usage-api/overview.md).
+After you download and unpack the files, the library is ready for [integration](../builder-framework/overview.md).
