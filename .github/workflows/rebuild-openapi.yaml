@@ -1,0 +1,36 @@
+name: ReBuild open-api
+
+run-name: "ReBuild open-api"
+
+on:
+  workflow_dispatch:
+  
+env:
+  EVENT: ${{ github.event_name }}
+  REF: ${{ github.ref_name }}
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v4
+    
+    - name: Set up Git
+      run: |
+        git config --global user.name "github-actions[bot]"
+        git config --global user.email "github-actions[bot]@users.noreply.github.com"
+
+    - name: Build open-api
+      run: |
+        npm install
+        yarn docusaurus clean-api-docs all
+        yarn docusaurus gen-api-docs all
+
+        if ! git diff --exit-code; then
+            git add .
+            git commit -m "Update openApi from GitHub Actions"
+            git push origin ${REF}
+          else
+            echo "Nothing to commit"
+          fi
