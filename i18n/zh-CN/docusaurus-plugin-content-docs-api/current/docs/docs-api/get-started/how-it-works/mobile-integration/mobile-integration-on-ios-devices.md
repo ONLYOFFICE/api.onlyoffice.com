@@ -14,7 +14,7 @@ sidebar_label: iOS
 
 ### 打开 ONLYOFFICE 编辑器
 
-1. 下载并安装 ONLYOFFICE 文档[企业版](https://www.onlyoffice.com/docs-enterprise.aspx)或[开发者版](https://www.onlyoffice.com/developer-edition.aspx)。
+1. 下载并安装ONLYOFFICE文档[企业版](https://www.onlyoffice.com/zh/docs-enterprise.aspx)或[开发者版](https://www.onlyoffice.com/zh/developer-edition.aspx)。
 
 2. 从 [GitHub](https://github.com/ONLYOFFICE/editors-webview-ios) 下载 iOS 移动演示示例。
 

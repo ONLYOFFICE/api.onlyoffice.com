@@ -8,7 +8,7 @@ sidebar_position: -7
 
 以下选项可用于定制 ONLYOFFICE 文档版本（白标化），修改**关于**页面显示信息（所有编辑器用户可见）：
 
-> 请注意，更改这些选项仅适用于 [ONLYOFFICE 开发者版](https://www.onlyoffice.com/developer-edition-prices.aspx)用户。
+> 请注意，更改这些选项仅适用于 [ONLYOFFICE 文档开发者版](https://www.onlyoffice.com/developer-edition-prices.aspx)用户。
 
 - *editorConfig.customization.customer* 选项：
 

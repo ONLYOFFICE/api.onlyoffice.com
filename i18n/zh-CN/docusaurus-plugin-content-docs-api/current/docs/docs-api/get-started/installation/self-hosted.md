@@ -9,7 +9,7 @@ ONLYOFFICE 文档支持在 Windows、Linux 和 Docker 环境部署。
 
 要在本地服务器安装：
 
-1. 从官网[下载](https://www.onlyoffice.com/download-docs.aspx?from=api#docs-developer) ONLYOFFICE 文档开发者解决方案，并根据帮助中心指引进行安装：
+1. 从官网[下载](https://www.onlyoffice.com/zh/download-docs.aspx?from=api#docs-developer) ONLYOFFICE文档开发者版，并根据帮助中心指引进行安装：
 
    - [Windows 系统安装指南](https://helpcenter.onlyoffice.com/installation/docs-developer-install-windows.aspx?from=api)
    - [Linux 系统安装指南](https://helpcenter.onlyoffice.com/installation/docs-developer-install-ubuntu.aspx?from=api)

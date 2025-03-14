@@ -254,7 +254,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
 当用户尝试通过单击*存储中的文档*按钮来选择要进行比较的文档时调用的函数。
 
 :::请注意
-仅适用于ONLYOFFICE企业版和ONLYOFFICE开发者版。
+此事件仅适用于ONLYOFFICE文档企业版和ONLYOFFICE文档开发者版。
 :::
 :::danger[Deprecated]
 自版本 7.5 起已弃用，请改用 [onRequestSelectDocument](#onrequestselectdocument)。
@@ -730,7 +730,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
 要选择文档以进行比较、合并或插入文本，您必须调用 [setRequestedDocument](../methods.md#setrequesteddocument) 方法。
 
 :::请注意
-此事件仅适用于 ONLYOFFICE 企业版和 ONLYOFFICE 开发者版。
+此事件仅适用于ONLYOFFICE文档企业版和 ONLYOFFICE文档开发者版。
 :::
 
 ![onRequestSelectDocument](/assets/images/editor/onRequestSelectDocument.png)

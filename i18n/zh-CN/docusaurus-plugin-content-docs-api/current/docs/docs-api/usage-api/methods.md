@@ -14,7 +14,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config)
 
 [connector](./automation-api.md) 创建连接器以与外部的文本文档、电子表格、演示文稿和可填充表单交互。
 
-> 此参数仅适用于 ONLYOFFICE 开发者版的编辑。
+> 此参数仅适用于ONLYOFFICE文档开发者版的编辑。
 
   ``` ts
   docEditor.createConnector()
@@ -322,7 +322,7 @@ refreshFile({
 
 通过指向文件的链接刷新数据, 该链接使用 *referenceData*、*path* 或 *link* 参数指定。 此方法必须在 [onRequestReferenceData](./config/events.md#onrequestreferencedata) 事件之后调用。
 
-  > 此参数仅可用于 ONLYOFFICE 开发者版的编辑。
+ > 此参数仅可用于ONLYOFFICE文档开发者版的编辑。
 
   > 请注意，仅当用户有权访问要从中获取数据的文件时，才会执行此方法。
 
@@ -404,7 +404,7 @@ refreshFile({
 
 选择用于比较、合并或插入文本的文档。该方法可以在 [onRequestSelectDocument](./config/events.md#onrequestselectdocument) 事件之后调用。
 
-> 此参数仅可用于 ONLYOFFICE 企业版和 ONLYOFFICE 开发者版。
+> 此参数仅可用于ONLYOFFICE文档企业版和 ONLYOFFICE文档开发者版。
 
   ``` ts
   docEditor.setRequestedDocument({
@@ -450,7 +450,7 @@ refreshFile({
 
 选择一个文档进行比较。此方法必须在 [onRequestCompareFile](./config/events.md#onrequestcomparefile) 事件之后调用。自版本 7.5 起已弃用，请改用 [setRequestedDocument](#setrequesteddocument)。
 
-> 此参数仅可用于 ONLYOFFICE 企业版和 ONLYOFFICE 开发者版。
+> 此参数仅可用于ONLYOFFICE文档企业版和 ONLYOFFICE文档开发者版。
 
   ``` ts
   docEditor.setRevisedFile({

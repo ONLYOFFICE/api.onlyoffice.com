@@ -7,7 +7,7 @@ sidebar_label: Cloud
 
 要在云端安装ONLYOFFICE 文档：
 
-1. 使用我们在 ONLYOFFICE 帮助中心提供的[指南](https://helpcenter.onlyoffice.com/installation/docs-developer-index.aspx?from=api)，在云端部署 ONLYOFFICE 文档开发者解决方案。
+1. 通过我们的官网上填写注册[表单](https://helpcenter.onlyoffice.com/installation/docs-developer-index.aspx?from=api)，在云端部署ONLYOFFICE文档开发者版解决方案。
 
 2. 在需要嵌入编辑器的目标 HTML 文件中，指定一个占位符 *div* 标签，用于传递所有关于编辑器参数的配置信息：
 

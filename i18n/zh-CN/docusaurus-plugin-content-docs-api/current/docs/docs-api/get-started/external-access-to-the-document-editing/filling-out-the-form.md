@@ -108,6 +108,6 @@ function onChangeContentControl(e) {
 }
 ```
 
-> 请注意，该连接器仅适用于 **ONLYOFFICE 开发者版本**.
+> 请注意，该连接器仅适用于 **ONLYOFFICE文档开发者版本**.
 >
-> 此类是一项附加功能，需要额外付费。 如果您有任何疑问，请通过 [sales@onlyoffice.com](mailto:sales@onlyoffice.com)联系我们的销售团队。
+> 此类是一项附加功能，在 ONLYOFFICE文档开发者版中并非默认提供，需要额外付费。 如果您有任何疑问，请通过 [sales@onlyoffice.com](mailto:sales@onlyoffice.com)联系我们的销售团队。

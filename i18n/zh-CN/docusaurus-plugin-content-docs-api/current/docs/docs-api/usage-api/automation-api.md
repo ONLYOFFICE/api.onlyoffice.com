@@ -12,9 +12,9 @@ sidebar_position: -2
 const connector = docEditor.createConnector()
 ```
 
-> 请注意，连接器仅适用于 **ONLYOFFICE 开发者版**。
+> > 请注意，连接器仅适用于 **ONLYOFFICE文档开发者版**。
 >
-> 连接器是 ONLYOFFICE 开发者版默认不包含的附加功能，需要额外付费才能使用。请联系我们的销售团队 [sales@onlyoffice.com](mailto:sales@onlyoffice.com) 获取报价。
+> 连接器是ONLYOFFICE文档开发者版默认不包含的附加功能，需要额外付费才能使用。请联系我们的销售团队 [sales@onlyoffice.com](mailto:sales@onlyoffice.com) 获取报价。
 
 连接器与插件具有相同的接口。下面可以找到可用于此类的方法。
 
