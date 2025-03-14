@@ -74,12 +74,11 @@ Download the SDK
     </TabItem>
     <TabItem value="linux" label="Linux">
         - Download [Document Builder aarch64](https://github.com/ONLYOFFICE/DocumentBuilder/releases/latest/download/onlyoffice-documentbuilder-8.3.2-14-linux-aarch64.tar.xz) or [Document Builder x86_64](https://github.com/ONLYOFFICE/DocumentBuilder/releases/latest/download/onlyoffice-documentbuilder-8.3.2-14-linux-x86_64.tar.xz) SDK archive
-        - Extract via `tar xvzf onlyoffice-documentbuilder-8.3.2-14-linux-aarch64.tar.xz` or `tar xvzf onlyoffice-documentbuilder-8.3.2-14-linux-x86_64.tar.xz`.
-        - 
+        - Extract via `tar xvzf onlyoffice-documentbuilder-8.3.2-14-linux-aarch64.tar.xz` or `tar xvzf onlyoffice-documentbuilder-8.3.2-14-linux-x86_64.tar.xz`
     </TabItem>
     <TabItem value="macos" label="macOS">
         - Download [Document Builder arm64](https://github.com/ONLYOFFICE/DocumentBuilder/releases/latest/download/onlyoffice-documentbuilder-8.3.2-14-macos-arm64.tar.xz) or [Document Builder x86_64](https://github.com/ONLYOFFICE/DocumentBuilder/releases/latest/download/onlyoffice-documentbuilder-8.3.2-14-macos-x86_64.tar.xz) SDK archive
-        - Extract via `tar xvzf onlyoffice-documentbuilder-8.3.2-14-macos-arm64.tar.xz` or `tar xvzf onlyoffice-documentbuilder-8.3.2-14-macos-x86_64.tar.xz`.
+        - Extract via `tar xvzf onlyoffice-documentbuilder-8.3.2-14-macos-arm64.tar.xz` or `tar xvzf onlyoffice-documentbuilder-8.3.2-14-macos-x86_64.tar.xz`
     </TabItem>
 </Tabs>
 
