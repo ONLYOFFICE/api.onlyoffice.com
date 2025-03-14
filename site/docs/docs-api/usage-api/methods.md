@@ -404,8 +404,6 @@ Show an error message explaining if any error occurred:
 
 Select a document for comparing, combining, or inserting text. This method must be called after the [onRequestSelectDocument](./config/events.md#onrequestselectdocument) event.
 
-> This parameter is available only for ONLYOFFICE Docs Enterprise and ONLYOFFICE Docs Developer.
-
   ``` ts
   docEditor.setRequestedDocument({
     c: "compare",
