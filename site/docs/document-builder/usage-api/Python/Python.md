@@ -5,9 +5,9 @@ sidebar_position: -6
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# C++
+# Python
 
-For the integration of ONLYOFFICE Document Builder into any application, the C++ doctrenderer library is used.
+For the integration of ONLYOFFICE Document Builder into any application, the Python doctrenderer library is used. 
 
 ## Classes
 
@@ -23,47 +23,34 @@ The current application version contains four main classes:
 ## Example
 
 <Tabs>
-    <TabItem value="cpp" label="C++">
-        ```cpp
-        #include "./../common_deploy.h"
-        #include "../docbuilder.h"
-        #include "./utils.cpp"
+    <TabItem value="python" label="Python">
+        ``` py
+        import os
+        import sys
+        sys.path.append("C:/Program Files/ONLYOFFICE/documentBuilder")
+        import docbuilder
 
-        using namespace NSDoctRenderer;
-        int main(int argc, char *argv[])
-        {
-            std::wstring sProcessDirectory = NSUtils::GetProcessDirectory();
-            std::wstring sWorkDirectory = NSUtils::GetBuilderDirectory();
+        builder = docbuilder.CDocBuilder()
 
-            CDocBuilder::Initialize(sWorkDirectory.c_str());
+        builder.CreateFile("docx")
 
-            CDocBuilder oBuilder;
-            oBuilder.SetProperty("--work-directory", sWorkDirectory.c_str());
+        context = builder.GetContext()
+        scope = context.CreateScope()
 
-            oBuilder.CreateFile("docx");
+        globalObj = context.GetGlobal()
 
-            CContext oContext = oBuilder.GetContext();
-            CContextScope oScope = oContext.CreateScope();
+        api = globalObj["Api"]
+        document = api.Call("GetDocument")
+        paragraph = api.Call("CreateParagraph")
+        paragraph.Call("SetSpacingAfter", 1000, False)
+        paragraph.Call("AddText", "Hello, World!")
+        content = context.CreateArray(1)
+        content[0] = paragraph
+        document.Call("InsertContent", content)
 
-            CValue oGlobal = oContext.GetGlobal();
-
-            CValue oApi = oGlobal["Api"];
-            CValue oDocument = oApi.Call("GetDocument");
-            CValue oParagraph = oApi.Call("CreateParagraph");
-            oParagraph.Call("SetSpacingAfter", 1000, false);
-            oParagraph.Call("AddText", "Hello, world!");
-            CValue oContent = oContext.CreateArray(1);
-            oContent[0] = oParagraph;
-            oDocument.Call("InsertContent", oContent);
-
-            std::wstring sDstPath = sProcessDirectory + L"/result.docx";
-            oBuilder.SaveFile("docx", sDstPath.c_str());
-            oBuilder.CloseFile();
-
-            CDocBuilder::Dispose();
-
-            return 0;
-        }uilder::Dispose();
+        dstPath = os.getcwd() + "/result.docx"
+        builder.SaveFile("docx", dstPath)
+        builder.CloseFile()
         ```
     </TabItem>
     <TabItem value="builder" label=".docbuilder">
@@ -73,7 +60,7 @@ The current application version contains four main classes:
         const oDocument = Api.GetDocument()
         const oParagraph = Api.CreateParagraph()
         oParagraph.SetSpacingAfter(1000, false)
-        oParagraph.AddText("Hello, world!")
+        oParagraph.AddText("Hello, World!")
         oDocument.InsertContent([oParagraph])
         builder.SaveFile("docx", "result.docx")
         builder.CloseFile()

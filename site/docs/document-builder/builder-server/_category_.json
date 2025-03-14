@@ -1,5 +1,6 @@
 {
   "position": 4,
   "collapsed": false,
-  "label": "Builder.Server"
+  "label": "Builder.Server",
+  "className": "hidden"
 }
