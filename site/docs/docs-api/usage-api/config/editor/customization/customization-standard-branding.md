@@ -1008,7 +1008,7 @@ In case this setting is changed in the editor interface, it will be stored in th
 ## Example
 
 ``` ts
-const docEditor = new DocsAPI.DocEditor("placeholder", {
+const config = {
   editorConfig: {
     customization: {
       anonymous: {
@@ -1102,7 +1102,9 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
       zoom: 100,
     },
   },
-})
+};
+
+const docEditor = new DocsAPI.DocEditor("placeholder", config);
 ```
 
 The **example.com** is the name of the server where **document manager** and **document storage service** are installed. See the [How it works](../../../../get-started/how-it-works/how-it-works.md) section to find out more on ONLYOFFICE Docs service client-server interactions.

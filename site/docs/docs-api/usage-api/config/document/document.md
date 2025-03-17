@@ -84,7 +84,7 @@ Defines the absolute URL where the source viewed or edited document is stored. B
 ## Example
 
 ``` ts
-const docEditor = new DocsAPI.DocEditor("placeholder", {
+const config = {
   document: {
     fileType: "xlsx",
     isForm: true,
@@ -96,7 +96,9 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
     title: "Example Title",
     url: "https://example.com/url-to-example-document.xlsx",
   },
-})
+};
+
+const docEditor = new DocsAPI.DocEditor("placeholder", config);
 ```
 
 The **example.com** is the name of the server where **document manager** and **document storage service** are installed. See the [How it works](../../../get-started/how-it-works/how-it-works.md) section to find out more on ONLYOFFICE Docs service client-server interactions.

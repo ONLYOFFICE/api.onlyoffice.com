@@ -282,7 +282,7 @@ The full name of the user. The length is limited to 128 symbols. Used since vers
 ## Example
 
 ``` ts
-const docEditor = new DocsAPI.DocEditor("placeholder", {
+const config = {
   editorConfig: {
     actionLink: "ACTION_DATA",
     callbackUrl: "https://example.com/url-to-callback.ashx",
@@ -315,7 +315,9 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
       name: "John Smith",
     },
   },
-})
+};
+
+const docEditor = new DocsAPI.DocEditor("placeholder", config);
 ```
 
 The **example.com** is the name of the server where **document manager** and **document storage service** are installed. See the [How it works](../../../get-started/how-it-works/how-it-works.md) section to find out more on ONLYOFFICE Docs service client-server interactions.
