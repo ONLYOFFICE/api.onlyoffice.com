@@ -12,11 +12,11 @@ It enables document generation without running a full editor, automating content
 
 **ONLYOFFICE Document Builder** provides SDKs for various programming languages, allowing seamless integration into your applications.
 
-- **Python**. Generate and modify documents in scripts or backend services.
-- **C++**. Use the C++ library for high-performance document processing.
-- **COM**. Integrate with Windows applications using the Component Object Model (COM) interface.
-- **JAVA**. Work with the Java SDK for document creation and editing in enterprise applications.
-- **.Net**. Develop cross-platform applications for Windows, Linux, and macOS using the .NET SDK.
+- [Python](../builder-framework/Python/Python.md). Generate and modify documents in scripts or backend services.
+- [C++](../builder-framework/C++/C++.md). Use the C++ library for high-performance document processing.
+- [COM](../builder-framework/COM/COM.md). Integrate with Windows applications using the Component Object Model (COM) interface.
+- [Java](../builder-framework/Java/Java.md). Work with the Java SDK for document creation and editing in enterprise applications.
+- [.Net](../builder-framework/Net/Net.md). Develop cross-platform applications for Windows, Linux, and macOS using the .NET SDK.
 
 Integrate SDK into your own application. To install ONLYOFFICE Document Builder, visit [this page](./installing.md).
 After you download and unpack the files, the library is ready for [integration](../builder-framework/overview.md).

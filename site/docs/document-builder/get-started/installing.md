@@ -22,7 +22,7 @@ For purchasing details, please contact us at [sales@onlyoffice.com](mailto:sales
 <Tabs>
     <TabItem value="python" label="Python">
         - [Python 3.10 - 3.12](https://www.python.org/downloads/)
-        - `pip3`. Make sure `python3` and `pip3` are installed in your system. You can check your python version and pip3 version by using thecommand in terminal:
+        - `pip3`. Make sure `python3` and `pip3` are installed in your system. You can check your Python version and pip3 version by using the command in the terminal:
 
         ```bash
         python3 --version
@@ -31,7 +31,7 @@ For purchasing details, please contact us at [sales@onlyoffice.com](mailto:sales
 
         :::note
 
-        Use `pip` and `python` for Windows. Make sure the executable name is python.exe (default on Windows) and Python is added to your path environment variable.
+        Use `pip` and `python` for Windows. Make sure the executable name is `python.exe` (default on Windows) and Python is added to your `path` environment variable.
 
         :::
 
@@ -43,7 +43,7 @@ For purchasing details, please contact us at [sales@onlyoffice.com](mailto:sales
 
         :::info
 
-        You can install `python3` and `pip3` fo macOS with [Homebrew](https://brew.sh/) using the following command:
+        You can install `python3` and `pip3` for macOS with [Homebrew](https://brew.sh/) using the following command:
 
         ```bash
         brew install python3
@@ -57,7 +57,7 @@ For purchasing details, please contact us at [sales@onlyoffice.com](mailto:sales
         - GCC ≥ 4.2.1 for macOS
     </TabItem>
     <TabItem value="java" label="Java">
-        - JDK >= 5. Make sure that the JDK has been added to your `path` environment variable
+        - JDK >= 5. Make sure that the JDK has been added to your `path` environment variable.
     </TabItem>
     <TabItem value="net" label=".Net">
         - [.NET SDK](https://learn.microsoft.com/en-us/dotnet/core/install/linux?WT.mc_id=dotnet-35129-website)
@@ -66,25 +66,25 @@ For purchasing details, please contact us at [sales@onlyoffice.com](mailto:sales
 
 ## Installing
 
-Download the SDK
+Download the SDK.
 <Tabs>
     <TabItem value="windows" label="Windows">
-        - Download [Document Builder x64](https://github.com/ONLYOFFICE/DocumentBuilder/releases/latest/download/onlyoffice-documentbuilder-8.3.2-14-windows-x64.zip) or [Document Builder x86](https://github.com/ONLYOFFICE/DocumentBuilder/releases/latest/download/onlyoffice-documentbuilder-8.3.2-14-windows-x86.zip) SDK archive
-        - Extract the folder from the .zip file
+        - Download the [Document Builder x64](https://github.com/ONLYOFFICE/DocumentBuilder/releases/latest/download/onlyoffice-documentbuilder-8.3.2-14-windows-x64.zip) or [Document Builder x86](https://github.com/ONLYOFFICE/DocumentBuilder/releases/latest/download/onlyoffice-documentbuilder-8.3.2-14-windows-x86.zip) SDK archive.
+        - Extract the folder from the `.zip` file.
     </TabItem>
     <TabItem value="linux" label="Linux">
-        - Download [Document Builder aarch64](https://github.com/ONLYOFFICE/DocumentBuilder/releases/latest/download/onlyoffice-documentbuilder-8.3.2-14-linux-aarch64.tar.xz) or [Document Builder x86_64](https://github.com/ONLYOFFICE/DocumentBuilder/releases/latest/download/onlyoffice-documentbuilder-8.3.2-14-linux-x86_64.tar.xz) SDK archive
-        - Extract via `tar xvzf onlyoffice-documentbuilder-8.3.2-14-linux-aarch64.tar.xz` or `tar xvzf onlyoffice-documentbuilder-8.3.2-14-linux-x86_64.tar.xz`
+        - Download the [Document Builder aarch64](https://github.com/ONLYOFFICE/DocumentBuilder/releases/latest/download/onlyoffice-documentbuilder-8.3.2-14-linux-aarch64.tar.xz) or [Document Builder x86_64](https://github.com/ONLYOFFICE/DocumentBuilder/releases/latest/download/onlyoffice-documentbuilder-8.3.2-14-linux-x86_64.tar.xz) SDK archive.
+        - Extract via `tar xvzf onlyoffice-documentbuilder-8.3.2-14-linux-aarch64.tar.xz` or `tar xvzf onlyoffice-documentbuilder-8.3.2-14-linux-x86_64.tar.xz`.
     </TabItem>
     <TabItem value="macos" label="macOS">
-        - Download [Document Builder arm64](https://github.com/ONLYOFFICE/DocumentBuilder/releases/latest/download/onlyoffice-documentbuilder-8.3.2-14-macos-arm64.tar.xz) or [Document Builder x86_64](https://github.com/ONLYOFFICE/DocumentBuilder/releases/latest/download/onlyoffice-documentbuilder-8.3.2-14-macos-x86_64.tar.xz) SDK archive
-        - Extract via `tar xvzf onlyoffice-documentbuilder-8.3.2-14-macos-arm64.tar.xz` or `tar xvzf onlyoffice-documentbuilder-8.3.2-14-macos-x86_64.tar.xz`
+        - Download the [Document Builder arm64](https://github.com/ONLYOFFICE/DocumentBuilder/releases/latest/download/onlyoffice-documentbuilder-8.3.2-14-macos-arm64.tar.xz) or [Document Builder x86_64](https://github.com/ONLYOFFICE/DocumentBuilder/releases/latest/download/onlyoffice-documentbuilder-8.3.2-14-macos-x86_64.tar.xz) SDK archive.
+        - Extract via `tar xvzf onlyoffice-documentbuilder-8.3.2-14-macos-arm64.tar.xz` or `tar xvzf onlyoffice-documentbuilder-8.3.2-14-macos-x86_64.tar.xz`.
     </TabItem>
 </Tabs>
 
 :::note
 
-For python you can use `pip3` to install `document-builder` library in terminal
+For Python, you can use `pip3` to install the `document-builder` library in the terminal:
 
 ```bash
 pip3 install document-builder
@@ -92,9 +92,9 @@ pip3 install document-builder
 
 :::
 
-## Run the Samples
+## Run the samples
 
-Download `document-builder` [Samples](https://github.com/ONLYOFFICE/document-builder-samples).
+Download the `document-builder` [samples](https://github.com/ONLYOFFICE/document-builder-samples):
 
 ```bash
 git clone https://github.com/ONLYOFFICE/document-builder-samples
@@ -107,21 +107,23 @@ cd document-builder-samples
         ```shell
         python3 configure.py --test python
         ```
-        Provide directory to Document Builder with `--dir` if necessary.
+        Provide the directory to Document Builder with `--dir` if necessary.
         It is needed for generating auxiliary module containing the path to Document Builder.
 
-        2. Go to test directory:
+        2. Go to the test directory:
         ```shell
         cd python/creating_basic_form
         ```
 
-        3. Run the script
+        3. Run the script:
         ```shell
         python3 main.py
         ```
+
+        Documents will be created in the test directory.
     </TabItem>
     <TabItem value="c++vs" label="C++ (VS)">
-        > **NOTE:** Only available on Windows
+        > **NOTE:** Only available on Windows.
 
         1. Use `configure.py` to generate VS project files. For example:
 
@@ -129,7 +131,7 @@ cd document-builder-samples
             python configure.py --vs --test cpp/creating_basic_form --test cpp/creating_advanced_form
             ```
 
-        2. Open `.sln` file in Visual Studio. It will prompt you to retarget Windows SDK and VS toolset to your installed version – click "OK".
+        2. Open the `.sln` file in Visual Studio. It will prompt you to retarget Windows SDK and VS toolset to your installed version – click "OK".
 
         3. The solution is ready to be built and run. Documents will be created in the project files directory.
 
@@ -142,12 +144,12 @@ cd document-builder-samples
             python configure.py --qt --test cpp
             ```
 
-        2. Open `.pro` file in Qt Creator.
+        2. Open the `.pro` file in Qt Creator.
         3. The project is ready to be built and run. Documents will be created in the `build` directory.
 
         - Makefile
 
-        > **NOTE:** Only available on Linux and Mac OS.
+        > **NOTE:** Only available on Linux and macOS.
 
         1. Use `configure.py` to generate Makefile. For example:
 
@@ -161,7 +163,7 @@ cd document-builder-samples
             cd ../out/cpp/filling_spreadsheet
             ```
 
-        3. Call
+        3. Call:
 
             ```shell
             make
@@ -170,15 +172,15 @@ cd document-builder-samples
             `make` will build and run the executable. Documents will be created in the same directory as Makefile is.
     </TabItem>
     <TabItem value="java" label="Java">
-        > **NOTE:** JDK 8 or newer is required
+        > **NOTE:** JDK 8 or newer is required.
 
-        1. Go to test directory:
+        1. Go to the test directory:
 
             ```shell
             cd java/creating_presentation
             ```
 
-        2. Compile the `Program.java` providing the path to ***docbuilder.jar***, located in the Document Builder directory:
+        2. Compile the `Program.java` providing the path to ***docbuilder.jar*** located in the Document Builder directory:
 
             ```shell
             javac -cp "C:\Program Files\ONLYOFFICE\DocumentBuilder\docbuilder.jar" Program.java
@@ -190,14 +192,16 @@ cd document-builder-samples
             java -cp "C:\Program Files\ONLYOFFICE\DocumentBuilder\docbuilder.jar;." Program
             ```
 
-            Note, that on UNIX systems the path separator is `:` instead of `;`. Thus, on Linux or Mac OS it should be:
+            Note that on UNIX systems the path separator is `:` instead of `;`. Thus, on Linux or macOS it should be:
 
             ```shell
             java -cp "/opt/onlyoffice/documentbuilder/docbuilder.jar:." Program
             ```
+
+        Documents will be created in the test directory.
     </TabItem>
     <TabItem value="net" label=".Net">
-        > **NOTE:** Only available on Windows with Visual Studio and .NET SDK installed
+        > **NOTE:** Only available on Windows with Visual Studio and .NET SDK installed.
 
         1. Use `configure.py` to generate VS project files. For example:
 
@@ -205,10 +209,8 @@ cd document-builder-samples
             python configure.py --vs --test cs
             ```
 
-        2. Open `.sln` file in Visual Studio. Depending on your installed .NET SDK version you may need to set different target framework by setting it in Visual Studio project properties or editing it directly in the `.csproj` file.
+        2. Open the `.sln` file in Visual Studio. Depending on your installed .NET SDK version, you may need to set different target framework by setting it in Visual Studio project properties or editing it directly in the `.csproj` file.
 
         3. The solution is ready to be built and run. Documents will be created in the project files directory.
     </TabItem>
 </Tabs>
-
-Documents will be created in the test directory.
