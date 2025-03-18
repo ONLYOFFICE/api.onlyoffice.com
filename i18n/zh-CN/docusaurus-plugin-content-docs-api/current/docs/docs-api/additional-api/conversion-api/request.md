@@ -27,7 +27,7 @@ sidebar_position: -4
 
 类型: boolean
 
-出现: 可选的
+是否必填：非必填
 
 > 如果是同步转换，文件转换时间比较长，可能会出现web请求超时错误。虽然最终可以完成转换，但只有用相同的key再次发送请求才能得到结果。
 
@@ -47,7 +47,7 @@ sidebar_position: -4
 
 类型: integer
 
-出现: 可选的
+是否必填：非必填
 
 ### 分隔符
 
@@ -64,7 +64,7 @@ sidebar_position: -4
 
 类型: integer
 
-出现: 可选的
+是否必填：非必填
 
 ### documentLayout
 
@@ -72,7 +72,7 @@ sidebar_position: -4
 
 类型: object
 
-出现: 可选的
+是否必填：非必填
 
 #### documentLayout.drawPlaceHolders
 
@@ -80,7 +80,7 @@ sidebar_position: -4
 
 类型: boolean
 
-出现: 可选的
+是否必填：非必填
 
 #### documentLayout.drawFormHighlight
 
@@ -88,7 +88,7 @@ sidebar_position: -4
 
 类型: boolean
 
-出现: 可选的
+是否必填：非必填
 
 #### documentLayout.isPrint
 
@@ -96,7 +96,7 @@ sidebar_position: -4
 
 类型: boolean
 
-出现: 可选的
+是否必填：非必填
 
 ### documentRenderer
 
@@ -104,7 +104,7 @@ sidebar_position: -4
 
 类型: object
 
-出现: 可选的
+是否必填：非必填
 
 #### documentRenderer.textAssociation
 
@@ -119,7 +119,7 @@ sidebar_position: -4
 
 类型: string
 
-出现: 可选的
+是否必填：非必填
 
 ### filetype
 
@@ -158,7 +158,7 @@ Type: string
 
 类型: string
 
-出现: 可选的
+是否必填：非必填
 
 ### pdf
 
@@ -166,7 +166,7 @@ Type: string
 
 类型: object
 
-出现: 可选的
+是否必填：非必填
 
 #### pdf.form
 
@@ -174,7 +174,7 @@ Type: string
 
 类型: boolean
 
-出现: 可选的
+是否必填：非必填
 
 ### region
 
@@ -182,7 +182,7 @@ Type: string
 
 类型: string
 
-出现: 可选的
+是否必填：非必填
 
 ### spreadsheetLayout
 
@@ -192,7 +192,7 @@ Type: string
 
 类型: object
 
-出现: 可选的
+是否必填：非必填
 
 #### spreadsheetLayout.fitToHeight
 
@@ -200,7 +200,7 @@ Type: string
 
 类型: integer
 
-出现: 可选的
+是否必填：非必填
 
 #### spreadsheetLayout.fitToWidth
 
@@ -208,7 +208,7 @@ Type: string
 
 类型: integer
 
-出现: 可选的
+是否必填：非必填
 
 #### spreadsheetLayout.gridLines
 
@@ -216,7 +216,7 @@ Type: string
 
 类型: boolean
 
-出现: 可选的
+是否必填：非必填
 
 #### spreadsheetLayout.headings
 
@@ -224,7 +224,7 @@ Type: string
 
 类型: boolean
 
-出现: 可选的
+是否必填：非必填
 
 #### spreadsheetLayout.ignorePrintArea
 
@@ -232,7 +232,7 @@ Type: string
 
 类型: boolean
 
-出现: 可选的
+是否必填：非必填
 
 #### spreadsheetLayout.margins
 
@@ -240,7 +240,7 @@ Type: string
 
 类型: object
 
-出现: 可选的
+是否必填：非必填
 
 #### spreadsheetLayout.margins.bottom
 
@@ -248,7 +248,7 @@ Type: string
 
 类型: string
 
-出现: 可选的
+是否必填：非必填
 
 #### spreadsheetLayout.margins.left
 
@@ -256,7 +256,7 @@ Type: string
 
 类型: string
 
-出现: 可选的
+是否必填：非必填
 
 #### spreadsheetLayout.margins.right
 
@@ -264,7 +264,7 @@ Type: string
 
 类型: string
 
-出现: 可选的
+是否必填：非必填
 
 #### spreadsheetLayout.margins.top
 
@@ -272,7 +272,7 @@ Type: string
 
 类型: string
 
-出现: 可选的
+是否必填：非必填
 
 #### spreadsheetLayout.orientation
 
@@ -280,7 +280,7 @@ Type: string
 
 类型: string
 
-出现: 可选的
+是否必填：非必填
 
 #### spreadsheetLayout.pageSize
 
@@ -288,7 +288,7 @@ Type: string
 
 类型: object
 
-出现: 可选的
+是否必填：非必填
 
 #### spreadsheetLayout.pageSize.height
 
@@ -296,7 +296,7 @@ Type: string
 
 类型: string
 
-出现: 可选的
+是否必填：非必填
 
 #### spreadsheetLayout.pageSize.width
 
@@ -304,7 +304,7 @@ Type: string
 
 类型: string
 
-出现: 可选的
+是否必填：非必填
 
 #### spreadsheetLayout.scale
 
@@ -312,7 +312,7 @@ Type: string
 
 类型: integer
 
-出现: 可选的
+是否必填：非必填
 
 ### thumbnail
 
@@ -320,7 +320,7 @@ Type: string
 
 类型: object
 
-出现: 可选的
+是否必填：非必填
 
 #### thumbnail.aspect
 
@@ -334,7 +334,7 @@ Type: string
 
 类型: integer
 可选的
-出现: 可选的
+是否必填：非必填
 
 #### thumbnail.first
 
@@ -342,7 +342,7 @@ Type: string
 
 类型: boolean
 
-出现: 可选的
+是否必填：非必填
 
 #### thumbnail.height
 
@@ -350,7 +350,7 @@ Type: string
 
 类型: integer
 
-出现: 可选的
+是否必填：非必填
 
 #### thumbnail.width
 
@@ -358,7 +358,7 @@ Type: string
 
 类型: integer
 
-出现: 可选的
+是否必填：非必填
 
 ### title
 
@@ -366,7 +366,7 @@ Type: string
 
 类型: string
 
-出现: 可选的
+是否必填：非必填
 
 ### 令牌
 
@@ -390,7 +390,7 @@ Type: string
 
 类型: object
 
-出现: 可选的
+是否必填：非必填
 
 #### watermark.transparent
 
@@ -398,7 +398,7 @@ Type: string
 
 类型: float
 
-出现: 可选的
+是否必填：非必填
 
 #### watermark.type
 
@@ -406,7 +406,7 @@ Type: string
 
 类型: string
 
-出现: 可选的
+是否必填：非必填
 
 #### watermark.width
 
@@ -414,7 +414,7 @@ Type: string
 
 类型: integer
 
-出现: 可选的
+是否必填：非必填
 
 #### watermark.height
 
@@ -422,7 +422,7 @@ Type: string
 
 类型: integer
 
-出现: 可选的
+是否必填：非必填
 
 #### watermark.rotate
 
@@ -430,7 +430,7 @@ Type: string
 
 类型: integer
 
-出现: 可选的
+是否必填：非必填
 
 #### watermark.margins
 
@@ -438,7 +438,7 @@ Type: string
 
 类型: array of integers
 
-出现: 可选的
+是否必填：非必填
 
 #### watermark.fill
 
@@ -446,7 +446,7 @@ Type: string
 
 类型: array of integers \| string
 
-出现: 可选的
+是否必填：非必填
 
 #### watermark.stroke-width
 
@@ -454,7 +454,7 @@ Type: string
 
 类型: integer
 
-出现: 可选的
+是否必填：非必填
 
 #### watermark.stroke
 
@@ -462,7 +462,7 @@ Type: string
 
 类型: array of integers
 
-出现: 可选的
+是否必填：非必填
 
 #### watermark.align
 
@@ -470,7 +470,7 @@ Type: string
 
 类型: integer
 
-出现: 可选的
+是否必填：非必填
 
 #### watermark.paragraphs
 
@@ -478,7 +478,7 @@ Type: string
 
 类型: array of objects
 
-出现: 可选的
+是否必填：非必填
 
 #### watermark.paragraphs.align
 
@@ -486,7 +486,7 @@ Type: string
 
 类型: integer
 
-出现: 可选的
+是否必填：非必填
 
 #### watermark.paragraphs.fill
 
@@ -494,7 +494,7 @@ Type: string
 
 类型: array of integers
 
-出现: 可选的
+是否必填：非必填
 
 #### watermark.paragraphs.linespacing
 
@@ -502,7 +502,7 @@ Type: string
 
 类型: integer
 
-出现: 可选的
+是否必填：非必填
 
 #### watermark.paragraphs.runs
 
@@ -510,7 +510,7 @@ Type: string
 
 类型: array of objects
 
-出现: 可选的
+是否必填：非必填
 
 #### watermark.paragraphs.runs.text
 
@@ -518,7 +518,7 @@ Type: string
 
 类型: string
 
-出现: 可选的
+是否必填：非必填
 
 #### watermark.paragraphs.runs.fill
 
@@ -526,7 +526,7 @@ Type: string
 
 类型: array of integers
 
-出现: 可选的
+是否必填：非必填
 
 #### watermark.paragraphs.runs.font-family
 
@@ -534,7 +534,7 @@ Type: string
 
 类型: string
 
-出现: 可选的
+是否必填：非必填
 
 #### watermark.paragraphs.runs.font-size
 
@@ -542,7 +542,7 @@ Type: string
 
 类型: string
 
-出现: 可选的
+是否必填：非必填
 
 #### watermark.paragraphs.runs.bold
 
@@ -550,7 +550,7 @@ Type: string
 
 类型: boolean
 
-出现: 可选的
+是否必填：非必填
 
 #### watermark.paragraphs.runs.italic
 
@@ -558,7 +558,7 @@ Type: string
 
 类型: boolean
 
-出现: 可选的
+是否必填：非必填
 
 #### watermark.paragraphs.runs.strikeout
 
@@ -566,7 +566,7 @@ Type: string
 
 类型: boolean
 
-出现: 可选的
+是否必填：非必填
 
 #### watermark.paragraphs.runs.underline
 
@@ -574,7 +574,7 @@ Type: string
 
 类型: boolean
 
-出现: 可选的
+是否必填：非必填
 
 ## 请求示例
 
