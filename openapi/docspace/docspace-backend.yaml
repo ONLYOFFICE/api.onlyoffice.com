@@ -22735,9 +22735,6 @@ components:
       name: asc_auth_key
       in: cookie
 x-tagGroups:
-  - name: Backup
-    tags:
-      - Backup
   - name: Files
     tags:
       - Files / Files
