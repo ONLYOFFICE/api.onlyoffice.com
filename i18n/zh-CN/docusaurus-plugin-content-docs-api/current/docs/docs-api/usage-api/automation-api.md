@@ -2,9 +2,9 @@
 sidebar_position: -2
 ---
 
-# Automation API
+# 自动化应用程序编程接口（API）
 
-**连接器**是一个允许从外部源编辑文本文档、电子表格、演示文稿和可填写表单的类。使用"自动化API" 的示例可以在 [此处](../get-started/external-access-to-the-document-editing/external-access-to-the-document-editing.md) 找到。
+**连接器**是一个允许从外部源编辑文本文档、电子表格、演示文稿和可填写表单的类。使用"自动化API" 的示例可以在[此处](../get-started/external-access-to-the-document-editing/external-access-to-the-document-editing.md)找到。
 
 要创建连接器，请使用**文档编辑器**对象的 [createConnector](./methods.md#createconnector) 方法 ：
 
@@ -12,9 +12,9 @@ sidebar_position: -2
 const connector = docEditor.createConnector()
 ```
 
-> 请注意，连接器仅适用于 **ONLYOFFICE 开发者版**。
+> > 请注意，连接器仅适用于 **ONLYOFFICE文档开发者版**。
 >
-> 连接器是 ONLYOFFICE 开发者版默认不包含的附加功能，需要额外付费才能使用。请联系我们的销售团队 [sales@onlyoffice.com](mailto:sales@onlyoffice.com) 获取报价。
+> 连接器是ONLYOFFICE文档开发者版默认不包含的附加功能，需要额外付费才能使用。请联系我们的销售团队 [sales@onlyoffice.com](mailto:sales@onlyoffice.com) 获取报价。
 
 连接器与插件具有相同的接口。下面可以找到可用于此类的方法。
 
@@ -36,7 +36,7 @@ const connector = docEditor.createConnector()
 | *text*     | string                   | 项目标题。                                                                                                       |
 | *data*     | string                   | 项目数据（此数据将发送到点击事件回调）。                                                        |
 | *disabled* | boolean                  | 指定当前项是否已禁用。                                                                          |
-| *icons*    | string                   | 项目图标（请参阅插件 [config](../../plugin-and-macros/structure/manifest/manifest.md#icons) documentation)文档）。 |
+| *icons*    | string                   | 项目图标（请参阅插件 [config](../../plugin-and-macros/structure/manifest/manifest.md#variationsicons)文档）。 |
 | *onClick*  | function                 | 点击事件回调。                                                                                                  |
 | *items*    | Array.\<ContextMenuItem> | 包含当前项的上下文菜单项的数组。                                                           |
 
@@ -267,7 +267,7 @@ connector.executeMethod("GetCurrentWord", [], (word) => {
 | text     | string                   | 项目文本。                                                                                                             |
 | data     | string                   | 项目数据（此数据将发送到点击事件回调）。                                                        |
 | disabled | boolean                  | 指定当前项目是否已禁用。                                                                          |
-| icons    | string                   | 项目图标（请参阅插件 [config](../../plugin-and-macros/structure/manifest/manifest.md#icons) 文档）。 |
+| icons    | string                   | 项目图标（请参阅插件 [config](../../plugin-and-macros/structure/manifest/manifest.md#variationsicons) 文档）。 |
 | items    | array of ContextMenuItem | 包含当前项的上下文菜单项的数组。                                                         |
 
 示例:

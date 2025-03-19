@@ -2,11 +2,11 @@
 sidebar_position: -1
 ---
 
-# Using WOPI
+# 使用WOPI
 
 ## 如何启用WOPI？
 
-要启用 WOPI，请将 ONLYOFFICE 文档配置中的[wopi.enable](https://helpcenter.onlyoffice.com/installation/docs-developer-configuring.aspx#wopi-enable) 参数设置为 **true**。
+要启用 WOPI，请将 ONLYOFFICE 文档配置中的 [wopi.enable](https://helpcenter.onlyoffice.com/installation/docs-developer-configuring.aspx#wopi-enable) 参数设置为 **true**。
 
 参数:
 
@@ -32,14 +32,14 @@ sidebar_position: -1
 
 ## 为什么我需要discovery XML 以及如何获取它？
 
-[WOPI 发现](https://docs.microsoft.com/zh-cn/microsoft-365/cloud-storage-partner-program/online/discovery) 是通过从在线办公室请求discovery XML 来帮助 WOPI 服务器发现 WOPI 客户端的过程。WOPI 主机使用discovery XML 来指定如何与在线办公室进行交互。discovery XML的 **action** 元素表示：
+[WOPI 发现](https://docs.microsoft.com/zh-cn/microsoft-365/cloud-storage-partner-program/online/discovery)是通过从在线办公室请求discovery XML 来帮助 WOPI 服务器发现 WOPI 客户端的过程。WOPI 主机使用discovery XML 来指定如何与在线办公室进行交互。discovery XML的 **action** 元素表示：
 
 - 在线办公室中可用的文档操作，
 - 支持的文件格式（扩展名）。
 
 请求被发送到`https://documentserver/hosting/discovery` 地址，其中 **documentserver** 是安装了 ONLYOFFICE 文档的服务器的名称。
 
-有关 WOPI discovery的更多信息，请参见 [此处](../../using-wopi/wopi-discovery.md)。
+有关 WOPI discovery的更多信息，请参见[此处](../../using-wopi/wopi-discovery.md)。
 
 ## 如何通过 WOPI 自定义编辑器行为？
 
@@ -78,19 +78,19 @@ sidebar_position: -1
 
 - 用于避免移动端浏览器的视觉和功能问题的 *viewport* 元标签。
 
- 可以在 [此页面](../../using-wopi/host-page.md)上找到主机页面代码的示例。
+ 可以在[此页面](../../using-wopi/host-page.md)上找到主机页面代码的示例。
 
 ## 如何通过 WOPI 限制公众对数据的访问？
 
 要限制公众访问您的数据，必须配置在线办公室和集成商之间的安全请求交换。
 
-集成商必须检查是否从 ONLYOFFICE 文档收到请求。它为此目的使用 [证明密钥](https://docs.microsoft.com/zh-cn/microsoft-365/cloud-storage-partner-program/online/scenarios/proofkeys) 。ONLYOFFICE 文档使用私钥对请求进行签名。相应的公钥写在 [WOPI discovery XML](../../using-wopi/wopi-discovery.md) 的 proof-key 元素中。集成商使用公钥检查私钥。签名随 **X-WOPI-Proof** 和 **X-WOPI-ProofOld** HTTP 标头中的每个请求一起发送。
+集成商必须检查是否从 ONLYOFFICE 文档收到请求。它为此目的使用[证明密钥](https://docs.microsoft.com/zh-cn/microsoft-365/cloud-storage-partner-program/online/scenarios/proofkeys) 。ONLYOFFICE 文档使用私钥对请求进行签名。相应的公钥写在 [WOPI discovery XML](../../using-wopi/wopi-discovery.md) 的 proof-key 元素中。集成商使用公钥检查私钥。签名随 **X-WOPI-Proof** 和 **X-WOPI-ProofOld** HTTP 标头中的每个请求一起发送。
 
 有关证明密钥的更多信息，请参见[此页面](../../using-wopi/proof-keys.md)。
 
 ## 我在哪里可以找到可能的 WOPI 错误代码及其描述？
 
-您可以在 [此页面](../../using-wopi/wopi-rest-api/wopi-rest-api.md) 上找到可能的 WOPI 错误代码及其描述。
+您可以在 [此页面](../../using-wopi/wopi-rest-api/wopi-rest-api.md)上找到可能的 WOPI 错误代码及其描述。
 
 ## ONLYOFFICE 文档支持哪些 WOPI REST API 操作？
 
@@ -98,7 +98,7 @@ ONLYOFFICE 文档使用以下 WOPI 操作：[CheckFileInfo](../../using-wopi/wop
 
 ## 如何通过WOPI限制访问ONLYOFFICE服务器的使用？
 
-您不能通过 WOPI 限制对 ONLYOFFICE 服务器的使用。编辑访问控制只能通过 ONLYOFFICE 文档 API 并基于 JWT 签名。生成 [文件打开请求](../../additional-api/signature/browser.md) 需要密钥。
+您不能通过 WOPI 限制对 ONLYOFFICE 服务器的使用。编辑访问控制只能通过 ONLYOFFICE 文档 API 并基于 JWT 签名。生成[文件打开请求](../../additional-api/signature/browser.md)需要密钥。
 
 更多关于签名的信息可以在[这里](../../additional-api/signature/signature.md)找到。
 

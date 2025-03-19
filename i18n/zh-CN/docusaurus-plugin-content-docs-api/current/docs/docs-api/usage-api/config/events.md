@@ -1,4 +1,4 @@
-﻿# Events
+﻿# 事件
 
 事件部分允许更改与事件有关的所有功能。
 
@@ -6,7 +6,7 @@
 
 应用程序被加载到浏览器中。
 
-示例:
+**示例**:
 
 ``` ts
 function onAppReady() {
@@ -24,7 +24,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
 
 文档由其他用户以 *严格* 共同编辑模式共同编辑。
 
-示例:
+**示例**:
 
 ``` ts
 function onCollaborativeChanges() {
@@ -42,7 +42,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
 
 文档被加载到文档编辑器中。
 
-示例:
+**示例**:
 
 ``` ts
 function onDocumentReady() {
@@ -60,7 +60,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
 
 修改文档时调用的函数。使用以下参数调用它：*\{"data": true\}* --适用于当前用户正在编辑文档时。使用以下参数调用它：*\{"data": false\}* --适用于当前用户的更改发送到 **文档编辑服务**时。
 
-示例:
+**示例**:
 
 ``` ts
 function onDocumentStateChange(event) {
@@ -82,7 +82,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
 
 调用 [downloadAs](../methods.md#downloadas) 方法时使用已编辑文件的绝对 URL 调用的函数。要下载的文档的绝对 URL 及其类型在 *data* 参数中发送。
 
-示例:
+**示例**:
 
 ``` ts
 function onDownloadAs(event) {
@@ -100,9 +100,9 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
 
 ## onError
 
-发生错误或其他特定事件时调用的函数。错误消息在 *data* 参数中发送。可以在 [此处](https://github.com/ONLYOFFICE/sdkjs/blob/master/common/errorCodes.js) 找到错误代码列表。
+发生错误或其他特定事件时调用的函数。错误消息在 *data* 参数中发送。可以在[此处](https://github.com/ONLYOFFICE/sdkjs/blob/master/common/errorCodes.js)找到错误代码列表。
 
-示例:
+**示例**:
 
 ``` ts
 function onError(event) {
@@ -120,7 +120,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
 
 应用程序打开文件时调用的函数。模式在 *data.mode* 参数中发送。可以**查看**或**编辑**。
 
-示例:
+**示例**:
 
 ``` ts
 function onInfo(event) {
@@ -142,7 +142,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
 
 ![onMakeActionLink](/assets/images/editor/onMakeActionLink.png)
 
-示例:
+**示例**:
 
 ``` ts
 function onMakeActionLink(event) {
@@ -164,9 +164,9 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
 
 文档的名称在 *data.title* 参数中发送。*收藏* 图标高亮状态在 *data.favorite* 参数中发送。
 
-当用户点击 *收藏* 图标时，调用 [setFavorite](../methods.md#setfavorite) 方法更新*收藏*图标高亮状态 [信息](./document/info.md#favorite) 如果未声明该方法，则*收藏*图标不会更改。
+当用户点击 *收藏* 图标时，调用 [setFavorite](../methods.md#setfavorite) 方法更新*收藏*图标高亮状态[信息](./document/info.md#favorite)如果未声明该方法，则*收藏*图标不会更改。
 
-示例:
+**示例**:
 
 ``` ts
 function onMetaChange(event) {
@@ -183,9 +183,13 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
 
 ## onOutdatedVersion
 
-显示 [错误](../../more-information/troubleshooting.md#key) 后调用的函数，当使用旧的 [document.key](./document/document.md#key) 值打开文档进行编辑时，该值用于编辑以前的文档版本并成功保存。调用此事件时，必须使用新的 *document.key* 重新初始化编辑器。自 8.3 版起已弃用，请改用 [onRequestRefreshFile](#onrequestrefreshfile)。
+显示 [错误](../../more-information/troubleshooting.md#the-file-version-has-been-changed) 后调用的函数，当使用旧的 [document.key](./document/document.md#key) 值打开文档进行编辑时，该值用于编辑以前的文档版本并成功保存。调用此事件时，必须使用新的 *document.key* 重新初始化编辑器。
 
-示例:
+:::danger[Deprecated]
+自 8.3 版起已弃用，请改用 [onRequestRefreshFile](#onrequestrefreshfile)。
+:::
+
+**示例**:
 
 ``` ts
 function onOutdatedVersion() {
@@ -203,7 +207,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
 
 当所有插件都加载并可以使用时调用的函数。
 
-示例:
+**示例**:
 
 ``` ts
 function onPluginsReady() {}
@@ -217,13 +221,17 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
 
 ## onReady
 
-当应用程序加载到浏览器中时调用的函数。自 5.0 版起已弃用，请改用 [onAppReady](#onappready)
+当应用程序加载到浏览器中时调用的函数。
+
+:::danger[Deprecated]
+自 5.0 版起已弃用，请改用 [onAppReady](#onappready)
+:::
 
 ## onRequestClose
 
 当用户尝试结束编辑器工作并通过单击交叉按钮将其关闭时调用的函数。如果未声明该方法，则 [editorConfig.customization.close](./editor/customization/customization-standard-branding.md#close) 参数将不可用，并且不会显示关闭按钮。
 
-示例:
+**示例**:
 
 ``` ts
 function onRequestClose() {
@@ -243,15 +251,20 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
 
 ## onRequestCompareFile
 
-当用户尝试通过单击*存储中的文档*按钮来选择要进行比较的文档时调用的函数。自版本 7.5 起已弃用，请改用 [onRequestSelectDocument](#onrequestselectdocument)。
+当用户尝试通过单击*存储中的文档*按钮来选择要进行比较的文档时调用的函数。
 
-> 仅适用于ONLYOFFICE企业版和ONLYOFFICE开发者版。
+:::请注意
+此事件仅适用于ONLYOFFICE文档企业版和ONLYOFFICE文档开发者版。
+:::
+:::danger[Deprecated]
+自版本 7.5 起已弃用，请改用 [onRequestSelectDocument](#onrequestselectdocument)。
+:::
 
 ## onRequestCreateNew
 
 当用户试图通过单击*新建*按钮来创建文档时调用的函数。此方法用于代替 [createUrl](./editor/editor.md#createurl) 字段。如果未声明该方法且未指定 *createUrl*，则不会显示*新建*按钮。
 
-示例:
+**示例**:
 
 ``` ts
 function onRequestCreateNew() {}
@@ -265,14 +278,16 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
 
 ## onRequestEditRights
 
-当用户尝试通过单击*编辑当前文件*按钮将文档从查看模式切换到编辑模式时调用的函数。当用户在 *view* 或 *fillForms* 模式下打开的表单中单击 *编辑 PDF* 按钮时，也会触发此事件。调用该函数时，必须在编辑模式下再次初始化编辑器。如果未声明该方法，则不会显示*编辑当前文件* 和 *编辑 PDF* 按钮。
+当用户尝试通过单击*编辑当前文件*按钮将文档从查看模式切换到编辑模式时调用的函数。当用户在 *view* 或 *fillForms* 模式下打开的表单中单击*编辑 PDF* 按钮时，也会触发此事件。调用该函数时，必须在编辑模式下再次初始化编辑器。如果未声明该方法，则不会显示*编辑当前文件*和*编辑 PDF* 按钮。
 
-> 当 [editorConfig](./editor/editor.md#mode) *模式*参数设置为 **view** 并且*编辑**文档的*权限* ([文档权限](./document/permissions.md#edit)) 设置为 **true** 时，**onRequestEditRights** 参数是强制性的，以便用户可以切换到编辑模式。
+:::请注意
+当 [editorConfig](./editor/editor.md#mode) *模式*参数设置为 **view** 并且*编辑**文档的*权限*([文档权限](./document/permissions.md#edit))设置为 **true** 时，**onRequestEditRights** 参数是强制性的，以便用户可以切换到编辑模式。
+:::
 
 ![onRequestEditRights](/assets/images/editor/onRequestEditRights.png)
 ![Edit PDF button](/assets/images/editor/edit-pdf.png)
 
-示例:
+**示例**:
 
 ``` ts
 function onRequestEditRights() {
@@ -295,7 +310,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
 
 <img alt="onRequestHistory" src="/assets/images/editor/onRequestHistory.png" width="282px" />
 
-示例:
+**示例**:
 
 ``` ts
 function onRequestHistory() {
@@ -333,9 +348,9 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
 })
 ```
 
-其中 **changes** 是保存文档后返回的 [历史对象](../callback-handler.md#history) 的*更改*。
+其中 **changes** 是保存文档后返回的[历史对象](../callback-handler.md#history)的*更改*。
 
-其中 **serverVersion** 是保存文档后返回的 [历史对象](../callback-handler.md#history) 中的 *serverVersion*。
+其中 **serverVersion** 是保存文档后返回的[历史对象](../callback-handler.md#history)中的 *serverVersion*。
 
 ## onRequestHistoryClose
 
@@ -343,7 +358,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
 
 ![onRequestHistoryClose](/assets/images/editor/onRequestHistoryClose.png)
 
-示例:
+**示例**:
 
 ``` ts
 function onRequestHistoryClose() {
@@ -367,7 +382,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
 
 ![onRequestHistoryData](/assets/images/editor/onRequestHistoryData.png)
 
-示例:
+**示例**:
 
 ``` ts
 function onRequestHistoryData(event) {
@@ -396,7 +411,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
 
 其中 [JSON 对象](../callback-handler.md#changesurl) 中的 *changesUrl*。
 
- 其中 **example.com** 是安装了**文档管理器**和**文档存储服务**的服务器的名称。有关 ONLYOFFICE 文档服务客户端交互的更多信息，请参阅 [工作原理](../../get-started/how-it-works/how-it-works.md) 部分。
+ 其中 **example.com** 是安装了**文档管理器**和**文档存储服务**的服务器的名称。有关 ONLYOFFICE 文档服务客户端交互的更多信息，请参阅[工作原理](../../get-started/how-it-works/how-it-works.md)部分。
 
 ## onRequestInsertImage
 
@@ -408,7 +423,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
 
 ![onRequestInsertImage](/assets/images/editor/onRequestInsertImage.png)
 
-示例:
+**示例**:
 
 ``` ts
 function onRequestInsertImage(event) {
@@ -435,11 +450,15 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
 })
 ```
 
-其中 **example.com** 是安装了**文档管理器**和**文档存储服务**的服务器的名称。有关 ONLYOFFICE 文档服务客户端交互的更多信息，请参阅 [工作原理](../../get-started/how-it-works/how-it-works.md) 部分。
+其中 **example.com** 是安装了**文档管理器**和**文档存储服务**的服务器的名称。有关 ONLYOFFICE 文档服务客户端交互的更多信息，请参阅[工作原理](../../get-started/how-it-works/how-it-works.md)部分。
 
 ## onRequestMailMergeRecipients
 
-当用户尝试通过单击*邮件合并*按钮选择收件人数据时调用的函数。自版本 7.5 起已弃用，请改用 [onRequestSelectSpreadsheet](#onrequestselectspreadsheet)。自版本 7.5 起已弃用，请改用 [onRequestSelectSpreadsheet](#onrequestselectspreadsheet)。
+当用户尝试通过单击*邮件合并*按钮选择收件人数据时调用的函数。
+
+:::danger[Deprecated]
+自版本 7.5 起已弃用，请改用 [onRequestSelectSpreadsheet](#onrequestselectspreadsheet)。
+:::
 
 ## onRequestOpen
 
@@ -451,7 +470,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
 
 <img alt="Open source" src="/assets/images/editor/open-source.png" width="498px" />
 
-示例:
+**示例**:
 
 ``` ts
 function onRequestOpen(event) {
@@ -471,7 +490,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
 })
 ```
 
-其中 **example.com** 是安装了**文档管理器**和**文档存储服务**的服务器的名称。有关 ONLYOFFICE 文档服务客户端交互的更多信息，请参阅 [工作原理](../../get-started/how-it-works/how-it-works.md) 部分。
+其中 **example.com** 是安装了**文档管理器**和**文档存储服务**的服务器的名称。有关 ONLYOFFICE 文档服务客户端交互的更多信息，请参阅[工作原理](../../get-started/how-it-works/how-it-works.md)部分。
 
 ## onRequestReferenceData
 
@@ -481,7 +500,9 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
 
 要通过事件参数指定的文件链接刷新数据，您必须调用 [setReferenceData](../methods.md#setreferencedata) 方法。调用该方法时，必须添加token来验证参数。 如果未声明该事件，则不会显示*粘贴链接*和*更新值*按钮。
 
-> 要将数据发送给*setReferenceData*方法，建议先通过*referenceData*参数搜索文件。如果没有这样的字段或找不到文件，则使用 *path* 参数。
+:::请注意
+要将数据发送给*setReferenceData*方法，建议先通过*referenceData*参数搜索文件。如果没有这样的字段或找不到文件，则使用 *path* 参数。
+:::
 
 <img alt="Paste link" src="/assets/images/editor/paste-link.png" width="400px" />
 
@@ -489,7 +510,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
 
 当用户运行 [IMPORTRANGE](https://helpcenter.onlyoffice.com/onlyoffice-editors/onlyoffice-spreadsheet-editor/Functions/importrange.aspx?from=api) 函数时，也会触发此事件。 *IMPORTRANGE* 参数中使用的源电子表格的 URL 被传递给 *event.data.link* 参数中的 *onRequestReferenceData* 事件。
 
-示例:
+**示例**:
 
 ``` ts
 function onRequestReferenceData() {
@@ -525,11 +546,13 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
 
 单击该按钮时，必须调用 [setReferenceSource](../methods.md#setreferencesource) 方法来更改外部数据的来源。调用该方法时，必须添加token来验证参数。如果未声明事件，则不会显示*更改源*按钮。
 
-> 要将数据发送到*setReferenceSource*方法，建议首先通过*referenceData*参数搜索文件。如果没有这样的字段或找不到文件，则使用 *path* 参数。
+:::请注意
+要将数据发送到*setReferenceSource*方法，建议首先通过*referenceData*参数搜索文件。如果没有这样的字段或找不到文件，则使用 *path* 参数。
+:::
 
 <img alt="Change source" src="/assets/images/editor/change-source.png" width="498px" />
 
-示例:
+**示例**:
 
 ``` ts
 function onRequestReferenceSource() {
@@ -565,7 +588,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
 
 在这些情况下，将调用 [refreshFile](../methods.md#refreshfile) 方法并更新文件版本，而无需重新加载编辑器。
 
-示例:
+**示例**:
 
 ``` ts
 function onRequestRefreshFile() {
@@ -594,11 +617,13 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
 
 当用户试图通过单击 *重命名...* 按钮重命名文件时调用的函数。
 
-> 在 6.0 版之前，*重命名...* 按钮仅在 [document.permissions.rename](./document/permissions.md#rename) 设置为 **true** 时可用。
+:::请注意
+在 6.0 版之前，*重命名...* 按钮仅在 [document.permissions.rename](./document/permissions.md#rename) 设置为 **true** 时可用。
+:::
 
 <img alt="onRequestRename" src="/assets/images/editor/onRequestRename.png" width="282px" />
 
-示例:
+**示例**:
 
 ``` ts
 function onRequestRename(event) {
@@ -616,15 +641,17 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
 
 当用户尝试通过单击版本历史记录中的*恢复*按钮来恢复文件版本时调用的函数。
 
-如果从历史记录中调用文档版本，则文档版本号将在 *data.version* 参数中发送。此外，如果从 [历史对象](../callback-handler.md#history). 此链接指定的文档类型在 *data.fileType* 参数中发送。
+如果从历史记录中调用文档版本，则文档版本号将在 *data.version* 参数中发送。此外，如果从[历史对象](../callback-handler.md#history)。此链接指定的文档类型在 *data.fileType* 参数中发送。
 
 调用该函数时，必须调用 [refreshHistory](../methods.md#refreshhistory) 方法再次初始化版本历史记录。如果未声明该方法，则不会显示*恢复*按钮。
 
-> *恢复*按钮仅对以前的文档版本显示，对当前版本隐藏。在 5.5 版之前，仅当 [document.permissions.changeHistory](./document/permissions.md#changehistory) 设置为 **true** 时，*恢复* 按钮才可用。
+:::请注意
+*恢复*按钮仅对以前的文档版本显示，对当前版本隐藏。在 5.5 版之前，仅当 [document.permissions.changeHistory](./document/permissions.md#changehistory) 设置为 **true** 时，*恢复* 按钮才可用。
+:::
 
 ![onRequestRestore](/assets/images/editor/onRequestRestore.png)
 
-示例:
+**示例**:
 
 ``` ts
 function onRequestRestore(event) {
@@ -666,19 +693,19 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
 })
 ```
 
-其中 **changes** 保存文档后返回的 [历史对象](../callback-handler.md#history) 的 *更改*。
+其中 **changes** 保存文档后返回的[历史对象](../callback-handler.md#history)的*更改*。
 
-其中 **serverVersion** 是保存文档后返回的 [历史对象](../callback-handler.md#history) 中的 *serverVersion*。
+其中 **serverVersion** 是保存文档后返回的[历史对象](../callback-handler.md#history)中的 *serverVersion*。
 
-其中 **example.com** 是安装了**文档管理器**和**文档存储服务**的服务器的名称。有关 ONLYOFFICE 文档服务客户端交互的更多信息，请参阅 [工作原理](../../get-started/how-it-works/how-it-works.md) 部分。
+其中 **example.com** 是安装了**文档管理器**和**文档存储服务**的服务器的名称。有关 ONLYOFFICE 文档服务客户端交互的更多信息，请参阅[工作原理](../../get-started/how-it-works/how-it-works.md)部分。
 
 ## onRequestSaveAs
 
-当用户试图通过单击 *另存为...* 按钮来保存文件时调用的函数。文档的标题、其类型和要下载的文档的绝对 URL 在 *data* 参数中发送。如果未声明该方法，将不会显示 *另存为...* 按钮。
+当用户试图通过单击*另存为...*按钮来保存文件时调用的函数。文档的标题、其类型和要下载的文档的绝对 URL 在 *data* 参数中发送。如果未声明该方法，将不会显示*另存为...*按钮。
 
 ![onRequestSaveAs](/assets/images/editor/onRequestSaveAs.png)
 
-示例:
+**示例**:
 
 ``` ts
 function onRequestSaveAs(event) {
@@ -702,13 +729,15 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
 
 要选择文档以进行比较、合并或插入文本，您必须调用 [setRequestedDocument](../methods.md#setrequesteddocument) 方法。
 
-> 此事件仅适用于 ONLYOFFICE 企业版和 ONLYOFFICE 开发者版。
+:::请注意
+此事件仅适用于ONLYOFFICE文档企业版和 ONLYOFFICE文档开发者版。
+:::
 
 ![onRequestSelectDocument](/assets/images/editor/onRequestSelectDocument.png)
 
 ![插入文本](/assets/images/editor/insert-text.png#gh-light-mode-only)![插入文本](/assets/images/editor/insert-text.dark.png#gh-dark-mode-only)
 
-示例:
+**示例**:
 
 ``` ts
 function onRequestSelectDocument() {
@@ -727,7 +756,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
 })
 ```
 
-其中 **example.com** 是安装了**文档管理器**和**文档存储服务**的服务器的名称。有关 ONLYOFFICE 文档服务客户端交互的更多信息，请参阅 [工作原理](../../get-started/how-it-works/how-it-works.md) 部分。
+其中 **example.com** 是安装了**文档管理器**和**文档存储服务**的服务器的名称。有关 ONLYOFFICE 文档服务客户端交互的更多信息，请参阅[工作原理](../../get-started/how-it-works/how-it-works.md)部分。
 
 ## onRequestSelectSpreadsheet
 
@@ -739,7 +768,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
 
 ![onRequestSelectSpreadsheet](/assets/images/editor/onRequestMailMergeRecipients.png)
 
-示例:
+**示例**:
 
 ``` ts
 function onRequestSelectSpreadsheet() {
@@ -758,7 +787,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
 })
 ```
 
-其中 **example.com** 是安装了**文档管理器**和**文档存储服务**的服务器的名称。有关 ONLYOFFICE 文档服务客户端交互的更多信息，请参阅 [工作原理](../../get-started/how-it-works/how-it-works.md) 部分。
+其中 **example.com** 是安装了**文档管理器**和**文档存储服务**的服务器的名称。有关 ONLYOFFICE 文档服务客户端交互的更多信息，请参阅[工作原理](../../get-started/how-it-works/how-it-works.md)部分。
 
 ## onRequestSendNotify
 
@@ -768,9 +797,11 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
 
 要提及的用户列表应通过 [setUsers](../methods.md#setusers) 方法完成。
 
-> 在 5.4 版本中，只有在设置了 [onRequestUsers](#onrequestusers) 事件时才能使用 **onRequestSendNotify** 事件。从 5.5 版开始，**onRequestSendNotify** 和 **onRequestUsers** 之间没有这种依赖关系两者都可以独立设置。
+:::请注意
+在 5.4 版本中，只有在设置了 [onRequestUsers](#onrequestusers) 事件时才能使用 **onRequestSendNotify** 事件。从 5.5 版开始，**onRequestSendNotify** 和 **onRequestUsers** 之间没有这种依赖关系两者都可以独立设置。
+:::
 
-示例:
+**示例**:
 
 ``` ts
 function onRequestSendNotify(event) {
@@ -794,7 +825,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
 
 ![onRequestSharingSettings](/assets/images/editor/onRequestSharingSettings.png)
 
-示例:
+**示例**:
 
 ``` ts
 function onRequestSharingSettings() {
@@ -826,7 +857,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
 
 当用户单击*开始填写*按钮时，将调用 [startFilling](../methods.md#startfilling) 方法来锁定 pdf 编辑（仅可查看 pdf）。
 
-示例:
+**示例**:
 
 ``` ts
 function onRequestStartFilling() {
@@ -854,7 +885,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
 
 <img alt="Protect range" src="/assets/images/editor/protect-range.png" width="292px" />
 
-示例:
+**示例**:
 
 ``` ts
 function onRequestUsers(event) {
@@ -891,7 +922,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
 
 *3* [forcesavetype](../callback-handler.md#forcesavetype) 的强制保存请求成功执行时调用的函数，即点击**完成并提交**按钮并提交表单时调用的函数。
 
-示例:
+**示例**:
 
 ``` ts
 function onSubmit(event) {
@@ -913,7 +944,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
 - 当用户需要为 *txt* 文件选择编码时；
 - 当用户需要为 *csv* 文件选择编码和分隔符时。
 
-示例:
+**示例**:
 
 ``` ts
 function onUserActionRequired() {
@@ -930,7 +961,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
 
 发生警告时调用的函数。警告消息在 *data* 参数中发送。可以在[此处](https://github.com/ONLYOFFICE/sdkjs/blob/master/common/errorCodes.js)此处。
 
-示例:
+**示例**:
 
 ``` ts
 function onWarning(event) {
