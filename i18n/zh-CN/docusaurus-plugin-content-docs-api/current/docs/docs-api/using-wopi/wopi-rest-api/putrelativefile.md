@@ -31,12 +31,12 @@
 
 ## 请求标头
 
-| 名称                   | 类型    | 出现 | 描述                                                                                                                           |
+| 名称                   | 类型    | 是否必填 | 描述                                                                                                                           |
 | ---------------------- | ------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------- |
-| X-WOPI-Override        | string  | 必需的 | 来自 WOPI 服务器的请求操作 (*PUT_RELATIVE*)。                                                                      |
-| X-WOPI-SuggestedTarget | string  | 必需的 | 文件扩展名或完整文件名，包括 UTF-7 编码字符串格式的文件扩展名。                         |
-| X-WOPI-Size            | integer | 可选的 | 文件的大小（以字节为单位）。                                                                                                        |
-| X-WOPI-FileConversion  | boolean | 可选的 | 表明请求是在[二进制文档转换](../editing-binary-documents.md)的上下文中进行的。|
+| X-WOPI-Override        | string  | 必填 | 来自 WOPI 服务器的请求操作 (*PUT_RELATIVE*)。                                                                      |
+| X-WOPI-SuggestedTarget | string  | 必填 | 文件扩展名或完整文件名，包括 UTF-7 编码字符串格式的文件扩展名。                         |
+| X-WOPI-Size            | integer | 非必填的 | 文件的大小（以字节为单位）。                                                                                                        |
+| X-WOPI-FileConversion  | boolean | 非必填的 | 表明请求是在[二进制文档转换](../editing-binary-documents.md)的上下文中进行的。|
 
 ## 请求正文
 
@@ -44,19 +44,19 @@
 
 ## 响应标头
 
-| 名称                     | 类型   | 出现 | 描述                                                                                                                                                                                                               |
+| 名称                     | 类型   | 是否必填 | 描述                                                                                                                                                                                                               |
 | ------------------------ | ------ | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| X-WOPI-Lock              | string | 可选的 | 锁ID——标识文件上的当前锁。当使用 **409 Conflict** 响应请求时，必须始终包含此标头。用 **200 OK**响应请求时不应包含它。 |
-| X-WOPI-LockFailureReason | string | 可选的 | 锁定失败的原因。当使用 **409 Conflict**响应请求时，可能会包含此标头。它只能用于记录目的。                                                               |
+| X-WOPI-Lock              | string | 非必填的 | 锁ID——标识文件上的当前锁。当使用 **409 Conflict** 响应请求时，必须始终包含此标头。用 **200 OK**响应请求时不应包含它。 |
+| X-WOPI-LockFailureReason | string | 非必填的 | 锁定失败的原因。当使用 **409 Conflict**响应请求时，可能会包含此标头。它只能用于记录目的。                                                               |
 
 ## 响应体
 
-| 名称        | 类型   | 出现 | 描述                                                                                                                       |
+| 名称        | 类型   | 是否必填 | 描述                                                                                                                       |
 | ----------- | ------ | -------- | --------------------------------------------------------------------------------------------------------------------------------- |
-| Name        | string | 必需的 | 文件名，包括扩展名，没有路径。                                                                               |
-| Url         | string | 必需的 | URI，其形式为 *http\://server/\<...\>/wopi/files/(file\_id)?access\_token=(access token)*, 在主机上新创建的文件。 |
-| HostViewUrl | string | 可选的 | 主机页面的 URI，该页面为新创建文件加载[查看](../wopi-discovery.md#wopi-actions) WOPI 操作。    |
-| HostEditUrl | string | 可选的 | 主机页面的 URI，该页面为新创建的文件加载[编辑](../wopi-discovery.md#wopi-actions)操作。             |
+| Name        | string | 必填 | 文件名，包括扩展名，没有路径。                                                                               |
+| Url         | string | 必填 | URI，其形式为 *http\://server/\<...\>/wopi/files/(file\_id)?access\_token=(access token)*, 在主机上新创建的文件。 |
+| HostViewUrl | string | 非必填的 | 主机页面的 URI，该页面为新创建文件加载[查看](../wopi-discovery.md#wopi-actions) WOPI 操作。    |
+| HostEditUrl | string | 非必填的 | 主机页面的 URI，该页面为新创建的文件加载[编辑](../wopi-discovery.md#wopi-actions)操作。             |
 
 ## 另存为
 

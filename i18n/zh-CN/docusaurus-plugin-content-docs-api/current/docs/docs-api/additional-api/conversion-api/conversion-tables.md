@@ -7,7 +7,7 @@ sidebar_position: -2
 下面您可以找到可在不同类型的编辑器中转换的表格格式。
 
 :::注意
-在[onlyoffice-docs-formats.json](https://github.com/ONLYOFFICE/document-formats/blob/master/onlyoffice-docs-formats.json)文件中，您可以找到 ONLYOFFICE编辑器所支持的所有文件格式列表，以及这些格式的相关属性（可执行的操作、多用途互联网邮件扩展类型（MIME）等）。
+在[onlyoffice-docs-formats.json](https://github.com/ONLYOFFICE/document-formats/blob/master/onlyoffice-docs-formats.json)文件中，您可以找到 ONLYOFFICE 编辑器支持的所有文件格式及其属性（可能的操作、MIME 等）的列表。
 :::
 
 ## 文本文档文件格式

@@ -18,8 +18,8 @@ sidebar_position: -1
 
 [更多](working-with-review-changes.md)
 
-## 填写表单
+## 填写表格
 
-填充表单中的空单元格。
+填充表格中的空单元格。
 
 [更多](filling-out-the-form.md)

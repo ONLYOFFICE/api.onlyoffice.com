@@ -40,7 +40,7 @@ sidebar_position: -3
 
 示例: `https://documentserver/url-to-converted-document.pdf`
 
-### 百分比
+### percent
 
 定义文件转换的百分比。如果 *endConvert* 参数设置为 **true**，则 *percent* 等于 **100**。
 

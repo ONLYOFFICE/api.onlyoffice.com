@@ -4,7 +4,7 @@ sidebar_position: -4
 
 # 请求
 
- 对于与**文档转换服务**的交互，使用 POST 请求。请求参数在请求正文中以 JSON。格式输入请求被发送到`https://documentserver/converter` 其中 **documentserver** 是安装了ONLYOFFICE 文档的服务器的名称。
+ 对于与**文档转换服务**的交互，使用 POST 请求。请求参数在请求正文中以 JSON。格式输入请求被发送到`https://documentserver/converter` 其中 **documentserver** 是安装了 ONLYOFFICE 文档的服务器的名称。
 
 > 请注意，在 5.5 版本之前，使用`https://documentserver/ConvertService.ashx`地址发送请求。
 
@@ -129,7 +129,7 @@ sidebar_position: -4
 
 类型: string
 
-出现: 必需的
+是否必填: 必填
 
 ### key
 
@@ -137,7 +137,7 @@ sidebar_position: -4
 
 Type: string
 
-出现: 必需的
+是否必填: 必填
 
 ### outputtype
 
@@ -150,7 +150,7 @@ Type: string
 
 类型: string
 
-出现: 必需的
+是否必填: 必填
 
 ### 密码
 
@@ -333,8 +333,8 @@ Type: string
 默认值为 **2**。
 
 类型: integer
-可选的
-是否必填：非必填
+
+是否必填: 非必填的
 
 #### thumbnail.first
 
@@ -370,11 +370,11 @@ Type: string
 
 ### 令牌
 
-以[令牌](../signature/request/token-in-body.md#request-to-convert-the-document)的形式定义添加到**文档服务器**配置的加密签名。
+以[令牌](../signature/request/token-in-body.md#request-to-convert-the-document)的形式定义添加到 **ONLYOFFICE 文档** 配置的加密签名。
 
 类型: string
 
-出现: 配置要求
+是否必填: 配置要求
 
 ### url
 
@@ -382,7 +382,7 @@ Type: string
 
 类型: string
 
-出现: 必需的
+是否必填: 必填
 
 ### watermark
 

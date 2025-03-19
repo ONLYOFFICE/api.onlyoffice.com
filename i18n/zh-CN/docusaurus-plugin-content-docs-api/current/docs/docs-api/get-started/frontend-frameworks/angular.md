@@ -217,7 +217,7 @@ ng version
 
 ## 在 Angular 组件中调用编辑器方法
 
-1. 将`DocEditor.instances` 参数添加到`window` 对象中，并通过编辑器 ID 从该对象中获取编辑器对象：
+1. 将`DocEditor.instances` 参数添加到`window` 并通过编辑器 ID 从该对象中获取编辑器对象：
 
    ```ts
    const documentEditor = window.DocEditor.instances["docxEditor"]
