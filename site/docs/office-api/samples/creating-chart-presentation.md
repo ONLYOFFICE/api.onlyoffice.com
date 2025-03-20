@@ -2,13 +2,13 @@
 
 Create a chart presentation:
 
-- get the first slide in the current presentation ([Api/GetPresentation](../presentation-api/Api/Methods/GetPresentation.md), [ApiPresentation/GetSlideByIndex](../presentation-api/ApiPresentation/Methods/GetSlideByIndex.md));
-- set the gradient background ([Api/CreateGradientStop](../presentation-api/Api/Methods/CreateGradientStop.md), [ApiSlide/SetBackground](../presentation-api/ApiSlide/Methods/SetBackground.md));
-- set the slide title and text in the specified style ([Api/CreateShape](../presentation-api/Api/Methods/CreateShape.md), [ApiRun/AddText](../presentation-api/ApiRun/Methods/AddText.md), [ApiParagraph/SetJc](../presentation-api/ApiParagraph/Methods/SetJc.md), [ApiTextPr/SetFill](../presentation-api/ApiTextPr/Methods/SetFill.md), [ApiTextPr/SetFontFamily](../presentation-api/ApiTextPr/Methods/SetFontFamily.md), [ApiTextPr/SetFontSize](../presentation-api/ApiTextPr/Methods/SetFontSize.md),  [ApiShape/GetDocContent](../presentation-api/ApiShape/Methods/GetDocContent.md), [ApiSlide/AddObject](../presentation-api/ApiSlide/Methods/AddObject.md));
-- create a chart and add it to the specified slide ([Api/CreateChart](../presentation-api/Api/Methods/CreateChart.md), [ApiSlide/AddObject](../presentation-api/ApiSlide/Methods/AddObject.md))
+- get the first slide in the current presentation ([Api/GetPresentation](../usage-api/presentation-api/Api/Methods/GetPresentation.md), [ApiPresentation/GetSlideByIndex](../usage-api/presentation-api/ApiPresentation/Methods/GetSlideByIndex.md));
+- set the gradient background ([Api/CreateGradientStop](../usage-api/presentation-api/Api/Methods/CreateGradientStop.md), [ApiSlide/SetBackground](../usage-api/presentation-api/ApiSlide/Methods/SetBackground.md));
+- set the slide title and text in the specified style ([Api/CreateShape](../usage-api/presentation-api/Api/Methods/CreateShape.md), [ApiRun/AddText](../usage-api/presentation-api/ApiRun/Methods/AddText.md), [ApiParagraph/SetJc](../usage-api/presentation-api/ApiParagraph/Methods/SetJc.md), [ApiTextPr/SetFill](../usage-api/presentation-api/ApiTextPr/Methods/SetFill.md), [ApiTextPr/SetFontFamily](../usage-api/presentation-api/ApiTextPr/Methods/SetFontFamily.md), [ApiTextPr/SetFontSize](../usage-api/presentation-api/ApiTextPr/Methods/SetFontSize.md),  [ApiShape/GetDocContent](../usage-api/presentation-api/ApiShape/Methods/GetDocContent.md), [ApiSlide/AddObject](../usage-api/presentation-api/ApiSlide/Methods/AddObject.md));
+- create a chart and add it to the specified slide ([Api/CreateChart](../usage-api/presentation-api/Api/Methods/CreateChart.md), [ApiSlide/AddObject](../usage-api/presentation-api/ApiSlide/Methods/AddObject.md))
 
 This sample is available for the **C++ and .Net DocBuilder Frameworks**.
-Download the sample and get more information on the [Builder framework samples](../../../document-builder/builder-framework/builder-framework-samples/builder-framework-samples.md) page.
+Download the sample and get more information on the [Builder framework samples](../../document-builder/builder-framework/builder-framework-samples/builder-framework-samples.md) page.
 
 ```ts document-builder={"documentType": "slide", "editorConfig": {"customization": {"zoom": 60}}}
 const oPresentation = Api.GetPresentation()

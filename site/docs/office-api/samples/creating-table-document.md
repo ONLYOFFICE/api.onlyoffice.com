@@ -2,9 +2,9 @@
 
 Create a document with a styled table filled with array-based values:
 
-- create an empty document with a table ([Api](../text-document-api/Api/Api.md), [Api/CreateTable](../text-document-api/Api/Methods/CreateTable.md))
-- create a custom style for the table ([ApiDocument/GetStyle](../text-document-api/ApiDocument/Methods/GetStyle.md), [ApiStyle](../text-document-api/ApiStyle/ApiStyle.md), [ApiTableCellPr](../text-document-api/ApiTableCellPr/ApiTableCellPr.md), [ApiTableRow](../text-document-api/ApiTableRow/ApiTableRow.md));
-- populate the table with the array-based data cell by cell ([ApiTableCell](../text-document-api/ApiTableCell/ApiTableCell.md)).
+- create an empty document with a table ([Api](../usage-api/text-document-api/Api/Api.md), [Api/CreateTable](../usage-api/text-document-api/Api/Methods/CreateTable.md))
+- create a custom style for the table ([ApiDocument/GetStyle](../usage-api/text-document-api/ApiDocument/Methods/GetStyle.md), [ApiStyle](../usage-api/text-document-api/ApiStyle/ApiStyle.md), [ApiTableCellPr](../usage-api/text-document-api/ApiTableCellPr/ApiTableCellPr.md), [ApiTableRow](../usage-api/text-document-api/ApiTableRow/ApiTableRow.md));
+- populate the table with the array-based data cell by cell ([ApiTableCell](../usage-api/text-document-api/ApiTableCell/ApiTableCell.md)).
 
 ```ts document-builder={"documentType": "word", "editorConfig": {"customization": {"zoom": 60}}}
 const oDocument = Api.GetDocument()

@@ -2,8 +2,8 @@
 
 Create a document with a watermark with custom settings:
 
-- create an empty page with a watermark ([Api](../text-document-api/Api/Api.md), [ApiDocument/InsertWatermark](../text-document-api/ApiDocument/Methods/InsertWatermark.md));
-- edit watermark settings, set an image, specify size, direction and opacity ([ApiWatermarkSettings](../text-document-api/ApiWatermarkSettings/ApiWatermarkSettings.md));
+- create an empty page with a watermark ([Api](../usage-api/text-document-api/Api/), [ApiDocument/InsertWatermark](../usage-api/text-document-api/ApiDocument/Methods/InsertWatermark.md));
+- edit watermark settings, set an image, specify size, direction and opacity ([ApiWatermarkSettings](../usage-api/text-document-api/ApiWatermarkSettings/ApiWatermarkSettings.md));
 
 ```ts document-builder={"documentType": "word", "editorConfig": {"customization": {"zoom": 60}}}
 const oDocument = Api.GetDocument()

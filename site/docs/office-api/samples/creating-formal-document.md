@@ -2,11 +2,11 @@
 
 Create a document following the structure of a formal paper:
 
-- create a title page with a document heading and subtitle ([Api](../text-document-api/Api/Api.md), [ApiDocumentContent](../text-document-api/ApiDocumentContent/ApiDocumentContent.md), [ApiDrawing](../text-document-api/ApiDrawing/ApiDrawing.md));
-- create different styles for the document text, heading, subtitle, table, footer ([ApiParaPr](../text-document-api/ApiParaPr/ApiParaPr.md), [ApiStyle](../text-document-api/ApiStyle/ApiStyle.md), [ApiTable](../text-document-api/ApiTable/ApiTable.md), [ApiTableCell](../text-document-api/ApiTableCell/ApiTableCell.md), [ApiTablePr](../text-document-api/ApiTablePr/ApiTablePr.md), [ApiTableRow](../text-document-api/ApiTableRow/ApiTableRow.md), [ApiTextPr](../text-document-api/ApiTextPr/ApiTextPr.md));
-- structure the document by marking up its section: set columns for text and pictures, set page size and margins, create header and footer ([ApiDocument](../text-document-api/ApiDocument/ApiDocument.md), [ApiSection](../text-document-api/ApiSection/ApiSection.md));
-- fill the document with text, dividing it into separate fragments and highlighting them with headings ([ApiParagraph](../text-document-api/ApiParagraph/ApiParagraph.md), [ApiRun](../text-document-api/ApiRun/ApiRun.md));
-- add images and charts to represent document text ([Api](../text-document-api/Api/Api.md), [ApiChart](../text-document-api/ApiChart/ApiChart.md)).
+- create a title page with a document heading and subtitle ([Api](../usage-api/text-document-api/Api/Api.md), [ApiDocumentContent](../usage-api/text-document-api/ApiDocumentContent/ApiDocumentContent.md), [ApiDrawing](../usage-api/text-document-api/ApiDrawing/ApiDrawing.md));
+- create different styles for the document text, heading, subtitle, table, footer ([ApiParaPr](../usage-api/text-document-api/ApiParaPr/ApiParaPr.md), [ApiStyle](../usage-api/text-document-api/ApiStyle/ApiStyle.md), [ApiTable](../usage-api/text-document-api/ApiTable/ApiTable.md), [ApiTableCell](../usage-api/text-document-api/ApiTableCell/ApiTableCell.md), [ApiTablePr](../usage-api/text-document-api/ApiTablePr/ApiTablePr.md), [ApiTableRow](../usage-api/text-document-api/ApiTableRow/ApiTableRow.md), [ApiTextPr](../usage-api/text-document-api/ApiTextPr/ApiTextPr.md));
+- structure the document by marking up its section: set columns for text and pictures, set page size and margins, create header and footer ([ApiDocument](../usage-api/text-document-api/ApiDocument/ApiDocument.md), [ApiSection](../usage-api/text-document-api/ApiSection/ApiSection.md));
+- fill the document with text, dividing it into separate fragments and highlighting them with headings ([ApiParagraph](../usage-api/text-document-api/ApiParagraph/ApiParagraph.md), [ApiRun](../usage-api/text-document-api/ApiRun/ApiRun.md));
+- add images and charts to represent document text ([Api](../usage-api/text-document-api/Api/Api.md), [ApiChart](../usage-api/text-document-api/ApiChart/ApiChart.md)).
 
 ```ts document-builder={"documentType": "word", "editorConfig": {"customization": {"zoom": 60}}}
 let oParagraph
