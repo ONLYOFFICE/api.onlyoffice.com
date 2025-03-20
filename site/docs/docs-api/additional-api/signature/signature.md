@@ -67,7 +67,7 @@ supervisorctl restart all
 
 ## Code samples for signature generation
 
-Below you can find examples of signature generation for init config and requests. They are taken from [test samples](../../get-started/language-specific-examples/language-specific-examples.md) in different programming languages. We advise you to use this code in your projects to generate signatures.
+Below you can find examples of signature generation for init config and requests. They are taken from [test samples](../../samples/language-specific-examples/language-specific-examples.md) in different programming languages. We advise you to use this code in your projects to generate signatures.
 
 ### C# example
 

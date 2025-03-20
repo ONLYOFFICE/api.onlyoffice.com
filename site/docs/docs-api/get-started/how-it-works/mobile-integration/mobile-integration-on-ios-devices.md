@@ -8,7 +8,7 @@ In this section, we will look at the integration process via [WKWebView](https:/
 
 ## Integration based on the ONLYOFFICE test sample
 
-This example demonstrates how to integrate ONLYOFFICE mobile web editors with the ONLYOFFICE [test or DMS sample](../../language-specific-examples/language-specific-examples.md).
+This example demonstrates how to integrate ONLYOFFICE mobile web editors with the ONLYOFFICE [test or DMS sample](../../../samples/language-specific-examples/language-specific-examples.md).
 
 ![iOS integration via test sample](/assets/images/editor/ios-test-sample.png)
 
