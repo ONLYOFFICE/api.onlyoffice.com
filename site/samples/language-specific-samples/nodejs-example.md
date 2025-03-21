@@ -31,7 +31,7 @@ See the detailed guide to learn how to [install ONLYOFFICE Docs for Windows](htt
 
 ### Step 2. Download the Node.js code for the editors integration
 
-Download the [Node.js example](./language-specific-examples.md) from our site.
+Download the [Node.js example](./language-specific-samples.md) from our site.
 
 To connect the editors to your website, specify the path to the editors installation and the path to the storage folder in the *config/default.json* file:
 

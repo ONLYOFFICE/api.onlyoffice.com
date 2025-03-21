@@ -12,7 +12,7 @@ Inserts custom fields into the document.
 
 ## Installation
 
-Download this plugin from [GitHub](https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/example_customfields_add) and install it following the [desktop](../../docs/plugin-and-macros/tutoria../../docs/plugin-and-macros/tutorials/installing/onlyoffice-desktop-editors.md), [on-premises](../../docs/plugin-and-macros/tutorials/installing/onlyoffice-docs-on-premises.md), or [cloud](../../docs/plugin-and-macros/tutorials/installing/onlyoffice-cloud.md) installation instructions.
+Download this plugin from [GitHub](https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/example_customfields_add) and install it following the [desktop](../../docs/plugin-and-macros/tutorials/installing/onlyoffice-desktop-editors.md), [on-premises](../../docs/plugin-and-macros/tutorials/installing/onlyoffice-docs-on-premises.md), or [cloud](../../docs/plugin-and-macros/tutorials/installing/onlyoffice-cloud.md) installation instructions.
 
 ## Usage
 

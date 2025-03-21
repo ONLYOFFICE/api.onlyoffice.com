@@ -192,7 +192,7 @@ Repository on GitHub: [ocr](https://github.com/ONLYOFFICE/onlyoffice.github.io/t
 - button
 - init
 - onTranslate
-- [resizeWindow](../../docs/plugin-and-macros/interacting-with-editors/methods/text-document-api/Plugin/Methods/resizeWindow.md)
+- [resizeWindow](../../docs/plugin-and-macros/customization/windows-and-panels.md#interacting-with-a-window)
 - [info.recalculate](../../docs/plugin-and-macros/interacting-with-editors/overview/how-to-call-commands.md#recalculate)
 
 ## Support

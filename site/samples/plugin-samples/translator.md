@@ -113,7 +113,7 @@ Repository on GitHub: [translator](https://github.com/ONLYOFFICE/onlyoffice.gith
 - init
 - onExternalMouseUp
 - onTranslate
-- [callCommand](../../docs/plugin-and-macros/interacting-with-editors/methods/text-document-api/Plugin/Methods/callCommand.md)
+- [callCommand](../../docs/plugin-and-macros/interacting-with-editors/overview/how-to-call-commands.md#callcommand)
 - [executeMethod ("GetVersion")](../../docs/plugin-and-macros/interacting-with-editors/methods/text-document-api/Api/Methods/GetVersion.md)
 - [executeMethod ("GetSelectedText")](../../docs/plugin-and-macros/interacting-with-editors/methods/text-document-api/Api/Methods/GetSelectedText.md)
 - [executeMethod ("GetSelectionType")](../../docs/plugin-and-macros/interacting-with-editors/methods/text-document-api/Api/Methods/GetSelectionType.md)

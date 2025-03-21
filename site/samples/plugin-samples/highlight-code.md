@@ -174,8 +174,7 @@ Repository on GitHub: [highlightcode](https://github.com/ONLYOFFICE/onlyoffice.g
 - onExternalMouseUp
 - onTranslate
 - [executeMethod ("PasteHtml")](../../docs/plugin-and-macros/interacting-with-editors/methods/text-document-api/Api/Methods/PasteHtml.md)
-- [loadModule](../../docs/plugin-and-macros/interacting-with-editors/methods/text-document-api/Plugin/Methods/loadModule.md)
-- [resizeWindow](../../docs/plugin-and-macros/interacting-with-editors/methods/text-document-api/Plugin/Methods/resizeWindow.md)
+- [resizeWindow](../../docs/plugin-and-macros/customization/windows-and-panels.md#interacting-with-a-window)
 
 ## Support
 

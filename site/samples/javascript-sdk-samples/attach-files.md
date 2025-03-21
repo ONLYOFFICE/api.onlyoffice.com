@@ -1,6 +1,6 @@
 # Attach files
 
-Attaches files to a website using [File selector](../usage-sdk/initialization-modes/file-selector.md).
+Attaches files to a website using [File selector](../../docspace/javascript-sdk/usage-sdk/initialization-modes/file-selector.md).
 
 ``` html
 <!DOCTYPE html>
@@ -232,7 +232,7 @@ Attaches files to a website using [File selector](../usage-sdk/initialization-mo
 ## Before you start
 
 Please make sure you are using a server environment to run the HTML file because the JavaScript SDK must be launched on the server.
-You need to [add the URL](../get-started/get-started.md#step-1-specifying-the-docspace-url) of your server's root directory to the **Developer Tools** section of DocSpace.
+You need to [add the URL](../../docspace/javascript-sdk/get-started/get-started.md#step-1-specifying-the-docspace-url) of your server's root directory to the **Developer Tools** section of DocSpace.
 
 ## Step 1. Set HTML structure
 
@@ -441,7 +441,7 @@ attachButton.addEventListener("click", () => {
 })
 ```
 
-2. Add the [onSelectCallback](../usage-sdk/events.md#onselectcallback) event handler that closes the modal window and sends the ID and name of the selected file in JSON format:
+2. Add the [onSelectCallback](../../docspace/javascript-sdk/usage-sdk/events.md#onselectcallback) event handler that closes the modal window and sends the ID and name of the selected file in JSON format:
 
 ``` ts
 function onSelectCallback() {
@@ -498,7 +498,7 @@ modalElement.addEventListener("close", () => {
 
 Add a script to initialize the **file selector**.
 
-1. Add an event handler for [onAppReady](../usage-sdk/events.md#onappready), which fires when initialization is successful:
+1. Add an event handler for [onAppReady](../../docspace/javascript-sdk/usage-sdk/events.md#onappready), which fires when initialization is successful:
 
 ``` ts
 function onAppReady() {
@@ -519,7 +519,7 @@ const config = {
 }
 ```
 
-3. Initialize the **file selector** with the [initFileSelector](../usage-sdk/methods.md#initfileselector) method:
+3. Initialize the **file selector** with the [initFileSelector](../../docspace/javascript-sdk/usage-sdk/methods.md#initfileselector) method:
 
 ``` ts
 const docSpace = DocSpace.SDK.initFileSelector(config)

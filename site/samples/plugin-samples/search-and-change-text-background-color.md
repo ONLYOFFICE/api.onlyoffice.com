@@ -103,7 +103,7 @@ Repository on GitHub: [example_search_and_change_text_background_color](https://
 
 - button
 - init
-- [callCommand](../../docs/plugin-and-macros/interacting-with-editors/methods/text-document-api/Plugin/Methods/callCommand.md)
+- [callCommand](../../docs/plugin-and-macros/interacting-with-editors/overview/how-to-call-commands.md#callcommand)
 - [Asc.scope](../../docs/plugin-and-macros/interacting-with-editors/overview/how-to-call-commands.md#ascscope-object) object
 
 ## Support

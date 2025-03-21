@@ -88,15 +88,15 @@ Repository on GitHub: [autocomplete](https://github.com/ONLYOFFICE/onlyoffice.gi
 - inputHelper_onSelectItem
 - onInputHelperClear
 - onInputHelperInput
-- [createInputHelper](../../docs/plugin-and-macros/interacting-with-editors/methods/text-document-api/Plugin/Methods/createInputHelper.md)
+- [createInputHelper](../../docs/plugin-and-macros/customization/input-helper.md#creating-an-input-helper)
 - [executeMethod ("InputText")](../../docs/plugin-and-macros/interacting-with-editors/methods/text-document-api/Api/Methods/InputText.md)
-- [getInputHelper](../../docs/plugin-and-macros/interacting-with-editors/methods/text-document-api/Plugin/Methods/getInputHelper.md)
-- [InputHelper.createWindow](../../docs/plugin-and-macros/interacting-with-editors/methods/text-document-api/InputHelper/Methods/createWindow.md)
-- [InputHelper.getItems](../../docs/plugin-and-macros/interacting-with-editors/methods/text-document-api/InputHelper/Methods/getItems.md)
-- [InputHelper.getScrollSizes](../../docs/plugin-and-macros/interacting-with-editors/methods/text-document-api/InputHelper/Methods/getScrollSizes.md)
-- [InputHelper.setItems](../../docs/plugin-and-macros/interacting-with-editors/methods/text-document-api/InputHelper/Methods/setItems.md)
-- [InputHelper.show](../../docs/plugin-and-macros/interacting-with-editors/methods/text-document-api/InputHelper/Methods/show.md)
-- [InputHelper.unShow](../../docs/plugin-and-macros/interacting-with-editors/methods/text-document-api/InputHelper/Methods/unShow.md)
+- [getInputHelper](../../docs/plugin-and-macros/customization/input-helper.md#getting-an-input-helper)
+- [InputHelper.createWindow](../../docs/plugin-and-macros/customization/input-helper.md#createwindow)
+- [InputHelper.getItems](../../docs/plugin-and-macros/customization/input-helper.md#getitems)
+- [InputHelper.getScrollSizes](../../docs/plugin-and-macros/customization/input-helper.md#getscrollsizes)
+- [InputHelper.setItems](../../docs/plugin-and-macros/customization/input-helper.md#setitems)
+- [InputHelper.show](../../docs/plugin-and-macros/customization/input-helper.md#show)
+- [InputHelper.unShow](../../docs/plugin-and-macros/customization/input-helper.md#unshow)
 
 ## Support
 
