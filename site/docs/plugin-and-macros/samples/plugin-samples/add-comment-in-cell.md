@@ -99,7 +99,7 @@ Repository on GitHub: [example_add_comment_in_cell](https://github.com/ONLYOFFIC
 
 - button
 - init
-- [callCommand](../../interacting-with-editors/methods/text-document-api/Plugin/Methods/callCommand.md)
+- [callCommand](../../interacting-with-editors/overview/how-to-call-commands.md#callcommand)
 - [Asc.scope](../../interacting-with-editors/overview/how-to-call-commands.md#ascscope-object) object
 
 ## Support
