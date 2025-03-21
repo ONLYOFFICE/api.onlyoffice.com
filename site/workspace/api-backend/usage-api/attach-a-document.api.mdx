@@ -1,0 +1,71 @@
+---
+id: attach-a-document
+title: "Attach a document"
+description: "Attaches a document to the message with the ID specified in the request."
+sidebar_label: "Attach a document"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVMFu2zAM/RWB12l1mhTD6lu2FFiwdRia9FTkwNhMrM62NIlOlwb+90GyEztt2m7AfDAEiY+k3hPfDhjXDuI7KFDl0ZgZk6ygkh0sJDhKKqt4C/HdDsYVZ9qqR2Slyy+EKVmPs4QpSHiwigkW9UJCSi6xyvgwiKFJSU6gSHVS+dyCteCMREHO4ZrEg+IsbEwnwhlK1EpRKlQZ9iz9qsjxGUhol590uoV4B4kumUr2SzQmV0noLLp3vu4OXJJRgX7FW0MQg17eU8IgwVhtyLIi509V6v/HTV+3nU0nIPdwVTKtyUItYaVymp6ATfYX7OMcW1WuPWxD1qmmuRdw+4gT4JIoneGG5npOhXmeY9YS54RaCc6U6+j2UOdJX5JwuKHUr1EwFSZH7nTQVpSau+JLrXPCEurwef6d0aVraBsOBs+baMVOD7VB/i+ZOs6f6CFhpW2B3GyNhiCBfmNhch90Phxd7BX7jgX18C21/ehDVC3BqUd6s9qHi5PV2ivPA/S1gv3Akxo/UaKPZVtRr9gRNy+XmqYHOqpi6Uf43wgdjUaBHdaW0rcZ7cUFlCUs3ur0EFVLwPZBjd03Vf78S0b8w56Fwrc2f73Wcah/5Kw4nFyjyjs7nCAjNFNwMTh//vBvS2ztkdKQpiDOdAoxGO3CY0bOIIYIjYqGZ4Mo2G07eC7aqTS+G7y/XLyro97oOLLeEYL9Vv4qkDEbF0fRLtOO63hntOUaJGzQKlzmzaj4s6bFFVa51zHXCeZhu5bgMcfHHweXQ3+7nuXP/Fg26U4a/4FUNOorbUGC8jxkzbGEMjyNY2wgxs/9TWfkV3spGiMedObayXXwzW7r6aR46Wvfw0qH3loRP+uiqErFWzELVIqbq9lcjH9Mj7J6E/TU1H8AlT1uqg==
+sidebar_class_name: "post api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Attach a document"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/api/2.0/mail/messages/{id:[0-9]+}/document"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Attaches a document to the message with the ID specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"id":{"description":"Message ID","type":"integer"},"fileId":{"description":"Document ID","type":"string"},"version":{"description":"Document version","type":"string"},"needSaveToTemp":{"description":"Specifies if this document needs to be saved to a template message or not","type":"boolean"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Attached document","content":{"application/json":{"schema":{"type":"object","properties":{"fileId":{"type":"integer","format":"int32","example":"1234"},"fileName":{"type":"string","example":"fileName"},"size":{"type":"integer","format":"int64","example":"1234"},"contentType":{"type":"string","example":"contentType"},"needSaveToTemp":{"type":"boolean","example":"true"},"contentId":{"type":"string","example":"contentId"},"fileNumber":{"type":"integer","format":"int32","example":"333"},"storedName":{"type":"string","example":"storedName"},"streamId":{"type":"string","example":"streamId"},"attachedAsLink":{"type":"boolean","example":"true"},"tempStoredUrl":{"type":"string","example":"tempStoredUrl"}},"title":"MailAttachmentData"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

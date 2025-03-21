@@ -1,0 +1,71 @@
+---
+id: get-a-currency-rate-by-currencies
+title: "Get a currency rate by currencies"
+description: "Returns a currency rate by currencies."
+sidebar_label: "Get a currency rate by currencies"
+hide_title: true
+hide_table_of_contents: true
+api: eJydVEtv2zAM/isGz0Kcpj1svhVr1xW7DEmDHQIfFJuJ1dqSJtFtPUP/faAd592i68UPiY+PH/mxBZJrD8kCMlfF32rnUGcKPaQCPGa1U9RAsmjhuqbCOPVXkjL6B8ocHXs5lDkIeHGKENKQCsjRZ05ZNoMEpki10z6SUdbHbiInCaNlMxwo9CMQYKWTFRI636XTskJIYOVMtQHVgADFIa2kAo7zDEYRmSgz+hkdgQCfFVhJSFqgxnI8T07pNYQgtinI/F8CpclEL4XKiogKjIxTa6VluavvRZVltMQBBubvAkkFOPTWaI+e7yfjMb/eSM7cgYDMaEJNbCitLVXWdSV+9GzdnmYzy0fMmBDrjEVHqs/1fZ/dE2wC8FVWtuSj2/kUgoAH8zHz+eyGzaeMdmeo62qJDgSsjKskQQK5qZclHrhejC7Y9f5mz1FpwvWhp9J0OTl0nFxecWOBFHUHA1RG8dtJa9FBCGxxNb445Xiu5WbEMe/iVEiFySGBNXbU8VQkEEur4sloHLNehp7H3Bcft/vjGuJ2N1qBZwDd8zDetSshgYLI+iSO28J4CklrjSO2fJZOyWXZN4nverQrWZdce2kyWXbHQQD7HF5/GX+dcKF7Cp7xQPThzup4y7S06iduhVD012KQyoFvx5HSK9O5D5ybqqq1oiaaddVG09vZQ3T9656rQud7qktma4PeUyW7od3kuEN6f1kcK7PdqeHj22ZTLuErxbaUSjOYrintptEL5gIETEZjFpyr+LlbFF3DQUBytKGSvXWSik3zFtC2S+lx7soQ+PhPjY7XarrrdTcWufL8nUOykqXHdyo9v+/OljW0VjfdaJU1/4GAJ2yONyyvxU9g+NRK/ATWPW5DGsQwn8xcb3CdZWhpz/VkO7IqtsK+u30AASz7Qwk8dRLYfHD0s7AO1TBg5CfTeNalbXuBhbC176/e9NhKsLdmltIQwj8y5qUn
+sidebar_class_name: "get api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get a currency rate by currencies"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/crm/currency/rates/{fromCurrency}/{toCurrency}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns a currency rate by currencies.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"fromCurrency","in":"path","description":"Currency to convert","schema":{"type":"string"}},{"name":"toCurrency","in":"path","description":"Currency into which the original currency will be converted","schema":{"type":"string"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Currency rate","content":{"application/json":{"schema":{"type":"object","properties":{"FromCurrency":{"type":"string","example":"EUR"},"ToCurrency":{"type":"string","example":"USD"},"Rate":{"type":"number","format":"double","example":"1.1"},"ID":{"type":"integer","format":"int32","example":"1234"}},"title":"CurrencyRateWrapper"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

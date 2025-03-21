@@ -1,6 +1,9 @@
 ---
-sidebar_position: -4
+sidebar_position: -3
 ---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
 # Java
 
@@ -21,65 +24,66 @@ The current application version contains four main classes:
 
 ## Example
 
-### Java
+<Tabs>
+    <TabItem value="java" label="Java">
+        ``` java
+        import docbuilder.*;
 
-``` java
-import docbuilder.*;
+        public class Program {
+            public static void main(String[] args) {
+                String resultPath = "result.docx";
 
-public class Program {
-    public static void main(String[] args) {
-        String resultPath = "result.docx";
+                test(resultPath);
 
-        test(resultPath);
+                System.gc();
+            }
 
-        System.gc();
-    }
+            public static void test(String resultPath) {
+                CDocBuilder.initialize("");
+                CDocBuilder builder = new CDocBuilder();
+                builder.createFile(FileTypes.Document.DOCX);
 
-    public static void test(String resultPath) {
-        CDocBuilder.initialize("");
-        CDocBuilder builder = new CDocBuilder();
-        builder.createFile(FileTypes.Document.DOCX);
+                CDocBuilderContext context = builder.getContext();
 
-        CDocBuilderContext context = builder.getContext();
+                CDocBuilderValue global = context.getGlobal();
 
-        CDocBuilderValue global = context.getGlobal();
+                CDocBuilderValue api = global.get("Api");
+                CDocBuilderValue document = api.call("GetDocument");
+                CDocBuilderValue paragraph1 = api.call("CreateParagraph");
 
-        CDocBuilderValue api = global.get("Api");
-        CDocBuilderValue document = api.call("GetDocument");
-        CDocBuilderValue paragraph1 = api.call("CreateParagraph");
+                paragraph1.call("SetSpacingAfter", 1000, false);
+                paragraph1.call("AddText", "Hello from Java!");
 
-        paragraph1.call("SetSpacingAfter", 1000, false);
-        paragraph1.call("AddText", "Hello from Java!");
+                CDocBuilderValue paragraph2 = api.call("CreateParagraph");
+                paragraph2.call("AddText", "Goodbye!");
 
-        CDocBuilderValue paragraph2 = api.call("CreateParagraph");
-        paragraph2.call("AddText", "Goodbye!");
+                CDocBuilderValue[] paragraphs = { paragraph1, paragraph2 };
+                CDocBuilderValue content = new CDocBuilderValue(paragraphs);
 
-        CDocBuilderValue[] paragraphs = { paragraph1, paragraph2 };
-        CDocBuilderValue content = new CDocBuilderValue(paragraphs);
+                document.call("InsertContent", content);
 
-        document.call("InsertContent", content);
+                builder.saveFile(FileTypes.Document.DOCX, resultPath);
+                builder.closeFile();
 
-        builder.saveFile(FileTypes.Document.DOCX, resultPath);
-        builder.closeFile();
-
-        CDocBuilder.dispose();
-    }
-}
-```
-
-### .docbuilder
-
-```ts
-builder.SetTmpFolder("DocBuilderTemp")
-builder.CreateFile("docx")
-const oDocument = Api.GetDocument()
-const oParagraph1 = Api.CreateParagraph()
-oParagraph1.SetSpacingAfter(1000, false)
-oParagraph1.AddText("Hello from Java!")
-const oParagraph2 = Api.CreateParagraph()
-oParagraph2.AddText("Goodbye!")
-const aParagraphs = [oParagraph1, oParagraph2]
-oDocument.InsertContent(aParagraphs)
-builder.SaveFile("docx", "result.docx")
-builder.CloseFile()
-```
+                CDocBuilder.dispose();
+            }
+        }
+        ```
+    </TabItem>
+    <TabItem value="builder" label=".docbuilder">
+        ```ts
+        builder.SetTmpFolder("DocBuilderTemp")
+        builder.CreateFile("docx")
+        const oDocument = Api.GetDocument()
+        const oParagraph1 = Api.CreateParagraph()
+        oParagraph1.SetSpacingAfter(1000, false)
+        oParagraph1.AddText("Hello from Java!")
+        const oParagraph2 = Api.CreateParagraph()
+        oParagraph2.AddText("Goodbye!")
+        const aParagraphs = [oParagraph1, oParagraph2]
+        oDocument.InsertContent(aParagraphs)
+        builder.SaveFile("docx", "result.docx")
+        builder.CloseFile()
+        ```
+    </TabItem>
+</Tabs>

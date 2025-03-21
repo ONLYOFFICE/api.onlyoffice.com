@@ -1,0 +1,63 @@
+---
+id: get-my-posts
+title: "Get my posts"
+description: "Returns a list of all the blog posts for the current user with the post titles, dates of creation and update, post texts, and author."
+sidebar_label: "Get my posts"
+hide_title: true
+hide_table_of_contents: true
+api: eJzNVW1v2zYQ/ivEfWZs2SmWTcCwpV3QFVsHo3YwoKk/XKSzzYYSOfKURBP034ejlNje0qTAMGD6INPHe0738vBhB4zbCPkVFK6qmtpwO31t3TbCWkOkogmGW8ivOjhveOeC+RPZuPpnwpKCwAJhCRrugmGCdb/WUFIsgvHiBjl8IG5CHRUqayIrt1ForeIdqWvrtsq7yFFtXEimogmBalZNpKDuDO+SVXwUG7YUtSqRKUqYIlBKRWFdqsaLXY+udM9RJzumpCegIVD0ro4UIe9gnmXyc5zpr2N+VTtkBRoKVzPVLL7ovTVF+uL0cxRAB7HYUYWy4tYT5IAhYAsaDFMVD+zu+jMVDBp8cJ4CmyGNRaBbQ3cHjpGDqbegge6x8lZMo1PKCXoNK2nE85CLYfUIeSOtovJ50DybZyez+Ul2uprP8tNv8tl8kp2dvZqdnn2UIJepxf8yyLsn8RsXKmTIoWlMeRQvG5+TJ14PT2pKIvGLc3gi4xVuZ1pe0O879bp9eXj/VSk/megttr9h9cKU35sbUh+xbpHjjflKarzHGrcUxPv8FhnDskJrn8c0wSp2KoqnwoQS/CK4jbF0GV6Af/o0XQRXNgVHWZLzlgabwCcY/f0PcuC/x7IytYkckF1I4+ChILiovHUt0e8B/ZC8aNRXlCtuavA7jCfmhYss8TyFZVNVGFro5dHwKpv9Ux0uaxwFkMoUqyLeuRJy2FIiB/IOcpiiN9P5JJvu5VR0bvpjJLsBkdRwSyEmRW2kc7Bj9jGfTrudi9znnXeBe9Bwi8HgtR3IJntDThtsrPDLugLtbjzggjne/jb7bi71HKj4UtRqCPeklu9Pjze/UDo+Uvhu2NZQJ0YeY1MnTL1xCT52981D6WqZqlUfLpYrdb54J1VRiENDrQj5mH3kCpOijt94S3wow0eT6Paq/L+5XMbGyd7UWzS1lNUMB2MgxpV0FTTMJ1m6V8YOgQbJFDQMBFnrcdRX0HXXGOV09b2Y/2goyEW83jND/vX6YUDCqBtqZUJFQZ4ThWwzDPRvd5fQ4pG/by9WoEGKOebATeLAuJDoD1t1exD7mA56TEHevf4CpOsGhvX9o/+w9UXEIwcHb+nvuu/7vwCS8+py
+sidebar_class_name: "get api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get my posts"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/community/blog/@self"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns a list of all the blog posts for the current user with the post titles, dates of creation and update, post texts, and author.
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"List of my posts","content":{"application/json":{"schema":{"type":"array","items":{"type":"object","properties":{"Preview":{"type":"string","example":"Preview post"},"Title":{"type":"string","example":"Example post"},"Created":{"type":"string","example":"2020-12-03T21:36:12.0774137Z"},"Updated":{"type":"string","example":"2020-12-03T21:36:12.0774137Z"},"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"Tags":{"type":"array","items":{"type":"string","example":"Tag1,Tag1"}},"CreatedBy":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"},"BlogTitle":{"type":"string","example":"Blog Title"}},"title":"BlogPostWrapperSummary"}}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

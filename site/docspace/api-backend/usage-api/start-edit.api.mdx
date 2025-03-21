@@ -1,0 +1,71 @@
+---
+id: start-edit
+title: "Start file editing"
+description: "Informs about opening a file with the ID specified in the request for editing, locking it from being deleted or moved (this method is called by the mobile editors)."
+sidebar_label: "Start file editing"
+hide_title: true
+hide_table_of_contents: true
+api: eJzVVU2P2zYQ/SvEXJoArGU4QZHqtlmngNEWXayTQ7EwAlocW8xSHIak7BiG/nsxpLz2roMiPdYHS6Tm+71HHiGpbYT6AX4zFqOoRH7CSgJ5DCoZcgsNNcSkQvqgTQIJXgXVYcLAjkdwqkOoYWMsLjRIMA5q8Cq1IEFjbILxHAbqnEMs5iAh4NfeBNRQp9CjhNi02Cmoj5AOnqMZl3CLASRsKHQqla03M5CA31TnLUL967u3vwzDqkTDmN6TPnCI50nvnqoVGwoiN2LcVnC9ArXhBUhoyCV0if2V99Y0uffqS+Qgx+sCaf0FmzyNwJNKBiN/HQPeWHJ4Yb0msqjc1USWHhuzMRjFvsXUYhCJRGxVQKFKhXuTWkH5Ux9PTYxZBAXhKF3OhMc5DBKUZhNyyt5d1LdRNuLLGn5wQMkkTgA3y9tJJsnklgJObrz5kzTaOLkvKMwTTZZPbBkGriZg9ORiGdFsOr1GKVPjEQ+5hDk1fYcuiSWGnWnwP8BT8r2dvrlO8Tf1QpP7KYlW7VCgo37bCo+hMzEacjz6ncG9SC3m5oFDPY+xcEzHKNSa+iTIo+NJXULFzou5iCOwWhiX90aOXsInhaXmkQOYJDaBOrFGXmm0mFAzuh3tUItXqTVRdJha0sJE0ShrUYv1IUfuaH1CikJ8PQEJxZRlSLEoNrVQQ6W8qWaTacXlxvxfHYtuhyrjjkXhEcPuJO8+WKjhuFYRPwU7XFM424qG3MZs+3JkgISdCkatbYF8dC6YbFRvWc9tSr6uKkuNsi3FVL+bXgWfF2vx6f4PptKKS2v6YNJhyYiX6Co2n1Wf2s+PeLjQnPLmdzyAPB1Qz8zGY6ohejQFaKbS/fkg+XBS1EtNZ4Wx+4ZyspMsvOGuMcRS+W4Gg8zz71Sm6FhFlsZLbT1r+ngm+/+Fb+PEE35LlbfKOO69L4AX7j0wHCBhNmGQM//GJ0ion+6OMwlXEpgU7Hl8It/A2197DAeoH1ZnkmWiahP5XX//mLuc6qv78fp5Lc5X0nd7OFHJHTKlbc8rkJCZdrryhtUgoUWlMeRCysfbku7njxzi7Hx1eg3y5HHTNOjTv9quLrR999fyI0hYj7deR5p9gtrz/ar2pVDK7WeZ5L0jWOW2vdqybYnJv38Ah+DINw==
+sidebar_class_name: "post api-method"
+info_path: site/docspace/api-backend/usage-api/api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Start file editing"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/api/2.0/files/file/{fileId}/startedit"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Informs about opening a file with the ID specified in the request for editing, locking it from being deleted or moved (this method is called by the mobile editors).
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"fileId","in":"path","description":"File ID","required":true,"schema":{"type":"integer","format":"int32","example":9846}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"description":"Parameters for starting file editing","content":{"application/json":{"schema":{"type":"object","properties":{"editingAlone":{"type":"boolean","description":"Specifies whether to share a file with other users for editing or not","example":true}},"additionalProperties":false,"description":"Parameters for starting file editing","title":"ASC.Files.Core.ApiModels.RequestDto.StartEdit"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"File key for Document Service","content":{"application/json":{"schema":{}}}},"403":{"description":"You don't have enough permission to view the file"}}}
+>
+  
+</StatusCodes>
+
+
+      

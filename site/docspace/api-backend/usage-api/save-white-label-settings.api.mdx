@@ -1,0 +1,71 @@
+---
+id: save-white-label-settings
+title: "Save the white label settings"
+description: "Saves the white label settings specified in the request."
+sidebar_label: "Save the white label settings"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVk1z2zYQ/SuYPbUzKKk6PXR4c+wcPHFbj2U3B40mA5ErETEIMABoW9Xwv2cWIEXqw7GV9GBZIheLt28f3mIDXqwcZDOYovdSrxxL2S0urNCF1CuYczA1WuGl0VcFZODEI34qpcdrsUDVLwIOtbCiQo+Wsm1Aiwohgyt3KewDcJAaMvjaoF0DhwJdbmVNSSGDaY25XEp0TC6ZL5EpszJMOrY0lglWCPtAjytkxjJtPHBweYmVgGwDfl3TPgtjFAoNHPBZVLVCyLxtsG35GAouRaP8z6GJOZhHLbT/EURzDha/Nuj8e1OsaUVutEft6auoayXzQHf6xRGgzWFqs/iCOW1aW2qOl+joLQG9w+eQpxLP16hXvoTs3YRDJXX/c8L7NM5bavE+AddUr6c8HHSjlFj02EelgDMVxqiWh51H+IS1goiVHiv3Ou4HXI+CtqjeuPejUA2+gRy5Kv2xbfaKp7BObaGqN+Mgmb6e/3IQ8ynpWw6iKCQlEepmVNhSKIccvPRhyfn0IvmEi+S8lvT3lylQJbdRbe7Sm4SaO/p9WmbKemGUwpzCXXLlsfqI63+pAzdC2mS6dh6rZBpqT04Hs8/WXTxkV5eOPUlfEnHSBuIc+yV0lA4gMf/rAZOvVra7VYeDDTYWDvwTWR1T5HXMDWb3Zr4Hq9xlndBZdLXRLurzbDKhf7ug3kcPYUHjGaOyelfaujJZk2tydG7ZKOAnm0nvUxHTH5PfD2Hca9H40lj5HxYQgt4dBv1tWI22ks6RNpgPP5fGVsyX0jERNBP05jBvrPTrMCeEyz9T9s/BBWZgURTA4clKjzAns9yzZ/GILjBwrDXMde5dMKlDVGe1CXCo0JeGZlhtXDAIQX4IqahlepZM0j5JGjKHxCmNO3J3tI/9ZGusggw2C+Hw3qr2cICEWJYbvZSrJjYJyKesJHWGbneLI4txKGVQel9naapMLlRpnM/+nBz6Rzd+7m+vqWPzgc0pNTZm3+V0sOVafkTy5W4g7oR1MzE35kFiaBMp5nYYVB96XxoPmpFH9VNg1hn6zqutSXc2vPMyOueO3c1bwrOMQ6U/a7WkTGhdpOLxjLRIvaxEkHZXFinkRYHsEzoavj8jrY5hQp/WSkhN0JrY4CizGdEPHM6SSdDTFs4gNnpOcptzoPbTms1WZi09jjcWoriQjsRUHHeznapOv10drSY2dXuf6zoKQDes/w/NC7er7yPaXusGUPPhwEE2IzmVKAq0I31eRFC/3VHuYe2BaVKBccV5nmPtvxs7H9nMzT/TO+Cw6G55lSlojRVPwMNnBkC36zBLKSA824ASetWIFcXGnGGSNSSi8VGOh7b7QlX1r/R6jHD3jMc66JOqOrpis4k+0bbb+PjqxRUds300NWfetu036F5IBQ==
+sidebar_class_name: "post api-method"
+info_path: site/docspace/api-backend/usage-api/api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Save the white label settings"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/api/2.0/settings/whitelabel/save"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Saves the white label settings specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"IsDark","in":"query","description":"Specifies if the logo is for a dark theme or not","schema":{"type":"boolean","example":true}},{"name":"IsDefault","in":"query","description":"Specifies if the logo is for a default tenant or not","schema":{"type":"boolean","example":true}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"logoText":{"maxLength":30,"minLength":0,"type":"string","description":"Logo text","nullable":true,"example":"some text"},"logo":{"type":"array","items":{"type":"object","properties":{"key":{"type":"string","nullable":true,"example":"some text"},"value":{"type":"object","properties":{"light":{"type":"string","description":"Light theme logo","nullable":true,"example":"some text"},"dark":{"type":"string","description":"Dark theme logo","nullable":true,"example":"some text"}},"additionalProperties":false,"title":"ASC.Web.Api.ApiModel.RequestsDto.LogoRequestsDto"}},"additionalProperties":false,"title":"ASC.Api.Collections.ItemKeyValuePair.System.String.ASC.Web.Api.ApiModel.RequestsDto.LogoRequestsDto"},"description":"Tenant IDs with their logos (light or dark)","nullable":true}},"additionalProperties":false,"description":"Request parameters for white label settings","title":"ASC.Web.Api.ApiModel.RequestsDto.WhiteLabelRequestsDto"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Boolean value: true if the operation is sucessful","content":{"application/json":{"schema":{"type":"boolean"}}}},"401":{"description":"Unauthorized"},"403":{"description":"No permissions to perform this action"}}}
+>
+  
+</StatusCodes>
+
+
+      

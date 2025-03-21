@@ -14,7 +14,7 @@ Connects a Zotero account for adding references to the document in full accordan
 
 ## Installation
 
-Available by default in ONLYOFFICE Enterprise Edition, Community Edition (Docs + Workspace), and ONLYOFFICE cloud.
+Available by default in ONLYOFFICE Docs Enterprise and Community (Docs + Workspace), and ONLYOFFICE cloud.
 
 You can also download this plugin from the [ONLYOFFICE App Directory](https://www.onlyoffice.com/en/app-directory/zotero) and install it following the [desktop](../../docs/plugin-and-macros/tutorials/installing/onlyoffice-desktop-editors.md) installation instruction.
 

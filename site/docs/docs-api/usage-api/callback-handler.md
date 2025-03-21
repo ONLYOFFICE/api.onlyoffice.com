@@ -2,6 +2,9 @@
 sidebar_position: -1
 ---
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 # Callback handler
 
 The **document editing service** informs the **document storage service** about the status of the document editing using the *callbackUrl* from [JavaScript API](../get-started/basic-concepts.md). The **document editing service** use the POST request with the information in body.
@@ -233,185 +236,183 @@ The **document manager** and **document storage service** are either included to
 
 ## Document save examples
 
-### .Net (C#) document save example
+<Tabs>
+  <TabItem value="csharp" label=".Net (C#)">
+      ``` cs
+      public class WebEditor : IHttpHandler
+      {
+          public void ProcessRequest(HttpContext context)
+          {
+              string body;
+              using (var reader = new StreamReader(context.Request.InputStream))
+                  body = reader.ReadToEnd();
 
-``` cs
-public class WebEditor : IHttpHandler
-{
-    public void ProcessRequest(HttpContext context)
-    {
-        string body;
-        using (var reader = new StreamReader(context.Request.InputStream))
-            body = reader.ReadToEnd();
+              var fileData = new JavaScriptSerializer().Deserialize<Dictionary<string, object>>(body);
+              if ((int) fileData["status"] == 2)
+              {
+                  var req = WebRequest.Create((string) fileData["url"]);
 
-        var fileData = new JavaScriptSerializer().Deserialize<Dictionary<string, object>>(body);
-        if ((int) fileData["status"] == 2)
-        {
-            var req = WebRequest.Create((string) fileData["url"]);
+                  using (var stream = req.GetResponse().GetResponseStream())
+                  using (var fs = File.Open(PATH_FOR_SAVE, FileMode.Create))
+                  {
+                      var buffer = new byte[4096];
+                      int readed;
+                      while ((readed = stream.Read(buffer, 0, 4096)) != 0)
+                          fs.Write(buffer, 0, readed);
+                  }
+              }
+              context.Response.Write("{\"error\":0}");
+          }
+      }
+      ```
 
-            using (var stream = req.GetResponse().GetResponseStream())
-            using (var fs = File.Open(PATH_FOR_SAVE, FileMode.Create))
-            {
-                var buffer = new byte[4096];
-                int readed;
-                while ((readed = stream.Read(buffer, 0, 4096)) != 0)
-                    fs.Write(buffer, 0, readed);
-            }
+      > *PATH\_FOR\_SAVE* is the absolute path to your computer folder where the file will be saved including the file name.
+
+      On the [.Net example](../samples/language-specific-examples/net-example.md) page, you will learn how to integrate ONLYOFFICE Docs into your web application written on .Net (C#) or .Net (C# MVC).
+  </TabItem>
+  <TabItem value="java" label="Java">
+      ``` java
+      public class IndexServlet extends HttpServlet {
+          @Override
+          protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+              PrintWriter writer = response.getWriter();
+
+              Scanner scanner = new Scanner(request.getInputStream()).useDelimiter("\\A");
+              String body = scanner.hasNext() ? scanner.next() : "";
+
+              JSONObject jsonObj = (JSONObject) new JSONParser().parse(body);
+
+              if((long) jsonObj.get("status") == 2)
+              {
+                  String downloadUri = (String) jsonObj.get("url");
+
+                  URL url = new URL(downloadUri);
+                  java.net.HttpURLConnection connection = (java.net.HttpURLConnection) url.openConnection();
+                  InputStream stream = connection.getInputStream();
+
+                  File savedFile = new File(pathForSave);
+                  try (FileOutputStream out = new FileOutputStream(savedFile)) {
+                      int read;
+                      final byte[] bytes = new byte[1024];
+                      while ((read = stream.read(bytes)) != -1) {
+                          out.write(bytes, 0, read);
+                      }
+
+                      out.flush();
+                  }
+
+                  connection.disconnect();
+              }
+              writer.write("{\"error\":0}");
+          }
+      }
+      ```
+
+      > *pathForSave* is the absolute path to your computer folder where the file will be saved including the file name.
+
+      On the [Java example](../samples/language-specific-examples/java-example.md) and [Java integration SDK](../samples/language-specific-examples/java-integration-sdk.md) pages, you will learn how to integrate ONLYOFFICE Docs into your web application written on Java.
+  </TabItem>
+  <TabItem value="nodejs" label="Node.js">
+      ``` ts
+      import {fs} from "node:fs"
+      import {syncRequest} from "sync-request"
+
+      app.post("/track", (req, res) => {
+        function updateFile(response, body, path) {
+          if (body.status === 2) {
+            const file = syncRequest("GET", body.url)
+            fs.writeFileSync(path, file.getBody())
+          }
+
+          response.write("{\"error\":0}")
+          response.end()
         }
-        context.Response.Write("{\"error\":0}");
-    }
-}
-```
 
-> *PATH\_FOR\_SAVE* is the absolute path to your computer folder where the file will be saved including the file name.
-
-On the [.Net example](../samples/language-specific-examples/net-example.md) page, you will learn how to integrate ONLYOFFICE Docs into your web application written on .Net (C#) or .Net (C# MVC).
-
-### Java document save example
-
-``` java
-public class IndexServlet extends HttpServlet {
-    @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        PrintWriter writer = response.getWriter();
-
-        Scanner scanner = new Scanner(request.getInputStream()).useDelimiter("\\A");
-        String body = scanner.hasNext() ? scanner.next() : "";
-
-        JSONObject jsonObj = (JSONObject) new JSONParser().parse(body);
-
-        if((long) jsonObj.get("status") == 2)
-        {
-            String downloadUri = (String) jsonObj.get("url");
-
-            URL url = new URL(downloadUri);
-            java.net.HttpURLConnection connection = (java.net.HttpURLConnection) url.openConnection();
-            InputStream stream = connection.getInputStream();
-
-            File savedFile = new File(pathForSave);
-            try (FileOutputStream out = new FileOutputStream(savedFile)) {
-                int read;
-                final byte[] bytes = new byte[1024];
-                while ((read = stream.read(bytes)) != -1) {
-                    out.write(bytes, 0, read);
-                }
-
-                out.flush();
-            }
-
-            connection.disconnect();
+        function readbody(request, response, path) {
+          let content = ""
+          request.on("data", (data) => {
+            content += data
+          })
+          request.on("end", () => {
+            const body = JSON.parse(content)
+            updateFile(response, body, path)
+          })
         }
-        writer.write("{\"error\":0}");
-    }
-}
-```
 
-> *pathForSave* is the absolute path to your computer folder where the file will be saved including the file name.
+        if (req.body.hasOwn("status")) {
+          updateFile(res, req.body, pathForSave)
+        } else {
+          readbody(req, res, pathForSave)
+        }
+      })
+      ```
 
-On the [Java example](../samples/language-specific-examples/java-example.md) and [Java integration SDK](../samples/language-specific-examples/java-integration-sdk.md) pages, you will learn how to integrate ONLYOFFICE Docs into your web application written on Java.
+      > *pathForSave* is the absolute path to your computer folder where the file will be saved including the file name.
 
-### Node.js document save example
+      On the [NodeJS example](../samples/language-specific-examples/nodejs-example.md) page, you will learn how to integrate ONLYOFFICE Docs into your web application written on Node.js.
+  </TabItem>
+  <TabItem value="php" label="PHP">
+      ``` php
+      <?php
 
-``` ts
-import {fs} from "node:fs"
-import {syncRequest} from "sync-request"
+      if (($body_stream = file_get_contents("php://input"))===FALSE){
+          echo "Bad Request";
+      }
 
-app.post("/track", (req, res) => {
-  function updateFile(response, body, path) {
-    if (body.status === 2) {
-      const file = syncRequest("GET", body.url)
-      fs.writeFileSync(path, file.getBody())
-    }
+      $data = json_decode($body_stream, TRUE);
 
-    response.write("{\"error\":0}")
-    response.end()
-  }
+      if ($data["status"] == 2){
+          $downloadUri = $data["url"];
+              
+          if (($new_data = file_get_contents($downloadUri))===FALSE){
+              echo "Bad Response";
+          } else {
+              file_put_contents($path_for_save, $new_data, LOCK_EX);
+          }
+      }
+      echo "{\"error\":0}";
 
-  function readbody(request, response, path) {
-    let content = ""
-    request.on("data", (data) => {
-      content += data
-    })
-    request.on("end", () => {
-      const body = JSON.parse(content)
-      updateFile(response, body, path)
-    })
-  }
+      ?>
+      ```
 
-  if (req.body.hasOwn("status")) {
-    updateFile(res, req.body, pathForSave)
-  } else {
-    readbody(req, res, pathForSave)
-  }
-})
-```
+      > *$path\_for\_save* is the absolute path to your computer folder where the file will be saved including the file name.
 
-> *pathForSave* is the absolute path to your computer folder where the file will be saved including the file name.
+      On the [PHP example](../samples/language-specific-examples/php-example.md) page, you will learn how to integrate ONLYOFFICE Docs into your web application written on PHP.
+  </TabItem>
+  <TabItem value="ruby" label="Ruby">
+      ``` rb
+      class ApplicationController < ActionController::Base
+          def index
+              body = request.body.read
 
-On the [NodeJS example](../samples/language-specific-examples/nodejs-example.md) page, you will learn how to integrate ONLYOFFICE Docs into your web application written on Node.js.
+              file_data = JSON.parse(body)
+              status = file_data["status"].to_i
 
-### PHP document save example
+              if status == 2
+                  download_uri = file_data["url"]
+                  uri = URI.parse(download_uri)
+                  http = Net::HTTP.new(uri.host, uri.port)
 
-``` php
-<?php
+                  if download_uri.start_with?("https")
+                      http.use_ssl = true
+                      http.verify_mode = OpenSSL::SSL::VERIFY_NONE
+                  end
 
-if (($body_stream = file_get_contents("php://input"))===FALSE){
-    echo "Bad Request";
-}
+                  req = Net::HTTP::Get.new(uri.request_uri)
+                  res = http.request(req)
+                  data = res.body
 
-$data = json_decode($body_stream, TRUE);
+                  File.open(path_for_save, "wb") do |file|
+                      file.write(data)
+                  end
+              end
+              render :text => "{\"error\":0}"
+          end
+      end
+      ```
 
-if ($data["status"] == 2){
-    $downloadUri = $data["url"];
-        
-    if (($new_data = file_get_contents($downloadUri))===FALSE){
-        echo "Bad Response";
-    } else {
-        file_put_contents($path_for_save, $new_data, LOCK_EX);
-    }
-}
-echo "{\"error\":0}";
+      > *path\_for\_save* is the absolute path to your computer folder where the file will be saved including the file name.
 
-?>
-```
-
-> *$path\_for\_save* is the absolute path to your computer folder where the file will be saved including the file name.
-
-On the [PHP example](../samples/language-specific-examples/php-example.md) page, you will learn how to integrate ONLYOFFICE Docs into your web application written on PHP.
-
-### Ruby document save example
-
-``` rb
-class ApplicationController < ActionController::Base
-    def index
-        body = request.body.read
-
-        file_data = JSON.parse(body)
-        status = file_data["status"].to_i
-
-        if status == 2
-            download_uri = file_data["url"]
-            uri = URI.parse(download_uri)
-            http = Net::HTTP.new(uri.host, uri.port)
-
-            if download_uri.start_with?("https")
-                http.use_ssl = true
-                http.verify_mode = OpenSSL::SSL::VERIFY_NONE
-            end
-
-            req = Net::HTTP::Get.new(uri.request_uri)
-            res = http.request(req)
-            data = res.body
-
-            File.open(path_for_save, "wb") do |file|
-                file.write(data)
-            end
-        end
-        render :text => "{\"error\":0}"
-    end
-end
-```
-
-> *path\_for\_save* is the absolute path to your computer folder where the file will be saved including the file name.
-
-On the [Ruby example](../samples/language-specific-examples/ruby-example.md) page, you will learn how to integrate ONLYOFFICE Docs into your web application written on Ruby.
+      On the [Ruby example](../samples/language-specific-examples/ruby-example.md) page, you will learn how to integrate ONLYOFFICE Docs into your web application written on Ruby.
+  </TabItem>
+</Tabs>

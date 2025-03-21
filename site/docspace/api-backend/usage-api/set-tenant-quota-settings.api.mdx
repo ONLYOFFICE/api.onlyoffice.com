@@ -1,0 +1,71 @@
+---
+id: set-tenant-quota-settings
+title: "Save the tenant quota settings"
+description: "Saves the tenant quota settings specified in the request to the current portal."
+sidebar_label: "Save the tenant quota settings"
+hide_title: true
+hide_table_of_contents: true
+api: eJy1Vttu2zgQ/RViXlexFcdbFHrLJvtQ7AVtLlgsAqMYS2ObLU0y5Mhp1tC/F0PKthK77UvXgG2JPHM4lzMjbYFxGaF6gFti1nYZ1Vh9aB0jzApwngKydvZdAxVE4juyaDnt7/BQQKDHliL/5ppnqLZQO8tkWS7Re6PrRDH+FJ2VtVivaI1yxc+eoAI3/0Q1QwE+yIGsKabddJacvEdqy7SkAAU0FOugvRBDBdkt9e4aCli4sEbO4IsJFEBfcO0NQXU+uZh2BTym6H5MmrPwkvDN9IiwKwCbRosRmveDCBZoIr0mvcmpUh4DrokpRLVwQfGKVI5XJfdUPGSXNcthcHl7NfqH5qNLr+X7l2vIjHq+eM1udKI4g23oOvE1UPTOxpziSVnK38lkHvnxk8pKFueGPrwqwtw5Q2iPinDrqdYLTVHpRcpSdktHlXka5YKyjodl4dDSz69zAQYj31CNpm4NMl0j04A+ctB2ecQuKOWy70LQBxD2PAIbHN4g0xnrNUEBtjVGgswhDRySwr09K6dn5+Vd+aa6KKuyHJX580s5rcoSfqjLoayuXKBePvGUjHrtTMvzY7ncW2x55YL+jxpIoMkx6F/XBuWDrrVdKm/QqsZRlMKp2HrvAite6ahcNkg0vx7T/O1Y4QZ1zoq4FKlug+ZnqB62gLH+KM58/EyyAIGwgQKegmaCWTc7EhduKH6791TsxdcobROsH3SKXbqt2xDIshL/0YyggDXxysms9G1SPvIKKhij1+PJqBzvmMf5vHTcoMMihQ2FmGJpg4EKtnOMdB9Md9wYCatqZxd62YadjjYYtCQntVpvnPO4wNaIwFbMvhqPjavRrFzk6m15LNqMVvc3f0rpZ4c830qXZ/aX2d73AXr9Bz2LenGd7oewArTw18591rmAMj5uDs+P33cSH85/6b99P/fNqO3CJdROxl5L+BRiDmEzERV5F3mNaT717kjNvztuX2Ri8DD7H9TSZ4zpC4+9QZ2E3+aCZek8SDqhgMmoTPo4PBROCGhWgBRUrLZ74XSy/NhSkI6YHQQid10BK8KGQlJcKiNc5XjP7sQ3gZs2V/XVxO+KncVlXZPn72Jng854f38HBcz7d4W1a8Qk4JO8R+ATVADy3iHGSWVpbQsG7bLFpWAzZZpvreRoqLyssf5Cgtpt2eehgy8lmcOQXwnqpMV2m2XddXt83vqmRZ/YHVpqO+u67itTsEEy
+sidebar_class_name: "put api-method"
+info_path: site/docspace/api-backend/usage-api/api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Save the tenant quota settings"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"put"}
+  path={"/api/2.0/settings/tenantquotasettings"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Saves the tenant quota settings specified in the request to the current portal.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"tenantId":{"type":"integer","description":"Tenant ID","format":"int32","example":1234},"quota":{"type":"integer","description":"Quota","format":"int64","example":1234}},"additionalProperties":false,"description":"Request parameters for the tenant quota settings","title":"ASC.Web.Api.ApiModel.RequestsDto.TenantQuotaSettingsRequestsDto"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Tenant quota settings","content":{"application/json":{"schema":{"type":"object","properties":{"enableQuota":{"type":"boolean","description":"Specifies if the quota is enabled or not","example":true},"quota":{"type":"integer","description":"Quota","format":"int64","example":1234},"lastRecalculateDate":{"type":"string","description":"Date of the last quota recalculation","format":"date-time","nullable":true,"example":"2008-04-10T06:30:00.0000000+04:00"}},"additionalProperties":false,"title":"ASC.Core.Tenants.TenantQuotaSettings"}}}},"401":{"description":"Unauthorized"},"402":{"description":"Your pricing plan does not support this option"},"405":{"description":"Not available"}}}
+>
+  
+</StatusCodes>
+
+
+      

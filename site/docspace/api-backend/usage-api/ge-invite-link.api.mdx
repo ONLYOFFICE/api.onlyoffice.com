@@ -1,0 +1,71 @@
+---
+id: ge-invite-link
+title: "Get an invitation link"
+description: "Returns an invitation link for joining the portal."
+sidebar_label: "Get an invitation link"
+hide_title: true
+hide_table_of_contents: true
+api: eJydVMtuGzkQ/BWiTglAaWTFh8XchMQwgg2QwI5PhhAwo5bEmEMyJMcb7WD+fdGkHh5L2UMu86xuVndVd4+kNhH1I764kJQRlXiIFCKWEs5TUEk7+3GFGhv6aJ91ok/aPkHCq6BaSgytH3tY1RJqUOuN2xF93XmChLao4VXaQmJFsQnacz7UuNkDRdp5Em8Wxkhx51y7WLXaysxBig+uufeqofzxLSQC/ex0oBXqFDqSiM2WWoW6h7P0eZ2ZkO1armdhDCSOOSFx21FMkBilhQQfxvUyFdSIKWi7OWP8uDBGTMSYqZjkZ6EK7XyCmJT7K/5icnw/wPlgMcm3JSTol2q9YQrMfZDHWmbySs7lO3l9Iqltog2Fc5azA8erV9zmJ17vLnC5vkRkNvCJOhVS9++n712gaTbI9Oal1AMDA0XvbKTIgsxnM76N2WUHZUsJU2zUOJvIJoYq741u8t/qR2R8fxJ4GIZB4np2dZ70waoubV3Q/9IKjIrUdEGnXbaDis03/v/tifgDAqkVJP4JOhGWTHuc7Y5SF2wUygo9ZivWLogfTlttNyJtSfg8MVNItJS2rgxJyrORtqhRKa+r+XRWFWDVcd+qnJWq/uWoDGDW4fkwTV0wqNF/V5EeghnOVL7PWNE4u9abrgwpJJ5V0Oq7KQLsg0u/1qozCTW2Kfm6qoxrlNm6mOq/ZmfJPxS0eLj7hCELe2joPatRso/b2h9sqbz+m3aQh30wgu33QePck6aslLZrl6MPFvOay6AQC5XnOQYJ72JqVfbDPu0tpQsCva6kP7nrz2TdF5XoV6q8Udoym670tGj8yBVDYj7lPpZISGSlc72sNSTq0WJcSnDzObw/ijzw558dBbbp8iRmNsRKR35eoV4rE+l/Cn1zt9+Rb8Wf7diLRR/ktbtsM9PxGySy+uOtPywHiS2pFYVMvUAWTUM+vQg+m3Y22nGObm++QoKdMzZXsdH+gbNfJPbKdYUBX3mnXozo++LcYTjiy6/fRuwrPKC5TcthGP4DfA12+A==
+sidebar_class_name: "get api-method"
+info_path: site/docspace/api-backend/usage-api/api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get an invitation link"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/portal/users/invite/{employeeType}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns an invitation link for joining the portal.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"employeeType","in":"path","description":"Employee type (All, RoomAdmin, User, DocSpaceAdmin)","required":true,"schema":{"oneOf":[{"enum":["All","RoomAdmin","Guest","DocSpaceAdmin","User"],"type":"string","description":"[All - All, RoomAdmin - Room admin, Guest - Guest, DocSpaceAdmin - DocSpace admin, User - User]","example":"All"},{"enum":[0,1,2,3,4],"type":"integer","description":"[0 - All, 1 - Room admin, 2 - Guest, 3 - DocSpace admin, 4 - User]","example":0}],"title":"ASC.Core.Users.EmployeeType"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Invitation link","content":{"application/json":{"schema":{}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

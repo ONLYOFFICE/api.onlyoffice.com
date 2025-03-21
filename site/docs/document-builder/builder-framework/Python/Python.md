@@ -1,6 +1,9 @@
 ---
-sidebar_position: -2
+sidebar_position: -6
 ---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
 # Python
 
@@ -19,47 +22,48 @@ The current application version contains four main classes:
 
 ## Example
 
-### Python
+<Tabs>
+    <TabItem value="python" label="Python">
+        ``` py
+        import os
+        import sys
+        sys.path.append("C:/Program Files/ONLYOFFICE/documentBuilder")
+        import docbuilder
 
-``` py
-import os
-import sys
-sys.path.append("C:/Program Files/ONLYOFFICE/documentBuilder")
-import docbuilder
+        builder = docbuilder.CDocBuilder()
 
-builder = docbuilder.CDocBuilder()
+        builder.CreateFile("docx")
 
-builder.CreateFile("docx")
+        context = builder.GetContext()
+        scope = context.CreateScope()
 
-context = builder.GetContext()
-scope = context.CreateScope()
+        globalObj = context.GetGlobal()
 
-globalObj = context.GetGlobal()
+        api = globalObj["Api"]
+        document = api.Call("GetDocument")
+        paragraph = api.Call("CreateParagraph")
+        paragraph.Call("SetSpacingAfter", 1000, False)
+        paragraph.Call("AddText", "Hello, World!")
+        content = context.CreateArray(1)
+        content[0] = paragraph
+        document.Call("InsertContent", content)
 
-api = globalObj["Api"]
-document = api.Call("GetDocument")
-paragraph = api.Call("CreateParagraph")
-paragraph.Call("SetSpacingAfter", 1000, False)
-paragraph.Call("AddText", "Hello, World!")
-content = context.CreateArray(1)
-content[0] = paragraph
-document.Call("InsertContent", content)
-
-dstPath = os.getcwd() + "/result.docx"
-builder.SaveFile("docx", dstPath)
-builder.CloseFile()
-```
-
-### .docbuilder
-
-``` ts
-builder.SetTmpFolder("DocBuilderTemp")
-builder.CreateFile("docx")
-const oDocument = Api.GetDocument()
-const oParagraph = Api.CreateParagraph()
-oParagraph.SetSpacingAfter(1000, false)
-oParagraph.AddText("Hello, World!")
-oDocument.InsertContent([oParagraph])
-builder.SaveFile("docx", "result.docx")
-builder.CloseFile()
-```
+        dstPath = os.getcwd() + "/result.docx"
+        builder.SaveFile("docx", dstPath)
+        builder.CloseFile()
+        ```
+    </TabItem>
+    <TabItem value="builder" label=".docbuilder">
+        ```ts
+        builder.SetTmpFolder("DocBuilderTemp")
+        builder.CreateFile("docx")
+        const oDocument = Api.GetDocument()
+        const oParagraph = Api.CreateParagraph()
+        oParagraph.SetSpacingAfter(1000, false)
+        oParagraph.AddText("Hello, World!")
+        oDocument.InsertContent([oParagraph])
+        builder.SaveFile("docx", "result.docx")
+        builder.CloseFile()
+        ```
+    </TabItem>
+</Tabs>

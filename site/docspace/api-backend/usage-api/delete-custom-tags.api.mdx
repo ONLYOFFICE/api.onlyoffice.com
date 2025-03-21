@@ -1,0 +1,71 @@
+---
+id: delete-custom-tags
+title: "Delete tags"
+description: "Deletes a bunch of custom tags specified in the request."
+sidebar_label: "Delete tags"
+hide_title: true
+hide_table_of_contents: true
+api: eJylVMlu3DgQ/RWiLnNRWj2eHALdEtsBgkmQwMthYDSCaqnUYkyRDFm009PQvw+KVG82cpqLxKXW915xB4ybCM0DfNSGoqrVjXNjhFUFzlNA1s5+6qCBjgwxXabIbrwTlwoC/UwU+YPrttDsoHWWybIs0Xuj2+xc/4jOyllsBxpRVrz1BA249Q9qGSrwQVKxpii3FseymM0wBNxCBZppPD2PHLTdwFRBR7EN2ks2aOAON6rEqMAmY3BtCBoOiSqgXzh62T5AdCMppl8Mq2mqALtOSwA0306q6dFEepngprStPAYciSlE1bugJILdKC7YsGbJA+9vLxcZ2cWlC7R47/UX15GJiznKFbvFB+R2EEyPZzBNUlWg6J2NBY+L5VJ+58V8fRQE3i7/fH11bzHx4IL+l7pi9Ndro39cUp2zf7Aa8IkUWZc2g/IURh2jdlaxk13vwqh4IHUQBUh9kdoUNG+hedgBxva7ZPz+SHIAgbCDCp6DZoLVtHqJ41VWVFSo1sm2g3K9arO8MoYqemp1r6lT2ubUs9wWUMFIPLijKkVDyAM0UKPX9cViWfeCeT2TESk8UYi5yhQMNLBbY6T7YCZ4WdVttlWts73epLnXCp4waFFSZmJ2Lmj2mAxDAwOzb+rauBbN4CI375avgl8Va3V/81kYXh0RvJXpKNHPcTzOgdd/kwyCiFv2p2YVaInfOveoKVMjY3dzHNDrvfIPA3Y+AhKgdzndXrleS98UYqn96UJE5F3kEe0+zoHGve7P+j15E/4P2zMAUmntDWorhaSCf+H9QdCBCi4WgnnmXvykpFUFwobY7A6sT3L8M1EQoa6O7MpuqmAg7ChkuWQO4LK08eZOKhFzkwolL545YfSgzavrz9d311DBen4gR9eJV8BneTzxGRoAeWbFPzOfz3Zg0G4SbsS2RM0PVJJGT9VQeJ8XUuv+ym5PazyXSelHvlP1G4/drkhtmg725eq3HjNee2shaDVN03+bmy8U
+sidebar_class_name: "delete api-method"
+info_path: site/docspace/api-backend/usage-api/api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Delete tags"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"delete"}
+  path={"/api/2.0/files/tags"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Deletes a bunch of custom tags specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"names":{"type":"array","items":{"type":"string"},"description":"Tag names","nullable":true,"example":["some text"]}},"additionalProperties":false,"description":"Request parameters for adding tags","title":"ASC.Files.Core.ApiModels.RequestDto.BatchTagsRequestDto"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Ok"},"401":{"description":"Unauthorized"},"403":{"description":"You don't have enough permission to perform the operation"}}}
+>
+  
+</StatusCodes>
+
+
+      

@@ -1,0 +1,71 @@
+---
+id: change-default-access-rights
+title: "Change the default access rights"
+description: "Changes the default access rights in the sharing settings."
+sidebar_label: "Change the default access rights"
+hide_title: true
+hide_table_of_contents: true
+api: eJztV02P2zYQ/SvEnFqAtmVnk2x027pZoOhXsM62h4UQcKWxxUYiFZLaxDX034sZSrb8kfbQHoIiFy05mqHmvTccz+4gqI2H9AFudYVezMQKQ9Bm4yGTYBt0KmhrfigghbxUZoPf41q1VbjJc/T+Tm/K4EGCww8t+vCdLbaQ7qBAnzvdUCiksCqV02YjHHuLb36xBqW4Q1X87nTol/T0wek8SPGbcho9WZ40fpRiaesaTZDiVlfVrXW1l2LZ+mDrW10FdFLcWVvfFLU2UrwuNAGgqKpSj9apYN23ICG3JqAJlJ9qmkrnDG32h6ckd+DzEmtFq7BtEFJQzqktSNABa89RZvvrGtKHHaBpayKNkICEPZR+zX8iGJAQ0bCN4ICEHg9I2AMi6wgReVtb/6yM2vCuR8XBDGPpkICRTH2+9EH2OGb/gZIUE3HCupjwWihTiI8HGXrzQQ02HAsjJicKsc+RVGJyQTQx4bVYnytI/rwV65GiPXw63tpa1HG7l1hMxmKPWeHPs0Hk0ZKBBPyk6qYiqli3Tu6FTORcLuQzeSWfyxfypbyWr+Q8kfP5gV1tAkYpTuhN9tzOL3C62BP67IjJqxGJz0f8vRgz9/KEsetzml6dkTNPxrzM5//ARdJl3SmmL+LCdl3XUWPxjTUe+QIukuS8u9w3hQpYCP8lJP0fdBlr8GuX+dpl/nddRkLQgXm5WS2nPG5Ml9bhdIV563TYso1aD/Ld7yRcJfML992oNpTW6T+xAPLyfTzfGeXzd/T+3XskA7h4UZgnyCiL49OWPNR4EUoURRxthOLZZmgk2vDLob34fj6agoQaQ2lpNGpaumaNCiWkMFONni2myWxNGGdDwKxQfHw83Q2Tk0f3hM5z8q2rIIXdo/J476rurApW7Ctya9Z608bRDCQ8KafVYxV7ZB8ceeMPQgplCE06m1U2V1VpfUivk7PD+8FO3N/9RPxnB2JX1LPi6cf0HppYo39E6mJG1bwfu0nQdH5u7XuNrBg1w7vDxPh6qJKh1SUZxawtf2EomkYTVHQ+pvu0gE5CY32oFXfW/tNR0M/reYp7d+jY/64YeioCfgqzplLaUH5tVCJWxgPxBBIWU2Kfq4MLoB+4JVyqkEwCKUbRu31ldGT+0KKjGs8OFUC7TkKJqkDHJcU6Dd188pZyJPeqjbKd/EBRs4oRNN834W99s9EFeHP/FiQ89uN/bQsKcYp+huiZAtB/ExTMZcS2HVTKbFq1Id94JBUH1c1xacUi6hcEanhltuMEj2suwqAngboYsdvFuu26vX989dmIntjBmzTOuq77C+gHcJs=
+sidebar_class_name: "put api-method"
+info_path: site/docspace/api-backend/usage-api/api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Change the default access rights"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"put"}
+  path={"/api/2.0/files/settings/dafaultaccessrights"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Changes the default access rights in the sharing settings.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"description":"Sharing rights (None, ReadWrite, Read, Restrict, Varies, Review, Comment, FillForms, CustomFilter, RoomAdmin, Editing, Collaborator)","content":{"application/json":{"schema":{"type":"array","items":{"anyOf":[{"enum":["None","ReadWrite","Read","Restrict","Varies","Review","Comment","FillForms","CustomFilter","RoomManager","Editing","ContentCreator"],"type":"string","description":"[None - None, ReadWrite - Read and write, Read - Read, Restrict - Restrict, Varies - Varies, Review - Review, Comment - Comment, FillForms - Fill forms, CustomFilter - Custom filter, RoomManager - Room manager, Editing - Editing, ContentCreator - Content creator]","example":"None"},{"enum":[0,1,2,3,4,5,6,7,8,9,10,11],"type":"integer","description":"[0 - None, 1 - Read and write, 2 - Read, 3 - Restrict, 4 - Varies, 5 - Review, 6 - Comment, 7 - Fill forms, 8 - Custom filter, 9 - Room manager, 10 - Editing, 11 - Content creator]","example":0}]},"description":"Sharing rights (None, ReadWrite, Read, Restrict, Varies, Review, Comment, FillForms, CustomFilter, RoomAdmin, Editing, Collaborator)"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Updated sharing rights (None, ReadWrite, Read, Restrict, Varies, Review, Comment, FillForms, CustomFilter, RoomAdmin, Editing, Collaborator)","content":{"application/json":{"schema":{"type":"array","items":{"oneOf":[{"enum":["None","ReadWrite","Read","Restrict","Varies","Review","Comment","FillForms","CustomFilter","RoomManager","Editing","ContentCreator"],"type":"string","description":"[None - None, ReadWrite - Read and write, Read - Read, Restrict - Restrict, Varies - Varies, Review - Review, Comment - Comment, FillForms - Fill forms, CustomFilter - Custom filter, RoomManager - Room manager, Editing - Editing, ContentCreator - Content creator]","example":"None"},{"enum":[0,1,2,3,4,5,6,7,8,9,10,11],"type":"integer","description":"[0 - None, 1 - Read and write, 2 - Read, 3 - Restrict, 4 - Varies, 5 - Review, 6 - Comment, 7 - Fill forms, 8 - Custom filter, 9 - Room manager, 10 - Editing, 11 - Content creator]","example":0}],"title":"ASC.Files.Core.Security.FileShare"}}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

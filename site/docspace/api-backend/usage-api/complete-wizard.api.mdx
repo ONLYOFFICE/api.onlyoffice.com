@@ -1,0 +1,71 @@
+---
+id: complete-wizard
+title: "Complete the Wizard settings"
+description: "Completes the Wizard settings."
+sidebar_label: "Complete the Wizard settings"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVt9P4zgQ/lesec42HNqHU56Og10dul0JUarVHaqQm0wbL45t7AmlVPnfT2MnJS09QKd7oMTj+eVvvhl7CyRXAYpbmCKRMqsgcnFum8YaEXoJzDOwDr0kZc1lBQWUtnEaCX+oZ+kryMDjQ4uBfrfVBootlNYQGuJP6ZxWZTTNfwZrWBbKGhvJX7RxCAXYxU8sCTJwngORwsC72EilR2qBvDIryKDCUHrl2CkU8CWqZbC0vpEERW+XgWm1lguNUJBvMQN8kpw3FDDdVAY3d9d2gZ7C599qS2wzKW0DXQZOhrC2vvpDhvr9+Fe9tqhZ/a2wwTYoCJ+Ig2izet/3N2lWrVzhx92SavBva/B93zeqQfHMqh92LhvFBHjP89n3S3F58XG3oV2w+QK/ettMFY2TX1irUZpXMaaDTSWW3jaCahRBEQrrhbFMpl0wjt1x9lWl2FrqqxHPllIHPPSemL1rAdETXDjpZYOEPgBDTfEsZ9PzyQ9cTM6c4r/vtkI9uU4W4YLsJHkbSaDrOCGPwVkTEttPT07435t5QPZ/9dbQwtVHoHZYqqXCINQy4nyIjvQodg7/awEO0Ty3HiczUlrRZjJMpx7KYdnj+PkYdJemtN5jSSLOAyGrymMI+U2NYmhwoYLAxtEGopdfXnuZGdlSbb16xiopnb5W+su2omkDCTSEXkihVYkmoLjHDcMxXqrA6Ight9EuPjnlE35tQC8eWktSVBaTRSOprCP8vQHw0QOWrVe0geJ2CzKUd5zu3T2yADxKns5rzy017+aHhT3vaxaOVXUCGTRIteWJ79pIIUk1FJBLp/LTyUk+qObraJoPHADOyz9yl3BarddQwHYhA8687l7zK+qK0pqlWrXpnoEMHqVXPDwiX3vjhP1StpoHfU3kijzXtpS6toGKX09eOb9I2mJ2/Y3ZMn+BbMqtkrzvA7drCOnUn7jhOSabuB6rZaBMvAvtvUq14B68frkJvwz0391kb947h9fOaET2l8We5GXO74n7Cb0nOzJeY0fyCZY2nnfoPacYePQhgfd4Gq9DG6iRcbz0QAzEOcabwwqMngPvE64HnhPPnZbKcPw21T2x75arAhmcTk4izXZB18NjZMfCeQbMCrbZ7tjXsfihRc8dMn9hGa+6DGqUFfpI28gFOE/Jf7rhzFhdt4kaB7O3ywaLs7JER2/qzketdTW7gQwW/dOpsRWbeLnmZ5VcQwHAzy82jlSNsi3o4WFQQHIZ52tL9T59E1H7Dz7UsGU24wT3eZ2Owb98qKMW223qja7b6aetf7XogR20ubLzruv+Ac4ZqF0=
+sidebar_class_name: "put api-method"
+info_path: site/docspace/api-backend/usage-api/api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Complete the Wizard settings"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"put"}
+  path={"/api/2.0/settings/wizard/complete"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Completes the Wizard settings.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"email":{"type":"string","description":"Email","format":"email","nullable":true,"example":"Sydney_Roberts4@hotmail.com"},"passwordHash":{"type":"string","description":"Password hash","nullable":true,"example":"some text"},"lng":{"type":"string","description":"Language","nullable":true,"example":"some text"},"timeZone":{"type":"string","description":"Time zone","nullable":true,"example":"some text"},"amiId":{"type":"string","description":"AMI ID","nullable":true,"example":"some text"},"subscribeFromSite":{"type":"boolean","description":"Subscribed from the site or not","example":true}},"additionalProperties":false,"description":"Wizard settings request parameters","title":"ASC.Web.Api.ApiModel.RequestsDto.WizardRequestsDto"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Wizard settings","content":{"application/json":{"schema":{"type":"object","properties":{"completed":{"type":"boolean","description":"Specifies if the Wizard settings are completed or not","example":true}},"additionalProperties":false,"title":"ASC.Web.Core.Utility.Settings.WizardSettings"}}}},"400":{"description":"Incorrect email address/The password is empty"},"401":{"description":"Unauthorized"},"402":{"description":"You must enter a license key or license key is not correct or license expired or user quota does not match the license"}}}
+>
+  
+</StatusCodes>
+
+
+      

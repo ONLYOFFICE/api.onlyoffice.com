@@ -1,0 +1,63 @@
+---
+id: get-the-space-usage
+title: "Get the space usage"
+description: "Returns the space usage quota for the portal with the specified space usage for each module."
+sidebar_label: "Get the space usage"
+hide_title: true
+hide_table_of_contents: true
+api: eJy1VU1v2zgQ/SvCnIlYcY1+6BYU3XaxKNDW9fZg+DCRxhZbiWTIURpX4H9fDCU7VrZBkha92LJm3uPMe+NhD4y7AMUaAjFrswuzj51lhI2CQGXnNe+hWPdw0XFtvf6BrK15R1iRF5QnrEDBd6+ZYBM3CioKpddO0qCAT8SdNyHjmrLgsKSsC7ij7EoOybbWp4iznrHJvmuux0wq9VZTNcFINmFZZ62tuobOQIGn4KwJFKDoYZ7n8jUtYHlCgKbKGt1qDomrc41N1ZfWMBkWMDrX6DI1OfsahKGHUNbUojzx3hEUYC+/UsmgwHnryLMezl+y9bijpf5BJ8naMO3Ig4Kt9S0yFNBpw88XoIBusHWNZJ3nL569WJy/nC8gKniPN3/p5teY5s/n54tFngvPKlD1WyT5WM0qkA+vbTeIdD+VNvxsPmE61PE78Itr1A1e/qIgU4qnlRLVwdWVTNAJBL3HPSjQTG14eDY+INcnWYG9NrtE/2BLQ0cxKmDNqaP0Dx0KiqO6j569kW1APW4+JpAneHHEvcebf3XQbH14JOKQ/jijfibPF4/OkYcYJbTIz/+/GlYGx6VGVSJoiWtbQQE7Sg4mz2CGTs/mZ/nsuCHT8gJZkP6apKd1D51voICa2YViNutrGzgWvSy2CAqu0WsRLfUvsaGaLXaN9NDYEpv0OioQzDT8Mn81l0ZOdvJSdtJA99PNfDunTv9DaVCl5XoIKzDYSnSCTRpos7UJPor52rZtZzTvs2XqNvv0Zvk5u/jwt3RFPgxSNsh0qD5wi2lvjme8Jb67/uHONdHfruA/fWOMsjDd8Mw1qI0UnczrR8PXohkomJ/lyePBdFBwdbgYBwPX0PeXGGjlmxjl9VVHXi7Lza3f8iuqg+wyJ99oL7qXJTlOg9F0g0137h0x+ziPb998BgUyrVNnvyVnxwdhP4TM/oR7arIaS5DPqO6B9P0wNzEe84fQvYjjZA3ZousmxvgfiuvUAA==
+sidebar_class_name: "get api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get the space usage"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/settings/quota"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns the space usage quota for the portal with the specified space usage for each module.
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Space usage and limits for upload","content":{"application/json":{"schema":{"type":"object","properties":{"StorageSize":{"type":"integer","format":"uint64","example":"1073741824"},"MaxFileSize":{"type":"integer","format":"uint64","example":"26214400"},"UsedSize":{"type":"integer","format":"uint64","example":"262144000"},"MaxUsersCount":{"type":"integer","format":"int32","example":"0"},"UsersCount":{"type":"integer","format":"int32","example":"0"},"AvailableSize":{"type":"integer","format":"uint64","example":"0"},"AvailableUsersCount":{"type":"integer","format":"int32"},"StorageUsage":{"type":"array","items":{"type":"object","properties":{"Path":{"type":"string"},"Size":{"type":"integer","format":"int64"}},"title":"QuotaUsage"}},"UserStorageSize":{"type":"integer","format":"int64"},"UserUsedSize":{"type":"integer","format":"int64"},"UserAvailableSize":{"type":"integer","format":"int64"},"MaxVisitors":{"type":"integer","format":"int64"},"VisitorsCount":{"type":"integer","format":"int64"}},"title":"QuotaWrapper"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

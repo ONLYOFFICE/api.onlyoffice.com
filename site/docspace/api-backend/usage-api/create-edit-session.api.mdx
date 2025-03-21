@@ -1,0 +1,71 @@
+---
+id: create-edit-session
+title: "Create the editing session"
+description: "Creates a session to edit the existing file with multiple chunks (needed for WebDAV)."
+sidebar_label: "Create the editing session"
+hide_title: true
+hide_table_of_contents: true
+api: eJy1Vd+L4zYQ/lfEvPQOxDqXXY6r35ZuC6GFlkv3SjnCotiTWF1b0knj3GaN/vcykvPDTVrah77YQZ6Zb+b7Pk0GILUNUH6GH3SLQRQivWElwTr0irQ1ixpKqDwqwu9rTUsMQVsDEpzyqkNCzwUGMKpDKGGjW1zUIEEbKMEpakBCjaHy2nE5KBOWWDyABI9feu2xhpJ8jxJC1WCnoByA9o6raUO4RQ8SNtZ3ivLR7Rwk4IvqXItQfvvh7n2MctLBUr/ioYcvPfr99SaCfkWhjVjvCQP8a/z3d+f47+a3dzGueJrgrAkYuMB8NuPXFHRhchltjVBr25PIxNYiHGmtrCE0xMnKuVZXKbz4I3CF4dRijDFKuJu9u4R5NKqnxnr9ijWkoNvLoN9tL2prviHRqB0KNLbfNsKh73RqRZAVWGsS1KBgToHxAla917RPkqtQPTHS0zPyAXhUrPxXrwlhxZRMIb9LwwahDuNOMPBFB9Jmm8DEV02N6PqWtGtRVE1vnoN4YxBrrMXGevEbrh/uP729AQkdUmPZps4GSs6kBkoolNPF/GZWcMGQnsWQ/RkLhn06sR7Q7w5O7n0LJQxrFfDRt/HCOssUKyprNnrb51sCEnbKa7Vus/xjcqZ9o/qWrdMQubIoWluptrGByg+zi+IPOVo8fvwJYrLVgfIlK5+rT4k/ulU5/SOy1cebMAkbb0Nl7bPOWmqzsSlbE/sY7p3mMdCH3MpuzuZhTjuVvDeWzTJmzWqdJDsROZlmOLn5fxN/nJ3whQrXKm246T5Tn43wmYkBCfMbpjuZYXyDhPK4sCaOWElghTh5ODoh8nFeJ+yTWgfWu4Zyo9qA/zD71WVztfEk6PkK26m25zBgKxws9h/h33wc9+xbcdq9V+EPRjL7c+jzthY1xFWU0KCq0adG8sf7qkJHZ2kX24snOF7VX35e/goS2J5TB2evjj+4/NWe/mLt3AI/+Y/gasYw5OsR4zE+f/rbjHHEQzQztIox/glvAXIp
+sidebar_class_name: "post api-method"
+info_path: site/docspace/api-backend/usage-api/api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Create the editing session"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/api/2.0/files/file/{fileId}/edit_session"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Creates a session to edit the existing file with multiple chunks (needed for WebDAV).
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"fileId","in":"path","description":"File ID","required":true,"schema":{"type":"integer","format":"int32","example":9846}},{"name":"fileSize","in":"query","description":"File size in bytes","schema":{"type":"integer","format":"int64","example":1234}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Information about created session","content":{"application/json":{"schema":{}}}},"401":{"description":"Unauthorized"},"403":{"description":"You don't have enough permission to edit the file"}}}
+>
+  
+</StatusCodes>
+
+
+      

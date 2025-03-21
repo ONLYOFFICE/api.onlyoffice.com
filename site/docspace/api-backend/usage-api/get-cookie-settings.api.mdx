@@ -1,0 +1,63 @@
+---
+id: get-cookie-settings
+title: "Get cookies lifetime"
+description: "Returns the cookies lifetime value in minutes."
+sidebar_label: "Get cookies lifetime"
+hide_title: true
+hide_table_of_contents: true
+api: eJyVlE1P4zAQhv9KNGerKYXDKjcECK2WlVYUtAdUITeZNAbH9tqTLt3I/301cfotDhzaJvF8vs+b9kByFaB4gTkSKbMKWZ7dWPuuMMBCgHXoJSlrvldQwAopnW2DQYDH4KwJGKDoYTad8k+FofTKcR4U8KBqJNVitpa6w0yZrFWmI+Ts0hpCQ5wkndOqHJrlb4Ezewhlg63kK9o4hALs8g1LAgHO82ikUl+tanxSLR5EKkO4Qg/iC9PU1reSUvLlDATgh2ydRiguZpdXUQAaudRYHbRZWqtRmrM2c4elqhWGTNUZNZiVg3BZ2MosPWZjucz6zFg67Ee+wxgFyKpSXFHqXwcL11IHFECKOBau5zeT37icXDvFn5+2Qh0mjyOYW7KTY2q3ZCFGLn81vTjn9WxkR4316h9WwFEBy84r2kDx0oMM5Sufv74jPwCPsgIBf70ihEVcnArxiNR5Ew40CJn+jMEEBLRIjR3dxqAlNVBALp3KZ5NpvhUwH4vtnRjQr9GHYcrOayigX8qAz17HczxDbFZaU6tVlywOAtbSK0YymGpMTgLVstPsjIbIFXmubSl1YwMV36ZnxW9TdPb8+MA6L/YKztnPqfqxjjs/Sad+4AYEGNkO94dhAhTXT5sPaJSp7ZC9tYJTvAb6kEZZzyAKcDZQK4c3aix7j3RG43SPfv92fp3iuA7hB+VOS2V4ji6pmZC+8K4gYDaZDvB2HE/ALgSw0JzQ74BGfvynQ88eXOzB8V0U0KCs0A9OGOSF67JERwNh3SWdT/5tGNPOevd3TyCAdT9GkyCMF1x9e2Q2h7WPmaUJ+DuKTzL6PnGPcRefjj7NGDfcRrO+ixjjf1teAYE=
+sidebar_class_name: "get api-method"
+info_path: site/docspace/api-backend/usage-api/api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get cookies lifetime"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/settings/cookiesettings"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns the cookies lifetime value in minutes.
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Lifetime value in minutes","content":{"application/json":{"schema":{"type":"object","properties":{"lifeTime":{"type":"integer","description":"Lifetime value in minutes","format":"int32","example":1234},"enabled":{"type":"boolean","description":"Specifies if the cookie settings are enabled or not","example":true}},"additionalProperties":false,"title":"ASC.Web.Api.ApiModels.ResponseDto.CookieSettingsDto"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

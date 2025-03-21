@@ -1,0 +1,71 @@
+---
+id: get-an-invitation-link
+title: "Get an invitation link"
+description: "Returns an invitation link for joining the portal."
+sidebar_label: "Get an invitation link"
+hide_title: true
+hide_table_of_contents: true
+api: eJydVE1v1DAQ/SvWnEBym+3CAXJboapUXBBtuaxycLOzG7eObexJIUT+72icZNvttiBx2U3iN1/vvfEApHYRyjV4F0iZ4iZiiFBJiFh3QVMP5XqAVUeNC/q3Iu3sZ1QbDBwTUG1Aws+gCaFKlYQNxjpozzAo4RtSF2wUygptHzTlcGG0vRdbF8Sd01bbnaAGxVj+FCR4FVSLxG1waatahBKw9cb1iNe9R5CgOb1X1MDzmucTUFDvUbzheYQL4ruOmlx4CxJi3WCroByAIVCCtoQ7DCBh60KraPz0bgkS0HYtT7oyBiRwMpAw5YKjedcLcSJWxkhxJk4Eo6VYipO5eAWJOQoYvbMRI7ewXCz47zDP5SFZIKF2ltASQ5X3Rtf5tLiLjB+OR4oUtN1BSilJeL84O65xY9UkKm6AUS1S4zZQwg4py0ANlFAor4vl6aKY/NGxP4qsJhbDU1USU4vhYRauCwZKaIh8LItiaFykVA6chpEPKmh1a0YS+GzscKs6w/wbVyuTPyeZrXl4/GHxccnDPfHpFVMwpnvRrXtqlNdfsJ891IzHcvbZQWzmRduty+GaDCM+ubbtrKZeXOVpxbfzq2ux+nrJU2GII71GEc7dR2pVlmmqcYH0wko8d/LwKPr/LdI0L+EvKrxR2nI3WZVhUnfNZICE5ekC5HQDgISscSaIVQYJ5cH2VXISbA3DcKsi3gSTEn/+0WHgC6N61DdbYaMjP2+g3CoT8S+D/nt7X5xqltb22Vqm4zeQcI/987sjVUnOqnNvI2RV1+jpSfDRlrHX9itycX4NEniBDo11n401PXD2Fxs79NjcJf8m+UrIMIy2TWmPH49ejdgbe0QzT1VK6Q8IzAac
+sidebar_class_name: "get api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get an invitation link"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/portal/users/invite/{employeeType}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns an invitation link for joining the portal.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"employeeType","in":"path","description":"Employee type (User or Visitor)","schema":{"type":"integer","format":"int32","enum":["All","User","Visitor"],"description":"[0 - All, 1 - User, 2 - Visitor]"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Invitation link","content":{"application/json":{"schema":{"type":"string"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

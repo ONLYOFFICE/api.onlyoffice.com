@@ -1,0 +1,71 @@
+---
+id: get-a-mail-operation-status
+title: "Get a mail operation status"
+description: "Returns a status of the mail operation with the ID specified in the request."
+sidebar_label: "Get a mail operation status"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVE1v2zAM/SsGz0LtZjtsvhVr0QXDsKJpT0UOis3Eam3Jlei2maH/PlD+SJy0GQbskg/xkXwkH9kCyY2D9AEqqcr4V41WkjLawVKAw6yxiraQPrRw0VBhrPodzN9R5mjZzaLMQcCrVYSw9EsBObrMqpphkMItUmO1i2TkSFLjIrOOqMCI00VmSBe9KirC+/wycjVmaq0wj5QObxafG3R0BgJqaWWFhNYFUlpWCCmMcebMRXHeWlIBh2TG8qL5JQhwWYGVhLQF2tYcx5FVegOey7DoaqMdOrbPkoS/ptF+Tkvo6gMBmdGEmthB1nWpsmCPHx17tcdZzeoRM+LiLEcj1eX8Zqq6RMJ8D7oypkSpQQC+STZDCmQbBC9gnh9Xso+b54xadCxPInuMF3BlrbGnwR3EC7hBm6Gm/dhKE27QgoC1sZWk7unTbBLgPEkCMdPYDP9CrMN4sZvkXQD/Y8ZJhNMpdzDvBZCi8MqjHy1DuzwjPifnx0q517LfHsxDnAqpMDmksMEweBZrCrGsVTw7S+Kwi6OyXNzuCdyzcNG+DCvQ2BJSKIhql8ZxWxhHPm1rY4mRL9IquSo7RbGtI7eWTcm9KU0my/DsBbDP1Pwl+TrjuvZuwYLV24V79yKMvZS1+oHbYR2LziyGjZ34hpYovTbBvW/xN1NVjVa0jRah2uj2anEXXdzMuSq0rutsKQkH9o4qGabZ57hGiuThoRm3dDKhdre0//ti9e0gfKO4LqXSTDYMre3n/sC9AgGzswREuMMgdieNuab7B24p+kE+QNuupMN7W3rPz88NWj7Wy93cg0Ry5fh3Dulalg5P1H5wIN/lPsxXb4O+yob/gYAn3B6cYr/0Ypg88+gQF1mGNe35Hh1J1tu4IddXdyCA92cqrqcgrv4HR3+X11RnA0n+9OIDl7btpOv9iO9MH3qM4u7Q3Kal9/4Pe36CVQ==
+sidebar_class_name: "get api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get a mail operation status"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/mail/operations/{operationId}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns a status of the mail operation with the ID specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"operationId","in":"path","description":"Operation ID","schema":{"type":"string"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Mail operation status","content":{"application/json":{"schema":{"type":"object","properties":{"Completed":{"type":"boolean","example":"true"},"Id":{"type":"string","example":"Id"},"Status":{"type":"string","example":"Status"},"Error":{"type":"string","example":"Error"},"Percents":{"type":"integer","format":"int32","example":"100"},"Source":{"type":"string","example":"Source"},"OperationType":{"type":"integer","format":"int32","example":"1"},"Operation":{"type":"string","example":"Operation"}},"title":"MailOperationStatus"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

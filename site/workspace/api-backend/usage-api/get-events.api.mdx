@@ -1,0 +1,63 @@
+---
+id: get-events
+title: "Get events"
+description: "Returns a list of all the portal events with the event titles, dates of creation and update, event texts, and authors."
+sidebar_label: "Get events"
+hide_title: true
+hide_table_of_contents: true
+api: eJzVVktv4zYQ/ivEnOlYlh0n0S1Igt2gizbIowU28GEsjS1uKEolR8l6Bf33gpTsWE2zzqFA0YstDeeb9+hjA4xrB8kjpGVR1EbxZnz1TIYdLCQ4SmureAPJYwPnNeelVT+QVWk+E2ZkPc4SZiDhxSomWLQLCRm51KrKq0ECt8S1NU6g0MqxKFcCtRack6hKy6gFBXfiRXEexOFdsGJNTooMmZxHpZaCZ4EmE3Xl5XKrS9/ZyXCAIUh3BBIsuao0jhwkDcRR5P+GoX3pA+oiAAlpaZgMe02sKq3S4HH8zXn1BlyaU4H+iTcVQQJoLW5AgmIq3J68XH6jlEFCZcuKLKsuiOtsT8exVWYNEug7FpX2ogm0Eh7UIa14OnvJ0OteoCaToT1kON3qXXrUr1jQz/XDBIig10q43C/aYdi+eivhXOtL3HwpzXoPvCxLTWgG6BVqF/zdMVr+uac4iqPRJB5Fk/tonkznySQ6Op3Pjmen8Vdv4socqMghA7dUEfJtrQ9UqsuQBvG+0/37cLrTUoZpTRYkrEpbIHeiaTwwP5pA20oIy7AtcHD3h8WqIuvdX7u7HC1lB8rLtqZuZsyDcfXSN2lJHwRdu6tMMS71IcCuiTdkC+WcKs0HFuPBkb1Bi4Ml+leWa1fbulbZcAJW2YqOT05G0zSej2Yn0/noLFudjZbHOD+dLpenx3H0sW35HTXZjfi6eSqfB+3aS6vdl+/XppXw24vxn9L/eYJhb7l2HxxxUxeePe7JMLJ6JpBwUZqVsgX5NC7QpKQ1ZfCGUB4jMRI7nBQTMRI7qBSxf92iF4M8Qrqf0Z0zY5oX4aP/dpzfLNxu19rQxVk0eUslDwZ7eqQsWCiI8zKDBNYUWomcQwJjrNQ4PorGr2wbyAc819pnsi5QbW01JJAzVy4Zj5u8dNwmjefLFiQ8o1V+FUPw/qwLZ4W19iXWZYo6iFsJHjM8Po3OYp/KHr3feV7rzP0jyb+uZKV+obCTPue8O5ZgwgQNsaEIyqzKAO/LebHNWtyFbMXt1d29OL+59lmRdV0ttaf8PnrHBQbW6X18In6l62xITDv2/u/uHH2d/OG40qgCA4ZuNv0IPPoigoT4KAoXjr4gfk7DICxk39JHaJolOnqwum29+M+arL+JLV4nwL+1ctsIPzlPtPGdSFOqOIyKrrvG/e0249u/G9FPV/cgwacx7PVT6HX/4K1vj8xmz/aw7bIPwf+28h1I03ST1LY7/e7oXcRu1jptX9hF27Z/Afr8lpo=
+sidebar_class_name: "get api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get events"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/community/event"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns a list of all the portal events with the event titles, dates of creation and update, event texts, and authors.
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"List of events","content":{"application/json":{"schema":{"type":"array","items":{"type":"object","properties":{"Id":{"type":"string","example":"1"},"Uid":{"type":"string","example":"1234wda"},"CalendarId":{"type":"string","example":"calendarID"},"Name":{"type":"string","example":"Event Name"},"Description":{"type":"string","example":"Event Description"},"AllDayLong":{"type":"boolean","example":"false"},"Start":{"type":"string","example":"2020-12-01T06:36:10.8645482Z"},"End":{"type":"string","example":"2020-12-01T06:36:10.8645482Z"},"RepeatRule":{"type":"string","example":""},"Alert":{"type":"object","properties":{"Type":{"type":"integer","format":"int32","example":"-1"}},"title":"EventAlertWrapper"},"IsShared":{"type":"boolean","example":"true"},"CanUnsubscribe":{"type":"boolean","example":"true"},"IsEditable":{"type":"boolean","example":"false"},"Permissions":{"type":"object","properties":{"UserParams":{"type":"array","items":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"2fdfe577-3c26-4736-9df9-b5a683bb8520"},"Name":{"type":"string","example":"Valery Zykov"}},"title":"UserParams"}}},"title":"Permissions"},"Owner":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"2fdfe577-3c26-4736-9df9-b5a683bb8520"},"Name":{"type":"string","example":"Valery Zykov"}},"title":"UserParams"},"Status":{"type":"integer","format":"int32","enum":["Tentative","Confirmed","Cancelled"],"description":"[0 - Tentative, 1 - Confirmed, 2 - Cancelled]","example":"0"},"HasAttachments":{"type":"boolean"}},"title":"EventWrapper"}}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

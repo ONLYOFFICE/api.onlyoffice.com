@@ -1,0 +1,63 @@
+---
+id: get-licensor-data
+title: "Get the licensor data"
+description: "Returns the licensor data."
+sidebar_label: "Get the licensor data"
+hide_title: true
+hide_table_of_contents: true
+api: eJylVV2L2zoQ/StinkWchhYufuqyLaU0XMrmLn1YwjKxJ7FaWfKVxttNjf97GdnOJ10K+5JYsubM0Tkz4w4YdxHyB1gRs3G7qDJ1R5uArjRuB2sNvqGAbLz7XEIOO+KlKchFHz4gI2gIFBvvIkXIO1jM5/JXUiyCaSQKcliayMpvVeHrBt1e/awMk7K4IavimBY0FN4xOZZ4bBpripQ1+x4FpINYVFSjPPG+IcjBb75TwaChCcKRzUBhzPIv1iTLGp+X5HZcQb54905Dbdy0nusJKnKQ2+oL4rcjYSdYGlxrLW4sQc6hJQ30jHVjU7yvSTE9M/QaouFXZ14JhoatDzUy5NAG8/cEqEZjX8vgo4AoLMtAMZ5SGdBfIrPal472j3d+Q4Hj2/eVZ4mZFb4WehPmKwneHKj9pSxN5d2rjfmaQE7kYHpZjDMKn+PUPCd1vPHeErrrGmioMFtDUZmtwkP3mKhQ2RFG+aCclyY4ZBQC/SCzESS0X0/6Y4s2kgY2nNjdrG5n32gzu/WBZt+kL5fSlrOx8o8703iAvhfwt/M3131+77Dlygfzi0qQU5GKNhjeQ/7QAcbiUd4//iDZgEBYgoafQUp93a8vr39H3AYXFVd0vG6JjDPQUBNXfpxHMgFQzIMMG5MtZvNsmirZKFqaOGnggLAKTxRiItUGCzl0G4x0H2x/7UE6qwrvtmbXDnMQNDxhMGJ3KuIxeNBji62VsqiYmzzLrC/QVj5y/s/8CvzDcFrd3y1F1vVRsJXMugH9XLZD0WBjvtBeKi/NufNjGozgF97/MJScMG7rU/TkeyPzRGQYqDwtUof4yDWmaTvCfiK+NuDyIt1xdL/s2shduiFrLBonSdtBusHCB7kYaFjM5smpk4/DpZFrDSKsxHQHA3vZ/r+lICW2Pholq15DRVhSSM4nOeGmKKjh5KhtB10vvjxiy6HaPn38DzSIzudWDKKPD4I+vXL7U+xzjwYG8tvrP0R03eBz3x/OD6/+GDHecDotEq/7vv8NVEa1Fw==
+sidebar_class_name: "get api-method"
+info_path: site/docspace/api-backend/usage-api/api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get the licensor data"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/settings/companywhitelabel"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns the licensor data.
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"List of company white label settings","content":{"application/json":{"schema":{"type":"object","properties":{"companyName":{"maxLength":255,"minLength":0,"type":"string","description":"Company name","nullable":true,"example":"some text"},"site":{"maxLength":255,"minLength":0,"type":"string","description":"Site","format":"uri","nullable":true,"example":"some text"},"email":{"maxLength":255,"minLength":0,"type":"string","description":"Email address","format":"email","nullable":true,"example":"Sydney_Roberts4@hotmail.com"},"address":{"maxLength":255,"minLength":0,"type":"string","description":"Address","nullable":true,"example":"some text"},"phone":{"maxLength":255,"minLength":0,"type":"string","description":"Phone","format":"tel","nullable":true,"example":"some text"},"IsLicensor":{"type":"boolean","description":"Specifies if a company is a licensor or not","example":true}},"additionalProperties":false,"title":"ASC.Web.Core.WhiteLabel.CompanyWhiteLabelSettings"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

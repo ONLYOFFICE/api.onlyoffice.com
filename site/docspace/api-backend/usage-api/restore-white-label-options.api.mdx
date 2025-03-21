@@ -1,0 +1,71 @@
+---
+id: restore-white-label-options
+title: "Restore the white label options"
+description: "Restores the white label options."
+sidebar_label: "Restore the white label options"
+hide_title: true
+hide_table_of_contents: true
+api: eJytlE1v2zAMhv+KwLNQZ9kOg24ddilWbEO7YIciKBSbjrXIkibJaTPD/32g5DjN0hRDt0s+JJJ+yfcxe4hyHUDcwS3GqMw6sILd4MpLUymzhiUH69DLqKy5qkCAxxCtx++NingtV6i/OLoLwMFJL1uM6KleD0a2CAKuwkfpN8BBGRDws0O/Aw4VhtKrlAoCbh2WqlYYmKpZbJBpu7ZMBVZbzySrpN/QcYvMemZsBA6hbLCVIHqIO0fPWVmrURrggI+ydRpBRN/hMPCnUrCWnY7/pibXYBGNNPE1ipacxuisCRgofj6b0dexig85m22l7lAwytzrmRwhUaErSwyh7jRwKK2JaCJVk85pVaaw4kegkv15icMwDBzezd6c6lgY2cXGevULK0hBb0+DPlvm0LcqBGKBxfS3tr5lsVGByTLF0TMClp1XcZcQkaG8p+r3G6QD8Cgr4PDgVURY0pyOH3OT4QtpCg+EINPEILMZwgvg0GJsLJHqupigjA0IKKRTxfxiVoQR8yKlp+xiZJo8RL/d89t5DQL6lQy48Ho4xSTFstKaWq27bAhw2Eqv5EpnZ8fkPLCMnoAmRieKQttS6saGKN7PToqPoLLFzTWZszwM7pY8zNWPxzeZKp36hIT1iP1R2Eh+ae1GYXJEmdqmbBUJUbh0itpAH7KU7ZxsdzbEViaKxrKjGee8+LOl/gDnX/k4NhPxMRZOS2VIRZdnmU29o06Bw/xilqzLxhI/k7XA9wuLNhkNm9L6ydSBjvMWIMsrFci6CkQtdcAXOnjFxnq2oeTcYUemlx0EAG2t/6fmzMZ6WdG0Kg+ilge8QdwtBw4Nygp9Gl5OvCxLdE+zTvYQVZle0q+Lb8CB6DwGOKM6/qDq+yuze1r7mOysgD5pfM9m9H1+O4Zhis9XZzPGDvfRNKTlMAy/AWnue4s=
+sidebar_class_name: "put api-method"
+info_path: site/docspace/api-backend/usage-api/api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Restore the white label options"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"put"}
+  path={"/api/2.0/settings/whitelabel/restore"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Restores the white label options.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"IsDark","in":"query","description":"Specifies if the logo is for a dark theme or not","schema":{"type":"boolean","example":true}},{"name":"IsDefault","in":"query","description":"Specifies if the logo is for a default tenant or not","schema":{"type":"boolean","example":true}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Boolean value: true if the operation is successful","content":{"application/json":{"schema":{"type":"boolean"}}}},"401":{"description":"Unauthorized"},"403":{"description":"No permissions to perform this action"}}}
+>
+  
+</StatusCodes>
+
+
+      

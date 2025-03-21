@@ -244,7 +244,7 @@ You need to [add the URL](../get-started/get-started.md#step-1-specifying-the-do
   <head>
     <meta charset="UTF-8">
     <title>DocSpace JavaScript SDK</title>
-    <script src="{PORTAL_SRC}/static/scripts/sdk/1.0.0/api.js"></script>
+    <script src="{PORTAL_SRC}/static/scripts/sdk/1.0.1/api.js"></script>
     ...
   </head>
   <body>
@@ -254,7 +254,7 @@ You need to [add the URL](../get-started/get-started.md#step-1-specifying-the-do
 </html>
 ```
 
-The API JavaScript file can normally be found in the following DocSpace folder: **\{PORTAL_SRC\}/static/scripts/sdk/1.0.0/api.js** where **\{PORTAL_SRC\}** is the name of the server with the ONLYOFFICE DocSpace installed.
+The API JavaScript file can normally be found in the following DocSpace folder: **\{PORTAL_SRC\}/static/scripts/sdk/1.0.1/api.js** where **\{PORTAL_SRC\}** is the name of the server with the ONLYOFFICE DocSpace installed.
 
 2. Add the *style* section to the page:
 

@@ -1,0 +1,63 @@
+---
+id: get-the-audit-trail-settings
+title: "Get the audit trail settings"
+description: "Returns the audit trail settings."
+sidebar_label: "Get the audit trail settings"
+hide_title: true
+hide_table_of_contents: true
+api: eJyVU8tu2zAQ/BVhz4Tluj20ugVFkBTNoYidk+EDI60tJhTJkqu0qsB/L5aUFTutgfaix744OzMcgeQhQLWFgHXvFQ3lVd8oKshLpYtGkoSdmJNQbUe46qm1Xv2SpKy5Rdmg5wEeZQMCfnhFCLu4E9BgqL1yXAYV3CP13oSCWizkyRkBiZQ5hAUI8BicNQEDVCOslkt+nU/J6I49IKC2htAQV0rntKoTrPIpcPkIoW6xk/xFg0OowD4+YU0gwHnr0JPKh93ZgzK3KpD1w53a40Z1eNKlDOEBPQjYW99JyqH3K4giQ9rwLv/VGAWQIs1FGzTSUJqzPm4WI1d8WL77k4MHIycJsElzOqTWNlDBAdNmklqooJROlavFspylTbSXR/JKrfZIDJcF9i/oQ9K39xoqaIlcqMpybG2gWI3Oeoog4EV6JR91Zo1zGd9e9pqX07aWOoWjAO45T39cfuLV44mn1qxQHvdXZ81USqe+4gACFJPQ5rQAI5nw897EijJ7m9onlj/bruuNoqFYp22L++v1prj69oW3Qh8yuVoSHtEH6mRy0XTGDdJF+8Ibv4+vzvwn609LEv6k0mmpDENIUoyToFtmAASsFks4uZIC0sgUmqHM0u7EJNIWxvFRBnzwOkYOf+/R84XevWrKf1EcqWUvPOPA3NY1Okri6z5L8eamsaCzC2+uNwkVgz5V7zmpN33w9GPKDCezz4UUEwR+RnGhZRyzN2Kc63PqYsfsnlzNbO9ijL8Bh8m9FQ==
+sidebar_class_name: "get api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get the audit trail settings"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/security/audit/settings/lifetime"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns the audit trail settings.
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Audit settings","content":{"application/json":{"schema":{"type":"object","properties":{"LoginHistoryLifeTime":{"type":"integer","format":"int32"},"AuditTrailLifeTime":{"type":"integer","format":"int32"}},"title":"TenantAuditSettings"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

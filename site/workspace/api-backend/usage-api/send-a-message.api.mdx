@@ -1,0 +1,71 @@
+---
+id: send-a-message
+title: "Send a message"
+description: "Sends a message with the ID specified in the request."
+sidebar_label: "Send a message"
+hide_title: true
+hide_table_of_contents: true
+api: eJy9V1Fv2zgM/isCH4Yd4DZZOxzuspfr2h1W3DYMTfpU5IGxmVibLHmS3CwL/N8PlO3YTpx0PQzXh1SWSJGiyO+jtuBx5WDyABlKNfpIzuGKHMwjcBQXVvoNTB62cFX41Fj5A700+j1hQpaVLGECEayt9ATzch5BQi62MmcxmMCUdOIEiqzaV6ylT4VPSdzeCJdTLJeSEiF1mLP0rSDnzyGCevjWJBuYbCE22pP2PMQ8VzIOboy+ODayBRenlCGP/CYnmIBZfKHYQwS5NTlZL8nxqkz4t+9hfWJ2aJ3KOBVrqZRYkHCkvTBWjCFqtpXa04oslBEsrckGNkOpBCaJJecEi9R7olDkPdne5ufib2Mz9BPxCTMSL5R/ozGjvxKTodQvVv5Na9l5K/WKDXtzaPaDdF6Ypcg65skJb36VebQWNxCB9JS5Tpwbt8oI4vi4X9exeBmjXRgtYpNvfttz9Bd7sjjlyts4Fi8XSupE/H8eZTKjO8rVZmZuT6fg7sp8Kt2uaqQTltWlXglvhrJCZrmxHnVMh9tP6zpzQi4P9m0UQ6pr4yfC24LEWbsQiSUqx1Pa+Ha69WJhjCLU7IYrqsI7esRGYCixAw4duzePK3F74/iKKOEwMWDU53j6LprCjWAZ7rWauryo8qUGmWGPeVWgC/bezz5+ELXHAydA7zFOM9L+xEGa2HeFn/T/CJ4tpaIqoZ46ZwT0HbNcsdCri8vXAcKkIk7vw5ztSu+k+HrlD3rS2u+vB63VED4LqqcMdgXLCDRRMsVHmpkZZXlHtUm7ri7nbsdYLzbHTd0mu3AU2YKJ7XkBvby8DNHxxlLydEQ7ckHLEmZPebqT2qUZJVfug9RffzIinrJ8GgzfW3XaVl+UK8RLH1aY3q52eXuDHsMyR45dcdMULX00yRAIpciGRGYSEktjQz0pVgrVnTYFQYng7dwg6caoSCdob+OBAruuFwU9MnPXPYW8RiWquwtmHenkSPlKd1XwsXM1AAcnQRQbvRpEB7GxbmnuKCaZD0Bka2Gdkk/JMsphkghsGqO2e7ojX1h9Vu91NjMiDS3ZT9nHAQp6jvEb6XLjJGuefTJeLut27GfcCH/si8uNdhWKXYzHpzgRome3f0eBqbL+evzq0OC9xrrFpaQibfKpSWACeRGQF30KExhhLkcX5+NRaJfrHHAjTivgltk+knWhYy64ziD1PneT0WibGufLyZbZs4QIHtFKXKgqArxWebTEQrG7ysSownQZAev0l/8Y/8ncVXa69CkHodpusFffBQdz+Q8FkuFjVxcGEeiAW33dEAeO8l3bjr9rcKJqp8dNK9wiCXeoD83nvOoMu9+L/Ym99qjdqdvVMJB1GoyOuer9Mp43TN4u9Qj5oeXLipS6DNgOG5ZrZHq81fs65KYKbXv00xn3KSawRp80uh9dYmiHh+DfmNzD930Qnw+j9HgPUzuh74JhFft9ANubZVjhKUZSvQyvlIY3rk2WFVr6jZiGAhF376YzcfX5lguBrKsqUKGnJuGdzzDUdp2W/I5sn5Gw98zsPBD/84uzrg5P3/0oVygDZhYVV1a1/8ClAxFcnPOTkOuf/zUPZq5EnXA6V9X8ANvtAh3dW1WWPP2tIMtv6Xlb/PxVRk0NcoZ+pU2IVzjNWZ1mj6iKqnL3sK+MGo2rOKbcn5SddyDt8/0M2sY3C7kAFtf88sY1TAAiMCG4AVDC3BYU6lXB4Z9AtSXDA6NmH12+BnSpB3yoZklvOg72gSaqz8G/fKpBle22wq6y3MlXS0c1duhWSfOlzsuy/BfT2NE6
+sidebar_class_name: "put api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Send a message"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"put"}
+  path={"/api/2.0/mail/messages/send"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Sends a message with the ID specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"id":{"description":"Message ID which will be sent or 0","type":"integer"},"from":{"description":"Mail address from which a letter will be sent. Format: Name &lt;name@domain&gt;","type":"string"},"to":{"description":"List of mail addresses to which a letter will be sent. Format: Name &lt;name@domain&gt;","type":"array","items":{"type":"string"}},"cc":{"description":"List of Cc (carbon copy) mail addresses. Format: Name &lt;name@domain&gt;","type":"array","items":{"type":"string"}},"bcc":{"description":"List of Bcc (blind carbon copy) mail addresses. Format: Name &lt;name@domain&gt;","type":"array","items":{"type":"string"}},"mimeReplyToId":{"description":"Message ID to which this message is replying to","type":"string"},"importance":{"description":"Specifies if this message is important or not: true - important, false - not important","type":"boolean"},"subject":{"description":"Message subject","type":"string"},"tags":{"description":"List of tag IDs added to the message","type":"array","items":{"type":"integer","format":"int32"}},"body":{"description":"Message body as the HTML string","type":"string"},"attachments":{"description":"List of message attachments","type":"array","items":{"type":"object","properties":{"fileId":{"type":"integer","format":"int32","example":"1234"},"fileName":{"type":"string","example":"fileName"},"size":{"type":"integer","format":"int64","example":"1234"},"contentType":{"type":"string","example":"contentType"},"needSaveToTemp":{"type":"boolean","example":"true"},"contentId":{"type":"string","example":"contentId"},"fileNumber":{"type":"integer","format":"int32","example":"333"},"storedName":{"type":"string","example":"storedName"},"streamId":{"type":"string","example":"streamId"},"attachedAsLink":{"type":"boolean","example":"true"},"tempStoredUrl":{"type":"string","example":"tempStoredUrl"}},"title":"MailAttachmentData"}},"fileLinksShareMode":{"description":"Sharing mode for the links of the attached files","type":"integer"},"calendarIcs":{"description":"Calendar event in the iCal format for sending","type":"string"},"isAutoreply":{"description":"Specifies if this message is autoreply or not","type":"boolean"},"requestReceipt":{"description":"Specifies whether to add a request with the Return-Receipt-To header or not","type":"boolean"},"requestRead":{"description":"Specifies whether to add a request with the Disposition-Notification-To header or not","type":"boolean"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Message ID","content":{"application/json":{"schema":{"type":"integer","format":"int64"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

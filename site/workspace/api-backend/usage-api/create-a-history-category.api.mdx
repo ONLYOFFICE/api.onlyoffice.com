@@ -1,0 +1,71 @@
+---
+id: create-a-history-category
+title: "Create a history category"
+description: "Creates a new history category with the parameters (title, description, etc.) specified in the request."
+sidebar_label: "Create a history category"
+hide_title: true
+hide_table_of_contents: true
+api: eJy9Vd9v2zYQ/leI20sHcJHqFtimt8wtkGDAGsQp9hD44SKfLbaSyJKnuJ6g/304UnZk12lQYJgfDJr3w3ffffexB8ZNgOIeSt9kVyaw9TtYaghUdt7wDor7Hi47rqw3/yAb214RrshLiCdcgYatN0ywHJYaVhRKb5y4QQFzT8gUFKqWtqpKyVWJTBs5bA1XiitSDj02xOSDesWGa9Jqkkgr4vLiZxUclWZtaKVMG8M8feko8AVoGI9/2NUOih5K2zK1LEd0rjZlLDz7FKSsHkJZUYNy4p0jKMA+fKKSQYPz1pFnQyFapRY5HLd1ddpI8tP7bIG9aTcwnMDxYpqp+Uwy0+CG/sLmTEXXYlItNqTsOmJzCva5hMF6/uDjLF+szUa/QxLTMm3IwxA/gn9wtg0Jtlmev5wR9H81pVuqkc0jXTM1YW67lPGkUA1r6xvkdPVmBhroKzZO5guvBY2I4Q1yNYkesZr6OhTSWhWnIXF3e5I8H5NcBg3vjvnwfMTUcdAwt7X134/4CX9dl3ku3ovpXH8ch3c/HDZ78xaEBeO+7Gc9H0f9t0fnRrJoeJu//pYdH1scJYZWMVVDXNmV4G1DHHkcDGToTDa7yDNRq5Hj2YRSgfwj+RBFq/M1FFAxu1BkWV/ZwEPRO+t5AA2P6A0+1IlCYktFrbGrpcvalljH60GDxBybf8t/n0k/E6FcCF1TurNyecAUnfmTpFgjnVfJrKGNm30cG6GQfbh90rf3e9wP+vREh2NQD9cT5Xi6nGx/LurSru0059w2Tdca3qlFxFTdvl/cqcuba8GOfEh/UYu+jxgFbjDSeuwkqb/Cc1p0IowHJfgfn4xxGkxfOXM1mrhokTP9yLZ7GRVomF3kola+AQ1jRfJ7381Sj/y5h75/wEAffT0Mcv2lIy8P6PKJbvJr0PupC00/0y7CHRH45U6qEve6S1w50cVB7yMuy5Icf9d3Odmjmw+LO9DwML6QjV1JjMetvJ64hQJAg43oRQ7Hux5qbDedKF0BKacwUnb1mNCfI6HHg3S1N7W7SYXH3NZjI/ItbZ0N6fu0LsNw8E+mZyMOC5W8Za7LYRj+BfqbEW4=
+sidebar_class_name: "post api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Create a history category"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/api/2.0/crm/history/category"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Creates a new history category with the parameters (title, description, etc.) specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"title":{"description":"History category title","type":"string"},"description":{"description":"History category description","type":"string"},"imageName":{"description":"Image name of the history category","type":"string"},"sortOrder":{"description":"History category order","type":"integer"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"History category","content":{"application/json":{"schema":{"type":"object","properties":{"RelativeItemsCount":{"type":"integer","format":"int32","example":"1"},"ImagePath":{"type":"string","example":"path to image"},"Title":{"type":"string","example":"Title"},"Description":{"type":"string","example":"Description"},"Color":{"type":"string","example":"#a7fc00"},"SortOrder":{"type":"integer","format":"int32","example":"1"},"ID":{"type":"integer","format":"int32","example":"1234"}},"title":"HistoryCategoryWrapper"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

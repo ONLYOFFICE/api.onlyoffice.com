@@ -1,0 +1,71 @@
+---
+id: get-tariff
+title: "Gets tariff"
+description: "Gets tariff"
+sidebar_label: "Gets tariff"
+hide_title: true
+hide_table_of_contents: true
+api: eJy9VV1v00AQ/CvRvnJN3DQg8FtFAVUQhGj6VEXV1t4kB7bP3K1DguX/jtbnJHYKblU+8pDEd3M3u7Pe2RIYlw7CG5ih1YsFzBWYnCyyNtllDCEsiZstBTlaTInJyokSMkwJQvhkLGPyUR4U6AxC+FaQ3YKCmFxkdS537XGDzANdtKIUISwhxc0Hypa8gnD8/LmCVGe750ABb3MhcWx1tgQFtME0T+olk9KAacNQVWofzYwyzPgy7o/FowY67kTScOmMaUkWFCyMTZH90tm4zX46Ppu0ac8j1mu6dqJNL7MHDooG+VfILwq6QH5A/ouCBrFH3SPdq7vnFOQJ67pUB8nHQfDyJJicnAaz4EV4FoRBMAz851kwCYOgU4q3hFxYekCQFupfvRNT3LzVCV3pHw9oNMXNYKETGjgPfWR1Xkz6qjPFzcwwJo+jZ4H+Bf65AksuN5kjJxeMg0B+jtpg19mRyZgyrplow6M8QYmzvB+BuftCEYMCjGMt12DyyYplsBaiBSaOFLDmuh5THVnjzIKH5y7/SPzaWBpO19HwUvrAZJ/JFUldLMA8T3RUG8/oizP/mb3O+n/TCvEkOL1fl+sMC14Zq39QXIfnKCqs5m3tu+iiW9m//UqyAJZQfOy71Uwwl8p3b3tH7Aa8K3VKvDKNs9eeLk0FI78/8ouO7Hrn8oVNIIQVc+7C0ahcGcdVWObGcgUK1mg13iX+HZM9n8wCJcMQEhNhUi9XCuRMd/tl8GosOswPGV6J9v66bp77YmCu35M0T9NfHVjTX5ExXzXV0ulsYerTTXXOr14Pz3N9tXVMqWRA1nmd1mMfpeMU6/egIejq19G2PHTOEawJttVNlfJalo3mN7AHi+pz1eh3A2V5h46ubVJVsuzNQmoRaydix/tX7rfBdIftL4OpVe1O7zUmhQBB7OvxZO1p2kPVGs1PJDoanj1c3Xn8RLrWyOyhOkzfJ9K0JmAPTQv1RJ7j6dZD1p2Yf8DXGWf9hO0heWCcHzwGwpt5pWBFGJOt+2FX64hybp1qE8xbjvfuzUw8vJDua9uJN47mj9y728q2rVuPfMZzy7eo8ssTZem9qqr2eL/12xNNbjt0nUBVVT8BQFjr5A==
+sidebar_class_name: "get api-method"
+info_path: site/docspace/for-hosting-providers/usage-api/asc-apisystem
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Gets tariff"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/tariff/get"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Gets tariff
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"PortalName","in":"query","description":"Portal name","schema":{"maxLength":255,"minLength":0,"type":"string","example":"some text"}},{"name":"TenantId","in":"query","description":"Tenant id","schema":{"type":"integer","format":"int32","example":1234}},{"name":"ActiveUsers","in":"query","description":"Active users","schema":{"type":"integer","format":"int32","example":1234}},{"name":"DueDate","in":"query","description":"Due date","schema":{"type":"string","format":"date-time","example":"2008-04-10T06:30:00.0000000+04:00"}},{"name":"Features","in":"query","description":"Features","schema":{"maxLength":255,"minLength":0,"type":"string","example":"some text"}},{"name":"MaxFileSize","in":"query","description":"Max file size","schema":{"type":"integer","format":"int64","example":1234}},{"name":"MaxTotalSize","in":"query","description":"Max total size","schema":{"type":"integer","format":"int64","example":1234}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Tariff","content":{"text/plain":{"schema":{"type":"object","additionalProperties":false,"title":"Microsoft.AspNetCore.Mvc.IActionResult"}},"application/json":{"schema":{"type":"object","additionalProperties":false,"title":"Microsoft.AspNetCore.Mvc.IActionResult"}},"text/json":{"schema":{"type":"object","additionalProperties":false,"title":"Microsoft.AspNetCore.Mvc.IActionResult"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

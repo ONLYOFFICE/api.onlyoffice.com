@@ -1,0 +1,71 @@
+---
+id: get-product-administrators
+title: "Get the product administrators"
+description: "Returns a list of all the product administrators with the ID specified in the request."
+sidebar_label: "Get the product administrators"
+hide_title: true
+hide_table_of_contents: true
+api: eJy1Vttu20YQ/ZXFPLUALcqqA7h8E+ogMBq3hh2jQAMhGJFDaeLlLrO7tK0Q/PdilpQsWb4ICaoHWSZnz5nLmZltIeDCQ/YZrikENguvUnVNeeM4rGCWgK3JYWBrzgvIYEHh0tmiycO0qNiwDw6DdR4SqNFhRYGcoLVgsCLIoO6tuYAE2MgDDEtIoCCfO64FGDIYMNX5GSTg6FvDjgrIgmsoAZ8vqULIWgirWjB9cGwWkEBpXYUBMmiaSEAPWNVaTBDpmI7Hvx3Nc3x39HuJx0dzPM2PTibjd6fzE5yXk1Poupmw+doaT14IJuOx/Nl17iP7oGyphlAU7kSu7jksVViSKq3W9p7NQm2lIoHcmkAmCC7WteY8ZjP96gW83Y/Ozr9SHiShTnIfuHeNi+cysOtpTN/LSWnHw+foma/1p4MugYJ9rXH1V6zhW6xnvbGKFU/ANFrjXAj78j3yX/AtqX/RrDD4WxaewEEfwPApmr0KjQYX5AQT7zCgext02tu9huptRSrQQ3jE/dvxgg3qt/HXlsrzd1L4Q2wX+PA20QU+cNVUP8VDBTfVAVTR7meYrivUByQvmh1C0TitglV+276LvVOypht3ANdlb6turj4eHs0S/fSp0ObWakKzH0xNOZdMXnEZJ0XjyakleoVm8FlZp4wN2+0q9F0C7KfGGq5+mId7mgjyEo2UpyhYcFBfbs2dErWnTZ/C9PqP0T80H01rHl3YgrQfva9qbVdEZ8FC1wnSyfh4f4jeGGzC0jr+TgWIlV/vGFkW6PMv8v7LLckDcIQyuu4dB4KZjOldtCsKjTNeodLDcJbyS8hvDenzM+WHNBWKTXwmC4d8GEECFYWlHRZd3GlhCRmkWHM6GY1TP+zIdO19usOTtpt114GE6O7W67ARJUI7Ry+i7PZrF21Vbk3Ji6bfuJDAHToWNcYVMBzuk1tio2XKL0OoszTVNke9tD5kp+P9Cd1bR4V3ceut/b+W7dOj79ZgIzas+U9aSWP0C33HbNjpubW3TLGsbEobT68VU7OEQc73rtxNYntaHyqM+2+A/UDhlfo9jah93Kr/nxaGBEjHp7VGNuJ50+e/F8ZnyQ4kMBmNY7l7ccCWuKWvtsghgezxRjRLQComOO1GGZ08/taQk0aYPSogqqhgL7+LTWO+mJVfroZb1K9q53L1bFDrUptVlJxu5D9IICph6wrXzWTyERbkojv9+2meUx22Tu5dc0Rxm8768P6TpKWRBG6rrNfT8EPQn/Xqifx6D+S7S1440ba9hLtuY9+/evHEEOHaWnI067ruP5ql1uE=
+sidebar_class_name: "get api-method"
+info_path: site/docspace/api-backend/usage-api/api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get the product administrators"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/settings/security/administrator/{productid}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns a list of all the product administrators with the ID specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"productid","in":"path","description":"Product ID","required":true,"schema":{"type":"string","format":"uuid","example":"aae1e103-bca5-9fa1-ba8c-42058b4abf28"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"List of product administrators with the following parameters","content":{"application/json":{"schema":{"type":"object","properties":{"id":{"type":"string","description":"ID","format":"uuid","example":"{00000000-0000-0000-0000-000000000000}"},"displayName":{"type":"string","description":"Display name","nullable":true,"example":"Mike Zanyatski"},"title":{"type":"string","description":"Title","nullable":true,"example":"Manager"},"avatar":{"type":"string","description":"Avatar","nullable":true,"example":"some text"},"avatarOriginal":{"type":"string","description":"Original size avatar","nullable":true,"example":"some text"},"avatarMax":{"type":"string","description":"Maximum size avatar","nullable":true,"example":"some text"},"avatarMedium":{"type":"string","description":"Medium size avatar","nullable":true,"example":"some text"},"avatarSmall":{"type":"string","description":"Small avatar","nullable":true,"example":"url to small avatar"},"profileUrl":{"type":"string","description":"Profile URL","nullable":true,"example":"some text"},"hasAvatar":{"type":"boolean","description":"Specifies if the user has an avatar or not","example":true},"isAnonim":{"type":"boolean","description":"Specifies if the user is an anonim or not","example":true}},"additionalProperties":false,"title":"ASC.Web.Api.Models.EmployeeDto"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

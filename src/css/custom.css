@@ -402,7 +402,33 @@ main {
   transition: opacity .2s ease-out;
 }
 
+button svg[class*='copyButtonSuccessIcon'] {
+  top: 50%;
+  left: 50%;
+  opacity: 0;
+}
+
 button[class*='copyButtonCopied'] svg[class*='copyButtonSuccessIcon'] {
   top: 50%;
   left: 50%;
+}
+
+.conversion-table table {
+  font-size: var(--base-text-font-size-12);
+}
+
+.conversion-table table td {
+  padding: 0.3rem 0.5rem;
+}
+
+.conversion-table table td:not(:first-child) {
+  opacity: 0.8;
+}
+
+.conversion-table table th {
+  font-weight: normal;
+}
+
+.hidden {
+  display: none !important;
 }

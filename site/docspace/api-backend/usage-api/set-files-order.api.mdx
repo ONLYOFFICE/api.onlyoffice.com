@@ -1,0 +1,71 @@
+---
+id: set-files-order
+title: "Sets order"
+description: "Sets order"
+sidebar_label: "Sets order"
+hide_title: true
+hide_table_of_contents: true
+api: eJy1VE1v2zAM/SsBz1qcpMFa+Na1HVBsw4qmOQVGodhMolaWVElumxn67wOlfDhNA+yySyJTJEW+98gWPF86yGfwXUh0vawX/6FgoA1a7oVWtxXk4NDHm9+2QgsMLL406Pw3Xa0hb6HUyqPydOTGSFHGyOzJaUU2V66w5nTya4OQg54/YemBgbH0jhfo6FZ4rF3HjVvL18CO7CfCdSwub6Hm76JuashHw/H5+OLs6/icQS1UMg7ZNo9QHpexnwpdaYWhqiGHbZcLbWvuk+PZCBjgO6+NRMiHo7NxYIDK2zUB1B6n/LfghxjWAioqbTZko+KT8o5yeeEpE1xOrvqRmP6VthiPN7u0ITDgVSWoKy7vOlgtuHR4MsulEb90hdL17xPN1173Iybu1mPdMU7WzmPdv41VBQaqkZLPKae3Df6H90++Hegxi85o5ZIaRoMB/X3CbE+4nkNPBY8Hw2OnqeKNX2kr/mAVQXRYNlb4NeSzFrgrH+n+8RnJABZ5BQzerPAIRSg+immC3vX0RlE1+pWmgTJN1C/3K8gh40Zko/4gWxAI2dbZoX1F6+KrjZWQQzvnDqdWhiPJTqJvr9RqIZZNmlxg8MqtIEIiIpvg1PCCN5IUtfLe5FkmdcnlSjufXwyOkl8n7970/ichXewRmdBkp+yHuOxn2IgfSEOseB2/u24MBOUvtX4WSa+0Mu73y+VmOzO75TDbzTmNUWcEO59pqIahCPTAQsdytlozgnBB61Jvr1G4Rjtf87isNnUe0HYAR2fdHXptOvb47jMjuVCUuUmAJ6ZnBAcwGPUJ5Mg2sE0/BQPCn5zaHc+BzC8NWpJaseeTvgKDFfIIxayFiDpcpcq+RATIXTaJhA9LmTjcafFu+gAM5ptdXuuKQix/oz3P3yAHqjE2H4mOthYkV8uGL8k3pYzj3lCbXfITzZsDFbq9UutugYeqSM3Qb2AnIto2KSuEnX+6OhmxAWvrTfQUIYS/21RgYA==
+sidebar_class_name: "put api-method"
+info_path: site/docspace/api-backend/usage-api/api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Sets order"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"put"}
+  path={"/api/2.0/files/order"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Sets order
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"items":{"type":"array","items":{"type":"object","properties":{"order":{"maximum":2147483647,"minimum":1,"type":"integer","description":"Order","format":"int32","example":1234},"entryId":{"type":"integer","format":"int32","example":1234},"entryType":{"enum":[1,2],"type":"integer","format":"int32","title":"ASC.Files.Core.FileEntryType"}},"additionalProperties":false,"title":"ASC.Files.Core.ApiModels.RequestDto.OrdersItemRequestDto.System.Int32"},"nullable":true}},"additionalProperties":false,"title":"ASC.Files.Core.ApiModels.RequestDto.OrdersRequestDto.System.Int32"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Order is set"},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

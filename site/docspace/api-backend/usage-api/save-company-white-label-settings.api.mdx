@@ -1,0 +1,71 @@
+---
+id: save-company-white-label-settings
+title: "Save the company white label settings"
+description: "Saves the company white label settings specified in the request."
+sidebar_label: "Save the company white label settings"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVlFv2zYQ/ivEPWuW67XAoKelWR+KBV0QN8hDYAQ0dbbYUiRLUk48Q/99OFKSpTp1umUviUTfffru7rs7HiDwrYfiHpYYgtRbz3J2g2vHdSn1FlYZGIuOB2n0xxIK8HyHl6a2XO/vKhnwiq9R9b6QgcNvDfrw3pR7KA4gjA6oAz1ya5UUESn/4o2mMy8qrDk9hb1FKMCsv6AIkIF19N0g0Ue7/gMvWorE7ROvkV5r/nSFehsqKBbv3mVQS92/z7MeygdHsWZQohdOWqIIBXRhMk1YGehGKb5WCEVwDWaAT7y2KvqbGlnApwBtBl6GV395SRgZbIyreYACGid/ngDWXKrXMvhAIIyXpUPvx1QS+jkyy32pcf9wY9bogn/7e2UC+cyEqYlej/lKghcDtZ9Mi62MfnVhriPIKB0BzydjQuGjv5ICtTdupOO1MQq5PtWARSE3Ej2TG8ZZp2smPeNMdTDMOKYNNcHwRSLQpjRLQuLqetQfG648ZhBkiOwulpezO1zPLo3D2bGdZz9u8Behn2+hR0JiiqCYPw6L/8zjznFr0UHbEiGH3hrt0wBYzOf0b8rjfUoy23HVYMEoSZTWUCEbxhul1jdCoPebhqr6b2dXX8lE6u1zPIYhKz3D2oY9RMs3p5a3mjehMk7+jWUy+vXU6JNhFl0tvZdGexbiK2mThYqEIqIdsfEoGifDHor7A3AvHgj94SvSATjkJWTw6GjsrNrViRT5Dn1MljhTT+Y7xZZM6mjd7YIZZFBjqAztD2t8HNqc+g1ybmW+mM3zHiR3w+7Ju48BsXc7dD6Sb5yCAg5r7vHWqfa0b6ItE0Zv5LZJpYUMdtxJatGokc45JXTDG0WtXIVgizxXRnBVGR+K3+Yn4H8ka3Z7c0VlXh0TuyQ1JPRpegd5cCv/RIom7pNiapaBJHxhzFeJsWIks5vjMv3QN/h0GU7W3Wja9HtoctRthrMTejSgJ77d+JycjedZP3ek3pgYdN/allYXVS9lcLeIw9j4UPPYRl02SGMvSuz7eozuF/+HSLtCUXS5VVxqotoknSTB3lMVIYPFbB5lObr2DFemrC8KXZ5ISOR2GATb0vG3Bh213uooTHprM6iQl+ii0qN84DJF+MtnIkfmqklq+m4itVnvcSEE2nDWdjXqyOu/lp8hg3V3Y6tNST6OP1JY/BEKALoEkneUXDw7gOJ62/At2SbMuBoaytJY8knc3QNF1f8UG3tgOO2FFAf9paie9TgcUj+17WCffvqhR5fZ3pqqu2rb9h+a68+M
+sidebar_class_name: "post api-method"
+info_path: site/docspace/api-backend/usage-api/api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Save the company white label settings"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/api/2.0/settings/rebranding/company"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Saves the company white label settings specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"settings":{"type":"object","properties":{"companyName":{"maxLength":255,"minLength":0,"type":"string","description":"Company name","nullable":true,"example":"some text"},"site":{"maxLength":255,"minLength":0,"type":"string","description":"Site","format":"uri","nullable":true,"example":"some text"},"email":{"maxLength":255,"minLength":0,"type":"string","description":"Email address","format":"email","nullable":true,"example":"Sydney_Roberts4@hotmail.com"},"address":{"maxLength":255,"minLength":0,"type":"string","description":"Address","nullable":true,"example":"some text"},"phone":{"maxLength":255,"minLength":0,"type":"string","description":"Phone","format":"tel","nullable":true,"example":"some text"},"IsLicensor":{"type":"boolean","description":"Specifies if a company is a licensor or not","example":true}},"additionalProperties":false,"title":"ASC.Web.Core.WhiteLabel.CompanyWhiteLabelSettings"}},"additionalProperties":false,"description":"Company white label settings","title":"ASC.Web.Core.WhiteLabel.CompanyWhiteLabelSettingsWrapper"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Boolean value: true if the operation is successful","content":{"application/json":{"schema":{"type":"boolean"}}}},"400":{"description":"Settings is empty"},"401":{"description":"Unauthorized"},"403":{"description":"No permissions to perform this action"}}}
+>
+  
+</StatusCodes>
+
+
+      

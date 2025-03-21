@@ -1,0 +1,63 @@
+---
+id: get-room-index-export
+title: "Gets room index export"
+description: "Gets room index export"
+sidebar_label: "Gets room index export"
+hide_title: true
+hide_table_of_contents: true
+api: eJyVVVFv2zgM/isCn1U7TYPDzm9d0g3F7rYhbZ+CYFBsJtEqSz5J7toz/N8HSo5jL8u6vSSyRH4kv4+iGvBi5yBbwTup0LGULY0pHaw5mAqt8NLo2wIy2KGnk1td4PPNc2WsBw4WXWW0QwdZA9PJhP4KdLmVFTlCBp8egUNutEft6VRUlZJ5gE2/OjJpwOV7LAWt/EuFkIHZfMWc8CtLSXgZA8hiYOO8lXoH/Id4twVw0LVSYqMQMm9r5IDPoqzoE/5+M/sLWg5orbGvo90Es18BOlMi8/jsCbVCm6P2YocDaKk97tCeYH8+GnPYGlsKH62vpjCIcDm9mrUcpJsb2vA4JGFjjEKhT1lwLO/NB2CUfcvBeeHrQKnR+GkL2aoB1HVJbTC3KKLXstY6kjIfYM2FzlGF5TshFW2u+Ss0rjpQdsG6FWcdOrs4rDjrw5DdYc3ZISLtdkvOutjs4rBaD+vsq2h5X9mEX/Ipv+KzY7rnpFlNhpleDnOcjnO7GiU1O5POpKWY0ofUru/mydyUpdHJ/d6iKKTeJQtJ1G1qj8W9cI93UaA23LBaebqbt8Xp7VqGU7aVCpn8Zec3VGzsJn6Qadi9vO+l2CSj0B9Fia9flmEymjx++94cIz1Y9WeBaqt+N07LQRSFJBChPg8my1Yoh2OBwjBM5sZicl3Jf02ByiXLbtotvEkWJq9L1P5tLVWBlkRbeANtS2Fmk8tTrR60qP3eWPk/9SXdQsxrK/1LuH7C5V/o/Msj0gZQYwCHb1Z6hDX1zxjtPXrHrDElkzSRGR5Gcol+b7qBTRNU+D1kkIpKptNkkhJpLiVHlwbP3tGhfULrQjbEagbNRjhSpD1R4C7YstzordzV8ZUADk/CSpIhjJbOORKxFbWi8bb3vsrSVJlcqL1xPnszOQFfRGv2sPyH+FwfmbqjhyKij/nqO0ZU8gO+UEeElh2bcZCEnxvzKDFIIPXWBO+D9JWkMtC6mMrTNIx143wpwlPVwZ5lf1RJc3z4znt0iVOLppUSUlPEOvIWxVtRVcBhmhBXQUB6esMzTSUcRVxzIFLJpenFa2n7vxot9dX6KBJ9tRz2KAq0QfVAJVznOVY+qKnqyOkPTzZJ0rfZ+5t74EAcj2WIhHcLQj8c6Zch9lifmAH90uD+qUfTRI3btrePR2c9ugoP1sTwum3b7+ycDT8=
+sidebar_class_name: "get api-method"
+info_path: site/docspace/api-backend/usage-api/api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Gets room index export"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/files/rooms/indexexport"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Gets room index export
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Ok","content":{"application/json":{"schema":{"type":"object","properties":{"id":{"type":"string","description":"Id","nullable":true,"example":"9846"},"error":{"type":"string","description":"Error","nullable":true,"example":"some text"},"percentage":{"type":"integer","description":"Percentage","format":"int32","example":1234},"isCompleted":{"type":"boolean","description":"Is completed","example":true},"status":{"oneOf":[{"enum":["Created","Running","Completed","Canceled","Failted"],"type":"string","description":"[Created - Created, Running - Running, Completed - Completed, Canceled - Canceled, Failted - Failted]","example":"Created"},{"enum":[0,1,2,3,4],"type":"integer","description":"[0 - Created, 1 - Running, 2 - Completed, 3 - Canceled, 4 - Failted]","example":0}],"title":"ASC.Common.Threading.DistributedTaskStatus"},"resultFileId":{"description":"Result file id","nullable":true,"example":{"int":1234,"string":"some text","boolean":true}},"resultFileName":{"type":"string","description":"Result file name","nullable":true,"example":"some text"},"resultFileUrl":{"type":"string","description":"Result file url","nullable":true,"example":"some text"}},"additionalProperties":false,"title":"ASC.Files.Core.ApiModels.ResponseDto.DocumentBuilderTaskDto"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

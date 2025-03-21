@@ -1,0 +1,71 @@
+---
+id: terminate-remove
+title: "Terminate the data deletion"
+description: "Terminates the data deletion for the user with the ID specified in the request."
+sidebar_label: "Terminate the data deletion"
+hide_title: true
+hide_table_of_contents: true
+api: eJy1VE1v2zAM/SsCz0qcZB3Q+da1OxTbsKJtTkVQMDYdq7MlTZKbZYH/+0DJcdIWBXbZJbHEDz0+PnIPATce8ge4IWMbEplYenKixICwkmAsOQzK6OsScgjkWqUx0C215plAgqNfHfnw2ZQ7yPdQGB1IB/5EaxtVxNjsyRvNd76oqUX+CjtLkINZP1ERQIJ1/FJQ5NnaeXL84Ojng1N6AxJK8oVTlrNCDhHq9ZXY1sZTxCyUF47Qe7XRVGYu4ixBQmVciwFy6DrFZ/qNrW04NyLNaT77MFkX+HHyqcL5ZI3nxeRsMft4vj7DdbU4h76XgGWp+GFsbk7QVth4eg3sNtEiLDpsKZDzojJOHPhTeiNCTSPSlnQQ1pmCvAcJQYWI7OLucpraMr2w6rspqfHTIfVVMNP7YzsOd9D3DNWRt0b7xOZiNuO/lwh/fIVewtls/ta01NiF2jj1h8pYuKeicyrsIH/YA/rike2PP4kvwBEyn1unAsGqX72mYgTpY8mxSSU1xOZESk2CGy62KtTxdH0lvKVCVYpKofRAVSxxChJaCrVhOdouSgdDDTlkaFW2mM4yGxkbWp+NkgWuwz2T87GMzjWQw36Nnpau6d9I6y76isLoSm26NAMg4RmdwnWTiB2CE4MVdg3rqw7B5lnWmAKb2viQn8/eJL9K3mJ5+40btjpSfMcTkrK/JHocBbTqK+1AgsY2nk/dJCjOXxjzU1HsHY/e7XFIvxxkfxyyfxwATl2ZCOQgT6uYEXI+VfW8YC9rfGgxjvuAcFTAWwG8ZuZkg/wH4QwMBvodMtug0oy3Sw1MKnpgekHCYspNS0qKW25Yd0c1rSRwdzlkP6qo5+tfHTmejNVRLXzqJdSEJbkov9hTuEzFTu4ZGLs3XWrxq9XJChlVf7O8BwnrYeO2puQQh1vGiVvIAXhtc3CUUbzbQ4N60+GGfVPKuNE6LvpUWklEwwcDPZj07hTgS82lYvi3l+9E7PdJt30/+ifTuxEDWQdvbtaq7/u/9ZZKrg==
+sidebar_class_name: "put api-method"
+info_path: site/docspace/api-backend/usage-api/api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Terminate the data deletion"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"put"}
+  path={"/api/2.0/people/remove/terminate"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Terminates the data deletion for the user with the ID specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"userId":{"type":"string","description":"User ID whose data is reassigned/removed","format":"uuid","example":"aae1e103-bca5-9fa1-ba8c-42058b4abf28"}},"additionalProperties":false,"description":"Request parameters for terminating the reassignment process","title":"ASC.People.ApiModels.RequestDto.TerminateRequestDto"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"OK"},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

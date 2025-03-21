@@ -1,0 +1,71 @@
+---
+id: tfa-settings
+title: "Update the TFA settings"
+description: "Updates the two-factor authentication settings with the parameters specified in the request."
+sidebar_label: "Update the TFA settings"
+hide_title: true
+hide_table_of_contents: true
+api: eJy9Vttu4zYQ/RViniVb9tqNV2/upi2C7raLOEEfDGMxlkY2dyWSS1LJuob+vRhKvidBUqB9sKzLcObM5RxyCx5XDtI5zMh7qVZO9MXdr1PhukdYRKANWfRSq5scUvAF7mwhAkvfa3L+Z51vIN1CppUn5fkWjSllFtb1vzqt+J3L1lQh3/mNIUhBL79S5iECYzmKl+QOX7egFf1ZQDrfAqm6Yph/aEUQwazi4FNjGF/ny3kr1QoiyMllVhqODCnMeYmIBf9FYlY5EfM1ElNjRMzXBURAP7AyJbsJEZpoHzKJBtHwEEUqTyuyl2GSfYzBLsLwCf9Jw76kD7Gmsw+9v2jZmxrJv086p7J325bUXXvduyvw6PGOITQRyPyohM+kfe/IiptriKDQtkIPKdS1zCECVZclLjm+tzUdp45IAxok7+JlhuP4fYGDeImTLB4Nk/FkOcJlMZxwfG9r5ym/MUfNArQWNxCB9FS5S3zNOcCP0nmhC9E5EzefBea5JefIvYRyDk5XJDz98LBoIqhQ5ei13XDGbwB0XphnAdbsVzyutahq5/lR+DUFljyQlUU35C9jvhrjuLgajePip/dX8Wg0mMTLd5M8TgpK8uHVFQ3Hk9N0frO6fkuBX53PKjj+nxJqIsA8l+wPy89HJC+wdHQO8Vh5RCctwqDFijw3918zB5qGoVhyRivXiswwSfjvDIGtScgiFGSve0I64eosI+eKuoTozTK31LokVB2KUTK4DHyvsPZrbeXfFHo3SsaXRrNPs0N90JJQ2gt8QBm61OfyHeF5wRQYh6OsttJvgsCiy74wgi/fiF+AJWSxeLTSEyxYtM7wmhw9uVAo/6jjAjOvrWAXpPwFgkfp18H20E3hDGWykJQLqcK3ruM9iKAiv9a83Zg6bA/o15BCH43sD3tJf+e37wtEY4CTsQ+B//Mt1LaEFLZLdHRvy+ZCG2fBVmRaFXJV2920P6CVXJwwHd3itgcF1iUTa+29Sfv9UmdYrrXz6SS5cH7dWov724/c78WhzjMei9b7abUPFDfyd2KOK6zC87FZBJL9Z1p/k20Ded5uDxvwLzt27v11uyXvF68T91NtP5HaS6V9rQg8IWpvEESpCh1S2jHfSO4VWdfW+2HIdDHa+QoD+7ratQO6VzZ3OLOc9OvozPJfz3TXFC5n35QoFQOv2xlrB3zOEwARDHtJGOk95G7MFxHw2LHhdj/eDb/+XpNl3i4OY8xPTQRrwpxs4EUYNvjQ5huH0wSbl3U7e2dCxmegdsU0y8j4F20XR5T9fH8HESy7I2Glc15i8ZGPi/gIKQCfKXlx4EJ4t4US1arGFdu2LsPeUXNZjvnRMqG74aR2n9TmGOApcdo0+MpJPbliu23J1zR7+/bTsyu6wu6suZ2Lpmn+Aabe0JI=
+sidebar_class_name: "put api-method"
+info_path: site/docspace/api-backend/usage-api/api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Update the TFA settings"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"put"}
+  path={"/api/2.0/settings/tfaapp"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Updates the two-factor authentication settings with the parameters specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"type":{"oneOf":[{"enum":["None","Sms","App"],"type":"string","description":"[None - None, Sms - Sms, App - App]","example":"None"},{"enum":[0,1,2],"type":"integer","description":"[0 - None, 1 - Sms, 2 - App]","example":0}],"title":"ASC.Web.Api.ApiModel.RequestsDto.TfaRequestsDtoType"},"id":{"type":"string","description":"User ID","format":"uuid","nullable":true,"example":"aae1e103-bca5-9fa1-ba8c-42058b4abf28"},"trustedIps":{"type":"array","items":{"type":"string"},"description":"List of trusted IP addresses","nullable":true,"example":["some text"]},"mandatoryUsers":{"type":"array","items":{"type":"string","format":"uuid"},"description":"List of users who must use the TFA verification","nullable":true,"example":["75a5f745-f697-4418-b38d-0fe0d277e258"]},"mandatoryGroups":{"type":"array","items":{"type":"string","format":"uuid"},"description":"List of groups who must use the TFA verification","nullable":true,"example":["75a5f745-f697-4418-b38d-0fe0d277e258"]}},"additionalProperties":false,"description":"TFA settings request parameters","title":"ASC.Web.Api.ApiModel.RequestsDto.TfaRequestsDto"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"True if the operation is successful","content":{"application/json":{"schema":{"type":"boolean"}}}},"401":{"description":"Unauthorized"},"405":{"description":"SMS settings are not available/TFA application settings are not available"}}}
+>
+  
+</StatusCodes>
+
+
+      

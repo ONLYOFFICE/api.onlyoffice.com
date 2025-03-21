@@ -1,0 +1,63 @@
+---
+id: get-portal-capabilities
+title: "Get portal capabilities"
+description: "Returns the information about portal capabilities."
+sidebar_label: "Get portal capabilities"
+hide_title: true
+hide_table_of_contents: true
+api: eJydVV1r40AM/CuLnpek9OnwW2hKKdejpblyD6EUxVbibde7e7tyaDD+74fWudZJjvZoIOQDSSPNSOMOGDcJiiVcYMCVsYYNJXjU4ANFZOPddQUFbIjvfGS0B2EaIqXgXaIERQfnZ2fyUVEqowmSCwUMaao8zCu9Y3Is4RiCNWWGmj4nyekglTU1KN94FwgK8KtnKhk0hCiN5SpFB7bCcOlwZakaBa+8t4QO9FEri0ClWRtKyqwV16Ru5rM7lYjZuE1SGEnRUEz5qJwXPHrFJliCYo02Ua8z5Nw3aNwIMXE0bnMCeFNhUNUQrMG11kp1KDi2NCoNyTekmF4Z+jzh1lQU06g+xog70GCYmnSK258Am8TKr9V7rQ/glyP8x15DSv4GV2Q/n29xp6zfGKdsjv9oROnRY8v1F+W6nbVcK5M+UEggh/Yf4v80v7hVD/c3E3Uty2CSChixIaaYYZrAOy1b4vKqSPTBplQmDYNoWPvYIEMBbTSfkmAqcmx4t6C4pfgRG4eD9Rqwqow0j/ZudAV5MTWw4YwxW1xMftFqMgtG3j98RXZyvz/TOfvJ+ILn7KGX1zE598RtdCmPbtwwoPFO4cq3rMLpTU9AQ0Nc+71byKki11DAFIOZnk/OpkcWkDIB4j0dtCIYdCtM9BBtf6pVjlWld2uzaQdfAg1bjEb4yyexTx4caI2tFUVq5lBMp9aXaGufuPh2dlJ8PkTLMggZj9Ja2UbRSGxoqI6pfJL1fXqh3fgwg/lOcpkOm/x7HKZBTAJK718MgZAsVObsv2IFWRihYWhle54dwCduMPvLvuwV/ZP041G6d1/9moL7qcQKpsGKbfV6EKfby7mUkUHD+USILI8eGkKxxHRvUvby9++W4g6K5eO7ZPKr11ATVhTzDmRiYVaWFDhra9uB4aPHgwj0tmlXlz+h7/8ALtdafw==
+sidebar_class_name: "get api-method"
+info_path: site/docspace/api-backend/usage-api/api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get portal capabilities"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/capabilities"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns the information about portal capabilities.
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Portal capabilities","content":{"application/json":{"schema":{"type":"object","properties":{"ldapEnabled":{"type":"boolean","description":"Specifies if the LDAP settings are enabled or not","example":false},"ldapDomain":{"type":"string","description":"Ldap domain","nullable":true,"example":"some text"},"providers":{"type":"array","items":{"type":"string"},"description":"List of providers","nullable":true,"example":["some text"]},"ssoLabel":{"type":"string","description":"SP login label","nullable":true,"example":""},"oauthEnabled":{"type":"boolean","description":"Specifies if OAuth is enabled or not","example":true},"ssoUrl":{"type":"string","description":"SSO URL. If this parameter is empty, then the SSO settings are disabled","format":"uri","nullable":true,"example":""},"identityServerEnabled":{"type":"boolean","example":true}},"additionalProperties":false,"title":"ASC.Web.Api.ApiModel.ResponseDto.CapabilitiesDto"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

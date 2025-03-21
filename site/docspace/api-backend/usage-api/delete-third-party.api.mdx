@@ -1,0 +1,71 @@
+---
+id: delete-third-party
+title: "Remove a third-party account"
+description: "Removes the third-party storage service account with the ID specified in the request."
+sidebar_label: "Remove a third-party account"
+hide_title: true
+hide_table_of_contents: true
+api: eJy1lE1P3DAQhv+KNadWcsmycKhyQ1oqrcoB8XFCK2SSycYliY09WdhG/u/V2NkvFrj1kg9nZjzzvk88AKmlh/wBfukGvcjEXa1d+cMqR2uhO8KlU6RNBwsJxmJ6mZeQQ4kNEsbwa44GCVY51SKh44oDdKpFyME6s9IlunkJEnTHK4pqkFCiL5y2sXwO12OYmM9AgsOXXjssISfXowRf1NgqyAegteWqsTd0IKEyrlWUls6mIAHfVGsbhPx0enYewoKreWs6j54LTCcTvh3uvj92ZZptH4XpCDviBGVto4soQPbHc9awayuEECScT06PS993qqfaOP0XS+Aoj0XvNK2jSMoXj/z98Rl5ARwq1unVaUJYcPOH1W6wNSv0gmoUtNe0J+PUEoVHt9IFClUUpu9IvGqqY/B8JrzFQlcaS6G7uMYqo6cTkNAi1Wbna3STasghU1Zn05NJVjEhWdwzbpkNO2cD8FhutbG+dw3kMDwpj/euCUdm38ZYUZiu0st+REzCSjmtnprk05icBK1U37DHNZHNs6wxhWpq4yn/OTkqPkvR4v7mCkL0f6P4LduVqh/qvsVKWf0bmeUR3oOwEd/CmGeN0UrdVSZma2Lg4MJqHgOdT62sphAkWOOpVRGYsWxyUagDC0fL3s8z7CD8b+6P0xO+UWYbpTtuu0/iJw4eWBqQMD1hwSMLnLelASTke3/6QgLbw3nDFoPAyy89OiZ9sbM7IlNqz88l5JVqPH4hwreb8XD4Lg4PjQ+n2BjbrSNgTc9vICH6vn84hUWQUKMq0cWGUsBFUaClvdSjY4AB2/49s8ury7tLkMDQHHKVCBofeIMPO3sHXGqCr0F+kjEMCdoQtvHp06cZ45CbaNZpEUL4BxN1Erc=
+sidebar_class_name: "delete api-method"
+info_path: site/docspace/api-backend/usage-api/api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Remove a third-party account"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"delete"}
+  path={"/api/2.0/files/thirdparty/{providerId}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Removes the third-party storage service account with the ID specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"providerId","in":"path","description":"Provider ID","required":true,"schema":{"type":"integer","format":"int32","example":1234}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Third-party folder ID","content":{"application/json":{"schema":{}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

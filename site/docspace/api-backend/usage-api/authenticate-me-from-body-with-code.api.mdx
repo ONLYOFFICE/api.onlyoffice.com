@@ -1,0 +1,71 @@
+---
+id: authenticate-me-from-body-with-code
+title: "Authenticate a user by code"
+description: "Authenticates the current user by SMS or two-factor authentication code."
+sidebar_label: "Authenticate a user by code"
+hide_title: true
+hide_table_of_contents: true
+api: eJy9WFuP2kYU/iujeWpVA152W6V+KiWpUqXJImCbhxWKBvsYT9aecWbG7FLk/16dGRtsrt4qKhLC2Oc+5zsXb6lhK02DRzoqTALC8JAZLgVdeFTmoOyfPyMaULZ/Dh/hDyWz32W0+cxNMpYRUI/mTLEMDCgUt6WCZUADGrqHXNCA5swk1KMKvhVcQUQDowrwqA4TyBgNttRscuTRRnGxomW5cMSgDepCilAKA8LgJcvztLJ28FVLgfeORMnlVwgNWqfQHcNB49NCg/pkDTxU6tEIdKh4bqMQ0AcNCl0hAwIZ4yn1qCjSlC1TqO2HF5blqZUhMyAGXgwtMR5aP0sVXdcxqSkvyV7HWTxc3998yJvC3zOddFdAEiTv7oGSax6B6qCgoiSWrLMCFoag9Vw+gXiFDsdFjGXrrEuD4izl/0A0UTLmaYezn+1YCCYMySvGzjpt8l9VM3+WvZiFRirCWiAkFXheoe0eYXxdJUKWxFKRFRjDxYqw14dTay6bx7aUMgUmTkTRUpIl0xAdeigVERLxuVODWq0zIuYqe8tMBzg7ZF71+h2SERZFCrSmHo2lypihAb2O7NkmErD5MpVLUEbf/ZZIgzz9UGYYjZgrbTrEYuRSlwlMYlkIYw/BJECsBGJ4BvuYnDWnitETbK47/QE2XU8VERlFHBlZOmlEOGapBo8abizLaDbuf4Zlf5Rz/H6UEaT9qSvU+q2R/XHj8Eqs4SHLTZiwubV0S6WA+9h2CRBFht3nLcSsSNHpkYiU5NHfQ+wa9zP7m4wdP3aly94+VoJIj1RXHtlJJL39tUescNJzvx6pdZDe7nLRzMudiaW3M9v3bryhd7u3igsDK1DHZvlNg27ahjSMuD2n3cdeeBj/sVTQn7aC24z2FHQuhe5QgRSMR5P5+P2IqJqne9UpUlOoDkrGFeF3SsYDYLXLSjU1kMZM8or0RWGN/7QsSxtXFxpbcYa+jz8XjYgw/b3vNbKYbl3ywIbrVZ0twwhuhrd3P+NpwkvOVaXwctNCwcSSV5p4Bs2aGjEDvermXtvQ99/0/LvejT/3fwlu/cD3+777/OTfBb5ve0umu/SVHEIec9CEx7aEnmiehGuiQRiy3JDZx9mJdmOzCWedRAr4JHkXuEyQlogiW1qon48tOmNi9l+cMY2hYJ816E+BbfS8IyZmH7r0hfNTx9OVjkH37flBdWi7VTdwwm2rJQ/Tv5q5Uij+P/UoB+Ea5HunbTrvsX53Ct710uCRevrGY6iucRDH04EsNxtqRdwci8Bt4jDcMeMpRI7l9nRR2eWykIawNeMuTsgy/PWYZS4lyZjYkFSuuCDMGLRK98kkBaaBGLUhbMW4ICkzoGxQz1YR0DYfw0IpBJIdhPdoMhdn1z71aAYmkbhA5lLbqoZLYEAHLOeDYd8ftNkGW+QrqZ3X1/UuWWCa0S1OkA8qLU8N6mtQxCblqnAFiXp0zRTHQNlqUjG7aLlOHtDEmDwYDFIZsjSR2gRv/CPh9USBOVvanVRDWChuNjMs3U460+EX9ORLeyZjOa/mL7cNt8iqrTiU8omDPQTsCdP9wvuuBkBzYW2AobljNvfDw/WwzbJb6lq3W6tY68mJxan13C05R7eqTeRAVLU0OIAfzPjVFH9x1t6N2k6CjXZ7HjkYNhuT5YnBqG11Pcm0BXIRS3ukdWXJsVhhbrr8WA/triy1yZht0NVZNzFE2A441U7XyrHGe43vCb0qCdGRQZ4yLtDQwmHAwfARM5R6dNjHvG+LoR4NrLELjyI2kHq7w2CJt78VoDY0eFzssWbxGnGN19HpYa3p7Q/T6mXQj+ScwTWUxMZCOi1sD6rP3lpYLkqPJsBsWj9uq0djp6U3d+8katajIQwHeseB61luLtIuGhVtcj+bU48uq3dTmQOCYs+YbOzZmSmt17ZI2HtbmjKxKtgKaZ1M/PwLa8zAjA==
+sidebar_class_name: "post api-method"
+info_path: site/docspace/api-backend/usage-api/api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Authenticate a user by code"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/api/2.0/authentication/{code}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Authenticates the current user by SMS or two-factor authentication code.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"code","in":"path","required":true,"schema":{"type":"string"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"userName":{"type":"string","description":"Username / email","nullable":true,"example":"some text"},"password":{"type":"string","description":"Password","nullable":true,"example":"vfmf2vO1Kp"},"passwordHash":{"type":"string","description":"Password hash","nullable":true,"example":"some text"},"provider":{"type":"string","description":"Provider type","nullable":true,"example":"some text"},"accessToken":{"type":"string","description":"Provider access token","nullable":true,"example":"some text"},"serializedProfile":{"type":"string","description":"Serialized user profile","nullable":true,"example":"some text"},"code":{"type":"string","description":"Two-factor authentication code","nullable":true,"example":"some text"},"codeOAuth":{"type":"string","description":"Code for getting a token","nullable":true,"example":"some text"},"session":{"type":"boolean","description":"Session based authentication or not","example":true},"confirmData":{"type":"object","properties":{"email":{"type":"string","description":"Email address","format":"email","nullable":true,"example":"Sydney_Roberts4@hotmail.com"},"first":{"type":"boolean","description":"Access an account for the first time or not","nullable":true,"example":true},"key":{"type":"string","description":"Key","nullable":true,"example":"some text"}},"additionalProperties":false,"title":"ASC.Web.Api.ApiModel.RequestsDto.ConfirmData"},"recaptchaType":{"oneOf":[{"enum":["Default","AndroidV2","iOSV2","hCaptcha"],"type":"string","description":"[Default - Default, AndroidV2 - AndroidV2, iOSV2 - iOSV2, hCaptcha - hCaptcha]","example":"Default"},{"enum":[0,1,2,3],"type":"integer","description":"[0 - Default, 1 - AndroidV2, 2 - iOSV2, 3 - hCaptcha]","example":0}],"title":"ASC.Web.Core.RecaptchaType"},"recaptchaResponse":{"type":"string","description":"reCAPTCHA response","nullable":true,"example":"some text"},"culture":{"type":"string","description":"Culture","nullable":true,"example":"some text"}},"additionalProperties":false,"description":"Authentication request parameters","title":"ASC.Web.Api.ApiModel.RequestsDto.AuthRequestsDto"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Authentication data","content":{"application/json":{"schema":{"type":"object","properties":{"token":{"type":"string","description":"Authentication token","nullable":true,"example":"abcde12345"},"expires":{"type":"string","description":"Token expiration time","format":"date-time","example":"2008-04-10T06:30:00.0000000+04:00"},"sms":{"type":"boolean","description":"Specifies if the authentication code is sent by SMS or not","example":false},"phoneNoise":{"type":"string","description":"Phone number","nullable":true,"example":""},"tfa":{"type":"boolean","description":"Specifies if the two-factor application is used or not","example":false},"tfaKey":{"type":"string","description":"Two-factor authentication key","nullable":true,"example":""},"confirmUrl":{"type":"string","description":"Confirmation email URL","format":"uri","nullable":true,"example":"some text"}},"additionalProperties":false,"title":"ASC.Web.Api.ApiModel.ResponseDto.AuthenticationTokenDto"}}}},"400":{"description":"userName, password or passworHash is empty"},"401":{"description":"User authentication failed"},"403":{"description":"Auth code is not available"},"429":{"description":"Too many login attempts. Please try again later"}}}
+>
+  
+</StatusCodes>
+
+
+      

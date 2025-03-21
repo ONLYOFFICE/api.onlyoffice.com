@@ -1,0 +1,71 @@
+---
+id: check-upload
+title: "Checks upload"
+description: "Checks upload"
+sidebar_label: "Checks upload"
+hide_title: true
+hide_table_of_contents: true
+api: eJydVdtu2zAM/RWDTxugxVlWDJ3funQFgm1YkTZPgVEoNpOolS1Vkttmhv59oGTn0mQX7CVIJPKIPOeQacHxlYVsDldCok3S5ErJEo2FnIHSaLgTqp6UkEGxxuJhpqXiJTDQ3PAKHUVm8xZqXiFksAzJEwoQNWSguVsDgxJtYYQmKMggvpBMLoGBwcdGGCwhc6ZBBrZYY8Uha8FtNCGK2uEKDTBYKlNxF48+jIABvvBKS4Ts0/nZR+/ziIbWfVblhiAOn73eVpwslUlCO6JeJcvQeBMaE/UKGBSqdlg7guBaS1EEEtJ7SzjtcY1qcY+FI1IMUeYEWroNwLfCUYnbWG4M3xA9Diu7d26docf9EVlCYuICCIO6kZIvCC+ytWVgDlZVmDh8cZB7z4CXpSAELq/3alpyafH1C//OSywjg4ub8SDYZTBWBgcXWnxXJUo7mEb+L50ajHdu6U7Be6rMoNWqtpGi0XB4LNSktmgclqGC/5DjbxTHOs6G74+fntW8cWtlxE8sgaIsFo0RbhNMzm1xR/d3D0gHYDCMwrMRDiEnAx6iBQ56CoFBhW6taJS0ssEuNB0ZpFyLdDQYpoHxtO2HyKcxMw2SABVjnvqBa4yEDNoFtzgz0h8N2U2ITQpVL8WqiWMMDJ64EeSgwEuXHGlY8kbSdK2d01maSlVwuVbWZefDI/DLGJ3Mpt+IznzH0w2JEdEP2dqpo8VXJHm6lXEQ1q2NQqkHgUEAUnm6G+svveMPx+vQ/4SyVOHN3rFaUPNobGzgaUSTRjJUPJioK+a1YgdttzsnHgV2zVEBqZZc1ITfRG6jzHPqHBiMBsRnKB4YZHsbcwsW9c4ZEP+U2W519nT82KAhA+Y7PYMnSmHpe3l60PfLfzPt9u7bZH8bn+yi163eBP/Ihn4BgyDrbuN74n2NvEQTionX4/jku1sC2aUfzbFnfcZFUaB2f4zN90bp+sfNLTBYdCu/UiXlGP5Mfy78OZaqAgXBleGsBcnrVcNXFBsxw9JsSKh9p0ZPdl+oq5NkvLJw7IM+qauTGW0bx8D7bXy8+m1Gx2wfTdLk3vtfasSnQg==
+sidebar_class_name: "post api-method"
+info_path: site/docspace/api-backend/usage-api/api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Checks upload"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/api/2.0/files/{folderId}/upload/check"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Checks upload
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"folderId","in":"path","description":"Folder ID","required":true,"schema":{"type":"integer","format":"int32","example":9846}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"description":"Parameters for checking files uploading","content":{"application/json":{"schema":{"type":"object","properties":{"filesTitle":{"type":"array","items":{"type":"string"},"description":"File title","nullable":true,"example":["some text"]}},"additionalProperties":false,"description":"Parameters for checking files uploading","title":"ASC.Files.Core.ApiModels.RequestDto.CheckUploadRequest"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Inserted file","content":{"application/json":{"schema":{"type":"array","items":{"type":"string"}}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

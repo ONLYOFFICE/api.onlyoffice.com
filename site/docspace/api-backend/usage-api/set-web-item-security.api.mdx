@@ -1,0 +1,71 @@
+---
+id: set-web-item-security
+title: "Set the module security settings"
+description: "Sets the security settings to the module with the ID specified in the request."
+sidebar_label: "Set the module security settings"
+hide_title: true
+hide_table_of_contents: true
+api: eJzVWNtu2zgQ/RVinhXbdZ0m9Vu2KRbebbpFnKBAA6MYSyObjUSqJJXEMfTvxZBSLOdiO5eXNRBHlg7nejgz1BIcziwML2BMzkk1s6IrxhSXRroFTCLQBRl0UqtRAkOw5L7TdOQov8NEYOh3Sdb9pZMFDJcQa+VIOb7Eoshk7Jd3f1mt+J6N55QjX7lFQTAEPf1FsYMICsPKnCTLT2XSwlhnpJpBBAnZ2MiCJcIQTnRSZiRGxxCBKrMMpxnB0JmSIqAbzAv+CR8PBx+gioAUP2+LnWqdEaoHcscFxTKVZIVMhZuTyIMiWzstbBMsNCRquUIboTQ7cqeaLakisKV30bY0ozHIsZOOcvuYo6k2OToYQlnKhK1ft/CLtE7oVJSWTHdmdFmI0bEV19LNvcEYx2StcLpl/qYgXcDBPu6nB4P9vfTDx4O9weDd4d70/WGy10upl/QPDqi/fwiTqooAk0SyGZh9a2UsxczSEwmqGSIKNJiTI2MhAiedT8/R+FPnO007R4XkvxOdUNY5DSvssdOde4xrPYKqYoMM2UIrG3jT7/X4372E3k8cRG/F0+tg3ejN6Lrs1Z+9R76aT8WU4OTvQqpX7DBv6zoXX2ZrIm2R4eIr5rRd63EAC8XoTbE6kZckfqBaoLOXkvXUrNqm4czDNopGhTMyLBOv0KHZLvQo4DZJtTon4ejGreT+Z+RMKsy2y2+QwspbEvgibSd4swNR8UbmZf4qPZTIMt9Blce9RtM4x2yH4HnYLipKk3HdtG185fdOKjM6Nzvo+haw4vz0y+7ezNEe3Sfazg2KS4GYoxWoapufbkfSHimtZP5iPTKo8UKeUrOtTzxW/X3pt53PeZHpBZEv8Jsa33P7XRWBb5X/l5qpdiqWX7cVyb/9eOBhVQR5Xdd2KAIBuEn0P3hJnR94O5eh/r4i697KcZnnaBYbMx9S+PzUv2L8e+HcJ+249MPB83VK28ycvNmELadM0EdU+cC+KO6tWSuMTzxrNYPSarga9N49nKfOFZZuro28JT+cDnrvdxi6fNQSaUPYUm24jOiClCi0cZh5/jSxhuHFEtDGP1nTz0viG2AIeTNdG+kIJtXkQRTJ2ScytsaPFXtGx8LWoU+EVP5ePa52IIKc3FzzyacofTFAN4chdLGQ3X6n122kd+3qOGTJXPm57GLJvYR3/BQtN47qYdY9VsRapXJWhoMWRHCFRnKQfMmpF4f4plhmXFXmzhXDbjfTMWZzbd3wsPdwigpo34WqioPVWDnm2TZIX4/wqiwW8l9ib0INWodFIFl+rPWlJJ80HppPV8fAzw07Q8EMJ7DWDgxlZHUs2vn0wZpT7e1sGF1IDhgZG5y+6vtmra3L0c/xtQNjchtPcvej1zrHvj2r6iBz5+8WGUrlp/mQ40CxC84ARNDv9Dyl7oy0rbM5J56hyzuCVXz7d0mGd8tkRST+xSMGYcKl/2IJPt3wKfi4d8YGMTwrQ/bvnYeqqFlxFMdUuI3YSWvbfDs/gwim9auBXCe8xOA1vzbAaxgC8CsGXuzZ6O8tIUM1K3HG2CDSF7iSA9NmaOBifcFONY/Uom3gOnWDG/zNTj26YrkM9K+qO3x49OSKOrANmhM6qarqDyzJ7j8=
+sidebar_class_name: "put api-method"
+info_path: site/docspace/api-backend/usage-api/api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Set the module security settings"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"put"}
+  path={"/api/2.0/settings/security"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Sets the security settings to the module with the ID specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"id":{"type":"string","description":"Module ID","nullable":true,"example":"9846"},"enabled":{"type":"boolean","description":"Specifies if the module security settings are enabled or not","example":true},"subjects":{"type":"array","items":{"type":"string","format":"uuid"},"description":"List of user/group IDs with the access to the module","nullable":true,"example":["75a5f745-f697-4418-b38d-0fe0d277e258"]}},"additionalProperties":false,"description":"Module request parameters","title":"ASC.Web.Api.ApiModel.RequestsDto.WebItemSecurityRequestsDto"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Security settings","content":{"application/json":{"schema":{"type":"object","properties":{"webItemId":{"type":"string","description":"Module ID","nullable":true,"example":"{00000000-0000-0000-0000-000000000000}"},"users":{"type":"array","items":{"type":"object","properties":{"id":{"type":"string","description":"ID","format":"uuid","example":"{00000000-0000-0000-0000-000000000000}"},"displayName":{"type":"string","description":"Display name","nullable":true,"example":"Mike Zanyatski"},"title":{"type":"string","description":"Title","nullable":true,"example":"Manager"},"avatar":{"type":"string","description":"Avatar","nullable":true,"example":"some text"},"avatarOriginal":{"type":"string","description":"Original size avatar","nullable":true,"example":"some text"},"avatarMax":{"type":"string","description":"Maximum size avatar","nullable":true,"example":"some text"},"avatarMedium":{"type":"string","description":"Medium size avatar","nullable":true,"example":"some text"},"avatarSmall":{"type":"string","description":"Small avatar","nullable":true,"example":"url to small avatar"},"profileUrl":{"type":"string","description":"Profile URL","nullable":true,"example":"some text"},"hasAvatar":{"type":"boolean","description":"Specifies if the user has an avatar or not","example":true},"isAnonim":{"type":"boolean","description":"Specifies if the user is an anonim or not","example":true}},"additionalProperties":false,"title":"ASC.Web.Api.Models.EmployeeDto"},"description":"List of users with the access to the module","nullable":true},"groups":{"type":"array","items":{"type":"object","properties":{"id":{"type":"string","description":"ID","format":"uuid","example":"{00000000-0000-0000-0000-000000000000}"},"name":{"type":"string","description":"Name","nullable":true,"example":"Group Name"},"manager":{"type":"string","description":"Manager","nullable":true,"example":"Jake.Zazhitski"}},"additionalProperties":false,"title":"ASC.Web.Api.Models.GroupSummaryDto"},"description":"List of groups with the access to the module","nullable":true},"enabled":{"type":"boolean","description":"Specifies if the security settings are enabled or not","example":true},"isSubItem":{"type":"boolean","description":"Specifies if this module is a subitem or not","example":false}},"additionalProperties":false,"title":"ASC.Web.Api.ApiModel.ResponseDto.SecurityDto"}}}},"401":{"description":"Unauthorized"},"403":{"description":"Security settings are disabled for an open portal"}}}
+>
+  
+</StatusCodes>
+
+
+      

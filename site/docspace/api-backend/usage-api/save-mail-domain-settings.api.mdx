@@ -1,0 +1,71 @@
+---
+id: save-mail-domain-settings
+title: "Save the mail domain settings"
+description: "Saves the mail domain settings specified in the request to the portal."
+sidebar_label: "Save the mail domain settings"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVUtzIjcQ/iuqPsuAqRxScyN2DltZZ7eMnRwoaquZaUC7GmlWrcFLqPnvqZYGGIy9lUMOMHp0f/36unWAiBuGYgFzitG4DauxuvN17Z3i/gSWGnxDAaPx7kMFBTDu6AGNvfc1GnfUBA2BvrfE8Tdf7aE4QOldJBdliU1jTZkgxl/ZOznjcks1yiruG4IC/OorlRE0NEEMRkN8vj2Ad/RpDcXiAOTaWpz+0zsCDXctR1+Dhpm14m0PxzEYtwENFXEZTCPGoYCFaKkbJR+tsq666RdazaxVN/K/BA30A+vGClgy1emT7Ym+1dOzLeMibShcG5ucLN0OjEzfMDHpBM7EZG42vxvd+UCjJ3LoIvffp9BypConnp/EdqehyttBJjEE3IMGE6kenvcp6V67+dFwVH6tYsZXR0QNrrUWV+JTDC0N3F0A+5pUpB8Rlp0G43Ym0jNT4Bn/ZdhEH4amV95bQneVoQ9JjxWyQtUyBeWDcj4OUyOmu04DVpURNbSfBwxZo2V6DfuYqagaDFhTpMBq7YOq0dg+ujPBL9P+N61Gs8bI78FXZEc9FN9HP7qm/eAWuk68DMSNd5zJO51M5HPp3AMx44YUrnwbVdySCsStTSVg3Bm3SYfvOPtf2yp788vk9tqBZ4dt3Ppg/qEKRIqpbIOJ+9ReyOUXuf/yjeQAAmEFGl6CiQRLoekl2hx3xO96rLih0qwNVcq4Pthcm+jTtvEhoh2Bhpri1suEaTynOYBxCwWMsTHj6WgyPkKOxU7P0XNemMKOhHOLA7TBQgGHFTI9B9tdsW6eZFXp3dps2jzbQMMOgxG2p9L1yjl7a2xthAK2MTbFeGx9iXbrORa/Tq7A77O0en78KJRYntM7l9pk9Msknzu3MX+QtK7DOu2HYtJlUEDp/TdDqW5S9Mfz1P392DEnvH5EnkbERdu+27Wp4eR27RPWsT0aI0miwDnQ3VRGiRSrxsS93mkhxM8YfJGuwTvx/zGpj17CHDcWjRNH21zMzKqFpBo0TEeTxJ2Tc29wa6lBai1KhxOnOjn+3lKQHlmeuSO7TsOWsKKQyJgqDHc5yps0tUXctrngr1pYHpmsMStLauJPZZeDpvn8af4EGlb961v7SnQCvsjLjC9QAMhLLtqJgensABbdpsWNyGbMNGlbydGQlZl//UKiOl65/dDDS7rmOORfonpT43DIlO+6k3y+elejz+xRWmq77LruX6DFCno=
+sidebar_class_name: "post api-method"
+info_path: site/docspace/api-backend/usage-api/api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Save the mail domain settings"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/api/2.0/settings/maildomainsettings"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Saves the mail domain settings specified in the request to the portal.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"type":{"oneOf":[{"enum":["None","Custom","All"],"type":"string","description":"[None - None, Custom - Custom, All - All]","example":"None"},{"enum":[0,1,2],"type":"integer","description":"[0 - None, 1 - Custom, 2 - All]","example":0}],"title":"ASC.Core.Tenants.TenantTrustedDomainsType"},"domains":{"type":"array","items":{"type":"string"},"description":"List of trusted domains","nullable":true,"example":["some text"]},"inviteUsersAsVisitors":{"type":"boolean","description":"Invites as a user or not","example":true}},"additionalProperties":false,"description":"Request parameters for mail domain settings","title":"ASC.Web.Api.ApiModel.RequestsDto.MailDomainSettingsRequestsDto"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Message about the result of saving the mail domain settings","content":{"application/json":{"schema":{}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

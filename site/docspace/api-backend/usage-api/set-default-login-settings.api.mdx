@@ -1,0 +1,63 @@
+---
+id: set-default-login-settings
+title: "Returns the portal login settings."
+description: "Returns the portal login settings."
+sidebar_label: "Returns the portal login settings."
+hide_title: true
+hide_table_of_contents: true
+api: eJyVVE1P4zAQ/SvWnK2mWzisckPAYbUgIQraA6qQ60wag2N77TGFjfLfV3aSfoDQsoemif1m5nneG3dAYhOgfIAlEimzCaxgV3ajDAvjAqw4WIdekLLmRwUlBKQLrEXUlJFTJHDwGJw1AQOUHSzm8/RXYZBeuRQNJbzLzUFaQ2goIYVzWslcp3gKCd5BkA22Ir3Rm0Mowa6fUBJwcD6xIjUUE0TYOjq3ccg1opUh3KAH/o7GtXhVbWyZie0aPbM1owZZDOjZmCkwskzbDVMGONTWt4KGhCcL4ICvonUaofy2ODntOay1lc93qsUvFL9rkJFqkdXWs22jZLOvvlVaszWynA8rJmpCz6IJUUoMoY46kVJmR/Mr5GSD8vkGvbLV/9Ajy7ZCUaYp2KQtq71tM+GA/iXH/5OACqNhDsqvrdUozCGafMS+5yCqSiUyQt8ciFwLHZADKUpYOFuez37henbmVPpd2wp1mN2OLC/Izo7ceUEW+j5lP51/++jLeyMiNdarP1hBQgWU0St6g/KhAxHkY9p/fMa0AB5FBRy2XhHCql+9b+EtUvQm5C4560lMqk3GnwGHFqlJgkCFGgmTpQU1UEIhnCoWs3kxoYuJTJGzHEzPIEHIJKPXUEK3FgHvve4/6LrMWCatqdUmDvMMHF6EV2KthzEag4f+jIpBQ+TKotBWCt3YQOX3+Yfko77s/vYqtXm1b+AyTfA4pEdt3DlBOPUT34CDEW3+PoRxUCm/tPZZYVZGmdrm6MkITqVjoA8DlZcF9BycDdSKfIeMab8kytGpuv3t9LXo8UCEr1Q4LZRJTOLQz0Hch3Ra4LCYzbN8B0qOfuNwLPKKQ2p6Cu124vZp+XdEn+y42ouYvnoODYoKfXZFbjWcSYmOsto6Dj1/d9cmyXaOvLi8ury7BA5JhmOlBk3Gl1Rg2jJvh+mPJRxIpGfPP4nousEGfb/DD1ufRoyHnNCp2au+7/8CdfNbgw==
+sidebar_class_name: "delete api-method"
+info_path: site/docspace/api-backend/usage-api/api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Returns the portal login settings."}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"delete"}
+  path={"/api/2.0/settings/security/loginsettings"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns the portal login settings.
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Login settings","content":{"application/json":{"schema":{"type":"object","properties":{"attemptCount":{"type":"integer","description":"Maximum number of the user attempts to log in","format":"int32","example":1234},"blockTime":{"type":"integer","description":"The time for which the user will be blocked after unsuccessful login attempts","format":"int32","example":1234},"checkPeriod":{"type":"integer","description":"The time to wait for a response from the server","format":"int32","example":1234},"isDefault":{"type":"boolean","example":true}},"additionalProperties":false,"title":"ASC.Web.Api.ApiModels.ResponseDto.LoginSettingsDto"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

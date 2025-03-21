@@ -1,0 +1,71 @@
+---
+id: delete-a-topic
+title: "Delete a topic"
+description: "Deletes a topic with the ID specified in the request."
+sidebar_label: "Delete a topic"
+hide_title: true
+hide_table_of_contents: true
+api: eJylVttu3DYQ/RVinrVerdy0jYCicG0XNdoERneNAnH2gZZmLcaUyJAjx4qgfy+G1N7i9SXtPmglcQ7nzIVn1APJWw/5NRSmrttGUTf93bi29rBMwGPROkUd5Nc9nLRUGae+SlKm+QNliY5xDmUJCXxxihCWwzKBEn3hlGUzyOEMNRJ6IQUZqwrxRVElqEJxcSa8xUKtFJZCNeGdw88tejqCBKx0skZC54P3RtYIOYQ9FDtUvLmVVMG3HhfBz8UZJOCLCmsJeQ/UWcarhvAWHSSwMq6WFF8dZzAwc4femsajZ0SWpvx3YG9IoDANYUNsIK3VqghZmX7ybNU/9mtuPmFBHJYzFh2p6OOifA23BPBB1laz0SyFIYGFIn7aQD051dzuGc7DTUw6Q04dSsLyeVCWZulklk3Snxaz4/zNj3maHR1nb95ms+wDb3Jly/+/yQIf6PkdFpXyQnnhYwzWeNrx/lv3nYndeNjktW1DD209puNvcuCy/jGFM+Wtlt370I3PhfBO3aH4IJtOkr9Tr6zZO9lI7oAhgZN7SdLNa6n185jWaUFGeLYUMqAYf+nMSmm8ci/AP36cXjpTtgV5vkVjNcZ3DD+S3j782np0v8iyVo3y5CQZB8OQAMWA4Ly22nSI/zhpI/lFxaqwUKReirhptWbEnCS1/pWHoWlrVp73vKAhgVNtPHI956SKuw4eadB1KiYimidiJiYiIhKRiYmIoOV+O4QoApPvYXTRxCVlmkDs0mj9BJs900iKrQ/RCAK9oSGdkx3rH2HtXzhG8naWLOQtq9tOvYK+ByHjioWShfUf0tljwbtq5Kj7WIaq10iVKSGHMgh7UGqqIIeptGqaHaXT7SRZsadpkKBpP0r3wLKM7n4t7C13KFRE1ufTaV8ZT0PeW+OILe+lU/JGx0PNa5HhSraaC6BNIXU1ygNj9pd/Tt+G2HdG2ZyVOW53cKBt82zVn9itB00Vl5P1HNrDhryoZmUCfMzy6ToLYh6iFX+fzxfi5PKCo0LnY3q1JFyz91TLMD1GH3Fyrgfnt2Ou386g/zxjx1AJH2hqtVQNE2mjZMSqXnMeIIHsKA1Tb4wpHoK25j1Gcvl6NC+TsVDX0Pc30rMGDQO//tyi42+J5bauoQVK5fm+hHwltcdnAt0Z7Qe5r2vXdKF3dMtPkMAddjsfD8NySNYVZf9x9aQo0NIO7tFg5z7atP/Z+V/ni3NIgM/Hft/chb4Zb9jBQVr7LbTmyNcheQLS97Erh2FjH5eeRGz6NlpzlpbDMPwLCRtOEg==
+sidebar_class_name: "delete api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Delete a topic"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"delete"}
+  path={"/api/2.0/community/forum/topic/{topicid}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Deletes a topic with the ID specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"topicid","in":"path","description":"Topic ID","schema":{"type":"integer","format":"int32"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Topic","content":{"application/json":{"schema":{"type":"object","properties":{"Id":{"type":"integer","format":"int32","example":"10"},"Title":{"type":"string","example":"Sample topic"},"Created":{"type":"string","example":"2020-12-07T13:56:02.3259212Z"},"Updated":{"type":"string","example":"2020-12-07T13:56:02.3259212Z"},"Text":{"type":"string","example":"This is sample post"},"UpdatedBy":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"},"ThreadTitile":{"type":"string","example":"null"},"Status":{"type":"integer","format":"int32","enum":["Normal","Closed","Sticky"],"description":"[0 - Normal, 1 - Closed, 2 - Sticky]","example":"0"},"Type":{"type":"integer","format":"int32","enum":["Informational","Poll"],"description":"[0 - Informational, 1 - Poll]","example":"0"},"Tags":{"type":"array","items":{"type":"string","example":"Tag1,Tag2"}}},"title":"ForumTopicWrapper"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

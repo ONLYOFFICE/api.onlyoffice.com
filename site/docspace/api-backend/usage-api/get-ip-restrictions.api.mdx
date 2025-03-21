@@ -1,0 +1,63 @@
+---
+id: get-ip-restrictions
+title: "Get the IP portal restrictions"
+description: "Returns the IP portal restrictions."
+sidebar_label: "Get the IP portal restrictions"
+hide_title: true
+hide_table_of_contents: true
+api: eJyVVEFu2zAQ/IqwZ8JyHKNIdQvaIjCag2E3p8AIaGltMaFIllylcQX+vVhRcWQHKdqLJJKzo92ZkToguQ9Q3MMaiZTZhyzPFsvMYyCvSlLWBNgIsA695NWiggL2SAu3GkMEeAzOmoABig5m0ynfKgylV44hUMCtCpTZ3Tl95qSXDRJ6pimtITTE1dI5rcr+rfljYIoOQlljI/mJDg6hALt9xJJAgPPcI6nUgHIjDL/L7EGAabWWW41QkG9RAL7IxukeYhvMCF8IooCd9ddVo8yIYmutRmlgVMMUUYCqRjBlCPfooedoJKWty9m47vPV/FMUQGikocX/Vl/MLucxCpBVpVgZqZejwXdSBxRAivqprtdfJovlGsvWKzpMFsuRZxAj88ynF++dujOypdp69RsrYFQYKKC470CG8oHPH56QN8CjrEDAL68IYRM34oxthdR6EzKqkb131pPUJxGYgIAGqbZDuNhOSTUUkEun8tlkmochnrly/jR4Af0zZ4dba72GArqtDHjndYTzVtY9Niut2al9mxINAp6lV5yLPjpDcVJlJ1vNPtRErshzbUupaxuouJq+I/+a0Nnd6pbF3bzJtubUJvZT8Y7WS6e+44EjKpt+PYYJ4CxCae2Twt4PZXa2r3412ikeA31IrTzPOMfOBmpkH+OB9gbpLzacT9S9fY3/aOIwDX9IudNSGW6jTWImR+95VBAwm0x775KrPKI7/+ewzlzQHf2MvP2zRc+527z5xqsooEZZoe+D0KsL12WJjnqDdZtkPvulsEvH5N18+wECWPZTZ5IHwwOzvx6Zw5j71LLUAV+j+KCi65LtMR7x6ejDimHCVzTru4kx/gGxMvpL
+sidebar_class_name: "get api-method"
+info_path: site/docspace/api-backend/usage-api/api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get the IP portal restrictions"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/settings/iprestrictions"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns the IP portal restrictions.
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"List of IP restrictions parameters","content":{"application/json":{"schema":{"type":"object","properties":{"ip":{"type":"string","nullable":true,"example":"some text"},"forAdmin":{"type":"boolean","example":true},"id":{"type":"integer","format":"int32","example":9846},"tenantId":{"type":"integer","format":"int32","example":1234}},"additionalProperties":false,"title":"ASC.IPSecurity.IPRestriction"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

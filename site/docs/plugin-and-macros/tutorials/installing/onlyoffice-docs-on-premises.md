@@ -2,6 +2,9 @@
 sidebar_position: -2
 ---
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 # ONLYOFFICE Docs on-premises
 
 <iframe src="https://www.youtube.com/embed/R7gvhLvGL44?wmode=transparent" class="video-frame" width="700px" height="400px" frameborder="0" allowfullscreen></iframe>
@@ -12,8 +15,18 @@ There are three ways to add plugins: through the *sdkjs-plugins* folder, through
 
 Put the folder with the plugin code to the **ONLYOFFICE Docs** folder. The path to the folder depends on the operating system you use:
 
-- For Linux - */var/www/onlyoffice/documentserver/sdkjs-plugins/*
-- For Windows - *%ProgramFiles%\ONLYOFFICE\DocumentServer\sdkjs-plugins\\*
+<Tabs>
+  <TabItem value="win" label="Windows">
+      ``` bash
+      %ProgramFiles%\ONLYOFFICE\DocumentServer\sdkjs-plugins\
+      ```
+  </TabItem>
+  <TabItem value="lin" label="Linux">
+      ``` bash
+      /var/www/onlyoffice/documentserver/sdkjs-plugins/
+      ```
+  </TabItem>
+</Tabs>
 
 The plugins will be available to all the users of **ONLYOFFICE Docs on-premises**. [In some cases](https://nodejs.org/docs/latest/api/fs.html#fs_availability), service restart is required.
 
@@ -28,7 +41,7 @@ docker run -itd -p 80:80 -v /absolutly_path_to_work_dir:/var/www/onlyoffice/docu
 In [ONLYOFFICE Docs config](../../../docs-api/usage-api/config/editor/plugins.md), add the relative path to the *config.json* file of the created plugin to the *plugins.pluginsData* parameter:
 
 ``` ts
-const docEditor = new DocsAPI.DocEditor("placeholder", {
+const config = {
   editorConfig: {
     plugins: {
       autostart: [
@@ -41,7 +54,9 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
       ],
     },
   },
-})
+};
+
+const docEditor = new DocsAPI.DocEditor("placeholder", config);
 ```
 
 where **example.com** is the name of the server where document manager and document storage service are installed and the plugins are placed. See the [How it works](../../../docs-api/get-started/how-it-works/how-it-works.md) section to find out more on ONLYOFFICE Docs service client-server interactions.
@@ -79,19 +94,20 @@ The plugin will be added to the opened editors and all the editors you will open
 
 Starting from version 7.4, the **pluginsmanager** utility can be used to manage the plugins in ONLYOFFICE Docs on-premises. The commands for installing, removing, restoring, updating, etc. are available. For example:
 
-- For **Docker, DEB, and RPM**, the commands are as follows:
-
-  ``` sh
-  cd /var/www/onlyoffice/documentserver/server/tools/
-  ./pluginsmanager --directory="/var/www/onlyoffice/documentserver/sdkjs-plugins" --install="zotero"
-  ```
-
-- For **Windows**, the commands are as follows:
-
-  ``` sh
-  cd C:\Program Files\ONLYOFFICE\DocumentServer\bin
-  documentserver-pluginsmanager.bat --install="zotero"
-  ```
+<Tabs>
+  <TabItem value="docker" label="Docker, DEB, and RPM">
+      ``` bash
+      cd /var/www/onlyoffice/documentserver/server/tools/
+      ./pluginsmanager --directory="/var/www/onlyoffice/documentserver/sdkjs-plugins" --install="zotero"
+      ```
+  </TabItem>
+  <TabItem value="win" label="Windows">
+      ``` bash
+      cd C:\Program Files\ONLYOFFICE\DocumentServer\bin
+      documentserver-pluginsmanager.bat --install="zotero"
+      ```
+  </TabItem>
+</Tabs>
 
 The paths in the examples are default ones, please change them if necessary.
 
@@ -103,19 +119,20 @@ You can uninstall plugins in four ways:
 
 **Option 1.** Starting from version 7.4, you can use the **pluginsmanager** utility:
 
-- For **Docker, DEB, and RPM**, the commands are as follows:
-
-  ``` sh
-  cd /var/www/onlyoffice/documentserver/server/tools/
-  ./pluginsmanager --directory="/var/www/onlyoffice/documentserver/sdkjs-plugins" --remove="zotero"
-  ```
-
-- For **Windows**, the commands are as follows:
-
-  ``` sh
-  cd C:\Program Files\ONLYOFFICE\DocumentServer\bin
-  documentserver-pluginsmanager.bat --remove="zotero"
-  ```
+<Tabs>
+  <TabItem value="docker" label="Docker, DEB, and RPM">
+      ``` bash
+      cd /var/www/onlyoffice/documentserver/server/tools/
+      ./pluginsmanager --directory="/var/www/onlyoffice/documentserver/sdkjs-plugins" --remove="zotero"
+      ```
+  </TabItem>
+  <TabItem value="win" label="Windows">
+      ``` bash
+      cd C:\Program Files\ONLYOFFICE\DocumentServer\bin
+      documentserver-pluginsmanager.bat --remove="zotero"
+      ```
+  </TabItem>
+</Tabs>
 
 The paths in the examples are default ones, please change them if necessary.
 
@@ -123,13 +140,23 @@ The paths in the examples are default ones, please change them if necessary.
 
 The path to the folder depends on the operating system you use:
 
-- For Linux - */var/www/onlyoffice/documentserver/sdkjs-plugins/*
-- For Windows - *%ProgramFiles%\ONLYOFFICE\DocumentServer\sdkjs-plugins\\*
+<Tabs>
+  <TabItem value="win" label="Windows">
+      ``` bash
+      %ProgramFiles%\ONLYOFFICE\DocumentServer\sdkjs-plugins\
+      ```
+  </TabItem>
+  <TabItem value="lin" label="Linux">
+      ``` bash
+      /var/www/onlyoffice/documentserver/sdkjs-plugins/
+      ```
+  </TabItem>
+</Tabs>
 
 **Option 3.** Edit the [ONLYOFFICE Docs config](../../../docs-api/usage-api/config/editor/plugins.md) by removing the corresponding plugin. The plugin will become unavailable for all portal users upon the editor next start:
 
 ``` ts
-const docEditor = new DocsAPI.DocEditor("placeholder", {
+const config = {
   editorConfig: {
     plugins: {
       autostart: [
@@ -142,7 +169,9 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
       ],
     },
   },
-})
+};
+
+const docEditor = new DocsAPI.DocEditor("placeholder", config);
 ```
 
 The plugins will be removed for all the users. [In some cases](https://nodejs.org/docs/latest/api/fs.html#fs_availability), service restart is required.

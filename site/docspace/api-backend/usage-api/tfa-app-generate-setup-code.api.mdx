@@ -1,0 +1,63 @@
+---
+id: tfa-app-generate-setup-code
+title: "Generate setup code"
+description: "Generates the setup TFA code for the current user."
+sidebar_label: "Generate setup code"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVMtu2zAQ/BVhz4TlGi1Q6Ga0aRC0QIs6OQVGsJHWFhOZZMilG1fQvxdLyq8EuRS52CI1+5qZVQ+M6wDVLSyIWZt1KMri+tu8COMRlgqsI4+srblqoAJe4dy5SzJySQvi6L7YhkCBp+CsCRSg6mE2ncpfQ6H22kk0VJDQRZ3htTVMhgWFznW6TjXKhyDQHkLd0gbliXeOoAJ7/0A1gwLnpSPWuRDWtY05zQgM7LVZgwITuw7vO4KKfSRpEJufptvtz/SMG9elELuhgumZYVCwQROxuzDsd99p946Jn7wwlUi42uCabnz3btkHBdg0WijE7tcJQyvsAilgzSnk0tp1R5N55JYMC+nWT44qDoNk+jj98Fq8G4ORW+v1X2oggT69Bol3TtQ8+KhAT4WxXOAWdZ5OCgWqo9e8g+q2Bwz1nZS4exTWb9PcoOCP10ywHJbqRa29B0PBLUml6JJ3xV/Fyvp0XUfvyXARA/kJKNgQt1Z8vKbkJeQWKijR6XI2mZb7fkteITpXpqwgjfot+ZD6jCIb9PcYRMEBXva1SNiitmal1zGvDijYotcyeHLtGJwJXGHsGCpomV1Vlp2tsWtt4Orz9FXyrxld3Pz+IWItjxwuZGHGnThj8uAwdFoMrcDgJp1PYQq05K+tfdRZHG1WNkWP1pk7LWOQD7mV7Uxs4GzgDaaVHdPudRklGdf9bIz+uP3/J+M4kXi/dB1qI63ETGjW9FbGBQWzyTTpN37PFGRl81108oETriWgP2g6yPVTJC9GXB61k9OgoCVsyCczJIZhXtfkOIncxUz1iy+aKHXw3uXFNSgQ6s/VyTqMD5J9/8rsTnOfy5Y7kN9BvRHR91n6YTjg86s3I8YJ92jhdzkMwz8R6iE+
+sidebar_class_name: "get api-method"
+info_path: site/docspace/api-backend/usage-api/api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Generate setup code"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/settings/tfaapp/setup"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Generates the setup TFA code for the current user.
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Setup code","content":{"application/json":{"schema":{"type":"object","properties":{"account":{"type":"string","nullable":true,"readOnly":true,"example":"some text"},"manualEntryKey":{"type":"string","nullable":true,"readOnly":true,"example":"some text"},"qrCodeSetupImageUrl":{"type":"string","nullable":true,"readOnly":true,"example":"some text"}},"additionalProperties":false,"title":"Google.Authenticator.SetupCode"}}}},"401":{"description":"Unauthorized"},"405":{"description":"TFA application settings are not available"}}}
+>
+  
+</StatusCodes>
+
+
+      

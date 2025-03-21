@@ -21,7 +21,7 @@ sidebar_position: -8
 | edit       | 允许用户编辑文档。                                                                                                                                                                                                                  |
 | editnew    | 使用适合文件类型的空白文件模板创建新文档，并在online office中打开此文档进行编辑。                                                                                                             |
 | embedview  | 呈现为嵌入网页而优化的文档的不可编辑视图。此操作从7.2版开始可用。                                                                                                      |
-| convert    | 将 [二进制格式](./editing-binary-documents.md) (*doc、ppt、xls*) 的文档转换为现代格式 (*docx、pptx、xlsx*)，以便可以在在线办公中进行编辑。此操作从版本 7.3 开始可用。 |
+| convert    | 将[二进制格式](./editing-binary-documents.md) (*doc、ppt、xls*) 的文档转换为现代格式 (*docx、pptx、xlsx*)，以便可以在在线办公中进行编辑。此操作从版本 7.3 开始可用。 |
 | formsubmit | 支持在表单填写模式下打开 *pdf* 文件。 在这种情况下，即使用户没有使用 *edit* 操作的权限，他们也可能能够对 *pdf* 文件进行更改。此操作从 8.1 版开始可用。       |
 | mobileView | 呈现文档的不可编辑视图，该视图已针对智能手机等移动设备上的查看进行了优化。此操作从版本 7.4 开始可用。                                                                                |
 | mobileEdit | 允许用户在智能手机等移动设备上编辑文档。此操作从版本 7.4 开始可用。                                                                                                                        |

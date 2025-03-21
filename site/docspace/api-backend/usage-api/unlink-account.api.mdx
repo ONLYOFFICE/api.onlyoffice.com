@@ -1,0 +1,71 @@
+---
+id: unlink-account
+title: "Unlink a third-pary account"
+description: "Unlinks a third-party account specified in the request from the user profile."
+sidebar_label: "Unlink a third-pary account"
+hide_title: true
+hide_table_of_contents: true
+api: eJy1lMtu2zAQRX+FuGs2co0uCu0CNIsiARo0ySowAkYaRUQokiEpN67Afy9GtA0/mu66kQXOgzP3XHlCUi8R9SNuyXlDohL3vQ7tJ69C2gjVNG60KWIl4TwFlbSz31vUGK3R9vWyxCHhVVADJQrcbIJVA6GGD26tWwqQ0BY13kYKG0i0FJugPXdDjdttlpirJGLT06BQT0gbz21iCtq+QILe1eDNfOQGEoneE3JeSQSK3tlIkauWiwX/HF/y4xpZ4svi83nowaox9S7o39QiZ4lIzRh02syrqNg8cfzplfgAgVQLiV9BJ8KKLz/txspEoUQ6V1JET43uNLVCW5F6EoHeRopJdMEN88EYKQgfXKcNXUBioNQ7lrwlQ4lmrVOPGpXyulpeLCo/o6vm6+bbqkJH7elECusdmjEY1JieVaSHYPIZjbs5VzTOdvplLMghsVZBq2dTFN4WFyk7NZqEGn1Kvq4q4xplehdT/XVx1vxbyRYPP2+QZ3I7re8Yeul+rPjeBcrra2L3bM11lLY1WOPcq6YZoradm6t1mh1z6TWvQSGWUdZLNoR3MQ3KcuK2beF3iG9P73SdCY2ziWz6D9i3S7PFK2+UtjztWDQvBnhkRSCxvGCdiwm4cG8DSBwbYSXBYLh02hsg83H5MNkerY6MuUXdKRPpHxuffrZ/nXhGePg/sFZm5DQw/J2pUD+u8oHVv13dXN1fQYL5HlugwN6+8MC7kN0cdD/xRpmCn1l+UDFNxV857/NL6MOKnlRZqWTzvquc8x/ou9SG
+sidebar_class_name: "delete api-method"
+info_path: site/docspace/api-backend/usage-api/api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Unlink a third-pary account"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"delete"}
+  path={"/api/2.0/people/thirdparty/unlinkaccount"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Unlinks a third-party account specified in the request from the user profile.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"provider","in":"query","description":"Provider name","schema":{"type":"string","example":"some text"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"OK"},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

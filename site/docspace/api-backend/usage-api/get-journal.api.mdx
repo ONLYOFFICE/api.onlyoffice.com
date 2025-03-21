@@ -1,0 +1,71 @@
+---
+id: get-journal
+title: "Get webhook logs"
+description: "Returns the logs of the webhook activities."
+sidebar_label: "Get webhook logs"
+hide_title: true
+hide_table_of_contents: true
+api: eJy9V1lv2zgQ/ivCvC5jy0eCrN6CpJtmN+0WObAPgVEw0thmI5MqSbn2GvrviyFlS/LttNgAjmVqZr65ObMAy0cGohd4RGuFHJmgHfyDr2Ol3gwMGKgMNbdCybsEIhih/VPlWvIUGGRc8wla1MS/AMknCBEkmIop6vkfWk2AgZAQwfcc9RwYJGhiLTISBxHcOMp5YCzXNrBigsDAxGOccIgWYOcZyTNWCzkCBkOlJ9wSArd4VpLjjE+ylOi6YXh5FvbPOuFTeBH1wigMW6H/+y3sR2EIRcE2tHxSx+mIMvmfNaQIPGuxX72PSr0Fzw93e9WqNDBqgoHFmW0g/fDhvkv2Y5VZEdzdbEMT0uIIdd0LQtpet47f6fb6deBYyaEYHcK9dlS/EBanKO0h1A9E9AtBR1rl2aPlNjfHudkxUG14jkoJJfHvoas4lPmESvezkpRpn5V9RGmBgcfpzmar517tuV97Pp/NqMrXU6ap0gsBBGcBfbGghHG/bWBQWhasAIOz6nl53Ksd96rjfu24Xx2f147PZ7NBI4GdpeTV0vSQdViX9dkl61xUZlTxWbMjXBnRaajfbardb6p72VSzc7FTv7AgJYR1ul49XreWnbR1rTQuf93WUqEgDo0mU9KgofB2w5C+mprfq5EJ1DCwYwzKcg14bMVUWIGUHrGSlmIfLYBnWSpi17Pb3wyxLzZTWL1+w5hSJdPU4Z2UaAEi2ZrmTWVcUezO/N8v+xcFK4v7s8v+zZ60tcRdqTCQeZryVxJldY47+heDWKMz8kkcBVFSL7v4z/dqBhO0Y5Ucxv7k6Y62TKvcHmHSgyM7Xip+z9HYj8gTd2UfFO/pg3HJcCrQFz5PFT/CPUugrGQ4AcjXzQkmeYb32OQ5TzCqhDrZqrLlH67D1W1y4BZiq2nnsNo3JeXeMtltyFEjDvAkEYTH0y+17jPkqcGN9tm6ygR9PqkEU9NauvXGqlVzvVejG6ugKEh2P+xsts9nyXM7Vlr8i4nTwGCca2Hn7hrlJv5K77++IR2ARheuH1pYhAE16PXQ2lxL45pxurcxt6BqEjQ7u6HZjiGCNs9Eu9sK26Ycu9slt2mnisJiUE+Xk3WuU4hg8coNPuu02EwERxv4jpv7cR0YTLkWFCaXSyWz982Q5ykFdWxtFrXbqYp5OlbGRpfhloxw1MHzwz25eFA575EuFS+96cJVkvFM/IU04pRDUIOsnIJipd4EuqgIOVSOe5kCGY2/5AavyrRL9ZEpYyfcXWul2Fu0K+dTQNZtWFTX44nBK+2g0mxnKReSFMi9G30kX8hIYNBthS5qPpqUPssligFFdMCAPEwMi1UkCzr2YyDFORGG4pWsamGnFVtXp63KuoCsL2VTnuZE6kap01Fry9ARmG7Feidibb/Zg1StSu+Eaaw2e4Dqm9I7oerbzB6k2mr0TqDaArMHp9qFftJ1a+vKHsjmJlTBDqqOBdHLoGDgb2lXGp71Ko4xszWujVmXpKw67u2HJ2BADafZk3z3KR9I+vKVnNdlN5uV14D+k4O2ciwWvuEVxYrev9rJUVq4pCY3DYqi+A/OB+P8
+sidebar_class_name: "get api-method"
+info_path: site/docspace/api-backend/usage-api/api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get webhook logs"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/settings/webhooks/log"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns the logs of the webhook activities.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"deliveryFrom","in":"query","description":"Delivey start time","schema":{"type":"string","format":"date-time","example":"2008-04-10T06:30:00.0000000+04:00"}},{"name":"deliveryTo","in":"query","description":"Delivey end time","schema":{"type":"string","format":"date-time","example":"2008-04-10T06:30:00.0000000+04:00"}},{"name":"hookUri","in":"query","description":"Hook URI","schema":{"type":"string","example":"some text"}},{"name":"webhookId","in":"query","description":"Webhook ID","schema":{"type":"integer","format":"int32","example":1234}},{"name":"configId","in":"query","description":"Config ID","schema":{"type":"integer","format":"int32","example":1234}},{"name":"eventId","in":"query","description":"Event ID","schema":{"type":"integer","format":"int32","example":1234}},{"name":"groupStatus","in":"query","description":"Webhook group status","schema":{"oneOf":[{"enum":["None","NotSent","Status2xx","Status3xx","Status4xx","Status5xx"],"type":"string","description":"[None - None, NotSent - Not sent, Status2xx - Status2xx, Status3xx - Status3xx, Status4xx - Status4xx, Status5xx - Status5xx]","example":"None"},{"enum":[0,1,2,4,8,16],"type":"integer","description":"[0 - None, 1 - Not sent, 2 - Status2xx, 4 - Status3xx, 8 - Status4xx, 16 - Status5xx]","example":0}],"title":"ASC.Webhooks.Core.WebhookGroupStatus"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Logs of the webhook activities","content":{"application/json":{"schema":{"type":"object","properties":{"id":{"type":"integer","description":"ID","format":"int32","example":9846},"configName":{"type":"string","description":"Config name","nullable":true,"example":"some text"},"creationTime":{"type":"string","description":"Creation time","format":"date-time","example":"2008-04-10T06:30:00.0000000+04:00"},"method":{"type":"string","description":"Method","nullable":true,"example":"some text"},"route":{"type":"string","description":"Route","nullable":true,"example":"some text"},"requestHeaders":{"type":"string","description":"Request headers","nullable":true,"example":"some text"},"requestPayload":{"type":"string","description":"Request payload","nullable":true,"example":"some text"},"responseHeaders":{"type":"string","description":"Response headers","nullable":true,"example":"some text"},"responsePayload":{"type":"string","description":"Response payload","nullable":true,"example":"some text"},"status":{"type":"integer","description":"Status","format":"int32","example":1234},"delivery":{"type":"string","description":"Delivery time","format":"date-time","nullable":true,"example":"2008-04-10T06:30:00.0000000+04:00"}},"additionalProperties":false,"title":"ASC.Web.Api.ApiModels.ResponseDto.WebhooksLogDto"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

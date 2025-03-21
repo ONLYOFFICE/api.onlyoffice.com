@@ -1,0 +1,71 @@
+---
+id: update-a-message-status
+title: "Update a message status"
+description: "Updates the selected message status."
+sidebar_label: "Update a message status"
+hide_title: true
+hide_table_of_contents: true
+api: eJztV99v2zYQ/leEe9owJZLVuGgFDEOaBGgwpDXiFAMa54GRzhFbSuTIkxPV0P8+nCir1hrEyboAfageDFq8X/y+D+LdGkjcOEgvwVj9CTOKjqXLauekrhxcheAwq62kBtLLNRzWVGgrvwiSunqLIkfLrhZFDiHcWkkIV+1VCDm6zErDZpDCB5MLQhdQgYFDhRlhHpTonLjBwJGg2u1DCBb/rtHRG503kK4h0xVhRbwUxiiZdVmjT45jrsFlBZaCV9QYhBT0NdcPIZ/EoCWJjnf7PDLnP+O6zvoSTo8h3ESRFeENWmhD8JV96/YOb/9VffDLAt4brBYQaBss4NBmhVxhvoBf74ncPXxcZ3TlfJVJHH+byOM2QAXh/4XJzHP9/rZiAndZn+ZbNptThLDUthTkX71IIAS8E6VRbDRJXjCAF5L47+DryMrqZmQ57xZBLz52mg+oPyVjzK6nbmblStB2zmutFYpqZLwUyiEwB+QrhLnkrR6Wv6wwxkvgAu/o4QO8RaV0GFAhXSBd4Px5Noy1IRyJ6siiIDzSZdlzt7u2zu8kl7vMydbe2gd3R7oepXgUeNMuQldk/vBpkziJ9ybJXpJcxAfpZJJOX+5PX05fTZODj1tB3jRPVNWQaqiyrmU+Zrh/9u752TxcwrF0RonmnSh3SO9Mfsbgo6gaQe6zfKRez0Ql+s/D4UqQsPNSKPWwT21VQDpwbBmIzov9Z1YvpcIPdof7YhHNrM7rjBwvURuF/h277wtn7v6oHdrfRV7KSjqygrQdyfukNEo3iKxsX/xA1HPR0H+7vk9OfZCfcvrR5TQQ9Vw0/Ic7KH7aFeQtmfHtO/gRjtt39vfdX+e+I5DXo5J/Cv4HFPwWVc9DxFb2vk0d2pKuezyIJ/c0jJXoO3TMuxAlUqFzSMHUnYIEFZBCJIyMkv042vT8fbsSrYdmOb2M915f/dZGfRPMg4BdoXXdHFAz5lAQGZdG0brQjtp0bbSlFkJYCSvFtfIy5T1f6FLUigFROhOqe92GwD7j7Vfx64TPuDV7zLmt9eHunUAG9IWRf2IDIUhGo/DbIVSdlse+HTzcN59/nTpONhyNpob46yQQtxx6qbuUPTvcedWVpCaYdwgF5yfzi+BwdspIoHWeGcUDEEHb/gPbsXD4
+sidebar_class_name: "put api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Update a message status"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"put"}
+  path={"/api/2.0/project/message/{messageid:[0-9]+}/status"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Updates the selected message status.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"messageid":{"description":"Message ID","type":"integer"},"status":{"description":"New message status (\"Open\" or \"Archived\")","type":"integer"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Updated message","content":{"application/json":{"schema":{"type":"object","properties":{"ProjectOwner":{"type":"object","properties":{"Id":{"type":"integer","format":"int32","example":"123"},"Title":{"type":"string","example":"Sample project"},"Status":{"type":"integer","format":"int32","example":"0"},"IsPrivate":{"type":"boolean","example":"false"}},"title":"SimpleProjectWrapper"},"Text":{"type":"string","example":"Hello, this is sample message"},"CanCreateComment":{"type":"boolean","example":"false"},"CanEdit":{"type":"boolean","example":"true"},"CommentsCount":{"type":"integer","format":"int32","example":"5"},"Created":{"type":"string","example":"2020-12-22T04:11:56.5658524Z"},"CreatedBy":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"},"CreatedById":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"Updated":{"type":"string","example":"2020-12-22T04:11:56.5658524Z"},"UpdatedBy":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"},"UpdatedById":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"Id":{"type":"integer","format":"int32","example":"10"},"Title":{"type":"string","example":"Sample Title"},"Description":{"type":"string","example":"Sample description"},"Status":{"type":"integer","format":"int32","example":"0"},"Responsible":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"},"ResponsibleId":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"}},"title":"MessageWrapper"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

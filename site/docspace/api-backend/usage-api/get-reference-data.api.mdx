@@ -1,0 +1,71 @@
+---
+id: get-reference-data
+title: "Get reference data"
+description: "Returns the reference data to uniquely identify a file in its system and check the availability of insering data into the destination spreadsheet by the external link."
+sidebar_label: "Get reference data"
+hide_title: true
+hide_table_of_contents: true
+api: eJzVV99v2zYQ/leIe9bs1A2Gzm9Z0hVBOyyIE+whMIqzdLZZU6RCnpx4hv734UjZkeMlUbe+7MWSyOPxfnz33XkLjIsA4zv4TRsKaqjiE6YZuIo8snb2soAxLIivaU6ebE4XyAgZeLqvKfCvrtjAeAu5s0yW5RWryug8Hh5+C87KWsiXVKK88aYiGIObfaOcIYPKy1WsKcjuXBv6TJuOoLZMC/KQQUEh97oSvTCGmyWp2ur7mlTh8roky0oXZFnPNXlVByrUbKN4SSqQX+ucFDu1IFaojLYr+ZJNuREymDtfIqf73o8gA3rEsjIE43ej96dNBtoGRpuTxGNvXGCv7eI128ImMJUdyyADWxuDM9HNvqbOVfDLh9OfockguNrnJMk4uO6lWEyieHRFXV708aZCXvbzIyq1WJJyXnkyyHpNSs6rufMphM6XtUFFhWb3uoPBlaSYHlm8lDS8bcSXNlltonrpbjLAotCiAc1VB2FzNIGe33CdoKwq9FgSkw/RtQUxa7tQfod8VSTos+Z44dnkfBALZnDuPA3OKv27K8iEQavwgt3g07PKkbVJxMTgMuamacRaT6FyNqQiGJ2cyOPQSLno2JQfVHb+oLj/RZW+kLto9Io2/THxPWV22comzL9VVW9hopvVP2nWZnaSuCMMLlqSaRfi9iEnNhmQ986/bfjHKNY7Jv2K9UqkeuusvXlb5e31ly6Z1F73v0AwchO19wJJFOmtfNUHfJ+/B3f9uai/TnYrsj1YNor9IGb7Lyhuuej05N0x/dxarHnpvP6LimhFoLz2mjcwvtsChvyr7H+NibkDT1hABg9eM8G0mR4zLtfehtg9DjlNmD61TrPZdc2NwtSGtFWaw66noi1UvqR8FdXgGrXBmTaaN8rNlbaBJNxJq7Ztuy8osLaRJVWoxM6wJOLdqECPTN6iiSPCADIoiZdORqDKhUiEsRZhiJUejgYnQ7ErxN/h3pGWm2XsIB9igGK5wXaGgW69aY47eJRVubNzvajT5AUZrNFrgURk3fZwys0cayM1uWSuxsOhcTmapQs8/nBypPwiSSsp56aRbOySN5H+kLQfpnCPWax0W0dYxu+umNA1jCF3bqUpokIaz/XTZPhxB+FOz5AJ5JDnE0E/n3qSXBvvpwrYlerztjF30eod/CuhKgl/CsF6FInUBS4xlmTrzifi46Z6EL3OaPs/gm2bPQnPsDKobYfzU0jvJLWQwWgggIkwbp9xuO9CeZqBQEvObPcQbmT5viYvBT99gqp8NRksCQvyEfsRUHCeovjTTSL6NZo64evZ1NJkuxNneU4Vvyo77RTo1R+TG8hg1v4hKV0hZzw+iD/4AGMA+Vsjp9PMI2tbMGgXNS5ENumMFFsfdFysdIJ7+yJe7bbspmvhYXUkP+RXvPrHE9ttqrCm2cunrRdPtJHdSUtqp03T/A3hx8Sa
+sidebar_class_name: "post api-method"
+info_path: site/docspace/api-backend/usage-api/api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get reference data"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/api/2.0/files/file/referencedata"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns the reference data to uniquely identify a file in its system and check the availability of insering data into the destination spreadsheet by the external link.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"fileKey":{"type":"integer","description":"The unique document identifier used by the service to get a link to the file","format":"int32","example":1234},"instanceId":{"type":"string","description":"The unique system identifier","nullable":true,"example":"9846"},"sourceFileId":{"type":"integer","description":"Source file ID","format":"int32","example":1234},"path":{"type":"string","description":"The file name or relative path for the formula editor","nullable":true,"example":"some text"},"link":{"type":"string","description":"Link to file","nullable":true,"example":"some text"}},"additionalProperties":false,"description":"Request parameters for getting reference data","title":"ASC.Files.Core.ApiModels.RequestDto.GetReferenceDataDto.System.Int32"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"File reference data","content":{"application/json":{"schema":{"type":"object","properties":{"referenceData":{"type":"object","properties":{"fileKey":{"type":"string","description":"File key","nullable":true,"example":"some text"},"instanceId":{"type":"string","description":"Instance ID","nullable":true,"example":"9846"}},"additionalProperties":false,"title":"ASC.Web.Files.Services.DocumentService.FileReferenceData"},"error":{"type":"string","description":"Error","nullable":true,"example":"some text"},"path":{"type":"string","description":"Path","nullable":true,"example":"some text"},"url":{"type":"string","description":"URL","format":"uri","nullable":true,"example":"some text"},"fileType":{"type":"string","description":"File type","nullable":true,"example":"some text"},"key":{"type":"string","description":"Key","nullable":true,"example":"some text"},"link":{"type":"string","description":"Link","nullable":true,"example":"some text"},"token":{"type":"string","description":"Token","nullable":true,"example":"some text"}},"additionalProperties":false,"title":"ASC.Web.Files.Services.DocumentService.FileReference"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

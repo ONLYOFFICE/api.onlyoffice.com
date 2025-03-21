@@ -1,0 +1,71 @@
+---
+id: csp
+title: "Csp"
+description: "Csp"
+sidebar_label: "Csp"
+hide_title: true
+hide_table_of_contents: true
+api: eJzVVU1v2zAM/SsBz1qcBTsMvnVpgQ3b0KJpsUNgFIrNxGplSZXktpmh/z5Qshsn6XrZaYcE+iAp8r1HugPPtw7yFSyxbK3wu0k2WSyvoGCgDVruhVbfKsihdAYYWHxs0fkvutpB3kGplUflacmNkaKM9tm904rOXFljw2nldwYhB72+x9IDA2Mpuhfo6LbSDRfKjQy5tXwHDITHZnzuvBVqC4FBha60wtB7kMN5H4GBaqXka4mQe9siA3zhjaHtCpxucOLxxUMRAgNeVYLcubwaZbPh0iEDLzw5wdlyMf2F6+mZEfT7qSuUbnqdYHDnXk8Xzoy2EALFtuiMVi6VN5/NYpUHGV8+APuP8WNQI6/QnsY+Dv012b0TeRT4n3lJsPe87Pn49BYFFy8lxvVEqMmAQDT+eGp8q3jra23Fb6ximq5vGMhXHXBX3tH93QPSAVjkFTB4tsIjFKE4BmURu6lBX2tqLqNdZJX7GnLIuBHZfDrLhiey1HwO7RNaFx9srYQcujV3eGtlOEF9GW0npVYbsW1THwODJ24FcRA10TunWje8lR5yqL03eZZJXXJZa+fzz7OT4OfJenJ7/YPwLfZgLEmxKfohJHtlGvEdSZqKN3E/NmMgKH6p9YPAiDK1wvV+6FwMmhmJ/liYQm10fHCQihFUOVqXsn+aE8kEecNjm/WZJE4OKh1NuP66r4Iey4zkQlGsNoGY6FtRicBgPp3BSCUsTtCCAYFKVt0reYGOH1u0JJ1iTxLtRo226iBCCYuU04cbyoXMZZuQPZoggQ0eZyUp/V3bYiTHq8vlDTBY91O+0RX5WP5MXwD+DDkAfR7IO1IdzzqQXG1bviXbFDN2c0ugjOlPRPcLqmq4Urtxhoe6SHXQP1X1pkfXJW2F8Gqfrv7qUQ+jKVkTmUUI4Q9FAmxk
+sidebar_class_name: "post api-method"
+info_path: site/docspace/api-backend/usage-api/api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Csp"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/api/2.0/security/csp"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Csp
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"domains":{"type":"array","items":{"type":"string"},"description":"Domains","nullable":true,"example":["some text"]}},"additionalProperties":false,"title":"ASC.Web.Api.ApiModels.RequestsDto.CspRequestsDto"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Ok","content":{"application/json":{"schema":{"type":"object","properties":{"domains":{"type":"array","items":{"type":"string"},"description":"Domains","nullable":true,"example":["some text"]},"header":{"type":"string","description":"Header","nullable":true,"example":"some text"}},"additionalProperties":false,"title":"ASC.Web.Api.ApiModels.ResponseDto.CspDto"}}}},"400":{"description":"Exception in Domains"},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

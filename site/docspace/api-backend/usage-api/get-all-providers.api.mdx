@@ -1,0 +1,65 @@
+---
+id: get-all-providers
+title: "Get all providers"
+description: "Returns a list of the all providers."
+sidebar_label: "Get all providers"
+hide_title: true
+hide_table_of_contents: true
+api: eJzNVUtv20YQ/iuLORobUTVyKHhTrdYI8irkCDk4QrAiR9LEq93N7lCxSvC/B8OHHjbUuLfqQC3Jbx7fzDfDGtisE+T38BdZTCpTnzYUy1fBRN4rcozraJi8g4WGElMRKbS3OcyQq+iSMspSYuVXijeojLUqRL+jEmMafXFfnLq6+uAZr65yNdkZsmZp8QBRD7hPuZpGH5b+Uas/5PIZl1Oz0+qjw2mkHWp16/3aDjcP/b//4W6sr0qtPuAjF3IEDT5gl/GbEnJYI0+s/XtICDRETMG7hAnyGq7HY/k7J/aupzPkCBoK7xgdC9aEYKloI2TfkhjUkIoNbo2ceB8QcjAxmj1oIMZtOnnul9+wYNAQouTJ1KXhzBZPUIkjuTU8LfjAQrVwDa6ybTEh51ihBnw02yC38JncitCWah7YO2g0POD+PwQQ9L/5T36LivGRxXXhncOCsTwJsPTeonHPItwMWLWyRhI4+JQQjQZvKt68wNFHwV1yErGkiAXPo/016VkPVlW0Lycd8XtFEcueEHl3HuxS3rPeThUHQwl8iUlhCR2/KX9NoytIh1dUvpRJo8GUJYkTI2NyEOXK2IQamLg1mdzdjNoNMbrxEUeTQO99iTaNZv04TdmPBv1M2UMjPw2vx789H7C5k2R9pH+wbFNIWFSReA/5fQ0mFV/l/ddWs/cQ0QidH5EYYdEsNGyRN76fbpklI5KBzATKrkfjbCV5Zix7rF1jWTgZ/4RxJyeJJB3PoV6ahPNom2c1vWux0qoVrat+D2rYmUhS2HZ0e+OO5MpUliGHDXPIs8z6wtiNT5z/Pn7mfNqh1Xz2Toq1OFbhTrZJ5/28Fsf1EuhtN6Lt4jiHaSDxX3j/QNiWl9zKt9ZDMwMJDYypS2V3LZIOPvHWuOM+glvk833+lER9XIz/189BXzFRexasoXYbVl3DOuHcSzlBw/VImtSKR+wO8um2dV+AhQZpqFjVB+E08vh7hVH0ujgKRO4aDRs08hURxbVthElRYOBWSbbq+vnkm3Km8ts/P4GGJ4vRBOqa3R/E+/DK7U99n2ujy0Cujb5gUdedvprmgO9eXbToGQ5oKfKiaZqfEcvjvQ==
+sidebar_class_name: "get api-method"
+info_path: site/docspace/api-backend/usage-api/api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get all providers"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/files/thirdparty/providers"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns a list of the all providers.
+
+ **Note**: Available provider keys: Dropbox, Box, WebDav, OneDrive, GoogleDrive, kDrive, ownCloud, Nextcloud
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"List of provider","content":{"application/json":{"schema":{"type":"array","items":{"type":"object","properties":{"name":{"type":"string","description":"Provider name","nullable":true,"example":"Winfield Upton"},"key":{"type":"string","description":"Provider key","nullable":true,"example":"some text"},"connected":{"type":"boolean","description":"Connected flag","example":true},"oauth":{"type":"boolean","description":"Oauth flag","example":true},"redirectUrl":{"type":"string","description":"Redirect url","nullable":true,"example":"some text"},"requiredConnectionUrl":{"type":"boolean","description":"Required connection url flag","example":true},"clientId":{"type":"string","description":"Oauth client id","nullable":true,"example":"some text"}},"additionalProperties":false,"title":"ASC.Files.Core.ApiModels.ResponseDto.ProviderDto"}}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

@@ -1,0 +1,71 @@
+---
+id: delete-custom-navigation-item
+title: "Delete a custom navigation item"
+description: "Deletes a custom navigation item with the ID specified in the request."
+sidebar_label: "Delete a custom navigation item"
+hide_title: true
+hide_table_of_contents: true
+api: eJytlMtu2zAQRX9FmFUL0JHsJoCrXVFnYSRogaRZBUZASyOLiEQq5MiJK/DfiyFlu86jq270IIfzuPdIA5DcOMjv4RaJlN64JE2+945Mm/yQW7WRpIyGlQDToQ0vyxJyKLFBwhh4jFsStiCgk1a2SGg58QBatgg5qBIEKA05dJJqEFCiK6zqQoEclrxt8alXFkvIyfYowBU1thLyAWjXcRJHVukNCKiMbSVBDn0fEuOLbLuGQ6TEKU6zL5N1IS8mXys5nazlvJicz7KL+fpcrqvZHLxfcTXXGe3QcYFZlvHttKmfV+AFnGfTt1t3WvZUG6t+YwneC3BY9FbRLswsXfHA+w+PyAtgUXKXz1YRwoqLn2ZbBD1dIpMiiq8PoiaKsE2eFdUJ1ZgsF4nrsFCVwjJROqyxbOjoDAS0SLU5OhTcoBpySGWn0tlZlrrR6DRWOhZK45F0UKUHnsdu9xb2toEchrV0eGcb/8a82xCbFEZXatNHTkDAVlol100UeDwclaxk37B7NVGXp2ljCtnUxlE+z94kX8To5O7mGnwwbi/1LeMRs58KfuBFduoKdyD2EJ6EjTgWxjwqDB4qXZlwWlFg6VuneAy0LraynTEPnXHUSs2BY9po34fuvR5pgMJoQk3/0/lxYsIXSrtGKs2t9lHwyMA9ywECZmdZ8DdyAAJekxD6HfHJVcmfP5vDGYYDBJ6Xn3q0DPjqaHYAplSOn0vIK9k4/Mf8n27Gb/5zEn4B746xd1PvAlVNz28gIJjNfxa/8n+xv7i8vvx1CQLY6lMaou/jA3f6bupXmMQyfPXigxPDEFHz/hAftz48UaMs0R6H0DyE938APWvjhg==
+sidebar_class_name: "delete api-method"
+info_path: site/docspace/api-backend/usage-api/api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Delete a custom navigation item"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"delete"}
+  path={"/api/2.0/settings/customnavigation/delete/{id}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Deletes a custom navigation item with the ID specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"id","in":"path","description":"Id","required":true,"schema":{"type":"string","format":"uuid","example":"aae1e103-bca5-9fa1-ba8c-42058b4abf28"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"OK"},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

@@ -1,0 +1,71 @@
+---
+id: start-remove
+title: "Start the data deletion"
+description: "Starts the data deletion for the user with the ID specified in the request."
+sidebar_label: "Start the data deletion"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVktv2zgQ/ivEnOm3u0h1y9pdINhHgzg5BUYxlkYWG4lUSSpp1tB/L4aUbTlOmh56scnRcPjNNy/uwOPWQXIP12TqksRI3DmyIkOPsJZgarLoldFXGSTgPFp/Q5V5JJBg6VtDzv9psmdIdpAa7Ul7XmJdlyoN50ZfndEsc2lBFfLKP9cECZjNV0o9SKgt3+IVOf7aOLJ82UHPeav0FiRk5FKrarYKCQSYV0vxVBhHAa9QTlhC59RWUzayAWcGEnJjK/SQQNMo3tN3rOqSbSPShCbj2WCT4ofBxxwngw1epIP5dPzhYjPHTT69gLaVgFmm+GIsr3tocywdvQR2E2kRNVqsyJN1IjdWeLKV0uiV3gpf0AFpRdqL2pqUnAMJXvmA7HK1GMaQDC9r9a/JqHTDzvTSm+FtZ46OMmhbhmrJ1Ua7yOZ0POa/U4RLKomXfO3Wxnt/U/TUL0TuagkSdFOWuGFXvW2oH5OPF/M/oJVA1hr7vrVPQe1nBp2pSHj67tlqTTYl7XFLPdNKe9qSPbN9fVTuZZHSfjbtp9FkOpu3EpRbGBZ46pOwMaYk1Ocs9LR7thh8K7nSfBMYNZo+55Dc74B0U3GlLixhPHXTaB056dtaoE6pDMu/UJUsXMt3WLzvjIqB6FZSdNbFYL+S4nAN6+3XUuxvZGm3lKK7Wwz2q/VJ6e29aOXBs7GcyKmcyfkR7luRuR/3kU76GKen2GYnoOZvwBm369PaW5iqMnp4W1jCTOntcKmYuk3jKbtF97CKAXq3N7xTz7FUQ0Gje7ju6rEn74p6/lodhxZI31OKgqA2eUVNY+MLY9X/gW6Yj2fnSv8ZUXNLcU4Z7YQPW0554QvlBKbHK+ZvINHGi9w0OgusOEobq/xzSF106RcG8eWBWABMKkh4ssoTrJn7U3srHjQu9MnQ2bN9xwqdtCDBU0I8KV+E3dVSuJpSlSvKhNJdfw19cQgSKvKF4flVGxdaFvoCEhhhrUbT4XhUh7h0A2MUhhywA/aRrAv4G1tCArsNOrqzZXuWjqugK1Kjc7Vt4sQECY9oFfekUMjd4Uhejk3JvaTwvk5Go9KkWBbG+eRifGZ8GbXF3c0/nA3rI7cr7srR+inDh+6Dtfqbnrk9YhX2fTUJiu2nxjwoCkHjdn9zHOuf9uVxHMu/ODLZdG4CkH0B1IoZIeuiV4/T0I6N8xWGEdMhDKE/j/xLVnrvjd+cLR1zPDBGdYkqZH0TAxcz555pBQnTIQcrZk94D3UPo5hBawkcUVbfHTKnZfG3hiyXwfqYIbxrJRSEGdmQciGOsIhODm4ZFKuXTQzrixHNXTSeuEy5H/xUd90rievPq1uQsOkecZXJ+IzFJ3YInyAB4Fcgnw55FmQ7KFFvmzBEIdoMjbBhdvq5F7OsW7BX+0/6uY/wNCmjH/zLXr16YreLid22B/346c0THbN7bY7qum3bH9tAv8Q=
+sidebar_class_name: "post api-method"
+info_path: site/docspace/api-backend/usage-api/api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Start the data deletion"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/api/2.0/people/remove/start"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Starts the data deletion for the user with the ID specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"userId":{"type":"string","description":"User ID whose data is reassigned/removed","format":"uuid","example":"aae1e103-bca5-9fa1-ba8c-42058b4abf28"}},"additionalProperties":false,"description":"Request parameters for terminating the reassignment process","title":"ASC.People.ApiModels.RequestDto.TerminateRequestDto"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Deletion progress","content":{"application/json":{"schema":{"type":"object","properties":{"id":{"type":"string","description":"ID","nullable":true,"example":"9846"},"error":{"type":"string","description":"Error","nullable":true,"example":"some text"},"percentage":{"type":"integer","description":"Percentage","format":"int32","example":1234},"isCompleted":{"type":"boolean","description":"IsCompleted","example":true},"status":{"oneOf":[{"enum":["Created","Running","Completed","Canceled","Failted"],"type":"string","description":"[Created - Created, Running - Running, Completed - Completed, Canceled - Canceled, Failted - Failted]","example":"Created"},{"enum":[0,1,2,3,4],"type":"integer","description":"[0 - Created, 1 - Running, 2 - Completed, 3 - Canceled, 4 - Failted]","example":0}],"title":"ASC.Common.Threading.DistributedTaskStatus"}},"additionalProperties":false,"title":"ASC.People.ApiModels.ResponseDto.TaskProgressResponseDto"}}}},"400":{"description":"User exception"},"401":{"description":"Unauthorized"},"403":{"description":"No permissions to perform this action"},"404":{"description":"User not found"}}}
+>
+  
+</StatusCodes>
+
+
+      

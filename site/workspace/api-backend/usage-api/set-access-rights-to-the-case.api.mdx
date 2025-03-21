@@ -1,0 +1,71 @@
+---
+id: set-access-rights-to-the-case
+title: "Set access rights to the case"
+description: "Sets access rights to the selected case with the parameters specified in the request."
+sidebar_label: "Set access rights to the case"
+hide_title: true
+hide_table_of_contents: true
+api: eJztWG1v2zYQ/ivEfZ0cy69JBAxD7KRYsCYI6nRFm+bDWTpFbCRSI09pPMM/Z39kv2wg5dc2jdWuwICh+mDQJO94fO65I49zYLyzEN1AbIr2GC1ZuA3AUlwZyTOIbuZwUnGmjfwTWWr1K2FCxgkYwgQC+GgkE9wubgNIyMZGlm4aRDAhtgLjmKwVRt5lbAVrwRkJSznFTImI0ZL4KDnz3SUaLIjJWGFLimUqKRFS+TFDf1Rk+QACWDZHOplBNIdYKybFrollmcvYm9n+YJ0Rc7BxRgW6Fs9Kggj09APFDAGURpdkWJL1atCSTFxrdxcOEnF+CsFKXiqmOzKwCEDaKyMfkOkLYqUbjWdR3WAS2gileaNrqnVOqJyuGqiX0vLnylyv0KmorMPG47XEdQmoM36jFY3BGQQgmQq7tXPLRqo7CCDVpkCGCKpKJrCoPwesLbWyNR7dMHx6VxB8L8gvqJiS2bbwS5Z/QcGkwDx/oVm/NvlT+6RHLMrcdVUmd1ilmrUD+4ISWRXfInkqbZnj7BILel7uGpMPlCRSkRhhnElPmHM71kWJarYlu+LAtnCKuSUncLLDim9D6TzZz4HtxcPl13riZ/V9FRQX8p7EO1QzZHsvnei15HyfECpchtnJAzIa7+xGvrJupkAv5eSvjE5lTntd/f59+8ropIrZuibpMqe6z4kfoC0ff3Eh+DMmhVTSskHWBlzocL0hOCvKXM+I3hgsqR46304Sz/icTUU1RyYZGkqaUsTPvvYT55/mqC03S8W9rtOgqsJl70utXCi/Ikze+Axet+GzNH4TipZwswPRES2xFghEd/n3dpc+zqhxZQypeLafnQ2oMM6kIkvibVWnysmsmOo9vvz7L8+c6dTQg8R6K8+ucfm2tjvnytB+To8vV/GsHsgwTvPm/h2hlXEz925RawXpuUq1o1dZB8cY1VkiueHiY1SnlFNzMp42ZNVastPt9Xft1oox5hFaWpvtLDGETKMGDPmRv/67/LXy05Mu2KzcDbthq9NthUfXncOodxiF/YPBYW/YOxq8a4jX2WMmp9IFqtDmDtXyurmMslzb5hmxacb9ccr+T1j69WmwsqyLF5Ly5F9cP88US57tOL5ZiuwPur1+t+cseYlT2gPYSBrOEkfnRQDe5t8xr/Y49smIPO4M++Hw3VrP198arumRvSgEvn1iCCGAiS/oRvoRAhhnFN/XTVcr1oadOvOfvlqsVdb3i5XW+nqxVhyInmiJle5A9EVLLNUHYiBawq2wexEZeFZqKz85/Zv5yAffBdr753H+XofkhpCfHpTfQ7sr6zc63VA/7Hxe3r1WuCz1KfEKCuJMJxBBWXn6I2cQQRtL2e4ehG33ZOBKz/a8rp6jm7B1fPvTol1Xp+DeEcyDL/Fu5i5vQAQZc2mjdnueacuLaF5qwwsI4AGNdLcoH1lurDYvxSp3u8x1jLnvXgTgZHaHj8LjrtvZ1tPFxFWhtbonHzA2UV/K38iHvcMgq4cDUD7j7sp6UFyZ+2rzBnG2wn3zhhDuPA24pLNb399AL8WjQTrstwaHncNWfzDstqa9NG514+NhLx0OMcUh3LonBpVqb+v6NlUUlZI8ExMPrXh1NrkWJ1fnDkIytnZkjkwOqsU//OLw8w==
+sidebar_class_name: "put api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Set access rights to the case"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"put"}
+  path={"/api/2.0/crm/case/{caseid:[0-9]+}/access"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Sets access rights to the selected case with the parameters specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"caseid":{"description":"Case ID","type":"integer"},"isPrivate":{"description":"Case privacy: private or not","type":"boolean"},"accessList":{"description":"List of users with access to the case","type":"array","items":{"type":"string","format":"uuid"}}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Case","content":{"application/json":{"schema":{"type":"object","properties":{"Members":{"type":"array","items":{"type":"object","properties":{"SmallFotoUrl":{"type":"string","example":"url to foto"},"MediumFotoUrl":{"type":"string","example":"url to foto"},"DisplayName":{"type":"string","example":"Tadjeddine Bachir"},"IsCompany":{"type":"boolean","example":"false"},"AccessList":{"type":"array","items":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"}},"IsPrivate":{"type":"boolean","example":"true"},"IsShared":{"type":"boolean","example":"false"},"ShareType":{"type":"integer","format":"int32","enum":["None","ReadWrite","Read"],"description":"[0 - None, 1 - ReadWrite, 2 - Read]","example":"0"},"Currency":{"type":"object","properties":{"Title":{"type":"string","example":"Chinese Yuan"},"Symbol":{"type":"string","example":"¥"},"Abbreviation":{"type":"string","example":"CNY"},"CultureName":{"type":"string","example":"CN"},"IsConvertable":{"type":"boolean","example":"true"},"IsBasic":{"type":"boolean","example":"false"}},"title":"CurrencyInfoWrapper"},"CanEdit":{"type":"boolean","example":"true"},"CanDelete":{"type":"boolean","example":"true"},"ID":{"type":"integer","format":"int32","example":"1234"}},"title":"ContactBaseWrapper"}},"CreateBy":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"},"Created":{"type":"string","example":"2020-12-08T17:37:04.5736385Z"},"Title":{"type":"string","example":"Exhibition organization"},"IsClosed":{"type":"boolean","example":"false"},"IsPrivate":{"type":"boolean","example":"false"},"AccessList":{"type":"array","items":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"}},"CanEdit":{"type":"boolean","example":"true"},"CustomFields":{"type":"array","items":{"type":"object","properties":{"EntityId":{"type":"integer","format":"int32","example":"14523423"},"Label":{"type":"string","example":"Birthdate"},"FieldValue":{"type":"string","example":"2020-12-08T17:37:04.5916406Z"},"FieldType":{"type":"integer","format":"int32","enum":["TextField","TextArea","SelectBox","CheckBox","Heading","Date"],"description":"[0 - TextField, 1 - TextArea, 2 - SelectBox, 3 - CheckBox, 4 - Heading, 5 - Date]","example":"5"},"Position":{"type":"integer","format":"int32","example":"10"},"Mask":{"type":"string","example":""},"ID":{"type":"integer","format":"int32","example":"1234"}},"title":"CustomFieldBaseWrapper"}},"ID":{"type":"integer","format":"int32","example":"1234"}},"title":"CasesWrapper"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

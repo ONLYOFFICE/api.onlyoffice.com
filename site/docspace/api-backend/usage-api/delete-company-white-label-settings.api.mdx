@@ -1,0 +1,63 @@
+---
+id: delete-company-white-label-settings
+title: "Delete the company white label settings"
+description: "Deletes the company white label settings."
+sidebar_label: "Delete the company white label settings"
+hide_title: true
+hide_table_of_contents: true
+api: eJylVU1v2zgQ/SvEnAnL9bZAoVODJIdijaKIG/QQGAEtjS22FMklR2lcQf+9GOrDdoykWeRiixLn8c17M8MWSO0i5HewQiJtd1Fk4gY3QdlS2x2sJTiPQZF29nMJOZRokPDS1V7Z/fdKEy7VBs0YDRICRu9sxAh5C4v5nP9KjEXQnlEghyvcqsaQKHoU8YthhGEcEQ9AhbOEljheeW90kVhkPyKDtBCLCmvFT7T3CDm4zQ8sCCT4wJxJ9xSGU76oGnlZq8cl2h1VkC8+fJBQazuu53KEihQ4e/mE+JC2sIwlwTbGqI1ByCk0KAEfVe1Ninc1CsJHgk5C1PTmk1eMIWHrQq0IcmiCfj0BrJU2b2VwzSBClWXAGI+p9OgvkVntS4v7+xu3wUDx/afKEcfMClczvRHzjQQvJmqvlMVXzr7ZmK8J5EgOwpfFOKHwOS51gTa6cFTHG+cMKnteAx4LvdUYhd4KNXWPjkIJM8AIF4R13ATTiUyg62XWjKTM16P+2CoTUQJpSuwuVpez77iZXbqAs0N7z55v+K5j8Pfzd+d9fmtVQ5UL+jeWkDb9c77pixMeQ61j1M5GQWnJagqqOLUi7eMzIhZN0LSH/K4FFYt7Rr//ifwCAqoSJPwK3Cjrbv1UvKs0t6KgCl+cOzOQUCNV7jDseKIoLgbIlNfZYjbPxt1ZmEZlNqACEw0PGGLi2QQDObQbFfE2mO7c1LRXFM5u9a7pBy1IeFBBc/2krhiCe+3S6IQcKiKfZ5lxhTKVi5R/nJ+Bj4P29mbJPq0PGq54ePbop0pOVai8/hc5mzTs8tNtEjTjF8791JjM0XbrUvRYSJ4HFMvQU3lYpJZzkWqVxvcA2/vyV1ueptYebof/Ze2QHPdf5o3Sllk1vba9yXecOUhYzObJyqN7bboV5Xip8P3I4nNYO5nc8ev/GgxcmeuDmbzqJFSoSgypOpLkcFEU6Cm5bppe+yfXHVs3VeXV9fL62zVIYDtOHeu9GR74gPFTqssJ/tTKngT/dvKZiLbty6Hrpv39p2cjhiTH3Sz0uuu6P52z5n4=
+sidebar_class_name: "delete api-method"
+info_path: site/docspace/api-backend/usage-api/api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Delete the company white label settings"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"delete"}
+  path={"/api/2.0/settings/rebranding/company"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Deletes the company white label settings.
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Default company white label settings","content":{"application/json":{"schema":{"type":"object","properties":{"companyName":{"maxLength":255,"minLength":0,"type":"string","description":"Company name","nullable":true,"example":"some text"},"site":{"maxLength":255,"minLength":0,"type":"string","description":"Site","format":"uri","nullable":true,"example":"some text"},"email":{"maxLength":255,"minLength":0,"type":"string","description":"Email address","format":"email","nullable":true,"example":"Sydney_Roberts4@hotmail.com"},"address":{"maxLength":255,"minLength":0,"type":"string","description":"Address","nullable":true,"example":"some text"},"phone":{"maxLength":255,"minLength":0,"type":"string","description":"Phone","format":"tel","nullable":true,"example":"some text"},"IsLicensor":{"type":"boolean","description":"Specifies if a company is a licensor or not","example":true}},"additionalProperties":false,"title":"ASC.Web.Core.WhiteLabel.CompanyWhiteLabelSettings"}}}},"401":{"description":"Unauthorized"},"403":{"description":"No permissions to perform this action"}}}
+>
+  
+</StatusCodes>
+
+
+      

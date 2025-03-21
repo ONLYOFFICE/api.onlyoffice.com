@@ -1,5 +1,6 @@
 ---
 sidebar_label: Standard branding
+
 ---
 
 # Customization - Standard branding
@@ -64,7 +65,7 @@ In case this setting is changed in the editor interface, it will be stored in th
 Defines if the **Chat** menu button is displayed or hidden. Please note that in case you hide the **Chat** button, the corresponding chat functionality will also be disabled. The default value is **true**.
 
 :::danger[Deprecated]
-Deprecated since version 7.1, please use the [document.permissions.chat](../../document/permissions.md#chat) parameter instead.
+Starting from version 7.1, please use the [document.permissions.chat](../../document/permissions.md#chat) parameter instead.
 :::
 
 **Example**: `true`
@@ -117,7 +118,7 @@ This parameter is also available for the mobile editors.
 Defines if the user can edit and delete only his comments. The default value is **false**.
 
 :::danger[Deprecated]
-Deprecated since version 6.3, please use the [document.permissions.editCommentAuthorOnly](../../document/permissions.md#editcommentauthoronly) and [document.permissions.deleteCommentAuthorOnly](../../document/permissions.md#deletecommentauthoronly) fields instead.
+Starting from version 6.3, please use the [document.permissions.editCommentAuthorOnly](../../document/permissions.md#editcommentauthoronly) and [document.permissions.deleteCommentAuthorOnly](../../document/permissions.md#deletecommentauthoronly) fields instead.
 :::
 
 **Example**: `true`
@@ -454,7 +455,7 @@ Opens the website in the new browser tab/window (if the value is set to **true**
 Defines that if the **Open file location** button is clicked, [events.onRequestClose](../../events.md#onrequestclose) event is called instead of opening a browser tab or window.
 
 :::danger[Deprecated]
-Deprecated since version 8.1. Please use the [close](#close) parameter instead.
+Starting from version 8.1, please use the [close](#close) parameter instead.
 :::
 
 **Example**: `false`
@@ -590,7 +591,7 @@ Path to the image file used for the light header (for example, in the Gray theme
 Path to the image file used to show in the embedded mode (see the [config](../../config.md#type) section to find out how to define the **embedded** document type). The image must have the following size: 248x40.
 
 :::danger[Deprecated]
-Deprecated since version 7.0, please use the *image* field instead.
+Starting from version 7.0, please use the [logo.image](#logoimage) field instead.
 :::
 
 **Example**: `"https://example.com/logo_em.png"`
@@ -707,7 +708,7 @@ Defines if the mobile document editor is opened in the view/edit mode on launch.
 This parameter is also available for the mobile editors.
 :::
 :::danger[Deprecated]
-Deprecated since version 8.2. Please use the [mobile](#mobile) parameter instead.
+Starting from version 8.2, please use the [mobile](#mobile) parameter instead.
 :::
 
 **Example**: `true`
@@ -736,6 +737,12 @@ Defines the pointer mode (**select** or **hand**) when the presentation editor i
 
 Contains the information about the review mode.
 
+:::note
+In case this setting is changed in the editor interface, it will be stored in the browser local storage and will overwrite any values sent as the *editorConfig.customization.review\.hoverMode* and the *editorConfig.customization.review\.reviewDisplay* parameters.
+
+The [showReviewChanges](#showreviewchanges), [reviewDisplay](#reviewdisplay), [trackChanges](#trackchanges) parameters are deprecated since version 7.0. Please use the *review* parameter instead.
+:::
+
 **Example**:
 
 ``` ts
@@ -747,13 +754,6 @@ const review = {
   hoverMode: false,
 }
 ```
-
-:::note
-In case this setting is changed in the editor interface, it will be stored in the browser local storage and will overwrite any values sent as the *editorConfig.customization.review\.hoverMode* and the *editorConfig.customization.review\.reviewDisplay* parameters.
-:::
-:::danger[Deprecated]
-The [showReviewChanges](#showreviewchanges), [reviewDisplay](#reviewdisplay), [trackChanges](#trackchanges) parameters are deprecated since version 7.0. Please use the *review* parameter instead.
-:::
 
 ![Review display](/assets/images/editor/reviewDisplay.png)
 
@@ -817,14 +817,14 @@ Defines the review editing mode in the document editor. This parameter can take 
 
 The default value is **original** for viewer and **markup** for editor.                                                                   
 
-**Example**: `"original"`
-
 :::note
 In case this setting is changed in the editor interface, it will be stored in the browser local storage and will overwrite any values sent as the *editorConfig.customization.reviewDisplay* parameter.
 :::
 :::danger[Deprecated]
-Deprecated since version 7.0. Please use the [review.reviewDisplay](#review) parameter instead.
+Starting from version 7.0, please use the [review.reviewDisplay](#reviewreviewdisplay) parameter instead.
 :::
+
+**Example**: `"original"`
 
 ## showHorizontalScroll
 
@@ -841,7 +841,7 @@ Starting from version 8.3, defines if the horizontal scroll is automatically dis
 Defines if the review changes panel is automatically displayed or hidden when the editor is loaded. The default value is **false**.
 
 :::danger[Deprecated]
-Deprecated since version 7.0. Please use the [review.showReviewChanges](#review) parameter instead.
+Starting from version 7.0, please use the [review.showReviewChanges](#reviewshowreviewchanges) parameter instead.
 :::
 
 **Example**: `false`
@@ -872,7 +872,7 @@ Defines if the spell checker is automatically switched on or off when the editor
 In case this setting is changed in the editor interface, it will be stored in the browser local storage and will overwrite any values sent as the *editorConfig.customization.spellcheck* parameter.
 :::
 :::danger[Deprecated]
-Deprecated since version 7.1. Please use the [features.spellcheck](#features) parameter instead.
+Starting from version 7.1, please use the [features.spellcheck](#featuresspellcheck) parameter instead.
 :::
 
 **Example**: `true`
@@ -929,7 +929,7 @@ This setting is used when the [compactHeader](#compactheader) and [toolbarNoTabs
 Defines if the top toolbar tabs are distinctly displayed (**false**) or only highlighted to see which one is selected (**true**). The default value is **false**.
 
 :::danger[Deprecated]
-Deprecated since version 8.2, please use the [editorConfig.customization.features.tabStyle](#featurestabstyle) parameter which is set to **line** and the [editorConfig.customization.features.tabBackground](#featurestabbackground) parameter which is equal to **toolbar**.
+Starting from version 8.2, please use the [editorConfig.customization.features.tabStyle](#featurestabstyle) parameter which is set to **line** and the [editorConfig.customization.features.tabBackground](#featurestabbackground) parameter which is equal to **toolbar**.
 :::
 
 **Example**: `false`
@@ -941,7 +941,7 @@ Deprecated since version 8.2, please use the [editorConfig.customization.feature
 Defines if the document is opened in the review editing mode (**true**) or not (**false**) regardless of the [document.permissions.review](../../document/permissions.md#review) parameter (the review mode is changed only for the current user). If the parameter is *undefined*, the *document.permissions.review* value is used (for all the document users).
 
 :::danger[Deprecated]
-Deprecated since version 7.0. Please use the [review.trackChanges](#reviewtrackchanges) parameter instead.
+Starting from version 7.0, please use the [review.trackChanges](#reviewtrackchanges) parameter instead.
 :::
 
 **Example**: `true`
@@ -1008,7 +1008,7 @@ In case this setting is changed in the editor interface, it will be stored in th
 ## Example
 
 ``` ts
-const docEditor = new DocsAPI.DocEditor("placeholder", {
+const config = {
   editorConfig: {
     customization: {
       anonymous: {
@@ -1102,7 +1102,9 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
       zoom: 100,
     },
   },
-})
+};
+
+const docEditor = new DocsAPI.DocEditor("placeholder", config);
 ```
 
 The **example.com** is the name of the server where **document manager** and **document storage service** are installed. See the [How it works](../../../../get-started/how-it-works/how-it-works.md) section to find out more on ONLYOFFICE Docs service client-server interactions.

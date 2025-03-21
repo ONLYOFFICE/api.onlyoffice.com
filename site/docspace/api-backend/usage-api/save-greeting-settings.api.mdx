@@ -1,0 +1,71 @@
+---
+id: save-greeting-settings
+title: "Save the greeting settings"
+description: "Saves the greeting settings specified in the request to the current portal."
+sidebar_label: "Save the greeting settings"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVU2PGzcM/SsDnlXPxGiAYG7bpCiKJmiw3kUPC8OgNfRYiUZS9OFd15j/XlDyeL32tsmhB9uURFLke4/yASL2AdoHWFCMyvShqqvfPBHbVTjuwVKAdeQxKmt+76CFgDua3KZIEODpW6IQf7HdHtoDSGsimcgmOqeVzAnqL8Ea3gtySwOyFfeOoAW7/kIyggDn+bqoKORTFTWxMeDTRzJ93EI7f/tWwKDMtG7ElCREr0wPAjoK0ivHV0ILd2TQxMrgQCDAJK1xzVmjTySAnnBwvARNPcr96k3zrnGrMKDWq0drOzKrwaZAMI4CsOsUp0X9+azQDepAl9deYymmfuBm8X72F61nN07x55PtSM9uC4ThQ7SzS4TPzmAcuRJPwVkTCk7zpuGflwV8ohCwpwrXNsUq4I6L6S+rqkKSkkLYJK33IH6YuVLFz82b64vvDaa4tV79TV1GLZBMXsU9tA8HwCBXfL76SrwBnrADAY9eRYLluLzEcYE7ClXc0mu1O5Jqo6irlMkuRxlW0ealTN6TiZWzPqKegYCB4tayjp0NWW/IGoIanarns6aeUtfTZWfsBfI78iF3kbyGFg5rDHTv9XglukX2raQ1G9WnMj8gYIdesfoya8fgAuAGk47QwjZG19a1thL11obYvmuukn8o3tX97UdWw/IZ4QXTU7K/xPk0aejUH8RE53loX7oJUJxfWvtVFcEz77fPs/3rNC2n2fz+2HDSjT0PuXGKsSAfSj+7OXsxIwNmlR1rY+pfZ/4SkrMX538WzBG2SE+xdhqV4VJTYa2I54ExBQHzWZNFcqrwSkJLAUwphxxO0hl5+1siz9OwfJYIr0YBW8KOfNZcJhLel0Z/uuPC2F2nwuvFsI5iiriRklz8T9/l2WR8/nNxBwLWx6d8sB3HeHzkZx4foQXgPwWOzkLLewfQaPqEPfuWnPm9TIzQufiKzI4GdzUdmf15hS9VWfrgb+7q1YjDoSh7HE/+5ehfI47ITt7M7HIcx38A6v161A==
+sidebar_class_name: "post api-method"
+info_path: site/docspace/api-backend/usage-api/api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Save the greeting settings"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/api/2.0/settings/greetingsettings"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Saves the greeting settings specified in the request to the current portal.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"title":{"maxLength":255,"minLength":0,"type":"string","description":"Tenant name","nullable":true,"example":"legacy_1080p_small_wooden_mouse"}},"additionalProperties":false,"description":"Greeting settings","title":"ASC.Web.Api.ApiModel.RequestsDto.GreetingSettingsRequestsDto"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Message about saving greeting settings successfully","content":{"application/json":{"schema":{}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

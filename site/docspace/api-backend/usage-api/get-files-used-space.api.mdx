@@ -1,0 +1,63 @@
+---
+id: get-files-used-space
+title: "Get used space of files"
+description: "Returns the used space of files in the root folders."
+sidebar_label: "Get used space of files"
+hide_title: true
+hide_table_of_contents: true
+api: eJztVt9r2zAQ/lfMPYs4zcoofgvLWsY2GMn6VEJQ5XOsVrY06Zw2M/7fx1lOk6YtG4O89cWxrO9+fd8ppxZIrgNkN3CpDYYkTS6tydEHWAqwDr0kbesvOWSwRuox1wHzhZMKQYDH4GwdMEDWwmQ85p8cg/LasR1kwOgkMDyxRVL0QXSdUImJt5aSYggnQNmasCZ2IZ0zWvWh07vAfloIqsRK8httHUIG9vYOFYEA5zlR0jGLajuzqqmwpoNM/2pFmswhLJDX9RrEUTWRnCSiBdSNMfKWDck3KAAfZeV4CQbXUm1XZ+OLsVuFShqzerA2x3pV2SYgdAKaV7LTNeEa/Yu4exZBQGF9JSmiP57DQdizyYfzrhMg81yzpTQ/DqospAkodqXCdPFp1As6+mQ9jqZOf7c5mjCaD6LOyEbAgiTpQFqFWD9nT16G8p3g0xEsvSr1Bt8pPh3F3trq/U/iZASfMsYcQ2NoRha6jgOdj89emT21bKi0Xv/GvE8noGq8pi1kNy3IoFa8v7pH/gAeZQ4CHrwmhGW3PKZ3jtT4OvSjq/m3qTYCARVSaYf5yR0lqYQMUul0OhmN0942PtnpTr6AfsNjkRNtvIEM2lsZ8Nqb7oXuix6bKFsXet3EiQ0CNtJr7ru+dQfjyFEhG8OtURK5LE2NVdKUNlB2MX7hfBbRyfX8G1O93JO44IEcvT+n8qlRpdNfcctHQFb9+hAmQLN/Ze29xl4dXRf24JjB1GkuA32IqWwmfCKcDVTJ/kowuL1Cek2Q41La/Q3jf7Uc6iJ8pNQZqev+iEZao7A3XDQImIyYyl0eR/IuBTDdjG6fZO34868GPTfjci8frzoBJUo+VNwPPckwVQod9TqbJrJ9dGlisZ667+rzTxDA7D8XKEoxvLD33Va9PfT9XLmYAT878YZF20b1u+4JH7fetBgq3KGZ3GXXdX8Ap4Cx/A==
+sidebar_class_name: "get api-method"
+info_path: site/docspace/api-backend/usage-api/api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get used space of files"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/files/filesusedspace"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns the used space of files in the root folders.
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Used space of files in the root folders","content":{"application/json":{"schema":{"type":"object","properties":{"myDocumentsUsedSpace":{"type":"object","properties":{"title":{"type":"string","description":"Folder title","nullable":true,"example":"legacy_1080p_small_wooden_mouse"},"usedSpace":{"type":"integer","description":"Used space","format":"int64","example":1234}},"additionalProperties":false,"title":"ASC.Files.Core.ApiModels.ResponseDto.FilesStatisticsFolder"},"trashUsedSpace":{"type":"object","properties":{"title":{"type":"string","description":"Folder title","nullable":true,"example":"legacy_1080p_small_wooden_mouse"},"usedSpace":{"type":"integer","description":"Used space","format":"int64","example":1234}},"additionalProperties":false,"title":"ASC.Files.Core.ApiModels.ResponseDto.FilesStatisticsFolder"},"archiveUsedSpace":{"type":"object","properties":{"title":{"type":"string","description":"Folder title","nullable":true,"example":"legacy_1080p_small_wooden_mouse"},"usedSpace":{"type":"integer","description":"Used space","format":"int64","example":1234}},"additionalProperties":false,"title":"ASC.Files.Core.ApiModels.ResponseDto.FilesStatisticsFolder"},"roomsUsedSpace":{"type":"object","properties":{"title":{"type":"string","description":"Folder title","nullable":true,"example":"legacy_1080p_small_wooden_mouse"},"usedSpace":{"type":"integer","description":"Used space","format":"int64","example":1234}},"additionalProperties":false,"title":"ASC.Files.Core.ApiModels.ResponseDto.FilesStatisticsFolder"}},"additionalProperties":false,"title":"ASC.Files.Core.ApiModels.ResponseDto.FilesStatisticsResultDto"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

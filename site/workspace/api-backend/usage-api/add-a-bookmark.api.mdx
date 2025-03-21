@@ -1,0 +1,71 @@
+---
+id: add-a-bookmark
+title: "Add a bookmark"
+description: "Adds a bookmark with the title, description and tags specified in the request."
+sidebar_label: "Add a bookmark"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVm1v2zYQ/ivCfWYs2Q2yVMAwJF2wFVu7IC8Y0NgfzuLFZi2JLEnVUQX99+EoyZETp9mw6oNM815499zDOzXgceUgvYNMF0VVKl/H51pvCrQbBwsBjrLKKl9DetfAWeXX2qpv6JUufyeUZNnUEkoQsLXKEyzahQBJLrPKsBqkcCalizBa9n6jrfLryK8p8srnJKKRdoSljDikyBnK1L0iGakyKFv6UpHzExDQL8+1rCFtINOlp9LzEo3JVRbiiz87Pr0Bl62pQF752hCkoJefKfMgwFhtyHpFjqWVzfnnSexLp/PKU3R79WfkdYhkl4jBFYEY3DpvVbmCVkDI67mvAdgu70OGe/ovmo+3D50eKvry4QFdMmjRk+yK4ahQmc4P+QsPQ+6MLl2H1CxJnh/wkbZ5HaGUJHcIgfhRxXkvRzqq9LQiCwLutS3Qd1snxyCAHrAwDD5MpwzGzVCK/bTGir9pvcopUmU2YYvbjgYv66+9N+l8Hs/n8Xa7nayC+STTRThvXRXLEtUrPm5t3rFp0G4FvLPEFfm+4SyZJUfT2VFycpP8lL45SafHk9Pp6fT07ZtPIXoj/7+TX/dp+Bp0o+DP6/9Yyp3TXSWrSsm9Q5L+OTrwGp4QtXImx/ojFq8U/IPaUPQJyxq926h/yZIPWCJzrhVw9hU92usC81eqXHVVdqwZYbBi+0ur71VOrxJtPo8vrZZV5h0vSZucuj02n6AzD79UjuzPKAtVKuctem2hfexAcFGYXNdEf1s0tC8aGgKLOhlLj5Pp86t9W2Lf+UkGHwX5tZaQgtEuFBj9GlKI0ah4Nknix2Ey6gSO7FeyLkyS0GvDTXJpHDdr7XybNkZb34KAr2gVLvOOLizrQrrHKmeG5DrDPGy3AthmX3yavJ1xNqPpdc1dpnN3cIbtqoBG/UE1CFCc97oTCygDp/ZtAxDcxq4ep9HFULshw11VB9R3G/sIP+qF5j3q5qq81yHA3sG7AdroOuAZXV1c30Rnl+8ZN7Ku85ejpwEf5wsM93jIQsrRNH4aymic/vjB3aPs6cHHJkdVcoT93O04dMclAAGzSRKGR58sCNgFvBA9J+6gaZbo+CK1LW9/qcjyl8rikUL8rxVDJZl6G6oDjCHJoxuOiNXzqqv/kxHVisHiLMvI+O/qLkY34/Kv65sQdfeNUmjJNha3/P2CW0gBBOiAXeBl2Gsgx3JV8WdFCp1PZhnfvn2SbgJJ+wVnNYjKehThPl9Fnwi/Oa2DJk3TXYG23el3ohctdpek0+aaLtq2/QdMWIKd
+sidebar_class_name: "post api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Add a bookmark"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/api/2.0/community/bookmark"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Adds a bookmark with the title, description and tags specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"url":{"description":"Absolute URL to the bookmark page","type":"string"},"title":{"description":"Bookmark title","type":"string"},"description":{"description":"Bookmark description","type":"string"},"tags":{"description":"Bookmark tags separated with semicolon","type":"string"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Newly added bookmark","content":{"application/json":{"schema":{"type":"object","properties":{"Id":{"type":"integer","format":"int64","example":"11"},"Title":{"type":"string","example":"Google inc."},"Url":{"type":"string","example":"http:\\/\\/www.google.com"},"Thumbnail":{"type":"string","example":"Url to thumbnail"},"Created":{"type":"string","example":"2020-12-06T07:36:14.8181893Z"},"Updated":{"type":"string","example":"2020-12-06T07:36:14.8181893Z"},"Description":{"type":"string","example":"Google"},"CreatedBy":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"}},"title":"BookmarkWrapper"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

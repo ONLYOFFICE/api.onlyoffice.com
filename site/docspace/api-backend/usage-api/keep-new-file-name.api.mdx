@@ -1,0 +1,71 @@
+---
+id: keep-new-file-name
+title: "Ask a new file name"
+description: "Specifies whether to ask a user for a file name on creation or not."
+sidebar_label: "Ask a new file name"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVMFuGzcQ/RVizqxWMXoI9ubYKVC0CQI7PhlCMNqd1TKmSIYcWlGE/fdgyJUl223RAr1I3OGb4cx7jzwA4yZBew+/GUtJNeqWmI3bJFhp8IEisvHu9x5aeCAKH2knwI+4JdAQ6VumxO98v4f2AJ13TI5liSFY05Xc5mvyTmKpG2mLsuJ9IGjBr79Sx6AhRDmJDaWCIz4Drb23hA409JS6aILUhBZuA3VmMJTUbiQeKSr2KhErHkmlebOXSBlH+aicl8PoO26DJWg5ZpomDdj3Roqi/XTWx4A20atDj9XmyVXAiFtiigk0sGGpC5e3V4tC5+LKR1pcBvPB92TT4qZmXbNfHCudQjBN0k2kFLxLlYqL5VL+njfxrjKiHtFmapWMocxQ5n4STJmkUu46SmnIFvR/1uZIe23q1+Wb133cOcw8+mh+UA+CStTlaHgP7f0BMHVfZP/LA0kAImEPGnbRMMFqWv0rPTE9KFQ5UVSDjwrVYCwph1tS3qkuUh22arsADVvi0YtZQy7GQh6hhQaDaS4Wy0bSUyNGdrSTD1eNnCg+iobSeI4WWjisMdFdtNNr4xWs6rwbzCZXukHDI0aDa1t1m5MrZwNmy9DCyBzaprG+Qzv6xO3b5avi1xWt7m7+FOpXJ1JvRaFa/Tm1T5JhMH/QHjSUodrnMA1G6nfePxgqaon0N6cL/P54LeYLWG6HZA2+nHH0djAyLMVUG368gElD8Im3WJw0H35ZlHO0O0n2ctizB+N/Un8mguk7N8GicdJbrjpUK9wLS6DhYiHcFzuAhpeGWGkQgQR+eDLCJOFvmaLYeXUSXL4mDSNhT7E4qMgCV3W4Xz5LUwK3uar04vZN+phx2XUU+B+xqzOLf7r7DBrW8+O79b2kRNzJw4w7aAHkBZfk4poSO4BFt8m4EWwtWZ7ALOScO6l6Zl7IUMcttz9v8LnF6hjyK0P9ZcbhUG06TU/4uvW3GTOxR7SIupqm6SdKylOg
+sidebar_class_name: "put api-method"
+info_path: site/docspace/api-backend/usage-api/api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Ask a new file name"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"put"}
+  path={"/api/2.0/files/keepnewfilename"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Specifies whether to ask a user for a file name on creation or not.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"set":{"type":"boolean","description":"Specifies whether to set the specified settings or not","example":true}},"additionalProperties":false,"description":"Settings request parameters","title":"ASC.Files.Core.ApiModels.RequestDto.SettingsRequestDto"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Boolean value: true if the operation is successful","content":{"application/json":{"schema":{"type":"boolean"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

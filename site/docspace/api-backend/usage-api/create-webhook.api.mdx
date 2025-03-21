@@ -1,0 +1,71 @@
+---
+id: create-webhook
+title: "Create a webhook"
+description: "Creates a new tenant webhook with the parameters specified in the request."
+sidebar_label: "Create a webhook"
+hide_title: true
+hide_table_of_contents: true
+api: eJzFVt1v2zYQ/1eIe+Zs1+uGTm9Z0oeg2VbEMfIQGAUtnS02EqmSpzieof+9OJL+kJM0LlpsD5Yl8r7v9ztyA6SWHrI7mCCRNksvhuIW56W19x5mEmyDTpG25rKADHKHijDtgwSHX1r09Kct1pBtILeG0BC/qqapdB40h5+9Nbzm8xJrxW+spx0W7NioGkFC6zT7o3WDkIGdf8acQELjOALS6FlPF/xMMtoQLtGBhAJ97nTDziCDywuQsLCuVhSlfh2DBHxUdVMhZH+8e/t7J6PbbAO1erxCs6QSst9GEmpttp+jXTSenDbLJ47+jpHvLMOtNguNVSGmDVkDXcyKneytvnnN6vT6smfU2xoF4SOxPY+5Q/qA6x8MfRLsiHtcgwTTVpWaszNyLb7oGw0LHXZgbm2Fyjyx/j5KCuuEsfQtD/zJafnqBLOTydWrtjoJqig0a6jq4wF4FqryeGwxIVkkHItGOVUjofMggTSFIpxNzge3OB+cNZp/f9kCKz+4jir+guxgS5hzaxZ6ebADXccROfSNNT5ieDwa8V8/kBs0ypBYpXhWmkqhyYs8WOzHdTLL/nMunUSXl9H2In1OIcyJIO4R6P/kyKTBXC80eqEXgkrc9t4L5VDgMYN+hDHfx5DXYB+h/BT2e7i/Hb15ivCpUS2V1ul/sYAudqJ1mtaQ3W1A+fwT73/iamd34FAVIGHlNCHMutlxYufhIPJCCYMrQc+wh0u6p43wqdyF0CbsJcoPQEKNVFo+3hrrA08Uz1AYqkYPx4PR0KejcbjaHXwe3QOzkWNvXQUZbObK49RV3TM4YtlE5TaepiDhQTnNTQ5kTMqxbAvVVky3kqjJhsPK5qoqrafs3eiJ8YsoLabXV1z92b6uE54D0Xq/ujvUqEZ/iOAO/O2LSdBsP7f2XmNoGA+Y6/2B/36LqjhKeBTsLB0xORH5gCo9IvbWdwyKPAs4T5jXZmFD+FuENprriM7HWjyMmYLcxFqFUZiiiWARSuz71yviwcXl5wIr1ZkzGzaV0mmmhTZHkN1xE0DCeDAKNYlAY+SnUGcSuPUsudlBrOPlLy065spsDyX+6iSUqAp0AZuh4XAe0/vlhuNh8aqN/T86PTq51TjLc2zom7KzA+J8/GdyAxLm6R5Y24J1nFrxHVGtIAPgqyRrB0CGtQ1UyixbtWTZaDMMp5YLcwjSCMf0wlltt8z6MMI+emMe/OSsntXYbCIDum4nH7de1EiV3UpzQ2dd130FHGXeHw==
+sidebar_class_name: "post api-method"
+info_path: site/docspace/api-backend/usage-api/api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Create a webhook"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/api/2.0/settings/webhook"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Creates a new tenant webhook with the parameters specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"required":["name","uri"],"type":"object","properties":{"id":{"type":"integer","description":"ID","format":"int32","example":9846},"name":{"maxLength":50,"minLength":0,"type":"string","description":"Name","example":"Winfield Upton"},"uri":{"minLength":1,"type":"string","description":"URI","example":"some text"},"secretKey":{"maxLength":50,"minLength":0,"type":"string","description":"Secret key","nullable":true,"example":"some text"},"enabled":{"type":"boolean","description":"Enabled or not","nullable":true,"example":true},"ssl":{"type":"boolean","description":"SSL","nullable":true,"example":true}},"additionalProperties":false,"description":"Webhook request parameters","title":"ASC.Web.Api.ApiModels.RequestsDto.WebhooksConfigRequestsDto"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Tenant webhook with its config parameters","content":{"application/json":{"schema":{"type":"object","properties":{"id":{"type":"integer","description":"ID","format":"int32","example":9846},"name":{"type":"string","description":"Name","nullable":true,"example":"Winfield Upton"},"uri":{"type":"string","description":"URI","nullable":true,"example":"some text"},"secretKey":{"type":"string","description":"Secret key","nullable":true,"example":"some text"},"enabled":{"type":"boolean","description":"Specifies if the webhooks are enabled or not","example":true},"ssl":{"type":"boolean","description":"SSL","example":true}},"additionalProperties":false,"title":"ASC.Web.Api.ApiModels.ResponseDto.WebhooksConfigDto"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

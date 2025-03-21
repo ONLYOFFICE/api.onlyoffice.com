@@ -1,0 +1,63 @@
+---
+id: get-the-restoring-progress
+title: "Get the restoring progress"
+description: "Returns the progress of the started restoring process."
+sidebar_label: "Get the restoring progress"
+hide_title: true
+hide_table_of_contents: true
+api: eJydVE1v2zAM/SsGz0KdZT1svm1F0RXboejHKchBcZhYjSxpFN01M/TfB8pOGnftDrsktvgeTb737B5YbyNUCwieWNvyq653XYClgoh1R4b3UC16+NJx48n81my8+4Z6jSQkQr0GBb/IMMIyLRWsMdZkgsCgglvkjlwsuMEikN8Sxlj4Tb6PrIlxXRBG9mTcVhA1xngGCghj8C5ihKqH+Wwmf69bn9ByY1BQe8foWNA6BGvqPG/5GIXSQ6wbbLVc8T4gVOBXj1gzKAjkAxKb4YHX8cK3wSLj+gS88t6idqAAn7WUoYKNthEhKbg5DPGCN45xiwQKNp5azcPRx/mkwfm5sC+JPJ1QI8tmE6DrrBXoD+N2/0ZmREoK2HA+GDw9TpiSFM9nH/4W9cHp0Whc5xYtcuPXUMEWs0yaG6ig1MGU87NZOYZmizy4iCdeRKQnpJjj05GFChrmEKuy7BsfOVW9sBMoeNJk9MoO2kttGGyjOyuiWV9rm4+TyjGdlj/NPs9lp5PI3onPQ7s3g3tUTwfzHfegwMj2zVBW4HQr1Qk3y2Hcxmf6qOyFb9vOGd4Xd3nb4vby7r74cnMtWyHFQVWrGQ/TR251zuL4jCvk/DbQW3GemNO/pPv/36txb8ZnLoPVxslU2Z1+NHchooCC+dkM1PhVAAVvWLxUo1kL6PuVjvhANiU5/tkhyXdj+eKt3CV1kFgyscO9aFzXGDiHwHaDJa/eWzH2GMOry3tQICGdurjLLo4X0v1QcvuT3lND1TiC/Cb1DqXvh4ykdMQPpXcZxxQNaJF4mVL6A/W33Io=
+sidebar_class_name: "get api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get the restoring progress"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/portal/getrestoreprogress"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns the progress of the started restoring process.
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Restoring progress","content":{"application/json":{"schema":{"type":"object","properties":{"IsCompleted":{"type":"boolean","example":"false"},"Progress":{"type":"integer","format":"int32","example":"44"},"Error":{"type":"string","example":"null"},"Link":{"type":"string","example":"Link"}},"title":"BackupProgress"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

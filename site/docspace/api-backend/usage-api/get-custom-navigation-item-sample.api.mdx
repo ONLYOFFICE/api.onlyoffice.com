@@ -1,0 +1,63 @@
+---
+id: get-custom-navigation-item-sample
+title: "Get a custom navigation item sample"
+description: "Returns a custom navigation item sample."
+sidebar_label: "Get a custom navigation item sample"
+hide_title: true
+hide_table_of_contents: true
+api: eJy1VttyozgQ/RVKr0uCr7OOt/ZBJsR2bJzYhCRknJqSQQYZgYgkHDMu/n1K4CSeZG77sA82unQftc5putkDiUIB+p+Bg6UkaSg0QzNzIVmizdCWhEgSloJHHbAM82oyDkAfhFjWVm9GY4kTByUZxUAHHIuMpQIL0N+DVqOhHgEWPidZBdgHh0PSV3+NSJwAHfgslTiVygNlGSV+tWtshHLbA+FHOEFqJIsMgz5gqw32JdBBxlWMktSHkuDIRkhO0hDo72IYB0AHa8YTJEEf5DlRc7yrL9EHCOEmbjbaJysfdU/O1qh5skI9/6TTanR7qw5arVs9UOqAohWmvz9tWpnpIM0pRSt1guQ5Pj6wtih1kPM/wHMX01+iubzCWpFwnIS/hxuQUCMJCvEvQQMkUb8yWy6NLA3/WSGBP3V0cju4Wjw3JsOQQQjhzHEjyw0hhMM5hHAQw9Cu1jej9kgNzi8G9q3lqtFl4aeHX0Lymaz2YXvh3FAbrjvmcmkgZ1qtFha15reLzn3enol527QHjtXx8tXFoEPoaI7DYOhs7qC5tbIhs4qBR6aNLgzSe3c4YnTXbNB1r2UnV9l6ilnXZZduNKDZJF6YaeQWf6/O7s27+Gluu7FH729HzroX32zj0eRpMudOyrKw6yx2N3ZMp4nTtJ+Rc5clpjNv2sXV17vhg+lxy7YuYgE78ycKL/LLS2/gm5Pdxm5f2IWDx2vLNluBfXU1M4cPD2ES8CYt2jcOv7QnZ1ZxOUBoyEdzEntCQnL5sPCcgsytoAi7Ts/a+jGJlkvDuxa+CPCmMfoU+I0b77lTUea4t1eLSdf0xuN/lfIiQZT+kfaOsvw/1B9Ugc1N6KnnurdcGmeRGrpurSS8s73l0piYXbZcGj60rs9Gu1048Z3MHFpTD54Xecv6lMD5ZrYbUHh3PdvFo+B5GA/Gdnvieecu5K0HE1p/sVEP5xsO788FbMQtC0J5fg+H013HzgQ8d8NtvJi49GldxWTRi5vYyeeJaVZcRex5nNo4zY/YWjFGMUo/0hWxZ42kWoLTXGNcS5k8LhyKtQPkVTpiCb5WvP4hLEu1iCVYy1CIf4Zd6gAFAVFuiF4flb01ogK/h/1YaTPEUYIl5gLoQBJZaQsd8/QOr04dmQeEnZqM49Mf1XhQliqATqP5sai7KcplxDj5igOgrAT2c05kAfqf9wAJ/4va/xJjtQA4RqrgPnMiMXgsH98HvsAy56nQkOb/sFlooiLlFOggwTJih8akWgGSEegDA2XEaJ02DHFobkYN9IZjhFiKl6YlMN8qTlSsVQUGe5XfLqflR60qW81n6ZqEed0ZgQ62iBP16lQt6OBc07RGOVVdJpIy6xsGZT6iEROy32t8AD+vrTVV4ctSEfPCo6O6X43+PZuvyYUyMsGFeotRUs2PzXRAFL7PWExwJRBJ16zyfsmCjKhrYC7qULYt9XZkTMgEVf33ADvE8ne6vL/W/q21/xdpD/eSeCeNjCKSHjXIWufP6tJAB63TRqVirbX6lHinNtDBm96POlD8K/f9q86lWn7KMVcJ+vimp5qVOogwCjCvEqRiHUDfx5mshKd5Tf+7Txal3mt2Dq0boAMlx/eK1docBgr9ZSstjrG/l7KOQP2X+k889vs6Hcry1b7e+qnH4YYv1ortx7IsvwEY6HLM
+sidebar_class_name: "get api-method"
+info_path: site/docspace/api-backend/usage-api/api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get a custom navigation item sample"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/settings/customnavigation/getsample"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns a custom navigation item sample.
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Custom navigation item","content":{"application/json":{"schema":{"type":"object","properties":{"id":{"type":"string","description":"Id","format":"uuid","example":"aae1e103-bca5-9fa1-ba8c-42058b4abf28"},"label":{"type":"string","description":"Label","nullable":true,"example":"Label"},"url":{"type":"string","description":"URL","nullable":true,"example":"Url"},"bigImg":{"type":"string","description":"Big image","nullable":true,"example":"data:image\\/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkAgMAAAANjH3HAAAADFBMVEUAAADJycnJycnJycmiuNtHAAAAA3RSTlMAf4C\\/aSLHAAAAyElEQVR4Xu3NsQ3CMBSE4YubFB4ilHQegdGSjWACvEpGoEyBYiL05AdnXUGHolx10lf82MmOpfLeo5UoJUhBlpKkRCnhUy7b9XCWkqQMUkYlXVHSf8kTvkHKqKQrSnopg5SRxTMklLmS1MwaSWpmCSQ1MyOzWGZCYrEMEFksA4QqlAFuJJYBcCKxjM3FMySeIfEMC2dMOONCGZZgmdr1ly3TSrJMK9EyJBaaGrHQikYstAiJZRYSyiQEdyg5S8Evckih\\/YPscsdej0H6dc0TYw4AAAAASUVORK5CYII="},"smallImg":{"type":"string","description":"Small image","nullable":true,"example":"data:image\\/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8\\/9hAAAAUUlEQVR4AWMY\\/KC5o\\/cAEP9HxxgKcSpCGELYADyu2E6mAQjNxBlAWPNxkHdwGkBIM3KYYDUAr2ZCAE+oH8eujrAXDsA0k2EAAtDXAGLx4MpsADUgvkRKUlqfAAAAAElFTkSuQmCC"},"showInMenu":{"type":"boolean","description":"Show in menu or not","example":true},"showOnHomePage":{"type":"boolean","description":"Show on home page or not","example":true}},"additionalProperties":false,"description":"Custom navigation parameters","title":"ASC.Web.Studio.Core.CustomNavigationItem"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

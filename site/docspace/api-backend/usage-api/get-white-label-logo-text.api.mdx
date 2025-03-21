@@ -1,0 +1,71 @@
+---
+id: get-white-label-logo-text
+title: "Get the white label logo text"
+description: "Returns the white label logo text."
+sidebar_label: "Get the white label logo text"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVMtu2zAQ/BViz0TkGj0UugVoEQTNKQ/0EAjBWlpZrGmSJSknrsB/L1aU7ThOgiLtxQ9ydzg7M+QAEZcBynu4oRiVWQZRiGtaeDSNMkuoJFhHHqOy5rKBEpYUf3Qq0hUuSF/Zpb2lpwgSHHpcUyTPYAMYXBOUcBm+ol+BBGWghF89+S1IaCjUXjnGhBJuHNWqVRSEakXsSGi7tEIF0VovUDToV7y8JmG9MJYPC3VHa4RygLh1fM7CWk1oQAI94dppgjL6nlKSz6lQi72O/8YmY4hIBk38CKNKgqfgrAkUuH4+m/HXMQsWVsSsbG1NJBO5CJ3Tqh7NKH4GrhwOJ6eUkoTPs0+ncHcG+9hZr35TA1wVqO69itvRKwz1A+8/rIgXwBM2IOHRq0hQMeFjtGuKvTdhVOeRsyA0hyErxaTPQMKaYmenwIzxiB2UUKBTxfxsVoQpbcUIMPYX3D/NHMhvdlHqvYYShgUGuvM6nTo21oramlYt+xxVkLBBr3Chs8hTc1Ymp6CELkZXFoW2NerOhlh+mZ2AT5kRd9dXkEbzdtLdsO4Z/VjAfQTQqe/ECZsSeFQ2hbC2dqVo9ESZ1o7dKnJa4NwpHoN8yFQ2c0gSnA1xjaPzE+wFxbeteDnQcIjT3/k4zcJ/C6dRGSbRZymzqfc8KEiYn81G57KxHKC9tSBhb24lgcXmvmFvauLlfCHZ8kYFtq6BskUd6J0ZPvB4vDrR6Nzhudqg7rkI+AH5f2zeeDzeZ7R/tQ6kqkO8obyvkoSOsCE/ipcbz+ua3POuk7eDUfa39OLbLUjgdB4HOEd1+sHouy2zfY59nOzMgD9Zvlc7hiHfjpT29XnrzY5pwl01i1SllP4A29RPZw==
+sidebar_class_name: "get api-method"
+info_path: site/docspace/api-backend/usage-api/api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get the white label logo text"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/settings/whitelabel/logotext"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns the white label logo text.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"IsDark","in":"query","description":"Specifies if the logo is for a dark theme or not","schema":{"type":"boolean","example":true}},{"name":"IsDefault","in":"query","description":"Specifies if the logo is for a default tenant or not","schema":{"type":"boolean","example":true}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Logo text","content":{"application/json":{"schema":{}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

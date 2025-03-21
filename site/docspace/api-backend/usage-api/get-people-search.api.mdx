@@ -1,0 +1,71 @@
+---
+id: get-people-search
+title: "Search users (using query parameters)"
+description: "Returns a list of users matching the search query. This method uses the query parameters."
+sidebar_label: "Search users (using query parameters)"
+hide_title: true
+hide_table_of_contents: true
+api: eJy1Vt9v2zYQ/leIe9oAzfaCPQx6M5ZiKNZsQZNgwAKjOEtn6xqK1Egqiyvofy+OlFzZThqjxfwg2+LH++7Hxzt2EHDrIb+Ha7KNJjVXN4SuqGCVgW3IYWBr3paQw5ZCwgyADBp0WFMgJwY6MFgT5PBvS24HGbCZ/CnJF44bMQY5JAtqXPRFRTVC3kHYNWLCB8dmCxnQE9aNjq9sTSrQU4C+X2XgyDfWePKy62KxkK9Djnfsg7Ib1XrxL4PCmkAmCBCbRnMRI5t/9ILuTn2w649UBInSSR4CJy4un/PzkPrtJWSwsa7GADm0LZcHoXSL4fPTM4/x00OfQcm+0bj7Myb2NdbLBFaxDBmYVmtcC2FwLU35r/iB1D9odhj8AwtP4KDPYLiNsK+aRoNbcmITHzGge93oMuG+ZnVS+9HuX463bFC/bn9EKs+fSOE3sV3h0+tEV/jEdVt/Fw+V3NZnUEXc9zDd1KjPSF6EnUPROq2CVX6K7+PZ2bCmO3cG13XCqrv3786PpkK/PBba2lpNaE6DaajgDZNXvFGhotgaVIVeoRl8VtYpY8P0uAp9nwH7pbGG62/m4UQTjbxEI+UpSxY7qK8nfWeD2tP+nMLy5rfZ37SeLRueXdmStJ+9qRttd0SXwULfi6VfFj+fdsU7g22orONPVIKgPBWt47CLHRx98UHWPzyQvABHKK3rP8eBYCV999DaewqtM16h0tNuq2oMRcVmG6P3k2Y/U7cVe1VTqGwpYB8hcU19GSczyCBh0tyJsyZUkMMcG55fzBbzJo6iuR9nkSf3OA6iVuQG3Rq9KK9/ZvwIVhXWbHjbphEHGTyiY5Fc7PPD5pTBDbZaWnkVQpPP59oWqCvrQ/7r4rQNJ3SUcR9n1ZjiGxkxyfphoveKwob/IJmIwyg9gA0TtbD2gSnWjs3Gxt2jLBqWMMj55MrjRTyD1oca45AbzA7jN9Xqh9ZLpY5L8ONxYN2XCfq/1n1IhRzweaORjcTQpkokEdxLniCDi5lkPwkhKmC8t0hpBNbtJdDL63TdEIGU7KXQ5f5gvRjp0U3lWediDfc3nUfUrWBASj9KCvL7lXQrwpJcdCFtWhYFNWGy6+RqIlb2R+H3N7eQgSjiUDRJHsMPsT4umalHR2pKHsizz17Y0XVJkX2/x6elF3cMEY5oSdCq7/vPcA2Q+Q==
+sidebar_class_name: "get api-method"
+info_path: site/docspace/api-backend/usage-api/api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Search users (using query parameters)"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/people/search"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns a list of users matching the search query. This method uses the query parameters.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"query","in":"query","description":"Search query","schema":{"type":"string","example":"some text"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"List of users","content":{"application/json":{"schema":{"type":"object","properties":{"id":{"type":"string","description":"ID","format":"uuid","example":"{00000000-0000-0000-0000-000000000000}"},"displayName":{"type":"string","description":"Display name","nullable":true,"example":"Mike Zanyatski"},"title":{"type":"string","description":"Title","nullable":true,"example":"Manager"},"avatar":{"type":"string","description":"Avatar","nullable":true,"example":"some text"},"avatarOriginal":{"type":"string","description":"Original size avatar","nullable":true,"example":"some text"},"avatarMax":{"type":"string","description":"Maximum size avatar","nullable":true,"example":"some text"},"avatarMedium":{"type":"string","description":"Medium size avatar","nullable":true,"example":"some text"},"avatarSmall":{"type":"string","description":"Small avatar","nullable":true,"example":"url to small avatar"},"profileUrl":{"type":"string","description":"Profile URL","nullable":true,"example":"some text"},"hasAvatar":{"type":"boolean","description":"Specifies if the user has an avatar or not","example":true},"isAnonim":{"type":"boolean","description":"Specifies if the user is an anonim or not","example":true}},"additionalProperties":false,"title":"ASC.Web.Api.Models.EmployeeDto"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

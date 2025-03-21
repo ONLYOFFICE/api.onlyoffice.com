@@ -1,0 +1,63 @@
+---
+id: get-a-message-template
+title: "Get a message template"
+description: "Returns a message template - empty message in the JSON format."
+sidebar_label: "Get a message template"
+hide_title: true
+hide_table_of_contents: true
+api: eJzlWEtz2zYQ/iuYPUPWw3YS6+ZnotZOMpY8ndajw4pcS4hJggFA24qG/72zICWRrizS7bE+WBLwfbvAvrjLFTicWxjeQ4wq6t6QtTgnC1MJloLMKLeE4f0KTjO30Eb9Qqd08oUwJMMkQxiChGejHME0n0oIyQZGpQyDIdySy0xiBYq4kCwcxWmEjkRHUJy65WZDJcItSPw2/vZVPGgTozsACYZsqhNLFoYrGPR6/FFXcdkgBSQEOnGUOOZimkYq8Lfo/rAsYAU2WFCM/M0tU4Ih6NkPCpiYGp2ScapQf+ocBouYEmcrYDQGlyBBOYpts5AHFdEorOBU4mhOBiSU5/VLhwOQQC8YpxGD+oPDI8ilZ3/FmCp864xK5jX0BpVLsOoXNWr7cLRTW2m3iafuU1gF5hISonCMTzTRE4rTCnWmdUSY1LjOZFRRVrPN26pG4cYcWTzjYHyfQQ8PD711nDYUNlu0gvMsQxg3nXSDyiWgDx0KT+21Sh5bWoRTZewV35lov646NGeycn7nBlW0DdwLdOi3R4kzOsyCIon2ia4hcwlfXByd6XC5n7VB5RLOS5fZs0gHjxS2vP4oTrVxWORtC/w4KzJu77nWIL4I2t0ZvU/JWRDsV8AAvnMD7NyjJno/aqIZdRqGhqzdD12DcglXRsf7wR6RS7ilNFo2HWINYpe8u3AdHx97cyxQJU0Jswat8RfoaFzAmnkMZmZbUhV/oWwaYUNEV4HsOpyPwjbPgXfU91zCNc4osqOkzRVeYdk/9is9t00ve5rYZzLt89FeafOMJmzNmNCL4yLwLYmWbZP4Xzyujv0fsy9vrl/V1x1mW4NYW6tCPq4U8lvyj4IrHYVkWqdDksXcLY0pCQvho2SmX0DyCrcIFwYf+HNi0C54OcUYJNxZMoUm3isbJ9+b1Vug+57oiFK4FH3REV6+FINi3UlxKDrCa5HiSHSEVyTFMe+nGEvxQXTEVp0UHxm01jitx6qvMcWx/q/X32JrMfCOGpDtKAJHRQ3w9eyakrlbvLuOHPnG7Q9sUQgeMLJlYk90iE0ZWoH/SdaReQfllgJSTxT6ors31wa9Qa/TH3T6nya9T8P+YNg7OegPeicnHz7+VSjngnKujclS11iINgf4gvY7GkuXxmjTlnSjYioHoqYSUYeW3PLB2Ya7hbL/MaIkRHOnmh6YFaC3Moa39DMj68YOXbarp3ndGpaHLvtC3j3q9f85ZN0lWA6AFHoZMbmFDmEIc/IzDnKsQhdT1R0c9Lp+mCxnMttdz3zAQ6V5ImP9TJlxVwsL51I77HZXC21dPlxx05eDhCc0CmdRMTXxXnGqB8wijv1IBxj55VwCc+rbn3onA75QZY4d85hXTnK7ptltFqfqd/JpzFdfFNsSEj8l1LneFip5KFqo0q7nOo6zRLmlGPvbitvL8UScfh/xrcjYwqS+tJSnty5G34aXOj6T2zEyw6vCt9oOtv990C7v7ujFddMIle/1s2LuKLx7z4YBCYODHkj/uoA/1i8MinHFH3MqS3/dw2o1Q0t3JspzXv6ZkeH3CdOte/lXLtdW5rB4pCWbOQgodT4OoqzwyqvJnX27CcPPlxOQwEFad+Sjd2T5haWvt5JlRXbdp7I8Av/P5RuU1aoIkzzf4IutNxmbQCrQbOFpnud/A/sG0ZQ=
+sidebar_class_name: "get api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get a message template"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/mail/messages/template"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns a message template - empty message in the JSON format.
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Empty message in the JSON format","content":{"application/json":{"schema":{"type":"object","properties":{"Attachments":{"type":"array","items":{"type":"object","properties":{"fileId":{"type":"integer","format":"int32","example":"1234"},"fileName":{"type":"string","example":"fileName"},"size":{"type":"integer","format":"int64","example":"1234"},"contentType":{"type":"string","example":"contentType"},"needSaveToTemp":{"type":"boolean","example":"true"},"contentId":{"type":"string","example":"contentId"},"fileNumber":{"type":"integer","format":"int32","example":"333"},"storedName":{"type":"string","example":"storedName"},"streamId":{"type":"string","example":"streamId"},"attachedAsLink":{"type":"boolean","example":"true"},"tempStoredUrl":{"type":"string","example":"tempStoredUrl"}},"title":"MailAttachmentData"}},"Introduction":{"type":"string","example":"Introduction"},"HtmlBody":{"type":"string","example":"HtmlBody"},"ContentIsBlocked":{"type":"boolean","example":"true"},"Important":{"type":"boolean","example":"true"},"Subject":{"type":"string","example":"Subject"},"HasAttachments":{"type":"boolean","example":"true"},"Bcc":{"type":"string","example":"Bcc"},"Cc":{"type":"string","example":"Cc"},"To":{"type":"string","example":"To"},"Address":{"type":"string","example":"Address"},"From":{"type":"string","example":"From"},"ReplyTo":{"type":"string","example":"ReplyTo"},"Id":{"type":"integer","format":"int32","example":"555"},"ChainId":{"type":"string","example":"ChainId"},"ChainDateString":{"type":"string","example":"ChainDate"},"DateString":{"type":"string","example":"Date"},"DateDisplay":{"type":"string","example":"DateDisplay"},"TagIds":{"type":"array","items":{"type":"integer","format":"int32","example":"1234"}},"LabelsInString":{"type":"string","example":"LabelsInString"},"IsNew":{"type":"boolean","example":"true"},"IsAnswered":{"type":"boolean","example":"true"},"IsForwarded":{"type":"boolean","example":"true"},"TextBodyOnly":{"type":"boolean","example":"true"},"Size":{"type":"integer","format":"int64","example":"555555"},"EMLLink":{"type":"string","example":"EMLLink"},"StreamId":{"type":"string","example":"StreamId"},"RestoreFolderId":{"type":"integer","format":"int32","enum":["Sending","Inbox","Sent","Draft","Trash","Spam","UserFolder","Templates"],"description":"[0 - Sending, 1 - Inbox, 2 - Sent, 3 - Draft, 4 - Trash, 5 - Spam, 6 - UserFolder, 7 - Templates]","example":"1"},"Folder":{"type":"integer","format":"int32","enum":["Sending","Inbox","Sent","Draft","Trash","Spam","UserFolder","Templates"],"description":"[0 - Sending, 1 - Inbox, 2 - Sent, 3 - Draft, 4 - Trash, 5 - Spam, 6 - UserFolder, 7 - Templates]","example":"1"},"UserFolderId":{"type":"array","items":{"type":"integer","format":"uint32","example":"144"}},"ChainLength":{"type":"integer","format":"int32","example":"144"},"WasNew":{"type":"boolean","example":"false"},"IsToday":{"type":"boolean","example":"false"},"IsYesterday":{"type":"boolean","example":"false"},"ReceivedDate":{"type":"string","example":"2020-12-18T08:12:09.1209967Z"},"IsBodyCorrupted":{"type":"boolean","example":"false"},"HasParseError":{"type":"boolean","example":"false"},"MimeMessageId":{"type":"string","example":"MimeMessageId"},"MimeReplyToId":{"type":"string","example":"MimeReplyToId"},"CalendarUid":{"type":"string","example":"CalendarUid"},"ReadRequestStatus":{"type":"boolean"}},"title":"MailMessageData"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

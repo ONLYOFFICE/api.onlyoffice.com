@@ -4,19 +4,19 @@ The plugins section allows to connect the special add-ons to your ONLYOFFICE Doc
 
 ## autostart
 
+`Type: array of string`
+
 Defines the array of the identifiers (as entered in [config.json](../../../../plugin-and-macros/structure/manifest/manifest.md#guid)) for the plugins, which will automatically start when the editor opens, and the order the plugins will run one-by-one.
 
-Type: array of string
-
-Example: `["asc.{7327FC95-16DA-41D9-9AF2-0E7F449F6800}"]`
+**Example**: `["asc.{7327FC95-16DA-41D9-9AF2-0E7F449F6800}"]`
 
 ## options
 
+`Type: object`
+
 Defines an object which allows configuring plugins from an external source. The settings can be set for all plugins or for a specific plugin. For example, this object can be used to pass an authorization token to the plugin. You can also use the **SetPluginsOptions** method of the [Automation API](../../automation-api.md) to pass the *options* object to the plugin.
 
-Type: object
-
-Example:
+**Example**:
 
 ``` json
 {
@@ -27,11 +27,11 @@ Example:
 
 ### options.all
 
+`Type: object`
+
 Defines the parameters which will be set for all plugins.
 
-Type: object
-
-Example:
+**Example**:
 
 ``` json
 {
@@ -43,11 +43,11 @@ Example:
 
 ### options.pluginGuid
 
+`Type: object`
+
 Defines the parameters which will be set for a specific plugin. The plugin must be specified with the plugin GUID of the *asc.\{UUID\}* type.
 
-Type: object
-
-Example:
+**Example**:
 
 ``` json
 {
@@ -59,26 +59,30 @@ Example:
 
 ## pluginsData
 
+`Type: array of string`
+
 Defines the array of absolute URLs to the plugin configuration files ([config.json](../../../../plugin-and-macros/structure/manifest/manifest.md)).
 
-Type: array of string
-
-Example: `["https://example.com/plugins/chess-plugin/config.json"]`
+**Example**: `["https://example.com/plugins/chess-plugin/config.json"]`
 
 ## url
 
-Defines the absolute URL to the directory where the plugins are stored. Deprecated since version 4.3, please use the absolute URLs in [pluginsData](#pluginsdata) field.
+`Type: string`
 
-Type: string
+Defines the absolute URL to the directory where the plugins are stored.
 
-Example: `https://example.com/plugins/`
+:::danger[Deprecated]
+Starting from version 4.3, please use the absolute URLs in [pluginsData](#pluginsdata) field instead.
+:::
+
+**Example**: `https://example.com/plugins/`
 
 ![Plugins](/assets/images/editor/plugins.png#gh-light-mode-only)![Plugins](/assets/images/editor/plugins.dark.png#gh-dark-mode-only)
 
 ## Example
 
 ``` ts
-const docEditor = new DocsAPI.DocEditor("placeholder", {
+const config = {
   editorConfig: {
     plugins: {
       autostart: [
@@ -98,7 +102,9 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
       url: "https://example.com/plugins/",
     },
   },
-})
+};
+
+const docEditor = new DocsAPI.DocEditor("placeholder", config);
 ```
 
 The **example.com** is the name of the server where **document manager** and **document storage service** are installed and the plugins are placed. See the [How it works](../../../get-started/how-it-works/how-it-works.md) section to find out more on ONLYOFFICE Docs service client-server interactions.

@@ -28,7 +28,7 @@ export const FeaturePageTemplate: FC<FeaturePageTemplate.Props> = ({ title, desc
         <div className={styles.helpSection}>
           <div className={styles.helpSectionHeader}>
             <GithubIcon/>
-            <Heading as='h2'>Get Help</Heading>
+            <Heading as='h2'>Get help</Heading>
           </div>
           <ul>
             {links.map((linkChildren, index) => (<li key={index}>{linkChildren}</li>))}

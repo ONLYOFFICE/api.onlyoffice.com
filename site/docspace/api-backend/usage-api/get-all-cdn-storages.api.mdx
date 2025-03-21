@@ -1,0 +1,63 @@
+---
+id: get-all-cdn-storages
+title: "Get the CDN storages"
+description: "Returns a list of all the CDN storages."
+sidebar_label: "Get the CDN storages"
+hide_title: true
+hide_table_of_contents: true
+api: eJy9VcFu2zgQ/RVizoTkpkWR1c2Ii6JoGyziensIDIOWxhYbiuSSo6ReQf++GIm247hJ2z3swbAozTzOvDd87IDUNkJxC3Mk0nYbRS7m5ILaIiwlOI9BkXb2QwUFbJGmxlxVNkVEkBAwemcjRig6uJhM+K/CWAbtOQ8K+KQjCbcRVKO4ml2LmJLFg6Z6eLtxxrgHbbfCq6AaJAwMXTpLaIkRlfdGl0Ml+bfIsB3EssZG8RPtPEIBbv0NSwIJPnDdpMeidPUoJlLQdgvySY0fZiDBtsaotUEoKLQoAb+rxvMS/rh88xZ6CaSJ1z9D+zKEvQRocKvK3erV5HLiV7FRxqwenKvQrhrXRuS9TptIG6oQ1A4kaMIm/rx1q5pfKPeao16q9qu2G42mEgtPznJx98q0v4D81xD2EnR0DQrC7/T/0ttLUFWlGVCZPx9xtlEm4qESmM6vsq+4zubUVtpli4jhylkKzsTss7Jqiw1ayqYt1R9xxz38ePZVSzVaSiMs7nAXzxroJZRtCGniEwVr5wwqe8bB3GOpNxqj0HyydBQ6DmcpQexPmXBBWMeTcWAn7aXjHP/bTnvoUlmxRhGRntvld2mees2/z65Ck90kZ5mRy5LhzMhB3zPsm8mrc6dZWObZBf0PVjAEvT4PunbCY2h0jNrZKGhYblxoxuZUOcTxHhHLNmjaQXHbgYrlitFXd8gvIKCqQMJD0ISw7JdPabtBaoONQgmznwFjzjwwAwkNUu2SvfIJVlRDAbnyOr/IJnlMxpynnLysWKSI4Z5tkmtrg4ECurWKuAimP5dwiBWlsxu9bUdDBz7EQfP4DVaRkke+Nqo1BAXURL7Ic+NKZWoXqbicnIHPxmixuPnE2iyPvM3ZoEf0U/aOduY1HxuZjOo0TIJm/NK5Oz0eWW03bsjej43X3AaGOJZyfzEYp4vUKHv0P3iPdMb80z6643XzG9qlPtjAcm+UHsyxHWkchbzlJkHCRTYZVBvF5Md0y0pgQZcSmGCO7w5C9vz67xYDT9zyKBivegk1qgrDMAEDrTAtS/QEB3s+vzZZnsO8vX/3BSQw36eSjOSnB0bff7K7x9inWo0V3A0m+ExG14169/0hfvz0bEbqcB/N9C77vv8XAm4A0w==
+sidebar_class_name: "get api-method"
+info_path: site/docspace/api-backend/usage-api/api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get the CDN storages"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/settings/storage/cdn"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns a list of all the CDN storages.
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"List of the CDN storages with the following parameters","content":{"application/json":{"schema":{"type":"object","properties":{"id":{"type":"string","description":"ID","nullable":true,"example":"9846"},"title":{"type":"string","description":"Title","nullable":true,"example":"legacy_1080p_small_wooden_mouse"},"properties":{"type":"array","items":{"type":"object","properties":{"name":{"type":"string","description":"Name","nullable":true,"example":"Winfield Upton"},"value":{"type":"string","description":"Value","nullable":true,"example":"some text"},"title":{"type":"string","description":"Title","nullable":true,"example":"legacy_1080p_small_wooden_mouse"}},"additionalProperties":false,"title":"ASC.Web.Studio.UserControls.Management.AuthKey"},"description":"List of authentication keys","nullable":true},"current":{"type":"boolean","description":"Specifies if this is the current storage or not","example":true},"isSet":{"type":"boolean","description":"Specifies if this storage can be set or not","example":true}},"additionalProperties":false,"title":"ASC.Web.Api.ApiModel.ResponseDto.StorageDto"}}}},"401":{"description":"Unauthorized"},"403":{"description":"No permissions to perform this action"}}}
+>
+  
+</StatusCodes>
+
+
+      

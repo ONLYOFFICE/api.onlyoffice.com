@@ -1,0 +1,71 @@
+---
+id: delete-an-invoice-line
+title: "Delete an invoice line"
+description: "Deletes an invoice line with the ID specified in the request."
+sidebar_label: "Delete an invoice line"
+hide_title: true
+hide_table_of_contents: true
+api: eJyVUsFu2zAM/RWB13m1l+2w6tYtBWbsMjTbKchBlZiahSxpEp0uM/zvA+2ka7AdNh8MgY98fHzkCGweCugt2NzXbThEslhgV0FBO2TiI+jtCDcDdzHTT8MUwyc0DrPUZDQOKnjKxAi7aVeBw2IzJUkDDWv0yFiUCYoWauUpoHoi7hR3qNq1Kgkt7QmdojDHMn4fsPAVVHB6fojuCHoEGwNjYHmalDzZWU79WKTZCMV22Bt58TEhaIj3j2gZKkg5JsxMWAQlJ/9Lpe1Lee0aqjMHBcYHzDDNn0gqKYayMK2a5l+o/lf3uWcF+5h7w0vo7QoWCe+aN392/RbMaUfoQLJ65C460ODmJYgLhjvQUJtE9eqqqWXjp7WI1nokp7fN6+vdqwlk//mAuczrH7IHDR1zKrquxy4WnvSYYmbJPJhM5t4vlgi2qNubwYt0H63xc3iqQGou4ffN9TzYi5PbiCEL3V8P79kok+gzHqECEgu6Ba4gmF7Qi9rZE3H87vdN3f4wffJ4volmEqJ9nBsQCwAfY98PgfioNrMf6u5281XdfGllbsxlMd8bRplv+gWQuCV0
+sidebar_class_name: "delete api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Delete an invoice line"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"delete"}
+  path={"/api/2.0/crm/invoiceline/{id:[0-9]+}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Deletes an invoice line with the ID specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"id":{"description":"Invoice line ID","type":"integer"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Invoice line ID","content":{"application/json":{"schema":{"type":"integer","format":"int32"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

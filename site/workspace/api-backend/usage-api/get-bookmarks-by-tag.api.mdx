@@ -1,0 +1,71 @@
+---
+id: get-bookmarks-by-tag
+title: "Get bookmarks by tag"
+description: "Returns a list of all the bookmarks marked by the tag specified in the request with the bookmark titles, dates of creation and update, bookmark texts, and authors."
+sidebar_label: "Get bookmarks by tag"
+hide_title: true
+hide_table_of_contents: true
+api: eJzVVt1v2zYQ/1eIe2Ys2Q2yVMAwJF2QFVuHIHEwoLEfztJZZk2JKknF0QT978NRkmOvWbJiT9ODTN+X7uN3d2zBY+4geYDUFEVdKt9El8ZsC7RbB0sJjtLaKt9A8tDCRe03xqo/0StT/kKYkWVVS5iBhJ1VnmDZLSVk5FKrKhaDBG7J17Z0AoVWzguzFqi18BsSq/FTgt+UiVUT6B5z4SpK1VpRJlQZiJa+1uS82Cm/OdIWXnlNTooMPTm2n1oKPgosM1FXTJcH4vTknQw8DBG5CUgYzF+arIGkhdSUnkrPR6wqrdJgMPriOKQWXLqhAvnkm4ogAbP6QqkHCZU1FVmvyAUu5vxznJA55qLEgkCO2s5bVebQhYd9cZUpXW9iFsffmvhtyOQ+gyC/22W0FhuQoDwV7u1QPmYHMqr0lJMFCWtjC/Q96ewUJNATFpVmoekUOglzrs6B6hDroeC1Mbkmocp0whr3Vr8uv/G+ShaLaLGIdrvdJA/qk9QU4XubuliVqN6wcW+18Eb4vXQn4QPjhrLXFWfxLD6Zzk7is3n8Q/LuLJmeTs6n59Pz9+8+B+8D3v6jkZ8Pq/126g6cv2y+s5R7o/tK1rXKjj4SD8/JC6/xCV4rV2lsfmdsv+r1J7Ul8RnLBr3bqn+Jkk9YImOuk3DxiB7tXYH6jSrXfZUdSwoMWqx/Y81aaXoTaItFdGNNVqfe8ZFMpamnsfoEXfX0U+3I/ohZoUrlvEVvLHAP+z4guCoqbRqiPyxWdMwaJy2zel7o/tN4+m3D35c4TF/KgpGC/MZkkEBOocDoN5BAhJWKZpM4ep7n44iIVg1PI57p9pGsCyO95gyEfnJJFLUb43yXtJWxvgMJj2gVrnQPGub1fq2x1owTbVLUgdxJYJ1j9nn8fsYxHayRO55BvbkXl8nzbKrUrxSGEwe/6dkSwtRMjnVDNnjI3T5P8KuxgsME3g9YNrg2gT4U4cOYKHEX8iJur+7m4uLmI8dP1vXp17xahjidLzB05eDNNfmDTcYrLKQ5O27h/XT+n+zDoRDMjCqNquTg675herA9cJVAwmwSh+0z5BEkjKb5GEC3lAN8HqBtV+i487qOyV9rsny7WD6jjf91ciw6o3RLTahUyODJnD1jcV33UPnbruvkqHGRplT5V2WXB510fTUPzvc3gMJkrGJxx7cD3EECIMGEggYEB1oLGsu8xpxle5OMR07kMZy3Ac7DgYMaWWVz4OAxsuUQB785qhdV2rZvlq7by/esf9TYt1MvzaVddl33F79OaFs=
+sidebar_class_name: "get api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get bookmarks by tag"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/community/bookmark/bytag"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns a list of all the bookmarks marked by the tag specified in the request with the bookmark titles, dates of creation and update, bookmark texts, and authors.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"tag":{"description":"Tag name","type":"string"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"List of bookmarks","content":{"application/json":{"schema":{"type":"array","items":{"type":"object","properties":{"Id":{"type":"integer","format":"int64","example":"11"},"Title":{"type":"string","example":"Google inc."},"Url":{"type":"string","example":"http:\\/\\/www.google.com"},"Thumbnail":{"type":"string","example":"Url to thumbnail"},"Created":{"type":"string","example":"2020-12-06T07:36:14.8181893Z"},"Updated":{"type":"string","example":"2020-12-06T07:36:14.8181893Z"},"Description":{"type":"string","example":"Google"},"CreatedBy":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"}},"title":"BookmarkWrapper"}}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

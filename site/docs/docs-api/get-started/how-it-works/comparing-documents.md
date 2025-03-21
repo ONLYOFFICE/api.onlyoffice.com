@@ -30,13 +30,15 @@ The reference figure and the steps below explain the process of comparing docume
        token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaWxlVHlwZSI6ImRvY3giLCJ1cmwiOiJodHRwczovL2V4YW1wbGUuY29tL3VybC10by1leGFtcGxlLWRvY3VtZW50LmRvY3gifQ.t8660n_GmxJIppxcwkr_mUxmXYtE8cg-jF2cTLMtuk8",
        url: "https://example.com/url-to-example-document.docx",
      })
-   }
+   };
    
-   const docEditor = new DocsAPI.DocEditor("placeholder", {
+   const config = {
      events: {
        onRequestCompareFile,
      },
-   })
+   };
+
+   const docEditor = new DocsAPI.DocEditor("placeholder", config);
    ```
 
 3. In order to select a document for comparing, the [setRevisedFile](../../usage-api/methods.md#setrevisedfile) method must be called. When calling this method, the token must be added to validate the parameters.
@@ -46,7 +48,7 @@ The reference figure and the steps below explain the process of comparing docume
      fileType: "docx",
      token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaWxlVHlwZSI6ImRvY3giLCJ1cmwiOiJodHRwczovL2V4YW1wbGUuY29tL3VybC10by1leGFtcGxlLWRvY3VtZW50LmRvY3gifQ.t8660n_GmxJIppxcwkr_mUxmXYtE8cg-jF2cTLMtuk8",
      url: "https://example.com/url-to-example-document.docx",
-   })
+   });
    ```
 
 4. After that the user can accept or reject the changes using the corresponding buttons on the top toolbar.

@@ -1,0 +1,71 @@
+---
+id: set-audit-settings
+title: "Set the audit trail settings"
+description: "Sets the audit trail settings for the current portal."
+sidebar_label: "Set the audit trail settings"
+hide_title: true
+hide_table_of_contents: true
+api: eJztVk1v20YQ/SuLOW9FRcmh4M11A7SogQaRjKIwhGBMjsRNqN3N7tC2KvC/F7NLypQtN07RYy8SuXxvPt8MeQDGbYTyBpZUdcHwXhXqoqsNKw5oWlUjI6w1OE8B2Tj7aw0lROIEWhKzsdsIGgJ97SjyT67eQ3mAylkmy3KJ3remSuTic3RWzmLV0A7liveeoAR3+5kqBg0+iCs2FBNudPBNZOu2xv5iIruwvzIbWpkdTVjGMm0pgIaaYhWMl3CghCuhqSbzVGs2xELUsHFhh5yZbxeggR5w51uC8s3i7bteA0oBVlKk73A3Le3rnYm3ujZiA9sPk7Q32EbSwIYFCxfLy9mlCzRbkUXLcfg/bdU3rb0ccXxs9/e4/COg9xSg78V3oOidjblri/lc/l7l8j+S1P9CebVQxN67cx16/1BRulbGqqszBVUu5DVymney9+a5vWuLHTcumL+ozqDFc9CfrgvKB1MZu1W+RatqR1FZxyp23rvAihsTlcsECT4OSw3KmwNgrD6Jm09fSA4gENag4T4YJlj366ctWBJHxQ0pPKNHtXEhPay6EMiyEv/YzkDDjrhxsiW9i0l+yA2UUKA3xWI2L8agimS3GC0WkzZHCncUYgq7Cy2UcLjFSNeh7Z8pZZmwqnJ2Y7ZdXtKg4Q6Dwds2a34g55pusGtFQg2zL4uidRW2jYtc/jh/ZvznjFbXH69ED+vHki5l3LL108IepY3e/EZ70GBxl+6nMA1G7FfOfTGUeiVz/PHxJfJ+FPbpS+D89Ir4zw/aOBbGblyKbZwAb6RIFGJO9G4hupOO7TCtkyHoJfGLGnharclb71+LZ6gd0wMXvkVjJawuty4L6UYKCxoWszlMFD6kn46O4R0ltdYgLRb24SilXo6/dhRkHNaPkpG7XkNDWFNIGkyNhcuc3Q8riVHgbZf7/GQZ93pkXFSyJ/4Ru54MzIfflyvQcDt8Q+xcLZyA9/J9gfdQAsiXiLCTGNLZAVq02w63gs020x7spFhTMWbZDReS1fjI7qcRnqo05yG/ktVZxuGQld73R3x+9CJjqOyIliav+77/G7L/UdA=
+sidebar_class_name: "post api-method"
+info_path: site/docspace/api-backend/usage-api/api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Set the audit trail settings"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/api/2.0/security/audit/settings/lifetime"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Sets the audit trail settings for the current portal.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"settings":{"type":"object","properties":{"loginHistoryLifeTime":{"type":"integer","description":"Login history lifetime","format":"int32","example":1234},"auditTrailLifeTime":{"type":"integer","description":"Audit trail lifetime","format":"int32","example":1234}},"additionalProperties":false,"title":"ASC.Core.Tenants.TenantAuditSettings"}},"additionalProperties":false,"description":"Audit trail settings","title":"ASC.Core.Tenants.TenantAuditSettingsWrapper"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Audit trail settings","content":{"application/json":{"schema":{"type":"object","properties":{"loginHistoryLifeTime":{"type":"integer","description":"Login history lifetime","format":"int32","example":1234},"auditTrailLifeTime":{"type":"integer","description":"Audit trail lifetime","format":"int32","example":1234}},"additionalProperties":false,"title":"ASC.Core.Tenants.TenantAuditSettings"}}}},"400":{"description":"Exception in LoginHistoryLifeTime or AuditTrailLifeTime"},"401":{"description":"Unauthorized"},"402":{"description":"Your pricing plan does not support this option"}}}
+>
+  
+</StatusCodes>
+
+
+      

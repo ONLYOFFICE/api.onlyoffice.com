@@ -1,0 +1,71 @@
+---
+id: start-filling
+title: "Starts filling"
+description: "Starts filling a file with the ID specified in the request."
+sidebar_label: "Starts filling"
+hide_title: true
+hide_table_of_contents: true
+api: eJyllF1r2zAUhv+KOFcbiDpLy+h8NyiFsMFGu1yMEopqH8eitqRKx2kzo/8+jpSkddPuZjeWLZ8Pn/d55RFIrQOUN3CpOwyiEGmFlQTr0CvS1ixqKCGQ8nSpu06bNUhwyqseCT3njmBUj1BCoztc1CBBGyjBKWpBQo2h8tpxJShTG7G4AAkeHwbtsYaS/IASQtVir6AcgbaOq2lDuEYPEhrre0V563QOEvBJ9a5DKL+cn32OccXVgrMmYOAC89mMl2nnH/cQJZzNPh2/Who1UGu9/oN1Djo9DvptB1FbYSyJVm1QoLHDuhUOfa9D0NYEQVZgrUlQi4K1gBglBKwGr2mbhFKhuuVet/fIG+BRsV6PXhPCigeZNr1m2QMXY+GFSmXFo6Y2NVlciOCw0o3GWmiT9lhXDHQCEnqk1jI9N1CCRi2UUCini/nJrOBaIV2LMaOLReLcHDgH9Js95MF3UMJ4pwIufReP0F6nWFFZ0+j1kL0DEjbKa3XXZTK75Kxuo4aOqbZEriyKzlaqa22g8nx2VPwiR4vl1XeIifhe12v2Ta4+VfdgJOX0N9yC3Nt0ErYza2Xtvc7AtGlsytbEFoOvTvMY6EP+lM2cPeJsoF4ZDtyVnbJ6PcEIlTWEhv6b6m4qwicqXKe04c8ZsqgZ8Q2PDBLmJyxkwrxbQUJ5OKUT1isJrD0njwfGkbcfBvRs1tUzy+SHWge+r6FsVBfwH/N+uNqd9Y/i+fy/OcaemNkm53QDP4GEBHT/f4mr+MLbP5e/QALznCLPcHc3/L1v1n7lhdyHr1G+kzGO2U8xHuLzq3czWlR1+o/laJ50FWP8C7cy2bA=
+sidebar_class_name: "put api-method"
+info_path: site/docspace/api-backend/usage-api/api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Starts filling"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"put"}
+  path={"/api/2.0/files/file/{fileId}/startfilling"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Starts filling a file with the ID specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"fileId","in":"path","description":"File ID","required":true,"schema":{"type":"integer","format":"int32","example":9846}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Ok"},"401":{"description":"Unauthorized"},"403":{"description":"You do not have enough permissions to edit the file"}}}
+>
+  
+</StatusCodes>
+
+
+      

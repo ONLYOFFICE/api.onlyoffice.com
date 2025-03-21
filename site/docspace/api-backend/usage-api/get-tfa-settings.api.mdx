@@ -1,0 +1,63 @@
+---
+id: get-tfa-settings
+title: "Get the TFA settings"
+description: "Returns the current two-factor authentication settings."
+sidebar_label: "Get the TFA settings"
+hide_title: true
+hide_table_of_contents: true
+api: eJy9Vdtu4zYQ/RVinmlbcZ21V29B0wZBt8AiF/TBMAxaGtnclUguOXTWFfTvxUiy4wuSdtGiD5ZFaXjmzDnDUQ2k1gHSOTwikTbrIEbi6dcbEfolLCRYh16RtuY+hxTWSE+F2oeDBI/BWRMwQFrDOEn4L8eQee14E6RwAighs4bQEMcp50qdteCjL4GDawjZBivFd7RzCCnY1RfMCCQ4z1RId6l0fhQTyGuzBnmW+f4WJJhYlmpVIqTkI0rA76pyvISPs8kHaCSQJl7/HdpTG/YeYIlrle2WV8kscctQqbJcvlibo1lWNgbkXGh46zH3lbUlKnOR7tFhpguNQehC0AZPjBHKo+ixhPXCWFbowISJNRLUVpW6o/ofpFNbpdvC305IPgbC/N6Fo4zKe7UDCZqwCpcyN+dMPulAwhaiBxP3n4XKc4+Bm+wd+ecQbIWC8DvBopFQKZMrsn73HND/ACEJhfWVIkghRp2/TTAyrnjZWFHFQLw8CLdFr4u+td/nPL1W18V0cj0oPnycDiaTq9lg9dMsHyQFJvl4OsXx9ey0nDtv448I/I/rWbfA/1NB3J55rhlPlZ+PjnahyoCHQwk3jz8P/8DV8MZp/v1ucyyHD/gtYqBwS3Z4NI5uyULTMPQkubocRM9GRdpYr//EHDgqYBa9ph2k8xpUyJb8fvkV+QF4VDlIePGaEBbN4ly1B6ToTWgVyqL3aEjQix0UKiPrBUOhoV6yw0kagoQKaWP7YcpzTdEGUhgpp0fjYTLah46oUMo5YJ5+27bwvIboS0ihXqmAz75sLs9xGysyawq9jn5v2Fb5dhK0/dFv7hQqVCy5NzZELh2NSpupcmMDpbPkAvy2ixbPD59Y6MWrhI88tjv0UyFfu9Tp35Db1KiqXR+HSdCMn1n7VWPrjTaFbXfv+8BpLgN96Khsx9zIzgaqVPvh6GHvkC7G13kd9etH6F/Y2NfF82bkSqUNE4qdrJ2ncy4aJIyHSevigU3v7EICK82B9cHRhh9/i+i5CxevzvGqkbBBlaNvW6HVF26yDB21FpexE/rsq8o+HXru7pcnkMBlnXrTudDfMPr+ldkdY5+a1jHgayPf2FHXnfFNc4jvXr25o69wH826Lpqm+QtviPdG
+sidebar_class_name: "get api-method"
+info_path: site/docspace/api-backend/usage-api/api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get the TFA settings"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/settings/tfaapp"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns the current two-factor authentication settings.
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"TFA settings","content":{"application/json":{"schema":{"type":"object","properties":{"id":{"type":"string","description":"ID","nullable":true,"example":"9846"},"title":{"type":"string","description":"Title","nullable":true,"example":"legacy_1080p_small_wooden_mouse"},"enabled":{"type":"boolean","description":"Specifies if the TFA settings are enabled or not","example":true},"avaliable":{"type":"boolean","description":"Specifies if the TFA settings are available or not","example":true},"trustedIps":{"type":"array","items":{"type":"string"},"description":"List of trusted IP addresses","nullable":true,"example":["some text"]},"mandatoryUsers":{"type":"array","items":{"type":"string","format":"uuid"},"description":"List of users who must use the TFA verification","nullable":true,"example":["75a5f745-f697-4418-b38d-0fe0d277e258"]},"mandatoryGroups":{"type":"array","items":{"type":"string","format":"uuid"},"description":"List of groups who must use the TFA verification","nullable":true,"example":["75a5f745-f697-4418-b38d-0fe0d277e258"]}},"additionalProperties":false,"title":"ASC.Web.Api.ApiModel.RequestsDto.TfaSettingsDto"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

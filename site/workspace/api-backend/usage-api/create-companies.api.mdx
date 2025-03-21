@@ -1,0 +1,71 @@
+---
+id: create-companies
+title: "Create companies"
+description: "Creates a list of companies with the names specified in the request."
+sidebar_label: "Create companies"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVttuGzcQ/RVinteWrOShFVAUtuyiRhvXsBwEqaKH0e7Ios0l1+SsbEXYz+mP9MuKIVey5EukBN2HBS9zyLkczswSGG8C9EeQ+7IzcJYx5wDjDALltde8gP5oCcc1z5zXX5G1s78TFuQF4wkLyODBayYYN+MMCgq515WIQR8GnpApKFRGB1ZuqnJXVmg1BfWgeaZ4RspiSUGFinI91VQobeOyp/uaAh9CBu3wxBUL6C8hd5bJsgyxqozOo1ad2yB3LiHkMypRRryoCPrgJreUM2RQeVeRZ00hHSOqLC6wJJk+0zxtJuUgWx2F3uMCMtBMZdi4IrDX9gaa9InGoXI2pIt63e7LC/5cO6R1efbddr2lzBv2Dks05jfH7qM3L1XPgB6xrIws1d4odmrq2EGTwQcqdF3+CPJUh8rg2sVv466xuKWi0JbUCeYz7QV9HtoobGAnzhlCuwWeogkkgOM8pxDEsz/upfPiNU2nzpfIYmCti63Lu+138Mpv9X2XKz7oO1J/o10ghzst0GvNZhcILd5Q9NrxHBl9DPZesQoiqTCiBH/p3VQb2hnqL186l94Vdc5BhuQqQ2lN4IcYqsdf60D+FyxKbXVgj+w8yOvgZBCclZVxC6JPHitKW+fh0us5Mu2IOfuaEkeGM/RU7EuRKH0dBdcAbZnEeRth1pbf9eQEW5eS6C6cJcjgirD4FJNdGsOLjDfqqgMl0pk6UgdqDchUr52Ot+kjSg1q78nmi93s3IMKg5m2FEh9rtFGixflxO2I5b//ROZMJp7mGpMp37zj4nPS23DtaTenBxer92zn5BknZv/4nmDQ+X7h3aDWyqXnduqEXlV6HAO0Z4XmPS8foD0lQ/uT8XRPVq2RR71377f1TuXgBAOt1U4l5X336GUV+WixrcxUxHNK4pkroA+VC5E+yDPoQwcr3ekddjtS5duS02kLYOe+1vkdSMX3c/IhFvxanj/MmKvQ73SWMxe46S8r57mBDObotQQxclL2kmZTrI3YaVyOJi43GQhme/un7s89sWqjyRhKbUvHvdpqPGXzSv9BMZ2L+bO0nYGNFNzGRn9I8bx6ah/OVp5/Vv5HK9aOGzl66uKV65iUZW01L9QwekhdnQ2v1fHluXiCfEihMNLptBYHLjE+oVav1Ac9NT/wLG1s9DT/V8/U+ovpkTuVQR1zQZ2SeiLFSJwJGfQOu9J8+LJtQTDmndY9kEGixzhrAz2C5XKCQQpE08jyfU1eusTxEy9k1mSr8Aif7mjRspssH8QELOKmTkF91u002QohJb3ib8qON1h/+dfwGjKYtJ1i6QrBeHyQLhIfoA+QgYtej2SLa0swaG9qvBHZdKZQR17WNvPuIvPagVi12op+Wmm4TcKsNUT+YtarkOUy8bpp1vJp603EmvlJWsI7bprmP7YZACE=
+sidebar_class_name: "post api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Create companies"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/api/2.0/crm/contact/company/quick"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Creates a list of companies with the names specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"companyName":{"description":"Company names","type":"array","items":{"type":"string"}}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"List of contacts","content":{"application/json":{"schema":{"type":"array","items":{"type":"object","properties":{"SmallFotoUrl":{"type":"string","example":"url to foto"},"MediumFotoUrl":{"type":"string","example":"url to foto"},"DisplayName":{"type":"string","example":"Tadjeddine Bachir"},"IsCompany":{"type":"boolean","example":"false"},"AccessList":{"type":"array","items":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"}},"IsPrivate":{"type":"boolean","example":"true"},"IsShared":{"type":"boolean","example":"false"},"ShareType":{"type":"integer","format":"int32","enum":["None","ReadWrite","Read"],"description":"[0 - None, 1 - ReadWrite, 2 - Read]","example":"0"},"Currency":{"type":"object","properties":{"Title":{"type":"string","example":"Chinese Yuan"},"Symbol":{"type":"string","example":"¥"},"Abbreviation":{"type":"string","example":"CNY"},"CultureName":{"type":"string","example":"CN"},"IsConvertable":{"type":"boolean","example":"true"},"IsBasic":{"type":"boolean","example":"false"}},"title":"CurrencyInfoWrapper"},"CanEdit":{"type":"boolean","example":"true"},"CanDelete":{"type":"boolean","example":"true"},"ID":{"type":"integer","format":"int32","example":"1234"}},"title":"ContactBaseWrapper"}}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

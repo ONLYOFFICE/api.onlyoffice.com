@@ -23,13 +23,15 @@ There are several ways to initiate forced saving:
 - Enabling the [editorConfig.customization.forcesave](../../usage-api/config/editor/customization/customization-standard-branding.md#forcesave) setting to **true** in the editor initialization configuration:
 
   ``` ts
-  const docEditor = new DocsAPI.DocEditor("placeholder", {
+  const config = {
     editorConfig: {
       customization: {
         forcesave: false,
       },
     },
-  })
+  };
+
+  const docEditor = new DocsAPI.DocEditor("placeholder", config);
   ```
 
 - Enabling the repeating forcesave start in the **default.json** ONLYOFFICE Docs configuration file:
@@ -66,13 +68,15 @@ The details of how the conversion works and why it is needed can be found in [th
 The **Autosave** option is enabled by default. To disable it, you need to set the [editorConfig.customization.autosave](../../usage-api/config/editor/customization/customization-standard-branding.md#autosave) parameter in the document configuration to **false**:
 
   ``` ts
-  const docEditor = new DocsAPI.DocEditor("placeholder", {
+  const config = {
     editorConfig: {
       customization: {
         autosave: false,
       },
     },
-  })
+  };
+
+  const docEditor = new DocsAPI.DocEditor("placeholder", config);
   ```
 
 > Please note, that disabling the **Autosave** will also disable the **Fast** co-editing mode which only works with the automatic document saving enabled.

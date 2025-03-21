@@ -1,0 +1,71 @@
+---
+id: create-a-mail-contact
+title: "Create a mail contact"
+description: "Creates a mail contact with the parameters specified in the request."
+sidebar_label: "Create a mail contact"
+hide_title: true
+hide_table_of_contents: true
+api: eJzlVk1z2zgM/SsanLmx6/awq1u2TaeZ3XYzTbIXjw+wBFtsJVIloaReDf97BxRly07SZjq9rQ+2DD6A+HgA1APj1kO+hAZ1PXttDWPBHlYKPBWd07yDfNnDeceVdfo/ZG3NO8KSnCg5whIU3DvNBKuwUlCSL5xuBQY5vHaETD7DTMxnxWA+u9dcZVxR1qLDhpicz3xLhd5oKjNt4pmjLx15PgMF6fFPW+4g70HMkGF5xLatdRG9mn3ycmcPvqioQXniXUuQg11/ooJBQetsS441eTk12JD8nricfIynajTh2WmzhXAS4FPKU+kjNkiy4R+q/609Z3azz1PC7S2gc7gDBZqp8ZMAR8tBQVtZQx+6Zk3uGRdEdGYS/Pn3xI/UxbfW+CGdi/n84YWXZmNdE+uT4dp2nBWREuXoAqhfVc6U+8tyAtWGaUsOFAxuDKKXC1BAX7FpawG9WLx8JVX5kPhwHOwUGTkRFLw55sDTCtNkBAUX+7r/INFPhPjzsf2LdfeD4O4iJCi49FdON+h2E/za2prQHCmwE3xQwJqjYKyA2dgovzrh4v8i6Juo+3MOXzdY128t21tXf99vP0UGBe+p1F3zLNXmCDoN5T3qOoXzBhlhaPJX8xcP+/rWYNoIVEYbDXFlS8ihtT7WELmCHGbY6tnibD6L6yX1/AxL2Rqe3F1kxrKHTryGirn1+WzWV9ZzyPvWOg6g4A6dxnU98EHOBoc22NWS0NoWWEexDEDrTo5/n/+xkFgmO+1aZspg7tHNduBqq/+iSFaJuhqOVVodx7oxDTK0Ph621cWY9XHbHApynM9DndKIWI6i1elMP5wEcWtjo7t7NjZNZzTvsuuY3ezjxfVNdn51KVkk54fbalnKKVueGzQTB4eVfbKxT/2d7OBfteNTwpm+8qytUceB2Q1kHsi0lGqAgsXZHFR8X0nLY3BQSLVSiR5L6Ps1erp1dQgi/tKR9PZydWCT/AtqLKqw8DPtUkeT4d9iJ6s0IvKHuymoUeO8KKjl72JXkxa5+uf6BhSs0+tMY0vRcXgvrzp4DzmAAhtTHSkaZT3UaLYdbgU72BTCSRse8/Vz5Gt6kKjGI7ObeHhMXZUCkW8J61GVvh+6IYQ9fhyfT2js+2VAS01XIYRvSoeR8Q==
+sidebar_class_name: "post api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Create a mail contact"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/api/2.0/mail/contact/add"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Creates a mail contact with the parameters specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"name":{"description":"Contact name","type":"string"},"description":{"description":"Contact description","type":"string"},"emails":{"description":"List of contact emails","type":"array","items":{"type":"string"}},"phoneNumbers":{"description":"List of contact phone numbers","type":"array","items":{"type":"string"}}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Information about created contact","content":{"application/json":{"schema":{"type":"object","properties":{"ContactId":{"type":"integer","format":"int32","example":"1234"},"Name":{"type":"string","example":"name"},"Description":{"type":"string","example":"description"},"Emails":{"type":"array","items":{"type":"object","properties":{"Id":{"type":"integer","format":"int32","example":"1234"},"Value":{"type":"string","example":"value"},"IsPrimary":{"type":"boolean","example":"true"}},"title":"ContactInfo"}},"PhoneNumbers":{"type":"array","items":{"type":"object","properties":{"Id":{"type":"integer","format":"int32","example":"1234"},"Value":{"type":"string","example":"value"},"IsPrimary":{"type":"boolean","example":"true"}},"title":"ContactInfo"}},"Type":{"type":"integer","format":"int32","example":"1234"},"SmallFotoUrl":{"type":"string","example":"smallFotoUrl"},"MediumFotoUrl":{"type":"string","example":"mediumFotoUrl"}},"title":"MailContactData"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

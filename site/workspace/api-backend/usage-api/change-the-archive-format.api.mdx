@@ -1,0 +1,71 @@
+---
+id: change-the-archive-format
+title: "Change the archive format"
+description: "Changes the format of the downloaded archive from .zip to .tar.gz."
+sidebar_label: "Change the archive format"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVE1v2zAM/SsGz1qcBTtsvmVFgRW7FE16CnJgbCZWa0uqRDdNDP/3gZLTJW23w7AcAln8EPneI3tg3AUoVrDVDYV8Qcza7AKsFQQqO6/5AMWqh3nHtfX6iKyt+UFYkZcoT1iBgr3XTLAe1goqCqXXTtyggKsazY5CxjVlW+tb5Mxu41dl96axWFGVoS9r/UzZ1ts2mxy1y9hmE0Y/2R0noMDTU0eBv9vqAEUPpTVMhuWIzjW6jDXlD0Fe7CGUNbUoJz44ggLs5oFKBgXOW0eeNYXoRzHFZb3LzptUrUOPLTH5zJrM+sxut6BOKTfWNoQGhviTCoOzJqTEs+n0feJ56hHUv5fPmhu5uLmyrfMUAqTHv0w/v3/v3uDIGFUgXi1xbSsowHURC+QaCsjR6Xw2meaJ/jDSn5/YYfS7I4gW/DP5EKXQ+QYKqJldKPK8r23goeid9TyAgmf0GjdNgkJsqbYtdg1DAY0tsYnXgwKJuTR/nX6bSVtn8lsIICndhyJ8BQqd/kkHUKAFgDqZFRhsxXoRGxERxO9+S+v6BVsnAI/SYN/RIMm2Nj4yon9l27Yzmg/ZImKS3V0vltn89kZ6Jx8S/A0ynXoM3GKkdqwkzUQU2avy42jAm+k5k/r/GaQRKKYXzl2D2kiBkc5+FMRKUAQFs8kUVNoJkf1xKyi4FMZajRSvoO83GOjeN8Mg108dedkc69+KkK9BnYgRJT3SISIam/y0lOrEvekSnW+GY1CniHlZkuO/+q7PFH97vwQFm3F9tLaSEI97WS24hwJAgY2YR5XFux4aNLsOd+KbUopmZKguJfcYJTcepKmTyRzOCrxUnxr7kH/p6sOQvk+CHoZX/2T6Y8Sr5JO30LsehuEXzA8G4w==
+sidebar_class_name: "put api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Change the archive format"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"put"}
+  path={"/api/2.0/files/settings/downloadtargz"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Changes the format of the downloaded archive from .zip to .tar.gz.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"set":{"description":"Turns the parameter on or off","type":"boolean"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Archive","content":{"application/json":{"schema":{"type":"object","title":"ICompress"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

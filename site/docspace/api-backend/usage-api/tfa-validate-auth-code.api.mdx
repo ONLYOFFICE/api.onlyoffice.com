@@ -1,0 +1,71 @@
+---
+id: tfa-validate-auth-code
+title: "Validate the TFA code"
+description: "Validates the two-factor authentication code specified in the request."
+sidebar_label: "Validate the TFA code"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVFFv0zAQ/ivRPZumTDygvJUBEgIEWjd4mCp0TS6NN9c29mWjVPnv6OxkyzZAQuKhqePcnb/7vu98BMZdhOoS1sSs7S4WZXH+dlXE8RU2CpyngKydfddABdziFzS6QaZVz92pawgUBPreU+RXrjlAdYTaWSbLskTvja5TfnkVnZW9WHe0R1nxwRNU4LZXVDMo8EFOY00xl2loFhU5aLsDBQ3FOmgvNaECwVtnGLY3BreGoOLQkwL6gXtvUq7bU8H0g2EYFGDTaMlG83l2YIsm0u+q3+SGtbPF2GjhMeCemEIEBaw5HbJany6+0nax8lp+H11DZnGWM+Jrdovze/Jm2zAMAipQ9M7G3PrJcil/j7CEngrdFtxR6rjQMWMD9c+Ub50zhHY8+8Xy+dPjLiz23Lmgf1KTaItU90HzAarLI2Csv8n3b9ckGxAIBcdt0EywGTaPiZwajwk+37pnLdbsQiFFyPKIODcWPdW61dQU2qb4kfcFKNgTd06s6F1MnkHuoIISvS5PFsty8m7JLaL35aie+CNSuBHJBH8fDFRw3GKki2CGJ7Zap9iidrbVuz5PACi4waDFYkmlMTlT12JvGCromH1VlsbVaDoXuXq5fFL8dY4uLs4+iAKbe27XIlSu/pDhO+XQ6/d0ELfjPr3PwxRoqV87d60piSYOOLsfzzfTSEzjNR8NyW5dOmuytNfSNIWYgd+cSJQwv8dkrBHEpG4SazaRD9qeXQz/zw4jK9JA6Q1qKwD7LEq2xqVQBgpOFsvkgfFqU5ANkkQdLbJRIJJJzvHOGoNsf+8piM839xaQt0FBR9hQSJ5KQsFpbvLZuSBLxfus26OxHNSUsapr8vzX2M3M+J8/rc9BwXa8bfdZx4C3chPjLVQAcm1LdjJS2juCQbvrcSexuWa6CnuhaG6ubKNxIV1Nn+xhjvCh63If8pSufptxPGbnDsNdfP70x4yR2SlapN0Mw/ALJK9RMA==
+sidebar_class_name: "post api-method"
+info_path: site/docspace/api-backend/usage-api/api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Validate the TFA code"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/api/2.0/settings/tfaapp/validate"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Validates the two-factor authentication code specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"code":{"type":"string","description":"TFA code","nullable":true,"example":"some text"}},"additionalProperties":false,"description":"TFA validation request parameters","title":"ASC.Web.Api.ApiModel.RequestsDto.TfaValidateRequestsDto"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"True if the code is valid","content":{"application/json":{"schema":{"type":"boolean"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

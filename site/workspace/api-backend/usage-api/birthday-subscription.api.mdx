@@ -1,0 +1,71 @@
+---
+id: birthday-subscription
+title: "Birthday subscription"
+description: "Subscribes to or unsubscribes from the birthday of the user with the ID specified in the request."
+sidebar_label: "Birthday subscription"
+hide_title: true
+hide_table_of_contents: true
+api: eJy9VD1v2zAQ/SvELV3YyDU6tNqSJkCDDg3idDI8UNLZYkKRDHmK4wr678VRkj9St0CXejBI3p343rt37IDUJkK+BI/OG8yudKC6UjtYSYhYtkHTDvJlB5ct1S7on4q0s19RVRi4LKCqQMI2aEJY9SsJFcYyaM9pkMOiLXhbYBTkhAuitfFwtA6uEVSjKMZrhVunfRsxiK2mOu1ur0X0WOq1xkpom84CPrcY6QIkjMsrV+0g76B0ltASL5X3RpcJcvYYGVAHsayxUbyinUfIwRWPWBJI8MF5DKQxcpQh6IpXp4x+MLTba5BTfaSg7QZ6Cc7eY6PtmaJrXGuLUegTesaIAoV1NDBThWtJKOuoxpBy3sUjZQJnHq4tnDOoLPTpxypE72wcwM9ns99BXDlnxIsyLeaCQouiQWWjoFrRG1QbJKFGYIN8IP9Z12OAEj7OPpzR0qrRVlgBZzVItasgB+9iaomiGnLIlNfZ/GKWjS6dRIlZSIJjALZreMEQk1vbYCCHmsjHPMu62kXq8867QD1IeFFBq8IMUnFsQLZWrSHIwbhSmXTcS+Ca0/Cn2ec5kzqakAVzHz53dk72miivv+EOJGimXw9hCVY1HD2pTXqwuPcHe9+8qsYbPLbnZL9j93Fze75j7dLdmrgGvrimaa2mnVgkqcT9zeJBXN7dsiQY4tATowgn6pEalZo7ApxeBzHOsB+tcdLVown8L+M/Skv4Spk3SlvGngzQjf5Zsu4gYX4xY08lD4GEvYvSGzL6aCVHRyyh6woV8Ucwfc/Hzy0GfgtXBwPxrpdTH9l4T7hLSicB3j8wNE437dD9N2PTy6nisizR019zV0fjcfd98cAMxievcRXXBLVlKmoLObAhUkOSK9NZB0bZTas2nDt8kz3GI3hq0adk0XHBrKaQ3R0hPHWrHInwP9M6W9J1wwD0/T5/CP2xYj8iQzY3d9X3/S9oRVR6
+sidebar_class_name: "post api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Birthday subscription"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/api/2.0/people/birthdays/reminder"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Subscribes to or unsubscribes from the birthday of the user with the ID specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"userid":{"description":"User ID","type":"string"},"onRemind":{"description":"Defines if the user will be notified about another user's birthday or not","type":"boolean"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Bool value: true means that the user will get a notification","content":{"application/json":{"schema":{"type":"boolean"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

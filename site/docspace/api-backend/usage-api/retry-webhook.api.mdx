@@ -1,0 +1,71 @@
+---
+id: retry-webhook
+title: "Retry a webhook"
+description: "Retries a webhook with the ID specified in the request."
+sidebar_label: "Retry a webhook"
+hide_title: true
+hide_table_of_contents: true
+api: eJylVt9v2zgM/lcMPt3h1NhNg6Hnt2J5uOK6Q9Ef2EMRDIrNxFptS5XodDnD//tAyXHWJl2TrUCb1CY/8iM/kWqB5NJB+gC3SKTqpYvi6DPOC60fHcwEaINWktL1ZQ4pWCS77l+DACOtrJDQMkILtawQUlA5CFA1pGAkFSAgR5dZZRgFUrjk1xafGmUxh5RsgwJcVmAlIW2B1saD1IRLtCBgoW0lKTw6G4MA/CYrUyKkf59PPnTdjNGc0bVDxwDjJOGPl0Gv9NJFehFRgdFzyD+SGamVIoUOBGS6JqyJPaUxpco86firY/d2Nz89/4oZcQ0sl8ijpC1z38fhVQWm79PyGS3U8j9f0wHSkVX1cgfxo7eNfAME1E1ZyjlDheIOyOB0hRHhNwIOYNGTvFMHheitI1I+yJB/LglP+ofbSOMkOT9JJienyV3yIT1L0iQZJeHnr2SSJglnUCEVOn8/9qdgdzAzqxs6gNKNNzscFZ8adPQPytwr/l34YB8VvcOxga7lutTygPJsApne4YhA4dwcQSk4/Aqn4HkEqT7U0awcSWrcAefwNhj+7Cyejs8mHfuVaoV2/X7a097yp8fkbSIHHJtOgMxzxfFkef3D9FnI0qEAUuShLm4/jj7jfHRhFP9+0jmWbrQp65T0aDPnr/RyShq6jrEn+8bnZR6pOtPW8szzRqe7Rve1bKjQVv2PeTCa7EEirKJaU7TQTZ17Ng6zxipa+x0iXfaFYb48Ij8Ai771z1YRwoyH/WuZkFXoIjmM9WdFhZ/zl9PIGczUQiGn75/1R2sE2+EDpvFznHdVCrE0Kh6Pktj1+zDuceNW5V3sFyBwzna1WXuNLSGFdi4d3tuy25WZt43CPG/CNgUBK2kVi8ArtXcO9VrIpmTJFEQmjeNSZ7IstKP0PNmjN28d3d9ccQNn23Le8soK6C+LOkhYGvUvMpt+cb8w61d4pvWjQt8nVS+0994IzCimgdaFVFZj7rrRjirpl2YPyy1abxv0mkK73b2/0c2eEs+A2JRS1ZxLEyoaWvvAfEHAeJT4Bob2sraGvFIV7ibc45kArjn7tUNvO3781PhJ8DDb9tDrIFeOv+fDSXyT5h83/fXnz8jfhvYmv2lSvfZiKRv+DwT4HvJFo5t1AsIg9vHDi4ssQ0M/uOxcZ1gkg/iv7+9AAHf9pTCCBPovjL43nVeKCRnw30684dG2QXVdN9iHV2969AwH4kyg67rvdqqhZg==
+sidebar_class_name: "put api-method"
+info_path: site/docspace/api-backend/usage-api/api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Retry a webhook"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"put"}
+  path={"/api/2.0/settings/webhook/{id}/retry"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Retries a webhook with the ID specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"id","in":"path","description":"Id","required":true,"schema":{"type":"integer","format":"int32","example":9846}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Logs of the webhook activities","content":{"application/json":{"schema":{"type":"object","properties":{"id":{"type":"integer","description":"ID","format":"int32","example":9846},"configName":{"type":"string","description":"Config name","nullable":true,"example":"some text"},"creationTime":{"type":"string","description":"Creation time","format":"date-time","example":"2008-04-10T06:30:00.0000000+04:00"},"method":{"type":"string","description":"Method","nullable":true,"example":"some text"},"route":{"type":"string","description":"Route","nullable":true,"example":"some text"},"requestHeaders":{"type":"string","description":"Request headers","nullable":true,"example":"some text"},"requestPayload":{"type":"string","description":"Request payload","nullable":true,"example":"some text"},"responseHeaders":{"type":"string","description":"Response headers","nullable":true,"example":"some text"},"responsePayload":{"type":"string","description":"Response payload","nullable":true,"example":"some text"},"status":{"type":"integer","description":"Status","format":"int32","example":1234},"delivery":{"type":"string","description":"Delivery time","format":"date-time","nullable":true,"example":"2008-04-10T06:30:00.0000000+04:00"}},"additionalProperties":false,"title":"ASC.Web.Api.ApiModels.ResponseDto.WebhooksLogDto"}}}},"400":{"description":"Id incorrect"},"401":{"description":"Unauthorized"},"404":{"description":"Item not found"}}}
+>
+  
+</StatusCodes>
+
+
+      

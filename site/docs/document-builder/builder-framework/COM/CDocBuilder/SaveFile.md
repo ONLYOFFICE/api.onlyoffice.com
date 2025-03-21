@@ -1,3 +1,6 @@
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 # SaveFile
 
 Saves the file after all the changes are made. The type of the file which will be saved needs to be set.
@@ -18,19 +21,20 @@ HRESULT SaveFile([in] BSTR type, [in] BSTR path, [out, retval] VARIANT_BOOL* res
 
 ## Example
 
-### COM
-
-```cpp
-CoInitialize(NULL);
-IONLYOFFICEDocBuilder* oBuilder = NULL;
-VARIANT_BOOL b;
-oBuilder->Initialize();
-oBuilder->SaveFile("docx", "result.docx", &b);
-oBuilder->Dispose();
-```
-
-### .docbuilder
-
-```ts
-builder.SaveFile("docx", "result.docx")
-```
+<Tabs>
+    <TabItem value="com" label="COM">
+        ```cpp
+        CoInitialize(NULL);
+        IONLYOFFICEDocBuilder* oBuilder = NULL;
+        VARIANT_BOOL b;
+        oBuilder->Initialize();
+        oBuilder->SaveFile("docx", "result.docx", &b);
+        oBuilder->Dispose();
+        ```
+    </TabItem>
+    <TabItem value="builder" label=".docbuilder">
+        ```ts
+        builder.SaveFile("docx", "result.docx")
+        ```
+    </TabItem>
+</Tabs>

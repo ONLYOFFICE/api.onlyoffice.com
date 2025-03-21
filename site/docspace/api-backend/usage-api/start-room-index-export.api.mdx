@@ -1,0 +1,71 @@
+---
+id: start-room-index-export
+title: "Starts room index export"
+description: "Starts room index export"
+sidebar_label: "Starts room index export"
+hide_title: true
+hide_table_of_contents: true
+api: eJyVVttu4zYQ/RVinlqAsRzHLbZ6S+0NEPSSwE6eAmNBS2ObG4rUklSarKB/L4aUZal2nO1LQlMzZy7nkMMavNg6SJ/gRip0LGELYwoHKw6mRCu8NPo2hxScF9bTt1ud4+vn19JYDxxKYUWBHi1h1KBFgZCCzIGD1JBCKfwOOOToMitLQoMUCIbdko3Fb5W0mEPqbYUcXLbDQkBag38rA5L2uEULHDbGFsLHrasJcMBXUZQKIf3t0/TXplkRmiuNdugIYDIe079h5Ltn4JAZ7VF7+irKUsksVJl8dWRSH+dg1l8xC8Va6omXMYDMezbOW6m3R5WGInWllFhTprHILnGgzKHhgNYa+zHa52B2DtCZApnHV0+oJdoMtRdbPNnQIfb9wfhcry8nV9OGg3QzQxse+01YG6NQ6OMuOJZ15j0wyr7hJC1fhZYajXebICTUVUGqnFkU0WtRaR2bMuthzYTOUIXljZCKNlf8gzY+taDsgrUrzlp0drFfcdaFIbv9mrN9RNptl5y1sdnFfrXq19lV0fCusjG/5BN+xaeHdN+j5mncz/Syn+NkmNvVIKnpO+mM6ax46UNq18vZaGaKwujRw86iyKXejuaSWreuPOYPwj0vI0FNOGGV8nRV3ObHp2sRvrKNVMjkWeXXVGxUE9/T1Fcv77QURTII/Xe4ZD46LP1kwrX0w+fmEOnRqv8XqLLqR+M0HESeSwIR6r53s2yEcjgkKNzNo5mxOLou5V8mR+VGi/a2m3szmpusKlD73yupcrRE2twbaBoKMx1fHnP1qEXld8bK70GX8MspoxtDaEzSlU+nQzrmK6sxZ2azCSU4zCor/Vs4tMJlXwj1yzPSBpCcgMM/VnqEFaluCL+kmeKYpXEQYjDcz5UC/c7Q3CmNi3PG7yCFRJQymYzGCXXbJeTpklrmTRL8O3eH9mU/k4iTFOq1cMRnc8TfMtiyzOiN3FZx5AGHF2ElkRguptY5dmgjKkWX4877Mk0SZTKhdsb59NP4CHwerdnj4k9iY3Xo2JLGTEQf9q3TmyjlH/hGeopTdWDWztfMmGeJgQqpNyZ474VTSioDrYupvEzCUDDOFyIMuhb2DAuDWurD4Dzn0yZPIk9KJaSmqFXsXWTxiSoDDpMR9SswSU+B8O7gkLaPhwOdKw7UXnKsOxob2v5WoSWlrQ50Bcpz6Widd4fp3UJ+WrQvkJ/Z4VVysoQ9KfotiENV9As4BM7oMdCsGg47FDnakET8cJ1lWPqey9GTg0TRyf3+bvkAHIjmoRIi5+2C4E/m8x+JxBToL02ekx51HWXWNJ19/PSuR1tiVzlV0DTNv7Z4fXI=
+sidebar_class_name: "post api-method"
+info_path: site/docspace/api-backend/usage-api/api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Starts room index export"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/api/2.0/files/rooms/{id}/indexexport"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Starts room index export
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"id","in":"path","description":"Room Id","required":true,"schema":{"type":"integer","format":"int32","example":9846}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Ok","content":{"application/json":{"schema":{"type":"object","properties":{"id":{"type":"string","description":"Id","nullable":true,"example":"9846"},"error":{"type":"string","description":"Error","nullable":true,"example":"some text"},"percentage":{"type":"integer","description":"Percentage","format":"int32","example":1234},"isCompleted":{"type":"boolean","description":"Is completed","example":true},"status":{"oneOf":[{"enum":["Created","Running","Completed","Canceled","Failted"],"type":"string","description":"[Created - Created, Running - Running, Completed - Completed, Canceled - Canceled, Failted - Failted]","example":"Created"},{"enum":[0,1,2,3,4],"type":"integer","description":"[0 - Created, 1 - Running, 2 - Completed, 3 - Canceled, 4 - Failted]","example":0}],"title":"ASC.Common.Threading.DistributedTaskStatus"},"resultFileId":{"description":"Result file id","nullable":true,"example":{"int":1234,"string":"some text","boolean":true}},"resultFileName":{"type":"string","description":"Result file name","nullable":true,"example":"some text"},"resultFileUrl":{"type":"string","description":"Result file url","nullable":true,"example":"some text"}},"additionalProperties":false,"title":"ASC.Files.Core.ApiModels.ResponseDto.DocumentBuilderTaskDto"}}}},"401":{"description":"Unauthorized"},"501":{"description":"Folder indexing is turned off"}}}
+>
+  
+</StatusCodes>
+
+
+      

@@ -9,7 +9,7 @@ ONLYOFFICE Docs is available for Windows, Linux and Docker.
 
 To install it on your local server:
 
-1. [Download](https://www.onlyoffice.com/download-docs.aspx?from=api#docs-developer) ONLYOFFICE Docs Developer solution and install it on your local server following the instructions in ONLYOFFICE Help Center:
+1. [Download](https://www.onlyoffice.com/download-docs.aspx?from=api#docs-developer) ONLYOFFICE Docs Developer and install it on your local server following the instructions in ONLYOFFICE Help Center:
 
    - [Install ONLYOFFICE Docs for Windows](https://helpcenter.onlyoffice.com/installation/docs-developer-install-windows.aspx?from=api)
    - [Install ONLYOFFICE Docs for Linux](https://helpcenter.onlyoffice.com/installation/docs-developer-install-ubuntu.aspx?from=api)
@@ -31,12 +31,6 @@ To install it on your local server:
 3. Specify the page code containing the changeable parameters:
 
    ``` ts
-   const docEditor = new DocsAPI.DocEditor("placeholder", config)
-   ```
-
-   Where *config* is an object:
-
-   ``` ts
    const config = {
      document: {
        fileType: "docx",
@@ -48,7 +42,9 @@ To install it on your local server:
      editorConfig: {
        callbackUrl: "https://example.com/url-to-callback.ashx",
      },
-   }
+   };
+
+   const docEditor = new DocsAPI.DocEditor("placeholder", config);
    ```
 
    Where **example.com** is the name of the server where **document manager** and **document storage service** are installed. See the [How it works](../how-it-works/how-it-works.md) section to find out more on ONLYOFFICE Docs service client-server interactions.

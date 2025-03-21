@@ -1,0 +1,71 @@
+---
+id: get-white-label-logos
+title: "Get the white label logos"
+description: "Returns the white label logos."
+sidebar_label: "Get the white label logos"
+hide_title: true
+hide_table_of_contents: true
+api: eJy1VU1v3EYM/SsDnger7SaHQjejTgMjDhJ4a/hgLAKuREkTj2amM5Tj7UL/vaCk/bDXThq3PSwWEEjO43vk4xYY6wT5LSyJ2bg6qUxd0TqiK42rYaXBB4rIxruLEnKoiW8aw3SJa7KXvvYJNASM2BJTlEpbcNgS5HCRzjHegQbjIIc/O4ob0FBSKqIJUhByWAYqTGUoKVMpbkhZX3tlkqp8VKhKjHfyuSXlo3KeQUMqGmoR8i3wJsg7a+8toQMN9IBtsAQ5x476Xh9DoQo7y/8OzVhDMTl0/BpEKw2RUvAuUZL4xXwuf49RDPwqKwQPAIThwjsmxxKMIVhTDIpkX5NkbE8R+PVXKgRbiKIfm/G9kY59VOIoIj+l4XdjSQ2hGlxnLa53HRw1BDfGVYZsqa4Dewe9hmT+oh9j+GZKbo7CjGOqKYKGyscWefz0ZnHM3i+LN297DQ2ZuuHX5Zr0rg28eValSFh+cnZz0uQ0R4BlaYQctJ+PeqnQJtLAhgdClubhEtc+ptlFizUtG4xhthROelmRR02/wI190t8LAn1GbhT7cUQlZdoRmZbvapZ8S4rpgQWSLNfPvXW0jj/z1D8l8Gz52+yG1rOzYOT30Zdk0+xqWphz9rOD9VwwtQLtnP3/98BYvJf6j0m5Iu6iSwMp356u6ww0tMSNn/wSdupDhsFki9k8S5PZZkPykJvtVj1RvN85aRct5LBdY6LraPtTwxpiVeFdZeputGnQcI/RiCrDTE3Jo8+MJphDwxzyLLO+QNv4xPmv85Pik2Wq66tLYWEl0IouGt4sxW7G6piKL9hx8+WOjncLg/lAYrCTAT8Kmzy48P7O0KCecZUfsndCBSNtUEwjlPvFsEM+cYvuYGTwnvh5DZ42sz046I/Fm3qQ4c2CRTOYWzdSOCp5Kw2ChsVsPig2qgkaDnqChhHJSoMwLEnbvZK9fB6PkOhcmiR6lfuJfRH8Kw7ms+0Mch1O9D3aToJAjuZ/h+aFg/l9RPtLfQC1Osw05Ler4RRgSXEgb0w8KwoKx1knd1Kq7Pfy/bs/oO//BouhGRU=
+sidebar_class_name: "get api-method"
+info_path: site/docspace/api-backend/usage-api/api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get the white label logos"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/settings/whitelabel/logos"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns the white label logos.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"IsDark","in":"query","description":"Specifies if the logo is for a dark theme or not","schema":{"type":"boolean","example":true}},{"name":"IsDefault","in":"query","description":"Specifies if the logo is for a default tenant or not","schema":{"type":"boolean","example":true}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"White label logos","content":{"application/json":{"schema":{"type":"object","properties":{"name":{"type":"string","description":"File name","nullable":true,"example":"Winfield Upton"},"size":{"type":"object","properties":{"width":{"type":"integer","format":"int32","example":1234},"height":{"type":"integer","format":"int32","example":1234},"isEmpty":{"type":"boolean","readOnly":true,"example":true}},"additionalProperties":false,"title":"SixLabors.ImageSharp.Size"},"path":{"type":"object","properties":{"light":{"type":"string","description":"Path to the light theme logo","nullable":true,"example":"some text"},"dark":{"type":"string","description":"Path to the dark theme logo","nullable":true,"example":"some text"}},"additionalProperties":false,"title":"ASC.Web.Api.ApiModels.ResponseDto.WhiteLabelItemPathDto"}},"additionalProperties":false,"title":"ASC.Web.Api.ApiModels.ResponseDto.WhiteLabelItemDto"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

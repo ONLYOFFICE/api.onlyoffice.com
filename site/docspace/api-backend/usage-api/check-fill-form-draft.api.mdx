@@ -1,0 +1,71 @@
+---
+id: check-fill-form-draft
+title: "Check the form draft"
+description: "Checks if the current file is a form draft which can be filled out."
+sidebar_label: "Check the form draft"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVe9v2zYQ/VeI+7IN4CzXCYpO39KkAYK1aJC0A4bAKGjqZLGhSJak7BqG/vfhSMk/pqAosPlDHEvHd+/evTvuIYp1gPIJbpXGwAqWvmHJwTr0Iipr7iooQTYon2+V1rfWtzde1BE4OOFFixE9IezBiBahhFppvKuAgzJQghOxAQ4VBumVIzwoUzJ2dwMcPH7rlMcKyug75BBkg62Acg9x5whNmYhr9MChtr4VMT+6WAAH/C5apxHKP95cvu77ZUbDEN/aakcQ06TAQVoT0UR6L5zTSqYii6+BgvZTAnb1FWWq1pMkUWGgtxv0QeUjE6YvFDuG/6iMV4uLy56DkPEcOESvzHqCe5Xi2FbFhglGsMDBdFqLFaFlPQ/gEGyLLOL3CP1BqL8Ubk8SrazVKMwk06NDqWqFgW0bjA16Fi0bIIbU9IdtFG6VWTPrmbExdVdUH43eTdjQzyONd+0Kq4pM8B+pGIYDVCb1k0RI9KpSlELo+5M210IH/DeF+4PrU9FpMqjqQYhqGI6oYtL96vF6loZqdm09zq6c+mAr1GH2kFnfRDu7nk5X3/dJoOCsCdlyi/l86ur3yjyTBrHB0QM/6/Cc4nJ+MUX923assuaXyBqxQYbGduuGOfStCuRjykjdzmlpsAjqHCMVFZiqU5DsvEcTUzBT4Uwttm2UbJgUhq0SnMaK2S7OgEOLsbG0gZwNeefEBkoohFPFYjYvCC8UrQgRPSEW+7x/+iI1hsDo8diVgH4z7qvOayhhvxIBP3vdT72WYpm0plbrLi9D4LARXtGIpZ4Mh7OCteg0TXYToyuLQlspdGNDLN/MJ+A3OZp9fnhPvV4SNdl5FXeP1J+MLoL8IrrYfHnG3clwCKf+xB1Ne964Z2HD3pXWPqvcFmr8w3Ezvhu9f7LEaPUcN8/5rlCmtin5aGinSIXxKGwWFEXtaUUy2MAq9f/gy8NcnMmwP5r1f/LLIBGRL5wWyhC5Lncoe+eJ9AMOixl1JfmHfHZwEHAoD3fYCyZacqCmEtD+YJ6eHn/r0O+gfFoeTZKMVqlA/1cvL5RTDX59GO7D39jxjnyxpNEKZpcsqTv6BRySU8Y7uF/2HBoUFfpEJL+8zul+/0QQx8OTXdHz8cSVlOjiD2OXJ6N6//HxE3BYDddways648WWNrHYZqI2lZ9snp7tQQuz7sSaYjMmff4B3IL5cQ==
+sidebar_class_name: "post api-method"
+info_path: site/docspace/api-backend/usage-api/api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Check the form draft"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/api/2.0/files/masterform/{fileId}/checkfillformdraft"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Checks if the current file is a form draft which can be filled out.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"fileId","in":"path","description":"File ID","required":true,"schema":{"type":"integer","format":"int32","example":9846}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"description":"File","content":{"application/json":{"schema":{"type":"object","properties":{"version":{"type":"integer","description":"File version","format":"int32","example":1234},"action":{"type":"string","description":"Action with a form","nullable":true,"example":"some text"},"requestView":{"type":"boolean","description":"Specifies whether to request a form for viewing or not","readOnly":true,"example":true},"requestEmbedded":{"type":"boolean","description":"Specifies whether to request an embedded form or not","readOnly":true,"example":true}},"additionalProperties":false,"description":"Parameters for checking a form draft","title":"ASC.Files.Core.ApiModels.RequestDto.CheckFillFormDraft"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Link to the form","content":{"application/json":{"schema":{}}}},"403":{"description":"You don't have enough permission to view the file"}}}
+>
+  
+</StatusCodes>
+
+
+      

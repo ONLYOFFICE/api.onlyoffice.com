@@ -1,0 +1,71 @@
+---
+id: upload-license
+title: "Upload a license"
+description: "Uploads a portal license specified in the request."
+sidebar_label: "Upload a license"
+hide_title: true
+hide_table_of_contents: true
+api: eJydVE1vEzEQ/SvWnN1uCCChvRUQEqISFWkPqIoqxzvJuvXarj1bCNH+dzT25qsJFy6J134zfjPvjTdAapWgvocZEhm3SqIS10ajSwhzCT5gVGS8+9pADX2wXjXbYwkRn3tM9NE3a6g3oL0jdMTLrrdkgopULX3sLhpFireTbrHLK1oHhBr84hE1gYQQ+SoymPj0i7FlMcJUjGoNEgxhd7ifKBq3Agl8iyKoYWGcimsYJDSYdDSByUMNI2mhiJRuO3SUYBgGCei0bzjJ4bWJ1pbzc1qGMTBiCt6lAphOJvx39g6Qh51QIVijcw+rx8S4gzaUzO/OJbttUZR+YyOWxqLQvreNcJ7EAsXS966BHPzmNPjOqZ5aH80fHEFvT0E3PpKy4kprTKmg3p+ifvo+ihCNNm4lglVONB5TppH6EHwkQa1JwpcArieh7qOhNdT3G1BJPzCZhyfkDYioGpDwKxpCmA/z10Ld5ZqTUCIUfnZULgXUZmmwEcYJalGM7rsECR1S69mhwafsJkUt1FCpYKrp5aRKo7kru5MoYXzBmDLHPlqoYbNQCe+iHeA1p1nGCu3d0qz6MhAg4UVFoxajZcbg0sCl6i27sSUKdVVZr5VtfaL6w+Qk+eeCFnc/rtlq833/ZmyTkv24i/u5COYb8mA41eXvQ5gEw/m1908GszDGLX2ONpTtfRUMl4ExFSovU7YB97BT2ahj2qKJUGLfvqMaDkb///QbyyH8TVWwyjjm0ZduFi3vuVaQML2cZPGKniDB7h8r7jAjNzslB95+7jGy9eZ7xfhrkNCiajBmC+S+wqdSxsUt82G47ZnXuddskNsgHqBAB/CTkWdRdxa9+T67BQmL8dHsfLN9aXJeuV8WkqznseRF3HHB5LdHbn3I4tgLhSv/MvOzEZtN8dMw7PDl6J8RYwO3aNZtPgzDXyQjLK0=
+sidebar_class_name: "post api-method"
+info_path: site/docspace/api-backend/usage-api/api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Upload a license"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/api/2.0/settings/license"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Uploads a portal license specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"multipart/form-data":{"schema":{"type":"object","properties":{"Files":{"type":"array","items":{"type":"string","format":"binary"},"description":"License attachments"}}},"encoding":{"Files":{"style":"form"}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"License","content":{"application/json":{"schema":{}}}},"400":{"description":"The uploaded file could not be found"},"401":{"description":"Unauthorized"},"403":{"description":"Portal Access"},"405":{"description":"Your pricing plan does not support this option"}}}
+>
+  
+</StatusCodes>
+
+
+      

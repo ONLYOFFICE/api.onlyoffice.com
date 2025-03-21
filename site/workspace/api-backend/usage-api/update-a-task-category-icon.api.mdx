@@ -1,0 +1,71 @@
+---
+id: update-a-task-category-icon
+title: "Update a task category icon"
+description: "Updates an icon of the task category with the ID specified in the request."
+sidebar_label: "Update a task category icon"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVMFu2zAM/RWBO06r3bTAVt+6pMCCAV3RpNihyIG1mVitbWkS3S4z/O8D5aRN1iHDhvlgCBQfRT4+sgPGVYDsFnJfJ3MMDwEWGgLlrTe8huy2g/OWS+vND2Rjm0+EBXkBeMICNDx5wwSLfqGhoJB748QNMrhxBTIFhY0yuW2UXSouSTGGB5Uj08r6tXoyXEbzdKKCo9wsDRXKNNHm6VtLgY9Aw+b40RZryDrIbcPUsBzRucrkMbfkPsjLHYS8pBrlxGtHkIG9u6ecQYPz1pFnQ0FuTSH//bTne/lNJ6C3QUzDtCIPvQZT44ousabX+Et6GuptsKZY9G7Al2iBvWlW0MdPCgzONmHIa5Smf0rsmbg20lzEN0H/L2auqUI2jzRlqsPYtkPEX4jQsLS+Rh5MJyPQQN+xdpU4HQtPU+HpCrncQW8K3/V1KMVYFWkV3NxwRYcxg0uvYbLL0iHErmOvYWwr6w8j3uD7ZZ6m4j2znr/4KP1/4WHy17DRySmIMHigIrZ/vOn+V4/OiRKjdE7T49dquWlwM7ZUxDg1cWkLIbuN7Y5NgQSdSUZHaSLjL0pNtgpLOlNkt+m7s8XbPtmIK5B/JB/iVmh9BRmUzC5kSdKVNnCfdc567kHDI3qDd9UgJrkbMlxiW0m9lc2xiuZeg2D2rz+kZyMpbmcTzUS4Q7jf7qNndtGZzyRzZoSGcrjW0MRh3cdGXmQyrl+2y8W2A8N2SPdm/XloJfrSxlc37Rnbum4bw2s1iySp64vZXJ1fTYUM8mHoSiUbkaHvfwJkzd/U
+sidebar_class_name: "put api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Update a task category icon"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"put"}
+  path={"/api/2.0/crm/task/category/{id:[0-9]+}/icon"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Updates an icon of the task category with the ID specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"id":{"description":"Task category ID","type":"integer"},"imageName":{"description":"New icon name of task category","type":"string"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Task category with the updated icon","content":{"application/json":{"schema":{"type":"object","properties":{"RelativeItemsCount":{"type":"integer","format":"int32","example":"1"},"ImagePath":{"type":"string","example":"path to image"},"Title":{"type":"string","example":"Title"},"Description":{"type":"string","example":"Description"},"Color":{"type":"string","example":"#a7fc00"},"SortOrder":{"type":"integer","format":"int32","example":"1"},"ID":{"type":"integer","format":"int32","example":"1234"}},"title":"TaskCategoryWrapper"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

@@ -1,0 +1,71 @@
+---
+id: get-edit-history
+title: "Get version history"
+description: "Returns the version history of a file with the ID specified in the request."
+sidebar_label: "Get version history"
+hide_title: true
+hide_table_of_contents: true
+api: eJztV21v2zYQ/ivCfVoxxlKdoMj0zYi7LFi3DnlpgQVGwUgni61MsuTJrWHovw9Hyo5f6sYtNuxL9cGy5buHd8/diQ+XQHLqIb+HX1WDPkmTcIeJAGPRSVJGX5WQwxTpZanoN+XJuAUIsNLJGRI69l6CljOEHCrV4FUJApSGHKykGgSU6AunLGNBHhZKrsYgwOHHVjksISfXogBf1DiTkC+BFpbRlCacogMBlXEzSfHR6RAE4Gc5sw1C/sv52YuumzCat0Z79AwwzDK+ba/8Bp1XRid1TCIpJUkQUBhNqIntpbWNKkLW6XvPTsv9qMzDeyyIKXDMEam4pCq/GPmh5A9n9Hx4etYJ+ICLDUBPTunpHt7vyLXQbdPIB/aNRK6hwJsZJoSfCToB85j/sWGuzI+ItTe9dKa1R8CvCjEN9kfgtx7dN1bgAGGhOQ/zxd3EVMV2fgrsT7b6GtxbpSuFTZncWTIauk6ALEvF7rL5ayP4SjYeBZCi4De6uRiEQRxcGIeDjckbtVQbxyEWDiVh+TQtLRW36ph07nrDjYKUkvCE4kOHsnytm8V+msMsOz/Jzk6eZ7fZi/w0y7NskMXr5+wszzKOl1H+NhpfV5VHejqa22373aC8lfqrQWUcRlj7W1gfWRU5H1k1loSBEGa7lnqKfvX+ezL63jDp/RKlE6oxidZJn8rRk9ujbCwrnZM8+opw5o/ogR8D9GOA/scB+s66jaz6w5TY+MF1v7uPyWxW8yIOxlsnrcVQ1W0OXilPianWW/5qkHZ7rhPg0c3RvdnbIw+wexPMNzbJo0b5v+JhTAY6vnbDvEZqnfbh5TPf0T+mSmTCii35pKgOJlfjxFssVKWwXL2zWKahpwEImCHVppeDQQNSDTmk0qp0OMhSxvLhM11GJdilWCpK67VsjCxHzdi6BnJYPkiPd67pDlFcGF2paRvFKAiYS6eY6DCbvXMUe5VsG+7vmsjmadqYQja18ZSfZ3vg42id3F2/YuYmHFrROkWLGxZ8EV364p1sqX63LcakVb3wiqp3y6zXvoUxH1TsfKUrE7xXxbUKNtQYzIfcuNZ4msnQeT3sJdJuzXbTWD6q13+51H2q3LapbaTSHGMbmY51v2ceQMBwwOyG2vd3EJCvTwLcACBglcBEAJeE3Zfr0nf8+GOLvLPeTx5LHNqkVJ6/l+shOcjAT9f9ieJZ8ii0v5jIqpB6ERqqafkX9KJ7dYrpJp2AGmXJe+f9sv9zVBRoacNt79DAzbSelMuXt9B1/wAORI73
+sidebar_class_name: "get api-method"
+info_path: site/docspace/api-backend/usage-api/api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get version history"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/files/file/{fileId}/edit/history"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns the version history of a file with the ID specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"fileId","in":"path","description":"File ID","required":true,"schema":{"type":"integer","format":"int32","example":9846}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Version history data","content":{"application/json":{"schema":{"type":"object","properties":{"id":{"type":"integer","description":"File ID","format":"int32","example":1234},"key":{"type":"string","description":"Key","nullable":true,"example":"some text"},"version":{"type":"integer","description":"File version","format":"int32","example":1234},"versionGroup":{"type":"integer","description":"Version group","format":"int32","example":1234},"user":{"type":"object","properties":{"id":{"type":"string","description":"Id","nullable":true,"example":"9846"},"name":{"type":"string","description":"Name","nullable":true,"example":"Winfield Upton"}},"additionalProperties":false,"title":"ASC.Files.Core.EditHistoryAuthor"},"created":{"type":"object","properties":{"utcTime":{"type":"string","description":"UtcTime","format":"date-time","readOnly":true,"example":"2008-04-10T06:30:00.0000000+04:00"},"timeZoneOffset":{"type":"string","description":"TimeZoneOffset","format":"date-span","readOnly":true,"example":"00:00:00"}},"additionalProperties":false,"title":"ASC.Api.Core.ApiDateTime"},"changesHistory":{"type":"string","description":"History changes in the string format","nullable":true,"example":"some text"},"changes":{"type":"array","items":{"type":"object","properties":{"user":{"type":"object","properties":{"id":{"type":"string","description":"Id","nullable":true,"example":"9846"},"name":{"type":"string","description":"Name","nullable":true,"example":"Winfield Upton"}},"additionalProperties":false,"title":"ASC.Files.Core.EditHistoryAuthor"},"created":{"type":"object","properties":{"utcTime":{"type":"string","description":"UtcTime","format":"date-time","readOnly":true,"example":"2008-04-10T06:30:00.0000000+04:00"},"timeZoneOffset":{"type":"string","description":"TimeZoneOffset","format":"date-span","readOnly":true,"example":"00:00:00"}},"additionalProperties":false,"title":"ASC.Api.Core.ApiDateTime"}},"additionalProperties":false,"title":"ASC.Files.Core.ApiModels.ResponseDto.EditHistoryChangesWrapper"},"description":"List of history changes","nullable":true},"serverVersion":{"type":"string","description":"Server version","nullable":true,"example":"some text"}},"additionalProperties":false,"title":"ASC.Files.Core.ApiModels.ResponseDto.EditHistoryDto"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

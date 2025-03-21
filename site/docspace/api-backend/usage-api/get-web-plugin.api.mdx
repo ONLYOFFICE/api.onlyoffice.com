@@ -1,0 +1,71 @@
+---
+id: get-web-plugin
+title: "Gets web plugins by name specified in request"
+description: "Gets web plugins by name specified in request"
+sidebar_label: "Gets web plugins by name specified in request"
+hide_title: true
+hide_table_of_contents: true
+api: eJylV9tu2zgQ/RVinnaxiq2mwaLQm7cJusU2bZDLBtjCKGhpbE8jkSxJJXEN/ftiSNmx41yY1A+yLR2euY9mluDlzEHxFc7Qe1IzJ4biEiembmekHIwz0Aat9KTVxwoKmKG/xMlJeAwZGGllgx4tcyxByQahiF8ZkIICjPRzyKBCV1oyzAMFfI4Aiz9aslhB4W2LGbhyjo2EYgl+YZjIeUtqBhngrWxMzbcuSU0J60pcGK8VdN2YeZzRyqHjo/t5zl/bAi9xIsxK6VIrj8ozShpTUxnMG353DF3uaqEn37H0bK1lZ3iKgqKxu7o+aKpq61pO2IJo6uMGZXCN1lHU5Wnuf3vgU/RONyg83npm3jr+HPvhxr9kCTWVqFyCXz71wGRm2fq5ts8TjyIumXeuGzyRswSV/+ZjhqHJ5DHnPidlyskdNpnfldrEbHya+yziknmpSfLIx+ZF3igtSo9/LZ6vLaoShB9CBlNtG+mhgLalaqtRLPP+s/fAZfXpQlWQM7VcpEXpMIKFei5Ox3SF4j+pFtK7K2I5nnydIOE8wJ6klkrO0IaquJZeplRFxKVXW8B/sTQjJevn+VdI4egnCvkqacfy9nlBx/KWmrb5JTlYUdskiAq4X5F01sg6wXkBliKitbXwWrhNfBdqZ0o1XtgEWScRKy5OP72gR0o3up9oE61rlGrXGIMlTQmdoKnwcxStQyvm0gmpep2FtkJpv1muLJ77jhsprah5tRyKYgLJY2I4PFVFzCPrk42+M5W1w3Wdwujs/eASJ4ORocGxrrB2g6PG1HqBeOj1XUP7kvAyfR+QIrxK1z2rkh73PIVGcuf5/Tx/t5cf7L3Jz/M/i7d5keeDvl39kR8Uec6SUXHYqgQ/HfXIXWe7hfOY5OoI3GVoUzKO0zL9hdaPoQlFs0Imcr8m6iNDfeBP+xHz0OvBegAOWdAx80H+ZnfovFBxZqGfWEEAvd0FRSYnKnIxTl3wQtla8oswVEtXfmOib1fIN8Ci5GjeWPIIY55/txk/oHfiZj3wOjGJbyvh+oqpBCnBszc6Lo4G/Vz3s30Y6f0cChhKQ8P9QT5cRWR4s14Lhkvm64AVtder4T8kAywn0nEn6h4IGGNFqdWUZm3cKSCDa2mJLQ8h7w9HN01lW3OZzL03xXBY61LWc+188S5/YFgN6NDWurAUrHx4xuN8ZN/25DrBpKF/cMF5FNeXLVi/xpRaXxGG4JCa6nB6lTCGYGNoh+v90JO1841Ud4vCi+Nyb1hfby0vJurN5DIYmlpSWDL60o3R/so+gAz2Bzls1GAGdzGHDIpgyJhHZuf50HId7I5v/2jRcoaO74IaEmOd2qtSe9Sy3077jfB30c/BD+q+iptahPypW/4HGYSwRnd3Y35toazQBh3io1FZovEbh3b2P86cdUF8ODqHuHhsZ0vMi/4Hsz+o0L00ihrwtcseObFcxlTsujU+Pnr0RG/hCs3uGXdd9z9AM2vk
+sidebar_class_name: "get api-method"
+info_path: site/docspace/api-backend/usage-api/api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Gets web plugins by name specified in request"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/settings/webplugins/{name}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Gets web plugins by name specified in request
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"name","in":"path","description":"Name","required":true,"schema":{"type":"string","example":"Winfield Upton"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Web plugin","content":{"application/json":{"schema":{"type":"object","properties":{"name":{"type":"string","description":"Name","nullable":true,"example":"Winfield Upton"},"version":{"type":"string","description":"Version","nullable":true,"example":"some text"},"description":{"type":"string","description":"Description","nullable":true,"example":"some text"},"license":{"type":"string","description":"License","nullable":true,"example":"some text"},"author":{"type":"string","description":"Author","nullable":true,"example":"some text"},"homePage":{"type":"string","description":"Home page","nullable":true,"example":"some text"},"pluginName":{"type":"string","description":"PluginName","nullable":true,"example":"some text"},"scopes":{"type":"string","description":"Scopes","nullable":true,"example":"some text"},"image":{"type":"string","description":"Image","nullable":true,"example":"some text"},"createBy":{"type":"object","properties":{"id":{"type":"string","description":"ID","format":"uuid","example":"{00000000-0000-0000-0000-000000000000}"},"displayName":{"type":"string","description":"Display name","nullable":true,"example":"Mike Zanyatski"},"title":{"type":"string","description":"Title","nullable":true,"example":"Manager"},"avatar":{"type":"string","description":"Avatar","nullable":true,"example":"some text"},"avatarOriginal":{"type":"string","description":"Original size avatar","nullable":true,"example":"some text"},"avatarMax":{"type":"string","description":"Maximum size avatar","nullable":true,"example":"some text"},"avatarMedium":{"type":"string","description":"Medium size avatar","nullable":true,"example":"some text"},"avatarSmall":{"type":"string","description":"Small avatar","nullable":true,"example":"url to small avatar"},"profileUrl":{"type":"string","description":"Profile URL","nullable":true,"example":"some text"},"hasAvatar":{"type":"boolean","description":"Specifies if the user has an avatar or not","example":true},"isAnonim":{"type":"boolean","description":"Specifies if the user is an anonim or not","example":true}},"additionalProperties":false,"title":"ASC.Web.Api.Models.EmployeeDto"},"createOn":{"type":"string","description":"Create on","format":"date-time","example":"2008-04-10T06:30:00.0000000+04:00"},"enabled":{"type":"boolean","description":"Enabled","example":true},"system":{"type":"boolean","description":"System","example":true},"url":{"type":"string","description":"Url","nullable":true,"example":"some text"},"settings":{"type":"string","description":"Settings","nullable":true,"example":"some text"}},"additionalProperties":false,"title":"ASC.Web.Api.ApiModels.ResponseDto.WebPluginDto"}}}},"401":{"description":"Unauthorized"},"403":{"description":"Plugins disabled"}}}
+>
+  
+</StatusCodes>
+
+
+      

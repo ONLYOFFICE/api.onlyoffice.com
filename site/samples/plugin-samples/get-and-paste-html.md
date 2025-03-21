@@ -14,7 +14,7 @@ Gets the document content as HTML code, modifies it, and pastes back to the docu
 
 ## Installation
 
-Available by default in ONLYOFFICE Enterprise Edition and Community Edition (Docs + Workspace).
+Available by default in ONLYOFFICE Docs Enterprise and Community (Docs + Workspace).
 
 You can also download this plugin from the [ONLYOFFICE App Directory](https://www.onlyoffice.com/en/app-directory/html) and install it following the [desktop](../../docs/plugin-and-macros/tutorials/installing/onlyoffice-desktop-editors.md) or [cloud](../../docs/plugin-and-macros/tutorials/installing/onlyoffice-cloud.md) installation instructions.
 

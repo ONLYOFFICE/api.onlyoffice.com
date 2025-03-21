@@ -1,0 +1,63 @@
+---
+id: get-backup-schedule
+title: "Get the backup schedule"
+description: "Returns the backup schedule of the current portal."
+sidebar_label: "Get the backup schedule"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVm1v2zYQ/ivEfR1ty447FPqWOUU3rMOCJsEwGEZAS2ebiURyfEnrGvrvw5GyLL+kyIr5g0We7uW5u4c87cCLtYN8Dr+I4jkYWHDQBq3wUqvfSshhjT69uis2WIYKgYNFZ7Ry6CDfwSTL6FGiK6w0ZAd56425g02hlUflSVUYU8kihhg9OdLfAWnWglZ+axBy0MsnLDxwMJYAeZmiOa+tWON9VNqBVvjnCvL5DlCFmvK40UWoUXkHHO43VpZGWL/tS2fBeV3PKh1K4PBJF6ICDjfCizuvLUY7actbsptp5UKNlurSAnPeSrUGfpLxvAvBBqxbc3YBAxv0pKw86PaQsUG7YwVtOYs42SA9OevgUjThBaPCIIU7hR6jSdtGK1rpAjjgV1GbinI6lKfhXSkzPuYTfsWn/N0he6k8rtGep58dpz1+NcnJWWpXh7SmJ+m8ewP6rCF40sdMru9mQ3IwTAwczrTyVhTetYK7Hn8avqfTrbCidpfYJ8pSUoqiuj3i4SkZVKgqsSQI3gZsTgU9uPMdPOOWbHWNzONXCvMiqoBHsmbRcCisVq9jOz4ZBq3U5eVD8eEF7fZGbIGn5V+Iz/v1H1r5zRv4vffBBiwuWSm2nHXuOvEXxOdWHl13L2raHfOuw3VKuzcSrgdkfAJg8p2432VMelw/ia+/ClVWaB+T5DbVt+Gw0cH2+nFAuNK2Fj6Jrib9iOPJ1bThUIrtjxg2r/FwJSqH/yWV2YFQDYdlfO/iPVK+DdirtG4zrIRr58W9rPHSSelclsLjwJNWnxKTLHs/yKaDcXaf/ZxfZXmWDbP0+ymb5llGwMtQm57vpdYVCtX3EyvzPxaum35NQ16n2fh86D0oEfxGW/kNI0+m2eRc6W8dLDNWFlKtmamEYqVGx5T2zAVjtPXMb6RjOhlQMIdFsNJv45EWrnikMI/xEpmDRUFj7IuVHmFBxD6O9xl9sMoxv0G2PJ7KTK+iuAjWovKMgotqCBxq9BvdTn+6aITfQA4jYeRoMsxGyc9ojb5l0GHMO7QvaF2EGmwFOeyWwuGDrZqzI3wXdelSX8l1SN8c8S60kigWb7XWONVxJUJFzNl4b/LRqKKZsdHO5++zM+c3SZs9fP5EPVscykitrJP342J2fBJG/o50WSpRx31fjYMk/4XWzxJjf6Ra6Wi9Z5ORlAZal6C8TIgNRjtfi/ix07r9iP5SW05T2R2+nX6sm21WNFZGphJSEZyQippaO6eUgcNkSIVMjoHDeYMXdPs5Txa7rrENif8JaImQi0MDaUfXJYoSbW/wXRcFmv7UO/sgpHZ1HPz44Z4GcSCg/RalZrQL8r5/pbZ938e9Swjon0bORYvdLvW/aTr99OpVizbDvTYVeNE0zb+oDd3s
+sidebar_class_name: "get api-method"
+info_path: site/docspace/api-backend/usage-api/api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get the backup schedule"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/backup/getbackupschedule"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns the backup schedule of the current portal.
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Backup schedule","content":{"application/json":{"schema":{"type":"object","properties":{"storageType":{"oneOf":[{"enum":["Documents","ThridpartyDocuments","CustomCloud","Local","DataStore","ThirdPartyConsumer"],"type":"string","description":"[Documents - Documents, ThridpartyDocuments - Thridparty documents, CustomCloud - Custom cloud, Local - Local, DataStore - Data store, ThirdPartyConsumer - Thirdparty consumer]","example":"Documents"},{"enum":[0,1,2,3,4,5],"type":"integer","description":"[0 - Documents, 1 - Thridparty documents, 2 - Custom cloud, 3 - Local, 4 - Data store, 5 - Thirdparty consumer]","example":0}],"title":"ASC.Data.Backup.Contracts.BackupStorageType"},"storageParams":{"type":"object","additionalProperties":{"type":"string","nullable":true},"nullable":true,"example":[{"key":"some text","value":"some text"}]},"cronParams":{"type":"object","properties":{"period":{"oneOf":[{"enum":["EveryDay","EveryWeek","EveryMonth"],"type":"string","description":"[EveryDay - Every day, EveryWeek - Every week, EveryMonth - Every month]","example":"EveryDay"},{"enum":[0,1,2],"type":"integer","description":"[0 - Every day, 1 - Every week, 2 - Every month]","example":0}],"title":"ASC.Data.Backup.BackupAjaxHandler_BackupPeriod"},"hour":{"type":"integer","format":"int32","example":1234},"day":{"type":"integer","format":"int32","example":1234}},"additionalProperties":false,"title":"ASC.Data.Backup.BackupAjaxHandler_CronParams"},"backupsStored":{"type":"integer","format":"int32","nullable":true,"example":1234},"lastBackupTime":{"type":"string","format":"date-time","example":"2008-04-10T06:30:00.0000000+04:00"},"dump":{"type":"boolean","example":false}},"additionalProperties":false,"title":"ASC.Data.Backup.BackupAjaxHandler_Schedule"}}}},"401":{"description":"Unauthorized"},"402":{"description":"Your pricing plan does not support this option"}}}
+>
+  
+</StatusCodes>
+
+
+      

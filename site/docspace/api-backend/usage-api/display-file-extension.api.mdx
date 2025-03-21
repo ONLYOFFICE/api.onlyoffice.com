@@ -1,0 +1,71 @@
+---
+id: display-file-extension
+title: "Display a file extension"
+description: "Specifies whether to display a file extension or not."
+sidebar_label: "Display a file extension"
+hide_title: true
+hide_table_of_contents: true
+api: eJydVE1v2zAM/SsCz16cBTsMvvVrwLANKJr2VAQDYzOxWsVSJTppFvi/D5TsJG3aYdslsSSSenzvUTtgXAYo7uGLNhRUrqbErJtlgFkG1pFH1rb5WkEBlQ7O4FYCr56ZmqBtAxl4emop8LmttlDsoLQNU8Pyic4ZXcYC+UOwjeyFsqYVyhdvHUEBdv5AJUMGzst1rCnEOOKjoLm1hlBuqyiUXjupCQVMHZV6oSmoTU1ck1dsVSBWXJMK/WElO7EnZb1qrFxGz7hyhqBg31LXZYBVpaUomusjHAs0gU4uHar1nSuHHlfE5ANkwJqlLpxNL0aR09GF9TQ6c/qHrciE0U3KumQ7GiodtqDrBI2n4GwTEhWT8Vj+XoI4T4yoNZqWCiVtKL2Ife/hKB0UNTg3VEH2z8IMnCdEn8YfT0HcNdhybb3+RRVIVKCy9Zq3UNzvAEP5U85/PpJsgCcUHBuvmWDWzf5KzN50CtVCG1I0GK+XcgQZrIhrKwZ1bfQRcg0F5Oh0PhmNc8kLeV9HFnRk3kB+LboJ3tYbKGA3x0B33nSnZouxqrTNQi/bNBiQwRq9Fo6jVn1yomqBrWEooGZ2RZ4bW6KpbeDi8/ik+GWKVnc334Xx2YHLqQiTqr9kdK8UOv2NtpBBg6u4Pg7LQEv90tpHTVEkUfzmMLRXwyj0QxcnQrIWNt4x+NlpaZZ8SIDXE+gycDbwCqOB+ssv3xHsdcdHL8V/K9/3z/TMuTOoG4HUJvqTDe6FHMhgMhLKoxUEyFtmmGUg4kjObm+CTrafWvLi4NlBbFl1GdSEFfnonigJXKSePtwKMgk3bVLo1cB12ZBxVpbk+I+xsyOPX9/dQgbz/rFd2UpSPG7kIcYNFADybEtydEzc24HBZtniUmJTyfjktcLQsYuSX/oPaWo4arbHAF/aK7Uhv9LUmxm7XbJo1+3j09G7GT2xQ7QoO+u67jdhCVMB
+sidebar_class_name: "put api-method"
+info_path: site/docspace/api-backend/usage-api/api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Display a file extension"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"put"}
+  path={"/api/2.0/files/displayfileextension"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Specifies whether to display a file extension or not.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"set":{"type":"boolean","description":"Specifies whether to set the specified settings or not","example":true}},"additionalProperties":false,"description":"Settings request parameters","title":"ASC.Files.Core.ApiModels.RequestDto.SettingsRequestDto"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Boolean value: true if the parameter is enabled","content":{"application/json":{"schema":{"type":"boolean"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

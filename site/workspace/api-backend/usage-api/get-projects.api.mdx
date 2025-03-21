@@ -1,0 +1,63 @@
+---
+id: get-projects
+title: "Get projects"
+description: "Returns a list of all the portal projects with the base information about them."
+sidebar_label: "Get projects"
+hide_title: true
+hide_table_of_contents: true
+api: eJy1VU1v3DYQ/SvCnFnvZttDK6AojMRIgzaF4bVRoM4eZqVZizElsuTIsSrwvwdDajdSEzfuITpIFDlvPt6MnkZgvAtQ3oLz9j1VvLrMzwA7BYGq3mseoLwd4bznxnr9D7K23a+ENXnBecIaFHzwmgl2caegplB57cQMSrgi7n0XCiyMDlzYQ4HGFNxQ4axnNMUUOBQfNDfpYI+BCt0drG9TsAL3tmc5as9AgafgbBcoQDnCZr2WxzLm71Oko2tQUNmOqWOxReeMrpLn1fsggBFC1VCLsuLBEZSA3uMACjRTG2b7di8eQQlfjjzrnMZL7C5qzTPDvbWGsAMF9IitM7J3QBMIooI34dLrB2R6NqCeWeqO6Y48KMgU5a3vNwvoi7XgrjWbeZDAXnd3C8NtWhTZMip4NafyGcA59VHBlpH78H+zTcle5cbq/SLlJxhfMHLK7hSi73W9jDBd333hdrxS+To4g8Mf2H6Ft7f6noq/sBuQw71+JtlvsUMhIyo4f0BGv23RmP/G9N4UbIsglgUmlOAvvT1oQzf+K/B37+SbrvuKgyzJOkN5T+BnGNzjL30g/zPWre50YI9sPcSogHNBcNE6YweiPz26nPysVd+mEbPokyJJ8BRdLgU/rF98/uHfdDipFNXJR0vc2BpKuKM0QsgNlLBCp1ebs/XqKHogWucfyIckdb1wCg2zC+VqNTY2cCxH0asICh7Qa9ybPIZylvM4YG+kYGMrNGk7KhDM8vjH9U8bqWEmr1sRn+zuiyL7SZSc/o2SKkmxTT5W0KVZXWJT9aKhCT4x+dK2bd9pHoptqra4utheF+eXb6Qq8iGTaJDpmH3gFpMMTDFeE89VtV5qxUlkv4HqTxQwPfLKGdRJbPo8/Lmtt8IPKNicrbNaTLohf7LcplsYRwlz402Msv13T17+brtPXZW3qI7kyjTc0yDsVhU5Tu03fW7Gv34j0tLTvL2+uAYFMo3L/t2n/k0L8X486oaZ72Ur1ZSC3KN6AjKOeTpiPNnnoycRp/nJ1sLoLsb4EX2PtiQ=
+sidebar_class_name: "get api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get projects"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/project/"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns a list of all the portal projects with the base information about them.
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"List of projects","content":{"application/json":{"schema":{"type":"array","items":{"type":"object","properties":{"CanEdit":{"type":"boolean","example":"false"},"IsPrivate":{"type":"boolean","example":"false"},"Id":{"type":"integer","format":"int32","example":"10"},"Title":{"type":"string","example":"Sample Title"},"Description":{"type":"string","example":"Sample description"},"Status":{"type":"integer","format":"int32","example":"0"},"Responsible":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"},"ResponsibleId":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"}},"title":"ProjectWrapper"}}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

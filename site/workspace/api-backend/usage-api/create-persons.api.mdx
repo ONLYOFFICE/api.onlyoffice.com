@@ -1,0 +1,74 @@
+---
+id: create-persons
+title: "Create persons"
+description: "Creates a list of persons with the first and last names specified in the request."
+sidebar_label: "Create persons"
+hide_title: true
+hide_table_of_contents: true
+api: eJzlVs1uGzcQfhViLgaMtSUrObQLFIUtO6jRxDViB0Eq6zDaHVmMueSGnLWtCvs4fZE+WTHkSpZiN1Jy7R4EipyPnJ9vyG8BjLcB8hEUvuoNnWUsOMA4g0BF4zXPIR8t4LjhmfP6L2Tt7G+EJXnBeMISMnjwmgnG7TiDkkLhdS1mkMPQEzIFhcrowMpNVU0+OBvUg+aZ4hmpqfaBFdpSGQysLFYUVKip0FNNpdI2Wnn60lDgwxt7Y/f3LxzT/n6uTpFRzTCkjZwx7kHbWzV1vkLOb6xa/0aLO5rnau9NPFDOUUd7mbpH01Cu9t7i02ybqefGgxeNB3vt+BAy6Bw8ceUc8gUUzjJZliHWtdFFTFzvc5C0LCAUM6pQRjyvCXJwk89UMGRQe1eTZ01BVkvkaLWZ1UvUPuSqCeS79IkrWZpYZRGy5eboPc4hA81UheeHtumTGELtbEhHD/r95ye/7apYLHmSfXekW5z5OgNXFRrzxrH74M2adWCv7S1kQI9Y1UamGm8UOzV17KDN4B2Vuql+BHmqQ21wfiE5/CbuGsvPVJbakjrBYqa9oM/D0FU12vkaduKcIbQb4CmaQAI4LgoKQTL741k6L1/yNPWBBNjocuPwfvcdvPCz/L4rFe/0Hak/0c6Rw50W6LVmsw2EFm8pZu34Hhl9LPZOtQpiqTCiBH/p3VQb2lrqm5vepXdlU3CQIbnaUJoT+CGG+vFXaaNfsKy01YE9svMg3cEpIDirauPmRB891pSWzsOl1/fItKXm7BtKHLmaoadyV4pE6+touAJoyyTJWyuztvxqIDvYppLb+cJZuQXeE5Yf4w2dxvDsmh711YES60wdqQO1AmRq0P0db9JHnBo23pMt5tvZuQMVhjNtKZD61KCNEc+ridtSy3/+jsyZTDzda0yhfPOMi0/Jb8ONp+2cHl4s+9nek2ecmN3re4JBF7uVd41ay5Se26kTetWpOYZoz0rNOx4+RHtKhnYn4+mOrFohjwavXm/6nZ6DEwy0cjs9Ka/7R89fkQ8WOzlBZdynIp65EnKoXYj0QZ5BDj2sdW9w2O+JNOmenF4SEL0vjS7uQFSKvycfokhppPthxlyHvNdbzFzgNl/UznMLGdyj11LDSElZS45NsTESpnEFmjjdZiCYzeWf+j8PJKg1YXQlT1va7kV59HSZ1/p3ire5RD9LyxnERzrfxMZ0yNv5/klPnC0Tv9QDo0U7bmW3qYunrKpQVY3VPFdXMSnq/dnVtTq+PJfgyYeUfCOCrAsycIWxaTpXklxbajT46ppYUzX/I2HX1ZDpkXu1QR2vpya9M4mnIykwZDA47Ise8lWnijBdhTEvkEFi7DjruDeCxWKCQZ6stpXpLw15EdvjJ6rKvzZbMkYofkfzrt/I8kF8EsTcNIlnX+mvNlsiRGTU/E3b8VofXv5xdQ0ZTDo1W7lSMB4fROniA+QAGbjIi8j/OLcAg/a2wVuxTXsKm6XXN5vhLjZDN5Colkt2vubhZl9kXSDyK2G9CFksUqu17co+Lf0nYtWMyVqqO27b9l9Ip2Wp
+sidebar_class_name: "post api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Create persons"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/api/2.0/crm/contact/person/quick"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Creates a list of persons with the first and last names specified in the request.
+
+**Note**: Data has the following format:
+             [\{key: 'First name 1', value: 'Last name 1'\}, \{key: 'First name 2', value: 'Last name 2'\}].
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"data":{"description":"Pairs: user first name, user last name","type":"array","items":{"type":"object"}}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"List of contacts","content":{"application/json":{"schema":{"type":"array","items":{"type":"object","properties":{"SmallFotoUrl":{"type":"string","example":"url to foto"},"MediumFotoUrl":{"type":"string","example":"url to foto"},"DisplayName":{"type":"string","example":"Tadjeddine Bachir"},"IsCompany":{"type":"boolean","example":"false"},"AccessList":{"type":"array","items":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"}},"IsPrivate":{"type":"boolean","example":"true"},"IsShared":{"type":"boolean","example":"false"},"ShareType":{"type":"integer","format":"int32","enum":["None","ReadWrite","Read"],"description":"[0 - None, 1 - ReadWrite, 2 - Read]","example":"0"},"Currency":{"type":"object","properties":{"Title":{"type":"string","example":"Chinese Yuan"},"Symbol":{"type":"string","example":"¥"},"Abbreviation":{"type":"string","example":"CNY"},"CultureName":{"type":"string","example":"CN"},"IsConvertable":{"type":"boolean","example":"true"},"IsBasic":{"type":"boolean","example":"false"}},"title":"CurrencyInfoWrapper"},"CanEdit":{"type":"boolean","example":"true"},"CanDelete":{"type":"boolean","example":"true"},"ID":{"type":"integer","format":"int32","example":"1234"}},"title":"ContactBaseWrapper"}}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

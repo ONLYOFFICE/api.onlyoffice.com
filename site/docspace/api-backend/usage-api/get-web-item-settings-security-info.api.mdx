@@ -1,0 +1,71 @@
+---
+id: get-web-item-settings-security-info
+title: "Get the security settings"
+description: "Returns the security settings for the modules specified in the request."
+sidebar_label: "Get the security settings"
+hide_title: true
+hide_table_of_contents: true
+api: eJzVV01v2zgQ/SvEnFXbG+xhoZuxKYLsNm0RNyjQwCjG0tiaRiJVkkriGPrviyElxx+J4ya9rA+2JQ3n473h8GkFHhcO0muYkPesF04N1YSyxrJfwjQBU5NFz0af55DCgvxXmp17qnrz3vZczw0kUKPFijxZ8bkCjRVBCpw7SIA1pPCzIbuEBHJymeVaPEMKH9h5ZeaqMnlTkjo/FXvnl6WszonqT7MflHm5mRVUIaQr8MtanqK1KA7ZU+U27jtvWS+gTYDusarF0zU4U5HydO9h2rbTBCy52mhHYeHJaCQ/25n19SnXFQwJZEZ70l6Msa5LzgJAwx9OVqz2UzR98rUVOD3HeHcRSQF2N+tdfC56XCAB3ZQlzqQebxvaKA9Wo+7z7omv/tMKJI0LDL0I4jOZ8xEph1znxlboIYWm4Rxel2vOri5x+TG00ktRT6OxCo13CKsLviH1DfUSvbthiePZl0dE+BLMDrpGjQuy4hNv0aN92ek42h3y+ti6a7+fLC9YY/my/95SOX4gha+KdoH3RzQq3nPVVG+KQzk31RGhgt1bIk0qLI8AL5gdE6KxpfJGuU37NuydOZd0ZY+I9TnaqqvLD8dXU6Ab7zbazJiSUO8XU1PGcyaneK58QUpGgSrQKdRdzspYpY3f3K4Svk2A3VgbzdWr43AME5w8F0boyXMWP1h+3pg7cywdrfcpjCd/D77SbDCueXBhcird4H1Vl2ZJdOpNmBxPnjFh9qk79kXIC7OMnBPe5CoeQHvQtwksrGnq/8vM1EcNy48vDckzqVkFszaBqptrRwyBaHjI9T94Q4Nv+FBwnL9vYD1kOWmqCu3yIPORwl+nnrRc5q/percrHxRaUp3DQxtt0gRx8Osx2fUqSjabcs1MGvSJUAHYV+E+rjlAP7js5NOpN4NeKAUGWvH75+iPfT11pbHxhbH8QHlgvUco6EV02Xd5/v2G5AZYQtkCd5Y9wVQU27a3S/KN1e4ZqOfGbjDrlOuQyhXr8MDSz4acH0ACFfnCdBI36FhfQApDrHl4MhgNe5/DdbqSub3thW4jwx1WM3Qy59t9koKtyoye86KJihoSuEXL0gphQnSLI2ZzbEoZAoX3dToclibDsjDOp3+N9kVPtA6HRht0bZ/lRKRo9L4N7eMUq/lfkmo6qb5l1mn2zJgbpsAWi8yX1X1b1CxlkHUxlduTcOIZ5ysMYrhze0b+aZJ2i1k9quvfyG5XrByYw7pE1kEER6wj1deCBCRwMhgFatfZuY2XISFATFdrolu5Hd9p0uvpI6FyJSczYS4T83oFAXYYZxnVPjBfNhH/nRcIoW/djGfvv0ACwsc2ZZGc7o947x/p5abvbS5jBvLdJs+sWK1iP7Tt2j4+enZFV2FvLchO27b9Dz4r54Q=
+sidebar_class_name: "get api-method"
+info_path: site/docspace/api-backend/usage-api/api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get the security settings"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/settings/security"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns the security settings for the modules specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"ids","in":"query","description":"List of module IDs","style":"deepObject","schema":{"type":"array","items":{"type":"string"},"example":["some text"]}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Security settings","content":{"application/json":{"schema":{"type":"object","properties":{"webItemId":{"type":"string","description":"Module ID","nullable":true,"example":"{00000000-0000-0000-0000-000000000000}"},"users":{"type":"array","items":{"type":"object","properties":{"id":{"type":"string","description":"ID","format":"uuid","example":"{00000000-0000-0000-0000-000000000000}"},"displayName":{"type":"string","description":"Display name","nullable":true,"example":"Mike Zanyatski"},"title":{"type":"string","description":"Title","nullable":true,"example":"Manager"},"avatar":{"type":"string","description":"Avatar","nullable":true,"example":"some text"},"avatarOriginal":{"type":"string","description":"Original size avatar","nullable":true,"example":"some text"},"avatarMax":{"type":"string","description":"Maximum size avatar","nullable":true,"example":"some text"},"avatarMedium":{"type":"string","description":"Medium size avatar","nullable":true,"example":"some text"},"avatarSmall":{"type":"string","description":"Small avatar","nullable":true,"example":"url to small avatar"},"profileUrl":{"type":"string","description":"Profile URL","nullable":true,"example":"some text"},"hasAvatar":{"type":"boolean","description":"Specifies if the user has an avatar or not","example":true},"isAnonim":{"type":"boolean","description":"Specifies if the user is an anonim or not","example":true}},"additionalProperties":false,"title":"ASC.Web.Api.Models.EmployeeDto"},"description":"List of users with the access to the module","nullable":true},"groups":{"type":"array","items":{"type":"object","properties":{"id":{"type":"string","description":"ID","format":"uuid","example":"{00000000-0000-0000-0000-000000000000}"},"name":{"type":"string","description":"Name","nullable":true,"example":"Group Name"},"manager":{"type":"string","description":"Manager","nullable":true,"example":"Jake.Zazhitski"}},"additionalProperties":false,"title":"ASC.Web.Api.Models.GroupSummaryDto"},"description":"List of groups with the access to the module","nullable":true},"enabled":{"type":"boolean","description":"Specifies if the security settings are enabled or not","example":true},"isSubItem":{"type":"boolean","description":"Specifies if this module is a subitem or not","example":false}},"additionalProperties":false,"title":"ASC.Web.Api.ApiModel.ResponseDto.SecurityDto"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

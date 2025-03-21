@@ -1,0 +1,71 @@
+---
+id: create-a-notification-address
+title: "Create a notification address"
+description: "Creates an address for the tenant notifications with the parameters specified in the request."
+sidebar_label: "Create a notification address"
+hide_title: true
+hide_table_of_contents: true
+api: eJy1VVGP2zYM/isGn7VLltvD5re0d8CKAduhuT4dggNjM7FaW1Ilumlm+L8PlOTEaa9dH7Y8JIrIjxLJj58GYDwEKJ+gQ90G8p/IL/60rPe6QtbWBNgqCFT1XvMJyqcB1j031uu/o/l3wpq84D1hDQqOXjPBdtwqqClUXjtxgxJee0KmUKApsK49hVDsrS+4oYLJoOHCzI8tjpqbaHXosSMmH4rgqNJ7TXWhTbR5+thT4BtQkJevbH2CcoDKGibDskTn2hx28T7IZQYIVUMdyopPjqAEu3tPFYMC560jz5qCWA12JL/XuaxzAtGqphCBvTYHGBU4DOFoff1t5NnjBXRtO9TmWb8Av4um4s3dBacN04E8jPEjdQjOmpCuv1ouvw4yb++5FzUyFhiCrTQy1Zfyp+aA+q8qei9Em7nlvBXQZ+xcK1vJZVSw6dhtIie/Dwgdu+dE3gn2YD3PQFOVFOyt75DT1u3qKszt7YReV5XtDf/AqZg9J2DPzQy1s7YlNFcw9j0ld8f3pvKn2JfHCPjX4+gMeI6es2PJcO7JD8bCnpscZVTAmqMp1XvOkczZO2SExLFflj9/Tat3BrMyUB0jdsSNraEEZ0PkAUptYIFOL1Y3y8VMceajv8iUlF8Q7RGPEKWn9y2U0DC7UC4WQ2MDj+XgrOcRFHxCr3HXJpqJLd1xj30r/W5thW3clgnN9LiYf13+tpL0ZnK3EUqncC+K3rnC6PQfdAIFWgrRJLPK4nGNjZWRmXl70av7qS+T3lxadlGSy95MH5ajnLm38S65ga9t1/VG86lIrSze3m8ei/XDGykR+ZC61YoY51IE7tDMTk9SXeCVIk9KAV8I+0xq/3eNz+Vm+swL16I2cv9IiiGz60l6AQpWN0tQszdNujE7GhRc0hGebVVmzBMMww4DvfPtOMr2x568PHzbC8Hk36imPgsxP9ApVj4W4qc4f+Le9okdX6jlqCbEuqrI8Xd9t7NBevhr8wgKdvmN62wtGI9Hef/wCCWAAuvSu10OaW+AFs2hx4P4ppjCQbxWKnT6Q6RwXkhWk8mcZje8ZrPKici3pPUiZBjSgIzj2T+Zvok4j1DylkZvx3H8B3elBdI=
+sidebar_class_name: "post api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Create a notification address"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/api/2.0/mailserver/notification/address/add"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Creates an address for the tenant notifications with the parameters specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"name":{"description":"Address name","type":"string"},"password":{"description":"Address password","type":"string"},"domain_id":{"description":"Domain ID","type":"integer"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Notification address data associated with the tenant","content":{"application/json":{"schema":{"type":"object","properties":{"Email":{"type":"string","example":"Email"},"SmtpServer":{"type":"string","example":"smtp_server"},"SmtpPort":{"type":"integer","format":"int32","example":"33"},"SmtpAccount":{"type":"string","example":"smtp_account"},"SmtpAuth":{"type":"boolean","example":"true"},"SmptEncryptionType":{"type":"string","example":"smtp_encryption_type"},"SmtpAuthenticationType":{"type":"string","example":"smtp_auth_type"}},"title":"ServerNotificationAddressData"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

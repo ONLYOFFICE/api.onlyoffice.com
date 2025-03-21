@@ -1,0 +1,71 @@
+---
+id: update-login-settings
+title: "Update login settings"
+description: "Updates the login settings with the parameters specified in the request."
+sidebar_label: "Update login settings"
+hide_title: true
+hide_table_of_contents: true
+api: eJzFlt9v2zYQx/8V4p4523H7sOitS/owrAWC/MAeAqOgqZPFRiJZ8hgnM/S/D0dKsZ10S4B22INlibw7fnn3OUo7ILWJUN3CFRIZu4liLj65jbEijgOwkuA8BkXG2d9rqCD5WhFmq8kLJAT8ljDSb65+hGoH2llCS3yrvO+Mzv7zr9FZHou6xV7xHT16hArc+itqAgk+8GpkMGZfIuw9nblUYvXqwfSph+r09PRUQm9seTyRUyBjCTcYQEKNUQfjeV2o4HPxFDb1awzCNYJaFCliEOMiUZATndsIY0FC40KvqAR8twQJ+KB63yFUJ8t37wcJ687pu2vT44/pum5R1Kmkd1KltOYNi5iiRxt5pnFBJBuT1hhjkzoWauyT9LcI1i3quwsMxtU/Jvnjg0dNWIuI4R6DCBi9sxEFcTZeVTJIUHVtOJjqLg7K3agu4vPFjmkUI2bCq6B6JAy8dTLE0eHD1dnsT1zPPnjDv8+uxi7OLotLPCc3O6J2nDgnB8PAsqaNZPSWiwX/Hau5yezXY/bjHv//iPf/Feo3kMsVz2xuW6Pb/epb03VijSLHw1qohvBnA/xWeeTEVhnKMtUe1ia4PgsuFL9FgInn2KjUHZZm7VyHyh5aU0j4KuWvMVtUvmB2D+v7xcl3+LQqUeuC+QtrYKuIOgVDj1Dd7kBF/YXnv9whD0BAVYOEbTCEsBpWz1NYaI85S8fEi62hUu59I4roUZvGYC2MzXNjs85AQo/UctnAp0y9ohYqmCtv5svZYj7FnU9653m9gwYrVYp5Hyl0UMFurSLehG54Ufqrci5pZxuzGc9WkHCvglHrrnTa6FxSOBYVWiJfzeed06prXaTq18WL4CMC4ubyE1ditc/xFTf52MdHmX6CRXnzBz6CBKv6/HxoJsFwfO3cncFcPD49Lvfv1Y8TYM/PCcbzqHfLwFG/TAjbxmVBE37ecGYwxLK7+yUMEryL1Kt8co1KCwovz72j3By89n8mO2PyCB9o7jtlLEtMpXYFpFvOLEhYzhYZlQNqRvwlHAO1ksAFZtfdE0gDD39LGLg7Vntg+GmQ0KKqMWQCc1nhrOz2l2sWyOZdKlV+9gIY5OTxQWv09K+2q4Nmubi5Bgnr8ZuqdzW7BLXl7y21hQqAP87YOVOXx3bQKbtJasO2JWQ+jBIn6pDEwtx4w5uapuzjocBjRMs2+Mqb+q7HblcwH4Yn+zL1jx5jYidrLvBqGIa/AUmgrO4=
+sidebar_class_name: "put api-method"
+info_path: site/docspace/api-backend/usage-api/api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Update login settings"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"put"}
+  path={"/api/2.0/settings/security/loginsettings"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Updates the login settings with the parameters specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"attemptCount":{"maximum":9999,"minimum":1,"type":"integer","description":"Maximum number of the user attempts to log in","format":"int32","example":1234},"blockTime":{"maximum":9999,"minimum":1,"type":"integer","description":"The duration of the account suspension for unsuccessful login attempts","format":"int32","example":1234},"checkPeriod":{"maximum":9999,"minimum":1,"type":"integer","description":"Expected server response time","format":"int32","example":1234}},"additionalProperties":false,"description":"Login settings request parameters","title":"ASC.Web.Api.ApiModels.RequestsDto.LoginSettingsRequestDto"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Updated login settings","content":{"application/json":{"schema":{"type":"object","properties":{"attemptCount":{"type":"integer","description":"Maximum number of the user attempts to log in","format":"int32","example":1234},"blockTime":{"type":"integer","description":"The time for which the user will be blocked after unsuccessful login attempts","format":"int32","example":1234},"checkPeriod":{"type":"integer","description":"The time to wait for a response from the server","format":"int32","example":1234},"isDefault":{"type":"boolean","example":true}},"additionalProperties":false,"title":"ASC.Web.Api.ApiModels.ResponseDto.LoginSettingsDto"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

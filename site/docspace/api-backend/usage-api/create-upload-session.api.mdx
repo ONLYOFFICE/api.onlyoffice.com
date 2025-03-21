@@ -1,0 +1,77 @@
+---
+id: create-upload-session
+title: "Chunked upload"
+description: "Creates a session to upload large files in multiple chunks to the folder with the ID specified in the request."
+sidebar_label: "Chunked upload"
+hide_title: true
+hide_table_of_contents: true
+api: eJztWG1v2zYQ/isHftmWKbbiZEUnBAGypAWCdU2RFwxbYxSUeLLYUqRKUklcQ/99OFK2ZTtrui/71HwILPp4L8/dPXfygnk+cyx7z15LhQ7GcNmg5V4a7dg0YQJdYWVDzyxjZxa5RwccHDonjQZvoG2U4QIUtzOEMmiRGupWedkohKJq9SdHgr5CKI0SaOFB+io8X5yDa7CQpURB1+jM4ucWnR/d6TsNe3tvjce9vQxe8aKK2qDgGip+jyBkWaJF7UGhnvkK8tYHHf2jq0yrBOS49seUcJyf/HIwOR7nJ8C1gFmIyoKxgJ9brsjX4/zkIIU6J6ERvOHOb5vmeg5OfsHRnb3TpyUpIMNSSy+5AouuMdrhMvA+qHXkx/nJJE3h8vfgh/Pcty6BuWmhbp2HGcZAjrE+UaYIGTkeY30CpUQl4J6rFqG0pu7VR3MjuEYtgCtFquwG+tLBUlNwegBoMJkjOIKyTwM+8sKDsaKPrFfFmwa5XQpRvgcIWCxQ3ks9A1wpT4KgQ3sfEq+W2Ig1FkVrbbRcGlsHD4Hnps9lX2DLkpMlaANorbEOTBHuiuDDnxVGr3Rb55TQEvI51WvUQBXm1il+SpDgH2KwzmbI3kYofRRuK6UHELtEDPIayswhCZOFr4WJImLKEmaWnXghWMaKoPU2CF1HKFjCGm55jR4t9fCCaV4jy1jssgvBEiapbxvuK7bdzK9jK16cs4RRfNKiYJm3LSbMFRXWnGUL5ucNaZTa4wwtS1h0PR4dTljC8JHXjUKW/fry6EXXTaM2dP43I+akYtPs2vfCaI/akwhvGiVjaY4/OpJb7Ppg8o9YeAraEjReoqNvCa63Ie6VpPNW6tluxFIhBIgSpluleE5ux4hXUTBnagSPj551SVB+Lb/gk1A8ob3nHaljQW3h9eJoiNfB5PCoI7QU9/Ie31GSno3hqpcGyukmq357VLGWLvXz4La+uJHfgu1tLzgIWHCP+z4eWuTiUqv5rmOTNH25nx7tH6Q36YvsMM3SdJTGv5/ToyxNyWHS8rfReFmWDv3z3txsym875Rquv+pUSm4E213CuBCS9HL1boBNyZVD8syHG6fXZ6PTRo7OjEX6cM49BkC6hKEu7Lzx1F4rx3NjFAYvttqjn4YOHir0FXGvgV4B8MANNKi08cNSIv9XeX2LDxflq0fp/DfYi2QFGh+IWJFuuR3Nz4HwZIfDgJs2cQqrxgqpP4xA5UZXkTTOvRn1CvoT1nVdaJM44UJZTtJ0l1kudmg14rEaHf+Bc6LNo/Rg18yt5q2vjJVfULAgdLgr9JdpQRj9g4/LAmrTzipo0NZytThF70KJOSxaK/08kDh3xQcy8eET0kEoU5awBys9sikRbI2+MjQUGuNCzwbqYGPeyPFklI7DFjZeLMdAN46zZRwtfljDEUdZnB2tVSxji5w7vLWq263MOPYKo0s5a+NkYgm751YS5YS89JcjHiVvFbVc5X2Tjce0e6jKOJ+9THeUn0dpuL16Q/meriG5ppRE7ZvArEqbN/J3nBP7xem3IdZPwMKYTzJiTbm+Wk+oV8tKH06SAV0OZwAx9jZhb4gOiHWz7yPB7PZn37i0EYSIll3SSIIWrYvw3E+o0ijbNQ+F2od6RgsWin532EZ1sS7376v799X9++r+v63uPTMRK4wbxaWm9m0jMUayfk+0xRI2GaU9xdCUzAab+6qnt1h7mjBiUVKxWLF1R8efW7Q0MaZrVg7MLqSjz+LpeT1kiR+v+heBn2D4evBkOEv21fMwBVRLTyxhgZzXryDdtEtYhZwWVHImfn0WTe7fkJL19Z2Z3CXLG6dFgY3/quxwMr67vL5hCcv7d5DaCLpj+QPtffwhumqa+ENHtohnC6a4nrV8RrJRZ9h92o3NnDcyTpb+A0X1JBhbgyjGQf8pqidvLBZxmHXdSj5+9a83emSX0pSaadd1/wAwGzT9
+sidebar_class_name: "post api-method"
+info_path: site/docspace/api-backend/usage-api/api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Chunked upload"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/api/2.0/files/{folderId}/upload/create_session"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Creates a session to upload large files in multiple chunks to the folder with the ID specified in the request.
+
+ **Note**: Each chunk can have different length but the length should be multiple of <b>512</b> and greater or equal to <b>10 mb</b>. Last chunk can have any size.
+After the initial response to the request with the <b>200 OK</b> status, you must get the <em>location</em> field value from the response. Send all your chunks to this location.
+Each chunk must be sent in the exact order the chunks appear in the file.
+After receiving each chunk, the server will respond with the current information about the upload session if no errors occurred.
+When the number of bytes uploaded is equal to the number of bytes you sent in the initial request, the server responds with the <b>201 Created</b> status and sends you information about the uploaded file.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"folderId","in":"path","description":"Folder ID","required":true,"schema":{"type":"integer","format":"int32","example":9846}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"description":"Session","content":{"application/json":{"schema":{"type":"object","properties":{"fileName":{"type":"string","description":"File name","nullable":true,"example":"some text"},"fileSize":{"type":"integer","description":"File length in bytes","format":"int64","example":1234},"relativePath":{"type":"string","description":"Relative path to the folder","nullable":true,"example":"some text"},"createOn":{"type":"object","properties":{"utcTime":{"type":"string","description":"UtcTime","format":"date-time","readOnly":true,"example":"2008-04-10T06:30:00.0000000+04:00"},"timeZoneOffset":{"type":"string","description":"TimeZoneOffset","format":"date-span","readOnly":true,"example":"00:00:00"}},"additionalProperties":false,"title":"ASC.Api.Core.ApiDateTime"},"encrypted":{"type":"boolean","description":"Specifies whether to encrypt a file or not","example":true},"createNewIfExist":{"type":"boolean","description":"Create new if exists","example":true}},"additionalProperties":false,"description":"Session parameters","title":"ASC.Files.Core.ApiModels.RequestDto.SessionRequest"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Information about created session","content":{"application/json":{"schema":{}}}},"401":{"description":"Unauthorized"},"403":{"description":"You don't have enough permission to create"}}}
+>
+  
+</StatusCodes>
+
+
+      

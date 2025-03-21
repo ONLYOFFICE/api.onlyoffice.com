@@ -1,0 +1,71 @@
+---
+id: update-a-tag
+title: "Update a tag"
+description: "Updates a tag with the ID specified in the request."
+sidebar_label: "Update a tag"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVUuP2zYQ/ivEnFqAXTtODq1um90AXbQNgth7MnyYFccWE0lUyFF2XYH/vRhS8iPrDdKiOgjSPDgz3zczHIBxF6BYQ4O2nq3kZ6MhUNl7y3so1gNc91w5b/9Gtq79ndCQFwdPaEDDo7dMsIkbDYZC6W0nZlDAfWeQKShUjDv1aLlSXJG6u1Who9JuLRll2yTz9KWnwFegoUOPDTH5kGK32BAUYCWSlVM75Aq+DbXCnbq7BQ2hrKhBKAbgfZccW6YdedCwdb5BzqLXC4iS8Bj3rTN78Sldy9SyfGLX1bZMFc8+BQkyPD/cPXyikiVp7zrybCmINuc8fJPje3pMQCStno4I7G27g6gh8L5+wS2plDXUssDmC4Wqc4G39kk9VraslKfOU6CWQ8LzZrkcnX6SkKWrnf/5UlA0xlMIOe/ngWsbWLmtOpgpDMGVFplMZjSRezwZvce9UMXUhBOkpoj5EeBD59ox7mI+fx4+d49R0pZjjP+JnjvzI/2hgZ6w6YQSeLV4/UbQej8Se17UqWUiN2pYTmS+bJr5jhquTzn4MRxPzzlSKMD+SSyzc+P6DNS/LzNqYMtJ8BfaeoW7W2SEzNub+asLVLU4bggyyb8hrpyRYe0T/DKyBcyws7PF1XyWNo2sndlgTZSpJf91Gvje11BAxdyFYjYbKhc4FkPnPIvlV/QWH+qMlehyNlvsa6mpdiXWSRw1iM+5+tf5bzL48WTBLaVp8nEX19yRkc7+QftpC1VZraf9dOabMJCu/HhcL+8mlA8r7UDlOPhHwclQrifpJkrkrUsZjfTcuKbpW8t7tUwAqo/vlit1/eFOgCIfMju1LOERkMANtic55CE7DPEZrSfr8D+u8hE5pieedTXaVpJI/A5jT6wFVtCwuJqDTjeQuMkdpKGwRm6iTPIahuEBA937OkYRf+nJy+20OfZEah9jg3wbKLZYB/pOTYc742KaE+vtPnVd3csfaPhM+3wdRWGkmi7DYVTc5ON/WYn70fHZuop68rguS+r4u7abk4n6cL8CDQ/jhdU4Iy4eH0Gnd8rRpWpTTyfZADW2ux53YpuPlA6VoT1v8M+pwccPKeoiCue9PkEib6nqossw5PGJ8WCfVS96HAZsBFxgiDH+AzV38II=
+sidebar_class_name: "put api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Update a tag"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"put"}
+  path={"/api/2.0/mail/tags/{id}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Updates a tag with the ID specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"id","in":"path","description":"Tag ID","schema":{"type":"integer","format":"int32"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"name":{"description":"New tag name","type":"string"},"style":{"description":"New style identifier: a postfix which represents the CSS style (tag color)","type":"string"},"addresses":{"description":"New list of addresses associated with a tag","type":"array","items":{"type":"string"}}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Updated mail tag","content":{"application/json":{"schema":{"type":"object","properties":{"Id":{"type":"integer","format":"int32","example":"1234"},"Name":{"type":"string","example":"name"},"Style":{"type":"string","example":"style"},"Addresses":{"type":"array","items":{"type":"string","example":"addresses"}},"LettersCount":{"type":"integer","format":"int32","example":"1234"}},"title":"MailTagData"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

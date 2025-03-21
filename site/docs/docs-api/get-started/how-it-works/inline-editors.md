@@ -33,7 +33,7 @@ The steps below explain the process of connecting several editors to the same ht
    Each editor has its own initialization script:
 
    ``` ts
-   const documentEditor = new DocsAPI.DocEditor("placeholder1", {
+   const config = {
      document: {
        fileType: "docx",
        key: "Khirz6zTPdfd7",
@@ -42,8 +42,10 @@ The steps below explain the process of connecting several editors to the same ht
      },
      documentType: "word",
      token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkb2N1bWVudCI6eyJmaWxlVHlwZSI6ImRvY3giLCJrZXkiOiJLaGlyejZ6VFBkZmQ3IiwidGl0bGUiOiJFeGFtcGxlIERvY3VtZW50IFRpdGxlLmRvY3giLCJ1cmwiOiJodHRwczovL2V4YW1wbGUuY29tL3VybC10by1leGFtcGxlLWRvY3VtZW50LmRvY3gifSwiZG9jdW1lbnRUeXBlIjoid29yZCJ9.7IpEJxdOvBQ0kJ8l6ZegIV4tX5vsPbZZCDDVmcFROXc",
-   })
-   const spreadsheetEditor = new DocsAPI.DocEditor("placeholder2", {
+   };
+   const documentEditor docEditor = new DocsAPI.DocEditor("placeholder1", config);
+
+   const config = {
      document: {
        fileType: "xlsx",
        key: "af86C7e71Ca8",
@@ -52,8 +54,10 @@ The steps below explain the process of connecting several editors to the same ht
      },
      documentType: "cell",
      token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkb2N1bWVudCI6eyJmaWxlVHlwZSI6Inhsc3giLCJrZXkiOiJhZjg2QzdlNzFDYTgiLCJ0aXRsZSI6IkV4YW1wbGUgU3ByZWFkc2hlZXQgVGl0bGUueGxzeCIsInVybCI6Imh0dHBzOi8vZXhhbXBsZS5jb20vdXJsLXRvLWV4YW1wbGUtc3ByZWFkc2hlZXQueGxzeCJ9LCJkb2N1bWVudFR5cGUiOiJjZWxsIn0.8CklPIjYSEkgM7swGAC7-85ICcq_42be3WTWNOuvhlg",
-   })
-   const presentationEditor = new DocsAPI.DocEditor("placeholder3", {
+   };
+   const spreadsheetEditor docEditor = new DocsAPI.DocEditor("placeholder2", config);
+
+   const config = {
      document: {
        fileType: "pptx",
        key: "bv48M5r64Sf9",
@@ -62,7 +66,8 @@ The steps below explain the process of connecting several editors to the same ht
      },
      documentType: "slide",
      token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkb2N1bWVudCI6eyJmaWxlVHlwZSI6InBwdHgiLCJrZXkiOiJidjQ4TTVyNjRTZjkiLCJ0aXRsZSI6IkV4YW1wbGUgUHJlc2VudGF0aW9uIFRpdGxlLnBwdHgiLCJ1cmwiOiJodHRwczovL2V4YW1wbGUuY29tL3VybC10by1leGFtcGxlLXByZXNlbnRhdGlvbi5wcHR4In0sImRvY3VtZW50VHlwZSI6InNsaWRlIn0.FKaDWfJE-OuODhtpq-8Qv6BdDy_evgdpaBw616T7zOs",
-   })
+   };
+   const presentationEditor docEditor = new DocsAPI.DocEditor("placeholder3", config);
    ```
 
    Where the **example.com** is the name of the server where **document manager** and **document storage service** are installed.

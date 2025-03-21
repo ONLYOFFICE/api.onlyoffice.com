@@ -1,0 +1,63 @@
+---
+id: get-generated-reports
+title: "Get generated reports"
+description: "Returns the generated report files."
+sidebar_label: "Get generated reports"
+hide_title: true
+hide_table_of_contents: true
+api: eJyNVG1v4zYM/isGP6uxm2brnYHD0G1dd9gLir7ggGvygbXZRFfZ0iS6q2f4vw+UnDbZ9dr5g6JIfKiHfEgOwLgOUN6A8/YLVZxfkLOeA6wUBKo6r7mH8maAk4431ut/kLVtfyWsyQvME9ag4G+vmWA1rhTUFCqvnZhBCRfEnW9DxhvK1tSSR6Y68/GR7E4bCjNQ4Ck42wYKUA4wLwr52fdz9iIWFFS2ZWpZEOic0VUkmH8JAhsgVBtqUHbcO4IS0HvsQYFmasLOub2V8EFJIhx51onMn9jQjlVgr9s1KKBHbJyRo1+0oawVs1HBtauF5I/9254/1i/5vbO+QYYSuk7Xe+8U03fwwrL9hMLPOjiD/dvE/9D3lH3GtkcO91qgV5rNWyBscU1erE8ekNFfNmjM65jOm4xtFsQyw4gS/Lm3IuK1fwO+XObn3tZdxUG2ZJ2hdCbwGQb3+EMXyH/AutGtDuyRrYdxVMApIDhtnLE90SePLpGfhHr95XkxLw4O5wfFu6vD4/LouCyOZkeL+eL9d8efxcnvNlXb614Wy+Vyufhe1p1a2WEnp8IsUpNPwaI4/LoHrlucmpDq6KAh3tgaSlhTrC/kDZSQo9P5fFbk25ZOHZNvOyaQfyAfYld3knzYMLtQ5vmwsYHHchDzERQ8oNd4a1K9yl3idIedkRI1tkITj0cFgtm/fle8n0s8O5PkUroxuXtxnjx3qdO/UWxTCXyTrhXE1JX72JgJ3d7ZCJ9S+pNtmq7V3GeXMdrs4vTyKjs5/yhRkQ8poQaZtuwDNxiFnN44I/5qYEn29iQZnsfP/5x0U3xMj5w7g7qV17vUAkm/GwkeFMxnRZoZ0/RInmRERB1XalLkBobhFoP00TjK8V8deZnZq2cB5d+otnkU4e+pl0RWFTmOSpsu5f0/I1TUeyqzs9MrUCBFuC/VfZRq2oj37VXb7/jeV01NFGQd1Tcgw5AKYRyf7NPVNxFPpZKsJb+rcRz/BeNhU40=
+sidebar_class_name: "get api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get generated reports"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/project/report/files"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns the generated report files.
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Generated report files","content":{"application/json":{"schema":{"type":"array","items":{"type":"object","properties":{"Name":{"type":"string","example":"File name"},"UpdatedBy":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"},"Updated":{"type":"string","example":"2020-12-08T17:37:03.3424957Z"},"Location":{"type":"string","example":"4\\\\46\\\\File name"}},"title":"FileWrapper"}}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

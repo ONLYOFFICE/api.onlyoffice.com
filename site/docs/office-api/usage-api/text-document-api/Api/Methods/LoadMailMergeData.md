@@ -14,7 +14,7 @@ expression.LoadMailMergeData(data);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| data | Required | String[][] |  | Mail merge data. The first element of the array is the array with names of the merge fields. The rest of the array elements are arrays with values for the merge fields. |
+| data | Required | String[][] |  | Mail merge data. The first element of the array is the array with names of the merge fields.\ The rest of the array elements are arrays with values for the merge fields. |
 
 ## Returns
 
@@ -24,7 +24,7 @@ boolean
 
 This example shows how to load data for the mail merge.
 
-```javascript
+```javascript editor-docx
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 let fields = ["Greeting line", "First name", "Last name"];

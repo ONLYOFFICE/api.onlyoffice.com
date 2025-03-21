@@ -1,0 +1,71 @@
+---
+id: check-the-product-administrator
+title: "Check the product administrator"
+description: "Checks if the selected user is an administrator of a product with the ID specified in the request."
+sidebar_label: "Check the product administrator"
+hide_title: true
+hide_table_of_contents: true
+api: eJy9VLFu2zAQ/RXiZjZyjQ6ttjQJ2qBDgzidDA+0dLaYSCRDnuK4Av+9OEqyrdTt0KEaBIp3R7177x07ILUNkC8hIJE225AtsGi9pj2sJIRxnS87uGypsl7/VKSt+YqqRM+FHlUJEnZeE8IqriSUGAqvHadBDlcVFk9B6I2gCkXAGgvCUrQBvdBBKCNU2WijA3lF1gu7EUo4b8u2ILHTVKW622sRHBZ6o7EU2qQ9j88tBroACcPysy33kHdQWENoiJfKuVoXCXP2GBhRB6GosFG8or1DyMGuH7EgkOC8dehJY+DogEKX/DHt6m4AeHsNcjwlkNdmC1ECN3eu6gc3fa4kPdxGcNaE/u/z2ez3E74npEdeEo2jTEKbjfVNahbkv7LQQ/kwe38Gv1GDCbAEzmqQKltCDltM9CmqIIdMOZ3NL2bZwVQjwmyiNbDD/Av6kAzW+hpyqIhcyLOsq2ygmHfOeoog4UV5rdZ1zw3Hengb1dYEOdS2UHXajhK4Zhr+OPs0585OTL3g/vvjzlr7wIty+hvuQYJmDqo+LMGohqOT2kQKE3x/NOTNq2pcjW8MNUp/NMuJf1jHBEATF8KVbZrWsMKLxJe4v1k8iMu7W+YFfejVqRXh2H+gRiWVB5RpCpNjxtF6q8RE6ZMR+j8DPFBN+EqZq5U2aYzYEN3gqiXrABLmF7Pkm95ZcHJJSZj2tJKDT5bQdWsV8IevY+Tt5xY9X2qro634K8pRXbbjE+4T9YmHdw8MkNPrtvfEm4GKcqy4LAp09Nfc1cnkfLl5AAnr4eZqbMklXu34VlM7yAEk2CRLsmra66BWZtuqLef2R7LxeDinvn1Kvh0W3NQYMvsTgFMLy6EPfnNXZ0u6rp+KGA/5feiPFYe56bNZ4VWM8RcgEEF2
+sidebar_class_name: "get api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Check the product administrator"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/settings/security/administrator"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Checks if the selected user is an administrator of a product with the ID specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"productid":{"description":"Product ID","type":"string"},"userid":{"description":"User ID","type":"string"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Object with the user security information","content":{"application/json":{"schema":{"type":"object"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

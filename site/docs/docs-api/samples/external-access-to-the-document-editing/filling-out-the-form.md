@@ -108,6 +108,6 @@ function onChangeContentControl(e) {
 }
 ```
 
-> Please note that the connector is available only for **ONLYOFFICE Developer Edition**.
+> Please note that the connector is available only for **ONLYOFFICE Docs Developer**.
 >
-> The connector is an additional feature not included by default in the ONLYOFFICE Developer Edition and is available at an extra cost. Please contact our sales team at [sales@onlyoffice.com](mailto:sales@onlyoffice.com) to request a quote.
+> The connector is an additional feature not included by default in the ONLYOFFICE Docs Developer and is available at an extra cost. Please contact our sales team at [sales@onlyoffice.com](mailto:sales@onlyoffice.com) to request a quote.

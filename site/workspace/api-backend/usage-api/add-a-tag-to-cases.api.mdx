@@ -1,0 +1,71 @@
+---
+id: add-a-tag-to-cases
+title: "Add a tag to cases"
+description: "Adds the selected tag to the group of cases with the parameters specified in the request."
+sidebar_label: "Add a tag to cases"
+hide_title: true
+hide_table_of_contents: true
+api: eJy1VMGO1DAM/ZXI57AdVhygt2VBAiHBih1Oox48racNpE02cVmGqv+OnLazM7sDiAM9VGlsv9p+zx6AsY6Qb6AMbbaWc6EhUtkHw3vINwNc9dy4YH4iG9e9I6woiH8grEDDfTBMUIyFhopiGYwXN8jhqqqi4oZUJEslU6UYa8Uu3dXB9V65nSoxUlT3hpt07zFgS0whquipNDtDlTJdsgW66ynyBWiYj69dtYd8gNJ1TB3LEb23pkypZl+jJDJALBtqUU689wQ5uO1XKhk0+OA8BTYUFxgs2VTycVrM9WRS79+AXlBMx1RTgFGDidfWRToXiJFUZOQ+5qpMTsoF1Tl+AMIQcA8aDFMbj9LcOmcJOxhHPbN0Fj2Z/goWOZiuXrA+YktP4dZYq04s+kmUPNL36F0Xp3ZdrlZnIUD/MyFHv9HwYvX8Ke6XDmcZUpWKaIkbV0EO3sVEJXIDOWToTXZ5scpEziKubGcsU8gYa2uSZ6TwnUJM2u6DhRwaZh/zLBsaF3nMB+8Cj6DhOwaDWzuVK7Yprx32liEH60q06XrUIDGn5perV5dS0tE83UrhE9zZqTo0BL35QIlGKb6ZzBoSOflpbOqGdPbzw1C8/YGtt/RI1KtjoW449FTow/jPFBRH8jjQImnsXErPsMDCtWvbvjO8V7epm+rz29u1urp5L12jECfSLDIt3YncYiJ/qaGqFC4rIW0BeLRBjub6vy6TueVMPzjzFk0nCSdhDLOqNsIHaLi8WIm4QytvjDInk7ogdS3pq9CzUjYwDFuM9CXYcZTru56CbNTiQVjyNeqFXxHkN9rP64Y6fraW1MTd9pMqHs3SqJeIq7Ikz3/0LY6G5ubT7Ro0bOcF2rpKYgLey3LFe8gBNLhERFJruhvAYlf3WIvvhCnak8E8le63JN35IFUtpm5/lOGpivVciLylrLMhwzANxjge/CfTbyMOozN5C7nFOI6/ANY8YqI=
+sidebar_class_name: "post api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Add a tag to cases"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/api/2.0/crm/case/filter/taglist"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Adds the selected tag to the group of cases with the parameters specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"contactid":{"description":"Contact ID","type":"integer"},"isClosed":{"description":"Case status: closed or not","type":"array","items":{"type":"boolean"}},"tags":{"description":"Case tags","type":"array","items":{"type":"string"}},"tagName":{"description":"Tag name","type":"string"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Tag","content":{"application/json":{"schema":{"type":"string"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

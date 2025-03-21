@@ -1,0 +1,71 @@
+---
+id: remove-messages
+title: "Remove messages"
+description: "Removes messages with the IDs specified in the request."
+sidebar_label: "Remove messages"
+hide_title: true
+hide_table_of_contents: true
+api: eJylVE1v1DAQ/SvRnE0TFg6QW4FKVIBU9eO0ysGbzG7cJrFrT7oNkf87GjvZL1okYA8bxzNjv/fmTUYguXGQL6GVqkl/oHNygw4KAQ7L3ioaIF+OcN5Tra36KUnp7ivKCi0XWZQVCNhaRQiFLwRU6EqrDKdBDtfY6id0STudm2wV1QnVmFx+cYkzWKq1wipRXdi0+NijozMQMC0/6WqAfIRSd4Qd8VIa06gyAEnvHV8zgitrbCWvaDAIOejVPZYEAozVBi0pdBxVVXgcg/yuHCV6PYNkaCDmg6S1cgABirB1BxeojnCDFgSstW0lxa13C/Dxxwyc0Z2LFy+y7PWLbVCpOgHwt5T/DamA99nb36HddXLqOFbAWS1SrSvIwfRBVkk15JBKo9LFWZYG98xdTiMhYA/ZJ7QuWKi3DeRQExmXp+lYa0c+H4225EHAk7RKrpqoFsciprXsG0bc6FI2YdsL4Jrj8IfsY+BzYNsb1ice96J597oZ9Q2DcEy8jmEBnWw5elQblOAGXO/defEsW9Pgzl3LrPB81lqHOxRxDD7rtu07RUNyEyRJri9ubpPzq0umjtZF1RtJOFN01MrQ6AlIHKXdJMHJqB2MyH9M3SQJ4TOlppGqYyyhcePU8iXrBQIWZxmI8NHgxx7U1PpCTE1cwjiupMM723jP2489Wv6mFPue85sXs/TslQccgmiB0ZtbRsXpTR8bdjINXswV52WJhv6YWxx4+eruFgSspm9MqysusXLLPOQWcgABOggcfBT2Rmhkt+nlhnPjkewKHpdjUz0EU00LJjWHuuEA4LG/xMSD/5nViyXjGC3r/S4/hl6t2Jk6ZnNbC+/9L4OhDB8=
+sidebar_class_name: "put api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Remove messages"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"put"}
+  path={"/api/2.0/mail/messages/remove"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Removes messages with the IDs specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"ids":{"description":"List of message IDs","type":"array","items":{"type":"integer","format":"int32"}}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"List of removed message IDs","content":{"application/json":{"schema":{"type":"array","items":{"type":"integer","format":"int32"}}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

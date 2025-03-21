@@ -1,0 +1,71 @@
+---
+id: get-edit-diff-url
+title: "Get changes URL"
+description: "Returns a URL to the changes of a file version specified in the request."
+sidebar_label: "Get changes URL"
+hide_title: true
+hide_table_of_contents: true
+api: eJzNVktv00AQ/iurOYG0ikNACHyrmgIVHFAfJ1ShqT2Ot3V2l91xRBT5v6NZO2napKRUPeCDV7Ln/c03sytgnEXIf8An01BUmUonXGlwngKycfa0hBxmxCel4ampqsvQgAaPAefEFER7BRbnBDlUpqHTEjQYCzl45Bo0lBSLYLzYgjw5UqdT0BDoV2sClZBzaElDLGqaI+Qr4KUXa8YyzSiAhsqFOXL/6e0ENNBvnPuGIP/44d37rtObCBYUojgaQvjVUljuj+FO8lmO30zevuu6K0kjemcjRTEwGY/leNydqk1kF5aqREbQUDjLZFmU0PvGFKnm2U0UzdVuaO76hgoWAIIgxKb3W9RoZxQFmzvZyMHY2U72l2ffFDvFNSnBSw2629m2wYAG2zYNXkuyPUCb3CG6OSmm3wydhltaHnb6lZZPt+gDLYxr4+G8X953+6QSJg48r1xS84tk/ZCX1DdJ5InGOw1YlkbUsfm+VagKm0ga2HBSOTo/HiWij45doJEw+0vflpJYp4HdLdnDAV4ksZctbUr68uzbs+u75vU+Ov91DBzg+n+O3BQZp+ygk+dhPGfEbbBRodoi/8B75SqF/SRYz6joqTCVoVIZm0RlVFPkEWiYE9duWAlpD3ANOWToTTYZjTOxE9M7W/XboMuoNJyVpqpk1lJYrJdG6gdYXWOky9B0O1U8T7KqcLYys7bfRqBhgcFIQdMAGJT7oVth2wiANbPPs6xxBTa1i5x/GO8Yn/bSqdW6NMgjFW0wvDyXmdtbx1j8xJbrn/fnDHozzJR+6dwTGzZP4dytoYSssZVL2msQvbTzpk9hMUlDz0WeY+rbwexn4g1IPSPupbC6Wx4vCfCQo/Rl5hs0dou6Pdo/pACgYTKSsibEhxM05Js7gMAuMQvwVxoECNFdbQDv5HO/oaUdShMF1nLT9I9m+4C4eyNOiG1dBxbYtCIFAvW6hf7R76uz4cryWt1dY/Z6XzeKXW67Xkc1lKi76jTUhCWFFEj/86goyPOW2s69QDLY0PDzyQV03R8bWVPv
+sidebar_class_name: "get api-method"
+info_path: site/docspace/api-backend/usage-api/api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get changes URL"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/files/file/{fileId}/edit/diff"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns a URL to the changes of a file version specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"fileId","in":"path","description":"File ID","required":true,"schema":{"type":"integer","format":"int32","example":9846}},{"name":"version","in":"query","description":"File version","schema":{"type":"integer","format":"int32","example":1234}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"File version history data","content":{"application/json":{"schema":{"type":"object","properties":{"changesUrl":{"type":"string","description":"URL to the file changes","format":"uri","nullable":true,"example":"some text"},"key":{"type":"string","description":"Key","nullable":true,"example":"some text"},"previous":{"type":"object","properties":{"key":{"type":"string","description":"Key","nullable":true,"example":"some text"},"url":{"type":"string","description":"Url","format":"uri","nullable":true,"example":"some text"},"fileType":{"type":"string","description":"File type","nullable":true,"example":"some text"}},"additionalProperties":false,"title":"ASC.Files.Core.EditHistoryUrl"},"token":{"type":"string","description":"Token","nullable":true,"example":"some text"},"url":{"type":"string","description":"File URL","format":"uri","nullable":true,"example":"some text"},"version":{"type":"integer","description":"File version","format":"int32","example":1234},"fileType":{"type":"string","description":"File type","nullable":true,"example":"some text"}},"additionalProperties":false,"title":"ASC.Files.Core.EditHistoryDataDto"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

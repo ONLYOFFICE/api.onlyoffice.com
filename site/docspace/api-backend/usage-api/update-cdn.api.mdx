@@ -1,0 +1,71 @@
+---
+id: update-cdn
+title: "Update the CDN storage"
+description: "Updates the CDN storage with the parameters specified in the request."
+sidebar_label: "Update the CDN storage"
+hide_title: true
+hide_table_of_contents: true
+api: eJy1VsFy2zYQ/RXMnlFScXvo8ObKPWTSZDxW3B48mgxErkQkIIAASzuqhv/eWYC0KFuN3U57kUhgd/H27dslDkBqF6G6gxUSabuLohQrckHtENYSnMegSDv7toEKet8owmVjQULArz1G+sU1e6gOUDtLaIkflfdG18mr/Byd5bVYt9gpfqK9R6jAbT5jTSDBBz6DNEbe7VzTG5zZRQra7kBCg7EO2nNUqGCEKKzqECTY3hi1YUcKPUrAb6rzJvm7DgXhN4IhnxVnwVUIag8SNGEXXwb3BffnkL3y8Htl+rOZvcp/kKCaRnP6ylzPYG2ViSiBNCWXy9WyuPS6WDpjsGbzWLwl7N7h/ncGcK10KFb7SNgVq4Tg9I2Rnqd6xsVTzC+iOx8xTpIbtSS8CqpDwsBHzDP6Azcpq0uv37sGTXGTPeIVuWIMN1uCYWBIAaN3NubiXSwW/HeK5DYJuhHLqw8ijqqX/7+W/6VcH885z/VL5wzfOfhuVPcMwKNi56DW/0iIV4rUVJ5i6exW7/o8ToplY8eNafCMRfvpXJ3eZyrT9pszZbSqp9YF/Sc22ejH50YfnPAYOh0jN4Wg9Lp1oRPU6ihUapbUaBHrPmjaJ1pUrD9x9E+JnzsIqBqQ8BA0IayH9VNxZ0lFQS3OZSUeNLVp8ShyET3WequxEdqmvbERCpDQIbWOh67vk7QUtVBBqbwuL4pFOfVOOcYv6zSVI4Z7bh9G3gcDFRw2KuJtMMPzGZpsRT2vS6p60KyRpKjRObO5Vb0hqKAl8lVZGlcr07pI1c+LZ8GvsrW4vfmNC7s+srri9snRT7k9jmWv3yHP5TTdq1MzCZrj18590ZjKxX15c/wa/Tpp+tiBJ6oeu+r1iucTty7hm7TtNRtjiDnZ+4vUri5Sp9KIGIFnLTyVwlOuZh/P/0w9I5OcQumN0pYB9rmQWUp3TDNIuCgWSTdjE0qYzcHG8h2AS8z2h0cpDbz8tcfAHbE+SobfBgktqgbDjOJlzu+Hj4zqyPKz4TrIyeOyrtHTd23Xsx65vv0IEjbjXaRzDbsE9cD3FPUAFQBfZdLXkA3S2gGMsrueU60gh0zDrWd25lrMqhsfOKlpy+7nAE9FmtPgX07qrMfhkIU+DI/2eetvPUZiJ2uu6noYhr8APLpkYg==
+sidebar_class_name: "put api-method"
+info_path: site/docspace/api-backend/usage-api/api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Update the CDN storage"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"put"}
+  path={"/api/2.0/settings/storage/cdn"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Updates the CDN storage with the parameters specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"module":{"type":"string","description":"Storage name","nullable":true,"example":"some text"},"props":{"type":"array","items":{"type":"object","properties":{"key":{"type":"string","nullable":true,"example":"some text"},"value":{"type":"string","nullable":true,"example":"some text"}},"additionalProperties":false,"title":"ASC.Api.Collections.ItemKeyValuePair.System.String.System.String"},"description":"Storage properties","nullable":true}},"additionalProperties":false,"description":"Storage settings request parameters","title":"ASC.Web.Api.ApiModel.RequestsDto.StorageRequestsDto"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Updated CDN storage","content":{"application/json":{"schema":{"type":"object","properties":{"module":{"type":"string","nullable":true,"example":"some text"},"props":{"type":"object","additionalProperties":{"type":"string","nullable":true},"nullable":true,"example":[{"key":"some text","value":"some text"}]}},"additionalProperties":false,"title":"ASC.Data.Storage.Configuration.CdnStorageSettings"}}}},"400":{"description":"Module"},"401":{"description":"Unauthorized"},"403":{"description":"No permissions to perform this action"}}}
+>
+  
+</StatusCodes>
+
+
+      

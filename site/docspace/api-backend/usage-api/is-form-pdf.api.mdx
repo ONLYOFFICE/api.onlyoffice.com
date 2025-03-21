@@ -1,0 +1,71 @@
+---
+id: is-form-pdf
+title: "Check the PDF file"
+description: "Checks if the PDF file is form or not."
+sidebar_label: "Check the PDF file"
+hide_title: true
+hide_table_of_contents: true
+api: eJyNVFFv0zAQ/ivWPYFkllImBH4blKIJHqaNPU3R5CWXxsyJPdspG5H/Ozo7benaIV7ixL777u77PmeEIFcexA0slUbPCpZWKDkYi04GZfrzGgQovzSuu1gsgYOVTnYY0FHiCL3sEAQ0SuN5DRxUDwKsDC1wqNFXTlmCAZFqsPMFcHD4MCiHNYjgBuTgqxY7CWKE8GQJTfUBV+iAQ2NcJ0PeejcHDvgoO6sRxMcPp+9jLAnNW9N79AQwn81o2a/8yRiNsmdrqQcUjIqyNyy0yC4WS0atM+UZleKskdofO+1NYDLFAIfK9AH7QJWktVpViarip6dy4+E8d7kBiDFGDqezt4c9XvdyCK1x6jfWQFEeq8Gp8JRYlr66pfPbe6QNcCiJ7F9OBYSSWNhH+9xide+Zao5OyYyjeU6AQ4ehNSTxCkMSN7QgoJBWFfOTWUFZPj2LMUscC+UJw9YNUJNuvXHC4DQIGO+kx2un44H+VymWVaZv1GrI7gIOa+mUvNNZvik509PIQZP0bQhWFIU2ldSt8UF8mB2AL3I0u778TiyXO/6uSIyMvs/iVh1p1Td8Ar7x8l7Y5OjKmHuFSRjVNyZlq0A+hDOraAx0PreynkPkYI0PnUx2mGCTJnt6PJ9i3Bnr/xWchgj4GAqrpeqp+pA5zHLe0ITAYX5CvCVJpxU4iN3N3epaciCeKXPc6hlp+2FARwYsd7ol7Wvl6b0Gke7PP+Z6dTld/tds90M4OsNGnf4puUQP9AUcknibH04sI4cWZY0uNZIPz6oKbfgr7eCWkkO23v/65QdwIMn3XZH1n14I/WhLz+ySO6Bn5C9kjGO2XIzb+Hz0YsY04SaaCCpjjH8AxM3sGw==
+sidebar_class_name: "get api-method"
+info_path: site/docspace/api-backend/usage-api/api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Check the PDF file"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/files/file/{fileId}/isformpdf"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Checks if the PDF file is form or not.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"fileId","in":"path","description":"File ID","required":true,"schema":{"type":"integer","format":"int32","example":9846}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Boolean value: true - the PDF file is form, false - the PDF file is not a form","content":{"application/json":{"schema":{"type":"boolean"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

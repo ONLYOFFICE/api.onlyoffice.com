@@ -58,7 +58,7 @@ Create an HTML file. It must include a *div* tag where we specify the DocSpace c
   <head>
     <meta charset="UTF-8">
     <title>DocSpace JavaScript SDK</title>
-    <script src="{PORTAL_SRC}/static/scripts/sdk/1.0.0/api.js"></script>
+    <script src="{PORTAL_SRC}/static/scripts/sdk/1.0.1/api.js"></script>
     ...
   </head>
   <body>
@@ -68,7 +68,7 @@ Create an HTML file. It must include a *div* tag where we specify the DocSpace c
 </html>
 ```
 
-The API JavaScript file can normally be found in the following DocSpace folder: **\{PORTAL_SRC\}/static/scripts/sdk/1.0.0/api.js** where **\{PORTAL_SRC\}** is the name of the server with the ONLYOFFICE DocSpace installed.
+The API JavaScript file can normally be found in the following DocSpace folder: **\{PORTAL_SRC\}/static/scripts/sdk/1.0.1/api.js** where **\{PORTAL_SRC\}** is the name of the server with the ONLYOFFICE DocSpace installed.
 
 ## Step 2. Add the file selector
 

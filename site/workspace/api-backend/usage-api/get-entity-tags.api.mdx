@@ -1,0 +1,71 @@
+---
+id: get-entity-tags
+title: "Get entity tags"
+description: "Returns a list of all the tags related to the entity with the ID and type specified in the request."
+sidebar_label: "Get entity tags"
+hide_title: true
+hide_table_of_contents: true
+api: eJyVU01v00AQ/SurOYEwtYk40L0VGomIC0rCKcphak/srezdZXfcYlz/dzTrRElbOODTeD7fvHk7AmMdQe+gDF2+FXufQaSyD4YH0LsRbnpuXDC/kY2zXwkrCpIfCCvI4DEYJthP+wwqimUwXtJAw5q4DzYqVK2JrNxBYdsqbkjJRBWoRaZKsUs+smx4UI+Gm/S/ulVoK8WDJxU9leZgqFLGpmCgnz1FvoIMjuZnVw2gRyidZbIsJnrfmjKBzu+jQBohlg11KJY0Bg3u7p5Khgx8cJ4CG4oSndFsU874Yq/ljDQ1yE59Igdja5iyY6mp/lm4uj2XGctUU4ApfbJN9M7GGcSiKF432WIN2X+viSHgABkYpi5e+E+w5+kfiw+vB/6weLw/VSBZHXHjKtBQUyIOuQENOXqTL66KXGQ0nvnTbwQrlvzkvHeBe2t4eCox0tspZ6xPuabSu+L99f7dBCK/8EAhJvX1oQUNDbOPOs/HxkWe9CitJPMBg8G7diZMYvMCB+xbBg2tK7FN7ikDqXke/lRcL2T5C8VvhLq53V91f6bUm2+UOBWWmjmcgcVOos9qE21ym/VZrMtf2PmWXortdJFLHRWTDDm4NNywFMEX13WJSrVJXKn1crNVN99XwgmFON9OXpjsPv0BQJFeUw==
+sidebar_class_name: "get api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get entity tags"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/crm/{entityType:(contact|opportunity|case)}/tag/{entityid:[0-9]+}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns a list of all the tags related to the entity with the ID and type specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"entityType":{"description":"Entity type","type":"string"},"entityid":{"description":"Entity ID","type":"integer"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Tag","content":{"application/json":{"schema":{"type":"array","items":{"type":"string"}}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

@@ -1,0 +1,71 @@
+---
+id: set-product-administrator
+title: "Set a product administrator"
+description: "Sets the selected user as a product administrator with the ID specified in the request."
+sidebar_label: "Set a product administrator"
+hide_title: true
+hide_table_of_contents: true
+api: eJy1VUtv20YQ/iuLOVOirDqAy5sb92C0RQ0rRlEYQjAkR+Im1O5md2hHFfjfg9kl9UwKH9qDqOVwnt98M7sDxnWA4hkWxKzNOqhcLajqvOYtLDOwjjyytua+hgIC8YO3dVfxbb3RRgf2yNZDBp6+dBT4F1tvodhBZQ2TYTmic62uoo/8U7BGZKFqaINy4q0jKMCWn6hiyMB5iciagnx1KZjE3qsG9tqsIYOaQuW1E8dQwJCXur+DDFbWb5ChgK7TNWRAX3HjWrFGpCu6mv00KSt8N/l5hVeTEm+qyfV89u6mvMZyNb+BPoMukH9L2KdA/r+KiSeYHkKX1raE5iL2SQ+U9cpYPg7MvqM++q21mGD7cITuCttA5y7H1quhn8qhxw0x+QAZsOZY0O3i/fQvKqe3TsvvD1tTO31MFuGO7XR0cySDvpdcPAVnTUjtnc9m8neawp+RCupVc6O4ISWdUGHMS5uEs7amUG7f8yypyQG/j8pbGZnSvJ5dXWb2ZLDjxnr9D9UQleaXSn/bzivndaXNWrkWjaotBUlChc4561lxo4OyyUCCjcVB8bwDDNVHCfPxM4kAPKGw6dVrJlj2y8uOcYg4BWqpYqoTEhgU7vE5hWSP7P2dCo4qvdJUK22ibOj7FDLYEDdWpt51cTKRGyggR6fz+XSWh2Fh5GP6OZ7thED+RYgjZXW+hQJ2JQZ68m1/weVF1FWVNSu97tLKgQxe0Gss20SXwThhvsKulWlrmF2R562tsG1s4OJmduH8Lmmrp8ffhYbLA+QLaXvyfgr8fvjQ6d9oCxkY3MT3Y7UMtPivrP2sKfZS+PR42IW/jrN4ssvethEOS+it+mcLJM6/pLiysaBxep0WZMmHhM7LXMjsbOANxlkYKl0Q/4hD5wgfLfz/kZBDR5i+cu5a1CYu6kSIxM5naRdkMJ/OIv8SQ+FoxM5BWmYgrBHT3Z6dvYi/dORlApcHFspbn0FDWJOPtI5cgfep+MkHSVDU2y5R52zP9NlocVtV5PhfdZdHE/jw9AEyKIfLdWNrMfH4KhcvvkIBIDe1GEcqR9kOWjTrDteim1zGy6AToI7pnYg8HKSo8ZPZHid4yvtUhjylqO9a7HZpdvp+r58+/dBiAHbUlgYv+77/Bjqi95E=
+sidebar_class_name: "put api-method"
+info_path: site/docspace/api-backend/usage-api/api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Set a product administrator"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"put"}
+  path={"/api/2.0/settings/security/administrator"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Sets the selected user as a product administrator with the ID specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"productId":{"type":"string","description":"Product ID","format":"uuid","example":"aae1e103-bca5-9fa1-ba8c-42058b4abf28"},"userId":{"type":"string","description":"User ID","format":"uuid","example":"aae1e103-bca5-9fa1-ba8c-42058b4abf28"},"administrator":{"type":"boolean","description":"Administrator or not","example":true}},"additionalProperties":false,"description":"Security request parameters","title":"ASC.Web.Api.ApiModel.RequestsDto.SecurityRequestsDto"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Object with the user security information: product ID, user ID, administrator or not","content":{"application/json":{"schema":{}}}},"401":{"description":"Unauthorized"},"402":{"description":"Your pricing plan does not support this option"}}}
+>
+  
+</StatusCodes>
+
+
+      

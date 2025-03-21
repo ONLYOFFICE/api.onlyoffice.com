@@ -1,0 +1,71 @@
+---
+id: enable-admin-message-settings
+title: "Enable the administrator message settings"
+description: "Displays the contact form on the 'Sign In' page, allowing users to send a message to the DocSpace administrator in case they encounter any issues while accessing DocSpace."
+sidebar_label: "Enable the administrator message settings"
+hide_title: true
+hide_table_of_contents: true
+api: eJzVVU2P2zYQ/SvEnFXbWfRQ6LaNcwjaIMF6Fz1sjGBMjW0mFMlwRuu4hv57MZT8sd5N0WsPliXyzdebN+QBBDcM9SMsSMSFDZup+UDMuCGGZQUxUUZxMbxvoAYKuPJ027QujKCjGVSQ6XtHLL/HZg/1AWwMQkH0FVPyzhY3068cg66x3VKL+ib7RFBDXH0lK1BByhpUHHHZ7XL4GC5wqxg9YYAKGmKbXVK3UMMikXVrR2zc2siWDGqajiWjxGzasSiDmcxQR2NiNiFqTPqBbfIEteSO+r4CbBqnjtF/ukhnjZ7pOvDdULdJmLElocxmHfPr4Q2f+RInGhFuF28nf9Fqcpuc/j7EhvxkdMpziZP7QsFrrI+ouUToe007E6cYeKDuZjbTv+fZjh4MrmInhadM3HkxcW0Yn1zYmEC7yzz/ayOHDH6dvXkZ9CFgJ9uY3d/UgKKYbJed7KF+PACy/aL7X76RLkAmbKCCXXZCsOyX14TPHSePey7Za3ZoRSlvTQxl7TMs3CaY9+EzmIQbqgx6H3daW8faH4mGKTQGT32RWCzn0S4S2mvxuGAsMilkbyjY2AWhbDDsjWPuiM1u6zwZtJaYNc7R0QQqaEm2UccnRS4CR9lCDVNMbnozmU2PXE+PGj1zz5SfKHOhqcseajiskOkh+/7lABSsErJ2m26YWqjgCbNTtRdJjMZDh9bYeYEatiKpnk59tOi3kaX+bfbC+XxAm4e7P1Vqy3MLF9r/wfvzRp4mFpP7g/ZQQcC2fF/CKnDq38b4zVHRhgrr7nyWvDuO5vksKEOqhutYlo+DlJzWS5mHnJ9uoK8K6S0WqY7x35Xp//kZcSn+ZyxcHGr/OxGOvRD6IdPk0QXlphukMAjyURsFFdxMZkV5Jw6uZbmsQGWiFoeTHHtd/t5R1hFenmWnX30FW8KGctFxEQe8HZj85V7zUrjvBq1cnTB9dbS4tZaS/Ct2eTFsnz4u7qGC1XgdtbFRm4w7vapwBzWAXm9qXcRb1g7gMWw63Ch28Flug04JuhT0IN3xRas6boX9ZYbPlT7UoU+t6lWLw2GYlr4/4Yetn1qMzB7R2thl3/f/AEhZwUI=
+sidebar_class_name: "post api-method"
+info_path: site/docspace/api-backend/usage-api/api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Enable the administrator message settings"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/api/2.0/settings/messagesettings"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Displays the contact form on the "Sign In" page, allowing users to send a message to the DocSpace administrator in case they encounter any issues while accessing DocSpace.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"turnOn":{"type":"boolean","description":"Specifies if the administrator messages are enabled or not","example":true}},"additionalProperties":false,"description":"Request parameters for administrator message settings","title":"ASC.Web.Api.ApiModel.RequestsDto.TurnOnAdminMessageSettingsRequestDto"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Message about the result of saving new settings","content":{"application/json":{"schema":{}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

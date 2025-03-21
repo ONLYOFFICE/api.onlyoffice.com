@@ -1,0 +1,71 @@
+---
+id: delete-recent
+title: "Delete recent files"
+description: "Removes files with the IDs specified in the request from the 'Recent' section."
+sidebar_label: "Delete recent files"
+hide_title: true
+hide_table_of_contents: true
+api: eJzNVcFu2zgQ/RVhzlzZdXtY6JbEWSBoki6c5pQKBS2NLLaUyJIjp16D/74YUo5lp7u9dIG9WNbwcTR8781wDyQ3Hoon+ENp9Nksi08oBRiLTpIy/U0NBdSokXCFFfYEAhx+G9DTpal3UOyhMj3xQrEHaa1WVdw4++JNzzFftdhJ/kc7i1CAWX/BivNYx58hhZ5XG6NrdDe1n0Clc3IHAhRhF+Oy331ooHh6QaiecIMOBOB32VmNULxZvH0XxAvCk1P9ZgoAbzrMCL8ThDIIqNFXTlmuGgq4VZ4y02Spnuxm6UFAP2gt17yZ3IBBQKM0/o9qVRp/XGkQIOtaMV7qPyeEN1J7PM93KT1ma0lVm40iZ1Y62SGh4+SkKBZ18XCVR6/kV8ZhfmHVnalR+3yVdi3J5JzrklMdYxACF+TQW9P7JPtiPufHaR33Jju4Svwqf3mSNPgrU+MEe5SkMa6TlEJvF680+hmPB2buVOWMNw3lF97eI0V+7rZVfm+u0jlW6AdNIxXv5m9en/6xlwO1xqm/sAZGeawGp2gXzSR99ZnXP39FDoBDWYOAZ6cIoQzluaYr7MwWffSIz54VtRm10S2Zt1ipRmGdqT4GD6I3znQx8AlS13+CzGPFGXMQ0CG15jgYmGpJLRQwk1bNFvl8Fj82c4eJ4dFt2UFc/+A0FLBfS4+PTgc4r/chYln/Rm2GNIVAwFY6xb6OWo6bE3WNZD4LaIlsMZtpU0ndGk/F7/NXyZcJnT2ublmB8sjtA9soZT9l+NjgVr1H7vBedvF9ChOgOH9lzFeFUTT25+o4Ka8PdjqZdE9sLjFp8nIyWl4vBv5MY2JRh1a0itlB59MJtwsIAqzx1MnYH2O1yyhVliRJZjhnZzLK/wvXjDTySWZWS9VzoUNSMfnniTkGAYuclTvUOLqoFMCqMmr/4p7A4W8DOm6F8ugSfgsCWpQ1umi7qCWMPfjbR66F4XpI0p7NFZ7JacdFVaGlf8WWk45YXt9ef7wGAevxduziwAEnn/ko8hkKAL5feX90W4ztQct+M8gNY1PWOHIGpmXqwOS18c/kbpH9blrjqTXTSfh3ctec7tjvk71DeMGnpX/cMXJ7QLOcZQjhbyfe2nE=
+sidebar_class_name: "delete api-method"
+info_path: site/docspace/api-backend/usage-api/api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Delete recent files"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"delete"}
+  path={"/api/2.0/files/recent"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Removes files with the IDs specified in the request from the "Recent" section.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"folderIds":{"type":"array","items":{"anyOf":[{"type":"integer","example":1234},{"type":"string","example":"some text"}]},"description":"List of folder IDs","nullable":true},"fileIds":{"type":"array","items":{"anyOf":[{"type":"integer","example":1234},{"type":"string","example":"some text"}]},"description":"List of file IDs","nullable":true}},"additionalProperties":false,"description":"Base batch request parameters","title":"ASC.Files.Core.ApiModels.RequestDto.BaseBatchRequestDto"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"No content","content":{"application/json":{"schema":{"type":"object","properties":{"statusCode":{"type":"integer","format":"int32","example":1234}},"additionalProperties":false,"title":"Microsoft.AspNetCore.Mvc.NoContentResult"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

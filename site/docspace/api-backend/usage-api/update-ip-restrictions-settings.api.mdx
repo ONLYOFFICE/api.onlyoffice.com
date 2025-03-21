@@ -1,0 +1,71 @@
+---
+id: update-ip-restrictions-settings
+title: "Save the IP restriction settings"
+description: "Updates the IP restriction settings with a parameter specified in the request."
+sidebar_label: "Save the IP restriction settings"
+hide_title: true
+hide_table_of_contents: true
+api: eJztVk1v2zgQ/SvCnLmWN+hhoVv6cQjaLYK4wR4CoRhLY4upRLLkKK7X0H9fDCnHkpMGPSx6ysGySL4Zzrx5Q+oAjNsAxR2siFmbbcjy7Oo68xTY64q1NQFKBdaRRxld1VBA72pkunI3E9TRHhR4+t5T4Le23kNxgMoaJsPyis61uoqO8vtgjcyFqqEO5Y33jqAAu76nikGB87ItawqyqmfbTfDoPe5BgWbqwq/4mWDEodmCAtO3La5bgoJ9TwroB3aujRDbUcb0g2FQsLH+su60mbhYW9sSGpjYiIthUIB1rSVabK8nIWywDaSANUf/l6t3i6vrFVW917xfzFh9i4Fk25pC5bWTKSjgkw6c2Y3UCevaUwgUnqQwKCCThs+EOnf4IQLDeeEz6zNj+SV2finT+WafaXe2URZO2pmy8g+tF5dOy+9vW1O7uEnCCu/ZznmSGRgGicRTcNaEVOuL5VL+5gHcRvXWLwTxqthXxf4+xb5Z/vmMSA323Fiv/6UaBBVGuqG4OwCG6qusf/1GMgGesAYFO6+ZoBzK8wyS5EPGDf0sk2ynuckwc+ixIyafBUeV3miqM22i5XiuL0BBR9xYuQpcH/WK3EABOTqdXyyW+dFprt20PPmEtkD+gXyI6fS+hQIOawx069vhSbVXEZtV1mz0tk8XESh4QK+jDIS+0TgxucG+ZSigYXZFnre2wraxgYu/lk+cv0/o7PbmkxSkPFG9kj5P3ueEnxrZ6Y8knWywi+MpTIF0HVTWftMUaygHyM3pcvxw1OTTo+Iudf2klaedHDVcntpl7B5tNjYGd1Sk08IS+ZAyfbiQznQ2cIfxPBijXuEDvSSNc8omV/r/r6yRWck5dy1qIzH3qbBJZndCOyi4WCyjjh6DnIttulYqkPKL7eFRZoNMf+/JSwuVJznJaFDQENbkYyli0eFdSvqPLxKhwNs+aeDshhjU0eKyqsjxi9hy0kvXt19AwXr8bOpsLSYed/JJhTsoAORD7PEyiXMHaNFse9wKNrmMp1svTE11mhQ5vkhSxyWznwY4F3BKQ56S1LMWh0NqgmF4xKeln1qMxB7RUuFyGIb/AE/6sYQ=
+sidebar_class_name: "put api-method"
+info_path: site/docspace/api-backend/usage-api/api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Save the IP restriction settings"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"put"}
+  path={"/api/2.0/settings/iprestrictions/settings"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Updates the IP restriction settings with a parameter specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"ipRestrictions":{"type":"array","items":{"type":"object","properties":{"ip":{"type":"string","nullable":true,"example":"some text"},"forAdmin":{"type":"boolean","example":true}},"additionalProperties":false,"title":"ASC.IPSecurity.IpRestrictionBase"},"description":"List of IP addresses","nullable":true},"enable":{"type":"boolean","description":"Enables IP restrictions or not","nullable":true,"example":true}},"additionalProperties":false,"description":"New IP restriction settings","title":"ASC.Web.Api.ApiModel.RequestsDto.IpRestrictionsDto"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Updated IP restriction settings","content":{"application/json":{"schema":{"type":"object","properties":{"ipRestrictions":{"type":"array","items":{"type":"object","properties":{"ip":{"type":"string","nullable":true,"example":"some text"},"forAdmin":{"type":"boolean","example":true}},"additionalProperties":false,"title":"ASC.IPSecurity.IpRestrictionBase"},"description":"List of IP addresses","nullable":true},"enable":{"type":"boolean","description":"Enables IP restrictions or not","nullable":true,"example":true}},"additionalProperties":false,"description":"New IP restriction settings","title":"ASC.Web.Api.ApiModel.RequestsDto.IpRestrictionsDto"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

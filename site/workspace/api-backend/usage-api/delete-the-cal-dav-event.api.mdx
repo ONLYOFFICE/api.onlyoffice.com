@@ -1,0 +1,71 @@
+---
+id: delete-the-cal-dav-event
+title: "Delete the CalDav event"
+description: "Deletes the CalDav event from the calendar with the ID specified in the request."
+sidebar_label: "Delete the CalDav event"
+hide_title: true
+hide_table_of_contents: true
+api: eJy1VD1v2zAQ/SvCzWzkGh1abWlsoEY7FIkzGRou0tliQokKebLrCvrvxVGSYyVOhwL1YJC873fvqQXGnYdkAxkaqnJ08XJPFXtIFXjKGqf5CMmmheuGC+v0b2Rtq2+EOTkJc4Q5KDg4zQRplyrIyWdO1+IGCSzIEJOPuKDoBs0C9xFJgWjrbBlex8LRQXMRXlaLyNeU6a2mPNJVeHP03JDnK1AwHL/a/AhJC5mtmCqWI9a10VnoMH70Ur8FnxVUopz4WBMkYB8eKWNQUDtbk2NNPqQZ2ljlcpsOcTO2uFqAGvN4drraQaeg0RdiAozR/eUIR762ldcPpi8+DV2jf4omLqcU6BweQYFmKv3ZUGPq/ncq0Gefz2bvFMEDaiYH6l9R7Kt9mn18W+C+woEylIN4lcSFzSGBPHBCNoBcQAIx1jqeX83iEwczNDnuA1FAeOj25HygYeMMJFAw1z6J47awnrukra3jDhTs0WkcQRVb39YWG8OQgLEZmvDcKZCYqfnz7MtcJjqj/p3M3ae7KIATHljr7xQ2I7MXvVlBhaVYJ7EBDAH29oXIy19Y1oZeE3Hc68Cxl+uUQJvRkHbSwNaGxjRLQrixZdlUmo/RXcAxul3eraPrnyvBi5zvt2WQacTFc4lh60P3vYbfSBheaf1Miv9D9gPQTL84rg3qKkhP6NAORNrIFkDB/GomjB4K9McTnVI1EGMDbfuAnu6d6Tp5fm7IybcufeGR3Do1rlP490THgGkY9MNaehJ30/QkeKWcTo0R11lGNf/VNz2TyGL5Y7legoKH4StX2lyiHB5k+3iABECBDdAHeoa3FgxWuwZ34ttnFbKJEKdcfQpcHQ4y12iqjmc9TmmrhlHkXwa7GNK2vRK67uTfm96NOGml95a9pl3X/QFDq0R6
+sidebar_class_name: "delete api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Delete the CalDav event"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"delete"}
+  path={"/api/2.0/calendar/caldavevent"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Deletes the CalDav event from the calendar with the ID specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"calendarId":{"description":"Calendar ID","type":"string"},"uid":{"description":"Event UID","type":"string"},"responsibles":{"description":"Task responsibles","type":"array","items":{"type":"string"}}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Task awaiter","content":{"application/json":{"schema":{"type":"object"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

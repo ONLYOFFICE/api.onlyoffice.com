@@ -1,6 +1,9 @@
 ---
-sidebar_position: -6
+sidebar_position: -5
 ---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
 # C++
 
@@ -19,60 +22,61 @@ The current application version contains four main classes:
 
 ## Example
 
-### C++
+<Tabs>
+    <TabItem value="cpp" label="C++">
+        ```cpp
+        #include "./../common_deploy.h"
+        #include "../docbuilder.h"
+        #include "./utils.cpp"
 
-```cpp
-#include "./../common_deploy.h"
-#include "../docbuilder.h"
-#include "./utils.cpp"
+        using namespace NSDoctRenderer;
+        int main(int argc, char *argv[])
+        {
+            std::wstring sProcessDirectory = NSUtils::GetProcessDirectory();
+            std::wstring sWorkDirectory = NSUtils::GetBuilderDirectory();
 
-using namespace NSDoctRenderer;
-int main(int argc, char *argv[])
-{
-    std::wstring sProcessDirectory = NSUtils::GetProcessDirectory();
-    std::wstring sWorkDirectory = NSUtils::GetBuilderDirectory();
+            CDocBuilder::Initialize(sWorkDirectory.c_str());
 
-    CDocBuilder::Initialize(sWorkDirectory.c_str());
+            CDocBuilder oBuilder;
+            oBuilder.SetProperty("--work-directory", sWorkDirectory.c_str());
 
-    CDocBuilder oBuilder;
-    oBuilder.SetProperty("--work-directory", sWorkDirectory.c_str());
+            oBuilder.CreateFile("docx");
 
-    oBuilder.CreateFile("docx");
+            CContext oContext = oBuilder.GetContext();
+            CContextScope oScope = oContext.CreateScope();
 
-    CContext oContext = oBuilder.GetContext();
-    CContextScope oScope = oContext.CreateScope();
+            CValue oGlobal = oContext.GetGlobal();
 
-    CValue oGlobal = oContext.GetGlobal();
+            CValue oApi = oGlobal["Api"];
+            CValue oDocument = oApi.Call("GetDocument");
+            CValue oParagraph = oApi.Call("CreateParagraph");
+            oParagraph.Call("SetSpacingAfter", 1000, false);
+            oParagraph.Call("AddText", "Hello, world!");
+            CValue oContent = oContext.CreateArray(1);
+            oContent[0] = oParagraph;
+            oDocument.Call("InsertContent", oContent);
 
-    CValue oApi = oGlobal["Api"];
-    CValue oDocument = oApi.Call("GetDocument");
-    CValue oParagraph = oApi.Call("CreateParagraph");
-    oParagraph.Call("SetSpacingAfter", 1000, false);
-    oParagraph.Call("AddText", "Hello, world!");
-    CValue oContent = oContext.CreateArray(1);
-    oContent[0] = oParagraph;
-    oDocument.Call("InsertContent", oContent);
+            std::wstring sDstPath = sProcessDirectory + L"/result.docx";
+            oBuilder.SaveFile("docx", sDstPath.c_str());
+            oBuilder.CloseFile();
 
-    std::wstring sDstPath = sProcessDirectory + L"/result.docx";
-    oBuilder.SaveFile("docx", sDstPath.c_str());
-    oBuilder.CloseFile();
+            CDocBuilder::Dispose();
 
-    CDocBuilder::Dispose();
-
-    return 0;
-}
-```
-
-### .docbuilder
-
-```ts
-builder.SetTmpFolder("DocBuilderTemp")
-builder.CreateFile("docx")
-const oDocument = Api.GetDocument()
-const oParagraph = Api.CreateParagraph()
-oParagraph.SetSpacingAfter(1000, false)
-oParagraph.AddText("Hello, world!")
-oDocument.InsertContent([oParagraph])
-builder.SaveFile("docx", "result.docx")
-builder.CloseFile()
-```
+            return 0;
+        }uilder::Dispose();
+        ```
+    </TabItem>
+    <TabItem value="builder" label=".docbuilder">
+        ```ts
+        builder.SetTmpFolder("DocBuilderTemp")
+        builder.CreateFile("docx")
+        const oDocument = Api.GetDocument()
+        const oParagraph = Api.CreateParagraph()
+        oParagraph.SetSpacingAfter(1000, false)
+        oParagraph.AddText("Hello, world!")
+        oDocument.InsertContent([oParagraph])
+        builder.SaveFile("docx", "result.docx")
+        builder.CloseFile()
+        ```
+    </TabItem>
+</Tabs>

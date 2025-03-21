@@ -6,7 +6,7 @@ The document section allows to change all the parameters pertaining to the docum
 
 `Type: string`
 
-Defines the type of the file for the source viewed or edited document. Must be lowercase. The following file types are available: *.csv, .djvu, .doc, .docm, .docx, .docxf, .dot, .dotm, .dotx, .epub, .fb2, .fodp, .fods, .fodt, .htm, .html, .key, .mht, .numbers, .odp, .ods, .odt, .oform, .otp, .ots, .ott, .oxps, .pages, .pdf, .pot, .potm, .potx, .pps, .ppsm, .ppsx, .ppt, .pptm, .pptx, .rtf, .txt,<!-- .vsdm, .vsdx, .vssm, .vssx, .vstm, .vstx,--> .xls, .xlsb, .xlsm, .xlsx, .xlt, .xltm, .xltx, .xml, .xps*.
+Defines the type of the file for the source viewed or edited document. Must be lowercase. The following file types are available: *.csv, .djvu, .doc, .docm, .docx, .docxf, .dot, .dotm, .dotx, .epub, .fb2, .fodp, .fods, .fodt, .htm, .html, .hwp, .hwpx, .key, .mht, .numbers, .odp, .ods, .odt, .oform, .otp, .ots, .ott, .oxps, .pages, .pdf, .pot, .potm, .potx, .pps, .ppsm, .ppsx, .ppt, .pptm, .pptx, .rtf, .txt,<!-- .vsdm, .vsdx, .vssm, .vssx, .vstm, .vstx,--> .xls, .xlsb, .xlsm, .xlsx, .xlt, .xltm, .xltx, .xml, .xps*.
 
 **Example**: `"docx"`
 
@@ -33,7 +33,6 @@ The key characters can be used: **0-9**, **a-z**, **A-Z**, **-.\_=**. The maxima
 :::
 
 **Example**: `"Khirz6zTPdfd7"`
-
 
 ## referenceData
 
@@ -85,7 +84,7 @@ Defines the absolute URL where the source viewed or edited document is stored. B
 ## Example
 
 ``` ts
-const docEditor = new DocsAPI.DocEditor("placeholder", {
+const config = {
   document: {
     fileType: "xlsx",
     isForm: true,
@@ -97,7 +96,9 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
     title: "Example Title",
     url: "https://example.com/url-to-example-document.xlsx",
   },
-})
+};
+
+const docEditor = new DocsAPI.DocEditor("placeholder", config);
 ```
 
 The **example.com** is the name of the server where **document manager** and **document storage service** are installed. See the [How it works](../../../get-started/how-it-works/how-it-works.md) section to find out more on ONLYOFFICE Docs service client-server interactions.

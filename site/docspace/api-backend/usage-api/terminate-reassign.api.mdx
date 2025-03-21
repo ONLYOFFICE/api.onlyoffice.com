@@ -1,0 +1,71 @@
+---
+id: terminate-reassign
+title: "Terminate the data reassignment"
+description: "Terminates the data reassignment for the user with the ID specified in the request."
+sidebar_label: "Terminate the data reassignment"
+hide_title: true
+hide_table_of_contents: true
+api: eJy1Vk1v2zgQ/SvEnGnLdtxFqlvW7gLB7mKDfJwCoxhLY4uNRKoklTRr6L8XQ0qynDRND7sXm6Jmhm/evBnqAB73DtJ7uCJTlyQScefIihw9wkaCqcmiV0Zf5pCCJ1spjZ6uCZ1Tew0SLH1tyPnfTf4M6QEyoz1pz0us61JlwTv54ozmPZcVVCGv/HNNkILZfqHMg4Ta8llekeO3jSPLRw52zlul9yAhJ5dZVXNUSCGAvVyLp8I4CqiFcsJ28ChPLFXmkXKQsDO2Qg8pNI3iZ/qGVV1ybESa03x2Ntlm+GHycYfzyRbPs8lyMftwvl3idrc4h7aVgHmu+GAsr0Zod1g6egnsOtIiarRYkSfrxM5Y0TOo9F74ggakFWkvamsycg4keOUDsoub1TQWZnpRq79NTqWbdqHX3kxvjwXp96BtGaolVxvtIpuL2Yz/XiI8PXpv49n/UQXVL1Tvcg0SdFOWuOV0vW1oXJeP58vfoJVA1hr7frRPwexnAZ2pSHj65jlqTTYj7XFPo9BKe9qTfRX76mg8UpLS/mwxltJ8cbZsJSi3MrzhaUzC1piSUL9mYWQ9isXgWwnOo28Co0bTPztI7w9Auqm4Z1eWMHpdN1pHTsaxVqgzKsPyD1Qlb27kOyzed0HFRHQrKbroYtKvpBiOYbt+LUV/Iu92Sym6s8WkX21O2q/PopVDZjM5lwt5JpdHuG9V5n42RjofY1ycYjs7AbV8A86s3Zz238pUldHT28IS5krvp2vF1G0bT/ktuoebWKB358M7PR3bNTQ1uoerrh9H+11jL2fz1718p7HxhbHqX+aRVUNZY5V/DnJBl33m958fiDeAEwEJT1Z5gg3nexptmCouzKgwVU8GVZhkBQme0uJJ+SI8Xa6FqylTO0W5ULqbb2EuTUFCRb4wfIvUTZgW6AtIIcFaJYvpLKkDJUl/TjLcNcDZ2EeyLiTT2BJSOGzR0Z0t21d6uAm2IjN6p/ZNvLxAwiNaxUMhdFLnHHncYVNyMxfe12mSlCbDsjDOp+ezV8HX0VrcXf/F5dgcib7hsRijn9I9tD/W6k965vmEVXgem0lQHD8z5kFRqCDP2+vj3fqp1+fxbvzFe4tD70wA0iuwVswIWRezelyEeWicrzDM+A7hoIMfy+AlO6PL/3+SUMckT/CkLlFpxt3EQkY93TPNIGEx5eJFTYWPlOF75airjQSuMzsdBj21vP21Icudsjnqhp9aCQVhTjYIMVQXVjHlyS1DY/OyicV+cXPycIseF1lGtf+p7WbULVd3tyBh231eVSZnF4tPnBU+QQrAX2nsHMQX9g5Qot434WqDGDKMp4YpGgsySq9bcFL9K/08Bniq1JgG/3JSP/Q4HKLa23awj6/e9OiI7a25tJu2bb8DyqyiJA==
+sidebar_class_name: "put api-method"
+info_path: site/docspace/api-backend/usage-api/api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Terminate the data reassignment"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"put"}
+  path={"/api/2.0/people/reassign/terminate"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Terminates the data reassignment for the user with the ID specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"userId":{"type":"string","description":"User ID whose data is reassigned/removed","format":"uuid","example":"aae1e103-bca5-9fa1-ba8c-42058b4abf28"}},"additionalProperties":false,"description":"Request parameters for terminating the reassignment process","title":"ASC.People.ApiModels.RequestDto.TerminateRequestDto"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Reassignment progress","content":{"application/json":{"schema":{"type":"object","properties":{"id":{"type":"string","description":"ID","nullable":true,"example":"9846"},"error":{"type":"string","description":"Error","nullable":true,"example":"some text"},"percentage":{"type":"integer","description":"Percentage","format":"int32","example":1234},"isCompleted":{"type":"boolean","description":"IsCompleted","example":true},"status":{"oneOf":[{"enum":["Created","Running","Completed","Canceled","Failted"],"type":"string","description":"[Created - Created, Running - Running, Completed - Completed, Canceled - Canceled, Failted - Failted]","example":"Created"},{"enum":[0,1,2,3,4],"type":"integer","description":"[0 - Created, 1 - Running, 2 - Completed, 3 - Canceled, 4 - Failted]","example":0}],"title":"ASC.Common.Threading.DistributedTaskStatus"}},"additionalProperties":false,"title":"ASC.People.ApiModels.ResponseDto.TaskProgressResponseDto"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

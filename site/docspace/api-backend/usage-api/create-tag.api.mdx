@@ -1,0 +1,71 @@
+---
+id: create-tag
+title: "Create a tag"
+description: "Creates a custom tag with the parameters specified in the request."
+sidebar_label: "Create a tag"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVNuO2zYQ/RViXvLCWq7bAIHetpsEKJo2wV4QBAsjmJVGEhOJZMjReh1D/x4MaXntdVv0oS8SL3M95wx3wNhGKO/grekpqkJdOTdEWGtwngKycfb3GkqoAiHTDbagIdC3kSL/5uotlDuonGWyLEv0vjdV8iq+RGflLFYdDSgr3nqCEtz9F6oYNPggOdhQlFuLA8l/wMd3ZFvuoFy9fKlhMHbeL/UcI3IwVmqpKVbBeMkIJdxgq1IcDXbse7zvCUoOI2mgRxy8bOGjsY2hvla3np2FadKAdW0kBPYfjmpqsI/0PMVVbl55DDgQU4iqcUElfIxtFSpOILHhlO3i+nKRsF1cukCLC2/+dDX1cbEP9Jrd4nIG9+kMpkkKCxS9szEjtFou5Xdaz1+0kYxz2/+VjBz+1+XP5xFvLY7cuWC+Uw3J6Jdzo09uVLWzL1h1+ECKrBvbTnkKg4nROKvYya5xYVDckTqoKeEdqRqD4S2UdzvAWH2WjJ+/khxAIKxBwyYYJlhP6+cMZLSiQlWNkd2Q2t8Y7lKiI16ip8o0hmplbLrbC3cBGgbizomwvYtJiygCgwK9KVaLZdEIZUUaDik3PFCIqdox9FDC7h4j3YZ+OpPgdbJVlbONacd9zxoeMBiRYyJy75xRbXDsGUromH1ZFL2rsO9c5PLV8iz462ytbq/eiUDWT0heC7E5+imeh7FDb/6grUxGGrRTMw1G4lfOfTWUKBLFXD0N+pt5fOZBPRsjCdG4lHCWvjfSOYWYq39YiZUAPqA9ipQJPUzOSctHz8v/Q/weDaZHLnyPJlU+ZjKyCO4EKtCwWggBSQjiJ1JYaxBqxGZ3kMAkx99GCqLe9RPVsps0dIQ1haSdRAhc5oZ+upFKxLwfMz/PxnXSs8dFVZHnf7VdH0n6w/vrG9Bwv3+fB1eLT8CNvN24gRJAnnfxToJJZzvo0bYjtmKbY6aXcRRIjkWU5bJfSFfzld0eV3iqrtyHfKWrv/XY7bJCp+lgn6/+0WOP7GwtVK6nafoBzCpY6g==
+sidebar_class_name: "post api-method"
+info_path: site/docspace/api-backend/usage-api/api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Create a tag"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/api/2.0/files/tags"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Creates a custom tag with the parameters specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"name":{"maxLength":255,"minLength":0,"type":"string","description":"Tag name","nullable":true,"example":"Winfield Upton"}},"additionalProperties":false,"description":"Request parameters for creating a tag","title":"ASC.Files.Core.ApiModels.RequestDto.CreateTagRequestDto"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"New tag name","content":{"application/json":{"schema":{}}}},"401":{"description":"Unauthorized"},"403":{"description":"You don't have enough permission to perform the operation"}}}
+>
+  
+</StatusCodes>
+
+
+      
