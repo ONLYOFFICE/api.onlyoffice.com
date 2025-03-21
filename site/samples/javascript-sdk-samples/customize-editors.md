@@ -138,5 +138,3 @@ const docSpace = DocSpace.SDK.initEditor(config)
 ## Step 3. Run the sample
 
 Run our HTML file and make sure everything works.
-
-<img alt="Authorization sample" src="/assets/images/docspace/customization-of-editors.svg" width="720px" />

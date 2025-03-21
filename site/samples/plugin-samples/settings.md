@@ -1,7 +1,5 @@
 # Settings
 
-## Description
-
 Protects a document using a watermark.
 
 **Plugin type:** non-visual, system.

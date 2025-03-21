@@ -1,7 +1,5 @@
 # YouTube
 
-## Description
-
 Connects [youtube iframe\_api](https://developers.google.com/youtube/iframe_api_reference) for embedding YouTube videos into documents as OLE objects and managing them by adjusting their size, rotating, and changing position.
 
 **Plugin type:** visual, OLE object, non-system.

@@ -1,7 +1,5 @@
 # Hello world
 
-## Description
-
 Inserts the *Hello world!* phrase when the user presses the button.
 
 **Plugin type:** non-visual, non-system.

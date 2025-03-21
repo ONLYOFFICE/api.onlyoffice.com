@@ -1,7 +1,5 @@
 # Search and replace on start
 
-## Description
-
 Searches for and replaces text in the document when it is reopened.
 
 **Plugin type:** non-visual, system.

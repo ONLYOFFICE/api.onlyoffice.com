@@ -1,7 +1,5 @@
 # Clippy
 
-## Description
-
 Adds a clippy assistant to the document editor.
 
 **Plugin type:** visual, non-system.

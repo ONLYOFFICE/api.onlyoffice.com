@@ -1,7 +1,5 @@
 # Zotero
 
-## Description
-
 Connects a Zotero account for adding references to the document in full accordance with the chosen style guides.
 
 **Plugin type:** visual, non-system.

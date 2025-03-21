@@ -1,7 +1,5 @@
 # Work with content controls content
 
-## Description
-
 Inserts the content of one content control into another.
 
 **Plugin type:** non-visual, non-system.

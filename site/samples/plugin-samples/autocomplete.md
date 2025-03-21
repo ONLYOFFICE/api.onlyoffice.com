@@ -1,7 +1,5 @@
 # Autocomplete
 
-## Description
-
 Helps the user to input text quickly.
 
 **Plugin type:** input helper, system.

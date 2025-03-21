@@ -17,6 +17,10 @@ The following examples will show you how to use ONLYOFFICE macros and compare th
 
 <DocCardList items={[...[...useCurrentSidebarCategory().items[2].items]]} />
 
+## PDF editor
+
+<DocCardList items={[...[...useCurrentSidebarCategory().items[3].items]]} />
+
 ## Support
 
 If you want to request a feature or report a bug regarding macros, use the issues section [on GitHub.](https://github.com/ONLYOFFICE/plugin-macros/issues)

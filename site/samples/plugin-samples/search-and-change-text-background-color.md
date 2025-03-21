@@ -1,7 +1,5 @@
 # Search and change text background color
 
-## Description
-
 Searches for target text and changes its background color.
 
 **Plugin type:** visual, non-system.

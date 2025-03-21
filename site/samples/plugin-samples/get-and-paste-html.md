@@ -1,7 +1,5 @@
 # Get and paste html
 
-## Description
-
 Gets the document content as HTML code, modifies it, and pastes back to the document.
 
 **Plugin type:** visual, non-system.

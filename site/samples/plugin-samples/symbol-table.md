@@ -1,7 +1,5 @@
 # Symbol table
 
-## Description
-
 Inserts special symbols into the document.
 
 **Plugin type:** visual, non-system.

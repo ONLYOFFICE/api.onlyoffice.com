@@ -1,7 +1,5 @@
 # Load custom fields
 
-## Description
-
 Loads custom fields from the document.
 
 > The fields should be already added to the document with the [Example add custom fields](./add-custom-fields.md) plugin.

@@ -1,7 +1,5 @@
 # Speech
 
-## Description
-
 Converts the selected text into speech. The plugin uses [guessLanguage](https://richtr.github.io/guessLanguage.js/) to recognize the language and the [SpeechSynthesis](https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesis) interface of the [Web Speech API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API).
 
 **Plugin type:** visual, non-system.

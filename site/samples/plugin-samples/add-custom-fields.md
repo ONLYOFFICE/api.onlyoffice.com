@@ -1,7 +1,5 @@
 # Add custom fields
 
-## Description
-
 Inserts custom fields into the document.
 
 **Plugin type:** visual, non-system.

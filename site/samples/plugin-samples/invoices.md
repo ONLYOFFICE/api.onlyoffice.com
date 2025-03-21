@@ -1,7 +1,5 @@
 # Invoices
 
-## Description
-
 Inserts template fields for invoice information.
 
 **Plugin type:** visual, non-system.
