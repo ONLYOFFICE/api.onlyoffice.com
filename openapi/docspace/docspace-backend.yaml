@@ -7,7 +7,7 @@ servers:
     description: Server configuration
     variables:
       baseUrl:
-        default: ''
+        default: http://localhost:80
         description: Default URL
 tags:
   - name: Authentication
@@ -22735,15 +22735,6 @@ components:
       name: asc_auth_key
       in: cookie
 x-tagGroups:
-  - name: ''
-    tags:
-      - Authentication
-  - name: ''
-    tags:
-      - Backup
-  - name: ''
-    tags:
-      - Capabilities
   - name: Files
     tags:
       - Files / Files
@@ -22771,6 +22762,12 @@ x-tagGroups:
       - People / User data
       - People / User status
       - People / User type
+  - name: Authentication
+    tags:
+      - Authentication
+  - name: Capabilities
+    tags:
+      - Capabilities
   - name: Portal
     tags:
       - Portal / Quota
