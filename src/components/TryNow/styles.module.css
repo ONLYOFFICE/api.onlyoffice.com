@@ -1,0 +1,69 @@
+.formatsTable {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.formatsTable th {
+  text-align: center;
+}
+
+.categoryCell {
+  font-weight: bold;
+}
+
+.formatCell {
+  vertical-align: top;
+}
+
+.formatButtonContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.formatButtonRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.formatLabel {
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.9em;
+  width: 64px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.documentFormat {
+  background-color: color-mix(in srgb, var(--ifm-color-primary) 10%, transparent);
+  color: var(--ifm-color-primary-dark);
+}
+
+.spreadsheetFormat {
+  background-color: color-mix(in srgb, #4CAF50 10%, transparent);
+  color: #2E7D32;
+}
+
+.presentationFormat {
+  background-color: color-mix(in srgb, #FF5722 10%, transparent);
+  color: #D84315;
+}
+
+.pdfFormat {
+  background-color: color-mix(in srgb, #9C27B0 10%, transparent);
+  color: #6A1B9A;
+}
+
+.codeButton {
+  border: 1px solid var(--ifm-color-gray-300);
+  border-radius: 4px;
+  padding: 4px 8px;
+  cursor: pointer;
+}
+
+.codeButton:hover {
+  background-color: var(--ifm-color-gray-200);
+}
