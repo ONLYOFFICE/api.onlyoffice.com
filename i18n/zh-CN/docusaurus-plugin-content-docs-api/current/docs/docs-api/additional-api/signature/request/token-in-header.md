@@ -80,7 +80,7 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImZpb
 
 ### 请求文档生成器服务
 
-对于从**文档存储服务**向[文档生成器服务](./../.document-builder-api.md)的传入请求进行验证。
+对于从**文档存储服务**向[文档生成器服务](../../document-builder-api.md)的传入请求进行验证。
 
 请求文档生成器服务的示例参数:
 
