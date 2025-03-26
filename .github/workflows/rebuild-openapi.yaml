@@ -6,7 +6,6 @@ on:
   workflow_dispatch:
   
 env:
-  EVENT: ${{ github.event_name }}
   REF: ${{ github.ref_name }}
 
 jobs:

@@ -1,0 +1,39 @@
+name: ReBuild office-js-api
+
+run-name: "ReBuild office-js-api"
+
+on:
+  workflow_dispatch:
+
+env:
+  REF: ${{ github.ref_name }}
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+    
+    - name: Set up Node.js
+        uses: actions/setup-node@v4
+
+    - name: Checkout api.onlyoffice.com Repository
+      uses: actions/checkout@v4
+    
+    - name: Checkout repository office-js-api
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ REF }}
+          path: office-js-api
+    
+    - name: Checkout build_tools repository
+        uses: actions/checkout@v4
+        with:
+          repository: ONLYOFFICE/build_tools
+          token: ${{ secrets.READ_PAT }}
+          ref: ${{ REF }}
+          path: build_tools
