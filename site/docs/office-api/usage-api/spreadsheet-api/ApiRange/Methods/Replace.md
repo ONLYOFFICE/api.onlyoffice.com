@@ -5,7 +5,7 @@ Replaces specific information to another one in a range.
 ## Syntax
 
 ```javascript
-expression.Replace(oReplaceData);
+expression.Replace(What, Replacement, LookAt, SearchOrder, SearchDirection, MatchCase, ReplaceAll);
 ```
 
 `expression` - A variable that represents a [ApiRange](../ApiRange.md) class.
@@ -14,11 +14,17 @@ expression.Replace(oReplaceData);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| oReplaceData | Required | [ReplaceData](../../Enumeration/ReplaceData.md) |  | The data used to make search and replace. |
+| What | Required | string \| undefined |  | The data to search for. |
+| Replacement | Required | string |  | The replacement string. |
+| LookAt | Required | [XlLookAt](../../Enumeration/XlLookAt.md) |  | Specifies whether the whole search text or any part of the search text is matched. |
+| SearchOrder | Required | [XlSearchOrder](../../Enumeration/XlSearchOrder.md) |  | Range search order - by rows or by columns. |
+| SearchDirection | Required | [XlSearchDirection](../../Enumeration/XlSearchDirection.md) |  | Range search direction - next match or previous match. |
+| MatchCase | Required | boolean |  | Case sensitive or not. The default value is "false". |
+| ReplaceAll | Required | boolean |  | Specifies if all the found data will be replaced or not. The default value is "true". |
 
 ## Returns
 
-[ApiRange](../../ApiRange/ApiRange.md) \| null
+This method doesn't return any data.
 
 ## Example
 

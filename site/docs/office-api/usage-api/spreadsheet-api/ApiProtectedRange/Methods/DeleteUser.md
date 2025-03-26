@@ -18,7 +18,7 @@ expression.DeleteUser(sId);
 
 ## Returns
 
-boolean
+bool
 
 ## Example
 

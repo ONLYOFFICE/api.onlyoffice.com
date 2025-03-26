@@ -19,7 +19,7 @@ expression.InsertWatermark(sText, bIsDiagonal);
 
 ## Returns
 
-boolean
+[ApiDrawing](../../ApiDrawing/ApiDrawing.md)
 
 ## Example
 

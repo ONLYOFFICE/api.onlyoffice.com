@@ -11,6 +11,8 @@ Enumeration
 - "horizontal"
 - "clockwise45"
 - "counterclockwise45"
+- "clockwise90"
+- "counterclockwise90"
 
 
 ## Example

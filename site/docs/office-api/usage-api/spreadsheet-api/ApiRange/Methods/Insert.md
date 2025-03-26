@@ -14,7 +14,7 @@ expression.Insert(shift);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| shift | Optional | string |  | Specifies which way to shift the cells ("right", "down"). |
+| shift | Required | string |  | Specifies which way to shift the cells ("right", "down"). |
 
 ## Returns
 
