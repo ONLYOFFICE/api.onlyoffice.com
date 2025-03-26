@@ -1,6 +1,6 @@
 # GetDocContent
 
-Deprecated in 6.2.\
+Deprecated in 6.2.
 Returns the shape inner contents where a paragraph or text runs can be inserted.
 
 ## Syntax

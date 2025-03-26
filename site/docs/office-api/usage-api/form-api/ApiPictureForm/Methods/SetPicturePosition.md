@@ -1,8 +1,8 @@
 # SetPicturePosition
 
-Sets the picture position inside the current form:\
--**0** - the picture is placed on the left/top;\
--**50** - the picture is placed in the center;\
+Sets the picture position inside the current form:
+-**0** - the picture is placed on the left/top;
+-**50** - the picture is placed in the center;
 -**100** - the picture is placed on the right/bottom.
 
 ## Syntax

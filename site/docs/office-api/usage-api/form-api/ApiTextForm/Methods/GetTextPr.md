@@ -1,6 +1,6 @@
 # GetTextPr
 
-Returns the text properties from the current form.\
+Returns the text properties from the current form.
 Used if possible for this type of form*
 
 ## Syntax

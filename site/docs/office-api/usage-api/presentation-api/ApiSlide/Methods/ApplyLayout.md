@@ -1,6 +1,6 @@
 # ApplyLayout
 
-Applies the specified layout to the current slide.\
+Applies the specified layout to the current slide.
 The layout must be in slide master.
 
 ## Syntax

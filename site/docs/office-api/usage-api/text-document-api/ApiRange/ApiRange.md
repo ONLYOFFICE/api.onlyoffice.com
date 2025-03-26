@@ -9,6 +9,7 @@ Represents the ApiRange class.
 | ------ | ------- | ----------- |
 | [AddBookmark](./Methods/AddBookmark.md) | boolean | Adds a bookmark to the specified range. |
 | [AddComment](./Methods/AddComment.md) | [ApiComment](../ApiComment/ApiComment.md) | Adds a comment to the current range. |
+| [AddField](./Methods/AddField.md) | boolean | Adds the field by instruction line to current range. 💡  This method removes text within range.  |
 | [AddHyperlink](./Methods/AddHyperlink.md) | [ApiHyperlink](../ApiHyperlink/ApiHyperlink.md) \| null | Adds a hyperlink to the specified range. |
 | [AddText](./Methods/AddText.md) | boolean | Adds a text to the specified position. |
 | [Delete](./Methods/Delete.md) | boolean | Deletes all the contents from the current range. |
@@ -24,7 +25,8 @@ Represents the ApiRange class.
 | [GetText](./Methods/GetText.md) | String | Returns a text from the specified range. |
 | [GetTextPr](./Methods/GetTextPr.md) | [ApiTextPr](../ApiTextPr/ApiTextPr.md) | Returns the merged text properties of the entire range. |
 | [IntersectWith](./Methods/IntersectWith.md) | [ApiRange](../ApiRange/ApiRange.md) \| null | Returns a new range as the intersection of the current range with another range. The current range has not changed. |
-| [Select](./Methods/Select.md) | None | Sets the selection to the specified range. |
+| [MoveCursorToPos](./Methods/MoveCursorToPos.md) | boolean | Moves a cursor to a specified position of the current range object. If there is any selection in the document, it will be removed. |
+| [Select](./Methods/Select.md) | boolean | Sets the selection to the specified range. |
 | [SetBold](./Methods/SetBold.md) | [ApiRange](../ApiRange/ApiRange.md) \| null | Sets the bold property to the text character. |
 | [SetCaps](./Methods/SetCaps.md) | [ApiRange](../ApiRange/ApiRange.md) \| null | Specifies that any lowercase characters in the current text Range are formatted for display only as their capital letter character equivalents. |
 | [SetColor](./Methods/SetColor.md) | [ApiRange](../ApiRange/ApiRange.md) \| null | Sets the text color to the current text Range in the RGB format. |
@@ -34,14 +36,14 @@ Represents the ApiRange class.
 | [SetFontSize](./Methods/SetFontSize.md) | [ApiRange](../ApiRange/ApiRange.md) \| null | Sets the font size to the characters of the current text Range. |
 | [SetHighlight](./Methods/SetHighlight.md) | [ApiRange](../ApiRange/ApiRange.md) \| null | Specifies a highlighting color which is applied as a background to the contents of the current Range. |
 | [SetItalic](./Methods/SetItalic.md) | [ApiRange](../ApiRange/ApiRange.md) \| null | Sets the italic property to the text character. |
-| [SetPosition](./Methods/SetPosition.md) | [ApiRange](../ApiRange/ApiRange.md) \| null | Specifies the amount by which text is raised or lowered for the current Range in relation to the default\ baseline of the surrounding non-positioned text. |
+| [SetPosition](./Methods/SetPosition.md) | [ApiRange](../ApiRange/ApiRange.md) \| null | Specifies the amount by which text is raised or lowered for the current Range in relation to the default baseline of the surrounding non-positioned text. |
 | [SetShd](./Methods/SetShd.md) | [ApiRange](../ApiRange/ApiRange.md) \| null | Specifies the shading applied to the contents of the current text Range. |
-| [SetSmallCaps](./Methods/SetSmallCaps.md) | [ApiRange](../ApiRange/ApiRange.md) \| null | Specifies that all the lowercase letter characters in the current text Range are formatted for display only as their capital\ letter character equivalents which are two points smaller than the actual font size specified for this text. |
+| [SetSmallCaps](./Methods/SetSmallCaps.md) | [ApiRange](../ApiRange/ApiRange.md) \| null | Specifies that all the lowercase letter characters in the current text Range are formatted for display only as their capital letter character equivalents which are two points smaller than the actual font size specified for this text. |
 | [SetSpacing](./Methods/SetSpacing.md) | [ApiRange](../ApiRange/ApiRange.md) \| null | Sets the text spacing measured in twentieths of a point. |
 | [SetStartPos](./Methods/SetStartPos.md) | boolean | Sets the start position of the current range object. |
 | [SetStrikeout](./Methods/SetStrikeout.md) | [ApiRange](../ApiRange/ApiRange.md) \| null | Specifies that the contents of the current Range are displayed with a single horizontal line through the range center. |
 | [SetStyle](./Methods/SetStyle.md) | [ApiRange](../ApiRange/ApiRange.md) \| null | Sets the style to the current Range. |
 | [SetTextPr](./Methods/SetTextPr.md) | [ApiRange](../ApiRange/ApiRange.md) \| null | Sets the text properties to the current Range. |
-| [SetUnderline](./Methods/SetUnderline.md) | [ApiRange](../ApiRange/ApiRange.md) \| null | Specifies that the contents of the current Range are displayed along with a line appearing directly below the character\ (less than all the spacing above and below the characters on the line). |
-| [SetVertAlign](./Methods/SetVertAlign.md) | [ApiRange](../ApiRange/ApiRange.md) \| null | Specifies the alignment which will be applied to the Range contents in relation to the default appearance of the Range text:\ -**"baseline"** - the characters in the current text Range will be aligned by the default text baseline.\ -**"subscript"** - the characters in the current text Range will be aligned below the default text baseline.\ -**"superscript"** - the characters in the current text Range will be aligned above the default text baseline. |
+| [SetUnderline](./Methods/SetUnderline.md) | [ApiRange](../ApiRange/ApiRange.md) \| null | Specifies that the contents of the current Range are displayed along with a line appearing directly below the character (less than all the spacing above and below the characters on the line). |
+| [SetVertAlign](./Methods/SetVertAlign.md) | [ApiRange](../ApiRange/ApiRange.md) \| null | Specifies the alignment which will be applied to the Range contents in relation to the default appearance of the Range text: -**"baseline"** - the characters in the current text Range will be aligned by the default text baseline. -**"subscript"** - the characters in the current text Range will be aligned below the default text baseline. -**"superscript"** - the characters in the current text Range will be aligned above the default text baseline. |
 | [ToJSON](./Methods/ToJSON.md) | JSON | Converts the ApiRange object into the JSON object. |
