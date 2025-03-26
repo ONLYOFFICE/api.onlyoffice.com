@@ -28,10 +28,19 @@ jobs:
     
     - name: Checkout office-js-api repository
       uses: actions/checkout@v4
+      continue-on-error: true
       with:
         repository: ONLYOFFICE/office-js-api
         token: ${{ secrets.READ_PAT }}
         ref: ${{ github.ref_name }}
+        path: office-js-api
+    
+    - name: Checkout office-js-api repository from master
+      if: failure()
+      uses: actions/checkout@v4
+      with:
+        repository: ONLYOFFICE/office-js-api
+        token: ${{ secrets.READ_PAT }}
         path: office-js-api
     
     - name: Checkout build_tools repository
