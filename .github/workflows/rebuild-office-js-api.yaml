@@ -31,7 +31,7 @@ jobs:
       with:
         repository: ONLYOFFICE/office-js-api
         token: ${{ secrets.READ_PAT }}
-        ref: ${{ REF }}
+        ref: ${ REF }
         path: office-js-api
     
     - name: Checkout build_tools repository
@@ -39,7 +39,7 @@ jobs:
       with:
         repository: ONLYOFFICE/build_tools
         token: ${{ secrets.READ_PAT }}
-        ref: ${{ REF }}
+        ref: ${ REF }
         path: build_tools
     
     - name: Checkout sdkjs repository
@@ -55,7 +55,7 @@ jobs:
       with:
         repository: ONLYOFFICE/sdkjs-forms
         token: ${{ secrets.READ_PAT }}
-        ref: ${{ REF }}
+        ref: ${ REF }
         path: sdkjs-forms
     
     - name: Set up Git
