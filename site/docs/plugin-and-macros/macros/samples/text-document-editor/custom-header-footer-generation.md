@@ -1,4 +1,4 @@
-# Custom header footer generation
+# Custom header and footer generation
 
 Applies predefined headers and footers to all pages in the document.
 

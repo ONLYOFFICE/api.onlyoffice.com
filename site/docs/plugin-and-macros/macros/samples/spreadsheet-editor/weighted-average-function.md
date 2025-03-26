@@ -13,7 +13,7 @@ Creates a custom function to calculate a weighted average.
 
     // Insert the formula into cell H2.
     // This calls the custom function 'weightedAverage' that was registered above.
-    oWorksheet.GetRange("H2").SetValue("=WA(A$1:A$3, B$1:B$3)");
+    oWorksheet.GetRange("H2").SetValue("=wa(A$2:A$6, B$2:B$6)");
 
     // Optionally, insert a label in cell G2.
     oWorksheet.GetRange("G2").SetValue("Average:");
@@ -59,7 +59,7 @@ Creates a custom function to calculate a weighted average.
 })();
 ```
 
-Methods used: [GetActiveSheet](../../../../office-api/usage-api/spreadsheet-api/Api/Methods/GetActiveSheet.md), [GetRange](../../../../office-api/usage-api/spreadsheet-api/Api/Methods/GetRange.md), [SetValue](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/SetValue.md)
+Methods used: [GetActiveSheet](../../../../office-api/usage-api/spreadsheet-api/Api/Methods/GetActiveSheet.md), [GetRange](../../../../office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetRange.md), [SetValue](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/SetValue.md)
 
 ## Result
 

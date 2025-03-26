@@ -26,7 +26,7 @@ Counts the total number of shapes in a presentation by iterating through all sli
     //Create a slide and show it there
     var slide = Api.CreateSlide();
     var shape = Api.CreateShape("rect", 100 * 36000, 50 * 36000);
-    shape.SetPosition(608_400, 1_267_200);
+    shape.SetPosition(608400, 1267200);
 
     const paragraph = Api.CreateParagraph();
     paragraph.AddText("Number of shapes: " + count.toString());

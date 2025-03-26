@@ -37,41 +37,7 @@ Merges data from all sheets into the active sheet by copying the used range of e
 })();
 ```
 
-Methods used: [GetSheets](../../../../office-api/usage-api/spreadsheet-api/Api/Methods/GetSheets.md), [GetActiveSheet](../../../../office-api/usage-api/spreadsheet-api/Api/Methods/GetActiveSheet.md), [GetName](../../../../office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetName.md), [GetUsedRange](../../../../office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetUsedRange.md), [GetValue](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/GetValue.md), [GetRange](../../../../office-api/usage-api/spreadsheet-api/Api/Methods/GetRange.md), [SetValue](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/SetValue.md)
-
-## Reference Microsoft VBA macro code
-
-<!-- code generated with AI -->
-
-```vb
-Sub MergeSheets()
-    Dim ws As Worksheet
-    Dim activeWs As Worksheet
-    Dim lastRow As Long
-    Dim lastCol As Long
-    Dim targetRow As Long
-    targetRow = 1
-
-    Set activeWs = ActiveSheet
-
-    ' Loop through all sheets
-    For Each ws In ThisWorkbook.Sheets
-        If ws.Name <> activeWs.Name Then
-            lastRow = ws.Cells(Rows.Count, 1).End(xlUp).Row
-            lastCol = ws.Cells(1, Columns.Count).End(xlToLeft).Column
-
-            ' Copy data range from sheet
-            ws.Range(ws.Cells(1, 1), ws.Cells(lastRow, lastCol)).Copy
-            activeWs.Cells(targetRow, 1).PasteSpecial Paste:=xlPasteValues
-
-            ' Update target row position
-            targetRow = targetRow + lastRow + 1
-        End If
-    Next ws
-
-    Application.CutCopyMode = False
-End Sub
-```
+Methods used: [GetSheets](../../../../office-api/usage-api/spreadsheet-api/Api/Methods/GetSheets.md), [GetActiveSheet](../../../../office-api/usage-api/spreadsheet-api/Api/Methods/GetActiveSheet.md), [GetName](../../../../office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetName.md), [GetUsedRange](../../../../office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetUsedRange.md), [GetValue](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/GetValue.md), [GetRange](../../../../office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetRange.md), [SetValue](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/SetValue.md)
 
 ## Result
 

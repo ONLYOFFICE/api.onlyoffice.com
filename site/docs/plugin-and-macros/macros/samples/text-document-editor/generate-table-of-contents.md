@@ -1,48 +1,12 @@
 # Generate table of contents
 
-Generates a Table of Contents by scanning the document for headings.
+Generates a table of contents by scanning the document for headings.
 
 <!-- This code snippet is shown in the screenshot. -->
 
 <!-- eslint-skip -->
 
 ```ts
-function generateTableOfContents() {
-    var document = Api.GetDocument();
-    var paragraphs = document.GetAllParagraphs();
-    var tocContent = [];
-
-    // Loop through paragraphs to find headings
-    for (var i = 0; i < paragraphs.length; i++) {
-        var element = paragraphs[i];
-
-        var styleName = element.GetStyle()?.GetName();
-
-        // Check if paragraph is a heading based on its style name
-        if (styleName && styleName.toString().match(/Heading [1-6]/)) {
-            var headingText = element.GetText();
-            var headingLevel = parseInt(styleName.replace("Heading ", ""), 10);
-            tocContent.push({ text: headingText, level: headingLevel });
-        }
-    }
-
-    // Insert Table of Contents at the beginning of the document
-    if (tocContent.length > 0) {
-        var tocParagraph = Api.CreateParagraph();
-        tocParagraph.AddText("Table of Contents");
-        tocParagraph.SetBold(true);
-        tocParagraph.SetFontSize(32);
-        document.InsertContent([tocParagraph]);
-
-        tocContent.forEach(function (entry) {
-            var tocEntryParagraph = Api.CreateParagraph();
-            tocEntryParagraph.AddText("".padStart(entry.level * 4) + entry.text);
-            tocEntryParagraph.SetFontSize(28);
-            document.InsertContent([tocEntryParagraph]);
-        });
-    }
-}
-
 (function () {
     var document = Api.GetDocument();
     var tocPr = { "ShowPageNums": true, "RightAlgn": true, "LeaderType": "underline", "FormatAsLinks": true, "BuildFrom": { "OutlineLvls": 10 }, "TocStyle": "modern" };
@@ -50,7 +14,8 @@ function generateTableOfContents() {
 })();
 ```
 
-Methods used: [GetDocument](../../../../office-api/usage-api/text-document-api/Api/Methods/GetDocument.md), [GetAllParagraphs](../../../../office-api/usage-api/text-document-api/ApiDocument/Methods/GetAllParagraphs.md), [GetText](../../../../office-api/usage-api/text-document-api/ApiParagraph/Methods/GetText.md), [GetStyle](../../../../office-api/usage-api/text-document-api/ApiParagraph/Methods/GetStyle.md), [CreateParagraph](../../../../office-api/usage-api/text-document-api/Api/Methods/CreateParagraph.md), [AddText](../../../../office-api/usage-api/text-document-api/ApiParagraph/Methods/AddText.md), [SetBold](../../../../office-api/usage-api/text-document-api/ApiParagraph/Methods/SetBold.md), [SetFontSize](../../../../office-api/usage-api/text-document-api/ApiParagraph/Methods/SetFontSize.md), [InsertContent](../../../../office-api/usage-api/text-document-api/ApiDocument/Methods/InsertContent.md), [AddTableOfContents](../../../../office-api/usage-api/text-document-api/ApiDocument/Methods/AddTableOfContents.md)
+Methods used: [GetDocument](../../../../office-api/usage-api/text-document-api/Api/Methods/GetDocument.md),
+[AddTableOfContents](../../../../office-api/usage-api/text-document-api/ApiDocument/Methods/AddTableOfContents.md)
 
 ## Reference Microsoft VBA macro code
 
