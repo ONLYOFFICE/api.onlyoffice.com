@@ -2,7 +2,7 @@
 sidebar_position: -8
 ---
 
-# Co-editing
+# 共同编辑问题
 
 ## 如何检查我需要多少个连接？
 
@@ -14,7 +14,7 @@ sidebar_position: -8
 
 ## 如何找到当前正在编辑文档的用户的信息？
 
-您可以使用API向**文档命令服务**发送 POST 请求。将 *c* 参数设置为[info](../../additional-api/command-service/info.md) 与 *key* 参数一起使用，以标识您要查找有关信息的文档。参数作为请求正文中JSON对象的一部分发送：
+您可以使用API向**文档命令服务**发送 POST 请求。将 *c* 参数设置为 [info](../../additional-api/command-service/info.md) 与 *key* 参数一起使用，以标识您要查找有关信息的文档。参数作为请求正文中JSON对象的一部分发送：
 
   ``` json
   {
@@ -55,4 +55,4 @@ sidebar_position: -8
 
 因此，具有上述请求中 ID 的两个用户（"6d5a81d0"和"78e1e841"）将无法使用 **Khirz6zTPdfd7** 键编辑文档。
 
-有关使用来自**文档命令服务**的请求的更多信息，请参见 [此页面](../../additional-api/command-service/command-service.md)。
+有关使用来自**文档命令服务**的请求的更多信息，请参见[此页面](../../additional-api/command-service/command-service.md)。

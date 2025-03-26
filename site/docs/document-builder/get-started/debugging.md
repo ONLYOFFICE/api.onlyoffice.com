@@ -1,5 +1,6 @@
 ---
 sidebar_position: -1
+sidebar_class_name: hidden
 ---
 
 import Tabs from '@theme/Tabs';

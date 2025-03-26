@@ -41,7 +41,7 @@ export const DocsFeatures: Features = {
       icon: <DocSpaceApiIcon/>,
     },
     {
-      title: 'Plugins and Macros',
+      title: 'Plugins and macros',
       link: 'plugin-and-macros/get-started/overview',
       description: (
         <>
@@ -117,7 +117,7 @@ export const DocSpaceFeatures: Features = {
       icon: <DocsApiIcon/>,
     },
     {
-      title: 'API Backend',
+      title: 'API backend',
       link: 'api-backend/get-started/basic-concepts',
       description: (
         <>
@@ -129,7 +129,7 @@ export const DocSpaceFeatures: Features = {
       icon: <DocSpaceApiIcon/>,
     },
     {
-      title: 'For Hosting Providers',
+      title: 'For hosting providers',
       link: 'for-hosting-providers/get-started/authentication',
       description: (
         <>
@@ -146,7 +146,7 @@ export const WorkspaceFeatures: Features = {
   linkPrefix: 'workspace',
   items: [
     {
-      title: 'API Backend',
+      title: 'API backend',
       link: 'api-backend/get-started/basic-concepts',
       description: (
         <>
@@ -160,7 +160,7 @@ export const WorkspaceFeatures: Features = {
       icon: <DocSpaceApiIcon/>
     },
     {
-      title: 'For Hosting Providers',
+      title: 'For hosting providers',
       link: 'for-hosting-providers/get-started/authentication',
       description: (
         <>

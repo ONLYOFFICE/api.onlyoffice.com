@@ -52,13 +52,15 @@ The reference figure and the steps below explain the process of viewing the hist
          },
        ],
      })
-   }
+   };
    
-   const docEditor = new DocsAPI.DocEditor("placeholder", {
+   const config = {
      events: {
        onRequestHistory,
      },
-   })
+   };
+
+   const docEditor = new DocsAPI.DocEditor("placeholder", config);
    ```
 
    <img alt="Opening File" src="/assets/images/editor/history_open.png" width="300px" />
@@ -77,13 +79,15 @@ The reference figure and the steps below explain the process of viewing the hist
        url: "https://example.com/url-to-example-document.docx",
        version: 2,
      })
-   }
+   };
    
-   const docEditor = new DocsAPI.DocEditor("placeholder", {
+   const config = {
      events: {
        onRequestHistoryData,
      },
-   })
+   };
+
+   const docEditor = new DocsAPI.DocEditor("placeholder", config);
    ```
 
    ![History](/assets/images/editor/history.png)
@@ -121,13 +125,15 @@ The reference figure and the steps below explain the process of viewing the hist
          },
        ],
      })
-   }
+   };
    
-   const docEditor = new DocsAPI.DocEditor("placeholder", {
+   const cconfig = {
      events: {
        onRequestRestore,
      },
-   })
+   };
+
+   const docEditor = new DocsAPI.DocEditor("placeholder", config);
    ```
 
    ![onRequestRestore](/assets/images/editor/onRequestRestore.png)
@@ -141,13 +147,15 @@ The reference figure and the steps below explain the process of viewing the hist
    ``` ts
    function onRequestHistoryClose() {
      document.location.reload()
-   }
+   };
    
-   const docEditor = new DocsAPI.DocEditor("placeholder", {
+   const configg = {
      events: {
        onRequestHistoryClose,
      },
-   })
+   };
+
+   const docEditor = new DocsAPI.DocEditor("placeholder", config);
    ```
 
    ![onRequestHistoryClose](/assets/images/editor/onRequestHistoryClose.png)

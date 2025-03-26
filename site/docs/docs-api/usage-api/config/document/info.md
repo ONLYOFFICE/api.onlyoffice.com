@@ -108,7 +108,7 @@ Defines the document uploading date.
 ## Example
 
 ``` ts
-const docEditor = new DocsAPI.DocEditor("placeholder", {
+const config = {
   document: {
     info: {
       favorite: false,
@@ -124,5 +124,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
     }
     ,
   },
-})
+};
+
+const docEditor = new DocsAPI.DocEditor("placeholder", config);
 ```

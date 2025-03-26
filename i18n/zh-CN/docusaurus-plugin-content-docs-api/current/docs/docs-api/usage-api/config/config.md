@@ -2,11 +2,13 @@
 sidebar_position: -4
 ---
 
-# Config
+# 配置
 
 config base 部分允许更改使用的平台类型、文档显示大小（宽度和高度）和打开文档的类型。
 
 ## documentType
+
+`类型: string`
 
 定义要打开的文档类型：
 
@@ -17,29 +19,31 @@ config base 部分允许更改使用的平台类型、文档显示大小（宽�
 
 <!--- **diagram** - 图表文档（*.vsdm, .vsdx, .vssm, .vssx, .vstm, .vstx*)-->
 
-类型: string
+:::请注意
+自 6.1 版起，**text**、**spreadsheet** 和 **presentation**值已被弃用。请使用新值。
+:::
 
-示例: "cell"
-
-> 自 6.1 版起，**text**、**spreadsheet** 和 **presentation**值已被弃用。请使用新值。
+**示例**: `"cell"`
 
 ## 高度
 
+`类型: string`
+
 定义浏览器窗口中的文档高度（默认为**100%**）。
 
-类型: string
-
-示例: "100%"
+**示例**: `"100%"`
 
 ## 令牌
 
-以[令牌](../../additional-api/signature/browser.md)的形式定义添加到 **ONLYOFFICE 文档** 配置的加密签名。
+`类型: string`
 
-类型: string
+以[令牌](../../additional-api/signature/browser.md)的形式定义添加到 **ONLYOFFICE 文档**配置的加密签名。
 
-示例: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.e30.LwimMJA3puF3ioGeS-tfczR3370GXBZMIL-bdpu4hOU"
+**示例**: `"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.e30.LwimMJA3puF3ioGeS-tfczR3370GXBZMIL-bdpu4hOU"`
 
 ## 类型
+
+`类型: string`
 
 定义用于访问文档的平台类型。可以是：
 
@@ -49,19 +53,15 @@ config base 部分允许更改使用的平台类型、文档显示大小（宽�
 
 默认值为 **desktop**。
 
-类型: string
-
-示例: "desktop"
+**示例**: `"desktop"`
 
 ## width
 
+`类型: string`
+
 定义浏览器窗口中的文档宽度（默认为**100%**）
 
-类型: string
-
-示例: "100%"
-
-**示例**
+**示例**: `"100%"`
 
 ## 示例
 

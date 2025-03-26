@@ -25,7 +25,7 @@ Create an HTML file. Add a combo box, a text field, and a button. The HTML file 
                 width: 800px;
             }
         </style>
-        <script src="{PORTAL_SRC}/static/scripts/sdk/1.0.0/api.js"></script>
+        <script src="{PORTAL_SRC}/static/scripts/sdk/1.0.1/api.js"></script>
     </head>
     <body>
         <div id="holder-buttons" class="holder" style="width: 400px; margin-top: 300px;">
@@ -42,7 +42,7 @@ Create an HTML file. Add a combo box, a text field, and a button. The HTML file 
 </html>
 ```
 
-The API JavaScript file can normally be found in the following DocSpace folder: **\{PORTAL_SRC\}/static/scripts/sdk/1.0.0/api.js** where **\{PORTAL_SRC\}** is the name of the server with the ONLYOFFICE DocSpace installed.
+The API JavaScript file can normally be found in the following DocSpace folder: **\{PORTAL_SRC\}/static/scripts/sdk/1.0.1/api.js** where **\{PORTAL_SRC\}** is the name of the server with the ONLYOFFICE DocSpace installed.
 
 ## Step 2. Initialize the Manager mode
 
@@ -119,7 +119,7 @@ function onButtonClick() {
   <head>
     <meta charset="UTF-8">
     <title>DocSpace JavaScript SDK</title>
-    <script src="{PORTAL_SRC}/static/scripts/sdk/1.0.0/api.js"></script>
+    <script src="{PORTAL_SRC}/static/scripts/sdk/1.0.1/api.js"></script>
     <style>
       .holder {
         margin: auto;

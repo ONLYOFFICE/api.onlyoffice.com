@@ -9,7 +9,7 @@ The lifecycle of [opening](./opening-file.md) an editor can be defined by the se
 Add the script initializing the Document Editor with the configuration for the document you want to open:
 
 ``` ts
-const docEditor = new DocsAPI.DocEditor("placeholder", {
+const config = {
   document: {
     fileType: "docx",
     key: "Khirz6zTPdfd7",
@@ -18,7 +18,9 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
   },
   documentType: "word",
   token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkb2N1bWVudCI6eyJmaWxlVHlwZSI6ImRvY3giLCJrZXkiOiJLaGlyejZ6VFBkZmQ3IiwidGl0bGUiOiJFeGFtcGxlIERvY3VtZW50IFRpdGxlLmRvY3giLCJ1cmwiOiJodHRwczovL2V4YW1wbGUuY29tL3VybC10by1leGFtcGxlLWRvY3VtZW50LmRvY3gifSwiZG9jdW1lbnRUeXBlIjoid29yZCJ9.7IpEJxdOvBQ0kJ8l6ZegIV4tX5vsPbZZCDDVmcFROXc",
-})
+};
+
+const docEditor = new DocsAPI.DocEditor("placeholder", config);
 ```
 
 Specify there the following events:
@@ -28,19 +30,21 @@ Specify there the following events:
    ``` ts
    function onAppReady() {
      console.log("ONLYOFFICE Document Editor is ready")
-   }
+   };
 
-   const docEditor = new DocsAPI.DocEditor("placeholder", {
+   const config = {
      events: {
        onAppReady,
      },
-   })
+   };
+
+   const docEditor = new DocsAPI.DocEditor("placeholder", config);
    ```
 
    After that, the [showMessage](../../usage-api/methods.md#showmessage) method can be called which displays a tooltip with a message:
 
    ``` ts
-   docEditor.showMessage(message)
+   docEditor.showMessage(message);
    ```
 
    ## message
@@ -58,13 +62,15 @@ Specify there the following events:
    ``` ts
    function onError(event) {
      console.log(`ONLYOFFICE Document Editor reports an error: code ${event.data.errorCode}, description ${event.data.errorDescription}`)
-   }
+   };
 
-   const docEditor = new DocsAPI.DocEditor("placeholder", {
+   const config = {
      events: {
        onError,
      },
-   })
+   };
+
+   const docEditor = new DocsAPI.DocEditor("placeholder", config);
    ```
 
    For example, it may be a conversion error or an error loading a certain editor component. Further work will not be available.
@@ -74,13 +80,15 @@ Specify there the following events:
    ``` ts
    function onOutdatedVersion() {
      location.reload(true)
-   }
+   };
 
-   const docEditor = new DocsAPI.DocEditor("placeholder", {
+   const config = {
      events: {
        onOutdatedVersion,
      },
-   })
+   };
+
+   const docEditor = new DocsAPI.DocEditor("placeholder", config);
    ```
 
    An [error](../../more-information/troubleshooting.md#the-file-version-has-been-changed) will occur and further work will not be available. If the event is not processed, the file will be opened for viewing only. The editor must be reinitialized with a new key.
@@ -104,12 +112,15 @@ Specify there the following events:
        },
        token: "...",
      })
-   }
-   const docEditor = new DocsAPI.DocEditor("placeholder", {
+   };
+
+   const config = {
      events: {
        onRequestHistory,
      },
-   })
+   };
+
+   const docEditor = new DocsAPI.DocEditor("placeholder", config);
    ```
 
    In this case, the [refreshFile](../../usage-api/methods.md#refreshfile) method is called and the file version is updated with a new key value without reloading the editor.
@@ -119,12 +130,15 @@ Specify there the following events:
    ``` ts
    function onUserActionRequired() {
      console.log("Enter a password")
-   }
-   const docEditor = new DocsAPI.DocEditor("placeholder", {
+   };
+
+   const config = {
      events: {
        onUserActionRequired,
      },
-   })
+   };
+
+   const docEditor = new DocsAPI.DocEditor("placeholder", config);
    ```
 
    This happens when  the user needs to enter a password to open the protected document or to select an encoding or a delimiter for the `txt` or `csv` files.
@@ -134,13 +148,15 @@ Specify there the following events:
    ``` ts
    function onDocumentReady() {
      console.log("Document is loaded")
-   }
+   };
 
-   const docEditor = new DocsAPI.DocEditor("placeholder", {
+   const config = {
      events: {
        onDocumentReady,
      },
-   })
+   };
+
+   const docEditor = new DocsAPI.DocEditor("placeholder", config);
    ```
 
    After that, the requests to the [Automation API](../../usage-api/automation-api.md) can be sent.
@@ -161,23 +177,25 @@ Specify there the following events:
        return
      }
      docEditor.destroyEditor()
-   }
+   };
 
-   const docEditor = new DocsAPI.DocEditor("placeholder", {
+   const config = {
      events: {
        onRequestClose,
      },
-   })
+   };
+
+   const docEditor = new DocsAPI.DocEditor("placeholder", config);
    ```
 
    The `onRequestClose` event can be also executed after the [requestClose](../../usage-api/methods.md#requestclose) method. It is recommended to call this method before the [destroyEditor](../../usage-api/methods.md#destroyeditor) method to check if there is some unsaved data in the editor or not. If the unsaved data exists, then the dialog box will be displayed to ask the user whether they want to continue editing or close the editor losing all the unsaved data. If the `Close` option will be chosen, then the `onRequestClose` event will be called:
 
    ``` ts
-   docEditor.requestClose()
+   docEditor.requestClose();
    ```
 
    The `destroyEditor` method is used to destroy `docEditor` object. This method can be called when you want to reinit document editor with another configurations:
 
    ``` ts
-   docEditor.destroyEditor()
+   docEditor.destroyEditor();
    ```

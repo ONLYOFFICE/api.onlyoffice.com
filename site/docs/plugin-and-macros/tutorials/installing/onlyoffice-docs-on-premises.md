@@ -41,7 +41,7 @@ docker run -itd -p 80:80 -v /absolutly_path_to_work_dir:/var/www/onlyoffice/docu
 In [ONLYOFFICE Docs config](../../../docs-api/usage-api/config/editor/plugins.md), add the relative path to the *config.json* file of the created plugin to the *plugins.pluginsData* parameter:
 
 ``` ts
-const docEditor = new DocsAPI.DocEditor("placeholder", {
+const config = {
   editorConfig: {
     plugins: {
       autostart: [
@@ -54,7 +54,9 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
       ],
     },
   },
-})
+};
+
+const docEditor = new DocsAPI.DocEditor("placeholder", config);
 ```
 
 where **example.com** is the name of the server where document manager and document storage service are installed and the plugins are placed. See the [How it works](../../../docs-api/get-started/how-it-works/how-it-works.md) section to find out more on ONLYOFFICE Docs service client-server interactions.
@@ -154,7 +156,7 @@ The path to the folder depends on the operating system you use:
 **Option 3.** Edit the [ONLYOFFICE Docs config](../../../docs-api/usage-api/config/editor/plugins.md) by removing the corresponding plugin. The plugin will become unavailable for all portal users upon the editor next start:
 
 ``` ts
-const docEditor = new DocsAPI.DocEditor("placeholder", {
+const config = {
   editorConfig: {
     plugins: {
       autostart: [
@@ -167,7 +169,9 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
       ],
     },
   },
-})
+};
+
+const docEditor = new DocsAPI.DocEditor("placeholder", config);
 ```
 
 The plugins will be removed for all the users. [In some cases](https://nodejs.org/docs/latest/api/fs.html#fs_availability), service restart is required.

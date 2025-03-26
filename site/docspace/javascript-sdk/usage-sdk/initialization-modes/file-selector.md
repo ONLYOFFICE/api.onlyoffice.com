@@ -2,7 +2,7 @@
 sidebar_position: 3
 ---
 
-# File Selector
+# File selector
 
 Opens the file selector and allows you to select a file from a list of available files.
 

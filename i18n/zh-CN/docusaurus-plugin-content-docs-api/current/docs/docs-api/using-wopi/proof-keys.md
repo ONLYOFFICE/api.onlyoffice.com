@@ -2,11 +2,11 @@
 sidebar_position: -6
 ---
 
-# Proof keys
+# 证明密钥
 
 要限制公众访问您的数据，必须配置online office和集成商之间的安全请求交换。
 
-集成商必须检查是否从 ONLYOFFICE 文档收到请求。它为此目的使用 [证明密钥](https://docs.microsoft.com/en-us/microsoft-365/cloud-storage-partner-program/online/scenarios/proofkeys)。ONLYOFFICE 文档使用私钥对请求进行签名。相应的公钥写在 [WOPI discovery XML](./wopi-discovery.md) 的 proof-key 元素中。集成商使用公钥检查私钥。签名随 **X-WOPI-Proof** 和 **X-WOPI-ProofOld** HTTP 标头中的每个请求一起发送。私钥和公钥通过以下配置参数设置：
+集成商必须检查是否从 ONLYOFFICE 文档收到请求。它为此目的使用[证明密钥](https://docs.microsoft.com/en-us/microsoft-365/cloud-storage-partner-program/online/scenarios/proofkeys)。ONLYOFFICE 文档使用私钥对请求进行签名。相应的公钥写在 [WOPI discovery XML](./wopi-discovery.md) 的 proof-key 元素中。集成商使用公钥检查私钥。签名随 **X-WOPI-Proof** 和 **X-WOPI-ProofOld** HTTP 标头中的每个请求一起发送。私钥和公钥通过以下配置参数设置：
 
 ## 参数
 

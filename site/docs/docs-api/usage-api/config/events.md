@@ -11,13 +11,15 @@ The function called when the application is loaded into the browser.
 ``` ts
 function onAppReady() {
   console.log("ONLYOFFICE Document Editor is ready")
-}
+};
 
-const docEditor = new DocsAPI.DocEditor("placeholder", {
+const config = {
   events: {
     onAppReady,
   },
-})
+};
+
+const docEditor = new DocsAPI.DocEditor("placeholder", config);
 ```
 
 ## onCollaborativeChanges
@@ -29,13 +31,15 @@ The function called when the document is co-edited by the other user in the *str
 ``` ts
 function onCollaborativeChanges() {
   console.log("The document changed by collaborative user")
-}
+};
 
-const docEditor = new DocsAPI.DocEditor("placeholder", {
+const config = {
   events: {
     onCollaborativeChanges,
   },
-})
+};
+
+const docEditor = new DocsAPI.DocEditor("placeholder", config);
 ```
 
 ## onDocumentReady
@@ -47,13 +51,15 @@ The function called when the document is loaded into the document editor.
 ``` ts
 function onDocumentReady() {
   console.log("Document is loaded")
-}
+};
 
-const docEditor = new DocsAPI.DocEditor("placeholder", {
+const config = {
   events: {
     onDocumentReady,
   },
-})
+};
+
+const docEditor = new DocsAPI.DocEditor("placeholder", config);
 ```
 
 ## onDocumentStateChange
@@ -69,13 +75,15 @@ function onDocumentStateChange(event) {
   } else {
     console.log("Changes are collected on document editing service")
   }
-}
+};
 
-const docEditor = new DocsAPI.DocEditor("placeholder", {
+const config = {
   events: {
     onDocumentStateChange,
   },
-})
+};
+
+const docEditor = new DocsAPI.DocEditor("placeholder", config);
 ```
 
 ## onDownloadAs
@@ -89,13 +97,15 @@ function onDownloadAs(event) {
   const fileType = event.data.fileType
   const url = event.data.url
   console.log(`ONLYOFFICE Document Editor create file: ${url}`)
-}
+};
 
-const docEditor = new DocsAPI.DocEditor("placeholder", {
+const config = {
   events: {
     onDownloadAs,
   },
-})
+};
+
+const docEditor = new DocsAPI.DocEditor("placeholder", config);
 ```
 
 ## onError
@@ -107,13 +117,15 @@ The function called when an error or some other specific event occurs. The error
 ``` ts
 function onError(event) {
   console.log(`ONLYOFFICE Document Editor reports an error: code ${event.data.errorCode}, description ${event.data.errorDescription}`)
-}
+};
 
-const docEditor = new DocsAPI.DocEditor("placeholder", {
+const config = {
   events: {
     onError,
   },
-})
+};
+
+const docEditor = new DocsAPI.DocEditor("placeholder", config);
 ```
 
 ## onInfo
@@ -125,13 +137,15 @@ The function called when the application opened the file. The mode is sent in th
 ``` ts
 function onInfo(event) {
   console.log(`ONLYOFFICE Document Editor is opened in mode ${event.data.mode}`)
-}
+};
 
-const docEditor = new DocsAPI.DocEditor("placeholder", {
+const config = {
   events: {
     onInfo,
   },
-})
+};
+
+const docEditor = new DocsAPI.DocEditor("placeholder", config);
 ```
 
 ## onMakeActionLink
@@ -149,13 +163,15 @@ function onMakeActionLink(event) {
   const ACTION_DATA = event.data
   const link = GENERATE_LINK(ACTION_DATA)
   docEditor.setActionLink(link)
-}
+};
 
-const docEditor = new DocsAPI.DocEditor("placeholder", {
+const config = {
   events: {
     onMakeActionLink,
   },
-})
+};
+
+const docEditor = new DocsAPI.DocEditor("placeholder", config);
 ```
 
 ## onMetaChange
@@ -172,13 +188,15 @@ When the user clicks the *Favorite* icon, the [setFavorite](../methods.md#setfav
 function onMetaChange(event) {
   const title = event.data.title
   const favorite = event.data.favorite
-}
+};
 
-const docEditor = new DocsAPI.DocEditor("placeholder", {
+const config = {
   events: {
     onMetaChange,
   },
-})
+};
+
+const docEditor = new DocsAPI.DocEditor("placeholder", config);
 ```
 
 ## onOutdatedVersion
@@ -194,13 +212,15 @@ Starting from version 8.3, please use [onRequestRefreshFile](#onrequestrefreshfi
 ``` ts
 function onOutdatedVersion() {
   location.reload(true)
-}
+};
 
-const docEditor = new DocsAPI.DocEditor("placeholder", {
+const config = {
   events: {
     onOutdatedVersion,
   },
-})
+};
+
+const docEditor = new DocsAPI.DocEditor("placeholder", config);
 ```
 
 ## onPluginsReady
@@ -210,13 +230,15 @@ The function called when all plugins are loaded and can be used.
 **Example**:
 
 ``` ts
-function onPluginsReady() {}
+function onPluginsReady() {};
 
-const docEditor = new DocsAPI.DocEditor("placeholder", {
+const config = {
   events: {
     onPluginsReady,
   },
-})
+};
+
+const docEditor = new DocsAPI.DocEditor("placeholder", config);
 ```
 
 ## onReady
@@ -240,13 +262,15 @@ function onRequestClose() {
     return
   }
   docEditor.destroyEditor()
-}
+};
 
-const docEditor = new DocsAPI.DocEditor("placeholder", {
+const config = {
   events: {
     onRequestClose,
   },
-})
+};
+
+const docEditor = new DocsAPI.DocEditor("placeholder", config);
 ```
 
 ## onRequestCompareFile
@@ -254,7 +278,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
 The function called when the user is trying to select document for comparing by clicking the *Document from Storage* button.
 
 :::note
-This event is available only for ONLYOFFICE Enterprise Edition and ONLYOFFICE Developer Edition.
+This event is available only for ONLYOFFICE Docs Enterprise and ONLYOFFICE Docs Developer.
 :::
 :::danger[Deprecated]
 Starting from version 7.5, please use [onRequestSelectDocument](#onrequestselectdocument) instead.
@@ -267,13 +291,15 @@ The function called when the user is trying to create document by clicking the *
 **Example**:
 
 ``` ts
-function onRequestCreateNew() {}
+function onRequestCreateNew() {};
 
-const docEditor = new DocsAPI.DocEditor("placeholder", {
+const config = {
   events: {
     onRequestCreateNew,
   },
-})
+};
+
+const docEditor = new DocsAPI.DocEditor("placeholder", config);
 ```
 
 ## onRequestEditRights
@@ -293,13 +319,15 @@ The function called when the user is trying to switch the document from the view
 function onRequestEditRights() {
   console.log("ONLYOFFICE Document Editor requests editing rights")
   document.location.reload()
-}
+};
 
-const docEditor = new DocsAPI.DocEditor("placeholder", {
+const config = {
   events: {
     onRequestEditRights,
   },
-})
+};
+
+const docEditor = new DocsAPI.DocEditor("placeholder", config);
 ```
 
 ## onRequestHistory
@@ -339,13 +367,15 @@ function onRequestHistory() {
       },
     ],
   })
-}
+};
 
-const docEditor = new DocsAPI.DocEditor("placeholder", {
+const config = {
   events: {
     onRequestHistory,
   },
-})
+};
+
+const docEditor = new DocsAPI.DocEditor("placeholder", config);
 ```
 
 Where the **changes** is the *changes* from [the history object](../callback-handler.md#history) returned after saving the document.
@@ -363,13 +393,15 @@ The function called when the user is trying to go back to the document from view
 ``` ts
 function onRequestHistoryClose() {
   document.location.reload()
-}
+};
 
-const docEditor = new DocsAPI.DocEditor("placeholder", {
+const config = {
   events: {
     onRequestHistoryClose,
   },
-})
+};
+
+const docEditor = new DocsAPI.DocEditor("placeholder", config);
 ```
 
 ## onRequestHistoryData
@@ -400,13 +432,15 @@ function onRequestHistoryData(event) {
     url: "https://example.com/url-to-example-document.docx",
     version,
   })
-}
+};
 
-const docEditor = new DocsAPI.DocEditor("placeholder", {
+const config = {
   events: {
     onRequestHistoryData,
   },
-})
+};
+
+const docEditor = new DocsAPI.DocEditor("placeholder", config);
 ```
 
 Where the **changesUrl** is the *changesUrl* from [the JSON object](../callback-handler.md#changesurl) returned after saving the document.
@@ -441,13 +475,15 @@ function onRequestInsertImage(event) {
     ],
     token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpbWFnZXMiOlt7ImZpbGVUeXBlIjoicG5nIiwidXJsIjoiaHR0cHM6Ly9leGFtcGxlLmNvbS91cmwtdG8tZXhhbXBsZS1pbWFnZTEucG5nIn0seyJmaWxlVHlwZSI6InBuZyIsInVybCI6Imh0dHBzOi8vZXhhbXBsZS5jb20vdXJsLXRvLWV4YW1wbGUtaW1hZ2UyLnBuZyJ9XX0.ly1O8-6u4Y7WJlgp9O-bJMeffHe0GtaXzyvY2UUFJTg",
   })
-}
+};
 
-const docEditor = new DocsAPI.DocEditor("placeholder", {
+const config = {
   events: {
     onRequestInsertImage,
   },
-})
+};
+
+const docEditor = new DocsAPI.DocEditor("placeholder", config);
 ```
 
 Where the **example.com** is the name of the server where **document manager** and **document storage service** are installed. See the [How it works](../../get-started/how-it-works/how-it-works.md) section to find out more on ONLYOFFICE Docs service client-server interactions.
@@ -481,13 +517,15 @@ function onRequestOpen(event) {
     path: "https://example.com/external-url.docx",
     windowName: event.data.windowName,
   })
-}
+};
 
-const docEditor = new DocsAPI.DocEditor("placeholder", {
+const config = {
   events: {
     onRequestOpen,
   },
-})
+};
+
+const docEditor = new DocsAPI.DocEditor("placeholder", config);
 ```
 
 Where the **example.com** is the name of the server where **document manager** and **document storage service** are installed. See the [How it works](../../get-started/how-it-works/how-it-works.md) section to find out more on ONLYOFFICE Docs service client-server interactions.
@@ -529,13 +567,15 @@ function onRequestReferenceData() {
     token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaWxlVHlwZSI6Inhsc3giLCJwYXRoIjoic2FtcGxlLnhsc3giLCJyZWZlcmVuY2VEYXRhIjp7ImZpbGVLZXkiOiJCQ0ZBMkNFRCIsImluc3RhbmNlSWQiOiJodHRwczovL2V4YW1wbGUuY29tIn0sInVybCI6Imh0dHBzOi8vZXhhbXBsZS5jb20vdXJsLXRvLWV4YW1wbGUtZG9jdW1lbnQueGxzeCJ9.UXosmM-E_Cu9j9QGSlcj9FEoSu5m-zCS4b6FxO_2k7w",
     url: "https://example.com/url-to-example-document.xlsx",
   })
-}
+};
 
-const docEditor = new DocsAPI.DocEditor("placeholder", {
+const config = {
   events: {
     onRequestReferenceData,
   },
-})
+};
+
+const docEditor = new DocsAPI.DocEditor("placeholder", config);
 ```
 
 ## onRequestReferenceSource
@@ -570,13 +610,15 @@ function onRequestReferenceSource() {
     token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaWxlVHlwZSI6Inhsc3giLCJwYXRoIjoic2FtcGxlLnhsc3giLCJyZWZlcmVuY2VEYXRhIjp7ImZpbGVLZXkiOiJCQ0ZBMkNFRCIsImluc3RhbmNlSWQiOiJodHRwczovL2V4YW1wbGUuY29tIn0sInVybCI6Imh0dHBzOi8vZXhhbXBsZS5jb20vdXJsLXRvLWV4YW1wbGUtZG9jdW1lbnQueGxzeCJ9.UXosmM-E_Cu9j9QGSlcj9FEoSu5m-zCS4b6FxO_2k7w",
     url: "https://example.com/url-to-example-document.xlsx",
   })
-}
+};
 
-const docEditor = new DocsAPI.DocEditor("placeholder", {
+const config = {
   events: {
     onRequestReferenceSource,
   },
-})
+};
+
+const docEditor = new DocsAPI.DocEditor("placeholder", config);
 ```
 
 ## onRequestRefreshFile
@@ -605,12 +647,15 @@ function onRequestRefreshFile() {
     },
     token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkb2N1bWVudCI6eyJmaWxlVHlwZSI6ImRvY3giLCJrZXkiOiJLaGlyejZ6VFBkZmQ3IiwidGl0bGUiOiJFeGFtcGxlIERvY3VtZW50IFRpdGxlLmRvY3giLCJ1cmwiOiJodHRwczovL2V4YW1wbGUuY29tL3VybC10by1leGFtcGxlLWRvY3VtZW50LmRvY3gifSwiZG9jdW1lbnRUeXBlIjoid29yZCIsImVkaXRvckNvbmZpZyI6eyJjYWxsYmFja1VybCI6Imh0dHBzOi8vZXhhbXBsZS5jb20vdXJsLXRvLWNhbGxiYWNrLmFzaHgifX0.vbezS2aM8Xf8qFzIAsO-jrIsi7VLxjRYkIkwh5jLTJU",
   })
-}
-const docEditor = new DocsAPI.DocEditor("placeholder", {
+};
+
+const config = {
   events: {
     onRequestRefreshFile,
   },
-})
+};
+
+const docEditor = new DocsAPI.DocEditor("placeholder", config);
 ```
 
 ## onRequestRename
@@ -628,13 +673,15 @@ Until version 6.0 the *Rename...* button is only available if the [document.perm
 ``` ts
 function onRequestRename(event) {
   const title = event.data
-}
+};
 
-const docEditor = new DocsAPI.DocEditor("placeholder", {
+const config = {
   events: {
     onRequestRename,
   },
-})
+};
+
+const docEditor = new DocsAPI.DocEditor("placeholder", config);
 ```
 
 ## onRequestRestore
@@ -684,13 +731,15 @@ function onRequestRestore(event) {
       },
     ],
   })
-}
+};
 
-const docEditor = new DocsAPI.DocEditor("placeholder", {
+const config = {
   events: {
     onRequestRestore,
   },
-})
+};
+
+const docEditor = new DocsAPI.DocEditor("placeholder", config);
 ```
 
 Where the **changes** is the *changes* from [the history object](../callback-handler.md#history) returned after saving the document.
@@ -712,13 +761,15 @@ function onRequestSaveAs(event) {
   const fileType = event.data.fileType
   const title = event.data.title
   const url = event.data.url
-}
+};
 
-const docEditor = new DocsAPI.DocEditor("placeholder", {
+const config = {
   events: {
     onRequestSaveAs,
   },
-})
+};
+
+const docEditor = new DocsAPI.DocEditor("placeholder", config);
 ```
 
 ## onRequestSelectDocument
@@ -728,10 +779,6 @@ The function called when the user is trying to select a document for comparing, 
 The type of document selection is specified in the *data.c* parameter.
 
 To select a document for comparing, combining, or inserting text, you must call the [setRequestedDocument](../methods.md#setrequesteddocument) method.
-
-:::note
-This event is available only for ONLYOFFICE Enterprise Edition and ONLYOFFICE Developer Edition.
-:::
 
 ![onRequestSelectDocument](/assets/images/editor/onRequestSelectDocument.png)
 
@@ -747,13 +794,15 @@ function onRequestSelectDocument() {
     url: "https://example.com/url-to-example-document.docx",
     token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaWxlVHlwZSI6ImRvY3giLCJ1cmwiOiJodHRwczovL2V4YW1wbGUuY29tL3VybC10by1leGFtcGxlLWRvY3VtZW50LmRvY3gifQ.t8660n_GmxJIppxcwkr_mUxmXYtE8cg-jF2cTLMtuk8",
   })
-}
+};
 
-const docEditor = new DocsAPI.DocEditor("placeholder", {
+const config = {
   events: {
     onRequestSelectDocument,
   },
-})
+};
+
+const docEditor = new DocsAPI.DocEditor("placeholder", config);
 ```
 
 Where the **example.com** is the name of the server where **document manager** and **document storage service** are installed. See the [How it works](../../get-started/how-it-works/how-it-works.md) section to find out more on ONLYOFFICE Docs service client-server interactions.
@@ -778,13 +827,15 @@ function onRequestSelectSpreadsheet() {
     token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaWxlVHlwZSI6Inhsc3giLCJ1cmwiOiJodHRwczovL2V4YW1wbGUuY29tL3VybC10by1leGFtcGxlLXJlY2lwaWVudHMueGxzeCJ9.P3TjOyX1Tv3xAVRAc8qtNb-uFLD6FH_WErag_rbI6nQ",
     url: "https://example.com/url-to-example-recipients.xlsx",
   })
-}
+};
 
-const docEditor = new DocsAPI.DocEditor("placeholder", {
+const config = {
   events: {
     onRequestSelectSpreadsheet,
   },
-})
+};
+
+const docEditor = new DocsAPI.DocEditor("placeholder", config);
 ```
 
 Where the **example.com** is the name of the server where **document manager** and **document storage service** are installed. See the [How it works](../../get-started/how-it-works/how-it-works.md) section to find out more on ONLYOFFICE Docs service client-server interactions.
@@ -808,13 +859,15 @@ function onRequestSendNotify(event) {
   const ACTION_DATA = event.data.actionLink
   const comment = event.data.message
   const emails = event.data.emails
-}
+};
 
-const docEditor = new DocsAPI.DocEditor("placeholder", {
+const config = {
   events: {
     onRequestSendNotify,
   },
-})
+};
+
+const docEditor = new DocsAPI.DocEditor("placeholder", config);
 ```
 
 ## onRequestSharingSettings
@@ -842,13 +895,15 @@ function onRequestSharingSettings() {
       },
     ],
   })
-}
+};
 
-const docEditor = new DocsAPI.DocEditor("placeholder", {
+const config = {
   events: {
     onRequestSharingSettings,
   },
-})
+};
+
+const docEditor = new DocsAPI.DocEditor("placeholder", config);
 ```
 
 ## onRequestStartFilling
@@ -862,13 +917,15 @@ When the user clicks the *Start filling* button, the [startFilling](../methods.m
 ``` ts
 function onRequestStartFilling() {
   docEditor.startFilling()
-}
+};
 
-const docEditor = new DocsAPI.DocEditor("placeholder", {
+const config = {
   events: {
     onRequestStartFilling,
   },
-})
+};
+
+const docEditor = new DocsAPI.DocEditor("placeholder", config);
 ```
 
 ## onRequestUsers
@@ -909,13 +966,15 @@ function onRequestUsers(event) {
       },
     ],
   })
-}
+};
 
-const docEditor = new DocsAPI.DocEditor("placeholder", {
+const config = {
   events: {
     onRequestUsers,
   },
-})
+};
+
+const docEditor = new DocsAPI.DocEditor("placeholder", config);
 ```
 
 ## onSubmit
@@ -927,13 +986,15 @@ The function called when the force saving request of the *3* [forcesavetype](../
 ``` ts
 function onSubmit(event) {
   console.log("The form was submitted.")
-}
+};
 
-const docEditor = new DocsAPI.DocEditor("placeholder", {
+const config = {
   events: {
     onSubmit,
   },
-})
+};
+
+const docEditor = new DocsAPI.DocEditor("placeholder", config);
 ```
 
 ## onUserActionRequired
@@ -949,12 +1010,15 @@ The function called when a user action is required to open a document in the fol
 ``` ts
 function onUserActionRequired() {
   console.log("Enter a password")
-}
-const docEditor = new DocsAPI.DocEditor("placeholder", {
+};
+
+const config = {
   events: {
     onUserActionRequired,
   },
-})
+};
+
+const docEditor = new DocsAPI.DocEditor("placeholder", config);
 ```
 
 ## onWarning
@@ -966,11 +1030,13 @@ The function called when a warning occurs. The warning message is sent in the *d
 ``` ts
 function onWarning(event) {
   console.log(`ONLYOFFICE Document Editor reports a warning: code ${event.data.warningCode}, description ${event.data.warningDescription}`)
-}
+};
 
-const docEditor = new DocsAPI.DocEditor("placeholder", {
+const config = {
   events: {
     onWarning,
   },
-})
+};
+
+const docEditor = new DocsAPI.DocEditor("placeholder", config);
 ```

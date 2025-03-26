@@ -1,4 +1,4 @@
-﻿# FAQ
+﻿# 常见问题
 
 ## 一般问题
 
@@ -14,7 +14,7 @@
 
 本节包含与 ONLYOFFICE 文档安全问题相关的说明及解答。
 
-- [如何限制对我的 ONLYOFFICE 文档的访问？](security.md#how-to-limit-access-to-my-document-server)
+- [如何限制对我的 ONLYOFFICE 文档的访问？](security.md#how-to-limit-access-to-onlyoffice-docs)
 - [在标头和正文中发送令牌有什么区别？](security.md#whats-the-difference-between-sending-the-token-in-header-and-in-body)
 
 [更多](security.md)

@@ -82,7 +82,7 @@ Starting from version 4.3, please use the absolute URLs in [pluginsData](#plugin
 ## Example
 
 ``` ts
-const docEditor = new DocsAPI.DocEditor("placeholder", {
+const config = {
   editorConfig: {
     plugins: {
       autostart: [
@@ -102,7 +102,9 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
       url: "https://example.com/plugins/",
     },
   },
-})
+};
+
+const docEditor = new DocsAPI.DocEditor("placeholder", config);
 ```
 
 The **example.com** is the name of the server where **document manager** and **document storage service** are installed and the plugins are placed. See the [How it works](../../../get-started/how-it-works/how-it-works.md) section to find out more on ONLYOFFICE Docs service client-server interactions.

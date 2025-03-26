@@ -14,7 +14,7 @@ Supported languages are listed [here](https://github.com/typograf/typograf/blob/
 
 ## Installation
 
-Available by default in ONLYOFFICE Enterprise Edition and Community Edition (Docs + Workspace).
+Available by default in ONLYOFFICE Docs Enterprise and Community (Docs + Workspace).
 
 You can also download this plugin from the [ONLYOFFICE App Directory](https://www.onlyoffice.com/en/app-directory/typograph) and install it following the [desktop](../installing/onlyoffice-desktop-editors.md) or [cloud](../installing/onlyoffice-cloud.md) installation instructions.
 

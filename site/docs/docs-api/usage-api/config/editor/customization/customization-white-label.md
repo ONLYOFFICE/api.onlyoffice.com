@@ -509,7 +509,7 @@ Starting from version 7.1, please use the [layout.toolbar](#layouttoolbar) param
 ## Example
 
 ``` ts
-const docEditor = new DocsAPI.DocEditor("placeholder", {
+const config = {
   editorConfig: {
     customization: {
       about: true,
@@ -567,7 +567,9 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
       loaderName: "The document is loading, please wait...",
     },
   },
-})
+};
+
+const docEditor = new DocsAPI.DocEditor("placeholder", config);
 ```
 
 The **example.com** is the name of the server where **document manager** and **document storage service** are installed. See the [How it works](../../../../get-started/how-it-works/how-it-works.md) section to find out more on ONLYOFFICE Docs service client-server interactions.

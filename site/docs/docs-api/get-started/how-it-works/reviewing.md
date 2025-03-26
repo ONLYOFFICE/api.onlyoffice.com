@@ -19,14 +19,16 @@ In case the *edit* parameter is set to **true** and the *review* parameter is al
 In case the *edit* parameter is set to **false** and the *review* parameter is set to **true**, the document will be available for reviewing only.
 
 ``` ts
-const docEditor = new DocsAPI.DocEditor("placeholder", {
+const config = {
   document: {
     permissions: {
       edit: false,
       review: true,
     },
   },
-})
+};
+
+const docEditor = new DocsAPI.DocEditor("placeholder", config);
 ```
 
 > Please note that the document review will only be available for the document editor if the [mode](../../usage-api/config/editor/editor.md#mode) parameter is set to **edit**.
@@ -36,7 +38,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
 1. Specify the group (or several groups separated with commas) the user belongs to by adding the field *group* to the [user](../../usage-api/config/editor/editor.md#user) parameter in the editorConfig section.
 
 ``` ts
-const docEditor = new DocsAPI.DocEditor("placeholder", {
+const condig = {
   editorConfig: {
     user: [{
       id: "78e1e841",
@@ -49,7 +51,9 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
       group: "Group1,Group2",
     }],
   },
-})
+};
+
+const docEditor = new DocsAPI.DocEditor("placeholder", config);
 ```
 
 2. Specify the access rights using the [reviewGroups](../../usage-api/config/document/permissions.md#reviewgroups) parameter in the permissions section of the editor initialization.
@@ -57,13 +61,15 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
    > If the **reviewGroups** parameter is specified in the editor config, the access rights to reviewing all changes are disabled. Otherwise, if the current user does not belong to any of the groups, he or she can review documents of all groups.
 
    ``` ts
-   const docEditor = new DocsAPI.DocEditor("placeholder", {
+   const config = {
      document: {
        permissions: {
          reviewGroups: ["Group1", "Group2"],
        },
      },
-   })
+   };
+
+   const docEditor = new DocsAPI.DocEditor("placeholder", config);
    ```
 
    *\["Group1", "Group2"]* means that user can review changes made by users from *Group1* and *Group2*.
@@ -71,13 +77,15 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
    The [reviewGroups](../../usage-api/config/document/permissions.md#reviewgroups) parameter can take the value of an empty group. This means that the user can review changes made by users who do not belong to any of the groups (for example, the document that is reviewed in third-party editors).
 
    ``` ts
-   const docEditor = new DocsAPI.DocEditor("placeholder", {
+   const config = {
      document: {
        permissions: {
          reviewGroups: ["Group2", ""],
        },
      },
-   })
+   };
+
+   const docEditor = new DocsAPI.DocEditor("placeholder", config);
    ```
 
    *\["Group2", ""]* means that user can review changes made by users from *Group2* and users who do not belong to any of the groups.

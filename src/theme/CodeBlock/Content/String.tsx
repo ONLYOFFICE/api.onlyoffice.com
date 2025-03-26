@@ -17,7 +17,6 @@ import type {Props} from '@theme/CodeBlock/Content/String';
 
 import styles from './styles.module.css';
 
-import {useLocation} from '@docusaurus/router';
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import OnlyOfficeEditor from '@site/src/components/BrowserWindow/OnlyofficeEditor';

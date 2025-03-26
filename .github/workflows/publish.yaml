@@ -57,7 +57,7 @@ jobs:
 
         NODE_OPTIONS="--max-old-space-size=12288" npm run build -- ${SUB_ARGS} ${LOCALE}
     
-    - name: Configure AWS Credentials
+    - name: Configure AWS Environment
       env:
         AWS_ACCESS_KEY_PROD: ${{secrets.AWS_ACCESS_KEY_PROD}}
         AWS_SECRET_KEY_PROD: ${{secrets.AWS_SECRET_KEY_PROD}}
@@ -128,6 +128,21 @@ jobs:
           # Execute the sync command
           eval "aws s3 sync . ${{env.AWS_BUCKET_URL}} --include \"*\" --delete $EXCLUDE_STR"
 
+          # Compress files more than 10mb manually
+          echo "🔹 Find files that more than 10MB"
+          BUILD_DIR="."
+          find "$BUILD_DIR" -type f \( -name "*.js" -o -name "*.json" -o -name "*.htm" \
+            -o -name "*.html" -o -name "*.css" -o -name "*.bin" -o -name "*.wasm" -o -name "*.dic" -o -name "*.aff" -o -name "*.svg" \) \
+            -size +10M \
+            | while read -r file; do
+            echo "📦 Compress: $file"
+            gzip -9 -c "$file" > "$file.gz" && mv "$file.gz" "$file"
+            MIME_TYPE=$(file --mime-type -b "$file")
+            echo "🚀 Upload compressed file to s3: $file"
+            aws s3 cp "$file" "${{ env.AWS_BUCKET_URL }}/${file#./}" \
+            --content-encoding gzip --content-type "$MIME_TYPE"
+          done
+
     - name: Invalidate AWS CloudFront Cache
       run: aws cloudfront create-invalidation --distribution-id ${{env.AWS_DISTRIBUTION_ID}} --paths '/*'
 
@@ -147,7 +162,7 @@ jobs:
              [[ "$SYNC_STATUS" == 'success' ]] && echo "SYNC_STATUS=success🟢" >> $GITHUB_ENV
           fi
 
-    - name: send default message
+    - name: Send alert message
       if: always()
       uses: appleboy/telegram-action@master
       with:
@@ -165,4 +180,5 @@ jobs:
             Api build status: ${{ env.BUILD_STATUS }}
             Api s3 sync status: ${{ env.SYNC_STATUS }}
 
-            See changes: https://github.com/${{ github.repository }}/commit/${{github.sha}}
+            See commit changes: https://github.com/${{ github.repository }}/commit/${{github.sha}}
+            See action run logs: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_number }}

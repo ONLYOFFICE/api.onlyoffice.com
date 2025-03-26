@@ -227,7 +227,7 @@ The *\["Group1", ""]* means that the information about users from Group1 and use
 ## Example
 
 ``` ts
-const docEditor = new DocsAPI.DocEditor("placeholder", {
+const config = {
   document: {
     permissions: {
       chat: true,
@@ -253,5 +253,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
     }
     ,
   },
-})
+};
+
+const docEditor = new DocsAPI.DocEditor("placeholder", config);
 ```

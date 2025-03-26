@@ -1,10 +1,10 @@
-﻿# Browser
+﻿# 浏览器
 
-在向 ONLYOFFICE 文档服务器执行客户端浏览器请求时，必须将*令牌*添加到参数中以验证数据。
+在向 ONLYOFFICE 文档服务器执行客户端浏览器请求时，必须将令牌添加到参数中以验证数据。
 
 ## 打开文件
 
-在 ONLYOFFICE 文档服务器中[打开](../../get-started/how-it-works/opening-file.md)文件进行编辑时，必须将 [令牌](../../usage-api/config/config.md#token) 添加到配置中以验证参数。
+在 ONLYOFFICE 文档中[打开](../../get-started/how-it-works/opening-file.md)文件进行编辑时，必须将[令牌](../../usage-api/config/config.md#token)添加到配置中以验证参数。
 
  JSON 格式的 JWT 令牌的*有效负载*必须与[config](../../usage-api/advanced-parameters.md)具有相同的结构。
 
@@ -89,9 +89,9 @@
 
 ### refreshFile
 
-在调用[refreshFile](../../usage-api/methods.md#refreshFile)方法更新文件版本时，必须添加令牌以验证参数。
+在调用 [refreshFile](../../usage-api/methods.md#refreshfile) 方法更新文件版本时，必须添加令牌以验证参数。
 
-JWT 令牌的有效载荷（JSON 格式）必须与[config](../../usage-api/advanced-parameters.md)结构相同。
+JWT 令牌的有效载荷（JSON 格式）必须与 [config](../../usage-api/advanced-parameters.md) 结构相同。
 
   ``` json
   {
@@ -142,7 +142,7 @@ JWT 令牌的有效载荷（JSON 格式）必须与[config](../../usage-api/adva
 
 ### setHistoryData
 
-在 ONLYOFFICE 文档服务器中调用 [setHistoryData](../../usage-api/methods.md#sethistorydata) 方法查看文档 [历史](../../get-started/how-it-works/document-history.md) 版本时，必须添加令牌以验证参数。
+在 ONLYOFFICE 文档中调用[setHistoryData](../../usage-api/methods.md#sethistorydata)方法查看文档[历史](../../get-started/how-it-works/document-history.md)版本时，必须添加令牌以验证参数。
 
 JSON 格式的 JWT 令牌的有效负载必须与方法参数具有相同的结构。要签名的参数列表没有严格规定，但我们建议您指定所有发送的参数：
 
@@ -223,7 +223,7 @@ JSON 格式的 JWT 令牌的有效负载必须与方法参数具有相同的结�
 
 ### setReferenceSource
 
-当调用[setReferenceSource](../../usage-api/methods.md#setreferencesource)方法更改外部数据源时，必须添加token 以验证参数。
+当调用 [setReferenceSource](../../usage-api/methods.md#setreferencesource) 方法更改外部数据源时，必须添加令牌以验证参数。
 
  JSON 格式的 JWT 令牌的有效负载必须与方法参数具有相同的结构。需要签名的参数列表没有严格规定，但我们建议您指定所有发送的参数：
 
@@ -252,7 +252,7 @@ JSON 格式的 JWT 令牌的有效负载必须与方法参数具有相同的结�
 
 ### setRequestedDocument
 
-当调用[setRequestedDocument](../../usage-api/methods.md#setrequesteddocument)方法选择要比较或组合的文档时，必须添加token 以验证参数。
+当调用 [setRequestedDocument](../../usage-api/methods.md#setrequesteddocument) 方法选择要比较或组合的文档时，必须添加token 以验证参数。
 
 JSON 格式的 JWT 令牌的有效负载必须与方法参数具有相同的结构。需要签名的参数列表没有严格规定，但我们建议您指定所有发送的参数：
 
@@ -276,7 +276,7 @@ JSON 格式的 JWT 令牌的有效负载必须与方法参数具有相同的结�
 
 ### setRequestedSpreadsheet
 
-当调用[setRequestedSpreadsheet](../../usage-api/methods.md#setrequestedspreadsheet)方法将邮件合并的收件人数据插入文件时，必须添加令牌以验证参数。
+当调用 [setRequestedSpreadsheet](../../usage-api/methods.md#setrequestedspreadsheet) 方法将邮件合并的收件人数据插入文件时，必须添加令牌以验证参数。
 
  JSON 格式的 JWT 令牌的有效负载必须与方法参数具有相同的结构。需要签名的参数列表没有严格规定，但我们建议您指定所有发送的参数：
 
@@ -300,7 +300,7 @@ JSON 格式的 JWT 令牌的有效负载必须与方法参数具有相同的结�
 
 ### setRevisedFile
 
-当调用[setRevisedFile](../../usage-api/methods.md#setrevisedfile)方法来选择一个文档进行比较时，必须添加令牌来验证参数。
+当调用 [setRevisedFile](../../usage-api/methods.md#setrevisedfile) 方法来选择一个文档进行比较时，必须添加令牌来验证参数。
 
 JSON 格式的 JWT 令牌的有效负载须与方法参数具有相同的结构。要签名的参数列表没有严格规定，但我们建议您指定所有发送的参数：
 
@@ -313,7 +313,7 @@ JSON 格式的 JWT 令牌的有效负载须与方法参数具有相同的结构�
 
 此处的 **example.com** 表示安装**文档管理器**和**文档存储服务**的服务器名称。要深入了解 ONLYOFFICE 文档服务的客户端-服务器交互机制，请参阅[工作原理] (../../get-started/how-it-works/how-it-works.md) 章节。
 
-Sample token:
+示例令牌：
 
 ``` json
 {

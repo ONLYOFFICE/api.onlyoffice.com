@@ -7,7 +7,7 @@ sidebar_label: Cloud
 
 To install ONLYOFFICE Docs in the cloud:
 
-1. Deploy ONLYOFFICE Docs Developer solution in the cloud using our [instructions](https://helpcenter.onlyoffice.com/installation/docs-developer-index.aspx?from=api) from ONLYOFFICE Help Center.
+1. Deploy ONLYOFFICE Docs Developer solution in the cloud by filling in the registration [form](https://www.onlyoffice.com/docs-registration.aspx?from=api) on our official website.
 
 2. In the target HTML file where the editors are to be embedded, specify a placeholder *div* tag, where all the information about the editor parameters will be passed:
 
@@ -20,15 +20,11 @@ To install ONLYOFFICE Docs in the cloud:
 
    `https://documentserver/web-apps/apps/api/documents/api.js` is the address where the API JavaScript file can normally be found.
 
+   :::info
    Starting from version 8.1, it is recommended to add the [shardkey](../how-it-works/how-it-works.md#shard-key) parameter to the URL *QueryString* with the *key* value in it. For example, *?shardkey=Khirz6zTPdfd7*. This allows you to load balance requests.
+   :::
 
 3. Specify the page code containing the changeable parameters:
-
-   ``` ts
-   const docEditor = new DocsAPI.DocEditor("placeholder", config)
-   ```
-
-   Where *config* is an object:
 
    ``` ts
    const config = {
@@ -42,7 +38,9 @@ To install ONLYOFFICE Docs in the cloud:
      editorConfig: {
        callbackUrl: "https://example.com/url-to-callback.ashx",
      },
-   }
+   };
+
+   const docEditor = new DocsAPI.DocEditor("placeholder", config);
    ```
 
    Where **example.com** is the public IP address or public DNS provided by your cloud where **document manager** and **document storage service** are installed. See the [How it works](../how-it-works/how-it-works.md) section to find out more on ONLYOFFICE Docs service client-server interactions.
