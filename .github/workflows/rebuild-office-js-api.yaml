@@ -36,7 +36,7 @@ jobs:
         path: office-js-api
     
     - name: Checkout office-js-api repository from master
-      if: failure()
+      if: failure() && steps.build.outputs.exit_code != 0
       uses: actions/checkout@v4
       with:
         repository: ONLYOFFICE/office-js-api
