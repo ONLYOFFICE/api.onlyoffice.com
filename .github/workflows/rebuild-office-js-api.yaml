@@ -21,10 +21,12 @@ jobs:
     - name: Set up Node.js
       uses: actions/setup-node@v4
 
-    - name: Checkout api.onlyoffice.com Repository
+    - name: Checkout api.onlyoffice.com repository
       uses: actions/checkout@v4
+      with:
+        path: api.onlyoffice.com
     
-    - name: Checkout repository office-js-api
+    - name: Checkout office-js-api repository
       uses: actions/checkout@v4
       with:
         repository: ONLYOFFICE/office-js-api
@@ -39,3 +41,24 @@ jobs:
         token: ${{ secrets.READ_PAT }}
         ref: ${{ REF }}
         path: build_tools
+    
+    - name: Set up Git
+      run: |
+        git config --global user.name "github-actions[bot]"
+        git config --global user.email "github-actions[bot]@users.noreply.github.com"
+    
+    - name: Build office-js-api
+      run: |
+        cd build_tools/scripts/sdkjs_common/jsdoc
+        npm install
+        python generate_docs_md.py
+        python generate_docs_plugins_md.py
+        cd ../../../../api.onlyoffice.com
+
+        if ! git diff --exit-code; then
+            git add .
+            git commit -m "Add office-js-api documentation update from GitHub Actions"
+            git push origin ${REF}
+          else
+            echo "Nothing to commit"
+          fi
