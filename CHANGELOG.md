@@ -1,5 +1,43 @@
 # Change log
 
+## 4.5.0
+
+### New features
+
+#### Docs API
+
+* Updated the config page for WOPI
+* Added javascript example for signing with jwt
+* Updated documentation in Chinese
+
+#### Docspace
+
+* Updated Docspace openAPI docs
+
+#### Plugins and macros
+
+* Added PDF Forms section in macro samples
+
+### Fixes
+
+* Hid workspace section
+* Added ruby language for highlighting in code block
+* Changed Edition titles
+* Fixed anchors
+* Updated docs titles
+
+#### Docs
+
+* Updated Document Builder section
+
+#### Docs API
+
+* Fixed config parameters
+
+#### Plugins and macros
+
+* Fixed import hyperlink example
+
 ## 4.4.0
 
 ### New features
