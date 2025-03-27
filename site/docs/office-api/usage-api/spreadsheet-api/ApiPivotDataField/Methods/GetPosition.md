@@ -1,7 +1,6 @@
 # GetPosition
 
-Returns a value that represents the position of the field (first, second, third, and so on)
-among all the fields in its orientation (Rows, Columns, Pages, Data).
+Returns a value that represents the data field position within a category.
 
 ## Syntax
 
@@ -49,13 +48,14 @@ let dataRef = Api.GetRange("'Sheet1'!$B$1:$D$5");
 let pivotTable = Api.InsertPivotNewWorksheet(dataRef);
 
 pivotTable.AddFields({
-	rows: ['Region', 'Style'],
+    rows: ['Region', 'Style'],
 });
 
-let pivotWorksheet = Api.GetActiveSheet();
 pivotTable.AddDataField('Price');
-let pivotField = pivotTable.GetPivotFields('Style');
-pivotWorksheet.GetRange('A12').SetValue('Style field position');
-pivotWorksheet.GetRange('B12').SetValue(pivotField.GetPosition());
+let dataField = pivotTable.AddDataField('Price');
 
+let pivotWorksheet = Api.GetActiveSheet();
+
+pivotWorksheet.GetRange('A15').SetValue('Sum of Price2 position:');
+pivotWorksheet.GetRange('B15').SetValue(dataField.GetPosition());
 ```

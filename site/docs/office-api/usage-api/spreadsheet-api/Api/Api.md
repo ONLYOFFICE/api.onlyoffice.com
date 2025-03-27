@@ -13,7 +13,7 @@ Represents the Api class.
 | PivotTables | [ApiPivotTable](../ApiPivotTable/ApiPivotTable.md)[] | Returns all pivot tables. |
 | ReferenceStyle | [ReferenceStyle](../Enumeration/ReferenceStyle.md) | Returns or sets the reference style. |
 | Selection | [ApiRange](../ApiRange/ApiRange.md) | Returns an object that represents the selected range. |
-| Sheets | Array | Returns the Sheets collection that represents all the sheets in the active workbook. |
+| Sheets | [ApiWorksheet](../ApiWorksheet/ApiWorksheet.md)[] | Returns the Sheets collection that represents all the sheets in the active workbook. |
 | WorksheetFunction | [ApiWorksheetFunction](../ApiWorksheetFunction/ApiWorksheetFunction.md) | Returns an object that represents the function list. |
 
 ## Methods
@@ -21,8 +21,8 @@ Represents the Api class.
 | Method | Returns | Description |
 | ------ | ------- | ----------- |
 | [AddComment](./Methods/AddComment.md) | [ApiComment](../ApiComment/ApiComment.md) \| null | Returns an array of ApiComment objects. |
-| [AddCustomFunction](./Methods/AddCustomFunction.md) | None | Creates a new custom function. The description of the function parameters and result is specified using JSDoc. The &lt;em&gt;@customfunction&lt;/em&gt; tag is required in JSDoc. Parameters and results can be specified as the &lt;em&gt;number / string / bool / any / number[][] / string[][] / bool[][] / any[][]&lt;/em&gt; types. Parameters can be required or optional. A user can also set a default value. |
-| [AddCustomFunctionLibrary](./Methods/AddCustomFunctionLibrary.md) | None | Registers a new custom functions library (see the -**SetCustomFunctions** plugin method). The description of the function parameters and result is specified using JSDoc. The &lt;em&gt;@customfunction&lt;/em&gt; tag is required in JSDoc. Parameters and results can be specified as the &lt;em&gt;number / string / bool / any / number[][] / string[][] / bool[][] / any[][]&lt;/em&gt; types. Parameters can be required or optional. A user can also set a default value. |
+| [AddCustomFunction](./Methods/AddCustomFunction.md) | None | Creates a new custom function.\ The description of the function parameters and result is specified using JSDoc. The &lt;em&gt;@customfunction&lt;/em&gt; tag is required in JSDoc.\ Parameters and results can be specified as the &lt;em&gt;number / string / boolean / any / number[][] / string[][] / bobooleanol[][] / any[][]&lt;/em&gt; types.\ Parameters can be required or optional. A user can also set a default value. |
+| [AddCustomFunctionLibrary](./Methods/AddCustomFunctionLibrary.md) | None | Registers a new custom functions library (see the -**SetCustomFunctions** plugin method).\ The description of the function parameters and result is specified using JSDoc. The &lt;em&gt;@customfunction&lt;/em&gt; tag is required in JSDoc.\ Parameters and results can be specified as the &lt;em&gt;number / string / boolean / any / number[][] / string[][] / boolean[][] / any[][]&lt;/em&gt; types.\ Parameters can be required or optional. A user can also set a default value. |
 | [AddDefName](./Methods/AddDefName.md) | boolean | Adds a new name to a range of cells. |
 | [AddSheet](./Methods/AddSheet.md) | None | Creates a new worksheet. The new worksheet becomes the active sheet. |
 | [ClearCustomFunctions](./Methods/ClearCustomFunctions.md) | boolean | Clears all custom functions. |
@@ -34,6 +34,7 @@ Represents the Api class.
 | [CreateLinearGradientFill](./Methods/CreateLinearGradientFill.md) | [ApiFill](../ApiFill/ApiFill.md) | Creates a linear gradient fill to apply to the object using the selected linear gradient as the object background. |
 | [CreateNewHistoryPoint](./Methods/CreateNewHistoryPoint.md) | None | Creates a new history point. |
 | [CreateNoFill](./Methods/CreateNoFill.md) | [ApiFill](../ApiFill/ApiFill.md) | Creates no fill and removes the fill from the element. |
+| [CreateNumbering](./Methods/CreateNumbering.md) | [ApiBullet](../ApiBullet/ApiBullet.md) | Creates a bullet for a paragraph with the numbering character or symbol specified with the numType parameter. |
 | [CreateParagraph](./Methods/CreateParagraph.md) | [ApiParagraph](../ApiParagraph/ApiParagraph.md) | Creates a new paragraph. |
 | [CreatePatternFill](./Methods/CreatePatternFill.md) | [ApiFill](../ApiFill/ApiFill.md) | Creates a pattern fill to apply to the object using the selected pattern as the object background. |
 | [CreatePresetColor](./Methods/CreatePresetColor.md) | [ApiPresetColor](../ApiPresetColor/ApiPresetColor.md) | Creates a color selecting it from one of the available color presets. |
@@ -51,7 +52,7 @@ Represents the Api class.
 | [GetCommentById](./Methods/GetCommentById.md) | [ApiComment](../ApiComment/ApiComment.md) | Returns a comment from the current document by its ID. |
 | [GetComments](./Methods/GetComments.md) | [ApiComment](../ApiComment/ApiComment.md)[] | Returns all comments related to the whole workbook. |
 | [GetDefName](./Methods/GetDefName.md) | [ApiName](../ApiName/ApiName.md) | Returns the ApiName object by the range name. |
-| [GetDocumentInfo](./Methods/GetDocumentInfo.md) | object | Returns the document information: -**Application** - the application the document has been created with. -**CreatedRaw** - the date and time when the file was created. -**Created** - the parsed date and time when the file was created. -**LastModifiedRaw** - the date and time when the file was last modified. -**LastModified** - the parsed date and time when the file was last modified. -**LastModifiedBy** - the name of the user who has made the latest change to the document. -**Autrors** - the persons who has created the file. -**Title** - this property allows you to simplify your documents classification. -**Tags** - this property allows you to simplify your documents classification. -**Subject** - this property allows you to simplify your documents classification. -**Comment** - this property allows you to simplify your documents classification. |
+| [GetDocumentInfo](./Methods/GetDocumentInfo.md) | object | Returns the document information:\ -**Application** - the application the document has been created with.\ -**CreatedRaw** - the date and time when the file was created.\ -**Created** - the parsed date and time when the file was created.\ -**LastModifiedRaw** - the date and time when the file was last modified.\ -**LastModified** - the parsed date and time when the file was last modified.\ -**LastModifiedBy** - the name of the user who has made the latest change to the document.\ -**Autrors** - the persons who has created the file.\ -**Title** - this property allows you to simplify your documents classification.\ -**Tags** - this property allows you to simplify your documents classification.\ -**Subject** - this property allows you to simplify your documents classification.\ -**Comment** - this property allows you to simplify your documents classification. |
 | [GetFreezePanesType](./Methods/GetFreezePanesType.md) | [FreezePaneType](../Enumeration/FreezePaneType.md) | Returns the freeze panes type. |
 | [GetFullName](./Methods/GetFullName.md) | string | Returns the full name of the currently opened file. |
 | [GetLocale](./Methods/GetLocale.md) | number | Returns the current locale ID. |

@@ -87,15 +87,15 @@ Represents the ApiRange class.
 | [Merge](./Methods/Merge.md) | None | Merges the selected cell range into a single cell or a cell row. |
 | [Paste](./Methods/Paste.md) | None | Pastes the Range object to the specified range. |
 | [PasteSpecial](./Methods/PasteSpecial.md) | None | Pastes the Range object to the specified range using the special paste options. |
-| [Replace](./Methods/Replace.md) | None | Replaces specific information to another one in a range. |
+| [Replace](./Methods/Replace.md) | [ApiRange](../ApiRange/ApiRange.md) \| null | Replaces specific information to another one in a range. |
 | [Select](./Methods/Select.md) | None | Selects the current range. |
 | [SetAlignHorizontal](./Methods/SetAlignHorizontal.md) | boolean | Sets the horizontal alignment of the text in the current cell range. |
 | [SetAlignVertical](./Methods/SetAlignVertical.md) | boolean | Sets the vertical alignment of the text in the current cell range. |
 | [SetAutoFilter](./Methods/SetAutoFilter.md) | None | Adds an AutoFilter to the current range. |
 | [SetBold](./Methods/SetBold.md) | None | Sets the bold property to the text characters in the current cell or cell range. |
 | [SetBorders](./Methods/SetBorders.md) | None | Sets the border to the cell / cell range with the parameters specified. |
-| [SetColumnWidth](./Methods/SetColumnWidth.md) | None | Sets the width of all the columns in the current range. One unit of column width is equal to the width of one character in the Normal style. For proportional fonts, the width of the character 0 (zero) is used. |
-| [SetFillColor](./Methods/SetFillColor.md) | None | Sets the background color to the current cell range with the previously created color object. Sets 'No Fill' when previously created color object is null. |
+| [SetColumnWidth](./Methods/SetColumnWidth.md) | None | Sets the width of all the columns in the current range.\ One unit of column width is equal to the width of one character in the Normal style.\ For proportional fonts, the width of the character 0 (zero) is used. |
+| [SetFillColor](./Methods/SetFillColor.md) | None | Sets the background color to the current cell range with the previously created color object.\ Sets 'No Fill' when previously created color object is null. |
 | [SetFontColor](./Methods/SetFontColor.md) | None | Sets the text color to the current cell range with the previously created color object. |
 | [SetFontName](./Methods/SetFontName.md) | None | Sets the specified font family as the font name for the current cell range. |
 | [SetFontSize](./Methods/SetFontSize.md) | None | Sets the font size to the characters of the current cell range. |

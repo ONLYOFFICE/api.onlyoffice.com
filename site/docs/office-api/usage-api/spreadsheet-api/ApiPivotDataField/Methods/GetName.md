@@ -48,15 +48,15 @@ let dataRef = Api.GetRange("'Sheet1'!$B$1:$D$5");
 let pivotTable = Api.InsertPivotNewWorksheet(dataRef);
 
 pivotTable.AddFields({
-	rows: ['Region', 'Style'],
+    rows: ['Region', 'Style'],
 });
 
 pivotTable.AddDataField('Price');
 
 let pivotWorksheet = Api.GetActiveSheet();
-let pivotField = pivotTable.GetPivotFields('Style');
+let dataField = pivotTable.GetDataFields('Sum of Price');
 
-pivotWorksheet.GetRange('A12').SetValue('The Style field name');
-pivotWorksheet.GetRange('B12').SetValue(pivotField.GetName());
+pivotWorksheet.GetRange('A12').SetValue('The Data field name');
+pivotWorksheet.GetRange('B12').SetValue(dataField.GetName());
 
 ```

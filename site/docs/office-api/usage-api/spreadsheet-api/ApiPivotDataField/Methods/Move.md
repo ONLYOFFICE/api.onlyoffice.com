@@ -1,6 +1,6 @@
 # Move
 
-Moves the current pivot field inside the category.
+Moves the current data field inside the category.
 
 ## Syntax
 
@@ -14,8 +14,8 @@ expression.Move(type, index);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| type | Required | [PivotMoveFieldType](../../Enumeration/PivotMoveFieldType.md) \| [PivotFieldOrientationType](../../Enumeration/PivotFieldOrientationType.md) |  | The direction to move the pivot table field, or the pivot field orientation type. |
-| index | Required | number \| undefined |  | The field index in a new category. |
+| type | Required | [PivotMoveFieldType](../../Enumeration/PivotMoveFieldType.md) \| [PivotFieldOrientationType](../../Enumeration/PivotFieldOrientationType.md) |  | The direction to move the pivot table field,\ or the pivot field orientation type. |
+| index | Optional | number |  | The index of the data field in a new category. |
 
 ## Returns
 
@@ -51,17 +51,19 @@ let dataRef = Api.GetRange("'Sheet1'!$B$1:$D$5");
 let pivotTable = Api.InsertPivotNewWorksheet(dataRef);
 
 pivotTable.AddFields({
-	rows: 'Region',
-	columns: 'Style',
+    rows: ['Region', 'Style'],
 });
 
-let pivotWorksheet = Api.GetActiveSheet();
 pivotTable.AddDataField('Price');
-let pivotField = pivotTable.GetPivotFields('Region');
-pivotWorksheet.GetRange('A10').SetValue('The Region field will be moved soon');
+pivotTable.AddDataField('Price');
 
-setTimeout(function () {
-	pivotField.Move('Columns');
+let pivotWorksheet = Api.GetActiveSheet();
+let dataField = pivotTable.GetDataFields('Sum of Price');
+
+pivotWorksheet.GetRange('A16').SetValue('Sum of Price will be moved soon');
+
+setTimeout(function() {
+    dataField.Move("Rows");
 }, 5000);
 
 ```

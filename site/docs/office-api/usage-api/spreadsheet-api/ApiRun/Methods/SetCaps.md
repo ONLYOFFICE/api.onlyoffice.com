@@ -1,6 +1,6 @@
 # SetCaps
 
-Specifies that any lowercase characters in the text run are formatted for display only as their capital letter character equivalents.
+Specifies that any lowercase characters in the current text run are formatted for display only as their capital letter character equivalents.
 
 ## Syntax
 
@@ -22,7 +22,7 @@ expression.SetCaps(isCaps);
 
 ## Example
 
-This example specifies that any lowercase characters in the text run are formatted for display only as their capital letter character equivalents.
+This example specifies that any lowercase characters in the current text run are formatted for display only as their capital letter character equivalents.
 
 ```javascript editor-xlsx
 let worksheet = Api.GetActiveSheet();
@@ -32,10 +32,10 @@ let shape = worksheet.AddShape("flowChartOnlineStorage", 120 * 36000, 70 * 36000
 let content = shape.GetContent();
 let paragraph = content.GetElement(0);
 let run = Api.CreateRun();
-let textProps = run.GetTextPr();
-textProps.SetFontSize(30);
-textProps.SetCaps(true);
-paragraph.SetJc("left");
-run.AddText("This is a sample text inside the shape set to capital letters using the text properties.");
+run.AddText("This is just a sample text. ");
+paragraph.AddElement(run);
+run = Api.CreateRun();
+run.SetCaps(true);
+run.AddText("This is a text run with the font set to capitalized letters.");
 paragraph.AddElement(run);
 ```

@@ -1,6 +1,6 @@
 # SetSmallCaps
 
-Specifies that all the small letter characters in the text run are formatted for display only as their capital
+Specifies that all the small letter characters in this text run are formatted for display only as their capital\
 letter character equivalents which are two points smaller than the actual font size specified for this text.
 
 ## Syntax
@@ -23,7 +23,7 @@ expression.SetSmallCaps(isSmallCaps);
 
 ## Example
 
-This example specifies that all the small letter characters in the text run are formatted for display only as their capital letter character equivalents which are two points smaller than the actual font size specified for this text.
+This example specifies that all the small letter characters in this text run are formatted for display only as their capital letter character equivalents which are two points smaller than the actual font size specified for this text.
 
 ```javascript editor-xlsx
 let worksheet = Api.GetActiveSheet();
@@ -33,10 +33,10 @@ let shape = worksheet.AddShape("flowChartOnlineStorage", 120 * 36000, 70 * 36000
 let content = shape.GetContent();
 let paragraph = content.GetElement(0);
 let run = Api.CreateRun();
-let textProps = run.GetTextPr();
-textProps.SetFontSize(30);
-textProps.SetSmallCaps(true);
-paragraph.SetJc("left");
-run.AddText("This is a sample text inside the shape with the font set to small capitalized letters.");
+run.AddText("This is just a sample text. ");
+paragraph.AddElement(run);
+run = Api.CreateRun();
+run.SetSmallCaps(true);
+run.AddText("This is a text run with the font set to small capitalized letters.");
 paragraph.AddElement(run);
 ```

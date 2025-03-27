@@ -1,6 +1,6 @@
 # GetClassType
 
-Returns a type of the ApiTextPr class.
+Returns a type of the ApiRun class.
 
 ## Syntax
 
@@ -16,7 +16,7 @@ This method doesn't have any parameters.
 
 ## Returns
 
-"textPr"
+"run"
 
 ## Example
 
@@ -33,10 +33,8 @@ oShape.SetPosition(608400, 1267200);
 var oDocContent = oShape.GetDocContent();
 var oParagraph = oDocContent.GetElement(0);
 var oRun = Api.CreateRun();
-var oTextPr = oRun.GetTextPr();
-oTextPr.SetFontSize(50);
-oParagraph.SetJc("left");
-var sClassType = oTextPr.GetClassType();
+var sClassType = oRun.GetClassType();
+oRun.SetFontSize(30);
 oRun.AddText("Class Type = " + sClassType);
 oParagraph.AddElement(oRun);
 oSlide.AddObject(oShape);

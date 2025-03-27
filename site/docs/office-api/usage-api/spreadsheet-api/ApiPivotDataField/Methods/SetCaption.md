@@ -1,6 +1,6 @@
 # SetCaption
 
-Sets a value that represents the label text for the pivot field.
+Sets a value that represents the label text for the data field.
 
 ## Syntax
 
@@ -14,7 +14,7 @@ expression.SetCaption(caption);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| caption | Required | string |  | The label text for the pivot field. |
+| caption | Required | string |  | The label text for the data field. |
 
 ## Returns
 
@@ -52,18 +52,16 @@ let pivotTable = Api.InsertPivotNewWorksheet(dataRef);
 pivotTable.AddFields({
     rows: ['Region', 'Style'],
 });
-pivotTable.SetRowAxisLayout("Tabular", false);
 
 pivotTable.AddDataField('Price');
 
 let pivotWorksheet = Api.GetActiveSheet();
-let pivotField = pivotTable.GetPivotFields('Style');
+let dataField = pivotTable.GetDataFields('Sum of Price');
 
-pivotWorksheet.GetRange('A12').SetValue('Style field caption');
-pivotWorksheet.GetRange('B12').SetValue(pivotField.GetCaption());
+pivotWorksheet.GetRange('A12').SetValue('Data field caption');
+pivotWorksheet.GetRange('B12').SetValue(dataField.GetCaption());
 
-pivotWorksheet.GetRange('A14').SetValue('New Style field caption');
-pivotField.SetCaption('My caption');
-pivotWorksheet.GetRange('B14').SetValue(pivotField.GetCaption());
-
+dataField.SetCaption('My Sum of Price');
+pivotWorksheet.GetRange('A13').SetValue('New Data field caption');
+pivotWorksheet.GetRange('B13').SetValue(dataField.GetCaption());
 ```

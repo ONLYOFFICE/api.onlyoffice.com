@@ -18,7 +18,7 @@ expression.GetFormsByTag(sTag);
 
 ## Returns
 
-[ApiBlockLvlSdt](../../ApiBlockLvlSdt/ApiBlockLvlSdt.md)[] \| [ApiInlineLvlSdt](../../ApiInlineLvlSdt/ApiInlineLvlSdt.md)[]
+[ApiForm](../../Enumeration/ApiForm.md)[]
 
 ## Example
 

@@ -1,6 +1,6 @@
 # GetIndex
 
-Returns an index for the pivot table field.
+Returns an index of the data field.
 
 ## Syntax
 
@@ -52,10 +52,11 @@ pivotTable.AddFields({
 });
 
 pivotTable.AddDataField('Price');
+pivotTable.AddDataField('Price');
 
 let pivotWorksheet = Api.GetActiveSheet();
-let pivotField = pivotTable.GetPivotFields('Style');
+let dataField = pivotTable.GetDataFields('Sum of Price');
 
-pivotWorksheet.GetRange('A12').SetValue('The Style field index');
-pivotWorksheet.GetRange('B12').SetValue(pivotField.GetIndex());
+pivotWorksheet.GetRange('A15').SetValue('Sum of Price index:');
+pivotWorksheet.GetRange('B15').SetValue(dataField.GetIndex());
 ```

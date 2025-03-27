@@ -1,7 +1,6 @@
 # GetOrientation
 
-Returns a pivot field orientation value that represents the location
-of the field in the specified pivot table report.
+Returns a data field orientation value that represents the data field location in the specified pivot table report.
 
 ## Syntax
 
@@ -49,15 +48,15 @@ let dataRef = Api.GetRange("'Sheet1'!$B$1:$D$5");
 let pivotTable = Api.InsertPivotNewWorksheet(dataRef);
 
 pivotTable.AddFields({
-	rows: 'Region',
-	columns: 'Style',
+    rows: ['Region', 'Style'],
 });
 
 pivotTable.AddDataField('Price');
+let dataField = pivotTable.AddDataField('Price');
+dataField.SetPosition(1);
 
 let pivotWorksheet = Api.GetActiveSheet();
-let pivotField = pivotTable.GetPivotFields('Style');
-pivotWorksheet.GetRange('A12').SetValue('The Style field orientation');
-pivotWorksheet.GetRange('B12').SetValue(pivotField.GetOrientation());
 
+pivotWorksheet.GetRange('A15').SetValue('Sum of Price2 orientation:');
+pivotWorksheet.GetRange('B15').SetValue(dataField.GetOrientation());
 ```

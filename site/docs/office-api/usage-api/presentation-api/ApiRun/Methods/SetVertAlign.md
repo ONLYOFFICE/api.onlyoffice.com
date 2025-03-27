@@ -1,8 +1,8 @@
 # SetVertAlign
 
-Specifies the alignment which will be applied to the contents of the run in relation to the default appearance of the run text:
--**"baseline"** - the characters in the current text run will be aligned by the default text baseline.
--**"subscript"** - the characters in the current text run will be aligned below the default text baseline.
+Specifies the alignment which will be applied to the contents of the current run in relation to the default appearance of the text run:\
+-**"baseline"** - the characters in the current text run will be aligned by the default text baseline.\
+-**"subscript"** - the characters in the current text run will be aligned below the default text baseline.\
 -**"superscript"** - the characters in the current text run will be aligned above the default text baseline.
 
 ## Syntax
@@ -25,7 +25,7 @@ expression.SetVertAlign(sType);
 
 ## Example
 
-This example specifies the alignment which will be applied to the contents of the run in relation to the default appearance of the run text.
+This example specifies the alignment which will be applied to the contents of the current run in relation to the default appearance of the text run.
 
 ```javascript editor-pptx
 var oPresentation = Api.GetPresentation();
@@ -38,11 +38,19 @@ oShape.SetPosition(608400, 1267200);
 var oDocContent = oShape.GetDocContent();
 var oParagraph = oDocContent.GetElement(0);
 var oRun = Api.CreateRun();
-var oTextPr = oRun.GetTextPr();
-oTextPr.SetFontSize(50);
-oTextPr.SetVertAlign("superscript");
-oParagraph.SetJc("left");
-oRun.AddText("This is a text inside the shape with vertical alignment set to 'superscript'.");
+oRun.AddText("This is just a sample text. ");
+oParagraph.AddElement(oRun);
+oRun = Api.CreateRun();
+oRun.SetVertAlign("subscript");
+oRun.AddText("This is a text run with the text aligned below the baseline vertically. ");
+oParagraph.AddElement(oRun);
+oRun = Api.CreateRun();
+oRun.SetVertAlign("baseline");
+oRun.AddText("This is a text run with the text aligned by the baseline vertically. ");
+oParagraph.AddElement(oRun);
+oRun = Api.CreateRun();
+oRun.SetVertAlign("superscript");
+oRun.AddText("This is a text run with the text aligned above the baseline vertically.");
 oParagraph.AddElement(oRun);
 oSlide.AddObject(oShape);
 ```

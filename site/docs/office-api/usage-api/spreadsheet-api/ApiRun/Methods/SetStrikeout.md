@@ -1,6 +1,6 @@
 # SetStrikeout
 
-Specifies that the contents of the run are displayed with a single horizontal line through the center of the line.
+Specifies that the contents of the current run are displayed with a single horizontal line through the center of the line.
 
 ## Syntax
 
@@ -22,7 +22,7 @@ expression.SetStrikeout(isStrikeout);
 
 ## Example
 
-This example specifies that the contents of the run are displayed with a single horizontal line through the center of the line.
+This example specifies that the contents of the current run are displayed with a single horizontal line through the center of the line.
 
 ```javascript editor-xlsx
 let worksheet = Api.GetActiveSheet();
@@ -32,10 +32,10 @@ let shape = worksheet.AddShape("flowChartOnlineStorage", 120 * 36000, 70 * 36000
 let content = shape.GetContent();
 let paragraph = content.GetElement(0);
 let run = Api.CreateRun();
-let textProps = run.GetTextPr();
-textProps.SetFontSize(30);
-textProps.SetStrikeout(true);
-paragraph.SetJc("left");
-run.AddText("This is a struck out text inside the shape.");
+run.AddText("This is just a sample text. ");
+paragraph.AddElement(run);
+run = Api.CreateRun();
+run.SetStrikeout(true);
+run.AddText("This is a text run with the text struck out with a single line.");
 paragraph.AddElement(run);
 ```

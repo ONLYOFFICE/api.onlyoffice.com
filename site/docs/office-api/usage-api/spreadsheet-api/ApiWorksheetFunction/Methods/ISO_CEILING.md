@@ -1,6 +1,6 @@
 # ISO_CEILING
 
-Returns a number that is rounded up to the nearest integer or to the nearest multiple of significance regardless of the sign of the number.
+Returns a number that is rounded up to the nearest integer or to the nearest multiple of significance regardless of the sign of the number.\
 The number is always rounded up regardless of its sing.
 
 ## Syntax
@@ -16,7 +16,7 @@ expression.ISO_CEILING(arg1, arg2);
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
 | arg1 | Required | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number |  | The numeric value to round up. |
-| arg2 | Required | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number |  | The multiple of significance to round up to. If it is omitted, the default value of 1 is used. If it is set to zero, the function returns 0. |
+| arg2 | Optional | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number |  | The multiple of significance to round up to. If it is omitted, the default value of 1 is used. If it is set to zero, the function returns 0. |
 
 ## Returns
 

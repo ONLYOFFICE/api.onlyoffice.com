@@ -16,7 +16,7 @@ This method doesn't have any parameters.
 
 ## Returns
 
-[base64img](../../../text-document-api/base64img/base64img.md)
+[Base64Img](../../Enumeration/Base64Img.md)
 
 ## Example
 
