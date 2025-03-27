@@ -29,8 +29,12 @@ This example specifies the shading applied to the contents of the current text r
 
 ```javascript editor-docx
 let doc = Api.GetDocument();
-let textPr = doc.GetDefaultTextPr();
-textPr.SetShd("clear", 255, 111, 61);
 let paragraph = doc.GetElement(0);
-paragraph.AddText("A sample text with the shading set to orange.");
+let run = Api.CreateRun();
+run.AddText("This is just a sample text. ");
+paragraph.AddElement(run);
+run = Api.CreateRun();
+run.SetShd("clear", 255, 111, 61);
+run.AddText("This is a text run with the text shading set to orange.");
+paragraph.AddElement(run);
 ```

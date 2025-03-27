@@ -12,7 +12,6 @@ Represents the ApiTableCell class.
 | [AddRows](./Methods/AddRows.md) | [ApiTable](../ApiTable/ApiTable.md) \| null | Adds the new rows to the current table. |
 | [Clear](./Methods/Clear.md) | boolean | Clears the content from the current cell. |
 | [GetClassType](./Methods/GetClassType.md) | "tableCell" | Returns a type of the ApiTableCell class. |
-| [GetClassType](./Methods/GetClassType.md) | "tableCellPr" | Returns a type of the ApiTableCellPr class. |
 | [GetContent](./Methods/GetContent.md) | [ApiDocumentContent](../ApiDocumentContent/ApiDocumentContent.md) | Returns the current cell content. |
 | [GetIndex](./Methods/GetIndex.md) | Number | Returns the current cell index. |
 | [GetNext](./Methods/GetNext.md) | [ApiTableCell](../ApiTableCell/ApiTableCell.md) \| null | Returns the next cell if exists. |

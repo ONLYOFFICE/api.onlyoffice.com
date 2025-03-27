@@ -21,6 +21,7 @@ Represents the ApiBlockLvlSdt class.
 | [GetClassType](./Methods/GetClassType.md) | "blockLvlSdt" | Returns a type of the ApiBlockLvlSdt class. |
 | [GetContent](./Methods/GetContent.md) | [ApiDocumentContent](../ApiDocumentContent/ApiDocumentContent.md) | Returns the content of the current container. |
 | [GetDropdownList](./Methods/GetDropdownList.md) | [ApiContentControlList](../ApiContentControlList/ApiContentControlList.md) | Returns a list of values of the combo box / dropdown list content control. |
+| [GetId](./Methods/GetId.md) | string | Gets a unique ID for the current content control. |
 | [GetInternalId](./Methods/GetInternalId.md) | string | Returns an internal id of the current content control. |
 | [GetLabel](./Methods/GetLabel.md) | string | Returns the label attribute for the current container. |
 | [GetLock](./Methods/GetLock.md) | [SdtLock](../Enumeration/SdtLock.md) | Returns the lock type of the current container. |
@@ -38,6 +39,7 @@ Represents the ApiBlockLvlSdt class.
 | [Search](./Methods/Search.md) | [ApiRange](../ApiRange/ApiRange.md)[] | Searches for a scope of a content control object. The search results are a collection of ApiRange objects. |
 | [Select](./Methods/Select.md) | None | Selects the current content control. |
 | [SetAlias](./Methods/SetAlias.md) | None | Sets the alias attribute to the current container. |
+| [SetId](./Methods/SetId.md) | None | Specifies a unique ID for the current content control. |
 | [SetLabel](./Methods/SetLabel.md) | None | Sets the label attribute to the current container. |
 | [SetLock](./Methods/SetLock.md) | None | Sets the lock to the current block text content control:\ -**"contentLocked"** - content cannot be edited.\ -**"sdtContentLocked"** - content cannot be edited and the container cannot be deleted.\ -**"sdtLocked"** - the container cannot be deleted. |
 | [SetPlaceholderText](./Methods/SetPlaceholderText.md) | boolean | Sets the placeholder text to the current content control. |

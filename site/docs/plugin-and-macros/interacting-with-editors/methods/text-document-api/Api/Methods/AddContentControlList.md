@@ -15,7 +15,7 @@ expression.AddContentControlList(type, List, commonPr);
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
 | type | Required | [ContentControlType](../../Enumeration/ContentControlType.md) |  | A numeric value that specifies the content control type. It can have one of the following values: -**1** (combo box), -**0** (dropdown list). |
-| List | Optional | [ContentControlListElement](../../Enumeration/ContentControlListElement.md)[] |  | A list of the content control elements that consists of two items: -**Display** - an item that will be displayed to the user in the content control list, -**Value** - a value of each item from the content control list. |
+| List | Optional | String, String[] | [&#123;Display, Value&#125;] | A list of the content control elements that consists of two items: -**Display** - an item that will be displayed to the user in the content control list, -**Value** - a value of each item from the content control list. |
 | commonPr | Optional | [ContentControlProperties](../../Enumeration/ContentControlProperties.md) | &#123;&#125; | The common content control properties. |
 
 ## Returns

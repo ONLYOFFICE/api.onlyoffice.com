@@ -1,6 +1,6 @@
 # GetClassType
 
-Returns a type of the ApiParaPr class.
+Returns a type of the ApiParagraph class.
 
 ## Syntax
 
@@ -16,7 +16,7 @@ This method doesn't have any parameters.
 
 ## Returns
 
-"paraPr"
+"paragraph"
 
 ## Example
 
@@ -34,15 +34,7 @@ var oShape = Api.CreateShape("flowChartMagneticTape", 300 * 36000, 130 * 36000, 
 oShape.SetPosition(608400, 1267200);
 var oDocContent = oShape.GetDocContent();
 var oParagraph = oDocContent.GetElement(0);
-var oParaPr = oParagraph.GetParaPr();
-var sClassType = oParaPr.GetClassType();
-oParaPr.SetIndFirstLine(1440);
-oParagraph.AddText("This is the first paragraph with the indent of 1 inch set to the first line. ");
-oParagraph.AddText("This indent is set by the paragraph style. No paragraph inline style is applied. ");
-oParagraph.AddText("These sentences are used to add lines for demonstrative purposes. ");
-oParagraph.AddText("These sentences are used to add lines for demonstrative purposes.");
-oParagraph = Api.CreateParagraph();
+var sClassType = oParagraph.GetClassType();
 oParagraph.AddText("Class Type = " + sClassType);
-oDocContent.Push(oParagraph);
 oSlide.AddObject(oShape);
 ```

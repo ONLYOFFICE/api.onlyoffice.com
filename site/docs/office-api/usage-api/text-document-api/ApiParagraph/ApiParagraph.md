@@ -35,7 +35,6 @@ Represents the ApiParagraph class.
 | [GetAllOleObjects](./Methods/GetAllOleObjects.md) | [ApiOleObject](../ApiOleObject/ApiOleObject.md)[] | Returns a collection of OLE objects in the paragraph. |
 | [GetAllShapes](./Methods/GetAllShapes.md) | [ApiShape](../ApiShape/ApiShape.md)[] | Returns a collection of shape objects in the paragraph. |
 | [GetClassType](./Methods/GetClassType.md) | "paragraph" | Returns a type of the ApiParagraph class. |
-| [GetClassType](./Methods/GetClassType.md) | "paraPr" | Returns a type of the ApiParaPr class. |
 | [GetElement](./Methods/GetElement.md) | [ParagraphContent](../Enumeration/ParagraphContent.md) | Returns a paragraph element using the position specified. |
 | [GetElementsCount](./Methods/GetElementsCount.md) | number | Returns a number of elements in the current paragraph. |
 | [GetFontNames](./Methods/GetFontNames.md) | string[] | Returns all font names from all elements inside the current paragraph. |
@@ -113,5 +112,4 @@ Represents the ApiParagraph class.
 | [SetVertAlign](./Methods/SetVertAlign.md) | [ApiParagraph](../ApiParagraph/ApiParagraph.md) \| null | Specifies the alignment which will be applied to the contents of this paragraph in relation to the default appearance of the paragraph text:\ -**"baseline"** - the characters in the current paragraph will be aligned by the default text baseline.\ -**"subscript"** - the characters in the current paragraph will be aligned below the default text baseline.\ -**"superscript"** - the characters in the current paragraph will be aligned above the default text baseline. |
 | [SetWidowControl](./Methods/SetWidowControl.md) | None | Specifies whether a single line of the current paragraph will be displayed on a separate page from the remaining content at display time by moving the line onto the following page. |
 | [ToJSON](./Methods/ToJSON.md) | JSON | Converts the ApiParagraph object into the JSON object. |
-| [ToJSON](./Methods/ToJSON.md) | JSON | Converts the ApiParaPr object into the JSON object. |
 | [WrapInMailMergeField](./Methods/WrapInMailMergeField.md) | None | Wraps the paragraph content in a mail merge field. |

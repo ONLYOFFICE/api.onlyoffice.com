@@ -7,7 +7,11 @@ Represents the Api class.
 
 | Method | Returns | Description |
 | ------ | ------- | ----------- |
+| [ActivateWindow](./Methods/ActivateWindow.md) | None | Activates (moves forward) the plugin window/panel. |
+| [AddContextMenuItem](./Methods/AddContextMenuItem.md) | None | Adds an item to the context menu. |
 | [AddOleObject](./Methods/AddOleObject.md) | None | Adds an OLE object to the current document position. |
+| [AddToolbarMenuItem](./Methods/AddToolbarMenuItem.md) | None | Adds an item to the toolbar menu. |
+| [CloseWindow](./Methods/CloseWindow.md) | None | Closes the plugin modal window. |
 | [CoAuthoringChatSendMessage](./Methods/CoAuthoringChatSendMessage.md) | None | Sends a message to the co-authoring chat. |
 | [ConvertDocument](./Methods/ConvertDocument.md) | string | Converts a document to Markdown or HTML text. |
 | [EditOleObject](./Methods/EditOleObject.md) | None | Edits an OLE object in the document. |
@@ -35,16 +39,20 @@ Represents the Api class.
 | [OnEncryption](./Methods/OnEncryption.md) | None | Encrypts the document. |
 | [PasteHtml](./Methods/PasteHtml.md) | None | Pastes text in the HTML format into the document. |
 | [PasteText](./Methods/PasteText.md) | None | Pastes text into the document. |
-| [PutImageDataToSelection](./Methods/PutImageDataToSelection.md) | None | Replaces the first selected drawing with the image specified in the parameters.\ If there are no drawings selected, the method inserts the image at the current position. |
+| [PutImageDataToSelection](./Methods/PutImageDataToSelection.md) | None | Replaces the first selected drawing with the image specified in the parameters. If there are no drawings selected, the method inserts the image at the current position. |
 | [RemovePlugin](./Methods/RemovePlugin.md) | object | Removes a plugin with the specified GUID. |
 | [ReplaceTextSmart](./Methods/ReplaceTextSmart.md) | boolean | Replaces each paragraph (or text in cell) in the select with the corresponding text from an array of strings. |
+| [ResizeWindow](./Methods/ResizeWindow.md) | None | Resizes the plugin modal window. |
+| [SendToWindow](./Methods/SendToWindow.md) | None | Sends a message to the plugin modal window. |
 | [SetFormValue](./Methods/SetFormValue.md) | None | Sets a value to the specified form. |
 | [SetMacros](./Methods/SetMacros.md) | None | Sets macros to the document. |
-| [SetPluginsOptions](./Methods/SetPluginsOptions.md) | None | Configures plugins from an external source. The settings can be set for all plugins or for a specific plugin.\ For example, this method can be used to pass an authorization token to the plugin. This method can be used only with the connector class. |
+| [SetPluginsOptions](./Methods/SetPluginsOptions.md) | None | Configures plugins from an external source. The settings can be set for all plugins or for a specific plugin. For example, this method can be used to pass an authorization token to the plugin. This method can be used only with the connector class. |
 | [SetProperties](./Methods/SetProperties.md) | None | Sets the properties to the document. |
 | [ShowButton](./Methods/ShowButton.md) | None | Shows or hides buttons in the header. |
 | [ShowError](./Methods/ShowError.md) | None | Shows an error/warning message. |
 | [ShowInputHelper](./Methods/ShowInputHelper.md) | None | Shows the input helper. |
+| [ShowWindow](./Methods/ShowWindow.md) | None | Shows the plugin modal window. |
 | [StartAction](./Methods/StartAction.md) | None | Specifies the start action for long operations. |
 | [UnShowInputHelper](./Methods/UnShowInputHelper.md) | None | Unshows the input helper. |
+| [UpdateContextMenuItem](./Methods/UpdateContextMenuItem.md) | None | Updates an item in the context menu with the specified items. |
 | [UpdatePlugin](./Methods/UpdatePlugin.md) | object | Updates a plugin using the specified plugin config. |

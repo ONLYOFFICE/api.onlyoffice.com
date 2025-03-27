@@ -14,7 +14,7 @@ expression.SetBold(isBold);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| isBold | Required | boolean |  | Specifies that the contents of the run are displayed bold. |
+| isBold | Required | boolean |  | Specifies that the contents of the current run are displayed bold. |
 
 ## Returns
 
@@ -35,11 +35,11 @@ oShape.SetPosition(608400, 1267200);
 var oDocContent = oShape.GetDocContent();
 var oParagraph = oDocContent.GetElement(0);
 var oRun = Api.CreateRun();
-var oTextPr = oRun.GetTextPr();
-oTextPr.SetFontSize(50);
-oTextPr.SetBold(true);
-oParagraph.SetJc("left");
-oRun.AddText("This is a sample text inside the shape with the font weight set to bold using the text properties.");
+oRun.AddText("This is just a sample text. ");
+oParagraph.AddElement(oRun);
+oRun = Api.CreateRun();
+oRun.SetBold(true);
+oRun.AddText("This is a text run with the font set to bold.");
 oParagraph.AddElement(oRun);
 oSlide.AddObject(oShape);
 ```

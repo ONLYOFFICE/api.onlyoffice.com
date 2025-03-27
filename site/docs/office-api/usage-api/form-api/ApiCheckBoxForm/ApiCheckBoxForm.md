@@ -9,6 +9,7 @@ Represents the ApiCheckBoxForm class.
 | ------ | ------- | ----------- |
 | [Clear](./Methods/Clear.md) | None | Clears the current form. |
 | [Copy](./Methods/Copy.md) | [ApiForm](../Enumeration/ApiForm.md) | Copies the current form (copies with the shape if it exists). |
+| [GetChoiceName](./Methods/GetChoiceName.md) | string | Get the choice name for the current radio button. |
 | [GetClassType](./Methods/GetClassType.md) | "form" | Returns a type of the ApiFormBase class. |
 | [GetFormKey](./Methods/GetFormKey.md) | string | Returns the current form key. |
 | [GetFormType](./Methods/GetFormType.md) | [FormType](../Enumeration/FormType.md) | Returns a type of the current form. |
@@ -25,6 +26,7 @@ Represents the ApiCheckBoxForm class.
 | [SetBackgroundColor](./Methods/SetBackgroundColor.md) | boolean | Sets the background color to the current form. |
 | [SetBorderColor](./Methods/SetBorderColor.md) | boolean | Sets the border color to the current form. |
 | [SetChecked](./Methods/SetChecked.md) | boolean | Checks the current checkbox. |
+| [SetChoiceName](./Methods/SetChoiceName.md) | boolean | Set the choice name for the current radio button. |
 | [SetFormKey](./Methods/SetFormKey.md) | boolean | Sets a key to the current form. |
 | [SetPlaceholderText](./Methods/SetPlaceholderText.md) | boolean | Sets the placeholder text to the current form.\ Can't be set to checkbox or radio button.* |
 | [SetRadioGroup](./Methods/SetRadioGroup.md) | None | Sets the radio group key to the current radio button. |

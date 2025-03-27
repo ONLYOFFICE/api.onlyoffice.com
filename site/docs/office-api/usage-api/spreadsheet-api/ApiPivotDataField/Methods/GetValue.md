@@ -1,6 +1,6 @@
 # GetValue
 
-Returns a value representing the name of the specified field in the pivot table report.
+Returns a value representing the name of the specified data field in the pivot table report.
 
 ## Syntax
 
@@ -48,15 +48,15 @@ let dataRef = Api.GetRange("'Sheet1'!$B$1:$D$5");
 let pivotTable = Api.InsertPivotNewWorksheet(dataRef);
 
 pivotTable.AddFields({
-	rows: ['Region', 'Style'],
+    rows: ['Region', 'Style'],
 });
 
 pivotTable.AddDataField('Price');
 
 let pivotWorksheet = Api.GetActiveSheet();
-let pivotField = pivotTable.GetPivotFields('Style');
+let dataField = pivotTable.GetDataFields('Sum of Price');
 
-pivotWorksheet.GetRange('A12').SetValue('The Style field value');
-pivotWorksheet.GetRange('B12').SetValue(pivotField.GetValue());
+pivotWorksheet.GetRange('A12').SetValue('The Data field value');
+pivotWorksheet.GetRange('B12').SetValue(dataField.GetValue());
 
 ```

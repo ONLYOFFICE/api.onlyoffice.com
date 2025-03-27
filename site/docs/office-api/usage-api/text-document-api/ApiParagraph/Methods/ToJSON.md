@@ -1,11 +1,11 @@
 # ToJSON
 
-Converts the ApiParaPr object into the JSON object.
+Converts the ApiParagraph object into the JSON object.
 
 ## Syntax
 
 ```javascript
-expression.ToJSON(bWriteStyles);
+expression.ToJSON(bWriteNumberings, bWriteStyles);
 ```
 
 `expression` - A variable that represents a [ApiParagraph](../ApiParagraph.md) class.
@@ -14,6 +14,7 @@ expression.ToJSON(bWriteStyles);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
+| bWriteNumberings | Required | boolean |  | Specifies if the used numberings will be written to the JSON object or not. |
 | bWriteStyles | Required | boolean |  | Specifies if the used styles will be written to the JSON object or not. |
 
 ## Returns
@@ -22,16 +23,14 @@ JSON
 
 ## Example
 
-This example converts the ApiParaPr object into the JSON object.
+This example converts the ApiParagraph object into the JSON object.
 
 ```javascript editor-docx
 let doc = Api.GetDocument();
-let myStyle = doc.CreateStyle("My document style");
-let paraPr = myStyle.GetParaPr();
-paraPr.SetLeftBorder("single", 24, 0, 0, 255, 0);
-let json = paraPr.ToJSON(true);
-let paraPrFromJSON = Api.FromJSON(json);
-let type = paraPrFromJSON.GetClassType();
-let paragraph = doc.GetElement(0);
-paragraph.AddText("Class type = " + type);
+let paragraph = Api.CreateParagraph();
+paragraph.AddText("This is a new paragraph");
+let json = paragraph.ToJSON(false, true);
+let paragraphFromJSON = Api.FromJSON(json);
+paragraphFromJSON.SetBold(true);
+doc.AddElement(0, paragraphFromJSON);
 ```

@@ -19,7 +19,6 @@ Represents the ApiTable class.
 | [Delete](./Methods/Delete.md) | boolean | Deletes the current table. |
 | [GetCell](./Methods/GetCell.md) | [ApiTableCell](../ApiTableCell/ApiTableCell.md) \| null | Returns a cell by its position. |
 | [GetClassType](./Methods/GetClassType.md) | "table" | Returns a type of the ApiTable class. |
-| [GetClassType](./Methods/GetClassType.md) | "tablePr" | Returns a type of the ApiTablePr class. |
 | [GetParentContentControl](./Methods/GetParentContentControl.md) | [ApiBlockLvlSdt](../ApiBlockLvlSdt/ApiBlockLvlSdt.md) \| null | Returns a content control that contains the current table. |
 | [GetParentTable](./Methods/GetParentTable.md) | [ApiTable](../ApiTable/ApiTable.md) \| null | Returns a table that contains the current table. |
 | [GetParentTableCell](./Methods/GetParentTableCell.md) | [ApiTableCell](../ApiTableCell/ApiTableCell.md) \| null | Returns a table cell that contains the current table. |
@@ -67,4 +66,3 @@ Represents the ApiTable class.
 | [SetWrappingStyle](./Methods/SetWrappingStyle.md) | boolean | Sets the table wrapping style. |
 | [Split](./Methods/Split.md) | [ApiTable](../ApiTable/ApiTable.md) \| null | Splits the cell into a given number of rows and columns. |
 | [ToJSON](./Methods/ToJSON.md) | JSON | Converts the ApiTable object into the JSON object. |
-| [ToJSON](./Methods/ToJSON.md) | JSON | Converts the ApiTablePr object into the JSON object. |

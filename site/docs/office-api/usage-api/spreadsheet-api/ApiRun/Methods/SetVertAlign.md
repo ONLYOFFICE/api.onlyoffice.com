@@ -1,6 +1,6 @@
 # SetVertAlign
 
-Specifies the alignment which will be applied to the contents of the run in relation to the default appearance of the run text:\
+Specifies the alignment which will be applied to the contents of the current run in relation to the default appearance of the text run:\
 -**"baseline"** - the characters in the current text run will be aligned by the default text baseline.\
 -**"subscript"** - the characters in the current text run will be aligned below the default text baseline.\
 -**"superscript"** - the characters in the current text run will be aligned above the default text baseline.
@@ -35,9 +35,18 @@ let shape = worksheet.AddShape("flowChartOnlineStorage", 120 * 36000, 70 * 36000
 let content = shape.GetContent();
 let paragraph = content.GetElement(0);
 let run = Api.CreateRun();
-let textProps = run.GetTextPr();
-textProps.SetVertAlign("superscript");
-paragraph.SetJc("left");
-run.AddText("This is a text inside the shape with vertical alignment set to 'superscript'.");
+run.AddText("This is just a sample text. ");
+paragraph.AddElement(run);
+run = Api.CreateRun();
+run.SetVertAlign("subscript");
+run.AddText("This is a text run with the text aligned below the baseline vertically. ");
+paragraph.AddElement(run);
+run = Api.CreateRun();
+run.SetVertAlign("baseline");
+run.AddText("This is a text run with the text aligned by the baseline vertically. ");
+paragraph.AddElement(run);
+run = Api.CreateRun();
+run.SetVertAlign("superscript");
+run.AddText("This is a text run with the text aligned above the baseline vertically.");
 paragraph.AddElement(run);
 ```
