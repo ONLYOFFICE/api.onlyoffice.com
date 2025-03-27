@@ -18,7 +18,7 @@ Counts paragraphs, words, and characters with or without spaces in the selected 
 
 ## Installation
 
-Available by default in ONLYOFFICE Enterprise Edition and Community Edition (Docs + Workspace).
+Available by default in ONLYOFFICE Docs Enterprise and Community (Docs + Workspace).
 
 You can also download this plugin from the [ONLYOFFICE App Directory](https://www.onlyoffice.com/en/app-directory/word-counter) and install it following the [desktop](../installing/onlyoffice-desktop-editors.md) or [cloud](../installing/onlyoffice-cloud.md) installation instructions.
 

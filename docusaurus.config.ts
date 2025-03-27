@@ -29,10 +29,11 @@ const config: Config = {
   future: {
     experimental_faster: {
       mdxCrossCompilerCache: true,
+      lightningCssMinimizer: true,
+
       swcJsLoader: false,
       swcJsMinimizer: false,
       swcHtmlMinimizer: false,
-      lightningCssMinimizer: false,
       rspackBundler: false,
     }
   },
@@ -142,13 +143,13 @@ const config: Config = {
             {
               type: 'docSidebar',
               sidebarId: 'docspaceApiBackend',
-              label: 'API Backend',
+              label: 'API backend',
               docsPluginId: 'api',
             },
             {
               type: 'docSidebar',
               sidebarId: 'docspaceHosting',
-              label: 'For Hosting Providers',
+              label: 'For hosting providers',
               docsPluginId: 'api',
             },
           ],
@@ -174,7 +175,7 @@ const config: Config = {
             {
               type: 'docSidebar',
               sidebarId: 'docsMacros',
-              label: 'Plugins and Macros',
+              label: 'Plugins and macros',
               docsPluginId: 'api',
             },
             {
@@ -187,26 +188,6 @@ const config: Config = {
               type: 'docSidebar',
               sidebarId: 'docsDesktop',
               label: 'Desktop Editors',
-              docsPluginId: 'api',
-            },
-          ],
-        },
-        {
-          type: 'dropdown',
-          label: 'Workspace',
-          position: 'left',
-          to: 'workspace',
-          items: [
-            {
-              type: 'docSidebar',
-              sidebarId: 'workspaceBackend',
-              label: 'API Backend',
-              docsPluginId: 'api',
-            },
-            {
-              type: 'docSidebar',
-              sidebarId: 'workspaceHosting',
-              label: 'For Hosting Providers',
               docsPluginId: 'api',
             },
           ],
@@ -227,7 +208,7 @@ const config: Config = {
       style: 'dark',
       links: [
         {
-          title: 'Get Information',
+          title: 'Get information',
           items: [
             {
               label: 'Blog for developers',
@@ -248,7 +229,7 @@ const config: Config = {
           ],
         },
         {
-          title: 'Get Help',
+          title: 'Get help',
           items: [
             {
               label: 'Forum',
@@ -287,7 +268,7 @@ const config: Config = {
     prism: {
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,
-      additionalLanguages: ["bash", "php", "csharp", "java"],
+      additionalLanguages: ["bash", "php", "csharp", "java", "ruby"],
     },
     algolia: {
       appId: '59O6KESY1Y',

@@ -1,4 +1,4 @@
-﻿# Troubleshooting
+﻿# 故障排除
 
 编辑器集成最常见的问题以及解决方法。
 
@@ -18,7 +18,7 @@
 
 >**文档编辑服务**无法将数据发送到**文档存储服务**。
 
- 检查 [editorConfig.callbackUrl](../usage-api/config/editor/editor.md#callbackurl) 链接是否正确。**文档管理器**中的保存必须通过[回调处理程序](../usage-api/callback-handler.md#net-c-document-save-example)实现。
+ 检查 [editorConfig.callbackUrl](../usage-api/config/editor/editor.md#callbackurl) 链接是否正确。**文档管理器**中的保存必须通过[回调处理程序](../usage-api/callback-handler.md#document-save-examples)实现。
 
 ## 无法保存
 
@@ -26,9 +26,9 @@
 
 编辑器加载了"无法保存文档"消息。
 
-**文档编辑服务**无法连接到[editorConfig.callbackUrl](../usage-api/config/editor/editor.md#callbackurl)地址的**文档存储服务**。
+**文档编辑服务**无法连接到 [editorConfig.callbackUrl](../usage-api/config/editor/editor.md#callbackurl) 地址的**文档存储服务**。
 
-检查[回调处理程序](../usage-api/callback-handler.md#net-c-document-save-example)是否正常工作。**文档存储服务**必须返回 [\{"error": 0\}](../usage-api/callback-handler.md#response-from-the-document-storage-service)作为响应。
+检查[回调处理程序](../usage-api/callback-handler.md#document-save-examples)是否正常工作。**文档存储服务**必须返回 [\{"error": 0\}](../usage-api/callback-handler.md#response-from-the-document-storage-service)作为响应。
 
 ## 文件版本已更改
 
@@ -66,7 +66,7 @@
 
 **文档编辑服务**会请求一个加密**签名**。
 
-检查[牌](../usage-api/config/config.md#token)是否正确。令牌必须根据[JWT（JSON Web 令牌）标准](../get-started/how-it-works/security.md)生成并存在于 **ONLYOFFICE 文档服务器**配置中。
+检查[牌](../usage-api/config/config.md#token)是否正确。令牌必须根据 [JWT（JSON Web 令牌）标准](../get-started/how-it-works/security.md)生成并存在于 **ONLYOFFICE 文档服务器**配置中。
 
 ## 拒绝访问
 
@@ -79,7 +79,7 @@
 1. 这是编辑器的错误，它传递了服务器检查认为存在安全违规的参数。
 2. 更改浏览器中打开的配置中的访问权限（可能是与错误填写缺失配置字段相关的编辑器错误）。
 3. 尝试在查看器中保存文档或编辑器错误地在查看器中打开。
-4. 执行了 [downloadAs](../usage-api/methods.md#downloadas) 方法，但用户无权 [下载](../usage-api/config/document/permissions.md#download) 文档。
+4. 执行了 [downloadAs](../usage-api/methods.md#downloadas) 方法，但用户无权[下载](../usage-api/config/document/permissions.md#download)文档。
 5. 更改用户名（仅限匿名用户）。
 
 错误原因不仅限于提供的示例。此列表还可扩展。

@@ -428,3 +428,7 @@ button[class*='copyButtonCopied'] svg[class*='copyButtonSuccessIcon'] {
 .conversion-table table th {
   font-weight: normal;
 }
+
+.hidden {
+  display: none !important;
+}

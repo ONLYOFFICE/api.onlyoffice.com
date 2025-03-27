@@ -1,14 +1,14 @@
 openapi: 3.0.1
 info:
-  title: ASC.Web.Api
+  title: Api
   version: v2
 servers:
-  - url: https://{host}:{port}
+  - url: '{baseUrl}'
+    description: Server configuration
     variables:
-      host:
-        default: localhost
-      port:
-        default: '8092'
+      baseUrl:
+        default: http://localhost:80
+        description: Default URL
 tags:
   - name: Authentication
     description: Operations for authenticating users.
@@ -16,12 +16,6 @@ tags:
   - name: Capabilities
     description: Operations for getting information about portal capabilities.
     x-displayName: Capabilities
-  - name: Migration
-    description: Operations for performing migration.
-    x-displayName: Migration
-  - name: Modules
-    description: Operations for getting information about portal modules.
-    x-displayName: Modules
   - name: Portal / Quota
     description: Operations for getting information about portal quota.
     x-displayName: Quota
@@ -103,15 +97,9 @@ tags:
   - name: Settings / Storage
     description: Operations for working with storage settings.
     x-displayName: Storage
-  - name: Settings / Team templates
-    description: Operations for working with team template settings.
-    x-displayName: Team templates
   - name: Settings / TFA settings
     description: Operations for working with TFA settings.
     x-displayName: TFA settings
-  - name: Settings / Tips
-    description: Operations for working with tip settings.
-    x-displayName: Tips
   - name: Settings / Webhooks
     description: Operations for working with webhook settings.
     x-displayName: Webhooks
@@ -361,220 +349,6 @@ paths:
                 $ref: >-
                   #/components/schemas/ASC.Web.Api.ApiModel.ResponseDto.CapabilitiesDto
       description: Returns the information about portal capabilities.
-  /api/2.0/migration/list:
-    get:
-      tags:
-        - Migration
-      summary: Gets migration list
-      operationId: list
-      responses:
-        '200':
-          description: Ok
-          content:
-            application/json:
-              schema:
-                type: array
-                items:
-                  type: string
-        '401':
-          description: Unauthorized
-        '403':
-          description: No permissions to perform this action
-      security:
-        - asc_auth_key:
-            - read
-            - write
-      description: Gets migration list
-  /api/2.0/migration/init/{migratorName}:
-    post:
-      tags:
-        - Migration
-      summary: Uploads and inits migration
-      operationId: uploadAndInit
-      parameters:
-        - name: migratorName
-          in: path
-          description: Migrator name
-          required: true
-          schema:
-            type: string
-            example: some text
-      responses:
-        '200':
-          description: Ok
-        '401':
-          description: Unauthorized
-        '403':
-          description: No permissions to perform this action
-      security:
-        - asc_auth_key:
-            - read
-            - write
-      description: Uploads and inits migration
-  /api/2.0/migration/status:
-    get:
-      tags:
-        - Migration
-      summary: Gets migration status
-      operationId: status
-      responses:
-        '200':
-          description: Ok
-          content:
-            application/json:
-              schema:
-                $ref: >-
-                  #/components/schemas/ASC.Web.Api.ApiModels.ResponseDto.MigrationStatusDto
-        '401':
-          description: Unauthorized
-        '403':
-          description: No permissions to perform this action
-      security:
-        - asc_auth_key:
-            - read
-            - write
-      description: Gets migration status
-  /api/2.0/migration/cancel:
-    post:
-      tags:
-        - Migration
-      summary: Cancels migration
-      operationId: cancel
-      responses:
-        '200':
-          description: Ok
-        '401':
-          description: Unauthorized
-        '403':
-          description: No permissions to perform this action
-      security:
-        - asc_auth_key:
-            - read
-            - write
-      description: Cancels migration
-  /api/2.0/migration/clear:
-    post:
-      tags:
-        - Migration
-      summary: Clears migration
-      operationId: clear
-      responses:
-        '200':
-          description: Ok
-        '401':
-          description: Unauthorized
-        '403':
-          description: No permissions to perform this action
-      security:
-        - asc_auth_key:
-            - read
-            - write
-      description: Clears migration
-  /api/2.0/migration/migrate:
-    post:
-      tags:
-        - Migration
-      summary: Migrates
-      operationId: migrate
-      requestBody:
-        content:
-          application/json:
-            schema:
-              $ref: >-
-                #/components/schemas/ASC.Migration.Core.Models.Api.MigrationApiInfo
-      responses:
-        '200':
-          description: Ok
-        '401':
-          description: Unauthorized
-        '403':
-          description: No permissions to perform this action
-      security:
-        - asc_auth_key:
-            - read
-            - write
-      description: Migrates
-  /api/2.0/migration/logs:
-    get:
-      tags:
-        - Migration
-      summary: Gets migration logs
-      operationId: logs
-      responses:
-        '200':
-          description: Ok
-        '401':
-          description: Unauthorized
-        '403':
-          description: No permissions to perform this action
-      security:
-        - asc_auth_key:
-            - read
-            - write
-      description: Gets migration logs
-  /api/2.0/migration/finish:
-    post:
-      tags:
-        - Migration
-      summary: Finishes migration
-      operationId: finish
-      requestBody:
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/ASC.Web.Api.ApiModels.RequestsDto.FinishDto'
-      responses:
-        '200':
-          description: Ok
-        '401':
-          description: Unauthorized
-        '403':
-          description: No permissions to perform this action
-      security:
-        - asc_auth_key:
-            - read
-            - write
-      description: Finishes migration
-  /api/2.0/modules:
-    get:
-      tags:
-        - Modules
-      summary: Get modules
-      operationId: getAll
-      responses:
-        '200':
-          description: List of modules
-          content:
-            application/json:
-              schema:
-                type: string
-        '401':
-          description: Unauthorized
-      security:
-        - asc_auth_key:
-            - read
-            - write
-      description: Returns a list of all the portal modules.
-  /api/2.0/modules/info:
-    get:
-      tags:
-        - Modules
-      summary: Get modules information
-      operationId: getAllWithInfo
-      responses:
-        '200':
-          description: List of modules with their information
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/ASC.Api.Core.Module'
-        '401':
-          description: Unauthorized
-      security:
-        - asc_auth_key:
-            - read
-            - write
-      description: Returns a list of all the portal modules with their information.
   /api/2.0/portal/usedspace:
     get:
       tags:
@@ -3884,117 +3658,6 @@ paths:
             - read
             - write
       description: Returns a list of all Amazon regions.
-  /api/2.0/settings/customschemas:
-    get:
-      tags:
-        - Settings / Team templates
-      summary: Get team templates
-      operationId: peopleSchemas
-      responses:
-        '200':
-          description: List of team templates with the following parameters
-          content:
-            application/json:
-              schema:
-                $ref: >-
-                  #/components/schemas/ASC.Web.Api.ApiModel.RequestsDto.SchemaRequestsDto
-        '401':
-          description: Unauthorized
-      security:
-        - asc_auth_key:
-            - read
-            - write
-      description: >-
-        Returns all portal team templates that allow users to name their
-        organization (or group), add members, and define their activities within
-        the portal.
-    post:
-      tags:
-        - Settings / Team templates
-      summary: Save the naming settings
-      operationId: saveNamingSettings
-      requestBody:
-        content:
-          application/json:
-            schema:
-              $ref: >-
-                #/components/schemas/ASC.Web.Api.ApiModel.RequestsDto.SchemaBaseRequestsDto
-      responses:
-        '200':
-          description: Team template with the following parameters
-          content:
-            application/json:
-              schema:
-                $ref: >-
-                  #/components/schemas/ASC.Web.Api.ApiModel.RequestsDto.SchemaRequestsDto
-        '401':
-          description: Unauthorized
-      security:
-        - asc_auth_key:
-            - read
-            - write
-      description: >-
-        Saves the names from the team template with the ID specified in the
-        request.
-    put:
-      tags:
-        - Settings / Team templates
-      summary: Create a custom team template
-      operationId: saveCustomNamingSettings
-      requestBody:
-        content:
-          application/json:
-            schema:
-              $ref: >-
-                #/components/schemas/ASC.Web.Api.ApiModel.RequestsDto.SchemaRequestsDto
-      responses:
-        '200':
-          description: Custom team template with the following parameters
-          content:
-            application/json:
-              schema:
-                $ref: >-
-                  #/components/schemas/ASC.Web.Api.ApiModel.RequestsDto.SchemaRequestsDto
-        '400':
-          description: Please fill in all fields
-        '401':
-          description: Unauthorized
-      security:
-        - asc_auth_key:
-            - read
-            - write
-      description: >-
-        Creates a custom team template with the parameters specified in the
-        request.
-  /api/2.0/settings/customschemas/{id}:
-    get:
-      tags:
-        - Settings / Team templates
-      summary: Get a team template by ID
-      operationId: peopleSchema
-      parameters:
-        - name: id
-          in: path
-          description: Id
-          required: true
-          schema:
-            type: string
-            example: '9846'
-      responses:
-        '200':
-          description: Team template with the following parameters
-          content:
-            application/json:
-              schema:
-                $ref: >-
-                  #/components/schemas/ASC.Web.Api.ApiModel.RequestsDto.SchemaRequestsDto
-        '401':
-          description: Unauthorized
-      security:
-        - asc_auth_key:
-            - read
-            - write
-      description: Returns a team template by the ID specified in the request.
   /api/2.0/settings/tfaapp:
     get:
       tags:
@@ -4216,72 +3879,6 @@ paths:
       description: >-
         Unlinks the current two-factor authentication application from the user
         account specified in the request.
-  /api/2.0/settings/tips:
-    put:
-      tags:
-        - Settings / Tips
-      summary: Update the tip settings
-      operationId: updateTipsSettings
-      requestBody:
-        content:
-          application/json:
-            schema:
-              $ref: >-
-                #/components/schemas/ASC.Web.Api.ApiModel.RequestsDto.TipsRequestDto
-      responses:
-        '200':
-          description: Updated tip settings
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/ASC.Web.Studio.Core.TipsSettings'
-        '401':
-          description: Unauthorized
-      security:
-        - asc_auth_key:
-            - read
-            - write
-      description: Updates the tip settings with a parameter specified in the request.
-  /api/2.0/settings/tips/change/subscription:
-    put:
-      tags:
-        - Settings / Tips
-      summary: Update the tip subscription
-      operationId: updateTipsSubscription
-      responses:
-        '200':
-          description: 'Boolean value: true if the user is subscribed to the tips'
-          content:
-            application/json:
-              schema:
-                type: boolean
-        '401':
-          description: Unauthorized
-      security:
-        - asc_auth_key:
-            - read
-            - write
-      description: Updates the tip subscription.
-  /api/2.0/settings/tips/subscription:
-    get:
-      tags:
-        - Settings / Tips
-      summary: Check the tip subscription
-      operationId: getTipsSubscription
-      responses:
-        '200':
-          description: 'Boolean value: true if the user is subscribed to the tips'
-          content:
-            application/json:
-              schema:
-                type: boolean
-        '401':
-          description: Unauthorized
-      security:
-        - asc_auth_key:
-            - read
-            - write
-      description: Checks if the current user is subscribed to the tips or not.
   /api/2.0/settings/webhook:
     get:
       tags:
@@ -12078,54 +11675,6 @@ components:
           readOnly: true
           example: '00:00:00'
       additionalProperties: false
-    ASC.Api.Core.Module:
-      type: object
-      properties:
-        id:
-          type: string
-          description: ID
-          format: uuid
-          example: aae1e103-bca5-9fa1-ba8c-42058b4abf28
-        appName:
-          type: string
-          description: Product class name
-          nullable: true
-          example: some text
-        title:
-          type: string
-          description: Title
-          nullable: true
-          example: legacy_1080p_small_wooden_mouse
-        link:
-          type: string
-          description: Start link
-          nullable: true
-          example: some text
-        iconUrl:
-          type: string
-          description: Icon URL
-          nullable: true
-          example: some text
-        imageUrl:
-          type: string
-          description: Large image URL
-          nullable: true
-          example: some text
-        helpUrl:
-          type: string
-          description: Help URL
-          nullable: true
-          example: some text
-        description:
-          type: string
-          description: Description
-          nullable: true
-          example: some text
-        isPrimary:
-          type: boolean
-          description: Specifies if the module is primary or not
-          example: true
-      additionalProperties: false
     ASC.Api.Settings.Smtp.SmtpOperationStatusRequestsDto:
       type: object
       properties:
@@ -14035,159 +13584,6 @@ components:
             Generate authorization code token, 9909 - Generate personal access
             token, -1 - None]
           example: 1000
-    ASC.Migration.Core.Models.Api.MigratingApiFiles:
-      type: object
-      properties:
-        foldersCount:
-          type: integer
-          format: int32
-          example: 1234
-        filesCount:
-          type: integer
-          format: int32
-          example: 1234
-        bytesTotal:
-          type: integer
-          format: int64
-          example: 1234
-      additionalProperties: false
-    ASC.Migration.Core.Models.Api.MigratingApiGroup:
-      type: object
-      properties:
-        shouldImport:
-          type: boolean
-          example: true
-        groupName:
-          type: string
-          nullable: true
-          example: some text
-        moduleName:
-          type: string
-          nullable: true
-          example: some text
-        userUidList:
-          type: array
-          items:
-            type: string
-          nullable: true
-          example:
-            - some text
-      additionalProperties: false
-    ASC.Migration.Core.Models.Api.MigratingApiUser:
-      type: object
-      properties:
-        shouldImport:
-          type: boolean
-          example: true
-        key:
-          type: string
-          nullable: true
-          example: some text
-        email:
-          type: string
-          format: email
-          nullable: true
-          example: Sydney_Roberts4@hotmail.com
-        displayName:
-          type: string
-          nullable: true
-          example: some text
-        firstName:
-          type: string
-          nullable: true
-          example: Winfield
-        lastName:
-          type: string
-          nullable: true
-          example: Wyman
-        userType:
-          $ref: '#/components/schemas/ASC.Core.Users.EmployeeType'
-        migratingFiles:
-          $ref: '#/components/schemas/ASC.Migration.Core.Models.Api.MigratingApiFiles'
-      additionalProperties: false
-    ASC.Migration.Core.Models.Api.MigrationApiInfo:
-      type: object
-      properties:
-        migratorName:
-          type: string
-          nullable: true
-          example: some text
-        operation:
-          type: string
-          nullable: true
-          example: some text
-        failedArchives:
-          type: array
-          items:
-            type: string
-          nullable: true
-          example:
-            - some text
-        users:
-          type: array
-          items:
-            $ref: >-
-              #/components/schemas/ASC.Migration.Core.Models.Api.MigratingApiUser
-          nullable: true
-        withoutEmailUsers:
-          type: array
-          items:
-            $ref: >-
-              #/components/schemas/ASC.Migration.Core.Models.Api.MigratingApiUser
-          nullable: true
-        existUsers:
-          type: array
-          items:
-            $ref: >-
-              #/components/schemas/ASC.Migration.Core.Models.Api.MigratingApiUser
-          nullable: true
-        groups:
-          type: array
-          items:
-            $ref: >-
-              #/components/schemas/ASC.Migration.Core.Models.Api.MigratingApiGroup
-          nullable: true
-        importPersonalFiles:
-          type: boolean
-          example: true
-        importSharedFiles:
-          type: boolean
-          example: true
-        importSharedFolders:
-          type: boolean
-          example: true
-        importCommonFiles:
-          type: boolean
-          example: true
-        importProjectFiles:
-          type: boolean
-          example: true
-        importGroups:
-          type: boolean
-          example: true
-        successedUsers:
-          type: integer
-          format: int32
-          example: 1234
-        failedUsers:
-          type: integer
-          format: int32
-          example: 1234
-        files:
-          type: array
-          items:
-            type: string
-          nullable: true
-          example:
-            - some text
-        errors:
-          type: array
-          items:
-            type: string
-          nullable: true
-          example:
-            - some text
-      additionalProperties: false
     ASC.Security.Cryptography.EmailValidationKeyModel:
       type: object
       properties:
@@ -14531,76 +13927,6 @@ components:
           description: Default quota value
       additionalProperties: false
       description: Request parameters for the user quota settings
-    ASC.Web.Api.ApiModel.RequestsDto.SchemaBaseRequestsDto:
-      type: object
-      properties:
-        id:
-          type: string
-          description: Team template ID
-          nullable: true
-          example: '9846'
-      additionalProperties: false
-      description: Team template parameters
-    ASC.Web.Api.ApiModel.RequestsDto.SchemaRequestsDto:
-      type: object
-      properties:
-        id:
-          type: string
-          description: Team template ID
-          nullable: true
-          example: '9846'
-        name:
-          type: string
-          description: Team template name
-          nullable: true
-          example: Winfield Upton
-        userCaption:
-          type: string
-          description: User caption
-          nullable: true
-          example: some text
-        usersCaption:
-          type: string
-          description: Users caption
-          nullable: true
-          example: some text
-        groupCaption:
-          type: string
-          description: Group caption
-          nullable: true
-          example: some text
-        groupsCaption:
-          type: string
-          description: Groups caption
-          nullable: true
-          example: some text
-        userPostCaption:
-          type: string
-          description: User status caption
-          nullable: true
-          example: some text
-        regDateCaption:
-          type: string
-          description: Registration date caption
-          nullable: true
-          example: some text
-        groupHeadCaption:
-          type: string
-          description: Group lead caption
-          nullable: true
-          example: some text
-        guestCaption:
-          type: string
-          description: Guest caption
-          nullable: true
-          example: some text
-        guestsCaption:
-          type: string
-          description: Guests caption
-          nullable: true
-          example: some text
-      additionalProperties: false
-      description: Team template parameters
     ASC.Web.Api.ApiModel.RequestsDto.SecurityRequestsDto:
       type: object
       properties:
@@ -14811,15 +14137,6 @@ components:
           nullable: true
           example: some text
       additionalProperties: false
-    ASC.Web.Api.ApiModel.RequestsDto.TipsRequestDto:
-      type: object
-      properties:
-        show:
-          type: boolean
-          description: Specifies whether to show tips for the user or not
-          example: true
-      additionalProperties: false
-      description: Settings request parameters
     ASC.Web.Api.ApiModel.RequestsDto.TurnOnAdminMessageSettingsRequestDto:
       type: object
       properties:
@@ -15643,14 +14960,6 @@ components:
           example: 1234
       additionalProperties: false
       description: Portal theme settings
-    ASC.Web.Api.ApiModels.RequestsDto.FinishDto:
-      type: object
-      properties:
-        isSendWelcomeEmail:
-          type: boolean
-          description: Is send welcome email
-          example: true
-      additionalProperties: false
     ASC.Web.Api.ApiModels.RequestsDto.FirebaseRequestsDto:
       type: object
       properties:
@@ -16050,26 +15359,6 @@ components:
           example: 1234
         isDefault:
           type: boolean
-          example: true
-      additionalProperties: false
-    ASC.Web.Api.ApiModels.ResponseDto.MigrationStatusDto:
-      type: object
-      properties:
-        progress:
-          type: number
-          description: Migration progress
-          format: double
-          example: 1
-        error:
-          type: string
-          description: Migration error
-          nullable: true
-          example: some text
-        parseResult:
-          $ref: '#/components/schemas/ASC.Migration.Core.Models.Api.MigrationApiInfo'
-        isCompleted:
-          type: boolean
-          description: Specifies whether the migration is completed
           example: true
       additionalProperties: false
     ASC.Web.Api.ApiModels.ResponseDto.NotificationSettingsDto:
@@ -16834,15 +16123,6 @@ components:
           example: true
       additionalProperties: false
       description: Email activation settings
-    ASC.Web.Studio.Core.TipsSettings:
-      type: object
-      properties:
-        show:
-          type: boolean
-          description: Specifies if the tips will be shown or not
-          example: true
-      additionalProperties: false
-      description: ''
     ASC.Web.Studio.UserControls.Management.AuthKey:
       type: object
       properties:
@@ -18311,6 +17591,54 @@ components:
             type: string
           example:
             - some text
+      additionalProperties: false
+    ASC.Api.Core.Module:
+      type: object
+      properties:
+        id:
+          type: string
+          description: ID
+          format: uuid
+          example: aae1e103-bca5-9fa1-ba8c-42058b4abf28
+        appName:
+          type: string
+          description: Product class name
+          nullable: true
+          example: some text
+        title:
+          type: string
+          description: Title
+          nullable: true
+          example: legacy_1080p_small_wooden_mouse
+        link:
+          type: string
+          description: Start link
+          nullable: true
+          example: some text
+        iconUrl:
+          type: string
+          description: Icon URL
+          nullable: true
+          example: some text
+        imageUrl:
+          type: string
+          description: Large image URL
+          nullable: true
+          example: some text
+        helpUrl:
+          type: string
+          description: Help URL
+          nullable: true
+          example: some text
+        description:
+          type: string
+          description: Description
+          nullable: true
+          example: some text
+        isPrimary:
+          type: boolean
+          description: Specifies if the module is primary or not
+          example: true
       additionalProperties: false
     ASC.FederatedLogin.OAuth20Token:
       type: object
@@ -23407,21 +22735,54 @@ components:
       name: asc_auth_key
       in: cookie
 x-tagGroups:
-  - name: Api
+  - name: Files
+    tags:
+      - Files / Files
+      - Files / Folders
+      - Files / Operations
+      - Files / Quota
+      - Files / Rooms
+      - Files / Settings
+      - Files / Third-party integration
+  - name: Group
+    tags:
+      - Group
+      - Group / Rooms
+  - name: People
+    tags:
+      - People / Contacts
+      - People / Guests
+      - People / Password
+      - People / Photos
+      - People / Profiles
+      - People / Quota
+      - People / Search
+      - People / Theme
+      - People / Third-party accounts
+      - People / User data
+      - People / User status
+      - People / User type
+  - name: Authentication
     tags:
       - Authentication
+  - name: Capabilities
+    tags:
       - Capabilities
-      - Migration
-      - Modules
+  - name: Portal
+    tags:
       - Portal / Quota
       - Portal / Settings
       - Portal / Users
+  - name: Security
+    tags:
       - Security / Active connections
       - Security / Audit trail data
       - Security / CSP
       - Security / Firebase
       - Security / Login history
       - Security / SMTP settings
+  - name: Settings
+    tags:
       - Settings / Authorization
       - Settings / Common settings
       - Settings / Cookies
@@ -23440,36 +22801,6 @@ x-tagGroups:
       - Settings / SSO
       - Settings / Statistics
       - Settings / Storage
-      - Settings / Team templates
       - Settings / TFA settings
-      - Settings / Tips
       - Settings / Webhooks
       - Settings / Webplugins
-  - name: People
-    tags:
-      - Group
-      - Group / Rooms
-      - People / Contacts
-      - People / Guests
-      - People / Password
-      - People / Photos
-      - People / Profiles
-      - People / Quota
-      - People / Search
-      - People / Theme
-      - People / Third-party accounts
-      - People / User data
-      - People / User status
-      - People / User type
-  - name: Files
-    tags:
-      - Files / Files
-      - Files / Folders
-      - Files / Operations
-      - Files / Quota
-      - Files / Rooms
-      - Files / Settings
-      - Files / Third-party integration
-  - name: Backup
-    tags:
-      - Backup

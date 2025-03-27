@@ -2,7 +2,7 @@
 sidebar_position: -11
 ---
 
-# Overview
+# 概述
 
 从 6.4 版开始，ONLYOFFICE 文档提供 **对Web 应用程序开放平台接口协议 (WOPI)** 的支持 - 一种基于 REST 的协议，用于将您的应用程序与online office集成。WOPI 操作允许您打开存储在服务器上的文件、编辑和保存它们。
 
@@ -11,13 +11,13 @@ sidebar_position: -11
 - WOPI 协议 [configuration parameters](./config.md);
 - 了解与 WOPI 客户端集成的要求所必需的 [key concepts](./key-concepts.md)；
 - 可以通过 [WOPI discovery](./wopi-discovery.md) 指定的文件属性；
-- 必须构建 [主机页面](./host-page.md) 以在online office内创建 iframe 元素；
+- 必须构建[主机页面](./host-page.md)以在online office内创建 iframe 元素；
 - [proof keys](./proof-keys.md) 用于检查是否从online office收到请求；
 - 支持的 [WOPI REST API](./wopi-rest-api/wopi-rest-api.md) 函数；
 - 可以通过 [PostMessage](./postmessage.md) 发布的可用消息；
-- 在online office中 [转换](./conversion-api.md) 不同文件格式请求参数；
+- 在online office中[转换](./conversion-api.md)不同文件格式请求参数；
 - [编辑二进制文档格式](./editing-binary-documents.md) 的方案；
-- ONLYOFFICE 文档 API 和 WOPI 之间的 [区别](./api-vs-wopi.md)。
+- ONLYOFFICE 文档 API 和 WOPI 之间的[区别](./api-vs-wopi.md)。
 
 有关 WOPI 协议的更多信息，请阅读 [WOPI 文档](https://docs.microsoft.com/zh-cn/microsoft-365/cloud-storage-partner-program/online/)。
 
@@ -55,7 +55,7 @@ ONLYOFFICE 文档只能接受来自受信任的集成商的 WOPI 请求。此类
 
 > 默认情况下，所有 IP 地址都被认为是可信的。
 
-按照以下步骤配置 ONLYOFFICE 文档[IP filter](https://helpcenter.onlyoffice.com/installation/docs-developer-configuring.aspx#IPFilter):
+按照以下步骤配置 ONLYOFFICE 文档 [IP filter](https://helpcenter.onlyoffice.com/installation/docs-developer-configuring.aspx#IPFilter):
 
 1. 使用任何可用的文本编辑器打开 */etc/onlyoffice/documentserver/local.json* 文件：
 

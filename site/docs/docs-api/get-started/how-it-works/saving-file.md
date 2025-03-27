@@ -34,7 +34,7 @@ The reference figure and the steps below explain the process of saving a documen
 3. In the configuration script for Document Editor initialization specify the URL to the file with the *Callback handler* in the [parameter line](../../usage-api/config/editor/editor.md#callbackurl). Be sure to add a [token](./security.md) when using local links. Otherwise, an error will occur.
 
    ``` ts
-   const docEditor = new DocsAPI.DocEditor("placeholder", {
+   const config = {
      document: {
        fileType: "docx",
        key: "Khirz6zTPdfd7",
@@ -46,7 +46,9 @@ The reference figure and the steps below explain the process of saving a documen
        callbackUrl: "https://example.com/url-to-callback.ashx",
      },
      token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkb2N1bWVudCI6eyJmaWxlVHlwZSI6ImRvY3giLCJrZXkiOiJLaGlyejZ6VFBkZmQ3IiwidGl0bGUiOiJFeGFtcGxlIERvY3VtZW50IFRpdGxlLmRvY3giLCJ1cmwiOiJodHRwczovL2V4YW1wbGUuY29tL3VybC10by1leGFtcGxlLWRvY3VtZW50LmRvY3gifSwiZG9jdW1lbnRUeXBlIjoid29yZCIsImVkaXRvckNvbmZpZyI6eyJjYWxsYmFja1VybCI6Imh0dHBzOi8vZXhhbXBsZS5jb20vdXJsLXRvLWNhbGxiYWNrLmFzaHgifX0.vbezS2aM8Xf8qFzIAsO-jrIsi7VLxjRYkIkwh5jLTJU",
-   })
+   };
+
+   const docEditor = new DocsAPI.DocEditor("placeholder", config);
    ```
    Where **example.com** is the name of the server where **document manager** and **document storage service** are installed.
 

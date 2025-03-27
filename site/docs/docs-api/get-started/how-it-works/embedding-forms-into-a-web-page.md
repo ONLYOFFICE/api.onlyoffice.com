@@ -65,7 +65,7 @@ To open an online form in the PDF format for editing from your website, follow t
 8. Add the script initializing the Document Editor with the configuration for the document you want to open and open the editor in the placeholder element:
 
    ``` ts
-   this.docEditor = new DocsAPI.DocEditor("placeholder", {
+   const config = {
      document: {
        fileType: "pdf",
        key,
@@ -76,7 +76,9 @@ To open an online form in the PDF format for editing from your website, follow t
        url,
      },
      documentType: "pdf",
-   })
+   };
+
+   this.docEditor = new DocsAPI.DocEditor("placeholder", config);
    ```
 
 The full code fragment looks like this:
@@ -92,19 +94,19 @@ The full code fragment looks like this:
         }
         const url = "https://example.com/url-to-example-form.pdf";
         const key = filename + ".pdf";
-        this.docEditor = new DocsAPI.DocEditor("placeholder",
-        {
-            "document": {
-                "fileType": "pdf",
-                "key": key,
-                "permissions": {
-                    "edit": true
-                },
-                "title": "Form Template",
-                "url": url
-            },
-            "documentType": "pdf"
-        });
+        const config = {
+         "document": {
+               "fileType": "pdf",
+               "key": key,
+               "permissions": {
+                  "edit": true
+               },
+               "title": "Form Template",
+               "url": url
+         },
+         "documentType": "pdf"
+        };
+        this.docEditor = new DocsAPI.DocEditor("placeholder", config);
     }
 </script>
 ```
@@ -164,19 +166,20 @@ To make an online form in the PDF format available for filling in, follow the st
 8. Add the script initializing the Document Editor with the configuration for the document you want to open and open the editor in the placeholder element:
 
    ``` ts
-   this.docEditor = new DocsAPI.DocEditor("placeholder",
-     {
-       document: {
-         fileType: "pdf",
-         permissions: {
-           edit: false,
-           fillForms: true,
-         },
-         title: "Form",
-         url,
-       },
-       documentType: "pdf",
-     })
+   const config = {
+      document: {
+      fileType: "pdf",
+      permissions: {
+         edit: false,
+         fillForms: true,
+      },
+      title: "Form",
+      url,
+      },
+      documentType: "pdf",
+   };
+
+   this.docEditor = new DocsAPI.DocEditor("placeholder", config);
    ```
 
 The full code fragment looks like this:
@@ -192,19 +195,19 @@ The full code fragment looks like this:
         }
         const url = "https://example.com/url-to-example-form.pdf";
         const key = filename + ".pdf";
-        this.docEditor = new DocsAPI.DocEditor("placeholder",
-        {
-            "document": {
-                "fileType": "pdf",
-                "permissions": {
-                    "edit": false,
-                    "fillForms": true
-                },
-                "title": "Form",
-                "url": url
-            },
-            "documentType": "pdf"
-        });
+        const config = {
+         "document": {
+               "fileType": "pdf",
+               "permissions": {
+                  "edit": false,
+                  "fillForms": true
+               },
+               "title": "Form",
+               "url": url
+         },
+         "documentType": "pdf"
+        };
+        this.docEditor = new DocsAPI.DocEditor("placeholder", config);
     }
 </script>
 ```

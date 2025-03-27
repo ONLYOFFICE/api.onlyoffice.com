@@ -8,31 +8,52 @@ Imports hyperlinks between different worksheets in the spreadsheet.
 
 ```ts
 (function () {
-  var oWorksheetA = Api.GetSheet("Sheet1");
-  var oWorksheetB = Api.GetSheet("Sheet2");
-  var rowIndex = 0;
-  var titles = [];
-  var links = [];
+  let oWorksheetA = Api.GetSheet("Sheet1");
+  if (!oWorksheetA) {
+      Api.AddSheet("Sheet1"); // Add Sheet1 if it doesn't exist
+      oWorksheetA = Api.GetSheet("Sheet1");
+  }
+  let oWorksheetB = Api.GetSheet("Sheet2");
+  if (!oWorksheetB) {
+      Api.AddSheet("Sheet2"); // Add Sheet2 if it doesn't exist
+      oWorksheetB = Api.GetSheet("Sheet2");
+  }
+  
+  // Set data in the first worksheet. If you already have the data that you want to use, you can remove it.
+  oWorksheetA.SetActive();
+  oWorksheetA.GetRange("A1").SetValue("title1");
+  oWorksheetA.GetRange("A2").SetValue("title2");
+  oWorksheetA.GetRange("A3").SetValue("title2");
+  oWorksheetA.GetRange("B1").SetValue("https://api.onlyoffice.com/docs/office-api/usage-api/spreadsheet-api/");
+  oWorksheetA.GetRange("B2").SetValue("https://api.onlyoffice.com/docs/office-api/usage-api/text-document-api/");
+  oWorksheetA.GetRange("B3").SetValue("https://api.onlyoffice.com/docs/office-api/usage-api/presentation-api/");
+  oWorksheetA.GetRange("A1:B3").Select();
+  
+  let rowIndex = 0;
+  const titles = [];
+  const links = [];
   while (rowIndex < 10) {
-    var titleCell = oWorksheetA.GetRangeByNumber(rowIndex, 0); // Assuming title is in column A
-    var linkCell = oWorksheetA.GetRangeByNumber(rowIndex, 1); // Assuming link is in column B
-    var title = titleCell.GetValue();
-    var link = linkCell.GetValue();
-    titles.push(title); // Store titles in an array
-    links.push(link); // Store links in an array
+    const titleCell = oWorksheetA.GetRangeByNumber(rowIndex, 0); // Assuming title is in column A
+    const linkCell = oWorksheetA.GetRangeByNumber(rowIndex, 1); // Assuming link is in column B
+    const title = titleCell.GetValue();
+    const link = linkCell.GetValue();
+    if (link) {
+      titles.push(title); // Store titles in an array
+      links.push(link); // Store links in an array
+    }
     rowIndex++; // Increment the row index for the next iteration
   }
-  var rangeB = Api.GetSelection();
+  const rangeB = Api.GetSelection();
   rangeB.ForEach(function (cell) {
-    var cellValue = cell.GetValue();
+    const cellValue = cell.GetValue();
     // Check if the cell value matches any of the titles from the array
-    var index = titles.indexOf(cellValue);
+    const index = titles.indexOf(cellValue);
     if (index !== -1) {
-      var title = titles[index];
-      var link = links[index];
-      var address = cell.GetAddress(true, true, "xlA1", false);
+      const title = titles[index];
+      const link = links[index];
+      const address = cell.GetAddress(true, true, "xlA1", false);
       // Set the hyperlink in oWorksheetB
-      oWorksheetB.SetHyperlink(address, link, "Your Description", title);
+      oWorksheetB.SetHyperlink(address, link, "", title);
     }
   });
 })();

@@ -115,7 +115,7 @@ The steps below explain the process of document encryption in ONLYOFFICE.
    You can also do it in the editor initialization config:
 
    ``` ts
-   const docEditor = new DocsAPI.DocEditor("placeholder", {
+   const config = {
      editorConfig: {
        encryptionKeys: {
          cryptoEngineId: "{FFF0E1EB-13DB-4678-B67D-FF0A41DBBCEF}",
@@ -123,7 +123,9 @@ The steps below explain the process of document encryption in ONLYOFFICE.
          publicKey: "yyy",
        },
      },
-   })
+   };
+
+   const docEditor = new DocsAPI.DocEditor("placeholder", config);
    ```
 
 4. Send the generated keys to the cloud through the *cloudCryptoCommand* method with the *encryptionKeys* type:

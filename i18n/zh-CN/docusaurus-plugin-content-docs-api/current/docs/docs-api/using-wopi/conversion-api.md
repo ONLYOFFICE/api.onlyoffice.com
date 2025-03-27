@@ -8,15 +8,15 @@ sidebar_position: -3
 
 ## 请求参数及其说明：
 
-| 参数        | 类型    | 出现 | 描述                                                                                                                             |
+| 参数        | 类型    | 是否必填 | 描述                                                                                                                             |
 | ---------------- | ------- | -------- | --------------------------------------------------------------------------------------------------------------------------------------- |
-| format           | string  | 必需的 | 输出文件格式。                                                                                                                |
-| PDFVer           | string  | 可选的 | 用于输出文件（PDF/A-1b、PDF/A-2b 等）的相应 PDF 类型的 pdf 版本。                               |
-| FullSheetPreview | bollean | 可选的 | 指定完整工作表预览是否可用。                                                                          |
-| file             | object  | 必需的 | 要在负载中转换的文件。                                                                                                       |
-| lang             | string  | 可选的 | 默认格式语言。它用于日期类型的单元格。如果指定了语言，它决定了显示/输出格式。 |
-| Password         | string  | 可选的 | 受保护文档的密码。从版本 8.2 开始可用。                                                                      |
-| PasswordToOpen   | string  | 可选的 | 打开受保护文档的密码。从版本 8.2 开始可用。                                                                  |
+| format           | string  | 必填 | 输出文件格式。                                                                                                                |
+| PDFVer           | string  | 非必填的 | 用于输出文件（PDF/A-1b、PDF/A-2b 等）的相应 PDF 类型的 pdf 版本。                               |
+| FullSheetPreview | bollean | 非必填的 | 指定完整工作表预览是否可用。                                                                          |
+| file             | object  | 必填 | 要在负载中转换的文件。                                                                                                       |
+| lang             | string  | 非必填的 | 默认格式语言。它用于日期类型的单元格。如果指定了语言，它决定了显示/输出格式。 |
+| Password         | string  | 非必填的 | 受保护文档的密码。从版本 8.2 开始可用。                                                                      |
+| PasswordToOpen   | string  | 非必填的 | 打开受保护文档的密码。从版本 8.2 开始可用。                                                                  |
 
 ## 请求示例
 
@@ -39,7 +39,7 @@ curl -F "data=sample.txt" https://documentserver/cool/convert-to/docx > result.d
 
 其中 **documentserver** 是安装了 ONLYOFFICE 文档的服务器的名称。
 
-### 带有 *格式* 参数的转换请求示例
+### 带有*格式*参数的转换请求示例
 
 ``` sh
 curl -F "data=sample.odt" -F "format=pdf" "PDFVer=PDF/A-2b" https://documentserver/cool/convert-to > result.pdf
