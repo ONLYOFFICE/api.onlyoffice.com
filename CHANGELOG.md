@@ -1,5 +1,11 @@
 # Change log
 
+### New features
+
+#### Docs API
+
+* Added the Size response property to CheckFileInfo
+
 ## 4.5.0
 
 ### New features
