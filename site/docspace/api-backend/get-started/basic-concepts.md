@@ -32,12 +32,12 @@ HTTP/1.1 404 Not Found
 
 ## Rate limiting
 
-Please pay attention to some restrictions on autentication requests:
+Please pay attention to some restrictions on authenticated requests:
 
-- You can perform up to 1500 authentication requests per minute.
-- You can perform up to 50 simultaneous GET authentication requests.
-- You can perform up to 15 simultaneous authentication requests of any type except GET.
-- Some methods have additional restrictions. For example, you can perform up to 5 authentication requests per minute to collect passwords.
+- You can perform up to 1500 authenticated requests per minute.
+- You can perform up to 50 simultaneous GET authenticated requests.
+- You can perform up to 15 simultaneous authenticated requests of any type except GET.
+- Some methods have additional restrictions. For example, you can perform up to 5 authenticated requests per minute to collect passwords.
 
 If you exceed the limit, the **429 Too Many Requests** response for the subsequent requests will be received. This response may contain additional headers:
 
