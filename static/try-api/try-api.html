@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html style="height: 100%;">
+<head>
+    <title>ONLYOFFICE Api Documentation</title>
+    <script src="/try-api/monaco.js"></script>
+    <link rel="stylesheet" href="/try-api/styles.css">
+</head>
+<body>
+<div id="interactive">
+    <div id="header">
+        <table cols="3" style="width:100%;">
+            <tr>
+                <td width="110">
+                    <select name="editor_types" id="editor_types" class="form-control">
+                        <option value="word">word</option>
+                        <option value="cell">cell</option>
+                        <option value="slide">slide</option>
+                    </select>
+                </td>
+                <td rowspan="2">
+                    <button id="runButton" class="form-control" style="width:50px;height:46px;">Run</button>
+                </td>
+                <td align="right">
+                    <select name="editor_modes" id="editor_modes" class="form-control" style="width:104px;">
+                    <option value="desktop">desktop</option>
+                    <option value="mobile">mobile</option>
+                    <option value="embedded">embedded</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <select name="editor_func" id="editor_func" class="form-control">
+                    <option value="office-js-api">office-js-api</option>
+                    <option value="connector">connector</option>
+                    <option value="plugin">plugin</option>
+                    </select>
+                </td>
+                <td align="right">
+                    <select name="editor_themes" id="editor_themes" class="form-control" style="width:50px;">
+                        <option value="light">light</option>
+                        <option value="dark">dark</option>
+                    </select>
+                    <select name="editor_langs" id="editor_langs" class="form-control" style="width:50px;">
+                    <option value="en">en</option>
+                    <option value="de">de</option>
+                    <option value="fr">fr</option>
+                    <option value="es">es</option>
+                    <option value="pt">pt</option>
+                    <option value="ru">ru</option>
+                    <option value="zh">zh</option>
+                    <option value="ja">ja</option>
+                    <option value="ko">ko</option>
+                </select>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div id="codeWrapper">
+    </div>
+</div>
+<div id="editor">
+</div>
+
+<script type="text/javascript" src="https://doc-linux.teamlab.info/web-apps/apps/api/documents/api.js"></script>
+<script type="text/javascript" src="/try-api/code.js"></script>
+</body>
+</html>
