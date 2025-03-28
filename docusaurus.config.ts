@@ -104,6 +104,14 @@ const config: Config = {
           } satisfies OpenApiPlugin.Options,
         } satisfies Plugin.PluginOptions,
       },
+    ],
+    [
+      '@docusaurus/plugin-client-redirects',
+      {
+        redirects: [
+          { to: '/docs/docs-api/usage-api/config/', from: '/editors/config/' }
+        ]
+      }
     ]
   ],
 
