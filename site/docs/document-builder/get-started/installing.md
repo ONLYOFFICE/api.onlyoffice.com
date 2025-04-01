@@ -69,16 +69,16 @@ For purchasing details, please contact us at [sales@onlyoffice.com](mailto:sales
 Download the SDK.
 <Tabs>
     <TabItem value="windows" label="Windows">
-        - Download the [Document Builder x64](https://github.com/ONLYOFFICE/DocumentBuilder/releases/latest/download/onlyoffice-documentbuilder-8.3.2-14-windows-x64.zip) or [Document Builder x86](https://github.com/ONLYOFFICE/DocumentBuilder/releases/latest/download/onlyoffice-documentbuilder-8.3.2-14-windows-x86.zip) SDK archive.
+        - Download the [Document Builder x64](https://github.com/ONLYOFFICE/DocumentBuilder/releases/latest/download/onlyoffice-documentbuilder-windows-x64.zip) or [Document Builder x86](https://github.com/ONLYOFFICE/DocumentBuilder/releases/latest/download/onlyoffice-documentbuilder-windows-x86.zip) SDK archive.
         - Extract the folder from the `.zip` file.
     </TabItem>
     <TabItem value="linux" label="Linux">
-        - Download the [Document Builder aarch64](https://github.com/ONLYOFFICE/DocumentBuilder/releases/latest/download/onlyoffice-documentbuilder-8.3.2-14-linux-aarch64.tar.xz) or [Document Builder x86_64](https://github.com/ONLYOFFICE/DocumentBuilder/releases/latest/download/onlyoffice-documentbuilder-8.3.2-14-linux-x86_64.tar.xz) SDK archive.
-        - Extract via `tar xvzf onlyoffice-documentbuilder-8.3.2-14-linux-aarch64.tar.xz` or `tar xvzf onlyoffice-documentbuilder-8.3.2-14-linux-x86_64.tar.xz`.
+        - Download the [Document Builder aarch64](https://github.com/ONLYOFFICE/DocumentBuilder/releases/latest/download/onlyoffice-documentbuilder-linux-aarch64.tar.xz) or [Document Builder x86_64](https://github.com/ONLYOFFICE/DocumentBuilder/releases/latest/download/onlyoffice-documentbuilder-linux-x86_64.tar.xz) SDK archive.
+        - Extract via `tar xvzf onlyoffice-documentbuilder-linux-aarch64.tar.xz` or `tar xvzf onlyoffice-documentbuilder-linux-x86_64.tar.xz`.
     </TabItem>
     <TabItem value="macos" label="macOS">
-        - Download the [Document Builder arm64](https://github.com/ONLYOFFICE/DocumentBuilder/releases/latest/download/onlyoffice-documentbuilder-8.3.2-14-macos-arm64.tar.xz) or [Document Builder x86_64](https://github.com/ONLYOFFICE/DocumentBuilder/releases/latest/download/onlyoffice-documentbuilder-8.3.2-14-macos-x86_64.tar.xz) SDK archive.
-        - Extract via `tar xvzf onlyoffice-documentbuilder-8.3.2-14-macos-arm64.tar.xz` or `tar xvzf onlyoffice-documentbuilder-8.3.2-14-macos-x86_64.tar.xz`.
+        - Download the [Document Builder arm64](https://github.com/ONLYOFFICE/DocumentBuilder/releases/latest/download/onlyoffice-documentbuilder-macos-arm64.tar.xz) or [Document Builder x86_64](https://github.com/ONLYOFFICE/DocumentBuilder/releases/latest/download/onlyoffice-documentbuilder-macos-x86_64.tar.xz) SDK archive.
+        - Extract via `tar xvzf onlyoffice-documentbuilder-macos-arm64.tar.xz` or `tar xvzf onlyoffice-documentbuilder-macos-x86_64.tar.xz`.
     </TabItem>
 </Tabs>
 
