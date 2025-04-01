@@ -84,7 +84,24 @@ var Placeholders = {
                   "    console.log(version);\n" +
                   "    await Editor.callMethod(\"PasteHtml\", [\"<span>Hello, </span><span><b>world</b></span><span>!</span>\"]);\n" + 
                   "})();\n"
-    }
+    },
+    "form" : {
+        "office-js-api": "var oDocument = Api.GetDocument();\n" +
+            "var oParagraph = Api.CreateParagraph();\n" +
+            "oParagraph.AddText(\"Hello world!\");\n" +
+            "oDocument.InsertContent([oParagraph]);\n",
+
+        "connector":     "connector.executeMethod(\"GetCurrentWord\", [], function(word) {\n" +
+            "    console.log(\"GetCurrentWord: \" + word);\n" +
+            "});\n",
+
+        "plugin": plugins_Header +
+            "(async function(){\n" +
+            "    let version = await Editor.callMethod(\"GetVersion\");\n" +
+            "    console.log(version);\n" +
+            "    await Editor.callMethod(\"PasteHtml\", [\"<span>Hello, </span><span><b>world</b></span><span>!</span>\"]);\n" +
+            "})();\n"
+    },
 };
 
 function Environment_Load()
@@ -96,7 +113,7 @@ function Environment_Load()
         
         if (obj)
         {
-            for (item in obj)
+            for (let item in obj)
             {
                 if (Environment[item])
                     Environment[item] = obj[item];
@@ -106,6 +123,10 @@ function Environment_Load()
     catch (e)
     {
     }
+    let params = getUrlParams(),
+        editor = params["editor"];
+    editor && (Environment.editor = editor);
+
 }
 
 function Environment_Save()
@@ -126,6 +147,20 @@ function getFullUrl(localUrl) {
     let url = location.href;
     url = url.substring(0, url.lastIndexOf("/"));
     return url + localUrl;
+}
+
+function getUrlParams() {
+    var e,
+        a = /\+/g,  // Regex for replacing addition symbol with a space
+        r = /([^&=]+)=?([^&]*)/g,
+        d = function (s) { return decodeURIComponent(s.replace(a, " ")); },
+        q = window.location.search.substring(1),
+        urlParams = {};
+
+    while (e = r.exec(q))
+        urlParams[d(e[1])] = d(e[2]);
+
+    return urlParams;
 }
 
 async function createJWT(json, secret) {
@@ -150,6 +185,10 @@ async function createJWT(json, secret) {
     return encodedHeader + "." + encodedPayload + "." + hash;
 }
 
+function initCodeText() {
+    codeEditor && codeEditor.setValue(Placeholders[Environment.editor][Environment.testType]);
+}
+
 async function initCodeEditorType()
 {
     if (window.connector)
@@ -158,19 +197,26 @@ async function initCodeEditorType()
     var divEditor = document.getElementById("editor");
     divEditor.innerHTML = "<div id=\"placeholder\" style=\"position:absolute;left:0px;top:0px;width:100%;height:100%;\"></div>";
 
-    var ext = "docx";
-    if (Environment.editor == "slide")
-        ext = "pptx";
-    if (Environment.editor == "cell")
-        ext = "xlsx";
+    let ext = "docx",
+        docType = "word",
+        api = "word",
+        fileUrl = "https://static.onlyoffice.com/assets/docs/samples/demo.";
+    if (Environment.editor === "form") {
+        docType = "pdf";
+        api = "word";
+        fileUrl = "https://static.onlyoffice.com/assets/docs/samples/demo-invoice.pdf";
+        ext = "pdf";
+    } else {
+        api = docType = Environment.editor;
+        if (Environment.editor === "slide")
+            ext = "pptx";
+        if (Environment.editor === "cell")
+            ext = "xlsx";
+        fileUrl += ext;
+    }
 
     // JWT
     let secret = "doc-linux";
-    let fileUrl = "https://d2nlctn12v279m.cloudfront.net/assets/docs/samples/demo.";
-    if (!secret)
-        fileUrl = getFullUrl("/files/new.");
-    fileUrl += ext;
-
     let config = {
         "document": {
             "fileType": ext,
@@ -178,7 +224,7 @@ async function initCodeEditorType()
             "title": "Example Document Title." + ext,
             "url": fileUrl
         },
-        "documentType": Environment.editor,
+        "documentType": docType,
         "type": Environment.type,
         "editorConfig": {
             "user": {
@@ -210,14 +256,14 @@ async function initCodeEditorType()
     window.docEditor = new DocsAPI.DocEditor("placeholder", config);
 
     codeEditor.addLibrary({
-        url: "./libs/" + Environment.editor + "/api.js", 
+        url: "./libs/" + api + "/api.js",
         name : "onlyoffice"
     });
 }
 
 document.getElementById("editor_types").value = Environment.editor;
 document.getElementById("editor_types").addEventListener('change', function() {
-    if (Environment.editor == this.value)
+    if (Environment.editor === this.value)
         return;
 
     Environment.editor = this.value;
@@ -226,7 +272,7 @@ document.getElementById("editor_types").addEventListener('change', function() {
 });
 document.getElementById("editor_themes").value = Environment.theme;
 document.getElementById("editor_themes").addEventListener('change', function() {
-    if (Environment.theme == this.value)
+    if (Environment.theme === this.value)
         return;
 
     Environment.theme = this.value;
@@ -247,7 +293,7 @@ document.getElementById("editor_func").addEventListener('change', function() {
 
 document.getElementById("editor_langs").value = Environment.lang;
 document.getElementById("editor_langs").addEventListener('change', function() {
-    if (Environment.lang == this.value)
+    if (Environment.lang === this.value)
         return;
     
     Environment.lang = this.value;
@@ -257,7 +303,7 @@ document.getElementById("editor_langs").addEventListener('change', function() {
 
 document.getElementById("editor_modes").value = Environment.type;
 document.getElementById("editor_modes").addEventListener('change', function() {
-    if (Environment.type == this.value)
+    if (Environment.type === this.value)
         return;
     
     Environment.type = this.value;
@@ -334,5 +380,6 @@ codeEditor.create("codeWrapper", theme.type === "light" ? "vs-light" : "vs-dark"
 /**
  * OPEN FILE
  */
+initCodeText();
 initCodeEditorType();
 onTheme();
