@@ -26,8 +26,12 @@ This example sets the italic property to the text character.
 
 ```javascript editor-docx
 let doc = Api.GetDocument();
-let textPr = doc.GetDefaultTextPr();
-textPr.SetItalic(true);
 let paragraph = doc.GetElement(0);
-paragraph.AddText("A sample text with the font set to italicized letters using the text properties.");
+let run = Api.CreateRun();
+run.AddText("This is just a sample text. ");
+paragraph.AddElement(run);
+run = Api.CreateRun();
+run.SetItalic(true);
+run.AddText("This is a text run with the font set to italicized letters.");
+paragraph.AddElement(run);
 ```

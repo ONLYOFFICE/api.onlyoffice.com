@@ -1,6 +1,6 @@
 # GetCaption
 
-Returns a value that represents the label text for the pivot field.
+Returns a value that represents the label text for the data field.
 
 ## Syntax
 
@@ -54,8 +54,9 @@ pivotTable.AddFields({
 pivotTable.AddDataField('Price');
 
 let pivotWorksheet = Api.GetActiveSheet();
-let pivotField = pivotTable.GetPivotFields('Style');
+let dataField = pivotTable.GetDataFields('Sum of Price');
 
-pivotWorksheet.GetRange('A12').SetValue('The Style field caption');
-pivotWorksheet.GetRange('B12').SetValue(pivotField.GetCaption());
+pivotWorksheet.GetRange('A12').SetValue('The Data field caption');
+pivotWorksheet.GetRange('B12').SetValue(dataField.GetCaption());
+
 ```

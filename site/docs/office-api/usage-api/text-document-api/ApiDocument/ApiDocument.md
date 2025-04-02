@@ -41,7 +41,6 @@ Represents the ApiDocument class.
 | [GetBookmark](./Methods/GetBookmark.md) | [ApiBookmark](../ApiBookmark/ApiBookmark.md) | Returns a bookmark by its name from the current document. |
 | [GetBookmarkRange](./Methods/GetBookmarkRange.md) | [ApiRange](../ApiRange/ApiRange.md) \| null | Returns a bookmark range. |
 | [GetClassType](./Methods/GetClassType.md) | "document" | Returns a type of the ApiDocument class. |
-| [GetClassType](./Methods/GetClassType.md) | "documentContent" | Returns a type of the ApiDocumentContent class. |
 | [GetCommentById](./Methods/GetCommentById.md) | [ApiComment](../ApiComment/ApiComment.md) | Returns a comment from the current document by its ID. |
 | [GetCommentsReport](./Methods/GetCommentsReport.md) | [CommentReport](../Enumeration/CommentReport.md) | Returns a report about all the comments added to the document. |
 | [GetContent](./Methods/GetContent.md) | [DocumentElement](../Enumeration/DocumentElement.md)[] | Returns an array of document elements from the current ApiDocumentContent object. |
@@ -63,7 +62,6 @@ Represents the ApiDocument class.
 | [GetFormsData](./Methods/GetFormsData.md) | [FormData](../Enumeration/FormData.md)[] | Returns the data from all forms present in the current document.\ If a form was created and not assigned to any part of the document, it won't appear in this list. |
 | [GetPageCount](./Methods/GetPageCount.md) | number | Returns a number of pages in the current document.\ 💡 This method can be slow for large documents because it runs the document calculation\ process before the full recalculation. |
 | [GetRange](./Methods/GetRange.md) | [ApiRange](../ApiRange/ApiRange.md) | Returns a Range object that represents the part of the document contained in the specified document. |
-| [GetRange](./Methods/GetRange.md) | [ApiRange](../ApiRange/ApiRange.md) | Returns a Range object that represents the part of the document contained in the document content. |
 | [GetRangeBySelect](./Methods/GetRangeBySelect.md) | [ApiRange](../ApiRange/ApiRange.md) \| null | Returns a range object by the current selection. |
 | [GetReviewReport](./Methods/GetReviewReport.md) | [ReviewReport](../Enumeration/ReviewReport.md) | Returns a report about every change which was made to the document in the review mode. |
 | [GetSections](./Methods/GetSections.md) | [ApiSection](../ApiSection/ApiSection.md)[] | Returns a collection of section objects in the document. |
@@ -100,7 +98,6 @@ Represents the ApiDocument class.
 | [SetWatermarkSettings](./Methods/SetWatermarkSettings.md) | [ApiDrawing](../ApiDrawing/ApiDrawing.md) | Sets the watermark settings in the current document. |
 | [ToHtml](./Methods/ToHtml.md) | string | Converts a document to HTML. |
 | [ToJSON](./Methods/ToJSON.md) | JSON | Converts the ApiDocument object into the JSON object. |
-| [ToJSON](./Methods/ToJSON.md) | JSON | Converts the ApiDocumentContent object into the JSON object. |
 | [ToMarkdown](./Methods/ToMarkdown.md) | string | Converts a document to Markdown. |
 | [UpdateAllFields](./Methods/UpdateAllFields.md) | None | Updates all fields in the document. |
 | [UpdateAllTOC](./Methods/UpdateAllTOC.md) | None | Updates all tables of contents in the current document. |

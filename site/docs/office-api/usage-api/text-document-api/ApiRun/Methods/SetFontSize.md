@@ -26,8 +26,12 @@ This example sets the font size to the characters of the current text run.
 
 ```javascript editor-docx
 let doc = Api.GetDocument();
-let textPr = doc.GetDefaultTextPr();
-textPr.SetFontSize(30);
 let paragraph = doc.GetElement(0);
-paragraph.AddText("A sample text with the font size set to 15 points using the text properties.");
+let run = Api.CreateRun();
+run.AddText("This is just a sample text. ");
+paragraph.AddElement(run);
+run = Api.CreateRun();
+run.SetFontSize(30);
+run.AddText("This is a text run with the font size set to 15 points (30 half-points).");
+paragraph.AddElement(run);
 ```

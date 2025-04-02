@@ -52,18 +52,17 @@ let pivotTable = Api.InsertPivotNewWorksheet(dataRef);
 pivotTable.AddFields({
 	rows: ['Region', 'Style'],
 });
-pivotTable.SetRowAxisLayout("Tabular", false);
 
 pivotTable.AddDataField('Price');
 
 let pivotWorksheet = Api.GetActiveSheet();
-let pivotField = pivotTable.GetPivotFields('Style');
+let dataField = pivotTable.GetDataFields('Sum of Price');
 
-pivotWorksheet.GetRange('A12').SetValue('Style field name');
-pivotWorksheet.GetRange('B12').SetValue(pivotField.GetName());
+pivotWorksheet.GetRange('A12').SetValue('Data field name');
+pivotWorksheet.GetRange('B12').SetValue(dataField.GetName());
 
-pivotWorksheet.GetRange('A14').SetValue('New Style field name');
-pivotField.SetName('My name');
-pivotWorksheet.GetRange('B14').SetValue(pivotField.GetName());
+dataField.SetName('My Sum of Price');
+pivotWorksheet.GetRange('A13').SetValue('New Data field name');
+pivotWorksheet.GetRange('B13').SetValue(dataField.GetName());
 
 ```

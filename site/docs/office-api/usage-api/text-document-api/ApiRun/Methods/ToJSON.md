@@ -1,6 +1,6 @@
 # ToJSON
 
-Converts the ApiTextPr object into the JSON object.
+Converts the ApiRun object into the JSON object.
 
 ## Syntax
 
@@ -22,16 +22,15 @@ JSON
 
 ## Example
 
-This example converts the ApiTextPr object into the JSON object.
+This example converts the ApiRun object into the JSON object.
 
 ```javascript editor-docx
 let doc = Api.GetDocument();
-let textPr = doc.GetDefaultTextPr();
-textPr.SetFontFamily("Comic Sans MS");
-let json = textPr.ToJSON(true);
-let textPrFromJSON = Api.FromJSON(json);
-textPrFromJSON.SetFontSize(30);
 let paragraph = doc.GetElement(0);
-paragraph.AddText("A sample text with the font size set to 15 points using the text properties.");
-paragraph.SetTextPr(textPrFromJSON);
+let run = Api.CreateRun();
+run.AddText("This is a text run");
+let json = run.ToJSON(true);
+let runFromJSON = Api.FromJSON(json);
+runFromJSON.SetBold(true);
+paragraph.AddElement(runFromJSON);
 ```

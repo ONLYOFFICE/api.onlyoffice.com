@@ -1,6 +1,6 @@
 # SetStrikeout
 
-Specifies that the contents of the run are displayed with a single horizontal line through the center of the line.
+Specifies that the contents of the current run are displayed with a single horizontal line through the center of the line.
 
 ## Syntax
 
@@ -22,7 +22,7 @@ expression.SetStrikeout(isStrikeout);
 
 ## Example
 
-This example specifies that the contents of the run are displayed with a single horizontal line through the center of the line.
+This example specifies that the contents of the current run are displayed with a single horizontal line through the center of the line.
 
 ```javascript editor-pptx
 var oPresentation = Api.GetPresentation();
@@ -35,11 +35,11 @@ oShape.SetPosition(608400, 1267200);
 var oDocContent = oShape.GetDocContent();
 var oParagraph = oDocContent.GetElement(0);
 var oRun = Api.CreateRun();
-var oTextPr = oRun.GetTextPr();
-oTextPr.SetFontSize(50);
-oTextPr.SetStrikeout(true);
-oParagraph.SetJc("left");
-oRun.AddText("This is a struck out text inside the shape.");
+oRun.AddText("This is just a sample text. ");
+oParagraph.AddElement(oRun);
+oRun = Api.CreateRun();
+oRun.SetStrikeout(true);
+oRun.AddText("This is a text run with the text struck out with a single line.");
 oParagraph.AddElement(oRun);
 oSlide.AddObject(oShape);
 ```

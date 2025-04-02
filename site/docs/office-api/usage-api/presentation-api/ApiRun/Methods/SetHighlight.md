@@ -1,6 +1,6 @@
 # SetHighlight
 
-Specifies a highlighting color which is added to the text properties and applied as a background to the contents of the current run/range/paragraph.
+Specifies a highlighting color which is applied as a background to the contents of the current run.
 
 ## Syntax
 
@@ -22,7 +22,7 @@ expression.SetHighlight(sColor);
 
 ## Example
 
-This example specifies a highlighting color which is added to the text properties and applied as a background to the contents of the run.
+This example specifies a highlighting color which is applied as a background to the contents of the run.
 
 ```javascript editor-pptx
 var oPresentation = Api.GetPresentation();
@@ -35,11 +35,8 @@ oShape.SetPosition(608400, 1267200);
 var oDocContent = oShape.GetDocContent();
 var oParagraph = oDocContent.GetElement(0);
 var oRun = Api.CreateRun();
-var oTextPr = oRun.GetTextPr();
-oTextPr.SetFontSize(50);
-oTextPr.SetHighlight("lightGray");
-oParagraph.SetJc("left");
-oRun.AddText("This is a sample text inside the shape with the text highlighted with light gray color using the text properties.");
+oRun.AddText("This is a text run with the text highlighted with light gray color.");
 oParagraph.AddElement(oRun);
+oRun.SetHighlight("lightGray");
 oSlide.AddObject(oShape);
 ```

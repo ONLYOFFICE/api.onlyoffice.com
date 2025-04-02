@@ -35,11 +35,11 @@ oShape.SetPosition(608400, 1267200);
 var oDocContent = oShape.GetDocContent();
 var oParagraph = oDocContent.GetElement(0);
 var oRun = Api.CreateRun();
-var oTextPr = oRun.GetTextPr();
-oTextPr.SetFontSize(50);
-oTextPr.SetItalic(true);
-oParagraph.SetJc("left");
-oRun.AddText("This is a sample text inside the shape with the font set to italicized letters using the text properties.");
+oRun.AddText("This is just a sample text. ");
+oParagraph.AddElement(oRun);
+oRun = Api.CreateRun();
+oRun.SetItalic(true);
+oRun.AddText("This is a text run with the font set to italicized letters.");
 oParagraph.AddElement(oRun);
 oSlide.AddObject(oShape);
 ```

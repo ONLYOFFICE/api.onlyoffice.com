@@ -1,6 +1,6 @@
 # SetSmallCaps
 
-Specifies that all the small letter characters in the text run are formatted for display only as their capital\
+Specifies that all the small letter characters in this text run are formatted for display only as their capital\
 letter character equivalents which are two points smaller than the actual font size specified for this text.
 
 ## Syntax
@@ -23,7 +23,7 @@ expression.SetSmallCaps(isSmallCaps);
 
 ## Example
 
-This example specifies that all the small letter characters in the text run are formatted for display only as their capital letter character equivalents which are two points smaller than the actual font size specified for this text.
+This example specifies that all the small letter characters in this text run are formatted for display only as their capital letter character equivalents which are two points smaller than the actual font size specified for this text.
 
 ```javascript editor-pptx
 var oPresentation = Api.GetPresentation();
@@ -36,11 +36,11 @@ oShape.SetPosition(608400, 1267200);
 var oDocContent = oShape.GetDocContent();
 var oParagraph = oDocContent.GetElement(0);
 var oRun = Api.CreateRun();
-var oTextPr = oRun.GetTextPr();
-oTextPr.SetFontSize(50);
-oTextPr.SetSmallCaps(true);
-oParagraph.SetJc("left");
-oRun.AddText("This is a sample text inside the shape with the font set to small capitalized letters using the text properties.");
+oRun.AddText("This is just a sample text. ");
+oParagraph.AddElement(oRun);
+oRun = Api.CreateRun();
+oRun.SetSmallCaps(true);
+oRun.AddText("This is a text run with the font set to small capitalized letters.");
 oParagraph.AddElement(oRun);
 oSlide.AddObject(oShape);
 ```

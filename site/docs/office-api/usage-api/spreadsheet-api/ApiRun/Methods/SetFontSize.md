@@ -32,9 +32,10 @@ let shape = worksheet.AddShape("flowChartOnlineStorage", 120 * 36000, 70 * 36000
 let content = shape.GetContent();
 let paragraph = content.GetElement(0);
 let run = Api.CreateRun();
-let textProps = run.GetTextPr();
-textProps.SetFontSize(30);
-paragraph.SetJc("left");
-run.AddText("This is a sample text inside the shape with the font size set to 15 points using the text properties.");
+run.AddText("This is just a sample text. ");
+paragraph.AddElement(run);
+run = Api.CreateRun();
+run.SetFontSize(30);
+run.AddText("This is a text run with the font size set to 15 points (30 half-points).");
 paragraph.AddElement(run);
 ```

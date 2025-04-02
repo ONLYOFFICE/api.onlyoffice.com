@@ -1,6 +1,6 @@
 # Remove
 
-Removes the current pivot field from the pivot table.
+Removes  the current data field from the category.
 
 ## Syntax
 
@@ -48,17 +48,18 @@ let dataRef = Api.GetRange("'Sheet1'!$B$1:$D$5");
 let pivotTable = Api.InsertPivotNewWorksheet(dataRef);
 
 pivotTable.AddFields({
-    rows: 'Region',
-    columns: 'Style',
+    rows: ['Region', 'Style'],
 });
 
-let pivotWorksheet = Api.GetActiveSheet();
 pivotTable.AddDataField('Price');
-let pivotField = pivotTable.GetPivotFields('Region');
-pivotWorksheet.GetRange('A10').SetValue('The Region field will be removed soon');
 
-setTimeout(function () {
-    pivotField.Remove();
+let pivotWorksheet = Api.GetActiveSheet();
+let dataField = pivotTable.GetDataFields('Sum of Price');
+
+pivotWorksheet.GetRange('A12').SetValue('Sum of Price will be deleted soon');
+
+setTimeout(function() {
+    dataField.Remove();
 }, 5000);
 
 ```

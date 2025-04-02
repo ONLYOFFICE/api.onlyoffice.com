@@ -1,6 +1,6 @@
 # GetClassType
 
-Returns a type of the ApiTablePr class.
+Returns a type of the ApiTable class.
 
 ## Syntax
 
@@ -16,22 +16,20 @@ This method doesn't have any parameters.
 
 ## Returns
 
-"tablePr"
+"table"
 
 ## Example
 
-This example gets a class type and pastes it into the presentation.
+This example gets a class type and inserts it into the document.
 
 ```javascript editor-docx
 let doc = Api.GetDocument();
 let tableStyle = doc.CreateStyle("CustomTableStyle", "table");
 tableStyle.SetBasedOn(doc.GetStyle("Bordered"));
-let tablePr = tableStyle.GetTablePr();
 let table = Api.CreateTable(3, 3);
-table.SetWidth("percent", 100);
 table.SetStyle(tableStyle);
 doc.Push(table);
-let classType = tablePr.GetClassType();
+let classType = table.GetClassType();
 let paragraph = doc.GetElement(0);
 paragraph.AddText("Class Type = " + classType);
 ```
