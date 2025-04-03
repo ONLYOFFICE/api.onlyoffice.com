@@ -9,676 +9,674 @@ Create a document following the structure of a formal paper:
 - add images and charts to represent document text ([Api](../text-document-api/Api/Api.md), [ApiChart](../text-document-api/ApiChart/ApiChart.md)).
 
 ```ts document-builder={"documentType": "word", "editorConfig": {"customization": {"zoom": 60}}}
-let oParagraph
-let oRun
-let oDrawing
-const oDocument = Api.GetDocument()
+let paragraph;
+let run;
+let drawing;
+const doc = Api.GetDocument();
 
-const oNoSpacingStyle = oDocument.GetStyle("No Spacing")
-const oFinalSection = oDocument.GetFinalSection()
-oFinalSection.SetEqualColumns(2, 720)
-oFinalSection.SetPageSize(12_240, 15_840)
-oFinalSection.SetPageMargins(1440, 1440, 1440, 1440)
-oFinalSection.SetHeaderDistance(720)
-oFinalSection.SetFooterDistance(720)
-oFinalSection.SetType("continuous")
+const noSpacingStyle = doc.GetStyle("No Spacing");
+const finalSection = doc.GetFinalSection();
+finalSection.SetEqualColumns(2, 720);
+finalSection.SetPageSize(12_240, 15_840);
+finalSection.SetPageMargins(1440, 1440, 1440, 1440);
+finalSection.SetHeaderDistance(720);
+finalSection.SetFooterDistance(720);
+finalSection.SetType("continuous");
 
-let oTextPr
-let oParaPr
-let oTablePr
+let textPr;
+let paraPr;
+let tablePr;
 
-oTextPr = oDocument.GetDefaultTextPr()
-oTextPr.SetFontSize(22)
-oTextPr.SetLanguage("en-US")
-oTextPr.SetFontFamily("Calibri")
+textPr = doc.GetDefaultTextPr();
+textPr.SetFontSize(22);
+textPr.SetLanguage("en-US");
+textPr.SetFontFamily("Calibri");
 
-oParaPr = oDocument.GetDefaultParaPr()
-oParaPr.SetSpacingLine(276, "auto")
-oParaPr.SetSpacingAfter(200)
+paraPr = doc.GetDefaultParaPr();
+paraPr.SetSpacingLine(276, "auto");
+paraPr.SetSpacingAfter(200);
 
-const oNormalStyle = oDocument.GetDefaultStyle("paragraph")
-oParaPr = oNormalStyle.GetParaPr()
-oParaPr.SetSpacingLine(240, "auto")
-oParaPr.SetJc("both")
-oTextPr = oNormalStyle.GetTextPr()
-oTextPr.SetColor(0x26, 0x26, 0x26, false)
+const normalStyle = doc.GetDefaultStyle("paragraph");
+paraPr = normalStyle.GetParaPr();
+paraPr.SetSpacingLine(240, "auto");
+paraPr.SetJc("both");
+textPr = normalStyle.GetTextPr();
+textPr.SetColor(0x26, 0x26, 0x26, false);
 
-const oHeading1Style = oDocument.CreateStyle("Heading 1", "paragraph")
-oParaPr = oHeading1Style.GetParaPr()
-oParaPr.SetKeepNext(true)
-oParaPr.SetKeepLines(true)
-oParaPr.SetSpacingAfter(240)
-oTextPr = oHeading1Style.GetTextPr()
-oTextPr.SetColor(0x29, 0x33, 0x4F, false)
-oTextPr.SetFontSize(40)
-oTextPr.SetFontFamily("Calibri Light")
+const heading1Style = doc.CreateStyle("Heading 1", "paragraph");
+paraPr = heading1Style.GetParaPr();
+paraPr.SetKeepNext(true);
+paraPr.SetKeepLines(true);
+paraPr.SetSpacingAfter(240);
+textPr = heading1Style.GetTextPr();
+textPr.SetColor(0x29, 0x33, 0x4F, false);
+textPr.SetFontSize(40);
+textPr.SetFontFamily("Calibri Light");
 
-const oSubtitleStyle = oDocument.CreateStyle("Subtitle")
-oParaPr = oSubtitleStyle.GetParaPr()
-oParaPr.SetSpacingAfter(0)
-oParaPr.SetSpacingBefore(240)
-oTextPr = oSubtitleStyle.GetTextPr()
-oTextPr.SetColor(0x29, 0x33, 0x4F, false)
-oTextPr.SetFontSize(32)
-oTextPr.SetFontFamily("Calibri Light")
+const subtitleStyle = doc.CreateStyle("Subtitle");
+paraPr = subtitleStyle.GetParaPr();
+paraPr.SetSpacingAfter(0);
+paraPr.SetSpacingBefore(240);
+textPr = subtitleStyle.GetTextPr();
+textPr.SetColor(0x29, 0x33, 0x4F, false);
+textPr.SetFontSize(32);
+textPr.SetFontFamily("Calibri Light");
 
-const oNormalTableStyle = oDocument.GetDefaultStyle("table")
-oTablePr = oNormalTableStyle.GetTablePr()
-oTablePr.SetTableInd(0)
-oTablePr.SetTableCellMarginTop(0)
-oTablePr.SetTableCellMarginLeft(108)
-oTablePr.SetTableCellMarginRight(108)
-oTablePr.SetTableCellMarginBottom(0)
+const normalTableStyle = doc.GetDefaultStyle("table");
+tablePr = normalTableStyle.GetTablePr();
+tablePr.SetTableInd(0);
+tablePr.SetTableCellMarginTop(0);
+tablePr.SetTableCellMarginLeft(108);
+tablePr.SetTableCellMarginRight(108);
+tablePr.SetTableCellMarginBottom(0);
 
-const oTableGridStyle = oDocument.CreateStyle("TableGrid", "table")
-oTableGridStyle.SetBasedOn(oNormalTableStyle)
-oParaPr = oTableGridStyle.GetParaPr()
-oParaPr.SetSpacingAfter(0)
-oParaPr.SetSpacingLine("auto", 240)
-oTablePr = oTableGridStyle.GetTablePr()
-oTablePr.SetTableInd(0)
-oTablePr.SetTableBorderTop("single", 4, 0, 0, 0, 0)
-oTablePr.SetTableBorderLeft("single", 4, 0, 0, 0, 0)
-oTablePr.SetTableBorderRight("single", 4, 0, 0, 0, 0)
-oTablePr.SetTableBorderBottom("single", 4, 0, 0, 0, 0)
-oTablePr.SetTableBorderInsideH("single", 4, 0, 0, 0, 0)
-oTablePr.SetTableBorderInsideV("single", 4, 0, 0, 0, 0)
-oTablePr.SetTableCellMarginTop(0)
-oTablePr.SetTableCellMarginLeft(108)
-oTablePr.SetTableCellMarginBottom(0)
-oTablePr.SetTableCellMarginRight(108)
+const tableGridStyle = doc.CreateStyle("TableGrid", "table");
+tableGridStyle.SetBasedOn(normalTableStyle);
+paraPr = tableGridStyle.GetParaPr();
+paraPr.SetSpacingAfter(0);
+paraPr.SetSpacingLine("auto", 240);
+tablePr = tableGridStyle.GetTablePr();
+tablePr.SetTableInd(0);
+tablePr.SetTableBorderTop("single", 4, 0, 0, 0, 0);
+tablePr.SetTableBorderLeft("single", 4, 0, 0, 0, 0);
+tablePr.SetTableBorderRight("single", 4, 0, 0, 0, 0);
+tablePr.SetTableBorderBottom("single", 4, 0, 0, 0, 0);
+tablePr.SetTableBorderInsideH("single", 4, 0, 0, 0, 0);
+tablePr.SetTableBorderInsideV("single", 4, 0, 0, 0, 0);
+tablePr.SetTableCellMarginTop(0);
+tablePr.SetTableCellMarginLeft(108);
+tablePr.SetTableCellMarginBottom(0);
+tablePr.SetTableCellMarginRight(108);
 
-const oFooterStyle = oDocument.CreateStyle("Footer", "paragraph")
-oParaPr = oFooterStyle.GetParaPr()
-oParaPr.SetTabs([4680, 9360], ["center", "right"])
-oParaPr.SetSpacingAfter(0)
-oParaPr.SetJc("left")
-oTextPr = oFooterStyle.GetTextPr()
-oTextPr.SetColor(0, 0, 0, true)
-oTextPr.SetFontSize(22)
+const footerStyle = doc.CreateStyle("Footer", "paragraph");
+paraPr = footerStyle.GetParaPr();
+paraPr.SetTabs([4680, 9360], ["center", "right"]);
+paraPr.SetSpacingAfter(0);
+paraPr.SetJc("left");
+textPr = footerStyle.GetTextPr();
+textPr.SetColor(0, 0, 0, true);
+textPr.SetFontSize(22);
 
-oParagraph = Api.CreateParagraph()
-oParagraph.SetSpacingLine(276, "auto")
-oParagraph.SetJc("left")
-const oParaMark = oParagraph.GetParagraphMarkTextPr()
-oParaMark.SetFontSize(52)
-oParaMark.SetColor(0x14, 0x14, 0x14, false)
-oParaMark.SetSpacing(5)
-oParagraph.AddPageBreak()
-let oFill = Api.CreateSolidFill(Api.CreateRGBColor(61, 74, 107))
-let oStroke = Api.CreateStroke(0, Api.CreateNoFill())
-oDrawing = Api.CreateShape("rect", 5_463_210, 9_655_810, oFill, oStroke)
-oParagraph.AddDrawing(oDrawing)
-oDrawing.SetWrappingStyle("behind")
-oDrawing.SetHorPosition("page", 155_575)
-oDrawing.SetVerPosition("page", 201_295)
+paragraph = Api.CreateParagraph();
+paragraph.SetSpacingLine(276, "auto");
+paragraph.SetJc("left");
+const paraMark = paragraph.GetParagraphMarkTextPr();
+paraMark.SetFontSize(52);
+paraMark.SetColor(0x14, 0x14, 0x14, false);
+paraMark.SetSpacing(5);
+paragraph.AddPageBreak();
+let fill = Api.CreateSolidFill(Api.CreateRGBColor(61, 74, 107));
+let stroke = Api.CreateStroke(0, Api.CreateNoFill());
+drawing = Api.CreateShape("rect", 5_463_210, 9_655_810, fill, stroke);
+paragraph.AddDrawing(drawing);
+drawing.SetWrappingStyle("behind");
+drawing.SetHorPosition("page", 155_575);
+drawing.SetVerPosition("page", 201_295);
 
-let oDocContent = oDrawing.GetDocContent()
-oDocContent.RemoveAllElements()
-let oParagraph2 = Api.CreateParagraph()
-oParagraph2.SetJc("right")
-let oRun2 = oParagraph2.AddText("ONLYOFFICE")
-oRun2.AddLineBreak()
-oRun2.AddText("Document Builder")
-oRun2.SetFontSize(64)
-oRun2.SetCaps(true)
-oRun2.SetColor(255, 255, 255)
-oRun2.SetFontFamily("Calibri Light")
-oParagraph2.SetBottomBorder("single", 1, 0, 151, 192, 60)
-oDocContent.Push(oParagraph2)
-oParagraph2 = Api.CreateParagraph()
-oParagraph2.SetJc("right")
-oRun2 = oParagraph2.AddText("Product Launch Revenue Plan")
-oRun2.SetFontSize(44)
-oRun2.SetColor(255, 255, 255)
-oRun2.SetFontFamily("Calibri Light")
-oDocContent.Push(oParagraph2)
-oParagraph2 = Api.CreateParagraph()
-oParagraph2.SetJc("right")
-oDocContent.Push(oParagraph2)
-oParagraph2 = Api.CreateParagraph()
-oParagraph2.SetJc("right")
-oDocContent.Push(oParagraph2)
-oParagraph2 = Api.CreateParagraph()
-oParagraph2.SetJc("right")
-oDocContent.Push(oParagraph2)
-oParagraph2 = Api.CreateParagraph()
-oParagraph2.SetJc("right")
-oRun2 = oParagraph2.AddText("Confidential")
-oRun2.SetFontSize(28)
-oRun2.SetColor(255, 255, 255)
-oRun2.SetFontFamily("Calibri Light")
-oDocContent.Push(oParagraph2)
-oParagraph2 = Api.CreateParagraph()
-oParagraph2.SetJc("right")
-oRun2 = oParagraph2.AddText("July 2016")
-oRun2.SetFontSize(28)
-oRun2.SetColor(255, 255, 255)
-oRun2.SetFontFamily("Calibri Light")
-oDocContent.Push(oParagraph2)
-oParagraph2 = Api.CreateParagraph()
-oParagraph2.SetJc("right")
-oDocContent.Push(oParagraph2)
-oParagraph2 = Api.CreateParagraph()
-oParagraph2.SetJc("right")
-oDocContent.Push(oParagraph2)
-oParagraph2 = Api.CreateParagraph()
-oParagraph2.SetJc("right")
-oDocContent.Push(oParagraph2)
+let docContent = drawing.GetDocContent();
+docContent.RemoveAllElements();
+let paragraph2 = Api.CreateParagraph();
+paragraph2.SetJc("right");
+let run2 = paragraph2.AddText("ONLYOFFICE");
+run2.AddLineBreak();
+run2.AddText("Document Builder");
+run2.SetFontSize(64);
+run2.SetCaps(true);
+run2.SetColor(255, 255, 255);
+run2.SetFontFamily("Calibri Light");
+paragraph2.SetBottomBorder("single", 1, 0, 151, 192, 60);
+docContent.Push(paragraph2);
+paragraph2 = Api.CreateParagraph();
+paragraph2.SetJc("right");
+run2 = paragraph2.AddText("Product Launch Revenue Plan");
+run2.SetFontSize(44);
+run2.SetColor(255, 255, 255);
+run2.SetFontFamily("Calibri Light");
+docContent.Push(paragraph2);
+paragraph2 = Api.CreateParagraph();
+paragraph2.SetJc("right");
+docContent.Push(paragraph2);
+paragraph2 = Api.CreateParagraph();
+paragraph2.SetJc("right");
+docContent.Push(paragraph2);
+paragraph2 = Api.CreateParagraph();
+paragraph2.SetJc("right");
+docContent.Push(paragraph2);
+paragraph2 = Api.CreateParagraph();
+paragraph2.SetJc("right");
+run2 = paragraph2.AddText("Confidential");
+run2.SetFontSize(28);
+run2.SetColor(255, 255, 255);
+run2.SetFontFamily("Calibri Light");
+docContent.Push(paragraph2);
+paragraph2 = Api.CreateParagraph();
+paragraph2.SetJc("right");
+run2 = paragraph2.AddText("July 2016");
+run2.SetFontSize(28);
+run2.SetColor(255, 255, 255);
+run2.SetFontFamily("Calibri Light");
+docContent.Push(paragraph2);
+paragraph2 = Api.CreateParagraph();
+paragraph2.SetJc("right");
+docContent.Push(paragraph2);
+paragraph2 = Api.CreateParagraph();
+paragraph2.SetJc("right");
+docContent.Push(paragraph2);
+paragraph2 = Api.CreateParagraph();
+paragraph2.SetJc("right");
+docContent.Push(paragraph2);
 
-oFill = Api.CreateSolidFill(Api.CreateRGBColor(41, 51, 79))
-oStroke = Api.CreateStroke(0, Api.CreateNoFill())
-oDrawing = Api.CreateShape("rect", 1_880_870, 9_655_810, oFill, oStroke)
-oDrawing.SetWrappingStyle("inFront")
-oDrawing.SetHorPosition("page", 5_673_725)
-oDrawing.SetVerPosition("page", 201_295)
-oParagraph.AddDrawing(oDrawing)
-oDocument.Push(oParagraph)
+fill = Api.CreateSolidFill(Api.CreateRGBColor(41, 51, 79));
+stroke = Api.CreateStroke(0, Api.CreateNoFill());
+drawing = Api.CreateShape("rect", 1_880_870, 9_655_810, fill, stroke);
+drawing.SetWrappingStyle("inFront");
+drawing.SetHorPosition("page", 5_673_725);
+drawing.SetVerPosition("page", 201_295);
+paragraph.AddDrawing(drawing);
+doc.Push(paragraph);
 
-oParagraph = Api.CreateParagraph()
-oParagraph.SetStyle(oNoSpacingStyle)
+paragraph = Api.CreateParagraph();
+paragraph.SetStyle(noSpacingStyle);
 
-let oGs1 = Api.CreateGradientStop(Api.CreateRGBColor(176, 217, 84), 0)
-let oGs2 = Api.CreateGradientStop(Api.CreateRGBColor(151, 192, 60), 100_000)
-oFill = Api.CreateLinearGradientFill([oGs1, oGs2], 5_400_000)
-oStroke = Api.CreateStroke(0, Api.CreateNoFill())
-oDrawing = Api.CreateShape("rect", 5_930_900, 15 * 36_000, oFill, oStroke)
-oDrawing.SetWrappingStyle("topAndBottom")
-oDrawing.SetHorAlign("margin", "left")
-oDrawing.SetVerPosition("paragraph", 5715)
-oDrawing.SetDistances(114_300, 0, 114_300, 0)
-oDocContent = oDrawing.GetDocContent()
-oDocContent.RemoveAllElements()
-oParagraph2 = Api.CreateParagraph()
-oParagraph2.SetJc("left")
-oRun2 = oParagraph2.AddText("Product Launch Revenue Plan")
-oRun2.SetFontSize(36)
-oRun2.SetColor(0, 0, 0)
-oRun2.SetFontFamily("Calibri Light")
-oDocContent.AddElement(0, oParagraph2)
+let gs1 = Api.CreateGradientStop(Api.CreateRGBColor(176, 217, 84), 0);
+let gs2 = Api.CreateGradientStop(Api.CreateRGBColor(151, 192, 60), 100_000);
+fill = Api.CreateLinearGradientFill([gs1, gs2], 5_400_000);
+stroke = Api.CreateStroke(0, Api.CreateNoFill());
+drawing = Api.CreateShape("rect", 5_930_900, 15 * 36_000, fill, stroke);
+drawing.SetWrappingStyle("topAndBottom");
+drawing.SetHorAlign("margin", "left");
+drawing.SetVerPosition("paragraph", 5715);
+drawing.SetDistances(114_300, 0, 114_300, 0);
+docContent = drawing.GetDocContent();
+docContent.RemoveAllElements();
+paragraph2 = Api.CreateParagraph();
+paragraph2.SetJc("left");
+run2 = paragraph2.AddText("Product Launch Revenue Plan");
+run2.SetFontSize(36);
+run2.SetColor(0, 0, 0);
+run2.SetFontFamily("Calibri Light");
+docContent.AddElement(0, paragraph2);
 
-oParagraph.AddDrawing(oDrawing)
+paragraph.AddDrawing(drawing);
 
-oDocument.Push(oParagraph)
+doc.Push(paragraph);
 
-oParagraph = Api.CreateParagraph()
-oParagraph.AddText("Overview")
-oDocument.Push(oParagraph)
+paragraph = Api.CreateParagraph();
+paragraph.AddText("Overview");
+doc.Push(paragraph);
 
-oParagraph = Api.CreateParagraph()
-oParagraph.AddText("In the previous meeting of the board of directors funds were approved to take the 'ONLYOFFICE Document Builder' product to market.  They have also allocated a sum of $250,000 towards market identification and launch efforts. This document describes in brief the objective set forth by the VP of marketing pursuant to the board's decision.")
-oDocument.Push(oParagraph)
+paragraph = Api.CreateParagraph();
+paragraph.AddText("In the previous meeting of the board of directors funds were approved to take the 'ONLYOFFICE Document Builder' product to market.  They have also allocated a sum of $250,000 towards market identification and launch efforts. This document describes in brief the objective set forth by the VP of marketing pursuant to the board's decision.");
+doc.Push(paragraph);
 
-oParagraph = Api.CreateParagraph()
-oDocument.Push(oParagraph)
+paragraph = Api.CreateParagraph();
+doc.Push(paragraph);
 
-oParagraph = Api.CreateParagraph()
-oParagraph.SetStyle(oHeading1Style)
-oParagraph.SetSpacingAfter(100, true)
-oParagraph.SetSpacingBefore(100, true)
-oParagraph.AddText("Summary")
-oDocument.Push(oParagraph)
+paragraph = Api.CreateParagraph();
+paragraph.SetStyle(heading1Style);
+paragraph.SetSpacingAfter(100, true);
+paragraph.SetSpacingBefore(100, true);
+paragraph.AddText("Summary");
+doc.Push(paragraph);
 
-oParagraph = Api.CreateParagraph()
-oParagraph.SetSpacingAfter(100, true)
-oParagraph.SetSpacingBefore(100, true)
+paragraph = Api.CreateParagraph();
+paragraph.SetSpacingAfter(100, true);
+paragraph.SetSpacingBefore(100, true);
 
-oFill = Api.CreateSolidFill(Api.CreateRGBColor(255, 104, 0))
+fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 104, 0));
 
-oGs1 = Api.CreateGradientStop(Api.CreateRGBColor(176, 217, 84), 0)
-oGs2 = Api.CreateGradientStop(Api.CreateRGBColor(151, 192, 60), 100_000)
-oFill = Api.CreateLinearGradientFill([oGs1, oGs2], 5_400_000)
+gs1 = Api.CreateGradientStop(Api.CreateRGBColor(176, 217, 84), 0);
+gs2 = Api.CreateGradientStop(Api.CreateRGBColor(151, 192, 60), 100_000);
+fill = Api.CreateLinearGradientFill([gs1, gs2], 5_400_000);
 
-oStroke = Api.CreateStroke(0, Api.CreateNoFill())
-oDrawing = Api.CreateShape("rect", 70 * 36_000, 40 * 36_000, oFill, oStroke)
-oDrawing.SetWrappingStyle("topAndBottom")
-oDrawing.SetVerPosition("paragraph", 900_888)
-oDrawing.SetDistances(114_300, 0, 114_300, 0)
-oDocContent = oDrawing.GetDocContent()
-oDocContent.RemoveAllElements()
-oParagraph2 = Api.CreateParagraph()
-oParagraph2.SetJc("left")
-oParagraph2.SetSpacingAfter(160)
-oRun2 = oParagraph2.AddText("Phase 1")
-oRun2.SetFontSize(20)
-oRun2.SetBold(true)
-oRun2.SetColor(0, 0, 0)
-oRun2.SetFontFamily("Calibri")
+stroke = Api.CreateStroke(0, Api.CreateNoFill());
+drawing = Api.CreateShape("rect", 70 * 36_000, 40 * 36_000, fill, stroke);
+drawing.SetWrappingStyle("topAndBottom");
+drawing.SetVerPosition("paragraph", 900_888);
+drawing.SetDistances(114_300, 0, 114_300, 0);
+docContent = drawing.GetDocContent();
+docContent.RemoveAllElements();
+paragraph2 = Api.CreateParagraph();
+paragraph2.SetJc("left");
+paragraph2.SetSpacingAfter(160);
+run2 = paragraph2.AddText("Phase 1");
+run2.SetFontSize(20);
+run2.SetBold(true);
+run2.SetColor(0, 0, 0);
+run2.SetFontFamily("Calibri");
 
-oRun2 = oParagraph2.AddText(": Review market tests, marketing plans, and expected sales goals.")
-oRun2.SetFontSize(20)
-oRun2.SetColor(0, 0, 0)
-oRun2.SetFontFamily("Calibri")
+run2 = paragraph2.AddText(": Review market tests, marketing plans, and expected sales goals.");
+run2.SetFontSize(20);
+run2.SetColor(0, 0, 0);
+run2.SetFontFamily("Calibri");
 
-oDocContent.Push(oParagraph2)
+docContent.Push(paragraph2);
 
-oParagraph2 = Api.CreateParagraph()
-oParagraph2.SetJc("left")
-oParagraph2.SetSpacingAfter(160)
-oRun2 = oParagraph2.AddText("Phase 2")
-oRun2.SetFontSize(20)
-oRun2.SetBold(true)
-oRun2.SetColor(0, 0, 0)
-oRun2.SetFontFamily("Calibri")
+paragraph2 = Api.CreateParagraph();
+paragraph2.SetJc("left");
+paragraph2.SetSpacingAfter(160);
+run2 = paragraph2.AddText("Phase 2");
+run2.SetFontSize(20);
+run2.SetBold(true);
+run2.SetColor(0, 0, 0);
+run2.SetFontFamily("Calibri");
 
-oRun2 = oParagraph2.AddText(": Developers complete final build of the solution.")
-oRun2.SetFontSize(20)
-oRun2.SetColor(0, 0, 0)
-oRun2.SetFontFamily("Calibri")
-oDocContent.Push(oParagraph2)
+run2 = paragraph2.AddText(": Developers complete final build of the solution.");
+run2.SetFontSize(20);
+run2.SetColor(0, 0, 0);
+run2.SetFontFamily("Calibri");
+docContent.Push(paragraph2);
 
-oParagraph2 = Api.CreateParagraph()
-oParagraph2.SetJc("left")
-oParagraph2.SetSpacingAfter(160)
-oRun2 = oParagraph2.AddText("Phase 3")
-oRun2.SetFontSize(20)
-oRun2.SetBold(true)
-oRun2.SetColor(0, 0, 0)
-oRun2.SetFontFamily("Calibri")
+paragraph2 = Api.CreateParagraph();
+paragraph2.SetJc("left");
+paragraph2.SetSpacingAfter(160);
+run2 = paragraph2.AddText("Phase 3");
+run2.SetFontSize(20);
+run2.SetBold(true);
+run2.SetColor(0, 0, 0);
+run2.SetFontFamily("Calibri");
 
-oRun2 = oParagraph2.AddText(": The launch phase.")
-oRun2.SetFontSize(20)
-oRun2.SetColor(0, 0, 0)
-oRun2.SetFontFamily("Calibri")
-oDocContent.Push(oParagraph2)
+run2 = paragraph2.AddText(": The launch phase.");
+run2.SetFontSize(20);
+run2.SetColor(0, 0, 0);
+run2.SetFontFamily("Calibri");
+docContent.Push(paragraph2);
 
-oParagraph.AddDrawing(oDrawing)
+paragraph.AddDrawing(drawing);
 
-oParagraph.AddText("After years of market research and focused creative effort we are in a position to take our 'ONLYOFFICE Document Builder' to market. We have a three phase approach in place to complete the product and take the product to market.  The first step of this initiative is to test the market. ")
-oDocument.Push(oParagraph)
+paragraph.AddText("After years of market research and focused creative effort we are in a position to take our 'ONLYOFFICE Document Builder' to market. We have a three phase approach in place to complete the product and take the product to market.  The first step of this initiative is to test the market. ");
+doc.Push(paragraph);
 
-oParagraph = Api.CreateParagraph()
-oParagraph.SetSpacingAfter(0, true)
-oParagraph.SetSpacingBefore(0, true)
-oDocument.Push(oParagraph)
+paragraph = Api.CreateParagraph();
+paragraph.SetSpacingAfter(0, true);
+paragraph.SetSpacingBefore(0, true);
+doc.Push(paragraph);
 
-oParagraph = Api.CreateParagraph()
-oParagraph.SetStyle(oHeading1Style)
-oParagraph.SetSpacingAfter(100, true)
-oParagraph.SetSpacingBefore(100, true)
+paragraph = Api.CreateParagraph();
+paragraph.SetStyle(heading1Style);
+paragraph.SetSpacingAfter(100, true);
+paragraph.SetSpacingBefore(100, true);
 
-oDrawing = Api.CreateChart("bar3D", [[200, 240, 300, 320, 390], [250, 260, 270, 280, 285]], ["Projected Revenue", "Estimated Costs"], [2016, 2017, 2018, 2019, 2020], 90 * 36_000, 2_347_595)
-oDrawing.SetWrappingStyle("tight")
-oDrawing.SetHorPosition("column", 80 * 36_000)
-oDrawing.SetVerPosition("paragraph", 346_075)
-oDrawing.SetDistances(114_300, 0, 114_300, 0)
-oDrawing.SetVerAxisTitle("USD In Hundred Thousands")
-oDrawing.SetLegendPos("bottom")
-oDrawing.SetShowDataLabels(false, false, true)
-oParagraph.AddDrawing(oDrawing)
-oParagraph.AddText("Financial Overview")
-oDocument.Push(oParagraph)
+drawing = Api.CreateChart("bar3D", [[200, 240, 300, 320, 390], [250, 260, 270, 280, 285]], ["Projected Revenue", "Estimated Costs"], [2016, 2017, 2018, 2019, 2020], 90 * 36_000, 2_347_595);
+drawing.SetWrappingStyle("tight");
+drawing.SetHorPosition("column", 80 * 36_000);
+drawing.SetVerPosition("paragraph", 346_075);
+drawing.SetDistances(114_300, 0, 114_300, 0);
+drawing.SetVerAxisTitle("USD In Hundred Thousands");
+drawing.SetLegendPos("bottom");
+drawing.SetShowDataLabels(false, false, true);
+paragraph.AddDrawing(drawing);
+paragraph.AddText("Financial Overview");
+doc.Push(paragraph);
 
-oParagraph = Api.CreateParagraph()
-oParagraph.SetIndRight(5040)
-oParagraph.AddText("Included are the estimated investment costs to introduce the new product.  As you can see for the first 2 years we will be in the investment phase.  Generating market demand and building our reputation in this category.  By 201")
-oParagraph.AddText("8")
-oParagraph.AddText(" we expect to be profitable.")
-oDocument.Push(oParagraph)
+paragraph = Api.CreateParagraph();
+paragraph.SetIndRight(5040);
+paragraph.AddText("Included are the estimated investment costs to introduce the new product.  As you can see for the first 2 years we will be in the investment phase.  Generating market demand and building our reputation in this category.  By 201");
+paragraph.AddText("8");
+paragraph.AddText(" we expect to be profitable.");
+doc.Push(paragraph);
 
-oParagraph = Api.CreateParagraph()
-oParagraph.SetIndRight(5040)
-oDocument.Push(oParagraph)
+paragraph = Api.CreateParagraph();
+paragraph.SetIndRight(5040);
+doc.Push(paragraph);
 
-oParagraph = Api.CreateParagraph()
-oParagraph.SetStyle(oHeading1Style)
-oParagraph.SetSpacingAfter(100, true)
-oParagraph.SetSpacingBefore(100, true)
-oParagraph.AddText("Details")
-oDocument.Push(oParagraph)
+paragraph = Api.CreateParagraph();
+paragraph.SetStyle(heading1Style);
+paragraph.SetSpacingAfter(100, true);
+paragraph.SetSpacingBefore(100, true);
+paragraph.AddText("Details");
+doc.Push(paragraph);
 
-oParagraph = Api.CreateParagraph()
-oParagraph.SetSpacingAfter(240)
-oParagraph.AddText("Out of the $250,000 allocated for this effort, we would like to spend about $50,000 towards the identification of the market.  For this we are allowed to engage with a marketing consulting organization.  Let us start with creating an RFP for this and start inviting the bids.  We would like to get the selection process completed by no later than end of first quarter.")
-oDocument.Push(oParagraph)
+paragraph = Api.CreateParagraph();
+paragraph.SetSpacingAfter(240);
+paragraph.AddText("Out of the $250,000 allocated for this effort, we would like to spend about $50,000 towards the identification of the market.  For this we are allowed to engage with a marketing consulting organization.  Let us start with creating an RFP for this and start inviting the bids.  We would like to get the selection process completed by no later than end of first quarter.");
+doc.Push(paragraph);
 
-oParagraph = Api.CreateParagraph()
-oParagraph.SetSpacingBefore(100, true)
-oParagraph.SetSpacingAfter(360)
-oDocument.Push(oParagraph)
-const oSection1 = oDocument.CreateSection(oParagraph)
-oSection1.SetEqualColumns(1, 720)
-oSection1.SetPageSize(12_240, 15_840)
-oSection1.SetPageMargins(1440, 1440, 1440, 1440)
-oSection1.SetHeaderDistance(720)
-oSection1.SetFooterDistance(576)
+paragraph = Api.CreateParagraph();
+paragraph.SetSpacingBefore(100, true);
+paragraph.SetSpacingAfter(360);
+doc.Push(paragraph);
+const section1 = doc.CreateSection(paragraph);
+section1.SetEqualColumns(1, 720);
+section1.SetPageSize(12_240, 15_840);
+section1.SetPageMargins(1440, 1440, 1440, 1440);
+section1.SetHeaderDistance(720);
+section1.SetFooterDistance(576);
 
-oParagraph = Api.CreateParagraph()
-oParagraph.SetStyle(oSubtitleStyle)
-oGs1 = Api.CreateGradientStop(Api.CreateRGBColor(176, 217, 84), 0)
-oGs2 = Api.CreateGradientStop(Api.CreateRGBColor(151, 192, 60), 100_000)
-oFill = Api.CreateLinearGradientFill([oGs1, oGs2], 5_400_000)
-oStroke = Api.CreateStroke(0, Api.CreateNoFill())
-oDrawing = Api.CreateShape("rect", 2_718_435, 962_025, oFill, oStroke)
-oDrawing.SetWrappingStyle("square")
-oDrawing.SetHorAlign("margin", "right")
-oDrawing.SetVerPosition("paragraph", 35_560)
-oDrawing.SetDistances(114_300, 0, 114_300, 0)
-const oContent = oDrawing.GetDocContent()
-oContent.RemoveAllElements()
-oParagraph2 = Api.CreateParagraph()
-oParagraph2.SetJc("left")
-oRun2 = oParagraph2.AddText("Innovation. Profit.")
-oRun2.SetFontSize(20)
-oRun2.SetBold(true)
-oRun2.SetColor(0, 0, 0)
-oRun2.SetFontFamily("Calibri")
-oContent.AddElement(0, oParagraph2)
+paragraph = Api.CreateParagraph();
+paragraph.SetStyle(subtitleStyle);
+gs1 = Api.CreateGradientStop(Api.CreateRGBColor(176, 217, 84), 0);
+gs2 = Api.CreateGradientStop(Api.CreateRGBColor(151, 192, 60), 100_000);
+fill = Api.CreateLinearGradientFill([gs1, gs2], 5_400_000);
+stroke = Api.CreateStroke(0, Api.CreateNoFill());
+drawing = Api.CreateShape("rect", 2_718_435, 962_025, fill, stroke);
+drawing.SetWrappingStyle("square");
+drawing.SetHorAlign("margin", "right");
+drawing.SetVerPosition("paragraph", 35_560);
+drawing.SetDistances(114_300, 0, 114_300, 0);
+const content = drawing.GetDocContent();
+content.RemoveAllElements();
+paragraph2 = Api.CreateParagraph();
+paragraph2.SetJc("left");
+run2 = paragraph2.AddText("Innovation. Profit.");
+run2.SetFontSize(20);
+run2.SetBold(true);
+run2.SetColor(0, 0, 0);
+run2.SetFontFamily("Calibri");
+content.AddElement(0, paragraph2);
 
-oParagraph2 = Api.CreateParagraph()
-oParagraph2.SetJc("left")
-oRun2 = oParagraph2.AddText("After years of market research and focused creative effort we are in a position to take our 'ONLYOFFICE Document Builder' to market.")
-oRun2.SetFontSize(18)
-oRun2.SetItalic(true)
-oRun2.SetColor(0, 0, 0)
-oRun2.SetFontFamily("Calibri")
-oContent.AddElement(1, oParagraph2)
+paragraph2 = Api.CreateParagraph();
+paragraph2.SetJc("left");
+run2 = paragraph2.AddText("After years of market research and focused creative effort we are in a position to take our 'ONLYOFFICE Document Builder' to market.");
+run2.SetFontSize(18);
+run2.SetItalic(true);
+run2.SetColor(0, 0, 0);
+run2.SetFontFamily("Calibri");
+content.AddElement(1, paragraph2);
 
-oParagraph.AddDrawing(oDrawing)
-oParagraph.AddText("Legal Issues")
-oDocument.Push(oParagraph)
+paragraph.AddDrawing(drawing);
+paragraph.AddText("Legal Issues");
+doc.Push(paragraph);
 
-oParagraph = Api.CreateParagraph()
-oDrawing = Api.CreateChart("pie", [[53, 32, 14]], [], ["Enterprise", "Small Business", "Individual Developers"], 2_741_295, 2_473_300)
-oDrawing.SetWrappingStyle("square")
-oDrawing.SetHorAlign("margin", "right")
-oDrawing.SetVerPosition("paragraph", 914_400)
-oDrawing.SetDistances(114_300, 0, 114_300, 0)
-oDrawing.SetTitle("Projected Market", 9)
-oDrawing.SetShowDataLabels(false, false, true)
-oParagraph.AddDrawing(oDrawing)
-oParagraph.AddText("To support the new product, the Legal Department will maintain a centralized repository for all patent investigations as well as marketing claims.  The release team will adhere to all of the standardized processes for releasing new products.")
-oDocument.Push(oParagraph)
+paragraph = Api.CreateParagraph();
+drawing = Api.CreateChart("pie", [[53, 32, 14]], [], ["Enterprise", "Small Business", "Individual Developers"], 2_741_295, 2_473_300);
+drawing.SetWrappingStyle("square");
+drawing.SetHorAlign("margin", "right");
+drawing.SetVerPosition("paragraph", 914_400);
+drawing.SetDistances(114_300, 0, 114_300, 0);
+drawing.SetTitle("Projected Market", 9);
+drawing.SetShowDataLabels(false, false, true);
+paragraph.AddDrawing(drawing);
+paragraph.AddText("To support the new product, the Legal Department will maintain a centralized repository for all patent investigations as well as marketing claims.  The release team will adhere to all of the standardized processes for releasing new products.");
+doc.Push(paragraph);
 
-oParagraph = Api.CreateParagraph()
-oParagraph.SetSpacingAfter(0)
-oParagraph.AddText("As we approach release of the product, the Legal Department is prepared ")
-oParagraph.AddText("to develop all licensing agreements and has streamlined coordination with the marketing and sales department on the license terms and addendums.   ")
-oDocument.Push(oParagraph)
+paragraph = Api.CreateParagraph();
+paragraph.SetSpacingAfter(0);
+paragraph.AddText("As we approach release of the product, the Legal Department is prepared ");
+paragraph.AddText("to develop all licensing agreements and has streamlined coordination with the marketing and sales department on the license terms and addendums.   ");
+doc.Push(paragraph);
 
-oParagraph = Api.CreateParagraph()
-oDocument.Push(oParagraph)
-oParagraph.SetStyle(oSubtitleStyle)
-oParagraph.AddText("Statement on Timeline")
+paragraph = Api.CreateParagraph();
+doc.Push(paragraph);
+paragraph.SetStyle(subtitleStyle);
+paragraph.AddText("Statement on Timeline");
 
-oParagraph = Api.CreateParagraph()
-oDocument.Push(oParagraph)
-oParagraph.SetSpacingAfter(0)
-oParagraph.AddText("All timelines in this report are estimated and highly dependent upon each team meeting their individual objectives. There are many interdependencies that are detailed in the related project plan.  ")
+paragraph = Api.CreateParagraph();
+doc.Push(paragraph);
+paragraph.SetSpacingAfter(0);
+paragraph.AddText("All timelines in this report are estimated and highly dependent upon each team meeting their individual objectives. There are many interdependencies that are detailed in the related project plan.  ");
 
-oParagraph = Api.CreateParagraph()
-oDocument.Push(oParagraph)
-oParagraph.SetStyle(oSubtitleStyle)
-oParagraph.AddText("Productivity Gains")
+paragraph = Api.CreateParagraph();
+doc.Push(paragraph);
+paragraph.SetStyle(subtitleStyle);
+paragraph.AddText("Productivity Gains");
 
-oParagraph = Api.CreateParagraph()
-oDocument.Push(oParagraph)
-oParagraph.AddText("To support the new product, the Legal Department will maintain a centralized repository for all patent investigations")
-oParagraph.AddText(" as well as marketing claims.  ")
+paragraph = Api.CreateParagraph();
+doc.Push(paragraph);
+paragraph.AddText("To support the new product, the Legal Department will maintain a centralized repository for all patent investigations");
+paragraph.AddText(" as well as marketing claims.  ");
 
-oParagraph = Api.CreateParagraph()
-oDocument.Push(oParagraph)
-oParagraph.SetStyle(oSubtitleStyle)
-oParagraph.AddText("License Agreements")
+paragraph = Api.CreateParagraph();
+doc.Push(paragraph);
+paragraph.SetStyle(subtitleStyle);
+paragraph.AddText("License Agreements");
 
-oParagraph = Api.CreateParagraph()
-oParagraph.SetSpacingAfter(0)
-oParagraph.AddText("All timelines in this report are estimated and highly dependent upon each team meetin")
-oParagraph.AddText("g their individual objectives.  I")
-oParagraph.AddText("nterdependencies are detailed in the related project plan.  ")
-oDocument.Push(oParagraph)
+paragraph = Api.CreateParagraph();
+paragraph.SetSpacingAfter(0);
+paragraph.AddText("All timelines in this report are estimated and highly dependent upon each team meetin");
+paragraph.AddText("g their individual objectives.  I");
+paragraph.AddText("nterdependencies are detailed in the related project plan.  ");
+doc.Push(paragraph);
 
-oParagraph = Api.CreateParagraph()
-oDocument.Push(oParagraph)
-oParagraph.SetStyle(oSubtitleStyle)
-oParagraph.SetKeepNext(true)
-oParagraph.SetKeepLines(true)
-oParagraph.AddText("Revenue Forecasting")
+paragraph = Api.CreateParagraph();
+doc.Push(paragraph);
+paragraph.SetStyle(subtitleStyle);
+paragraph.SetKeepNext(true);
+paragraph.SetKeepLines(true);
+paragraph.AddText("Revenue Forecasting");
 
-oParagraph = Api.CreateParagraph()
-oDocument.Push(oParagraph)
-oParagraph.SetKeepNext(true)
-oParagraph.SetKeepLines(true)
-oParagraph.AddText("To support the new product, the Legal Department will maintain a centralized repository for all ")
-oParagraph.AddText("patent investigations and")
-oParagraph.AddText(" marketing claims.  The release team will adhere to all of the stand")
-oParagraph.AddText("ardized processes for releasing ")
-oParagraph.AddText("new products. ")
+paragraph = Api.CreateParagraph();
+doc.Push(paragraph);
+paragraph.SetKeepNext(true);
+paragraph.SetKeepLines(true);
+paragraph.AddText("To support the new product, the Legal Department will maintain a centralized repository for all ");
+paragraph.AddText("patent investigations and");
+paragraph.AddText(" marketing claims.  The release team will adhere to all of the stand");
+paragraph.AddText("ardized processes for releasing ");
+paragraph.AddText("new products. ");
 
-let oTable = Api.CreateTable(2, 2)
-oDocument.Push(oTable)
-oTable.SetStyle(oTableGridStyle)
-oTable.SetWidth("twips", 4311)
-oTable.SetTableInd(100)
-oTable.SetTableLook(true, true, false, false, true, false)
-oTable.SetTableBorderTop("single", 4, 0, 0xAF, 0xAD, 0x91)
-oTable.SetTableBorderBottom("single", 4, 0, 0xAF, 0xAD, 0x91)
-oTable.SetTableBorderLeft("single", 4, 0, 0xAF, 0xAD, 0x91)
-oTable.SetTableBorderRight("single", 4, 0, 0xAF, 0xAD, 0x91)
-oTable.SetTableBorderInsideH("single", 4, 0, 0xAF, 0xAD, 0x91)
-oTable.SetTableBorderInsideV("single", 4, 0, 0xAF, 0xAD, 0x91)
-let oRow = oTable.GetRow(0)
-let oCell
-let oCellContent
+let table = Api.CreateTable(2, 2);
+doc.Push(table);
+table.SetStyle(tableGridStyle);
+table.SetWidth("twips", 4311);
+table.SetTableInd(100);
+table.SetTableLook(true, true, false, false, true, false);
+table.SetTableBorderTop("single", 4, 0, 0xAF, 0xAD, 0x91);
+table.SetTableBorderBottom("single", 4, 0, 0xAF, 0xAD, 0x91);
+table.SetTableBorderLeft("single", 4, 0, 0xAF, 0xAD, 0x91);
+table.SetTableBorderRight("single", 4, 0, 0xAF, 0xAD, 0x91);
+table.SetTableBorderInsideH("single", 4, 0, 0xAF, 0xAD, 0x91);
+table.SetTableBorderInsideV("single", 4, 0, 0xAF, 0xAD, 0x91);
+let row = table.GetRow(0);
+let cell;
+let cellContent;
 
-if (oRow) {
-  oRow.SetHeight("atLeast", 201)
-  oCell = oRow.GetCell(0)
-  oCell.SetWidth("twips", 1637)
-  oCell.SetShd("clear", 151, 192, 60, false)
-  oCell.SetVerticalAlign("center")
-  oCellContent = oCell.GetContent()
-  oParagraph = oCellContent.GetElement(0)
-  oParagraph.SetJc("center")
-  oRun = oParagraph.AddText("2016")
-  oRun.SetBold(true)
-  oRun.SetColor(0, 0, 0, false)
+if (row) {
+  row.SetHeight("atLeast", 201);
+  cell = row.GetCell(0);
+  cell.SetWidth("twips", 1637);
+  cell.SetShd("clear", 151, 192, 60, false);
+  cell.SetVerticalAlign("center");
+  cellContent = cell.GetContent();
+  paragraph = cellContent.GetElement(0);
+  paragraph.SetJc("center");
+  run = paragraph.AddText("2016");
+  run.SetBold(true);
+  run.SetColor(0, 0, 0, false);
 
-  oCell = oRow.GetCell(1)
-  oCell.SetWidth("twips", 2674)
-  oCell.SetShd("clear", 151, 192, 60, false)
-  oCell.SetVerticalAlign("center")
-  oCellContent = oCell.GetContent()
-  oParagraph = oCellContent.GetElement(0)
-  oParagraph.SetJc("center")
-  oRun = oParagraph.AddText("2017")
-  oRun.SetBold(true)
-  oRun.SetColor(0, 0, 0, false)
+  cell = row.GetCell(1);
+  cell.SetWidth("twips", 2674);
+  cell.SetShd("clear", 151, 192, 60, false);
+  cell.SetVerticalAlign("center");
+  cellContent = cell.GetContent();
+  paragraph = cellContent.GetElement(0);
+  paragraph.SetJc("center");
+  run = paragraph.AddText("2017");
+  run.SetBold(true);
+  run.SetColor(0, 0, 0, false);
 }
-oRow = oTable.GetRow(1)
-if (oRow) {
-  oRow.SetHeight("atLeast", 700)
-  oCell = oRow.GetCell(0)
-  oCell.SetWidth("twips", 1637)
-  oCell.SetVerticalAlign("center")
-  oCellContent = oCell.GetContent()
-  oParagraph = oCellContent.GetElement(0)
-  oParagraph.SetJc("center")
-  oParagraph.AddText("All Projects")
-  oParagraph.AddLineBreak()
-  oParagraph.AddText("Pending")
+row = table.GetRow(1);
+if (row) {
+  row.SetHeight("atLeast", 700);
+  cell = row.GetCell(0);
+  cell.SetWidth("twips", 1637);
+  cell.SetVerticalAlign("center");
+  cellContent = cell.GetContent();
+  paragraph = cellContent.GetElement(0);
+  paragraph.SetJc("center");
+  paragraph.AddText("All Projects");
+  paragraph.AddLineBreak();
+  paragraph.AddText("Pending");
 
-  oCell = oRow.GetCell(1)
-  oCell.SetWidth("twips", 2674)
-  oCell.SetShd("clear", 0, 0, 0, true)
-  oCell.SetVerticalAlign("center")
-  oCellContent = oCell.GetContent()
-  oCellContent.RemoveAllElements()
-  oCell.SetCellMarginTop(150)
-  const oInnerTable = Api.CreateTable(3, 3)
-  oCellContent.AddElement(0, oInnerTable)
-  oInnerTable.SetStyle(oTableGridStyle)
-  oInnerTable.SetWidth("twips", 2448)
-  oInnerTable.SetTableLook(true, true, false, false, true, false)
-  const oMergeCells = []
-  oRow = oInnerTable.GetRow(0)
-  if (oRow) {
-    oRow.SetHeight("atLeast", 201)
-    oCell = oRow.GetCell(0)
-    if (oCell) {
-      oMergeCells.push(oCell)
+  cell = row.GetCell(1);
+  cell.SetWidth("twips", 2674);
+  cell.SetShd("clear", 0, 0, 0, true);
+  cell.SetVerticalAlign("center");
+  cellContent = cell.GetContent();
+  cellContent.RemoveAllElements();
+  cell.SetCellMarginTop(150);
+  const innerTable = Api.CreateTable(3, 3);
+  cellContent.AddElement(0, innerTable);
+  innerTable.SetStyle(tableGridStyle);
+  innerTable.SetWidth("twips", 2448);
+  innerTable.SetTableLook(true, true, false, false, true, false);
+  const mergeCells = [];
+  row = innerTable.GetRow(0);
+  if (row) {
+    row.SetHeight("atLeast", 201);
+    cell = row.GetCell(0);
+    if (cell) {
+      mergeCells.push(cell);
     }
-    oCell = oRow.GetCell(1)
-    if (oCell) {
-      oCell.SetWidth("twips", 865)
-      oCell.SetShd("clear", 189, 227, 100, false)
-      oCellContent = oCell.GetContent()
-      oParagraph = oCellContent.GetElement(0)
-      oParagraph.AddText("West")
+    cell = row.GetCell(1);
+    if (cell) {
+      cell.SetWidth("twips", 865);
+      cell.SetShd("clear", 189, 227, 100, false);
+      cellContent = cell.GetContent();
+      paragraph = cellContent.GetElement(0);
+      paragraph.AddText("West");
     }
-    oCell = oRow.GetCell(2)
-    if (oCell) {
-      oCell.SetWidth("twips", 1092)
-      oCell.SetShd("clear", 225, 245, 174, false)
-      oCellContent = oCell.GetContent()
-      oParagraph = oCellContent.GetElement(0)
-      oParagraph.AddText("Approved")
+    cell = row.GetCell(2);
+    if (cell) {
+      cell.SetWidth("twips", 1092);
+      cell.SetShd("clear", 225, 245, 174, false);
+      cellContent = cell.GetContent();
+      paragraph = cellContent.GetElement(0);
+      paragraph.AddText("Approved");
     }
   }
-  oRow = oInnerTable.GetRow(1)
-  if (oRow) {
-    oRow.SetHeight("atLeast", 196)
-    oCell = oRow.GetCell(0)
-    if (oCell) {
-      oMergeCells.push(oCell)
+  row = innerTable.GetRow(1);
+  if (row) {
+    row.SetHeight("atLeast", 196);
+    cell = row.GetCell(0);
+    if (cell) {
+      mergeCells.push(cell);
     }
 
-    oCell = oRow.GetCell(1)
-    if (oCell) {
-      oCell.SetWidth("twips", 865)
-      oCell.SetShd("clear", 189, 227, 100, false)
-      oCellContent = oCell.GetContent()
-      oParagraph = oCellContent.GetElement(0)
-      oParagraph.AddText("Central")
+    cell = row.GetCell(1);
+    if (cell) {
+      cell.SetWidth("twips", 865);
+      cell.SetShd("clear", 189, 227, 100, false);
+      cellContent = cell.GetContent();
+      paragraph = cellContent.GetElement(0);
+      paragraph.AddText("Central");
     }
-    oCell = oRow.GetCell(2)
-    if (oCell) {
-      oCell.SetWidth("twips", 1092)
-      oCell.SetShd("clear", 225, 245, 174, false)
-      oCellContent = oCell.GetContent()
-      oParagraph = oCellContent.GetElement(0)
-      oParagraph.AddText("Pending")
-    }
-  }
-  oRow = oInnerTable.GetRow(2)
-  if (oRow) {
-    oRow.SetHeight("atLeast", 196)
-    oCell = oRow.GetCell(0)
-    if (oCell) {
-      oMergeCells.push(oCell)
-    }
-    oCell = oRow.GetCell(1)
-    if (oCell) {
-      oCell.SetWidth("twips", 865)
-      oCell.SetShd("clear", 189, 227, 100, false)
-      oCellContent = oCell.GetContent()
-      oParagraph = oCellContent.GetElement(0)
-      oParagraph.AddText("East")
-    }
-    oCell = oRow.GetCell(2)
-    if (oCell) {
-      oCell.SetWidth("twips", 1092)
-      oCell.SetShd("clear", 225, 245, 174, false)
-      oCellContent = oCell.GetContent()
-      oParagraph = oCellContent.GetElement(0)
-      oParagraph.AddText("Approved")
+    cell = row.GetCell(2);
+    if (cell) {
+      cell.SetWidth("twips", 1092);
+      cell.SetShd("clear", 225, 245, 174, false);
+      cellContent = cell.GetContent();
+      paragraph = cellContent.GetElement(0);
+      paragraph.AddText("Pending");
     }
   }
-  const oMergedCell = oInnerTable.MergeCells(oMergeCells)
-  oMergedCell.SetVerticalAlign("center")
-  oMergedCell.SetTextDirection("btlr")
-  oMergedCell.SetWidth("twips", 491)
-  oMergedCell.SetShd("clear", 177, 217, 84, false)
-  oCellContent = oMergedCell.GetContent()
-  oParagraph = oCellContent.GetElement(0)
-  oParagraph.SetIndLeft(113)
-  oParagraph.SetIndRight(113)
-  oParagraph.SetJc("center")
-  oRun = oParagraph.AddText("USA")
-  oRun.SetBold(true)
-}
-
-oParagraph = Api.CreateParagraph()
-oDocument.Push(oParagraph)
-oTextPr = oParagraph.GetParagraphMarkTextPr()
-oTextPr.SetColor(0xFF, 0x00, 0x00)
-oTextPr.SetFontFamily("Segoe UI")
-
-oSection1.SetTitlePage(true)
-oDocContent = oSection1.GetHeader("default", true)
-oTable = Api.CreateTable(2, 1)
-oDocContent.AddElement(0, oTable)
-oTable.SetWidth("auto")
-oTable.SetJc("right")
-oTable.SetTableLook(true, true, false, false, true, false)
-
-oRow = oTable.GetRow(0)
-if (oRow) {
-  oRow.SetHeight("atLeast", 792)
-  oCell = oRow.GetCell(0)
-  if (oCell) {
-    oCell.SetWidth("twips", 7337)
-    oCell.SetVerticalAlign("bottom")
-    oCellContent = oCell.GetContent()
-    oParagraph = oCellContent.GetElement(0)
-    oParagraph.SetStyle("Header")
-    oParagraph.SetJc("right")
-    oTextPr = oParagraph.GetParagraphMarkTextPr()
-    oTextPr.SetFontFamily("Calibri Light")
-    oTextPr.SetFontSize(28)
-    oRun = oParagraph.AddText("ONLYOFFICE Document Builder")
-    oRun.SetSmallCaps(true)
-    oRun.SetFontSize(32)
-    oRun.SetFontFamily("Calibri Light")
+  row = innerTable.GetRow(2);
+  if (row) {
+    row.SetHeight("atLeast", 196);
+    cell = row.GetCell(0);
+    if (cell) {
+      mergeCells.push(cell);
+    }
+    cell = row.GetCell(1);
+    if (cell) {
+      cell.SetWidth("twips", 865);
+      cell.SetShd("clear", 189, 227, 100, false);
+      cellContent = cell.GetContent();
+      paragraph = cellContent.GetElement(0);
+      paragraph.AddText("East");
+    }
+    cell = row.GetCell(2);
+    if (cell) {
+      cell.SetWidth("twips", 1092);
+      cell.SetShd("clear", 225, 245, 174, false);
+      cellContent = cell.GetContent();
+      paragraph = cellContent.GetElement(0);
+      paragraph.AddText("Approved");
+    }
   }
-  oCell = oRow.GetCell(1)
-  if (oCell) {
-    oCell.SetWidth("twips", 792)
-    oCell.SetShd("clear", 0x3D, 0x4A, 0x6B)
-    oCell.SetVerticalAlign("center")
-    oCellContent = oCell.GetContent()
-    oParagraph = oCellContent.GetElement(0)
-    oParagraph.SetStyle("Header")
-    oParagraph.SetJc("center")
-    oParagraph.GetParagraphMarkTextPr().SetColor(0xFF, 0xFF, 0xFF)
-    oRun = oParagraph.AddPageNumber()
-    oRun.SetColor(0xFF, 0xFF, 0xFF)
-  }
+  const mergedCell = innerTable.MergeCells(mergeCells);
+  mergedCell.SetVerticalAlign("center");
+  mergedCell.SetTextDirection("btlr");
+  mergedCell.SetWidth("twips", 491);
+  mergedCell.SetShd("clear", 177, 217, 84, false);
+  cellContent = mergedCell.GetContent();
+  paragraph = cellContent.GetElement(0);
+  paragraph.SetIndLeft(113);
+  paragraph.SetIndRight(113);
+  paragraph.SetJc("center");
+  run = paragraph.AddText("USA");
+  run.SetBold(true);
 }
 
-oDocContent = oSection1.GetFooter("default", true)
-oTable = Api.CreateTable(2, 1)
-oDocContent.AddElement(0, oTable)
-oTable.SetWidth("auto")
-oTable.SetJc("right")
-oTable.SetTableLook(true, true, false, false, true, false)
-oRow = oTable.GetRow(0)
-if (oRow) {
-  oCell = oRow.GetCell(0)
-  if (oCell) {
-    oCell.SetWidth("auto")
-    oCellContent = oCell.GetContent()
-    oParagraph = oCellContent.GetElement(0)
-    oParagraph.SetStyle(oFooterStyle)
-    oParagraph.SetJc("right")
-    oParagraph.AddText("ONLYOFFICE Document Builder")
-    oParagraph.AddText(" | Confidential")
+paragraph = Api.CreateParagraph();
+doc.Push(paragraph);
+textPr = paragraph.GetParagraphMarkTextPr();
+textPr.SetColor(0xFF, 0x00, 0x00);
+textPr.SetFontFamily("Segoe UI");
+
+section1.SetTitlePage(true);
+docContent = section1.GetHeader("default", true);
+table = Api.CreateTable(2, 1);
+docContent.AddElement(0, table);
+table.SetWidth("auto");
+table.SetJc("right");
+table.SetTableLook(true, true, false, false, true, false);
+
+row = table.GetRow(0);
+if (row) {
+  row.SetHeight("atLeast", 792);
+  cell = row.GetCell(0);
+  if (cell) {
+    cell.SetWidth("twips", 7337);
+    cell.SetVerticalAlign("bottom");
+    cellContent = cell.GetContent();
+    paragraph = cellContent.GetElement(0);
+    paragraph.SetStyle("Header");
+    paragraph.SetJc("right");
+    textPr = paragraph.GetParagraphMarkTextPr();
+    textPr.SetFontFamily("Calibri Light");
+    textPr.SetFontSize(28);
+    run = paragraph.AddText("ONLYOFFICE Document Builder");
+    run.SetSmallCaps(true);
+    run.SetFontSize(32);
+    run.SetFontFamily("Calibri Light");
   }
-  oCell = oRow.GetCell(1)
-  if (oCell) {
-    oCell.SetWidth("auto")
-    oCellContent = oCell.GetContent()
-    oParagraph = oCellContent.GetElement(0)
-    oParagraph.SetStyle(oFooterStyle)
-    oParagraph.SetJc("right")
-    oDrawing = Api.CreateImage("https://static.onlyoffice.com/assets/docs/samples/img/onlyoffice_logo.png", 495_300, 481_965)
-    oDrawing.SetWrappingStyle("inline")
-    oParagraph.AddDrawing(oDrawing)
+  cell = row.GetCell(1);
+  if (cell) {
+    cell.SetWidth("twips", 792);
+    cell.SetShd("clear", 0x3D, 0x4A, 0x6B);
+    cell.SetVerticalAlign("center");
+    cellContent = cell.GetContent();
+    paragraph = cellContent.GetElement(0);
+    paragraph.SetStyle("Header");
+    paragraph.SetJc("center");
+    paragraph.GetParagraphMarkTextPr().SetColor(0xFF, 0xFF, 0xFF);
+    run = paragraph.AddPageNumber();
+    run.SetColor(0xFF, 0xFF, 0xFF);
   }
 }
 
-oParagraph.SetStyle(oFooterStyle)
+docContent = section1.GetFooter("default", true);
+table = Api.CreateTable(2, 1);
+docContent.AddElement(0, table);
+table.SetWidth("auto");
+table.SetJc("right");
+table.SetTableLook(true, true, false, false, true, false);
+row = table.GetRow(0);
+if (row) {
+  cell = row.GetCell(0);
+  if (cell) {
+    cell.SetWidth("auto");
+    cellContent = cell.GetContent();
+    paragraph = cellContent.GetElement(0);
+    paragraph.SetStyle(footerStyle);
+    paragraph.SetJc("right");
+    paragraph.AddText("ONLYOFFICE Document Builder");
+    paragraph.AddText(" | Confidential");
+  }
+  cell = row.GetCell(1);
+  if (cell) {
+    cell.SetWidth("auto");
+    cellContent = cell.GetContent();
+    paragraph = cellContent.GetElement(0);
+    paragraph.SetStyle(footerStyle);
+    paragraph.SetJc("right");
+    drawing = Api.CreateImage("https://static.onlyoffice.com/assets/docs/samples/img/onlyoffice_logo.png", 495_300, 481_965);
+    drawing.SetWrappingStyle("inline");
+    paragraph.AddDrawing(drawing);
+  }
+}
 
-const oElement = oDocument.Last()
-oElement.Delete()
+paragraph.SetStyle(footerStyle);
+doc.RemoveElement(doc.GetElementsCount() - 1);
 ```

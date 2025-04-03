@@ -11,99 +11,99 @@ This sample is available for the **C++ and .Net DocBuilder Frameworks**.
 Download the sample and get more information on the [Builder framework samples](../../../document-builder/builder-framework/builder-framework-samples/builder-framework-samples.md) page.
 
 ```ts document-builder={"documentType": "slide", "editorConfig": {"customization": {"zoom": 60}}}
-const oPresentation = Api.GetPresentation()
-oPresentation.SetSizes(9_144_000, 6_858_000)
+let presentation = Api.GetPresentation();
+presentation.SetSizes(9_144_000, 6_858_000);
 
-function createSlide(oPresentation, image_url) {
-  const oSlide = Api.CreateSlide()
-  oPresentation.AddSlide(oSlide)
-  const oFill = Api.CreateBlipFill(image_url, "stretch")
-  oSlide.SetBackground(oFill)
-  oSlide.RemoveAllObjects()
-  return oSlide
+function createSlide(presentation, image_url) {
+  let slide = Api.CreateSlide();
+  presentation.AddSlide(slide);
+  let fill = Api.CreateBlipFill(image_url, "stretch");
+  slide.SetBackground(fill);
+  slide.RemoveAllObjects();
+  return slide;
 }
 
-function addText(oShape, oContent, text, fontSize, isBold, js) {
-  const oParagraph = Api.CreateParagraph()
-  oParagraph.SetSpacingBefore(0)
-  oParagraph.SetSpacingAfter(0)
-  oContent.Push(oParagraph)
-  const oRun = oParagraph.AddText(text)
-  oRun.SetFill(Api.CreateSolidFill(Api.CreateRGBColor(0xFF, 0xFF, 0xFF)))
-  oRun.SetFontSize(fontSize)
-  oRun.SetFontFamily("Georgia")
-  oRun.SetBold(isBold)
-  oParagraph.SetJc(js)
+function addText(shape, content, text, fontSize, isBold, js) {
+  let paragraph = Api.CreateParagraph();
+  paragraph.SetSpacingBefore(0);
+  paragraph.SetSpacingAfter(0);
+  content.Push(paragraph);
+  let run = paragraph.AddText(text);
+  run.SetFill(Api.CreateSolidFill(Api.CreateRGBColor(0xFF, 0xFF, 0xFF)));
+  run.SetFontSize(fontSize);
+  run.SetFontFamily("Georgia");
+  run.SetBold(isBold);
+  paragraph.SetJc(js);
 }
 
-const image_url = "https://static.onlyoffice.com/assets/docs/samples/img/presentation_gun.png"
-let oSlide = createSlide(oPresentation, image_url)
-oPresentation.GetSlideByIndex(0).Delete()
+let image_url = "https://static.onlyoffice.com/assets/docs/samples/img/presentation_gun.png";
+let slide = createSlide(presentation, image_url);
+presentation.GetSlideByIndex(0).Delete();
 
-let oShape = Api.CreateShape("rect", 8_056_800, 3_020_400, Api.CreateNoFill(), Api.CreateStroke(0, Api.CreateNoFill()))
-oShape.SetPosition(608_400, 1_267_200)
-let oContent = oShape.GetDocContent()
-oContent.RemoveAllElements()
-addText(oShape, oContent, "How They", 160, true, "left")
-addText(oShape, oContent, "Throw Out", 132, false, "left")
-addText(oShape, oContent, "a Challenge", 132, false, "left")
-oSlide.AddObject(oShape)
+let shape = Api.CreateShape("rect", 8_056_800, 3_020_400, Api.CreateNoFill(), Api.CreateStroke(0, Api.CreateNoFill()));
+shape.SetPosition(608_400, 1_267_200);
+let content = shape.GetDocContent();
+content.RemoveAllElements();
+addText(shape, content, "How They", 160, true, "left");
+addText(shape, content, "Throw Out", 132, false, "left");
+addText(shape, content, "a Challenge", 132, false, "left");
+slide.AddObject(shape);
 
-oSlide = Api.CreateSlide()
-oPresentation.AddSlide(oSlide)
-let oFill = Api.CreateBlipFill("https://static.onlyoffice.com/assets/docs/samples/img/presentation_axe.png", "stretch")
-oSlide.SetBackground(oFill)
-oSlide.RemoveAllObjects()
+slide = Api.CreateSlide();
+presentation.AddSlide(slide);
+let fill = Api.CreateBlipFill("https://static.onlyoffice.com/assets/docs/samples/img/presentation_axe.png", "stretch");
+slide.SetBackground(fill);
+slide.RemoveAllObjects();
 
-oShape = Api.CreateShape("rect", 6_904_800, 1_724_400, Api.CreateNoFill(), Api.CreateStroke(0, Api.CreateNoFill()))
-oShape.SetPosition(1_764_000, 1_191_600)
-oContent = oShape.GetDocContent()
-oContent.RemoveAllElements()
-addText(oShape, oContent, "American Indians ", 110, true, "right")
-addText(oShape, oContent, "(XVII century)", 94, false, "right")
-oSlide.AddObject(oShape)
+shape = Api.CreateShape("rect", 6_904_800, 1_724_400, Api.CreateNoFill(), Api.CreateStroke(0, Api.CreateNoFill()));
+shape.SetPosition(1_764_000, 1_191_600);
+content = shape.GetDocContent();
+content.RemoveAllElements();
+addText(shape, content, "American Indians ", 110, true, "right");
+addText(shape, content, "(XVII century)", 94, false, "right");
+slide.AddObject(shape);
 
-oShape = Api.CreateShape("rect", 4_986_000, 2_419_200, Api.CreateNoFill(), Api.CreateStroke(0, Api.CreateNoFill()))
-oShape.SetPosition(3_834_000, 3_888_000)
-oContent = oShape.GetDocContent()
-oContent.RemoveAllElements()
-addText(oShape, oContent, "put a tomahawk on the ground in the ", 84, false, "right")
-addText(oShape, oContent, "rival's camp", 84, false, "right")
-oSlide.AddObject(oShape)
+shape = Api.CreateShape("rect", 4_986_000, 2_419_200, Api.CreateNoFill(), Api.CreateStroke(0, Api.CreateNoFill()));
+shape.SetPosition(3_834_000, 3_888_000);
+content = shape.GetDocContent();
+content.RemoveAllElements();
+addText(shape, content, "put a tomahawk on the ground in the ", 84, false, "right");
+addText(shape, content, "rival's camp", 84, false, "right");
+slide.AddObject(shape);
 
-oSlide = Api.CreateSlide()
-oPresentation.AddSlide(oSlide)
-oFill = Api.CreateBlipFill("https://static.onlyoffice.com/assets/docs/samples/img/presentation_knight.png", "stretch")
-oSlide.SetBackground(oFill)
-oSlide.RemoveAllObjects()
+slide = Api.CreateSlide();
+presentation.AddSlide(slide);
+fill = Api.CreateBlipFill("https://static.onlyoffice.com/assets/docs/samples/img/presentation_knight.png", "stretch");
+slide.SetBackground(fill);
+slide.RemoveAllObjects();
 
-oShape = Api.CreateShape("rect", 6_904_800, 1_724_400, Api.CreateNoFill(), Api.CreateStroke(0, Api.CreateNoFill()))
-oShape.SetPosition(1_764_000, 1_191_600)
-oContent = oShape.GetDocContent()
-oContent.RemoveAllElements()
-addText(oShape, oContent, "European Knights", 110, true, "right")
-addText(oShape, oContent, " (XII-XVI centuries)", 94, false, "right")
-oSlide.AddObject(oShape)
+shape = Api.CreateShape("rect", 6_904_800, 1_724_400, Api.CreateNoFill(), Api.CreateStroke(0, Api.CreateNoFill()));
+shape.SetPosition(1_764_000, 1_191_600);
+content = shape.GetDocContent();
+content.RemoveAllElements();
+addText(shape, content, "European Knights", 110, true, "right");
+addText(shape, content, " (XII-XVI centuries)", 94, false, "right");
+slide.AddObject(shape);
 
-oShape = Api.CreateShape("rect", 4_986_000, 2_419_200, Api.CreateNoFill(), Api.CreateStroke(0, Api.CreateNoFill()))
-oShape.SetPosition(3_834_000, 3_888_000)
-oContent = oShape.GetDocContent()
-oContent.RemoveAllElements()
-addText(oShape, oContent, "threw a glove", 84, false, "right")
-addText(oShape, oContent, "in the rival's face", 84, false, "right")
-oSlide.AddObject(oShape)
+shape = Api.CreateShape("rect", 4_986_000, 2_419_200, Api.CreateNoFill(), Api.CreateStroke(0, Api.CreateNoFill()));
+shape.SetPosition(3_834_000, 3_888_000);
+content = shape.GetDocContent();
+content.RemoveAllElements();
+addText(shape, content, "threw a glove", 84, false, "right");
+addText(shape, content, "in the rival's face", 84, false, "right");
+slide.AddObject(shape);
 
-oSlide = Api.CreateSlide()
-oPresentation.AddSlide(oSlide)
-oFill = Api.CreateBlipFill("https://static.onlyoffice.com/assets/docs/samples/img/presentation_sky.png", "stretch")
-oSlide.SetBackground(oFill)
-oSlide.RemoveAllObjects()
+slide = Api.CreateSlide();
+presentation.AddSlide(slide);
+fill = Api.CreateBlipFill("https://static.onlyoffice.com/assets/docs/samples/img/presentation_sky.png", "stretch");
+slide.SetBackground(fill);
+slide.RemoveAllObjects();
 
-oShape = Api.CreateShape("rect", 7_887_600, 3_063_600, Api.CreateNoFill(), Api.CreateStroke(0, Api.CreateNoFill()))
-oShape.SetPosition(630_000, 1_357_200)
-oContent = oShape.GetDocContent()
-oContent.RemoveAllElements()
-addText(oShape, oContent, "ONLYOFFICE", 176, false, "center")
-addText(oShape, oContent, "stands for Peace", 132, false, "center")
-oSlide.AddObject(oShape)
+shape = Api.CreateShape("rect", 7_887_600, 3_063_600, Api.CreateNoFill(), Api.CreateStroke(0, Api.CreateNoFill()));
+shape.SetPosition(630_000, 1_357_200);
+content = shape.GetDocContent();
+content.RemoveAllElements();
+addText(shape, content, "ONLYOFFICE", 176, false, "center");
+addText(shape, content, "stands for Peace", 132, false, "center");
+slide.AddObject(shape);
 ```

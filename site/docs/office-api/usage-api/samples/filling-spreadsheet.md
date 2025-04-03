@@ -10,23 +10,19 @@ This sample is available for the **C++ and .Net DocBuilder Frameworks**.
 Download the sample and get more information on the [Builder framework samples](../../../document-builder/builder-framework/builder-framework-samples/builder-framework-samples.md) page.
 
 ```ts document-builder={"documentType": "cell", "editorConfig": {"customization": {"zoom": 60}}}
-const oWorksheet = Api.GetActiveSheet()
-const sHeaders = ["ID", "Product", "Price", "Available"]
-const sData = [
+let worksheet = Api.GetActiveSheet();
+let headers = ["ID", "Product", "Price", "Available"];
+let data = [
   ["D51s15", "D83a01", "D14s09", "D60a12"],
   ["Soda", "Granola", "Donuts", "Cake"],
   [2.5, 12.1, 19.9, 48.1],
   ["true", "true", "false", "true"],
-]
+];
 
-let i = 0
-for (const header of sHeaders) {
-  oWorksheet.GetRangeByNumber(0, i).SetValue(header)
-  let j = 0
-  for (const data of sData[i]) {
-    oWorksheet.GetRangeByNumber(j + 1, i).SetValue(data)
-    j += 1
+for (let i = 0; i < headers.length; ++i) {
+  worksheet.GetRangeByNumber(0, i).SetValue(headers[i]);
+  for (let j = 0; j < data[i].length; ++j) {
+    worksheet.GetRangeByNumber(j + 1, i).SetValue(data[i][j]);
   }
-  i += 1
 }
 ```

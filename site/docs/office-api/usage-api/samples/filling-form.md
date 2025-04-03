@@ -9,9 +9,9 @@ This sample is available for the **C++ and .Net DocBuilder Frameworks**.
 Download the sample and get more information on the [Builder framework samples](../../../document-builder/builder-framework/builder-framework-samples/builder-framework-samples.md) page.
 
 ```ts document-builder={"document": {"url": "https://static.onlyoffice.com/assets/docs/samples/purchase_order.pdf"}, "documentType": "pdf", "editorConfig": {"customization": {"zoom": 60}}}
-const oDocument = Api.GetDocument()
+let doc = Api.GetDocument();
 
-const data = {
+let data = {
   "Photo": "https://static.onlyoffice.com/assets/docs/samples/img/onlyoffice_logo.png",
   "Serial": "A1345",
   "Company Name": "ONLYOFFICE",
@@ -23,17 +23,15 @@ const data = {
   "Description2": "Stack",
   "Qty3": "34",
   "Description3": "Shifter",
-}
+};
 
-const aForms = oDocument.GetAllForms()
-for (const form of aForms) {
+let forms = doc.GetAllForms();
+for (let form of forms) {
   if (form.GetFormType() === "textForm") {
-    form.SetText(data[form.GetFormKey()])
+    form.SetText(data[form.GetFormKey()]);
   }
   if (form.GetFormType() === "pictureForm") {
-    form.SetImage(data[form.GetFormKey()])
+    form.SetImage(data[form.GetFormKey()]);
   }
 }
-
-Api.Save()
 ```
