@@ -10,11 +10,10 @@ This sample is available for the **C++ and .Net DocBuilder Frameworks**.
 Download the sample and get more information on the [Builder framework samples](../../../document-builder/builder-framework/builder-framework-samples/builder-framework-samples.md) page.
 
 ```ts document-builder={"documentType": "pdf", "editorConfig": {"customization": {"zoom": 60}}}
-const oDocument = Api.GetDocument()
+let doc = Api.GetDocument();
 
-function addTextFormToParagraph(oParagraph, fontSize, key, placeholder,
-  maxCharacters, jc, comb, border) {
-  const oTextForm = Api.CreateTextForm({
+function addTextFormToParagraph(paragraph, fontSize, key, placeholder, maxCharacters, jc, comb, border) {
+  let textForm = Api.CreateTextForm({
     key,
     required: false,
     comb,
@@ -22,56 +21,58 @@ function addTextFormToParagraph(oParagraph, fontSize, key, placeholder,
     maxCharacters,
     multiLine: false,
     autoFit: true,
-  })
+  });
+  
   if (border) {
-    oTextForm.SetBorderColor(200, 200, 200)
+    textForm.SetBorderColor(200, 200, 200);
   }
-  oParagraph.AddElement(oTextForm)
-  oParagraph.SetFontSize(fontSize)
-  oParagraph.SetJc(jc)
+  
+  paragraph.AddElement(textForm);
+  paragraph.SetFontSize(fontSize);
+  paragraph.SetJc(jc);
 }
 
-function setBordres(oTable, color) {
-  oTable.SetTableBorderTop("single", 4, 0, color, color, color)
-  oTable.SetTableBorderBottom("single", 4, 0, color, color, color)
-  oTable.SetTableBorderLeft("single", 4, 0, color, color, color)
-  oTable.SetTableBorderRight("single", 4, 0, color, color, color)
-  oTable.SetTableBorderInsideV("single", 4, 0, color, color, color)
-  oTable.SetTableBorderInsideH("single", 4, 0, color, color, color)
+function setBorders(table, color) {
+  table.SetTableBorderTop("single", 4, 0, color, color, color);
+  table.SetTableBorderBottom("single", 4, 0, color, color, color);
+  table.SetTableBorderLeft("single", 4, 0, color, color, color);
+  table.SetTableBorderRight("single", 4, 0, color, color, color);
+  table.SetTableBorderInsideV("single", 4, 0, color, color, color);
+  table.SetTableBorderInsideH("single", 4, 0, color, color, color);
 }
 
-function addTextToParagraph(oParagraph, text, fontSize, isBold, jc) {
-  oParagraph.AddText(text)
-  oParagraph.SetFontSize(fontSize)
-  oParagraph.SetBold(isBold)
-  oParagraph.SetJc(jc)
+function addTextToParagraph(paragraph, text, fontSize, isBold, jc) {
+  paragraph.AddText(text);
+  paragraph.SetFontSize(fontSize);
+  paragraph.SetBold(isBold);
+  paragraph.SetJc(jc);
 }
 
-function getTableCellParagraph(oTable, row, col, width) {
-  const oCell = oTable.GetCell(row, col)
-  oCell.SetWidth("twips", width)
-  return oCell.GetContent().GetElement(0)
+function getTableCellParagraph(table, row, col, width) {
+  let cell = table.GetCell(row, col);
+  cell.SetWidth("twips", width);
+  return cell.GetContent().GetElement(0);
 }
 
 function createFullWidthTable(rows, cols, borderColor, marginTop) {
-  const oTable = Api.CreateTable(cols, rows)
-  oTable.SetWidth("percent", 100)
-  setBordres(oTable, borderColor)
-  oTable.SetTableCellMarginTop(marginTop)
-  return oTable
+  let table = Api.CreateTable(cols, rows);
+  table.SetWidth("percent", 100);
+  setBorders(table, borderColor);
+  table.SetTableCellMarginTop(marginTop);
+  return table;
 }
 
-let oTable = createFullWidthTable(1, 3, 255, 100)
-let oParagraph = getTableCellParagraph(oTable, 0, 0, 4320)
-addTextToParagraph(oParagraph, "PURCHASE ORDER", 36, true)
-oParagraph = getTableCellParagraph(oTable, 0, 1, 720)
-addTextToParagraph(oParagraph, "Serial #", 25, false, "right")
-oParagraph = getTableCellParagraph(oTable, 0, 2, 1440)
-addTextFormToParagraph(oParagraph, 25, "Serial", " ", 5, "left", true)
-oDocument.Push(oTable)
+let table = createFullWidthTable(1, 3, 255, 100);
+let paragraph = getTableCellParagraph(table, 0, 0, 4320);
+addTextToParagraph(paragraph, "PURCHASE ORDER", 36, true);
+paragraph = getTableCellParagraph(table, 0, 1, 720);
+addTextToParagraph(paragraph, "Serial #", 25, false, "right");
+paragraph = getTableCellParagraph(table, 0, 2, 1440);
+addTextFormToParagraph(paragraph, 25, "Serial", " ", 5, "left", true);
+doc.Push(table);
 
-oParagraph = Api.CreateParagraph()
-const oPictureForm = Api.CreatePictureForm({
+paragraph = Api.CreateParagraph();
+let pictureForm = Api.CreatePictureForm({
   key: "Photo",
   tip: "Upload Company Logo",
   required: false,
@@ -79,46 +80,42 @@ const oPictureForm = Api.CreatePictureForm({
   scaleFlag: "tooBig",
   lockAspectRatio: false,
   respectBorders: false,
-})
-oParagraph.AddElement(oPictureForm)
-oDocument.Push(oParagraph)
+});
+paragraph.AddElement(pictureForm);
+doc.Push(paragraph);
 
-oParagraph = Api.CreateParagraph()
-addTextFormToParagraph(oParagraph, 35, "Company Name", "Company Name", 50, "left")
-oDocument.Push(oParagraph)
+paragraph = Api.CreateParagraph();
+addTextFormToParagraph(paragraph, 35, "Company Name", "Company Name", 50, "left");
+doc.Push(paragraph);
 
-oParagraph = Api.CreateParagraph()
-addTextToParagraph(oParagraph, "Date: ", 25)
-addTextFormToParagraph(oParagraph, 35, "Date", "DD.MM.YYYY", 10, "left", true, true)
-oDocument.Push(oParagraph)
+paragraph = Api.CreateParagraph();
+addTextToParagraph(paragraph, "Date: ", 25);
+addTextFormToParagraph(paragraph, 35, "Date", "DD.MM.YYYY", 10, "left", true, true);
+doc.Push(paragraph);
 
-oParagraph = Api.CreateParagraph()
-addTextToParagraph(oParagraph, "To:", 35, true)
-oDocument.Push(oParagraph)
+paragraph = Api.CreateParagraph();
+addTextToParagraph(paragraph, "To:", 35, true);
+doc.Push(paragraph);
 
-oTable = createFullWidthTable(1, 1, 200, 100)
-oParagraph = getTableCellParagraph(oTable, 0, 0)
-addTextFormToParagraph(oParagraph, 30, "Recipient", "Recipient", 32, "left", true)
-oDocument.Push(oTable)
+table = createFullWidthTable(1, 1, 200, 100);
+paragraph = getTableCellParagraph(table, 0, 0);
+addTextFormToParagraph(paragraph, 30, "Recipient", "Recipient", 32, "left", true);
+doc.Push(table);
 
-oTable = createFullWidthTable(10, 2, 200, 100)
-oTable.GetRow(0).SetBackgroundColor(245, 245, 245, false)
-const oCell = oTable.GetCell(0, 0)
-oCell.SetWidth("percent", 30)
-oParagraph = getTableCellParagraph(oTable, 0, 0)
-addTextToParagraph(oParagraph, "Qty.", 30, true)
-oParagraph = getTableCellParagraph(oTable, 0, 1)
-addTextToParagraph(oParagraph, "Description", 30, true)
+table = createFullWidthTable(10, 2, 200, 100);
+table.GetRow(0).SetBackgroundColor(245, 245, 245, false);
+let cell = table.GetCell(0, 0);
+cell.SetWidth("percent", 30);
+paragraph = getTableCellParagraph(table, 0, 0);
+addTextToParagraph(paragraph, "Qty.", 30, true);
+paragraph = getTableCellParagraph(table, 0, 1);
+addTextToParagraph(paragraph, "Description", 30, true);
 
 for (let i = 1; i < 10; i += 1) {
-  oParagraph = getTableCellParagraph(oTable, i, 0)
-  addTextFormToParagraph(oParagraph, 30, `Qty${i}`, " ", 9, "left", true)
-  oParagraph = getTableCellParagraph(oTable, i, 1)
-  addTextFormToParagraph(oParagraph, 30, `Description${i}`, " ", 22, "left", true)
+  paragraph = getTableCellParagraph(table, i, 0);
+  addTextFormToParagraph(paragraph, 30, `Qty${i}`, " ", 9, "left", true);
+  paragraph = getTableCellParagraph(table, i, 1);
+  addTextFormToParagraph(paragraph, 30, `Description${i}`, " ", 22, "left", true);
 }
-oDocument.Push(oTable)
-oDocument.RemoveElement(0)
-oDocument.RemoveElement(1)
-
-Api.Save()
+doc.Push(table);
 ```

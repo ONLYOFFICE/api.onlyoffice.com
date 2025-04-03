@@ -9,13 +9,13 @@ This sample is available for the **C++ and .Net DocBuilder Frameworks**.
 Download the sample and get more information on the [Builder framework samples](../../../document-builder/builder-framework/builder-framework-samples/builder-framework-samples.md) page.
 
 ```ts document-builder={"documentType": "pdf", "editorConfig": {"customization": {"zoom": 60}}}
-const oDocument = Api.GetDocument()
-let oParagraph = oDocument.GetElement(0)
-const oHeadingStyle = oDocument.GetStyle("Heading 3")
-oParagraph.AddText("Employee pass card")
-oParagraph.SetStyle(oHeadingStyle)
+let doc = Api.GetDocument();
+let paragraph = doc.GetElement(0);
+let headingStyle = doc.GetStyle("Heading 3");
+paragraph.AddText("Employee pass card");
+paragraph.SetStyle(headingStyle);
 
-const oPictureForm = Api.CreatePictureForm({
+let pictureForm = Api.CreatePictureForm({
   key: "Photo",
   tip: "Upload your photo",
   required: false,
@@ -25,13 +25,13 @@ const oPictureForm = Api.CreatePictureForm({
   respectBorders: false,
   shiftX: 50,
   shiftY: 50,
-})
-oParagraph = Api.CreateParagraph()
-oParagraph.AddElement(oPictureForm)
-oDocument.Push(oParagraph)
+});
+paragraph = Api.CreateParagraph();
+paragraph.AddElement(pictureForm);
+doc.Push(paragraph);
 
-oParagraph = Api.CreateParagraph()
-const oTextForm = Api.CreateTextForm({
+paragraph = Api.CreateParagraph();
+let textForm = Api.CreateTextForm({
   key: "First name",
   tip: "Enter your first name",
   required: false,
@@ -41,9 +41,7 @@ const oTextForm = Api.CreateTextForm({
   cellWidth: 3,
   multiLine: false,
   autoFit: false,
-})
-oParagraph.AddElement(oTextForm)
-oDocument.Push(oParagraph)
-
-Api.Save()
+});
+paragraph.AddElement(textForm);
+doc.Push(paragraph);
 ```
