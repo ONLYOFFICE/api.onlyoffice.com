@@ -3,164 +3,132 @@ import type { SidebarsConfig } from "@docusaurus/plugin-content-docs";
 const sidebar: SidebarsConfig = {
   apisidebar: [
     {
+      type: "doc",
+      id: "docspace/api-backend/usage-api/api",
+    },
+    {
       type: "category",
       label: "Authentication",
-      collapsible: true,
-      collapsed: true,
       items: [
         {
           type: "doc",
-          id: "docspace/api-backend/usage-api/api",
+          id: "docspace/api-backend/usage-api/get-is-authentificated",
+          label: "Check authentication",
+          className: "api-method get",
         },
         {
-          type: "category",
-          label: "Authentication",
-          items: [
-            {
-              type: "doc",
-              id: "docspace/api-backend/usage-api/get-is-authentificated",
-              label: "Check authentication",
-              className: "api-method get",
-            },
-            {
-              type: "doc",
-              id: "docspace/api-backend/usage-api/authenticate-me",
-              label: "Authenticate a user",
-              className: "api-method post",
-            },
-            {
-              type: "doc",
-              id: "docspace/api-backend/usage-api/authenticate-me-from-body-with-code",
-              label: "Authenticate a user by code",
-              className: "api-method post",
-            },
-            {
-              type: "doc",
-              id: "docspace/api-backend/usage-api/logout",
-              label: "Log out",
-              className: "api-method post",
-            },
-            {
-              type: "doc",
-              id: "docspace/api-backend/usage-api/check-confirm",
-              label: "Open confirmation email URL",
-              className: "api-method post",
-            },
-            {
-              type: "doc",
-              id: "docspace/api-backend/usage-api/save-mobile-phone",
-              label: "Set a mobile phone",
-              className: "api-method post",
-            },
-            {
-              type: "doc",
-              id: "docspace/api-backend/usage-api/send-sms-code",
-              label: "Send SMS code",
-              className: "api-method post",
-            },
-          ],
+          type: "doc",
+          id: "docspace/api-backend/usage-api/authenticate-me",
+          label: "Authenticate a user",
+          className: "api-method post",
+        },
+        {
+          type: "doc",
+          id: "docspace/api-backend/usage-api/authenticate-me-from-body-with-code",
+          label: "Authenticate a user by code",
+          className: "api-method post",
+        },
+        {
+          type: "doc",
+          id: "docspace/api-backend/usage-api/logout",
+          label: "Log out",
+          className: "api-method post",
+        },
+        {
+          type: "doc",
+          id: "docspace/api-backend/usage-api/check-confirm",
+          label: "Open confirmation email URL",
+          className: "api-method post",
+        },
+        {
+          type: "doc",
+          id: "docspace/api-backend/usage-api/save-mobile-phone",
+          label: "Set a mobile phone",
+          className: "api-method post",
+        },
+        {
+          type: "doc",
+          id: "docspace/api-backend/usage-api/send-sms-code",
+          label: "Send SMS code",
+          className: "api-method post",
         },
       ],
     },
     {
       type: "category",
       label: "Backup",
-      collapsible: true,
-      collapsed: true,
       items: [
         {
           type: "doc",
-          id: "docspace/api-backend/usage-api/api",
+          id: "docspace/api-backend/usage-api/get-backup-schedule",
+          label: "Get the backup schedule",
+          className: "api-method get",
         },
         {
-          type: "category",
-          label: "Backup",
-          items: [
-            {
-              type: "doc",
-              id: "docspace/api-backend/usage-api/get-backup-schedule",
-              label: "Get the backup schedule",
-              className: "api-method get",
-            },
-            {
-              type: "doc",
-              id: "docspace/api-backend/usage-api/create-backup-schedule",
-              label: "Create the backup schedule",
-              className: "api-method post",
-            },
-            {
-              type: "doc",
-              id: "docspace/api-backend/usage-api/delete-backup-schedule",
-              label: "Delete the backup schedule",
-              className: "api-method delete",
-            },
-            {
-              type: "doc",
-              id: "docspace/api-backend/usage-api/start-backup",
-              label: "Start the backup",
-              className: "api-method post",
-            },
-            {
-              type: "doc",
-              id: "docspace/api-backend/usage-api/get-backup-progress",
-              label: "Get the backup progress",
-              className: "api-method get",
-            },
-            {
-              type: "doc",
-              id: "docspace/api-backend/usage-api/get-backup-history",
-              label: "Get the backup history",
-              className: "api-method get",
-            },
-            {
-              type: "doc",
-              id: "docspace/api-backend/usage-api/delete-backup",
-              label: "Delete the backup",
-              className: "api-method delete",
-            },
-            {
-              type: "doc",
-              id: "docspace/api-backend/usage-api/delete-backup-history",
-              label: "Delete the backup history",
-              className: "api-method delete",
-            },
-            {
-              type: "doc",
-              id: "docspace/api-backend/usage-api/start-backup-restore",
-              label: "Start the restoring process",
-              className: "api-method post",
-            },
-            {
-              type: "doc",
-              id: "docspace/api-backend/usage-api/get-restore-progress",
-              label: "Get the restoring progress",
-              className: "api-method get",
-            },
-          ],
+          type: "doc",
+          id: "docspace/api-backend/usage-api/create-backup-schedule",
+          label: "Create the backup schedule",
+          className: "api-method post",
+        },
+        {
+          type: "doc",
+          id: "docspace/api-backend/usage-api/delete-backup-schedule",
+          label: "Delete the backup schedule",
+          className: "api-method delete",
+        },
+        {
+          type: "doc",
+          id: "docspace/api-backend/usage-api/start-backup",
+          label: "Start the backup",
+          className: "api-method post",
+        },
+        {
+          type: "doc",
+          id: "docspace/api-backend/usage-api/get-backup-progress",
+          label: "Get the backup progress",
+          className: "api-method get",
+        },
+        {
+          type: "doc",
+          id: "docspace/api-backend/usage-api/get-backup-history",
+          label: "Get the backup history",
+          className: "api-method get",
+        },
+        {
+          type: "doc",
+          id: "docspace/api-backend/usage-api/delete-backup",
+          label: "Delete the backup",
+          className: "api-method delete",
+        },
+        {
+          type: "doc",
+          id: "docspace/api-backend/usage-api/delete-backup-history",
+          label: "Delete the backup history",
+          className: "api-method delete",
+        },
+        {
+          type: "doc",
+          id: "docspace/api-backend/usage-api/start-backup-restore",
+          label: "Start the restoring process",
+          className: "api-method post",
+        },
+        {
+          type: "doc",
+          id: "docspace/api-backend/usage-api/get-restore-progress",
+          label: "Get the restoring progress",
+          className: "api-method get",
         },
       ],
     },
     {
       type: "category",
       label: "Capabilities",
-      collapsible: true,
-      collapsed: true,
       items: [
         {
           type: "doc",
-          id: "docspace/api-backend/usage-api/api",
-        },
-        {
-          type: "category",
-          label: "Capabilities",
-          items: [
-            {
-              type: "doc",
-              id: "docspace/api-backend/usage-api/get-portal-capabilities",
-              label: "Get portal capabilities",
-              className: "api-method get",
-            },
-          ],
+          id: "docspace/api-backend/usage-api/get-portal-capabilities",
+          label: "Get portal capabilities",
+          className: "api-method get",
         },
       ],
     },
@@ -463,7 +431,8 @@ const sidebar: SidebarsConfig = {
             {
               type: "doc",
               id: "docspace/api-backend/usage-api/set-file-order",
-              label: "Sets file order in the folder with ID specified in the request",
+              label:
+                "Sets file order in the folder with ID specified in the request",
               className: "api-method put",
             },
             {
