@@ -232,7 +232,10 @@ async function initCodeEditorType()
                 "name": "Developer"
             },
             "customization": {
-                "uiTheme": (theme.type === "dark") ? "default-dark" : "default-light"
+                "uiTheme": (theme.type === "dark") ? "default-dark" : "default-light",
+                "features": {
+                    "featuresTips": false
+                }
             },
             "lang": Environment.lang
         },
