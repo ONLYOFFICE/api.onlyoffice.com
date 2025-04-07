@@ -1,13 +1,19 @@
 import type {SidebarsConfig} from '@docusaurus/plugin-content-docs';
 
-const filterOpenApiSidebarItems = (item: any) => {
+const filterOpenApiSidebarItems = (item) => {
   // Remove Introduction items
   if (item.type === 'doc' && !item.className) {
     return false;
   }
 
   if (item.type === 'category' && item.items) {
-    item.items = item.items.filter(filterOpenApiSidebarItems);
+    // Change items with only one item
+    if (item.items.length === 2 && item.items[0].type === 'doc' && !item.items[0].className &&
+      item.items[1].type === 'category' && item.items[1].label === item.label) {
+      item.items = item.items[1].items;
+    } else {
+      item.items = item.items.filter(filterOpenApiSidebarItems);
+    }
   }
 
   return true;
