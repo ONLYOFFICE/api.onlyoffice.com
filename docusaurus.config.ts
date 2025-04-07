@@ -104,6 +104,13 @@ const config: Config = {
           } satisfies OpenApiPlugin.Options,
         } satisfies Plugin.PluginOptions,
       },
+    ],
+    [
+      '@docusaurus/plugin-google-gtag',
+      {
+        trackingID: 'GTM-5NW47TX',
+        anonymizeIP: true
+      },
     ]
   ],
 
