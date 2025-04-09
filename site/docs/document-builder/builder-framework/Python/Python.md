@@ -26,8 +26,6 @@ The current application version contains four main classes:
     <TabItem value="python" label="Python">
         ``` py
         import os
-        import sys
-        sys.path.append("C:/Program Files/ONLYOFFICE/documentBuilder")
         import docbuilder
 
         builder = docbuilder.CDocBuilder()
