@@ -5,7 +5,7 @@ sidebar_position: 0
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# Users CRUD
+# Users Management
 
 This example demonstrates how to manage user accounts in ONLYOFFICE DocSpace using the API. It covers creating, retrieving, updating, terminating, and deleting users, following a structured administrative workflow.
 
@@ -87,20 +87,20 @@ The script performs the following operations in sequence:
     
             # Step 4: Delete user profile
             delete_user(user_id)
-      ```
+    ```
   </TabItem>
 </Tabs>
 
 ## Before you start
 
-1.	Replace `https://yourportal.onlyoffice.com` and `YOUR_API_KEY` with your actual DocSpace portal URL and API key. Ensure you have the necessary data and permissions to perform migration operations.
-2.	Before you can make requests to the API, you need to authenticate. Check out the authentication example to learn how to obtain and use access tokens.
+1.	Replace `https://yourportal.onlyoffice.com` and `YOUR_API_KEY` with your actual DocSpace portal URL and API key. Ensure you have the necessary permissions to perform user operations.
+2.	Before you can make requests to the API, you need to authenticate. Check out the [`authentication example`](../../../../docspace/api-backend/get-started/samples/authentication.md) to learn how to obtain and use access tokens.
 
 ## Step 1: Add a User
 Use a [`POST /api/2.0/people`](../../../../docspace/api-backend/usage-api/delete-batch-items.api.mdx) request to add a user.
 <Tabs>
   <TabItem value="py" label="Python">
-``` py
+    ``` py
     def create_user(first_name, last_name, email):
         url = f'{BASE_URL}/api/2.0/people'
         data = {
@@ -121,7 +121,7 @@ Use a [`POST /api/2.0/people`](../../../../docspace/api-backend/usage-api/delete
 Use a [`GET /api/2.0/people/{userid}`](../../../../docspace/api-backend/usage-api/get-by-id.api.mdx) request to fetch user data.
 <Tabs>
   <TabItem value="py" label="Python">
-``` py
+    ``` py
     def get_user(user_id):
         url = f'{BASE_URL}/api/2.0/people/{user_id}'
         response = requests.get(url, headers=HEADERS)
@@ -138,7 +138,7 @@ Use a [`GET /api/2.0/people/{userid}`](../../../../docspace/api-backend/usage-ap
 Use a [`PUT /api/2.0/people/status/Terminated`](../../../../docspace/api-backend/usage-api/update-user-status.api.mdx) request to mark the user as terminated, meaning they cannot log in but are still present in the system.
 <Tabs>
   <TabItem value="py" label="Python">
-``` py
+    ``` py
     def terminate_user(user_id):
         url = f'{BASE_URL}/api/2.0/people/status/Terminated'
         data = {'userIds': [user_id], 'resendAll': False}
@@ -155,7 +155,7 @@ Use a [`PUT /api/2.0/people/status/Terminated`](../../../../docspace/api-backend
 Use a [`DELETE /api/2.0/people/{userid}`](../../../../docspace/api-backend/usage-api/delete-member.api.mdx) request to remove a user permanently.
 <Tabs>
   <TabItem value="py" label="Python">
-``` py
+    ``` py
     def delete_user(user_id):
         url = f'{BASE_URL}/api/2.0/people/{user_id}'
         response = requests.delete(url, headers=HEADERS)
@@ -163,6 +163,6 @@ Use a [`DELETE /api/2.0/people/{userid}`](../../../../docspace/api-backend/usage
             print(f'User {user_id} deleted successfully')
         else:
             print('Failed to delete user:', response.status_code, response.text)
-```
+    ```
   </TabItem>
 </Tabs>
