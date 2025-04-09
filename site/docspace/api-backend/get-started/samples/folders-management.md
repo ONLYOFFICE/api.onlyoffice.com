@@ -73,7 +73,7 @@ This example demonstrates how to:
 ## Before you start
 
 1.	Replace `https://yourportal.onlyoffice.com` and `YOUR_API_KEY` with your actual DocSpace portal URL and API key. Ensure you have the necessary data and permissions to perform migration operations.
-2.	Before you can make requests to the API, you need to authenticate. Check out the authentication example to learn how to obtain and use access tokens.
+2.	Before you can make requests to the API, you need to authenticate. Check out the [`authentication example`](../../../../docspace/api-backend/get-started/samples/authentication.md) to learn how to obtain and use access tokens.
 
 ## Step 1: Create a Folder
 Use [`POST /api/2.0/files/folder/{folderId}`](../../../../docspace/api-backend/usage-api/create-folder.api.mdx) request to create a new folder.
