@@ -82,7 +82,7 @@ def main():
 
 ## Before you start
 
-1.	Replace 'https://yourportal.onlyoffice.com' and 'YOUR_API_KEY' with your actual DocSpace portal URL and API key. Ensure you have the necessary data and permissions to perform migration operations.
+1.	Replace `https://yourportal.onlyoffice.com` and `YOUR_API_KEY` with your actual DocSpace portal URL and API key. Ensure you have the necessary data and permissions to perform migration operations.
 2.	Before you can make requests to the API, you need to authenticate. Check out the authentication example to learn how to obtain and use access tokens.
 
 ## Step 1: Create an Empty File
