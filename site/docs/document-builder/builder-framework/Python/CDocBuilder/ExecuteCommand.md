@@ -31,7 +31,7 @@ def ExecuteCommand(self, str command, CDocBuilderValue | None retValue = None);
         builder = docbuilder.CDocBuilder()
         builder.CreateFile("docx")
 
-        builder.ExecuteCommand("var oDocument = Api.GetDocument();var oParagraph = oDocument.GetElement(0);oParagraph.AddText(\"Hello from Python!\");");
+        builder.ExecuteCommand("var oDocument = Api.GetDocument();var oParagraph = oDocument.GetElement(0);oParagraph.AddText('Hello from Python!');");
 
         dstPath = os.getcwd() + "/result.docx"
         builder.SaveFile("docx", dstPath)
