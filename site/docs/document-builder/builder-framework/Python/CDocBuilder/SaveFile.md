@@ -63,7 +63,6 @@ ONLYOFFICE Document Builder allows to save your document files into image files 
 
         document = api.Call("GetDocument")
         paragraph = api.Call("CreateParagraph")
-        paragraph.Call("SetSpacingAfter", 1000, False)
         paragraph.Call("AddText", "Hello, World!")
         content = context.CreateArray(1)
         content[0] = paragraph
