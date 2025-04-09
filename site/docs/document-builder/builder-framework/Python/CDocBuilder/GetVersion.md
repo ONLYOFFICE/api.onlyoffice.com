@@ -15,6 +15,8 @@ def GetVersion(self);
 ### Python
 
 ``` py
+import docbuilder
+
 builder = docbuilder.CDocBuilder()
 version = builder.GetVersion()
 ```

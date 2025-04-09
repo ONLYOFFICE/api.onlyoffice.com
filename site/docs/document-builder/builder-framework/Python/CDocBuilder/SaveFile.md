@@ -52,7 +52,26 @@ ONLYOFFICE Document Builder allows to save your document files into image files 
 <Tabs>
     <TabItem value="python" label="Python">
         ``` py
-        builder.SaveFile(OFFICESTUDIO_FILE_IMAGE, L"thumbnail.png", "<m_oThumbnail><format>4</format><aspect>1</aspect><first>false</first><width>1000</width><height>1000</height></m_oThumbnail>")
+        import os
+        import docbuilder
+        builder = docbuilder.CDocBuilder()
+        builder.CreateFile("docx")
+
+        context = builder.GetContext()
+        globalObj = context.GetGlobal()
+        api = globalObj["Api"]
+
+        document = api.Call("GetDocument")
+        paragraph = api.Call("CreateParagraph")
+        paragraph.Call("SetSpacingAfter", 1000, False)
+        paragraph.Call("AddText", "Hello, World!")
+        content = context.CreateArray(1)
+        content[0] = paragraph
+        document.Call("InsertContent", content)
+
+        dstPath = os.getcwd() + "/result.docx"
+        builder.SaveFile(docbuilder.FileTypes.Graphics.PNG, "images.zip", "<m_oThumbnail><format>4</format><aspect>1</aspect><first>false</first><width>1000</width><height>1000</height></m_oThumbnail>")
+builder.CloseFile()
         ```
     </TabItem>
     <TabItem value="builder" label=".docbuilder">

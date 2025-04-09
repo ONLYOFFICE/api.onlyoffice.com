@@ -29,15 +29,12 @@ The current application version contains four main classes:
         import docbuilder
 
         builder = docbuilder.CDocBuilder()
-
         builder.CreateFile("docx")
 
         context = builder.GetContext()
-        scope = context.CreateScope()
-
         globalObj = context.GetGlobal()
-
         api = globalObj["Api"]
+
         document = api.Call("GetDocument")
         paragraph = api.Call("CreateParagraph")
         paragraph.Call("SetSpacingAfter", 1000, False)

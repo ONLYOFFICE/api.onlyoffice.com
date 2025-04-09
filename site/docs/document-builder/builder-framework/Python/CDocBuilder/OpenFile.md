@@ -23,6 +23,8 @@ def OpenFile(self, str path, str | None params);
 <Tabs>
     <TabItem value="python" label="Python">
         ``` py
+        import docbuilder
+
         builder = docbuilder.CDocBuilder()
         builder.OpenFile(L"text-document.csv", "<m_nCsvTxtEncoding>46</m_nCsvTxtEncoding><m_nCsvDelimiter>4</m_nCsvDelimiter>")
         ```
