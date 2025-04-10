@@ -10,7 +10,7 @@ import TabItem from '@theme/TabItem';
 This example demonstrates how to create and retrieve user contacts in ONLYOFFICE DocSpace using API requests. Managing user contacts is crucial for maintaining accurate and up-to-date communication details within the system.
 
 The script is divided into two key steps: create or update contacts and retrieve contacts:
-- Create or Update Contacts – Adds new contact details such as email and phone number.
+- Create or Update Contacts – Adds new contact details such as a phone number.
 - Print Contacts – Fetches stored contacts for a specific user.
 
 <Tabs>
