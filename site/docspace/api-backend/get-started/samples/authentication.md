@@ -1,17 +1,11 @@
----
-sidebar_position: 0
----
-
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
 # Authenticate a user
-
 This example demonstrates how to authenticate a user in ONLYOFFICE DocSpace using the API.
-
 The script performs the following operations in sequence:
-- Authenticate a User – Uses `userName` and `password` to generate an access token.
-- Check authentication – Checks authentication with a token received.
+- Authenticate a User - Uses `userName` and `password` to generate an access token.
+- Check authentication - Checks authentication with a token received.
 
 <Tabs>
   <TabItem value="py" label="Python">
@@ -57,11 +51,11 @@ The script performs the following operations in sequence:
 </Tabs>
 
 ## Before you start
-
 Replace `https://yourportal.onlyoffice.com` with your actual DocSpace portal URL, replace `USER_CREDENTIALS` with your credentials.
 
 ## Step 1: Authenticate a User
 Use a [`POST /api/2.0/authentication`](../../../../docspace/api-backend/usage-api/authenticate-me.api.mdx) request to authenticate with `USER_CREDENTIALS`.
+
 <Tabs>
   <TabItem value="py" label="Python">
     ``` py
@@ -78,6 +72,7 @@ Use a [`POST /api/2.0/authentication`](../../../../docspace/api-backend/usage-ap
 
 ## Step 2: Check authentication
 Use a [`GET /api/2.0/authentication`](../../../../docspace/api-backend/usage-api/get-is-authentificated.api.mdx) request to check authentication success.
+
 <Tabs>
   <TabItem value="py" label="Python">
     ``` py

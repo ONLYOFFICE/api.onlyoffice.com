@@ -1,17 +1,11 @@
----
-sidebar_position: 0
----
-
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
 # Manage User Contacts
-
 This example demonstrates how to create and retrieve user contacts in ONLYOFFICE DocSpace using API requests. Managing user contacts is crucial for maintaining accurate and up-to-date communication details within the system.
-
 The script is divided into two key steps: create or update contacts and retrieve contacts:
-- Create or Update Contacts – Adds new contact details such as a phone number.
-- Print Contacts – Fetches stored contacts for a specific user.
+- Create or Update Contacts - Adds new contact details such as a phone number.
+- Print Contacts - Fetches stored contacts for a specific user.
 
 <Tabs>
   <TabItem value="py" label="Python">
@@ -66,12 +60,12 @@ The script is divided into two key steps: create or update contacts and retrieve
 </Tabs>
 
 ## Before you start
-
 1.	Replace `https://yourportal.onlyoffice.com` and `YOUR_API_KEY` with your actual DocSpace portal URL and API key. Ensure you have the necessary permissions to perform user operations.
 2.	Before you can make requests to the API, you need to authenticate. Check out the [`authentication example`](../../../../docspace/api-backend/get-started/samples/authentication.md) to learn how to obtain and use access tokens.
 
 ## Step 1: Create or Update Contacts
 Use a [`PUT /api/2.0/people/{userid}/contacts`](../../../../docspace/api-backend/usage-api/update-member-contacts.api.mdx) request to update user contacts.
+
 <Tabs>
   <TabItem value="py" label="Python">
     ``` py
@@ -89,6 +83,7 @@ Use a [`PUT /api/2.0/people/{userid}/contacts`](../../../../docspace/api-backend
 
 ## Step 2: Retrieve a User by ID and Print Contacts 
 Use a [`GET /api/2.0/people/{userid}`](../../../../docspace/api-backend/usage-api/get-by-id.api.mdx) request to fetch user data and print contacts.
+
 <Tabs>
   <TabItem value="py" label="Python">
     ``` py

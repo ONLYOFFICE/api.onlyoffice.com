@@ -1,7 +1,3 @@
----
-sidebar_position: 0
----
-
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
@@ -86,12 +82,12 @@ This example demonstrates how to:
 </Tabs>
 
 ## Before you start
-
 1.	Replace `https://yourportal.onlyoffice.com` and `YOUR_API_KEY` with your actual DocSpace portal URL and API key. Ensure you have the necessary data and permissions to perform migration operations.
 2.	Before you can make requests to the API, you need to authenticate. Check out the [`authentication example`](../../../../docspace/api-backend/get-started/samples/authentication.md) to learn how to obtain and use access tokens.
 
 ## Step 1: Create an Empty File
 Use [`POST /api/2.0/files/{folderId}/file`](../../../../docspace/api-backend/usage-api/create-file.api.mdx) request to create an empty file in a specific folder.
+
 <Tabs>
   <TabItem value="py" label="Python">
     ``` py
@@ -107,6 +103,7 @@ Use [`POST /api/2.0/files/{folderId}/file`](../../../../docspace/api-backend/usa
 
 ## Step 2: Upload a File
 Use [`POST /api/2.0/files/{folderId}/upload`](../../../../docspace/api-backend/usage-api/upload-file.api.mdx) request to upload a file to a folder.
+
 <Tabs>
   <TabItem value="py" label="Python">
     ``` py
@@ -130,6 +127,7 @@ Use [`POST /api/2.0/files/{folderId}/upload`](../../../../docspace/api-backend/u
 
 ## Step 3: Update an Existing File
 Use [`PUT /api/2.0/files/file/{fileId}`](../../../../docspace/api-backend/usage-api/update-file.api.mdx) request to update an existing file.
+
 <Tabs>
   <TabItem value="py" label="Python">
     ``` py
@@ -143,6 +141,7 @@ Use [`PUT /api/2.0/files/file/{fileId}`](../../../../docspace/api-backend/usage-
 
 ## Step 4: Delete a File
 Use [`DELETE /api/2.0/files/file/{fileId}`](../../../../docspace/api-backend/usage-api/delete-file.api.mdx) request to remove a file.
+
 <Tabs>
   <TabItem value="py" label="Python">
     ``` py
