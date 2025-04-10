@@ -15,25 +15,29 @@ import Heading from '@theme/Heading';
 const Playgrounds = [
   {
     name: 'Text document API',
-    image: require('@site/static/assets/images/editor/word-playground.png').default,
+    image: require('@site/static/assets/images/editor/word-playground.png').default + '#gh-light-mode-only',
+    imageDark: require('@site/static/assets/images/editor/word-playground.dark.png').default + '#gh-dark-mode-only',
     url: 'pathname:///playground/playground.html?editor=word',
     description: 'Engage with the text document editor to create and manipulate text files.',
   },
   {
     name: 'Spreadsheet API',
-    image: require('@site/static/assets/images/editor/cell-playground.png').default,
+    image: require('@site/static/assets/images/editor/cell-playground.png').default + '#gh-light-mode-only',
+    imageDark: require('@site/static/assets/images/editor/cell-playground.dark.png').default + '#gh-dark-mode-only',
     url: 'pathname:///playground/playground.html?editor=cell',
     description: 'Access the spreadsheet editor for data analysis and management tasks.',
   },
   {
     name: 'Presentation API',
-    image: require('@site/static/assets/images/editor/slide-playground.png').default,
+    image: require('@site/static/assets/images/editor/slide-playground.png').default + '#gh-light-mode-only',
+    imageDark: require('@site/static/assets/images/editor/slide-playground.dark.png').default + '#gh-dark-mode-only',
     url: 'pathname:///playground/playground.html?editor=slide',
     description: 'Use the presentation editor to design and present slideshows.',
   },
   {
     name: 'Form API',
-    image: require('@site/static/assets/images/editor/form-playground.png').default,
+    image: require('@site/static/assets/images/editor/form-playground.png').default + '#gh-light-mode-only',
+    imageDark: require('@site/static/assets/images/editor/form-playground.dark.png').default + '#gh-dark-mode-only',
     url: 'pathname:///playground/playground.html?editor=form',
     description: 'Interact with the form editor to create and manage forms.',
   },
@@ -42,17 +46,18 @@ const Playgrounds = [
 interface Props {
   name: string;
   image: string;
+  imageDark: string;
   url: string;
   description: string;
 }
 
-function PlaygroundCard({name, image, url, description}: Props) {
+function PlaygroundCard({name, image, imageDark, url, description}: Props) {
   return (
     <div className="col col--6 margin-bottom--lg">
       <div className={clsx('card')}>
         <div className={clsx('card__image')}>
           <Link to={url}>
-            <img src={image} alt={name} />
+            <img src={image} alt={name} /><img src={imageDark} alt={name} />
           </Link>
         </div>
         <div className="card__body">
