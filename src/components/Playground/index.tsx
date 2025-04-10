@@ -59,11 +59,20 @@ function PlaygroundCard({name, image, imageDark, url, description}: Props) {
   const documentServer = customFields.documentServer as string;
   const documentServerSecret = customFields.documentServerSecret as string;
 
+  const handleClick = (e: React.MouseEvent) => {
+    if (window===undefined) return;
+
+    e.preventDefault();
+    const fullUrl = new URL(e.currentTarget.getAttribute('href'), window.location.origin).href + `&documentServer=${documentServer}&documentServerSecret=${documentServerSecret}`;
+    window.open(fullUrl, '_blank');
+  };
+
   return (
     <div className="col col--6 margin-bottom--lg">
       <div className={clsx('card')}>
         <div className={clsx('card__image')}>
-          <Link to={`${url}&documentServer=${documentServer}&documentServerSecret=${documentServerSecret}`}>
+          <Link to={typeof window !== 'undefined' ? url : `${url}&documentServer=${documentServer}&documentServerSecret=${documentServerSecret}`}
+                onClick={handleClick}>
             <img src={image} alt={name} /><img src={imageDark} alt={name} />
           </Link>
         </div>
@@ -73,7 +82,8 @@ function PlaygroundCard({name, image, imageDark, url, description}: Props) {
         </div>
         <div className="card__footer">
           <div className="button-group button-group--block">
-            <Link className="button button--secondary" to={`${url}&documentServer=${documentServer}&documentServerSecret=${documentServerSecret}`}>
+            <Link className="button button--secondary" to={typeof window !== 'undefined' ? url : `${url}&documentServer=${documentServer}&documentServerSecret=${documentServerSecret}`}
+                  onClick={handleClick}>
               Try it now
             </Link>
           </div>
