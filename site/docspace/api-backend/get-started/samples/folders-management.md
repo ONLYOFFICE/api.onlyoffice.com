@@ -17,14 +17,17 @@ This example demonstrates how to:
     ``` py
     import requests
 
+    # Set API base URL
     BASE_URL = 'https://yourportal.onlyoffice.com'
     API_KEY = 'YOUR_API_KEY'
 
+    # Headers with API key for authentication
     HEADERS = {
         'Authorization': f'Bearer {API_KEY}',
         'Content-Type': 'application/json'
     }
 
+    # Step 1: Create a Folder
     def create_folder(parent_folder_id, folder_name):
         url = f'{BASE_URL}/api/2.0/files/folder/{parent_folder_id}'
         data = {
@@ -33,10 +36,12 @@ This example demonstrates how to:
 
         requests.post(url, headers=HEADERS, json=data)
 
+    # Step 2: Retrieve Folder Details
     def get_folder_details(folder_id):
         url = f'{BASE_URL}/api/2.0/files/folder/{folder_id}'
         requests.get(url, headers=headers)
 
+    # Step 3: Rename a Folder
     def rename_folder(folder_id, new_name):
         url = f'{BASE_URL}/api/2.0/files/folder/{folder_id}/rename'
         data = {
@@ -45,6 +50,7 @@ This example demonstrates how to:
 
         requests.put(url, headers=headers, json=data)
 
+    # Step 4: Delete a Folder
     def delete_folder(folder_id):
         url = f'{BASE_URL}/api/2.0/files/folder/{folder_id}'
         requests.delete(url, headers=headers)

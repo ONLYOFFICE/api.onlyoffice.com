@@ -16,15 +16,17 @@ This example demonstrates how to:
   <TabItem value="py" label="Python">
     ``` py
     import requests
-
+    # Set API base URL
     BASE_URL = 'https://yourportal.onlyoffice.com'
     API_KEY = 'YOUR_API_KEY'
 
+    # Headers with API key for authentication
     HEADERS = {
         'Authorization': f'Bearer {API_KEY}',
         'Content-Type': 'application/json'
     }
 
+    # Step 1: Create an Empty File
     def create_file(folder_id, file_name):
         url = f'{BASE_URL}/api/2.0/files/{folder_id}/file'
         data = {
@@ -32,6 +34,7 @@ This example demonstrates how to:
         }
         requests.post(url, headers=HEADERS, json=data)
 
+    # Step 2: Upload a File
     def upload_file(folder_id, file_path):
         url = f'{BASE_URL}/api/2.0/files/{folder_id}/upload'
         headers = {
@@ -46,11 +49,13 @@ This example demonstrates how to:
             print(response.status_code, response.text)
             return response
 
+    # Step 3: Update an Existing File
     def update_file(file_id, new_file_path):
         url = f'{BASE_URL}/api/2.0/files/file/{file_id}'
         files = {'file': open(new_file_path, 'rb')}
         requests.put(url, headers=headers, files=files)
 
+    # Step 4: Delete a File
     def delete_file(file_id):
         url = f'{BASE_URL}.api/2.0/files/file/{file_id}'
         data = {
@@ -137,7 +142,7 @@ Use [`PUT /api/2.0/files/file/{fileId}`](../../../../docspace/api-backend/usage-
 </Tabs>
 
 ## Step 4: Delete a File
-Use Use [`DELETE /api/2.0/files/file/{fileId}`](../../../../docspace/api-backend/usage-api/delete-file.api.mdx) request to remove a file.
+Use [`DELETE /api/2.0/files/file/{fileId}`](../../../../docspace/api-backend/usage-api/delete-file.api.mdx) request to remove a file.
 <Tabs>
   <TabItem value="py" label="Python">
     ``` py
