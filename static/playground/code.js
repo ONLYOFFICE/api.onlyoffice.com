@@ -104,6 +104,36 @@ var Placeholders = {
     },
 };
 
+const urlParams = function getUrlParams() {
+    let e,
+        a = /\+/g,  // Regex for replacing addition symbol with a space
+        r = /([^&=]+)=?([^&]*)/g,
+        d = function (s) { return decodeURIComponent(s.replace(a, " ")); },
+        q = window.location.search.substring(1),
+        params = {};
+
+    while (e = r.exec(q))
+        params[d(e[1])] = d(e[2]);
+
+    return params;
+}();
+window.history.replaceState(null, '', window.location.pathname);
+
+function addApiScript() {
+    const apiUrl = urlParams['documentServer'] + ('web-apps/apps/api/documents/api.js');
+
+    const scriptApi = document.createElement("script");
+    scriptApi.type = "text/javascript";
+    scriptApi.src = apiUrl;
+    scriptApi.onerror = () => {
+        console.error("Failed to load OnlyOffice API script.");
+    };
+    scriptApi.onload = () => {
+        initCodeEditorType();
+    };
+
+    document.body.appendChild(scriptApi);
+}
 function Environment_Load()
 {
     let obj = {};
@@ -123,8 +153,7 @@ function Environment_Load()
     catch (e)
     {
     }
-    let params = getUrlParams(),
-        editor = params["editor"];
+    let editor = urlParams["editor"];
     editor && (Environment.editor = editor);
 
 }
@@ -147,20 +176,6 @@ function getFullUrl(localUrl) {
     let url = location.href;
     url = url.substring(0, url.lastIndexOf("/"));
     return url + localUrl;
-}
-
-function getUrlParams() {
-    var e,
-        a = /\+/g,  // Regex for replacing addition symbol with a space
-        r = /([^&=]+)=?([^&]*)/g,
-        d = function (s) { return decodeURIComponent(s.replace(a, " ")); },
-        q = window.location.search.substring(1),
-        urlParams = {};
-
-    while (e = r.exec(q))
-        urlParams[d(e[1])] = d(e[2]);
-
-    return urlParams;
 }
 
 async function createJWT(json, secret) {
@@ -216,7 +231,7 @@ async function initCodeEditorType()
     }
 
     // JWT
-    let secret = "doc-linux";
+    let secret = urlParams['documentServerSecret'];
     let config = {
         "document": {
             "fileType": ext,
@@ -244,7 +259,7 @@ async function initCodeEditorType()
     };
 
     if (secret) {
-        config.token = await createJWT(config, "doc-linux");        
+        config.token = await createJWT(config, secret);
     }
 
     config.events = {
@@ -383,6 +398,6 @@ codeEditor.create("codeWrapper", theme.type === "light" ? "vs-light" : "vs-dark"
 /**
  * OPEN FILE
  */
+addApiScript();
 initCodeText();
-initCodeEditorType();
 onTheme();

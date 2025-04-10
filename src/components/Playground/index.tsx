@@ -11,6 +11,7 @@ import React, {type ReactNode} from 'react';
 import clsx from 'clsx';
 import Link from '@docusaurus/Link';
 import Heading from '@theme/Heading';
+import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 
 const Playgrounds = [
   {
@@ -52,11 +53,17 @@ interface Props {
 }
 
 function PlaygroundCard({name, image, imageDark, url, description}: Props) {
+  const {
+    siteConfig: {customFields},
+  } = useDocusaurusContext();
+  const documentServer = customFields.documentServer as string;
+  const documentServerSecret = customFields.documentServerSecret as string;
+
   return (
     <div className="col col--6 margin-bottom--lg">
       <div className={clsx('card')}>
         <div className={clsx('card__image')}>
-          <Link to={url}>
+          <Link to={`${url}&documentServer=${documentServer}&documentServerSecret=${documentServerSecret}`}>
             <img src={image} alt={name} /><img src={imageDark} alt={name} />
           </Link>
         </div>
@@ -66,7 +73,7 @@ function PlaygroundCard({name, image, imageDark, url, description}: Props) {
         </div>
         <div className="card__footer">
           <div className="button-group button-group--block">
-            <Link className="button button--secondary" to={url}>
+            <Link className="button button--secondary" to={`${url}&documentServer=${documentServer}&documentServerSecret=${documentServerSecret}`}>
               Try it now
             </Link>
           </div>
