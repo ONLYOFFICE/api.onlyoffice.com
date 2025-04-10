@@ -7,12 +7,11 @@ import TabItem from '@theme/TabItem';
 
 # Users Management
 
-This example demonstrates how to manage user accounts in ONLYOFFICE DocSpace using the API. It covers creating, retrieving, updating, terminating, and deleting users, following a structured administrative workflow.
+This example demonstrates how to manage user accounts in ONLYOFFICE DocSpace using the API. It covers creating, retrieving, terminating, and deleting users, following a structured administrative workflow.
 
 The script performs the following operations in sequence:
 - Create a User – Adds a new user with a first name, last name, and email.
 - Retrieve a User – Fetches user details using their unique ID.
-- Update a User – Modifies the user's name.
 - Terminate a User – Marks a user as terminated without deleting them.
 - Delete a User – Permanently removes the user from the system.
 
@@ -113,7 +112,7 @@ Use a [`POST /api/2.0/people`](../../../../docspace/api-backend/usage-api/delete
             return response.json()['response']['id']
         else:
             return None
-```
+    ```
   </TabItem>
 </Tabs>
 
@@ -129,7 +128,7 @@ Use a [`GET /api/2.0/people/{userid}`](../../../../docspace/api-backend/usage-ap
             return response.json()
         else:
             return None
-```
+    ```
   </TabItem>
 </Tabs>
 
@@ -147,7 +146,7 @@ Use a [`PUT /api/2.0/people/status/Terminated`](../../../../docspace/api-backend
             print(f'User {user_id} terminated successfully')
         else:
             print('Failed to terminate user:', response.status_code, response.text)
-```
+    ```
   </TabItem>
 </Tabs>
 

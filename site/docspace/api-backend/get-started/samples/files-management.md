@@ -119,7 +119,7 @@ Use [`POST /api/2.0/files/{folderId}/upload`](../../../../docspace/api-backend/u
 
             print(response.status_code, response.text)
             return response
-        ```
+    ```
   </TabItem>
 </Tabs>
 
