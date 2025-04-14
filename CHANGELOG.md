@@ -1,5 +1,25 @@
 # Change log
 
+## 4.6.0
+
+### New features
+
+#### Docs API
+
+* Updated Document Builder section
+* Added Playground page for testing the capabilities of the Docs APIs
+ 
+#### Docspace
+
+* Updated Docspace openAPI docs
+
+### Fixes
+
+#### Docs
+
+* Updated conversion tables
+* Fixed Office API examples
+
 ## 4.5.1
 
 ### New features
