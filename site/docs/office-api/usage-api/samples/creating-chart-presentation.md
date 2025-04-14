@@ -11,56 +11,56 @@ This sample is available for the **C++ and .Net DocBuilder Frameworks**.
 Download the sample and get more information on the [Builder framework samples](../../../document-builder/builder-framework/builder-framework-samples/builder-framework-samples.md) page.
 
 ```ts document-builder={"documentType": "slide", "editorConfig": {"customization": {"zoom": 60}}}
-const oPresentation = Api.GetPresentation()
-const oSlide = oPresentation.GetSlideByIndex(0)
-oSlide.RemoveAllObjects()
+let presentation = Api.GetPresentation();
+let slide = presentation.GetSlideByIndex(0);
+slide.RemoveAllObjects();
 
-const oGs1 = Api.CreateGradientStop(Api.CreateRGBColor(255, 240, 235), 0)
-const oGs2 = Api.CreateGradientStop(Api.CreateRGBColor(255, 216, 201), 100_000)
-let oFill = Api.CreateRadialGradientFill([oGs1, oGs2])
-oSlide.SetBackground(oFill)
+let gs1 = Api.CreateGradientStop(Api.CreateRGBColor(255, 240, 235), 0);
+let gs2 = Api.CreateGradientStop(Api.CreateRGBColor(255, 216, 201), 100_000);
+let fill = Api.CreateRadialGradientFill([gs1, gs2]);
+slide.SetBackground(fill);
 
-const oStroke = Api.CreateStroke(0, Api.CreateNoFill())
-const oShapeTitle = Api.CreateShape("rect", 300 * 36_000, 20 * 36_000, Api.CreateNoFill(), oStroke)
-const oShapeText = Api.CreateShape("rect", 120 * 36_000, 80 * 36_000, Api.CreateNoFill(), oStroke)
-oShapeTitle.SetPosition(20 * 36_000, 20 * 36_000)
-oShapeText.SetPosition(210 * 36_000, 50 * 36_000)
-const oParagraphTitle = oShapeTitle.GetDocContent().GetElement(0)
-const oParagraphText = oShapeText.GetDocContent().GetElement(0)
-oFill = Api.CreateSolidFill(Api.CreateRGBColor(115, 81, 68))
+let stroke = Api.CreateStroke(0, Api.CreateNoFill());
+let shapeTitle = Api.CreateShape("rect", 300 * 36_000, 20 * 36_000, Api.CreateNoFill(), stroke);
+let shapeText = Api.CreateShape("rect", 120 * 36_000, 80 * 36_000, Api.CreateNoFill(), stroke);
+shapeTitle.SetPosition(20 * 36_000, 20 * 36_000);
+shapeText.SetPosition(210 * 36_000, 50 * 36_000);
+let paragraphTitle = shapeTitle.GetDocContent().GetElement(0);
+let paragraphText = shapeText.GetDocContent().GetElement(0);
+fill = Api.CreateSolidFill(Api.CreateRGBColor(115, 81, 68));
 
-function addText(fontSize, text, oShape, oParagraph, jc) {
-  const oRun = Api.CreateRun()
-  const oTextPr = oRun.GetTextPr()
-  oTextPr.SetFontSize(fontSize)
-  oTextPr.SetFill(oFill)
-  oTextPr.SetFontFamily("Tahoma")
-  oParagraph.SetJc(jc)
-  oRun.AddText(text)
-  oRun.AddLineBreak()
-  oParagraph.AddElement(oRun)
-  oSlide.AddObject(oShape)
+function addText(fontSize, text, shape, paragraph, jc) {
+  let run = Api.CreateRun();
+  let textPr = run.GetTextPr();
+  textPr.SetFontSize(fontSize);
+  textPr.SetFill(fill);
+  textPr.SetFontFamily("Tahoma");
+  paragraph.SetJc(jc);
+  run.AddText(text);
+  run.AddLineBreak();
+  paragraph.AddElement(run);
+  slide.AddObject(shape);
 }
 function addChart(values, items, periods) {
-  const oChart = Api.CreateChart("lineStacked", values, items, periods, 36_000 * 180, 36_000 * 100, 24)
-  oChart.SetPosition(36_000 * 20, 36_000 * 50)
-  oChart.SetVertAxisLablesFontSize(16)
-  oChart.SetHorAxisLablesFontSize(16)
-  oChart.SetLegendFontSize(16)
-  oChart.SetLegendPos("top")
-  oSlide.AddObject(oChart)
+  let chart = Api.CreateChart("lineStacked", values, items, periods, 36_000 * 180, 36_000 * 100, 24);
+  chart.SetPosition(36_000 * 20, 36_000 * 50);
+  chart.SetVertAxisLablesFontSize(16);
+  chart.SetHorAxisLablesFontSize(16);
+  chart.SetLegendFontSize(16);
+  chart.SetLegendPos("top");
+  slide.AddObject(chart);
 }
-const titleContent = "Price Type Report"
-const textContent = "This is an overview of price types. As we can see, May was the price peak, but even in June the price went down, the annual upward trend persists."
-addText(80, titleContent, oShapeTitle, oParagraphTitle, "center")
-addText(42, textContent, oShapeText, oParagraphText, "left")
+let titleContent = "Price Type Report";
+let textContent = "This is an overview of price types. As we can see, May was the price peak, but even in June the price went down, the annual upward trend persists.";
+addText(80, titleContent, shapeTitle, paragraphTitle, "center");
+addText(42, textContent, shapeText, paragraphText, "left");
 
-const values = [
+let values = [
   [12, 13, 19, 17, 21, 15, 16],
   [8, 6, 10, 11, 14, 9, 10],
   [15, 14, 15, 18, 19, 12, 13],
-]
-const items = ["Price type A", "Price type B", "Price type C"]
-const periods = ["Jan", "Feb", "Mar", "Apr", "May", "June", "July"]
-addChart(values, items, periods)
+];
+let items = ["Price type A", "Price type B", "Price type C"];
+let periods = ["Jan", "Feb", "Mar", "Apr", "May", "June", "July"];
+addChart(values, items, periods);
 ```

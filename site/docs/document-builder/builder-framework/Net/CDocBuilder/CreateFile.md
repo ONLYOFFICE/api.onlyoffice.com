@@ -15,7 +15,7 @@ bool CreateFile(int nType);
 
 | Parameter | Type | Description                                                                                                                                                                                                                                      |
 | --------- | ---- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| nType     | int  | The type of the file to be created set as a hexadecimal integer for the .Net code or `docx`, `xlsx`, `pptx`, or `pdf` for the `.docbuilder` script file (see [OFFICESTUDIO\_FILE\_XXX](../../../builder-app/overview.md#format-types) values). |
+| nType     | int  | The type of the file to be created set as a hexadecimal integer for the .Net code or `docx`, `xlsx`, `pptx`, or `pdf` for the `.docbuilder` script file (see [OFFICESTUDIO\_FILE\_XXX](../../../get-started/supported-formats.md) values). |
 
 ## Example
 

@@ -8,7 +8,7 @@ sidebar_position: -4
 
 For the samples to work correctly, make sure that two conditions are met:
 
-1. [ONLYOFFICE Document Builder](https://www.onlyoffice.com/download-builder.aspx?utm_source=api) is installed into default directory `C:/Program Files/ONLYOFFICE/documentBuilder` on your computer.
+1. ONLYOFFICE Document Builder is installed. For more information visit [installing page](../../get-started/installing.md).
 2. The directory in which you are going to store the downloaded samples has general editing access to save files created by the Document Builder.
 
 ## Download samples

@@ -11,14 +11,14 @@ This sample is available for the **C++ and .Net DocBuilder Frameworks**.
 Download the sample and get more information on the [Builder framework samples](../../../document-builder/builder-framework/builder-framework-samples/builder-framework-samples.md) page.
 
 ```ts document-builder={"document": {"url": "https://static.onlyoffice.com/assets/docs/samples/data_with_errors.xlsx"}, "documentType": "cell", "editorConfig": {"customization": {"zoom": 60}}}
-const oWorksheet = Api.GetActiveSheet()
-const data = oWorksheet.GetRange("A:G").GetValue()
+let worksheet = Api.GetActiveSheet();
+let data = worksheet.GetRange("A:G").GetValue();
 for (let row = 0; row < data.length; row += 1) {
   for (let column = 0; column < data[0].length; column += 1) {
-    const cell = data[row][column]
+    let cell = data[row][column];
     if (cell.indexOf("#") === 0) {
-      const comment = `Error "${cell}"`
-      oWorksheet.GetRangeByNumber(row, column).AddComment(comment)
+      let comment = `Error "${cell}"`;
+      worksheet.GetRangeByNumber(row, column).AddComment(comment);
     }
   }
 }
