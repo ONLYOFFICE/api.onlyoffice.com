@@ -12,7 +12,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config)
 
 ## createConnector
 
-Create the [connector](./automation-api.md) to interact with text documents, spreadsheets, presentations, and fillable forms from the outside.
+Create the [connector](./automation-api.md) to interact with text documents, spreadsheets, presentations, PDFs, and fillable forms from the outside.
 
 > This parameter is available for editing only for ONLYOFFICE Docs Developer.
 

@@ -15,7 +15,7 @@ boolean createFile(int | String type);
 
 | Parameter | Type         | Description                                                                                                                                                                                                                                    |
 | --------- | ------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| type      | int \| String | The type of the file to be created set as a hexadecimal integer for the Java code or `docx`, `xlsx`, `pptx`, or `pdf` for the `.docbuilder` script file (see [OFFICESTUDIO_FILE_XXX](../../../builder-app/overview.md#format-types) values). |
+| type      | int \| String | The type of the file to be created set as a hexadecimal integer for the Java code or `docx`, `xlsx`, `pptx`, or `pdf` for the `.docbuilder` script file (see [OFFICESTUDIO_FILE_XXX](../../../get-started/supported-formats.md) values). |
 
 ## Example
 

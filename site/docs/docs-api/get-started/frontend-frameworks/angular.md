@@ -362,6 +362,12 @@ The application will be deployed on the web server (`http://localhost:3000` by d
 
 ### Properties
 
+```mdx-code-block
+import APITable from '@site/src/components/APITable/APITable';
+
+<APITable>
+```
+
 | Name                                 | Type                    | Default | Description                                                                                                                                                |
 | ------------------------------------ | ----------------------- | ------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | id\*                                 | string                  | null    | Component unique identifier.                                                                                                                               |
@@ -392,6 +398,10 @@ The application will be deployed on the web server (`http://localhost:3000` by d
 | events\_onRequestHistoryClose        | (event: object) => void | null    | The function called when the user is trying to go back to the document from viewing the document version history by clicking the **Close History** button. |
 | events\_onRequestHistoryData         | (event: object) => void | null    | The function called when the user is trying to click the specific document version in the document version history.                                        |
 | events\_onRequestRestore             | (event: object) => void | null    | The function called when the user is trying to restore the file version by clicking the **Restore** button in the version history.                         |
+
+```mdx-code-block
+</APITable>
+```
 
 \* *- required field*
 

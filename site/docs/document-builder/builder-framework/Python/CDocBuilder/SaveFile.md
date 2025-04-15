@@ -15,7 +15,7 @@ def SaveFile(self, int | str type, str path, str | None params = None);
 
 | Parameter | Type        | Default | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
 | --------- | ----------- | ------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| type      | int \| str  |         | The type of the file to be saved set as a hexadecimal integer for the Python code. For the `.docbuilder` script file the following values are possible: `docx`, `odt`, `rtf`, `txt`, `pptx`, `xlsx`, `ods`, `csv`, `pdf` (see [OFFICESTUDIO\_FILE\_XXX](../../../builder-app/overview.md#format-types) values).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| type      | int \| str  |         | The type of the file to be saved set as a hexadecimal integer for the Python code. For the `.docbuilder` script file the following values are possible: `docx`, `odt`, `rtf`, `txt`, `pptx`, `xlsx`, `ods`, `csv`, `pdf` (see [OFFICESTUDIO\_FILE\_XXX](../../../get-started/supported-formats.md) values).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 | path      | str         |         | The path to the file to be saved together with its name and extension.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
 | params    | str \| None | None    | The parameters needed for the correct file saving (most commonly, the encoding is used for the `txt` and `csv` file types or the delimiter for the `csv` files, for other file types this is just an empty string). The parameters are added in the form of XML tags, where `m_nCsvTxtEncoding` is used for the text encoding and `m_nCsvDelimiter` is used for the `csv` delimiter. You can find all the supported values for the encoding [in this file](https://github.com/ONLYOFFICE/server/blob/master/Common/sources/commondefines.js). The supported values for the `csv` delimiters include:<br/>`0` - no delimiter;<br/>`1` - tab;<br/>`2` - semicolon;<br/>`3` - colon;<br/>`4` - comma;<br/>`5` - space.<br/>When saving into an image file (`png` or `jpg`) for creating thumbnails, the additional parameters are used. [See below](#saving-into-images) to find them out. |
 
@@ -52,7 +52,25 @@ ONLYOFFICE Document Builder allows to save your document files into image files 
 <Tabs>
     <TabItem value="python" label="Python">
         ``` py
-        builder.SaveFile(OFFICESTUDIO_FILE_IMAGE, L"thumbnail.png", "<m_oThumbnail><format>4</format><aspect>1</aspect><first>false</first><width>1000</width><height>1000</height></m_oThumbnail>")
+        import os
+        import docbuilder
+        builder = docbuilder.CDocBuilder()
+        builder.CreateFile("docx")
+
+        context = builder.GetContext()
+        globalObj = context.GetGlobal()
+        api = globalObj["Api"]
+
+        document = api.Call("GetDocument")
+        paragraph = api.Call("CreateParagraph")
+        paragraph.Call("AddText", "Hello, World!")
+        content = context.CreateArray(1)
+        content[0] = paragraph
+        document.Call("InsertContent", content)
+
+        dstPath = os.getcwd() + "/result.docx"
+        builder.SaveFile(docbuilder.FileTypes.Graphics.PNG, "images.zip", "<m_oThumbnail><format>4</format><aspect>1</aspect><first>false</first><width>1000</width><height>1000</height></m_oThumbnail>")
+builder.CloseFile()
         ```
     </TabItem>
     <TabItem value="builder" label=".docbuilder">

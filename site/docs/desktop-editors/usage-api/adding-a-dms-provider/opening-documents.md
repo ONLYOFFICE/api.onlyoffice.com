@@ -39,7 +39,7 @@ Example: `https://example.com/url-to-example-document.docx`
 
 ## type
 
-Defines the type of the opened document if it is possible to define: **word**, **cell** or **slide**.
+Defines the type of the opened document if it is possible to define: **word**, **cell**, **slide**, or **pdf**.
 
 Type: string
 

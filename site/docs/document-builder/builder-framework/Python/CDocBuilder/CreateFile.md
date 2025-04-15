@@ -15,15 +15,22 @@ def CreateFile(self, int | str type);
 
 | Parameter | Type       | Description                                                                                                                                                                                                                                        |
 | --------- | ---------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| type      | int \| str | The type of the file to be created set as a hexadecimal integer for the Python code or `docx`, `xlsx`, `pptx`, or `pdf` for the `.docbuilder` script file (see [OFFICESTUDIO\_FILE\_XXX](../../../builder-app/overview.md#format-types) values). |
+| type      | int \| str | The type of the file to be created set as a hexadecimal integer for the Python code or `docx`, `xlsx`, `pptx`, or `pdf` for the `.docbuilder` script file (see [OFFICESTUDIO\_FILE\_XXX](../../../get-started/supported-formats.md) values). |
 
 ## Example
 
 <Tabs>
     <TabItem value="python" label="Python">
         ``` py
+        import os
+        import docbuilder
+
         builder = docbuilder.CDocBuilder()
         builder.CreateFile("docx")
+
+        dstPath = os.getcwd() + "/result.docx"
+        builder.SaveFile("docx", dstPath)
+        builder.CloseFile()
         ```
     </TabItem>
     <TabItem value="builder" label=".docbuilder">

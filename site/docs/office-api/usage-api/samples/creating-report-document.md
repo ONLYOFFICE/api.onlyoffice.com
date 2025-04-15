@@ -8,155 +8,155 @@ Create reports on all the comments added to the document and on every change whi
 - edit text style in the table ([ApiDocument/GetStyle](../text-document-api/ApiDocument/Methods/GetStyle.md), [ApiRun/SetColor](../text-document-api/ApiRun/Methods/SetColor.md), [ApiRun/SetStrikeout](../text-document-api/ApiRun/Methods/SetStrikeout.md)).
 
 ```ts document-builder={"document": {"url": "https://static.onlyoffice.com/assets/docs/samples/document_review_mode.docx"}, "documentType": "word", "editorConfig": {"customization": {"zoom": 60}}}
-let oDocument = Api.GetDocument()
-GlobalVariable["CommentsReport"] = oDocument.GetCommentsReport()
-GlobalVariable["ReviewReport"] = oDocument.GetReviewReport()
+let doc = Api.GetDocument();
+GlobalVariable["CommentsReport"] = doc.GetCommentsReport();
+GlobalVariable["ReviewReport"] = doc.GetReviewReport();
 
-builder.CloseFile()
+builder.CloseFile();
 
-builder.CreateFile("docx")
+builder.CreateFile("docx");
 
-const oCommentsReport = GlobalVariable["CommentsReport"]
-const oReviewReport = GlobalVariable["ReviewReport"]
+let commentsReport = GlobalVariable["CommentsReport"];
+let reviewReport = GlobalVariable["ReviewReport"];
 
-oDocument = Api.GetDocument()
-let oParagraph = Api.CreateParagraph()
-oDocument.Push(oParagraph)
-oParagraph.AddText("Comments report")
+let doc = Api.GetDocument();
+let paragraph = Api.CreateParagraph();
+doc.Push(paragraph);
+paragraph.AddText("Comments report");
 
-let nRows = 1
-for (const sUserName in oCommentsReport) {
-  nRows += oCommentsReport[sUserName].length
+let rows = 1;
+for (let userName in commentsReport) {
+  rows += commentsReport[userName].length;
 }
 
-let nCols = 6
-let oTable = Api.CreateTable(nCols, nRows)
-oDocument.Push(oTable)
+let cols = 6;
+let table = Api.CreateTable(cols, rows);
+doc.Push(table);
 
-function privateFillCell(nCurRow, nCurCol, sText) {
-  const oRow = oTable.GetRow(nCurRow)
-  const oCell = oRow.GetCell(nCurCol)
-  const oCellContent = oCell.GetContent()
-  const oRun = oCellContent.GetElement(0).AddText(sText)
-  return {Cell: oCell, Run: oRun}
+function fillCell(curRow, curCol, text) {
+  let row = table.GetRow(curRow);
+  let cell = row.GetCell(curCol);
+  let cellContent = cell.GetContent();
+  let run = cellContent.GetElement(0).AddText(text);
+  return {Cell: cell, Run: run};
 }
 
-privateFillCell(0, 0, "Name")
-privateFillCell(0, 1, "Date")
-privateFillCell(0, 2, "")
-privateFillCell(0, 3, "Solved")
-privateFillCell(0, 4, "Text")
-privateFillCell(0, 5, "Quote text")
+fillCell(0, 0, "Name");
+fillCell(0, 1, "Date");
+fillCell(0, 2, "");
+fillCell(0, 3, "Solved");
+fillCell(0, 4, "Text");
+fillCell(0, 5, "Quote text");
 
-let nCurRow = 1
-for (sUserName in oCommentsReport) {
-  const arrUserComments = oCommentsReport[sUserName]
-  const arrCells = []
-  for (let nIndex = 0, nCount = arrUserComments.length; nIndex < nCount;
-    nIndex += 1, nCurRow += 1) {
-    const oCommentInfo = oCommentsReport[sUserName][nIndex]
-    arrCells.push(privateFillCell(nCurRow, 0, "").Cell)
-    privateFillCell(nCurRow, 1, new Date(oCommentInfo["Date"]).toString())
-    let value2
-    if (oCommentInfo["IsAnswer"] === true) {
-      value2 = "answer"
+let curRow = 1;
+for (let userName in commentsReport) {
+  let userComments = commentsReport[userName];
+  let cells = [];
+  for (let index = 0, count = userComments.length; index < count;
+    index += 1, curRow += 1) {
+    let commentInfo = commentsReport[userName][index];
+    cells.push(fillCell(curRow, 0, "").Cell);
+    fillCell(curRow, 1, new Date(commentInfo["Date"]).toString());
+    let value2;
+    if (commentInfo["IsAnswer"] === true) {
+      value2 = "answer";
     } else {
-      value2 = "comment"
+      value2 = "comment";
     }
-    privateFillCell(nCurRow, 2, value2)
+    fillCell(curRow, 2, value2);
 
-    if (oCommentInfo["IsAnswer"] !== true) {
-      let value3
-      if (oCommentInfo["IsSolved"] === true) {
-        value3 = "yes"
-        privateFillCell(nCurRow, 3, value3).Run.SetColor(0, 255, 0)
+    if (commentInfo["IsAnswer"] !== true) {
+      let value3;
+      if (commentInfo["IsSolved"] === true) {
+        value3 = "yes";
+        fillCell(curRow, 3, value3).Run.SetColor(0, 255, 0);
       } else {
-        value3 = "no"
-        privateFillCell(nCurRow, 3, value3).Run.SetColor(255, 0, 0)
+        value3 = "no";
+        fillCell(curRow, 3, value3).Run.SetColor(255, 0, 0);
       }
     }
 
-    let value4
-    if (oCommentInfo["CommentMessage"]) {
-      value4 = oCommentInfo["CommentMessage"]
+    let value4;
+    if (commentInfo["CommentMessage"]) {
+      value4 = commentInfo["CommentMessage"];
     } else {
-      value4 = ""
+      value4 = "";
     }
-    privateFillCell(nCurRow, 4, value4)
+    fillCell(curRow, 4, value4);
 
-    let value5
-    if (oCommentInfo["QuoteText"]) {
-      value5 = oCommentInfo["QuoteText"]
+    let value5;
+    if (commentInfo["QuoteText"]) {
+      value5 = commentInfo["QuoteText"];
     } else {
-      value5 = ""
+      value5 = "";
     }
-    privateFillCell(nCurRow, 5, value5)
+    fillCell(curRow, 5, value5);
   }
 
-  const oMergedCell = oTable.MergeCells(arrCells)
-  if (oMergedCell) {
-    const oCellContent = oMergedCell.GetContent()
-    oCellContent.GetElement(0).AddText(sUserName)
-  } else if (arrCells.length !== 0) {
-    oCellContent = arrCells[0].GetContent()
-    oCellContent.GetElement(0).AddText(sUserName)
+  let mergedCell = table.MergeCells(cells);
+  if (mergedCell) {
+    let cellContent = mergedCell.GetContent();
+    cellContent.GetElement(0).AddText(userName);
+  } else if (cells.length !== 0) {
+    let cellContent = cells[0].GetContent();
+    cellContent.GetElement(0).AddText(userName);
   }
 }
-oTable.SetStyle(oDocument.GetStyle("Bordered"))
+table.SetStyle(doc.GetStyle("Bordered"));
 
-oParagraph = Api.CreateParagraph()
-oDocument.Push(oParagraph)
-oParagraph.AddText("Review report")
+paragraph = Api.CreateParagraph();
+doc.Push(paragraph);
+paragraph.AddText("Review report");
 
-nRows = 1
-for (sUserName in oReviewReport) {
-  nRows += oReviewReport[sUserName].length
+rows = 1;
+for (let userName in reviewReport) {
+  rows += reviewReport[userName].length;
 }
 
-nCols = 4
-oTable = Api.CreateTable(nCols, nRows)
-oDocument.Push(oTable)
+cols = 4;
+table = Api.CreateTable(cols, rows);
+doc.Push(table);
 
-privateFillCell(0, 0, "Name")
-privateFillCell(0, 1, "Date")
-privateFillCell(0, 2, "Action")
-privateFillCell(0, 3, "")
+fillCell(0, 0, "Name");
+fillCell(0, 1, "Date");
+fillCell(0, 2, "Action");
+fillCell(0, 3, "");
 
-nCurRow = 1
-for (sUserName in oReviewReport) {
-  const arrUserChanges = oReviewReport[sUserName]
-  arrCells = []
-  for (nIndex = 0, nCount = arrUserChanges.length; nIndex < nCount; nIndex += 1, nCurRow += 1) {
-    const oChangeInfo = arrUserChanges[nIndex]
-    arrCells.push(privateFillCell(nCurRow, 0, "").Cell)
-    privateFillCell(nCurRow, 1, new Date(oChangeInfo["Date"]).toString())
-    const sType = oChangeInfo["Type"]
-    if (sType === "TextAdd") {
-      privateFillCell(nCurRow, 2, "Added text")
-      privateFillCell(nCurRow, 3, oChangeInfo["Value"])
-    } else if (sType === "TextRem") {
-      privateFillCell(nCurRow, 2, "Removed text")
-      privateFillCell(nCurRow, 3, oChangeInfo["Value"]).Run.SetStrikeout(true)
-    } else if (sType === "TextPr") {
-      privateFillCell(nCurRow, 2, "Formatted text")
-    } else if (sType === "ParaAdd") {
-      privateFillCell(nCurRow, 2, "Added paragraph")
-    } else if (sType === "ParaRem") {
-      privateFillCell(nCurRow, 2, "Removed paragraph")
-    } else if (sType === "ParaPr") {
-      privateFillCell(nCurRow, 2, "Formatted paragraph")
+curRow = 1;
+for (let userName in reviewReport) {
+  let userChanges = reviewReport[userName];
+  let cells = [];
+  for (let index = 0, count = userChanges.length; index < count; index += 1, curRow += 1) {
+    let changeInfo = userChanges[index];
+    cells.push(fillCell(curRow, 0, "").Cell);
+    fillCell(curRow, 1, new Date(changeInfo["Date"]).toString());
+    let type = changeInfo["Type"];
+    if (type === "TextAdd") {
+      fillCell(curRow, 2, "Added text");
+      fillCell(curRow, 3, changeInfo["Value"]);
+    } else if (type === "TextRem") {
+      fillCell(curRow, 2, "Removed text");
+      fillCell(curRow, 3, changeInfo["Value"]).Run.SetStrikeout(true);
+    } else if (type === "TextPr") {
+      fillCell(curRow, 2, "Formatted text");
+    } else if (type === "ParaAdd") {
+      fillCell(curRow, 2, "Added paragraph");
+    } else if (type === "ParaRem") {
+      fillCell(curRow, 2, "Removed paragraph");
+    } else if (type === "ParaPr") {
+      fillCell(curRow, 2, "Formatted paragraph");
     } else {
-      privateFillCell(nCurRow, 2, "Unknown change")
+      fillCell(curRow, 2, "Unknown change");
     }
   }
-  oMergedCell = oTable.MergeCells(arrCells)
-  if (oMergedCell) {
-    oCellContent = oMergedCell.GetContent()
-    oCellContent.GetElement(0).AddText(sUserName)
-  } else if (arrCells.length !== 0) {
-    const oCellContent = arrCells[0].GetContent()
-    oCellContent.GetElement(0).AddText(sUserName)
+  let mergedCell = table.MergeCells(cells);
+  if (mergedCell) {
+    let cellContent = mergedCell.GetContent();
+    cellContent.GetElement(0).AddText(userName);
+  } else if (cells.length !== 0) {
+    let cellContent = cells[0].GetContent();
+    cellContent.GetElement(0).AddText(userName);
   }
 }
-oTable.SetStyle(oDocument.GetStyle("Bordered"))
+table.SetStyle(doc.GetStyle("Bordered"));
 ```

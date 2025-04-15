@@ -25,8 +25,17 @@ def ExecuteCommand(self, str command, CDocBuilderValue | None retValue = None);
 <Tabs>
     <TabItem value="python" label="Python">
         ``` py
+        import os
+        import docbuilder
+
         builder = docbuilder.CDocBuilder()
-        builder.ExecuteCommand(L"oParagraph.AddText(\"Hello from Python!\");");
+        builder.CreateFile("docx")
+
+        builder.ExecuteCommand("var oDocument = Api.GetDocument();var oParagraph = oDocument.GetElement(0);oParagraph.AddText('Hello from Python!');");
+
+        dstPath = os.getcwd() + "/result.docx"
+        builder.SaveFile("docx", dstPath)
+        builder.CloseFile()
         ```
     </TabItem>
     <TabItem value="builder" label=".docbuilder">

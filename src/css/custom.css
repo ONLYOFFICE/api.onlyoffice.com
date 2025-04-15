@@ -419,14 +419,31 @@ button[class*='copyButtonCopied'] svg[class*='copyButtonSuccessIcon'] {
 
 .conversion-table table td {
   padding: 0.3rem 0.5rem;
+  min-width: 40px;
 }
 
 .conversion-table table td:not(:first-child) {
   opacity: 0.8;
 }
 
+.conversion-table table thead {
+  background-color: var(--ifm-table-background);
+  border: none;
+}
+
+.conversion-table table thead tr{
+  border: none;
+}
+
 .conversion-table table th {
-  font-weight: normal;
+  border: none;
+  padding: 0.2rem 0;
+  white-space: break-spaces;
+}
+
+.conversion-table table tr:first-child td:first-child {
+  font-weight: bold;
+  line-height: normal;
 }
 
 .hidden {

@@ -6,6 +6,43 @@
 
 * Added DocSpace version 3.1
 
+## 4.6.0
+
+### New features
+
+#### Docs API
+
+* Updated Document Builder section
+* Added Playground page for testing the capabilities of the Docs APIs
+ 
+#### Docspace
+
+* Updated Docspace openAPI docs
+
+### Fixes
+
+#### Docs
+
+* Updated conversion tables
+* Fixed Office API examples
+
+## 4.5.1
+
+### New features
+
+#### Docs API
+
+* Added the Size response property to CheckFileInfo
+
+#### Docs
+
+* Updated Office API usage page
+
+### Fixes
+
+* Added pdf editor
+* Fixed anchors
+
 ## 4.5.0
 
 ### New features
