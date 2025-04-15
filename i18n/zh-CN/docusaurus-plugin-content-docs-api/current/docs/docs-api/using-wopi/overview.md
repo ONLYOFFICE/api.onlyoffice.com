@@ -2,6 +2,9 @@
 sidebar_position: -11
 ---
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 # 概述
 
 从 6.4 版开始，ONLYOFFICE 文档提供 **对Web 应用程序开放平台接口协议 (WOPI)** 的支持 - 一种基于 REST 的协议，用于将您的应用程序与online office集成。WOPI 操作允许您打开存储在服务器上的文件、编辑和保存它们。
@@ -23,9 +26,18 @@ sidebar_position: -11
 
 您可以在配置文件中查找和更改所有必要的 [WOPI设置](https://helpcenter.onlyoffice.com/installation/docs-developer-configuring.aspx#WOPI) ，该文件可以在以下路径中找到（或创建）：
 
-对于 Linux - */etc/onlyoffice/documentserver/**local.json***.
-
-对于 Windows - *%ProgramFiles%\ONLYOFFICE\DocumentServer\config\\**local.json***.
+<Tabs>
+  <TabItem value="windows" label="Windows">
+      ``` bash
+      %ProgramFiles%\ONLYOFFICE\DocumentServer\config\local.json
+      ```
+  </TabItem>
+  <TabItem value="linux" label="Linux">
+      ``` bash
+      /etc/onlyoffice/documentserver/local.json
+      ```
+  </TabItem>
+</Tabs>
 
 > 默认值在 *default.json* 配置文件中可用，该文件位于上述文件夹中（适用于 Linux 和 Windows）。请不要直接编辑 *default.json* 文件的内容。每次重新启动 Docker 容器或将 **ONLYOFFICE 文档** 升级到新版本时都会恢复默认值，并且所有更改都将丢失。
 
@@ -90,14 +102,15 @@ ONLYOFFICE 文档只能接受来自受信任的集成商的 WOPI 请求。此类
 
 4. 重新启动服务以使配置更改生效：
 
-   **对于 RPM/DEB 软件包：**
-
-   ``` sh
-   systemctl restart ds-*
-   ```
-
-   **对于 Docker:**
-
-   ``` sh
-   supervisorctl restart all
-   ```
+    <Tabs>
+      <TabItem value="rpm-deb" label="RPM/DEB packages">
+          ``` bash
+          systemctl restart ds-*
+          ```
+      </TabItem>
+      <TabItem value="docker" label="Docker">
+          ``` bash
+          supervisorctl restart all
+          ```
+      </TabItem>
+    </Tabs>
