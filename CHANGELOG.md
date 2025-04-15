@@ -1,5 +1,11 @@
 # Change log
 
+### New features
+
+#### Docspace
+
+* Added the API keys page
+
 ## 4.5.1
 
 ### New features
