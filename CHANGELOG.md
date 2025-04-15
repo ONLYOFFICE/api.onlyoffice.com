@@ -4,6 +4,7 @@
 
 #### Docspace
 
+* Added the API keys page
 * Added DocSpace version 3.1
 
 ## 4.6.0
