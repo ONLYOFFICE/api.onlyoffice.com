@@ -1,7 +1,7 @@
 openapi: 3.0.4
 info:
   title: Api
-  version: v2
+  version: 3.1.0
 servers:
   - url: '{baseUrl}'
     description: Server configuration
@@ -324,11 +324,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Sets a mobile phone for the current user.
   /api/2.0/authentication/sendsms:
@@ -388,11 +390,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Returns the used space of the current portal.
   /api/2.0/portal/tariff:
@@ -422,11 +426,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Returns the current portal tariff.
   /api/2.0/portal/quota:
@@ -451,11 +457,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Returns the current portal quota.
   /api/2.0/portal/quota/right:
@@ -478,11 +486,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Returns the recommended quota for the current portal.
   /api/2.0/portal:
@@ -505,11 +515,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Returns the current portal information.
   /api/2.0/portal/path:
@@ -539,11 +551,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Returns the full absolute path to the current portal.
   /api/2.0/portal/suspend:
@@ -562,11 +576,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Sends the instructions to suspend the current portal.
     put:
@@ -584,11 +600,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Deactivates the current portal.
   /api/2.0/portal/delete:
@@ -607,11 +625,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Sends the instructions to remove the current portal.
     delete:
@@ -633,11 +653,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Deletes the current portal.
   /api/2.0/portal/continue:
@@ -656,11 +678,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Restores the current portal.
   /api/2.0/portal/users/{userID}:
@@ -692,11 +716,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Returns a user with the ID specified in the request from the current portal.
   /api/2.0/portal/users/invite/{employeeType}:
@@ -726,11 +752,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Returns an invitation link for joining the portal.
   /api/2.0/portal/userscount:
@@ -753,11 +781,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Returns a number of portal users.
   /api/2.0/portal/present/mark:
@@ -776,11 +806,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Marks a gift message as read.
   /api/2.0/portal/sendcongratulations:
@@ -834,11 +866,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Sets the Developer Tools access settings for the portal.
     get:
@@ -860,11 +894,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Returns the Developer Tools access settings for the portal.
   /api/2.0/security/activeconnections:
@@ -887,11 +923,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Returns all the active connections to the portal.
   /api/2.0/security/activeconnections/logoutallchangepassword:
@@ -914,11 +952,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Logs out from all the active connections for the current user and changes their password.
   /api/2.0/security/activeconnections/logoutall/{userId}:
@@ -948,11 +988,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Logs out from all the active connections for the user with the ID specified in the request.
   /api/2.0/security/activeconnections/logoutallexceptthis:
@@ -975,11 +1017,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Logs out from all the active connections except the current connection.
   /api/2.0/security/activeconnections/logout/{loginEventId}:
@@ -1013,11 +1057,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Logs out from the connection with the ID specified in the request.
   /api/2.0/security/audit/events/last:
@@ -1042,11 +1088,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Returns a list of the latest changes (creation, modification, deletion, etc.) made by users to the entities on the portal.
   /api/2.0/security/audit/events/filter:
@@ -1120,11 +1168,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Returns a list of the audit events by the parameters specified in the request.
   /api/2.0/security/audit/types:
@@ -1190,11 +1240,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Generates the audit trail report.
   /api/2.0/security/audit/settings/lifetime:
@@ -1219,11 +1271,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Returns the audit trail settings.
     post:
@@ -1254,11 +1308,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Sets the audit trail settings for the current portal.
   /api/2.0/security/csp:
@@ -1288,11 +1344,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Configures the CSP (Content Security Policy) settings for the current portal.
     get:
@@ -1333,11 +1391,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Saves the Firebase device token specified in the request for the Documents application.
   /api/2.0/settings/push/docsubscribe:
@@ -1365,11 +1425,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Subscribes to the Documents push notification.
   /api/2.0/security/audit/login/last:
@@ -1394,11 +1456,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Returns all the latest user login activity, including successful logins and error logs.
   /api/2.0/security/audit/login/filter:
@@ -1446,11 +1510,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Returns a list of the login events by the parameters specified in the request.
   /api/2.0/security/audit/login/report:
@@ -1475,11 +1541,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Generates the login history report.
   /api/2.0/smtpsettings/smtp:
@@ -1504,11 +1572,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Returns the current portal SMTP settings.
     post:
@@ -1537,11 +1607,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Saves the SMTP settings for the current portal.
     delete:
@@ -1565,11 +1637,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Resets the SMTP settings of the current portal.
   /api/2.0/smtpsettings/smtp/test:
@@ -1594,11 +1668,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Tests the SMTP settings for the current portal (sends test message to the user email).
   /api/2.0/smtpsettings/smtp/test/status:
@@ -1623,11 +1699,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Returns the status of the SMTP testing process.
   /api/2.0/settings/authservice:
@@ -1650,11 +1728,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Returns the authorization services.
     post:
@@ -1685,11 +1765,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Saves the authorization keys.
   /api/2.0/settings:
@@ -1738,11 +1820,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Saves the mail domain settings specified in the request to the portal.
   /api/2.0/settings/deeplink:
@@ -1772,11 +1856,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Saves the deep link configuration settings for the portal.
     get:
@@ -1798,11 +1884,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Returns the deep link settings.
   /api/2.0/settings/cultures:
@@ -1839,11 +1927,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Returns a list of all the available portal time zones.
   /api/2.0/settings/machine:
@@ -1866,11 +1956,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Returns the portal hostname.
   /api/2.0/settings/dns:
@@ -1904,11 +1996,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Saves the DNS settings specified in the request to the current portal.
   /api/2.0/settings/logo:
@@ -1931,11 +2025,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Returns the portal logo image URL.
   /api/2.0/settings/wizard/complete:
@@ -1967,11 +2063,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Completes the Wizard settings.
   /api/2.0/settings/colortheme:
@@ -2012,11 +2110,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Saves the portal color theme specified in the request.
     delete:
@@ -2046,11 +2146,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Deletes the portal color theme with the ID specified in the request.
   /api/2.0/settings/closeadminhelper:
@@ -2071,11 +2173,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Closes the administrator helper notification.
   /api/2.0/settings/emailactivation:
@@ -2103,11 +2207,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Updates the email activation settings.
   /api/2.0/settings/socket:
@@ -2130,11 +2236,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Returns the socket settings.
   /api/2.0/settings/payment:
@@ -2157,11 +2265,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Returns the portal payment settings.
   /api/2.0/settings/cookiesettings:
@@ -2184,11 +2294,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Returns the cookies lifetime value in minutes.
     put:
@@ -2217,11 +2329,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Updates the cookies lifetime value in minutes.
   /api/2.0/settings/customnavigation/getall:
@@ -2244,11 +2358,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Returns a list of the custom navigation items.
   /api/2.0/settings/customnavigation/getsample:
@@ -2271,11 +2387,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Returns a sample of the custom navigation item.
   /api/2.0/settings/customnavigation/get/{id}:
@@ -2307,11 +2425,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Returns a custom navigation item by the ID specified in the request.
   /api/2.0/settings/customnavigation/create:
@@ -2339,11 +2459,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Adds a custom navigation item with the parameters specified in the request.
   /api/2.0/settings/customnavigation/delete/{id}:
@@ -2371,11 +2493,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Deletes a custom navigation item with the ID specified in the request.
   /api/2.0/settings/encryption/start:
@@ -2409,11 +2533,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Starts the storage encryption process.
   /api/2.0/settings/encryption/progress:
@@ -2438,11 +2564,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Returns the storage encryption progress.
   /api/2.0/settings/greetingsettings:
@@ -2465,11 +2593,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Returns the greeting settings for the current portal.
     post:
@@ -2496,11 +2626,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Saves the greeting settings specified in the request to the current portal.
   /api/2.0/settings/greetingsettings/isdefault:
@@ -2523,11 +2655,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Checks if the greeting settings of the current portal are set to default or not.
   /api/2.0/settings/greetingsettings/restore:
@@ -2550,11 +2684,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Restores the current portal greeting settings.
   /api/2.0/settings/iprestrictions:
@@ -2577,11 +2713,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Returns the IP portal restrictions.
     put:
@@ -2608,11 +2746,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Updates the IP restrictions with the parameters specified in the request.
   /api/2.0/settings/iprestrictions/settings:
@@ -2635,11 +2775,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Returns the IP restriction settings.
     put:
@@ -2666,11 +2808,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Updates the IP restriction settings with the parameters specified in the request.
   /api/2.0/settings/license/refresh:
@@ -2693,11 +2837,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Refreshes the portal license.
   /api/2.0/settings/license/accept:
@@ -2720,11 +2866,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Activates a license for the portal.
   /api/2.0/settings/license/required:
@@ -2784,11 +2932,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Uploads a portal license specified in the request.
   /api/2.0/settings/security/loginsettings:
@@ -2816,11 +2966,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Updates the login settings with the parameters specified in the request.
     get:
@@ -2842,11 +2994,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Returns the portal login settings.
     delete:
@@ -2868,11 +3022,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Resets the portal login settings to default.
   /api/2.0/settings/messagesettings:
@@ -2900,11 +3056,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Displays the contact form on the "Sign In" page, allowing users to send a message to the DocSpace administrator in case they encounter any issues while accessing DocSpace.
   /api/2.0/settings/sendadmmail:
@@ -2982,11 +3140,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Checks if the notification type specified in the request is enabled or not.
   /api/2.0/settings/notification:
@@ -3014,11 +3174,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Enables the notification type specified in the request.
   /api/2.0/settings/notification/rooms:
@@ -3041,11 +3203,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Returns a list of rooms with the disabled notifications.
     post:
@@ -3072,11 +3236,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Sets a notification status for a room with the ID specified in the request.
   /api/2.0/settings/owner:
@@ -3106,11 +3272,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Sends the instructions to change the DocSpace owner.
     put:
@@ -3137,11 +3305,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Updates the current portal owner with a new one specified in the request.
   /api/2.0/settings/userquotasettings:
@@ -3164,11 +3334,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Returns the user quota settings.
   /api/2.0/settings/roomquotasettings:
@@ -3198,11 +3370,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Saves the room quota settings specified in the request to the current portal.
   /api/2.0/settings/tenantquotasettings:
@@ -3234,11 +3408,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Saves the tenant quota settings specified in the request to the current portal.
   /api/2.0/settings/whitelabel/logos/save:
@@ -3281,11 +3457,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Saves the white label logos specified in the request.
   /api/2.0/settings/whitelabel/logos/savefromfiles:
@@ -3325,11 +3503,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Saves the white label logos from files.
   /api/2.0/settings/whitelabel/logos:
@@ -3392,11 +3572,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Specifies if the white label logos are default or not.
   /api/2.0/settings/whitelabel/logos/restore:
@@ -3434,11 +3616,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Restores the white label logos.
   /api/2.0/settings/whitelabel/logotext/save:
@@ -3481,11 +3665,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Saves the white label logo text specified in the request.
   /api/2.0/settings/whitelabel/logotext:
@@ -3521,11 +3707,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Returns the white label logo text.
   /api/2.0/settings/whitelabel/logotext/isdefault:
@@ -3561,11 +3749,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Specifies if the white label logo text are default or not.
   /api/2.0/settings/whitelabel/logotext/restore:
@@ -3603,11 +3793,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Restores the white label logo text.
   /api/2.0/settings/companywhitelabel:
@@ -3630,11 +3822,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Returns the licensor data.
   /api/2.0/settings/rebranding/company:
@@ -3666,11 +3860,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Saves the company white label settings specified in the request.
     get:
@@ -3692,11 +3888,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Returns the company white label settings.
     delete:
@@ -3720,11 +3918,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Deletes the company white label settings.
   /api/2.0/settings/rebranding/additional:
@@ -3756,11 +3956,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Saves the additional white label settings specified in the request.
     get:
@@ -3782,11 +3984,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Returns the additional white label settings.
     delete:
@@ -3810,11 +4014,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Deletes the additional white label settings.
   /api/2.0/settings/enablewhitelabel:
@@ -3837,11 +4043,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Checks if the white label is enabled or not.
   /api/2.0/settings/security:
@@ -3875,11 +4083,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Returns the security settings for the modules specified in the request.
     put:
@@ -3908,11 +4118,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Sets the security settings to the module with the ID specified in the request.
   /api/2.0/settings/security/{id}:
@@ -3944,11 +4156,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Returns the availability of the module with the ID specified in the request.
   /api/2.0/settings/security/modules:
@@ -3971,11 +4185,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Returns a list of all the enabled modules.
   /api/2.0/settings/security/password:
@@ -3998,11 +4214,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Returns the portal password settings.
     put:
@@ -4031,11 +4249,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Sets the portal password settings.
   /api/2.0/settings/security/access:
@@ -4065,11 +4285,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Sets the security settings to the modules with the IDs specified in the request.
   /api/2.0/settings/security/administrator/{productid}:
@@ -4101,11 +4323,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Returns a list of all the administrators of a product with the ID specified in the request.
   /api/2.0/settings/security/administrator:
@@ -4143,11 +4367,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Checks if the selected user is an administrator of a product with the ID specified in the request.
     put:
@@ -4176,11 +4402,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Sets the selected user as an administrator of a product with the ID specified in the request.
   /api/2.0/settings/ssov2:
@@ -4223,11 +4451,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Saves the SSO settings for the current portal.
     delete:
@@ -4249,11 +4479,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Resets the SSO settings of the current portal.
   /api/2.0/settings/ssov2/default:
@@ -4276,11 +4508,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Returns the default portal SSO settings.
   /api/2.0/settings/ssov2/constants:
@@ -4303,11 +4537,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Returns the SSO settings constants.
   /api/2.0/settings/statistics/spaceusage/{id}:
@@ -4339,11 +4575,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Returns the space usage statistics for the module with the ID specified in the request.
   /api/2.0/settings/storage:
@@ -4368,11 +4606,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Returns a list of all the portal storages.
     put:
@@ -4403,11 +4643,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Updates a storage with the parameters specified in the request.
     delete:
@@ -4427,11 +4669,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Resets the storage settings to the default parameters.
   /api/2.0/settings/storage/progress:
@@ -4454,11 +4698,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Returns the storage progress.
   /api/2.0/settings/storage/cdn:
@@ -4483,11 +4729,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Returns a list of all the CDN storages.
     put:
@@ -4518,11 +4766,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Updates the CDN storage with the parameters specified in the request.
     delete:
@@ -4542,11 +4792,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Resets the CDN storage settings to the default parameters.
   /api/2.0/settings/storage/backup:
@@ -4577,11 +4829,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Returns a list of all the backup storages.
   /api/2.0/settings/storage/s3/regions:
@@ -4604,11 +4858,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Returns a list of all Amazon regions.
   /api/2.0/settings/tfaapp:
@@ -4631,11 +4887,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Returns the current two-factor authentication settings.
     put:
@@ -4664,11 +4922,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Updates the two-factor authentication settings with the parameters specified in the request.
   /api/2.0/settings/tfaapp/validate:
@@ -4696,11 +4956,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Validates the two-factor authentication code specified in the request.
   /api/2.0/settings/tfaapp/confirm:
@@ -4723,11 +4985,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Returns the confirmation email URL for authorization via SMS or TFA application.
   /api/2.0/settings/tfaappwithlink:
@@ -4755,11 +5019,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Returns the confirmation email URL for updating TFA settings.
   /api/2.0/settings/tfaapp/setup:
@@ -4784,11 +5050,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Generates the setup TFA code for the current user.
   /api/2.0/settings/tfaappcodes:
@@ -4813,11 +5081,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Returns the two-factor authentication application codes.
   /api/2.0/settings/tfaappnewcodes:
@@ -4842,11 +5112,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Requests the new backup codes for the two-factor authentication application.
   /api/2.0/settings/tfaappnewapp:
@@ -4878,11 +5150,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Unlinks the current two-factor authentication application from the user account specified in the request.
   /api/2.0/settings/webhook:
@@ -4905,11 +5179,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Returns a list of the tenant webhooks.
     post:
@@ -4936,11 +5212,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Creates a new tenant webhook with the parameters specified in the request.
     put:
@@ -4967,11 +5245,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Updates a tenant webhook with the parameters specified in the request.
   /api/2.0/settings/webhook/enable:
@@ -4999,11 +5279,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Enables or disables a tenant webhook with the parameters specified in the request.
   /api/2.0/settings/webhook/{id}:
@@ -5035,11 +5317,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Removes a tenant webhook with the ID specified in the request.
   /api/2.0/settings/webhooks/log:
@@ -5114,11 +5398,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Returns the logs of the webhook activities.
   /api/2.0/settings/webhook/{id}/retry:
@@ -5154,11 +5440,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Retries a webhook with the ID specified in the request.
   /api/2.0/settings/webhook/retry:
@@ -5186,11 +5474,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Retries all the webhooks with the IDs specified in the request.
   /api/2.0/settings/webhook/triggers:
@@ -5213,11 +5503,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Returns a list of triggers for a webhook.
   /api/2.0/settings/webplugins:
@@ -5251,11 +5543,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Adds a web plugin from a file to the current portal.
     get:
@@ -5286,11 +5580,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Returns the portal web plugins.
   /api/2.0/settings/webplugins/{name}:
@@ -5323,11 +5619,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Returns a web plugin by the name specified in the request.
     put:
@@ -5361,11 +5659,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Updates a web plugin with the parameters specified in the request.
     delete:
@@ -5393,11 +5693,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Deletes a web plugin by the name specified in the request.
   /api/2.0/keys:
@@ -5425,11 +5727,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Creates a user API key with the parameters specified in the request.
     get:
@@ -5451,11 +5755,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Returns a list of all API keys for the current user.
   /api/2.0/keys/permissions:
@@ -5478,11 +5784,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Returns a list of all available permissions for the API key.
   /api/2.0/keys/{keyId}:
@@ -5520,11 +5828,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Updates an existing API key changing its name, permissions and status.
     delete:
@@ -5554,11 +5864,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Delete a user API key by its ID.
   /api/2.0/group:
@@ -5599,11 +5911,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
     post:
       tags:
@@ -5629,11 +5943,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Adds a new group with the group manager, name, and members specified in the request.
   /api/2.0/group/{id}:
@@ -5677,11 +5993,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
     put:
       tags:
@@ -5719,11 +6037,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Updates the existing group changing the group manager, name, and/or members.
     delete:
@@ -5756,11 +6076,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Deletes a group with the ID specified in the request from the list of groups on the portal.
   /api/2.0/group/user/{userid}:
@@ -5792,11 +6114,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Returns a list of groups for the user with the ID specified in the request.
   /api/2.0/group/{fromId}/members/{toId}:
@@ -5838,11 +6162,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Moves all the members from the selected group to another one specified in the request.
   /api/2.0/group/{id}/members:
@@ -5880,11 +6206,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Replaces the group members with those specified in the request.
     put:
@@ -5923,11 +6251,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Adds new group members to the group with the ID specified in the request.
     delete:
@@ -5966,11 +6296,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Removes the group members specified in the request from the selected group.
   /api/2.0/group/{id}/manager:
@@ -6010,11 +6342,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Sets a user with the ID specified in the request as a group manager.
   /api/2.0/group/room/{id}:
@@ -6054,11 +6388,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Returns groups with their sharing settings.
   /api/2.0/people/{userid}/contacts:
@@ -6099,11 +6435,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Deletes the contacts of the user with the ID specified in the request from the portal.
     post:
@@ -6143,11 +6481,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Sets the contacts of the user with the ID specified in the request replacing the current portal data with the new data.
     put:
@@ -6187,11 +6527,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Updates the contact information of the user with the ID specified in the request merging the new data into the current portal data.
   /api/2.0/people/guests:
@@ -6217,11 +6559,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Deletes guests from the list and excludes them from rooms to which they were invited.
   /api/2.0/people/guests/share/approve:
@@ -6253,11 +6597,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Approves a guest sharing link and returns the detailed information about a guest.
   /api/2.0/people/{userid}/password:
@@ -6301,11 +6647,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Sets a new password to the user with the ID specified in the request.
   /api/2.0/people/password:
@@ -6367,11 +6715,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Creates the user photo thumbnails by coordinates of the original image specified in the request.
   /api/2.0/people/{userid}/photo:
@@ -6406,11 +6756,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Deletes a photo of the user with the ID specified in the request.
     get:
@@ -6444,11 +6796,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Returns a photo of the user with the ID specified in the request.
     put:
@@ -6488,11 +6842,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Updates a photo of the user with the ID specified in the request.
     post:
@@ -6546,11 +6902,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Uploads a photo of the user with the ID specified in the request.
   /api/2.0/people/tokendiagnostics:
@@ -6573,11 +6931,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Returns the user claims.
   /api/2.0/people:
@@ -6607,11 +6967,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Adds a new portal user with the first name, last name, email address, and several optional parameters specified in the request.
     get:
@@ -6633,11 +6995,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Returns a list of profiles for all the portal users.
   /api/2.0/people/invite:
@@ -6667,11 +7031,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Invites users specified in the request to the current portal.
     put:
@@ -6700,11 +7066,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Resends emails to the users who have not activated their emails.
   /api/2.0/people/{userid}:
@@ -6741,11 +7109,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Deletes a user with the ID specified in the request from the portal.
     get:
@@ -6779,11 +7149,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Returns the detailed information about a profile of the user with the name specified in the request.
     put:
@@ -6825,11 +7197,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Updates the data for the selected portal user with the first name, last name, email address, and/or optional parameters specified in the request.
   /api/2.0/people/@self:
@@ -6856,11 +7230,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Deletes the current user profile.
     get:
@@ -6882,11 +7258,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Returns the detailed information about the current user profile.
   /api/2.0/people/email:
@@ -6921,11 +7299,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Returns the detailed information about a profile of the user with the email specified in the request.
     post:
@@ -6958,11 +7338,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Sends a message to the user email with the instructions to change the email address connected to the portal.
   /api/2.0/people/delete:
@@ -6992,11 +7374,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Deletes a list of the users with the IDs specified in the request.
   /api/2.0/people/{userid}/culture:
@@ -7037,11 +7421,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Updates the user culture code with the parameters specified in the request.
   /api/2.0/people/userquota:
@@ -7071,11 +7457,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Changes a quota limit for the users with the IDs specified in the request.
   /api/2.0/people/resetquota:
@@ -7109,11 +7497,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Resets a quota limit of users with the IDs specified in the request.
   /api/2.0/accounts/room/{id}/search:
@@ -7195,11 +7585,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Returns the account entries with their sharing settings.
   /api/2.0/people/status/{status}/search:
@@ -7237,11 +7629,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Returns a list of users matching the status filter and search query.
   /api/2.0/people/filter:
@@ -7378,11 +7772,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Returns a list of users with full information about them matching the parameters specified in the request.
   /api/2.0/people/search:
@@ -7412,11 +7808,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Returns a list of users matching the search query. This method uses the query parameters.
   /api/2.0/people/@search/{query}:
@@ -7449,11 +7847,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Returns a list of users matching the search query.
   /api/2.0/people/simple/filter:
@@ -7590,11 +7990,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Returns a list of users matching the parameters specified in the request.
   /api/2.0/people/room/{id}:
@@ -7676,11 +8078,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Returns the users with the sharing settings in a room with the ID specified in request.
   /api/2.0/people/theme:
@@ -7703,11 +8107,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Returns a theme which is set to the current portal.
     put:
@@ -7734,11 +8140,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Changes the current portal theme.
   /api/2.0/people/thirdparty/providers:
@@ -7803,11 +8211,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Links a third-party account specified in the request to the user profile.
   /api/2.0/people/thirdparty/signup:
@@ -7852,11 +8262,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Unlinks a third-party account specified in the request from the user profile.
   /api/2.0/people/reassign/progress/{userid}:
@@ -7888,11 +8300,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Returns the progress of the started data reassignment for the user with the ID specified in the request.
   /api/2.0/people/reassign/start:
@@ -7922,11 +8336,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Starts the data reassignment for the user with the ID specified in the request.
   /api/2.0/people/reassign/terminate:
@@ -7954,11 +8370,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Terminates the data reassignment for the user with the ID specified in the request.
   /api/2.0/people/reassign/necessary:
@@ -7994,11 +8412,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Checks if the reassignment of rooms and shared files is necessary or not.
   /api/2.0/people/remove/progress/{userid}:
@@ -8030,11 +8450,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Returns the progress of the started data deletion for the user with the ID specified in the request.
   /api/2.0/people/self/delete:
@@ -8059,11 +8481,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Sends the instructions for deleting a user profile.
   /api/2.0/people/remove/start:
@@ -8097,11 +8521,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Starts the data deletion for the user with the ID specified in the request.
   /api/2.0/people/remove/terminate:
@@ -8125,11 +8551,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Terminates the data deletion for the user with the ID specified in the request.
   /api/2.0/people/delete/personal/start:
@@ -8154,11 +8582,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Starts deleting the personal folder.
   /api/2.0/people/delete/personal/progress:
@@ -8181,11 +8611,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Returns the progress of deleting the personal folder.
   /api/2.0/people/status/{status}:
@@ -8215,11 +8647,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Returns a list of profiles filtered by the user status.
     put:
@@ -8254,11 +8688,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Changes a status of the users with the IDs specified in the request.
   /api/2.0/people/activationstatus/{activationstatus}:
@@ -8294,11 +8730,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Sets the required activation status to the list of users with the IDs specified in the request.
   /api/2.0/people/type/{type}:
@@ -8334,11 +8772,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Changes a type of the users with the IDs specified in the request.
   /api/2.0/people/type:
@@ -8368,11 +8808,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Starts updating the type of the user or guest when reassigning rooms and shared files.
   /api/2.0/people/type/progress/{userid}:
@@ -8404,11 +8846,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Returns the progress of updating the user type.
   /api/2.0/people/type/terminate:
@@ -8436,11 +8880,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Terminates the process of updating the type of the user or guest.
   /api/2.0/people/guests/{userid}/share:
@@ -8476,11 +8922,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Returns a link to share a guest with another user.
   /api/2.0/files/file/{fileId}/saveediting:
@@ -8547,11 +8995,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Saves edits to a file with the ID specified in the request.
   /api/2.0/files/file/{fileId}/startedit:
@@ -8616,11 +9066,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Starts filling a file with the ID specified in the request.
   /api/2.0/files/file/{fileId}/trackeditfile:
@@ -8751,11 +9203,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Returns a link to download a file with the ID specified in the request asynchronously.
   /api/2.0/files/file/referencedata:
@@ -8783,11 +9237,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Returns the reference data to uniquely identify a file in its system and check the availability of insering data into the destination spreadsheet by the external link.
   /api/2.0/files/file/{fileId}/protectusers:
@@ -8819,11 +9275,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Returns a list of users with their access rights to the protected file with the ID specified in the request.
   /api/2.0/files/file/{fileId}/log:
@@ -8869,11 +9327,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Returns the list of actions performed on the file with the specified identifier.
   /api/2.0/files/file/{fileId}/history:
@@ -8913,11 +9373,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Changes the version history of a file with the ID specified in the request.
     get:
@@ -8971,11 +9433,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: "Returns a pre-signed URL to download a file with the specified ID.\r\nThis temporary link provides secure access to the file."
   /api/2.0/files/file/{fileId}/isformpdf:
@@ -9007,11 +9471,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Checks if the PDF file is a form or not.
   /api/2.0/files/file/{fileId}/copyas:
@@ -9055,11 +9521,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Copies (and converts if possible) an existing file to the specified folder.
   /api/2.0/files/{folderId}/file:
@@ -9101,11 +9569,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
   /api/2.0/files/{folderId}/html:
     post:
@@ -9144,11 +9614,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Creates an HTML (.html) file in the selected folder with the title and contents specified in the request.
   /api/2.0/files/{folderId}/text:
@@ -9186,11 +9658,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Creates a text (.txt) file in the selected folder with the title and contents specified in the request.
   /api/2.0/files/file/{fileId}:
@@ -9229,11 +9703,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Deletes a file with the ID specified in the request.
     get:
@@ -9404,11 +9880,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Locks a file with the ID specified in the request.
   /api/2.0/files/file/{fileId}/customfilter:
@@ -9446,11 +9924,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Sets the Custom Filter editing mode to a file with the ID specified in the request.
   /api/2.0/files/file/{fileId}/restoreversion:
@@ -9530,11 +10010,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Creates a primary external link by the identifier specified in the request.
     get:
@@ -9600,11 +10082,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Sets order of the file with ID specified in the request.
   /api/2.0/files/order:
@@ -9632,11 +10116,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Sets order of the files.
   /api/2.0/files/file/{id}/links:
@@ -9668,11 +10154,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Returns the external links of a file with the ID specified in the request.
     put:
@@ -9709,11 +10197,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Sets an external link to a file with the ID specified in the request.
   /api/2.0/files/file/{id}/saveaspdf:
@@ -9753,11 +10243,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Saves a file with the identifier specified in the request as a PDF document.
   /api/2.0/files/file/{fileId}/formrolemapping:
@@ -9793,11 +10285,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Saves the form role mapping.
   /api/2.0/files/file/{fileId}/formroles:
@@ -9831,11 +10325,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Returns all roles for the specified form.
   /api/2.0/files/file/{fileId}/manageformfilling:
@@ -9867,11 +10363,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Performs the specified form filling action.
   /api/2.0/files/@my/file:
@@ -9903,11 +10401,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
   /api/2.0/files/@my/html:
     post:
@@ -9936,11 +10436,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Creates an HTML (.html) file in the "My documents" section with the title and contents specified in the request.
   /api/2.0/files/@my/text:
@@ -9968,11 +10470,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Creates a text (.txt) file in the "My documents" section with the title and contents specified in the request.
   /api/2.0/files/thumbnails:
@@ -10050,11 +10554,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Adds files with the IDs specified in the request to the template list.
     delete:
@@ -10088,11 +10594,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Removes files with the IDs specified in the request from the template list.
   /api/2.0/files/recent:
@@ -10120,11 +10628,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Removes files with the IDs specified in the request from the "Recent" section.
   /api/2.0/files/file/{fileId}/edit_session:
@@ -10166,11 +10676,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
   /api/2.0/files/folder/{folderId}/log:
     get:
@@ -10215,11 +10727,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Returns the activity history of a folder with a specified identifier.
   /api/2.0/files/{folderId}/formfilter:
@@ -10280,11 +10794,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Creates a new folder with the title specified in the request. The parent folder ID can be also specified.
     delete:
@@ -10321,11 +10837,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Deletes a folder with the ID specified in the request.
     get:
@@ -10386,11 +10904,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Renames the selected folder with a new title specified in the request.
   /api/2.0/files/folder/{folderId}/order:
@@ -10428,11 +10948,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Sets the file order in the folder with ID specified in the request.
   /api/2.0/files/{folderId}:
@@ -10546,11 +11068,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Returns a path to the folder with the ID specified in the request.
   /api/2.0/files/{folderId}/subfolders:
@@ -10584,11 +11108,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Returns a list of all the subfolders from a folder with the ID specified in the request.
   /api/2.0/files/{folderId}/news:
@@ -10622,11 +11148,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Returns a list of all the new items from a folder with the ID specified in the request.
   /api/2.0/files/filesusedspace:
@@ -10649,11 +11177,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Returns the used space of files in the root folders.
   /api/2.0/files/folder/{id}/link:
@@ -10723,11 +11253,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Returns the detailed list of files and folders located in the "My documents" section.
   /api/2.0/files/@privacy:
@@ -10767,11 +11299,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Returns the detailed list of files and folders located in the "Private Room" section.
   /api/2.0/files/@root:
@@ -10817,11 +11351,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Returns all the sections matching the parameters specified in the request.
   /api/2.0/files/@trash:
@@ -10866,11 +11402,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Returns the detailed list of files and folders located in the "Trash" section.
   /api/2.0/files/{folderId}/upload/check:
@@ -10908,11 +11446,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Checks the file uploads to the folder with the ID specified in the request.
   /api/2.0/files/{folderId}/insert:
@@ -11023,11 +11563,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Inserts a file specified in the request to the selected folder by single file uploading.
   /api/2.0/files/{folderId}/upload:
@@ -11070,11 +11612,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
   /api/2.0/files/@my/insert:
     post:
@@ -11175,11 +11719,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Inserts a file specified in the request to the "My documents" section by single file uploading.
   /api/2.0/files/@my/upload:
@@ -11213,11 +11759,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
   /api/2.0/files/file/{fileId}/checkconversion:
     get:
@@ -11254,11 +11802,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Checks the conversion status of a file with the ID specified in the request.
     put:
@@ -11295,11 +11845,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Starts a conversion operation of a file with the ID specified in the request.
   /api/2.0/files/file/{fileId}/comment:
@@ -11337,11 +11889,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Updates a comment in a file with the ID specified in the request.
   /api/2.0/files/fileops/bulkdownload:
@@ -11392,11 +11946,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Copies all the selected files and folders to the folder with the ID specified in the request.
   /api/2.0/files/fileops/delete:
@@ -11426,11 +11982,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Deletes the files and folders with the IDs specified in the request.
   /api/2.0/files/fileops/deleteversion:
@@ -11458,11 +12016,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Deletes the file versions with the IDs specified in the request.
   /api/2.0/files/fileops/emptytrash:
@@ -11485,11 +12045,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Deletes all the files and folders from the "Trash" folder.
   /api/2.0/files/fileops:
@@ -11552,11 +12114,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Marks the files and folders with the IDs specified in the request as read.
   /api/2.0/files/fileops/move:
@@ -11586,11 +12150,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Moves or copies all the selected files and folders to the folder with the ID specified in the request.
     get:
@@ -11620,11 +12186,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Checks if files or folders can be moved or copied to the specified folder, moves or copies them, and returns their information.
   /api/2.0/files/fileops/duplicate:
@@ -11654,11 +12222,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Duplicates all the selected files and folders.
   /api/2.0/files/fileops/checkdestfolder:
@@ -11689,11 +12259,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Checks if files can be moved or copied to the specified folder.
   /api/2.0/files/fileops/terminate/{id}:
@@ -11756,11 +12328,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
   /api/2.0/files/rooms/roomquota:
     put:
@@ -11787,11 +12361,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Changes the quota limit for the rooms with the IDs specified in the request.
   /api/2.0/files/rooms/resetquota:
@@ -11819,11 +12395,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Resets the quota limit for the rooms with the IDs specified in the request.
   /api/2.0/files/roomtemplate:
@@ -11851,11 +12429,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Starts creating the room template.
   /api/2.0/files/roomtemplate/status:
@@ -11878,11 +12458,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Returns the progress status of the room template creation process.
   /api/2.0/files/roomtemplate/{id}/public:
@@ -11914,11 +12496,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Returns the public settings of the room template with the ID specified in the request.
   /api/2.0/files/roomtemplate/public:
@@ -11942,11 +12526,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Sets the public settings for the room template with the ID specified in the request.
   /api/2.0/files/rooms:
@@ -11974,11 +12560,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Creates a room in the "Rooms" section.
     get:
@@ -12060,11 +12648,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Returns the contents of the "Rooms" section by the parameters specified in the request.
   /api/2.0/files/rooms/fromtemplate:
@@ -12092,11 +12682,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Creates a room in the "Rooms" section based on the template.
   /api/2.0/files/rooms/fromtemplate/status:
@@ -12119,11 +12711,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Returns the progress of creating a room from the template.
   /api/2.0/files/rooms/{id}:
@@ -12183,11 +12777,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Updates a room with the ID specified in the request.
     delete:
@@ -12224,11 +12820,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Removes a room with the ID specified in the request.
   /api/2.0/files/rooms/{id}/archive:
@@ -12266,11 +12864,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Moves a room with the ID specified in the request to the "Archive" section.
   /api/2.0/files/rooms/{id}/unarchive:
@@ -12308,11 +12908,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Moves a room with the ID specified in the request from the "Archive" section to the "Rooms" section.
   /api/2.0/files/rooms/{id}/share:
@@ -12350,11 +12952,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Sets the access rights to the room with the ID specified in the request.
     get:
@@ -12390,11 +12994,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Returns the access rights of a room with the ID specified in the request.
   /api/2.0/files/rooms/{id}/links:
@@ -12432,11 +13038,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Sets the room external or invitation link with the ID specified in the request.
     get:
@@ -12472,11 +13080,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Returns the links of the room with the ID specified in the request.
   /api/2.0/files/rooms/{id}/link:
@@ -12510,11 +13120,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Returns the primary external link of the room with the ID specified in the request.
   /api/2.0/files/rooms/{id}/tags:
@@ -12554,11 +13166,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Adds the tags to a room with the ID specified in the request.
     delete:
@@ -12597,11 +13211,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Removes the tags from a room with the ID specified in the request.
   /api/2.0/files/rooms/{id}/logo:
@@ -12641,11 +13257,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Creates a logo for a room with the ID specified in the request.
     delete:
@@ -12676,11 +13294,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Removes a logo from a room with the ID specified in the request.
   /api/2.0/files/rooms/{id}/cover:
@@ -12722,11 +13342,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Changes a cover of a room with the ID specified in the request.
   /api/2.0/files/rooms/covers:
@@ -12749,11 +13371,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Returns a list of all covers.
   /api/2.0/files/rooms/{id}/pin:
@@ -12785,11 +13409,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Pins a room with the ID specified in the request to the top of the list.
   /api/2.0/files/rooms/{id}/unpin:
@@ -12821,11 +13447,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Unpins a room with the ID specified in the request from the top of the list.
   /api/2.0/files/rooms/{id}/resend:
@@ -12859,11 +13487,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Resends the email invitations to a room with the ID specified in the request to the selected users.
   /api/2.0/files/rooms/{id}/reorder:
@@ -12895,11 +13525,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Reorders the room with ID specified in the request.
   /api/2.0/files/rooms/{id}/news:
@@ -12931,11 +13563,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Returns a list of all the new items from a room with the ID specified in the request.
   /api/2.0/files/rooms/thirdparty/{id}:
@@ -12972,11 +13606,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Creates a room in the "Rooms" section stored in a third-party storage.
   /api/2.0/files/tags:
@@ -13006,11 +13642,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Creates a custom tag with the parameters specified in the request.
     get:
@@ -13032,11 +13670,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Returns a list of custom tags.
     delete:
@@ -13061,11 +13701,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Deletes a bunch of custom tags specified in the request.
   /api/2.0/files/logos:
@@ -13104,11 +13746,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Uploads a temporary image to create a room logo.
   /api/2.0/files/rooms/{id}/indexexport:
@@ -13142,11 +13786,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Starts the index export of a room with the ID specified in the request.
   /api/2.0/files/rooms/indexexport:
@@ -13169,11 +13815,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Returns the room index export.
     delete:
@@ -13191,11 +13839,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Terminates the room index export.
   /api/2.0/files/rooms/news:
@@ -13218,11 +13868,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Returns the room new items.
   /api/2.0/files/docservice:
@@ -13252,11 +13904,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Checks the document service location URL.
   /api/2.0/files/thirdparty:
@@ -13284,11 +13938,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Changes the access to the third-party settings.
     get:
@@ -13310,11 +13966,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Returns a list of all the connected third-party accounts.
     post:
@@ -13345,11 +14003,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
   /api/2.0/files/changedeleteconfrim:
     put:
@@ -13376,11 +14036,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Specifies whether to confirm the file deletion or not.
   /api/2.0/files/settings/downloadtargz:
@@ -13408,11 +14070,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Changes the format of the downloaded archive from .zip to .tar.gz. This method uses the body parameters.
   /api/2.0/files/settings/external:
@@ -13440,11 +14104,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Changes the ability to share a file externally.
   /api/2.0/files/settings/externalsocialmedia:
@@ -13472,11 +14138,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Changes the ability to share a file externally on social networks.
   /api/2.0/files/forcesave:
@@ -13499,11 +14167,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Specifies if the file forcesaving is enabled or not.
   /api/2.0/files/settings:
@@ -13540,11 +14210,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Returns the information about the "Documents" module.
   /api/2.0/files/hideconfirmcanceloperation:
@@ -13572,11 +14244,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Hides the confirmation dialog when canceling operations.
   /api/2.0/files/hideconfirmconvert:
@@ -13604,11 +14278,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Hides the confirmation dialog for saving the file copy in the original format when converting a file.
   /api/2.0/files/hideconfirmroomlifetime:
@@ -13636,11 +14312,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Hides the confirmation dialog when changing the room lifetime settings.
   /api/2.0/files/@privacy/available:
@@ -13663,11 +14341,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Checks if the "Private Room" settings are available or not.
   /api/2.0/files/storeforcesave:
@@ -13690,11 +14370,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Changes the ability to store the forcesaved file versions.
   /api/2.0/files/storeoriginal:
@@ -13722,11 +14404,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Changes the ability to upload documents in the original formats as well.
   /api/2.0/files/keepnewfilename:
@@ -13754,11 +14438,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Specifies whether to ask a user for a file name on creation or not.
   /api/2.0/files/displayfileextension:
@@ -13786,11 +14472,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Specifies whether to display a file extension or not.
   /api/2.0/files/updateifexist:
@@ -13818,11 +14506,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Updates a file version if a file with such a name already exists.
   /api/2.0/files/settings/autocleanup:
@@ -13845,11 +14535,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Returns the trash bin auto-clearing setting.
     put:
@@ -13876,11 +14568,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Updates the trash bin auto-clearing setting.
   /api/2.0/files/settings/dafaultaccessrights:
@@ -13970,11 +14664,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Changes the default access rights in the sharing settings.
   /api/2.0/files/settings/openeditorinsametab:
@@ -14002,11 +14698,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Changes the ability to open the document in the same browser tab.
   /api/2.0/files/thirdparty/capabilities:
@@ -14033,11 +14731,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
   /api/2.0/files/thirdparty/{providerId}:
     delete:
@@ -14068,11 +14768,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Removes the third-party storage service account with the ID specified in the request.
   /api/2.0/files/thirdparty/common:
@@ -14095,11 +14797,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Returns a list of the third-party services connected to the "Common" section.
   /api/2.0/files/thirdparty/backup:
@@ -14122,11 +14826,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Returns a backup of the connected third-party account.
     post:
@@ -14157,11 +14863,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
   /api/2.0/files/thirdparty/providers:
     get:
@@ -14187,11 +14895,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
   /api/2.0/backup/getbackupschedule:
     get:
@@ -14222,11 +14932,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Returns the backup schedule of the current portal.
   /api/2.0/backup/createbackupschedule:
@@ -14262,11 +14974,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Creates the backup schedule of the current portal with the parameters specified in the request.
   /api/2.0/backup/deletebackupschedule:
@@ -14298,11 +15012,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Deletes the backup schedule of the current portal.
   /api/2.0/backup/startbackup:
@@ -14338,11 +15054,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Starts the backup of the current portal with the parameters specified in the request.
   /api/2.0/backup/getbackupprogress:
@@ -14374,11 +15092,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Returns the progress of the started backup.
   /api/2.0/backup/getbackuphistory:
@@ -14410,11 +15130,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Returns the history of the started backup.
   /api/2.0/backup/deletebackup/{id}:
@@ -14448,11 +15170,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Deletes the backup with the ID specified in the request.
   /api/2.0/backup/deletebackuphistory:
@@ -14484,11 +15208,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Deletes the backup history from the current portal.
   /api/2.0/backup/startrestore:
@@ -14524,11 +15250,13 @@ paths:
             - read
             - write
           Bearer: []
-          ApiKeyBearer: []
+          ApiKeyBearer:
+            - read
+            - write
           Basic: []
           OAuth2:
-            - api.read
-            - api.write
+            - read
+            - write
           OpenId: []
       description: Starts the data restoring process of the current portal with the parameters specified in the request.
   /api/2.0/backup/getrestoreprogress:
@@ -14589,7 +15317,9 @@ paths:
         '400':
           description: Invalid request parameters
       security:
-        - x-signature: []
+        - asc_auth_key:
+            - read
+            - write
     post:
       tags:
         - Authorization
@@ -14616,7 +15346,9 @@ paths:
         '400':
           description: Invalid request parameters
       security:
-        - x-signature: []
+        - asc_auth_key:
+            - read
+            - write
   /oauth2/token:
     post:
       tags:
@@ -14747,7 +15479,9 @@ paths:
               schema:
                 $ref: '#/components/schemas/ErrorResponse'
       security:
-        - x-signature: []
+        - asc_auth_key:
+            - read
+            - write
     put:
       tags:
         - Client Management
@@ -14807,7 +15541,9 @@ paths:
               schema:
                 $ref: '#/components/schemas/ErrorResponse'
       security:
-        - x-signature: []
+        - asc_auth_key:
+            - read
+            - write
     delete:
       tags:
         - Client Management
@@ -14861,7 +15597,9 @@ paths:
               schema:
                 $ref: '#/components/schemas/ErrorResponse'
       security:
-        - x-signature: []
+        - asc_auth_key:
+            - read
+            - write
   /api/2.0/clients:
     get:
       tags:
@@ -14958,7 +15696,9 @@ paths:
               schema:
                 $ref: '#/components/schemas/ErrorResponse'
       security:
-        - x-signature: []
+        - asc_auth_key:
+            - read
+            - write
     post:
       tags:
         - Client Management
@@ -15030,7 +15770,9 @@ paths:
               schema:
                 $ref: '#/components/schemas/ErrorResponse'
       security:
-        - x-signature: []
+        - asc_auth_key:
+            - read
+            - write
   /api/2.0/clients/{clientId}/regenerate:
     patch:
       tags:
@@ -15087,7 +15829,9 @@ paths:
               schema:
                 $ref: '#/components/schemas/ErrorResponse'
       security:
-        - x-signature: []
+        - asc_auth_key:
+            - read
+            - write
   /api/2.0/clients/{clientId}/activation:
     patch:
       tags:
@@ -15148,7 +15892,9 @@ paths:
               schema:
                 $ref: '#/components/schemas/ErrorResponse'
       security:
-        - x-signature: []
+        - asc_auth_key:
+            - read
+            - write
   /api/2.0/scopes:
     get:
       tags:
@@ -15192,7 +15938,9 @@ paths:
               schema:
                 $ref: '#/components/schemas/ErrorResponse'
       security:
-        - x-signature: []
+        - asc_auth_key:
+            - read
+            - write
   /api/2.0/clients/{clientId}/public/info:
     get:
       tags:
@@ -15294,7 +16042,9 @@ paths:
         '500':
           description: Internal server error
       security:
-        - x-signature: []
+        - asc_auth_key:
+            - read
+            - write
   /api/2.0/clients/info:
     get:
       tags:
@@ -15345,7 +16095,9 @@ paths:
         '500':
           description: Internal server error
       security:
-        - x-signature: []
+        - asc_auth_key:
+            - read
+            - write
   /api/2.0/clients/consents:
     get:
       tags:
@@ -15406,7 +16158,9 @@ paths:
                 limit: 50
                 last_modified_on: '2024-04-04T12:00:00Z'
       security:
-        - x-signature: []
+        - asc_auth_key:
+            - read
+            - write
   /api/2.0/clients/{clientId}/revoke:
     delete:
       tags:
@@ -15467,7 +16221,9 @@ paths:
               schema:
                 $ref: '#/components/schemas/ErrorResponse'
       security:
-        - x-signature: []
+        - asc_auth_key:
+            - read
+            - write
 components:
   schemas:
     ActionType:
@@ -15670,6 +16426,7 @@ components:
           example: true
         feedbackAndSupportEnabled:
           type: boolean
+          description: Specifies if the "Feedback & Support" link is available or not.
           example: true
         userForumEnabled:
           type: boolean
@@ -27251,8 +28008,9 @@ components:
             - IsFavorite
             - IsTemplate
             - IsFillFormDraft
+            - IsCompletedForm
           type: string
-          description: '[None - None, IsEditing - Is editing, IsNew - Is new, IsConverting - Is converting, IsOriginal - Is original, IsEditingAlone - Is editing alone, IsFavorite - Is favorite, IsTemplate - Is template, IsFillFormDraft - Is fill form draft]'
+          description: '[None - None, IsEditing - Is editing, IsNew - Is new, IsConverting - Is converting, IsOriginal - Is original, IsEditingAlone - Is editing alone, IsFavorite - Is favorite, IsTemplate - Is template, IsFillFormDraft - Is fill form draft, IsCompletedForm - Is completed form]'
           example: None
         - enum:
             - 0
@@ -27264,8 +28022,9 @@ components:
             - 32
             - 64
             - 128
+            - 256
           type: integer
-          description: '[0 - None, 1 - Is editing, 2 - Is new, 4 - Is converting, 8 - Is original, 16 - Is editing alone, 32 - Is favorite, 64 - Is template, 128 - Is fill form draft]'
+          description: '[0 - None, 1 - Is editing, 2 - Is new, 4 - Is converting, 8 - Is original, 16 - Is editing alone, 32 - Is favorite, 64 - Is template, 128 - Is fill form draft, 256 - Is completed form]'
           example: 0
           x-enum-varnames:
             - None
@@ -27277,6 +28036,7 @@ components:
             - IsFavorite
             - IsTemplate
             - IsFillFormDraft
+            - IsCompletedForm
           x-enum-descriptions:
             - None
             - Is editing
@@ -27287,6 +28047,7 @@ components:
             - Is favorite
             - Is template
             - Is fill form draft
+            - Is completed form
       description: The file status.
     FileType:
       oneOf:
@@ -29013,10 +29774,10 @@ components:
       type: object
       properties:
         fileKey:
-          type: integer
+          type: string
           description: The unique document identifier used by the service to get a link to the file.
-          format: int32
-          example: 1234
+          nullable: true
+          example: some text
         instanceId:
           type: string
           description: The unique system identifier.
@@ -31941,10 +32702,10 @@ components:
       scheme: bearer
       bearerFormat: JWT
     ApiKeyBearer:
-      type: http
+      type: apiKey
       description: Authentication is determined by the 'Authorization' header
-      scheme: bearer
-      bearerFormat: API Key
+      name: ApiKeyBearer
+      in: header
     OAuth2:
       type: oauth2
       description: OAuth2 flow with Authorization Code
@@ -31959,11 +32720,6 @@ components:
       type: openIdConnect
       description: OpenID Connect authentication
       openIdConnectUrl: ''
-    x-signature:
-      type: apiKey
-      description: ASC JWT Signature
-      name: x-signature
-      in: cookie
 x-tagGroups:
   - name: Api keys
     tags:
