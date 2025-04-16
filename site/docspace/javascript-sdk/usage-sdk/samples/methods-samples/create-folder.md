@@ -1,5 +1,5 @@
-# Add tags to room
-This example demonstrates how to add custom tags to a room using a button.
+# Create folder
+This example demonstrates how to create a folder in a room.
 
 ## Before you start
 Please make sure you are using a server environment to run the HTML file because the JavaScript SDK must be launched on the server.
@@ -11,7 +11,7 @@ You need to [add the URL](../../../get-started/basic-concepts.md#step-1-specifyi
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Add Tags to Room</title>
+    <title>Create Folder</title>
 
     <!-- Replace with your actual portal URL -->
     <script src="{PORTAL_SRC}/static/scripts/sdk/1.0.1/api.js"></script>
@@ -38,25 +38,26 @@ You need to [add the URL](../../../get-started/basic-concepts.md#step-1-specifyi
     <iframe id="ds-frame"></iframe>
 
     <!-- Trigger Button -->
-    <button id="button">Add Tags</button>
+    <button id="button">Create Folder</button>
   </body>
 
   <!-- Step 2: JavaScript SDK Logic -->
   <script>
+    const roomId = "71234"; // Replace with your DocSpace Room ID
+
+    function onAppReady() {
+      document.getElementById("button").onclick = () => {
+        docSpace.createFolder(roomId, "New Folder");
+      };
+    }
+
     const config = {
       frameId: "ds-frame",
       width: "100%",
       height: "700px",
-      events: {
-        onAppReady: function () {
-          const roomId = "71234"; // Replace with your actual room ID
-          const tags = ["important", "team-docs"]; // Tags to be added
-
-          document.getElementById("button").onclick = () => {
-            docSpace.addTagsToRoom(roomId, tags);
-          };
-        },
-      },
+      rootPath: `/rooms/shared/${roomId}`,
+      filter: { folder: roomId },
+      events: { onAppReady },
     };
 
     const docSpace = DocSpace.SDK.initManager(config);
@@ -65,7 +66,7 @@ You need to [add the URL](../../../get-started/basic-concepts.md#step-1-specifyi
 ```
 
 ## Step 1. Set HTML structure
-Create a simple HTML page with an embedded DocSpace frame and a button to trigger the tag-adding action.
+Create an HTML page with an embedded DocSpace frame and a button to trigger folder creation.
 
 ``` html
 <!-- Step 1: HTML Setup -->
@@ -73,7 +74,7 @@ Create a simple HTML page with an embedded DocSpace frame and a button to trigge
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Add Tags to Room</title>
+    <title>Create Folder</title>
 
     <!-- Replace with your actual portal URL -->
     <script src="{PORTAL_SRC}/static/scripts/sdk/1.0.1/api.js"></script>
@@ -100,7 +101,7 @@ Create a simple HTML page with an embedded DocSpace frame and a button to trigge
     <iframe id="ds-frame"></iframe>
 
     <!-- Trigger Button -->
-    <button id="button">Add Tags</button>
+    <button id="button">Create Folder</button>
   </body>
 </html>
 ```
@@ -108,22 +109,23 @@ Create a simple HTML page with an embedded DocSpace frame and a button to trigge
 The API JavaScript file can normally be found in the following DocSpace folder: **\{PORTAL_SRC\}/static/scripts/sdk/1.0.1/api.js** where **\{PORTAL_SRC\}** is the name of the server with the ONLYOFFICE DocSpace installed.
 
 ## Step 2. JavaScript SDK Logic
-Create a script block to configure and initialize the SDK. Use the [addTagsToRoom()](../../../usage-sdk/methods.md#addtagstoroom) method to assign one or more tags to a DocSpace room.
+Create a script block to configure and initialize the SDK. Use the [createFolder()](../../../usage-sdk/methods.md#createfolder) method to create a new folder inside the specified room.
 
 ``` ts
+const roomId = "71234"; // Replace with your DocSpace Room ID
+function onAppReady() {
+  document.getElementById("button").onclick = () => {
+  docSpace.createFolder(roomId, "New Folder");
+  };
+}
+
 const config = {
   frameId: "ds-frame",
   width: "100%",
   height: "700px",
-  events: {
-    onAppReady: function () {
-      const roomId = "71234"; // Replace with your actual room ID
-      const tags = ["important", "team-docs"]; // Tags to be added
-      document.getElementById("button").onclick = () => {
-        docSpace.addTagsToRoom(roomId, tags);
-      };
-    },
-  },
+  rootPath: `/rooms/shared/${roomId}`,
+  filter: { folder: roomId },
+  events: { onAppReady },
 };
 
 const docSpace = DocSpace.SDK.initManager(config);

@@ -1,19 +1,19 @@
-# Add tags to room
-This example demonstrates how to add custom tags to a room using a button.
+# Remove tags from room
+This example demonstrates how to remove one or more tags from a room using the JavaScript SDK method.
 
 ## Before you start
 Please make sure you are using a server environment to run the HTML file because the JavaScript SDK must be launched on the server.
 You need to [add the URL](../../../get-started/basic-concepts.md#step-1-specifying-the-docspace-url) of your server's root directory to the **Developer Tools** section of DocSpace.
 
 ``` html
-<!-- Step 1: HTML Setup -->
+<!-- Step 1: HTML Structure -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Add Tags to Room</title>
+    <title>Remove Tags from Room</title>
 
-    <!-- Replace with your actual portal URL -->
+    <!-- Replace with your actual DocSpace portal URL -->
     <script src="{PORTAL_SRC}/static/scripts/sdk/1.0.1/api.js"></script>
 
     <style>
@@ -24,11 +24,12 @@ You need to [add the URL](../../../get-started/basic-concepts.md#step-1-specifyi
         transform: translateX(-50%);
         background-color: #007bff;
         color: white;
-        font-size: 16px;
-        padding: 10px 20px;
+        font-size: 20px;
+        padding: 15px 30px;
         border: none;
-        border-radius: 6px;
+        border-radius: 10px;
         cursor: pointer;
+        z-index: 1000;
       }
     </style>
   </head>
@@ -38,25 +39,25 @@ You need to [add the URL](../../../get-started/basic-concepts.md#step-1-specifyi
     <iframe id="ds-frame"></iframe>
 
     <!-- Trigger Button -->
-    <button id="button">Add Tags</button>
+    <button id="button">Remove Tags From Room</button>
   </body>
 
   <!-- Step 2: JavaScript SDK Logic -->
   <script>
-    const config = {
-      frameId: "ds-frame",
-      width: "100%",
-      height: "700px",
-      events: {
-        onAppReady: function () {
-          const roomId = "71234"; // Replace with your actual room ID
-          const tags = ["important", "team-docs"]; // Tags to be added
+    const roomId = "71234"; // Replace with your actual Room ID
+    const tagsToRemove = ["tag"]; // Replace with tags to remove
 
-          document.getElementById("button").onclick = () => {
-            docSpace.addTagsToRoom(roomId, tags);
-          };
-        },
-      },
+    function onAppReady() {
+      document.getElementById("button").onclick = () => {
+        docSpace.removeTagsFromRoom(roomId, tagsToRemove);
+      };
+    }
+
+    const config = {
+      frameId: "ds-frame",           // ID of the iframe
+      width: "100%",                 // Set full width
+      height: "700px",               // Set height
+      events: { onAppReady },        // Register event
     };
 
     const docSpace = DocSpace.SDK.initManager(config);
@@ -65,17 +66,17 @@ You need to [add the URL](../../../get-started/basic-concepts.md#step-1-specifyi
 ```
 
 ## Step 1. Set HTML structure
-Create a simple HTML page with an embedded DocSpace frame and a button to trigger the tag-adding action.
+Build an HTML page with an embedded iframe and a button to trigger tag removal.
 
 ``` html
-<!-- Step 1: HTML Setup -->
+<!-- Step 1: HTML Structure -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Add Tags to Room</title>
+    <title>Remove Tags from Room</title>
 
-    <!-- Replace with your actual portal URL -->
+    <!-- Replace with your actual DocSpace portal URL -->
     <script src="{PORTAL_SRC}/static/scripts/sdk/1.0.1/api.js"></script>
 
     <style>
@@ -86,11 +87,12 @@ Create a simple HTML page with an embedded DocSpace frame and a button to trigge
         transform: translateX(-50%);
         background-color: #007bff;
         color: white;
-        font-size: 16px;
-        padding: 10px 20px;
+        font-size: 20px;
+        padding: 15px 30px;
         border: none;
-        border-radius: 6px;
+        border-radius: 10px;
         cursor: pointer;
+        z-index: 1000;
       }
     </style>
   </head>
@@ -100,7 +102,7 @@ Create a simple HTML page with an embedded DocSpace frame and a button to trigge
     <iframe id="ds-frame"></iframe>
 
     <!-- Trigger Button -->
-    <button id="button">Add Tags</button>
+    <button id="button">Remove Tags From Room</button>
   </body>
 </html>
 ```
@@ -108,22 +110,23 @@ Create a simple HTML page with an embedded DocSpace frame and a button to trigge
 The API JavaScript file can normally be found in the following DocSpace folder: **\{PORTAL_SRC\}/static/scripts/sdk/1.0.1/api.js** where **\{PORTAL_SRC\}** is the name of the server with the ONLYOFFICE DocSpace installed.
 
 ## Step 2. JavaScript SDK Logic
-Create a script block to configure and initialize the SDK. Use the [addTagsToRoom()](../../../usage-sdk/methods.md#addtagstoroom) method to assign one or more tags to a DocSpace room.
+Use the [removeTagsFromRoom()](../../../usage-sdk/methods.md#removetagsfromroom) method to remove specific tags from a selected DocSpace room.
 
 ``` ts
+const roomId = "71234"; // Replace with your actual Room ID
+const tagsToRemove = ["tag"]; // Replace with tags to remove
+
+function onAppReady() {
+  document.getElementById("button").onclick = () => {
+    docSpace.removeTagsFromRoom(roomId, tagsToRemove);
+  };
+}
+
 const config = {
-  frameId: "ds-frame",
-  width: "100%",
-  height: "700px",
-  events: {
-    onAppReady: function () {
-      const roomId = "71234"; // Replace with your actual room ID
-      const tags = ["important", "team-docs"]; // Tags to be added
-      document.getElementById("button").onclick = () => {
-        docSpace.addTagsToRoom(roomId, tags);
-      };
-    },
-  },
+  frameId: "ds-frame",           // ID of the iframe
+  width: "100%",                 // Set full width
+  height: "700px",               // Set height
+  events: { onAppReady },        // Register event
 };
 
 const docSpace = DocSpace.SDK.initManager(config);
