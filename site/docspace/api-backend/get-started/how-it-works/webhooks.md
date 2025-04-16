@@ -17,6 +17,8 @@ API methods for working with webhooks are detailed [in this section](../../../..
 
 A full list of available triggers can be obtained via [this method](https://api.onlyoffice.com/docspace/api-backend/usage-api/get-triggers/).
 
+<!-- The Node.js and Python examples demonstrating how to configure and handle events with webhooks can be found [here](https://github.com/ONLYOFFICE/docspace-samples/tree/master/webhooks). -->
+
 ## Webhook request
 
 The **Accept** and **Content-Type** webhook headers must be included in the webhook request. Custom headers are not supported.
@@ -88,7 +90,7 @@ On each retry, additional information is added to the request body, including er
 - `lastFailureContent` - error information from the last failed attempt;
 - `lastSuccessOn` - time of the last successful request for the current webhook.
 
-The maximum waiting time for a request is 5 minutes. SSL verification is set during the webhook configuration. See the [instructions for creating webhooks](https://helpcenter.onlyoffice.com/docspace/configuration/docspace-webhooks.aspx).
+SSL verification is set during the webhook configuration. See the [instructions for creating webhooks](https://helpcenter.onlyoffice.com/docspace/configuration/docspace-webhooks.aspx).
 
 If the response contains a [410 Gone](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Status/410) status, the webhook is removed from the portal.
 
