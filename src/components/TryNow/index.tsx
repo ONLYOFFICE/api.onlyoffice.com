@@ -1,11 +1,13 @@
 import type { ReactNode } from 'react';
 import styles from './styles.module.css';
+import {Link} from 'react-router-dom';
 
 const FileFormatButton: React.FC<{ 
   format: string, 
   type: 'document' | 'spreadsheet' | 'presentation' | 'pdf', 
   category: string 
 }> = ({ format, type, category }) => {
+
   const handleCodeClick = () => {
     console.log(`Viewing source code for ${format} in ${category}`);
   };
@@ -14,12 +16,12 @@ const FileFormatButton: React.FC<{
 
   return (
     <div className={styles.formatButtonRow}>
-      <span
-        onClick={handleCodeClick} 
+      <Link
+        to={`try-docs/editor?format=${format}&type=${type}&category=${category}`}
         className={`${styles.formatLabel} ${formatClass}`}
       >
         {format}
-      </span>
+      </Link>
       <span 
         onClick={handleCodeClick} 
         className={styles.codeButton}
