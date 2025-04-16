@@ -17,7 +17,7 @@ const FileFormatButton: React.FC<{
   return (
     <div className={styles.formatButtonRow}>
       <Link
-        to={`try-docs/editor?format=${format}&type=${type}&category=${category}`}
+        to={`editor?format=${format}&type=${type}&category=${category}`}
         className={`${styles.formatLabel} ${formatClass}`}
       >
         {format}
