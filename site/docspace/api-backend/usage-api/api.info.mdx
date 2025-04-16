@@ -16,7 +16,7 @@ import Export from "@theme/ApiExplorer/Export";
 
 <span
   className={"theme-doc-version-badge badge badge--secondary"}
-  children={"Version: v2"}
+  children={"Version: 3.1.0"}
 >
 </span>
 
@@ -131,7 +131,7 @@ import Export from "@theme/ApiExplorer/Export";
         </table>
       </div>
     </TabItem><TabItem
-      label={"HTTP: Bearer Auth"}
+      label={"API Key: ApiKeyBearer"}
       value={"ApiKeyBearer"}
     >
       
@@ -145,19 +145,13 @@ import Export from "@theme/ApiExplorer/Export";
               <th>
                 Security Scheme Type:
               </th><td>
-                http
+                apiKey
               </td>
             </tr><tr>
               <th>
-                HTTP Authorization Scheme:
+                Header parameter name:
               </th><td>
-                bearer
-              </td>
-            </tr><tr>
-              <th>
-                Bearer format:
-              </th><td>
-                API Key
+                ApiKeyBearer
               </td>
             </tr>
           </tbody>
@@ -214,33 +208,6 @@ import Export from "@theme/ApiExplorer/Export";
                 Security Scheme Type:
               </th><td>
                 openIdConnect
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </TabItem><TabItem
-      label={"API Key: x-signature"}
-      value={"x-signature"}
-    >
-      
-      
-      ASC JWT Signature
-      
-      <div>
-        <table>
-          <tbody>
-            <tr>
-              <th>
-                Security Scheme Type:
-              </th><td>
-                apiKey
-              </td>
-            </tr><tr>
-              <th>
-                Header parameter name:
-              </th><td>
-                x-signature
               </td>
             </tr>
           </tbody>
