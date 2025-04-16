@@ -54,8 +54,14 @@ async function createJWT(json: object, secret: string): Promise<string | null> {
 const getDocumentType = (fileType: string): string => {
   switch (fileType) {
     case "xlsx":
+    case "xls":
+    case "ods":
+    case "csv":
       return "cell";
     case "pptx":
+    case "ppsx":
+    case "ppt":
+    case "odp": 
       return "slide";
     case "pdf":
       return "pdf";
