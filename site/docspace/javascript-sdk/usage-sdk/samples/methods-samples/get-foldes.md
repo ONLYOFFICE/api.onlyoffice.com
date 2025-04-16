@@ -1,5 +1,5 @@
-# Create folder
-This example demonstrates how to create a folder in a room.
+# Get folders
+This example demonstrates how to retrieve a list of folders from a shared DocSpace room using the JavaScript SDK.
 
 ## Before you start
 Please make sure you are using a server environment to run the HTML file because the JavaScript SDK must be launched on the server.
@@ -11,7 +11,7 @@ You need to [add the URL](../../../get-started/basic-concepts.md#step-1-specifyi
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Create Folder</title>
+    <title>Get Folders</title>
 
     <!-- Replace with your actual portal URL -->
     <script src="{PORTAL_SRC}/static/scripts/sdk/1.0.1/api.js"></script>
@@ -24,11 +24,12 @@ You need to [add the URL](../../../get-started/basic-concepts.md#step-1-specifyi
         transform: translateX(-50%);
         background-color: #007bff;
         color: white;
-        font-size: 16px;
-        padding: 10px 20px;
+        font-size: 20px;
+        padding: 15px 30px;
         border: none;
-        border-radius: 6px;
+        border-radius: 10px;
         cursor: pointer;
+        z-index: 1000;
       }
     </style>
   </head>
@@ -37,17 +38,19 @@ You need to [add the URL](../../../get-started/basic-concepts.md#step-1-specifyi
     <!-- SDK iframe -->
     <iframe id="ds-frame"></iframe>
 
-    <!-- Trigger Button -->
-    <button id="button">Create Folder</button>
+    <!-- Trigger button -->
+    <button id="button">Get Folders</button>
   </body>
 
   <!-- Step 2: JavaScript SDK Logic -->
   <script>
-    const roomId = "71234"; // Replace with your DocSpace Room ID
+    const roomId = "71234"; // Replace with your public room ID
 
     function onAppReady() {
-      document.getElementById("button").onclick = () => {
-        docSpace.createFolder(roomId, "New Folder");
+      document.getElementById("button").onclick = async () => {
+        // Step 2: Use getFolders() method to retrieve folder list
+        const folders = await docSpace.getFolders();
+        console.log("Folders in room:", folders); // Output to browser console
       };
     }
 
@@ -55,18 +58,19 @@ You need to [add the URL](../../../get-started/basic-concepts.md#step-1-specifyi
       frameId: "ds-frame",
       width: "100%",
       height: "700px",
-      rootPath: `/rooms/shared/${roomId}`,
-      filter: { folder: roomId },
+      rootPath: `/rooms/shared/${roomId}`, // Initial path in the room
+      filter: { folder: roomId },          // Optional: filter view
       events: { onAppReady },
     };
 
+    // Initialize DocSpace SDK
     const docSpace = DocSpace.SDK.initManager(config);
   </script>
 </html>
 ```
 
 ## Step 1. Set HTML structure
-Create an HTML page with an embedded DocSpace frame and a button to trigger folder creation.
+Create an HTML page with an embedded DocSpace iframe and a button to trigger folder retrieval.
 
 ``` html
 <!-- Step 1: HTML Setup -->
@@ -74,7 +78,7 @@ Create an HTML page with an embedded DocSpace frame and a button to trigger fold
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Create Folder</title>
+    <title>Get Folders</title>
 
     <!-- Replace with your actual portal URL -->
     <script src="{PORTAL_SRC}/static/scripts/sdk/1.0.1/api.js"></script>
@@ -87,11 +91,12 @@ Create an HTML page with an embedded DocSpace frame and a button to trigger fold
         transform: translateX(-50%);
         background-color: #007bff;
         color: white;
-        font-size: 16px;
-        padding: 10px 20px;
+        font-size: 20px;
+        padding: 15px 30px;
         border: none;
-        border-radius: 6px;
+        border-radius: 10px;
         cursor: pointer;
+        z-index: 1000;
       }
     </style>
   </head>
@@ -100,8 +105,8 @@ Create an HTML page with an embedded DocSpace frame and a button to trigger fold
     <!-- SDK iframe -->
     <iframe id="ds-frame"></iframe>
 
-    <!-- Trigger Button -->
-    <button id="button">Create Folder</button>
+    <!-- Trigger button -->
+    <button id="button">Get Folders</button>
   </body>
 </html>
 ```
@@ -109,13 +114,14 @@ Create an HTML page with an embedded DocSpace frame and a button to trigger fold
 The API JavaScript file can normally be found in the following DocSpace folder: **\{PORTAL_SRC\}/static/scripts/sdk/1.0.1/api.js** where **\{PORTAL_SRC\}** is the name of the server with the ONLYOFFICE DocSpace installed.
 
 ## Step 2. JavaScript SDK Logic
-Create a script block to configure and initialize the SDK. Use the [createFolder()](../../../usage-sdk/methods.md#createfolder) method to create a new folder inside the specified room.
+Use the [getFolders()](../../../usage-sdk/methods.md#getfolders) method to retrieve the list of folders from the current DocSpace view.
 
 ``` ts
-const roomId = "71234"; // Replace with your DocSpace Room ID
+const roomId = "71234"; // Replace with your actual public room ID
 function onAppReady() {
-  document.getElementById("button").onclick = () => {
-  docSpace.createFolder(roomId, "New Folder");
+  document.getElementById("button").onclick = async () => {
+    const folders = await docSpace.getFolders(); // Retrieve folders
+    console.log("Folders:", folders); // Output folder list to console
   };
 }
 
@@ -123,10 +129,10 @@ const config = {
   frameId: "ds-frame",
   width: "100%",
   height: "700px",
-  rootPath: `/rooms/shared/${roomId}`,
-  filter: { folder: roomId },
+  rootPath: `/rooms/shared/${roomId}`, // Load the shared room path
+  filter: { folder: roomId },          // Optional filter for folder view
   events: { onAppReady },
 };
 
-const docSpace = DocSpace.SDK.initManager(config);
+const docSpace = DocSpace.SDK.initManager(config); // Initialize the SDK
 ```

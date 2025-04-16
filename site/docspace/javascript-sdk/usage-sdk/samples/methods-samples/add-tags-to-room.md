@@ -112,18 +112,18 @@ Create a script block to configure and initialize the SDK. Use the [addTagsToRoo
 
 ``` ts
 const config = {
-    frameId: "ds-frame",
-    width: "100%",
-    height: "700px",
-    events: {
-        onAppReady: function () {
-            const roomId = "71234"; // Replace with your actual room ID
-            const tags = ["important", "team-docs"]; // Tags to be added
-            document.getElementById("button").onclick = () => {
-                docSpace.addTagsToRoom(roomId, tags);
-            };
-        },
+  frameId: "ds-frame",
+  width: "100%",
+  height: "700px",
+  events: {
+    onAppReady: function () {
+      const roomId = "71234"; // Replace with your actual room ID
+      const tags = ["important", "team-docs"]; // Tags to be added
+      document.getElementById("button").onclick = () => {
+        docSpace.addTagsToRoom(roomId, tags);
+      };
     },
+  },
 };
 
 const docSpace = DocSpace.SDK.initManager(config);

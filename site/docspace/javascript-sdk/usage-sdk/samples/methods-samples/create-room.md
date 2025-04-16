@@ -1,4 +1,4 @@
-# Create Room
+# Create room
 This example demonstrates how to create a folder in a room.
 
 ## Before you start
