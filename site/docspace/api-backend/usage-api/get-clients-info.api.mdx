@@ -1,0 +1,71 @@
+---
+id: get-clients-info
+title: "Retrieves a pageable list of client information"
+description: "Retrieves a pageable list of client information"
+sidebar_label: "Retrieves a pageable list of client information"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVttu4zYQ/RViXtIC8lp2bl29eZO0yLbApomDAA2MYCyNbW4kUktSSVxD/14MKV9ke5NssYAB2+RcDmfOHHIBDqcWkns4yyUpJ/6uyMylmsIoAl2SQSe1uswggSm5YGMv1URDBCUaLMiRYf8FKCwIEshlIR1EIBUk8I2jQQQZ2dTIkmNBAlc4lcoHFktrQ98qaSiDxJmKIrDpjAqEZAEFvsiiKiA5jiMopAp/ehG4ecn5pHI0JQMRTLQp0IWlwz7UEdALFmVOkPTqaA0QrXtI/UkeZPY60stzoSfCzUiwlzDkjKQnykTwbwGfYG5byBuA1hmu5yYcOElP00nvdNzpjbPDztFpdtz5eJSedMbUzw6PT2PqnfwGO5gNoaPsQavXQZ+jo58Ge6OsGTrqOFlQ+yz9uH/Uifkz7PWTOE7i+B+oR5zDllpZshy1H8f81UZ6U6UpWTup8ny+g9IKGXiWauUYdbIALMtcpp463a+WYyx2kevxV0r5kKVhBjsZEGTo9ljVUcPY9c5rjNoiz74ub/fqnSWtI3DS+Ype4ZRwnNN1U8Awdjx1yxWoa3Y42lfUT5gJbi9Zf7qj/sddm6HWokA1Xxran1dmQ2j3nZrxtkFcGKONWLJEcH6USqqpQDGrClQdQ5hxIQS9lDk2ktEwm9gb1kXz0bbqc7yvPpfKkVGYC0vmiUwTiM0tpZWRbu7l7KVj5VShqwxBcj9iQrfjXDd8tQJF2XRM5NI6Rhgo4hnMrZZ+ZgtyM91IqddPN4MEuljKbv9D3G1o321oH+AFba1MDgksxmjp1uT1zsjfhKOkWk3ktDLLhE9oJMPyjWmcQ0EmWOVMwF3xCFvi9vovLuJoXZUbJkAIhTZ9wMrNHh5pvtFpLOWftKtHt5bEmdaPkgQ7kXINtyBa6lsrYCNuqXdhCn9CK9ONPDPnyp0sF9xWMdeVEZXlBhckUGWiRGuftWGh9xTmAGMfkCMTGjLvC30QjMXi891QDPUjqfqgFTTEipofvy9n/PPdkFMNfHHel3DQKpOQVmR8zxZSUSbGc8//AzbSRv7rbQ7EjDDz6d8ENLi6FNynOoIvHKS/OdToF7YBBTsxyfWzeJZuJlrJxZnOiGUt18+BH5u7fnN70ROR2ee4kKt/NtXlSkYyP2SYCfS3hHBalEY7Sh2xwlldmZRYuZ6NdAz+jr/fsA7C8KUk/6hZn9svnGmlgqZtHZ93z0WzvcvilndzmDpqS8hbUzK4ORPMrJuVy2o6NuNsDUfN/yfah2+EcFBKHn0yNgR+8hdXqa0r0OtyE/XH9asFeHUeRy+uW+YoFeepgsIEbbvnw0IE/Q8xXzBB36CBPIpgpq1jq8VK2WpeDs8a1r1MWoa1fqZsQVjdWfDLdfOi+VXseV7uherFa/VefcK8otC4H8n79gvxtdzbT9H/CeI9L743YWy+Ltc4RutbxF+DETRCw+0J7oM0pXKzhDvPB46yuvz+uBhC5NWgPRRB+psfHH25peYbsduzEAA8ejH7jsNiEQaurlf2Yeu7HislDdZcqVFd1/8BwbuDtQ==
+sidebar_class_name: "get api-method"
+info_path: site/docspace/api-backend/usage-api/api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Retrieves a pageable list of client information"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/clients/info"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Retrieves a pageable list of client information
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"limit","in":"query","description":"Pagination limit","required":true,"schema":{"maximum":50,"minimum":1,"type":"integer","format":"int32"},"example":1},{"name":"last_client_id","in":"query","description":"ID of the last retrieved client","required":false,"schema":{"type":"string"},"example":"6c7cf17b-1bd3-47d5-94c6-be2d3570e168"},{"name":"last_created_on","in":"query","description":"Date of the last retrieved client","required":false,"schema":{"type":"string","format":"date-time"},"example":"2024-04-04T12:00:00Z"}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Successfully retrieved clients info","content":{"application/json":{"schema":{"type":"object","properties":{"data":{"type":"object"},"limit":{"type":"integer","format":"int32"},"last_client_id":{"type":"string"},"last_created_on":{"type":"string","format":"date-time"}},"title":"PageableResponseClientInfoResponse"}}}},"400":{"description":"Bad request"},"429":{"description":"Too many requests","content":{"application/json":{"schema":{"type":"object","properties":{"reason":{"type":"string"}},"description":"Error response containing a human-readable explanation of the error","title":"ErrorResponse"}}}},"500":{"description":"Internal server error"}}}
+>
+  
+</StatusCodes>
+
+
+      

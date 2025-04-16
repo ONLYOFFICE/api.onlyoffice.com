@@ -1,0 +1,71 @@
+---
+id: delete-api-key
+title: "Delete a user API key"
+description: "Delete a user API key by its ID."
+sidebar_label: "Delete a user API key"
+hide_title: true
+hide_table_of_contents: true
+api: eJyNVttu4zYQ/RViXtICbOymfdKbcymQ7QJb5II8BMaClsYR1zLJJUfJugL/fTGkJN+ySZ5Mk3PjzDlH7IDUU4DiEWZOixVuAswlWIdekbbmuoICKmyQcOb0v7gBCU55tUZCz24dGLVGKGCFm+sKJGgDBThFNUioMJReOw4EBdzVKGb/XXMScX15ChI8fm+1xwoK8i1KCGWNawVFB7RxHDSQ1+YJJCytXyuCAtpWVxDjnJ2DsyZgYPuz6ZR/9hNeprqFEm1AL1S+H0gorSE0xA7KuUaX6aqTb4G9uuMq7OIblsQ399wY0jnnUMCO5cLaBpWByEnanKI/0obwCf3uXbShv87YttFmFXZslfeKC9WE6/B+IbXH5XHTogRV5k4cHcUYJQRS1IYPlpiNL2yFH3KIEkhTw0bnuScPXjmHvs/99/TP43ndG9VSbb3+H6sUImDZek2bhDMVyq98/pWHWDyCR8V4e/GakDF7jsqjh+JxLiFjdXfnXAVd5uWXWUv1GYdQTp/2YXg5hvriMCH/cc5AewtUA54XG6Ep9LBeI9V2S5xEGaqhgIlyenJ2Op0wzyZdokwEvqd/HujU+gYK6BYq4L1v4hGLbpOtKK1Z6qc2sxQkPCuv1aLJgOidc4eXqm14MkeRLvORuL/5zFOZb/t9ywzIofa7vkXoIAYHEwwoLqxdaRTshIZ6coEcdGIvYC8XZXJhmPVjGvPURO4oy5Uh9GJjW5+GwIGFMpVwKoQX63mcicOJkSlg3MLjI6FPsrHoPj3ciTu7QhNP9oLmWLJf/DOA/9PDHafaR9/bCWd7bRI6iIqlda0NVowqqlGczHpaJJsTUaOqUvp3C2J48pziFvVbMVFp47CgbCeWjX0RL5pqsZdcJAWQwMcZH7ungzzsbSYgMvqIGzn+C6V1g44qJssNqkqossQQBFnhvCUsCSvhMdjWlxhGthfwwL/vWGelGbi8vXfauLDGZC09uD6fXor++BjFe979ZaKEH38E/WQUtR7fZ8ns9kIwsm5Hl5Edu3EOyBH5/9Km8L20zpxm6qMPOfBzkmpnA61Vkv0+6quadVhWt/0ufkTk+isS/qCJa5ROH702i06Wu6SvIOHsdAoS0tNCQpHfCXMJtQ3ERt2odZG3v7foN1moB01LuljpwOsKiqVqAr5R/G83/bPid3H85Hi17GFcZpOUtGkxYzRpXv+yifMooWce15PPZmWJjna8jh4UrKvjB+Hy6vPV3RV/blru0C5Q8kT6BSd4tagD9RwLhCh/4dF1GYUxjvb56Jceo7xka27RPMb4E/+hblI=
+sidebar_class_name: "delete api-method"
+info_path: site/docspace/api-backend/usage-api/api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Delete a user API key"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"delete"}
+  path={"/api/2.0/keys/{keyId}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Delete a user API key by its ID.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"keyId","in":"path","description":"The API key ID.","required":true,"schema":{"type":"string","format":"uuid"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Delete a user api key","content":{"application/json":{"schema":{"type":"object","properties":{"response":{"type":"boolean"},"count":{"type":"integer","format":"int32"},"links":{"type":"array","items":{"type":"object","properties":{"href":{"type":"string"},"action":{"type":"string"}}}},"status":{"type":"integer","format":"int32"},"statusCode":{"type":"integer","format":"int32"}},"title":"BooleanWrapper"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

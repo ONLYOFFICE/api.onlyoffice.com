@@ -5,7 +5,7 @@ description: "Returns a number of portal users."
 sidebar_label: "Get a number of portal users"
 hide_title: true
 hide_table_of_contents: true
-api: eJyNU8tu2zAQ/BVhzoTlGkEPugVtERQtiiKpT4YQMPLaYiORLEm5dQX+e7Gk4ldioBdJ5M4Md2eoEUFuPaoVvhsXZFeUxdKT86gFjCUngzL68xoVthRS5YMZdICAI2+N9uRRjVjM5/xak2+cssxBhW9D/0SuMJvCZu0hKQs0RgfSgRnS2k416ZTyp2faCN+01Ev+CntLqKB0oC05CGyM62XIW+9vEGOMAjfzd68PX2o5hNY49ZfWYJSnZnAq7FGtRkjfPHL98Zl4A47kGgK/nQqEOtbiQu2ewuC0L2Sh3xxqBoGeQmsmpyBgZWhRoZRWlYvZvMzwMsGbyUNPbseWcEuD61BhfJKelq6LuGzhIWGLxuiN2g45GAjspFPyqcsxTOTsxkYOHVv1SuljLhXL+6/sYH305oGdz1LnDh2ikFZ9oT0EtOzT+hQmoFi/MeZZUTJd6Y1JbBU6ht9axT2T87mV3QJRwBofepmyn2TvKFz1+nKe8Xif/iunaZJAf0JpO6k0tzBk13JoKx4TAovZnINMfAicRFcLtMYHho6HyCJv/xrI8ZWqj9HwKgq0JNfkUtbJU9w2DdmQMuyGbO7Fz8DZHK7V3acfEGCzz/PIzk8frP5S0vtT7fOgcgf8jOIKYxxz2DEe8Ll0lTFN+IJmZ+sY4z8MbH60
+api: eJyNVcFuGzkM/RWBl1zU2OsWe5ib63aLdBfboomRQ2AU8gztUT2WtBKV1GvMvy8ojcdju9nkZFkkHyny8c0eSK0DFA/w1XpSjRiJeUAfYCHBOvSKtDU3FRSwRkqWmY2GQILH4KwJGKDYw2Q85p8KQ+m14xgo4O+4XaIXdiVcxo4JWUJpDaEhjlDONbpMWUY/AoftIZQ1bhWfaOcQCrDLH1hyTue5JtI56aGCgac2hGv00HKSmFOcmSSsrN8qyldvJ+zbaLMJA1/lvdqBBE24DS8XUntcDbwCeW3WjKvK3IoLU9u2EgIpiuGVJWbnma1+9dzLgFYCaWrY6cbQ7+/uvXKOG5Myvxv/djmuuVGRauv1v1glgIBl9Jp2UDzsQYXyO9u/b5AvwKOqQMKT14RMlveoPHooHhYSpk7/ibvhzXsVdJmPX6aR6glDKKevOxg+9lBfHCbKPSzahTwr8htS9CYIJcwv2XUNErZIte0oy7NSVEMBI+X0aHI9HmX3UXIvOzIH9I/MTX5p9A0UsF+qgHPftHBewm3yFaU1K72OeUNAwqPyWi2bzIguODd5pWLDo7lA+pBNYv7tLx7M4tjyW16BDHXa+CNFU48vIOcBxczajUbBQWio2y6QYNQ2RQ4BJWgOK1MI86ybVJ+nJnIXWT4aQi92NvrUdQYWylTCqRCerOeJpiVmgGUCbI8MeQ30VXYW+8/3d+LObtC0VyegGUt2hz8O7P98f8epTgn4/wmnJ20SOogKCf1WG6zEcieoRnE17TYj+VyJGlWV0r9Y0PTrjeA5tUfiH9VEpYvzgrKfWDX2STxpqsVJcpEkQAKbMz+G1oM+nFwmIjL7iBvZ/wuldQchVVXaLVUJVZYYgiArnLeEJWElPAYbfYmhX/gC7vn3Be8sNod1Pr47XcysMVlMz57P1g+iM1+y+CS6e0wr4eeboNdGUfT48pZMb2eCmXXbh/TbMcQ5W46W/69sgu+0deo0rz76kIEfk1Y7G2irku53qJ+QnpWs8+r2x+/jq+SueyrhTxq5RmnDJcQsPln7ktSChMn1mPUwxYOEgQIuJNQ2ELvue+Vr+fqfiH6XlfugcEmZJXRLwJKZpAmmZYmOkhQ2MXf/7OPOEter86ePd6z8kSscDizLUndg9IPJ7IbYpyqWK9ikTXsmYr/PbGjb3j+bno3o1zx7c2cXbdv+B+YjI9g=
 sidebar_class_name: "get api-method"
 info_path: site/docspace/api-backend/usage-api/api
 custom_edit_url: null
@@ -54,7 +54,7 @@ Returns a number of portal users.
 <StatusCodes
   id={undefined}
   label={undefined}
-  responses={{"200":{"description":"Number of portal users","content":{"application/json":{"schema":{"type":"integer","format":"int64"}}}},"401":{"description":"Unauthorized"}}}
+  responses={{"200":{"description":"Number of portal users","content":{"application/json":{"schema":{"type":"object","properties":{"response":{"type":"integer"},"count":{"type":"integer","format":"int32"},"links":{"type":"array","items":{"type":"object","properties":{"href":{"type":"string"},"action":{"type":"string"}}}},"status":{"type":"integer","format":"int32"},"statusCode":{"type":"integer","format":"int32"}},"title":"Int64Wrapper"}}}},"401":{"description":"Unauthorized"}}}
 >
   
 </StatusCodes>

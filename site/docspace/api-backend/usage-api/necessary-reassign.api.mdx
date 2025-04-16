@@ -1,0 +1,71 @@
+---
+id: necessary-reassign
+title: "Check the data reassignment need"
+description: "Checks if the reassignment of rooms and shared files is necessary or not."
+sidebar_label: "Check the data reassignment need"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVttu2zgQ/RViXvIix46TAl2/uUm3SHeBFrkgD4FRjKVRxEYiuSSVxGvo3xdD6mLZadNd7JMuHJ45nMsZbsHjg4PFPXwlbUoSU3HryIoMPcIqAW3IopdaXWawAEUpOYd2c0XonHxQkIBBixV5soyyBYUVwQIY5DKDBKSCBfxVk91AAhm51ErDeLCAm4JEzc4uL44hAZcWVCEstuA3hjGct1I9QAK5thV6WEBdS8akF6xMySaIdEIns9PJOsV3k99yPJms8X06OZvP3r1fn+E6n7+Hpkl6XjcM/SYrejGUesoiPaYzJqgVfcnDcUnVFUdvWZaQwJXW1TKrJMflU03OQwIXOr02mFL3nyPDkd0/5JjF/bIsxUQsyzIRPaqYhHeB/JGI4EFM4jMRI0di0n935iGvk/BYjYLI3DlE7VlmyUkyT06Ts4GkVJ4eyB6ynHUcT/a4zQdep69wOXuNyCyBlwmTmDyh5Xy5/xbZFmSH6h5QZPEKUr8QoZrVD0u2qwkvfYjhx8qUekMU6qvhjZac0crxIbYwn834MQb7oHVJqMQTljUthLc1CZkLRWnbZcIObZZq5Ul5RkFjSpmGrpx+dwy1PWwevf5OKZ/NWO5hLyORjtWO5TrSgIad1NHFQd77FpTKn87ZtpTq0e3YorXI3SQ9Ve5tIoWl/LDXmwQwjeE5WGqaJgHn0dfuFylG43Od0S9taIZ0tqm5s2gM2db32ezkMIm3CmtfaCv/pixAOEprK/0myAO69Buvf3sk/gGWkAXs2UpPXKofCC1ZWNyvElga+Qdtdv98QCfT+PplWftizhBo5HELw6891BdDQaTvXynb84LSR8fF5Qvqq6oi5YXOhdW6cgJVJlyBljKRy5KckE70ei+0FUp7rviKfKF5GDxQyCr6AhYwRSOn8+PZ1IQxMu18THsIFlCyT92cqG0JC9iu0dGtLZsDabkOtiLVKpcPdZxBkMATWonrMtZQuzkmJce65GQeIF3EJXF79ScncjWk6JqbJkKNEzUUdcjJAeStI3Gu9aMkwZtI+bYfIekGzQiwHThp2MKV2Wa291N4bw68fFSerNjo2gbNYeCQJYPOPWubdSMpNHEAbIaK+hXoo2gstp/vbsSNfiTVHI1AI1bSvvze9cvnuxt2NS7YnztcjsLEtZXxnaGSijKx3oS6PFq2nRRsjkRBmAX3bxJafr0UnKdmaJRBfzD82CcU7URe6mfxLH0hRs5FEI0EeDnWx+5qpyijn6EQufo8B7L/cqk2nfQit80VYSYwSLzwWhirfbxrWHK6tim5XiAWcMfPN6yjOHXtP5w7/DjXSkX53Ts+r16Idvmwike728M0PFq5qdHXlt7ukuX1ueDKuu639N2xi7PXHA1/5zrAt2q8NJJbn6yLwE9B3Y12vsIwKVrUIHOhlPj6OtY5RZTtM9wOU/V/lcg2LJ5e/NSUKMNsraNQRb0MMg4JzI9nrKFBM4HvDP28H3RzlUChnedN214vG/4dL7Csppl0rIoZLHIsHf3knHuX7lepBg0crvDhfhIL4N96ev0i/ROn7f18cLkaND/MtgRaWeBjxz3LNCXjd3YdXJAYpZ9bnz7e8OysOQ+7JRyFun1h9G5JbXaxx7oeGTwG7fnBju029kfT9PZx6Yc7euGL1hyfVdM0/wAd4ZxW
+sidebar_class_name: "get api-method"
+info_path: site/docspace/api-backend/usage-api/api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Check the data reassignment need"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/people/reassign/necessary"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Checks if the reassignment of rooms and shared files is necessary or not.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"UserId","in":"query","description":"The user ID.","schema":{"type":"string","format":"uuid","example":"aae1e103-bca5-9fa1-ba8c-42058b4abf28"}},{"name":"Type","in":"query","description":"The expected user type.","schema":{"oneOf":[{"enum":["All","RoomAdmin","Guest","DocSpaceAdmin","User"],"type":"string","description":"[All - All, RoomAdmin - Room admin, Guest - Guest, DocSpaceAdmin - DocSpace admin, User - User]","example":"All"},{"enum":[0,1,2,3,4],"type":"integer","description":"[0 - All, 1 - Room admin, 2 - Guest, 3 - DocSpace admin, 4 - User]","example":0,"x-enum-varnames":["All","RoomAdmin","Guest","DocSpaceAdmin","User"],"x-enum-descriptions":["All","Room admin","Guest","DocSpace admin","User"]}],"description":"The user type.","title":"EmployeeType"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Boolean value: true if neccessary reassign","content":{"application/json":{"schema":{"type":"object","properties":{"response":{"type":"boolean"},"count":{"type":"integer","format":"int32"},"links":{"type":"array","items":{"type":"object","properties":{"href":{"type":"string"},"action":{"type":"string"}}}},"status":{"type":"integer","format":"int32"},"statusCode":{"type":"integer","format":"int32"}},"title":"BooleanWrapper"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

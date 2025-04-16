@@ -1,0 +1,71 @@
+---
+id: hide-confirm-cancel-operation
+title: "Hide confirmation dialog when canceling operations"
+description: "Hides the confirmation dialog when canceling operations."
+sidebar_label: "Hide confirmation dialog when canceling operations"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVk1v4zYQ/SvEXHLRxmnak26Os4vutkCCfCCHwFhMpLHFjUxyyVG8rqH/XgwpybLdTVK0J8vkzJsZzrxHboFxGSB/hE+6pqAm6paYtVkGmGdgHXlkbc3nEnKodEkzaxbar2ZoCqqv+m3IwNP3hgJf2HID+RYKa5gMyyc6V+si2k2+BWtkLRQVrVC+eOMIcrBP36hgyMB5CcqaQrQjHhk9WVsTSrSSQuG1i7FzuHVU6IWmoNYVcUVesVWBWHFFKnSbpazEypT1ylg+hQzoB65cTZCzb6htM8Cy1IKK9fUokQXWgQ6j3gl4D9mVrxx6XBGTDwLPmgUc+jO9SVaXbKFtJZyn4KwJqdjzszP52Y9ykWpWL1g3lCvJU+lFrGyIpXRQZPCpphKy/+vo+9T+4fxbCdKYcWu0YVqShwwW1q+Q09Kv52Jba/McRrboPW4gA820Cm8nUnlajKwCe22WgotFOqOjrXi0gZGb8M4Uk/HMlvQuh3bX2q4/Dx6dI9/F/u3sl+NO3htsuLJe/0VlhAhUNF7zBvLHLWAovsr+12eSBfCE0sy110xCxQtCTx7yx3kGU6f/oM145QKDLtLn1bTh6lwg0OnTDkY+B6grR5HQj/N2fjjUv+uSQpyuIjE9Do8qNdZ2KfQyqojc12apBnmIw74irqzohGtiE5EryGGCTk/OT88mC9GXiWhIh5xw7EhDAvkX8iGeR+NryGH7hIHufd0ecz7apiyXzQDxgl4LEWLjO+fUigU2tbTwCOkyban7mz+lffNdY26FKglqvz27UY6dOIK8D6Rm1j5rUuJEhjsWQgYGV9FzDJiBFrciusg8dv0c4lTM7ijKRyPc39jGqyaQF2CFplQOQ1hbL32PZI/UjYDtbo7eA32SjNX2y8OdurPPZNqTPdCElXUfn3qWfHm4k1D7Y/p6wOneMYmglaJsK22oVE+bOJEn044/0eZEVYRlDP9mQtPrz0r61O7osVMdjAuHCSU7tajtWq01V2ovuIpSkYFsp/kY7/Y6srcYB1Gmj+Ugh3+hsK4XXBT23BCWCouCQpBrzHnLVDCVylOwjS8oDLKQw4P8vmGdJKkn/a7uuDCzxiTRPShfdi9Vt308xXveXTFtBj8+BL00yI2nt1kyvZ0pmazbwWVgxxjngBxtBnKV3ezeGx/7S7x7L8S7XLwWNibRKfXUaREI8iGFf4nK72zgFcZbpIstEvjv1O+wstHz578Iand6TD944mrU8eJtkp4ldY0aDxmcn57JMIrCQgavaOw8g8oGFs/toK2tLH9vyG/SDdJraLwhMuhoJqIcxQ9mqbgPd5KfmNdN6vLBY6PNeo9pUZDjV23nowvk+v5OONw9JVeRTeBxLc9MXCfeWJeOXogja1uo0SwbXIptgozvuUbOaTyJSW+7Dymq3zKbcYL78pzKeI4S8hOP7TaNedsO9mnrpx6DfiVr6e+8bdu/AZk+AJg=
+sidebar_class_name: "put api-method"
+info_path: site/docspace/api-backend/usage-api/api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Hide confirmation dialog when canceling operations"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"put"}
+  path={"/api/2.0/files/hideconfirmcanceloperation"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Hides the confirmation dialog when canceling operations.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"set":{"type":"boolean","description":"Specifies whether to set the specified settings or not.","example":true}},"additionalProperties":false,"description":"The settings request parameters.","title":"SettingsRequestDto"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Boolean value: true if the parameter is enabled","content":{"application/json":{"schema":{"type":"object","properties":{"response":{"type":"boolean"},"count":{"type":"integer","format":"int32"},"links":{"type":"array","items":{"type":"object","properties":{"href":{"type":"string"},"action":{"type":"string"}}}},"status":{"type":"integer","format":"int32"},"statusCode":{"type":"integer","format":"int32"}},"title":"BooleanWrapper"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

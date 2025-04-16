@@ -5,7 +5,7 @@ description: "Checks if the greeting settings of the current portal are set to d
 sidebar_label: "Check the default greeting settings"
 hide_title: true
 hide_table_of_contents: true
-api: eJy1k02PmzAQhv+KNWcrpFFP3LYfWlXtqWlOEVp5YRLcENu1h7Qp8n+vxiZkQ7SnVS9g7PF8vM/LAKT2AcotrJFIm30QhXj0iLwWYdyDSoJ16BVpa740UIIOn3Cn+o5AgsfgrAkYoBxgtVzyq8FQe+04Hkr4YG2HyoiT6nosBfkehd4JalHs57WEzQd17z0aEs56Up1QHjlEkBXNVLm2htAQF1TOdbpODRY/A1cdINQtHhWv6OwQSnjOfUCMMUp4v3x33+rGqJ5a6/VfbICjAta913SGcjuACvUTnz8dkDfAo2pAwm+vCaGKlZxl+9hifQhvn1VYL4ylBUg4IrWWEeyRJXCKWiihUE4Xq8WyuKQuLsWmDR2uwgX0J/QhzdT7DkoYnlXAje8izGdYp1hRW7PT+z57ACSclNfqucvUx8tZzlykhLtMo2XE5vs3RlBdxV0zqZzqVuIJnXL6K55BglHH9P0yTILm/LW1B42JmjY7m25r6jj8wWnuGX3IrZxWECU4G+ioklfGtAlYYnJR/g7afKzhasP/wXucn/APFa5T2nDjfdY6w9+yOCBhtVgmtFObcwuwTpMJKgmtDcTXhwl+5O1fPXp2d3WFzF9RQouqQZ9ck+jAQ12jo+SGrs+YZr8hU54s+/j5B0hgbLdkM8NxwdkvR+b8Mvct8twBP6N85cYwZNvEOMXno1dvjBNeolntKsb4D0NQyAU=
+api: eJy1Vk2P4zYM/SsCL3NxJ2nak2+Z7Hax2wJbbGYwh0GwUGwm1saRVIqe2dTwfy8o2c4XtjNA0ZMVkXykxMentMB6GyB/giUyG7sNaqI+EKKsVej3YJWB80iajbMfS8jBhHe40U3NkAFh8M4GDJC3MJtO5VNiKMh48Ycc7pyrUVv1rOsGc8XUoDIbxRWq7WUu5ZKhaIjQsvKOWNdKE4qLYqfKMXPhLKNlSai9r00RC5x8C5K1hVBUuNey4oNHyMGtv2EhgZ7kOGxSzcMBTjzXqWLoJEmTUvQmYxm3SJDBxtFec9r6ZSa+tbG7cOKrifQBMjCM+/B6IRXh5sQrMBm7FVxdpJu8MnVdl0FgzU14Y4nJeeFKfFNAlwEbrvHYxUfS3iP1uX+d/nzd7werG64cmb+xjBABi4YMHyB/akGH4qvYv+5QNoBQl5DBCxlGYdodakKC/GmVwdyb3/FwunOngynS8vO84WomENqb2x5GliPUZ4+Rr0+rbpVdFLmosNiF/85D5UhZx7eQwR65cjIeW4zN1VxBDhPtzWR2O50M0JMh2bhhwpHUAekZKcSraqiGHNq1DvhAdQeXZ1hGX1U4uzHbJs0nZPCsyeh1nUjVB6cupSQ5XCH146wevvwhnV0de7aUKUpQ5507sjw26QryIaBaOLczqCQILfcDChlYvY+Rp4AZGAkrYohQtW/1mKdi9ldZ3ltGUgfXkGoCkgArbUvldQgvjoQSUQfiVEfA7kixt0DfJGfVfnq8V/duh7a7OQNNWFm/+G0YoE+P95LqnMH/nnB+dk3KBFUiI+2NxVKtD5GPN/N+tKLPjapQlzH9qwXN//yopE/dcXKOgqTjxmVByU9taveiXgxX6iy5iiqSgZgTP06tg8ScbUYiCvtYLnL8FQrnBy3WMkBfUJdKFwWGIKPmyTEWjKUiDK6hAsOoGDk8yvcV76RWgx4czx03Fs7apMcXxxfrO9Wbr1l8Ft0fpsvg+0/BbK3mhvD1KZkvF0qYtRxDxuk4xbkYjk5+b1yE7+V57o2MPlJIwM9R7r0LvNfx6ehRo+5FKg0CdqV9l0W2x5f2/5DN/oIYv/PE19rEZ7dJkpU0NCo8ZDC7nUaFHMu8VFK5p1FLVxlULrCEt6OGdrL9V4N0SI/IoJXxkcigHycR3yhyMC8K9BxFtW5SHy/+aYhYjsr/4f29PEKNVH3a+iRw/ULQB5M9nGKf62GqYBdn9gcRbZt41XWjfzL9MGIUjOQtt73quu4f8ttzgA==
 sidebar_class_name: "get api-method"
 info_path: site/docspace/api-backend/usage-api/api
 custom_edit_url: null
@@ -54,7 +54,7 @@ Checks if the greeting settings of the current portal are set to default or not.
 <StatusCodes
   id={undefined}
   label={undefined}
-  responses={{"200":{"description":"Boolean value: true if the greeting settings of the current portal are set to default","content":{"application/json":{"schema":{"type":"boolean"}}}},"401":{"description":"Unauthorized"}}}
+  responses={{"200":{"description":"Boolean value: true if the greeting settings of the current portal are set to default","content":{"application/json":{"schema":{"type":"object","properties":{"response":{"type":"boolean"},"count":{"type":"integer","format":"int32"},"links":{"type":"array","items":{"type":"object","properties":{"href":{"type":"string"},"action":{"type":"string"}}}},"status":{"type":"integer","format":"int32"},"statusCode":{"type":"integer","format":"int32"}},"title":"BooleanWrapper"}}}},"401":{"description":"Unauthorized"}}}
 >
   
 </StatusCodes>

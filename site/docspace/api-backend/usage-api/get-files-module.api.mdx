@@ -1,0 +1,63 @@
+---
+id: get-files-module
+title: "Get the 'Documents' information"
+description: "Returns the information about the 'Documents' module."
+sidebar_label: "Get the 'Documents' information"
+hide_title: true
+hide_table_of_contents: true
+api: eJy1V99PGzkQ/leseeFlISGlEpe3FNqKXu9aFRAPFKGJd5K47No+/4Cm0f7vp7E3ySZpC9HpnmLs8Tcznm++WRYQcOpheAvvVEVe9MQlhaD01MNdAcaSw6CMvihhCFMKyegvU8aKoABH3hrtycNwAYN+n39K8tIpy5dgCNlUKD0xrk5IQ3FxXgjrTBllELJC74XGmgoRVKioEB2AQihptLj+8rEQFbopdf72AV3IS+tUjW4ujBPauELMqLJ8AgVIowPpwIGhtZWSKYbeN8/RLcDLGdXIqzC3BEMw428kAxRgHeceVM5tmejzlqrs2PjglJ5CsfUoVzMSdX6Yi/MjKCA/DgwhRlVCAfQda1sxAiId03H/1eFY4uvDPyZ4fDjGU3l4Mui/Ph2f4HgyOIWm4OT+xpr28r1bA45Fx6rCMTsPLlI3Fm9qEoG+B3aYivW/uqtoinJ+f9w/7dt7X2NV3T8ZU5K+r030xEFUSj+8LIbrLx9FMCKsw8n8sTjdJ2um37Wr9sp7Sdl93NQ4pX39tA3CV/d0x/2yr7dlj+3hZgNrD1edg33e0H/OstDxNTamItQ7zi4tSTVR5IWadDmi/Ka2hKNuc7L7hnuvLBUDYfW5IwUTrDz9jhZrSWTUtp9aweQEpIlZuNrglQ40JdeVC6XDq8GyEXzHFp3DORSgAtX+edGaOZrsloRTkz+vVtNw4j5giP6FIWbjM1PSiy40209y49Bacq3rk/7x7rC51hjDzDj1g8qE4ElGp8IchrcLQC/v+fz+gXgDHCFr7ZNTgXjWvSF05GB4e1fAyKo/ad7deYNeybz8NIphNmAItOqoheHlCuqTpTQxb++au20KfKEQnfaJZh0OCBybGNLuVzg3Mtakg/8KLV2YIjWFmWnnMJcQwwyG0EOreoOjfm/Co7nHkMCZu0dyPiUeubVhMUbPmtLssj/ZCmn0RE1jnvdQwCM6xX2WCtxezm8+wVhxqXaQzvNRmr1Nw7kvK3DJgzZDbdZhTdn05DuQ157EmTEPigRfIh3aGc5KkCbeJmABiq/JdIV51xZu5WcWgt3x8lYHcmJuohPRk2NggboUFr1/Mo4LnD4VkogkwGZNmJdAH2RjsfhwcyWuzAPp5mADNGMV7eLdshs+3Fyxq00+/t7haOOZWMNKCuRqpakU43mi2MGobZRkcyBmhGVy/2xAo88XguvUrPtgrS6YNrYDynZiUpkn8aTCTGw4F0kSCuDjzI/u6VIvNjYTEZl9gR9y9ZeXxi4/17BMrYalQCnJex7+1plAMlApHHkTnSS/6v8h3PDvM9ZZe5bdvc47bZwZrbO4bqXPp+eiPd5l8cbtNpmmgO+HXk01hujo+S4ZXZ4JZtbl6sqqO7o4W83BU5LlguFbrR1Zxa1Pzmfgx6Td1vhQY5oDLep7+plWdfRsO8TF+lP8P0hg+wo843u2QqU5uph1KethEmUoYHDUZ1KxJkKb5l0BM+MD2yxWatjw9j+R+DuBxX2pekm8+dMoNQbLaJIrGElJNiR5rGKuyNa/FSx7K6l+//aKh0Pk0LpFzFLVLhh9eaTnXexNZcsRPKTu+8WNxSIzpGlW9vnolzdWrZ+t+Unvmqb5FyU00kM=
+sidebar_class_name: "get api-method"
+info_path: site/docspace/api-backend/usage-api/api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get the 'Documents' information"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/files/info"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns the information about the "Documents" module.
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Module information: ID, product class name, title, description, icon URL, large icon URL, start URL, primary or nor, help URL","content":{"application/json":{"schema":{"type":"object","properties":{"response":{"type":"object","properties":{"id":{"type":"string","description":"The module ID.","format":"uuid","example":"aae1e103-bca5-9fa1-ba8c-42058b4abf28"},"appName":{"type":"string","description":"The module product class name.","nullable":true,"example":"some text"},"title":{"type":"string","description":"The module product class name.","nullable":true,"example":"legacy_1080p_small_wooden_mouse"},"link":{"type":"string","description":"The URL to the module start page.","nullable":true,"example":"some text"},"iconUrl":{"type":"string","description":"The module icon URL.","nullable":true,"example":"some text"},"imageUrl":{"type":"string","description":"The module large image URL.","nullable":true,"example":"some text"},"helpUrl":{"type":"string","description":"The module help URL.","nullable":true,"example":"some text"},"description":{"type":"string","description":"The module description.","nullable":true,"example":"some text"},"isPrimary":{"type":"boolean","description":"Specifies if the module is primary or not.","example":true}},"additionalProperties":false,"description":"The module information.","title":"Module"},"count":{"type":"integer","format":"int32"},"links":{"type":"array","items":{"type":"object","properties":{"href":{"type":"string"},"action":{"type":"string"}}}},"status":{"type":"integer","format":"int32"},"statusCode":{"type":"integer","format":"int32"}},"title":"ModuleWrapper"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

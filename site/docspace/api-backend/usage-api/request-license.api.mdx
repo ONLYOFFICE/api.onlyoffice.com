@@ -5,7 +5,7 @@ description: "Requests a portal license if necessary."
 sidebar_label: "Request a license"
 hide_title: true
 hide_table_of_contents: true
-api: eJyVkkFv2zAMhf+K8M5CHOToW4cNw7CemvUUBAWjMLFWRVIlOphh+L8Pstw2yE7zxZZFPpLf4wihc0a7w5ZFrD9n1ahHa9hnxl4jRE4kNvgfR7RI/NZzlvd7jcQ5Bp85ox2xWa/L68jZJBtLElp8CcExeXUl13OrJPWs7ElJx8pVGWWzKsI28REaJnhhL0WJYnTWzOWb37nIjcim4wuVLxkio8WhFsBUHn1X/ak2nBWpGJKQ+yx6Up4N50xpWEHjwtKFMuOZBRqRpEOLhqJtNqt1kxc6zZLf3HScOV05FYgj+uTQYjxQ5ufkJtw3tJ1jlQn+ZM99RQuNKyVLB1c5LsmV5Yl6J2jxj9LXeqWenx7L7PvSh+mTlWFbEFUpyuaFeuleXnm4YUbR/uQBGp4u8/k2TMMWfRPCq2UUptafwpxtxZXwh2hLz5xybeW6waQRQ5YLzSYtsgt9Re/U74cYP93+D6uWIYT/SBMdWV+q9xVY9W1XJoTGZrWe/aneQcPdbO7i316jC1lK0vjh21R+v/WcBrS7/ac/5TRpdExHTrPhM1g8GMNRZiNdXwnfrW4x6GPHvn/7hWn6C6PBM2Q=
+api: eJyVVU1vGzkM/SsCL7lo48C9zc1N20U/gC7qBDkEQSBraI+asaRSnKSuMf+9oDS2x/Yh2ZM9IvlIkY9PW2CzSlDdwxyZnV8lNVHfnEWfEB40hIhk2AX/uYYKCH91mHhn10CYYvAJE1RbmF5dyU+NyZKLEgQVvA+hRePVs2k7rBRTh8otFTeo2gKjXFIC7Ahr0GCDZ/QsSCbG1tmcfvIzCdwWkm1wbeQfbyJCBWHxEy2DhkhSLLtSzK6ykeeilAK9JOlKisHkPOMKCTQsA60Nl6N3U/FtnX9KI19DZDagwTGu0+uFNITLkVdicn4luMaWFp2Z+r7XkNhwl95YYnG+DjW+KaDXwI5bPIznjkyMSDl3r09G+KNMPSmjYiA27WFyS+XRYkqGNpegYY3cBCHKCnMjDDdQwcREN5leXk3SQLHJED8ZjT0hPSMJE7fQUQsVbBcm4S21PZwWNM++yga/dKuu8BM0PBtyZtGWtg/BhZBL07Vy/zOkD8Wkbn98k7s/SB22I8ebufCsQJlkH03HzeMTbsY8iO4rbs4gbxOq6xCeHCoJQs8DhUGDN+scOQbU4CTM5hAZ5nuTnB3laZjjWZaPnpHUJnSkuoQkwMr4WkWT0kug3NF8A+F9BhRkNIT0NuiL4qy2X+5u1E14Qt9fHIEWLD38+bSj2Je7G0k1y815W8LZUZtEDmpkpLXzWKvFJmvFhTgFcn+yz4Vq0NQ5/asFzf77rGROvYbvAjIdr6zJB6cFFT+1bMOLenHcqKPkKu+ZBjEXfoytuyU8OsxEFPaxNHL/lWyIO7Uydd40UytjZaMUBxUpMFrGWhGm0JHFBBpeyLEUfye/r3iXdf4eMev34d754Dp4XxTr5Ppi/aAG8zmLj6KHy/Qafv+T3Mob7ghf35LZ/FoJs+b7kP12jHFOlqOX72XI8IOAzaKT1UdKBfg5C2IMidcmi+uAOoiYMjvxOi1pe3h5/ofiDbdk/M2T2BqXX5eu6E6Rv3tpAWiYXl5lmSsSCPKuHF7RQQYfNDQhsQRt9/LXy/GvDmkD1f3DQebkq9cwbILoZtYnmFmLkbMetl0ZwckzKjq3l+p/P95A3/8F3OvDgg==
 sidebar_class_name: "get api-method"
 info_path: site/docspace/api-backend/usage-api/api
 custom_edit_url: null
@@ -54,7 +54,7 @@ Requests a portal license if necessary.
 <StatusCodes
   id={undefined}
   label={undefined}
-  responses={{"200":{"description":"Boolean value: true if the license is required","content":{"application/json":{"schema":{"type":"boolean"}}}}}}
+  responses={{"200":{"description":"Boolean value: true if the license is required","content":{"application/json":{"schema":{"type":"object","properties":{"response":{"type":"boolean"},"count":{"type":"integer","format":"int32"},"links":{"type":"array","items":{"type":"object","properties":{"href":{"type":"string"},"action":{"type":"string"}}}},"status":{"type":"integer","format":"int32"},"statusCode":{"type":"integer","format":"int32"}},"title":"BooleanWrapper"}}}}}}
 >
   
 </StatusCodes>

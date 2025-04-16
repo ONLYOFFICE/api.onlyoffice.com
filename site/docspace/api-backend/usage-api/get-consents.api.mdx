@@ -1,0 +1,71 @@
+---
+id: get-consents
+title: "Retrieves a pageable list of consents"
+description: "Retrieves a pageable list of consents"
+sidebar_label: "Retrieves a pageable list of consents"
+hide_title: true
+hide_table_of_contents: true
+api: eJyVVttu4zYQ/RViXtICdCw72aRVn7zJttjttklzQYAGhkFTY5kbSdSSlBPX0L8XQ8qyFefiNQzYEoeHh3M5MytwIrUQ38NZprBw7J8KzVIVKYw56BKNcEoXnxOIIUV3pguLhbPAoRRG5OjQ0OYVFCJHiCFTuXLAQRUQw3eCAg4JWmlUSUAQw6VIVeFR2dra4PdKGUwgdqZCDlbOMRcQryAXTyqvcog/RBxyVYSHAQe3LOk8VThM0QCHmTa5cOHV0RBqDvgk8jJDiAc13xAU1k1ynaiZwmSii7e5nguHTM+YmyOjncygMwoXmDAZXNFhPxOZ7dBvWFpnyKNbJBPhsOdUjh2iMIyGx72IvjeDYRxFcRT9C/WYzrAlHWgJdRhF9NOlel1JidbOqixbbtGsLJo1Vwqb1IUj2vEKRFlmSvpI9L9ZAlntUtfTbyjplqWhbHAqUEiEe8Gq5k0CbFbeCtBOLPb0WM3BKecddilSFNMM//Io4TJXja86rl1Tvl+BwVRZhwaTifQ5P1GU3ifyVM4Gp9PeYJoc9Y5Pkw+9X4/lSW+Kw+Tow2mEg5NfgIKrS/QFM1MZ2tigSIinf3g0yiFVTnsrz/3FsHIIpxO3Jjk/Bbbsb3pcr/8Qu25OrPHOt95yeMSpVQ4nlckghrlzZdzvN446lDoHDg5Nbt8yKHWm5PIti0ynOoRNxCoXKfbLIv1tKiyeHHO1+HhxBRxE5eZYuCZwkxzdXCfeuc3dLUqDblJq68it+zlf2UlZTTMl13oiDQrXpNirwWhspsv9vd3J3deAW6P9kWsq+aaSSPh2C+UVpaAPB4uyMsotfbY/9axKC+EqgxDfjwm5myRXjVZYJljZlBPLlHUkfFvKEYIT+oDXfzeHGPqiVP3hYdQPAbP9rR0WzWLdH0KmrCj+tyard1L12tvSeTOVVqHrAIeFMIoIedFpNgftm4kqo9ra1eywxG6vvpJDxht/XJO4BShh5YSSb/KAyy3ZEaX6E3fbwK1Fdqb1g0LWzVjg69LtADY9RfotJEMfhaVsbM+hitmt1sKhYUtdGa/aBMxEkbBSWPuoTQJNZyGAqQckZBQGzX7QB8GYrb7c3bAb/YBFfdABDVi8+fP7Wnq/3N3QUSPvnP0OHHXcxJRlCc0KuSowYdOlb6gHZKSN+s/bHLA5isQf/y6h0eVnRnGqOVwQyHC7FQn/4jmhYMdmmX5kj8rNWedwdqYTUlxaDvmxveoXn7/0iUjZ58iR7dNaoajNiMSXl0iY8L2ZOc1Kox1KhwkzaHVlJFKlBOmK4Y5+37EONX5Rop/KNvf2L850UYR+/ez6tHrOmuXdLO7sbi5T8654vFclo+szRpl13W5pq2Mb51lx1PQ80x6+aeqjUlHpo7EBeOGnBeoBuSi22uW+ytWh2d7C4ZPrl5lQBaFXQVeCqt3TFYHD8DBq23AzPAXMMYc5taT4HlatptX0OsyRpHiJskRoMxY+o9FOYvDTVTNB/sxeGI5fpOtlq522FyKrMITsR87da7p96/jdWXrDZLwRb993ODT1Tb4J+0dSYrnNf2ciJZS27/zx6aYZGbq5GBS3+UPo66ViuYXdTcFA4MFryCsbVquQ53Xd2oelV3e0AhasyVXjuq7/B4obf7g=
+sidebar_class_name: "get api-method"
+info_path: site/docspace/api-backend/usage-api/api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Retrieves a pageable list of consents"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/clients/consents"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Retrieves a pageable list of consents
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"limit","in":"query","description":"Pagination limit","required":true,"schema":{"maximum":50,"minimum":1,"type":"integer","format":"int32"},"example":1},{"name":"last_modified_on","in":"query","description":"Date of the last retrieved consent","required":false,"schema":{"type":"string","format":"date-time"},"example":"2024-04-04T12:00:00Z"}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Successfully retrieved user consents","content":{"application/json":{"schema":{"type":"object","properties":{"data":{"type":"object"},"limit":{"type":"integer","format":"int32"},"last_modified_on":{"type":"string","format":"date-time"}},"title":"PageableModificationResponse"},"example":{"data":[{"registered_client_id":"6c7cf17b-1bd3-47d5-94c6-be2d3570e168","scopes":["files:read","files:write"],"modified_at":"2024-04-04T12:00:00Z","client":{"name":"Example Name","client_id":"6c7cf17b-1bd3-47d5-94c6-be2d3570e168","description":"Example Description","website_url":"http://example.com","terms_url":"http://example.com","policy_url":"http://example.com","logo":"data:image/png;base64,ivBOR","authentication_methods":["client_secret_post"],"scopes":["files:read","files:write"],"is_public":true,"created_on":"2024-04-04T12:00:00Z","created_by":"6c7cf17b-1bd3-47d5-94c6-be2d3570e168","modified_on":"2024-04-04T12:00:00Z","modified_by":"6c7cf17b-1bd3-47d5-94c6-be2d3570e168"}}],"limit":50,"last_modified_on":"2024-04-04T12:00:00Z"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

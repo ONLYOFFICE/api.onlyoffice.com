@@ -1,0 +1,63 @@
+---
+id: get-delete-personal-folder-progress
+title: "Get the progress of deleting the personal folder"
+description: "Returns the progress of deleting the personal folder."
+sidebar_label: "Get the progress of deleting the personal folder"
+hide_title: true
+hide_table_of_contents: true
+api: eJydV01v2zgQ/SvEXHJhYscJFru+uU5btLtAg3wgh8AoJtLYZi2RXJJK6jX034shJVm2m7qbkxly5s0jZ+aNsoGACw/jR7gmYwsSA3HvyYkcA8JMgrHkMCijP+UwhgWFKyoo0DU5bzQWH0yRk7t2ZuHIe5DgyFujPXkYb2A0HPJPTj5zyjIKjCECKKOF3XplRgfSgY3R2kJlMeTgm2ePDfhsSSXyKqwtwRjM0zfKAkiwjgkGleK1wY9bqrxn44NTegFyj+jdkkRAv+qIik9XZyBBV0WBTwXBOLiKJNB3LC3/CX/9efkH1BLIOePeEiA6ipK8xwX9OpY3JYlA3wMHtOQy0gEX/asrHWhB7qdhtw7CzEXYJ8Kh58aVGBLOxQh6sc9HF5e1BOWnhjcC9R/zyZiCUB9EvbWUqbkiL1Q/IDU3V15kLZowTmgTzvox+fq1BB8wVDGDRtOXOYwfN0C6KrmAp46QuUi4qbROD75lKGGKOqMiLj+gKnhzJo+k6LEBFaeiWUnRoIvTdiVFF4bt2rUUbUTebZZSNLHFabua9e/Z3aKW3c2G8lyO5IW83NJ9LbePwz7T8z7H0S63ix1Sl6/QGUr4fso0Tp/RaSzJv/2lG6Ae4TeD1fwSKsQHu1Kcu6cqUH6HfnWbKqSuJWCeKw6DxXWv+edYeDreiq2WCIsOSwrkYle0UTlUK3s3jelVMNyMmamSlB3kaq+lagmF0ivfs0XncA0SVKDSH5expaP5oc7w1bN0sYOjut7pot+gmIynJv+5tuw71L9+oweH1pJriFwOzw8HxL3GKiyNU/9xGzADyiqnwjp2O/rsK59/XRFvgCPk0nhxKhBX2TtCRw7GjzMJE6v+pnV/5x16laXll0kVliOGQKvOGhhedlBfLMWx9xjrbZfkDYXKaR+VrKsZMxd5nG56kQ6aKSnmcUxy/ZQUlqYZpZxODEsYwwCtGozOhgMbh/AgotCg9R/0RqUn90zOx7eoXAFj2Dyhp3tX1IeaG21FZvRcLao0x0HCMzrFQyVWQOOc0jDHquBcHiBdpSNxf/MPp262Tcotz+YEtZuabU3HLBxA3nsSU2NWigQ7kQ7N2Oexh2X07ANKUOyWRRcuzCaXXZxlCPYgynsdyIm1qZyoPEUJE6hzYdH7F+M45/HrIo6uCFhva+h3oE+Ssdh8frgTd2ZFuj7ZAU1Ysll8aNvl88Mdh9ot0V8HnOw8E4/MnHWpVJpy8bSOJXcyaXon2pyIJWEewx8lNLn+JDhP9bY1tvKDcWOfULIT88K8iBcVlmInuIiaIYGPU330T1tB2dmMhcjVF/ghu798Zmz7hYd57D7MBWYZN10w3ICBMh6qjrypXEa+k4QxPPDvEeskR23Db+8dN6ZG66S+e9fn0yvRHB9W8Y53c5ma56BXC42hcnS8Sya3U8GVddu5dN3Rx9lrDv4603MT4RsxnljFrU/OJ+DnKO7W+FBiHBQN6kcK/0vU9hlvth/zbxbJ5kn463ZgC1SaqVZJpJJiRtEGCaOzIatoVM3IhHUz7iTQNDGTds4kLI0P7LzpNLPm7X8rcus0FVptjKovoWkfFtsoajDJMrIhimhRpbzt/b/C4tip/Mf3dzxVKubcT3UStGbB6O2RXvexd/UvMVjFHn3FY7NJdVTXnX06etWjE4hkzW89q+v6BxI00h4=
+sidebar_class_name: "get api-method"
+info_path: site/docspace/api-backend/usage-api/api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get the progress of deleting the personal folder"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/people/delete/personal/progress"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns the progress of deleting the personal folder.
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Deletion progress","content":{"application/json":{"schema":{"type":"object","properties":{"response":{"type":"object","properties":{"id":{"type":"string","description":"The task progress ID.","nullable":true,"example":"9846"},"error":{"type":"string","description":"The task progress error message.","nullable":true,"example":"some text"},"percentage":{"type":"integer","description":"The percentage of the task progress.","format":"int32","example":1234},"isCompleted":{"type":"boolean","description":"Specifies if the task peogress is completed or not.","example":true},"status":{"oneOf":[{"enum":["Created","Running","Completed","Canceled","Failted"],"type":"string","description":"[Created - Created, Running - Running, Completed - Completed, Canceled - Canceled, Failted - Failted]","example":"Created"},{"enum":[0,1,2,3,4],"type":"integer","description":"[0 - Created, 1 - Running, 2 - Completed, 3 - Canceled, 4 - Failted]","example":0,"x-enum-varnames":["Created","Running","Completed","Canceled","Failted"],"x-enum-descriptions":["Created","Running","Completed","Canceled","Failted"]}],"title":"DistributedTaskStatus"}},"additionalProperties":false,"description":"The task progress response parameters.","title":"TaskProgressResponseDto"},"count":{"type":"integer","format":"int32"},"links":{"type":"array","items":{"type":"object","properties":{"href":{"type":"string"},"action":{"type":"string"}}}},"status":{"type":"integer","format":"int32"},"statusCode":{"type":"integer","format":"int32"}},"title":"TaskProgressResponseWrapper"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

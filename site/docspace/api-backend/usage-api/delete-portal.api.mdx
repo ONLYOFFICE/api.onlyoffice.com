@@ -5,7 +5,7 @@ description: "Deletes the current portal."
 sidebar_label: "Delete a portal"
 hide_title: true
 hide_table_of_contents: true
-api: eJyFUk2v2jAQ/CvRnC1CUU+5PQkOVTlUj3JC6MkkC3EJtmtvaGnk/17Z5rvvqZc49s7O7s7sAJY7j2qFb8ax7IqyWBCz0juPtYCx5CQro780qNBQR0wZCAFH3hrtyaMaMBmP49GQr52yMQUVlq/zgk3BLRVbomYj632xNe5QyI3puXB0MEeld4Us7IW0NppJc+SS1naqTuXLHz4SDvB1SweJagghBIHP40/vVNWy59Y49YcaRJSnuneKT6hWA6Sv32L8bU/xAY5kA4FfTjFhHdbiiW2ahvZpiLp3jjSfux1B4EDcmps2ELCSW1QopVXlZDQuM7a8xj25IzmfeuldhwrDRnpaui7gufYiYYva6K3a9dkJCBylU3LTZeHPyVmGrew7RoV/mKY5VCxf5wghTnkRZREVzVSP0gzgkyVUkFZ9pRMEtDyk+z1MQEX+2pi9oqS20luTshV3Ef5iVeyZnM+tHCcIAtZ4Psjk6Zk2C32/Cw8jDLfV+I8n57aZfnNpO6l0rNdnibI7qzgTBCajcXTsVi95tBZojecIG67ehPj8sycXl2Z98yDegkBLsiGXTE3i4aWuyXIyq+uzik/bHE24rs90Np99n0EgCvuofVb5/BMLXEL6dE//aEpuIn6D+CBjGLKxIVzxOfRhxnnICzoKuw4h/AUJtnMn
+api: eJyNVU1vGzkM/SsCL7loY9e7p7m5SRZoG6BFnCCHwChkDe1RPZa0EiepdzD/fUFpPP5q1zlZFslHinx80wKpVYTiBb65QKoWIzFDImNXEeYSnMegyDj7qYQCSqyRMDuChIDROxsxQtHCZDzmnxKjDsZzCBTw9HAvyAmqUCwRy4XSa7F0YSPUwjUkAm7cq7EroYTfgWpnCS0xlvK+NjqlH/2IDNhC1BVuFJ9o6xEKcIsfqAkk+MDFksnl7Go78IwUjF1BxzmanKG3GEu4wgASuDhF+erPCfvWxq7jga8KQW1BgiHcxMt1VAGXv6xB6dyjM1PXdRIiKWriO0vMzjeuxHcFdBLIUM1Os5TzOSjvMfSp/xp/+MUgrWqocsH8i2VCiKibYGgLxUsLKurvbP++Rr6AgKoECW/BEDKLPqIKGKB4mUuYevMFt4c3H1U0Oh+/ThuqJgyhvLnuYfg4QH31mLj4Mu/m8qTI20TPmOimmxDQUs+ra5CwQarcnsU8KUUVFDBS3owm1+NR9h0N9ojhFUNMT2xCDQW0CxXxKdQdnOaeJV+hnV2aVZN3BiS8qmDUos5c6INzd5eqqXkoZ0i32SSeHu55IvN9r2fM/Qx13PE9OVNzzyCfIoob59YGBQehpX6tQIJVmxR5CCjBcJhOIcywfkRDnorIn2W5s4RBbF0TRBMxMLBQthRexfjmAo8ybS8DLBJgt6fGe6CvsrNoPz8/ike3RttdHYFmLNkf/t7x/vPzI6c6Zt7/J5wetUmYKEokDBtjsRSLbaLY1bRfieRzJSpUZUp/saDpt0+C59TtGb/XEZUuTgvKfmJZuzfxZqgSR8lFWn4JbM78OLTulOHoMhGR2UfcyOFf1M7vFFTxtjygKoXSGmNkKffBEWrCUgSMrgka47DpBTzz7wXvrDK7Pd6/O13cOGuzjJ48n623ojefs/goun9MJ+HnH9GsrKIm4OUtmc5uBDNrNoQM23GIc7IcHf9fugTfq+rUG159DDEDvyaV9i7SRiXF71GzXh1+/I4KavffwgvS1r+L8CeNfK2M5XxNVposcklQQcLkeszCt8+XpG4uoXKR2K0dJK7j638aDNuszTspS9oroWc7a2PSIJhqjZ6S5tVNbvPJ55u1bFDh27v7u8c7lveGCzwcTpag/sAJdia7PYQ/VqxcxDpt1W8i2jZPvusG/2z6bcSw0tmbGzvvuu4/66wjdA==
 sidebar_class_name: "delete api-method"
 info_path: site/docspace/api-backend/usage-api/api
 custom_edit_url: null
@@ -54,7 +54,7 @@ Deletes the current portal.
 <StatusCodes
   id={undefined}
   label={undefined}
-  responses={{"200":{"description":"URL to the feedback form about removing a portal","content":{"application/json":{"schema":{}}}},"401":{"description":"Unauthorized"}}}
+  responses={{"200":{"description":"URL to the feedback form about removing a portal","content":{"application/json":{"schema":{"type":"object","properties":{"response":{"type":"string"},"count":{"type":"integer","format":"int32"},"links":{"type":"array","items":{"type":"object","properties":{"href":{"type":"string"},"action":{"type":"string"}}}},"status":{"type":"integer","format":"int32"},"statusCode":{"type":"integer","format":"int32"}},"title":"StringWrapper"}}}},"401":{"description":"Unauthorized"}}}
 >
   
 </StatusCodes>

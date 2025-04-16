@@ -5,7 +5,7 @@ description: "Activates a license for the portal."
 sidebar_label: "Activate a license"
 hide_title: true
 hide_table_of_contents: true
-api: eJyNUsGO2jAQ/RXrnS1CUU+5IfVSdatWpZwQWg1hIO6G2LUdWhr536uJE9hltdJe4tgz8+bNe9Mj0jGg3GDFMZr2GFShHkzFbWBsNaxjT9HY9vMeJaiq2MUprOE5ONsGDih7LOZzOfYcKm+c1KDEVw6BjqxoZ7uoYs3Kc+iaqOxBURXNmaSpaq6QlW0jt1GQyLnGVEP34lcQuB6hqvlEKPuUUtL4OP/wuue6pS7W1pt/vIdkBa46b+IF5aYHhepR4o9PLA/wTHto/PEmMrZpq+/QlpklB0UTTXWwfpjFWR+pmUHjxLG2IpGzIULDUaxRoiBnisVsXoRR3WKEKLKUEHL+zD4M3DrfoES/o8Br3yTcc1kNuaqy7cEcu2wMNM7kDe2abMNYnGU5UNdElHiF9CmH1PrHA1KSqSeRVqJwhnopVY94cSxb4MwXvkCjpdNwf56mYQS/svbJ8KC+aQ92qDaxkfSlM8KZfchUzgskPeh2osHjEXYS/qb7/RT9bVveadM4QeS/sXANmVZad1mtbNlGxoPGYjYfzMm2QePGYbRuq1GL2eUG/dWyJM+/O/ayW9ubNXJLGjXTnv3g9aApltManKnpsrh3Sy/eXLfr+7fVT2HQCdXnhmTpxx+Bn0Lt5Tn4S6cyBfkm/UZF32e3U7rm59CbFeOIU7ZIvE0p/Qdl04FB
+api: eJyNVU2P2zYQ/SvEXPairl23J92cTQskTbFBvIs9GEYwlsYWY5lkydFuXEH/vRhSkr+S7p5Mc2beDMn3nlpg3AbIl7AgZm22QU3UJ12QCQSrDKwjj6yt+VBCDlgU5HgIZ+ApOGsCBchbmE2n8lNSKLx2UgM5/E0h4JYUrm3DiitSnkJTs7IbhQXrZ5Smqh4hC2uYDAsSOlfrInaffAsC10IoKtqjrPjgCHKw629UMGTgvMzKOg0zTHaSGdhrs4VOejSpQx/RhmlLHjLYWL9HTlu/zSS31mYXTnLRezxABpppH16fo/K0+eEMcvh0pItQ13UZBEZuwhtHTMl3tqQ3FXQZsOZakhax55NH58j3rX+f/nr9jI8GG66s1/9SGRECFY3XfIB82QKG4qvEv+5INsATlpDBi9ccSfSO0JOHfLnKYO70X3Q43XmHQRdpeT9vuJoJBDp928PIcoS6dxSpuFx1q+xiyHniEwWFA6HUxvrIOmc9Y30LGeyJKytkdjbE90KuIIcJOj2Z3U4nodfBpIeYJNKDnNk/kw/xyI2vIYd2jYEefd3B5SyLmKsKazZ62yQJQQbP6DWu68SNvjjd9gabWh7pCul9CqnHL5/khVbHu1+IFhLU+QscyRov+wryMZC6s3anSUkRGe5lBhkY3MfKU8AMtJQVsUQY1z/Z2Kdidldd/jBMXh1s41UTyAuwQlMqhyG8WC9PG9UsAOsI2B2p8hbom5Ss2o9PD+rB7sh0N2egCSvrF38OOvj49CCtzpn4/w3nZ9ekdFAlMfm9NlSq9SFS7GbeSyTm3KiKsIztXx1o/vmDknfqjgo4+grGjcuBUp7a1PZFvWiu1FlzFc0gAwknfpxGB6c424xEFPaxXOT4LxTWDY6KopovhKUSSYSg2CrnLVPBVIqv28YXFEbl5/Akv69kJ9cZdH08d9y4s8YkW704vkTfqz58zeKz6v4wXQbffwl6a5AbT6+rZL64U8KsxVgyquMU50Icnfzf2Ajfu+zcaZE++ZCAn6Nri/3sMX4BetTBv472dTlTe/w8vtHt+iMyfeeJq1Ebad0k00nOF70WMpjdTqPHJfcD+fINM/QOuMqgEs/Ml9COztfJ9j8N+UOy8MHhokVn0ItALDNaE8wHN33Gukm3f/GVF4sbTfrz/eJBJmhk1NMXS77ULwR+CJnDKfi5jaURdlFqP6lo20SHrhvzU+inFaPOU7Zc8arruv8ABq0xjg==
 sidebar_class_name: "post api-method"
 info_path: site/docspace/api-backend/usage-api/api
 custom_edit_url: null
@@ -54,7 +54,7 @@ Activates a license for the portal.
 <StatusCodes
   id={undefined}
   label={undefined}
-  responses={{"200":{"description":"Message about the result of activating license","content":{"application/json":{"schema":{}}}},"401":{"description":"Unauthorized"}}}
+  responses={{"200":{"description":"Message about the result of activating license","content":{"application/json":{"schema":{"type":"object","properties":{"response":{"type":"string"},"count":{"type":"integer","format":"int32"},"links":{"type":"array","items":{"type":"object","properties":{"href":{"type":"string"},"action":{"type":"string"}}}},"status":{"type":"integer","format":"int32"},"statusCode":{"type":"integer","format":"int32"}},"title":"StringWrapper"}}}},"401":{"description":"Unauthorized"}}}
 >
   
 </StatusCodes>

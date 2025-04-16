@@ -5,7 +5,7 @@ description: "Returns the storage progress."
 sidebar_label: "Get the storage progress"
 hide_title: true
 hide_table_of_contents: true
-api: eJyFk0Fv2zAMhf+K8c5CnAU7+VZgQzFsh6FZToFRKA4Ta3UkTaKzZYb++0DLTdK0xS62bPJR5PekAaz3EdUaS2I2dh+LsliyC3pPqBWcp6DZOPtliwp74in2Pbh9oBihECh6ZyNFVAMW87m8thSbYLwIUWHSFP4iapxlsiy52vvONOMm5c8oggGxaemgZcUnT6hg+8OGAhR2Lhw0o8LW9ZuOkFJKCh/nH15vu7K659YF85e2kKxITR8Mn1CtB+jYPEr88YnkBwLpLRR+B8OEOtXqptoDcR9sLLilIt4MNIPCgbh1EyQoeM0tKpTam3Ixm5dxwltO2vIKRqRwpBDHtvrQocKw0ZFWoUu4bWM55haNszuz77M3UDjqYPSmyyZM4kxkp/tOeL2q9CmHitXDN6FYX/gshX4u9ZLS2Q7tzVc6QcHqw/h9naZgpH7j3JOhEbyxOzeqDXeSfueN9Ewh5laOCyQF7yIf9Oj/VPae+E3et7MMl/P0X5+mCZj+cOk7baxs3Wda2bS1jAeFxWw+mpONk+V0LxTOjdQKrYssouFsWpLfv3oKcrDqiznylRRa0lsKo9sjVdw1DXkeXez6jPfmSog75wN2//kHFAT3S0cy+2kh1Z9D9nRd+6VVuQN5JvWOYhiy3Smd83PoXcU04XO2MK5TSv8Az5WEAQ==
+api: eJyNVcGO2zYQ/RViLnth167bk27ObhokLZAg3sUeFkZAS2OLsUyy5Gg3rqB/L4akZdlu6j2J4sy8GQ7fPHZAahOgeIYFEmmzCWIiFmS92iAsJViHXpG25mMFBWyQsu2LtxuPIYAEj8FZEzBA0cFsOuVPhaH02nEgFJBjhDsGldYQGmJf5Vyjy5hk8j1wQAehrHGneEV7h1CAXX3HkkCC81wS6ZTukHvkadrdCj30nKNNGbJFG8INepCwtn6nKG39NmPfRpttGPkq79UeJGjCXbheR+1xPfIK5LXZMK4qUw8uTH3fSwikqA1vLDE539kK3xTQSyBNDTvd23bV4JNXznFnYurfp79eXtSjUS3V1ut/sIoIAcvWa9pD8dyBCuU3tn/bIm+AR1WBhFevKXLlHSqPHornpYS503/ifrzzTgVdpuXneUv1jCGU07cZhpcD1GeHkXHPy34pz4r8itR6EwTVKMIZs25Bwg6ptpmtfFGKaihgopyezG6nk5B5PsmxkxErA/oX9CGetvUNFNCtVMBH3/RwXsYi+orSmrXetGlIQMKL8lqtmkSLHJwavVZtw/dzgXSfTOLx6198Octj2xc8BgnqtPlHnsY+X0A+BhR31m41Cg5CQ3nCQIJRuxg5BpSgOayMIUy2fFtDnprIXWR5bwi92NvWizagZ2ChTCWcCuHVer7VOMgMsIqA/ZElb4G+Sc6i+/T0IB7sFk1/cwKasGRe/HEYgU9PD5zqlIT/n3B+0iahg6iQ0O+0wUqs9pFtN/M8HdHnRtSoqpj+akHzLx8F31N/JP9RUlTcOC8o+Yl1Y1/Fq6ZanCQXUQcksDnxY2w9iMTJZiQis4+4kcNfKK07iKmq4nypSqiyxBAEWR4twpKwEh6DbX2JYRj6Ap74e8U7Cc5hpI/njht31pikqGfHZ+u9yOZLFp9E58P0En78EvTGKGo9Xp+S+eJOMLMWQ8gwHWOcs+Ho+X9tI3wW2LnTPProQwJ+iYLtbKCdiuKfUT8g/adsnVfWHd/Hq3KXj0j4gyauUdpw6jaJTtK+KLMgYXY7jRqX9I+X+Z2Pr1kqZCmhtoE4qBu0r+ftv1v0+6TfB42L+iwhjwGLZhQnmJclOopi2LSp/2dPPIvcoNMf3j+w/rdc6/jKkjDlBaMfTGY/xj7VsVTBNs7aTyK6LvGh7wf/ZPppxDDoyZt7vOz7/l8+fSkl
 sidebar_class_name: "get api-method"
 info_path: site/docspace/api-backend/usage-api/api
 custom_edit_url: null
@@ -54,7 +54,7 @@ Returns the storage progress.
 <StatusCodes
   id={undefined}
   label={undefined}
-  responses={{"200":{"description":"Storage progress","content":{"application/json":{"schema":{"type":"number","format":"double"}}}},"401":{"description":"Unauthorized"}}}
+  responses={{"200":{"description":"Storage progress","content":{"application/json":{"schema":{"type":"object","properties":{"response":{"type":"number"},"count":{"type":"integer","format":"int32"},"links":{"type":"array","items":{"type":"object","properties":{"href":{"type":"string"},"action":{"type":"string"}}}},"status":{"type":"integer","format":"int32"},"statusCode":{"type":"integer","format":"int32"}},"title":"DoubleWrapper"}}}},"401":{"description":"Unauthorized"}}}
 >
   
 </StatusCodes>

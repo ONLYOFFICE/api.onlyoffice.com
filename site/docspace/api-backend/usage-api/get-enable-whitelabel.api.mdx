@@ -5,7 +5,7 @@ description: "Checks if the white label is enabled or not."
 sidebar_label: "Check the white label availability"
 hide_title: true
 hide_table_of_contents: true
-api: eJyVk09vEzEQxb+K9c5WN0Sc9lagQghOLRWHalU5m0nW1LGN7U0JK393NPY2bRMVicv+88zLm/ebTEhqG9He4YZS0nYbRSOuaRWUXWu7RSfhPAWVtLNf1mixpXRl1crQj0EnMmpFBhKBonc2UkQ7YblY8G1NsQ/acydafHDOkLJir8xIrUhhJKE3Ig0kHllJFCmho6Aiv4ZE72wim1hMeW90X2w0PyMrToj9QDvFT+ngCS1W9TeQc84S7xfvzm3cWjWmwQX9h9bgqkj9GHQ6oL2boGJ/z+f3D8QfEEixj8egE6HLnTxR+zhQ/xD/PYdwQViXLiCxozS4OURIeJUGtGiU183yYtHEmUBTOx9fBhwp7CnE4nIMBi2mlYp0G0zGqaubUit6Zzd6O1Z2kNiroFm3MJqba0AbNZqEFmdKn+qRuL3+xqF2z3HdcPZV6nVoRxjK6690gIRVu/L+skxCs37v3IOmwkHbjSvdOhkuv/SaPVOI1cp+iSzhXUw7VejPsgXBWfxqr7RRK22Y7MlU0/Ne/S/AebREv1PjjdKWPY01xkrzjueGxPJiUahVopA4Y9pJDC4mbpmOLDN//jVS4PXrnpnxW5YYSK0plCUoYeOy78mnAteMNfWT/wlDO+7d56vvkGAKr0FVJPMDqz8d2cNL7dcEqwO+ZvlGxzTVLcj5WF+P3uyYJ3yq5oS7nPNfix2W1w==
+api: eJyVVlGP4jYQ/ivWvOyLu1Dap7yx3La6a6Wrll3xsEInkwzER7BdewJHo/z3auwQAuhu955iPDPfjD3zfaYBUpsA2SvMkUibTRAj8YQrr0yhzQaWEqxDr0hb87GADDZIj0atKlyUmrBSK6xAgsfgrAkYIGtgMh7zp8CQe+04EjJ4sLZCZcReVTVmgnyNQq8FlSgOjCQilNBBYIQvQEJuDaEhBlPOVTqPZYy+BkZsIOQl7hSv6OgQMrCrr5gTSHCeiyad6jkVN/BcpWqg5SR1StGZtCHcoAcJa+t3itLWbxP2rbTZhoGv8l4dQYIm3IW3Cyk9rgdegTxfcStB5emWbkxt20oIpKgO7ywxOc9sge8KaCWQpgrPHVp45Rz6Lvfv419ve/liVE2l9fo/LCJEwLz2mo6QvTagQv6F7V+2yBvgUXEzD14T8jw9oPLoIXtdSpg6/RcehzsPKug8LT9PayonDKGcvu9geNlDfXYYp/J12S7lVZGzEvNt+PGMCeuFsXQPEnZIpe0GnBunqIQMRsrp0eR+PAodO0Yp8jAc/oB+jz7Ew9e+ggyalQr44qsWrquaR1+RW7PWmzrxCiTsldeMG7vcBad7X6u64n7dIH1IJvHy9Df3annuwpx5kaAue3Ge23jtN5AvAcXM2q1GwUFoqKMcSDBqFyOHgBI0h+UxhIeva16fpyRyN1keDaEXR1t7UQf0DCyUKYRTIRys5yZHZkeeRsD2PDTvgb5LzqL5tHgWz3aLpr27AE1Yslv8caLEp8Uzp7qcyR8nnF5cE09WgYR+pw0WYnWMo3c37cgSfe5EiaqI6d8saPrPR8F9as9cOEuMihvXBSU/sa7sQRw0leIiuYi6IIHNaT6G1pNoXGzGQeTpI77I/lfIrTupq2LaPKEqhMpzDEGQFc5bwpywEB6DrX2OodeADBb8fcM76c+J4edzx42ZNSYp7NXx2fpBdObbKb6I7g7TSvj2S9Abo6j2+DZLpvOZ4Mma9yE9O4Y4V+Ro+ffaRvhOcKdOM/XRhwS8jwLubKCdio9BhxqV7EbF1F7pSq10xbp7VWNzfjp/Vge7sxN+o5GrlI5vZJ3UKIlilGOQMLkfR/FLwggSbqRxKaG0gTik6SWx5e1/a/THpPIn6YsqLqFjB2tp1CyY5jk6ihpZ1aktV38FWPt6+f7z8ZlfiZorHXYy6VW3YPSTyRyH2JfylirYRgp+J6Jp0pi0be+fTN+N6PmfvPmGl23b/g9twEJS
 sidebar_class_name: "get api-method"
 info_path: site/docspace/api-backend/usage-api/api
 custom_edit_url: null
@@ -54,7 +54,7 @@ Checks if the white label is enabled or not.
 <StatusCodes
   id={undefined}
   label={undefined}
-  responses={{"200":{"description":"Boolean value: true if the white label is enabled","content":{"application/json":{"schema":{"type":"boolean"}}}},"401":{"description":"Unauthorized"}}}
+  responses={{"200":{"description":"Boolean value: true if the white label is enabled","content":{"application/json":{"schema":{"type":"object","properties":{"response":{"type":"boolean"},"count":{"type":"integer","format":"int32"},"links":{"type":"array","items":{"type":"object","properties":{"href":{"type":"string"},"action":{"type":"string"}}}},"status":{"type":"integer","format":"int32"},"statusCode":{"type":"integer","format":"int32"}},"title":"BooleanWrapper"}}}},"401":{"description":"Unauthorized"}}}
 >
   
 </StatusCodes>

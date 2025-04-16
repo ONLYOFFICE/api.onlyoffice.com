@@ -1,11 +1,11 @@
 ---
 id: get-used-space
-title: "Get the used portal space"
+title: "Get the portal used space"
 description: "Returns the used space of the current portal."
-sidebar_label: "Get the used portal space"
+sidebar_label: "Get the portal used space"
 hide_title: true
 hide_table_of_contents: true
-api: eJyVk81u2zAQhF9FmDMRuUZPugVoERTtoU3qkyEEtLS22Mgkyx+3rsB3L5ZU7NhNDr3YEjk73p1vPSHInUezxlfjghyruvoWTZBoBYwlJ4My+lOPBjsKK0/9g5UdQcCRt0Z78mgmLBcL/urJd05ZLkEDVle2uPq5qjM6kA4sltaOqsv+9Q/PFRN8N9Be8lM4WkIDHfcbchDYGreXAQ16EzcjIaWUBN4v3r3yu1rGMBin/lAPVnnqolPhiGY9Qfruke8fn4gP4Ej2EPjlVCC0qRVXbvcUotO+CgNVkSfKo1Rmm0+66BzpMI95A4E9hcHMeUHAyjCgQS2tqpc3i7oIa3Z6zsSTO5DzubvoRjSYNtLTyo0J1908ZG3VGb1Vu1joQOAgnZKbscCYi0swWxlHju0fpw/lqlrdf+Ew23NMDwyhWF2GdaIirfpMRwhouc/vL2UCiv07Y54U5fyV3ppcrcLI8luruGdyvrRyWCIJWOPDXuY1mG3vKJxjv1qki2Gm8179N695pEC/Q21HqTT3Ekt8Bd6a54XA8mbBQHMlBM4IW4HB+MDK6YQu8fHPSI63rD0j4rckMJDsyWXmOVvcdh3ZkFmOsYR89f9gRqftuvv4HQIc+iWXQmB+YPfnK3186X0JrHTAn0m8UTFNBXpKJ325erNinvBZzcG2KaW/NRuC+Q==
+api: eJyVVU1zGzcM/SscXHxhLVXtSTfFTjJJO5M0sscHjyZDcSEtoxXJkqAddWf/ewfkavXVxO5puQTwABIPjy2QWkeYPsJnF0g1YiT+So4ULCQ4j0GRcfZDBVNYI91HrOZeaQQJAaN3NmKEaQuT8Zg/FUYdjOcQmAJ7C19QYx+lnSW0xM7K+8bojD/6Fjmihahr3Cpe0c4jTMEtv6EmkOADV0Om5NsnP/K0abvEAB3nSCVDbzGWcI0BJKxc2CoqW79N2LcxdhOPfFUIagcSDOE2vlxHHXB15BUpGLtmXKXLJVyYuq6TEElRiq8ssTjfuApfFdBJIEMNO926tGzwISjv+WZy6t/Hv/5Hp6xKVLtg/sEqI0TUKRjawfSxBRX1V7Z/3SBvQEBVgYTnYAiZJm9QBQwwfVxImHnzB+6Od96oaHRZfpolqicMoby57mF4OUB98pjJ9rjoFvKsyC9IKdgoqEaRmFqZU8Kt8o5OIaClnm/XIGGLVLueuNw4RTVMYaS8GU2ux6PiOGKkPTkjhicMMR86hQam0C5VxPvQdHBezTz7Cu3syqxTGROQ8KSCUcumsKMPLve9UqnhNl0g3RaTuP/yJ/docbj9OU9DgTrtwYGu+bovIO8jihvnNgYFB6GlftBAglXbHHkMKMFwmM4hzLm+aUOemshfZHlrCYPYuRS4H4GBhbKV8CrGZxe4uXmeGWCZAbsDWV4DfVWcRfvx4U7cuQ3a7uoEtGDJfvFuPwkfH+441SkXf55wdnJNwkRRIWHYGouVWO4yxa5m/ZBknytRo6py+hcLmn3+ILhP3WEGDsqi8sZ5QcVPrBr3LJ4N1eIkuchyIIHNhR/H1r1WnGxmIjL7iC9y+Iva+b2mqiqPmaqE0hpjFOSED45QE1YiYHQpaIzD7E/hgb8veBfd2U/24dx548ZZW4T17PhsvRW9+ZLFJ9H9YToJ33+JZm0VpYAvT8lsfiOYWfMhZJiOY5yz4ej4f+UyfK+zM2949DHEAvyUddu7SFuV34Ae9T1SJlL/Jh5E7Ly09vBO/m/Z689M+J1GvlHGci2pqFDRwCy/IGFyPWZdzJEg4aCECwm1i8Se7aCAHW//nTDsipjvlS6LtYR+GFg6s0TBTGv0lCWxSaULZ+89S90g0u/f3vFjkLjA48YVeeoXjL432d0x9qmalQo2eeJ+ENG2hRVdN/gX0w8jhnEv3nyxi67r/gUXcCgd
 sidebar_class_name: "get api-method"
 info_path: site/docspace/api-backend/usage-api/api
 custom_edit_url: null
@@ -22,7 +22,7 @@ import Heading from "@theme/Heading";
 <Heading
   as={"h1"}
   className={"openapi__heading"}
-  children={"Get the used portal space"}
+  children={"Get the portal used space"}
 >
 </Heading>
 
@@ -54,7 +54,7 @@ Returns the used space of the current portal.
 <StatusCodes
   id={undefined}
   label={undefined}
-  responses={{"200":{"description":"Used portal space","content":{"application/json":{"schema":{"type":"number","format":"double"}}}},"401":{"description":"Unauthorized"}}}
+  responses={{"200":{"description":"Used portal space","content":{"application/json":{"schema":{"type":"object","properties":{"response":{"type":"number"},"count":{"type":"integer","format":"int32"},"links":{"type":"array","items":{"type":"object","properties":{"href":{"type":"string"},"action":{"type":"string"}}}},"status":{"type":"integer","format":"int32"},"statusCode":{"type":"integer","format":"int32"}},"title":"DoubleWrapper"}}}},"401":{"description":"Unauthorized"}}}
 >
   
 </StatusCodes>

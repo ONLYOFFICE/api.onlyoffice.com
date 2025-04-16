@@ -1,11 +1,11 @@
 ---
 id: refresh-license
 title: "Refresh the license"
-description: "Refreshes the license."
+description: "Refreshes the portal license."
 sidebar_label: "Refresh the license"
 hide_title: true
 hide_table_of_contents: true
-api: eJx1ks1u2zAQhF9FmDMRuUZPuqVoUQTNKalPhhAw9MpiQ5MsSbl1Bb57saLiv8AXieTuDpff7IgktxHNGs+UkrbbWNXVo1ZkI6EVcJ6CTNrZhw0aBOoCxf49LhAoemcjRTQjlosF/zYUVdCei9Dgi3OGpK320gzUVCkMVOmuSj1VR+1KxyoOSlGM3WAgoJxNZBOrSe+NVlNa/Suy5IioetpJXqWDJzR4LZcg55wFPi8+fexjZeWQehf0P9qAsyKpIeh0QLMeIaN64fjLG/EBAskNBP4EnQhtbsWV2lMBQXF6iCk87iCwo9Q7RrWlBAEvU48GtfS6Xt4t6jhDrueSeiYK7ifsKcSpnSEYNBhfZaRVMBnX1z9PuZVyttPboUCEwF4GLV9NcWMuLiQ6OZiEBh+UvpZQtXp6ZHrticszQy5Sl3SO1KXXP+gAASt30/48TUCzvnLuTdMEXNvOTdU6GU6/95p7phBLK/slsoB3Me3kZPMsO7M+J339jPE0MbetmbtO9DfV3kht+bqhECo+rflJEFjeLSZDilcQMGcDX/xqBXoXE9eMR58yH/8eKPAMtSc/eJcFepIbCpPBE0jcK0U+TcaZoRC9GnY25DhS37/9hAATvjSh4J4XrP4esodz7Ut3Sgf8zeJGxTgWh3M+5pfQzYr5he/ZjLjNOf8H6il/2A==
+api: eJyNVcFu2zgQ/RViLrlwY9e7J92ctFu0W6CLOkEOgVHQ0thiLZNccpjUK+jfF0PKsmyj65xEcWbeDIdvHlsgtQlQPMMCibTZBDERX3SJJiAsJViHXpG25lMFBXhcewz1wS7BY3DWBAxQtDCbTvlTYSi9dhwEBdxZ26Ay4kU1EQtBPqLQa0E1igFb6CBCLEsMYR0bkFBaQ2iI0ZRzjS6T2+RHYMgWQlnjTvGK9g6hALv6gSWBBOcZlHQu6FDdyHOVy4GOk8ScojdpQ7hBDxLW1u8U5a3fZ+zbaLMNI1/lvdqDBE24C9cLqT2uR16BvDYbxlVlbtOFqes6CYEUxfDGErPzva3wTQGdBNLU4PGKnrxyDn2f+4/pu8vLfDQqUm29/herBBGwjF7THornFlQov7P9+xZ5AzyqCiS8ek2JS3eoPHoonpcS5k7/hfvxzp0KuszLr/NI9YwhlNO3PQwvB6ivDhMjn5fdUp4V+S2TFEMimbOeVCOaTNlbkLBDqi2zeYPpphTVUMBEOT2Z3U4noZ+DSR8y6UkPfFr/gj6kw0bfQAHtSgV89E0H51Uskq8orVnrTcw8Bwkvymu1ajIt+uDc57WKDd/PBdL7bBKP377w3SyPXV/wHGSo094feZrafAH5GFDcW7vVKDgIDfUjBhKM2qXIMaAEzWFlCmGy9Zc15KmJ3EWWD4bQi72NXsSAnoGFMpVwKoRX6/lS0ySnuUyA3ZEkb4G+yc6i/fz0IB7sFk13cwKasWS/+PMwAp+fHjjVKQf/P+H8pE0sWBUS+p02WInVPlHtZt4PR/K5ETWqKqW/WtD870+C76k7cv8oKSptnBeU/cS6sa/iVVMtTpKLpAMS2Jz5MbYeROJkMxGR2UfcyOEvlNYd1FRVabxUJVQSa0FWOG8JS8JKeAw2+hLDMPMFPPH3infWm8NEH8+dNu6tMVlRz47P1veiN1+y+CS6P0wn4edvQW+Moujx+pTMF/eCmbUYQobpGOOcDUfH/2ub4HuBnTvNo48+ZOCXJNjOBtqpJP49aq9ciUzN8MaeFNUe38arQtefjvAnTVyjdHr1YtabrHpJYEHC7Haa5C0rH/B7d3zhs/otJdQ2EMe0g+p1vP1PRL/Pwn1QtyTMEvoBYLlMsgTzskRHSQabmDt/9rqzvA0C/fHDAwt/5FLHl5UlqV8w+sFk9mPsUwXLFWzTlP0iom0zE7pu8M+mX0YMI569ucXLruv+A7roMLc=
 sidebar_class_name: "get api-method"
 info_path: site/docspace/api-backend/usage-api/api
 custom_edit_url: null
@@ -36,7 +36,7 @@ import Heading from "@theme/Heading";
 
 
 
-Refreshes the license.
+Refreshes the portal license.
 
 <ParamsDetails
   parameters={undefined}
@@ -54,7 +54,7 @@ Refreshes the license.
 <StatusCodes
   id={undefined}
   label={undefined}
-  responses={{"200":{"description":"Boolean value: true if the operation is successful","content":{"application/json":{"schema":{"type":"boolean"}}}},"401":{"description":"Unauthorized"}}}
+  responses={{"200":{"description":"Boolean value: true if the operation is successful","content":{"application/json":{"schema":{"type":"object","properties":{"response":{"type":"boolean"},"count":{"type":"integer","format":"int32"},"links":{"type":"array","items":{"type":"object","properties":{"href":{"type":"string"},"action":{"type":"string"}}}},"status":{"type":"integer","format":"int32"},"statusCode":{"type":"integer","format":"int32"}},"title":"BooleanWrapper"}}}},"401":{"description":"Unauthorized"}}}
 >
   
 </StatusCodes>

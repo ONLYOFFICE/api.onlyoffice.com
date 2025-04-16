@@ -1,0 +1,71 @@
+---
+id: get-public-client-info
+title: "Handles the GET request for public client information"
+description: "Handles the GET request for public client information"
+sidebar_label: "Handles the GET request for public client information"
+hide_title: true
+hide_table_of_contents: true
+api: eJytV21v4zYM/isCv3QDnCbN9dqd96lvu/V2WG9tigILikCRmURXW3IluW0W+L8PlOzETly0ewECJDGpRxT18CG9AsfnFuIxnKUSlWN/FGiWUs3hPgKdo+FOanWZQAxzdN+KaSpF8LxUMw0R5NzwDB0aAlmB4hlCDCK4JBCBVBBDzt0CIkjQCiNzgoQYLs+ZnjG3QBbcmdPMoDMSnxAiMPhYSIMJxM4UGIEVC8w4xCvIpPqKau4WEB9E4JY5bWmdobDLCPCFZ3lKz47EsZgdHE97B9PkQ+/wOPnY+3QojnpTHCYfPh4P8ODoJyjvaS+ba2XREvxwMKCvdrA3hRBo7axI0+U6yqSOPPeJYTLkRGjlUDkC4XmeSuGT2P9uCWnVOEgVup5+R+EomYZS7mSII+RytXvAVmQddit0HiAKJR8LvHSY2TqNlTc3hi/peoJtB6WMqkucyKRzk2ecWulwUpi00+7QZPZVa65TKZavmlM9150GXrgFKleldJKhW+jkvx9V2km4woZ5qnWKXNGuwiB3mEy68h3BTJuMO4gh4Q57TmbYXDNddh4k04mcyX+IuV7UCUpJl84Tf1Oi1xWzW4WxrtOL8IT9Tn9bN/6+2tku6RrvvPF0iyqwcC6P+/0qmH2hM2ixpduhSZhuj8AZShiPZcbn2M/V/Ocpt3h0GMmn06treJ0/4/rsFoVBN8m1dSSBdSmNYSZTtLFBTqIW/jwb6ZC8GvQJzGsSBoaD4WFvQJ/RwTAeDOLB4E9oE+S92W6x5jXgFkveqYElseewS/hOecJIitE64tDh8NOuz0hrlnG1rB3t/yeCBrntlLltHYQLY7RhtZIz2p9LJdWccbYoMq56dHl8miLDlzzlygdUtyCk1bCpII+2KR6fn49d+blUDo3iKbNontBUQLvh/cpVkqL1m32+GNWpYjNt6vZRNRPqIlT9oXgCRUP/9f2W2h70eS77w/1BP6yx/VXdcst+QOtXzSiEFbpzqJ4V1cStScud8r0JRxBazeS8MHUIT9xIypu/kGpxSMSMFymp1A7SeTCx2+uvlDyqJBSFkW55QxcfoLgVEyrIyQM29Yzn8jdc7kDeWmRnWj9IZO0qhqiWsxZgNXoIv4Soe8ptS+BJRXYVjK6TLXVhWGHpYjNkXCUs59Y+a0PF76nrO4QHJGTkBs37oPeCM1t9uRuxkX5AVe61QANWVP34pW4EX+5GtNWJT877NjxppYlJyxKa1DKpMGHTpafiHjlpI//yPntsgTzx278Z0Mm3S0b3VEZwRSDDZjFz/2A7oODHZql+Zs/SLVhrc3amE+pCZA78aFq9cfuhJyKxz1Ei1/82A5DX6xiukSeM+wmOpszcaIfCISmb1YURSIoV5DyGO/p+wzsIwlWOfjbenNs/ONNKBS3bOj5Zz1ll3mVxa3V1mDKCl56Vc8VdYfDtKjm5OWPErJv1knV1NHG2ioNGIJILgq8E8CSXVPpobAB+Goa5zbqMq8YI8W91rXuIdfji+nnKpZ+7qvEwaN6YjgwRDPcH61GFri1uvGxUXbg6zX0EC+rj8RhWa9Er6fEjveVAPL7fiJsXyERa+p1APOOpxZ0o100NfriuXk9+ZG+8x3SerL5EtfT6mhYYmOuVcPP6VN6XEVQlSfEF84kQmLvGwp0GS4K7bhyfL0ZQln8DlfG/HQ==
+sidebar_class_name: "get api-method"
+info_path: site/docspace/api-backend/usage-api/api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Handles the GET request for public client information"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/clients/{clientId}/public/info"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Handles the GET request for public client information
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"clientId","in":"path","description":"ID of the client to retrieve","required":true,"schema":{"minLength":1,"type":"string"},"example":"6c7cf17b-1bd3-47d5-94c6-be2d3570e168"}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Successfully retrieved client public info","content":{"application/json":{"schema":{"type":"object","properties":{"name":{"type":"string"},"description":{"type":"string"},"scopes":{"uniqueItems":true,"type":"array","items":{"type":"string"}},"client_id":{"type":"string"},"website_url":{"type":"string"},"terms_url":{"type":"string"},"policy_url":{"type":"string"},"logo":{"type":"string"},"authentication_methods":{"uniqueItems":true,"type":"array","items":{"type":"string"}},"is_public":{"type":"boolean"},"created_on":{"type":"string","format":"date-time"},"created_by":{"type":"string"},"modified_on":{"type":"string","format":"date-time"},"modified_by":{"type":"string"}},"title":"ClientInfoResponse"},"example":{"name":"Example Name","client_id":"6c7cf17b-1bd3-47d5-94c6-be2d3570e168","description":"Example Description","website_url":"http://example.com","terms_url":"http://example.com","policy_url":"http://example.com","logo":"data:image/png;base64,ivBOR","authentication_methods":["client_secret_post"],"scopes":["files:read","files:write"],"is_public":true,"created_on":"2024-04-04T12:00:00Z","created_by":"6c7cf17b-1bd3-47d5-94c6-be2d3570e168","modified_on":"2024-04-04T12:00:00Z","modified_by":"6c7cf17b-1bd3-47d5-94c6-be2d3570e168"}}}},"400":{"description":"Bad request"},"429":{"description":"Too many requests","content":{"application/json":{"schema":{"type":"object","properties":{"reason":{"type":"string"}},"description":"Error response containing a human-readable explanation of the error","title":"ErrorResponse"}}}},"500":{"description":"Internal server error"}}}
+>
+  
+</StatusCodes>
+
+
+      

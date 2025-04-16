@@ -5,7 +5,7 @@ description: "Returns the confirmation email URL for authorization via SMS or TF
 sidebar_label: "Get confirmation email"
 hide_title: true
 hide_table_of_contents: true
-api: eJy1k09v2zAMxb+K8c5CnAU7+RbsTzFsuzTNKQgK1WFirY6lSXS2zNB3Hyg5bZK2x15syySfyfejB7DeBVQrLIjZdLtQlMXd13kRxiPWCtaR12xs922DCrzVn2y3NX6/9C0UPAVnu0AB1YDZdCq3DYXaGyc1qDCmJ4mC9tq0xfL2BxRq2zF1LBXaudbUKaX8FaRsQKgb2mtUQ4wxKnycfnipvex0z4315h9tIFmB6t4bPqJaDdChvpf4/SPJC3jSGyj88YYJ67hWV2q3xL3vQsENFfWrXRdb64vTJ3PsYHSx+LkorE/OnU0ygcKeuLHi244YCk5zgwqldqacTablyeeSt1o7V45fhQziD+RDmqP3LSoMDzrQ0rcR130vUm5ueddnWFA4aG/0Q5vRjMXZwq3uW0aFF0qfcygBilEcOhm6EBpZ6tLWAXx0hArame90hEKn9+l8nqZgRL+29tFQImW6rU3VhltJnzsjPZMPuZXDDFHB2cB7nfZhlL0hfgXO9STD83a9B9ZxZKa/XLpWm0567bO9mfFK/IDCbDJNNMf/SSGTzuufWK8VGhtYSoYnxlFe/+7Jy+Kun1nKKSo0pDfk03IkCJjXNTlO0Ns+07j6owTm0zbefLmDgkx8CTCjGh9E/RTqjufal2RzB3KN6o2KYcjbEeNTfg69WTFOeMoWh9cxxv9Q+5tV
+api: eJy1Vk2T2zYM/SscXPbCrl23J90c52OStpNO7J097HgytARbjGWSJaHduBr99wxISZbtTXcvPVkigAcIeHh0A6R2AbIHWCKRNrsgJmL1fi5C9wprCdahV6St+VhABrRVC2u22h/ufAUSPAZnTcAAWQOz6ZR/Cgy5145jIIPOPUIIPChdibsvf4KE3BpCQxyhnKt0Hl0m3wKHNRDyEg+Kn+joEDKwm2+YE0hwnmsinZL2FYw8A3ltdtByjjpl6CzaEO7Qg4St5ZrS0W8z9q202YeRr/JeHUGCJjyEl+soPW6frUHlqRNXprZtJQRSVIdXlpicF7bAVwW0EkhTxU7LmPPeK+fQd6l/n/56Pa47o2oqrdf/YhERAua113SE7KEBFfKvbP+6Rz4Aj6oACU9eEzJZ3qDy6CF7WEuYO/0HHscnb1TQeXr8PK+pnDGEcvq2g+HHAeqzw0i5h3W7lhdFfkGqvQmCShT5s/wSW+tF/yXJ9qiVWP61FNZHjo84dwsSDkilZYbvMM5WUQkZTJTTk9ntdNJvxIS2Sjk36bIC98c/og+xPbWvIINmowLe+aqFy7qX0TeVvKvTWoGER+W12lSJR11wmsxW1RUP9ArpbTLFVWpb7lA/pyXvTYI6n9aJ2HEwV5B3AcXC2r3G2Dg01LUHJBh1iJFjQAmaw/IYwuzsxjvkKYncVZZ3htCLo629qAN6BhbKFMKpEJ6sZxrEzWeATQRsT7R6DfRNchbNp/uVWNk9mvbmDDRhye7hfb8zn+5XnOqctf+dcH7WJqGDKJDQH7TBQmyOkZ438zEJb0SJqojpXyxo/vdHwXNqT9ty0iAVDy4LSn5iW9kn8aSpFGfJRRQOCWxO/Bhbe1U5O4xEZPYRN3J4C7l1vfqqIi6kKoTKcwxBkBXOW8KcsBAeg619jmFQiQzu+fcF76RQvQacvjseLKwxSYIvPp+tb0VnvmbxWXT3Ma2E778EvTOKao8vb8l8uRDMrOUQMmzHGOdiOVp+39oI3yny3GleffQhAT9GhXc20EHF26JD/YD0jMZd1tWcrtP/Qx27nhB+p4mrlDZca51UKkllFHKQMLudRlHs/kBISIKZ7vsomWsJpQ3EIc0glS0f/1OjP6b7oZfEqP8Suq1hjY1aBvM8R0dRO6s6jeviLwRr4iDqH96t+H6pudLxhJOOdQ+M3pvMcYx9Lnupgn1czZ9ENE2iT9sO/sn004hBF5I3d3jdtu0PTedLog==
 sidebar_class_name: "get api-method"
 info_path: site/docspace/api-backend/usage-api/api
 custom_edit_url: null
@@ -54,7 +54,7 @@ Returns the confirmation email URL for authorization via SMS or TFA application.
 <StatusCodes
   id={undefined}
   label={undefined}
-  responses={{"200":{"description":"Confirmation email URL","content":{"application/json":{"schema":{}}}},"401":{"description":"Unauthorized"}}}
+  responses={{"200":{"description":"Confirmation email URL","content":{"application/json":{"schema":{"type":"object","properties":{"response":{"type":"string"},"count":{"type":"integer","format":"int32"},"links":{"type":"array","items":{"type":"object","properties":{"href":{"type":"string"},"action":{"type":"string"}}}},"status":{"type":"integer","format":"int32"},"statusCode":{"type":"integer","format":"int32"}},"title":"StringWrapper"}}}},"401":{"description":"Unauthorized"}}}
 >
   
 </StatusCodes>

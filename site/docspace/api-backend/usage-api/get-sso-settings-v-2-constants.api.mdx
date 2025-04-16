@@ -5,7 +5,7 @@ description: "Returns the SSO settings constants."
 sidebar_label: "Get the SSO settings constants"
 hide_title: true
 hide_table_of_contents: true
-api: eJyNU8Fu2zAM/RXjnYU6C3byrViHItiADXW7SxEUqsPYWh3Jk+hsmaF/H2jZbZoixS62RT4+ke/RA1jXAcU9SmI2tg5ZnpXlN6wVXEdes3F2tUGBmrgMbkb9WH5yNrC2HKDgKXTOBgooBiwXC3ltKFTedFKPArcNCW0W5luqubwY41bvKFtdZVvnd5ozPnSkxsSjsRtj66NIMLWViG5r5w03u6Nc+T2ryLPZmkozZbqS64/yq6uzAChUzjJZlu5117UCMc7mP4OMMCBUDe00iiHGGBU+Lj68nfPO6p4b581f2kBQgareGz6guB+gQ/Ug+YcnkgA86Q0UfnvDhHVcqxO2G+Le25DxWfUuoLAjbtxkERQ6zQ0K5Loz+fJikc9FeQhuv8yrI98C+T35MPbW+xYFhkcd6M63Eae9lCNWbt6auk+LAYW99kY/tsn6qTjJstV9yyjwhukqpbK7m6+IUaaeRSpF4UT1WqoBo0UFdGe+0AEKsjByPoYpGOGvnHsyNKpv7NaN1YZbgV92RnomH1Ir+yWiQucC7/To8UR7TfyO6KcTDS+b85+WTdMw/eG8a7Wx0kaflEv+3cuoUFheLEajEot8iotpWadu1gqNCyw1w7N/UcK/evKyaOsXn+QUFRrSG/Kj8aPAuKwq6ng0tO2T0id/gBj1vGrXn2+hIMq/NifZMH0I+5yyh2Pu166lDuQZ1ZmKYUjOx/iMT6mzFdOEM1okXscY/wHlvbDv
+api: eJyNVU1z2zYQ/SuYvfiCWqraE2+KnGacdsaZyK4PHk0GIlciIgpAgaUdlcP/3lmApCipjn0iuB9vF8C+hwZIbQNkT7BEIm22QUzEcnkHKwnWoVekrbktIIMt0jLYPurv2cKaQMpQAAkeg7MmYICsgdl0yp8CQ+6143zI4L5EhhWhr5L36Vm0G7VHcXsjNtbvFQk6OJTRsdam0GY7sgS9NWxR1dZ6TeV+5Ft+ETl60hudK0Khci4/8t/evBoAEnJrCA1x98q5ikO0NZPvgbfQQMhL3CtexfgM7Po75gQSnOezIp0OoD+Ny8iWa9SpQufRhnCLHiSkrSfTbzOOrbTZhVGs8l4dQIIm3Ie3+yg9bkZRgbw2W8ZNu/4fV9u2EgIpqsM7W0zBC1vguxJaCaSp4qC72PSjV86h70r/Pv31cnQejKqptF7/i0VECJjXXtMBsqcGVMi/sf/bDtkAHlUBEl68JuQh/oDKo4fsaSVh7vSfeBhbPqig87S8m9dUzhhCOX3dwfBygLpzGKnwtGpX8qzJr0i1N0HQq3N+DRL2SKXtyMTXpaiEDCbK6cnsejrpkyYh2OfZJB8xLKB/Rh/ilmtfQQbNWgV88FUL570sYyxX3uhtnSgMEp6V12pdpdnoktNpb1Rd8SVdIN0kl3j4+hff0Op49kvmQoI6vYHjsMbDvoB8CCgW1u40Ck5CQx3NQAKLAGeOASVoTstjCk9cd2VDnZLIXVT5aAi9ONjaizqgj+qiTCGcCuHFer7ayGYGWEfA9jgq74G+SsGi+fx4L+7tDk17dQKasGS3+KPnwefHey51Ook/Lzg/OSahgyiQ0O+1wUKsD3HkruYdRWLMlShRFbH8mw3Nv9wKvqf2yICjrqhoOG8oxYlNZV/Ei6ZSnBQXUQwksDvNx9jbK8WJMQ4iTx/xQQ5/IbeuV1RVRJKpQqg8xxAEWeG8JcwJC+Ex2NrnGAbmZ/DI3zeik+r0vD7uOxoW1pgkq2fbZ++N6NyXU3yS3W2mlfDjF364FNUe32bJfLkQPFnLIWVgxxjnjBwt/29shO9Udu40Ux99SMDPUbWdDbRX8QXoUD8h/US7zvtrjk/lO5Wv2y7hD5q4SmnDbdRJgJIMRt0FCbPradS7hMJLFsP0OnfdrCSUNhDnNIMMtmz+p0Z/SHrey13UawkdI1g/o07BPM/RUdTFqk5Xcfbks94Niv3p4z2/BzW3Or69pFHdgtF7lzmMsU8lLXWwi7R7JaNp0mi07RCfXK9mDJxP0XzEq7Zt/wO2JWD8
 sidebar_class_name: "get api-method"
 info_path: site/docspace/api-backend/usage-api/api
 custom_edit_url: null
@@ -54,7 +54,7 @@ Returns the SSO settings constants.
 <StatusCodes
   id={undefined}
   label={undefined}
-  responses={{"200":{"description":"The SSO settings constants: SSO name ID format type, SSO binding type, SSO signing algorithm type, SSO SP certificate action type, SSO IDP certificate action type","content":{"application/json":{"schema":{}}}},"401":{"description":"Unauthorized"}}}
+  responses={{"200":{"description":"The SSO settings constants: SSO name ID format type, SSO binding type, SSO signing algorithm type, SSO SP certificate action type, SSO IDP certificate action type","content":{"application/json":{"schema":{"type":"object","properties":{"response":{"type":"object"},"count":{"type":"integer","format":"int32"},"links":{"type":"array","items":{"type":"object","properties":{"href":{"type":"string"},"action":{"type":"string"}}}},"status":{"type":"integer","format":"int32"},"statusCode":{"type":"integer","format":"int32"}},"title":"ObjectWrapper"}}}},"401":{"description":"Unauthorized"}}}
 >
   
 </StatusCodes>

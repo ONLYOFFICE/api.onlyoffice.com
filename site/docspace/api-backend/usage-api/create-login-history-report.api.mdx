@@ -5,7 +5,7 @@ description: "Generates the login history report."
 sidebar_label: "Generate the login history report"
 hide_title: true
 hide_table_of_contents: true
-api: eJyNU8tu2zAQ/BVizkTkGj3pFqBAW9RAi7g5FIYRMNLaYiOTLEmldgX+e7Gk7DhODfSiF2d2Z2dWI6LaBtQrLKkZvI4HUYmF3WojOh2i9QesJawjr6K25nOLGo0nFSmDPhXMHTnrIyQ8BWdNoIB6xHw241tLofHaMR017u8WIloROxL7PuyFz1Sx0T1BorEmkolMU871usldq5+BuSNC09FOoR5TSkni/ezdPxoYNcTOev2HWmTQ/C3ohx28cF432myF65URraUgjI0iDC4rip0OwhYCNwuTP6hXI1RoHrjNwxPxB3hSLSR+ex0J67SWF/0+kmEHKeTB+3N/JwduILGj2Fl22NnAbjoVO9SolNPV/GZWHSVUamh1rHKZyh+9D+SfyYesb/A9aoyPKtC97xMu9SwzVjTWbPR2KNlC4ll5rR77Et9ELuZt1NBH1HhT6UM5Evd3C6TEkx9VLjmsUuq1XSPiwRFqKKe/0AESRu3y+zlMQnP9xtonTTkBbTY2s3XsGX7rNGsmH4qU5znnzd7tVF6XqezR/KveXw41vuzhfyY3DRRpHyvXK21YyVDMKymueFpIzG9mOFsmiZwlJHLp/AtlSWuJjregXmE85Zj486+BPC/d+iUvfksSHamWfF6AbDRum4ZczMH2Q3H84qfiwE5r9+3r8ntWxILPUyp5TA9c/nhkDufFX8dXJPA1ySuMcSwrkNIJX46uMqYRj2g2ep1S+gsgpqSL
+api: eJyNVsFu4zYQ/RViLrmwcdbtSTdvttvuNkAWcYKgMIwFLY0trmWSJUdJXEH/XgwpybK9aXKyTM68GXLee1IDpDYBsgXMMa+9pr2YiBu70UaUOpD1e1hKsA69Im3NlwIyyD0qwhj0Z4q5Q2c9gQSPwVkTMEDWwPTqin8KDLnXjtMhg4e7G0FWUInipQovwsdUsdYVgoTcGkJDnKacq3Qeq05+BM5tIOQl7hQ/0d4hZGBXPzDnws5zj6RT5b6NUWQgr80GWq5RpwrdjjaEG/QgYW39TlFa+nXKsZU22zCKVd6rPUjQhLvwdh+lx/VPe1B5uo6zrbZtJQRSVId3tpiCr22B70poJZCmioPmseajV86h70r/dvXhJzMzqqbSev0vFhCDpudBf9vaC+d1rs1GuEoZUVgMwlgSoXZxyFTqIGxKiOfsKAfZogEV8u9c5vsWeQE8qgIkPHtNyBz8iMqjh2yxlDBz+i/cj1c+qqDz9Hg7q6mcMoRy+rKD4ccB6tZhZPJi2S7lyTH+QMNcxxApWo2V0HH1EiTskErLWnA2xLErKiGDiXJ6Mr28mvQnm6i60DSJMBPfqySgf0If4rFrX0EGzUoFfPBVC6f9zGOsyK1Z602dVAgSnpTXalUlmnXJaSZrVVc87zOkT2lLPNzd8LCXh/ufs6wS1PEUDryPF34G+RBQXFu71Sg4CQ11igUJRu1i5hhQgua0PKYwk7qxDXVKIndW5XdD6MWe+VUH9AwslCmEUyE8W8/jjcbAAKsI2B7o8h7oixQsmq+P9+LebtG0F0egCUt2D597SX19vOdSx2z8/4Kzo2sSOogCCf1OGyzEah9JdzHr1BZjLkSJqojl32xo9u2L4Dm1BxUcLErFhdOGUpxYV/ZZPGsqxVFxEX1FAm8nfox3e9M5WoxEZPYRX+TwL+TW9easWDl3qAqh8hxD4BeC85YwJyyEx2Brn2MY1J/BI/++EZ0MrNf24dxx4doakxz65Pi8+0l02+csPsruDtNKePkl6I1RVHt8WyWz+bVgZs2HlEEdY5wTcbT8f20jfGfYM6dZ+uhDAn6KLwC2oJ2KL5MOtfewVy3stMXm8OJ9pwF2JyZ8oYmrlDbcSZ08KJlhtF+QML28gpHVS4iWCBIidPxmiC0tJZRsptkCmsEOW17+p0a/T97e2170bgmdMthHo1/BLM/RUfTHqk4jOfmKYN8b3Pvb7fw+dsQNj8eYzKp7YPh+y+zH4MfellrYRv29ktE0iSNtO8SnrVczBvGnaL7oZdu2/wEjylTY
 sidebar_class_name: "post api-method"
 info_path: site/docspace/api-backend/usage-api/api
 custom_edit_url: null
@@ -54,7 +54,7 @@ Generates the login history report.
 <StatusCodes
   id={undefined}
   label={undefined}
-  responses={{"200":{"description":"URL to the xlsx report file","content":{"application/json":{"schema":{}}}},"401":{"description":"Unauthorized"},"402":{"description":"Your pricing plan does not support this option"}}}
+  responses={{"200":{"description":"URL to the xlsx report file","content":{"application/json":{"schema":{"type":"object","properties":{"response":{"type":"string"},"count":{"type":"integer","format":"int32"},"links":{"type":"array","items":{"type":"object","properties":{"href":{"type":"string"},"action":{"type":"string"}}}},"status":{"type":"integer","format":"int32"},"statusCode":{"type":"integer","format":"int32"}},"title":"StringWrapper"}}}},"401":{"description":"Unauthorized"},"402":{"description":"Your pricing plan does not support this option"}}}
 >
   
 </StatusCodes>

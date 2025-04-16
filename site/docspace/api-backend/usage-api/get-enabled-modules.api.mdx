@@ -5,7 +5,7 @@ description: "Returns a list of all the enabled modules."
 sidebar_label: "Get the enabled modules"
 hide_title: true
 hide_table_of_contents: true
-api: eJyVU8tu2zAQ/BVhzoTlGj3pFqBBUDS9xPXJEAJGWltsaJIlV25dgf9eUJSfSQ69SKJ2ZzQ7sxrAchtQrbEkZmW2oSiLJTW9V3xALWAdecnKmq8tKmyJ74180dR+t22vKUDAU3DWBAqoBizm83RrKTReuYRDhUcVuLCbgjK02J2wjTVMhhNEOqdVM36q/BkSbkBoOtpJVEOMMQp8nn96S74ysufOevWXWqSucFRfrQfI0Dyn+vMrpRfwJFsI/PaKCXWsxQ3bE3HvTShkoSfRUuuCO7oVP4PAjrizky0QcJI7VCilU+ViNi/D5Gh5VFSeBw/k9+TDqLH3GhWGFxlo5XXErabl2Fs01mzUts9pQGAvvUqSRt8ncLZnI3vNqPCG6UsuFaunR8SYpj9KWyanM9W1ZQP44AgVpFPf6AABI3fj+bJNQCX+xtpXRWMKymzsiFasU/udU0kz+ZCl7BeIAs4G3skx64n2gfg9u29HGc6r83+ZTdMw/eHSaalMktFn53KA6zQqBBaz+RhUDhEXiyVwVFULdDZwAg2nAGN6/asnnzauPgeVTlGgI9mSH5MfHcZd05DjMVHdZ6tvfoWU1GnZHu5/QCBZf51OzmF6SOzHkjlccl/HlhWkaxQfIIYhRx/jqT+XPkRMEx67k8d1jPEfnaOCfA==
+api: eJyVVU1z2zYQ/SuYvfiCWqraE2+K42aSpuNOZI8PHk0GIlciIgpAgaUdlYP/3lmApL6a2j0RxO6+XWDfPnRAahOgeIIFEmmzCWIiFli2XtMelhKsQ69IW/OxggI2SLdGrRqs/rBV22AACR6DsyZggKKD2XTKnwpD6bXjOCjgsw4k7FpgDhW7Mba0htAQhyjnGl2mVJNvgeM6CGWNO8Ur2juEAuzqG5YEEpznwkjnrEMJl56Rc7Q5Q2/RhnCDHiSsrd8pylu/zNi30WYbjnyV92oPEjThLrxeR+1xfeQVyGuzYVxV5qu4MMUYJQRS1IY3lpidb2yFbwqIEkhTw053qehHr5xD36f+dfrzZb8ejGqptl7/jVVCCAMhiqcOVCi/sv3rFnkDPKoKJLx4TciMeYfKo4fiaSlh7vTvuD/eeaeCLvPybt5SPWMI5fR1D8PLEerOYeLd0zIu5VmRX5Bab4JQounppZpGUI3nNLsGCTuk2vYE5q4pqqGAiXJ6MrueTkLP/clw0MmBogH9M/qQjt76BgroVirgg28inNe0SL6itGatN22eG5DwrLzmklKL++B862vVNtysC6T32SQevnzmTi0PPVjwTGSo004cSJsu/QLyIaC4sXarUXAQGurHDSQYtUuRx4ASNIeVKYSZ17duzFMTuYsst4bQi71tvWgDegYWylTCqRBerOcWp6lmgFUCjAfKvAX6KjuL7tPjvbi3WzTx6gQ0Y8l+8dswD58e7znVKSP/O+H85JqEDqJCQr/TBiux2ieyXc37UUk+V6JGVaX0rxY0//Oj4D7FwyQc9EWljfOCsp9YN/ZFvGiqxUlykURBApszP46tg2KcbCYiMvuIL3L8C6V1g7KqKg2bqoQqSwxBkBXOW8KSsBIeg219mSYlj20Bj/x9xTurzzDfh3OnjRtrTJbXs+Oz9b3ozZcsPonuDxMlfP8p6I1R1Hp8fUrmixvBzFqMIeN0HOOcDUfk/7VN8L3azp3m0UcfMvBzUm9nA+1Uegl61A9I/6Za54V1h7fy/0lff1zC7zRxjdKGy2izAGUdTPoLEmbX06R3WQvhSPYlDFUtJdQ2EAd1ow5G3v6rRb/Pwj7oXRJuCf1IsIAmoYJ5WaKjJIxNm3tx9vaz4I2a/eH2nh+Glms9bl8WqX7B6IPJ7I+xTzUtV7BNc/eDiK7L3Ihx9M+mH0aMQ5+9+Y6XMcZ/AIdpMok=
 sidebar_class_name: "get api-method"
 info_path: site/docspace/api-backend/usage-api/api
 custom_edit_url: null
@@ -54,7 +54,7 @@ Returns a list of all the enabled modules.
 <StatusCodes
   id={undefined}
   label={undefined}
-  responses={{"200":{"description":"List of enabled modules","content":{"application/json":{"schema":{}}}},"401":{"description":"Unauthorized"}}}
+  responses={{"200":{"description":"List of enabled modules","content":{"application/json":{"schema":{"type":"object","properties":{"response":{"type":"object"},"count":{"type":"integer","format":"int32"},"links":{"type":"array","items":{"type":"object","properties":{"href":{"type":"string"},"action":{"type":"string"}}}},"status":{"type":"integer","format":"int32"},"statusCode":{"type":"integer","format":"int32"}},"title":"ObjectWrapper"}}}},"401":{"description":"Unauthorized"}}}
 >
   
 </StatusCodes>

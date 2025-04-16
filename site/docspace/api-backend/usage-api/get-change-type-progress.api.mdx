@@ -1,0 +1,71 @@
+---
+id: get-change-type-progress
+title: "Get the progress of updating user type"
+description: "Returns the progress of updating the user type."
+sidebar_label: "Get the progress of updating user type"
+hide_title: true
+hide_table_of_contents: true
+api: eJydV1tvGjkU/iuWX7IrmXAJu0p5o6St2l2pUUKUhwhVh5kDuAy2a3uSsmj+++rYM8MMkFLlCWOfy+dz+Y5nxz0sHR898VvUJkPWZQ8OLfNbg3wmuDZowUutPqd8xJfoJytQS5xuDd5avbToHBfcgIUNerRkaccVbJCPeO7QypQLLhUfcQN+xQVP0SVWGjLJR3y6QkZi7PPNJRfc4o9cWkz5yNscBXfJCjfARzse8Iy481aqJRd8oe0GPDnJgwv8CRuTkQgA9rHfu+rME/ir824B/c4crpPOcND763o+hPlicM2LYkbenNHKoSMHg16PftrwHkwKHkMwmNlfN9HKo/IkD8ZkMgkR6n53pLQ7Rq3n3zHxFCdL8fQyuqz8n5eU6akYHIfSg1vXQMuYqjzLYE6hiTHdR+rd9fBvXgiO1mr7FgdBkW3QOVjir305vUHm8acnhwZtgsrDsnl1qTwu0Z50u1dgesH8IZDLZkFI5a8GzYroD66GheDSTTRteGwGc651hqCOvN4bTORComOy6RDLm0vHksoa05Yp7S+bPun6heDOg89DBrXCr4vQHKjyDfXbxCIQFsHvcqViwPcIBZ+ASjALy48gM9qciTMpeiqNsg4rV4KV1lmnWglWuyG5ai1Y5ZF2y6VgpW/WqVazVrdVtyhEfbOe6IuBuBLDPdzXcvvUayLtNzEO2tiuWqCGr8DpCf6zQzA6z2CJhdzbI10aagB+szEiGy99CNiNpNzNc4/pFNz6PlZIUQgOaSrJDWS3jeZfQObwfCtWXML2VEwFWXklVxVf35WiN15TMyY6j1R2lKuDlioEz6Rau4YsWAtbIniPG3eexlYWF8c8Q1dP4sWOjoqi1UW/ATEKT3R6mlsOFYpfx+jRgjFoSyDDXv/EjFCQ+5W28j9qA0KASW6l34ZuB5d8o/Nva6QNbhGoNF6s9GG+vkewaPnoaSb42Mh/cNvceQ9OJnH5dZz71YBMgJGXpRla1qa+GgxT+inUWxvkHfrcKheYrK4ZvWA5DThiB18NYooYVc4G/UqXMz9MeL/iI94FI7uDy17XhNdCl6S7lcHuLk78glMQ7HP1HMhtxkd8NweHDzYrjrk2yLJEq4Vc5vG5wQV/BitpmITMl8ox/AvIM8rhkaWbeMQe7v6llM32ybinmRxNtVOyr+UQ/SOTDw7ZROu1REZKqHw57mncxXdOy2D52kmCChVkmcPaz8p7c+Tlg/Jo2VbnNmSBDDNQKTPg3Iu2lOvwqggjKxgs9rXzO6YvojDbfXmcsqleoyouWkajLVEuPlZt8uVxSq7apflrh+NWmGhUpsRHG6kwZfNtKLWLcdkzQeaCrRDS4P4soPHtZ0Z5KvYtsacdCBuHgKIcW2T6hb1Iv2It5yxwheB0HOujeVoRSWszFCJVn6dA1v9cok31soM0dB2kDJKEms1rajyPCQ1Ti07nNkFXU8GIP9LvGelIQ1Wj7+8dNiZaqci6B9en0xtWHh9XcUu7vExB88/JpQKfWzzfJeP7CaPKuq9V6u5o2jloDnqVqYUO5ksSHhtJrY/WRcPPgdSNdn4DYUCUVj+hf53MaiI7xLnbP93fQIllCOgV2zUZSEXQ8khKkR8DOXPBB5c94szAkZViGIbVF8So/DaaCb7SzpPmribIgrZ/5Gi3kforIgxkmkpH6/T0y6B5wT/uyq+pP9nBZ9bJi1QJVtvAvVmOsaoDS1bfcsWsELxsVkITD8dJgsY31I6+ioiK64ny6cOUZldOEWsWVqTPckHWT0I6YNuIYB0Y4RWN3S5WbVHU8vHoVY2ajqI0BWhWFMX/RlwqbA==
+sidebar_class_name: "get api-method"
+info_path: site/docspace/api-backend/usage-api/api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get the progress of updating user type"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/people/type/progress/{userid}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns the progress of updating the user type.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"userid","in":"path","description":"The user ID.","required":true,"schema":{"type":"string","format":"uuid","example":"aae1e103-bca5-9fa1-ba8c-42058b4abf28"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Update type progress","content":{"application/json":{"schema":{"type":"object","properties":{"response":{"type":"object","properties":{"id":{"type":"string","description":"The task progress ID.","nullable":true,"example":"9846"},"error":{"type":"string","description":"The task progress error message.","nullable":true,"example":"some text"},"percentage":{"type":"integer","description":"The percentage of the task progress.","format":"int32","example":1234},"isCompleted":{"type":"boolean","description":"Specifies if the task peogress is completed or not.","example":true},"status":{"oneOf":[{"enum":["Created","Running","Completed","Canceled","Failted"],"type":"string","description":"[Created - Created, Running - Running, Completed - Completed, Canceled - Canceled, Failted - Failted]","example":"Created"},{"enum":[0,1,2,3,4],"type":"integer","description":"[0 - Created, 1 - Running, 2 - Completed, 3 - Canceled, 4 - Failted]","example":0,"x-enum-varnames":["Created","Running","Completed","Canceled","Failted"],"x-enum-descriptions":["Created","Running","Completed","Canceled","Failted"]}],"title":"DistributedTaskStatus"}},"additionalProperties":false,"description":"The task progress response parameters.","title":"TaskProgressResponseDto"},"count":{"type":"integer","format":"int32"},"links":{"type":"array","items":{"type":"object","properties":{"href":{"type":"string"},"action":{"type":"string"}}}},"status":{"type":"integer","format":"int32"},"statusCode":{"type":"integer","format":"int32"}},"title":"TaskProgressResponseWrapper"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

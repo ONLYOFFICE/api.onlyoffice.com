@@ -1,0 +1,71 @@
+---
+id: hide-confirm-room-lifetime
+title: "Hide confirmation dialog when changing room lifetime settings"
+description: "Hides the confirmation dialog when changing the room lifetime settings."
+sidebar_label: "Hide confirmation dialog when changing room lifetime settings"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVkFv2zoM/isCL714Tdft5FuabnjbG7CiTdFDEQyszcRabUmT6KZ5gf/7AyUncZJ17WGnOBL5URT5fdQaGBcB8nv4rGsKaqRuiFmbRYBZBtaRR9bWfCkhh0qXNLFmrn1zbW3zTc+JdUOQgadfLQW+sOUK8jUU1jAZlk90rtZFxBj9DNbIWigqalC+eOUIcrAPP6lgyMB5iciaQrQjHhg9WFsTGsigpFB47QQTcrhxVOi5pqCWFXFFXrFVgVhxRSr0m6WsxLSU9cpYPoUM6BkbVxPk7FvqugywLLWgYn01OMgc60CHUacCvoHs01cOPTbE5IPAs2YBh82FXierS7bQdRLOU3DWhJTs+dmZ/OxHuUg5qyesW8qVnFPpecxsG0vpoMjgQ00lZH/r6jdH+839dxKkNcPSaMO0IA8ZzK1vkNPSh3OxrbV5DANb9B5XkIFmasLrB6k8zQdWgb02C8HFIt3R0Va82sDIbXjjEZPxxJb0JoduV9q+PncenSPfx/549v64krcGW66s1/9RGSECFa3XvIL8fg0Yih+y/+ORZAE8oRRz6TWT8PCC0JOH/H6Wwdjpf2k1XLnAoIv0+X3ccnUuEOj0aQ8jn1uo744im+9n3eywqf/RJYXYXUWieWweVWqs7ULoZVRRoVlos4hW3tpG1b0MbOkgvd8QV1Y0w7WxpsgV5DBCp0fnp2ejuWjNSPSkDyRI9U5PAvkn8iHeTetryGH9gIFufd0d8z/aphMv2iRXkMETei2kiE3QO6eyzLGtpZxHSJdpS91ef5NSznZFuhHaJKj9Uu3aOlblCPI2kJpY+6hJiRMZ7hkJGRhsoucQMAMtbkV0kd7sa7uNUzG7oyifjOjAyrZetYG8ACs0pXIYwtJ66YFI/EjjCNjteuot0CfJWK2/3k3V1D6S6U72QBNW1n983jDm691UQu237J8DjveuScStFJVrtKFSPaxi352Mey5FmxNVEZYx/KsHGl99UVKnbkeVnQJhXDg8ULJT89ou1VJzpfaCqygbGch26o/h7kZT9hZjI0r3sVzk9l8orNuILwp1rglLhUVBIchIc94yFUyl8hRs6wsKW4nI4U5+X7FO8rQRgF3ecWFijUkCfJC+7F6qfvu4i/e8+2S6DJ7fBb0wyK2n11kyvpko6aybrcuWHUOcA3J0GchYu969PT5tBnr/dohzXbzmNh6iV+2x0yIQ5EMK/xSngLOBG4wTpY8tcvgGJfy9Ch4mOXgV/UWd7e+V6ZlHrkYdx3OblC6JbpwEkMH56Zm0qQgvZPCS9M4yqGxgcVtvJbeT5V8t+VUaMhtpjUMkg559otVRE2GSEn03lcOJed2m4h+8R7ps4zEuCnL8R9vZYKhc3U6F2v1rs4kkA49LeYniMtHJxntPfJK1NdRoFi0uxDZBxidfK5c0bNAkw/2HJLXZMqvhAfdVO6XxGJXlBY/1OnV/123t09aLHltZS9ZS3FnXdf8DpcgMFQ==
+sidebar_class_name: "put api-method"
+info_path: site/docspace/api-backend/usage-api/api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Hide confirmation dialog when changing room lifetime settings"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"put"}
+  path={"/api/2.0/files/hideconfirmroomlifetime"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Hides the confirmation dialog when changing the room lifetime settings.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"set":{"type":"boolean","description":"Specifies whether to set the specified settings or not.","example":true}},"additionalProperties":false,"description":"The settings request parameters.","title":"SettingsRequestDto"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Boolean value: true if the parameter is enabled","content":{"application/json":{"schema":{"type":"object","properties":{"response":{"type":"boolean"},"count":{"type":"integer","format":"int32"},"links":{"type":"array","items":{"type":"object","properties":{"href":{"type":"string"},"action":{"type":"string"}}}},"status":{"type":"integer","format":"int32"},"statusCode":{"type":"integer","format":"int32"}},"title":"BooleanWrapper"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

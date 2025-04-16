@@ -1,0 +1,71 @@
+---
+id: delete-client
+title: "Delete an OAuth2 client"
+description: "Permanently deletes an OAuth2 client and all associated data. This will invalidate all access tokens and refresh tokens issued to this client. This operation cannot be undone."
+sidebar_label: "Delete an OAuth2 client"
+hide_title: true
+hide_table_of_contents: true
+api: eJzdV0tv2zgQ/iuDuWQXkPNwXlvdvEkWSDeLFomDHAKjoKmRxUYiVZJK4hr674sh5XfSFNtLtyfLJOebmW9e5Ay9mDhM7/GsVKQ9/CO0mFBF2uMowYyctKr2ymhM8SPZSmjSvpxCRiV5ciA0fBg0vuiDjABCZyDKEoRzRirhKYNMeLELw0I5eFJlCUo/ilJlwlM8KSU5B948kHZB3lJuyRXzJeVcQxl4A54xoqIO0NRkBdsHUmhtPIwJGp0ZTbuY4GL3MsMUo83RUUywFlZU5Mmy/zPUoiJMMaJfZpigYqdr4QvcZOLyHEwOvqC51950jGCClr40ylKGqbcNJehkQZXAdIaV0lekJ77A9CBBP61ZofNW6Qm2CdKzqOqS107kqcwPTse9g3F22Ds6zY57747kSW9M/ezw+HSfDk7+wHbEulxttCPH8P39ff5ZN7WLq2sCy3lTLoLHLkqjPbORzlDUdalkYGvvs2PZ2YrpnbFm/Jmkx7Zt2wSPXtJ3GYM7J+byHHJjK+H/u7IEa8uB9Cq6aUl0EhsMtpthurDWWJhzBKxfKK30BAQUTSV0z5LIxLgkoOe6FDpmUhdaYmlM0CsfghLQrjuwBQWHL1HgmjxXMhBQk62Uc8pot8ySjp1flZOjV9OQKzQ3jf6B3PupXe+/23Z9aAxUQk+BGwM576AHlptfqSrlgZ4lUfYj1fgzM3L8co/wZLUowZF9JBuBwEjZWPtrEtEm6Eg2VvlpGDbPPacmWvjGEqb3I27lFfnCLMdUGFA8KXBP1Gqvv7u/F5uG25vNZ1SLDMsUxhHW2BJTnI2Fo1tbtltj6ybSLY3O1aSJkxETfBRWsWuBs044Bi0XTekxxS2k87gFt9dX7N9o6d4NxyZCCSc/icYXnx5ouhIEUau/aboFeesIzox5UAQsRNp3YcdkPpvXALv5LIMIj88/hVNyRU/hfb2l5YJTD6amsdA4TsKKwpWjFs49GcvJF7KLAcYBkJFJWLLfB70TD8Ps/d0QhnyBaXfWQCNW0n38FYdjiu/vhqxqEMj5PoWDNZpAOcj4OlMpTRmMpyE1d/iQseprOLMDBYksqH/ToMHHS+A4tQnGG95qvYmwsGlQdxPMS/MET8oXsKYczkzGac3bMT9Wd8Pm5mJIRM6+cBNc/HPS1IsK55K5JpEt75FQW+NJ8tXTkjONleQwwSerPBt/x79vnI4l+6GmcHNc+h0WzozWsd1suM+759Btb2fxmnTnTJus94K3qmRwcwacWTcLkUV1rOJsFEfL/3MT4LseNagVlz5ZF4Ef+2xLbZyvRGiZHep5vLBs3vM3DZste/b/8J3Qce7p2e/VpVCauWhiF4xd+J4Dggn2d/d5PsVOjAmmi/fCKMHCOM9HZ4sW3PLyl4Yst/3RstWGdp0px98ZprkoHX2D0d+uuzfF7/DNp8eLfswTSk9Dry8bilUUuvLyvdOO2gS79sDWxe2BlFT7FcGtebw2u84vri6GF5iEMl7P5tizuw9W8KJd60kcbXgIXegVgdksVkrbLs7HrVclFi0wnmaSRm3b/guzfTyU
+sidebar_class_name: "delete api-method"
+info_path: site/docspace/api-backend/usage-api/api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Delete an OAuth2 client"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"delete"}
+  path={"/api/2.0/clients/{clientId}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Permanently deletes an OAuth2 client and all associated data. This will invalidate all access tokens and refresh tokens issued to this client. This operation cannot be undone.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"clientId","in":"path","description":"ID of the client to delete","required":true,"schema":{"minLength":1,"type":"string"},"example":"6c7cf17b-1bd3-47d5-94c6-be2d3570e168"}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Client successfully deleted","content":{"application/json":{"schema":{"type":"object"}}}},"400":{"description":"Invalid client ID format","content":{"application/json":{"schema":{"type":"object","properties":{"reason":{"type":"string"}},"description":"Error response containing a human-readable explanation of the error","title":"ErrorResponse"}}}},"403":{"description":"Insufficient permissions to delete client","content":{"application/json":{"schema":{"type":"object","properties":{"reason":{"type":"string"}},"description":"Error response containing a human-readable explanation of the error","title":"ErrorResponse"}}}},"404":{"description":"Client not found","content":{"application/json":{"schema":{"type":"object","properties":{"reason":{"type":"string"}},"description":"Error response containing a human-readable explanation of the error","title":"ErrorResponse"}}}},"429":{"description":"Too many requests - rate limit exceeded","content":{"application/json":{"schema":{"type":"object","properties":{"reason":{"type":"string"}},"description":"Error response containing a human-readable explanation of the error","title":"ErrorResponse"}}}},"500":{"description":"Internal server error occurred","content":{"application/json":{"schema":{"type":"object","properties":{"reason":{"type":"string"}},"description":"Error response containing a human-readable explanation of the error","title":"ErrorResponse"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

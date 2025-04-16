@@ -1,0 +1,63 @@
+---
+id: get-scopes
+title: "List available OAuth2 scopes"
+description: "Retrieves a list of all available OAuth2 scopes for the specified tenant. The scopes define the permissions that can be requested by OAuth2 clients. The list is ordered alphabetically, with the 'openid' scope always appearing first."
+sidebar_label: "List available OAuth2 scopes"
+hide_title: true
+hide_table_of_contents: true
+api: eJzlVktv4zYQ/iuDueSiPOC2h/rmZtMi2y22SBzkEBjBmBpb3Egkl6ScuIb+ezGk/E6QPeyh2J4kcjivj98MZ4WR5gGHD3irrGP4iwzNuWETcVJgyUF57aK2Bod4w9FrXnAAglqHCHYGVNdAC9I1TWuGz6M2VgMIYirAzHqIFUNwrPRMcwmRDZl4BmPZzYdKnmnD6Zxj3+gQtDUBYkURFBmYMnj+2nKIXMJ0uXahas0mhmwqBaMDWF+y5xKodhVNOWpFdb0s4FnHKnk4sY6NLk+yc6D6mZYByDkmr80cZtqHeIYFWseeJO3rEoc455jQCVig5+CsCRxwuMLBxYV89mHKRyG0SnEIs7aul+B76EosUFkTBd/hCsm5Wqvk6PxLEO0VBlVxQ/IXl45xiHb6hVXEAp2XsKLOvg01vHMqRMkAuwLn3rbuVUneOBKIRMea17Hf9CmKCr9Q40T0sPaICbvHtCg2ptJeWmwC6Dfzqpt04ufn1wC7Nguqdbm+Z3DkqeHIPnw/tDxTr3Gc/H40V95bD+trBvFP2gg7CKq2IXPqmcpEd35xNZkUkNSCMIxFG7eAJmtbQHsQfnoNhNDOZloJrfcrwWZ+hzUDf0REBr8eIzK2FhoyyzUvApyCpyjl3ugI/KKYy+9ZUf8lRH55vVAie0M1BPYL9tkQWKVa739MILoCA6vW67hMLejlNOi5odh6aUmTblJgw7GyfZeWTChWOMRzcvp8cHZxvimbjFlIZlpf4xBXUwp85+sOD9O6zfgqa2Z63uaXAAtckNeSSwKpV863NKO2jjjEI0sfsgjubj5JQpNtPrdyGdkUBfVIbawen3i5gzo5/Scvj0zeBYZLa580gyixif09Y7Fu0XsGC9SippKK9PTfKGi146eK0R15uRKuwdK2HtogrGsYyJTgKIRn64VtiU5iYJoMimUmz/7bTJ/kw7D6eD+GsX1i053sGc22iv7nd+sbEog/3o/F1SiB820OR3swyaRQyvPSaJNnijQayCHr9T/pzAlUTGVy/25Ao7+vQe6pKzAPJ7sFRmnjMKB+iJnV9jkPJ3vO4dKW8o6KOPNjV5qEh5uJiMK+KEBuVj35c0mXaYSjEigNJvKwOG8jK5msPAfbepUq5dnrKMHfy/ed07lGPztOk9I277RxaY3J/eUgfZF+gF58zOI97T6Zrtgv/veqZHR7CcKs243Kpjp27RwURyfrmU3m+6Y0clpKn33IhhcDicXZEBsy20EMP8kj/cYofBjdatup/09TdX9jkV/iuatJG0GyzT009+0HuU4scHB2saXvpMDKhijS1aZnd7L9tWUvD8Nk25vTs1BgX77S7FNTxZFS7GJq4nWbeXPwQO49Jn9cjbFINbZPtdxQ+x+xvhaZ5Y7tfYblAJ5Si3hDYbXKNO66zfkselNj05/yacFSRux/ATIy1U0=
+sidebar_class_name: "get api-method"
+info_path: site/docspace/api-backend/usage-api/api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"List available OAuth2 scopes"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/scopes"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Retrieves a list of all available OAuth2 scopes for the specified tenant. The scopes define the permissions that can be requested by OAuth2 clients. The list is ordered alphabetically, with the 'openid' scope always appearing first.
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Scopes successfully retrieved","content":{"application/json":{"schema":{"type":"object","properties":{"name":{"type":"string"},"group":{"type":"string"},"type":{"type":"string"}},"title":"ScopeResponse"},"example":[{"name":"scope_name","type":"scope_type","group":"scope_group"}]}}},"400":{"description":"Invalid request parameters","content":{"application/json":{"schema":{"type":"object","properties":{"reason":{"type":"string"}},"description":"Error response containing a human-readable explanation of the error","title":"ErrorResponse"}}}},"403":{"description":"Insufficient permissions to list scopes","content":{"application/json":{"schema":{"type":"object","properties":{"reason":{"type":"string"}},"description":"Error response containing a human-readable explanation of the error","title":"ErrorResponse"}}}},"429":{"description":"Too many requests - rate limit exceeded","content":{"application/json":{"schema":{"type":"object","properties":{"reason":{"type":"string"}},"description":"Error response containing a human-readable explanation of the error","title":"ErrorResponse"}}}},"500":{"description":"Internal server error occurred","content":{"application/json":{"schema":{"type":"object","properties":{"reason":{"type":"string"}},"description":"Error response containing a human-readable explanation of the error","title":"ErrorResponse"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

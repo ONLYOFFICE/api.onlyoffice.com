@@ -1,0 +1,63 @@
+---
+id: start-delete-personal-folder
+title: "Delete the personal folder"
+description: "Starts deleting the personal folder."
+sidebar_label: "Delete the personal folder"
+hide_title: true
+hide_table_of_contents: true
+api: eJydV01v4zgM/SsCL72oTZoWi93cMukOMLMLtOgHegiKAWsziSa2pJXkdrKB//uAku04yXRS9BRFIh9JkXyUNxBw4WE8gxsytiAxEA+enMgxIDxJMJYcBmX0lxzG4AO6cEUFBboh543G4rMpcnIgwZG3RnvyMN7AaDjkn5x85pRlfRhDHhWFbTSFdWbhyHuQkBkdSAfWQWsLlUWbg++eFTfgsyWVyKuwtgRjMM/fKQsgwTr2MKhktvXhuKTKezI+OKUXIPf8vV+SCOhXnaPiy9UZSNBVUeBzQTAOriIJ9ANLy3/hrz8v/4BaAjln3EcMREVRkve4oN/b8qYkEehHYIOWXEY64KIfutKBFjE3h2a3CsLMRdh3hE3PjSsxJJyLEfRsn48uLmsJyk8NbwTqX+azMQWhPrB6ZylTc0VeqL5BaiJXXmQtmjBOaBPO+jY5/FpyBYYqZtBoup7DeLYB0lXJFTx1hOyLhNtK63ThWw8lTFFnVMTlZ1QFbz7JIymaNaDiVDQrKRp0cdqupOjMsFy7lqK1yLvNUorGtjhtV0/9OLsoatlFNpTnciQv5OXW3bdyOxv2PT3v+zja9e1ix6nLN9wZSvhxym6cvqDTWJL/+E03QD2HPwxW802oEC/sSnHunqtA+T361V2qkLqWgHmu2AwWN73mn2Ph6XgrtlwiLDosKZCLXdFaZVM3jextI3oVDDdjZqpEZQe52mupWkKh9Mr3ZNE5XIMEFaj0x2ls6Wh+yDMcepYCOziq650ueoeLSXhq8l9zy75C/fs7enRoLbnGkctfzYlJlnECctIq9gFcDs8PpR40VmFpnPqfhdhPyiqnwjpyAvrsG59/WxFvgCPkAnp1KhDX4idCRw7GsycJE6v+oXV/5xN6laXl9aQKyxFDoFVnDQwvO6hrS3E6zmJV7pEeD0wOpaDAlBGWvfk3j6OTi6qksDQ8YK3xMckYljCGAVo1GJ0NBzbO5kEaoIMWYBDHMXDk7oWcj4FXroAxbJ7R04Mr6kMajrIiM3quFlWa7SDhBZ3iOROLolFOdz7HquD0HiBdpSPxcPsvZ/Npm4E7HtcJajcP2zKPV34A+eBJTI1ZKRKsRDo0LwGehFhGzT6gBMVqWVThSmkS19lZhmAPrPytAzmxNpUTlafIagJ1Lix6/2ocJzg+OOI0i4D1tmDeA32ShMXm6+O9uDcr0vXJDmjCks3ic9tBXx/v2dRuPf7e4GTnmniK5kxVpdKUi+d1LLiTSdMoUeZELAnTk+2oQ5ObL4LzVG/7YMtIGDf2HUpyYl6YV/GqwlLsGBeRRiTwcaqP/mnLMTubsRC5+gJfZPfPZ8a2jz7k1rklzAUm6giGeTxQxnPWkTeVy8h3/T+GR/49Ip0Yqu3ubdxxY2q0ToS8Fz6fXonm+LCKd7SbYGoejV4tNIbK0fEumdxNBVfWXafSdUcfZ685+MGm5ybCN/w8sYpbn5xPwC+R75mDSoyzo0FNL/5fkde+b5vtS/693NfEyi/ZgS1QafahSuyTeDBSL0gYnQ2ZGyMXRsPsVdxJoCDTBwqT8pKJdDyDTceENW//V5FbJ2JvGS8St4SmKZhCI1XFKWRDpMaiStnY+zBhyuuY++b67p4nQ8Ue9zOYeKpZMHx7pNd98F1aSy6sYuu9obHZpPKo604+Hb2p0fV9kuabfqrr+ieIt8hx
+sidebar_class_name: "post api-method"
+info_path: site/docspace/api-backend/usage-api/api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Delete the personal folder"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/api/2.0/people/delete/personal/start"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Starts deleting the personal folder.
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"delete personal progress","content":{"application/json":{"schema":{"type":"object","properties":{"response":{"type":"object","properties":{"id":{"type":"string","description":"The task progress ID.","nullable":true,"example":"9846"},"error":{"type":"string","description":"The task progress error message.","nullable":true,"example":"some text"},"percentage":{"type":"integer","description":"The percentage of the task progress.","format":"int32","example":1234},"isCompleted":{"type":"boolean","description":"Specifies if the task peogress is completed or not.","example":true},"status":{"oneOf":[{"enum":["Created","Running","Completed","Canceled","Failted"],"type":"string","description":"[Created - Created, Running - Running, Completed - Completed, Canceled - Canceled, Failted - Failted]","example":"Created"},{"enum":[0,1,2,3,4],"type":"integer","description":"[0 - Created, 1 - Running, 2 - Completed, 3 - Canceled, 4 - Failted]","example":0,"x-enum-varnames":["Created","Running","Completed","Canceled","Failted"],"x-enum-descriptions":["Created","Running","Completed","Canceled","Failted"]}],"title":"DistributedTaskStatus"}},"additionalProperties":false,"description":"The task progress response parameters.","title":"TaskProgressResponseDto"},"count":{"type":"integer","format":"int32"},"links":{"type":"array","items":{"type":"object","properties":{"href":{"type":"string"},"action":{"type":"string"}}}},"status":{"type":"integer","format":"int32"},"statusCode":{"type":"integer","format":"int32"}},"title":"TaskProgressResponseWrapper"}}}},"400":{"description":"Access denied"},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

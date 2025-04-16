@@ -1,0 +1,63 @@
+---
+id: gett-deep-link-settings
+title: "Get the deep link settings"
+description: "Returns the deep link settings."
+sidebar_label: "Get the deep link settings"
+hide_title: true
+hide_table_of_contents: true
+api: eJyNVk1v2zgQ/SvEXHJYJlbcYLHQzU263XZbpGgc5BAYBSONbdYSySVHSVxD/30xpGTLNtLEF1OcmTffT9oAqUWA/B5ukEibRRAjcWnr2hoRuhuYSbAOvSJtzacSclgg0RWi+6LNqrcDCR6DsyZggHwD4yzjvxJD4bVjU8jhegUSCmsIDbFUOVfpIgKPfgZW2UAollgrPtHaIeRgH35iQSDBeQ6DdHLQe3tdc6lMWWmz+GrLqI2mqSG/z+S5HM9kb6wN4QI9yIOYp0sUJaITlTYr0WOJ2pZ4BhLm1teKkv27MUggTRXj9QX6Z+i9lVCpQF9tqecay0Hsgbw2iyFgqQhPSdcIEvBZ1S7CjrPsr9Ps4vQ8m2Z/5u+yPMvOsvT7I7vIswzaVoIqS83xq+rboBRzVQX8fX59088GmUzRKHPc8JZb2aRGHtXwoCyctzarMNBV3qs1SNCEdXhDEz3Oj8vFqRYpkSNRy4UIpKgJbwwxKV92Y/KqQftaie68cg59F8pFdn68EbdGNbS0Xv/CMiIGLBqvaQ35/QZUKH6w/McK+QI8qhIkPHlNyGv5HpVHD/n9TMLE6X9xPbx5r4Iu0vF60tByzBDK6bMOho9bqGuHcbnvZ+3scES+IzXeBEEvjkqNtLQdNXDrFC0hh5FyejQ+y0a96oit2Rg4Uf+IPsQ8G19BDpsHFfDWV+3RDt5EXVFYM9eLJjERSHhUXquHKg1IZ5xKPFdNxZ06QrpKInH7/Qu3ZbYr+A3zToLaL/tuYmOFjyBvA4pLa1caBRuhoY7SQIJRdbQcAkrQbFZEEx67rk9bP0sid+TlgyH0Ym0bL5qAnoGFMqVwKoQn67mfkTkZ4CECtrv5eAv0SVIWm893UzG1KzTtyR5owpLd4e9+GT7fTdnV/vj93uFkr0xCB1Eioa+1wVI8rOOcnUy6vYg6J2KJqozuXw1o8u2T4D61u7HfkYuKF4cBJT0xr+yTeNK0FHvORWQECSxO8zGU9nSxdxkHkaePuJDbp1BY17+9VBk3S5VCFQWGIMgK5y1hQVgKj8E2vsCwXfcc7vj/Fe1ENf0y7/KOF5fWmMStB+mz9Ep04uMp3rPukmklPJ8GvTCKGo+vb8nk5lLwZN1sTbbbMcQ5WI6Wn+c2wndUO3GaVx99SMCPkbqdDVSr+BroUD8ivUBYh7Ftdp8kb6C6Lk3CZxq5SmnD7ptEPIn3IsmChPFZFnlu4LVjv5mEpQ3Eqpst67V8/V+Dfp04u2e3yMkSugVguoy0BJOiQEeRBqsmVf7ga4rpbcvMHz9MmfMbjnDYrERJ3YHRe5FZD7H3GSxFsIpb9oLFZpMmoW23+kn0osV2xZM2V3bWtu3/C1me7g==
+sidebar_class_name: "get api-method"
+info_path: site/docspace/api-backend/usage-api/api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get the deep link settings"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/settings/deeplink"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns the deep link settings.
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Ok","content":{"application/json":{"schema":{"type":"object","properties":{"response":{"type":"object","properties":{"handlingMode":{"enum":[0,1,2],"type":"integer","description":"The deep link handling mode.","format":"int32","title":"DeepLinkHandlingMode"},"lastModified":{"type":"string","format":"date-time","example":"2008-04-10T06:30:00.0000000+04:00"}},"additionalProperties":false,"description":"The deep link settings.","title":"TenantDeepLinkSettings"},"count":{"type":"integer","format":"int32"},"links":{"type":"array","items":{"type":"object","properties":{"href":{"type":"string"},"action":{"type":"string"}}}},"status":{"type":"integer","format":"int32"},"statusCode":{"type":"integer","format":"int32"}},"title":"TenantDeepLinkSettingsWrapper"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

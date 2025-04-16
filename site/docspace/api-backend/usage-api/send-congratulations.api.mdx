@@ -1,11 +1,11 @@
 ---
 id: send-congratulations
 title: "Send congratulations"
-description: "Sends congratulations to the user after registering the portal."
+description: "Sends congratulations to the user after registering a portal."
 sidebar_label: "Send congratulations"
 hide_title: true
 hide_table_of_contents: true
-api: eJytlMFu2zAMhl9F4FlpvDRZMt+GdYdiw1osyykICtamY6G2pEly0CDQuw+UvaZJtmKHnQxbP6mf/EgfIODWQ76Ge+MCNmIsVp6ch40EY8lhUEbflpCDJ11+MnrrMHRN+uxBgkWHLQWOyNcH0NgS5MApVAkSlIYcfnbk9iChJF84ZTl00IjbG5Dgi5pahPwAYW853Aen9BYkVMa1GCCHrkvp6Blb27BkPsNZNZ/ORtX7D/PRdPpuMXq8XpSjrKKsnMznNJktIEb5YukL7d/287lF1YinJPu7o6MDb1oSgZ4DxLiR4Mhboz15jppkGT9OL7h7gihhml1fHn0zwpJrlffcVhHSKxcvQq28wCLpYjz3vCRdelGcUuHwUJPouMFYBXLC0Vb5QFxDOrKJ9RVIaCnUhvFa40PiGWrIYYxWjSdX2bhXjhl+cQHfk9v9Jt+5BnI4PKKnlWviRXuXScteK7Xt+rkCCTt0Ch+bvm1DcN+fCruG0V9kuumPxOr7V4ip956KzqmwXzK2PhX64gG7UD8w0CNHtKofhGEqTmTDeBTGPClK3Va6MilahcT8o1XsmZzvrewmjJRb16Jm4ZCWuZxjOa/jAIXRgXT4LxyH+ngex7ZBpdlY1/eyZ7rm4kHC5CpjzikyMbwku5FQ8zjkazi8EI38uV8d5l0qz9xKyCtsPL1R3HHR/2gyATr+MXbYdCwC3t1/v+T19r5xTQ//eMfmOIGQrzfx1ULc3y1/QIy/ADd1vsw=
+api: eJytVU1v4zYQ/SuDueQix643aVLdXKcFsi2aYO0gB8NYjKWRRVgiVZKy4zX034uh/O0i2S16kk3OvPl687hBT3OH8QSfjfVUQBdeHFuH0whNxZa8MvoxxRgd63Ro9NySr4tw7DDCiiyV7MUjnmxQU8kYo0CoFCNUGmP8u2a7xghTdolVlbhijOOcoXZs4fEBvAHLCaslg88ZkkMYY9dQsnM052uM0CU5l4TxBv26kkjOW6XnGGFmbEkeY6zrEJnfqKwKMbm7pdvs7ua2k/38y13n5uan+87s033a6WXcS/t3d9y/vcemifbZ/8Hrj1P3XFYFeQaVsvYqU2zBWOCSVCEFZGpet92DBa/fz/2QqzOlQL95bJpphJZdZbRjJ179Xk8+p6k8LbCJ8Kb36fLqLwMV21I5J7OSHldspU3gc+WAkmDXNOfVjVin7ngGO3e/mxhlni1YnivnWWoAgirQR+os2edGGFMZ5wNFfI4xdqlS3f51r9tadoVPyQWfHNvljky1LTDGzYwcv9iiuRjDKNieNhsjXJJVNCvapm2d2+5kVBdCkQukh/YKXr78iU3ovOOktsqvRzK0Fopc8pVqn39d8PpoilSpljCnkC+OYWjMQjGIk3Ak2WW45dkJ4JZwSXCRmf5KTiVHcXLvq4sov2mZxNrUNkxGgIF0ChU5tzI23dFOAGYBUJCZLNvvg75qjWHz+XUMY7Ng3VydgLZY0fbH77st/Pw6llCD0JzvCzg4aRMoB6kIS6k0pzBbB/pdiZGx6luwuYKcKQ3hP0xo8PwIMqcmwicB6R+lYygcnCfU2kFWmBWslM/hJDgMTcoiPIVZtfw4vg2X54eBiMI+L43c/3OJqVqKWSZZnC9MKVCSsGvX1hrPiecULDtT24RlU1ZWeUn+Vb4fWDeNrPlTxUHKD3WHg6HRmhN/Wb7cPsD2+pLFJ97bYpoI3zpOzTX52vLHWzIYDUGYNdq77LfjGOdsORr5n5kAr3wQzkGlZPXZuhZ42ZdcRIFK0mK4RRVxO9e286w2mBjtWfv/QQy35Yukd6uClJa06laQWmGcSG8wwv51T8QyeAYhvJTHaYS5aGo8wc1eFhs5bt8pEc1UORG/FOOMCsfvlPafHuB/rScI4uHRX1JRc8uGH83nx1/VdxJqCXfIZnp4GzCeTJujp+r5aTTGpvkHGcQelw==
 sidebar_class_name: "post api-method"
 info_path: site/docspace/api-backend/usage-api/api
 custom_edit_url: null
@@ -36,7 +36,7 @@ import Heading from "@theme/Heading";
 
 
 
-Sends congratulations to the user after registering the portal.
+Sends congratulations to the user after registering a portal.
 
 <Heading
   id={"request"}
@@ -47,7 +47,7 @@ Sends congratulations to the user after registering the portal.
 </Heading>
 
 <ParamsDetails
-  parameters={[{"name":"Userid","in":"query","description":"User ID","schema":{"type":"string","format":"uuid","example":"75a5f745-f697-4418-b38d-0fe0d277e258"}},{"name":"Key","in":"query","description":"Email key","schema":{"type":"string","example":"some text"}}]}
+  parameters={[{"name":"Userid","in":"query","description":"The user ID to receive the congratulatory message.","schema":{"type":"string","format":"uuid","example":"75a5f745-f697-4418-b38d-0fe0d277e258"}},{"name":"Key","in":"query","description":"The template identifier or email configuration key.","schema":{"type":"string","example":"some text"}}]}
 >
   
 </ParamsDetails>

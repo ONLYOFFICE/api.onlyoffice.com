@@ -1,0 +1,63 @@
+---
+id: get-template-creating-status
+title: "Get status of room template creation"
+description: "Returns the progress status of the room template creation process."
+sidebar_label: "Get status of room template creation"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVk1v2zgQ/SvEXHJRbdftAgvdXKct0l2gReIgh8AoaGpssZFILTlK4jX03xdDSrJsJ3UOe7JMzsfjzJtH7oDkxkN6D190gV6MxbW1pYdlArZCJ0lbc5VBChukBZZVIQnnDiVps7khSbWHBBz6yhqPHtIdTCcT/snQK6cr9ocUelNlDaEhtpBVVWgVMox/eTbbgVc5lpK/aFshpGBXv1ARJFA5xkM6JukynrekFjQforfVhnCDDpIjmIschbO2FJ2XuLocQQJr60pJ0fHDFBLAZ1lWBUL6fvrhYxNybhx6P8hh6nL1SorOWti1oJOUKpTXGjZT6P0BgMzWqwKHCN79OfqjSQCds26Q3pPTZvNi+mAqSvReblBQLkloLzwaEk85mhcgaS+MpYgMM+FrxcDWdVFsGZ2pi0IyrJRcjQNs4G2JgvCZoElA+7nldcJhL1bWFijNCdKbCpVea/QMinJ0AVdbE66camn4Ml7VpRoNi8X4miYBmWWa88jix4Ata1l4PM8JH8jMcUlTOCbPTDcdkeqXZPnIytaR7CfEO6JUk0ChzcOQQNI5uYUENGHpzxM9d7g+7T+fVcWTnGw1XIl4mDdCjMZzm+GbHJrfVejOyapC18L4OHl/qhq3RtaUW6f/xSxE86hqp2kL6f0OpFc/ef/nA/ICOJQZJPDkNCHr1yeUDh2k98sEZpX+C7fDlU/SaxU/v89qyqccQlZ61Ibhzz7U9wqDCt4vm+UxP66Ramd8x8442LFQb5/vEim3rcxyZyXlkMJYVno8HU3Ga9bmMYfpoox9p6ge3SM6H0pSuwJS2K2kx1tXNKczFWyFsmatN3VUd0jgUTrN8xto0DrHbqxlXXBDTyJdxi1xe/03d3C5780NS3gMddihPbFDM05C3noUc2sfNAp2QkPt7cAKI8vgOQyYgGY3FVyYnW1L+zw5UXWS5bMhdGJraydqj44DC2kyUUnvn6zj1odLKEhTCNjsqfSW0BfRWOy+3S3Ewj6gaS4OgsZYSfvxpZuZb3cLTnXI1N8nnB2UiVUvQ0JXaoOZWG0D9y5m7QgFmwuRo8xC+rOAZj+uBPep2U/IXoNkWDgGFO3EurBP4klTLg6SiyAcCfB25Mdwt1OVg8VARGYfcSH7f17ZqnsIyCwMocyEDLeSIMuTRaj4qnLobe0U+l4ZUrjj3zPWUZW6ud+fOyzMrTFRgo+Oz7uXot0+ZfGBd3uYJoHnd15vjKTa4fkpmd3MBTPrpnfpp2MY52g4+PY1axvCt4o8qzSPPjofAz8Gha+sp1KG26KN+hVpIGcvS9kxyt3+nff/6GNbE35JjKtCasNY66hSUSyDeEMC09GEKcaCyS/TgWRCf9ktE8itJ3ba9WLZ8PI/NbptvBU6UQyqn0A7N6yyQc1gphRWFNSzqGPDjt6zrIq9sH/9vOBbpWaswx5HJWs/OHq3ZbbD2IfCFxE8hOF8xWO3iwRqmt4+br3q0StDtOYaL5um+Q/n9TEM
+sidebar_class_name: "get api-method"
+info_path: site/docspace/api-backend/usage-api/api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get status of room template creation"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/files/roomtemplate/status"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns the progress status of the room template creation process.
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Status","content":{"application/json":{"schema":{"type":"object","properties":{"response":{"type":"object","properties":{"templateId":{"type":"integer","description":"The room template ID.","format":"int32","example":1234},"progress":{"type":"number","description":"The progress of the room template creation process.","format":"double","example":-8.5},"error":{"type":"string","description":"The error message that is sent when the room template is not created successfully.","nullable":true,"example":"some text"},"isCompleted":{"type":"boolean","description":"Specifies whether the process of creating the room template is completed.","example":true}},"additionalProperties":false,"description":"The room template status.","title":"RoomTemplateStatusDto"},"count":{"type":"integer","format":"int32"},"links":{"type":"array","items":{"type":"object","properties":{"href":{"type":"string"},"action":{"type":"string"}}}},"status":{"type":"integer","format":"int32"},"statusCode":{"type":"integer","format":"int32"}},"title":"RoomTemplateStatusWrapper"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

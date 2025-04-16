@@ -1,0 +1,71 @@
+---
+id: get-is-default-white-label-logo-text
+title: "Check the default white label logo text"
+description: "Specifies if the white label logo text are default or not."
+sidebar_label: "Check the default white label logo text"
+hide_title: true
+hide_table_of_contents: true
+api: eJylVktv2zgQ/ivEXHLRxtnsnnxzk3aRboAWiQMfAqOgpZHFWiZVcpTEa+i/L4bU03LqpD1Z5sx8nOc33APJtYPpI9wjkdJrJybiDldW6kTpNSwjMAVaScromwSmsEa6cdeYyjKnRaYIb+UK81uzNnN8IYigkFZukdAy6h603CJM4cZdS7uBCJSGKfwo0e4gggRdbFXB4DCF+wJjlSp0QqWCMhTPjC9yvkDkZm2EciI11ssSaTf8sUVhrNCGziECF2e4lTDdA+0KvnZlTI5SQwT4IrdFjjAlW2JVRX3PQjTvdK7vkBRJwBCEWmr6JZeWEVh0hdEOHetfXlzwz9CNO/xRoiNRWC4LsT8mHSXKQQSx0YSaGEIWRa5iX8PJd8c4+7FfZvUdY1/AFpqljUunNUM+Wy1HlhvoMI/zY3VlU06WLvNcrpqU9DIEC6VThXkiHgoyGiqGDVU7ltlf6KumgF3lDjsGZJIohpT5117gqcwdHouyQRwVR3QjwveQonzQiMOxctdkON7YlLofrdKEa7QQQWrsVlI4+uuSdXOlN66nK62V3NKKcOtOVzKzmI4ryRmIQ3wjUcX5cSSpdG90MShfmQTfZFCdztPCyqJAWzvz98Wf4+l50LKkzFj1HyYe02FcWkU7T1XSxd9Y/m2DfAAWZQIRPFtFyET4AaVFC9PHZQSzQv2Lu/7JB+lUHD6/zErKLhlCFuq8huHPFupLgZ5OH5c89u9tV8IXEtLikabdImWm5mlPxpTBFCayUJPL84uJq0l+4jE95IQhGXGiXNIyoUP71FB4aXOYwn4lHT7YvBrPl9cVsdGpWpdhV0AET9IqHmbfEbVxKEk9uDBCqgsrHu5uuYzLrkD3TFcBalimrsd9RUaQDw7FlTEbhYKNUFPNhEw3YQMMAOslEHsTbtS6ru09GVExuuWjJrRiZ0orSoeWgYXUiSikc8/GJs0i8DTlAauun94CfRaUxf7zYi7mZoO6OhuABqyo/vjUjM/nxZyvGrbrzy+cDdIUuJHQbpXGRKx2viXPZvUceZ0zkaFM/PUnHZp9vRFcp6obk46OpD84dCjoiTQ3z+JZUSYGlwvPIRGwOPRHX9oQzODQNyJ3H3Ei238uNkWz9GTil61MhIxjdE6Q4Z1LGBMmwqIzpY3RtfQwhQX/ntAO1NQMfxe3P7gyWgc2PgifpdeiFo+7eGBdB1NF8PKHU2stqbR4ekpm91eCO+u+NWmno49zMBwV/0+Nh6/JeVYoHn20LgA/ebIvjKOt1N0rAa4yjDfhIffKmvQsd+jovnvW/B5P1unwvFfkUvknRRkIKpCmJ2+I4PL8wvNhIE4ueEudEEFDnpyalj6XEWTGEWPsW9qs+Di8LZlUE+WYHJPjD4j3xXnqWXw0WM+e3bv8SeYlhtb5Lefe+Cz+uUvtGuq8WnYLxa/NCGrO4WQGw1kcY9G3Gr17GaXdkP98nPNaLrnY/fkIW6D+YPRGpHd97OHSCB5sPLG9YrHfh+GrqlY/iF61aFk1aHOSllVV/Q/1hLed
+sidebar_class_name: "get api-method"
+info_path: site/docspace/api-backend/usage-api/api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Check the default white label logo text"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/settings/whitelabel/logotext/isdefault"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Specifies if the white label logo text are default or not.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"IsDark","in":"query","description":"Specifies if the white label logo is for the dark theme or not.","schema":{"type":"boolean","example":true}},{"name":"IsDefault","in":"query","description":"Specifies if the logo is for a default tenant or not.","schema":{"type":"boolean","example":true}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Request properties of white label logos","content":{"application/json":{"schema":{"type":"object","properties":{"response":{"type":"object","properties":{"name":{"type":"string","description":"The white label logo name.","nullable":true,"example":"Winfield Upton"},"default":{"type":"boolean","description":"Specifies if the white label logo is default or not.","example":true}},"additionalProperties":false,"description":"The default white label logos parameters.","title":"IsDefaultWhiteLabelLogosDto"},"count":{"type":"integer","format":"int32"},"links":{"type":"array","items":{"type":"object","properties":{"href":{"type":"string"},"action":{"type":"string"}}}},"status":{"type":"integer","format":"int32"},"statusCode":{"type":"integer","format":"int32"}},"title":"IsDefaultWhiteLabelLogosWrapper"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

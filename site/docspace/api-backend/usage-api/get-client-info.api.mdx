@@ -1,0 +1,71 @@
+---
+id: get-client-info
+title: "Retrieves detailed information for a specific client"
+description: "Retrieves detailed information for a specific client"
+sidebar_label: "Retrieves detailed information for a specific client"
+hide_title: true
+hide_table_of_contents: true
+api: eJytV21v2zYQ/ivEfckGyLHj5mXVPqVJN6Qrmi1JUWBBYNDUyWYjkQxJJfEM/ffhSNmWbAXJXgADtnXHh8fjc8+dluD5zEF6C2eFROXZHxXahVQzuEtAG7TcS60uMkhhhj76XKhcQwKGW16iR0vLl6B4iZCCiC4ZJCAVpGC4n0MCGTphpSEwSOHinOmc+Tmy6M68Zha9lfiIkIDFh0pazCD1tsIEnJhjySFdQinVZ1QzP4f0IAG/MLSl85YCrhPAZ16agp4dixORH5xMBwfT7N3g8CQ7Grw/FMeDKY6zd0cnIzw4/gnqO9rLGa0cOoIfj0b01Q32uhICncuroliso8xWkcuYDKGVR+VpNTemkCLkbfjdEcSydYImZj39jsJTFi1l2csYQEzicvdknZB67E5oEyEqJR8qvPBYulX+Gm9uLV/QvUTbDkqdNLc3kVnvJk84ddLjpLJFr92jLd2LVqMLKRYvmgs9070GXvk5Kt+kdFKin+vsvx9VuomppoUULfNU6wK5ol2FRe4xm/TlO4Fc25J7SCHjHgdeltheM130HqTUmczlP8RcL+oFpaRLHxi/qc2rhtKdilgX6Mf4hH2hv50bf1vRbNfyCu+89XSLKjD33qTDYRPMvtAldNjS79AmTL9H5AwljKey5DMcGjX7ecodHh8m8vHD5RW8zJ/b1dkdCot+YrTzpHqrUrqFXBboUouc1Cz+ebLSI3m16BOZ1yYMjEfjw8GIPjcH43Q0SkejP6FLkLdmu8Oal4A7LHmj+NXEnsM+xfvAM0YajM4Thw7H73d9brRmJVeLlaP7/0TQIne9Mretg/DRWm3ZSsIZ7c+lkmrGOJtXJVcDujw+LZDhsym4CgGteg/SathUUEDbFE/Iz1Fffi6UR6t4wRzaR7QNELk7FJWVfhE64vPAyZnivrII6e0ddZsuzlXTTBzL0HNZYBbaCckAhZlryzhzBoXMpWgaDl12YHDsyKEPUzuEITdyON4fDaOfGy5XrbgeNk0qhhvbdayqJdXKV1vUO2V9HY8mtMrlrIpjACTwyK2kfIaLahbHBOW8Kki9dpDOo4l9vfpMSb3bZOmaCBGhuBMTKtTJPbZ1jhv5Gy52IL86ZGda30tk3eqGZCVzHcBmFhFhCVH6A3cd4Sd12VU2uma20JVllaMLL5FxlTHDnXvSlkQhUDp0jgBIyMgt2rdB70Vntvz07Ybd6HtU9V4HNGIlzY9fVg3i07cb2uo0JOdtG5520sRkoBzaUirM2HQR6mGPnLSVfwWfPTZHnoXtXw3o9PcLRvdUJ3BJION2kfPwYDug6MfyQj+xJ+nnrLM5O9MZdScyR360rcG4/TAQkdjnKZHrf5vBKOg4FR3PGA8jHY2dxmqPwiMpntOVFUhKFmU+hW/0/Yp3FIpLg2FM3pw7PDjTSkWN2zo+Wc9ZY95lcWd1c5g66UrKa1Vyen3GiFnX6yXr6mjjbBUHjUYkFwTfCOOpkVT6aF0EfhzHec75kqvWaPEv9ax/tvX47Iem4DKMY83UGLXulk4MCYz3R+sJhm4t7bx85Jr69Jy6enoLy7XU1fT4gV5zSJU3khZkMZOOfmeQ5rxwuBPcusXBD1fNW8qP7JXXmd4Dra5OLYKqFhVGvgb927xF1Xd1Ak0hUnzRfCoEGt9auNNuSWbXfeLXjzfNHNQlTZTG5geh9wbV5UoM4D4U+wsLlstIyLpe+0fTiyvWShO9KUN3dV3/DfvW+kM=
+sidebar_class_name: "get api-method"
+info_path: site/docspace/api-backend/usage-api/api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Retrieves detailed information for a specific client"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/clients/{clientId}/info"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Retrieves detailed information for a specific client
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"clientId","in":"path","description":"ID of the client to retrieve","required":true,"schema":{"minLength":1,"type":"string"},"example":"6c7cf17b-1bd3-47d5-94c6-be2d3570e168"}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Successfully retrieved client info","content":{"application/json":{"schema":{"type":"object","properties":{"name":{"type":"string"},"description":{"type":"string"},"scopes":{"uniqueItems":true,"type":"array","items":{"type":"string"}},"client_id":{"type":"string"},"website_url":{"type":"string"},"terms_url":{"type":"string"},"policy_url":{"type":"string"},"logo":{"type":"string"},"authentication_methods":{"uniqueItems":true,"type":"array","items":{"type":"string"}},"is_public":{"type":"boolean"},"created_on":{"type":"string","format":"date-time"},"created_by":{"type":"string"},"modified_on":{"type":"string","format":"date-time"},"modified_by":{"type":"string"}},"title":"ClientInfoResponse"},"example":{"name":"Example Name","client_id":"6c7cf17b-1bd3-47d5-94c6-be2d3570e168","description":"Example Description","website_url":"http://example.com","terms_url":"http://example.com","policy_url":"http://example.com","logo":"data:image/png;base64,ivBOR","authentication_methods":["client_secret_post"],"scopes":["files:read","files:write"],"is_public":true,"created_on":"2024-04-04T12:00:00Z","created_by":"6c7cf17b-1bd3-47d5-94c6-be2d3570e168","modified_on":"2024-04-04T12:00:00Z","modified_by":"6c7cf17b-1bd3-47d5-94c6-be2d3570e168"}}}},"400":{"description":"Bad request"},"429":{"description":"Too many requests","content":{"application/json":{"schema":{"type":"object","properties":{"reason":{"type":"string"}},"description":"Error response containing a human-readable explanation of the error","title":"ErrorResponse"}}}},"500":{"description":"Internal server error"}}}
+>
+  
+</StatusCodes>
+
+
+      

@@ -1,0 +1,71 @@
+---
+id: create-client
+title: "Create a new OAuth2 client"
+description: "Creates a new OAuth2 client with the specified configuration. The client will be created with the provided scopes, redirect URIs, and other settings. Returns the created client details including the generated client ID."
+sidebar_label: "Create a new OAuth2 client"
+hide_title: true
+hide_table_of_contents: true
+api: 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
+sidebar_class_name: "post api-method"
+info_path: site/docspace/api-backend/usage-api/api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Create a new OAuth2 client"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/api/2.0/clients"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Creates a new OAuth2 client with the specified configuration. The client will be created with the provided scopes, redirect URIs, and other settings. Returns the created client details including the generated client ID.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"required":["allowed_origins","redirect_uris"],"type":"object","properties":{"name":{"maxLength":256,"minLength":3,"type":"string","description":"The name of the client","example":"Example Client"},"description":{"maxLength":255,"minLength":0,"type":"string","description":"The description of the client","example":"Description of the client"},"logo":{"minLength":1,"pattern":"^data:image\\/(?:png|jpeg|jpg|svg\\+xml);base64,.*.{1,}","type":"string","description":"The logo of the client in base64 format","example":"data:image/png;base64,..."},"scopes":{"minItems":1,"uniqueItems":true,"type":"array","description":"The scopes for the client","example":["read","write"],"items":{"type":"string","description":"The scopes for the client","example":"[\"read\",\"write\"]"}},"allow_pkce":{"type":"boolean","description":"Indicates whether PKCE is allowed for the client","example":true},"is_public":{"type":"boolean","description":"Indicates if the client is public","example":false},"website_url":{"minLength":1,"pattern":"^(https?://)?(([a-zA-Z0-9-]+\\.)+[a-zA-Z]{2,}|localhost|[a-zA-Z0-9-]+)(:\\d+)?(/[a-zA-Z0-9-._~:/?#\\[\\]@!$&'()*+,;=]*)?$|^https?://(\\d{1,3}\\.){3}\\d{1,3}(:\\d+)?(/[a-zA-Z0-9-._~:/?#\\[\\]@!$&'()*+,;=]*)?$","type":"string","description":"The website URL of the client","example":"http://example.com"},"terms_url":{"minLength":1,"pattern":"^(https?://)?(([a-zA-Z0-9-]+\\.)+[a-zA-Z]{2,}|localhost|[a-zA-Z0-9-]+)(:\\d+)?(/[a-zA-Z0-9-._~:/?#\\[\\]@!$&'()*+,;=]*)?$|^https?://(\\d{1,3}\\.){3}\\d{1,3}(:\\d+)?(/[a-zA-Z0-9-._~:/?#\\[\\]@!$&'()*+,;=]*)?$","type":"string","description":"The terms URL of the client","example":"http://example.com/terms"},"policy_url":{"minLength":1,"pattern":"^(https?://)?(([a-zA-Z0-9-]+\\.)+[a-zA-Z]{2,}|localhost|[a-zA-Z0-9-]+)(:\\d+)?(/[a-zA-Z0-9-._~:/?#\\[\\]@!$&'()*+,;=]*)?$|^https?://(\\d{1,3}\\.){3}\\d{1,3}(:\\d+)?(/[a-zA-Z0-9-._~:/?#\\[\\]@!$&'()*+,;=]*)?$","type":"string","description":"The policy URL of the client","example":"http://example.com/policy"},"redirect_uris":{"uniqueItems":true,"type":"array","description":"The redirect URIs for the client","example":["http://example.com/redirect"],"items":{"type":"string","description":"The redirect URIs for the client","example":"[\"http://example.com/redirect\"]"}},"allowed_origins":{"uniqueItems":true,"type":"array","description":"The allowed origins for the client","example":["http://example.com"],"items":{"type":"string","description":"The allowed origins for the client","example":"[\"http://example.com\"]"}},"logout_redirect_uri":{"minLength":1,"pattern":"^(https?://)?(([a-zA-Z0-9-]+\\.)+[a-zA-Z]{2,}|localhost|[a-zA-Z0-9-]+)(:\\d+)?(/[a-zA-Z0-9-._~:/?#\\[\\]@!$&'()*+,;=]*)?$|^https?://(\\d{1,3}\\.){3}\\d{1,3}(:\\d+)?(/[a-zA-Z0-9-._~:/?#\\[\\]@!$&'()*+,;=]*)?$","type":"string","description":"The logout redirect URI for the client","example":"http://example.com/logout"}},"description":"Client creation request containing client details","title":"CreateClientRequest"}}},"required":true}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"201":{"description":"Client successfully created","content":{"application/json":{"schema":{"type":"object","properties":{"name":{"type":"string"},"description":{"type":"string"},"tenant":{"type":"integer","format":"int64"},"scopes":{"uniqueItems":true,"type":"array","items":{"type":"string"}},"enabled":{"type":"boolean"},"client_id":{"type":"string"},"client_secret":{"type":"string"},"website_url":{"type":"string"},"terms_url":{"type":"string"},"policy_url":{"type":"string"},"logo":{"type":"string"},"authentication_methods":{"uniqueItems":true,"type":"array","items":{"type":"string"}},"redirect_uris":{"uniqueItems":true,"type":"array","items":{"type":"string"}},"allowed_origins":{"uniqueItems":true,"type":"array","items":{"type":"string"}},"logout_redirect_uris":{"uniqueItems":true,"type":"array","items":{"type":"string"}},"created_on":{"type":"string","format":"date-time"},"created_by":{"type":"string"},"modified_on":{"type":"string","format":"date-time"},"modified_by":{"type":"string"},"is_public":{"type":"boolean"}},"title":"ClientResponse"},"example":{"name":"Example Name","description":"Example Description","tenant":1,"scopes":["files:read","files:write"],"enabled":true,"client_id":"6c7cf17b-1bd3-47d5-94c6-be2d3570e168","client_secret":"6c7cf17b-1bd3-47d5-94c6-be2d3570e168","website_url":"http://example.com","terms_url":"http://example.com","policy_url":"http://example.com","logo":"data:image/png;base64,ivBOR","authentication_methods":["client_secret_post"],"redirect_uris":["https://example.com"],"allowed_origins":["https://example.com"],"logout_redirect_uris":["https://example.com"],"created_on":"2024-04-04T12:00:00Z","created_by":"6c7cf17b-1bd3-47d5-94c6-be2d3570e168","modified_on":"2024-04-04T12:00:00Z","modified_by":"6c7cf17b-1bd3-47d5-94c6-be2d3570e168","is_public":true}}}},"400":{"description":"Invalid request - missing required fields or validation failed","content":{"application/json":{"schema":{"type":"object","properties":{"reason":{"type":"string"}},"description":"Error response containing a human-readable explanation of the error","title":"ErrorResponse"}}}},"403":{"description":"Insufficient permissions to create client","content":{"application/json":{"schema":{"type":"object","properties":{"reason":{"type":"string"}},"description":"Error response containing a human-readable explanation of the error","title":"ErrorResponse"}}}},"429":{"description":"Too many requests - rate limit exceeded","content":{"application/json":{"schema":{"type":"object","properties":{"reason":{"type":"string"}},"description":"Error response containing a human-readable explanation of the error","title":"ErrorResponse"}}}},"500":{"description":"Internal server error occurred","content":{"application/json":{"schema":{"type":"object","properties":{"reason":{"type":"string"}},"description":"Error response containing a human-readable explanation of the error","title":"ErrorResponse"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

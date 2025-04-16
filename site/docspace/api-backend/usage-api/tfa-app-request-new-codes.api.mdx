@@ -5,7 +5,7 @@ description: "Requests the new backup codes for the two-factor authentication ap
 sidebar_label: "Update the TFA codes"
 hide_title: true
 hide_table_of_contents: true
-api: eJytk01v2zAMhv+KwLNWZ8F28S3YMGDYUAxtcyqCgrXpWqsjqRKdLDP03wfKdpqk6G2XOLL49b4PPQDjU4TyHm6J2dinqAp1922l4nSEjQbnKSAbZ7/XUAI3uPL+hl56inxN+y+upggaAkXvbKQI5QDLxUIeNcUqGC+5UMI17dUjVs+9V9WUVDnLZFli0fvOVLlP8TtKwgCxammLUA4ppaTh0+Lj26priz23Lpi/VEMO+vw2SCSdNDjKUxhIWccKd2g6fOwIpFGkqg+GD1DeD4CxepAWD88kLyAQ1qBhHwwTbNJGX/SarImKW1L2QrNqXMgXvHcfGqzYBSXFyfI828mcV6BhS9w6Md73DBo8cgslFOhNsbxaFLOSghtE7y3tZ28jhR2FmDX0oYMShkeMtA5dgsuZb3OsqpxtzFM/0gYNOwxGTMlMp+TR3Ab7jqGEN5W+jldqffMTUhJ3ZjNvBeZY6tzSAfjgCUpAb37QATRY3ObzaZgGI/Ur557NSMnYxuVsw52Er7yRmSnEcZTdUvbBu8hbzOs0lV37GpkyBdmL2a8zHcPrav5voJNYpj9c+A6NlSn70diR7r04ARqWV4vMcfoUNVww3mhoXWRJGI5sk7x+6SnIsm5eGcopaWgJawp5KbL5sKoq8pxhd/1I4eJDFIjHLfy1vgMNovAc3Iho+iPV5yt7OK19TnScQH6TfidjGMatSOkYP169mzEpnKPF301K6R+p3bGi
+api: eJytVk1vGzkM/SsCL7mosTe7e/Ftmm6BdhdN0cTIITAKeob2qB5LqsSJ6zXmvxeUZvyJbnLYkzUi+UiJj0/eAeMywuQJ7onZ2GVUI/XwvlCx/4SZBucpIBtnP1QwAV5g4f0X+t5S5E+0uXUVRdAQKHpnI0WY7OBmPJafimIZjJdYmMAn2qg5lqvWq7IPKp1lsiy+6H1jypRn9C1KwA5iWdMaZcVbTzABN/9GJYMGH6QqNjndkPvIE0PALWgwTOt4idB1krzNqXuTsUxLCqBh4cIaOW/9fgOdhsbYVXw9/HmBdaDFkVfkYOxScLHMl3Nh6qTCyMhtfGWJ2Vna8aqATgMbbsTpLhVdyJEeA3pPoc//x/i3yzZOLbZcu2D+pQqS05+XTsKho47u+aQwkLKOFT6jaXDeUKokUtkGw1uYPO0AY/lVUnxdkWxAIKxAwyYYJuHjW8JAASZPMw2FN3/T9njnLUZT5uVd0XJ9IxDozXUPI8s91J2nxOqnWTfTZ0foKR4V16TsGXfVwoVk4I17s8CSXVBSM1kejnx0/GvQsCaunQyQbxM/kGuYwAi9Gd1cj0fDBY14gei9pc0wI5HCM4WYrqYNDUxgN8dI09B0cF7zffJVpbMLs2zz1IKGZwxG7jpRqQ/OPVtg2wgpLpDeZZOafvlHyDA79OhehjJDnXbqMBypKReQ00jq1rmVobOrAg0W1ynyGFCDkbAyhQjT+tbu89TM/iLLX5YpqK1rg2ojBQFWaCvlMcaNC0KBJCsCME+A3YFSr4G+ys5q9/HxQT24Fdnu6gQ0Y+l+8X6Yu4+PD5LqlLH/nbA4ZZSJqiKmsDaWKjXfJgJeFf00Jp8rVRNWKf2LBRWfPyjpU3eYlIOOYdo4Lyj7qUXjNmpjuFYnyVUSHw1izvw4tg7KdLKZiCjsY7nI/VcsnR+kHas0jFgpLEuKUbFTPjimkqlSgaJrQ5kmJY/1BB7l9wXvLHDD/B/OnTZunbVZxs+OL9Z3qjdfsvgkuj9Mp+HHm2iWFrkN9PKUFPe3Sph1vw/ZT8cxztlwdPK9cAm+V/XCGxl9CjEDP6dXwrvIa0wvTo869RUyJS6Jag+yc1LV7vBS/9+62N8G0w8e+QaNlSrbrE9ZJJN8g4ab63GSw/6fiYYzqZxpqF1kCdjtJbKT7e8thW1+EwYpTJqvoZ8W0dakYVCUJXlOmtm0uU1n/0tEC/di/nn6IG9KK3UedzbrV78Q9MFkt8fYp3KXK1ilkfxFxG6XadN1e/9s+mXEXg+yt9zvrOu6n3K6bBU=
 sidebar_class_name: "put api-method"
 info_path: site/docspace/api-backend/usage-api/api
 custom_edit_url: null
@@ -54,7 +54,7 @@ Requests the new backup codes for the two-factor authentication application.
 <StatusCodes
   id={undefined}
   label={undefined}
-  responses={{"200":{"description":"New backup codes","content":{"application/json":{"schema":{}}}},"401":{"description":"Unauthorized"},"405":{"description":"TFA application settings are not available"}}}
+  responses={{"200":{"description":"New backup codes","content":{"application/json":{"schema":{"type":"object","properties":{"response":{"type":"array","items":{"type":"object"}},"count":{"type":"integer","format":"int32"},"links":{"type":"array","items":{"type":"object","properties":{"href":{"type":"string"},"action":{"type":"string"}}}},"status":{"type":"integer","format":"int32"},"statusCode":{"type":"integer","format":"int32"}},"title":"ObjectArrayWrapper"}}}},"401":{"description":"Unauthorized"},"405":{"description":"TFA application settings are not available"}}}
 >
   
 </StatusCodes>

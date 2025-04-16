@@ -5,7 +5,7 @@ description: "Checks if the current user is authenticated or not."
 sidebar_label: "Check authentication"
 hide_title: true
 hide_table_of_contents: true
-api: eJydkk+P2jAQxb+K9c4WII650T+qVu2p2z0htBrMhLgE27XHqCjKd6/ssMsuXKrNJRln/Pzm9zxAaJ/QrLHK0rETa0isd9ho+MCxFg87NNizPKSXpra08Q4akVPwLnFCM2C5WJTXjpOJNlSdBp+875mcOlGfuVESMyvbKulYmRwjO1E5cVQ2Kbp6qOLGO2EnRZNC6C/e5r9TER6QTMdHKl9yDowG2+kojOXRNz4+d2wO6b+OVj4q52UGjSNL5y/zQyOQdGgwp2Dny9liTu+paSSOJ46F6IAcezQYtpT4KfYjbh091l5lvGvtPscXiRNFS9t+QnrZPGFtKfeCBndKX6Zf6unnjzL8pvgwOVo5PxZGkxQl81z8Ph/4/AYaBfudz9BwdKz12zYNW/SN9wfLKFCta33dbaUv7atgi2eOabJyWmLUCD7JkWpKF9mKX93xejfHcE38g3FdZhL+K/PQk3XFTJ74Tdmty8DQWM4W0KC7W9/5JKVreM1tLMt/MsczmvXmmk+pRo2OacexBl7BYmUMB6lB9nkifHN3S0CvF+vb118Yx3+08jm5
+api: eJydVU1v2zgQ/SvEXHLhxoF78811P5B2gRZNghyCoKCpscVaJtnhKKnX0H9fDCnbsn2I0ZNEcvjmDfnmcQtslgkmTzBtuUbPzhp2wcOzhhCR8uC2ggkskW/TLmghYViBBsIUg0+YYLKF8c2NfCpMllzMOBN4H0KDxqsX07Q4UUwtKrdQXKOyLRF6Vm1CUi4pc+CQwW3wjJ4F08TY9NxGv5IAbyHZGtdG/ngTESYQ5r/QMmiIJOTZFVo7joPIeSEFnSRpS4p+yXnGJRJoWARaGy5T78YS2zi/SoNYQ2Q2oMExrtPbRGrCxSAqMTm/FFxjy2GdLXVdpyGx4TZdSLEEz0KFF23oNLDjBg8X9UgmRqScu9Mnlzmr0a7SRfenAikf+Bo0rJHr0ItIDsVwDRMYmehG4+ubkTmWnoaE9IIkstxCSw1MYDs3CR+o6eCU0V2OVTb4hVu2tIN4MeTMvCnn3m8u2lyYtpEDOEP6UJbUw49/pfhn4WFbcry5E6EVKJPsT+H7c4WboRCi+4qbM8iHhGoWwsqhOivSm3XeOQTU4GSbzVvkNt+b5OwgT80cz7J89IykNqGlfBMCrIyvVDQpvQaSTsqtkoWfAQUZDSFdBn1VgtX2y+O9ug8r9N3VEWjB0v3Pp53GvjzeS6ppPpzLEh7bkIiqQkZaO4+Vmm+y7K4kKJD7L8dcqRpNldO/SWj6/VbJPXUavgnIeNizJk+cEipxatGEV/XquFZHyVVuNA2yXPQxXN114dFkFqKoj+Ug96NkQ9zZlZFe+YGmUsZaTElxUJECo5W+IkyhJYsJNLySYyH/KN83oks/f4uYDf1Qd56YBe+LZZ2UL6sfVL98ruKj3X0xnYY//yS39IZbwre7ZHo3U6Ksu/2WfXcMcU6ao5PxImT43sGm0UnrI6UC/JIdMYbEa5PdtUfNLnZeyxGr7eH1+UvX64tm/MOj2BiXX5u22FCxwCc5EdAwvr4BDebsBa5DYona7u2vk+nfLdIGJk/PB5uTUaeh7wTxzexPMLUWI2c/bNpyBSfvqPjc3p8/f7yHrvsfNanJ1w==
 sidebar_class_name: "get api-method"
 info_path: site/docspace/api-backend/usage-api/api
 custom_edit_url: null
@@ -54,7 +54,7 @@ Checks if the current user is authenticated or not.
 <StatusCodes
   id={undefined}
   label={undefined}
-  responses={{"200":{"description":"Boolean value: true if the current user is authenticated","content":{"application/json":{"schema":{"type":"boolean"}}}}}}
+  responses={{"200":{"description":"Boolean value: true if the current user is authenticated","content":{"application/json":{"schema":{"type":"object","properties":{"response":{"type":"boolean"},"count":{"type":"integer","format":"int32"},"links":{"type":"array","items":{"type":"object","properties":{"href":{"type":"string"},"action":{"type":"string"}}}},"status":{"type":"integer","format":"int32"},"statusCode":{"type":"integer","format":"int32"}},"title":"BooleanWrapper"}}}}}}
 >
   
 </StatusCodes>

@@ -5,7 +5,7 @@ description: "Returns the portal logo image URL."
 sidebar_label: "Get a portal logo"
 hide_title: true
 hide_table_of_contents: true
-api: eJyNkk9v2zAMxb+K8c5CnAU7+VZsQzGsh6FZToFRqA5ja7UlTaKzZYa++yDJSZu0BXbxH5F8In+PE1i2HtUWa2JWuvVFWXwyw2B04ecT1ALGkpOsjP66Q4WW+M60BgKOvDXak0c1YbVcxteOfOOUjdmo8N04ln3Rm9YUapAtFZv7Owg0RjNpjgXS2l41Sb786WPVBN90NEhUUwghCHxcfngtvdFy5M449Zd2iFmemtEpPqLaTpC+eYjxhyeKB3AkdxD47RQT6lCLK7V74tFpX3BHhX2r6QUEBuLOzAggYCV3qFBKq8rVYlmekJV9xuPJHcj51M/oelSYHqWnjesDru9fp9yiMXqv2jHThsBBOiUf+0x4Ls4o9nLsGRVeKX3OoQQ6hDjpCcw6Us1Sl3gm8NESKkirvtERAloO6f9lmoCK+o0xT4oScaX3JlUr7mP6jVWxZ3I+t3JYIQhY43mQyddZ9pa4kC8xXw8xPS/I/zkz98/0h0vbS6XjxWNmlW3axuEgsFoskzXzdguk+2uBzniOadPZpBCPf43k4gbVz2bEvyDQkdyRS+4mirhpGrKcXOvHjPNqtaMb5yW6/fIDAhHvpQOZ9fwR1U8hfXypfWlN7iA+g3inYpqyvSGc83Po3Yp5wlN2pFqHEP4Bq6dtow==
+api: eJyNVU2P2zYQ/SvEXPbCrl23J98cJw2SBkgQ72IPCyOgpbHEWCJZcrQbV+B/L4aU5a+kuyfT8/FmOHzz1AOpKsD8EVZIpE0VxEQsbdtaI8JggbUE69Ar0tZ8KGEOFdInW1mQ4DE4awIGmPcwm075p8RQeO04GubwxXpSjWhsZYVuVYXi/usnkFBYQ2iIE5RzjS4S/OR74KweQlFjq/hEe4cwB7v5jgWBBOe5GdK55qGBk8hAXpsKItfocoXBow1hhR4kbK1vFWXTHzOObbTZhZNY5b3agwRN2IaX+6g9bn/agyryIK5cMUYJgRR14ZUt5uClLfFVCVECaWo4aJVqPnjlHPqh9J/T369f696ojmrr9b9YJoSARec17WH+2IMKxTf2f9shG8CjKkHCs9eEzJI3qDx6mD+uJSyc/hv3p5Y3KugiHz8vOqpnDKGcvh1g+DhCfXaYuPa4jmt50eRXpM6bIKhG4X5Gr1uQ0CLVdiArv5aiGuYwUU5PZrfTyYHckyYTOaB/Qh/SNTvfwBz6jQp475sIl/VXKVYU1mx11eW9AAlPymu1aTIfhuQ84a3qGn6YK6S32ZVWIka+6WHeK+Z/hjqf+pGgacBXkPcBxdLanUbBSWhoWC2QYFSbMk8BJWhOK1IKs2x4prFOTeSuqrwzhF7sbedFF9AzsFCmFE6F8Gw9P2faYAbYJMB4pMdroG9ysOg/PtyJO7tDE2/OQDOWHA5/Hbj/8eGOS52z7/8LLs7GJHQQJRL6VhssxWafaHazGNYixdyIGlWZyr/Y0OLLB8HvFI+sP2qJSobLhnKc2Db2WTxrqsVZcZEEQAK7Mz9OvQd1ODMmIjL7iAc5/guFdQcVVWVaLFUKVRQYgiArnLeEBWEpPAbb+QLDuO1zeODfF6Kz0hx2+XjvZFhaY7KUXlyfvW/F4L5m8Vn2cJko4cdvQVdGUefx5S1ZrJaCmbUaU8btOMW5WI7I/7c2wQ/KunCaVx99yMBPSamdDdSqpPoD6nskoU7V6rKl/vhFfJ3ADRck/EET1yhtuHCXJSerXVJXkDC7nSaFGz7nElL9tYTaBuKwftS6yOZ/OvT7LNQHTUtCLGGgPYtkEiNYFAU6SuLXdHneF99yFrVRi9+/u2Oh77i70yfKQjQcGP3gMvtT7HPdyh3s0m79IqPv8/vHOMZn1y8zxsXO0TzVdYzxP0XtHfA=
 sidebar_class_name: "get api-method"
 info_path: site/docspace/api-backend/usage-api/api
 custom_edit_url: null
@@ -54,7 +54,7 @@ Returns the portal logo image URL.
 <StatusCodes
   id={undefined}
   label={undefined}
-  responses={{"200":{"description":"Portal logo image URL","content":{"application/json":{"schema":{}}}},"401":{"description":"Unauthorized"}}}
+  responses={{"200":{"description":"Portal logo image URL","content":{"application/json":{"schema":{"type":"object","properties":{"response":{"type":"string"},"count":{"type":"integer","format":"int32"},"links":{"type":"array","items":{"type":"object","properties":{"href":{"type":"string"},"action":{"type":"string"}}}},"status":{"type":"integer","format":"int32"},"statusCode":{"type":"integer","format":"int32"}},"title":"StringWrapper"}}}},"401":{"description":"Unauthorized"}}}
 >
   
 </StatusCodes>

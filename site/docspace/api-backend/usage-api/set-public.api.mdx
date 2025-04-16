@@ -1,0 +1,71 @@
+---
+id: set-public
+title: "Set public settings"
+description: "Sets the public settings for the room template with the ID specified in the request."
+sidebar_label: "Set public settings"
+hide_title: true
+hide_table_of_contents: true
+api: eJy1VsFu2zgQ/RViLrmosddbLHZ1c+wWSLtAgthGDoFR0NLYYiORLDmK4zX078WQsizb6WYve4kZcubNkPPmjfZAcuMhfYLPqkQvBuLBmMrDMgFj0UlSRt/mkIJHuq9XpcogAYc/avR0Y/IdpHvIjCbUxEtpbamy4DX47o3mPZ8VWElesZ9ymHM4lXMM2lmEFMzqO2YECVjHUUmhZ3uV89/WRmnCDTpIIEefOWU5CKQwL1A4YypBWNlSEorb6TUksDaukhQdfx9BAvgqK1sipH/9+fGPJgEbr3OMsDKmRKkvIswsZmqt0IttgVSgE3QRU3kR8YRxQhu67gckV2PTJCDzXDGmLO9791zL0uNbt2oBPRIpvfHCrN8ITIYNOBwp4mAwO1RqSgaahgM79NZoH191NBzyz2m8u6/QJPBx+Nvl0ULLmgrj1D+YA6N5zGqnaAfp0x6kz77x+bdn5A1wKHNIYOsUIVf4BqVDB+nTMoGxVV9x19+5kZ5LwMu7cU3FiCGkVdctDC87qDuLgYtPy2Z5USMkH17n/NHW5q1ybRUVYft2Knxb3lwoHU0jvflNK6TCMP1tHegpqYAUBtKqweh6OFhzzwwY+oA8sIcm8ehe0PnwSLUrIYX9SnpcuLK5ZFiwFZnRa7WpY9dBAi/SKbkqY9la51iftaxL5vYF0jQeicXD31z75bFaM27DCHVas47/MpTnAnLhUUyMeVYo2Ak1tR0OCWhZBc8+YAKK3bLgwqxqi9zFKYjsRZRPmtCJnamdqD06BhZS58JK77fGMRmCkIRGDYDNkVz/BfoqGov9l8e5mJtn1M3VCWjEStrF54N8fHmcc6hT7v57wPHJM7E25EjoKqUxF6tdINnVuG2qYHMlCpR5CP9uQuP7W8F1ao4906VjZNg4TyjaiXVptpH6J8HFxOTIilmabeRH/zQcnm8GIjL7iB+y+89nxkaKhf5N4QFlLmSWofesVNYZwowwFw69qV2GvtOKFB759x3rqGcHJTjeO2xMjNZxjpxdn0+noj2+ZPGJd3uZJoHXD15ttKTa4ftdMp5NBDNr1rl03dHHOWuOJgEekw/HgfrpMDTi+ONZdRxVYZAwxNqEjFrFH1vFaoHOx1xeRpy+NZ4qGUZwm8gM6Vwfz+/Rm+b/l6a270j4SgNbSqU52ToqWxTYMAIggdH1kGnJIstfHT2Zhe5NlgkUxhM77TuBbXj7R41uF2fLQUjD7Eig7TVW5qCAMIl3/jDn1Ni8rGOpz75mWE+7kXC/mHNzth9BVWgTcHLLqcptbAgTnjV2BO/toZR6U8sN20bI8GFQ87X7FItC2i440cOR3vUTPNXdeJnnoA2/8NjvI3+bprOPR7/06IQpWnO5lk3T/AQv/4Cu
+sidebar_class_name: "put api-method"
+info_path: site/docspace/api-backend/usage-api/api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Set public settings"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"put"}
+  path={"/api/2.0/files/roomtemplate/public"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Sets the public settings for the room template with the ID specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"required":["id"],"type":"object","properties":{"id":{"type":"integer","description":"The room template ID.","format":"int32","example":9846},"public":{"type":"boolean","description":"Specifies whether the room template is public or not.","example":true}},"additionalProperties":false,"description":"The public settings of the room template to set.","title":"SetPublicDto"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"OK"},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

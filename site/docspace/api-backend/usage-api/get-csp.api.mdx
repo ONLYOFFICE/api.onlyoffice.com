@@ -1,11 +1,11 @@
 ---
 id: get-csp
-title: "Gets csp"
-description: "Gets csp"
-sidebar_label: "Gets csp"
+title: "Get CSP settings"
+description: "Returns the CSP (Content Security Policy) settings for the current portal."
+sidebar_label: "Get CSP settings"
 hide_title: true
 hide_table_of_contents: true
-api: eJx9U9GK2zAQ/BUzz8IOefRbSMq1tKXHpUcfQjgUeRPrYluqtA4XjP+9rO3euQnUYGxJs6PR7KgD61NEvsOWTBssX5MsWW8fsVdwnoJm65ovBXKciNfRQyFQ9K6JFJF3WC4W8ikommC9gJHjxxkKxjVMDcuq9r6yZqDKXqNAOkRTUq3lj6+ekMMdXskwFHyQjdmOGxSu1raJM6AOQV+hYJnq+XzkYJsTenWjZjMxKDRtVelDRcg5tKRAb7r2MtwhupoSpjfGvlcoSRcU7rlvqT+PuP8wz4j7XkEXhZVaXT3OTnnUVSQFtjyUrLbr9Bcd0pW38n53BVUxfZps37BL19Fv2KGX51bTA3FMzNCpmrh0U+/EWM0lcmTa22yZLrI4dTwb0ZHChYJkoUMbKuToDjrSc6j6u4NvB2xiXHO0p3ZMCRQuOlixYWjLVDzG46jbipHjjmkzLiXPT9/kPHvRMcraSkJGKh3Ni265fDnTdZ4Eb7+SRKHR9TCewxSs8BvnzpYG821zdEP1X5+9Fc0U4ijlspTweBe51kNGJ9qZo/9o7z4yPsdM4qTnma+0bYS1HY0YW7AT5VBYpgt8nFfuTPRy8UoXWVDdewN6mf7dUrgi3+0/jJbRLK+7DoNDWBlDnoeOVO1o1c0VFKff8/Hw6Sf6/g8g22DM
+api: eJytVk1v4zYQ/SvEXNICahy4N99cZ7vYbYEE6wQ5GMGCocYW1xLJDkdJXEP/vRhSdmR7d+NDT5LI4ZvP96gtsF5FmCxgjqYlyxs1UrP5LTwW4AOSZuvdpxImsEKexQAFEMbgXcQIky2Mr67kUWI0ZIMYwwRu1lCA8Y7RsezqEGprEtToWxSTLURTYaPljTcBYQL+6RsahgICiWO22cHO2/uWpW+0dXFgqIn0BgqwjM1wPTJZt4KuOIr7rkJV28jKL6UGqke8hAJcW9f6qUaYMLVYAL7qJsjnAqJvUDG+Mjx2BVSoS6RTZ9/zJT6y/U9dDDx0XQG6LK2A6Pp2kP9S1xF/5OSXWW6G2jf51tfWbH5VQZNukJFSlmw5OZzFcM1eCmR8m3vYZ2Md4woJClh6ajTnpd/HYltbtz6n/D/oX0W4/G6TtMnpnGx1Uo7Imtt4ZojZeOZLPOtAd1CSB9IhICW/J7PzBbklFxW/W/KIzNatolp6SuamJRLL4Il1LX1okCvfk07qpLmCCYx0sKPx5dUo9pAjkwgZkZ6RhMRbaKmGCWyfdMR7qruTsZsnW2W8W9pVm+kNBTxrsjJ7qY794czrpW5rqcgJ0nXeUvdf/paKPEocOay5UDtD6Wi+6parr2vcDCcj2L9wcwJ5H1HNvF9bVHIIHfeqIezQTTo5BCzAyjGTjkh7/9DRmoGfijmcePngGEltfEuqjUgCrLQrVdAxvngqpaIpA5hIKaxJyKjpgNY/gb7Ixmr7+eFO3fk1uu7iADRjFf3Ln7uh+/xwJ66mqTjnOZwelEnZqEohc2Mdluppk8brQow82X+TzUWvOOcENL39pKRPXQE3AjIeklinheOAsp1a1v5FvViu1IFzlZhXgGzn+Rju7mh5sJgGUaaPpZD7r2h82F0Qukz806XSxmCMir0K5BkNY6kIo2/JYIQCXsiyBP8gz3esM8lvAqbr7y3vtDDzzmUNO0pfdq9Vv306xQen+2S6Al5/i3blNLeE77NkOp8pmaz5/sieHUOcI3J08r30Cb6XtGmwQn2kmIGfk0QGH7nRSW571I/ISdJ2wnUc0fbtrv9/ZbCvg9x8o1Br6yS+NitT1sSFFAkKGF9ewZsAyd9HDPILU/nIYrXdK2Iny/+0SBuYLB7flE++Btf3YgtJsmBqDAZOElm3uStHPzMifXvB/vjhDrruP8ETM+A=
 sidebar_class_name: "get api-method"
 info_path: site/docspace/api-backend/usage-api/api
 custom_edit_url: null
@@ -22,7 +22,7 @@ import Heading from "@theme/Heading";
 <Heading
   as={"h1"}
   className={"openapi__heading"}
-  children={"Gets csp"}
+  children={"Get CSP settings"}
 >
 </Heading>
 
@@ -36,7 +36,7 @@ import Heading from "@theme/Heading";
 
 
 
-Gets csp
+Returns the CSP (Content Security Policy) settings for the current portal.
 
 <ParamsDetails
   parameters={undefined}
@@ -54,7 +54,7 @@ Gets csp
 <StatusCodes
   id={undefined}
   label={undefined}
-  responses={{"200":{"description":"Ok","content":{"application/json":{"schema":{"type":"object","properties":{"domains":{"type":"array","items":{"type":"string"},"description":"Domains","nullable":true,"example":["some text"]},"header":{"type":"string","description":"Header","nullable":true,"example":"some text"}},"additionalProperties":false,"title":"ASC.Web.Api.ApiModels.ResponseDto.CspDto"}}}}}}
+  responses={{"200":{"description":"Ok","content":{"application/json":{"schema":{"type":"object","properties":{"response":{"type":"object","properties":{"domains":{"type":"array","items":{"type":"string"},"description":"The list of CSP domains.","nullable":true,"example":["some text"]},"header":{"type":"string","description":"The CSP header.","nullable":true,"example":"some text"}},"additionalProperties":false,"description":"The CSP (Content Security Policy) parameters.","title":"CspDto"},"count":{"type":"integer","format":"int32"},"links":{"type":"array","items":{"type":"object","properties":{"href":{"type":"string"},"action":{"type":"string"}}}},"status":{"type":"integer","format":"int32"},"statusCode":{"type":"integer","format":"int32"}},"title":"CspWrapper"}}}}}}
 >
   
 </StatusCodes>

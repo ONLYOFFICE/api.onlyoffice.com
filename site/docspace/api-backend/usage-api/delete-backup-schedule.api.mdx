@@ -5,7 +5,7 @@ description: "Deletes the backup schedule of the current portal."
 sidebar_label: "Delete the backup schedule"
 hide_title: true
 hide_table_of_contents: true
-api: eJydk09vGjEQxb+K9c5WoKinvSVKDlVzasqhQqvIeAfWjbFd/6GlK3/3yjaBhCSXXmC9M/Nm/H6zE6LYBnQr3Aj5lBx6DuvIi6is+TKgw0CaIrXogxxpSJrA4Sk4awIFdBMW83n5GyhIr1wpRYcbazUJw/ZCJ+pY9ImY2rA4Ejt1YCqwkKSkEDZJg0NaE8nEoiac00rWtNnPUCQnBDnSTpSneHCEDuvWBDnnzPF5/untHEsjUhytV39pQE1avE36YZNnziupzJY5LQwbLAVmbGQhOWd9ZHFUgdlWUJoFksmreEC3miCCfCxtHp+ovIAnMYDjt1eR0OeeX/S7ra6G6sa6esvC0Vxmm0kyeU8mstJc6Ctw7CiO9swEHE7EER1mwqnZ4mo+a1KzFm+HcGYWyO/Jhzpw8hodprUItPQ643LAh5rLpDUbtU2NFjj2wiux1g37sbi5uRFJR3R4o3TbQmz57b5g6s/OlXXaNanX/p3wCqe+0gEcRuzq+WUahyr60tonRRWJMhtbq1XUJf3aqTIz+dBG2S/KAjgb4k7UfTrKNhrvwbi8zXTe0P9jeLxYpD9x5rRQpkyUmomN5qrcGhyLqzk4mnAd4x2mPcdoQyxF04llLq9/JfJlE/szs3LKHCOJgXxdgmo2rqUkFytcnZrrF19egXZavtu7+7vvd+AoIF6zalSOD6XBc8gcXsq/htiGKL+Zf1AxTW0Rcj7lt9CHFcdLPmcXm/uc8z9BjbJu
+api: eJydVlFv4zYM/isCX/riNV22J7+lTQ+42wE3XFsUQxEcFJmJdbElTaLaZoH/+0DJTuKmd+32FEckP5ISv0/aAcl1gPIBLqXaRAeLAqxDL0lb87GCEipskDBbb1SNVWwQCnDSyxYJPQfvwMgWoYR5bB0UoA2U8HdEv4UCKgzKa8eAUMKNQ6VXGoPQKyFFFVsnnnTTiCUK5VESVsJ6YSydQwFB1dhKKHdAW8cJltY2KA0UgM+ydQ1CST5i1y0K8BicNQED+08vLvhnnPwyR4tH2UQsBUdyGVSj2DctdBAhKoUhrGIDBShrCA0xmnSu0Sq5Tb4HhtydlmiX31ERb5FnUNK5oKG6V5rpOEnMKXqTNoRr9FDAyvpWUl76bcq+jTabcOQrvZe80ZqwDW8XUntcHXkF8tqsGVeqvE0npq7rCggkKYZ3lpidr2yF7wroCiBNfJjDEd176Rz6PvfvF7+eHuadkZFq6/U/WEFymp46/WWjF85rpc1auEYaUVkMPF4iROesJ0G1DsLmgNQoqug1bdNcy6C+cZpvG+QF8CgrKODJa0LmyiVKjx7Kh0UBM6f/wO3xyqUMWuXPL7NI9ZQhpNPnPQx/7qG+OEyMe1jwMI/bmCcShjSpy0RFEXouCpsHWEXv0ZDgnmTD5GmRanugcCIt1VDCRDo9mZ5fTDLUJNvzn3CgeED/OPA7+gZK2C1lwDvfdKe0Tr5CWbPS65iZBAU8Sq/lssmD1wfnQ1rJ2PAEnCDNs0ncff3Mp784HAirT5uhxsdyYEI6gRPIu4DiytqNRsFBaKgnMRSDcI0AewFTKYRHqz/HfZ6ayJ1kuTaEXmx54GJAz8BCmko4GcKT9dUgZ4n5CbA7zM97oM+ys9h9ur8Vt3aDpjsbgWasov/4MJDs0/0tpxqP588TzkbbxJJYsda32mAllts0cGeznn7J50zUKKuU/s2CZn9+FHxO3YEWB9GSaeFlQdlPrBr7JJ401WKUXCSlKYDNeT6OrYMMjRbTIPL0EW/k/l9Q1g16LZk7X1FWQqbrQJAVzltCxZeUx2CjVxj2clDCPf++4Z0VbSD7oe+0cGWNyZr9on22zkVvPp3iUXTfTFfA8y9Br42k6PFtlsxurgRP1s0+ZM+OY5wX5Oj4/8om+F7CZ04z9dGHDPyYrgRnA7UyXS/DYyHJzmua9rK23eES/n9S2HdO+EwT10id7tyYtSiLYtJlKGB6fsEDmx9DBbwqjYsCahuIg3Z7Sex4Ob95WDArHVj4KihXsgn4k4b+24vo1U6SCg6Pr/S4SQOwOAhwulYK6DnKBeaYmVLo6Cjq5InDKPubZH79+fr2mm+uyJt2PFJZOPsPTjCYzPYYfqyzuYhN0oIfROx2eV67bu+fTT+M2AtR9uYtWnRd9y+Q/b2G
 sidebar_class_name: "delete api-method"
 info_path: site/docspace/api-backend/usage-api/api
 custom_edit_url: null
@@ -38,8 +38,16 @@ import Heading from "@theme/Heading";
 
 Deletes the backup schedule of the current portal.
 
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
 <ParamsDetails
-  parameters={undefined}
+  parameters={[{"name":"Dump","in":"query","description":"Specifies if a dump will be created or not.","schema":{"type":"boolean","example":true}}]}
 >
   
 </ParamsDetails>
@@ -54,7 +62,7 @@ Deletes the backup schedule of the current portal.
 <StatusCodes
   id={undefined}
   label={undefined}
-  responses={{"200":{"description":"Boolean value: true if the operation is successful","content":{"application/json":{"schema":{"type":"boolean"}}}},"401":{"description":"Unauthorized"},"402":{"description":"Your pricing plan does not support this option"}}}
+  responses={{"200":{"description":"Boolean value: true if the operation is successful","content":{"application/json":{"schema":{"type":"object","properties":{"response":{"type":"boolean"},"count":{"type":"integer","format":"int32"},"links":{"type":"array","items":{"type":"object","properties":{"href":{"type":"string"},"action":{"type":"string"}}}},"status":{"type":"integer","format":"int32"},"statusCode":{"type":"integer","format":"int32"}},"title":"BooleanWrapper"}}}},"401":{"description":"Unauthorized"},"402":{"description":"Your pricing plan does not support this option"}}}
 >
   
 </StatusCodes>

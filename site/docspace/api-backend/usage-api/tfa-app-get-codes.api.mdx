@@ -5,7 +5,7 @@ description: "Returns the two-factor authentication application codes."
 sidebar_label: "Get the TFA codes"
 hide_title: true
 hide_table_of_contents: true
-api: eJylk8tu2zAQRX9FuGs2co12o53Rh1E0qzxWgREw8thiI5MsOXLqCvz3Yigp8QNZdSOJ4sydmXvIHqy3EdUDbonZ2G0syuLu+6KI4xIrBecpaDbO/lijAm/0wvsl8Re3pgiFQNE7Gymi6jGfzeS1plgH4yUJFa5N5MJtsrD2vjV1livqUaF2lsmyJB5tl7+iZPeIdUM7japPKSWFT7OPlyXure64ccH8pTVy0OfLoPP605CFDlRYx4Xea9Pqp5YghSLVXTB8QPXQQ8f6UUo8PpP8QCC9hsJLMExYpZU6q3VD3AUbC26o4Bf3YaNrdqEQCbI8dXDhxhUUdsSNE6u3xFDwmhtUKLU35fxqVk5dl7zR2vvJxEhhTyHmZrvQokL/pCPdhzbhvLnbHFvUzm7MthvgQmGvg5HpM8kxeXBxo7uWUeFC6euwVdzfXCMlsWFy7VaoDVKn3vXggydU0N78pAMUrN7l9XGYghH92rlnM+AwduNytuFWwhfeSM8U4tDKfi7gvYu80/ncjLJL4kxB6E9mnQzRvx3A/8E2TsX0h0vfamOlnW5wcGD4ICNDYX41y8DGK6ZwTHKl0LjIEt2/Ekzy+3dHQc7e6o2UrJJCQ3pNIaPPFmNR1+Q5I227weuzeyWoXg/a8tsdFGTIUzwDiPFD1KctezjWPuU2dCDPpN7J6PuBfUqv8cPWuxnjhFO0mLtKKf0DxT+gxA==
+api: eJylVsFu2zgQ/RViLrmwsdfdveimpm3QboEs6gQ5BEZBSyOLtUxyyVFcr6F/L4aUbNlGNwF6EsWZeTPkzHvSHkitAmRPMEcibVZBTMT9x1yE/hUWEqxDr0hb86mEDKhSuXO3SDe2xAASPAZnTcAA2R5m0yk/SgyF146DIIMvOpCwVQRWzjW6iHCi6BEKawgNceDIPPkeOHoPoahxo3hFO4eQgV1+x4JAgvNcG+mUeyhk5Km8VzuQoAk34RKh6zh5m1L3Jm0IV+hBQmX9RlHaejuDTkKjzTq8Hv68wNpjNfIK5LVZMa4q0k1dmDquMJCiNryyxOTMvXlVQCeBNDXsdBeLzvlIj145h77P/+f0j8uePhjVUm29/g9LiE5/XTqdN3yYKqE8CmNJqGelG7VsMFYSsGi9ph1kT3tQofjGKb6tkTfAoypBwtZrQp7Kd6g8esieFhJyp//G3XjnnQq6SMu7vKV6xhDK6esehpcHqDuHcbafFt1Cnh3hK1LrTRBUo6CtfVOpgqwXXBkaGg52MdXXIGGDVFumzArjLCiqIYOJcnoyu55OhsuYUKWUcwMZAvpn9CHeQesbyGC/VAEffNPBeXHz6CsKayq9ahNJQcKz8povNc5MH5yaU6m24e5fIL1PJvHw9Qt3fXFsxpzZl6BOW3JkQbz9C8iHgOLG2rXGs9sCCUZtYuQYUILmsCKG8Ej1PTzkqYncRZYPhtCLnW29aAN6BhbKlMKpELbWc6+jfjDAMgJ2x9l5DfRVchb7z4/34t6u0XRXJ6AJS/aLjwPBPj/ec6rT0fz/hPnpUOkgSiT0G22wFMtdnMGrvKdd9LkSNaoypn+xoPyfT4L71B0pcRQsFTfOC0p+omrsVmw11eIkuYgqI4HNaT7G1kGCTjbjIPL0EV/k4S0U1g0arsrIOlUKVRQYgiArnLeEBWEpPAbb+iIyJfE3g0d+vuCdlGwg+vHccePGGpP0+uz4bH0vevPlFJ9E94fpJPx4E/TKKGo9vsySfH4jeLLmh5ADO8Y4Z+To+L2yEb6X79xppj76kICf4+fA2UAbFT8tPeotUhwk1uZBc05K2h+/x7+jfv2xCX/QxDVKGy6nTUKUpDAKMkiYXU+j7vV/HBLGgriQUNtA7L0/CGHH2/+26HdJ4gfBixIuoecEK2hUKsiLAh1FZWza1Iyz3wxWvINe3364509Ey0WO+5dUql8w+mAyuzH2qailCtaReL+I2O/TcHTdwT+ZfhlxYH3y5stddF33E5s4Wzc=
 sidebar_class_name: "get api-method"
 info_path: site/docspace/api-backend/usage-api/api
 custom_edit_url: null
@@ -54,7 +54,7 @@ Returns the two-factor authentication application codes.
 <StatusCodes
   id={undefined}
   label={undefined}
-  responses={{"200":{"description":"List of TFA application codes","content":{"application/json":{"schema":{}}}},"401":{"description":"Unauthorized"},"405":{"description":"TFA application settings are not available"}}}
+  responses={{"200":{"description":"List of TFA application codes","content":{"application/json":{"schema":{"type":"object","properties":{"response":{"type":"array","items":{"type":"object"}},"count":{"type":"integer","format":"int32"},"links":{"type":"array","items":{"type":"object","properties":{"href":{"type":"string"},"action":{"type":"string"}}}},"status":{"type":"integer","format":"int32"},"statusCode":{"type":"integer","format":"int32"}},"title":"ObjectArrayWrapper"}}}},"401":{"description":"Unauthorized"},"405":{"description":"TFA application settings are not available"}}}
 >
   
 </StatusCodes>

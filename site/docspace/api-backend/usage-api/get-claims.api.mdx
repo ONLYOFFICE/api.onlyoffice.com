@@ -1,11 +1,11 @@
 ---
 id: get-claims
-title: "Gets claims"
-description: "Gets claims"
-sidebar_label: "Gets claims"
+title: "Returns the user claims."
+description: "Returns the user claims."
+sidebar_label: "Returns the user claims."
 hide_title: true
 hide_table_of_contents: true
-api: eJx1ksFu2zAQRH/FmDMRuUZPugVtERTtIWjqUyAEDLW2WMskS1JuXYL/XiwpO7GDXCSRnB3tvmFClNuA9hH3ZN1Ii2Zx7+1GjxTQCVhHXkZtzdceLbYUP41S7wMEPAVnTaCANmG1XPKrp6C8dqxHi7NUWRPJRFZI50atimPzK7AsIaiB9hJtyjlngY/LD2+91kZOcbBe/6MerAqkJq/jEe1jggzqic+fdsQb8CR7CPzxOhK63IkrtzuKYaFO7e0pDnYeDwJOxgEtGul0s7pZNq5waaLdkem13BobolZcGMgfyIfSwuRHtEjPMtDajxnXv3wo2oWyZqO3U2UKgYP0Wj6PleJcXKffyGmMaPHG6XM9Wqx/fEfOPNyJxQODrFaXRBLi0RFaSKe/0RECRu7L+rVMQLO/snanqUDWZmNLtY4jy2+d5p7Jh9rKYYUs4GyIe1minG0v+V60n15uw5VsbjHS39i4UWrD3lPFUTN55P4hsLpZck4lFy68TqYTGGyIXJDOiWTe/j2R5xvSvZDnVRYYSPbkS5QFGW6VIhdLRONU2V1dXUZ/vjt3X35CgFle4q5g5w92Px2Z42vvyxxqB/zM4p2KlGqWOZ/19ejdinnCk5r5djnn/4jxW8s=
+api: eJyNVcFu2zgQ/RViLrlwY693T7q5brtod4EETYIcAqOgqbHFWia55CipV9C/L4aUZdlGk5xMc968ITlvnlogtYlQPMEtOl+jmIjb4NamxghLCc5jUGSc/VJCARukRa3MLoKEgNE7GzFC0cJsOuWfEqMOxjMeChig2llCS4xQ3tdGJ8bJj8iwFqKucKd4RXuPUIBb/UBNIMEHrk8mFzlUvER2XKPJFfqIsYQbDCBh7cJOUd76Y8bY2thtHGFVCGoPEgzhLr59jirgeoSKFIzdMK/S+eYXoa7rJERS1MR3HjGDF67EdyV0EshQzaCbdOjHoLzH0Jf+c/r7ZXserGqocsH8h2ViiKibYGgPxVMLKurvHP++Rd6AgKoECS/BELIwPqAKGKB4WkqYe/M37sc7H1Q0Oi9v5g1VM6ZQ3lz3NLwcqG48Jnk9LbulPDvkN6Qm2CioQtFEDEInUV2DhB1S5XpVco8UVVDARHkzmV1PJz7JeUJui7Y0amNdJKNZjhHDM4aYrtmEGgpoVyriQ6g7OK9/l7BCO7s2myaPAkh4VsGoVZ310CfnF16rpubGXDB9zCHx8O0f7sry+N53rP9MdfrqR4GmB76gfIgoFs5tDQpOQkv9aIEEq3Ypc0wowXCaTimssr5NQ52KyF9U+WQJg9i7JqQOMLFQthRexfjiArczTTATrBJhd5THe6ivMli0Xx/vxT33q7s6Ic1csl98Pmj/6+M9lzpV3+sF5yfPJEwUJRKGnbFYitU+yexq3o9FwlyJClWZyr95oPntF8F96o6qP3qJShvnB8o4sa7di3gxVImT4iIZgAQOZ32Mowd3ONlMQmT1JeEP/6J2/uCiqkyDpUqhtMYYBTnhgyPUhKUIGF0TNMZh2gt45N830NlpDrN8vHfaWDhrs5WeXZ+jH0UfvlTxSXZ/mU7Cz9+i2VhFTcC3p2R+txCsrLshZZiOMc/ZcHT8f+0Sfe+sc2949DHETPycnNq7SDuVXL9nfcWzTk7WHj+Mr+X0tyP8SRNfK2O5apP9JpteslaQMLueshEm4zsoYGx9SwmVi8QJ7WB5HW//22DYZ78+WFvyYwm9+tkrkyfBXGv0lDywbvKzn33S2dsGc/7r0z37fcPnHHcq+1G/YPZDyO7H3Kf2lU+wTSP2i4y2zTLougGfQ7/MGOY7o/l9l13X/Q9lRBpC
 sidebar_class_name: "get api-method"
 info_path: site/docspace/api-backend/usage-api/api
 custom_edit_url: null
@@ -22,7 +22,7 @@ import Heading from "@theme/Heading";
 <Heading
   as={"h1"}
   className={"openapi__heading"}
-  children={"Gets claims"}
+  children={"Returns the user claims."}
 >
 </Heading>
 
@@ -36,7 +36,7 @@ import Heading from "@theme/Heading";
 
 
 
-Gets claims
+Returns the user claims.
 
 <ParamsDetails
   parameters={undefined}
@@ -54,7 +54,7 @@ Gets claims
 <StatusCodes
   id={undefined}
   label={undefined}
-  responses={{"200":{"description":"Claims","content":{"application/json":{"schema":{}}}},"401":{"description":"Unauthorized"}}}
+  responses={{"200":{"description":"Claims","content":{"application/json":{"schema":{"type":"object","properties":{"response":{"type":"object"},"count":{"type":"integer","format":"int32"},"links":{"type":"array","items":{"type":"object","properties":{"href":{"type":"string"},"action":{"type":"string"}}}},"status":{"type":"integer","format":"int32"},"statusCode":{"type":"integer","format":"int32"}},"title":"ObjectWrapper"}}}},"401":{"description":"Unauthorized"}}}
 >
   
 </StatusCodes>

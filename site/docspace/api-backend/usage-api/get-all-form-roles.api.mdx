@@ -1,0 +1,71 @@
+---
+id: get-all-form-roles
+title: "Get form roles"
+description: "Returns all roles for the specified form."
+sidebar_label: "Get form roles"
+hide_title: true
+hide_table_of_contents: true
+api: eJytV21v2zYQ/ivEfcmGybHiuEWqb27SFOmGtsgLgqEwClo6WWwkUiWpOJ6h/z4cKcuW5SbOsHyIZPLuuRfePUetwPK5gegbXIocDRsy94RpAKpEza1Q8iqBCOZoJ3l+qXRxrUgggJJrXqBFTeorkLxAiCAVOV4lEICQEEHJbQYBJGhiLUoCgwhuM2Qkxq4umEqZzZBp/FmhsccQAL0KjQlEVlcYgIkzLDhEK7DLkiwIaXGOGgJIlS649UunIwgAn3hR5gjRu7Px27qeEpoplTRoCGAUhvToenNTxTEak1Z5vmQarRb4iAnjec40RcpSpZ2PZA0CiJW0KC0B8bLMRexyNPxhCG3Vd1fNfmBsKV+aMmqF92Xt2JYk15ovKXMWC3MAglIFHc2exPTzTcLs6uL45awFQGF/dqfZQhurhZz/AjlHRodP2LLKcz4jLH94LTQYVSCz+GShsXCucqVfYSIm+VfYqAzqTnqeMUCyu9mpKpFsJwc4xxM8CU8Hs5i/GbxL+clgxs/iwXgUvjmbjfksHZ2RYUO1LGM8+GRyZGud58/nZHQ6JgPVrBDW4nZwM6Vy5LJn4abEWKQCDRNNp5G5BTesRWFKM6lc77WWKLO1owCJycQelsWEW2RcJsyKAtkiQ9m16NE6IZLKgMQ7mR6F4dkgHA9OwtvwbXQaRmF4HPq/P8JxFIawzoIxQskLbg+s1Zc8bHPy/zhZB8CTRJADPP+61bwpzw3upUWlC+cOOWCFdZbWpOsAY1VJewgb1gHkQj6Y/04wmca0n1cKKvYu97Zq8tBYbitzoIte+Fwl+9tlV6HuZ2VCQd1rXpaoGw/G4Umf5+8kr2ymtPgHE3BCp32hv1XFEkXtwDL+iAylquYZK1E3tWaYVexR4KIdCX5KONcMxpUWdunmITfxd7L4/QFpATRy4pOFFhZpvL5HrlFD9G0awKQUf+Jye+U9NyL2r18mlc1GBMFLcdzA0GsL9aVEN6S/TWnkdSO6RltpafbMM9NQQ+LCoIIr0GaqGfZuwNsMIhjyUgxHx+GQZrZx/4crP+brIanq5kJgUD+ubwOVziGC1YwbvNN53eclJ8tiJVMxr/w9AwJ45FoQt7vyaZT9KaW8yqkQekgXfovdXf9Fxz/dHMMNjWIP1T2MTUO4vPcg7wyyc6UeBDJSQmmbKU/Tx19zOoDNZSd2KlRbzem1djJry56VD9KiZktVaTd/CNhxU8mNWShNp+wuE47eHWC9qZpDoI+8MFt9ur9lt+oBZX3UAfVYQfNyue61T/e3ZKpblM8bnHTSxIRhCd0MCyExYbOlq7ejSdN/TuaIZcgTZ/5FhyZfrxidU71phg13cbew65CXY2muFmwhbMY6xpkjnABo29fH9u6ajTqLrhCp+iwlsv1lYlWuL3Q8cf3GE8bdlZKootTKYkxTVqNRlY5dp/jOjeCeni9Ie0pbt/gmbrdwrqT01L0TPu1esGa7X8Ud7SaYOoCngRFzyW2l8eUumdycM6qsm1al7Y5tnJ3mqOl3qhx8w+STUlDrozYe+NFNhlIZW3A3ZRrUj2i3GXfHn9XmZv4q0muCpGvjsMy5kO7y6GnHM6AjXghgdBxSzQhvnJ4QQNR+8GyocBpApowlzVVLgTUt/6xQLz2tr6nO0WUiDL0n+68G26H9dt18H/3Onv+O2hvX+kTl0pFtXqEvY0eL62+3eloH0HQnOec3J3GMpd1S6339EPe2I+Tjh1saUxUlcLuSPF82L4S+16UdevUePDgK+IXGauXLtK5beb/1S42Wf7w0JWha1/W//Z8VyA==
+sidebar_class_name: "get api-method"
+info_path: site/docspace/api-backend/usage-api/api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get form roles"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/files/file/{fileId}/formroles"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns all roles for the specified form.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"fileId","in":"path","description":"The file ID of the request.","required":true,"schema":{"type":"integer","format":"int32","example":9846}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Successfully retrieved all roles for the form","content":{"application/json":{"schema":{"type":"object","properties":{"response":{"type":"array","items":{"type":"object","properties":{"roomId":{"type":"integer","description":"The room ID.","format":"int32","example":9846},"roleName":{"type":"string","description":"The role name.","nullable":true,"example":"some text"},"roleColor":{"type":"string","description":"The role color.","nullable":true,"example":"some text"},"userId":{"type":"string","description":"The user ID.","format":"uuid","example":"aae1e103-bca5-9fa1-ba8c-42058b4abf28"},"sequence":{"type":"integer","description":"The role sequence.","format":"int32","example":1234},"submitted":{"type":"boolean","description":"Specifies if the role was submitted or not.","example":true},"openedAt":{"type":"string","description":"The date and time when the role was opened.","format":"date-time","example":"2008-04-10T06:30:00.0000000+04:00"},"submissionDate":{"type":"string","description":"The date and time when the role was submitted.","format":"date-time","example":"2008-04-10T06:30:00.0000000+04:00"}},"additionalProperties":false,"description":"The form role.","title":"FormRole"}},"count":{"type":"integer","format":"int32"},"links":{"type":"array","items":{"type":"object","properties":{"href":{"type":"string"},"action":{"type":"string"}}}},"status":{"type":"integer","format":"int32"},"statusCode":{"type":"integer","format":"int32"}},"title":"FormRoleArrayWrapper"}}}},"401":{"description":"Unauthorized"},"403":{"description":"You do not have enough permissions to view the form roles"}}}
+>
+  
+</StatusCodes>
+
+
+      

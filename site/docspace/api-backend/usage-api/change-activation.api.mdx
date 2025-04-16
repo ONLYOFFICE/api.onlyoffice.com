@@ -1,0 +1,71 @@
+---
+id: change-activation
+title: "Change client activation status"
+description: "Activates or deactivates an OAuth2 client. When deactivated, the client cannot request new access tokens, but existing tokens will remain valid until they expire."
+sidebar_label: "Change client activation status"
+hide_title: true
+hide_table_of_contents: true
+api: eJzdV1tv2zYU/isEX7IBcpw4abLqzXUyLF2HFomLPARGcUwdW2wkUiWpOJ6h/z4ckrYlO2m69aXrk2XyXL9z5Yo7mFue3vFRIVE59hcomGOJyvFJwjO0wsjKSa14yofCyQdwaJk2LEPY/AXF3g9rlw+Y8FIO2W2OqkWSJczlGG+ZAKW0Ywa/1GgdU7hgIARay5y+R2UTNq0dw0dpnVTzeMgWsiiYwRKkYg9QyIzVysmCBC8ZPlbS4CFPuK7QABl8lfGUixzUHKPh5EXCKzBQokNDbq+4ghKJ0Jt2lfGES/K1ApfzXQCuLpietT1xmgUNDDYq2EwbnnDyThrMeOpMjQm3IscSeLripVTvUM1dztPjhLtlRfqtM1LNeZNwfISyKujsTJyL2fH5tHc8zU56p+fZq97rU3HWm+IgO3l1foTHZ7/xZhJ0oXVvdLYkBUIrRwFMVxyqqpDC29X/bMmJVcuSrY133DpwtaWgR4v09DMKR4AZwtRJtJ470KWrNd1U6wJB7YE1zjuoBL4ufrzlLaHUNLtCYla25ES8o8s84U46j9bIXwSGbcCvI11Dsrsx8Qe20soGzwZHR/TzkgHREVv7lJ3VRbGMRlHyfDP2XZQbb9/pUxZcqZDtMeWuLijBSnBUhHtm/XcLduNsECLHTobuxejSGG3YGkpG+kEqqlxgeV2C6hmEDKYFUpkWoILBMROQuFth9NKuo7ANLidP4WLr2UwKj0qFppTWSq1sqyjFbvB+VnhOn01carQzXavvyM0f2vXB633Xx1qzEtRy3SQs6zEDDlkhS0mDRSBm31OtPzIir57uIQ6NgoJZNA9ogiCmhaiN+TmBaBJuUdRGuqUf8489K+cKXG2Qp3cTmpolulxnYdaL3G8GNJN5HyrZHxwe9UP7sP3Vejlo+p1WEsAMa0RtCp7y1RQsfjRFszcNbwLwQquZnNdmLeIBjCQnPXqROYRvBnXheMr3JF2EK/bx+h15Otk6ekNRCqLAik9Qu/zTPS5b4YBK/onLPZEfLbKR1vcSGTGhcjEBeLLejzoC444kPAvtLG/AStHSkztX7Wm5pCRkS10bVltKxxIZqIxVYO1CG0pDn2d+qfACSTKCQfNtog8CMVu9vR2zMW2NzUFHaJCVxI/f/RjlKX97OyZVQw/OtykcdmBi0rKMVspSKszYdOmT9ICItJF/e5oDliNkXv2LBg0/XDGKU5PwsFe3Kw/8wa5Bcf+eFXrBFtLlrKOcjXSGPOF0HfKjfesvdw99IlL2+fV7888KXW1qnYrnGiHbru+sMtqhcJhRbevaCKSdZGGkI+Nv6fcF6lC87yv0G/zWb38w0kqFxrPjPt1esHi9n8Ud7uhMk3S7wktVMrwZMcqsmw3LpjracnaKo0k4ddHr7Yp+uV55t8t0XEelmmlvR2xrw0pSj0BjgwUPAzK60taV4LtsVD96Zt3ZLoUdT1ovhP/Hmy7GxeGj61cFSEUw1KFThqZ9R0HjCR8cHtE0C42bJzxtvetavXuS8FxbR3yrTc9u6PhLjYYmxmTbm31/z6Sl74ynMygsfgXRX67jK+NX9m/ei0/6uE5ItfSzoqgxVKHv6ts3azNpEh7bCxkbrkfBpN6YhGzZ9+Z7k6w5hkJg5b5K256bH4bj0R/UveK7s/R9hBtY0PsXFsFW7TEKLYPOVrwANa9hTrRBKBUJlWy3BsOkiR/k1pNodEsv+HHve+czDKtVqO+m2dCHq2c5No07UFNoJk3T/AN/ewj1
+sidebar_class_name: "patch api-method"
+info_path: site/docspace/api-backend/usage-api/api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Change client activation status"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"patch"}
+  path={"/api/2.0/clients/{clientId}/activation"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Activates or deactivates an OAuth2 client. When deactivated, the client cannot request new access tokens, but existing tokens will remain valid until they expire.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"clientId","in":"path","description":"ID of the client to change activation for","required":true,"schema":{"minLength":1,"type":"string"},"example":"6c7cf17b-1bd3-47d5-94c6-be2d3570e168"}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"required":["status"],"type":"object","properties":{"status":{"type":"boolean","description":"The activation status of the client","example":true}},"description":"Client activation change request","title":"ChangeClientActivationRequest"}}},"required":true}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Client activation status successfully changed","content":{"application/json":{"schema":{"type":"object"}}}},"400":{"description":"Invalid client ID format or activation status","content":{"application/json":{"schema":{"type":"object","properties":{"reason":{"type":"string"}},"description":"Error response containing a human-readable explanation of the error","title":"ErrorResponse"}}}},"403":{"description":"Insufficient permissions to change client activation","content":{"application/json":{"schema":{"type":"object","properties":{"reason":{"type":"string"}},"description":"Error response containing a human-readable explanation of the error","title":"ErrorResponse"}}}},"404":{"description":"Client not found","content":{"application/json":{"schema":{"type":"object","properties":{"reason":{"type":"string"}},"description":"Error response containing a human-readable explanation of the error","title":"ErrorResponse"}}}},"429":{"description":"Too many requests - rate limit exceeded","content":{"application/json":{"schema":{"type":"object","properties":{"reason":{"type":"string"}},"description":"Error response containing a human-readable explanation of the error","title":"ErrorResponse"}}}},"500":{"description":"Internal server error occurred","content":{"application/json":{"schema":{"type":"object","properties":{"reason":{"type":"string"}},"description":"Error response containing a human-readable explanation of the error","title":"ErrorResponse"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

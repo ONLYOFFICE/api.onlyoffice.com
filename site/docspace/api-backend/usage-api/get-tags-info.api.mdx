@@ -5,7 +5,7 @@ description: "Returns a list of custom tags."
 sidebar_label: "Get tags"
 hide_title: true
 hide_table_of_contents: true
-api: eJyFksFu2zAQRH9FmDNhuUZPugVoGwTNyYlPhhAw8spiI4ksuXLrCvz3YkXZiR0EuUiiuDucfcMRrPcBxRY/TEshy7O1tV1AqWAdec3G9nc7FNgTP+p9uOtrCwVPwdk+UEAxYrVcymtHofLGSQcK3JvAma0z1vus1x0FKFS2Z+pZirVzrakm+fxXkI4RoWqo0yjGGGNU+Lr88l520+uBG+vNP9pBqgJVgzd8RLEdoUP1JPtPLyQ/4EnvoPDHGyaUsVRXamviwfch01k7262GwLYT12EBhY64sfP4UHCaGxTItTP5arHMa2GWTwTFiT+QD5ORwbcoMD7rQBvfRlwf/DDVZpXta7MfEmYoHLQ3+rlNWOfmxKDWQ8so8E7pW9rKNut7xCgjnog8CM4kdcllBB8doYB25icdoSAByfptmYIR/craF0MTaiPZS7fhVspvnBHP5EOyclghKjgbuNNToLPsLXE2M7rwPr5eiM+TmC0z/eXctdr0ctaQ8KRYtjIPFFaLJRSmaKRPDi4VGhtYasZzKFF+/x7Iy1UpX+HLKio0pHfkpzQnaripKnI8pdQOCd/VHRb65xtz+/0RCoLzknhiO3+I+mmrP77VvowiOZBnVB90jGOKM8Zzfdr6sGOe8FQtSMsY43/GqWAc
+api: eJyNVU1vIzcM/SsCL7mosev2NDdv9gPZLpAicZBDYCzkGdqj9VhSRU6y7mD+e0Fp/I1tcrIsko8U+fimAzYrguIZPtsGSY3UvfcbgrkGHzAatt7dVlDACnlmVnTrlh40RKTgHSFB0cFkPJafCqmMNkgEFPDNEiu/VGxWypkNEmgovWN0LM4mhMaWCX70gySiAypr3Bg58TYgFOAXP7Bk0BCiFMM259slP/I0MZotaLCMG7pE6HtJ3ubUg8k6xhVG0LD0cWM4X/0xgV5DY92a3g9/XmAdcXnkRRytWwmuKXN3Lky9VEhsuKV3lpidb3yF7wroNbDlRpzuUtFTedJTNCFgHPL/Of79co6PzrRc+2j/xSrBEJZttLyF4rkDQ+V3sX9fo1xARFOBhtdoGYVDH9BEjFA8zzVMg/0Lt8c3HwzZMh/vpi3XE4EwwV4PMHLcQ90FTEx8nvdzfVbkPXIbHSmjmoF2ZUvsN8I+ugYNG+TaDzSWcRmuoYCRCXY0uR6PlsL9UdoEeWB8wUjpfW1soIBuYQgfY9PDeeKH5KtK75Z21eZ1AQ0vJlqzaDIbhuDc2qVpGxnLBdLHbFKP999kHPNDox9kLTLUabsP9EydvYB8JFQ33q8tKglCx8PGgQZZSYk8BtRgJaxMIcKxYT77PDVzuMjyyTFGtfVtVC1hFGBlXKWCIXr1UeaYFlsAFgmwP/DiPdBX2Vl1X59maubX6PqrE9CMpYfD5x3zvz7NJNUp7f4/4fSkTcqSqpAxbqzDSi22imtUV9NhH5LPlarRVCn9mwVN/75VMqf+QPeDkph0cV5Q9lPLxr+qV8u1Okmu0vprEHPmx7F1pw0nl4mIwj6WRu7/UenDTlxNlTbKVMqUJRIp9ipEz1gyVioi+TaWSc/zbhbwJL9veGeJ2S3x4d3p4sY7l4X07Pli/agG8yWLT6KHx/Qafv5GduUMtxHf3pLpw40SZj3sQ/bbcYxzthy9/F/6BD/o6jRYWX2MlIFfkk4HT7wxSfMH1C/IapCak0q6w/fxbUEb3sT4k0ehMdZJrjarTFa3pKSgYXI9FoqIwkmcJJ5rqD2x+HR7bevl+p8W4zYr8k7DkuJqGGguopjEB6ZliYGT2DVt7u/ZJ11EbC+8Xz7NRNFbKe14JFl4hoOg70xue4x9qlO5gnXapV9EdF2ed9/v/bPplxH7Rc7e0tJ53/f/AccMGo8=
 sidebar_class_name: "get api-method"
 info_path: site/docspace/api-backend/usage-api/api
 custom_edit_url: null
@@ -54,7 +54,7 @@ Returns a list of custom tags.
 <StatusCodes
   id={undefined}
   label={undefined}
-  responses={{"200":{"description":"List of tag names","content":{"application/json":{"schema":{}}}},"401":{"description":"Unauthorized"}}}
+  responses={{"200":{"description":"List of tag names","content":{"application/json":{"schema":{"type":"object","properties":{"response":{"type":"array","items":{"type":"object"}},"count":{"type":"integer","format":"int32"},"links":{"type":"array","items":{"type":"object","properties":{"href":{"type":"string"},"action":{"type":"string"}}}},"status":{"type":"integer","format":"int32"},"statusCode":{"type":"integer","format":"int32"}},"title":"ObjectArrayWrapper"}}}},"401":{"description":"Unauthorized"}}}
 >
   
 </StatusCodes>

@@ -1,0 +1,63 @@
+---
+id: get-all-permissions
+title: "Get API key permissions"
+description: "Returns a list of all available permissions for the API key."
+sidebar_label: "Get API key permissions"
+hide_title: true
+hide_table_of_contents: true
+api: eJylVk1v2zgQ/SvEXHLhxq53T7qpaRukW2yLOEEOhlHQ0thiLZNccpTUK+i/F0PKH7I3GwN7Mk3OvHnizHtSC6RWAbIZ5E6LNW4DzCVYh16RtuauhAxWSHldf0O/0SFoawJI8BicNQEDZC1MxmP+KTEUXjvOgwy+6EDCLoWqa6Gela7VokbhDihiaT1XBAmFNYSGGEQ5V+siFh/9CIzUQigq3Che0dYhZGAXP7AgkOA8UyWdeOxIHUUq7xVX0ISbcLQfyGuzgq7j4k0q3R9pQ7hCDxKW1m8Upa3fJ9BJqLVZhwvgXyFYeVz+CwkJqki3ds6PGQZS1IQLKabgG1viRQmdBNJUc9D04f7ur9ucH+nJK+fQ9/X/GL877++jUQ1V1ut/sIwwAYvGa9pCNmtBheI7n3/nBmcz8KhKkPDiNSFP2HtUHj1ks7nkyfsTt8c771XQRVp+zRuqJgyhnL7uYXi5h/rqMM7pbN7N5QnJe6TGmyCUqC8aR6pQ5N/ueCyvQcIGqbK9BLiZiirIYKScHk2uxyOWy8gNdBHQP6MP8Q4aX0MG7UIFfPR1B6fkpjFWFNYs9apJggMJz8prJhcb3ien61+qpubWnSF9SEfi8f4Lt2x+aMaUpZOghi05jHC8/TPIx4Dixtq1RsFJaKhXJUgwahMzjwElaE4rYgrPYd/DfZ2KyJ1V+WgIvdjaxosmoGdgoUwpnArhxXrudRQ/AywiYHeYnUugr1KwaD8/PYgHu0bTXQ1AE5bsF5926vj89MClhqP53wXzwTUJHUSJxMNhsBSLbZytq7zXTIy5EhWqMpZ/kxBPJfepO0ji4DYqbpwSSnFiWdsX8aKpEoPiIlqEBD5O83F8uvOPwWYcRJ4+4ovc/wuFdTsDVmVUnSqFKgoMQZAVzlvCgrAUHoNtfIFhbwUZPPHvG9HJhnZCPzx33LixxiSzPXl8Pv0g+uPzKR5k9w/TSfj5W9Aro6jx+LZK8umN4Mma7lP26jjGORFHx/+XNsL33ps7zdJHHxLwc/RyZwNtVHwv9Ki3SDuDEkPnGRBrD6/U/+uB/QUQ/qSRq5U2TKxJlpQMMVozSJhcj0FC/IaQcExuLqGygTiy3dthx9t/N+i3yeh3theNXEKvDPbR6FeQFwU6iv5YN6klJ18K7Ht7x779+MAvioYJHncxeVW/YPTdkdkeYw+tLTFYR/m9ktG2aUS6bh+fjl7N2Gs/RfPFzruu+wXKhkSN
+sidebar_class_name: "get api-method"
+info_path: site/docspace/api-backend/usage-api/api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get API key permissions"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/keys/permissions"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns a list of all available permissions for the API key.
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"List of all available permissions for key","content":{"application/json":{"schema":{"type":"object","properties":{"response":{"type":"array","items":{"type":"string"}},"count":{"type":"integer","format":"int32"},"links":{"type":"array","items":{"type":"object","properties":{"href":{"type":"string"},"action":{"type":"string"}}}},"status":{"type":"integer","format":"int32"},"statusCode":{"type":"integer","format":"int32"}},"title":"STRINGArrayWrapper"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

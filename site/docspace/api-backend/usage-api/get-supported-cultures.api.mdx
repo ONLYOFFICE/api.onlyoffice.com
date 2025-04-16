@@ -5,7 +5,7 @@ description: "Returns a list of all the available portal languages in the format
 sidebar_label: "Get supported languages"
 hide_title: true
 hide_table_of_contents: true
-api: eJzNk8Fu2zAMhl9F4GkDVDvI0beiG4phPTXLKQkKVqZtrbKkSVS2wPC7D7KdtE0vO84XSzL5m+T/aQDGNkK1gw0xa9tGUYo71/fOiricwEGC8xSQtbPfaqigJd4k711gqu+S4RQogoRA0TsbKUI1wHq1yq+aogra51So4EFHFq4RaIzgjgQeURt8NiSyGBph0LYJ20lOOctkOaug90arqYDyZ8xSA0TVUY95xSdPUEHkoG0LY37k1Y8fiVOwUaAw/1yC0HaKaFzocc4R/NvdGGKmIFwQjUvhvD2nCeVqEp+oaAuxh5r2IMUeyN5sN3lJrIrPBUjoiTu3DBMkeOQOKijR63JdrMrz8Ev1Ot9I4UghuzVACgYqGJ4x0jaYEa4b3kyxQjnb6DbN3oGEIwadm50sWpJnmxpMhqGCD0pf5k9i+/iQZ3vIdagUNJ822YFZCqN6wsTd0wud3liCXn+nE0iw2E/7t2ESdNZXzr1oguyZto2bsjWbHH7rda6ZQpxLOa5hlOBd5B4nBhbZe2IRz0C+Y+hdK8MrUv8hEMvImP5w6Q1qm3tNsz0zHbs8T5CwLlYTDcv1lHBh5CChc5Fz6HBhY8zHvxKFE1S7wysDeTdK6AhrChNUk3lwqxR5nmAxaXbx6vZlCC783n/9AeP4FwIdeLQ=
+api: eJzNVktvIzcM/isEL9kCih24N99c7zbIdtEtYgc5JMFC0dAz2owlVeLE6xrz3wtqxo4fLeLjnkaiyI8PkZ9mg6zLhOMHnBGzdWWCIUz9cukdpF6CTwp9oKjZendT4BhL4lkTgo9MxbSpuYmUUGGkFLxLlHC8wdHVlXwKSibaIKY4xi82MfgF6LoGrgj0q7a1fq4JBEzXUGtXNrrMcMY7JseCokOorckBDL8ngdpgMhUttax4HQjH6J+/k2FUGKKEy7YLZBvVnqaOUa9RoWVapj154mhdiW0rzpvOdX9kHVNJERUufFxq7kS/jrBVWFv3ks6A/58Aq0iL/whCoTZd2U7jkwgTa27SmSF2ylNf0FkGrUK2XIvSbH578+f1RFK6jzoEitl/q46u9pa4iS6BhvrsSwbrskbnPtsAr/xlTcwUwUdY+CZut1szML4g+ECDcgCPWNAjKnhEcpd3M1kSm8EvA1S4JK58365SdM0VjnGogx2OBlfDbXsPzVsHJ4qvFGUeNtjEGse4edaJ7mLd4nHCs6wLxruFLZtuOlDhq45Wks030xt3g7DQTS01PkH62B3B3e0Xqe2TxGGaaHk9kx7voHQy33TD1bcXWu/3WrB/0PoE8i4RTL1/sQRiRI778UGFTi+z5T6gQitmJptIw/ymkzV7firmcOLlk5N7WfsmQpMoCjBoV0DQKa18LKSiOQMcSymsycikI8XzoC86Zdh8vp/D3L+Qay8OQDss1S9+37bx5/u5uJrk4pzncHJQJrAJCmKKS+uogOd17tMLUfLR/pN1LqAiXWT37wY0+esG5J5ahV8FZLRPCzoLjgPq9GBR+xWsLFdw4BzyLCuU464/9k+3g34gzI0o3cdSyN0uGR+2TKmLPMm6AG0MpQTsIUTPZJgKiJR8E02elFW0LMHfy/cd7Y4uvgbKr8db3lkw9c51rHiUvpx+hP74tIsPrPtkWoU/LpMtnZaBfn9KJrMpSGfNdia76djHORqOVvYLn+F7kpwEK6NPMXXAr5l0g0+81JnAe9RrYkjbl/PgsTsIbPP29v2EvNrXlOkHD0OtrZNcm47lOpJ9kIKjwtHgKpNq/x+hcEe1Tworn1hUNzuKbUX8d0NxjeOHpzcqlV2rsJ824ebMgTgxhgJnzq2b7pqPfhOES3fPwPWnObbtv2hpEl4=
 sidebar_class_name: "get api-method"
 info_path: site/docspace/api-backend/usage-api/api
 custom_edit_url: null
@@ -54,7 +54,7 @@ Returns a list of all the available portal languages in the format of a two-lett
 <StatusCodes
   id={undefined}
   label={undefined}
-  responses={{"200":{"description":"List of all the available portal languages","content":{"application/json":{"schema":{"type":"string"}}}}}}
+  responses={{"200":{"description":"List of all the available portal languages","content":{"application/json":{"schema":{"type":"object","properties":{"response":{"type":"array","items":{"type":"string"}},"count":{"type":"integer","format":"int32"},"links":{"type":"array","items":{"type":"object","properties":{"href":{"type":"string"},"action":{"type":"string"}}}},"status":{"type":"integer","format":"int32"},"statusCode":{"type":"integer","format":"int32"}},"title":"STRINGArrayWrapper"}}}}}}
 >
   
 </StatusCodes>
