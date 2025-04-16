@@ -12,7 +12,7 @@ export const NoHeaderFooter = ({ children }: { children: React.ReactNode }) => {
   return <div className={styles.noHeaderFooter}>{children}</div>;
 };
 
-export default function EditorPage() {
+function Editor() {
   const query = useQuery();
   const format = query.get("format").toLowerCase();
   const type = query.get("type").toLowerCase();
@@ -26,3 +26,5 @@ export default function EditorPage() {
     </NoHeaderFooter>
   );
 }
+
+export default Editor;
