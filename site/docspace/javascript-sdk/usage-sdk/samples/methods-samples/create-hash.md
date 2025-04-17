@@ -107,6 +107,7 @@ Create a basic HTML page with a DocSpace iframe and a button to trigger the hash
     <!-- Trigger Button -->
     <button id="button">Create Hash</button>
   </body>
+</html>
 ```
 
 The API JavaScript file can normally be found in the following DocSpace folder: **\{PORTAL_SRC\}/static/scripts/sdk/1.0.1/api.js** where **\{PORTAL_SRC\}** is the name of the server with the ONLYOFFICE DocSpace installed.

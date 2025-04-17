@@ -62,6 +62,7 @@ Create an HTML page with a frame element that will load the DocSpace manager.
     <!-- SDK iframe -->
     <iframe id="ds-frame"></iframe>
   </body>
+</html>
 ```
 
 ## Step 2. JavaScript SDK Logic

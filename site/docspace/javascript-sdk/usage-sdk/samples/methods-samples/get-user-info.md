@@ -104,6 +104,7 @@ Create a simple HTML page with an embedded DocSpace frame and a button to trigge
     <!-- Trigger Button -->
     <button id="button">Get User Info</button>
   </body>
+</html>
 ```
 
 The API JavaScript file can normally be found in the following DocSpace folder: **\{PORTAL_SRC\}/static/scripts/sdk/1.0.1/api.js** where **\{PORTAL_SRC\}** is the name of the server with the ONLYOFFICE DocSpace installed.

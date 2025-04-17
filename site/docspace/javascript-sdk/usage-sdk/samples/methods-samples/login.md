@@ -108,6 +108,7 @@ Create a basic HTML page that includes a button for logging in and embeds the Do
     <!-- Trigger Button -->
     <button id="button">Login</button>
   </body>
+</html>
 ```
 
 ## Step 2. JavaScript SDK Logic

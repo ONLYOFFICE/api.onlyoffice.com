@@ -104,6 +104,7 @@ Create a simple HTML page with a DocSpace frame and a button to update the confi
     <!-- Trigger Button -->
     <button id="button">Set Config</button>
   </body>
+</html>
 ```
 
 ## Step 2. JavaScript SDK Logic

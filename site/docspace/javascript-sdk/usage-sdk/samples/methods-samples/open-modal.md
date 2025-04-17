@@ -103,6 +103,7 @@ Create an HTML page with a button and an embedded DocSpace iframe.
     <!-- Trigger Button -->
     <button id="button">Open Modal</button>
   </body>
+</html>
 ```
 
 ## Step 2. JavaScript SDK Logic

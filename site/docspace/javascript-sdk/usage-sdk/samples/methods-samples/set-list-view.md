@@ -103,6 +103,7 @@ Create an HTML page with a button and an embedded DocSpace frame.
     <!-- Trigger Button -->
     <button id="button">Set List View</button>
   </body>
+</html>
 ```
 
 ## Step 2. JavaScript SDK Logic
