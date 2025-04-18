@@ -14,61 +14,10 @@ You need to [add the URL](../../../get-started/basic-concepts.md#step-1-specifyi
   <head>
     <meta charset="UTF-8" />
     <title>Project Manager</title>
-
     <!-- Replace with your actual portal URL -->
     <script src="{PORTAL_SRC}/static/scripts/sdk/1.0.1/api.js"></script>
-
     <style>
-      body {
-        font-family: Arial, sans-serif;
-        max-width: 600px;
-        margin: 20px auto;
-        padding: 0 20px;
-      }
-
-      .container {
-        display: flex;
-        gap: 10px;
-        margin-bottom: 20px;
-      }
-
-      input, button {
-        padding: 8px;
-      }
-
-      button {
-        background: #0066cc;
-        color: white;
-        border: none;
-        cursor: pointer;
-      }
-
-      button:disabled {
-        background-color: #0066cc52;
-        cursor: not-allowed;
-      }
-
-      ul {
-        list-style: none;
-        padding: 0;
-      }
-
-      li {
-        padding: 8px;
-        border-bottom: 1px solid #eee;
-        display: flex;
-        justify-content: space-between;
-      }
-
-      .close-btn {
-        background: #f44336;
-        color: white;
-        border: none;
-        border-radius: 50%;
-        width: 24px;
-        height: 24px;
-        cursor: pointer;
-      }
+      /* CSS omitted for brevity */
     </style>
   </head>
 

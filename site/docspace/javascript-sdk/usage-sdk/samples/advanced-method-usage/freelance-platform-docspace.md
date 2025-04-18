@@ -3,7 +3,7 @@ This example shows how to create a freelance platform interface using DocSpace S
 
 ## Before you start
 Please make sure you are using a server environment to run the HTML file because the JavaScript SDK must be launched on the server.
-You need to [add the URL](../../../get-started/basic-concepts.md#step-1-specifying-the-docspace-url) of your server's root directory to the **Developer Tools** section of DocSpace.
+You need to [add the URL](../../../get-started/basic-concepts.md#step-1-specifying-the-docspace-url) of your server"s root directory to the **Developer Tools** section of DocSpace.
 
 ## Full Example
 
@@ -15,15 +15,12 @@ You need to [add the URL](../../../get-started/basic-concepts.md#step-1-specifyi
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Freelance Platform</title>
-
     <!-- Replace with your actual portal URL -->
     <script src="{PORTAL_SRC}/static/scripts/sdk/1.0.1/api.js"></script>
-
     <style>
       /* Styles omitted for brevity - same as your input */
     </style>
   </head>
-
   <body>
     <div class="container">
       <h1>Freelance Platform</h1>
@@ -62,11 +59,11 @@ You need to [add the URL](../../../get-started/basic-concepts.md#step-1-specifyi
       // Grant or revoke room access for freelancer
       function setRoomAccessRights(access) {
         fetch(`{PORTAL_SRC}/api/2.0/files/rooms/${roomId}/share`, {
-          method: 'PUT',
+          method: "PUT",
           headers: {
-            'Authorization': `Bearer ${token}`,
-            'Content-Type': 'application/json',
-            'Accept': 'application/json'
+            "Authorization": `Bearer ${token}`,
+            "Content-Type": "application/json",
+            "Accept": "application/json"
           },
           body: JSON.stringify({
             invitations: [{
@@ -98,53 +95,53 @@ You need to [add the URL](../../../get-started/basic-concepts.md#step-1-specifyi
       // Called when SDK is ready for form
       function onInitialReady() {
         fetchUsers();
-        const button = document.getElementById('createOrderBtn');
-        button.addEventListener('click', createOrder);
+        const button = document.getElementById("createOrderBtn");
+        button.addEventListener("click", createOrder);
         button.disabled = false;
       }
 
       // Called when SDK loads project room
       function onWorkspaceReady() {
-        document.getElementById('ds-frame').style.display = 'block';
-        document.getElementById('orderForm').classList.add('hidden');
-        document.getElementById('workspace').classList.remove('hidden');
-        document.getElementById('confirmUserBtn').addEventListener('click', confirmUser);
+        document.getElementById("ds-frame").style.display = "block";
+        document.getElementById("orderForm").classList.add("hidden");
+        document.getElementById("workspace").classList.remove("hidden");
+        document.getElementById("confirmUserBtn").addEventListener("click", confirmUser);
       }
 
       // Create project room from form input
       async function createOrder() {
-        document.getElementById('createOrderBtn').disabled = true;
-        const title = document.getElementById('title').value;
-        if (!title) return alert('Please enter a project title');
+        document.getElementById("createOrderBtn").disabled = true;
+        const title = document.getElementById("title").value;
+        if (!title) return alert("Please enter a project title");
 
         try {
           const room = await docSpace.createRoom(title, 2);
-          if (room.status && room.status !== 200) return alert('Error creating room');
+          if (room.status && room.status !== 200) return alert("Error creating room");
           roomId = room.id;
           initDocSpace("/rooms/shared/" + roomId, { folder: roomId });
         } catch (error) {
-          alert('Error: ' + error.message);
+          alert(""Error: " + error.message);
         }
       }
 
       // Load users list
       async function fetchUsers() {
         try {
-          const response = await fetch("{PORTAL_SRC}/api/2.0/people", {
-            headers: { 'Authorization': `Bearer ${token}` }
+          const response = await fetch(`{PORTAL_SRC}/api/2.0/people`, {
+            headers: { "Authorization": `Bearer ${token}` }
           });
           const data = await response.json();
           if (data.response && data.response.length > 0) {
-            const usersContainer = document.getElementById('usersContainer');
-            usersContainer.innerHTML = '';
+            const usersContainer = document.getElementById("usersContainer");
+            usersContainer.innerHTML = "";
             data.response.forEach(user => {
-              const userDiv = document.createElement('div');
-              userDiv.className = 'user-item';
+              const userDiv = document.createElement("div");
+              userDiv.className = "user-item";
               userDiv.dataset.userId = user.id;
               userDiv.textContent = `${user.firstName} ${user.lastName}`;
-              userDiv.addEventListener('click', function() {
-                document.querySelectorAll('.user-item').forEach(item => item.classList.remove('selected'));
-                this.classList.add('selected');
+              userDiv.addEventListener("click", function() {
+                document.querySelectorAll(".user-item").forEach(item => item.classList.remove("selected"));
+                this.classList.add("selected");
                 selectedUserId = user.id;
                 selectedUserEmail = user.email;
                 selectedUserName = `${user.firstName} ${user.lastName}`;
@@ -153,46 +150,46 @@ You need to [add the URL](../../../get-started/basic-concepts.md#step-1-specifyi
             });
           }
         } catch (error) {
-          console.error('Error fetching users:', error);
+          console.error("Error fetching users:", error);
         }
       }
 
       // Confirm selected freelancer
       function confirmUser() {
-        if (!selectedUserId) return alert('Please select a freelancer');
-        document.getElementById('usersList').style.display = 'none';
-        document.getElementById('confirmUserBtn').textContent = 'Complete Order';
-        document.getElementById('confirmUserBtn').removeEventListener('click', confirmUser);
-        document.getElementById('completeOrderBtn').style.display = 'block';
-        document.getElementById('completeOrderBtn').addEventListener('click', completeOrder);
-        setRoomAccessRights('ContentCreator');
+        if (!selectedUserId) return alert("Please select a freelancer");
+        document.getElementById("usersList").style.display = "none";
+        document.getElementById("confirmUserBtn").textContent = "Complete Order";
+        document.getElementById("confirmUserBtn").removeEventListener("click", confirmUser);
+        document.getElementById("completeOrderBtn").style.display = "block";
+        document.getElementById("completeOrderBtn").addEventListener("click", completeOrder);
+        setRoomAccessRights("ContentCreator");
       }
 
       // Archive the room and revoke access
       function completeOrder() {
         setRoomAccessRights(0);
         fetch(`{PORTAL_SRC}/api/2.0/files/rooms/${roomId}/archive`, {
-          method: 'PUT',
+          method: "PUT",
           headers: {
-            'Authorization': `Bearer ${token}`,
-            'Content-Type': 'application/json',
-            'Accept': 'application/json'
+            "Authorization": `Bearer ${token}`,
+            "Content-Type": "application/json",
+            "Accept": "application/json"
           },
           body: JSON.stringify({ deleteAfter: true })
         });
       }
 
       // Initial login and load
-      document.addEventListener('DOMContentLoaded', function() {
-        fetch('{PORTAL_SRC}/api/2.0/authentication', {
-          method: 'POST',
+      document.addEventListener("DOMContentLoaded", function() {
+        fetch("{PORTAL_SRC}/api/2.0/authentication", {
+          method: "POST",
           headers: {
-            'Content-Type': 'application/json',
-            'Accept': 'application/json'
+            "Content-Type": "application/json",
+            "Accept": "application/json"
           },
           body: JSON.stringify({
-            userName: '{LOGIN}',
-            password: '{PASSWORD}'
+            userName: "{LOGIN}",
+            password: "{PASSWORD}"
           })
         })
         .then(response => response.json())
@@ -214,16 +211,16 @@ You need to [add the URL](../../../get-started/basic-concepts.md#step-1-specifyi
 ### 1. Initialize the SDK on page load
 
 ``` ts
-document.addEventListener('DOMContentLoaded', function() {
-  fetch('{{PORTAL_SRC}}api/2.0/authentication', {
-    method: 'POST',
+document.addEventListener("DOMContentLoaded", function() {
+  fetch("{PORTAL_SRC}api/2.0/authentication", {
+    method: "POST",
     headers: {
-      'Content-Type': 'application/json',
-      'Accept': 'application/json'
+      "Content-Type": "application/json",
+      "Accept": "application/json"
     },
     body: JSON.stringify({
-      userName: '{{LOGIN}}',
-      password: '{{PASSWORD}}'
+      userName: "{LOGIN}",
+      password: "{PASSWORD}"
     })
   })
   .then(response => response.json())
@@ -267,8 +264,8 @@ function initDocSpace(rootPath = null, filter = null) {
 ``` ts
 function onInitialReady() {
   fetchUsers(); // Load available freelancers
-  const button = document.getElementById('createOrderBtn');
-  button.addEventListener('click', createOrder);
+  const button = document.getElementById("createOrderBtn");
+  button.addEventListener("click", createOrder);
   button.disabled = false;
 }
 ```
@@ -280,7 +277,7 @@ function onInitialReady() {
 
 ``` ts
 async function createOrder() {
-  const title = document.getElementById('title').value;
+  const title = document.getElementById("title").value;
   ...
   const room = await docSpace.createRoom(title, 2);
   roomId = room.id;
@@ -296,10 +293,10 @@ async function createOrder() {
 
 ``` ts
 function onWorkspaceReady() {
-  document.getElementById('ds-frame').style.display = 'block';
-  document.getElementById('orderForm').classList.add('hidden');
-  document.getElementById('workspace').classList.remove('hidden');
-  document.getElementById('confirmUserBtn').addEventListener('click', confirmUser);
+  document.getElementById("ds-frame").style.display = "block";
+  document.getElementById("orderForm").classList.add("hidden");
+  document.getElementById("workspace").classList.remove("hidden");
+  document.getElementById("confirmUserBtn").addEventListener("click", confirmUser);
 }
 ```
 
@@ -310,13 +307,13 @@ function onWorkspaceReady() {
 
 ``` ts
 function confirmUser() {
-    if (!selectedUserId) return alert('Please select a freelancer');
-    document.getElementById('usersList').style.display = 'none';
-    document.getElementById('confirmUserBtn').textContent = 'Complete Order';
-    document.getElementById('confirmUserBtn').removeEventListener('click', confirmUser);
-    document.getElementById('completeOrderBtn').style.display = 'block';
-    document.getElementById('completeOrderBtn').addEventListener('click', completeOrder);
-    setRoomAccessRights('ContentCreator');
+    if (!selectedUserId) return alert("Please select a freelancer");
+    document.getElementById("usersList").style.display = "none";
+    document.getElementById("confirmUserBtn").textContent = "Complete Order";
+    document.getElementById("confirmUserBtn").removeEventListener("click", confirmUser);
+    document.getElementById("completeOrderBtn").style.display = "block";
+    document.getElementById("completeOrderBtn").addEventListener("click", completeOrder);
+    setRoomAccessRights("ContentCreator");
 }
 ```
 
@@ -328,21 +325,21 @@ function confirmUser() {
 ``` ts
 async function fetchUsers() {
     try {
-        const response = await fetch("{PORTAL_SRC}/api/2.0/people", {
-            headers: { 'Authorization': `Bearer ${token}` }
+        const response = await fetch(`{PORTAL_SRC}/api/2.0/people`, {
+            headers: { "Authorization": `Bearer ${token}` }
         });
         const data = await response.json();
         if (data.response && data.response.length > 0) {
-            const usersContainer = document.getElementById('usersContainer');
-            usersContainer.innerHTML = '';
+            const usersContainer = document.getElementById("usersContainer");
+            usersContainer.innerHTML = "";
             data.response.forEach(user => {
-                const userDiv = document.createElement('div');
-                userDiv.className = 'user-item';
+                const userDiv = document.createElement("div");
+                userDiv.className = "user-item";
                 userDiv.dataset.userId = user.id;
                 userDiv.textContent = `${user.firstName} ${user.lastName}`;
-                userDiv.addEventListener('click', function() {
-                    document.querySelectorAll('.user-item').forEach(item => item.classList.remove('selected'));
-                    this.classList.add('selected');
+                userDiv.addEventListener("click", function() {
+                    document.querySelectorAll(".user-item").forEach(item => item.classList.remove("selected"));
+                    this.classList.add("selected");
                     selectedUserId = user.id;
                     selectedUserEmail = user.email;
                     selectedUserName = `${user.firstName} ${user.lastName}`;
@@ -351,7 +348,7 @@ async function fetchUsers() {
             });
         }
     } catch (error) {
-        console.error('Error fetching users:', error);
+        console.error("Error fetching users:", error);
     }
 }
 ```
@@ -364,12 +361,12 @@ async function fetchUsers() {
 ``` ts
 function completeOrder() {
   setRoomAccessRights(0); // remove access
-  fetch(`{{PORTAL_SRC}}api/2.0/files/rooms/${roomId}/archive`, {
-    method: 'PUT',
+  fetch(`{PORTAL_SRC}api/2.0/files/rooms/${roomId}/archive`, {
+    method: "PUT",
     headers: {
-      'Authorization': `Bearer ${token}`,
-      'Content-Type': 'application/json',
-      'Accept': 'application/json'
+      "Authorization": `Bearer ${token}`,
+      "Content-Type": "application/json",
+      "Accept": "application/json"
     },
     body: JSON.stringify({ deleteAfter: true })
   });
