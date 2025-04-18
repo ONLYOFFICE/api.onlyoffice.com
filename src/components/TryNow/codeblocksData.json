@@ -1,0 +1,946 @@
+{
+  "DOCX": {
+    "Edit": [
+      {
+        "document": {
+          "fileType": "docx",
+          "key": "E7FAFC9C22A8",
+          "title": "Example Document Title.docx",
+          "url": "https://example.com/url-to-example-document.docx"
+        },
+        "documentType": "word",
+        "editorConfig": {
+          "callbackUrl": "https://example.com/url-to-callback.ashx"
+        }
+      }
+    ],
+    "Co-Edit": [
+      {
+        "document": {
+          "fileType": "docx",
+          "key": "B143195F47A0",
+          "title": "Example Document Title.docx",
+          "url": "https://example.com/url-to-example-document.docx"
+        },
+        "documentType": "word",
+        "editorConfig": {
+          "callbackUrl": "https://example.com/url-to-callback.ashx",
+          "user": {
+            "id": "78e1e841",
+            "name": "John Smith"
+          }
+        }
+      },
+      {
+        "document": {
+          "fileType": "docx",
+          "key": "B143195F47A0",
+          "title": "Example Document Title.docx",
+          "url": "https://example.com/url-to-example-document.docx"
+        },
+        "documentType": "word",
+        "editorConfig": {
+          "callbackUrl": "https://example.com/url-to-callback.ashx",
+          "user": {
+            "id": "F89d8069ba2b",
+            "name": "Kate Cage"
+          }
+        }
+      }
+    ],
+    "Strict Co-Edit": [
+      {
+        "document": {
+          "fileType": "docx",
+          "key": "491BD667CABA",
+          "title": "Example Document Title.docx",
+          "url": "https://example.com/url-to-example-document.docx"
+        },
+        "documentType": "word",
+        "editorConfig": {
+          "callbackUrl": "https://example.com/url-to-callback.ashx",
+          "customization": {
+            "autosave": false
+          },
+          "user": {
+            "id": "78e1e841",
+            "name": "John Smith"
+          }
+        }
+      },
+      {
+        "document": {
+          "fileType": "docx",
+          "key": "491BD667CABA",
+          "title": "Example Document Title.docx",
+          "url": "https://example.com/url-to-example-document.docx"
+        },
+        "documentType": "word",
+        "editorConfig": {
+          "callbackUrl": "https://example.com/url-to-callback.ashx",
+          "customization": {
+            "autosave": false
+          },
+          "user": {
+            "id": "F89d8069ba2b",
+            "name": "Kate Cage"
+          }
+        }
+      }
+    ],
+    "Review": [
+      {
+        "document": {
+          "fileType": "docx",
+          "key": "9B5D4A67A9A9",
+          "title": "Example Document Title.docx",
+          "url": "https://example.com/url-to-example-document.docx",
+          "permissions": {
+            "edit": false,
+            "review": true
+          }
+        },
+        "editorConfig": {
+          "callbackUrl": "https://example.com/url-to-callback.ashx",
+          "mode": "edit"
+        }
+      }
+    ],
+    "Restricted review": [
+      {
+        "document": {
+          "fileType": "docx",
+          "key": "CE661B77",
+          "title": "Example Document Title.docx",
+          "url": "https://example.com/url-to-example-document.docx",
+          "permissions": {
+            "edit": true,
+            "review": true,
+            "reviewGroups": ["Group2", ""]
+          }
+        },
+        "editorConfig": {
+          "callbackUrl": "https://example.com/url-to-callback.ashx",
+          "mode": "edit"
+        }
+      }
+    ],
+    "Content control settings restricted": [
+      {
+        "document": {
+          "fileType": "docx",
+          "key": "779591724609",
+          "title": "Example Document Title.docx",
+          "url": "https://example.com/url-to-example-document.docx",
+          "permissions": {
+            "edit": true,
+            "modifyContentControl": false
+          }
+        },
+        "editorConfig": {
+          "callbackUrl": "https://example.com/url-to-callback.ashx",
+          "mode": "edit"
+        }
+      }
+    ],
+    "Comment": [
+      {
+        "document": {
+          "fileType": "docx",
+          "key": "5C5D4CCA7674",
+          "title": "Example Document Title.docx",
+          "url": "https://example.com/url-to-example-document.docx",
+          "permissions": {
+            "comment": true,
+            "edit": false
+          }
+        },
+        "editorConfig": {
+          "callbackUrl": "https://example.com/url-to-callback.ashx",
+          "mode": "edit"
+        }
+      }
+    ],
+    "Restricted comment": [
+      {
+        "document": {
+          "fileType": "docx",
+          "key": "CEEC2F6D",
+          "title": "Example Document Title.docx",
+          "url": "https://example.com/url-to-example-document.docx",
+          "permissions": {
+            "comment": true,
+            "commentGroups": {
+              "edit": ["Group2", ""],
+              "remove": ["Group2"],
+              "view": ""
+            },
+            "edit": false
+          }
+        },
+        "editorConfig": {
+          "callbackUrl": "https://example.com/url-to-callback.ashx",
+          "mode": "edit"
+        }
+      }
+    ],
+    "View": [
+      {
+        "document": {
+          "fileType": "docx",
+          "key": "D24A86BDE9A2",
+          "title": "Example Document Title.docx",
+          "url": "https://example.com/url-to-example-document.docx"
+        },
+        "documentType": "word",
+        "editorConfig": {
+          "mode": "view"
+        }
+      }
+    ],
+    "Rebranding": [
+      {
+        "document": {
+          "fileType": "docx",
+          "key": "D97815D69205",
+          "title": "Example Document Title.docx",
+          "url": "https://example.com/url-to-example-document.docx"
+        },
+        "documentType": "word",
+        "editorConfig": {
+          "callbackUrl": "https://example.com/url-to-callback.ashx",
+          "customization": {
+            "customer": {
+              "address": "My City, 123a-45",
+              "info": "Some additional information",
+              "logo": "https://example.com/logo-big.png",
+              "mail": "john@example.com",
+              "name": "John Smith and Co.",
+              "www": "example.com"
+            },
+            "logo": {
+              "image": "https://example.com/logo.png",
+              "url": "https://example.com"
+            }
+          }
+        }
+      }
+    ],
+    "Embedded view": [
+      {
+        "document": {
+          "fileType": "docx",
+          "key": "B949CB79",
+          "title": "Example Document Title.docx",
+          "url": "https://example.com/url-to-example-document.docx"
+        },
+        "type": "embedded"
+      }
+    ]
+  },
+  "DOC": {
+    "Edit": [
+      {
+        "document": {
+          "fileType": "doc",
+          "key": "D21889C484E9",
+          "title": "Example Document Title.doc",
+          "url": "https://example.com/url-to-example-document.doc"
+        }
+      }
+    ]
+  },
+  "ODT": {
+    "Edit": [
+      {
+        "document": {
+          "fileType": "odt",
+          "key": "B95B853D3B1E",
+          "title": "Example Document Title.odt",
+          "url": "https://example.com/url-to-example-document.odt"
+        },
+        "documentType": "word",
+        "editorConfig": {
+          "callbackUrl": "https://example.com/url-to-callback.ashx"
+        }
+      }
+    ]
+  },
+  "TXT": {
+    "Edit": [
+      {
+        "document": {
+          "fileType": "txt",
+          "key": "B2D7ACF65806",
+          "title": "Example Document Title.txt",
+          "url": "https://example.com/url-to-example-document.txt"
+        },
+        "documentType": "word",
+        "editorConfig": {
+          "callbackUrl": "https://example.com/url-to-callback.ashx"
+        }
+      }
+    ]
+  },
+  "PDF": {
+    "Edit": [
+      {
+        "document": {
+          "fileType": "pdf",
+          "key": "E7FAFC9C22A8",
+          "title": "Example PDF Title.pdf",
+          "url": "https://example.com/url-to-example-pdf.pdf"
+        },
+        "documentType": "word",
+        "editorConfig": {
+          "callbackUrl": "https://example.com/url-to-callback.ashx"
+        }
+      }
+    ],
+    "Co-Edit": [
+      {
+        "document": {
+          "fileType": "pdf",
+          "key": "B143195F47A0",
+          "title": "Example PDF Title.pdf",
+          "url": "https://example.com/url-to-example-pdf.pdf"
+        },
+        "documentType": "pdf",
+        "editorConfig": {
+          "callbackUrl": "https://example.com/url-to-callback.ashx",
+          "user": {
+            "id": "78e1e841",
+            "name": "John Smith"
+          }
+        }
+      },
+      {
+        "document": {
+          "fileType": "pdf",
+          "key": "B143195F47A0",
+          "title": "Example PDF Title.pdf",
+          "url": "https://example.com/url-to-example-pdf.pdf"
+        },
+        "documentType": "pdf",
+        "editorConfig": {
+          "callbackUrl": "https://example.com/url-to-callback.ashx",
+          "user": {
+            "id": "F89d8069ba2b",
+            "name": "Kate Cage"
+          }
+        }
+      }
+    ],
+    "Strict Co-Edit": [
+      {
+        "document": {
+          "fileType": "pdf",
+          "key": "491BD667CABA",
+          "title": "Example PDF Title.pdf",
+          "url": "https://example.com/url-to-example-pdf.pdf"
+        },
+        "documentType": "pdf",
+        "editorConfig": {
+          "callbackUrl": "https://example.com/url-to-callback.ashx",
+          "customization": {
+            "autosave": false
+          },
+          "user": {
+            "id": "78e1e841",
+            "name": "John Smith"
+          }
+        }
+      },
+      {
+        "document": {
+          "fileType": "pdf",
+          "key": "491BD667CABA",
+          "title": "Example PDF Title.pdf",
+          "url": "https://example.com/url-to-example-pdf.pdf"
+        },
+        "documentType": "pdf",
+        "editorConfig": {
+          "callbackUrl": "https://example.com/url-to-callback.ashx",
+          "customization": {
+            "autosave": false
+          },
+          "user": {
+            "id": "F89d8069ba2b",
+            "name": "Kate Cage"
+          }
+        }
+      }
+    ],
+    "Editing forms": [
+      {
+        "document": {
+          "fileType": "pdf",
+          "key": "D05D6A33",
+          "permissions": {
+            "edit": true
+          },
+          "title": "Example Form Template Title.pdf",
+          "url": "https://example.com/url-to-example-form.pdf"
+        },
+        "documentType": "pdf",
+        "editorConfig": {
+          "callbackUrl": "https://example.com/url-to-callback.ashx"
+        }
+      }
+    ],
+    "Filling in forms": [
+      {
+        "document": {
+          "fileType": "pdf",
+          "key": "DEEC57D9",
+          "title": "Example Form Title.pdf",
+          "url": "https://example.com/url-to-example-form.pdf",
+          "permissions": {
+            "edit": false,
+            "fillForms": true
+          }
+        },
+        "documentType": "pdf",
+        "editorConfig": {
+          "callbackUrl": "https://example.com/url-to-callback.ashx",
+          "mode": "edit"
+        }
+      }
+    ],
+    "Comment": [
+      {
+        "document": {
+          "fileType": "pdf",
+          "key": "5C5D4CCA7674",
+          "title": "Example PDF Title.pdf",
+          "url": "https://example.com/url-to-example-pdf.pdf",
+          "permissions": {
+            "comment": true,
+            "edit": false
+          }
+        },
+        "editorConfig": {
+          "callbackUrl": "https://example.com/url-to-callback.ashx",
+          "mode": "edit"
+        }
+      }
+    ],
+    "View": [
+      {
+        "document": {
+          "fileType": "pdf",
+          "key": "D24A86BDE9A2",
+          "title": "Example PDF Title.pdf",
+          "url": "https://example.com/url-to-example-pdf.pdf"
+        },
+        "documentType": "pdf",
+        "editorConfig": {
+          "mode": "view"
+        }
+      }
+    ],
+    "Rebranding": [
+      {
+        "document": {
+          "fileType": "pdf",
+          "key": "D97815D69205",
+          "title": "Example PDF Title.pdf",
+          "url": "https://example.com/url-to-example-pdf.pdf"
+        },
+        "documentType": "pdf",
+        "editorConfig": {
+          "callbackUrl": "https://example.com/url-to-callback.ashx",
+          "customization": {
+            "customer": {
+              "address": "My City, 123a-45",
+              "info": "Some additional information",
+              "logo": "https://example.com/logo-big.png",
+              "mail": "john@example.com",
+              "name": "John Smith and Co.",
+              "www": "example.com"
+            },
+            "logo": {
+              "image": "https://example.com/logo.png",
+              "url": "https://example.com"
+            }
+          }
+        }
+      }
+    ],
+    "Embedded view": [
+      {
+        "document": {
+          "fileType": "pdf",
+          "key": "B949CB79",
+          "title": "Example PDF Title.pdf",
+          "url": "https://example.com/url-to-example-pdf.pdf"
+        },
+        "type": "embedded"
+      }
+    ]
+  },
+  "XLSX": {
+    "Edit": [
+      {
+        "document": {
+          "fileType": "xlsx",
+          "key": "53500B46FCA9",
+          "title": "Example Spreadsheet Title.xlsx",
+          "url": "https://example.com/url-to-example-spreadsheet.xlsx"
+        },
+        "documentType": "cell",
+        "editorConfig": {
+          "callbackUrl": "https://example.com/url-to-callback.ashx"
+        }
+      }
+    ],
+    "Co-Edit": [
+      {
+        "document": {
+          "fileType": "xlsx",
+          "key": "6FB60FE9E548",
+          "title": "Example Spreadsheet Title.xlsx",
+          "url": "https://example.com/url-to-example-spreadsheet.xlsx"
+        },
+        "documentType": "cell",
+        "editorConfig": {
+          "callbackUrl": "https://example.com/url-to-callback.ashx",
+          "user": {
+            "id": "78e1e841",
+            "name": "John Smith"
+          }
+        }
+      },
+      {
+        "document": {
+          "fileType": "xlsx",
+          "key": "6FB60FE9E548",
+          "title": "Example Spreadsheet Title.xlsx",
+          "url": "https://example.com/url-to-example-spreadsheet.xlsx"
+        },
+        "documentType": "cell",
+        "editorConfig": {
+          "callbackUrl": "https://example.com/url-to-callback.ashx",
+          "user": {
+            "id": "F89d8069ba2b",
+            "name": "Kate Cage"
+          }
+        }
+      }
+    ],
+    "Strict Co-Edit": [
+      {
+        "document": {
+          "fileType": "xlsx",
+          "key": "DB1788E4AF4A",
+          "title": "Example Spreadsheet Title.xlsx",
+          "url": "https://example.com/url-to-example-spreadsheet.xlsx"
+        },
+        "documentType": "cell",
+        "editorConfig": {
+          "callbackUrl": "https://example.com/url-to-callback.ashx",
+          "customization": {
+            "autosave": false
+          },
+          "user": {
+            "id": "78e1e841",
+            "name": "John Smith"
+          }
+        }
+      },
+      {
+        "document": {
+          "fileType": "xlsx",
+          "key": "DB1788E4AF4A",
+          "title": "Example Spreadsheet Title.xlsx",
+          "url": "https://example.com/url-to-example-spreadsheet.xlsx"
+        },
+        "documentType": "cell",
+        "editorConfig": {
+          "callbackUrl": "https://example.com/url-to-callback.ashx",
+          "customization": {
+            "autosave": false
+          },
+          "user": {
+            "id": "F89d8069ba2b",
+            "name": "Kate Cage"
+          }
+        }
+      }
+    ],
+    "Local filter": [
+      {
+        "document": {
+          "fileType": "xlsx",
+          "key": "B0823482653D",
+          "title": "Example Spreadsheet Title.xlsx",
+          "url": "https://example.com/url-to-example-spreadsheet.xlsx",
+          "permissions": {
+            "edit": true,
+            "modifyFilter": false
+          }
+        },
+        "documentType": "cell",
+        "editorConfig": {
+          "callbackUrl": "https://example.com/url-to-callback.ashx",
+          "user": {
+            "id": "78e1e841",
+            "name": "John Smith"
+          }
+        }
+      },
+      {
+        "document": {
+          "fileType": "xlsx",
+          "key": "B0823482653D",
+          "title": "Example Spreadsheet Title.xlsx",
+          "url": "https://example.com/url-to-example-spreadsheet.xlsx",
+          "permissions": {
+            "edit": true,
+            "modifyFilter": false
+          }
+        },
+        "documentType": "cell",
+        "editorConfig": {
+          "callbackUrl": "https://example.com/url-to-callback.ashx",
+          "user": {
+            "id": "F89d8069ba2b",
+            "name": "Kate Cage"
+          }
+        }
+      }
+    ],
+    "Comment": [
+      {
+        "document": {
+          "fileType": "xlsx",
+          "key": "B62D0C4B9C09",
+          "title": "Example Spreadsheet Title.xlsx",
+          "url": "https://example.com/url-to-example-spreadsheet.xlsx",
+          "permissions": {
+            "comment": true,
+            "edit": false
+          }
+        },
+        "documentType": "cell",
+        "editorConfig": {
+          "callbackUrl": "https://example.com/url-to-callback.ashx",
+          "mode": "edit"
+        }
+      }
+    ],
+    "View": [
+      {
+        "document": {
+          "fileType": "xlsx",
+          "key": "138E9734B413",
+          "title": "Example Spreadsheet Title.xlsx",
+          "url": "https://example.com/url-to-example-spreadsheet.xlsx"
+        },
+        "documentType": "cell",
+        "editorConfig": {
+          "mode": "view"
+        }
+      }
+    ],
+    "Rebranding": [
+      {
+        "document": {
+          "fileType": "xlsx",
+          "key": "6CDE57CAF31F",
+          "title": "Example Spreadsheet Title.xlsx",
+          "url": "https://example.com/url-to-example-spreadsheet.xlsx"
+        },
+        "documentType": "cell",
+        "editorConfig": {
+          "callbackUrl": "https://example.com/url-to-callback.ashx",
+          "customization": {
+            "customer": {
+              "address": "My City, 123a-45",
+              "info": "Some additional information",
+              "logo": "https://example.com/logo-big.png",
+              "mail": "john@example.com",
+              "name": "John Smith and Co.",
+              "www": "example.com"
+            },
+            "logo": {
+              "image": "https://example.com/logo.png",
+              "url": "https://example.com"
+            }
+          }
+        }
+      }
+    ],
+    "Embedded view": [
+      {
+        "document": {
+          "fileType": "xlsx",
+          "key": "9CB47328",
+          "title": "Example Spreadsheet Title.docx",
+          "url": "https://example.com/url-to-example-document.xlsx"
+        },
+        "documentType": "cell",
+        "type": "embedded"
+      }
+    ]
+  },
+  "XLS": {
+    "Edit": [
+      {
+        "document": {
+          "fileType": "xls",
+          "key": "D01A6B57CD96",
+          "title": "Example Spreadsheet Title.xls",
+          "url": "https://example.com/url-to-example-spreadsheet.xls"
+        },
+        "documentType": "cell",
+        "editorConfig": {
+          "callbackUrl": "https://example.com/url-to-callback.ashx"
+        }
+      }
+    ]
+  },
+  "ODS": {
+    "Edit": [
+      {
+        "document": {
+          "fileType": "ods",
+          "key": "000C2F39D5A4",
+          "title": "Example Spreadsheet Title.ods",
+          "url": "https://example.com/url-to-example-spreadsheet.ods"
+        },
+        "documentType": "cell",
+        "editorConfig": {
+          "callbackUrl": "https://example.com/url-to-callback.ashx"
+        }
+      }
+    ]
+  },
+  "CSV": {
+    "Edit": [
+      {
+        "document": {
+          "fileType": "csv",
+          "key": "B04E56B18519",
+          "title": "Example Spreadsheet Title.csv",
+          "url": "https://example.com/url-to-example-spreadsheet.csv"
+        },
+        "documentType": "cell",
+        "editorConfig": {
+          "callbackUrl": "https://example.com/url-to-callback.ashx"
+        }
+      }
+    ]
+  },
+  "PPTX": {
+    "Edit": [
+      {
+        "document": {
+          "fileType": "pptx",
+          "key": "9E2BDFCD1D75",
+          "title": "Example Presentation Title.pptx",
+          "url": "https://example.com/url-to-example-presentation.pptx"
+        },
+        "documentType": "slide",
+        "editorConfig": {
+          "callbackUrl": "https://example.com/url-to-callback.ashx"
+        }
+      }
+    ],
+    "Co-Edit": [
+      {
+        "document": {
+          "fileType": "pptx",
+          "key": "B6C57F1FC447",
+          "title": "Example Presentation Title.pptx",
+          "url": "https://example.com/url-to-example-presentation.pptx"
+        },
+        "documentType": "slide",
+        "editorConfig": {
+          "callbackUrl": "https://example.com/url-to-callback.ashx",
+          "user": {
+            "id": "78e1e841",
+            "name": "John Smith"
+          }
+        }
+      },
+      {
+        "document": {
+          "fileType": "pptx",
+          "key": "B6C57F1FC447",
+          "title": "Example Presentation Title.pptx",
+          "url": "https://example.com/url-to-example-presentation.pptx"
+        },
+        "documentType": "slide",
+        "editorConfig": {
+          "callbackUrl": "https://example.com/url-to-callback.ashx",
+          "user": {
+            "id": "F89d8069ba2b",
+            "name": "Kate Cage"
+          }
+        }
+      }
+    ],
+    "Strict Co-Edit": [
+      {
+        "document": {
+          "fileType": "pptx",
+          "key": "5664FFF42E4E",
+          "title": "Example Presentation Title.pptx",
+          "url": "https://example.com/url-to-example-presentation.pptx"
+        },
+        "documentType": "slide",
+        "editorConfig": {
+          "callbackUrl": "https://example.com/url-to-callback.ashx",
+          "customization": {
+            "autosave": false
+          },
+          "user": {
+            "id": "78e1e841",
+            "name": "John Smith"
+          }
+        }
+      },
+      {
+        "document": {
+          "fileType": "pptx",
+          "key": "5664FFF42E4E",
+          "title": "Example Presentation Title.pptx",
+          "url": "https://example.com/url-to-example-presentation.pptx"
+        },
+        "documentType": "slide",
+        "editorConfig": {
+          "callbackUrl": "https://example.com/url-to-callback.ashx",
+          "customization": {
+            "autosave": false
+          },
+          "user": {
+            "id": "F89d8069ba2b",
+            "name": "Kate Cage"
+          }
+        }
+      }
+    ],
+    "Comment": [
+      {
+        "document": {
+          "fileType": "pptx",
+          "key": "DA7CC0B9",
+          "title": "Example Presentation Title.pptx",
+          "url": "https://example.com/url-to-example-presentation.pptx",
+          "permissions": {
+            "comment": true,
+            "edit": false
+          }
+        },
+        "documentType": "slide",
+        "editorConfig": {
+          "callbackUrl": "https://example.com/url-to-callback.ashx",
+          "mode": "edit"
+        }
+      }
+    ],
+    "View": [
+      {
+        "document": {
+          "fileType": "pptx",
+          "key": "37195B2B9BF4",
+          "title": "Example Presentation Title.pptx",
+          "url": "https://example.com/url-to-example-presentation.pptx"
+        },
+        "documentType": "slide",
+        "editorConfig": {
+          "mode": "view"
+        }
+      }
+    ],
+    "Rebranding": [
+      {
+        "document": {
+          "fileType": "pptx",
+          "key": "E9B24523F469",
+          "title": "Example Presentation Title.pptx",
+          "url": "https://example.com/url-to-example-presentation.pptx"
+        },
+        "documentType": "slide",
+        "editorConfig": {
+          "callbackUrl": "https://example.com/url-to-callback.ashx",
+          "customization": {
+            "customer": {
+              "address": "My City, 123a-45",
+              "info": "Some additional information",
+              "logo": "https://example.com/logo-big.png",
+              "mail": "john@example.com",
+              "name": "John Smith and Co.",
+              "www": "example.com"
+            },
+            "logo": {
+              "image": "https://example.com/logo.png",
+              "url": "https://example.com"
+            }
+          }
+        }
+      }
+    ],
+    "Embedded view": [
+      {
+        "document": {
+          "fileType": "pptx",
+          "key": "1CA69995",
+          "title": "Example Presentation Title.docx",
+          "url": "https://example.com/url-to-example-document.pptx"
+        },
+        "documentType": "slide",
+        "type": "embedded"
+      }
+    ]
+  },
+  "PPSX": {
+    "Edit": [
+      {
+        "document": {
+          "fileType": "ppsx",
+          "key": "3DAB8BAA68E4",
+          "title": "Example Presentation Title.ppsx",
+          "url": "https://example.com/url-to-example-presentation.ppsx"
+        },
+        "documentType": "slide",
+        "editorConfig": {
+          "callbackUrl": "https://example.com/url-to-callback.ashx"
+        }
+      }
+    ]
+  },
+  "PPT": {
+    "Edit": [
+      {
+        "document": {
+          "fileType": "ppt",
+          "key": "EEE93333E5F3",
+          "title": "Example Presentation Title.ppt",
+          "url": "https://example.com/url-to-example-presentation.ppt"
+        },
+        "documentType": "slide",
+        "editorConfig": {
+          "callbackUrl": "https://example.com/url-to-callback.ashx"
+        }
+      }
+    ]
+  },
+  "ODP": {
+    "Edit": [
+      {
+        "document": {
+          "fileType": "odp",
+          "key": "47BAE2E8A54F",
+          "title": "Example Presentation Title.odp",
+          "url": "https://example.com/url-to-example-presentation.odp"
+        },
+        "documentType": "slide",
+        "editorConfig": {
+          "callbackUrl": "https://example.com/url-to-callback.ashx"
+        }
+      }
+    ]
+  }
+}

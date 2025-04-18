@@ -1,31 +1,43 @@
-import type { ReactNode } from 'react';
+import { useState, type ReactNode } from 'react';
 import styles from './styles.module.css';
 import {Link} from 'react-router-dom';
+import { TryNowCodeModal } from '@site/src/components/Modal';
+import { code } from '@site/src/components/Modal/TryNowCodeModal/CodeBlock/types';
+import codeblocksData from '@site/src/components/TryNow/codeblocksData.json';
 
-const FileFormatButton: React.FC<{ 
-  format: string, 
-  type: 'document' | 'spreadsheet' | 'presentation' | 'pdf', 
-  category: string 
-}> = ({ format, type, category }) => {
-
-  const handleCodeClick = () => {
-    console.log(`Viewing source code for ${format} in ${category}`);
+type FileFormatButtonProps = {
+  format: string;
+  type: 'document' | 'spreadsheet' | 'presentation' | 'pdf';
+  category: string;
+  actionName: string;
+  modalStates: {
+    setIsCodeModalOpen: React.Dispatch<React.SetStateAction<boolean>>;
+    setCodeModalData: React.Dispatch<React.SetStateAction<{ title: string; codes: code[] }>>;
   };
+};
 
+const FileFormatButton = ({ format, type, category, actionName, modalStates }: FileFormatButtonProps) => {
   const formatClass = styles[type + 'Format'];
+  const { setIsCodeModalOpen, setCodeModalData } = modalStates;
+
+  const handleOpenModal = () => {
+    setCodeModalData({
+      title: `OPEN ${format} ${actionName}`,
+      codes: codeblocksData[format][category].map((codeblockData: code) => ({
+        ...codeblockData,
+        width: '100%',
+        height: '100%',
+      })),
+    });
+    setIsCodeModalOpen(true);
+  };
 
   return (
     <div className={styles.formatButtonRow}>
-      <Link
-        to={`editor?format=${format}&type=${type}&category=${category}`}
-        className={`${styles.formatLabel} ${formatClass}`}
-      >
+      <Link className={`${styles.formatLabel} ${formatClass}`} to={`editor?format=${format}&type=${type}&category=${category}`}>
         {format}
       </Link>
-      <span 
-        onClick={handleCodeClick} 
-        className={styles.codeButton}
-      >
+      <span className={styles.codeButton} onClick={handleOpenModal}>
         {`</>`}
       </span>
     </div>
@@ -41,6 +53,7 @@ export default function TryNowPage(): ReactNode {
   const categoriesFormats = [
     {
       name: 'Edit',
+      actionName: 'FOR EDITING',
       document: documentFormats,
       spreadsheet: spreadsheetFormats,
       presentation: presentationFormats,
@@ -48,6 +61,7 @@ export default function TryNowPage(): ReactNode {
     },
     {
       name: 'Co-Edit',
+      actionName: 'FOR CO-EDITING',
       document: [documentFormats[0]],
       spreadsheet: [spreadsheetFormats[0]],
       presentation: [presentationFormats[0]],
@@ -55,6 +69,7 @@ export default function TryNowPage(): ReactNode {
     },
     {
       name: 'Strict Co-Edit',
+      actionName: 'FOR CO-EDITING IN STRICT MODE',
       document: [documentFormats[0]],
       spreadsheet: [spreadsheetFormats[0]],
       presentation: [presentationFormats[0]],
@@ -62,6 +77,7 @@ export default function TryNowPage(): ReactNode {
     },
     {
       name: 'Editing forms',
+      actionName: 'FORM FOR EDITING',
       document: [],
       spreadsheet: [],
       presentation: [],
@@ -69,6 +85,7 @@ export default function TryNowPage(): ReactNode {
     },
     {
       name: 'Filling in forms',
+      actionName: 'FOR FILLING IN FORMS',
       document: [],
       spreadsheet: [],
       presentation: [],
@@ -76,6 +93,7 @@ export default function TryNowPage(): ReactNode {
     },
     {
       name: 'Local filter',
+      actionName: 'WITHOUT ACCESS TO CHANGE THE FILTER',
       document: [],
       spreadsheet: [spreadsheetFormats[0]],
       presentation: [],
@@ -83,6 +101,7 @@ export default function TryNowPage(): ReactNode {
     },
     {
       name: 'Review',
+      actionName: 'FOR REVIEW',
       document: [documentFormats[0]],
       spreadsheet: [],
       presentation: [],
@@ -90,6 +109,7 @@ export default function TryNowPage(): ReactNode {
     },
     {
       name: 'Restricted review',
+      actionName: 'FOR RESTRICTED REVIEW',
       document: [documentFormats[0]],
       spreadsheet: [],
       presentation: [],
@@ -97,6 +117,7 @@ export default function TryNowPage(): ReactNode {
     },
     {
       name: 'Content control settings restricted',
+      actionName: 'WITHOUT ACCESS TO THE CONTENT CONTROL SETTINGS',
       document: [documentFormats[0]],
       spreadsheet: [],
       presentation: [],
@@ -104,6 +125,7 @@ export default function TryNowPage(): ReactNode {
     },
     {
       name: 'Comment',
+      actionName: 'FOR COMMENTING',
       document: [documentFormats[0]],
       spreadsheet: [spreadsheetFormats[0]],
       presentation: [presentationFormats[0]],
@@ -111,6 +133,7 @@ export default function TryNowPage(): ReactNode {
     },
     {
       name: 'Restricted comment',
+      actionName: 'FOR RESTRICTED COMMENTING',
       document: [documentFormats[0]],
       spreadsheet: [],
       presentation: [],
@@ -118,6 +141,7 @@ export default function TryNowPage(): ReactNode {
     },
     {
       name: 'View',
+      actionName: 'FOR VIEWING',
       document: [documentFormats[0]],
       spreadsheet: [spreadsheetFormats[0]],
       presentation: [presentationFormats[0]],
@@ -125,6 +149,7 @@ export default function TryNowPage(): ReactNode {
     },
     {
       name: 'Rebranding',
+      actionName: 'WITH REBRANDING',
       document: [documentFormats[0]],
       spreadsheet: [spreadsheetFormats[0]],
       presentation: [presentationFormats[0]],
@@ -132,6 +157,7 @@ export default function TryNowPage(): ReactNode {
     },
     {
       name: 'Embedded view',
+      actionName: 'FILE FOR EMBEDDED VIEWING',
       document: [documentFormats[0]],
       spreadsheet: [spreadsheetFormats[0]],
       presentation: [presentationFormats[0]],
@@ -162,37 +188,45 @@ export default function TryNowPage(): ReactNode {
     }
   ];
 
+  const [isCodeModalOpen, setIsCodeModalOpen] = useState<boolean>(false);
+  const [codeModalData, setCodeModalData] = useState<{ title: string; codes: code[] }>({ title: '', codes: [] });
+
   return (
-    <table className={styles.formatsTable}>
-      <thead>
-        <tr>
-          <th></th>
-          {columnConfigs.map(({ title }) => (
-            <th key={title}>{title}</th>
-          ))}
-        </tr>
-      </thead>
-      <tbody>
-        {categoriesFormats.map((categoryFormat) => (
-          <tr key={categoryFormat.name}>
-            <td className={styles.categoryCell}>{categoryFormat.name}</td>
-            {columnConfigs.map(({ title, type }) => (
-              <td key={title} className={styles.formatCell}>
-                <div className={styles.formatButtonContainer}>
-                  {categoryFormat[type as 'document' | 'spreadsheet' | 'presentation' | 'pdf'].map((format) => (
-                    <FileFormatButton 
-                      key={format}
-                      format={format} 
-                      type={type as any} 
-                      category={categoryFormat.name} 
-                    />
-                  ))}
-                </div>
-              </td>
+    <>
+      <table className={styles.formatsTable}>
+        <thead>
+          <tr>
+            <th></th>
+            {columnConfigs.map(({ title }) => (
+              <th key={title}>{title}</th>
             ))}
           </tr>
-        ))}
-      </tbody>
-    </table>
+        </thead>
+        <tbody>
+          {categoriesFormats.map((categoryFormat) => (
+            <tr key={categoryFormat.name}>
+              <td className={styles.categoryCell}>{categoryFormat.name}</td>
+              {columnConfigs.map(({ title, type }) => (
+                <td key={title} className={styles.formatCell}>
+                  <div className={styles.formatButtonContainer}>
+                    {categoryFormat[type as 'document' | 'spreadsheet' | 'presentation' | 'pdf'].map((format) => (
+                      <FileFormatButton
+                        key={format}
+                        format={format}
+                        type={type as any}
+                        category={categoryFormat.name}
+                        actionName={categoryFormat.actionName}
+                        modalStates={{ setIsCodeModalOpen: setIsCodeModalOpen, setCodeModalData: setCodeModalData }}
+                      />
+                    ))}
+                  </div>
+                </td>
+              ))}
+            </tr>
+          ))}
+        </tbody>
+      </table>
+      <TryNowCodeModal isOpenState={[isCodeModalOpen, setIsCodeModalOpen]} title={codeModalData.title} codes={codeModalData.codes} />
+    </>
   );
 };
