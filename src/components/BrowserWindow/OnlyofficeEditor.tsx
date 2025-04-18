@@ -74,17 +74,16 @@ const createDocumentConfig = (fileType: string): object => {
   };
 };
 
-const addScript = async (secret: string, fileType: string, code: string, theme: string): Promise<void> => {
+const addScript = async (server: string, secret: string, fileType: string, code: string, theme: string): Promise<void> => {
   const scriptConfig = document.createElement("script");
   scriptConfig.type = "text/javascript";
 
   const documentConfig = createDocumentConfig(fileType);
-
   const config = {
     document: documentConfig,
     documentType: getDocumentType(fileType),
     editorConfig: {
-      callbackUrl: "",
+      callbackUrl: server + "dummyCallback",
       customization: {
         anonymous: {request: false},
         uiTheme: theme === "dark" ? "theme-dark" : "theme-light",
@@ -147,13 +146,13 @@ const OnlyOfficeEditor: React.FC<OnlyOfficeEditorProps> = ({
         };
         scriptApi.onload = () => {
           document.documentElement.setAttribute("data-script-api-state", "2");
-          addScript(documentServerSecret, fileType, code, colorMode);
+          addScript(documentServer, documentServerSecret, fileType, code, colorMode);
         };
   
         document.documentElement.setAttribute("data-script-api-state", "1");
         document.body.appendChild(scriptApi);
       } else {
-        addScript(documentServerSecret, fileType, code, colorMode);
+        addScript(documentServer, documentServerSecret, fileType, code, colorMode);
       }
     }
 
