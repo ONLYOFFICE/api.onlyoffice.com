@@ -1,11 +1,11 @@
 ---
 id: o-auth-2-consent-endpoint
-title: "OAuth2 Consent Endpoint"
-description: "Sends consent approval"
-sidebar_label: "OAuth2 Consent Endpoint"
+title: "OAuth2 consent endpoint"
+description: "Sends a consent request with the specified parameters."
+sidebar_label: "OAuth2 consent endpoint"
 hide_title: true
 hide_table_of_contents: true
-api: eJyNVUtvGzcQ/ivEXHRZxfIjdrs3R0kBpwVc2DJ8MASDIkcW412SIWftqML+92LIlbRr1U18sLicmW/eHzdA8ilC+QCXDa1cMP9IMs7CvACNUQXj02cJt2h1FMrZiJaE9D64F1lBAQG/Nxjpk9NrKDegnCW0xMe6qch4Geho6UI91pIkX0e1wjqdaO0RSnCLb6gICvDBeQxkMCakyqClR6N7qpGCsU9QAP6Qta/46lxdqOXxxWJ8vNCn47ML/XH8+5k6Hy/wRJ9+vJjg8flv0BYQSRL+P5RcKI1JVzn/E92lqTCWAaWGNv1xJaLn+qToTycn/DMs4g1qE1CRICdohSKnOIoibAV3N1fi1dBKyH47hHI5sLPJ5BD1yr7IymjRdUJ4GWSNhCEChxVRNcHQGsqHDcioHhn68Rn5AlICBbwGQwjzdl5AjbRyGkrwLqamSFpBCUeOzU6OtnEhMHJ4YS8M3IQKStgsZMS7ULVwOD+sywO0NE9NyFNWwIsMRi6qXLPOOGe4lE1FUMIB0ucsEnc3f3Hp5/sMb3myMtQwz10jpTd/4voA8i6imDr3bDDVHS0ZtY3QyjpZ9gELMGymkgn35ZOMRvX8rIj8gZcvljCItWuCaCIGBhbSauFljK8ucB/SbjDAIgEyMsqA4degR1lZbL7ez8TMPaNtRwPQjFV0hz9cqCWX+Ov9jF1dpuIcOHynZpeDQgkTheaZq41FLRbrNN+jAamMxAqlTgF0RR147Ira6bQFXLP1SZ8o0ggeRJL1xLJyr3l3Bl7FlHenABbn0ehLk/DtZZpBHjziGu6+EiskiLQ1vM5SC6kUxsgb7YMjVIS8idE1QWHcrVYJ9/z7E+3MI9ce7VWf9Vy6mDprM0++SZ+ln0UnPhzggXWXDLsxdumSE0NV1wxeSAwx455+OP4w4T4wEdTSsm7Xt67i0+41+GK1d8YehNZ7Dd5/P7ocCX/Qka+kseyyySyQuedh3/g9+8wLWDFBlQ+w2bFOy9ffGwzMbfM9u/BXW2xHi+kq0QJMc3jjGcfA6lXDsfzXwzWgxr+vb2e8Rt2bV6chAlZOusX+mB1z2MONyizSHTigrciue4G8IZ0cNP9vi3csNpu8rm2708+idy12O5m1uf7ztm3/BaL1xxk=
+api: eJydVU1v4zgM/SsCL7k4bfox7a5vncwM0NkFumhS9FAEhSwxtba25JHodrKB//uCkvPhZostpodGFsnHJ4p8WgPJpwD5A1y1VDpv/pFknIVFBhqD8qaJnznM0OogpFDOBrQkPP5oMZB4NVQKKlGEBpVZGtSikV7WSOjDEWTQO352egX5GpSzhJZ4WbcVmUZ6Ol46X4+1JMnbQZVYxxWtGoQcXPE3KoIMGu8a9GQwRKTKoKVHo/dcA3ljn+At+XmJIrkLo9ES8/TChNCiFuQi/96uW0YQHp9MIB+LwafAn7JuKk5xoS7V8uSyGJ8U+mx8fqk/jX8/VxfjAk/12afLCZ5c/AZdBoEk4ceoeWm1q0XyEG1IpIKrXjBSm85uv4mXtrLoZWEqQyvReFdUWA+pyUJpjLmVaz6YOzRS4TggXxqhFpUJJNxyc7+oRQQTDfrahGCcDcOkS1NhyD1KDV384ysPDbdJvKazySn/DDPfojYeFQ2LPwrCbwx3t9ept+R+Xwrl0gnPJ5ND1Gv7Iiujt725a0RgWgFV6w2tIH9YgwzqkaEfn5E3IB4gg1dvCGHRLTKokUqnIYfGhdh9kkrI4dhx2OnxhhcCI/sXzsLAra8gh3UhA975qjso+iz68hwtzVObOgwyeJHeyKJKNeuD0wmXsq0IcjhA+pJM4u72Ty79YnfCGY9Qghqec9sRsjF/4OoA8i6gmDr3bDDWnUdFbRhaWcfIfcAMDIepGML38lkGo/bylETNQZavltCLlWs9N7tnYCEtC0cIr87zPUQRYIAiAjIySo/+Y9Cj5CzW3+/nYu6e0XajAWjCyvrFN+drySX+fj/nVFexOAcJ36nZ1aBQwgShuedqY1GLYhX7ezRQ15EoUepIoC/qIGNf1N6ny+CGo0/3FTG24AGT5CeWlXtNszPIKqY8OxmwObXGvjUa327GHuTGI67h9isqQoSIU8PjLLWQSmEIPNGNd4SKtcNjcK1XGLajlcM9//6Pd9KRmwbt9b68u7gxddamB+HN8dn6RfTmwwYeRPeH4TTGLl1MYqjqL4MHEn1IuGdHJ0cTvgcWglpa9u3vra/45lFEqxtn7AG1vWfv1x/SvgaEP+m4qaSxTKlNKpG06WHXGDt1WmRQsoDlD7DeqlLH2z9a9Kx9i5368FeXbVqP5SzKBkwT/fGcObB71TKX/3rBB9L5181szmPWP/51bDJg5+ib7ZYpMdMeTlxSmX7BhDYmu9oj8kaUEmn+32XvRKzXaZy7buufTO9GbGc2eXP9F13X/QsXADOr
 sidebar_class_name: "post api-method"
 info_path: site/docspace/api-backend/usage-api/api
 custom_edit_url: null
@@ -22,7 +22,7 @@ import Heading from "@theme/Heading";
 <Heading
   as={"h1"}
   className={"openapi__heading"}
-  children={"OAuth2 Consent Endpoint"}
+  children={"OAuth2 consent endpoint"}
 >
 </Heading>
 
@@ -36,7 +36,7 @@ import Heading from "@theme/Heading";
 
 
 
-Sends consent approval
+Sends a consent request with the specified parameters.
 
 <Heading
   id={"request"}
@@ -54,7 +54,7 @@ Sends consent approval
 
 <RequestSchema
   title={"Body"}
-  body={{"content":{"multipart/form-data":{"schema":{"type":"object","properties":{"client_id":{"type":"string","example":"6c7cf17b-1bd3-47d5-94c6-be2d3570e168"},"state":{"type":"string","example":"abcde"},"scope":{"type":"string","example":"files:read"}}}}}}}
+  body={{"content":{"multipart/form-data":{"schema":{"type":"object","properties":{"client_id":{"type":"string","description":"The client identifier issued to the client during registration.","example":"6c7cf17b-1bd3-47d5-94c6-be2d3570e168"},"state":{"type":"string","description":"The random string used to solve the CSRF vulnerability problem.","example":"abcde"},"scope":{"type":"string","description":"The space-separated list of requested scope permissions.","example":"files:read"}}}}}}}
 >
   
 </RequestSchema>
