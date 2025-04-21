@@ -16,11 +16,27 @@
   box-shadow: 1px 1px 8px #aaa;
 }
 
-.tryNowCodeModal > span {
+.tryNowCodeModal > div:nth-child(1) {
+  display: flex;
+  justify-content: space-between;
   word-break: none;
 }
 
-.tryNowCodeModal > div {
+.tryNowCodeModal > div:nth-child(1) button {
+  cursor: pointer;
+
+  font-weight: bold;
+  font-size: 28px;
+  font-weight: bold;
+  word-break: none;
+
+  background-color: transparent;
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+.tryNowCodeModal > div:nth-child(2) {
   display: flex;
   flex-direction: column;
   gap: 1em;

@@ -34,7 +34,7 @@ const FileFormatButton = ({ format, type, category, actionName, modalStates }: F
 
   return (
     <div className={styles.formatButtonRow}>
-      <Link className={`${styles.formatLabel} ${formatClass}`} to={`editor?format=${format}&type=${type}&category=${category}`}>
+      <Link className={`${styles.formatLabel} ${formatClass}`} to={`editor?format=${format}&type=${type}&category=${category}`} target='_blank'>
         {format}
       </Link>
       <span className={styles.codeButton} onClick={handleOpenModal}>

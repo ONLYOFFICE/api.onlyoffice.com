@@ -29,7 +29,12 @@ const TryNowCodeModal = ({ isOpenState, title = "Open format for work in choosen
   return (
     <ModalWrapper isOpenState={isOpenState}>
       <div className={styles.tryNowCodeModal}>
-        <span>{title}</span>
+        <div>
+          <span>{title}</span>
+          <button type="button" onClick={() => setIsOpen(false)}>
+            ×
+          </button>
+        </div>
         {codes.map((code, i) => (
           <div key={i}>
             <CodeBlock
