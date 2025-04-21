@@ -24,36 +24,47 @@ const ObjectInner = ({ children, nesting = 0 }: Props) => {
         </React.Fragment>
       );
 
-      if (typeof value === "string") {
-        const idVal = uniqueId++;
-        wrappedObjectInner.push(
-          <React.Fragment key={`value-${idVal}`}>
-            <PaintedText black>:</PaintedText>
-            <PaintedText red>{` "${value}"`}</PaintedText>
-            {i !== lastEntryIndex && <PaintedText black>,</PaintedText>}
-          </React.Fragment>
-        );
-      } else if (typeof value === "object" && value !== null) {
-        const idOpen = uniqueId++;
-        wrappedObjectInner.push(
-          <React.Fragment key={`open-${idOpen}`}>
-            <PaintedText black>{": {"}</PaintedText>
-            <br key={`open-br-${idOpen}`} />
-          </React.Fragment>
-        );
+      const idVal = uniqueId++;
+      switch (typeof value) {
+        case "string":
+          wrappedObjectInner.push(
+            <React.Fragment key={`value-${idVal}`}>
+              <PaintedText black>:</PaintedText>
+              <PaintedText red>{` "${value}"`}</PaintedText>
+              {i !== lastEntryIndex && <PaintedText black>,</PaintedText>}
+            </React.Fragment>
+          );
+          break;
+        case "boolean":
+          wrappedObjectInner.push(
+            <React.Fragment key={`valueBool-${idVal}`}>
+              <PaintedText black>:</PaintedText>
+              <PaintedText red>{` ${value}`}</PaintedText>
+              {i !== lastEntryIndex && <PaintedText black>,</PaintedText>}
+            </React.Fragment>
+          );
+          break;
+        case "object":
+          if (value) {
+            wrappedObjectInner.push(
+              <React.Fragment key={`open-${idVal}`}>
+                <PaintedText black>{": {"}</PaintedText>
+                <br key={`open-br-${idVal}`} />
+              </React.Fragment>
+            );
 
-        wrapObjectInner(value, nesting + 1);
+            wrapObjectInner(value, nesting + 1);
 
-        const idClose = uniqueId++;
-        wrappedObjectInner.push(
-          <React.Fragment key={`close-${idClose}`}>
-            <MultiTab tabs={nesting} />
-            <PaintedText black>
-              {"}"}
-              {i !== lastEntryIndex && ","}
-            </PaintedText>
-          </React.Fragment>
-        );
+            wrappedObjectInner.push(
+              <React.Fragment key={`close-${idVal}`}>
+                <MultiTab tabs={nesting} />
+                <PaintedText black>
+                  {"}"}
+                  {i !== lastEntryIndex && ","}
+                </PaintedText>
+              </React.Fragment>
+            );
+          }
       }
 
       wrappedObjectInner.push(<br key={`br-${uniqueId++}`} />);

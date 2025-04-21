@@ -1,9 +1,9 @@
 import { useState, type ReactNode } from 'react';
-import styles from './styles.module.css';
 import {Link} from 'react-router-dom';
 import { TryNowCodeModal } from '@site/src/components/Modal';
 import { code } from '@site/src/components/Modal/TryNowCodeModal/CodeBlock/types';
 import codeblocksData from '@site/src/components/TryNow/codeblocksData.json';
+import styles from './styles.module.css';
 
 type FileFormatButtonProps = {
   format: string;
