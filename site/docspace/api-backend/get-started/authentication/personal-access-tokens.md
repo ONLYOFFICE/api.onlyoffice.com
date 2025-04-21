@@ -1,11 +1,11 @@
 ---
-sidebar_position: -6
+sidebar_position: -3
 ---
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# Passing authentication
+# Personal access tokens
 
 The user needs to perform several easy steps to pass authentication:
 

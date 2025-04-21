@@ -106,17 +106,6 @@ export const DocSpaceFeatures: Features = {
       icon: <PluginIcon/>,
     },
     {
-      title: 'OAuth API',
-      link: 'oauth-api/get-started/basic-concepts',
-      description: (
-        <>
-          In this section, you will learn how to register a new OAuth application{" "}
-          on the DocSpace portal.
-        </>
-      ),
-      icon: <DocsApiIcon/>,
-    },
-    {
       title: 'API backend',
       link: 'api-backend/get-started/basic-concepts',
       description: (

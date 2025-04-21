@@ -4,7 +4,13 @@ sidebar_position: -1
 
 # API keys
 
-The ONLYOFFICE DocSpace API uses API keys for [authentication](passing-authentication.md). Create and manage API keys on your portal from the **Developer Tools** page:
+API keys are simple tokens used to authenticate API requests. They act as a unique identifier and secret that confirms the identity of the calling application or service.
+
+Unlike user-based authentication methods (such as [OAuth](oauth2/oauth2.md) or [personal access tokens](personal-access-tokens.md)), API keys are typically tied to the application itself, not to an individual user.
+
+## How to create API keys
+
+The ONLYOFFICE DocSpace API uses API keys for authentication. Create and manage API keys on your portal from the **Developer Tools** page:
 
 1. Go to the DocSpace settings.
 2. Navigate to the **Developer Tools** section.
@@ -19,6 +25,8 @@ The ONLYOFFICE DocSpace API uses API keys for [authentication](passing-authentic
     ![Create API key](/assets/images/docspace/create-api-key.png)
 
 > Do not share the API key or include it in any client-side code (browsers, apps). API keys should be securely loaded from environment variables or a key management service on the server side.
+
+## How to use API keys
 
 When calling the API, pass the API keys in the Authorization header in the same way as an OAuth access token.
 
@@ -36,6 +44,8 @@ curl https://yourportal.onlyoffice.com/api/2.0/people/@self \
 ```
 
 where `ONLYOFFICE_API_KEY` is the API key.
+
+## Security known issues
 
 For security, regularly audit the list of API keys you have created and revoke any keys that are no longer in use.
 

@@ -1,5 +1,5 @@
 ---
-sidebar_position: -3
+sidebar_position: -4
 ---
 
 # Basic concepts
@@ -14,7 +14,7 @@ The ONLYOFFICE DocSpace API is implemented as REST over HTTP using GET/POST/PUT/
 
 ## Authentication
 
-Authentication in the ONLYOFFICE DocSpace API is managed via the HTTP authentication, i.e. every request must include the Authorization HTTP header. For information and examples please visit the [Authentication](./how-it-works/passing-authentication.md) section.
+To interact with the API, most requests require authentication. The authentication method you choose depends on your application's purpose, its users, and the features it requires. For information and examples, visit the [Authentication](authentication/authentication.md) section.
 
 ## Making requests
 
