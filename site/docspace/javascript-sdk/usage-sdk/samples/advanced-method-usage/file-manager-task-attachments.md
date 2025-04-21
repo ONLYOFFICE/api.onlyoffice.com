@@ -1,5 +1,5 @@
-# File manager with task attachments
-This example demonstrates how to integrate the DocSpace file selector into a task management interface, allowing users to attach files to tasks using a modal.
+# File Manager with Task Attachments
+This example demonstrates how to integrate the DocSpace file selector into a task management interface. Users can attach files to individual tasks by selecting a row and using a modal-based file selector.
 
 ## Before you start
 Please make sure you are using a server environment to run the HTML file because the JavaScript SDK must be launched on the server.
@@ -9,16 +9,17 @@ You need to [add the URL](../../../get-started/basic-concepts.md#step-1-specifyi
 
 ```html
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
+    <title>Task Attachments</title>
     <script src="{PORTAL_SRC}/static/scripts/sdk/1.0.0/api.js"></script>
-    <title>An example of using file manager</title>
     <style>
-      /* Full CSS omitted for brevity */
+      /* CSS omitted for brevity */
     </style>
   </head>
   <body>
+    <!-- Task table -->
     <div id="taskContainer">
       <table id="taskTable">
         <thead>
@@ -38,106 +39,120 @@ You need to [add the URL](../../../get-started/basic-concepts.md#step-1-specifyi
         </tbody>
       </table>
     </div>
+
+    <!-- Attachment panel -->
     <div id="attachmentsPanel">
       <h2>Attachments</h2>
       <ul id="attachmentsList"></ul>
       <button id="attachButton">Attach file</button>
     </div>
+
+    <!-- Modal container for SDK -->
     <dialog id="modal" style="width: 600px; height: 700px;">
       <div id="ds-frame"></div>
     </dialog>
-  </body>
-  <script>
-    const taskRows = document.querySelectorAll(".task-row");
-    let selectedTask = null;
 
-    const loadAttachments = (taskRow) => {
-      const attachmentsList = document.querySelector("#attachmentsList");
-      attachmentsList.innerHTML = "";
-      if (taskRow.attachments && taskRow.attachments.length !== 0) {
-        for (const item of taskRow.attachments) {
-          attachmentsList.append(item);
-        }
-      }
-    };
+    <script>
+      // Step 1: Select and highlight task
+      const taskRows = document.querySelectorAll('.task-row')
+      let selectedTask = null
 
-    for (const row of taskRows) {
-      row.addEventListener("click", ((loadAttachments) => {
-        return () => {
-          if (selectedTask) {
-            selectedTask.classList.remove("selected");
+      const loadAttachments = (taskRow) => {
+        const attachmentsList = document.getElementById('attachmentsList')
+        attachmentsList.innerHTML = ''
+        if (taskRow.attachments?.length) {
+          for (const item of taskRow.attachments) {
+            attachmentsList.append(item)
           }
-          selectedTask = row;
-          row.classList.add("selected");
-          loadAttachments(row);
-        };
-      })(loadAttachments));
-    }
-
-    const modalElement = document.querySelector("#modal");
-    const attachButton = document.querySelector("#attachButton");
-
-    attachButton.addEventListener("click", () => {
-      if (selectedTask) {
-        modalElement.showModal();
-      }
-    });
-
-    function onSelectCallback(e) {
-      modalElement.close(JSON.stringify({
-        id: e.id,
-        title: e.title,
-      }));
-    }
-
-    const dsURL = "{PORTAL_SRC}/doceditor?fileId=";
-
-    modalElement.addEventListener("close", () => {
-      const result = modalElement.returnValue;
-      if (result && selectedTask) {
-        const {id, title} = JSON.parse(result);
-        const noAttachmentsMessage = document.querySelector("#attachmentsList .no-attachments");
-        if (noAttachmentsMessage) {
-          noAttachmentsMessage.remove();
         }
-        const listItem = document.createElement("li");
-        listItem.className = "attachment-item";
-        const link = document.createElement("a");
-        link.href = dsURL + id;
-        link.target = "_blank";
-        link.textContent = title;
-        listItem.append(link);
-
-        const deleteButton = document.createElement("button");
-        deleteButton.className = "delete-button";
-        deleteButton.textContent = "Delete";
-        deleteButton.addEventListener("click", () => {
-          listItem.remove();
-          selectedTask.attachments = selectedTask.attachments.filter(i => i !== listItem);
-        });
-        listItem.append(deleteButton);
-
-        selectedTask.attachments ||= [];
-        selectedTask.attachments.push(listItem);
-        document.querySelector("#attachmentsList").append(listItem);
       }
-    });
 
-    function onAppReady() {
-      const frame = DocSpace.SDK.frames["ds-frame"];
-    }
+      for (const row of taskRows) {
+        row.addEventListener('click', ((loadAttachments) => {
+          return () => {
+            if (selectedTask) selectedTask.classList.remove('selected')
+            selectedTask = row
+            row.classList.add('selected')
+            loadAttachments(row)
+          }
+        })(loadAttachments))
+      }
 
-    const config = {
-      events: {
-        onSelectCallback,
-        onAppReady,
-      },
-      height: "700px",
-      width: "100%",
-    };
+      // Step 2: Handle modal open
+      const modalElement = document.getElementById('modal')
+      const attachButton = document.getElementById('attachButton')
 
-    DocSpace.SDK.initFileSelector(config);
-  </script>
+      attachButton.addEventListener('click', () => {
+        if (selectedTask) {
+          modalElement.showModal()
+        }
+      })
+
+      // Step 3: Handle file selection
+      const dsURL = '{PORTAL_SRC}/doceditor?fileId='
+
+      function onSelectCallback(e) {
+        modalElement.close(JSON.stringify({
+          id: e.id,
+          title: e.title
+        }))
+      }
+
+      // Step 4: Render and manage attachments
+      modalElement.addEventListener('close', () => {
+        const result = modalElement.returnValue
+        if (result && selectedTask) {
+          const { id, title } = JSON.parse(result)
+
+          // Remove "no attachments" message
+          const noAttachments = document.querySelector('#attachmentsList .no-attachments')
+          if (noAttachments) noAttachments.remove()
+
+          // Create list item with link
+          const listItem = document.createElement('li')
+          listItem.className = 'attachment-item'
+
+          const link = document.createElement('a')
+          link.href = dsURL + id
+          link.target = '_blank'
+          link.textContent = title
+          listItem.append(link)
+
+          // Add delete button
+          const deleteButton = document.createElement('button')
+          deleteButton.className = 'delete-button'
+          deleteButton.textContent = 'Delete'
+          deleteButton.addEventListener('click', () => {
+            listItem.remove()
+            selectedTask.attachments = selectedTask.attachments.filter(i => i !== listItem)
+          })
+
+          listItem.append(deleteButton)
+
+          // Store and display attachment
+          selectedTask.attachments ||= []
+          selectedTask.attachments.push(listItem)
+          document.getElementById('attachmentsList').append(listItem)
+        }
+      })
+
+      // Step 5: Initialize file selector
+      function onAppReady() {
+        const frame = DocSpace.SDK.frames['ds-frame']
+      }
+
+      const config = {
+        events: {
+          onSelectCallback,
+          onAppReady
+        },
+        height: '700px',
+        width: '100%'
+      }
+
+      DocSpace.SDK.initFileSelector(config)
+    </script>
+  </body>
 </html>
 ```
 
@@ -145,120 +160,129 @@ You need to [add the URL](../../../get-started/basic-concepts.md#step-1-specifyi
 
 ## Script Execution Steps
 
-### 1. Task selection setup
+### 1. Select and highlight task
 
 ```js
-const taskRows = document.querySelectorAll(".task-row");
-let selectedTask = null;
+const taskRows = document.querySelectorAll('.task-row')
+let selectedTask = null
 ```
 
-Each task row gets a `click` handler:
+- Defines task row elements
+- Keeps track of the selected task
+
+Clicking on a row highlights the task and loads its attachments:
 
 ```js
 for (const row of taskRows) {
-  row.addEventListener("click", ((loadAttachments) => {
+  row.addEventListener('click', ((loadAttachments) => {
     return () => {
-      if (selectedTask) {
-        selectedTask.classList.remove("selected");
-      }
-      selectedTask = row;
-      row.classList.add("selected");
-      loadAttachments(row);
-    };
-  })(loadAttachments));
+      if (selectedTask) selectedTask.classList.remove('selected')
+      selectedTask = row
+      row.classList.add('selected')
+      loadAttachments(row)
+    }
+  })(loadAttachments))
 }
 ```
 
-Clicking a row marks it as selected and loads any attachments associated with it:
-
-```js
-const loadAttachments = (taskRow) => {
-  const attachmentsList = document.querySelector("#attachmentsList");
-  attachmentsList.innerHTML = "";
-  if (taskRow.attachments && taskRow.attachments.length !== 0) {
-    for (const item of taskRow.attachments) {
-      attachmentsList.append(item);
-    }
-  }
-};
-```
+- Adds click handlers to task rows
+- Highlights the selected row
+- Loads existing attachments if present
 
 ---
 
-### 2. File attachment modal
+### 2. Open modal with SDK
 
 ```js
-const modalElement = document.querySelector("#modal");
-const attachButton = document.querySelector("#attachButton");
+const modalElement = document.getElementById('modal')
+const attachButton = document.getElementById('attachButton')
 
-attachButton.addEventListener("click", () => {
+attachButton.addEventListener('click', () => {
   if (selectedTask) {
-    modalElement.showModal();
+    modalElement.showModal()
   }
-});
+})
 ```
 
-When the attach button is clicked, the modal with the file selector opens (only if a task is selected).
+- Opens file selector modal
+- Works only when a task is selected
 
 ---
 
-### 3. Handling file selection
+### 3. Handle file selection via SDK
 
 ```js
 function onSelectCallback(e) {
   modalElement.close(JSON.stringify({
     id: e.id,
-    title: e.title,
-  }));
+    title: e.title
+  }))
 }
 ```
 
-The file selector invokes this callback. The selected file info is passed through `modal.returnValue`.
+- Closes the modal
+- Saves selected file ID and title to `returnValue`
 
 ---
 
-### 4. Rendering and managing attachments
+### 4. Render and manage file attachments
 
 ```js
-modalElement.addEventListener("close", () => {
-  const result = modalElement.returnValue;
+modalElement.addEventListener('close', () => {
+  const result = modalElement.returnValue
   if (result && selectedTask) {
-    const {id, title} = JSON.parse(result);
-```
+    const { id, title } = JSON.parse(result)
 
-- Parses the returned data
-- Creates a new attachment with a link and delete button
+    const listItem = document.createElement('li')
+    listItem.className = 'attachment-item'
 
-```js
-    const listItem = document.createElement("li");
-    listItem.className = "attachment-item";
-    const link = document.createElement("a");
-    link.href = dsURL + id;
-    link.target = "_blank";
-    link.textContent = title;
-    listItem.append(link);
-```
+    const link = document.createElement('a')
+    link.href = dsURL + id
+    link.target = '_blank'
+    link.textContent = title
+    listItem.append(link)
 
-- Adds delete button and logic:
+    const deleteButton = document.createElement('button')
+    deleteButton.className = 'delete-button'
+    deleteButton.textContent = 'Delete'
+    deleteButton.addEventListener('click', () => {
+      listItem.remove()
+      selectedTask.attachments = selectedTask.attachments.filter(i => i !== listItem)
+    })
+    listItem.append(deleteButton)
 
-```js
-    const deleteButton = document.createElement("button");
-    deleteButton.className = "delete-button";
-    deleteButton.textContent = "Delete";
-    deleteButton.addEventListener("click", () => {
-      listItem.remove();
-      selectedTask.attachments = selectedTask.attachments.filter(i => i !== listItem);
-    });
-    listItem.append(deleteButton);
-```
-
-- Finally, stores and displays the new attachment:
-
-```js
-    selectedTask.attachments ||= [];
-    selectedTask.attachments.push(listItem);
-    document.querySelector("#attachmentsList").append(listItem);
+    selectedTask.attachments ||= []
+    selectedTask.attachments.push(listItem)
+    document.getElementById('attachmentsList').append(listItem)
   }
-});
+})
 ```
 
+- Parses selected file metadata from returnValue
+- Removes placeholder if no attachments were previously added
+- Adds a delete button that updates the task state
+- Appends the attachment to the visible list and task's memory
+
+---
+
+### 4. Render and manage file attachments
+
+```js
+function onAppReady() {
+  const frame = DocSpace.SDK.frames['ds-frame']
+}
+
+const config = {
+  events: {
+    onSelectCallback,
+    onAppReady
+  },
+  height: '700px',
+  width: '100%'
+}
+
+DocSpace.SDK.initFileSelector(config)
+```
+
+- Configures and initializes the file selector
+- Assigns event callbacks for user interaction

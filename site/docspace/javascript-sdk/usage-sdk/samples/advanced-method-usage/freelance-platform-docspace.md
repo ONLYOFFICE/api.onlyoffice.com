@@ -1,9 +1,9 @@
 # Collaborative Project Workflow
-This example shows how to create a freelance platform interface using DocSpace SDK. Users can create a project room, select a freelancer, upload task files, and archive the workspace once the task is complete.
+This example shows how to build a freelance project workspace using DocSpace SDK. When a project is created, a room is generated, a freelancer is assigned via API, task files are managed, and the room is archived on completion.
 
 ## Before you start
 Please make sure you are using a server environment to run the HTML file because the JavaScript SDK must be launched on the server.
-You need to [add the URL](../../../get-started/basic-concepts.md#step-1-specifying-the-docspace-url) of your server"s root directory to the **Developer Tools** section of DocSpace.
+You need to [add the URL](../../../get-started/basic-concepts.md#step-1-specifying-the-docspace-url) of your server's root directory to the **Developer Tools** section of DocSpace.
 
 ## Full Example
 
@@ -49,12 +49,12 @@ You need to [add the URL](../../../get-started/basic-concepts.md#step-1-specifyi
 
     <!-- Step 4: JavaScript SDK Logic -->
     <script>
-      let docSpace;
-      let token;
-      let roomId;
-      let selectedUserId = null;
-      let selectedUserEmail = null;
-      let selectedUserName = null;
+      let docSpace
+      let token
+      let roomId
+      let selectedUserId = null
+      let selectedUserEmail = null
+      let selectedUserName = null
 
       // Grant or revoke room access for freelancer
       function setRoomAccessRights(access) {
@@ -94,34 +94,29 @@ You need to [add the URL](../../../get-started/basic-concepts.md#step-1-specifyi
 
       // Called when SDK is ready for form
       function onInitialReady() {
-        fetchUsers();
-        const button = document.getElementById("createOrderBtn");
-        button.addEventListener("click", createOrder);
-        button.disabled = false;
+        fetchUsers()
+        const button = document.getElementById("createOrderBtn")
+        button.addEventListener("click", createOrder)
+        button.disabled = false
       }
 
       // Called when SDK loads project room
       function onWorkspaceReady() {
-        document.getElementById("ds-frame").style.display = "block";
-        document.getElementById("orderForm").classList.add("hidden");
-        document.getElementById("workspace").classList.remove("hidden");
-        document.getElementById("confirmUserBtn").addEventListener("click", confirmUser);
+        document.getElementById("ds-frame").style.display = "block"
+        document.getElementById("orderForm").classList.add("hidden")
+        document.getElementById("workspace").classList.remove("hidden")
+        document.getElementById("confirmUserBtn").addEventListener("click", confirmUser)
       }
 
       // Create project room from form input
       async function createOrder() {
-        document.getElementById("createOrderBtn").disabled = true;
-        const title = document.getElementById("title").value;
-        if (!title) return alert("Please enter a project title");
-
-        try {
-          const room = await docSpace.createRoom(title, 2);
-          if (room.status && room.status !== 200) return alert("Error creating room");
-          roomId = room.id;
+        document.getElementById("createOrderBtn").disabled = true
+        const title = document.getElementById("title").value
+        if (!title) return alert("Please enter a project title")
+          const room = await docSpace.createRoom(title, 2)
+          if (room.status && room.status !== 200) return alert("Error creating room")
+          roomId = room.id
           initDocSpace("/rooms/shared/" + roomId, { folder: roomId });
-        } catch (error) {
-          alert(""Error: " + error.message);
-        }
       }
 
       // Load users list
@@ -129,45 +124,45 @@ You need to [add the URL](../../../get-started/basic-concepts.md#step-1-specifyi
         try {
           const response = await fetch(`{PORTAL_SRC}/api/2.0/people`, {
             headers: { "Authorization": `Bearer ${token}` }
-          });
-          const data = await response.json();
+          })
+          const data = await response.json()
           if (data.response && data.response.length > 0) {
-            const usersContainer = document.getElementById("usersContainer");
-            usersContainer.innerHTML = "";
+            const usersContainer = document.getElementById("usersContainer")
+            usersContainer.innerHTML = ""
             data.response.forEach(user => {
-              const userDiv = document.createElement("div");
-              userDiv.className = "user-item";
-              userDiv.dataset.userId = user.id;
-              userDiv.textContent = `${user.firstName} ${user.lastName}`;
+              const userDiv = document.createElement("div")
+              userDiv.className = "user-item"
+              userDiv.dataset.userId = user.id
+              userDiv.textContent = `${user.firstName} ${user.lastName}`
               userDiv.addEventListener("click", function() {
-                document.querySelectorAll(".user-item").forEach(item => item.classList.remove("selected"));
-                this.classList.add("selected");
-                selectedUserId = user.id;
-                selectedUserEmail = user.email;
-                selectedUserName = `${user.firstName} ${user.lastName}`;
+                document.querySelectorAll(".user-item").forEach(item => item.classList.remove("selected"))
+                this.classList.add("selected")
+                selectedUserId = user.id
+                selectedUserEmail = user.email
+                selectedUserName = `${user.firstName} ${user.lastName}`
               });
-              usersContainer.appendChild(userDiv);
+              usersContainer.appendChild(userDiv)
             });
           }
         } catch (error) {
-          console.error("Error fetching users:", error);
+          console.error("Error fetching users:", error)
         }
       }
 
       // Confirm selected freelancer
       function confirmUser() {
-        if (!selectedUserId) return alert("Please select a freelancer");
-        document.getElementById("usersList").style.display = "none";
-        document.getElementById("confirmUserBtn").textContent = "Complete Order";
-        document.getElementById("confirmUserBtn").removeEventListener("click", confirmUser);
-        document.getElementById("completeOrderBtn").style.display = "block";
-        document.getElementById("completeOrderBtn").addEventListener("click", completeOrder);
-        setRoomAccessRights("ContentCreator");
+        if (!selectedUserId) return alert("Please select a freelancer")
+        document.getElementById("usersList").style.display = "none"
+        document.getElementById("confirmUserBtn").textContent = "Complete Order"
+        document.getElementById("confirmUserBtn").removeEventListener("click", confirmUser)
+        document.getElementById("completeOrderBtn").style.display = "block"
+        document.getElementById("completeOrderBtn").addEventListener("click", completeOrder)
+        setRoomAccessRights("ContentCreator")
       }
 
       // Archive the room and revoke access
       function completeOrder() {
-        setRoomAccessRights(0);
+        setRoomAccessRights(0)
         fetch(`{PORTAL_SRC}/api/2.0/files/rooms/${roomId}/archive`, {
           method: "PUT",
           headers: {
@@ -176,7 +171,7 @@ You need to [add the URL](../../../get-started/basic-concepts.md#step-1-specifyi
             "Accept": "application/json"
           },
           body: JSON.stringify({ deleteAfter: true })
-        });
+        })
       }
 
       // Initial login and load
@@ -197,8 +192,8 @@ You need to [add the URL](../../../get-started/basic-concepts.md#step-1-specifyi
           token = data.response.token;
         });
 
-        initDocSpace();
-      });
+        initDocSpace()
+      })
     </script>
   </body>
 </html>
@@ -225,7 +220,7 @@ document.addEventListener("DOMContentLoaded", function() {
   })
   .then(response => response.json())
   .then(data => {
-    token = data.response.token;
+    token = data.response.token
   });
 
   initDocSpace();
@@ -244,7 +239,7 @@ function initDocSpace(rootPath = null, filter = null) {
     events: {
       onAppReady: rootPath ? onWorkspaceReady : onInitialReady
     }
-  };
+  }
 
   if (rootPath) {
     config.rootPath = rootPath;
@@ -264,9 +259,9 @@ function initDocSpace(rootPath = null, filter = null) {
 ``` ts
 function onInitialReady() {
   fetchUsers(); // Load available freelancers
-  const button = document.getElementById("createOrderBtn");
-  button.addEventListener("click", createOrder);
-  button.disabled = false;
+  const button = document.getElementById("createOrderBtn")
+  button.addEventListener("click", createOrder)
+  button.disabled = false
 }
 ```
 
@@ -277,11 +272,12 @@ function onInitialReady() {
 
 ``` ts
 async function createOrder() {
-  const title = document.getElementById("title").value;
-  ...
-  const room = await docSpace.createRoom(title, 2);
-  roomId = room.id;
-
+  document.getElementById("createOrderBtn").disabled = true
+  const title = document.getElementById("title").value
+  if (!title) return alert("Please enter a project title")
+    const room = await docSpace.createRoom(title, 2)
+  if (room.status && room.status !== 200) return alert("Error creating room")
+    roomId = room.id
   initDocSpace("/rooms/shared/" + roomId, { folder: roomId });
 }
 ```
@@ -293,10 +289,10 @@ async function createOrder() {
 
 ``` ts
 function onWorkspaceReady() {
-  document.getElementById("ds-frame").style.display = "block";
-  document.getElementById("orderForm").classList.add("hidden");
-  document.getElementById("workspace").classList.remove("hidden");
-  document.getElementById("confirmUserBtn").addEventListener("click", confirmUser);
+  document.getElementById("ds-frame").style.display = "block"
+  document.getElementById("orderForm").classList.add("hidden")
+  document.getElementById("workspace").classList.remove("hidden")
+  document.getElementById("confirmUserBtn").addEventListener("click", confirmUser)
 }
 ```
 
@@ -307,13 +303,13 @@ function onWorkspaceReady() {
 
 ``` ts
 function confirmUser() {
-    if (!selectedUserId) return alert("Please select a freelancer");
-    document.getElementById("usersList").style.display = "none";
-    document.getElementById("confirmUserBtn").textContent = "Complete Order";
-    document.getElementById("confirmUserBtn").removeEventListener("click", confirmUser);
-    document.getElementById("completeOrderBtn").style.display = "block";
-    document.getElementById("completeOrderBtn").addEventListener("click", completeOrder);
-    setRoomAccessRights("ContentCreator");
+    if (!selectedUserId) return alert("Please select a freelancer")
+    document.getElementById("usersList").style.display = "none"
+    document.getElementById("confirmUserBtn").textContent = "Complete Order"
+    document.getElementById("confirmUserBtn").removeEventListener("click", confirmUser)
+    document.getElementById("completeOrderBtn").style.display = "block"
+    document.getElementById("completeOrderBtn").addEventListener("click", completeOrder)
+    setRoomAccessRights("ContentCreator")
 }
 ```
 
@@ -327,28 +323,28 @@ async function fetchUsers() {
     try {
         const response = await fetch(`{PORTAL_SRC}/api/2.0/people`, {
             headers: { "Authorization": `Bearer ${token}` }
-        });
-        const data = await response.json();
+        })
+        const data = await response.json()
         if (data.response && data.response.length > 0) {
-            const usersContainer = document.getElementById("usersContainer");
-            usersContainer.innerHTML = "";
+            const usersContainer = document.getElementById("usersContainer")
+            usersContainer.innerHTML = ""
             data.response.forEach(user => {
-                const userDiv = document.createElement("div");
-                userDiv.className = "user-item";
-                userDiv.dataset.userId = user.id;
-                userDiv.textContent = `${user.firstName} ${user.lastName}`;
+                const userDiv = document.createElement("div")
+                userDiv.className = "user-item"
+                userDiv.dataset.userId = user.id
+                userDiv.textContent = `${user.firstName} ${user.lastName}`
                 userDiv.addEventListener("click", function() {
-                    document.querySelectorAll(".user-item").forEach(item => item.classList.remove("selected"));
-                    this.classList.add("selected");
-                    selectedUserId = user.id;
-                    selectedUserEmail = user.email;
-                    selectedUserName = `${user.firstName} ${user.lastName}`;
+                    document.querySelectorAll(".user-item").forEach(item => item.classList.remove("selected"))
+                    this.classList.add("selected")
+                    selectedUserId = user.id
+                    selectedUserEmail = user.email
+                    selectedUserName = `${user.firstName} ${user.lastName}`
                 });
-                usersContainer.appendChild(userDiv);
+                usersContainer.appendChild(userDiv)
             });
         }
     } catch (error) {
-        console.error("Error fetching users:", error);
+        console.error("Error fetching users:", error)
     }
 }
 ```
@@ -360,7 +356,7 @@ async function fetchUsers() {
 
 ``` ts
 function completeOrder() {
-  setRoomAccessRights(0); // remove access
+  setRoomAccessRights(0) // remove access
   fetch(`{PORTAL_SRC}api/2.0/files/rooms/${roomId}/archive`, {
     method: "PUT",
     headers: {
@@ -369,7 +365,7 @@ function completeOrder() {
       "Accept": "application/json"
     },
     body: JSON.stringify({ deleteAfter: true })
-  });
+  })
 }
 ```
 

@@ -1,4 +1,4 @@
-# Create and Manage Project Folders
+# Manage Project Folders
 This example shows how to create a simple project tracker that interacts with DocSpace. Each project is represented as a folder inside a shared room. You can add or remove projects, and when a project is deleted, all associated files are locked using the ONLYOFFICE API.
 
 ## Before you start
@@ -36,21 +36,21 @@ You need to [add the URL](../../../get-started/basic-concepts.md#step-1-specifyi
 
     <!-- Step 2: JavaScript SDK Logic -->
     <script>
-      let docSpace;
-      let token;
+      let docSpace
+      let token
 
-      const portalUrl = "{PORTAL_SRC}"; // Replace with your actual DocSpace URL
-      const collaborationRoomID = "your-room-id"; // Replace with shared room ID
-      const login = "your-login";                 // Replace with your login
-      const password = "your-password";           // Replace with your password
+      const portalUrl = "{PORTAL_SRC}" // Replace with your actual DocSpace URL
+      const collaborationRoomID = "your-room-id" // Replace with shared room ID
+      const login = "your-login" // Replace with your login
+      const password = "your-password" // Replace with your password
 
-      // Step 2.1: Called when SDK is ready
-      function onAppReady() {
-        document.getElementById("add").removeAttribute("disabled");
-        document.getElementById("ds-frame").style.display = "none";
+      // Step 2.1: Load folders directly once SDK is ready
+      async function onAppReady() {
+        document.getElementById("add").removeAttribute("disabled")
+        document.getElementById("ds-frame").style.display = "none"
 
-        // Step 2.2: Authenticate user
-        fetch(`${portalUrl}/api/2.0/authentication`, {
+        // Authenticate user
+        const authRes = await fetch(`${portalUrl}/api/2.0/authentication`, {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -61,49 +61,46 @@ You need to [add the URL](../../../get-started/basic-concepts.md#step-1-specifyi
             password: password,
           }),
         })
-        .then((response) => response.json())
-        .then((data) => {
-          token = data.response.token;
-        });
 
-        // Step 2.3: Load folders after short delay
-        setTimeout(async () => {
-          const folders = await docSpace.getFolders();
-          populateProjectList(folders);
-        }, 1000);
+        const authData = await authRes.json()
+        token = authData.response.token
+
+        // Load and render folders immediately
+        const folders = await docSpace.getFolders()
+        populateProjectList(folders)
       }
 
       // Step 3: Render folders in list
       function populateProjectList(folders) {
-        const list = document.getElementById("projectList");
-        list.innerHTML = "";
+        const list = document.getElementById("projectList")
+        list.innerHTML = ""
         folders.forEach((folder) => {
-          addProjectToList(folder.title, folder.id);
+          addProjectToList(folder.title, folder.id)
         });
       }
 
       // Step 4: Add a project to the DOM
       function addProjectToList(projectName, folderId) {
-        const list = document.getElementById("projectList");
-        const li = document.createElement("li");
+        const list = document.getElementById("projectList")
+        const li = document.createElement("li")
 
-        const nameSpan = document.createElement("span");
+        const nameSpan = document.createElement("span")
         nameSpan.textContent = projectName;
 
-        const closeBtn = document.createElement("button");
-        closeBtn.className = "close-btn";
-        closeBtn.innerHTML = "×";
+        const closeBtn = document.createElement("button")
+        closeBtn.className = "close-btn"
+        closeBtn.innerHTML = "×"
 
-        closeBtn.onclick = () => removeProject(li, folderId);
+        closeBtn.onclick = () => removeProject(li, folderId)
 
-        li.appendChild(nameSpan);
-        li.appendChild(closeBtn);
-        list.appendChild(li);
+        li.appendChild(nameSpan)
+        li.appendChild(closeBtn)
+        list.appendChild(li)
       }
 
       // Step 5: Remove a project and lock files in its folder
       function removeProject(element, folderId) {
-        element.remove();
+        element.remove()
 
         // Get files inside the folder
         fetch(`${portalUrl}/api/2.0/files/${folderId}`, {
@@ -142,13 +139,13 @@ You need to [add the URL](../../../get-started/basic-concepts.md#step-1-specifyi
 
       // Step 7: Create folder from input
       function addProject() {
-        const input = document.getElementById("projectInput");
-        const projectName = input.value.trim();
+        const input = document.getElementById("projectInput")
+        const projectName = input.value.trim()
 
         if (projectName) {
           docSpace.createFolder(collaborationRoomID, projectName).then((folder) => {
-            addProjectToList(projectName, folder.id);
-            input.value = "";
+            addProjectToList(projectName, folder.id)
+            input.value = ""
           });
         }
       }
@@ -157,8 +154,8 @@ You need to [add the URL](../../../get-started/basic-concepts.md#step-1-specifyi
       document
         .getElementById("projectInput")
         .addEventListener("keypress", function (e) {
-          if (e.key === "Enter") addProject();
-        });
+          if (e.key === "Enter") addProject()
+        })
     </script>
   </body>
 </html>
@@ -176,102 +173,114 @@ docSpace = DocSpace.SDK.initManager({
   rootPath: "/rooms/shared/" + collaborationRoomID,
   filter: { folder: collaborationRoomID },
   events: { onAppReady },
-});
-```
-
--Connects the DocSpace SDK to a specific shared room
--Assigns `onAppReady` callback
-
-### 2. Authenticating the user
-
-``` ts
-fetch(`${portalUrl}/api/2.0/authentication`, {
-  method: "POST",
-  headers: {
-    "Content-Type": "application/json",
-    "Accept": "application/json",
-  },
-  body: JSON.stringify({
-    userName: login,
-    password: password,
-  }),
 })
-.then((response) => response.json())
-.then((data) => {
-  token = data.response.token;
-});
 ```
 
-- Authenticates with login/password and stores the token
-- Token is used for all subsequent API calls
+- Initializes the DocSpace SDK
+- Targets a specific shared room by `collaborationRoomID`
+- Sets the `onAppReady` callback for post-initialization logic
 
-### 3. Loading and rendering existing project folders
-
-``` ts
-setTimeout(async () => {
-  const folders = await docSpace.getFolders();
-  populateProjectList(folders);
-}, 1000);
-```
-
-- Loads folders after a short delay (for SDK readiness)
+### 2. Authenticate and load folders when SDK is ready
 
 ``` ts
-function populateProjectList(folders) {
-  folders.forEach(folder => addProjectToList(folder.title, folder.id));
+async function onAppReady() {
+  document.getElementById("add").removeAttribute("disabled")
+  document.getElementById("ds-frame").style.display = "none"
+
+  const authRes = await fetch(`${portalUrl}/api/2.0/authentication`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      "Accept": "application/json",
+    },
+    body: JSON.stringify({
+      userName: login,
+      password: password,
+    }),
+  })
+
+  const authData = await authRes.json()
+  token = authData.response.token
+
+  const folders = await docSpace.getFolders()
+  populateProjectList(folders)
 }
 ```
 
-- Adds each project folder to the UI list
+- Authenticates the user via login/password and stores the access token
+- Once authenticated, retrieves and displays the list of project folders
 
-### 4. Creating a new project folder
+### 3. Render project folders in the UI
+
+``` ts
+function populateProjectList(folders) {
+  folders.forEach(folder => addProjectToList(folder.title, folder.id))
+}
+```
+
+- Iterates through each folder
+- Adds it to the visible project list in the interface
+
+### 4. Add a new project folder
 
 ``` ts
 function addProject() {
-  const input = document.getElementById("projectInput");
-  const projectName = input.value.trim();
+  const input = document.getElementById("projectInput")
+  const projectName = input.value.trim()
 
   if (projectName) {
     docSpace.createFolder(collaborationRoomID, projectName).then((folder) => {
-      addProjectToList(projectName, folder.id);
-      input.value = "";
-    });
+      addProjectToList(projectName, folder.id)
+      input.value = ""
+    })
   }
 }
 ```
 
-- Uses SDK to create a new folder in DocSpace
-- Renders it in the UI immediately
+- Creates a new folder in the shared room via SDK
+- Immediately appends it to the list of projects
 
-### 5. Displaying the project in UI
+### 5. Remove a project and lock its files
 
 ``` ts
-function addProjectToList(projectName, folderId) {
-  const li = document.createElement("li");
-  const nameSpan = document.createElement("span");
-  nameSpan.textContent = projectName;
+function removeProject(element, folderId) {
+  element.remove()
 
-  const closeBtn = document.createElement("button");
-  closeBtn.className = "close-btn";
-  closeBtn.innerHTML = "×";
-  closeBtn.onclick = () => removeProject(li, folderId);
-
-  li.appendChild(nameSpan);
-  li.appendChild(closeBtn);
-  document.getElementById("projectList").appendChild(li);
+  fetch(`${portalUrl}/api/2.0/files/${folderId}`, {
+    method: "GET",
+    headers: {
+      Accept: "application/json",
+      Authorization: `Bearer ${token}`,
+    },
+  })
+  .then((res) => res.json())
+  .then((data) => {
+    const files = data.response.files
+    files.forEach((file) => {
+      fetch(`${portalUrl}/api/2.0/files/file/${file.id}/lock`, {
+        method: "PUT",
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${token}`,
+        },
+        body: JSON.stringify({ lockFile: true }),
+      })
+    })
+  })
 }
 ```
 
-- Adds a new project to the visible list
-- Binds the delete button
+- Removes the project from the UI
+- Locks all files in the corresponding folder to prevent further editing
 
-### 7. Submitting projects via Enter key
+### 7. Add projects using the Enter key
 
 ``` ts
 document
   .getElementById("projectInput")
   .addEventListener("keypress", function (e) {
-    if (e.key === "Enter") addProject();
+    if (e.key === "Enter") addProject()
   });
 ```
 
