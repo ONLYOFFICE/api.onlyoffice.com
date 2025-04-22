@@ -20,30 +20,32 @@ export type code = {
     };
   };
   documentType?: string;
-  editorConfig?: {
-    callbackUrl?: string;
-    mode?: string;
-    customization?: {
-      autosave?: boolean;
-      customer?: {
-        address: string;
-        info: string;
-        logo: string;
-        mail: string;
-        name: string;
-        www: string;
-      };
-      logo?: {
-        image: string;
-        url: string;
-      };
-    };
-    user?: {
-      id: string;
-      name: string;
-    };
-  };
+  editorConfig?: editorConfig;
   height?: string;
   width?: string;
   type?: string;
+};
+
+export type editorConfig = {
+  callbackUrl?: string;
+  mode?: string;
+  customization?: {
+    autosave?: boolean;
+    customer?: {
+      address: string;
+      info: string;
+      logo: string;
+      mail: string;
+      name: string;
+      www: string;
+    };
+    logo?: {
+      image: string;
+      url: string;
+    };
+  };
+  user?: {
+    id: string;
+    name: string;
+  };
 };

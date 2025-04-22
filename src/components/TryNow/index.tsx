@@ -1,5 +1,4 @@
 import { useState, type ReactNode } from 'react';
-import {Link} from 'react-router-dom';
 import { TryNowCodeModal } from '@site/src/components/Modal';
 import { code } from '@site/src/components/Modal/TryNowCodeModal/CodeBlock/types';
 import codeblocksData from '@site/src/components/TryNow/codeblocksData.json';
@@ -32,11 +31,20 @@ const FileFormatButton = ({ format, type, category, actionName, modalStates }: F
     setIsCodeModalOpen(true);
   };
 
+  const handleEditorOpen = async () => {    
+    codeblocksData[format][category].forEach((_, i) => {
+      window.open(
+        window.location.href + `editor?format=${format}&type=${type}&category=${category}&codeIndex=${i}`,
+        "_blank"
+      );
+    });
+  };
+
   return (
     <div className={styles.formatButtonRow}>
-      <Link className={`${styles.formatLabel} ${formatClass}`} to={`editor?format=${format}&type=${type}&category=${category}`} target='_blank'>
+      <span className={`${styles.formatLabel} ${formatClass}`} onClick={handleEditorOpen}>
         {format}
-      </Link>
+      </span>
       <span className={styles.codeButton} onClick={handleOpenModal}>
         {`</>`}
       </span>

@@ -1,28 +1,19 @@
 import React, { useEffect } from "react";
-import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
-import {useColorMode} from '@docusaurus/theme-common';
-
-interface OnlyOfficeEditorProps {
-  fileType: string; // e.g., "docx", "xlsx", "pptx", "pdf"
-  code: string;
-  height?: string;
-}
+import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
+import { useColorMode } from "@docusaurus/theme-common";
 
 async function createJWT(json: object, secret: string): Promise<string | null> {
   if (!secret) return null;
 
   // Define the JWT header
   const header = {
-      typ: "JWT",
-      alg: "HS256"
+    typ: "JWT",
+    alg: "HS256"
   };
 
   // Helper function to encode strings in URL-safe Base64
   const base64EncodeURL = (str: string): string => {
-      return btoa(str)
-          .replace(/\+/g, '-')
-          .replace(/\//g, '_')
-          .replace(/=/g, '');
+    return btoa(str).replace(/\+/g, "-").replace(/\//g, "_").replace(/=/g, "");
   };
 
   // Encode the header and payload
@@ -32,13 +23,7 @@ async function createJWT(json: object, secret: string): Promise<string | null> {
   // Create the HMAC-SHA256 signature
   const encoder = new TextEncoder();
   const algorithm = { name: "HMAC", hash: "SHA-256" };
-  const key = await crypto.subtle.importKey(
-      "raw",
-      encoder.encode(secret),
-      algorithm,
-      false,
-      ["sign", "verify"]
-  );
+  const key = await crypto.subtle.importKey("raw", encoder.encode(secret), algorithm, false, ["sign", "verify"]);
 
   const dataToSign = encoder.encode(`${encodedHeader}.${encodedPayload}`);
   const signature = await crypto.subtle.sign(algorithm.name, key, dataToSign);
@@ -61,7 +46,7 @@ const getDocumentType = (fileType: string): string => {
     case "pptx":
     case "ppsx":
     case "ppt":
-    case "odp": 
+    case "odp":
       return "slide";
     case "pdf":
       return "pdf";
@@ -88,28 +73,52 @@ const createDocumentConfig = (fileType: string): object => {
     fileType,
     key: `doc-${Date.now()}`,
     title: `Example Document.${fileType}`,
-    url: `https://static.onlyoffice.com/assets/docs/samples/${getDocumentName(fileType)}.${fileType}`,
+    url: `https://static.onlyoffice.com/assets/docs/samples/${getDocumentName(fileType)}.${fileType}`
   };
 };
 
-const addScript = async (secret: string, fileType: string, code: string, theme: string): Promise<void> => {
+function deepMergePreferFirst(a: any, b: any): any {
+  if (typeof a !== "object" || a === null) return a;
+  if (typeof b !== "object" || b === null) return a;
+
+  const result: any = Array.isArray(a) ? [...a] : { ...b, ...a };
+
+  for (const key in b) {
+    if (a.hasOwnProperty(key)) {
+      if (typeof a[key] === "object" && typeof b[key] === "object" && a[key] !== null && b[key] !== null) {
+        result[key] = deepMergePreferFirst(a[key], b[key]);
+      } else {
+        result[key] = a[key];
+      }
+    } else {
+      result[key] = b[key];
+    }
+  }
+
+  return result;
+}
+
+const addScript = async (secret: string, fileType: string, code: string, theme: string, externalConfig?: object): Promise<void> => {
   const scriptConfig = document.createElement("script");
   scriptConfig.type = "text/javascript";
 
   const documentConfig = createDocumentConfig(fileType);
 
-  const config = {
-    document: documentConfig,
-    documentType: getDocumentType(fileType),
-    editorConfig: {
-      callbackUrl: "",
-      customization: {
-        anonymous: {request: false},
-        uiTheme: theme === "dark" ? "theme-dark" : "theme-light",
-        features:   {featuresTips: false}
-      }
-    }
-  };
+  const config = deepMergePreferFirst(
+    {
+      document: documentConfig,
+      documentType: getDocumentType(fileType),
+      editorConfig: {
+        callbackUrl: "",
+        customization: {
+          anonymous: { request: false },
+          uiTheme: theme === "dark" ? "theme-dark" : "theme-light",
+          features: { featuresTips: false },
+        },
+      },
+    },
+    externalConfig
+  );
 
   const token = await createJWT(config, secret);
 
@@ -139,23 +148,26 @@ const addScript = async (secret: string, fileType: string, code: string, theme: 
   document.body.appendChild(scriptConfig);
 };
 
-const OnlyOfficeEditor: React.FC<OnlyOfficeEditorProps> = ({
-  fileType,
-  code,
-  height = "700px",
-}) => {
+interface OnlyOfficeEditorProps {
+  fileType: string; // e.g., "docx", "xlsx", "pptx", "pdf"
+  code: string;
+  height?: string;
+  config?: object;
+}
+
+const OnlyOfficeEditor: React.FC<OnlyOfficeEditorProps> = ({ fileType, code, height = "700px", config }) => {
   const {
-    siteConfig: {customFields},
+    siteConfig: { customFields },
   } = useDocusaurusContext();
 
-  const {colorMode} = useColorMode();
+  const { colorMode } = useColorMode();
   const documentServer = customFields.documentServer as string;
   const documentServerSecret = customFields.documentServerSecret as string;
 
   useEffect(() => {
     if ("1" !== document.documentElement.getAttribute("data-script-api-state")) {
       if ("2" !== document.documentElement.getAttribute("data-script-api-state")) {
-        const apiUrl = new URL('/web-apps/apps/api/documents/api.js', documentServer);
+        const apiUrl = new URL("/web-apps/apps/api/documents/api.js", documentServer);
 
         const scriptApi = document.createElement("script");
         scriptApi.type = "text/javascript";
@@ -165,9 +177,9 @@ const OnlyOfficeEditor: React.FC<OnlyOfficeEditorProps> = ({
         };
         scriptApi.onload = () => {
           document.documentElement.setAttribute("data-script-api-state", "2");
-          addScript(documentServerSecret, fileType, code, colorMode);
+          addScript(documentServerSecret, fileType, code, colorMode, config);
         };
-  
+
         document.documentElement.setAttribute("data-script-api-state", "1");
         document.body.appendChild(scriptApi);
       } else {
@@ -175,8 +187,7 @@ const OnlyOfficeEditor: React.FC<OnlyOfficeEditorProps> = ({
       }
     }
 
-    return () => {
-    };
+    return () => {};
   }, []);
 
   return (
