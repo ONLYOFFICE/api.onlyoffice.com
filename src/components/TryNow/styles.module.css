@@ -25,21 +25,68 @@
 .formatButtonRow {
   display: flex;
   align-items: center;
-  gap: 10px;
-}
-
-.formatLabel {
-  padding: 4px 8px;
-  border-radius: 4px;
   font-size: 0.9em;
-  width: 64px;
-  text-align: center;
   cursor: pointer;
 }
 
+.codeButton {
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  padding: 5px 8px;
+  transition: 100ms ease;
+}
+
+.codeButton.documentFormat{
+  color: white;
+  background-color: #318ba7;
+}
+
+.codeButton.spreadsheetFormat{
+  color: white;
+  background-color: #39ac3d;
+}
+
+.codeButton.presentationFormat{
+  color: white;
+  background-color: #ac6739;
+}
+
+.codeButton.pdfFormat{
+  color: white;
+  background-color: #8639b6;
+}
+
+.codeButton.documentFormat:hover{
+  background-color: #236377;
+}
+
+.codeButton.spreadsheetFormat:hover{
+  background-color: #297a2c;
+}
+
+.codeButton.presentationFormat:hover{
+  background-color: #744526;
+}
+
+.codeButton.pdfFormat:hover{
+  background-color: #552574;
+}
+
+.formatLabel {
+  padding: 5px 8px;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+  width: 64px;
+  text-align: center;
+}
+
+.formatLabel:hover{
+  text-decoration: underline;
+}
+
 .documentFormat {
-  background-color: color-mix(in srgb, var(--ifm-color-primary) 10%, transparent);
-  color: var(--ifm-color-primary-dark);
+  background-color: color-mix(in srgb, #318ba7 10%, transparent);
+  color: #318ba7;
 }
 
 .spreadsheetFormat {
@@ -55,15 +102,4 @@
 .pdfFormat {
   background-color: color-mix(in srgb, #9C27B0 10%, transparent);
   color: #6A1B9A;
-}
-
-.codeButton {
-  border: 1px solid var(--ifm-color-gray-300);
-  border-radius: 4px;
-  padding: 4px 8px;
-  cursor: pointer;
-}
-
-.codeButton:hover {
-  background-color: var(--ifm-color-gray-200);
 }

@@ -45,7 +45,7 @@ const FileFormatButton = ({ format, type, category, actionName, modalStates }: F
       <span className={`${styles.formatLabel} ${formatClass}`} onClick={handleEditorOpen}>
         {format}
       </span>
-      <span className={styles.codeButton} onClick={handleOpenModal}>
+      <span className={`${styles.codeButton} ${formatClass}`} onClick={handleOpenModal}>
         {`</>`}
       </span>
     </div>
