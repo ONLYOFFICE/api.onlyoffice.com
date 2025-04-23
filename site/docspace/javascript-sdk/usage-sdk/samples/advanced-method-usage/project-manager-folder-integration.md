@@ -49,31 +49,40 @@ You need to [add the URL](../../../get-started/basic-concepts.md#step-1-specifyi
         document.getElementById("add").removeAttribute("disabled")
         document.getElementById("ds-frame").style.display = "none"
 
-        // Authenticate user
-        const authRes = await fetch(`${portalUrl}/api/2.0/authentication`, {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-            "Accept": "application/json",
-          },
-          body: JSON.stringify({
-            userName: login,
-            password: password,
-          }),
-        })
+        try {
+          const authRes = await fetch(`${portalUrl}/api/2.0/authentication`, {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+              "Accept": "application/json",
+            },
+            body: JSON.stringify({ userName: login, password: password }),
+          })
 
-        const authData = await authRes.json()
-        token = authData.response.token
+          const authData = await authRes.json()
+          token = authData.response.token
 
-        // Load and render folders immediately
-        const folders = await docSpace.getFolders()
-        populateProjectList(folders)
+          const folders = await docSpace.getFolders()
+          populateProjectList(folders)
+        } catch (err) {
+          alert("Failed to authenticate or load folders.")
+          console.error(err)
+        }
       }
 
       // Step 3: Render folders in list
       function populateProjectList(folders) {
         const list = document.getElementById("projectList")
         list.innerHTML = ""
+
+        if (!folders.length) {
+          const empty = document.createElement("li")
+          empty.textContent = "No projects yet"
+          empty.className = "no-projects"
+          list.appendChild(empty)
+          return
+        }
+
         folders.forEach((folder) => {
           addProjectToList(folder.title, folder.id)
         });
@@ -102,7 +111,6 @@ You need to [add the URL](../../../get-started/basic-concepts.md#step-1-specifyi
       function removeProject(element, folderId) {
         element.remove()
 
-        // Get files inside the folder
         fetch(`${portalUrl}/api/2.0/files/${folderId}`, {
           method: "GET",
           headers: {
@@ -112,9 +120,9 @@ You need to [add the URL](../../../get-started/basic-concepts.md#step-1-specifyi
         })
         .then((res) => res.json())
         .then((data) => {
-          const files = data.response.files;
+          const files = data.response.files || []
+            if (!files.length) return
 
-          // Lock each file to prevent editing
           files.forEach((file) => {
             fetch(`${portalUrl}/api/2.0/files/file/${file.id}/lock`, {
               method: "PUT",
@@ -124,9 +132,15 @@ You need to [add the URL](../../../get-started/basic-concepts.md#step-1-specifyi
                 Authorization: `Bearer ${token}`,
               },
               body: JSON.stringify({ lockFile: true }),
-            });
-          });
-        });
+            })
+            .catch((err) => {
+              console.error(`Failed to lock file ${file.id}`, err)
+            })
+          })
+        })
+        .catch((err) => {
+          console.error("Failed to retrieve files", err)
+        })
       }
 
       // Step 6: Initialize the DocSpace manager
@@ -187,23 +201,25 @@ async function onAppReady() {
   document.getElementById("add").removeAttribute("disabled")
   document.getElementById("ds-frame").style.display = "none"
 
-  const authRes = await fetch(`${portalUrl}/api/2.0/authentication`, {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      "Accept": "application/json",
-    },
-    body: JSON.stringify({
-      userName: login,
-      password: password,
-    }),
-  })
+  try {
+    const authRes = await fetch(`${portalUrl}/api/2.0/authentication`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "Accept": "application/json",
+      },
+      body: JSON.stringify({ userName: login, password: password }),
+    })
 
-  const authData = await authRes.json()
-  token = authData.response.token
+    const authData = await authRes.json()
+    token = authData.response.token
 
-  const folders = await docSpace.getFolders()
-  populateProjectList(folders)
+    const folders = await docSpace.getFolders()
+    populateProjectList(folders)
+  } catch (err) {
+    alert("Failed to authenticate or load folders.")
+    console.error(err)
+  }
 }
 ```
 
@@ -214,7 +230,20 @@ async function onAppReady() {
 
 ``` ts
 function populateProjectList(folders) {
-  folders.forEach(folder => addProjectToList(folder.title, folder.id))
+  const list = document.getElementById("projectList")
+  list.innerHTML = ""
+
+  if (!folders.length) {
+    const empty = document.createElement("li")
+    empty.textContent = "No projects yet"
+    empty.className = "no-projects"
+    list.appendChild(empty)
+    return
+  }
+
+  folders.forEach((folder) => {
+    addProjectToList(folder.title, folder.id)
+  });
 }
 ```
 
@@ -255,7 +284,9 @@ function removeProject(element, folderId) {
   })
   .then((res) => res.json())
   .then((data) => {
-    const files = data.response.files
+    const files = data.response.files || []
+    if (!files.length) return
+
     files.forEach((file) => {
       fetch(`${portalUrl}/api/2.0/files/file/${file.id}/lock`, {
         method: "PUT",
@@ -266,7 +297,13 @@ function removeProject(element, folderId) {
         },
         body: JSON.stringify({ lockFile: true }),
       })
+      .catch((err) => {
+        console.error(`Failed to lock file ${file.id}`, err)
+      })
     })
+  })
+  .catch((err) => {
+    console.error("Failed to retrieve files", err)
   })
 }
 ```

@@ -92,6 +92,8 @@ You need to [add the URL](../../../get-started/basic-concepts.md#step-1-specifyi
 
       // Opens modal for manual file/room selector choice
       function openSelectorChoice() {
+        const btn = document.querySelector(".input-container button:last-child")
+        btn.disabled = true
         document.getElementById("selectorChoiceModal").style.display = "block"
       }
 
@@ -100,6 +102,9 @@ You need to [add the URL](../../../get-started/basic-concepts.md#step-1-specifyi
         if (docSpace) docSpace.destroyFrame()
         document.getElementById("selectorChoiceModal").style.display = "none"
         document.getElementById("selectorModal").style.display = "none"
+
+        const btn = document.querySelector(".input-container button:last-child")
+        btn.disabled = false
       }
 
       // Initializes and shows the Room Selector SDK modal
@@ -136,6 +141,7 @@ You need to [add the URL](../../../get-started/basic-concepts.md#step-1-specifyi
 
       // Callback for when a room is selected
       function onRoomSelectCallback(e) {
+        if (!Array.isArray(e) || !e.length) return
         const id = e[0].id
         const link = `${portalSrc}rooms/shared/${id}/filter?folder=${id}`
         addMessage(link, true)
@@ -149,9 +155,9 @@ You need to [add the URL](../../../get-started/basic-concepts.md#step-1-specifyi
       }
 
       // Sends message on Enter key press
-      document.getElementById("messageInput").addEventListener("keypress", function (e) {
+      document.getElementById("messageInput").addEventListener("keydown", function (e) {
         if (e.key === "Enter") sendMessage()
-      });
+      })
     </script>
   </body>
 </html>
@@ -218,6 +224,7 @@ function openRoomSelector() {
 
 ```js
 function onRoomSelectCallback(e) {
+  if (!Array.isArray(e) || !e.length) return
   const id = e[0].id
   const link = `${portalSrc}rooms/shared/${id}/filter?folder=${id}`
   addMessage(link, true)

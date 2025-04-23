@@ -71,25 +71,73 @@ You need to [add the URL](../../../get-started/basic-concepts.md#step-1-specifyi
         list.appendChild(li)
 
         const room = await docSpace.createRoom(clientName, 2)
-        if (room.status && room.status != 200) {
+        if (room.status && room.status !== 200) {
           alert(`Failed to create room: ${room.status}`)
           return
         }
 
         input.value = ""
-        const id = room.id
+        const roomId = room.id
 
-        const instructionsFolder = await docSpace.createFolder(id, "Instructions")
-        docSpace.createFile(instructionsFolder.id, "Instructions.docx", templates.instructions)
+        // Create folder: Instructions
+        const instructionsFolder = await docSpace.createFolder(roomId, "Instructions")
+        if (instructionsFolder.status && instructionsFolder.status !== 200) {
+          alert("Failed to create 'Instructions' folder")
+          return
+        }
 
-        const priceListFolder = await docSpace.createFolder(id, "Price List")
-        docSpace.createFile(priceListFolder.id, "Price List.xlsx", templates.priceList)
+        const docxFile = await docSpace.createFile(
+          instructionsFolder.id,
+          "Instructions.docx",
+          templates.instructions
+        )
+        if (docxFile.status && docxFile.status !== 200) {
+          alert("Failed to insert Instructions.docx")
+          return
+        }
 
-        const contractsFolder = await docSpace.createFolder(id, "Contracts")
-        docSpace.createFile(contractsFolder.id, "Contract template.pdf", templates.contract)
+        // Create folder: Price List
+        const priceListFolder = await docSpace.createFolder(roomId, "Price List")
+        if (priceListFolder.status && priceListFolder.status !== 200) {
+          alert("Failed to create 'Price List' folder")
+          return
+        }
 
-        docSpace.createFolder(id, "Invoices for payment")
+        const xlsxFile = await docSpace.createFile(
+          priceListFolder.id,
+          "Price List.xlsx",
+          templates.priceList
+        )
+        if (xlsxFile.status && xlsxFile.status !== 200) {
+          alert("Failed to insert Price List.xlsx")
+          return
+        }
+
+        // Create folder: Contracts
+        const contractsFolder = await docSpace.createFolder(roomId, "Contracts")
+        if (contractsFolder.status && contractsFolder.status !== 200) {
+          alert("Failed to create 'Contracts' folder")
+          return
+        }
+
+        const pdfFile = await docSpace.createFile(
+          contractsFolder.id,
+          "Contract template.pdf",
+          templates.contract
+        )
+        if (pdfFile.status && pdfFile.status !== 200) {
+          alert("Failed to insert Contract template.pdf")
+          return
+        }
+
+        // Create folder: Invoices for payment (no files)
+        const invoicesFolder = await docSpace.createFolder(roomId, "Invoices for payment")
+        if (invoicesFolder.status && invoicesFolder.status !== 200) {
+          alert("Failed to create 'Invoices for payment' folder")
+          return
+        }
       }
+
 
       // Step 9: Submit on Enter
       document.getElementById("clientInput").addEventListener("keypress", function (e) {
@@ -146,24 +194,71 @@ async function addClient() {
   list.appendChild(li)
 
   const room = await docSpace.createRoom(clientName, 2)
-  if (room.status && room.status != 200) {
+  if (room.status && room.status !== 200) {
     alert(`Failed to create room: ${room.status}`)
-    return;
+    return
   }
 
   input.value = ""
-  const id = room.id
+  const roomId = room.id
 
-  const instructionsFolder = await docSpace.createFolder(id, "Instructions")
-  docSpace.createFile(instructionsFolder.id, "Instructions.docx", templates.instructions)
+  // Create folder: Instructions
+  const instructionsFolder = await docSpace.createFolder(roomId, "Instructions")
+  if (instructionsFolder.status && instructionsFolder.status !== 200) {
+    alert("Failed to create 'Instructions' folder")
+    return
+  }
 
-  const priceListFolder = await docSpace.createFolder(id, "Price List")
-  docSpace.createFile(priceListFolder.id, "Price List.xlsx", templates.priceList)
+  const docxFile = await docSpace.createFile(
+    instructionsFolder.id,
+    "Instructions.docx",
+    templates.instructions
+  )
+  if (docxFile.status && docxFile.status !== 200) {
+    alert("Failed to insert Instructions.docx")
+    return
+  }
 
-  const contractsFolder = await docSpace.createFolder(id, "Contracts")
-  docSpace.createFile(contractsFolder.id, "Contract template.pdf", templates.contract)
+  // Create folder: Price List
+  const priceListFolder = await docSpace.createFolder(roomId, "Price List")
+  if (priceListFolder.status && priceListFolder.status !== 200) {
+    alert("Failed to create 'Price List' folder")
+    return
+  }
 
-  docSpace.createFolder(id, "Invoices for payment")
+  const xlsxFile = await docSpace.createFile(
+    priceListFolder.id,
+    "Price List.xlsx",
+    templates.priceList
+  )
+  if (xlsxFile.status && xlsxFile.status !== 200) {
+    alert("Failed to insert Price List.xlsx")
+    return
+  }
+
+  // Create folder: Contracts
+  const contractsFolder = await docSpace.createFolder(roomId, "Contracts")
+  if (contractsFolder.status && contractsFolder.status !== 200) {
+    alert("Failed to create 'Contracts' folder")
+    return
+  }
+
+  const pdfFile = await docSpace.createFile(
+    contractsFolder.id,
+    "Contract template.pdf",
+    templates.contract
+  )
+  if (pdfFile.status && pdfFile.status !== 200) {
+    alert("Failed to insert Contract template.pdf")
+    return
+  }
+
+  // Create folder: Invoices for payment (no files)
+  const invoicesFolder = await docSpace.createFolder(roomId, "Invoices for payment")
+  if (invoicesFolder.status && invoicesFolder.status !== 200) {
+    alert("Failed to create 'Invoices for payment' folder")
+    return
+  }
 }
 ```
 
