@@ -1,5 +1,5 @@
-# Room selector
-This example shows how to use the DocSpace Room Selector within a custom task creation dialog. Each task is linked to a room selection via the JavaScript SDK.
+# Create basic task
+This example demonstrates how to create a task management table using the DocSpace JavaScript SDK. When a task is created, a corresponding room is automatically created in DocSpace.
 
 ## Before you start
 Please make sure you are using a server environment to run the HTML file because the JavaScript SDK must be launched on the server. You need to [add the URL](../../../get-started/basic-concepts.md#step-1-specifying-the-docspace-url) of your server's root directory to the **Developer Tools** section of DocSpace.
@@ -11,15 +11,12 @@ Please make sure you are using a server environment to run the HTML file because
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Room selector</title>
+    <title>Basic Task Creation</title>
     <script src="{PORTAL_SRC}/static/scripts/sdk/1.0.1/api.js"></script>
     <style>
       body {
           font-family: Arial, sans-serif;
           margin: 20px;
-      }
-      input {
-          width: 100%;
       }
       table {
           width: 100%;
@@ -46,13 +43,16 @@ Please make sure you are using a server environment to run the HTML file because
           background-color: #007bff52;
           cursor: none;
       }
-      .selectorWindow {
-          height: 320px;
+      .button.row {
+          margin-left: 12px;
       }
       #error {
           display: none;
           color: crimson;
           margin: 0;
+      }
+      #create-task :last-child {
+          margin-top: 10px;
       }
       #managerWindow {
           display: block;
@@ -72,11 +72,12 @@ Please make sure you are using a server environment to run the HTML file because
 
     <!-- Task creation modal -->
     <dialog id="create-task">
-      <input id="taskname" type="text" placeholder="task name" />
-      <div class="selectorWindow">
-        <div id="ds-selector"></div>
-      </div>
+      <input id="taskname" type="text" />
       <p id="error"></p>
+      <div>
+        <button id="create" class="button row">Create</button>
+        <button id="cancel" class="button row">Cancel</button>
+      </div>
     </dialog>
 
     <!-- Hidden SDK container -->
@@ -90,6 +91,8 @@ Please make sure you are using a server environment to run the HTML file because
       const managerWindow = document.getElementById('managerWindow')
       const newTaskButton = document.getElementById('new-task')
       const tasknameInput = document.getElementById('taskname')
+      const createButton = document.getElementById('create')
+      const cancelButton = document.getElementById('cancel')
       const error = document.getElementById('error')
       const tasks = document.getElementById('tasks')
 
@@ -104,48 +107,51 @@ Please make sure you are using a server environment to run the HTML file because
         events: { onAppReady }
       })
 
-      // Step 2: Reset modal state
+      // Step 2: Modal helpers
       const resetView = () => {
+        createTaskDialog.close()
         tasknameInput.value = ''
         error.innerText = ''
         error.style.display = 'none'
+        createButton.removeAttribute('disabled')
+        cancelButton.removeAttribute('disabled')
       }
 
-      // Step 3: Open modal and render room selector
       newTaskButton.addEventListener('click', () => {
         createTaskDialog.showModal()
+      })
 
-        const onSelectCallback = (e) => {
-          const taskname = tasknameInput.value.trim()
-          if (taskname.length === 0) {
-            error.innerText = 'incorrect task name'
-            error.style.display = 'block'
-            return
-          }
+      cancelButton.addEventListener('click', () => {
+        resetView()
+      })
 
-          const task = document.createElement('tr')
-          task.innerHTML = `<td>${taskname}</td>`
-          tasks.appendChild(task)
+      // Step 3: Create room on submit
+      createButton.addEventListener('click', async () => {
+        const taskname = tasknameInput.value.trim()
 
-          resetView()
-          createTaskDialog.close()
-          dsSelector.destroyFrame()
+        if (taskname.length === 0) {
+          error.innerText = 'incorrect task name'
+          error.style.display = 'block'
+          return
         }
 
-        const onCloseCallback = () => {
-          createTaskDialog.close()
-          resetView()
-          dsSelector.destroyFrame()
+        createButton.setAttribute('disabled', 'true')
+        cancelButton.setAttribute('disabled', 'true')
+
+        const room = await docSpace.createRoom(taskname, 2)
+
+        if (room.status && room.status != 200) {
+          cancelButton.removeAttribute('disabled')
+          error.innerText = room.message
+          error.style.display = 'block'
+          return
         }
 
-        const dsSelector = DocSpace.SDK.initRoomSelector({
-          frameId: 'ds-selector',
-          showSelectorCancel: true,
-          events: {
-            onSelectCallback,
-            onCloseCallback
-          }
-        })
+        const row = document.createElement('tr')
+        row.innerHTML = `<td>${taskname}</td>`
+        tasks.appendChild(row)
+
+        resetView()
       })
     </script>
   </body>
@@ -156,76 +162,80 @@ Please make sure you are using a server environment to run the HTML file because
 
 ## Script Execution Steps
 
-### Step 1: Initialize SDK and unlock button
+### 1. Initialize SDK and unlock UI
 
 ```js
-const onAppReady = () => {
-  newTaskButton.removeAttribute('disabled')
-  managerWindow.style.display = 'none'
-}
-
 const docSpace = DocSpace.SDK.initManager({
   frameId: 'ds-frame',
   events: { onAppReady }
 })
-```
 
-- Sets up the SDK and enables the "New Task" button when the app is ready
-
----
-
-### Step 2: Reset modal state
-
-```js
-const resetView = () => {
-  tasknameInput.value = ''
-  error.innerText = ''
-  error.style.display = 'none'
+const onAppReady = () => {
+  newTaskButton.removeAttribute('disabled')
+  managerWindow.style.display = 'none'
 }
 ```
 
-- Clears the form and hides the error block
+- Loads SDK
+- Unlocks the "New task" button
 
 ---
 
-### Step 3: Open modal and render room selector
+### 2. Handle modal open/cancel/reset
 
 ```js
-newTaskButton.addEventListener('click', () => {
-  createTaskDialog.showModal()
+newTaskButton.addEventListener('click', () => createTaskDialog.showModal())
 
-  const onSelectCallback = (e) => {
-    const taskname = tasknameInput.value.trim()
-    if (taskname.length === 0) {
-      error.innerText = 'incorrect task name'
-      error.style.display = 'block'
-      return
-    }
+cancelButton.addEventListener('click', () => resetView())
 
-    const task = document.createElement('tr')
-    task.innerHTML = `<td>${taskname}</td>`
-    tasks.appendChild(task)
+const resetView = () => {
+  createTaskDialog.close()
+  tasknameInput.value = ''
+  error.innerText = ''
+  error.style.display = 'none'
+  createButton.removeAttribute('disabled')
+  cancelButton.removeAttribute('disabled')
+}
+```
 
-    resetView()
-    createTaskDialog.close()
-    dsSelector.destroyFrame()
+- Modal interaction
+- Safe reset after creation or cancel
+
+---
+
+### 3. Create room and append task
+
+```js
+createButton.addEventListener('click', async () => {
+  const taskname = tasknameInput.value.trim()
+
+  if (taskname.length === 0) {
+    error.innerText = 'incorrect task name'
+    error.style.display = 'block'
+    return
   }
 
-  const onCloseCallback = () => {
-    createTaskDialog.close()
-    resetView()
-    dsSelector.destroyFrame()
+  createButton.setAttribute('disabled', 'true')
+  cancelButton.setAttribute('disabled', 'true')
+
+  const room = await docSpace.createRoom(taskname, 2)
+
+  if (room.status && room.status != 200) {
+    cancelButton.removeAttribute('disabled')
+    error.innerText = room.message
+    error.style.display = 'block'
+    return
   }
 
-  const dsSelector = DocSpace.SDK.initRoomSelector({
-    frameId: 'ds-selector',
-    showSelectorCancel: true,
-    events: {
-      onSelectCallback,
-      onCloseCallback
-    }
-  })
+  const row = document.createElement('tr')
+  row.innerHTML = `<td>${taskname}</td>`
+  tasks.appendChild(row)
+
+  resetView()
 })
 ```
 
-- Launches a room selector inside the modal and handles success or cancel
+- Validates task
+- Creates linked room
+- Appends to table
+- Resets state
