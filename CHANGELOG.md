@@ -5,6 +5,7 @@
 #### Docs API
 
 * Added the Go and PHP (Laravel) test examples
+* Added the Changing the default font page for test examples
 
 ## 4.6.0
 
