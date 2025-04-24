@@ -7,6 +7,10 @@
 * Added the Go and PHP (Laravel) test examples
 * Updated test examples
 
+#### Docspace
+
+* Added the Plugins SDK samples
+
 ## 4.6.0
 
 ### New features
