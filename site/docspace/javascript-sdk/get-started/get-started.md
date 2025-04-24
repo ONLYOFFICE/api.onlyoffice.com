@@ -2,7 +2,7 @@
 sidebar_position: 1
 ---
 
-# Basic concepts
+# Get started
 
 The [ONLYOFFICE DocSpace SDK](https://www.npmjs.com/package/@onlyoffice/docspace-sdk-js) based on JavaScript allows developers to use all the DocSpace possibilities with *api.js*. You can integrate ONLYOFFICE DocSpace into your own web application, allowing users to create and submit documents directly from your website. For example, you can use the ONLYOFFICE DocSpace [React component](./react-component.md) to integrate ONLYOFFICE DocSpace into React projects.
 
