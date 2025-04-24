@@ -5,7 +5,7 @@ description: "Returns the portal hostname."
 sidebar_label: "Get hostname"
 hide_title: true
 hide_table_of_contents: true
-api: eJyFUstu2zAQ/BVhzoTlGj3pFrRFEPSBIq5PhhEw8tpiI5EsuXLrCvz3YkXZiR0EvejBnR3OzuwA1vuIao0lMRu7j0VZfHBd52wRpxNsFJynoNk4e7dFhT3xV103xtI33REUAkXvbKSIasBiPpfXlmIdjJcmVPjuAuu2aFxkm3tqZ5ksC1R735p65C9/RsEPiHVDnUY1pJSSwvv5u9ekK6t7blwwf2kLQUWq+2D4iGo9QMf6QeoPTyQHCKS3UPgdDBM2aaOu2O6J+2BjwQ0V/lLuDAodceOm6aHgNTeoUGpvysVsXp7cKrvsDERNOFCIo5g+tKgwPOpIq9AmXF++HLFF7ezO7PvsNRQOOhj92GZjp+bsw073LaPCK6aPuVSs7r8gJRnz5MpSLM1Ul94M4KMnVNDefKYjFMaMqkuYghH+2rknQ6Pdxu7c2G24FfiNN6KZQsxSDgskBe8id3oMdaK9JX65CRf6h+fF+F8ik2imP1z6Vhsrt/XZoBzPWiaCwmI2H/OYFlrhFNJGQRgFOZzDSXL8q6cga7N5DkH+kkJDekthTHV0Dzd1TZ7HtNo+23i1z5LCeX9uP/2Agth66Xz2ePoQ9lPJHl9yX0aSFcgzqTc6hiHHmtIZn0tvdkwTntBi7Cal9A8/xWxz
+api: eJyNVk1z2zgM/SscXHLh2q67J928abfT7kd2Gmdy8HgaWoItNhLJJaGkXo3+ewek/CE7O/bFlogHgAQeHtUCqU2AbAH3SKTNJoixuLV1bY0I/QosJViHXpG25nMBGWyQ/lJ5qQ3+rWoECR6DsyZggKyF6WTCfwWG3GvHTpDBP9aTqkRpA5nkk1tDaIihyrlK5zH++HtgfAshL7FW/ERbh5CBXX3HnECC87wb0inbLvU5suMcTcrQW7Qh3KAHCWvra0Vp6f2UsZU2z+EIq7xXW5CgCetweR+lx/URKpDXZsNxVZ5KcGbquk5CIEVNuHKLCXxrC7zKoZNAmioG3cVNP3rlHPo+9a+Td+d9ejCqodJ6/R8WMULAvPGatpAtWlAh/8b2b8/IC+BRFSDh1WtCWHayhd9QefSQLeLbzOk/cLtfewuvgs538LtZQ+X0beCdw0i+xbJbypNNf0VqvAmCShRuSLQRSKiRStvzlvumqIQMxsrp8XQ0Ge94Pq4Tp4EP7V/Qh3jmxleQQbtSAR981cFp8vuIFbk1a71p0pSAhBfltVpViRy9cyr3WjUVd+ks0odkEg9f/+QWLQ/Fv+dhSKGGLTiwNVb6LORDQHFr7bNGwU5oqJ8zkBDnMBsGlKDZLY8uTLm+P/s8JZE7y/LREHqxtY0XTUDPgYUyhXAqhFfruZNxnDnAKgbkyD0rrgl9k8Ci/fI4F3P7jKa7GQRNsWT/8PtuEL48zjnVkIaXajYbFEroIAok9LU2WIjVNrLsZtZPScTciBJVETfQF3WQsS9qj+nknucHTVFx4XQnCSfWlX0Vr5pKMcgqohBIYHOixrF1pxKDxcjBWOiQjccx68iaamvXa53jKLd1WpyO9yoAEogLfr1rhMfuWLfTaFXEMVWFUHmOIQiywnlLmBMWwmOwjc8x7Ec+g0f+v4BOOrZThkM148KtNSYJ9UlR2fpB9ObzsRh4X39qJr42a8v9/fFL0BujqPF4mW5M6T2c56cQa+tP9jUS8xJFrKyom0BihcKuSEVOvmgVSfl0ULQkG4OOPAk0hbPa0Eh8JqY1jycWQgWhRJr4xDKOFWf46eggT6MDu4/Pd6IYHb+vbTx2f/fMnGY9RB/Sgd+P3o0mXCZnA9UqXo194E9Ix58Ig0K1hy+GS4LfF5zwB41dpbThbE3S36T+C+4GSJiOJlHu+y8dCbs7YCmBIzKy3Wt/x8v/Nuj58lseND7dX7sB50sjijPM8hwdxcugahIFTj50WOT319Onj3OQcWCHrEnC3D9w9J3JbI9jD3U87YB/+fZ806NtEyW7bo9Ppv/12MtcQnNhl13X/QTLb4ot
 sidebar_class_name: "get api-method"
 info_path: site/docspace/api-backend/usage-api/api
 custom_edit_url: null
@@ -54,7 +54,7 @@ Returns the portal hostname.
 <StatusCodes
   id={undefined}
   label={undefined}
-  responses={{"200":{"description":"Portal hostname","content":{"application/json":{"schema":{}}}},"401":{"description":"Unauthorized"}}}
+  responses={{"200":{"description":"Portal hostname","content":{"application/json":{"schema":{"type":"object","properties":{"response":{"type":"object"},"count":{"type":"integer","format":"int32"},"links":{"type":"array","items":{"type":"object","properties":{"href":{"type":"string"},"action":{"type":"string"}}}},"status":{"type":"integer","format":"int32"},"statusCode":{"type":"integer","format":"int32"}},"title":"ObjectWrapper"}}}},"401":{"description":"Unauthorized"}}}
 >
   
 </StatusCodes>

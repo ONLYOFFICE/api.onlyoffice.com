@@ -1,0 +1,63 @@
+---
+id: get-all-permissions
+title: "Get API key permissions"
+description: "Returns a list of all available permissions for the API key."
+sidebar_label: "Get API key permissions"
+hide_title: true
+hide_table_of_contents: true
+api: eJylVktv2zgQ/ivEXHLh2q67J928aTdIt9gWqYMcDKOhpZHFRia55CipV9B/XwwpP2SniIG92BLnyZlvvlELpNYBsgXMnBZPuA2wlGAdekXamtsCMlgjzer6K/qNDkFbE0CCx+CsCRgga2E6mfBfgSH32rEdZPBZBxK2FKquhXpWularGoU7eBGl9RwRJOTWEBpiJ8q5Wucx+PhHYE8thLzCjeIn2jqEDOzqB+YEEpznVEmnPHZJHWkq7xVH0ISbcHQeyGuzhq7j4E0K3Yu0IVyjBwml9RtF6ej9FDoJtTZP4QL3v0iw8li+koQElaeqnefHGQZS1IQLU0zK17bAiww6CaSpZqVv87vbv29mfKUHr5xD38f/ffLuvL/3RjVUWa//xSK6CZg3XtMWskULKuTfWf6dG5wtwKMqQMKL14Sw7GQLf6Dy6CFbxLeZ03/hdn/2mr4KOt+pf5k1VE1fV/ziMOJ2seyW8iTpO6TGmyCUqC+CJ1UoZl9vGaYjkLBBqmw/EtxcRRVkMFZOj6ejyZjHZ+wGcxLQP6MPsSaNryGDdqUC3vu6g9PkvkVdkVtT6nWTBhAkPCuvObkIgN44taNUTc2tPPP0IYnE/d1nbuHy0JxvPErJ1bBFB0jHTpy5vA8orq190ijYCA31UwoSjNpEy2OHEjSb5dGEcdn3bx+nInJnUT4aQi+2tvGiCejZsVCmEE6F8GI9dzqSATtYRYfsuUfNJa6vkrJoPz3Mxdw+oemuBk6TL9k//Lmblk8Pcw41hOlbNZsNCiV0EAUSw8NgIVbbiK6rWT9FUedKVKiKmEBf1EHEvqi9Tif3c3AgHhUPTjNJeqKs7Yt40VSJQVQR2UICixM0jqU7KhkcRgzGQodsPI5RR9bUW1uWOsdRbjfpcDreswRIIC745aZRPXbHuh3DqyKOsSqEynMMQZAVzlvCnLAQHoNtfI5hTwkZPPD/G9qJ53bMcahmPLi2xiQ2PykqSz+IXnw+FgPry2/NwNemtNzfn78FvTaKGo9vw40hvVfn+Skihw3zGol5hSJWVmyaQGKFwq5IRUw+axVB+bhjtB1tDDryKNAUzmpDI3FLDGseTyyEYmJNE59Qxr7iDD8eXeRxdED38f1OGKPj99LGa/cLauY08yH6kC78fvRuNOEyORtoo+L+7B3fIO2IWwwZeVCz9vDp8X93Q98bwp80drXShhNrElWnRbHgxoGE6WgCEuK3loTj5JYSKhuINdv9muj4+J8GPe/R5WEdpFW44wLeL5HHYZbn6CjujbpJaDn5ouJ9sN9kNx/nIONsDwGWOLx/YO87kdke+x5SfsqAf3kRv2rRtgm9XbfXT6JfWuwZMWlzYZdd1/0HWrayOg==
+sidebar_class_name: "get api-method"
+info_path: site/docspace/api-backend/usage-api/api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get API key permissions"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/keys/permissions"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns a list of all available permissions for the API key.
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"List of all available permissions for key","content":{"application/json":{"schema":{"type":"object","properties":{"response":{"type":"array","items":{"type":"string"}},"count":{"type":"integer","format":"int32"},"links":{"type":"array","items":{"type":"object","properties":{"href":{"type":"string"},"action":{"type":"string"}}}},"status":{"type":"integer","format":"int32"},"statusCode":{"type":"integer","format":"int32"}},"title":"STRINGArrayWrapper"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

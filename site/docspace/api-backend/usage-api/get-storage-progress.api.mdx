@@ -5,7 +5,7 @@ description: "Returns the storage progress."
 sidebar_label: "Get the storage progress"
 hide_title: true
 hide_table_of_contents: true
-api: eJyFk0Fv2zAMhf+K8c5CnAU7+VZgQzFsh6FZToFRKA4Ta3UkTaKzZYb++0DLTdK0xS62bPJR5PekAaz3EdUaS2I2dh+LsliyC3pPqBWcp6DZOPtliwp74in2Pbh9oBihECh6ZyNFVAMW87m8thSbYLwIUWHSFP4iapxlsiy52vvONOMm5c8oggGxaemgZcUnT6hg+8OGAhR2Lhw0o8LW9ZuOkFJKCh/nH15vu7K659YF85e2kKxITR8Mn1CtB+jYPEr88YnkBwLpLRR+B8OEOtXqptoDcR9sLLilIt4MNIPCgbh1EyQoeM0tKpTam3Ixm5dxwltO2vIKRqRwpBDHtvrQocKw0ZFWoUu4bWM55haNszuz77M3UDjqYPSmyyZM4kxkp/tOeL2q9CmHitXDN6FYX/gshX4u9ZLS2Q7tzVc6QcHqw/h9naZgpH7j3JOhEbyxOzeqDXeSfueN9Ewh5laOCyQF7yIf9Oj/VPae+E3et7MMl/P0X5+mCZj+cOk7baxs3Wda2bS1jAeFxWw+mpONk+V0LxTOjdQKrYssouFsWpLfv3oKcrDqiznylRRa0lsKo9sjVdw1DXkeXez6jPfmSog75wN2//kHFAT3S0cy+2kh1Z9D9nRd+6VVuQN5JvWOYhiy3Smd83PoXcU04XO2MK5TSv8Az5WEAQ==
+api: eJyNVktv2zgQ/ivEXHJhLdfdk27epFu0XaCLJkEOgdHQ0thiI5NccpTUK+i/F0PSD9lZJBdb4jw588036oHUOkB5D9dIpM06iEJck/VqjbCQYB16RdqazzWUsEbKsn+8XXsMASR4DM6agAHKHmbTKf/VGCqvHRtCCdlGuINRZQ2hIdZVzrW6ikGKn4ENeghVgxvFT7R1CCXY5U+sCCQ4zymRTuF2sY80TbdZooeBY3QpQpZoQ7hGDxJW1m8UpaMPM9ZttXkMR7rKe7UFCZpwE17Po/G4OtIK5LVZs19VpRqciYZhkBBIURfemGJSvrQ1vslgkECaWla6st2yxTuvnOPKxNB/TN+fN+rWqI4a6/V/WEcPAavOa9pCed+DCtUPlv94RD4Aj6oGCc9eE8JikD38icqjh/I+vs2d/orb/dlL+iroaqf+bd5RM3tZ8ZvDiMD7xbCQJ0l/R+q8CYIaFOEEaROQsEFqbEYvN05RAyUUyuliNpkWIeO+yLbFEUoD+if0Id6+8y2U0C9VwFvfDnCaxnXUFZU1K73u0tCAhCfltVq2CSbZOBV+pbqW+3Xm6SqJxO33v7lZi0MbrnkskqtxMw64jTU/c3kbUFxa+6hRsBEayhMHEozaRMtjhxI0m1XRhMGXO7WP0xC5sygfDaEXW9t50QX07FgoUwunQni2nnsaB5sdLKND9pzx8RbXF0lZ9F/ubsSNfUQzXIycJl8yP/y1G4kvdzccagzI12o2HxVK6CBqJPQbbbAWy23E28U8z0vUuRANqjomkIs6ipiLmnUGuUf8gV1UPDjNJOmJVWufxbOmRoyiikgJElicoHEs3fHF6DBiMBY6lEURo06sabd2tdIVTiq7SYezYs8HIIG44G83jeqxO9bt2FrVcWBVLVRVYQiCLM8qYUVYC4/Bdr7CsB/+Eu74/xXtxGg7jjhUMx5cWmMSZZ8UlaVXIovPx2Jk/fZbM/C1WVnu7693Qa+Nos7j63BjSO/VeX5qsbL+JK+JuGlQxMqKTRdILFHYJamIySetIigfDtSWaGPUkQeBpnZWG5qIz8Sw5vHEWqgglEgTn1DGvuIMPxxd5GFyQPfx/U4YY+D3lY3Xzlto7jTzIfqQLvxh8n4y5TI5G2ij4pLMjj8hvUjnp0XrD98Rr66BXH3CX1S4VmnDobtExmkn3HNrQMJsMo3cn/YCP+bvobj1UyILCY0NxEb9ficMfPxvh57X4+LA/WnD7Qafl0kkbZhXFTqKS6LtEjROPoWY/Pf769PHG5BxkMdoSoSdH9j7TmS2x77H/J4y4F/ery9a9H2C6jDs9ZPofy329Je0ucaLYRh+A4celtI=
 sidebar_class_name: "get api-method"
 info_path: site/docspace/api-backend/usage-api/api
 custom_edit_url: null
@@ -54,7 +54,7 @@ Returns the storage progress.
 <StatusCodes
   id={undefined}
   label={undefined}
-  responses={{"200":{"description":"Storage progress","content":{"application/json":{"schema":{"type":"number","format":"double"}}}},"401":{"description":"Unauthorized"}}}
+  responses={{"200":{"description":"Storage progress","content":{"application/json":{"schema":{"type":"object","properties":{"response":{"type":"number"},"count":{"type":"integer","format":"int32"},"links":{"type":"array","items":{"type":"object","properties":{"href":{"type":"string"},"action":{"type":"string"}}}},"status":{"type":"integer","format":"int32"},"statusCode":{"type":"integer","format":"int32"}},"title":"DoubleWrapper"}}}},"401":{"description":"Unauthorized"}}}
 >
   
 </StatusCodes>
