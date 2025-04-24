@@ -178,7 +178,11 @@ import Export from "@theme/ApiExplorer/Export";
               <th>
                 OAuth Flow (authorizationCode):
               </th><td>
-                <span>
+                <div>
+                  Token URL: https://oauth.onlyoffice.com/oauth2/token
+                </div><div>
+                  Authorization URL: https://oauth.onlyoffice.com/oauth2/authorize
+                </div><span>
                   Scopes:
                 </span><ul>
                   <li>
@@ -208,6 +212,39 @@ import Export from "@theme/ApiExplorer/Export";
                 Security Scheme Type:
               </th><td>
                 openIdConnect
+              </td>
+            </tr><tr>
+              <th>
+                OpenID Connect URL:
+              </th><td>
+                https://oauth.onlyoffice.com/oauth2/userinfo
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </TabItem><TabItem
+      label={"API Key: x-signature"}
+      value={"x-signature"}
+    >
+      
+      
+      JWT signature used for authentication. The token must be obtained via the `api/2.0/security/oauth2/token` endpoint. It is passed as a cookie with the name `x-signature`.
+      
+      <div>
+        <table>
+          <tbody>
+            <tr>
+              <th>
+                Security Scheme Type:
+              </th><td>
+                apiKey
+              </td>
+            </tr><tr>
+              <th>
+                Header parameter name:
+              </th><td>
+                x-signature
               </td>
             </tr>
           </tbody>
