@@ -15322,9 +15322,7 @@ paths:
         '400':
           description: Invalid request parameters
       security:
-        - asc_auth_key:
-            - read
-            - write
+        - x-signature: []
     post:
       tags:
         - Authorization
@@ -15354,9 +15352,7 @@ paths:
         '400':
           description: Invalid request parameters
       security:
-        - asc_auth_key:
-            - read
-            - write
+        - x-signature: []
   /oauth2/token:
     post:
       tags:
@@ -15496,9 +15492,7 @@ paths:
               schema:
                 $ref: '#/components/schemas/ErrorResponse'
       security:
-        - asc_auth_key:
-            - read
-            - write
+        - x-signature: []
     put:
       tags:
         - Client Management
@@ -15558,9 +15552,7 @@ paths:
               schema:
                 $ref: '#/components/schemas/ErrorResponse'
       security:
-        - asc_auth_key:
-            - read
-            - write
+        - x-signature: []
     delete:
       tags:
         - Client Management
@@ -15614,9 +15606,7 @@ paths:
               schema:
                 $ref: '#/components/schemas/ErrorResponse'
       security:
-        - asc_auth_key:
-            - read
-            - write
+        - x-signature: []
   /api/2.0/clients:
     get:
       tags:
@@ -15713,9 +15703,7 @@ paths:
               schema:
                 $ref: '#/components/schemas/ErrorResponse'
       security:
-        - asc_auth_key:
-            - read
-            - write
+        - x-signature: []
     post:
       tags:
         - Client Management
@@ -15787,9 +15775,7 @@ paths:
               schema:
                 $ref: '#/components/schemas/ErrorResponse'
       security:
-        - asc_auth_key:
-            - read
-            - write
+        - x-signature: []
   /api/2.0/clients/{clientId}/regenerate:
     patch:
       tags:
@@ -15846,9 +15832,7 @@ paths:
               schema:
                 $ref: '#/components/schemas/ErrorResponse'
       security:
-        - asc_auth_key:
-            - read
-            - write
+        - x-signature: []
   /api/2.0/clients/{clientId}/activation:
     patch:
       tags:
@@ -15909,9 +15893,7 @@ paths:
               schema:
                 $ref: '#/components/schemas/ErrorResponse'
       security:
-        - asc_auth_key:
-            - read
-            - write
+        - x-signature: []
   /api/2.0/scopes:
     get:
       tags:
@@ -15955,9 +15937,7 @@ paths:
               schema:
                 $ref: '#/components/schemas/ErrorResponse'
       security:
-        - asc_auth_key:
-            - read
-            - write
+        - x-signature: []
   /api/2.0/clients/{clientId}/public/info:
     get:
       tags:
@@ -16061,9 +16041,7 @@ paths:
         '500':
           description: Internal server error
       security:
-        - asc_auth_key:
-            - read
-            - write
+        - x-signature: []
   /api/2.0/clients/info:
     get:
       tags:
@@ -16115,9 +16093,7 @@ paths:
         '500':
           description: Internal server error
       security:
-        - asc_auth_key:
-            - read
-            - write
+        - x-signature: []
   /api/2.0/clients/consents:
     get:
       tags:
@@ -16179,9 +16155,7 @@ paths:
                 limit: 50
                 last_modified_on: '2024-04-04T12:00:00Z'
       security:
-        - asc_auth_key:
-            - read
-            - write
+        - x-signature: []
   /api/2.0/clients/{clientId}/revoke:
     delete:
       tags:
@@ -16242,9 +16216,7 @@ paths:
               schema:
                 $ref: '#/components/schemas/ErrorResponse'
       security:
-        - asc_auth_key:
-            - read
-            - write
+        - x-signature: []
 components:
   schemas:
     ActionType:
@@ -32797,6 +32769,11 @@ components:
       type: openIdConnect
       description: OpenID Connect authentication
       openIdConnectUrl: ''
+    x-signature:
+      type: apiKey
+      description: JWT signature used for authentication. The token must be obtained via the `api/2.0/security/oauth2/token` endpoint. It is passed as a cookie with the name `x-signature`.
+      name: x-signature
+      in: cookie
 x-tagGroups:
   - name: Api keys
     tags:
