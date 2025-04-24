@@ -8,6 +8,10 @@
 * Updated test examples
 * Added the Changing the default font page for test examples
 
+#### Docspace
+
+* Added the Plugins SDK samples
+
 ## 4.6.0
 
 ### New features
