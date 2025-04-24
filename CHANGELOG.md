@@ -1,5 +1,12 @@
 # Change log
 
+### New features
+
+#### Docs API
+
+* Added the Go and PHP (Laravel) test examples
+* Updated test examples
+
 ## 4.6.0
 
 ### New features

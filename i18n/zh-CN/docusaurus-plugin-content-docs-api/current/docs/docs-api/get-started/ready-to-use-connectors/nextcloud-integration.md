@@ -5,7 +5,11 @@ sidebar_custom_props:
 
 # Nextcloud 集成
 
-<iframe src="https://www.youtube.com/embed/vN9v9sJ0HVw?wmode=transparent" class="video-frame" width="700px" height="400px" frameborder="0" allowfullscreen></iframe>
+```mdx-code-block
+import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
+
+<YoutubeVideo videoId="vN9v9sJ0HVw"/>
+```
 
 这个[应用程序](https://github.com/ONLYOFFICE/onlyoffice-nextcloud)允许用户借助ONLYOFFICE文档在[Nextcloud](https://nextcloud.com)中编辑办公文档。
 

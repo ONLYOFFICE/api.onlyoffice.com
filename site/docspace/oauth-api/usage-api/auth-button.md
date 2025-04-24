@@ -10,7 +10,7 @@ sidebar_position: -4
 
 2. In the opened window, copy HTML, CSS, and JavaScript code blocks and use them to embed a button into your website.
 
-    <img alt="Preview" src="/assets/images/docspace/preview.png#gh-light-mode-only" width="400px" /><img alt="Preview" src="/assets/images/docspace/preview.dark.png#gh-dark-mode-only" width="400px" />
+    <img alt="Preview" src="/assets/images/docspace/oauth-auth-button.png#gh-light-mode-only" width="400px" /><img alt="Preview" src="/assets/images/docspace/oauth-auth-button.dark.png#gh-dark-mode-only" width="400px" />
 
 3. Copy the **Authorize link** and assign it to the authorization button. This link contains the following parameters:
 

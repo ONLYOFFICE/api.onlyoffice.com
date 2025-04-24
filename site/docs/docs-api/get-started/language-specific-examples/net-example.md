@@ -1,6 +1,6 @@
 ---
 sidebar_label: .Net example
-sidebar_position: -8
+sidebar_position: -10
 ---
 
 # .Net example
@@ -60,7 +60,15 @@ Configure the IIS components for the server to work correctly:
 
    <img alt="Windows features" src="/assets/images/csharp/server-components.png" width="778px" />
 
-## Step 4. Run your website with the editors
+## Step 4. Configure JWT
+
+Open the *settings.config* file (or *web.appsettings.config* file for MVC version) and [specify the same secret key](https://helpcenter.onlyoffice.com/installation/docs-configure-jwt.aspx) as used in your ONLYOFFICE Docs to enable JWT: 
+ 
+ ``` xml
+ <add key="files.docservice.secret" value="secret" />
+ ```
+
+## Step 5. Run your website with the editors
 
 1. Run the Internet Information Service (IIS) Manager:
 
@@ -92,6 +100,6 @@ Configure the IIS components for the server to work correctly:
 
    <img alt="Browse website" src="/assets/images/csharp/browse.png" width="500px" />
 
-## Step 5. Check accessibility
+## Step 6. Check accessibility
 
 In case the example and ONLYOFFICE Docs are installed on different computers, make sure that your server with the example installed has access to the ONLYOFFICE Docs with the address which you specify instead of **documentserver** in the configuration files. Make sure that the ONLYOFFICE Docs in its turn has access to the server with the example installed with the address which you specify instead of **example.com** in the configuration files.
