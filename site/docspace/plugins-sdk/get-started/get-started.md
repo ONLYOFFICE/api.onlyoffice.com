@@ -31,7 +31,7 @@ To create your own plugin, you need to follow a few steps:
 
 ### Step 1. Preparing
 
-Install the *@onlyoffice/docspace-plugin-sdk* npm package globally:
+[Install](../usage-sdk/preparing.md) the *@onlyoffice/docspace-plugin-sdk* npm package globally:
 
 ``` sh
 npm i -g @onlyoffice/docspace-plugin-sdk

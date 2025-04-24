@@ -34,7 +34,7 @@ To convert an audio or video file to text:
 
 ## Plugin structure
 
-Repository on GitHub: [pdf-converter](https://github.com/ONLYOFFICE/docspace-plugins/tree/master/pdf-converter).
+Repository on GitHub: [speech-to-text](https://github.com/ONLYOFFICE/docspace-plugins/tree/master/speech-to-text).
 
 All the required files are described [here](../usage-sdk/plugin-structure.md).
 

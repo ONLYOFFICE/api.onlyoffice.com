@@ -14,7 +14,7 @@ You can enable it following the instructions [here](../usage-sdk/adding-plugin.m
 
 To start working with the plugin:
 
-1. Generate the API token using [ConvertAPI](www.convertapi.com).
+1. Generate the API token using [ConvertAPI](https://convertapi.com).
 2. Go to **Developer Tools -> Integration -> Plugins**.
 3. Click ![Settings icon](/assets/images/docspace/settings-icon.png) next to the **PDF converter** plugin.
 4. Enter the API token in the corresponding field.
@@ -45,7 +45,7 @@ All the required files are described [here](../usage-sdk/plugin-structure.md).
 The following plugin interfaces are used:
 
 - [IPlugin](../usage-sdk/coding-plugin/plugin-types/plugin.md). Required for each plugin. It contains the plugin [status](../usage-sdk/coding-plugin/plugin-types/plugin.md#status) (PluginStatus) variable, used to embed the plugin into the DocSpace.
-- [IApiPlugin](../usage-sdk/coding-plugin/plugin-types/apiplugin.md). Required as we implement a third-party service ([ConvertAPI](www.convertapi.com)).
+- [IApiPlugin](../usage-sdk/coding-plugin/plugin-types/apiplugin.md). Required as we implement a third-party service ([ConvertAPI](https://convertapi.com)).
 - [ISettingsPlugin](../usage-sdk/coding-plugin/plugin-types/settingsplugin.md) and [ISettings](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/settings/ISettings.ts). Used to add settings block for plugin's configuration. The users will access this block from **Settings -> Integration -> Plugins** to adjust the plugin's parameters.
 - [IContextMenuPlugin](../usage-sdk/coding-plugin/plugin-types/contextmenuplugin.md) and [IContextMenuItem](../usage-sdk/coding-plugin/plugin-items/contextmenuitem.md). Used to implement a context menu action.
 
