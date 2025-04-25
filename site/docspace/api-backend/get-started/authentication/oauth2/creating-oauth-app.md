@@ -83,6 +83,8 @@ Defines the capabilities of a third-party application in relation to Docspace AP
 
 Check **Read** or **Write** options near each scope. When selecting the **Write** capability, the **Read** option is automatically enabled.
 
+For more information about the OpenID Connect and the *openid* scope, view its [documentation](../openid-connect.md).
+
 ![Access scopes](/assets/images/docspace/access-scopes.png#gh-light-mode-only)![Access scopes](/assets/images/docspace/access-scopes.dark.png#gh-dark-mode-only)
 
 ## Support & Legal info
