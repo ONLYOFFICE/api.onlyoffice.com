@@ -142,12 +142,6 @@ const config: Config = {
             },
             {
               type: 'docSidebar',
-              sidebarId: 'docspaceOAuth',
-              label: 'OAuth API',
-              docsPluginId: 'api',
-            },
-            {
-              type: 'docSidebar',
               sidebarId: 'docspaceApiBackend',
               label: 'API backend',
               docsPluginId: 'api',

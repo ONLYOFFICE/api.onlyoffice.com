@@ -10,6 +10,7 @@
 
 #### Docspace
 
+* Added the Authentication section
 * Added the API keys page
 * Added DocSpace version 3.1
 * Added the Plugins SDK samples
