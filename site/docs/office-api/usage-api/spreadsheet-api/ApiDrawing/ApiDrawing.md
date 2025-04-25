@@ -15,6 +15,6 @@ Represents the ApiDrawing class.
 | [GetRotation](./Methods/GetRotation.md) | number | Gets the rotation angle of the current drawing object. |
 | [GetWidth](./Methods/GetWidth.md) | [EMU](../Enumeration/EMU.md) | Returns the width of the current drawing. |
 | [SetLockValue](./Methods/SetLockValue.md) | boolean | Sets the lock value to the specified lock type of the current drawing. |
-| [SetPosition](./Methods/SetPosition.md) | None | Changes the position for the drawing object.\ 💡 Please note that the horizontal and vertical offsets are calculated within the limits of\ the specified column and row cells only. If this value exceeds the cell width or height, another vertical/horizontal position will be set. |
+| [SetPosition](./Methods/SetPosition.md) | None | Changes the position for the drawing object. 💡 Please note that the horizontal and vertical offsets are calculated within the limits of the specified column and row cells only. If this value exceeds the cell width or height, another vertical/horizontal position will be set. |
 | [SetRotation](./Methods/SetRotation.md) | boolean | Sets the rotation angle to the current drawing object. |
 | [SetSize](./Methods/SetSize.md) | None | Sets a size of the object (image, shape, chart) bounding box. |
