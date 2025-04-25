@@ -84,7 +84,7 @@ export const DocSpaceFeatures: Features = {
   items: [
     {
       title: 'JavaScript SDK',
-      link: 'javascript-sdk/get-started/basic-concepts',
+      link: 'javascript-sdk/get-started',
       description: (
         <>
           In this section, you will learn how to connect DocSpace as a frame to{" "}
