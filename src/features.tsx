@@ -96,7 +96,7 @@ export const DocSpaceFeatures: Features = {
     },
     {
       title: 'Plugins SDK',
-      link: 'plugins-sdk/get-started/basic-concepts',
+      link: 'plugins-sdk/get-started',
       description: (
         <>
           In this section, you will learn how to create your own plugins and add{" "}
