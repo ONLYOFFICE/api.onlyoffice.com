@@ -57,6 +57,10 @@ ui=en-us&amp;thm=1&amp;"/>
 
 ### Parameters
 
+```mdx-code-block
+<APITable>
+```
+
 | Name       | Example                                                          | Description                                                                                                                                                                                                                                                |
 | ---------- | ---------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | ui         | en-us                                                            | Indicates that the WOPI server includes the preferred UI language in the format described in [\[RFC1766\]](https://datatracker.ietf.org/doc/html/rfc1766.html).                                                                                            |
@@ -66,6 +70,10 @@ ui=en-us&amp;thm=1&amp;"/>
 | embed      | true                                                             | Indicates that the output of the action will be embedded in a web page (**true**).                                                                                                                                                                         |
 | wopisrc    | https\://\<host\_address>/ wopi/files/(file\_id)                 | Indicates that the WOPI server includes the [WOPISrc](./key-concepts.md#wopisrc) value. It tells the WOPI client what URL to call back to when running WOPI operations on a file. This parameter is required.                                     |
 | favIconUrl | "/web-apps/apps/ documenteditor/main/ resources/img/favicon.ico" | Indicates that the WOPI server includes a URL to an appropriate favicon for all online office applications. Hosts should use this URL as the favicon for their host page, so that the appropriate application icon appears when the online office is used. |
+
+```mdx-code-block
+</APITable>
+```
 
 ## Nextcloud specific
 
