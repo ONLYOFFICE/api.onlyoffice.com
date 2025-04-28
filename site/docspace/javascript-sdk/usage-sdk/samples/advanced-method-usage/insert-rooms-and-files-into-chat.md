@@ -5,7 +5,8 @@ This example shows how to integrate DocSpace SDK selectors into a chat interface
 Please make sure you are using a server environment to run the HTML file because the JavaScript SDK must be launched on the server.  
 You need to [add the URL](../../../get-started/basic-concepts.md#step-1-specifying-the-docspace-url) of your server's root directory to the **Developer Tools** section of DocSpace.
 
-## Full Example
+<details>
+  <summary>Full Example</summary>
 
 ```html
 <!-- Step 1: HTML Setup -->
@@ -162,6 +163,8 @@ You need to [add the URL](../../../get-started/basic-concepts.md#step-1-specifyi
   </body>
 </html>
 ```
+
+</details>
 
 ---
 

@@ -5,6 +5,9 @@ This example demonstrates how to retrieve the configuration object of the embedd
 Please make sure you are using a server environment to run the HTML file because the JavaScript SDK must be launched on the server.
 You need to [add the URL](../../../get-started/basic-concepts.md#step-1-specifying-the-docspace-url) of your server's root directory to the **Developer Tools** section of DocSpace.
 
+<details>
+  <summary>Full Example</summary>
+
 ``` html
 <!-- Step 1: HTML Setup -->
 <!DOCTYPE html>
@@ -66,6 +69,8 @@ You need to [add the URL](../../../get-started/basic-concepts.md#step-1-specifyi
 </html>
 ```
 
+</details>
+
 ## Step 1. Set HTML structure
 Create a simple HTML page with an embedded DocSpace frame and a button to trigger the configuration retrieval:
 
@@ -107,7 +112,9 @@ Create a simple HTML page with an embedded DocSpace frame and a button to trigge
 </html>
 ```
 
+:::info
 The API JavaScript file can normally be found in the following DocSpace folder: **\{PORTAL_SRC\}/static/scripts/sdk/1.0.1/api.js** where **\{PORTAL_SRC\}** is the name of the server with the ONLYOFFICE DocSpace installed.
+:::
 
 ## Step 2. JavaScript SDK Logic
 Create a script block to configure and initialize the SDK. Use the [getConfig()](../../../usage-sdk/methods.md#getconfig) method to retrieve the current configuration object.

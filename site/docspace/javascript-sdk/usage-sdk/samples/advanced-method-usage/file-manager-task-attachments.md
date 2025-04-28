@@ -5,7 +5,9 @@ This example demonstrates how to integrate the DocSpace file selector into a tas
 Please make sure you are using a server environment to run the HTML file because the JavaScript SDK must be launched on the server.
 You need to [add the URL](../../../get-started/basic-concepts.md#step-1-specifying-the-docspace-url) of your server's root directory to the **Developer Tools** section of DocSpace.
 
-## Full Example
+
+<details>
+  <summary>Full Example</summary>
 
 ```html
 <!DOCTYPE html>
@@ -155,6 +157,8 @@ You need to [add the URL](../../../get-started/basic-concepts.md#step-1-specifyi
   </body>
 </html>
 ```
+
+</details>
 
 ---
 

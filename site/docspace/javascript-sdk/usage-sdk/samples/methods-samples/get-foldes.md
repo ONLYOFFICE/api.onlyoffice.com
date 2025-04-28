@@ -5,6 +5,9 @@ This example demonstrates how to retrieve a list of folders from a shared DocSpa
 Please make sure you are using a server environment to run the HTML file because the JavaScript SDK must be launched on the server.
 You need to [add the URL](../../../get-started/basic-concepts.md#step-1-specifying-the-docspace-url) of your server's root directory to the **Developer Tools** section of DocSpace.
 
+<details>
+  <summary>Full Example</summary>
+
 ``` html
 <!-- Step 1: HTML Setup -->
 <!DOCTYPE html>
@@ -69,6 +72,8 @@ You need to [add the URL](../../../get-started/basic-concepts.md#step-1-specifyi
 </html>
 ```
 
+</details>
+
 ## Step 1. Set HTML structure
 Create an HTML page with an embedded DocSpace iframe and a button to trigger folder retrieval.
 
@@ -111,7 +116,9 @@ Create an HTML page with an embedded DocSpace iframe and a button to trigger fol
 </html>
 ```
 
+:::info
 The API JavaScript file can normally be found in the following DocSpace folder: **\{PORTAL_SRC\}/static/scripts/sdk/1.0.1/api.js** where **\{PORTAL_SRC\}** is the name of the server with the ONLYOFFICE DocSpace installed.
+:::
 
 ## Step 2. JavaScript SDK Logic
 Use the [getFolders()](../../../usage-sdk/methods.md#getfolders) method to retrieve the list of folders from the current DocSpace view.

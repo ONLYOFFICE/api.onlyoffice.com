@@ -5,6 +5,9 @@ This example demonstrates how to log in to DocSpace using the JavaScript SDK by 
 Please make sure you are using a server environment to run the HTML file because the JavaScript SDK must be launched on the server.
 You need to [add the URL](../../../get-started/basic-concepts.md#step-1-specifying-the-docspace-url) of your server's root directory to the **Developer Tools** section of DocSpace.
 
+<details>
+  <summary>Full Example</summary>
+
 ``` html
 <!-- Step 1: HTML Setup -->
 <!DOCTYPE html>
@@ -70,6 +73,8 @@ You need to [add the URL](../../../get-started/basic-concepts.md#step-1-specifyi
 </html>
 ```
 
+</details>
+
 ## Step 1. Set HTML structure
 Create a basic HTML page that includes a button for logging in and embeds the DocSpace iframe.
 
@@ -110,6 +115,10 @@ Create a basic HTML page that includes a button for logging in and embeds the Do
   </body>
 </html>
 ```
+
+:::info
+The API JavaScript file can normally be found in the following DocSpace folder: **\{PORTAL_SRC\}/static/scripts/sdk/1.0.1/api.js** where **\{PORTAL_SRC\}** is the name of the server with the ONLYOFFICE DocSpace installed.
+:::
 
 ## Step 2. JavaScript SDK Logic
 Configure and initialize the system. Then use the [getHashSettings()](../../../usage-sdk/methods.md#gethashsettings) and [createHash()](../../../usage-sdk/methods.md#createhash) methods to securely hash the password, followed by [login()](../../../usage-sdk/methods.md#login) to authenticate the user.

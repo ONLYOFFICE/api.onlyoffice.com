@@ -5,6 +5,9 @@ This example demonstrates how to destroy (remove) the embedded DocSpace iframe u
 Please make sure you are using a server environment to run the HTML file because the JavaScript SDK must be launched on the server.
 You need to [add the URL](../../../get-started/basic-concepts.md#step-1-specifying-the-docspace-url) of your server's root directory to the **Developer Tools** section of DocSpace.
 
+<details>
+  <summary>Full Example</summary>
+
 ``` html
 <!-- Step 1: HTML Setup -->
 <!DOCTYPE html>
@@ -65,6 +68,8 @@ You need to [add the URL](../../../get-started/basic-concepts.md#step-1-specifyi
 </html>
 ```
 
+</details>
+
 ## Step 1. Set HTML structure
 Embed the DocSpace iframe and add a button that will destroy the frame when clicked.
 
@@ -107,7 +112,9 @@ Embed the DocSpace iframe and add a button that will destroy the frame when clic
 </html>
 ```
 
+:::info
 The API JavaScript file can normally be found in the following DocSpace folder: **\{PORTAL_SRC\}/static/scripts/sdk/1.0.1/api.js** where **\{PORTAL_SRC\}** is the name of the server with the ONLYOFFICE DocSpace installed.
+:::
 
 ## Step 2. JavaScript SDK Logic
 Use the [destroyFrame()](../../../usage-sdk/methods.md#destroyframe)  method to remove the DocSpace instance from the DOM.

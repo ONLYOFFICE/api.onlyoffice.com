@@ -5,6 +5,9 @@ This example demonstrates how to initialize the DocSpace view-only frame using t
 Please make sure you are using a server environment to run the HTML file because the JavaScript SDK must be launched on the server.
 You need to [add the URL](../../../get-started/basic-concepts.md#step-1-specifying-the-docspace-url) of your server's root directory to the **Developer Tools** section of DocSpace.
 
+<details>
+  <summary>Full Example</summary>
+
 ``` html
 <!-- Step 1: HTML Structure -->
 <!DOCTYPE html>
@@ -36,6 +39,8 @@ You need to [add the URL](../../../get-started/basic-concepts.md#step-1-specifyi
 </html>
 ```
 
+</details>
+
 ## Step 1. Set HTML structure
 Add an iframe to your HTML page to embed the DocSpace frame.
 
@@ -58,7 +63,9 @@ Add an iframe to your HTML page to embed the DocSpace frame.
 </html>
 ```
 
+:::info
 The API JavaScript file can normally be found in the following DocSpace folder: **\{PORTAL_SRC\}/static/scripts/sdk/1.0.1/api.js** where **\{PORTAL_SRC\}** is the name of the server with the ONLYOFFICE DocSpace installed.
+:::
 
 ## Step 2. JavaScript SDK Logic
 This example demonstrates how to initialize the DocSpace view-only frame using the [initFrame()](../../../usage-sdk/methods.md#initframe) method.
