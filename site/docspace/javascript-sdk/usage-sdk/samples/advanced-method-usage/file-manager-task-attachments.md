@@ -160,8 +160,6 @@ You need to [add the URL](../../../get-started/basic-concepts.md#step-1-specifyi
 
 </details>
 
----
-
 ## Script Execution Steps
 
 ### 1. Select and highlight task
