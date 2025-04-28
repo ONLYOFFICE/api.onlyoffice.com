@@ -24,7 +24,7 @@ Start a secure tunnel:
 ngrok http 3000
 ```
 
-Copy the HTTPS URL it shows (e.g. `https://abc123.ngrok-free.app`) and **don’t stop Ngrok** while testing.
+Copy the HTTPS URL it shows (e.g. `https://abc123.ngrok-free.app`) and **don't stop Ngrok** while testing.
 
 ---
 
@@ -70,7 +70,7 @@ Go to **Developer Tools → OAuth 2.0 → Register New Application** inside DocS
 - **Permissions** - enable `Profile (read/write)`
 - **Privacy/Security** - can match website URL
 
-> **Don’t stop Ngrok while testing!**  
+> **Don't stop Ngrok while testing!**  
 > The URL will break if you close it.
 
 ---

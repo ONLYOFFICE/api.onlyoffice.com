@@ -98,7 +98,7 @@ You need to [add the URL](../../../get-started/basic-concepts.md#step-1-specifyi
 
         const closeBtn = document.createElement("button")
         closeBtn.className = "close-btn"
-        closeBtn.innerHTML = "×"
+        closeBtn.innerHTML = "x"
 
         closeBtn.onclick = () => removeProject(li, folderId)
 

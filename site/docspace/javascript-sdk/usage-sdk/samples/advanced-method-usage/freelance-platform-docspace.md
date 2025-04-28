@@ -251,7 +251,7 @@ function initDocSpace(rootPath = null, filter = null) {
 }
 ```
 
-- If `rootPath` is provided, the SDK loads the freelancer’s workspace view.
+- If `rootPath` is provided, the SDK loads the freelancer's workspace view.
 - If not, we are still on the project creation form.
 
 ### 3. Enable the Create Order button

@@ -24,7 +24,7 @@ Start your tunnel:
 ngrok http 3000
 ```
 
-Copy the HTTPS URL it shows (e.g. `https://abc123.ngrok-free.app`) and **don’t stop Ngrok** while testing.
+Copy the HTTPS URL it shows (e.g. `https://abc123.ngrok-free.app`) and **don't stop Ngrok** while testing.
 
 ---
 
