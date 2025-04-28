@@ -10,7 +10,11 @@ Supported languages are listed [here](https://github.com/typograf/typograf/blob/
 
 **Supported editors:** documents.
 
-![Typograf](/assets/images/plugins/gifs/typograf.gif)
+```mdx-code-block
+import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
+
+<YoutubeVideo videoId="Pr1TAstlj7E"/>
+```
 
 ## Installation
 

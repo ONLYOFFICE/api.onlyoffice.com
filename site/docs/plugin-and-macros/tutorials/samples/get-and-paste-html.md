@@ -10,7 +10,11 @@ Gets the document content as HTML code, modifies it, and pastes back to the docu
 
 **Analogue:** [Doc2md](https://github.com/ONLYOFFICE/onlyoffice.github.io/tree/master/sdkjs-plugins/content/doc2md).
 
-![GetAndPasteHTML](/assets/images/plugins/gifs/get-and-paste-html.gif)
+```mdx-code-block
+import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
+
+<YoutubeVideo videoId="ZoY0CMfcPyk"/>
+```
 
 ## Installation
 

@@ -8,7 +8,11 @@ Connects [Big Huge Thesaurus](https://words.bighugelabs.com/) to search for word
 
 **Supported editors:** documents, spreadsheets, presentations.
 
-![Thesaurus](/assets/images/plugins/gifs/thesaurus.gif)
+```mdx-code-block
+import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
+
+<YoutubeVideo videoId="3r0CCY5HNbQ"/>
+```
 
 ## Installation
 
