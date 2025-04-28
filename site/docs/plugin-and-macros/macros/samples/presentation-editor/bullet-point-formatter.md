@@ -1,0 +1,43 @@
+# Bullet Point Formatter
+
+Apply consistent formatting to bullet points.
+
+```ts
+(function () {
+    let presentation = Api.GetPresentation();
+    let slideCount = presentation.GetSlidesCount();
+    let bullet = Api.CreateBullet("-");
+
+    for (let i = 0; i < slideCount; i++) {
+        let slide = presentation.GetSlideByIndex(i);
+        let shapes = slide.GetAllShapes();
+
+        shapes.forEach(function (shape) {
+            let docContent = shape.GetDocContent();
+            let paragraphs = docContent.GetAllParagraphs();
+            paragraphs.forEach(function (paragraph) {
+                let paragraphProperties = paragraph.GetParaPr();
+                let indentLeft = paragraphProperties.GetIndLeft();
+
+                if (indentLeft !== 0) {
+                    paragraph.SetBullet(bullet);
+                    paragraph.SetFontSize(48);
+                    paragraph.SetFontFamily("Arial");
+                    paragraph.SetBold(false);
+                    paragraph.SetItalic(false);
+                    paragraph.SetHighlight("white");
+                    paragraph.SetColor(0, 0, 0);
+                    paragraph.SetUnderline(false);
+                }
+            });
+        });
+    }
+})();
+```
+
+Methods used: [CreateBullet](../../../../office-api/usage-api/presentation-api/Api/Methods/CreateBullet.md), [GetAllParagraphs](../../../../office-api/usage-api/text-document-api/ApiRange/Methods/GetAllParagraphs.md), [GetAllShapes](../../../../office-api/usage-api/presentation-api/ApiMaster/Methods/GetAllShapes.md), [GetDocContent](../../../../office-api/usage-api/presentation-api/ApiShape/Methods/GetDocContent.md), [GetIndLeft](../../../../office-api/usage-api/presentation-api/ApiParagraph/Methods/GetIndLeft.md), [GetParaPr](../../../../office-api/usage-api/presentation-api/ApiParagraph/Methods/GetParaPr.md), [GetPresentation](../../../../office-api/usage-api/presentation-api/Api/Methods/GetPresentation.md), [GetSlideByIndex](../../../../office-api/usage-api/presentation-api/ApiPresentation/Methods/GetSlideByIndex.md), [GetSlidesCount](../../../../office-api/usage-api/presentation-api/ApiPresentation/Methods/GetSlidesCount.md), [SetBold](../../../../office-api/usage-api/presentation-api/ApiRun/Methods/SetBold.md), [SetBullet](../../../../office-api/usage-api/presentation-api/ApiParagraph/Methods/SetBullet.md), [SetColor](../../../../office-api/usage-api/presentation-api/ApiRun/Methods/SetColor.md), [SetFontFamily](../../../../office-api/usage-api/presentation-api/ApiRun/Methods/SetFontFamily.md), [SetFontSize](../../../../office-api/usage-api/presentation-api/ApiRun/Methods/SetFontSize.md), [SetHighlight](../../../../office-api/usage-api/presentation-api/ApiParagraph/Methods/SetHighlight.md), [SetItalic](../../../../office-api/usage-api/presentation-api/ApiRun/Methods/SetItalic.md), [SetUnderline](../../../../office-api/usage-api/presentation-api/ApiRun/Methods/SetUnderline.md)
+
+## Result
+
+![BulletPointFormatter](/assets/images/plugins/bullet-point-formatter.png#gh-light-mode-only)
+![BulletPointFormatter](/assets/images/plugins/bullet-point-formatter.dark.png#gh-dark-mode-only)
