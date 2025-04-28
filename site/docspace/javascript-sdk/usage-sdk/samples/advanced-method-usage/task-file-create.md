@@ -1,11 +1,16 @@
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 # Create files in rooms
 This example demonstrates how to create tasks linked to rooms in DocSpace, and then create files inside those rooms using the JavaScript SDK.
 
 ## Before you start
 Please make sure you are using a server environment to run the HTML file because the JavaScript SDK must be launched on the server. You need to [add the URL](../../../get-started/basic-concepts.md#step-1-specifying-the-docspace-url) of your server's root directory to the **Developer Tools** section of DocSpace.
 
-## Full Example
-
+<details>
+  <summary>Full Example</summary>
+  <Tabs>
+    <TabItem value="html" label="HTML" default>
 ```html
 <!DOCTYPE html>
 <html lang="en">
@@ -14,87 +19,7 @@ Please make sure you are using a server environment to run the HTML file because
     <title>Create files in rooms</title>
     <script src="{PORTAL_SRC}/static/scripts/sdk/1.0.1/api.js"></script>
     <style>
-      body {
-          font-family: Arial, sans-serif;
-          margin: 20px;
-      }
-      table {
-          width: 56%;
-          border-collapse: collapse;
-          margin-top: 20px;
-      }
-      th, td {
-          border: 1px solid #ddd;
-          padding: 8px;
-          text-align: left;
-      }
-      th {
-          background-color: #f2f2f2;
-      }
-      .button {
-          padding: 8px 12px;
-          background-color: #007bff;
-          color: #fff;
-          border: none;
-          cursor: pointer;
-          margin-top: 12px;
-      }
-      .button:disabled {
-          background-color: #007bff52;
-          cursor: none;
-      }
-      .button.row {
-          margin-left: 12px;
-      }
-      .roomWindow {
-          width: 100%;
-          height: 100%;
-      }
-      #error {
-          display: none;
-          color: crimson;
-          margin: 0;
-      }
-      #tasks div{
-          cursor: pointer;
-          text-decoration: underline;
-      }
-      #room-view {
-          width: 40%;
-          height: 94%;
-          position: absolute;
-          top: 0;
-          right: 0;
-          display: none;
-          border: solid;
-          padding: 24px 10px 10px 10px;
-      }
-      #close-room {
-          position: absolute;
-          top: -12px;
-          right: 0;
-          z-index: 2;
-      }
-      #new-file {
-          position: relative;
-          bottom: 84px;
-          z-index: 2;
-          font-size: 20px;
-          margin-left: 32px;
-          display: none;
-      }
-      #create-task :last-child {
-          margin-top: 10px;
-      }
-      #create-file {
-          padding: 32px;
-          z-index: 2;
-          top: 50%;
-      }
-      #managerWindow {
-          display: block;
-          border: none;
-      }
+      /* Check CSS tab for styles */
     </style>
   </head>
   <body>
@@ -268,6 +193,94 @@ Please make sure you are using a server environment to run the HTML file because
   </body>
 </html>
 ```
+    </TabItem>
+    <TabItem value="css" label="CSS" default>
+```css
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+table {
+    width: 56%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+th {
+    background-color: #f2f2f2;
+}
+.button {
+    padding: 8px 12px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    margin-top: 12px;
+}
+.button:disabled {
+    background-color: #007bff52;
+    cursor: none;
+}
+.button.row {
+    margin-left: 12px;
+}
+.roomWindow {
+    width: 100%;
+    height: 100%;
+}
+#error {
+    display: none;
+    color: crimson;
+    margin: 0;
+}
+#tasks div{
+    cursor: pointer;
+    text-decoration: underline;
+}
+#room-view {
+    width: 40%;
+    height: 94%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: none;
+    border: solid;
+    padding: 24px 10px 10px 10px;
+}
+#close-room {
+    position: absolute;
+    top: -12px;
+    right: 0;
+    z-index: 2;
+}
+#new-file {
+    position: relative;
+    bottom: 84px;
+    z-index: 2;
+    font-size: 20px;
+    margin-left: 32px;
+    display: none;
+}
+#create-task :last-child {
+    margin-top: 10px;
+}
+#create-file {
+    padding: 32px;
+    z-index: 2;
+    top: 50%;
+}
+#managerWindow {
+    display: block;
+    border: none;
+}
+```
+    </TabItem>
+  </Tabs>
+</details>
 
 ## Script Execution Steps
 

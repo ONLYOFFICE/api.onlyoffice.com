@@ -1,11 +1,16 @@
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 # Attach files to tasks
 This example demonstrates how to integrate the DocSpace file selector into a task management interface, allowing users to attach files to tasks using a modal.
 
 ## Before you start
 Please make sure you are using a server environment to run the HTML file because the JavaScript SDK must be launched on the server. You need to [add the URL](../../../get-started/basic-concepts.md#step-1-specifying-the-docspace-url) of your server's root directory to the **Developer Tools** section of DocSpace.
 
-## Full Example
-
+<details>
+  <summary>Full Example</summary>
+  <Tabs>
+    <TabItem value="html" label="HTML" default>
 ```html
 <!DOCTYPE html>
 <html lang="en">
@@ -14,34 +19,7 @@ Please make sure you are using a server environment to run the HTML file because
     <title>Attach files to tasks</title>
     <script src="{PORTAL_SRC}/static/scripts/sdk/1.0.0/api.js"></script>
     <style>
-      body {
-          font-family: Arial, sans-serif;
-          margin: 20px;
-      }
-      table {
-          width: 100%;
-          border-collapse: collapse;
-          margin-top: 20px;
-      }
-      th, td {
-          border: 1px solid #ddd;
-          padding: 8px;
-          text-align: left;
-      }
-      th {
-          background-color: #f2f2f2;
-      }
-      .selected {
-        background-color: #d3e2ff;
-      }
-      .button {
-          padding: 8px 12px;
-          background-color: #007bff;
-          color: #fff;
-          border: none;
-          cursor: pointer;
-          margin-top: 12px;
-      }
+      /* Check CSS tab for styles */
     </style>
   </head>
   <body>
@@ -137,8 +115,41 @@ Please make sure you are using a server environment to run the HTML file because
   </body>
 </html>
 ```
-
----
+    </TabItem>
+    <TabItem value="css" label="CSS" default>
+```css
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+th {
+    background-color: #f2f2f2;
+}
+.selected {
+  background-color: #d3e2ff;
+}
+.button {
+    padding: 8px 12px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    margin-top: 12px;
+}
+```
+    </TabItem>
+  </Tabs>
+</details>
 
 ## Script Execution Steps
 

@@ -1,11 +1,16 @@
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 # Create basic task
 This example demonstrates how to create a task management table using the DocSpace JavaScript SDK. When a task is created, a corresponding room is automatically created in DocSpace.
 
 ## Before you start
 Please make sure you are using a server environment to run the HTML file because the JavaScript SDK must be launched on the server. You need to [add the URL](../../../get-started/basic-concepts.md#step-1-specifying-the-docspace-url) of your server's root directory to the **Developer Tools** section of DocSpace.
 
-## Full Example
-
+<details>
+  <summary>Full Example</summary>
+  <Tabs>
+    <TabItem value="html" label="HTML" default>
 ```html
 <!DOCTYPE html>
 <html lang="en">
@@ -14,50 +19,7 @@ Please make sure you are using a server environment to run the HTML file because
     <title>Basic Task Creation</title>
     <script src="{PORTAL_SRC}/static/scripts/sdk/1.0.1/api.js"></script>
     <style>
-      body {
-          font-family: Arial, sans-serif;
-          margin: 20px;
-      }
-      table {
-          width: 100%;
-          border-collapse: collapse;
-          margin-top: 20px;
-      }
-      th, td {
-          border: 1px solid #ddd;
-          padding: 8px;
-          text-align: left;
-      }
-      th {
-          background-color: #f2f2f2;
-      }
-      .button {
-          padding: 8px 12px;
-          background-color: #007bff;
-          color: #fff;
-          border: none;
-          cursor: pointer;
-          margin-top: 12px;
-      }
-      .button:disabled {
-          background-color: #007bff52;
-          cursor: none;
-      }
-      .button.row {
-          margin-left: 12px;
-      }
-      #error {
-          display: none;
-          color: crimson;
-          margin: 0;
-      }
-      #create-task :last-child {
-          margin-top: 10px;
-      }
-      #managerWindow {
-          display: block;
-          border: none;
-      }
+      /* Check CSS tab for styles */
     </style>
   </head>
   <body>
@@ -157,8 +119,57 @@ Please make sure you are using a server environment to run the HTML file because
   </body>
 </html>
 ```
-
----
+    </TabItem>
+    <TabItem value="css" label="CSS" default>
+```css
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+th {
+    background-color: #f2f2f2;
+}
+.button {
+    padding: 8px 12px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    margin-top: 12px;
+}
+.button:disabled {
+    background-color: #007bff52;
+    cursor: none;
+}
+.button.row {
+    margin-left: 12px;
+}
+#error {
+    display: none;
+    color: crimson;
+    margin: 0;
+}
+#create-task :last-child {
+    margin-top: 10px;
+}
+#managerWindow {
+    display: block;
+    border: none;
+}
+```
+    </TabItem>
+  </Tabs>
+</details>
 
 ## Script Execution Steps
 
