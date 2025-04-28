@@ -1,9 +1,6 @@
 const fs = require('fs');
 const path = require('path');
 const prettier = require('prettier');
-const os = require('os');
-
-const EOL = os.EOL;
 
 const sidebarPath = path.join(__dirname, "../site/docspace/api-backend/usage-api/sidebar.ts");
 const content = fs.readFileSync(sidebarPath, "utf8");
@@ -37,7 +34,7 @@ function flattenSidebar(sidebar) {
 }
 
 const startStr = "apisidebar:";
-const endStr = `,${EOL}};${EOL}${EOL}export default sidebar.apisidebar;${EOL}`;
+const endStr = ",\r\n};\r\n\r\nexport default sidebar.apisidebar;\r\n";
 const startIndex = content.indexOf(startStr) + startStr.length;
 const endIndex = content.lastIndexOf(endStr);
 
@@ -58,7 +55,7 @@ try {
 
 const fixedSidebar = flattenSidebar(sidebarJson);
 
-const newContent = content.substring(0, startIndex) + EOL + JSON.stringify(fixedSidebar, null, 2) + EOL + content.substring(endIndex);
+const newContent = content.substring(0, startIndex) + "\n" + JSON.stringify(fixedSidebar, null, 2) + "\n" + content.substring(endIndex);
 
 async function main() {
     try {
