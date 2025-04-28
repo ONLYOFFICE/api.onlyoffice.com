@@ -15,6 +15,12 @@ The **action** element of the discovery XML provides the important characteristi
 
 ### WOPI actions
 
+```mdx-code-block
+import APITable from '@site/src/components/APITable/APITable';
+
+<APITable>
+```
+
 | Name       | Description                                                                                                                                                                                                                                       |
 | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | view       | Renders a non-editable view of a document.                                                                                                                                                                                                        |
@@ -25,6 +31,10 @@ The **action** element of the discovery XML provides the important characteristi
 | formsubmit | Supports opening *pdf* files in the form filling mode. In this case, a user might be able to make changes to a *pdf* file even if they didn't have permission to use the *edit* action. This action is available starting from version 8.1.       |
 | mobileView | Renders a non-editable view of a document that is optimized for viewing on mobile devices such as smartphones. This action is available starting from version 7.4.                                                                                |
 | mobileEdit | Allows users to edit a document on mobile devices such as smartphones. This action is available starting from version 7.4.                                                                                                                        |
+
+```mdx-code-block
+</APITable>
+```
 
 ### Attributes
 

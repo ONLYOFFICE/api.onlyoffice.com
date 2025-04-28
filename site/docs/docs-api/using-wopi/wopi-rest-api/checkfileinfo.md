@@ -45,18 +45,16 @@ import APITable from '@site/src/components/APITable/APITable';
 ## Breadcrumb properties
 
 ```mdx-code-block
-import APITable from '@site/src/components/APITable/APITable';
-
 <APITable>
 ```
 
 | Name                 | Type   | Example                                                | Description                                                                                                                                                          |
 | -------------------- | ------ | ------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | BreadcrumbBrandName  | string | "Example Brand Name"                                   | The brand name of the host.                                                                                                                                          |
-| BreadcrumbBrandUrl   | string | `https://example.com/url-to-breadcrumb-brand-page.com` | A URI to a web page that the WOPI client should navigate to when the user clicks on UI that displays [BreadcrumbBrandName](#breadcrumb-properties).                  |
-| BreadcrumbDocName    | string | "Example Breadcrumb File Name.docx"                    | A file name that the WOPI client displays to the user. If this parameter is not specified, then the [BaseFileName](#required-response-properties) parameter is used. |
+| BreadcrumbBrandUrl   | string | `https://example.com/url-to-breadcrumb-brand-page.com` | A URI to a web page that the WOPI client should navigate to when the user clicks on UI that displays [BreadcrumbBrandName](#BreadcrumbBrandName).                  |
+| BreadcrumbDocName    | string | "Example Breadcrumb File Name.docx"                    | A file name that the WOPI client displays to the user. If this parameter is not specified, then the [BaseFileName](#BaseFileName) parameter is used. |
 | BreadcrumbFolderName | string | "Example Folder Name"                                  | The name of the container that contains the file.                                                                                                                    |
-| BreadcrumbFolderUrl  | string | `https://example.com/url-to-breadcrumb-brand-folder`   | A URI to a web page that the WOPI client should navigate to when the user clicks on UI that displays [BreadcrumbFolderName](#breadcrumb-properties).                 |
+| BreadcrumbFolderUrl  | string | `https://example.com/url-to-breadcrumb-brand-folder`   | A URI to a web page that the WOPI client should navigate to when the user clicks on UI that displays [BreadcrumbFolderName](#BreadcrumbFolderName).                 |
 
 ```mdx-code-block
 </APITable>
@@ -65,8 +63,6 @@ import APITable from '@site/src/components/APITable/APITable';
 ## PostMessage properties
 
 ```mdx-code-block
-import APITable from '@site/src/components/APITable/APITable';
-
 <APITable>
 ```
 
@@ -86,8 +82,6 @@ import APITable from '@site/src/components/APITable/APITable';
 ## File URL properties
 
 ```mdx-code-block
-import APITable from '@site/src/components/APITable/APITable';
-
 <APITable>
 ```
 
@@ -105,8 +99,6 @@ import APITable from '@site/src/components/APITable/APITable';
 ## Other miscellaneous properties
 
 ```mdx-code-block
-import APITable from '@site/src/components/APITable/APITable';
-
 <APITable>
 ```
 
@@ -114,9 +106,9 @@ import APITable from '@site/src/components/APITable/APITable';
 | --------------------- | ------- | ------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | CopyPasteRestrictions | string  | "BlockAll"                     | Specifies if the WOPI client should disable the **Copy and Paste** functionality within the application. By default, all **Copy and Paste** functionality is enabled, i.e. the setting has no effect. Possible property values:<br/><br/>- **BlockAll** - the **Copy and Paste** functionality is completely disabled within the application;<br/><br/>- **CurrentDocumentOnly** - the **Copy and Paste** functionality is enabled but content can only be copied and pasted within the file currently open in the application. |
 | DisablePrint          | boolean | true                           | Specifies if the WOPI client should disable all print functionality.                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
-| FileExtension         | string  | ".docx"                        | A file extension which must begin with a ".". If provided, WOPI clients will use this value as the file extension. Otherwise the extension will be parsed from the [BaseFileName](#required-response-properties).                                                                                                                                                                                                                                                                                                               |
+| FileExtension         | string  | ".docx"                        | A file extension which must begin with a ".". If provided, WOPI clients will use this value as the file extension. Otherwise the extension will be parsed from the [BaseFileName](#BaseFileName).                                                                                                                                                                                                                                                                                                               |
 | FileNameMaxLength     | integer | 20                             | The maximum length for file names that the WOPI host supports, excluding the file extension. The default value is 250. Note that WOPI clients will use this default value if the property is omitted or if it is explicitly set to 0.                                                                                                                                                                                                                                                                                           |
-| LastModifiedTime      | string  | "2009-06-15T13:45:30.0000000Z" | The last time that the file was modified. This time must always be a UTC time, and must be formatted in ISO 8601 round-trip format. This property can be specified as an alternative to the [Version](#required-response-properties) property.                                                                                                                                                                                                                                                                                  |
+| LastModifiedTime      | string  | "2009-06-15T13:45:30.0000000Z" | The last time that the file was modified. This time must always be a UTC time, and must be formatted in ISO 8601 round-trip format. This property can be specified as an alternative to the [Version](#Version) property.                                                                                                                                                                                                                                                                                  |
 
 ```mdx-code-block
 </APITable>
@@ -125,8 +117,6 @@ import APITable from '@site/src/components/APITable/APITable';
 ## User metadata properties
 
 ```mdx-code-block
-import APITable from '@site/src/components/APITable/APITable';
-
 <APITable>
 ```
 
@@ -143,8 +133,6 @@ import APITable from '@site/src/components/APITable/APITable';
 ## User permissions properties
 
 ```mdx-code-block
-import APITable from '@site/src/components/APITable/APITable';
-
 <APITable>
 ```
 
@@ -163,8 +151,6 @@ import APITable from '@site/src/components/APITable/APITable';
 ## WOPI host capabilities properties
 
 ```mdx-code-block
-import APITable from '@site/src/components/APITable/APITable';
-
 <APITable>
 ```
 
@@ -182,8 +168,6 @@ import APITable from '@site/src/components/APITable/APITable';
 ## Nextcloud/Collabora/Seafile properties
 
 ```mdx-code-block
-import APITable from '@site/src/components/APITable/APITable';
-
 <APITable>
 ```
 
