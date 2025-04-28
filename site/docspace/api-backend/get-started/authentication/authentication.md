@@ -14,7 +14,7 @@ API keys are a simple way to authenticate requests, typically used for server-to
 
 ## OAuth 2.0
 
-OAuth 2.0 is recommended when your application needs to access data on behalf of multiple users or when you want users to explicitly authorize your application without sharing their credentials. OAuth is more complex to implement than using personal access tokens, but it offers more features and security.
+OAuth 2.0 is recommended when your application needs to access data on behalf of multiple users or when you want users to explicitly authorize your application without sharing their credentials. OAuth is more complex to implement than using API keys, but it offers more features and security.
 
 [Learn more about OAuth 2.0](oauth2/oauth2.md)
 
