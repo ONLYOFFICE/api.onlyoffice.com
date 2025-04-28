@@ -9,6 +9,7 @@
 * Added the Go and PHP (Laravel) test examples
 * Updated test examples
 * Added the Changing the default font page for test examples
+* Updated a list of the validated parameters in the browser
 
 #### Docs
 
