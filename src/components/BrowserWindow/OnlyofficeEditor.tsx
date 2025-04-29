@@ -98,7 +98,7 @@ const addScript = async (secret: string, fileType: string, code: string, theme: 
   const documentConfig = createDocumentConfig(fileType, isDemo);
 
   if (externalConfig.editorConfig?.customization?.logo?.image) {
-    externalConfig.editorConfig.customization.logo.image = new URL("/try-docs/example-logo.png", window.location.origin).href;
+    externalConfig.editorConfig.customization.logo.image = new URL("/assets/images/try-docs/example-logo.png", window.location.origin).href;
   }
 
   const config = deepMergePreferFirst(
