@@ -40,7 +40,7 @@ export type editorConfig = {
       www: string;
     };
     logo?: {
-      image: string;
+      image?: string;
       url: string;
     };
   };

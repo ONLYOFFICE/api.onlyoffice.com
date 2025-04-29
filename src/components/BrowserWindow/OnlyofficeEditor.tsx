@@ -97,8 +97,8 @@ const addScript = async (secret: string, fileType: string, code: string, theme: 
 
   const documentConfig = createDocumentConfig(fileType, isDemo);
 
-  if (externalConfig.editorConfig?.customization?.logo) {
-    externalConfig.editorConfig.customization.logo.image = "https://legacy-api.onlyoffice.com/content/img/editor/rebranding/logo.png"; //"/assets/images/example-logo.png";
+  if (externalConfig.editorConfig?.customization?.logo?.image) {
+    externalConfig.editorConfig.customization.logo.image = new URL("/try-docs/example-logo.png", window.location.origin).href;
   }
 
   const config = deepMergePreferFirst(
