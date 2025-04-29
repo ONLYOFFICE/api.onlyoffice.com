@@ -56,16 +56,8 @@ const getDocumentType = (fileType: string): string => {
   }
 };
 
-const getDocumentName = (fileType: string): string => {
-  switch (fileType) {
-    case "xlsx":
-    case "pptx":
-    case "pdf":
-    case "docx":
-      return "new";
-    default:
-      return "demo";
-  }
+const getDocumentName = (isDemo: boolean = false): string => {
+  return isDemo ? "demo" : "new";
 };
 
 const createDocumentConfig = (fileType: string): object => {
@@ -73,7 +65,7 @@ const createDocumentConfig = (fileType: string): object => {
     fileType,
     key: `doc-${Date.now()}`,
     title: `Example Document.${fileType}`,
-    url: `https://static.onlyoffice.com/assets/docs/samples/${getDocumentName(fileType)}.${fileType}`
+    url: `https://static.onlyoffice.com/assets/docs/samples/${getDocumentName(true)}.${fileType}`,
   };
 };
 

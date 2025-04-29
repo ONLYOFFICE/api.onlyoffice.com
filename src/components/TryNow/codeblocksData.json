@@ -291,7 +291,7 @@
           "title": "Example PDF Title.pdf",
           "url": "https://example.com/url-to-example-pdf.pdf"
         },
-        "documentType": "word",
+        "documentType": "pdf",
         "editorConfig": {
           "callbackUrl": "https://example.com/url-to-callback.ashx"
         }
