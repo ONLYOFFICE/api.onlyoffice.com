@@ -60,12 +60,12 @@ const getDocumentName = (isDemo: boolean = false): string => {
   return isDemo ? "demo" : "new";
 };
 
-const createDocumentConfig = (fileType: string): object => {
+const createDocumentConfig = (fileType: string,  isDemo: boolean = false): object => {
   return {
     fileType,
     key: `doc-${Date.now()}`,
     title: `Example Document.${fileType}`,
-    url: `https://static.onlyoffice.com/assets/docs/samples/${getDocumentName(true)}.${fileType}`,
+    url: `https://static.onlyoffice.com/assets/docs/samples/${getDocumentName(isDemo)}.${fileType}`,
   };
 };
 
@@ -90,11 +90,11 @@ function deepMergePreferFirst(a: any, b: any): any {
   return result;
 }
 
-const addScript = async (secret: string, fileType: string, code: string, theme: string, externalConfig?: object): Promise<void> => {
+const addScript = async (secret: string, fileType: string, code: string, theme: string, externalConfig?: object, isDemo: boolean = false): Promise<void> => {
   const scriptConfig = document.createElement("script");
   scriptConfig.type = "text/javascript";
 
-  const documentConfig = createDocumentConfig(fileType);
+  const documentConfig = createDocumentConfig(fileType, isDemo);
 
   const config = deepMergePreferFirst(
     {
@@ -145,9 +145,10 @@ interface OnlyOfficeEditorProps {
   code: string;
   height?: string;
   config?: object;
+  isDemo?: boolean;
 }
 
-const OnlyOfficeEditor: React.FC<OnlyOfficeEditorProps> = ({ fileType, code, height = "700px", config }) => {
+const OnlyOfficeEditor: React.FC<OnlyOfficeEditorProps> = ({ fileType, code, height = "700px", config, isDemo = false }) => {
   const {
     siteConfig: { customFields },
   } = useDocusaurusContext();
@@ -169,7 +170,7 @@ const OnlyOfficeEditor: React.FC<OnlyOfficeEditorProps> = ({ fileType, code, hei
         };
         scriptApi.onload = () => {
           document.documentElement.setAttribute("data-script-api-state", "2");
-          addScript(documentServerSecret, fileType, code, colorMode, config);
+          addScript(documentServerSecret, fileType, code, colorMode, config, isDemo);
         };
 
         document.documentElement.setAttribute("data-script-api-state", "1");

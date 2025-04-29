@@ -22,7 +22,7 @@ function Editor() {
   return (
     <div className={styles.noHeaderFooter}>
       <Layout>
-        <OnlyOfficeEditor fileType={format.toLowerCase()} code={""} height={"100%"} config={config} />
+        <OnlyOfficeEditor fileType={format.toLowerCase()} code={""} height={"100%"} config={config} isDemo={true} />
       </Layout>
     </div>
   );
