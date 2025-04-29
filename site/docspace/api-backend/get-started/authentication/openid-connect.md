@@ -15,6 +15,8 @@ OpenID Connect implementation in DocSpace includes:
 3. JWT token decoding;
 4. user profile fetching via OpenID Connect UserInfo endpoint.
 
+The Node.js and Python examples demonstrating how to implement OAuth 2.0 authentication with OpenID Connect using DocSpace can be found [here](https://github.com/ONLYOFFICE/docspace-samples/tree/develop/oauth2).
+
 ## Authentication flow
 
 To initiate authentication, redirect users to the authorization URL which is constructed in the following way:
