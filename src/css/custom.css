@@ -210,11 +210,6 @@
   --ifm-color-primary: var(--color-foreground-link);
   --ifm-menu-color-background-active: var(--ifm-menu-color-background-hover);
   /* --ifm-font-family-base: "Open Sans", "Open Sans Fallback", system-ui, sans-serif; */
-
-  --trydocs-documents-color: black;
-  --trydocs-spreadsheets-color: black;
-  --trydocs-presentations-color: black;
-  --trydocs-pdf-color: black;
 }
 
 [data-theme='light'] img[src$='#gh-dark-mode-only'],
@@ -250,11 +245,6 @@ html[data-theme='dark'] {
 
   --sidebar-category-c: var(--c-gray-0);
   --color-page-header-default-background: #333;
-  
-  --trydocs-documents-color: #208BFF;
-  --trydocs-spreadsheets-color: #34C759;
-  --trydocs-presentations-color: #FE8C33;
-  --trydocs-pdf-color:  #FFAF49;
 }
 
 /* START OPENAPI */

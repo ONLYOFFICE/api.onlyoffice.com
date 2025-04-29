@@ -94,19 +94,19 @@
 }
 
 .formatLabel.documentFormat{
-  color: var(--trydocs-documents-color);
+  color: #38567A;
 }
 
 .formatLabel.spreadsheetFormat{
-  color: var(--trydocs-spreadsheets-color);
+  color: #336B49;
 }
 
 .formatLabel.presentationFormat{
-  color: var(--trydocs-presentations-color);
+  color: #854535;
 }
 
 .formatLabel.pdfFormat{
-  color: var(--trydocs-pdf-color);
+  color: #8D4444;
 }
 
 .formatLabel:hover {
