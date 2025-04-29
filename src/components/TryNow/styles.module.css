@@ -91,7 +91,22 @@
   border-bottom-left-radius: 4px;
   width: 64px;
   text-align: center;
-  color: black;
+}
+
+.formatLabel.documentFormat{
+  color: var(--trydocs-documents-color);
+}
+
+.formatLabel.spreadsheetFormat{
+  color: var(--trydocs-spreadsheets-color);
+}
+
+.formatLabel.presentationFormat{
+  color: var(--trydocs-presentations-color);
+}
+
+.formatLabel.pdfFormat{
+  color: var(--trydocs-pdf-color);
 }
 
 .formatLabel:hover {
