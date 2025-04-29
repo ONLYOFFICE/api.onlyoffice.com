@@ -20,9 +20,7 @@ Connects the Telegram application for instant messaging within the ONLYOFFICE ed
 
 ## Installation
 
-Available by default in ONLYOFFICE Docs Enterprise and Community (Docs + Workspace).
-
-You can also download this plugin from the [ONLYOFFICE App Directory](https://www.onlyoffice.com/en/app-directory/telegram) and install it following the [desktop](../installing/onlyoffice-desktop-editors.md) or [cloud](../installing/onlyoffice-cloud.md) installation instructions.
+Download this plugin from [GitHub](https://github.com/ONLYOFFICE/onlyoffice-telegram) and install it following the [desktop](../installing/onlyoffice-desktop-editors.md), [on-premises](../installing/onlyoffice-docs-on-premises.md), or [cloud](../installing/onlyoffice-cloud.md) installation instructions.
 
 ## Usage
 

@@ -20,7 +20,7 @@ import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 
 Available by default in ONLYOFFICE Docs Enterprise and Community (Docs + Workspace).
 
-You can also download this plugin from the [ONLYOFFICE App Directory](https://www.onlyoffice.com/en/app-directory/typograph) and install it following the [desktop](../installing/onlyoffice-desktop-editors.md) or [cloud](../installing/onlyoffice-cloud.md) installation instructions.
+You can also download this plugin from the [ONLYOFFICE App Directory](https://www.onlyoffice.com/app-directory/typograf) and install it following the [desktop](../installing/onlyoffice-desktop-editors.md) or [cloud](../installing/onlyoffice-cloud.md) installation instructions.
 
 ## Usage
 
