@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import { useColorMode } from "@docusaurus/theme-common";
+import { code } from "@site/src/components/Modal/TryNowCodeModal/CodeBlock/types";
 
 async function createJWT(json: object, secret: string): Promise<string | null> {
   if (!secret) return null;
@@ -60,7 +61,7 @@ const getDocumentName = (isDemo: boolean = false): string => {
   return isDemo ? "demo" : "new";
 };
 
-const createDocumentConfig = (fileType: string,  isDemo: boolean = false): object => {
+const createDocumentConfig = (fileType: string, isDemo: boolean = false): object => {
   return {
     fileType,
     key: `doc-${Date.now()}`,
@@ -90,11 +91,15 @@ function deepMergePreferFirst(a: any, b: any): any {
   return result;
 }
 
-const addScript = async (secret: string, fileType: string, code: string, theme: string, externalConfig?: object, isDemo: boolean = false): Promise<void> => {
+const addScript = async (secret: string, fileType: string, code: string, theme: string, externalConfig?: code, isDemo: boolean = false): Promise<void> => {
   const scriptConfig = document.createElement("script");
   scriptConfig.type = "text/javascript";
 
   const documentConfig = createDocumentConfig(fileType, isDemo);
+
+  if (externalConfig.editorConfig?.customization?.logo) {
+    externalConfig.editorConfig.customization.logo.image = "https://legacy-api.onlyoffice.com/content/img/editor/rebranding/logo.png"; //"/assets/images/example-logo.png";
+  }
 
   const config = deepMergePreferFirst(
     {
@@ -144,7 +149,7 @@ interface OnlyOfficeEditorProps {
   fileType: string; // e.g., "docx", "xlsx", "pptx", "pdf"
   code: string;
   height?: string;
-  config?: object;
+  config?: code;
   isDemo?: boolean;
 }
 
