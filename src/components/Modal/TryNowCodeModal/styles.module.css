@@ -12,6 +12,7 @@
 
   font-size: 1rem;
 
+  color: black;
   background-color: white;
   box-shadow: 1px 1px 8px #aaa;
 }
@@ -30,6 +31,7 @@
   font-weight: bold;
   word-break: none;
 
+  color: black;
   background-color: transparent;
   border: none;
   margin: 0;
