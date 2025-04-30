@@ -9,7 +9,7 @@ Check Exchanging data among files and Using command line arguments to learn more
 This sample is available for the **C++ and .Net DocBuilder Frameworks**.
 Download the sample and get more information on the [Builder framework samples](../../../document-builder/builder-framework/builder-framework-samples/builder-framework-samples.md) page.
 
-```ts document-builder={"documentType": "cell", "editorConfig": {"customization": {"zoom": 60}}}
+```ts editor-xlsx
 let worksheet = Api.GetActiveSheet();
 let headers = ["ID", "Product", "Price", "Available"];
 let data = [

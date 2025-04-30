@@ -6,6 +6,8 @@ interface OnlyOfficeEditorProps {
   fileType: string; // e.g., "docx", "xlsx", "pptx", "pdf"
   code: string;
   height?: string;
+  templateUrl: string;
+  zoom: number;
 }
 
 async function createJWT(json: object, secret: string): Promise<string | null> {
@@ -65,20 +67,29 @@ const getDocumentType = (fileType: string): string => {
   }
 };
 
-const createDocumentConfig = (fileType: string): object => {
-  return {
-    fileType,
-    key: `doc-${Date.now()}`,
-    title: `Example Document.${fileType}`,
-    url: `https://static.onlyoffice.com/assets/docs/samples/new.${fileType}`,
+const createDocumentConfig = (fileType: string, templateUrl: string): object => {
+  if (!templateUrl) {
+    return {
+      fileType,
+      key: `doc-${Date.now()}`,
+      title: `Example Document.${fileType}`,
+      url: `https://static.onlyoffice.com/assets/docs/samples/new.${fileType}`,
+    };
+  } else {
+    return {
+      fileType,
+      key: `doc-${Date.now()}`,
+      title: `Example Document.${fileType}`,
+      url: templateUrl,
+    };
   };
 };
 
-const addScript = async (server: string, secret: string, fileType: string, code: string, theme: string): Promise<void> => {
+const addScript = async (server: string, secret: string, fileType: string, code: string, theme: string, templateUrl: string, zoom: number): Promise<void> => {
   const scriptConfig = document.createElement("script");
   scriptConfig.type = "text/javascript";
 
-  const documentConfig = createDocumentConfig(fileType);
+  const documentConfig = createDocumentConfig(fileType, templateUrl);
   const config = {
     document: documentConfig,
     documentType: getDocumentType(fileType),
@@ -87,7 +98,8 @@ const addScript = async (server: string, secret: string, fileType: string, code:
       customization: {
         anonymous: {request: false},
         uiTheme: theme === "dark" ? "theme-dark" : "theme-light",
-        features:   {featuresTips: false}
+        features: {featuresTips: false},
+        zoom: zoom,
       }
     }
   };
@@ -124,6 +136,8 @@ const OnlyOfficeEditor: React.FC<OnlyOfficeEditorProps> = ({
   fileType,
   code,
   height = "700px",
+  templateUrl,
+  zoom,
 }) => {
   const {
     siteConfig: {customFields},
@@ -146,13 +160,13 @@ const OnlyOfficeEditor: React.FC<OnlyOfficeEditorProps> = ({
         };
         scriptApi.onload = () => {
           document.documentElement.setAttribute("data-script-api-state", "2");
-          addScript(documentServer, documentServerSecret, fileType, code, colorMode);
+          addScript(documentServer, documentServerSecret, fileType, code, colorMode, templateUrl, zoom);
         };
   
         document.documentElement.setAttribute("data-script-api-state", "1");
         document.body.appendChild(scriptApi);
       } else {
-        addScript(documentServer, documentServerSecret, fileType, code, colorMode);
+        addScript(documentServer, documentServerSecret, fileType, code, colorMode, templateUrl, zoom);
       }
     }
 

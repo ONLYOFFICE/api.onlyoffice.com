@@ -65,6 +65,12 @@ export default function CodeBlockString({
   const editorPdf = metastring && metastring.includes("editor-pdf") && "pdf";
   const editorType = editorWord || editorCell || editorSlide || editorPdf;
 
+  const urlIndex  = metastring && metastring.indexOf("https://static.onlyoffice.com/assets/docs/samples/");
+  const templateUrl = metastring && metastring.includes("https://static.onlyoffice.com/assets/docs/samples/") && metastring.substring(urlIndex);
+
+  const zoomIndex  = metastring && metastring.indexOf("zoom=");
+  const zoom = metastring && metastring.includes("zoom=") && Number(metastring.substring(zoomIndex + 5, zoomIndex + 7));
+
   const codeBlockContent = (
     <Container
       as="div"
@@ -123,7 +129,7 @@ export default function CodeBlockString({
     <Tabs lazy>
       <TabItem value="code" label="Code">{codeBlockContent}</TabItem>
       <TabItem value="result" label="Result">
-        <OnlyOfficeEditor code={code} fileType={editorType} />
+        <OnlyOfficeEditor code={code} fileType={editorType} templateUrl={templateUrl} zoom={zoom} />
       </TabItem>
     </Tabs>
   ) : (

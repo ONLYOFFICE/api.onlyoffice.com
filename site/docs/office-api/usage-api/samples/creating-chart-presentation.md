@@ -10,7 +10,7 @@ Create a chart presentation:
 This sample is available for the **C++ and .Net DocBuilder Frameworks**.
 Download the sample and get more information on the [Builder framework samples](../../../document-builder/builder-framework/builder-framework-samples/builder-framework-samples.md) page.
 
-```ts document-builder={"documentType": "slide", "editorConfig": {"customization": {"zoom": 60}}}
+```ts editor-pptx
 let presentation = Api.GetPresentation();
 let slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();

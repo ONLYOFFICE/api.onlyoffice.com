@@ -8,7 +8,7 @@ Create a document following the structure of a formal paper:
 - fill the document with text, dividing it into separate fragments and highlighting them with headings ([ApiParagraph](../text-document-api/ApiParagraph/ApiParagraph.md), [ApiRun](../text-document-api/ApiRun/ApiRun.md));
 - add images and charts to represent document text ([Api](../text-document-api/Api/Api.md), [ApiChart](../text-document-api/ApiChart/ApiChart.md)).
 
-```ts document-builder={"documentType": "word", "editorConfig": {"customization": {"zoom": 60}}}
+```ts editor-docx zoom=60
 let paragraph;
 let run;
 let drawing;
