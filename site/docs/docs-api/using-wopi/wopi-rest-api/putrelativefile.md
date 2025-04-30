@@ -55,8 +55,8 @@ The request body must contain the full file contents in the binary format.
 | ----------- | ------ | -------- | --------------------------------------------------------------------------------------------------------------------------------- |
 | Name        | string | required | The file name, including extension, without a path.                                                                               |
 | Url         | string | required | URI of the form *http\://server/\<...\>/wopi/files/(file\_id)?access\_token=(access token)*, of the newly created file on the host. |
-| HostViewUrl | string | optional | URI to a host page that loads the [view](../wopi-discovery.md#wopi-actions) WOPI action for the newly created file.    |
-| HostEditUrl | string | optional | URI to a host page that loads [edit](../wopi-discovery.md#wopi-actions) action for the newly created file.             |
+| HostViewUrl | string | optional | URI to a host page that loads the [view](../wopi-discovery.md#view) WOPI action for the newly created file.    |
+| HostEditUrl | string | optional | URI to a host page that loads [edit](../wopi-discovery.md#edit) action for the newly created file.             |
 
 ## Save Copy As
 
@@ -64,4 +64,4 @@ Starting from version 8.1, the *Save Copy As* functionality is added to the WOPI
 
 When the *PutRelativeFile* operation is executed to save a copy of the current file, the *X-WOPI-FileConversion* header is not sent in the request.
 
-To restrict the *Save Copy As* functionality, set the [UserCanNotWriteRelative](./checkfileinfo.md#user-permissions-properties) property in *CheckFileInfo* to *true*.
+To restrict the *Save Copy As* functionality, set the [UserCanNotWriteRelative](./checkfileinfo.md#UserCanNotWriteRelative) property in *CheckFileInfo* to *true*.
