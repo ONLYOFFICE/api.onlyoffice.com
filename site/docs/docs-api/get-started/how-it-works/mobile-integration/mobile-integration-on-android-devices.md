@@ -112,4 +112,4 @@ private class EditorWebViewClient(private val navController: NavController) : We
 }
 ```
 
-The full code for **EditorFragment.kt** can be found [here](https://github.com/ONLYOFFICE/editors-webview-android/blob/fd8f9809441fab9653140cf2e51a1303e2edd774/app/src/main/java/ru/mike/florida/editorFragment.kt).
+The full code for **EditorFragment.kt** can be found [here](https://github.com/ONLYOFFICE/editors-webview-android/blob/fd8f9809441fab9653140cf2e51a1303e2edd774/app/src/main/java/ru/mike/florida/EditorFragment.kt).
