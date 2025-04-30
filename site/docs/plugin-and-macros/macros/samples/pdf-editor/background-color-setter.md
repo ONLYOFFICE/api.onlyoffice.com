@@ -1,0 +1,31 @@
+# Background Color Setter
+
+Changes the background color of all form fields on focus.
+
+```ts
+(function () {
+    let document = Api.GetDocument();
+  
+    // Define the desired background color (light blue in RGB).
+    let red = 171;
+    let green = 242;
+    let blue = 255;
+  
+    // Get all form fields in the document.
+    let formFields = document.GetAllForms();
+  
+    // Iterate through each form field and set the background color.
+    formFields.forEach(function(field) {
+      field.SetBackgroundColor(red, green, blue);
+    });
+  
+    console.log("Background color of all form fields has been updated.");
+  })();
+```
+
+Methods used: [GetDocument](../../../../office-api/usage-api/text-document-api/Api/Methods/GetDocument.md), [GetAllForms](../../../../office-api/usage-api/text-document-api/ApiDocument/Methods/GetAllForms.md), [SetBackgroundColor](../../../../office-api/usage-api/text-document-api/ApiComplexForm/Methods/SetBackgroundColor.md)
+
+## Result
+
+![BackgroundColorSetter](/assets/images/plugins/background-color-setter.png#gh-light-mode-only)
+![BackgroundColorSetter](/assets/images/plugins/background-color-setter.dark.png#gh-dark-mode-only)
