@@ -65,6 +65,12 @@ export default function CodeBlockString({
   const editorPdf = metastring && metastring.includes("editor-pdf") && "pdf";
   const editorType = editorWord || editorCell || editorSlide || editorPdf;
 
+  let res = metastring ? metastring.match(/zoom=(\d+)\s*/) : null;
+  const zoom = res ? Number(res[1]) : undefined;
+
+  res = metastring ? metastring.match(/templateUrl=([^\s]+)/) : null;
+  const templateUrl = res ? res[1] : undefined;
+
   const codeBlockContent = (
     <Container
       as="div"
@@ -123,7 +129,7 @@ export default function CodeBlockString({
     <Tabs lazy>
       <TabItem value="code" label="Code">{codeBlockContent}</TabItem>
       <TabItem value="result" label="Result">
-        <OnlyOfficeEditor code={code} fileType={editorType} />
+        <OnlyOfficeEditor code={code} fileType={editorType} templateUrl={templateUrl} zoom={zoom} />
       </TabItem>
     </Tabs>
   ) : (

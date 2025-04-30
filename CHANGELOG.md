@@ -14,6 +14,7 @@
 #### Docs
 
 * Added instruction to install plugins for all users
+* Added Results to the Office API samples
 
 #### Docspace
 
