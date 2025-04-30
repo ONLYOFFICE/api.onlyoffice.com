@@ -68,20 +68,11 @@ const getDocumentType = (fileType: string): string => {
 };
 
 const createDocumentConfig = (fileType: string, templateUrl: string): object => {
-  if (!templateUrl) {
-    return {
-      fileType,
-      key: `doc-${Date.now()}`,
-      title: `Example Document.${fileType}`,
-      url: `https://static.onlyoffice.com/assets/docs/samples/new.${fileType}`,
-    };
-  } else {
-    return {
-      fileType,
-      key: `doc-${Date.now()}`,
-      title: `Example Document.${fileType}`,
-      url: templateUrl,
-    };
+  return {
+    fileType,
+    key: `doc-${Date.now()}`,
+    title: `Example Document.${fileType}`,
+    url: templateUrl ? templateUrl : `https://static.onlyoffice.com/assets/docs/samples/new.${fileType}`,
   };
 };
 

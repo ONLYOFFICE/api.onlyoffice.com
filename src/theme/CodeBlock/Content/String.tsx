@@ -65,11 +65,11 @@ export default function CodeBlockString({
   const editorPdf = metastring && metastring.includes("editor-pdf") && "pdf";
   const editorType = editorWord || editorCell || editorSlide || editorPdf;
 
-  const urlIndex  = metastring && metastring.indexOf("https://static.onlyoffice.com/assets/docs/samples/");
-  const templateUrl = metastring && metastring.includes("https://static.onlyoffice.com/assets/docs/samples/") && metastring.substring(urlIndex);
+  let res = metastring ? metastring.match(/zoom=(\d+)\s*/) : null;
+  const zoom = res ? Number(res[1]) : undefined;
 
-  const zoomIndex  = metastring && metastring.indexOf("zoom=");
-  const zoom = metastring && metastring.includes("zoom=") && Number(metastring.substring(zoomIndex + 5, zoomIndex + 7));
+  res = metastring ? metastring.match(/templateUrl=([^\s]+)/) : null;
+  const templateUrl = res ? res[1] : undefined;
 
   const codeBlockContent = (
     <Container

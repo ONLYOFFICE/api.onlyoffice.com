@@ -8,7 +8,7 @@ Fill a form with the data stored in the object:
 This sample is available for the **C++ and .Net DocBuilder Frameworks**.
 Download the sample and get more information on the [Builder framework samples](../../../document-builder/builder-framework/builder-framework-samples/builder-framework-samples.md) page.
 
-```ts editor-pdf zoom=60 https://static.onlyoffice.com/assets/docs/samples/purchase_order.pdf
+```ts editor-pdf zoom=60 templateUrl=https://static.onlyoffice.com/assets/docs/samples/purchase_order.pdf
 let doc = Api.GetDocument();
 
 let data = {
