@@ -38,9 +38,11 @@ If the authorization link contains non-existent [client_id](auth-button.md#clien
 
    > If the user clicks the **Deny** button on the consent page, they will be redirected to [redirect_uri](#redirect_uri) with an error, without the possibility to get JWT.
 
+   To send a consent request, you can also send POST request to the [oauth2/authorize](../../../../../docspace/api-backend/usage-api/o-auth-2-consent-endpoint.api.mdx) address.
+
 2. The application exchanges the user code for the access token and refresh token, save them to its storage, and use these tokens to get the access to the DocSpace API.
 
-3. The application sends the POST request:
+3. The application sends the [POST request](../../../../../docspace/api-backend/usage-api/o-auth-2-token-endpoint.api.mdx):
 
 ``` ini
 {{docspace_address}}/oauth2/token
