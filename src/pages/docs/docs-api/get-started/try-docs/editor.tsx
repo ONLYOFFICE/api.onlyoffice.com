@@ -16,13 +16,14 @@ function Editor() {
   const type = query.get("type");
   const category = query.get("category");
   const codeIndex = query.get("codeIndex");
+  const isForm = query.get("isForm")==="true";
 
   const config: code = codeblocksData[format][category][codeIndex];
 
   return (
     <div className={styles.noHeaderFooter}>
       <Layout>
-        <OnlyOfficeEditor fileType={format.toLowerCase()} code={""} height={"100%"} config={config} isDemo={true} />
+        <OnlyOfficeEditor fileType={format.toLowerCase()} code={""} height={"100%"} config={config} isDemo={true} isForm={isForm} />
       </Layout>
     </div>
   );

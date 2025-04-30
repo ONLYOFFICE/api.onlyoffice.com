@@ -9,13 +9,14 @@ type FileFormatButtonProps = {
   type: 'document' | 'spreadsheet' | 'presentation' | 'pdf';
   category: string;
   actionName: string;
+  isForm?: boolean;
   modalStates: {
     setIsCodeModalOpen: React.Dispatch<React.SetStateAction<boolean>>;
     setCodeModalData: React.Dispatch<React.SetStateAction<{ title: string; codes: code[] }>>;
   };
 };
 
-const FileFormatButton = ({ format, type, category, actionName, modalStates }: FileFormatButtonProps) => {
+const FileFormatButton = ({ format, type, category, actionName, isForm = false, modalStates }: FileFormatButtonProps) => {
   const formatClass = styles[type + 'Format'];
   const { setIsCodeModalOpen, setCodeModalData } = modalStates;
 
@@ -34,7 +35,7 @@ const FileFormatButton = ({ format, type, category, actionName, modalStates }: F
   const handleEditorOpen = async () => {    
     codeblocksData[format][category].forEach((_, i) => {
       window.open(
-        window.location.href + `editor?format=${format}&type=${type}&category=${category}&codeIndex=${i}`,
+        window.location.href + `editor?format=${format}&type=${type}&category=${category}&codeIndex=${i}&isForm=${isForm}`,
         "_blank"
       );
     });
@@ -89,7 +90,8 @@ export default function TryNowPage(): ReactNode {
       document: [],
       spreadsheet: [],
       presentation: [],
-      pdf: pdfFormats
+      pdf: pdfFormats,
+      isForm: true
     },
     {
       name: 'Filling in forms',
@@ -97,7 +99,8 @@ export default function TryNowPage(): ReactNode {
       document: [],
       spreadsheet: [],
       presentation: [],
-      pdf: pdfFormats
+      pdf: pdfFormats,
+      isForm: true
     },
     {
       name: 'Local filter',
@@ -224,6 +227,7 @@ export default function TryNowPage(): ReactNode {
                         type={type as any}
                         category={categoryFormat.name}
                         actionName={categoryFormat.actionName}
+                        isForm={categoryFormat.isForm}
                         modalStates={{ setIsCodeModalOpen: setIsCodeModalOpen, setCodeModalData: setCodeModalData }}
                       />
                     ))}

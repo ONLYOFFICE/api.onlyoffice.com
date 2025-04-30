@@ -1,20 +1,32 @@
 import React, { useEffect } from "react";
-import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
-import { useColorMode } from "@docusaurus/theme-common";
+import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
+import {useColorMode} from '@docusaurus/theme-common';
 import { code } from "@site/src/components/Modal/TryNowCodeModal/CodeBlock/types";
+
+interface OnlyOfficeEditorProps {
+  fileType: string; // e.g., "docx", "xlsx", "pptx", "pdf"
+  code: string;
+  height?: string;
+  config?: code;
+  isDemo?: boolean;
+  isForm?: boolean;
+}
 
 async function createJWT(json: object, secret: string): Promise<string | null> {
   if (!secret) return null;
 
   // Define the JWT header
   const header = {
-    typ: "JWT",
-    alg: "HS256"
+      typ: "JWT",
+      alg: "HS256"
   };
 
   // Helper function to encode strings in URL-safe Base64
   const base64EncodeURL = (str: string): string => {
-    return btoa(str).replace(/\+/g, "-").replace(/\//g, "_").replace(/=/g, "");
+      return btoa(str)
+          .replace(/\+/g, '-')
+          .replace(/\//g, '_')
+          .replace(/=/g, '');
   };
 
   // Encode the header and payload
@@ -24,7 +36,13 @@ async function createJWT(json: object, secret: string): Promise<string | null> {
   // Create the HMAC-SHA256 signature
   const encoder = new TextEncoder();
   const algorithm = { name: "HMAC", hash: "SHA-256" };
-  const key = await crypto.subtle.importKey("raw", encoder.encode(secret), algorithm, false, ["sign", "verify"]);
+  const key = await crypto.subtle.importKey(
+      "raw",
+      encoder.encode(secret),
+      algorithm,
+      false,
+      ["sign", "verify"]
+  );
 
   const dataToSign = encoder.encode(`${encodedHeader}.${encodedPayload}`);
   const signature = await crypto.subtle.sign(algorithm.name, key, dataToSign);
@@ -57,16 +75,16 @@ const getDocumentType = (fileType: string): string => {
   }
 };
 
-const getDocumentName = (isDemo: boolean = false): string => {
-  return isDemo ? "demo" : "new";
+const getDocumentName = (isDemo: boolean = false, isForm: boolean = false): string => {
+  return isDemo ? (isForm ? "demo-invoice" : "demo") : "new";
 };
 
-const createDocumentConfig = (fileType: string, isDemo: boolean = false): object => {
+const createDocumentConfig = (fileType: string, isDemo: boolean = false, isForm: boolean = false): object => {
   return {
     fileType,
     key: `doc-${Date.now()}`,
     title: `Example Document.${fileType}`,
-    url: `https://static.onlyoffice.com/assets/docs/samples/${getDocumentName(isDemo)}.${fileType}`,
+    url: `https://static.onlyoffice.com/assets/docs/samples/${getDocumentName(isDemo, isForm)}.${fileType}`,
   };
 };
 
@@ -91,11 +109,11 @@ function deepMergePreferFirst(a: any, b: any): any {
   return result;
 }
 
-const addScript = async (secret: string, fileType: string, code: string, theme: string, externalConfig?: code, isDemo: boolean = false): Promise<void> => {
+const addScript = async (secret: string, fileType: string, code: string, theme: string, externalConfig?: code, isDemo: boolean = false, isForm: boolean = false): Promise<void> => {
   const scriptConfig = document.createElement("script");
   scriptConfig.type = "text/javascript";
 
-  const documentConfig = createDocumentConfig(fileType, isDemo);
+  const documentConfig = createDocumentConfig(fileType, isDemo, isForm);
 
   if (externalConfig?.editorConfig?.customization?.logo?.image) {
     externalConfig.editorConfig.customization.logo.image = new URL("/assets/images/try-docs/example-logo.png", window.location.origin).href;
@@ -145,27 +163,26 @@ const addScript = async (secret: string, fileType: string, code: string, theme: 
   document.body.appendChild(scriptConfig);
 };
 
-interface OnlyOfficeEditorProps {
-  fileType: string; // e.g., "docx", "xlsx", "pptx", "pdf"
-  code: string;
-  height?: string;
-  config?: code;
-  isDemo?: boolean;
-}
-
-const OnlyOfficeEditor: React.FC<OnlyOfficeEditorProps> = ({ fileType, code, height = "700px", config, isDemo = false }) => {
+const OnlyOfficeEditor: React.FC<OnlyOfficeEditorProps> = ({
+  fileType,
+  code,
+  height = "700px",
+  config,
+  isDemo = false,
+  isForm = false
+}) => {
   const {
-    siteConfig: { customFields },
+    siteConfig: {customFields},
   } = useDocusaurusContext();
 
-  const { colorMode } = useColorMode();
+  const {colorMode} = useColorMode();
   const documentServer = customFields.documentServer as string;
   const documentServerSecret = customFields.documentServerSecret as string;
 
   useEffect(() => {
     if ("1" !== document.documentElement.getAttribute("data-script-api-state")) {
       if ("2" !== document.documentElement.getAttribute("data-script-api-state")) {
-        const apiUrl = new URL("/web-apps/apps/api/documents/api.js", documentServer);
+        const apiUrl = new URL('/web-apps/apps/api/documents/api.js', documentServer);
 
         const scriptApi = document.createElement("script");
         scriptApi.type = "text/javascript";
@@ -175,17 +192,18 @@ const OnlyOfficeEditor: React.FC<OnlyOfficeEditorProps> = ({ fileType, code, hei
         };
         scriptApi.onload = () => {
           document.documentElement.setAttribute("data-script-api-state", "2");
-          addScript(documentServerSecret, fileType, code, colorMode, config, isDemo);
+          addScript(documentServerSecret, fileType, code, colorMode, config, isDemo, isForm);
         };
 
         document.documentElement.setAttribute("data-script-api-state", "1");
         document.body.appendChild(scriptApi);
       } else {
-        addScript(documentServerSecret, fileType, code, colorMode);
+        addScript(documentServerSecret, fileType, code, colorMode, config, isDemo, isForm);
       }
     }
 
-    return () => {};
+    return () => {
+    };
   }, []);
 
   return (

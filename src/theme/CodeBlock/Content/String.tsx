@@ -64,6 +64,7 @@ export default function CodeBlockString({
   const editorCell = metastring && metastring.includes("editor-xlsx") && "xlsx";
   const editorSlide = metastring && metastring.includes("editor-pptx") && "pptx";
   const editorPdf = metastring && metastring.includes("editor-pdf") && "pdf";
+  const isForm = metastring && metastring.includes("editor-pdf"); // TODO: change to editor-pdf-form
   const editorType = editorWord || editorCell || editorSlide || editorPdf;
 
   const codeBlockContent = (
@@ -124,7 +125,7 @@ export default function CodeBlockString({
     <Tabs lazy>
       <TabItem value="code" label="Code">{codeBlockContent}</TabItem>
       <TabItem value="result" label="Result">
-        <OnlyOfficeEditor code={code} fileType={editorType} />
+        <OnlyOfficeEditor code={code} fileType={editorType} isForm={isForm} />
       </TabItem>
     </Tabs>
   ) : (
