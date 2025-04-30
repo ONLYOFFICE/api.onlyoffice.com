@@ -1,6 +1,6 @@
 {
   "name": "api-onlyoffice-com",
-  "version": "4.6.0",
+  "version": "5.0.0",
   "private": true,
   "scripts": {
     "docusaurus": "docusaurus",
@@ -25,7 +25,8 @@
     "docusaurus-theme-openapi-docs": "4.3.3",
     "prism-react-renderer": "^2.3.0",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "react-lite-youtube-embed": "^2.4.0"
   },
   "devDependencies": {
     "@docusaurus/module-type-aliases": "3.7.0",

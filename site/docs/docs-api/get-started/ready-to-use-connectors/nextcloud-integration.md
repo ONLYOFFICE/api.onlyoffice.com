@@ -5,7 +5,11 @@ sidebar_custom_props:
 
 # Nextcloud integration
 
-<iframe src="https://www.youtube.com/embed/vN9v9sJ0HVw?wmode=transparent" class="video-frame" width="700px" height="400px" frameborder="0" allowfullscreen></iframe>
+```mdx-code-block
+import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
+
+<YoutubeVideo videoId="vN9v9sJ0HVw"/>
+```
 
 This [app](https://github.com/ONLYOFFICE/onlyoffice-nextcloud) enables users to edit office documents from [Nextcloud](https://nextcloud.com) using ONLYOFFICE Docs.
 

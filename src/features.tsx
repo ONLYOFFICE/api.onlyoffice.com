@@ -84,7 +84,7 @@ export const DocSpaceFeatures: Features = {
   items: [
     {
       title: 'JavaScript SDK',
-      link: 'javascript-sdk/get-started/basic-concepts',
+      link: 'javascript-sdk/get-started',
       description: (
         <>
           In this section, you will learn how to connect DocSpace as a frame to{" "}
@@ -96,7 +96,7 @@ export const DocSpaceFeatures: Features = {
     },
     {
       title: 'Plugins SDK',
-      link: 'plugins-sdk/get-started/basic-concepts',
+      link: 'plugins-sdk/get-started',
       description: (
         <>
           In this section, you will learn how to create your own plugins and add{" "}
@@ -104,17 +104,6 @@ export const DocSpaceFeatures: Features = {
         </>
       ),
       icon: <PluginIcon/>,
-    },
-    {
-      title: 'OAuth API',
-      link: 'oauth-api/get-started/basic-concepts',
-      description: (
-        <>
-          In this section, you will learn how to register a new OAuth application{" "}
-          on the DocSpace portal.
-        </>
-      ),
-      icon: <DocsApiIcon/>,
     },
     {
       title: 'API backend',

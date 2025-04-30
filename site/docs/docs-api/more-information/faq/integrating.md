@@ -13,8 +13,10 @@ The examples of integration of ONLYOFFICE Docs with your own website can be foun
 - [Java Spring](../../get-started/language-specific-examples/java-spring-example.md)
 - [Node.js](../../get-started/language-specific-examples/nodejs-example.md)
 - [PHP](../../get-started/language-specific-examples/php-example.md)
+- [PHP (Laravel)](../../get-started/language-specific-examples/php-laravel-example.md)
 - [Python](../../get-started/language-specific-examples/python-example.md)
 - [Ruby](../../get-started/language-specific-examples/ruby-example.md)
+- [Go](../../get-started/language-specific-examples/go-example.md)
 - [Java integration SDK](../../get-started/language-specific-examples/java-integration-sdk.md)
 
 The examples will show where to get the source codes, how to install and set up the working examples for integrating ONLYOFFICE Docs into your website written with the help of one of these programming languages.

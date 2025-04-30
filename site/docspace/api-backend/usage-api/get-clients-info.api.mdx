@@ -1,0 +1,71 @@
+---
+id: get-clients-info
+title: "Get detailed information of clients"
+description: "Retrieves a paginated list of information for all clients."
+sidebar_label: "Get detailed information of clients"
+hide_title: true
+hide_table_of_contents: true
+api: eJytV1tv2zYU/ivEeckGyNfcVr2laVekG9AtdRFggZHQ4pHNViJVkkriGfrvwyFlW7KcxV0GBLFNnst3Pp4LuQLH5xbiW7jMJCrH/izRLKWawzQCgTYxsnBSK4jhGp2R+ICWcVbwuVTcoWCZtI7plEmVapNzkmWpNoxnGUu8SduHCHSBxm9eCYhhji64s1cq1RBBwQ3P0aEhKCtQPEeIIZO5dBCBJPffCRjsgposkOX8SeZlzlSZz9AQGIO2zJxlBl1pFApWoCHMSFAMfi+lQQGxMyVGYJMF5hziFdSGID4dRpBLFX6MInDLgvBI5XCOBiIIsYal4zFUEeATz4sMIR5V0TYAbt1dYOFOipcjkQKVk6kMUbgFMrJAYXjmRc1oO4qUZ7YVRo3WOkPn2MQGZ8l5ko7OZ73RTBz3Ts7Fae/NSXLWm+FYHJ+eD3F09gt0AjBIR32n1csReFnKAcEd/n9BNBgnwz0nc2xHNh6OT3pD+puMxvFwGA+Hf0E1JR+20MqiJavj4ZA+2rg/l0mC1qZlli07MK3PbIgg0cqhcqTOiyKTiY9z8NWSjVUXuZ59xcTtJWkNiZFNLpVU80ZFBb/NgiKqCkMl5GSIQ3B3oK+OXVLtE3ehurZGns3uV9ccOWtXwp4DfkU1bOxvE/WwDHptBldVBE46n4B/8DnyWYbX9eGGBkf9bb0CVUUKJ/ty8C0XjKoBraNwTsZvujITrVnO1XItaF+Tle18MshrjS4hizLnqmeQCwqPoTHaMHwqMq422bnTcqp9xAbFfbnvDvVSU/2eNndYPd3H6pVyaBTPmEXzgCZY9fAsJqWRbunHzVPPyrnirjQI8e2UukaObqHrUeXnk1tADANeyMG4PxzUvWFQ94ZgPsyu0mQQw2rGLX4xWdXJsc8BSqJVKudlGIoQwQM3kiL3x1Erh4BSXmaUth1L78IW+3L9O5Ew3Ub1mY49mOI2ueOlW9x9w2UjD3ghf8NuC/9ikV1q/U0iIyWqv2SNsB4JLYP1PEi8CiXuW25l0vCzcK7oeHlPx8KWujSstHRAOTKuBCu4tY/a0KD0iUsGZt4gWUZu0Bxm+igIs9XHmwmb6G+oqqOW0WArqr/8uu4MH28m5OrCk9Nx+AxnFy2imLRM0E0ml9QEZ0uf3UckpI3828scsQVy4QHUpLY81qTWMlUEn0h73Kxi7hd2kQQ5lmb6kT1Kt2Atr+xSC2p5tB1So7nrN3cXfQ56om08GHivfa2ypU5TmWA/0XlYHA/WauTAEeGHq3pxfzq62HQj4S+cXDDuZzNzmhVGO0xokhm0ujQJUgN8NNIRJTf0+YJ06BSfCvS30C2bfuFSK7VviHrxd6ze7pZFS/vwqCnxffeoonb/eSndKKU34lQ/Ity3W7j6jDquZ5blpXVshkzPqN+iYA+S+6S8X3ezddtoncg9QyUKLZXrsytHaU3liYJxegCEig9ZRrZ8Dd83Arnvb7O7Gd9Ox6jod6p92HV3vygk9UM0NgR83B/1h0RToa3LuZ9SteEP6KjYuMxQtF4gOl1f33b5W21H5uteNPUpOXxygyLjUhHEMjTtMC5u6QghgnF/SJN6g8cHPI1goa0jqdVmWFS0HC7XNEqEtDQSttfjZyP56bq+Sf/M/sOLaG8ofl5snmAPPCtJxj8ODsf1g4+afwOy+5R6BaIfe6S8CKr5PNqimm5nur9UROuGTicb1C+SBIsmu50rXOsq8uH9BCLfoNtdIgzi+gtZX2+pZcN2uwgDAPpP9O1VWK1CB6qqjXzYelZjM9WCNDE1rarqH853r9g=
+sidebar_class_name: "get api-method"
+info_path: site/docspace/api-backend/usage-api/api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get detailed information of clients"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/clients/info"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Retrieves a paginated list of information for all clients.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"limit","in":"query","description":"The maximum number of results returned per page.","required":true,"schema":{"maximum":50,"minimum":1,"type":"integer","format":"int32"},"example":1},{"name":"last_client_id","in":"query","description":"The identifier of the last retrieved client.","required":false,"schema":{"type":"string"},"example":"6c7cf17b-1bd3-47d5-94c6-be2d3570e168"},{"name":"last_created_on","in":"query","description":"The creation date of the last retrieved client.","required":false,"schema":{"type":"string","format":"date-time"},"example":"2024-04-04T12:00:00Z"}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Successfully retrieved clients info","content":{"application/json":{"schema":{"type":"object","description":"The response containing paginated client information.","properties":{"data":{"type":"object","description":"The paginated client data."},"limit":{"type":"integer","format":"int32","description":"The maximum number of results returned per page."},"last_client_id":{"type":"string","description":"The identifier of the last retrieved client."},"last_created_on":{"type":"string","format":"date-time","description":"The creation date of the last retrieved client."}},"title":"PageableResponseClientInfoResponse"}}}},"400":{"description":"Bad request"},"429":{"description":"Too many requests","content":{"application/json":{"schema":{"type":"object","properties":{"reason":{"description":"The human-readable error explanation.","type":"string"}},"description":"The error response containing the human-readable error explanation.","title":"ErrorResponse"}}}},"500":{"description":"Internal server error"}}}
+>
+  
+</StatusCodes>
+
+
+      

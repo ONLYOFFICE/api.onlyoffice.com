@@ -1,0 +1,71 @@
+---
+id: restore-white-label-logos
+title: "Restore the white label logos"
+description: "Restores the white label logos."
+sidebar_label: "Restore the white label logos"
+hide_title: true
+hide_table_of_contents: true
+api: eJylVktz4zYM/iscXHJRba/Tk27ZbDuTbabbyWNyyHg2tARZXEskS0JJXI/++w5ISbZid+N2L36QwAcQjw/YAsmVh/QRbpFI6ZUXU3GDSyd1rvQKFgkYi06SMvoqhxQcejIOH0pFeC2XWF2blfGQgJVO1kjoGG0LWtYIKVz5T9KtIQGlIYW/G3QbSCBHnzllGRRSuLWYqUKhF6oQVKJ4YXBRMbqozMoI5UVhXLjLpVvzjxqFcUIbmkACPiuxlpBugTaWzS6NqVBqSABfZW0rhJRcg22b7HuGhWwq+o/O7TskRR4xBKGWmv6XS4uEg2qN9uhZfj6b8dfYjY9RWzzLqsFUsGbv0JAf9so3WYbeF00FCWRGE2piNGltpbIgNv3mGXJ76KJZfsOM42Edg5KKDvXeHXlMy0aaaKK7UppwhQ4SKIyrJcWj8znLVkqv/Z6sdE5yyBVh7d93pHRY7El5clyibQIyi2E6uGrbNgFPkhp/ootR+NLkeJJCmwAp4mT2KXpw0lp0ne1fZx8Ok3mvZUOlceofzCEInR8K/WmERVcr75XRXlD4y+YFlcqL7snhfZg1TtEm9J302VdG/7pGPgCHMocEXpwihAXX/0eUDh2kj+HfhVV/4GY4OyYvvcp68S8XDZXz44JfLAaOeFxwTY9fcxNpwx/tb88NUyOVhhnGNiHzkkpIYSqtms4ns6nv6GkalIPuNOhOO0binkP33PNP4ypIYbuUHu9d1R72dZAVmdGFWjWxgSCBZ+mUXFax3jrlmJvIFSkcIHU0Iu5vrjnpi11CbrnBItQ4LbsGCNE/gLz3KC6NWSsUrISaut6FpKevEWDHYFlQ4YrqcjbYKYnsgZXfNKETG9M40Xh0DCykzoWV3r8Yl/csFho+ADJyVymnQJ9FYbH9/HAn7swadXs2Ao1YSffj9763Pj/csalxab4Xs4tRoJgLc55GtdKYi+UmFN7ZRdd3QeZMlCjz4EAX1JHFLqidTJsMtb+jKRkO3noS5URRmRfxoqgUI6sicEsCfB1LY/+2J57RYajBEGifTqfB6sToamOKQmU4yUwdD+fTgVcgAeKAn64axEN2jO15X+ahdWUuZBgrgYWcIcwIc+HQm8Zl6AcaSOGBv9+RjszYs8UumuHg0mgduf9NUPn2k+iuD9tipH36q7nwlS4M5/f1F69WWlLj8P1y45IexLl/8rgRjPyaiLsSRYisqBtPYonCLEmGmnxWMhTl047iIm2MMvIkUOfWKE0TcUVc1tyemAvphRSx42OVMVbo4ae9hzxNdtW9/743jNHy/8KEZ3fj7MIq5kN0Pj74fPJhMuMwWeOplmHadsAduR/n9reR2+7WkhOmQpcEwlea2kqqsHI0kZPjiHjkDEEC88ksjIA4Jrgkh0EBCfSu9MNikUBpPLH6dhgSLR/HNZBHSK48j4Ic0kJWHn/wjp/fYI++M8yK3Qoddj+eQDxsf8K5EzfYH7s07M47rxa78RnXhZ47OZhR8SLL0O5rHeyljDKsAn/d30ESuHDckHHmdT8Yvb/Sm33s8YiMHvAnx++oxnYbu71tB/l49a8awwSJ0hykRdu23wEBgppx
+sidebar_class_name: "put api-method"
+info_path: site/docspace/api-backend/usage-api/api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Restore the white label logos"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"put"}
+  path={"/api/2.0/settings/whitelabel/logos/restore"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Restores the white label logos.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"IsDark","in":"query","description":"Specifies if the white label logo is for the dark theme or not.","schema":{"type":"boolean","example":true}},{"name":"IsDefault","in":"query","description":"Specifies if the logo is for a default tenant or not.","schema":{"type":"boolean","example":true}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Boolean value: true if the operation is successful","content":{"application/json":{"schema":{"type":"object","properties":{"response":{"type":"boolean"},"count":{"type":"integer","format":"int32"},"links":{"type":"array","items":{"type":"object","properties":{"href":{"type":"string"},"action":{"type":"string"}}}},"status":{"type":"integer","format":"int32"},"statusCode":{"type":"integer","format":"int32"}},"title":"BooleanWrapper"}}}},"401":{"description":"Unauthorized"},"403":{"description":"No permissions to perform this action"}}}
+>
+  
+</StatusCodes>
+
+
+      

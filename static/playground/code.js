@@ -121,7 +121,6 @@ window.history.replaceState(null, '', window.location.pathname);
 
 function addApiScript() {
     const apiUrl = urlParams['documentServer'] + ('web-apps/apps/api/documents/api.js');
-
     const scriptApi = document.createElement("script");
     scriptApi.type = "text/javascript";
     scriptApi.src = apiUrl;
@@ -242,6 +241,7 @@ async function initCodeEditorType()
         "documentType": docType,
         "type": Environment.type,
         "editorConfig": {
+            callbackUrl: urlParams['documentServer'] + 'dummyCallback',
             "user": {
                 "id": "userID",
                 "name": "Developer"
