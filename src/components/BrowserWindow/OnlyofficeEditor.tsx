@@ -7,8 +7,8 @@ interface OnlyOfficeEditorProps {
   fileType: string; // e.g., "docx", "xlsx", "pptx", "pdf"
   code: string;
   height?: string;
-  templateUrl: string;
-  zoom: number;
+  templateUrl?: string;
+  zoom?: number;
   config?: code;
   isDemo?: boolean;
   isForm?: boolean;
