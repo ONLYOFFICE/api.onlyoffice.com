@@ -12,10 +12,10 @@ function useQuery() {
 
 function Editor() {
   const query = useQuery();
-  const format = query.get("format");
-  const type = query.get("type");
-  const category = query.get("category");
-  const codeIndex = query.get("codeIndex");
+  const format = query.get("format") || "DOCX";
+  const type = query.get("type") || "document";
+  const category = query.get("category") || "Edit";
+  const codeIndex = query.get("codeIndex") || 0;
   const isForm = query.get("isForm")==="true";
 
   const config: code = codeblocksData[format][category][codeIndex];
