@@ -6,17 +6,17 @@ import { code } from "@site/src/components/Modal/TryNowCodeModal/CodeBlock/types
 import codeblocksData from "@site/src/components/TryNow/codeblocksData.json";
 import styles from "./styles.module.css";
 
-function useQuery() {
+function useQuery(): URLSearchParams {
   return new URLSearchParams(useLocation().search);
 }
 
-function Editor() {
+function Editor(): React.JSX.Element {
   const query = useQuery();
-  const format = query.get("format");
-  const type = query.get("type");
-  const category = query.get("category");
-  const codeIndex = query.get("codeIndex");
-  const isForm = query.get("isForm")==="true";
+  const format: string = query.get("format") || "DOCX";
+  const type: string = query.get("type") || "document";
+  const category: string = query.get("category") || "Edit";
+  const codeIndex: number = parseInt(query.get("codeIndex")) || 0;
+  const isForm: boolean = query.get("isForm")==="true";
 
   const config: code = codeblocksData[format][category][codeIndex];
 
