@@ -33,7 +33,7 @@ const FileFormatButton = ({ format, type, category, actionName, isForm = false, 
   };
 
   const handleEditorOpen = async () => {    
-    codeblocksData[format][category].forEach((_, i) => {
+    codeblocksData[format][category].forEach((_: any, i: number) => {
       window.open(
         window.location.href + `editor?format=${format}&type=${type}&category=${category}&codeIndex=${i}&isForm=${isForm}`,
         "_blank"
