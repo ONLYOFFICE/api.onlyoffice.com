@@ -29,7 +29,7 @@
 | ---------------------------- | ------ | -------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | X-WOPI-Override              | string | 必填 | 来自 WOPI 服务器的请求操作 (*PUT*)。                                                                                                                   |
 | X-WOPI-Lock                  | string | 非必填的 | 锁ID主机必须用它来标识文件上的锁。                                                                                                    |
-| X-WOPI-Editors               | string | 非必填的 | 在此 **PutFile** 请求中对文档做出更改的所有用户 ([UserId](./checkfileinfo.md#user-metadata-properties) 值以逗号分隔）。              |
+| X-WOPI-Editors               | string | 非必填的 | 在此 **PutFile** 请求中对文档做出更改的所有用户 ([UserId](./checkfileinfo.md#UserId) 值以逗号分隔）。              |
 | X-LOOL-WOPI-IsModifiedByUser | string | 非必填的 | 指示用户是否在保存之前修改了文档（**"true"**），或者他们是否只是按下了 **保存** 按钮而没有进行任何修改（**"false"**）。  |
 | X-LOOL-WOPI-IsAutosave       | string | 非必填的 | 指示 **PutFile** 是由自动保存 (**"true"**) 还是由显式用户操作（**保存** 按钮或菜单项）（**"false"**）触发。                   |
 | X-LOOL-WOPI-IsExitSave       | string | 非必填的 | 指示当从内存中清除文档时（例如，当所有用户断开连接时）是否会触发自动保存。（是：**"true"**，否：**"false"**） |
