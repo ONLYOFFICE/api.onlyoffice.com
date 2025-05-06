@@ -3,7 +3,6 @@
 Counts the number of form fields in a document and categorizes them by type.
 
 ```ts
-// This script counts the number of form fields in a document and categorizes them by type.
 (function () {
     // Get the document object.
     let document = Api.GetDocument();
@@ -63,7 +62,7 @@ Counts the number of form fields in a document and categorizes them by type.
 })();
 ```
 
-Methods used: [GetDocument](../../../../office-api/usage-api/text-document-api/Api/Methods/GetDocument.md), [GetAllForms](../../../../office-api/usage-api/text-document-api/ApiDocument/Methods/GetAllForms.md), [GetFormType](../../../../office-api/usage-api/text-document-api/ApiComplexForm/Methods/GetFormType.md), [CreateParagraph](../../../../office-api/usage-api/spreadsheet-api/Api/Methods/CreateParagraph.md), [AddText](../../../../office-api/usage-api/spreadsheet-api/ApiParagraph/Methods/AddText.md), [SetFontSize](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/SetFontSize.md), [SetBold](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/SetBold.md), [SetJc](../../../../office-api/usage-api/spreadsheet-api/ApiParagraph/Methods/SetJc.md), [Push](../../../../office-api/usage-api/spreadsheet-api/ApiDocumentContent/Methods/Push.md), [Save](../../../../office-api/usage-api/spreadsheet-api/Api/Methods/Save.md)
+Methods used: [GetDocument](../../../../office-api/usage-api/text-document-api/Api/Methods/GetDocument.md), [GetAllForms](../../../../office-api/usage-api/form-api/ApiDocument/Methods/GetAllForms.md), [GetFormType](../../../../office-api/usage-api/form-api/ApiFormBase/Methods/GetFormType.md), [CreateParagraph](../../../../office-api/usage-api/text-document-api/Api/Methods/CreateParagraph.md), [AddText](../../../../office-api/usage-api/text-document-api/ApiParagraph/Methods/AddText.md), [SetFontSize](../../../../office-api/usage-api/text-document-api/ApiParagraph/Methods/SetFontSize.md), [SetBold](../../../../office-api/usage-api/text-document-api/ApiParagraph/Methods/SetBold.md), [SetJc](../../../../office-api/usage-api/text-document-api/ApiParagraph/Methods/SetJc.md), [Push](../../../../office-api/usage-api/text-document-api/ApiDocument/Methods/Push.md), [Save](../../../../office-api/usage-api/text-document-api/Api/Methods/Save.md)
 
 ## Result
 

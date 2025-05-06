@@ -23,7 +23,7 @@ Changes the background color of all form fields on focus.
   })();
 ```
 
-Methods used: [GetDocument](../../../../office-api/usage-api/text-document-api/Api/Methods/GetDocument.md), [GetAllForms](../../../../office-api/usage-api/text-document-api/ApiDocument/Methods/GetAllForms.md), [SetBackgroundColor](../../../../office-api/usage-api/text-document-api/ApiComplexForm/Methods/SetBackgroundColor.md)
+Methods used: [GetDocument](../../../../office-api/usage-api/text-document-api/Api/Methods/GetDocument.md), [GetAllForms](../../../../office-api/usage-api/form-api/ApiDocument/Methods/GetAllForms.md), [SetBackgroundColor](../../../../office-api/usage-api/form-api/ApiFormBase/Methods/SetBackgroundColor.md)
 
 ## Result
 

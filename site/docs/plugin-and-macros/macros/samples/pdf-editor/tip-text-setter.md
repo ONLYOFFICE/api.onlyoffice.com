@@ -20,7 +20,7 @@ Sets the desired tip text to all checkboxes with a certain key.
 })();
 ```
 
-Methods used: [GetDocument](../../../../office-api/usage-api/text-document-api/Api/Methods/GetDocument.md), [GetAllForms](../../../../office-api/usage-api/text-document-api/ApiDocument/Methods/GetAllForms.md), [GetFormType](../../../../office-api/usage-api/text-document-api/ApiComplexForm/Methods/GetFormType.md), [GetFormKey](../../../../office-api/usage-api/text-document-api/ApiComplexForm/Methods/GetFormKey.md), [SetTipText](../../../../office-api/usage-api/text-document-api/ApiComplexForm/Methods/SetTipText.md)
+Methods used: [GetDocument](../../../../office-api/usage-api/text-document-api/Api/Methods/GetDocument.md), [GetAllForms](../../../../office-api/usage-api/form-api/ApiDocument/Methods/GetAllForms.md), [GetFormType](../../../../office-api/usage-api/form-api/ApiFormBase/Methods/GetFormType.md), [GetFormKey](../../../../office-api/usage-api/form-api/ApiFormBase/Methods/GetFormKey.md), [SetTipText](../../../../office-api/usage-api/form-api/ApiCheckBoxForm/Methods/SetTipText.md)
 
 ## Result
 

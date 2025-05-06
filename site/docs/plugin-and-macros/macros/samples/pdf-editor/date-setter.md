@@ -3,7 +3,6 @@
 Sets current date to all date form fields in the document.
 
 ```ts
-// Set current date to all date form fields in the document.
 (function () {
   let document = Api.GetDocument();
   let forms = document.GetAllForms();
@@ -21,7 +20,7 @@ Sets current date to all date form fields in the document.
 })();
 ```
 
-Methods used: [GetDocument](../../../../office-api/usage-api/text-document-api/Api/Methods/GetDocument.md), [GetAllForms](../../../../office-api/usage-api/text-document-api/ApiDocument/Methods/GetAllForms.md), [GetFormType](../../../../office-api/usage-api/text-document-api/ApiComplexForm/Methods/GetFormType.md), [SetFormat](../../../../office-api/usage-api/text-document-api/ApiDateForm/Methods/SetFormat.md), [SetLanguage](../../../../office-api/usage-api/spreadsheet-api/ApiRun/Methods/SetLanguage.md), [SetBackgroundColor](../../../../office-api/usage-api/text-document-api/ApiComplexForm/Methods/SetBackgroundColor.md)
+Methods used: [GetDocument](../../../../office-api/usage-api/text-document-api/Api/Methods/GetDocument.md), [GetAllForms](../../../../office-api/usage-api/form-api/ApiDocument/Methods/GetAllForms.md), [GetFormType](../../../../office-api/usage-api/form-api/ApiFormBase/Methods/GetFormType.md), [SetFormat](../../../../office-api/usage-api/form-api/ApiDateForm/Methods/SetFormat.md), [SetLanguage](../../../../office-api/usage-api/form-api/ApiDateForm/Methods/SetLanguage.md), [SetBackgroundColor](../../../../office-api/usage-api/form-api/ApiDateForm/Methods/SetBackgroundColor.md)
 
 ## Result
 
