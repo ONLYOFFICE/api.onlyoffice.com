@@ -30,13 +30,13 @@ CDocBuilderValue call(String name, Object p1, Object p2, Object p3, Object p4, O
         CDocBuilderContext context = builder.getContext();
         CDocBuilderValue global = context.getGlobal();
         CDocBuilderValue api = global.get("Api");
-        CDocBuilderValue document = api.call("GetDocument");
+        CDocBuilderValue doc = api.call("GetDocument");
         CDocBuilder.dispose();
         ```
     </TabItem>
     <TabItem value="builder" label=".docbuilder">
         ```ts
-        const oDocument = Api.GetDocument()
+        let doc = Api.GetDocument();
         ```
     </TabItem>
 </Tabs>

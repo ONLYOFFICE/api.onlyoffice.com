@@ -10,18 +10,18 @@ Finds the next available blank row in a worksheet. This macro allows you to get 
 (function () 
 {
     // Getting the active sheet
-    var activeSheet = Api.ActiveSheet;
+    let activeSheet = Api.ActiveSheet;
     // Minimum row index
-    var indexRowMin = 0;
+    let indexRowMin = 0;
     // Maximum row index
-    var indexRowMax = 1048576;
+    let indexRowMax = 1048576;
     // Column 'A'
-    var indexCol = 0;
+    let indexCol = 0;
     // Row index for empty cell search
-    var indexRow = indexRowMax;
+    let indexRow = indexRowMax;
     for (; indexRow >= indexRowMin; --indexRow) {
         // Getting the cell
-        var range = activeSheet.GetRangeByNumber(indexRow, indexCol);
+        let range = activeSheet.GetRangeByNumber(indexRow, indexCol);
         // Checking the value
         if (range.GetValue() && indexRow !== indexRowMax) {
             range = activeSheet.GetRangeByNumber(indexRow + 1, indexCol);

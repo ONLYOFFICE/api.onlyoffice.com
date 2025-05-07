@@ -40,7 +40,7 @@ def ExecuteCommand(self, str command, CDocBuilderValue | None retValue = None);
     </TabItem>
     <TabItem value="builder" label=".docbuilder">
         ```ts
-        oParagraph.AddText("Hello, world!")
+        paragraph.AddText("Hello, world!");
         ```
     </TabItem>
 </Tabs>

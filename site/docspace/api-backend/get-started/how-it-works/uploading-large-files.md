@@ -77,50 +77,50 @@ After the last chunk is uploaded, the server returns an object in the following 
 Below you can see an example in Node.js:
 
 ``` ts
-const fileResponse = await fetch("url_to_file")
-const data = await fileResponse.arrayBuffer()
-const size = fileResponse.headers.get("content-length")
-const chunkUploadSize = 1024 * 1023
-const folderId = "your_folder_id"
+const fileResponse = await fetch("url_to_file");
+const data = await fileResponse.arrayBuffer();
+const size = fileResponse.headers.get("content-length");
+const chunkUploadSize = 1024 * 1023;
+const folderId = "your_folder_id";
 
 const body = {
   CreateOn: new Date().toISOString(),
   FileName: "file_name",
   FileSize: size,
   folderId,
-}
+};
 
-const url = `https://example.onlyoffice.com/api/2.0/files/${folderId}/upload/create_session`
+const url = `https://example.onlyoffice.com/api/2.0/files/${folderId}/upload/create_session`;
 const sessionResponse = await fetch(url, {
   body: JSON.stringify(body),
   headers: {"Content-Type": "application/json"},
   method: "POST",
-})
+});
 
-const session = await sessionResponse.json()
+const session = await sessionResponse.json();
 
-const requestsDataArray = []
-const chunks = Math.ceil(size / chunkUploadSize)
-let chunk = 0
+const requestsDataArray = [];
+const chunks = Math.ceil(size / chunkUploadSize);
+let chunk = 0;
 
 while (chunk < chunks) {
-  const offset = chunk * chunkUploadSize
-  const formData = new FormData()
-  formData.append("file", new Blob([data.slice(offset, offset + chunkUploadSize)]))
-  requestsDataArray.push(formData)
-  chunk += 1
+  const offset = chunk * chunkUploadSize;
+  const formData = new FormData();
+  formData.append("file", new Blob([data.slice(offset, offset + chunkUploadSize)]));
+  requestsDataArray.push(formData);
+  chunk += 1;
 }
 
-let result
+let result;
 for (const formData of requestsDataArray) {
   const headers = {
     ...formData.getHeaders(),
     "Content-Type": "multipart/form-data",
-  }
+  };
   result = await fetch(session.data.location, {
     body: formData,
     headers,
     method: "POST",
-  })
-}
+  });
+};
 ```

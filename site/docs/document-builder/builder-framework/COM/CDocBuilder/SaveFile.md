@@ -34,7 +34,7 @@ HRESULT SaveFile([in] BSTR type, [in] BSTR path, [out, retval] VARIANT_BOOL* res
     </TabItem>
     <TabItem value="builder" label=".docbuilder">
         ```ts
-        builder.SaveFile("docx", "result.docx")
+        builder.SaveFile("docx", "result.docx");
         ```
     </TabItem>
 </Tabs>

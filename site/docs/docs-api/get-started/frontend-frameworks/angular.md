@@ -51,10 +51,10 @@ ng version
 1. Open the *./src/app/app.module.ts* file in the *onlyoffice-angular-demo* project and import the **DocumentEditorModule**:
 
    ``` ts
-   import {NgModule} from "@angular/core"
-   import {BrowserModule} from "@angular/platform-browser"
-   import {DocumentEditorModule} from "@onlyoffice/document-editor-angular"
-   import {AppComponent} from "./app.component"
+   import {NgModule} from "@angular/core";
+   import {BrowserModule} from "@angular/platform-browser";
+   import {DocumentEditorModule} from "@onlyoffice/document-editor-angular";
+   import {AppComponent} from "./app.component";
    
    @NgModule({
      declarations: [
@@ -74,8 +74,8 @@ ng version
 2. Open the *./src/app/app.component.ts* file in the *onlyoffice-angular-demo* project and define options in your consuming component:
 
    ``` ts
-   import {Component} from "@angular/core"
-   import {type IConfig} from "@onlyoffice/document-editor-angular"
+   import {Component} from "@angular/core";
+   import {type IConfig} from "@onlyoffice/document-editor-angular";
    
    @Component({
      selector: "app-root",
@@ -95,21 +95,21 @@ ng version
        },
      }
      onDocumentReady = () => {
-       console.log("Document is loaded")
+       console.log("Document is loaded");
      }
      onLoadComponentError = (errorCode, errorDescription) => {
        switch (errorCode) {
        case -1: // Unknown error loading component
-         console.log(errorDescription)
-         break
+         console.log(errorDescription);
+         break;
   
        case -2: // Error load DocsAPI from http://documentserver/
-         console.log(errorDescription)
-         break
+         console.log(errorDescription);
+         break;
   
        case -3: // DocsAPI is not defined
-         console.log(errorDescription)
-         break
+         console.log(errorDescription);
+         break;
        }
      }
    }
@@ -143,8 +143,8 @@ ng version
    > Please note that starting from Angular v17.0.0, the *app.module.ts* file is not added to the new projects by default. You must specify *DocumentEditorModule* in the *imports* property of the *Component* decorator and set *standalone* to *true*.
 
    ``` ts
-   import {Component} from "@angular/core"
-   import {DocumentEditorModule, type IConfig} from "@onlyoffice/document-editor-angular"
+   import {Component} from "@angular/core";
+   import {DocumentEditorModule, type IConfig} from "@onlyoffice/document-editor-angular";
 
    @Component({
      selector: "app-root",
@@ -166,19 +166,19 @@ ng version
        },
      }
      onDocumentReady = () => {
-       console.log("Document is loaded")
+       console.log("Document is loaded");
      }
      onLoadComponentError = (errorCode, errorDescription) => {
        switch (errorCode) {
        case -1: // Unknown error loading component
-         console.log(errorDescription)
-         break
+         console.log(errorDescription);
+         break;
        case -2: // Error load DocsAPI from http://documentserver/
-         console.log(errorDescription)
-         break
+         console.log(errorDescription);
+         break;
        case -3: // DocsAPI is not defined
-         console.log(errorDescription)
-         break
+         console.log(errorDescription);
+         break;
        }
      }
    }
@@ -220,22 +220,22 @@ Test the application using the Node.js development server:
 1. Add the `DocEditor.instances` parameter to the `window` object and get the editor object from it by the editor ID:
 
    ```ts
-   const documentEditor = window.DocEditor.instances["docxEditor"]
+   const documentEditor = window.DocEditor.instances["docxEditor"];
    ```
 
 2. Call any editor [method](../../usage-api/methods.md) from this object:
 
    ```ts
-   documentEditor.showMessage("Welcome to ONLYOFFICE Editor!")
+   documentEditor.showMessage("Welcome to ONLYOFFICE Editor!");
    ```
 
 Example:
 
 ```ts
 onDocumentReady = () => {
-  const documentEditor = window.DocEditor.instances["docxEditor"]
+  const documentEditor = window.DocEditor.instances["docxEditor"];
 
-  documentEditor.showMessage("Welcome to ONLYOFFICE Editor!")
+  documentEditor.showMessage("Welcome to ONLYOFFICE Editor!");
 }
 ```
 
@@ -281,7 +281,7 @@ To deploy the application to a production environment, create the build-specific
 2. Import the original environment file in the *app.component.ts* component file to use the environment configurations you have defined:
 
    ``` ts
-   import {environment} from "./../environments/environment"
+   import {environment} from "./../environments/environment";
    ```
 
    This ensures that the *build* and *serve* commands can find the configurations for the specific build targets.

@@ -37,26 +37,26 @@ This procedure creates a [basic React application](https://github.com/facebook/c
 4. Open the *./src/App.js* file in the *onlyoffice-react-demo* project and replace its contents with the following code:
 
    ``` tsx
-   import {DocumentEditor} from "@onlyoffice/document-editor-react"
-   import React, {useRef} from "react"
+   import {DocumentEditor} from "@onlyoffice/document-editor-react";
+   import React, {useRef} from "react";
    
    function onDocumentReady(event) {
-     console.log("Document is loaded")
+     console.log("Document is loaded");
    }
    
    function onLoadComponentError(errorCode, errorDescription) {
      switch (errorCode) {
      case -1: // Unknown error loading component
-       console.log(errorDescription)
-       break
+       console.log(errorDescription);
+       break;
    
      case -2: // Error load DocsAPI from http://documentserver/
-       console.log(errorDescription)
-       break
+       console.log(errorDescription);
+       break;
    
      case -3: // DocsAPI is not defined
-       console.log(errorDescription)
-       break
+       console.log(errorDescription);
+       break;
      }
    }
    
@@ -107,22 +107,22 @@ This procedure creates a [basic React application](https://github.com/facebook/c
 1. Add the `DocEditor.instances` parameter to the `window` object and get the editor object from it by the editor ID:
 
    ```tsx
-   const documentEditor = window.DocEditor.instances["docxEditor"]
+   const documentEditor = window.DocEditor.instances["docxEditor"];
    ```
 
 2. Call any editor [method](../../usage-api/methods.md) from this object:
 
    ```tsx
-   documentEditor.showMessage("Welcome to ONLYOFFICE Editor!")
+   documentEditor.showMessage("Welcome to ONLYOFFICE Editor!");
    ```
 
 Example:
 
 ```tsx
 const onDocumentReady = () => {
-  const documentEditor = window.DocEditor.instances["docxEditor"]
+  const documentEditor = window.DocEditor.instances["docxEditor"];
 
-  documentEditor.showMessage("Welcome to ONLYOFFICE Editor!")
+  documentEditor.showMessage("Welcome to ONLYOFFICE Editor!");
 }
 ```
 

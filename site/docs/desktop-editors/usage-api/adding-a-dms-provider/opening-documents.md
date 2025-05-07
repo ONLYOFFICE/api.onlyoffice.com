@@ -60,6 +60,6 @@ const params = {
   url: "https://example.com/url-to-example-document.docx",
   type: "word",
   provider: "onlyoffice",
-}
-window.AscDesktopEditor.execCommand("open:document", JSON.stringify(params))
+};
+window.AscDesktopEditor.execCommand("open:document", JSON.stringify(params));
 ```

@@ -8,10 +8,10 @@ Adds comments to the cells in the selection and can also change the background c
 
 ```ts
 (function () {
-  var oWorksheet = Api.GetActiveSheet();
-  var oRange = Api.GetSelection();
-  oRange.ForEach(function (range) {
-    var sValue = range.GetValue();
+  let worksheet = Api.GetActiveSheet();
+  let range = Api.GetSelection();
+  range.ForEach(function (range) {
+    let sValue = range.GetValue();
     if (sValue > 100) {
       range.AddComment("The value is bigger than 100.");
       range.SetFillColor(Api.CreateColorFromRGB(255, 213, 191));
