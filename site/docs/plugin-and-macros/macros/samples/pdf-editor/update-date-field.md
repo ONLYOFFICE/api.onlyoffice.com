@@ -1,11 +1,11 @@
-# Date Setter
+# Update date field
 
-Sets current date to all date form fields in the document.
+Sets the current date to all date form fields in the document.
 
 ```ts
 (function () {
-  let document = Api.GetDocument();
-  let forms = document.GetAllForms();
+  let doc = Api.GetDocument();
+  let forms = doc.GetAllForms();
 
   forms.forEach((form) => {
     if (form.GetFormType() === "dateForm") {
@@ -16,7 +16,7 @@ Sets current date to all date form fields in the document.
     }
   });
 
-  console.log("Date fields updated to current date.");
+  console.log("Date fields updated to the current date.");
 })();
 ```
 

@@ -1,20 +1,15 @@
-# Custom Header
+# Create custom header
 
-This macro creates a custom header with an image and a title. The image is represented as a base64 string in the code, which can be customized or replaced as needed.
+Creates a custom header with an image and a title. The image is represented as a base64 string in the code, which can be customized or replaced as needed.
 
 ```ts
 (function () {
   // Get the active document
-  let document = Api.GetDocument();
+  let doc = Api.GetDocument();
 
   // Try to get the existing header; if none exists, create one
-  let section = document.GetFinalSection();
+  let section = doc.GetFinalSection();
   let header = section.GetHeader("default", true);
-  if (!header) {
-    // Create a new header section if not present
-    header = Api.CreateHeader();
-    document.SetHeader(header); // Attach the header to the document
-  }
 
   // Create a paragraph for the header
   let headerParagraph = Api.CreateParagraph();
@@ -40,8 +35,7 @@ This macro creates a custom header with an image and a title. The image is repre
 })();
 ```
 
-Methods used: [GetDocument](../../../../office-api/usage-api/text-document-api/Api/Methods/GetDocument.md), [GetFinalSection](../../../../office-api/usage-api/text-document-api/ApiDocument/Methods/GetFinalSection.md), [GetHeader](../../../../office-api/usage-api/text-document-api/ApiSection/Methods/GetHeader.md), [CreateHeader](../../../../office-api/usage-api/text-document-api/Api/Methods/CreateHeader.md), [SetHeader](../../../../office-api/usage-api/text-document-api/ApiDocument/Methods/SetHeader.md), [CreateParagraph](../../../../office-api/usage-api/text-document-api/Api/Methods/CreateParagraph.md), [CreateImage](../../../../office-api/usage-api/text-document-api/Api/Methods/CreateImage.md), [AddDrawing](../../../../office-api/usage-api/text-document-api/ApiParagraph/Methods/AddDrawing.md), [AddText](../../../../office-api/usage-api/text-document-api/ApiParagraph/Methods/AddText.md), [SetFontSize](../../../../office-api/usage-api/text-document-api/ApiParagraph/Methods/SetFontSize.md), [SetBold](../../../../office-api/usage-api/text-document-api/ApiParagraph/Methods/SetBold.md), [Push](../../../../office-api/usage-api/text-document-api/ApiDocumentContent/Methods/Push.md)
-
+Methods used: [GetDocument](../../../../office-api/usage-api/text-document-api/Api/Methods/GetDocument.md), [GetFinalSection](../../../../office-api/usage-api/text-document-api/ApiDocument/Methods/GetFinalSection.md), [GetHeader](../../../../office-api/usage-api/text-document-api/ApiSection/Methods/GetHeader.md), [CreateParagraph](../../../../office-api/usage-api/text-document-api/Api/Methods/CreateParagraph.md), [CreateImage](../../../../office-api/usage-api/text-document-api/Api/Methods/CreateImage.md), [AddDrawing](../../../../office-api/usage-api/text-document-api/ApiParagraph/Methods/AddDrawing.md), [AddText](../../../../office-api/usage-api/text-document-api/ApiParagraph/Methods/AddText.md), [SetFontSize](../../../../office-api/usage-api/text-document-api/ApiParagraph/Methods/SetFontSize.md), [SetBold](../../../../office-api/usage-api/text-document-api/ApiParagraph/Methods/SetBold.md), [Push](../../../../office-api/usage-api/text-document-api/ApiDocumentContent/Methods/Push.md)
 
 ## Result
 

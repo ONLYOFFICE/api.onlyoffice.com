@@ -1,15 +1,15 @@
-# Validate Form Fields
+# Validate form fields
 
-Highlights empty or unrequired text fields in a document with desired colors. 
+Highlights empty or unrequired text fields in a document with desired colors.
 
 ```ts
 (function () {
     let checkSpecificTip = false;
     let requiredTipText = "Please enter your second address";
 
-    let document = Api.GetDocument();
-    let forms = document.GetAllForms();
-    let formsData = JSON.parse(JSON.stringify(document.GetFormsData()));
+    let doc = Api.GetDocument();
+    let forms = doc.GetAllForms();
+    let formsData = JSON.parse(JSON.stringify(doc.GetFormsData()));
     let invalidCount = 0;
 
     forms.forEach(form => {
@@ -34,7 +34,7 @@ Highlights empty or unrequired text fields in a document with desired colors.
         }
     });
 
-    console.log(`Form Field Validator complete. ${invalidCount} empty unrequired text field(s) highlighted.`);
+    console.log(`All form fields in the document have been validated. ${invalidCount} empty unrequired text field(s) highlighted.`);
 })();
 ```
 

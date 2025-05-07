@@ -1,14 +1,14 @@
-# Form Field Counter
+# Count form fields
 
 Counts the number of form fields in a document and categorizes them by type.
 
 ```ts
 (function () {
     // Get the document object.
-    let document = Api.GetDocument();
+    let doc = Api.GetDocument();
 
     // Retrieve all form fields from the document.
-    let forms = document.GetAllForms();
+    let forms = doc.GetAllForms();
 
     // Initialize counters.
     let totalFields = forms.length;
@@ -57,7 +57,7 @@ Counts the number of form fields in a document and categorizes them by type.
     summaryParagraph.SetBold(true);
     summaryParagraph.SetJc("center");
 
-    document.Push(summaryParagraph);
+    doc.Push(summaryParagraph);
     Api.Save();
 })();
 ```

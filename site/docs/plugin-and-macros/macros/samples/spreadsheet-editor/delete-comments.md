@@ -1,6 +1,6 @@
-# Delete Comments
+# Delete comments
 
-This macro deletes comments from a specified range of cells in the active worksheet.
+Deletes comments from a specified range of cells in the active worksheet.
 
 ```ts
 (function () {
@@ -30,7 +30,6 @@ This macro deletes comments from a specified range of cells in the active worksh
 ```
 
 Methods used: [GetActiveSheet](../../../../office-api/usage-api/spreadsheet-api/Api/Methods/GetActiveSheet.md), [GetRangeByNumber](../../../../office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetRangeByNumber.md), [GetComment](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/GetComment.md), [GetText](../../../../office-api/usage-api/spreadsheet-api/ApiComment/Methods/GetText.md), [Delete](../../../../office-api/usage-api/spreadsheet-api/ApiComment/Methods/Delete.md)
-
 
 ## Result
 

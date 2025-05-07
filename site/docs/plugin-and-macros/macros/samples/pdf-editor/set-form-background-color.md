@@ -1,10 +1,10 @@
-# Background Color Setter
+# Set form background color
 
 Changes the background color of all form fields on focus.
 
 ```ts
 (function () {
-    let document = Api.GetDocument();
+    let doc = Api.GetDocument();
   
     // Define the desired background color (light blue in RGB).
     let red = 171;
@@ -12,7 +12,7 @@ Changes the background color of all form fields on focus.
     let blue = 255;
   
     // Get all form fields in the document.
-    let formFields = document.GetAllForms();
+    let formFields = doc.GetAllForms();
   
     // Iterate through each form field and set the background color.
     formFields.forEach(function(field) {
