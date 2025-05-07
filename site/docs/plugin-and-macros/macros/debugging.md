@@ -16,9 +16,9 @@ To debug ONLYOFFICE macros, follow the instructions below.
 
    ``` ts
    debugger;
-   const oDocument = Api.GetDocument();
-   const oParagraph = oDocument.GetElement(0);
-   oParagraph.AddText("Hello world!");
+   let doc = Api.GetDocument();
+   let paragraph = doc.GetElement(0);
+   paragraph.AddText("Hello world!");
    ```
 
 3. To run your script in debug mode:
@@ -42,7 +42,7 @@ If you just need to display the specific values in the browser developer console
 
 ``` ts
 console.log(123);
-const oDocument = Api.GetDocument();
-const oParagraph = oDocument.GetElement(0);
-oParagraph.AddText("Hello world!");
+let doc = Api.GetDocument();
+let paragraph = doc.GetElement(0);
+paragraph.AddText("Hello world!");
 ```

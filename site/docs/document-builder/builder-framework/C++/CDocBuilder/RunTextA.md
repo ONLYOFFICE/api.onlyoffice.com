@@ -29,5 +29,5 @@ builder.CreateFile(\"docx\");\n\
 var oDocument = Api.GetDocument();var oParagraph;oParagraph = oDocument.GetElement(0);oParagraph.SetJc(\"center\");oParagraph.AddText(\"Center\");\n\
 builder.SaveFile(\"pdf\", \"images.pdf\");\n\
 builder.CloseFile();");
-CDocBuilder::Dispose()
+CDocBuilder::Dispose();
 ```

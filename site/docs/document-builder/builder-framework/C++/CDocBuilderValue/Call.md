@@ -37,7 +37,7 @@ CDocBuilderValue Call(const wchar_t* | const char* sName, CDocBuilderValue p1, C
     </TabItem>
     <TabItem value="builder" label=".docbuilder">
         ```ts
-        const oDocument = Api.GetDocument()
+        let doc = Api.GetDocument();
         ```
     </TabItem>
 </Tabs>

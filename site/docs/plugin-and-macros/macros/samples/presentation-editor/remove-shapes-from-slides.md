@@ -9,11 +9,11 @@ Removes shapes from slides in a presentation.
 ``` ts
 (function()
 {
-  var oPresentation = Api.GetPresentation();
+  let presentation = Api.GetPresentation();
   for (let i = 0; i < 10; i++) {
-    var oSlide = oPresentation.GetSlideByIndex(i);
-    var aShape  = oSlide.GetAllShapes();
-    aShape[0].Delete();
+    let slide = presentation.GetSlideByIndex(i);
+    let shapes  = slide.GetAllShapes();
+    shapes[0].Delete();
   }
 })();
 ```

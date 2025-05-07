@@ -45,9 +45,9 @@ HRESULT Get([in] long index, [out, retval] I_DOCBUILDER_VALUE** result);
     </TabItem>
     <TabItem value="builder" label=".docbuilder">
         ```ts
-        const oDocument = Api.GetDocument()
-        const aCharts = oDocument.GetAllCharts()
-        const oChart = aCharts[1]
+        let doc = Api.GetDocument();
+        let charts = doc.GetAllCharts();
+        let chart = charts[1];
         ```
     </TabItem>
 </Tabs>
