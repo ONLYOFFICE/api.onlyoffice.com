@@ -1,5 +1,31 @@
 # Change log
 
+## 5.1.0
+
+### New features
+
+#### Docs
+
+* Added Results to the Office API samples
+
+#### Docs API
+
+* Added Try Docs page
+* Updated a list of the validated parameters in the browser
+* Added scrolling to tables
+
+#### Docspace
+
+* Update the Authentication section
+
+#### Plugins and macros
+
+* Added YouTube videos for plugins samples
+
+### Fixes
+
+* Fixed anchors
+
 ## 5.0.0
 
 ### New features

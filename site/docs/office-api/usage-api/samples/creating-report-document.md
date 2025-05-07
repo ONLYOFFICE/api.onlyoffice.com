@@ -7,19 +7,22 @@ Create reports on all the comments added to the document and on every change whi
 - create a table for the comments/review report and fill it in with the data from the global variable ([Api/CreateParagraph](../text-document-api/Api/Methods/CreateParagraph.md), [Api/CreateTable](../text-document-api/Api/Methods/CreateTable.md), [ApiDocument/Push](../text-document-api/ApiDocument/Methods/Push.md), [ApiDocumentContent/GetElement](../text-document-api/ApiDocumentContent/Methods/GetElement.md), [ApiParagraph/AddText](../text-document-api/ApiParagraph/Methods/AddText.md), [ApiTable/GetRow](../text-document-api/ApiTable/Methods/GetRow.md), [ApiTable/MergeCells](../text-document-api/ApiTable/Methods/MergeCells.md), [ApiTableCell/GetContent](../text-document-api/ApiTableCell/Methods/GetContent.md), [ApiTableRow/GetCell](../text-document-api/ApiTableRow/Methods/GetCell.md));
 - edit text style in the table ([ApiDocument/GetStyle](../text-document-api/ApiDocument/Methods/GetStyle.md), [ApiRun/SetColor](../text-document-api/ApiRun/Methods/SetColor.md), [ApiRun/SetStrikeout](../text-document-api/ApiRun/Methods/SetStrikeout.md)).
 
-```ts document-builder={"document": {"url": "https://static.onlyoffice.com/assets/docs/samples/document_review_mode.docx"}, "documentType": "word", "editorConfig": {"customization": {"zoom": 60}}}
+```ts editor-docx zoom=60
 let doc = Api.GetDocument();
-GlobalVariable["CommentsReport"] = doc.GetCommentsReport();
-GlobalVariable["ReviewReport"] = doc.GetReviewReport();
+let paragraph1 = doc.GetElement(0);
+doc.SetTrackRevisions(true);
+paragraph1.AddText("Create reports on all the comments added to the document and on every change which was made to the document in the review mode");
+paragraph1.SetFontSize(24);
+paragraph1.SetBold(true);
+let paragraph2 = Api.CreateParagraph();
+paragraph2.AddText("John Smith");
+doc.Push(paragraph2);
+let reviewReport = doc.GetReviewReport();
+doc.SetTrackRevisions(false);
 
-builder.CloseFile();
+Api.AddComment(paragraph1, "Ok, got it!", "Mark Pottato");
+let commentsReport = doc.GetCommentsReport();
 
-builder.CreateFile("docx");
-
-let commentsReport = GlobalVariable["CommentsReport"];
-let reviewReport = GlobalVariable["ReviewReport"];
-
-let doc = Api.GetDocument();
 let paragraph = Api.CreateParagraph();
 doc.Push(paragraph);
 paragraph.AddText("Comments report");
