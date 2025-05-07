@@ -81,11 +81,11 @@ const getDocumentName = (isDemo: boolean = false, isForm: boolean = false): stri
   return isDemo ? (isForm ? "demo-invoice" : "demo") : "new";
 };
 
-const createDocumentConfig = (fileType: string, templateUrl: string, isDemo: boolean = false, isForm: boolean = false): object => {
+const createDocumentConfig = (fileType: string, templateUrl: string, title?: string, isDemo: boolean = false, isForm: boolean = false): object => {
   return {
     fileType,
     key: `doc-${Date.now()}`,
-    title: `Example Document.${fileType}`,
+    title: title || `Example Document.${fileType}`,
     url: templateUrl ? templateUrl : `https://static.onlyoffice.com/assets/docs/samples/${getDocumentName(isDemo, isForm)}.${fileType}`
   };
 };
@@ -116,10 +116,14 @@ const addScript = async (server: string, secret: string, fileType: string, code:
   const scriptConfig = document.createElement("script");
   scriptConfig.type = "text/javascript";
 
-  const documentConfig = createDocumentConfig(fileType, templateUrl, isDemo, isForm);
+  const documentConfig = createDocumentConfig(fileType, templateUrl, externalConfig?.document?.title, isDemo, isForm);
 
   if (externalConfig?.editorConfig?.customization?.logo?.image) {
     externalConfig.editorConfig.customization.logo.image = new URL("/assets/images/try-docs/example-logo.png", window.location.origin).href;
+  }
+
+  if (externalConfig?.editorConfig?.customization?.customer?.logo) {
+    externalConfig.editorConfig.customization.customer.logo = new URL("/assets/images/try-docs/example-logo-big.png", window.location.origin).href;
   }
 
   const config = deepMergePreferFirst(
