@@ -1,4 +1,4 @@
-# Word Formatter
+# Word formatter
 
 The macro applies custom styling (e.g., font, size, bold, italic, color) to all occurrences of a phrase in a document by processing each paragraph and formatting the target word dynamically.
 
@@ -55,7 +55,7 @@ The macro applies custom styling (e.g., font, size, bold, italic, color) to all 
 })();
 ```
 
-Methods Used: [GetDocument](../../../../office-api/usage-api/text-document-api/Api/Methods/GetDocument.md), [GetAllParagraphs](../../../../office-api/usage-api/text-document-api/ApiDocument/Methods/GetAllParagraphs.md), [GetText](../../../../office-api/usage-api/text-document-api/ApiParagraph/Methods/GetText.md), [RemoveAllElements](../../../../office-api/usage-api/text-document-api/ApiParagraph/Methods/RemoveAllElements.md), [CreateRun](../../../../office-api/usage-api/text-document-api/Api/Methods/CreateRun.md), [AddText](../../../../office-api/usage-api/text-document-api/ApiRun/Methods/AddText.md), [AddElement](../../../../office-api/usage-api/text-document-api/ApiParagraph/Methods/AddElement.md), [SetFontFamily](../../../../office-api/usage-api/text-document-api/ApiRun/Methods/SetFontFamily.md), [SetFontSize](../../../../office-api/usage-api/text-document-api/ApiRun/Methods/SetFontSize.md), [SetBold](../../../../office-api/usage-api/text-document-api/ApiRun/Methods/SetBold.md), [SetItalic](../../../../office-api/usage-api/text-document-api/ApiRun/Methods/SetItalic.md), [SetColor](../../../../office-api/usage-api/text-document-api/ApiRun/Methods/SetColor.md)
+Methods used: [GetDocument](../../../../office-api/usage-api/text-document-api/Api/Methods/GetDocument.md), [GetAllParagraphs](../../../../office-api/usage-api/text-document-api/ApiDocument/Methods/GetAllParagraphs.md), [GetText](../../../../office-api/usage-api/text-document-api/ApiParagraph/Methods/GetText.md), [RemoveAllElements](../../../../office-api/usage-api/text-document-api/ApiParagraph/Methods/RemoveAllElements.md), [CreateRun](../../../../office-api/usage-api/text-document-api/Api/Methods/CreateRun.md), [AddText](../../../../office-api/usage-api/text-document-api/ApiRun/Methods/AddText.md), [SetFontFamily](../../../../office-api/usage-api/text-document-api/ApiRun/Methods/SetFontFamily.md), [SetFontSize](../../../../office-api/usage-api/text-document-api/ApiRun/Methods/SetFontSize.md), [SetBold](../../../../office-api/usage-api/text-document-api/ApiRun/Methods/SetBold.md), [SetItalic](../../../../office-api/usage-api/text-document-api/ApiRun/Methods/SetItalic.md), [SetColor](../../../../office-api/usage-api/text-document-api/ApiRun/Methods/SetColor.md), [AddElement](../../../../office-api/usage-api/text-document-api/ApiParagraph/Methods/AddElement.md)
 
 ## Result
 
