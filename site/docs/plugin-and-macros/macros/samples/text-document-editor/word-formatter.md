@@ -1,4 +1,4 @@
-# Word formatter
+# Format a word
 
 The macro applies custom styling (e.g., font, size, bold, italic, color) to all occurrences of a phrase in a document by processing each paragraph and formatting the target word dynamically.
 
@@ -59,5 +59,5 @@ Methods used: [GetDocument](../../../../office-api/usage-api/text-document-api/A
 
 ## Result
 
-![WordFormatter](/assets/images/plugins/word-formatter.png#gh-light-mode-only)
-![WordFormatter](/assets/images/plugins/word-formatter.dark.png#gh-dark-mode-only)
+![WordFormatter](/assets/images/plugins/format-a-word.png#gh-light-mode-only)
+![WordFormatter](/assets/images/plugins/format-a-word.dark.png#gh-dark-mode-only)

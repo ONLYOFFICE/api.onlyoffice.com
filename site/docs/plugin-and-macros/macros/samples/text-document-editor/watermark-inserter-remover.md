@@ -1,4 +1,4 @@
-# Watermark inserter
+# Insert watermark
 
 Insert or remove a custom watermark on every page of the document.
 
@@ -37,5 +37,5 @@ Methods used: [GetDocument](../../../../office-api/usage-api/text-document-api/A
 
 ## Result
 
-![WatermarkInserter](/assets/images/plugins/watermark-inserter.png#gh-light-mode-only)
-![WatermarkInserter](/assets/images/plugins/watermark-inserter.dark.png#gh-dark-mode-only)
+![WatermarkInserter](/assets/images/plugins/insert-watermark.png#gh-light-mode-only)
+![WatermarkInserter](/assets/images/plugins/insert-watermark.dark.png#gh-dark-mode-only)

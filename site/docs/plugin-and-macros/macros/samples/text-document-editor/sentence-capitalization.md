@@ -1,14 +1,14 @@
-# Sentence capitalization
+# Capitalize Sentence
 
 Capitalizes the first letter of each sentence in all paragraphs, converts the rest to lowercase, and handles sentence-ending punctuation while ignoring colons and quotes as boundaries.
 
 ```ts
 (function () {
     // Get the active document
-    let document = Api.GetDocument();
+    let doc = Api.GetDocument();
   
     // Get all paragraphs in the document
-    let paragraphs = document.GetAllParagraphs();
+    let paragraphs = doc.GetAllParagraphs();
   
     // Loop through each paragraph
     paragraphs.forEach((paragraph) => {

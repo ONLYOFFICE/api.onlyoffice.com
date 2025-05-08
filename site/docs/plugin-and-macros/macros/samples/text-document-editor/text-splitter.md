@@ -1,4 +1,4 @@
-# Text splitter
+# Split Texts
 
 Splits paragraphs at a custom word trigger phrase. Splits the text into separate paragraphs.
 

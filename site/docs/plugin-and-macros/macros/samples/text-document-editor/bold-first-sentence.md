@@ -1,4 +1,4 @@
-# Bold First Sentence
+# Bold first sentence
 
 This macro extracts the first sentence of each paragraph and makes it bold.
 

@@ -1,4 +1,4 @@
-# Chart aligner
+# Align charts
 
 Align charts and text boxes on every slide.
 

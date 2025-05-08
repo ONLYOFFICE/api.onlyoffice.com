@@ -1,4 +1,4 @@
-# Comment Word Search
+# Comment word search
 
 This macro marks comments containing a specific keyword as solved in a document.
 

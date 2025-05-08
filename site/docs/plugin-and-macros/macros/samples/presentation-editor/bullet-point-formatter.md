@@ -1,4 +1,4 @@
-# Bullet point formatter
+# Format bullet points
 
 Apply consistent formatting to bullet points.
 

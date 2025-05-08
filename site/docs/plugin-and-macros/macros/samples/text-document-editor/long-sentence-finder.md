@@ -1,12 +1,12 @@
-# Long sentence finder
+# Find long sentences
 
 Highlights sentences over a word count threshold by adding comments.
 
 ```ts
 (function () {
     let threshold = 20; // Word count threshold for a long sentence.
-    let document = Api.GetDocument();
-    let paragraphs = document.GetAllParagraphs();
+    let doc = Api.GetDocument();
+    let paragraphs = doc.GetAllParagraphs();
   
     paragraphs.forEach(function (paragraph) {
       let text = paragraph.GetText();
@@ -34,7 +34,7 @@ Highlights sentences over a word count threshold by adding comments.
       });
     });
   
-    console.log("Long Sentence Finder complete with sentence-specific comments.");
+    console.log("Found long sentences!!");
   })();
 ```
 
