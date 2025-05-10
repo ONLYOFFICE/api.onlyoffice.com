@@ -8,119 +8,80 @@ sidebar_position: -1
 
 For the samples to work correctly, make sure that two conditions are met:
 
-1. ONLYOFFICE Document Builder is installed. For more information visit [installing page](../../get-started/installing.md).
+1. ONLYOFFICE Document Builder is installed. For more information visit [installing page](../get-started/installing.md).
 2. The directory in which you are going to store the downloaded samples has general editing access to save files created by the Document Builder.
 
-## Download samples
+## Hello world sample
+
+```java
+import docbuilder.*;
+
+public class Program {
+    public static void main(String[] args) {
+        String resultPath = "result.docx";
+
+        test(resultPath);
+
+        System.gc();
+    }
+
+    public static void test(String resultPath) {
+        CDocBuilder.initialize("");
+        CDocBuilder builder = new CDocBuilder();
+        builder.createFile(FileTypes.Document.DOCX);
+
+        CDocBuilderContext context = builder.getContext();
+
+        CDocBuilderValue global = context.getGlobal();
+
+        CDocBuilderValue api = global.get("Api");
+        CDocBuilderValue doc = api.call("GetDocument");
+        CDocBuilderValue paragraph1 = api.call("CreateParagraph");
+
+        paragraph1.call("SetSpacingAfter", 1000, false);
+        paragraph1.call("AddText", "Hello from Java!");
+
+        CDocBuilderValue paragraph2 = api.call("CreateParagraph");
+        paragraph2.call("AddText", "Goodbye!");
+
+        CDocBuilderValue[] paragraphs = { paragraph1, paragraph2 };
+        CDocBuilderValue content = new CDocBuilderValue(paragraphs);
+
+        doc.call("InsertContent", content);
+
+        builder.saveFile(FileTypes.Document.DOCX, resultPath);
+        builder.closeFile();
+
+        CDocBuilder.dispose();
+    }
+}
+```
+
+Run the script:
+
+:::note
+
+JDK 8 or newer is required.
+
+:::
+
+```sh
+javac -cp "C:\Program Files\ONLYOFFICE\DocumentBuilder\docbuilder.jar" Program.java
+
+java -cp "C:\Program Files\ONLYOFFICE\DocumentBuilder\docbuilder.jar;." Program
+```
+
+Document will be created in the test directory.
+
+![Result file](/assets/images/docbuilder/java-result-file.png)
+
+## Run other samples
 
 Clone a repository with the Document Builder samples from [https://github.com/ONLYOFFICE/document-builder-samples](https://github.com/ONLYOFFICE/document-builder-samples). The created folder must have general editing access.
 
-The project folder includes the `java` folder with the Java samples. Each sample has its own folder with the `Program.java` program file.
+```bash
+git clone https://github.com/ONLYOFFICE/document-builder-samples
+cd document-builder-samples
+```
 
-## Program structure
-
-To create the [Java sample](https://github.com/ONLYOFFICE/document-builder-samples/blob/master/java/creating_basic_form/Program.java):
-
-1. Include the [Java wrapper](../Java/Java.md) doctrenderer library:
-
-  ```java
-  import docbuilder.*;
-  ```
-
-2. Specify the result path (where the generated file will be saved):
-
-  ```java
-  String resultPath = "result.docx";
-  ```
-
-3. Create and call the builder function (this function is created by user and calls the DocBuilder method to work with documents):
-
-  ```java
-  public static void createBasicForm(String resultPath) {}
-  ```
-
-- [Initialize](../Java/CDocBuilder/initialize.md) the [DocBuilder](../Java/CDocBuilder/CDocBuilder.md) with `docbuilder.jar` directory by passing an empty string:
-
-  ```java
-  // Initialize builder with docbuilder.jar directory by passing an empty string
-  CDocBuilder.initialize("");
-  CDocBuilder builder = new CDocBuilder();
-  ```
-
-- Open or create a file so that [Context](../Java/CDocBuilderContext/CDocBuilderContext.md) and [Global](../Java/CDocBuilderContext/getGlobal.md) classes can be accessed:
-
-  ```java
-  // Create file and get context
-  builder.createFile(doctype);
-  CDocBuilderContext context = builder.getContext();
-  CDocBuilderValue global = context.getGlobal();
-  CDocBuilderValue api = global.get("Api");
-  ```
-
-- Edit file using the Document Builder API methods. Use the [call](../Java/CDocBuilderValue/call.md) method with the name and parameters of the API method you call as arguments:
-
-  ```java
-  // Create basic form
-  CDocBuilderValue document = api.call("GetDocument");
-  CDocBuilderValue paragraph = document.call("GetElement", 0);
-  CDocBuilderValue headingStyle = document.call("GetStyle", "Heading 3");
-
-  paragraph.call("AddText", "Employee pass card");
-  paragraph.call("SetStyle", headingStyle);
-  document.call("Push", paragraph);
-
-  CDocBuilderValue pictureForm = api.call("CreatePictureForm");
-  setPictureFormProperties(pictureForm, "Photo", "Upload your photo", false, "Photo", "tooBig", true, false, 50, 50);
-  paragraph = api.call("CreateParagraph");
-  paragraph.call("AddElement", pictureForm);
-  document.call("Push", paragraph);
-
-  CDocBuilderValue textForm = api.call("CreateTextForm");
-  setTextFormProperties(textForm, "First name", "Enter your first name", false, "First name", true, 13, 3, false, false);
-  paragraph = api.call("CreateParagraph");
-  paragraph.call("AddElement", textForm);
-  document.call("Push", paragraph);
-  ```
-
-- [Save](../Java/CDocBuilder/saveFile.md) and [close](../Java/CDocBuilder/closeFile.md) file after editing, then call the [dispose](../Java/CDocBuilder/dispose.md) method to destroy DocBuilder:
-
-  ```cpp
-  // Save file and close DocBuilder
-  builder.saveFile(doctype, resultPath);
-  builder.closeFile();
-  CDocBuilder.dispose();
-  ```
-
-## Run the sample
-
-> JDK 8 or newer is required.
-
-To run the Java code samples:
-
-1. Go to the test directory:
-
-   ```sh
-   cd ../document-builder-samples/java/creating_presentation
-   ```
-
-2. Compile the `Program.java` providing the path to `docbuilder.jar` located in the Document Builder directory:
-
-   ```sh
-   javac -cp "C:\Program Files\ONLYOFFICE\DocumentBuilder\docbuilder.jar" Program.java
-   ```
-
-3. The `.class` file should appear in the directory. Run the program:
-
-   ```sh
-   java -cp "C:\Program Files\ONLYOFFICE\DocumentBuilder\docbuilder.jar;." Program
-   ```
-
-   Note, that on UNIX systems the path separator is `:` instead of `;`. Thus, on Linux or macOS it should be:
-
-   ```sh
-   java -cp "/opt/onlyoffice/documentbuilder/docbuilder.jar:." Program
-   ```
-
-   Documents will be created in the test directory.
-
-![Result file](/assets/images/docbuilder/java-result-file.png)
+The project folder includes the java folder with the Java samples. Each sample has its own folder with the Program.java program file.

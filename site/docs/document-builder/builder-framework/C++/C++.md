@@ -63,7 +63,7 @@ The current application version contains four main classes:
             CDocBuilder::Dispose();
 
             return 0;
-        }uilder::Dispose();
+        }
         ```
     </TabItem>
     <TabItem value="builder" label=".docbuilder">
