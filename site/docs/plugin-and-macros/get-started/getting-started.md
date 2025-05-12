@@ -12,7 +12,7 @@ Let's see how to build the simplest [Hello world](https://github.com/ONLYOFFICE/
 
 ## Building a plugin
 
-1. Create a plugin folder. Follow the plugin structure described [here](../structure/manifest/manifest.md). The plugin folder must contain three files required for the plugin to work: [config.json](../structure/manifest/manifest.md), [index.html](../structure/entry-point.md), [pluginCode.js](../interacting-with-editors/overview/overview.md):
+1. Create a plugin folder. Follow the plugin structure described [here](../structure/configuration/configuration.md). The plugin folder must contain three files required for the plugin to work: [config.json](../structure/configuration/configuration.md), [index.html](../structure/entry-point.md), [pluginCode.js](../interacting-with-editors/overview/overview.md):
 
    ![Structure](/assets/images/plugins/plugins-structure.png)
 
@@ -140,7 +140,7 @@ Let's see how to build the simplest [Hello world](https://github.com/ONLYOFFICE/
 
 3. [Localize](../structure/localization.md) your plugin if needed.
 
-4. Create an informative **About** window for your plugin. Add a short description and the plugin version, the company developer name and link to its website. Follow the instructions [here](../structure/manifest/variations.md) to create an **About** variation in the *config.json* file.
+4. Create an informative **About** window for your plugin. Add a short description and the plugin version, the company developer name and link to its website. Follow the instructions [here](../structure/configuration/variations.md) to create an **About** variation in the *config.json* file.
 
    ![About window](/assets/images/plugins/about-variation.png)
 

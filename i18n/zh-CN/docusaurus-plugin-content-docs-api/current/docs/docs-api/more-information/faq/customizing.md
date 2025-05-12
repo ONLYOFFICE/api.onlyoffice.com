@@ -180,6 +180,6 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
 })
 ```
 
-其中 *editorConfig.plugins.autostart* 是您希望在 ONLYOFFICE 文档启动时自动启动的插件的 GUID 数组（在插件 [config.json](../../../plugin-and-macros/structure/manifest/manifest.md#guid) 文件中定义），*editorConfig.plugins.pluginsData* 是您希望 ONLYOFFICE 文档用户可以使用的所有插件的 **config.json** 配置文件数组。
+其中 *editorConfig.plugins.autostart* 是您希望在 ONLYOFFICE 文档启动时自动启动的插件的 GUID 数组（在插件 [config.json](../../../plugin-and-macros/structure/configuration/configuration.md#guid) 文件中定义），*editorConfig.plugins.pluginsData* 是您希望 ONLYOFFICE 文档用户可以使用的所有插件的 **config.json** 配置文件数组。
 
 有关启用 ONLYOFFICE 文档插件的更多信息，请参见[此页面](../../usage-api/config/editor/plugins.md)。

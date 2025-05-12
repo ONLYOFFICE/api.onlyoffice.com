@@ -25,7 +25,7 @@ The list of changes for ONLYOFFICE Plugins and Macros API.
 
 - Added the ability to [add custom functions](../macros/adding-custom-functions.md) to the spreadsheets using the **Macros** plugin.
 - Added the ability to add the plugin [toolbar menu items](../customization/toolbar.md).
-- Added the ability to create [multiple left panels](../structure/manifest/variations.md) for plugins.
+- Added the ability to create [multiple left panels](../structure/configuration/variations.md) for plugins.
 - Added the information about the current position of the context menu plugin event.
 - Added the onToolbarMenuClick event.
 - Added the [ActivateWindow](../customization/windows-and-panels.md#activating-a-window) method to *window\.Asc.plugin.executeMethod*.
@@ -43,7 +43,7 @@ The list of changes for ONLYOFFICE Plugins and Macros API.
 - Added the [ToolbarMenuTab](../customization/toolbar.md#toolbarmenutab) type to the simple type definitions.
 - Added the [ToolbarMenuItemType](../customization/toolbar.md#toolbarmenuitemtype) type to the simple type definitions.
 - Added the *icons* and *data* parameters to the [ContextMenuItem](../customization/context-menu.md#contextmenuitem) object.
-- Added the [menu](../structure/manifest/manifest.md#variationsmenu) config parameter.
+- Added the [menu](../structure/configuration/configuration.md#variationsmenu) config parameter.
 
 ## Version 8.0
 
@@ -85,7 +85,7 @@ The list of changes for ONLYOFFICE Plugins and Macros API.
 
 ## Version 7.3
 
-- Added the *sign* type to the [initDataType](../structure/manifest/manifest.md#variationsinitdatatype) config parameter.
+- Added the *sign* type to the [initDataType](../structure/configuration/configuration.md#variationsinitdatatype) config parameter.
 - Added the AddAddinField method to *window\.Asc.plugin.executeMethod*.
 - Added the GetAllAddinFields method to *window\.Asc.plugin.executeMethod*.
 - Added the [GetVBAMacros](../interacting-with-editors/methods/text-document-api/Api/Methods/GetVBAMacros.md) method to *window\.Asc.plugin.executeMethod*.

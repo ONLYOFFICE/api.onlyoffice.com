@@ -8,7 +8,7 @@ There are two options to attach events from the editor.
 
 ## Option 1. Using the attachEvent method (works for all versions)
 
-1. In the *config.json* file, add the [events](../../structure/manifest/manifest.md#variationsevents) parameter with the array of all the available events:
+1. In the *config.json* file, add the [events](../../structure/configuration/configuration.md#variationsevents) parameter with the array of all the available events:
 
    ``` json
    {
