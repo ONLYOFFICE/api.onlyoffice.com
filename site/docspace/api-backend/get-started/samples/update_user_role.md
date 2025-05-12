@@ -1,5 +1,5 @@
-# Manage users
-This example demonstrates how to manage user accounts in ONLYOFFICE DocSpace using the API. It covers creating, retrieving, terminating, and deleting users, following a structured administrative workflow.
+# Update user role
+This example demonstrates how to automate user onboarding in ONLYOFFICE DocSpace using the API. It covers creating a user, retrieving their profile, and updating their role.
 
 ## Before you start
 1. Replace `https://yourportal.onlyoffice.com` and `YOUR_API_KEY` with your actual DocSpace portal URL and API key. Ensure you have the necessary data and permissions to perform migration operations.
@@ -52,25 +52,16 @@ def get_user(user_id):
         print(f'Failed to retrieve user: {response.status_code} - {response.text}')
         return None
   
-# Step 3: Terminate a user
-def terminate_user(user_id):
-    url = f'https://{API_HOST}/api/2.0/people/status/Terminated'
-    data = {'userIds': [user_id], 'resendAll': False}
+# Step 3: Update user role
+def update_user_role(user_id, role):
+    url = f'https://{API_HOST}/api/2.0/people/{user_id}'
+    data = {'role': role}
     response = requests.put(url, json=data, headers=HEADERS)
     if response.status_code == 200:
-        print(f'User {user_id} terminated successfully')
+        print(f'User {user_id} role updated to {role}')
     else:
-        print('Failed to terminate user:', response.status_code, response.text)
- 
-# Step 4: Delete user profile
-def delete_user(user_id):
-    url = f'https://{API_HOST}/api/2.0/people/{user_id}'
-    response = requests.delete(url, headers=HEADERS)
-    if response.status_code == 200:
-        print(f'User {user_id} deleted successfully')
-    else:
-        print('Failed to delete user:', response.status_code, response.text)
- 
+        print('Failed to update user role:', response.status_code, response.text)
+
 if __name__ == "__main__":
     # Step 1: Create a new user
     user_id = create_user("John", "Doe", "john.doe@example.com")
@@ -79,11 +70,8 @@ if __name__ == "__main__":
         # Step 2: Retrieve user information
         get_user(user_id)
 
-        # Step 3: Terminate the user
-        terminate_user(user_id)
- 
-        # Step 4: Delete user profile
-        delete_user(user_id)
+        # Step 3: Update user role
+        update_user_role(user_id, "Manager")
 ```
 
 </details>
@@ -142,54 +130,25 @@ if __name__ == "__main__":
         get_user(user_id)
 ```
 
-## Step 3: Terminate a user
-- PUT request is sent to [/api/2.0/people/status/Terminated](../../../usage-api/update-user-status).
-- The request includes: 
-    - userIds: A list of user IDs to be terminated.
-    - resendAll: Boolean flag for sending notifications.
-- The API marks the user as terminated, meaning they cannot log in but are still present in the system.
+## Step 3: Update user role
+- PUT request is sent to [/api/2.0/people/:userid](../../../usage-api/update-member).
+- The request updates the user’s profile, applying the new role or permissions.
 
 ``` py
-def terminate_user(user_id):
-    url = f'https://{API_HOST}/api/2.0/people/status/Terminated'
-    data = {'userIds': [user_id], 'resendAll': False}
+def update_user_role(user_id, role):
+    url = f'https://{API_HOST}/api/2.0/people/{user_id}'
+    data = {'role': role}
     response = requests.put(url, json=data, headers=HEADERS)
     if response.status_code == 200:
-        print(f'User {user_id} terminated successfully')
+        print(f'User {user_id} role updated to {role}')
     else:
-        print('Failed to terminate user:', response.status_code, response.text)
- 
+        print('Failed to update user role:', response.status_code, response.text)
+
 if __name__ == "__main__":
     user_id = create_user("John", "Doe", "john.doe@example.com")
- 
     if user_id:
         get_user(user_id)
 
-        # Step 3: Terminate the user
-        terminate_user(user_id)
-```
-
-## Step 4: Delete a user profile 
-- A DELETE request is sent to [/api/2.0/people/:userId](../../../usage-api/delete-member).
-- The API removes the user permanently, making them unrecoverable.
-- This step is essential for offboarding employees or cleaning up unused accounts.
-
-``` py
-def delete_user(user_id):
-    url = f'https://{API_HOST}/api/2.0/people/{user_id}'
-    response = requests.delete(url, headers=HEADERS)
-    if response.status_code == 200:
-        print(f'User {user_id} deleted successfully')
-    else:
-        print('Failed to delete user:', response.status_code, response.text)
- 
-if __name__ == "__main__":
-    user_id = create_user("John", "Doe", "john.doe@example.com")
- 
-    if user_id:
-        get_user(user_id)
-        terminate_user(user_id)
- 
-        # Step 4: Delete user profile
-        delete_user(user_id)
+        # Step 3: Update user role
+        update_user_role(user_id, "Manager")
 ```
