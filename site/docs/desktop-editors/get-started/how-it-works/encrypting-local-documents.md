@@ -58,27 +58,27 @@ After the config file is ready, create the plugin code file with the following c
 const globalPassword = "{my-super-long-password}"
 window.Asc.plugin.init = function init(obj) {
   if (!obj) {
-    return
+    return;
   }
   switch (obj.type) {
   case "generatePassword":
-    this.executeMethod("OnEncryption", [{type: "generatePassword", password: globalPassword}])
-    break
+    this.executeMethod("OnEncryption", [{type: "generatePassword", password: globalPassword}]);
+    break;
   case "getPasswordByFile":
-    this.executeMethod("OnEncryption", [{type: "getPasswordByFile", password: globalPassword}])
-    break
+    this.executeMethod("OnEncryption", [{type: "getPasswordByFile", password: globalPassword}]);
+    break;
   case "setPasswordByFile":
-    this.executeMethod("StartAction", ["Info", "Save"])
-    this.executeMethod("EndAction", ["Info", "Save"])
-    break
+    this.executeMethod("StartAction", ["Info", "Save"]);
+    this.executeMethod("EndAction", ["Info", "Save"]);
+    break;
   case "encryptData":
-    this.executeMethod("OnEncryption", [{type: "encryptData", data: obj.data, check: true}])
-    break
+    this.executeMethod("OnEncryption", [{type: "encryptData", data: obj.data, check: true}]);
+    break;
   case "decryptData":
-    this.executeMethod("OnEncryption", [{type: "decryptData", data: obj.data, check: true}])
-    break
+    this.executeMethod("OnEncryption", [{type: "decryptData", data: obj.data, check: true}]);
+    break;
   default:
-    break
+    break;
   }
 }
 ```
@@ -97,7 +97,6 @@ This plugin can’t access the editing features but has almost the same config:
 {
   "name": "Encryption",
   "nameLocale": { 
-    "ru": "Шифрование",
     "it": "Crittografia",
     "fr": "Chiffrement",
     "es": "Encriptación",
@@ -143,26 +142,26 @@ Enable encryption by ticking the checkbox:
 
 ``` ts
 window.addEventListener("load", () => {
-  const ASC_DESKTOP_EDITOR_DEFAULT_MODE = 0
-  const ASC_DESKTOP_EDITOR_CRYPTO_MODE = 2
+  const ASC_DESKTOP_EDITOR_DEFAULT_MODE = 0;
+  const ASC_DESKTOP_EDITOR_CRYPTO_MODE = 2;
 
   document.querySelector("#check").addEventListener("change", function changeListener() {
-    let mode
+    let mode;
     if (this.checked) {
-      mode = ASC_DESKTOP_EDITOR_CRYPTO_MODE
+      mode = ASC_DESKTOP_EDITOR_CRYPTO_MODE;
     } else {
-      mode = ASC_DESKTOP_EDITOR_DEFAULT_MODE
+      mode = ASC_DESKTOP_EDITOR_DEFAULT_MODE;
     }
     AscDesktopEditor.SetCryptoMode("", mode, (retCode) => {
       switch (retCode) {
       case 0:
-        console.log("OK")
-        break
+        console.log("OK");
+        break;
       case 1:
-        console.log("Please, close all open files!")
-        break
+        console.log("Please, close all open files!");
+        break;
       default:
-        break
+        break;
       }
     })
   })

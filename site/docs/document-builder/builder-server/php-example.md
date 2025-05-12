@@ -32,7 +32,7 @@ $GLOBALS['builder_path'] = "C:\\ONLYOFFICE\\DocumentBuilder\\docbuilder.exe";
 
 You can use any web server capable of runnig PHP code to run the sample. We will demonstrate how to run the PHP sample using **Internet Information Services (IIS)** web server. To set up and configure PHP on IIS **PHP Manager for IIS** will be used.
 
-- **IIS: version 7** or later (refer to [Microsoft official website](https://www.iis.net/learn/application-frameworks/scenario-build-a-php-website-on-iis/configuring-step-1-install-iis-and-php) to learn how to install **IIS**);
+- **IIS: version 7** or later (refer to [Microsoft official website](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh994592(v=ws.11)) to learn how to install **IIS**);
 - **PHP** (download it from the [php.net](https://php.net/downloads.php) site);
 - **PHP Manager for IIS** (download it from the [Microsoft open source site](https://www.iis.net/downloads/community/2018/05/php-manager-150-for-iis-10)).
 

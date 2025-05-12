@@ -5,7 +5,7 @@ description: "Returns a list of custom tags."
 sidebar_label: "Get tags"
 hide_title: true
 hide_table_of_contents: true
-api: eJyFksFu2zAQRH9FmDNhuUZPugVoGwTNyYlPhhAw8spiI4ksuXLrCvz3YkXZiR0EuUiiuDucfcMRrPcBxRY/TEshy7O1tV1AqWAdec3G9nc7FNgTP+p9uOtrCwVPwdk+UEAxYrVcymtHofLGSQcK3JvAma0z1vus1x0FKFS2Z+pZirVzrakm+fxXkI4RoWqo0yjGGGNU+Lr88l520+uBG+vNP9pBqgJVgzd8RLEdoUP1JPtPLyQ/4EnvoPDHGyaUsVRXamviwfch01k7262GwLYT12EBhY64sfP4UHCaGxTItTP5arHMa2GWTwTFiT+QD5ORwbcoMD7rQBvfRlwf/DDVZpXta7MfEmYoHLQ3+rlNWOfmxKDWQ8so8E7pW9rKNut7xCgjnog8CM4kdcllBB8doYB25icdoSAByfptmYIR/craF0MTaiPZS7fhVspvnBHP5EOyclghKjgbuNNToLPsLXE2M7rwPr5eiM+TmC0z/eXctdr0ctaQ8KRYtjIPFFaLJRSmaKRPDi4VGhtYasZzKFF+/x7Iy1UpX+HLKio0pHfkpzQnaripKnI8pdQOCd/VHRb65xtz+/0RCoLzknhiO3+I+mmrP77VvowiOZBnVB90jGOKM8Zzfdr6sGOe8FQtSMsY43/GqWAc
+api: eJyNVktv2zgQ/ivEXHLh2q67J9286QPpFgiQOsghMBpaGllsJJJLjpJ6Bf33xZDyQ3YW8cWWOE/OfPONOiC1CZA9whddYxBTcWdtE2AlwTr0irQ1NwVksEFaqk24MaUFCR6DsyZggKyD+WzGfwWG3GvHFpDBdx1I2FKQ2gijGgwgIbeG0BArK+dqnUf301+BLToIeYWN4ifaOoQM7PoX5gQSnOdkSKd4u+BHmsp7tQUJmrAJ5x76noO3KfQg0oZwgx4klNY3itLRxzn0EmptnsPl7k8TrDyWR1qBvDYb9qvyVJ0zUc8ZBlLUhgtTTMrXtsCLDHoJpKlmpduY9IKv9OCVc+iH+H/OPpz38d6olirr9b9YRDcB89Zr2kL22IEK+U+W/3xGPgCPqgAJr14TwqqXHfyFyqOH7DG+LZz+G7f7s7f0VdD5Tv120VI1f1vx1mFE5uOqX8mTpO+QWm+CUKIeYJi3gWzDaAwTkNAgVXaANbdPUQUZTJXT0/lkNi15FqZxMvjC/gV9iPdtfQ0ZdGsV8N7XPZwG/hF1RW5NqTdtGh+Q8KK8Vus6oWMwTqUuVVtzm848fUoicX/3nduzOhT+B49JcjUu/wGuscpnLu8DimtrnzUKNkJDwwSCBB5Rtjx2KEGzWR5NGHNDb/ZxKiJ3FuWzIfRia1sv2oCeHQtlCuFUCK/WcxfjoLODdXTIngdEXOL6KimL7tvDUiztM5r+auQ0+ZLDw5fdJHx7WHKoMQTfq9liVCihgyiQ0DfaYCHWW0EViqvFMCFR50pUqIqYwFDUUcShqINOL/cYP5CKigenmSQ9Udb2VbxqqsQoqohMIIHFCRrH0h1NjA4jBmOhQzadxqgTa+qtLUud4yS3TTqcT/cMABKIC365aVSP3bFux96qiCOqCqHyHEMQZIXzljAnLITHYFufx4WRxj2DB/5/Rztx2I4VDtWMB9fWmMTUJ0Vl6ScxiM/HYmR9+a0Z+Jo3ZS/h9x9Bb4yi1uP7cGNI79V5fgpRWn+S10QsKxSxsqJpA4k1CrsmFTH5olUE5dOOy3a0MerIk0BTOKsNTcQNMax5PLEQikkzTXxCGfuKM/x0dJGnyQHdx/c7YYye30sbrz0sn4XTzIfoQ7rwx8mHyYzL5GygRsXdODj+iiQGCh4VqTt8R7xP9EO5CX/T1NVKG47VJvZNrP/IvQAJ88mM54eZn+048EpCZQOxTrfn/J6P/2nR88JbHbg97azdYPOyiKQMizxHR3EJ1G1q/cmnD5P7fiF9/bwEGQd1jJZEyMMDe9+JzPbY95i/Uwb8yxvzTYuuS1Ds+71+Ev2vxZ7ekjaXdNX3/X+CIog8
 sidebar_class_name: "get api-method"
 info_path: site/docspace/api-backend/usage-api/api
 custom_edit_url: null
@@ -54,7 +54,7 @@ Returns a list of custom tags.
 <StatusCodes
   id={undefined}
   label={undefined}
-  responses={{"200":{"description":"List of tag names","content":{"application/json":{"schema":{}}}},"401":{"description":"Unauthorized"}}}
+  responses={{"200":{"description":"List of tag names","content":{"application/json":{"schema":{"type":"object","properties":{"response":{"type":"array","items":{"type":"object"}},"count":{"type":"integer","format":"int32"},"links":{"type":"array","items":{"type":"object","properties":{"href":{"type":"string"},"action":{"type":"string"}}}},"status":{"type":"integer","format":"int32"},"statusCode":{"type":"integer","format":"int32"}},"title":"ObjectArrayWrapper"}}}},"401":{"description":"Unauthorized"}}}
 >
   
 </StatusCodes>

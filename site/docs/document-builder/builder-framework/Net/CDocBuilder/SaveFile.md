@@ -35,7 +35,7 @@ bool SaveFile(int nType, String^ sPath, String^ sParams);
     </TabItem>
     <TabItem value="builder" label=".docbuilder">
         ```ts
-        builder.SaveFile("docx", "result.docx")
+        builder.SaveFile("docx", "result.docx");
         ```
     </TabItem>
 </Tabs>
@@ -61,7 +61,7 @@ ONLYOFFICE Document Builder allows to save your document files into image files 
     </TabItem>
     <TabItem value="builder" label=".docbuilder">
         ```ts
-        builder.SaveFile("image", "./thumbnail.png", "<m_oThumbnail><format>4</format><aspect>1</aspect><first>false</first><width>1000</width><height>1000</height></m_oThumbnail>")
+        builder.SaveFile("image", "./thumbnail.png", "<m_oThumbnail><format>4</format><aspect>1</aspect><first>false</first><width>1000</width><height>1000</height></m_oThumbnail>");
         ```
     </TabItem>
 </Tabs>

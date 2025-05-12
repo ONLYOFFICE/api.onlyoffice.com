@@ -6,7 +6,7 @@ Create a document with a styled table filled with array-based values:
 - create a custom style for the table ([ApiDocument/GetStyle](../text-document-api/ApiDocument/Methods/GetStyle.md), [ApiStyle](../text-document-api/ApiStyle/ApiStyle.md), [ApiTableCellPr](../text-document-api/ApiTableCellPr/ApiTableCellPr.md), [ApiTableRow](../text-document-api/ApiTableRow/ApiTableRow.md));
 - populate the table with the array-based data cell by cell ([ApiTableCell](../text-document-api/ApiTableCell/ApiTableCell.md)).
 
-```ts document-builder={"documentType": "word", "editorConfig": {"customization": {"zoom": 60}}}
+```ts editor-docx zoom=60
 let doc = Api.GetDocument();
 let headers = ["ID", "Year", "Region", "2023 Revenue", "2024 Revenue", "% Change"];
 let data = [

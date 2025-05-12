@@ -82,7 +82,7 @@ add_header 'Access-Control-Allow-Origin' '*';
 add_header 'Access-Control-Allow-Methods' 'GET, POST, OPTIONS';
 ```
 
-## Adding plugins through the plugin manager
+## Adding plugins through the plugin manager for a single user
 
 Starting from version 7.2, you can download ready-to-use plugins from **ONLYOFFICE Plugin Marketplace**.
 
@@ -96,7 +96,9 @@ Follow the steps below to add the plugins to the editor using plugin manager:
 
 The plugin will be added to the opened editors and all the editors you will open afterwords and displayed within the **Plugins** tab.
 
-Starting from version 7.4, the **pluginsmanager** utility can be used to manage the plugins in ONLYOFFICE Docs on-premises. The commands for installing, removing, restoring, updating, etc. are available. For example:
+## Adding plugins through the plugin manager for all users 
+
+Starting from version 7.4, the **pluginsmanager** utility can be used to manage the plugins in ONLYOFFICE Docs on-premises. Commands are available for installing, removing, restoring, updating and more. For example:
 
 <Tabs>
   <TabItem value="docker" label="Docker, DEB, and RPM">
@@ -113,7 +115,7 @@ Starting from version 7.4, the **pluginsmanager** utility can be used to manage 
   </TabItem>
 </Tabs>
 
-The paths in the examples are default ones, please change them if necessary.
+The paths in the examples are default values, please modify them if necessary.
 
 A full list of server commands can be found [here](https://helpcenter.onlyoffice.com/ONLYOFFICE-Editors/editors-User-Guides/AllEditors/Plugin-manager.aspx#servercommands).
 

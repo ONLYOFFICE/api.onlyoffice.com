@@ -1,5 +1,5 @@
 ---
-sidebar_position: -8
+sidebar_position: -9
 ---
 
 # Java Spring example
@@ -111,7 +111,15 @@ To run the Java-Spring example code, install the Java version 11 appropriate for
    echo %MAVEN_HOME%
    ```
 
-### Step 5 . Start application with Maven
+### Step 5. Configure JWT
+
+Open the *src/main/resouces/application.properties* file and [specify the same secret key](https://helpcenter.onlyoffice.com/installation/docs-configure-jwt.aspx) as used in your ONLYOFFICE Docs to enable JWT: 
+ 
+ ``` ini
+ docservice.security.key=secret
+ ```
+
+### Step 6. Start application with Maven
 
 1. Open a console and go to the *java-spring* folder using the **cd** command:
 
@@ -133,7 +141,7 @@ To run the Java-Spring example code, install the Java version 11 appropriate for
    http://server.address:server.port/
    ```
 
-### Step 6. Check accessibility
+### Step 7. Check accessibility
 
 In case the example and ONLYOFFICE Docs are installed on different computers, make sure that your server with the example installed has access to the ONLYOFFICE Docs with the address which you specify instead of **documentserver** in the configuration files. Make sure that the ONLYOFFICE Docs in its turn has access to the server with the example installed with the address which you specify instead of **example.com** in the configuration files.
 
@@ -198,6 +206,12 @@ See the detailed guide to learn how to install ONLYOFFICE Docs [for Linux](https
    ```
 
    where the **documentserver** is the name of the server with the ONLYOFFICE Docs installed, **port** is any available port and **files.storage** is the path where files will be created and stored (in the project folder by default). You can set an absolute path.
+
+   [Specify the same secret key](https://helpcenter.onlyoffice.com/installation/docs-configure-jwt.aspx) as used in your ONLYOFFICE Docs to enable JWT: 
+ 
+     ``` ini
+     docservice.security.key=secret
+     ```
 
 5. Install **Maven**:
 
@@ -288,6 +302,12 @@ See the detailed guide to learn how to install ONLYOFFICE Docs [for Docker](http
    ```
 
    where the **documentserver** is the name of the server with the ONLYOFFICE Docs installed, **port** is any available port and **files.storage** is the path where files will be created and stored (in the project folder by default). You can set an absolute path.
+
+   [Specify the same secret key](https://helpcenter.onlyoffice.com/installation/docs-configure-jwt.aspx) as used in your ONLYOFFICE Docs to enable JWT: 
+ 
+     ``` ini
+     docservice.security.key=secret
+     ```
 
 5. Run the next command in the Java-Spring example directory:
 

@@ -10,29 +10,29 @@ Generates and inserts hyperlinks instead of text URLs.
 (function()
 {
     //Use regular expression to find and replace URLs
-    const urlRegex = /(https?:\/\/[^\s]+)/g;
-    const document = Api.GetDocument();
+    let urlRegex = /(https?:\/\/[^\s]+)/g;
+    let doc = Api.GetDocument();
     //Get all paragraphs to update
-    const allParagraphs = document.GetAllParagraphs();
-    
+    let allParagraphs = doc.GetAllParagraphs();
+
     allParagraphs.forEach(paragraph => {
-        const rawText = paragraph.GetText();
+        let rawText = paragraph.GetText();
         //Clear all content after getting text
         paragraph.RemoveAllElements();
-        
+
         //Split text by url parts
-        const parts = rawText.split(urlRegex);
-        
+        let parts = rawText.split(urlRegex);
+
         parts.forEach(part => {
             if (urlRegex.test(part)) {
                 //Add hyperlink if regular expression matches the part
-                var hyperlinkRun = Api.CreateRun();
+                let hyperlinkRun = Api.CreateRun();
                 hyperlinkRun.AddText(part);
                 paragraph.AddElement(hyperlinkRun);
                 hyperlinkRun.AddHyperlink(part);
             } else {
                 //Add text if regular expression does not match
-                var textRun = Api.CreateRun();
+                let textRun = Api.CreateRun();
                 textRun.AddText(part);
                 paragraph.AddElement(textRun);
             }

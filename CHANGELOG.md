@@ -1,10 +1,66 @@
 # Change log
 
+## 5.1.0
+
+### New features
+
+#### Docs
+
+* Added Results to the Office API samples
+
+#### Docs API
+
+* Added Try Docs page
+* Updated a list of the validated parameters in the browser
+* Added scrolling to tables
+
+#### Docspace
+
+* Update the Authentication section
+
+#### Plugins and macros
+
+* Added YouTube videos for plugins samples
+
+### Fixes
+
+* Fixed anchors
+
+## 5.0.0
+
 ### New features
 
 #### Docs API
 
 * Added the Go and PHP (Laravel) test examples
+* Updated test examples
+* Added the Changing the default font page for test examples
+
+#### Docs
+
+* Added instruction to install plugins for all users
+
+#### Docspace
+
+* Restructured the JS SDK section
+* Added the Authentication section
+* Added the API keys page
+* Added DocSpace version 3.1
+* Added the Plugins SDK samples
+
+### Fixes
+
+* Changed loading YouTube frames
+
+#### Docs API
+
+* Updated documentation in Chinese
+* Updated Office API usage page
+
+#### Docspace
+
+* Fixed installation links
+* Updated the Webhooks page
 
 ## 4.6.0
 

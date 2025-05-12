@@ -23,7 +23,7 @@ def Initialize(cls, str directory = None);
 ``` py
 import docbuilder
 
-docbuilder.CDocBuilder.Initialize("../documentBuilder");
+docbuilder.CDocBuilder.Initialize("../documentBuilder")
 builder = docbuilder.CDocBuilder()
 docbuilder.CDocBuilder.Dispose()
 ```

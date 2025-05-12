@@ -10,7 +10,7 @@ Create a presentation on a specific topic:
 This sample is available for the **C++ and .Net DocBuilder Frameworks**.
 Download the sample and get more information on the [Builder framework samples](../../../document-builder/builder-framework/builder-framework-samples/builder-framework-samples.md) page.
 
-```ts document-builder={"documentType": "slide", "editorConfig": {"customization": {"zoom": 60}}}
+```ts editor-pptx
 let presentation = Api.GetPresentation();
 presentation.SetSizes(9_144_000, 6_858_000);
 

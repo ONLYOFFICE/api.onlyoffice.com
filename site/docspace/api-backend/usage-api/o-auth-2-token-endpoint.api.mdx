@@ -1,0 +1,71 @@
+---
+id: o-auth-2-token-endpoint
+title: "OAuth2 token endpoint"
+description: "Exchanges an authorization code specified in the request for the access token."
+sidebar_label: "OAuth2 token endpoint"
+hide_title: true
+hide_table_of_contents: true
+api: eJy1V1lv4zYQ/isEX/wiH7m7fku828Jp0RQ5mgJB4FDkyOJGIrU84ngD//diSNmWbAdxgNYvMkVy5puZbw69Ucemlg4f6Ll3uTbyJ3NSK/qYUAGWG1mF5ZB+e+U5U1OwhCnCmmcJ1wKIrYDLTIIgUhGXAzHww4N1JNMmrBnnYC1x+hlUjya03r/QYk6Hb5Rr5UA5/MuqqpA8yO6/dmezWTfTpux6U4BCXQIPWZ5DyfCfm1dAh1Sn34E7mtDK6AqMk2Bxd2qYcpN4ZnXWOiPVlG7aeJsDuUI/HJJwjeDxhJTeOpIC6bTMniCUztq8bZdkhZ6hpfDKyqpAvdsC6CKh4fkhuHPioKy0YWa+S5nLmSPSEguIWwdMvJD1KgUCdQBFgMzWgWjAS3lEZEBIA9xNvJH7ue3u+g8yy8FAUOwtGDKTRYGKl8JAEJY5MMT6QIXMF0Qb4lVjjYaBcnX02+hy5yo77PfrNz2uy+C9YOREiv2A1j6RAtVkEgyR1noQGz4THiUQA1NpndmB5pSf8ezgLO0epOKoe3wmTrpfjvlpN4VDcXRyNoCD018a8CxwA+5TEOOV/xVe+GG4baWVjQlzOBjgYxvWDtLNmG1Es5hvkGwz7WnyXpp/t6hm/6yOUidR6l5ObeJY+jSd70hdC+YFTNubML/M09+4vJKX47uf44M/5diO1fUJH41Px8/VP3+PLr/0ej2Md1DwiXqDJ4jOWsASfCs5Q492LoAZMJ02oPgS9cFrJQ3YiWz6QSoHUzA7FSpfpmBQpQWulbDEKyeLrWCRWnJL8dHpYBAIkxmw+Wf8H2V6G6msU8ekIowomLW1znKI/YN7Y5DqWsFOKFRAdjI4DG6veXy8i7pj9cIKKVb9qGKGleDAWIp3SnC5FnRIK20Dz5jL6ZD2NbLisL/kbWQFNso36k1Bh/QtZRbuTLHYMvcmnCVcq0xOfcxOmtAXZiRLi0jg+nKEmzFfODqkW5K+xi2srmjkI+Lg3kg3v8FEqXPB8gmCnTzDvBELVsnfYb4l8s4CGWn9LGGj2NKEKlaGm02BCUVmUR6uIOEumJW8oQfL8paWbwoL/Vx7E3oBCiZMCVIxa2faCPRosIAO0RWSB8mR1HuJrtOCvF3e35JbDNKi0xIaZSX1n1+1KRm6+PL+FlWdB+dsKXzHZ+ctR2GXFUigUqp1Eem05qcOyYGJAKB2aktj7dT6zCKhcepo1r1Avy0k9XSCkwWZSZeTllYywkkiobgdqdHcHdVjRutl4OCqtQatPa2Kuc4yyUOPXWbC8hoqCFmx/9VVEnFdRc4aYJhz18DEOv1JZbSLg4IBq73hYGlCZ0Y6dMk9Pj84HevAVQVq3JwHdHgx0krFZrLhVNz9Surt7bRo3d7faiS+VJnG+L52rZwq5ryBj+mGlF4djyUzjGzt2Yisq+pyQI1VFQR5kSyQ8olVsn/YG/SXZaMVkScCSlRaKtcj4zA8YnrimGYJIzHjI8tQVsjhp4YhT701u5v2bVSMBa4zHcyWrqhzAeshGBsNPuod9AboJqzBJQsdpRZcE77uSDXcTY81vh7++++UOlYOXl2/KphUCNTH0h2bxcM6WyPTHxOaYzcZPtC3VZtY4OsfHsycDh8e1+0AV4tkWQuwv4Q6TkfRpO4t6sfjhY+c+ejjaJEsRZxzDpV753IYubClrDrgX1c3t1gx6y+yMtQL2pCcNBcIe7H4F3CF/EQ=
+sidebar_class_name: "post api-method"
+info_path: site/docspace/api-backend/usage-api/api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"OAuth2 token endpoint"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/oauth2/token"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Exchanges an authorization code specified in the request for the access token.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/x-www-form-urlencoded":{"schema":{"type":"object","properties":{"grant_type":{"type":"string","description":"The OAuth2 grant type, must be 'authorization_code' for the authorization code flow.","example":"authorization_code"},"code":{"type":"string","description":"A temporary authorization code that is sent to the client to be exchanged for a token.","example":"abcde"},"redirect_uri":{"type":"string","description":"The URL where the user will be redirected after successful or unsuccessful authentication.","example":"https://example.com"},"client_id":{"type":"string","description":"The client identifier issued to the client during registration.","example":"6c7cf17b-1bd3-47d5-94c6-be2d3570e168"},"client_secret":{"type":"string","description":"The client secret issued to the client during registration.","example":"6c7cf17b-1bd3-47d5-94c6-be2d3570e168"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"The authorization code was successfully exchanged for the access token","content":{"application/json":{"schema":{"type":"object","properties":{"access_token":{"type":"string","description":"The access token issued by the authorization server.","example":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..."},"token_type":{"type":"string","description":"The type of token issued, typically 'Bearer'.","example":"Bearer"},"expires_in":{"type":"integer","description":"The number of seconds until the access token expires.","example":3600},"refresh_token":{"type":"string","description":"The token used to obtain a new access token when the current one expires.","example":"def502..."}}}}}},"400":{"description":"Invalid request parameters"}}}
+>
+  
+</StatusCodes>
+
+
+      
