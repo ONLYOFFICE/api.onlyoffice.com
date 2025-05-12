@@ -72,3 +72,11 @@ cd document-builder-samples
 ```
 
 The project folder includes the `python` folder with the Python samples. Each sample has its own folder with the `main.py` program file.
+
+## Troubleshooting
+
+If you want to upgrade `ONLYOFFICE Document Builder SDK` to the latest version, you can simply run:
+
+```sh
+python -m pip install document-builder --upgrade
+```
