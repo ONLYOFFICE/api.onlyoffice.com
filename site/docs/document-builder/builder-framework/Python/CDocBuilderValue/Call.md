@@ -34,7 +34,7 @@ def Call(self, str name, CDocBuilderValue *args);
     </TabItem>
     <TabItem value="builder" label=".docbuilder">
         ```ts
-        const oDocument = Api.GetDocument()
+        let doc = Api.GetDocument();
         ```
     </TabItem>
 </Tabs>

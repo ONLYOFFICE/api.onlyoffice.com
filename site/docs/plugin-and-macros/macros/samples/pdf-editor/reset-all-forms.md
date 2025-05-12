@@ -9,8 +9,8 @@ Clears all fields if necessary, for example after printing the document.
 ```ts
 (function()
 {
-    var document = Api.GetDocument();
-    var allForms = document.GetAllForms();
+    let doc = Api.GetDocument();
+    let allForms = doc.GetAllForms();
     allForms.forEach(form => {
         form.Clear();
     });

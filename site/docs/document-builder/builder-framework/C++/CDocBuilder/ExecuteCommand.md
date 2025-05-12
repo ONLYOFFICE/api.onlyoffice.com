@@ -34,7 +34,7 @@ bool ExecuteCommand(const wchar_t* sCommand, CDocBuilderValue* oRetValue = 0);
     </TabItem>
     <TabItem value="builder" label=".docbuilder">
         ```ts
-        oParagraph.AddText("Hello, world!")
+        paragraph.AddText("Hello, world!");
         ```
     </TabItem>
 </Tabs>

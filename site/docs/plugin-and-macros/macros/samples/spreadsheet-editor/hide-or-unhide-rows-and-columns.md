@@ -9,19 +9,19 @@ Hides or unhides the specified rows and/or columns in the spreadsheet.
 ```ts
 (function()
 {
-    const sheet = Api.GetActiveSheet()
-    const range = sheet.GetRange("A1:M1")
-    const rowsToHide = [5, 8, 9, 12, 14, 16, 21, 22, 31, 32, 33]
-    const columnsToHide = [2,4,5,7,8,10,11,13,14,16]
-    const hidden = sheet.GetRows(rowsToHide[0]).GetHidden()
-    hideUnhideDetails(hidden)
+    let sheet = Api.GetActiveSheet();
+    let range = sheet.GetRange("A1:M1");
+    let rowsToHide = [5, 8, 9, 12, 14, 16, 21, 22, 31, 32, 33];
+    let columnsToHide = [2,4,5,7,8,10,11,13,14,16];
+    let hidden = sheet.GetRows(rowsToHide[0]).GetHidden();
+    hideUnhideDetails(hidden);
     // Unhide if hidden, Hide if unhidden
     function hideUnhideDetails(hidden) {
         rowsToHide.forEach(row => {
-            sheet.GetRows(row).SetHidden(!hidden)
+            sheet.GetRows(row).SetHidden(!hidden);
         })
         columnsToHide.forEach(column => {
-            range.GetCols(column).SetHidden(!hidden)
+            range.GetCols(column).SetHidden(!hidden);
         })
     }
 })();

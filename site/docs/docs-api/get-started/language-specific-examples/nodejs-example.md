@@ -170,7 +170,6 @@ See the detailed guide to learn how to [install ONLYOFFICE Docs for Linux](https
      "storagePath": "/files",
      "siteUrl": "https://documentserver/"
    }
-   
    ```
 
    where the **documentserver** is the name of the server with the ONLYOFFICE Docs installed, the **storageFolder** and **storagePath** are the paths where files will be created and stored. Please note that you must have read and write permissions to the folder. If you do not have them, please use the next command:

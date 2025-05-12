@@ -10,9 +10,9 @@ Generates word definitions in your document using the [Dictionary API](https://a
 
 ```ts
 (function () {
-  const oDocument = Api.GetDocument();
-  const oRange = oDocument.GetRangeBySelect();
-  const word = oRange.GetText();
+  let doc = Api.GetDocument();
+  let range = doc.GetRangeBySelect();
+  let word = range.GetText();
   $.ajax({
     method: "GET",
     url: "https://api.api-ninjas.com/v1/dictionary?word=" + word,
@@ -20,10 +20,10 @@ Generates word definitions in your document using the [Dictionary API](https://a
     contentType: "application/json",
     success: function (result) {
       console.log(result);
-      const text = result.definition;
-      const oParagraph = Api.CreateParagraph();
-      oParagraph.AddText(text);
-      oDocument.InsertContent([oParagraph], { KeepTextOnly: true });
+      let text = result.definition;
+      let paragraph = Api.CreateParagraph();
+      paragraph.AddText(text);
+      doc.InsertContent([paragraph], { KeepTextOnly: true });
     },
     error: function ajaxError(jqXHR) {
       console.error("Error: ", jqXHR.responseText);

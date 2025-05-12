@@ -41,6 +41,12 @@ Restart the services for the config changes to take effect:
 
 ## Parameters
 
+```mdx-code-block
+import APITable from '@site/src/components/APITable/APITable';
+
+<APITable>
+```
+
 | Parameter                      | Type             | Example                                                                                                                                                      | Description                                                                                                                                                                                                                                      |
 | ------------------------------ | ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | wopi.enable                    | boolean          | false                                                                                                                                                        | Defines if WOPI is enabled or not.                                                                                                                                                                                                               |
@@ -73,6 +79,10 @@ Restart the services for the config changes to take effect:
 | wopi.dummy                     | object           |                                                                                                                                                              | Defines the properties of dummy handlers for stress testing.                                                                                                                                                                                     |
 | wopi.dummy.enable              | boolean          | false                                                                                                                                                        | Defines if the dummy handlers are enabled or not.                                                                                                                                                                                                |
 | wopi.dummy.<br/>sampleFilePath | string           | ""                                                                                                                                                           | Defines the dummy path to the sample file.                                                                                                                                                                                                       |
+
+```mdx-code-block
+</APITable>
+```
 
 ## Example
 

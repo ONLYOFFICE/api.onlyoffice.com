@@ -34,7 +34,7 @@ int SaveFile(const wchar_t* sExtension, const wchar_t* sPath, const wchar_t* sPa
     </TabItem>
     <TabItem value="builder" label=".docbuilder">
         ```ts
-        builder.SaveFile("docx", "result.docx")
+        builder.SaveFile("docx", "result.docx");
         ```
     </TabItem>
 </Tabs>

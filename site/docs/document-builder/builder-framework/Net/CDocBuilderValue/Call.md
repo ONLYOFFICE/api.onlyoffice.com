@@ -37,7 +37,7 @@ CDocBuilderValue^ Call(String^ sName, CDocBuilderValue^ p1, CDocBuilderValue^ p2
     </TabItem>
     <TabItem value="builder" label=".docbuilder">
         ```ts
-        const oDocument = Api.GetDocument()
+        let doc = Api.GetDocument();
         ```
     </TabItem>
 </Tabs>

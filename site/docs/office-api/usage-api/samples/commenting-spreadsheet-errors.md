@@ -1,3 +1,7 @@
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+import OnlyOfficeEditor from '@site/src/components/BrowserWindow/OnlyofficeEditor';
+
 # Commenting spreadsheet errors
 
 This script checks all used cells for formula errors like "#DIV/0!" and comments each error:
@@ -10,7 +14,7 @@ This script checks all used cells for formula errors like "#DIV/0!" and comments
 This sample is available for the **C++ and .Net DocBuilder Frameworks**.
 Download the sample and get more information on the [Builder framework samples](../../../document-builder/builder-framework/builder-framework-samples/builder-framework-samples.md) page.
 
-```ts document-builder={"document": {"url": "https://static.onlyoffice.com/assets/docs/samples/data_with_errors.xlsx"}, "documentType": "cell", "editorConfig": {"customization": {"zoom": 60}}}
+``` ts editor-xlsx templateUrl=https://static.onlyoffice.com/assets/docs/samples/data_with_errors.xlsx
 let worksheet = Api.GetActiveSheet();
 let data = worksheet.GetRange("A:G").GetValue();
 for (let row = 0; row < data.length; row += 1) {

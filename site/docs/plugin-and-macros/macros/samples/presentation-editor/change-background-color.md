@@ -9,20 +9,20 @@ Sets blue color as the background of even indexed slides, if it is odd sets an i
 ``` ts
 (function()
 {
-    const presentation = Api.GetPresentation(); 
-    const slidesCount = presentation.GetSlidesCount();
+    let presentation = Api.GetPresentation(); 
+    let slidesCount = presentation.GetSlidesCount();
     
     //Create background color and solid fill
-    const backgroundColor = Api.CreateRGBColor(0, 150, 255);
-    const colorFill = Api.CreateSolidFill(backgroundColor);
+    let backgroundColor = Api.CreateRGBColor(0, 150, 255);
+    let colorFill = Api.CreateSolidFill(backgroundColor);
 
     //Create blip fill from image
-    const imageUrl = "https://static.onlyoffice.com/assets/docs/samples/img/presentation_sky.png";
-    const imageFill = Api.CreateBlipFill(imageUrl, "stretch");
+    let imageUrl = "https://static.onlyoffice.com/assets/docs/samples/img/presentation_sky.png";
+    let imageFill = Api.CreateBlipFill(imageUrl, "stretch");
     
     //Iterate through each slide
     for (let i = 0; i < slidesCount; i++) {
-        var slide = presentation.GetSlideByIndex(i);
+        let slide = presentation.GetSlideByIndex(i);
         if(i % 2 == 0) {
             //Set color as background if index of slide is even
             slide.SetBackground(colorFill);

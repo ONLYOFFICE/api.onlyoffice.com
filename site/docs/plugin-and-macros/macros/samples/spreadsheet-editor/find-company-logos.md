@@ -11,23 +11,23 @@ Searches for a company logo throughout the spreadsheet using the [Logo API](http
 ```ts
 (function() {
     // Get the active worksheet
-    var oWorksheet = Api.GetActiveSheet();
+    let worksheet = Api.GetActiveSheet();
     // Get the currently selected range of cells
-    var selectedRange = Api.GetSelection();
+    let selectedRange = Api.GetSelection();
     // Define a mapping of values to insert into specific columns
-    var valuesToInsert = {
+    let valuesToInsert = {
         "name": "B",
         "ticker": "C",
         "image": "D"
     };
     // Loop through the values to insert and populate empty cells
-    for (var value in valuesToInsert) {
-        var oCell = oWorksheet.GetRange(valuesToInsert[value] + "1");
-        if (!oCell.GetValue()) oCell.SetValue(value);
+    for (let value in valuesToInsert) {
+        let cell = worksheet.GetRange(valuesToInsert[value] + "1");
+        if (!cell.GetValue()) cell.SetValue(value);
     } 
     // Iterate through each cell in the selected range
     selectedRange.ForEach(function (cell) {
-        var value = cell.GetValue();
+        let value = cell.GetValue();
         if (value) {
             // Make an AJAX request to an API to retrieve data based on the cell value
             $.ajax({
@@ -38,16 +38,16 @@ Searches for a company logo throughout the spreadsheet using the [Logo API](http
                 success: function(result) {
                     console.log(result);
                     // Iterate through the API response and populate data into specific columns
-                    for (var i = 0; i < result.length; i++) {
-                        var data = result[i];
-                        var currentRow = cell.GetRow() + i - 1;
+                    for (let i = 0; i < result.length; i++) {
+                        let data = result[i];
+                        let currentRow = cell.GetRow() + i - 1;
                         // Populate data into specific columns and adjust column width
-                        oWorksheet.GetRangeByNumber(currentRow, 1).SetValue(data.name);
-                        oWorksheet.GetRangeByNumber(currentRow, 1).AutoFit(false, true);
-                        oWorksheet.GetRangeByNumber(currentRow, 2).SetValue(data.ticker);
-                        oWorksheet.GetRangeByNumber(currentRow, 2).AutoFit(false, true);
-                        oWorksheet.GetRangeByNumber(currentRow, 3).SetValue(data.image);
-                        oWorksheet.GetRangeByNumber(currentRow, 3).AutoFit(false, true);
+                        worksheet.GetRangeByNumber(currentRow, 1).SetValue(data.name);
+                        worksheet.GetRangeByNumber(currentRow, 1).AutoFit(false, true);
+                        worksheet.GetRangeByNumber(currentRow, 2).SetValue(data.ticker);
+                        worksheet.GetRangeByNumber(currentRow, 2).AutoFit(false, true);
+                        worksheet.GetRangeByNumber(currentRow, 3).SetValue(data.image);
+                        worksheet.GetRangeByNumber(currentRow, 3).AutoFit(false, true);
                     }
                 },
                 error: function ajaxError(jqXHR) {

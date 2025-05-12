@@ -16,11 +16,11 @@ Completes the basic address data with detailed address information and inserts i
 
 (function()
 {
-    const API_KEY = 'yourAPIkey';
-    const ENDPOINT = 'https://api.geoapify.com/v1/geocode/search';
-    const oWorksheet = Api.GetActiveSheet();
+    let API_KEY = 'yourAPIkey';
+    let ENDPOINT = 'https://api.geoapify.com/v1/geocode/search';
+    let worksheet = Api.GetActiveSheet();
     let row = 2;
-    makeRequest(oWorksheet.GetRange(`A${row}`).GetText());
+    makeRequest(worksheet.GetRange(`A${row}`).GetText());
     
     // REQUEST
     function makeRequest(ADDRESS) {
@@ -37,7 +37,7 @@ Completes the basic address data with detailed address information and inserts i
     
     // RESPONSE
     function successFunction(response) {
-        const data = createAddressDetailsObject(response);
+        let data = createAddressDetailsObject(response);
         pasteAddressDetails(data);
         reload();
     }
@@ -67,11 +67,11 @@ Completes the basic address data with detailed address information and inserts i
     
     // PASTE
     function pasteAddressDetails(data) {
-        const oRange = oWorksheet.GetRange(`B${row}:F${row}`);
+        let range = oWorksheet.GetRange(`B${row}:F${row}`);
         if (data.error !== undefined) {
-            oRange.SetValue([[data.error]]);
+            range.SetValue([[data.error]]);
         } else {
-            oRange.SetValue([
+            range.SetValue([
                 [
                     data.country,
                     data.county,
@@ -83,7 +83,7 @@ Completes the basic address data with detailed address information and inserts i
         }
         // Execute recursively until "Address" value is empty
         row++;
-        makeRequest(oWorksheet.GetRange(`A${row}:A${row}`).GetText());
+        makeRequest(worksheet.GetRange(`A${row}:A${row}`).GetText());
     }
     // Sheet has to be reloaded on changes
     function reload() {

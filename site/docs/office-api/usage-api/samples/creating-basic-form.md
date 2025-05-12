@@ -8,7 +8,7 @@ Create a basic form with the image and text inputs:
 This sample is available for the **C++ and .Net DocBuilder Frameworks**.
 Download the sample and get more information on the [Builder framework samples](../../../document-builder/builder-framework/builder-framework-samples/builder-framework-samples.md) page.
 
-```ts document-builder={"documentType": "pdf", "editorConfig": {"customization": {"zoom": 60}}}
+```ts editor-pdf
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 let headingStyle = doc.GetStyle("Heading 3");

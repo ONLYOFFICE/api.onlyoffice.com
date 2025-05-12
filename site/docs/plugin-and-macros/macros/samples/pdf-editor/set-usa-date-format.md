@@ -9,10 +9,10 @@ Sets all date form formats to USA one.
 ```ts
 (function()
 {
-    var document = Api.GetDocument();
+    let doc = Api.GetDocument();
     
     //Get all forms from the document
-    var allForms = document.GetAllForms();
+    let allForms = doc.GetAllForms();
     allForms.forEach(form => {
         //For each Date form set USA date format
         if(form.GetFormType() == "dateForm") {

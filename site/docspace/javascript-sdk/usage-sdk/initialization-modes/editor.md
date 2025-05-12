@@ -15,5 +15,5 @@ Allows you to open the SDK as a document editor for editing by specifying the [i
 | [initEditor](../methods.md#initeditor) | Initializes the SDK frame in the "editor" mode. |
 
 ``` ts
-const docSpace = DocSpace.SDK.initEditor({config})
+const docSpace = DocSpace.SDK.initEditor({config});
 ```

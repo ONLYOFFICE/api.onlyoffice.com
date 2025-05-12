@@ -54,7 +54,7 @@ Argument.name === "ONLYOFFICE" // true
     </TabItem>
     <TabItem value="builder" label=".docbuilder">
         ```ts
-        docbuilder.exe "--argument={\"name\":\"ONLYOFFICE\"}" test.docbuilder;
+        docbuilder.exe "--argument={\"name\":\"ONLYOFFICE\"}" test.docbuilder
         ```
     </TabItem>
 </Tabs>

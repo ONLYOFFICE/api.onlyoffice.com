@@ -10,11 +10,11 @@ Highlights duplicates in the selected area with different colors to recognize du
 (function () 
 {
     // Background color of cells with non-repeating values
-    var whiteFill = Api.CreateColorFromRGB(255, 255, 255);
+    let whiteFill = Api.CreateColorFromRGB(255, 255, 255);
     // The current index of the color range
-    var uniqueColorIndex = 0;
+    let uniqueColorIndex = 0;
     // Color range to highlight duplicate values
-    var uniqueColors = [Api.CreateColorFromRGB(255, 255, 0),
+    let uniqueColors = [Api.CreateColorFromRGB(255, 255, 0),
         Api.CreateColorFromRGB(204, 204, 255),
         Api.CreateColorFromRGB(0, 255, 0),
         Api.CreateColorFromRGB(0, 128, 128),
@@ -31,27 +31,27 @@ Highlights duplicates in the selected area with different colors to recognize du
     }
 
     // Getting an active sheet
-    var activeSheet = Api.ActiveSheet;
+    let activeSheet = Api.ActiveSheet;
     // Getting selection on the active sheet
-    var selection = activeSheet.Selection;
+    let selection = activeSheet.Selection;
     // Map of values in cells with the duplicates number
-    var mapValues = {};
+    let mapValues = {};
     // All cells range
-    var arrRanges = [];
+    let arrRanges = [];
     // Going through the selection
     selection.ForEach(function (range) {
         // Getting value from cell
-        var value = range.GetValue();
+        let value = range.GetValue();
         if (!mapValues.hasOwnProperty(value)) {
             mapValues[value] = 0;
         }
         mapValues[value] += 1;
         arrRanges.push(range);
     });
-    var value;
-    var mapColors = {};
+    let value;
+    let mapColors = {};
     // We go through all the cells of the selection and setting the highlighting if this value is repeated more than 1 time
-    for (var i = 0; i < arrRanges.length; ++i) {
+    for (let i = 0; i < arrRanges.length; ++i) {
         value = arrRanges[i].GetValue();
         if (mapValues[value] > 1) {
             if (!mapColors.hasOwnProperty(value)) {

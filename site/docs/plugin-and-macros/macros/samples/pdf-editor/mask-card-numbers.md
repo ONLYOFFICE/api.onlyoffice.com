@@ -9,18 +9,18 @@ Applies the mask to all forms with the specified form key to hide card numbers.
 ``` ts
 (function()
 {
-    var document = Api.GetDocument();
-    var allForms = document.GetAllForms();
+    let doc = Api.GetDocument();
+    let allForms = doc.GetAllForms();
     allForms.forEach(form => {
         if(form.GetFormKey() == "CardNumber") {
-            var input = form.GetText();
+            let input = form.GetText();
             //Keep the first 4 characters and the last 2 characters
-            const firstPart = input.slice(0, 4);
-            const lastPart = input.slice(-2);
+            let firstPart = input.slice(0, 4);
+            let lastPart = input.slice(-2);
             //Create a middle part with asterisks
-            const maskedPart = '*'.repeat(10);
+            let maskedPart = '*'.repeat(10);
             //Set masked string
-            var result = firstPart + maskedPart + lastPart;
+            let result = firstPart + maskedPart + lastPart;
             form.SetText(result);
         }
     });

@@ -20,7 +20,7 @@ This documentation describes:
 
 Here are some examples of what you can do with ONLYOFFICE plugins:
 
-- connect third-party services, like [Telegram](../tutorials/samples/telegram.md), [YouTube](../tutorials/samples/youtube.md), [Thesaurus](../tutorials/samples/thesaurus.md), [Translator](../tutorials/samples/translator.md), [Zotero](../tutorials/samples/zotero.md), [OCR](../tutorials/samples/ocr.md), etc.;
+- connect third-party services, like <!--[Telegram](../tutorials/samples/telegram.md),--> [YouTube](../tutorials/samples/youtube.md), [Thesaurus](../tutorials/samples/thesaurus.md), [Translator](../tutorials/samples/translator.md), [Zotero](../tutorials/samples/zotero.md), [OCR](../tutorials/samples/ocr.md), etc.;
 - add custom components & controls in the UI, like **Trackchanges**, **Trackchanges\_off**;
 - enhance the existing user experience and the editors’ functionality: [Autocomplete](../tutorials/samples/autocomplete.md), [Search & Replace](../tutorials/samples/search-and-replace.md), [Move cursor](../tutorials/samples/move-cursor.md), [Extended comments](../tutorials/samples/extended-comments.md);
 - automate tasks in documents with [Macros](../macros/getting-started.md).

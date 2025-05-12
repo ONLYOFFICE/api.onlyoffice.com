@@ -68,7 +68,7 @@ Let's look at the [demo example](https://github.com/ONLYOFFICE/docs-integration-
    }
    ```
 
-   The full example code can be found [here](https://github.com/ONLYOFFICE/docs-integration-sdk-java/blob/main/demo-example/src/main/java/com/onlyoffice/demoexample/manager/documentManagerImpl.java).
+   The full example code can be found [here](https://github.com/ONLYOFFICE/docs-integration-sdk-java/blob/main/demo-example/src/main/java/com/onlyoffice/demoexample/manager/DocumentManagerImpl.java).
 
 3. Implement the **UrlManager** methods. To open the editor in the editing mode, you need to define:
 
@@ -105,7 +105,7 @@ Let's look at the [demo example](https://github.com/ONLYOFFICE/docs-integration-
 5. After this, you can use all available services in their default implementations or by overriding and extending them:
 
    - To use the [callback service](https://github.com/ONLYOFFICE/docs-integration-sdk-java/blob/main/demo-example/src/main/java/com/onlyoffice/demoexample/service/CallbackServiceImpl.java), create the [callback controller](https://github.com/ONLYOFFICE/docs-integration-sdk-java/blob/main/demo-example/src/main/java/com/onlyoffice/demoexample/controllers/CallbackController.java) where the request body is wrapped in the *Callback* model and the callback service is called to handle this model.
-   - To demonstrate the [config service](https://github.com/ONLYOFFICE/docs-integration-sdk-java/blob/main/demo-example/src/main/java/com/onlyoffice/demoexample/service/configServiceImpl.java) work, *@GetMapping("/editor")* is used in the [main controller](https://github.com/ONLYOFFICE/docs-integration-sdk-java/blob/main/demo-example/src/main/java/com/onlyoffice/demoexample/controllers/MainController.java). When the user opens this address, the editor page is requested. At the same time, the config service is called and generates the *Config* model to open the editor:
+   - To demonstrate the [config service](https://github.com/ONLYOFFICE/docs-integration-sdk-java/blob/main/demo-example/src/main/java/com/onlyoffice/demoexample/service/ConfigServiceImpl.java) work, *@GetMapping("/editor")* is used in the [main controller](https://github.com/ONLYOFFICE/docs-integration-sdk-java/blob/main/demo-example/src/main/java/com/onlyoffice/demoexample/controllers/MainController.java). When the user opens this address, the editor page is requested. At the same time, the config service is called and generates the *Config* model to open the editor:
 
    ``` java
    @GetMapping("/editor")

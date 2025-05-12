@@ -8,22 +8,22 @@ Changes the font family and/or size on all the slides in your presentation.
 
 ```ts
 (function () {
-  var oPresentation = Api.GetPresentation();
+  let presentation = Api.GetPresentation();
   for (
-    var slideIndex = 0;
-    slideIndex < oPresentation.GetSlidesCount();
+    let slideIndex = 0;
+    slideIndex < presentation.GetSlidesCount();
     slideIndex++
   ) {
-    var oSlide = oPresentation.GetSlideByIndex(slideIndex);
-    var aShape = oSlide.GetAllShapes();
+    let slide = presentation.GetSlideByIndex(slideIndex);
+    let shapes = slide.GetAllShapes();
 
-    for (var shapeIndex = 0; shapeIndex < aShape.length; shapeIndex++) {
-      var content = aShape[shapeIndex].GetDocContent();
+    for (let shapeIndex = 0; shapeIndex < shapes.length; shapeIndex++) {
+      let content = shapes[shapeIndex].GetDocContent();
       // Check if content is valid before proceeding
       if (content) {
-        var count = content.GetElementsCount();
-        for (var elementIndex = 0; elementIndex < count; elementIndex++) {
-          var element = content.GetElement(elementIndex);
+        let count = content.GetElementsCount();
+        for (let elementIndex = 0; elementIndex < count; elementIndex++) {
+          let element = content.GetElement(elementIndex);
           // Check if element is valid before using it
           if (element) {
             element.SetFontSize(10);

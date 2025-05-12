@@ -8,22 +8,22 @@ Searches for a word throughout the document and replaces it with the given repla
 
 ```ts
 (function () {
-  const oDocument = Api.GetDocument();
-  const oRange = oDocument.GetRangeBySelect();
-  const rawText = oRange.GetText();
-  oRange.Delete();
+  let doc = Api.GetDocument();
+  let range = doc.GetRangeBySelect();
+  let rawText = range.GetText();
+  range.Delete();
   // Define the word to find and the word to replace it with
-  const wordToFind = "oldWord"; // Replace "oldWord" with the word you want to find
-  const replacementWord = "newWord"; // Replace "newWord" with the word you want to replace it with
+  let wordToFind = "oldWord"; // Replace "oldWord" with the word you want to find
+  let replacementWord = "newWord"; // Replace "newWord" with the word you want to replace it with
   // Use regular expression to find and replace the word
-  const cleanedText = rawText.replace(
+  let cleanedText = rawText.replace(
     new RegExp(wordToFind, "g"),
     replacementWord
   );
   // Insert the cleanedText with the original paragraph structure
-  const oParagraph = Api.CreateParagraph();
-  oParagraph.AddText(cleanedText);
-  oDocument.InsertContent([oParagraph]);
+  let paragraph = Api.CreateParagraph();
+  paragraph.AddText(cleanedText);
+  doc.InsertContent([paragraph]);
 })();
 ```
 

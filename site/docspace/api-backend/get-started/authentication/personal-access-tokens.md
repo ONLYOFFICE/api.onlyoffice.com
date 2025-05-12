@@ -9,7 +9,7 @@ import TabItem from '@theme/TabItem';
 
 The user needs to perform several easy steps to pass authentication:
 
-1. Send POST request, containing the **userName** and **password** parameters to the [api/2.0/authentication](../../../../docspace/api-backend/usage-api/authenticate-me.api.mdx) address:
+1. Send POST request, containing the `userName` and `password` parameters to the [api/2.0/authentication](../../../../docspace/api-backend/usage-api/authenticate-me.api.mdx) address:
 
     <Tabs>
       <TabItem value="request" label="Request">
@@ -46,7 +46,7 @@ The user needs to perform several easy steps to pass authentication:
 
 2. In case authentication is successful, a token and its lifetime will be received.
 
-3. Use this token every time you call API methods inserting it to the **Authorization** HTTP header:
+3. Use this token every time you call API methods inserting it to the `Authorization` HTTP header:
 
    Example API Request:
 

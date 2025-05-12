@@ -32,7 +32,7 @@ bool CreateFile(int nType);
     </TabItem>
     <TabItem value="builder" label=".docbuilder">
         ```ts
-        builder.CreateFile("docx")
+        builder.CreateFile("docx");
         ```
     </TabItem>
 </Tabs>

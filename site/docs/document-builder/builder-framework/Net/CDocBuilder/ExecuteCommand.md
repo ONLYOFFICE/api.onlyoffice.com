@@ -34,7 +34,7 @@ bool ExecuteCommand(String^ sCommand, CDocBuilderValue^% oRetValue = 0);
     </TabItem>
     <TabItem value="builder" label=".docbuilder">
         ```ts
-        oParagraph.AddText("Hello from .net!")
+        paragraph.AddText("Hello from .net!");
         ```
     </TabItem>
 </Tabs>

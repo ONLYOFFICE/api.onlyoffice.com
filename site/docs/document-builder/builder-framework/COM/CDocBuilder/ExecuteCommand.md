@@ -37,8 +37,8 @@ HRESULT ExecuteCommand([in] BSTR command, [out, retval] VARIANT_BOOL* result);
     </TabItem>
     <TabItem value="builder" label=".docbuilder">
         ```ts
-        oParagraph.AddText("Hello, world!")
-        ragraph.SetSpacingAfter(1000, false)
+        paragraph.AddText("Hello, world!");
+        paragraph.SetSpacingAfter(1000, false);
         ```
     </TabItem>
 </Tabs>

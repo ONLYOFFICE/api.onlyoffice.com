@@ -33,7 +33,7 @@ HRESULT CreateFile([in] BSTR type, [out, retval] VARIANT_BOOL* result);
     </TabItem>
     <TabItem value="builder" label=".docbuilder">
         ```ts
-        builder.CreateFile("docx")
+        builder.CreateFile("docx");
         ```
     </TabItem>
 </Tabs>

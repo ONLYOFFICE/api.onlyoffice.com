@@ -50,7 +50,7 @@ The list of changes of ONLYOFFICE Docs API.
 - Added the [-10 error code](../additional-api/conversion-api/error-codes.md) to the Conversion API.
 - The [editorConfig.customization.logo](../usage-api/config/editor/customization/customization-standard-branding.md#logo) parameter is now available for the mobile editors.
 - Added the *visible* field to the [editorConfig.customization.logo](../usage-api/config/editor/customization/customization-standard-branding.md#logo) parameter.
-- Added the [formsubmit](../using-wopi/wopi-discovery.md#wopi-actions) action to the WOPI discovery.
+- Added the [formsubmit](../using-wopi/wopi-discovery.md#formsubmit) action to the WOPI discovery.
 - The [editorConfig.customization.goback.requestClose](../usage-api/config/editor/customization/customization-standard-branding.md#goback) field is deprecated, please use the [editorConfig.customization.close](../usage-api/config/editor/customization/customization-standard-branding.md#close) field instead.
 - Added the [Save Copy As](../using-wopi/wopi-rest-api/putrelativefile.md#save-copy-as) functionality to WOPI.
 - Change the default value of the [editorConfig.customization.hideRightMenu](../usage-api/config/editor/customization/customization-standard-branding.md#hiderightmenu) parameter to *true*.
@@ -86,7 +86,7 @@ The list of changes of ONLYOFFICE Docs API.
 
 ## Version 7.4
 
-- Added the [mobileView](../using-wopi/wopi-discovery.md#wopi-actions) and [mobileEdit](../using-wopi/wopi-discovery.md#wopi-actions) actions to the WOPI discovery.
+- Added the [mobileView](../using-wopi/wopi-discovery.md#mobileView) and [mobileEdit](../using-wopi/wopi-discovery.md#mobileEdit) actions to the WOPI discovery.
 - Added opening for [dps, dpt, et, ett, mhtml, stw, sxc, sxi, sxw, wps, wpt](../usage-api/config/config.md#documenttype) formats.
 - Added the *users.id* field to the [setUsers](../usage-api/methods.md#setusers) method.
 - Added the *c* parameter to the [setUsers](../usage-api/methods.md#setusers) method and [events.onRequestUsers](../usage-api/config/events.md#onrequestusers) event.
@@ -97,9 +97,9 @@ The list of changes of ONLYOFFICE Docs API.
 - Added the [setReferenceData](../usage-api/methods.md#setreferencedata) method.
 - Added the [events.onRequestReferenceData](../usage-api/config/events.md#onrequestreferencedata) event.
 - Added the [document.referenceData](../usage-api/config/document/document.md#referencedata) parameter.
-- Added the [UserCanNotWriteRelative](../using-wopi/wopi-rest-api/checkfileinfo.md#user-permissions-properties) property to the *CheckFileInfo* WOPI operation.
+- Added the [UserCanNotWriteRelative](../using-wopi/wopi-rest-api/checkfileinfo.md#UserCanNotWriteRelative) property to the *CheckFileInfo* WOPI operation.
 - Added a scheme for [editing binary document formats](../using-wopi/editing-binary-documents.md).
-- Added the [convert](../using-wopi/wopi-discovery.md#wopi-actions) action to the WOPI discovery.
+- Added the [convert](../using-wopi/wopi-discovery.md#convert) action to the WOPI discovery.
 - Added the [PutRelativeFile](../using-wopi/wopi-rest-api/putrelativefile.md) WOPI operation.
 
 ## Version 7.2
@@ -110,7 +110,7 @@ The list of changes of ONLYOFFICE Docs API.
 - Added the *phone* field to the [editorConfig.customization.customer](../usage-api/config/editor/customization/customization-standard-branding.md#customer) parameter.
 - Added the *connections\_view*, *users\_view\_count* and *users\_view* parameters to the [license response](../additional-api/command-service/license.md#response-parameters).
 - Added the [live viewer](../get-started/how-it-works/viewing.md) mode to the text document, spreadsheet and presentation editors.
-- Added the [embedview](../using-wopi/wopi-discovery.md#wopi-actions) action to the WOPI discovery.
+- Added the [embedview](../using-wopi/wopi-discovery.md#embedview) action to the WOPI discovery.
 - The [services.CoAuthoring.secret.browser.string](../additional-api/signature/signature.md#parameters) parameter is deprecated, please use the [services.CoAuthoring.secret.inbox.string](../additional-api/signature/signature.md#parameters) parameter instead.
 
 ## Version 7.1

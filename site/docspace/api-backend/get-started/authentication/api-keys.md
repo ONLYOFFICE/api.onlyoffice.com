@@ -2,15 +2,57 @@
 sidebar_position: -5
 ---
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 # API keys
 
 API keys are simple tokens used to authenticate API requests. They act as a unique identifier and secret that confirms the identity of the calling application or service.
 
 Unlike user-based authentication methods (such as [OAuth](oauth2/oauth2.md) or [personal access tokens](personal-access-tokens.md)), API keys are typically tied to the application itself, not to an individual user.
 
+API methods for working with API keys are detailed [in this section](../../../../docspace/api-backend/usage-api/create-api-key.api.mdx).
+
 ## How to create API keys
 
-The ONLYOFFICE DocSpace API uses API keys for authentication. Create and manage API keys on your portal from the **Developer Tools** page:
+The ONLYOFFICE DocSpace API uses API keys for authentication. To create a user API key, send POST request containing the `name`, `permissions`, and `expiresInDays` parameters to the [api/2.0/keys](../../../../docspace/api-backend/usage-api/create-api-key.api.mdx) address:
+
+<Tabs>
+  <TabItem value="request" label="Request">
+    ``` http
+    POST /api/2.0/keys HTTP/1.1
+    Host: yourportal.onlyoffice.com
+    Content-Type: application/json
+    Accept: application/json
+
+    {
+      "name": "Winfield Upton",
+      "permissions": [
+        "some text"
+      ],
+      "expiresInDays": 1234
+    }
+    ```
+
+    > Please note, that you have to enter your own portal address to the *Host: yourportal.onlyoffice.com* line instead of *yourportal.onlyoffice.com* address.
+  </TabItem>
+  <TabItem value="response" label="Response">
+    ``` http
+    HTTP/1.1 201 Created
+    Content-Type: application/json; charset=utf-8
+    {
+        "count": 1,
+        "response": {
+            "id": "aae1e103-bca5-9fa1-ba8c-42058b4abf28"
+        },
+        "status": 0,
+        "statusCode": 201
+    }
+    ```
+  </TabItem>
+</Tabs>
+
+You can also create and manage API keys on your portal from the **Developer Tools** page:
 
 1. Go to the DocSpace settings.
 2. Navigate to the **Developer Tools** section.

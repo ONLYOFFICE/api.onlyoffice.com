@@ -75,9 +75,9 @@ The steps below explain the process of connecting several editors to the same ht
 5. In order to finish editing, the [destroyEditor](../../usage-api/methods.md#destroyeditor) method must be called to close the required editor:
 
    ``` ts
-   documentEditor.destroyEditor()
-   spreadsheetEditor.destroyEditor()
-   presentationEditor.destroyEditor()
+   documentEditor.destroyEditor();
+   spreadsheetEditor.destroyEditor();
+   presentationEditor.destroyEditor();
    ```
 
 6. Open your *html* file in the browser.

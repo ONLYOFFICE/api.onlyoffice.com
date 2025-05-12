@@ -9,7 +9,7 @@ Create an advanced form with a table structure:
 This sample is available for the **C++ and .Net DocBuilder Frameworks**.
 Download the sample and get more information on the [Builder framework samples](../../../document-builder/builder-framework/builder-framework-samples/builder-framework-samples.md) page.
 
-```ts document-builder={"documentType": "pdf", "editorConfig": {"customization": {"zoom": 60}}}
+```ts editor-pdf zoom=60
 let doc = Api.GetDocument();
 
 function addTextFormToParagraph(paragraph, fontSize, key, placeholder, maxCharacters, jc, comb, border) {

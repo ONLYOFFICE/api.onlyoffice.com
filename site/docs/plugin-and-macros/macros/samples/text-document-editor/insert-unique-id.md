@@ -11,7 +11,7 @@ Inserts a unique id into a form document.
 {
     function generate () {
         let key = '';
-        const data = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ' +
+        let data = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ' +
                 'abcdefghijklmnopqrstuvwxyz0123456789';
         for (let i = 1; i <= 12; i++) {
             let index = Math.floor(Math.random()
@@ -20,11 +20,11 @@ Inserts a unique id into a form document.
         }
         return key;
     }
-    const id = generate();
-    const oDocument = Api.GetDocument();
-    const oParagraph = Api.CreateParagraph();
-    oParagraph.AddText(id);
-    oDocument.InsertContent([oParagraph], { "KeepTextOnly": true });
+    let id = generate();
+    let doc = Api.GetDocument();
+    let paragraph = Api.CreateParagraph();
+    paragraph.AddText(id);
+    doc.InsertContent([paragraph], { "KeepTextOnly": true });
 })();
 ```
 

@@ -31,7 +31,7 @@ void SetTmpFolder(const wchar_t* sFolder);
     </TabItem>
     <TabItem value="builder" label=".docbuilder">
         ```ts
-        builder.SetTmpFolder("DocBuilderTemp")
+        builder.SetTmpFolder("DocBuilderTemp");
         ```
     </TabItem>
 </Tabs>

@@ -35,7 +35,7 @@ HRESULT Execute([in] BSTR command, [out, retval] I_DOCBUILDER_VALUE** result);
     </TabItem>
     <TabItem value="builder" label=".docbuilder">
         ```ts
-        oParagraph.AddText("Hello, world!")
+        paragraph.AddText("Hello, world!");
         ```
     </TabItem>
 </Tabs>

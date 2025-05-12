@@ -6,7 +6,7 @@ Creates a custom chart filled with array-based values in the spreadsheet:
 - create a chart using the data ([ApiWorksheet/AddChart](../spreadsheet-api/ApiWorksheet/Methods/AddChart.md));
 - customize the chart ([ApiChart/SetTitle](../spreadsheet-api/ApiChart/Methods/SetTitle.md), [ApiChart/SetLegendPos](../spreadsheet-api/ApiChart/Methods/SetLegendPos.md));
 
-```ts document-builder={"documentType": "cell", "editorConfig": {"customization": {"zoom": 60}}}
+```ts editor-xlsx
 let worksheet = Api.GetActiveSheet();
 let headers = ["Year", "Revenue South dept", "Revenue West dept"];
 let data = [
