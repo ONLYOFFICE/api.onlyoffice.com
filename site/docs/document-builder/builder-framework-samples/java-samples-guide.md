@@ -2,6 +2,9 @@
 sidebar_position: -1
 ---
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 # Java samples guide
 
 ## Before you start
@@ -57,19 +60,35 @@ public class Program {
 }
 ```
 
-Run the script:
-
 :::note
 
 JDK 8 or newer is required.
 
 :::
 
-```sh
-javac -cp "C:\Program Files\ONLYOFFICE\DocumentBuilder\docbuilder.jar" Program.java
+Save the code above as `Program.java` file in the SDK folder.
+Run the script:
 
-java -cp "C:\Program Files\ONLYOFFICE\DocumentBuilder\docbuilder.jar;." Program
-```
+<Tabs>
+    <TabItem value="windows" label="Windows">
+    ```sh
+    javac -cp "docbuilder.jar" Program.java
+    java -cp "docbuilder.jar;." Program
+    ```
+    </TabItem>
+    <TabItem value="linux" label="Linux">
+    ```sh
+    javac -cp "docbuilder.jar" Program.java
+    java -cp "docbuilder.jar:." Program
+    ```
+    </TabItem>
+    <TabItem value="macos" label="macOS">
+    ```sh
+    javac -cp "docbuilder.jar" Program.java
+    java -cp "docbuilder.jar:." Program
+    ```
+    </TabItem>
+</Tabs>
 
 Document will be created in the test directory.
 
