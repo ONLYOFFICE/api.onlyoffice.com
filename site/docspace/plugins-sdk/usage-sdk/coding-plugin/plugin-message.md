@@ -2,7 +2,7 @@
 sidebar_position: -3
 ---
 
-# Plugin message
+# Message
 
 Each item which interacts with a user (onClick, onChange, onSelect, etc.) can return a message that is represented as the *IMessage* object with the following parameters:
 
