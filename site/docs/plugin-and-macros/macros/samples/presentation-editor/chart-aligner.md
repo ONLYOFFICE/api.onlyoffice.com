@@ -4,40 +4,30 @@ Align charts and text boxes on every slide.
 
 ```ts
 (function () {
-    let presentation = Api.GetPresentation();
-    let slideCount = presentation.GetSlidesCount();
-    let bullet = Api.CreateBullet("-");
+  try {
+    const presentation = Api.GetPresentation();
+    const slideCount = presentation.GetSlidesCount();
+    const initialTop = 467200;
+    const spacing = 50000;
 
     for (let i = 0; i < slideCount; i++) {
-        let slide = presentation.GetSlideByIndex(i);
-        let shapes = slide.GetAllShapes();
+      const slide = presentation.GetSlideByIndex(i);
 
-        shapes.forEach(function (shape) {
-            let docContent = shape.GetDocContent();
-            let paragraphs = docContent.GetAllParagraphs();
-            paragraphs.forEach(function (paragraph) {
-                let paragraphProperties = paragraph.GetParaPr();
-                let indentLeft = paragraphProperties.GetIndLeft();
+      const allElements = [...slide.GetAllCharts(), ...slide.GetAllShapes()];
+      let currentTop = initialTop;
 
-                if (indentLeft !== 0) {
-                    paragraph.SetBullet(bullet);
-                    paragraph.SetFontSize(24);
-                    paragraph.SetFontFamily("Arial");
-                    paragraph.SetBold(false);
-                    paragraph.SetItalic(false);
-                    paragraph.SetHighlight("white");
-                    paragraph.SetColor("black");
-                    paragraph.SetUnderline(false);
-                } else {
-                    console.log("Paragraph does not have bullet-like indentation.");
-                }
-            });
-        });
+      allElements.forEach((element) => {
+        element.SetPosition(608400, currentTop);
+        currentTop = currentTop + element.GetHeight() + spacing;
+      });
     }
+  } catch (error) {
+    console.error("An error occurred: " + error.message);
+  }
 })();
 ```
 
-Methods used: [GetPresentation](../../../../office-api/usage-api/presentation-api/Api/Methods/GetPresentation.md), [GetSlidesCount](../../../../office-api/usage-api/presentation-api/ApiPresentation/Methods/GetSlidesCount.md), [CreateBullet](../../../../office-api/usage-api/presentation-api/Api/Methods/CreateBullet.md), [GetSlideByIndex](../../../../office-api/usage-api/presentation-api/ApiPresentation/Methods/GetSlideByIndex.md), [GetAllShapes](../../../../office-api/usage-api/presentation-api/ApiSlide/Methods/GetAllShapes.md), [GetDocContent](../../../../office-api/usage-api/presentation-api/ApiShape/Methods/GetDocContent.md), [GetAllParagraphs](), [GetParaPr](../../../../office-api/usage-api/presentation-api/ApiParagraph/Methods/GetParaPr.md), [GetIndLeft](../../../../office-api/usage-api/presentation-api/ApiParaPr/Methods/GetIndLeft.md), [SetBullet](../../../../office-api/usage-api/presentation-api/ApiParagraph/Methods/SetBullet.md), [SetFontSize](../../../../office-api/usage-api/presentation-api/ApiRun/Methods/SetFontSize.md), [SetFontFamily](../../../../office-api/usage-api/presentation-api/ApiRun/Methods/SetFontFamily.md), [SetBold](../../../../office-api/usage-api/presentation-api/ApiRun/Methods/SetBold.md), [SetItalic](../../../../office-api/usage-api/presentation-api/ApiRun/Methods/SetItalic.md), [SetHighlight](../../../../office-api/usage-api/presentation-api/ApiParagraph/Methods/SetHighlight.md), [SetColor](../../../../office-api/usage-api/presentation-api/ApiRun/Methods/SetColor.md), [SetUnderline](../../../../office-api/usage-api/presentation-api/ApiRun/Methods/SetUnderline.md)
+Methods used: Methods used: [GetPresentation](../../../../office-api/usage-api/presentation-api/Api/Methods/GetPresentation.md), [GetSlidesCount](../../../../office-api/usage-api/presentation-api/ApiPresentation/Methods/GetSlidesCount.md), [GetSlideByIndex](../../../../office-api/usage-api/presentation-api/ApiPresentation/Methods/GetSlideByIndex.md), [GetAllCharts](../../../../office-api/usage-api/presentation-api/ApiSlide/Methods/GetAllCharts.md), [GetAllShapes](../../../../office-api/usage-api/presentation-api/ApiSlide/Methods/GetAllShapes.md), [SetPosition](../../../../office-api/usage-api/presentation-api/ApiDrawing/Methods/SetPosition.md), [GetHeight](../../../../office-api/usage-api/presentation-api/ApiDrawing/Methods/GetHeight.md)
 
 ## Result
 
