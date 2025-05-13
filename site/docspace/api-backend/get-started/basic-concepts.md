@@ -1,10 +1,10 @@
 ---
-sidebar_position: -3
+sidebar_position: -4
 ---
 
 # Basic concepts
 
-[ONLYOFFICE DocSpace](https://www.onlyoffice.com/docspace.aspx) is a collaborative cloud platform that allows users to edit and collaborate on documents, spreadsheets, presentations, and forms in customizable rooms. It provides the following features:
+[ONLYOFFICE DocSpace](https://www.onlyoffice.com/docspace.aspx) is a collaborative cloud platform that allows users to edit and collaborate on documents, spreadsheets, presentations, PDFs, and forms in customizable rooms. It provides the following features:
 
 - creating and customizing rooms for collaboration;
 - creating, editing and viewing text documents, spreadsheets, presentations, fillable forms, PDFs, ebooks, multimedia files;
@@ -14,7 +14,7 @@ The ONLYOFFICE DocSpace API is implemented as REST over HTTP using GET/POST/PUT/
 
 ## Authentication
 
-Authentication in the ONLYOFFICE DocSpace API is managed via the HTTP authentication, i.e. every request must include the Authorization HTTP header. For information and examples please visit the [Authentication](./how-it-works/passing-authentication.md) section.
+To interact with the API, most requests require authentication. The authentication method you choose depends on your application's purpose, its users, and the features it requires. For information and examples, visit the [Authentication](authentication/authentication.md) section.
 
 ## Making requests
 
@@ -32,12 +32,12 @@ HTTP/1.1 404 Not Found
 
 ## Rate limiting
 
-Please pay attention to some restrictions on autentication requests:
+Please pay attention to some restrictions on authenticated requests:
 
-- You can perform up to 1500 authentication requests per minute.
-- You can perform up to 50 simultaneous GET authentication requests.
-- You can perform up to 15 simultaneous authentication requests of any type except GET.
-- Some methods have additional restrictions. For example, you can perform up to 5 authentication requests per minute to collect passwords.
+- You can perform up to 1500 authenticated requests per minute.
+- You can perform up to 50 simultaneous GET authenticated requests.
+- You can perform up to 15 simultaneous authenticated requests of any type except GET.
+- Some methods have additional restrictions. For example, you can perform up to 5 authenticated requests per minute to collect passwords.
 
 If you exceed the limit, the **429 Too Many Requests** response for the subsequent requests will be received. This response may contain additional headers:
 

@@ -7,7 +7,7 @@ sidebar_position: -2
 Starting from version 8.1, you can get the viewport settings of the desktop editors. This method is used to set the space between the top panel and the Desktop Editors widget.
 
 ``` ts
-window.AscDesktopEditor.getViewportSettings()
+window.AscDesktopEditor.getViewportSettings();
 ```
 
 This method returns an object with the following parameters:
@@ -39,6 +39,6 @@ You can also subscribe to the *onViewportSettingsChanged* event which is called 
 
 ``` ts
 window.AscDesktopEditor.attachEvent("onViewportSettingsChanged", () => {
-  console.log("The viewport settings have been changed.")
-})
+  console.log("The viewport settings have been changed.");
+});
 ```

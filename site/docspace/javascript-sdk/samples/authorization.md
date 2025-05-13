@@ -8,7 +8,7 @@ Logs in to the DocSpace account using the specified email and password hash.
   <head>
     <meta charset="UTF-8">
     <title>DocSpace JavaScript SDK</title>
-    <script src="{PORTAL_SRC}/static/scripts/sdk/1.0.0/api.js"></script>
+    <script src="{PORTAL_SRC}/static/scripts/sdk/1.0.1/api.js"></script>
   </head>
   <body>
     <label>Login</label><br />

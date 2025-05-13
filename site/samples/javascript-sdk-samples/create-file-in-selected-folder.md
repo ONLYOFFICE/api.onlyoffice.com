@@ -185,4 +185,6 @@ function onButtonClick() {
 
 ## Step 5. Run the sample
 
+Run our HTML file and make sure everything works.
+
 <img alt="Authorization sample" src="/assets/images/docspace/gifs/js-sdk-create-file.gif" width="720px" />

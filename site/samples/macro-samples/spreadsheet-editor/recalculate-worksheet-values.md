@@ -11,9 +11,9 @@ Repeatedly recalculates worksheet cell values within one-second intervals.
 {
     let timerId = setInterval(function(){
         Api.asc_calculate(Asc.c_oAscCalculateType.All);
-        var oWorksheet = Api.GetActiveSheet();
-        oWorksheet.GetRange("F2").SetValue("Average");
-        oWorksheet.GetRange("G2").SetValue("=AVERAGE(B2:B80)");
+        let worksheet = Api.GetActiveSheet();
+        worksheet.GetRange("F2").SetValue("Average");
+        worksheet.GetRange("G2").SetValue("=AVERAGE(B2:B80)");
     }, 1000);
 })();
 ```

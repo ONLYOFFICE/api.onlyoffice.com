@@ -20,8 +20,8 @@ CDocBuilder builder = new CDocBuilder();
 CDocBuilderContext context = builder.getContext();
 CDocBuilderValue global = context.getGlobal();
 CDocBuilderValue api = global.get("Api");
-CDocBuilderValue document = api.call("GetDocument");
-CDocBuilderValue charts = document.call("GetAllCharts");
+CDocBuilderValue doc = api.call("GetDocument");
+CDocBuilderValue charts = doc.call("GetAllCharts");
 int length = charts.getLength();
 CDocBuilder.dispose();
 ```

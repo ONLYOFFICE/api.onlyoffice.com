@@ -81,6 +81,6 @@ In the following cases, only the common viewer is used:
 - for [WOPI](../../using-wopi/overview.md);
 - when opening the *pdf/djvu/xps* formats.
 
-> Please note that the server connections for the live viewer are counted separately from the total number of simultaneous connections and limited with the [connections\_view](../../additional-api/command-service/license.md#response-parameters) parameter in the license. For the open source version, this limit is 20. The live viewer is not available for the older licenses.
+> Please note that the server connections for the live viewer are counted separately from the total number of simultaneous connections and limited with the [connections\_view](../../additional-api/command-service/license.md#license) parameter in the license. For the open source version, this limit is 20. The live viewer is not available for the older licenses.
 
 The concept for working with viewing modes in the mobile editors is the same as for the web version.

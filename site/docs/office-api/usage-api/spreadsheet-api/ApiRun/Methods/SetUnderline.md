@@ -1,6 +1,6 @@
 # SetUnderline
 
-Specifies that the contents of the run are displayed along with a line appearing directly below the character\
+Specifies that the contents of the current run are displayed along with a line appearing directly below the character
 (less than all the spacing above and below the characters on the line).
 
 ## Syntax
@@ -33,10 +33,10 @@ let shape = worksheet.AddShape("flowChartOnlineStorage", 120 * 36000, 70 * 36000
 let content = shape.GetContent();
 let paragraph = content.GetElement(0);
 let run = Api.CreateRun();
-let textProps = run.GetTextPr();
-textProps.SetFontSize(30);
-textProps.SetUnderline(true);
-paragraph.SetJc("left");
-run.AddText("This is an underlined text inside the shape.");
+run.AddText("This is just a sample text. ");
+paragraph.AddElement(run);
+run = Api.CreateRun();
+run.SetUnderline(true);
+run.AddText("This is a text run with the text underlined with a single line.");
 paragraph.AddElement(run);
 ```

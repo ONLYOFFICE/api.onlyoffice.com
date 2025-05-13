@@ -15,7 +15,7 @@ bool CreateFile(sExtension);
 
 | **Name**   | **Data type**  | **Description**                                                                                                                                                                  |
 | ---------- | -------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| sExtension | const wchar_t* | The file extension. The following values are possible: `docx`, `xlsx`, `pptx`, or `pdf` (see [OFFICESTUDIO\_FILE\_XXX](../../../builder-app/overview.md#format-types) values). |
+| sExtension | const wchar_t* | The file extension. The following values are possible: `docx`, `xlsx`, `pptx`, or `pdf` (see [OFFICESTUDIO\_FILE\_XXX](../../../get-started/supported-formats.md) values). |
 
 ## Example
 
@@ -31,7 +31,7 @@ bool CreateFile(sExtension);
     </TabItem>
     <TabItem value="builder" label=".docbuilder">
         ```ts
-        builder.CreateFile("docx")
+        builder.CreateFile("docx");
         ```
     </TabItem>
 </Tabs>

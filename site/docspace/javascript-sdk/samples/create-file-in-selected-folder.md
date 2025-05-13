@@ -7,7 +7,7 @@ Creates a file in the selected folder and opens it in the editors.
   <head>
     <meta charset="UTF-8">
     <title>DocSpace JavaScript SDK</title>
-    <script src="{PORTAL_SRC}/static/scripts/sdk/1.0.0/api.js"></script>
+    <script src="{PORTAL_SRC}/static/scripts/sdk/1.0.1/api.js"></script>
     <style>
       .holder {
         margin: auto;
@@ -184,5 +184,7 @@ function onButtonClick() {
 ```
 
 ## Step 5. Run the sample
+
+Run our HTML file and make sure everything works.
 
 <img alt="Authorization sample" src="/assets/images/docspace/gifs/js-sdk-create-file.gif" width="720px" />

@@ -5,7 +5,7 @@ description: "Checks if the current user is authenticated or not."
 sidebar_label: "Check authentication"
 hide_title: true
 hide_table_of_contents: true
-api: eJydk0+P2jAQxb+KNWeLIE6Vb/SPqlV76nZPCK0GMxAXY7v2GBVF+e7VOOyyC5equSS2xs9vfm8yAOO+gFnBsnJPgZ1FdjHAWkNMlNviYQsG9sQP5aVoJ2W0BQ2ZSoqhUAEzwGI+l9eWis0uNR0DH2P0hEGd0FcyinMl5XaKe1K25kyBVS2UlSsKrx6auI2BKbBoYkr+4q37VUR4gGJ7OqJ88TkRGNhMV8Eoj77x8akneyj/dLWKWYXIM9BwJO7jpX/QkJB7MNBhct1iNu/wPTUNhfKJshAdoGYPBoYNFnrKfoRbR4+tVtkYdm5f84vECbPDjZ+QXg5PWHdYPYOBnjmZrvPRou9jYfNhfif+eapWTz++C4+1WLM1Oz4/CrZJHYt9lhaeD3R+wxGT+0Zn0BDw2NZvyzQ40bcxHhyBcHZhF9tpx17Kl8lJG5TLZOW0gFFDioWP2IK7yLZE1B3Cd30M1yH4zwQvPTH94S55dEHM1AnpFOdKGgYNi5lgxLsfQRBL1fAa5SjbvyvlM5jV+hqZrEYNPeGWcpuBBhaW1lLilq2vE+GbcZaAXmft65efMI5/AcuoQHw=
+api: eJydVlFv2zgM/isEX/ric3LZW966bnfoNmDAlqIPRbEqMh1rcSSdRLfLBf7vB0pO4yQYGtyTbenTR4r8SHqHrFYR5w943XFDlo1WbJzFxwKdp5A+biuc44r4Nu5BtcCowgIDRe9spIjzHc6mU3lUFHUwPvHM8b1zLSkLz6rtaA4cOgJTAzcEuguBLEMXKYCJoA4+JHLtLJNl4VTet4Nvk59RiHcYdUMbJW+89YRzdMufpBkL9EGcZ5Pd2vs4Qi6zU9iLkS6bGLaMZVpRwAJrFzaK89K7mWBbY9dxhFUhqC0WaJg28W1HmkD1CBU5GLsSXqVzsM62+r4vMLLiLl7oYgbfuIouOtAXyIZbOiTqPijvKSTbfXGSzJuG9DpelD9wAazjEgvcEDduEJEERXGDc5wobyazcjpRx9IrMFJ4piCy3GEXWpzjbqki3YW2x1OPvicsaGdrs+rCnuJZBaOWbY77cDhrs1ZdKwE4Y/qQt+Du2xe5/KP4obtgePtdhJapVNQ/xN8fa9qOheDNZ9qeUd5Fghvn1obg7JJWbdLJMWGBRo7pdESy+V5Fo0d2GmZ/ZuWjZQqwdV1ImRBiULYCr2J8cUEqKZVKEn4iFGZSgcJl1FcZDLtP9wtYuDXZ/uqINHMVw8tfe419ul+IqesUnDODv4nZcSMSWVXEFDbGUgXLbRLelYBcMP8mzBU0pKrkwBDUI4tDUAdMX+BXOT0bl6tKC6eeZBzUrXuBF8MNHFmFVGMFynaWxnh3X4BHi0mDKdBxPpkkq6Wz7dbVtdFUarfJi7PJ/pgYYAn45UcTPGXH+X3/U1J830hVoLSmGIEd+OCYtBRqoOi6oCligS/BsITkXp5voHOD+OopTYhDNNPCjbM298CToMruBxi2z8vi6PTltxbhG1s7ye+vP6JZWcVdoLflJpJ+hUv9VFC7cOJXCYuGIEUWNl1kWBK4JaukyWejkiif9v1s3zaOMvIEZCvvjOUSbllkLeVJFagICnLFZ5UJV6rhp9FFnsqDusf3O+kYvXzXLl17aOvX3kg/pBDzhd+Vf5ZTCZN3kTcqTZ2BOHX385QcBWx3mMr/cxoM+WD6xRPfKpOmcJfbcx4ND5IsLHBWTrFAdfZn0rjIgtq9joVelv/pKGxx/vB4aP/y1Rf72pd5kvo2XmtNntOcaLusjpP/C+n/r3Pr748L7Pv/AMNBMRA=
 sidebar_class_name: "get api-method"
 info_path: site/docspace/api-backend/usage-api/api
 custom_edit_url: null
@@ -54,7 +54,7 @@ Checks if the current user is authenticated or not.
 <StatusCodes
   id={undefined}
   label={undefined}
-  responses={{"200":{"description":"Boolean value: true if the current user is authenticated","content":{"application/json":{"schema":{"type":"boolean"}}}}}}
+  responses={{"200":{"description":"Boolean value: true if the current user is authenticated","content":{"application/json":{"schema":{"type":"object","properties":{"response":{"type":"boolean"},"count":{"type":"integer","format":"int32"},"links":{"type":"array","items":{"type":"object","properties":{"href":{"type":"string"},"action":{"type":"string"}}}},"status":{"type":"integer","format":"int32"},"statusCode":{"type":"integer","format":"int32"}},"title":"BooleanWrapper"}}}}}}
 >
   
 </StatusCodes>

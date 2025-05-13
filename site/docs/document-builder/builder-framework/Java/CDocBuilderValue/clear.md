@@ -20,7 +20,7 @@ CDocBuilder builder = new CDocBuilder();
 CDocBuilderContext context = builder.getContext();
 CDocBuilderValue global = context.getGlobal();
 CDocBuilderValue api = global.get("Api");
-CDocBuilderValue document = api.call("GetDocument");
-document.clear();
+CDocBuilderValue doc = api.call("GetDocument");
+doc.clear();
 CDocBuilder.dispose();
 ```

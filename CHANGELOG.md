@@ -1,5 +1,142 @@
 # Change log
 
+## 5.1.0
+
+### New features
+
+#### Docs
+
+* Added Results to the Office API samples
+
+#### Docs API
+
+* Added Try Docs page
+* Updated a list of the validated parameters in the browser
+* Added scrolling to tables
+
+#### Docspace
+
+* Update the Authentication section
+
+#### Plugins and macros
+
+* Added YouTube videos for plugins samples
+
+### Fixes
+
+* Fixed anchors
+
+## 5.0.0
+
+### New features
+
+#### Docs API
+
+* Added the Go and PHP (Laravel) test examples
+* Updated test examples
+* Added the Changing the default font page for test examples
+
+#### Docs
+
+* Added instruction to install plugins for all users
+
+#### Docspace
+
+* Restructured the JS SDK section
+* Added the Authentication section
+* Added the API keys page
+* Added DocSpace version 3.1
+* Added the Plugins SDK samples
+
+### Fixes
+
+* Changed loading YouTube frames
+
+#### Docs API
+
+* Updated documentation in Chinese
+* Updated Office API usage page
+
+#### Docspace
+
+* Fixed installation links
+* Updated the Webhooks page
+
+## 4.6.0
+
+### New features
+
+#### Docs API
+
+* Updated Document Builder section
+* Added Playground page for testing the capabilities of the Docs APIs
+ 
+#### Docspace
+
+* Updated Docspace openAPI docs
+
+### Fixes
+
+#### Docs
+
+* Updated conversion tables
+* Fixed Office API examples
+
+## 4.5.1
+
+### New features
+
+#### Docs API
+
+* Added the Size response property to CheckFileInfo
+
+#### Docs
+
+* Updated Office API usage page
+
+### Fixes
+
+* Added pdf editor
+* Fixed anchors
+
+## 4.5.0
+
+### New features
+
+#### Docs API
+
+* Updated the config page for WOPI
+* Added javascript example for signing with jwt
+* Updated documentation in Chinese
+
+#### Docspace
+
+* Updated Docspace openAPI docs
+
+#### Plugins and macros
+
+* Added PDF Forms section in macro samples
+
+### Fixes
+
+* Hid workspace section
+* Added ruby language for highlighting in code block
+* Changed Edition titles
+* Fixed anchors
+* Updated docs titles
+
+#### Docs
+
+* Updated Document Builder section
+
+#### Docs API
+
+* Fixed config parameters
+
+#### Plugins and macros
+
+* Fixed import hyperlink example
+
 ## 4.4.0
 
 ### New features

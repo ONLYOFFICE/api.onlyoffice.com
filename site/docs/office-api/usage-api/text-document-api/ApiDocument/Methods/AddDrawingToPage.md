@@ -1,7 +1,7 @@
 # AddDrawingToPage
 
-Adds a shape to the specified page.\
-💡 This method can be a little bit slow, because it runs the document calculation\
+Adds a shape to the specified page.
+💡 This method can be a little bit slow, because it runs the document calculation
 process to arrange tables on the specified page.
 
 ## Syntax

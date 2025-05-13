@@ -1,6 +1,6 @@
 # SetUnderline
 
-Specifies that the contents of the run are displayed along with a line appearing directly below the character\
+Specifies that the contents of the current run are displayed along with a line appearing directly below the character
 (less than all the spacing above and below the characters on the line).
 
 ## Syntax
@@ -23,7 +23,7 @@ expression.SetUnderline(isUnderline);
 
 ## Example
 
-This example specifies that the contents of the run are displayed along with a line appearing directly below the character (less than all the spacing above and below the characters on the line).
+This example specifies that the contents of the current run are displayed along with a line appearing directly below the character (less than all the spacing above and below the characters on the line).
 
 ```javascript editor-pptx
 var oPresentation = Api.GetPresentation();
@@ -36,11 +36,11 @@ oShape.SetPosition(608400, 1267200);
 var oDocContent = oShape.GetDocContent();
 var oParagraph = oDocContent.GetElement(0);
 var oRun = Api.CreateRun();
-var oTextPr = oRun.GetTextPr();
-oTextPr.SetFontSize(50);
-oTextPr.SetUnderline(true);
-oParagraph.SetJc("left");
-oRun.AddText("This is an underlined text inside the shape.");
+oRun.AddText("This is just a sample text. ");
+oParagraph.AddElement(oRun);
+oRun = Api.CreateRun();
+oRun.SetUnderline(true);
+oRun.AddText("This is a text run with the text underlined with a single line.");
 oParagraph.AddElement(oRun);
 oSlide.AddObject(oShape);
 ```

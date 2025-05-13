@@ -14,7 +14,7 @@ expression.SetBold(isBold);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| isBold | Required | boolean |  | Specifies that the contents of the run are displayed bold. |
+| isBold | Required | boolean |  | Specifies that the contents of the current run are displayed bold. |
 
 ## Returns
 
@@ -32,10 +32,10 @@ let shape = worksheet.AddShape("flowChartOnlineStorage", 120 * 36000, 70 * 36000
 let content = shape.GetContent();
 let paragraph = content.GetElement(0);
 let run = Api.CreateRun();
-let textProps = run.GetTextPr();
-textProps.SetFontSize(30);
-textProps.SetBold(true);
-paragraph.SetJc("left");
-run.AddText("This is a sample text inside the shape with the font weight set to bold using the text properties.");
+run.AddText("This is just a sample text. ");
+paragraph.AddElement(run);
+run = Api.CreateRun();
+run.SetBold(true);
+run.AddText("This is a text run with the font set to bold.");
 paragraph.AddElement(run);
 ```

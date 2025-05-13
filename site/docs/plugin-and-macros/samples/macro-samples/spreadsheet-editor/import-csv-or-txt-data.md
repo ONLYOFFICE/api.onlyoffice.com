@@ -18,17 +18,17 @@ Imports data from remote CSV/TXT files into the spreadsheet.
         }).done(successFunction);
     }
     function successFunction(data) {
-        var arrAllRows = data.split(/\r?\n|\r/);
-        var oWorksheet = Api.GetActiveSheet();
+        let arrAllRows = data.split(/\r?\n|\r/);
+        let worksheet = Api.GetActiveSheet();
 
         //reference point
-        var i = 1;
-        var j = 1;
+        let i = 1;
+        let j = 1;
 
-        for (var singleRow = 0; singleRow < arrAllRows.length; singleRow++) {
-            var rowCells = arrAllRows[singleRow].split(',');
-            for (var rowCell = 0; rowCell < rowCells.length; rowCell++) {
-               oWorksheet.GetCells(i,j).SetValue(rowCells[rowCell]);
+        for (let singleRow = 0; singleRow < arrAllRows.length; singleRow++) {
+            let rowCells = arrAllRows[singleRow].split(',');
+            for (let rowCell = 0; rowCell < rowCells.length; rowCell++) {
+               worksheet.GetCells(i,j).SetValue(rowCells[rowCell]);
                 j = j + 1;
             }
             i = i + 1;
@@ -42,7 +42,7 @@ Imports data from remote CSV/TXT files into the spreadsheet.
 })();
 ```
 
-Methods used: [GetActiveSheet](../../../../office-api/usage-api/spreadsheet-api/Api/Methods/GetActiveSheet.md), [GetCells](../../../../office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetCells.md), SetV[SetValue](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/SetValue.md)alue
+Methods used: [GetActiveSheet](../../../../office-api/usage-api/spreadsheet-api/Api/Methods/GetActiveSheet.md), [GetCells](../../../../office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetCells.md), [SetValue](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/SetValue.md)
 
 ## Result
 

@@ -1,6 +1,6 @@
 # SetColor
 
-Sets the text color to the current text run in the RGB format.
+Sets the text color for the current text run in the RGB format.
 
 ## Syntax
 
@@ -29,8 +29,12 @@ This example sets the text color for the current text run in the RGB format.
 
 ```javascript editor-docx
 let doc = Api.GetDocument();
-let textPr = doc.GetDefaultTextPr();
-textPr.SetColor(255, 111, 61, false);
 let paragraph = doc.GetElement(0);
-paragraph.AddText("A sample text with the color set to orange using the text properties.");
+let run = Api.CreateRun();
+run.AddText("This is just a sample text. ");
+paragraph.AddElement(run);
+run = Api.CreateRun();
+run.SetColor(255, 111, 61);
+run.AddText("This is a text run with the font color set to orange.");
+paragraph.AddElement(run);
 ```

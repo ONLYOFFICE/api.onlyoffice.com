@@ -95,7 +95,7 @@ function CardCategory({item}: {item: PropSidebarItemCategory}): ReactNode {
   return (
     <CardLayout
       href={href}
-      icon="📄️"
+      icon="📄"
       title={item.label}
       description={item.description}
     />

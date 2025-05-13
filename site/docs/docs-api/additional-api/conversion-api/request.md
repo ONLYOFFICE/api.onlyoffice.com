@@ -92,7 +92,7 @@ Presence: optional
 
 #### documentLayout.isPrint
 
-Defines if the print mode is turned on or off. This parameter is used only for converting *docx/docxf* into *pdf*. If this parameter is equal to **true**, the *drawPlaceHolders* and *drawFormHighlight* flags are used as described above. If this parameter is **false**, the *drawFormHighlight* flag does not work and the *drawPlaceHolders* parameter allows saving the forms in the *pdf* format. The default value is **false**.
+Defines if the print mode is turned on or off. This parameter is used only for converting *docx* into *pdf*. If this parameter is equal to **true**, the *drawPlaceHolders* and *drawFormHighlight* flags are used as described above. If this parameter is **false**, the *drawFormHighlight* flag does not work and the *drawPlaceHolders* parameter allows saving the forms in the *pdf* format. The default value is **false**.
 
 Type: boolean
 
@@ -170,7 +170,7 @@ Presence: optional
 
 #### pdf.form
 
-Defines whether the document will be converted to the *pdf* form (**true**) or to a regular *pdf* file (**false**). If this parameter is omitted, the document contents will not be changed. If the document has fields, they will remain in the converted document. If has not, the converted document will not contain them either. For example, you don't need to specify this parameter when converting *docxf* and *oform* formats to *pdf*. They will always be converted to *pdf* forms.
+Defines whether the document will be converted to the *pdf* form (**true**) or to a regular *pdf* file (**false**). If this parameter is omitted, the document contents will not be changed. If the document has fields, they will remain in the converted document. If has not, the converted document will not contain them either. For example, you don't need to specify this parameter when converting *oform* format to *pdf*. It will always be converted to *pdf* forms.
 
 Type: boolean
 

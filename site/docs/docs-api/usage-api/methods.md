@@ -12,7 +12,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config)
 
 ## createConnector
 
-Create the [connector](./automation-api.md) to interact with text documents, spreadsheets, presentations, and fillable forms from the outside.
+Create the [connector](./automation-api.md) to interact with text documents, spreadsheets, presentations, PDFs, and fillable forms from the outside.
 
 > This parameter is available for editing only for ONLYOFFICE Docs Developer.
 
@@ -106,7 +106,7 @@ Updates the file version without reloading the editor. This method must be calle
 This method must take the editor initialization configuration for the current file version. The configuration must contain all the parameters used for signing a request to [open a file](../additional-api/signature/browser.md#opening-file) for editing. The following parameters cannot be changed in the config: [documentType](./config/config.md#documenttype), [type](./config/config.md#type), [events](./config/events.md).
 
 ``` ts
-refreshFile({
+docEditor.refreshFile({
   document: {
     fileType: "docx",
     key: "Khirz6zTPdfd7",

@@ -1,8 +1,6 @@
 # SetStyle
 
-The text style base method.\
-💡 This method is not used by itself, as it only forms the basis for the [ApiRun#SetStyle](../../ApiRun/Methods/SetStyle.md) method which sets\
-the selected or created style to the text.
+Sets a style to the current run.
 
 ## Syntax
 
@@ -16,7 +14,7 @@ expression.SetStyle(oStyle);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| oStyle | Required | [ApiStyle](../../ApiStyle/ApiStyle.md) |  | The style which must be applied to the text character. |
+| oStyle | Required | [ApiStyle](../../ApiStyle/ApiStyle.md) |  | The style which must be applied to the text run. |
 
 ## Returns
 
@@ -24,7 +22,7 @@ expression.SetStyle(oStyle);
 
 ## Example
 
-This example sets a style to run.
+This example sets a style to the run.
 
 ```javascript editor-docx
 let doc = Api.GetDocument();

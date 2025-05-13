@@ -9,25 +9,25 @@ Adds the "State" label and the text form prefilled with "CA" if the zip code of 
 ``` ts
 (function()
 {
-    var document = Api.GetDocument();
-    var allForms = document.GetAllForms();
+    let doc = Api.GetDocument();
+    let allForms = doc.GetAllForms();
     //California Zip Codes regex
-    const zipRegex = /^9[0-5][0-9]{3}$/;
+    let zipRegex = /^9[0-5][0-9]{3}$/;
     
     allForms.forEach(form => {
         if(form.GetFormKey() == "ZipCode") {
-            var input = form.GetText();
+            let input = form.GetText();
             //If the zip code is Californian, add the "State" label with the text form indicating "CA"
             if(zipRegex.test(input)) {
-                const stateForm = allForms.find(item => item.GetFormKey() === "State");
+                let stateForm = allForms.find(item => item.GetFormKey() === "State");
                 if(stateForm == null) {
-                    var stateTextForm = Api.CreateTextForm({"key": "State", "tip": "State", "required": false, "placeholder": "State", "comb": true, "maxCharacters": 2, "cellWidth": 3, "multiLine": false, "autoFit": false});
+                    let stateTextForm = Api.CreateTextForm({"key": "State", "tip": "State", "required": false, "placeholder": "State", "comb": true, "maxCharacters": 2, "cellWidth": 3, "multiLine": false, "autoFit": false});
                     stateTextForm.SetText("CA");
-                    var paragraph = Api.CreateParagraph();
+                    let paragraph = Api.CreateParagraph();
                     paragraph.AddTabStop();
                     paragraph.AddText("State: ");
                     paragraph.AddElement(stateTextForm);
-                    document.InsertContent([paragraph]);
+                    doc.InsertContent([paragraph]);
                 }
                 else {
                     stateForm.SetText("CA");

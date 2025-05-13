@@ -6,7 +6,11 @@ Connects the [TesseractJS-Core library](https://tesseract.projectnaptha.com/) fo
 
 **Supported editors:** documents, spreadsheets, presentations.
 
-![OCR](/assets/images/plugins/gifs/ocr.gif)
+```mdx-code-block
+import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
+
+<YoutubeVideo videoId="SQE6HhgBylg"/>
+```
 
 ## Installation
 

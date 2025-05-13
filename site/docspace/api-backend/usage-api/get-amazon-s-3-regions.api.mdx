@@ -5,7 +5,7 @@ description: "Returns a list of all Amazon regions."
 sidebar_label: "Get Amazon regions"
 hide_title: true
 hide_table_of_contents: true
-api: eJyNU8tu2zAQ/BVhzkTk2j0UugVoERTNKW5OgREw8tpiQ5MsuUrrCPz3YkXZiW0E6EXiY2e4O7M7gPU2oXnAkpiN26aqrpbso94SVgo+UNRsvPu+RoMt8fVOv3q3XNzR1niXoBApBe8SJTQD5rOZ/NaU2miCANHg1iSu/KbijqqCr+IR3nrH5FhQOgRr2vG5+lcS6IDUdrTTaIacc1b4PPt0yX/vdM+dj+aV1pCoRG0fDe/RPAzQqX2U+8dnkgNE0mso/ImGCau8Umdsd8R9dKnSlZ3y1tae5X0FhR1x5ydVoBA0d2hQ62Dq+dWsTpOedSpq1mlRv1WdKL5QTGOCfbRoMDzpRPfRZpwntBxjq9a7jdn2xQ4ovOho9JMtuk/gos1G95bRoGMOTV1b32rb+cTNl9kF+dcSXd3f3SJnUeMg3lKUL+ynEg7gfSA00MH8oD0UnN6N+/dhCkb4W++fDY2uGLfxI9qwlfDrYKQMiqmk8jJHVgg+8U6P3k+0N8SXbXNSxfDWRf9t31QD01+ug9XGyeN9kbB4+SAFQmF+NRsdK37KcpoPhbQYB6AktVIQlQU4HN3Mcvy7pyi9t3pzTXZZoSO9pji2wagtrtuWAo/22r6IfDYU4tGx926+/YSCiH7qS3FgWgj74crt33OfGlYykG9WHyCGoZie8zG+XH2ImCo8RIvOq5zzP0vLhX4=
+api: eJyNVktv2zgQ/ivEXHJhLdfZk27etFv0AQRIHORgGA0tjSw2MqklR0ldQf99MaQsW3YW8cWWOE/NfPMNWyC18ZAu4R6JtNl4kYh7sk5tEFYSbI1Okbbmaw4pbJDmW/XHmvvrO9xoazxIcOhrazx6SFuYTaf8l6PPnK7ZEFL4oT0JWwgqUUR74QbzzBpCQ2yl6rrSWQiX/PJs2oLPStwqfqJdjZCCXf/CjEBC7Tg50jHwPotzzY5jNDFCL9GGcIMOJBTWbRXFo+sZ61baPPsjXeWc2oEETbj17+dROiyOtDw5bTbsV2WxGmeiruskeFLU+AtTjMo3NseLDDoJpKlipduQ9KNTdY2uD/3X9ON5yx6Maqi0Tv/BPHjwmDVO0w7SZQvKZz9Z/vMZ+QAcqhwkvDpNCKtOtvA3KocO0mV4m9f6O+6Gs7f0ldfZXv123lA5e1vxtsaAxeWqW8mTpO+QGme8UKLqEaeq6gRxE5CwRSptj2duoKISUkhUrZPZZJr4fhISH+cg8dfJAa8e3Qs6H+rQuApSaNfK44OrOjhN6D7oisyaQm+aOEgg4UU5rdZVBExvHFtQqKbizp15+hRF4uHuB7dtdWjIPQ9IdDVuywHBofpnLh88ihtrnzUKNkJD/eyBBKO2wfLYoQTNZlkwYRj2PRvilET1WZTPhtCJnW2caDw6diyUyUWtvH+1jrsbRpwdrIND9twj5RLXV1FZtN8eF2Jhn9F0VyOn0ZfsH/7ZD8e3xwWHGkPzvZrNR4US2oscCd1WG8zFehcY7mreT07QuRIlqjwk0Bd1FLEvaq/TyQH7B55R4eA0k6gnisq+ildNpRhFFYEcJLA4QuNYumeO0WHAYCi0T5MkRJ1YU+1sUegMJ5ndxsNZMjADSCAu+OWmQT10x9Z73lZ5GF2VC5Vl6L0gK2pnCTPCXDj0tnEZ+oEGUnjk/3e0I7ft2eJQzXBwY42J5H1SVJZ+Er34fCxG1pd/NQNfm8Jyf39/8HpjFDUO34cbQ3pQ5/nJRWHdSV4TsShRhMqKbeNJrFHYNamAyRetAiifDuQWaWPUkSeBJq+tNjQRX4lhzeOJuVBMpnHiI8rYV5jhp6MPeZoc0H38fSeM0fF7YcNn9/toXmvmQ3Q+fvD15ONkymWqraetCuuyd/wF6fzyMCpXe7hLXLwK+voT/qakrpQ2HLyJdBz3wpKbAxJmk2lg/7gb+LG/JUnw1+EaFJNaSSitJzZsh83Q8fG/DTpel6vDBogbbz/+vFICdcM8y7CmsCqqJgLk5GrEK2DYY18+L0CGcR5jKtJ2/8De9yKzO/Y9ZvmYAf/yvn3Tom0jYLtu0I+i/7UYSDBqc51XXdf9B128nHU=
 sidebar_class_name: "get api-method"
 info_path: site/docspace/api-backend/usage-api/api
 custom_edit_url: null
@@ -54,7 +54,7 @@ Returns a list of all Amazon regions.
 <StatusCodes
   id={undefined}
   label={undefined}
-  responses={{"200":{"description":"List of the Amazon regions","content":{"application/json":{"schema":{}}}},"401":{"description":"Unauthorized"}}}
+  responses={{"200":{"description":"List of the Amazon regions","content":{"application/json":{"schema":{"type":"object","properties":{"response":{"type":"object"},"count":{"type":"integer","format":"int32"},"links":{"type":"array","items":{"type":"object","properties":{"href":{"type":"string"},"action":{"type":"string"}}}},"status":{"type":"integer","format":"int32"},"statusCode":{"type":"integer","format":"int32"}},"title":"ObjectWrapper"}}}},"401":{"description":"Unauthorized"}}}
 >
   
 </StatusCodes>

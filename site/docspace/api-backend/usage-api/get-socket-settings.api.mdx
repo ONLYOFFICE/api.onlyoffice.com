@@ -5,7 +5,7 @@ description: "Returns the socket settings."
 sidebar_label: "Get the socket settings"
 hide_title: true
 hide_table_of_contents: true
-api: eJyFUstu2zAQ/BVhzkTkGj0UvAVtERTtKW5OgREw8tpiLZEsuUrrCvz3YkXZiZ0GvehBzszuzuwINrsEfY8VMVu3S1VdffR9712V5hOsFXygaNh692UDjR3xyjd74iMJCpFS8C5Rgh6xXCzktaHURBuEB41COcnqqh0eq7vbb1BovGNyLBwTQmebqVb9IwlxRGpa6g30mHPOCu8X716r3zkzcOuj/UMbCCpRM0TLB+j7ESY1D3L/sCc5QCSzgcKvaJmwzmt1oXZLPESXKm6pSud9X0GhJ2797AQUguEWGrUJtl5eLeojtC5USDPxiWKaehliB43x0SS6i13GZe3VhK0a77Z2NxTbofBkojWPXTF4JhcbtmboGBotc9B13fnGdK1PrD8sXol/KujJ95xl8KNPKzG5qJ+7NYIPgaBhgv1KByg400//L2EKVvQb7/eWpgCs2/qJbbkT+HWwMgbFVFp5WiIrBJ+4N1PMs+wN8b98vxxlfN6a/8U198/0m+vQGeuk8FDsK9ndy3BQWF4tprROJecE1wriqADHU3JZjn8OFGWl1s8JyV9WaMlsKE6RTz7iumko8BRlNxRDL3Zd8jjt1s3n71AQg88zKG7PH6J+vHKHl9rn4ZQO5JnVG4xxLAHnfMKXqzcZ84RHtPi6zjn/BQknewU=
+api: eJyNVk1v2zgQ/SvEXHLh2q67J928abdod4EATYIcAqOhpbHFRiK55CipV9B/XwwpyZadhXOxJfLNB4dv3qgFUrsA2SPcIpE2uyDm4trWtTUi9CuwlmAdekXamq8FZLBDurX5M9JgBBI8BmdNwABZC8vFgv8KDLnXju0gg2Qyus1E2WzE/fe/QUJuDaEhtlHOVTqPseY/Axu2EPISa8VPtHcIGdjNT8wJJDjPmZFOYYcczpEdx2hShH5HG8IdepCwtb5WlJY+LhlbafMcjrDKe7UHCZqwDpfzKD1uj1CBvDY79qvyVIuzra7rJARS1IR3ppjA17bAdxl0EkhTxaCbmPSDV86h70P/vvhwfmH3RjVUWq//xSJ6CJg3XtMesscWVMh/8P6PZ+QF8KgKkPDqNSGsO9nCH6g8esge49vK6b9wP669hVdB5wP8ZtVQuXwbeOMwEvFx3a3lSdLfkRpvgqASRZgybgYSaqTS9hzme1NUQgZz5fR8OVvMB+g8mQKf2b+gD/HIja8gg3ajAt77qoPT2LcRK3JrtnrXpIYBCS/Ka7WpEjd641TtrWoqvqQzT5/SVmyPruNTDrW/5V5IrqY3cCBrLPSZy/uA4traZ42CjdBQ32Ygwag6Wh47lKDZLI8mzLj+esY4JZE7i/LZEHqxt40XTUDPjoUyhXAqhFfr+SJjN7ODTXTInntSvMf1VQKL9tvDnbizz2i6q4nT5Ev2D38OffDt4Y5DTVl4qWarSaGEDqJAQl9rg4XY7CPJrlZ9k0TMlShRFTGBvqiTiH1Re0wnR5ofJEXFhdNMEk5sK/sqXjWVYhJVRB2QwNuJGse7g0hMFiMHY6FDNp/HqDNrqr3dbnWOs9zWaXE5H0UAJBAX/P2mER5vx7pBolURu1QVQuU5hiDICuctYU5YCI/BNj7HMHZ8Bg/8fwGdZGwQhkM148K1NSbp9ElRefeT6LfP22Ji/f5TM/G12Vq+31+/Bb0zihqPl+nGlB7h3D+F2Fp/ktdM3JUoYmVF3QQSGxR2Qypy8kWrSMqng6Al2ZjcyJNAUzirDc3EV2Jac3tiIVQQSqSOTyxjX7GHn44O8jQ7sPv4fCeK0fH71sZj96Nn5TTrIfqQDvxx9mG24DI5G6hWcTL2jr8gvaXhpzVrD98Ol6S/rz3hL5q7SmnDgZskxWkOPPLFgITlbBGVfwzZT4O1hNIGYmA7ToGOl/9p0PMUXB/UPg2yodV5fESZhlWeo6M4FqomkeHki4flfpxTXz7fgYytO+VPkuj+gb0PW2Z/7Huq6CkD/uUx+qZF2yZydt2IT1v/azEKXkJzXddd1/0H6cWR/A==
 sidebar_class_name: "get api-method"
 info_path: site/docspace/api-backend/usage-api/api
 custom_edit_url: null
@@ -54,7 +54,7 @@ Returns the socket settings.
 <StatusCodes
   id={undefined}
   label={undefined}
-  responses={{"200":{"description":"Socket settings: hub URL","content":{"application/json":{"schema":{}}}},"401":{"description":"Unauthorized"}}}
+  responses={{"200":{"description":"Socket settings: hub URL","content":{"application/json":{"schema":{"type":"object","properties":{"response":{"type":"object"},"count":{"type":"integer","format":"int32"},"links":{"type":"array","items":{"type":"object","properties":{"href":{"type":"string"},"action":{"type":"string"}}}},"status":{"type":"integer","format":"int32"},"statusCode":{"type":"integer","format":"int32"}},"title":"ObjectWrapper"}}}},"401":{"description":"Unauthorized"}}}
 >
   
 </StatusCodes>

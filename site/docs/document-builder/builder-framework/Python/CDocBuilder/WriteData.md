@@ -23,6 +23,19 @@ def WriteData(self, str path, str value, bool append);
 ### Python
 
 ``` py
+import os
+import docbuilder
+
 builder = docbuilder.CDocBuilder()
-builder.WriteData("result.log", "Alert!", false)
+builder.CreateFile("docx")
+
+context = builder.GetContext()
+globalObj = context.GetGlobal()
+api = globalObj["Api"]
+
+builder.WriteData("result.log", "Alert!", False)
+
+dstPath = os.getcwd() + "/result.docx"
+builder.SaveFile("docx", dstPath)
+builder.CloseFile()
 ```

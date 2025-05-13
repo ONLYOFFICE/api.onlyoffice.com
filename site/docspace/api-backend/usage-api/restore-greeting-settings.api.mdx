@@ -5,7 +5,7 @@ description: "Restores the current portal greeting settings."
 sidebar_label: "Restore the greeting settings"
 hide_title: true
 hide_table_of_contents: true
-api: eJyVk09rGzEQxb/K8s4i65oeim6BQikptMTNKZigrCdeNWtJlWbTuou+exlp7dQ2OfSyf6R5o5n3G01gs03Q91gRs3Xb1LTNp0gk302a17BW8IGiYevd5w00IiX2kQ6RBzGU7ATvEiXoCcvFQl4bSl20QdTQuEivGyZnHDfO7AgKnXdMjkVpQhhsV85tfySRT0hdTzsDPeWcs8L7xbvLM+6cGbn30f6hDSQqUTdGy3vo+wkmdQ+y//BMsoBIZgOFX9EyYZ3X6izbbe02NdxT040xkuMm+MhmaLbn3VxBYUfce/Ep+MRQCIZ7aLQm2HZ5tWgPse1BfVyYjYVUHF8oplLwGAdoTI8m0V0cMs4LXJXYpvPuyW7HygkKLyZa8zhUFrO4evVkxoGh0TMH3baD78zQ+8T6w+Ii+cca3dzdfkHO4s7BzJWQqNlPLZ3A+0DQMMHe0B4KBa0+DVOwkr/z/tlSoWTdky9qy4OEXwcrbVBMtZSXJbIqpu5MmYU57Qyo8LkAct7Q9Dpg/0927ovpN7dhMNZJQWO1tVK+l6ahsLxaFIrHIs5Z18tSaK8VxH0RT0fKWZZ/jhRlRtevNOUvK/RkNhTLeBTPcd11FLhgH8Zq/tnlEXbH0fz2dfUdCkLjFFhFM39I+sOW2/+b/JRkLUGeWb2hmKY6DTkf4+vWm4q5xUO0mL3OOf8FfY6hzQ==
+api: eJyVVk1v4zYQ/SvEXHJhba+3J93cbFvstkCKdYIcDGNDS2OLG5lkyVGyrqD/XgwpyZadIu7FljifnHnzRg2Q2gXIVrBEIm12QUzF7x6Rn0XozmAtwTr0irQ1nwvIwGMg67HX7I1BssRZEzBA1sB8NuO/AkPutWNryODCfSYIjTIkjNojSMitITTElsq5Sucx7vR7YPMGQl7iXvETHRxCBnbzHXMCCc5zlqRT8D6TE81AXpsdtByjThE6iTaEO/QgYWv9XlE6+jhn3Uqb53Ciq7xXB5CgCffh/TxKj9s3c1B5qsiFqG1bCYEU1eHKFJPyrS3wKoNWAmmqWGkZYz565Rz6LvTPsw+XbXswqqbSev0PFtFDwLz2mg6QrRpQIf/G8m/PyAfgURUg4dVrQli3soFfUHn0kK3i28LpP/AwnL2lr4LOe/W7RU3l/G3FO4cRlKt1u5ZnSX9NOA2CShR57T0aEs56UpXYneNwAhL2SKVlhDsbYisVlZDBVDk9nU9m01532lsPB91IABfGv6APsS61ryCDZqMCPviqhfMEl1FX5NZs9a5OEwYSXpTXalMlAHXGqSVbVVfcyQtPn5JIPHz9k9u4PjZoyQOTXI3bdER07MaFy4eA4tbaZ42CjdBQN4sgIc5qNnYoQbNZHk0Yll0PhzglkbuI8qsh9OJgay/qgJ4dC2UK4VQIr9Zzt+PIs4NNdMieO+Rc4/omKYvmy+O9uLfPaNqbkdPkS3YPv/XD8uXxnkONofpezRajQgkdRIGEfq8NFmJziEC8WXSTFHVuRImqiAl0RR1F7Ira6bRymIUj76h4cJ5J0hPbyr6KV02lGEUVkSwksDhB41TaM8noMGIwFjpk02mMOrGmOtjtVuc4ye0+Hc6nA1OABOKCX28a1WN3rOt5XBVxlFUhVJ5jCIKscN4S5oSF8Bhs7XMMAy1k8Mj/72gnruvZ41jNeHBrjUlkflZUln4SnfhyLEbW19+aga/N1nJ/f/wU9M4oqj2+DzeG9KDO81OIrfVneU3EfYkiVlbs60Big8JuSEVMvmgVQfl0pLhEG6OOPAk0hbPa0ER8JoY1jycWQgWhRJr4hDL2FWf46eQiT5Mjuk/vd8YYLb9vbbx2t58WTjMfog/pwh8nHyYzLhMT9F7F9dk57sg+ZnBB7ueVa46fGf9/S3Q9IfxBU1cpbTihOlF02hgrbhhImE9mcSMMSZzvjfTJFDfHWkLJWydbQTNsjJaP/67R81pdHzdD2ow9LfCqiZQOizxHR3GFVHUCztknFK+GYc39dbe8BxnnfAy2xOfdA7vvReZw6nxM/ykF/uXF/KZF0yQkt+2gn0T/aTGwY9LmYq/btv0Xkqa5BA==
 sidebar_class_name: "post api-method"
 info_path: site/docspace/api-backend/usage-api/api
 custom_edit_url: null
@@ -54,7 +54,7 @@ Restores the current portal greeting settings.
 <StatusCodes
   id={undefined}
   label={undefined}
-  responses={{"200":{"description":"Greeting settings: tenant name","content":{"application/json":{"schema":{}}}},"401":{"description":"Unauthorized"}}}
+  responses={{"200":{"description":"Greeting settings: tenant name","content":{"application/json":{"schema":{"type":"object","properties":{"response":{"type":"string"},"count":{"type":"integer","format":"int32"},"links":{"type":"array","items":{"type":"object","properties":{"href":{"type":"string"},"action":{"type":"string"}}}},"status":{"type":"integer","format":"int32"},"statusCode":{"type":"integer","format":"int32"}},"title":"StringWrapper"}}}},"401":{"description":"Unauthorized"}}}
 >
   
 </StatusCodes>

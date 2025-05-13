@@ -1,10 +1,10 @@
 ---
-sidebar_position: -8
+sidebar_position: -9
 ---
 
 # Basic concepts
 
-[ONLYOFFICE Docs](https://www.onlyoffice.com/download-docs.aspx?from=api#docs-developer) is an open-source office suite that includes editors for text documents, spreadsheets, presentations and fillable forms.
+[ONLYOFFICE Docs](https://www.onlyoffice.com/download-docs.aspx?from=api#docs-developer) is an open-source office suite that includes editors for text documents, spreadsheets, presentations, PDFs, and fillable forms.
 
 This documentation describes:
 
@@ -17,7 +17,7 @@ This documentation describes:
 
 ONLYOFFICE Docs provides the following features:
 
-- creating, editing and viewing text documents, spreadsheets, presentations and fillable forms;
+- creating, editing and viewing text documents, spreadsheets, presentations, PDFs, and fillable forms;
 - collaborating on files with other teammates in real time.
 
 ONLYOFFICE Docs API is used to let the developers integrate the ONLYOFFICE Document/Spreadsheet/Presentation/Pdf Editors into their own web sites and setup and manage the editors. ONLYOFFICE Docs can be customized to look and feel like part of your application or webpage by [customizing the user interface](../usage-api/config/editor/customization/customization-standard-branding.md).

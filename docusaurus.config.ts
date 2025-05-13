@@ -104,6 +104,12 @@ const config: Config = {
           } satisfies OpenApiPlugin.Options,
         } satisfies Plugin.PluginOptions,
       },
+    ],
+    [
+      '@docusaurus/plugin-google-gtag',
+      {
+        trackingID: 'GTM-5NW47TX'
+      },
     ]
   ],
 
@@ -132,12 +138,6 @@ const config: Config = {
               type: 'docSidebar',
               sidebarId: 'docspacePlugins',
               label: 'Plugins SDK',
-              docsPluginId: 'api',
-            },
-            {
-              type: 'docSidebar',
-              sidebarId: 'docspaceOAuth',
-              label: 'OAuth API',
               docsPluginId: 'api',
             },
             {

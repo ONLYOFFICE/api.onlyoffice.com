@@ -1,0 +1,63 @@
+---
+id: get-room-creating-status
+title: "Get the room creation progress"
+description: "Returns the progress of creating a room from the template."
+sidebar_label: "Get the room creation progress"
+hide_title: true
+hide_table_of_contents: true
+api: eJylV99v2zYQ/leIe8mLaqduN3R685KmSDegQ5MgD4HR0NLJYiORHHlK4hr634cjJVm208XDXmKH95N3331Hb4DkykN6BxeqQi+m4qsxtYdFAsaik6SMvswhhRUSS84cSlJ6dUWSGg8JOPTWaI8e0g3MTk/5I0efOWXZFlIYVDOjCTWxhrS2UlnwPv3uWW0DPiuxlvyN1hYhBbP8jhlBAtZxLqRikD7iEZrG1Jz8oKc04QodJHspXpcoWFlcnk8ggcK4WlLUfzeDBPBZ1rZCSH/78P7XNoRZOfR+5Fo39fInnnttYQqRdfUTMgYsnKkFlSgIa1tJwp34uWmWFY4TePNh8kubADpn3Ci6J6f06sXoQVXU6L1coaBSklBeeNQknkrUfSLKC20o5oe58E2WofdFU1Xrl5PUTVVJzi4l1+AoRfCmZtVngjYB5c8MnxOOG7E0pkKpDxK+spipQqHn3KhEF8JaZ7Jj68cXyfqIk3HpOM22TUDmueJwsvprhJZCVh7/tXtWOlkjoTu+kaQoVIQn58KZ+rqTxZE4J8MVykwTh+IApHs4bBOolH4Yo046J9eQgCKs/esDUTosDlHDNcnijQ9ELVfMxwk+LsWofGZyPMqgfa1Kt05ai65L5f3p20OGudGyodI49QPz4NFj1jhFa0jvNiB99o3l3x6QD8ChzCGBJ6cIYdEmG/gdpUMH6V34b27VH7gezl7Sl15lvfqXeUPl7GXFLxYDe94t2sU+tr4iNU77HuD/jSFqpNJ0tMxdllRCClNp1XQ2OZ0WzOVTNvdTtu9Np77nYo/uEZ0PBWpcBSlsltLjjavaw6EMuiIzulCrJu4ESOBROsUEEIDRGcfeFLKpuMUHns6jSNx8/ZP7udh26orJP7ra7dcW6qEtBy5vPIozYx4UCjZCTd1eYYqSdbAcO0xAsVkWTBivXTOHOCWRPYjyURM6sTaNE41Hx46F1Lmw0vsn47jtYX0FbgsO2XMHoWNcn0Rlsfl8ey2uzQPq9mTHafSVdF8u+in6fHvNoXYx+1rN5juFYsbMmddqpTEXy3VA28m8G6mgcyJKlHlIoCvqTsSuqJ1OmwxDsSUkGQ72M4l6oqjMk3hSVIqdqCKwSAIsjtAYS3uK2TkMGAyF9ul0GqJOjK7WpihUhpPM1PFwNh0og3maC368aVAP3TG2f5PIPMy0zIUMm1OQ4bEmzHidOvSmcRn6gR9SuOXPV7Qj6fU0sq1mODgzWkeW3ysqS89FJz4cix3r42/NwFe6CDvr+Y1XKy2pcfg63BjSgzrPTy4K4/bymghetqGyom48iSUKsyQZMPmoZADlfU9wPW3sdOReoM6tUZom4jK8cng8MRfSCynixEeUsa8ww/eji9xPtuge32+PMfhNw1Xga3eLa24V8yE6Hy/8bvJ2csplssZTLcNe7Rx/QgrRA7VHqjd64P/90m22b+b/ty+6BvGjbGorqTRn10S+jsvjjrsHCcwmpzxxvED4dR9+DCQwXiIwPAgWCZTGExtvhvXR8vHfDTpetovtmoj7sucI3juB32GeZWgp7JOqiSja+23Ae2JYeJ8+XkMSZn4XeJHbuy/svRfp9dj37iqIGfBf3tYvWmw2EdVtO+hH0U8tBqaM2lzrRdu2/wBYL6fP
+sidebar_class_name: "get api-method"
+info_path: site/docspace/api-backend/usage-api/api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get the room creation progress"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/files/rooms/fromtemplate/status"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns the progress of creating a room from the template.
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Status","content":{"application/json":{"schema":{"type":"object","properties":{"response":{"type":"object","properties":{"roomId":{"type":"integer","description":"The room ID.","format":"int32","example":9846},"progress":{"type":"number","description":"The progress of creating a room from the template.","format":"double","example":-8.5},"error":{"type":"string","description":"The error message that is sent when a room is not created successfully from the template.","nullable":true,"example":"some text"},"isCompleted":{"type":"boolean","description":"Specifies whether the process of creating a room from the template is completed.","example":true}},"additionalProperties":false,"description":"The progress parameters of creating a room from the template.","title":"RoomFromTemplateStatusDto"},"count":{"type":"integer","format":"int32"},"links":{"type":"array","items":{"type":"object","properties":{"href":{"type":"string"},"action":{"type":"string"}}}},"status":{"type":"integer","format":"int32"},"statusCode":{"type":"integer","format":"int32"}},"title":"RoomFromTemplateStatusWrapper"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

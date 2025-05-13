@@ -5,7 +5,7 @@ description: "Requests a portal license if necessary."
 sidebar_label: "Request a license"
 hide_title: true
 hide_table_of_contents: true
-api: eJyVkkFv2zAMhf+K8M5CHOQ0+NZhwzC0p2Y9BUHBKEysVZFUiQ4WGP7vgyy3CbLTfLElk4/k9zhA6JjRbrBmEeuPWTXqyRr2mbHVCJETiQ3+5x4tEr/3nOXjv0biHIPPnNEOWC2X5bXnbJKNJQktvobgmLw6k+u5VZJ6VvagpGPlqoyyWRVhm3gPDRO8sJeiRDE6a6byze9c5AZk0/GJypdcIqPFrhbAWB59V/25NpwVqRiSkLsWPSjPhnOmdFlA48TShTLjkQUakaRDi4aibVaLZZNnOs2c39x0nDmdORWIA/rk0GLYUeaX5EbcN7SeYpUJ/mCPfUULjTMlSztXOc7JleWBeido0YnEtmlcMOS6kKX9svxH/FuNVi/PTwXHtrRm+mTlsi7Uqjpl80q9dK9vfLnBSNE+8gUank7T+TZMwxZ9E8KbZRTM1h/ClG3FlfCHaMsYnHJt5bzCqBFDlhNNvs2ysyGKPoy4H2K4LsB/uDcPIfxHmujI+lK9rwyrlZsyITRWi+VkWbUTGu5mmWdLtxoFcUkaPq0cy/V7z+mCdrO9WlZOo0bHtOc07cAEFg/GcJTJW9dXwnfbXAz6XLsf339hHP8CUu46Jw==
+api: eJyVVlFv2zgM/isEX/ris3PZm9+6bnfYbsCAtUUfimJVbDrW6kiaRLfzBf7vB0pO4yQYmntKIpEfKfLjx2yR1TpgeY/XxKzNOkABX3RFJhA+ZGgdecXamk81lujpZ0+Bd/cZegrOmkAByy0uFwv5qClUXjtxwhLfW9uRMvCsup5KYN8T6Aa4JegSDOgAAqw91ZhhZQ2TYUFSznW6iuGLH0HgthiqljZKvvHgCEu0qx9UMWbovCTLOiWzy2xmuUqp4ChB+hRiutKGaU0eM2ys3yhOR++WYttp8xRmtsp7NWCGmmkT3k6k9dTMrAJ7bdaCq6pUopOrcRwzDKy4D2emmIyvbE1nOYwZsuaO9u2588o58jH2mB218FvqegAFznpW3b5zDRiqKATlhxwz3BC3VoiyplgIxS2WWCini2W+KMJEsWLyL2ZtD+SfyQsTt9j7DkvcrlSgW9+NeJzQdbSFyppGr/vET8zwWXmtVl0q++ScCNmovpP3nyB9SFdw++2LvP1B8qh6r3m4Fp4lKBWq76rn9vsTDXMeOP0PDSeQt4HgytonTSBOZHiiMGZo1CZ6zgEz1OJWRRdp5nsVdDWL0zK7kygfDZOHwfYe+kBegEGZGpwK4cX6WNH4AuF9BBRkUp78edAXyRi2n+9u4MY+kRkvDkATVjZ9+WtHsc93NxLqMhbnJOBvanZ5UCgRhJqY/EYbqmE1RLW4ECPr9b/R5gJaUnVMYCrqQcSpqJPNmOFX8V7Op1XFg+NMkh00nX2BF80tHESFOGIZynWixvx2N38Hh5GDsdChLIoYNbemG2zT6Iryym7S4bLYuUkAloKf7xrNY3es28mfquPoqhpUJSMKbMF5y1Qx1eAp2N5XFDDDF69ZSnInn29YJ3346iguhH0148GVNSZJ4FFR5fYDTNenY3Hgff6rhfjaNFb6++uPoNdGce/pbboJpV/NZX5qaKw/yiuHm5YgVhY2fWBYEdgVq8jJZ60iKR/30pZk46Ajj0CmdlYbzuETC61lPKkGJVqaJj6xTLDiDD/OHvKY79k9f9+RYozyu7Hx2ZOqXzotekg+pAe/y//MF1ImZwNvVFw6E/Ak7qB2on5cre1+I/+PTTA1gOkXF65TOm7dPulxWgv30h3McJkvovyn1YCyb/f/Lqb18JBhawOL0/Z1LYxy/LMnP2B5/7CXf/k1ZrvZl30SdRsvq4ocxz3R9YkdR38vRP9fV9jfH29wHP8DdHAquw==
 sidebar_class_name: "get api-method"
 info_path: site/docspace/api-backend/usage-api/api
 custom_edit_url: null
@@ -54,7 +54,7 @@ Requests a portal license if necessary.
 <StatusCodes
   id={undefined}
   label={undefined}
-  responses={{"200":{"description":"Boolean value: true if the license is required","content":{"application/json":{"schema":{"type":"boolean"}}}}}}
+  responses={{"200":{"description":"Boolean value: true if the license is required","content":{"application/json":{"schema":{"type":"object","properties":{"response":{"type":"boolean"},"count":{"type":"integer","format":"int32"},"links":{"type":"array","items":{"type":"object","properties":{"href":{"type":"string"},"action":{"type":"string"}}}},"status":{"type":"integer","format":"int32"},"statusCode":{"type":"integer","format":"int32"}},"title":"BooleanWrapper"}}}}}}
 >
   
 </StatusCodes>

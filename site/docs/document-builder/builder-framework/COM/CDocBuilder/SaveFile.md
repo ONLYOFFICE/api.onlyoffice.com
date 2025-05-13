@@ -15,7 +15,7 @@ HRESULT SaveFile([in] BSTR type, [in] BSTR path, [out, retval] VARIANT_BOOL* res
 
 | **Name** | **Type**      | **Description**                                                                                                                                                                                                |
 | -------- | ------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| type     | BSTR          | The file extension. The following values are possible: `docx`, `odt`, `rtf`, `txt`, `pptx`, `xlsx`, `ods`, `csv`, `pdf` (see [OFFICESTUDIO_FILE_XXX](../../../builder-app/overview.md#format-types) values). |
+| type     | BSTR          | The file extension. The following values are possible: `docx`, `odt`, `rtf`, `txt`, `pptx`, `xlsx`, `ods`, `csv`, `pdf` (see [OFFICESTUDIO_FILE_XXX](../../../get-started/supported-formats.md) values). |
 | path     | BSTR          | The path to the file to be saved together with its name and extension.                                                                                                                                         |
 | result   | VARIANT_BOOL* | Specifies if the operation of saving a file is successful or not.                                                                                                                                              |
 
@@ -34,7 +34,7 @@ HRESULT SaveFile([in] BSTR type, [in] BSTR path, [out, retval] VARIANT_BOOL* res
     </TabItem>
     <TabItem value="builder" label=".docbuilder">
         ```ts
-        builder.SaveFile("docx", "result.docx")
+        builder.SaveFile("docx", "result.docx");
         ```
     </TabItem>
 </Tabs>

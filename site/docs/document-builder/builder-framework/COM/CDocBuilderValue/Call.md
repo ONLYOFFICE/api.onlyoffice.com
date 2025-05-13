@@ -42,7 +42,7 @@ HRESULT Call([in] BSTR name, [in, optional] VARIANT val1, [in, optional] VARIANT
     </TabItem>
     <TabItem value="builder" label=".docbuilder">
         ```ts
-        const oDocument = Api.GetDocument()
+        let doc = Api.GetDocument();
         ```
     </TabItem>
 </Tabs>

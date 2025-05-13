@@ -9,14 +9,14 @@ Unhides all the rows and columns in the active spreadsheet.
 ``` ts
 (function()
 {
-    var activeSheet = Api.ActiveSheet;
-    var indexRowMax = 1048576;
-    var n = 1;
+    let activeSheet = Api.ActiveSheet;
+    let indexRowMax = 1048576;
+    let n = 1;
     for (let i = 0; i < indexRowMax; i++) {
         activeSheet.GetRows(n).SetHidden(false);
         n++;
     }
-    var newRange = activeSheet.GetRange("A1");
+    let newRange = activeSheet.GetRange("A1");
     newRange.SetValue("All the rows and columns are unhidden now");
 })();
 ```

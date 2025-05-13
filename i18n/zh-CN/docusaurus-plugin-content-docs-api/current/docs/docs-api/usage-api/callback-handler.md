@@ -236,185 +236,183 @@ import TabItem from '@theme/TabItem';
 
 ## 文档保存示例
 
-### .Net (C#) 文档保存示例
+<Tabs>
+  <TabItem value="csharp" label=".Net (C#)">
+      ``` cs
+      public class WebEditor : IHttpHandler
+      {
+          public void ProcessRequest(HttpContext context)
+          {
+              string body;
+              using (var reader = new StreamReader(context.Request.InputStream))
+                  body = reader.ReadToEnd();
 
-``` cs
-public class WebEditor : IHttpHandler
-{
-    public void ProcessRequest(HttpContext context)
-    {
-        string body;
-        using (var reader = new StreamReader(context.Request.InputStream))
-            body = reader.ReadToEnd();
+              var fileData = new JavaScriptSerializer().Deserialize<Dictionary<string, object>>(body);
+              if ((int) fileData["status"] == 2)
+              {
+                  var req = WebRequest.Create((string) fileData["url"]);
 
-        var fileData = new JavaScriptSerializer().Deserialize<Dictionary<string, object>>(body);
-        if ((int) fileData["status"] == 2)
-        {
-            var req = WebRequest.Create((string) fileData["url"]);
+                  using (var stream = req.GetResponse().GetResponseStream())
+                  using (var fs = File.Open(PATH_FOR_SAVE, FileMode.Create))
+                  {
+                      var buffer = new byte[4096];
+                      int readed;
+                      while ((readed = stream.Read(buffer, 0, 4096)) != 0)
+                          fs.Write(buffer, 0, readed);
+                  }
+              }
+              context.Response.Write("{\"error\":0}");
+          }
+      }
+      ```
 
-            using (var stream = req.GetResponse().GetResponseStream())
-            using (var fs = File.Open(PATH_FOR_SAVE, FileMode.Create))
-            {
-                var buffer = new byte[4096];
-                int readed;
-                while ((readed = stream.Read(buffer, 0, 4096)) != 0)
-                    fs.Write(buffer, 0, readed);
-            }
+     > *PATH\_FOR\_SAVE* 是保存文件的计算机文件夹的绝对路径，包括文件名。
+
+      在 [.Net example](../get-started/language-specific-examples/net-example.md) 页面上，您将了解如何将 ONLYOFFICE 文档集成到使用 .Net (C#) 或 .Net (C# MVC) 编写的 Web 应用程序中。
+ </TabItem>
+  <TabItem value="java" label="Java">
+      ``` java
+      public class IndexServlet extends HttpServlet {
+          @Override
+          protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+              PrintWriter writer = response.getWriter();
+
+              Scanner scanner = new Scanner(request.getInputStream()).useDelimiter("\\A");
+              String body = scanner.hasNext() ? scanner.next() : "";
+
+              JSONObject jsonObj = (JSONObject) new JSONParser().parse(body);
+
+              if((long) jsonObj.get("status") == 2)
+              {
+                  String downloadUri = (String) jsonObj.get("url");
+
+                  URL url = new URL(downloadUri);
+                  java.net.HttpURLConnection connection = (java.net.HttpURLConnection) url.openConnection();
+                  InputStream stream = connection.getInputStream();
+
+                  File savedFile = new File(pathForSave);
+                  try (FileOutputStream out = new FileOutputStream(savedFile)) {
+                      int read;
+                      final byte[] bytes = new byte[1024];
+                      while ((read = stream.read(bytes)) != -1) {
+                          out.write(bytes, 0, read);
+                      }
+
+                      out.flush();
+                  }
+
+                  connection.disconnect();
+              }
+              writer.write("{\"error\":0}");
+          }
+      }
+      ```
+
+      > *pathForSave* 是保存文件的计算机文件夹的绝对路径，包括文件名。
+
+      在 [Java example](../get-started/language-specific-examples/java-example.md) 和 [Java integration SDK](../get-started/language-specific-examples/java-integration-sdk.md) 页面上，您将了解如何将 ONLYOFFICE 文档集成到使用 Java 编写的 Web 应用程序中。
+</TabItem>
+  <TabItem value="nodejs" label="Node.js">
+      ``` ts
+      import {fs} from "node:fs"
+      import {syncRequest} from "sync-request"
+
+      app.post("/track", (req, res) => {
+        function updateFile(response, body, path) {
+          if (body.status === 2) {
+            const file = syncRequest("GET", body.url)
+            fs.writeFileSync(path, file.getBody())
+          }
+
+          response.write("{\"error\":0}")
+          response.end()
         }
-        context.Response.Write("{\"error\":0}");
-    }
-}
-```
 
-> *PATH\_FOR\_SAVE* 是保存文件的计算机文件夹的绝对路径，包括文件名。
-
-在 [.Net example](../get-started/language-specific-examples/net-example.md) 页面上，您将了解如何将 ONLYOFFICE 文档集成到使用 .Net (C#) 或 .Net (C# MVC) 编写的 Web 应用程序中。
-
-### Java 文档保存示例
-
-``` java
-public class IndexServlet extends HttpServlet {
-    @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        PrintWriter writer = response.getWriter();
-
-        Scanner scanner = new Scanner(request.getInputStream()).useDelimiter("\\A");
-        String body = scanner.hasNext() ? scanner.next() : "";
-
-        JSONObject jsonObj = (JSONObject) new JSONParser().parse(body);
-
-        if((long) jsonObj.get("status") == 2)
-        {
-            String downloadUri = (String) jsonObj.get("url");
-
-            URL url = new URL(downloadUri);
-            java.net.HttpURLConnection connection = (java.net.HttpURLConnection) url.openConnection();
-            InputStream stream = connection.getInputStream();
-
-            File savedFile = new File(pathForSave);
-            try (FileOutputStream out = new FileOutputStream(savedFile)) {
-                int read;
-                final byte[] bytes = new byte[1024];
-                while ((read = stream.read(bytes)) != -1) {
-                    out.write(bytes, 0, read);
-                }
-
-                out.flush();
-            }
-
-            connection.disconnect();
+        function readbody(request, response, path) {
+          let content = ""
+          request.on("data", (data) => {
+            content += data
+          })
+          request.on("end", () => {
+            const body = JSON.parse(content)
+            updateFile(response, body, path)
+          })
         }
-        writer.write("{\"error\":0}");
-    }
-}
-```
 
-> *pathForSave* 是保存文件的计算机文件夹的绝对路径，包括文件名。
+        if (req.body.hasOwn("status")) {
+          updateFile(res, req.body, pathForSave)
+        } else {
+          readbody(req, res, pathForSave)
+        }
+      })
+      ```
 
-在 [Java example](../get-started/language-specific-examples/java-example.md) 和 [Java integration SDK](../get-started/language-specific-examples/java-integration-sdk.md) 页面上，您将了解如何将 ONLYOFFICE 文档集成到使用 Java 编写的 Web 应用程序中。
+      > *pathForSave* 是保存文件的计算机文件夹的绝对路径，包括文件名。
 
-### Node.js 文档保存示例
+      在 [NodeJS example](../get-started/language-specific-examples/nodejs-example.md) 页面上，您将了解如何将 ONLYOFFICE 文档集成到使用 Node.js 编写的 Web 应用程序中。
+  </TabItem>
+  <TabItem value="php" label="PHP">
+      ``` php
+      <?php
 
-``` ts
-import {fs} from "node:fs"
-import {syncRequest} from "sync-request"
+      if (($body_stream = file_get_contents("php://input"))===FALSE){
+          echo "Bad Request";
+      }
 
-app.post("/track", (req, res) => {
-  function updateFile(response, body, path) {
-    if (body.status === 2) {
-      const file = syncRequest("GET", body.url)
-      fs.writeFileSync(path, file.getBody())
-    }
+      $data = json_decode($body_stream, TRUE);
 
-    response.write("{\"error\":0}")
-    response.end()
-  }
+      if ($data["status"] == 2){
+          $downloadUri = $data["url"];
+              
+          if (($new_data = file_get_contents($downloadUri))===FALSE){
+              echo "Bad Response";
+          } else {
+              file_put_contents($path_for_save, $new_data, LOCK_EX);
+          }
+      }
+      echo "{\"error\":0}";
 
-  function readbody(request, response, path) {
-    let content = ""
-    request.on("data", (data) => {
-      content += data
-    })
-    request.on("end", () => {
-      const body = JSON.parse(content)
-      updateFile(response, body, path)
-    })
-  }
+      ?>
+      ```
 
-  if (req.body.hasOwn("status")) {
-    updateFile(res, req.body, pathForSave)
-  } else {
-    readbody(req, res, pathForSave)
-  }
-})
-```
+      > *$path\_for\_save* 是保存文件的计算机文件夹的绝对路径，包括文件名。
 
-> *pathForSave* 是保存文件的计算机文件夹的绝对路径，包括文件名。
+      在 [PHP example](../get-started/language-specific-examples/php-example.md) 页面上，您将了解如何将 ONLYOFFICE 文档集成到您用 PHP 编写的 Web 应用程序中。
+  </TabItem>
+  <TabItem value="ruby" label="Ruby">
+      ``` rb
+      class ApplicationController < ActionController::Base
+          def index
+              body = request.body.read
 
-在 [NodeJS example](../get-started/language-specific-examples/nodejs-example.md) 页面上，您将了解如何将 ONLYOFFICE 文档集成到使用 Node.js 编写的 Web 应用程序中。
+              file_data = JSON.parse(body)
+              status = file_data["status"].to_i
 
-### PHP文档保存示例
+              if status == 2
+                  download_uri = file_data["url"]
+                  uri = URI.parse(download_uri)
+                  http = Net::HTTP.new(uri.host, uri.port)
 
-``` php
-<?php
+                  if download_uri.start_with?("https")
+                      http.use_ssl = true
+                      http.verify_mode = OpenSSL::SSL::VERIFY_NONE
+                  end
 
-if (($body_stream = file_get_contents("php://input"))===FALSE){
-    echo "Bad Request";
-}
+                  req = Net::HTTP::Get.new(uri.request_uri)
+                  res = http.request(req)
+                  data = res.body
 
-$data = json_decode($body_stream, TRUE);
+                  File.open(path_for_save, "wb") do |file|
+                      file.write(data)
+                  end
+              end
+              render :text => "{\"error\":0}"
+          end
+      end
+      ```
 
-if ($data["status"] == 2){
-    $downloadUri = $data["url"];
-        
-    if (($new_data = file_get_contents($downloadUri))===FALSE){
-        echo "Bad Response";
-    } else {
-        file_put_contents($path_for_save, $new_data, LOCK_EX);
-    }
-}
-echo "{\"error\":0}";
+      > *path\_for\_save* 是保存文件的计算机文件夹的绝对路径，包括文件名。
 
-?>
-```
-
-> *$path\_for\_save* 是保存文件的计算机文件夹的绝对路径，包括文件名。
-
-在 [PHP example](../get-started/language-specific-examples/php-example.md) 页面上，您将了解如何将 ONLYOFFICE 文档集成到您用 PHP 编写的 Web 应用程序中。
-
-### Ruby 文档保存示例
-
-``` rb
-class ApplicationController < ActionController::Base
-    def index
-        body = request.body.read
-
-        file_data = JSON.parse(body)
-        status = file_data["status"].to_i
-
-        if status == 2
-            download_uri = file_data["url"]
-            uri = URI.parse(download_uri)
-            http = Net::HTTP.new(uri.host, uri.port)
-
-            if download_uri.start_with?("https")
-                http.use_ssl = true
-                http.verify_mode = OpenSSL::SSL::VERIFY_NONE
-            end
-
-            req = Net::HTTP::Get.new(uri.request_uri)
-            res = http.request(req)
-            data = res.body
-
-            File.open(path_for_save, "wb") do |file|
-                file.write(data)
-            end
-        end
-        render :text => "{\"error\":0}"
-    end
-end
-```
-
-> *path\_for\_save* 是保存文件的计算机文件夹的绝对路径，包括文件名。
-
-在 [Ruby example](../get-started/language-specific-examples/ruby-example.md) 页面上，您将了解如何将 ONLYOFFICE 文档集成到您用 Ruby 编写的 Web 应用程序中。
+      在 [Ruby example](../get-started/language-specific-examples/ruby-example.md) 页面上，您将了解如何将 ONLYOFFICE 文档集成到您用 Ruby 编写的 Web 应用程序中。
+  </TabItem>
+</Tabs>

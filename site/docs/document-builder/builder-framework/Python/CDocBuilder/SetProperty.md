@@ -66,7 +66,7 @@ It is also possible to update the font list when you either add new fonts or rem
     <TabItem value="python" label="Python">
         ``` py
         builder = docbuilder.CDocBuilder()
-    builder.SetProperty("--check-fonts", L"true")
+        builder.SetProperty("--check-fonts", L"true")
         ```
     </TabItem>
     <TabItem value="builder" label=".docbuilder">

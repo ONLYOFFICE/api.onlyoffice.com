@@ -15,6 +15,8 @@ def GetContext(self);
 ### Python
 
 ``` py
+import docbuilder
+
 builder = docbuilder.CDocBuilder()
 context = builder.GetContext()
 ```

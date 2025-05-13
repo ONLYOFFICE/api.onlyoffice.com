@@ -1,5 +1,5 @@
 ---
-sidebar_position: -7
+sidebar_position: -10
 ---
 
 # Java example
@@ -105,7 +105,15 @@ To run the Java example code, install the Java version appropriate for your OS a
 
    If everything is correct, you will see the Tomcat web page in the browser as shown below.
 
-### Step 5. Run the Java code
+### Step 5. Configure JWT 
+ 
+ Open the *src/main/resouces/settings.properties* file and [specify the same secret key](https://helpcenter.onlyoffice.com/installation/docs-configure-jwt.aspx) as used in your ONLYOFFICE Docs to enable JWT: 
+ 
+ ``` ini
+ files.docservice.secret=secret
+ ```
+
+### Step 6. Run the Java code
 
 1. Open Tomcat Web Application Manager by clicking **Manager App:**
 
@@ -135,7 +143,7 @@ To run the Java example code, install the Java version appropriate for your OS a
 
 5. Click the link with the application name to run it.
 
-### Step 6. Check accessibility
+### Step 7. Check accessibility
 
 In case the example and ONLYOFFICE Docs are installed on different computers, make sure that your server with the example installed has access to the ONLYOFFICE Docs with the address which you specify instead of **documentserver** in the configuration files. Make sure that the ONLYOFFICE Docs in its turn has access to the server with the example installed with the address which you specify instead of **example.com** in the configuration files.
 
@@ -187,6 +195,12 @@ See the detailed guide to learn how to install ONLYOFFICE Docs [for Linux](https
    ``` sh
    sudo chmod -R ugo+rw /{path}
    ```
+
+   [Specify the same secret key](https://helpcenter.onlyoffice.com/installation/docs-configure-jwt.aspx) as used in your ONLYOFFICE Docs to enable JWT: 
+ 
+ 	``` ini
+ 	files.docservice.secret=secret
+ 	```
 
 5. Install **Maven**:
 
@@ -289,6 +303,12 @@ See the detailed guide to learn how to install ONLYOFFICE Docs [for Docker](http
    ```
 
    where the **documentserver** is the name of the server with the ONLYOFFICE Docs installed and the **storage-folder** is the path where files will be created and stored.
+
+   [Specify the same secret key](https://helpcenter.onlyoffice.com/installation/docs-configure-jwt.aspx) as used in your ONLYOFFICE Docs to enable JWT: 
+ 
+ 	``` ini
+ 	files.docservice.secret=secret
+ 	```
 
 5. Run the next command in the Java example directory:
 

@@ -8,7 +8,7 @@ Opens a file in [ONLYOFFICE editors](../usage-sdk/initialization-modes/editor.md
   <head>
     <meta charset="UTF-8">
     <title>DocSpace JavaScript SDK</title>
-    <script src="{PORTAL_SRC}/static/scripts/sdk/1.0.0/api.js"></script>
+    <script src="{PORTAL_SRC}/static/scripts/sdk/1.0.1/api.js"></script>
     ...
   </head>
   <body>

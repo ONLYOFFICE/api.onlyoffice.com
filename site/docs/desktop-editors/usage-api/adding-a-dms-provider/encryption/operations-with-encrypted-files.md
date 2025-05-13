@@ -30,7 +30,7 @@ Example: `*.docx *.xlsx *.pptx`
 window.AscDesktopEditor.cloudCryptoCommand("upload", {
   cryptoEngineId: "{FFF0E1EB-13DB-4678-B67D-FF0A41DBBCEF}",
   filter: "*.docx *.xlsx *.pptx",
-}, callback)
+}, callback);
 ```
 
 After the user chooses the files, they will be encrypted in a loop and transferred to *callback*:
@@ -81,7 +81,7 @@ window.AscDesktopEditor.cloudCryptoCommand("share", {
     userId: "78e1e841",
     publicKey: "yyy",
   }],
-}, callback)
+}, callback);
 ```
 
 The file is uploaded by the desktop app and encrypted. The access rights to the file are transferred to it with keys. After that, it is transmitted to *callback*:

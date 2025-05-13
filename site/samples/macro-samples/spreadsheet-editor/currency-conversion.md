@@ -11,42 +11,42 @@ Converts a base currency into multiple desired target currencies. It can also fe
 ```ts
 (function () {
     function buildHistoricalURL(apiKey, baseCurrency, date, currencies) {
-      const currencyParam = currencies.join("%2C");
+      let currencyParam = currencies.join("%2C");
       return `https://api.currencyapi.com/v3/historical?apikey=${apiKey}&currencies=${currencyParam}&base_currency=${baseCurrency}&date=${date}`;
     }
-  
+
     function buildLatestURL(apiKey, baseCurrency, currencies) {
-      const currencyParam = currencies.join("%2C");
+      let currencyParam = currencies.join("%2C");
       return `https://api.currencyapi.com/v3/latest?apikey=${apiKey}&currencies=${currencyParam}&base_currency=${baseCurrency}`;
     }
-  
+
     function reloadCellValues() {
       setTimeout(function () {
         Api.asc_calculate(Asc.c_oAscCalculateType.All);
       }, 5000);
     }
-  
+
     function fetchAndPopulateData(url, currencies, isHistorical) {
-      const xhr = new XMLHttpRequest();
+      let xhr = new XMLHttpRequest();
       xhr.open("GET", url, true);
-  
+
       xhr.onload = function () {
         if (this.status === 200) {
-          const apiData = JSON.parse(this.response);
-          const data = apiData.data;
-  
-          const sheet = Api.GetActiveSheet();
+          let apiData = JSON.parse(this.response);
+          let data = apiData.data;
+
+          let sheet = Api.GetActiveSheet();
           sheet.GetRange("A1").SetValue("Currency Code");
           sheet.GetRange("A1").AutoFit(false, true);
           sheet
             .GetRange("B1")
             .SetValue(isHistorical ? "Historical Rate" : "Exchange Rate");
-  
+
           sheet.GetRange("B1").AutoFit(false, true);
-  
+
           currencies.forEach((currency, index) => {
             if (data[currency]) {
-              const { code, value } = data[currency];
+              let { code, value } = data[currency];
               sheet.GetRange(`A${index + 2}`).SetValue(code);
               sheet.GetRange(`B${index + 2}`).SetValue(value);
             } else {
@@ -57,30 +57,30 @@ Converts a base currency into multiple desired target currencies. It can also fe
           console.error(`Error fetching data: ${this.statusText}`);
         }
       };
-  
+
       xhr.onerror = function () {
         console.error(
           "There was some error in your request. Check and try again."
         );
       };
-  
+
       xhr.send();
     }
-  
-    const baseCurrency = "GBP";
-    const currencies = ["CAD", "EUR", "USD", "AUD", "SGD"];
-    const apiKey = "YOUR_API_KEY";
-  
+
+    let baseCurrency = "GBP";
+    let currencies = ["CAD", "EUR", "USD", "AUD", "SGD"];
+    let apiKey = "YOUR_API_KEY";
+
     // Fetch and populate the latest exchange rates
-    const latestURL = buildLatestURL(apiKey, baseCurrency, currencies);
+    let latestURL = buildLatestURL(apiKey, baseCurrency, currencies);
     fetchAndPopulateData(latestURL, currencies, false);
-  
+
     /* Comment out the upper block and uncomment the following block to enable fetching historical exchange rates */
-  
-    // const date = "2025-01-01";
-    // const historicalURL = buildHistoricalURL(apiKey, baseCurrency, date, currencies);
+
+    // let date = "2025-01-01";
+    // let historicalURL = buildHistoricalURL(apiKey, baseCurrency, date, currencies);
     // fetchAndPopulateData(historicalURL, currencies, true);
-  
+
     reloadCellValues();
   })();
 ```

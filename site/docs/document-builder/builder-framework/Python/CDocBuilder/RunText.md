@@ -21,10 +21,13 @@ def RunText(self, str commands);
 ### Python
 
 ``` py
+import os
+import docbuilder
+
 builder = docbuilder.CDocBuilder()
-builder.RunText(L"builder.SetTmpFolder(\"DocBuilderTemp\");\n\
+builder.RunText("builder.SetTmpFolder(\"DocBuilderTemp\");\n\
 builder.CreateFile(\"docx\");\n\
-var oDocument = Api.GetDocument();var oParagraph;oParagraph = oDocument.GetElement(0);oParagraph.SetJc(\"center\");oParagraph.AddText(\"Center\");\n\
+var oDocument = Api.GetDocument();var oParagraph = oDocument.GetElement(0);oParagraph.SetJc(\"center\");oParagraph.AddText(\"Center\");\n\
 builder.SaveFile(\"pdf\", \"images.pdf\");\n\
 builder.CloseFile();")
 ```

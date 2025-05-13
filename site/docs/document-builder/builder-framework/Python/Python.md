@@ -26,20 +26,15 @@ The current application version contains four main classes:
     <TabItem value="python" label="Python">
         ``` py
         import os
-        import sys
-        sys.path.append("C:/Program Files/ONLYOFFICE/documentBuilder")
         import docbuilder
 
         builder = docbuilder.CDocBuilder()
-
         builder.CreateFile("docx")
 
         context = builder.GetContext()
-        scope = context.CreateScope()
-
         globalObj = context.GetGlobal()
-
         api = globalObj["Api"]
+
         document = api.Call("GetDocument")
         paragraph = api.Call("CreateParagraph")
         paragraph.Call("SetSpacingAfter", 1000, False)
@@ -55,15 +50,15 @@ The current application version contains four main classes:
     </TabItem>
     <TabItem value="builder" label=".docbuilder">
         ```ts
-        builder.SetTmpFolder("DocBuilderTemp")
-        builder.CreateFile("docx")
-        const oDocument = Api.GetDocument()
-        const oParagraph = Api.CreateParagraph()
-        oParagraph.SetSpacingAfter(1000, false)
-        oParagraph.AddText("Hello, World!")
-        oDocument.InsertContent([oParagraph])
-        builder.SaveFile("docx", "result.docx")
-        builder.CloseFile()
+        builder.SetTmpFolder("DocBuilderTemp");
+        builder.CreateFile("docx");
+        let doc = Api.GetDocument();
+        let paragraph = Api.CreateParagraph();
+        paragraph.SetSpacingAfter(1000, false);
+        paragraph.AddText("Hello, World!");
+        doc.InsertContent([paragraph]);
+        builder.SaveFile("docx", "result.docx");
+        builder.CloseFile();
         ```
     </TabItem>
 </Tabs>

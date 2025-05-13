@@ -9,10 +9,10 @@ Inserts text into the document at the current cursor position.
 ``` ts
 (function()
 {
-    var oDocument = Api.GetDocument();
-    var oParagraph = Api.CreateParagraph();
-    oParagraph.AddText("Hello world!");
-    oDocument.InsertContent([oParagraph]);
+    let doc = Api.GetDocument();
+    let paragraph = Api.CreateParagraph();
+    paragraph.AddText("Hello world!");
+    doc.InsertContent([paragraph]);
 })();
 ```
 

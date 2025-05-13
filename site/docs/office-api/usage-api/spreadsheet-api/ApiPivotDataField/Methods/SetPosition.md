@@ -1,7 +1,6 @@
 # SetPosition
 
-Sets a value that represents the position of the field (first, second, third, and so on)\
-among all the fields in its orientation (Rows, Columns, Pages, Data).
+Sets a value that represents the data field position within a category.
 
 ## Syntax
 
@@ -15,7 +14,7 @@ expression.SetPosition(position);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| position | Required | number |  | The field position. |
+| position | Required | number |  | The data field position. |
 
 ## Returns
 
@@ -55,14 +54,11 @@ pivotTable.AddFields({
 });
 
 pivotTable.AddDataField('Price');
+let dataField = pivotTable.AddDataField('Price');
+dataField.SetPosition(1);
 
 let pivotWorksheet = Api.GetActiveSheet();
-pivotWorksheet.GetRange('A12').SetValue('The Style field position will change soon');
 
-let pivotField = pivotTable.GetPivotFields('Style');
-
-setTimeout(function () {
-	pivotField.SetPosition(1);
-}, 5000);
-
+pivotWorksheet.GetRange('A15').SetValue('Sum of Price2 position:');
+pivotWorksheet.GetRange('B15').SetValue(dataField.GetPosition());
 ```

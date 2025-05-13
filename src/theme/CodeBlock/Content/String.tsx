@@ -17,7 +17,6 @@ import type {Props} from '@theme/CodeBlock/Content/String';
 
 import styles from './styles.module.css';
 
-import {useLocation} from '@docusaurus/router';
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import OnlyOfficeEditor from '@site/src/components/BrowserWindow/OnlyofficeEditor';
@@ -64,7 +63,14 @@ export default function CodeBlockString({
   const editorCell = metastring && metastring.includes("editor-xlsx") && "xlsx";
   const editorSlide = metastring && metastring.includes("editor-pptx") && "pptx";
   const editorPdf = metastring && metastring.includes("editor-pdf") && "pdf";
+  const isForm = metastring && metastring.includes("editor-pdf"); // TODO: change to editor-pdf-form
   const editorType = editorWord || editorCell || editorSlide || editorPdf;
+
+  let res = metastring ? metastring.match(/zoom=(\d+)\s*/) : null;
+  const zoom = res ? Number(res[1]) : undefined;
+
+  res = metastring ? metastring.match(/templateUrl=([^\s]+)/) : null;
+  const templateUrl = res ? res[1] : undefined;
 
   const codeBlockContent = (
     <Container
@@ -124,7 +130,7 @@ export default function CodeBlockString({
     <Tabs lazy>
       <TabItem value="code" label="Code">{codeBlockContent}</TabItem>
       <TabItem value="result" label="Result">
-        <OnlyOfficeEditor code={code} fileType={editorType} />
+        <OnlyOfficeEditor code={code} fileType={editorType} templateUrl={templateUrl} zoom={zoom} isForm={isForm} />
       </TabItem>
     </Tabs>
   ) : (
