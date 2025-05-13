@@ -1,5 +1,5 @@
 # Manage the Trash Section
-This example demonstrates how to retrieve and empty the contents of the Trash section in ONLYOFFICE DocSpace using the API.
+This example demonstrates how to retrieve, restore, and empty the contents of the Trash section in ONLYOFFICE DocSpace using the API.
 
 ## Before you start
 1. Replace `https://yourportal.onlyoffice.com` and `YOUR_API_KEY` with your actual DocSpace portal URL and API key. Ensure you have the necessary data and permissions to perform migration operations.
@@ -11,6 +11,7 @@ This example demonstrates how to retrieve and empty the contents of the Trash se
 
 ``` py
 import requests
+import json
 
 # Set API base URL
 API_HOST = 'yourportal.onlyoffice.com'
@@ -40,8 +41,29 @@ def empty_trash():
         return True
     return False
 
+# Step 3: Restore a file from Trash to a specific folder
+def restore_file(file_id, dest_folder_id):
+    url = f'https://{API_HOST}/api/2.0/files/fileops/move'
+    data = {
+        'fileIds': [file_id],
+        'destFolderId': dest_folder_id,
+        'deleteAfter': True,
+        'content': True
+    }
+
+    response = requests.put(url, headers=HEADERS, data=json.dumps(data))
+
+    if response.status_code == 200:
+        return True
+    return False
+
 if __name__ == "__main__":
     get_trash_section()
+
+    file_id = '123456'       # Replace with a real file ID from Trash
+    folder_id = '654321'     # Replace with destination folder ID
+    restore_file(file_id, folder_id)
+
     empty_trash()
 ```
 
@@ -69,6 +91,31 @@ def get_trash_section():
 def empty_trash():
     url = f'https://{API_HOST}/api/2.0/files/fileops/emptytrash'
     response = requests.put(url, headers=HEADERS)
+
+    if response.status_code == 200:
+        return True
+    return False
+```
+
+## Restore a File from Trash
+- A PUT request is sent to [/api/2.0/files/fileops/move](../../../usage-api/move-batch-items) with:
+    - `fileIds`: List of file IDs to restore.
+    - `destFolderId`: Target folder to move the file into.
+    - `deleteAfter`: Set to true to remove the item from Trash.
+    - `content`: Set to true to preserve file contents.
+- This operation is useful for selectively restoring documents from Trash back to a specific folder.
+
+``` py
+def restore_file(file_id, dest_folder_id):
+    url = f'https://{API_HOST}/api/2.0/files/fileops/move'
+    data = {
+        'fileIds': [file_id],
+        'destFolderId': dest_folder_id,
+        'deleteAfter': True,
+        'content': True
+    }
+
+    response = requests.put(url, headers=HEADERS, data=json.dumps(data))
 
     if response.status_code == 200:
         return True
