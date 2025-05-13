@@ -90,9 +90,9 @@ if __name__ == "__main__":
 
 ## Step 1: Create a user
 - A POST request is sent to [/api/2.0/people](../../../usage-api/add-member) with: 
-    - firstName: User’s first name.
-    - lastName: User’s last name.
-    - email: User’s email address.
+    - `firstName`: User’s first name.
+    - `lastName`: User’s last name.
+    - `email`: User’s email address.
 - The API returns a user ID, which is required for further operations.
 
 ``` py
@@ -119,7 +119,7 @@ if __name__ == "__main__":
 
 ## Step 2: Retrieve a user by ID
 - A GET request is sent to [/api/2.0/people/:userId](../../../usage-api/get-by-id) to fetch user details.
-- The response includes the user's profile information such as name, email, and assigned roles.
+- The response includes the user's profile information such as `name`, `email`, and `assigned roles`.
 - This step ensures that the user exists before making any updates or deletions.
 
 ``` py
@@ -145,8 +145,8 @@ if __name__ == "__main__":
 ## Step 3: Terminate a user
 - PUT request is sent to [/api/2.0/people/status/Terminated](../../../usage-api/update-user-status).
 - The request includes: 
-    - userIds: A list of user IDs to be terminated.
-    - resendAll: Boolean flag for sending notifications.
+    - `userIds`: A list of user IDs to be terminated.
+    - `resendAll`: Boolean flag for sending notifications.
 - The API marks the user as terminated, meaning they cannot log in but are still present in the system.
 
 ``` py

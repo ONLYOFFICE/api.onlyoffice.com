@@ -91,9 +91,9 @@ if __name__ == "__main__":
 
 ## Step 1: Create a group
 - A POST request is sent to [/api/2.0/group](../../../usage-api/add-group) with: 
-    - groupName: Name of the new group.
-    - groupManager: The user ID of the group manager.
-    - members: A list of user IDs to be added to the group.
+    - `groupName`: Name of the new group.
+    - `groupManager`: The user ID of the group manager.
+    - `members`: A list of user IDs to be added to the group.
 - The API returns a group ID, which is required for further operations.
 
 ``` py
