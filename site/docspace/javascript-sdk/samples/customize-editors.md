@@ -11,7 +11,7 @@ Customizes the editor interface so that it looks like your other products (if th
   <head>
   <meta charset="UTF-8">
   <title>DocSpace JavaScript SDK</title>
-  <script src="{PORTAL_SRC}/static/scripts/sdk/1.0.1/api.js"></script>
+  <script src="{PORTAL_SRC}/static/scripts/sdk/1.0.0/api.js"></script>
     ...
   </head>
   <body>
