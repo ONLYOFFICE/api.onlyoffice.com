@@ -1,0 +1,141 @@
+.commentsExternalToolbar {
+  background: rgb(249, 249, 249);
+  border-radius: 3px;
+  padding: 15px 24px;
+
+  font-family: inherit;
+
+  width: 95%;
+  width: -moz-available;
+  width: -webkit-fill-available;
+}
+
+.list-buttons {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 16px;
+
+  font: inherit;
+  margin: 16px 0;
+  padding: 0;
+
+  list-style: disc outside none;
+  list-style-type: none;
+}
+
+.list-buttons > * {
+  margin: 0 !important;
+}
+
+.list-buttons button {
+  cursor: pointer;
+  padding: 16px 20px;
+
+  text-decoration: none !important;
+  font: inherit;
+  font-weight: 600;
+  line-height: 1em;
+
+  color: #444444;
+  border: 1px solid #aaaaaa;
+  border-radius: 3px;
+  background-color: transparent;
+}
+
+.list-buttons button.active {
+  background: #ff6f3d;
+  border: 1px solid #ff6f3d;
+  color: #ffffff;
+}
+.list-buttons button.disabled {
+  color: #cccccc;
+  border-color: #cccccc;
+  pointer-events: none;
+}
+
+.comment-date,
+.comment-author {
+  font: inherit;
+  color: #666666;
+}
+
+.comment-message {
+  font: inherit;
+  font-style: italic;
+  color: #333333;
+  margin-top: 5px;
+}
+
+.comment {
+  font: inherit;
+  margin-bottom: 12px;
+}
+
+.comment > div:first-child {
+  display: inline-flex;
+  flex-wrap: wrap;
+  row-gap: 0;
+  column-gap: 20px;
+}
+
+.comment.reply {
+  background-image: url("@site/static/assets/images/working-with-comments/reply.svg");
+  background-repeat: no-repeat;
+  background-position-y: 4px;
+  padding-left: 38px;
+}
+
+.replies {
+  margin-left: 50px;
+}
+
+.commentsExternalToolbar textarea {
+  border: 1px solid #bfbfbf;
+  background-color: rgb(249, 249, 249);
+  resize: none;
+  border-radius: 3px;
+  width: 95%;
+  width: -moz-available;
+  width: -webkit-fill-available;
+}
+
+.add-comment-area {
+  padding: 15px 24px;
+  height: 100px;
+}
+
+.add-reply-area {
+  padding: 5px 10px;
+  margin-left: 50px;
+  height: 40px;
+}
+
+@media (hover: hover) {
+  button:hover {
+    color: #ff6f3d;
+    border: 1px solid #ff6f3d;
+  }
+
+  button.active:hover {
+    color: #ffffff;
+    background: #ff7a4b;
+    border: 1px solid #ff6f3d;
+  }
+}
+
+@media (width <= 500px) {
+  .comment.reply {
+    padding-left: 22px;
+  }
+
+  .replies {
+    margin-left: 25px;
+  }
+}
+
+@media (width <= 300px) {
+  .replies {
+    margin-left: 0;
+  }
+}

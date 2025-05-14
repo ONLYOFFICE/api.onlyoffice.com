@@ -12,6 +12,11 @@ interface OnlyOfficeEditorProps {
   config?: code;
   isDemo?: boolean;
   isForm?: boolean;
+  externalScript?: {
+    beforeDocumentReady: string;
+    onDocumentReady: string;
+    otherFunctional: string;
+  };
 }
 
 async function createJWT(json: object, secret: string): Promise<string | null> {
@@ -112,7 +117,7 @@ function deepMergePreferFirst(a: any, b: any): any {
 }
 
 const addScript = async (server: string, secret: string, fileType: string, code: string, theme: string, templateUrl: string, zoom: number,
-                         externalConfig?: code, isDemo: boolean = false, isForm: boolean = false): Promise<void> => {
+                         externalConfig?: code, externalScript?: OnlyOfficeEditorProps["externalScript"], isDemo: boolean = false, isForm: boolean = false): Promise<void> => {
   const scriptConfig = document.createElement("script");
   scriptConfig.type = "text/javascript";
 
@@ -147,12 +152,14 @@ const addScript = async (server: string, secret: string, fileType: string, code:
       window.docEditor = null;
     }
 
+    ${externalScript?.beforeDocumentReady}
     window.onDocumentReady = function() {
       window.connector = docEditor.createConnector();
       connector.callCommand(() => {
         ${code}
       }, () => {
       });
+      ${externalScript?.onDocumentReady}
     };
 
     var config = ${JSON.stringify(config)};
@@ -162,6 +169,7 @@ const addScript = async (server: string, secret: string, fileType: string, code:
     };
 
     window.docEditor = new DocsAPI.DocEditor("placeholder", config);
+    ${externalScript?.otherFunctional}
   `;
 
   document.body.appendChild(scriptConfig);
@@ -175,7 +183,12 @@ const OnlyOfficeEditor: React.FC<OnlyOfficeEditorProps> = ({
   zoom,
   config,
   isDemo = false,
-  isForm = false
+  isForm = false,
+  externalScript = { 
+    beforeDocumentReady:"",
+    onDocumentReady:"",
+    otherFunctional:"" 
+  }
 }) => {
   const {
     siteConfig: {customFields},
@@ -198,13 +211,13 @@ const OnlyOfficeEditor: React.FC<OnlyOfficeEditorProps> = ({
         };
         scriptApi.onload = () => {
           document.documentElement.setAttribute("data-script-api-state", "2");
-          addScript(documentServer, documentServerSecret, fileType, code, colorMode, templateUrl, zoom, config, isDemo, isForm);
+          addScript(documentServer, documentServerSecret, fileType, code, colorMode, templateUrl, zoom, config, externalScript, isDemo, isForm);
         };
 
         document.documentElement.setAttribute("data-script-api-state", "1");
         document.body.appendChild(scriptApi);
       } else {
-        addScript(documentServer, documentServerSecret, fileType, code, colorMode, templateUrl, zoom, config, isDemo, isForm);
+        addScript(documentServer, documentServerSecret, fileType, code, colorMode, templateUrl, zoom, config, externalScript, isDemo, isForm);
       }
     }
 
