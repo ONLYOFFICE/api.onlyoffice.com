@@ -3,7 +3,7 @@ sidebar_position: -7
 hide_table_of_contents: true
 ---
 
-从 '@site/src/components/TryNow' 导入 TryNowPage;
+import TryNowPage from '@site/src/components/TryNow';
 
 # 试用文档
 
