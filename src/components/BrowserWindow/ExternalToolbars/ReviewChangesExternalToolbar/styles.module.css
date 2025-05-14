@@ -1,0 +1,40 @@
+.list-buttons {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 16px;
+
+  font: inherit;
+  padding: 0;
+
+  list-style: disc outside none;
+  list-style-type: none;
+}
+
+.list-buttons button {
+  cursor: pointer;
+  padding: 16px 20px;
+
+  text-decoration: none !important;
+  font: inherit;
+  font-weight: 600;
+  line-height: 1em;
+
+  color: #444444;
+  border: 1px solid #aaaaaa;
+  border-radius: 3px;
+  background-color: transparent;
+}
+
+.list-buttons button.disabled {
+  color: #cccccc;
+  border-color: #cccccc;
+  pointer-events: none;
+}
+
+@media (hover: hover) {
+  button:hover {
+    color: #ff6f3d;
+    border: 1px solid #ff6f3d;
+  }
+}
