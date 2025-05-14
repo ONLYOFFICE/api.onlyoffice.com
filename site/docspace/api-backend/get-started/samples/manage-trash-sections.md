@@ -1,4 +1,4 @@
-# Manage the Trash Section
+# Manage the trash section
 This example demonstrates how to retrieve, restore, and empty the contents of the Trash section in ONLYOFFICE DocSpace using the API.
 
 ## Before you start

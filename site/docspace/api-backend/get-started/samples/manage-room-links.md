@@ -1,4 +1,4 @@
-# Manage Room Links
+# Manage room links
 This example demonstrates how to set and retrieve room invitation or external links in ONLYOFFICE DocSpace using the API. These links provide access to rooms based on specified permissions.
 
 ## Before you start

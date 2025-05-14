@@ -1,4 +1,4 @@
-# Manage Files in "My Documents"
+# Manage files in "My Documents"
 This example demonstrates how to interact with a user's personal space ("My Documents") in ONLYOFFICE DocSpace using the API. It includes retrieving contents, uploading a file, creating a new document, and deleting a file.
 
 ## Before you start

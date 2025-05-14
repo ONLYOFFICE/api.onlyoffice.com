@@ -1,4 +1,4 @@
-# Lock and Unlock a File
+# Lock and unlock a file
 This example demonstrates how to programmatically create a new room in ONLYOFFICE DocSpace and invite a user to it via email with specific access permissions.
 
 ## Before you start
@@ -44,11 +44,20 @@ def unlock_file(file_id):
         return response.json()
     return None
 
+# Step 3: View users with access to the file
+def get_protected_file_users(file_id):
+    url = f'https://{API_HOST}/api/2.0/files/file/{file_id}/protectusers'
+    response = requests.get(url, headers=HEADERS)
+    if response.status_code == 200:
+        return response.json()
+    return None
+
 if __name__ == "__main__":
     file_id = '123456'  # Replace with a valid file ID
 
     lock_file(file_id)
     unlock_file(file_id)
+    get_protected_file_users(file_id)
 ```
 
 </details>
@@ -82,6 +91,19 @@ def unlock_file(file_id):
 
     response = requests.put(url, headers=HEADERS, json=data)
 
+    if response.status_code == 200:
+        return response.json()
+    return None
+```
+
+## Step 3: View File Access List
+- A GET request is sent to [/api/2.0/files/file/:fileId/protectusers](../../../usage-api/protect-users)
+- It returns a list of users and their access levels for the file.
+
+``` py
+def get_protected_file_users(file_id):
+    url = f'https://{API_HOST}/api/2.0/files/file/{file_id}/protectusers'
+    response = requests.get(url, headers=HEADERS)
     if response.status_code == 200:
         return response.json()
     return None

@@ -1,4 +1,4 @@
-# Create a Virtual Data Room (VDR) with Watermark
+# Create a Virtual Data Room (VDR) with watermark
 This example demonstrates how to create a Virtual Data Room (VDR) in ONLYOFFICE DocSpace using the API. The room is created with a text watermark enabled, including dynamic elements such as `UserName` and `CurrentDate`.
 
 ## Before you start

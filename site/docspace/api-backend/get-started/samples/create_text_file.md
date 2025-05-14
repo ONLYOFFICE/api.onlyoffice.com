@@ -1,4 +1,4 @@
-# Create a Text File
+# Create a text file
 This example demonstrates how to create a `.txt file` in a specified folder in ONLYOFFICE DocSpace using the API. You can set a custom title and content for the file when uploading it to a folder.
 
 ## Before you start

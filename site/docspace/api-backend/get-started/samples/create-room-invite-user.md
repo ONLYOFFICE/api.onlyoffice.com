@@ -1,4 +1,4 @@
-# Create a Room and Invite a User
+# Create a room and invite a user
 This example demonstrates how to programmatically create a new room in ONLYOFFICE DocSpace and invite a user to it via email with specific access permissions.
 
 ## Before you start
@@ -90,10 +90,10 @@ def create_room(title):
 
 ## Step 2: Invite a User to the Room
 - A PUT request is sent to [/api/2.0/files/rooms/:roomId/share](../../../usage-api/set-room-security) with:
-    - email: The invitee's email address.
-    - access: Access level (e.g., ReadWrite, Editing, Read).
-    - notify: Whether to send an email notification.
-    - message: Custom invitation message.
+    - `email`: The invitee's email address.
+    - `access`: Access level (e.g., ReadWrite, Editing, Read).
+    - `notify`: Whether to send an email notification.
+    - `message`: Custom invitation message.
 
 ``` py
 def invite_user_to_room(room_id, email, access='ReadWrite'):
