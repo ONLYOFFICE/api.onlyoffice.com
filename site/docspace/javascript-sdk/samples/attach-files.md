@@ -395,104 +395,104 @@ a:hover {
 
 1. Add two variables to get a list of tasks and store the selected task, as well as the function to upload attachments for the selected task:
 
-``` ts
-const taskRows = document.querySelectorAll(".task-row")
-const selectedTask = null
-const loadAttachments = (taskRow) => {
-  const attachmentsList = document.querySelector("#attachmentsList")
-  attachmentsList.innerHTML = ""
-  if (taskRow.attachments && taskRow.attachments.length !== 0) {
-    for (const item of taskRow.attachments) {
-      attachmentsList.append(item)
+  ``` ts
+  const taskRows = document.querySelectorAll(".task-row")
+  const selectedTask = null
+  const loadAttachments = (taskRow) => {
+    const attachmentsList = document.querySelector("#attachmentsList")
+    attachmentsList.innerHTML = ""
+    if (taskRow.attachments && taskRow.attachments.length !== 0) {
+      for (const item of taskRow.attachments) {
+        attachmentsList.append(item)
+      }
     }
   }
-}
-```
+  ```
 
 2. Add the **click** event handler for each task:
 
-``` ts
-for (const row of taskRows) {
-  row.addEventListener("click", ((selectedTask, loadAttachments) => {
-    return () => {
-      if (selectedTask) {
-        selectedTask.classList.remove("selected")
+  ``` ts
+  for (const row of taskRows) {
+    row.addEventListener("click", ((selectedTask, loadAttachments) => {
+      return () => {
+        if (selectedTask) {
+          selectedTask.classList.remove("selected")
+        }
+        selectedTask = row
+        row.classList.add("selected")
+        loadAttachments(row)
       }
-      selectedTask = row
-      row.classList.add("selected")
-      loadAttachments(row)
-    }
-  })(selectedTask, loadAttachments))
-}
-```
+    })(selectedTask, loadAttachments))
+  }
+  ```
 
 ## Step 3. Implement functionality for adding attachments
 
 1. Add variables to get a modal window and the **Attach file** button, as well as the *click* handler that opens the modal window when the task is selected:
 
-``` ts
-const modalElement = document.querySelector("#modal")
-const attachButton = document.querySelector("#attachButton")
+  ``` ts
+  const modalElement = document.querySelector("#modal")
+  const attachButton = document.querySelector("#attachButton")
 
-attachButton.addEventListener("click", () => {
-  if (selectedTask) {
-    modalElement.showModal()
-  }
-})
-```
+  attachButton.addEventListener("click", () => {
+    if (selectedTask) {
+      modalElement.showModal()
+    }
+  })
+  ```
 
 2. Add the [onSelectCallback](../usage-sdk/events.md#onselectcallback) event handler that closes the modal window and sends the ID and name of the selected file in JSON format:
 
-``` ts
-function onSelectCallback() {
-  modalElement.close(JSON.stringify({
-    id: e.id,
-    title: e.title,
-  }))
-}
-```
+  ``` ts
+  function onSelectCallback() {
+    modalElement.close(JSON.stringify({
+      id: e.id,
+      title: e.title,
+    }))
+  }
+  ```
 
 3. Add a variable for the base URL and an event handler for closing the modal window. When the task is selected and the modal window is closed, this function creates a list item with an attachment that includes a link and the **Delete** button, and then adds this item to the list of task attachments:
 
-``` ts
-const dsURL = "{PORTAL_SRC}/doceditor?fileId="
+  ``` ts
+  const dsURL = "{PORTAL_SRC}/doceditor?fileId="
 
-function isNotListItem(item) {
-  return item !== listItem
-}
-
-modalElement.addEventListener("close", () => {
-  const result = modalElement.returnValue
-  if (result && selectedTask) {
-    const {id, title} = JSON.parse(result)
-    const noAttachmentsMessage = document.querySelector("#attachmentsList .no-attachments")
-    if (noAttachmentsMessage) {
-      noAttachmentsMessage.remove()
-    }
-    const listItem = document.createElement("li")
-    listItem.className = "attachment-item"
-    const link = document.createElement("a")
-    link.href = dsURL + id
-    link.target = "_blank"
-    link.textContent = title
-    listItem.append(link)
-    const deleteButton = document.createElement("button")
-    deleteButton.className = "delete-button"
-    deleteButton.textContent = "Delete"
-    deleteButton.addEventListener("click", () => {
-      selectedTask.attachments = selectedTask.attachments.filter(isNotListItem)
-      listItem.remove()
-      if (selectedTask.attachments.length === 0) {
-        showNoAttachmentsMessage()
-      }
-    })
-    listItem.append(deleteButton)
-    selectedTask.attachments ||= []
-    selectedTask.attachments.push(listItem)
-    document.querySelector("#attachmentsList").append(listItem)
+  function isNotListItem(item) {
+    return item !== listItem
   }
-})
-```
+
+  modalElement.addEventListener("close", () => {
+    const result = modalElement.returnValue
+    if (result && selectedTask) {
+      const {id, title} = JSON.parse(result)
+      const noAttachmentsMessage = document.querySelector("#attachmentsList .no-attachments")
+      if (noAttachmentsMessage) {
+        noAttachmentsMessage.remove()
+      }
+      const listItem = document.createElement("li")
+      listItem.className = "attachment-item"
+      const link = document.createElement("a")
+      link.href = dsURL + id
+      link.target = "_blank"
+      link.textContent = title
+      listItem.append(link)
+      const deleteButton = document.createElement("button")
+      deleteButton.className = "delete-button"
+      deleteButton.textContent = "Delete"
+      deleteButton.addEventListener("click", () => {
+        selectedTask.attachments = selectedTask.attachments.filter(isNotListItem)
+        listItem.remove()
+        if (selectedTask.attachments.length === 0) {
+          showNoAttachmentsMessage()
+        }
+      })
+      listItem.append(deleteButton)
+      selectedTask.attachments ||= []
+      selectedTask.attachments.push(listItem)
+      document.querySelector("#attachmentsList").append(listItem)
+    }
+  })
+  ```
 
 ## Step 4. Add the file selector
 
@@ -500,30 +500,30 @@ Add a script to initialize the **file selector**.
 
 1. Add an event handler for [onAppReady](../usage-sdk/events.md#onappready), which fires when initialization is successful:
 
-``` ts
-function onAppReady() {
-  const frame = DocSpace.SDK.frames["ds-frame"]
-}
-```
+  ``` ts
+  function onAppReady() {
+    const frame = DocSpace.SDK.frames["ds-frame"]
+  }
+  ```
 
 2. Create a configuration for the **file selector**:
 
-``` ts
-const config = {
-  events: {
-    onSelectCallback,
-    onAppReady,
-  },
-  height: "700px",
-  width: "100%",
-}
-```
+  ``` ts
+  const config = {
+    events: {
+      onSelectCallback,
+      onAppReady,
+    },
+    height: "700px",
+    width: "100%",
+  }
+  ```
 
 3. Initialize the **file selector** with the [initFileSelector](../usage-sdk/methods.md#initfileselector) method:
 
-``` ts
-const docSpace = DocSpace.SDK.initFileSelector(config)
-```
+  ``` ts
+  const docSpace = DocSpace.SDK.initFileSelector(config)
+  ```
 
 ## Step 5. Run the sample
 
