@@ -381,7 +381,7 @@ Type: string
 
 Example:  "text"
 
-![Init data](/assets/images/plugins/init-data.png#gh-light-mode-only)![Init data](/assets/images/plugins/init-data.dark.png#gh-dark-mode-only)
+![Init data](/assets/images/plugins/plugin-init-data.png#gh-light-mode-only)![Init data](/assets/images/plugins/plugin-init-data.dark.png#gh-dark-mode-only)
 
 ### variations.initDataType
 
@@ -560,7 +560,7 @@ Type: string
 
 Example: "#F5F5F5"
 
-![Light icon](/assets/images/plugins/icon-light.png)
+![Light icon](/assets/images/plugins/plugin-icon.png)
 
 ### variations.store.background.dark
 
@@ -570,7 +570,7 @@ Type: string
 
 Example: "#444444"
 
-![Dark icon](/assets/images/plugins/icon-dark.png)
+![Dark icon](/assets/images/plugins/plugin-icon.dark.png)
 
 ### variations.store.categories
 
