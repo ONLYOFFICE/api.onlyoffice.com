@@ -190,7 +190,7 @@ Repository on GitHub: [photoeditor](https://github.com/ONLYOFFICE/onlyoffice.git
 - [executeMethod ("PutImageDataToSelection")](../../interacting-with-editors/methods/text-document-api/Api/Methods/PutImageDataToSelection.md)
 - [resizeWindow](../../customization/windows-and-panels.md#interacting-with-a-window)
 - [Asc.scope](../../interacting-with-editors/overview/how-to-call-commands.md#ascscope-object) object
-- [info.editorType](../../interacting-with-editors/overview/how-to-call-commands.md#editortype)
+- [info.editorType](../../interacting-with-editors/overview/how-to-call-commands.md#editorType)
 
 ## Support
 

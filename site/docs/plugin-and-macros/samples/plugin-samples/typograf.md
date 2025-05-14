@@ -135,7 +135,7 @@ Repository on GitHub: [typograf](https://github.com/ONLYOFFICE/onlyoffice.github
 - [executeMethod ("PasteText")](../../interacting-with-editors/methods/text-document-api/Api/Methods/PasteText.md)
 - [executeMethod ("ReplaceTextSmart")](../../interacting-with-editors/methods/text-document-api/Api/Methods/ReplaceTextSmart.md)
 - [Asc.scope](../../interacting-with-editors/overview/how-to-call-commands.md#ascscope-object) object
-- [info.editorType](../../interacting-with-editors/overview/how-to-call-commands.md#editortype)
+- [info.editorType](../../interacting-with-editors/overview/how-to-call-commands.md#editorType)
 
 ## Support
 
