@@ -38,6 +38,6 @@ The plugin is opened in the right-side panel, like [Translator](../../samples/pl
 
 The plugin that does not display any windows or panels upon launch but can create them later during its operation. It provides a button (or buttons) to apply some transformations or manipulations to the document, like [Hello world](../../samples/plugin-samples/hello-world.md), [Speech](../../samples/plugin-samples/speech.md). For example, it can be used when the plugin displays different windows depending on the document content.
 
-![Insisible plugin](/assets/images/plugins/invisible-plugin.png#gh-light-mode-only)![Insisible plugin](/assets/images/plugins/invisible-plugin.dark.png#gh-dark-mode-only)
+![Insisible plugin](/assets/images/plugins/plugin-invisible.png#gh-light-mode-only)![Insisible plugin](/assets/images/plugins/plugin-invisible.dark.png#gh-dark-mode-only)
 
 > Please note that a plugin of any type can create windows and tabs during its work.
