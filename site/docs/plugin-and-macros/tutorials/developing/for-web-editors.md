@@ -41,26 +41,26 @@ To debug ONLYOFFICE plugins in the web editors, follow the instructions below.
 
 <!-- eslint-skip -->
 
-   ``` ts
-   (function debugger(window, undefined){
+      ``` ts
+      (function debugger(window, undefined){
 
-    var text = "Hello world!";
+      var text = "Hello world!";
 
-    window.Asc.plugin.init = function init()
-    {
-        debugger;
-        var variant = 2;
+      window.Asc.plugin.init = function init()
+      {
+         debugger;
+         var variant = 2;
 
-        switch (variant)
-        {}
-    };
+         switch (variant)
+         {}
+      };
 
-    window.Asc.plugin.button = function button(id)
-    {
-    };
+      window.Asc.plugin.button = function button(id)
+      {
+      };
 
-    })(window, undefined);
-   ```
+      })(window, undefined);
+      ```
 
 2. Open the developer console by pressing the **F12** button.
 

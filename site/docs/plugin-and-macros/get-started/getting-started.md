@@ -134,9 +134,9 @@ Let's see how to build the simplest [Hello world](https://github.com/ONLYOFFICE/
 
 2. Add the ONLYOFFICE [style sheet](../structure/styles.md) to the *index.html* file to adjust your plugin to the ONLYOFFICE editor style:
 
-``` html
-<link rel="stylesheet" href="https://onlyoffice.github.io/sdkjs-plugins/v1/plugins.css">
-```
+  ``` html
+  <link rel="stylesheet" href="https://onlyoffice.github.io/sdkjs-plugins/v1/plugins.css">
+  ```
 
 3. [Localize](../structure/localization.md) your plugin if needed.
 

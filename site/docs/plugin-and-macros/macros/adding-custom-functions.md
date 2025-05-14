@@ -13,21 +13,21 @@ Starting from version 8.1, you can add custom functions to the spreadsheets usin
 
 <!-- eslint-skip -->
 
-``` ts
-(function()
-{
-  /**
-  * Function that returns the argument
-  * @customfunction
-  * @param {any} arg Any data.
-  * @returns {any} The argumet of the function.
-  */
-  function myFunction(arg) {
-    return arg;
-  }
-  Api.AddCustomFunction(myFunction);
-})();
-```
+  ``` ts
+  (function()
+  {
+    /**
+    * Function that returns the argument
+    * @customfunction
+    * @param {any} arg Any data.
+    * @returns {any} The argumet of the function.
+    */
+    function myFunction(arg) {
+      return arg;
+    }
+    Api.AddCustomFunction(myFunction);
+  })();
+  ```
 
 3. Write a description for your function, specify the parameters and return value if necessary. Add a script for your function. Use the [Api.AddCustomFunction](../../office-api/usage-api/spreadsheet-api/Api/Methods/AddCustomFunction.md) method to add a function to the system.
 4. Click **Save**.
