@@ -92,7 +92,7 @@ Follow the steps below to add the plugins to the editor using plugin manager:
 2. Click **Plugin Manager**.
 3. Find the plugin you need and click **Install**.
 
-![Plugins manager](/assets/images/plugins/plugin-manager.png)
+![Plugins manager](/assets/images/plugins/plugin-manager.png#gh-light-mode-only)![Plugins manager](/assets/images/plugins/plugin-manager.dark.png#gh-dark-mode-only)
 
 The plugin will be added to the opened editors and all the editors you will open afterwords and displayed within the **Plugins** tab.
 
