@@ -97,17 +97,6 @@ def create_users(users):
         else:
             print(f'Failed to create user {user["email"]}: {response.status_code} - {response.text}')
     return created_users
-
-if __name__ == "__main__":
-    # List of users to create
-    users = [
-        # Enter your email for testing
-        {"first_name": "Alice", "last_name": "Smith", "email": "alice.smith@example.com"},
-        {"first_name": "Bob", "last_name": "Johnson", "email": "bob.johnson@example.com"}
-    ]
-    
-    # Step 1: Create new users and get their data
-    created_users = create_users(users)
 ```
 
 ## Step 2: Send invitation emails
@@ -126,16 +115,4 @@ def send_invitations(users):
         print(f'Invitations sent successfully to users.')
     else:
         print(f'Failed to send invitations: {response.status_code} - {response.text}')
- 
-if __name__ == "__main__":
-    users = [
-        {"first_name": "Alice", "last_name": "Smith", "email": "alice.smith@example.com"},
-        {"first_name": "Bob", "last_name": "Johnson", "email": "bob.johnson@example.com"}
-    ]
-
-    created_users = create_users(users)
-    
-    # Step 2: Send invitations to newly created users
-    if created_users:
-        send_invitations(created_users)
 ```
