@@ -24,7 +24,7 @@ If you want your plugin to be available to other users in the ONLYOFFICE Plugin 
 
 7. Create a [pull request](https://github.com/ONLYOFFICE/onlyoffice.github.io/pulls) from your fork to `https://github.com/ONLYOFFICE/onlyoffice.github.io`. You can use the **Submit your own plugin** button in the Plugin Manager window.
 
-   ![Submit plugin](/assets/images/plugins/submit-plugin.png)
+   ![Submit plugin](/assets/images/plugins/submit-plugin.png#gh-light-mode-only)![Submit plugin](/assets/images/plugins/submit-plugin.dark.png#gh-dark-mode-only)
    
    If your plugin works properly, your pull request will be approved and the plugin will appear in the marketplace.
 

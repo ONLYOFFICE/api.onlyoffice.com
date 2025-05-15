@@ -74,7 +74,7 @@ Now let's sum it up with the complete script code:
 
 Paste the code above to the macros window and click ![Play icon](/assets/images/plugins/play.svg). The table rows from 1 to 200 will be colored alternately in less than a second.
 
-![Alternate raws](/assets/images/plugins/alternate-raws.png)
+![Alternate raws](/assets/images/plugins/alternate-rows.png#gh-light-mode-only)![Alternate raws](/assets/images/plugins/alternate-rows.dark.png#gh-dark-mode-only)
 
 ## Subscribing to events
 
