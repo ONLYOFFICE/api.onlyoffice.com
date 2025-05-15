@@ -43,7 +43,6 @@ The list of changes of ONLYOFFICE Docs API.
 - Added the [docs\_api\_config](../using-wopi/host-page.md#parameters) parameter to the *form* element of the WOPI host page.
 - Added the [pdf](../additional-api/conversion-api/request.md#pdf) field to the conversion request.
 - Added the [events.onSubmit](../usage-api/config/events.md#onsubmit) event.
-- Changed the [documentType](../usage-api/config/config.md#documenttype) of the *oform* formats to *pdf*.
 - Added the *roles* field to the [editorConfig.customization.features](../usage-api/config/editor/customization/customization-standard-branding.md#features) parameter.
 - Added the [shardkey](../get-started/how-it-works/how-it-works.md#shard-key) parameter to the URL query string when sending requests to the ONLYOFFICE Docs API, document command service, document conversion service, or document builder service.
 - Added the [addContextMenuItem](../usage-api/automation-api.md#addcontextmenuitem), [addToolbarMenuItem](../usage-api/automation-api.md#addtoolbarmenuitem) and [updateContextMenuItem](../usage-api/automation-api.md#updatecontextmenuitem) methods to the *Automation API*.
@@ -132,7 +131,6 @@ The list of changes of ONLYOFFICE Docs API.
 
 ## Version 7.0
 
-- Added the *.oform* [document format](../usage-api/config/config.md#documenttype).
 - The [callbackUrl](../usage-api/callback-handler.md) is used from the last tab of the same user.
 - Added the *logoDark* field to the [editorConfig.customization.customer](../usage-api/config/editor/customization/customization-standard-branding.md#customer) parameter.
 - Added the *imageDark* field to the [editorConfig.customization.logo](../usage-api/config/editor/customization/customization-standard-branding.md#logo) parameter.
