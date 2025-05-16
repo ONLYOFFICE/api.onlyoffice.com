@@ -10,7 +10,7 @@ When the user goes to the authorization link, four scenarios are possible.
 
 If the user is not yet authorized on the portal, an authorization form opens. The user must enter their email and password and click the **Sign in** button. If the authorization is successful, they will be redirected to the pages described in scenarios 2 and 3.
 
-<img alt="Authorization flow" src="/assets/images/docspace/authorization-flow.png" width="400px" />
+![Authorization flow](/assets/images/docspace/authorization-flow.png#gh-light-mode-only)![Authorization flow](/assets/images/docspace/authorization-flow.dark.png#gh-dark-mode-only)
 
 ## Scenario 2. Portal selection
 
