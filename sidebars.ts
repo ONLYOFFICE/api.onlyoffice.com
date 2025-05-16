@@ -286,12 +286,12 @@ const sidebars: SidebarsConfig = {
         },
         {
           type: "doc",
-          id: "docs/document-builder/builder-framework-samples/java-samples-guide",
+          id: "docs/document-builder/builder-framework-samples/python-samples-guide",
           label: "Python samples guide",
         },
         {
           type: "doc",
-          id: "docs/document-builder/builder-framework-samples/c-samples-guide",
+          id: "docs/document-builder/builder-framework-samples/java-samples-guide",
           label: "Java samples guide",
         },
       ],
