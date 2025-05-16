@@ -6,7 +6,7 @@ sidebar_position: 2
 
 Opens the room selector and allows you to select a room from a list of the available rooms.
 
-![Room-selector mode](/assets/images/docspace/room-selector-mode.png)
+![Room-selector mode](/assets/images/docspace/room-selector-mode.png#gh-light-mode-only)![Room-selector mode](/assets/images/docspace/room-selector-mode.dark.png#gh-dark-mode-only)
 
 ## Method
 

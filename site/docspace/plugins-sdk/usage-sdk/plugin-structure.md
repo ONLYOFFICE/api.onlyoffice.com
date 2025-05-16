@@ -12,7 +12,7 @@ A folder for storing plugin images. Nesting is not supported. The number of icon
 
 - The default plugin type requires a [logo](config.md#image) image. It is equal to the *logo* parameter from the *package.json* file. The logo will be displayed in the DocSpace plugin settings. The required icon size is 48x48 px. Otherwise, it will be compressed to this size.
 
-  <img alt="Plugin logo" src="/assets/images/docspace/plugin-logo.png" width="300px" />
+  ![Plugin logo](/assets/images/docspace/plugin-logo.png#gh-light-mode-only)![Plugin logo](/assets/images/docspace/plugin-logo.dark.png#gh-dark-mode-only)
 
 - The context menu plugin uses an [icon](coding-plugin/plugin-items/contextmenuitem.md#icon) for the context menu button. The required icon size is 16x16 px. Otherwise, it will be compressed to this size.
 
