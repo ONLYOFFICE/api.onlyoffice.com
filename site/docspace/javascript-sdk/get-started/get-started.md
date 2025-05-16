@@ -20,7 +20,7 @@ You need to add the URL of your server's root directory to the **Developer Tools
 2. Navigate to the **Developer Tools** section.
 3. On the **JavaScript SDK** tab, in the **Enter the address of DocSpace to embed** field, add the URL of your server's root directory.
 
-![Opening File](/assets/images/docspace/add-in-js-sdk-root-url.png)
+![Opening File](/assets/images/docspace/add-in-js-sdk-root-url.png#gh-light-mode-only)![Opening File](/assets/images/docspace/add-in-js-sdk-root-url.dark.png#gh-dark-mode-only)
 
 ## Step 2. Creating the HTML file
 
