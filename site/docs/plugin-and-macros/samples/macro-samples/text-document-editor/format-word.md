@@ -1,6 +1,6 @@
-# Format a word
+# Format word
 
-The macro applies custom styling (e.g., font, size, bold, italic, color) to all occurrences of a phrase in a document by processing each paragraph and formatting the target word dynamically.
+Applies custom styling (e.g., font, size, bold, italic, color) to all occurrences of a phrase in a document by processing each paragraph and formatting the target word dynamically.
 
 ```ts
 (function () {

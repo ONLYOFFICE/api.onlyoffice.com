@@ -1,14 +1,14 @@
 # Bold first sentence
 
-This macro extracts the first sentence of each paragraph and makes it bold.
+Extracts the first sentence of each paragraph and makes it bold.
 
 ```ts
 (function () {
   // Get the active document
-  let document = Api.GetDocument();
+  let doc = Api.GetDocument();
 
   // Get all paragraphs in the document
-  let paragraphs = document.GetAllParagraphs();
+  let paragraphs = doc.GetAllParagraphs();
 
   // Process each paragraph
   paragraphs.forEach((paragraph) => {

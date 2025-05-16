@@ -1,11 +1,11 @@
-# Comment word search
+# Search for keyword in comments
 
-This macro marks comments containing a specific keyword as solved in a document.
+Marks comments containing a specific keyword as solved in a document.
 
 ```ts
 (function () {
-    let docuement = Api.GetDocument();
-    let comments = docuement.GetAllComments();
+    let doc = Api.GetDocument();
+    let comments = doc.GetAllComments();
     
     // Define the keyword to search for in comment texts
     let keyword = "solve"; 

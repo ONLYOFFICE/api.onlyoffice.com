@@ -1,6 +1,6 @@
-# Data Mismatch Checker
+# Check data mismatch
 
-This macro highlights cells with data type mismatches based on column majority vote, starting from B2 by default, with configurable header offsets.
+Highlights cells with data type mismatches based on column majority vote, starting from B2 by default, with configurable header offsets.
 
 ```ts
 (function () {
@@ -90,14 +90,7 @@ This macro highlights cells with data type mismatches based on column majority v
   })();
 ```
 
-Methods used: Methods Used:  
-[GetActiveSheet](../../../../office-api/usage-api/spreadsheet-api/Api/Methods/GetActiveSheet.md),  
-[GetUsedRange](../../../../office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetUsedRange.md),  
-[GetAddress](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/GetAddress.md),  
-[GetRange](../../../../office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetRange.md),  
-[GetValue](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/GetValue.md),  
-[SetFillColor](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/SetFillColor.md),  
-[CreateColorFromRGB](../../../../office-api/usage-api/spreadsheet-api/Api/Methods/CreateColorFromRGB.md)
+Methods used: [GetActiveSheet](../../../../office-api/usage-api/spreadsheet-api/Api/Methods/GetActiveSheet.md), [GetUsedRange](../../../../office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetUsedRange.md), [GetAddress](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/GetAddress.md), [GetRange](../../../../office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetRange.md), [GetValue](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/GetValue.md), [SetFillColor](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/SetFillColor.md), [CreateColorFromRGB](../../../../office-api/usage-api/spreadsheet-api/Api/Methods/CreateColorFromRGB.md)
 
 ## Result
 

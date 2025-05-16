@@ -1,28 +1,24 @@
 # Align charts
 
-Align charts and text boxes on every slide.
+Aligns charts and text boxes on every slide.
 
 ```ts
 (function () {
-  try {
-    const presentation = Api.GetPresentation();
-    const slideCount = presentation.GetSlidesCount();
-    const initialTop = 467200;
-    const spacing = 50000;
+  let presentation = Api.GetPresentation();
+  let slideCount = presentation.GetSlidesCount();
+  let initialTop = 467200;
+  let spacing = 50000;
 
-    for (let i = 0; i < slideCount; i++) {
-      const slide = presentation.GetSlideByIndex(i);
+  for (let i = 0; i < slideCount; i++) {
+    let slide = presentation.GetSlideByIndex(i);
 
-      const allElements = [...slide.GetAllCharts(), ...slide.GetAllShapes()];
-      let currentTop = initialTop;
+    let allElements = [...slide.GetAllCharts(), ...slide.GetAllShapes()];
+    let currentTop = initialTop;
 
-      allElements.forEach((element) => {
-        element.SetPosition(608400, currentTop);
-        currentTop = currentTop + element.GetHeight() + spacing;
-      });
-    }
-  } catch (error) {
-    console.error("An error occurred: " + error.message);
+    allElements.forEach((element) => {
+      element.SetPosition(608400, currentTop);
+      currentTop = currentTop + element.GetHeight() + spacing;
+    });
   }
 })();
 ```

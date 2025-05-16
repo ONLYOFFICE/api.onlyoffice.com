@@ -1,6 +1,6 @@
 # Insert watermark
 
-Insert or remove a custom watermark on every page of the document.
+Inserts or removes a custom watermark on every page of the document.
 
 ```ts
 (function () {
