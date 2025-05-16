@@ -6,18 +6,18 @@ sidebar_position: -6
 
 ## Where can I find integration examples for ONLYOFFICE Docs?
 
-The examples of integration of ONLYOFFICE Docs with your own website can be found [here](../../get-started/language-specific-examples/language-specific-examples.md). You can choose among different web development programming languages:
+The examples of integration of ONLYOFFICE Docs with your own website can be found [here](../../samples/language-specific-examples/language-specific-examples.md). You can choose among different web development programming languages:
 
-- [.Net (C#) / .Net (C# MVC)](../../get-started/language-specific-examples/net-example.md)
-- [Java](../../get-started/language-specific-examples/java-example.md)
-- [Java Spring](../../get-started/language-specific-examples/java-spring-example.md)
-- [Node.js](../../get-started/language-specific-examples/nodejs-example.md)
-- [PHP](../../get-started/language-specific-examples/php-example.md)
-- [PHP (Laravel)](../../get-started/language-specific-examples/php-laravel-example.md)
-- [Python](../../get-started/language-specific-examples/python-example.md)
-- [Ruby](../../get-started/language-specific-examples/ruby-example.md)
-- [Go](../../get-started/language-specific-examples/go-example.md)
-- [Java integration SDK](../../get-started/language-specific-examples/java-integration-sdk.md)
+- [.Net (C#) / .Net (C# MVC)](../../samples/language-specific-examples/net-example.md)
+- [Java](../../samples/language-specific-examples/java-example.md)
+- [Java Spring](../../samples/language-specific-examples/java-spring-example.md)
+- [Node.js](../../samples/language-specific-examples/nodejs-example.md)
+- [PHP](../../samples/language-specific-examples/php-example.md)
+- [PHP (Laravel)](../../samples/language-specific-examples/php-laravel-example.md)
+- [Python](../../samples/language-specific-examples/python-example.md)
+- [Ruby](../../samples/language-specific-examples/ruby-example.md)
+- [Go](../../samples/language-specific-examples/go-example.md)
+- [Java integration SDK](../../samples/language-specific-examples/java-integration-sdk.md)
 
 The examples will show where to get the source codes, how to install and set up the working examples for integrating ONLYOFFICE Docs into your website written with the help of one of these programming languages.
 

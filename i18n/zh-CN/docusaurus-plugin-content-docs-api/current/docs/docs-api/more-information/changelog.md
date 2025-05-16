@@ -43,15 +43,14 @@ ONLYOFFICE 文档 API 的更改列表。
 - 向 WOPI 主机页面的 *form* 元素添加了 [docs\_api\_config](../using-wopi/host-page.md#parameters) 参数。
 - 向转换请求添加了 [pdf](../additional-api/conversion-api/request.md#pdf) 字段。
 - 添加了 [events.onSubmit](../usage-api/config/events.md#onsubmit) 事件。
-- *docxf* 格式已弃用，请使用 *pdf* 格式创建和编辑表单。
-- 将 *docxf* 和 *oform* 格式的 [documentType](../usage-api/config/config.md#documenttype) 更改为 *pdf*。
+- 将 *oform* 格式的 [documentType](../usage-api/config/config.md#documenttype) 更改为 *pdf*。
 - 将 *roles* 字段添加到 [editorConfig.customization.features](../usage-api/config/editor/customization/customization-standard-branding.md#features) 参数。
 - 发送时将 [shardkey](../get-started/how-it-works/how-it-works.md#shard-key) 参数添加到 URL 查询字符串请求到文档命令服务、文档转换服务或文档生成器服务。
 - 向 *Automation API* 添加了 [addContextMenuItem](../usage-api/automation-api.md#addcontextmenuitem), [addToolbarMenuItem](../usage-api/automation-api.md#addtoolbarmenuitem) 和 [updateContextMenuItem](../usage-api/automation-api.md#updatecontextmenuitem) 方法。
 - 向 Conversion API 添加了 [-10 错误代码](../additional-api/conversion-api/error-codes.md)。
 - [editorConfig.customization.logo](../usage-api/config/editor/customization/customization-standard-branding.md#logo) 参数现在可用于移动编辑器。
 - 向 [editorConfig.customization.logo](../usage-api/config/editor/customization/customization-standard-branding.md#logo) 参数添加了 *visible* 字段。
-- 向 WOPI 发现添加了 [formsubmit](../using-wopi/wopi-discovery.md#wopi-actions) 操作。
+- 向 WOPI 发现添加了 [formsubmit](../using-wopi/wopi-discovery.md#formsubmit) 操作。
 - [editorConfig.customization.goback.requestClose](../usage-api/config/editor/customization/customization-standard-branding.md#goback) 字段已弃用，请使用 [editorConfig.customization.close](../usage-api/config/editor/customization/customization-standard-branding.md#close) 字段。
 - 向 WOPI 添加了 [Save Copy As](../using-wopi/wopi-rest-api/putrelativefile.md#save-copy-as) 功能。
 - 将 [editorConfig.customization.hideRightMenu](../usage-api/config/editor/customization/customization-standard-branding.md#hiderightmenu) 参数的默认值更改为 *true*。
@@ -87,7 +86,7 @@ ONLYOFFICE 文档 API 的更改列表。
 
 ## 版本 7.4
 
-- 在 WOPI discovery 中新增 [mobileView](../using-wopi/wopi-discovery.md#wopi-actions) 和 [mobileEdit](../using-wopi/wopi-discovery.md#wopi-actions) 操作。
+- 在 WOPI discovery 中新增 [mobileView](../using-wopi/wopi-discovery.md#mobileView) 和 [mobileEdit](../using-wopi/wopi-discovery.md#mobileEdit) 操作。
 - 添加了打开 [dps、dpt、et、ett、mhtml、stw、sxc、sxi、sxw、wps、wpt](../usage-api/config/config.md#documenttype) 格式的功能。
 - 在 [setUsers](../usage-api/methods.md#setusers) 方法中添加了 *users.id* 字段。
 - 在 [setUsers](../usage-api/methods.md#setusers) 方法和 [events.onRequestUsers](../usage-api/config/events.md#onrequestusers) 事件中添加了 *c* 参数。
@@ -98,9 +97,9 @@ ONLYOFFICE 文档 API 的更改列表。
 - 添加了 [setReferenceData](../usage-api/methods.md#setreferencedata) 方法。
 - 添加了 [events.onRequestReferenceData](../usage-api/config/events.md#onrequestreferencedata) 事件。
 - 添加了 [document.referenceData](../usage-api/config/document/document.md#referencedata) 参数。
-- 向 *CheckFileInfo* WOPI 操作添加了 [UserCanNotWriteRelative](../using-wopi/wopi-rest-api/checkfileinfo.md#user-permissions-properties) 属性。
+- 向 *CheckFileInfo* WOPI 操作添加了 [UserCanNotWriteRelative](../using-wopi/wopi-rest-api/checkfileinfo.md#UserCanNotWriteRelative) 属性。
 - 添加了 [编辑二进制文档格式](../using-wopi/editing-binary-documents.md) 的方案。
-- 向 WOPI 发现添加了 [convert](../using-wopi/wopi-discovery.md#wopi-actions) 操作。
+- 向 WOPI 发现添加了 [convert](../using-wopi/wopi-discovery.md#convert) 操作。
 - 添加了 [PutRelativeFile](../using-wopi/wopi-rest-api/putrelativefile.md) WOPI 操作。
 
 ## 版本 7.2
@@ -111,7 +110,7 @@ ONLYOFFICE 文档 API 的更改列表。
 - 将 *phone* 字段添加到 [editorConfig.customization.customer](../usage-api/config/editor/customization/customization-standard-branding.md#customer) 参数中。
 - 向许可证响应添加 *connections\_view*, *users\_view\_count* 和 *users\_view* [license response](../additional-api/command-service/license.md#response-parameters)。
 - 在文本文档、电子表格和演示文稿编辑器中添加了 [实时查看器](../get-started/how-it-works/viewing.md) 模式。
-- 将 [embedview](../using-wopi/wopi-discovery.md#wopi-actions) 操作添加到 wopi 发现中。
+- 将 [embedview](../using-wopi/wopi-discovery.md#embedview) 操作添加到 wopi 发现中。
 - [services.CoAuthoring.secret.browser.string](../additional-api/signature/signature.md#parameters) 参数已弃用，请改用 [services.CoAuthoring.secret.inbox.string](../additional-api/signature/signature.md#parameters) 参数。
 
 ## 版本 7.1
@@ -133,8 +132,7 @@ ONLYOFFICE 文档 API 的更改列表。
 
 ## 版本 7.0
 
-- 添加了 *.docxf* 和 *.oform* [文档格式](../usage-api/config/config.md#documenttype)。
-- 添加了与 [docxf](../additional-api/conversion-api/conversion-tables.md#text-document-file-formats) 格式的双向转换。
+- 添加了 *.oform* [文档格式](../usage-api/config/config.md#documenttype)。
 - 使用来自同一用户的最后一个标签的 [callbackUrl](../usage-api/callback-handler.md)。
 - 在 [editorConfig.customization.customer](../usage-api/config/editor/customization/customization-standard-branding.md#customer) 参数中添加了 *logoDark* 字段。
 - 在 [editorConfig.customization.logo](../usage-api/config/editor/customization/customization-standard-branding.md#logo) 参数中添加了 *imageDark* 字段。

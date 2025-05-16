@@ -2,6 +2,9 @@
 
 Opens a file in [ONLYOFFICE editors](../usage-sdk/initialization-modes/editor.md) using the [file selector](../usage-sdk/initialization-modes/file-selector.md).
 
+<details>
+  <summary>Full example</summary>
+
 ``` html
 <!DOCTYPE html>
 <html lang="en">
@@ -41,6 +44,8 @@ Opens a file in [ONLYOFFICE editors](../usage-sdk/initialization-modes/editor.md
 </html>
 ```
 
+</details>
+
 ![Open editors sample](/assets/images/docspace/open-editors.svg)
 
 ## Before you start
@@ -68,7 +73,9 @@ Create an HTML file. It must include a *div* tag where we specify the DocSpace c
 </html>
 ```
 
+:::info
 The API JavaScript file can normally be found in the following DocSpace folder: **\{PORTAL_SRC\}/static/scripts/sdk/1.0.1/api.js** where **\{PORTAL_SRC\}** is the name of the server with the ONLYOFFICE DocSpace installed.
+:::
 
 ## Step 2. Add the file selector
 
