@@ -24,5 +24,5 @@ Methods used: [GetDocument](../../../../office-api/usage-api/text-document-api/A
 
 ## Result
 
-![DateSetter](/assets/images/plugins/date-setter.png#gh-light-mode-only)
-![DateSetter](/assets/images/plugins/date-setter.dark.png#gh-dark-mode-only)
+![DateSetter](/assets/images/plugins/update-date-field.png#gh-light-mode-only)
+![DateSetter](/assets/images/plugins/update-date-field.dark.png#gh-dark-mode-only)

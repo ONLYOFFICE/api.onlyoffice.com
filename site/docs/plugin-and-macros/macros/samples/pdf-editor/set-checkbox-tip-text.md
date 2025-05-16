@@ -24,5 +24,5 @@ Methods used: [GetDocument](../../../../office-api/usage-api/text-document-api/A
 
 ## Result
 
-![TipTextSetter](/assets/images/plugins/tip-text-setter.png#gh-light-mode-only)
-![TipTextSetter](/assets/images/plugins/tip-text-setter.dark.png#gh-dark-mode-only)
+![TipTextSetter](/assets/images/plugins/set-checkbox-tip-text.png#gh-light-mode-only)
+![TipTextSetter](/assets/images/plugins/set-checkbox-tip-text.dark.png#gh-dark-mode-only)

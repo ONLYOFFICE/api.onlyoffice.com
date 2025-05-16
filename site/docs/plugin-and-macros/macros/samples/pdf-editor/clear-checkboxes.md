@@ -22,5 +22,5 @@ Methods used: [GetDocument](../../../../office-api/usage-api/text-document-api/A
 
 ## Result
 
-![CheckboxUnchecker](/assets/images/plugins/checkbox-unchecker.png#gh-light-mode-only)
-![CheckboxUnchecker](/assets/images/plugins/checkbox-unchecker.dark.png#gh-dark-mode-only)
+![CheckboxUnchecker](/assets/images/plugins/clear-checkboxes.png#gh-light-mode-only)
+![CheckboxUnchecker](/assets/images/plugins/clear-checkboxes.dark.png#gh-dark-mode-only)

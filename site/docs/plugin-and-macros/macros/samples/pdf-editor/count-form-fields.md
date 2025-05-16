@@ -66,5 +66,5 @@ Methods used: [GetDocument](../../../../office-api/usage-api/text-document-api/A
 
 ## Result
 
-![FormFieldCounter](/assets/images/plugins/form-field-counter.png#gh-light-mode-only)
-![FormFieldCounter](/assets/images/plugins/form-field-counter.dark.png#gh-dark-mode-only)
+![FormFieldCounter](/assets/images/plugins/count-form-fields.png#gh-light-mode-only)
+![FormFieldCounter](/assets/images/plugins/count-form-fields.dark.png#gh-dark-mode-only)

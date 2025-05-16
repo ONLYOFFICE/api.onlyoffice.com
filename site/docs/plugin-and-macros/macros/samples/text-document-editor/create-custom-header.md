@@ -7,7 +7,7 @@ Creates a custom header with an image and a title. The image is represented as a
   // Get the active document
   let doc = Api.GetDocument();
 
-  // Try to get the existing header; if none exists, create one
+  // Get the existing header
   let section = doc.GetFinalSection();
   let header = section.GetHeader("default", true);
 
@@ -39,5 +39,5 @@ Methods used: [GetDocument](../../../../office-api/usage-api/text-document-api/A
 
 ## Result
 
-![CustomHeader](/assets/images/plugins/custom-header.png#gh-light-mode-only)
-![CustomHeader](/assets/images/plugins/custom-header.dark.png#gh-dark-mode-only)
+![CustomHeader](/assets/images/plugins/create-custom-header.png#gh-light-mode-only)
+![CustomHeader](/assets/images/plugins/create-custom-header.dark.png#gh-dark-mode-only)

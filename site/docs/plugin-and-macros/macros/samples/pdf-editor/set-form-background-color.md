@@ -27,5 +27,5 @@ Methods used: [GetDocument](../../../../office-api/usage-api/text-document-api/A
 
 ## Result
 
-![BackgroundColorSetter](/assets/images/plugins/background-color-setter.png#gh-light-mode-only)
-![BackgroundColorSetter](/assets/images/plugins/background-color-setter.dark.png#gh-dark-mode-only)
+![BackgroundColorSetter](/assets/images/plugins/set-form-background-color.png#gh-light-mode-only)
+![BackgroundColorSetter](/assets/images/plugins/set-form-background-color.dark.png#gh-dark-mode-only)
