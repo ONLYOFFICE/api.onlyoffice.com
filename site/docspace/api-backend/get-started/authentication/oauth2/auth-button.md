@@ -79,4 +79,4 @@ You can click the example button to go through the entire [authorization flow](a
 
 To initiate the OAuth 2.0 authorization flow, you can also send GET request to the [oauth2/authorize](../../../../../docspace/api-backend/usage-api/o-auth-2-authorization-endpoint.api.mdx) address.
 
-![Authorization flow](/assets/images/docspace/authorization-flow.png#gh-light-mode-only)![Authorization flow](/assets/images/docspace/authorization-flow.dark.png#gh-dark-mode-only)
+<img alt="Authorization flow" src="/assets/images/docspace/authorization-flow.png#gh-light-mode-only" width="300px" /><img alt="Authorization flow" src="/assets/images/docspace/authorization-flow.dark.png#gh-dark-mode-only" width="300px" />
