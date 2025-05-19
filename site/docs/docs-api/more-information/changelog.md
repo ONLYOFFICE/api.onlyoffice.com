@@ -108,7 +108,7 @@ The list of changes of ONLYOFFICE Docs API.
 - Added the [Connector](../usage-api/automation-api.md) class to interact with text documents, spreadsheets, presentations, PDFs, and fillable forms from the outside.
 - Added the *theme-contrast-dark* theme id to the [editorConfig.customization.uiTheme](../usage-api/config/editor/customization/customization-standard-branding.md#uitheme) parameter.
 - Added the *phone* field to the [editorConfig.customization.customer](../usage-api/config/editor/customization/customization-standard-branding.md#customer) parameter.
-- Added the *connections\_view*, *users\_view\_count* and *users\_view* parameters to the [license response](../additional-api/command-service/license.md#response-parameters).
+- Added the [connections\_view](../additional-api/command-service/license.md#license.connections_view), [users\_view\_count](../additional-api/command-service/license.md#license.users_view_count) and [users\_view](../additional-api/command-service/license.md#quota.users_view) parameters to the license response.
 - Added the [live viewer](../get-started/how-it-works/viewing.md) mode to the text document, spreadsheet and presentation editors.
 - Added the [embedview](../using-wopi/wopi-discovery.md#embedview) action to the WOPI discovery.
 - The [services.CoAuthoring.secret.browser.string](../additional-api/signature/signature.md#parameters) parameter is deprecated, please use the [services.CoAuthoring.secret.inbox.string](../additional-api/signature/signature.md#parameters) parameter instead.
