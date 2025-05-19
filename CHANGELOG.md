@@ -5,6 +5,7 @@
 #### Docspace
 
 * Added new JavaScript SDK samples
+* Added the MCP server
 
 ## 5.1.0
 
