@@ -151,7 +151,7 @@ The list of changes of ONLYOFFICE Docs API.
 - Added the [editorConfig.customization.review.hideReviewDisplay](../usage-api/config/editor/customization/customization-standard-branding.md#review) field.
 - Added the [editorConfig.customization.review.hoverMode](../usage-api/config/editor/customization/customization-standard-branding.md#review) field.
 - Added the possibility to view the [document history](../get-started/how-it-works/document-history.md) of the spreadsheet files.
-- Added the [UI\_InsertGraphic](../using-wopi/postmessage.md#ui_insertgraphic) message for the PostMessage WOPI protocol.
+- Added the [UI\_InsertGraphic](../using-wopi/postmessage.md#UI_InsertGraphic) message for the PostMessage WOPI protocol.
 
 ## Version 6.4
 
