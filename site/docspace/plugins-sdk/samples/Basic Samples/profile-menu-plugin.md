@@ -86,7 +86,7 @@ window.Plugins.Profilemenuitem = plugin || {};
 export default plugin;
 ```
 
-### Add Profile Menu Item
+## Step 4: Add Profile Menu Item
 
 Now append the following to the bottom of the file:
 
@@ -109,7 +109,7 @@ For reference:
 [ProfileMenuPlugin Docs](../../../usage-sdk/coding-plugin/plugin-types/profilemenuplugin)  
 [ProfileMenuItem Docs](../../../usage-sdk/coding-plugin/plugin-items/profilemenuitem)
 
-## Step 4: Build the Plugin
+## Step 5: Build the Plugin
 
 From the root of your plugin:
 
@@ -119,14 +119,14 @@ npm run build
 
 This compiles `src/index.ts` to `dist/plugin.js` and runs `scripts/createZip.js` to bundle everything into `dist/plugin.zip`.
 
-## Step 5: Upload to DocSpace
+## Step 6: Upload to DocSpace
 
 1. Log in as an administrator.
 2. Navigate to: **Admin Panel → Integration → Plugins**.
 3. Click **Upload**, and select the generated `dist/plugin.zip`.
 4. Enable the plugin toggle if not already active.
 
-## Step 6: Test It
+## Step 7: Test It
 
 1. Go to the bottom-left corner of the DocSpace interface.
 2. Click the three dots button next to your profile (avatar).
