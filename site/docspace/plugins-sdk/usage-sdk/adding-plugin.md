@@ -10,7 +10,7 @@ You can upload your own plugins to your server. For the DocSpace Saas solution, 
 
 By default, system plugins are turned off. But you can enable them by following the instructions below:
 
-1. In the lower left corner, click ![More icon](/assets/images/docspace/more-icon.png) and open the **Settings** page.
+1. In the lower left corner, click ![More icon](/assets/images/docspace/more-icon.png#gh-light-mode-only)![More icon](/assets/images/docspace/more-icon.dark.png#gh-dark-mode-only) and open the **Settings** page.
 
    ![DocSpace Settings](/assets/images/docspace/docspace-settings.png)
 
