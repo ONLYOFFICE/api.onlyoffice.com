@@ -33,8 +33,8 @@ const ReviewChangesExternalToolbar: React.FC<void> = () => {
         templateUrl="https://static.onlyoffice.com/assets/docs/samples/review.docx"
         externalScript={{
           beforeDocumentReady: `            
-            const contentControls = [];
-            let indexComment = 0;  
+            var contentControls = [];
+            var indexComment = 0;  
           `,
           onDocumentReady: `
             document.querySelectorAll(".${styles["list-buttons"]} button").forEach(btn => {
