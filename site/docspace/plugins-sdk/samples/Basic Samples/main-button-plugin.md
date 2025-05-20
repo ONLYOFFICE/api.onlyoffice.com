@@ -3,11 +3,16 @@
 This guide walks you through creating a basic plugin for DocSpace that adds a button to the main toolbar and logs an action when clicked.
 
 ## Before you start
-Make sure you have a DocSpace server running and install DocSpace Plugin SDK globally `npm i -g @onlyoffice/docspace-plugin-sdk`
+
+Make sure you have a DocSpace server running and install DocSpace Plugin SDK globally:
+
+```bash
+npm i -g @onlyoffice/docspace-plugin-sdk
+```
 
 ## Step 1: Create the Plugin
 
-First, initialize your plugin using the CLI:
+Initialize your plugin using the CLI:
 
 ```bash
 npx create-docspace-plugin
@@ -22,7 +27,7 @@ You'll be prompted to fill out basic metadata:
 - License
 - Homepage
 
-Then, you'll be shown a list of available scopes.  
+Then, you'll be shown a list of available scopes.
 Use the arrow keys to highlight `Main button`, press `space` to select it, then press `enter` to confirm and generate the plugin template.
 
 ## Step 2: Confirm Plugin Configuration
@@ -110,8 +115,8 @@ declare global {
 ...
 ```
 
-For reference:  
-[MainButtonPlugin Docs](../../../usage-sdk/coding-plugin/plugin-types/mainbuttonplugin)  
+For reference:
+[MainButtonPlugin Docs](../../../usage-sdk/coding-plugin/plugin-types/mainbuttonplugin)
 [MainButtonItem Docs](../../../usage-sdk/coding-plugin/plugin-items/mainbuttonitem)
 
 ## Step 5: Build the Plugin
@@ -123,7 +128,6 @@ npm run build
 ```
 
 This compiles `src/index.ts` to `dist/plugin.js` and runs `scripts/createZip.js` to bundle everything into `dist/plugin.zip`
-
 
 ## Step 6: Upload to DocSpace
 
@@ -138,7 +142,6 @@ This compiles `src/index.ts` to `dist/plugin.js` and runs `scripts/createZip.js`
 2. Click the **...More** menu in the top toolbar
 3. Look for your button titled `"Do something"`
 4. Click it - it should log `"Main Button works!"` in the browser console
-
 
 ## Notes
 
