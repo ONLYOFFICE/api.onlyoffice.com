@@ -131,7 +131,7 @@ const close = {
 
 **示例**: `true`
 
-![批注](/assets/images/editor/comment.png)
+![批注](/assets/images/editor/comment.png#gh-light-mode-only)![批注](/assets/images/editor/comment.dark.png#gh-dark-mode-only)
 
 ## compactHeader
 

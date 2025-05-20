@@ -6,7 +6,7 @@ sidebar_position: -10
 
 **评论功能**允许您对文档中特定的单词、短语、句子以及其他部分添加评论，还能对这些评论进行编辑和删除操作。所有评论都会被保存下来，并展示给其他使用该文档的用户。
 
-![评论](/assets/images/editor/comment.png)
+![评论](/assets/images/editor/comment.png#gh-light-mode-only)![评论](/assets/images/editor/comment.dark.png#gh-dark-mode-only)
 
 ## 评论权限
 

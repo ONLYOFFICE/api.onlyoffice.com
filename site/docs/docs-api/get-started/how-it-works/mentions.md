@@ -102,7 +102,7 @@ When the [onRequestSendNotify](../../usage-api/config/events.md#onrequestsendnot
 
 In the case when the [document.info.sharingSettings](../../usage-api/config/document/info.md#sharingsettings) field is used in the document initialization but the list of the users from the [onRequestSendNotify](../../usage-api/config/events.md#onrequestsendnotify) event is different, the [setSharingSettings](../../usage-api/methods.md#setsharingsettings) method must be called.
 
-![Sharing settings](/assets/images/editor/sharing_settings.png)
+![Sharing settings](/assets/images/editor/sharing-settings.png#gh-light-mode-only)![Sharing settings](/assets/images/editor/sharing-settings.dark.png#gh-dark-mode-only)
 
 ``` ts
 docEditor.setSharingSettings({

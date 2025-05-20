@@ -98,7 +98,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
 
 如果在文档初始化中使用了[document.info.sharingSettings](../../usage-api/config/document/info.md#sharingsettings)字段，但[onRequestSendNotify](../../usage-api/config/events.md#onrequestsendnotify)事件中的用户列表与之不同，则必须调用[setSharingSettings](../../usage-api/methods.md#setsharingsettings)方法。
 
-![共享设置](/assets/images/editor/sharing_settings.png)
+![共享设置](/assets/images/editor/sharing-settings.png#gh-light-mode-only)![共享设置](/assets/images/editor/sharing-settings.dark.png#gh-dark-mode-only)
 
 ``` ts
 docEditor.setSharingSettings({

@@ -34,7 +34,7 @@
 
 **示例**: `true`
 
-![评论](/assets/images/editor/comment.png)
+![评论](/assets/images/editor/comment.png#gh-light-mode-only)![评论](/assets/images/editor/comment.dark.png#gh-dark-mode-only)
 
 ## commentGroups
 
@@ -102,7 +102,7 @@ const config = {
 
 **示例**: `true`
 
-![下载文档](/assets/images/editor/download.png)
+![下载文档](/assets/images/editor/download.png#gh-light-mode-only)![下载文档](/assets/images/editor/download.dark.png#gh-dark-mode-only)
 
 ## 修改
 
@@ -134,7 +134,7 @@ const config = {
 
 **示例**: `true`
 
-![填写表格](/assets/images/editor/fill-forms.png)
+![填写表格](/assets/images/editor/fill-forms.png#gh-light-mode-only)![填写表格](/assets/images/editor/fill-forms.dark.png#gh-dark-mode-only)
 
 ## modifyContentControl
 
@@ -164,7 +164,7 @@ const config = {
 
 **示例**: `true`
 
-![打印文档](/assets/images/editor/print.png)
+![打印文档](/assets/images/editor/print.png#gh-light-mode-only)![打印文档](/assets/images/editor/print.dark.png#gh-dark-mode-only)
 
 ## 保护
 
@@ -174,7 +174,7 @@ const config = {
 
 **示例**: `true`
 
-![保护文档](/assets/images/editor/protect.png)
+![保护文档](/assets/images/editor/protect.png#gh-light-mode-only)![保护文档](/assets/images/editor/protect.dark.png#gh-dark-mode-only)
 
 ## 重命名
 

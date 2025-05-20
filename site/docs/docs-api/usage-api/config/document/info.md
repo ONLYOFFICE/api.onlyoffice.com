@@ -93,7 +93,7 @@ The name of the user the document will be shared with.
 
 **Example**: `"John Smith"`
 
-![Sharing settings](/assets/images/editor/sharing_settings.png) 
+![Sharing settings](/assets/images/editor/sharing-settings.png#gh-light-mode-only)![Sharing settings](/assets/images/editor/sharing-settings.dark.png#gh-dark-mode-only)
 
 ## uploaded
 
@@ -103,7 +103,7 @@ Defines the document uploading date.
 
 **Example**: `"2010-07-07 3:46 PM"`
 
-![Document information](/assets/images/editor/info.png)
+![Document information](/assets/images/editor/info.png#gh-light-mode-only)![Document information](/assets/images/editor/info.dark.png#gh-dark-mode-only)
 
 ## Example
 

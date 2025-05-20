@@ -93,7 +93,7 @@
 
 **示例**: `"John Smith"`
 
-![共享设置](/assets/images/editor/sharing_settings.png) 
+![共享设置](/assets/images/editor/sharing-settings.png#gh-light-mode-only)![共享设置](/assets/images/editor/sharing-settings.dark.png#gh-dark-mode-only)
 
 ## 已上传
 
@@ -103,7 +103,7 @@
 
 **示例**: `"2010-07-07 3:46 PM"`
 
-![文档信息](/assets/images/editor/info.png)
+![文档信息](/assets/images/editor/info.png#gh-light-mode-only)![文档信息](/assets/images/editor/info.dark.png#gh-dark-mode-only)
 
 ## 示例
 

@@ -131,7 +131,7 @@ Defines if the **Comments** menu button is displayed or hidden. Please note that
 
 **Example**: `true`
 
-![Comments](/assets/images/editor/comment.png)
+![Comments](/assets/images/editor/comment.png#gh-light-mode-only)![Comments](/assets/images/editor/comment.dark.png#gh-dark-mode-only)
 
 ## compactHeader
 

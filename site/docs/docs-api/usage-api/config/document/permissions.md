@@ -34,7 +34,7 @@ In case *edit* is set to **"true"** and *comment* is also set to **"true"**, the
 
 **Example**: `true`
 
-![Comments](/assets/images/editor/comment.png)
+![Comments](/assets/images/editor/comment.png#gh-light-mode-only)![Comments](/assets/images/editor/comment.dark.png#gh-dark-mode-only)
 
 ## commentGroups
 
@@ -102,7 +102,7 @@ Defines if the document can be downloaded or only viewed or edited online. In ca
 
 **Example**: `true`
 
-![Download document](/assets/images/editor/download.png)
+![Download document](/assets/images/editor/download.png#gh-light-mode-only)![Download document](/assets/images/editor/download.dark.png#gh-dark-mode-only)
 
 ## edit
 
@@ -134,7 +134,7 @@ In case *edit* is set to **"true"** or *review* is set to **"true"**, the *fillF
 
 **Example**: `true`
 
-![Fill forms](/assets/images/editor/fill-forms.png)
+![Fill forms](/assets/images/editor/fill-forms.png#gh-light-mode-only)![Fill forms](/assets/images/editor/fill-forms.dark.png#gh-dark-mode-only)
 
 ## modifyContentControl
 
@@ -164,7 +164,7 @@ Defines if the document can be printed or not. In case the printing permission i
 
 **Example**: `true`
 
-![Print document](/assets/images/editor/print.png)
+![Print document](/assets/images/editor/print.png#gh-light-mode-only)![Print document](/assets/images/editor/print.dark.png#gh-dark-mode-only)
 
 ## protect
 
@@ -174,7 +174,7 @@ Defines if the **Protection** tab on the toolbar and the **Protect** button in t
 
 **Example**: `true`
 
-![Protect document](/assets/images/editor/protect.png)
+![Protect document](/assets/images/editor/protect.png#gh-light-mode-only)![Protect document](/assets/images/editor/protect.dark.png#gh-dark-mode-only)
 
 ## rename
 
