@@ -87,12 +87,11 @@ const FormExternalToolbar: React.FC<void> = () => {
               const person = ${persons}.find(e => e["PostalCode"] === this.value);
               for (const key in person) {
                 let value = person[key];
-                //if (key === "Sex") {
-                //  const sexKey = value === "Male" ? "Male" : "Female";
-                //  value = "true";
-                //  setFormValue(sexKey, value);
-                //} else {
-                if (key !== "Sex") {
+                if (key === "Sex") {
+                  const sexKey = value === "Male" ? "Male" : "Female";
+                  value = "true";
+                  setFormValue(sexKey, value);
+                } else {
                   setFormValue(key, value);
                 }
               }
@@ -102,11 +101,13 @@ const FormExternalToolbar: React.FC<void> = () => {
                   "GetFormsByTag",
                   [tag],
                   function(forms) {
-                    connector.executeMethod(
-                      "SetFormValue",
-                      [forms[0]["InternalId"], value],
-                      null
-                    );
+                    if (forms && forms.length > 0) {
+                      connector.executeMethod(
+                        "SetFormValue",
+                        [forms[0]["InternalId"], value],
+                        null
+                      );
+                    }
                   }
                 );
               }
