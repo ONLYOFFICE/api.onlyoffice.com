@@ -5,7 +5,7 @@ This guide walks you through creating a plugin for DocSpace that adds a custom i
 ## Before you start
 Make sure you have a DocSpace server running and install DocSpace Plugin SDK globally `npm i -g @onlyoffice/docspace-plugin-sdk`
 
-## Step 1: Creating the Plugin
+## Step 1: Create the Plugin
 
 First, initialize your plugin using the CLI:
 
@@ -30,7 +30,7 @@ Use the arrow keys to highlight `Profile menu`, press `space` to select it, then
 Ensure `package.json` includes all necessary fields. Most importantly, make sure it includes:
 
 ```json
-"scopes": ["MainButton"]
+"scopes": ["ProfileMenu"]
 ```
 
 Also verify that the `scripts/createZip.js` file is present. This script will:
@@ -135,6 +135,6 @@ This compiles `src/index.ts` to `dist/plugin.js` and runs `scripts/createZip.js`
 
 ## Notes
 
-You can add multiple items via `addProfileMenuItem(...)`.
-The `onClick()` function is a good place to trigger modals, open side panels, or call APIs.
-You can extend this plugin to support other scopes like `MainButton`, `Settings`, or `ContextMenu` by updating the `package.json` and plugin logic accordingly.
+- You can add multiple items via `addProfileMenuItem(...)`.
+- The `onClick()` function is a good place to trigger modals, open side panels, or call APIs.
+- You can extend this plugin to support other scopes like `MainButton`, `Settings`, or `ContextMenu` by updating the `package.json` and plugin logic accordingly.
