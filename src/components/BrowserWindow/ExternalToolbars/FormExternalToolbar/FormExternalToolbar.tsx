@@ -52,7 +52,7 @@ const FormExternalToolbar: React.FC<void> = () => {
         }}
         externalScript={{
           beforeDocumentReady: `            
-            const contentControls = [];
+            var contentControls = [];
           `,
           onDocumentReady: `
             connector.executeMethod("GetAllContentControls", null, function (data) {
