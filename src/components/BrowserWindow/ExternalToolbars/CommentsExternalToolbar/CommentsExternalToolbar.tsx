@@ -53,8 +53,8 @@ const CommentsExternalToolbar: React.FC<void> = () => {
         templateUrl="https://static.onlyoffice.com/assets/docs/samples/withcomments.docx"
         externalScript={{
           beforeDocumentReady: `
-            const comments = [];
-            let indexComment = 0;
+            var comments = [];
+            var indexComment = 0;
           `,
           onDocumentReady: `
             const getCommentIndex = (targetComment) => {
@@ -95,7 +95,7 @@ const CommentsExternalToolbar: React.FC<void> = () => {
             });
           `,
           otherFunctional: `
-            const renderComment = function() {
+            var renderComment = function() {
               const comment = document.getElementById("comment");
               const replies = document.getElementById("replies");
               const emptyComment = document.getElementById("empty-comment");
@@ -146,7 +146,7 @@ const CommentsExternalToolbar: React.FC<void> = () => {
               }
             };
 
-            const postComment = function(parent, userName, time, text) {
+            var postComment = function(parent, userName, time, text) {
               const date = parent.querySelector(".${styles["comment-date"]}");
               date.textContent = date.getAttribute("title") + ": " + new Date(parseInt(time, 10)).toLocaleString();
 

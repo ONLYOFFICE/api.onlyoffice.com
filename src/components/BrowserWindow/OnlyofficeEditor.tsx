@@ -116,9 +116,12 @@ function deepMergePreferFirst(a: any, b: any): any {
   return result;
 }
 
+const scriptId: string = "editorScript";
+
 const addScript = async (server: string, secret: string, fileType: string, code: string, theme: string, templateUrl: string, zoom: number,
                          externalConfig?: code, externalScript?: OnlyOfficeEditorProps["externalScript"], isDemo: boolean = false, isForm: boolean = false): Promise<void> => {
   const scriptConfig = document.createElement("script");
+  scriptConfig.id = scriptId;
   scriptConfig.type = "text/javascript";
 
   const documentConfig = createDocumentConfig(fileType, templateUrl, isDemo, isForm);
@@ -222,6 +225,7 @@ const OnlyOfficeEditor: React.FC<OnlyOfficeEditorProps> = ({
     }
 
     return () => {
+      document.getElementById(scriptId).remove();
     };
   }, []);
 
