@@ -1,6 +1,6 @@
 # Sort tables
 
-Automatically sort table rows alphabetically or numerically based on a selected column.
+Automatically sorts table rows alphabetically or numerically based on a selected column.
 
 ```ts
 (function() {

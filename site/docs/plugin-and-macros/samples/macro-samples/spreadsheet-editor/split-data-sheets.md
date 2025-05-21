@@ -1,6 +1,6 @@
 # Split data sheets
 
-This macro splits large sheets containing extensive datasets into multiple sheets if they exceed a specified row limit.
+Splits large sheets containing extensive datasets into multiple sheets if they exceed a specified row limit.
 
 ```ts
 /* In each new sheet, the first row from the original sheet is added at the top as a header (assuming the first row contains the column headers).
