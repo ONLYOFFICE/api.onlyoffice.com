@@ -1,6 +1,6 @@
 # Remove duplicate sheet
 
-Identify and remove duplicate sheets in the spreadsheet.
+Identifies and removes duplicate sheets in the spreadsheet.
 
 ```ts
 (function()

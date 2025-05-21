@@ -1,6 +1,6 @@
 # Create content control list
 
-This macro creates a ContentControlList from all simple numbered lists throughout the document, as well as from manual text section.
+Creates a ContentControlList from all simple numbered lists throughout the document, as well as from manual text section.
 
 ```ts
 (function() {

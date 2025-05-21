@@ -1,6 +1,6 @@
 # Remove empty paragraphs
 
-This macro deletes all unnecessary blank paragraphs across the entire presentation.
+Deletes all unnecessary blank paragraphs across the entire presentation.
 
 ```ts
 (function()

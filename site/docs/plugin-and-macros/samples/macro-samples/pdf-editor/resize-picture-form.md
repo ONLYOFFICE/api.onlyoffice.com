@@ -1,6 +1,6 @@
 # Resize picture form
 
-This macro resizes PictureForms based on a predefined size or aspect ratio across the document.
+Resizes PictureForms based on a predefined size or aspect ratio across the document.
 
 ```ts
 (function()
