@@ -130,6 +130,12 @@ const config: Config = {
           items: [
             {
               type: 'docSidebar',
+              sidebarId: 'docspaceApiBackend',
+              label: 'Backend REST API',
+              docsPluginId: 'api',
+            },
+            {
+              type: 'docSidebar',
               sidebarId: 'docspaceJSSdk',
               label: 'JavaScript SDK',
               docsPluginId: 'api',
@@ -138,12 +144,6 @@ const config: Config = {
               type: 'docSidebar',
               sidebarId: 'docspacePlugins',
               label: 'Plugins SDK',
-              docsPluginId: 'api',
-            },
-            {
-              type: 'docSidebar',
-              sidebarId: 'docspaceApiBackend',
-              label: 'API backend',
               docsPluginId: 'api',
             },
             {
