@@ -1,6 +1,6 @@
-# Keyword Match
+# Keyword match in form keys
 
-This macro highlights form fields based on a keyword match in the form key.
+Highlights form fields based on a keyword match in the form key.
 
 ```ts
 (function () {
@@ -21,10 +21,9 @@ This macro highlights form fields based on a keyword match in the form key.
 })();
 ```
 
-Methods used: [GetDocument](../../../../office-api/usage-api/text-document-api/Api/Methods/GetDocument.md), [GetAllForms](../../../../office-api/usage-api/form-api/ApiDocument/Methods/GetAllForms.md), [GetFormKey](../../../../office-api/usage-api/form-api/ApiComplexForm/Methods/GetFormKey.md), [SetRequired](../../../../office-api/usage-api/form-api/ApiComplexForm/Methods/SetRequired.md)
+Methods used: [GetDocument](../../../../office-api/usage-api/text-document-api/Api/Methods/GetDocument.md), [GetAllForms](../../../../office-api/usage-api/form-api/ApiDocument/Methods/GetAllForms.md), [GetFormKey](../../../../office-api/usage-api/form-api/ApiFormBase/Methods/GetFormKey.md), [SetRequired](../../../../office-api/usage-api/form-api/ApiFormBase/Methods/SetRequired.md)
 
 ## Result
 
 ![KeywordMatch](/assets/images/plugins/keyword-match.png#gh-light-mode-only)
 ![KeywordMatch](/assets/images/plugins/keyword-match.dark.png#gh-dark-mode-only)
-

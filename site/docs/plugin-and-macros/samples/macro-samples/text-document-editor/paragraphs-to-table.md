@@ -1,6 +1,6 @@
-# Paragraphs To Table
+# Paragraphs to table
 
-This script converts a list of numbered paragraphs into a table.
+Converts a list of numbered paragraphs into a table.
 
 ```ts
 (function () {
@@ -50,10 +50,9 @@ This script converts a list of numbered paragraphs into a table.
 })();
 ```
 
-Methods used: [GetDocument](../../../../office-api/usage-api/text-document-api/Api/Methods/GetDocument.md), [GetAllNumberedParagraphs](../../../../office-api/usage-api/text-document-api/ApiDocument/Methods/GetAllNumberedParagraphs.md), [GetNumbering](../../../../office-api/usage-api/text-document-api/ApiParagraph/Methods/GetNumbering.md), [GetLevelIndex](../../../../office-api/usage-api/text-document-api/ApiNumberingLevel/Methods/GetLevelIndex.md), [GetText](../../../../office-api/usage-api/text-document-api/ApiRange/Methods/GetText.md), [CreateTable](../../../../office-api/usage-api/text-document-api/Api/Methods/CreateTable.md), [Push](../../../../office-api/usage-api/text-document-api/ApiParagraph/Methods/Push.md), [GetCell](../../../../office-api/usage-api/text-document-api/ApiTable/Methods/GetCell.md), [GetContent](../../../../office-api/usage-api/text-document-api/ApiDrawing/Methods/GetContent.md), [GetElement](../../../../office-api/usage-api/text-document-api/ApiHyperlink/Methods/GetElement.md), [AddText](../../../../office-api/usage-api/text-document-api/ApiRange/Methods/AddText.md)
+Methods used: [GetDocument](../../../../office-api/usage-api/text-document-api/Api/Methods/GetDocument.md), [GetAllNumberedParagraphs](../../../../office-api/usage-api/text-document-api/ApiDocument/Methods/GetAllNumberedParagraphs.md), [GetNumbering](../../../../office-api/usage-api/text-document-api/ApiParagraph/Methods/GetNumbering.md), [GetLevelIndex](../../../../office-api/usage-api/text-document-api/ApiNumberingLevel/Methods/GetLevelIndex.md), [GetText](../../../../office-api/usage-api/text-document-api/ApiParagraph/Methods/GetText.md), [CreateTable](../../../../office-api/usage-api/text-document-api/Api/Methods/CreateTable.md), [Push](../../../../office-api/usage-api/text-document-api/ApiDocument/Methods/Push.md), [GetCell](../../../../office-api/usage-api/text-document-api/ApiTable/Methods/GetCell.md), [GetContent](../../../../office-api/usage-api/text-document-api/ApiTableCell/Methods/GetContent.md), [GetElement](../../../../office-api/usage-api/text-document-api/ApiDocumentContent/Methods/GetElement.md), [AddText](../../../../office-api/usage-api/text-document-api/ApiParagraph/Methods/AddText.md)
 
 ## Result
 
 ![ParagraphsToTable](/assets/images/plugins/paragraphs-to-table.png#gh-light-mode-only)
 ![ParagraphsToTable](/assets/images/plugins/paragraphs-to-table.dark.png#gh-dark-mode-only)
-

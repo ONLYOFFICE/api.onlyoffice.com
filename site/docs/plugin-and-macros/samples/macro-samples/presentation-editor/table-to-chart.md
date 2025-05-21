@@ -1,6 +1,6 @@
-# Table To Chart
+# Table to chart
 
-Generates a chart based on selected table data.
+Generates a chart based on the selected table data.
 
 ```ts
 (function () {
@@ -129,10 +129,9 @@ Generates a chart based on selected table data.
 })();
 ```
 
-Methods used: [GetPresentation](../../../../office-api/usage-api/presentation-api/Api/Methods/GetPresentation.md), [GetSlidesCount](../../../../office-api/usage-api/presentation-api/ApiPresentation/Methods/GetSlidesCount.md), [GetSlideByIndex](../../../../office-api/usage-api/presentation-api/ApiPresentation/Methods/GetSlideByIndex.md), [GetAllDrawings](../../../../office-api/usage-api/presentation-api/ApiMaster/Methods/GetAllDrawings.md), [GetClassType](../../../../office-api/usage-api/presentation-api/ApiBullet/Methods/GetClassType.md), [Delete](../../../../office-api/usage-api/presentation-api/ApiDrawing/Methods/Delete.md), [GetRow](../../../../office-api/usage-api/presentation-api/ApiTable/Methods/GetRow.md), [GetCellsCount](../../../../office-api/usage-api/presentation-api/ApiTableRow/Methods/GetCellsCount.md), [GetCell](../../../../office-api/usage-api/presentation-api/ApiTableRow/Methods/GetCell.md), [GetContent](../../../../office-api/usage-api/presentation-api/ApiTableCell/Methods/GetContent.md), [GetText](../../../../office-api/usage-api/presentation-api/ApiComment/Methods/GetText.md), [CreateChart](../../../../office-api/usage-api/presentation-api/Api/Methods/CreateChart.md), [SetHorAxisTitle](../../../../office-api/usage-api/presentation-api/ApiChart/Methods/SetHorAxisTitle.md), [SetLegendPos](../../../../office-api/usage-api/presentation-api/ApiChart/Methods/SetLegendPos.md), [AddObject](../../../../office-api/usage-api/presentation-api/ApiMaster/Methods/AddObject.md)
+Methods used: [GetPresentation](../../../../office-api/usage-api/presentation-api/Api/Methods/GetPresentation.md), [GetSlidesCount](../../../../office-api/usage-api/presentation-api/ApiPresentation/Methods/GetSlidesCount.md), [GetSlideByIndex](../../../../office-api/usage-api/presentation-api/ApiPresentation/Methods/GetSlideByIndex.md), [GetAllDrawings](../../../../office-api/usage-api/presentation-api/ApiSlide/Methods/GetAllDrawings.md), [GetClassType](../../../../office-api/usage-api/presentation-api/ApiDrawing/Methods/GetClassType.md), [Delete](../../../../office-api/usage-api/presentation-api/ApiDrawing/Methods/Delete.md), [GetRow](../../../../office-api/usage-api/presentation-api/ApiTable/Methods/GetRow.md), [GetCellsCount](../../../../office-api/usage-api/presentation-api/ApiTableRow/Methods/GetCellsCount.md), [GetCell](../../../../office-api/usage-api/presentation-api/ApiTableRow/Methods/GetCell.md), [GetContent](../../../../office-api/usage-api/presentation-api/ApiTableCell/Methods/GetContent.md), [CreateChart](../../../../office-api/usage-api/presentation-api/Api/Methods/CreateChart.md), [SetHorAxisTitle](../../../../office-api/usage-api/presentation-api/ApiChart/Methods/SetHorAxisTitle.md), [SetLegendPos](../../../../office-api/usage-api/presentation-api/ApiChart/Methods/SetLegendPos.md), [AddObject](../../../../office-api/usage-api/presentation-api/ApiSlide/Methods/AddObject.md)
 
 ## Result
 
 ![TableToChart](/assets/images/plugins/table-to-chart.png#gh-light-mode-only)
 ![TableToChart](/assets/images/plugins/table-to-chart.dark.png#gh-dark-mode-only)
-
