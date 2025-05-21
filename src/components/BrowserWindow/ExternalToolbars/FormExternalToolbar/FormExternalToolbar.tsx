@@ -71,7 +71,7 @@ const FormExternalToolbar: React.FC<void> = () => {
                       data[i].Type = "input";
                   }
                   connector.executeMethod("GetFormValue", [data[i]["InternalId"]], function (value) {
-                    data[i].Value === value ? value : "";
+                    data[i].Value = value ? value : "";
                     if (data.length - 1 === i) {
                       contentControls.push(...preparingArrayContentControls(data));
                       renderForm();
@@ -88,9 +88,7 @@ const FormExternalToolbar: React.FC<void> = () => {
               for (const key in person) {
                 let value = person[key];
                 if (key === "Sex") {
-                  const sexKey = value === "Male" ? "Male" : "Female";
-                  value = "true";
-                  setFormValue(sexKey, value);
+                  setFormValue(value, true);
                 } else {
                   setFormValue(key, value);
                 }
@@ -101,13 +99,11 @@ const FormExternalToolbar: React.FC<void> = () => {
                   "GetFormsByTag",
                   [tag],
                   function(forms) {
-                    if (forms && forms.length > 0) {
-                      connector.executeMethod(
-                        "SetFormValue",
-                        [forms[0]["InternalId"], value],
-                        null
-                      );
-                    }
+                    connector.executeMethod(
+                      "SetFormValue",
+                      [forms[0]["InternalId"], value],
+                      null
+                    );
                   }
                 );
               }
@@ -150,7 +146,7 @@ const FormExternalToolbar: React.FC<void> = () => {
                       const optionLabel = document.createElement("label");
                       optionLabel.textContent = option["Tag"].replace(/([a-z])([A-Z])/g, "$1 $2");
                       optionLabel.htmlFor = option["Tag"];
-                      optionLabel.className = "label-radio";
+                      optionLabel.className = "${styles["label-radio"]}";
                       targetElement.appendChild(optionLabel);
                     });
                     break;
@@ -159,14 +155,14 @@ const FormExternalToolbar: React.FC<void> = () => {
               document.querySelectorAll(".${styles["content-control-input"]}").forEach(input => {
                 input.addEventListener("keyup", updateContent);
               });
-              document.querySelectorAll(".${styles["content-control-radio"]}").forEach(radio => {
+              document.querySelectorAll(".content-control-radio").forEach(radio => {
                 radio.addEventListener("change", updateContent);
               });
             }
 
             function updateContent(e) {
               const id = e.target.id;
-              const value = e.target.classList.contains("${styles["content-control-radio"]}") ? true : e.target.value;
+              const value = e.target.classList.contains("content-control-radio") ? true : e.target.value;
               connector.executeMethod(
                 "SetFormValue",
                 [id, value],
@@ -176,13 +172,12 @@ const FormExternalToolbar: React.FC<void> = () => {
 
             function onChangeContentControl(e) {
               connector.executeMethod("GetFormValue", [e["InternalId"]], function(value) {
-                const element = document.getElementById(e["InternalId"]);                
-                if (element && element.type !== "checkbox") {
-                  if (element.classList.contains("")) {
-                    element.checked = value;
-                  } else {
-                    element.value = value || "";
-                  }
+                const element = document.getElementById(e["InternalId"]);    
+                            
+                if (element.classList.contains("content-control-radio")) {
+                  element.checked = value;
+                } else {
+                  element.value = value || "";
                 }
               });
             }
@@ -208,7 +203,7 @@ const FormExternalToolbar: React.FC<void> = () => {
                   const index = [];
                   let first = true;
                   for (let i = 0; i < data.length; i++) {
-                    if (data[i]["GroupKey"] && data[i]["GroupKey"] == key) {
+                    if (data[i]["GroupKey"] && data[i]["GroupKey"] === key) {
                       index.push(i);
                     }
                   }

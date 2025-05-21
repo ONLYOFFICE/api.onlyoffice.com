@@ -61,9 +61,21 @@
   width: 57%;
 }
 
+.left-half input[type="radio"],
+.right-half input[type="radio"] {
+  cursor: pointer;
+  width: 28px !important;
+  vertical-align: middle !important;
+}
+
 .left-half label,
 .right-half label {
   display: inline-block;
   color: #666666;
   width: 33%;
+}
+
+.label-radio {
+  margin-right: 30px;
+  width: auto !important;
 }
