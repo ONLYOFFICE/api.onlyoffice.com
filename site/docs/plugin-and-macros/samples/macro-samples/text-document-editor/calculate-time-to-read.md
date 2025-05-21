@@ -1,6 +1,6 @@
-# Time To Read
+# Calculate time to read
 
-The macro analyzes the text content of the entire document, counts the number of words, adjusts for text complexity, and calculates how long it would take an average adult to read it.
+Analyzes the text content of the entire document, counts the number of words, adjusts for the text complexity, and calculates how long it would take an average adult to read it.
 
 ```ts
 (function () {
@@ -72,10 +72,9 @@ The macro analyzes the text content of the entire document, counts the number of
 })();
 ```
 
-Methods used: [GetDocument](../../../../office-api/usage-api/text-document-api/Api/Methods/GetDocument.md), [GetAllParagraphs](../../../../office-api/usage-api/text-document-api/ApiRange/Methods/GetAllParagraphs.md), [GetText](../../../../office-api/usage-api/text-document-api/ApiRange/Methods/GetText.md), [CreateParagraph](../../../../office-api/usage-api/text-document-api/Api/Methods/CreateParagraph.md), [AddText](../../../../office-api/usage-api/text-document-api/ApiRange/Methods/AddText.md), [SetBold](../../../../office-api/usage-api/text-document-api/ApiRange/Methods/SetBold.md), [SetItalic](../../../../office-api/usage-api/text-document-api/ApiRange/Methods/SetItalic.md), [SetFontFamily](../../../../office-api/usage-api/text-document-api/ApiRange/Methods/SetFontFamily.md), [InsertContent](../../../../office-api/usage-api/text-document-api/ApiDocument/Methods/InsertContent.md)
+Methods used: [GetDocument](../../../../office-api/usage-api/text-document-api/Api/Methods/GetDocument.md), [GetAllParagraphs](../../../../office-api/usage-api/text-document-api/ApiDocument/Methods/GetAllParagraphs.md), [GetText](../../../../office-api/usage-api/text-document-api/ApiParagraph/Methods/GetText.md), [CreateParagraph](../../../../office-api/usage-api/text-document-api/Api/Methods/CreateParagraph.md), [AddText](../../../../office-api/usage-api/text-document-api/ApiParagraph/Methods/AddText.md), [SetBold](../../../../office-api/usage-api/text-document-api/ApiParagraph/Methods/SetBold.md), [SetItalic](../../../../office-api/usage-api/text-document-api/ApiParagraph/Methods/SetItalic.md), [SetFontFamily](../../../../office-api/usage-api/text-document-api/ApiParagraph/Methods/SetFontFamily.md), [InsertContent](../../../../office-api/usage-api/text-document-api/ApiDocument/Methods/InsertContent.md)
 
 ## Result
 
 ![TimeToRead](/assets/images/plugins/time-to-read.png#gh-light-mode-only)
 ![TimeToRead](/assets/images/plugins/time-to-read.dark.png#gh-dark-mode-only)
-

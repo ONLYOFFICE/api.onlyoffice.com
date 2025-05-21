@@ -1,6 +1,6 @@
-# Delete Bookmark
+# Delete bookmark
 
-This macro searches for bookmarks containing a specific word in their text and deletes them from the document.
+Searches for bookmarks containing a specific word in their text and deletes them from the document.
 
 ```ts
 (function () {
@@ -25,10 +25,9 @@ This macro searches for bookmarks containing a specific word in their text and d
 })();
 ```
 
-Methods used: [GetDocument](../../../../office-api/usage-api/text-document-api/Api/Methods/GetDocument.md), [GetAllBookmarksNames](../../../../office-api/usage-api/text-document-api/ApiDocument/Methods/GetAllBookmarksNames.md), [GetBookmark](../../../../office-api/usage-api/text-document-api/ApiDocument/Methods/GetBookmark.md), [GetText](../../../../office-api/usage-api/text-document-api/ApiRange/Methods/GetText.md), [DeleteBookmark](../../../../office-api/usage-api/text-document-api/ApiDocument/Methods/DeleteBookmark.md)
+Methods used: [GetDocument](../../../../office-api/usage-api/text-document-api/Api/Methods/GetDocument.md), [GetAllBookmarksNames](../../../../office-api/usage-api/text-document-api/ApiDocument/Methods/GetAllBookmarksNames.md), [GetBookmark](../../../../office-api/usage-api/text-document-api/ApiDocument/Methods/GetBookmark.md), [GetText](../../../../office-api/usage-api/text-document-api/ApiBookmark/Methods/GetText.md), [DeleteBookmark](../../../../office-api/usage-api/text-document-api/ApiDocument/Methods/DeleteBookmark.md)
 
 ## Result
 
 ![DeleteBookmark](/assets/images/plugins/delete-bookmark.png#gh-light-mode-only)
 ![DeleteBookmark](/assets/images/plugins/delete-bookmark.dark.png#gh-dark-mode-only)
-

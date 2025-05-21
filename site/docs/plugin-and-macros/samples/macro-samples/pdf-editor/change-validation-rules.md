@@ -1,6 +1,6 @@
-# Change Validation Rules
+# Change validation rules
 
-This macro  changes the validation rules of the number and email fields in the document.
+Changes the validation rules of the number and email fields in the document.
 
 ```ts
 (function () {
@@ -35,4 +35,3 @@ Methods used: [GetDocument](../../../../office-api/usage-api/text-document-api/A
 
 ![ChangeValidationRules](/assets/images/plugins/change-validation-rules.png#gh-light-mode-only)
 ![ChangeValidationRules](/assets/images/plugins/change-validation-rules.dark.png#gh-dark-mode-only)
-

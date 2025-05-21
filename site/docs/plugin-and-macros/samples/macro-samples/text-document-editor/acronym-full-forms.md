@@ -1,6 +1,6 @@
-# Acronym Full Forms
+# Acronym full forms
 
-Identify all acronyms in the document and adds their full forms in comments.
+Identifies all acronyms in the document and adds their full forms in comments.
 
 ```ts
 (function () {
@@ -48,4 +48,3 @@ Methods used: [GetDocument](../../../../office-api/usage-api/text-document-api/A
 
 ![AcronymFullForms](/assets/images/plugins/acronym-full-forms.png#gh-light-mode-only)
 ![AcronymFullForms](/assets/images/plugins/acronym-full-forms.dark.png#gh-dark-mode-only)
-
