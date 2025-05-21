@@ -15,5 +15,5 @@ Opens the file selector and allows you to select a file from a list of available
 | [initFileSelector](../methods.md#initfileselector) | Initializes the SDK frame in the "file-selector" mode. |
 
 ``` ts
-const docSpace = DocSpace.SDK.initFileSelector({config})
+const docSpace = DocSpace.SDK.initFileSelector({config});
 ```

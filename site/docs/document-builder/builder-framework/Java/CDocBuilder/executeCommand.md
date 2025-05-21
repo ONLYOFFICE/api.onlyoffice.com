@@ -33,7 +33,7 @@ boolean executeCommand(String command, CDocBuilderValue retValue = 0);
     </TabItem>
     <TabItem value="builder" label=".docbuilder">
         ```ts
-        oParagraph.AddText("Hello from Java!")
+        paragraph.AddText("Hello from Java!");
         ```
     </TabItem>
 </Tabs>

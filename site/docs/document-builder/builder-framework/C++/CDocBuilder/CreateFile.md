@@ -31,7 +31,7 @@ bool CreateFile(sExtension);
     </TabItem>
     <TabItem value="builder" label=".docbuilder">
         ```ts
-        builder.CreateFile("docx")
+        builder.CreateFile("docx");
         ```
     </TabItem>
 </Tabs>

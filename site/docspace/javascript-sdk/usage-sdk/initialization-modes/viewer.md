@@ -15,5 +15,5 @@ Allows you to open the SDK as a document editor for viewing by specifying the [i
 | [initViewer](../methods.md#initviewer) | Initializes the SDK frame in the "viewer" mode. |
 
 ``` ts
-const docSpace = DocSpace.SDK.initViewer({config})
+const docSpace = DocSpace.SDK.initViewer({config});
 ```

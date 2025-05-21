@@ -85,15 +85,15 @@ The current application version contains four main classes:
     </TabItem>
     <TabItem value="builder" label=".docbuilder">
         ```ts
-        builder.SetTmpFolder("DocBuilderTemp")
-        builder.CreateFile("docx")
-        const oDocument = Api.GetDocument()
-        const oParagraph = Api.CreateParagraph()
-        oParagraph.SetSpacingAfter(1000, false)
-        oParagraph.AddText("Hello from .net!")
-        oDocument.InsertContent([oParagraph])
-        builder.SaveFile("docx", "result.docx")
-        builder.CloseFile()
+        builder.SetTmpFolder("DocBuilderTemp");
+        builder.CreateFile("docx");
+        let doc = Api.GetDocument();
+        let paragraph = Api.CreateParagraph();
+        paragraph.SetSpacingAfter(1000, false);
+        paragraph.AddText("Hello from .net!");
+        doc.InsertContent([paragraph]);
+        builder.SaveFile("docx", "result.docx");
+        builder.CloseFile();
         ```
     </TabItem>
 </Tabs>
