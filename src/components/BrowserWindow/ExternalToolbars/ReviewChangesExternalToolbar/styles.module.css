@@ -11,6 +11,10 @@
   list-style-type: none;
 }
 
+.list-buttons > * {
+  margin-top: 0 !important;
+}
+
 .list-buttons button {
   cursor: pointer;
   padding: 16px 20px;
