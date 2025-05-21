@@ -2,9 +2,13 @@
 sidebar_position: -2
 ---
 
+import { ReviewChangesExternalToolbar } from '@site/src/components/BrowserWindow';
+
 # Working with review changes
 
 Manages review process from an external source.
+
+<ReviewChangesExternalToolbar/>
 
 ## How it works
 
