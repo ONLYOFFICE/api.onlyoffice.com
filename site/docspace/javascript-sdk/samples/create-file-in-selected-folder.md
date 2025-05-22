@@ -2,6 +2,9 @@
 
 Creates a file in the selected folder and opens it in the editors.
 
+<details>
+  <summary>Full example</summary>
+
 ``` html
 <html lang="en">
   <head>
@@ -73,6 +76,8 @@ Creates a file in the selected folder and opens it in the editors.
   </script>
 ```
 
+</details>
+
 ![Create file sample](/assets/images/docspace/js-sdk-create-file.svg)
 
 ## Before you start
@@ -113,7 +118,9 @@ Create an HTML file. Add a combo box, a text field, and a button. The HTML file 
 </html>
 ```
 
+:::info
 The API JavaScript file can normally be found in the following DocSpace folder: **\{PORTAL_SRC\}/static/scripts/sdk/1.0.1/api.js** where **\{PORTAL_SRC\}** is the name of the server with the ONLYOFFICE DocSpace installed.
+:::
 
 ## Step 2. Initialize the Manager mode
 

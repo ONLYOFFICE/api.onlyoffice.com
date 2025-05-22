@@ -42,7 +42,7 @@ otherWindow.postMessage(msg, targetOrigin)
 
 ### targetOrigin
 
-*otherWindow* 原点必须是要调度的事件。它将被设置为 *CheckFileInfo*中提供的 [PostMessageOrigin](./wopi-rest-api/checkfileinfo.md#postmessage-properties) 属性。
+*otherWindow* 原点必须是要调度的事件。它将被设置为 *CheckFileInfo*中提供的 [PostMessageOrigin](./wopi-rest-api/checkfileinfo.md#PostMessageOrigin) 属性。
 
 \*otherWindow* 是对 *msg* 将被发布到的另一个窗口的引用。
 
@@ -78,19 +78,19 @@ otherWindow.postMessage(msg, targetOrigin)
 
 ### UI\_Close
 
-由于错误或用户操作，online office 应用程序关闭时会发布此消息。要发送此消息，来自主机的 *CheckFileInfo* 响应中的 [ClosePostMessage](./wopi-rest-api/checkfileinfo.md#postmessage-properties) 属性必须设置为**true**。否则，online office 将不会发送此消息。
+由于错误或用户操作，online office 应用程序关闭时会发布此消息。要发送此消息，来自主机的 *CheckFileInfo* 响应中的 [ClosePostMessage](./wopi-rest-api/checkfileinfo.md#ClosePostMessage) 属性必须设置为**true**。否则，online office 将不会发送此消息。
 
 ### UI\_Edit
 
-当用户激活online office中的 *编辑* UI 时，会发送此消息。此 UI 仅在使用视图操作时可见。要发送此消息，来自主机的 *CheckFileInfo* 响应中的 [EditModePostMessage](./wopi-rest-api/checkfileinfo.md#postmessage-properties) 属性必须设置为 **true**。否则，online office将不会发送此消息，而是会将内部 iframe 重定向到编辑操作 URL。
+当用户激活online office中的 *编辑* UI 时，会发送此消息。此 UI 仅在使用视图操作时可见。要发送此消息，来自主机的 *CheckFileInfo* 响应中的 [EditModePostMessage](./wopi-rest-api/checkfileinfo.md#EditModePostMessage) 属性必须设置为 **true**。否则，online office将不会发送此消息，而是会将内部 iframe 重定向到编辑操作 URL。
 
 ### UI\_FileVersions
 
-当用户在online office中激活 *以前的版本* UI 时，会发布此消息。主机应使用此消息来触发任何自定义文件版本历史 UI。要发送此消息，来自主机的 *CheckFileInfo* 响应中的 [FileVersionPostMessage](./wopi-rest-api/checkfileinfo.md#postmessage-properties) 属性必须设置为 **true**。 否则，online office将不会发送此消息。
+当用户在online office中激活 *以前的版本* UI 时，会发布此消息。主机应使用此消息来触发任何自定义文件版本历史 UI。要发送此消息，来自主机的 *CheckFileInfo* 响应中的 [FileVersionPostMessage](./wopi-rest-api/checkfileinfo.md#FileVersionPostMessage) 属性必须设置为 **true**。 否则，online office将不会发送此消息。
 
 ### UI\_Sharing
 
-当用户激活online office中的 *共享* UI 时，会发布此消息。主机应使用此消息来触发任何自定义共享 UI。要发送此消息，来自主机的 *CheckFileInfo* 响应中的 [FileSharingPostMessage](./wopi-rest-api/checkfileinfo.md#postmessage-properties) 属性必须设置为 **true**。否则，online office将不会发送此消息。
+当用户激活online office中的 *共享* UI 时，会发布此消息。主机应使用此消息来触发任何自定义共享 UI。要发送此消息，来自主机的 *CheckFileInfo* 响应中的 [FileSharingPostMessage](./wopi-rest-api/checkfileinfo.md#FileSharingPostMessage) 属性必须设置为 **true**。否则，online office将不会发送此消息。
 
 ## Collabora特性
 
@@ -102,4 +102,4 @@ otherWindow.postMessage(msg, targetOrigin)
 
 发布此消息以显示用户界面元素（例如，对话框），允许用户从集成中选择图像。该集成应该提供一个可以下载一次的临时 URL，通过 [Action\_InsertGraphic](#action_insertgraphic) 消息将 *Values* 设置为临时 URL，将其返回。
 
-> 请注意，PostMessage 消息的优先级高于 *CheckFileInfo*中提供的 [CloseUrl](./wopi-rest-api/checkfileinfo.md#file-url-properties), [HostEditUrl](./wopi-rest-api/checkfileinfo.md#file-url-properties), [FileSharingUrl](./wopi-rest-api/checkfileinfo.md#file-url-properties), [FileVersionUrl](./wopi-rest-api/checkfileinfo.md#file-url-properties) 属性。
+> 请注意，PostMessage 消息的优先级高于 *CheckFileInfo*中提供的 [CloseUrl](./wopi-rest-api/checkfileinfo.md#CloseUrl), [HostEditUrl](./wopi-rest-api/checkfileinfo.md#HostEditUrl), [FileSharingUrl](./wopi-rest-api/checkfileinfo.md#FileSharingUrl), [FileVersionUrl](./wopi-rest-api/checkfileinfo.md#FileVersionUrl) 属性。

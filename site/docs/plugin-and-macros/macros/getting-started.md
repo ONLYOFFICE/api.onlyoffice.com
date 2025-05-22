@@ -14,7 +14,7 @@ There are several reasons why ONLYOFFICE uses JavaScript for macros:
 
 > Please note that starting from version 7.1, the access to the *window* and *document* objects and the *alert* function is restricted from the macros because the *"use strict"* mode was applied to the macro scripts. Don't forget to declare variables before using them so that the macros work correctly.
 
-You can find ready-to-use macros [here](./samples/samples.md) or create your own ones.
+You can find ready-to-use macros [here](../samples/macro-samples/macro-samples.md) or create your own ones.
 
 How to start writing your macro:
 
