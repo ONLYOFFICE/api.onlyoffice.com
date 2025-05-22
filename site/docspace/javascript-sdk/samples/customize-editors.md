@@ -2,13 +2,16 @@
 
 Customizes the editor interface so that it looks like your other products (if there are any), and changes the presence or absence of the additional buttons, links, logos and editor owner details.
 
+<details>
+  <summary>Full example</summary>
+
 ``` html
 <!DOCTYPE html>
 <html lang="en">
   <head>
   <meta charset="UTF-8">
   <title>DocSpace JavaScript SDK</title>
-  <script src="{PORTAL_SRC}/static/scripts/sdk/1.0.1/api.js"></script>
+  <script src="{PORTAL_SRC}/static/scripts/sdk/1.0.0/api.js"></script>
     ...
   </head>
   <body>
@@ -53,6 +56,8 @@ Customizes the editor interface so that it looks like your other products (if th
 </html>
 ```
 
+</details>
+
 ![Customization sample](/assets/images/docspace/customization-of-editors.svg)
 
 ## Before you start
@@ -80,7 +85,9 @@ Create an HTML file. The HTML file must include a *div* tag where we specify the
 </html>
 ```
 
+:::info
 The API JavaScript file can normally be found in the following DocSpace folder: **\{PORTAL_SRC\}/static/scripts/sdk/1.0.1/api.js** where **\{PORTAL_SRC\}** is the name of the server with the ONLYOFFICE DocSpace installed.
+:::
 
 ## Step 2. Initialize the editors
 

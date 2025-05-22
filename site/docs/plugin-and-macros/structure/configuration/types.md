@@ -8,7 +8,7 @@ The plugin type is specified with the [type](./configuration.md#variationstype) 
 
 ## System
 
-The system plugin is not displayed in the editor interface and is started in the background with the server (or desktop editors start) not interfering with other plugins, so that they can work simultaneously. You don’t need to run such plugins. And unlike background plugins, they cannot be disabled. Samples of system plugins: [Settings](../../tutorials/samples/settings.md), [Search and replace on start](../../tutorials/samples/search-and-replace-on-start.md).
+The system plugin is not displayed in the editor interface and is started in the background with the server (or desktop editors start) not interfering with other plugins, so that they can work simultaneously. You don’t need to run such plugins. And unlike background plugins, they cannot be disabled. Samples of system plugins: [Settings](../../samples/plugin-samples/settings.md), [Search and replace on start](../../samples/plugin-samples/search-and-replace-on-start.md).
 
 ## Background
 
@@ -18,25 +18,25 @@ Launch such a plugin and it will work until you disable it in all opened documen
 
 ## Window
 
-The plugin operates as a standalone window upon launch, like [Highlight code](../../tutorials/samples/highlight-code.md), [Photo editor](../../tutorials/samples/photo-editor.md), [OCR](../../tutorials/samples/ocr.md).
+The plugin operates as a standalone window upon launch, like [Highlight code](../../samples/plugin-samples/highlight-code.md), [Photo editor](../../samples/plugin-samples/photo-editor.md), [OCR](../../samples/plugin-samples/ocr.md).
 
 ![Plugin window](/assets/images/plugins/plugin-window.png#gh-light-mode-only)![Plugin window](/assets/images/plugins/plugin-window.dark.png#gh-dark-mode-only)
 
 ## Panel
 
-The plugin is opened in the left-side panel, like [Translator](../../tutorials/samples/translator.md), [Thesaurus](../../tutorials/samples/thesaurus.md), [Zotero](../../tutorials/samples/zotero.md). You can run multiple panel plugins at the same time. For each plugin, a separate button will appear on the left toolbar.
+The plugin is opened in the left-side panel, like [Translator](../../samples/plugin-samples/translator.md), [Thesaurus](../../samples/plugin-samples/thesaurus.md), [Zotero](../../samples/plugin-samples/zotero.md). You can run multiple panel plugins at the same time. For each plugin, a separate button will appear on the left toolbar.
 
 <img alt="Plugin left panel" src="/assets/images/plugins/plugin-left-panel.png#gh-light-mode-only" width="300px" /><img alt="Plugin left panel" src="/assets/images/plugins/plugin-left-panel.dark.png#gh-dark-mode-only" width="300px" />
 
 ## PanelRight
 
-The plugin is opened in the right-side panel, like [Translator](../../tutorials/samples/translator.md), [Thesaurus](../../tutorials/samples/thesaurus.md), [Zotero](../../tutorials/samples/zotero.md). You can run multiple panel plugins at the same time. For each plugin, a separate button will appear on the right toolbar.
+The plugin is opened in the right-side panel, like [Translator](../../samples/plugin-samples/translator.md), [Thesaurus](../../samples/plugin-samples/thesaurus.md), [Zotero](../../samples/plugin-samples/zotero.md). You can run multiple panel plugins at the same time. For each plugin, a separate button will appear on the right toolbar.
 
 ![Plugin right panel](/assets/images/plugins/plugin-right-panel.png#gh-light-mode-only)![Plugin right panel](/assets/images/plugins/plugin-right-panel.dark.png#gh-dark-mode-only)
 
 ## Unvisible
 
-The plugin that does not display any windows or panels upon launch but can create them later during its operation. It provides a button (or buttons) to apply some transformations or manipulations to the document, like [Hello world](../../tutorials/samples/hello-world.md), [Speech](../../tutorials/samples/speech.md). For example, it can be used when the plugin displays different windows depending on the document content.
+The plugin that does not display any windows or panels upon launch but can create them later during its operation. It provides a button (or buttons) to apply some transformations or manipulations to the document, like [Hello world](../../samples/plugin-samples/hello-world.md), [Speech](../../samples/plugin-samples/speech.md). For example, it can be used when the plugin displays different windows depending on the document content.
 
 ![Insisible plugin](/assets/images/plugins/invisible-plugin.png#gh-light-mode-only)![Insisible plugin](/assets/images/plugins/invisible-plugin.dark.png#gh-dark-mode-only)
 

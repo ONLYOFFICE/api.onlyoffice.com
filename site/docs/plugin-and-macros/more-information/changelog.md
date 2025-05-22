@@ -105,7 +105,7 @@ The list of changes for ONLYOFFICE Plugins and Macros API.
 - Added the MoveToNextReviewChange method to *window\.Asc.plugin.executeMethod*.
 - Added the RejectReviewChanges method to *window\.Asc.plugin.executeMethod*.
 - Changed the plugin [localization](../structure/localization.md) scheme.
-- Added the [ONLYOFFICE Plugin Marketplace](../tutorials/installing/onlyoffice-docs-on-premises.md#adding-plugins-through-the-plugin-manager).
+- Added the [ONLYOFFICE Plugin Marketplace](../tutorials/installing/onlyoffice-docs-on-premises.md#adding-plugins-through-the-plugin-manager-for-a-single-user).
 - Added the ChangeOleObject method to *window\.Asc.plugin.executeMethod*.
 - Added the GetAllForms method to *window\.Asc.plugin.executeMethod*.
 - Added the [GetFileToDownload](../interacting-with-editors/methods/text-document-api/Api/Methods/GetFileToDownload.md) method to *window\.Asc.plugin.executeMethod*.

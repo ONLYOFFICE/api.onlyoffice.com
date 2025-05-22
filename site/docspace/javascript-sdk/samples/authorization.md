@@ -2,6 +2,9 @@
 
 Logs in to the DocSpace account using the specified email and password hash.
 
+<details>
+  <summary>Full example</summary>
+
 ``` html
 <!DOCTYPE html>
 <html lang="en">
@@ -42,6 +45,8 @@ Logs in to the DocSpace account using the specified email and password hash.
 </html>
 ```
 
+</details>
+
 ![Authorization sample](/assets/images/docspace/js-sdk-authorization-sample.svg)
 
 ## Before you start
@@ -72,7 +77,9 @@ Create an HTML file. Add two text fields and a button. The HTML file must includ
 </html>
 ```
 
+:::info
 The API JavaScript file can normally be found in the following DocSpace folder: **\{PORTAL_SRC\}/static/scripts/sdk/1.0.1/api.js** where **\{PORTAL_SRC\}** is the name of the server with the ONLYOFFICE DocSpace installed.
+:::
 
 ## Step 2. Initialize the System mode
 
