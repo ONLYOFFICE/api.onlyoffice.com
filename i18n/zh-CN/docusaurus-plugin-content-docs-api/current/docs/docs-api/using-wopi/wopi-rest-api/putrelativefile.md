@@ -55,8 +55,8 @@
 | ----------- | ------ | -------- | --------------------------------------------------------------------------------------------------------------------------------- |
 | Name        | string | 必填 | 文件名，包括扩展名，没有路径。                                                                               |
 | Url         | string | 必填 | URI，其形式为 *http\://server/\<...\>/wopi/files/(file\_id)?access\_token=(access token)*, 在主机上新创建的文件。 |
-| HostViewUrl | string | 非必填的 | 主机页面的 URI，该页面为新创建文件加载[查看](../wopi-discovery.md#wopi-actions) WOPI 操作。    |
-| HostEditUrl | string | 非必填的 | 主机页面的 URI，该页面为新创建的文件加载[编辑](../wopi-discovery.md#wopi-actions)操作。             |
+| HostViewUrl | string | 非必填的 | 主机页面的 URI，该页面为新创建文件加载[查看](../wopi-discovery.md#view) WOPI 操作。    |
+| HostEditUrl | string | 非必填的 | 主机页面的 URI，该页面为新创建的文件加载[编辑](../wopi-discovery.md#edit)操作。             |
 
 ## 另存为
 

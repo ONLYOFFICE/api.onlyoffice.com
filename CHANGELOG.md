@@ -1,5 +1,11 @@
 # Change log
 
+### New features
+
+#### Docspace
+
+* Added new JavaScript SDK samples
+
 ## 5.1.0
 
 ### New features
