@@ -2,6 +2,9 @@
 sidebar_position: -4
 ---
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 # C++ samples guide
 
 ## Before you start
@@ -13,12 +16,15 @@ For the samples to work correctly, make sure that two conditions are met:
 
 ## Hello world sample
 
+This section will help you build the "Hello World" application. It is easy to integrate the **ONLYOFFICE Document Builder SDK** if you are able to open, save and close documents.
+
 ```cpp
 #include "./../common_deploy.h"
 #include "../docbuilder.h"
 #include "./utils.cpp"
 
 using namespace NSDoctRenderer;
+
 int main(int argc, char *argv[])
 {
     std::wstring sProcessDirectory = NSUtils::GetProcessDirectory();
@@ -58,6 +64,34 @@ int main(int argc, char *argv[])
 ```
 
 Run the script:
+
+<Tabs>
+    <TabItem value="windows" label="Windows">
+    - Create a new C++ Console Project for Windows called `hello-world`
+    - Add `libdocbuilder.lib` to the project's Additional Dependencies in the Linker Input settings
+    - Add `include` files to the project's Additional Include Directories in the C/C++ General Settings
+    - Copy the `libdocbuilder.dll` file to the project's output directory
+    - Replace the contents of `hello-world.cpp` with code above
+    </TabItem>
+    <TabItem value="linux" label="Linux">
+    - Create a `hello-world.cpp` file in the CPP directory
+    - Replace the contents of `hello-world.cpp` with code above
+    - Build the project using:
+    ```bash
+    g++ hello-world.cpp -I../include -L../Lib -libdocbuilder -lstdc++ -lpthread -lm -lc -Wl,-rpath,../../../Lib -Wl,-rpath$ORIGIN -o hello-world
+    ```
+    - Run the application via ./hello-world
+    </TabItem>
+    <TabItem value="macos" label="macOS">
+    - Create a `hello-world.cpp` file in the CPP directory
+    - Replace the contents of `hello-world.cpp` with code above
+    - Build the project using:
+    ```bash
+    g++ hello-world.cpp -I../include -L../Lib -libdocbuilder -lstdc++ -lpthread -lm -lc -Wl,-rpath,../../../Lib -Wl,-rpath$ORIGIN -o hello-world
+    ```
+    - Run the application via ./hello-world
+    </TabItem>
+</Tabs>
 
 Call `make`, which will build and run the executable. Documents will be created in the same directory as Makefile.
 

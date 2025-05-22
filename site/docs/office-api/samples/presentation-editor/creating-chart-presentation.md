@@ -8,7 +8,7 @@ Create a chart presentation:
 - create a chart and add it to the specified slide ([Api/CreateChart](../../usage-api/presentation-api/Api/Methods/CreateChart.md), [ApiSlide/AddObject](../../usage-api/presentation-api/ApiSlide/Methods/AddObject.md))
 
 This sample is available for the **C++ and .Net DocBuilder Frameworks**.
-Download the sample and get more information on the [Builder framework samples](../../../document-builder/builder-framework-samples/builder-framework-samples.md) page.
+Download the sample and get more information on the [Builder framework samples](../../../document-builder/samples/samples.md) page.
 
 ```ts editor-pptx
 let presentation = Api.GetPresentation();
