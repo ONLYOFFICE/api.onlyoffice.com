@@ -14,22 +14,22 @@ This documentation describes:
 - How to customize plugins: create [context menu items](../customization/context-menu.md), [toolbar buttons](../customization/toolbar.md), [windows and panels](../customization/windows-and-panels.md), [input helpers](../customization/input-helper.md), process [buttons](../customization/buttons.md)
 - How to [write](../macros/writing-macros.md), [debug](../macros/debugging.md) and run a macro, add a custom function, or [convert](../macros/converting-vba-macros.md) VBA macros to use in ONLYOFFICE
 - How to [interact with the editors](../interacting-with-editors/overview/overview.md), use ONLYOFFICE [methods](../interacting-with-editors/overview/how-to-call-methods.md) and [events](../interacting-with-editors/overview/how-to-attach-events.md)
-- Where to find guides and [plugin](../tutorials/samples/samples.md)/[macro](../macros/samples/samples.md) code samples to get started
+- Where to find guides and [plugin](../samples/plugin-samples/plugin-samples.md)/[macro](../samples/macro-samples/macro-samples.md) code samples to get started
 
 ## What plugins can do
 
 Here are some examples of what you can do with ONLYOFFICE plugins:
 
-- connect third-party services, like <!--[Telegram](../tutorials/samples/telegram.md),--> [YouTube](../tutorials/samples/youtube.md), [Thesaurus](../tutorials/samples/thesaurus.md), [Translator](../tutorials/samples/translator.md), [Zotero](../tutorials/samples/zotero.md), [OCR](../tutorials/samples/ocr.md), etc.;
+- connect third-party services, like <!-- [Telegram](../samples/plugin-samples/telegram.md), -->[YouTube](../samples/plugin-samples/youtube.md), [Thesaurus](../samples/plugin-samples/thesaurus.md), [Translator](../samples/plugin-samples/translator.md), [Zotero](../samples/plugin-samples/zotero.md), [OCR](../samples/plugin-samples/ocr.md), etc.;
 - add custom components & controls in the UI, like **Trackchanges**, **Trackchanges\_off**;
-- enhance the existing user experience and the editors’ functionality: [Autocomplete](../tutorials/samples/autocomplete.md), [Search & Replace](../tutorials/samples/search-and-replace.md), [Move cursor](../tutorials/samples/move-cursor.md), [Extended comments](../tutorials/samples/extended-comments.md);
+- enhance the existing user experience and the editors’ functionality: [Autocomplete](../samples/plugin-samples/autocomplete.md), [Search & Replace](../samples/plugin-samples/search-and-replace.md), [Move cursor](../samples/plugin-samples/move-cursor.md), [Extended comments](../samples/plugin-samples/extended-comments.md);
 - automate tasks in documents with [Macros](../macros/getting-started.md).
 
 Code samples are available at [GitHub](https://github.com/ONLYOFFICE/sdkjs-plugins).
 
 If you are looking for ready-to-use plugins, please visit [ONLYOFFICE App Directory](https://www.onlyoffice.com/en/app-directory).
 
-To quickly install and update plugins, you can use [ONLYOFFICE Plugin Marketplace](../tutorials/installing/onlyoffice-docs-on-premises.md#adding-plugins-through-the-plugin-manager).
+To quickly install and update plugins, you can use [ONLYOFFICE Plugin Marketplace](../tutorials/installing/onlyoffice-docs-on-premises.md#adding-plugins-through-the-plugin-manager-for-a-single-user).
 
 ## How to create plugins
 
