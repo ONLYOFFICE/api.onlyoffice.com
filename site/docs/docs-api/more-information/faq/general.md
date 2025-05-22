@@ -8,7 +8,7 @@ sidebar_position: -12
 
 If you do not know where to start with ONLYOFFICE Docs API, we suggest that you first read the [Basic concepts](../../get-started/basic-concepts.md) and [How it works](../../get-started/how-it-works/how-it-works.md) sections to have better understanding of how ONLYOFFICE Docs API is built. Once you are familiar with the main concepts, you can visit the [Try now](../../get-started/try-docs/try-docs.md) section to see the live examples of the main ONLYOFFICE Docs features in action.
 
-If you are interested in a specific programming language example, see the [Language-specific examples](../../get-started/language-specific-examples/language-specific-examples.md) which are available in several programming languages and explain how to install ONLYOFFICE Docs, where to get the example source files and how to install them and connect ONLYOFFICE Docs.
+If you are interested in a specific programming language example, see the [Language-specific examples](../../samples/language-specific-examples/language-specific-examples.md) which are available in several programming languages and explain how to install ONLYOFFICE Docs, where to get the example source files and how to install them and connect ONLYOFFICE Docs.
 
 The users who use some document management systems (Nextcloud, ownCloud, SharePoint etc.) and simply want to know how to connect ONLYOFFICE Docs to these systems should visit the [Ready-to-use connectors](../../get-started/ready-to-use-connectors/nextcloud-integration.md) section where all the main plugins working with ONLYOFFICE Docs are explained.
 

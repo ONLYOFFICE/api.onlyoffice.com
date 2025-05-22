@@ -42,4 +42,4 @@ When the plugin object is being initialized (*window.Asc.plugin.init = function 
 
 The only OK button (*window.Asc.plugin.button = function (id) \{...\}*) is used to create the text and finish the work with the plugin.
 
-More existing open source plugin examples can be found [here](../../tutorials/samples/samples.md).
+More existing open source plugin examples can be found [here](../../samples/plugin-samples/plugin-samples.md).

@@ -12,23 +12,21 @@ The *callback* is the result that the method returns. It is an optional paramete
 
 ### Parameters
 
-#### name
+```mdx-code-block
+import APITable from '@site/src/components/APITable/APITable';
 
-The name of the specific method that must be executed.
+<APITable>
+```
 
-Type: string
+| Name     | Type     | Description                                               |
+|----------|----------|-----------------------------------------------------------|
+| name     | string   | The name of the specific method that must be executed.    |
+| params   | array    | The arguments that the method in use has (if it has any). |
+| callback | function | The result that the method returns.                       |
 
-#### params
-
-The arguments that the method in use has (if it has any).
-
-Type: array
-
-#### callback
-
-The result that the method returns.
-
-Type: function
+```mdx-code-block
+</APITable>
+```
 
 ### Returns:
 

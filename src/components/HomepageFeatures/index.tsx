@@ -2,7 +2,7 @@ import type {ReactNode} from 'react';
 import clsx from 'clsx';
 import Link from '@docusaurus/Link';
 import styles from './styles.module.css';
-import { DocsFeatures, DocSpaceFeatures, type Features, WorkspaceFeatures } from "@site/src/features";
+import { DocsFeatures, DocSpaceFeatures, type Features, WorkspaceFeatures, SamplesFeatures } from "@site/src/features";
 
 type FeatureItem = {
   title: string;
@@ -41,6 +41,17 @@ const FeatureList: FeatureItem[] = [
       </>
     ),
     features: DocsFeatures,
+  },
+  {
+    title: 'Samples',
+    Image: require('@site/static/assets/images/samples-preview.png').default,
+    description: (
+      <>
+        In this section, you will learn how to use ONLYOFFICE APIs{" "}
+        when working with documents.
+      </>
+    ),
+    features: SamplesFeatures,
   },
 ];
 
