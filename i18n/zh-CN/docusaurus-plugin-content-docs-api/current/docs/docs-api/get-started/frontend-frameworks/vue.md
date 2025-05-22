@@ -177,6 +177,12 @@ onDocumentReady() {
 
 ### 属性
 
+```mdx-code-block
+import APITable from '@site/src/components/APITable/APITable';
+
+<APITable>
+```
+
 | 名称                                 | 类型                    | 默认 | 描述                                                                                                                                                |
 | ------------------------------------ | ----------------------- | ------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | id\*                                 | string                  | null    | 组件唯一标识符。                                                                                                                               |
@@ -207,6 +213,10 @@ onDocumentReady() {
 | events\_onRequestHistoryClose        | (event: object) => void | null    | 当用户试图通过单击**关闭历史记录**按钮从查看文档版本历史记录返回到文档时调用的函数。 |
 | events\_onRequestHistoryData         | (event: object) => void | null    | 当用户试图单击文档版本历史记录中的特定文档版本时调用的函数。                                        |
 | events\_onRequestRestore             | (event: object) => void | null    | 当用户尝试通过单击版本历史记录中的**恢复**按钮来恢复文件版本时调用的函数。                         |
+
+```mdx-code-block
+</APITable>
+```
 
 \* *- 必填字段*
 
