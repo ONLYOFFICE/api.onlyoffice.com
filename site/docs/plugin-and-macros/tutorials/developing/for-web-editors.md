@@ -37,9 +37,9 @@ To debug ONLYOFFICE plugins in the web editors, follow the instructions below.
 
 1. Add the **debugger** command to your script:
 
-<!-- This code snippet is shown in the screenshot. -->
+      <!-- This code snippet is shown in the screenshot. -->
 
-<!-- eslint-skip -->
+      <!-- eslint-skip -->
 
       ``` ts
       (function debugger(window, undefined){

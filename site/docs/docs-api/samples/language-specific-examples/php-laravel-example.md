@@ -43,7 +43,7 @@ The application provides you with Docker files out-of-the-box, so you will just 
     cd "PHP Laravel Example"
     ```
 
-  > You should modify the `DOCUMENT_SERVER_JWT_SECRET` environment variable in your `.env` file as the `docker-compose.yml` uses it to set a JWT secret in ONLYOFFICE Docs.
+   > You should modify the `DOCUMENT_SERVER_JWT_SECRET` environment variable in your `.env` file as the `docker-compose.yml` uses it to set a JWT secret in ONLYOFFICE Docs.
 
 2. To run the containers, you can either run the `make compose-start` command that builds and starts the project, or you can execute the following commands manually:
 

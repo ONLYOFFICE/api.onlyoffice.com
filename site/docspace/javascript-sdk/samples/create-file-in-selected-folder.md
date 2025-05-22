@@ -128,67 +128,67 @@ Add a script to initialize the [Manager](../usage-sdk/initialization-modes/manag
 
 1. Add an event handler for [onAppReady](../usage-sdk/events.md#onappready), which fires when initialization is successful:
 
-  ``` ts
-  function onAppReady() {
-    const frame = DocSpace.SDK.frames["ds-frame"]
-  }
-  ```
+    ``` ts
+    function onAppReady() {
+      const frame = DocSpace.SDK.frames["ds-frame"]
+    }
+    ```
 
 2. Create a configuration for the **Manager** mode. In the [rootPath](../usage-sdk/config.md#rootpath) field, specify the section whose directories you want to display:
 
-  ``` ts
-  const config = {
-    events: {
-      onAppReady,
-    },
-    rootPath: "/rooms/personal/",
-    height: "700px",
-  }
-  ```
+    ``` ts
+    const config = {
+      events: {
+        onAppReady,
+      },
+      rootPath: "/rooms/personal/",
+      height: "700px",
+    }
+    ```
 
 3. Initialize the **Manager** mode with the [initManager](../usage-sdk/methods.md#initmanager) method:
 
-  ``` ts
-  const docSpace = DocSpace.SDK.initManager(config)
-  ```
+    ``` ts
+    const docSpace = DocSpace.SDK.initManager(config)
+    ```
 
 ## Step 3. Upload a list of folders to the combo box
 
 Add the **onComboboxClick()** event handler for the combo box. Using the [getFolders](../usage-sdk/methods.md#getfolders) method, upload the list into the combo box:
 
-  ``` ts
-  const combobox = document.querySelector("#combobox").value
-  function onComboboxClick(e) {
-    const data = await frame.getFolders()
-    for (const item of data) {
-      const option = document.createElement("option")
-      option.value = item.id
-      option.textContent = item.title
-      combobox.append(option)
-    }
+``` ts
+const combobox = document.querySelector("#combobox").value
+function onComboboxClick(e) {
+  const data = await frame.getFolders()
+  for (const item of data) {
+    const option = document.createElement("option")
+    option.value = item.id
+    option.textContent = item.title
+    combobox.append(option)
   }
-  ```
+}
+```
 
 ## Step 4. Add a method to create a file
 
 Add the **onButtonClick()** event handler for the button. Using the [createFile](../usage-sdk/methods.md#createfile) method, create a file in the selected folder:
 
-  ``` ts
-  function onButtonClick() {
-    const frame = DocSpace.SDK.frames["ds-frame"]
-    const selectedFolder = document.querySelector("#combobox").value
-    const fileName = document.querySelector("#fileName").value
+``` ts
+function onButtonClick() {
+  const frame = DocSpace.SDK.frames["ds-frame"]
+  const selectedFolder = document.querySelector("#combobox").value
+  const fileName = document.querySelector("#fileName").value
 
-    const res = await frame.createFile(selectedFolder, fileName)
-    const docSpace = DocSpace.SDK.initEditor({
-      id: res.id,
-      height: "700px",
-    })
+  const res = await frame.createFile(selectedFolder, fileName)
+  const docSpace = DocSpace.SDK.initEditor({
+    id: res.id,
+    height: "700px",
+  })
 
-    document.querySelector("#holder-buttons").style.display = "none"
-    document.querySelector("#holder-frame").style.display = "block"
-  }
-  ```
+  document.querySelector("#holder-buttons").style.display = "none"
+  document.querySelector("#holder-frame").style.display = "block"
+}
+```
 
 ## Step 5. Run the sample
 

@@ -83,41 +83,41 @@ Add a script to initialize the [file selector](../usage-sdk/initialization-modes
 
 1. Add an event handler for [onAppReady](../usage-sdk/events.md#onappready), which fires when initialization is successful:
 
-  ``` ts
-  function onAppReady() {
-    const frame = DocSpace.SDK.frames["ds-frame"]
-  }
-  ```
+    ``` ts
+    function onAppReady() {
+      const frame = DocSpace.SDK.frames["ds-frame"]
+    }
+    ```
 
 2. Add an event handler for [onSelectCallback](../usage-sdk/events.md#onselectcallback). When the user selects a file, **ONLYOFFICE editors** are initialized by passing the ID of the file selected in the **file selector** to the [initEditor](../usage-sdk/methods.md#initeditor) method:
 
-  ``` ts
-  function onSelectCallback() {
-    docSpace = DocSpace.SDK.initEditor({
-      id: e.id,
-      height: "700px",
-    })
-  }
-  ```
+    ``` ts
+    function onSelectCallback() {
+      docSpace = DocSpace.SDK.initEditor({
+        id: e.id,
+        height: "700px",
+      })
+    }
+    ```
 
 3. Create a configuration for the **file selector**:
 
-  ``` ts
-  const config = {
-    events: {
-      onSelectCallback,
-      onAppReady,
-    },
-    height: "700px",
-    width: "100%",
-  }
-  ```
+    ``` ts
+    const config = {
+      events: {
+        onSelectCallback,
+        onAppReady,
+      },
+      height: "700px",
+      width: "100%",
+    }
+    ```
 
 4. Initialize the **file selector** with the [initFileSelector](../usage-sdk/methods.md#initfileselector) method:
 
-  ``` ts
-  const docSpace = DocSpace.SDK.initFileSelector(config)
-  ```
+    ``` ts
+    const docSpace = DocSpace.SDK.initFileSelector(config)
+    ```
 
 ## Step 3. Run the sample
 
