@@ -6,7 +6,7 @@ Create a basic form with the image and text inputs:
 - create an image form and a text form, and add the form to the document ([Api/CreatePictureForm](../../usage-api/form-api/Api/Methods/CreatePictureForm.md), [Api/CreateTextForm](../../usage-api/form-api/Api/Methods/CreateTextForm.md)).
 
 This sample is available for the **C++ and .Net DocBuilder Frameworks**.
-Download the sample and get more information on the [Builder framework samples](../../../document-builder/builder-framework-samples/builder-framework-samples.md) page.
+Download the sample and get more information on the [Builder framework samples](../../../document-builder/samples/samples.md) page.
 
 ```ts editor-pdf
 let doc = Api.GetDocument();

@@ -14,29 +14,22 @@ To call commands and send the data back to the editor, define the **callCommand*
 
 ### Parameters
 
-#### func
+```mdx-code-block
+import APITable from '@site/src/components/APITable/APITable';
 
-Defines the command written in JavaScript which purpose is to form structured data which can be inserted to the resulting document file (formatted paragraphs, tables, text parts, and separate words, etc.). Then the data is sent to the editors. The command must be compatible with [Office JavaScript API](../../../office-api/get-started/overview.md) syntax.
+<APITable>
+```
 
-Type: function
+| Name     | Type     | Description                                                                                                                                                                                                                                                                                                                                                                      |
+|----------|----------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| func     | function | Defines the command written in JavaScript which purpose is to form structured data which can be inserted to the resulting document file (formatted paragraphs, tables, text parts, and separate words, etc.). Then the data is sent to the editors. The command must be compatible with [Office JavaScript API](../../../office-api/get-started/overview.md) syntax.             |
+| isClose  | boolean  | Defines whether the plugin window must be closed after the code is executed or left open waiting for another command or action. The *true* value is used to close the plugin window after executing the function in the *func* parameter. The *false* value is used to execute the command and leave the window open waiting for the next command. The default value is *false*. |
+| isCalc   | boolean  | Defines whether the document will be recalculated or not. The *true* value is used to recalculate the document after executing the function in the *func* parameter. The *false* value will not recalculate the document (use it only when your edits surely will not require document recalculation). The default value is *true*.                                              |
+| callback | function | The result that the method returns. Only the js standart types are available (any objects will be replaced *with undefined*).                                                                                                                                                                                                                                                    |
 
-#### isClose
-
-Defines whether the plugin window must be closed after the code is executed or left open waiting for another command or action. The *true* value is used to close the plugin window after executing the function in the *func* parameter. The *false* value is used to execute the command and leave the window open waiting for the next command. The default value is *false*.
-
-Type: boolean
-
-#### isCalc
-
-Defines whether the document will be recalculated or not. The *true* value is used to recalculate the document after executing the function in the *func* parameter. The *false* value will not recalculate the document (use it only when your edits surely will not require document recalculation). The default value is *true*.
-
-Type: boolean
-
-#### callback
-
-The result that the method returns. Only the js standart types are available (any objects will be replaced *with undefined*).
-
-Type: function
+```mdx-code-block
+</APITable>
+```
 
 ### Returns:
 
@@ -81,85 +74,26 @@ See the available *window.Asc.plugin.info* object parameters below to find out
 
 ### Parameters
 
-#### data
+```mdx-code-block
+<APITable>
+```
 
-The OLE object data which need to be sent to the *window.Asc.plugin.info* object and used by the plugin.
+| Name        | Type    | Example                 | Description                                                                                              |
+|-------------|---------|-------------------------|----------------------------------------------------------------------------------------------------------|
+| data        | string  | `{data}`                | The OLE object data which need to be sent to the *window.Asc.plugin.info* object and used by the plugin. |
+| editorType  | string  | "word"                  | The editor type where the plugin is currently running.                                                   |
+| guid        | string  | `asc.{UUID}`            | The OLE object GUID in the current document.                                                             |
+| height      | number  | 70                      | The OLE object height measured in millimeters.                                                           |
+| imgSrc      | string  | "./resources/image.png" | The link to the image (its visual representation) stored in the OLE object and used by the plugin.       |
+| mmToPx      | number  | 3                       | Millimeter to pixel conversion ratio for the OLE object vector draw.                                     |
+| objectId    | string  | "1"                     | The OLE object identifier in the current document.                                                       |
+| recalculate | boolean | true                    | Forces the document to recalculate its content data.                                                     |
+| resize      | boolean | true                    | Checks if the OLE object size has been changed.                                                          |
+| width       | number  | 70                      | The OLE object width measured in millimeters.                                                            |
 
-Type: string
-
-Example: `{data}`
-
-#### editorType
-
-The editor type where the plugin is currently running.
-
-Type: string
-
-Example: "word"
-
-#### guid
-
-The OLE object GUID in the current document.
-
-Type: string
-
-Example: `asc.{UUID}`
-
-#### height
-
-The OLE object height measured in millimeters.
-
-Type: number
-
-Example: 70
-
-#### imgSrc
-
-The link to the image (its visual representation) stored in the OLE object and used by the plugin.
-
-Type: string
-
-Example: "./resources/image.png"
-
-#### mmToPx
-
-Millimeter to pixel conversion ratio for the OLE object vector draw.
-
-Type: number
-
-Example: 3
-
-#### objectId
-
-The OLE object identifier in the current document.
-
-Type: string
-
-Example: "1"
-
-#### recalculate
-
-Forces the document to recalculate its content data.
-
-Type: boolean
-
-Example: true
-
-#### resize
-
-Checks if the OLE object size has been changed.
-
-Type: boolean
-
-Example: true
-
-#### width
-
-The OLE object width measured in millimeters.
-
-Type: number
-
-Example: 70
+```mdx-code-block
+</APITable>
+```
 
 ### Example for the data, height, imgSrc, mmToPx, objectId and width parameters
 

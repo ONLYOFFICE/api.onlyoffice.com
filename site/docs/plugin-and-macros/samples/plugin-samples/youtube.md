@@ -130,9 +130,9 @@ Repository on GitHub: [youtube](https://github.com/ONLYOFFICE/onlyoffice.github.
 - [info.data](../../interacting-with-editors/overview/how-to-call-commands.md#data)
 - [info.guid](../../interacting-with-editors/overview/how-to-call-commands.md#guid)
 - [info.height](../../interacting-with-editors/overview/how-to-call-commands.md#height)
-- [info.imgSrc](../../interacting-with-editors/overview/how-to-call-commands.md#imgsrc)
-- [info.mmToPx](../../interacting-with-editors/overview/how-to-call-commands.md#mmtopx)
-- [info.objectId](../../interacting-with-editors/overview/how-to-call-commands.md#objectid)
+- [info.imgSrc](../../interacting-with-editors/overview/how-to-call-commands.md#imgSrc)
+- [info.mmToPx](../../interacting-with-editors/overview/how-to-call-commands.md#mmToPx)
+- [info.objectId](../../interacting-with-editors/overview/how-to-call-commands.md#objectId)
 - [info.resize](../../interacting-with-editors/overview/how-to-call-commands.md#resize)
 - [info.width](../../interacting-with-editors/overview/how-to-call-commands.md#width)
 

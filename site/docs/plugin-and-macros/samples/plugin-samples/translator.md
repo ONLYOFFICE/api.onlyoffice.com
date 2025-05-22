@@ -117,7 +117,7 @@ Repository on GitHub: [translator](https://github.com/ONLYOFFICE/onlyoffice.gith
 - [executeMethod ("GetSelectionType")](../../interacting-with-editors/methods/text-document-api/Api/Methods/GetSelectionType.md)
 - [executeMethod ("PasteText")](../../interacting-with-editors/methods/text-document-api/Api/Methods/PasteText.md)
 - [Asc.scope](../../interacting-with-editors/overview/how-to-call-commands.md#ascscope-object) object
-- [info.editorType](../../interacting-with-editors/overview/how-to-call-commands.md#editortype)
+- [info.editorType](../../interacting-with-editors/overview/how-to-call-commands.md#editorType)
 
 ## Support
 

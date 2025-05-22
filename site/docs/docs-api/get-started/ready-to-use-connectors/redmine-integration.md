@@ -20,11 +20,11 @@ The plugin is available in the official [Redmine Plugins Directory](https://www.
 
 ## Supported formats
 
-|        | djvu  |  doc  | docm  | docx  |  dot  | dotm  | dotx  | epub* | fb2*  | fodt  |  htm  | html* |  mht  | mhtml | odt*  | oform | ott*  | oxps  |  pdf  | rtf*  |  stw  |  sxw  | txt*  |  wps  |  wpt  |  xml  |  xps  | csv*  |  et   |  ett  | fods  | ods*  | ots*  |  sxc  |  xls  | xlsb  | xlsm  | xlsx  |  xlt  | xltm  | xltx  |  dps  |  dpt  | fodp  | odp*  | otp*  |  pot  | potm  | potx  |  pps  | ppsm  | ppsx  |  ppt  | pptm  | pptx  |  sxi  |
-| :----- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| View   |   +   |   +   |   +   |   +   |   +   |   +   |   +   |   +   |   +   |   +   |   +   |   +   |   +   |   +   |   +   |   +   |   +   |   +   |   +   |   +   |   +   |   +   |   +   |   +   |   +   |   +   |   +   |   +   |   +   |   +   |   +   |   +   |   +   |   +   |   +   |   +   |   +   |   +   |   +   |   +   |   +   |   +   |   +   |   +   |   +   |   +   |   +   |   +   |   +   |   +   |   +   |   +   |   +   |   +   |   +   |   +   |
-| Edit   |   -   |   -   |   +   |   +   |   -   |   +   |   +   |   +   |   +   |   -   |   -   |   +   |   -   |   -   |   +   |   -   |   +   |   -   |   +   |   +   |   -   |   -   |   +   |   -   |   -   |   -   |   -   |   +   |   -   |   -   |   -   |   +   |   +   |   -   |   -   |   -   |   +   |   +   |   -   |   +   |   +   |   -   |   -   |   -   |   +   |   +   |   -   |   +   |   +   |   -   |   +   |   +   |   -   |   +   |   +   |   -   |
-| Create |   -   |   -   |   -   |   +   |   -   |   -   |   -   |   -   |   -   |   -   |   -   |   -   |   -   |   -   |   -   |   -   |   -   |   -   |   -   |   -   |   -   |   -   |   -   |   -   |   -   |   -   |   -   |   -   |   -   |   -   |   -   |   -   |   -   |   -   |   -   |   -   |   -   |   +   |   -   |   -   |   -   |   -   |   -   |   -   |   -   |   -   |   -   |   -   |   -   |   -   |   -   |   -   |   -   |   -   |   +   |   -   |
+|        | djvu | doc | docm | docx | dot | dotm | dotx | epub* | fb2* | fodt | htm | html* | mht | mhtml | odt* | ott* | oxps | pdf | rtf* | stw | sxw | txt* | wps | wpt | xml | xps | csv* | et | ett | fods | ods* | ots* | sxc | xls | xlsb | xlsm | xlsx | xlt | xltm | xltx | dps | dpt | fodp | odp* | otp* | pot | potm | potx | pps | ppsm | ppsx | ppt | pptm | pptx | sxi |
+|:-------|:----:|:---:|:----:|:----:|:---:|:----:|:----:|:-----:|:----:|:----:|:---:|:-----:|:---:|:-----:|:----:|:----:|:----:|:---:|:----:|:---:|:---:|:----:|:---:|:---:|:---:|:---:|:----:|:--:|:---:|:----:|:----:|:----:|:---:|:---:|:----:|:----:|:----:|:---:|:----:|:----:|:---:|:---:|:----:|:----:|:----:|:---:|:----:|:----:|:---:|:----:|:----:|:---:|:----:|:----:|:---:|
+| View   |  +   |  +  |  +   |  +   |  +  |  +   |  +   |   +   |  +   |  +   |  +  |   +   |  +  |   +   |  +   |  +   |  +   |  +  |  +   |  +  |  +  |  +   |  +  |  +  |  +  |  +  |  +   | +  |  +  |  +   |  +   |  +   |  +  |  +  |  +   |  +   |  +   |  +  |  +   |  +   |  +  |  +  |  +   |  +   |  +   |  +  |  +   |  +   |  +  |  +   |  +   |  +  |  +   |  +   |  +  |
+| Edit   |  -   |  -  |  +   |  +   |  -  |  +   |  +   |   +   |  +   |  -   |  -  |   +   |  -  |   -   |  +   |  +   |  -   |  +  |  +   |  -  |  -  |  +   |  -  |  -  |  -  |  -  |  +   | -  |  -  |  -   |  +   |  +   |  -  |  -  |  -   |  +   |  +   |  -  |  +   |  +   |  -  |  -  |  -   |  +   |  +   |  -  |  +   |  +   |  -  |  +   |  +   |  -  |  +   |  +   |  -  |
+| Create |  -   |  -  |  -   |  +   |  -  |  -   |  -   |   -   |  -   |  -   |  -  |   -   |  -  |   -   |  -   |  -   |  -   |  -  |  -   |  -  |  -  |  -   |  -  |  -  |  -  |  -  |  -   | -  |  -  |  -   |  -   |  -   |  -  |  -  |  -   |  -   |  +   |  -  |  -   |  -   |  -  |  -  |  -   |  -   |  -   |  -  |  -   |  -   |  -  |  -   |  -   |  -  |  -   |  +   |  -  |
 
 \* *- to be able to open the format for editing, check it in the [formats settings](#formats). Due to some format restrictions, data loss may occur.*
 
@@ -113,7 +113,7 @@ The plugin uses the [ONLYOFFICE Docs API](../basic-concepts.md) and is integrate
 On the **Documents** page, users can open the attachment to view, edit, create, or convert it. The options displayed in the interface may vary depending on the user permissions.
 
 | Option            | Permissions                    |
-| ----------------- | ------------------------------ |
+|-------------------|--------------------------------|
 | View              | View documents                 |
 | Edit              | View documents, Edit documents |
 | Create            | View documents, Edit documents |
@@ -133,7 +133,7 @@ On the **Attachment** page, users can open the attachment to view, edit, or conv
 On the **Files** page, users can open the attachment to view, edit, or convert it. The options displayed in the interface may vary depending on the user's permissions.
 
 | Option            | Permissions              |
-| ----------------- | ------------------------ |
+|-------------------|--------------------------|
 | View              | View files               |
 | Edit              | View files, Manage files |
 | Convert: Save     | View files, Manage files |
@@ -146,7 +146,7 @@ On the **Files** page, users can open the attachment to view, edit, or convert i
 On the **Issues** page, users can open the attachment to view, edit, or convert it. The options displayed in the interface may vary depending on the user's permissions.
 
 | Option            | Permissions                  |
-| ----------------- | ---------------------------- |
+|-------------------|------------------------------|
 | View              | View issues                  |
 | Edit              | View issues, Edit own issues |
 | Convert: Save     | View issues, Edit own issues |
@@ -159,7 +159,7 @@ On the **Issues** page, users can open the attachment to view, edit, or convert 
 On the **News** page, users can open the attachment to view, edit, or convert it. The options displayed in the interface may vary depending on the user's permissions.
 
 | Option            | Permissions            |
-| ----------------- | ---------------------- |
+|-------------------|------------------------|
 | View              | View news              |
 | Edit              | View news, Manage news |
 | Convert: Save     | View news, Manage news |
@@ -172,7 +172,7 @@ On the **News** page, users can open the attachment to view, edit, or convert it
 On the **Wiki** page, users can open the attachment to view, edit, or convert it. The options displayed in the interface may vary depending on the user's permissions.
 
 | Option            | Permissions                |
-| ----------------- | -------------------------- |
+|-------------------|----------------------------|
 | View              | View wiki                  |
 | Edit              | View wiki, Edit wiki pages |
 | Convert: Save     | View wiki, Edit wiki pages |
@@ -185,7 +185,7 @@ On the **Wiki** page, users can open the attachment to view, edit, or convert it
 On the **Forums** page, users can open the attachment to view, edit, or convert it. The options displayed in the interface may vary depending on the user's permissions.
 
 | Option            | Permissions                  |
-| ----------------- | ---------------------------- |
+|-------------------|------------------------------|
 | View              | View messages                |
 | Edit              | View messages, Edit messages |
 | Convert: Save     | View messages, Edit messages |

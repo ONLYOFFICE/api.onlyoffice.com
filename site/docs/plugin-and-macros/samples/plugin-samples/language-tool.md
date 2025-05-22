@@ -185,7 +185,7 @@ Repository on GitHub: [languagetool](https://github.com/ONLYOFFICE/onlyoffice.gi
 - [executeMethod ("GetVersion")](../../interacting-with-editors/methods/text-document-api/Api/Methods/GetVersion.md)
 - [executeMethod ("PasteText")](../../interacting-with-editors/methods/text-document-api/Api/Methods/PasteText.md)
 - [Asc.scope](../../interacting-with-editors/overview/how-to-call-commands.md#ascscope-object) object
-- [info.editorType](../../interacting-with-editors/overview/how-to-call-commands.md#editortype)
+- [info.editorType](../../interacting-with-editors/overview/how-to-call-commands.md#editorType)
 - [info.recalculate](../../interacting-with-editors/overview/how-to-call-commands.md#recalculate)
 
 ## Support

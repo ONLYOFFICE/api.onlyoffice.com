@@ -7,7 +7,7 @@ Create an advanced form with a table structure:
 - create the text and image forms and add them to the tables ([Api/CreatePictureForm](../../usage-api/form-api/Api/Methods/CreatePictureForm.md), [Api/CreateTextForm](../../usage-api/form-api/Api/Methods/CreateTextForm.md)).
 
 This sample is available for the **C++ and .Net DocBuilder Frameworks**.
-Download the sample and get more information on the [Builder framework samples](../../../document-builder/builder-framework-samples/builder-framework-samples.md) page.
+Download the sample and get more information on the [Builder framework samples](../../../document-builder/samples/samples.md) page.
 
 ```ts editor-pdf zoom=60
 let doc = Api.GetDocument();
