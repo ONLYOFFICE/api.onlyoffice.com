@@ -90,7 +90,8 @@
   margin-left: 50px;
 }
 
-.commentsExternalToolbar textarea {
+.commentsExternalToolbar textarea,
+.add-comment-area {
   border: 1px solid #bfbfbf;
   background-color: rgb(249, 249, 249);
   resize: none;
@@ -101,8 +102,14 @@
 }
 
 .add-comment-area {
+  outline: none;
+  background: rgb(249, 249, 249);
+  border-radius: 3px;
   padding: 15px 24px;
+  width: 95%;
   height: 100px;
+  width: -moz-available;
+  width: -webkit-fill-available;
 }
 
 .add-reply-area {
@@ -112,15 +119,15 @@
 }
 
 @media (hover: hover) {
-  button:hover {
+  .list-buttons button:hover {
     color: #ff6f3d;
-    border: 1px solid #ff6f3d;
+    border-color: #ff6f3d;
   }
 
-  button.active:hover {
+  .list-buttons button.active:hover {
     color: #ffffff;
-    background: #ff7a4b;
-    border: 1px solid #ff6f3d;
+    background-color: #ff7a4b;
+    border-color: #ff6f3d;
   }
 }
 

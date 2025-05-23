@@ -37,7 +37,7 @@
 }
 
 @media (hover: hover) {
-  button:hover {
+  .list-buttons button:hover {
     color: #ff6f3d;
     border: 1px solid #ff6f3d;
   }
