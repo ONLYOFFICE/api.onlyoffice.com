@@ -4,7 +4,7 @@ import styles from "./styles.module.css";
 const CommentsExternalToolbar: React.FC<void> = () => {
   return (
     <>
-      <div id="commentsBlock" data-easy="true" className={styles.commentsExternalToolbar} spellCheck="false">
+      <div id="commentsBlock" data-easy="true" className={styles.commentsExternalToolbar} spellCheck="false" style={{ display: "none" }}>
         <div id="comment" className={styles.comment}>
           <div>
             <div className={styles["comment-author"]} title="Author" />

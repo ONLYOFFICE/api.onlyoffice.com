@@ -2,6 +2,7 @@
   background: rgb(249, 249, 249);
   border-radius: 3px;
   padding: 15px 24px;
+  margin-bottom: 16px;
 
   font-family: inherit;
 
@@ -17,7 +18,7 @@
   gap: 16px;
 
   font: inherit;
-  margin: 16px 0;
+  margin-bottom: 16px;
   padding: 0;
 
   list-style: disc outside none;
