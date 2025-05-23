@@ -293,6 +293,8 @@ Also verify that the `scripts/createZip.js` file is present. This script will:
 ## Step 3: Review and Extend Plugin Code
 
 By default, the plugin template includes a basic implementation inside the `src/index.ts` file. Here's an example implementation:
+<details>
+  <summary>Complete ContextMenuDialog class</summary>
 
 ```js
 import {
@@ -381,9 +383,13 @@ window.Plugins.Extsearch = plugin;
 export default plugin;
 ```
 
+</details>
+
 ## Step 4: Add Context Menu and UI Logic
 
 Now define a dropdown to choose the extension and a button to filter and render files:
+<details>
+  <summary>Complete UI components</summary>
 
 ```js
 // Store current API base URL and selected room ID
@@ -542,6 +548,7 @@ const contextMenuItem: IContextMenuItem = {
 // Register menu item inside the plugin
 plugin.addContextMenuItem(contextMenuItem);
 ```
+</details>
 
 ## Step 5: Build the Plugin
 
