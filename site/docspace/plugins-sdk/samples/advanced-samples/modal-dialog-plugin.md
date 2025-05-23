@@ -6,7 +6,6 @@ This guide walks you through building a plugin for DocSpace that adds a custom t
   <summary>Complete index.ts</summary>
 
 ``` js
-// For plugin
 import { 
   IPlugin, 
   PluginStatus, 
@@ -15,7 +14,6 @@ import {
   IApiPlugin 
 } from '@onlyoffice/docspace-plugin-sdk'
 
-// For Modal
 import { 
   Actions, 
   Components, 
@@ -110,7 +108,6 @@ class MainButtonDialog implements IPlugin, IMainButtonPlugin, IApiPlugin {
 
 const plugin = new MainButtonDialog();
 
-// Create text props
 const labelProps: IText = {
   text: "Name your file",
   fontWeight: 600,
@@ -119,7 +116,6 @@ const labelProps: IText = {
   noSelect: true,
 };
 
-// Create input props
 const onChange = (value: string) => {
   input.value = value;
   const message: IMessage = {
@@ -148,7 +144,6 @@ const inputProps: IBox = {
   children: [inputComponent]
 };
 
-// Create button props
 const createFile = () => {
   fetch(
     `${plugin.getOrigin()}/api/2.0/files/${plugin.currentFolderId}/file`,
@@ -177,7 +172,6 @@ const buttonProps: IButton = {
   }
 };
 
-// Add label, input, and button components with props to the modal
 const body: IBox = {
   widthProp: "700px",
   heightProp: "150px",
@@ -209,7 +203,6 @@ export const modalDialogProps: IModalDialog = {
   autoMaxWidth: true,
 };
 
-// Create the main button with modal on click
 const createItem: IMainButtonItem = {
   key: "main-button",
   label: "Create new file",
@@ -233,7 +226,6 @@ const mainButtonItem: IMainButtonItem = {
   }
 };
 
-// Add the main button to the plugin
 plugin.addMainButtonItem(mainButtonItem);
 
 declare global {
@@ -435,7 +427,6 @@ Set up UI components for the modal dialog:
   <summary>Complete UI components</summary>
 
 ``` js
-// Create text props
 const labelProps: IText = {
   text: "Name your file",
   fontWeight: 600,
@@ -444,7 +435,6 @@ const labelProps: IText = {
   noSelect: true,
 };
 
-// Create input props
 const onChange = (value: string) => {
   input.value = value;
   const message: IMessage = {
@@ -473,7 +463,6 @@ const inputProps: IBox = {
   children: [inputComponent]
 };
 
-// Create button props
 const createFile = () => {
   fetch(
     `${plugin.getOrigin()}/api/2.0/files/${plugin.currentFolderId}/file`,
@@ -505,7 +494,6 @@ const buttonProps: IButton = {
 </details>
 
 ``` js
-// Create text props
 const textProps: IText = {
   text: "Name your file",
   fontWeight: 600,
@@ -516,7 +504,6 @@ const textProps: IText = {
 
 ...
 
-// Create input props
 const inputProps: IBox = {
   marginProp: "0 0 24px",
   children: [inputComponent]
@@ -524,7 +511,6 @@ const inputProps: IBox = {
 
 ...
 
-// Create button props
 const buttonProps: IButton = {
   label: "Create File",
   primary: true,
@@ -604,7 +590,6 @@ const mainButtonItem: IMainButtonItem = {
   }
 };
 
-// Add the main button to the plugin
 plugin.addMainButtonItem(mainButtonItem);
 ```
 
