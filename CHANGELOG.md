@@ -4,6 +4,7 @@
 
 #### Docs API
 
+* Added opening for md format
 * Added the editorConfig.customization.forceWesternFontSize parameter for the Chinese (Simplified) UI
 * Added the editorConfig.customization.layout.header.user parameter
 

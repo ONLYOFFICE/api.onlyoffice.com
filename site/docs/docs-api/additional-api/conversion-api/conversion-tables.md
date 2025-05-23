@@ -9,7 +9,7 @@ Below you can find tables with formats that are available for conversion in diff
 ## Text document file formats
 
 |       | bmp | docm | docx | docxf | dotm | dotx | epub | fb2 | gif | html | jpg | odt | ott | pdf | pdfa | png | rtf | txt |
-| ----- | --- | ---- | ---- | ----- | ---- | ---- | ---- | --- | --- | ---- | --- | --- | --- | --- | ---- | --- | --- | --- |
+|-------|-----|------|------|-------|------|------|------|-----|-----|------|-----|-----|-----|-----|------|-----|-----|-----|
 | djvu  | +   |      |      |       |      |      |      |     | +   |      | +   |     |     | +   | +    | +   |     |     |
 | doc   | +   | +    | +    | +     | +    | +    | +    | +   | +   | +    | +   | +   | +   | +   | +    | +   | +   | +   |
 | docm  | +   |      | +    | +     | +    | +    | +    | +   | +   | +    | +   | +   | +   | +   | +    | +   | +   | +   |
@@ -23,6 +23,7 @@ Below you can find tables with formats that are available for conversion in diff
 | fodt  | +   | +    | +    | +     | +    | +    | +    | +   | +   | +    | +   | +   | +   | +   | +    | +   | +   | +   |
 | htm   | +   | +    | +    | +     | +    | +    | +    | +   | +   | +    | +   | +   | +   | +   | +    | +   | +   | +   |
 | html  | +   | +    | +    | +     | +    | +    | +    | +   | +   |      | +   | +   | +   | +   | +    | +   | +   | +   |
+| md    | +   | +    | +    | +     | +    | +    | +    | +   | +   | +    | +   | +   | +   | +   | +    | +   | +   | +   |
 | mht   | +   | +    | +    | +     | +    | +    | +    | +   | +   | +    | +   | +   | +   | +   | +    | +   | +   | +   |
 | mhtml | +   | +    | +    | +     | +    | +    | +    | +   | +   | +    | +   | +   | +   | +   | +    | +   | +   | +   |
 | odt   | +   | +    | +    | +     | +    | +    | +    | +   | +   | +    | +   |     | +   | +   | +    | +   | +   | +   |
@@ -42,7 +43,7 @@ Below you can find tables with formats that are available for conversion in diff
 ## Spreadsheet file formats
 
 |         | bmp | csv | gif | jpg | ods | ots | pdf | pdfa | png | xlsm | xlsx | xltm | xltx |
-| ------- | --- | --- | --- | --- | --- | --- | --- | ---- | --- | ---- | ---- | ---- | ---- |
+|---------|-----|-----|-----|-----|-----|-----|-----|------|-----|------|------|------|------|
 | csv     | +   |     | +   | +   | +   | +   | +   | +    | +   | +    | +    | +    | +    |
 | et      | +   | +   | +   | +   | +   | +   | +   | +    | +   | +    | +    | +    | +    |
 | ett     | +   | +   | +   | +   | +   | +   | +   | +    | +   | +    | +    | +    | +    |
@@ -63,7 +64,7 @@ Below you can find tables with formats that are available for conversion in diff
 ## Presentation file formats
 
 |      | bmp | gif | jpg | odp | otp | pdf | pdfa | png | potm | potx | ppsm | ppsx | pptm | pptx |
-| ---- | --- | --- | --- | --- | --- | --- | ---- | --- | ---- | ---- | ---- | ---- | ---- | ---- |
+|------|-----|-----|-----|-----|-----|-----|------|-----|------|------|------|------|------|------|
 | dps  | +   | +   | +   | +   | +   | +   | +    | +   | +    | +    | +    | +    | +    | +    |
 | dpt  | +   | +   | +   | +   | +   | +   | +    | +   | +    | +    | +    | +    | +    | +    |
 | fodp | +   | +   | +   | +   | +   | +   | +    | +   | +    | +    | +    | +    | +    | +    |
@@ -84,11 +85,11 @@ Below you can find tables with formats that are available for conversion in diff
 <!--
 ## Diagram document file formats
 
-|      | bmp | gif | jpg | pdf | pdfa | png |
-| ---- | --- | --- | --- | --- | ---- | --- |
-| vsdm | +   | +   | +   | +   | +    | +   |
-| vsdx | +   | +   | +   | +   | +    | +   |
-| vssm | +   | +   | +   | +   | +    | +   |
-| vssx | +   | +   | +   | +   | +    | +   |
-| vstm | +   | +   | +   | +   | +    | +   |
-| vstx | +   | +   | +   | +   | +    | +   |-->
+|      | bmp | gif | jpg | pdf | pdfa | png |     |
+|------|-----|-----|-----|-----|------|-----|-----|
+| vsdm | +   | +   | +   | +   | +    | +   |     |
+| vsdx | +   | +   | +   | +   | +    | +   |     |
+| vssm | +   | +   | +   | +   | +    | +   |     |
+| vssx | +   | +   | +   | +   | +    | +   |     |
+| vstm | +   | +   | +   | +   | +    | +   |     |
+| vstx | +   | +   | +   | +   | +    | +   | --> |
