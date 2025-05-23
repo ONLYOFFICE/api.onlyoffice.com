@@ -3,7 +3,7 @@
 This guide shows how to build a DocSpace plugin that adds a context menu action to rooms, opens a modal with a file extension filter, and displays a list of matching files using UI components.
 
 <details>
-  <summary>Full Example</summary>
+  <summary>Complete index.ts</summary>
 
 ``` ts
 import {

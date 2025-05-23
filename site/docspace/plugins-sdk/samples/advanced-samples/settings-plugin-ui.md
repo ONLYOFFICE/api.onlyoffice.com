@@ -7,7 +7,7 @@ This plugin adds a settings interface for administrators in DocSpace. It include
 - Save button that prints values to the console
 
 <details>
-  <summary>Full Example</summary>
+  <summary>Complete index.ts</summary>
 
 ``` ts
 // Import interfaces and components from the SDK
