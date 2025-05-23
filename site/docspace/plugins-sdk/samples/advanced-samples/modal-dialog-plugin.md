@@ -6,6 +6,7 @@ This guide walks you through building a plugin for DocSpace that adds a custom t
   <summary>Complete index.ts</summary>
 
 ``` js
+// For plugin
 import { 
   IPlugin, 
   PluginStatus, 
@@ -14,6 +15,7 @@ import {
   IApiPlugin 
 } from '@onlyoffice/docspace-plugin-sdk'
 
+// For Modal
 import { 
   Actions, 
   Components, 
@@ -108,6 +110,7 @@ class MainButtonDialog implements IPlugin, IMainButtonPlugin, IApiPlugin {
 
 const plugin = new MainButtonDialog();
 
+// Create text props
 const labelProps: IText = {
   text: "Name your file",
   fontWeight: 600,
@@ -116,6 +119,7 @@ const labelProps: IText = {
   noSelect: true,
 };
 
+// Create input props
 const onChange = (value: string) => {
   input.value = value;
   const message: IMessage = {
@@ -144,6 +148,7 @@ const inputProps: IBox = {
   children: [inputComponent]
 };
 
+// Create button props
 const createFile = () => {
   fetch(
     `${plugin.getOrigin()}/api/2.0/files/${plugin.currentFolderId}/file`,
@@ -172,6 +177,7 @@ const buttonProps: IButton = {
   }
 };
 
+// Add label, input, and button components with props to the modal
 const body: IBox = {
   widthProp: "700px",
   heightProp: "150px",
@@ -203,6 +209,7 @@ export const modalDialogProps: IModalDialog = {
   autoMaxWidth: true,
 };
 
+// Create the main button with modal on click
 const createItem: IMainButtonItem = {
   key: "main-button",
   label: "Create new file",
@@ -226,6 +233,7 @@ const mainButtonItem: IMainButtonItem = {
   }
 };
 
+// Add the main button to the plugin
 plugin.addMainButtonItem(mainButtonItem);
 
 declare global {
@@ -366,6 +374,8 @@ class MainButtonDialog implements IPlugin, IMainButtonPlugin, IApiPlugin {
 
 const plugin = new MainButtonDialog();
 
+// Add plugin items and components below the plugin init line
+
 declare global {
   interface Window {
     Plugins: any;
@@ -379,42 +389,7 @@ export default plugin;
 
 </details>
 
-Ensure `currentFolderId` functionality was added, it's required for file creating API calls:
-
-```js
-import { 
-  IPlugin, 
-  PluginStatus, 
-  IMainButtonPlugin, 
-  IMainButtonItem, 
-  IApiPlugin 
-} from '@onlyoffice/docspace-plugin-sdk'
-
-class MainButtonDialog implements IPlugin, IMainButtonPlugin, IApiPlugin {
-  status: PluginStatus = PluginStatus.active;
-  mainButtonItems: Map<string, IMainButtonItem> = new Map();
-
-  currentFolderId: number | null = null;
-
-  ...
-
-  setCurrentFolderId = (id: number | null) => {
-    this.currentFolderId = id;
-  };
-}
-
-const plugin = new MainButtonDialog();
-
-declare global {
-  interface Window {
-    Plugins: any;
-  }
-};
-
-window.Plugins.Mainbtndialog = plugin || {};
-
-export default plugin;
-```
+Ensure that `currentFolderId` functionality was added, it's required for file creating API calls.
 
 ## Step 3: Set up UI components
 
@@ -427,6 +402,7 @@ Set up UI components for the modal dialog:
   <summary>Complete UI components</summary>
 
 ``` js
+// Create text props
 const labelProps: IText = {
   text: "Name your file",
   fontWeight: 600,
@@ -435,6 +411,7 @@ const labelProps: IText = {
   noSelect: true,
 };
 
+// Create input props
 const onChange = (value: string) => {
   input.value = value;
   const message: IMessage = {
@@ -463,6 +440,7 @@ const inputProps: IBox = {
   children: [inputComponent]
 };
 
+// Create button props
 const createFile = () => {
   fetch(
     `${plugin.getOrigin()}/api/2.0/files/${plugin.currentFolderId}/file`,
@@ -493,41 +471,12 @@ const buttonProps: IButton = {
 ```
 </details>
 
-``` js
-const textProps: IText = {
-  text: "Name your file",
-  fontWeight: 600,
-  fontSize: "13px",
-  lineHeight: "20px",
-  noSelect: true,
-};
-
-...
-
-const inputProps: IBox = {
-  marginProp: "0 0 24px",
-  children: [inputComponent]
-};
-
-...
-
-const buttonProps: IButton = {
-  label: "Create File",
-  primary: true,
-  size: ButtonSize.normal,
-  scale: true,
-  isDisabled: false,
-  withLoadingAfterClick: true,
-  onClick: () => {
-    console.log(`Creating file named ${input.value}.docx`)
-    createFile()
-  }
-};
-```
-
 ## Step 4: Build Modal Dialog
 
 Create a modal dialog with a label, input, and button. The modal uses `Actions.showModal` and auto-adjusts width/height:
+
+<details>
+  <summary>Complete UI components</summary>
 
 ```js
 const body: IBox = {
@@ -561,11 +510,15 @@ export const modalDialogProps: IModalDialog = {
   autoMaxWidth: true,
 };
 ```
+</details>
 
 ## Step 5: Register Main Button
 
 Register a toolbar button labeled `"Create new file"` that shows the modal on click:
 
+<details>
+  <summary>Complete UI components</summary>
+  
 ```js
 const createItem: IMainButtonItem = {
   key: "main-button",
@@ -590,8 +543,10 @@ const mainButtonItem: IMainButtonItem = {
   }
 };
 
+// Add the main button to the plugin
 plugin.addMainButtonItem(mainButtonItem);
 ```
+</details>
 
 Notice that `folder ID` is set here using Main Button ID.
 
