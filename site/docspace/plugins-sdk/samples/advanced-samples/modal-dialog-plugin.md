@@ -374,7 +374,7 @@ class MainButtonDialog implements IPlugin, IMainButtonPlugin, IApiPlugin {
 
 const plugin = new MainButtonDialog();
 
-// Add plugin items and components below the plugin init line
+// Add the plugin items and components below the plugin initialization line
 
 declare global {
   interface Window {
