@@ -2,14 +2,6 @@
 
 This guide shows how to build a DocSpace plugin that adds a context menu action to rooms, opens a modal with a file extension filter, and displays a list of matching files using UI components.
 
-## Before you start
-
-Make sure you have a DocSpace server running and install DocSpace Plugin SDK globally:
-
-```bash
-npm i -g @onlyoffice/docspace-plugin-sdk
-```
-
 <details>
   <summary>Full Example</summary>
 
@@ -258,6 +250,14 @@ export default plugin;
 
 </details>
 
+## Before you start
+
+Make sure you have a DocSpace server running and install DocSpace Plugin SDK globally:
+
+```bash
+npm i -g @onlyoffice/docspace-plugin-sdk
+```
+
 ## Step 1: Create the Plugin
 
 Initialize your plugin using the CLI:
@@ -369,6 +369,8 @@ class ExtSearchPlugin implements IPlugin, IContextMenuPlugin {
 }
 
 const plugin = new ExtSearchPlugin();
+
+// Add the plugin items and components below the plugin initialization line
 
 // Register plugin globally for DocSpace to find
 declare global {

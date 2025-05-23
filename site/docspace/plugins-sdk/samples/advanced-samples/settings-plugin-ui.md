@@ -6,14 +6,6 @@ This plugin adds a settings interface for administrators in DocSpace. It include
 - Inputs for URL, login, and password
 - Save button that prints values to the console
 
-## Before you start
-
-Make sure you have a DocSpace server running and install DocSpace Plugin SDK globally:
-
-```bash
-npm i -g @onlyoffice/docspace-plugin-sdk
-```
-
 <details>
   <summary>Full Example</summary>
 
@@ -361,6 +353,14 @@ export default plugin;
 
 </details>
 
+## Before you start
+
+Make sure you have a DocSpace server running and install DocSpace Plugin SDK globally:
+
+```bash
+npm i -g @onlyoffice/docspace-plugin-sdk
+```
+
 ## Step 1: Create the Plugin
 
 Initialize your plugin using the CLI:
@@ -466,6 +466,8 @@ class Settingsplugin implements IPlugin, ISettingsPlugin {
 }
 
 const plugin = new Settingsplugin();
+
+// Add the plugin items and components below the plugin initialization line
 
 // Register plugin globally for DocSpace to find
 declare global {
