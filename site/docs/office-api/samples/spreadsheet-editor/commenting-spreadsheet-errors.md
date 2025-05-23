@@ -8,11 +8,11 @@ This script checks all used cells for formula errors like "#DIV/0!" and comments
 
 - open an existing spreadsheet file to check for errors;
 - create a loop for columns and nest another loop for rows;
-- get each cell ([ApiWorksheet/GetRangeByNumber](../../usage-api/spreadsheet-api/ApiWorksheet/Methods/GetRangeByNumber.md)) and check the value for errors;
-- comment the cell ([ApiRange/AddComment](../../usage-api/spreadsheet-api/ApiRange/Methods/AddComment.md)) if an error exists.
+- get each cell ([ApiWorksheet/GetRangeByNumber](/docs/office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetRangeByNumber.md)) and check the value for errors;
+- comment the cell ([ApiRange/AddComment](/docs/office-api/usage-api/spreadsheet-api/ApiRange/Methods/AddComment.md)) if an error exists.
 
 This sample is available for the **C++ and .Net DocBuilder Frameworks**.
-Download the sample and get more information on the [Builder framework samples](../../../document-builder/samples/samples.md) page.
+Download the sample and get more information on the [Builder framework samples](/docs/document-builder/samples/samples.md) page.
 
 ``` ts editor-xlsx templateUrl=https://static.onlyoffice.com/assets/docs/samples/data_with_errors.xlsx
 let worksheet = Api.GetActiveSheet();

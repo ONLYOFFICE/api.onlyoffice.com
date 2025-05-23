@@ -126,7 +126,7 @@ The API JavaScript file can normally be found in the following DocSpace folder: 
 
 ## Step 2. JavaScript SDK logic
 
-Create a script block to configure and initialize the SDK. Use the [getFolderInfo()](../../usage-sdk/methods.md#getfolderinfo) method to retrieve information about the currently loaded folder.
+Create a script block to configure and initialize the SDK. Use the [getFolderInfo()](/docspace/javascript-sdk/usage-sdk/methods.md#getfolderinfo) method to retrieve information about the currently loaded folder.
 
 ``` ts
 function onAppReady() {

@@ -120,7 +120,7 @@ The API JavaScript file can normally be found in the following DocSpace folder: 
 
 ## Step 2. JavaScript SDK logic
 
-Create a script block to configure and initialize the SDK. Use the [addTagsToRoom()](../../usage-sdk/methods.md#addtagstoroom) method to assign one or more tags to a DocSpace room.
+Create a script block to configure and initialize the SDK. Use the [addTagsToRoom()](/docspace/javascript-sdk/usage-sdk/methods.md#addtagstoroom) method to assign one or more tags to a DocSpace room.
 
 ``` ts
 const config = {

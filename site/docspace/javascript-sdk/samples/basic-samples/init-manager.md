@@ -79,7 +79,7 @@ The API JavaScript file can normally be found in the following DocSpace folder: 
 
 ## Step 2. JavaScript SDK logic
 
-Configure and initialize the manager using the [initManager()](../../usage-sdk/methods.md#initmanager) method. Attach an event listener to handle the app readiness.
+Configure and initialize the manager using the [initManager()](/docspace/javascript-sdk/usage-sdk/methods.md#initmanager) method. Attach an event listener to handle the app readiness.
 
 ``` ts
 function onAppReady() {

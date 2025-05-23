@@ -123,7 +123,7 @@ The API JavaScript file can normally be found in the following DocSpace folder: 
 
 ## Step 2. JavaScript SDK logic
 
-Use the [logout()](../../usage-sdk/methods.md#logout) method to end the current user session from the embedded DocSpace.
+Use the [logout()](/docspace/javascript-sdk/usage-sdk/methods.md#logout) method to end the current user session from the embedded DocSpace.
 
 ``` ts
 function onAppReady() {

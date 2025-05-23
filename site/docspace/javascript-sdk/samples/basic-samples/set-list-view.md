@@ -120,7 +120,7 @@ The API JavaScript file can normally be found in the following DocSpace folder: 
 
 ## Step 2. JavaScript SDK logic
 
-Use the [setListView()](../../usage-sdk/methods.md#setlistview) method to toggle the document list layout. The parameter `1` sets the list view mode.
+Use the [setListView()](/docspace/javascript-sdk/usage-sdk/methods.md#setlistview) method to toggle the document list layout. The parameter `1` sets the list view mode.
 
 ``` ts
 function onAppReady() {

@@ -121,7 +121,7 @@ The API JavaScript file can normally be found in the following DocSpace folder: 
 
 ## Step 2. JavaScript SDK logic
 
-Create a script block to configure and initialize the SDK. Use the [getRooms()](../../usage-sdk/methods.md#getrooms) method to retrieve a list of all rooms available to the user.
+Create a script block to configure and initialize the SDK. Use the [getRooms()](/docspace/javascript-sdk/usage-sdk/methods.md#getrooms) method to retrieve a list of all rooms available to the user.
 
 ``` ts
 function onAppReady() {

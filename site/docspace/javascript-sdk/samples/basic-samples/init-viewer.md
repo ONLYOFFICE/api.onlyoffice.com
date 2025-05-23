@@ -82,7 +82,7 @@ The API JavaScript file can normally be found in the following DocSpace folder: 
 
 ## Step 2. JavaScript SDK logic
 
-Use the [initViewer()](../../usage-sdk/methods.md#initviewer) method to load and display a document in read-only mode. Be sure to pass a valid `id` for the file you want to view.
+Use the [initViewer()](/docspace/javascript-sdk/usage-sdk/methods.md#initviewer) method to load and display a document in read-only mode. Be sure to pass a valid `id` for the file you want to view.
 
 ``` ts
 // Called when the viewer is ready

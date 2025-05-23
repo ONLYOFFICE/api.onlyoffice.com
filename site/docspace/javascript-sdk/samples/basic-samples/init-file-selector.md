@@ -84,7 +84,7 @@ The API JavaScript file can normally be found in the following DocSpace folder: 
 
 ## Step 2. JavaScript SDK logic
 
-Configure and initialize the file selector using the [initFileSelector()](../../usage-sdk/methods.md#initfileselector) method. Attach event listeners to handle ready and file selection events.
+Configure and initialize the file selector using the [initFileSelector()](/docspace/javascript-sdk/usage-sdk/methods.md#initfileselector) method. Attach event listeners to handle ready and file selection events.
 
 ``` ts
 function onAppReady() {

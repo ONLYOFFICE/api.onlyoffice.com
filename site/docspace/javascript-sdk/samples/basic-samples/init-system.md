@@ -71,7 +71,7 @@ The API JavaScript file can normally be found in the following DocSpace folder: 
 
 ## Step 2. JavaScript SDK logic
 
-Configure and initialize the system view using the [initSystem()](../../usage-sdk/methods.md#initsystem) method.
+Configure and initialize the system view using the [initSystem()](/docspace/javascript-sdk/usage-sdk/methods.md#initsystem) method.
 
 ``` ts
 const config = {

@@ -82,7 +82,7 @@ The API JavaScript file can normally be found in the following DocSpace folder: 
 
 ## Step 2. JavaScript SDK logic
 
-Use the [initEditor()](../../usage-sdk/methods.md#initeditor) method to embed the ONLYOFFICE document editor for a specified file ID.
+Use the [initEditor()](/docspace/javascript-sdk/usage-sdk/methods.md#initeditor) method to embed the ONLYOFFICE document editor for a specified file ID.
 
 ``` ts
 function onAppReady() {

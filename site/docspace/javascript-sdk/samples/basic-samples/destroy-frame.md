@@ -121,7 +121,7 @@ The API JavaScript file can normally be found in the following DocSpace folder: 
 
 ## Step 2. JavaScript SDK logic
 
-Use the [destroyFrame()](../../usage-sdk/methods.md#destroyframe)  method to remove the DocSpace instance from the DOM.
+Use the [destroyFrame()](/docspace/javascript-sdk/usage-sdk/methods.md#destroyframe)  method to remove the DocSpace instance from the DOM.
 
 ``` ts
 function onAppReady() {
