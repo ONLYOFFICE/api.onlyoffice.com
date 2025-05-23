@@ -1,5 +1,6 @@
 ---
 sidebar_position: -3
+hide_table_of_contents: true
 ---
 
 import { CommentsExternalToolbar } from '@site/src/components/BrowserWindow';
