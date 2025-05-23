@@ -5,8 +5,8 @@ This guide demonstrates how to render and configure a [Button](../../usage-sdk/c
 ## Overview
 
 - Component: [Components.button](../../usage-sdk/coding-plugin/plugin-components/button)
-- Interface: IButton
-- Wrapper: ButtonGroup
+- Interface: `IButton`
+- Wrapper: `ButtonGroup`
 - Purpose: Renders an interactive button with optional action, size, and state options
 
 ## Example Output
@@ -18,12 +18,56 @@ A button labeled "Save" will be rendered inside a flex box. Clicking it logs a m
 
 ``` ts
 import {
-  Components,
+  IPlugin,
+  PluginStatus,
+  IMainButtonPlugin,
+  IMainButtonItem,
+} from '@onlyoffice/docspace-plugin-sdk'
+
+import {
   IButton,
-  ButtonGroup,
+  IBox,
+  Components,
+  IModalDialog,
+  ModalDisplayType,
+  IMessage,
+  Actions,
   ButtonSize,
-  IBox
-} from "@onlyoffice/docspace-plugin-sdk";
+  ButtonGroup
+} from '@onlyoffice/docspace-plugin-sdk';
+
+class Buttonplugin implements IPlugin, IMainButtonPlugin {
+  status: PluginStatus = PluginStatus.active;          
+  mainButtonItems: Map<string, IMainButtonItem> = new Map();
+
+  onLoadCallback = async () => {};
+           
+  updateStatus = (status: PluginStatus) => {
+    this.status = status;
+  };
+          
+  getStatus = () => {
+    return this.status;
+  };
+          
+  setOnLoadCallback = (callback: () => Promise<void>) => {
+    this.onLoadCallback = callback;
+  };
+
+  addMainButtonItem = (item: IMainButtonItem ): void => {
+    this.mainButtonItems.set(item.key, item);
+  };
+        
+  getMainButtonItems = (): Map<string, IMainButtonItem > => {
+    return this.mainButtonItems;
+  };
+        
+  updateMainButtonItem = (item: IMainButtonItem): void => {
+    this.mainButtonItems.set(item.key, item);
+  };
+}
+
+const plugin = new Buttonplugin();
 
 // Define button behavior and appearance
 const ButtonProps: IButton = {
@@ -71,9 +115,77 @@ const demoBox: IBox = {
     ButtonComponent
   ]
 };
+
+
+// Add toggle component with props to the modal
+const body: IBox = {
+  widthProp: "500px",
+  heightProp: "100px",
+  children: [
+    ButtonComponent
+  ],
+}
+
+export const modalDialogProps: IModalDialog = {
+  dialogHeader: "Sample modal dialog",
+  dialogBody: body,
+  displayType: ModalDisplayType.modal,
+  onClose: () => {
+    const message: IMessage = {
+      actions: [Actions.closeModal],
+    }
+    return message
+  },
+
+  onLoad: async () => {
+    return {
+      newDialogHeader: modalDialogProps.dialogHeader,
+      newDialogBody: modalDialogProps.dialogBody,
+    }
+  },
+  autoMaxHeight: true,
+  autoMaxWidth: true,
+}
+
+// Create the main button with modal on click
+const createItem: IMainButtonItem = {
+  key: "test-main-button",
+  label: "Show dialog",
+  icon: "icon.svg",
+  onClick: () => {}
+}
+
+const mainButtonItem: IMainButtonItem = {
+  key: "test-main-button",
+  label: "Show dialog",
+  icon: "icon.svg",
+  items: [createItem],
+  onClick: () => {
+    const message: IMessage = {
+        actions: [Actions.showModal],
+        modalDialogProps: modalDialogProps,
+      };
+      return message;
+  }
+}
+
+// Add the main button to the plugin
+plugin.addMainButtonItem(mainButtonItem);
+
+declare global {
+  interface Window {
+    Plugins: any;
+  }
+}
+
+window.Plugins.Toggleplugin = plugin || {};
+
+export default plugin;
 ```
 
 </details>
+
+## Property Reference
 
 | **Property**                 | **Type**     | **Description**                                                            |
 | ---------------------------- | ------------ | -------------------------------------------------------------------------- |
