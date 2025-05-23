@@ -11,7 +11,8 @@
     "Number/street": "625 Hartin Cir",
     "City": "Irving",
     "PostalCode": "75061",
-    "Country": "U.S.A."
+    "Country": "U.S.A.",
+    "DateOfCompletion": "23052025"
   },
   {
     "Title": "Mr",
@@ -25,13 +26,14 @@
     "Number/street": "1502 Betsy Ln",
     "City": "New York",
     "PostalCode": "11225",
-    "Country": "U.S.A."
+    "Country": "U.S.A.",
+    "DateOfCompletion": "23052025"
   },
   {
     "Title": "Mrs",
     "LastName": "Williams",
     "FirstName": "Emily",
-    "MiddleName": "",
+    "MiddleName": "Marie",
     "DateOfBirth": "07121998",
     "Sex": "Female",
     "Phone": "(972)343-5341",
@@ -39,7 +41,8 @@
     "Number/street": "Möckernstraße 73A",
     "City": "Berlin",
     "PostalCode": "10965",
-    "Country": "Germany"
+    "Country": "Germany",
+    "DateOfCompletion": "23052025"
   },
   {
     "Title": "Miss",
@@ -53,7 +56,8 @@
     "Number/street": "810 Julie Ave",
     "City": "Fort Worth",
     "PostalCode": "76116",
-    "Country": "U.S.A."
+    "Country": "U.S.A.",
+    "DateOfCompletion": "23052025"
   },
   {
     "Title": "Dr",
@@ -67,7 +71,8 @@
     "Number/street": "1908 Nelson Ave",
     "City": "Las Vegas",
     "PostalCode": "89032",
-    "Country": "U.S.A."
+    "Country": "U.S.A.",
+    "DateOfCompletion": "23052025"
   },
   {
     "Title": "Mrs",
@@ -81,7 +86,8 @@
     "Number/street": "321 Exhibition Rd",
     "City": "London",
     "PostalCode": "SW7 2BX",
-    "Country": "United Kingdom"
+    "Country": "United Kingdom",
+    "DateOfCompletion": "23052025"
   },
   {
     "Title": "Dr",
@@ -95,7 +101,8 @@
     "Number/street": "89 Paul Couturier",
     "City": "Paris",
     "PostalCode": "94250",
-    "Country": "France"
+    "Country": "France",
+    "DateOfCompletion": "23052025"
   },
   {
     "Title": "Mrs",
@@ -109,7 +116,8 @@
     "Number/street": "50 Main St",
     "City": "Centerfield",
     "PostalCode": "84622",
-    "Country": "U.S.A."
+    "Country": "U.S.A.",
+    "DateOfCompletion": "23052025"
   },
   {
     "Title": "Miss",
@@ -123,7 +131,8 @@
     "Number/street": "10 Rue du N",
     "City": "Le Mans",
     "PostalCode": "72100",
-    "Country": "France"
+    "Country": "France",
+    "DateOfCompletion": "23052025"
   },
   {
     "Title": "Mr",
@@ -137,7 +146,8 @@
     "Number/street": "322 Dickenson Rd",
     "City": "Manchester",
     "PostalCode": "M13 0WG",
-    "Country": "United Kingdom"
+    "Country": "United Kingdom",
+    "DateOfCompletion": "23052025"
   },
   {
     "Title": "Mr",
@@ -151,13 +161,14 @@
     "Number/street": "13 Hardman St",
     "City": "Liverpool",
     "PostalCode": "L1 9AS",
-    "Country": "United Kingdom"
+    "Country": "United Kingdom",
+    "DateOfCompletion": "23052025"
   },
   {
     "Title": "Mr",
     "LastName": "Davis",
     "FirstName": "Jason",
-    "MiddleName": "",
+    "MiddleName": "James",
     "DateOfBirth": "04121987",
     "Sex": "Male",
     "Phone": "(972)543-9876",
@@ -165,7 +176,8 @@
     "Number/street": "Richard-Wagner 32",
     "City": "Frankfurt",
     "PostalCode": "63069",
-    "Country": "Germany"
+    "Country": "Germany",
+    "DateOfCompletion": "23052025"
   },
   {
     "Title": "Dr",
@@ -179,7 +191,8 @@
     "Number/street": "9 Cité Roguet",
     "City": "Toulouse",
     "PostalCode": "31300",
-    "Country": "France"
+    "Country": "France",
+    "DateOfCompletion": "23052025"
   },
   {
     "Title": "Mr",
@@ -193,13 +206,14 @@
     "Number/street": "350 Grand Ave",
     "City": "Los Angeles",
     "PostalCode": "90071",
-    "Country": "U.S.A."
+    "Country": "U.S.A.",
+    "DateOfCompletion": "23052025"
   },
   {
     "Title": "Mr",
     "LastName": "Taylor",
     "FirstName": "Ethan",
-    "MiddleName": "",
+    "MiddleName": "Edward",
     "DateOfBirth": "31111997",
     "Sex": "Male",
     "Phone": "(972)234-6745",
@@ -207,7 +221,8 @@
     "Number/street": "Heisterstraße 1",
     "City": "Nürnberg",
     "PostalCode": "90441",
-    "Country": "Germany"
+    "Country": "Germany",
+    "DateOfCompletion": "23052025"
   },
   {
     "Title": "Miss",
@@ -221,13 +236,14 @@
     "Number/street": "21 Rte de Capestang",
     "City": "Béziers",
     "PostalCode": "34500",
-    "Country": "France"
+    "Country": "France",
+    "DateOfCompletion": "23052025"
   },
   {
     "Title": "Mr",
     "LastName": "Jones",
     "FirstName": "Matthew",
-    "MiddleName": "",
+    "MiddleName": "Henry",
     "DateOfBirth": "04101983",
     "Sex": "Male",
     "Phone": "(972)546-8754",
@@ -235,7 +251,8 @@
     "Number/street": "Caspar-Voght 44",
     "City": "Hamburg",
     "PostalCode": "20535",
-    "Country": "Germany"
+    "Country": "Germany",
+    "DateOfCompletion": "23052025"
   },
   {
     "Title": "Mr",
@@ -249,7 +266,8 @@
     "Number/street": "925 Dickinson St,",
     "City": "Philadelphia",
     "PostalCode": "19147",
-    "Country": "U.S.A."
+    "Country": "U.S.A.",
+    "DateOfCompletion": "23052025"
   },
   {
     "Title": "Dr",
@@ -263,7 +281,8 @@
     "Number/street": "98 Market Pl",
     "City": "Romford",
     "PostalCode": "RM1 3ER",
-    "Country": "United Kingdom"
+    "Country": "United Kingdom",
+    "DateOfCompletion": "23052025"
   },
   {
     "Title": "Mr",
@@ -277,6 +296,7 @@
     "Number/street": "21 Rond-point du Grand",
     "City": "Montpellier",
     "PostalCode": "34300",
-    "Country": "France"
+    "Country": "France",
+    "DateOfCompletion": "23052025"
   }
 ]
