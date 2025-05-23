@@ -8,7 +8,7 @@ sidebar_label: Android
 
 ## 基于 ONLYOFFICE 测试示例的集成
 
-本示例演示如何将 ONLYOFFICE 移动端网页编辑器与 ONLYOFFICE [测试或 DMS 示例](../../language-specific-examples/language-specific-examples.md)集成。
+本示例演示如何将 ONLYOFFICE 移动端网页编辑器与 ONLYOFFICE [测试或 DMS 示例](../../../samples/language-specific-examples/language-specific-examples.md)集成。
 
 ![通过测试示例的 Android 集成](/assets/images/editor/android-test-sample.png)
 

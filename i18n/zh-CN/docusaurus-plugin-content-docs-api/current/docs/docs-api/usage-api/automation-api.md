@@ -4,7 +4,7 @@ sidebar_position: -2
 
 # 自动化应用程序编程接口（API）
 
-**连接器**是一个允许从外部源编辑文本文档、电子表格、演示文稿和可填写表单的类。使用"自动化API" 的示例可以在[此处](../get-started/external-access-to-the-document-editing/external-access-to-the-document-editing.md)找到。
+**连接器**是一个允许从外部源编辑文本文档、电子表格、演示文稿和可填写表单的类。使用"自动化API" 的示例可以在[此处](../samples/external-access-to-the-document-editing/external-access-to-the-document-editing.md)找到。
 
 要创建连接器，请使用**文档编辑器**对象的 [createConnector](./methods.md#createconnector) 方法 ：
 
