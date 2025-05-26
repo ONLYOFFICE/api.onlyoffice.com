@@ -39,6 +39,10 @@
   word-break: normal;
 }
 
+#controlsBlock[hidden] {
+  display: none;
+}
+
 .docbuilder-script {
   outline: none;
   background: rgb(249, 249, 249);
