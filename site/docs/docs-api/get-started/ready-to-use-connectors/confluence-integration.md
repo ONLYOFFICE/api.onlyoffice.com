@@ -11,7 +11,7 @@ The connector is available in the official [Atlassian Marketplace](https://marke
 
 ## Features
 
-- Currently, the following document formats can be edited or viewed: DOCX, XLSX, PPTX, DOCXF, OFORM.
+- Currently, the following document formats can be edited or viewed: DOCX, XLSX, PPTX.
 - The plugin will create a new **Edit in ONLYOFFICE** menu option within the document library for Office documents. This allows multiple users to collaborate in real time and to save back those changes to Confluence.
 - Currently, the following document formats can be converted into OOXML: ODT, DOC, ODP, PPT, ODS, XLS.
 
