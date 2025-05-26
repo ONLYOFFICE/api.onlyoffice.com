@@ -31,7 +31,7 @@ const sidebars: SidebarsConfig = {
     },
     {
       type: "category",
-      label: "API Usage",
+      label: "API usage",
       collapsed: false,
       items: require("./site/docspace/api-backend/usage-api/sidebar.ts")
         .filter(filterOpenApiSidebarItems),
@@ -52,7 +52,7 @@ const sidebars: SidebarsConfig = {
     },
     {
       type: "category",
-      label: "API Usage",
+      label: "API usage",
       collapsed: false,
       items: require("./site/docspace/for-hosting-providers/usage-api/sidebar.ts")
         .filter(filterOpenApiSidebarItems),
@@ -80,7 +80,7 @@ const sidebars: SidebarsConfig = {
     },
     {
       type: "category",
-      label: "API Usage",
+      label: "API usage",
       collapsed: false,
       items: require("./site/workspace/api-backend/usage-api/sidebar.ts")
         .filter(filterOpenApiSidebarItems),
@@ -101,7 +101,7 @@ const sidebars: SidebarsConfig = {
     },
     {
       type: "category",
-      label: "API Usage",
+      label: "API usage",
       collapsed: false,
       items: require("./site/workspace/for-hosting-providers/usage-api/sidebar.ts")
         .filter(filterOpenApiSidebarItems),
