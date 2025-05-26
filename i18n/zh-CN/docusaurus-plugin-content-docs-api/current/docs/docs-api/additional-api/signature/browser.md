@@ -37,12 +37,7 @@
   },
   "editorConfig": {
     "callbackUrl": "https://example.com/url-to-callback.ashx",
-    "mode": "edit",
-    "user": {
-      "group": "Group1",
-      "id": "78e1e841",
-      "name": "Smith"
-    }
+    "mode": "edit"
   }
 }
 ```
@@ -120,12 +115,7 @@ JWT 令牌的有效载荷（JSON 格式）必须与 [config](../../usage-api/adv
     },
     "editorConfig": {
       "callbackUrl": "https://example.com/url-to-callback.ashx",
-      "mode": "edit",
-      "user": {
-        "group": "Group1",
-        "id": "78e1e841",
-        "name": "Smith"
-      }
+      "mode": "edit"
     }
   }
   ```

@@ -1,5 +1,32 @@
 # Change log
 
+## 5.2.0
+
+### New features
+
+#### Docspace
+
+* Added new JavaScript SDK samples
+
+#### Docs
+
+* Updated parameter descriptions
+* Added Inserting text into a document sample
+
+#### Docs API
+
+* Added interactive examples for Automation API
+* Updated samples in Document Builder section
+* Updated documentation in Chinese
+
+### Fixes
+
+* Fixed code samples
+
+#### Docs API
+
+* Fixed Try Docs page
+
 ## 5.1.0
 
 ### New features

@@ -24,7 +24,7 @@ void closeFile();
     </TabItem>
     <TabItem value="builder" label=".docbuilder">
         ```ts
-        builder.CloseFile()
+        builder.CloseFile();
         ```
     </TabItem>
 </Tabs>

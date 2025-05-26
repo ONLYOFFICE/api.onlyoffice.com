@@ -192,6 +192,12 @@ const config: Config = {
             },
           ],
         },
+        // {
+        //   type: 'docSidebar',
+        //   sidebarId: 'samples',
+        //   label: 'Samples',
+        //   docsPluginId: 'api',
+        // },
         {
           type: 'localeDropdown',
           position: 'right',

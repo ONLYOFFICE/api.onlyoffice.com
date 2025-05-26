@@ -1,13 +1,13 @@
 export type code = {
   document: {
-    fileType: string;
-    key: string;
-    title: string;
-    url: string;
+    fileType?: string;
+    key?: string;
+    title?: string;
+    url?: string;
     permissions?: {
-      edit: boolean;
-      modifyFilter: boolean;
-      fillForms: boolean;
+      edit?: boolean;
+      modifyFilter?: boolean;
+      fillForms?: boolean;
       review?: boolean;
       reviewGroups?: string[];
       modifyContentControl?: boolean;

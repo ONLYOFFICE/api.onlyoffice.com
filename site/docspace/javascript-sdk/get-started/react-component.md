@@ -37,19 +37,19 @@ This procedure creates a [basic React application](https://github.com/facebook/c
 4. Open the *./src/App.js* file in the *docspace-react-demo* project and replace its contents with the following code:
 
    ``` tsx
-   import {DocSpace} from "@onlyoffice/docspace-react"
-   import React, {useRef} from "react"
+   import {DocSpace} from "@onlyoffice/docspace-react";
+   import React, {useRef} from "react";
 
    function onAppReady(e) {
-     console.log("ONLYOFFICE DocSpace App is ready!")
+     console.log("ONLYOFFICE DocSpace App is ready!");
    }
 
    function onAppError(e) {
-     console.log(e)
+     console.log(e);
    }
 
    function onLoadComponentError(errorCode, errorDescription) {
-     console.log(errorDescription)
+     console.log(errorDescription);
    }
 
    export default function App() {

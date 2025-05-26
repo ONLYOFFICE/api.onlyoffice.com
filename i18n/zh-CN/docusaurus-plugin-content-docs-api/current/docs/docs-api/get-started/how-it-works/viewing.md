@@ -81,6 +81,6 @@ sidebar_position: -8
 - 对于 [WOPI](../../using-wopi/overview.md);
 - 打开 *pdf/djvu/xps* 格式时。
 
-> 请注意，实时查看器的服务器连接数与同时连接总数分开计算，并接受许可证中 [connections\_view](../../additional-api/command-service/license.md#response-parameters) 参数的限制。对于开源版本，这个值限制为20。对于较旧的许可证，实时查看器不可用。
+> 请注意，实时查看器的服务器连接数与同时连接总数分开计算，并接受许可证中 [connections\_view](../../additional-api/command-service/license.md#license) 参数的限制。对于开源版本，这个值限制为20。对于较旧的许可证，实时查看器不可用。
 
 在移动编辑器中使用查看模式的概念与web版本相同。

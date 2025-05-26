@@ -8,7 +8,7 @@ sidebar_position: -12
 
 如果您不知道如何开始使用 ONLYOFFICE 文档 API，我们建议您首先阅读[基本概念](../../get-started/basic-concepts.md)和[工作原理](../../get-started/how-it-works/how-it-works.md)部分，以便更好地了解 ONLYOFFICE 文档 API 的构建方式。熟悉了主要概念后，您可以访问[立即试用](../../get-started/try-docs/try-docs.md)部分，查看 ONLYOFFICE 文档主要功能的实际示例。
 
-如果您对特定的编程语言示例感兴趣，请参阅[特定于语言的示例](../../get-started/language-specific-examples/language-specific-examples.md) ，它们是以多种编程语言编写，解释了如何安装 ONLYOFFICE 文档、从何处获取示例源文件以及如何安装它们和连接 ONLYOFFICE 文档。
+如果您对特定的编程语言示例感兴趣，请参阅[特定于语言的示例](../../samples/language-specific-examples/language-specific-examples.md) ，它们是以多种编程语言编写，解释了如何安装 ONLYOFFICE 文档、从何处获取示例源文件以及如何安装它们和连接 ONLYOFFICE 文档。
 
 使用某些文档管理系统（如 Nextcloud、ownCloud、SharePoint 等）并希望了解如何将 ONLYOFFICE 文档连接到这些系统的用户，可以访问[即用型连接器](../../get-started/ready-to-use-connectors/nextcloud-integration.md)部分。该部分详细介绍了与 ONLYOFFICE 文档配合使用的主要插件。
 

@@ -94,8 +94,8 @@ const params = {
   provider: "onlyoffice",
   uiTheme: "theme-dark",
   userId: "78e1e841",
-}
-window.AscDesktopEditor.execCommand("portal:login", JSON.stringify(params))
+};
+window.AscDesktopEditor.execCommand("portal:login", JSON.stringify(params));
 ```
 
 ## Logout
@@ -121,5 +121,5 @@ Example: `https://exampledomain.com`
 ``` ts
 window.AscDesktopEditor.execCommand("portal:logout", JSON.stringify({
   domain: "https://exampledomain.com",
-}))
+}));
 ```

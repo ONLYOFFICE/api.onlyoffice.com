@@ -1,0 +1,81 @@
+.left-half {
+  float: left;
+  width: 50%;
+}
+
+.right-half {
+  float: right;
+  width: 50%;
+}
+
+.content-control-input {
+}
+
+.content-control-radio {
+}
+
+#persons {
+  box-sizing: border-box;
+  padding: 8px 16px;
+  width: 100%;
+  max-width: 544px;
+  height: 48px;
+  border: 1px solid #808080;
+  border-radius: 3px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  color: #333333;
+  margin-bottom: 25px;
+}
+
+#persons option:disabled {
+  color: #cccccc;
+}
+
+#controlsBlock {
+  display: flex;
+  margin-bottom: 25px;
+  word-break: normal;
+}
+
+.docbuilder-script {
+  outline: none;
+  background: rgb(249, 249, 249);
+  border-radius: 3px;
+  padding: 15px 24px;
+  width: 95%;
+  width: -moz-available;
+  width: -webkit-fill-available;
+  width: strech;
+}
+
+.left-half input,
+.right-half input {
+  border: 1px solid #d0d5da;
+  border-radius: 2px;
+  box-sizing: border-box;
+  margin: 4px;
+  padding: 4px 8px;
+  height: 30px;
+  width: 57%;
+}
+
+.left-half input[type="radio"],
+.right-half input[type="radio"] {
+  cursor: pointer;
+  width: 28px !important;
+  vertical-align: middle !important;
+}
+
+.left-half label,
+.right-half label {
+  display: inline-block;
+  color: #666666;
+  width: 33%;
+}
+
+.label-radio {
+  margin-right: 30px;
+  width: auto !important;
+}
