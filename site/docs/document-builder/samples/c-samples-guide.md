@@ -77,7 +77,15 @@ Run the script:
     - Replace the contents of `hello-world.cpp` with code above
     - Build the project using:
     ```bash
-    g++ hello-world.cpp -I../include -L../Lib -libdocbuilder -lstdc++ -lpthread -lm -lc -Wl,-rpath,../../../Lib -Wl,-rpath$ORIGIN -o hello-world
+    g++ hello-world.cpp \
+        -Ibuilder/opt/onlyoffice/documentbuilder/include \
+        -Lbuilder/opt/onlyoffice/documentbuilder \
+        -ldocbuilder.c \
+        -lDocxRenderer \
+        -ldoctrenderer \
+        -lstdc++ -lpthread -lm -lc \
+        -Wl,-rpath=builder/opt/onlyoffice/documentbuilder \
+        -o hello-world
     ```
     - Run the application via ./hello-world
     </TabItem>
