@@ -19,7 +19,6 @@ Generates word definitions in your document using the [Dictionary API](https://a
     headers: { "X-Api-Key": "your-api-key" },
     contentType: "application/json",
     success: function (result) {
-      console.log(result);
       let text = result.definition;
       let paragraph = Api.CreateParagraph();
       paragraph.AddText(text);
