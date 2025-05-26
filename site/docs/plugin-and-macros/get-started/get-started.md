@@ -31,6 +31,6 @@ To quickly install and update plugins, you can use [ONLYOFFICE Plugin Marketplac
 
 To create your own plugin, you need to follow a few steps:
 
-1. Learn the fundamental concepts for building plugins on the [Getting started](./getting-started.md) page and write code that defines the plugin appearance and behavior.
+1. Learn the fundamental concepts for building plugins on the [Getting started](../structure/getting-started.md) page and write code that defines the plugin appearance and behavior.
 2. After building the plugin, [test](../tutorials/developing/for-web-editors.md) it thoroughly and make sure the plugin looks and works as you expected. Try to anticipate the problems that might occur and suggest your solutions to them.
 3. Now you can use the plugin on your own or suggest it for [publishing](../tutorials/publishing.md) by creating a pull request to the [plugin marketplace repository](https://github.com/ONLYOFFICE/onlyoffice.github.io).

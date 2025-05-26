@@ -17,7 +17,7 @@ The parameters, which can be changed for ONLYOFFICE Docs, can be subdivided into
 
   - [**customization**](./config/editor/customization/customization-standard-branding.md) - allows to customize the editor interface so that it looked like your other products (if there are any) and change the presence or absence of the additional buttons, links, change logos and editor owner details;
   - [**embedded**](./config/editor/embedded.md) - is used for the embedded document type only and allows to change the behavior of the buttons used to control the embedded mode;
-  - [**plugins**](./config/editor/plugins.md) - is used to connect the necessary [plugins](../../plugin-and-macros/get-started/overview.md) to your ONLYOFFICE Docs, so that they become visible to all document editor users;
+  - [**plugins**](./config/editor/plugins.md) - is used to connect the necessary [plugins](../../plugin-and-macros/get-started/get-started.md) to your ONLYOFFICE Docs, so that they become visible to all document editor users;
 
 - [**events**](./config/events.md) - is the list of special events called when some action is applied to the document (when it is loaded, modified, etc.).
 
