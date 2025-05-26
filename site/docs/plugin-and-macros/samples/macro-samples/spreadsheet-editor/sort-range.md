@@ -1,4 +1,4 @@
-# Automatic range sorter
+# Sort range
 
 Automatically sorts a selected range or the entire used range in a spreadsheet.
 
