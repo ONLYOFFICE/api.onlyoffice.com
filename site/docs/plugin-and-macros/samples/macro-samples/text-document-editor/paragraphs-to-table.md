@@ -11,9 +11,7 @@ Converts a list of numbered paragraphs into a table.
 
     for (let i = 0; i < paragraphs.length; i++) {
         let level = paragraphs[i].GetNumbering().GetLevelIndex();
-        console.log(level);
         let text = paragraphs[i].GetText().trim();
-        console.log(text);
 
         if (level === 0) {
             if (currentRow.length > 0) {

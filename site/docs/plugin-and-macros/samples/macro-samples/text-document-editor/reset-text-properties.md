@@ -22,8 +22,6 @@ Resets the text properties of all the paragraphs in a document to the default se
         // Apply text properties
         paragraphs[i].SetTextPr(defaultTextPr);
     }
-
-    console.log("end");
 })();
 ```
 

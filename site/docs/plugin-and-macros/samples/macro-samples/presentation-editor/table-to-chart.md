@@ -120,12 +120,9 @@ Generates a chart based on the selected table data.
         }
 
         slide.AddObject(chart);
-        console.log("Chart created successfully");
     }
 
     processPresentation();
-
-    console.log("Macro execution completed successfully.");
 })();
 ```
 
