@@ -18,7 +18,6 @@ Searches for bookmarks containing a specific word in their text and deletes them
             : bookmarkText.toLowerCase();
 
         if (textToCompare.includes(textToRemove)) {
-            console.log("detected")
             doc.DeleteBookmark(bookmarkName);
         }
     }

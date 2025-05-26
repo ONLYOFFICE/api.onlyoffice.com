@@ -35,8 +35,6 @@ Splits slides in a presentation that contain more than 100 words into multiple s
         }
     }
 
-    console.log("Slide splitting completed.");
-
     function extractAllTextFromSlide(shapes) {
         let text = "";
         shapes.forEach(function (shape) {
