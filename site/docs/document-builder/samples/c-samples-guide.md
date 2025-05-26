@@ -19,24 +19,23 @@ For the samples to work correctly, make sure that two conditions are met:
 This section will help you build the "Hello World" application. It is easy to integrate the **ONLYOFFICE Document Builder SDK** if you are able to open, save and close documents.
 
 ```cpp
-#include "./../common_deploy.h"
-#include "../docbuilder.h"
-#include "./utils.cpp"
+#include <string>
+#include "common.h"
+#include "docbuilder.h"
+
+// Specify the path to the Document Builder work directory and the result path (where the generated file will be saved)
+#define WORK_DIRECTORY L"builder/opt/onlyoffice/documentbuilder"
 
 using namespace NSDoctRenderer;
 
 int main(int argc, char *argv[])
 {
-    std::wstring sProcessDirectory = NSUtils::GetProcessDirectory();
-    // Specify the path to the Document Builder work directory and the result path (where the generated file will be saved)
-    std::wstring sWorkDirectory = NSUtils::GetBuilderDirectory();
-
     // Init DocBuilder
-    CDocBuilder::Initialize(sWorkDirectory.c_str());
+    CDocBuilder::Initialize(WORK_DIRECTORY);
     CDocBuilder oBuilder;
-    oBuilder.SetProperty("--work-directory", sWorkDirectory.c_str());
+    oBuilder.SetProperty("--work-directory", WORK_DIRECTORY);
 
-    oBuilder.CreateFile("docx");
+    oBuilder.CreateFile(OFFICESTUDIO_FILE_DOCUMENT_DOCX);
 
     CContext oContext = oBuilder.GetContext();
     CContextScope oScope = oContext.CreateScope();
@@ -53,8 +52,8 @@ int main(int argc, char *argv[])
     oDocument.Call("InsertContent", oContent);
 
     // Save and close
-    std::wstring sDstPath = sProcessDirectory + L"/result.docx";
-    oBuilder.SaveFile("docx", sDstPath.c_str());
+    std::wstring sDstPath = L"result.docx";
+    oBuilder.SaveFile(OFFICESTUDIO_FILE_DOCUMENT_DOCX, sDstPath.c_str());
     oBuilder.CloseFile();
 
     CDocBuilder::Dispose();
