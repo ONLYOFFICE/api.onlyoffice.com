@@ -75,6 +75,21 @@ Download the SDK.
     <TabItem value="linux" label="Linux">
         - Download the [Document Builder aarch64](https://github.com/ONLYOFFICE/DocumentBuilder/releases/latest/download/onlyoffice-documentbuilder-linux-aarch64.tar.xz) or [Document Builder x86_64](https://github.com/ONLYOFFICE/DocumentBuilder/releases/latest/download/onlyoffice-documentbuilder-linux-x86_64.tar.xz) SDK archive.
         - Extract via `tar xvzf onlyoffice-documentbuilder-linux-aarch64.tar.xz` or `tar xvzf onlyoffice-documentbuilder-linux-x86_64.tar.xz`.
+
+        For example:
+        ```bash
+        ARCH=$(uname -m)
+        if [[ "$ARCH" == "aarch64" || "$ARCH" == "arm64" ]]; then
+            FILE_NAME="onlyoffice-documentbuilder-linux-aarch64.tar.xz"
+        else
+            FILE_NAME="onlyoffice-documentbuilder-linux-x86_64.tar.xz"
+        fi
+
+        curl -L -o "$FILE_NAME" "https://github.com/ONLYOFFICE/DocumentBuilder/releases/latest/download/$FILE_NAME"
+
+        mkdir -p builder
+        tar xvJf "$FILE_NAME" -C builder
+        ```
     </TabItem>
     <TabItem value="macos" label="macOS">
         - Download the [Document Builder arm64](https://github.com/ONLYOFFICE/DocumentBuilder/releases/latest/download/onlyoffice-documentbuilder-macos-arm64.tar.xz) or [Document Builder x86_64](https://github.com/ONLYOFFICE/DocumentBuilder/releases/latest/download/onlyoffice-documentbuilder-macos-x86_64.tar.xz) SDK archive.
