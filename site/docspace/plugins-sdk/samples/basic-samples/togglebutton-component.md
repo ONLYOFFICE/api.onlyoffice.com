@@ -1,11 +1,11 @@
-# Text component
+# Toggle Button component
 
-This guide demonstrates how to configure and use the [Text](../../../usage-sdk/coding-plugin/plugin-components/text) component in the DocSpace Plugin SDK with nearly all supported layout and style properties.
+This guide demonstrates how to configure and use the [Toggle Button](../../../usage-sdk/coding-plugin/plugin-components/togglebutton) component in the DocSpace Plugin SDK with nearly all supported layout and style properties.
 
 <details>
   <summary>Full Example</summary>
 
-``` js
+```js
 import {
   IPlugin,
   PluginStatus,
@@ -14,7 +14,7 @@ import {
 } from '@onlyoffice/docspace-plugin-sdk'
 
 import {
-  IText,
+  IToggleButton,
   IBox,
   Components,
   IModalDialog,
@@ -23,20 +23,20 @@ import {
   Actions
 } from '@onlyoffice/docspace-plugin-sdk';
 
-class Textcomponentplugin implements IPlugin, IMainButtonPlugin {
-  status: PluginStatus = PluginStatus.active; 
+class Toggleplugin implements IPlugin, IMainButtonPlugin {
+  status: PluginStatus = PluginStatus.active;          
   mainButtonItems: Map<string, IMainButtonItem> = new Map();
-          
+
   onLoadCallback = async () => {};
-           
+
   updateStatus = (status: PluginStatus) => {
     this.status = status;
   };
-          
+
   getStatus = () => {
     return this.status;
   };
-          
+
   setOnLoadCallback = (callback: () => Promise<void>) => {
     this.onLoadCallback = callback;
   };
@@ -44,41 +44,50 @@ class Textcomponentplugin implements IPlugin, IMainButtonPlugin {
   addMainButtonItem = (item: IMainButtonItem ): void => {
     this.mainButtonItems.set(item.key, item);
   };
-        
+
   getMainButtonItems = (): Map<string, IMainButtonItem > => {
     return this.mainButtonItems;
   };
-        
+
   updateMainButtonItem = (item: IMainButtonItem): void => {
     this.mainButtonItems.set(item.key, item);
   };
 }
 
-const plugin = new Textcomponentplugin();
+const plugin = new Toggleplugin();
 
-// Create text props
-const textProps: IText = {
-  text: "Document Management",
-  title: "Full description shown on hover",
-  fontSize: "24px",
-  fontWeight: 600,
-  lineHeight: "32px",
-  color: "#FF6F3D",
-  isBold: false,
-  noSelect: true,
-  textAlign: "center"
+// Create toggle props
+const onChange = () => {
+  toggleButtonProps.isChecked = !toggleButtonProps.isChecked
+
+  const message: IMessage = {
+    actions: [Actions.updateProps],
+    newProps: toggleButtonProps,
+  }
+  return message
 }
 
-// Add text component with props to the modal
+const toggleButtonProps: IToggleButton = {
+  label: "Enable Notifications",
+  isChecked: false,
+  onChange,
+  style: {
+    backgroundColor: "#f5f5f5",
+    padding: "8px",
+    borderRadius: "4px"
+  }
+}
+
+// Add toggle component with props to the modal
 const body: IBox = {
   widthProp: "500px",
   heightProp: "100px",
   children: [
-    { component: Components.text, props: textProps }
+    { component: Components.toggleButton, props: toggleButtonProps }
   ],
 }
 
-const modalDialogProps: IModalDialog = {
+export const modalDialogProps: IModalDialog = {
   dialogHeader: "Sample modal dialog",
   dialogBody: body,
   displayType: ModalDisplayType.modal,
@@ -130,10 +139,11 @@ declare global {
   }
 }
 
-window.Plugins.Textcomponentplugin = plugin || {};
+window.Plugins.Toggleplugin = plugin || {};
 
 export default plugin;
 ```
+
 </details>
 
 ## Before you start
@@ -172,7 +182,7 @@ import {
   IMainButtonItem
 } from '@onlyoffice/docspace-plugin-sdk'
 
-class Textcomponentplugin implements IPlugin, IMainButtonPlugin {
+class Toggleplugin implements IPlugin, IMainButtonPlugin {
   status: PluginStatus = PluginStatus.active;
   mainButtonItems: Map<string, IMainButtonItem> = new Map();
 
@@ -199,7 +209,7 @@ class Textcomponentplugin implements IPlugin, IMainButtonPlugin {
   };
 }
 
-const plugin = new Textcomponentplugin();
+const plugin = new Toggleplugin();
 
 declare global {
   interface Window {
@@ -207,7 +217,7 @@ declare global {
   }
 }
 
-window.Plugins.Textcomponentplugin = plugin || {};
+window.Plugins.Toggleplugin = plugin || {};
 
 export default plugin;
 ```
@@ -229,14 +239,12 @@ Add a [Main Button item](../../../usage-sdk/coding-plugin/plugin-items/mainbutto
 ```js
 // ...
 
-const plugin = new Textcomponentplugin();
-
 const createItem: IMainButtonItem = {
   key: "test-main-button",
   label: "Show dialog",
   icon: "icon.svg",
   onClick: () => {}
-};
+}
 
 const mainButtonItem: IMainButtonItem = {
   key: "test-main-button",
@@ -244,7 +252,7 @@ const mainButtonItem: IMainButtonItem = {
   icon: "icon.svg",
   items: [createItem],
   onClick: () => {}
-};
+}
 
 plugin.addMainButtonItem(mainButtonItem);
 
@@ -257,50 +265,59 @@ declare global {
 // ...
 ```
 
-## Step 3: Define a Text component
+## Step 3: Define a Toggle Button component
 
-Create styled [Text component](../../../usage-sdk/coding-plugin/plugin-components/text) and embed it a [Box component](../../../usage-sdk/coding-plugin/plugin-components/box) below the plugin initialization.
+Create styled [Toggle Button component](../../../usage-sdk/coding-plugin/plugin-components/text) with the onChange function, and embed it in a [Box component](../../../usage-sdk/coding-plugin/plugin-components/box) below the plugin initialization.
+
 
 ```js
 import {
-  IText,
+  IToggleButton,
   IBox,
   Components,
   IModalDialog,
   ModalDisplayType,
   IMessage,
   Actions
-} from '@onlyoffice/docspace-plugin-sdk'
+} from '@onlyoffice/docspace-plugin-sdk';
 
 // ...
 
-const plugin = new Textcomponentplugin();
+const plugin = new Toggleplugin();
 
-// Create text props
-const textProps: IText = {
-  text: "Document Management",
-  title: "Full description shown on hover",
-  fontSize: "24px",
-  fontWeight: 600,
-  lineHeight: "32px",
-  color: "#FF6F3D",
-  isBold: false,
-  noSelect: true,
-  textAlign: "center"
-};
+const onChange = () => {
+  toggleButtonProps.isChecked = !toggleButtonProps.isChecked
+
+  const message: IMessage = {
+    actions: [Actions.updateProps],
+    newProps: toggleButtonProps,
+  }
+  return message
+}
+
+const toggleButtonProps: IToggleButton = {
+  label: "Enable Notifications",
+  isChecked: false,
+  onChange,
+  style: {
+    backgroundColor: "#f5f5f5",
+    padding: "8px",
+    borderRadius: "4px"
+  }
+}
 
 const body: IBox = {
   widthProp: "500px",
   heightProp: "100px",
   children: [
-    { component: Components.text, props: textProps }
+    { component: Components.toggleButton, props: toggleButtonProps }
   ],
-};
+}
 
-// ...
+//...
 ```
 
-## Step 4: Define Modal behavior
+## Step 4: Define Modal Dialog
 
 Create the [Modal Dialog component](../../../usage-sdk/coding-plugin/plugin-components/modaldialog) with the [Box component](../../../usage-sdk/coding-plugin/plugin-components/box) body created on the previous step.
 
@@ -311,37 +328,37 @@ const body: IBox = {
   widthProp: "500px",
   heightProp: "100px",
   children: [
-    { component: Components.text, props: textProps }
+    { component: Components.toggleButton, props: toggleButtonProps }
   ],
-};
+}
 
-const modalDialogProps: IModalDialog = {
+export const modalDialogProps: IModalDialog = {
   dialogHeader: "Sample modal dialog",
   dialogBody: body,
   displayType: ModalDisplayType.modal,
   onClose: () => {
     const message: IMessage = {
       actions: [Actions.closeModal],
-    };
-    return message;
+    }
+    return message
   },
 
   onLoad: async () => {
     return {
       newDialogHeader: modalDialogProps.dialogHeader,
       newDialogBody: modalDialogProps.dialogBody,
-    };
+    }
   },
   autoMaxHeight: true,
   autoMaxWidth: true,
-};
+}
 
 // ...
 ```
 
 ## Step 5: Append Modal to the Main Button
 
-Update main button's onClick function with the modal display behavior
+Update main button's onClick function with the modal display behavior.
 
 ```js
 // ...
@@ -369,7 +386,7 @@ const mainButtonItem: IMainButtonItem = {
 npm run build
 ```
 
-This compiles `src/index.ts` to `dist/plugin.js` and bundles everything into `dist/plugin.zip`.
+This compiles your plugin from `src/index.ts` into `dist/plugin.js` and bundles it as `dist/plugin.zip`.
 
 ## Step 7: Upload to DocSpace
 
@@ -377,10 +394,10 @@ This compiles `src/index.ts` to `dist/plugin.js` and bundles everything into `di
 2. Click **Upload** and select `dist/plugin.zip`
 3. Enable the plugin toggle
 
-
 ## Step 8: Test the Plugin
 
 1. Open any Room
 2. Click the **More (⋯)** button in the toolbar
-3. Click the `"Show dialog"` button
-4. A modal should appear showing your styled text
+3. Click **"Show dialog"**
+4. A modal should appear with a toggle button
+5. Toggling it should visually update its state

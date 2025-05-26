@@ -1,6 +1,6 @@
-# Text component
+# ComboBox component
 
-This guide demonstrates how to configure and use the [Text](../../../usage-sdk/coding-plugin/plugin-components/text) component in the DocSpace Plugin SDK with nearly all supported layout and style properties.
+This guide demonstrates how to configure and use the [ComboBox](../../../usage-sdk/coding-plugin/plugin-components/combobox) component in the DocSpace Plugin SDK with nearly all supported layout and style properties.
 
 <details>
   <summary>Full Example</summary>
@@ -14,7 +14,8 @@ import {
 } from '@onlyoffice/docspace-plugin-sdk'
 
 import {
-  IText,
+  IComboBox,
+  IComboBoxItem,
   IBox,
   Components,
   IModalDialog,
@@ -23,10 +24,10 @@ import {
   Actions
 } from '@onlyoffice/docspace-plugin-sdk';
 
-class Textcomponentplugin implements IPlugin, IMainButtonPlugin {
-  status: PluginStatus = PluginStatus.active; 
+class Combocomponentplugin implements IPlugin, IMainButtonPlugin {
+  status: PluginStatus = PluginStatus.active;
   mainButtonItems: Map<string, IMainButtonItem> = new Map();
-          
+
   onLoadCallback = async () => {};
            
   updateStatus = (status: PluginStatus) => {
@@ -40,7 +41,7 @@ class Textcomponentplugin implements IPlugin, IMainButtonPlugin {
   setOnLoadCallback = (callback: () => Promise<void>) => {
     this.onLoadCallback = callback;
   };
-
+        
   addMainButtonItem = (item: IMainButtonItem ): void => {
     this.mainButtonItems.set(item.key, item);
   };
@@ -54,19 +55,40 @@ class Textcomponentplugin implements IPlugin, IMainButtonPlugin {
   };
 }
 
-const plugin = new Textcomponentplugin();
+const plugin = new Combocomponentplugin();
 
-// Create text props
-const textProps: IText = {
-  text: "Document Management",
-  title: "Full description shown on hover",
-  fontSize: "24px",
-  fontWeight: 600,
-  lineHeight: "32px",
-  color: "#FF6F3D",
-  isBold: false,
-  noSelect: true,
-  textAlign: "center"
+const options: IComboBoxItem[] = [
+  {key: "auto", label: "Auto"},
+  {key: "en", label: "English"},
+  {key: "fr", label: "Française"},
+]
+
+const onSelect = (option: IComboBoxItem) => {
+  comboBox.selectedOption = option
+
+  const message: IMessage = {
+    actions: [Actions.updateProps],
+    newProps: comboBox,
+  }
+  return message
+}
+
+const comboBox: IComboBox = {
+  options,
+  selectedOption: options[0],
+  onSelect,
+  scaled: true,
+  dropDownMaxHeight: 400,
+  directionY: "both",
+  scaledOptions: true,
+  directionX: "right",
+  displayType: "default",
+  showDisabledItems: true,
+  withBackdrop: true,
+  isDisabled: false,
+  noBorder: false,
+  opened: false,
+  modernView: false
 }
 
 // Add text component with props to the modal
@@ -74,11 +96,11 @@ const body: IBox = {
   widthProp: "500px",
   heightProp: "100px",
   children: [
-    { component: Components.text, props: textProps }
+    { component: Components.comboBox, props: comboBox }
   ],
 }
 
-const modalDialogProps: IModalDialog = {
+export const modalDialogProps: IModalDialog = {
   dialogHeader: "Sample modal dialog",
   dialogBody: body,
   displayType: ModalDisplayType.modal,
@@ -130,10 +152,11 @@ declare global {
   }
 }
 
-window.Plugins.Textcomponentplugin = plugin || {};
+window.Plugins.Combocomponentplugin = plugin || {};
 
 export default plugin;
 ```
+
 </details>
 
 ## Before you start
@@ -172,34 +195,38 @@ import {
   IMainButtonItem
 } from '@onlyoffice/docspace-plugin-sdk'
 
-class Textcomponentplugin implements IPlugin, IMainButtonPlugin {
+class Combocomponentplugin implements IPlugin, IMainButtonPlugin {
   status: PluginStatus = PluginStatus.active;
   mainButtonItems: Map<string, IMainButtonItem> = new Map();
 
   onLoadCallback = async () => {};
-
+           
   updateStatus = (status: PluginStatus) => {
     this.status = status;
   };
-
-  getStatus = () => this.status;
-
+          
+  getStatus = () => {
+    return this.status;
+  };
+          
   setOnLoadCallback = (callback: () => Promise<void>) => {
     this.onLoadCallback = callback;
   };
-
-  addMainButtonItem = (item: IMainButtonItem): void => {
+        
+  addMainButtonItem = (item: IMainButtonItem ): void => {
     this.mainButtonItems.set(item.key, item);
   };
-
-  getMainButtonItems = (): Map<string, IMainButtonItem> => this.mainButtonItems;
-
+        
+  getMainButtonItems = (): Map<string, IMainButtonItem > => {
+    return this.mainButtonItems;
+  };
+        
   updateMainButtonItem = (item: IMainButtonItem): void => {
     this.mainButtonItems.set(item.key, item);
   };
 }
 
-const plugin = new Textcomponentplugin();
+const plugin = new Combocomponentplugin();
 
 declare global {
   interface Window {
@@ -229,14 +256,14 @@ Add a [Main Button item](../../../usage-sdk/coding-plugin/plugin-items/mainbutto
 ```js
 // ...
 
-const plugin = new Textcomponentplugin();
+const plugin = new Combocomponentplugin();
 
 const createItem: IMainButtonItem = {
   key: "test-main-button",
   label: "Show dialog",
   icon: "icon.svg",
   onClick: () => {}
-};
+}
 
 const mainButtonItem: IMainButtonItem = {
   key: "test-main-button",
@@ -244,7 +271,7 @@ const mainButtonItem: IMainButtonItem = {
   icon: "icon.svg",
   items: [createItem],
   onClick: () => {}
-};
+}
 
 plugin.addMainButtonItem(mainButtonItem);
 
@@ -257,13 +284,14 @@ declare global {
 // ...
 ```
 
-## Step 3: Define a Text component
+## Step 3: Define a ComboBox component
 
-Create styled [Text component](../../../usage-sdk/coding-plugin/plugin-components/text) and embed it a [Box component](../../../usage-sdk/coding-plugin/plugin-components/box) below the plugin initialization.
+Create styled [ComboBox component](../../../usage-sdk/coding-plugin/plugin-components/combobox) and embed it in a [Box component](../../../usage-sdk/coding-plugin/plugin-components/box) below the plugin initialization.
 
 ```js
 import {
-  IText,
+  IComboBox,
+  IComboBoxItem,
   IBox,
   Components,
   IModalDialog,
@@ -274,33 +302,55 @@ import {
 
 // ...
 
-const plugin = new Textcomponentplugin();
+const plugin = new Combocomponentplugin();
 
-// Create text props
-const textProps: IText = {
-  text: "Document Management",
-  title: "Full description shown on hover",
-  fontSize: "24px",
-  fontWeight: 600,
-  lineHeight: "32px",
-  color: "#FF6F3D",
-  isBold: false,
-  noSelect: true,
-  textAlign: "center"
+const options: IComboBoxItem[] = [
+  { key: "auto", label: "Auto" },
+  { key: "en", label: "English" },
+  { key: "fr", label: "Française" }
+];
+
+const onSelect = (option: IComboBoxItem) => {
+  comboBox.selectedOption = option;
+
+  const message: IMessage = {
+    actions: [Actions.updateProps],
+    newProps: comboBox,
+  };
+  return message;
 };
 
+const comboBox: IComboBox = {
+  options,
+  selectedOption: options[0],
+  onSelect,
+  scaled: true,
+  dropDownMaxHeight: 400,
+  directionY: "both",
+  scaledOptions: true,
+  directionX: "right",
+  displayType: "default",
+  showDisabledItems: true,
+  withBackdrop: true,
+  isDisabled: false,
+  noBorder: false,
+  opened: false,
+  modernView: false
+};
+
+// Add text component with props to the modal
 const body: IBox = {
   widthProp: "500px",
   heightProp: "100px",
   children: [
-    { component: Components.text, props: textProps }
+    { component: Components.comboBox, props: comboBox }
   ],
-};
+}
 
 // ...
 ```
 
-## Step 4: Define Modal behavior
+## Step 4: Define Modal Dialog
 
 Create the [Modal Dialog component](../../../usage-sdk/coding-plugin/plugin-components/modaldialog) with the [Box component](../../../usage-sdk/coding-plugin/plugin-components/box) body created on the previous step.
 
@@ -311,11 +361,11 @@ const body: IBox = {
   widthProp: "500px",
   heightProp: "100px",
   children: [
-    { component: Components.text, props: textProps }
+    { component: Components.comboBox, props: comboBox }
   ],
 };
 
-const modalDialogProps: IModalDialog = {
+export const modalDialogProps: IModalDialog = {
   dialogHeader: "Sample modal dialog",
   dialogBody: body,
   displayType: ModalDisplayType.modal,
@@ -341,7 +391,7 @@ const modalDialogProps: IModalDialog = {
 
 ## Step 5: Append Modal to the Main Button
 
-Update main button's onClick function with the modal display behavior
+Update main button's onClick function with the modal display behavior.
 
 ```js
 // ...
@@ -369,18 +419,20 @@ const mainButtonItem: IMainButtonItem = {
 npm run build
 ```
 
-This compiles `src/index.ts` to `dist/plugin.js` and bundles everything into `dist/plugin.zip`.
+This compiles your plugin from `src/index.ts` into `dist/plugin.js` and bundles it as `dist/plugin.zip`.
 
 ## Step 7: Upload to DocSpace
 
-1. Go to **Admin Panel → Integration → Plugins**
-2. Click **Upload** and select `dist/plugin.zip`
-3. Enable the plugin toggle
+1. Log in as **Admin**
+2. Go to **Admin Panel → Integration → Plugins**
+3. Click **Upload**, select `dist/plugin.zip`
+4. Toggle your plugin to **enabled**
 
 
 ## Step 8: Test the Plugin
 
-1. Open any Room
-2. Click the **More (⋯)** button in the toolbar
-3. Click the `"Show dialog"` button
-4. A modal should appear showing your styled text
+1. Enter any Room
+2. Open the **More (⋯)** menu
+3. Click **"Show dialog"**
+4. A modal will appear showing the language ComboBox
+5. Select a language and confirm the value updates dynamically
