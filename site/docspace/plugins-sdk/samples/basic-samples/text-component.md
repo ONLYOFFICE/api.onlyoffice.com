@@ -1,4 +1,4 @@
-# Text Component
+# Text component
 
 This guide demonstrates how to configure and use the [Text](../../usage-sdk/coding-plugin/plugin-components/text) component in the DocSpace Plugin SDK with nearly all supported layout and style properties.
 
@@ -218,9 +218,13 @@ Ensure `package.json` includes all necessary fields. Most importantly, make sure
 "scopes": ["MainButton"]
 ```
 
-## Step 2: Add the Main Button
+:::info
+[Main Button](../../usage-sdk/coding-plugin/plugin-types/mainbuttonplugin) plugin type is used for this example. The same structure could be applied to any other plugin type.
+:::
 
-Add a main button below the plugin initialization
+## Step 2: Add a Main Button item
+
+Add a [Main Button item](../../usage-sdk/coding-plugin/plugin-items/mainbuttonitem/) below the plugin initialization.
 
 ```js
 // ...
@@ -250,15 +254,13 @@ declare global {
   }
 }
 
-window.Plugins.Textcomponentplugin = plugin || {};
-
-export default plugin;
+// ...
 ```
 
 
-## Step 3: Define Text Component
+## Step 3: Define a Text component
 
-Create styled text and embed it in a `Box` below the plugin initialization.
+Create styled [Text component](../../usage-sdk/coding-plugin/plugin-components/text) and embed it in a [Box component](../../usage-sdk/coding-plugin/plugin-components/box) below the plugin initialization.
 
 ```js
 import {
@@ -297,9 +299,9 @@ const body: IBox = {
 };
 ```
 
-## Step 4: Define Modal Behavior
+## Step 4: Define Modal behavior
 
-Create the modal dialog with the IBox body created on the previous step.
+Create the [Modal Dialog component](../../usage-sdk/coding-plugin/plugin-components/modaldialog) with the [Box component](../../usage-sdk/coding-plugin/plugin-components/box) body created on the previous step.
 
 ```js
 // ...
@@ -336,7 +338,7 @@ const modalDialogProps: IModalDialog = {
 // ...
 ```
 
-## Step 5: Append modal to the main button
+## Step 5: Append Modal to the Main Button
 
 Update main button's onClick function with the modal display behavior
 
