@@ -1,18 +1,6 @@
-# IBox Component
+# Box сomponent
 
-This guide demonstrates how to configure and use the [IBox](../../usage-sdk/coding-plugin/plugin-components/box) component in the DocSpace Plugin SDK with nearly all supported layout and style properties.
-
-## Overview
-
-- Component: [Components.box](../../usage-sdk/coding-plugin/plugin-components/box)
-- Interface: `IBox`
-- Purpose: Acts as a container for structuring layout using margin, padding, flex, grid, borders, and other layout utilities
-
-## Example Output
-
-- A modal dialog will open with a 400px-wide box
-- The box has a border, padding, margin, and multiple flex/grid properties
-- Inside the box is a primary “Save” button
+This guide demonstrates how to configure and use the [IBox](../../../usage-sdk/coding-plugin/plugin-components/box) component in the DocSpace Plugin SDK with common layout, alignment, and spacing properties.
 
 <details>
   <summary>Full Example</summary>
@@ -37,7 +25,7 @@ import {
   IButton
 } from '@onlyoffice/docspace-plugin-sdk';
 
-class Boxplugin implements IPlugin, IMainButtonPlugin {
+class Boxcomponentplugin implements IPlugin, IMainButtonPlugin {
   status: PluginStatus = PluginStatus.active;          
   mainButtonItems: Map<string, IMainButtonItem> = new Map();
 
@@ -68,10 +56,10 @@ class Boxplugin implements IPlugin, IMainButtonPlugin {
   };
 }
 
-const plugin = new Boxplugin();
+const plugin = new Boxcomponentplugin();
 
 const ButtonProps: IButton = {
-  onClick: ()=>{
+  onClick: () => {
     console.log("Button clicked!")
   },
   size: ButtonSize.normal,
@@ -87,73 +75,34 @@ const ButtonComponent: ButtonGroup = {
 };
 
 const demoBox: IBox = {
-  // Width of the box element (e.g., "100px", "auto", "100%")
   widthProp: "400px",
-
-  // Height of the box element (e.g., "50px", "auto")
   heightProp: "auto",
-
-  // Inner padding on all four sides (shorthand for top/right/bottom/left)
   paddingProp: "16px",
-
-  // Outer margin on all four sides (shorthand for top/right/bottom/left)
   marginProp: "24px auto",
-
-  // Determines how the box is displayed: block, inline, flex, grid, etc.
   displayProp: "flex",
-
-  // Direction of the main axis in a flex container
   flexDirection: "column",
-
-  // Aligns children along the cross axis in a flex container
   alignItems: "flex-start",
-
-  // Distributes multiple lines of content along the cross axis
   alignContent: "flex-start",
-
-  // Overrides alignItems for the current element in the parent container
   alignSelf: "center",
-
-  // Initial size of the item before growing or shrinking in flexbox
   flexBasis: "auto",
-
-  // Shorthand for flex-grow, flex-shrink, and flex-basis
   flexProp: "0 1 auto",
-
-  // Determines whether flex items wrap and the direction of wrapping
   flexWrap: "nowrap",
-
-  // Places the item in a specific grid area
   gridArea: "auto",
-
-  // Controls distribution of items along the main axis
   justifyContent: "flex-start",
-
-  // Sets the default justify-self for all children
   justifyItems: "stretch",
-
-  // Aligns the box within its alignment container
   justifySelf: "auto",
-
-  // Controls overflow behavior when content is too large
   overflowProp: "visible",
-
-  // Horizontal alignment of inline content (e.g., text)
   textAlign: "left",
-
-  // Border settings, including color, radius, style, and width
   borderProp: {
     color: "#ccc",
     radius: "6px",
     style: "solid",
     width: "1px"
   },
-
-  // Child components inside the box
   children: [ButtonComponent]
 };
 
-export const modalDialogProps: IModalDialog = {
+const modalDialogProps: IModalDialog = {
   dialogHeader: "Sample modal dialog",
   dialogBody: demoBox,
   displayType: ModalDisplayType.modal,
@@ -205,35 +154,263 @@ declare global {
   }
 }
 
-window.Plugins.Toggleplugin = plugin || {};
+window.Plugins.Boxcomponentplugin = plugin || {};
 
 export default plugin;
 ```
 
 </details>
 
-## Property Reference
+## Before you start
+Make sure you have a DocSpace server running and install the Plugin SDK globally:
 
-| **Property**     | **Type**        | **Description**                                                     |
-| ---------------- | --------------- | ------------------------------------------------------------------- |
-|  widthProp       |  string         | Sets the box width (e.g., `"100%"`,`"400px"` )                      |
-|  heightProp      |  string         | Sets the box height                                                 |
-|  paddingProp     |  string         | Inner spacing on all sides                                          |
-|  marginProp      |  string         | Outer spacing around the box                                        |
-|  displayProp     |  string         | Layout behavior (typically `"flex"` or `"grid"`)                    |
-|  flexDirection   |  string         | Direction of flex items (`"row"`, `"column"`)                       |
-|  alignItems      |  string         | Cross-axis alignment of children (`"flex-start"`, `"center"`, etc.) |
-|  alignContent    |  string         | Aligns content lines inside multi-line flex container               |
-|  alignSelf       |  string         | Self-alignment of this box in its parent container                  |
-|  flexBasis       |  string         | Base size in flex context (`"auto"`, `"0%"` , etc.)                 |
-|  flexProp        |  string         | Shorthand for `flex-grow shrink basis`                              |
-|  flexWrap        |  string         | Wrap behavior for children (`"wrap"`, `"nowrap"`)                   |
-|  gridArea        |  string         | Grid template area assignment                                       |
-|  justifyContent  |  string         | Main-axis distribution of children                                  |
-|  justifyItems    |  string         | Default self-alignment for children                                 |
-|  justifySelf     |  string         | Alignment of this box inside a grid/flex parent                     |
-|  overflowProp    |  string         | Controls overflow visibility                                        |
-|  textAlign       |  string         | Aligns inline content (e.g., `"left"`, `"center"`)                  |
-|  borderProp      |  object         | Includes `color`, `width`, `radius`, `style` for border styling     |
-|  children        |  Component[]    | Nested elements rendered inside this box                            |
+```bash
+npm i -g @onlyoffice/docspace-plugin-sdk
+```
 
+## Step 1: Create the Plugin
+Initialize your plugin using the CLI:
+
+```bash
+npx create-docspace-plugin
+```
+
+You'll be prompted to fill out basic metadata:
+- Plugin name
+- Version
+- Author
+- Description
+- Logo
+- License
+- Homepage
+
+Then, you'll be shown a list of available scopes.
+Use the arrow keys to highlight `Main button`, press `space` to select it, then press `enter` to confirm and generate the plugin template.
+
+```js
+import {
+  IPlugin,
+  PluginStatus,
+  IMainButtonPlugin,
+  IMainButtonItem
+} from '@onlyoffice/docspace-plugin-sdk'
+
+import {
+  ButtonGroup,
+  IBox,
+  Components,
+  IModalDialog,
+  ModalDisplayType,
+  IMessage,
+  Actions,
+  ButtonSize,
+  IButton
+} from '@onlyoffice/docspace-plugin-sdk';
+
+class Boxcomponentplugin implements IPlugin, IMainButtonPlugin {
+  status: PluginStatus = PluginStatus.active;          
+  mainButtonItems: Map<string, IMainButtonItem> = new Map();
+
+  onLoadCallback = async () => {};
+           
+  updateStatus = (status: PluginStatus) => {
+    this.status = status;
+  };
+          
+  getStatus = () => {
+    return this.status;
+  };
+          
+  setOnLoadCallback = (callback: () => Promise<void>) => {
+    this.onLoadCallback = callback;
+  };
+
+  addMainButtonItem = (item: IMainButtonItem ): void => {
+    this.mainButtonItems.set(item.key, item);
+  };
+        
+  getMainButtonItems = (): Map<string, IMainButtonItem > => {
+    return this.mainButtonItems;
+  };
+        
+  updateMainButtonItem = (item: IMainButtonItem): void => {
+    this.mainButtonItems.set(item.key, item);
+  };
+}
+
+const plugin = new Boxcomponentplugin();
+
+declare global {
+  interface Window {
+    Plugins: any;
+  }
+}
+
+window.Plugins.Boxcomponentplugin = plugin || {};
+
+export default plugin;
+```
+
+Ensure `package.json` includes all necessary fields. Most importantly, make sure it includes:
+
+```json
+"scopes": ["MainButton"]
+```
+
+:::info
+[Main Button](../../../usage-sdk/coding-plugin/plugin-types/mainbuttonplugin) plugin type is used for this example. The same structure could be applied to any other plugin type.
+:::
+
+## Step 2: Add a Main Button item
+Add a [Main Button item](../../../usage-sdk/coding-plugin/plugin-items/mainbuttonitem) below the plugin initialization.
+
+```js
+// ...
+
+const plugin = new Boxcomponentplugin();
+
+const createItem: IMainButtonItem = {
+  key: "test-main-button",
+  label: "Show dialog",
+  icon: "icon.svg",
+  onClick: () => {}
+};
+
+const mainButtonItem: IMainButtonItem = {
+  key: "test-main-button",
+  label: "Show dialog",
+  icon: "icon.svg",
+  items: [createItem],
+  onClick: () => {}
+};
+
+plugin.addMainButtonItem(mainButtonItem);
+
+declare global {
+  interface Window {
+    Plugins: any;
+  }
+}
+
+// ...
+```
+
+## Step 3: Define a Box Component
+Configure layout styles via [IBox](../../../usage-sdk/coding-plugin/plugin-components/box) and include nested UI elements:
+
+```js
+import {
+  IPlugin,
+  PluginStatus,
+  IMainButtonPlugin,
+  IMainButtonItem
+} from '@onlyoffice/docspace-plugin-sdk'
+
+import {
+  ButtonGroup,
+  IBox,
+  Components,
+  IModalDialog,
+  ModalDisplayType,
+  IMessage,
+  Actions,
+  ButtonSize,
+  IButton
+} from '@onlyoffice/docspace-plugin-sdk';
+// ...
+
+const plugin = new Boxcomponentplugin();
+
+const demoBox: IBox = {
+  widthProp: "400px",
+  heightProp: "auto",
+  paddingProp: "16px",
+  marginProp: "24px auto",
+  displayProp: "flex",
+  flexDirection: "column",
+  alignItems: "flex-start",
+  alignContent: "flex-start",
+  alignSelf: "center",
+  flexBasis: "auto",
+  flexProp: "0 1 auto",
+  flexWrap: "nowrap",
+  gridArea: "auto",
+  justifyContent: "flex-start",
+  justifyItems: "stretch",
+  justifySelf: "auto",
+  overflowProp: "visible",
+  textAlign: "left",
+  borderProp: {
+    color: "#ccc",
+    radius: "6px",
+    style: "solid",
+    width: "1px"
+  },
+  children: [ButtonComponent]
+};
+```
+
+## Step 4: Define Modal behavior
+Create the [Modal Dialog component](../../../usage-sdk/coding-plugin/plugin-components/modaldialog) with the [Box component](../../../usage-sdk/coding-plugin/plugin-components/box) body created on the previous step.
+
+```js
+// ...
+
+const modalDialogProps: IModalDialog = {
+  dialogHeader: "Box layout example",
+  dialogBody: demoBox,
+  displayType: ModalDisplayType.modal,
+  onClose: () => ({ actions: [Actions.closeModal] }),
+  onLoad: async () => ({
+    newDialogHeader: modalDialogProps.dialogHeader,
+    newDialogBody: modalDialogProps.dialogBody
+  }),
+  autoMaxHeight: true,
+  autoMaxWidth: true
+};
+
+// ...
+```
+
+## Step 5: Append Modal to the Main Button
+Update main button's onClick function with the modal display behavior
+
+```js
+// ...
+
+const mainButtonItem: IMainButtonItem = {
+  key: "test-main-button",
+  label: "Show dialog",
+  icon: "icon.svg",
+  items: [createItem],
+  onClick: () => {
+    const message: IMessage = {
+        actions: [Actions.showModal],
+        modalDialogProps: modalDialogProps,
+      };
+      return message;
+  }
+}
+
+// ...
+```
+
+## Step 6: Build the Plugin
+
+```bash
+npm run build
+```
+
+This compiles `src/index.ts` to `dist/plugin.js` and bundles everything into `dist/plugin.zip`.
+
+## Step 7: Upload to DocSpace
+1. Go to **Admin Panel → Integration → Plugins**
+2. Click **Upload** and select `dist/plugin.zip`
+3. Enable the plugin toggle
+
+
+## Step 8: Test the Plugin
+1. Open any Room
+2. Click the **More (⋯)** button in the toolbar
+3. Click the `"Show dialog"` button
+4. You should see a styled container with a "Save" button inside
