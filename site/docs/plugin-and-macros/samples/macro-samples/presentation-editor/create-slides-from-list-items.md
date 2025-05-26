@@ -44,7 +44,6 @@ Creates new slides based on the listed items in the current slide. Each list ite
     }
     function createSlides(items, index = 0) {
         if (index >= items.length) {
-            console.log(`Successfully created ${items.length} new slides`);
             return;
         }
 
@@ -90,7 +89,6 @@ Creates new slides based on the listed items in the current slide. Each list ite
     let numberedItems = processShapes(shapes);
 
     if (numberedItems.length === 0) {
-        console.log("No indented items found to create slides from.");
         return;
     }
 
