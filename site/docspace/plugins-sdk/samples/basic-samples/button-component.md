@@ -2,19 +2,10 @@
 
 This guide demonstrates how to render and configure a [Button](../../../usage-sdk/coding-plugin/plugin-components/button) component using the DocSpace Plugin SDK.
 
-## Overview
-- Component: [Components.button](../../../usage-sdk/coding-plugin/plugin-components/button)
-- Interface: `IButton`
-- Wrapper: `ButtonGroup`
-- Purpose: Renders an interactive button with optional action, size, and state options
-
-## Example Output
-A button labeled "Save" will be rendered inside a flex box. Clicking it logs a message to the browser console.
-
 <details>
   <summary>Full Example</summary>
 
-``` ts
+```js
 import {
   IPlugin,
   PluginStatus,
@@ -302,7 +293,7 @@ declare global {
 // ...
 ```
 
-## Step 3: Create the Button Component
+## Step 3: Create the Button component
 Define an [IButton](../../../usage-sdk/coding-plugin/plugin-components/button) instance and wrap it inside ButtonGroup:
 
 ```js
@@ -324,6 +315,7 @@ import {
   ButtonSize,
   ButtonGroup
 } from '@onlyoffice/docspace-plugin-sdk';
+
 // ...
 
 const plugin = new Boxcomponentplugin();
@@ -358,6 +350,8 @@ const body: IBox = {
   alignItems: "center",
   children: [ButtonComponent]
 };
+
+// ...
 ```
 
 ## Step 4: Define Modal behavior

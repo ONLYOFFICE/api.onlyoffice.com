@@ -5,7 +5,7 @@ This guide demonstrates how to configure and use the [IBox](../../../usage-sdk/c
 <details>
   <summary>Full Example</summary>
 
-``` ts
+``` js
 import {
   IPlugin,
   PluginStatus,
@@ -295,7 +295,7 @@ declare global {
 // ...
 ```
 
-## Step 3: Define a Box Component
+## Step 3: Define a Box сomponent
 Configure layout styles via [IBox](../../../usage-sdk/coding-plugin/plugin-components/box) and include nested UI elements:
 
 ```js
@@ -317,6 +317,7 @@ import {
   ButtonSize,
   IButton
 } from '@onlyoffice/docspace-plugin-sdk';
+
 // ...
 
 const plugin = new Boxcomponentplugin();
@@ -348,6 +349,8 @@ const demoBox: IBox = {
   },
   children: [ButtonComponent]
 };
+
+// ...
 ```
 
 ## Step 4: Define Modal behavior
