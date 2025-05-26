@@ -19,7 +19,6 @@ Identifies all acronyms in the document and adds their full forms in comments.
     ]);
 
     let totalFound = 0;
-    let errors = [];
 
     acronymDictionary.forEach((fullForm, acronym) => {
       let searchResults = doc.Search(acronym, true);
@@ -31,11 +30,6 @@ Identifies all acronyms in the document and adds their full forms in comments.
       });
     }
     });
-
-    if (errors.length) {
-      console.log("Errors encountered:");
-      errors.forEach((error) => console.log(error));
-    }
   }
 
   addAcronymComments();

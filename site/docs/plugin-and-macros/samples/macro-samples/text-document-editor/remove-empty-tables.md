@@ -8,7 +8,6 @@ Removes all the empty tables from the document.
     let tables = doc.GetAllTables();
 
     if (!tables || tables.length === 0) {
-        console.log("No tables found");
         return;
     }
 
