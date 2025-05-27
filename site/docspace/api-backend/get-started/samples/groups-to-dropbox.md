@@ -13,6 +13,7 @@ The script ensures all ONLYOFFICE teams have centralized file storage in Dropbox
 
 <Tabs>
   <TabItem value="py" label="Python">
+
     ```py
     import dropbox, requests
  
@@ -84,6 +85,7 @@ The script ensures all ONLYOFFICE teams have centralized file storage in Dropbox
                 if members:
                     share_dropbox_group_folder(folder, members)
     ```
+
   </TabItem>
 </Tabs>
 
@@ -102,6 +104,7 @@ Use a [`GET /api/2.0/group`](../../../usage-api/get-groups) request to retrieve 
 
 <Tabs>
   <TabItem value="py" label="Python">
+
     ```py
     # Step 1: Retrieve ONLYOFFICE groups
     def get_onlyoffice_groups():
@@ -116,6 +119,7 @@ Use a [`GET /api/2.0/group`](../../../usage-api/get-groups) request to retrieve 
     if __name__ == '__main__':
         onlyoffice_groups = get_onlyoffice_groups()
     ```
+
   </TabItem>
 </Tabs>
 
@@ -124,6 +128,7 @@ Use dropbox client to generate a Dropbox folder for each DocSpace group.
 
 <Tabs>
   <TabItem value="py" label="Python">
+
     ``` py
     # Step 2: Create a Dropbox folder for each ONLYOFFICE group
     def create_dropbox_group_folder(group_name):
@@ -141,6 +146,7 @@ Use dropbox client to generate a Dropbox folder for each DocSpace group.
         for group in onlyoffice_groups:
             folder = create_dropbox_group_folder(group['name'])
     ```
+
   </TabItem>
 </Tabs>
 
@@ -149,6 +155,7 @@ Use a [`GET /api/2.0/group/{group_id}`](../../../usage-api/get-group) to get a g
 
 <Tabs>
   <TabItem value="py" label="Python">
+
     ```py
     # Step 3: Retrieve ONLYOFFICE group members
     def get_group_members(group_id):
@@ -171,6 +178,7 @@ Use a [`GET /api/2.0/group/{group_id}`](../../../usage-api/get-group) to get a g
             if folder:
                 members = get_group_members(group['id'])
     ```
+
   </TabItem>
 </Tabs>
 
@@ -179,7 +187,8 @@ Use dropbox client to share Dropbox folders with DocSpace group members.
 
 <Tabs>
   <TabItem value="py" label="Python">
-    ``` py
+
+    ```py
     # Step 4: Share the Dropbox group folder with its members
     def share_dropbox_group_folder(folder_path, group_members):
         for member in group_members:
@@ -198,5 +207,6 @@ Use dropbox client to share Dropbox folders with DocSpace group members.
                 if members:
                     share_dropbox_group_folder(folder, members)
     ```
+    
   </TabItem>
 </Tabs>
