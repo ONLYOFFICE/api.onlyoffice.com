@@ -1,0 +1,71 @@
+---
+id: open-customer-session
+title: "Open customer session"
+description: "Trying to open a customer session and block amount money on the balance."
+sidebar_label: "Open customer session"
+hide_title: true
+hide_table_of_contents: true
+api: eJytV0tz2zgM/iscXHJh7Tx68s1NujPt7myyiTM5ZDwNLMEWG4lU+Eji9ei/74CUbPnRdQ692BKJB0F8wAetwOPCwegRboz1WIqhuMFlRdrDVIKpyaJXRn/LYcRv+jI4byqyd+ScMhokWHoJ5PwXky9htILMaM/aoxVgXZcqi/rDn85oXnNZQRXyk1/WxEZnPynzIKG27M0rclGO7KvKaJxlJiRrrbzSnhZkQUJOLrOqZvMwgrukILDVkDA3tkKfVC7OQQK9Y1WXBKOz84vPDb97shrLW5r3HDhvlV7s2f/aCgtLc7KkMwIJOpQlztikt4F6HsCZioSndw+NhJeA2iu//EAY/3SiR8/fSMA8V6yH5U3v8uZYOtq1e1kq0l64lDbBqVR6IWq0WJEn60CCVz6e/Xo/z7cpyVfeQNOwa0uuNtqlZJ2fnvLftsdJQSJrrXR+Qf4ufHT+P4Kk6JoRfOD2j4LEEkOR8nG1A0Qdqtm2idwExkIjIQuWIbI8BKsPYeZYcrtUdWXIPn9ZKDsxNhJKpZ9dTxatRYac8lS541da2EMVw2fOUvL3tiJmnEcf3AePmIQvTU4fUmj27uTBYl2TbX1/Pj3bh+i9xuALY9W/lEMUutgX+tuImmylolEnfHxl98IXyok25BgfZcHGMn9cAbrsB1v/8Uy8AJYwBwlvVnmCaSNX8IXQkoXRY3wb1+pPWq7XDsmjU1knfj0Ovjg/LMj1y3B/nDbT3T4wsUuue29iCxC4V6ICdS5mpcmeBUbIi8poWgqjhS9IzLBEndEAJFTkC8O8UBsXMYK+gBEMsVbD88HpsI6EMqwTnQw7R0N2vOkHsbqsi3cWbAkjWM3Q0b0tm4M9nqzIjJ6rRUjMBBJe0SquqAitVjnlcY6hZJDsWbpKW+L+9i8GyHSTvDtuQMnUdgo3xRIztWfy3pG4NOZZkWAl0r7tbVzzWEXNvkEJitWyqMLoa/O79lN4X+/TkPZkxdIEK4JjQqooZqxG596MZSTEFsoGZtEgW25R9RHTJ0lYrL4/TMTEPJNuTraMJluyffijq8PvDxN2tQ3jY3c23roooZzImYwqpSkXs2VE3Mm4rdEocyIKwjweoL3ULY/tpbYyjVzXyaalYVzYPUmSE/PSvIk35Qux5VXEPiSBtxM0+rtdk9pajBhk4Hm+w/Wby0zdMRhy8dwS5jy0kEu9xRpPmadcWHIm2IzcurhH8MD/R6RTv+t6wCbuuHBptE4dfSd83r0S7fY+gLe022AaCe+fnFpo9MHS8WQzoNbijN5czI3d8TUQPDfEOxNVcF7MSJiZx4iIV4UREk9di+mKdpiyOox6T4J0Xhul/UB88wwqLg7KBTrud6lEY47ZVqygp14gT4MNtvrx7dRrI4FnltvN9Pu1I/L96ZVniZ15s8f2/QGxnTqUnpt4oy2njWvFjY6sS3d5MTgbnHIGuPdWGCm3PTOn8tDgtZWM3pz+OymhBQBHNaxLVHEwCakbJ3p4ZHSAhPPBKVNGpIjIHembg0en5LwFXXf+qYSCaWb0CKs1QTS8/BLIMsNON0SQSLLrAswssYPDZYr504SPyeJlSHjdmUOZRJPGOMuo9v8rO+0x4c313YRbY/stVMXGABbf+DsJ31ILMDEHqQfw2gpK1IuAC5ZNNuP8F/i++kWVWKN94Ki6Lb3sn3CbZFIc/MtRHdRYrVLFNs1aPm39UmPdg5M053naNM1/BobxQQ==
+sidebar_class_name: "post api-method"
+info_path: site/docspace/api-backend/usage-api/api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Open customer session"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/api/2.0/portal/payment/customer/opensession"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Trying to open a customer session and block amount money on the balance.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"serviceAccount":{"type":"integer","description":"Service account","format":"int32","example":1234},"externalRef":{"type":"string","description":"External reference","nullable":true,"example":"some text"},"quantity":{"type":"integer","description":"Quantity","format":"int32","example":1234}},"additionalProperties":false,"description":"Client session opening parameters","title":"OpenCustomerSessionRequestDto"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"The customer session","content":{"application/json":{"schema":{"type":"object","properties":{"response":{"type":"object","properties":{"sessionId":{"type":"integer","format":"int32","example":1234},"reservedAmount":{"type":"number","format":"double"},"currency":{"type":"string","nullable":true,"example":"some text"}},"additionalProperties":false,"title":"Session"},"count":{"type":"integer","format":"int32"},"links":{"type":"array","items":{"type":"object","properties":{"href":{"type":"string"},"action":{"type":"string"}}}},"status":{"type":"integer","format":"int32"},"statusCode":{"type":"integer","format":"int32"}},"title":"SessionWrapper"}}}},"401":{"description":"Unauthorized"},"403":{"description":"No permissions to perform this action"}}}
+>
+  
+</StatusCodes>
+
+
+      

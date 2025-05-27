@@ -1,0 +1,71 @@
+---
+id: payment-update
+title: "Update the payment quantity"
+description: "Updates the payment quantity with the parameters specified in the request."
+sidebar_label: "Update the payment quantity"
+hide_title: true
+hide_table_of_contents: true
+api: eJytV0tz2zgM/iscXHJR7TTpSbc07c60u7PNpsnk4PE0sATZbCSS5SOp16P/vgOSsuXY3eTQiyWRAIjH9wH0BjwuHZQzuNLWYyum4grXHSkP8wK0IYteavWphhJM2rg1NXqCAiz9COT8e12vodxApZVnvXIDaEwrq6g5/e604jVXrahDfvNrQ1CCXnynykMBxvI5XpLj3R8BlZd+fUwS61qyUWyv9nSynFSelmShgEbbDn1aOj+DvoCaXGWlYW0o4WZFokNjpFoK3QjpqROyJuVlI8k68ST9SvgVSSssOUOVl48ksmuSnJCKt0VOyQQKUKFtcdESlN4GKoB+Ymf4c7aBB1pDCU53JDz95EgesQ0E5duz83f9vO9/FVqDraNjzufcC4MWO/Lsc6Pt2KfB27Vg/2WT6+HYVy89ewb/ZJHrZO2D19D37A0HrZVL2T07PeXHvhPvtW4JlYiBlIJjFrKJDmxRI6QTLlQVOdeEForfBZHBu5HkIrnDla50SEe8AhWtVA9jBKG1uIYCGBDuZUdWlpqRlPNWqiXbxSql6WArZtd59OG1wE3Cl7qmVyn0u+rmEt1ZNIZsPvvd6dvDYt4qDH6lrfyXaohC54dCf2thyHbSOYaR8PGTjxd+JZ3IIcf4qAo2Uni2AXTVN7b+LZJgBpawhgKerPQE877YwHtCSxbKWfy6MPJPWm/Xjsmjk9Ug/uUi+NXZccEvhmLnms37+XMSpS7mjjNmoP+YXplFVA/czxRkPnXkVzq2yBBBgn4FJUzRyOnZ5HRqYmud5mOmYWigjuwjWRfTFGwLJWwW6OjWtj089/drlBWVVo1chsSv2Ees5K4T0ZSVU+kaDC3j4sDSh7Qlbq//YkzMd/X6yvxLpvartuNHLM6ByVtH4lLrB0mClbiPVoOHCruoOTZYgGS1Kqow4HJJt+esvDcHp3xUnqxY62BFcGTZsEBVC4POPWnLxY8dJPaDaJAtZyC9xvRJEhabz3c34kY/kOpP9owmW0V++WOg3ue7Gz5qH7kv5exiL1HcKmsGWicV1WKxjhA7uci0jDInYkVYRwdyUvdOzEnNMn2xpcaui2FceO5JkhNNq58S8vdOFbH1FMDbCRrj3aEv7S1GDDLwPOdw++UqbYYGjsyWa8JaYJwPsZ1Y7anyVPPM1cFW5LZ8LuGOny9IpxY30H4Xd1y41EqlJv4sfN79IPL2IYD3tHMwfQE/3zi5VOiDpZeLzYDaijN66ziu98+aCJ7sMWeiC86LBQm98BgR8SgxQuJ+aCoDaaepqtOody9I1UZL5Sfik2dQMTmoFugEisS3XXeLDLofBXI/2WFrHN8zvvYF8Mi+3t3/Pg6XnfH97RUXHzbc6Ji/PLQujGQpsi5l7nzydnLK+Tba+Q7jTM0ephZ+tIM/L8Dodvp7O38uOwc3NS3KeAMJqQenMTBjTEABZ5NTHg1xFMQZkW7ZBeRxMC9gpZ1nhc12DPS8/COQ5XTOd+0+Tb+B67tMX6Yo39ywW9tkH162eDomjYuqIuP/V3Y+GnBXtzfc//KVv4vsB4tP/HcAnxLPdUx6IjqvbaBFtQy4ZNlkMt54A6dnzJw0GvILBzVsqfXYwf1JksLgXw7qqMZmk2jZ91v5tPVLjW2jTdJc1nnf9/8BtLaRPg==
+sidebar_class_name: "put api-method"
+info_path: site/docspace/api-backend/usage-api/api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Update the payment quantity"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"put"}
+  path={"/api/2.0/portal/payment/update"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Updates the payment quantity with the parameters specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"quantity":{"type":"object","additionalProperties":{"type":"integer","format":"int32"},"description":"The mapping of item identifiers with their respective quantities in the payment.","nullable":true,"example":[{"key":"some text","value":1234}]}},"additionalProperties":false,"description":"The request parameters for the payment quantity specifications.","title":"QuantityRequestDto"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Boolean value: true if the operation is successful","content":{"application/json":{"schema":{"type":"object","properties":{"response":{"type":"boolean"},"count":{"type":"integer","format":"int32"},"links":{"type":"array","items":{"type":"object","properties":{"href":{"type":"string"},"action":{"type":"string"}}}},"status":{"type":"integer","format":"int32"},"statusCode":{"type":"integer","format":"int32"}},"title":"BooleanWrapper"}}}},"401":{"description":"Unauthorized"},"403":{"description":"No permissions to perform this action"}}}
+>
+  
+</StatusCodes>
+
+
+      

@@ -1,0 +1,71 @@
+---
+id: get-chechout-setup-url
+title: "Get the chechout setup page URL"
+description: "Returns the URL to the chechout setup page."
+sidebar_label: "Get the chechout setup page URL"
+hide_title: true
+hide_table_of_contents: true
+api: eJyVVk1z2zYQ/SuYvfiCSordk26Ok2aSdppMbI8PHk0MkSsRMQmgwNKOyuF/zywASqLp1O5FH8Duw369B3RAahtgeQtfrCdVi7n4onYNGoKVBOvQK9LWfCxhCVukiwqLyrZ0idS6a1+DBKe8apDQM0oHRjUIS3irivu0rw0s4Z8W/Q4klBgKrx1DZiNx/fUvkBCKChsFyw5o5xggkNdmCxLwh2pcHZdsg4LwB0HfryR4DM6agIG9ThcL/hrjX1XI8IKsoApFkYMXgaMXTm0RJBTWEKe77EA5V+siJjz/HhiimwZm19+xIE7cc3lIpwCGaKYp9HxGm07IO9oQbtGDhI31jaK0dHbKtrU29+HIVnmvuHSasAkvx1F53DwbgypSVSZbfd9LCKSoDa8MMRlf2BJf5dBLIE2xhZfxzBuvnEOfj/598WbaumujWqqs1/9iCdHobGr0txUOfaND0NYEbrNDz6cLqnQQOeOYHhat17SLI6pC8Y3Rv90jL4BHVYKER68JYdXLDt6i8uhheRv/nTv9J+72a8/Zq6CLwfzzeUvV6fOGnx1GLt2ueILH2XxFaj2n8eLUzkBCg1TZzMrIQqpgCXPl9Px0tpi7yOa5S1yeDyARo428DOgfBtLyyhK6tQp47et+QtTLaCsKazZ62yZJAAkPymu1rtPgZefUpY1qa56ACdK7tBVZ30caD625ZKIlqHGDDkyIfZhAXgcUF9beaxTshIYyh0EOajQCzJJURBeerdy9/TkVkZuc8t4QerGzrRdtQM/AQplSOBXCo/XloGEMsI6AjJxn5jXQJ8lYdJ9ursSVvUfTn4xAE5bMP/4YSPbp5oqPGg/pSzU7HxVK6CBKlvBGGyzFehcH7+Q8MzDanIgKVRkDyEUdnZiLmm16uWfBQa9UXHgaSbITm9o+ikdNlRidKqLISODtNBrHu4MCjRbjDPLgEddw/y8U1g1KrcpIN1UKVRQYknJ4S1gQlsJjsK0vMOypu4Qb/n7BOqnZwPBD3nHhwhqT5PpJ+rz7TuTt6QCPvHMyvYQfvwW9NYpajy83mwdqb87TW4qN9U/Omgm+LWPNRNMGEmsUdk0qTsSDVnEk7gZ5GUg7T12dR787gaZ0VhuaiY/EQ8XkwFKoIJRIfEs9ZqzIoLujRO5mh9k6zu8JX3v+v7Ex7XyrnDvNaoQ+pITPZm9mCy6Ts4EaFS+9DPwB6Veqml8io9p1h+fB/9Tn3BJ+rsxdrbTheNqkj0msb7lfIOF0tmABj4IdlTw9vyRMRHslobKB2LXbi3XPy+l9xVJe6sCSXMJyo+qA/5HP0evr2WCj+B495B5U3WKcv9VB+tOlN/CeA0hu50WBjo68Jm8rRtlfYh/eX4GMPB6Pc9Lr/IPRhy2zO8Yey3uKgD/5yn3Wo+sSV/p+b5+2fumxV79kzSVa9X3/E5I52hg=
+sidebar_class_name: "get api-method"
+info_path: site/docspace/api-backend/usage-api/api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get the chechout setup page URL"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/portal/payment/chechoutsetupurl"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns the URL to the chechout setup page.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"BackUrl","in":"query","description":"Back URL","schema":{"type":"string","example":"some text"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"The URL to the chechout setup page","content":{"application/json":{"schema":{"type":"object","properties":{"response":{"type":"string"},"count":{"type":"integer","format":"int32"},"links":{"type":"array","items":{"type":"object","properties":{"href":{"type":"string"},"action":{"type":"string"}}}},"status":{"type":"integer","format":"int32"},"statusCode":{"type":"integer","format":"int32"}},"title":"StringWrapper"}}}},"401":{"description":"Unauthorized"},"403":{"description":"No permissions to perform this action"}}}
+>
+  
+</StatusCodes>
+
+
+      

@@ -1,0 +1,71 @@
+---
+id: update-invitation-settings
+title: "Update user invitation settings"
+description: "Updates the portal user invitation settings."
+sidebar_label: "Update user invitation settings"
+hide_title: true
+hide_table_of_contents: true
+api: eJztV01vGzcQ/SvEXHzZSI7Tk26KnRZOWySwZfhgCPFod6RlvEsy5KxlVdj/Xgy5klaSHbtADz30YkvkfM+bN9QaGBcBRndwTczaLIIaqnNb19ao0J3ANAPryCNray4LGEHjCmS6NI+a4+FGFzLw9KOhwB9tsYLRGnJrmAzLR3Su0nmUH34P1shZyEuqUT7xyhGMwM6+U86QgfPikjWFqFtVdhn9abP4k+oZ+dDTmllbERrIoKCQe+3ECYxgLGpKix4pQ0t1YfNrhzmpOtlQXHrbLErFJalzaxhzDipQLgYGkAE9Ye0qghH7htpsP5DfJNO3x4FV9UwAdhMfPTF5g5VaRLNy462tw3EYEkdRaDGO1ddeoeZYBTp0fhPIJx+x9ru2ZsCaxShMyKBhETzu6VVq6AVbaFtx7Sk4a0JqzNnpqfw78BjhUajmZc//Ei42sfyPoP8wgiJ0pOVNaniXqjZMC/KQwdz6GjkdfTgT2Uqbh35Z0HtcQQaaqQ6vN7v0NO9JBfbaLMQu5imlo6uI7MDITXhjiEn43Bb0JoX2bbW69egc+S6gX07fPzNdBhsurdd/URHtBsobr3kFo7s1YMi/yf23B5ID8IQFZLD0mgmmbbaGj4SePIzu4rex07/Tanv2nDwGnW/Ev4wbLs+eF/ziKK6Hu2k7PYJQpIQQp8RZz1i9yA6C1pq4tLJpXBO7i1zCCIbo9PBscDrciA536j1MBvKPcbrv1tD4CkawnmGgG1+1R3N1HWVVbs1cL5q04iCDR/QaZ1VCU6ecOjHHppK2Hlm6SFfq5uoP6d5015drIbOOhfa6s4N3bMKRyZsglGIfNClRIsMdT0IGBuuo2TeYgRa1PKoIRrvWbf2UzO7IyyfD5NXKNj62RAwrNIVyGMLSemlypONIT9GgWO4A8xbTJ0lYrT/fTtTEPpBpT/aMJltZ9+HXzeR8vp2Iq32Evlaz8V6hlA6qICZfa0OFmq0iAE/G3QBFmRNVEhYxgK6oex67onYybbYdgR0JYTw4jCTJqbkQ91Jzqfa8qsgcGch1gkb/dkMre4cRgwI8lhpuv4Xcus02RJmZK8JCYZ5TiCvAecuUyz72FGzjcwrbuR3Brfx/RTqR0Wa8d3nHg3NrTOLgg/Tl9kJ118cA3tPukmkzeHoX9MIgN55eb7YAaisu6C3U3PoDXwM1KUnFmqm6CaxmpOyMMSLiUWOExP2OWtLQDlNXh1HvXpEpnNWGB+qSBVQyHFQoDApVmrfUY7EVJ+i+l8j9YIetfn4H89pmIO+fq90L+tNmab/0fpFl/sKTontuaDO3sZDd8hk7LfxGPqQSfhi8H5xK4Z0NXGPcjV2oibN/9orb60bvsf9P6b7rMtMTD12F2khATaLcxP13AgHI4GxwGhl+G8IzG2CaQWkDi9J6y/ytHP9oyMtWnO4YPi22zXjLyojUDOcpl3cTCU3EqyYB8eCxKosvaYzznBz/VHba22xfbyZCed3vpDoOPHhcym8oXKbRtrG0abblbA0VmkWDC5FNJuNTrpES9YclbYPugyS1uTKrfoD7yyOlIX8lqWc11us0iW27lU9XL2psuTVJS2unbdv+DQJrFGY=
+sidebar_class_name: "put api-method"
+info_path: site/docspace/api-backend/usage-api/api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Update user invitation settings"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"put"}
+  path={"/api/2.0/settings/invitationsettings"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Updates the portal user invitation settings.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"allowInvitingMembers":{"type":"boolean","description":"Allow invite new DocSpace members through the Contacts section.","example":true},"allowInvitingGuests":{"type":"boolean","description":"Allow all DocSpace members to invite external guests to rooms.","example":true}},"additionalProperties":false,"description":"User invitation settings","title":"TenantUserInvitationSettingsRequestDto"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Updated user invitation settings","content":{"application/json":{"schema":{"type":"object","properties":{"response":{"type":"object","properties":{"allowInvitingMembers":{"type":"boolean","description":"Allow invite new DocSpace members through the Contacts section.","example":true},"allowInvitingGuests":{"type":"boolean","description":"Allow all DocSpace members to invite external guests to rooms.","example":true}},"additionalProperties":false,"description":"User invitation settings","title":"TenantUserInvitationSettingsDto"},"count":{"type":"integer","format":"int32"},"links":{"type":"array","items":{"type":"object","properties":{"href":{"type":"string"},"action":{"type":"string"}}}},"status":{"type":"integer","format":"int32"},"statusCode":{"type":"integer","format":"int32"}},"title":"TenantUserInvitationSettingsWrapper"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

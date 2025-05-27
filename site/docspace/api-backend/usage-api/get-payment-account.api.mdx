@@ -1,0 +1,71 @@
+---
+id: get-payment-account
+title: "Get the payment account"
+description: "Returns the URL to the payment account."
+sidebar_label: "Get the payment account"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVktv2zgQ/ivEXHLR2m6yJ928abdod7EtmgQ5BEZDS2OLjURyyVEcr6D/vhhSkq3IbVKgFz/Iec8337ABklsP6R18No5kKebis9xXqAlWCRiLTpIy+kMOKWyRurtllplaEyRgpZMVEjq20YCWFUIKa5k93LgSElAaUvi3RreHBHL0mVOWDUIK1wWKmy9/i12BDgUVKGqPTuxUWYo1Coe5cpgR5kJuCJ2w0bewzmTovdLbGSTgswIrCWkDtLfs25NTegsJ4JOsbBmOTIWC8ImgbVcJOPTWaI+etc4XC/46HRqZEFfvWQ5pZ0YT1yhtQFpbqixUaf7Ns3ozDcqsv2EW6uW4pqSi8z6Safgt+6ijh+5GacItOkhgY1wlKR5dnLNsqfSDP5KVzkmuuCKs/MtxFA43J2OQWazI5Kpt2wQ8Sar9K0OMwpcmx1cptAmQotC+q+Dz1klr0XWuf1+8mbbtRsuaCuPUf5hDELqYCv1jhEVXKe+V0Z5bbNGxd0GF8qLLOKSHWe0U7QOypc++svWvD8gH4FDmkMDOKUJYtUkDf6B06CC9C/+WVv2F++HslLz0KuvFPy1rKs5PC36yGAbwbsXoHWfzBal2nMYPEcuDUiEVphvjMLhUQApzadX8fLaY2zD+805xfoC6R/fYj3ftSkihWUuPN65sJyN9FWRFZvRGbetIHZDAo3RKrsuItU45NmYj65KbPrH0Nl5xTtzx1aEbVzxb0dS4Jwfwh9JPTN54FJfGPCgUrISaurGFpOetkcGOvLKgwnDqGjb4KYjsxMs7zVy1N7ULdMaGhdS5sNL7nXF5T1mRJtkgW+5g8hrTZ1FYNB9vr8W1eUDdno2MRltJ9+PPfq4+3l6zqzEuX6rZclQoobzImewrpTEX633A2tmyG7ogcyYKlHkIoCvqyGNX1E6mTQbgHyhKhoPnkUQ5sSnNTuwUFWLkVQReSYCvIzSOb3vSGR0GDDLwiGs4/POZsT05yzxMmMx5jtBHsnCG4lZy6E3tMvTDtKZwy98vSEcC64f6kHc4uDRaR4Z+lj7fvhXd9RTAI+0umTaBp9+82mpJtcOXm82AGsQZvbnYGPfM10zwcgw1E1XtiVe1WZMMiHhUMkDivmeVfmjnsavzoHcvUOfWKE0z8YEYVDwcvOe9kCLOW+wx2woTdH+UyP3sgK3j/J7Na8v/Nyak3S2SpVXMRuh8TPhi9ma24DJZ46mSYc91ht8jfWf1j2rWHF4CP0HFXRv4RTK3pVSaY6gjJ0ZevuMeQQLnswVzdeDmQNrxacaLOcazSqAwnlijGXi55eP46GLWzpVn9s0h3cjS4w9S+DVPspPpBYo+ehg+yrLGgNLVYUHEbdizA8ce1ZZZhpaOtCaPLrYybLj37665RDVX8hj0kdW7H2y9v9L7Y9vjJRAj4E/exSc1miZOVNsO8vHquxoDR0ZpLtGqbdv/AeJS900=
+sidebar_class_name: "get api-method"
+info_path: site/docspace/api-backend/usage-api/api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get the payment account"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/portal/payment/account"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns the URL to the payment account.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"backUrl","in":"query","description":"The URL where the user will be redirected after payment processing.","schema":{"type":"string","example":"some text"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"The URL to the payment account","content":{"application/json":{"schema":{"type":"object","properties":{"response":{"type":"string"},"count":{"type":"integer","format":"int32"},"links":{"type":"array","items":{"type":"object","properties":{"href":{"type":"string"},"action":{"type":"string"}}}},"status":{"type":"integer","format":"int32"},"statusCode":{"type":"integer","format":"int32"}},"title":"StringWrapper"}}}},"401":{"description":"Unauthorized"},"403":{"description":"No permissions to perform this action"}}}
+>
+  
+</StatusCodes>
+
+
+      

@@ -1,0 +1,71 @@
+---
+id: perform-customer-operation
+title: "Perform customer operation"
+description: "Perform customer operation and return true if the operation is succesfully provided."
+sidebar_label: "Perform customer operation"
+hide_title: true
+hide_table_of_contents: true
+api: eJy1V0tPG0kQ/iutunCZ2A7kNDcDWSnZ1cISEAdkhfJM2dNhpnvSD8BrzX+PqrvHHtuwsNLuBezuenXVV1+V1+BwaSG/g0ttHNZiLC5x1ZByMMtAt2TQSa2+lJBDS2ahTXPmrdMNmYv+EjIw9NOTdae6XEG+hkIrxybyNWDb1rIIcuMfVis+s0VFDfInt2oJctDzH1Q4yKA17NJJskGOzKMsaFoU2kdrSV4qR0sykEFJtjCyDWHk8C0qCEwaGXDA6KLKyTFkQM/YtDVB/vH45FOXgSVr0wPfYT7Iii/n77H806Ny0q3eYfivXvRNs10GWJaS9bC+HGRrgbWlfbuXaLAhR8aKhTYiFVCqpUBRpDIKPaijk45dweUrpb6KdT53GrqOgzFkW61srNfxZML/dmM41bomVOIRa0+5cMaTkAvhKtp6FtIK64uC7MLX9Uq0Rj/KkkrI/iso9XEOJOcxMOjYyWv42itHl0Et1YMdyKIxyIWTjhr7diCVocVAyjoj1ZLtYhETdnAV8mwdOm/fGWIUPtMlvUuh29Y9FevWYNuSSb4/TT4elvVGoXeVNvJvKiEInRwK/akZc40MbWOF0z0EhaukFenJ4X1UeBOa5W4NaIvvbP37A/EBGEKGwpORjmDWZWs4JTRkIL8L36at/J1Wm7OX5NHKohe/mHpXHb8seNFS4IK7WTc76KYU+2HnCFSlMOS8Uf8O4CPIoCFX6cCv2ga8oKsghzG2cnw8mozbQMzjNtLyuPc+Tqkcti8TJhkbkuhNDTms52jpxtTdi1xJRhRaLeTSb0w8opE4ryNYk3Is7AJ9zag5sHQer8TN1R+MmNm2mt+4O6Op3ZpuuyeU7sDkjSVxpvWDJMFKpFxqfMhAYRM0hwYzkKxWBBWGYyr4xk/lXHvg5bNyZMRKeyO8JcOGQyVbtPZJG4ZG4JfAFsEgW04we4/poygs1l9vr8W1fiDVHe0Yjbay9OG3vjG/3l6zq11cv5Wz6U6iGHElU38jFZVivgqAPJqmpg0yR6IiLEMAKak7HlNSk0yXbRpny3EYDvYjiXJiUesn8SRdJXa8ikBMGfB1hMbwtmetncOAQQae4xxuvtlCtz29I3fQFWHJw59sJBujHRWOuDet9qYgu+n2HG75/xvSkQB7Uti+OxycaaUixe89n2/PRbo+BPCOdnpMl8HzByuXCp039HaxGVAbcUZvGSb8rq+RuK5IhJyJxlsn5iT03GFAxKPEAIn7nmf6ph3Hqo6D3r0gVbZaKjcSXxyDipuDSoGWd4jYoqHGbCt00P3gIfejLbaG79vr1y4DHuhX2y3yc7/1HG6BvAft7G3xYLtupf1LqoUOiUyzbdpK5jcyNqbwZPRxNOHEM+82GEZvCvV1pt8vxGDX/b/mQwKCo2c3bmuUYWPxkZXjrLhjlEAGx6MJz48wL8IgiYt8Bn1EfLg/NWYZVDx48jtYb6ZFx8c/PRmev7PtVIgjtKcEHjOBzuEsJuHDNcfK4rWP4N3b2HjERo1pUVDr/lF2NpiNlxffrpkn0w+MJrAEGHziHx/4FPlAh6JEQuCzNdSolh6XLBtthgXac9KGHRZHSPrAr+qv1GoY4e7Eie/gv/yqFzXW69i+XbeRj1evamwIOUpzsWdd1/0Cx/e6lg==
+sidebar_class_name: "post api-method"
+info_path: site/docspace/api-backend/usage-api/api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Perform customer operation"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/api/2.0/portal/payment/customer/performoperation"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Perform customer operation and return true if the operation is succesfully provided.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"serviceAccount":{"type":"integer","description":"Service account","format":"int32","example":1234},"sessionId":{"type":"integer","description":"Session ID","format":"int32","example":1234},"quantity":{"type":"integer","description":"Quantity","format":"int32","example":1234}},"additionalProperties":false,"description":"Parameters for performing a customer operation","title":"PerformCustomerOperationRequestDto"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Boolean value: true if the operation is succesfully provided","content":{"application/json":{"schema":{"type":"object","properties":{"response":{"type":"boolean"},"count":{"type":"integer","format":"int32"},"links":{"type":"array","items":{"type":"object","properties":{"href":{"type":"string"},"action":{"type":"string"}}}},"status":{"type":"integer","format":"int32"},"statusCode":{"type":"integer","format":"int32"}},"title":"BooleanWrapper"}}}},"401":{"description":"Unauthorized"},"403":{"description":"No permissions to perform this action"}}}
+>
+  
+</StatusCodes>
+
+
+      

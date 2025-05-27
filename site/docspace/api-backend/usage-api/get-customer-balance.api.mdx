@@ -1,0 +1,71 @@
+---
+id: get-customer-balance
+title: "Get the customer balance"
+description: "Returns the customer balance from the accounting service."
+sidebar_label: "Get the customer balance"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVktv2zgQ/ivEXHLR2mnSk29u2i3aXbRFmyCHwGhoamyxkUguOUrqNfTfF0NSshSnSIDuxQ9y5pv3N9wDyW2AxQ18sZ5kLebii9w1aAhWBViHXpK25kMJC9giXbSBbIP+jaylUQgFOOllg4SeQfZgZIOwAI8bj6GCArSBBfzTot9BASUG5bVjRFjAN4dKbzQG8VAhVegFWZE1BVUoXPJEaLOxvomOCCVVhcJ6YSzNoICgKmwkLPZAO8em19bWKA0UgD9l42qEBfkWu25VgMfgrAkYWP7s9JS/pj5dVihUDlKshyiVNcQ5WexBOldrFZ2Z/wistD92wq5/oCJOj+cckk4me/vPS0qlbGvoU9us0Y/EtSHcoocCUkrS0fnZONxXZ+evuwJCu14mlDACkN5LLoUmbMLzfqjWezRqN5IM5LXZQgGmrWu57hM8cgCCbVAQ/iToCpAN+zACMCmoUQilbRmnY+my1JxbWX8ZObKRdcACSFPE/zaExgamfrwYpO/hjss79fCXWe4KqLW5+42EVh43x8lkn1VqwaOrjiMKJKkNL3QxCV/YEl+k0B3l5NpL59Bn269PXx0PypWRLVXW63+xhCh0fiz0yQqHvtEhaGsCj7dDz+YFVTqIHHKMD1XrNe0iicigvjP69zvkA/AoSyjgwWtCWHXFHt6g9DwXN/Hf0um/cDecPSUvg1a9+OdlS9XZ04KfHUayu1kxX0yj+YrUeg7jCY4QG2+beJMnV5utCOjvtUKmqQapsplEI2tSBQuYS6fnZ7PTuYvkO8+EN+/R5wcGYqyeZFtfwwL2axnwytfdMbFGWaGs2ehtmxgcCriXXvOcxDbKyqlmG9nW3BBHSG/Tlbj6+jc3w+pQqG9MeZmrJuU6DEasyhHkVUBxYe2dRsFKaCizKTNK2h4TwLxCVFThTsu1HOxURO7IyjtD6MXOtl60AT0DC2lK4WQID9aX/eaIGyMCMnLuoJdAnyRhsf94fSku7R2a7mQCmrCK/OPPfuY+Xl+yqWnLPpez5SRRQgdR8spttMFSrHex706WeR6jzImoUJbRgZzUicWc1CzTFcNMHOhLxoPHniQ5santg3jQVImJVRE5pwC+Tq0xvu0JaXIYe5AbjziHw7+grOt3pizj8MmSZwtD4hFvCRVhKTwG23qFYRjkBVzz9zPSidv6eT/EHQ8urDGJvR+Fz7dvRb4+buCJdg6mK+DnH0FvjaTW4/PF5oYaxLl7S7Gx/pGtmeCXSsyZaNpAYo3CrknGjrjXMrbEbU8v/dDOU1XnUe9WoCmd1YZm4gNxU/FwYClkEFKkeUs1Zqw4QbejQG5nh94ax/doXjv+v7Ex7Lxklk4zG6EPKeDz2avZKafJ2UCNjDswA79HepJuHydtf3ih/RZN58rw02XuaqkNu9UmmkycfcNlgwLOZqfM45G3I6GnR3MBvUke/ezsqoDKBmLl/cDaHR+nhzFzeqkDc3M5PFN+Gd//8mx+MtDI36O3+72sW4wtvDpsj7RFe+pg15PaUil0NNI6eigzyrAH37+7hCJSwXQiEuXnH4zeX5ndGHu6IZIH/Mk7/EmN/T6NW9cN8unqlxoDgSZpTtGq67r/AISQjcw=
+sidebar_class_name: "get api-method"
+info_path: site/docspace/api-backend/usage-api/api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get the customer balance"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/portal/payment/customer/balance"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns the customer balance from the accounting service.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"refresh","in":"query","description":"Specifies whether to refresh the payment information cache or not.","schema":{"type":"boolean","example":true}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"The customer balance","content":{"application/json":{"schema":{"type":"object","properties":{"response":{"type":"object","properties":{"accountNumber":{"type":"integer","format":"int32","example":1234},"subAccounts":{"type":"array","items":{"type":"object","properties":{"currency":{"type":"string","nullable":true,"example":"some text"},"amount":{"type":"number","format":"double"}},"additionalProperties":false,"title":"SubAccount"},"nullable":true}},"additionalProperties":false,"title":"Balance"},"count":{"type":"integer","format":"int32"},"links":{"type":"array","items":{"type":"object","properties":{"href":{"type":"string"},"action":{"type":"string"}}}},"status":{"type":"integer","format":"int32"},"statusCode":{"type":"integer","format":"int32"}},"title":"BalanceWrapper"}}}},"401":{"description":"Unauthorized"},"403":{"description":"No permissions to perform this action"}}}
+>
+  
+</StatusCodes>
+
+
+      

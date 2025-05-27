@@ -1,0 +1,63 @@
+---
+id: generate-jwt-token
+title: "Generate JWT token"
+description: "Generates a JWT token for communication between login (client) and identity services."
+sidebar_label: "Generate JWT token"
+hide_title: true
+hide_table_of_contents: true
+api: eJy1Vk1v4zYQ/SvEXNICrO319uSbm90uNi2wwCZBDoaxoamxxY1MquQoXlfQfy+GpGzLTptcerEk8s0HZ948ugVSmwCzBdyibryhvRiLL/OGyiksJbgavSLj7OcCZrBBy594s6M794QWJHgMtbMBA8xamE4m/CgwaG9qNoMZ3OxI9GjtLKElBqm6royOvsffAyNbCLrEreI32tcIM3Cr76gJJNSeMyGT4vRBT5CBvLEb6DhGkyLkHWMJN+hBwtr5raK09H7K2MrYp3CCVd6rPUgwhNvweh6lx/WLOSidDn+x1XWdhECKmvDGFBP42hX4JoNOAhmqGHQbYz54Vdfoc+hfJ+8uO3RvVUOl8+ZvLKKHkKkAs0ULKuhvvP/tCXkBPKoCJOy8IYRlJ1v4DZVHD7NF/JrX5g/cH9ZewqtgdA/PXHsR+KXGSLzFslvKs6Q/ZS4GocTNw50gpphYOy+0224bm7klVkg7RCsqtzFW/KQrg5Z+FsoWwhRoiRkf0D8bjWEEErZIpUtkjw1XVMIMxqo24+loMu5LM3Zck+mYMrPZBfoQK9b4CmbQrlTAe191cJ76bcQK7ezabJo0XyDhWXmjVlWiVjZOzVqrpuIeX3j6kLbE/dc/ucHLY+tueZSSq2EDj1yPfbpweR9QXDv3ZFCwEVdI9xlatY2Wpw4lGDbT0YQJm7t7iFMS1RdRPlpCL/au8aIJ6NlxbEmtQtg5zzyIYsAOVtEhe86ceovrqwQWLXMjyk93NXCafMn88ns/RjcPdxxqSOLXajYfFEqYIAok9FtjsRCrvaASxdU8z1jEXIkSVRETyEUdRMxFzZhOHqbkqEiRfheZJJxYV24ndoZKMYgqooxI4O1EjdPdXmMGi5GDTLxI9MNX0K7utVjxtHxFVQilNYYgyInaO0JNWAiPwTVeYziM9gwe+PkKOulVrwDHc8eFa2dtEuSz4/PuB5G3Lwk8sM6H6ST8+CWYjVXUeHy92UyoA5zZW0TVGcYaibsSsyZtm0BihcKtSEVGPBsVKfH4n6LyKNAWtTOWRuIzMal4OLAQiiUvzVvqMfuKE/R4cpDH0ZFbp+c7m9eOv9cuHjvfG/PasBqhD+nA70fvRhMuU+0CbVW81rLjXoSPCnxervZ45/9vkp37RfiDxnWljOVkmySeSb8X3EyQMB1N4OR6k8cxSskvJZQuEBu0B/3uePmvBj1ff8ujTqcbrB9SFv4osDDXGmuKgl41iUhnf3VYqA/3zKePdyDj0A25l8Q1v7D3fsvuT30PtThlwL98f75o0baJ2F13wKetf7U4SFVCc32XXdf9A1KRgjM=
+sidebar_class_name: "get api-method"
+info_path: site/docspace/api-backend/usage-api/api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Generate JWT token"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/security/oauth2/token"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Generates a JWT token for communication between login (client) and identity services.
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Jwt Token","content":{"application/json":{"schema":{"type":"object","properties":{"response":{"type":"string"},"count":{"type":"integer","format":"int32"},"links":{"type":"array","items":{"type":"object","properties":{"href":{"type":"string"},"action":{"type":"string"}}}},"status":{"type":"integer","format":"int32"},"statusCode":{"type":"integer","format":"int32"}},"title":"StringWrapper"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

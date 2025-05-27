@@ -1,0 +1,71 @@
+---
+id: payment-update-wallet
+title: "Update the wallet payment quantity"
+description: "Updates the wallet payment quantity with the parameters specified in the request."
+sidebar_label: "Update the wallet payment quantity"
+hide_title: true
+hide_table_of_contents: true
+api: eJy1V0tTGzkQ/iuqvnCZ2MbkNDdCslXJbm1YAsXB5QrNTNtWmJEUPXC8rvnvqZY09hiTwGH3ArbU7/76a3kLHpcOyhlcauuxEWNxiZuWlId5AdqQRS+1+lhDCSZd3JgaPd1i05CHAix9D+T8O11voNxCpZVn7XILaEwjq6g//ua04jNXrahF/uQ3hqAEff+NKrZjLHvzkhzffg+ovPSb5ySxriUbxebyQCfLSeVpSRYKWGjbok9HZ1MoQIWmwfuGoPQ2UFdATa6y0rA1KOF6RaJFY6RaCr0Q0lMrZE3Ky4Uk68Ra+pXwK5JWWHKGKi8fSeRQJTkhFV+LXKjRkccC6Ae2hr/OtvBAGyjB6ZaEpx+c2SM2gaA8nZ697eZdrEkdKv9PLsZ1THALpEIL5WxSnBbT4mxevCJzLz17hctnLHbdr2q6wMbRc1XKTRcGLbbkuTgLbWPy6wiMvgZ9dTaC6yUXGQ9uNIgpQakP6SqZfu81dB2HxqXWyqUeTycT/ncY0TutG0IlYvlKwZUWchGj2SFYSCdcqCpybhEaKP4roPbRDSTvUzjQsZOQXLzUoa6ARqqHIY7RWtxAAQxD93IgK0uLgZTzVqol28UqlenoKlbXefThVeOzE77QNb1Kodv3OLfo1qIxZLPvt5PT42beKAx+pa38l2qIQmfHQn9rYci20jkGk/DxK7sXfiWdyCnH/KgKNhLJbAvoqq9s/WscvRlYwhoKWFvpCeZdsYV3hJYslLP47dzIP2mzO3tOHp2sevHP58Gvps8LfjYUWXQ27+ZPJyoxqvvt+PTcMxy5PFJU98STx5KHqyW/0pG1Q8QK+hWUMEYjx9PRZGwi24+zm3GIEax7TndkH8m6WLNgGyhhe4+ObmzTwdPgv0RZUWm1kMuQhi1SmZVMfBFaWTn1cYGhYZAcWXqfrsTN1V8MkPm+eV94GJOpwxbuhyV26sjkjSNxofWDJMFKTOVVH6HCNmoODRYgWa2KKoy+3N+dn5X35sjLB+XJio0OVgRHlg0LVLUw6NxaW0ZCpJNIDtEgW86oeo3pkyQstp9ur8W1fiDVnRwYTbaK/OGPfg4/3V6zq0MYv1Sz84NCMW/WDLdWKqrF/SYC7eQ8z2iUORErwjoGkIt64DEXNct0xW5O9pSG8eBpJElOLBq9Tvg/8CoiDxXA1wkaw9uepA4OIwYZeJ5ruPvmKm16NkeemSvCWmBcFpFbrPZUeap57etgK3K74S7hlv+/IJ34rueAfd7x4EIrlRj9Sfp8+17k62MAH2jnZLoCfrxxcqnQB0svN5sBtRNn9NZxkR/6Ggne+bFmog3Oi3sS+t5jRMSjxAiJu55a+qEdp66Oo96dIFUbLZUfiY+eQcXDQbVAJ1CkedtzXJygu0Eid6M9tob5PZnXrgDe31f7J+mH/r01fFK+/Pb6xdNr0rHDhY51zZvt3EjWJutSRc9Gp6MJ98Fo51uMizdHnnj+dzT/tD+D9/T/siUyOLgEY9OgjI+WkJg6rYwZIwcKmI4mvEbi2oj7JP1IKOBgdcwLWGnnWW27WxkdH38PZLn08/1qSGuz54V9Vy5Sym9izXeNOX6l8VpNGudVRcb/VnY+WImXN9fMlfkXSxuZAiyu+dcMrhMn6NiBRAp8toUG1TLgkmWTyfhuDlyk4ZSlNZI/cFL9ldoMAzzcOikN/stJPaux3aYR7rqdfLr6pcaOlJM0N3fedd1P9aLX6w==
+sidebar_class_name: "put api-method"
+info_path: site/docspace/api-backend/usage-api/api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Update the wallet payment quantity"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"put"}
+  path={"/api/2.0/portal/payment/updatewallet"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Updates the wallet payment quantity with the parameters specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"quantity":{"type":"object","additionalProperties":{"type":"integer","format":"int32","nullable":true},"description":"The mapping of item identifiers with their respective quantities in the payment.","nullable":true,"example":[{"key":"some text","value":1234}]},"productQuantityType":{"enum":[0,1,2,3],"type":"integer","format":"int32","title":"ProductQuantityType"}},"additionalProperties":false,"description":"The request parameters for the wallet payment quantity specifications.","title":"WalletQuantityRequestDto"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Boolean value: true if the operation is successful","content":{"application/json":{"schema":{"type":"object","properties":{"response":{"type":"boolean"},"count":{"type":"integer","format":"int32"},"links":{"type":"array","items":{"type":"object","properties":{"href":{"type":"string"},"action":{"type":"string"}}}},"status":{"type":"integer","format":"int32"},"statusCode":{"type":"integer","format":"int32"}},"title":"BooleanWrapper"}}}},"401":{"description":"Unauthorized"},"403":{"description":"No permissions to perform this action"}}}
+>
+  
+</StatusCodes>
+
+
+      
