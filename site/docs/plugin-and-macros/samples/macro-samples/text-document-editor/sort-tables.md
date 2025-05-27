@@ -1,15 +1,12 @@
 # Sort tables
 
-Automatically sorts table rows alphabetically or numerically based on a selected column.
+Automatically sorts table rows alphabetically or numerically based on the selected column.
+
+> Please select the entire column by which you want the table to be sorted (alphabetically or numerically).
+> The macro will only work correctly if the whole column is selected.
 
 ```ts
 (function() {
-    /*
-    Please select the entire column by which you want the table to be sorted (alphabetically or numerically).
-    
-    The macro will only work correctly if the whole column is selected.
-    */
-    
     let isFirstRowIncluded = true;  // Set to false to exclude the first row (headers) from sorting
 
     let doc = Api.GetDocument();
@@ -116,12 +113,10 @@ Automatically sorts table rows alphabetically or numerically based on a selected
             }
         }
     }
-    
-    console.log("Table sorting by selected column completed successfully.");
 })();
 ```
 
-Methods used: [GetDocument](../../../../office-api/usage-api/text-document-api/Api/Methods/GetDocument.md), [GetCurrentPage](../../../../office-api/usage-api/text-document-api/ApiDocument/Methods/GetCurrentPage.md), [GetAllTablesOnPage](../../../../office-api/usage-api/text-document-api/ApiDocument/Methods/GetAllTablesOnPage.md), [GetRangeBySelect](../../../../office-api/usage-api/text-document-api/ApiDocument/Methods/GetRangeBySelect.md), [GetStartPos](../../../../office-api/usage-api/text-document-api/ApiRange/Methods/GetStartPos.md), [GetEndPos](../../../../office-api/usage-api/text-document-api/ApiRange/Methods/GetEndPos.md), [GetRowsCount](../../../../office-api/usage-api/text-document-api/ApiTable/Methods/GetRowsCount.md), [GetRow](../../../../office-api/usage-api/text-document-api/ApiTable/Methods/GetRow.md), [GetCellsCount](../../../../office-api/usage-api/text-document-api/ApiTableRow/Methods/GetCellsCount.md), [GetCell](../../../../office-api/usage-api/text-document-api/ApiTable/Methods/GetCell.md), [GetCell](../../../../office-api/usage-api/text-document-api/ApiTableRow/Methods/GetCell.md), [GetContent](../../../../office-api/usage-api/text-document-api/ApiTableCell/Methods/GetContent.md), [GetText](../../../../office-api/usage-api/text-document-api/ApiDocumentContent/Methods/GetText.md), [AddRow](../../../../office-api/usage-api/text-document-api/ApiTable/Methods/AddRow.md), [AddText](../../../../office-api/usage-api/text-document-api/ApiParagraph/Methods/AddText.md), [Remove](../../../../office-api/usage-api/text-document-api/ApiTableRow/Methods/Remove.md)
+Methods used: [GetDocument](../../../../office-api/usage-api/text-document-api/Api/Methods/GetDocument.md), [GetCurrentPage](../../../../office-api/usage-api/text-document-api/ApiDocument/Methods/GetCurrentPage.md), [GetAllTablesOnPage](../../../../office-api/usage-api/text-document-api/ApiDocument/Methods/GetAllTablesOnPage.md), [GetRangeBySelect](../../../../office-api/usage-api/text-document-api/ApiDocument/Methods/GetRangeBySelect.md), [GetStartPos](../../../../office-api/usage-api/text-document-api/ApiRange/Methods/GetStartPos.md), [GetEndPos](../../../../office-api/usage-api/text-document-api/ApiRange/Methods/GetEndPos.md), [GetRowsCount](../../../../office-api/usage-api/text-document-api/ApiTable/Methods/GetRowsCount.md), [GetRow](../../../../office-api/usage-api/text-document-api/ApiTable/Methods/GetRow.md), [GetCellsCount](../../../../office-api/usage-api/text-document-api/ApiTableRow/Methods/GetCellsCount.md), [GetCell](../../../../office-api/usage-api/text-document-api/ApiTable/Methods/GetCell.md), [GetCell](../../../../office-api/usage-api/text-document-api/ApiTableRow/Methods/GetCell.md), [GetContent](../../../../office-api/usage-api/text-document-api/ApiTableCell/Methods/GetContent.md), [GetRange](../../../../office-api/usage-api/text-document-api/ApiDocumentContent/Methods/GetRange.md), [GetText](../../../../office-api/usage-api/text-document-api/ApiDocumentContent/Methods/GetText.md), [AddRow](../../../../office-api/usage-api/text-document-api/ApiTable/Methods/AddRow.md), [GetElement](../../../../office-api/usage-api/text-document-api/ApiDocumentContent/Methods/GetElement.md), [AddText](../../../../office-api/usage-api/text-document-api/ApiParagraph/Methods/AddText.md), [Remove](../../../../office-api/usage-api/text-document-api/ApiTableRow/Methods/Remove.md)
 
 ## Result
 

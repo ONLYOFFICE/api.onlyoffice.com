@@ -43,9 +43,6 @@ Identifies and removes duplicate sheets in the spreadsheet.
             }
         }
     }
-
-    // Log a message when all duplicate sheets have been removed
-    console.log("All duplicate sheets have been removed.");
 })();
 ```
 

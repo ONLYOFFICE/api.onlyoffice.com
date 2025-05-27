@@ -1,16 +1,9 @@
 # Create content control list
 
-Creates a ContentControlList from all simple numbered lists throughout the document, as well as from manual text section.
+Creates a ContentControlList from all simple numbered lists throughout the document, as well as from the manually selected text section.
 
 ```ts
 (function() {
-    /* 
-    User Instructions:
-    1. To use the content control list, ensure the plugin is installed. If not, follow the installation instructions here: "https://api.onlyoffice.com/docs/plugin-and-macros/tutorials/samples/work-with-content-controls-navigation/"
-        
-    2. This macro replaces numbered paragraphs with dropdown lists across the entire document. If a portion of the document is selected, only the selected paragraphs will be modified.
-    */
-        
     let doc = Api.GetDocument();
     
     let contentControlList; // Reference to the current content control list (dropdown)
@@ -81,12 +74,10 @@ Creates a ContentControlList from all simple numbered lists throughout the docum
     } else {
         processAllDocument();
     }
-    
-    console.log("Successfully replaced all numbered lists with content control lists.");
 })();
 ```
 
-Methods used: [GetDocument](../../../../office-api/usage-api/text-document-api/Api/Methods/GetDocument.md), [GetNumbering](../../../../office-api/usage-api/text-document-api/ApiParagraph/Methods/GetNumbering.md), [GetClassType](../../../../office-api/usage-api/text-document-api/ApiNumberingLevel/Methods/GetClassType.md), [GetText](../../../../office-api/usage-api/text-document-api/ApiParagraph/Methods/GetText.md), [Delete](../../../../office-api/usage-api/text-document-api/ApiParagraph/Methods/Delete.md), [GetAllNumberedParagraphs](../../../../office-api/usage-api/text-document-api/ApiDocument/Methods/GetAllNumberedParagraphs.md), [CreateParagraph](../../../../office-api/usage-api/text-document-api/Api/Methods/CreateParagraph.md), [AddText](../../../../office-api/usage-api/text-document-api/ApiParagraph/Methods/AddText.md), [InsertParagraph](../../../../office-api/usage-api/text-document-api/ApiParagraph/Methods/InsertParagraph.md), [GetRange](../../../../office-api/usage-api/text-document-api/ApiParagraph/Methods/GetRange.md), [Select](../../../../office-api/usage-api/text-document-api/ApiRange/Methods/Select.md), [pluginMethod_AddContentControlList](), [GetAllContentControls](../../../../office-api/usage-api/text-document-api/ApiDocument/Methods/GetAllContentControls.md), [GetDropdownList](../../../../office-api/usage-api/text-document-api/ApiInlineLvlSdt/Methods/GetDropdownList.md), [Add](../../../../office-api/usage-api/text-document-api/ApiContentControlList/Methods/Add.md), [GetRangeBySelect](../../../../office-api/usage-api/text-document-api/ApiDocument/Methods/GetRangeBySelect.md), [GetAllParagraphs](../../../../office-api/usage-api/text-document-api/ApiRange/Methods/GetAllParagraphs.md)
+Methods used: [GetDocument](../../../../office-api/usage-api/text-document-api/Api/Methods/GetDocument.md), [GetNumbering](../../../../office-api/usage-api/text-document-api/ApiParagraph/Methods/GetNumbering.md), [GetClassType](../../../../office-api/usage-api/text-document-api/ApiNumberingLevel/Methods/GetClassType.md), [GetText](../../../../office-api/usage-api/text-document-api/ApiParagraph/Methods/GetText.md), [Delete](../../../../office-api/usage-api/text-document-api/ApiParagraph/Methods/Delete.md), [GetAllNumberedParagraphs](../../../../office-api/usage-api/text-document-api/ApiDocument/Methods/GetAllNumberedParagraphs.md), [CreateParagraph](../../../../office-api/usage-api/text-document-api/Api/Methods/CreateParagraph.md), [AddText](../../../../office-api/usage-api/text-document-api/ApiParagraph/Methods/AddText.md), [InsertParagraph](../../../../office-api/usage-api/text-document-api/ApiParagraph/Methods/InsertParagraph.md), [GetRange](../../../../office-api/usage-api/text-document-api/ApiParagraph/Methods/GetRange.md), [Select](../../../../office-api/usage-api/text-document-api/ApiRange/Methods/Select.md), [pluginMethod_AddContentControlList](../../../interacting-with-editors/methods/text-document-api/Api/Methods/AddContentControlList.md), [GetAllContentControls](../../../../office-api/usage-api/text-document-api/ApiDocument/Methods/GetAllContentControls.md), [GetDropdownList](../../../../office-api/usage-api/text-document-api/ApiInlineLvlSdt/Methods/GetDropdownList.md), [Add](../../../../office-api/usage-api/text-document-api/ApiContentControlList/Methods/Add.md), [GetRangeBySelect](../../../../office-api/usage-api/text-document-api/ApiDocument/Methods/GetRangeBySelect.md), [GetAllParagraphs](../../../../office-api/usage-api/text-document-api/ApiRange/Methods/GetAllParagraphs.md)
 
 ## Result
 
