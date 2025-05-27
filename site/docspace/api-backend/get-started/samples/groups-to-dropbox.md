@@ -2,14 +2,14 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
 # DocSpace Groups to the Dropbox
-This integration automates the process of creating shared Dropbox folders for ONLYOFFICE groups and inviting group members to collaborate. 
-The script ensures all ONLYOFFICE teams have centralized file storage in Dropbox.
+This integration automates the process of creating shared Dropbox folders for DocSpace groups and inviting group members to collaborate. 
+The script ensures all DocSpace teams have centralized file storage in Dropbox.
 
 ## How it works
-- Retrieve ONLYOFFICE groups - Fetch a list of groups from ONLYOFFICE.
+- Retrieve DocSpace groups - Fetch a list of groups from DocSpace.
 - Create Dropbox folders - Generate a shared Dropbox folder for each group.
-- Get groups members - Fetch all users assigned to each ONLYOFFICE group.
-- Share the Dropbox folders - Invite ONLYOFFICE group members to their corresponding Dropbox folders.
+- Get groups members - Fetch all users assigned to each DocSpace group.
+- Share the Dropbox folders - Invite DocSpace group members to their corresponding Dropbox folders.
 
 <Tabs>
   <TabItem value="py" label="Python">
@@ -32,19 +32,19 @@ The script ensures all ONLYOFFICE teams have centralized file storage in Dropbox
         'Content-Type': 'application/json'
     }
     
-    # Step 1: Retrieve ONLYOFFICE groups
-    def get_onlyoffice_groups():
+    # Step 1: Retrieve DocSpace groups
+    def get_docspace_groups():
         url = f'https://{ONLYOFFICE_API_HOST}/api/2.0/group'
         response = requests.get(url, headers=ONLYOFFICE_HEADERS)
         
         if response.status_code == 200:
             return [{'id': group['id'], 'name': group['name']} for group in response.json()['response']]
-        print(f'Failed to retrieve ONLYOFFICE groups: {response.status_code} - {response.text}')
+        print(f'Failed to retrieve DocSpace groups: {response.status_code} - {response.text}')
         return []
     
-    # Step 2: Create a Dropbox folder for each ONLYOFFICE group
+    # Step 2: Create a Dropbox folder for each DocSpace group
     def create_dropbox_group_folder(group_name):
-        folder_path = f'/ONLYOFFICE_Groups/{group_name.replace(" ", "_")}'
+        folder_path = f'/DocSpace_Groups/{group_name.replace(" ", "_")}'
         try:
             dbx.files_create_folder_v2(folder_path)
             print(f'Folder created: {folder_path}')
@@ -53,7 +53,7 @@ The script ensures all ONLYOFFICE teams have centralized file storage in Dropbox
             print(f'Failed to create folder for {group_name}: {e}')
             return None
     
-    # Step 3: Retrieve ONLYOFFICE group members
+    # Step 3: Retrieve DocSpace group members
     def get_group_members(group_id):
         url = f'https://{ONLYOFFICE_API_HOST}/api/2.0/group/{group_id}'
         response = requests.get(url, headers=ONLYOFFICE_HEADERS)
@@ -77,8 +77,8 @@ The script ensures all ONLYOFFICE teams have centralized file storage in Dropbox
                 print(f'Failed to share folder with {member["email"]}: {e}')
     
     if __name__ == '__main__':
-        onlyoffice_groups = get_onlyoffice_groups()
-        for group in onlyoffice_groups:
+        docspace_groups = get_docspace_groups()
+        for group in docspace_groups:
             folder = create_dropbox_group_folder(group['name'])
             if folder:
                 members = get_group_members(group['id'])
@@ -99,40 +99,40 @@ Finally install the [Dropbox Python SDK](https://www.dropbox.com/developers/docu
 pip install dropbox
 ```
 
-## Step 1: Retrieve ONLYOFFICE groups
+## Step 1: Retrieve DocSpace groups
 Use a [`GET /api/2.0/group`](../../../usage-api/get-groups) request to retrieve the group ID and the group name for each team.
 
 <Tabs>
   <TabItem value="py" label="Python">
 
     ```py
-    # Step 1: Retrieve ONLYOFFICE groups
-    def get_onlyoffice_groups():
+    # Step 1: Retrieve DocSpace groups
+    def get_docspace_groups():
         url = f'https://{ONLYOFFICE_API_HOST}/api/2.0/group'
         response = requests.get(url, headers=ONLYOFFICE_HEADERS)
         
         if response.status_code == 200:
             return [{'id': group['id'], 'name': group['name']} for group in response.json()['response']]
-        print(f'Failed to retrieve ONLYOFFICE groups: {response.status_code} - {response.text}')
+        print(f'Failed to retrieve DocSpace groups: {response.status_code} - {response.text}')
         return []
 
     if __name__ == '__main__':
-        onlyoffice_groups = get_onlyoffice_groups()
+        docspace_groups = get_docspace_groups()
     ```
 
   </TabItem>
 </Tabs>
 
 ## Step 2: Create shared Dropbox folders
-Use dropbox client to generate a Dropbox folder for each DocSpace group.
+Use Dropbox client to generate a Dropbox folder for each DocSpace group.
 
 <Tabs>
   <TabItem value="py" label="Python">
 
     ``` py
-    # Step 2: Create a Dropbox folder for each ONLYOFFICE group
+    # Step 2: Create a Dropbox folder for each DocSpace group
     def create_dropbox_group_folder(group_name):
-        folder_path = f'/ONLYOFFICE_Groups/{group_name.replace(" ", "_")}'
+        folder_path = f'/DocSpace_Groups/{group_name.replace(" ", "_")}'
         try:
             dbx.files_create_folder_v2(folder_path)
             print(f'Folder created: {folder_path}')
@@ -142,22 +142,22 @@ Use dropbox client to generate a Dropbox folder for each DocSpace group.
             return None
 
     if __name__ == '__main__':
-        onlyoffice_groups = get_onlyoffice_groups()
-        for group in onlyoffice_groups:
+        docspace_groups = get_docspace_groups()
+        for group in docspace_groups:
             folder = create_dropbox_group_folder(group['name'])
     ```
 
   </TabItem>
 </Tabs>
 
-## Step 3: Retrieve ONLYOFFICE group members
+## Step 3: Retrieve DocSpace group members
 Use a [`GET /api/2.0/group/{group_id}`](../../../usage-api/get-group) to get a group by ID and extract user names and emails.
 
 <Tabs>
   <TabItem value="py" label="Python">
 
     ```py
-    # Step 3: Retrieve ONLYOFFICE group members
+    # Step 3: Retrieve DocSpace group members
     def get_group_members(group_id):
         url = f'https://{ONLYOFFICE_API_HOST}/api/2.0/group/{group_id}'
         response = requests.get(url, headers=ONLYOFFICE_HEADERS)
@@ -172,8 +172,8 @@ Use a [`GET /api/2.0/group/{group_id}`](../../../usage-api/get-group) to get a g
         return
 
     if __name__ == '__main__':
-        onlyoffice_groups = get_onlyoffice_groups()
-        for group in onlyoffice_groups:
+        docspace_groups = get_docspace_groups()
+        for group in docspace_groups:
             folder = create_dropbox_group_folder(group['name'])
             if folder:
                 members = get_group_members(group['id'])
@@ -183,7 +183,7 @@ Use a [`GET /api/2.0/group/{group_id}`](../../../usage-api/get-group) to get a g
 </Tabs>
 
 ## Step 4: Share the Dropbox folders with the group members
-Use dropbox client to share Dropbox folders with DocSpace group members.
+Use Dropbox client to share Dropbox folders with DocSpace group members.
 
 <Tabs>
   <TabItem value="py" label="Python">
@@ -199,14 +199,14 @@ Use dropbox client to share Dropbox folders with DocSpace group members.
                 print(f'Failed to share folder with {member["email"]}: {e}')
     
     if __name__ == '__main__':
-        onlyoffice_groups = get_onlyoffice_groups()
-        for group in onlyoffice_groups:
+        docspace_groups = get_docspace_groups()
+        for group in docspace_groups:
             folder = create_dropbox_group_folder(group['name'])
             if folder:
                 members = get_group_members(group['id'])
                 if members:
                     share_dropbox_group_folder(folder, members)
     ```
-    
+
   </TabItem>
 </Tabs>
