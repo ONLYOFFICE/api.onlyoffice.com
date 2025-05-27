@@ -80,23 +80,37 @@ Run the script:
     g++ hello-world.cpp \
         -Ibuilder/opt/onlyoffice/documentbuilder/include \
         -Lbuilder/opt/onlyoffice/documentbuilder \
-        -ldocbuilder.c \
         -lDocxRenderer \
         -ldoctrenderer \
         -lstdc++ -lpthread -lm -lc \
         -Wl,-rpath=builder/opt/onlyoffice/documentbuilder \
         -o hello-world
     ```
-    - Run the application via ./hello-world
+    - Run the application via
+    ```bash
+    ./hello-world
+    ```
     </TabItem>
     <TabItem value="macos" label="macOS">
     - Create a `hello-world.cpp` file in the CPP directory
     - Replace the contents of `hello-world.cpp` with code above
     - Build the project using:
     ```bash
-    g++ hello-world.cpp -I../include -L../Lib -libdocbuilder -lstdc++ -lpthread -lm -lc -Wl,-rpath,../../../Lib -Wl,-rpath$ORIGIN -o hello-world
+    g++ hello-world.cpp \
+        -Ibuilder/include \
+        -Lbuilder \
+        -lDocxRenderer \
+        -ldoctrenderer \
+        -lpthread \
+        -o hello-world \
+        -Wl,-rpath,@executable_path/builder \
+        -Wl,-rpath,@loader_path/builder
     ```
-    - Run the application via ./hello-world
+    - Run the application via
+    ```bash
+    export DYLD_LIBRARY_PATH=builder:$DYLD_LIBRARY_PATH
+    ./hello-world
+    ```
     </TabItem>
 </Tabs>
 
