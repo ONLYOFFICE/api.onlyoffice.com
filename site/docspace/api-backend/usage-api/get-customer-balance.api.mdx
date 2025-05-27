@@ -1,0 +1,71 @@
+---
+id: get-customer-balance
+title: "Get the customer balance"
+description: "Returns the customer balance from the accounting service."
+sidebar_label: "Get the customer balance"
+hide_title: true
+hide_table_of_contents: true
+api: eJytV01v2zgQ/SvEXHLR2qnTk29u2i3aXbRBkyCHwGhoamSxkUguOUrqNfTfF0NKshSnSIDuJbbJmTffb5g9kNwGWN7ChfUkKzEXF3JXoyFYZ2Adeknamk85LGGLdN4EsjX6d7KSRiFk4KSXNRJ6BtmDkTXCEjwWHkMJGWgDS/inQb+DDHIMymvHiLCES4dKFxqDeCyRSvSCrOg0BZUoXPJEaFNYX0dHhJKqRGG9MJZmkEFQJdYSlnugnWPTG2srlAYywJ+ydhXCknyDbbvOwGNw1gQMLL84PeWPqU9XJQrVBSk2Q5TKGuKcLPcgnau0is7MfwRW2h87YTc/UBGnx3MOSSeTvf2XJaVStjH0pak36Efi2hBu0UMGKSXp6GwxDvfN4uxtm0FoNquEEkYA0nvJpdCEdXjZD9V4j0btRpKBvDZbyMA0VSU3fYJHDkCwNQrCnwRtBrJmH0YAJgU1CiG3DeO0LJ3nmnMrq4uRI4WsAmZAmiL+5RAaG5j68WqQvodbLu/Uw19muc2g0ub+NxJaeiyOk8k+q9SCR1ctRxRIUhNe6WISPrc5vkqhPcrJjZfOoe9svz19czwo10Y2VFqv/8UcotDZsdAXKxz6WoegrQk83g49mxdU6iC6kGN8qBqvaRdJRAb1ndG/3yMfgEeZQwaPXhPCus328A6l57m4jb9WTv+Fu+HsOXkZtOrFv64aKhfPC351GMnuds18MY3mG1LjOYxnOEIU3tbxpptcbbYioH/QCpmmaqTSdiQaWZNKWMJcOj1fzE7nLpLvvCO8eY8+PzAQY/Uk2/gKlrDfyIDXvmqPiTXKCmVNobdNYnDI4EF6zXMS26hTTjUrZFNxQxwhvU9X4vrb39wM60OhLpnyOq6alOswGLEqR5DXAcW5tfcaBSuhoY5NmVHS9pgAditERRXutK6Wg52SyB1Z+WAIvdjZxosmoGdgIU0unAzh0fq83xxxY0RARu466DXQJ0lY7D/fXIkre4+mPZmAJqys+/JnP3Ofb67Y1LRlX8rZapIooYPIeeXW2mAuNrvYdyerbh6jzIkoUebRgS6pE4tdUjuZNhtm4kBfMh489STJiaKyj+JRUykmVkXknAz4OrXG+LYnpMlh7MGY6LCcz6PVmTXVzhYFj46ydTpczAe+gQyIE/561Sgeq2Ndv4llHkda5jyxGBI7eUuoCHPhMdjGKwwDPSzhhj9fkE6M2bPIIZvx4Nwak3bCk6Ty7XvRXR+PxUT79VFz4/PTiev784+gt0ZS4/HlduOWHsR5fnJRWP/Er5ngt1LMrKibQGKDwm5Ixp580DI25V1PcD1tTCpyJ9DkzmpDM/GJuK15PDEXMggp0sSnLmOsOMN3o0DuZofuHsf3hDFa/l3YGHa35lZOMx+iDyngs9mb2SmnydlAtYxbuAP+iPQs4T9N2v7wRvytRdFVhh9Pc1dJbditJhF12hq3XDbIYDE75U0SN0dcKenZnkFvksmnc3adQWkDsfJ+2BstH6enOW+VXAfeDvnwUPplfP/Lw/3ZQOMGGf338CCrhqWAV0+/v9Ie78mLXU9qK6XQ0Ujr6KnOKMMm/vjhCrJIRtOJSEun+8Lo/ZXZjbGnOyp5wH/5FfGsxn6fxq1tB/l09UuNgcKTNKdo3bbtf1fbv2U=
+sidebar_class_name: "get api-method"
+info_path: site/docspace/api-backend/usage-api/api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get the customer balance"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/portal/payment/customer/balance"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns the customer balance from the accounting service.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"refresh","in":"query","description":"Specifies whether to refresh the payment information cache or not.","schema":{"type":"boolean","example":true}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"The customer balance","content":{"application/json":{"schema":{"type":"object","properties":{"response":{"type":"object","properties":{"accountNumber":{"type":"integer","format":"int32","example":1234},"subAccounts":{"type":"array","items":{"type":"object","properties":{"currency":{"type":"string","nullable":true,"example":"some text"},"amount":{"type":"number","format":"double"}},"additionalProperties":false,"title":"SubAccount"},"nullable":true}},"additionalProperties":false,"title":"Balance"},"count":{"type":"integer","format":"int32"},"links":{"type":"array","items":{"type":"object","properties":{"href":{"type":"string"},"action":{"type":"string"}}}},"status":{"type":"integer","format":"int32"},"statusCode":{"type":"integer","format":"int32"}},"title":"BalanceWrapper"}}}},"401":{"description":"Unauthorized"},"403":{"description":"No permissions to perform this action"}}}
+>
+  
+</StatusCodes>
+
+
+      

@@ -1,0 +1,63 @@
+---
+id: list
+title: "Get migrations"
+description: "Returns a list of available migrations."
+sidebar_label: "Get migrations"
+hide_title: true
+hide_table_of_contents: true
+api: eJyVVk1z2zYQ/SuYvfiCSorcE2+qk3qctvGMI48PHk0MkUsRMQWwwNKOyuF/zyxAUqLkjNWLRAL7vW/fsgFSGw/JI/yjN06RtgZWEmyF8eUmgwRK7QkkOPSVNR49JA3MZzP+y9CnTldBL4HbZ5CQWkNoiG9VVZU6DYam3z2LNODTAreKn2hXISRg198xZfuVY7eko4Pe24Gkck7tQIIm3PqDc09Omw20LTuvo+vuShvCDTqQkFu3VRSPLufQSii1efZnmP9FgIXD/I0gJKg0luM0Po7Qk6LanxliFL6yGZ6l0EogTSULfV3e3Xy5XnBKD05VFbrO/++zD6eNuzeqpsI6/R9mEIQuT4W+WFGh22rvtTVeUHjlEAQV2osu7ZAjprXTtIPksQHl029s/dsz8gE4VBlIeHWaEFatbOAPVA4dJI/hbVHpv3A3nL0lr7xOe/HbRU3F/G3B2woDgh9X7UoeZXOHVDvjhRIMb2FzoV6ULtW6RLHtZ8FPQMIWqbA8BxsMKFBUQAJTVenpfDKbDsLTbk48uhd0PiRfuxISaNbK470rWziO4muQFak1ud7U3QBKeFFOcyQBJ51ybEiu6pI7fmLpY7wS93d/c6dX+y585YmLpsa92CM/lPzE5L1HcWXts0bBSmioG2aQYNQ2aB4alKBZLQ0qDKOuUYOfgqg68fLJEDqxs7UTtUfHhoUymaiU96/WcUsDZ7CBdTDIljt4nGP6IgqL5vPDUiztM5r2YmQ02pLdw5/9UH1+WLKrMR7fq9liVCihvciQeGoMZmK9E1SguFh0wxZkLkSBKgsBdEUdeeyK2sm0cgD8np9UODiOJMqJvLSv4lVTIUZeRSAVCXwdoXF42zPO6DBgMBTaJ9Np8DqxptzZPNcpTlK7jYfz6UAmIIG44OerBvHQHVv1i0BlYV5VJlSaoo/U4yxhSpgJh97WLkU/zH4CD/z/jnSkw54i9tUMB1fWmEj6R0Xl24+iuz4di5H2+Vkz8LXJLff3x29eb4yi2uH7cGNID+I8P5nIrTuKayKWBYpQWbGtPYk1CrsmFTD5olUA5VPPZz1tjDryJNBkldWGJuKGGNY8npgJxQwaJz6ijG2FGX46SORpskf3YX5HjNHye25D2t0eW1Sa+RCdjwlfTj5MZlymynraqrBmO8PXSAfMfVyqZv9h8j+4v6s+4Q+aVqXShl3XkYzjInjk1oCE+WTGu2L4ipLxs2klobCeWK4Z1kDLx//W6HghrvZ0H3daP+u8PwJPwyJNsaKwF8o6ouHow4r5fthT15+WIMPsjgEUObp7YOv9ldkd2h5TeoyAf3mjvqnRNBGdbTvIx6tfagyMF6W5rKu2bX8C+HWiGA==
+sidebar_class_name: "get api-method"
+info_path: site/docspace/api-backend/usage-api/api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get migrations"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/migration/list"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns a list of available migrations.
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Ok","content":{"application/json":{"schema":{"type":"object","properties":{"response":{"type":"array","items":{"type":"string"}},"count":{"type":"integer","format":"int32"},"links":{"type":"array","items":{"type":"object","properties":{"href":{"type":"string"},"action":{"type":"string"}}}},"status":{"type":"integer","format":"int32"},"statusCode":{"type":"integer","format":"int32"}},"title":"STRINGArrayWrapper"}}}},"401":{"description":"Unauthorized"},"403":{"description":"No permissions to perform this action"}}}
+>
+  
+</StatusCodes>
+
+
+      

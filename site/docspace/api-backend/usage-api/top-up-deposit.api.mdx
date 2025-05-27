@@ -1,0 +1,71 @@
+---
+id: top-up-deposit
+title: "Put money on deposit"
+description: "Returns result of putting money on deposit."
+sidebar_label: "Put money on deposit"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVktvGzcQ/ivEXHzZSIrc094UOwWSFrVhy/BBEGJqd6RlvEsy5NCKKux/D4ZcSSvJrV2gFz3Ibx6cxzezBZIrD/kMbo0jWYuhuJWbBjXBPANj0UlSRn8pIQcy9sFeozVeEWTg8EdAT59MuYF8C4XRxGL5FqS1tSqi4PC7N5rPfFFhI/kXbSxCDmbxHQvWYx2bIYU+yjYmJC0dTodmgQ4yKNEXTlnWCjlMEi6DpXGNJMihNGFRI7QZFME51MWmp8WTU3p1puVqh8xAh7qWrCAnFzAD/CkbW0dZ06Ag/EnQthnIslQsLevbnuNLWXs81X4bSDRG40YYLcoUONGFTVjpZIOEzkMGpCiamvZCfJeA12SgbdmyQ2+N9ilO49GIv44N3oeiQO+FJ0mB9f5PSdlZPg8oR/skYUoTrmLG9qlRmi7HjK2VfvY9rHROcvAVYePf9qNyuHzVB1mkCJxdxcB14Xifiwl8ZUp8l0B7SN59tPnopLXoOtO/jT6ep+lBy0CVcepvLCGCLs9Bfxlh0TXKe2W0FxT/snVBlfKie3F8HhbBKdpAPtuC9MU31v7tGfkAHMoSMlg7RQjzNtvCJ5QOHeSz+G9i1R+42Z+9hpdeFTv4zSRQNX4deGMxEsVs3s5PW+EOKTjthUMfahJmKWwgUnp11iADyKBBqgxTjjU+VoGkCnIYSquG48FoaCNXDW1iqmG55ySP7oU7iiMRXA05bBfS44Or27Pev49YURi9VKuQeA4yeJFOMQ/EeumEU3aWMtSc+TNN1+lKPNz9yWmfH1Jyzw3WEdtRYg4dEON/pvLBo7gy5lmhYCHU1PUuM5VsomRfYQaKxYoowjXVZW1vpyKyZ1Y+a0InNiY4ETw6ViykLoWV3q+N4/xGimAFi6iQNXe18h7VFwkstl8fp2JqnlG3F0dKk66s+/H7rrm+Pk7Z1HFxvhWzyVGghPKiZH5tlMZSLDaCKhQXk67zIuZCVCjL6EAX1COLXVA7TJvtq//AUzIenHqScGJZm7VYK6rEkVURySUDvk6l0b/dMc/RYazBGGifD4fR6sDoemOWS1XgoDBNOhwP98zCU4UD/n7RCI/ZMXbH+7KMzStLIdNoYR5yhrAgLLmbTXAF+j0R5PDI32+gEzfu+OIQzXhwZbRO5H8SVL69Ft31eVscSb//1Vz4Si8N5/fnB69WWlJw+Ha5cUnv4dw/pVgad+LXQEwrFDGyogmexAKFWZCMNfmiZCzKpx2v7WjjKCNPAnVpjdI0EF+Iy5rbE0shvZAidXyqMtYVe/ip95CnwaG6++87YYw2A94K7g5L3efdAnRYykb93aq/F7GypYkx64bhxComU3Q+Rety8HEwYiBTeiPjrO68em1NOo12b7/8j7OkSyL7ObS1VJqdCInT01yZcYYhg/FgxLMmzpY4dNIezJ4kn+YZVDyQ8hls93Ol5eMfAR2P2/lhfqSJuSMPHkiR+OEqvePDlP1ieB1SkZ2sZzxRk8SkKNDSv2LnvZl5e3M/ZUbt9vIm8gk4ueadXa7TADMxrqnJ+WwLtdSrIFeMTTrjshs4QP1OSMOm+8Gv2l3pTd/D49mU3sGf/KpXJbbb1GZtu8enq3+U2FN3QnNi523b/gIx+3Gm
+sidebar_class_name: "post api-method"
+info_path: site/docspace/api-backend/usage-api/api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Put money on deposit"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/api/2.0/portal/payment/deposit"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns result of putting money on deposit.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"amount":{"type":"number","description":"Amount","format":"double"},"currency":{"type":"string","description":"Currency","nullable":true,"example":"some text"}},"additionalProperties":false,"description":"Put money on deposit request parameters","title":"TopUpDepositRequestDto"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Success status","content":{"application/json":{"schema":{"type":"object","properties":{"response":{"type":"string"},"count":{"type":"integer","format":"int32"},"links":{"type":"array","items":{"type":"object","properties":{"href":{"type":"string"},"action":{"type":"string"}}}},"status":{"type":"integer","format":"int32"},"statusCode":{"type":"integer","format":"int32"}},"title":"StringWrapper"}}}},"401":{"description":"Unauthorized"},"403":{"description":"No permissions to perform this action"}}}
+>
+  
+</StatusCodes>
+
+
+      
