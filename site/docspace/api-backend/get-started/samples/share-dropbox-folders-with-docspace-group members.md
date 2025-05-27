@@ -1,15 +1,14 @@
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# DocSpace Groups to the Dropbox
-This integration automates the process of creating shared Dropbox folders for DocSpace groups and inviting group members to collaborate. 
-The script ensures all DocSpace teams have centralized file storage in Dropbox.
+# Share Dropbox folders with DocSpace group members
+This integration automates the process of creating shared Dropbox folders for DocSpace group members and inviting them to collaborate.
 
 ## How it works
 - Retrieve DocSpace groups - Fetch a list of groups from DocSpace.
 - Create Dropbox folders - Generate a shared Dropbox folder for each group.
 - Get groups members - Fetch all users assigned to each DocSpace group.
-- Share the Dropbox folders - Invite DocSpace group members to their corresponding Dropbox folders.
+- Share Dropbox folders - Invite DocSpace group members to their corresponding Dropbox folders.
 
 <Tabs>
   <TabItem value="py" label="Python">

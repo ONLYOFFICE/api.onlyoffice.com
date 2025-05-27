@@ -1,13 +1,13 @@
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# DocSpace Users to the Dropbox
-This integration automates the process of adding DocSpace users to the Dropbox.
+# Share Dropbox folders with DocSpace users
+This integration automates the process of sharing Dropbox folders with DocSpace users.
 
 ## How it works
 - Retrieve DocSpace users - Fetches a list of users with names and emails from the DocSpace.
 - Create Dropbox folders - Each DocSpace user gets a dedicated folder in the Dropbox.
-- Share the Dropbox folders - Generates a Dropbox shared link for the user.
+- Share Dropbox folders - Generates a Dropbox shared link for each DocSpace user.
 
 <Tabs>
   <TabItem value="py" label="Python">
