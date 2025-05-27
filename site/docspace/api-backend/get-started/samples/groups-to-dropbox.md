@@ -6,10 +6,10 @@ This integration automates the process of creating shared Dropbox folders for ON
 The script ensures all ONLYOFFICE teams have centralized file storage in Dropbox.
 
 ## How it works
-- Retrieve ONLYOFFICE Groups - Fetch a list of groups from ONLYOFFICE.
-- Create Dropbox Folders - Generate a shared Dropbox folder for each group.
-- Get Group Members - Fetch all users assigned to each ONLYOFFICE group.
-- Share the Dropbox Folder - Invite ONLYOFFICE group members to their corresponding Dropbox folder.
+- Retrieve ONLYOFFICE groups - Fetch a list of groups from ONLYOFFICE.
+- Create Dropbox folders - Generate a shared Dropbox folder for each group.
+- Get groups members - Fetch all users assigned to each ONLYOFFICE group.
+- Share the Dropbox folders - Invite ONLYOFFICE group members to their corresponding Dropbox folders.
 
 <Tabs>
   <TabItem value="py" label="Python">
@@ -89,11 +89,16 @@ The script ensures all ONLYOFFICE teams have centralized file storage in Dropbox
 
 ## Before you start
 1. Replace `yourportal.onlyoffice.com` and `YOUR_API_KEY` with your actual DocSpace portal host and API key. Ensure you have the necessary permissions to perform user operations.
-2. Create a [`Dropbox App`](https://www.dropbox.com/developers) with `files.content.write` and `sharing.write` permissions.
-3. Before you can make requests to the API, you need to authenticate. Check out the [`authentication example`](../../../../docspace/api-backend/get-started/samples/authentication.md) to learn how to obtain and use access tokens.
+2. Before you can make requests to the API, you need to create a DocSpace API key. Check out the [API keys article](../../../get-started/authentication/api-keys/) to learn how to obtain and use API keys.
+3. Create a [Dropbox App](https://www.dropbox.com/developers) with `files.content.write` and `sharing.write` permissions.
 
-## Step 1: Retrieve ONLYOFFICE Groups
-Use a [`GET /api/2.0/group`](../../../../docspace/api-backend/usage-api/get-groups) request to retrieve the group ID and the group name for each team.
+Finally install the [Dropbox Python SDK](https://www.dropbox.com/developers/documentation/python#install):
+```bash
+pip install dropbox
+```
+
+## Step 1: Retrieve ONLYOFFICE groups
+Use a [`GET /api/2.0/group`](../../../usage-api/get-groups) request to retrieve the group ID and the group name for each team.
 
 <Tabs>
   <TabItem value="py" label="Python">
@@ -114,7 +119,7 @@ Use a [`GET /api/2.0/group`](../../../../docspace/api-backend/usage-api/get-grou
   </TabItem>
 </Tabs>
 
-## Step 2: Create a Shared Dropbox Folder
+## Step 2: Create shared Dropbox folders
 Use dropbox client to generate a Dropbox folder for each DocSpace group.
 
 <Tabs>
@@ -139,8 +144,8 @@ Use dropbox client to generate a Dropbox folder for each DocSpace group.
   </TabItem>
 </Tabs>
 
-## Step 3: Retrieve ONLYOFFICE Group Members
-Use a [`GET /api/2.0/group/{group_id}`](../../../../docspace/api-backend/usage-api/get-group) get a group by ID and extract user's names and emails.
+## Step 3: Retrieve ONLYOFFICE group members
+Use a [`GET /api/2.0/group/{group_id}`](../../../usage-api/get-group) to get a group by ID and extract user names and emails.
 
 <Tabs>
   <TabItem value="py" label="Python">
