@@ -2,10 +2,9 @@
 
 Splits large sheets containing extensive datasets into multiple sheets if they exceed a specified row limit.
 
-```ts
-/* In each new sheet, the first row from the original sheet is added at the top as a header (assuming the first row contains the column headers).
-*/
+In each new sheet, the first row from the original sheet is added at the top as a header (assuming the first row contains the column headers).
 
+```ts
 (function () {
     
     let maximumRows = 4;  // Maximum number of rows per new sheet
@@ -71,8 +70,6 @@ Splits large sheets containing extensive datasets into multiple sheets if they e
             // Copy the appropriate slice of data into the new sheet
             copyDataToNewSheet(startRow, endRow, newSheet, firstRowNewSheet);
         }
-
-        console.log(`Data has been split into ${numSheets} sheets.`);
     }
 
     splitDataIntoSheets(maximumRows);
@@ -80,7 +77,7 @@ Splits large sheets containing extensive datasets into multiple sheets if they e
 })();
 ```
 
-Methods used: [GetActiveSheet](../../../../office-api/usage-api/spreadsheet-api/Api/Methods/GetActiveSheet.md), [GetUsedRange](../../../../office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetUsedRange.md), [GetValue](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/GetValue.md), [GetCharacters](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/GetCharacters.md), [GetFont](../../../../office-api/usage-api/spreadsheet-api/ApiCharacters/Methods/GetFont.md), [SetValue](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/SetValue.md), [SetFontName](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/SetFontName.md), [GetName](../../../../office-api/usage-api/spreadsheet-api/ApiName/Methods/GetName.md), [SetFontSize](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/SetFontSize.md), [GetSize](../../../../office-api/usage-api/spreadsheet-api/ApiFont/Methods/GetSize.md), [AutoFit](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/AutoFit.md), [GetBold](../../../../office-api/usage-api/spreadsheet-api/ApiRun/Methods/GetBold.md), [SetBold](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/SetBold.md), [GetItalic](../../../../office-api/usage-api/spreadsheet-api/ApiRun/Methods/GetItalic.md), [SetItalic](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/SetItalic.md), [GetRangeByNumber](../../../../office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetRangeByNumber.md), [AddSheet](../../../../office-api/usage-api/spreadsheet-api/Api/Methods/AddSheet.md), [GetSheet](../../../../office-api/usage-api/spreadsheet-api/Api/Methods/GetSheet.md)
+Methods used: [GetActiveSheet](../../../../office-api/usage-api/spreadsheet-api/Api/Methods/GetActiveSheet.md), [GetUsedRange](../../../../office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetUsedRange.md), [GetValue](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/GetValue.md), [GetCharacters](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/GetCharacters.md), [GetFont](../../../../office-api/usage-api/spreadsheet-api/ApiCharacters/Methods/GetFont.md), [SetValue](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/SetValue.md), [SetFontName](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/SetFontName.md), [GetName](../../../../office-api/usage-api/spreadsheet-api/ApiFont/Methods/GetName.md), [SetFontSize](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/SetFontSize.md), [GetSize](../../../../office-api/usage-api/spreadsheet-api/ApiFont/Methods/GetSize.md), [AutoFit](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/AutoFit.md), [GetBold](../../../../office-api/usage-api/spreadsheet-api/ApiFont/Methods/GetBold.md), [SetBold](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/SetBold.md), [GetItalic](../../../../office-api/usage-api/spreadsheet-api/ApiFont/Methods/GetItalic.md), [SetItalic](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/SetItalic.md), [GetRangeByNumber](../../../../office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetRangeByNumber.md), [AddSheet](../../../../office-api/usage-api/spreadsheet-api/Api/Methods/AddSheet.md), [GetSheet](../../../../office-api/usage-api/spreadsheet-api/Api/Methods/GetSheet.md)
 
 ## Result
 

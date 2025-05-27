@@ -17,7 +17,6 @@ Resizes PictureForms based on a predefined size or aspect ratio across the docum
 
     let doc = Api.GetDocument();
     let forms = doc.GetAllForms();
-    let resizedCount = 0;
 
     for (let form of forms) {
         if (form.GetFormType() === 'pictureForm') {
@@ -28,16 +27,13 @@ Resizes PictureForms based on a predefined size or aspect ratio across the docum
                 let newHeight = aspectRatio > 0 ? newWidth / aspectRatio : pictureHeight * 10 * 36000;
 
                 form.SetImage(img, newWidth, newHeight);
-                resizedCount++;
             }
         }
     }
-
-    console.log(`${resizedCount} picture form${resizedCount === 1 ? '' : 's'} resized successfully.`);
 })();
 ```
 
-Methods used: [GetDocument](../../../../office-api/usage-api/text-document-api/Api/Methods/GetDocument.md), [GetAllForms](../../../../office-api/usage-api/form-api/ApiDocument/Methods/GetAllForms.md), [GetFormType](../../../../office-api/usage-api/form-api/ApiComplexForm/Methods/GetFormType.md), [GetFormKey](../../../../office-api/usage-api/form-api/ApiComplexForm/Methods/GetFormKey.md), [GetImage](../../../../office-api/usage-api/form-api/ApiPictureForm/Methods/GetImage.md), [SetImage](../../../../office-api/usage-api/form-api/ApiPictureForm/Methods/SetImage.md)
+Methods used: [GetDocument](../../../../office-api/usage-api/text-document-api/Api/Methods/GetDocument.md), [GetAllForms](../../../../office-api/usage-api/form-api/ApiDocument/Methods/GetAllForms.md), [GetFormType](../../../../office-api/usage-api/form-api/ApiFormBase/Methods/GetFormType.md), [GetFormKey](../../../../office-api/usage-api/form-api/ApiFormBase/Methods/GetFormKey.md), [GetImage](../../../../office-api/usage-api/form-api/ApiPictureForm/Methods/GetImage.md), [SetImage](../../../../office-api/usage-api/form-api/ApiPictureForm/Methods/SetImage.md)
 
 ## Result
 
