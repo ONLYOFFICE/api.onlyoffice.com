@@ -141,7 +141,7 @@ const close = {
 
 **示例**: `false`
 
-![紧凑标题](/assets/images/editor/compactHeader.png)
+![紧凑标题](/assets/images/editor/compactHeader.png#gh-light-mode-only)![紧凑标题](/assets/images/editor/compactHeader.dark.png#gh-dark-mode-only)
 
 ## compactToolbar
 
@@ -155,7 +155,7 @@ const close = {
 
 **示例**: `false`
 
-![紧凑工具栏](/assets/images/editor/compactToolbar.png)
+![紧凑工具栏](/assets/images/editor/compactToolbar.png#gh-light-mode-only)![紧凑工具栏](/assets/images/editor/compactToolbar.dark.png#gh-dark-mode-only)
 
 ## compatibleFeatures
 
@@ -254,7 +254,7 @@ const customer = {
 
 **示例**: `"example.com"`
 
-![客户](/assets/images/editor/customer.png)
+![客户](/assets/images/editor/customer.png#gh-light-mode-only)![客户](/assets/images/editor/customer.dark.png#gh-dark-mode-only)
 
 ## 功能
 
@@ -438,7 +438,7 @@ const goback = {
 }
 ```
 
-![回去](/assets/images/editor/goback.png)
+![回去](/assets/images/editor/goback.png#gh-light-mode-only)![回去](/assets/images/editor/goback.dark.png#gh-dark-mode-only)
 
 ### goback.blank
 
@@ -488,7 +488,7 @@ const goback = {
 
 **示例**: `true`
 
-![帮助](/assets/images/editor/help.png)
+![帮助](/assets/images/editor/help.png#gh-light-mode-only)![帮助](/assets/images/editor/help.dark.png#gh-dark-mode-only)
 
 ## hideNotes
 
@@ -502,7 +502,7 @@ const goback = {
 
 **示例**: `false`
 
-![隐藏备注](/assets/images/editor/hideNotes.png)
+![隐藏备注](/assets/images/editor/hideNotes.png#gh-light-mode-only)![隐藏备注](/assets/images/editor/hideNotes.dark.png#gh-dark-mode-only)
 
 ## hideRightMenu
 
@@ -524,7 +524,7 @@ const goback = {
 
 **示例**: `false`
 
-![隐藏标尺](/assets/images/editor/hideRulers.png)
+![隐藏标尺](/assets/images/editor/hideRulers.png#gh-light-mode-only)![隐藏标尺](/assets/images/editor/hideRulers.dark.png#gh-dark-mode-only)
 
 ## integrationMode
 
@@ -729,7 +729,7 @@ const mobile = {
 
 **示例**: `"select"`
 
-![指针模式](/assets/images/editor/pointerMode.png)
+![指针模式](/assets/images/editor/pointerMode.png#gh-light-mode-only)![指针模式](/assets/images/editor/pointerMode.dark.png#gh-dark-mode-only)
 
 ## 审阅
 
