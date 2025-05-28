@@ -1,5 +1,4 @@
 ---
-sidebar_position: -6
 hide_table_of_contents: true
 ---
 
@@ -17,5 +16,5 @@ The Playground serves as an interactive platform for users to explore and test t
 ```mdx-code-block
 import {PlaygroundCardsRow} from '@site/src/components/Playground';
 
-<PlaygroundCardsRow searchParams={[{testType: "connector"}]}/>
+<PlaygroundCardsRow searchParams={[{testType: "plugin"}]}/>
 ```
