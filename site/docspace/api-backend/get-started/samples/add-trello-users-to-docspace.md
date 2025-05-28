@@ -5,7 +5,7 @@ import TabItem from '@theme/TabItem';
 This script automates the process of retrieving Trello users and adding them to the DocSpace. It ensures that all Trello team members are onboarded into DocSpace.
 
 ## How it works
-- Retrieve Trello Users - Fetches a list of users with their names and usernames.
+- Retrieve Trello users - Fetches a list of users with their names and usernames.
 - Add Trello users to the DocSpace - Trello usernames are used to create temporary emails.
 
 <Tabs>
@@ -132,7 +132,7 @@ Use a [`POST /api/2.0/people`](../../../usage-api/add-member) request to add new
             return None
 
     if __name__ == '__main__':
-        PASSWORD = 'DocSpace123' # Replace with a temporary password or generate unique
+        PASSWORD = 'DocSpace123' # Replace with any temporary password or generate unique
 
         trello_users = get_trello_users(TRELLO_BOARD_ID)
 

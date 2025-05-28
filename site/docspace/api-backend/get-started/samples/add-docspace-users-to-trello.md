@@ -5,9 +5,9 @@ import TabItem from '@theme/TabItem';
 This script automates the process of retrieving DocSpace users and adding them to a Trello board. It ensures that all DocSpace team members are onboarded into Trello for project management.
 
 ## How it works
-- Retrieve DocSpace Users - Fetches a list of users with their emails from DocSpace.
-- Check If the User Exists in Trello - Trello does not allow account creation, so users must already have a Trello account.
-- Add Users to a Trello Board - Users are assigned to the specified Trello board with the "normal" role.
+- Retrieve DocSpace users - Fetches a list of users with their emails from DocSpace.
+- Check If the user exists in Trello - Trello does not allow account creation, so users must already have a Trello account.
+- Add users to a Trello board - Users are assigned to the specified Trello board with the "normal" role.
 
 <Tabs>
   <TabItem value="py" label="Python">
