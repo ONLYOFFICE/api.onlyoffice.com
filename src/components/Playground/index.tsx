@@ -99,30 +99,34 @@ interface PlaygroundCardsRowProps {
   }[]
 };
 
-export function PlaygroundCardsRow({searchParams}: PlaygroundCardsRowProps): ReactNode {
-  if (searchParams?.length > 0) {
-    Playgrounds.forEach(playground => {
-      let stringifiedSearchParams = searchParams
+export function PlaygroundCardsRow({ searchParams }: PlaygroundCardsRowProps): ReactNode {
+  const updatedPlaygrounds = Playgrounds.map(playground => {
+    const newPlayground = { ...playground };
+    
+    if (searchParams?.length > 0) {
+      const stringifiedSearchParams = searchParams
         .filter(parameter => {
           const key = Object.keys(parameter)[0];
-
-          return !playground.url.includes(key)
+          return !newPlayground.url.includes(key);
         })
         .map(parameter => {
           const key = Object.keys(parameter)[0];
-
           return `${key}=${parameter[key]}`;
         });
 
       if (stringifiedSearchParams.length > 0) {
-        playground.url += (playground.url.includes("?") ? "&" : "?") + stringifiedSearchParams.join("&");
-      }      
-    });
-  }
+        newPlayground.url += 
+          (newPlayground.url.includes("?") ? "&" : "?") + 
+          stringifiedSearchParams.join("&");
+      }
+    }
+
+    return newPlayground;
+  });
 
   return (
     <div className="row">
-      {Playgrounds.map((playground) => (
+      {updatedPlaygrounds.map((playground) => (
         <PlaygroundCard key={playground.name} {...playground} />
       ))}
     </div>
