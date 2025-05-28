@@ -17,25 +17,25 @@ This script automates the process of retrieving DocSpace users and adding them t
 
     # Trello API credentials
     TRELLO_API_KEY = "your_trello_api_key"
-    TRELLO_TOKEN = "your_trello_api_token"
-    TRELLO_BOARD_ID = '00aaaaa'
+    TRELLO_TOKEN = "your_trello_token"
+    TRELLO_BOARD_ID = "your_board_id"
     TRELLO_API_URL = "https://api.trello.com/1"
 
     # DocSpace API credentials
-    DOCSPACE_API_HOST = "yourportal.onlyoffice.com"
-    DOCSPACE_API_KEY = "your_onlyoffice_api_key"
+    ONLYOFFICE_API_HOST = "your-docspace.onlyoffice.com"
+    ONLYOFFICE_API_KEY = "your_onlyoffice_api_key"
 
     # Headers for the DocSpace authentication
-    DOCSPACE_HEADERS = {
+    ONLYOFFICE_HEADERS = {
         "Accept": "application/json",
-        "Authorization": f"Bearer {DOCSPACE_API_KEY}",
+        "Authorization": f"Bearer {ONLYOFFICE_API_KEY}",
         "Content-Type": "application/json"
     }
 
     # Step 1: Retrieve DocSpace users
     def get_docspace_users():
-        url = f'https://{DOCSPACE_API_KEY}/api/2.0/people'
-        response = requests.get(url, headers=DOCSPACE_HEADERS)
+        url = f'https://{ONLYOFFICE_API_HOST}/api/2.0/people'
+        response = requests.get(url, headers=ONLYOFFICE_HEADERS)
         
         if response.status_code == 200:
             return [{'name': user['firstName'], 'email': user['email']} for user in response.json()['response']]
