@@ -70,7 +70,7 @@ Starting from version 7.1, please use the [document.permissions.chat](../../docu
 
 **Example**: `true`
 
-![Chat](/assets/images/editor/chat.png)
+![Chat](/assets/images/editor/chat.png#gh-light-mode-only)![Chat](/assets/images/editor/chat.dark.png#gh-dark-mode-only)
 
 ## close
 
@@ -109,7 +109,7 @@ This parameter is also available for the mobile editors.
 
 **Example**: `"Close file"`
 
-![Cross button in the header](/assets/images/editor/cross-button.jpg)
+![Cross button in the header](/assets/images/editor/cross-button.png#gh-light-mode-only)![Cross button in the header](/assets/images/editor/cross-button.dark.png#gh-dark-mode-only)
 
 ## commentAuthorOnly
 
@@ -131,7 +131,7 @@ Defines if the **Comments** menu button is displayed or hidden. Please note that
 
 **Example**: `true`
 
-![Comments](/assets/images/editor/comment.png#gh-light-mode-only)![Comments](/assets/images/editor/comment.dark.png#gh-dark-mode-only)
+![Comment](/assets/images/editor/comment.png#gh-light-mode-only)![Comment](/assets/images/editor/comment.dark.png#gh-dark-mode-only)
 
 ## compactHeader
 

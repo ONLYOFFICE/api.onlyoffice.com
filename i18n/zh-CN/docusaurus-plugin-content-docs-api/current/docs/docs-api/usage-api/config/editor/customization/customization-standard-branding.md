@@ -70,7 +70,7 @@ const anonymous = {
 
 **示例**: `true`
 
-![聊天](/assets/images/editor/chat.png)
+![聊天](/assets/images/editor/chat.png#gh-light-mode-only)![聊天](/assets/images/editor/chat.dark.png#gh-dark-mode-only)
 
 ## 关闭
 
@@ -109,7 +109,7 @@ const close = {
 
 **示例**: `"关闭文件"`
 
-![标题中的十字按钮](/assets/images/editor/cross-button.jpg)
+![标题中的十字按钮](/assets/images/editor/cross-button.png#gh-light-mode-only)![标题中的十字按钮](/assets/images/editor/cross-button.dark.png#gh-dark-mode-only)
 
 ## commentAuthorOnly
 

@@ -34,7 +34,7 @@ In case *edit* is set to **"true"** and *comment* is also set to **"true"**, the
 
 **Example**: `true`
 
-![Comments](/assets/images/editor/comment.png#gh-light-mode-only)![Comments](/assets/images/editor/comment.dark.png#gh-dark-mode-only)
+![Comment](/assets/images/editor/comment.png#gh-light-mode-only)![Comment](/assets/images/editor/comment.dark.png#gh-dark-mode-only)
 
 ## commentGroups
 
