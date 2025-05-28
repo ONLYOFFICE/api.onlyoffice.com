@@ -5,10 +5,10 @@ import TabItem from '@theme/TabItem';
 This integration allows you to automatically export files from DocSpace to Dropbox using a presigned download URL. It’s ideal for building document archiving workflows, offloading files to external storage, or syncing selected documents outside of the DocSpace environment.
 
 ## How it works
-- Retrieve file metadata – Get file title and MIME type using the DocSpace API.
-- Generate presigned URL – Request a secure download link from DocSpace.
-- Download file content – Retrieve the file using the presigned URL.
-- Upload to Dropbox – Store the downloaded file into a specified Dropbox folder.
+- Retrieve file metadata - Get file title and MIME type using the DocSpace API.
+- Generate presigned URL - Request a secure download link from DocSpace.
+- Download file content - Retrieve the file using the presigned URL.
+- Upload to Dropbox - Store the downloaded file into a specified Dropbox folder.
 
 <Tabs>
   <TabItem value="py" label="Python">

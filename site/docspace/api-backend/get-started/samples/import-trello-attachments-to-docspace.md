@@ -5,10 +5,10 @@ import TabItem from '@theme/TabItem';
 This integration allows you to automatically import all file attachments from a specific Trello card into an ONLYOFFICE DocSpace room. It's useful for syncing project files, archiving task assets, or aggregating external documentation into a centralized workspace.
 
 ## How it works
-- Locate the Trello card – Find a card by name on a specified board.
-- Get attachments – Retrieve a list of file attachments from the card.
-- Download each file – Retrieve binary content using a signed Trello URL.
-- Upload to DocSpace – Push files to the selected DocSpace room via API.
+- Locate the Trello card - Find a card by name on a specified board.
+- Get attachments - Retrieve a list of file attachments from the card.
+- Download each file - Retrieve binary content using a signed Trello URL.
+- Upload to DocSpace - Push files to the selected DocSpace room via API.
 
 <Tabs>
   <TabItem value="py" label="Python">
@@ -95,11 +95,6 @@ This integration allows you to automatically import all file attachments from a 
 1. Replace `yourportal.onlyoffice.com` and `YOUR_API_KEY` with your actual DocSpace portal host and API key. Ensure you have the necessary permissions to perform user operations.
 2. Before you can make requests to the API, you need to create a DocSpace API key. Check out the [API keys article](../../../get-started/authentication/api-keys/) to learn how to obtain and use API keys.
 3. Create a [Trello Developer App](https://developer.atlassian.com/cloud/trello/power-ups/rest-api-client/) to obtain an API key and token. Grant read access to cards and attachments by authorizing with `read` scope.
-
-Finally install the [Dropbox Python SDK](https://www.dropbox.com/developers/documentation/python#install):
-```bash
-pip install dropbox
-```
 
 ## Step 1: Get the Trello card ID
 Find the Trello card by name using the Cards API. Matching is done case-insensitively.

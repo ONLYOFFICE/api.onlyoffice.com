@@ -5,9 +5,9 @@ import TabItem from '@theme/TabItem';
 This integration allows you to automatically import files from Dropbox into a specific room in ONLYOFFICE DocSpace. It’s ideal for collecting external resources, migrating document libraries, or building automated submission workflows.
 
 ## How it works
-- Download file from Dropbox – Use Dropbox SDK to fetch the file content and name.
-- Upload to DocSpace room – Send the binary file to the specified room using the file upload API.
-- Run the import – Execute the process with a specific Dropbox file path.
+- Download file from Dropbox - Use Dropbox SDK to fetch the file content and name.
+- Upload to DocSpace room - Send the binary file to the specified room using the file upload API.
+- Run the import - Execute the process with a specific Dropbox file path.
 
 <Tabs>
   <TabItem value="py" label="Python">
@@ -56,7 +56,7 @@ This integration allows you to automatically import files from Dropbox into a sp
         if response.status_code == 200:
             print(f"File '{filename}' uploaded to DocSpace.")
         else:
-            print(f"Failed to upload to DocSpace: {response.status_code} — {response.text}")
+            print(f"Failed to upload to DocSpace: {response.status_code} - {response.text}")
 
     # Step 3: Transfer file from Dropbox to DocSpace
     def transfer_dropbox_to_docspace(file_path, room_id):
@@ -68,7 +68,6 @@ This integration allows you to automatically import files from Dropbox into a sp
 
     if __name__ == '__main__':
         transfer_dropbox_to_docspace(DROPBOX_FILE_PATH, ONLYOFFICE_ROOM_ID)
-
     ```
 
   </TabItem>
@@ -125,7 +124,7 @@ Use [`POST /api/2.0/files/{room_id}/upload`](../../../usage-api/upload-file) to 
         if response.status_code == 200:
             print(f"File '{filename}' uploaded to DocSpace.")
         else:
-            print(f"Failed to upload to DocSpace: {response.status_code} — {response.text}")
+            print(f"Failed to upload to DocSpace: {response.status_code} - {response.text}")
     ```
 
   </TabItem>
