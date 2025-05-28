@@ -24,6 +24,7 @@ This section will help you build the "Hello World" application. It is easy to in
 #include "docbuilder.h"
 
 // Specify the path to the Document Builder work directory and the result path (where the generated file will be saved)
+// for linux is builder/opt/onlyoffice/documentbuilder, for windows and mac is builder
 #define WORK_DIRECTORY L"builder/opt/onlyoffice/documentbuilder"
 
 using namespace NSDoctRenderer;
@@ -66,11 +67,17 @@ Run the script:
 
 <Tabs>
     <TabItem value="windows" label="Windows">
-    - Create a new C++ Console Project for Windows called `hello-world`
-    - Add `libdocbuilder.lib` to the project's Additional Dependencies in the Linker Input settings
-    - Add `include` files to the project's Additional Include Directories in the C/C++ General Settings
-    - Copy the `libdocbuilder.dll` file to the project's output directory
+    - Create a `hello-world.cpp` file in the CPP directory
     - Replace the contents of `hello-world.cpp` with code above
+    - Build with `cl hello-world.cpp /Ibuilder/include builder\doctrenderer.lib /Fe:hello-world.exe`
+    - Run the application via
+    ```bash
+    # Add 'builder' subfolder to PATH (relative path)
+    $env:PATH = "$(Get-Location)\builder;$env:PATH"
+    
+    # run
+    .\hello-world.exe
+    ```
     </TabItem>
     <TabItem value="linux" label="Linux">
     - Create a `hello-world.cpp` file in the CPP directory
