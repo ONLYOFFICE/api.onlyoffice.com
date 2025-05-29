@@ -6,6 +6,10 @@ sidebar_position: -1
 
 The list of changes for ONLYOFFICE Plugins and Macros API.
 
+## Version 9.0
+
+- Added the [ContentControlListElement](../interacting-with-editors/methods/text-document-api/Enumeration/ContentControlListElement.md) enumeration.
+
 ## Version 8.3
 
 - Added the [GetSelectedContent](../interacting-with-editors/methods/text-document-api/Api/Methods/GetSelectedContent.md) method to *window\.Asc.plugin.executeMethod*.
