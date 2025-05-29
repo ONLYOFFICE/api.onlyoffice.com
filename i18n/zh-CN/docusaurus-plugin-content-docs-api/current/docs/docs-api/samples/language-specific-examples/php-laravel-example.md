@@ -75,7 +75,7 @@ PHP（Laravel）示例提供了多种安装选项，但我们强烈建议使用 
 
 ### 选项 2. 本地安装
 
-在开始使用示例前，请先安装 ONLYOFFICE 文档。有关在 [Windows](https://helpcenter.onlyoffice.com/installation/docs-developer-install-windows.aspx?from=api_php_laravel_example)、[Linux](https://helpcenter.onlyoffice.com/installation/docs-developer-install-ubuntu.aspx?from=api_php_laravel_example) 或 [Docker](https://helpcenter.onlyoffice.com/installation/docs-developer-install-docker.aspx?from=api_php_laravel_example) 上的安装方法，请参考详细指南。
+在开始使用示例前，请先安装 ONLYOFFICE 文档。有关在 [Windows](https://helpcenter.onlyoffice.com/zh/installation/docs-developer-install-windows.aspx?from=api_php_laravel_example)、[Linux](https://helpcenter.onlyoffice.com/zh/installation/docs-developer-install-ubuntu.aspx?from=api_php_laravel_example) 或 [Docker](https://helpcenter.onlyoffice.com/zh/installation/docs-developer-install-docker.aspx?from=api_php_laravel_example) 上的安装方法，请参考详细指南。
 
 1. 安装准备：
 
