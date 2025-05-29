@@ -42,17 +42,17 @@ const FeatureList: FeatureItem[] = [
     ),
     features: DocsFeatures,
   },
-  // {
-  //   title: 'Samples',
-  //   Image: require('@site/static/assets/images/samples-preview.png').default,
-  //   description: (
-  //     <>
-  //       In this section, you will learn how to use ONLYOFFICE APIs{" "}
-  //       when working with documents.
-  //     </>
-  //   ),
-  //   features: SamplesFeatures,
-  // },
+  {
+    title: 'Samples',
+    Image: require('@site/static/assets/images/samples-preview.png').default,
+    description: (
+      <>
+        In this section, you will learn how to use ONLYOFFICE APIs{" "}
+        when working with documents.
+      </>
+    ),
+    features: SamplesFeatures,
+  },
 ];
 
 function Feature({index, title, Image, description, features }: FeatureItem & { index: number }) {
