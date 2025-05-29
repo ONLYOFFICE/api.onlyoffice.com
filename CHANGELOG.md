@@ -1,5 +1,24 @@
 # Change log
 
+## 5.3.0
+
+### New features
+
+#### Docspace
+
+* Added DocSpace version 3.2
+* Added the MCP server
+
+#### Docs
+
+* Added new Macro samples
+
+### Fixes
+
+#### Document Builder
+
+* Updated C++ samples
+
 ## 5.2.0
 
 ### New features
