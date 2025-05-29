@@ -32,7 +32,7 @@ Finds the next available blank row in a worksheet. This macro allows you to get 
 })();
 ```
 
-Methods used: [GetActiveSheet](../../../../office-api/usage-api/spreadsheet-api/Api/Methods/GetActiveSheet.md), [GetRangeByNumber](../../../../office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetRangeByNumber.md), [Select](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/Select.md)
+Methods used: [GetActiveSheet](/docs/office-api/usage-api/spreadsheet-api/Api/Methods/GetActiveSheet.md), [GetRangeByNumber](/docs/office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetRangeByNumber.md), [Select](/docs/office-api/usage-api/spreadsheet-api/ApiRange/Methods/Select.md)
 
 ## Reference Microsoft VBA macro code
 

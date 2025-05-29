@@ -2,11 +2,11 @@
 
 Create a basic form with the image and text inputs:
 
-- create a new document, add text to the first paragraph and style it as heading ([ApiDocument](../../usage-api/text-document-api/ApiDocument/ApiDocument.md), [ApiStyle](../../usage-api/text-document-api/ApiStyle/ApiStyle.md), [ApiParagraph](../../usage-api/text-document-api/ApiParagraph/ApiParagraph.md));
-- create an image form and a text form, and add the form to the document ([Api/CreatePictureForm](../../usage-api/form-api/Api/Methods/CreatePictureForm.md), [Api/CreateTextForm](../../usage-api/form-api/Api/Methods/CreateTextForm.md)).
+- create a new document, add text to the first paragraph and style it as heading ([ApiDocument](/docs/office-api/usage-api/text-document-api/ApiDocument/ApiDocument.md), [ApiStyle](/docs/office-api/usage-api/text-document-api/ApiStyle/ApiStyle.md), [ApiParagraph](/docs/office-api/usage-api/text-document-api/ApiParagraph/ApiParagraph.md));
+- create an image form and a text form, and add the form to the document ([Api/CreatePictureForm](/docs/office-api/usage-api/form-api/Api/Methods/CreatePictureForm.md), [Api/CreateTextForm](/docs/office-api/usage-api/form-api/Api/Methods/CreateTextForm.md)).
 
 This sample is available for the **C++ and .Net DocBuilder Frameworks**.
-Download the sample and get more information on the [Builder framework samples](../../../document-builder/samples/samples.md) page.
+Download the sample and get more information on the [Builder framework samples](/docs/document-builder/samples/samples.md) page.
 
 ```ts editor-pdf
 let doc = Api.GetDocument();

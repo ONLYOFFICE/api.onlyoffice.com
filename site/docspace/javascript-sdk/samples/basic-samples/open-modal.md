@@ -5,7 +5,7 @@ This example demonstrates how to open a predefined modal window in DocSpace usin
 ## Before you start
 
 Please make sure you are using a server environment to run the HTML file because the JavaScript SDK must be launched on the server.
-You need to [add the URL](../../get-started/get-started.md#step-1-specifying-the-docspace-url) of your server's root directory to the **Developer Tools** section of DocSpace.
+You need to [add the URL](/docspace/javascript-sdk/get-started/get-started.md#step-1-specifying-the-docspace-url) of your server's root directory to the **Developer Tools** section of DocSpace.
 
 <details>
   <summary>Full example</summary>
@@ -120,7 +120,7 @@ The API JavaScript file can normally be found in the following DocSpace folder: 
 
 ## Step 2. JavaScript SDK logic
 
-Use the [openModal()](../../usage-sdk/methods.md#openmodal) method inside the [onAppReady](../../usage-sdk/events.md#onappready) event to open a specific modal by its ID.
+Use the [openModal()](/docspace/javascript-sdk/usage-sdk/methods.md#openmodal) method inside the [onAppReady](/docspace/javascript-sdk/usage-sdk/events.md#onappready) event to open a specific modal by its ID.
 
 ``` ts
 function onAppReady() {

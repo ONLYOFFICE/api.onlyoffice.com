@@ -46,7 +46,7 @@ To connect the editors to your website, specify the path to the editors installa
 
 where the **documentserver** is the name of the server with the ONLYOFFICE Docs installed, the **storageFolder** and **storagePath** are the paths where files will be created and stored. You can set an absolute path. For example, *D:\\\folder*. Please note that on Windows OS the double backslash must be used as a separator.
 
-If you want to experiment with the editor configuration, modify the [parameters](../../usage-api/advanced-parameters.md) in the *\views\editor.ejs* file.
+If you want to experiment with the editor configuration, modify the [parameters](/docs/docs-api/usage-api/advanced-parameters.md) in the *\views\editor.ejs* file.
 
 ### Step 3. Install Node.js environment
 

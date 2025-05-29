@@ -5,7 +5,7 @@ This example demonstrates how to retrieve a list of folders from a shared DocSpa
 ## Before you start
 
 Please make sure you are using a server environment to run the HTML file because the JavaScript SDK must be launched on the server.
-You need to [add the URL](../../get-started/get-started.md#step-1-specifying-the-docspace-url) of your server's root directory to the **Developer Tools** section of DocSpace.
+You need to [add the URL](/docspace/javascript-sdk/get-started/get-started.md#step-1-specifying-the-docspace-url) of your server's root directory to the **Developer Tools** section of DocSpace.
 
 <details>
   <summary>Full example</summary>
@@ -125,7 +125,7 @@ The API JavaScript file can normally be found in the following DocSpace folder: 
 
 ## Step 2. JavaScript SDK logic
 
-Use the [getFolders()](../../usage-sdk/methods.md#getfolders) method to retrieve the list of folders from the current DocSpace view.
+Use the [getFolders()](/docspace/javascript-sdk/usage-sdk/methods.md#getfolders) method to retrieve the list of folders from the current DocSpace view.
 
 ``` ts
 const roomId = "71234"; // Replace with your actual public room ID

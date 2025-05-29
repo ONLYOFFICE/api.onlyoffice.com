@@ -5,7 +5,7 @@ This example demonstrates how to initialize the DocSpace system interface using 
 ## Before you start
 
 Please make sure you are using a server environment to run the HTML file because the JavaScript SDK must be launched on the server.
-You need to [add the URL](../../get-started/get-started.md#step-1-specifying-the-docspace-url) of your server's root directory to the **Developer Tools** section of DocSpace.
+You need to [add the URL](/docspace/javascript-sdk/get-started/get-started.md#step-1-specifying-the-docspace-url) of your server's root directory to the **Developer Tools** section of DocSpace.
 
 <details>
   <summary>Full example</summary>
@@ -71,7 +71,7 @@ The API JavaScript file can normally be found in the following DocSpace folder: 
 
 ## Step 2. JavaScript SDK logic
 
-Configure and initialize the system view using the [initSystem()](../../usage-sdk/methods.md#initsystem) method.
+Configure and initialize the system view using the [initSystem()](/docspace/javascript-sdk/usage-sdk/methods.md#initsystem) method.
 
 ``` ts
 const config = {

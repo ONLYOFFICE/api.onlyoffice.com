@@ -10,7 +10,7 @@ Inserts special symbols into the document.
 
 ## Installation
 
-Download this plugin from [GitHub](https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/symboltable) and install it following the [desktop](../../tutorials/installing/onlyoffice-desktop-editors.md), [on-premises](../../tutorials/installing/onlyoffice-docs-on-premises.md), or [cloud](../../tutorials/installing/onlyoffice-cloud.md) installation instructions.
+Download this plugin from [GitHub](https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/symboltable) and install it following the [desktop](/docs/plugin-and-macros/tutorials/installing/onlyoffice-desktop-editors.md), [on-premises](/docs/plugin-and-macros/tutorials/installing/onlyoffice-docs-on-premises.md), or [cloud](/docs/plugin-and-macros/tutorials/installing/onlyoffice-cloud.md) installation instructions.
 
 ## Usage
 
@@ -104,9 +104,9 @@ Repository on GitHub: [symboltable](https://github.com/ONLYOFFICE/sdkjs-plugins/
 - onExternalMouseUp
 - onMethodReturn
 - onTranslate
-- [executeMethod ("GetFontList")](../../interacting-with-editors/methods/text-document-api/Api/Methods/GetFontList.md)
-- [executeMethod ("PasteHtml")](../../interacting-with-editors/methods/text-document-api/Api/Methods/PasteHtml.md)
-- [info.editorType](../../interacting-with-editors/overview/how-to-call-commands.md#editorType)
+- [executeMethod ("GetFontList")](/docs/plugin-and-macros/interacting-with-editors/methods/text-document-api/Api/Methods/GetFontList.md)
+- [executeMethod ("PasteHtml")](/docs/plugin-and-macros/interacting-with-editors/methods/text-document-api/Api/Methods/PasteHtml.md)
+- [info.editorType](/docs/plugin-and-macros/interacting-with-editors/overview/how-to-call-commands.md#editorType)
 
 ## Support
 
