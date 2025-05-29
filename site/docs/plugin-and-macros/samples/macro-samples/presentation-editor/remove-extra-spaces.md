@@ -36,5 +36,5 @@ Methods used: [GetAllShapes](../../../../office-api/usage-api/presentation-api/A
 
 ## Result
 
-![RemoveExtraSpaces](/assets/images/plugins/remove-extra-spaces.png#gh-light-mode-only)
-![RemoveExtraSpaces](/assets/images/plugins/remove-extra-spaces.dark.png#gh-dark-mode-only)
+![RemoveExtraSpaces](/assets/images/plugins/remove-extra-spaces-slide.png#gh-light-mode-only)
+![RemoveExtraSpaces](/assets/images/plugins/remove-extra-spaces-slide.dark.png#gh-dark-mode-only)
