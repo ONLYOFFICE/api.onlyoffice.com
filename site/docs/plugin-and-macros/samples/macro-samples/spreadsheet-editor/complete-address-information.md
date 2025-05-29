@@ -46,7 +46,6 @@ Completes the basic address data with detailed address information and inserts i
         if (response.features.length === 0) {
             return { error: 'Address not found' };
         }
-        console.log(response);
         let data = {
             country: response.features[0].properties.country,
             county: response.features[0].properties.county,

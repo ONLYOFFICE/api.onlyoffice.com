@@ -36,7 +36,6 @@ Searches for a company logo throughout the spreadsheet using the [Logo API](http
                 headers: { 'X-Api-Key': 'yourAPIkey' },
                 contentType: 'application/json',
                 success: function(result) {
-                    console.log(result);
                     // Iterate through the API response and populate data into specific columns
                     for (let i = 0; i < result.length; i++) {
                         let data = result[i];

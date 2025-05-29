@@ -19,10 +19,10 @@ const FeatureList: FeatureItem[] = [
       <>
         In this section, you will learn how to integrate ONLYOFFICE{" "}
         DocSpace into your own application and interact with its backend{" "}
-        using the DocSpace API Backend. You will also find the{" "}
-        information on how to embed DocSpace using JavaScript SDK, create{" "}
-        your own plugins with our Plugins SDK, and host a portal on your{" "}
-        own servers using our methods for hosting providers.
+        using the Backend REST API. You will also find the information on{" "}
+        how to embed DocSpace using JavaScript SDK, create your own plugins{" "}
+        with our Plugins SDK, and host a portal on your own servers{" "}
+        using our methods for hosting providers.
       </>
     ),
     features: DocSpaceFeatures,
@@ -42,17 +42,17 @@ const FeatureList: FeatureItem[] = [
     ),
     features: DocsFeatures,
   },
-  {
-    title: 'Samples',
-    Image: require('@site/static/assets/images/samples-preview.png').default,
-    description: (
-      <>
-        In this section, you will learn how to use ONLYOFFICE APIs{" "}
-        when working with documents.
-      </>
-    ),
-    features: SamplesFeatures,
-  },
+  // {
+  //   title: 'Samples',
+  //   Image: require('@site/static/assets/images/samples-preview.png').default,
+  //   description: (
+  //     <>
+  //       In this section, you will learn how to use ONLYOFFICE APIs{" "}
+  //       when working with documents.
+  //     </>
+  //   ),
+  //   features: SamplesFeatures,
+  // },
 ];
 
 function Feature({index, title, Image, description, features }: FeatureItem & { index: number }) {
