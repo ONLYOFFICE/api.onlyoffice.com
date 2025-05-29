@@ -755,7 +755,7 @@ const review = {
 }
 ```
 
-![Review display](/assets/images/editor/reviewDisplay.png)
+![Review display](/assets/images/editor/reviewDisplay.png#gh-light-mode-only)![Review display](/assets/images/editor/reviewDisplay.dark.png#gh-dark-mode-only)
 
 ### review.hideReviewDisplay
 
@@ -920,7 +920,7 @@ This setting is used when the [compactHeader](#compactheader) and [toolbarNoTabs
 
 **Example**: `false`
 
-![Toolbar hide file name](/assets/images/editor/toolbarHideFileName.png)
+![Toolbar hide file name](/assets/images/editor/toolbarHideFileName.png#gh-light-mode-only)![Toolbar hide file name](/assets/images/editor/toolbarHideFileName.dark.png#gh-dark-mode-only)
 
 ## toolbarNoTabs
 
@@ -1003,7 +1003,7 @@ In case this setting is changed in the editor interface, it will be stored in th
 
 **Example**: `100`
 
-![Customization](/assets/images/editor/customization.png)
+![Customization](/assets/images/editor/customization.png#gh-light-mode-only)![Customization](/assets/images/editor/customization.dark.png#gh-dark-mode-only)
 
 ## Example
 

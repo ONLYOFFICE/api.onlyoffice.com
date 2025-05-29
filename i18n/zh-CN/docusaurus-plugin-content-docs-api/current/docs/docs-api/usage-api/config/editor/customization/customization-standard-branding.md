@@ -755,7 +755,7 @@ const review = {
 }
 ```
 
-![审阅显示](/assets/images/editor/reviewDisplay.png)
+![审阅显示](/assets/images/editor/reviewDisplay.png#gh-light-mode-only)![审阅显示](/assets/images/editor/reviewDisplay.dark.png#gh-dark-mode-only)
 
 ### review.hideReviewDisplay
 
@@ -920,7 +920,7 @@ const review = {
 
 **示例**: `false`
 
-![工具栏隐藏文件名](/assets/images/editor/toolbarHideFileName.png)
+![工具栏隐藏文件名](/assets/images/editor/toolbarHideFileName.png#gh-light-mode-only)![工具栏隐藏文件名](/assets/images/editor/toolbarHideFileName.dark.png#gh-dark-mode-only)
 
 ## toolbarNoTabs
 
@@ -1003,7 +1003,7 @@ const review = {
 
 **示例**: `100`
 
-![自定义](/assets/images/editor/customization.png)
+![自定义](/assets/images/editor/customization.png#gh-light-mode-only)![自定义](/assets/images/editor/customization.dark.png#gh-dark-mode-only)
 
 ## 示例
 
