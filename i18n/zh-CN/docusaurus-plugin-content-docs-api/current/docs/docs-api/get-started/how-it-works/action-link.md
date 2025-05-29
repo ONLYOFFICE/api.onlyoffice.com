@@ -18,7 +18,7 @@ sidebar_position: -18
 
 2. 在文档编辑器初始化的配置脚本中，为要显示在书签编辑菜单中的 *获取链接* 按钮指定事件处理程序。当调用[onMakeActionLink](../../usage-api/config/events.md#onmakeactionlink)事件时，用户请求会发送给软件集成商，他们会在文档存储服务中创建链接。
 
-   ![onMakeActionLink](/assets/images/editor/onMakeActionLink.png)
+   ![onMakeActionLink](/assets/images/editor/onMakeActionLink.png#gh-light-mode-only)![onMakeActionLink](/assets/images/editor/onMakeActionLink.dark.png#gh-dark-mode-only)
 
    ``` ts
    function onMakeActionLink(event) {

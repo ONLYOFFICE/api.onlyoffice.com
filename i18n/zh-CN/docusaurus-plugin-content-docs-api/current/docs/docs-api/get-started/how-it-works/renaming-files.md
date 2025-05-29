@@ -21,7 +21,8 @@ sidebar_position: -16
 
 2. 指定用于在文档编辑器初始化的配置脚本中打开*重命名...*菜单的事件处理程序。当调用 [onRequestRename](../../usage-api/config/events.md#onrequestrename) 事件时，不带扩展名的文档的新名称被发送给软件集成商，软件集成商在文档存储服务中重命名文档。
 
-   <img alt="onRequestRename" src="/assets/images/editor/onRequestRename.png" width="282px" />
+   <img alt="onRequestRename" src="/assets/images/editor/onRequestRename.png#gh-light-mode-only" width="282px" />   
+   <img alt="onRequestRename" src="/assets/images/editor/onRequestRename.dark.png#gh-dark-mode-only" width="282px" />
 
    ``` ts
    function onRequestRename(event) {

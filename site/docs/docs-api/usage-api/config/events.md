@@ -154,7 +154,7 @@ The function called when the user is trying to get link for opening the document
 
 To set the bookmark link, you must call the [setActionLink](../methods.md#setactionlink) method. The bookmark data is received in the *data* parameter and must be then used in the configuration as the value for the [editorConfig.actionLink](./editor/editor.md#actionlink) parameter. If the method is not declared the *Get Link* button will not be displayed.
 
-![onMakeActionLink](/assets/images/editor/onMakeActionLink.png)
+![onMakeActionLink](/assets/images/editor/onMakeActionLink.png#gh-light-mode-only)![onMakeActionLink](/assets/images/editor/onMakeActionLink.dark.png#gh-dark-mode-only)
 
 **Example**:
 
@@ -336,7 +336,8 @@ The function called when the user is trying to show the document version history
 
 To show the document version history you must call the [refreshHistory](../methods.md#refreshhistory) method. If the method and the [onRequestHistoryData](#onrequesthistorydata) method is not declared the *Version History* button will not be displayed.
 
-<img alt="onRequestHistory" src="/assets/images/editor/onRequestHistory.png" width="282px" />
+<img alt="onRequestHistory" src="/assets/images/editor/onRequestHistory.png#gh-light-mode-only" width="282px" />
+<img alt="onRequestHistory" src="/assets/images/editor/onRequestHistory.dark.png#gh-dark-mode-only" width="282px" />
 
 **Example**:
 
@@ -386,7 +387,7 @@ Where the **serverVersion** is the *serverVersion* from [the history object](../
 
 The function called when the user is trying to go back to the document from viewing the document version history by clicking the *Close History* button. When the function is called, the editor must be initialized again, in editing mode. If the method is not declared the *Close History* button will not be displayed.
 
-![onRequestHistoryClose](/assets/images/editor/onRequestHistoryClose.png)
+![onRequestHistoryClose](/assets/images/editor/onRequestHistoryClose.png#gh-light-mode-only)![onRequestHistoryClose](/assets/images/editor/onRequestHistoryClose.dark.png#gh-dark-mode-only)
 
 **Example**:
 
@@ -412,7 +413,7 @@ The document version number is sent in the *data* parameter.
 
 To show the changes corresponding to the specific document version you must call the [setHistoryData](../methods.md#sethistorydata) method. When calling this method, the token must be added to validate the parameters. If the method and the [onRequestHistory](#onrequesthistory) method is not declared the *Version History* button will not be displayed.
 
-![onRequestHistoryData](/assets/images/editor/onRequestHistoryData.png)
+![onRequestHistoryData](/assets/images/editor/onRequestHistoryData.png#gh-light-mode-only)![onRequestHistoryData](/assets/images/editor/onRequestHistoryData.dark.png#gh-dark-mode-only)
 
 **Example**:
 
@@ -666,7 +667,8 @@ The function called when the user is trying to rename the file by clicking the *
 Until version 6.0 the *Rename...* button is only available if the [document.permissions.rename](./document/permissions.md#rename) is set to **true**.
 :::
 
-<img alt="onRequestRename" src="/assets/images/editor/onRequestRename.png" width="282px" />
+<img alt="onRequestRename" src="/assets/images/editor/onRequestRename.png#gh-light-mode-only" width="282px" />   
+<img alt="onRequestRename" src="/assets/images/editor/onRequestRename.dark.png#gh-dark-mode-only" width="282px" />
 
 **Example**:
 
@@ -696,7 +698,7 @@ When the function is called, you must call the [refreshHistory](../methods.md#re
 The *Restore* button is displayed for the previous document versions only and hidden for the current one. Until version 5.5 the *Restore* button is only available if the [document.permissions.changeHistory](./document/permissions.md#changehistory) is set to **true**.
 :::
 
-![onRequestRestore](/assets/images/editor/onRequestRestore.png)
+![onRequestRestore](/assets/images/editor/onRequestRestore.png#gh-light-mode-only)![onRequestRestore](/assets/images/editor/onRequestRestore.dark.png#gh-dark-mode-only)
 
 **Example**:
 
@@ -752,7 +754,7 @@ Where the **example.com** is the name of the server where **document manager** a
 
 The function called when the user is trying to save file by clicking *Save Copy as...* button. The title of the document, its type and the absolute URL to the document to be downloaded are sent in the *data* parameter. If the method is not declared the *Save Copy as...* button will not be displayed.
 
-![onRequestSaveAs](/assets/images/editor/onRequestSaveAs.png)
+![onRequestSaveAs](/assets/images/editor/onRequestSaveAs.png#gh-light-mode-only)![onRequestSaveAs](/assets/images/editor/onRequestSaveAs.dark.png#gh-dark-mode-only)
 
 **Example**:
 
@@ -780,7 +782,7 @@ The type of document selection is specified in the *data.c* parameter.
 
 To select a document for comparing, combining, or inserting text, you must call the [setRequestedDocument](../methods.md#setrequesteddocument) method.
 
-![onRequestSelectDocument](/assets/images/editor/onRequestSelectDocument.png)
+![onRequestSelectDocument](/assets/images/editor/onRequestSelectDocument.png#gh-light-mode-only)![onRequestSelectDocument](/assets/images/editor/onRequestSelectDocument.dark.png#gh-dark-mode-only)
 
 ![Insert text](/assets/images/editor/insert-text.png#gh-light-mode-only)![Insert text](/assets/images/editor/insert-text.dark.png#gh-dark-mode-only)
 
@@ -876,7 +878,7 @@ The function called when the user is trying to manage document access rights by 
 
 When the access rights is changed, you must call the [setSharingSettings](../methods.md#setsharingsettings) method to update the [information](./document/info.md#sharingsettings) about the settings which allow to share the document with other users. If the method is not declared the *Change access rights* button will not be displayed.
 
-![onRequestSharingSettings](/assets/images/editor/onRequestSharingSettings.png)
+![onRequestSharingSettings](/assets/images/editor/onRequestSharingSettings.png#gh-light-mode-only)![onRequestSharingSettings](/assets/images/editor/onRequestSharingSettings.dark.png#gh-dark-mode-only)
 
 **Example**:
 

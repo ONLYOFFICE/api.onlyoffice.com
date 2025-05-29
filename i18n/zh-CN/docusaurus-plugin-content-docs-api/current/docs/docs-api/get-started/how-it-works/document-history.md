@@ -130,7 +130,7 @@ sidebar_position: -19
    })
    ```
 
-   ![onRequestRestore](/assets/images/editor/onRequestRestore.png)
+   ![onRequestRestore](/assets/images/editor/onRequestRestore.png#gh-light-mode-only)![onRequestRestore](/assets/images/editor/onRequestRestore.dark.png#gh-dark-mode-only)
 
 5. 在浏览器中打开您的*html*文件，
 
@@ -150,7 +150,7 @@ sidebar_position: -19
    })
    ```
 
-   ![onRequestHistoryClose](/assets/images/editor/onRequestHistoryClose.png)
+   ![onRequestHistoryClose](/assets/images/editor/onRequestHistoryClose.png#gh-light-mode-only)![onRequestHistoryClose](/assets/images/editor/onRequestHistoryClose.dark.png#gh-dark-mode-only)
 
 ## 打开带有更改突出显示的文档历史记录
 
