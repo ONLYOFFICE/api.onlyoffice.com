@@ -38,8 +38,8 @@
   font-weight: 600;
   line-height: 1em;
 
-  color: #444444;
-  border: 1px solid #aaaaaa;
+  color: var(--working-with-comments-button-color);
+  border: 1px solid var(--working-with-comments-button-border-color);
   border-radius: 3px;
   background-color: transparent;
 }
@@ -127,6 +127,8 @@
   --working-with-comments-comment-color: #black;
   --working-with-comments-comment-bg-color: #f9f9f9;
   --working-with-comments-comment-border-color: #bfbfbf;
+  --working-with-comments-button-color: #444444;
+  --working-with-comments-button-border-color: #aaaaaa;
 }
 
 html[data-theme="dark"] {
@@ -136,6 +138,8 @@ html[data-theme="dark"] {
   --working-with-comments-comment-color: white;
   --working-with-comments-comment-bg-color: #161616;
   --working-with-comments-comment-border-color: #818181;
+  --working-with-comments-button-color: #d4d4d4;
+  --working-with-comments-button-border-color: #cecece;
 }
 
 @media (hover: hover) {
