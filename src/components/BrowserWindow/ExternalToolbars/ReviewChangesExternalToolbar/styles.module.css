@@ -24,8 +24,8 @@
   font-weight: 600;
   line-height: 1em;
 
-  color: #444444;
-  border: 1px solid #aaaaaa;
+  color: var(--working-with-review-changes-button-color);
+  border: 1px solid var(--working-with-review-changes-button-border-color);;
   border-radius: 3px;
   background-color: transparent;
 }
@@ -34,6 +34,16 @@
   color: #cccccc;
   border-color: #cccccc;
   pointer-events: none;
+}
+
+:root {
+  --working-with-review-changes-button-color: #444444;
+  --working-with-review-changes-button-border-color: #aaaaaa;
+}
+
+html[data-theme="dark"] {
+  --working-with-review-changes-button-color: #d4d4d4;
+  --working-with-review-changes-button-border-color: #cecece;
 }
 
 @media (hover: hover) {
