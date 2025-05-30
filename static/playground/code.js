@@ -134,6 +134,32 @@ function addApiScript() {
     document.body.appendChild(scriptApi);
 }
 
+function Environment_Load() {
+    try {
+        const data = window.localStorage.getItem("oo-test-editors");
+        if (data) {
+            const obj = JSON.parse(data);
+            for (const item in obj) {
+                if (Environment[item] && item !== "testType") {
+                    Environment[item] = obj[item];
+                }
+            }
+        }
+        const editor = urlParams?.editor;
+        editor && (Environment.editor = editor);
+    } catch (e) {
+        console.error("Error while loading environment data: ", e);
+    }
+}
+
+function Environment_Save() {
+    if (Environment) {
+        window.localStorage.setItem("oo-test-editors", JSON.stringify(Environment));
+    }    
+}
+
+Environment_Load();
+
 function getFullUrl(localUrl) {
     let url = location.href;
     url = url.substring(0, url.lastIndexOf("/"));
@@ -248,6 +274,7 @@ document.getElementById("editor_types").addEventListener('change', function() {
         return;
 
     Environment.editor = this.value;
+    Environment_Save();
     initCodeEditorType();
 });
 document.getElementById("editor_themes").value = Environment.theme;
@@ -255,7 +282,9 @@ document.getElementById("editor_themes").addEventListener('change', function() {
     if (Environment.theme === this.value)
         return;
 
-    Environment.theme = this.value;    
+    Environment.theme = this.value;
+    Environment_Save();
+
     theme = Environment.theme === "light" ? themeLight : themeDark;
     onTheme();
     initCodeEditorType();
@@ -272,7 +301,8 @@ document.getElementById("editor_langs").addEventListener('change', function() {
     if (Environment.lang === this.value)
         return;
     
-    Environment.lang = this.value;    
+    Environment.lang = this.value;
+    Environment_Save();
     initCodeEditorType();
 });
 
@@ -281,7 +311,8 @@ document.getElementById("editor_modes").addEventListener('change', function() {
     if (Environment.type === this.value)
         return;
     
-    Environment.type = this.value;    
+    Environment.type = this.value;
+    Environment_Save();
     initCodeEditorType();
 });
 
