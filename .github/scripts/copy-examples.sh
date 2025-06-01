@@ -15,6 +15,7 @@ cp -r site/docs/docs-api/samples/. site/samples/docs/docs-api
 
 mkdir -p site/samples/docs/office-api
 cp -r site/docs/office-api/samples/. site/samples/docs/office-api
+mv site/samples/docs/office-api/samples.md site/samples/docs/office-api/office-api.md
 
 mkdir -p site/samples/docs/plugin-and-macros
 cp -r site/docs/plugin-and-macros/samples/. site/samples/docs/plugin-and-macros
