@@ -86,3 +86,15 @@ cat > site/samples/docspace/_category_.json <<EOF
   "label": "DocSpace"
 }
 EOF
+
+# zh-CN
+mkdir -p i18n/zh-CN/docusaurus-plugin-content-docs-api/current/samples/docs/docs-api
+cp -r i18n/zh-CN/docusaurus-plugin-content-docs-api/current/docs/docs-api/samples/. i18n/zh-CN/docusaurus-plugin-content-docs-api/current/samples/docs/docs-api
+
+cat > i18n/zh-CN/docusaurus-plugin-content-docs-api/current/samples/docs/docs-api/_category_.json <<EOF
+{
+  "position": 1,
+  "collapsed": false,
+  "label": "Docs API"
+}
+EOF
