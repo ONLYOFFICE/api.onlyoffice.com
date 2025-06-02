@@ -112,6 +112,7 @@ This step defines the `addQuestion` function for rendering feedback questions as
         table.SetTableBorderInsideH("single", 4, 0, color, color, color);
     }
     ```
+
 </details>
 
 ### Step 2. Prepare data and build feedback form

@@ -237,7 +237,7 @@ This step appends a checkbox list of required signed documents and adds a final 
       paragraph.AddElement(checkBoxForm);
       paragraph.AddText(` ${sd}`);
       paragraph.AddLineBreak();
-  });
+  });\
   doc.Push(paragraph);
 
   paragraph = Api.CreateParagraph();
