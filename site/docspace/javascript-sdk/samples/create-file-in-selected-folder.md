@@ -83,7 +83,7 @@ Creates a file in the selected folder and opens it in the editors.
 ## Before you start
 
 Please make sure you are using a server environment to run the HTML file because the JavaScript SDK must be launched on the server.
-You need to [add the URL](../get-started/get-started.md#step-1-specifying-the-docspace-url) of your server's root directory to the **Developer Tools** section of DocSpace.
+You need to [add the URL](/docspace/javascript-sdk/get-started/get-started.md#step-1-specifying-the-docspace-url) of your server's root directory to the **Developer Tools** section of DocSpace.
 
 ## Step 1. Set HTML structure
 
@@ -124,9 +124,9 @@ The API JavaScript file can normally be found in the following DocSpace folder: 
 
 ## Step 2. Initialize the Manager mode
 
-Add a script to initialize the [Manager](../usage-sdk/initialization-modes/manager.md) mode.
+Add a script to initialize the [Manager](/docspace/javascript-sdk/usage-sdk/initialization-modes/manager.md) mode.
 
-1. Add an event handler for [onAppReady](../usage-sdk/events.md#onappready), which fires when initialization is successful:
+1. Add an event handler for [onAppReady](/docspace/javascript-sdk/usage-sdk/events.md#onappready), which fires when initialization is successful:
 
 ``` ts
 function onAppReady() {
@@ -134,7 +134,7 @@ function onAppReady() {
 }
 ```
 
-2. Create a configuration for the **Manager** mode. In the [rootPath](../usage-sdk/config.md#rootpath) field, specify the section whose directories you want to display:
+2. Create a configuration for the **Manager** mode. In the [rootPath](/docspace/javascript-sdk/usage-sdk/config.md#rootpath) field, specify the section whose directories you want to display:
 
 ``` ts
 const config = {
@@ -146,7 +146,7 @@ const config = {
 }
 ```
 
-3. Initialize the **Manager** mode with the [initManager](../usage-sdk/methods.md#initmanager) method:
+3. Initialize the **Manager** mode with the [initManager](/docspace/javascript-sdk/usage-sdk/methods.md#initmanager) method:
 
 ``` ts
 const docSpace = DocSpace.SDK.initManager(config)
@@ -154,7 +154,7 @@ const docSpace = DocSpace.SDK.initManager(config)
 
 ## Step 3. Upload a list of folders to the combo box
 
-Add the **onComboboxClick()** event handler for the combo box. Using the [getFolders](../usage-sdk/methods.md#getfolders) method, upload the list into the combo box:
+Add the **onComboboxClick()** event handler for the combo box. Using the [getFolders](/docspace/javascript-sdk/usage-sdk/methods.md#getfolders) method, upload the list into the combo box:
 
 ``` ts
 const combobox = document.querySelector("#combobox").value
@@ -171,7 +171,7 @@ function onComboboxClick(e) {
 
 ## Step 4. Add a method to create a file
 
-Add the **onButtonClick()** event handler for the button. Using the [createFile](../usage-sdk/methods.md#createfile) method, create a file in the selected folder:
+Add the **onButtonClick()** event handler for the button. Using the [createFile](/docspace/javascript-sdk/usage-sdk/methods.md#createfile) method, create a file in the selected folder:
 
 ``` ts
 function onButtonClick() {

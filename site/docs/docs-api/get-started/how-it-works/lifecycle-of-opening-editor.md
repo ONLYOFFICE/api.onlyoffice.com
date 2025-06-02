@@ -159,7 +159,7 @@ Specify there the following events:
    const docEditor = new DocsAPI.DocEditor("placeholder", config);
    ```
 
-   After that, the requests to the [Automation API](../../usage-api/automation-api.md) can be sent.
+   After that, the requests to the [Automation API](/docs/docs-api/usage-api/automation-api.md) can be sent.
    
    The `onOutdatedVersion` or `onRequestRefreshFile` events can be also called after the `onDocumentReady` event in the following case:
 

@@ -13,7 +13,7 @@ Unmerges the selected cell range.
 })();
 ```
 
-Methods used: [GetActiveSheet](../../../../office-api/usage-api/spreadsheet-api/Api/Methods/GetActiveSheet.md), [GetRange](../../../../office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetRange.md), [UnMerge](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/UnMerge.md)
+Methods used: [GetActiveSheet](/docs/office-api/usage-api/spreadsheet-api/Api/Methods/GetActiveSheet.md), [GetRange](/docs/office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetRange.md), [UnMerge](/docs/office-api/usage-api/spreadsheet-api/ApiRange/Methods/UnMerge.md)
 
 ## Reference Microsoft VBA macro code
 

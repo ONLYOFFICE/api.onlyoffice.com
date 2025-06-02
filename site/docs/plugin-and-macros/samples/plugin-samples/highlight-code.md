@@ -12,7 +12,7 @@ Connects the [highlight.js library](https://highlightjs.org/) for highlighting c
 
 Available by default in the cloud, on-premises and desktop versions of ONLYOFFICE editors.
 
-You can remove it following the [desktop](../../tutorials/installing/onlyoffice-desktop-editors.md), [on-premises](../../tutorials/installing/onlyoffice-docs-on-premises.md), or [cloud](../../tutorials/installing/onlyoffice-cloud.md) installation instructions.
+You can remove it following the [desktop](/docs/plugin-and-macros/tutorials/installing/onlyoffice-desktop-editors.md), [on-premises](/docs/plugin-and-macros/tutorials/installing/onlyoffice-docs-on-premises.md), or [cloud](/docs/plugin-and-macros/tutorials/installing/onlyoffice-cloud.md) installation instructions.
 
 The plugin guid: `{BE5CBF95-C0AD-4842-B157-AC40FEDD9841}`.
 
@@ -171,8 +171,8 @@ Repository on GitHub: [highlightcode](https://github.com/ONLYOFFICE/onlyoffice.g
 - init
 - onExternalMouseUp
 - onTranslate
-- [executeMethod ("PasteHtml")](../../interacting-with-editors/methods/text-document-api/Api/Methods/PasteHtml.md)
-- [resizeWindow](../../customization/windows-and-panels.md#interacting-with-a-window)
+- [executeMethod ("PasteHtml")](/docs/plugin-and-macros/interacting-with-editors/methods/text-document-api/Api/Methods/PasteHtml.md)
+- [resizeWindow](/docs/plugin-and-macros/customization/windows-and-panels.md#interacting-with-a-window)
 
 ## Support
 

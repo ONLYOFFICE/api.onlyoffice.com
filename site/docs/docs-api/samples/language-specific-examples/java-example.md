@@ -42,7 +42,7 @@ files.docservice.url.site=https://documentserver/
 
 where the **documentserver** is the name of the server with the ONLYOFFICE Docs installed and the **storage-folder** is the path where files will be created and stored. You can set an absolute path. For example, *D:\\\folder*. Please note that on Windows OS the double backslash must be used as a separator.
 
-If you want to experiment with the editor configuration, modify the [parameters](../../usage-api/advanced-parameters.md) in the *src/main/webapp/editor.jsp* file.
+If you want to experiment with the editor configuration, modify the [parameters](/docs/docs-api/usage-api/advanced-parameters.md) in the *src/main/webapp/editor.jsp* file.
 
 ### Step 3. Install the prerequisites
 
