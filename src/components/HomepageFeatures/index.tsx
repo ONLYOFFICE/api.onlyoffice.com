@@ -78,7 +78,7 @@ function Feature({index, title, link, Image, description, features }: FeatureIte
             </li>
           )))}
         </ul>
-        <Link to={title.toLowerCase()} className={styles.homePreview}>
+        <Link to={link} className={styles.homePreview}>
           <div>
             {typeof Image === 'string' ? (
               <img src={Image} alt={title} className={styles.featureSvg} />
