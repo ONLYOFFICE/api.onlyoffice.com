@@ -551,7 +551,7 @@ This event also fires when the user runs the [IMPORTRANGE](https://helpcenter.on
 **Example**:
 
 ``` ts
-function onRequestReferenceData() {
+function onRequestReferenceData(event) {
   const link = event.data.link
   const referenceData = event.data.referenceData
   const path = event.data.path
@@ -595,7 +595,7 @@ To send the data to the *setReferenceSource* method, it is recommended to search
 **Example**:
 
 ``` ts
-function onRequestReferenceSource() {
+function onRequestReferenceSource(event) {
   const referenceData = event.data.referenceData
   const path = event.data.path
 
