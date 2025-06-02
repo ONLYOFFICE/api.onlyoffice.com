@@ -161,6 +161,6 @@ export const WorkspaceFeatures: Features = {
 }
 
 export const SamplesFeatures: Features = {
-  linkPrefix: 'samples',
+  linkPrefix: 'samples/docs/docs-api/language-specific-examples',
   items:[]
 }

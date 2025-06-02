@@ -6,6 +6,7 @@ import { DocsFeatures, DocSpaceFeatures, type Features, WorkspaceFeatures, Sampl
 
 type FeatureItem = {
   title: string;
+  link: string;
   Image: string | React.ComponentType<React.ComponentProps<'svg'>>;
   description: ReactNode;
   features: Features;
@@ -14,6 +15,7 @@ type FeatureItem = {
 const FeatureList: FeatureItem[] = [
   {
     title: 'DocSpace',
+    link: "docspace",
     Image: require('@site/static/assets/images/docspace-preview.svg').default,
     description: (
       <>
@@ -29,6 +31,7 @@ const FeatureList: FeatureItem[] = [
   },
   {
     title: 'Docs',
+    link: "docs",
     Image: require('@site/static/assets/images/docs-preview.png').default,
     description: (
       <>
@@ -44,6 +47,7 @@ const FeatureList: FeatureItem[] = [
   },
   {
     title: 'Samples',
+    link: "samples/docs/docs-api/language-specific-examples",
     Image: require('@site/static/assets/images/samples-preview.png').default,
     description: (
       <>
@@ -55,16 +59,16 @@ const FeatureList: FeatureItem[] = [
   },
 ];
 
-function Feature({index, title, Image, description, features }: FeatureItem & { index: number }) {
+function Feature({index, title, link, Image, description, features }: FeatureItem & { index: number }) {
   const is_reversed = index % 2;
   return (
       <div className={clsx(styles.featureBlock,{[styles.featureBlockReverse]:is_reversed})}>
         <div className={styles.homeDecr}>
           <h2>
-            <Link to={title.toLowerCase()}>{title}</Link>
+            <Link to={link}>{title}</Link>
           </h2>
           <p>{description}</p>
-          <Link to={title.toLowerCase()}>More</Link>
+          <Link to={link}>More</Link>
         </div>
         <ul className={styles.featuresList}>
           {features.items.map(((item, index) => (
