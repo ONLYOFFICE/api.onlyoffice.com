@@ -49,33 +49,40 @@ questions.forEach(question => {
 
 ## Script execution steps
 
-### Step 1. Define question rendering function
+### Step 1. Define reusable layout function
+
 This step defines the `addQuestion` function, which renders a multiple-choice question and its answer options as radio buttons inside the document.
 
 - Create a question paragraph and append the question text and the font size using [ApiParagraph](../../usage-api/text-document-api/ApiParagraph/ApiParagraph.md)
 - For each answer option set a radio button form using [ApiCheckBoxForm](../../usage-api/form-api/ApiCheckBoxForm/ApiCheckBoxForm.md)
 - Add option text to the same paragraph
 
-```ts
-function addQuestion(text, options) {
-    paragraph = Api.CreateParagraph();
-    paragraph.AddText(text);
-    paragraph.SetFontSize(24);
-    doc.Push(paragraph);
+<details>
+  <summary>Reusable function script</summary>
 
-    options.forEach(option => {
+    ```ts
+    function addQuestion(text, options) {
         paragraph = Api.CreateParagraph();
-        let checkBoxForm = Api.CreateCheckBoxForm({"tip": "Specify your marital status", "required": true, "placeholder": text, "radio": true});
-        checkBoxForm.SetRadioGroup(text);
-        paragraph.AddElement(checkBoxForm);
-        paragraph.AddText(option);
-        paragraph.SetFontSize(20);
+        paragraph.AddText(text);
+        paragraph.SetFontSize(24);
         doc.Push(paragraph);
-    })
-};
-```
 
-### Step 2. Prepare data and render exam
+        options.forEach(option => {
+            paragraph = Api.CreateParagraph();
+            let checkBoxForm = Api.CreateCheckBoxForm({"tip": "Specify your marital status", "required": true, "placeholder": text, "radio": true});
+            checkBoxForm.SetRadioGroup(text);
+            paragraph.AddElement(checkBoxForm);
+            paragraph.AddText(option);
+            paragraph.SetFontSize(20);
+            doc.Push(paragraph);
+        })
+    };
+    ```
+
+</details>
+
+### Step 2. Prepare data and build exam form
+
 This step initializes the document, defines the exam title, sets up the question list, and renders each question using the function from Step 1.
 
 - Define questions with answer options in array
@@ -83,30 +90,35 @@ This step initializes the document, defines the exam title, sets up the question
 - Get the first paragraph and append the title and the font size using [ApiParagraph](../../usage-api/text-document-api/ApiParagraph/ApiParagraph.md)
 - Run `addQuestion` function for each question
 
-```ts
-let questions = [
-    {
-        text: "1. Which planet is known as the Red Planet?",
-        options: ["Mars", "Venus", "Jupiter"]
-    },
-    {
-        text: "2. What is the name of Earth's natural satellite?",
-        options: ["The Moon", "Europa", "Titan"]
-    },
-    {
-        text: "3. Which star is at the center of our solar system?",
-        options: ["The Sun", "Alpha Centauri", "Polaris"]
-    }
-];
+<details>
+  <summary>Data and building form script</summary>
 
-let doc = Api.GetDocument();
+    ```ts
+    let questions = [
+        {
+            text: "1. Which planet is known as the Red Planet?",
+            options: ["Mars", "Venus", "Jupiter"]
+        },
+        {
+            text: "2. What is the name of Earth's natural satellite?",
+            options: ["The Moon", "Europa", "Titan"]
+        },
+        {
+            text: "3. Which star is at the center of our solar system?",
+            options: ["The Sun", "Alpha Centauri", "Polaris"]
+        }
+    ];
 
-let paragraph = doc.GetElement(0);
-paragraph.AddText("Astronomy Multiple Choice Test");
-paragraph.SetFontSize(32);
-doc.Push(paragraph);
+    let doc = Api.GetDocument();
 
-questions.forEach(question => {
-    addQuestion(question.text, question.options);
-});
-```
+    let paragraph = doc.GetElement(0);
+    paragraph.AddText("Astronomy Multiple Choice Test");
+    paragraph.SetFontSize(32);
+    doc.Push(paragraph);
+
+    questions.forEach(question => {
+        addQuestion(question.text, question.options);
+    });
+    ```
+
+</details>

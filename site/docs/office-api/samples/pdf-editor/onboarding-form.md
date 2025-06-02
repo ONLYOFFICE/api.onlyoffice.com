@@ -116,49 +116,49 @@ This step defines helper functions to add text, borders, and text fields inside 
 <details>
   <summary>Reusable functions script</summary>
 
-```ts
-function addTextFormToParagraph(paragraph, fontSize, key, placeholder, maxCharacters, jc, comb, border) {
-  let textForm = Api.CreateTextForm({
-    key,
-    required: false,
-    comb,
-    placeholder,
-    maxCharacters,
-    multiLine: false,
-    autoFit: true,
-  });
+  ```ts
+  function addTextFormToParagraph(paragraph, fontSize, key, placeholder, maxCharacters, jc, comb, border) {
+    let textForm = Api.CreateTextForm({
+      key,
+      required: false,
+      comb,
+      placeholder,
+      maxCharacters,
+      multiLine: false,
+      autoFit: true,
+    });
 
-  if (border) {
-    textForm.SetBorderColor(200, 200, 200);
+    if (border) {
+      textForm.SetBorderColor(200, 200, 200);
+    }
+
+    paragraph.AddElement(textForm);
+    paragraph.SetFontSize(fontSize);
+    paragraph.SetJc(jc);
   }
 
-  paragraph.AddElement(textForm);
-  paragraph.SetFontSize(fontSize);
-  paragraph.SetJc(jc);
-}
+  function addTextToParagraph(paragraph, text, fontSize, isBold, jc) {
+    paragraph.AddText(text);
+    paragraph.SetFontSize(fontSize);
+    paragraph.SetBold(isBold);
+    paragraph.SetJc(jc);
+  }
 
-function addTextToParagraph(paragraph, text, fontSize, isBold, jc) {
-  paragraph.AddText(text);
-  paragraph.SetFontSize(fontSize);
-  paragraph.SetBold(isBold);
-  paragraph.SetJc(jc);
-}
+  function setBorders(table, color) {
+    table.SetTableBorderTop("single", 4, 0, color, color, color);
+    table.SetTableBorderBottom("single", 4, 0, color, color, color);
+    table.SetTableBorderLeft("single", 4, 0, color, color, color);
+    table.SetTableBorderRight("single", 4, 0, color, color, color);
+    table.SetTableBorderInsideV("single", 4, 0, color, color, color);
+    table.SetTableBorderInsideH("single", 4, 0, color, color, color);
+  }
 
-function setBorders(table, color) {
-  table.SetTableBorderTop("single", 4, 0, color, color, color);
-  table.SetTableBorderBottom("single", 4, 0, color, color, color);
-  table.SetTableBorderLeft("single", 4, 0, color, color, color);
-  table.SetTableBorderRight("single", 4, 0, color, color, color);
-  table.SetTableBorderInsideV("single", 4, 0, color, color, color);
-  table.SetTableBorderInsideH("single", 4, 0, color, color, color);
-}
-
-function getTableCellParagraph(table, row, col, width) {
-  let cell = table.GetCell(row, col);
-  cell.SetWidth("twips", width);
-  return cell.GetContent().GetElement(0);
-}
-```
+  function getTableCellParagraph(table, row, col, width) {
+    let cell = table.GetCell(row, col);
+    cell.SetWidth("twips", width);
+    return cell.GetContent().GetElement(0);
+  }
+  ```
 
 </details>
 
