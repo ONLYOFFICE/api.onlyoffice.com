@@ -1,5 +1,5 @@
 .commentsExternalToolbar {
-  background: rgb(249, 249, 249);
+  background-color: var(--working-with-comments-bg-color);
   border-radius: 3px;
   padding: 15px 24px;
   margin-bottom: 16px;
@@ -38,33 +38,33 @@
   font-weight: 600;
   line-height: 1em;
 
-  color: #444444;
-  border: 1px solid #aaaaaa;
+  color: var(--working-with-comments-button-color);
+  border: 1px solid var(--working-with-comments-button-border-color);
   border-radius: 3px;
   background-color: transparent;
 }
 
 .list-buttons button.active {
-  background: #ff6f3d;
+  background-color: #ff6f3d;
   border: 1px solid #ff6f3d;
   color: #ffffff;
 }
 .list-buttons button.disabled {
-  color: #cccccc;
-  border-color: #cccccc;
+  color: var(--working-with-comments-button-disabled-color);
+  border-color: var(--working-with-comments-button-disabled-border-color);
   pointer-events: none;
 }
 
 .comment-date,
 .comment-author {
   font: inherit;
-  color: #666666;
+  color: var(--working-with-comments-top-color);
 }
 
 .comment-message {
   font: inherit;
   font-style: italic;
-  color: #333333;
+  color: var(--working-with-comments-bottom-color);
   margin-top: 5px;
 }
 
@@ -93,8 +93,9 @@
 
 .commentsExternalToolbar textarea,
 .add-comment-area {
-  border: 1px solid #bfbfbf;
-  background-color: rgb(249, 249, 249);
+  border: 1px solid var(--working-with-comments-comment-border-color);
+  color: var(--working-with-comments-comment-color);
+  background-color: var(--working-with-comments-comment-bg-color);
   resize: none;
   border-radius: 3px;
   width: 95%;
@@ -104,9 +105,9 @@
 
 .add-comment-area {
   outline: none;
-  background: rgb(249, 249, 249);
   border-radius: 3px;
   padding: 15px 24px;
+  margin-bottom: 16px;
   width: 95%;
   height: 100px;
   width: -moz-available;
@@ -117,6 +118,32 @@
   padding: 5px 10px;
   margin-left: 50px;
   height: 40px;
+}
+
+:root {
+  --working-with-comments-top-color: #666666;
+  --working-with-comments-bottom-color: #333333;
+  --working-with-comments-bg-color: #f9f9f9;
+  --working-with-comments-comment-color: #black;
+  --working-with-comments-comment-bg-color: #f9f9f9;
+  --working-with-comments-comment-border-color: #bfbfbf;
+  --working-with-comments-button-color: #444444;
+  --working-with-comments-button-border-color: #aaaaaa;
+  --working-with-comments-button-disabled-color: #cccccc;
+  --working-with-comments-button-disabled-border-color: #cccccc;
+}
+
+html[data-theme="dark"] {
+  --working-with-comments-top-color: #afafaf;
+  --working-with-comments-bottom-color: #d4d4d4;
+  --working-with-comments-bg-color: #1a1a1a;
+  --working-with-comments-comment-color: white;
+  --working-with-comments-comment-bg-color: #161616;
+  --working-with-comments-comment-border-color: #818181;
+  --working-with-comments-button-color: #d4d4d4;
+  --working-with-comments-button-border-color: #cecece;
+  --working-with-comments-button-disabled-color: #6b6b6b;
+  --working-with-comments-button-disabled-border-color: #747474;
 }
 
 @media (hover: hover) {
