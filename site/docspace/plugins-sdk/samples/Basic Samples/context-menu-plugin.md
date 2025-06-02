@@ -134,4 +134,4 @@ This compiles `src/index.ts` to `dist/plugin.js` and runs `scripts/createZip.js`
 
 - You can define multiple context items using different keys
 - Use the `fileType` and `usersTypes` fields to control visibility
-- The `onClick(id)` function receives the selected file’s ID
+- The `onClick(id)` function receives the selected file's ID

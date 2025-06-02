@@ -44,7 +44,7 @@ Also verify that the `scripts/createZip.js` file is present. This script will:
 
 ## Step 3: Review and Extend Plugin Code
 
-By default, the plugin template includes a base implementation inside `src/index.ts`. Here’s an example for supporting `.md` (Markdown) files:
+By default, the plugin template includes a base implementation inside `src/index.ts`. Here's an example for supporting `.md` (Markdown) files:
 
 ```js
 import {
