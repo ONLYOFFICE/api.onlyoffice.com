@@ -152,7 +152,7 @@ if __name__ == "__main__":
 ## Step 3: Update a group
 - PUT request is sent to [/api/2.0/group/:id](../../../usage-api/update-group).
 - The request updates the group details and returns a confirmation if successful.
-- This step simulates renaming or modifying an existing group’s properties.
+- This step simulates renaming or modifying an existing group's properties.
 
 ``` py
 def update_group(group_id, new_group_name):

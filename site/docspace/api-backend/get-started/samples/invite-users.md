@@ -74,9 +74,9 @@ if __name__ == "__main__":
 
 ## Step 1: Create users
 - For each user a POST request is sent to [/api/2.0/people](../../../usage-api/add-member) with: 
-    - `firstName`: User’s first name.
-    - `lastName`: User’s last name.
-    - `email`: User’s email address.
+    - `firstName`: User's first name.
+    - `lastName`: User's last name.
+    - `email`: User's email address.
 - The API returns users, which is required for further operations.
 
 ``` py

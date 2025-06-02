@@ -78,9 +78,9 @@ if __name__ == "__main__":
 
 ## Step 1: Create a user
 - A POST request is sent to [/api/2.0/people](../../../usage-api/add-member) with: 
-    - `firstName`: User’s first name.
-    - `lastName`: User’s last name.
-    - `email`: User’s email address.
+    - `firstName`: User's first name.
+    - `lastName`: User's last name.
+    - `email`: User's email address.
 - The API returns a user ID, which is required for further operations.
 
 ``` py
@@ -132,7 +132,7 @@ if __name__ == "__main__":
 
 ## Step 3: Update user role
 - PUT request is sent to [/api/2.0/people/:userid](../../../usage-api/update-member).
-- The request updates the user’s profile, applying the new role or permissions.
+- The request updates the user's profile, applying the new role or permissions.
 
 ``` py
 def update_user_role(user_id, role):
