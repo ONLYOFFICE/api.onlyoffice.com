@@ -50,10 +50,10 @@ questions.forEach(question => {
 ## Script execution steps
 
 ### Step 1. Define question rendering function
-This step defines the addQuestion function, which renders a multiple-choice question and its answer options as radio buttons inside the document.
+This step defines the `addQuestion` function, which renders a multiple-choice question and its answer options as radio buttons inside the document.
 
 - Create a question paragraph and append the question text and the font size using [ApiParagraph](../../usage-api/text-document-api/ApiParagraph/ApiParagraph.md)
-- For each answer option set a radio button form using [ApiCheckBoxForm](../../usage-api/text-document-api/form-api/ApiCheckBoxForm.md)
+- For each answer option set a radio button form using [ApiCheckBoxForm](../../usage-api/form-api/ApiCheckBoxForm/ApiCheckBoxForm.md)
 - Add option text to the same paragraph
 
 ```ts
@@ -78,8 +78,10 @@ function addQuestion(text, options) {
 ### Step 2. Prepare data and render exam
 This step initializes the document, defines the exam title, sets up the question list, and renders each question using the function from Step 1.
 
+- Define questions with answer options in array
 - Initialize the document using [ApiDocument](../../usage-api/text-document-api/ApiDocument/ApiDocument.md)
 - Get the first paragraph and append the title and the font size using [ApiParagraph](../../usage-api/text-document-api/ApiParagraph/ApiParagraph.md)
+- Run `addQuestion` function for each question
 
 ```ts
 let questions = [
