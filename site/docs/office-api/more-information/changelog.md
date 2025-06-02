@@ -2,6 +2,43 @@
 
 The list of changes for Office JavaScript API.
 
+## Version 9.0
+
+### Checkbox methods
+
+- Added the [ApiCheckBoxForm/GetChoiceName](../usage-api/text-document-api/ApiCheckBoxForm/Methods/GetChoiceName.md) method to Text document API.
+- Added the [ApiCheckBoxForm/SetChoiceName](../usage-api/text-document-api/ApiCheckBoxForm/Methods/SetChoiceName.md) method to Text document API.
+
+### Range methods
+
+- Added the [ApiRange/AddField](../usage-api/text-document-api/ApiRange/Methods/AddField.md) method to Text document API.
+- Added the [ApiRange/MoveCursorToPos](../usage-api/text-document-api/ApiRange/Methods/MoveCursorToPos.md) method to Text document API.
+
+### Document content methods
+
+- Added the [ApiDocumentContent/GetCurrentParagraph](../usage-api/text-document-api/ApiDocumentContent/Methods/GetCurrentParagraph.md) method to Text document API.
+- Added the [ApiDocumentContent/GetCurrentRun](../usage-api/text-document-api/ApiDocumentContent/Methods/GetCurrentRun.md) method to Text document API.
+
+### Document methods
+
+- Added the [ApiDocument/MoveCursorToPos](../usage-api/text-document-api/ApiDocument/Methods/MoveCursorToPos.md) method to Text document API.
+
+### Drawing methods
+
+- Added the [ApiDrawing/GetRotation](../usage-api/text-document-api/ApiDrawing/Methods/GetRotation.md) method to Text document API.
+
+### Run methods
+
+- Added the [ApiRun/GetParentParagraph](../usage-api/text-document-api/ApiRun/Methods/GetParentParagraph.md) method to Text document API.
+
+### Table methods
+
+- Added the [ApiTablePr/SetTableBorderAll](../usage-api/text-document-api/ApiTablePr/Methods/SetTableBorderAll.md) method to Text document API.
+
+### Other methods
+
+- Added the [Base64Img](../usage-api/text-document-api/Enumeration/Base64Img.md) type to the simple type definitions.
+
 ## Version 8.3
 
 ### Bookmark methods
