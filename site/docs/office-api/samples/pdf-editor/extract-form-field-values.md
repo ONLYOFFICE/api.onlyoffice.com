@@ -106,6 +106,9 @@ This step creates helper functions to render text paragraphs and fields in the d
 - Set text, font size, alignment, and indentation
 - Create `addTextField` and `addRadioGroup` helpers using [ApiTextForm](../../usage-api/form-api/ApiTextForm/ApiTextForm.md) and [ApiCheckBoxForm](../../usage-api/form-api/ApiCheckBoxForm/ApiCheckBoxForm.md)
 
+<details>
+  <summary>Text rendering script</summary>
+
 ```ts
 function addTextParagraph(ind, text, fontSize, bold = false, jc = "left") {
   let paragraph = Api.CreateParagraph();
@@ -147,6 +150,8 @@ function addRadioGroup(ind, label, key, options) {
   doc.Push(p);
 }
 ```
+
+</details>
 
 ### Step 2. Build the form structure
 This step initializes the form layout and renders the input blocks: name, email, country, and sex.
