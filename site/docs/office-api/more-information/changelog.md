@@ -26,6 +26,7 @@ The list of changes for Office JavaScript API.
 ### Drawing methods
 
 - Added the [ApiDrawing/GetRotation](../usage-api/text-document-api/ApiDrawing/Methods/GetRotation.md) method to Text document API.
+- Added the [ApiDrawing/SetRotation](../usage-api/text-document-api/ApiDrawing/Methods/SetRotation.md) method to Text document API.
 
 ### Run methods
 
