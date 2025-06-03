@@ -46,7 +46,7 @@ sidebar_position: -5
 
 其中，**documentserver**是安装了ONLYOFFICE文档的服务器名称，**storageFolder**和**storagePath**是将创建和存储文件的路径。您可以设置一个绝对路径，例如*D:\\\folder*。请注意，在Windows操作系统中，必须使用双反斜杠作为分隔符。
 
-如果您想尝试配置编辑器，请修改*\views\editor.ejs*文件中的[参数](../../usage-api/advanced-parameters.md)。
+如果您想尝试配置编辑器，请修改*\views\editor.ejs*文件中的[参数](/docs/docs-api/usage-api/advanced-parameters.md)。
 
 ### 步骤3.安装Node.js环境
 

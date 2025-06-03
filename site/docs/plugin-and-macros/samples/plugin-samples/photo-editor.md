@@ -12,7 +12,7 @@ Connects the [Toast UI Image Editor](https://ui.toast.com/tui-image-editor) for 
 
 Available by default in the cloud, on-premises and desktop versions of ONLYOFFICE editors.
 
-You can remove it following the [desktop](../../tutorials/installing/onlyoffice-desktop-editors.md), [on-premises](../../tutorials/installing/onlyoffice-docs-on-premises.md), or [cloud](../../tutorials/installing/onlyoffice-cloud.md) installation instructions.
+You can remove it following the [desktop](/docs/plugin-and-macros/tutorials/installing/onlyoffice-desktop-editors.md), [on-premises](/docs/plugin-and-macros/tutorials/installing/onlyoffice-docs-on-premises.md), or [cloud](/docs/plugin-and-macros/tutorials/installing/onlyoffice-cloud.md) installation instructions.
 
 The plugin guid: `{07FD8DFA-DFE0-4089-AL24-0730933CC80A}`.
 
@@ -184,13 +184,13 @@ Repository on GitHub: [photoeditor](https://github.com/ONLYOFFICE/onlyoffice.git
 - button
 - init
 - onTranslate
-- [callCommand](../../interacting-with-editors/overview/how-to-call-commands.md#callcommand)
-- [executeMethod ("GetImageDataFromSelection")](../../interacting-with-editors/methods/text-document-api/Api/Methods/GetImageDataFromSelection.md)
-- [executeMethod ("GerVersion")](../../interacting-with-editors/methods/text-document-api/Api/Methods/GetVersion.md)
-- [executeMethod ("PutImageDataToSelection")](../../interacting-with-editors/methods/text-document-api/Api/Methods/PutImageDataToSelection.md)
-- [resizeWindow](../../customization/windows-and-panels.md#interacting-with-a-window)
-- [Asc.scope](../../interacting-with-editors/overview/how-to-call-commands.md#ascscope-object) object
-- [info.editorType](../../interacting-with-editors/overview/how-to-call-commands.md#editorType)
+- [callCommand](/docs/plugin-and-macros/interacting-with-editors/overview/how-to-call-commands.md#callcommand)
+- [executeMethod ("GetImageDataFromSelection")](/docs/plugin-and-macros/interacting-with-editors/methods/text-document-api/Api/Methods/GetImageDataFromSelection.md)
+- [executeMethod ("GerVersion")](/docs/plugin-and-macros/interacting-with-editors/methods/text-document-api/Api/Methods/GetVersion.md)
+- [executeMethod ("PutImageDataToSelection")](/docs/plugin-and-macros/interacting-with-editors/methods/text-document-api/Api/Methods/PutImageDataToSelection.md)
+- [resizeWindow](/docs/plugin-and-macros/customization/windows-and-panels.md#interacting-with-a-window)
+- [Asc.scope](/docs/plugin-and-macros/interacting-with-editors/overview/how-to-call-commands.md#ascscope-object) object
+- [info.editorType](/docs/plugin-and-macros/interacting-with-editors/overview/how-to-call-commands.md#editorType)
 
 ## Support
 

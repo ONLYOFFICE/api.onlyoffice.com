@@ -41,7 +41,7 @@ To connect the editors to your website, specify the path to the editors installa
 
 where the **documentserver** is the name of the server with the ONLYOFFICE Docs installed and the **storage-path** is the path where files will be created and stored. You can set an absolute path.
 
-If you want to experiment with the editor configuration, modify the [parameters](../../usage-api/advanced-parameters.md) in the *DocEditor.aspx* file.
+If you want to experiment with the editor configuration, modify the [parameters](/docs/docs-api/usage-api/advanced-parameters.md) in the *DocEditor.aspx* file.
 
 ## Step 3. Install the prerequisites
 

@@ -4,7 +4,7 @@ sidebar_position: -1
 
 # 对文档编辑的外部访问
 
-以下示例将向您展示如何从外部源编辑文本文档、电子表格、演示文稿和可填写的表单。要实现这一点，请使用我们的 [自动化 API](../../usage-api/automation-api.md)。
+以下示例将向您展示如何从外部源编辑文本文档、电子表格、演示文稿和可填写的表单。要实现这一点，请使用我们的 [自动化 API](/docs/docs-api/usage-api/automation-api.md)。
 
 ## 处理评论
 

@@ -5,7 +5,7 @@ This example demonstrates how to retrieve hash-based settings from the embedded 
 ## Before you start
 
 Please make sure you are using a server environment to run the HTML file because the JavaScript SDK must be launched on the server.
-You need to [add the URL](../../get-started/get-started.md#step-1-specifying-the-docspace-url) of your server's root directory to the **Developer Tools** section of DocSpace.
+You need to [add the URL](/docspace/javascript-sdk/get-started/get-started.md#step-1-specifying-the-docspace-url) of your server's root directory to the **Developer Tools** section of DocSpace.
 
 <details>
   <summary>Full example</summary>
@@ -121,7 +121,7 @@ The API JavaScript file can normally be found in the following DocSpace folder: 
 
 ## Step 2. JavaScript SDK logic
 
-Create a script block to configure and initialize the SDK. Use the [getHashSettings()](../../usage-sdk/methods.md#gethashsettings) method to retrieve current settings from the URL hash.
+Create a script block to configure and initialize the SDK. Use the [getHashSettings()](/docspace/javascript-sdk/usage-sdk/methods.md#gethashsettings) method to retrieve current settings from the URL hash.
 
 ``` ts
 document.getElementById("button").onclick = async () => {
