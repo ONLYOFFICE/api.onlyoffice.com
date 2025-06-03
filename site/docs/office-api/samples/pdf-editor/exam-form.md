@@ -11,7 +11,7 @@ function addQuestion(text, options) {
 
     options.forEach(option => {
         paragraph = Api.CreateParagraph();
-        let checkBoxForm = Api.CreateCheckBoxForm({"tip": "Specify your marital status", "required": true, "placeholder": text, "radio": true});
+        let checkBoxForm = Api.CreateCheckBoxForm({"tip": option, "required": true, "placeholder": text, "radio": true});
         checkBoxForm.SetRadioGroup(text);
         paragraph.AddElement(checkBoxForm);
         paragraph.AddText(option);
