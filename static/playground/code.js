@@ -55,6 +55,13 @@ var Placeholders = {
                   "    let version = await Editor.callMethod(\"GetVersion\");\n" +
                   "    console.log(version);\n" +
                   "    await Editor.callMethod(\"PasteHtml\", [\"<span>Hello, </span><span><b>world</b></span><span>!</span>\"]);\n" + 
+                  "    var result = await Editor.callCommand(function() {\n" +
+                  "        let doc = Api.GetDocument();\n" +
+                  "        let searchResults = doc.Search(\"present\");\n" +
+                  "        searchResults[0].SetBold(true);\n" +
+                  "        return searchResults[0].ToJSON();\n" +
+                  "    });\n" +
+                  "   console.log(result);\n" +                  
                   "})();\n"
     },
     "cell" : {
@@ -74,6 +81,13 @@ var Placeholders = {
                   "    let version = await Editor.callMethod(\"GetVersion\");\n" +
                   "    console.log(version);\n" +
                   "    await Editor.callMethod(\"PasteHtml\", [\"<span>Hello, </span><span><b>world</b></span><span>!</span>\"]);\n" + 
+                  "    var result = await Editor.callCommand(function() {\n" +
+                  "        let doc = Api.GetDocument();\n" +
+                  "        let searchResults = doc.Search(\"present\");\n" +
+                  "        searchResults[0].SetBold(true);\n" +
+                  "        return searchResults[0].ToJSON();\n" +
+                  "    });\n" +
+                  "   console.log(result);\n" +                  
                   "})();\n"
     },
     "slide" : {
@@ -98,6 +112,13 @@ var Placeholders = {
                   "    let version = await Editor.callMethod(\"GetVersion\");\n" +
                   "    console.log(version);\n" +
                   "    await Editor.callMethod(\"PasteHtml\", [\"<span>Hello, </span><span><b>world</b></span><span>!</span>\"]);\n" + 
+                  "    var result = await Editor.callCommand(function() {\n" +
+                  "        let doc = Api.GetDocument();\n" +
+                  "        let searchResults = doc.Search(\"present\");\n" +
+                  "        searchResults[0].SetBold(true);\n" +
+                  "        return searchResults[0].ToJSON();\n" +
+                  "    });\n" +
+                  "   console.log(result);\n" +                  
                   "})();\n"
     },
     "form" : {
@@ -115,6 +136,13 @@ var Placeholders = {
             "    let version = await Editor.callMethod(\"GetVersion\");\n" +
             "    console.log(version);\n" +
             "    await Editor.callMethod(\"PasteHtml\", [\"<span>Hello, </span><span><b>world</b></span><span>!</span>\"]);\n" +
+            "    var result = await Editor.callCommand(function() {\n" +
+            "        let doc = Api.GetDocument();\n" +
+            "        let searchResults = doc.Search(\"present\");\n" +
+            "        searchResults[0].SetBold(true);\n" +
+            "        return searchResults[0].ToJSON();\n" +
+            "    });\n" +
+            "   console.log(result);\n" +                  
             "})();\n"
     },
 };
