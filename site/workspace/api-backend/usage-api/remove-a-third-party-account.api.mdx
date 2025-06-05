@@ -1,0 +1,71 @@
+---
+id: remove-a-third-party-account
+title: "Remove a third-party account"
+description: "Removes the third-party storage service account with the ID specified in the request."
+sidebar_label: "Remove a third-party account"
+hide_title: true
+hide_table_of_contents: true
+api: eJydUrFu2zAQ/RXi1sqW4nZouKV1gBpdAjudEg80ebIYSCJLnpyogv69OEqp46ZTNVH3jnfvPb4BSB0jyAcobY0xv69sMAuvAvXCtoTHoMi6FvYZRNRdsNSDfBjgpqPKBfsrod9QGQw8JKAykMFzsISwH/cZGIw6WJ+GSNhi404YBVUo6M2qSC6oI4qI4WQ1CqW161oSz5aq1LxZi+hR29KiEbZNtYA/O4y0hAzm4xdnepADaNcStsRH5X1tdaKZP0UmMUDUFTaKT9R7BAnu8ISaIAMfnMdAFiOjPriTNRg2hv8uldzNmNisl2JDwkahBIsRrkzsSle/wrcvqvE1ynON2x8hHtzL4mr18REyvtIKfx46dSSQBc5E05NggDF9rDt618aJ7qoo3vNcY42E5sLt2V3I/teoafmn4ur9vh+tmqOBBrirQaqcAQkmMWGTFVUgIVfe5qtlkU/JSwQTv3w4Gy8fisX1/sMInL9wwhBT/LpQg4SKyEeZ50PlIo1y8C4Qd55UsOpQT64wNtEsVVcTSKidVnUqjxnwnUv4c3G9YoVvIr9jH6Zx/wz+H3+Ut9+xhwwse1FNcAatahi9uJvMYaO35+zOQfk7e8XIA0uXFlniBvjqmqZrLfVil3wR29vdvbi527B+DHF6jVoRss7xN0yFXH8=
+sidebar_class_name: "delete api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Remove a third-party account"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"delete"}
+  path={"/api/2.0/files/thirdparty/{providerId:[0-9]+}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Removes the third-party storage service account with the ID specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"providerId":{"description":"Provider ID. It is a part of the folder ID. Example: folder ID is \"sbox-123\", then provider ID is \"123\".","type":"integer"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Deleted third-party account","content":{"application/json":{"schema":{"type":"object"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

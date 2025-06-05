@@ -17,13 +17,13 @@ This method doesn't have any parameters.
 
 ## Returns
 
-[FormData[]](../../Enumeration/FormData.md)
+[FormData](../../Enumeration/FormData.md)[]
 
 ## Example
 
 This example showh how to get the data for all forms added to the document.
 
-```javascript
+```javascript editor-docx
 let doc = Api.GetDocument();
 let paragraph1 = doc.GetElement(0);
 let checkBox = Api.CreateCheckBoxForm({key: "BestCompany"});

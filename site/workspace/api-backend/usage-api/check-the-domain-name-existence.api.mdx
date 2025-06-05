@@ -1,0 +1,71 @@
+---
+id: check-the-domain-name-existence
+title: "Check the domain name existence"
+description: "Checks if a web domain name specified in the request already exists or not."
+sidebar_label: "Check the domain name existence"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVMtu2zAQ/BViz0zkGj20uqVp0Ba9FHmgh8CHtbS2mFAkQ1JxVEH/XiwpO1aSFihQH2yZ+9DM7CwHiLgNUN5Ci0oH8o/ki8+2RWUCrCQEqjqvYg/l7QBnXWysV78wKmu+EtbkudIT1iBh51UkWI0rCTWFyivHaVDCeUPVfRBqI1DsaC3q1F4YbEkER5XaKKqFMiI2JDw9dBSiQM1te0FPKsQgrBfGxlOQMCV8snUP5QCVNZFM5Ed0TqsqgSvuAr96gFA11CI/xd4RlGDXd1RFkOC8deSjosBRBsO/c+Q/52hB7ruE6JXZwpg+jCk4a0JutVwsXnf6ZK0mNOIRdUeliL4jcTJTIhOVYoM6vIzVlgLzz0kg/5n1Or8eMtz3i3evEd4YnMZLNXBWS7GxNZSwpaQXxgZKKNCpYnm6KI78kqGGIlMAdg2fh2SazmsooYnRhbIohsaGOJaDsz6OIOERvcK1zspxLAPbYKcjlKBthTodjxK4Zh7+sPi4ZE5HRr1i6rndm3Y9SIJOfaceJChm3+SwnIwwr01ysLaXz967eMLWaXr2zsET3HFj05tU5Aw4t23bGRV7cZWEEZcXV9fi7Mc3FoB8yAPQGGlPNMQWzVHvtEJpP15ZhkzFxpwN82gt/vP2TeJFeoqF06gM400jHiaH3LKyIGF5ugB5dKswxulekTA5ZSWnmd/CMKwx0I3X48jHDx15vnRWzxbhf6PcT4qtdU99UjdRPblmaJyuuzzfF3sxyn3FWVWRi3/NXR35/8vFNUhYTxdOa2su8bjjywh3UAJIsEn5ZLt0NoBGs+1wy7m5JZuIV2zuwfvkwemBSe1Dpj8COLejnHjwN7N6s2QYssPH8ZCfQ3+sOOxAzubZrsZx/A0NFB1F
+sidebar_class_name: "get api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Check the domain name existence"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/mailserver/domains/exists"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Checks if a web domain name specified in the request already exists or not.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"name":{"description":"Web domain name","type":"string"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Boolean value: true - domain name exists, false - domain name does not exist","content":{"application/json":{"schema":{"type":"boolean"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

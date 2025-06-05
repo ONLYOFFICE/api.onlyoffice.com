@@ -1,0 +1,71 @@
+---
+id: delete-contact-information
+title: "Delete contact information"
+description: "Deletes the selected information from the contact with the ID specified in the request."
+sidebar_label: "Delete contact information"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVE1v20YQ/SuDuXZokrLbxjzFsdyGcWU4kZOgMHRYkSNxY5LL7i7tqIL+ezFLSrGaIEiB6kTtzrx9bz7eFr1aO8zusbBNfGlarwrvcEHouOit9hvM7rd40fvKWP238tq0r1mVbCXHsiqR8Mlqz7jYLQhLdoXVnYRhhlOu2bMDXzE4rrnwXIJuV8Y2AQlW1jThthhehiftq3CQT8F1XOiVDinhzPJfPTt/goTj5ytTbjDboqRz6+VTdV2tiwAff3JCY4uuqLhR8uU3HWOGZvmJC4+EnTUdW6/Z7WFU4XUpf46ljKWBfIq0R9Gt5zVb3BF+L+W5YMuFseW3UcJPpLnOtG5gNEmSHwJG+r9qkLcrcxcitv9mSDi8NxydTpCQ276RSbitTMtIeNUoXSPhR146GQrC+YOAEN49ae8DyB+6feAyF86/qYKXxjwg4UVZWnYu3D/yG9PbVgnSbDPvVCEIv88G7Fe1WQ90/lSVMRIzv0HC/PItEr5Ry2W4vMhnSPjhGr8ay/sEIgiMCVKIIJAmmEAEI2+CU4ggUCc4gwhG9gQ/QwR7AQS/QAR7DQS/QgSjDIIXIfCghOAcIhjFEKRCIQgiSIXDKIogFRpBGEEqLGbzG4JUSOSXbwlSYTCIJEiFwEU+I0jl8Q/XC+nJZ9V0tTQuldG8VJ7Xxm5+sKGH5ESSp8o/nxnnrW7XR2Gu7zpj/UvT1huzWumCTwrTPH/4RjX8fYzXpmHJyN2t1Y064ro0pmbVHsV72w/x0/8qKp2cnqFsmdc+HIy7JFP/0aquGxeR8CxJv968960anZDLANOwr0yJGZbB6mSblK8ww1h1Op6cJLH46ugr8fZgMNl9Ep0vftrFpfIq3n45QHFe+8jWBePtbY0ZVt53LovjbWWc32VbKbhEPiqr1bIeFlfuBsYr1dcivzaFqsPxjlByjq9fJOcTEfvM7OdiEgPcNy3/UGzV6WveIKGWslTDNWEbWn2cG+okLvTui2df7Rty5LnJ4KOJ+Gm7MuG5Q5uapm+138A8VAfeXc3v4OI2lyqwdUN7auVZ1O7+AZ4cQjY=
+sidebar_class_name: "delete api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Delete contact information"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"delete"}
+  path={"/api/2.0/crm/contact/{contactid:[0-9]+}/data/{id:[0-9]+}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Deletes the selected information from the contact with the ID specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"contactid":{"description":"Contact ID","type":"integer"},"id":{"description":"Contact information record ID","type":"integer"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Contact information","content":{"application/json":{"schema":{"type":"object","properties":{"InfoType":{"type":"integer","format":"int32","enum":["Phone","Email","Website","Skype","Twitter","LinkedIn","Facebook","Address","LiveJournal","MySpace","GMail","Blogger","Yahoo","MSN","ICQ","Jabber","AIM","VK"],"description":"[0 - Phone, 1 - Email, 2 - Website, 3 - Skype, 4 - Twitter, 5 - LinkedIn, 6 - Facebook, 7 - Address, 8 - LiveJournal, 9 - MySpace, 10 - GMail, 11 - Blogger, 12 - Yahoo, 13 - MSN, 14 - ICQ, 15 - Jabber, 16 - AIM, 17 - VK]","example":"1"},"Category":{"type":"integer","format":"int32","example":"0"},"Data":{"type":"string","example":"support@onlyoffice.com"},"CategoryName":{"type":"string","example":"Home"},"IsPrimary":{"type":"boolean","example":"true"},"ID":{"type":"integer","format":"int32","example":"1234"}},"title":"ContactInfoWrapper"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

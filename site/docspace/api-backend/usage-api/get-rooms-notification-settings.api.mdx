@@ -1,0 +1,63 @@
+---
+id: get-rooms-notification-settings
+title: "Get room notification settings"
+description: "Returns a list of rooms with the disabled notifications."
+sidebar_label: "Get room notification settings"
+hide_title: true
+hide_table_of_contents: true
+api: eJylVktv2zgQ/ivEXHLRWo7Tk27epFu0u9gu8kAOgdHQ0shiI5FacpTUa+i/F0NKsmQniIu92BLnwXl88412QHLjIHmAGyRSeuNELP42pHKVSlJGO1hFYGq0/u1zBglskK6NqdxYrbeGCCy62miHDpIdLOZz/svQpVbVrAkJsLXQI2vh9uap0YSa2ErWddlpxN8dm+7ApQVWkp9oWyMkYNbfMSWIoLYcJqlwcR/F+5qZcnJdYuZzGqlLa+UWIlCEk/POTRsdZHVboCiVI2FyYdmXeFFUCCpQ9FdMknYziEA3ZckiSMg2GAH+kFXNrw87UFyF88XFhwgcWaU3kIAzFQrCH5zG2pgSpQ6m7aptI5BZpti3LP8Z5ZjL0uFr4YYwX+0EB0eKOBR4s9tXZLgOqWlCw7oKKU24QQsR5MZWksLRxYJ1S6WffqHKh80qLOYjra4unHka8joStVwXR5Iad2KIQfnSZHiSQXtCoe6trGu0XTQf5ufHQ3GnZUOFseo/zLxTh2ljFW09FqRLv7H82xPyAViUGUTwYhUhrNpoB7+jtGghefBvy1r9idvh7DV96VTaq39dNlQsXlf8WqOf+4dVuzoE0TVSY7UT8teRXyEVpqMTbrOkAhKIZa3ixWwe9ziMx4ax9w5cG/uM1vnSNLaEBHZr6fDOli0cxnjjdUVqdK42TeAxiOBZWsWheVR0xqEruWxK7u+Rp6sgEnfXf3EnV/se3TArBVfTTu1x7hty5PLOobg05kmhYCPU1KXK3CArbzl2GIFis9SbMFi7Ng73FET10S0fNaEVW9NY0Ti07FhInYlaOvdiLDfc8yo7WHuH7LkDzymuz4Ky2H25vxW35gl1ezZxGnxF3cMf/Qh9ub/lq6Zofa9my0mhhHIiQ0JbKY2ZWG897s6W3TB5nTNRoMx8AF1RJzd2Re102mgYhz0bSX9wGEnQE3lpXgLkJ7cKTyERsDhAYyzt+WVy6DHoC+2SOPa3zowutybPVYqz1FThcBEPZME8zQU/3dSr++6Yul+WMvPTLDMh0xSdE2REbQ1hSpgJi840NkU3MEMC9/z/jnagu55A9tX0B5dG60DxB0Vl6ZXoxMdjMbE+PWsGvtK5X1g/fnNqoyU1Ft+HG0N6UOf5yURu7EFcM8H71FdWVI0jsUZh1iQ9Jp+V9KB83JNboI1JRx4F6qw2StNMfCaGNY8nZkIyv4aJ3xOrn+HHUSKPsz26x/kdMEbL77nxaXdba1kr5kO0LiR8MTufzblMtXFUSb9UO8efkDzDv/n1Nindbv8x9382Rdce/uqJ61IqzbE1ga3D2njg3kEEi9ncL4chnLEv/jT162MVQWEcsdluWBstH//boOX1utqvh7Ahe27gfeN5HZZpijX5PVI2AT0HH6u8H4Yl9+njLUR+1qeAC5zePbD3XqS3Y9/TFRAi4F/ez69a7HYBzW076AfRmxYDQwZtrvKqbdufdB44lw==
+sidebar_class_name: "get api-method"
+info_path: site/docspace/api-backend/usage-api/api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get room notification settings"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/settings/notification/rooms"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns a list of rooms with the disabled notifications.
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Room notification settings","content":{"application/json":{"schema":{"type":"object","properties":{"response":{"type":"object","properties":{"disabledRooms":{"type":"array","items":{"type":"object"},"description":"The list of rooms with the disabled notifications.","nullable":true,"example":[{"int":1234,"string":"some text","boolean":true}]}},"additionalProperties":false,"description":"The rooms notification settings.","title":"RoomsNotificationSettingsDto"},"count":{"type":"integer","format":"int32"},"links":{"type":"array","items":{"type":"object","properties":{"href":{"type":"string"},"action":{"type":"string"}}}},"status":{"type":"integer","format":"int32"},"statusCode":{"type":"integer","format":"int32"}},"title":"RoomsNotificationSettingsWrapper"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

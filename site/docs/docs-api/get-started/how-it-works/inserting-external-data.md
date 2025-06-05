@@ -23,14 +23,16 @@ The steps below explain the process of inserting data into the spreadsheet by an
 2. Specify the [document.referenceData](../../usage-api/config/document/document.md#referencedata) parameter in the initialization config of the source spreadsheet:
 
    ``` ts
-   const docEditor = new DocsAPI.DocEditor("placeholder", {
+   const config = {
      document: {
        referenceData: {
          fileKey: "BCFA2CED",
          instanceId: "https://example.com",
        },
      },
-   })
+   };
+
+   const docEditor = new DocsAPI.DocEditor("placeholder", config);
    ```
 
 3. When the user copies the data from the source spreadsheet, the clipboard receives a list of the following values:
@@ -44,11 +46,13 @@ The steps below explain the process of inserting data into the spreadsheet by an
 5. Specify the [onRequestReferenceData](../../usage-api/config/events.md#onrequestreferencedata) event handler in the initialization config of the destination spreadsheet for the *Paste link* and *Update values* buttons to be displayed:
 
    ``` ts
-   const docEditor = new DocsAPI.DocEditor("placeholder", {
+   const config = {
      events: {
        onRequestReferenceData,
      },
-   })
+   };
+
+   const docEditor = new DocsAPI.DocEditor("placeholder", config);
    ```
 
 6. If the clipboard has the source spreadsheet data specified in step 3, and the destination spreadsheet has the *onRequestReferenceData* event handler in the initialization config, then the *Paste link* button is displayed in the dialog box.
@@ -80,7 +84,7 @@ The steps below explain the process of inserting data into the spreadsheet by an
      const link = event.data.link
      const referenceData = event.data.referenceData
      const path = event.data.path
-   }
+   };
    ```
 
 <img alt="Update values" src="/assets/images/editor/update-values.png" width="700px" />
@@ -100,7 +104,7 @@ The steps below explain the process of inserting data into the spreadsheet by an
      },
      token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaWxlVHlwZSI6Inhsc3giLCJwYXRoIjoic2FtcGxlLnhsc3giLCJyZWZlcmVuY2VEYXRhIjp7ImZpbGVLZXkiOiJCQ0ZBMkNFRCIsImluc3RhbmNlSWQiOiJodHRwczovL2V4YW1wbGUuY29tIn0sInVybCI6Imh0dHBzOi8vZXhhbXBsZS5jb20vdXJsLXRvLWV4YW1wbGUtZG9jdW1lbnQueGxzeCJ9.UXosmM-E_Cu9j9QGSlcj9FEoSu5m-zCS4b6FxO_2k7w",
      url: "https://example.com/url-to-example-document.xlsx",
-   })
+   });
    ```
 
    Where the **example.com** is the name of the server where **document manager** and **document storage service** are installed. See the [How it works](./inserting-external-data.md) section to find out more on ONLYOFFICE Docs service client-server interactions.
@@ -126,13 +130,15 @@ The steps below explain the process of inserting data into the spreadsheet by an
        path: "https://example.com/external-url.docx",
        windowName: event.data.windowName,
      })
-   }
+   };
    
-   const docEditor = new DocsAPI.DocEditor("placeholder", {
+   const config = {
      events: {
        onRequestOpen,
      },
-   })
+   };
+
+   const docEditor = new DocsAPI.DocEditor("placeholder", config);
    ```
 
    Where the **example.com** is the name of the server where **document manager** and **document storage service** are installed. See the [How it works](./how-it-works.md) section to find out more on ONLYOFFICE Docs service client-server interactions.
@@ -165,11 +171,13 @@ The steps below explain the process of inserting data into the spreadsheet by an
        token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaWxlVHlwZSI6Inhsc3giLCJwYXRoIjoic2FtcGxlLnhsc3giLCJyZWZlcmVuY2VEYXRhIjp7ImZpbGVLZXkiOiJCQ0ZBMkNFRCIsImluc3RhbmNlSWQiOiJodHRwczovL2V4YW1wbGUuY29tIn0sInVybCI6Imh0dHBzOi8vZXhhbXBsZS5jb20vdXJsLXRvLWV4YW1wbGUtZG9jdW1lbnQueGxzeCJ9.UXosmM-E_Cu9j9QGSlcj9FEoSu5m-zCS4b6FxO_2k7w",
        url: "https://example.com/url-to-example-document.xlsx",
      })
-   }
+   };
    
-   const docEditor = new DocsAPI.DocEditor("placeholder", {
+   const config = {
      events: {
        onRequestReferenceSource,
      },
-   })
+   };
+
+   const docEditor = new DocsAPI.DocEditor("placeholder", config);
    ```

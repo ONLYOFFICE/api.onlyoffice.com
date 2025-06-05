@@ -58,13 +58,15 @@ const data = {
          },
        ],
      })
-   }
+   };
   
-   const docEditor = new DocsAPI.DocEditor("placeholder", {
+   const config = {
      events: {
        onRequestHistory,
      },
-   })
+   };
+
+   const docEditor = new DocsAPI.DocEditor("placeholder", config);
    ```
 
    Where
@@ -119,13 +121,15 @@ In addition to the actions described in the [above question](#which-methods-can-
       url: "https://documentserver/url-to-edited-document.docx",
       version,
     })
-  }
+  };
   
-  const docEditor = new DocsAPI.DocEditor("placeholder", {
+  const config = {
     events: {
       onRequestHistoryData,
     },
-  })
+  };
+
+  const docEditor = new DocsAPI.DocEditor("placeholder", config);
   ```
 
   The object containing the valid links to the current document version (*url*) and to the previous document version (*previous.url*) as well as the IDs (*key* and *previous.key*) must be passed to the configuration file. *changesUrl* archive file must be also available and downloadable from the browser to be able to display the changes.

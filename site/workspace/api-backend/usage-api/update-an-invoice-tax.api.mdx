@@ -1,0 +1,71 @@
+---
+id: update-an-invoice-tax
+title: "Update an invoice tax"
+description: "Updates the selected invoice tax with the parameters (name, description, rate) specified in the request."
+sidebar_label: "Update an invoice tax"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVd9v2zYQ/leEe9owJpLlDGsFDEOaBJgxrAsSFwOa5uEsnSO2FMmRp8Saof99ICW7FurUL+MDQdzddz8+kndbYHzyUDxA6Zp0oZ+NLMnDowBPZeskd1A8bOGy5do4+S+yNPp3wopcwDjCCgS8OMkEj/2jgIp86aQNZlDAB1shk0+4psSTopKpSuQQJGHcJC+S66i16LAhJueTHzQ2JJIDTyJxyPRj4i2Vci2jj4hy9E9Lns9BwHh8Z6oOii2URjNpDke0VskyZp5+9iGvLfiypgbDiTtLUIBZfaaSQYB1xpJjST5oZRX2aVFL3CSLaxA7qNRMT+SgFxAy/xbwnl5isVG7h3l2Uj8F1MT6NfCh9IiPQNDr4Kjdo3TbrEK+cQXmvDXaDwXnWfatm+EaJzcH4v+i+P3I2bQkAbTBxqogiha9gOspT68DDg17AXcjN9PyBayNa5ChgMq0K0UTFxHTC7hyhEx/nQiYZ3l2NsvPZhfLPC9m8+Jidv7z/Jc3+Xz+8auXd91pNhbVsUj7TNtWVpPI2bjOjmy7FbmT3irsTpP9p/xCyUfUHbL/IgN0KVmdAqHG8QtcPiOju29Qqe9jWqcSNokPlglGVMDfOrOWij64E/BPn9JbZ6q2ZB+OZKyiQRbg5+jt5rfWk/sVq0Zq6dkhm/DoBfBQENw0VpmO6G+Hdkj+CvVNJfkg8soYRagnodm1NFpfk6LJ4/qe/eL6wHDXNQ4uV2qe5xPkLJ9fTFIeG/QSNyFpO/5iARfZ7Mi31Ti2baqil4a4NhUUYNv48pBrKCBFK9P8PEvDBBi/eMq4SbeyKh6ys7ePP/UQ5oF7JufjOGjD7UDNbH2RptvaeO6LrTWOg+UzOokrNTzooBtSW2OrQpnKlKiiuBcQMFP1m+xtHqo6GEH3oZUM7o4Ooj2paOUf1IEAGeqvB/WuLU+xkZDQq+6+Do6bHfFD48/2yP37mxK8Fw/dN+tD4LWJCY0XdmWaptWSu+Q+8pfc3dwvk8vbReCJnB8cqTAlGfr+Px6kj1c=
+sidebar_class_name: "put api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Update an invoice tax"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"put"}
+  path={"/api/2.0/crm/invoice/tax/{id:[0-9]+}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Updates the selected invoice tax with the parameters (name, description, rate) specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"id":{"description":"Tax ID","type":"integer"},"name":{"description":"New tax name","type":"string"},"description":{"description":"New tax description","type":"string"},"rate":{"description":"New tax rate","type":"number"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Updated invoice tax","content":{"application/json":{"schema":{"type":"object","properties":{"Name":{"type":"string","example":"Name"},"Description":{"type":"string","example":"Description"},"Rate":{"type":"number","format":"double","example":"Rate"},"CreateOn":{"type":"string","example":"2020-12-14T22:13:41.5378233Z"},"CreateBy":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"},"CanEdit":{"type":"boolean","example":"true"},"CanDelete":{"type":"boolean","example":"true"},"ID":{"type":"integer","format":"int32","example":"1234"}},"title":"InvoiceTaxWrapper"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

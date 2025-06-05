@@ -1,0 +1,71 @@
+---
+id: get-the-previous-or-next-conversation-id
+title: "Get the previous or next conversation ID"
+description: "Returns the previous or next conversation ID filtered with the parameters specified in the request."
+sidebar_label: "Get the previous or next conversation ID"
+hide_title: true
+hide_table_of_contents: true
+api: eJytV19v4zYM/yqEnlrMveS627Dz2+3aYcWwYWhvT2lQMBYT6yZLnkS3zWX57gNlu7HTrGt760Mhi6T4n/xloxhXUeUzVaGxk4/e3VKIyMa7qOaZilQ0wfBa5bON+tBw6YP5ksg/E2oKIhkItcrUXTBMar6dZ0pTLIKphU3l6pK4CS4ClwR1oFvjmwg+gKN7hmKgES7OYGksUyANd4bLVgQDVsQUIsSaCrM0pMG4RAv0V0OR36hMdccfvV6rfKMK75gcyxHr2poiaZh8jmLSRsWipArlxOuaVK784jMVrDJVB19TYENRqEbL/7E/4jlUFCOuSEz2y2RL0YRAbuyRyvr3jWNaUVDbTGkTqGjf2n/6jJbGUQSzfEa0TARHpEnncK2E9VrB0ocHqQyulUh113Lc2RM5GLcSc5bepkTu2/JTugfhz+EtnIBxC3+fwSmcQCTHGXwnpxqr3asYAq5VpgxTFQfR7b0XbaFCbq++PVXbbaYalyrokQHDYoTIyE3MoWWGIw4NHWfQfizRRvnyAdBaOHKNtcejYMX/tnHhvSV0ySRkxqKsyHF8Mkk4zkiJEQaiKW2e87aWh4TefCH4hse01ps9Z7p6e6EfNQXj9c0y+OqxH1eMgSEShqKElhM0Mr02nd+/G+pk/1jjudP/vz5T1T4wtr2+52E3L1KuvLNreGAeVwfcGWthQaBNrC2uSXe5e1m4Jc43qHWgeKBufkVjoaOCsMJdaYp2yI3KqM813FGQGVeQuSV9qHfZP1Md++cpk8Y+pEi2w8Lf3xyah5dUmNrI6Ou44OLsK0dCu5T2FV2cxTRscRXBGvcnafFLPGIMK/q30fsqC9oyfWzDJxnD7Psy7vbQKKILr6XkUIq9SWslHgppjSu6ieYLPVbyW1MtKIiv4yr1rtuIq1c3Te+eD+zDwbl/5QNDosFinRpU9gvGgpw2bnWtpDWuk1B/c8g9GW03BVpyGg9pGbbmfggjlHhLMl07+Vd1YxMp3LTb7WDd/hEpQEv/2opNf4JBYu1dbKHD6XT6bOzw5KJX2YvRzBMDU+x8N317IBwOO3xHOsWvIi69VrlaUQJGyKXK1QRrMzl9M50kwDi0c7IxOp9NT97Pv9lONg8oJz8Sj/4WF4+3SjoriEhClE2wKlclcx3zyWRT+sjbfCMjWjhvMRhc2DacQmuNXmJjxSPrC7TpWrrJhz3yD9P3KTUDFHslcWqfO4hlH+KHtfmFUg1IZMqWnCmHlVBHsilUkojLHQA9v8eqttQDyOkI8/U9skNes+l8h4JmAg3mexCkvxzt8yQ22Lbpe7ANe6HxVtqpHy6P3e1w0qcXux8I0/luKO64B0Os5djNlR3T3ijo7drvz9l0LuvcLRNyYMMSQfXRV1XjDK/hKhUOXJ5ffYIPv19IgVCIbUwtMkkhbP8BK/R6Pw==
+sidebar_class_name: "get api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get the previous or next conversation ID"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/mail/conversation/{id:[0-9]+}/{direction:(next|prev)}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns the previous or next conversation ID filtered with the parameters specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"id":{"description":"Head message ID of the current conversation","type":"integer"},"direction":{"description":"Defines if the previous or next conversation is needed: \"prev\" for previous, \"next\" for next","type":"string"},"folder":{"description":"Folder type: 1 - inbox, 2 - sent, 5 - spam","type":"array","items":{"type":"integer","format":"int32"}},"unread":{"description":"Conversation status: unread (true), read (false), or all (null) conversations","type":"array","items":{"type":"boolean"}},"attachments":{"description":"Defines if a conversation has attachments or not: with attachments (true), without attachments (false) or all (null) messages","type":"array","items":{"type":"boolean"}},"period_from":{"description":"Start search period date","type":"array","items":{"type":"integer","format":"int64"}},"period_to":{"description":"End search period date","type":"array","items":{"type":"integer","format":"int64"}},"important":{"description":"Specifies if only important conversations will be displayed or not","type":"array","items":{"type":"boolean"}},"from_address":{"description":"Mail address from which the conversation messages were received","type":"string"},"to_address":{"description":"Mail address to which the conversation messages were sent","type":"string"},"mailbox_id":{"description":"Recipient mailbox ID","type":"array","items":{"type":"integer","format":"int32"}},"tags":{"description":"IDs of tags linked to the target conversation","type":"array","items":{"type":"integer","format":"int32"}},"search":{"description":"Text to search in the conversation bodies and subjects","type":"string"},"page_size":{"description":"Number of conversations on the page","type":"array","items":{"type":"integer","format":"int32"}},"sortorder":{"description":"Sort order by date: \"ascending\" or \"descending\"","type":"string"},"with_calendar":{"description":"Specifies if the conversations have a calendar or not","type":"array","items":{"type":"boolean"}},"user_folder_id":{"description":"User folder ID","type":"array","items":{"type":"integer","format":"int32"}}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Head message ID of the previous or next conversation","content":{"application/json":{"schema":{"type":"integer","format":"int64"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

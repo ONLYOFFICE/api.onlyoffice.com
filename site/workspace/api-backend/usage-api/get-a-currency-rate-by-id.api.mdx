@@ -1,0 +1,71 @@
+---
+id: get-a-currency-rate-by-id
+title: "Get a currency rate by ID"
+description: "Returns a currency rate by ID."
+sidebar_label: "Get a currency rate by ID"
+hide_title: true
+hide_table_of_contents: true
+api: eJytU8GO0zAQ/ZVorpgm7e6B9W3ZFlFxQe1WHKoe3GTaeJXYZjxZCFH+HU2yYVuBBAdyiCzPvOfn5zcdsDlH0HvIqU4fGiJ0ucUIBwUR84Yst6D3Hdw3XHqyPwxb7z6iKZAERWgKUPCNLCMc+oOCAmNONkgbaNggN+RiYpJ85G4TMozJsU3WyxkoIPzaYOT3vmhBd5B7x+hYliaEyubDeelTFLYOYl5ibWTFbUDQ4I9PmDMoCOQDEot03YEt5H8t5eFKwHoJaiKxjvGMBP3wiaYYvIsj1SLL/sIF6n/J/kC+nqgvuiOTdWdQgN9NHSrZWu020Ct49P/WvtsupX0jal8bXVMfkUDByVNtGDQUvjlWeAWdz+YCXS8vgJNhF0jr+GZxDVzc3ILYyZaHjUmqqPhCJoQXyxXcZvPfPd4585I5LAaeGrn0BWg442Cd4RI0pCbYdDHLUgnwFLJU3iWmnS30Pnt7d3jTg+SZnpHiEOeGKtBQMoeo07QrfeRed8ETS+ezIWuO1fgoUhvVnUxTyV0rn5tq2O4VCOa6/C67W8jFLkZoKwEY6f44SL+cNcF+whYUWLGgHMsKnKmleoUdPJGEbV5HaDW5P45A1gvRyQ8HTK/g67pxlttkO/iRbFbbx+T+81rujRRH8yvxj6HvfwIommok
+sidebar_class_name: "get api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get a currency rate by ID"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/crm/currency/rates/{id:[0-9]+}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns a currency rate by ID.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"id":{"description":"Currency rate ID","type":"integer"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Currency rate","content":{"application/json":{"schema":{"type":"object","properties":{"FromCurrency":{"type":"string","example":"EUR"},"ToCurrency":{"type":"string","example":"USD"},"Rate":{"type":"number","format":"double","example":"1.1"},"ID":{"type":"integer","format":"int32","example":"1234"}},"title":"CurrencyRateWrapper"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

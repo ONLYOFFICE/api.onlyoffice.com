@@ -1,0 +1,71 @@
+---
+id: search-bookmarks
+title: "Search bookmarks"
+description: "Returns a list of bookmarks matching the search query specified in the request with the bookmark titles, dates of creation and update, bookmark descriptions, and authors."
+sidebar_label: "Search bookmarks"
+hide_title: true
+hide_table_of_contents: true
+api: eJzVVd9v2zYQ/leIe2Ys2Q2yVMCwpV3QFVuHoEkwoLEfLtLZYi2JLEnF8QT+78NRkmMnabJhT9ODLN8v3h2/+64DjysH2Q3kuq7bRvlt8k7rdY127WAhwVHeWuW3kN10cNb6Ulv1F3qlm18JC7LsagkLkLCxyhMswkJCQS63yrAZZPCZfGsbJ1BUynmhl+J2PELU6PNSNSvhSxKO0Oal+NaS3QpnKFdLRYVQTdRa+taS82KjfBkFYxThla/ISVGgJ8fxc0sxR4FNIVrDcvlgvpedk9EEY2FuAhIMWqzJk3Wx5AZrggxiSiBBcT0GfQmPi7zcyx0kuLykGiHrwG8NR3DeqmYFgdtjyRndOHKsn6Up/xxG+/1xo0BCrhtPjWdjNKZSeSwx+erYo3t6IlqLMWdPtduT69uvlHsu1WpD1qs+j4/Fno1qPK3IgoSltjX6XnRyDBLoHmtTsdF0CkHCFTf/aaH7hh+0XlUkVJNP2OPaVi/bl96bbD5P5vNks9lMVtF9kus6nle29W2D6pUY17YSXgu/sw4S3jMsqHjZcZbO0qPp7Cg9uUp/yN6cZNPjyen0dHr69s2XmH2E038M8sv+bb/eur3k323/5VXugu5usm1VcXBIOjxHz7zGJ2atnKlw+0eciZey/qTWJL5gs0Xv1uofouQTNsiYCxLO7tCjvayxeuWW2/6WHVsKjF7sf2H1UlX0KtDm8+TC6qLNveNP0qaiXsbuE3Tm/qfWkf0Ri1o1ynmLXlsIQYLvC4Lz2lR6S/SnRUOHqpFIWdXrAquP0+nTgb9ucCBXKmKQmnypC8hgRfGCmXMySNCoZDZJkwe6Hiki+bmnz6SLHBSYhMjejUTWci/iZLksSbpSOx+yzmjr2fIOrcLbqocP6/oMl9hWjJhK51hFcZDAPofq0/TtjKvb2xeXzEZ9uGe3xgNLGfUb7ai17NVy5N0D39gX1Sx1dB+a/H5shLiM1YrP55dX4uziI1dF1vXtrXgzDNk7X2OcuuGMgbn3qbY4HM8d8/6/VtnQYU/3PjEVqobrb/uZ6PF0w+0HCbNJGhfM0EqQMJ4AEgZcgYSs324LOUDkBrruFh3PWQgs7vXZzeIBURF8hXL8XUC2xMrRCw1+tEafLWFETrONyK1a/gcS1rTdreqwCHJEE2fQ687ynIzf83qySBnDu9H7cH4FErijh4BdR8AOHxz92YwOsTumx+8gv+PSdf04hLCz71Xf9dgNTG/NDVqEEP4GN/1Wxg==
+sidebar_class_name: "get api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Search bookmarks"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/community/bookmark/@search/{query}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns a list of bookmarks matching the search query specified in the request with the bookmark titles, dates of creation and update, bookmark descriptions, and authors.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"query","in":"path","description":"Search query","schema":{"type":"string"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"List of bookmarks","content":{"application/json":{"schema":{"type":"array","items":{"type":"object","properties":{"Id":{"type":"integer","format":"int64","example":"11"},"Title":{"type":"string","example":"Google inc."},"Url":{"type":"string","example":"http:\\/\\/www.google.com"},"Thumbnail":{"type":"string","example":"Url to thumbnail"},"Created":{"type":"string","example":"2020-12-06T07:36:14.8181893Z"},"Updated":{"type":"string","example":"2020-12-06T07:36:14.8181893Z"},"Description":{"type":"string","example":"Google"},"CreatedBy":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"}},"title":"BookmarkWrapper"}}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

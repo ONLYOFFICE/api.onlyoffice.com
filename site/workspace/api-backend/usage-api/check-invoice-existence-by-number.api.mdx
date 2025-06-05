@@ -1,0 +1,71 @@
+---
+id: check-invoice-existence-by-number
+title: "Check invoice existence by number"
+description: "Returns the existence of an invoice with the number specified in the request."
+sidebar_label: "Check invoice existence by number"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVE1v1DAQ/SvRnE2zrDhAbqWqoOKC2nJa5eB1ZjduE9u1J92GyP8djZ39ghYJiT2sHM/3e288AcltgGoFyvfljXm2WmGAWkBANXhNI1SrCS4Haq3XPyVpa76ibNBzjEfZgICd14RQx1pAg0F57dgNKrhFGrwJBbVY4IsOhEZhYTeFNIXOtYqdpjY5mKFfoy+CQ6U3GptCm3Tv8WnAQBcgYD5+ts0I1QTKGkJDfJTOdVql9sqHwMUnCKrFXvKJRodQgV0/oCIQ4Lx16EljYGsuzKfz7mc05sZA7NME8tpsIaYfNxWcNSHnWi4Wbyc6QADin3tfW9uhNJBrfli8/7PMDyNnmrAB9uqRWttABVtMU0tqoYJSOl0uLxYlMz6zUK7HPGWZegSm3z+jD4n9wXdQQUvkQlWWU2sDxWpy1lMEAc/Sa7nu8vxsy51t5NARVNBZJbt0HQVwzLn54+LTkoc6Udwdz57Tvaq7AybS6W84ggDN47fZLMDInq1nsQkPBvf2KKHrF9m7Dk8lcOCWc25sqqWJfeDK9v1gNI3FXYKmuL2+uy8uv98wBOhD5qCThPtRA/UykTk3dNWiejzo/rgP6/EosTNGTxT+31dphpDwhUrXSW2450T0NAtlxfiCgOXFgvXq+wR0qgQC9oIBAVkytZjJX8E0rWXAH76Lka+fBvT8jNRHrfBXFHvKWGOPOCaQ07zv7rk7du+GTPRvGxLFPuJSKXT0V9/6ZBO+XN9z8/MD0tuGQ7zc8eMid1ABCLAJ/qS/dDdBJ812kFv2zSlZTbxs52J8TGKcDzzU3mTGkwbPdSnmOfifp3o1ZJqy1GM8+GfTmxGHZcjeTG8dY/wFi2EMnQ==
+sidebar_class_name: "get api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Check invoice existence by number"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/crm/invoice/bynumber/exist"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns the existence of an invoice with the number specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"number":{"description":"Invoice number","type":"string"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Invoice existence","content":{"application/json":{"schema":{"type":"boolean"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

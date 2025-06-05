@@ -1,0 +1,71 @@
+---
+id: create-a-photo-thumbnail
+title: "Create a photo thumbnail"
+description: "Creates a photo thumbnail by coordinates of the original image specified in the request."
+sidebar_label: "Create a photo thumbnail"
+hide_title: true
+hide_table_of_contents: true
+api: eJy1VlFv2zYQ/ivCPdORqgSFp7c07dBiGBrEyfaQGQEtnS22ksiSp8aqoP8+HCVLdux6Q7DlQVDE+z4e7z5+5xZIbhwkj2BQmwLD21yTdrAU4DCtraIGkscWrmvKtVU/JCldfUSZoWWQRZmBgGerCGHZLQVk6FKrDIdBAjcWJaELZGCYN6C8LleVVEWwaoJUa5upygfodUA5BtqqjapkEahSbjBwBlO1VpgFqvLrFr/V6OgCBBhpZYmE1vkEK1kiJFA7tIpTUry9kZTDy5weHNrg03sQ4NIcSwlJC9QYRjuyqtpAxwcZtnqns4YjUl0RVsSv0phCpb4S4RfHnO0xlV59wZQ4T6sNWlLo/GppflUF8uthVreS8sBXCAPC0mgrbROsOVa8TE/A9pjgI7dHVySLvcJOWFURbtAyuDkG/8EZpv8MfVYZ5cfw+7GtfcApaI5qk9M57BBxDPZ/3BFndOX6QsZRdIYLxH/VsM+DIo9VIgC3sjTcTMhwLeuCnlh+T17qT079wKc38Tya8ePC9I27Q1LVCcn9G7LLt9Hs8u1I9bvcvo4njqJZHI0879TmdTzzeDaPx2wwU3V5nuivn1JdzWdX8x3VopTFK+t9Gc8uh5Q6AaTIR4+ycO8lyT+tNGaQlYCr6M2xjh4qOfgdZp6pRMp1xo6indcIG0sCoTQqjC+icDDPtrefLvQphaPbOTYbtN93ZlXbAhLIiYxLwrDNtaMuaY221IGA79IquSp6/fFan6A/MSRQ6FQW/nMngDGHy/Pol5jPtufgC9Z6T3fSx8dKS6N+w2bnnnm/LHbeeoD1ZeHLdDf55Iddf/Z8bureFpLIm080+kg02ULU8a5r7cFD3250WdaVoiZY+OIFdx8W98H17ScuElrXN6vgATIUw1Ep/fUeUu7nz/H4eTkU9vz9/5xZQ5kJtxSaQqqKs/ZiaAdJPXIPQEB8EbHMvKxAQDLONZ8TU03aWopBJY/Qtivp8MEWXcefv9VoeX4vJ1F5/WXK8XsGyVoWDs8UYxqWJ3Pf6aZqvG6Lmv8DAV+xmYZxt/T2P/xmaIfFm36P2T1TTOAjr+7EDnGdpmjobOxy76refl7cg4DVMMBLnTHGymcQ/ukT1f7M/mr4by0UstrUcsOxPScLne3g8J589fdkeOFTnSzF4ZXZ1YWffKyTkLbtb2HXjfH90k8R4z3to7kzy67r/gbdZGT9
+sidebar_class_name: "post api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Create a photo thumbnail"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/api/2.0/people/{userid}/photo/thumbnails"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Creates a photo thumbnail by coordinates of the original image specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"userid","in":"path","description":"User ID","schema":{"type":"string"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"tmpFile":{"description":"Path to the temporary file","type":"string"},"x":{"description":"Horizontal coordinate","type":"integer"},"y":{"description":"Vertical coordinate","type":"integer"},"width":{"description":"Thumbnail width","type":"integer"},"height":{"description":"Thumbnail height","type":"integer"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Thumbnail","content":{"application/json":{"schema":{"type":"object","properties":{"Original":{"type":"string","example":"default_user_photo_size_1280-1280.png"},"Retina":{"type":"string","example":"default_user_photo_size_360-360.png"},"Max":{"type":"string","example":"default_user_photo_size_200-200.png"},"Big":{"type":"string","example":"default_user_photo_size_82-82.png"},"Medium":{"type":"string","example":"\"default_user_photo_size_48-48.png"},"Small":{"type":"string","example":"default_user_photo_size_32-32.png"}},"title":"ThumbnailsDataWrapper"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

@@ -1,0 +1,63 @@
+---
+id: get-mail-groups
+title: "Get mail groups"
+description: "Returns a list of mail groups associated with the tenant."
+sidebar_label: "Get mail groups"
+hide_title: true
+hide_table_of_contents: true
+api: eJzNVE1v2zAM/SsGz0Kcpj1sPq1Yi67YBgz9OBU5sDYTq7UlT6LbZob++0DJaZx2vWwYtktim48U+R71BmBceyhuoEXdeHIP5PKvqJts7WzfeVgq8FT2TvMGipsBjnuurdM/kLU1nwgrcpLtCCtQ8Og0EyzDUkFFvnS6ExgUcEHcO+MzzBrtObOrrN0dkqH3ttTIVGWPmuuMa8qYDBqegQJHvrPGk4digMV8Ln/71b+8qplVyJitrIu1yt45MjzWBAWlNUyGpRJ2XaPLOE5+56XcAL6sqUV54k1HUAA6hxtQoJlaP/lub++olIKdsx051qnJ82qC0YZpTQ4UrKxrkdOnwwUooCdsu0ZAB4vDIwgKjqvKkf+rR5zYFrX5/fxTYXmS7Nlps96DRsgHa5rNrLQthKCANcfQZVyx1MM47AkyTmYn/y+I/09ZeQt0Jku+hQjoaH7w+l5cGxyvK1XxvJa4thUUsKZIHnINBeTY6Xwxm+cTD4i3CFMreUKniI820LsGCqiZO1/k+VBbz6EYOus4gIIHdBpvm6SJxFJrK+wbYbGxJTbxc1AgOfvhd/P3CxlrYj2XciFTuV8a0G5fOv2Z4sLI/HUKKzDYSnQvNxKizcrG9JHjj7Zte6N5kyW2s4vTy6vs+Nu5TEXOJ14bZNp277nFaBrjGWfEU2+DF0447Lznj0xxnJfpifOuQW2km6jKMMp6I2SAgsVsDmpi76BgKq68EovPJ6FuYBhu0dO1a0KQz997cuL9y52u8hbUll7Zh3vaCL9lSR3HBWj6JMcLcxVRn5fw7PQKFMiK7it4HxUcH6T6NmQ2k9r7YqqxBfkN6o2UYUj7EcIzPoXezHjeoIQWmpchhJ9rbnFH
+sidebar_class_name: "get api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get mail groups"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/mailserver/groupaddress/get"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns a list of mail groups associated with the tenant.
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"List of mail group data for the current tenant","content":{"application/json":{"schema":{"type":"array","items":{"type":"object","properties":{"Id":{"type":"integer","format":"int32","example":"1234"},"Address":{"type":"object","properties":{"Id":{"type":"integer","format":"int32","example":"1234"},"DomainId":{"type":"integer","format":"int32","example":"1234"},"Email":{"type":"string","example":"Email@only.com"}},"title":"ServerDomainAddressData"},"Addresses":{"type":"array","items":{"type":"object","properties":{"Id":{"type":"integer","format":"int32","example":"1234"},"DomainId":{"type":"integer","format":"int32","example":"1234"},"Email":{"type":"string","example":"Email@only.com"}},"title":"ServerDomainAddressData"}}},"title":"ServerDomainGroupData"}}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

@@ -1,3 +1,6 @@
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 # RunText
 
 Runs all the commands for the document creation using a single command. Compared to [CDocBuilder.ExecuteCommand](./ExecuteCommand.md) where only one command at a time is allowed, `CDocBuilder.RunText` makes it possible to enter all the commands for the document creation at once.
@@ -18,21 +21,23 @@ bool RunText(String^ sCommands);
 
 ## Example
 
-### .Net
-
-```cs
-string workDirectory = "C:/Program Files/ONLYOFFICE/documentBuilder";
-CDocBuilder.Initialize(workDirectory);
-CDocBuilder oBuilder = new CDocBuilder();
-oBuilder.RunText(L"builder.SetTmpFolder(\"DocBuilderTemp\");\n\
-builder.CreateFile(\"docx\");\n\
-var oDocument = Api.GetDocument();var oParagraph;oParagraph = oDocument.GetElement(0);oParagraph.SetJc(\"center\");oParagraph.AddText(\"Center\");\n\
-builder.SaveFile(\"pdf\", \"images.pdf\");\n\
-builder.CloseFile();");
-CDocBuilder.Destroy();
-```
-
-### .docbuilder
-
-```ts
-builder.RunText("builder.SetTmpFolder(\"DocBuilderTemp\");\nbuilder.CreateFile(\"docx\");");
+<Tabs>
+    <TabItem value="net" label=".Net">
+        ``` cs
+        string workDirectory = "C:/Program Files/ONLYOFFICE/documentBuilder";
+        CDocBuilder.Initialize(workDirectory);
+        CDocBuilder oBuilder = new CDocBuilder();
+        oBuilder.RunText(L"builder.SetTmpFolder(\"DocBuilderTemp\");\n\
+        builder.CreateFile(\"docx\");\n\
+        var oDocument = Api.GetDocument();var oParagraph;oParagraph = oDocument.GetElement(0);oParagraph.SetJc(\"center\");oParagraph.AddText(\"Center\");\n\
+        builder.SaveFile(\"pdf\", \"images.pdf\");\n\
+        builder.CloseFile();");
+        CDocBuilder.Destroy();
+        ```
+    </TabItem>
+    <TabItem value="builder" label=".docbuilder">
+        ```ts
+        builder.RunText("builder.SetTmpFolder(\"DocBuilderTemp\");\nbuilder.CreateFile(\"docx\");");
+        ```
+    </TabItem>
+</Tabs>

@@ -1,0 +1,71 @@
+---
+id: delete-a-task
+title: "Delete a task"
+description: "Deletes a task with the ID specified in the request."
+sidebar_label: "Delete a task"
+hide_title: true
+hide_table_of_contents: true
+api: eJydVMFu2zAM/RWBZ6/Ouh0237okwIrtMLTpKciBsZlarWy5Et02M/TvAyWnaZqsh+ZgKBTJR/I9agDGWw/FEko01Fbo8gX6ew+rDDyVvdO8hWI5wEXPtXX6L7K27U/CipxEOcIKMnhymglWYZVBRb50uhM3KGBGhpi8QsXo79WT5lpxTepypnxHpd5oqpRuo83RQ0+ezyCDDh02xOR8BG+xISiAbWUvBU5L6g65hrd4Ury6nEEGvqypQSgG4G0n0bpluiUHGWysa5CT6cs5BCl7BP9hq63ElLZlalmO2HVGl7Hv/M4LynCc3K7vqGSp3NmOHGvycrtxtpmiqfDxmtyjjGw4GtBGt+SV3ryegdJeSWy0TdHM8FH5mEFZp1orSCPy2lpD2EKIP2nEd7b1Cf98MjmGjDPCJ9Qcp/HBVhPa18nnY4CbFke1UAXi1RDXtoICqiiHSDDXUECOnc7Pzyb5i/qEY58PieogPMa2kw56Z6CAmrnzRZ4PtfUciqGzjsXzEZ3GtUmdy12qbIO9EbKNLdFEc8hAYg6vv02+ixTCK+FfS+sp3Un5v4wEO/2Ltjth1uk628n2IDbOQ2Z7tRfc/BmbztBpwbDrKUjmjY2ImsUTprZp+lbzViVHdTW/XqiLP5cyCHI+MWGQadew5wYjo2NZaTXHzXy7SK824KM7PM6G6ZnzzqBupYzI4DDSv5TBQQbnZxPR4SgBCRURQAbFuPGrbORzCcOwRk83zoQg5oeenDxQqz39USmV9nKuoNig8fROd/sX42TBO4bbbVSY6eUfZHBP2/2LFFYh29Eu6OlymjA+LSTFPvhoyUK2i7goS+r4Xd/Vq22azX/PF3PIYD2+Wo2tJMrhE2TxG0u1seso42gbwGB72+Ot+KasIkrZ2UNN30dNjwfp6+QwDuW9m4x8pbGTIcOQNiaEF/909d+Il51K3sLNKoTwD4KaTZc=
+sidebar_class_name: "delete api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Delete a task"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"delete"}
+  path={"/api/2.0/calendar/todos/{todoId}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Deletes a task with the ID specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"todoId","in":"path","description":"Task ID","schema":{"type":"integer","format":"int32"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"fromCaldavServer":{"description":"Defines if the request is from the CalDav server or not","type":"boolean"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Task awaiter","content":{"application/json":{"schema":{"type":"object"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

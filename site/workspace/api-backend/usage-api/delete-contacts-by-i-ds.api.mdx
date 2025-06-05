@@ -1,0 +1,71 @@
+---
+id: delete-contacts-by-i-ds
+title: "Delete contacts by IDs"
+description: "Deletes a group of contacts with the IDs specified in the request."
+sidebar_label: "Delete contacts by IDs"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVttu4zYQ/RVhnpXY8e5Da6AoEidFjXaDIBcstl4/jKWxxUQiueTIidbQ5/RH+mXFkLJjd5PYu6geBF7mcG6HnFkB48LDcAKZq3ojoxkz9jBNwVNWO8UNDCcrOK25ME59RVZG/06YkxOMI8whhUenmGDaTlPIyWdOWRGDIZxTSUw+wWThTG0TM0+yTkXyqLhIuKBkfO4TbylTc0V5onRYdPSlJs/HkEI3PDN5A8MVyAGkWYZobamyYFPv3ovGFfisoAplxI0lGIKZ3VPGkIJ1xpJjRX59DGas8jDbNftP5XnLVrEQ0vV56Bw2kIJiqvyWHqWZFuQghblxFXJcejeANn7iiLdG+6h/0O/vVSxav9fd18x7JQw3FZblb4bNnSu3pD07pReQAj1hZUtZql2ZsEnmhg20KXygXNXVjyDPlbclNpdY0du4W8zvKc+VpuQMs0I5QY/9yFQWdbOFnRlTEuod8BxLTwI4zTLyXiL741Ea5y9ZuslzXat8R3m/+45e+K2/7wrFB/VAyV+oG2T/oAR6q7jcB0KNwkgJwhIZXUj2QbnyIplgQAn+ypm5Kmlvqj9/7l05k9cZexmSsSXFNYEfo7dPv9ae3C+YV0orzw7ZOJDbwdEhuKhsaRqijw4txa2xv3JqiUx7cs6upsiRmwId5YdSJEjfBsH91zkF0nUlr9+l0QQpXBPmH8MLGMfwzTM46SdHiUinyUlylGwAaTLoptNd+ohRo9o50lmzn50HUGFUKE2ekk816uBxU83Mnlz+83dgzmzmaKkwuvKmjstP0e6Sa0f7OT26XN9nvSTHOCsPz+8ZepUdlt4taq1DOtZzI/Sy8XKMUF/kig9UPkIdy9qhxp4fyKoN8mTw7v2u3bEcnKGnjdmxpLzvn3xbRe40duWa8nBORVyYHIZg68Ae5AKG0EOreoPjfk8qf1dxQOq+W5LzoezXct+hYLZ+2OutCuO5Ha6scdxCCkt0SrIWSCh70ZQ51qU4VpoMy7DcpiCY3e2f+j+H2rjVatxIMYvHvdhwPD/fVv1B4f0Wf4u4nYIOnNvFhgBItbx+biMu1qHebQMm/WkrR85NULUJflXVWnGT3ITIJNcXN7fJ6dVYIkDOx5iXyLT21HOF4a509kS6PHc+s6brKHbSttXZ/D99Uxcrpifu2RJVuPh1fMEjBSYSSEhhcNyXTsNVXb8hRJimXUonsFrN0Mvb37ay/KUmJ13h9JkBMmvTdSKEOQ/UdMQlzUfhbRXxso7p+08j06ZrhFRry2/KTrcIfXV3CynMutawMrlAHD5K24iPMARIwYQAB1aFtRWUqBc1LkQ2HikckTuzS7GHQLFuIE6tt3SzZeAu29LOD/mLVy9CVqtI4LbdyMetVxEbikdpyeW0bdt/AUAx95E=
+sidebar_class_name: "put api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Delete contacts by IDs"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"put"}
+  path={"/api/2.0/crm/contact"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Deletes a group of contacts with the IDs specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"contactids":{"description":"List of contact IDs","type":"array","items":{"type":"integer","format":"int32"}}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"List of contacts","content":{"application/json":{"schema":{"type":"array","items":{"type":"object","properties":{"SmallFotoUrl":{"type":"string","example":"url to foto"},"MediumFotoUrl":{"type":"string","example":"url to foto"},"DisplayName":{"type":"string","example":"Tadjeddine Bachir"},"IsCompany":{"type":"boolean","example":"false"},"AccessList":{"type":"array","items":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"}},"IsPrivate":{"type":"boolean","example":"true"},"IsShared":{"type":"boolean","example":"false"},"ShareType":{"type":"integer","format":"int32","enum":["None","ReadWrite","Read"],"description":"[0 - None, 1 - ReadWrite, 2 - Read]","example":"0"},"Currency":{"type":"object","properties":{"Title":{"type":"string","example":"Chinese Yuan"},"Symbol":{"type":"string","example":"¥"},"Abbreviation":{"type":"string","example":"CNY"},"CultureName":{"type":"string","example":"CN"},"IsConvertable":{"type":"boolean","example":"true"},"IsBasic":{"type":"boolean","example":"false"}},"title":"CurrencyInfoWrapper"},"CanEdit":{"type":"boolean","example":"true"},"CanDelete":{"type":"boolean","example":"true"},"ID":{"type":"integer","format":"int32","example":"1234"}},"title":"ContactBaseWrapper"}}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

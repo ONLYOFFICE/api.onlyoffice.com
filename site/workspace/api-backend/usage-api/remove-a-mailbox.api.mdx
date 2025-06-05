@@ -1,0 +1,71 @@
+---
+id: remove-a-mailbox
+title: "Remove a mailbox"
+description: "Deletes a mailbox with the ID specified in the request."
+sidebar_label: "Remove a mailbox"
+hide_title: true
+hide_table_of_contents: true
+api: eJylVE1v2zAM/SsGz0KdZjtsvhVLgAXbsKJpT0EOis3Uam1Llei2maH/PlCyk7gf2YZd8iE+ko/kIzsgeesgW0EtVeXQPqJNf0hVbfQzOlgLcJi3VtEOslUHFy2V2qpfkpRuvqIs0LKvRVmAgCerCGHt1wIKdLlVhmGQwQwrJHSJTOoYOnlSVCZUYrKYJc5grrYKi0Q14c3iQ4uOzkCAkVbWSGhdyN/IGiEDxdkURzaSSniZruefLGYgwOUl1hKyDmhngnNDeIsWBGy1rSXFpw9T8EzcojO6cejYYzqZ8Nc4+k+DNtSfOJLUOhCQ64awIcZKYyqVB3t659ihe01Bb+4wJy7PaoOWVEz3RdeGG1UcQTdaVygbEIDPks2QAdkWwQtYHAMdWdXcjnCLglHLyPIkssd4AXNrtT0NjhAv4BJtjg25v2nucYDzySQQ063N8Q/EIsaLQ9uvA/gfM44inE55gHkvgBSFV9bU3jK0yzPi4+T8tUhuGtmvChYhTo1U6gIyKMIuBGlTCRmk0qh0ejZJjxawHhYwtVjrR0w7VXjWcjDHVWhtBRmURMZladqV2pHPOqMtMfJRWiU3VdQV2yLFrWwr7lClc1mFZy+AfcbmT5PPvA7+aP2XrOEY7s0jsO+oNOob7ob9LKNZDJs78g2NUc1WB/e+0V90XbeNol2yDNUmV/PldXJxueCq0LrY30oSDuwd1TLMtM9xFXp2ODYv70N32Nf/uEx9uYTPlJpKqobJhKF0/WhX3AsQMD2bgDi6r/2feGH54jBdEJCpgg9unNYKum4jHd7Yynt+fmjR8hFeH4YbdFAox78LyLaycnii1tFZfJP+MMJmFyRUtfwPBNzjLl5dv/ZimCknj4aLPEdDRy6vjiArab8Bs/n3+fUcBPCKjJVzH5TT/+AEbzIai2igx59evOPSdVGX3u/x0fSux165ffFchPf+NwzMb4w=
+sidebar_class_name: "delete api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Remove a mailbox"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"delete"}
+  path={"/api/2.0/mailserver/mailboxes/remove/{id}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Deletes a mailbox with the ID specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"id","in":"path","description":"Mailbox ID","schema":{"type":"integer","format":"int32"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Operation status","content":{"application/json":{"schema":{"type":"object","properties":{"Completed":{"type":"boolean","example":"true"},"Id":{"type":"string","example":"Id"},"Status":{"type":"string","example":"Status"},"Error":{"type":"string","example":"Error"},"Percents":{"type":"integer","format":"int32","example":"100"},"Source":{"type":"string","example":"Source"},"OperationType":{"type":"integer","format":"int32","example":"1"},"Operation":{"type":"string","example":"Operation"}},"title":"MailOperationStatus"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

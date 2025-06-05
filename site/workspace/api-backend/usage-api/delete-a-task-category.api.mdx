@@ -1,0 +1,71 @@
+---
+id: delete-a-task-category
+title: "Delete a task category"
+description: "Deletes a task category with the ID specified in the request."
+sidebar_label: "Delete a task category"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVE1v2zAM/SsCd5xWu2mBrb51SYEFO6xoMuxQ5MDaTKzWtjSJbpcF/u8DZXeJ16JDh/kki+9R5OPHDhg3AbJryH2dLDHcBVhpCJS33vAWsusdnLdcWm9+IhvbfCIsyAvBExag4cEbJlh1Kw0FhdwbJzDIYEYVMQWFijHcqRyZNtZv1YPhUnFJaj5TwVFu1oYKZZp45+l7S4GPQMNw/GiLLWQ7yG3D1LAc0bnK5DGc5DbIYzsIeUk1yom3jiADe3NLOYMG560jz4ZCdDOEYQr5G0e8HMU5n4F+dGYapg156DQ09PAaH4qt8uQqzCkmWERVij1kSFw0Cntt8tZ7angs3TPxxE+0Cs42oU9xkqZ/iQv0/5Lziipkc09zpjpMbdt7/CNKDWvra+T+6mQCGugH1q4S0LGIOq9xQ5fI5QE7sDfNZoR1KPJYZQQuvKVhMbzE6SGdhtmhHi8xDoGdhqmtrH+Z8Qbfr/M0FfTCev7i44j8iw6zV9MmJ6cgLcC9FLHQ06HO3zw6N7SJhtP0+GlffG1wGG8qop+auLQFZNB3qlQ81gUSdCaZHKWJbArpy+SxnZLdfiKy6/Td2eptB7JE/D35EHdI6yvIoGR2IUuSXWkDd9nOWc+CvEdv8KbqW0psfZxrbCvJurI5VvG60yCcsflDejaRFA/21kLat3f37Pb6rTE685lkHoyIUfZmDQ3WYh1xozoyH1f7xXTxWIfxYkmfrIm0kyfWNj49VGpq67ptDG/VIiqlri4WS3V+ORdFyIe+QBUySebdL/XS9Pw=
+sidebar_class_name: "delete api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Delete a task category"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"delete"}
+  path={"/api/2.0/crm/task/category/{categoryid:[0-9]+}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Deletes a task category with the ID specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"categoryid":{"description":"Task category ID","type":"integer"},"newcategoryid":{"description":"Task category ID to replace the deleted category in the tasks with the current task category","type":"integer"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Task category","content":{"application/json":{"schema":{"type":"object","properties":{"RelativeItemsCount":{"type":"integer","format":"int32","example":"1"},"ImagePath":{"type":"string","example":"path to image"},"Title":{"type":"string","example":"Title"},"Description":{"type":"string","example":"Description"},"Color":{"type":"string","example":"#a7fc00"},"SortOrder":{"type":"integer","format":"int32","example":"1"},"ID":{"type":"integer","format":"int32","example":"1234"}},"title":"TaskCategoryWrapper"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

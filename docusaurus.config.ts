@@ -29,10 +29,11 @@ const config: Config = {
   future: {
     experimental_faster: {
       mdxCrossCompilerCache: true,
+      lightningCssMinimizer: true,
+
       swcJsLoader: false,
       swcJsMinimizer: false,
       swcHtmlMinimizer: false,
-      lightningCssMinimizer: false,
       rspackBundler: false,
     }
   },
@@ -74,34 +75,40 @@ const config: Config = {
         docsPluginId: "api",
         config: {
           workspaceBackend: {
-            specPath: "openapi/workspace/community-server.json",
-            outputDir: "site/openapi/workspace/api-backend/usage-api",
+            specPath: "openapi/workspace/community-server.yaml",
+            outputDir: "site/workspace/api-backend/usage-api",
             sidebarOptions: {
               groupPathsBy: "tagGroup",
             },
           } satisfies OpenApiPlugin.Options,
           workspaceHosted: {
-            specPath: "openapi/workspace/hosted-solutions.json",
-            outputDir: "site/openapi/workspace/for-hosting-providers/usage-api",
+            specPath: "openapi/workspace/hosted-solutions.yaml",
+            outputDir: "site/workspace/for-hosting-providers/usage-api",
             sidebarOptions: {
               groupPathsBy: "tag",
             },
           } satisfies OpenApiPlugin.Options,
           docspaceBackend: {
-            specPath: "openapi/docspace/docspace.json",
-            outputDir: "site/openapi/docspace/api-backend/usage-api",
+            specPath: "openapi/docspace/docspace-backend.yaml",
+            outputDir: "site/docspace/api-backend/usage-api",
             sidebarOptions: {
-              groupPathsBy: "tag",
+              groupPathsBy: "tagGroup",
             },
           } satisfies OpenApiPlugin.Options,
           docspaceHosted: {
-            specPath: "openapi/docspace/asc.apisystem.swagger.json",
-            outputDir: "site/openapi/docspace/for-hosting-providers/usage-api",
+            specPath: "openapi/docspace/asc.apisystem.swagger.yaml",
+            outputDir: "site/docspace/for-hosting-providers/usage-api",
             sidebarOptions: {
               groupPathsBy: "tag",
             },
           } satisfies OpenApiPlugin.Options,
         } satisfies Plugin.PluginOptions,
+      },
+    ],
+    [
+      '@docusaurus/plugin-google-gtag',
+      {
+        trackingID: 'GTM-5NW47TX'
       },
     ]
   ],
@@ -123,6 +130,12 @@ const config: Config = {
           items: [
             {
               type: 'docSidebar',
+              sidebarId: 'docspaceApiBackend',
+              label: 'Backend REST API',
+              docsPluginId: 'api',
+            },
+            {
+              type: 'docSidebar',
               sidebarId: 'docspaceJSSdk',
               label: 'JavaScript SDK',
               docsPluginId: 'api',
@@ -135,20 +148,8 @@ const config: Config = {
             },
             {
               type: 'docSidebar',
-              sidebarId: 'docspaceOAuth',
-              label: 'OAuth API',
-              docsPluginId: 'api',
-            },
-            {
-              type: 'docSidebar',
-              sidebarId: 'docspaceApiBackend',
-              label: 'API Backend',
-              docsPluginId: 'api',
-            },
-            {
-              type: 'docSidebar',
               sidebarId: 'docspaceHosting',
-              label: 'For Hosting Providers',
+              label: 'For hosting providers',
               docsPluginId: 'api',
             },
           ],
@@ -174,7 +175,7 @@ const config: Config = {
             {
               type: 'docSidebar',
               sidebarId: 'docsMacros',
-              label: 'Plugins and Macros',
+              label: 'Plugins and macros',
               docsPluginId: 'api',
             },
             {
@@ -192,24 +193,10 @@ const config: Config = {
           ],
         },
         {
-          type: 'dropdown',
-          label: 'Workspace',
-          position: 'left',
-          to: 'workspace',
-          items: [
-            {
-              type: 'docSidebar',
-              sidebarId: 'workspaceBackend',
-              label: 'API Backend',
-              docsPluginId: 'api',
-            },
-            {
-              type: 'docSidebar',
-              sidebarId: 'workspaceHosting',
-              label: 'For Hosting Providers',
-              docsPluginId: 'api',
-            },
-          ],
+          type: 'docSidebar',
+          sidebarId: 'samples',
+          label: 'Samples',
+          docsPluginId: 'api',
         },
         {
           type: 'localeDropdown',
@@ -227,7 +214,7 @@ const config: Config = {
       style: 'dark',
       links: [
         {
-          title: 'Get Information',
+          title: 'Get information',
           items: [
             {
               label: 'Blog for developers',
@@ -248,7 +235,7 @@ const config: Config = {
           ],
         },
         {
-          title: 'Get Help',
+          title: 'Get help',
           items: [
             {
               label: 'Forum',
@@ -287,6 +274,7 @@ const config: Config = {
     prism: {
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,
+      additionalLanguages: ["bash", "php", "csharp", "java", "ruby"],
     },
     algolia: {
       appId: '59O6KESY1Y',
@@ -295,6 +283,39 @@ const config: Config = {
       indexName: 'api-onlyoffice',
       contextualSearch: true,
     },
+    languageTabs: [
+      {
+        highlight: "bash",
+        language: "curl",
+        logoClass: "curl",
+      },
+      {
+        highlight: "python",
+        language: "python",
+        logoClass: "python",
+      },
+      {
+        highlight: "javascript",
+        language: "javascript",
+        logoClass: "javascript",
+      },
+      {
+        highlight: "php",
+        language: "php",
+        logoClass: "php",
+      },
+      {
+        highlight: "csharp",
+        language: "csharp",
+        logoClass: "csharp",
+      },
+      {
+        highlight: "java",
+        language: "java",
+        logoClass: "java",
+        variant: "unirest",
+      },
+    ],
   } satisfies Preset.ThemeConfig,
 
   themes: ["docusaurus-theme-openapi-docs"],

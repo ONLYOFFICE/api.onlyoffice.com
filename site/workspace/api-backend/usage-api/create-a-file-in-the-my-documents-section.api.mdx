@@ -1,0 +1,73 @@
+---
+id: create-a-file-in-the-my-documents-section
+title: "Create a file in the 'My documents' section"
+description: "Creates a new file in the 'My documents' section with the title specified in the request."
+sidebar_label: "Create a file in the 'My documents' section"
+hide_title: true
+hide_table_of_contents: true
+api: eJztVt9v2zYQ/leIewwYW3GypRUwrGmaYsHa1KgdLGjsB0Y62WwkkiWpOKqg/304UnbsJEte9rCH6UGgyPvuF7+7UwteLByk11DIEt3wI71hzsFhVlvpG0ivWzip/VJb+VN4qdUfKHK0BLEocuCwstIjzLs5hxxdZqUhMUjh1KLw6JhgCleMDDCpmF8im8HnhuU6qytU3s2AOcwIxFbSL4OEl75E5gxmspCYr4EWf9To/GCmZmpv70J73NtL2XnBRNSP9x6VI03SsVwWBVpUnhVWV+zDl9Or4dWnydVwPJ5eMaFyZrFA65jXTCtkugg2bpVeKebx3nPmDAXploieacuMRYfKhzywQttKeMeZ9Gwly5LdIMuWQi0wJ42PzWWZtrlUi7IZkMNk6anLSvutoLWlvVoFj3iAkNYtyNquyPNodaM2JHAAHPqUvdd5A2kLmVYelaelMKaUWQhm+N3RlbXgsiVWgla+MQgp6JvvmHngYKw2aL1EF05JPS12r/zjxjTwtQbnrVQL6MJD/jijlYtqRknyVMnFA1tijmmb/1ueX4gKt6R67zjgvagMxRSDUCTWcbg0ufCYv29e13yeP6c3hgAp1LXMd+wk/bP/zGv9kAsfpDOlaF53/LO8RfZNqEZ4dysJOl1f0wsgocQCLUmf3Akv7KQSZfkyprYlkc2RJBMBRfix1XRvl/YV+Gw2HFud15l3tERtSox7BB8IZ+5/rx3a30ReSSWdt8JrC8SenndwVplSN4h/WWGi8/1FvWx5lIyS/YPRfvJmenCcHh6nyeHg8Gh09PaX42+k5JOOrHpZy9FsNpsd/UrvLa5seUe75FlwLbD+KDl4SvRLJfrOinnAV+iXOocUjHaBX8IvIYWhMHI4GiTD2KTfVU1YAbVpe4fWhS5dU9ph6b1x6XDYLrXzXdoabX0HHO6EleKmjEyls+hOIeqSyFnqTJRhu+NAmN3jN8nbEUWyNRkmVG9R3bPzYZNAYeSf2AAHSTEv4zGHkLR0FxuSQAX99aFpna3Tvmk6m45CKgu9fXKqq6pW0jdsEjLDvp5NpuxkfE4ZQOti3ksaS32kzlciXHfvTxxa63nyyryCRyNvq73+P/3+E9Ov5yDFMzSlkIpuvY4NKlbXNREUOIwGCXXr8APE4V3V9F/0NxTr5Rra9kY46m9dR9s/arT0hzR/KC/66via5VSWt9gEYgZe7E/JHxIv61gbjwZZx9eIkyxD41+UnW91jPGXyRQ43PRjvtI5YaxY0S+AWEEKwEEHnoaaDXstlEItarEg2aiTKpC60m4B34YC7hcU1fpINVse7tYy7wOhN4X1LKRtY3vouo18PPpHxKaBRGm60XnXdX8DTzStKg==
+sidebar_class_name: "post api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Create a file in the 'My documents' section"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/api/2.0/files/@my/file"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Creates a new file in the "My documents" section with the title specified in the request.
+
+**Note**: If a file extension is different from DOCX/XLSX/PPTX and refers to one of the known text, spreadsheet or presentation formats, it will be changed to DOCX/XLSX/PPTX accordingly. If the file extension is not specified or is unknown, the DOCX extension will be added to the file title.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"title":{"description":"File title","type":"string"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"New file information","content":{"application/json":{"schema":{"type":"object","properties":{"Name":{"type":"string","example":"File name"},"UpdatedBy":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"},"Updated":{"type":"string","example":"2020-12-08T17:37:03.3424957Z"},"Location":{"type":"string","example":"4\\\\46\\\\File name"}},"title":"FileWrapper"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

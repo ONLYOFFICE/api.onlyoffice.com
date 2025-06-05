@@ -19,14 +19,16 @@ In case the *edit* parameter is set to **true** and the *comment* parameter is a
 In case the *edit* parameter is set to **false** and the *comment* parameter is set to **true**, the document will be available for commenting only.
 
 ``` ts
-const docEditor = new DocsAPI.DocEditor("placeholder", {
+const config = {
   document: {
     permissions: {
       edit: false,
       comment: true,
     },
   },
-})
+};
+
+const docEditor = new DocsAPI.DocEditor("placeholder", config);
 ```
 
 > Please note that the document commenting will only be available for the document editor if the [mode](../../usage-api/config/editor/editor.md#mode) parameter is set to **edit**.
@@ -36,25 +38,29 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
 1. If you want to allow editing comments only by their authors, set the [editCommentAuthorOnly](../../usage-api/config/document/permissions.md#editcommentauthoronly) parameter in the permissions section of the editor initialization to **true**.
 
    ``` ts
-   const docEditor = new DocsAPI.DocEditor("placeholder", {
+   const config = {
      document: {
        permissions: {
          editCommentAuthorOnly: true,
        },
      },
-   })
+   };
+
+   const docEditor = new DocsAPI.DocEditor("placeholder", config);
    ```
 
 2. If you want to allow deleting comments only by their authors, set the [deleteCommentAuthorOnly](../../usage-api/config/document/permissions.md#deletecommentauthoronly) parameter in the permissions section of the editor initialization to **true**.
 
    ``` ts
-   const docEditor = new DocsAPI.DocEditor("placeholder", {
+   const config = {
      document: {
        permissions: {
          deleteCommentAuthorOnly: true,
        },
      },
-   })
+   };
+
+   const docEditor = new DocsAPI.DocEditor("placeholder", config);
    ```
 
 ## Differentiation of commenting rights by groups
@@ -62,7 +68,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
 1. Specify the group (or several groups separated with commas) the user belongs to by adding the field *group* to the [user](../../usage-api/config/editor/editor.md#user) parameter in the editorConfig section.
 
   ``` ts
-  const docEditor = new DocsAPI.DocEditor("placeholder", {
+  const config = {
     editorConfig: {
       user: [{
         id: "78e1e841",
@@ -75,7 +81,9 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
         group: "Group1,Group2",
       }],
     },
-  })
+  };
+
+  const docEditor = new DocsAPI.DocEditor("placeholder", config);
   ```
 
 2. Specify the access rights using the [commentGroups](../../usage-api/config/document/permissions.md#commentgroups) parameter in the permissions section of the editor initialization.
@@ -83,7 +91,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
    > If the **commentGroups** parameter is specified in the editor config, the access rights to viewing, editing and/or removing all comments are disabled. Otherwise, if the current user does not belong to any of the groups, he or she can edit, remove and/or view comments of all groups.
 
    ``` ts
-   const docEditor = new DocsAPI.DocEditor("placeholder", {
+   const config = {
      document: {
        permissions: {
          commentGroups: {
@@ -93,7 +101,9 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
          },
        },
      },
-   })
+   };
+
+   const docEditor = new DocsAPI.DocEditor("placeholder", config);
    ```
 
    - *"edit": \["Group2", ""]* means that the user can edit comments made by users from *Group2* and users who do not belong to any of the groups (for example, the document that is commented in third-party editors).

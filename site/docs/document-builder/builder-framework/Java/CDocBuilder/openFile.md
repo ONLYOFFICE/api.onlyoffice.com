@@ -1,3 +1,6 @@
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 # openFile
 
 Opens the document file which will be edited and saved afterwards.
@@ -17,17 +20,19 @@ int openFile(String path, String params);
 
 ## Example
 
-### Java
 
-``` java
-CDocBuilder.initialize("");
-CDocBuilder builder = new CDocBuilder();
-builder.openFile(L"text-document.csv", "<m_nCsvTxtEncoding>46</m_nCsvTxtEncoding><m_nCsvDelimiter>4</m_nCsvDelimiter>");
-CDocBuilder.dispose();
-```
-
-### .docbuilder
-
-``` ts
-builder.OpenFile("text-document.csv", "<m_nCsvTxtEncoding>46</m_nCsvTxtEncoding><m_nCsvDelimiter>4</m_nCsvDelimiter>")
-```
+<Tabs>
+    <TabItem value="java" label="Java">
+        ``` java
+        CDocBuilder.initialize("");
+        CDocBuilder builder = new CDocBuilder();
+        builder.openFile(L"text-document.csv", "<m_nCsvTxtEncoding>46</m_nCsvTxtEncoding><m_nCsvDelimiter>4</m_nCsvDelimiter>");
+        CDocBuilder.dispose();
+        ```
+    </TabItem>
+    <TabItem value="builder" label=".docbuilder">
+        ```ts
+        builder.OpenFile("text-document.csv", "<m_nCsvTxtEncoding>46</m_nCsvTxtEncoding><m_nCsvDelimiter>4</m_nCsvDelimiter>");
+        ```
+    </TabItem>
+</Tabs>

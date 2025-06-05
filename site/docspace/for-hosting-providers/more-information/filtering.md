@@ -6,7 +6,7 @@ sidebar_position: -2
 
 Every request to the API supports a certain number of parameters sent in the URL.
 
-For example, the [api/2.0/people](../../../openapi/docspace/api-backend/usage-api/get-all.api.mdx) request can be appended with several parameters:
+For example, the [api/2.0/people](../../../docspace/api-backend/usage-api/get-all-profiles.api.mdx) request can be appended with several parameters:
 
 ``` http
 api/2.0/people?startIndex=10&count=25

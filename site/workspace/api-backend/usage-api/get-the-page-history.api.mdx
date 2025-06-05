@@ -1,0 +1,71 @@
+---
+id: get-the-page-history
+title: "Get the page history"
+description: "Returns a list of history changes for a wiki page with the name specified in the request."
+sidebar_label: "Get the page history"
+hide_title: true
+hide_table_of_contents: true
+api: eJy1Vdtu3DgM/RWBz8rYmXR7MbBYZLtBt9gLgiZBgabzwNicsTq2pUp0Etfwvy8o20kmmSZPqwePRuKhDinyqAfGTYDsEnJb121juEs+m62BlYZAeesNd5Bd9nDccmm9+YFsbPMnYUFeUJ6wAA033jDBalhpKCjk3jgxgww+Ebe+CQpVZQIru1alCWx9p/ISmw0FtbZeoboxW6McbkjdGC4Vl6QarEkFR7lZGyqUaeKqp+8tBV6ABocea2LyITIUe8hAnIAG08Q5l/CY0qmcEo01hLykGiHrgTsn6MDeNBsYJBJPwdkmUJD9ZZrKz66rv/fHBBpy2zA1LBB0rjJ5zFvyLQiuf3oueo+d0Gaqw4N1e/WNcpZgvXXk2Yxs/o2xPmatgW6xdhXtRDloeH/P5gXEzHvQcOEKZCp+716m87HY53ptfY0MGbStKXaOSqdxsOczD6Hwhwmuwu7laP8xW1JfsOmQw9YI9Nxw9RIIG9yQF+vja2T0ZzVW1fOY1leKrQpiqTCiBH/q7dpUdOFfgH/9mpx6W7Q5B5mSdRWNawJfYHC3v7WB/K9Y1KYxgT2y9TAMGngMCE5qV9mO6LNHN5KfLur5k5fpMj04XB6kb88P32RHb7L0aHF0+PrVu9e/fNnxL2UgvqNzGRpepYdPa/+iwUkSqIgOauLSFpDBhmKFSO9lkKAzyXKRJvf6Ir2e9NKnQxL7RhqR/PXcyK1kEUpmF7Ik6UsbeMh6Zz0PoOEavcGraiw82RuprbGtpNYqm2MVlwcNgtndfpu+W0pYD+TtTHpxdLdX5O571Jm/qJu1pRy39aw7O9iYENOsbYRPmX0/Z0CdxWjVp5Ozc3V8+lGiIh/GvFbINLMPXGPUi+mMD8RRBKNQTqLzWN/6e+35X9V3SgrTLSeuQtMI5XZsgPHuLyVjoGG5SKMiTtHLcyEvjIZs0uoxjpWervMS+v4Kg3TTMMjy95a8vEKr+9uPhVKYIPMCsjVWgZ5JxEPN30t8vuKmiyVWtfIPNGypm9+UYTXo+dbl9HHrOM/J8QPQE7mXWrvrjQ8n56BBOme3sLaxsKaJeN9LaLfGZnbyHfRPIH0/lu0w3NmPWz9F3BX2aC35WQ3D8B8jaMFj
+sidebar_class_name: "get api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get the page history"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/community/wiki/{page}/story"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns a list of history changes for a wiki page with the name specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"page","in":"path","description":"Page name","schema":{"type":"string"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"List of history changes","content":{"application/json":{"schema":{"type":"array","items":{"type":"object","properties":{"Name":{"type":"string","example":"Page name"},"Content":{"type":"string","example":"Page content"},"UpdatedBy":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"},"Updated":{"type":"string","example":"2020-12-08T17:37:03.3164965Z"}},"title":"PageWrapper"}}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

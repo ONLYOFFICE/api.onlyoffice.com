@@ -3,7 +3,7 @@
 To check if the desktop app supports encryption, call the following command:
 
 ``` ts
-typeof window.AscDesktopEditor.cloudCryptoCommand === "function"
+typeof window.AscDesktopEditor.cloudCryptoCommand === "function";
 ```
 
 The steps below explain the process of document encryption in ONLYOFFICE.
@@ -15,7 +15,7 @@ The steps below explain the process of document encryption in ONLYOFFICE.
      encryptionKeys: {
        cryptoEngineId: "{FFF0E1EB-13DB-4678-B67D-FF0A41DBBCEF}",
      },
-   }))
+   }));
    ```
 
 2. To monitor the password from the login page, send the desktop editors the *portal:checkpwd* command through the [execCommand](../execcommand.md) method. Parameters are specified in the format of a string with the serialized *json* as follows:
@@ -59,7 +59,7 @@ The steps below explain the process of document encryption in ONLYOFFICE.
      domain: "https://exampledomain.com",
      emailInput: "john@example.com",
      pwdInput: "123456",
-   }))
+   }));
    ```
 
    When the command is sent, the DMS provider transfers the information about the password from the login page to the desktop app. ONLYOFFICE Desktop Editors remembers the password and uses it for the key encryption and decryption.
@@ -109,13 +109,13 @@ The steps below explain the process of document encryption in ONLYOFFICE.
        privateKeyEnc: "xxx",
        publicKey: "yyy",
      },
-   }))
+   }));
    ```
 
    You can also do it in the editor initialization config:
 
    ``` ts
-   const docEditor = new DocsAPI.DocEditor("placeholder", {
+   const config = {
      editorConfig: {
        encryptionKeys: {
          cryptoEngineId: "{FFF0E1EB-13DB-4678-B67D-FF0A41DBBCEF}",
@@ -123,7 +123,9 @@ The steps below explain the process of document encryption in ONLYOFFICE.
          publicKey: "yyy",
        },
      },
-   })
+   };
+
+   const docEditor = new DocsAPI.DocEditor("placeholder", config);
    ```
 
 4. Send the generated keys to the cloud through the *cloudCryptoCommand* method with the *encryptionKeys* type:
@@ -137,5 +139,5 @@ The steps below explain the process of document encryption in ONLYOFFICE.
        publicKey: "yyy",
      },
      callback,
-   )
+   );
    ```

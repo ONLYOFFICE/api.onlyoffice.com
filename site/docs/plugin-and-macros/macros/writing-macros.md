@@ -24,7 +24,7 @@ Now that you know how macros work, try to write your own macro. We have a table 
    - First, get the current worksheet using the [GetActiveSheet](../../office-api/usage-api/spreadsheet-api/Api/Methods/GetActiveSheet.md) method:
 
      ``` ts
-     const oWorksheet = Api.GetActiveSheet()
+     let worksheet = Api.GetActiveSheet();
      ```
 
    - Then create a loop to run from the first to the last row:
@@ -38,20 +38,20 @@ Now that you know how macros work, try to write your own macro. We have a table 
    - Set two variables: one for odd rows, the second for even rows:
 
      ``` ts
-     const rowOdd = i
-     const rowEven = i + 1
+     let rowOdd = i;
+     let rowEven = i + 1;
      ```
 
    - Now that we can access both the odd and even rows, let's color them in proper colors. Set the desired colors using the [CreateColorFromRGB](../../office-api/usage-api/spreadsheet-api/Api/Methods/CreateColorFromRGB.md) method. Get the cell range within the row using the [GetRange](../../office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetRange.md) method and set the color for the odd rows:
 
      ``` ts
-     oWorksheet.GetRange(`A${rowOdd}:S${rowOdd}`).SetFillColor(Api.CreateColorFromRGB(138, 181, 155))
+     worksheet.GetRange(`A${rowOdd}:S${rowOdd}`).SetFillColor(Api.CreateColorFromRGB(138, 181, 155));
      ```
 
      The same is for the even rows, but with a different color:
 
      ``` ts
-     oWorksheet.GetRange(`A${rowEven}:S${rowEven}`).SetFillColor(Api.CreateColorFromRGB(216, 227, 220))
+     worksheet.GetRange(`A${rowEven}:S${rowEven}`).SetFillColor(Api.CreateColorFromRGB(216, 227, 220));
      ```
 
 Now let's sum it up with the complete script code:
@@ -63,11 +63,11 @@ Now let's sum it up with the complete script code:
 ``` ts
 (function()
 {
-    var oWorksheet = Api.GetActiveSheet();
-    for (var i = 1; i < 200; i += 2) {
-        var rowOdd = i, rowEven = i + 1;
-        oWorksheet.GetRange("A" + rowOdd + ":S" + rowOdd).SetFillColor(Api.CreateColorFromRGB(138, 181, 155));
-        oWorksheet.GetRange("A" + rowEven + ":S" + rowEven).SetFillColor(Api.CreateColorFromRGB(216, 227, 220));
+    let worksheet = Api.GetActiveSheet();
+    for (let i = 1; i < 200; i += 2) {
+        let rowOdd = i, rowEven = i + 1;
+        worksheet.GetRange("A" + rowOdd + ":S" + rowOdd).SetFillColor(Api.CreateColorFromRGB(138, 181, 155));
+        worksheet.GetRange("A" + rowEven + ":S" + rowEven).SetFillColor(Api.CreateColorFromRGB(216, 227, 220));
     }
 })();
 ```
@@ -84,7 +84,7 @@ For example, to subscribe to an event when a hyperlink in a document is clicked,
 
 ``` ts
 Api.attachEvent("asc_onHyperlinkClick", () => {
-  console.log("HYPERLINK!!!")
+  console.log("HYPERLINK!!!");
 })
 ```
 

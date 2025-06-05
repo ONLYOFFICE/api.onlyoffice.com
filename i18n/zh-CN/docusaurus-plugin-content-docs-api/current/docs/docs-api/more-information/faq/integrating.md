@@ -2,20 +2,22 @@
 sidebar_position: -6
 ---
 
-# Integrating
+# 集成问题
 
 ## 在哪里可以找到 ONLYOFFICE 文档的集成示例？
 
-可以在[此处](../../get-started/language-specific-examples/language-specific-examples.md) 找到将 ONLYOFFICE 文档与您自己的网站集成的示例。您可以在不同的 Web 开发编程语言中进行选择：
+可以在[此处](../../samples/language-specific-examples/language-specific-examples.md)找到将 ONLYOFFICE 文档与您自己的网站集成的示例。您可以在不同的 Web 开发编程语言中进行选择：
 
-- [.Net (C#) / .Net (C# MVC)](../../get-started/language-specific-examples/net-example.md)
-- [Java](../../get-started/language-specific-examples/java-example.md)
-- [Java Spring](../../get-started/language-specific-examples/java-spring-example.md)
-- [Node.js](../../get-started/language-specific-examples/nodejs-example.md)
-- [PHP](../../get-started/language-specific-examples/php-example.md)
-- [Python](../../get-started/language-specific-examples/python-example.md)
-- [Ruby](../../get-started/language-specific-examples/ruby-example.md)
-- [Java integration SDK](../../get-started/language-specific-examples/java-integration-sdk.md)
+- [.Net (C#) / .Net (C# MVC)](../../samples/language-specific-examples/net-example.md)
+- [Java](../../samples/language-specific-examples/java-example.md)
+- [Java Spring](../../samples/language-specific-examples/java-spring-example.md)
+- [Node.js](../../samples/language-specific-examples/nodejs-example.md)
+- [PHP](../../samples/language-specific-examples/php-example.md)
+- [PHP (Laravel)](../../samples/language-specific-examples/php-laravel-example.md)
+- [Python](../../samples/language-specific-examples/python-example.md)
+- [Ruby](../../samples/language-specific-examples/ruby-example.md)
+- [Go](../../samples/language-specific-examples/go-example.md)
+- [Java integration SDK](../../samples/language-specific-examples/java-integration-sdk.md)
 
 这些示例将显示从何处获取源代码，如何安装和设置工作示例，以便将 ONLYOFFICE 文档集成到您的网站中，它们是用其中一个编程语言编写的。
 
@@ -50,4 +52,4 @@ sidebar_position: -6
 
 将 ownCloud/Nextcloud安装连接到 ONLYOFFICE 文档时，您需要确保 Internet 浏览器和 ownCloud/Nextcloud 安装都可以访问安装了 ONLYOFFICE 文档的服务器，即一台可以向它发送请求，也可以接受来自它的响应的安装了 ONLYOFFICE 文档的计算机。
 
-ownCloud 安装和 ONLYOFFICE 文档之间的交互方案可在[此处](../../get-started/ready-to-use-connectors/owncloud-integration.md#configuring-owncloud-onlyoffice-integration-app) 获得。如果您使用 Nextcloud，请访问[此页面](../../get-started/ready-to-use-connectors/nextcloud-integration.md#configuring-nextcloud-onlyoffice-integration-app) 以了解如何正确设置服务器。
+ownCloud 安装和 ONLYOFFICE 文档之间的交互方案可在[此处](../../get-started/ready-to-use-connectors/owncloud-integration.md#configuring-owncloud-onlyoffice-integration-app)获得。如果您使用 Nextcloud，请访问[此页面](../../get-started/ready-to-use-connectors/nextcloud-integration.md#configuring-nextcloud-onlyoffice-integration-app)以了解如何正确设置服务器。

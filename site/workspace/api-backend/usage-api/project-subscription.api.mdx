@@ -1,0 +1,71 @@
+---
+id: project-subscription
+title: "Project subscription"
+description: "Subscribes to or unsubscribes from the notifications about the actions performed in the project with the ID specified in the request."
+sidebar_label: "Project subscription"
+hide_title: true
+hide_table_of_contents: true
+api: eJy1Vd9P3DAM/lcqvy5wB9vDqDRNDJB2mpgQxzRpjAdf69JAmmSJC9xO/d8npz24ajCYtOWhdR1//vE5cVfAeBkhPwcf3BUVPDnp3xEuFEQq2qB5Cfn5CvZbrl3QP5G1sx8JSwqCC4QlKLgNmgkuugsFJcUiaC9mkMO8XcjngmLGLnMha218UFXBNRnXlFnHutJFch4zXLiWkx6LXuMpVC40VGbapo0h3+xWc50Us8Mseip0pR+MAv1oKfI2KBjED65cQr6CwlkmyyKi92aIPLmKkvQKYlFTgyLx0hPk4BYSDZTw5Cmwpii7QxazUj7GhQ9EZrNDUGsv2jJdUoAuLUkqemdj72t3On3SC6h/lfEB2qNS84bhwjlDaEEB3WHjjegqNJGgUzCLJ0HfINOLAeWG5bpeBdI85F71encE3ZkK7kyz2QwSOWh7OTKcJyHrLTsFh5tMvQC4yWynYM7IbfzbbFOyp33f9GKU8hOMjxi5z+4+RNvqchxhWFuPPNYrla+jN7j8jM0zvB3ra8q+oV0ix2v9QrKP0WI6qgr2b5AxzBs05s+YNhi55FEsM0wowZ8EV2lDX8Iz8O/fZfqUbcFRRHLeUK8T+DZGf/e+jRTeYdloqyMHZCeXSQH3BcFR441bEn0N6PvkN1r1fxqxEX24rBLcD7dcwZvpzu/X+ovFYZxSmVw0xLUrIQffphOEXEMOE/R6srs9nayn82oQdJmfT7f2Ll51k8oZ425BpnW4oRDTsG6Fa6iZfcwnk1XtInf5yrvAHSi4waBxYfrjKXt9ghW2RogwrkCT1J0CwYy33073dqW2jR/EXIZP7+7R38Q96+j1J1qCAi0s1P22ApvO8BibaJHpdvowuY/WvRlN3mkn/iqX4gytOHBN01rNy2yeaMlOj+Zn2f7JTMqnEPs2GGSSMrtf7zFj5Q==
+sidebar_class_name: "put api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Project subscription"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"put"}
+  path={"/api/2.0/project/{projectid:[0-9]+}/follow"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Subscribes to or unsubscribes from the notifications about the actions performed in the project with the ID specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"projectId":{"description":"Project ID","type":"integer"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Project","content":{"application/json":{"schema":{"type":"object","properties":{"CanEdit":{"type":"boolean","example":"false"},"IsPrivate":{"type":"boolean","example":"false"},"Id":{"type":"integer","format":"int32","example":"10"},"Title":{"type":"string","example":"Sample Title"},"Description":{"type":"string","example":"Sample description"},"Status":{"type":"integer","format":"int32","example":"0"},"Responsible":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"},"ResponsibleId":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"}},"title":"ProjectWrapper"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

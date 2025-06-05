@@ -1,0 +1,71 @@
+---
+id: check-fill-form-draft
+title: "Check the form draft filling"
+description: "Checks if the current file is a form draft which can be filled out."
+sidebar_label: "Check the form draft filling"
+hide_title: true
+hide_table_of_contents: true
+api: eJytV21v2zYQ/ivEfckGaHbqFMOmb2nSAOkKpEjSBUNgNGfxbLGRSJWk4nqG/vtwpBTJkbNkWP3FNnlvvHvuHnILHlcO0ls4UwU5MRXhG+YJmIosemX0uYQUspyy+zNVFGfGlqcWlx4SqNBiSZ4sW9iCxpIghaUq6FxCAkpDChX6HBKQ5DKrKrYHKVznJFhMnJ8KsxSe/xpbCsmGJ5CApW+1siQh9bamBFyWU4mQbsFvKnaitKcVWUiAFdHHpaMZJEDfsawKgvT3397+2jTzaI2cf2fkhk2MY+kPwnGIcFilV08C45ALpVccYGa0J+3ZHFZVobKQqulXxza343jN4itlIWeWE+sVOd59IOtUVBkd7JmUtSr78/Z8Mt7Mjt42CWDmd/05b5Ve7XUXZcVa+XyPK10XBS7YdCzRoydwpiTh6buH5jH3fypaD7wujCkI9cjtVUWZWipyYp2Tz8kKb0Rroo+Ba/SgaM0lMlZo02IG5YUuNqOA+G8fyftyQVIytP5fNKgFtaZiVK+NhKsgpWIfWHwawGGJhaN9hfjv8PTKh1KcjNu2aZqQDFcZ7SIKZ4eH4774qPQ9n7dz8uNA3/keo7BhH3X08FKjNwkUSt+7gSxaixsePJ5K93IcuaXl3hiea5KYOufR1+6VIUbhEyPpVQpNX7qr4PPGYlWRbV2/PTwaF+ovUwtp9IEXOT6QIG3qVS4qsqVyYVJ4E7olVlIVFNzs2gg4cULFmZLV1pL2cd4oJ3CIsnWuslxkqMUimCtIClMH3Jfkc8NsURkX+cHnkMIUKzWdTQ6nbM9NS3SeLFucbiNXNNMAaTbGy7KlF0f2oeOW2haQwnaBjj7bohm3apAVmdFLtaojcUECD2gVD6lQrlY5ZnCJdcGJH1k6jVvi8+VHzvqc48hqq/zmivEdTaHLvmDt8y/3tBkCsFJ/0GZk8rMjcWLMvSLBSqR92zo8RiNp7hhsqTMLKoyid+hUNvCTe1+NvLzXnqzYmNqK2pFlwwK1FBU6tzaWGTl0aJh4wSBbJrRkX2f6IAqL7Yeba3Ft7kk3BztGo62k/XHWYfvDzTW7Og7JGTl8JmfHO4liFEqegKXSJMViE3B6wELGqr+DzIHICWUIoE3qjsc2qa1Mk8AFa8+GYwLDwtNIopxYFmYduXDHqwi9nQBvR2gMd7vG31kMGAyJdul0GrxOjC42ZrlUGU0yU8bF2bRTYweeE/561SAeqmOqbuwi9+YloRSYZeQcT4bKGk+ZJyksOVPbjBwksLbKc0pu+PsF6TiaLioKN8U+m2HhxGgdZ++TpPLuqWi3x22xo/36UzPwlV4aru/3X5xaafS1pZfhxpB+FOf+CaT+JK6JYDYOmRVl7TxPQLPwGDD5oDCA8q6bdt3Y2KnInSAtK6O0n4hzz7Dm9iQpkMds7Pj+xhV6+G5wkLtJj+7h+Z5MjCYBJuXL/t77vruCDO6cfCXsyW732haSyFlr2ei4UjxOO1U4mryZHLIgj/oSA1m2cQUueeZu8jTv2/5O8YM4qC0zn2NaFag0B1nHqR/56JYxAAnMJofct+G9k0DPSpBA+viG2UNM8wRy5rf0FraPhNTw8rea7AbS23lPPIG8pHL8W+6/4g1z8NNl+/D5Wbz4Rtp70g7lehPYr6gpclzgqe5p1sybpBuEHF/cPIlR/HLNJnrl0U2vSTqN4yyjyv+r7HxwK/h0cXXN7NA+w8owG8Himq/MuI6BmpCVOLAwPBkK1KsaVywbbfLnH8gUGYM=
+sidebar_class_name: "post api-method"
+info_path: site/docspace/api-backend/usage-api/api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Check the form draft filling"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/api/2.0/files/masterform/{fileId}/checkfillformdraft"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Checks if the current file is a form draft which can be filled out.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"fileId","in":"path","description":"The file ID of the form draft.","required":true,"schema":{"type":"integer","format":"int32","example":9846}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"description":"The parameters for checking the form draft filling.","content":{"application/json":{"schema":{"type":"object","properties":{"version":{"type":"integer","description":"The file version of the form draft.","format":"int32","example":1234},"action":{"type":"string","description":"The action with the form draft.","nullable":true,"example":"some text"},"requestView":{"type":"boolean","description":"Specifies whether to request the form for viewing or not.","readOnly":true,"example":true},"requestEmbedded":{"type":"boolean","description":"Specifies whether to request an embedded form or not.","readOnly":true,"example":true}},"additionalProperties":false,"description":"The parameters for checking the form draft filling.","title":"CheckFillFormDraft"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Link to the form","content":{"application/json":{"schema":{"type":"object","properties":{"response":{"type":"string"},"count":{"type":"integer","format":"int32"},"links":{"type":"array","items":{"type":"object","properties":{"href":{"type":"string"},"action":{"type":"string"}}}},"status":{"type":"integer","format":"int32"},"statusCode":{"type":"integer","format":"int32"}},"title":"StringWrapper"}}}},"403":{"description":"You don't have enough permission to view the file"}}}
+>
+  
+</StatusCodes>
+
+
+      

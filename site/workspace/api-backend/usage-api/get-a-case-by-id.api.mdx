@@ -1,0 +1,71 @@
+---
+id: get-a-case-by-id
+title: "Get a case by ID"
+description: "Returns the detailed information about a case with the ID specified in the request."
+sidebar_label: "Get a case by ID"
+hide_title: true
+hide_table_of_contents: true
+api: eJztV+9OIzcQfxVrvnZDliRwsFJVkcCpUQ+EgOvp4Pgw2Z2wBq+9tWc50iiP0xfpk1X2JoFwEVmuSJWq2w+RY8+M589vxjNTYLxxkFxBaov2AB05uI7AUVpZyRNIrqZwUHFurPwTWRr9K2FG1jNYwgwi+GolE1zPriPIyKVWlp4MEjgjrqx2gnMSGTFKRZmQemxsESQJHJmKBYoUHYmvkvNAOjwUrqRUjmUgD3uW/qjI8RZEMF/2TTaBZAqp0Uya/RLLUsk0iG7fOq/CFFyaU4F+xZOSIAEzuqWUIYLSmpIsS3JBDDqSmV+t2uAdIoaHEC34pWa6IQuz8Hl1XGm0q6V04ni9CIjeStFjKkZk3RNCtBYnEIFkKtxmAecFKvXesPlo1RNqx1bqG4iAHrAold+qrBJsxNiwgVkEx5TJqvgezkPpSoWTEyzoZb4LzG4py6Qm0cc0l9ZzD93AFCXqyRPekTGKUK8wj1E58gwHaUrOfZCOv99Lw2ydpjV0vYGVzFYuj+dfa83P4nuVK47lHYlL1BNkdyc964VktYkJNQZwRnBwj4w2BLtRrJynFBi4PP+pNWOpaGOov3xpn1qTVSk7vyRTKqr3PPsWuvLhl8qR/RmzQmrp2CIbnz4RcG0QHBWlMhOiTxZLqo+G7tTKe2TaEHO2FdUYOc/RUtYUIoH6IhBOn2f2kzBLzd2Ol6Crwle8E6N9Kp8RZp9C1avX8E3pu4pFS3jqSGyLllgyRKIz/3u9Ch+v1KCylnQ62YzOBlAY5FKTI/G5Qh0snhQjsyGWf/8VkDMaWbqXWJvy4h0nn2u9FVeWNmN6cLLIZ31PlnGkmse3j06mzcL7BFoLlw712Hh4lXVyDFAfZZIbXj5AfUiKmoPxsCGqlpzbnW5vVW+jGVPuo6Ol2l4TS8jUb4CQH/Xrv6tfizitDcHjzZ24E7e2O61472L7XdJ9l8S9rZ133d3u3s5lQ38dPeRyJEMvZewN6nmLNs8yZVzziti04v54Zf8nKH19Gawcm+K9JJX9i/bzSLPkyUrgm5XI3k6n2+t0vSYfcEQbHNaXlvPMw3kWQdD5d1TVhsCuzcj97d1evHu5lPP6ruGCHjiwQhTWB5YQIjgnRSn3zQNEMMgpvauXfr6qFTv06q9vLZYi6/5iIbVuL5aCI9EVLbGQHYmeaIm5+EjsiJbwN6w2IjsBlcbJZ69/sxiF5DtGd/eyn9/qkXwE5POH8i2k+1H4UaY/6sXb3453HzXOx2PKgoCCODcZJHBDAf7IOSTQxlK2O1tx24/ZftpsT+uZM7mKW/vXP83AD932Psx2V1NfMCCBnLl0Sbs9zY3jWTItjWVPeY9W+vYppJQ/q/UaY6W8ecqkqML2LALPs3q8F+93vElP5vxzP37W4tZO+4/pXsrfKOS7Nz6vjyPQodSu8gZv+Pn27HFkP1o4/HHkjmde2NiES5b9T1FUWvJEnAefiLOj8wtxcDr0tpN1tesVMnkbZ/8A016R2A==
+sidebar_class_name: "get api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get a case by ID"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/crm/case/{caseid:[0-9]+}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns the detailed information about a case with the ID specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"caseid":{"description":"Case ID","type":"integer"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Case","content":{"application/json":{"schema":{"type":"object","properties":{"Members":{"type":"array","items":{"type":"object","properties":{"SmallFotoUrl":{"type":"string","example":"url to foto"},"MediumFotoUrl":{"type":"string","example":"url to foto"},"DisplayName":{"type":"string","example":"Tadjeddine Bachir"},"IsCompany":{"type":"boolean","example":"false"},"AccessList":{"type":"array","items":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"}},"IsPrivate":{"type":"boolean","example":"true"},"IsShared":{"type":"boolean","example":"false"},"ShareType":{"type":"integer","format":"int32","enum":["None","ReadWrite","Read"],"description":"[0 - None, 1 - ReadWrite, 2 - Read]","example":"0"},"Currency":{"type":"object","properties":{"Title":{"type":"string","example":"Chinese Yuan"},"Symbol":{"type":"string","example":"¥"},"Abbreviation":{"type":"string","example":"CNY"},"CultureName":{"type":"string","example":"CN"},"IsConvertable":{"type":"boolean","example":"true"},"IsBasic":{"type":"boolean","example":"false"}},"title":"CurrencyInfoWrapper"},"CanEdit":{"type":"boolean","example":"true"},"CanDelete":{"type":"boolean","example":"true"},"ID":{"type":"integer","format":"int32","example":"1234"}},"title":"ContactBaseWrapper"}},"CreateBy":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"},"Created":{"type":"string","example":"2020-12-08T17:37:04.5736385Z"},"Title":{"type":"string","example":"Exhibition organization"},"IsClosed":{"type":"boolean","example":"false"},"IsPrivate":{"type":"boolean","example":"false"},"AccessList":{"type":"array","items":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"}},"CanEdit":{"type":"boolean","example":"true"},"CustomFields":{"type":"array","items":{"type":"object","properties":{"EntityId":{"type":"integer","format":"int32","example":"14523423"},"Label":{"type":"string","example":"Birthdate"},"FieldValue":{"type":"string","example":"2020-12-08T17:37:04.5916406Z"},"FieldType":{"type":"integer","format":"int32","enum":["TextField","TextArea","SelectBox","CheckBox","Heading","Date"],"description":"[0 - TextField, 1 - TextArea, 2 - SelectBox, 3 - CheckBox, 4 - Heading, 5 - Date]","example":"5"},"Position":{"type":"integer","format":"int32","example":"10"},"Mask":{"type":"string","example":""},"ID":{"type":"integer","format":"int32","example":"1234"}},"title":"CustomFieldBaseWrapper"}},"ID":{"type":"integer","format":"int32","example":"1234"}},"title":"CasesWrapper"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

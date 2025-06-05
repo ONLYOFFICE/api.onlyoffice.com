@@ -1,0 +1,71 @@
+---
+id: insert-a-file-to-the-common-section
+title: "Insert a file to the 'Common' section"
+description: "Inserts a file specified in the request to the 'Common' section by single file uploading."
+sidebar_label: "Insert a file to the 'Common' section"
+hide_title: true
+hide_table_of_contents: true
+api: eJy1VlFv2zYQ/ivEPSux42RrK2DY0i7Fgm1tECcY0NgPZ+lss5FIljzF0Qz99+FIOXYSN9nDpgeZJu87Hu/77qg1MC4C5Dcw1xWFwUdbleQDTDMIVDRecwv5zRpOG15ar/9G1tb8RliSF5AnLCGDlddMMO2mGZQUCq+dmEEO5yaQ56BQiXsVHBV6rqlU2ihekvL0raHAim38O4EPtq6tmYAKVIgPNWtV0GZRUfLQuMpiqc3iEDLo0e9t2UK+hsIaJsMyROcqXcRgB1+DhLKGUCypRhlx6whysLOvVDBk4Lx15FlTkFXZR34fn+Syj1Qb17AK7AlryJ646jJgzfvgHyV4gzVtMYG9NgvBFJ6Q6ROtzudn9zrwc/i4T1xQqyXxkrxkLMEUKkOrlB09V5oVVkJLq0h8BWW9Mpa3+6L32EIGmqkOO+mYWVsRGui6DG6J3Adr7sjzmJGb8C9DElxkMoZTJA/aLFSIXp7Fst1THmE0OGtCImI0HD7fNimKyrgDZP8V6Z+Emq1Vz00GdI+1E0J3GOwyuHYlMpXv29c9n5f7/M6tr5Ehh6bR5aN9hv1zsOe1eSSEX3VwFbavB/6nviX1BU2LHG61QK82Gn0BhAYX5MX69A4Z/bjGqnoZ0/hKNBDEUmFECf7CW+Hq2r8Cn0wGF96WTcFBhmRdRWlO4IcY3P3PTSD/E5a1NjqwR7Y+yrUvOjirXWVbor88uhR8T9TLO4+Go+HB0ehg+Pbq6E1+/CYfHh8en4xO3v3w5os4+cMmVb3s5WQymUxOfpT3jlZ2opNZiSyGFuV+Mjx6rvBrg32zpTLia+KlLSEHZ0PUF/ISchig04PR4XCQOvcvRWydAx0LBKR/+ztp5dK+G0k+LJldyAeD9dIG7vK1s547yOAOvcZZlfQqaymoOTaVSLSyBVZxustAMI+X3w7fjeQ8O1fGWKouudt7cTykEZ3+nWIzkpMv03IGMXX5Y2xMhZT15bbrn22S/9C1d9L9QNHz9nrDvqHp3jYnK53EM7cxzt6Z3EuN0dyqcUyrujwbX6nTi3NJH/mQqKuQaZOmwDVGxfSHSY1rcxN+98KDJ1fozrX2P9+mPSVM9zxwFWoj52hS1SbJ3QhfkMHocCgtTGQHGfTCiyRG6U2zXkQ3sF7PMEjpd51Mf2vIy/fEdKs5+ddlG+pFq7fUxoTHUx9cSVRiXjVJME96fJdtEKdFQY5ftJ3uFNPF5/EVZDDrPx5qWwrG40o+LHAFOUAGNrIQhRzn1lChWTS4ENvkU2QpBftY1bdR1f1ATrVZMu1OhI8FnvUHkbccay9kvU4103UP9mnpu4iHqkrWwuu067p/ADL2aAg=
+sidebar_class_name: "post api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Insert a file to the 'Common' section"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/api/2.0/files/@common/insert"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Inserts a file specified in the request to the "Common" section by single file uploading.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"file":{"description":"Request input stream","type":"object"},"title":{"description":"File name","type":"string"},"createNewIfExist":{"description":"Specifies whether to create a new file if it already exists or not","type":"array","items":{"type":"boolean"}},"keepConvertStatus":{"description":"Specifies whether to keep the file converting status or not","type":"boolean"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Inserted file","content":{"application/json":{"schema":{"type":"object","properties":{"Name":{"type":"string","example":"File name"},"UpdatedBy":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"},"Updated":{"type":"string","example":"2020-12-08T17:37:03.3424957Z"},"Location":{"type":"string","example":"4\\\\46\\\\File name"}},"title":"FileWrapper"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

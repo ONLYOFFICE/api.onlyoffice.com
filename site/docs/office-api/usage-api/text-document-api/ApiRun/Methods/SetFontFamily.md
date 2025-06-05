@@ -24,10 +24,14 @@ expression.SetFontFamily(sFontFamily);
 
 This example sets all 4 font slots with the specified font family.
 
-```javascript
+```javascript editor-docx
 let doc = Api.GetDocument();
-let textPr = doc.GetDefaultTextPr();
-textPr.SetFontFamily("Comic Sans MS");
 let paragraph = doc.GetElement(0);
-paragraph.AddText("A sample text with the font family set to 'Comic Sans MS' using the text properties.");
+let run = Api.CreateRun();
+run.AddText("This is just a sample text. ");
+paragraph.AddElement(run);
+run = Api.CreateRun();
+run.SetFontFamily("Calibri Light");
+run.AddText("This is a text run with the font family set to 'Calibri Light'.");
+paragraph.AddElement(run);
 ```

@@ -1,0 +1,71 @@
+---
+id: update-the-order-of-task-categories
+title: "Update the order of task categories"
+description: "Updates the order of the task categories with a list specified in the request."
+sidebar_label: "Update the order of task categories"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVV1v2zoM/SsG96pbZ9mAbX7rugG3uANWtCn2EOSBtZlYi21pEt0sM/TfB0pO6/QL2HDzEEgiKZGHh8cDMG48FEsoXZsv0G89rBR4KnuneQ/FcoDTnmvj9C9kbbp/CStyEuAIK1Cwc5oJVmGloCJfOm3FDQq4thUy+YxryoyryGVmHTeMfpuVyLQxTpPPdprrDLNGe868pVKvNVWZ7qKzox89eT4BBePyo6n2UAxQmo6pY1mitY0uY375dy+vD+DLmlqUFe8tQQHm5juVDAqsM5Yca/LRqrlJq+P0v0g6kvEk2302eqvDpegc7kGBZmr95DHPTncbCOknuXtrOp8ems9mj99bPEBlrL+jXUIP1B9X/FxyzyBxSQ2yvqVzcT8zfXppjNEd0yZmsTauRU5Hb+aggH5iaxtxeg1BwXmLG7pArh/DMfW1yHXGJtPiLnELgfblmOQSFHyaQvdSxNQxKDgzjXEvR7zCd+tyNhPvK+P4a8T+r3D49Mdh8zdvQdjCCYrIibORet8cWksORkK9nb1+zKHrDsdZpSpe1BLXphK0+9jv2BXI0ep8fjLLZeaF3/mB37mjA9k8uVtyPipA7xoooGa2vsjzoTaeQzFY4ziAglt0Gm/GIRJbSmyNfSN1NqbEJh4HBRJzbH4/+zCXoiaqcyVETtc9qT33BLf6P4oMl+rrZFbQYSvWo9gIh0zK5b2KfD4gf68CywMlVkFuXZs7IxRwZtq27zTvs6sITnb5+WqRnV6cCwjkfGpCI6o3Fuu5xcjQMaWkiQ8k8Xjw4YGOToTu/5fUEUemn5zbBnUcktjtYSTLUkAGBfOTmSiQayUK/VY2I2miNCfarNRIgCUMww16unZNCHL8oycnn5PVPV9kF9ShbcKzLe0jzLHefxaSnLg3fWr2A8kL6hBxWpZk+UXf1WQYLq4XoOBm/I60ppIQhzspBHdQACgwEf7IwXg2QIPdphetKiBdKYySeTsm5DYSclxIUQdTt58keMxNNdYh/1LVkyHDkOgewp1/Mj0bcTcQyVu6uwoh/AZExLe2
+sidebar_class_name: "put api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Update the order of task categories"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"put"}
+  path={"/api/2.0/crm/task/category/reorder"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Updates the order of the task categories with a list specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"titles":{"description":"List of task category titles","type":"array","items":{"type":"string"}}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Task categories in the new order","content":{"application/json":{"schema":{"type":"array","items":{"type":"object","properties":{"RelativeItemsCount":{"type":"integer","format":"int32","example":"1"},"ImagePath":{"type":"string","example":"path to image"},"Title":{"type":"string","example":"Title"},"Description":{"type":"string","example":"Description"},"Color":{"type":"string","example":"#a7fc00"},"SortOrder":{"type":"integer","format":"int32","example":"1"},"ID":{"type":"integer","format":"int32","example":"1234"}},"title":"TaskCategoryWrapper"}}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

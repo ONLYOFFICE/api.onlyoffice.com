@@ -1,0 +1,71 @@
+---
+id: rename-a-folder
+title: "Rename a folder"
+description: "Renames the selected folder with a new title specified in the request."
+sidebar_label: "Rename a folder"
+hide_title: true
+hide_table_of_contents: true
+api: eJztV0tv2zgQ/isEz/RDslOnBhaLPBwk2E1q+LEFmvowkcYxG0lUScqJ19B/XwwpOXbtJik2hz2sDjJNzuPjzHzicM0t3Bvev+VzmaBpXagkRm34THCDUaGlXfH+7ZqfFHahtPwbrFTZJUKMmpQ0QswFf9TSIp+VM8FjNJGWOYnxPh9hBikaZhfIDCYYWYzZ3Plgj9IuGLAMH5mVNkFmcozkXGLMZOY0NH4v0NgmFzwHDSlagkZwyCrvc2/piiBIcpeDXfAfMfgtsatzLriJFpgC76+5XeVkwVgts3teEvTK3amKVyQRqcxiZmkIeZ7IyO299c2Q1fW+KXX3DSNLWLXKUVuJxq3S3miwi+oGH+tAeAmxB4keQmVylRlvLGy3901VG6zwGi7eC/oQNGb2Kj4kiU+Q5rQxHhx3273uh27viJeCX1AZnanCe6+0ZGbxHjUXfK50CtZPdcKX7PhCfAdLV2a8AI1w59NQGbpTKkHIdvSsLtBrXMBSuZreV6D1VyJyfNQ7/tANe10SntT5303vtvxYpUhVIBNs2idLWidRhMa8ceNZkRIZb1RGZTRCiD878H7sfsirQ/kXaMouzS0lPnLBz1SaUrG43CUXSqe0fFYYq9ILmVjUfI/Xt23WYORPsIA12MalYGH1V7COG3nHgnVZg3nfgh25FXIv2AfWYBUCwXqswTYgBDumtS0cs90sU5xcauNX8jqHxLjEnmkEuyN+IBthO2w3grARdCZBrx90+p2gefSxHfbC3pctI6er1wl0ddDVJoFFIeMd1+3qaRx41Q9BOJcmT2B1476CL+3lWj4g+wLZCqx5kG8sx2vIgEqNynAJFvQ4hSR5WafQCbOKGZJk4LRIf6gVnStT/Yr616+toVZxEVlDQ1R5gn6O1Jtg8qffC4P6N4hTmUljNVilOX0fq+8rH6R5olaInzXkHvw0j/99tkdKWf8tmjgbv0LI88HFyfTPCbHp0/X1pxsu+On05uySCz4ZnYzpdzoejLjg48uT0YC7eFEhEQHrT5DnauQZOsE0T8BPDrVcQrT6CTkr356f3r0np0Pg2elAeDoSDk9GB8Vzr0YjWEAmN4gECzzrI8fagMxukAkWdJyuQ7dL2XArLf/z57/On6FWS0n9lcX0jSdnrfIHrl4GHISdbrzjJP7lUz7suAP2HLPVuXrMEgWHDoJKgg4KAnFAYCsInukUAhcD14B128F+zzXNoOqIMXYWUrQLFVMPWrg6pk60z1uQy1bYbLd8d+0bvta67ltLaklRL+u2tqA884W1uem3WuuFMrbsr3OlLUkuQUvqYhw1aM3DmkORUIQSFUHipkvBSWd3+bj9MaQdbXX2Y+oDvbmD/f0mVJBLymjVZS/8sqi78B1dFwxqNEfP3fSgztmmG940uWRyrrZXqBkoMmlXbOwiw0aD8YSdDK8oAqiNj7/71FQ7NTYF19dWePylg0HVX/94Idjq7N/vflIFyuKTbeUJSFd3haetr4VbiiIXPGy2qa6pHlx9VxD7m7vMTFTJveXr9R0YYn9Z0vT3AjVdx2bPteDKJpaGxjHvu07nhf1u34UOQq4Tnq1cwSUF/eOCPxChn+9b5awUdR0QAr985v003En5rL53BSlFrUFtbm5flJ1tcWs4pcP0rrqgpSomFQ3UxdLbIVVu266o3dyaJ5DdF3BPst4klSjRd7fCH1yFVwPa1MFY7BZ7HRh6064OqqzXnj9luZH3Sz/V2DDMS1NqZmVZ/gP7SSRu
+sidebar_class_name: "put api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Rename a folder"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"put"}
+  path={"/api/2.0/files/folder/{folderId}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Renames the selected folder with a new title specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"folderId","in":"path","description":"Folder ID","schema":{"type":"string"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"title":{"description":"New folder title","type":"string"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Folder contents","content":{"application/json":{"schema":{"type":"object","properties":{"ParentId":{"type":"object","example":"1840746475"},"FilesCount":{"type":"integer","format":"int32","example":"1840746475"},"FoldersCount":{"type":"integer","format":"int32","example":"1840746475"},"IsShareable":{"type":"boolean","example":"true"},"IsFavorite":{"type":"boolean"},"Id":{"type":"object","example":"857864274"},"Title":{"type":"string","example":"Some titile.txt"},"Access":{"type":"integer","format":"int32","enum":["None","ReadWrite","Read","Restrict","Varies","Review","Comment","FillForms","CustomFilter"],"description":"[0 - None, 1 - ReadWrite, 2 - Read, 3 - Restrict, 4 - Varies, 5 - Review, 6 - Comment, 7 - FillForms, 8 - CustomFilter]","example":"1"},"Shared":{"type":"boolean","example":"false"},"Created":{"type":"string","example":"2020-12-13T17:13:31.5902727Z"},"CreatedBy":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"},"Updated":{"type":"string","example":"2020-12-13T17:13:31.5902727Z"},"RootFolderType":{"type":"integer","format":"int32","enum":["DEFAULT","COMMON","BUNCH","TRASH","USER","SHARE","Projects","Favorites","Recent","Templates","Privacy"],"description":"[0 - DEFAULT, 1 - COMMON, 2 - BUNCH, 3 - TRASH, 5 - USER, 6 - SHARE, 8 - Projects, 10 - Favorites, 11 - Recent, 12 - Templates, 13 - Privacy]","example":"2"},"UpdatedBy":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"},"ProviderItem":{"type":"boolean","example":"true"},"ProviderKey":{"type":"string","example":"1234d"},"ProviderId":{"type":"integer","format":"int32","example":"1234"},"DenyDownload":{"type":"boolean"},"DenySharing":{"type":"boolean"}},"title":"FolderWrapper"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

@@ -1,0 +1,71 @@
+---
+id: update-a-project
+title: "Update a project"
+description: "Updates the existing project using all the parameters (project ID, title, description, responsible ID, etc) specified in the request."
+sidebar_label: "Update a project"
+hide_title: true
+hide_table_of_contents: true
+api: eJztWF9v2zYQ/yoCn1pMjmUndlsBw9C6CWas7YI4xYAmebhIJ5sNRXLkKYln+LsPFGXJSozYTlugD/WDTIn3u/8kj7dgBFPL4gumjfqKCXVP/b9lVyGzmBSG05zFFwv2tqCZMvw/IK7knwgpGoczCCkL2Z3hhOxqeRWyFG1iuHZkLGafdQqENqAZBnjPLXE5DSphQWHdGwhRTmswkCOhscGLFcX4fRgQJ4FhsMY3DAxaraTl1wJLGqTkZWA1JjzjmAZclhwN/lugpQMWsmr4TqVzFi9YoiShJDcErQVPSrO6X61TesFsMsMc3IjmGlnM1LVTh4XOTxoNcbRulqfu2bb4tFadhSs4l4RTNGwZstKax6hPeFe7xZPUYEuGy6nDtiBPcVif2cBnzXvjDRasc2o7ehMzn0FP2uMoNiA1GOIJ1yBpC4cWZc0JjIE5CxknzO1asCoJIcuUyYFYzIqCp2y5DJkloGKLME8TvLhkf2uUlywMLtkpFBZTN1YmuGQjocrXl9uVWYV+TRsu6bBfqqMNvwXakA6TKpVtwLOAZtzW2pXDEuVUkYq2q3CtlECQpUSpiGfzpwTezZBmaAJSgScOoBaeg4QpmgCuVUF+0VYzkDhG9pFOjWz3q1PPL59+FD3WxO8Y6YozC7/XYh2BPE45bXBMyPAecu3WJctAWHTZOQL5HgX66OwCmNTb5Q6ajAwC4Ucu0JKSO8tokGgtTPfHnYO92R/Ec5xolOkeSOfqc4R8D8gZQnriPLInpvbi3kDvxH1hzof7YD5weTNSkiDZJ/mcpAq1j7AfmuJjO5a7B7U57VaH4mqJjGWmHL/q84kSZTnxeN00PHuH/cMjr8Nps2vuorQL10gVknbZldc5RC30uSIQz2JR5+fztXjPbVJYy5V8Po/T5hD9BnfwHM8NJDdcTh96pD53G8xjcmeMSoocJdnnqzG2J0oIdbclB6oITtcX0NaqYU17mNpe6J7+uPa7Yfo0qB/1o06v3+n3z6OjuNeLB8ODwXDwetA/+sIaJu92OCfGG0W1q5qWudWvs+Gx+lXZpAXMP0GOT9vykd9g8AXkHMjecB//qnx9AuSLBEf99hYIzCQHsSVPCiNcwWEdZQAlqtofMi7ws9kCv7x0F5e0SMi6ISot0H9z8AOw+v6PwqL5HdKcS27JACnT2qGOcy3UHPEfA9orXwfqR4WhqnS+LZ0qJr/S6WdPpzpQPyoMLb47baW9aMcYTMpB4CldxNsX0a3A9QrfVcr1LWzvjf+suY/+SvifO+HPHnYZvncgHteXTrhGc1IIwfx98yjqbbhiSqi6WejbAjnSTKUsZrooswhoxmLWBc27/YOou2qOLXgaX0SdN1e/LZlrj5lbNLbsjhXOw2xGpG3c7S5mytIyXmhlyFHeguFwXV1s3JxXKYNCOPOFSkCUn11LQJkH06+jN678WK515CbuyuvZbezLNcWO5n9hWe04u2d+OmSyzNw2tnSEu1OfNa2y41VEfKsrahxeB7Ht2frzgxZTM+HbRc17uwl0wQ4zeD3Ihkedwaveq87RYNjvXB9mSaefvBkeZsMhZDAsm5PVHnIRXa31US7IFHjVtDnc69JZn6nSK5X2I5XnheQ0DyZlEIOz48l58PZ07IKFxnpjhOtcElsu/wc04BBF
+sidebar_class_name: "put api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Update a project"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"put"}
+  path={"/api/2.0/project/{id:[0-9]+}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Updates the existing project using all the parameters (project ID, title, description, responsible ID, etc) specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"id":{"description":"Project ID","type":"integer"},"title":{"description":"New project title","type":"string"},"description":{"description":"New project description","type":"string"},"responsibleId":{"description":"New project responsible ID","type":"string"},"tags":{"description":"New project tags","type":"string"},"participants":{"description":"New project participants","type":"array","items":{"type":"string","format":"uuid"}},"status":{"description":"New project status (\"Open\", \"Paused\", or \"Closed\")","type":"array","items":{"type":"integer","format":"int32"}},"private":{"description":"Specifies if this project is private or not","type":"array","items":{"type":"boolean"}},"notify":{"description":"Specifies whether to notify a project manager about the project actions or not","type":"boolean"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Updated project","content":{"application/json":{"schema":{"type":"object","properties":{"CanEdit":{"type":"boolean","example":"false"},"CanDelete":{"type":"boolean","example":"false"},"Security":{"type":"object","properties":{"CanCreateMilestone":{"type":"boolean","example":"false"},"CanCreateMessage":{"type":"boolean","example":"false"},"CanCreateTask":{"type":"boolean","example":"false"},"CanCreateTimeSpend":{"type":"boolean","example":"false"},"CanEditTeam":{"type":"boolean","example":"false"},"CanReadFiles":{"type":"boolean","example":"false"},"CanReadMilestones":{"type":"boolean","example":"false"},"CanReadMessages":{"type":"boolean","example":"false"},"CanReadTasks":{"type":"boolean","example":"false"},"CanLinkContact":{"type":"boolean","example":"false"},"CanReadContacts":{"type":"boolean","example":"false"},"CanEdit":{"type":"boolean","example":"false"},"CanDelete":{"type":"boolean","example":"false"},"IsInTeam":{"type":"boolean","example":"false"}},"title":"ProjectSecurityInfo"},"ProjectFolder":{"type":"object","example":"13234"},"IsPrivate":{"type":"boolean","example":"false"},"TaskCount":{"type":"integer","format":"int32","example":"0"},"TaskCountTotal":{"type":"integer","format":"int32","example":"0"},"MilestoneCount":{"type":"integer","format":"int32","example":"0"},"DiscussionCount":{"type":"integer","format":"int32","example":"0"},"ParticipantCount":{"type":"integer","format":"int32","example":"0"},"TimeTrackingTotal":{"type":"string","example":"TimeTrackingTotal"},"DocumentsCount":{"type":"integer","format":"int32","example":"0"},"IsFollow":{"type":"boolean","example":"0"},"Tags":{"type":"array","items":{"type":"string","example":"Tags1,Tags2"}},"Created":{"type":"string","example":"2020-12-22T04:11:56.5658524Z"},"CreatedBy":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"},"CreatedById":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"Updated":{"type":"string","example":"2020-12-22T04:11:56.5658524Z"},"UpdatedBy":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"},"UpdatedById":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"Id":{"type":"integer","format":"int32","example":"10"},"Title":{"type":"string","example":"Sample Title"},"Description":{"type":"string","example":"Sample description"},"Status":{"type":"integer","format":"int32","example":"0"},"Responsible":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"},"ResponsibleId":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"}},"title":"ProjectWrapperFull"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

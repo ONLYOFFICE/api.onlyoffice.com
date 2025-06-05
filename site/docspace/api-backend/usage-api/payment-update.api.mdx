@@ -1,0 +1,71 @@
+---
+id: payment-update
+title: "Update the payment quantity"
+description: "Updates the payment quantity with the parameters specified in the request."
+sidebar_label: "Update the payment quantity"
+hide_title: true
+hide_table_of_contents: true
+api: eJytV01z2zgM/SscXHJR7dTpSbc07c60u7PNpsnk4PE0sATZbCSSJamkXo/++w5IypZid+NDL4lNAiA+Hh7gLXhcOcjncK2tx1pMxTVuGlIeFhloQxa91OpTCTmYeHFnSvQEGVj60ZLz73W5gXwLhVae9fItoDG1LILm9LvTis9csaYG+ZPfGIIc9PI7FR4yMJbf8ZIc3/5oUXnpN8cksSwlG8X6eqST5KTytCILGVTaNujj0cUMugxKcoWVhrUhh9s1iQaNkWoldCWkp0bIkpSXlSTrxLP0a+HXJK2w5AwVXj6RSK5JckIqvhYpJRPIQLV1jcuaIPe2pQzoJzaGv8638EgbyMHphoSnnxzJE9YtQf52dvGuW3Tdr0KrsHZ0zPmUe2HQYkOefa60HfrUe7sR7L+sUj0c++qlZ8/gnyRyE6198Bq6jr3hoLVyMbuz83P+N3bivdY1oRIhkFxwzEJWwYEdaoR0wrVFQc5VbQ3Z74JI791Achnd4UoXuo1PnICKWqrHIYLQWtxABgwI97oja0vVQMp5K9WK7WIR03RwFbLrPPr2VOBG4Std0kkK3b66qUT3Fo0hm95+d/72sJh3Clu/1lb+SyUEoYtDob+1MGQb6RzDSPjwlZ8Xfi2dSCGH+KhobWjh+RbQFd/Y+rfQBHOwhCVk8GylJ1h02RbeE1qykM/Dt0sj/6TN7uyYPDpZ9OJfLlu/nh0X/GIoMNd80S1eNlFkMXe8Y/r2H7ZX6iIq+95PLcj91JBf60CRbQAJ+jXkMEUjp7PJ+dQEap2mZ6ZtT6CO7BNZF9LU2hpy2C7R0Z2tO3jp79cgKwqtKrlqY38FHrGSWSegKSnH0lXY1oyLA0sf4pW4u/mLMbHY1+sr9180Na7avj9CcQ5M3jkSV1o/ShKsxDxa9B4qbILm0GAGktWKoMKASyXdvbP23hy88lF5smKjWytaR5YNC1SlMOjcs7Zc/MAggQ+CQbacgHSK6bMoLLaf72/FrX4k1Z2NjEZbWfrwR996n+9v+akxcl/L2eUoUUyVJQOtkYpKsdwEiJ1dprYMMmdiTVgGB1JSRy+mpCaZLtu1xp7FMBy89CTKiarWzxH5o1dFoJ4M+DpCY3jb89LoMGAwJNrl02l4daJVvdFVJQuaFLqJh7PpjnZ4KHHCT1cN4qE62vRjAbkHbwhLgWHqBJKy2lPhqeRJrltbkNuxRA73/P8V6UicPZnssxkOrrRScTS8SCrffhDp+rAtRtqnR83Al6rSXN+fb5xcKfStpdfhxpDeiXP/lGFhGPs1EbxbhMyKpnVeLEnopceAySeJAZQPPa31tDGqyIMgVRotlZ+IT55hze1JpUAnUMSO3/Nr6OGHQSAPkz26h/G9YIwuA14abvYb6Md+3RpukCesXmy40iF/aWxeGslSZF3M3MXk7eSc82208w2GqZ48jEPk6Ax5WYDBfvx7Z08qOwc3NTXKsAO1cQrEQTRnTEAGs8k5D6cwjMKUint+BmkgLTJYa+dZYbsbRB0f/2jJcjoX+4ET52/PNvtMX8Uo39yyW7tkH657PJ+jxmVRkPH/K7sYjNjru1tm4PSjown8Axaf+QcJPseBp0PSIynw2RZqVKsWVywbTYadu+X0DDsnDqf0gYPqr9Rm6OB4lsUw+C8HdVRju41t2XU7+Xj1S40d1UdpLuui67r/AIJKwtc=
+sidebar_class_name: "put api-method"
+info_path: site/docspace/api-backend/usage-api/api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Update the payment quantity"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"put"}
+  path={"/api/2.0/portal/payment/update"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Updates the payment quantity with the parameters specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"quantity":{"type":"object","additionalProperties":{"type":"integer","format":"int32"},"description":"The mapping of item identifiers with their respective quantities in the payment.","nullable":true,"example":[{"key":"some text","value":1234}]}},"additionalProperties":false,"description":"The request parameters for the payment quantity specifications.","title":"QuantityRequestDto"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Boolean value: true if the operation is successful","content":{"application/json":{"schema":{"type":"object","properties":{"response":{"type":"boolean"},"count":{"type":"integer","format":"int32"},"links":{"type":"array","items":{"type":"object","properties":{"href":{"type":"string"},"action":{"type":"string"}}}},"status":{"type":"integer","format":"int32"},"statusCode":{"type":"integer","format":"int32"}},"title":"BooleanWrapper"}}}},"401":{"description":"Unauthorized"},"403":{"description":"No permissions to perform this action"}}}
+>
+  
+</StatusCodes>
+
+
+      

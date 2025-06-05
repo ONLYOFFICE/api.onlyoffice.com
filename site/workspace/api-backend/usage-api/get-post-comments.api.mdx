@@ -1,0 +1,71 @@
+---
+id: get-post-comments
+title: "Get post comments"
+description: "Returns a list of all the comments on the blog post with the ID specified in the request."
+sidebar_label: "Get post comments"
+hide_title: true
+hide_table_of_contents: true
+api: eJy1Vdtu20gM/RWBT7vAxJKdvVXAYpEmQdbYC4LGQYGmfmAk2p5mpJnOUGm0gv59QV3ieO3G6MP6QZZmeDjkIXmmAcZ1gPQOMlsUVam5jt8auw6wVBAoq7zmGtK7Bs4q3liv/0HWtvydMCcvME+Yg4IvXjPBsl0qyClkXjsxgxTeEVe+DBFGRgeO7CpCYyLeUCQHUskhsmX3fW/sOnI2cPRF86Zbml9EwVGmV5rySPdmnj5XFHgCChx6LIjJhy7CEguCFMSFlpi0nO+QN/DfoK7llPlF9N3V7fzie1AQsg0VCGkDXDtxEtjrcg0KVtYXyJBCVekcWknQU3C2DBTEfpYk8rfr/88h1S6bMU9QkNmSqWQBoHNGZx2Z8acgqGY/CvQea8mEqQgv1u39J8pYGPDWkWfdx7KgJz6UAz1h4YwsDbFELJatgnNPyJS/Dpols+RkOjtJThezaXr6Uzo9nSSnsx+ns58/iJNblx93kh3zMj/oYJf+b3I45Pa2Pk7ct56dDL+TA4/xJyFc6OAM1n93jfkaO3/pB4o+YFkjhwct0IVmcwyEJa7Ji/XZIzL6mwKNeR1TeROxjYJYRtihBH/t7UobuvVH4B8/xtfe5lXGQV7JOkP9msAnGNzTb1Ug/yvmhS51YI9sPbStAu4TgsvCGVsTvffoaHdLhEdG87zvUrHoTVqx+iGZ7k/abYmDLlHe+SqINzaHFNbU1VnGP4UYnY5nkyTeqpzITdz0YtHGw2CIFJB/HBWlEj5gw+xCGsfNxgZu08ZZzy0oeESv8d70LSR7fXgrrIx0jbEZmm65VSCY3e1fkjczSe2Fzt7I/PfuDqrtVhec/oPqUeI2/bYaBXAH25Giy5Xt4APR5yML0U2XbfTu8mYRnV3PJSvyoefWINMYfeACO40azrgi3lO3nco0W7H7X++AgRERtNgZ1KXEW/V93Bf/TugCBbNJ0knwkDookNNAQfp8Y4xdsFRDPe+gae4xyGC0rSx/rsjLfbjclr/rlFwHec8hXaEJ9AoZe3fPwQzGQpd112imki9Q8ED19oprl60aqy9B9JtnWUaOX8D2rhrpuec5ubpcgAKZot0Ge+gabHgR7wdD2u21MT55tuorkKbp27dtn+37ra8inhu8txaGlm3b/gv3UOkP
+sidebar_class_name: "get api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get post comments"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/community/blog/{postid}/comment"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns a list of all the comments on the blog post with the ID specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"postid","in":"path","description":"Post ID (GUID)","schema":{"type":"string","format":"uuid"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"List of post comments","content":{"application/json":{"schema":{"type":"array","items":{"type":"object","properties":{"Text":{"type":"string","example":"comment text"},"Created":{"type":"string","example":"2020-12-03T21:36:13.0325127Z"},"Updated":{"type":"string","example":"c2020-12-03T21:36:13.0325127Z"},"Id":{"type":"string","format":"uuid","example":"c2020-12-03T21:36:13.0325127Z"},"CreatedBy":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"}},"title":"BlogPostCommentWrapper"}}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

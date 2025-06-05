@@ -1,6 +1,9 @@
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 # executeCommand
 
-Executes the command which will be used to create the document file (text document, spreadsheet, presentation, form document, PDF). See the [Text document API](../../../../office-api/usage-api/text-document-api/text-document-api.md), [Spreadsheet API](../../../../office-api/usage-api/spreadsheet-api/spreadsheet-api.md), [Presentation API](../../../../office-api/usage-api/presentation-api/presentation-api.md), or [Form API](../../../../office-api/usage-api/form-api/form-api.md) sections for more information which commands are available for various document types.
+Executes the command which will be used to create the document file (text document, spreadsheet, presentation, form document, PDF). See the [Text document API](/docs/office-api/usage-api/text-document-api/text-document-api.md), [Spreadsheet API](/docs/office-api/usage-api/spreadsheet-api/spreadsheet-api.md), [Presentation API](/docs/office-api/usage-api/presentation-api/presentation-api.md), or [Form API](/docs/office-api/usage-api/form-api/form-api.md) sections for more information which commands are available for various document types.
 
 > Please note, that for the `.docbuilder` file the `CDocBuilder.executeCommand` method is not used explicitly. The command itself is used instead. See the example below.
 
@@ -19,17 +22,18 @@ boolean executeCommand(String command, CDocBuilderValue retValue = 0);
 
 ## Example
 
-### Java
-
-``` java
-CDocBuilder.initialize("");
-CDocBuilder builder = new CDocBuilder();
-builder.executeCommand(L"oParagraph.AddText(\"Hello from Java!\");");
-CDocBuilder.dispose();
-```
-
-### .docbuilder
-
-``` ts
-oParagraph.AddText("Hello from Java!")
-```
+<Tabs>
+    <TabItem value="java" label="Java">
+        ``` java
+        CDocBuilder.initialize("");
+        CDocBuilder builder = new CDocBuilder();
+        builder.executeCommand(L"oParagraph.AddText(\"Hello from Java!\");");
+        CDocBuilder.dispose();
+        ```
+    </TabItem>
+    <TabItem value="builder" label=".docbuilder">
+        ```ts
+        paragraph.AddText("Hello from Java!");
+        ```
+    </TabItem>
+</Tabs>

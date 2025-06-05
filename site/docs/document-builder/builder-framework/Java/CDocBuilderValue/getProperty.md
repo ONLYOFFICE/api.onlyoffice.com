@@ -26,8 +26,8 @@ CDocBuilder builder = new CDocBuilder();
 CDocBuilderContext context = builder.getContext();
 CDocBuilderValue global = context.getGlobal();
 CDocBuilderValue api = global.get("Api");
-CDocBuilderValue document = api.call("GetDocument");
-CDocBuilderValue docPr = document.getProperty("color");
+CDocBuilderValue doc = api.call("GetDocument");
+CDocBuilderValue docPr = doc.getProperty("color");
 CDocBuilder.dispose();
 ```
 
@@ -49,8 +49,8 @@ There are two more ways to get a property of the `CDocBuilderValue` object:
    CDocBuilderContext context = builder.getContext();
    CDocBuilderValue global = context.getGlobal();
    CDocBuilderValue api = global.get("Api");
-   CDocBuilderValue document = api.call("GetDocument");
-   CDocBuilderValue docPr = document.get("color");
+   CDocBuilderValue doc = api.call("GetDocument");
+   CDocBuilderValue docPr = doc.get("color");
    CDocBuilder.dispose();
    ```
 
@@ -70,7 +70,7 @@ There are two more ways to get a property of the `CDocBuilderValue` object:
    CDocBuilderContext context = builder.getContext();
    CDocBuilderValue global = context.getGlobal();
    CDocBuilderValue api = global.get("Api");
-   CDocBuilderValue document = api.call("GetDocument");
-   CDocBuilderValue docPr = document["color"];
+   CDocBuilderValue doc = api.call("GetDocument");
+   CDocBuilderValue docPr = doc["color"];
    CDocBuilder.dispose();
    ```

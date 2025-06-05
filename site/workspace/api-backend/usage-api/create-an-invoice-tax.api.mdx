@@ -1,0 +1,71 @@
+---
+id: create-an-invoice-tax
+title: "Create an invoice tax"
+description: "Creates an invoice tax with the parameters (name, description, rate) specified in the request."
+sidebar_label: "Create an invoice tax"
+hide_title: true
+hide_table_of_contents: true
+api: eJy1VlFv2zYQ/ivCPW0AE9tyhnUChiFNAswYtgaxiwFN/XCWzjYbiWRJKrEm6L8PR8qOlbrJy6YHmSbvI+8+fnenFjxuHGT3kNtqNFOPWubkYCnAUV5b6RvI7lu4rP1WW/kPeqnV74QFWcZYwgIEPFnpCZbdUkBBLrfSsBlkcGUJPbkEVSLj1onHXfIk/TbxW0oMWqzIk3XJDworEskRXiQWPf2YOEO5XEsqEqkCytLXmpw/BwH98L0uGshayLXypDwP0ZhS5sHf0RfH3rTg8i1VyCPfGIIM9OoL5R4EGKsNWS/J8Sq7wr/DYBa4S8KK2MOdt1JtoHsR9ing8cwJPEd6GhhWDghVVyuy0IWHw3dGKxe9Tsfjb7eYPdMO4r/i56+en2EYAmiHlSl5Klh0Aq6HvHwfcGzYCbjr+RiGLWCtbYUeMih0vSppsEXAdKIX3Yc3DkzH6fhskp5NLhZpmk2m2cXk/Kfpz+/S6fTT8y7vm7fZmBWnTjp4WteyGJw87p+zE6/9E7iTzpTYvE32n/KBkk+oGvTuQTJ0IX35FggVblhKAi4f0aOdV1iWr2NqWyZeJ44tEwwoxt9avZYlfbRvwD9/Ht1aXdS5dzwkbUqKcww/R2d2v9WO7K9YVFJJ5y16zWIX4GNAcFOZUjdEf1s00fkrVDeF9Ecnr7QuCdXgaG9r6q2vqaSBuF6zn10fGUrlaTOUoVR+mg6Qk3R6MXC5z8AF7thp02evgIvx5Nt0/aiwr7RUhF0q8ltdQAZGuyA99FvIYIRGjtLz8Yirdl9aRzHHHdlHsi6U7ZqvBLbeG5eNRu1WO99lrdHWdyDgEa3EVRlVzGvRnzXWJcdW6hzLMN0JYMxw+d34l5RDOWoVc64fcbuTDePAJBr5BzUgQHLQ27gs+ro7xAYWuEDdPZf6mz3b+1L9rLYhnYfpWF/HHZ+41sGT/nqudFXVSvommQfikrub+SK5vJ0xQWRd3KjkNtYT4XyF6ujsWCle9LiXrhz1pv+/K/Yse9r5kSlRhpJax/SMArrnKwAB6fmY24Ktwl0EXxiPO/4CiJK4h7ZdoeP07jqe/lqT5a+C5bOC+F8n9hfJynugJpAbYj5bsENsXtbx+l/0nk7sEZd5Tsa/ars8yorbD/MFCFj1/b/SBWMsPoU7f4IMQIAOxAVZhrkWSlSbGjdsG/dkkXHmDTX6EDTaDziq/ZJqjjwcylX0gfCbwzoJaduYAV13sI9L30UcciRa85Uuu677F2LqS3k=
+sidebar_class_name: "post api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Create an invoice tax"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/api/2.0/crm/invoice/tax"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Creates an invoice tax with the parameters (name, description, rate) specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"name":{"description":"Tax name","type":"string"},"description":{"description":"Tax description","type":"string"},"rate":{"description":"Tax rate","type":"number"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Invoice tax","content":{"application/json":{"schema":{"type":"object","properties":{"Name":{"type":"string","example":"Name"},"Description":{"type":"string","example":"Description"},"Rate":{"type":"number","format":"double","example":"Rate"},"CreateOn":{"type":"string","example":"2020-12-14T22:13:41.5378233Z"},"CreateBy":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"},"CanEdit":{"type":"boolean","example":"true"},"CanDelete":{"type":"boolean","example":"true"},"ID":{"type":"integer","format":"int32","example":"1234"}},"title":"InvoiceTaxWrapper"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

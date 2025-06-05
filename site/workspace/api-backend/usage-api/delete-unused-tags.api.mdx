@@ -1,0 +1,71 @@
+---
+id: delete-unused-tags
+title: "Delete unused tags"
+description: "Deletes all the unused tags from the entities with the type specified in the request."
+sidebar_label: "Delete unused tags"
+hide_title: true
+hide_table_of_contents: true
+api: eJyVUsFuFDEM/ZXIJ5CizrLiALkVWAnEBXWXU7UHN+PdSZVJQuJpGabz78iZwm5bLuRk+Tn28/ObgPFYwFyDzX2zk3ivoZAdsuMRzPUElwN3MbtfyC6Gz4QtZanPhC1ouM+OCfbzXkNLxWaXpAwMfCJPTEWh94o7UkMYCrVKxqlDjn1NUmDHjoq6d9zVDI+JVElk3cFRq1yo2Uw/Bip8ARoeww+xHcFMYGNgCiwhpuSdrTSb2yIkJii2ox4lksZgIN7ckmXQkHJMlGW4oJXIuKs107NNNhWrzED/6VM4u3CEuT5hVVIMZWm2Xq1edqna6v/miznjCBocU1/O8ufzNbxdvXk58XvAx9NRC1LVE3exBQNtvY2IgNyBgQaTa9YXq0ZMMJ20MK+ELlp+iCnFzENwPD5YLPR6bhiPzXJUEMfkO8qlGmbIHgx0zKmYppm6WHg2k/yfQcMdZoc3flFKsIX4AQfPYMBHi76mZw3y5yn8bvV+LUufmXQrki3t/mnVk5TJfaWqpajTLbCGgL2gT/5WueQmVye3bX5inzw9d8vfS0jfQ6zzHEsdfIx9XyVT2yqPutpsd+ry2xeRgXJZzuSRSdadfwNdhkDH
+sidebar_class_name: "delete api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Delete unused tags"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"delete"}
+  path={"/api/2.0/crm/{entityType:(contact|opportunity|case)}/tag/unused"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Deletes all the unused tags from the entities with the type specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"entityType":{"description":"Entity type","type":"string"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Tags","content":{"application/json":{"schema":{"type":"array","items":{"type":"string"}}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

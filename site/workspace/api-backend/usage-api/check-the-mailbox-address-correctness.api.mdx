@@ -1,0 +1,71 @@
+---
+id: check-the-mailbox-address-correctness
+title: "Check the mailbox address correctness"
+description: "Checks if the mailbox address is valid or not."
+sidebar_label: "Check the mailbox address correctness"
+hide_title: true
+hide_table_of_contents: true
+api: eJyVVE1v2zAM/SsCz2qdBTtsvrVdsRXDgKEfpyAYGJuJ1cqSK8ltM0P/faBkt0naDmgOgaxHUuTjIwcIuPFQLqBFpT25B3LFL1R6ZZ/Iw1KCp6p3KmyhXAxw0ofGOvUXg7LmB2FNjn0dYQ0SHp0KBMu4lFCTr5zq2AxKOGuouvNCrUVoSLQ5vMC6duS9UF48oFa1sE4YG45BgqP7nnw4tfUWygEqawKZwEfsOq2q9H5x6zn6AL5qqEU+hW1HUIJd3VIVQELnbEcuKPKMaluh/tOhS5H2UxxrFslGJBs5hfPBKbOBKKG2LSrzR9XvB8gm4uLbi78ygTbkIKYfV+c7a3xOaj6bvQ52aq0mNMxLT6UIridx9IowKdao/QFibMgoyA/ztsrPQk7z8+zT68xuDI4aoBrYqqXQ2BpK2FBiHEMDJRTYqWJ+PCt2ZNVOsipQK/TFlGWGfRJY7zSU0ITQ+bIohsb6EMuhsy5EkPCATuFKZ+IYy/mtsdcBytzfdB0lsM8+/GX2dc6l7Yj6ihnI4d6U9jMz2KmftAUJikloMizBYMvonm9ihSm+fBHx+RO2naZDEU7K2hPWLPIra5teV4G94My2bW9U2IqrRJa4PL+6Fie/L5gUcj73RmOgqXgfWkxNHlNMI/jm+FXWOaqCIe/hYHB3Ju/jMzwyF+gpFJ1GZTix1N9hVMmCaQUJ8+MZyJ0FNH7kFSQhqSV1n/WylGPnFzAMK/R043SMfH3fk+M1tXwRCn9FOfWLBXZH28RnKuvomnNMkfvc5YMhiXLyOKkq6sJ/bZc7w/D9/BokrMb91dqaXRw+8m7DRygBJNjEchJfuhtAo9n0uGHbHJKlxPO2r8S7pMTxwEVNkNnuJLgvSjnWwf9c1Zsuw5B1HuOzfYbe9XiehGzNTV7GGP8B24wuuQ==
+sidebar_class_name: "get api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Check the mailbox address correctness"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/mailserver/mailboxes/alias/valid"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Checks if the mailbox address is valid or not.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"local_part":{"description":"Mailbox local part","type":"string"},"domain_id":{"description":"Mailbox domain ID","type":"integer"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Boolean value: true - address is valid, false - address is not valid","content":{"application/json":{"schema":{"type":"boolean"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

@@ -1,0 +1,73 @@
+---
+id: add-a-bookmark-comment-by-bookmark-id
+title: "Add a bookmark comment by bookmark ID"
+description: "Adds a comment to the bookmark with the ID specified in the request. The parent bookmark ID can be also specified if needed."
+sidebar_label: "Add a bookmark comment by bookmark ID"
+hide_title: true
+hide_table_of_contents: true
+api: eJztVttu4zYQ/RViXgoEim9N010BiyI3oEHbbbB2UGATP4zFccw1RWpJKolq6N+LoSRfYjcp0O1b/SDQJM9w5gznDFcQ8MFDegeZzfPSqFD1z61d5uiWHqYJeMpKp0IF6d0KzsqwsE79iUFZ8zOhJMdQRyghgSenAsG0niYgyWdOFbwNUjiT0gsUfAKZIIIVYUFi1h4jnlRYxJnrS+ELytRckRTKxDlHX0vyoScmCxIFOjawRl5figyNmJFA7e02eC4MkSTZuzf35ujoow10dJSKMRnZWrmWHwbt7/jAp/sJ64S05M13QXhGqyAwCNSaD6lsKZ7QBB647QBnJGwbgLVBaHok3YMECnSYUyDnI6EGc4IUFNOnmKoCwwJe8ne+iRcS8NmCcoR0BaEqItoEeiAHCcytyzE0U6cnUHMqWgLPrawYk1kTyAQeYlFolcVc9r94Pmm1b9zOvlAW2HNnC3JBkX9hZtfXi44DemZUa8UHp8wD1JGASP4+8qZJbkdijPUFPP44JF9Y4xtPRoPBvq1flQ/Czjc3pbXqIflWDEw4wM2u1sUE6BnzQvNUtk1FncCFIwwkXweNBqPB8XB0PDidDH5Mvz9Nhye9d8Mfhu+Hw89s5LaQ/97I9UH8+vaUZbyQG3v/pFDY7s1Wcr+99Za/8+rt5PxXLlwqX2isPsayfS0Dv6klic9oKgx+qRg6UUG/BUKDXMh1AmePGNCNc9T6dUzpNOuN550CIypmwtm50nTr3oDf3/dvnJVlFjwPyRaamjmG99AXzz+VntwHlLkyygeHwTrgKgxNQHCVF9pWRH84LGh3qROuVhR4R7OFN50MhvuFe2uw7TEko6mcwsJKVkbrY55ZIFPoY6H6o96gv2lbXa33V0rW/bb4WC/JPXZ6WzIfsAih8Gm/v1pYH+p0VVgXakjgEZ3CmW6uEK81/s2x1HxrtM1Qx2nWMeteLL8bvB9xaFtNc8xa0pg72DrXmcFC/UJV1wQWzXLStYcdbGSFxerTRtivunxuCfMm2xvJ3dJhZeY2OtCm6qLjUYwjX+LT1Xgizm6umRdyvkmPxkBd/D7kGBWz81JKgXuKK2bVdr9+2du2Hf7/mbB+JrTXgjtHv9CoDFNeNsXcVMAd3xlIYNQbxJ7WZg8S6MKGBNIoc10pTJP2Ut/BajVDz+pQ1zz9tSTHL7zppgZiuUjleSwhnaP29Erudp8oB93vrrqpYqnpkv9BAkuqmidQPa2T7u7z6c3CRXPG8YThG+Be666TDnGWZVSEV/dOt4Tl5vfxJNLWPJByKxnj8AmS+I1O2hhzrOQ4twKN5qHEB97b2OS6ZPHaLetlLOt2wFEdpGG3wjtO+MthHYSsVo1o1PV6f7P0t4i1rLSMMw91Xf8FWYX5pg==
+sidebar_class_name: "post api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Add a bookmark comment by bookmark ID"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/api/2.0/community/bookmark/{id}/comment"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Adds a comment to the bookmark with the ID specified in the request. The parent bookmark ID can be also specified if needed.
+
+**Note**: Send parentId=00000000-0000-0000-0000-000000000000 or doesn't send it at all if you want your comment to be on the root level.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"id","in":"path","description":"Bookmark ID","schema":{"type":"integer","format":"int64"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"content":{"description":"Comment text","type":"string"},"parentId":{"description":"Parent comment ID","type":"string"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"List of bookmark comments","content":{"application/json":{"schema":{"type":"object","properties":{"Text":{"type":"string","example":"comment text"},"Created":{"type":"string","example":"2020-12-06T07:36:14.8151911Z"},"Updated":{"type":"string","example":"2020-12-06T07:36:14.8151911Z"},"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"ParentId":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"CreatedBy":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"}},"title":"BookmarkCommentWrapper"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

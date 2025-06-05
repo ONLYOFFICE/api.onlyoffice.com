@@ -1,0 +1,71 @@
+---
+id: get-event-comments
+title: "Get event comments"
+description: "Returns a list of all the comments on the event with the ID specified in the request."
+sidebar_label: "Get event comments"
+hide_title: true
+hide_table_of_contents: true
+api: eJy1Vdtu3DYQ/RVhnuWVvE7TWEBRuLaRGr3AiG0UiLMPY2nWy5gSGXLkWBX478VQ0l7ijQ206D5oJc4czu3wsAfGew/FLZSmrttGcZedP1LDHhYpeCpbp7iD4raHk5ZXxqm/kZVpfiWsyAnOEVaQwlenmGARFilU5EunrLhBAR+IW9f4BBOtPCdmmaDWCa8okYgSKTFN/CaJm3xVvIqfF2eJt1SqpaIqUYOLoy8teZ5BChYd1sTkfMyuwZqggCVRpSQfJbEt8gq+TSiWl1ycQQq+XFGNUPTAnRW4apjuyUEKS+Nq5GHpaA5BCnPkrWk8eUHM81z+dvf+fSxxKg1SKE3D1LD4orValbF/2WcvgP55CugcdlIAU+231s3dZypZCnfGkmM1pHFNT7zl5dmp5h5SoCesrZalMZeExTOkcOoImaqXQfN8nh8czg/yH68Pj4of3hb5fDZ/d3x8eHT0UTa5sdV/3+SierX1b9/s7HiYC+4SHTX8L9Dzo60G/NK93t2LvRWuQ7Rt5NomQj7+DvY8pp+kcKa81dj9GUn7Ugv/UA+UfMSmQ/YPSqDXivVrIGxQmhFSOHlERndVo9YvY1qnEzaJF88EIyq22pml0nTjXoF/+pRdOlO1JXt5JWM1DWsCn6G3Tz+3ntxPWNWqUZ4dsnEQQgo8FATntdWmI/rLoaVvTHJkTwcei3mwB3F5kx8+P4Y3DY5iRVXcqCZemQoKuKc4ZNGFAjK0KpvP8myjfVGDsn6QkZCNZ0ekgtzjpDWtdANWzNYXWdavjOdQ9NY4DpDCIzqFd3ogkNiG/JbYauGMNiXquBxSEMyu+V1+LGoTttT3SiRi2G6vBm+kw6rfqJvEbzWY00kad7CxK6pZmggf23w6tSG5itUmH86vrpOTywupipwfmquRacrec41RxsYY74lHGd9SwJ3Z9BtB/N+uhrEdIniZ1agaSbYdKDyM/lZ6BSnMZ3mU6LFuofTjMO9ifZNMHFik4zRvoe/v0MuhCEGWv7Tk5I5cbIYfeVIpL+8VFEvUnl7oxNadtDf5acBNFwmmW/mCFB6o21x6YRHSaeoSfjCelCVZ3oI9u4WEa+sD8v78GlKQ47NLrIdIrPFFdt+b0i7HpvzkGdLvQPp+oG0Ia//B9F3EmtiDt3RoEUL4Bw8s8Co=
+sidebar_class_name: "get api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get event comments"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/community/event/{feedid}/comment"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns a list of all the comments on the event with the ID specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"feedid","in":"path","description":"Event ID","schema":{"type":"integer","format":"int32"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"List of comments","content":{"application/json":{"schema":{"type":"array","items":{"type":"object","properties":{"Text":{"type":"string","example":"comment text"},"Created":{"type":"string","example":"2020-12-07T13:56:02.2899133Z"},"Updated":{"type":"string","example":"2020-12-07T13:56:02.2899133Z"},"Id":{"type":"integer","format":"int64","example":"10"},"ParentId":{"type":"integer","format":"int64","example":"123"},"CreatedBy":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"}},"title":"EventCommentWrapper"}}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

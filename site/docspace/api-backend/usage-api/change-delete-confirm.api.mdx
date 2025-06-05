@@ -1,0 +1,71 @@
+---
+id: change-delete-confirm
+title: "Confirm the file deletion"
+description: "Specifies whether to confirm the file deletion or not."
+sidebar_label: "Confirm the file deletion"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVktv2zgQ/ivEXHJR7TTdk25p0gLtLtAicZBDYDS0NLLYSCRLDuN4Df33xZCSLdvpxljsJVbIeXAe3zezAZJLD/kDfFYNejEVt0ik9NLDPANj0UlSRn8pIYeilnqJ19gg4ZXRlXItZODwV0BPH025hnwDhdGEmvhTWtuoIupPf3qj+cwXNbaSv2htEXIwi59YEGRgHXsjhT7KIY2EFsY0KDVkUKIvnLJsE3K4tVioSqEXqxqpRifICI8kqEbh+8uST2JIwjihDU0gA3yRrW0QcnIBuy4DWZaKrcrm++ghlWw8HnqdsfHBZB++sNLJFgmdZ/OkiI3DkMybJHVNBrqO3Tn01mifgr04P+effS8fU8ziWTYBc8HvFKqKkW3LIpQXPhQFel+FBrL/K/vD614pQcdOgh5XR2nCJTrIoDKulZSOPlywbKP0kx/JSufkGjJQhK1/+yG1w2ok5ckpvWS7skhpOrqK2fUkKfgTn5iEr0yJJyl0u+r2Jbp30lp0ve8/zt8fF/NOy0C1cepvLKMJj0VwitaQP2xA+uIH3/94Qj4Ah7KEDFZOEcK8yzbwEaVDB/lD/O/Sqj9xvT17TV56VQzi3y4D1RevC36zGMH9MO/mJ6GrSMCPfVipBkXJfMC9uANXi1QbZgwbYkkl1ZDDVFo1vZicT1nNTxObRG1ko04xm3h0z+h8TEtwDeSwWUiPd67pjtEfZdOLliEhAjJ4lk7JRZMaqFdOFalkaLiSR5au05W4u/mLqzjf1eeWEZNM7Vdp19GxGEcm7zyKK2OeFApWQk09GCEDLduoOTaYgWK1IqpwW/Yl3PqpieyRl0+a0Im1CU4Ej44NC6lLYaX3K+O42BHzEcHRIFvuG+cU02dJWGy+3s/EzDyh7s72jCZbWf/xeQDL1/sZu9rv1LdydrmXKCa3khm1VRpLsVjHnju77IEUZc5EjbKMD+iTuuexT2ov02VbKOx4R8aDw5ckOVE1ZiVWimqx51VEssiAr1NrjG8HJtk7jD0YE+3z6TR6nRjdrE1VqQInhWnT4cV0SxQ8Rjjhp6tG8VgdYwcil4zDG5SlkHFOMIatM4QFYSkcehNcgX7LCjnc8+8b0onqBvLYZTMeXBmtE5kfJJVvr0V/fQyLPe3To+bGV7oyXN+Xd14ttaTg8O1245beijN+SlEZd/CuieBxHzMr2uBJLFCYBcnYk89KxqZ8HKhtoI29ijwK1KU1StNEfCFua4YnlkJ6IUVCfOoythUx/DgK5HGy6+5xfAeM0WXAY/5mt459Gnacfp2Kqw5rVSYmp59il1Yxa6LzKS0fJu8n55xMazy1Mg7Z3v3V78j/MLejPfC/j5G+eoQvNLWNVHH5CInM00x54NJCBheTc4YjzxVegl6ZLPMMauOJVTbbidLx8a+AjqfufDc50uAcaINHUaR8Dp9jejfjh7F4E1J7HWxaPFiTxmVRoKV/lZ2P5uX3uxlTab9Kt5FIwMkVr9lylSaXiSlO6OazDTRSL4NcsmwyGffZwAkaQyBNmf6Dgxqu9Hr8wP2hlMLgvxzUqxqbTcJX123l09VvNbacnaS5sPOu6/4BUg1ayg==
+sidebar_class_name: "put api-method"
+info_path: site/docspace/api-backend/usage-api/api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Confirm the file deletion"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"put"}
+  path={"/api/2.0/files/changedeleteconfrim"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Specifies whether to confirm the file deletion or not.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"set":{"type":"boolean","description":"Specifies whether to set the specified settings or not.","example":true}},"additionalProperties":false,"description":"The settings request parameters.","title":"SettingsRequestDto"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Boolean value: true if the operation is successful","content":{"application/json":{"schema":{"type":"object","properties":{"response":{"type":"boolean"},"count":{"type":"integer","format":"int32"},"links":{"type":"array","items":{"type":"object","properties":{"href":{"type":"string"},"action":{"type":"string"}}}},"status":{"type":"integer","format":"int32"},"statusCode":{"type":"integer","format":"int32"}},"title":"BooleanWrapper"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

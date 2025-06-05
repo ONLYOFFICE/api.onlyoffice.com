@@ -1,0 +1,71 @@
+---
+id: is-public
+title: "Get public settings"
+description: "Returns the public settings of the room template with the ID specified in the request."
+sidebar_label: "Get public settings"
+hide_title: true
+hide_table_of_contents: true
+api: eJy1Vt9v2zYQ/leIe8kGaLbrFsOmNzfpirQDMqQJ8hAYDS2dLDYSyZCnJq6g/304UrItO13yshf/II93vLvv+44tkFx7SG/h0pjawzIBY9FJUkaf55CC8v80q0plkICVTtZI6Ni+BS1rZIMcElAaUrCSSkggR585ZdkDpHBVonDG1IKwtpUkFOdnE0jA4UOjHOaQkmswAZ+VWEtIW6CNDX414RodJFAYV0uKS2/nkAA+ydpWCOmff7z7veuW7M1boz16djCfzfhrfI+Lz5BAZjShJt6V1lYqC3lOv3k2aY/vYFbfMCNO3XFVSMUAQ7Q9y5UxFUoNHQdpYoiXEukSqJS+93u20jm54XoS1v7li5QOiz0rT07pNfuVWUz7aKvrugQ8SWr8K68YjU9Njq860CVAirg58D7W5MZJa9H1sd/N3hw351rLhkrj1A/MgwuPWeMUbQLQpM++8v7Xe+QFcCgZc49OEcKyS1p4j9Khg/Q2/FtY9Rk327Xn7KVX2WB+sWionD9veGEx0OB2ySgbX/oSqXHaCypR2MAR4ZFI6bUXpgjLY+A/KirD8vmZ8BYzVSjMhdLRFB8a9MTUqJFKw9xbY2g50yqFqbRqOp/MpoWq0E/Z9eB52qq8m9qBpx7d94GkjasghXYlPV67qjui55dgKzKjC7VuIu8hge/SKbmqIsr6w7FthWwqbveRp7O4Ja4v/+ZWL3dN/MK0iq7GrdzBPnTsyOW1R3FqzL1CwYdQU89YSAb1GTnsdSgLRxi7fZ+3cUoiexTlgyZ0YmMaJxqPjh0LqXNhpfePxjEigjAEmgeH7LlH12tcn0Rj0X66uRJX5h51dzJyGn0l/Y+/BkZ9urniUGM4v1SzxahQQnmRs2TXSmMuVpuAtZNFz7ZgcyJKlHm4QF/UUcS+qL1Nl2z5shMnGRYObxLtRFGZxwj9UVQRFCUB3o7Q2N8d5Ga0GDAYCu3T6TREnRhdbUxRqAwnmanj4ny6VRNIgLjgrz8azEN3jB3UXuaB7jIXMsvQe0FGWGcIM8JcOPSmcRn6rXSkcMPfL1hHPRwUZlfNsHBqtI6Kf1BU3j0T/fYxLUanX581A1/pwnB/n37zaq0lNQ5fhhtDemvO/MlFYdzBvSaCXwGhsqJuPIkVCrMiGTD5XckAyrtB3wbZGHXkTqDOrVGaJuKcGNZMT8yF9EKKyPidwAYO3+0lcjfZoXs/vwPF6Ph/YULa/RBbWMV6iM7HhN9O3kxmXCZrPNUyzNje8Uekw0FwWK929wT5/+ZH3zHCJ5raSqrwKmmigMdhcsvthATmkxlTkAcKP8n2RgokkIaXXT9VlgmUxhMfbbfTpOPlhwYdj+XlbmqEyZMrz79zSAtZefyPQvxy2b8FfxU/ey0+m9KATL0JE6tqMM6lMFv4Xdotu2QQLr5S3FhkGVraO3L0FOThtR3CHz9cQRKEaMyGOHD6H+z92esczKd4A/7k18WzJ9o2Uq3rtvZx66cntvLdJ84JdF33LxKJEqI=
+sidebar_class_name: "get api-method"
+info_path: site/docspace/api-backend/usage-api/api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get public settings"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/files/roomtemplate/{id}/public"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns the public settings of the room template with the ID specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"id","in":"path","description":"The room template ID.","required":true,"schema":{"type":"integer","format":"int32","example":9846}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"OK","content":{"application/json":{"schema":{"type":"object","properties":{"response":{"type":"boolean"},"count":{"type":"integer","format":"int32"},"links":{"type":"array","items":{"type":"object","properties":{"href":{"type":"string"},"action":{"type":"string"}}}},"status":{"type":"integer","format":"int32"},"statusCode":{"type":"integer","format":"int32"}},"title":"BooleanWrapper"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

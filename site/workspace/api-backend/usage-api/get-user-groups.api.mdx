@@ -1,0 +1,71 @@
+---
+id: get-user-groups
+title: "Get user groups"
+description: "Returns a list of groups for the user with the ID specified in the request."
+sidebar_label: "Get user groups"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVEtv2zAM/isGz1qcBTtsvhVr0WXDhqFpMWBBDqzNxGr8UCW6rWfovw+U7SZp0u4yHfyQ+Pj48aM6YNw4SJawsXVjYKXAUdpYzS0kyw7OGs5rq/8g67r6QpiRFWNLmIGCR6uZYOVXCjJyqdVGzCCBK+LGVi7CqNCOo3odhfAuWtc24pyixpGNHjXn4W9+HjlDqV5ryiJdhT1L9w05noACgxZLYrIuYKqwJEhAQmhBoSWjQc7hJYwbyTI/BwUuzalESDrg1oi3Y6urDShY17ZElniNzsBLLZacqStHTuxn06m8DgNfBrIUpHXFVLEYoDGFTgNP8Z0Tq+44K1qLrUBmKt3efn17RylLqbY2ZFn3uX+ESo8x0xOWpqARSBTsvIJ59u8K972nw3p34jEuifsdK9xI59+C8hW3NPmNf3LNbqvBewWseYfyl0VjyC6askTbgpel4MP0/TG9NxUOuqMsBCqJ8zqDBDYUWJJmJxCj0fFsMo2DuGIRRNz1svDSc7IPo2YaW0ACObNxSRx3ee3YJ52pLYvlA1qNt0VPupz1kNbYFMJbUadYhG2vQHwOjz9OP82knL3ZWUjj+3AnJ2gnCKO/UTuKOO+P1SjxA99AhK7WdXAfmP1cl2VTaW6jRag2urpYXEdnP+dSFVnX81kg04jecYlBnEOOS+J+GvsJfTlD3U7j/3mqBwaYnjg2BepK8IU+dUODl0IPKJhNpqCGC0qFuQcFyTD/KzV0bAldd4uObmzhvWzfN2TlFlvtGhy0kGkn3xkkaywcvVHw7v44CXbsYdUGDRWN/IGCLbW7+8mvvBobK9n7w7M0JcN7bkfXh8jpWfaXF9egQIbiUDvboJ3hQ6KfhHQooxGfPL16xaXremV6/2zfH73q8azd3loYWnnv/wJp1iTt
+sidebar_class_name: "get api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get user groups"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/group/user/{userid}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns a list of groups for the user with the ID specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"userid","in":"path","description":"User ID","schema":{"type":"string","format":"uuid"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Group","content":{"application/json":{"schema":{"type":"array","items":{"type":"object","properties":{"Name":{"type":"string","example":"Group Name"},"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"Manager":{"type":"string","example":"Jake.Zazhitski"}},"title":"GroupWrapperSummary"}}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

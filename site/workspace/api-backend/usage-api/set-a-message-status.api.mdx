@@ -1,0 +1,71 @@
+---
+id: set-a-message-status
+title: "Set a message status"
+description: "Sets a status to the messages with the IDs specified in the request."
+sidebar_label: "Set a message status"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVE1v00AQ/SvWnJc6BA7gW4FKVIBUNe0pyWFiT+Jt7F13d9w2WPvf0aztfNACApFDvJ4P75s3b6YDxo2HbA416ir9Rt7jhjwsFXjKW6d5B9m8g/OWS+v0d2RtzWfCgpwkOcICFDw6zQTLsFRQkM+dbiQMMpgR+wQTz8itT9gmXFJSD5ckj5rLaLn85BPfUK7XmopEm2h0dN+S5zNQMBw/2GIHWQe5NUyG5YhNU+k8okrvvNzZgc9LqlFOvGsIMrCrO8oZFDTONuRYkxevLuLjFPFX7Tmx6xGkQAM1fgidwx0o0Ey1P7pAG6YNOVCwtq5G7k1vphCCgr745zcNXA/kZMkisrkAlSygNYezrhvrGA3Lq3XJAoxcUi3gAMyz02YDIf6EL99Y4/syp5PJH8scepGXaDZUDJBA/TXT/0BQBPx28vo5xluDg+qoiEzWxKUtIIOmjd1ELiGDFBudTs8maVTwWFBao9uCqNg9kPNRxK2rIIOSufFZmnal9RyyTtgNoOABncZV1ZMmvh7RGttK8FY2xyqagwLJOXW/m7yP1RwNzkzY6T/34vgcWGv0F4q0Sdll71ZgsBbvSW7kQei/PozExRPWTUV7Sc8ny4Pq9tKQr69tvFWzRMNHW9et0bxLZpGk5PpidpOcX10KGeR834UKmcaiPdcYGz9AmxEnuB+VvWpO2ng0rv9rHQy0MT1x2lSojaCLze0GUcyFU1AwPZuAiqtNHuNyE4vbyo7r2zyHrluhp1tXhSDm+5ac7L3lQRXyFtTYHFHTlnaRxFjcqxvBJOFV27f0p2kJasw4z3Nq+LexyyOtX93egILVsPpqW0iKw0dZi/gImWwBG7mOSou2Dio0mxY3Ett/UnQj43Qqu22U3XCQokaX2R0BPFWgGuqQf6nqxZSu60Udwj6+d/0yYy/7Plqaugwh/ACfpEPY
+sidebar_class_name: "put api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Set a message status"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"put"}
+  path={"/api/2.0/mail/messages/mark"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Sets a status to the messages with the IDs specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"ids":{"description":"List of message IDs","type":"array","items":{"type":"integer","format":"int32"}},"status":{"description":"Message status: \"read\", \"unread\", \"important\", or \"normal\"","type":"string"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"List of messages with changed status","content":{"application/json":{"schema":{"type":"array","items":{"type":"integer","format":"int32"}}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

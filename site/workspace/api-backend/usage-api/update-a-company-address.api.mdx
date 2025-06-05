@@ -1,0 +1,71 @@
+---
+id: update-a-company-address
+title: "Update a company address"
+description: "Updates a company address with the one specified in the request."
+sidebar_label: "Update a company address"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVE1v2zAM/SsGz1qdFTtsvnVDgQ0DtqIfpyAHxmZjtbakSnTT1PB/Hyg5idNmLQYsh0AWP/T4+MgeGFcBijmUvs1/+xUa/YysrYGFgkBl5zVvoJj3cNZxbf1o/U5YkZc4T1iBgrXXTLAYFgoqCqXXLiYp4MZVyBQyzErbOjSbDKvKUwjZWnOdcU2ZNZQFR6W+1VRl2sRLTw8dBT4BBePxq602UPRQWsNkWI7oXKPLiCi/C/JeD6GsqUU58cYRFGCXd1QyKHDeOvKsKUQ/9kQxyyHgX7TeQU0++bLTTaXNKkeHnlt5XG2zB/barGBQUEam3koXPY5EBkam95CIy5HYZ+3ejhSHY2htZ9i/B3h0ehUff9KZ4KwJidDT2ex1ttT+6mXzQf1zGydPK/g0+3jkLYOjRqkC8WqJa1tBAa6L/UeuoYAcnc5PT2a5SD4QszarkNuo/ZBA7FEG8o/kQ5yAzjdQQM3sQpHnfW0DD0XvrOcBFDyi17hsEhdiSwBvsWsYCmhsiU28HhRIzKH58+zLqdQ2mborYSClOzp7O2bQ6Z8kTdLCQp3MCgy2Yj2IjbQIxZf7mTp/wtY1NJ2JLdlbUe+/R6nuL6L+Jv5bWU2kps2tjXA1yzPwzbZtZzRvsqvIbnZ5fnWdnV38EBbJh9TNRtbGyFbgFqMqxpqSql7vFHixfSbL4n8sopFvpifOXYPaCLqoin4U11yaAQpOT2ZChm+jhJLEQMFUZKBgi3qhRsHMoe+XGOjGN8Mg1w8dCZnzxV5f8jWobZtFl/e0iazGSj9cC0hxb7okjhezNahtxFlZkuM3fReTIbq4uQYFy3ELt7aSEI9r2dC4hgKkwEh81Gy866FBs+pwJb4ppShQ5vRQwPdRwONBitqazGYC8FDLaqxD/qWqoyF9n8ZjGHb+yfTXiN0AJW/p8mIYhj/IZXtv
+sidebar_class_name: "put api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Update a company address"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"put"}
+  path={"/api/2.0/crm/settings/organisation/address"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Updates a company address with the one specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"street":{"description":"New company street/building/apartment","type":"string"},"city":{"description":"New company city","type":"string"},"state":{"description":"New company state","type":"string"},"zip":{"description":"New company zip","type":"string"},"country":{"description":"New company country","type":"string"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Updated company address","content":{"application/json":{"schema":{"type":"string"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

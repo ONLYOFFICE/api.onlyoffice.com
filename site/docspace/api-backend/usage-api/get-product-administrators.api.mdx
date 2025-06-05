@@ -1,0 +1,71 @@
+---
+id: get-product-administrators
+title: "Get the product administrators"
+description: "Returns a list of all the administrators of a product with the ID specified in the request."
+sidebar_label: "Get the product administrators"
+hide_title: true
+hide_table_of_contents: true
+api: eJy1WNtu2zgQ/RWCL9kFFNtxW6DrN2/TLdJtt0WTIMAGRjOWRhYbiVTJURLX0L8vhqQvst0mbrF5SBxxbpzLOSMvJMHMydG1PEcipWdO9MU5po1VNJeTRJoaLZAy+iyTIzlD+mhN1qQ0ziqllSMLZKyTiazBQoWElq0tpIYK5UjWQVplMpFK8wOgQiYyQ5daVbNhOZIXBYqzU2FyQQWKqCPwgSykhJnIran8kTUNoVi76slEWvzaKIuZHJFtMJEuLbACOVpImtccgyOr9EwmMje2ApIj2TQ+IHyAqi5ZBABP8GTw7HiawovjP3I4OZ7Cy/T4+XDw4uX0OUzz4UvZthP25mqjHTp2MBwM+E/3Mu+UI77K8hrQyZS4V1T4u+SmLM290rON+8hEpkYTamK7UNelSn32+18cG1/s3s5Mv2BKXADLtSIVQlvGuSEJ1sKc60BYucctqGxfDncL1zi04uy098MELwbx53jPr+VPK9tEZsrVJcz/8f3zZP9RS3DbcSS6KUuYsuvQFOtI3qtbFP+CngO5W8UeSVF5iC8v/4gT0DBDy9bhDgjsAeaDwo/tO1OhIHygtYcPVs2UhvIATyaqCKe+4c/6fQ8PB7is4EFVTfVrHjFTTXWIU6/wSz7PKygPSa1j+ad7bGwpyESt2DGtH8hclXhpD3EdlcTlp3cHXLMAN97u1KkxJYLecXVeY6pyhU6ogNjebwFOgI7RC2OFNtTbBAH23yZSubE2WlU/7UixH6PnlWncd/1w5bJMsSEoP24AWw6lw+8nr0MtERnk66ouzRzxlIxky6lpAkLH+JUm5HHfQECl6dmQE1sqfet+HoULi/lu8fl2aYh956jlCB0BNe6JIQbhVybDJym0u4kZ86WuLNQ1g56P4PngZJcbLzU0VBirvmHmDbnlqsE7A7j0M59/vkV+IC0Cs8i9VYRy0iYL+SeCRStH1/6/ca3+xvnq2T55cCpdin8YN1QM9wt+qNFvONcTJvlu0J+QGqudAFFGaucp5XbconY+WdH+iufPToWLfZwJpcMeg18bdL5tK6TCxN3Kr1FUyJHsQ636w96g7+Ja1l9mqt9x2l+sNqxWcjrt3XIDaxg15GIKjgGk3R0uLytSo3M1a8KSJxN5B1YxXvjmicqhkDk0JbfBjqXTcMSIw8WfrMt6zttKMNUt7nocfA13TF46FK+MuVUoWAk1xUWIES2slh2DcbtMvQr3dKz8yk9BVO94ea0JrZibxvrpZ8MCdCZqcO7eWO4Rv295jPIG2XLst6eYPgrCYvH26kJcmFvU7VHHaLCVxA9/LSft7dUFu+o2+GM5G3cSxTCZMZJVSmMmpnPfeEfjOH9e5kgUCJkPICa14zEmNcq0yWqC1qAF/sF2JEFO5KW5D3PQ8So80iSSj0NrbJ4uYajz0PegT7Qb9fvea8/ocm7yXKXYS00VHg77K3xh+OaEP13Vi/vqmHq5REPmAQAyAWmKzjFL19YQ+vcSi840NkW3ApORvOK/j0gHhFxizjqb/sEro3Vggq2k8umpiMe7Y9HRfvqtufGVzg3X9+HYqZkGaiw+3m7c0itxnp9M5MZuxdUTTK0+s6JqHIkpCjMl8D15p8A35c0a7CLGbVbkRqDOaqM09cQZcVvzeGImeN8QYeLXaOtn+GbjIje9dXdv3m8LMXgx4SzwtSO5jWvFeIjWhQs/6530Bn4tM44q8NwbDb9B6ry6wvbbcSd1i/VL3v9MLrGCvOT16xKU5vCbAOiBaa65vDKRw97A80dgG7nBzLxIbUQiEzlav9VPElkYR2xnsaKalh9/bdAyi0/WlOJpKVOOP2f7N7HN1Pz2Kb7Z/y5+6QuCvUlY9raee84rGwzM5tlp42uLdsLLcUBADj+cj9MUa9rQ3HlVZxZcUfub1xecxoYTvjlWgbniB7a+N6otogsR8G9eXPZqLBZhZtt2JR+Ovqux4oEgzTmatG37Hy5mQr8=
+sidebar_class_name: "get api-method"
+info_path: site/docspace/api-backend/usage-api/api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get the product administrators"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/settings/security/administrator/{productid}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns a list of all the administrators of a product with the ID specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"productid","in":"path","description":"The ID of the product extracted from the route parameters.","required":true,"schema":{"type":"string","format":"uuid","example":"aae1e103-bca5-9fa1-ba8c-42058b4abf28"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"List of product administrators with the following parameters","content":{"application/json":{"schema":{"type":"object","properties":{"response":{"type":"array","items":{"type":"object","properties":{"id":{"type":"string","description":"The user ID.","format":"uuid","example":"{00000000-0000-0000-0000-000000000000}"},"displayName":{"type":"string","description":"The user display name.","nullable":true,"example":"Mike Zanyatski"},"title":{"type":"string","description":"The user title.","nullable":true,"example":"Manager"},"avatar":{"type":"string","description":"The user avatar.","nullable":true,"example":"some text"},"avatarOriginal":{"type":"string","description":"The user original size avatar.","nullable":true,"example":"some text"},"avatarMax":{"type":"string","description":"The user maximum size avatar.","nullable":true,"example":"some text"},"avatarMedium":{"type":"string","description":"The user medium size avatar.","nullable":true,"example":"some text"},"avatarSmall":{"type":"string","description":"The user small size avatar.","nullable":true,"example":"url to small avatar"},"profileUrl":{"type":"string","description":"The user profile URL.","nullable":true,"example":"some text"},"hasAvatar":{"type":"boolean","description":"Specifies if the user has an avatar or not.","example":true},"isAnonim":{"type":"boolean","description":"Specifies if the user is anonymous or not.","example":true}},"additionalProperties":false,"description":"The user parameters.","title":"EmployeeDto"}},"count":{"type":"integer","format":"int32"},"links":{"type":"array","items":{"type":"object","properties":{"href":{"type":"string"},"action":{"type":"string"}}}},"status":{"type":"integer","format":"int32"},"statusCode":{"type":"integer","format":"int32"}},"title":"EmployeeArrayWrapper"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

@@ -1,0 +1,71 @@
+---
+id: get-a-user-photo
+title: "Get a user photo"
+description: "Returns a photo of the user with the ID specified in the request."
+sidebar_label: "Get a user photo"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVNtO3EAM/ZXIz7MkZBHa5o0WRFFVFQFVH7YrNJt4NwO5DDMOsETz75UnF9iyoAr1JZcZ+/jYPnYLJNcWkjlorHWB4XleU21hIcBi2hhFG0jmLRw1lNdGPUlSdfUVZYaGnQzKDAQ8GEUIC7cQkKFNjdJsBglcIDWmsoEMNOMG9SqgHIPGogkeFOX+7+w4sBpTtVKYBaryZwbvGrS0BwK0NLJEQmM9k0qWCAkwhOLYiuNoSTn8HfwnRzk7BgE2zbGUkLRAG83eloyq1uCYsUGr68qi5fs4ivi1A8gnAALSuiKsiK2k1oVKfUnCG8um7etQ9fIGU+I8TK3RkOoC/TBqrSpZvCYlAB9lqQs+ynAlm4KuOdtrz+Daqie83o9n0YQfe5rTEFxoVe3I8F/ApofRZHo4Qn2Xjx/DiaNoEkcjzme1/hjOLJ7M4pENZqop3wf6/SbUwWxyMBugLktZfLDe03gy7Sk5AaTIW1/lTbmspCrssST5y0it0YBzbHMQ7e8QUiX7OcLMI5VIeZ1BAmv0EmEZJxBKrcJ4Lwr7mWw7sbtw0KBFcz/MQ2MKSCAn0jYJwzavLbmk1bUhBwLupVFyWXSa47uOlM8SEijqVBb+2Algn+3rWfQp5nxebINL1ncHt3MnjNWVWn3DzTCgeXcthvHd8vWlUNWq9u59cb/UZdlUijbBpc82uDi5vAqOzs84KzS2q2ghCQf2lkrpZ7CPcYoUyG7XDIXbakf7PMv/ZVH1iRM+UqgLqSqm5dvT9p2dc1VAQLwXcbd9d0FAMi6zjudC9K2aQ9supcWfpnCOj+8aNLyQF8+d9SLIlOXvDJKVLCy+k+jzUtxJd2hetfHiKRr+AwG3uHleum7hxNBRjt5dHqUpanrh9mo9so5GxZ+eXIEAnodt0dx60fQfjL6T0rZ+Bn78dOINl7btJOncaN9dvekxiraz5gotnHN/ALFidbc=
+sidebar_class_name: "get api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get a user photo"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/people/{userid}/photo"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns a photo of the user with the ID specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"userid","in":"path","description":"User ID","schema":{"type":"string"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"User photo","content":{"application/json":{"schema":{"type":"object","properties":{"Original":{"type":"string","example":"default_user_photo_size_1280-1280.png"},"Retina":{"type":"string","example":"default_user_photo_size_360-360.png"},"Max":{"type":"string","example":"default_user_photo_size_200-200.png"},"Big":{"type":"string","example":"default_user_photo_size_82-82.png"},"Medium":{"type":"string","example":"\"default_user_photo_size_48-48.png"},"Small":{"type":"string","example":"default_user_photo_size_32-32.png"}},"title":"ThumbnailsDataWrapper"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

@@ -1,0 +1,71 @@
+---
+id: get-access-parameters
+title: "Get access parameters"
+description: "Returns the sharing access parameters of the calendar with the ID specified in the request."
+sidebar_label: "Get access parameters"
+hide_title: true
+hide_table_of_contents: true
+api: eJzlVU1v2zgQ/SvCnJnY6zRfugVJkDUW2C2SFnsIfKClccSWIllylFYr8L8XQ0m21ThN97CnvSQyZ4Z88+bxsQOSTwHyRyikRlNKP7sePkImTZmFZh0KrxwpawKsBAQsGq+ohfyxg6uGKuvVP5LDv6Ms0fNeHmUJAr56RQiruBJQ4nYXyOEeqfEmZFRhFirplXnKZFFgCJmTXtZI6ENmNylhBJZ9VVSlleVNFhwWaqOwzJRJax6/NBjoGATstkgYjawR8m1/S0amGIWTVMGP0Mbus+UNCAhFhbWEvANqHe+iDOETehCwsb6W1C+dLCBylx6DsyZg4IrFfM7/pts/vNYtCCisITTERdI5rYrE6uxT4MruJRa7/oQFccPeOvSk+nOvnqXScq3xr2FouwrpvWy5fcI6vL3TstzLCcTAQQB+k7XTvJTGHAX8mRj+WeY9yjKzRrecfoMb2Wjaq1hbq1GaSQn5BveyH6jVbxzSw4kCSFFauEok9zSkwPKHvv8tH4T1W5wsNuUGT8/Pj06KxdnRu/OTs6PLcnN5tD6VZxcn6/XF6WIOA5S3ebt9Rt9ak4hYhjtvG/eLtF1Lc1uqXyV5kOVA1f9PGGPgfbPWquDZ/O2lc+ghHg5fW62xGOo55d38t5e3/aORg0FiD6BGqmwJOTxhYpUdKIeZdGq2OJ7Pth7c7dwqzgaHZDtC/zzaWuM15FARuZDPZl1lA8W8c9ZTBAHP0iv2gDQujvXgBn5B20LqtBwFcM00fDG/ZEeLe3b/wO4zGMwh09/dKaf+wHb02KoPi9GFJ7WJEmU2NpUPHF/bum6MojZ7SN1m97cPH7Kr90vuCn3omdWScEQfqJZJtMMZd0gH/XUym25nt//xczTwQviNZk5LZRh1ml43COCRSQMBi+M5PwPDASAgnzxaow5WYpjoI3TdWgb86HWMvPylQc8P82ongKSVUgX+LiHfSB3wJ1RMn7+D0Mc5mzbpTDf8CwR8xnb6zMZVFKMAGEWfwHfP0V7pi7eOZbe9KHe3H0AAX6Opxj4njQ0fvPtBWFO5jRj5bxSvlHRdr+AYt/l96NWKrcb7bGZpFWP8DuRrLwQ=
+sidebar_class_name: "get api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get access parameters"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/calendar/{calendarId}/sharing"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns the sharing access parameters of the calendar with the ID specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"calendarId","in":"path","description":"Calendar ID","schema":{"type":"integer","format":"int32"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Sharing access parameters","content":{"application/json":{"schema":{"type":"object","properties":{"AvailableOptions":{"type":"array","items":{"type":"object","properties":{"Id":{"type":"string","example":"read"},"Name":{"type":"string","example":"Read only"},"Default":{"type":"boolean","example":"true"},"DefaultStyle":{"type":"string","example":"read"}},"title":"AccessOption"}},"Items":{"type":"array","items":{"type":"object","properties":{"ItemId":{"type":"string","example":"2fdfe577-3c26-4736-9df9-b5a683bb8520"},"ItemName":{"type":"string","example":"Everyone"},"IsGroup":{"type":"boolean","example":"true"},"CanEdit":{"type":"boolean","example":"true"},"SharingOption":{"type":"object","properties":{"Id":{"type":"string","example":"read"},"Name":{"type":"string","example":"Read only"},"Default":{"type":"boolean","example":"true"},"DefaultStyle":{"type":"string","example":"read"}},"title":"AccessOption"}},"title":"PublicItemWrapper"}}},"title":"PublicItemCollection"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

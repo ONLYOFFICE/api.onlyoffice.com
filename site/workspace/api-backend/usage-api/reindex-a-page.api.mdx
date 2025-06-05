@@ -1,0 +1,71 @@
+---
+id: reindex-a-page
+title: "Reindex a page"
+description: "Reindexes a page during the search process."
+sidebar_label: "Reindex a page"
+hide_title: true
+hide_table_of_contents: true
+api: eJydUztv2zAQ/ivCzWzkGh1abmkRoEGHBnEyGRpo6WIxkUiGPCVRBf734kj5laQFWg82zXvwvsdNQGobQK7BWU+qK1eofN1CJSBgPXhNI8j1BOcDtdbrX4q0Nd9RNei5yKNqQMCz14RQxUpAg6H22nEaSLhGbRp8wVCowqktFs3gtdkW1GIR0kuF87bGEM5AgMfHAQN9tc0IcoLaGkJDfFTOdbpOj5f3gVtPEOoWe8UnGh2CBLu5x5pAgPPWoSeNgaNG9ci/p5Nd8lxFioldg0A8HMT04XGCsybkLsvF4m2TTFahzZ31fZoOxP+Ond/8tPj49plbo2b6sQHO6pFa24AEZ0MCrKgFCaVyulyeLcpZy8xw6bMIwJL6J/QhKTr4DiS0RC7IspxaGyjKiSsjCHhSXqtNl7FzLE91p4aOQEJna9Wl6yiSc07DnxdflgzoyEUrhp3bveulPR3K6R84ggDN0NscFrOKp7WJC+b1+mCcixfVuw4Pwu9V5Y53Nr2kiTPgm+37wWgai1Uipri+WN0U51eXTAD6kNnvFOEOaKBemaPes79nd8Mr+x9Z+B83YeaC8IVK1ylt+Pmk2DSLvWaiQMDybAFiXt6kcFpfNm8WvRKzfGuYpo0KeOu7GPn6cUDPy10d1OZ/UexIZ5c84JiISjA+3PBYnN4NWapX9o5iV3Fe1+jor7nVkY+vfq5uQMBm3vzeNlzj1TMjUc8gAQTYRGuyULqboFNmOzDxEnJPNgTvyqmfHpKf5gOj2oXMeDThqbXEDIS/Gda7JdOU3RrjPj+H/lix93POZmGrGONv+8/lPg==
+sidebar_class_name: "post api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Reindex a page"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/api/2.0/portal/search/reindex"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Reindexes a page during the search process.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"name":{"description":"Index name","type":"string"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Search information","content":{"application/json":{"schema":{"type":"object"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

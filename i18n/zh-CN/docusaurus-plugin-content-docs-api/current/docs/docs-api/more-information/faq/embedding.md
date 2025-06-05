@@ -2,7 +2,7 @@
 sidebar_position: -9
 ---
 
-# Embedding
+# 嵌入问题
 
 ## 如何将文档嵌入到网站？
 
@@ -46,10 +46,10 @@ sidebar_position: -9
   })
   ```
 
-其中 **>example.com** 是安装了**文档管理器**和**文档存储服务**的服务器的名称。有关 ONLYOFFICE 文档服务客户机-服务器交互的更多信息，请参阅[工作原理](../../get-started/how-it-works/how-it-works.md) 部分。
+其中 **>example.com** 是安装了**文档管理器**和**文档存储服务**的服务器的名称。有关 ONLYOFFICE 文档服务客户机-服务器交互的更多信息，请参阅[工作原理](../../get-started/how-it-works/how-it-works.md)部分。
 
 要删除这些按钮中的任何一个，只需在配置文件中不要包含相应的参数。
 
 > 如果您决定隐藏**下载**按钮（*editorConfig.embedded.saveUrl* 参数），请不要忘记将文档配置中的 *document.permission.download*> 参数设置为 **false** 以完全禁用下载文件的可能性。
 
-有关嵌入参数的更多信息，请参见 [此页面](../../usage-api/config/editor/embedded.md)。
+有关嵌入参数的更多信息，请参见[此页面](../../usage-api/config/editor/embedded.md)。

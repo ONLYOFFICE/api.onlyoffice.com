@@ -1,0 +1,63 @@
+---
+id: get-smtp-operation-status
+title: "Get the SMTP testing process status"
+description: "Returns the status of the SMTP testing process."
+sidebar_label: "Get the SMTP testing process status"
+hide_title: true
+hide_table_of_contents: true
+api: eJydV9tu2zgQ/ZUBX7ILqLab7pPfsm23aHeLFo2DYBEYDS2NLDYSyXJGTV1D/74YUr7IdhtjX2yZnBuHZ86x1or1ktT0Tl1j3gbDKxjD9fvZRyBkNnZJap4p5zFoNs6+LdRULZGvG/YfNovXrLkllamA5J0lJDVdq8vJRL4KpDwYL3ZqqmLkbTSgjWfuLKNlcdDe1yaP++MvJF5rRXmFjZYnXnlUU+UWXzBnlSkfJBqblHNTwNOWuWt8jYzFnunCuRq1Vdlh0R5zUxokeKyQKwzAFcLBUSpNUBprqMICfHA5Ehm7HKlM4XctydSUQ4tdpsx+UuJg7PIo56xCaK352iKYAi1L/gClC8BB5w/GLk8UIclsW9d6scm2l1ytyTX4LGhbuObZsjVFp7pMYQgunFdPNIUGifQSwZSn2oA2d61lDFiAIWqRfl2UlNCj4Kwa8jYEtByRg+BO1fB0Qo8hR8v7KY1lXGI4mdMHtwxIBMYWgkwXgCr3KHfQw0hO3geV1vRlDSoqXWg0p0wvLvdRMem6TOmiMGKq6497OC11TXiqpIBfWyQGr4NukDHQEBuxI79dG8kA77WpYRa0pRIDfAyOXe7q34/mUMpkw7FNJwb8U8pJr9hJE+M9n+zgwVG7TNXGPux3W4egVypThrGhp4e1Clgew0O6lqeeHG113Slc/arEZPzSFXiWQ3dWq26D9h5DX88fk+fHjHhjdcuVC+YHFioaXR4b/evaAD6YXO7W19pC4ZDAOgZqvXeBgStD4JJDPHxP52p6t1aa8s+S5vMDyoIKqAuVqcdgGNW8y9bqT9QBg5rexV9X3vyNq+3aKXtNJt+Yf7hqubo8bfjBY1SNu3k3P0TyJ+Q2WIrDkvo/mGhG4njgxKYCzwa5cr0GCUw0V2qqxtqb8eVoMqaG/Ua34o+xxBhvZYYwfMNAsSdtqIUUF5rwJtTdMetHW8idLc2yTberMvVNByPMEnHVO6cLK3VbC0KOIr1KW3Dz6R9Bwnx3OdeiaynU8Ip2kxJv4ijkDSG8dO7BIIiTCES+qdDqJnruB8yUEbc8ugjM+vvb5qmY/VGW10LksBLwtYRBAoO2BXhN9OiC3HRU5iieMaBE7lFzTuiLZAzrd7czmLkHtN3FIGiKlfUPf22G8N3tTFINYfpUz64GjQJDUAhzNsZiAYtVxN3FVT+M0eYCKtRFLKBv6iBj39Tepsu2c7DjMx0XDitJdlDW7hEeDVcwyAqRhDIl2wka+7sbhhosRgzGRtN0PI5ZR87WK1eWJsdR7pq0eDneko1wvTT8fNdoHm/H+c3fLV3EMdYF6FxmFNjJuDLmjAUEJNeGHGlLCVN1K99PWCe63DDHrptx4aWzNonEQVNl9xX028djMfA+/9QCfGPLKHnfn5FZWs1twKfhJpDemsv8FFGih3WNQNQ8dhaalhgWCG7BOmLym9ERlPdbeutpY3Aj94C28M5YHsFbFljLeGIBmkBDmviEMokVZ/h+7yD3ox269893wBjyt1W6IMfude/KG+FDDJQO/GL0fDSJf68ccaOjLPeB3yD/lNZ3LwGD/q137wT/Qyf6q2H8zmNfa2OlrjYxdRKNO7k3lanL0UQwvScc/U+JgiQ46wucZ6pyxOK63spGJ8tfWwyiq/OdPCRp3HCD6E3kdXWV5+g56kjdJvQcvO6IPmxl7s3rmcrirA8Blzi9f5Domy272o89lIBUgXyKMJ/0WK8Tmrtua5+2fuqxZchkLZ2ed133H84p/uk=
+sidebar_class_name: "get api-method"
+info_path: site/docspace/api-backend/usage-api/api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get the SMTP testing process status"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/smtpsettings/smtp/test/status"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns the status of the SMTP testing process.
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"SMTP operation status","content":{"application/json":{"schema":{"type":"object","properties":{"response":{"type":"object","properties":{"completed":{"type":"boolean","description":"Specifies whether the SMTP operation has finished processing.","example":true},"id":{"type":"string","description":"The unique identifier for tracking the SMTP operation.","nullable":true,"example":"{some-random-guid}"},"error":{"type":"string","description":"The error message if the SMTP operation encountered issues.","nullable":true,"example":""},"status":{"type":"string","description":"The current state of the SMTP operation.","nullable":true,"example":""},"percents":{"type":"integer","description":"The progress indicator showing completion percentage of the operation.","format":"int32","example":0}},"additionalProperties":false,"description":"The request parameters for tracking SMTP (Simple Mail Transfer Protocol) operation status.","title":"SmtpOperationStatusRequestsDto"},"count":{"type":"integer","format":"int32"},"links":{"type":"array","items":{"type":"object","properties":{"href":{"type":"string"},"action":{"type":"string"}}}},"status":{"type":"integer","format":"int32"},"statusCode":{"type":"integer","format":"int32"}},"title":"SmtpOperationStatusRequestsWrapper"}}}},"401":{"description":"Unauthorized"},"402":{"description":"Your pricing plan does not support this option"}}}
+>
+  
+</StatusCodes>
+
+
+      

@@ -1,0 +1,71 @@
+---
+id: update-a-folder
+title: "Update a folder"
+description: "Updates a user folder with the parameters specified in the request."
+sidebar_label: "Update a folder"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVU1v20YQ/SuLObXA1lKUHFreXDtFjaKBEVsnQYcxORI3We7Su0M7KsH/XswuKcm2khZxdBBIzvebmTc9MG4jFCto0NjZH95WFCKsNUQqu2B4B8Wqh/OOax/MP8jGuz8JKwpiEwgr0PAYDBOsh7WGimIZTCtqUMCyrZApKlRdpKA2ybt6NFwrrkm1GLAhphBVbKk0G0OVMi7JAt13FPkMNBzUUi4OG4ICjEQ2EqVFruF56FyJuroEDbGsqUEoeuBdm2wd05YCaNj40CBDAZ1x/HYBgxQxxv7dVzsxKr1jciyP2LbWlAmF2acogfqX3v3dJypZEg++pcCGokhz3v2zPD/Q44RLUtCTl8jBuC0MqX5yfFWdNs7SycfVpfopeM/K0gNZZaKi+w6tYq/mPx+cYwi4E/yYmvg/gUk/ASe23sVc02I+f5nVCL1x2Yd81D8KxIzCf2argb5g01rRerN4+05gvD6C8bscfBgb+LRBx5qpg4OGpZPNuPBdLvjr0U4GEw+3ntG+xsGYQo3GvT6P13rJE/H9HgYNbDi9/43GLiOF7PISGSHP5bv5m5ejuHQ4MhdVyU1DXPtKSKNLwyXUUcAMWzNbnM1niQSFq/I6xVlvqkEYhMLDxD9dsFBAzdzGYjbrax95KPrWBxbNBwwG72yeVpHlpDbYWSnQ+hJt+iyL7cMz8a/z39KqHfHvjWxGdneShfdwYmv+ot1EinUW64kun9gmKGT1Ph6Y7v0E+Z5h9wN+IKDVfD1IgI1PgceeXPim6ZzhnbpJOKmP729u1fn1leBBIeZeWDkFY92RG3RHofKhUDjS2HM2P+LgH3RTRsyYvvCstWic5JU6249DsRJAQcPibA46XUfQcDQaoKEwlVzK3OUV9P0dRloGOwzy+b6jINdzfRiKND+VifJcQbFBG+kbpR7fsJMJT513uzR5tpM30PCZdvlCDtKuerrX/Si4yBF+uRXzg+ELXh70ZHFeltTyN3XXR8t1vbwFDXfj/Wx8JSYBH0Gn/5SjTwWnuU7ferDoth1uRTe7lCmV/X065J/TkI8PUtRJFJ7O+wSJ/EtVJ036Pq/QMOz1s+irFvslGwEXGIZh+Be45iSR
+sidebar_class_name: "put api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Update a folder"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"put"}
+  path={"/api/2.0/mail/userfolders/{id}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Updates a user folder with the parameters specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"id","in":"path","description":"Folder ID","schema":{"type":"integer","format":"uint32"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"name":{"description":"New folder name","type":"string"},"parentId":{"description":"New parent folder ID (root level is equal to 0)","type":"array","items":{"type":"integer","format":"uint32"}}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Folder information","content":{"application/json":{"schema":{"type":"object","properties":{"Id":{"type":"integer","format":"uint32","example":"1234"},"ParentId":{"type":"integer","format":"uint32","example":"1234"},"Name":{"type":"string","example":"name"},"UnreadCount":{"type":"integer","format":"int32","example":"123"},"TotalCount":{"type":"integer","format":"int32","example":"123"},"UnreadChainCount":{"type":"integer","format":"int32","example":"123"},"TotalChainCount":{"type":"integer","format":"int32","example":"123"},"FolderCount":{"type":"integer","format":"int32","example":"123"}},"title":"MailUserFolderData"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

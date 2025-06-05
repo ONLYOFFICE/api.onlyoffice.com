@@ -19,7 +19,7 @@ builder = docbuilder.CDocBuilder()
 context = builder.GetContext()
 globalObj = context.GetGlobal()
 api = globalObj["Api"]
-document = api.Call("GetDocument");
+document = api.Call("GetDocument")
 charts = document.Call("GetAllCharts")
-length = charts.GetLength();
+length = charts.GetLength()
 ```

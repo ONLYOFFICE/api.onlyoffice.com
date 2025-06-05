@@ -27,7 +27,7 @@ globalObj = context.GetGlobal()
 api = globalObj["Api"]
 document = api.Call("GetDocument")
 charts = document.Call("GetAllCharts")
-chart = charts.Get(1);
+chart = charts.Get(1)
 ```
 
 The `default[]` postfix expression can be also used to get an array value by its index:
@@ -47,5 +47,5 @@ globalObj = context.GetGlobal()
 api = globalObj["Api"]
 document = api.Call("GetDocument")
 charts = document.Call("GetAllCharts")
-chart = charts[1];
+chart = charts[1]
 ```

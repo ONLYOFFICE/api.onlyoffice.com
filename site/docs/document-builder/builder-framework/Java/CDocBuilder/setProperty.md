@@ -1,3 +1,6 @@
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 # setProperty
 
 Sets an argument to the builder class which can be trasferred to the program outside the [CDocBuilder.executeCommand](./executeCommand.md) method, i.e. either as an additional property when running ONLYOFFICE Document Builder executable file or as a part of program code, but not included into the document file script.
@@ -39,20 +42,21 @@ Argument.name === "ONLYOFFICE" // true
 
 ## Example
 
-### Java
-
-``` java
-CDocBuilder.initialize("");
-CDocBuilder builder = new CDocBuilder();
-builder.setProperty("--argument", L"{\"name\":\"ONLYOFFICE\"}");
-CDocBuilder.dispose();
-```
-
-### .docbuilder
-
-```sh
-docbuilder.exe "--argument={\"name\":\"ONLYOFFICE\"}" test.docbuilder
-```
+<Tabs>
+    <TabItem value="java" label="Java">
+        ``` java
+        CDocBuilder.initialize("");
+        CDocBuilder builder = new CDocBuilder();
+        builder.setProperty("--argument", L"{\"name\":\"ONLYOFFICE\"}");
+        CDocBuilder.dispose();
+        ```
+    </TabItem>
+    <TabItem value="builder" label=".docbuilder">
+        ```ts
+        docbuilder.exe "--argument={\"name\":\"ONLYOFFICE\"}" test.docbuilder
+        ```
+    </TabItem>
+</Tabs>
 
 ## Adding or removing fonts
 
@@ -60,17 +64,18 @@ It is also possible to update the font list when you either add new fonts or rem
 
 ## Example
 
-### Java
-
-``` java
-CDocBuilder.initialize("");
-CDocBuilder builder = new CDocBuilder();
-builder.setProperty("--check-fonts", L"true");
-CDocBuilder.dispose();
-```
-
-### .docbuilder
-
-```sh
-docbuilder.exe "--check-fonts=true" test.docbuilder
-```
+<Tabs>
+    <TabItem value="java" label="Java">
+        ``` java
+        CDocBuilder.initialize("");
+        CDocBuilder builder = new CDocBuilder();
+        builder.setProperty("--check-fonts", L"true");
+        CDocBuilder.dispose();
+        ```
+    </TabItem>
+    <TabItem value="builder" label=".docbuilder">
+        ```ts
+        docbuilder.exe "--check-fonts=true" test.docbuilder
+        ```
+    </TabItem>
+</Tabs>

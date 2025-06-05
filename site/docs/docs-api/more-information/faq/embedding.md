@@ -17,9 +17,11 @@ You can embed the document with any appearance to your webpage, but it is more l
 That is why the *type* should be set to **embedded** and the configuration file will look like this:
 
   ``` ts
-  const docEditor = new DocsAPI.DocEditor("placeholder", {
+  const config = {
     type: "embedded",
-  })
+  };
+
+  const docEditor = new DocsAPI.DocEditor("placeholder", config);
   ```
 
 Further information about the display type can be found [at this page](../../usage-api/config/config.md#type).
@@ -35,7 +37,7 @@ The embedded mode allows to display the document with only three control buttons
 - *editorConfig.embedded.shareUrl* is the absolute URL to the document which can be used by other users to share it with others.
 
   ``` ts
-  const docEditor = new DocsAPI.DocEditor("placeholder", {
+  const config = {
     editorConfig: {
       embedded: {
         embedUrl: "https://example.com/embedded?doc=exampledocument1.docx",
@@ -43,7 +45,9 @@ The embedded mode allows to display the document with only three control buttons
         shareUrl: "https://example.com/view?doc=exampledocument1.docx",
       },
     },
-  })
+  };
+
+  const docEditor = new DocsAPI.DocEditor("placeholder", config);
   ```
 
 Where the **example.com** is the name of the server where **document manager** and **document storage service** are installed. See the [How it works](../../get-started/how-it-works/how-it-works.md) section to find out more on ONLYOFFICE Docs service client-server interactions.

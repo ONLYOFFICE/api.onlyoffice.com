@@ -27,8 +27,8 @@ CDocBuilder builder = new CDocBuilder();
 CDocBuilderContext context = builder.getContext();
 CDocBuilderValue global = context.getGlobal();
 CDocBuilderValue api = global.get("Api");
-CDocBuilderValue document = api.call("GetDocument");
-document.setProperty("color", {"zX":{"red":112,"green":173,"blue":71,"alpha":255},"type":"srgb","Zvf":null,"type":"uniColor"});
+CDocBuilderValue doc = api.call("GetDocument");
+doc.setProperty("color", {"zX":{"red":112,"green":173,"blue":71,"alpha":255},"type":"srgb","Zvf":null,"type":"uniColor"});
 CDocBuilder.dispose();
 ```
 
@@ -50,8 +50,8 @@ There are two more ways to set a property to the `CDocBuilderValue` object:
    CDocBuilderContext context = builder.getContext();
    CDocBuilderValue global = context.getGlobal();
    CDocBuilderValue api = global.get("Api");
-   CDocBuilderValue document = api.call("GetDocument");
-   document.set("color", {"zX":{"red":112,"green":173,"blue":71,"alpha":255},"type":"srgb","Zvf":null,"type":"uniColor"});
+   CDocBuilderValue doc = api.call("GetDocument");
+   doc.set("color", {"zX":{"red":112,"green":173,"blue":71,"alpha":255},"type":"srgb","Zvf":null,"type":"uniColor"});
    CDocBuilder.dispose();
    ```
 
@@ -71,7 +71,7 @@ There are two more ways to set a property to the `CDocBuilderValue` object:
    CDocBuilderContext context = builder.getContext();
    CDocBuilderValue global = context.getGlobal();
    CDocBuilderValue api = global.get("Api");
-   CDocBuilderValue document = api.call("GetDocument");
-   document["color", {"zX":{"red":112,"green":173,"blue":71,"alpha":255},"type":"srgb","Zvf":null,"type":"uniColor"}];
+   CDocBuilderValue doc = api.call("GetDocument");
+   doc["color", {"zX":{"red":112,"green":173,"blue":71,"alpha":255},"type":"srgb","Zvf":null,"type":"uniColor"}];
    CDocBuilder.dispose();
    ```

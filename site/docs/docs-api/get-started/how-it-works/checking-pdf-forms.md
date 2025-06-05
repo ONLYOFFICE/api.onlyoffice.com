@@ -8,6 +8,10 @@ PDF forms differ from standard PDF files in form metadata. It determines which e
 
 To distinguish standard PDF files from PDF forms, you can use the check functions. These functions take the first 300 bytes of the file and check if there is `"ONLYOFFICEFORM"` there. If `true`, then it is an extended PDF file. Otherwise, it is a standard PDF file.
 
+:::note
+Please note that you can speed up file opening by specifying the [document.isForm](../../usage-api/config/document/document.md#isform) parameter.
+:::
+
 Below you can find the check functions in different programming languages. 
 
 ## JavaScript

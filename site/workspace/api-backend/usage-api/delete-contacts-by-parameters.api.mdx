@@ -1,0 +1,71 @@
+---
+id: delete-contacts-by-parameters
+title: "Delete contacts by parameters"
+description: "Deletes a list of all the contacts in the CRM module matching the parameters specified in the request."
+sidebar_label: "Delete contacts by parameters"
+hide_title: true
+hide_table_of_contents: true
+api: eJy9V9tuGzcQ/RVinlqAthQnD62AorBlFTWaGIbtNEgdPYx2RxZjLrkhZ5VshP2c/ki/rBjuSpbki5SgqB4WuyQPOZcznKMFMN5GGNxAFore0DvGjCOMNUTKqmC4hsHNAo4rnvlgviIb734nzCkIJhDmoOFzMEwwbsYacopZMKUsgwGckiWmqFBZE1n5qUJrFc9IZd1Jyrj0Pbx8owqfV5ZUgZzNjLtN4yUGLIgpRBVLyszUUL7EBPpUUeRD0NC9nvi8hsECZHdyLK9YltZkye7exyhWLSBmMypQ3rguCQbgJx8pY9BQBl9SYEMxzabQLLac6oKk0qxeboEhYA0aDFMR17aOHIy7habR0Pl8xXhLT28bZVqdnaofPmMoePbj7jOMY7qlABqmPhTI7dDLo/VTr9PSJ32pSznzvznqtYn8p6HPTx+X2DCXJXp740bDNPjiFPkRc68YA6tc5vR2gDWwfxw1cvkTmPQT9sTSu9gm/ajff7jF646+S9qC/maOPRXRJ7h3VaC1v3n2b4N9SCcN9AWL0spQFaxir6aevUThDeWmKr4HeWpiabE+x4Kex11j/pHy3DhSJ5jNTMraWRz6okRXr2En3ltCtwGeoo0kgOMsoxglst8fpbP8MUtX1Kwqk28c3u9+B488lr9vCsUbc0fqL3Q1crwzAr02bHeB0GHH9eM5MoaU7L1yFWWlwoQS/EXwU2NpZ6o/fOhdBJ9XGUd5JV9aascEfoix/PJrFSn8gnlhnIkckH1IVc2tQzAqSutroncBS2qnzuJFMPOu6J7JOYeKWo5czTBQvi9F0urlzbXrBtJAriqkLZ17J8V+SZi/S62pfYcH/emmrw6UrNbqhTpQK4BWR93neJM+YtSwCoFcVu9m5x5UGM6Mo0jqfYUueVwXE78jl//8nZgzmQSaG2xdefaM8/et3ZarQLs5PTxf1rObU2Cc2P3ze4LRZPuld41ay5CeuakXepVtcQzRjXLDex4+RNfqjX2NPd2TVSvki6OXrzbtbtvBCUZamd22lFf9Fw+7yFuHnY6iPO1TEM98DgPIW8M1lMgzGEAPS9M7Ouz3RJV1Tac3NZaTiZHCnEJMyqySyocZcxkHvd5i5iM3g0XpAzegYY7BSP4SHWWuNWqKlRUXrc/QpuFGg2A2p3/q/yyNvVlTg1fS1trtHtWE9xd5af6gdJOL57N2WoNL7NvEplBI37y8V3GjZdAXK4HaMXW8LaRu+uMtlbM+ci9G+uvK4p73S9WwJiSMm/p08irNRVE5w7W6SpFXl6Ora3V8cSYRphDb7FpkWkYycoGpKjt/W2Leq95JvaZsYetaWtOv/5+C7tLG9IV7pUWTbqOqbSstKW8kp6Dh6LAv8icUsAqylE1LzrHuaHYDi8UEo3SmppHhTxUF+TMxvmelfDV6SQ5h8x3VXVmR44OUTVluq5ZSWzKr0UuEaImSn107Xiu309Hr0fUINEy6PwyFzwUVUBSpPAcAGnxKSCJ7GluARXdbJdZBu6tQV4p6k/l3ifndi/i1nHL1mo2bRaA7V+Qpjj0KWSzaumqa1fp26knEqvLa1ZLXcdM0/wKfYLyo
+sidebar_class_name: "delete api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Delete contacts by parameters"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"delete"}
+  path={"/api/2.0/crm/contact/filter"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Deletes a list of all the contacts in the CRM module matching the parameters specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"tags":{"description":"Contact tags","type":"array","items":{"type":"string"}},"contactStage":{"description":"Contact stage ID (warmth)","type":"array","items":{"type":"integer","format":"int32"}},"contactType":{"description":"Contact type ID","type":"array","items":{"type":"integer","format":"int32"}},"contactListView":{"description":"Contact list view","type":"integer"},"fromDate":{"description":"Start date","type":"string"},"toDate":{"description":"End date","type":"string"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"List of contacts","content":{"application/json":{"schema":{"type":"array","items":{"type":"object","properties":{"SmallFotoUrl":{"type":"string","example":"url to foto"},"MediumFotoUrl":{"type":"string","example":"url to foto"},"DisplayName":{"type":"string","example":"Tadjeddine Bachir"},"IsCompany":{"type":"boolean","example":"false"},"AccessList":{"type":"array","items":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"}},"IsPrivate":{"type":"boolean","example":"true"},"IsShared":{"type":"boolean","example":"false"},"ShareType":{"type":"integer","format":"int32","enum":["None","ReadWrite","Read"],"description":"[0 - None, 1 - ReadWrite, 2 - Read]","example":"0"},"Currency":{"type":"object","properties":{"Title":{"type":"string","example":"Chinese Yuan"},"Symbol":{"type":"string","example":"¥"},"Abbreviation":{"type":"string","example":"CNY"},"CultureName":{"type":"string","example":"CN"},"IsConvertable":{"type":"boolean","example":"true"},"IsBasic":{"type":"boolean","example":"false"}},"title":"CurrencyInfoWrapper"},"CanEdit":{"type":"boolean","example":"true"},"CanDelete":{"type":"boolean","example":"true"},"ID":{"type":"integer","format":"int32","example":"1234"}},"title":"ContactBaseWrapper"}}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

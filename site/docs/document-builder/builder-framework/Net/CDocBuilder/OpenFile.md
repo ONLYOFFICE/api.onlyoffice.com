@@ -1,3 +1,6 @@
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 # OpenFile
 
 Opens the document file which will be edited and saved afterwards.
@@ -17,18 +20,19 @@ int OpenFile(String^ sPath, String^ sParams);
 
 ## Example
 
-### .Net
-
-``` cs
-string workDirectory = "C:/Program Files/ONLYOFFICE/documentBuilder";
-CDocBuilder.Initialize(workDirectory);
-CDocBuilder oBuilder = new CDocBuilder();
-oBuilder.OpenFile(L"text-document.csv", "<m_nCsvTxtEncoding>46</m_nCsvTxtEncoding><m_nCsvDelimiter>4</m_nCsvDelimiter>");
-CDocBuilder.Destroy();
-```
-
-### .docbuilder
-
-``` ts
-builder.OpenFile("text-document.csv", "<m_nCsvTxtEncoding>46</m_nCsvTxtEncoding><m_nCsvDelimiter>4</m_nCsvDelimiter>")
-```
+<Tabs>
+    <TabItem value="net" label=".Net">
+        ``` cs
+        string workDirectory = "C:/Program Files/ONLYOFFICE/documentBuilder";
+        CDocBuilder.Initialize(workDirectory);
+        CDocBuilder oBuilder = new CDocBuilder();
+        oBuilder.OpenFile(L"text-document.csv", "<m_nCsvTxtEncoding>46</m_nCsvTxtEncoding><m_nCsvDelimiter>4</m_nCsvDelimiter>");
+        CDocBuilder.Destroy();
+        ```
+    </TabItem>
+    <TabItem value="builder" label=".docbuilder">
+        ```ts
+        builder.OpenFile("text-document.csv", "<m_nCsvTxtEncoding>46</m_nCsvTxtEncoding><m_nCsvDelimiter>4</m_nCsvDelimiter>");
+        ```
+    </TabItem>
+</Tabs>

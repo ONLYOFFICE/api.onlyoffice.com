@@ -1,0 +1,71 @@
+---
+id: get-the-file-information
+title: "Get the file information"
+description: "Returns the detailed information about a file with the ID specified in the request."
+sidebar_label: "Get the file information"
+hide_title: true
+hide_table_of_contents: true
+api: eJy1VVFP5DYQ/ivRPBs2LLTcRaoq7qBX1PaEYFGlY/dhSGZ3fSSxz54AaZT/Xo2dwO6xBy9tHrxee77xN+Nvxh0wrjxkN7DUJfnJbzLCQoGnvHGaW8huOjhpeG2c/gdZm/p3woKcQBxhAQoenGaCRb9QUJDPnbZiBhlcEjeu9gmvKSmIUZdUJLpeGlcFTwnemoYTTOTs5EHzOpienybeUq6XOpiHNUffGvK8DwosOqyIyfnArcaKIAv0z4WNlpMt8hq+pyOxJeenoMDna6oQsg64tYL27HS9gl5iGI76YIpWLHJTM9UsU7S21HmgPvnqxWf30pW5/Uo5C09nLDnW5GX3npzXEbKD1birRi+6ZlqRgz58QspbU/voa5qmP/CzkVxQ/xX1zyHD3+dKAT1iZUsazw4X0Su4tgUyFR/atz2fF7v8xhAgg6bRxdY56fDt7RjGTyicam9LbN8m/pe+o+QL1i2yv9MCnWku3wJhjeFuFJzcI6O7qrAsX8c0rkzYJF4sEwwowV84I8K9dm/A5/PJhTNFk7OXKRlbUlwT+D56+/hr48n9gkWla+3ZIRtRjwKOAcFZZUvTEv3t0Ebyw0W9fvI0naZ7B9O99N3s4Dg7PM7Sw/3Do+nR+5+Ov4iTP01U1etejubz+fzoZxk3tLLBTlaFmR00r+AoPXgp8usah1ZERcBXxGtTQAYrCvKSus9gglZPpvvpJDY1GSdd7BC9lD+5+7F9NJJ6WDNbn00m3dp47rPOGsdieY9O420Z1Sp7kdISm1IEWpocy7DcKxDM9va79P1Uotlop1dSc9Hdzqb6lES0+g9qx362jttq7HZb2JAIKerL5851NqZ+o/OkvXhbmnDKkPePpqqaWnObXIWkJJdnV7Pk5OJcgh+BUCLTGKTnCsNtD1Q+EYcOvXzZf7bubqOT/k8Pw5A5pkee2BJ1LYSbWFpRGDeSVlAw3U+lz4S3Lv6Cgmx4QhZquOkb6Lpb9FKdfS/L3xpy8iAunoURNFRoL/MCsiWWnl4J/PkJ2kl2vPu6DdorG/kHCu6ofX7i+kWvRkHI6XHzYzxjbyYunsEv+n6vRsRJnpPlV20XGwX26WwGCm6HV7EyhUAcPoAKY+BpQshB3WGtgxLrVYMrsY0uRatSw9tSvwtSHyYS1M5MbKt+TIuMEtVOSNfFQur7J/u49UPEU6lFa7mYRd/3/wLjNBiO
+sidebar_class_name: "get api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get the file information"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/files/file/{fileId}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns the detailed information about a file with the ID specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"fileId","in":"path","description":"File ID","schema":{"type":"string"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"version":{"description":"File version","type":"integer"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"File information","content":{"application/json":{"schema":{"type":"object","properties":{"Name":{"type":"string","example":"File name"},"UpdatedBy":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"},"Updated":{"type":"string","example":"2020-12-08T17:37:03.3424957Z"},"Location":{"type":"string","example":"4\\\\46\\\\File name"}},"title":"FileWrapper"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

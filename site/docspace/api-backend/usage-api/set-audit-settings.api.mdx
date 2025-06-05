@@ -1,0 +1,71 @@
+---
+id: set-audit-settings
+title: "Set the audit trail settings"
+description: "Sets the audit trail settings for the current portal."
+sidebar_label: "Set the audit trail settings"
+hide_title: true
+hide_table_of_contents: true
+api: eJztV99v2zYQ/leIe8nDFFtxgmHQm5tmWLsOLWoHwRAYDS2dLTYyqZKnOp6h/304UpYl213SYS8D6gdbJu8H7+67+6gtkFw6SO5hgmllFW3EUIyrTJEgK1UhMkkSZhGYEq0kZfSbDBJwSF5ogkRKLx1EYPFLhY5emWwDyRZSowk18aMsy0KlXnn42RnNay7NcSX5iTYlQgJm/hlTgghKy65IofNyOwfPShZmqfRvypGxm3dqgVO1wo6W0oRLtBBBhi61quTjQALTHIVXFXnQFYVaIKkVDiCChbErSUH9cgQR4JNclQVCcjG6vKojkJyFKWfqO33KTo6/y2MhHf1hMrVQmHV8ObJKL7sGMkl4zma7RmAUx7+cx1fnF/E0/jm5jJM4HsTh81N8lcQx1BxWlik+rCw+dJK8kIXDU8EQaqmpiWlXMlFKK1dIaB0HRor8AaZeto+e/8zl2sqyRPuMv7sgBXXNji260mgXUDSKY/7p++v2g9sj/gfEf0D8/wHxq1OovnlK0T8LpcW7E9ASxgYq6Bff27s4tnerZUW5seovzILQ6FjoT1NZUVqVKr0UZSG1yAw6oQ0JV5WlsSQoV06YoMCHdw0xQXK/BenST+zm0yPyAliUGUSwtooQZnW0hVcoLVpI7v2/cal+x027dkpeOpXuxN+PK8pHpwXfl+jJ735Wzw7LNUFygg4w35ZsYazfTCtrUZPgMGXBFVwh5YYJtTTO97ukHBIYylINR4N4uIt96O0OdxaHu3YCTo/9itb57FS2gAS2c+nw1hb1UVdOvKxIjV6oZRX4HCL4Kq2S8yIMmUY5lG4hq4Ib7cjS67Albj++Y4zN9mWa8NgLpvrFavtY+pocmbx1KK6NeVScRcpRUzNRIQItV16zazACxWqpV2HANZVs/eRE5ZGXG01oxYZhWDm0bFhInYlSOrc2lmvuBzcbmHuDbLnBz0tMnwVhsX17NxVT84i6PusZDbai5uHX3Sx7ezdlV33APpezcS9RQjmR8TRaKY2ZmG886s7GTVt6mTORo8z8AZqk9jw2SW1k6qjtiD03Sb9weJIgJxaFWYu1olz0vIprkzFYeTtAo7vrNw8XPQZ9ol0yHHqvA6OLjVksVIqD1KzC4mjYjh0eiZzwl6t6cV8dUwbM+r5P4CPKTMg0RecEGVFaQ5gSZsKiM5VN0bXDIYE7/n1GOgzi3QzZZ9MvXButA+EfJJV3X4tm+7gtetovj5qBr/TCcH2fzp1aakmVxefhxpBuxbl/Mj/b+ucaCE9enFmxqhyJOQozJ+kx+VVJD8qHownXrciDQJ2VRmkaiDfEsOb2xExIJ6QIHR9QxrZ8Dz90AnkY7NHdje9gYtQR8F3t4/7F5WZ3h+jfyk7fu/iycvp2FHb6t5gX3kp8WbgODbWPS8UDGq0LFbgcXAxirhsTxkr6i2YT6QTpmxR0WMnO+9m/5q4GKoRPNCwLqTQfqwrMEXjsnnEEEYwGMXR4vEmaX2qP1zLaLIKcyTC5h23LZDUvf6nQMunP9owVeHs3rpgCPdXAdYjufMpnZPGiCrA+uKYzrweNccq3oX+UnXX4+sP7yZRnePO2u/ITDKxc85uwXAfKDJeYMFZ4bQuF1MtKLlk22PTXwoqT1e29QG/NA0e129Kb7gn7bBji4G+O6qTGdhsau65b+bD1TY2WLII0F3lW1/XfwQyXyQ==
+sidebar_class_name: "post api-method"
+info_path: site/docspace/api-backend/usage-api/api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Set the audit trail settings"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/api/2.0/security/audit/settings/lifetime"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Sets the audit trail settings for the current portal.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"settings":{"type":"object","properties":{"loginHistoryLifeTime":{"type":"integer","description":"The login history lifetime.","format":"int32","example":1234},"auditTrailLifeTime":{"type":"integer","description":"The audit trail lifetime.","format":"int32","example":1234},"lastModified":{"type":"string","format":"date-time","example":"2008-04-10T06:30:00.0000000+04:00"}},"additionalProperties":false,"description":"The tenant audit settings parameters.","title":"TenantAuditSettings"}},"additionalProperties":false,"description":"The tenant audit settings wrapper.","title":"TenantAuditSettingsWrapper"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Audit trail settings","content":{"application/json":{"schema":{"type":"object","properties":{"settings":{"type":"object","properties":{"loginHistoryLifeTime":{"type":"integer","description":"The login history lifetime.","format":"int32","example":1234},"auditTrailLifeTime":{"type":"integer","description":"The audit trail lifetime.","format":"int32","example":1234},"lastModified":{"type":"string","format":"date-time","example":"2008-04-10T06:30:00.0000000+04:00"}},"additionalProperties":false,"description":"The tenant audit settings parameters.","title":"TenantAuditSettings"}},"additionalProperties":false,"description":"The tenant audit settings wrapper.","title":"TenantAuditSettingsWrapper"}}}},"400":{"description":"Exception in LoginHistoryLifeTime or AuditTrailLifeTime"},"401":{"description":"Unauthorized"},"402":{"description":"Your pricing plan does not support this option"}}}
+>
+  
+</StatusCodes>
+
+
+      

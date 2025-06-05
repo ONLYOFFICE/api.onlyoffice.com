@@ -28,11 +28,11 @@ Enumeration
 - "h:mm:ss"
 - "m/d/yyyy h:mm"
 - "#,##0_);(#,##0)"
-- "#,##0_);[Red](#,##0)"
+- "#,##0_);\[Red\](#,##0)"
 - "#,##0.00_);(#,##0.00)"
-- "#,##0.00_);[Red](#,##0.00)"
+- "#,##0.00_);\[Red\](#,##0.00)"
 - "mm:ss"
-- "[h]:mm:ss"
+- "\[h\]:mm:ss"
 - "mm:ss.0"
 - "##0.0E+0"
 - "@"
@@ -42,6 +42,6 @@ Enumeration
 
 This example shows how to specify that the range contents will be rotated upward.
 
-```javascript
+```javascript editor-xlsx
 worksheet.GetRange("A1").SetOrientation("xlUpward");
 ```

@@ -1,0 +1,71 @@
+---
+id: get-the-visit-statistics
+title: "Get the visit statistics"
+description: "Returns the user visit statistics for the period specified in the request."
+sidebar_label: "Get the visit statistics"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVE1P3DAQ/SvRXGtINoUWcqMtgqo9IHZRD2gPJpndGBLb2BNgG+W/V+MkbJbSVq26h5Xj+fDMm/emBZJrD9k1eCRSeu3jOUlSnlTuYSnAY944RRvIrls4aag0Tn2XpIw+R1mg41CHsgABj04RwrJbCijQ505ZdoMMLpEap31EJUaNRxc9KK8o8s8PRSvjgtWiU6aIvMVcrRQWkdLh3uF9g572QcBw/GCKDWQt5EYTauKjtLZSeagtvvX8cgs+L7GWfKKNRcjA3NxiTiDAOmPRkULP1pUz9SdJyOfd4uckHY2FFewixlyenNJr6ASQeT34VBe/Dw0/bspbo31fS5okP2f6qjxFZhVZozRFeSkdeRB/3b50Tm5AgCKs/Z9h+aS8reRmbG63eAH4JGtb8dUsjdM0TpM0YTh+5b8yrpYEGTAYe6Rq3EnC4XuzdC9NF8lBNptlh+/3k4N3x8nR4ZskyZKQ+9x4mlauNOEa3TS70vQ23cncR6p/CuTxKgpfHxn2C57ANyetRQfD/A6S2c8ju9Jy0AsWIU2NVJoCMlhjgFpSCRnE0qo43U/iZwVuhREHpQDL0D2g80GFjasgg5LI+iyO29J46rLWGkcdCHiQTsmbqp8f2/rCVrKpuMXK5LIK150Ajtk1HyXHKTc1Uf6cOdSne1X/W25Z9QUDubj7sjcL0LJm605sgINJerlV8+kI+lSNW+6MEpuoTumVCe+P4zF13WhFm2ge4IouT+eL6OTiM8OCzvdjqSTh2L6nWgahDEWeIYV983JBwYuVNtk7/3e7DVASPlFsK6k01xkG3g58uWacQUC6nwRe9Jzh47TanjdLMTDgGtr2Rnq8clXX8fV9g453+nJLGP7qxDg3JtodbgKqodO9BZfG7lXTT/vFuunEGHGS52jpt77LiRrOThcg4GZY6LUpOMTJR1728hEyAAEmAB9IGO5aqKReN3LNvn1KphQLbpeRd4GRw4GbGk16Mylwl5xi6IP/uatXQ9q253vXPfv3pl9GPCui9+bZLruu+wGzYo49
+sidebar_class_name: "get api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get the visit statistics"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/settings/statistics/visit"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns the user visit statistics for the period specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"fromDate":{"description":"Start period date","type":"string"},"toDate":{"description":"End period date","type":"string"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"List of point charts","content":{"application/json":{"schema":{"type":"array","items":{"type":"object","properties":{"DisplayDate":{"type":"string","example":"12/22/2020"},"Date":{"type":"string","format":"date-time","example":"2020-12-22T04:11:57.0469085+00:00"},"Hosts":{"type":"integer","format":"int32","example":"0"},"Hits":{"type":"integer","format":"int32","example":"0"}},"title":"ChartPointWrapper"}}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

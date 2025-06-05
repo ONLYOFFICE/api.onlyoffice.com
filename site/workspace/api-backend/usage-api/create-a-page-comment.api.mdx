@@ -1,0 +1,71 @@
+---
+id: create-a-page-comment
+title: "Create a page comment"
+description: "Creates a comment on the selected wiki page with the content specified in the request."
+sidebar_label: "Create a page comment"
+hide_title: true
+hide_table_of_contents: true
+api: eJzFVm1v2zYQ/ivCfVYsxcnQVsAwZG2ABVu3oHZRoKk/nKWzzZoiWZJK4gr678ORUvwSx/2yYv4gyOI9x+ce3gtb8Lh0UNxBqeu6UcJvsk9iLWCWgqOyscJvoLhr4arxK23Fd/RCqz8IK7KMsoQVpPBghSeYdbMUKnKlFYbNoIC3ltCTSzBh/6R8olXiV5Q4klR6qpIHsRaJwSUlD8KvwlqplWdTZ6gUC0FVIiLI0reGnB9BCgYt1uTJukBPYU1QAPuBFIQK734Fh3xueaNgnIIrV1QjFC34jWG081aoJXQcRr/V77rasEVPiV/RGCnKoEP21bHX9rkrPf9KpWeeVhuyXpA7cHOgU6+Op0dGHRAK4ZLyN9XLyGiR3Lx7Dg8/DskZrVxkMs7zl30JtdC2DiFC+l/FHsnvU0shbgQFNI3gTKJHrI1kk7z/nR15DD+W5nZHmp/hfUnHPG89TXRNIYHZ/O1Wq5cRg8yDsF3al9f/J+I74YzEzd+hjE5xfy/WlHxGtUHv1oKhU+Hlj0CocEk2BHqPHu2kRilPYxorE68Tx5YJBlQ4D6sXQtJH+wP4ly/ZrdVVU3rHr6SNpPiN4SN05vG3xpH9FataKOG8Ra8tcJ34GBBc10bqDdEniyaS/wudf6+r0JNObz/Ox/nZ+fgsfz09f1VcvCryi9HFRX755pfLz+zpRmHpxf2ubnOtJaHac7NA6WiPVJ87zCmQCpV9mZ8/L+aPCvueTVVwUZNf6Yo7o3Yhs7hBFpChEdl4lGfbCcA9OWs5p7us79vcL8neD/22Yf1h5b1xRZa1K+18V7RGW99BCvdoBc5lTFlei+wW2EjOUqlLlOEzdzZtD5Zf52/GHNjOCJpwj4nujg6iJxHRiD9pM4yAVVxOh/Gwhw2acBP7sG3114PyO616e7zbJrzTmblXBgI7BxRUTCZBr+TD9WSaXN3esC5kXTwcyVOxj9/5GkMn7VnGmZlgnIpb/feOd5fgTxuyvag8lDIjUSgm3MTSi9lzx4pDCuNRHiZFHztfCfgWkULRj+QhjFnaJ8QdtO0cHVdy1/Hnbw1ZvmvMtvkTUq0Sjt8rKEI1nNBhd7gfpT4kidqEJJUN/4MU1rQZLg/drEuHvOHd41Lf1s+m7GALfTYOu3RAXJUlGX/SdrZTkrf/TKaQwry/btS6YozFB0jDM9DUIeZQBeFbCxLVsgkTCqJPzmku+/2SWIeS6F84qqNC7FfHoAo/OayjkLaNBdd1T/Zx6UXEU0lGaz6XWdd1/wJ2jYeI
+sidebar_class_name: "post api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Create a page comment"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/api/2.0/community/wiki/{page}/comment"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Creates a comment on the selected wiki page with the content specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"page","in":"path","description":"Page name","schema":{"type":"string"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"content":{"description":"Comment text","type":"string"},"parentId":{"description":"Comment parent ID","type":"string"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Comment information","content":{"application/json":{"schema":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"ParentId":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"Page":{"type":"string","example":"Some page"},"Content":{"type":"string","example":"Comment content"},"Author":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"},"LastModified":{"type":"string","example":"2020-12-08T17:37:03.3304954Z"},"Inactive":{"type":"boolean","example":"false"}},"title":"CommentWrapper"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

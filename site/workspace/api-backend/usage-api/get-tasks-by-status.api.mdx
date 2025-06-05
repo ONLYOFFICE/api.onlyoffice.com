@@ -1,0 +1,71 @@
+---
+id: get-tasks-by-status
+title: "Get tasks by status"
+description: "Returns a list of all the tasks with the selected status in the project with the ID specified in the request."
+sidebar_label: "Get tasks by status"
+hide_title: true
+hide_table_of_contents: true
+api: eJztWN1S20YUfpWd7U07XWPLQH4802nB0MZJoASTMAnh4lg6RhtWu+ruEYlreJy+SJ+sc1YyxoFgJ81MexFfeCTt+fnOv3SmkuAsyN6JLL17hym1jyCcB3mqZMC08pomsncylVsV5c7rP4G0s08QMvTM5BEyqeR7rwnl6dWpkhmG1OuSyWRPHiJV3gYBwuhAwo0FGCMoR0GsRrzXlMfbgAZTwkwEAqqC0DY+bkDN6QY7IpSY6rHGbEbk8Y8KA61JJZvLbZdNZG8qU2cJLfEllKXRaYTffhcY3FSGNMcC+IomJcqedCPWJhU7o0RPGgOfNih0xjeLBh40AAc7Us2kaEt4hl5eKVlbc5uNndyYegdf/LExoXQ21Bi6nc5tMc8bp0ZnSvXZ9oL3MJFKasIiLPdD3yMQbk+WUw6yGzSBvLZnUsmx8wWQ7Mmq0pw2+AGK0jBJp/m17vib/difOzqUBib7UOBdCuYC9/Q5ijdgJ0DhXDPrkSazjAksNIHbugACPyzAmPt5Km8EORGYUkDkYv4D78ba4Eu/hP3t2/aBd1mVUuBLdKXB+hmzr0EoP/xcBfQ/QVZoqwN5IMcpoiTVBsndojRugnjsoazB13G6MwRzzd1Ot9NKuq3kwVFnvZckvc2NtfXNh+ub68mbKMRZgpSWx3q3AG1WSAk7dkeRYvpxwt/IDG1pvcs4bVVwgznInUWpGiVKHuMocK9RcnjOQpQ8eq+JopDn2p5jNrBSyV8hxZFz51LJrSzzGEI8v8CnrvIWWNLeZFhCyhJ+26tlbxt3VsN5DblzTDPcl0oO+i+kkk9hNIqHW4M9qeSrZ/JWtzvpiJaIiJVIREtE0Ep0RUs0uJVYFy0RoSuxIVqiQa/EpmiJmQFKPBAtMbNBiYeiJRozlHgUCa8tUeKxaInGGCUShhANUiJhDI1RSiQMIxqmRMIo9ob7SiQMYtB/oUTCCGojlUgYwNZgT4mElb96drqQO0lMECA8c36yYkDntR4LGQjuz89QlaXz9IuzZuLGY53iWuqKm4qXd4EnrkDmGIQDrwtYwDpyziDYBXryVU2/87lGJd31jYWqbMqHs54Ls6nM2FB+deSWNoamr4wdOWbcw0xXxZdwrtwyjyB7h1mmLYptSHPta8/1XVGCXea5MZgQXbeVphgCD6YvnzPfpsd/Nz1m1XIBhKtWSxjm4Bfmzb0pEqk/fxTs15PgECE79vUM4OtPtOH96y58zVB3Yr49vd2Q+pX3aNMV3m1WSIV+ri0GFK8rsNHiSTFyS2L5918xc0YjjxcaalPu1bH/usZtqPK4PKf7+7N6thfoCUZm9fhuQ9DpauG92QIbl37UA/tgdzNNKyrvg91Bg6sn41dr3dsQ8FhTHqf4DfwrxH+INhMgUlcU6FMNRrjxuObeuZmq98m4SRj5IHuu7RLFy17qtgx6egWmWrX2Fkf+Yf1Fohdz51sX/9918VjoxoWlTXleZrde5j4V1gLO8AAov9+oEviL3QnN5Cv6vib5F0XSd8b5+zm+g4fjtE6kofP0u4+bjC+oha/QaHgLMHN87DbzJrNrKa5eln58RbqPhukdZrv4Ml1ZFnotfqFCVzZhY3MuYYWgPnFVwNyZTMSVBNgUeb1D6C2SCLkrFzM5yv3icfGVonKtv97EbHSS28uXlxaapRhmUUCBlLtM9uQZxkDFGpFtKHW7u9ZpzxZs0+t1Uu+k03p8+uNVm/c37Wm9D+p9bx1BmmJJl65Ee5nGOr7MdOCZfVnZ1EAIcQN2aR1pW2iDgZzFH64kr+38BfoQt3YVtx6ZE5Wh125PcxfoqjflTGDKC/CaRcZE4rPaxjFUhl1lXAomPr5SknkWjx91HnfZPzc2hUPeL9Xi7twXzr8HSv0M4wcBOzKvj5W0saUv8kbP8gLrcL7a250Fb2E115mv2zpXLHrsosrrqV4UMf/FMHpIHO4Oj8TWwYA9gT7UQTVAyBZf/QNGBgKO
+sidebar_class_name: "get api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get tasks by status"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/project/{projectid:[0-9]+}/task/{status:(notaccept|open|closed|disable|unclassified|notinmilestone)}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns a list of all the tasks with the selected status in the project with the ID specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"projectid":{"description":"Project ID","type":"integer"},"status":{"description":"Task status","type":"integer"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"List of tasks","content":{"application/json":{"schema":{"type":"array","items":{"type":"object","properties":{"CreateBy":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"},"Created":{"type":"string","example":"2020-12-16T03:11:54.3573531Z"},"Contact":{"type":"object","properties":{"Email":{"type":"object","properties":{"InfoType":{"type":"integer","format":"int32","enum":["Phone","Email","Website","Skype","Twitter","LinkedIn","Facebook","Address","LiveJournal","MySpace","GMail","Blogger","Yahoo","MSN","ICQ","Jabber","AIM","VK"],"description":"[0 - Phone, 1 - Email, 2 - Website, 3 - Skype, 4 - Twitter, 5 - LinkedIn, 6 - Facebook, 7 - Address, 8 - LiveJournal, 9 - MySpace, 10 - GMail, 11 - Blogger, 12 - Yahoo, 13 - MSN, 14 - ICQ, 15 - Jabber, 16 - AIM, 17 - VK]","example":"1"},"Category":{"type":"integer","format":"int32","example":"0"},"Data":{"type":"string","example":"support@onlyoffice.com"},"CategoryName":{"type":"string","example":"Home"},"IsPrimary":{"type":"boolean","example":"true"},"ID":{"type":"integer","format":"int32","example":"1234"}},"title":"ContactInfoWrapper"},"SmallFotoUrl":{"type":"string","example":"url to foto"},"MediumFotoUrl":{"type":"string","example":"url to foto"},"DisplayName":{"type":"string","example":"Tadjeddine Bachir"},"IsCompany":{"type":"boolean","example":"false"},"AccessList":{"type":"array","items":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"}},"IsPrivate":{"type":"boolean","example":"true"},"IsShared":{"type":"boolean","example":"false"},"ShareType":{"type":"integer","format":"int32","enum":["None","ReadWrite","Read"],"description":"[0 - None, 1 - ReadWrite, 2 - Read]","example":"0"},"Currency":{"type":"object","properties":{"Title":{"type":"string","example":"Chinese Yuan"},"Symbol":{"type":"string","example":"¥"},"Abbreviation":{"type":"string","example":"CNY"},"CultureName":{"type":"string","example":"CN"},"IsConvertable":{"type":"boolean","example":"true"},"IsBasic":{"type":"boolean","example":"false"}},"title":"CurrencyInfoWrapper"},"CanEdit":{"type":"boolean","example":"true"},"CanDelete":{"type":"boolean","example":"true"},"ID":{"type":"integer","format":"int32","example":"1234"}},"title":"ContactBaseWithEmailWrapper"},"Title":{"type":"string","example":"Send a commercial offer"},"Description":{"type":"string","example":"Description"},"DeadLine":{"type":"string","example":"2020-12-16T03:11:54.3573531Z"},"AlertValue":{"type":"integer","format":"int32","example":"1"},"Responsible":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"},"IsClosed":{"type":"boolean","example":"true"},"Category":{"type":"object","properties":{"ImagePath":{"type":"string","example":"path to image"},"Title":{"type":"string","example":"Title"},"Description":{"type":"string","example":"Description"},"Color":{"type":"string","example":"#a7fc00"},"SortOrder":{"type":"integer","format":"int32","example":"1"},"ID":{"type":"integer","format":"int32","example":"1234"}},"title":"TaskCategoryBaseWrapper"},"Entity":{"type":"object","properties":{"EntityType":{"type":"string","example":"opportunity"},"EntityId":{"type":"integer","format":"int32","example":"123445"},"EntityTitle":{"type":"string","example":"Household appliances internet shop"}},"title":"EntityWrapper"},"CanEdit":{"type":"boolean","example":"true"},"ID":{"type":"integer","format":"int32","example":"1234"}},"title":"TaskWrapper"}}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

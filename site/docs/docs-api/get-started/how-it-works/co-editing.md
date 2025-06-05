@@ -37,7 +37,7 @@ The reference figure and the steps below explain the process of co-editing a doc
 4. Add the script initializing the **Document Editor** for the *div* element with the configuration for the document you want to open. Be sure to add a [token](../../additional-api/signature/signature.md) when using local links. Otherwise, an error will occur.
 
    ``` ts
-   const docEditor = DocsAPI.DocEditor("placeholder", {
+   const config = {
      document: {
        fileType: "docx",
        key: "Khirz6zTPdfd7",
@@ -52,7 +52,9 @@ The reference figure and the steps below explain the process of co-editing a doc
        },
      },
      token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkb2N1bWVudCI6eyJmaWxlVHlwZSI6ImRvY3giLCJrZXkiOiJLaGlyejZ6VFBkZmQ3IiwidGl0bGUiOiJFeGFtcGxlIERvY3VtZW50IFRpdGxlLmRvY3giLCJ1cmwiOiJodHRwczovL2V4YW1wbGUuY29tL3VybC10by1leGFtcGxlLWRvY3VtZW50LmRvY3gifSwiZG9jdW1lbnRUeXBlIjoid29yZCIsImVkaXRvckNvbmZpZyI6eyJ1c2VyIjp7ImlkIjoiNzhlMWU4NDEiLCJuYW1lIjoiSm9obiBTbWl0aCJ9fX0.6AcBUCbys9kQ7S982Qm4w1romVg86kZ4ECNsxDff5zU",
-   })
+   };
+
+   const docEditor = new DocsAPI.DocEditor("placeholder", config);
    ```
 
    Where **example.com** is the name of the server where **document manager** and **document storage service** are installed.
@@ -64,7 +66,7 @@ The reference figure and the steps below explain the process of co-editing a doc
 7. Change the script initializing the **Document Editor** in the copied *html* file.
 
    ``` ts
-   const docEditor = new DocsAPI.DocEditor("placeholder", {
+   const config = {
      document: {
        fileType: "docx",
        key: "Khirz6zTPdfd7",
@@ -79,7 +81,9 @@ The reference figure and the steps below explain the process of co-editing a doc
        },
      },
      token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkb2N1bWVudCI6eyJmaWxlVHlwZSI6ImRvY3giLCJrZXkiOiJLaGlyejZ6VFBkZmQ3IiwidGl0bGUiOiJFeGFtcGxlIERvY3VtZW50IFRpdGxlLmRvY3giLCJ1cmwiOiJodHRwczovL2V4YW1wbGUuY29tL3VybC10by1leGFtcGxlLWRvY3VtZW50LmRvY3gifSwiZG9jdW1lbnRUeXBlIjoid29yZCIsImVkaXRvckNvbmZpZyI6eyJ1c2VyIjp7ImlkIjoiRjg5ZDgwNjliYTJiIiwibmFtZSI6IkthdGUgQ2FnZSJ9fX0.rdmhKLzXwXXVTABioKy3R2-HGMBY5u4pbZ_TVhW2rJs",
-   })
+   };
+
+   const docEditor = new DocsAPI.DocEditor("placeholder", config);
    ```
 
    Where **example.com** is the name of the server where **document manager** and **document storage service** are installed.
@@ -107,7 +111,7 @@ If the user saves the document before the editing is finished (the *status* valu
    Close the **Document Editor**.
 
    ``` ts
-   const docEditor = new DocsAPI.DocEditor("placeholder", {
+   const config = {
      document: {
        fileType: "docx",
        key: "Khirz6zTPdfd7",
@@ -116,7 +120,9 @@ If the user saves the document before the editing is finished (the *status* valu
      },
      documentType: "word",
      token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkb2N1bWVudCI6eyJmaWxlVHlwZSI6ImRvY3giLCJrZXkiOiJLaGlyejZ6VFBkZmQ3IiwidGl0bGUiOiJFeGFtcGxlIERvY3VtZW50LmRvY3giLCJ1cmwiOiJodHRwczovL2V4YW1wbGUuY29tL3VybC10by1leGFtcGxlLWRvY3VtZW50LmRvY3gifX0.GcpcY8sLCUDqbgqCLvPs6Z0xfBtayOy-GHEXYiZCpfs",
-   })
+   };
+
+   const docEditor = new DocsAPI.DocEditor("placeholder", config);
    ```
 
    Where **example.com** is the name of the server where **document manager** and **document storage service** are installed.
@@ -124,7 +130,7 @@ If the user saves the document before the editing is finished (the *status* valu
 2. Add the script initializing the **Document Editor** with the same *key 1*. The new URL is not used because the key is known and the document is reopened from the editor cache.
 
    ``` ts
-   const docEditor = new DocsAPI.DocEditor("placeholder", {
+   const config = {
      document: {
        fileType: "docx",
        key: "Khirz6zTPdfd7",
@@ -133,7 +139,9 @@ If the user saves the document before the editing is finished (the *status* valu
      },
      documentType: "word",
      token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkb2N1bWVudCI6eyJmaWxlVHlwZSI6ImRvY3giLCJrZXkiOiJLaGlyejZ6VFBkZmQ3IiwidGl0bGUiOiJFeGFtcGxlIERvY3VtZW50IDIuZG9jeCIsInVybCI6Imh0dHBzOi8vZXhhbXBsZS5jb20vdXJsLXRvLWV4YW1wbGUtZG9jdW1lbnQyLmRvY3gifX0.aegFVaZpkqc5bEYmF-PQYf3MMFg7QvAfWeOnfDJeuTg",
-   })
+   };
+
+   const docEditor = new DocsAPI.DocEditor("placeholder", config);
    ```
 
    Where **example.com** is the name of the server where **document manager** and **document storage service** are installed.
@@ -143,7 +151,7 @@ If the user saves the document before the editing is finished (the *status* valu
    Close the **Document Editor**.
 
    ``` ts
-   const docEditor = new DocsAPI.DocEditor("placeholder", {
+   const config = {
      document: {
        fileType: "docx",
        key: "Mgetl3dYUppf2",
@@ -152,7 +160,9 @@ If the user saves the document before the editing is finished (the *status* valu
      },
      documentType: "word",
      token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkb2N1bWVudCI6eyJmaWxlVHlwZSI6ImRvY3giLCJrZXkiOiJNZ2V0bDNkWVVwcGYyIiwidGl0bGUiOiJFeGFtcGxlIERvY3VtZW50LmRvY3giLCJ1cmwiOiJodHRwczovL2V4YW1wbGUuY29tL3VybC10by1leGFtcGxlLWRvY3VtZW50LmRvY3gifSwiZG9jdW1lbnRUeXBlIjoid29yZCJ9.5YvlbNVbXFddzKBdz_qPpqgUX_JrUHBWCGRQ5YgVp_w",
-   })
+   };
+
+   const docEditor = new DocsAPI.DocEditor("placeholder", config);
    ```
 
    Where **example.com** is the name of the server where **document manager** and **document storage service** are installed.
@@ -162,7 +172,7 @@ If the user saves the document before the editing is finished (the *status* valu
    Get the current document state without closing the document. The [forcesave](../../usage-api/config/editor/customization/customization-standard-branding.md#forcesave) parameter allows you to do it in the customization section of the editor initialization.
 
    ``` ts
-   const docEditor = new DocsAPI.DocEditor("placeholder", {
+   const config = {
      document: {
        fileType: "docx",
        key: "Khirz6zTPdfd7",
@@ -176,7 +186,9 @@ If the user saves the document before the editing is finished (the *status* valu
        },
      },
      token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkb2N1bWVudCI6eyJmaWxlVHlwZSI6ImRvY3giLCJrZXkiOiJLaGlyejZ6VFBkZmQ3IiwidGl0bGUiOiJFeGFtcGxlIERvY3VtZW50LmRvY3giLCJ1cmwiOiJodHRwczovL2V4YW1wbGUuY29tL3VybC10by1leGFtcGxlLWRvY3VtZW50LmRvY3gifSwiZG9jdW1lbnRUeXBlIjoid29yZCIsImVkaXRvckNvbmZpZyI6eyJjdXN0b21pemF0aW9uIjp7ImZvcmNlc2F2ZSI6dHJ1ZX19fQ.dlIJqq6tH9ncQmXQV-gCi4Zc7sqYhGS5RwvpiIZGZXA",
-   })
+   };
+
+   const docEditor = new DocsAPI.DocEditor("placeholder", config);
    ```
 
    Where **example.com** is the name of the server where **document manager** and **document storage service** are installed.
@@ -186,7 +198,7 @@ If the user saves the document before the editing is finished (the *status* valu
    Close all the three editing sessions with *key 1*. All changes are successfully saved. As the document is saved, the key must be generated anew.
 
    ``` ts
-   const docEditor = new DocsAPI.DocEditor("placeholder", {
+   const config = {
      document: {
        fileType: "docx",
        key: "Khirz6zTPdfd7",
@@ -198,7 +210,9 @@ If the user saves the document before the editing is finished (the *status* valu
        callbackUrl: "https://example.com/url-to-callback.ashx",
      },
      token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkb2N1bWVudCI6eyJmaWxlVHlwZSI6ImRvY3giLCJrZXkiOiJLaGlyejZ6VFBkZmQ3IiwidGl0bGUiOiJFeGFtcGxlIERvY3VtZW50LmRvY3giLCJ1cmwiOiJodHRwczovL2V4YW1wbGUuY29tL3VybC10by1leGFtcGxlLWRvY3VtZW50LmRvY3gifSwiZG9jdW1lbnRUeXBlIjoid29yZCIsImVkaXRvckNvbmZpZyI6eyJjYWxsYmFja1VybCI6Imh0dHBzOi8vZXhhbXBsZS5jb20vdXJsLXRvLWNhbGxiYWNrLmFzaHgifX0.L53bCRlJyvIf-C7bcKYM2WMfmk4FeZIoeDaEpc5IxXA",
-   })
+   };
+
+   const docEditor = new DocsAPI.DocEditor("placeholder", config);
    ```
 
    Where **example.com** is the name of the server where **document manager** and **document storage service** are installed.
@@ -206,7 +220,7 @@ If the user saves the document before the editing is finished (the *status* valu
 6. Add the script initializing the **Document Editor** for viewing the document created. *Key 1* can be used.
 
    ``` ts
-   const docEditor = new DocsAPI.DocEditor("placeholder", {
+   const config = {
      document: {
        fileType: "docx",
        key: "Khirz6zTPdfd7",
@@ -218,7 +232,9 @@ If the user saves the document before the editing is finished (the *status* valu
        mode: "view",
      },
      token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkb2N1bWVudCI6eyJmaWxlVHlwZSI6ImRvY3giLCJrZXkiOiJLaGlyejZ6VFBkZmQ3IiwidGl0bGUiOiJFeGFtcGxlIERvY3VtZW50LmRvY3giLCJ1cmwiOiJodHRwczovL2V4YW1wbGUuY29tL3VybC10by1leGFtcGxlLWRvY3VtZW50LmRvY3gifSwiZG9jdW1lbnRUeXBlIjoid29yZCIsImVkaXRvckNvbmZpZyI6eyJtb2RlIjoidmlldyJ9fQ.wpEk-zrrGq5hKHCm6sAhl_tb51n56th-q-K52Oeq1a4",
-   })
+   };
+
+   const docEditor = new DocsAPI.DocEditor("placeholder", config);
    ```
 
    Where **example.com** is the name of the server where **document manager** and **document storage service** are installed.
@@ -228,7 +244,7 @@ If the user saves the document before the editing is finished (the *status* valu
    Close the **Document Editor**.
 
    ``` ts
-   const docEditor = new DocsAPI.DocEditor("placeholder", {
+   const config = {
      document: {
        fileType: "docx",
        key: "Khirz6zTPdfd7",
@@ -240,7 +256,9 @@ If the user saves the document before the editing is finished (the *status* valu
        mode: "edit",
      },
      token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkb2N1bWVudCI6eyJmaWxlVHlwZSI6ImRvY3giLCJrZXkiOiJLaGlyejZ6VFBkZmQ3IiwidGl0bGUiOiJFeGFtcGxlIERvY3VtZW50LmRvY3giLCJ1cmwiOiJodHRwczovL2V4YW1wbGUuY29tL3VybC10by1leGFtcGxlLWRvY3VtZW50LmRvY3gifSwiZG9jdW1lbnRUeXBlIjoid29yZCIsImVkaXRvckNvbmZpZyI6eyJtb2RlIjoiZWRpdCJ9fQ.rSc0yYe3_2u7N_uaxZcDQ6vC_d5ZWU5LFkkGSow5UDY",
-   })
+   };
+
+   const docEditor = new DocsAPI.DocEditor("placeholder", config);
    ```
 
    Where **example.com** is the name of the server where **document manager** and **document storage service** are installed.
@@ -252,14 +270,16 @@ There are two modes to collaborate on documents in real time - **Fast** and **St
 You can change the co-editing mode using the [editorConfig.coEditing](../../usage-api/config/editor/editor.md#coediting) parameter:
 
 ``` ts
-const docEditor = new DocsAPI.DocEditor("placeholder", {
+const config = {
   editorConfig: {
     coEditing: {
       mode: "fast",
       change: true,
     },
   },
-})
+};
+
+const docEditor = new DocsAPI.DocEditor("placeholder", config);
 ```
 
 ### Fast mode

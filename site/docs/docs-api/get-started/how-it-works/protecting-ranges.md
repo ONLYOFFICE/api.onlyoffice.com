@@ -38,13 +38,15 @@ The reference figure and the steps below explain the process of protecting range
          },
        ],
      })
-   }
+   };
    
-   const docEditor = new DocsAPI.DocEditor("placeholder", {
+   const config = {
      events: {
        onRequestUsers,
      },
-   })
+   };
+
+   const docEditor = new DocsAPI.DocEditor("placeholder", config);
    ```
 
 3. In order to set the users list under the *Who can edit* field, the [setUsers](../../usage-api/methods.md#setusers) method must be called:
