@@ -1,0 +1,71 @@
+---
+id: delete-a-filter
+title: "Delete a filter"
+description: "Deletes a filter with the ID specified in the request."
+sidebar_label: "Delete a filter"
+hide_title: true
+hide_table_of_contents: true
+api: eJydU01v2zAM/SsGz0KdZTtsvhVLhhXbYVjbU5ADazO1VtlWJbpdJui/D5TstOnHgO7iD5EUH997DMB47aHaQIfalF+0YXIetgo81aPTvIdqE+B05HZw+g+yHvqvhA05qXGEDSi4d5oJtnGroCFfO20lDSpYkSEmX2CxSxcX95rbglsqzlaFt1Trnaam0H06c3Q7kucTUGDRYUcJirTvsSOoQEszLRdb5Baedsvgi7MVKPB1Sx1CFYD3NtX2TNfkQMFucB1yPnq/hCiwHXk79J68VCwXC3m9fnk99Ew9SxJaa3SdaCl/eckMb+odo4IPi3fP+132OHFODUhWR9wODVTQJFITSdxCBSVaXS5PFmVSMBPty6CbKDyQu5tZHJ2BClpm66uyDO3gOVbBDo4l8w6dxiuTKZBYxrTD0QhgM9Ro0nFUIDXH4Y+LT2mcR8Y5FxrydS/a50APWv2N9rO0bQ6rWfSj2sSE7ndDKtdsJOPz0HVjr3lfnKdpi5/r84vi9MeZTEXOZ0INMs3oPXeYpJp6ZJ8ebPrUWeFB8f+39DQs028urUHdC5QkSZiU3AgToGB5sgCV9lEcM22kgko3spdZmg2EcIWeLp2JUY5vR3Kyq9sHJZPojfby3UC1Q+PpH5M9dviLYGe5+n2yixnlDxTc0D4vZ9xGNesnvXPgtK7J8qOSZzsjrjnYe7X+vr5YgwLx/7FLbpJLpg9p8CKiY8PM8OQZ1SslIWQPxnjIz6FXKw4unYaXIWKMfwEkLMnH
+sidebar_class_name: "delete api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Delete a filter"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"delete"}
+  path={"/api/2.0/mail/filters/{id}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Deletes a filter with the ID specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"id","in":"path","description":"Filter ID","schema":{"type":"integer","format":"int32"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Filter ID","content":{"application/json":{"schema":{"type":"integer","format":"int32"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

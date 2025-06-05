@@ -1,0 +1,71 @@
+---
+id: get-conversion-status
+title: "Get conversion status"
+description: "Checks the conversion status of a file with the ID specified in the request."
+sidebar_label: "Get conversion status"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVltv2zYU/ivEeaZjRXbSRsAwpE3WBVu3IBcMaOKHY+nYZiOJLEkl8QT99+GQsh3XmbMN0wNNk+fynTtb8Dh3kN3BTJXkhr8bsuiVrh1MJDjKG6v8ErK7Fk4bv9BW/RmufyYsyDKfJSxAwpNVnmDSTSQU5HKrDJNBBh8XlD844Rckcl0/knVK18J59I0TeiZQsGbxpPwiEF2cCWcoVzNFhVB1OLP0rSHnD0CCQYsVebIugKqxIsgC+AuGoVilQb+A73H8xFouzkCCyxdUIWQt+KVhbuetqufQMfhe1QddLJki17Wn2vMWjSlVHqwffnUss90VpadfKfeM02pD1itygc6jDUK2MV33hjqh2BEv/KNXcRDKicBNhdBW1JqF98qmWpeENXThY+zO6NpFlWmS7Cpch1dYck3Jsv6thWgtLtnTnir3tuUXxa6jJdAzVqbko+JofJLkUxzgER0PxkkxHWA+TQcn4zQZFVM8TItj6OQG+U0QtRapak9zsiBhpm2FPh6NUlZSNxVn6Gf9SCDhozaM+4xK8vz/TD/VpQ7J+xntw6m7ipl8URltfWDgcHjYSem7RAwES5XiUAwEC5YiFQMRZUsx4n0vXooxU681SHEkBiIqkeI48Ac9ky2/BKMvrZ5bcu4f2rtmHiXMfa0bm9N+97tI08lQH2+H87dQb/skhjoLZdlJuDUFeio+LP9roqyNbBpVbOlJ+m/wyrL6GMKZcqbE5dvAP6sHEl+wXqJ3D4pZb5Qv32LCGjkcnYTTR/Roryssy/08jS2F18IxpcDA1Qeb29itfYP9/n54aXXR5N7xlrQpKZ4x+wE68/xj48j+gEWlauW8Ra8tcIPw0SA4r0ypl0R/WDQRfB+o/ZrTJE0Gh+kgeX9z+C4bvcuS0cFonI5Pjt59YSG/6tg89ksZ39/f34+PeX2RKy/Q8Skj66GdW6vtfpG9+3Jy7i0bDrdUxdJzAfVV7Ih9Lx0nh7vt87bGfghSEeRU5Be6gAzmFDKaB08GQzRqmB4kwzhTeR22cUR1w5zn4abT8zwi+7iaZw1HHxbeG5cNh+1CO99lLfeKDiQ8olU4LWPB8F2EOEMGnkGpcyzDcSchNLGt6/fJScrmvRjs19zdo7hXx/um6xv1Cy1XA3YRr+Vq/G7xBsfw+LjajNLzlf/Xo9DbhjoWN9NBzTogVdXUyi/FdfCKuDq/vhGnlxdsfe+xDEr0tLLS+QpDxvVYPpHffWh8/xp4Mdj/7wdK7zBPz35oSlQ1w2xiUcf8uGNvgoT0IOEOxznS/4KEbP2U+T5RJrIP+R207RQdd4qu4+NvDVl+o002GRKSqVCO9wVkMywd7fHB5nH0KvxVEtTLkIRlE4pOwgMtN4+vbtLJVWaw9nj5MeoYhLG9Yd55anRyxXGa52T8XtrJi8r7dH4DEqb9e63SBbNYfAIZ1oBTm/ikzdp41kKJ9bzBOdNGkZy0XNzbOf8Qcr7fsFGvemI7/Vdu4ZWtepWlbWNFdd2aPl79Lce65iI1B2bSdd1f0HTwzg==
+sidebar_class_name: "get api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get conversion status"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/files/file/{fileId}/checkconversion"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Checks the conversion status of a file with the ID specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"fileId","in":"path","description":"File ID","schema":{"type":"string"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"start":{"description":"Specifies if a conversion operation is started or not","type":"boolean"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Operation result","content":{"application/json":{"schema":{"type":"array","items":{"type":"object","properties":{"Id":{"type":"string","example":"d5490cba-a5e6-40db-acb2-94203dba12d6"},"OperationType":{"type":"integer","format":"int32","enum":["Move","Copy","Delete","Download","MarkAsRead","Import","Convert"],"description":"[0 - Move, 1 - Copy, 2 - Delete, 3 - Download, 4 - MarkAsRead, 5 - Import, 6 - Convert]","example":"6"},"Progress":{"type":"integer","format":"int32","example":"30"},"Source":{"type":"string","example":"source"},"File":{"type":"object","properties":{"Name":{"type":"string","example":"File name"},"UpdatedBy":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"},"Updated":{"type":"string","example":"2020-12-08T17:37:03.3424957Z"},"Location":{"type":"string","example":"4\\\\46\\\\File name"}},"title":"FileWrapper"},"Error":{"type":"string","example":""},"Processed":{"type":"string","example":"1"}},"title":"ConversationResult"}}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

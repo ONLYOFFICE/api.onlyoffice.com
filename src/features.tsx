@@ -41,7 +41,7 @@ export const DocsFeatures: Features = {
       icon: <DocSpaceApiIcon/>,
     },
     {
-      title: 'Plugins and Macros',
+      title: 'Plugins and macros',
       link: 'plugin-and-macros/get-started/overview',
       description: (
         <>
@@ -83,8 +83,19 @@ export const DocSpaceFeatures: Features = {
   linkPrefix: 'docspace',
   items: [
     {
+      title: 'Backend REST API',
+      link: 'api-backend/get-started/basic-concepts',
+      description: (
+        <>
+          In this section, you will learn how to integrate ONLYOFFICE DocSpace into{" "}
+          your own application and interact with its backend using GET/POST/PUT/DELETE.
+        </>
+      ),
+      icon: <DocSpaceApiIcon/>,
+    },
+    {
       title: 'JavaScript SDK',
-      link: 'javascript-sdk/get-started/basic-concepts',
+      link: 'javascript-sdk/get-started',
       description: (
         <>
           In this section, you will learn how to connect DocSpace as a frame to{" "}
@@ -96,7 +107,7 @@ export const DocSpaceFeatures: Features = {
     },
     {
       title: 'Plugins SDK',
-      link: 'plugins-sdk/get-started/basic-concepts',
+      link: 'plugins-sdk/get-started',
       description: (
         <>
           In this section, you will learn how to create your own plugins and add{" "}
@@ -106,30 +117,7 @@ export const DocSpaceFeatures: Features = {
       icon: <PluginIcon/>,
     },
     {
-      title: 'OAuth API',
-      link: 'oauth-api/get-started/basic-concepts',
-      description: (
-        <>
-          In this section, you will learn how to register a new OAuth application{" "}
-          on the DocSpace portal.
-        </>
-      ),
-      icon: <DocsApiIcon/>,
-    },
-    {
-      title: 'API Backend',
-      link: 'api-backend/get-started/basic-concepts',
-      description: (
-        <>
-          In this section, you will learn how to integrate ONLYOFFICE DocSpace into{" "}
-          your own application and interact with its backend using the DocSpace API{" "}
-          Backend which is implemented as REST over HTTP using GET/POST/PUT/DELETE.
-        </>
-      ),
-      icon: <DocSpaceApiIcon/>,
-    },
-    {
-      title: 'For Hosting Providers',
+      title: 'For hosting providers',
       link: 'for-hosting-providers/get-started/authentication',
       description: (
         <>
@@ -146,13 +134,12 @@ export const WorkspaceFeatures: Features = {
   linkPrefix: 'workspace',
   items: [
     {
-      title: 'API Backend',
+      title: 'Backend REST API',
       link: 'api-backend/get-started/basic-concepts',
       description: (
         <>
           In this section, you will learn how to integrate ONLYOFFICE Workspace{" "}
-          into your own application and interact with its backend using the{" "}
-          Workspace API Backend which is implemented as REST over HTTP using{" "}
+          into your own application and interact with its backend using{" "}
           GET/POST/PUT/DELETE. This solution is provided without editors, you{" "}
           need to install ONLYOFFICE Docs separately.
         </>
@@ -160,7 +147,7 @@ export const WorkspaceFeatures: Features = {
       icon: <DocSpaceApiIcon/>
     },
     {
-      title: 'For Hosting Providers',
+      title: 'For hosting providers',
       link: 'for-hosting-providers/get-started/authentication',
       description: (
         <>
@@ -171,4 +158,9 @@ export const WorkspaceFeatures: Features = {
       icon: <HostingIcon/>
     },
   ]
+}
+
+export const SamplesFeatures: Features = {
+  linkPrefix: 'samples',
+  items:[]
 }

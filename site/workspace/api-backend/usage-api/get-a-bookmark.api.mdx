@@ -1,0 +1,71 @@
+---
+id: get-a-bookmark
+title: "Get a bookmark"
+description: "Returns the detailed information on the bookmark with the ID specified in the request."
+sidebar_label: "Get a bookmark"
+hide_title: true
+hide_table_of_contents: true
+api: eJy1VW1v2zgM/isGP6uxkxW9zsBh6NaiVxx2KNYWB6zJB8ZmEi22pUl0W5/h/36gHKfJ+rbhcPng2CIf6qH4kGqBcekhvYXMlGVdaW7ij8asS3RrDzMFnrLaaW4gvW3hpOaVcfofZG2qPwhzcgJ1hDkouHeaCWbdTEFOPnPaihuk8IW4dpWPeEVRToy6oDzS1cK4MkSKTBVs883G0b3mVVi5OI28pUwvdECENUffa/I8AgUWHZbE5HygV2FJkIIWMlo2tsgr+JHNkF50cQoKfLaiEiFtgRsb0BXTkhwo6Pn1S0eH0Elijrw1lScviEmSyN8L4XcSBAWZqZgqFn+0ttBZMMTfvIDapzTM/BtlLDk6Y8mx7re8yH+GqgJ6wNIW4jQeQ6fgWrN8baGena6We47nxiwLinSVjQRx44rX/VfMNp1O4+k0vr+/Hy0DfJSZMuy3qst5hfqNGDeuiNhEvPXuFHxyhEz568BJMkkOxpOD5Og6+S19d5SOD0fH4+Px8ft3XwN7m//3IKe7hX376HbIf2x+sZTboNtK1nXQ8eMmyeZ38Mxj+AXW2tsCm79CM7zG+rNeU/QVqwbZr/VPquQzViia6xSc3CGjuyqxeKPKdV9lL54RBpTgL51Z6ILeFNp0Gl86k9cZe3klYwvq1wQ+Qm8fPtSe3O+Yl7rSnh2ycdB1CrhPCM5KW5iG6G+HlvZNQ7+KqbeJ9TAZP23tmwo3A5DyEKMkXpkcUlhSqK+MmxRitDqejJL4caQOky1udd7J1CF3N0ytWvIP3eTTOG5XxnOXttY4Fs87dBrnRS8ZsfW0FlgXopLCZFiE5U6BYPbNx8n7iWS0M8ivZNL04Z4d59tKoNV/UjOM0lVvVsOQ3cOGw5B5F+Cbg/00ZB9dhWyjL2dX19HJ5YVkRc73Z1og08Dec4mh0zZ7nBNHuL0Vfhzk7eNM/f9umM1ZMD1wbAvUlTCte8X25b6VgwIFk1ESxvwmaVCwQzzVuVymff1uoW3n6EX4XSfL32tycsHOHssdlJFrL+85pAssPL2S//6d9izpoapVE1RV1PIFCtbU9HdmN+vUUGbZvTecZBlZ3oE8ub1EXNtGOD+7BgXSJvtKWgclbV4k+rN09kU1cJNnp16AtG2v067b+vemFxFbJW8ylwy6rvsXHZcIUQ==
+sidebar_class_name: "get api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get a bookmark"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/community/bookmark/{id}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns the detailed information on the bookmark with the ID specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"id","in":"path","description":"Bookmark ID","schema":{"type":"integer","format":"int64"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Bookmark information","content":{"application/json":{"schema":{"type":"object","properties":{"Id":{"type":"integer","format":"int64","example":"11"},"Title":{"type":"string","example":"Google inc."},"Url":{"type":"string","example":"http:\\/\\/www.google.com"},"Thumbnail":{"type":"string","example":"Url to thumbnail"},"Created":{"type":"string","example":"2020-12-06T07:36:14.8181893Z"},"Updated":{"type":"string","example":"2020-12-06T07:36:14.8181893Z"},"Description":{"type":"string","example":"Google"},"CreatedBy":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"}},"title":"BookmarkWrapper"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

@@ -1,0 +1,71 @@
+---
+id: check-the-discussion-subscription
+title: "Check the discussion subscription"
+description: "Checks subscription to the notifications about the actions performed in the discussion with the selected message."
+sidebar_label: "Check the discussion subscription"
+hide_title: true
+hide_table_of_contents: true
+api: eJyVkk1v2zAMhv+KwOvc2gt2WHXrF7BiGDA02ynIQbaZWJ0saSKVLjP83wfaqbesu8wnma9IvnzEAdjsCfQGYgpP2HB5Z6nJRDZ4gm0BhE1Olo+gNwNcZ+5Csj8N2+A/oGkxSWpC00IBz8kywnbcFtAiNclGuQYabjtsvpGiXC9RxUFxh8oHtjvbTAVJmTpknuKmmSMR0y6kHltl/SS0iz31bLmbYoQOG8ZW9Uhk9ngJBST8npH4JrRH0AM0wTN6lqOJ0Z06lk8kBgegpsPeyImPEUFDqAUGFIIlYmKLJOqpgW3l53zIT7OkHu6geKliPeMeE4zTJ6YoBk9zrVVVva5yE4JD49XBuIxaccqoLmZytsa2UDvjSELZn3DWKOz/d7567gOzr3fV29dWvnpzem5sQW71yF1oQcMeJzKGO9BQmmjL1WVVvizQiVE5LLD0prq42r4Zy8UyyGKlAyaa9ionBxo65ki6LIcuEI96iCHxCAUcTLKmdjM10WavO5MdgwYXGuOm8FiA5JzL76urlYz5xy6vhcZc7p8bvVAy0X7EIxRgBUg3ywV404t6ljsREtyPvxfv/ofpo8O/Fqcapd4uTH0siw63oe+zt3xU6wmLerxff1HXnx9kfEw0v4gzjDLm+AurME97
+sidebar_class_name: "get api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Check the discussion subscription"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/project/message/{messageid:[0-9]+}/subscribe"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Checks subscription to the notifications about the actions performed in the discussion with the selected message.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"messageid":{"description":"Message ID","type":"integer"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Boolean value: true - subscibed, false - unsubscribed","content":{"application/json":{"schema":{"type":"boolean"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

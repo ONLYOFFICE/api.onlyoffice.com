@@ -1,0 +1,63 @@
+---
+id: set-default-login-settings
+title: "Reset the login settings"
+description: "Resets the portal login settings to default."
+sidebar_label: "Reset the login settings"
+hide_title: true
+hide_table_of_contents: true
+api: eJyVV01v2zgQ/SuDuWQLaO3U6cm3bJIF2g3Qok2QQ2A0NDWy2EikSo6SeA3992JI+UN2iriX2Cbni8M37zErZLUIOL3Hb8Rs7CLAGK7dwlgI/QLOMnQNecXG2Y85TjEQX1Kh2oqj5doTM/QUGmcDBZyucHJ6Kh85Be1NI944xb3YGWpnmSyLpWqayuiYZ/wjiPkKgy6pVvKNlw3hFN38B2nGDBsvVbFJydaZ37ZUzFQ3fOHalLW3NpZpQR6zvYJvSoJavZi6rcG29Zw8uAK05NItmyeCQpmKcqjiyfroAVRVuWfKYU6F8wTszWJB3tgFKK0lN4Q2NGSDcXaEGRbO14pTIWcTzJBeVN1UhNP3k7MPXYbzyunHG1PTkUXnbboy+MtYqI1tmcI7KJyH59LoEpTdVOKpVsaGvqKcclAFkwd60US51LzuwPCQR9WtS9KPX8gbl/9hu9nUFKsPpJ3Nw7tNU+UUgfwTeWAHjXeaQgBlc0g4yGU51erpZ0vhyFpN6IG9U+ncuYqUPaj0W0PaFIYCmAK4pEAbWIPyBHmKBM6DdbybjH1LXZehynMjwVT1ZQehhaoCvdaWajA60CivamLy8WhsWELjYCIv2aHcwG+hvteQLsPK2MewY6u8V0vM0DDV4e3hKj0VO1aBBfESV+l0koOtTjoRWHEbjiwxGV+4/PVJ2HfoftOcO6+ahnxfwYfT94dkdWtVy6Xz5n/KYyCZeW94idP7Faqgv8v+90eSBfSkcszw2RsmnHXZCv8h5cnj9D7+Om/Mf7TcrL1mr4LRa/PP5y2Xk9cNPzcUqfh+1s32ofKVAnEQRELjPKtqHzjs1tgU4NTEpUwm5lQRk9yo4hKnOFaNGU9Gp+O143h9+nEMuMPhaRRD7ErrK5ziaq4C3fqqOxybNLba2cIseorCDJ+UN2peJRT1zulC+nnEg0j9qMLt12u5xNn2er6JaPRsP7ikLazjXRyEvA0EF849GgJxIsu9HmGGVtXRczdghkbcdHQRbPY3uMlTMjcHWa6skOvStR7aQF4CR+5qVAjPzstdR9mL7BMDSuQeN8eEPknGsPp0dwM37pFsdzIImmJl/Zd/1xPz6e5GUg2B+lbPzgeNAhMgF1aqjRX1W0Ygnpz3cxRtTqAklccC+qYOMvZN7W26bDMJW/JRcWG/kmQHReWe4dlwCYOsEBkjQ9lO0NjdXdPJYDFiMDY6TMfjmHXkbLV0RWE0jbSr0+JkvOEJoWJp+PGu0TzejmvWbxmVx0FWuUi0SFtSOSbNFDXOtV5T2JDCFO/k8w3rxHRr7th2My5cOGsTo+81VXYvod8+HIuB9/GnFuAbW0R9evk7mIVV3Hp6G24C6Y25zE96DQzrGoEIZuws1G1gmBO4OauIySejIigftgTX89rujTwA2bxxxvIIPrLAWsZTnkYBFKSJTyiTWHGGH3YO8jDaonv3fHuMIW8O6YIcuxep88YIH5IP6cBno/ejU2lT4wLXKmpoHzhSfcxf7T+rB01bbV/ZfyoP/WUwvfC4qZSxUkmbuDkJxb3cFGY4GZ1GKdhRhV4sMxwKxizD0gUW19VGKDpZ/tmSFy2dbQUhyeGaDURhIpPjudbUcFSOqk142fvvQRRho26XV9dXN1eYxQEfoiwRef9FEqy37HI3/JD3UxHyV/T4VY/VKkG46zb2aeu3HhtaTNbS7FnXdb8AyVK/Xw==
+sidebar_class_name: "delete api-method"
+info_path: site/docspace/api-backend/usage-api/api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Reset the login settings"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"delete"}
+  path={"/api/2.0/settings/security/loginsettings"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Resets the portal login settings to default.
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Login settings","content":{"application/json":{"schema":{"type":"object","properties":{"response":{"type":"object","properties":{"attemptCount":{"type":"integer","description":"The maximum number of consecutive failed login attempts allowed before triggering account suspension.","format":"int32","example":1234},"blockTime":{"type":"integer","description":"The duration (in minutes) for which an account remains suspended after exceeding maximum login attempts.","format":"int32","example":1234},"checkPeriod":{"type":"integer","description":"The maximum time (in seconds) allowed for server to process and respond to login requests.","format":"int32","example":1234},"isDefault":{"type":"boolean","description":"Specifies if these settings are default or not","example":true}},"additionalProperties":false,"description":"The login settings parameters.","title":"LoginSettingsDto"},"count":{"type":"integer","format":"int32"},"links":{"type":"array","items":{"type":"object","properties":{"href":{"type":"string"},"action":{"type":"string"}}}},"status":{"type":"integer","format":"int32"},"statusCode":{"type":"integer","format":"int32"}},"title":"LoginSettingsWrapper"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

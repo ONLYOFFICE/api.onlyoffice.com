@@ -1,0 +1,71 @@
+---
+id: get-my-tasks-by-status
+title: "Get my tasks by status"
+description: "Returns a list with the detailed information about the tasks for the current user with a status specified in the request."
+sidebar_label: "Get my tasks by status"
+hide_title: true
+hide_table_of_contents: true
+api: eJztWNtSG0cQ/ZWpyUtSNUJaAb6oKhWDILFsQzDCpnzhobXbYsfMzmxmerEVoc/Jj+TLUj0rIclgJBNXJQ/Wg2qk6cvp+26PJcF5kJ13svTuA6bUPIFwEeSZkgHTymsayc67sdypKHde/wmknX2KkKFnJo+QSSU/ek0ozyZnSmYYUq9LJpMdeYxUeRsECKMDiY+ackE5igwJtMFMaDt0vohSBQxcRfGaGIMYOh9/pZX3aElUAX0tAkQgoCqIUGKqhzoKirQe/6gw0IZUcnrcddlIdsYydZbQEh+hLI1Oo9Lmh8BAxzKkORbAJxqVKDvSDdgdUrFjSvSkMUS6qJhPy5ay26aopJrJ0JbwHL2cxA9DCqWzoZbUbrVuinnBbnLD2gNSfTVq8B5GUklNWITV1nQ9AuHuaDVlL1ugCeS1PZdK1sGTHVlVmhMBP0FRGiZpTT+NW75mHzlRck+H0sDoEAq8TcFc4IG+QPEW7AgoXGhmPdFkVjGBhRgAJXcugcD3CzDmbp7KG0FOBKYUELmY/8i7oTb4yq9gf/++eeRdVqUU+IiuNFj/x+wbEMpPv3Am/wxZoa0O5IEcp4iSVBsk94vSuBHiqYeyBl/H6dYQzDW3W+1WI2k3kgcnrc1OknS2tzY2tx9ubm8mb6MQZwlSWh3r/QK0WSMl7NCdRIrx5wm/kBna0mabcdqq4JZxlDuLUk2VKHmKg8DdQ8n+BQtR8uSjJopCXmh7gVnPSiV/hRQHzl1IJXeyzGMI8f4Sn7nKW2BJB6N+CSlL+O2glr1r3HkN5w3kzjFN/1Aq2eu+lEo+g8EgXu70DqSSr5/LG/3rXUs0RESsRCIaIoJWoi0aYopbiU3REBG6EluiIaboldgWDTEzQIkHoiFmNijxUDTE1AwlHkXCa0uUeCwaYmqMEglDiAYpkTCGqVFKJAwjGqZEwigO+odKJAyi132pRMIIaiOVSBjATu9AiYSVv35+tpQ7SUwQIDx3frRmQOe1HgsZCO7Oz1CVpfP0xFkzcsOhTnEjdcWi4tVd4KkrkDl64cjrApawDpwzCHaJnnxV0+99rVFJe3NrqSqn5cNZz4U5rczYUH515FY2hmlfGTpyzHiAma6K+3Cu3TJPIPuAWaYtil1Ic+1rz3VdUYJd5bkhmBBdt5OmGAIPpvvPme/T47+bHrNquQTCdasl9HPwS/PmzhSJ1F8/Cg7rSXCMkJ36egbw+Qtt+PC6C18z1J2Yf57dbEjd+NiYrvFss0YqdHNtMaB4U4GNFo+KgVsRy7//ipkzGHi81FCbcqeOwzc1bkOVx9U53T2c1bO9RE8wMOvHdxeCTtcL72ILnLr0sx7YBbufaVpTeRfsHhpcPxm/WevehYCnmvI4xRfwrxH/PtpMgEhdUaBPNRjhhsOae28xVe+SsUgY+SB7oe0Kxase6nYMenoNplq39pZH/nH9RqKXc+d7F//fdfFY6MaFlU15XmY3Hua+FNYCzvEIKL/bqBL45d0JzeRr+r4m+RdF0nXG+bs5foCHw7ROpL7z9LuPu4l71MI3aDS8BZg5PnabeZPZtxSXKStfviLdZ8P0FrNdfJiuLAu9Fr9UoWubsLU9l7BGUJ+6KmDuTCbiSgJsikGwMm+RRMhduZzJUe69x8U3isq1/noTs9VKbi5fXlmYrrkwiwIKpNxlsiPPMQYq1ohsQqmb7Y1Wc7Yy42VN80lAM2yO6xVQ50frCNIUS7pyJdqrNJbuVaYDj+mryqYGQoirqyvrSNtCGwzkLP40kbx785foQ1y9VdxtZE5Uhk6zOc5doElnzMFnykvwmkXG3OG72qwhVIa9Y1wKJv49UZJ5lq8ftR632SUL674+r5Rqcbcu/eavAKV+jvEdgH2X19dK2tjFl3mjM3lndTzfye3P4jXfqbUmLGzoopLr0V0UMclFP/pEHO/3T8TOUY9tRx/qyBkgZBsn/wBCjeri
+sidebar_class_name: "get api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get my tasks by status"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/project/task/@self/{status:(notaccept|open|closed|disable|unclassified|notinmilestone)}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns a list with the detailed information about the tasks for the current user with a status specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"status":{"description":"Task status","type":"integer"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"List of tasks","content":{"application/json":{"schema":{"type":"array","items":{"type":"object","properties":{"CreateBy":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"},"Created":{"type":"string","example":"2020-12-16T03:11:54.3573531Z"},"Contact":{"type":"object","properties":{"Email":{"type":"object","properties":{"InfoType":{"type":"integer","format":"int32","enum":["Phone","Email","Website","Skype","Twitter","LinkedIn","Facebook","Address","LiveJournal","MySpace","GMail","Blogger","Yahoo","MSN","ICQ","Jabber","AIM","VK"],"description":"[0 - Phone, 1 - Email, 2 - Website, 3 - Skype, 4 - Twitter, 5 - LinkedIn, 6 - Facebook, 7 - Address, 8 - LiveJournal, 9 - MySpace, 10 - GMail, 11 - Blogger, 12 - Yahoo, 13 - MSN, 14 - ICQ, 15 - Jabber, 16 - AIM, 17 - VK]","example":"1"},"Category":{"type":"integer","format":"int32","example":"0"},"Data":{"type":"string","example":"support@onlyoffice.com"},"CategoryName":{"type":"string","example":"Home"},"IsPrimary":{"type":"boolean","example":"true"},"ID":{"type":"integer","format":"int32","example":"1234"}},"title":"ContactInfoWrapper"},"SmallFotoUrl":{"type":"string","example":"url to foto"},"MediumFotoUrl":{"type":"string","example":"url to foto"},"DisplayName":{"type":"string","example":"Tadjeddine Bachir"},"IsCompany":{"type":"boolean","example":"false"},"AccessList":{"type":"array","items":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"}},"IsPrivate":{"type":"boolean","example":"true"},"IsShared":{"type":"boolean","example":"false"},"ShareType":{"type":"integer","format":"int32","enum":["None","ReadWrite","Read"],"description":"[0 - None, 1 - ReadWrite, 2 - Read]","example":"0"},"Currency":{"type":"object","properties":{"Title":{"type":"string","example":"Chinese Yuan"},"Symbol":{"type":"string","example":"¥"},"Abbreviation":{"type":"string","example":"CNY"},"CultureName":{"type":"string","example":"CN"},"IsConvertable":{"type":"boolean","example":"true"},"IsBasic":{"type":"boolean","example":"false"}},"title":"CurrencyInfoWrapper"},"CanEdit":{"type":"boolean","example":"true"},"CanDelete":{"type":"boolean","example":"true"},"ID":{"type":"integer","format":"int32","example":"1234"}},"title":"ContactBaseWithEmailWrapper"},"Title":{"type":"string","example":"Send a commercial offer"},"Description":{"type":"string","example":"Description"},"DeadLine":{"type":"string","example":"2020-12-16T03:11:54.3573531Z"},"AlertValue":{"type":"integer","format":"int32","example":"1"},"Responsible":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"},"IsClosed":{"type":"boolean","example":"true"},"Category":{"type":"object","properties":{"ImagePath":{"type":"string","example":"path to image"},"Title":{"type":"string","example":"Title"},"Description":{"type":"string","example":"Description"},"Color":{"type":"string","example":"#a7fc00"},"SortOrder":{"type":"integer","format":"int32","example":"1"},"ID":{"type":"integer","format":"int32","example":"1234"}},"title":"TaskCategoryBaseWrapper"},"Entity":{"type":"object","properties":{"EntityType":{"type":"string","example":"opportunity"},"EntityId":{"type":"integer","format":"int32","example":"123445"},"EntityTitle":{"type":"string","example":"Household appliances internet shop"}},"title":"EntityWrapper"},"CanEdit":{"type":"boolean","example":"true"},"ID":{"type":"integer","format":"int32","example":"1234"}},"title":"TaskWrapper"}}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

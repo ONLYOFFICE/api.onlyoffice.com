@@ -1,0 +1,71 @@
+---
+id: get-settings
+title: "Gets settings"
+description: "Gets settings"
+sidebar_label: "Gets settings"
+hide_title: true
+hide_table_of_contents: true
+api: eJy9Vd9P2zAQ/leqe7baroC05a1CE0IbCK2wlypCJrm2hsTO7EvXLsr/Pp2dtAmFMiGNlzSxv7vv7rsfrYDk0kE0hxkSKb10EAswBVpJyujLFCJYIu0uBRTSyhwJLVtVoGWOEMGNsSSza/4QoDRE8KtEuwUBKbrEqoK97XADHYAuWWEuIaogl5vvqJe0gmhydiYgV7r9HgugbcEkjqzSSxCAG5kXmT8yOQ4INwR1LXbR3KKWmi7T47EE1EClvUgaLqUJl2hBwMLYXFI4Opl02T9NTk67tN9we5wxAP5X1j9lVr4hfws5SPcNkliARVcY7dCx1WQ85p++806TJEYTavIEuKFRkUmOqjokNg+PmBAIkGmq2JHMbiz3HymmWsjMoQBS5GO6Uok1zixoOHXFNdK5sTi8WifDy2nCxj/QlZlXBWRRZCrxXTx6dOaD2X3WH03LxKfjT4eVudOypJWx6g+mPjyHSWkVbf0IS5fc8/39E/IBWJQ8Er+tIoSYa9/3doHkBm5f7BxpZZpF4RcE9y+MWsQoHDu063ZplDaDCFZEhYtGo2plHNVRVRhLNQhYS6vkQxY6je9CQgvJWUaQmURm/rgWwDb968/jLxPWIt5nOWP9g7t+rruCyEKF2WxGqQdrJiox5kmhl0/phfHWTYWms/PhtFCzrSPMOQO0Lmi1noQoHeXS90JD8FzDnsLVfn4OgE3AnamqRdCzapSfQwfO2seiUXEOVfUgHd7ZrK75OCwJrkiqHEue7prv1YD6G/zFcLy2/b+EtV88EQDvq38n667oI1Sdff9OolD9IxQB8E7v7do94r+F7Bni/SRANI9rASuUKVpfr2A0TRIsqGPV9Rx3JvPi6y1vm5L7o9v0ob2bF/bbXuluts+mIXDzk1V40aKqwkTV9Q4frl61aHJr0T6Buq7/AivK7vA=
+sidebar_class_name: "get api-method"
+info_path: site/docspace/for-hosting-providers/usage-api/asc-apisystem
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Gets settings"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/settings/get"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Gets settings
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"PortalName","in":"query","description":"Portal name","schema":{"maxLength":255,"minLength":0,"type":"string","example":"some text"}},{"name":"TenantId","in":"query","description":"Tenant id","schema":{"type":"integer","format":"int32","example":1234}},{"name":"Key","in":"query","description":"Key","schema":{"maxLength":255,"minLength":0,"type":"string","example":"some text"}},{"name":"Value","in":"query","description":"Value","schema":{"type":"string","example":"some text"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Settings","content":{"text/plain":{"schema":{"type":"object","additionalProperties":false,"title":"Microsoft.AspNetCore.Mvc.IActionResult"}},"application/json":{"schema":{"type":"object","additionalProperties":false,"title":"Microsoft.AspNetCore.Mvc.IActionResult"}},"text/json":{"schema":{"type":"object","additionalProperties":false,"title":"Microsoft.AspNetCore.Mvc.IActionResult"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

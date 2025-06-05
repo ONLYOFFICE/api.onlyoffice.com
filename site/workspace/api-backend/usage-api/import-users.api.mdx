@@ -1,0 +1,71 @@
+---
+id: import-users
+title: "Import users"
+description: "Imports the new portal users with the first name, last name, and email address."
+sidebar_label: "Import users"
+hide_title: true
+hide_table_of_contents: true
+api: eJy1lMFu2zAMhl9F4KkFtLroafOtKwqs2IAVTXsKcmBsJlYrW6pEN80MvftA2UmTbt1tOQSyKNLk/3/yAIzrCOUcPDlvqbgNbmUsRVhoiFT1wfAWyvkAlz03LphfyMZ13whrCpIWCGvQsAmGCRZpoaGmWAXj5RiUcNN6Fzgqbkh1tFHyhFb1kUJUG8NNjqxMiKw6bEkri/sldrWiFo1VWNeBYjwDDYGee4r81dVbKAeoXMfUsSzRe2uq3GDxGOX1A8SqoRZlxVtPUIJbPlLFoMEH5ymwoShRaeiHibnO8QSyq9xqbBn0rk7kYLo1JA0mj/gg4ct45azFpQvILsQ/i808VWZlKKpNQ9xQUOzUWGDSBKNay3xRnXDo6VS5oDrH6mSFNtLpWwNL5yxhByn/NLTEjauhBO9ing+5gRIK9Ka4ODsvJoPHlxURXwjE4vAiY4nDfbBQQsPsY1kUQ+Mip3KQ0wk0vGAwuLSjWhIbh1thbxlKsK5Cm7eTBsk5Dn8+/3IhnR5QNRNnxnJ/ZWvvGHrznbagwYiCzRjWIIhAeZwLIoRYf/cGyfUrtt7Ssck7+/7tnhggBncrl/sxLHXgyrVt3xneqlmWT91dz+7V5e2NyEQhjlZbZNrJEbnFjOPU9M2B4/Duyhwg/R9uz6Qp0ysX3qLppMHs/DARMxfBQcPF2blQlKnZ6yTICDkLPTEwh2FYYqSHYFOS7eeegnwxFm/IyFPSO+cEtSfaZh3znJ/upSc5bvvR73fXWKjZ0337c3YPGpbT9W9dLTkBN/JpwA2UABpc1jKzlfcGsNite1zL2bGmkIK9DHwI2lMGbVpIp7tQtz3o8Jg5PY0j/0l/kDIMI8Yp7c+PoQ8z9qCPp8WpRUrpN9Wl+KM=
+sidebar_class_name: "post api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Import users"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/api/2.0/people/import/save"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Imports the new portal users with the first name, last name, and email address.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"userList":{"description":"List of users","type":"string"},"importUsersAsCollaborators":{"description":"Specifies whether to import users as guests (true) or not (false)","type":"boolean"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={undefined}
+>
+  
+</StatusCodes>
+
+
+      

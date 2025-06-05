@@ -1,0 +1,71 @@
+---
+id: get-a-conversation
+title: "Get a conversation"
+description: "Returns a list of messages linked in one chain (conversation)."
+sidebar_label: "Get a conversation"
+hide_title: true
+hide_table_of_contents: true
+api: eJzlWEtzGjkQ/isqnXZrhXnYTmJuxI8yFTubAlxbuy4fmlEDijXSrKSxQ6j571ut4TEkGIZclwNQ0tfqVr/U3QseYOp595GnoHTz0poXdB6CssbzJ8E9JrlTYc67jwvey8PMOvU9bt8iSHRE6RAkF/zVqYD8qXgSXKJPnMoIxrt8gCF3xjNgWvnA7ISl6D1M0TOtzDNKpgyzBlkyA2XYb0lFiN9PuOAO/83Rh49Wznl3wRNrAppAfyHLtEoisvnVE7cF98kMU6B/YZ4h73I7/opJ4IJnzmbogkJPu0rS97ao/SsSD8x8JSKbOJuyMENWlYqL1dnKBJyi44Xg2oLsaf3zoXcWpF+dQZJHHlqv1bA5DpyDORdcBUx95QpjazWC4UUheArueUAq/4nRMMNETRR6piYMtiRmr0prNkZG1CgZeEZmY9YxY8NxAhhEOQSjgvqOB4S4Hd3fMcJ7Fiyxzxxm4FCyiXVRJTeXnxhKFaz7BVnih/zDZ9b40qydVmuHCWo4HhdHe9ZbEr7hcb0QIJmlaIL/9UMmSmNfVnArFxR8Yl0KoVw67XDB8RukmSZQu3N6Rk5K1J8hxQq9D06Z6RZ6jSoE90sr7+X27mwnt6U+R5F0H8MqcO1hLziyI0yzHaav0gaXY4XZlm7eZtWXa3Xk6ZgS2XEKPT09jdoJ1qE8rNEKLlI5hPSQpGtUIThE10HZ83fKPNfUSMA0G0bGD07v57UNpaAKKsSde1B647hXECBu901wVuZJGWD7jt5CFoLfhlSvUvnbVGtUIfjl0mT+o7bJM8qa1++nmXUByniugR/mZcTtlWsFoouA3x3R+5h8TJL9DAhAdz4Au4yokd2PGllC9aR06P1+6ApUCH7jbLofHBGF4APM9PyQECsQmeToxHV+fh7VQRn6UMCsQCv8FQQclrDDdAQmyrpEVfyV8pmGAx5dBZLpYNqXdd6BI/J7IfgdjFH7vqlzhR+wZB//GV/rhpfvGf+Krn48+hvrXsHJ2hQj/Barvj+NntcN4l94rs7jh6iv7+9+yK871LYCEbdaiXxYSeQDjE/BjdUSXe1wMHlKlfYQjSwP75ux/cYFrVCJcOVgQr8jB35GyxmkXPAHj67kRHuYZhoCxrp+uzx6bLEGWx4uWJs1WDxfsE65HgQ7ZQ0WuQh2xhosMhLsnPYzSAV7xxpsw06w9wRacXza9tWYY0qx/q/X32C3fOCIHJDvSAJnZQ6I+ewOzTTMjs4jZ7Fw+wtqJIIJaL8M7JGVcChCK/C/0Qd0R5AMMEH1gjIm3b2x1ml1Wo12p9H+MGp96LY73dbFSbvTurh49/6fkjkllEvrXJ6Fg4loLcAt+C/gPF47Z11donuV4n3ZcRxKEdvQJe3y4axDu4GS/UGjkeAe1KEHswKMWgY5KHvtYYCQv9UAVkvDpdDLujC2Y2et9s8d2IOB5fQAZdnGYphZybt8irHJAXJW3oRMNTsnrWYcR1Q72OZCye5jq3Hx9EfBaTDhaCvOJXKqbvkshMx3m83FzPpQdBdU/BHyBZyCsS67J9orhZtArikGtE1Ax+VCcKLZ3v7QuujQxSqzkCG1gcuObtdEZBPNmfqEMZxJA7NyW3ATu4Vt2qgS6jMHm1nH9cpO5ayiVRkxPNJz91SdBaxWtpvzcrUgCSZllbY03aVN09yoMGfDqEg2uB6OWO9LnxSGzpdGi9kr8KL4D7b+FBM=
+sidebar_class_name: "get api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get a conversation"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/mail/conversation/{id:[0-9]+}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns a list of messages linked in one chain (conversation).
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"id":{"description":"ID of any message from the conversation","type":"integer"},"loadAll":{"description":"Loads the content of all messages","type":"array","items":{"type":"boolean"}},"markRead":{"description":"Specifies if a conversation will be marked as read or not","type":"array","items":{"type":"boolean"}},"needSanitize":{"description":"Specifies if HTML needs to be prepared for the FCK editor or not","type":"array","items":{"type":"boolean"}}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"List of messages linked in one chain","content":{"application/json":{"schema":{"type":"array","items":{"type":"object","properties":{"Attachments":{"type":"array","items":{"type":"object","properties":{"fileId":{"type":"integer","format":"int32","example":"1234"},"fileName":{"type":"string","example":"fileName"},"size":{"type":"integer","format":"int64","example":"1234"},"contentType":{"type":"string","example":"contentType"},"needSaveToTemp":{"type":"boolean","example":"true"},"contentId":{"type":"string","example":"contentId"},"fileNumber":{"type":"integer","format":"int32","example":"333"},"storedName":{"type":"string","example":"storedName"},"streamId":{"type":"string","example":"streamId"},"attachedAsLink":{"type":"boolean","example":"true"},"tempStoredUrl":{"type":"string","example":"tempStoredUrl"}},"title":"MailAttachmentData"}},"Introduction":{"type":"string","example":"Introduction"},"HtmlBody":{"type":"string","example":"HtmlBody"},"ContentIsBlocked":{"type":"boolean","example":"true"},"Important":{"type":"boolean","example":"true"},"Subject":{"type":"string","example":"Subject"},"HasAttachments":{"type":"boolean","example":"true"},"Bcc":{"type":"string","example":"Bcc"},"Cc":{"type":"string","example":"Cc"},"To":{"type":"string","example":"To"},"Address":{"type":"string","example":"Address"},"From":{"type":"string","example":"From"},"ReplyTo":{"type":"string","example":"ReplyTo"},"Id":{"type":"integer","format":"int32","example":"555"},"ChainId":{"type":"string","example":"ChainId"},"ChainDateString":{"type":"string","example":"ChainDate"},"DateString":{"type":"string","example":"Date"},"DateDisplay":{"type":"string","example":"DateDisplay"},"TagIds":{"type":"array","items":{"type":"integer","format":"int32","example":"1234"}},"LabelsInString":{"type":"string","example":"LabelsInString"},"IsNew":{"type":"boolean","example":"true"},"IsAnswered":{"type":"boolean","example":"true"},"IsForwarded":{"type":"boolean","example":"true"},"TextBodyOnly":{"type":"boolean","example":"true"},"Size":{"type":"integer","format":"int64","example":"555555"},"EMLLink":{"type":"string","example":"EMLLink"},"StreamId":{"type":"string","example":"StreamId"},"RestoreFolderId":{"type":"integer","format":"int32","enum":["Sending","Inbox","Sent","Draft","Trash","Spam","UserFolder","Templates"],"description":"[0 - Sending, 1 - Inbox, 2 - Sent, 3 - Draft, 4 - Trash, 5 - Spam, 6 - UserFolder, 7 - Templates]","example":"1"},"Folder":{"type":"integer","format":"int32","enum":["Sending","Inbox","Sent","Draft","Trash","Spam","UserFolder","Templates"],"description":"[0 - Sending, 1 - Inbox, 2 - Sent, 3 - Draft, 4 - Trash, 5 - Spam, 6 - UserFolder, 7 - Templates]","example":"1"},"UserFolderId":{"type":"array","items":{"type":"integer","format":"uint32","example":"144"}},"ChainLength":{"type":"integer","format":"int32","example":"144"},"WasNew":{"type":"boolean","example":"false"},"IsToday":{"type":"boolean","example":"false"},"IsYesterday":{"type":"boolean","example":"false"},"ReceivedDate":{"type":"string","example":"2020-12-18T08:12:09.1209967Z"},"IsBodyCorrupted":{"type":"boolean","example":"false"},"HasParseError":{"type":"boolean","example":"false"},"MimeMessageId":{"type":"string","example":"MimeMessageId"},"MimeReplyToId":{"type":"string","example":"MimeReplyToId"},"CalendarUid":{"type":"string","example":"CalendarUid"},"ReadRequestStatus":{"type":"boolean"}},"title":"MailMessageData"}}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

@@ -1,0 +1,71 @@
+---
+id: get-a-file
+title: "Get a file"
+description: "Returns the detailed information about a file with the name specified in the request from the wiki page 'Files' section."
+sidebar_label: "Get a file"
+hide_title: true
+hide_table_of_contents: true
+api: eJzFVd9v2zgM/lcEvuzFrd00d90MDEPvrrcb7geKtcWANXlgbSbRIluaRLfNGf7fD5TtNmmz9vH84DgiP4qkPn5qgXEZIL+GwlZVU2vepF/0WsM8gUBF4zVvIL9u4bThlfX6X2Rt6z8IS/KC8oQlJHDnNRPMu3kCJYXCaydukMNn4sbXQfGKVEmM2lCpdL2wvoqRFN7YhhWqhTak7jSvomuNFangqNALHQFx1dP3hgKrhbdVXLjTa60cLkm9+V0bCm9UoELCHkICDj1WxORDLEBCQt7/JKAlOYe8gqcZSyA1eIViRRVC3gJvnKADe10voZNCPQVn60BB7JMsk589obaKhQQKWzPVLL7onNFFNKTfggDa5xvam29UsFTjrSPPut/un1jM07QSoHusnKGdMroErlyJTOUvm9cjfyr3xe1LgByaRpc7+2TDc7DnNT6Swm86OIOb1xP/W69JfcV6gxzWWqCXms1rIKxxSV68T2+R0V9UaMzLmMYbxVYF8VQYUYI/91a4eOVfgc9m6bm3ZVNwkE+yzlC/JvBDDO7+QxPIv8ey0rUO7JGth65LgPuC4Kxyxm6Ivnh0ffLDQb288ySbZAdHk4Ps7eXRSX58kmfHh8fTyfTdTydfJchftmfVy1Gms9lsNv1Z3ltc2cpOViWzmFonlml29JzkVzUO0kBlxFfEK1tCDkuK9JIhyyFFp9PJYZY+6oxMbyrNSlvZvJOBI387DmwjJwArZhfyNG1XNnCXt856Fs9b9BpvTE9asfWZLbAxwlNjCzRxuUtAMLvmt9m7iRS1pXIXMnp9uL1a99BLdPpP2owasurNyagvO9jYDxGACB/6+uvYAHURq1Wfzy4u1en5J6mKfOjbapBpzD5whfE0hz0+0qiYT9WrfRSY/1N6h04x3XPqDOpa6mj6ier5cC1thAQmh1lUxaElcpXI7ZPAUF0eS54nwxFfQ9veYJDp7DpZ/t6Qlwtq/siISJ5SB/kuIV+gCfRCm7b1fm/e47HXm0g708g/SGBNm/E+6eZdMjJBdu9Np0VBjrdAzxRf+PcwLh/PLiEBGaZdsq0j2YYPib43oV3ejdnJu0t+AGnbnspd9+Dfm36IeCB77y39mXdd9x+jb8pg
+sidebar_class_name: "get api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get a file"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/community/wiki/file/{name}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns the detailed information about a file with the name specified in the request from the wiki page 'Files' section.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"name","in":"path","description":"File name","schema":{"type":"string"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"File information","content":{"application/json":{"schema":{"type":"object","properties":{"Name":{"type":"string","example":"File name"},"UpdatedBy":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"},"Updated":{"type":"string","example":"2020-12-08T17:37:03.3424957Z"},"Location":{"type":"string","example":"4\\\\46\\\\File name"}},"title":"FileWrapper"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

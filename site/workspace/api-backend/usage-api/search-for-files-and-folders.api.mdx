@@ -1,0 +1,71 @@
+---
+id: search-for-files-and-folders
+title: "Search for files and folders"
+description: "Searches for files and folders by the query specified in the request."
+sidebar_label: "Search for files and folders"
+hide_title: true
+hide_table_of_contents: true
+api: eJztVtty2zYQ/RXMPkMXUnbscKbTOrZce1pfKsnNTBQ9wOTKQkwSDADKZjn8984ClCzZspNM+9CH8kGkgL0c7O4hTw1W3BmIpjCXKZreVYFaWKlyAzMOBuNSS1tBNK3hqLQLpeVfbvsMRYKa/DSKBDg8aGkRZs2MQ4Im1rIgM4hgjELHCzRsrjRzSZjIEzZXaYLasNuK2QWyryXqipkCYzmXmDCZu2WNX0s0tgscCqFFhha1cWhykSFE4PyAg6RUhbALeJ7/Dx/ZapnfAQcTLzATENVgq4IitDsNIddoCpUbNLQf9vt02452+vwAwCFWucXckrEoilTGrkK9L4Y86pcZhdbCYbaYmY11dfsFY0tH1apAbaXHcZ7sssFHkRUpLR3uHxy+2wsP9qDhMJGWFp+fbtN+rDJkVlqZYtc+WvI6imM0m1BkbvEONXCYK50J65cGIQXKy4z6fqlyBA4jFMlH13v/7G6U1aH8U2g6Ba0tJT4Ah2OVZVQsTqVMT5XOaPu4NFZlpzK1qOHFCE37rMMoH2cB67B1Ss7C9i9nA/fkE3O2xzrM5+Zs3+1Qes7esQ5rEXB2wDpsDYKzQ9rbwDHbqlpAdRovhMbNdtwqlaLItyznIjVI1scahd0y39GNsB/2O0HYCQaT4CAKBtEg6O6/74cH4cGnjSAfqh8clHWqdQPLUiZbqfvt1dnxs7oIwok0RSqqS8e4t85yIe+RfRJ5Jay5l985jhciFzRqNIZLYYUeZyJN3/YpdcqsYoYsmXBe5H+tFb1gbvQ33D9/7l1rlZSxNfSIqkjRr5F7V5ji8efSoP5JJJnMpbFaWKWhaThYfyAYZkWqKsSPWhQe/E2R/PNuj5Syp+7FMnExfoSQJ8PTo5vfJ8Smq4uLq0vg8OHm8vgMOExGR2O634yHI+AwPjsaDcHViwaJCHgqlooo5bkae4ZOMCtS4RevtVyKuHqFnG1uz0+f3pPTIfDsdCA8HQmHJ6OD4rm3QsNZQCHXiDgLPOtjx9qAwq6RcRYMnK9Dt03ZcKMt//Pnv86fa62WMkF9bjH7xhvW6hI3XX7D6m3AQTjYS7aSJN/Jra0QrpmYVyfqIU+V2PUhaC3oQ0EgdhhsFIHExDC3uqIquDLQxWGvH7xUHje5aAUYJi5KhnahEojgDt0sk/iJoCcK2Qu7/Z7Xc78YJ796tRNKDQkg1MuViCqp07CwtjBRr1cvlLFNVBdKW7JcCi3FberJQXse1FyUKdUoVbFI3XLDgXy2tw/770M60IaMHJMS8uF2isknhVRI6mkr6xZ+m68035avK4XM58q5t4WlT3yZS1uxsTstGw3HE3Z0fU6nQm18Rd0LpEVvbCacWmtzeNW6W7M+l5j1kwL819RuWwiLj7ZXpEK6ySo9MX2np1Ql4BB2+zS5lAo4tP0GDpGXxjPetm4KdX0rDLG7aWjZ70fT2VOn3VAk0tBzApFTMm8c9pm03ol51dG8chOVlvQPONwTZ1sMzazhqy4TAr9HorSwG14vxDXN1poFvw7p00cc2R6kezdI7QNF34loe6ZW8Oi34a+41LUf06ZZ2/utVz3Wg+ytqUCzpmn+BgH2baM=
+sidebar_class_name: "get api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Search for files and folders"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/files/@search/{query}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Searches for files and folders by the query specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"query","in":"path","description":"Query string","schema":{"type":"string"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Files and folders","content":{"application/json":{"schema":{"type":"array","items":{"type":"object","properties":{"Id":{"type":"object","example":"857864274"},"Title":{"type":"string","example":"Some titile.txt"},"Access":{"type":"integer","format":"int32","enum":["None","ReadWrite","Read","Restrict","Varies","Review","Comment","FillForms","CustomFilter"],"description":"[0 - None, 1 - ReadWrite, 2 - Read, 3 - Restrict, 4 - Varies, 5 - Review, 6 - Comment, 7 - FillForms, 8 - CustomFilter]","example":"1"},"Shared":{"type":"boolean","example":"false"},"Created":{"type":"string","example":"2020-12-13T17:13:31.5902727Z"},"CreatedBy":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"},"Updated":{"type":"string","example":"2020-12-13T17:13:31.5902727Z"},"RootFolderType":{"type":"integer","format":"int32","enum":["DEFAULT","COMMON","BUNCH","TRASH","USER","SHARE","Projects","Favorites","Recent","Templates","Privacy"],"description":"[0 - DEFAULT, 1 - COMMON, 2 - BUNCH, 3 - TRASH, 5 - USER, 6 - SHARE, 8 - Projects, 10 - Favorites, 11 - Recent, 12 - Templates, 13 - Privacy]","example":"2"},"UpdatedBy":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"},"ProviderItem":{"type":"boolean","example":"true"},"ProviderKey":{"type":"string","example":"1234d"},"ProviderId":{"type":"integer","format":"int32","example":"1234"},"DenyDownload":{"type":"boolean"},"DenySharing":{"type":"boolean"}},"title":"FileEntryWrapper"}}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

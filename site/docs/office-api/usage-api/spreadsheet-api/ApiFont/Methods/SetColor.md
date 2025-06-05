@@ -25,12 +25,12 @@ This method doesn't return any data.
 
 This example sets the font color property to the specified font.
 
-```javascript
-var oWorksheet = Api.GetActiveSheet();
-var oRange = oWorksheet.GetRange("B1");
-oRange.SetValue("This is just a sample text.");
-var oCharacters = oRange.GetCharacters(9, 4);
-var oFont = oCharacters.GetFont();
-var oColor = Api.CreateColorFromRGB(255, 111, 61);
-oFont.SetColor(oColor);
+```javascript editor-xlsx
+let worksheet = Api.GetActiveSheet();
+let range = worksheet.GetRange("B1");
+range.SetValue("This is just a sample text.");
+let characters = range.GetCharacters(9, 4);
+let font = characters.GetFont();
+let color = Api.CreateColorFromRGB(255, 111, 61);
+font.SetColor(color);
 ```

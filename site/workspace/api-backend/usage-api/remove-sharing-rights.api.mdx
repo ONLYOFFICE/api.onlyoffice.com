@@ -1,0 +1,71 @@
+---
+id: remove-sharing-rights
+title: "Remove sharing rights"
+description: "Removes the sharing rights for the group of folders and files with the IDs specified in the request."
+sidebar_label: "Remove sharing rights"
+hide_title: true
+hide_table_of_contents: true
+api: eJy9VD1v2zAQ/SvEzWzsGh1abWljoEEzFHEyGRpo6WQxoUSFPNlxBf734kg5/kgaIEs9GNR98d27dxyA1NpDtoRKG/STRa2cbteQS/BY9E7TDrLlAJc91dbpP4q0bX+iKtFxkkNVgoSt04SQh1xCib5wuuMwyOAWG7tBL6hG4VNp4fS6Ji8q66J57WzfCVuJypoSnReqLUUEI7aa6hhzfeWF77DQlcZS6DYaHT716OkCJIzH77bcQTZAYVvClvious7oIqKePHjGNIAvamwUn2jXIWRgVw9YEEjonO3QkUbP3gTouowfp33daE8HzIwP5L6ack7tQIImbPzRLZ4isyHIyPX7dbXBD1aNP6bCd7b1qYPZdPr6ju/WGrFRpsdMkOtR6Cryya1HooT2wvdFgd5XvQH5YT5X1hpULSREX6afX4O4b9WoKCwjJQ1SbUvIoESDhDwMRTVkMFGdnswuppMkUFYRez26DTofxdk7AxnURJ3PJpOhtp5CNnTWUQAJG+W0WpnECPsSmkr1hiADYwtlojlI4JxT99fptxk3crQQC+43lXtzLV54UJ3+hXFo3HKd3BJa1bD3JDdywITeHqQ8f1ZNZ/BMisv9yPMjHR2MgW+rbEShibPhh22avtW0E4tImridL+7E5e9rJgedTxMxinBPgqdGxdGOUNMan20wnC370d79r70feSZ8pklnlG4ZflTDMMpnyUMACbOLKSS+GHcSUS5HOSxhGFbK470zIbD5qUfH715+UA9/BbkfIqvuEXeR3NjzpzuGwuGmT6M/25Mg9xmXRYEdvRubH+3D1fxmfjcHCavxdWtsyVlObfnlU1vIACTYOIUoymgbwKh23as1x6aqLDHeulOFPkaFjgfua+9qd0cYT8Uqx1b4nxt7M2UYkv5DeIlPrn9mvGxIiuZx5iGEv+0ESN0=
+sidebar_class_name: "delete api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Remove sharing rights"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"delete"}
+  path={"/api/2.0/files/share"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Removes the sharing rights for the group of folders and files with the IDs specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"folderIds":{"description":"List of folder IDs","type":"array","items":{"type":"string"}},"fileIds":{"description":"List of file IDs","type":"array","items":{"type":"string"}}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Bool value: true if the operation is successful","content":{"application/json":{"schema":{"type":"boolean"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

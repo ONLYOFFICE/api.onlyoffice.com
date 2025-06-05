@@ -2,7 +2,7 @@
 sidebar_position: -4
 ---
 
-# Managing versions
+# 管理版本问题
 
 ## 处理文档历史事件时可以使用哪些方法？
 
@@ -86,7 +86,7 @@ const data = {
 
 因此，如果您想额外显示版本之间的差异，您还必须使用 [onRequestHistoryData](../../usage-api/config/events.md#onrequesthistorydata)  函数（用 *events.onRequestHistoryData* 事件），该函数必须包含**文档编辑服务**[回调](../../usage-api/callback-handler.md#changeshistory)返回的数据。
 
-除了 [上述问题](#which-methods-can-be-used-when-working-with-the-document-history-events) 中描述的操作外，您还需要：
+除了[上述问题](#which-methods-can-be-used-when-working-with-the-document-history-events)中描述的操作外，您还需要：
 
 - 解析来自**文档编辑服务**收到的 *status* 为 **2**的响应的 *changesurl* 参数：
 

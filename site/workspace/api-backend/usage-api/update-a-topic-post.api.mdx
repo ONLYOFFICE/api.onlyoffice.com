@@ -1,0 +1,71 @@
+---
+id: update-a-topic-post
+title: "Update a topic post"
+description: "Updates a post in the selected topic changing the post subject or/and content specified in the request."
+sidebar_label: "Update a topic post"
+hide_title: true
+hide_table_of_contents: true
+api: eJzNVm1v4zYM/isGP+0ANU7Te6uBYej1OqwYdgguKQZcLx9Ym0nU2pZOktv6DP/3gZKdl2uattswLB8MReIjkg8pkg04XFhILiFVRVGV0tXxr8pUhYWZAEtpZaSrIbls4KRyS2Xkd3RSlb8RZmQYZwgzEHBnpCOYtTMBGdnUSM1ikMCFztCRjTDSyrpIlpFbUmQpp9RRFjmlZRqlSywXslz4My9nq6trSl2kTIxlFqWqdFS6yGpK5VxS1l9k6FtF1g1AgEaDBTky1ttbYkGQgFcg2UTJ5mh0S/jRxqk34vwjCLDpkgqEpAFXa8bL0tGCDAiYK1OgC1tHI2hbsVLCJj+hY8xevVjFTEDn4QeV1YzpmOAlap3L1McjvraspXl4ufI8Mj1GaTJOkvVygV9ebtv5ie62I/ATGyANZa9A9JdaZ2S5gFZsmvPIPY7u3UOk/7FzVqvSBptGw+HDe0L+ZP4uEP+W++fZc/gXQPdY6JyFDkdH7O9kzdu2R5uyE7/oGWTYlEnYixmvuGoFnBpip/cjRsPR8OBwdDB8Nz08St68TYajwdHo7fHh8fsvfEnH3D+7pLPkQ/1CTleqVpRWlX8ha9XD7new49P/2ISP0uoc60/+qe3z5Q95Q9EXLGt09kZ62qXLnwJhiRz8VsDJLTo0kwLzfD+mMnnkVGRZMkKPYvzYqLnM6cI8Af/6NR4blVWps7wkpXMKewwfoNX3v1SWzM+YFbKU1hl0ynDBARccgrNC56om+tOgDsZPl1yJn+FwEGF3ncN0WVDp7AYCjcGaK5mjwj4d9P9Ppj6dH1qmrjI0uNa+dJ2GUjL18vtwssAFxdeaPGwiv9PLi8fo6PUbnyPcG56TXJwKWyH3bdl3Ki4V6+BxCvgceFx4Q6QV8Hp4uKPMltj1d8q82oLcUmXMWuWj7u2GGLWMR4NhvB4X5qwq9m02brpu28ZNaIkt9zsyt31TrvhtwNI5bZM4bpbKujZptDKOJW/RSLzKQ2bxWbBzjlXOvOYqxdxvtwIYs338fnjMLbPdGFwm3A7CdTvHl3XWa/k71X0DX4Zj0bf3Laxnh/vN53VjPuujt9FY17Fd9ayNvinLufL6u4Cd9nxGE09X9PlsMo1OxudMCxkbopTzKNW5b12Bvud1RoZHFGE3UnX9civKG9PDfziXdRRzb4t1jrJk+6tQJENaXTL/IGA0GHq6OirCm6oKvoPNAQHJepxLuqFrJrpUuYSmuULL9bdteftbRYZn19k6s3wSZtLyOoNkjrmlPSRtDIY7veizp6x99uYV/wMBN1RvjJ48KD5f53pQ/BsqO07aWSv6LGaPw2FX8A58xVuDH8xRbG9AnKQpabdXdrZRKsYXUxBw1U2qhcoYYvAOhP96O5V32T9Jv9dAjuWiwgXLhiv5gXE12n6fN/59dgt2aicT20+1p4W/7NVOSNOE19+2K/lw9ChiVR+CNAdm1rbtX7u5dn4=
+sidebar_class_name: "put api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Update a topic post"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"put"}
+  path={"/api/2.0/community/forum/topic/{topicid}/{postid}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Updates a post in the selected topic changing the post subject or/and content specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"topicid","in":"path","description":"Topic ID","schema":{"type":"integer","format":"int32"}},{"name":"postid","in":"path","description":"Post ID","schema":{"type":"integer","format":"int32"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"subject":{"description":"New post subject (required)","type":"string"},"content":{"description":"New post text","type":"string"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Updated post","content":{"application/json":{"schema":{"type":"object","properties":{"Id":{"type":"integer","format":"int32","example":"123"},"Subject":{"type":"string","example":"Sample subject"},"Text":{"type":"string","example":"Post text"},"Created":{"type":"string","example":"2020-12-07T13:56:02.3269198Z"},"Updated":{"type":"string","example":"2020-12-07T13:56:02.3269198Z"},"CreatedBy":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"},"ThreadTitle":{"type":"string","example":"Title"},"Attachments":{"type":"array","items":{"type":"object","properties":{"Created":{"type":"string","example":"2020-12-07T13:56:02.3269198Z"},"Updated":{"type":"string","example":"2020-12-07T13:56:02.3269198Z"},"Name":{"type":"string","example":"picture.jpg"},"ContentType":{"type":"string","example":"image/jpeg"},"Size":{"type":"integer","format":"int32","example":"122345"},"Path":{"type":"string","example":"url to file"}},"title":"ForumTopicPostAttachmentWrapper"}}},"title":"ForumTopicPostWrapper"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

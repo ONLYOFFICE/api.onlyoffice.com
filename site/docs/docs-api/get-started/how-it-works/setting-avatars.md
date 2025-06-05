@@ -20,7 +20,7 @@ The reference figure and the steps below explain the process of setting the avat
 2. To set the current user avatar, use the [editorConfig.user.image](../../usage-api/config/editor/editor.md#user) field of the initialization config:
 
    ``` ts
-   const docEditor = new DocsAPI.DocEditor("placeholder", {
+   const config  = {
      editorConfig: {
        user: {
          group: "Group1",
@@ -29,7 +29,9 @@ The reference figure and the steps below explain the process of setting the avat
          name: "John Smith",
        },
      },
-   })
+   };
+
+   const docEditor = new DocsAPI.DocEditor("placeholder", config);
    ```
 
 3. In the configuration script for Document Editor initialization, specify the event handler for setting the users' avatars. When the user opens the comments or a list of the co-editors, the [onRequestUsers](../../usage-api/config/events.md#onrequestusers) event is called with the *data.id* parameter. The *data.c* parameter with the *info* operation type is also passed in this event.
@@ -42,13 +44,15 @@ The reference figure and the steps below explain the process of setting the avat
   function onRequestUsers(event) {
     const c = event.data.c
     const id = event.data.id
-  }
+  };
 
-  const docEditor = new DocsAPI.DocEditor("placeholder", {
+  const config = {
     events: {
       onRequestUsers,
     },
-  })
+  };
+
+  const docEditor = new DocsAPI.DocEditor("placeholder", config);
   ```
 
 4. In order to set the users' avatars, the [setUsers](../../usage-api/methods.md#setusers) method must be called:
@@ -70,7 +74,7 @@ The reference figure and the steps below explain the process of setting the avat
         name: "Kate Cage",
       },
     ],
-  })
+  });
   ```
 
 Where the **example.com** is the name of the server where **document manager** and **document storage service** are installed. See the [How it works](./how-it-works.md) section to find out more on ONLYOFFICE Docs service client-server interactions.

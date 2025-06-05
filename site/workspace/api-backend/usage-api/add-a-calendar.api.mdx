@@ -1,0 +1,71 @@
+---
+id: add-a-calendar
+title: "Add a calendar"
+description: "Adds an iCal body to the draft with the ID specified in the request."
+sidebar_label: "Add a calendar"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVd9v2zgM/lcMPmt1lhSHO7/l1gEX3K9haZ+KYGAsJtZqS55Et8sM/+8DZTu1d127A9aHVJZIkfz48VMLjMcA2S1UaMp0zYx5UZHlADsFgfLGGz5BdtvCuuHCefMF2Tj7B6EmL36eUIOCB2+YYNftFGgKuTe1mEEGa61DgjYxb7BM9k6fEnYJF5RojwdOHgwX8XNzlYSacnMwpBNj456nTw0FvgAFw/J3p0+QtZA7y2RZlljXpcljVunHIDFbCHlBFcqKTzVBBm7/kXIGBbV3NXk2FOTU6A8VhYBHkq954n/3B8nmCtR4jbFMR/LQKTA5lh/2Qzpzz3Opj46BvbFH6OKfVBNqZ0OfxHKxeCI6mjLBcztA/aySD6akjZ7YjTUpODhfIfdbqyUooM9Y1aUYvV6uLqVq8f4HK5r4D6VNrc9WnYJgvtCL0X65fDLaUPJ1dH0u4NSwU2CJ9Bbv6dpdU1VPXPfOlYR25su+oUmwGTbfD7XRZziaai+j8P8AXa1WER12nvTLiE7sopcnrF7K9GzVKeiZRHod/jL27gcRYarqbQx848vnY81NheJsOJ4IkR9l5QoZoZ+By8Xr/9L+xuIgM6TjNRVx4TRkULsQyYxcQAYp1iZdXizSKFvDDIc0x5KsRi/Dl6IWYQrk78mHKGGNlAEFcx2yNG0LF7jL2tp57kDBPXqD+7IfEznr0ztgU0oPS5djGbc7BeIzP/518dtSKpvI5lZGsr/uSfE8A4q1+ZNELYxgUPTHCmykxdw3giIz//5REN+ObZgL2mImUmcJkigHF6MPLXrjqqqxhk/JNoKVvH+7vU7W7zYCCvnQt6ZEprH4wBVG1RlT1DrBZEQfvnkDJnL9s56DATimz5zWJRoreTU9S3uK3AqqoGB5sQAVXzf5NxBF5HRCFVAgZNmpoe230LZ7DHTjy66T7U8NeXkFd48ska9Ojc0Sdt3RKYIZS30VtUjMy6Zv8TeS3anRY53nVPOztrvJILz7d3sNCsanp3JafDw+yCuJD5ABKHAR+ki9uNdCifbYRF5Af6cQSYZtzsO7yMNhIVWNR/Y0yXBOSTUUIr9S1pMubduzvOvO9v3Rdz3Oc9BbS493Xdd9BcvG9rM=
+sidebar_class_name: "post api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Add a calendar"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/api/2.0/mail/messages/calendarbody/add"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Adds an iCal body to the draft with the ID specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"id_message":{"description":"Message ID","type":"integer"},"ical_body":{"description":"iCal body","type":"string"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Mail attachment","content":{"application/json":{"schema":{"type":"object","properties":{"fileId":{"type":"integer","format":"int32","example":"1234"},"fileName":{"type":"string","example":"fileName"},"size":{"type":"integer","format":"int64","example":"1234"},"contentType":{"type":"string","example":"contentType"},"needSaveToTemp":{"type":"boolean","example":"true"},"contentId":{"type":"string","example":"contentId"},"fileNumber":{"type":"integer","format":"int32","example":"333"},"storedName":{"type":"string","example":"storedName"},"streamId":{"type":"string","example":"streamId"},"attachedAsLink":{"type":"boolean","example":"true"},"tempStoredUrl":{"type":"string","example":"tempStoredUrl"}},"title":"MailAttachmentData"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

@@ -1,0 +1,63 @@
+---
+id: get-available-currencies
+title: "Get available currencies"
+description: "Returns a list of all the currencies currently available on the portal."
+sidebar_label: "Get available currencies"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVMFu2zAM/RWDZ6HOih0237qg6IoNxdC0GIogB8ZhYrWy5El0Vs/Q5+xH9mUDZSdNtrW9zIdYEflE8b1H98C4CVDMofR1Pm29J1tqCrBQEKhsveYOinkPZy1XzusfyNrZj4Qr8oLyhCtQ8N1rJljEhYIVhdLrRtKggGvi1tuQYWZ04MytMzQm44qycl9rXLLpMtyiNrg0lDmbshrnGc0JKPAUGmcDBSh6OJ1M5HVc6/Ouwv6QpxqgoHSWybLgsGmMLlMr+X0QcA+hrKhGWXHXEBSA3mMHCjRTHQ723fKeSgYFjXcNedbDlW40GzpIC+y13YACesS6kRBMK20pUHbXooWoYNbVS2dexvz6KZlny6Wnrcah0xdrXN0JYNoabj1dYf3ana4k/TJMnd2SZ6HtALB0zhDaIwT7lgbMBwy6fCV7jSYQxKiAB4JgNFl3adfuq8emIQ9RHgVvJ2/+lvXW4ug9WqWDauLKraCADSUZkCsoIMdG56cnk1yMHIhZ203IRweIjoH8lnxIbm69gQIq5iYUed5XLnAsejFbBAVb9FqISLpKbLjUGlvDUIBxJZq0HRUI5jj8bvL+VBo6mKCZeGs47p9z9OS5Rn+iZDrpvBrCCmyS8RibqNB27RJ8x62r69Zq7rJZ6ja7Pp/dZGdfLqUr8mFg1CDT7vaBa0yWGmtcED83QEey9E/z9B+HfKSB6ZHzxqBOY5LE6ked58IRKDg9mchM+zopO6gtGzu9F2pUbg59v8RAt97EKNvfWvLyTVs8CS3/otrxLQZ5oE4IL0tqODnCtIM+f3w4ROW9Hy/Ob0CBuPVY0ock6biQ03ch2x2cfayuGq8gv1E9A+n7wTAx7vOH0LOIvaWGbCF4EWP8DcDOEUc=
+sidebar_class_name: "get api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get available currencies"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/crm/settings/currency"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns a list of all the currencies currently available on the portal.
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"List of available currencies","content":{"application/json":{"schema":{"type":"array","items":{"type":"object","properties":{"Title":{"type":"string","example":"Chinese Yuan"},"Symbol":{"type":"string","example":"¥"},"Abbreviation":{"type":"string","example":"CNY"},"CultureName":{"type":"string","example":"CN"},"IsConvertable":{"type":"boolean","example":"true"},"IsBasic":{"type":"boolean","example":"false"}},"title":"CurrencyInfoWrapper"}}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

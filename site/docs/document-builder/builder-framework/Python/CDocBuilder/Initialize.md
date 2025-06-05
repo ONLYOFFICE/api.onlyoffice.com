@@ -21,7 +21,9 @@ def Initialize(cls, str directory = None);
 ### Python
 
 ``` py
-docbuilder.CDocBuilder.Initialize("C:/Program Files/ONLYOFFICE/documentBuilder");
+import docbuilder
+
+docbuilder.CDocBuilder.Initialize("../documentBuilder")
 builder = docbuilder.CDocBuilder()
 docbuilder.CDocBuilder.Dispose()
 ```

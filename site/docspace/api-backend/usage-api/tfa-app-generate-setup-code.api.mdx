@@ -1,0 +1,63 @@
+---
+id: tfa-app-generate-setup-code
+title: "Generate setup code"
+description: "Generates the setup TFA code for the current user."
+sidebar_label: "Generate setup code"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVk1v2zgQ/SvEXHLR2q67e/HNm6ZF2gWyaBzkYBjNWBrZbCSSJUdJvYb++2JI+UN2FgkWvdgS+WaGnHnzRltgXAWYzOGWmLVZBTVUs49TFbpXWGRgHXlkbc11ARPgEqfOfSIji3RL3LhLWxBk4Ck4awIFmGxhPBrJX0Eh99qJNUwgolWe4Lk1TIYFhc5VOo8xht+DQLcQ8jXVKE+8cQQTsMvvlDNk4LyciHUKtIv6OhLz3DYpYAcM7LVZQQamqSpcVgQT9g3JVbC4MdVm904/sXZVNLE1KaafDG0GNZoGqyvDfvOFNr/Q8Q8vOY3puq5xRXe++mXe2wywKLQkG6u/jzJUYhUoA9YcTQ6lbaVY/cxpw7QiDxmU1tfIaen9WLCVNo/hCIve4wYy0Ex1eL1Ma0/l+WXl1Hmi0dlWK3cKjNyENx4xgePl3mLQvpCVe4/Oke+i/z56d073O4MNr63X/1ABEfTHOUi67Yj/+85T6EkZywqfUKcqx2tS3njNG5jMt4Ah/yYhvj0K++ax/pDBs9dMsGizLfxJ6MnDZB7fpk5/oc1+7SU8Bp3v4DfThtfjl4E3jqIezBftIju50k4cguI1yYUaF0VFGl+V1sflvPGeDKsmkB9ABjXx2orArChyAnkNExii08PxYDTcpWXIJaJzw+gVJB/+iXyI6WikS2C7xCAN08LpuW4jVuXWlHrVJE2DDJ7Qa8lvJE9nnOpUYlMJDc48fUhb6u7rX0KAxaEutyJbnd70qnNoh1iEM5d3gdSltY+alBiR4Y4R0udYR8tjhxloMcujibCrK90+zprZnUW5MkxebWzjY+LFsUJTKIchPFsvRY7CKw6W0aF47gjzFtcXCay2n+9namYfybQXPafJV9Y9fNx12uf7mYTqM/S1nE17iVI6qIKYfK0NFWq5iTy7mHY9GDEXak1YxAN0Se1F7JLaYdps3wIH0cK4cHqShFNlZZ/Vs+a16kVV3YSU7USN492dDPUWIwdjosNkOIxRB9ZUG1uWOqdBbuu0OB7uNQYyYEn4200jPFbHut00RenBr4SFwjynEBRb5bxlypkK5SnYxucU9mowgXv5fwWdVHInGodsxoVLa0yaBCdJld0Pqts+b4ue9dtvLcTXprRS35+/Bb0yyI2n1+kmlN7DpX+KqGb9cw3UbE0qZlbVTWC1JGWXjJGTTxojKR8OspZko1eRB0WmcFYbHqhrFlpLe1KhMChUqeMTy8RX7OGHo4s8DA7sPr7fiWK08l7aeO1uuE2dFj0kH9KF3w/eDUaSJmcD1xhnb+d4p/GdvHffdL18bQ+feP9vJHTVkM+WoatQGzlKk8Q5zYe5lAoyGA9GcRZ0H60ZpCmR1honX7FrG1gMtvv50Mryj4a8zM7FYQ6k8bcTARksUcBhmufkOA6Mqkk0OflslUGwn2OfrmaQxabuMyuJd/cg3ndbZnPsu6/16QTyK8P3RYvtNtG2bff4tPWfFnspTGjJ76Jt238BjsMsWw==
+sidebar_class_name: "get api-method"
+info_path: site/docspace/api-backend/usage-api/api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Generate setup code"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/settings/tfaapp/setup"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Generates the setup TFA code for the current user.
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Setup code","content":{"application/json":{"schema":{"type":"object","properties":{"response":{"type":"object","properties":{"account":{"type":"string","nullable":true,"readOnly":true,"example":"some text"},"manualEntryKey":{"type":"string","nullable":true,"readOnly":true,"example":"some text"},"qrCodeSetupImageUrl":{"type":"string","nullable":true,"readOnly":true,"example":"some text"}},"additionalProperties":false,"title":"SetupCode"},"count":{"type":"integer","format":"int32"},"links":{"type":"array","items":{"type":"object","properties":{"href":{"type":"string"},"action":{"type":"string"}}}},"status":{"type":"integer","format":"int32"},"statusCode":{"type":"integer","format":"int32"}},"title":"SetupCodeWrapper"}}}},"401":{"description":"Unauthorized"},"405":{"description":"TFA application settings are not available"}}}
+>
+  
+</StatusCodes>
+
+
+      

@@ -7,7 +7,7 @@ sidebar_position: -3
 Starting from version 7.5, you can change a theme of the desktop editor tab. To do this, use the *portal:uitheme* command of the [execCommand](./execcommand.md) method.
 
 ``` ts
-window.AscDesktopEditor.execCommand("portal:uitheme", editorTheme)
+window.AscDesktopEditor.execCommand("portal:uitheme", editorTheme);
 ```
 
 ## editorTheme
@@ -28,7 +28,7 @@ Example: "theme-dark"
 ## Example
 
 ``` ts
-window.AscDesktopEditor.execCommand("portal:uitheme", "theme-dark")
+window.AscDesktopEditor.execCommand("portal:uitheme", "theme-dark");
 ```
 
 When the *portal:uitheme* command is sent, the editor theme is changed to the one specified in the method parameters.

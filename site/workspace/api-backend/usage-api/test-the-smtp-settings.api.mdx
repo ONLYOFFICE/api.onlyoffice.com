@@ -1,0 +1,63 @@
+---
+id: test-the-smtp-settings
+title: "Test the SMTP settings"
+description: "Tests the SMTP settings for the current portal (send test message to the user email)."
+sidebar_label: "Test the SMTP settings"
+hide_title: true
+hide_table_of_contents: true
+api: eJy1VMFu2zAM/RWDpw1Q6yzbYfOtKIKtGIYVS3oKclBsJlZrSxpFd80M/ftA2UmTdl1PuyS2yEdS7z26B9bbAMUSAjIbuw35/NviGlYKApYdGd5BsezhouPakfmt2Tj7BXWFJCBCXYGCX2QYYRVXCioMJRkvaVDAAgOHjGvMpGq275FtHKXTsiNCy5l3xLrJ3gS0VcYYOGsxBL3FjF1K7AJShq02zdtzUEAYvLMBAxQ9TCcT+TvtnPo5j5QmzgJr7gIoKJ1ltCwA7X1jyhTPb4Ogeghlja2WJ955hALc+hZLBgWepBqboeela32DjNVR6tq5BrUFBfigJQwFMHUIUcHVcWJgMnZ7ktcH1+IZaVu59mzbmSoKaj5M/U+k5M2IHL2edo1UouXjgsYybpFAwcZRq3k4ej89wU7SLK6jEl9rEhWw4fQyb9l/3wsw3iRGyfgwefdcsBurR49hleq0yLWroIAtJv4111BArr3Jp+eT/ODX0LLPxTMgnqV7pJAs21EDBdTMPhR53tcucCx6cVoEBfeajF43g5oSGyba6K4REhpX6iYdRwWCOQ1/nHyaymWO1mQuzhnK/XVZDrxpb77iDhQYuXY9hBVY3Ur0BJt4MHbjEnzk9dK1bWcN77J5um32YzZfZBfXV3IrpDDQ2ehESZo+cKuTu8cespXPlxKeLG//uCv/bY9HShgfOPeNNlYGTsL1o+BL4QsUTM8nSd/DrCK7VJBbrtQo4RL6fq0D3lAToxz/7JDkC7Z6VFzeotoTL065w50wX5boOVmj6QahnnwfRO6DKz/PFqBAPHuq7V3SdnyQ6vuQ3R3VPpVZjSPIb1QvQPp+cE6Mh/wh9CLi4K0hW9hdxRj/APeNBug=
+sidebar_class_name: "get api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Test the SMTP settings"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/settings/smtp/test"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Tests the SMTP settings for the current portal (send test message to the user email).
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"SMTP operation status","content":{"application/json":{"schema":{"type":"object","properties":{"Completed":{"type":"boolean","example":"true"},"Id":{"type":"string","example":"{some-random-guid}"},"Status":{"type":"string","example":""},"Error":{"type":"string","example":""},"Percents":{"type":"integer","format":"int32","example":"0"},"Source":{"type":"string","example":""}},"title":"SmtpOperationStatus"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

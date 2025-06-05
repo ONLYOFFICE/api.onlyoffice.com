@@ -1,0 +1,71 @@
+---
+id: export-an-attachment
+title: "Export an attachment"
+description: "Exports an attachment with the ID specified in the request to the folder with documents."
+sidebar_label: "Export an attachment"
+hide_title: true
+hide_table_of_contents: true
+api: eJy1VMtu2zAQ/BViTy3ARq7RQ6ubW6eoURQI8jglRkFLa4uJJDLkKo4q6N+LJeWHEreHAvXBlrkPzczOsgNSGw/pLVRKl8mMSGVFhTV5WErwmDVOUwvpbQezhgrj9C9F2tTfUOXouM6hykHC1mlCWPZLCTn6zGnLaZDC+bM1jrxQtVD77mKrqRBUoFjMhbeY6bXGXOg6nDl8bNCTIBP+rk2Zo4slucmaAO8MJAx5n03eQtpBZmrCmvhRWVvqLCBN7j3j6MBnBVaKn6i1CCmY1T1mBBKsMxYdafQc1fnPA1A+GPM5SCQWc5C7Zrom3KCDXnKDCPl18ddIZTEXb/RaUKG9sMqpCgmd0F5gZamVgfUd/GgPdO9gJ4P2ovGYvz282pPT9Qb68GFVvDW1j2Smk8lrFPOhK+MYJD+pMch/1TQi+TB5//rlN7UajIQ5cFaFVJgcUrBNGIaiAlJIlNXJ9GySBF9W6L3aoE8Ok0kwGAvYpe4JnQ8mbVwJKRRE1qdJ0hXGU592nNiDhCfltFqVURqORXhr1ZQEKZQmU2U47iWE5qPwx8mnKTM7Wowr5h/bnVyPvS7K6u/YggTNGhQxLKFWFUdHtUEUFvjyYO/zZ1XZEk/YczLy294L/KK1CQA0cSF8MVXV1JpacRX0EpfnV9didrFgXdD5OJ1SEe74e6pUmPKAMm7yeJHhxbofbeH/3PxBVcJnSmypdM2Iw+y7wUC3LDlImJ5NQIbLjX8GG4GEEYXBSks5mOIWum6lPN64su/5+LFBx7fg8uAh/tfL3SjZew/YBp0D/3fXDJHTyyYa4MX29HJXMcsytPTX3OXRmlzcXIOE1XDpVSbnEqe2fCGqLaQAEkwYR/BlOOugVPWmURvOjS3ZZbyJY5M+BJMOD0xqF6rbI4Bjv8qBB38zq5MlXRdXoO/3+TH0x4r9ksRsnvGy7/vfsGZQrg==
+sidebar_class_name: "put api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Export an attachment"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"put"}
+  path={"/api/2.0/mail/messages/attachment/export"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Exports an attachment with the ID specified in the request to the folder with documents.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"id_attachment":{"description":"Attachment ID","type":"integer"},"id_folder":{"description":"Folder ID (if this parameter is empty, the \"My documents\" folder is used)","type":"string"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Document ID in the folder with documents","content":{"application/json":{"schema":{"type":"object"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

@@ -1,12 +1,17 @@
+---
+sidebar_custom_props:
+  icon: /assets/images/editor/connectors/suitecrm.svg
+---
+
 # SuiteCRM integration
 
 This [plugin](https://github.com/ONLYOFFICE/onlyoffice-suitecrm) enables users to edit office documents from [SuiteCRM](https://suitecrm.com/) using ONLYOFFICE Docs.
 
 ## Features
 
-- Currently, the following document formats can be edited: DOCX, XLSX, PPTX, DOCXF, OFORM.
+- Currently, the following document formats can be edited: DOCX, XLSX, PPTX.
 - The following formats are available for viewing only: PDF, ODT, ODS, ODP, DOC, XLS, PPT, PPS, EPUB, RTF, HTML, HTM, TXT, CSV.
-- The plugin allows users to edit text documents, spreadsheets, presentations, and create and fill out digital forms.
+- The plugin allows users to edit text documents, spreadsheets, presentations and create and fill out digital forms.
 - The plugin will create a new **Open in ONLYOFFICE** menu option within the document library for office documents. This allows multiple users to collaborate in real time and save back those changes to SuiteCRM.
 
 ## Installing ONLYOFFICE Docs

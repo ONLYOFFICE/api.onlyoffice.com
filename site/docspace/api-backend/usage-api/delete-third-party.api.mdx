@@ -1,0 +1,71 @@
+---
+id: delete-third-party
+title: "Remove a third-party account"
+description: "Removes the third-party storage service account with the ID specified in the request."
+sidebar_label: "Remove a third-party account"
+hide_title: true
+hide_table_of_contents: true
+api: eJy1Vktv4zYQ/ivEXNICXNtx9qSbm2SBbBfYIg/kEBgbWhpZ3Eiklhw5cQ3992JIybZst8mlFz+G8+LMfN9wA6SWHpIn+KJL9GIs7gvtsk+1crQW2hAunSJtDcwl2Brjn5sMEsiwRMKg/hdrg4RaOVUhoWOPGzCqQkigdnalM3Q3GUjQhiWKCpCQoU+droP7BO4LFL2quLkagQSHvxrtMIOEXIMSfFpgpSDZAK1rdh0SRAcScusqRVF0MQUJ+KaqukRIzqcXn9t2zt58bY1Hzw6mkwl/Haawu3tuy5gISEitITTEBqquS52GKox/erbaHKdlFz8xJS6I45qRjjH7BPY0PTltltByjCZGeO9qrYRSmxe/p6ucU1x/TVj59/MoHOYnc1BpLMTRUdu2EjwpavwHU4zKlzbDDxm0EkgTtwvuQsxHp+oaXRf68+T8uFsPRjVUWKf/xix48Jg2TtM6DJ/y6Q8+//GCLACHiufv1WlCmLdyA3+gcuggeQr/ZrX+E9db2Sl95XXaq3+fNVRMTyt+rzFA5GnOYzdM+hYru0IvqEBBe+PmyTq1ROHRrXSKQqVhIMSrpiIo31wJX2Oqc42Z0CbIGB/oiaFSIRV2B8sARioggbGq9Xg6moxzBvg4xAwhx5sdMFvg6rlVj9zGlZDAZqE8PriyPcLqXdAVqTW5XjYdQ0hYKafVooxT1hnHvuWqKbndR56u4pF4uP3GvZ7vunjHqIquhr3cjX1o2ZHLB4/i0toXjYKN0FAHWJA9JQ0cdqSUBhOe3a7R2zgFUX0U5doQOrG2jRONR8eOhTKZqJX3r9bxSAReYAeL4JA9d+P1EddnUVlsvj7ei3v7gqY9GziNvmT340uPqK+P9xxqOM/v1Ww2KJTQXmTM45U2mInFOkzb2ayDW9A5EwWqLCTQFXUQsStqp9PKLWB25KSC4DCTqCfy0r7G4R9EFYFRJPBxHI39055uBsIwg6HQPhmPQ9SRNeXa5rlOcZTaKgqn4y2dgATign/cNKiH7ti6J3uVBbyrjMGM3guyvOAIU8JMOPS2cSn6LXck8Mjf72hHQuwpZlfNILi0xkTGPygqn16J7vgYFgPrj9+aB1+b3HJ/3z55vTSKGofvjxuP9Fad8ZOJ3LqDvEaCnwShsqJqPIkFCrsgFWZypVUYyuee3nraGHTkWaDJaqsNjcQN8VgzPDETygslIuJ3FBsw/Lx3kefRbrr373fAGC3/z224drfEZrVmPkTn44UvRuejCZeptp4qFXZs5zhuBKEG66Cj/8PCbXZPkf9tk3SdI3yjcV0qbTjtJhJ53ClP3FaQMB1NGIq8V9huu1lAQrL36JtLKKwntttsV0rL4l8NOl7O893qCOsn055/Z5DkqvT4H0X47bZ7Iv4uTrwfT16ln0yzDhurbDDupbBb9h+r7byVPYFxVlFhlqZY057p0YuQl9h2HV9df7u+vwYZOGkIjLh7uh8c4GRmB6sqJsGf/NI4abHZRNS17VY/Hv2rxZbJozbXad627T+tOS0M
+sidebar_class_name: "delete api-method"
+info_path: site/docspace/api-backend/usage-api/api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Remove a third-party account"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"delete"}
+  path={"/api/2.0/files/thirdparty/{providerId}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Removes the third-party storage service account with the ID specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"providerId","in":"path","description":"The provider ID.","required":true,"schema":{"type":"integer","format":"int32","example":1234}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Third-party folder ID","content":{"application/json":{"schema":{"type":"object","properties":{"response":{"type":"string"},"count":{"type":"integer","format":"int32"},"links":{"type":"array","items":{"type":"object","properties":{"href":{"type":"string"},"action":{"type":"string"}}}},"status":{"type":"integer","format":"int32"},"statusCode":{"type":"integer","format":"int32"}},"title":"StringWrapper"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

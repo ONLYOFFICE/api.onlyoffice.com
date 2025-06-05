@@ -1,0 +1,71 @@
+---
+id: add-a-bookmark-comment-by-entity-id
+title: "Add a bookmark comment by entity ID"
+description: "Adds a comment to the entity with the ID specified in the request. The parent bookmark ID can be also specified if needed."
+sidebar_label: "Add a bookmark comment by entity ID"
+hide_title: true
+hide_table_of_contents: true
+api: eJzFVm1v2zYQ/ivCfZbfFCeLBQyDu6ZYsGIzYudTYgS0eLbYSKRKnpK4gv57cZSUyI2bbMCA+YMhHe/hvT13pwpI7BzEN5CYPC+1ov3ogzH3ubD3DtYhOExKq2gP8U0F85JSY9U3QcroP1BItAy1KCSE8GgVIazrdQgSXWJVwWoQw1xKF4iALaCmgExAKQaoSdE+eFSU+vfLj4ErMFFbhTJQ2sssfi3R0TBYpRgUwjJ807rHgEToYIOByJzpg7eBRpQohxBCe8UHI/cQV5AYTaiJH0VRZCrxsYy+OPa0ApekmAt+on2BEIPZfMGEIITCmgItKXR82vjSRqQkiw5jXjTOdjFffoSwu9KRVXoHdQhNCo7BL5rk9GFKE+7QMq4XxCHs9y7F+ESvDfofZ8QVRrsmkGg8fn3NZ+UoMNuXVLdhOAj/qwS2nl5+7Km2foaATyIvMhZNouhsMpvOBnJzFg2mJ0k02MxOzwazCU6iZDqJ5KngjFw7tMfv2hqbC4IYylLJw7tPZ+enyeRkIORsMphuo2Qwi87PBsl2NptMp+f4y+ysu3thHL3tqS6zrNP+VGbZXyLHtxFzmSutHFlBxj4bsmarMvys9P3b6Nvb0cIaWSbk+BFNkWEjY/xQuOLpt9Kh/VUcMzN/ECTsQlD6rhV3rzSbkLgVZUa3tyOVix32RHds565IDZk7p77h3Xk0OI+GRUPyttJdA/7clhTu9rYcj8e+opdaJKQe+jncGJOh0Aegrcgcen13xWPobW2yZat8IRUt0ObKOWW0+8e4q7Z5/j12pXJcksiLJdl3SH8an8yClZFi30sgN+WxvnpNwTmRSNKmYV8AwlqxhxAUYe7eb9BPKsPjHK5Df3icPDxgfvAoBFLUMP7ZMfCTqJN3w0BvDTQzajqevB5L11q0CwilN5QjpUZCDAW3ZwiFdwlGolCjaDgevey0bpKN2kkGvNnsA1rnF1tpM4ghJSpcPBpVqXFUx1VhLNUQwoOwSmyyJi9pOwla7kMMmUlE5sV1CIw5PD4fzyKOqrdMlzwkm+uOrtSXmhXqT/RF4/jT5jgE7etyiPUJ4Sl89bLwLrpCHFlYPeI9b6Fxb7z3qq24LuxUr1w+rcHS5zC4uliugvniknOF1jXVygRhlxNHufDrofNcykC8Wi/BZt99FfjFd1D93ur+fz8o2tLwih0VmVCaQ/QEqloC3nDdIIRoOPYLs80WhNCZasUczTpsKXUDVbURDq9tVtcs/lqi5e+u9QsD+a0OOyIwc+9x7yviUzNYsW+snpUNfX5Y0HXYIeZJggW9qbvuNdji7+XK+98M8dxIxljxyF9Y4hFigBCML5WntZdVkAm9K8WOdZs7maTcxIccv/ccbx84qu5I73seHtI9bAPhfw7rKKSqmg6q62f95uiniOcea7S5uuu6rr8Dn6DRZA==
+sidebar_class_name: "post api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Add a bookmark comment by entity ID"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/api/2.0/community/bookmark/comment"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Adds a comment to the entity with the ID specified in the request. The parent bookmark ID can be also specified if needed.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"parentcommentid":{"description":"Parent comment ID","type":"string"},"entityid":{"description":"Entity ID","type":"integer"},"content":{"description":"Comment text","type":"string"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"List of bookmark comments","content":{"application/json":{"schema":{"type":"object","properties":{"CommentID":{"type":"string","example":"12261949-db62-43c2-b956-91e12c412d5a"},"UserID":{"type":"string","format":"uuid","example":"15985c13-ad91-4f2c-9286-cf991448e796"},"UserPost":{"type":"string","example":"null"},"UserFullName":{"type":"string","example":"Administrator"},"UserProfileLink":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"},"UserAvatarPath":{"type":"string","example":"\\/skins\\/default\\/images\\/default_user_photo_size_82-82.png"},"CommentBody":{"type":"string","example":"das\\u000a"},"Inactive":{"type":"boolean","example":"false"},"IsRead":{"type":"boolean","example":"true"},"IsEditPermissions":{"type":"boolean","example":"true"},"IsResponsePermissions":{"type":"boolean","example":"true"},"TimeStampStr":{"type":"string","example":"15:39 Today"},"CommentList":{"type":"object","example":"null"},"Attachments":{"type":"array","items":{"type":"object","properties":{"FileName":{"type":"string"},"FilePath":{"type":"string"}},"example":"null","title":"Attachment"}}},"title":"CommentInfo"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

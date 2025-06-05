@@ -1,0 +1,71 @@
+---
+id: get-preview
+title: "Get preview"
+description: "Returns the preview information about the specified category from the community section."
+sidebar_label: "Get preview"
+hide_title: true
+hide_table_of_contents: true
+api: eJy1VM1u2zAMfhWDZ63Ogh0237qi2IYdFiTtKfBBsZlYrW2pEt3WM/TuAyU7dZp2hwHLwVBEUuL3Qw1A8uAg20Khm6ZrFfWQC3BYdJbX2XaAy44qbdVvSUq331GWaLnAoixBwJNVhJD7XECJrrDKcBpksEbqbOsSqjAxFh8VPiWq3WvbhIMSudMdhagzWKi9wjIpJOFB2z7ZW92E2LGtxGHBdRcgwOJDh46+6rKHbIBCt4Qt8VIaU6siXJDeOe5jAFdU2EheUW8QMtC7OywIBBirDVpS6EJUUY28OMVxNfUU42I6xZFV7QG8mN//TumUcVYcfgzIGd262MdysTg/anXOIIh/RR4v/bT4eH7PbStHubEEzmqQKl1CBka7wJmkCjJIpVHp8mKRHgVKR5GB7WMf0brgns7WkEFFZFyWpkOlHflsMNqSBwGP0iq5qyNwjsWO9rKrCTKodSHrsO0FcM1p+PPiy5LBzBy7YcjxuDd9e6RCGvUTexCgGHYVwwJa2XD0pDbwwJyuX3x3/SwbE+0y+mbSdKbKzCOs2zz56ujrTSArWV9vbpLL1Q8mBa2LatSScALvqJFB1bHFb0jJC+UnKs5G4n+O4cgk4TOlppaq5UaD3sNoky3TDAKWF4vAy/TE8OjFznMxyr6FYdhJh7e29p63Hzq0/ADlLy7hf15MYrG77rEPZAa0H264IU6vuyjxq5HwYqq4LAo09NfcfOb91a/NDQjYjQ9Oo0uusZKZ528GIEAH9oP1wt4AtWwPnTxwbjyTjcTzderD++DDccGoplDbzzo8taQYgfCXYb1ZMgzR5d4f82Po3YrjHMRsljT33v8B5V4jow==
+sidebar_class_name: "post api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get preview"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/api/2.0/community/preview"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns the preview information about the specified category from the community section.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"title":{"description":"Category title","type":"string"},"content":{"description":"Category content","type":"string"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Preview information","content":{"application/json":{"schema":{"type":"object"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

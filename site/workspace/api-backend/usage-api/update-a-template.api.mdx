@@ -1,0 +1,71 @@
+---
+id: update-a-template
+title: "Update a template"
+description: "Updates the existing template information with the parameters specified in the request."
+sidebar_label: "Update a template"
+hide_title: true
+hide_table_of_contents: true
+api: eJy1VW1v3DYM/isCv86N3XQDVgNFka4Blg1Ng1yKAs3dB8bmxerJliZRSW4H//eB8vnuvGRLB6z6YMgUH748pMQNMN4GKK/BefuVKs6vqHUGmQIsMghURa95DeX1Bk4iN9brP5G17X4lrMkL0BPWkMG910yw6BcZ1BQqr52oQQmfXC3mFDek6EEH1t2t4q0Xpbul9W0yqe41N0nNoceWmHxQwVGll5pqpbt05umPSIGPIIPt9p2t11BuoLIdU8eyReeMrpLV/GuQMDYQqoZalB2vHUEJ9kYShkxSd+RZU5BTXct3msNIijp7D9mI1x3TLXnoM2DNhh7Dzul+n+mgs0MH9rq7FfAE85SJ32Yfz/d2AvtYcfQ0MrK0xth7YXWgslSbOTCGVZhDqa7lR1zLzxyuMKwS0TayarWhwLajOfSLTM1hJxDo35C7M7UVCqCOPrEsKsXRTyL6J88HeAwr8dgv+sd8pCW1Dc52YSjJcVE8Zmboq3pHDGT/Vwec1Qc6Y5UzGNgdRK+OIQN6wNZJ3eFlIYW8GrtgmtKh4ixt1KDZZ/B+WvtngYcU9BnMGDmG/xptCvZyIFjfTEL+FkZ20e1cxKjrqYftevHEZ1wpfR2cwfU5ts/w9kGvSH3Bbo0cVvobyf6AHW4v6MkdMvpZi8b8OyZ6o9iqIJoKE0rwF94utaFP/hn4fJ5feFvHioNsyTpDg0zgRxjcw9sYyL/ButWdDuyRrYd+/4bAaeuMXRN99uiG4A9K9X0KceD9Y2oA8e3Iv8NAMNzHH4uXT1zBDrczgepkpSVubA0luJiaCLmBEnJ0Oj8+KvJxxoxXNt/ourwuXrxe/CAvQSB/Rz6kYROFaWiYXSjzfNPYwH25cdazaN6h13hjhuaUsyG2JUYjNBhboUniPgPBTI9/Ll4fS1oHA24mT8Ng7skxt+Mcnf6d1pCBFgKa4TiDLnXwFJsYkbfncj+nTsfKDHOm2BO/K+aU4v2YkEmZAtkCfrFtGzvNazVLvKnL09mVOrk4E37IhwGfRjlD3/8FpxeyrQ==
+sidebar_class_name: "put api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Update a template"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"put"}
+  path={"/api/2.0/project/template/{id:[0-9]+}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Updates the existing template information with the parameters specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"id":{"description":"Template ID","type":"integer"},"title":{"description":"New template title","type":"string"},"description":{"description":"New JSON template structure in the following format: {\"tasks\": [{\"title\": \"Task without milestone\"}], \"milestones\":[{\"title\": \"milestone title\", \"duration\": 0.5, \"tasks\": [{\"title\": \"milestone task\"}]}]}","type":"string"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Updated template","content":{"application/json":{"schema":{"type":"object","properties":{"Id":{"type":"integer","format":"int32","example":"10"},"Title":{"type":"string","example":"Sample Title"},"Description":{"type":"string","example":"Sample description"},"Status":{"type":"integer","format":"int32","example":"0"},"Responsible":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"},"ResponsibleId":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"}},"title":"ObjectWrapperBase"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

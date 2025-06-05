@@ -1,0 +1,71 @@
+---
+id: search-projects
+title: "Search projects"
+description: "Returns a list of all the projects matching the query specified in the request."
+sidebar_label: "Search projects"
+hide_title: true
+hide_table_of_contents: true
+api: eJztVkuP2zYQ/ivEnOmVrLXTrU5ZpNs2aIMGsYMCNXzgSmOLWUpiyFESR+B/L4aSvOv15oECveVi0TPfcF6fZtQDqb2HfAPWte+woOT18PSwleCx6JymA+SbHq47qlqnPyvSbfM7qhId2zlUJUj46DQhbMNWQom+cNoyDHJ4g9S5xgsljPYk2p1QxgiqUIwevagVFZVu9lH6vkN3EN5ioXcaS6GbKHb4vkNPFyDBKqdqJHQ+xtWoGiGHaAcSNDu1iip4HMkKlSsqMQF9UWGtIO+BDpZv8OR0s4fAOTj0tm08etZnacqP09v+HLNx6DtDHiQUbUPYEEOVtUYXsVLJO8/4/tyfck7FiAlr/0De3nJZOFHXWnSkhyheEtbfgSrPM5KAn1RtDYsuF0sIEm4a0nRYR9gRrhvCPTqQsGtdrWgQXWZ8QdPV3O2RHSDhlTboqW0QJKyVvwMJq+52PK1R1SDhRVvXXBEJr9B7tWfsr9pEE13jymJTwhljNqmYidGRFHMxE0dfUmRiJtiJFJdiJkaPUixYjKqWYilmYvQrxTM2HlxL8ZOYCfYuxRWjpwC2J/VJuTprTQa/XsdVPAiKyCDhl4cpfIdhiX6CBwkvHCrCb7QuS7N0Ns9mWbZOF/l8ni+fXSwv06vlfPEPhCBhCGYiOvPlb6esRccu/vrY8Av7gz8/+PMf+HOmvdcEVi7S+fmIfNuocWdgGa+okaq2hBz2GJnHUzqHRFmdZBdpMq2g5z66SPo4qgPPanQfpnnfOQM5VETW50nSV62nkPe2dcTID8ppdWsGMrNuCGunOsN8NG2hTBQHCWxzqr5Kf844pQe7b8Vje7juyQ14P86t/gOPG6ga1HJaTye2sRi62bXRfKwrk65rNB3EKmYr3tys1uL69UvOCp0famoU4RS9p1pFtow+xgU37dXHC7C/31D/w1Yeq0D4iRJrlI68jL3qx0ZvuEQgIbtIh7EzToKx3SAhH3bzVo6d20Df3yqPb50JgcWDPt9s7xsdOVFqz+cS8p0yHr+S+KOPgCejnhraHCKhTMf/QMIdHo4fGmEb5NRkjmDQXRcFWnpgdfYhwNQ6vga/3axBAr8kpzy6izwaD3z7kxGdUmoKj3+D/IJJ3w8sDeGIH1RftDjyeEBzgbYhhH8BbKFiCQ==
+sidebar_class_name: "get api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Search projects"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/project/@search/{query}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns a list of all the projects matching the query specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"query","in":"path","description":"Search query","schema":{"type":"string"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"List of results","content":{"application/json":{"schema":{"type":"array","items":{"type":"object","properties":{"Item":{"type":"object","properties":{"Id":{"type":"string","example":"345"},"EntityType":{"type":"integer","format":"int32","enum":["Project","Milestone","Task","SubTask","Team","Comment","Message","File","TimeSpend"],"description":"[0 - Project, 1 - Milestone, 2 - Task, 3 - SubTask, 4 - Team, 5 - Comment, 6 - Message, 7 - File, 8 - TimeSpend]","example":"0"},"Title":{"type":"string","example":"Sample title"},"Description":{"type":"string","example":"Sample desription"},"Created":{"type":"string","example":"2020-12-22T04:11:56.5308514Z"}},"title":"SearchItemWrapper"},"Owner":{"type":"object","properties":{"Id":{"type":"string","example":"345"},"EntityType":{"type":"integer","format":"int32","enum":["Project","Milestone","Task","SubTask","Team","Comment","Message","File","TimeSpend"],"description":"[0 - Project, 1 - Milestone, 2 - Task, 3 - SubTask, 4 - Team, 5 - Comment, 6 - Message, 7 - File, 8 - TimeSpend]","example":"0"},"Title":{"type":"string","example":"Sample title"},"Description":{"type":"string","example":"Sample desription"},"Created":{"type":"string","example":"2020-12-22T04:11:56.5308514Z"}},"title":"SearchItemWrapper"}},"title":"SearchWrapper"}}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

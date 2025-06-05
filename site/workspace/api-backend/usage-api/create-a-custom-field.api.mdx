@@ -1,0 +1,71 @@
+---
+id: create-a-custom-field
+title: "Create a custom field"
+description: "Creates a new custom field with the parameters (entity type, field title, type, etc.) specified in the request."
+sidebar_label: "Create a custom field"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVe9P2zAQ/Ves+wSSS9O0DMg3fmpoQ0LANmmIDya5EkMSe/YF6Er/9+mcpC20Q0NaP7n23fPdO7+XKZC685BcQ+rK/mHtyZRirLHIPNxI8JjWTtMEkusp7NeUG6d/K9Km+owqQ8eJDlUGEp6cJoSb2Y2EDH3qtOUwSODQoSL0QokKn0S6dIV40pQLylFY5VSJhM6LDaxI00TQxKJs40hTgbLdQkq3NoW3mOqxxkzoKkA4/FWjpy2Q0C4PTDaBZAqpqQgr4qWyttBpaKB/77m8Kfg0x1LxivEhAXN7jymBBOuMRUcaPZ82dV2FmOmbHo8XNYPscDw5Xd3BTEKhbrFYzTpZNLcuK/S+/r7lQb25VVeEd+gYwBqvm4T1N8/P1yWXyj+sJp7x7kqt4ce8e2sq39AVR9H7dYP8X5O5wEKRfsRTwtIfmrpBfNOShLFxpaJmaxiDBHxWpS04KOKOmyGeZh9NHoy24+EoHjLG127SrxlaDj/QjvJMEXJ8GMR3VdT4flIcxVFvEPei3avBTjLcSaLR1vbe4NMo+vRzjtO9lX8ovqpL1u4VPtNJOwxe7ztUIOESC0zpwDyDhMMc04dmyZpvCjvi8leUfh2JnphDSjFo/zKqFLHoiTmwFEPREx22FCPREy28FNuiJ/iGm1cUbHOf50tP+kMzChM+a9/033nmqNOjD6PHwxGwAhotd+880PDDKWtZUkEio2iwqopvlWqtFbMAUyLlJoOEFRyeu6IcEugrq/vxVtRnr54u/CjZYCGplF4sOm+ql9SUVlWTF2OtcVRXmiYvqfK4Oes3/tsJ0KN7ROeDvdeugARyIuuTfn+aG0+zZMoAM5DwqJxWt0UjOD5r2hirumBOCpOqImwH33FvjnejvZgZWPqkXLK4G7i1H5b5BJTVX3ACEjRzlTfHEipV8umr3EAeu8fF4gtw3E3ptYMvht+a82JjyXejZRONOlNc8mhdjU2otRu8KcvAt7gM1IqL48srsX9+yhSi883AC/4gEsxmfwCdI4ml
+sidebar_class_name: "post api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Create a custom field"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/api/2.0/crm/{entityType:(contact|person|company|opportunity|case)}/customfield"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Creates a new custom field with the parameters (entity type, field title, type, etc.) specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"entityType":{"description":"Entity type","type":"string"},"label":{"description":"Field title","type":"string"},"fieldType":{"description":"Custom field type","type":"integer"},"position":{"description":"Field position","type":"integer"},"mask":{"description":"Mask","type":"string"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Custom field","content":{"application/json":{"schema":{"type":"object","properties":{"RelativeItemsCount":{"type":"integer","format":"int32","example":"0"},"EntityId":{"type":"integer","format":"int32","example":"14523423"},"Label":{"type":"string","example":"Birthdate"},"FieldValue":{"type":"string","example":"2020-12-08T17:37:04.5916406Z"},"FieldType":{"type":"integer","format":"int32","enum":["TextField","TextArea","SelectBox","CheckBox","Heading","Date"],"description":"[0 - TextField, 1 - TextArea, 2 - SelectBox, 3 - CheckBox, 4 - Heading, 5 - Date]","example":"5"},"Position":{"type":"integer","format":"int32","example":"10"},"Mask":{"type":"string","example":""},"ID":{"type":"integer","format":"int32","example":"1234"}},"title":"CustomFieldWrapper"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

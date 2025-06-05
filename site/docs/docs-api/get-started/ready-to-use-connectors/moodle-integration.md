@@ -1,3 +1,8 @@
+---
+sidebar_custom_props:
+  icon: /assets/images/editor/connectors/moodle.svg
+---
+
 # Moodle integration
 
 This [plugin](https://github.com/ONLYOFFICE/moodle-mod_onlyofficeeditor) enables users to edit office documents from [Moodle](https://moodle.org/) using ONLYOFFICE Docs.

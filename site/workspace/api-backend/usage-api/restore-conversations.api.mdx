@@ -1,0 +1,71 @@
+---
+id: restore-conversations
+title: "Restore conversations"
+description: "Restores the conversations with the IDs specified in the request to their original folders."
+sidebar_label: "Restore conversations"
+hide_title: true
+hide_table_of_contents: true
+api: eJy1VE2P2zgM/SsCz9pxOt3Drm/TD6DF7qGYzJyCHBibidXKkirRTVND/72g7MzE02mBLbA5ODY/JL7HR47AeEhQb6BHY6vX3n2hmJCNdwm2GhI1QzR8gnozws3AnY/mW3G/I2wpSmYkbEHDMRom2OathpZSE02QMKjhlhL7SElxR6q5vEEdDXfF/P5NUilQY/aGWmVcMUb6PFBixV4+TVQ+moNxaNXe25ZiugINc9Ar356gHqHxjsmxvGII1jTlpupjklJGSE1HPcobnwJBDX73kRoGDSH6QJENJfGatvwtgfxrEiu/X2CQykGfT8MY8QQaDFOfLm4xjulAETTsfeyRJ9PLa8hZgyWMbh2wv4tonHD69OL1zExSx464oyiUJHKt6iklPAi3hSOVAvaK5RzjDspH5Tw/lrfz3hI6yOUn3KXgXZogX69WP4ccpx62z2H/r5T/Bkml2j9XL34s8N7hrEpqC5s9cedbqCEMpa3IHdRQYTDV9dWqKjJfiLCasYGoPYq9iH2IFmromEOqq2rsfOJcj8FHzqDhC0aDOzsxJ76psj0OVuq2vkFbzFmD5Czdf63+LqguBmwtLE3HPTtmj+wF8w8V+gR+N7k1OOzFu8gtfEgbbh9n5O1X7IOlB41vVtvnFMhxoCx37H2527DkwGvf94MzfFLrQpW6fbu+Uzcf3gslFNPUE4tMZ+iJeywymAucl8FyD8CTlXExxv/z9phJZfrKVbBonFRdWj/O0tkI46Dh+moFumzJSfKL6s8S2upZDBsYxx0muo82ZzF/HijKFt0+ake+sj63UDT3iU6F5IL9jzupTcLtMDX+yWxlfc64aRoK/MvY7cVkfLi/Aw27eWP2vpWUiEcBgkeoATT4MGGrx8k2gkV3GPAgsdORoi4ZvqU4PxVxzi8C6uxyp4sClzrVMw55CqpnU8Zxkn7OD/GT66cZD8MxRUtztznn76Uwaec=
+sidebar_class_name: "put api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Restore conversations"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"put"}
+  path={"/api/2.0/mail/conversations/restore"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Restores the conversations with the IDs specified in the request to their original folders.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"ids":{"description":"List of conversation IDs","type":"array","items":{"type":"integer","format":"int32"}},"learnSpamTrainer":{"description":"Specifies whether to send messages to the spam training or not","type":"boolean"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"List of restored conversation IDs","content":{"application/json":{"schema":{"type":"array","items":{"type":"integer","format":"int32"}}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

@@ -1,0 +1,63 @@
+---
+id: get-forums
+title: "Get forums"
+description: "Returns a list of all the portal forums with the topic/thread titles, dates of creation and update, post texts, and authors."
+sidebar_label: "Get forums"
+hide_title: true
+hide_table_of_contents: true
+api: eJzFVlFv3DYM/isCn5U7n5Mui4GhyLKsK7YOQe6CAk3zoNi8WI1saRKdxjv4vw+UnMtd1jRpCmz34JNFfjT5kSK1AlJXAYpzKG3TdK2mfvqr9V0T4EJCwLLzmnoozldw2FFtvf5bkbbtb6gq9IzzqCqQ8NlrQrgYLiRUGEqvHatBAadInW+DUMLoQMIuhTJGUI3CWU/KiGX8nPisqY7bZJ0up1SzYUGaDAYpKkUYGFx6jA4I1Vaic7wvhbOBBOEtBRn3VXQ1TECCx+BsGzBAsYI8y/hv28E/RreSHyChtC1hS6ypnDO6jB+cfgqsvoJQ1tgoXlHvEAqwl5+wJJDgvHXoSaePHSnCK+vHt1FXea96kKAJm/C0jbfVho5uCa/Qg4Sl9Y2itLWbgwS8VY0zrJTBIGHBrG0gA3ndXm3pzeMi8cuQI+YVq6+D8izPdmb5Tra/mO0Wr34osnyyu/fqYLZ/8IGNnMV8fKeRXzaz84wQysRzHwOPVfOfEj57LuOLGkXy7yVR0hr58kzlewezg/3vzNSGkVMssaUFn9cX8Jbv7j0w8g1ly+obcfzcf2Nq16bXHnadrrZP0vjb+cLj7hczqYMzqv9TNU/4/k5fo/ig2l5RuNbPrJp3qlXM5SDh8EaR8vNGGfN1TOeNICsCawoVUYw/8XapDZ75J+AfP05PvK26kgIv0TqDaY/hExXc7esuoP9JVY1udSCvyHoYBgmpnRRw3Dhje8T3XjncFsXpks4BS5P4oXzsnf3jGhuSQcJeNvt3Yz9r1TiysIouNEi1raCAK4zloaiGAqbK6Wk+yab3EzCOAuD552/Qhzj+OqYNaiIXiul0VdtAQ7HiGTaAhBvltbo0qdJYltxZqs5wcRlbKhO3BwmM2Rb/mB3kHMnGyJ3zlEnmvjh47xuc079j7HAcc53EEtpYjtvYSIJulzbCRzaP7qIW8xitOD2eL8ThyVuOCn1IXBqev6P3gRoVm9b4jTdI98Oz2u5r61n6f98DRrZYOHVG6ZZj6dJRSIVwzlSChHySxUvASEvqEV3D96GU2HNYrS5V4IM0DLz9V4ee70gX93XAb4O8SwfXzzX2nI+yREexYEyX0vfghsFFsC7UN8cLkMBhbGf8OmZ8XLD1O1Hbb9jeTr4cXeDnIB+BrFapnoZhrZ9EjyLWFZe0mdiLYRj+AbltdKI=
+sidebar_class_name: "get api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get forums"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/community/forum"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns a list of all the portal forums with the topic/thread titles, dates of creation and update, post texts, and authors.
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"List of forums","content":{"application/json":{"schema":{"type":"object","properties":{"Categories":{"type":"array","items":{"type":"object","properties":{"Id":{"type":"integer","format":"int32","example":"0"},"Title":{"type":"string","example":"Sample title"},"Created":{"type":"string","example":"2020-12-07T13:56:02.3459179Z"},"Updated":{"type":"string","example":"2020-12-07T13:56:02.3459179Z"},"Description":{"type":"string","example":"Sample category"},"Threads":{"type":"array","items":{"type":"object","properties":{"Id":{"type":"integer","format":"int32","example":"10"},"Title":{"type":"string","example":"The Thread"},"Description":{"type":"string","example":"Sample thread"},"Created":{"type":"string","example":"2020-12-07T13:56:02.3249197Z"},"Updated":{"type":"string","example":"2020-12-07T13:56:02.3249197Z"},"RecentTopicId":{"type":"integer","format":"int32","example":"1234"},"RecentTopicTitle":{"type":"string","example":"Sample topic"},"UpdatedBy":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"}},"title":"ForumThreadWrapper"}}},"title":"ForumCategoryWrapper"}}},"title":"ForumWrapper"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

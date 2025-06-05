@@ -1,0 +1,71 @@
+---
+id: get-posts-by-tag
+title: "Get posts by tag"
+description: "Returns a list of blog posts containing the tag specified in the request with the post titles, dates of creation and update, post texts, and authors."
+sidebar_label: "Get posts by tag"
+hide_title: true
+hide_table_of_contents: true
+api: eJzNVlFv20YM/isHPiuR7BTLJmAY0i7oiq1DUDsY0NQPjETL15x01zsqiSrovw88yXG8uEmBYcD0IMk8fhS/73ike2CsAuRXUNi6bhvNXfra2CrAKoFARes1d5Bf9XDW8sZ6/RVZ2+Y3wpK8wDxhCQncec0Eq2GVQEmh8NqJG+Twgbj1TVCojA6s7FpdG1spZwMHVdiGUTe6qRRvSDFWKjgq9FpTqXQTjZ6+tBRY3WneRINAFWs2FBJVIlOQqIWnmJnCplStE3syudI9hyTaMXIIx5CAQ481MfkQ2TVYE+QiBiSgJXGHvIF/sllipaJrAqHYUI2Q98CdE2xgr5sKBtHAU3C2CRRkfZ5l8tiP9MekxijEA7kdfd59SmSihiUIOmd0EZmmn4NE6p9mgt5jJzyY6vDIbq8/U8FC3ltHnvWY34WnW013T6kkQPdYOyOmySnmC0MCS9mA5yHn49sD5I1sEZXPg+bZPDuazY+yk+V8lp/8kM/mx9np6avZyelHCXIZt/ZfBnl3EL+2vkaGHNpWl3vxsuk6OnDbXlGUeJZe3IcDGS+xmiVyg2Gn1Ovu5c37r6j8qoMz2P0Zz8Vzmb/XN6Q+YtMhhxv9naXxHhusyIv32S0y+kWNxjyPab1RbFUQT4URJfgLb9fa0KV/Af7pU3rhbdkWHOSVrDM02gR+jMHd/9IG8j9jWetGB/bI1sft4JEQnNfO2I7oL49uTF5a5XfQFTc1+j2OJ+YLG1jiOfKLtq7RdzDIlcCrbPa0bVw2OPVhKmOsmnhjS8iholgc0rVySNHpdH6cpbuuLm03ZazSnrEapIGRv922v1bUgw2zC3ma9hsbeMh7Zz2L5y16jddmLDhZG/NaY2ukxowt0GymQy6Y/eUfs5/mwunRQFlIxxrDHRwruxPk9O/UbVvyZlxOtt16DxvV0M3aRvik8JstfbWIbNWH88VSnV28E1bkwyiqkSEyZR+4xthVp2+8JZ569HWnxvGwtyP9rjv/b2fdJKYsps6gboRqOx6YsWCuRGlIYH6cxXkzqQYJCAMJEZnn8lglUw1cQd9fY5CjNwxi/tKSlz8Lq13JxOoqdZD3EvI1mkDPKPhovh5MelsWTRfL0rTyCxK4oW6a3sNqSLaFIt8eV86Kghw/wjyZo1KeD2fp7fkSEhAF92vxJtbi9CLRD+azX5bb5OQ+JN+A9P1Y6cPw4D8ufRPxcBZGb5FnNQzD37yeSGg=
+sidebar_class_name: "get api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get posts by tag"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/community/blog/tag/{tag}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns a list of blog posts containing the tag specified in the request with the post titles, dates of creation and update, post texts, and authors.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"tag","in":"path","description":"Tag name","schema":{"type":"string"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"List of posts with the specified tag name","content":{"application/json":{"schema":{"type":"array","items":{"type":"object","properties":{"Preview":{"type":"string","example":"Preview post"},"Title":{"type":"string","example":"Example post"},"Created":{"type":"string","example":"2020-12-03T21:36:12.0774137Z"},"Updated":{"type":"string","example":"2020-12-03T21:36:12.0774137Z"},"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"Tags":{"type":"array","items":{"type":"string","example":"Tag1,Tag1"}},"CreatedBy":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"},"BlogTitle":{"type":"string","example":"Blog Title"}},"title":"BlogPostWrapperSummary"}}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

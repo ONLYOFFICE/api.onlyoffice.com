@@ -1,0 +1,71 @@
+---
+id: get-audit-trail-mappers
+title: "Get audit trail mappers"
+description: "Returns the mappers for the audit trail types."
+sidebar_label: "Get audit trail mappers"
+hide_title: true
+hide_table_of_contents: true
+api: eJylVE1v1DAQ/SvRnE0TLRfIbUFVQQipasspymE2md24OLFrT9qGKP8djZNlsy1CAnyyZzxf7z17BMZDgLyAQFXvNQ/ptq81J+xRm6RGRigV1BQqrx1r20EON8S970LCDSUtOkc+JHvr4xlX0Tw4ChegwNNDT4E/2HqAfITKdkwdyxadM7pCSZzeB8k+QqgaalF2kgBysLt7qhgUOG8dedYUxOu8rfuK7+Kl8UWP17MT1DEJeo8DKNBMbVgl1x3TgTwo2FvfIs+mtxuYJgWtrXtDv6/wNfr+q0BcAk9wtgvzVJsse11rzcmCOKh/xXGp2hI3toYcDhSxRW4ghxSdTjcXWfpLD5HR9FQ1kH+UXV6M0HsDOTTMLuRpOjY28JSPznqeQMEjeo07M88lvnmwPfZGUDC2QhPNkwKJOXe/y95HjEr1S5u3MtGcbttzY73+EUf+RFiTX02KTn+hSIag18xuBR22FNFcxUaeBbKbk0gvn7F1hl6JrMjKc00UWTlJkb2NxTVLEHy0bdt3mofkNmKV3Fze3iXb68+CCfkwc2qQ6Th74BYjZ0uHV8RnL+mE/pkuVk/p7x/lAhXTM6fOoO6klUjouIihEBxBweYigxMJoCDmAwXHtkq10FvAOO4w0DdvpknMDz35AfKiPKlBTpM6kiIq+k5DRC2O8iYiK9dNP1P5QtmTOkZsq4oc//FuudL51eUdKNgtn1Brawnx+CQfFD5BDqDARmSjwqJtBIPdoceD3J1TyvoJGiPNFg==
+sidebar_class_name: "get api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get audit trail mappers"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/security/audit/mappers"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns the mappers for the audit trail types.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"productType":{"description":"Product","type":"array","items":{"type":"integer","format":"int32"}},"moduleType":{"description":"Module","type":"array","items":{"type":"integer","format":"int32"}}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Audit trail mappers","content":{"application/json":{"schema":{"type":"object"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

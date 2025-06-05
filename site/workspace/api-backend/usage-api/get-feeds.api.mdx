@@ -1,0 +1,71 @@
+---
+id: get-feeds
+title: "Get feeds"
+description: "Returns a list of feeds that are filtered by the parameters specified in the request."
+sidebar_label: "Get feeds"
+hide_title: true
+hide_table_of_contents: true
+api: eJy1VVFv2zgM/isCn5UmS9ts81t3V+wOdzgMbfcU5IGx6VqbLHkSvcxn+L8PlJ00ubQ3YMDyEEgm9Yn8+JHqgfExQraGkqiAjYZIeRsMd5Cte7hpufLB/ItsvPuDsKAgvoGwAA27YJhgM2w0FBTzYBpxgwzuiNvgokJlTWTlSyXoUXGFrDCQKo1lClSobae4ItVgwJqYQlSxodyUhgplXLIF+tJS5AvQMC3f+aKDrIfcOybHssSmsSZPYc4/RQmih5hXVKOsuGsIMvDbT5QzaGiCbyiwoSjWJviizRPMaRofRoPaVSavphQ636odOlbs1UTDhB45GPcIg4Yy+Poc7cHUpMQ04UluI2asfGsLtSVVmNhY7OhZWPYvgLaOjf1ZVEwlPkceS692lY/0w9wxBOxAg2Gq4xHj0zUaSh9qZMigbU0Bw6DBO9v9Q7vzi38fo41KPFQZKE7c//i6rfeW0CV8NjXdiWKLF1jbVeSO6NpRoBcqmn6ivth4F0fRLBeLc9y/92rfy3sf908qdbz3avHq/KqPDqfepJHPmrjyBWTwSEniyBVkMMfGzJcXi7lEMh/jAmny8JVCTD3eBgsZVMxNzObzvvKRh6xvfOABNHzFYHBrx6TFNoZSYmulnNbnaNPnQYOcOTW/WbxdShZHc+Vech3hnp0uBw6wMX9RqrLkW41mDQ5rOshzOpsIEDLvngbE7TesG0snDX6kx9SiT3vprafdvifWcFnim+tydTW7fv3q9ezqerWcbS/LfLbM364uy9UKS1zJ1Dyoec2hpc2p/I66zbgydTEbltjgN1/XrTPcqftUEnV3e/+gbj78KdRTiGOxLTLtKY5cYxLNRMR74oPMTiRyNB9/2UCeSsX0jeeNReMkxiSoflLgWuoIGpYXC6Gd0hCadLjRk6LW0PdbjPQx2GGQz19aCvICbZ4EKLtB73Ugwv1MXWIwJTl7kFDE3bajev7TZoPen7jJc2r4f303R/30/vYBNGynN6f2hRwJuJP3CHeQAWjwifMk6vStB4vuscVH8R0hh2nWnir8c1L4tJCk9ibXHQV4KnY95SH/ktWzR/p+7J9hOPiPphdPHDps9JZaboZh+A6o/soC
+sidebar_class_name: "get api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get feeds"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/feed/filter"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns a list of feeds that are filtered by the parameters specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"product":{"description":"Product which feeds you want to read","type":"string"},"from":{"description":"Time from which the feeds should be displayed","type":"string"},"to":{"description":"Time until which the feeds should be displayed","type":"string"},"author":{"description":"Author whose feeds you want to read","type":"array","items":{"type":"string","format":"uuid"}},"onlyNew":{"description":"Displays only fresh feeds","type":"array","items":{"type":"boolean"}},"timeReaded":{"description":"Time when the feeds were read","type":"string"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"List of filtered feeds","content":{"application/json":{"schema":{"type":"object"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

@@ -1,0 +1,71 @@
+---
+id: get-the-shared-link-template
+title: "Get the shared link template"
+description: "Returns a new unsaved link object to the file with the ID specified in the request."
+sidebar_label: "Get the shared link template"
+hide_title: true
+hide_table_of_contents: true
+api: eJy1Vt9z2zYM/ld4eKZj1+22Tm9Zfs23Xdez0/Uh5wdGgi02EqmSUBxPp/99B1Ky5VjtbndbHhyJAAjgwwdADZDaekgeYKML9NNVrpw2W1hL8JjWTtMekocGLmvKrdN/KdLW/IoqQ8dGDlUGEnZOE8K6XUvI0KdOV6wGCSyRame8UMLgTtTGq2fMRKHNk7CPXzAlQVZQjoK9i52mPLwtroWvMNUbjZnQJpw5/FqjpwuQUCmnSiR0PsRmVImQhAQWHI1mz5WiHF6Hc8teFtcgwac5lgqSBmhfsbWnkHfLOXSufrHZnjVSawgN8aOqqkKnAYTpF893NudXxcw4TmcrdKTRs1T7W1sE3JpXYa26XL3QG6EiPNr30PhcOczEJhgL64SxfHnn7NHaApWBNvxx7L6yxkeX89lsxFu8L3ghLKtCEYL8r7Jc1eF8kZ1jK2FjXakIEqhrnUEre+0PoYJntZDwuzZPo4LO8M7ZuhooHNCQ8MfORKzPRQGBgUgbwi26YYDa0Ns5SEBTl0z0D9YwSEtU2edA9vgc/nFUAYk/lWMU+OxZ4w4kXNmyZFAlU6+4ta5k8VXtyZa3uiB0cNYzDzMxEexPijdiIg4upZh3r1K8DU/RsRTvxERE31L8ECTsXoofxUR0EUjxk5iIQxBSvGfZII51gNumT5gt9TYnPw7dtfbqscAllvYZx1W4Zisk0mbr/5kvlzXZayyQvnHbzUulXaDitaJxkgQVzMbtPyrvd9aN0JG7hTQVfDSM+bNTVYUu3GzI7e+D1b8hS9fnoeg4UmAua9SJNWW1gP/C5MilHs1lEO5liocoQ9e/m705b/RPRnVTG7NgXiLlNoMEthgKwSMygamq9HR+MZvGDdDEOdpO49zhMTEdjAmP7rkfvLUrIIGcqPLJdNrk1lObNJV11IKEZ+U0cyWUmWUxwo2qCwatsKkqwnErgW1Oxe9nP885ucEiWvEIOrDmfB0dIFOV/g33/SbIo1j2e+LENuDCM255nPk3L6qsCjyd2eRqbPnGjQ2eukpwe9VG016sAjBiebO6F5cfFwwAOh8rwdj1iXoqVZioXTh3SMMx/3osn5R0sIv+p9XaIUj4QtOqUDr0UKhz0/HlgeEFCfOLGfcAcwYkJIfte6QNX9cnspYdBR6gaR6Vx0+uaFs+/lqj42+M9ZExgVxZnDQZJBtVePwOEsetPhp9TwqzD6Qsan4DCU+4P341tOtW9kxh71F4FX1Mwgg4Gp/tx1b2FpdpihV9V3c9aMS7m3uQ8Nh9aJQ2YxOneHXwb4jThpQD7cNZA4Uy21ptWTdeySTmXj/tgafQA90DJzWKxGk79LDwL2c1atI0scPa9qAfRd+0OPRg1ObCrNu2/RuGA446
+sidebar_class_name: "get api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get the shared link template"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/files/{fileId}/sharedlink/template"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns a new unsaved link object to the file with the ID specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"fileId","in":"path","description":"File ID","schema":{"type":"string"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"isFolder":{"description":"Specifies if a link is to the shared folder or not","type":"boolean"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Shared link template","content":{"application/json":{"schema":{"type":"object","properties":{"SubjectId":{"type":"string","format":"uuid"},"SubjectName":{"type":"string"},"Link":{"type":"string"},"SubjectGroup":{"type":"boolean"},"Owner":{"type":"boolean"},"Share":{"type":"integer","format":"int32","enum":["None","ReadWrite","Read","Restrict","Varies","Review","Comment","FillForms","CustomFilter"],"description":"[0 - None, 1 - ReadWrite, 2 - Read, 3 - Restrict, 4 - Varies, 5 - Review, 6 - Comment, 7 - FillForms, 8 - CustomFilter]"},"LockedRights":{"type":"boolean"},"DisableRemove":{"type":"boolean"},"LinkSettings":{"type":"object","properties":{"AutoDelete":{"type":"boolean"},"ExpirationDate":{"type":"string"},"Expired":{"type":"boolean"},"Password":{"type":"string"}},"title":"LinkSettingsWrapper"},"EntryType":{"type":"integer","format":"int32","enum":["Folder","File"],"description":"[1 - Folder, 2 - File]"},"Inherited":{"type":"boolean"}},"title":"AceWrapper"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

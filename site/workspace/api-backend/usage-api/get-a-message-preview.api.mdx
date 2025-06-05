@@ -1,0 +1,71 @@
+---
+id: get-a-message-preview
+title: "Get a message preview"
+description: "Returns a preview of the discussion message."
+sidebar_label: "Get a message preview"
+hide_title: true
+hide_table_of_contents: true
+api: eJyVVFtv0zAU/ivReTZLqXiAvA2YGIKJae2eqjy4yWnjLbE9+2Rbifzf0XHcS2BDWh+i1Of6XZwBSG49FCuwztxhRflX5avee2W0h1KAx6p3inZQrAY476kxTv2WpIy+RFmj41KHsgYBT04RQhlKATX6yinLaVDADVLvtM9kZh0+KnzKzCajBrP6MCvr0Hu5xTMQ4PChR0+fTb2DYoDKaEJN/CqtbVUVp+d3nnsP4KsGO8lvtLMIBZg14wDBiCw6Uug52lDXEj7HPtP1rsbRGUczpeNml8urn9nGuE5yp9TZk1N6CyH+eE9vjfZj+/ls9nrnBBvEm8GcjBTwYfb+3xm3WiZVsAbO6pAaU0MB1vhIg6QGCsilVfn8bJbvhU6M50cR8uOeHt0jOh9V710LBTRE1hd5PjTGUygGaxwFEPAonZLrNpHMI+OKG9m3BAW0ppJtPA4CuGYa/jj7NGd0J05bMAdjuxf9duBGWvUDdyBAMQ/NGBagZcfRSW0khkm+OXrr4ll2tsWpNw6Ec9eNidMUcRZ8MV3Xa0W7bBHJyW4uFsvs/Po7k4DOj3K0knAP1lMno6xppW9Imdw7/cQUE0FPDP/Wi5N4YSS5baXSvEZUb0guWDFpIGB+NhsvSLoqqQnvcugcE8YVS5GUXcEwrKXHW9eGwMcPPTr+NpRHI/C/IPZ6sIHucRf5i7DeLXlLTm/7UcW/rkEQ+4rzqkJL/80tT/x+/WuxBAHr9N3oTM01TjLF/CwABJhIc3RXPBuglXrbM/gCxp7sFb5TU6vdR6ulF0a1D+ndyYZT14kEhJ8M68WSYRiNHMIhfwy9WnGw+pjNOpchhD+e6wDp
+sidebar_class_name: "post api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get a message preview"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/api/2.0/project/message/discussion/preview"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns a preview of the discussion message.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"htmltext":{"description":"Message text in the HTML format","type":"string"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Message preview","content":{"application/json":{"schema":{"type":"string"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

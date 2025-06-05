@@ -1,0 +1,71 @@
+---
+id: update-a-mailbox
+title: "Update a mailbox"
+description: "Updates a mailbox with the ID specified in the request."
+sidebar_label: "Update a mailbox"
+hide_title: true
+hide_table_of_contents: true
+api: eJzlVcFu3DYQ/RVhzqy12eSQ6lQ3a6BGkSCI7ZOxCGal8YoJJTIklbUq8N+LIam1NnYdoG1O2cOC4rwh5808zkzgce+guoUOpXJkv5It36JUO31PDrYCHNWDlX6E6naC88G32sq/0Evd/0HYkGVfS9iAgIOVnmAbtgIacrWVhmFQwY1p0JMrsOjS0cVB+rbwLRWXm8IZquWdpKaQfdyz9GUg589AQF7+rpsRqglq3XvqPS/RGCXrGEj5yfE1E7i6pQ555UdDUIHefaLagwBjtSHrJTm25ig+yoa/TmPN5IvLDYj5GNl72pOFIKDHjh47vaND4ahvyBYRcPR03sp+DyH+mI4zuncpivVq9fiklKrmmKgGPYL4v4hfNgvMzErAnbYd+rT1cg0C6B47oxj0Yv3yFfO+cWRPvDOzJTZjMnojnVE4vssJe95tCQ4CzpvGknM/ktBGdyj7f+9/wRV6nliE/KZ7NZ7VugMWgJc+mq7iS0sxZLIbrnQQ8P2EHbOkJGYtZTBaiyMIkJ66nzF7j0H5Oc/mIODV6sUTz67H3NqoiVd15FvdQAVmiHlD30IFJRpZrs9W5aJbdnO3LIf4doF7JltcbJmDVVBB671xVVlOrXY+VJPR1gcQ8BWtxJ1K5WBbCu0OB8UJVLpGFbeDAPY5Nb9e/bpmVos2fcWdIB33ZLN+kIqRf1LUCvNvk3nub6e+MSHcaj48dOOLuU6n3XR1PGHufHzBnY4X58K80V039NKPRSpR8eHi6ro4f3/J+SDrUkUUT4zM2/kOY5/LZ6cm+TBO4JuBsxgU/2H25ER5uvelUSh7DiaWc8p6uOUsgoD12QrEYoLmjzRDBWRdbEWu8C1M0w4d3VgVAm9/GcjygN0+CIK/gpjrwkL6TGNMXiT2yzUHx3A1pGp+MxSCmD3O65qMfxa7Xej9/c01CNjlgdvphl0sHngY4wEqAAE65jmKLO5NoLDfD7hnbDqSJcNP6lRxn6Pi8oJJzaZ+XAR4Kj6RefA/s3rSZZqSnkM44pPpHz2Oik9oru42hPA35vgSyA==
+sidebar_class_name: "put api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Update a mailbox"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"put"}
+  path={"/api/2.0/mailserver/mailboxes/update"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Updates a mailbox with the ID specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"mailbox_id":{"description":"Mailbox ID","type":"integer"},"name":{"description":"New sender name","type":"string"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Updated mailbox data","content":{"application/json":{"schema":{"type":"object","properties":{"Id":{"type":"integer","format":"int32","example":"1234"},"UserId":{"type":"string","example":"UserId"},"UserDisplayName":{"type":"string","example":"UserDisplayName"},"Address":{"type":"object","properties":{"Id":{"type":"integer","format":"int32","example":"1234"},"DomainId":{"type":"integer","format":"int32","example":"1234"},"Email":{"type":"string","example":"Email@only.com"}},"title":"ServerDomainAddressData"},"Name":{"type":"string","example":"Name"},"Aliases":{"type":"array","items":{"type":"object","properties":{"Id":{"type":"integer","format":"int32","example":"1234"},"DomainId":{"type":"integer","format":"int32","example":"1234"},"Email":{"type":"string","example":"Email@only.com"}},"title":"ServerDomainAddressData"}}},"title":"ServerMailboxData"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

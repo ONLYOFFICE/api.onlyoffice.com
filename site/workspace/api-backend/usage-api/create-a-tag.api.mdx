@@ -1,0 +1,71 @@
+---
+id: create-a-tag
+title: "Create a tag"
+description: "Creates a tag for the selected entity with a tag name specified in the request."
+sidebar_label: "Create a tag"
+hide_title: true
+hide_table_of_contents: true
+api: eJyVk01v2zAMhv+KwNMKCHUW7LDp1hUBVgwYhiY7FTmwMhOrsCVNott5rv/7QDlt0zaX+USYH3r56NUIjPsM5gZs6qqNxFsNmWyfHA9gbka46LkJyf1FdsF/I6wpSX0irEHDQ3JMsJ22GmrKNrkoZWDgMhEyZYWKca92ISluSGVqyTLVijw7HtSD4+ZQ4rEjlSNZt3NUK+dLQ6LfPWU+Bw2H8GuoBzAj2OCZPEuIMbbOFoHVXZbjR8i2oQ4l4iESGAi3d2QZNMQUIiV2lCU7C9mUmvHNDqtZZBmgn+ZkTs7vYdKC7gd2J/o2h3XeN5VPVskx+DwrWC4WJ0eA/u8dj47R8Gnx8f3cXx4P90k1SFVH3IQaDMSQCx3kBgxUGF21PF9U4ovxBZL5IJrQ8mOIMSTuvePh0WKms6niIjpTuqeUi3n61IKBhjlmU1VjEzJPZpTGCTTcY3J4284YJDfr3WHfMhhog8W2/J40SM/r9OfFl6WsemTYtQCZx5207TMojO47DaDBCZRmTmsol2Ze9xZKQvz6xX+rP9jFlt7654n/kTWO7OL8LhQJjqUVLkPXFXxqXYip69V6oy5+XgkZSnm+sFZeEcM0/QMc60nY
+sidebar_class_name: "post api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Create a tag"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/api/2.0/crm/{entityType:(contact|opportunity|case)}/tag"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Creates a tag for the selected entity with a tag name specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"entityType":{"description":"Entity type","type":"string"},"tagName":{"description":"Tag name","type":"string"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Tag","content":{"application/json":{"schema":{"type":"string"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

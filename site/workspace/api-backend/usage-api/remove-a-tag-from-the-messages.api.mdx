@@ -1,0 +1,71 @@
+---
+id: remove-a-tag-from-the-messages
+title: "Remove a tag from the messages"
+description: "Removes a tag with the ID specified in the request from the messages."
+sidebar_label: "Remove a tag from the messages"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVE1v2zAM/SsGz1qdZTtsvnVtgRXboWjTU5ADYzOxWttSJbqtZ+i/D5TttGmyYgOWQyBL/HqPj+yBceshW0KNukoX8rFS4ClvneYOsmUPpy2XxulfyNo03wkLcuLgCAtQ8OQ0E6zCSkFBPnfaihlkcE21eSSfYMK4TZ40lwmXlFyeJ95SrjeaikQ38c7RQ0uek40zdbyoyXvckj8BBRYd1sTkfKymwZogAy25teSxyCW8Tb7AbXJ5Dgp8XlKNkPXAnY2ODdOWHCjYGFcjD1ef5hAEwljJN1N04pObhqlhOaK1lc4jB+mdlyT9YXCzvqOcpWhnLDnW5OV1giPn/Tp/as+J2UyAk8tzD2qKhs5hJzCZav93EOJPYHhrGj9knM9mh4mH7hSJtD02KLL1r3jfrUTB59nHw8y3DY6CogLEqiYuTSGdbCN10s8MUrQ6nZ/M0ihMUWna6yKkbeNJzDy5x0kTrasgg5LZ+ixN+9J4DllvjeMACh7RaVxXAxnyNtS0wbaSgiuTYxWvgwLx2X/+Mvsa4byaihuhYQh3dDZ29KDVP6ibhFoOz2qS8J5vZEJ4vn5R4MUz1raifQUtZ6sgATcmJtIsBnBm6rptNHfJTeQlub64WSSnV5eCn5wfqK+QacLpucbY1LGaQRDjtB4M4tsBezUa/23QR9KYnjm1FepGCo2t7UdRLIVRUDA/mYGKG0vcZGcpyOJGGNSxUmOfl9D3a/R066oQ5PqhJSdbbfUii6igQns5F5BtsPL0DtrdZjla7tT4povCq1r5AgX31A1LK0j3ymmJ9uPD2RD+w0LcXxwPZjCoyeM0z8nyu7arV6N1dbsABetxrdWmEBeHT6Dif6zRRLRR1vGuhwqbbYtbsR1Cikhlevc1fh81Ph4E1FEW9uU+USL/guqoS98PExTCzn54+qPHbsZGwoWGEMJvQzBXOw==
+sidebar_class_name: "put api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Remove a tag from the messages"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"put"}
+  path={"/api/2.0/mail/tags/{id}/unset"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Removes a tag with the ID specified in the request from the messages.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"id","in":"path","description":"Tag ID","schema":{"type":"integer","format":"int32"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"messages":{"description":"List of message IDs","type":"array","items":{"type":"integer","format":"int32"}}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Removed mail tag ID","content":{"application/json":{"schema":{"type":"integer","format":"int32"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

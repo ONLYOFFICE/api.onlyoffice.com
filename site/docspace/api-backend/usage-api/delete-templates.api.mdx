@@ -1,0 +1,71 @@
+---
+id: delete-templates
+title: "Delete template files"
+description: "Removes files with the IDs specified in the request from the template list."
+sidebar_label: "Delete template files"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVk1v2zgQ/SvEXHJRbcfpSTcnToF0CxRIHeQQGA0tjSw2EqmSozheQf99MaRsWXa6MRZ7iZXhfHFm3hs2QHLtIH6CL6pAJ8bC/8IyAlOhlaSMvkshhhQLJFxgWRWS0EEEFn/X6OjapFuIG0jRJVZVbAAxLHIUmSpQ3M3dCCJIjCbUxIqyqgqVeM/jX461G3BJjqXkL9pWCDFIa+UWIlCEpTuQK024RgsRZMaWkoLoagpt9EEG+CbLqkCIny6nV5+Xbdu2fAdXGe3Qh5hOJqcXuTamQKnFqyxqjAXZGoXKBOUo9gUSyglXJwk6l9XFf7itWf3ChCCCyrJTUiGhXXYHmquQDl83MXUIcUZpCqVf3Bnl/UMiucXsQMuRVXrNfmUSynRy5KvrSFJ9bveC8o1J8SyDNgJSxP3ctejRyqpC28X+PLk8beaDljXlxqq/MfUuHCa1VbSF+KkB6ZKffP7zBVkAFmUKEWysIoRlGzVwjdKihfjJ/zer1F+43cve05dOJTv177Oa8un7it8r9DB7WrbL40G+x9K8ovPD7MRGUe6n727uhKswUZnCVCjthR0mRWZN6QXUAVYUyhHDoETKTQ9obrWkHGIYy0qNp6PJ2McZ0wHSHdpXtM4XqbYFxNCspMMHW7RwnO0PrysSozO1rgM+IIJXaZVcFWGcOuPQn0zWBff1xNM8HImH+2/c02XfrR+Mn+Bq2LN+vn1rTlw+OBQ3xrwoFGyEmjpoQgRalt7y0GEEis0Sb8JD2jV0Hycnqk6i3GpCK7amtqJ2aNmxkDoVlXRuYyy33jOAx7N3yJ67MTrH9UVQFs3Xx4VYmBfU7cXAafAVdR9fdtD5+rjgUMO5/ahms0GhmOpSJLSl0piK1dZP2cWsg5XXuRA5ytQn0BV1ELEraqfTRntg9CwkveA4k6AnssJsAgwGUYWnjgj4OIzG4emOVwZCP4O+0C4ej33UkdHF1mSZSnCUmDIIp+M9bUAExAU/39Sr++6YakfrMvW4lqmQfmsIMqKyhjAhTIVFZ2qbeOgFjojhkX8/0A7Et6OSvppecGO0DtR+VFQ+nYvu+BQWA+vzb82Dr3RmuL9vn5xaa0m1xY/HjUd6r874SUVm7FFeI8Hb3VdWlLUjsUJhViT9TL4q6YfyeUdoO9oYdORZoE4rozSNxB3xWDM8MRXSCSkC4nuy9Rh+PrjI86if7sP7HTFGGwEv/fv+qXQ7fIawfmZ8WbptNqsU8yVaFwpyNbocTbiMlXFUSr9su8BzT+E9x3vmPq5o079G/udV0jWS8I3GVSGVf5XUgdfDUnniLkME09GEkdml16+WZQS5ccSKzX6ltCz+XaPlJbzsV0fYozve4F3kOR9uwvU+LTgdVi/qMF9HDy/es8FiliRY0b/qLg825fz22+3ilum0e+qWnkzAyg0/g+UmbC/jCx4QzrIGCqnXtVyzbvDK88AzOIRB2DTdB99rd6S3hzkOF1O4Cf/le71r0TQBY2271w9Hf7TY83bQ5o7yQ/kfm7ouVA==
+sidebar_class_name: "delete api-method"
+info_path: site/docspace/api-backend/usage-api/api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Delete template files"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"delete"}
+  path={"/api/2.0/files/templates"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Removes files with the IDs specified in the request from the template list.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"description":"The file IDs.","content":{"application/json":{"schema":{"type":"array","items":{"type":"integer","format":"int32"},"description":"The file IDs.","example":[1234]}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Boolean value: true if the operation is successful","content":{"application/json":{"schema":{"type":"object","properties":{"response":{"type":"boolean"},"count":{"type":"integer","format":"int32"},"links":{"type":"array","items":{"type":"object","properties":{"href":{"type":"string"},"action":{"type":"string"}}}},"status":{"type":"integer","format":"int32"},"statusCode":{"type":"integer","format":"int32"}},"title":"BooleanWrapper"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

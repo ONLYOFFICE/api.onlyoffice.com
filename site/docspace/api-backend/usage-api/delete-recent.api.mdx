@@ -1,0 +1,71 @@
+---
+id: delete-recent
+title: "Delete recent files"
+description: "Removes files with the IDs specified in the request from the 'Recent' section."
+sidebar_label: "Delete recent files"
+hide_title: true
+hide_table_of_contents: true
+api: eJzNV01v2zgQ/SvEXHJRbcfpSTcnToF0i2bhOsjBNRpaGllsJJIlqaReQ/+9GFKyJTuNU2AX2IslDx9nhvPxhtqC42sL8QI+iAItGzL/hGUESqPhTih5k0IMKRbocIYJSgcRGPxRoXWXKt1AvIVESUcL8Ra41oVI/Mbhd6skyWySY8npzW00Qgxq9R0T0qMNmXECLa1mqkjR3KS2A+XG8A1EIByWXs7l5jaDeLFDCOlwjQYiwJ+81AVCfD6+eF9HO4R1Rsh1FwBWlcgc/nRQL+sIUrSJEZq8hhjmObJCWMdUxoJP7GZq6Z/Lka24pR+X5KwJwwAikFVR8BXpdqbCOoJMFPg/O4oo8I8PUkfA01SQOl783UlXxguLL5k7Vss0N7xEh8aSBSecd/ySW7wk3CzApk5BXZNFg1YraUNVjEcjevQNfVasLbro3yq/1upppHXcVfZKpV3sPnmZMiV3QXQxPsrmqZC28fmsrsLBZmirwkFNJ63COU/ZrCMohHx8tfxeP2NuMOugmsIj35OQg6Mln7oQmje6+GdxJPW/ic294VqjaXx4Pzo/rpg7ySuXKyP+wdSrsphURriNb0Buk2+0/u0RSQAGeQoRPBvhEJbUgJfIDRqIF/7fRIu/cLOTvYTnViQt/HZSuXz8MvBWo+fYxbJeHvbTDEv1hNa3rmXPwuW+c6mJrcZEZAJTJqQXts2WGVV6wVcIfP0VmEWfNOq+El2u9pROeecuhxiGXIvheDAaemND03K9RfOExvowVaaAGLbU4nemqOHQ3y8eS62ZiXUV5gdE8MSNIE7xddFsDhnKOFV2DEeapmGJ3c0+UVaX+3x9oXYOqvpZ21e6T86RyjuL7EqpR4GMNqF0DVMQ6/HS7+wqjEDQtsRvoXJtUrqzkzunj6xcS4eGbVRlWGXRkGLGZco0t/ZZGUq+JyRSsPIKSXNTSG9RfRbAbPvxfs7m6hFlfdZTGnRFzcuHtok+3s/JVL9yT8Vs0gsUE5alxOOlkJiy1cbX2dmkaSyPOWM58tQ70AS1Z7EJaoOpo11r7PmIe8GhJwHHskI9h0boWWWeRCKg5VAa3dWWYXpCX4M+0DYeDr3VgZLFRmWZSHCQqDIIx8MdcdDwooC/fauH++wo3U4ZnvrO5injSYLWMqeYNsph4jBlBq2qTIJ2xxIx3NPzBDpQX0sm+2h6wZWSMpD8QVBpdcqa5eO26O1++6mp8IXMFOX35zsr1pK7yuDpcqOS3sGpf1KWKXPg14DRNcNHlpWVdWyFTK0c9zX5JLgvyoeWzVra6GXkgaFMtRLSDdiNo7Km9sSUccs4Cx2/p1vfww+dgzwM9tXdPd8BY9QR0B1ktr8sX7cXgd5ld0HXgqhzkVt2ro/HizWZyZSPZjMOJ1oQzaKxIY4Xg/PBiKKvlXUl99O68XfqaZ8Feg+D5TANnQv9fzGBmhKgwwx1wYUkR6swEcIsWlB9QATjwQhCKKz/6PATaRlBrqwj1HY3iWoS/6jQ0PRe7idOGMAt3dAI86MCmtvDuzn5QvCiCmV5cH2kAR12TJIEtXsVu+xM1+n1p+v5NbFw841Ueg4Cw5/pKPw5DD3lQx6IgWRbKLhcV3xN2KDV3xcrCku3e8KAal46nxBcbro+9udZOAn9dj4p+ju229Cadb3Dh6Xf7tjRfUBTOpd1Xf8CWr7xkQ==
+sidebar_class_name: "delete api-method"
+info_path: site/docspace/api-backend/usage-api/api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Delete recent files"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"delete"}
+  path={"/api/2.0/files/recent"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Removes files with the IDs specified in the request from the "Recent" section.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"folderIds":{"type":"array","items":{"anyOf":[{"type":"integer","example":1234},{"type":"string","example":"some text"}]},"description":"The list of folder IDs of the base batch request.","nullable":true},"fileIds":{"type":"array","items":{"anyOf":[{"type":"integer","example":1234},{"type":"string","example":"some text"}]},"description":"The list of file IDs of the base batch request.","nullable":true}},"additionalProperties":false,"description":"The base batch request parameters.","title":"BaseBatchRequestDto"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"No content","content":{"application/json":{"schema":{"type":"object","properties":{"response":{"type":"object","properties":{"statusCode":{"type":"integer","format":"int32","example":1234}},"additionalProperties":false,"title":"NoContentResult"},"count":{"type":"integer","format":"int32"},"links":{"type":"array","items":{"type":"object","properties":{"href":{"type":"string"},"action":{"type":"string"}}}},"status":{"type":"integer","format":"int32"},"statusCode":{"type":"integer","format":"int32"}},"title":"NoContentResultWrapper"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

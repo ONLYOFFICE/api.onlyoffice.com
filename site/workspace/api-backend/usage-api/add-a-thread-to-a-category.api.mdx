@@ -1,0 +1,71 @@
+---
+id: add-a-thread-to-a-category
+title: "Add a thread to a category"
+description: "Adds a thread to the category with the ID specified in the request."
+sidebar_label: "Add a thread to a category"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVm1v2zYQ/ivCfVoBJZaVbF0EDIObZFgwtAtiBwWa+sNFOltsJJElqTiaoP8+HCk5svOybqs+GPTxntPdc29qweLaQHIDqSzLuhK2mfwmdV0aWIZgKK21sA0kNy3MaptLLf5CK2T1O2FGmnGaMIMQNlpYgmW3DCEjk2qhWA0SmGWZCTCwOSsGVgY2pyBFS2upm2AjbO4kF2eBUZSKlaAsEJWTafpak7GHEEJ/fCezBpIWUllZqiwfUalCpM6pyRfDr2zBpDmVyCfbKIIE5O0XSi2EoLRUpK0g48z0blxk/G/X79PBxYuz4IeDabCSOsCgos3W+TcQDvZFZWlNGrpwa/MDlvSK1Yqvt3hjtajWDPc8PQ9eeA5fh56NIS9YGAufGHIPM26UrIwnKo6ip8ZmWUZZn1gIv1dOfC72eA1hJXWJ1ouOYgiBHrBUBStNI45+IWxBI2gfzlhxkVPgGWDAHlEvw+buMATahXCqCS1lr6PiKI4OpvFB9HYxPUp+/CmJ4sOj+PhkevL2Exu5Vtn/N3JFKVV2IZVI/wNv8dHxnpFvIHFgg9VHcbxr/mVqt6a3Hta1yHZeFfXPwTM/w+MyKYwqcNtxL/v+XtxR8AmrBq25E99YNe+xwr63Z/doUc9LLIrXMbUueNQZ1gzQoRh/qeVKFHSt/wH++fPkUsusTq3hI0lVkJcx/BCNevi1NqR/wawUlTBWo5UauG2tDwjOS1XIhuijRkW7V26++z7gW3/NCsfR9GmXX1fYD37KnJmSbC4zSEBJ43KMNocEJqjEJD6MJo+LZMUvAl4j+p60cVuk5tght1aZZDJpc2lsl7RKattBCPeoBd4Wvlz4zvuzwrrgCilkioUTdyEwZvf65+gk5lBGm2vOU8ebe3Z/bbOASvxBDYQgOOjcX4fgZm2yi3Us8Fi7elxK50PudpdKtL8PHrM9HvT70p3RNJrwolpJ53OfydOB6mDuKA6uzueLYHZ5wVSSNh5foKWBMmNLdONuCCzLdpYzbrcb7C3y0dL9Tju9Z97Sg52oAkXFLta+N3xR3XBaIIT4MHILpo/WD4265E8UXyQ30La3aLizuo7FX2vS/NmyfKwp/teFQ2q5Fu+ocSS6sA4W7A6rF7UviL0d1oUDYpampOyrustRn1z+OV9ACLf9t0spM8Zo3PB3DW4gAQhBOppdoTpZCwVW6xrXrOttctlxL+5W7Z2r2v7AUQ1XVTPycLeAwz4Q/uWwnoW0re+Jrtvq+6sXEduu8dqc0GXXdX8DGtGB/A==
+sidebar_class_name: "post api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Add a thread to a category"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/api/2.0/community/forum"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Adds a thread to the category with the ID specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"categoryId":{"description":"Category ID (-1 for a new category)","type":"integer"},"categoryName":{"description":"Category name","type":"string"},"threadName":{"description":"Thread name","type":"string"},"threadDescription":{"description":"Thread description","type":"string"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Added thread","content":{"application/json":{"schema":{"type":"object","properties":{"Id":{"type":"integer","format":"int32","example":"10"},"Title":{"type":"string","example":"The Thread"},"Description":{"type":"string","example":"Sample thread"},"Created":{"type":"string","example":"2020-12-07T13:56:02.3249197Z"},"Updated":{"type":"string","example":"2020-12-07T13:56:02.3249197Z"},"RecentTopicId":{"type":"integer","format":"int32","example":"1234"},"RecentTopicTitle":{"type":"string","example":"Sample topic"},"UpdatedBy":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"}},"title":"ForumThreadWrapper"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

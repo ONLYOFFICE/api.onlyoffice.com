@@ -1,0 +1,71 @@
+---
+id: search-pages-by-content
+title: "Search pages by content"
+description: "Returns a list of wiki pages with the content matching the search query specified in the request."
+sidebar_label: "Search pages by content"
+hide_title: true
+hide_table_of_contents: true
+api: eJy9Vdtu2zgQ/RVinhlLcXoVsFik3WBbtLsI6gQF6vphLI0t1pLIklQSraB/Xwwl+ZK48Vv1INMkz/DM6MxhCx7XDpI5pLos60r5JvqqNgoWEhyltVW+gWTewmXtc23Vf+iVrj4QZmQZZQkzkHBvlSdYdAsJGbnUKsPbIIEv5GtbOYGiUM4LvRL3aqOEwTU5ca98LnxOItWVp8qLEn2aq2odJh2hTXPxsybbCGcoVStFmVBVWLX0sybnJyDBoMWSPFkXmFZYEiQwxAQJiokY9Dk8ZjfbOwIkuDSnEiFpwTeGYzhvVbWGjvOy5IyuHDlen8Yx/xxG+zxkGJIDuWWQtIDGFCoNtYt+ON7dPj0NrUWmoTyVbm9eL39QyokYqw1Zr3oO/4Y8H3OVQA9YmoKnrnFNIpSjk/B+x+YEYuTdSbg1GXrK3jWn6XzMjoVeaVuihwTqWmUHR8XDc3bkNT5M4S/lTIHN6Wz/URsS37Bq0LuNYuiN8sUpEFa4Jsu7L+/Qo52VWBTPY2pbCK+F450CA4rx11avVEG39gT8+/fo2uqsTr3jIWlTUD/H8Ak68/Bn7cj+gVmpKuW8Ra8tdJ0E3ycEV6UpdEP01aLpyQ8f6vmTp/E0PjufnsVvbs5fJxevk/hicnH+6sXbVy+/HcRnGXDsEJwfCS/i86eKv61wsAXKQoCSfK4zSGBNQSHcdAlEaFQ0ncTRzmPYBaK+w6NlMyguaodBx81I9m5s6ZprCrn3xiVR1Oba+S5pjbZh5x1ahcuilyGv9URXWBesvEKnWITpTgJjDpffxG+nnOSe4c24M/twR21v17FGfaJmtJi8X5ajAx1gQ3lUtdIBPtT5/VgPMQvZii9Xsxtxef2RsyLr+ioX6Glk73yJwT2GMwYH6/102Yid6x18qXZnRr/Fkof6eHrwkSlQVcy+7jujF8WciwcSppM4WOVQCL5L+Prhj8FngYStPEBCMg4XcvjSc2jbJTpuu67j6d7Mk/liJ4ygoUw5HmeQrLBw9EyBHt0KR3MZBVA1QYBFzf9AwoaavbunW3RylAVz6Fcv05SM38M9uR1YjNtW+vvqBiRwox0qbxOUNww4+lFOhyIcCfK7k7+AtG2v667b7u+XfonYKr/fzSVadF33P/tL1oE=
+sidebar_class_name: "get api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Search pages by content"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/community/wiki/search/bycontent/{content}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns a list of wiki pages with the content matching the search query specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"content","in":"path","description":"Search query","schema":{"type":"string"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"List of pages","content":{"application/json":{"schema":{"type":"array","items":{"type":"object","properties":{"Name":{"type":"string","example":"Page name"},"Content":{"type":"string","example":"Page content"},"UpdatedBy":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"},"Updated":{"type":"string","example":"2020-12-08T17:37:03.3164965Z"}},"title":"PageWrapper"}}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

@@ -1,0 +1,71 @@
+---
+id: get-entity-files
+title: "Get entity files"
+description: "Returns a list of all the files for the entity with the ID and type specified in the request."
+sidebar_label: "Get entity files"
+hide_title: true
+hide_table_of_contents: true
+api: eJyVVFtv1DoQ/ivWPB2E26TbPZRGQqjQIqoDqOpFSHT7MCSzjcGJfexJISz572icXbqF0hV+iBzPfN/cZwGM1xGKSyhDk70yliJcaYhUdsFwD8XlAg46rl0w35CNa18TVhQEEAgr0PAlGCa4Gq40VBTLYLyoQQGnxF1oo0JlTWTl5gqtVVyTmosZNXch/VHLhnv1xXCd/o8PFbaV4t6Tip5KMzdUKdMmYaD/O4q8DRqW1xeu6qFYQOlappblit5bUyZ3s09RnFlALGtqUG5CDAW4j5+oZNDgg/MU2FAU6ejNedJZ/BLR0ehpItArnsjBtNcw6CXUVH8EHh/ewkzLdE0BhnQkmuhdG0cnJnn+O8mbZRZT9kD/dcAYAvagwTA1cXMi3mFDa1rLMDXQV2y8lSfpFtWK2qDhwlfIVL3oNzMfV/fxzl1okKGArjPVHTv58mzd81kdceHQRG+x3+z4W/OZ1Adse+T42Qj03LDdBMIWU8E0HNwgYzhr0NqHMV2wip2KoqkwoQR/EpwU8SJsgM9m2UlwVVdylCs5b2l8E/g2Rv/1eRcpPMOqMa2JHJCdtJQGHgOCo8Zb1xO9D+hH55eFetjyJJ/kWzuTrfzp+c5esbtX5Lvbu9PJdP/fvQ9C8saN3fYwy3Q2m82mT+S71itr3smreOZXg6Bhmu/83voXLS53EFWJoCGuXQUFXFPqL+QaCsjQm2yynWeyyxa3k1z8I7OCJX933rvAXWu4/15ipEfDSs9UxWW+tX/1eMhWAxYp3FCIaQd2UiuomX0ssmxRu8hDsRCyATTcYDD40Y7tLbIxhDl2VjrauhJteh40COau+Gm+P5Hw1/bumQzvSHfv9r0dam/+ozTVkqd6FGtImS7uYlPiZDuc3i7Oo1Wt7i6+tWL+3Gn5IEbmLhlf1u+la5qUTHWWcqVOj87O1cHJseSEQhyrZ5FJYh9+ANZpMlI=
+sidebar_class_name: "get api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get entity files"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/crm/{entityType:(contact|opportunity|case)}/{entityid:[0-9]+}/files"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns a list of all the files for the entity with the ID and type specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"entityType":{"description":"Entity type","type":"string"},"entityid":{"description":"Entity ID","type":"integer"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"List of files","content":{"application/json":{"schema":{"type":"array","items":{"type":"object","properties":{"Name":{"type":"string","example":"File name"},"UpdatedBy":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"},"Updated":{"type":"string","example":"2020-12-08T17:37:03.3424957Z"},"Location":{"type":"string","example":"4\\\\46\\\\File name"}},"title":"FileWrapper"}}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

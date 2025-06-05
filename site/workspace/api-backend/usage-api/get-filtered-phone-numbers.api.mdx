@@ -1,0 +1,71 @@
+---
+id: get-filtered-phone-numbers
+title: "Get filtered phone numbers"
+description: "Returns all the available phone numbers matching the parameters specified in the request."
+sidebar_label: "Get filtered phone numbers"
+hide_title: true
+hide_table_of_contents: true
+api: eJy1VE1P20AQ/SvWnLc4jXpofaMIUVSpRSRwQTlM7CFeWO8uu+NAavm/V7N2QgJppR6aQ7Te+fB7b964A8ZVhOIOytDkt+7yChYKIpVt0LyB4q6D05ZrF/QvZO3sN8KKguQHwgoUPAfNBIt+oaCiWAbtJQ0KuCZug40ZGpNxTRmuURtcGsp87Sxltm2WFGLWIJe1tquU5DFgQyz30VOp7zVVmbYpFuippcgnoGA8fnXVBooOSmeZLMsRvTe6TFDzhyhAOohlTQ3KiTeeoAC3fKCSQYEPzlNgTVGiA6J5yunesPmRYllqoLZ9tGVaUYBegY7uzLWWw+bMVUfqL2c/s3JIyErJ2DWJHLRdQZ9+Qi16Z+OAaDqZvG91tS8fqH9mjyHgBhRopiYeU4U1G7m4ddqnl8GI7dPk43s4NxZHg1AFktUQ166CAlaUNEauoYAcvc6nJ5NcfLZ22ucjg3xnDBDjhbWwEt+1wUABNbOPRZ53tYvcF513gXtQsMagpSgxkNiA7B5bw1CAcSWadN0rkJrD8OfJl6mw2vP6THQa2h11/Kt+Xn+nJKDQr4ewAouNRA9qkx4yiOtXw56/YOMNvTXc5L2HdtaQV927BGEczZlrmtZq3mSzpFh2fT6bZ6dXl6IMhTiMxiDTVoHIDSY/jDgviLN7bZgCVYcbCW82eW+//utSj/IyvXDuDWorwJMJutFEd6I9KJieTMT3oRG2TntRf4f91U4LNRrjDrpuiZFugul7uX5qKcjHbfHqI3nq1Xac4r9H2iSlE/cP82Hz12jawQRvNq1X24rTsiTPf81d7G3JxfkcFCzHT1kzTD7gs3zm8BkKAAUujSJ5M911YNCuWlxJ7tBSnCaLeGjUx2TU8SCktiG72QN46Fk18pB/YXW0pOuGNej7Xf4Q+mPFblGGbBnvou/738BCP3M=
+sidebar_class_name: "get api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get filtered phone numbers"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/crm/voip/numbers/available"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns all the available phone numbers matching the parameters specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"numberType":{"description":"Number type","type":"integer"},"isoCountryCode":{"description":"ISO country code","type":"string"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Phone numbers","content":{"application/json":{"schema":{"type":"array","items":{"type":"object","title":"VoipPhone"}}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

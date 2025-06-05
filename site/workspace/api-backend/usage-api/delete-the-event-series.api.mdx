@@ -1,0 +1,71 @@
+---
+id: delete-the-event-series
+title: "Delete the event series"
+description: "Deletes the event series from the calendar."
+sidebar_label: "Delete the event series"
+hide_title: true
+hide_table_of_contents: true
+api: eJyVU8tu2zAQ/BVhz0Tkuj20ugWNgQbtoaiTk6HDRlpHjCmKJVdJXYH/XiwlOXacBOhFD3JnHzOzAzDeByg2UKEhW6PPV49kOUCpIFDVe817KDYDXPbcdF7/Rdad/UZYkxeYJ6xBwZPXTFDGUkFNofLaSRgUcEWGmELGDWUkmbNAXlPItr5r0+lc+AIUOPTYEpMPqabFlqCAhLuWMlpSOuQGXtZJXWfXV6AgVA21CMUAvHeC15bpnjwo2Ha+RR6PPi4hSr+egutsoCCI5WIhr9PcNxh2GT6h5pSk6iyTZYlD54yuEiX5Q5Dg4bx8d/dAFUOMMSr4tPhwXuDW4sQu1SBRLXHT1VBAnehLzHADBeTodL68WOQHuRI5IR8mkqIQQP5xprD3BgpomF0o8nxousCxGFznWSIf0Wu8M+Pscjf2tsXeCEumq9Ck46hAMKfXnxdfhMN4ZJW1DD+me9UwB1LQ6e+0nyVtxms1K36CTYxou+0SXLORiK9d2/ZW8z5bp2mzX6v1TXb581qmIh9GYg0yzd0HbjEJNNUYnXlmzJfOGp71/k8zT5My/eHcGdRW+kh6DJOcG6EBFCwvFuKrCQtqdLy0UszeL9WkzwaG4Q4D3XoToxz/7snLipbPciblax3ku4ZiiybQO2Md7c6rPc+S2X2yjOnlDxTsaH+0nbGMahZS6o+3l1VFjo9wZysj9jn4/Wr1Y3WzAgWyEKd22SW7TB9S4NW2Tp0z9yjPqN6ADMNoxhgP8ePVm4iDXcdoYamMMf4DGffMtA==
+sidebar_class_name: "delete api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Delete the event series"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"delete"}
+  path={"/api/2.0/calendar/events/{eventId}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Deletes the event series from the calendar.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"eventId","in":"path","description":"Event ID","schema":{"type":"integer","format":"int32"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Task awaiter","content":{"application/json":{"schema":{"type":"object"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

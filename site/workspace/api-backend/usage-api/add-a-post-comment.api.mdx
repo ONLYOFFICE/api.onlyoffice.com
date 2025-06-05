@@ -1,0 +1,73 @@
+---
+id: add-a-post-comment
+title: "Add a post comment"
+description: "Adds a comment to the post with the ID specified in the request. The parent comment ID can be also specified if needed."
+sidebar_label: "Add a post comment"
+hide_title: true
+hide_table_of_contents: true
+api: eJztVttu4zYQ/RViXgoEiu04vQpYFLksUKPt1lg7KLCJH8bi2OaGIrUklUQV9O/FUFJsx27SBfpYPQgSOWc0c2bmUDUEXHtIbyGzeV4aFarhpbZrD4sEPGWlU6GC9LaGizJsrFN/YVDW/EIoyTHMEUpI4NGpQLBoFglI8plTBZtBChdSeoGCvZMJIlgRNiQK64N4VGET3ybXwheUqZUiKZSJa46+lOTDQMzZHB2DeyeTa5GhEUsSqL3dxa6EIZIkB3fmzpycfLCBTk5SMSMjOycT+W7UXadHbv0lrBPSmm+C8IxVQWAQqDV/orKleEQT+MHtZrYkYbvorQ1C0wPpASRQoMOcAjkfmTSYE6TAHCjmTjFPBYYNvCRvyjRNriEBn20oR0hrCFXBaB+cMmtIYGVdjgFSKEsloeEKdNxdWlkxIrMmkAn8iEWhVRZLOPzs+Rv1oWu7/ExZ4LidLcgFRf6Fm/0or3oG6IlR+wE2Mf1I/CFy+rKuh/B4cUq+sMa3kYxHo0NfvykfhF21rdV59JD8V9nPObkj9NMT5oXmpWyXhiaBK0cYSL4OGo/Go9Oz8enofD4+S8+/T8/OB6Pz8Xdn4x8+sZObQr7tJHvLy+Sog/3O+SqHXW6X1dvEfe23/810cgjXyhcaqw9xmF5j53d1T+ITmgqDv1cMnaug3wKhwTU5tr54wIBulqPWr2NKp1kFPFsKjCjGT51dKU037g343d1w6qwss+D5kWyhqV1j+AB98fRz6cm9Q5kro3xwGKwDno7QJgTv80LbiuhPhwXtb7Gos5x0w8oWrQkbfTs6OxyoG4Od5JOMrnIKGys75YqyFjaQwhALNRwPRsPtCbLUdj2sW4Frht1gsIqRe+hVsGQ+YBNC4dPhsN5YH5q0LqwLDSTwgE7hUrctxHttfCssNXeNthnquMz6Yt2L7R9HP405tZ0zbMZz3ro7epI9VwYL9StVvSxv2u2kF+09bGSFheTjVnDf9/XcEcxttbdSuKOPyqxsDKAr1VXPo5hFvsTH97O5uJhOmBdyvi2PxkB9/j7kGNWsj1JKgXtK+PJo2Y3u/yP6+dRh7R4WGpVhYst2ZNs+v+XOgATGg1E8VboaQQLc7ZBA+nyg95wvkq51b6Gul+hZA5qGl7+U5Pi3arHt9DgUUnl+lpCuUHt6pWjbX4OjoffNbKo4TLrkN0jgnqrtr0ezaJK+w/nr7eZV+43TObvYgg8OzybpERdZRkV41XaxIx/TP2Zzpq37PcmtZIzDR0jiPQZqY85xXuNaDRrNusQ127Y+efpYovaH9z4Ob/fAWR2lYn+Oe174zmkdhdR1Kw1N82zfbv0j4lk8WmuuzKJpmr8B3YPQgQ==
+sidebar_class_name: "post api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Add a post comment"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/api/2.0/community/blog/{postid}/comment"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Adds a comment to the post with the ID specified in the request. The parent comment ID can be also specified if needed.
+
+**Note**: Send parentId=00000000-0000-0000-0000-000000000000 or don't send it at all if you want your comment to be on the root level.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"postid","in":"path","description":"Post ID","schema":{"type":"string","format":"uuid"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"content":{"description":"Comment text","type":"string"},"parentId":{"description":"Parent comment ID","type":"string"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"List of post comments","content":{"application/json":{"schema":{"type":"object","properties":{"Text":{"type":"string","example":"comment text"},"Created":{"type":"string","example":"2020-12-03T21:36:13.0325127Z"},"Updated":{"type":"string","example":"c2020-12-03T21:36:13.0325127Z"},"Id":{"type":"string","format":"uuid","example":"c2020-12-03T21:36:13.0325127Z"},"CreatedBy":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"}},"title":"BlogPostCommentWrapper"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

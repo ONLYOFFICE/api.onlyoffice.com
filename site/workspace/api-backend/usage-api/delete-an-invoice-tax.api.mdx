@@ -1,0 +1,71 @@
+---
+id: delete-an-invoice-tax
+title: "Delete an invoice tax"
+description: "Deletes an invoice tax with the ID specified in the request."
+sidebar_label: "Delete an invoice tax"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVN9P2zAQ/leie51L0pRpEGmagFZaNW1DUDSJHw/X5EoMju3ZF2hW5X+fnBRoBaJ7mB8sy77v7rvz3bcCxlsP2RXkroqn+sHInDzcCPCU105yA9nVCo5qLo2Tf5Cl0V8JC3IB4wgLEPDoJBPctDcCCvK5kzaYQQZjUsTkI9SR7F1HjMvoUXIZcUnRdBx5S7lcSCoiqbs7R79r8rwHAtbHY1M0kK0gN5pJcziitUrmHZv4zodYK/B5SRWGEzeWIAMzv6OcQYB1xpJjST68yiLs20RnuIymYxBPUKmZbslB263AxFujfe8gTZLXHqYv+YH4X1R/YEUbVp6d1LcggJZYWRWuOotWwHiTzHuATcNWwBnyZgRdV3NyIGBhXIUMGRSmnivactFhWgEnjpDp546AaZImg2E6GO7P0jQbjrL94d7H0aeDdDS6fPFy3OyuxrR4K9Iz07qWxVbkZL0Gb2xPq6ud9FZhs7vY3+U9RZeoG2R/LwN0JlntAqHGrpUEHD0gozuvUKn3MbVTEZvIB8sIO1TAnzqzkIou3A749XV86kxR5+zDkYxV1N8F+B56u/xSe3Kfsaiklp4dsgnNLoD7hGBSWWUaol8ObU/+BPWkkLwReW6MItRbodnVtLbuh/8f7afjDcOn6dv4XKl5lG4hh+lof4vyegJnuAyk7Xp6Bewnw9fjeqFxLWlUdF4q4tIUoeF72gIscgkZxGhlnO4lcRDItYrFjMt4JYvsKhkc3nxoIcileyDnO7WswwdByWx9Fser0nhus5U1joPlAzqJc9X3dHjr2S2wViFTZXJU3XUrIGC2nw+SwzQktqHQ50FNendv6vRzXdHKb9SAABlKUPbPAnTX+NvYriZBrs5eNHjyVPteQ5M2OFqYLsD6D05MVdVachOdd/WIzibns+jodBryJuf74itkCvm1fwFp9zAj
+sidebar_class_name: "delete api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Delete an invoice tax"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"delete"}
+  path={"/api/2.0/crm/invoice/tax/{id:[0-9]+}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Deletes an invoice tax with the ID specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"id":{"description":"Tax ID","type":"integer"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Invoice tax","content":{"application/json":{"schema":{"type":"object","properties":{"Name":{"type":"string","example":"Name"},"Description":{"type":"string","example":"Description"},"Rate":{"type":"number","format":"double","example":"Rate"},"CreateOn":{"type":"string","example":"2020-12-14T22:13:41.5378233Z"},"CreateBy":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"},"CanEdit":{"type":"boolean","example":"true"},"CanDelete":{"type":"boolean","example":"true"},"ID":{"type":"integer","format":"int32","example":"1234"}},"title":"InvoiceTaxWrapper"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

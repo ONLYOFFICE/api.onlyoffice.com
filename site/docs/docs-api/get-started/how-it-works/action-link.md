@@ -25,13 +25,15 @@ The reference figure and the steps below explain the process of working with lin
      const ACTION_DATA = event.data
      const link = GENERATE_LINK(ACTION_DATA)
      docEditor.setActionLink(link)
-   }
+   };
    
-   const docEditor = new DocsAPI.DocEditor("placeholder", {
+   const config = {
      events: {
        onMakeActionLink,
      },
-   })
+   };
+
+   const docEditor = new DocsAPI.DocEditor("placeholder", config);
    ```
 
 3. In order to give the user the link to the document which contains a bookmark, the software integrators send the link to the [setActionLink](../../usage-api/methods.md#setactionlink) method:
@@ -51,11 +53,13 @@ The reference figure and the steps below explain the process of working with lin
 When the user follows the link, the **document editor** sends the initialization *editorConfig* to the **document editing service**. The ACTION\_DATA received from the [onMakeActionLink](../../usage-api/config/events.md#onmakeactionlink) event is specified in the [data.actionLink](../../usage-api/config/editor/editor.md#actionlink) parameter of the *editorConfig*:
 
 ``` ts
-const docEditor = new DocsAPI.DocEditor("placeholder", {
+const config = {
   editorConfig: {
     actionLink: ACTION_DATA,
   },
-})
+};
+
+const docEditor = new DocsAPI.DocEditor("placeholder", config);
 ```
 
 > The link is generated in the same way when [mentioning](./mentions.md#how-this-can-be-done-in-practice) users in the comments.

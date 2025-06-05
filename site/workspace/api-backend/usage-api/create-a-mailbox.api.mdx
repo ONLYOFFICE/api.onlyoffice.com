@@ -1,0 +1,71 @@
+---
+id: create-a-mailbox
+title: "Create a mailbox"
+description: "Creates a mailbox with the parameters specified in the request."
+sidebar_label: "Create a mailbox"
+hide_title: true
+hide_table_of_contents: true
+api: eJzlVk1vGzcQ/SvEXHphLUXJod1TXdtAjaKtETsnQwhGuyMtk12SIbmRt4v978GQlHflyC4apKfqIFGcN8P5eOTMAAF3Hop7aFE1ntxncos/UDUb80Ae1hI8lZ1ToYfifoDzLtTGqb8xKKN/I6zIsa4jrEDC3qlAsB7XEirypVOWYVDAhSMM5AWKNpkWexVqEWoSFh22FMh54S2VaquoEkpHmaNPHflwBhLy8ldT9VAMUBodSAdeorWNKqNDiw+ejxvAlzW1yKvQW4ICzOYDlQEkWGcsuaDIs1RjS/x77G0OX0SpPJjwwSm9g1FCY0ps3lt04XndiBERc8JCZVpU+r2qnjeQIOL6ctJXOtCOHBvoPLmT6u88uSOl6VBtgtr2F51zOXPHmrc5+17sawo1ORGMSDqxGGVSFHz0D14QV5KhelZV5UUZS10J41h58mNjTEOoJ0dunNmq5kT6/6UjNtn5Flfih7nlrdE+UWK1XL5QFAwo0HtTqmj5kcWBNGo+4jsR87qaYQ51l7A1rsWQtl6vQAI9YGs5ifBq9foNJ5cJcKSdCTDHZkxGXypvG+z/zHfhZbU5eJRwXlWOvP8vA7qMF+Hb9a+YES8HFiG/GN30Z6VpgTkRVIii2/giJh9ysJcYkA3/c8Ies9QozPTKYHQOe5CgArX/x+x9DcpX7CAeJbxZvjrxvmnMLYiqeFRLoTYVFGCNj4nDUEMBC7RqsTpbLmZtrT20tQVW3K7Sto+NrXMNFFCHYH2xWAy18WEsBmtcGEHCZ3QKN00qBsuSY1vsGk5ffOzj9iiBdY7FPy1/XnFMs2Z6y+9AMneypU5Esep3ikzh6OsklrlxHevGdPBD83bqlVeHKh163VTAeRebdmedaTlrMxPgSRcJrqOvXnTeHNnlrYmh5EJfmLbttAq9SCUXb69u78T5zTVnmJxPFW54UsiZ9KFFPXM+zRHTKw9PBo3ZYPAdZo5cgkAPYWEbVLF5RaIMmWb3XB+QsDpbgpxNUPlPmqEkMN3WMhPnHoZhg57euWYceftTR46nq/XEM/43ykO5mZ8fqY8ZjNH9eMeeMbzpEkmedJpRHjTOy5JseBG7nl2im79u70DCJo9ZralYx+GeRzDcQwEgwcRsR/LGvQEa1LsOd4xNNpmKfFGPmfwxMjkvOKqDSPczD49JLXMg/M1hnVQZhnRPxvERn0TPajzepITm2q7HcfwC98LKAw==
+sidebar_class_name: "post api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Create a mailbox"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/api/2.0/mailserver/mailboxes/add"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Creates a mailbox with the parameters specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"name":{"description":"Mailbox name","type":"string"},"local_part":{"description":"Mailbox local part","type":"string"},"domain_id":{"description":"Mailbox domain ID","type":"integer"},"user_id":{"description":"User ID","type":"string"},"notifyCurrent":{"description":"Specifies whether to notify the current user's email when a mailbox is created or not","type":"boolean"},"notifyProfile":{"description":"Specifies whether to notify the current user's profile when a mailbox is created or not","type":"boolean"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Mailbox data associated with the tenant","content":{"application/json":{"schema":{"type":"object","properties":{"Id":{"type":"integer","format":"int32","example":"1234"},"UserId":{"type":"string","example":"UserId"},"UserDisplayName":{"type":"string","example":"UserDisplayName"},"Address":{"type":"object","properties":{"Id":{"type":"integer","format":"int32","example":"1234"},"DomainId":{"type":"integer","format":"int32","example":"1234"},"Email":{"type":"string","example":"Email@only.com"}},"title":"ServerDomainAddressData"},"Name":{"type":"string","example":"Name"},"Aliases":{"type":"array","items":{"type":"object","properties":{"Id":{"type":"integer","format":"int32","example":"1234"},"DomainId":{"type":"integer","format":"int32","example":"1234"},"Email":{"type":"string","example":"Email@only.com"}},"title":"ServerDomainAddressData"}}},"title":"ServerMailboxData"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

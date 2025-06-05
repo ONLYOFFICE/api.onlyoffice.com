@@ -1,6 +1,6 @@
 # SetHighlight
 
-Specifies a highlighting color which is added to the text properties and applied as a background to the contents of the current run/range/paragraph.
+Specifies a highlighting color which is applied as a background to the contents of the current run.
 
 ## Syntax
 
@@ -22,12 +22,16 @@ expression.SetHighlight(sColor);
 
 ## Example
 
-This example specifies a highlighting color which is added to the text properties and applied as a background to the contents of the current run/range/paragraph.
+This example specifies a highlighting color which is applied as a background to the contents of the run.
 
-```javascript
+```javascript editor-docx
 let doc = Api.GetDocument();
-let textPr = doc.GetDefaultTextPr();
-textPr.SetHighlight("lightGray");
 let paragraph = doc.GetElement(0);
-paragraph.AddText("A sample text highlighted with light gray color using the text properties.");
+let run = Api.CreateRun();
+run.AddText("This is just a sample text. ");
+paragraph.AddElement(run);
+run = Api.CreateRun();
+run.SetHighlight("lightGray");
+run.AddText("This is a text run with the text highlighted with light gray color.");
+paragraph.AddElement(run);
 ```

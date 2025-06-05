@@ -1,10 +1,15 @@
+---
+sidebar_custom_props:
+  icon: /assets/images/editor/connectors/nuxeo.svg
+---
+
 # Nuxeo integration
 
 This [plugin](https://github.com/ONLYOFFICE/onlyoffice-nuxeo) enables users to edit office documents from [Nuxeo](https://www.nuxeo.com/) using ONLYOFFICE Docs.
 
 ## Features
 
-- Currently, the following document formats can be edited: DOCX, XLSX, PPTX, DOCXF, OFORM.
+- Currently, the following document formats can be edited: DOCX, XLSX, PPTX.
 - The following formats are available for viewing only: PDF, ODT, ODS, ODP, DOC, XLS, PPT.
 - The plugin allows multiple users to collaborate in real time and to save back those changes to Nuxeo.
 

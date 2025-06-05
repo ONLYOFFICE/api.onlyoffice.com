@@ -1,0 +1,71 @@
+---
+id: get-a-user-by-id
+title: "Get a user by ID"
+description: "Returns a user with the ID specified in the request from the current portal."
+sidebar_label: "Get a user by ID"
+hide_title: true
+hide_table_of_contents: true
+api: eJytU8tu2zAQ/BVhz0TkGj20uhlNkBq9FHFyMnSgpXXERCIZcpVUJfjvxVKSHddOT73owX1wdmY2AMlHD8UWrHEk2/zBo/NQCvBY9U7RAMU2wKqnxjj1W5Iy+jvKGh3XOJQ1CHhzihDKWAqo0VdOWU6DAu6Qeqd9JrPeo8veFDUZNZitrzNvsVJ7hXWmdDpz+NKjp2zvTJcOqt451JSNwK5AgJVOdkgMkEFp2SEUwK3X1yBA8ZVWUgN/4+ChspTjqwY7CUUAGixXe3JKP4KAvXGdJO7XqxoiD+PQW6M9es5fLhb8Om8MAiqjCTVxXFrbqirxlD95Tgrnl5rdE1YEAkhRi1Oftd4biDFGAZ8Xny7cpeWkAjI+AR1SY2oo4BEpsUMNFJBLq/Ll1SKfBGV6fB5GliJTgO51prB3LRTQEFlf5HlojKdYBK7kzFfplNy14/wcG0HtZd8yUa2pZJuOo0j2OQ1/WXxd8jzvvLRhIsZ2Fx11IEha9QOHWdNmDItZ8ZPaRIVi7rh84vOb6bpeKxqyTZo2u7vZ3Gern2ueCp0fGW0l4YzeUyeTWNMdt0izbXfD6J0TOcJR9P9t84kDwl+U21YqzQiTUmESecsEgYDl1QLEtLkg0iZ4EFBMK1GKSbUthLCTHh9cGyMfv/ToeLPLo8jJD7Xy/F1DsZetx3/MfFypi3BnHfWQfNT2/AcCnnE4rmwso5jF5dvH4Kqq0NK7srOVYksdzH97cw8CeDVO/fOc/DN9cPeLkE6tNOPjZxQflIQwujPGQ/4Y+rDi4N8xmxkqY4x/AP883A4=
+sidebar_class_name: "get api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get a user by ID"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/portal/users/{userID}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns a user with the ID specified in the request from the current portal.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"userID","in":"path","description":"User ID","schema":{"type":"string","format":"uuid"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"User","content":{"application/json":{"schema":{"type":"object","title":"UserInfo"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

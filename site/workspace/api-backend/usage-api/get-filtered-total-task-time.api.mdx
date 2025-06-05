@@ -1,0 +1,71 @@
+---
+id: get-filtered-total-task-time
+title: "Get filtered total task time"
+description: "Returns the total time spent matching the filter parameters specified in the request."
+sidebar_label: "Get filtered total task time"
+hide_title: true
+hide_table_of_contents: true
+api: eJy1Vktv4zYQ/ivEnFpAjdW0h1a37G6QBn0giJ2T48NYGlvcUKKWHG1WFfTfiyElv+IEWOzWB4PkPDjzzcxH9cC49ZAtoXH2I+U8W+iKYJWAp7x1mjvIlj1ctVxap/9F1rb+g7AgJzaOsIAEnp1mgtWwSqAgnzvdiBpkcE/cutorLkmxZTSKdUXKN1SzqpDzUtfbIN1ow+RUgw4rYnJelHK90VQoXQcVR59a8nwBCYzLd7boIOshtzVTzbLEpjE6D2HOPnoJogefl1ShrLhrCDKwa8kUEsm5IceavEhHBHQhm+NE7qJI3X6AZPKia6YtORgSqLpRwb80nY95ePVcEpfkFFvlAjCK0T9FSGxtOrWxTlWdGuPwyjpVW97fuLbWENbhRm3Is63p5YV/T6KjaNE57CABzVT5AyymLBLYWFchx6NfLmEIee2cfZfMdlG/mRvj9vUKiPBcCQpq0DFWYx8cG3/YC9XNwyEsnp2ut+JANHSuGzzn4G4vfNVB7giZijmjO+NhUZIidEaTZ1Ugk7KbiFKwE6W3fNrmvEuD/FUODXq+PdPgf6HncS5D1V5pdM/I7ZlWuMMugBvl6odH+Mfy+xLdlnBt6BESFY7eaWOokK116hGm7Y/f1KfhJ6TgG1v72KmXaXoGsEBB+ywh+WrqqNtqfRxFYdu1IYgx/Jr+/PLahxpH+qQijhVxaQvIYEuBhZBLyGCGjZ5dXqSziYklxFkkxllgTxBWdp/J+UDKrTOQQcnc+Gw260vrecj6xjoeIIHP6LRgH+AQWQxsg62RsI3N0YRj6X3rTsS/pb8HaA8egrlgEd2dfQ52GGGj/6RQQ8m+jOIEaqxEemQb4BCw7/eMfv0Fq8bQCSOnxyzLrqUjFlymq1O+ijqBTdITgpgm4mTs98fHw3zmXAZyfzyNVbofkWW6GgSCjQ3QaJaU4L2tqrbW3Kl5qKS6v54v1NXdrVSMnI8dE6c6VsZzhaEXR/xuiMfXkorpUZ3IFk4e4IOn8X97i8eiM33hWWNQBwoPrdmPnb2UjoAELi/S+OaOr+8YcbxO9qHHV8nYrUvo+zV6enBmGOT4U0tOPkdW++aW3ZBMPSZD8URdgDmk/dNCghN108bOPBnxIZksrvKcGn5Td3UwuTfXC0hgPX6AVLYQE4fP8nGCz5ABJGBDFcLAhLMeDNbbFreiG11K+ws5HE/PU5iecSFJTaK6OwjweJCSMQ/5l6zOmvR9nM1h2OlH0asWu+mN2lLd1TAM/wE7rolQ
+sidebar_class_name: "get api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get filtered total task time"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/project/time/filter/total"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns the total time spent matching the filter parameters specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"projectid":{"description":"Project ID","type":"integer"},"myProjects":{"description":"Specifies whether to return task time only for my projects or not","type":"boolean"},"milestone":{"description":"Milestone ID","type":"array","items":{"type":"integer","format":"int32"}},"myMilestones":{"description":"Specifies whether to return task time only for my milestones or not","type":"boolean"},"tag":{"description":"Project tag","type":"integer"},"departament":{"description":"Departament GUID","type":"string"},"participant":{"description":"Participant GUID","type":"string"},"createdStart":{"description":"The earliest date of task creation","type":"string"},"createdStop":{"description":"The latest date of task creation","type":"string"},"lastId":{"description":"Last spent time ID","type":"integer"},"status":{"description":"Payment status (\"NotChargeable\", \"NotBilled\", or \"Billed\")","type":"array","items":{"type":"integer","format":"int32"}}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Total spent time","content":{"application/json":{"schema":{"type":"number","format":"double"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

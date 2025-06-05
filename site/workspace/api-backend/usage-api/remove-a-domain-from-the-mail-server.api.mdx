@@ -1,0 +1,71 @@
+---
+id: remove-a-domain-from-the-mail-server
+title: "Remove a domain from the mail server"
+description: "Deletes a web domain with the ID specified in the request from the mail server."
+sidebar_label: "Remove a domain from the mail server"
+hide_title: true
+hide_table_of_contents: true
+api: eJy1VE1v2zAM/SsGz0KdZjtsvhVNgAXbsKJpsUOQg2IztVrbUiW6bWbovw+U7Hy0abYddsmH+Cg+Uo+vA5J3DrIF1FJVDu0T2nSia6kaB0sBDvPWKtpAtujgoqVSW/VLktLNF5QFWs60KAsQ8GwVISz9UkCBLrfKMAwymGCFhC6RyTOukiJcnjwrKhMqMZlNEmcwV2uFRaKacGbxsUVHydrqOhwwuSSyOwMBRlpZI6F1gVcja4QMFLNQXNFIKuE1jZ+74rMJCHB5ibWErAPamJDfEN6hBQFrbWtJ8ejDGDz3ZNEZ3Th0nDEejfjrsMAPgzaMJnEkqXUgINcNYUOMlcZUKg/x9N5xQveWgl7dY07codUGLalY7lLXhmdY7EFXWlcoGxCAL5LDkAHZFsELmO0DHVnV3B3gZgWj5pHlSWSP8QKm1mp7GhwhXsAV2hwbcn8z3P0LzkejQEy3Nsc/EIsYL3Zjvwngf6x4cMPpkjuY9wJIUTj9LlW1jQzj8oz4ODp/K5LbRvZbhEW4p0YqdQEZFGFNgrqphAxSaVQ6Phule5sZ9etSi7V+wrRThWclh2DchdZWkEFJZFyWpl2pHfmsM9oSI5+kVXJVRVVxLBJcy7bi+VQ6l1U49gI45zD8afSZl8Hv+cKcFRyvO+oO23lKo77iZljQMobFsLoHuWEsqlnrkN6P+VLXddso2iTz0G1yPZ3fJBdXM+4KrYvTrSThwN5RLcOL9jWuw8wSOZjAMXN5bRrdboP/g431oyF8odRUUjVMPDxg14tgwXMDAeOzEYg9i2aevUmzM3FjICBTBXt2fNcFdN1KOry1lfd8/NiiZR9f7mQQFFMox78LyNaycnhiAq8d9Cj/4b2bTdBb1fI/EPCAm+jRfunFIACuHwMXeY6G9lLe+CXLbrssk+m36c0UBPA2HcrsIcis/8EFjjI6VNxAjz+9eCel66KIvd/iY+jdjK3M++a5Ce/9bxo9h0I=
+sidebar_class_name: "delete api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Remove a domain from the mail server"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"delete"}
+  path={"/api/2.0/mailserver/domains/remove/{id}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Deletes a web domain with the ID specified in the request from the mail server.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"id","in":"path","description":"Web domain ID","schema":{"type":"integer","format":"int32"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Operation status","content":{"application/json":{"schema":{"type":"object","properties":{"Completed":{"type":"boolean","example":"true"},"Id":{"type":"string","example":"Id"},"Status":{"type":"string","example":"Status"},"Error":{"type":"string","example":"Error"},"Percents":{"type":"integer","format":"int32","example":"100"},"Source":{"type":"string","example":"Source"},"OperationType":{"type":"integer","format":"int32","example":"1"},"Operation":{"type":"string","example":"Operation"}},"title":"MailOperationStatus"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

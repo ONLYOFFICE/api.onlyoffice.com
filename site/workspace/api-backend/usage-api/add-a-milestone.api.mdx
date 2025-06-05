@@ -1,0 +1,71 @@
+---
+id: add-a-milestone
+title: "Add a milestone"
+description: "Adds a new milestone using the parameters (project ID, milestone title, deadline, etc) specified in the request."
+sidebar_label: "Add a milestone"
+hide_title: true
+hide_table_of_contents: true
+api: eJztV99v2zgM/lcEPd1wbuN46dAZOByytsAVh25F02JAuz4wFlNrtSWdRLfLBfnfD7Id/1izpNmuwB7mh0CR+FHUR1IiF5zgzvH4hhurP2NCgzOZoSOt0PHbgDtMCitpzuObBR8XlGor/wWSWv2FINB6pEUQPOCPVhLy2+VtwAW6xErjxXjMx0I4BkzhI8tXylnhpLpjlCIzYCFHQuvYb7UR7PQ46MiSpAwDJhBEJhUGDCl5xZzBRM4kCiZVqcjiPwU62ucBr4fvtJjzeMETrQgV+SEYk8mkPMHgs/P2LbhLUszBj2hukMdcT70VPPCkGLQk0flVKfxv/3DnjcU8WMGlIrxDy5cBL01/ijrrn62FOrJS3Xnk6rSbwI3MGrx0f+P8KXhSs+aYnDFKpWPSO+ce5x3CtWVKU6t1qnWGoCq17zXJ2UbNjylSipaRZhZzqQTLkY0OWaoL69gUZ9pi6bF2R1EgE0Abt+5tt4mUdn4NLxad0crJ6Wa/dMXWaFElCRebdK3lo8J1tTOY6oK+ogMSr8R9m43yaw5ThWcUhk+tGAuBotXMg/8rGerA//Co/C2wTfpUdGRW+RHwmbY5UDX1OuIBxy+QG88mH0avPdGXqwTqu6ArOSkHrL47PGhCQIXbdcfQQ0/duZUPQN09V6x3hWeQOeTLNsX5RPqlmpaPFoyproDjTiJ/+xBRGIV7w2gvii7DUTwcxgdv9kejg8ODKLqu7KrTebtNXrhN0ufIH4E6EZJ2ED/GDJ/LUcDHCckHvAR3f6QLRTuHwkG5a6Ydiu9WUumwCIRid1ccvPGuGF13lLyb7xj2zVaNlUUhRT8E629vzc/qK2NKOpPB/D3kW8LqTN4juwY1B3L38pkJdQYK6vdr/AAEdpJDlm3GFDbz95vzkgxKlMefWz2TGV7ZLfBPnwbnVosiIeeHqE2G1ZyH74MzX/4sHNo/QORSSUcWSNte/p3kJtNzRJ96lfGNo17KDVdG/Hg41Up+hdPPHk6No17KDd/xSIa7vZGVZPko9WqprcBuUfFjD+xXNdOvgP95A77jqpdxRGf3pvJuKqeywB2Fw6c17ZWCuhNFUSrJkVIteMyNdmUQAaU85gMwchDth4NVb7uQIr4J997e/r4cdEtih/YBrSub3MJTzVMi4+LBYJFqR8t4YbSlJQ/4A1gJ06yKTr9WWTeDIvM8ZDqBrJxeBtxj+suH4dvIH6zTWE98uV2pW9teN6SDkb4CDLj0FKTVcsBVGcJ9bMmJr+cv2jb4ZOWaqo0NW+Ybb7YdZztXd5FkC+z2ftX/vlcaTK/DaqfXtExeje8p1UyXJ60tOtJ5XihJczYpHcMuTiaXbHx+6h2A1lX7ZUDoiV7+B776mC0=
+sidebar_class_name: "post api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Add a milestone"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/api/2.0/project/{id:[0-9]+}/milestone"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Adds a new milestone using the parameters (project ID, milestone title, deadline, etc) specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"id":{"description":"Project ID","type":"integer"},"title":{"description":"Milestone title","type":"string"},"deadline":{"description":"Milestone deadline","type":"string"},"isKey":{"description":"Specifies if this is a key milestone or not","type":"boolean"},"isNotify":{"description":"Specifies whether to remind me 48 hours before the milestone due date or not","type":"boolean"},"description":{"description":"Milestone description","type":"string"},"responsible":{"description":"Milestone responsible","type":"string"},"notifyResponsible":{"description":"Specifies whether to notify responsible about the milestone actions or not","type":"boolean"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Added milestone","content":{"application/json":{"schema":{"type":"object","properties":{"ProjectOwner":{"type":"object","properties":{"Id":{"type":"integer","format":"int32","example":"123"},"Title":{"type":"string","example":"Sample project"},"Status":{"type":"integer","format":"int32","example":"0"},"IsPrivate":{"type":"boolean","example":"false"}},"title":"SimpleProjectWrapper"},"Deadline":{"type":"string","example":"2020-12-22T04:11:56.4458522Z"},"IsKey":{"type":"boolean","example":"false"},"IsNotify":{"type":"boolean","example":"false"},"CanEdit":{"type":"boolean","example":"false"},"CanDelete":{"type":"boolean","example":"false"},"ActiveTaskCount":{"type":"integer","format":"int32","example":"15"},"ClosedTaskCount":{"type":"integer","format":"int32","example":"5"},"Created":{"type":"string","example":"2020-12-22T04:11:56.5658524Z"},"CreatedBy":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"},"CreatedById":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"Updated":{"type":"string","example":"2020-12-22T04:11:56.5658524Z"},"UpdatedBy":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"},"UpdatedById":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"Id":{"type":"integer","format":"int32","example":"10"},"Title":{"type":"string","example":"Sample Title"},"Description":{"type":"string","example":"Sample description"},"Status":{"type":"integer","format":"int32","example":"0"},"Responsible":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"},"ResponsibleId":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"}},"title":"MilestoneWrapper"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

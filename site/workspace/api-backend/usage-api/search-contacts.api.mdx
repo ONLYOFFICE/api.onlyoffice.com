@@ -1,0 +1,71 @@
+---
+id: search-contacts
+title: "Search contacts"
+description: "Searches for contacts by their names, last names, or emails."
+sidebar_label: "Search contacts"
+hide_title: true
+hide_table_of_contents: true
+api: eJylVE1v2zAM/SsCz1qdBTtsvnVFsQ0rhqFJT20OjM3Eam3LleimnuH/PlCy89F2A4blkCji1+Pjo3pg3HpIb6FCUyYXtmbM2MNKg6esdYY7SG97OG+5sM78Qja2/kqYk5MgR5iDhp0zTLAaVhpy8pkzjbhBCgtClxXk1cY6lY3J1bpTXJBxqsaKvFYlep7O1ikSKP4MNDh6bMnzZ5t3kPYgCahmOWLTlCYLaJJ7L7V68FlBFcqJu4YgBbu+p4xBQ+NsQ44N+WAlV8nvKdRlQcqzM/VWNehY2Y2AnEAHeEdID0AV5rkj70FPZWMWGMJHmvCNrX2sPZ/NXpe+Mj7Ui4FemTqU3tiytDsBtLGuQk7VHfzAitTVhOIOIgbQ/8wNOocdaDBMlT+6Pwav4cPs/Wu4NzWOaqAcxKsiLmwOKWwpsI1cQAoJNiaZn82SoKw41MQHQYCoyz2R80FcrSshhYK58WmS9IX1PKR9Yx0PoOEJncF1GfkTW0S0wbZkSKG0GZbhetAgMafmj7NPc+nmSNAL4SKme1PWB44a850CSdJ2Ec0ahHlIT2MDD0L29UGyl89YNSUdJLcnVzJubDAYFg+4sFXV1oY7tQjEqOvLxVKd//wmBJDzkfkSmaZGPVcYRjvCiau2XzJ4sYpH2/O/Wzmyw/TMSVOiqQVQmGE/zv5WqAMN87MZaBgVGhOE0QcNrPQ4zVvo+zV6unHlMMj1Y0tOnp3VYfjyb9DTDEQ0D9QF3kJT75aCSdzLNk7uxQoMeoo4zzJq+K++qyNJf7lcgob1+AJVNpcQhzt5nXAHKYAGGzgOggp3PZRYb1vcim9MKfKQrTlV10NQ13iQpiZT3R0BPBWaHvuQb+nqzZC+j9odhr1/NP0xYq/u6C1DXQ3D8BvM1Rn6
+sidebar_class_name: "get api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Search contacts"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/mail/emails/search"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Searches for contacts by their names, last names, or emails.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"term":{"description":"The string part of the contact name, last name, or email address","type":"string"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"List of strings in the following format: \"Name Last name\" email","content":{"application/json":{"schema":{"type":"array","items":{"type":"string"}}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      
