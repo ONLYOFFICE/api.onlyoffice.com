@@ -1,5 +1,29 @@
 # Change log
 
+## 5.4.0
+
+### New features
+
+#### Samples
+
+* Added Samples section
+
+#### Docs
+
+* Updated Office API documentation
+* Added Playground page to the Office API, Plugins and macros sections
+
+#### Docs API
+
+* Updated the main page for the Automation API samples
+* Updated documentation in Chinese
+
+### Fixes
+
+#### Docs
+
+* Fixed examples for Automation API
+
 ## 5.3.0
 
 ### New features
