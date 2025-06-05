@@ -280,6 +280,7 @@ The list of changes for Office JavaScript API.
 
 ### Presentation methods
 
+- Added the [ApiPresentation/AddMathEquation](../usage-api/presentation-api/ApiPresentation/Methods/AddMathEquation.md) method to Presentation API.
 - Added the [ApiPresentation/GetAllCharts](../usage-api/presentation-api/ApiPresentation/Methods/GetAllCharts.md) method to Presentation API.
 - Added the [ApiPresentation/GetAllDrawings](../usage-api/presentation-api/ApiPresentation/Methods/GetAllDrawings.md) method to Presentation API.
 - Added the [ApiPresentation/GetAllImages](../usage-api/presentation-api/ApiPresentation/Methods/GetAllImages.md) method to Presentation API.
