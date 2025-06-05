@@ -2,6 +2,10 @@
 
 ### New features
 
+#### Docs
+
+* Added Plugins version 9.0
+
 #### Docs API
 
 * Added the editorConfig.customization.forceWesternFontSize parameter for the Chinese (Simplified) UI

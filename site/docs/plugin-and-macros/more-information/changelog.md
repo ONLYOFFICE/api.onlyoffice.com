@@ -8,6 +8,7 @@ The list of changes for ONLYOFFICE Plugins and Macros API.
 
 ## Version 9.0
 
+- Added the [GoToSlide](../interacting-with-editors/methods/presentation-api/Api/Methods/GoToSlide.md) method to *window\.Asc.plugin.executeMethod* for Presentation Api.
 - Added the [ContentControlListElement](../interacting-with-editors/methods/text-document-api/Enumeration/ContentControlListElement.md) enumeration.
 
 ## Version 8.3
