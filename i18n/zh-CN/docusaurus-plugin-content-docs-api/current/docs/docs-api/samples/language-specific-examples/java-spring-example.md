@@ -46,7 +46,7 @@ files.docservice.url.site=https://documentserver/
 其中 **documentserver** 是安装了 ONLYOFFICE 文档的服务器的名称，**port** 是任何可用的端口，而 **files.storage** 是创建和存储文件的路径（默认在项目文件夹中）。
 您可以设置绝对路径。例如，*D:\\\folder*。请注意，在 Windows 操作系统上，双反斜杠必须用作分隔符。
 
-如果要试验编辑器配置，请修改 *src/main/webapp/editor.jsp* 文件中的[参数](../../usage-api/advanced-parameters.md)。
+如果要试验编辑器配置，请修改 *src/main/webapp/editor.jsp* 文件中的[参数](/docs/docs-api/usage-api/advanced-parameters.md)。
 
 ### 步骤 3. 安装先决条件
 

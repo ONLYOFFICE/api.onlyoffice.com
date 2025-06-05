@@ -6,6 +6,7 @@ import { DocsFeatures, DocSpaceFeatures, type Features, WorkspaceFeatures, Sampl
 
 type FeatureItem = {
   title: string;
+  link: string;
   Image: string | React.ComponentType<React.ComponentProps<'svg'>>;
   description: ReactNode;
   features: Features;
@@ -14,6 +15,7 @@ type FeatureItem = {
 const FeatureList: FeatureItem[] = [
   {
     title: 'DocSpace',
+    link: "docspace",
     Image: require('@site/static/assets/images/docspace-preview.svg').default,
     description: (
       <>
@@ -29,6 +31,7 @@ const FeatureList: FeatureItem[] = [
   },
   {
     title: 'Docs',
+    link: "docs",
     Image: require('@site/static/assets/images/docs-preview.png').default,
     description: (
       <>
@@ -42,29 +45,30 @@ const FeatureList: FeatureItem[] = [
     ),
     features: DocsFeatures,
   },
-  // {
-  //   title: 'Samples',
-  //   Image: require('@site/static/assets/images/samples-preview.png').default,
-  //   description: (
-  //     <>
-  //       In this section, you will learn how to use ONLYOFFICE APIs{" "}
-  //       when working with documents.
-  //     </>
-  //   ),
-  //   features: SamplesFeatures,
-  // },
+  {
+    title: 'Samples',
+    link: "samples/docs/docs-api/language-specific-examples",
+    Image: require('@site/static/assets/images/samples-preview.png').default,
+    description: (
+      <>
+        In this section, you will learn how to use ONLYOFFICE APIs{" "}
+        when working with documents.
+      </>
+    ),
+    features: SamplesFeatures,
+  },
 ];
 
-function Feature({index, title, Image, description, features }: FeatureItem & { index: number }) {
+function Feature({index, title, link, Image, description, features }: FeatureItem & { index: number }) {
   const is_reversed = index % 2;
   return (
       <div className={clsx(styles.featureBlock,{[styles.featureBlockReverse]:is_reversed})}>
         <div className={styles.homeDecr}>
           <h2>
-            <Link to={title.toLowerCase()}>{title}</Link>
+            <Link to={link}>{title}</Link>
           </h2>
           <p>{description}</p>
-          <Link to={title.toLowerCase()}>More</Link>
+          <Link to={link}>More</Link>
         </div>
         <ul className={styles.featuresList}>
           {features.items.map(((item, index) => (
@@ -74,7 +78,7 @@ function Feature({index, title, Image, description, features }: FeatureItem & { 
             </li>
           )))}
         </ul>
-        <Link to={title.toLowerCase()} className={styles.homePreview}>
+        <Link to={link} className={styles.homePreview}>
           <div>
             {typeof Image === 'string' ? (
               <img src={Image} alt={title} className={styles.featureSvg} />
