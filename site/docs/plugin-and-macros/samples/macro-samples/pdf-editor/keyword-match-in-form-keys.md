@@ -21,7 +21,7 @@ Highlights form fields based on a keyword match in the form key.
 })();
 ```
 
-Methods used: [GetDocument](../../../../office-api/usage-api/text-document-api/Api/Methods/GetDocument.md), [GetAllForms](../../../../office-api/usage-api/form-api/ApiDocument/Methods/GetAllForms.md), [GetFormKey](../../../../office-api/usage-api/form-api/ApiFormBase/Methods/GetFormKey.md), [SetRequired](../../../../office-api/usage-api/form-api/ApiFormBase/Methods/SetRequired.md)
+Methods used: [GetDocument](/docs/office-api/usage-api/text-document-api/Api/Methods/GetDocument.md), [GetAllForms](/docs/office-api/usage-api/form-api/ApiDocument/Methods/GetAllForms.md), [GetFormKey](/docs/office-api/usage-api/form-api/ApiFormBase/Methods/GetFormKey.md), [SetRequired](/docs/office-api/usage-api/form-api/ApiFormBase/Methods/SetRequired.md)
 
 ## Result
 
