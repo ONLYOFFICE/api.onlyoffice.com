@@ -33,7 +33,7 @@ Resizes PictureForms based on a predefined size or aspect ratio across the docum
 })();
 ```
 
-Methods used: [GetDocument](../../../../office-api/usage-api/text-document-api/Api/Methods/GetDocument.md), [GetAllForms](../../../../office-api/usage-api/form-api/ApiDocument/Methods/GetAllForms.md), [GetFormType](../../../../office-api/usage-api/form-api/ApiFormBase/Methods/GetFormType.md), [GetFormKey](../../../../office-api/usage-api/form-api/ApiFormBase/Methods/GetFormKey.md), [GetImage](../../../../office-api/usage-api/form-api/ApiPictureForm/Methods/GetImage.md), [SetImage](../../../../office-api/usage-api/form-api/ApiPictureForm/Methods/SetImage.md)
+Methods used: [GetDocument](/docs/office-api/usage-api/text-document-api/Api/Methods/GetDocument.md), [GetAllForms](/docs/office-api/usage-api/form-api/ApiDocument/Methods/GetAllForms.md), [GetFormType](/docs/office-api/usage-api/form-api/ApiFormBase/Methods/GetFormType.md), [GetFormKey](/docs/office-api/usage-api/form-api/ApiFormBase/Methods/GetFormKey.md), [GetImage](/docs/office-api/usage-api/form-api/ApiPictureForm/Methods/GetImage.md), [SetImage](/docs/office-api/usage-api/form-api/ApiPictureForm/Methods/SetImage.md)
 
 ## Result
 
