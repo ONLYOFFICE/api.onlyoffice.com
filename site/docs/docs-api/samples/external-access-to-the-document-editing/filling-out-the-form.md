@@ -1,6 +1,9 @@
 ---
 sidebar_position: -1
+hide_table_of_contents: true
 ---
+
+import { FormExternalToolbar } from '@site/src/components/BrowserWindow';
 
 # Filling out the form
 
@@ -11,6 +14,8 @@ The user can choose a username from the list and all the fields in the form edit
 When the user edits the input data in the custom interface, it is automatically updated in the form editor as well.
 
 When the document is ready, the form data can be submitted by clicking the **Complete & Submit** button.
+
+<FormExternalToolbar/>
 
 ## How it works
 

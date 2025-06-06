@@ -33,6 +33,13 @@ jobs:
 
     - name: Install Dependencies
       run: npm install
+    
+    - name: Make scripts executable
+      run: |
+        chmod +x .github/scripts/copy-examples.sh
+    
+    - name: Copy Example Files
+      run: .github/scripts/copy-examples.sh
 
     - name: Build Packages
       id: build
