@@ -137,27 +137,19 @@ The list of changes for Office JavaScript API.
 
 - Added the [ApiCustomProperties](../usage-api/text-document-api/ApiCustomProperties/ApiCustomProperties.md) class to Text document API.
 - Added the [ApiDocument/GetCustomProperties](../usage-api/text-document-api/ApiDocument/Methods/GetCustomProperties.md) method to Text document API.
-- Added the [ApiCustomProperties/AddBoolProperty](../usage-api/text-document-api/ApiCustomProperties/Methods/AddBoolProperty.md) method to Text document API.
-- Added the [ApiCustomProperties/AddDateProperty](../usage-api/text-document-api/ApiCustomProperties/Methods/AddDateProperty.md) method to Text document API.
-- Added the [ApiCustomProperties/AddNumberProperty](../usage-api/text-document-api/ApiCustomProperties/Methods/AddNumberProperty.md) method to Text document API.
-- Added the [ApiCustomProperties/AddStringProperty](../usage-api/text-document-api/ApiCustomProperties/Methods/AddStringProperty.md) method to Text document API.
+- Added the [ApiCustomProperties/Add](../usage-api/text-document-api/ApiCustomProperties/Methods/Add.md) method to Text document API.
 - Added the [ApiCustomProperties/GetClassType](../usage-api/text-document-api/ApiCustomProperties/Methods/GetClassType.md) method to Text document API.
-- Added the [ApiCustomProperties/GetPropertyValueByName](../usage-api/text-document-api/ApiCustomProperties/Methods/GetPropertyValueByName.md) method to Text document API.
+- Added the [ApiCustomProperties/Get](../usage-api/text-document-api/ApiCustomProperties/Methods/Get.md) method to Text document API.
 - Added the [Api/GetCustomProperties](../usage-api/spreadsheet-api/Api/Methods/GetCustomProperties.md) method to Spreadsheet API.
 - Added the [ApiCustomProperties](../usage-api/spreadsheet-api/ApiCustomProperties/ApiCustomProperties.md) class to Spreadsheet API.
-- Added the [ApiCustomProperties/AddBoolProperty](../usage-api/spreadsheet-api/ApiCustomProperties/Methods/AddBoolProperty.md) method to Spreadsheet API.
-- Added the [ApiCustomProperties/AddDateProperty](../usage-api/spreadsheet-api/ApiCustomProperties/Methods/AddDateProperty.md) method to Spreadsheet API.
-- Added the [ApiCustomProperties/AddNumberProperty](../usage-api/spreadsheet-api/ApiCustomProperties/Methods/AddNumberProperty.md) method to Spreadsheet API.
-- Added the [ApiCustomProperties/AddStringProperty](../usage-api/spreadsheet-api/ApiCustomProperties/Methods/AddStringProperty.md) method to Spreadsheet API.
+- Added the [ApiCustomProperties/Add](../usage-api/spreadsheet-api/ApiCustomProperties/Methods/Add.md) method to Spreadsheet API.
 - Added the [ApiCustomProperties/GetClassType](../usage-api/spreadsheet-api/ApiCustomProperties/Methods/GetClassType.md) method to Spreadsheet API.
-- Added the [ApiCustomProperties/GetPropertyValueByName](../usage-api/spreadsheet-api/ApiCustomProperties/Methods/GetPropertyValueByName.md) method to Spreadsheet API.
+- Added the [ApiCustomProperties/Get](../usage-api/spreadsheet-api/ApiCustomProperties/Methods/Get.md) method to Spreadsheet API.
 - Added the [ApiCustomProperties](../usage-api/presentation-api/ApiCustomProperties/ApiCustomProperties.md) class to Presentation API.
-- Added the [ApiCustomProperties/AddBoolProperty](../usage-api/presentation-api/ApiCustomProperties/Methods/AddBoolProperty.md) method to Presentation API.
-- Added the [ApiCustomProperties/AddDateProperty](../usage-api/presentation-api/ApiCustomProperties/Methods/AddDateProperty.md) method to Presentation API.
-- Added the [ApiCustomProperties/AddNumberProperty](../usage-api/presentation-api/ApiCustomProperties/Methods/AddNumberProperty.md) method to Presentation API.
-- Added the [ApiCustomProperties/AddStringProperty](../usage-api/presentation-api/ApiCustomProperties/Methods/AddStringProperty.md) method to Presentation API.
+- Added the [ApiCustomProperties/Add](../usage-api/presentation-api/ApiCustomProperties/Methods/Add.md) method to Presentation API.
+
 - Added the [ApiCustomProperties/GetClassType](../usage-api/presentation-api/ApiCustomProperties/Methods/GetClassType.md) method to Presentation API.
-- Added the [ApiCustomProperties/GetPropertyValueByName](../usage-api/presentation-api/ApiCustomProperties/Methods/GetPropertyValueByName.md) method to Presentation API.
+- Added the [ApiCustomProperties/Get](../usage-api/presentation-api/ApiCustomProperties/Methods/Get.md) method to Presentation API.
 - Added the [ApiPresentation/GetCustomProperties](../usage-api/presentation-api/ApiPresentation/Methods/GetCustomProperties.md) method to Presentation API.
 
 ### Core methods
