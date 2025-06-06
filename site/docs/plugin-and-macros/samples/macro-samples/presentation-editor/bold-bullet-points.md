@@ -1,6 +1,6 @@
 # Bold bullet points
 
-Automatically **bold** the first word for each bullet point that contains a colon ( : ) or a dash ( – ).
+Automatically **bolds** the first word of each bullet point that contains a colon ( : ) or a dash ( – ).
 
 ```ts
 (function () {
@@ -17,23 +17,15 @@ Automatically **bold** the first word for each bullet point that contains a colo
                 let indLeft = paragraph.GetIndLeft();
                 if (indLeft !== 0) {
                     let text = paragraph.GetText();
-                    let count = paragraph.GetElementsCount();
-                    for (let i = 0; i < count; i++) {
-                        let match = text.match(/\b\w*[:–]\w*\b/);
-                        if (match) {
-                            console.log(paragraph.GetElement(i).GetText());
-                            let beforeMatch = text.substring(0, match.index);
-                            console.log(beforeMatch);
-                            let matchedText = match[0];
-                            console.log(matchedText);
-                            let afterMatch = text.substring(match.index + matchedText.length);
-                            paragraph.RemoveAllElements();
-                            if (beforeMatch) paragraph.AddText(beforeMatch);
-                            let boldText = paragraph.AddText(matchedText);
-                            boldText.SetBold(true);
-                            if (afterMatch) paragraph.AddText(afterMatch);
-                            break;
-                        }
+                   let match = text.match(/^(\s*\S+\s*[:–\-])/);
+                    if (match) {
+                        let boldTextStr = match[1];
+                        let restText = text.substring(boldTextStr.length);
+
+                        paragraph.RemoveAllElements();
+                        let boldPart = paragraph.AddText(boldTextStr);
+                        boldPart.SetBold(true);
+                        if (restText) paragraph.AddText(restText);
                     }
                 }
             }
@@ -42,7 +34,7 @@ Automatically **bold** the first word for each bullet point that contains a colo
 })();
 ```
 
-Methods used: [GetPresentation](../../../../office-api/usage-api/presentation-api/Api/Methods/GetPresentation.md), [GetAllSlides](../../../../office-api/usage-api/presentation-api/ApiPresentation/Methods/GetAllSlides.md), [GetAllShapes](../../../../office-api/usage-api/presentation-api/ApiMaster/Methods/GetAllShapes.md), [GetDocContent](../../../../office-api/usage-api/presentation-api/ApiShape/Methods/GetDocContent.md), [GetIndLeft](../../../../office-api/usage-api/presentation-api/ApiParagraph/Methods/GetIndLeft.md), [GetText](../../../../office-api/usage-api/presentation-api/ApiComment/Methods/GetText.md), [GetElementsCount](../../../../office-api/usage-api/presentation-api/ApiHyperlink/Methods/GetElementsCount.md), [GetElement](../../../../office-api/usage-api/presentation-api/ApiHyperlink/Methods/GetElement.md), [RemoveAllElements](../../../../office-api/usage-api/presentation-api/ApiParagraph/Methods/RemoveAllElements.md), [AddText](../../../../office-api/usage-api/presentation-api/ApiParagraph/Methods/AddText.md), [SetBold](../../../../office-api/usage-api/presentation-api/ApiRun/Methods/SetBold.md)
+Methods used: [GetPresentation](/docs/office-api/usage-api/presentation-api/Api/Methods/GetPresentation.md), [GetAllSlides](/docs/office-api/usage-api/presentation-api/ApiPresentation/Methods/GetAllSlides.md), [GetAllShapes](/docs/office-api/usage-api/presentation-api/ApiSlide/Methods/GetAllShapes.md), [GetDocContent](/docs/office-api/usage-api/presentation-api/ApiShape/Methods/GetDocContent.md), [GetIndLeft](/docs/office-api/usage-api/presentation-api/ApiParagraph/Methods/GetIndLeft.md), [GetElementsCount](/docs/office-api/usage-api/presentation-api/ApiParagraph/Methods/GetElementsCount.md), [RemoveAllElements](/docs/office-api/usage-api/presentation-api/ApiParagraph/Methods/RemoveAllElements.md), [AddText](/docs/office-api/usage-api/presentation-api/ApiParagraph/Methods/AddText.md), [SetBold](/docs/office-api/usage-api/presentation-api/ApiRun/Methods/SetBold.md)
 
 ## Result
 

@@ -1,11 +1,11 @@
 # Remove default values
 
-Automatically remove a specific default value from all text fields in the entire document.
+Automatically removes a specific default value from all text fields in the entire document.
 
 ```ts
 (function () {
     let doc = Api.GetDocument();
-    let forms = document.GetAllForms();
+    let forms = doc.GetAllForms();
     let defaultValue = "Text";
 
     forms.forEach(form => {
@@ -16,7 +16,7 @@ Automatically remove a specific default value from all text fields in the entire
 })();
 ```
 
-Methods used: [GetDocument](../../../../office-api/usage-api/text-document-api/Api/Methods/GetDocument.md), [GetAllForms](../../../../office-api/usage-api/form-api/ApiDocument/Methods/GetAllForms.md), [GetFormType](../../../../office-api/usage-api/form-api/ApiComplexForm/Methods/GetFormType.md), [GetText](../../../../office-api/usage-api/form-api/ApiTextForm/Methods/GetText.md), [Clear](../../../../office-api/usage-api/form-api/ApiTextForm/Methods/Clear.md)
+Methods used: [GetDocument](/docs/office-api/usage-api/text-document-api/Api/Methods/GetDocument.md), [GetAllForms](/docs/office-api/usage-api/form-api/ApiDocument/Methods/GetAllForms.md), [GetFormType](/docs/office-api/usage-api/form-api/ApiFormBase/Methods/GetFormType.md), [GetText](/docs/office-api/usage-api/form-api/ApiTextForm/Methods/GetText.md), [Clear](/docs/office-api/usage-api/form-api/ApiTextForm/Methods/Clear.md)
 
 ## Result
 

@@ -1,6 +1,6 @@
 # Find invalid emails
 
-Detect and highlight invalid email addresses within a specified column or across the entire spreadsheet.
+Detects and highlights invalid email addresses within a specified column or across the entire spreadsheet.
 
 ```ts
 (function () {
@@ -40,7 +40,6 @@ Detect and highlight invalid email addresses within a specified column or across
                 }
 
                 let trimmedValue = value.toString().trim();
-                console.log(trimmedValue);
                 if (trimmedValue && !emailRegex.test(trimmedValue)) {
                     cell.SetFillColor(red);
                 }
@@ -50,7 +49,7 @@ Detect and highlight invalid email addresses within a specified column or across
 })();
 ```
 
-Methods used: [GetActiveSheet](../../../../office-api/usage-api/spreadsheet-api/Api/Methods/GetActiveSheet.md), [GetUsedRange](../../../../office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetUsedRange.md), [CreateColorFromRGB](../../../../office-api/usage-api/spreadsheet-api/Api/Methods/CreateColorFromRGB.md), [GetRangeByNumber](../../../../office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetRangeByNumber.md), [SetFillColor](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/SetFillColor.md)
+Methods used: [GetActiveSheet](/docs/office-api/usage-api/spreadsheet-api/Api/Methods/GetActiveSheet.md), [GetUsedRange](/docs/office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetUsedRange.md), [CreateColorFromRGB](/docs/office-api/usage-api/spreadsheet-api/Api/Methods/CreateColorFromRGB.md), [GetRows](/docs/office-api/usage-api/spreadsheet-api/ApiRange/Methods/GetRows.md), [GetCols](/docs/office-api/usage-api/spreadsheet-api/ApiRange/Methods/GetCols.md), [GetRangeByNumber](/docs/office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetRangeByNumber.md), [GetValue](/docs/office-api/usage-api/spreadsheet-api/ApiRange/Methods/GetValue.md), [SetFillColor](/docs/office-api/usage-api/spreadsheet-api/ApiRange/Methods/SetFillColor.md)
 
 ## Result
 
