@@ -147,7 +147,6 @@ The list of changes for Office JavaScript API.
 - Added the [ApiCustomProperties/Get](../usage-api/spreadsheet-api/ApiCustomProperties/Methods/Get.md) method to Spreadsheet API.
 - Added the [ApiCustomProperties](../usage-api/presentation-api/ApiCustomProperties/ApiCustomProperties.md) class to Presentation API.
 - Added the [ApiCustomProperties/Add](../usage-api/presentation-api/ApiCustomProperties/Methods/Add.md) method to Presentation API.
-
 - Added the [ApiCustomProperties/GetClassType](../usage-api/presentation-api/ApiCustomProperties/Methods/GetClassType.md) method to Presentation API.
 - Added the [ApiCustomProperties/Get](../usage-api/presentation-api/ApiCustomProperties/Methods/Get.md) method to Presentation API.
 - Added the [ApiPresentation/GetCustomProperties](../usage-api/presentation-api/ApiPresentation/Methods/GetCustomProperties.md) method to Presentation API.
