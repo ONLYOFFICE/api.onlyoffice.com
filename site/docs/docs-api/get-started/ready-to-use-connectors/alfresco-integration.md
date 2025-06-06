@@ -14,7 +14,7 @@ The plugin is available in the official [Alfresco Add-ons directory](https://con
 
 ## Features
 
-- Currently, the following document formats can be opened and edited with this plugin: DOCX, XLSX, PPTX, DOCXF, OFORM.
+- Currently, the following document formats can be opened and edited with this plugin: DOCX, XLSX, PPTX.
 
 - The plugin will create a new **Edit in ONLYOFFICE** menu option within the document library for Office documents.
 

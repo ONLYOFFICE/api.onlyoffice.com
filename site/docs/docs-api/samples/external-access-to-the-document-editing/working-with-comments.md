@@ -1,10 +1,15 @@
 ---
 sidebar_position: -3
+hide_table_of_contents: true
 ---
+
+import { CommentsExternalToolbar } from '@site/src/components/BrowserWindow';
 
 # Working with comments
 
 Collects all the comments from the document and displays them in the custom interface.
+
+<CommentsExternalToolbar/>
 
 ## How it works
 

@@ -8,7 +8,7 @@ sidebar_label: iOS
 
 ## 基于 ONLYOFFICE 测试样本的集成
 
-本示例演示如何将 ONLYOFFICE 移动编辑器与[测试或 DMS 样本](../../language-specific-examples/language-specific-examples.md)集成。
+本示例演示如何将 ONLYOFFICE 移动编辑器与[测试或 DMS 样本](../../../samples/language-specific-examples/language-specific-examples.md)集成。
 
 ![iOS 测试样本集成示意图](/assets/images/editor/ios-test-sample.png)
 

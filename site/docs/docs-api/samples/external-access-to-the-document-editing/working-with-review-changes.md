@@ -1,10 +1,15 @@
 ---
 sidebar_position: -2
+hide_table_of_contents: true
 ---
+
+import { ReviewChangesExternalToolbar } from '@site/src/components/BrowserWindow';
 
 # Working with review changes
 
 Manages review process from an external source.
+
+<ReviewChangesExternalToolbar/>
 
 ## How it works
 

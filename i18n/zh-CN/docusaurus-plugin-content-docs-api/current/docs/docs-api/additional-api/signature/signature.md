@@ -80,7 +80,7 @@ ONLYOFFICE 文档[使用](../../get-started/how-it-works/security.md)令牌，�
 
 ## 用于生成签名的代码示例
 
-下面是为初始化设置和请求生成签名的示例。它们取自不同编程语言的[测试范例](../../get-started/language-specific-examples/language-specific-examples.md)。我们建议您在项目中使用此代码来生成签名。
+下面是为初始化设置和请求生成签名的示例。它们取自不同编程语言的[测试范例](../../samples/language-specific-examples/language-specific-examples.md)。我们建议您在项目中使用此代码来生成签名。
 
 <Tabs>
   <TabItem value="csharp" label="C#">

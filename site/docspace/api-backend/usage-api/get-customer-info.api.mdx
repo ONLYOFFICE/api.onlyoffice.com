@@ -1,0 +1,71 @@
+---
+id: get-customer-info
+title: "Get the customer info"
+description: "Returns the customer info."
+sidebar_label: "Get the customer info"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVktz2zYQ/iuYvfiCSrKSE091nTTj9BFPbI8PHo0NkUsTMQmgwNKOquF/7yxAUqLl1O5ML3oAu4t9fPvtboHUfYDsBs6tJ1WLuThXmwYNwUqCdegVaWvOCsjgHum0DWQb9GemtCDBKa8aJPRsYQtGNQgZeCw9hgokaAMZ/NWi34CEAkPutWNzkMGFw1yXGoN4qpAq9IKs6DUFVShcckNoU1rfRC9ErvIKhfXCWJqBhJBX2CjItkAbx0+vra1RGZCA31XjaoSMfItdt5LgMThrAgaWXy4W/DX16bJCkfcRxndBQm4NcTayLSjnap1HT+bfAmtsDz2w62+YE+fGc/ZIp/eGx1+XdLEOnPBRMpDX5h4kmLau1XqIai9ICLZBQfidoOOyxNT9gVTZ4oIUtdEymraB7GYhj+VyJQfj2hDeowcJKc/p6N0SJJCmaPz8BXudBGyUrv+bmxebwuDm9qtdo6fw/ufKEhuZ5baBrpOgikJzflV9vpeUUtUBd+5MQNhxidpUoNci6iTU2jyEPVnlvWJwasImvF6cymN5GDE7nicMHVx1HFYYa/AGF5PwqS3wTQrdy4m59so59L0D7xfHh3C/Mqqlynr9NxYQhd4dCv1phUPf6BC0NYGb1KFnHwRVOog+7hgk5q3XtIlUoEJ+y9ZvH5APwKMqQMKT14Sw6uQWfkHl0UN2E/+dOP0bbsazl+RV0Pkg/uWkpWr5suAXh5Gvblbc9dNoviK1nsN43unMJk3EdyK6SG5UQQZz5fR8OVvMU2PO++aaD+o9TwT0jwMPtr6GDLZrFfDK190h90VZkVtT6vs2MSxIeFRec9tEoPTKqSClamsu+YGlD+lKXH39nSu92lXhgokpmZrWYgf9mPIDk1cBxam1DxoFK6GhnvO4sRPBTwz2LJ9HFYZRX6jxnYrIHbzy0RB6sbGtF21Az4aFMoVwKoQn64uB3COpR4NsuYfHW0wfJWGx/Xx9KS7tA5ruaGI02ZL9j1+Hrvp8fclPTfH4Ws5OJokSOoiCp2KjDRZivYlwOzrpmy3KHIkKVREd6JM6ebFPai/TyRHwO4JS8eC5J0lOlLV9Ek+aKjF5VURWkcDXCRr7twPlTA4jBmOiQzafx1dn1tQbW5Y6RybudLicj2TCk4MT/nbVKB6rY90wL1UR+1UVQuU5hkQ93hLmhIXwGGzrcwxj72dwzd+vSCc6HChil814cGqNSaz/LKl8+0H014dtMdF+e9QMfN3PsO8/BX1vFLUeX4cbQ3oU5/4pRGn9M79mgteZmFnRtIHEGoVdk4qYfNQqgvJuILeBNiYVuRNoCme1oZk4I4Y1tycWQgWhROr4hDK2FXv4bi+Qu9kO3fvxPWOMjv+XNobdD7ITp5kP0YcU8LvZ8WwRNxsbqFFxzvaGPyEdsvnzjG13a9y/j4A+77xIzV2ttOFH20TDaR7ccFFAwnK24BkRZwKMKxcvjPtzYSWhsoFYbTvOg46P01bM06LQgVm/GPecH7r+v+zML4YYJ8Pe4v6o6palgEfKMJfS8B1IiV1Paid5jo72tA4WZbYyTtdPHy9BRpKZIj0Nk/4HWx+uzGbf9nT2JA/4k0f/ixrbbWqjrhvl09UPNUZqTtKcolXXdf8AcX6P1g==
+sidebar_class_name: "get api-method"
+info_path: site/docspace/api-backend/usage-api/api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get the customer info"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/portal/payment/customerinfo"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns the customer info.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"refresh","in":"query","description":"Specifies whether to refresh the payment information cache or not.","schema":{"type":"boolean","example":true}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"The customer info","content":{"application/json":{"schema":{"type":"object","properties":{"response":{"type":"object","properties":{"portalId":{"type":"string","nullable":true,"example":"some text"},"paymentMethodStatus":{"enum":[0,1,2],"type":"integer","format":"int32","title":"PaymentMethodStatus"},"email":{"type":"string","nullable":true,"example":"Sydney_Roberts4@hotmail.com"}},"additionalProperties":false,"title":"CustomerInfo"},"count":{"type":"integer","format":"int32"},"links":{"type":"array","items":{"type":"object","properties":{"href":{"type":"string"},"action":{"type":"string"}}}},"status":{"type":"integer","format":"int32"},"statusCode":{"type":"integer","format":"int32"}},"title":"CustomerInfoWrapper"}}}},"401":{"description":"Unauthorized"},"403":{"description":"No permissions to perform this action"}}}
+>
+  
+</StatusCodes>
+
+
+      
