@@ -1,0 +1,147 @@
+.contentControlsExternalToolbar {
+  background-color: var(--working-with-content-controls-bg-color);
+  border-radius: 3px;
+  padding: 15px 24px;
+  margin-bottom: 16px;
+
+  font-family: inherit;
+
+  width: 95%;
+  width: -moz-available;
+  width: -webkit-fill-available;
+}
+
+.contentControlsSelect {
+  box-sizing: border-box;
+  padding: 8px 16px;
+  width: 100%;
+  max-width: 544px;
+  height: 48px;
+  border: 1px solid #808080;
+  border-radius: 3px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  color: var(--working-with-content-controls-option-color);
+  margin-bottom: 16px;
+
+  cursor: pointer;
+}
+
+.contentControlsSelect option {
+  cursor: pointer;
+}
+
+.contentControlsSelect option:disabled {
+  color: var(--working-with-content-controls-option-disabled-color);
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 16px;
+
+  font: inherit;
+  margin-bottom: 16px;
+  padding: 0;
+
+  list-style: disc outside none;
+  list-style-type: none;
+}
+
+.buttons > * {
+  margin: 0 !important;
+}
+
+.buttons button {
+  cursor: pointer;
+  padding: 16px 20px;
+
+  text-decoration: none !important;
+  font: inherit;
+  font-weight: 600;
+  line-height: 1em;
+
+  color: var(--working-with-content-controls-button-color);
+  border: 1px solid var(--working-with-content-controls-button-border-color);
+  border-radius: 3px;
+  background-color: transparent;
+}
+
+.buttons button[disabled] {
+  color: var(--working-with-content-controls-button-disabled-color);
+  border-color: var(--working-with-content-controls-button-disabled-border-color);
+  pointer-events: none;
+}
+
+.contentControlsDetails label {
+  display: inline-block;
+  width: 200px;
+  color: var(--working-with-content-controls-label-color);
+}
+
+.contentControlsDetails input {
+  color: var(--working-with-content-controls-input-color);
+  border: 1px solid #d0d5da;
+  border-radius: 2px;
+  box-sizing: border-box;
+  margin: 4px;
+  padding: 4px 8px;
+  height: 30px;
+  width: 300px;
+}
+
+.contentControlsDetails input[type="radio"] {
+  cursor: pointer;
+  width: 28px !important;
+  vertical-align: middle !important;
+}
+
+:root {
+  --working-with-content-controls-bg-color: #f9f9f9;
+  --working-with-content-controls-input-color: black;
+  --working-with-content-controls-input-bg-color: white;
+  --working-with-content-controls-label-color: #666666;
+  --working-with-content-controls-form-bg-color: #f9f9f9;
+  --working-with-content-controls-option-color: #333333;
+  --working-with-content-controls-option-disabled-color: #cccccc;
+  --working-with-content-controls-button-color: #444444;
+  --working-with-content-controls-button-border-color: #aaaaaa;
+  --working-with-content-controls-button-disabled-color: #cccccc;
+  --working-with-content-controls-button-disabled-border-color: #cccccc;
+}
+
+html[data-theme="dark"] {  
+  --working-with-content-controls-bg-color: #1a1a1a;
+  --working-with-content-controls-input-color: white;
+  --working-with-content-controls-input-bg-color: #111111;
+  --working-with-content-controls-label-color: #c9c9c9;
+  --working-with-content-controls-form-bg-color: #0f0f0f;
+  --working-with-content-controls-option-color: #cccccc;
+  --working-with-content-controls-option-disabled-color: #929292;
+  --working-with-content-controls-button-color: #d4d4d4;
+  --working-with-content-controls-button-border-color: #cecece;
+  --working-with-content-controls-button-disabled-color: #6b6b6b;
+  --working-with-content-controls-button-disabled-border-color: #747474;
+}
+
+@media (hover: hover) {
+  .buttons button:hover {
+    color: #ff6f3d;
+    border-color: #ff6f3d;
+  }
+
+  .buttons button.active:hover {
+    color: #ffffff;
+    background-color: #ff7a4b;
+    border-color: #ff6f3d;
+  }
+}
