@@ -4,6 +4,7 @@ The list of changes of ONLYOFFICE Docs API.
 
 ## Version 8.4
 
+- Added the ability to [preload](../get-started/configuration/preload.md) the editor static resources.
 - Added the [editorConfig.customization.forceWesternFontSize](../usage-api/config/editor/customization/customization-standard-branding.md#forcewesternfontsize) parameter for the Chinese (Simplified) UI.
 - Added the [editorConfig.customization.layout.header.user](../usage-api/config/editor/customization/customization-white-label.md#layoutheaderuser) parameter.
 
@@ -49,7 +50,7 @@ The list of changes of ONLYOFFICE Docs API.
 - The *docxf* format is deprecated, please use the *pdf* format to create and edit forms.
 - Changed the [documentType](../usage-api/config/config.md#documenttype) of the *docxf* and *oform* formats to *pdf*.
 - Added the *roles* field to the [editorConfig.customization.features](../usage-api/config/editor/customization/customization-standard-branding.md#features) parameter.
-- Added the [shardkey](../get-started/how-it-works/how-it-works.md#shard-key) parameter to the URL query string when sending requests to the ONLYOFFICE Docs API, document command service, document conversion service, or document builder service.
+- Added the [shardkey](../get-started/configuration/shard-key.md) parameter to the URL query string when sending requests to the ONLYOFFICE Docs API, document command service, document conversion service, or document builder service.
 - Added the [addContextMenuItem](../usage-api/automation-api.md#addcontextmenuitem), [addToolbarMenuItem](../usage-api/automation-api.md#addtoolbarmenuitem) and [updateContextMenuItem](../usage-api/automation-api.md#updatecontextmenuitem) methods to the *Automation API*.
 - Added the [-10 error code](../additional-api/conversion-api/error-codes.md) to the Conversion API.
 - The [editorConfig.customization.logo](../usage-api/config/editor/customization/customization-standard-branding.md#logo) parameter is now available for the mobile editors.

@@ -4,7 +4,7 @@ For the interaction with the **document command service** the POST requests are 
 
 > Please note that prior to version 8.2, the `https://documentserver/coauthoring/CommandService.ashx` address was used to send requests.
 
-Starting from version 8.1, it is recommended to add the [shardkey](../../get-started/how-it-works/how-it-works.md#shard-key) parameter to the URL *QueryString* with the *key* value in it. For example, *?shardkey=Khirz6zTPdfd7*. This allows you to load balance requests.
+Starting from version 8.1, it is recommended to add the [shardkey](../../get-started/configuration/shard-key.md) parameter to the URL *QueryString* with the *key* value in it. For example, *?shardkey=Khirz6zTPdfd7*. This allows you to load balance requests.
 
 > In **ONLYOFFICE Docs** prior to version 4.2 the GET request with the parameters in the *QueryString* were used.
 

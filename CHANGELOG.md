@@ -4,6 +4,7 @@
 
 #### Docs API
 
+* Added the ability to preload the editor static resources
 * Added the editorConfig.customization.forceWesternFontSize parameter for the Chinese (Simplified) UI
 * Added the editorConfig.customization.layout.header.user parameter
 

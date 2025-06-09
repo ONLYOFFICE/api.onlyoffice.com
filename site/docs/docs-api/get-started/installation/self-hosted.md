@@ -26,7 +26,7 @@ To install it on your local server:
 
    `https://documentserver/web-apps/apps/api/documents/api.js` is the address where the API JavaScript file can normally be found.
 
-   Starting from version 8.1, it is recommended to add the [shardkey](../how-it-works/how-it-works.md#shard-key) parameter to the URL *QueryString* with the *key* value in it. For example, *?shardkey=Khirz6zTPdfd7*. This allows you to load balance requests.
+   Starting from version 8.1, it is recommended to add the [shardkey](../configuration/shard-key.md) parameter to the URL *QueryString* with the *key* value in it. For example, *?shardkey=Khirz6zTPdfd7*. This allows you to load balance requests.
 
 3. Specify the page code containing the changeable parameters:
 
