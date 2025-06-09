@@ -1,0 +1,71 @@
+---
+id: move-messages-to-the-folder
+title: "Move messages to the folder"
+description: "Moves the messages to a folder with the ID specified in the request."
+sidebar_label: "Move messages to the folder"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVEtv2zAM/isCz0rtph2w+datHRZsA4a1PQU+KDYTq7UtVaLbZob++0DZbh7rBmxYDonCNz9+ZA+kNh6yJTRK18lX9F5t0EMuwWPROU1byJY9XHRUGad/KNKm/YSqRMdODlUJEp6cJoQ85BJK9IXTls0gg6/mEb2gCkUzRhZkhBJrU5foxJOmKmoXl8JbLPRaYyl0G2UOHzr0dAISxud7U24h66EwLWFL/FTW1rqIVSV3nnP24IsKG8Uv2lqEDMzqDgsCCdYZi440etbqMv4cVvxFexJmPdUrFpce5BRIOae2IEETNn4vgW4JN+hAwtq4RtEgOptDCCyqI1rHmT4OGHCITJyKmdDtyjxLMRcz4bElKc7ETJROrclLcS5mgpzylRRv2MCqZlfXlD9I6Dy6IfKi/DXnrUc3gb+4/KfGuqmz+OHZeGtaP0A6T9M/QGoesTwC9m9H+Q8TiFWep6evoNGqkdZYxlE1SJUpIQPbRbooqiCDRFmdzE/SJK7IROSE2wFeE/eIzsct6VwNGVRE1mdJ0lfGU8h6axwFkPConFarekCKdUNFa9XVXG9tClVHcZDAPofqt+m72M3eZl4zOkO4V/dzh5rVnzHCxm1Xg1pCqxrWHvhGHBj+77udu3pWja3xZWeWab6jdXrMuWWaB860NrECTewJH0zTdK2mrbiOgInvV9c34uLbgoFB54eJ1IpwAsBToyIJxjL5lhycET4SYxVHd2fvRPyvEzQiSfhMia2VbuOy8bz7kSdLhhkkzE9SkPGc8s90UCVEvuRynPwS+n6lPN66OgQWP3To+NbmO6LwvyCneTHB7nEbsYzNzW64Jjavu2HKRwsU5ORxURRo6Y+2+R79v93egITVeG4bU7KLU098itUTZAASTMQ6ki/KeqhVu+nUhm2HkEwl3rBDJt5HJo4PbmpStdu9Ag9JKcc++Ju7etWl7weeh/BiP6h+6/GyCYM1DzUPIfwEN29mdQ==
+sidebar_class_name: "put api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Move messages to the folder"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"put"}
+  path={"/api/2.0/mail/messages/move"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Moves the messages to a folder with the ID specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"ids":{"description":"List of message IDs","type":"array","items":{"type":"integer","format":"int32"}},"folder":{"description":"Folder type: 1 - inbox, 2 - sent, 3 - drafts, 4 - trash, 5 - spam","type":"integer"},"userFolderId":{"description":"User folder ID","type":"array","items":{"type":"integer","format":"uint32"}}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"List of moved message IDs","content":{"application/json":{"schema":{"type":"array","items":{"type":"integer","format":"int32"}}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

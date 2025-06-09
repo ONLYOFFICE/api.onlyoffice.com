@@ -1,0 +1,71 @@
+---
+id: get-an-invoice-by-id
+title: "Get an invoice by ID"
+description: "Returns the detailed information about an invoice with the ID specified in the request."
+sidebar_label: "Get an invoice by ID"
+hide_title: true
+hide_table_of_contents: true
+api: eJztWe9u2zYQfxWCXyfHtpJirYFhSGwXNZamqe2iaNN8OEtni6lEauTRjWf4cfYie7KBlOxYbVKrTrANg/3BkKi7H4/3j+TdkhPMDO9c8UhnzYGcKxGh4dcBNxhZLWjBO1dLfmopUVr8ASSUfIUQo3Y8GiHmAf+iBSG/Xl0HPEYTaZE7Mt7hQySrpWGUIIuRQKQYMyGnSmceicFEWWIgmShmZl8EJZ580GMmx0hMhWfxYxp/t2joiAe8fDxT8YJ3ljxSklCSe4Q8T0Xk4Zs3xomx5CZKMAP3RIsceYeryQ1GxAOea5WjJoHGfS2lELF7qS6lVA0b9HiwRhGScIaar/zPCWVyJU2BFbZaD6Lw4KkkLgHPhSzeS2rQGhY84IIwM7VRBr0t0vXiAl6Yqxg6DnnA8RayPHVELb4KNtyE2eMQxnDbfjRCuCfCSGl6o71j78Hd2zbzht+QFnJWod4mXAX8rQVJPso2TNJmk+qcsbKTFKuTBn7aS+28aT/enjCRsoUL7sH+42puh8cn3MUJCfIDW877XkOe+1AK+IiAbA2vHRcw39N2QfKk0hbSbeQN+EWhtO/K4UUwxmIPaIfIYStsNdpho30yDsNO+7hz0j56dvzz8/D4+KODGWOWp0A49gi11iRt5rJ137rPQ+vTezUvXbVYg/WtDlibNdjQmutvXbyrJEFEu+0yyiBNXypS73T6/bVanTJSbKpIuRleYyxstg9nT5g8hcUFZLscAuIbjGMhkZ1BlAhdWKarshzkdhROlEoRZIV5Cqnx3nQaRWjMuTD0iJwb3yfpxnjWirhqg/LXuOdv/fshVbwWn5F9BLkAMp+Fd63dAfUaJMwKvz+dA4H2xq5lK+MoGXiuInepqUhxp6k/fWpeahXbiIx7RJWnWIw59iMw+e2v1qD+BeJMSGFIAyldCd1+lqdqgT7LlElmYC61mFej8T6bk7ZFAjGjBDTGdV3EU/94jF4o6bLtECF+709VxfMDEeuoy5BdMwQsLF/vC2GrNcpo8SS5tZu4QweyDxb8VjZaZBO1w5Z//ek9ZzLROBewe7fsXnwo5E7Jatzt092LdTzLOWqCSVrfvmdgRFTPvFuutVbpQE7V1qbQBdmPBdWcvAuyhynWd8bH72ZlNj8Dg9tiK2nETCIesvwhyx+y/CHLH7L8/zDL97++cj7gHgXdV+59jz1UnitNVjrQDXwl89WW/uTZHUIN73ylrMFEpTHzRRSQERrmJtMSiZlE5dUM4XG3NNF7ihvZOciZhdkOlENk/pOR2b+NEpAzHFatW6vA0S5rK1ZHCRj0RaG6l/wx6sqx4AGy2uUiR/xSpHuU5hptbzmNQPhmxyy7PLxAOavht4fzzr933nHHd7NvOe8/v5WV5be7QqH7eNJqf1tkfyehbFdg7CEypETFvMNn6D0WKOEd3oRcNMOjVtN1PsrKf3O5aQF0rlqNF9c/rbhrheg5auM7IdYZlidEuek0m8tEGVp1lm7/c5Rz0MIlPR8LSWmNGKdgU7fMVEWQ+uFVwB1P9fPz1ovQLWyr+zJyfYAC7t4ezN29JBe/ob+YOBUkxeeASx8wVV6vE9doGN41UfprxVeaIK2Vw5sqP8/mSJFlfqtnI68WNuyPxuz0cuCWj9oUNnAVSrfM1d/BycWZ
+sidebar_class_name: "get api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get an invoice by ID"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/crm/invoice/{invoiceid:[0-9]+}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns the detailed information about an invoice with the ID specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"invoiceid":{"description":"Invoice ID","type":"integer"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Invoice","content":{"application/json":{"schema":{"type":"object","properties":{"InvoiceLines":{"type":"array","items":{"type":"object","properties":{"InvoiceID":{"type":"integer","format":"int32","example":"0"},"InvoiceItemID":{"type":"integer","format":"int32","example":"0"},"InvoiceTax1ID":{"type":"integer","format":"int32","example":"0"},"InvoiceTax2ID":{"type":"integer","format":"int32","example":"0"},"SortOrder":{"type":"integer","format":"int32","example":"0"},"Description":{"type":"string","example":"Description"},"Quantity":{"type":"number","format":"double","example":"0,0"},"Price":{"type":"number","format":"double","example":"0,0"},"Discount":{"type":"number","format":"double","example":"0,0"},"ID":{"type":"integer","format":"int32","example":"1234"}},"title":"InvoiceLineWrapper"}},"Status":{"type":"object","properties":{"Title":{"type":"string","example":"Title"},"ID":{"type":"integer","format":"int32","example":"1234"}},"title":"InvoiceStatusWrapper"},"Number":{"type":"string","example":""},"IssueDate":{"type":"string","example":"2020-12-14T22:13:41.5378233Z"},"TemplateType":{"type":"integer","format":"int32","enum":["Eur","Rus"],"description":"[0 - Eur, 1 - Rus]","example":"0"},"Contact":{"type":"object","properties":{"SmallFotoUrl":{"type":"string","example":"url to foto"},"MediumFotoUrl":{"type":"string","example":"url to foto"},"DisplayName":{"type":"string","example":"Tadjeddine Bachir"},"IsCompany":{"type":"boolean","example":"false"},"AccessList":{"type":"array","items":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"}},"IsPrivate":{"type":"boolean","example":"true"},"IsShared":{"type":"boolean","example":"false"},"ShareType":{"type":"integer","format":"int32","enum":["None","ReadWrite","Read"],"description":"[0 - None, 1 - ReadWrite, 2 - Read]","example":"0"},"Currency":{"type":"object","properties":{"Title":{"type":"string","example":"Chinese Yuan"},"Symbol":{"type":"string","example":"¥"},"Abbreviation":{"type":"string","example":"CNY"},"CultureName":{"type":"string","example":"CN"},"IsConvertable":{"type":"boolean","example":"true"},"IsBasic":{"type":"boolean","example":"false"}},"title":"CurrencyInfoWrapper"},"CanEdit":{"type":"boolean","example":"true"},"CanDelete":{"type":"boolean","example":"true"},"ID":{"type":"integer","format":"int32","example":"1234"}},"title":"ContactBaseWrapper"},"Consignee":{"type":"object","properties":{"SmallFotoUrl":{"type":"string","example":"url to foto"},"MediumFotoUrl":{"type":"string","example":"url to foto"},"DisplayName":{"type":"string","example":"Tadjeddine Bachir"},"IsCompany":{"type":"boolean","example":"false"},"AccessList":{"type":"array","items":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"}},"IsPrivate":{"type":"boolean","example":"true"},"IsShared":{"type":"boolean","example":"false"},"ShareType":{"type":"integer","format":"int32","enum":["None","ReadWrite","Read"],"description":"[0 - None, 1 - ReadWrite, 2 - Read]","example":"0"},"Currency":{"type":"object","properties":{"Title":{"type":"string","example":"Chinese Yuan"},"Symbol":{"type":"string","example":"¥"},"Abbreviation":{"type":"string","example":"CNY"},"CultureName":{"type":"string","example":"CN"},"IsConvertable":{"type":"boolean","example":"true"},"IsBasic":{"type":"boolean","example":"false"}},"title":"CurrencyInfoWrapper"},"CanEdit":{"type":"boolean","example":"true"},"CanDelete":{"type":"boolean","example":"true"},"ID":{"type":"integer","format":"int32","example":"1234"}},"title":"ContactBaseWrapper"},"Entity":{"type":"object","properties":{"EntityType":{"type":"string","example":"opportunity"},"EntityId":{"type":"integer","format":"int32","example":"123445"},"EntityTitle":{"type":"string","example":"Household appliances internet shop"}},"title":"EntityWrapper"},"DueDate":{"type":"string","example":"2020-12-14T22:13:41.5378233Z"},"Language":{"type":"string","example":""},"Currency":{"type":"object","properties":{"Title":{"type":"string","example":"Chinese Yuan"},"Symbol":{"type":"string","example":"¥"},"Abbreviation":{"type":"string","example":"CNY"},"CultureName":{"type":"string","example":"CN"},"IsConvertable":{"type":"boolean","example":"true"},"IsBasic":{"type":"boolean","example":"false"}},"title":"CurrencyInfoWrapper"},"ExchangeRate":{"type":"number","format":"double","example":"1,0"},"PurchaseOrderNumber":{"type":"string","example":""},"Terms":{"type":"string","example":""},"Description":{"type":"string","example":""},"FileID":{"type":"integer","format":"int32","example":"-1"},"CreateOn":{"type":"string","example":"2020-12-14T22:13:41.5378233Z"},"CreateBy":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"},"Cost":{"type":"number","format":"double","example":"0,0"},"CanEdit":{"type":"boolean","example":"true"},"CanDelete":{"type":"boolean","example":"true"},"ID":{"type":"integer","format":"int32","example":"1234"}},"title":"InvoiceWrapper"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

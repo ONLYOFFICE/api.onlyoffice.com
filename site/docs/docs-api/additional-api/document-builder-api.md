@@ -6,52 +6,23 @@ Starting from version 8.1, it is recommended to add the [shardkey](../get-starte
 
 ## Request parameters and their description
 
-### argument
+```mdx-code-block
+import APITable from '@site/src/components/APITable/APITable';
 
-Defines the arguments to pass to the created document.
+<APITable>
+```
 
-Type: object
+| Parameter | Type    | Presence                  | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| --------- | ------- | ------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| argument  | object  | optional                  | Defines the arguments to pass to the created document.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| async     | boolean | optional                  | Defines the type of the request to the **document builder service**: asynchronous or not.<br/><br/>Supported values:<br/>- **true**;<br/>- **false**.<br/><br/>When the asynchronous request type is used, the response is formed instantly. In this case to get the result it is necessary to send requests without parameter change until the document generation is finished. The default value is **false**.                                                                                                                                    |
+| key       | string  | required                  | Defines the request identifier used to unambiguously identify the request. The key is formed on the **document builder service** side and is returned as the response to the first request. When the asynchronous request is used (the *async* parameter is set to **true**) the key is not present in the first request, but must be present in all the following requests which will be send before the generation is complete. When the synchronous request is used (the *async* parameter is set to **false**), this parameter is not required. |
+| token     | string  | required by configuration | Defines the encrypted signature added to the **ONLYOFFICE Docs** config in the form of a [token](./signature/request/token-in-body.md#request-to-document-builder-service).                                                                                                                                                                                                                                                                                                                                                                         |
+| url       | string  | required                  | Defines the absolute URL to the *.docbuilder* file.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 
-Presence: optional
-
-### async
-
-Defines the type of the request to the **document builder service**: asynchronous or not.
-
-Supported values:
-
-- **true**;
-- **false**.
-
-When the asynchronous request type is used, the response is formed instantly. In this case to get the result it is necessary to send requests without parameter change until the document generation is finished. The default value is **false**.
-
-Type: boolean
-
-Presence: optional
-
-### key
-
-Defines the request identifier used to unambiguously identify the request. The key is formed on the **document builder service** side and is returned as the response to the first request. When the asynchronous request is used (the *async* parameter is set to **true**) the key is not present in the first request, but must be present in all the following requests which will be send before the generation is complete. When the synchronous request is used (the *async* parameter is set to **false**), this parameter is not required.
-
-Type: string
-
-Presence: required
-
-### token
-
-Defines the encrypted signature added to the **ONLYOFFICE Docs** config in the form of a [token](./signature/request/token-in-body.md#request-to-document-builder-service).
-
-Type: string
-
-Presence: required by configuration
-
-### url
-
-Defines the absolute URL to the .docbuilder file.
-
-Type: string
-
-Presence: required
+```mdx-code-block
+</APITable>
+```
 
 The *.docbuilder* file contains the script used to generate the output document file (text document, spreadsheet or presentation), specifies the output file format and name. Once the document generation is ready, the response with the absolute URL to the resulting file will be returned (see below).
 

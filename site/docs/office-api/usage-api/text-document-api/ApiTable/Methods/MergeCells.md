@@ -15,7 +15,7 @@ expression.MergeCells(aCells);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| aCells | Required | [ApiTableCell[]](../../ApiTableCell/ApiTableCell.md) |  | The array of cells to be merged. |
+| aCells | Required | [ApiTableCell](../../ApiTableCell/ApiTableCell.md)[] |  | The array of cells to be merged. |
 
 ## Returns
 
@@ -25,7 +25,7 @@ expression.MergeCells(aCells);
 
 This example merges an array of cells.
 
-```javascript
+```javascript editor-docx
 let doc = Api.GetDocument();
 let tableStyle = doc.CreateStyle("CustomTableStyle", "table");
 tableStyle.SetBasedOn(doc.GetStyle("Bordered"));

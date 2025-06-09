@@ -1,0 +1,71 @@
+---
+id: revoke-user-client
+title: "Revoke client consent"
+description: "Revokes all user consents for the specified OAuth2 client. This will invalidate all access tokens and refresh tokens issued to this client for the current user. The user will need to re-authorize the client to access their resources."
+sidebar_label: "Revoke client consent"
+hide_title: true
+hide_table_of_contents: true
+api: eJztWFtPIzcU/itHfqGVJhfCrTtvFKjElmolFsTDKloc+0zGy4w92B4gjea/V8eeXCYJXdR92/ICie1z+849c+b51LH0C/t0WvscRv0hDOCsUKg9/MU1n2KJ2rNxwiQ6YVXlldEsZdf4ZB7QAS8KqB1aEEY71N5BZiz4HMFVKFSmUEJgPQIRuPbhJlcOnlVRgNJPvFCSewx8uBDoHHjzgNoB1xIsZhZdvjhSztUowRvwxCMyXAoUtbX0ndQhKRgVC5I0RjqLPV773Fj1N0aiyMObpfQclQWLztRWoOuzhJkKLSe7LyVLmQ2W3zq0ESaWsIpbXqJHS0jOmeYlspRF1peSJUwRZBX3OdvE8Walg5KoPSFmSajFx1pZlCz1tsaEOZFjyVk6Z6XSV6inPmfpfsL8rCJhzlulp6xJGL7wsiro7FiciGz/ZNLbn8iD3uGJPOp9OBTHvQmO5MHRyRD3j39jzZhkuYrc54j9aDikf10124honQyuDmBldVHMIAJCZgqjPSGSzhmvqkKJgNrgmyMe8zUTWqXN5BsKz5qmaRJ2uEvuZYyQBUSX5+Ttkvv/LixhlSWHehXNtchbim3H5HXJdc8il3xSIKC1xgK+VAXXQRj5aQP/ZpeDI+ECZULRc6WVnoYQfJMU5YNLL+jyumW0BO5gF3CuzjIlAmwV2lI5p4x2MQnIYQtnvkO5DuXhq7GvDZWaWv9AoP+EgI0+7FDfGCi5psrwWKPzDnpgqcgXqlQe8EUgyh8pGD8fjke7i59Hq3kBDu0T2parEaHRvcPXgW9HCTxtG33gEDBUAqHW/ImrguS8I7hAsEmYQ1Fb5WdhguFOfKU56esD0gHZR/H2bJVHNqaRoUSfGxqHJBboMQxBNJGwAa/UYNQfDmLLdoP5Yg5qBrHxMBJGAR2npdoWLGXzCXd4a4tma0L6HINfGJ2paR0HMZawJ24VmRrwb4mjAzJeF56lbIvTebyC2+srsnq8Mvoz+Tmy6pq+dDyv1J8422J56xDOjHlQCEREA5xYaNiOgR2G7SgoAglNa79zp8SanNz7akvKBRUCmJnahpGWGIfxuOLOPRtLrgmRSgwmgSFxRm7Rvo31XnwM8493N3BDw3az12EaeSXthz/iDJayj3c3JOo0gLMl8BXMTjtAgXIgaXYulUYJk1kI571O8u5BjlwGBVpQOxJbUNs3TRJ3mdF62vJwsKlJu5hkhXmGZ+Vz6JaMMyMpWOk6hsb6bbjcPAwxGIB26WAQpPaNLmaGRjHsC1PGw9FguYVQXhLgbycNz4N3TLUsPzLsZFyuliiorPEoPMrVNrPM4ZTd0f/vvI6V4VOFYfNZoRkOzozWsRZugEq359Beb6dFh/rtVlPgK50Z8u9Lz6mp5r62+P1wo5BePqf8kWFj7OoV98WALJS18zBBMBMqsCjhSfEQlPeL0rYoGx2P3ANqWRlFK+6lp7Cm9EQJ3AGHmPExyohXyOH7NUPu+6voXrdvo2I09D0zwey2nJ9WiuohWhcNPujv94cEU2WcL3loSy3j63by72xzm4jNV13xf7Xmt2Hk8cUPqoIrTRjWsavE5vaFYowlbNQf0uwQGxxLWLq26rc9bpyw3DhPNPNlb2vo+LFGS011vOphoQ9K5eizZGnGC4f/4pRfrtvfBn6FV38+2GnMIlH0LDTQosbYJkOrW/1e0YybZFFNSbN4fSoEVn6NcGtg6swF5xdXFzcXLAkFspulsRG2H0jATr02+mZUgv42ySsU83ksAU2zfB+vXqVYtpX4mlAaN03zD0AxtvU=
+sidebar_class_name: "delete api-method"
+info_path: site/docspace/api-backend/usage-api/api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Revoke client consent"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"delete"}
+  path={"/api/2.0/clients/{clientId}/revoke"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Revokes all user consents for the specified OAuth2 client. This will invalidate all access tokens and refresh tokens issued to this client for the current user. The user will need to re-authorize the client to access their resources.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"clientId","in":"path","description":"The client identifier.","required":true,"schema":{"minLength":1,"type":"string"},"example":"6c7cf17b-1bd3-47d5-94c6-be2d3570e168"}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Client consent successfully revoked","content":{"application/json":{"schema":{"type":"object"}}}},"400":{"description":"Invalid client ID format","content":{"application/json":{"schema":{"type":"object","properties":{"reason":{"description":"The human-readable error explanation.","type":"string"}},"description":"The error response containing the human-readable error explanation.","title":"ErrorResponse"}}}},"403":{"description":"Insufficient permissions to revoke consent","content":{"application/json":{"schema":{"type":"object","properties":{"reason":{"description":"The human-readable error explanation.","type":"string"}},"description":"The error response containing the human-readable error explanation.","title":"ErrorResponse"}}}},"404":{"description":"Client not found","content":{"application/json":{"schema":{"type":"object","properties":{"reason":{"description":"The human-readable error explanation.","type":"string"}},"description":"The error response containing the human-readable error explanation.","title":"ErrorResponse"}}}},"429":{"description":"Too many requests - rate limit exceeded","content":{"application/json":{"schema":{"type":"object","properties":{"reason":{"description":"The human-readable error explanation.","type":"string"}},"description":"The error response containing the human-readable error explanation.","title":"ErrorResponse"}}}},"500":{"description":"Internal server error occurred","content":{"application/json":{"schema":{"type":"object","properties":{"reason":{"description":"The human-readable error explanation.","type":"string"}},"description":"The error response containing the human-readable error explanation.","title":"ErrorResponse"}}}},"503":{"description":"Authorization service unavailable","content":{"application/json":{"schema":{"type":"object","properties":{"reason":{"description":"The human-readable error explanation.","type":"string"}},"description":"The error response containing the human-readable error explanation.","title":"ErrorResponse"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

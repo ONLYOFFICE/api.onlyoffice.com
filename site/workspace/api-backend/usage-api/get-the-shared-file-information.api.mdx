@@ -1,0 +1,71 @@
+---
+id: get-the-shared-file-information
+title: "Get the shared file information"
+description: "Returns the detailed information about the shared file with the ID specified in the request."
+sidebar_label: "Get the shared file information"
+hide_title: true
+hide_table_of_contents: true
+api: eJy1VE1v2zAM/SsGz0KdBTtsvhVr1wW7DE2LHYIcGJup1cq2KtHtPEP/faBsJ/HS7jYf/CHqiY+Pj+6B8cFDtoG9NuTTdYlO1w+wVeApb53mDrJND5ctl43Tv5F1U38jLMgJyBEWoODVaSbYhq2CgnzutJVtkMEtcetqn3BJSUGM2lCR6HrfuCqelOCuaTmGfYmOikRoJK+ay7i4ukq8pVzvdcTFNUfPLXm+AAUWHVbE5HwkWWNFkMVKVkJLCwWLXMLfvL5KltUVKPB5SRVC1gN3VtCeowBBinHkbVN78hJfLhbymB+0PmF9UhcoyJuaqWaBoLVG5zGQPnrB9ed50TnshDRT5U/Wm90j5QwKWLOhkXtM+9OhteQgyKXg4+LDOb/7GsfOUQGyqyIumwIyeCCOCnIJGaRodbq8WKSDC+Se9oOOIY2dEanIvUxSt85ABiWz9Vma9mXjOWS9bRwHUPCCTuPODLpJbCC2x9YwZGCaHE1cDgoEMw9/WnxeSlEnHlyLWsNxbzrxqKLV36mbel8OYTU5Y4aNckjPInwU90tTVW2tuUvWsdrk9np9l1z+WElV5PygqkGmib3nCmNHxxw3dO7nuTNmHeqPRvnf0zJKxPSLU2tQ11JAbGQ/+mAj+oGC5cUC1PBHGJ+gIDvM1WCIrRpbu4G+36Gne2dCkOXnlpz8NrZHJ0TTFNrLewHZHo2nfyhxnM83SU/NrrtoNtPKFyh4ou44/2Eb1OQAyT4EL/OcLJ/AzoZTfHeYkpvrO1AgMzQ32VM02fgip79Jae63iZ/cg3oH0veDhUM47B9C7yIOJh92i0LbEMIfYjT+4A==
+sidebar_class_name: "get api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get the shared file information"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/files/file/{fileId}/share"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns the detailed information about the shared file with the ID specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"fileId","in":"path","description":"File ID","schema":{"type":"string"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Shared file information","content":{"application/json":{"schema":{"type":"array","items":{"type":"object","title":"FileShareWrapper"}}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

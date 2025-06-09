@@ -21,13 +21,13 @@ expression.CreateRange(element, start, end);
 
 ## Returns
 
-[ApiRange](../../ApiRange/ApiRange.md) | null
+[ApiRange](../../ApiRange/ApiRange.md) \| null
 
 ## Example
 
 This example ctreates a range and sets bold for the first 9 characters.
 
-```javascript
+```javascript editor-docx
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 paragraph.AddText("ONLYOFFICE Document Builder");

@@ -8,13 +8,13 @@ In this section, we will look at the integration process via [WebView](https://d
 
 ## Integration based on the ONLYOFFICE test sample
 
-This example demonstrates how to integrate ONLYOFFICE mobile web editors with the ONLYOFFICE [test or DMS sample](../../language-specific-examples/language-specific-examples.md).
+This example demonstrates how to integrate ONLYOFFICE mobile web editors with the ONLYOFFICE [test or DMS sample](../../../samples/language-specific-examples/language-specific-examples.md).
 
 ![Android integration via test sample](/assets/images/editor/android-test-sample.png)
 
 ### Opening ONLYOFFICE editors
 
-1. Download and install ONLYOFFICE Docs [Enterprise](https://www.onlyoffice.com/docs-enterprise.aspx) or [Developer](https://www.onlyoffice.com/developer-edition.aspx) edition.
+1. Download and install ONLYOFFICE Docs [Enterprise](https://www.onlyoffice.com/docs-enterprise.aspx) or [Developer](https://www.onlyoffice.com/developer-edition.aspx).
 
 2. Download the mobile demo sample for Android from [GitHub](https://github.com/ONLYOFFICE/editors-webview-android).
 
@@ -112,4 +112,4 @@ private class EditorWebViewClient(private val navController: NavController) : We
 }
 ```
 
-The full code for **EditorFragment.kt** can be found [here](https://github.com/ONLYOFFICE/editors-webview-android/blob/fd8f9809441fab9653140cf2e51a1303e2edd774/app/src/main/java/ru/mike/florida/editorFragment.kt).
+The full code for **EditorFragment.kt** can be found [here](https://github.com/ONLYOFFICE/editors-webview-android/blob/fd8f9809441fab9653140cf2e51a1303e2edd774/app/src/main/java/ru/mike/florida/EditorFragment.kt).

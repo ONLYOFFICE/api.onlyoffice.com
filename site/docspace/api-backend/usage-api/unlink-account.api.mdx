@@ -1,0 +1,71 @@
+---
+id: unlink-account
+title: "Unlink a third-pary account"
+description: "Unlinks a third-party account specified in the request from the user profile."
+sidebar_label: "Unlink a third-pary account"
+hide_title: true
+hide_table_of_contents: true
+api: eJy1Vktvo0gQ/iuluuTCgMezJ27eJCvNQ8poxlEOkTVpQxFagW6mu3HiRfz3VXUDMbZ3k8tejOl6dtVX9dGhE48W03v8TrqpCBJYl9LkHxph3B5ElulWOYubCHVDRjip1eccU2xVJdXTKsgxwkYYUZMjw846VKImTLExeidzMhihVJji75bMHiPMyWZGNuwNU1yXBKMmsGWMEdqspFpg2qHbN+zLOiPVI0ZIL6JuKn+kawJHLw77fhOhIdtoZcmy1XKx4Mc80s1X7CP8Y/HxVHSrROtKbeTflGPfR2gpa410e38fYbNfLP/1RHyAhkSOET4b6Qg3fdThnyQMGUzv/duqkV9pP52d0xdWZqP6zap15fK84k1DvuT3G77jcdLcBQsC3GnXwDaUyUJSDlKBKwkM/W7JOiiMrv1Ba8lw6QtZ+aLX5ErN7c2pIke+r67EFBPRyGQZL5LGwyTx4Xy0JCBBTEiwZHYjDFpTYYrdVli6NVV/0vmfXhcyrQr52AZ4YYQ7YaTYVqGRg3HoWCHaymGKJ56ugghuf3zD3qNh7N9PBlJwNe/ihCzhm3Xi8tYSXGr9JAnYiJST2ZjhgO+ZwwHjmTdhnA0tnuKUzjUnUa6VIwN73RrfDXYMQuXQCGuftcnHUWAHW++QPQ/Aeo/ri6AM3Ze7Naz1E6n+YuY0+IqGP39pUwsu8Ze7NYeaI/mtmq1mhQJpIeelUEtFOWz3HnQXq2HQvM4FlCTCihiKOos4FHXQ6aNpVKZMtPAHx5kEPSgq/QzP0pUwiwqXOmd4szhA41DqhceHHoO+0DZNEh811qra66KQGcWZrsPhMpkWCUbouODvN/Xqvju6CZj1CyHFHyRyHmyyFpzmmXWUOcrBkNWtychOWyPFO36+od33vOTG5fJaTX9wqZWizJ0WlaVXMIhPx2Jm/f5bM/ClKjT39+WDlY9KuNbQ23BjSE/qPD85FNoc5RUDE4yvLNStdbAl0FsnPCZ3UnhQPowLblwbs448AKm80VK5GD47hjWPJ+UgePeGiQ8oY19+hh8OLvIQv6L78H5HG6Pn90L7a0tXDbPA+5CMDRf+FH+MF1ymRltXC8W6g+PABYdUMDHBcd06zLRypNz/QCFDw5iVk6YSUnG2bdjfgUzuuZsY4TJeMMF4QmHDiVIwwjmpbCIstXVs2k1k0vNx+KBgqsmlZcrIMS1EZek/bnz2c+Ns2p4mDj9idqJqWQ2ZYEaWCiT+yp1X19+u19cY+fUxx3CgieEPZz2K1P7A+xGrhCz4lz8Hzlp0XRiQvp/0g+hfLaalG7T5vpu+7/8BBkN7Zw==
+sidebar_class_name: "delete api-method"
+info_path: site/docspace/api-backend/usage-api/api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Unlink a third-pary account"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"delete"}
+  path={"/api/2.0/people/thirdparty/unlinkaccount"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Unlinks a third-party account specified in the request from the user profile.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"provider","in":"query","description":"The provider name.","schema":{"type":"string","example":"some text"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"OK"},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

@@ -1,0 +1,71 @@
+---
+id: update-task-statuses
+title: "Update task statuses"
+description: "Updates the task statuses with the values specified in the request."
+sidebar_label: "Update task statuses"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVMFu2zAM/RWDZ63Ogh0237qhwIYBQ9Gkp8AHxmZrNbalSnSzzNC/D5ScNl6zAcOWQyBTpPTe46NGYLz3UGzAOvNAFedr9DsPpQJP1eA0H6DYjHA5cGOc/oGsTf+ZsCYnRY6wBgV7p5mgDKWCmnzltJU0KODW1sjkM24oY/S7zDPy4Mlne81NDD9hO5DPvKVK32mqM93HuKPHgTxfgIJp+dHUByhGqEzP1LMs0dpWVxFU/uDlyhF81VCHsuKDJSjAbIUYKKFoybEmH/MmKLKeo/5G+zlaUMez0Dk8gALN1Plzd7DmVgKfBs+mEzFX8RAI6SdsvDX9dPFysXh9f1KtfoXhb4n/I1gF7xZvz6DrcTID1SBZHXFjaijADlFl5AYKyNHqfHmxyI/GOiHiyT2R89FZg2uhgIbZ+iLPx8Z4DsVojeMACp7Qady2SSzZS3jucGgZCmhNhW0MBwVSM99+v/iwFC4nbl6JSOm4s55+Ec/qrxTVE9JN2lbQYye7s9qognTh5sWoV9+xsyLuqdE2YyiDnHhn4k1H+U3XDb3mQ7aKwmQ3V6t1dnn9RQQg55PurUzSRNRzh7HnE5zkmFeGmTXuZHD+01xOSjF959y2qHsBF/s5Ti7YiIygYHmxSPM3Ge8ZY6mmrm5gHLfo6da1IUj4cSAnb0/5YgL5CurYCzHPjg5Rv8jrzVrwSHo7pA7+MiNBHSsuq4os/zG3PDH29e0aFGyn96cztZQ43MvbhHsoABSYKHM0VoyN0GJ/P+C95KYjxSYyO3OX7aLLpoWQOm71hxOAc8OpiYf8C6uzJeOYPBzCc37a+m3Fs8tTtjS0DCH8BBn3ILU=
+sidebar_class_name: "put api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Update task statuses"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"put"}
+  path={"/api/2.0/project/statuses"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Updates the task statuses with the values specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"statuses":{"description":"New task statuses","type":"array","items":{"type":"object","title":"CustomTaskStatus"}}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Updated task statuses","content":{"application/json":{"schema":{"type":"array","items":{"type":"object","title":"CustomTaskStatus"}}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

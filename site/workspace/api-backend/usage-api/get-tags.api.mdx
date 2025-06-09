@@ -1,0 +1,63 @@
+---
+id: get-tags
+title: "Get tags"
+description: "Returns a list of all the tags used in the blog posts with a number specifying the tag usage."
+sidebar_label: "Get tags"
+hide_title: true
+hide_table_of_contents: true
+api: eJy1VM1u2zAMfhWBZ6F2sx0237qi6IYNw9C02CHIQXEYW60saRLdNjP07gNlp4m79bgcHJkiKX4/8gCkmgjVCmrXdb3VtC8+GddEWEuIWPdB0x6q1QAXPbUu6N+KtLOfUW0xcFlAtQUJT0ETwjqtJWwx1kF7ToMKbpD6YKNQwuhIwu2EMkZQi4IPFn3ErdA2BzbGNcK7SFE8aWqFErbvNhhE9Fjr3V7b5lAo+qgaPAMJAaN3NmKEaoBFWfLffIJv07kZqITaWUJLnKe8N7rOgIr7yMkDxLrFTvGK9h6hAhWC2oMETdjFk7jb3GNNIMEH5zGQHkf4rjo8yYoUtG1AAj6rzhsOLfOCx4Ek4dL14zBTgbaEDQaQsHOhUzSG3i1mLc5LSEkCacqvLNitan4G5T0GSPyT8L48/5uMO6smHXGbe3RIrdtCBQ1mMIpaqKBQXheLs7I4uoLVKXho9kV4xBCzLfpgoIKWyMeqKIbWRUrV4F2gBBIeVdBqY0ZqeG+caKd6w8iMq5XJ4SSBa+bbH8qPC0ZzYsUlyzO2+6chj7J5/RWzbgy7Hbcl2CzPvDbzoO3O5fKJ08sDcLHMaMXN1fJWXPz4wqgwxJFOowgP00fqVLbQdMY10sFzMw2GowX/++2YyCB8psIbpS2PmiUbJqlXzBRIWJyV+XJMqEECH8gtVMPfglG8FQzDRkW8CyYlDv/qMfD3YX3Umt+SPFDOHnnAPXNe1+gpm8L0o0Svrh8L/eLH66tbkMBunav6kFWdFtz9sGX3J73nAstpBH4m+UbJMIyeSeklf9x6s+LFVWM2s7tOKf0Bgl7QPg==
+sidebar_class_name: "get api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get tags"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/community/blog/tag"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns a list of all the tags used in the blog posts with a number specifying the tag usage.
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"List of tags","content":{"application/json":{"schema":{"type":"array","items":{"type":"object","properties":{"Name":{"type":"string","example":"Sample tag"},"Count":{"type":"integer","format":"int32","example":"10"}},"title":"BlogTagWrapper"}}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

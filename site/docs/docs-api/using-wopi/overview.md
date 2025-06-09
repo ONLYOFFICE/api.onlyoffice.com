@@ -2,6 +2,9 @@
 sidebar_position: -11
 ---
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 # Overview
 
 Starting from version 6.4, ONLYOFFICE Docs offers support for the **Web Application Open Platform Interface Protocol (WOPI)** - a REST-based protocol that is used to integrate your application with an online office. WOPI operations allow you to open files stored on a server, edit and save them.
@@ -23,9 +26,18 @@ For further information on the WOPI protocol, please read the [WOPI documentatio
 
 All the necessary [WOPI settings](https://helpcenter.onlyoffice.com/installation/docs-developer-configuring.aspx#WOPI) you can find and change in the configuration file which can be found (or created) at the following path:
 
-For Linux - */etc/onlyoffice/documentserver/**local.json***.
-
-For Windows - *%ProgramFiles%\ONLYOFFICE\DocumentServer\config\\**local.json***.
+<Tabs>
+  <TabItem value="windows" label="Windows">
+      ``` bash
+      %ProgramFiles%\ONLYOFFICE\DocumentServer\config\local.json
+      ```
+  </TabItem>
+  <TabItem value="linux" label="Linux">
+      ``` bash
+      /etc/onlyoffice/documentserver/local.json
+      ```
+  </TabItem>
+</Tabs>
 
 > The default values are available in the *default.json* configuration file, which is available in the folders above (for Linux and Windows). Please do not edit the contents of the *default.json* file directly. The default values will be restored each time you restart Docker container or upgrade **ONLYOFFICE Docs** to a new version and all your changes will be lost.
 
@@ -90,14 +102,15 @@ Follow the steps below to configure the ONLYOFFICE Docs [IP filter](https://help
 
 4. Restart the services for the config changes to take effect:
 
-   **For RPM/DEB packages:**
-
-   ``` sh
-   systemctl restart ds-*
-   ```
-
-   **For Docker:**
-
-   ``` sh
-   supervisorctl restart all
-   ```
+    <Tabs>
+      <TabItem value="rpm-deb" label="RPM/DEB packages">
+          ``` bash
+          systemctl restart ds-*
+          ```
+      </TabItem>
+      <TabItem value="docker" label="Docker">
+          ``` bash
+          supervisorctl restart all
+          ```
+      </TabItem>
+    </Tabs>

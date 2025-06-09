@@ -12,10 +12,12 @@ The list of changes of ONLYOFFICE Docs API.
 
 <!--- Added conversion from [vsdm, vsdx, vssm, vssx, vstm, vstx](../additional-api/conversion-api/conversion-tables.md#diagram-document-file-formats) formats.
 - Added the *diagram* document type to the [documentType](../usage-api/config.md#documenttype) parameter.-->
+- Added the [editorConfig.customization.features.featuresTips](../usage-api/config/editor/customization/customization-standard-branding.md#featuresfeaturestips) parameter.
+- Added the [editorConfig.customization.showHorizontalScroll](../usage-api/config/editor/customization/customization-standard-branding.md#showhorizontalscroll) and [editorConfig.customization.showVerticalScroll](../usage-api/config/editor/customization/customization-standard-branding.md#showverticalscroll) parameters.
 - Added the [editorConfig.customization.slidePlayerBackground](../usage-api/config/editor/customization/customization-standard-branding.md#slideplayerbackground) parameter.
 - Added the [editorConfig.customization.wordHeadingsColor](../usage-api/config/editor/customization/customization-standard-branding.md#wordheadingscolor) parameter.
 - Added the [editorConfig.customization.mobile.info](../usage-api/config/editor/customization/customization-standard-branding.md#mobileinfo) parameter.
-- Added opening for [pages, key, numbers](../usage-api/config/config.md#documenttype) formats.
+- Added opening for [pages, key, numbers, hwp, hwpx](../usage-api/config/config.md#documenttype) formats.
 - Added the [events.onUserActionRequired](../usage-api/config/events.md#onuseractionrequired) event.
 - Added the [refreshFile](../usage-api/methods.md#refreshfile) method.
 - Added the [events.onRequestRefreshFile](../usage-api/config/events.md#onrequestrefreshfile) event.
@@ -47,21 +49,20 @@ The list of changes of ONLYOFFICE Docs API.
 - Added the [docs\_api\_config](../using-wopi/host-page.md#parameters) parameter to the *form* element of the WOPI host page.
 - Added the [pdf](../additional-api/conversion-api/request.md#pdf) field to the conversion request.
 - Added the [events.onSubmit](../usage-api/config/events.md#onsubmit) event.
-- The *docxf* format is deprecated, please use the *pdf* format to create and edit forms.
-- Changed the [documentType](../usage-api/config/config.md#documenttype) of the *docxf* and *oform* formats to *pdf*.
 - Added the *roles* field to the [editorConfig.customization.features](../usage-api/config/editor/customization/customization-standard-branding.md#features) parameter.
 - Added the [shardkey](../get-started/configuration/shard-key.md) parameter to the URL query string when sending requests to the ONLYOFFICE Docs API, document command service, document conversion service, or document builder service.
 - Added the [addContextMenuItem](../usage-api/automation-api.md#addcontextmenuitem), [addToolbarMenuItem](../usage-api/automation-api.md#addtoolbarmenuitem) and [updateContextMenuItem](../usage-api/automation-api.md#updatecontextmenuitem) methods to the *Automation API*.
 - Added the [-10 error code](../additional-api/conversion-api/error-codes.md) to the Conversion API.
 - The [editorConfig.customization.logo](../usage-api/config/editor/customization/customization-standard-branding.md#logo) parameter is now available for the mobile editors.
 - Added the *visible* field to the [editorConfig.customization.logo](../usage-api/config/editor/customization/customization-standard-branding.md#logo) parameter.
-- Added the [formsubmit](../using-wopi/wopi-discovery.md#wopi-actions) action to the WOPI discovery.
+- Added the [formsubmit](../using-wopi/wopi-discovery.md#formsubmit) action to the WOPI discovery.
 - The [editorConfig.customization.goback.requestClose](../usage-api/config/editor/customization/customization-standard-branding.md#goback) field is deprecated, please use the [editorConfig.customization.close](../usage-api/config/editor/customization/customization-standard-branding.md#close) field instead.
 - Added the [Save Copy As](../using-wopi/wopi-rest-api/putrelativefile.md#save-copy-as) functionality to WOPI.
 - Change the default value of the [editorConfig.customization.hideRightMenu](../usage-api/config/editor/customization/customization-standard-branding.md#hiderightmenu) parameter to *true*.
 
 ## Version 8.0
 
+- Added the [document.isForm](../usage-api/config/document/document.md#isform) parameter.
 - Added the [WOPISrc](../using-wopi/key-concepts.md#wopisrc) query parameter to the requests from the browser to the server.
 - Added the [watermark](../additional-api/conversion-api/request.md#watermark) field to the conversion request.
 - Added the *pdf* document type to the [documentType](../usage-api/config/config.md#documenttype) parameter.
@@ -90,7 +91,7 @@ The list of changes of ONLYOFFICE Docs API.
 
 ## Version 7.4
 
-- Added the [mobileView](../using-wopi/wopi-discovery.md#wopi-actions) and [mobileEdit](../using-wopi/wopi-discovery.md#wopi-actions) actions to the WOPI discovery.
+- Added the [mobileView](../using-wopi/wopi-discovery.md#mobileView) and [mobileEdit](../using-wopi/wopi-discovery.md#mobileEdit) actions to the WOPI discovery.
 - Added opening for [dps, dpt, et, ett, mhtml, stw, sxc, sxi, sxw, wps, wpt](../usage-api/config/config.md#documenttype) formats.
 - Added the *users.id* field to the [setUsers](../usage-api/methods.md#setusers) method.
 - Added the *c* parameter to the [setUsers](../usage-api/methods.md#setusers) method and [events.onRequestUsers](../usage-api/config/events.md#onrequestusers) event.
@@ -101,20 +102,20 @@ The list of changes of ONLYOFFICE Docs API.
 - Added the [setReferenceData](../usage-api/methods.md#setreferencedata) method.
 - Added the [events.onRequestReferenceData](../usage-api/config/events.md#onrequestreferencedata) event.
 - Added the [document.referenceData](../usage-api/config/document/document.md#referencedata) parameter.
-- Added the [UserCanNotWriteRelative](../using-wopi/wopi-rest-api/checkfileinfo.md#user-permissions-properties) property to the *CheckFileInfo* WOPI operation.
+- Added the [UserCanNotWriteRelative](../using-wopi/wopi-rest-api/checkfileinfo.md#UserCanNotWriteRelative) property to the *CheckFileInfo* WOPI operation.
 - Added a scheme for [editing binary document formats](../using-wopi/editing-binary-documents.md).
-- Added the [convert](../using-wopi/wopi-discovery.md#wopi-actions) action to the WOPI discovery.
+- Added the [convert](../using-wopi/wopi-discovery.md#convert) action to the WOPI discovery.
 - Added the [PutRelativeFile](../using-wopi/wopi-rest-api/putrelativefile.md) WOPI operation.
 
 ## Version 7.2
 
 - Added the [editorConfig.customization.integrationMode](../usage-api/config/editor/customization/customization-standard-branding.md#integrationmode) parameter.
-- Added the [Connector](../usage-api/automation-api.md) class to interact with text documents, spreadsheets, presentations, and fillable forms from the outside.
+- Added the [Connector](../usage-api/automation-api.md) class to interact with text documents, spreadsheets, presentations, PDFs, and fillable forms from the outside.
 - Added the *theme-contrast-dark* theme id to the [editorConfig.customization.uiTheme](../usage-api/config/editor/customization/customization-standard-branding.md#uitheme) parameter.
 - Added the *phone* field to the [editorConfig.customization.customer](../usage-api/config/editor/customization/customization-standard-branding.md#customer) parameter.
-- Added the *connections\_view*, *users\_view\_count* and *users\_view* parameters to the [license response](../additional-api/command-service/license.md#response-parameters).
+- Added the [connections\_view](../additional-api/command-service/license.md#license.connections_view), [users\_view\_count](../additional-api/command-service/license.md#license.users_view_count) and [users\_view](../additional-api/command-service/license.md#quota.users_view) parameters to the license response.
 - Added the [live viewer](../get-started/how-it-works/viewing.md) mode to the text document, spreadsheet and presentation editors.
-- Added the [embedview](../using-wopi/wopi-discovery.md#wopi-actions) action to the WOPI discovery.
+- Added the [embedview](../using-wopi/wopi-discovery.md#embedview) action to the WOPI discovery.
 - The [services.CoAuthoring.secret.browser.string](../additional-api/signature/signature.md#parameters) parameter is deprecated, please use the [services.CoAuthoring.secret.inbox.string](../additional-api/signature/signature.md#parameters) parameter instead.
 
 ## Version 7.1
@@ -136,8 +137,6 @@ The list of changes of ONLYOFFICE Docs API.
 
 ## Version 7.0
 
-- Added the *.docxf* and *.oform* [document formats](../usage-api/config/config.md#documenttype).
-- Added conversion to and from [docxf](../additional-api/conversion-api/conversion-tables.md#text-document-file-formats) format.
 - The [callbackUrl](../usage-api/callback-handler.md) is used from the last tab of the same user.
 - Added the *logoDark* field to the [editorConfig.customization.customer](../usage-api/config/editor/customization/customization-standard-branding.md#customer) parameter.
 - Added the *imageDark* field to the [editorConfig.customization.logo](../usage-api/config/editor/customization/customization-standard-branding.md#logo) parameter.
@@ -156,7 +155,7 @@ The list of changes of ONLYOFFICE Docs API.
 - Added the [editorConfig.customization.review.hideReviewDisplay](../usage-api/config/editor/customization/customization-standard-branding.md#review) field.
 - Added the [editorConfig.customization.review.hoverMode](../usage-api/config/editor/customization/customization-standard-branding.md#review) field.
 - Added the possibility to view the [document history](../get-started/how-it-works/document-history.md) of the spreadsheet files.
-- Added the [UI\_InsertGraphic](../using-wopi/postmessage.md#ui_insertgraphic) message for the PostMessage WOPI protocol.
+- Added the [UI\_InsertGraphic](../using-wopi/postmessage.md#UI_InsertGraphic) message for the PostMessage WOPI protocol.
 
 ## Version 6.4
 

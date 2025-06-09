@@ -2,10 +2,11 @@ import type {ReactNode} from 'react';
 import clsx from 'clsx';
 import Link from '@docusaurus/Link';
 import styles from './styles.module.css';
-import { DocsFeatures, DocSpaceFeatures, type Features, WorkspaceFeatures } from "@site/src/features";
+import { DocsFeatures, DocSpaceFeatures, type Features, WorkspaceFeatures, SamplesFeatures } from "@site/src/features";
 
 type FeatureItem = {
   title: string;
+  link: string;
   Image: string | React.ComponentType<React.ComponentProps<'svg'>>;
   description: ReactNode;
   features: Features;
@@ -14,21 +15,23 @@ type FeatureItem = {
 const FeatureList: FeatureItem[] = [
   {
     title: 'DocSpace',
+    link: "docspace",
     Image: require('@site/static/assets/images/docspace-preview.svg').default,
     description: (
       <>
         In this section, you will learn how to integrate ONLYOFFICE{" "}
         DocSpace into your own application and interact with its backend{" "}
-        using the DocSpace API Backend. You will also find the{" "}
-        information on how to embed DocSpace using JavaScript SDK, create{" "}
-        your own plugins with our Plugins SDK, and host a portal on your{" "}
-        own servers using our methods for hosting providers.
+        using the Backend REST API. You will also find the information on{" "}
+        how to embed DocSpace using JavaScript SDK, create your own plugins{" "}
+        with our Plugins SDK, and host a portal on your own servers{" "}
+        using our methods for hosting providers.
       </>
     ),
     features: DocSpaceFeatures,
   },
   {
     title: 'Docs',
+    link: "docs",
     Image: require('@site/static/assets/images/docs-preview.png').default,
     description: (
       <>
@@ -43,31 +46,29 @@ const FeatureList: FeatureItem[] = [
     features: DocsFeatures,
   },
   {
-    title: 'Workspace',
-    Image: require('@site/static/assets/images/workspace-preview.png').default,
+    title: 'Samples',
+    link: "samples/docs/docs-api/language-specific-examples",
+    Image: require('@site/static/assets/images/samples-preview.png').default,
     description: (
       <>
-        In this section, you will learn how to integrate ONLYOFFICE Workspace{" "}
-        into your own application and interact with its backend using the{" "}
-        Workspace API Backend. This solution is provided without editors, you{" "}
-        need to install ONLYOFFICE Docs separately. You can also host a portal{" "}
-        and interact with it using our methods for hosting providers.
+        In this section, you will learn how to use ONLYOFFICE APIs{" "}
+        when working with documents.
       </>
     ),
-    features: WorkspaceFeatures,
+    features: SamplesFeatures,
   },
 ];
 
-function Feature({index, title, Image, description, features }: FeatureItem & { index: number }) {
+function Feature({index, title, link, Image, description, features }: FeatureItem & { index: number }) {
   const is_reversed = index % 2;
   return (
       <div className={clsx(styles.featureBlock,{[styles.featureBlockReverse]:is_reversed})}>
         <div className={styles.homeDecr}>
           <h2>
-            <Link to={title.toLowerCase()}>{title}</Link>
+            <Link to={link}>{title}</Link>
           </h2>
           <p>{description}</p>
-          <Link to={title.toLowerCase()}>More</Link>
+          <Link to={link}>More</Link>
         </div>
         <ul className={styles.featuresList}>
           {features.items.map(((item, index) => (
@@ -77,7 +78,7 @@ function Feature({index, title, Image, description, features }: FeatureItem & { 
             </li>
           )))}
         </ul>
-        <Link to={title.toLowerCase()} className={styles.homePreview}>
+        <Link to={link} className={styles.homePreview}>
           <div>
             {typeof Image === 'string' ? (
               <img src={Image} alt={title} className={styles.featureSvg} />

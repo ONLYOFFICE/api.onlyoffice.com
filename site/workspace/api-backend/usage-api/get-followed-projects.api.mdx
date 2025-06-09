@@ -1,0 +1,63 @@
+---
+id: get-followed-projects
+title: "Get followed projects"
+description: "Returns a list of all the projects which the current user is following."
+sidebar_label: "Get followed projects"
+hide_title: true
+hide_table_of_contents: true
+api: eJy1VVFv2zYQ/ivCPXOx6+1hMzBsQRd0xdYhiFMMWOqHs3SO2FAkR56SeAL/+3Ck7Epts2bApgeZPt7Hu/vu+GkAxtsI6xvwwb2nmheX5TfCVkGkug+aD7C+GeC859YF/ReydvZnwoaC4AJhAwoegmaCbdoqaCjWQXtxgzVcEffBxgoroyNXbl+hMRW3VI0RY/XQ6rrNproPgSxXfaRQ6VjtnTHuQdvbM1AQKHpnI0VYD7BaLuVnHuvXMcLxZFBQO8tkWXzRe6PrnP7ifRTAALFuqUNZ8cETrAFDwAMo0ExdnNjdTk4EJTx5CqxLGi/RXjSaJ4475wyhBQX0iJ03YtujiQRJwet4GfQ9Mj0b0Ew8tWW6pQAK9i50yMX09WoGfbEU3LVmMw0SOWh7O3Pc5EVVPJOCn6ZUPgM4pT4p2DByH/9ttjnZq9JYvZul/ATjM0ZO2Z1C9L1u5hHG56vPvI5PLl9Hb/DwG3Zf4O2NvqPqD7QH5Hinn0n2G7QoZCQF5/fIGDYdGvPPmD6Yil0VxbPCjBL8ZXB7beht+AL83Tu5y01fc5QlOW+o2AR+htE//iD37HtsOm115IDsAqSkgEtBcNF54w5Evwf0JflJq/6fRkyij0okwXN0eRR8s3zx6cV/a3FUJ2ryGR1x6xpYwy3lEUJuYQ0L9HqxOlsujmL3YxEYEKkL9xRiVrpeqIWW2cf1YjG0LnJaD94FTqDgHoPGnSnTKHslnT32Ruo2rkaTzUmBYObb3y6/W0kpE3XdiAaV4z6rsR+0yetfKIuT1NyWbQU2j+wcm0nQdu8yfCT0peu63mo+VJtcbXV1sbmuzi9fS1UUYuHSINMx+8gdZjUYY7wiHjWZmqnKNnPtOInuf6j+IwdMj7zwBnUWnb5cgtLeGyEIFKzOlkU1Rv04NnmrxnbdwDDsMMoVSknMf/YU5CO3/dBd+ZfUkWSZijs6CMt1TZ7zGJi+NOWjr4q09jR+ry6uQYEM57yPd7mP40JOP27Zw+TseUvVmIK8k3oCMgxlSlI6+ZetJxGnOSreQuw2pfQ3r7W5Wg==
+sidebar_class_name: "get api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get followed projects"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/project/@follow"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns a list of all the projects which the current user is following.
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"List of projects","content":{"application/json":{"schema":{"type":"array","items":{"type":"object","properties":{"CanEdit":{"type":"boolean","example":"false"},"IsPrivate":{"type":"boolean","example":"false"},"Id":{"type":"integer","format":"int32","example":"10"},"Title":{"type":"string","example":"Sample Title"},"Description":{"type":"string","example":"Sample description"},"Status":{"type":"integer","format":"int32","example":"0"},"Responsible":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"},"ResponsibleId":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"}},"title":"ProjectWrapper"}}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

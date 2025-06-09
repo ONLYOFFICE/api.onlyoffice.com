@@ -1,0 +1,63 @@
+---
+id: send-instructions-to-delete
+title: "Send the deletion instructions"
+description: "Sends the instructions for deleting a user profile."
+sidebar_label: "Send the deletion instructions"
+hide_title: true
+hide_table_of_contents: true
+api: eJydVk1v4zYQ/SuDueSiWl6nJ9/cpAWyLbqLXRs5BMaGlkYWNzLJkqNkXUP/fTGk/CE7RYJeEpt888GZN2+8Q1brgNMH/EzWNQQ5LAJ5KBUrXGZoHXnF2pq7EqcYyJR3JrBvCzkLc3tLDTFhhp6CsyZQwOkOJ+Ox/CspFF47geIU70xl/SY6gw2FoNZiV1jDZFjgyrlGFxGQfw9is8NQ1LRR8om3jnCKdvWdCsYMnZfcWKeI+/AnyMBemzV2EqNNEfobbZjW5DHDlFE6up4IttHmKZxglfdqixlqpk14O4/aU/VqDqpIZbi46rouw8CK2/DOFBP4xpb0LoMuQ9bcCOhrjHnvlXPk+9C/jj9c9mphVMu19fpfKjGCri9Bf1tw5Dc6BOECcPwq0YFrHaB/cXweFa3XvMXpww5VKL6J929PJAfoSZWY4YvXTLjssh3+RsqTx+lD/DZz+k/aHs5ew6ugiz3806zlevI68JOjSOSHZbfMzl7zlUwZgGsCfcJwqKyHUkiuzRoUtDIczttKNzTCDDfEtZXRcG0kg+Iap5grp/PJaJy7OFR5oKbKy/2oBPLP5EMsRusbnOJupQItfNPhZVaChcKaSq/bNIqY4bPyWq2axLneODWoUm0jzb/wdJuuYPHlL+n88tiVrzJjydWwN8chiC24cLkIBDfWPmkCMSLD/fhihkZtouWpwwy1mBXRRGjVN+4Qp2Z2F1F+N0wetrb1sfriGJQpwakQXqyXFkeVEAer6FA893R5j+urBIbdx/s5zO0Tme5q4DT5yvoPf+zn6+P9XEIN+flWzWaDQoEOUBLLFBkqYbWNBLya9cMXMVdQkypjAn1RBxH7ovaYLjsMwFGqVDw4zyThoGrsC7xormEQFaK+ZCjXiRqnt3vxGRxGDsZCh2mex6gja5qtrSpd0Kiwm3Q4yQ/ighmyFPz9phEeu2PdXvqVDOAXUiWooqCQpMhbpoKpBE/Btr6gcNCCKd7L/zfQSR73knGsZjy4scYk/T8rqtzeQn99ORYD6/e/WoivTWWlvz9+CXptFLee3qabUPoAl/kpo6IN8xrBvCaIlYVNGxhWBHbFKnLyWatIyse9pu1lY9CRRyBTOqsNj+COhdYynlSCCqAgTXximfiKM/x48pDH0ZHdp+87U4xOvlc2PrtfaTOnRQ/Jh/Tg69GH0VjK5GzgjYobt3csCh/DJz2X6TtR+vPS7Y4/Tf7nbug7w/SDc9cobSStNgl1WhQP0jbMcDIay/KIyyIuiKaK6cSFscywtoEFvTssik6O/2nJywpdHhdC2oJ7NZANE5UcZ0VBjuPmaNrEl7MfW7IRDtvs82KOWZzuIcWSivcfxPv+ymxPfQ9FP2Ugf2UHv2qx2yX+dt0Bn67+0+KgiQktxV12XfcTAYC8Jw==
+sidebar_class_name: "put api-method"
+info_path: site/docspace/api-backend/usage-api/api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Send the deletion instructions"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"put"}
+  path={"/api/2.0/people/self/delete"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Sends the instructions for deleting a user profile.
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Information message","content":{"application/json":{"schema":{"type":"object","properties":{"response":{"type":"string"},"count":{"type":"integer","format":"int32"},"links":{"type":"array","items":{"type":"object","properties":{"href":{"type":"string"},"action":{"type":"string"}}}},"status":{"type":"integer","format":"int32"},"statusCode":{"type":"integer","format":"int32"}},"title":"StringWrapper"}}}},"401":{"description":"Unauthorized"},"403":{"description":"No permissions to perform this action"}}}
+>
+  
+</StatusCodes>
+
+
+      

@@ -37,13 +37,15 @@ The reference figure and the steps below explain the process of mentioning users
          },
        ],
      })
-   }
+   };
    
-   const docEditor = new DocsAPI.DocEditor("placeholder", {
+   const config = {
      events: {
        onRequestUsers,
      },
-   })
+   };
+
+   const docEditor = new DocsAPI.DocEditor("placeholder", config);
    ```
 
 3. In order to set the users list under the comment field, the [setUsers](../../usage-api/methods.md#setusers) method must be called:
@@ -83,13 +85,15 @@ function onRequestSendNotify(event) {
   const ACTION_DATA = event.data.actionLink
   const comment = event.data.message
   const emails = event.data.emails
-}
+};
 
-const docEditor = new DocsAPI.DocEditor("placeholder", {
+const config = {
   events: {
     onRequestSendNotify,
   },
-})
+};
+
+const docEditor = new DocsAPI.DocEditor("placeholder", config);
 ```
 
 ## Sharing settings
@@ -113,7 +117,7 @@ docEditor.setSharingSettings({
       user: "External link",
     },
   ],
-})
+});
 ```
 
 In the case when the [onRequestSendNotify](../../usage-api/config/events.md#onrequestsendnotify) event does not provide access to the file, the [mentionShare](../../usage-api/config/editor/customization/customization-standard-branding.md#mentionshare) parameter in the customization section of the editor configuration must be set to **false**.

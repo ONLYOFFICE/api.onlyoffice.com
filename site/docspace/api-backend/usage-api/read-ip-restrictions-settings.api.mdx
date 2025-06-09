@@ -1,0 +1,63 @@
+---
+id: read-ip-restrictions-settings
+title: "Get the IP restriction settings"
+description: "Returns the IP restriction settings."
+sidebar_label: "Get the IP restriction settings"
+hide_title: true
+hide_table_of_contents: true
+api: eJyNVlFv4zYM/isCX/owN3HTYhj8lvVuh942XNGm6EMRXBWbTnR1JE2i22aB//tAyUnspLckD4ktfaQo8uPHrIHk3EP2BPdIpPTci6G4uRUOPTmVkzLawzQBY9FJfrspIAOHsrixdx3MxhoScOit0R49ZGsYpSn/FOhzpyxDIYO+f+F3trnRhJrYRFpbqTycOfzh2W4NPl/gUvITrSxCBmb2A3OCBKzjCEnFUzchHEeilrOqi5sZU6HUkAC+y6XlPXI1NglU0tPfplClwqJjwPfQc0igNG4pCTIoJOE5qSV2nXAmfjtPr84v0kn6a3aZZmk6SOPnl/QqS1NomgRkUSi+sqxuO3GWsvKYACkKrm5uP0x9w/mrY/ba4JQmnKPrRqc0XY4YWyn94jtY6ZxcQQKKcOmPZ27hsDxMA18hj2U+2Gr4gp4k1f7EECP42hR4kkFzLEWPTlqLrg3lKr045OaDljUtjFP/YhE8esxrp2gF2dMapM+/8/73F+SF0AiQwJtThDBtkjX8jtKhg+wpvI2t+hNX27WP8NKrfAP/Nq5pMfoY+M1iaL6naTNN9oK+Q6qd9oIWKH7SXANIYIm0MNy/cwz1lLSADIbSquFokA430KGy3fYfdvrTo3tF50MualdBBuuZ9Pjgqgb2g7oPWJEbXap5HdUDEniVTnHPBQ60xrEMpawrruaBp09xSzzc/cWlm+6Kcs+CEF31S7NjdajAgcsHj+LamBeFgo1QU6s1kICWy2DZdZiAYrM8mDA127ptz1kQ2YNTPmtCJ1amdqL26NixkLoQVnr/ZhxXOEhaEJ7gkD23bDnF9VkEi/XXx4mYmBfUzVnPafSVtA9/bBrm6+OEj+rT81jOxr1ECeVFgYRuqTQWYrYK7Dsbt90TMGdigbIIAbRJ7Z3YJrXFNMmW/zvtkWFhP5KIE2Vl3sSbooXonSqCYCTA25Ea3d2NmvQWAwdDon02HIZTB0ZXK1OWKsdBbpZxcTTcqgMkQJzw000DPFTH2M2ckkVoX1kImefovSAjrDOEOWHBjWxql6PfSkEGj/x7BB31baMYu2yGhWujdRT0vaTy7ifRbh+2Rc/69Fsz8ZUuDdf3/dyruZZUOzxON6b0Fs79U4jSuL24BmKyQBEyK5a1JzFDYWYkAydflQykfN4pXJSNXkWeBerCGqVpIG6Iac3tiYWQXkgROz6yjH2FHn7uXOR5sGN39357itHwe2nCtdsZNbaK9RCdjxe+HFwMUk6TNZ6WMozQ1vEXpP8T9/3crXd/pE6dDW0tCN9paCupNAdSR2mOg+KJCwUJjAZpmATbo/vjors3TWBhPLHtejsoGl7+p0bHE3S6GwhxCG7UgCdMUHIY5zlaCpOjqiNf9v4Z8kTYzrYvnyeQhO7uUyyqePvA3jdbetX13Rf9GAF/8wj+0GK9jvxtmi0+bv3UYquJEc2pnjZN8x/A6vwW
+sidebar_class_name: "get api-method"
+info_path: site/docspace/api-backend/usage-api/api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get the IP restriction settings"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/settings/iprestrictions/settings"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns the IP restriction settings.
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"IP restriction settings","content":{"application/json":{"schema":{"type":"object","properties":{"response":{"type":"object","properties":{"enable":{"type":"boolean","example":true},"lastModified":{"type":"string","format":"date-time","example":"2008-04-10T06:30:00.0000000+04:00"}},"additionalProperties":false,"title":"IPRestrictionsSettings"},"count":{"type":"integer","format":"int32"},"links":{"type":"array","items":{"type":"object","properties":{"href":{"type":"string"},"action":{"type":"string"}}}},"status":{"type":"integer","format":"int32"},"statusCode":{"type":"integer","format":"int32"}},"title":"IPRestrictionsSettingsWrapper"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

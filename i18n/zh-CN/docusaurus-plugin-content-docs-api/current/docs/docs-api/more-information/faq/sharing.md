@@ -2,7 +2,7 @@
 sidebar_position: -10
 ---
 
-# Sharing
+# 共享问题
 
 ## 如何打开启用了"跟踪更改"模式的文档？
 
@@ -132,7 +132,7 @@ sidebar_position: -10
   })
   ```
 
-有关权限的更多信息，请参见 [此页面](../../usage-api/config/document/permissions.md)。
+有关权限的更多信息，请参见[此页面](../../usage-api/config/document/permissions.md)。
 
 ## 如何使用'fillForms'参数？
 
@@ -158,7 +158,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
 
 *comment* 字段是可选的，因为只要启用了 *fillForms* 参数并禁用了 *edit* 和 *review* 参数，注释都被禁用了。
 
-通过上面的配置，文档将在启用表单填写模式并禁用所有其他模式的情况下打开，从而使有权访问它的用户只能填写特殊[内容控件](https://helpcenter.onlyoffice.com/ONLYOFFICE-Editors/ONLYOFFICE-Document-Editor/UsageInstructions/InsertContentControls.aspx?from=api) 中的字段。
+通过上面的配置，文档将在启用表单填写模式并禁用所有其他模式的情况下打开，从而使有权访问它的用户只能填写特殊[内容控件](https://helpcenter.onlyoffice.com/ONLYOFFICE-Editors/ONLYOFFICE-Document-Editor/UsageInstructions/InsertContentControls.aspx?from=api)中的字段。
 
 然后由您决定下一步做什么：对可编辑字段的更改将保存到同一个文档中，或者每次新用户访问和更改原始文档时都将创建一个新文档。
 
@@ -166,7 +166,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
 
 第二种情况更常用，当您有一个文档模板，其中一些字段未填写，并希望将其访问权限授予更多用户（例如，将其放到您的网站上，以便用户无需每次下载就可以填写并再次上传）。在这种情况下，更合理的做法是将此文档作为模板，方便将来更改，并且在具有 *fillForms* 访问权限的用户编辑字段后，将其保存在另一个文件名下。
 
-有关权限的更多信息，请参见 [此页面](../../usage-api/config/document/permissions.md)。
+有关权限的更多信息，请参见[此页面](../../usage-api/config/document/permissions.md)。
 
 ## 如何同时启用文档的编辑和评论模式？
 
@@ -188,7 +188,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
 })
 ```
 
-有关权限的更多信息，请参见 [此页面](../../usage-api/config/document/permissions.md).
+有关权限的更多信息，请参见[此页面](../../usage-api/config/document/permissions.md).
 
 ## 权限参数是否相互影响？
 
@@ -202,7 +202,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
 
 请参阅下面的交互表，了解不同参数和参数组合如何相互影响以及由此产生的文档权限：
 
-有关权限的更多信息，请参见 [此页面](../../usage-api/config/document/permissions.md)。
+有关权限的更多信息，请参见[此页面](../../usage-api/config/document/permissions.md)。
 
 ## 如何在没有编辑选项的情况下在查看器中打开文档？
 
@@ -228,11 +228,11 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
 })
 ```
 
-有关权限的更多信息，请参见 [此页面](../../usage-api/config/document/permissions.md).
+有关权限的更多信息，请参见[此页面](../../usage-api/config/document/permissions.md).
 
 ## 如何禁用/启用下载文件的可能性？
 
-要在禁用*下载*选项的情况下打开文档，请使用 *document.permissions* 参数（请参阅 [此处](../../usage-api/advanced-parameters.md)) 了解 ONLYOFFICE 文档配置对象的完整结构）。
+要在禁用*下载*选项的情况下打开文档，请使用 *document.permissions* 参数（请参阅[此处](../../usage-api/advanced-parameters.md))了解 ONLYOFFICE 文档配置对象的完整结构）。
 
 您需要将 *document.permission.download* 设置为 **false**，以便从文档**文件**菜单（如果 *document.permission.edit* 参数设置为 **true** ）或顶部工具栏中删除**下载为...**选项（如果 *document.permission.edit* 设置为 **false** 并且该文件仅供查看），并且用户无法从编辑器下载该文档。这种情况下的*权限*配置将如下所示：
 
@@ -246,7 +246,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
 })
 ```
 
-有关权限的更多信息，请参见 [此页面](../../usage-api/config/document/permissions.md)。
+有关权限的更多信息，请参见[此页面](../../usage-api/config/document/permissions.md)。
 
 ## 如何防止文档被打印？
 

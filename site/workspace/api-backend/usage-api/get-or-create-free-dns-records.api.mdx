@@ -1,0 +1,63 @@
+---
+id: get-or-create-free-dns-records
+title: "Get or create free DNS records"
+description: "Returns or generates free DNS records."
+sidebar_label: "Get or create free DNS records"
+hide_title: true
+hide_table_of_contents: true
+api: eJzdVcFO20AQ/RVrziscAofWN0SqgqoiRIALymFjT+Il9q47O6ak1v57NWsTklICqjj1ZHv9Zjxv3vhNB6yXHrI7qLWpPNIDUjqNFw8zBR7zlgyvIbvr4KTl0pH5pdk4e4a6QJJIQl2Agp9kGGEWZgoK9DmZRmCQwRVyS9YnjpIlWiTN6JMFISaTi2lCmDsq/AEoIPSNsx49ZB2MRyO57KbaCkgWjhIuMclbIrScMFptOdG2SFqPBApyZxktSxrdNJXJY+HpvZdcHfi8xFrLHa8bhAzc/B5zBgUNuQaJTV/JebGFMZZxGbMvHNWa+6OjMSjAR103lYAOx0fHEBR8f7yKxb79jTPneQvlmYxd7uSMiKDgkozrFfm3ms79LZJZGNyuau5chdruBDC1CCEoYMPxoB+Liau1sU/MJpq1ZJ02i/dSvdA17qdqBREU3OqqfQP6ECEfRmti/S6vycrU7yU2xQpzdrS/4g1KtGznlcm/4Xp/yDPs44hueG2YxvPTEvPVf6nk3rR7svTxQRDHo8OXlnRj9WCLWMQ8NXLpCshgibFlmkvIINWNSccHo3TLZ8UDC+vTHugH1xWnbamCDErmxmdp2pXOc8i6xhEHUPCgyeh51YtQDs5R4EK3lfz7lct1VQ52ITG7rz+NPo+F0Ja7T8UJ+3R/9fhNv3RjZAwVGKFe9q9VL3O2Gxt7YezCxfCht6eurltreJ30XU6uvkyvk5PLc2GF5PuWVrIhhuo91zq69fCNr8iySHJCzfhii8Afu6d73gHvX0MDV8ZHTptKGyuVREW6Qc07aQQoGB+MQG1tTnHgXlNQUf6ZGvS5g66ba483VIUgxz9aJNmqs2c55Smop67KGKzEGeAkz7HhqHv8i14uM9FyM3Zfv1yDAhnKXeFWUbjhRrI/vbLrrdy7GqqhhFX0nldCuq4fixA2+Kef+ZWIzeD0aOnwLITwG7Ic6fw=
+sidebar_class_name: "get api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get or create free DNS records"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/mailserver/freedns/get"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns or generates free DNS records.
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"DNS records for the current tenant and user","content":{"application/json":{"schema":{"type":"object","properties":{"Id":{"type":"integer","format":"int32","example":"1234"},"MxRecord":{"type":"object","properties":{"Host":{"type":"string","example":"Host"},"Priority":{"type":"integer","format":"int32","example":"1234"},"IsVerified":{"type":"boolean","example":"true"}},"title":"ServerDomainMxRecordData"},"SpfRecord":{"type":"object","properties":{"Name":{"type":"string","example":"name"},"Value":{"type":"string","example":"value"},"IsVerified":{"type":"boolean","example":"true"}},"title":"ServerDomainDnsRecordData"},"DkimRecord":{"type":"object","properties":{"Selector":{"type":"string","example":"Selector"},"PublicKey":{"type":"string","example":"PublicKey"},"IsVerified":{"type":"boolean","example":"true"}},"title":"ServerDomainDkimRecordData"},"DomainCheckRecord":{"type":"object","properties":{"Name":{"type":"string","example":"name"},"Value":{"type":"string","example":"value"},"IsVerified":{"type":"boolean","example":"true"}},"title":"ServerDomainDnsRecordData"},"IsVerified":{"type":"boolean"}},"title":"ServerDomainDnsData"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

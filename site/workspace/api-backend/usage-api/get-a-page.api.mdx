@@ -1,0 +1,71 @@
+---
+id: get-a-page
+title: "Get a page"
+description: "Returns the detailed information on a wiki page with the name and version specified in the request."
+sidebar_label: "Get a page"
+hide_title: true
+hide_table_of_contents: true
+api: eJy9Vdtu2zgQ/RVhnhlbcbq9CFgs0m7QLRa7CBIHBer6YSKNLdaSyJKjJFpB/74YSortxI1fiupBpsU5w7mcOWyBce0hWUBqyrKuNDfTz3qjYanAU1o7zQ0kixbOa86N0/8ha1P9RZiRE5QjzEDBvdNMsOyWCjLyqdNWzCCBK+LaVT7inKKMGHVBWaSrlXFl8BSZKsLoXm90ZHFN0b3mPBhXWFKEVRbdkfNi6C2leqUDPFg4+l6T5wkosOiwJCbnQ6yChaT/UaAlDoucw9PgLuXEwcqnOZUISQvcWEF7drpaQyc5DUe9N1kjFqmpmCqWJVpb6DSkMv3mxWv73JW5/UYpS5zOWHKsycvukJksD8Q17qrRCzqHjeTDVPod77piWpMDBX1V+09nM+j6R8L31lS+P3UWxz84cactoH5Wkv+GXjytqgJ6wNIWtNeFTsGH7alHEGN8nYIbmyFT9r45Hs6n7JDrx8LVtc72joqH5+TAa3wkhD+1twU2x7P9R28o+oJVg+w3WqBzzcUxEFYoLe4UnN8ho7susShextSuiNhEXiwjDCjBXzqz0gXduCPwr1+nl85kdcpelmRsQf03gU/Q24c/ak/ud8xKXWnPDtk4ELpxnxBclLYwDdFnh7YPfmjUyyfP4ll8cjo7id/OT98kZ2+S+Gxydvr61bvXv33Z8y80EN/BeSD6q/j0ObdvKhy0i7KAL4lzk0ECawoEEWlIYIpWT2eTeLoVQpGlaSvU7EQhyN2NClNL+SBntj6ZTtvceO6S1hrHYnmHTuNt0TNO9vqgVlgXQrLCpFiEz50Cwexvv43fhdndUeBrGbbe3UEdfiwnWv03NaPo5f22GgVxDxtKIdN8tRW3i7EJO+K0iJed+FuZcM5Q+w9jkaLrUJbo6uJ6Hp1ffpL0RygUyDSm6bnEoBxDMB+JIwyi/1SXdwT2F90fQ/WYHnhqC9SVhFz3I9LTYyGlBQWzSRy0ccherj65LRUkIa2lGvq9gLa9RS9z1nXy+XtNTm7S5ZYegUmZ9rLOIFlh4emFUuzeVgcDHjlQNYGDRS3/QMGGmvE27KSX+Xh7t8PWILonc3GwhT6T/U6NiPM0Jcsv2i53Bu3jxRwU3A7XZ2kygTi8BxXeIUoTUg4cD99aKLBa18KPBHqXwliZ5X3CbwLhh4UkdbAO+9wfiyJvyeogpG37ceq6R/t+64eIx4HrraUty67r/gdLCi+L
+sidebar_class_name: "get api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get a page"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/community/wiki/{name}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns the detailed information on a wiki page with the name and version specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"name","in":"path","description":"Page name","schema":{"type":"string"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"version":{"description":"Page version","type":"array","items":{"type":"integer","format":"int32"}}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Page information","content":{"application/json":{"schema":{"type":"object","properties":{"Name":{"type":"string","example":"Page name"},"Content":{"type":"string","example":"Page content"},"UpdatedBy":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"},"Updated":{"type":"string","example":"2020-12-08T17:37:03.3164965Z"}},"title":"PageWrapper"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

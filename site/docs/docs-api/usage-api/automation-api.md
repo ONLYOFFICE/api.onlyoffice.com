@@ -4,7 +4,7 @@ sidebar_position: -2
 
 # Automation API
 
-**Connector** is a class that allows editing text documents, spreadsheets, presentations, and fillable forms from an external source. The examples of using Automation API can be found [here](../get-started/external-access-to-the-document-editing/external-access-to-the-document-editing.md).
+**Connector** is a class that allows editing text documents, spreadsheets, presentations, PDFs, and fillable forms from an external source. The examples of using Automation API can be found [here](../samples/external-access-to-the-document-editing/external-access-to-the-document-editing.md).
 
 To create the connector, use the [createConnector](./methods.md#createconnector) method of the **document editor** object:
 
@@ -12,9 +12,9 @@ To create the connector, use the [createConnector](./methods.md#createconnector)
 const connector = docEditor.createConnector()
 ```
 
-> Please note that the connector is available only for the **ONLYOFFICE Developer Edition**.
+> Please note that the connector is available only for the **ONLYOFFICE Docs Developer**.
 >
-> The connector is an additional feature not included by default in the ONLYOFFICE Developer Edition and is available at an extra cost. Please contact our sales team at [sales@onlyoffice.com](mailto:sales@onlyoffice.com) to request a quote.
+> The connector is an additional feature not included by default in the ONLYOFFICE Docs Developer and is available at an extra cost. Please contact our sales team at [sales@onlyoffice.com](mailto:sales@onlyoffice.com) to request a quote.
 
 The connector has the same interface as plugins. Below you can find methods that are available for this class.
 

@@ -1,6 +1,9 @@
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 # ExecuteCommand
 
-Executes the command which will be used to create the document file (text document, spreadsheet, presentation, form document, PDF). See the [Text document API](../../../../office-api/usage-api/text-document-api/text-document-api.md), [Spreadsheet API](../../../../office-api/usage-api/spreadsheet-api/spreadsheet-api.md), [Presentation API](../../../../office-api/usage-api/presentation-api/presentation-api.md), or [Form API](../../../../office-api/usage-api/form-api/form-api.md) sections for more information which commands are available for various document types.
+Executes the command which will be used to create the document file (text document, spreadsheet, presentation, form document, PDF). See the [Text document API](/docs/office-api/usage-api/text-document-api/text-document-api.md), [Spreadsheet API](/docs/office-api/usage-api/spreadsheet-api/spreadsheet-api.md), [Presentation API](/docs/office-api/usage-api/presentation-api/presentation-api.md), or [Form API](/docs/office-api/usage-api/form-api/form-api.md) sections for more information which commands are available for various document types.
 
 > Please note, that for the `.docbuilder` file the `CDocBuilder.ExecuteCommand` method is not used explicitly. The command itself is used instead. See the example below.
 
@@ -19,18 +22,19 @@ bool ExecuteCommand(const wchar_t* sCommand, CDocBuilderValue* oRetValue = 0);
 
 ## Example
 
-### C++
-
-```cpp
-std::wstring sWorkDirectory = NSUtils::GetBuilderDirectory();
-CDocBuilder::Initialize(sWorkDirectory.c_str());
-CDocBuilder oBuilder;
-oBuilder.ExecuteCommand(L"oParagraph.AddText(\"Hello, world!\");");
-CDocBuilder::Dispose();
-```
-
-### .docbuilder
-
-```ts
-oParagraph.AddText("Hello, world!")
-```
+<Tabs>
+    <TabItem value="cpp" label="C++">
+        ```cpp
+        std::wstring sWorkDirectory = NSUtils::GetBuilderDirectory();
+        CDocBuilder::Initialize(sWorkDirectory.c_str());
+        CDocBuilder oBuilder;
+        oBuilder.ExecuteCommand(L"oParagraph.AddText(\"Hello, world!\");");
+        CDocBuilder::Dispose();
+        ```
+    </TabItem>
+    <TabItem value="builder" label=".docbuilder">
+        ```ts
+        paragraph.AddText("Hello, world!");
+        ```
+    </TabItem>
+</Tabs>

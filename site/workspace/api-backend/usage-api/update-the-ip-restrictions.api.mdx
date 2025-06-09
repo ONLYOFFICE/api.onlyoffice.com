@@ -1,0 +1,71 @@
+---
+id: update-the-ip-restrictions
+title: "Update the IP restrictions"
+description: "Updates the IP restriction settings with a parameter specified in the request."
+sidebar_label: "Update the IP restrictions"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVMFu2zAM/RWBZ63Ogh0237qhwIpdgqY9FTkoNhurtSVVoptlhv59oOSkdpfu1B4KRSTF9x4fPQCpXYDyHgISabMLxfVKeAzkdUXamgAbCQGr3ms6QHk/wGVPjfX6j+LwT1Q1eq73qGqQsPeaEDZxI6HGUHntOA1KuHO1IgyCGhTzFuLYWuw1NUIJp7zqkNCL4LDSDxproU2q9PjcY6ALkDAev9v6AOUAlTWEhvionGt1lfAVj4G7DxCqBjvFJzo4hBLs9hErAgnOW4eeNAaOolHbFvk0h78ekQSxb5Aa9IKsyMlv6ARhvTCWnx5bba1tURmI6Y+RB2dNyA2Xi8W/3bJY9XtCgfwoulcnum+wSsDfqnMcA/I9AgMnTenienUz4bs+osrsviw+nyFk1GgbrNNTHVJjayjB9QmVogZKKJTTxfJiUZzcqN1U2mKiQED/gj4kT/a+hRIaIhfKohgaGyiWg7OeIkh4UV4zzcSYYxnfg+pbghJaW6k2XUcJXDMPf118WzK1yR6sWd383NltOKmpnP6FB5CgWYQmhyUY1XF0VptU4fHdvPr66jiCV1/yLCK/92BTn3EiP2zX9UbTQayTLOLman0rLlfXTB99yFNoeQNHmoE6lawygsmWO7OerPVsmJNd+/itHoUj/E2Fa5U2jDaNdxhNcs+qgoTlxSK54GSIuVWmsY0cx34Pw7BVAe98GyNfP/fo+bO2eXUJ/4ryOCx21xMeksSJ9KdbRsjpbZ9H/Gb7ojxWXFYVOvpv7mayCau7W5CwHb9nna25xKs9f+vUHkoACdZlcuWQ7wZoldn1ase5+Un2ES/b3IZPyYbjgUkdQ+YwATh3pBx58H9mdbZkGLLJYzzl59C7Fac1yNk84k2M8S/GyEc2
+sidebar_class_name: "put api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Update the IP restrictions"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"put"}
+  path={"/api/2.0/settings/iprestrictions/settings"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Updates the IP restriction settings with a parameter specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"enable":{"description":"Specifies whether to enable IP restrictions or not","type":"boolean"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Updated IP restriction settings","content":{"application/json":{"schema":{"type":"object","properties":{"Enable":{"type":"boolean","example":"true"}},"title":"IPRestrictionsSettings"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

@@ -1,0 +1,71 @@
+---
+id: get-the-linked-crm-entities
+title: "Get the linked CRM entities"
+description: "Returns a list of the CRM entities (contact, case, or opportunity) linked with a conversation."
+sidebar_label: "Get the linked CRM entities"
+hide_title: true
+hide_table_of_contents: true
+api: eJy1VE1v2zAM/SsCTxug1Vmww+Zb1xZdsRUY0vYUBAFjM7FaW3Iluqln+L8PlJ02absBO8wHQxI/xPf4qA4YNwHSOVRoyuTEWcaMAyw0BMoab7iFdN7BccOF8+YXsnH2G2FOXoI8YQ4att4wwaJfaMgpZN7U4gYpzIgbb4NCVZrAyq0VF6ROZpeKLBs2FNS7bLhTqwwDaeW8cnXtPDfWcPtelcbeUa62hguFKnP2gXyIZRyBBk/3DQX+6vIW0g4kF1mWJdZ1abLomNwGqaaDkBVUoay4rQlScKtbyhg01N7V5KUgsVYUAm5oaXLZHUK6HGzq4vRIXbCqsFUr2Qk4tK0aY5WxWdnklCtjI+j9ykHvCjCWaUMe+vgJnlA7G4YyppPJ6/t/jERGAltl7Nr5KmZNVTccLk2uR/tS7tEKH5DRL4VLrdhwST3of2YLvccWNBimKrzFYswMKZz4alTSKTLCiO3T5ONrODcWR2lRDuJVERcuhxQ2FBuDXEAKCdYmmR5NkijTzFfJoItkpyMQwXphOOq18SWkUDDXIU2SrnCB+7QTWQnwB/QGV+XAstiGutbYlAwplC7DMh73GiTm0Px58mUqmPZm5EqoGtK9OSnPFNbmO0UOBXwxmDVYrMR6EBvZkF7MnjV+9ohVLRQfanTSS8K1ixfteuCqKo6Quoq8qNnZ1bU6/nkh+MmHgf4SmXY4A1cYGz9Wc04clTtO4P7UwotB35u8/z/zI5VMj5zUJRor5ceGd6Nc5sIzaJgeTUDHl03U7ivQMKQGDU9QFnqUwBy6boWBbnzZ93J835CX52/xrBjZ9XrXOFHaHbWR7Qj/w7XUJu5lM7T7xVj1ehdxnGVU8199F3vTcH52DRpW4ztXuVxCPG7lDcQtpAAaXOxGVGE866BEu2lwI75DStGUDNyhJO+iJMeFgNqZbLtX4KE69YhD/oLqzZCuGwTf90/+g+mPEU8jMXhLcxd93/8G5NtLWA==
+sidebar_class_name: "get api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get the linked CRM entities"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/mail/crm/linked/entities"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns a list of the CRM entities (contact, case, or opportunity) linked with a conversation.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"message_id":{"description":"Message ID. It may be ID of any message included in the conversation","type":"integer"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"List of entity information: {entity_id, entity_type, avatar_link, title}","content":{"application/json":{"schema":{"type":"array","items":{"type":"object","title":"CrmContactData"}}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

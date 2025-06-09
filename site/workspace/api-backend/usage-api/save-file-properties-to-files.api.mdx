@@ -1,0 +1,71 @@
+---
+id: save-file-properties-to-files
+title: "Save file properties to files"
+description: "Saves file properties to the specified files."
+sidebar_label: "Save file properties to files"
+hide_title: true
+hide_table_of_contents: true
+api: eJyVVU1v2zAM/SsGz1qdFTtsvnVdgxXbgKBJT0EOis3EamXLlei2maH/PlByGjtNOzQHQzE/RL73SHdAcusgW8JGaXTplJ+wEuAwb62iHWTLDi5aKo1VfyUpU/9EWaDlEIuyAAFPVhHCyq8EFOhyqxp2gwzm8hFdwomTxpoGLSl0CZmESkxcg7naKCyCgzsDARYfWnT03RQ7yDrITU1YEx9l02iVh+vTO8fJO3B5iZXkE+0ahAzM+g5zAgGHy9ga0l8XfByXd/3DJWYTrwexzyKtlTsQoAgrN8juyKp6C94LyC1Kwnm73hgdoDjOfBkcXCITt3dKjE1qQ4d71sZolDV4ESqcjWoep5uOEQQffoyXa0ztYsj5ZPI68rdytO9xmEF8GNy3YHkD9Kmx1VRpzZD91/nSaI05sT/HDQIGIC3MNAAZmTwi5WCeSSpPOkROotNCkcb3vJTGP9Ldn6afYvSwx9mQnIPHVU12NzsiTsCXyefXVN3Wsp8yLEKSCqk0BWTQtAGy0BikslHp+dkkjfO6lpSX6YhZh/YRrQuD21oNGZREjcvStCuNI591jbHkQcCjtEqudSSBbbGqjWw1QQba5FKH114Ax4zNXyffzrmjwbKYs2piupMr46CmRv3CICduvYxmAbWs2DqKDViwLG8O2+HqWVZNZPBlupd7ilYnBpRsi55v25hQRc/Ppamqtla0S+YBtOTmar5ILmbXDA5aF5nRPMs9CI4qGQakL5VX3KkNt18qI44HK+3Du7EHjvCZ0kZLFWYi0Nv10lgyqiDg/GwCcadwAUEg44lbiZ7sJXTdWjq8tdp7fv3QouWNvzpog/95saeINXWPuwBd6OTTgutid91GYo92iRf7iIs8x4be9V0NVD+7XXD5/begMgWHWPnE3wn5BBmAABOADXoL7zrQst62csu+MSWrhwdrLL77IL7+wE3tTfVuUOBYh6Lvg5/c1cmQrovS9v7FP5rejHgRf/RmYlfe+38YaKF7
+sidebar_class_name: "put api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Save file properties to files"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"put"}
+  path={"/api/2.0/files/batch/properties"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Saves file properties to the specified files.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"filesId":{"description":"IDs of files","type":"array","items":{"type":"string"}},"createSubfolder":{"description":"Creates a subfolder or not","type":"boolean"},"fileProperties":{"description":"File properties"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"List of file properties","content":{"application/json":{"schema":{"type":"array","items":{"type":"object","properties":{"FormFilling":{"type":"object","properties":{"CollectFillForm":{"type":"boolean"},"ToFolderId":{"type":"string"},"ToFolderPath":{"type":"string"},"CreateFolderTitle":{"type":"string"},"CreateFileMask":{"type":"string"}},"title":"FormFillingProperties"}},"title":"EntryProperties"}}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

@@ -1,0 +1,73 @@
+---
+id: share-a-folder
+title: "Share a folder"
+description: "Sets the sharing settings to a folder with the ID specified in the request."
+sidebar_label: "Share a folder"
+hide_title: true
+hide_table_of_contents: true
+api: eJztVktz2zYQ/iuYPbUeyFLkN2+uY089nXo8lt0cbB0gcikiAQEGAK0oHP73zgKkREXOo/fqQIF47C6+3e9bNuDF0kHyDLlU6MazQliplzDn4DCtrfRrSJ4buKx9Yaz8Krw0+k8UGVo6ZFFkwGFlpUeYt3MOGbrUyoq2QQIz9I75ApmLdplD76VeOuYNEyw3KkPLVtIXYdfte+YqTGUuMWNShzmLn2t0/vBFv+iDgzvj8eAgYdciLZjJd2xXwooSPVrHytp5lhrtBVlZGfYqVI0uYS9AN8RH8wJsRP46G7Xr41gVpmQrZCuhPUVJ1nETK2cvcJmm6FwwIMKQ+XWFbFXItBieXMpXpP+N/d8eUGSc0fMDIcYZ+vT3Q+CwDT2grUWJkEB0eUsIS0KzEr6AbyG+iRjevgcOLi2wFJA0QBFBAs6HbLaUmQ7IP0y2ph2EDmpPQ1FVSqYhteOPjqw2+6bM4iOmnmK1pkLrJbqwj+ChwW5UV0YpTOmFEN7PEPDerrBWrOmGHkv3c39d+vbvyCE3thQeEqhrSZjhF1FWirZM8yzHk7Oz0VE6PR0dnx2dji6y/GK0OBGn50eLxfnJdAIt7zI7sC21xyXaoXGp/dGUrOu6JArcGY3AYZPUbhz+KLRwh3+Epfhp7lXiCjhcmbIk+DncSKVujC1p+ap23pQ3Unm0sMem5wkbMfLH2Ts2GtbRtHvl7CiMomPOjtmIRd+cnYQVcs/ZKRuxLgLOztiIbYLg7JzWBnHMd6CcQNty8NKHtxupMGTknjLrwpo2Xubr/ZK4o3mJLnDBMbEwtd/wF7NeDIxl2vhtfSyMUSg0pacro7/RObF8o+i6hcBa1BlbFahZDIeq7zset642bKEfEcZVRrtYd9PJZN/hbCdyqWOR0Br/z/z6KQ/2MP9gRVWhhS7c48m7/QiftOiUG7OQnRJ9YTISkzqQiyQlgbGo5Hh6OBnHLhAvNG56AWrHkebUFOxrr1K1VZBA4X3lkvG4KYzzbdJUxvoWOLwKK8VCRfRoLQaXi1oRjZRJhQrTLQc6s7t8PrmY0sUGfWhGiEVzb3ajLZKV/AvXvWgWcZn3orpzNkBCKXnYiuN1X+sbcXseyM6vaclWSogw8y0pvK1xv5A3lUcx51HcumwTS2st/ZrNAvTs4Xr2yC7vbwlitC6mWQmPPZTOlyKUWHfh2U4D+7Z/DBrB/936F7t1V2cev/hxpYQM4hTY0HSEeqYiBA7TQ6qFQKrQQ7oMJIPOHmtszjuOPEPTLITDJ6valqY/12jpG2y+pVSoyEw6GmeQ5EI5/EFah18Ib4be80avA29VTW/A4ROuh18h7bzlPZ0ogrh8Ff2MHsnI9vie5rW8P0EZqfwP984HQnX/9AgcFt1nS2kyOmIFNVF6hkhNuHbQhjDXgBJ6WUdyRZPEdNLCXaH4FISiG9Cl3sRiVzN6YOhJt3rzSNNEGWrbzf649N0TG6GKuyk187Zt/wVauO3W
+sidebar_class_name: "put api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Share a folder"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"put"}
+  path={"/api/2.0/files/folder/{folderId}/share"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Sets the sharing settings to a folder with the ID specified in the request.
+
+**Note**: Each of the sharing parameters must contain two values: "ShareTo" - ID of the user with whom we want to share a folder, "Access" - access type which we want to give to the user (Read, ReadWrite, etc).
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"folderId","in":"path","description":"Folder ID","schema":{"type":"string"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"share":{"description":"Collection of sharing parameters","type":"array","items":{"type":"object","properties":{"ShareTo":{"type":"string","format":"uuid","example":"2fdfe577-3c26-4736-9df9-b5a683bb8520"},"Access":{"type":"integer","format":"int32","enum":["None","ReadWrite","Read","Restrict","Varies","Review","Comment","FillForms","CustomFilter"],"description":"[0 - None, 1 - ReadWrite, 2 - Read, 3 - Restrict, 4 - Varies, 5 - Review, 6 - Comment, 7 - FillForms, 8 - CustomFilter]","example":"0"}},"title":"FileShareParams"}},"notify":{"description":"Notifies users about the shared folder or not","type":"boolean"},"sharingMessage":{"description":"Message to send when notifying about the shared folder","type":"string"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Shared folder information","content":{"application/json":{"schema":{"type":"array","items":{"type":"object","title":"FileShareWrapper"}}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

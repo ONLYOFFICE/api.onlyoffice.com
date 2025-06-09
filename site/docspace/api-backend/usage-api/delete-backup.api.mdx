@@ -1,0 +1,71 @@
+---
+id: delete-backup
+title: "Delete the backup"
+description: "Deletes the backup with the ID specified in the request."
+sidebar_label: "Delete the backup"
+hide_title: true
+hide_table_of_contents: true
+api: eJylVm1PIzcQ/ivWfKGVliTkoND9Fl4qcT3pJA6EKhQdzu4s62Nj++wxkEb736uxNy9LaEHqF8ja8z7PPOMlkHzwkN/BqSweg4VpBsaik6SMviwhhxIbJOxuM7DSyTkSOlZagpZzhBxUCRkoDTlYSTVkUKIvnLJsBXK4rlHMogVxeT6ADBz+DMphCTm5gBn4osa5hHwJtLBs0JNT+gEyqIybS4IcQohO8EXObcMix0fyqDo+PNqvfvv9eP/w8OBkf/bppNwfVTgqx8fHOD46gbadsjdvjfbo2cF4NOJ//QBPjWlQavEkm4C54KCEqgTVKNbVEMoLH4oCva9CAxkURhNqYmvS2kYVUWz4w7PJ5W5OZvYDC+IaOjZKKgW0im5LcpbCgZadhOSiu1Ka8AHddmWUpk9jlm2UfvRbstI5ueDGEM79+4HUDqvdFrQZyCKVaeeqbdsMPEkK/oMhJuEzU+KHFNoMSFFsd9eiWyetRdf5Phwd7DbzRstAtXHqbywhCo13hf4ywQnrVKH0g7CN1KI06IU2JHyw1jgSVCsvTFKIiWIRnKJFBL70xXd28/0R+QAcSobns1OEMG2zJZyidOggv4tfE6v+xMX67C156VWxEv86CVSP3xb8ajGO5t2Uwd1P6zxOq4/I7SbuWVEdvy/PhbdYqEphKZSOZzyI6Ilnco5Um83Ex1mnGnIYSquG48FomAwO0333sVRlC1wb97TihOAayGE5kx5vXNPusMG3KCsKoyv1ENJwQQZP0ik5axIWO+XUt0qGhkGxY+k8XYmbqy8MiOmmR994+JKpfqc2wxEbsmPyxqM4M+ZRoWAl1NTNNWQrsusZ7GiviCqMtq6Naz81kd3xcqEJnVgwBoNHx4aF1KWw0vtn47jhkT4iGUSDbLkDz0dM7yVhsfx8ey2uzSPqdq9nNNnKuh9/rObu8+01u+qj9b2aTXqFYp4seUPMlcZSzBYRaHuTbiajzJ6oUZYxgK6oPY9dUTuZNluPw4bCZDx4HUmSE1VjnhPue15F5J0M+DpBY/t2RUq9w4jBWGifD4fR68DoZmGqShU4KMw8HY6Ha86BDIgL/nHVKB67Y+xqJ0iexCuUpZBx5QgywjpDWBCWwqE3wRXo18yQwy3/f0c6seaKQDbVjAdnRuu0F14VlW/PRXe9OxY97Y9nzcBXujLc35d9rx60pODwfbgxpNfiPD+lqIx7FddA8KMjVlbMgycxQ2FmJCMmn5SMoLxfMduKNnoduReoS2uUpoG4JIY1jyeWQnohRZr4DbvGGb7fSuR+sEH3dn6vGKPl78rEtLtVN7GK+RCdTwl/GhwMRlwmazzNZdzEneHE91t0/7pay80z5f8sh64jhC80tI1U8W0SEkGnNXHH7YIMxoMR08ommM2ygAxyVfITszaeWGW53hItH/8M6HibTjfbIG6UUnn+XUJeycbjf6T4y1X3svxV7Dw638xhBTW9iCuoCZgWTVwW/K5tp222YiKOJV1MigItbansvAB5G61X6vnFl4vrC8giufQRnpZI94MdvBnRq52TguC//CB4U2O5TOPTtmv5dPWvGmtK7nLnHNq2/QcSFScr
+sidebar_class_name: "delete api-method"
+info_path: site/docspace/api-backend/usage-api/api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Delete the backup"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"delete"}
+  path={"/api/2.0/backup/deletebackup/{id}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Deletes the backup with the ID specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"id","in":"path","description":"The backup ID.","required":true,"schema":{"type":"string","format":"uuid","example":"75a5f745-f697-4418-b38d-0fe0d277e258"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Boolean value: true if the operation is successful","content":{"application/json":{"schema":{"type":"object","properties":{"response":{"type":"boolean"},"count":{"type":"integer","format":"int32"},"links":{"type":"array","items":{"type":"object","properties":{"href":{"type":"string"},"action":{"type":"string"}}}},"status":{"type":"integer","format":"int32"},"statusCode":{"type":"integer","format":"int32"}},"title":"BooleanWrapper"}}}},"401":{"description":"Unauthorized"},"402":{"description":"Your pricing plan does not support this option"}}}
+>
+  
+</StatusCodes>
+
+
+      

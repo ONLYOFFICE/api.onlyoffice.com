@@ -1,0 +1,71 @@
+---
+id: get-the-shared-folder-information
+title: "Get the shared folder information"
+description: "Returns the detailed information about the shared folder with the ID specified in the request."
+sidebar_label: "Get the shared folder information"
+hide_title: true
+hide_table_of_contents: true
+api: eJy1VMFu2zAM/RWDZ6HOgh0234qt7YJdhqbFDkEOjM3UamVbleh2nqF/HyjFbbymuy2H2CZF8vHxUSMw3nkoNrDXhny+rtHp9g62CjyVvdM8QLEZ4bznunP6N7Lu2m+EFTkJcoQVKHh2mgm2YaugIl86beUYFHBN3LvWZ1xTVhGjNlRlut13romZMtx1PUe3r9FRle07U5HLnjXX0bz6mnlLpd7rGBltjh578nwGCiw6bIjJ+QizxYaggJRkJdC0wLDINfyN7TJVWn0FBb6sqUEoRuDBSgbPkYYgLTnytms9efEvFwt5zFOtZ9iP+gMFZdcytSxBaK3RZXTk914ix7eV0TkcBDhT44/s3e6eSgYFrNmI4VIbioV/OrSWHAT5Kfi4+PAW4W2LhwlSBXKqIa67Cgq4I448cg0F5Gh1vjxb5EkNqaF8nPgMeZySEEbuaSK9dwYKqJmtL/J8rDvPoRht5ziAgid0GncmsSe+BG6PvWEowHQlmmgOCiRm7v60+LyUxo70uBbGUrqTqnxl0urvNEwaqJNbTRqZxUZKZG4x/EDwl65p+lbzkK1jt9n1xfomO/+xkq7I+cSsQaYJvecG41QPNa7olLbn+pjNaXyVy//fnQNNTL84twZ1K03EYY4HPWyEQ1CwPFuASjeEPGMZUFAc7VkSxlYdRryBcdyhp1tnQhDzY09OrpLtqyKieCrt5b2CYo/G0z/4ON7Xk9CnsbdDlJ3p5QsUPNBwfCeEbVCTGgRBcp+XJVk+CnyzrKLBl625urgBBbJTc8E9RMEdXiT7SVBz7U0I5T+od0LGMck5hJfzyfVuxIvg02nhaBtC+APCYwk/
+sidebar_class_name: "get api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get the shared folder information"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/files/folder/{folderId}/share"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns the detailed information about the shared folder with the ID specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"folderId","in":"path","description":"Folder ID","schema":{"type":"string"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Shared folder information","content":{"application/json":{"schema":{"type":"array","items":{"type":"object","title":"FileShareWrapper"}}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

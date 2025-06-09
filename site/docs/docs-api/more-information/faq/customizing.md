@@ -8,7 +8,7 @@ sidebar_position: -7
 
 The below options can be edited for whitelabeling your version of ONLYOFFICE Docs, changing the information which will be displayed at the **About** page and visible to all editor users.
 
-> Please note that changing these options is only available to the [ONLYOFFICE Developer Edition](https://www.onlyoffice.com/developer-edition-prices.aspx) users.
+> Please note that changing these options is only available to the [ONLYOFFICE Docs Developer](https://www.onlyoffice.com/developer-edition-prices.aspx) users.
 
 - *editorConfig.customization.customer* options:
 
@@ -29,7 +29,7 @@ The below options can be edited for whitelabeling your version of ONLYOFFICE Doc
 With all the above fields filled, the *customization* configuration will look like this:
 
 ``` ts
-const docEditor = new DocsAPI.DocEditor("placeholder", {
+const config = {
   editorConfig: {
     customization: {
       customer: {
@@ -48,24 +48,28 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
       },
     },
   },
-})
+};
+
+const docEditor = new DocsAPI.DocEditor("placeholder", config);
 ```
 
 Further information about the customization can be found [at this page](../../usage-api/config/editor/customization/customization-standard-branding.md).
 
 ## How to change the default language of the ONLYOFFICE Docs interface?
 
-If the interface language is present in the [list of available ONLYOFFICE Docs languages](https://helpcenter.onlyoffice.com/server/document/available-languages.aspx), you can simply use the *editorConfig.lang* property in the configuration file to set it to the necessary locale, like this:
+If the interface language is present in the [list of available ONLYOFFICE Docs languages](https://helpcenter.onlyoffice.com/docs/installation/docs-available-languages.aspx?from=api), you can simply use the *editorConfig.lang* property in the configuration file to set it to the necessary locale, like this:
 
 ``` ts
-const docEditor = new DocsAPI.DocEditor("placeholder", {
+const config = {
   editorConfig: {
     lang: "de",
   },
-})
+};
+
+const docEditor = new DocsAPI.DocEditor("placeholder", config);
 ```
 
-If the language is not available and you want to translate it or have already translated it to your own language, please see [this article](https://helpcenter.onlyoffice.com/server/docker/document/add-interface-language.aspx) to find out how to install it to your ONLYOFFICE Docs.
+If the language is not available and you want to translate it or have already translated it to your own language, please see [this article](https://helpcenter.onlyoffice.com/docs/installation/docs-community-add-language-docker.aspx?from=api) to find out how to install it to your ONLYOFFICE Docs.
 
 Further information about the language settings can be found [at this page](../../usage-api/config/editor/editor.md).
 
@@ -74,14 +78,16 @@ Further information about the language settings can be found [at this page](../.
 The chat and comments are enabled by default. To disable them use the *document.permissions.comment* and *document.permissions.chat* parameters with the values set to **false** in the configuration file respectively:
 
 ``` ts
-const docEditor = new DocsAPI.DocEditor("placeholder", {
+const config = {
   document: {
     permissions: {
       chat: false,
       comment: false,
     },
   },
-})
+};
+
+const docEditor = new DocsAPI.DocEditor("placeholder", config);
 ```
 
 This will disable both the **Chat** and **Comments** buttons and their functionality.
@@ -93,13 +99,15 @@ Further information about the customization can be found [at this page](../../us
 You can either display the full top toolbar or its compact version. To control this the *editorConfig.customization.compactToolbar* parameter is used. With the default **false** value the top toolbar will have its usual view. If you want to display its compact variant, the configuration will have to look like this:
 
 ``` ts
-const docEditor = new DocsAPI.DocEditor("placeholder", {
+const config = {
   editorConfig: {
     customization: {
       compactToolbar: true,
     },
   },
-})
+};
+
+const docEditor = new DocsAPI.DocEditor("placeholder", config);
 ```
 
 Further information about the customization can be found [at this page](../../usage-api/config/editor/customization/customization-standard-branding.md).
@@ -109,14 +117,16 @@ Further information about the customization can be found [at this page](../../us
 The document owner and uploading date is affected by the *document.info.owner* and *document.info.uploaded* parameter respectively. You can pass these settings from some database of yours to the document configuration file the following way:
 
 ``` ts
-const docEditor = new DocsAPI.DocEditor("placeholder", {
+const config = {
   document: {
     info: {
       owner: "John Smith",
       uploaded: "2010-07-07 3:46 PM",
     },
   },
-})
+};
+
+const docEditor = new DocsAPI.DocEditor("placeholder", config);
 ```
 
 This values will be displayed in the **File** > **Document Info...** menu option.
@@ -130,25 +140,31 @@ There are three main appearances of the editors, optimized for different use:
 - **desktop**, which is optimized for the display in desktop computer browsers:
 
   ``` ts
-  const docEditor = new DocsAPI.DocEditor("placeholder", {
+  const config = {
     type: "desktop",
-  })
+  };
+
+  const docEditor = new DocsAPI.DocEditor("placeholder", config);
   ```
 
 - **mobile**, which is optimized for the display in mobile device browsers:
 
   ``` ts
-  const docEditor = new DocsAPI.DocEditor("placeholder", {
+  const config = {
     type: "mobile",
-  })
+  };
+
+  const docEditor = new DocsAPI.DocEditor("placeholder", config);
   ```
 
 - **embedded**, which is optimized for the embedding the documents into a website page:
 
   ``` ts
-  const docEditor = new DocsAPI.DocEditor("placeholder", {
+  const config = {
     type: "embedded",
-  })
+  };
+
+  const docEditor = new DocsAPI.DocEditor("placeholder", config);
   ```
 
 You can use any appearance for mobile devices or to embed the document to your webpage, but it is more logical to use the specific display type.
@@ -164,7 +180,7 @@ To enable plugins for all ONLYOFFICE Docs users, you need the following:
 - Change the configuration file the following way:
 
 ``` ts
-const docEditor = new DocsAPI.DocEditor("placeholder", {
+const config = {
   editorConfig: {
     plugins: {
       autostart: [
@@ -177,7 +193,9 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
       ],
     },
   },
-})
+};
+
+const docEditor = new DocsAPI.DocEditor("placeholder", config);
 ```
 
 Where *editorConfig.plugins.autostart* is the array of the GUIDs for the plugins that you want to start automatically when ONLYOFFICE Docs is started (as defined in the plugin [config.json](../../../plugin-and-macros/structure/manifest/manifest.md#guid) file), and *editorConfig.plugins.pluginsData* is the array of the **config.json** configuration files for all the plugins that you want to be available to ONLYOFFICE Docs users.

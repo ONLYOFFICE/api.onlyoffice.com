@@ -1,0 +1,71 @@
+---
+id: get-project-files
+title: "Get project files"
+description: "Returns the detailed list of all the files and folders for the project with the ID specified in the request."
+sidebar_label: "Get project files"
+hide_title: true
+hide_table_of_contents: true
+api: eJztWW1vGjkQ/ivWfD0TlpeEZKXTKSWJiq5NEZCr1CQf3N0huN1d79mzJBziv5/GhgQuL6RRv1zFfliMxzPz2DOPPfLOgdSNg/gSSmu+YUL1M52hg2sJDpPKappBfDmH44omxup/FGlTvEeVomUliyoFCbdWE8L14lpCii6xuuRhEMMAqbKFEzRBkSIpnWEqMu1ImLFQWeYFY/YoVJGKsclStE6MjfWSJSZxq2niO3onwpWY6LHGVOjC91n8u0JHeyBh2Xxn0hnEc0hMQVgQN1VZZjrx6OvfHGObg0smmCtu0axEiMF8ZW8geS1KtKTRsVSn/N6cWH+JrHcCcqWuC8IbtLDwD6NxpSlcMNKMouet+BUA+bMAhxA+DFPWqhlI0IS5265+rnJcG+XI6uIGJOCdysuMu9iBKHjYQsJFmSrC9N1su+Ve+pTdsbG5IoihqnS64SdaPrUnXquHIZxoV2Zqth34R/0dxRdVzBS575pVR5qybUqqUD6uEo6nipQd5irLXtapbCbICMcjhfJarN+3hmN9YbeoX13V+9akVUKOm2jKDEMfq+8pV979UTm0v6s014V2ZBUZzjwJFCYEp3mZmRniZ6vKAH4ZqJc9N6NmVGs0a9HhqNGJW504au212s320X7nCxv5YEJSvmylfXV1ddU+4Pdarqyh415G5qEtJJwF5r89afvKYkEbCXY/8gFX47AdddoH7c4+z8XzpGuqwLj/sHgtL3VBreZLdgL4n2Cp54YTZVF93cjJr8ZkqIoNPbIVBo0zNTV+/32swPItK3K43zk8aDc77VeSYWhyFKSJ05DuyJMiSdC5V068qHI+OM5NgSBhgCr97MGHtv9hrx7lX8pqvy8OcKrxFiR0TZ7zBuljl50Zm7O4Wzky+ZnOCC08OoMuI1ET7E+KhqiJe5dSNJd/pWj5VnAsRVvURPAtxb6XsHspDkRNLBFI0RE1cQ9CikOWreG43owyr5MPbbolrmOVOR/YrsXXs7XRYrY2WnGrsbd/FDU7zcDWpZHd3vxL7c3PRXtgDIW9aORt/AghT07Pji8+jJhNnz5+/HQOEt5dnHffg4TR4HjIvxfD0wFIGL4/HpyCXBUvTMDVFhS4mgSGjjAvMxU6+1ZPVTJ7hpxL34GfwX0gp0cQ2OlBBDoyjkBGDyVwb4VGigabvEckRSOwPvGsbbDZe2RSNFpe16PbpGxzV9v8j/jTt2aqU7Q9wvyVJ+dK5U+cvQy40Wy10w0n6Q+f8s2WP2BPsJidmNsiM+qpg2A5gg8KBvHEgPUSyjN9vYjqVtbiRgmyK5Z2xdKuWNoVS7/WZr8rlnbF0o4/u2Lp7cWShL6iSV9ZeuJqiU8fUpZ6RYp3Pwrep+GbiptQVBhS2Zs0z/H2NXqPF6UbLp0fCkke0o4aj6+rLwq1/AyAqTeUI01MCjHcoOe4ognEUFelrjf3ovrqk8Jcp/FlVDu6/m1RX111O7RTf+F3OWeOQAwTotLF9fp8Yhwt4nlpLC1AwlRZzTWejxTLArCxqjKeVmYSlfnuhQTW2RQfRkc86cXaB40hX6MHc09+1ni4giw157sEzbOfBLEEf5kZb+r65eB7+sHDJ4jTVYDCJ4RowYbGxjtYRoALpKrQNBNDvx5icDocieN+j+eN1oV199svwWLxL12TTfA=
+sidebar_class_name: "get api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get project files"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/project/{id:[0-9]+}/files"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns the detailed list of all the files and folders for the project with the ID specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"id":{"description":"Project ID","type":"integer"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Project files","content":{"application/json":{"schema":{"type":"object","properties":{"Files":{"type":"array","items":{"type":"object","properties":{"Name":{"type":"string","example":"File name"},"UpdatedBy":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"},"Updated":{"type":"string","example":"2020-12-08T17:37:03.3424957Z"},"Location":{"type":"string","example":"4\\\\46\\\\File name"}},"title":"FileWrapper"}},"Folders":{"type":"array","items":{"type":"object","properties":{"ParentId":{"type":"object","example":"1840746475"},"FilesCount":{"type":"integer","format":"int32","example":"1840746475"},"FoldersCount":{"type":"integer","format":"int32","example":"1840746475"},"IsShareable":{"type":"boolean","example":"true"},"IsFavorite":{"type":"boolean"},"Id":{"type":"object","example":"857864274"},"Title":{"type":"string","example":"Some titile.txt"},"Access":{"type":"integer","format":"int32","enum":["None","ReadWrite","Read","Restrict","Varies","Review","Comment","FillForms","CustomFilter"],"description":"[0 - None, 1 - ReadWrite, 2 - Read, 3 - Restrict, 4 - Varies, 5 - Review, 6 - Comment, 7 - FillForms, 8 - CustomFilter]","example":"1"},"Shared":{"type":"boolean","example":"false"},"Created":{"type":"string","example":"2020-12-13T17:13:31.5902727Z"},"CreatedBy":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"},"Updated":{"type":"string","example":"2020-12-13T17:13:31.5902727Z"},"RootFolderType":{"type":"integer","format":"int32","enum":["DEFAULT","COMMON","BUNCH","TRASH","USER","SHARE","Projects","Favorites","Recent","Templates","Privacy"],"description":"[0 - DEFAULT, 1 - COMMON, 2 - BUNCH, 3 - TRASH, 5 - USER, 6 - SHARE, 8 - Projects, 10 - Favorites, 11 - Recent, 12 - Templates, 13 - Privacy]","example":"2"},"UpdatedBy":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"},"ProviderItem":{"type":"boolean","example":"true"},"ProviderKey":{"type":"string","example":"1234d"},"ProviderId":{"type":"integer","format":"int32","example":"1234"},"DenyDownload":{"type":"boolean"},"DenySharing":{"type":"boolean"}},"title":"FolderWrapper"}},"Current":{"type":"object","properties":{"ParentId":{"type":"object","example":"1840746475"},"FilesCount":{"type":"integer","format":"int32","example":"1840746475"},"FoldersCount":{"type":"integer","format":"int32","example":"1840746475"},"IsShareable":{"type":"boolean","example":"true"},"IsFavorite":{"type":"boolean"},"Id":{"type":"object","example":"857864274"},"Title":{"type":"string","example":"Some titile.txt"},"Access":{"type":"integer","format":"int32","enum":["None","ReadWrite","Read","Restrict","Varies","Review","Comment","FillForms","CustomFilter"],"description":"[0 - None, 1 - ReadWrite, 2 - Read, 3 - Restrict, 4 - Varies, 5 - Review, 6 - Comment, 7 - FillForms, 8 - CustomFilter]","example":"1"},"Shared":{"type":"boolean","example":"false"},"Created":{"type":"string","example":"2020-12-13T17:13:31.5902727Z"},"CreatedBy":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"},"Updated":{"type":"string","example":"2020-12-13T17:13:31.5902727Z"},"RootFolderType":{"type":"integer","format":"int32","enum":["DEFAULT","COMMON","BUNCH","TRASH","USER","SHARE","Projects","Favorites","Recent","Templates","Privacy"],"description":"[0 - DEFAULT, 1 - COMMON, 2 - BUNCH, 3 - TRASH, 5 - USER, 6 - SHARE, 8 - Projects, 10 - Favorites, 11 - Recent, 12 - Templates, 13 - Privacy]","example":"2"},"UpdatedBy":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"},"ProviderItem":{"type":"boolean","example":"true"},"ProviderKey":{"type":"string","example":"1234d"},"ProviderId":{"type":"integer","format":"int32","example":"1234"},"DenyDownload":{"type":"boolean"},"DenySharing":{"type":"boolean"}},"title":"FolderWrapper"},"PathParts":{"type":"object"},"StartIndex":{"type":"integer","format":"int32","example":"0"},"Count":{"type":"integer","format":"int32","example":"4"},"Total":{"type":"integer","format":"int32","example":"4"},"New":{"type":"integer","format":"int32"}},"title":"FolderContentWrapper"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

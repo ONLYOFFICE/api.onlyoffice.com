@@ -1,0 +1,63 @@
+---
+id: get-room-creating-status
+title: "Get the room creation progress"
+description: "Returns the progress of creating a room from the template."
+sidebar_label: "Get the room creation progress"
+hide_title: true
+hide_table_of_contents: true
+api: eJylV91v2zYQ/1eIe8mLaqduN3R685K2SDegQz6Qh8BoaOlksZFIjjwlcQ3978ORkizb6eJhL7HD++Td735Hb4DkykN6B5fG1B4WCRiLTpIy+iKHFFZILDlzKEnp1RVJajwk4NBboz16SDcwOz3ljxx95pRlW0hhUM2MJtTEGtLaSmXB+/S7Z7UN+KzEWvI3WluEFMzyO2YECVjHuZCKQfqIR2gaU3Pyg57ShCt0kOyleF2iYGVxcT6BBArjaklR/90MEsBnWdsKIf3tw/tf2xBm5dD7kWvd1MufeO61hSlE1tVPyBiwcKYWVKIgrG0lCXfi56ZZVjhO4M2HyS9tAuiccaPonpzSqxejB1VRo/dyhYJKSUJ54VGTeCpR94koL7ShmB/mwjdZht4XTVWtX05SN1UlObuUXIOjFMGbmlWfCdoElD8zfE44bsTSmAqlPkj4ymKmCoWec6MSXQhrncmOrR9fJOsjTsal4zTbNgGZ54rDyeqvEVoKWXn81+5Z6WSNhO74RpKiUBGenE/O1NedLI7EORmuUGaaOBQHIN3DYZtApfTDGHXSObmGBBRh7V8fiNJhcYgarkkWb3wgarliPk7wcSlG5TOT41EG7WtVunXSWnRdKu9P3x4yzI2WDZXGqR+YB48es8YpWkN6twHps28s//aAfAAOZQ4JPDlFCIs22cDvKB06SO/Cf3Or/sD1cPaSvvQq69W/zhsqZy8rfrUY2PNu0S72sXWJ1Djte4D/N4aokUrT0TJ3WVIJKUylVdPZ5HRaqAr9lM39lO1706nvudije0TnQ4EaV0EKm6X0eOOq9nAog67IjC7Uqok7ARJ4lE4xAQRgdMaxN4VsKm7xgafzKBI3l39yPxfbTl0x+UdXu/3aQj205cDljUdxZsyDQsFGqKnbK0xRsg6WY4cJKDbLggnjtWvmEKcksgdRPmpCJ9amcaLx6NixkDoXVnr/ZBy3PayvwG3BIXvuIHSM65OoLDZfbq/FtXlA3Z7sOI2+ku7Lp36Kvtxec6hdzL5Ws/lOoZgxc+a1WmnMxXId0HYy70Yq6JyIEmUeEuiKuhOxK2qn0ybDUGwJSYaD/Uyinigq8ySeFJViJ6oILJIAiyM0xtKeYnYOAwZDoX06nYaoE6OrtSkKleEkM3U8nE0HymCe5oIfbxrUQ3eM7d8kMg8zLXMhw+YUZHisCTNepw69aVyGfuCHFG758xXtSHo9jWyrGQ7OjNaR5feKytJz0YkPx2LH+vhbM/CVLsLOen7j1UpLahy+DjeG9KDO85OLwri9vCaCl22orKgbT2KJwixJBkw+KhlAed8TXE8bOx25F6hza5SmibgIrxweT8yF9EKKOPERZewrzPD96CL3ky26x/fbYwx+03AV+Nrd4ppbxXyIzscLv5u8nZxymazxVMuwVzvHn5FC9EDtkeqNHvh/v3Sb7Zv5/+2LrkH8KJvaSirN2TWRr+PyuOPuQQKzySlPHC8Qft2HHwMJjJcIDA+CRQKl8cTGm2F9tHz8d4OOl+1iuybivuw5gvdO4HeYZxlaCvukaiKK9n4b8J4YFt7nj9eQhJnfBV7k9u4Le+9Fej32vbsKYgb8l7f1ixabTUR12w76UfRTi4EpozbXetG27T9lNaVt
+sidebar_class_name: "get api-method"
+info_path: site/docspace/api-backend/usage-api/api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get the room creation progress"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/files/rooms/fromtemplate/status"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns the progress of creating a room from the template.
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Status","content":{"application/json":{"schema":{"type":"object","properties":{"response":{"type":"object","properties":{"roomId":{"type":"integer","description":"The room ID.","format":"int32","example":9846},"progress":{"type":"number","description":"The progress of creating a room from the template.","format":"double","example":-8.5},"error":{"type":"string","description":"The error message that is sent when a room is not created successfully from the template.","nullable":true,"example":"some text"},"isCompleted":{"type":"boolean","description":"Specifies whether the process of creating a room from the template is completed.","example":true}},"additionalProperties":false,"description":"The progress parameters of creating a room from the template.","title":"RoomFromTemplateStatusDto"},"count":{"type":"integer","format":"int32"},"links":{"type":"array","items":{"type":"object","properties":{"href":{"type":"string"},"action":{"type":"string"}}}},"status":{"type":"integer","format":"int32"},"statusCode":{"type":"integer","format":"int32"}},"title":"RoomFromTemplateStatusWrapper"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

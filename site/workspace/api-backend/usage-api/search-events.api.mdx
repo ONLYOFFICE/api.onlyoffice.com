@@ -1,0 +1,71 @@
+---
+id: search-events
+title: "Search events"
+description: "Returns a list of events matching the search query specified in the request with the event titles, dates of creation and update, event types, and authors."
+sidebar_label: "Search events"
+hide_title: true
+hide_table_of_contents: true
+api: eJzVVk1T4zgQ/SuqPivEcSCAT0MBtUPt1C5FYLdqUjkodifWIMseSYbJuvTft1pOTDwBwmEOu5d8SN2t7qfXet2AEysLyQzSsihqLd16eP2E2lmYc7CY1ka6NSSzBi5ql5dG/iOcLPVnFBka8jMoMuDwbKRDmPs5hwxtamRFZpDAHbraaMsEU9I6Vi4ZhvisEC7NpV4xlyOzKEyas+81mjWzFaZyKTFjUoddg99rtI49S5eHhRCCOekUWs4y4dBS5NRgyI4JnbG6onW+tV1XZEobIhRij4BDJYwo0KGxoUQtCoQEQhbAQVL+lXA5/FzUdCdd4GDTHAsBSQN0DCRgnZF6BZ7gMGirUlu0tB9HEX31o33pAQMc0lI71I4sRVUpmYaqht8smTf7xwljREjYYWF31svFN0wd1WnKCo2TbRI32X6qHPCHKCpFSyPwHB7kIat4fPycCbK9FAp1JsyhwOnW7oq8/ghov2cfmMiCnedwtQvaYbddc8/hQqkrsf5S6tWO86IsFQrd814KZcN5UyeMe/+kOIqjwSgeRKP7aJKMJ8koOjqbHJ8cn8VfKcS1PoDIoQB3WKFwd7U6gFRbIfbyfeP278NuZyW1wxUa4LAsTSFcuzSOe+EHI/CeQ2i4LcDhuL+NqCo0dPyNnebCYHYAXmdqbDmjH7StF3RJC/yg0429zqQTC3XIobvEWzSFtFaW+gON8WDR3NKTYH91c3XY1rXM+gxYZks8OT0djNN4Mjg+HU8G59nyfLA4EZOz8WJxdhJHH+uWv4Si1/Pr+rF86l3XTll+d30XG8/hz2dNT/r/vMDQt662H6S4rgtSsXvUTjj5hMDhstRLaQqkMi6FTlEpzGBP2GYRG7DOj7MRG7DOlbOY/m695706Qrmfhb1wTqR5ER79fTrvNVzXaz7c4nE02peSBy02Mo1ZiFCgy8sMElhhuEpSswSGopLD+Cgavqh+EJ/hp1aIh02QNk/ahuZpq4+1UZBA7lxlk+GwyUvrfNJUpXFk+SSMpNYMxdBem95S1IogV2UqVFj2HMinv30WncdU2s7YMSWda8O9Ony8tGglf8dOsfN2m2/lvOcbQJF6WQb3DbyXWxTYNFTL7q6n9+zi9oaqQmNbbBWNGZvsrStEUKHNGZuBoFPwrK9VnaD/t8ehDZwOf7hhpYQMwhkuvdkwZ0ZYA4f4KApzygY3ojfFBQ4bBgGHpB2P5nxDhhk0zUJYfDDKe1pu95PZ/IU7gWaZtPQ7gyQ84++g+dMc9mr+W47odeCoqoNecnjEdTfr+bnnW95QBu3eRZpi5Xa89oYxYmvXYb9d3wMHgrNPzcdAzc0Piv5qRn2WbtOjT8/fcGmalvjed/bt1pseXWu01gTQ3Hv/LwUsCOg=
+sidebar_class_name: "get api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Search events"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/community/event/@search/{query}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns a list of events matching the search query specified in the request with the event titles, dates of creation and update, event types, and authors.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"query","in":"path","description":"Search query","schema":{"type":"string"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"List of events","content":{"application/json":{"schema":{"type":"array","items":{"type":"object","properties":{"Id":{"type":"string","example":"1"},"Uid":{"type":"string","example":"1234wda"},"CalendarId":{"type":"string","example":"calendarID"},"Name":{"type":"string","example":"Event Name"},"Description":{"type":"string","example":"Event Description"},"AllDayLong":{"type":"boolean","example":"false"},"Start":{"type":"string","example":"2020-12-01T06:36:10.8645482Z"},"End":{"type":"string","example":"2020-12-01T06:36:10.8645482Z"},"RepeatRule":{"type":"string","example":""},"Alert":{"type":"object","properties":{"Type":{"type":"integer","format":"int32","example":"-1"}},"title":"EventAlertWrapper"},"IsShared":{"type":"boolean","example":"true"},"CanUnsubscribe":{"type":"boolean","example":"true"},"IsEditable":{"type":"boolean","example":"false"},"Permissions":{"type":"object","properties":{"UserParams":{"type":"array","items":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"2fdfe577-3c26-4736-9df9-b5a683bb8520"},"Name":{"type":"string","example":"Valery Zykov"}},"title":"UserParams"}}},"title":"Permissions"},"Owner":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"2fdfe577-3c26-4736-9df9-b5a683bb8520"},"Name":{"type":"string","example":"Valery Zykov"}},"title":"UserParams"},"Status":{"type":"integer","format":"int32","enum":["Tentative","Confirmed","Cancelled"],"description":"[0 - Tentative, 1 - Confirmed, 2 - Cancelled]","example":"0"},"HasAttachments":{"type":"boolean"}},"title":"EventWrapper"}}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

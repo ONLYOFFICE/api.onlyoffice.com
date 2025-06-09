@@ -1,0 +1,71 @@
+---
+id: upload-and-init
+title: "Upload and initialize migration"
+description: "Uploads and initializes a migration with a migrator name specified in the request."
+sidebar_label: "Upload and initialize migration"
+hide_title: true
+hide_table_of_contents: true
+api: eJy1Vk1v4zYQ/SvEXNICquzN9qSbm22BbNtNkTjIwTA2tDSKiEikQo6SeAX+92JIWbHsdBMs0IstkvPBmXkzjz2QvHOQreBvdWclKaNhnYBpMS7OC8iga2sji4UuzrUiSKCVVjZIaFmxBy0bhAyaYMDYL7xMQGnIoJVUQQIFutyqNljPYFmh2AkLVhb4TFbmhIUorWkEVSis6QjFi6cUErD40CmLBWRkO0zA5RU2ErIeaNvyFRxZpe8gAXyWTVuHLdOgIHwm8H7NJlxrtEPHWqfzOf9Nb3dxDz6BX+cfjo+uteyoMlZ9wyIKfTwW+mJEi7ZRzimjnaCwLI3lsJQTMg9y3ifgMO+som1IonT5V7b+9R55AyzKAhJ4sooQ1j7p4TeUFi1kq7BatOpP3I57r8lLp/Kd+MWio+r0dcGLFkOdV2vO0EHIofROSF0IpRUpWatv6IQcKqiMFk+KqnFjV1LXYq5KhawWC4oPHTriOjZIlWFgtcZFPFEFGcxkq2an6Xw2mp6xy1m/jywPnDj7uANfZ2vIoN9Ih9e29kdguwqyIje6VHfdgPAEHqVVclNHHAzKsZal7GqCDI4sfYpH4vryL/ABTLsCXjEOo6lpGUdgylCtI5PXDsWZMfcKBSuhJpXvbjh01cTg0FV5UGEEDjUe/VRE7ZGX3zWhFVvTWdE5tKE8XM9WOvdkLKMhdBIb2ASDbHlA1ntMn0Rh0X++WYqluUftTyZGo61k+PjD2EZyij/fLNnVFMpv5WwxSZRQThQ8IBqlsRCbbcDayWLo0yBzIiqURbjAkNSJxyGpg4xPxl4Zb2Jk2Di8SZQTZW2eYg9MvIozU/Ac5OMIjf3TcHi4GTAYEu2y2Sx4TY2ut6YsVY5pbpq4eTob5xAkQJzw96sG8VAd00bMhomQwSXKQsg8RxenljWEYSZbdKazObpxbGRww/9vSHvPU243XV6yGTbOjNaY03FS+fSTGI6P22Ki/f6oGfhKl4br+/yLU3daUmfxbbgxpEdx7p9ClMYe3CsVzGkhs6LpHIkNCrMhGTD5qGQA5e1uvO3GxqQitwJ10RqlKRXnxLDm9sRCSB62seMjythW6OHbvUBu0xd078d3MDE8r0sTwlZUD73A8xCtiwF/TD+kc04TD+dGapYdDEcyOOCCFyI4zF0PudGEmv4vHhkqx+w+a2upNF+7i4M8csqKywoJnKZz5p29m6r4lMkmr5Z1AhVTUraCfqQUz9sPHVrm5fULdQT6KZTj7wKyUtYOv5OBny6H18vP4ocfQK8GvMOv3gZeqzuM7BUYaPoq82u/x77/XFwtIQkjaNoHkWqGD47yVRcHzBTd8S+/KV7V6PvYZN6P8vHoPzXGwR2lOeC19/5fdmK3IA==
+sidebar_class_name: "post api-method"
+info_path: site/docspace/api-backend/usage-api/api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Upload and initialize migration"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/api/2.0/migration/init/{migratorName}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Uploads and initializes a migration with a migrator name specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"migratorName","in":"path","description":"The migrator name extracted from the route parameters.","required":true,"schema":{"type":"string","example":"some text"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Ok"},"401":{"description":"Unauthorized"},"403":{"description":"No permissions to perform this action"}}}
+>
+  
+</StatusCodes>
+
+
+      

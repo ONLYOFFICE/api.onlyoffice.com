@@ -1,0 +1,71 @@
+---
+id: remove-a-contact-from-the-project
+title: "Remove a contact from the project"
+description: "Removes a link to the selected project from the contact with the ID specified in the request."
+sidebar_label: "Remove a contact from the project"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVs1uGzcQfhVirl17ZSWHRkAR2LKLCm0Mw3YQpI4Po+XIS5tLsuSskq2gx+mL9MmC4UqKlLiRWnQPAkXym79vODMLYHxIMLqDKjbl2DvGihPcF5CoaqPhDkZ3CzhtufbR/IlsvPuFUFMUTCTUUMDHaJjgfnlfgKZURRPkGozgmho/p6RQWeOeFHvFNalEliomrUL0j1SxmkXf5JOq168+Gq7zxuRcpUCVmRnSyri8F+mPlhIfQwGr5ZnXHYwWIHByLEsMwZoqm1s+JjFmAamqqUFZcRcIRuCnoh4KCNEHimworcVgxUbLn12HVgFSk3Mo1lKMY3qgCMssRyQ+h7xa+fosMn/iTgrepd6K4WDwz/qNm/nYZPeg+L/8vmnQ2p89+7fRbt1OHI17gALoEzbBylYbrZA58+zF7TekTdv8F+S5ScFid4kNfR93i/qRtDaO1BlWtcnhnqSxbwK6bgs79d4Suh3wDG0iAZxWFaX0m0m8hcAYsYMCDFOT9kdpop+ztKdDHGyN3lE+WH1Hz/ysv38VijfmidTv6Drk9GQEemvY7gOhw1WSns6RMWayD+IqyU2FGSX4q+hnxtJeqj98KK+i123FSZbkg6V+T+DHmMKn122i+BPqxjiTOCJ7eQwFcO8QXDTB+o7oXcRA/dEkXUUzR6Y9nHNsqc+Rmxoj6UNTJN++zRcXX7/TLZqN4xdDkeDaRirhpXcEBVwT6ne5GvZr+KYk3g3UkZLbhTpRR2oDKNRw9fd+N33EqHEbI7mq25+dB6TCuDaOEqn3LbrscddM/R4u//4rZ850Gmlu+rLzfR2X73u7LbeR9uf0+HL9nt2cIuPUHs7vGSZTHUbvVmqtQzpxMy/pFfrHMUZ3oQ0fqHyM7pwsHZ6M5wdm1QZ5MnzxctfuvgOcYaKN2bl5vBycfNsv3jpcdW7SWUxDXHsNI9C93QUE5BpGUGIw5fB4UMocsOqA5WLTCkd3g6NX9z8sy1WLKxebXrc+ApkZ4pxiyiNDK/UBauaQRmW5qH3i5WgRfGS5OcdohOWctHLW2z7D1kogrK/Q5m3pqj5+dfzj4NVQ3N4aU26kyfXinh1WvpT7YH6lXO8lQHV/XIDLObqLzRGTLnr9Zc64WFOzMycMdnr/YCnSZz5r3fDWNK0z3KmbHCR1fXFzq06vJhIMiqnnyyKTOL38DKUMQtQ=
+sidebar_class_name: "delete api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Remove a contact from the project"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"delete"}
+  path={"/api/2.0/crm/contact/{contactid:[0-9]+}/project/{projectid:[0-9]+}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Removes a link to the selected project from the contact with the ID specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"contactid":{"description":"Contact ID","type":"integer"},"projectid":{"description":"Project ID","type":"integer"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Contact information","content":{"application/json":{"schema":{"type":"object","properties":{"SmallFotoUrl":{"type":"string","example":"url to foto"},"MediumFotoUrl":{"type":"string","example":"url to foto"},"DisplayName":{"type":"string","example":"Tadjeddine Bachir"},"IsCompany":{"type":"boolean","example":"false"},"AccessList":{"type":"array","items":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"}},"IsPrivate":{"type":"boolean","example":"true"},"IsShared":{"type":"boolean","example":"false"},"ShareType":{"type":"integer","format":"int32","enum":["None","ReadWrite","Read"],"description":"[0 - None, 1 - ReadWrite, 2 - Read]","example":"0"},"Currency":{"type":"object","properties":{"Title":{"type":"string","example":"Chinese Yuan"},"Symbol":{"type":"string","example":"¥"},"Abbreviation":{"type":"string","example":"CNY"},"CultureName":{"type":"string","example":"CN"},"IsConvertable":{"type":"boolean","example":"true"},"IsBasic":{"type":"boolean","example":"false"}},"title":"CurrencyInfoWrapper"},"CanEdit":{"type":"boolean","example":"true"},"CanDelete":{"type":"boolean","example":"true"},"ID":{"type":"integer","format":"int32","example":"1234"}},"title":"ContactBaseWrapper"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

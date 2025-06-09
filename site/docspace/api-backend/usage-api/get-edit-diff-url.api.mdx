@@ -1,0 +1,71 @@
+---
+id: get-edit-diff-url
+title: "Get changes URL"
+description: "Returns a URL to the changes of a file version specified in the request."
+sidebar_label: "Get changes URL"
+hide_title: true
+hide_table_of_contents: true
+api: eJzVWN1v2zYQ/1eIe8kGaHLqFsPmt6xpu3QDWqQJ8lAEDS2eLDYSqZKnJJ6h/304UrIl22ncbnvYSxyT9/m7T3oFJBceZh/htS7Ri4kIn3CdgK3RSdLWnCmYwQLpldJ0qvP80pWQQC2drJDQMfcKjKwQZpDrEs8UJKANzKCWVEACCn3mdM2yYAYXBQomE2enKSTg8EujHSqYkWswAZ8VWEmYrYCWNYvUhnCBDhLIraskxaPnU0gAH2RVlwizX3958XPbJmsz7tB51tbZ8aVBt3zckI6arfku7c+mz1+07TX74mtrPHoWMD0+5o+xztcDfaLQnqxbCiVJQgKZNYSGmEnWdamzgP7ks2fO1a5pdv4ZM+JQOI4V6ai3N+JpyqyQZoGe47mh9eS0WewF6/L8TyGVcui9sLmgHr97TUX4pmzWVGhIdJKDZ+kQu8ZpSMA0ZSnnDF2M+RpJ8LZCQfhA0CZwi8vDDFvr1QoN6VyjE41HJciKxshqrheNbXy57AmWY3PZi/Rwu2qHd9o2/mmE/5EHHcS9tnXadOc9yzcY3hwa6caV25E+xIzvCzOjfxFM+iak8IHQ9HV7kKo2AamUZmGyfD8IVC5Lj4+2B2QWs1iXK5fBpvuxdtIUdHGH/D1ScVG1CZC9RXOYY2gyt6wJlfB6YSQ1DjkGMYtDBHqdQptYfNZVHAYpgpr/IhH2lHzWOMf4rwMxaJ/flwB9t97Xdb+SAH0imqaao0ufbtH/v1Tr++eeBDuVJE/JMn6ZbeLYeGpmtQmU2twOG5d0TvJo1ITVAQ2tcJjvgsfeZjQOYX/VMhaeJI365ddMjMQvrcKDGNpH4blysq7RBRvabczPkRpnvJAhx7sS6+dWKKrhbiB8jRm3ZdUXH+8t6EPbq5AK2y1JYTOiAmYwkbWeTNPjCcvx4e9kFfejdsKBniid57xzoLvr16hQmLCaS4+Xrmx30vJDoBWZNbleNHE/gwTupNOckwHijjkuH7lsSgZrR9JpvGLvGaBrtiNrnKblB140oijps0+yoeLTeJDJWv+BuwvVpUfx0tpbjYKZeJBlvYXdYjYS2G1nWWDhyP8mvc4GegqiekfLK8MtcGmbMOMdCxbSKFFL7++tU/0WxwLmQSBLRunQHSb6KBKL1durC3HBnbU9GgmNspLun9d9Pr69umBVJwGcHYWPYHYyAkpoLxS3+EobVGIe95QjJrJO/xVojkSBUgUDOlBHGjtQO5o2gXfMPR2WtgwH25ZEOpGX9j5udCOtItRjAnwdU2N42xfr6DDkYADazyaToDW1plzaPNcZppmt4uF00rOxgjDKDmeNA5ajY+t+/5Uq1LdUQmYZTy6yonaWMOPp6tDbxmXoIYF7p4khueLPJ6hjE3lXY3gQbdAMBy+tMbFfboHKt6eiu94tixH34V5z4muTh+7/8NN6X3g63TilN+tF2JFz67bsSgUPpICsqBpPYo7CzkmGnLzTMiTlTd/e+rYxisiNQKNqqw2l4ow4rbk8UQnJHTdW/ObdEGr4ZuDITbrJ7qF/Wx2j5e+5DW53I+Ck5sVjvVHA8/RZehyWduupkmFCdYLf4Oahwl1wC6vV5kH2bw6LLj68JkzqUmoz2Mfi5PjIwYMEpukxxJXFd5+QwGz9wuYRwjbzELlOoLCemHe1Hh4tH8enL48WpT2PCLV/Bxl6u+9hvNfsMBUGj+07WTZMBTxO+pn0jcp/OO9+EPhRbP1SsNeEPt3Ncqi/N60Dq71uk74jsjXx8iTLsKYB286rm91YD/c3ry6gbf8Ghd7x7A==
+sidebar_class_name: "get api-method"
+info_path: site/docspace/api-backend/usage-api/api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get changes URL"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/files/file/{fileId}/edit/diff"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns a URL to the changes of a file version specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"fileId","in":"path","description":"The file ID.","required":true,"schema":{"type":"integer","format":"int32","example":9846}},{"name":"version","in":"query","description":"The file version.","schema":{"type":"integer","format":"int32","example":1234}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"File version history data","content":{"application/json":{"schema":{"type":"object","properties":{"response":{"type":"object","properties":{"changesUrl":{"type":"string","description":"The URL address of the file with the document changes data.","format":"uri","nullable":true,"example":"some text"},"key":{"type":"string","description":"The document identifier used to unambiguously identify the document file.","nullable":true,"example":"some text"},"previous":{"type":"object","properties":{"key":{"type":"string","description":"The document identifier of the previous version of the document.","nullable":true,"example":"some text"},"url":{"type":"string","description":"The url address of the previous version of the document.","format":"uri","nullable":true,"example":"some text"},"fileType":{"type":"string","description":"The document extension.","nullable":true,"example":"some text"}},"additionalProperties":false,"description":"The file editing history URL parameters.","title":"EditHistoryUrl"},"token":{"type":"string","description":"The encrypted signature added to the parameter in the form of a token.","nullable":true,"example":"some text"},"url":{"type":"string","description":"The URL address of the current document version.","format":"uri","nullable":true,"example":"some text"},"version":{"type":"integer","description":"The document version number.","format":"int32","example":1234},"fileType":{"type":"string","description":"The document extension.","nullable":true,"example":"some text"}},"additionalProperties":false,"description":"The file editing history data.","title":"EditHistoryDataDto"},"count":{"type":"integer","format":"int32"},"links":{"type":"array","items":{"type":"object","properties":{"href":{"type":"string"},"action":{"type":"string"}}}},"status":{"type":"integer","format":"int32"},"statusCode":{"type":"integer","format":"int32"}},"title":"EditHistoryDataWrapper"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

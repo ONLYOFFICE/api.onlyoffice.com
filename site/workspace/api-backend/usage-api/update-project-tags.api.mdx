@@ -1,0 +1,71 @@
+---
+id: update-project-tags
+title: "Update project tags"
+description: "Updates the tags from the selected project with the new tags specified in the request."
+sidebar_label: "Update project tags"
+hide_title: true
+hide_table_of_contents: true
+api: eJztWFFv2zgM/isGX89tHLcdNgPD0KUtLrjbUDQpDliXB9ZmEi2ypJPodlmQ/36Q7KTJ2rVOdwX2MD8YsqSPpEiKJrkAxomD7AqM1V8o587Qf49icJRXVvAcsqsFHFc81VZ8QxZa/UlYkPUYS1hADLdWMMFoOYqhIJdbYfw2yODSFMjkIp5S5PlEY6vL8OVIUs5URA3b6FbwNKwouq33OkO5GAsqIqHCiqV/K3K8DzE0w/e6mEO2gFwrJsV+iMZIkQc5O1+cl2IBLp9SiX7Ec0OQgb72PCH2hzZkWZDzq6Lw7+0jnDfy9U8gXsGFYpqQhWXcaO970Ee6XR8s7FhD0VqcQwyCqXQbEq1IxjDWtkSupw5SWNaPP7IzWrla0jRJfigqxP+XPnqoTgvBGxuvtZaECmKgr1ga6efGKB15XfRQnZAkpraAwdrFWkjSs4RMH4Qkx1q15nGHJOdwsjtuiG62O0iUNDCkih2QXtVDwnIHyAVhceY1siNmrcWdgbUSd4V5He6C+VuoWU8rxnwX5/OcGtQuzF7Uxfuur9ob1QcUwWGmucyrK9JXY+3pNdNnWoYQfP/e3NHsHqQHh7UM51bcYHuhvbl6ulLcJkBtUki20EPNKJ9FYu2fz5fiRLi8ck5o9Xwa52hZ5MKg4p9QhyhpaDGfCTX5XiOOrVCTLcz97f4wOq9KUuyeL0bfnWkp9e0TPtBYcLJ5gX70z3pIepy4buzfafDmOhoWj4PSJE32uulemg6Tw6zbzY5e7R+9Onp9lB5+gjsi71v8J/oPslrrpqpEsX3c5tl74LV6Gm8yEucfsaTHz/JBzCj6hGqO7Gaitn+40I+CUGGTTxzfIKMdlCif8JPKyoh15PzOCAOqiQ9jIenSPgH//LlzbnVR5ez8kLSRVM95+D468/Vd5ci+xaIUSji2yNpuRajT0kg9J/rHoqmFXxvqpcxQ55M/6U4Nkd/u9Ku709pQL2WGLbqtQmk3aWmDQRhE9U5v8c1MvQVwM7P3mTIjV63qhXvB/KKuG8T1lsi/Hf4XdPgNU72MIe7nl565IXtWSQl1nXmYdO+XlpcKmw4AFYFMSTzVBWRgquBFyFPIoINGdNL9pLNqJixEkV0le29Gfyw7TSHsyN6QdaGtUHk1w5TZuKzTWUy142W2MNryEmK4QSvwuqlu/Fot1xgr6XUgdY4yTC9j8Jjt5dfJm1A9b7QyBr7urck92NC4y3iM+ItCyuMPP62XY1DBfbexQRu+sL64a0mcrsxStxSSVZvgKhktPc2xDrwaS/R0WVZK8DwaBNVEF6eDYXR83vcqIOtqC0jfSGFYLv8DmBjcXA==
+sidebar_class_name: "put api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Update project tags"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"put"}
+  path={"/api/2.0/project/{id:[0-9]+}/tags"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Updates the tags from the selected project with the new tags specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"id":{"description":"Project ID","type":"integer"},"tags":{"description":"New project tags","type":"array","items":{"type":"integer","format":"int32"}}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Project","content":{"application/json":{"schema":{"type":"object","properties":{"CanEdit":{"type":"boolean","example":"false"},"CanDelete":{"type":"boolean","example":"false"},"Security":{"type":"object","properties":{"CanCreateMilestone":{"type":"boolean","example":"false"},"CanCreateMessage":{"type":"boolean","example":"false"},"CanCreateTask":{"type":"boolean","example":"false"},"CanCreateTimeSpend":{"type":"boolean","example":"false"},"CanEditTeam":{"type":"boolean","example":"false"},"CanReadFiles":{"type":"boolean","example":"false"},"CanReadMilestones":{"type":"boolean","example":"false"},"CanReadMessages":{"type":"boolean","example":"false"},"CanReadTasks":{"type":"boolean","example":"false"},"CanLinkContact":{"type":"boolean","example":"false"},"CanReadContacts":{"type":"boolean","example":"false"},"CanEdit":{"type":"boolean","example":"false"},"CanDelete":{"type":"boolean","example":"false"},"IsInTeam":{"type":"boolean","example":"false"}},"title":"ProjectSecurityInfo"},"ProjectFolder":{"type":"object","example":"13234"},"IsPrivate":{"type":"boolean","example":"false"},"TaskCount":{"type":"integer","format":"int32","example":"0"},"TaskCountTotal":{"type":"integer","format":"int32","example":"0"},"MilestoneCount":{"type":"integer","format":"int32","example":"0"},"DiscussionCount":{"type":"integer","format":"int32","example":"0"},"ParticipantCount":{"type":"integer","format":"int32","example":"0"},"TimeTrackingTotal":{"type":"string","example":"TimeTrackingTotal"},"DocumentsCount":{"type":"integer","format":"int32","example":"0"},"IsFollow":{"type":"boolean","example":"0"},"Tags":{"type":"array","items":{"type":"string","example":"Tags1,Tags2"}},"Created":{"type":"string","example":"2020-12-22T04:11:56.5658524Z"},"CreatedBy":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"},"CreatedById":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"Updated":{"type":"string","example":"2020-12-22T04:11:56.5658524Z"},"UpdatedBy":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"},"UpdatedById":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"Id":{"type":"integer","format":"int32","example":"10"},"Title":{"type":"string","example":"Sample Title"},"Description":{"type":"string","example":"Sample description"},"Status":{"type":"integer","format":"int32","example":"0"},"Responsible":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"},"ResponsibleId":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"}},"title":"ProjectWrapperFull"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

@@ -1,0 +1,63 @@
+---
+id: get-color-theme
+title: "Get a color theme"
+description: "Returns the portal color theme."
+sidebar_label: "Get a color theme"
+hide_title: true
+hide_table_of_contents: true
+api: eJztV0tv4zYQ/ivE9JCLajvOFu36libpItsCW2wc5BAEG1oaWdxIJEuOkngN/fdiSMkvdWsVXfTUk2Vynt88uQaSSw+ze7hBIqWXXozFhakqo4VvT+AhAWPRSVJGX2cwgyXShSmNmxdYISTg0FujPXqYrWE6mfBPhj51yjIPzLbSTS6oQGGNI1nyZ4UeEkiNJtTEjNLaUqVB2fizZ+41+LTASvIXrSzCDMziM6YECVjHppGKujtDjlO2mrd00jm5ggQUYeWP86tsh0ZpwiU6SA68nhco0tqTqUTKeEV/xfXlCBLIjaskRe6zKSSAr7KyJcLstElAy2rXC09O6eVQBczMKnRdlnLBIsnVuKMBFmWN0CRQSaWPOyvTtA3OcXMibTTn72347s2PP51enrIZi5rIaD9MQyQepOGH6du3VxNomgRklikWIsvfd3zLZelxIKrx20onKyR0nnWToqDpIpBvi8J3CR+OrgkrdpPwlf5H+79B+5sY0bXAQcq7KPcll8pT1/n6Wnwf1iYBjyWmhEPazI3FVOUKvXgpkAp0X1EklBed2CMdaHr2pkmgVJWigX2ukq+qqiuh62qB7oi3RzR/i9j5fxa8SzIcu9TU+q89PjA5oKOf/sUEKRzm/RJk19PoWO+qYWA8Sar9QBMj8YXJcBBDMwCoOyetRRes6SX7R6Taab874ndCwoGokArT7hAMiaQCZjCWVo2no8m4i9k4sFG7X3h0z+h4TVlD7UqYwXohPd66sukXQ6AVqdG5WtZxaYEEnqVTXF8BuZY5rim5rEvGoCfpMl6J24+/sbcPbEdaO0Wrm3SzPUiffpI1FZ+ecLWbC1b9iqueyFuP4sKYJ4WCmVBTu+lAN/H3BSbA4xnSwMIB/Vl6le7oKYhsT8uVJnRiZWonao+OBQupM2Gl9y/GZYxo8IAXgSCQJaN06IaJPonEYv3+bi7m5gl1c7InNMpK2o9fujR7fzdnVecBnJ7Cr2B2vgcU97CMB0KlNGZisQq5dsJExqkvgeZEFCizYEAL6p7GFtSWpkngA3NPdytWhoNDSyKdyEvzIl4UFWJPqwhllgBfx9TYve1qcO8w5GAA2s/G46B1ZHS5MnmuUhylpoqH03HHxgqIAR/OGshDdIzttmSZhWKVWVggvBdkhHWGwmgQDr2pXRoW8xeniCG5498j1LEjfLAYXglbNMPBhdE6tsEDUPn2UrTX/bLY4x7uNSe+0nlo6q/fe7XUkmqHx9ONU3pDzvWTidy4A7tGgodOQFZUtSexQGEWJENOPisZkvJx29Ri29iLyKNAnVmjNI3ENXFac3liJqQXUsSKj1nGskINP+448jjaZveufwcdo+H/uQlut5393Cruh+h8dPhsdDqaMEzWeKpkGDyt4HdIwZZNBz9Ea719uA3o/S3wvAWPbckvjyaJ/XzdDoJ7jgokMB1NQttvH6A8lzfj4CGBwnhi4vVmDDR8/EeNbgWz+4dtu+d/TdLVOs+P0KfhPE3RUpgL/BKa9V+d3O83w+rd1Rya5k+tgEeD
+sidebar_class_name: "get api-method"
+info_path: site/docspace/api-backend/usage-api/api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get a color theme"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/settings/colortheme"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns the portal color theme.
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Settings of the portal themes","content":{"application/json":{"schema":{"type":"object","properties":{"response":{"type":"object","properties":{"themes":{"type":"array","items":{"type":"object","properties":{"id":{"type":"integer","description":"The custom color theme ID.","format":"int32","example":1},"name":{"type":"string","description":"The custom color theme name.","nullable":true,"example":"blue"},"main":{"type":"object","properties":{"accent":{"type":"string","description":"The accent color.","nullable":true,"example":"#4781D1"},"buttons":{"type":"string","description":"The button color.","nullable":true,"example":"#5299E0"}},"additionalProperties":false,"description":"The custom color theme color parameters.","title":"CustomColorThemesSettingsColorItem"},"text":{"type":"object","properties":{"accent":{"type":"string","description":"The accent color.","nullable":true,"example":"#4781D1"},"buttons":{"type":"string","description":"The button color.","nullable":true,"example":"#5299E0"}},"additionalProperties":false,"description":"The custom color theme color parameters.","title":"CustomColorThemesSettingsColorItem"}},"additionalProperties":false,"description":"The custom color theme settings.","title":"CustomColorThemesSettingsItem"},"description":"The list of the custom color themes.","nullable":true},"selected":{"type":"integer","description":"Specifies whether the custom color theme is selected.","format":"int32","example":1234},"limit":{"type":"integer","description":"The maximum number of the custom color themes.","format":"int32","example":1234}},"additionalProperties":false,"description":"The custom color themes settings.","title":"CustomColorThemesSettingsDto"},"count":{"type":"integer","format":"int32"},"links":{"type":"array","items":{"type":"object","properties":{"href":{"type":"string"},"action":{"type":"string"}}}},"status":{"type":"integer","format":"int32"},"statusCode":{"type":"integer","format":"int32"}},"title":"CustomColorThemesSettingsWrapper"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

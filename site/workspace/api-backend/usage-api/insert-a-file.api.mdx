@@ -1,0 +1,71 @@
+---
+id: insert-a-file
+title: "Insert a file"
+description: "Inserts a file specified in the request to the selected folder by single file uploading."
+sidebar_label: "Insert a file"
+hide_title: true
+hide_table_of_contents: true
+api: eJy1VlFv4zYM/isCn90mTbvdnYFh6PV6WLDtVjQtBlyTB8ZmEl1tSyfRbb3A/32gZLdJk6V72PzgKJI+6hP5kfQaGJce0jtY6IL84LMpcnIeZgl4ymqnuYH0bg3nNa+M038ha1P9QpiTE5AjzCGBR6eZYNbOEsjJZ05b2QYpjCtPjr1CJeaVt5TphaZc6UrxipSj7zV5VmzCX08FZUy5WgQaat4or6tlQRFe28JgrqvlMSRg0WFJLGSFYIUlQQoROBZSWghY5BW8ZhUvqcafIAGfrahESNfAjRULnp2ultDKZTp6H03eyI7MVEwVyxCtLXQWvDH45sXqeteUmX+jjIWrM5Yca/KyKneR321S150rdGVrVp4dYQnJK1NtAqx5H/yzOCg4IXl9kwQyR8j0hR7Hi8sn7XkXPuki49XjinhFTkISYQpVRY8xAnqhNCssJO6NIrHllXGqMvxyLjqHjQSAqfQb7pgbUxBW0LYJ3BPZC1M9kOMJI9f+X1ISXJBKoJNFC7paKh+s7HB5OVMeiai3pvIxEKPhcPfYKFnRoIQp+a+C/iXo87XKEqAnLK0EdCOCbQK3Nkem/GPztuVxvs/uwrgSGVKoa51vnTPsnqM9r/4RCp+0twU2bxP/Xd+T+opVg+zvtUBveo0eAGGFS3Ky+/wBGd2kxKI4jKldIRrwslNhQAn+yhmJ1a17Az6dDq6cyeuMvQzJ2ILinMCP0dunn2tP7ifMS11pzw7ZuCDXLungsrSFaYj+dGgj+S5Qh08eDUfDo5PR0fD9zcm79PRdOjw9Pj0bnX344d1XMfKbiao6bOVsOp1Oz36U94ZWNtjJrDAL1ILcz4Ynuwq/rbCr5pQHfEm8MrlUS+ODvqRopjBAqwej4+EgtoZ1X1vbgQ45ItWT3ENfgWvxP6yYrU8Hg/XKeG7TtTWOW0jgAZ3GeRElK2uR1wLrQlRamAyLMN0mIJjt5ffDDyO50kZbmkjiRXN7m9OzJ9HqX6npG8IqLid9w9jCBm9IZl+/FP7L3v/PhXvD489R2q2wd+xqmu2tdLLSCp+FCTw7YxemLOtKc6Mmwa3q+nJyo86vxuI+cj5Gr0Cm3k2eSwyi6S4Ta1fXbV+3vY3+9X/25c7rTE88sAXqSqjWMTejsO4kJJDA6HgohUrEBQmkW6076GuWdEq5g/V6jl5SvG1l+ntNTj5MZi/CChrMtZdxDukCC08HPLD5DbCXcq+eqgnqLWr5BxLPZvM7o521SS8qYRCXL+I5Rzdi5AW+00DapEecZxlZPrh3tpGpV39MbiCBefdlUppcMA4fIQnvQNWEe4cUCXNrKLBa1riUvdGmCF6qwXa+3Id86QZyq73O2E6d3jPylmvthazXMRvb9nl/XPpHxHO+xt0Sm1nbtn8D872oBw==
+sidebar_class_name: "post api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Insert a file"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/api/2.0/files/{folderId}/insert"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Inserts a file specified in the request to the selected folder by single file uploading.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"folderId","in":"path","description":"Folder ID","schema":{"type":"string"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"file":{"description":"Request input stream","type":"object"},"title":{"description":"File name","type":"string"},"createNewIfExist":{"description":"Specifies whether to create a new file if it already exists or not","type":"array","items":{"type":"boolean"}},"keepConvertStatus":{"description":"Specifies whether to keep the file converting status or not","type":"boolean"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Inserted file","content":{"application/json":{"schema":{"type":"object","properties":{"Name":{"type":"string","example":"File name"},"UpdatedBy":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"},"Updated":{"type":"string","example":"2020-12-08T17:37:03.3424957Z"},"Location":{"type":"string","example":"4\\\\46\\\\File name"}},"title":"FileWrapper"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

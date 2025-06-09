@@ -8,6 +8,268 @@
 * Added the editorConfig.customization.forceWesternFontSize parameter for the Chinese (Simplified) UI
 * Added the editorConfig.customization.layout.header.user parameter
 
+## 5.4.0
+
+### New features
+
+#### Samples
+
+* Added Samples section
+
+#### Docs
+
+* Updated Office API documentation
+* Added Playground page to the Office API, Plugins and macros sections
+
+#### Docs API
+
+* Updated the main page for the Automation API samples
+* Updated documentation in Chinese
+
+### Fixes
+
+#### Docs
+
+* Fixed examples for Automation API
+
+## 5.3.0
+
+### New features
+
+#### Docspace
+
+* Added DocSpace version 3.2
+* Added the MCP server
+
+#### Docs
+
+* Added new Macro samples
+
+### Fixes
+
+#### Document Builder
+
+* Updated C++ samples
+
+## 5.2.0
+
+### New features
+
+#### Docspace
+
+* Added new JavaScript SDK samples
+* Added the MCP server
+
+#### Docs
+
+* Updated parameter descriptions
+* Added Inserting text into a document sample
+
+#### Docs API
+
+* Added interactive examples for Automation API
+* Updated samples in Document Builder section
+* Updated documentation in Chinese
+
+### Fixes
+
+* Fixed code samples
+
+#### Docs API
+
+* Fixed Try Docs page
+
+## 5.1.0
+
+### New features
+
+#### Docs
+
+* Added Results to the Office API samples
+
+#### Docs API
+
+* Added Try Docs page
+* Updated a list of the validated parameters in the browser
+* Added scrolling to tables
+
+#### Docspace
+
+* Update the Authentication section
+
+#### Plugins and macros
+
+* Added YouTube videos for plugins samples
+
+### Fixes
+
+* Fixed anchors
+
+## 5.0.0
+
+### New features
+
+#### Docs API
+
+* Added the Go and PHP (Laravel) test examples
+* Updated test examples
+* Added the Changing the default font page for test examples
+
+#### Docs
+
+* Added instruction to install plugins for all users
+
+#### Docspace
+
+* Restructured the JS SDK section
+* Added the Authentication section
+* Added the API keys page
+* Added DocSpace version 3.1
+* Added the Plugins SDK samples
+
+### Fixes
+
+* Changed loading YouTube frames
+
+#### Docs API
+
+* Updated documentation in Chinese
+* Updated Office API usage page
+
+#### Docspace
+
+* Fixed installation links
+* Updated the Webhooks page
+
+## 4.6.0
+
+### New features
+
+#### Docs API
+
+* Updated Document Builder section
+* Added Playground page for testing the capabilities of the Docs APIs
+ 
+#### Docspace
+
+* Updated Docspace openAPI docs
+
+### Fixes
+
+#### Docs
+
+* Updated conversion tables
+* Fixed Office API examples
+
+## 4.5.1
+
+### New features
+
+#### Docs API
+
+* Added the Size response property to CheckFileInfo
+
+#### Docs
+
+* Updated Office API usage page
+
+### Fixes
+
+* Added pdf editor
+* Fixed anchors
+
+## 4.5.0
+
+### New features
+
+#### Docs API
+
+* Updated the config page for WOPI
+* Added javascript example for signing with jwt
+* Updated documentation in Chinese
+
+#### Docspace
+
+* Updated Docspace openAPI docs
+
+#### Plugins and macros
+
+* Added PDF Forms section in macro samples
+
+### Fixes
+
+* Hid workspace section
+* Added ruby language for highlighting in code block
+* Changed Edition titles
+* Fixed anchors
+* Updated docs titles
+
+#### Docs
+
+* Updated Document Builder section
+
+#### Docs API
+
+* Fixed config parameters
+
+#### Plugins and macros
+
+* Fixed import hyperlink example
+
+## 4.4.0
+
+### New features
+
+#### Docs
+
+* Updated Office API usage page
+* Updated Plugins and Macros pages
+
+#### Docs API
+
+* Added the editorConfig.customization.features.featuresTips parameter
+* Added opening for hwp, hwpx formats
+* Updated docs config page
+
+#### Docspace
+
+* Updated list of languages for OpenAPI
+* Added host and port for server url as parameters
+
+### Fixes
+
+* Added tabs for convenient display of OS/services/languages
+* Fixed loading for ONLYOFFICE Docs editor tab
+* Fixed anchors
+* Fixed Docspace and Workspace sidebars
+ 
+#### Docs API
+
+* Updated conversion tables
+
+## 4.3.0
+
+### New features
+
+#### Docs API
+
+* Added the document.isForm parameter
+* Added the editorConfig.customization.showHorizontalScroll parameter
+* Added the editorConfig.customization.showVerticalScroll parameter
+* Added logos for connectors
+* Updated documentation in Chinese
+* Updated docs config page 
+
+#### Docspace
+
+* Updated Docspace openAPI docs
+
+### Fixes
+
+* Fixed loading for ONLYOFFICE Docs editor tab
+* Fixed ONLYOFFICE Docs editor tab in the dark mode
+* Fixed anchors
+ 
 ## 4.2.0
 
 ### New features

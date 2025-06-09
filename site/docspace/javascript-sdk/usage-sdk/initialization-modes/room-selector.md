@@ -2,7 +2,7 @@
 sidebar_position: 2
 ---
 
-# Room Selector
+# Room selector
 
 Opens the room selector and allows you to select a room from a list of the available rooms.
 
@@ -15,5 +15,5 @@ Opens the room selector and allows you to select a room from a list of the avail
 | [initRoomSelector](../methods.md#initroomselector) | Initializes the SDK frame in the "room-selector" mode. |
 
 ``` ts
-const docSpace = DocSpace.SDK.initRoomSelector({config})
+const docSpace = DocSpace.SDK.initRoomSelector({config});
 ```

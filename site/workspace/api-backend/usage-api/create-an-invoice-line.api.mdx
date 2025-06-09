@@ -1,0 +1,71 @@
+---
+id: create-an-invoice-line
+title: "Create an invoice line"
+description: "Creates an invoice line with the parameters (invoice ID, invoice item ID, etc.) specified in the request."
+sidebar_label: "Create an invoice line"
+hide_title: true
+hide_table_of_contents: true
+api: eJy9VlFv2zYQ/ivCPW0AFytuHza9ZXWHGRvQrE6xh8APtHSx2UokQ56SeIL++3AUJUu2m7bpMD8YFO++I+/uuzs2QHLrIbuF3FWzpX4wKkcPawEe89op2kN228BVTTvj1D+SlNG/oyzQMcahLEDAo1OEsG7XAgr0uVOW1SCDNw4loU+kTlRnOimVxuRR0S6hHSZWOlkhofPJD73GciEGbUVYhQ2k/OLHxFvM1Z3CIlE64B3e1+jpAgTE5a+m2EPWQG40oSZeSmtLlYerzz56vlgDPt9hJXlFe4uQgdl8xJxAgHXGoiOFnqXxIsuCP6bOLYf7guitKE24RQetGJCE1XPo6OFzJm7k0+U5E78p52kIFcmnL9uZn7Ozwtzo4msMeePonQvJPzFiHCUmyM4hJ8rH2MXoawB7ckpvGXtfS02BicfAv3rJgNJ1telOtE7leAq5Dttn9Avlc1N3jDm6Xi85QYUfU89bo33HmHmafj7bzH4Q/xU5o9XlYqTax1zAnXGVpG7r1RwE4JOsbMlKKTu8HBH0uywEfn6vhfkLLazGlPxm9GJKyyn1xtpjxVYciHcARU6MzixMvSlxeqgIx1733HwBdjHi6Qvg3x7my/mr18A0J0VhIybtT6XxbyetjZUg4HV6eUr9D1rG4YFFMFMh7UwBGVjjA6cl7SCDmbRqNr9IZzyIYi+K5eLRPaDzYRLVroQMdkTWZ7NZszOe2qyxxlELAh6kU3JTduXBsu4+d7Iu2bnS5LIM29wgjDsS/5z+MmdXRtNvxaXYmTs7A4dQSqv+QG5Eip3edWIBWlYsnWBDFLjW3x9G1ts+3JORk56MkfRkKqQn/T2dNOr0eCgP7D701XRol+m4EaZhdtyZ4GZM/htTVbVWtE9WISvJ+7erm+TqesnRR+e7M0oe+zHKnioZqivGonsUHL8J4GRGDE3yf31GxHQSPtHMllKFcg+kayJTbznXIGB+kXIrdxUMGQiOrEVk3i00zUZ6/ODKtuXt+xodv6fWB6LyVyt6vjDBP+E+hDk4/9MNX4fVy7pj2dG0aEWPuMpztPSs7npUfNfvVjcgYBOfS5UpGOPkIz+l5CNkAAJMSEZgf9hroJR6W8st63Y2mctc4NNS+BRKIS7Yq16k96MbTqtCREf4n906C2martDadtDvRJ9FDKXYaXNC123b/gvcEbcC
+sidebar_class_name: "post api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Create an invoice line"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/api/2.0/crm/invoiceline"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Creates an invoice line with the parameters (invoice ID, invoice item ID, etc.) specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"invoiceId":{"description":"Invoice ID","type":"integer"},"invoiceItemId":{"description":"Invoice item ID","type":"integer"},"invoiceTax1Id":{"description":"First invoice tax ID","type":"integer"},"invoiceTax2Id":{"description":"Second invoice tax ID","type":"integer"},"sortOrder":{"description":"Sort order","type":"integer"},"description":{"description":"Description","type":"string"},"quantity":{"description":"Quantity","type":"number"},"price":{"description":"Price","type":"number"},"discount":{"description":"Discount","type":"number"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Invoice line","content":{"application/json":{"schema":{"type":"object","properties":{"InvoiceID":{"type":"integer","format":"int32","example":"0"},"InvoiceItemID":{"type":"integer","format":"int32","example":"0"},"InvoiceTax1ID":{"type":"integer","format":"int32","example":"0"},"InvoiceTax2ID":{"type":"integer","format":"int32","example":"0"},"SortOrder":{"type":"integer","format":"int32","example":"0"},"Description":{"type":"string","example":"Description"},"Quantity":{"type":"number","format":"double","example":"0,0"},"Price":{"type":"number","format":"double","example":"0,0"},"Discount":{"type":"number","format":"double","example":"0,0"},"ID":{"type":"integer","format":"int32","example":"1234"}},"title":"InvoiceLineWrapper"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

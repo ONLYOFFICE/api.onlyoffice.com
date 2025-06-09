@@ -1,0 +1,71 @@
+---
+id: get-file-download-link
+title: "Get file download link"
+description: "Returns a link to download a file with the ID specified in the request."
+sidebar_label: "Get file download link"
+hide_title: true
+hide_table_of_contents: true
+api: eJytU01v2zAM/SsCz0KdBTtsuhVr1wW7DP04BT6oNhNrlWVVottlhv77QNlOmjbtaRf5g6T4+N7jAKS3EdQaNsZiLL7zCaWEiFUfDO1ArQc476npgvmryXTuB+oaA5cE1DVIeA6GEMpUSqgxVsF4TgMF10h9cFFoYY17ENSJunt2ttO10IL7iWdDjaAGxepCRI+V2RishXH5X8DHHiOdgQSvg26RMMSMx+kWQWXIK0ZguJvX1MBrCDyPWF2AhFg12GpQA9DOc3WkYNwWEuMOGH3nIkaOLxcLfpy4aA+f5wEJVecIHXG29t6aKhNU/I5cMnzQMiUJnxef3ra5c3riGmvgrBap6WpQsEXKRFADCgrtTbE8WxSjanwWw0hHKnzAaLYO6z4YHhzD00xcHywoaIh8VEUxNF2kpAbfBUog4UkHo+/tyALHRnwb3VsCBbartM2/kwSuOQ5/WXxd8mgvzHPDBIzXnbTQnhjtzU/czUo2Y1jOOh/VZlaM23S53JDljG9d2/bO0E7c5GnF9eXNrTj/teKpMMSRXKsJZ/SRWp1FmnpcIY2WfK3xkT7DQfL/6O6JBMI/VHirjWOIWaphEnzNDIGE5dkC5Liq0xMkqP0eHClfyknDNQzDvY54F2xK/Puxx8CLXR4kz+6oTeT3GtRG24gfzH5Yq5PYZ1XdLrvK9vwFEh5wd1jbVCY5S83dx+B5VaGnF2VvFosNtt+Kq8tbkMA7c+ymh+ym6YVvPwnp2FgzPj6TfKdkGEavprTPH0PvVuzdPGYzQ2VK6R+K+9vz
+sidebar_class_name: "get api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get file download link"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/files/file/{fileId}/presigneduri"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns a link to download a file with the ID specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"fileId","in":"path","description":"File ID","schema":{"type":"string"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"File download link","content":{"application/json":{"schema":{"type":"string"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

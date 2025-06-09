@@ -1,0 +1,71 @@
+---
+id: delete-favorite-files-and-folders
+title: "Delete favorite files and folders"
+description: "Removes files and folders with the IDs specified in the request from the favorite list."
+sidebar_label: "Delete favorite files and folders"
+hide_title: true
+hide_table_of_contents: true
+api: eJy1VE1v2zAM/SsCz1qdBTtsvrVrgBUrsKEfpyAHxaZjtbKlSnTazPB/HyjZTdJ2BXpYDoHMLz0+PqoHUpsA+RIqbTBkvxx6Rdq2AVYSAhad17SDfNnDaUe19fpPdP9AVaLnPI+qBAmPXhPCalhJKDEUXjsOgxyusLFbDCLWF6otRWVNiT6IR021oBrFxXkQwWGhK42l0G00enzoMJCovG2ioVJby5cIowOdgIQx4syWO8h7KGxL2BIflXNGFxFodhcYRg+hqLFRfKKdQ8jBru+wIJDgvHXoSWNgb0J3UcaP41YudSBhq7EBhg1yqqa8VzuQoAmbcHBLIK/bDQyDjAy/X1cb/GDV+GMqgrNtSB3MZ7PXd5xZa8RWmQ5zQb5DoavIqp0GLnQQoSsKDKHqDMgP87m21qBqISH6Mvv8GsRtq0YRYRkpaZBqW0IOJRok5GEoqiGHTDmdzU9mWZLlNHumJqDfog9Rk503kENN5EKeZX1tAw1576ynASRslddqbRIr7EuIKtUZghyMLZSJ5kEC5xy7v86+zbmZgz245p5TuTe34ZkL5fRPjIPjtuvkltCqhr1HuZEHJvVqL+fFk2qcwRdyXE5jXx1oaW8c+LbKRhSaOBu+26bpWk07cR1JE1eL6xtx+vuCyUEf0lSMIpxICNSoON4R6nmcy373Xm0xvNj3gz38j6s/0kz4RJkzSreMPoqhHxW05BmAhPnJDBJdDHWvo5UcFbGEvl+rgLfeDAObHzr0/OKt9gLir0FOc2Th3eMu8htb/XTDcDjcdGn6L9ZlkFPGaVGgo3djVwdrcb64XNwsQMJ6fOQaW3KWV4/8AKpHyAEkWJee7LxPth6Majed2nBsqsoq4+U7Ful9FOl44L4mV7s7wHisVzm2wv/c2JspfZ9WYBie45PrnxnPS5KieaSrYRj+Ali3SMQ=
+sidebar_class_name: "delete api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Delete favorite files and folders"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"delete"}
+  path={"/api/2.0/files/favorites"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Removes files and folders with the IDs specified in the request from the favorite list.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"folderIds":{"description":"List of folder IDs","type":"array","items":{"type":"string"}},"fileIds":{"description":"List of file IDs","type":"array","items":{"type":"string"}}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Bool value: true if the operation is successful","content":{"application/json":{"schema":{"type":"boolean"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

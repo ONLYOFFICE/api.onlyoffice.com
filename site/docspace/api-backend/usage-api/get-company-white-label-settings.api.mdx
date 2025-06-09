@@ -1,0 +1,63 @@
+---
+id: get-company-white-label-settings
+title: "Get the company white label settings"
+description: "Returns the company white label settings."
+sidebar_label: "Get the company white label settings"
+hide_title: true
+hide_table_of_contents: true
+api: eJytV99T4zYQ/lc0+8JDTWI4rtPxUyl3veFKex0IwwOTAcVexzpsyZXWhDTj/72zkuPECQd0Bh6ILe1+u9of38orIDl3kNzCFRIpPXdiLC5xZqXOlJ7DNAJTo5WkjD7PIIE50pmpaqmXN4UivJAzLNeqEIFFVxvt0EGyguM45p8MXWpVzRCQQKctFqwuStYXbgOQGk2oifVkXZcq9abH3x0rr8ClBVaSn2hZIyRgZt8xJYigtuwoqWC6R3xVMg3+/CUr5NdKPl2gnlMByfHHjxFUSq/f42gN5chycKKdo00KFB2c0LLCEUSgm7KUsxIhIdtgBPgkq7r0IKZCQfhE0EbgFL2recZj87mxlSRIoLHq7d5gJVX5nu54QCGzzKJzA7+CqZc8u1pmGpd3l2aGltzJr4Uh1hmlpmJfO9D39HbLzzcGrC6Mftf8eUChm2qGdhAvwpejNXDr3F2oFLUzdqsPZsaUKPWe+asaU5UrdELlQvaeKCekKDsYYazQhtij3iR70EZQSkd/mowRsi1r/Vn7E2SS8JBUhdsgzBW/HMYnh0fxJP45+RAncTyKw99P8UkSx9CGZCt2V5Z/bzVxLkuHL0XzOa7hM5Aib/zHjPbORsXCyroOKX3V+E2QhbZlL07io30yvdayocJY9S9m3leHaWMVLSG5XYF06R3v3z0gL4BFmUEEC8tkM22jFfyG0qKF5Na/ndbqD1z2a8/JS6fStfi304aK4+cFv9Xo58XttJ3uBukSqbHaCXpDhiqkwnRzh6lbcifBWNZqfDyKx2vRse1H1riDBA6GfUTrfCwaW0ICq5l0eG3Ldr/6vaxIjc7VvAkDDyJ4lFZxo3l+6ZRDGnLZlFzOe0ifwpa4vrzg1E03Sbni4RWghqnpu0X6DOxBXjsUZ8Y8KBSshJq6uchU4AfXEDACxWqpV2Ei6PLW2ymI6j0rnzWhFUvTWNE4tAwspM5ELZ1bGMsZ9uPXk4gHZOSuWt4CfRCExerrzURMzAPq9mAAGrCi7uH3NWN8vZmwqWF5vhaz00GgmMYyJLSV0piJ2dJX38Fp1z1e5kAUKDPvQBfUgcUuqJ1MG/X1v7lhSL+w60mQE3lpFmKhqBADq+LMZEyFvB1KY3vXb+4u+hr0gXbJeOytjowulybPVYo8GMPi8bhnB+YbDvjbVb24z46pQ836Luf2lZmQaYrOCTKitoYwJcyERWcam6LrqSCBG/59RTrw25oxNtH0C2dG63Bt2wkq734S3fZ+Wwy0335qLnylc8P5fTp0aq4lNRZfLzcu6V6c+ycTubE7fo0EDwgfWVE1jsQMhZmR9DX5qKQvyvsNuQXaGGTkXqDOaqM0jcQ5cVlze2ImpPND25OErzLG8j18v3WQ+9GmurfPt8MYLb/nxh+7G1OnNV8gmU/DgT+Mjkaxv/sYR5X0t/MO+AvSq+S+G8DV5ub/vwZElxW+8YzrUirNLjWBpMO0uOWUQQTHo9jPhK1vlf4zJ1p/BvAHT2EcsdqqnxYtL//ToOUxOt1MhTAJ15TAY8bTOZymKdbkx0fZhKLZ+ZThsdDPti+fJxD5Fh/WWaDy7oHR11t+uvXYQ+YPHvB/nsPPaqxWoYjbtpcPWz/U6IkxSHOUp23b/gfwL+re
+sidebar_class_name: "get api-method"
+info_path: site/docspace/api-backend/usage-api/api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get the company white label settings"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/settings/rebranding/company"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns the company white label settings.
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Company white label settings","content":{"application/json":{"schema":{"type":"object","properties":{"settings":{"type":"object","properties":{"companyName":{"maxLength":255,"minLength":0,"type":"string","description":"The company name.","nullable":true,"example":"some text"},"site":{"maxLength":255,"minLength":0,"type":"string","description":"The company site.","format":"uri","nullable":true,"example":"some text"},"email":{"maxLength":255,"minLength":0,"type":"string","description":"The company email address.","format":"email","nullable":true,"example":"Sydney_Roberts4@hotmail.com"},"address":{"maxLength":255,"minLength":0,"type":"string","description":"The company address.","nullable":true,"example":"some text"},"phone":{"maxLength":255,"minLength":0,"type":"string","description":"The company phone number.","format":"tel","nullable":true,"example":"some text"},"IsLicensor":{"type":"boolean","description":"Specifies if a company is a licensor or not.","example":true},"lastModified":{"type":"string","format":"date-time","example":"2008-04-10T06:30:00.0000000+04:00"}},"additionalProperties":false,"description":"The company white label settings.","title":"CompanyWhiteLabelSettings"}},"additionalProperties":false,"description":"The company white label settings wrapper.","title":"CompanyWhiteLabelSettingsWrapper"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

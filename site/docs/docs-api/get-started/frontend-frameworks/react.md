@@ -37,26 +37,26 @@ This procedure creates a [basic React application](https://github.com/facebook/c
 4. Open the *./src/App.js* file in the *onlyoffice-react-demo* project and replace its contents with the following code:
 
    ``` tsx
-   import {DocumentEditor} from "@onlyoffice/document-editor-react"
-   import React, {useRef} from "react"
+   import {DocumentEditor} from "@onlyoffice/document-editor-react";
+   import React, {useRef} from "react";
    
    function onDocumentReady(event) {
-     console.log("Document is loaded")
+     console.log("Document is loaded");
    }
    
    function onLoadComponentError(errorCode, errorDescription) {
      switch (errorCode) {
      case -1: // Unknown error loading component
-       console.log(errorDescription)
-       break
+       console.log(errorDescription);
+       break;
    
      case -2: // Error load DocsAPI from http://documentserver/
-       console.log(errorDescription)
-       break
+       console.log(errorDescription);
+       break;
    
      case -3: // DocsAPI is not defined
-       console.log(errorDescription)
-       break
+       console.log(errorDescription);
+       break;
      }
    }
    
@@ -107,22 +107,22 @@ This procedure creates a [basic React application](https://github.com/facebook/c
 1. Add the `DocEditor.instances` parameter to the `window` object and get the editor object from it by the editor ID:
 
    ```tsx
-   const documentEditor = window.DocEditor.instances["docxEditor"]
+   const documentEditor = window.DocEditor.instances["docxEditor"];
    ```
 
 2. Call any editor [method](../../usage-api/methods.md) from this object:
 
    ```tsx
-   documentEditor.showMessage("Welcome to ONLYOFFICE Editor!")
+   documentEditor.showMessage("Welcome to ONLYOFFICE Editor!");
    ```
 
 Example:
 
 ```tsx
 const onDocumentReady = () => {
-  const documentEditor = window.DocEditor.instances["docxEditor"]
+  const documentEditor = window.DocEditor.instances["docxEditor"];
 
-  documentEditor.showMessage("Welcome to ONLYOFFICE Editor!")
+  documentEditor.showMessage("Welcome to ONLYOFFICE Editor!");
 }
 ```
 
@@ -173,6 +173,12 @@ The application will be deployed on the web server (`http://localhost:3000` by d
 
 ### Properties
 
+```mdx-code-block
+import APITable from '@site/src/components/APITable/APITable';
+
+<APITable>
+```
+
 | Name                                 | Type                                                  | Default | Description                                                                                                                                                |
 | ------------------------------------ | ----------------------------------------------------- | ------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | id\*                                 | string                                                | null    | Component unique identifier.                                                                                                                               |
@@ -204,6 +210,10 @@ The application will be deployed on the web server (`http://localhost:3000` by d
 | events\_onRequestHistoryClose        | (event: object) => void                               | null    | The function called when the user is trying to go back to the document from viewing the document version history by clicking the **Close History** button. |
 | events\_onRequestHistoryData         | (event: object) => void                               | null    | The function called when the user is trying to click the specific document version in the document version history.                                        |
 | events\_onRequestRestore             | (event: object) => void                               | null    | The function called when the user is trying to restore the file version by clicking the **Restore** button in the version history.                         |
+
+```mdx-code-block
+</APITable>
+```
 
 \* *- required field*
 

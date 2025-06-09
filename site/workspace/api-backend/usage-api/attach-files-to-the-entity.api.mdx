@@ -1,0 +1,71 @@
+---
+id: attach-files-to-the-entity
+title: "Attach files to the entity"
+description: "Attaches the selected file(s) to the entity specified in the request."
+sidebar_label: "Attach files to the entity"
+hide_title: true
+hide_table_of_contents: true
+api: eJztWNty2zYQ/RUM+pJMaYu6pI450+n4okw0TVyP5Uwmsf2wBlcmEhJggaUSVdHn9Ef6ZZ0FJYtKbItN85CH8EFDkXsWi92DwwXmkuDGy+RCKld0nukcvbyKpEdVOU0zmVzM5UFFmXX6LyBtzXOEFB0DHEIqI/nBaUJ5tbiKZIpeOV2ymUzkARGoDL2gDIXHHBVhKiY6x0f+sSAbnqMhTTPhS1R6ojEV2oTnDv+s0NOujOTy9tCmM5nMpbKG0BDfQlnmWoWwOu88DzqXXmVYAN/RrESZSHv9DhXJSJbOluhIo+e39cDnwWb+WeTDOqjgIFr58eS0uZGLaAnV6b3A0fEapg3hDTrG8dR16r+EvdCehJ2E3IjRsV+jwTmYyUhqwsI3JrXyGsmJdQVQ/ajfk4v64qz50hpfT7YXx/cG+0FTFlK+qgzUdePafqNcHzkEwsPZdstR2rBZZrwxx6rSHBZ+hKLM2SReXjt3/KwuTv2x9mUOsxMo8K4B1g5f6vco3oKZAfn3mqHnmvJtIDCwrPHBFAjcuIA8fxhTuZzXgGdLAQHF+FNnuQ6v3Bb45WXn1Nm0UuT5Fm2ZY/2M4bvgy4+/VR7dr5AW2mhPDsg6ycygekJyWJS5nSG+dlDWwdd1urME65F7cS/e6fZ2uv3z7l7S7Sf97u6T/bi319t7G5ysOXO/k4Mbh5hyAgpEEkAir4zKBJhUpNqryteyoXKNhoSyRYFOaciFnUyWwQLhjXVtSFXADZ4CZQ/HVAIvBCs0m7esfG3CBGsurYcQTcOQrdy6hxE/wd5E1TQeW0d/uKC/26Wg6aPL6NHxf4b1+oMNzjzXnqybrXJ/CD7QZ8UfawgUba9IWB/PLNmtPF8uk4klyyO8xFRXxdcgWyvAOaTvME21QXEIKtNhZiN/ZIsSTJNt19bmCGYDPIHcBz4cKIXes7A3EPep+Q8x/O7EMNT81OkpEG6pObkKa46MM3Ab8vkgRYL1qgFpsSpNVXDbdWINdyVnCOnr0HrV9/KL/usiFjuCrSPRFTviFhCJ3vLv1SZ9whKunEOjWqhqCyocZdqgR/GmgiB241lxbbfU8p+/A3Ourx1ONWzX06OTN3XcOVUOt3P66GS1ns0UHcF13r6+h+C1alfeBrVWKR2ZiW2KJZhhqqnl4EdgjjHH9mT8/1q/VPPPNL7uGrfTY7jRX99fD1uW1lFl2Omt+w3lax394MnaQwt2PreVx8zmqQi9LRiFXvBgziAJn9lyUyGC368uYL21+upvwXZi8wDCsNkikq/KlDu5Hy339/2VuS1Uu5Y7fsotd38vifu7/UFvsP+kbrlfWNVCKQeXl5eXg1/4t8GVRnT89Jbf30ZDzjAPkflMl8MpGlr7Z7NB3P1yX/rKwPLAAdPgrEDKbModuvWBv6GVlx0odae3G3f45GK+3s8nj1StXJ8a2vJJgcfHi5WdTpOLeGf/6udFZxIWJh95uCk6H048KuaCzIhKn3Q688x6WiRzdraQkZyC0/zdCMuH39VzmECVc1pyqyAPjxeRZMzm66fxftimN05ZxryPrt3dedayFo1S/45BNThRWf06kqGSySY2ZI436mfr45PhqlCbxx8NstyebMSN44qL+GrBQ05sCOX281AUIbViHDInzobjc3FwOuIMofN1MXMg5Ews/gX9RzE3
+sidebar_class_name: "post api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Attach files to the entity"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/api/2.0/crm/{entityType:(contact|opportunity|case)}/{entityid:[0-9]+}/files"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Attaches the selected file(s) to the entity specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"entityType":{"description":"Entity type","type":"string"},"entityid":{"description":"Entity ID","type":"integer"},"fileids":{"description":"List of file IDs","type":"array","items":{"type":"integer","format":"int32"}}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Entity with the file(s) attached","content":{"application/json":{"schema":{"type":"object","properties":{"CreateBy":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"},"Created":{"type":"string","example":"2020-12-13T17:13:31.5902727Z"},"Content":{"type":"string","example":"Agreed to meet at lunch and discuss the client commercial offer"},"Category":{"type":"object","properties":{"ImagePath":{"type":"string","example":"path to image"},"Title":{"type":"string","example":"Title"},"Description":{"type":"string","example":"Description"},"Color":{"type":"string","example":"#a7fc00"},"SortOrder":{"type":"integer","format":"int32","example":"1"},"ID":{"type":"integer","format":"int32","example":"1234"}},"title":"HistoryCategoryBaseWrapper"},"Contact":{"type":"object","properties":{"SmallFotoUrl":{"type":"string","example":"url to foto"},"MediumFotoUrl":{"type":"string","example":"url to foto"},"DisplayName":{"type":"string","example":"Tadjeddine Bachir"},"IsCompany":{"type":"boolean","example":"false"},"AccessList":{"type":"array","items":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"}},"IsPrivate":{"type":"boolean","example":"true"},"IsShared":{"type":"boolean","example":"false"},"ShareType":{"type":"integer","format":"int32","enum":["None","ReadWrite","Read"],"description":"[0 - None, 1 - ReadWrite, 2 - Read]","example":"0"},"Currency":{"type":"object","properties":{"Title":{"type":"string","example":"Chinese Yuan"},"Symbol":{"type":"string","example":"¥"},"Abbreviation":{"type":"string","example":"CNY"},"CultureName":{"type":"string","example":"CN"},"IsConvertable":{"type":"boolean","example":"true"},"IsBasic":{"type":"boolean","example":"false"}},"title":"CurrencyInfoWrapper"},"CanEdit":{"type":"boolean","example":"true"},"CanDelete":{"type":"boolean","example":"true"},"ID":{"type":"integer","format":"int32","example":"1234"}},"title":"ContactBaseWrapper"},"Entity":{"type":"object","properties":{"EntityType":{"type":"string","example":"opportunity"},"EntityId":{"type":"integer","format":"int32","example":"123445"},"EntityTitle":{"type":"string","example":"Household appliances internet shop"}},"title":"EntityWrapper"},"CanEdit":{"type":"boolean","example":"true"},"Files":{"type":"array","items":{"type":"object","properties":{"Name":{"type":"string","example":"File name"},"UpdatedBy":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"},"Updated":{"type":"string","example":"2020-12-08T17:37:03.3424957Z"},"Location":{"type":"string","example":"4\\\\46\\\\File name"}},"title":"FileWrapper"}},"ID":{"type":"integer","format":"int32","example":"1234"}},"title":"RelationshipEventWrapper"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

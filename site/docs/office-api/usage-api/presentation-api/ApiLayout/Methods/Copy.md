@@ -17,13 +17,13 @@ This method doesn't have any parameters.
 
 ## Returns
 
-[ApiLayout](../../ApiLayout/ApiLayout.md) | null
+[ApiLayout](../../ApiLayout/ApiLayout.md) \| null
 
 ## Example
 
 This example creastes a copy of slide layout and apply it for other slide.
 
-```javascript
+```javascript editor-pptx
 var oPresentation = Api.GetPresentation();
 var oSlide = oPresentation.GetSlideByIndex(0);
 var oMaster = oPresentation.GetMaster(0);

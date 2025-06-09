@@ -1,0 +1,71 @@
+---
+id: export-a-message-to-crm
+title: "Export a message to CRM"
+description: "Exports a mail to the CRM relation history for some entities."
+sidebar_label: "Export a message to CRM"
+hide_title: true
+hide_table_of_contents: true
+api: eJyllFFz0zAMx7+KT8/eUsYL5A223bEDDm4bT6XX0xK1MdhxsBW2kvN352SnpRvjiTy0tiXL0l8/ewLGbYR6CQ6NrT5SjLilCCsNkZoxGN5BvZzgzcidD+YXsvH9O8KWgmwKhC1ouA+GCVZppaGl2AQziBvUcPkw+MBRoZLwir3ijtT59UcVyOZYqjORfdipjQ8qekeKejZsKJ6ChkA/Ror81rc7qCdofM/UswxxGKxpcojqW5TDJohNRw5lxLuBoAZ/940aBg1D8AMFiSpW065dKVRmjzO+ulB+o7DfqdlFbYJ3Oe2mQ9OD3gc3PdOWAiQNTXBryQ0bXps2/h31g4kscaXy2bHUuVNXF1GZPh+w8db6e9NvRQyHXKupOK1NW6uFnresJYFaLdLp114dfZcloFhjrV6oE3VejtLqTCYYSauX6kR9GqQrYy/NPZSDIaBMDZOLz2nIhq0snAc3x71ARkjl0+CIO99CDcOYJUfuoIYKB1OdnS6qzNesaaya4CrKcICQFn5SiBm0MViooWMeYl1VU+cjp3oSxwQafmIweGdLG8VWpN7gaBlqsL5Bm5eThhz8kfnV4vWZ5HsE940gU8I9i/hBBhzMe8r6SD+7YtbQoxPro70gagiT13/ovXxAN1h6St/iGXaWU1olOWfj8/l72b1zuWXqJsulri9vbtWbz1ciC4VYQLPItC8/ssN8L+Yky2WUuziTzV6AhCeX9uia/ff9ncVjeuBqsHJ9ki4tnmZAlqIsaDg7XYDOj5D87Z+hLA9omFFZ6bnpS5imO4z0JdiUZPnHSEFeqtUfRmSW9L5VwtZ32mUhc3Unt5KbuNuxNPjJgyKYHJj+/OUWNNzN75DzrWwJeC9vFN5DDaDBZwEzS3ltAov9dsyNhhJSyMBR6j4G63sGax5IontTvztK8DFjeq5GfpP+x5ZpKtimdPAvpn/uOIBdvKVhq5TSbyncGUQ=
+sidebar_class_name: "put api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Export a message to CRM"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"put"}
+  path={"/api/2.0/mail/messages/crm/export"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Exports a mail to the CRM relation history for some entities.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"id_message":{"description":"ID of any message from the chain","type":"integer"},"crm_contact_ids":{"description":"List of CRM contact entity IDs in the following format: {entity_id: 0, entity_type: 0}.\n            Entity types: 1 - Contact, 2 - Case, 3 - Opportunity","type":"array","items":{"type":"object","title":"CrmContactData"}}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={undefined}
+>
+  
+</StatusCodes>
+
+
+      

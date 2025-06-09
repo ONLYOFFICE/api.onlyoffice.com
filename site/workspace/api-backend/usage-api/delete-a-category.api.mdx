@@ -1,0 +1,71 @@
+---
+id: delete-a-category
+title: "Delete a category"
+description: "Deletes a category with the ID specified in the request."
+sidebar_label: "Delete a category"
+hide_title: true
+hide_table_of_contents: true
+api: eJy1Vm1P5DYQ/ivRfDabbOBKiVRVFKiK2qvQsajScfvBJLPERxL77AlHLvJ/r8bZ7AvsUQ7U/ZBN7Hnm3fO4B5K3DrJryHVdt42iLv5d27Z2MBfgMG+tog6y6x6OWyq1Vd8kKd38gbJAyziLsgABX60ihLmfCyjQ5VYZFoMMTrFCQhfJKJeEt9p20VdFZUQlRuenkTOYq4XCIlJNWLP4pUVHExBgpJU1EloXHGhkjZDBqEaxWcUmjKQSHts9Ga2dn4IAl5dYS8h6oM6wFtUQ3qIFAQtta0nD0n4KnkOw6IxuHDpGpEnCf7vVg4BcN4QNsYw0plJ5yFD82bFg/9S0vvmMOXF8Vhu0pAYz58VL3BOAD7I2FQsl4AXMFPHHCunIquZ2S+4yvEQUJL2AE4uSsHgelCZpsjdN95LD2XQ/e/dTlqST/YN3R9PDo4+s5MoUb1dyupnTF4Qw1j4EXnLruQ2ctFZyQRRh7f6PhE9fmvFZidHg32uipBXy9ZVKD46mR4dvrNSGkg+YY0MzbVT+iryl+wePlPxA27L4Rhy/dT9Y2pXqlYdtG4bHxkla/vZ2PMZfqKRyppLd32ESPef7e3WH0UfZdJLcnXph17yXjeRcegHH95KkvaxlVT2PaW0VkY4cS0YyoBh/YfVCVXhl/wP+6VN8YXXR5uT4FbWpcFhj+EQ68/Br69D+IotaNcqRlaQteC9gGCcZnNWm0h3iP1Ya3N4KTDKcA94dth/vj5N0Q8ILOEimT4fuVSOXJIRFMFQjlbqADIrAMoEzqIQMYmlUnE6SeE1rCzYWjxMk7tc84pkg0N6PRNNy1qAkMi6L477UjnzWG22JJe+lVfKmGhqN9wY/F7KtuLcqncsqLHsBjNne/jk5Yo7xG+x6yQQxqNvJsev5ZtSf2I2sVw7bYuTFLWzIjmoWOsCX6T4ZcxFdhmijD2eXs+j44pyjQuuGJFeScPTeUS3DzFraGMh8g8sf026/ZsO3MP8yYMIHik0lVcPutEMzDxW+5myAgHSSBApeRjac8rbmtbWL2cadYS6WRbuGvr+Rjs+I97z8pUXLV535usahHQrl+L2AbCErh89EvH3n2BnEWMqmC61UtfwFAu6w277b+LkXY43Zi0HgOM/R0Ab0yY2DO2t1LE7P/jqbnYEAPjfbnXQXOmn5wgZ2erbdVKOb/PTiO5C+H/rU+5X8sPVdxKqTB2lO1Nx7/y9Hc4cb
+sidebar_class_name: "delete api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Delete a category"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"delete"}
+  path={"/api/2.0/community/forum/category/{categoryid}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Deletes a category with the ID specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"categoryid","in":"path","description":"Category ID","schema":{"type":"integer","format":"int32"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Category","content":{"application/json":{"schema":{"type":"object","properties":{"Id":{"type":"integer","format":"int32","example":"0"},"Title":{"type":"string","example":"Sample title"},"Created":{"type":"string","example":"2020-12-07T13:56:02.3459179Z"},"Updated":{"type":"string","example":"2020-12-07T13:56:02.3459179Z"},"Description":{"type":"string","example":"Sample category"},"Threads":{"type":"array","items":{"type":"object","properties":{"Id":{"type":"integer","format":"int32","example":"10"},"Title":{"type":"string","example":"The Thread"},"Description":{"type":"string","example":"Sample thread"},"Created":{"type":"string","example":"2020-12-07T13:56:02.3249197Z"},"Updated":{"type":"string","example":"2020-12-07T13:56:02.3249197Z"},"RecentTopicId":{"type":"integer","format":"int32","example":"1234"},"RecentTopicTitle":{"type":"string","example":"Sample topic"},"UpdatedBy":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"}},"title":"ForumThreadWrapper"}}},"title":"ForumCategoryWrapper"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

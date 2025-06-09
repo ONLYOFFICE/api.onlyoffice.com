@@ -25,10 +25,6 @@ The list of changes for Office JavaScript API.
 - Added the [ApiGroup/GetClassType](../usage-api/text-document-api/ApiGroup/Methods/GetClassType.md) method to Text document API.
 - Added the [ApiGroup/Ungroup](../usage-api/text-document-api/ApiGroup/Methods/Ungroup.md) method to Text document API.
 - Added the [ApiDrawing/GetParentSheet](../usage-api/spreadsheet-api/ApiDrawing/Methods/GetParentSheet.md) method to Spreadsheet API.
-- Added the [ApiGroup](../usage-api/spreadsheet-api/ApiGroup/ApiGroup.md) class to Spreadsheet API.
-- Added the [ApiGroup/GetClassType](../usage-api/spreadsheet-api/ApiGroup/Methods/GetClassType.md) method to Spreadsheet API.
-- Added the [ApiGroup/Ungroup](../usage-api/spreadsheet-api/ApiGroup/Methods/Ungroup.md) method to Spreadsheet API.
-- Added the [ApiWorksheet/GroupDrawings](../usage-api/spreadsheet-api/ApiWorksheet/Methods/GroupDrawings.md) method to Spreadsheet API.
 - Added the [Api/CreateGroup](../usage-api/presentation-api/Api/Methods/CreateGroup.md) method to Presentation API.
 - Added the [ApiGroup](../usage-api/presentation-api/ApiGroup/ApiGroup.md) class to Presentation API.
 - Added the [ApiGroup/GetClassType](../usage-api/presentation-api/ApiGroup/Methods/GetClassType.md) method to Presentation API.
@@ -37,6 +33,12 @@ The list of changes for Office JavaScript API.
 - Added the [ApiSlide/GroupDrawings](../usage-api/presentation-api/ApiSlide/Methods/GroupDrawings.md) method to Presentation API.
 - Added the [Drawing](../usage-api/text-document-api/Enumeration/Drawing.md) type to the simple type definitions.
 - Added the [DrawingForGroup](../usage-api/text-document-api/Enumeration/DrawingForGroup.md) type to the simple type definitions.
+
+### Content control methods
+
+- Added the [ApiBlockLvlSdt/Copy](../usage-api/text-document-api/ApiBlockLvlSdt/Methods/Copy.md) method to Text document API.
+- Added the [ApiBlockLvlSdt/GetInternalId](../usage-api/text-document-api/ApiBlockLvlSdt/Methods/GetInternalId.md) method to Text document API.
+- Added the [ApiInlineLvlSdt/GetInternalId](../usage-api/text-document-api/ApiInlineLvlSdt/Methods/GetInternalId.md) method to Text document API.
 
 ### Document methods
 
@@ -73,7 +75,6 @@ The list of changes for Office JavaScript API.
 
 ### Other methods
 
-- Added the [ApiBlockLvlSdt/Copy](../usage-api/text-document-api/ApiBlockLvlSdt/Methods/Copy.md) method to Text document API.
 - Added the [ApiNumberingLevel/LinkWithStyle](../usage-api/text-document-api/ApiNumberingLevel/Methods/LinkWithStyle.md) method to Text document API.
 - Moved the [GetContent](../usage-api/text-document-api/ApiDrawing/Methods/GetContent.md) method of Text document from the *ApiShape* class to the *ApiDrawing* class.
 - Added the [ApiLayout/GetName](../usage-api/presentation-api/ApiLayout/Methods/GetName.md) method to Presentation API.

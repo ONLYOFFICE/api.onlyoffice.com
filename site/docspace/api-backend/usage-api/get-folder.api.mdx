@@ -1,0 +1,71 @@
+---
+id: get-folder
+title: "Get folder form filter"
+description: "Returns the form filter of a folder with the ID specified in the request."
+sidebar_label: "Get folder form filter"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVt9v2zYQ/leIe8kGcHbmDsOmtyxpCncDMqQJ8hAYDS2dLDYSyZKnJK6h/304UoplO0WCYk+Wyfv53X133ACpVYDsFs51jUFMxbmtC/QBFhKsQ69IWzMvIIMVUroDCU551SCxXHa7AaMahAzKeD0vQII2kIFTVIGEAkPutWNDkMFVhcLj1xYDiaQg5mcTkMCH2mMBGfkWJYS8wkZBtgFaOzavDeEqui+tbxSlo3czkIBPqnE1QvbnH7/93nULthacNQEDG5gdH/PPbiAX9yAht4bQEN8q52qdx3ynXwKLbA5jsMsvmBMj4Bkd0snB4G0kqbxXa0aCsAmvW7jH9UgokNdmBRJMW9dqyZklUJ4ThWAbFIRPBJ3s1X5QvZOgikJz4qr+dxRVqeqAL9WP8Q+CMxPapGJoa7iIpCmaP2eJOWFzRjZ6yG2bYH6tmJ2EWpv78ONQVh7LQzA4yzzlcHDVcYSBFLXhjSEm4VNb4JsUuheQOeGsbrxyDn0ModuH+hKp9SYI6iEXpa4JvbClUAN3HjVVUWB+JoLDXJcaC6FNPOt5xoVpkCrb0zgSmCrIYKqcns4mx9OS2T/dDAzupuwvuQMJAf3DwPXW15DBZqkCXvu6O+D3pygrcmtKvWrT/AAJD8pr7sQIcK+cOFmqtmaoDiydpStxffkP47PgOPLWa1p/YlomUyrkn1VL1eddAimn/8b1gcnrgOLU2nuNgpXQUM945koaYjsG+0GWRxWu+18q6HzkpyJyB17eG67S2rZetAE9GxbKFMKpEB6t5/kYBwsbWEaDbBmVR/8200dJWGw+3lyJK3uPpjvaMZpsyf7jfOjGjzdX7OokgnPg8DuYnewAJXQQBU/+RhssxHIdG+2IhazX36LMkahQpUXRg7rjsQe1l+kkXLD2bExsFQ/2I0lyoqztY+r7Ha8islECX6fWGN8OVN05jD0YgQ7ZdBq9Tqyp17YsdY6T3DbpcDYd1NgBMeBvV43isTrWDdtCFZHeqhAqzzEEQVY4bwlzwkJ4DLb1OQaQ8Og1MSQ3/PuKdJohFw7jwt6iGQ9OrTFpWu6Byrdnor8+pMWO9tuz5sbn3cD1ffol6JVR1Hp8vd24pZ/FmT8Fz769uCaC11BEVjRtILFEYZekYk8+aBWb8m4YbsPY2KnInUBTOKsNTcScuK2ZnlgIFYQSifHb6Ro5fDdK5G6y7e5xfnsTo+P/pY1p9wvgxGmeh+hDSvjd5NfJMcPkbKBGxf3UG/6Az2+k0fzfh2yzfcX8ryujrxM/EqauVtpwkG0a22l/3HIRQcJscszE4x0CErLRO3C0RhYSKhuItTbP66Pj468t+jVkt4vtmoirptCBv4uXXyLjtH+67B+PP4vvvi9fTGfoRbOOO6puMW2iuE22D9pu0clhYHFk6fokz9HRSPHgCclL63nzfnh/BV33HzIr8+Q=
+sidebar_class_name: "get api-method"
+info_path: site/docspace/api-backend/usage-api/api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get folder form filter"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/files/{folderId}/formfilter"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns the form filter of a folder with the ID specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"folderId","in":"path","description":"The request folder ID.","required":true,"schema":{"type":"integer","format":"int32","example":9846}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Ok","content":{"application/json":{"schema":{"type":"object","properties":{"response":{"type":"array","items":{"type":"object","properties":{"key":{"type":"string","nullable":true,"example":"some text"},"type":{"type":"string","nullable":true,"example":"some text"}},"additionalProperties":false,"description":"The forms item information.","title":"FormsItemDto"}},"count":{"type":"integer","format":"int32"},"links":{"type":"array","items":{"type":"object","properties":{"href":{"type":"string"},"action":{"type":"string"}}}},"status":{"type":"integer","format":"int32"},"statusCode":{"type":"integer","format":"int32"}},"title":"FormsItemArrayWrapper"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

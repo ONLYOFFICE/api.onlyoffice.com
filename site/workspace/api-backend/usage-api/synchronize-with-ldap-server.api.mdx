@@ -1,0 +1,63 @@
+---
+id: synchronize-with-ldap-server
+title: "Synchronize with LDAP server"
+description: "Synchronizes the portal data with the new information from the LDAP server."
+sidebar_label: "Synchronize with LDAP server"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVd9v2zgM/lcMPquNmw13N78Vvd42bNgVS3v3UORBsZlYmy1pFN0uM/S/D5Td1On1Rw4YEDi2+JGivo8ie2C9CVBcQ0BmYzdh9vHP0wtYKghYdmR4C8V1D6cd147MD83G2XeoKyRxItQVKLglwwjLuFRQYSjJeIFBAYutLWty1vzAkHGNmXfEuskqzTq7NVynRYu3mbFrR20Kn63JtckgqWQB6QbpGBQQBu9swABFD/M8l7/9/f72SEOMwJq7AApKZxktC1Z735gy2Wdfgjj0EMoaWy1vvPUIBbjVFywZFHhyHonNsN2Za32DjNUEunKuQW1BAX7XYoYCmDqEqOD9FBiYjN08ilsMeR6EPSdydBj0X01WbAeBL5BKtDzNwljGDRIoGGQZll7NH/U/E5rWwiyeObs21H7Gbx0GfpnWU+/J3RzM6hj3YPwCyejmU9eu8AXi9pCiXwgd0ifd4vN+E5zs16Vjvuw2BUYF/+jGVH+Rax/z2ilQacYjNi3uhZrnJ2+O8t+P5r9d5nmRfruQV5ZN8+tivtOhfv5cCbFfEqlqp7WlifQWFBjG9n/X3AnEGBWw4fT5sdL+6fITRVxH5UtiDJio7vvHZQI/57QPfZjTzjre75iyfp2f/LdnXVk9NlesUpwWuXYVFLDBdGE011DATHszmx/ns12jbirtZ2FrS5BmLU0ypF7dUQMF1Mw+FLNZX7vAseil80ZQcKPJ6FUzXD+xDRmtddcI440rdZOWowLx2Tf/kb+Zy2Em82EhHXS8zY9NiXvdvfmASXg5dj2YFdh0WfZ9Ew8yEpL7yOuZa9vOGt5mi3Ta7PP54jI7vXgvp0IKA52NZrzLPnCrU5cf95iMo2H6TAYMPJhd/f3k+MVjbKSD8TvPfKONlWSTaP0o9rVwBQrmx3nSdhAcFIjksiKiL9Uo3zX0/UoHvKImRln+1iHJ2F7eqy1fUd2RLlXyFbfCelmi51QWTTeI9GBGitS7inx7fgkKpF73df2adB1fJPqdyW4nsfclVmMK8ozqCZe+H6omxh1+MD3psaurAS3sLmOMPwGixQaf
+sidebar_class_name: "get api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Synchronize with LDAP server"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/settings/ldap/sync"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Synchronizes the portal data with the new information from the LDAP server.
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Operation status","content":{"application/json":{"schema":{"type":"object","properties":{"Completed":{"type":"boolean","example":"true"},"Id":{"type":"string","example":"true"},"Status":{"type":"string","example":"true"},"Error":{"type":"string","example":"true"},"Warning":{"type":"string","example":"true"},"Percents":{"type":"integer","format":"int32","example":"true"},"CertificateConfirmRequest":{"type":"object","properties":{"Approved":{"type":"boolean","example":"true"},"Requested":{"type":"boolean","example":"true"},"SerialNumber":{"type":"string","example":"SerialNumber"},"IssuerName":{"type":"string","example":"IssuerName"},"SubjectName":{"type":"string","example":"SubjectName"},"ValidFrom":{"type":"string","format":"date-time","example":"2019-07-26T00:00:00"},"ValidUntil":{"type":"string","format":"date-time","example":"2019-07-26T00:00:00"},"Hash":{"type":"string","example":"Hash"},"CertificateErrors":{"type":"array","items":{"type":"integer","format":"int32","example":"1"}}},"title":"LdapCertificateConfirmRequest"},"Source":{"type":"string","example":"Source"},"OperationType":{"type":"string","example":"OperationType"}},"title":"LdapOperationStatus"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

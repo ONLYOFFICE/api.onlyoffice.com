@@ -5,7 +5,7 @@ Finds and replaces the text.
 ## Syntax
 
 ```javascript
-expression.SearchAndReplace(oProperties, oProperties.searchString, oProperties.replaceString, oProperties.matchCase);
+expression.SearchAndReplace(oProperties);
 ```
 
 `expression` - A variable that represents a [ApiDocument](../ApiDocument.md) class.
@@ -27,7 +27,7 @@ This method doesn't return any data.
 
 This example shows how to make search and replace.
 
-```javascript
+```javascript editor-docx
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 paragraph.AddText("This is the first sample text. The serial number of this sample text was replaced here.");

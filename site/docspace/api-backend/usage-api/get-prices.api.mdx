@@ -1,0 +1,63 @@
+---
+id: get-prices
+title: "Get prices"
+description: "Returns the available portal prices."
+sidebar_label: "Get prices"
+hide_title: true
+hide_table_of_contents: true
+api: eJyNVk1v2zgQ/SvEXHLRWq67J928abdot0CCNkEOhtHQ0shiI5FccpTUK+i/L4aUbMtOEV9sifPmgzNvZtQBya2HbAW3xpGsRSpu5a5BTbBOwFh0kpTRnwvIYIt061SOHhJw6K3RHj1kHSzmc/4r0OdOWcZDBl+VJ2FKIZ+lquWmRmGjBzvayI0mdpR1IK2tVR5cpT8963fg8wobyU+0swgZmM1PzAkSsI4DIxW9j6GcI3v20UYPg0Rpwi06SKA0rpEUj94vGFsr/eSPsNI5uYMEFGHj346jclgeoTw5pbdsV+YxJWeivu8T8CSp9ReGGMHXpsCLFPoESFHNoJsQ9IOT1qIbXP85f3det3stW6qMU/9hESx4zFunaAfZqgPp8x8s//GEfAAOZQEJvDhFCOs+6eAvlA4dZKvwtrTqH9ztz17DS6/yEX6zbKlavA68sRh4uFr36+Qk6G9IrdNeUIW/I9wMEmiQKjNQmesnqYIMUmlVupjN04hPbWyAdE9Uj+4ZnQ8JaF0NGXQb6fHe1T2cRvI9YEVudKm2beweSOBZOsUxhUIPyjH3pWxrLtmZpQ9RJO6/feV6rQ+V+M6dEU1N63Ggbkj7mcl7j+LamCeFgpVQ09B0kICWTdA8NpiAYrU8qDD/hmLt/VRE9szLR03oxM60TrQeHRsWUhfCSu9fjOOyht5mA5tgkC0PFLnE9FUEi+7Lw524M0+o+6uJ0WgrGR7+Hrviy8Mdu5py8q2cLSeJEsqLAgldozQWYrMLlLtaDi0TMFeiQlmEAIakTjwOSR0wfbIn/WHAyHBwGknEibI2L+JFUSUmXkWYCgmwOFLjWDqOjMlh4GBItM/SNHidGV3vTFmqHGe5aeLhIt2PBEiAOOGXqwZ4qI6x48CWRehZWQiZ5+i9ICOsM4Q5YSEcetO62Hqx/zN44P830HGojWPikM1wcG20jlP7JKks/SAG8XlbTLQvvzUTX+nScH1//eHVVktqHb5NN6b0Hs79U4jSuJO4ZuKuQhEyK5rWk9igMBuSgZPPSgZSPo5jbRwbk4o8CtSFNUrTTHwmpjW3JxZCeiFF7PjIMrYVevjx6CKPswO7j+93MjF6fi9NuPawiJZW8TxE5+OF38/ezeacJms8NTLsycHwJ6TD18IkTd3h4+HS2T+knfAXpbaWSrPPNk7huAhWXBNIYDGb83IIBsKWiN9DvO9DLOsEKuOJFbr9Iuj5+N8WHa/F9WHgx802djtvkDCpYZnnaClshrqNfDj5BOKJv19Ynz7eQRK6d0qhOKWHB7Y+ivTu2PZ0qMcI+Jf36qsaXRf52fd7fBT9VmM/8yKa87vu+/5/mwmTUQ==
+sidebar_class_name: "get api-method"
+info_path: site/docspace/api-backend/usage-api/api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get prices"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/portal/payment/prices"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns the available portal prices.
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"List of available portal prices","content":{"application/json":{"schema":{"type":"object","properties":{"response":{"type":"object"},"count":{"type":"integer","format":"int32"},"links":{"type":"array","items":{"type":"object","properties":{"href":{"type":"string"},"action":{"type":"string"}}}},"status":{"type":"integer","format":"int32"},"statusCode":{"type":"integer","format":"int32"}},"title":"ObjectWrapper"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

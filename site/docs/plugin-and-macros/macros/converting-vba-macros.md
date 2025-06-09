@@ -42,21 +42,21 @@ The exact same thing can be achieved using ONLYOFFICE macros, the code will be a
 (function()
 {
   for (let run = 1; run <= 3; run += 1) {
-    let result = ""
+    let result = "";
     switch (run) {
     case 1:
-      result = "=SUM(A1:A100)"
-      break
+      result = "=SUM(A1:A100)";
+      break;
     case 2:
-      result = "=SUM(A1:A300)"
-      break
+      result = "=SUM(A1:A300)";
+      break;
     case 3:
-      result = "=SUM(A1:A25)"
-      break
+      result = "=SUM(A1:A25)";
+      break;
     default:
-      break
+      break;
     }
-    Api.GetActiveSheet().GetRange(`B${run}`).Value = result
+    Api.GetActiveSheet().GetRange(`B${run}`).Value = result;
   }
 })();
 ```

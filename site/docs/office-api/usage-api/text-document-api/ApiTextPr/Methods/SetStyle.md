@@ -1,7 +1,7 @@
 # SetStyle
 
 The text style base method.
-💡 This method is not used by itself, as it only forms the basis for the &#123;@link ApiRun#SetStyle&#125; method which sets
+💡 This method is not used by itself, as it only forms the basis for the [ApiRun#SetStyle](../../ApiRun/Methods/SetStyle.md) method which sets
 the selected or created style to the text.
 
 ## Syntax
@@ -26,7 +26,7 @@ expression.SetStyle(oStyle);
 
 This example sets a style to run.
 
-```javascript
+```javascript editor-docx
 let doc = Api.GetDocument();
 let myNewRunStyle = doc.CreateStyle("My New Run Style", "run");
 let textPr = myNewRunStyle.GetTextPr();

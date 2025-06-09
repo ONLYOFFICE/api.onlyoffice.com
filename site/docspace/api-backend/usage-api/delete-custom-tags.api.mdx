@@ -1,0 +1,71 @@
+---
+id: delete-custom-tags
+title: "Delete tags"
+description: "Deletes a bunch of custom tags specified in the request."
+sidebar_label: "Delete tags"
+hide_title: true
+hide_table_of_contents: true
+api: eJylVk1v2zgQ/SuDueSi2m66J93SJAu0WyCL1EGwMIyGlkYWG4lUyVESr6H/Xgwpy5adRQLsxabI+eLMm3ncIqu1x3SBt9bWHpcJ2oacYm3NlxxTzKkipsvWs63nIpqgo18tef5s8w2mW8ysYTIsS9U0lc6C8vSnt0b2fFZSrWTFm4YwRbv6SRljgo0TV6zJy6lRdVz0Yso5tcEENVN9uO/ZabPGLsGcfOZ0I94wxXlJUGnPYAtgtYZgb4IJmraq1KoiTNm1lCC9qLqRzwV6WxMwvTAuuy5BledarKnq74PQClV5es1bo5yqicl5KKwD0TZr8R3csmZxgp8VZ6Vk7jam7Yotdp24c+Qba3y89flsJn9jLzePcs8/Zh9Pj+6Marm0Tv9LeRT6dCr0j20ht+aMoVRPBGRsuy6hIVdr77U1wFa+Cutq4JJgKD1KfJ6y1mneYLrYovLZD/H445FkAx2pHBN8dpoJl12yxc+kHDlMF+HrotF/0WbYe01eeZ3txG8uWi7PXxe8aShgcbHslsd1uArw9KBg1ZqslOJnAauhDuAbynShKQdtwg177EqBauLS7iEugFRcYopT1ejp+WQ2LXRFfsoR9Z7cEzkfktG6ClPcrpSnO1d1eBzV9yALmTWFXrd9ShN8Uk4LEkPBe+VYtEK1FWOKJ5au4hHc3X4T1Cz3VfkufRVNjWuz76BQghOTd57g0tpHTSBKZLhvWekVVQfNQ4MJalHLgopArS/c4Kdkbk68XBsmBxvbOmg9OTEMyuTQKO+frZMSh8kgBlbBoFju4fIe02dRGLZf7+cwt49kurOR0Wgr6Rd/WlcrSfHX+7m4GuPzrZxdjBIF2kMujV9rQzmsNgFaZxd9QwaZMyhJ5SGAPqkjj31Se5kuGRpgPyZV2DiOJMpBUdlneNZcwsgrXNpckCzHERqHp+HweDNgMCTap9Np8DqxptrYotAZTTJbx83z6TBwZLpJwt+vGsRDdWwTMRvaPMVbUjmoLCPvwzByliljysGRt63LyA+zIMV7+X9DOo7W3cjYZzNsXFpjIvccJVVOr6A/Pm2Lkfb7by3A16awUt+XD16vjeLW0dtwE0gP4tI/eWSYUVwTEBIKmYW69QwrArtiFTD5pFUA5cNulu3GxqgiD0Amb6w2PIEvLLCW9qQclEzU2PERZWIr9PDDwUUeJnt0H97vaGJ0Ccpj4Hb/bLjeUfBA+2MuFgOFDXnqWfSi0TJAyfmYoU+Tj5OZ5LWxnmtldqYGSoB+bI8Se/BY+T/M0RdPgp02ldJGAmnjLI8cspDKYoLnk5l0o/CI6ElIywRL61lktgODdLL9qyUn3LrcM0Wkx92YEOoJIx4v4zU+zCUSEa/aCKej95cQxsBzV9ffrufXMhH7l1sd5gE69SyvOvUcCciGZMUmlb0tVsqsW7UW2Wg1PJZaueghkiNZ9AuJdXdkNocxjrkl3kd+hepf1dhuY5t03SAfj/5TYxi9UVoKtOy67jeaRcZl
+sidebar_class_name: "delete api-method"
+info_path: site/docspace/api-backend/usage-api/api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Delete tags"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"delete"}
+  path={"/api/2.0/files/tags"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Deletes a bunch of custom tags specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"names":{"type":"array","items":{"type":"string"},"description":"The list of tag names.","nullable":true,"example":["some text"]}},"additionalProperties":false,"description":"The parameters for adding tags.","title":"BatchTagsRequestDto"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Ok"},"401":{"description":"Unauthorized"},"403":{"description":"You don't have enough permission to perform the operation"}}}
+>
+  
+</StatusCodes>
+
+
+      

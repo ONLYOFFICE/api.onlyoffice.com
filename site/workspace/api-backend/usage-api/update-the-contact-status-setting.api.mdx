@@ -1,0 +1,71 @@
+---
+id: update-the-contact-status-setting
+title: "Update the contact status setting"
+description: "Updates the contact status setting with the parameter specified in the request."
+sidebar_label: "Update the contact status setting"
+hide_title: true
+hide_table_of_contents: true
+api: eJy1VE1v1DAQ/SvWnEAyzVJxgNzKhwBxqWh7Wu1hNpndGJzYtcctS5T/jsZO293SFjiwh5XjmbHfe/PGIzBuI9RLaEJfvXMDY8MRVhoiNSkY3kG9HOEkceeC+Yls3PCJsKUgNYGwBQ3XwTDBalppaCk2wXhJgxoufItMUXFHqilnq8jIKapIzGbYqmvDXY57DNgTU1DRU2M2hlplhhwKdJko8hFomJdvXbuDegQ5lAaWJXpvTZMBVt+iXD9CbDrqUVa88wQ1uPU3ahg0+OA8BTYU8zEdDlua2Z9lgB+DS/4ksZP4Iav3tDEDRWU2TxEzUZVjW4WJXY9sGrR2p1xQgxMMMyYMAXegwTD1cQ/r2jlLOMBUfsI9ejfEAvl4sfgdWdG7fQzSFdpE6hmHRFpt0EbKYJK1z0H/s5Z/hVvDq8XLB4AOODuKWpCsnrhzLdTgU24Pcgc1VOhNdXy0qMScM6mqkKpmUhHEquGKQsxOTcFCDR2zj3VVjZ2LPNWjd4En0HCFweDaFgklVqBtMFmGGqxr0ObtSYPUHIZfL94cC6296TgTVcpxD87InVrefKEsl/DvSljDgL1ED2qzICL71zuzf/iBvbf0Z7MupburSe7ZZO+yYamDd67v02B4p86yXOrrh7NzdXL6WWShEEtjrMzrTD9yj7n1M8jiric8D/fmf28+/8NTMAvL9IMrb9EMgjq3f5z9sxTVQcPx0UL8HfrZ5ZifgHJ7ts/spJWePbGEcVxjpItgp0m2LxMFeQlXdxaSr0nfdFKs9512WedM+cW5wJN0m0r/743UpG8qTpqGPD+Zu9qbkNOLc9Cwnl/A3rVSEvBaXke8hhpAg8sdyLbMeyNYHLYJt5JbjhSTyRAeevR79ui8EFI3oWG3B/DQrnrmIf/C6sGScSwTME23+SX0aMXtjJRs6e9qmqZfOlpV4Q==
+sidebar_class_name: "put api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Update the contact status setting"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"put"}
+  path={"/api/2.0/crm/contact/status/settings"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Updates the contact status setting with the parameter specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"changeContactStatusGroupAuto":{"description":"Defines if the contact status setting is changed automatically or not","type":"array","items":{"type":"boolean"}}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Updated contact status setting value (true, false or null)","content":{"application/json":{"schema":{"type":"array","items":{"type":"boolean"}}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

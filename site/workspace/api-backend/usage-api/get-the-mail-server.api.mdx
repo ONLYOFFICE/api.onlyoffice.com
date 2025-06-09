@@ -1,0 +1,63 @@
+---
+id: get-the-mail-server
+title: "Get the mail server"
+description: "Returns the mail server associated with the current tenant."
+sidebar_label: "Get the mail server"
+hide_title: true
+hide_table_of_contents: true
+api: eJzdVlFz2zYM/is6PPNi1+3uNr3l4l6b27Ll4qYvOT/AEhyxlkiNhFJ7Ov73HUhZsZvUTbfuZU+SSOAjPgDCxx4Y7z3kd9Cgrj25B3KTRXx4WCrwVHRO8w7yux7OO66s038ha2veE5bkxNMRlqDgs9NMsAxLBSX5wulWzCCHG+LOGZ9xRZmckqVjMvTeFhqZyuyz5iruF51zZDhjMmj4DBQ48q01njzkPcymU3kc418dYJbImK2tewYMFBTWMBkWCGzbWheRyeSTF5wefFFRg/LGu5YgB7v6RIU4ts625FinKC7LAxttmO7JgYK1dQ1yWno9AwW0xaatxejV7PUbCArmxv+X8FfbGyqsK799xnvr+cDKs9Pm/ggzWgQF107b1AH/LKZL/5GcXms6jGplbU1ojhzYdQQhKGDNcSG14dw2qM2e2RwZBXXRrl9K9Xds6DRVIxZBwUesu2+YPkSTH0Zrbvwxr/lGNy8ltqCaCrbudMSjldSyW9W6+JV2p10ezX4c0ZHXyDSuX1RUbP6XlTwJewJl7PC4/JtuNL9gZsgMXNntFW4vbGf4mtytJ/e9/+xPzwQWIxhJmbT4XEB7tyGUwTAo+KPj7/Z6mp8YQZCNN9NXT0Xg1uCgTlRG94a4siXkcE8xXcgV5DDBVk9mZ9PJgdylB4jYJd0TretcDTlUzK3PJ5O+sp5D3rfWcQAFD+g0ruqU+2qYpSWtsasls7UtsK6GASo+x9s/T3+ZCZcDfV2I9CS4Z1V2TBy2Wn5MBVpYV2lbpcbPj31jGrRZ2+g+ZPPCNk1nNO+ylNfs5u3iQ3Z+fSmsyPmUzRqZ9tF7bjDK43DGO+IvpRy+kPz+UWn/pfoPrJm2PGlr1EZiirXph5LeSUpAwexsCurgFjPWU64xqUR30Pcr9HTr6hBk+c+OnFxtlo8Vla+g9omVTtjIuITzoqCWY+njaHl6gZByjk337u0HUCAteVy7Tazd8CLo+y2zO8A+LqMaQtjEgfwVl75PnRHCaL+fcF/xGHsnWUtqlyGEvwHwgHCB
+sidebar_class_name: "get api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get the mail server"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/mailserver/server"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns the mail server associated with the current tenant.
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Mail server data for the current tenant","content":{"application/json":{"schema":{"type":"object","properties":{"Id":{"type":"integer","format":"int32","example":"1234"},"Dns":{"type":"object","properties":{"Id":{"type":"integer","format":"int32","example":"1234"},"MxRecord":{"type":"object","properties":{"Host":{"type":"string","example":"Host"},"Priority":{"type":"integer","format":"int32","example":"1234"},"IsVerified":{"type":"boolean","example":"true"}},"title":"ServerDomainMxRecordData"},"SpfRecord":{"type":"object","properties":{"Name":{"type":"string","example":"name"},"Value":{"type":"string","example":"value"},"IsVerified":{"type":"boolean","example":"true"}},"title":"ServerDomainDnsRecordData"},"DkimRecord":{"type":"object","properties":{"Selector":{"type":"string","example":"Selector"},"PublicKey":{"type":"string","example":"PublicKey"},"IsVerified":{"type":"boolean","example":"true"}},"title":"ServerDomainDkimRecordData"},"DomainCheckRecord":{"type":"object","properties":{"Name":{"type":"string","example":"name"},"Value":{"type":"string","example":"value"},"IsVerified":{"type":"boolean","example":"true"}},"title":"ServerDomainDnsRecordData"},"IsVerified":{"type":"boolean"}},"title":"ServerDomainDnsData"},"ServerLimits":{"type":"object","properties":{"MailboxMaxCountPerUser":{"type":"integer","format":"int32","example":"5"}},"title":"ServerLimitData"},"InServer":{"type":"object","title":"MailboxServer"},"OutServer":{"type":"object","title":"MailboxServer"}},"title":"ServerData"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

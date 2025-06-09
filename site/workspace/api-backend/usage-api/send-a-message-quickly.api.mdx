@@ -1,0 +1,71 @@
+---
+id: send-a-message-quickly
+title: "Send a message quickly"
+description: "Sends a message quickly specifying the sender, recipients, message subject, and message body."
+sidebar_label: "Send a message quickly"
+hide_title: true
+hide_table_of_contents: true
+api: eJy1lV+P2zYMwL+KwIc+aZf0sIfNfdm16NBhvaG43D0d8sDYTKKeLPlE+tLM8HcfKDuJ08sGDNjyENsiKfHPj1QHghuG4hFqdH52S8y4IYalBaayTU72UDx2cNPKNib3J4qL4RNhRUmNEmEFFnbJCcGyX1qoiMvkGlWDAhYUKjZo6mFf89y68snvDTdUuvXehY2RLRmmUFGyJlHpGkdB2B5NuF19pVKswVAdF1ex2l+BhUTPLbG8j9Ueig7KGISC6Cs2jXdldnf2ldWZDrjcUo36JvuGoICYtwYLTYoNJXHEKl2nWOvzPJZbdN5gVSViNqpidltXbg0aTyKUzM55b1Y5Grkyv8ZUoxTmD6zJvPHyLmBNv1SxRhfebOQd2IMXLMmFDfQWJL4+9rNjMXFt6snxxEbif3U8poR7sOCEap4k5+BWb2GswYWcnBfpUkyrsTaXDVVqkDMFn+5vP5vR8MJGju+oJNdccGORcXLExq3zVmnQNI5NImlToEozdmLNxGRCnDi8itETBujzT8niJgYegLiez18f+n6wMC/oWyqMpJb0+BPsO+RcDMNtWRLzuvVeE/1vKZ26ZuHH+dvXvjwEHBuUqlyxmmQbKyigaTPfKFsoYIaNm11fzWe52Uc/ecaubjxpr4K2fXqhxLnr2+ShgK1Iw8Vs1m0jS190TUzSg4UXTA5XfkiRyga/1th6gQJ8LNHn5d6C2pyLf5r/fK0hTSbNQiMftrs4b44Zwcb9TplZDX47iC0o4lCc2+ZsaGrvTqPi4zfUgE+tDifqoo618XM5If+kMgB9+p5wqQwoqWGdG1mc6CnwIdZ1G5zszSIn19x9XNybmy+/aRIp8VBDj0KHZLHUmGEYQ9LavB6j8N24nQzA/33yjpUQ+iazxqML6njmpRtpe9QygYXrqznYfL3o43DBWJhQt7QjP4/QdStkeki+73X5uaWkN9DyhJt+9fZQdcX0ifY5yzn2H+7VM1X37cDKdy3W24PFTVlSI/+ou5y00peHezjNszpWapJwp/cQ7qAAsBBzKTLCea0Dj2HT4kZ1hy0VSO3Wc56fMs/jiwZ1EIX9xMFztO0Yh/5rVBdNum7olr4/6g+iv7U49tOgraVd9n3/F1f30sQ=
+sidebar_class_name: "put api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Send a message quickly"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"put"}
+  path={"/api/2.0/mail/messages/simpleSend"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Sends a message quickly specifying the sender, recipients, message subject, and message body.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"from":{"description":"Mail address from which a letter will be sent. Format: Name &lt;name@domain&gt;","type":"string"},"to":{"description":"List of mail addresses to which a letter will be sent. Format: Name &lt;name@domain&gt;","type":"array","items":{"type":"string"}},"subject":{"description":"Message subject","type":"string"},"body":{"description":"Message body as the HTML string","type":"string"},"isReceipt":{"description":"Specifies if the receipt is returned to the sender or not","type":"boolean"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Boolean value: true if a message was sent successfully","content":{"application/json":{"schema":{"type":"boolean"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

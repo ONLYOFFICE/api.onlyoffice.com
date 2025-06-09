@@ -1,0 +1,71 @@
+---
+id: link-a-phone-number
+title: "Link a phone number"
+description: "Links a new phone number with the ID specified in the request to the VoIP provider."
+sidebar_label: "Link a phone number"
+hide_title: true
+hide_table_of_contents: true
+api: eJy1VE1v2zAM/SsCz1qdBTtsvnVrgQUbsKBpdwlyUGw2VmNLqkQn9Qz/94GSkyZd18OA+WDI/PLj46N6ILUJkC+h8E32087msJIQsGi9pg7yZQ+XLVXW61+KtDVfUZXoOd6jKkHC3mtCWA0rCSWGwmvHYZDDd222QShhcC9cZQ0K0zZr9GKvqRJUoZhdieCw0PcaS6FNtHl8bDGQIBs/GZBw3u50if4CJIz+z7bsIO+hsIbQEB+Vc7UuIsjsITCEHkJRYaP4RJ1DyMGuH7AgkOC8dehJY2CvLvl9jn9+inl2BfJQI5DXZgNDfBhRcNaEVGg6mbxdCeS/YyZNNRt+Wu1iTUgIPkze//nTO6PGuWEJHNUgVbaEHJwNkQFFFeSQKaez6cUk4/nvrHZZAhqyWpstsBb8Dn2IUmh9DTlURC7kWdZXNtCQ9856GkDCTnmt1nVign0J1b1qa4IcaluoOpoHCZxz7v44+TTlhk7kt2AqUrlXRXikSDn9DTuQoLn1KrklGNWw9yw3csFc3zwr6fpJNY6pTUo4Tpjr3dv4n5H6L7ZpWqOpE4tIi7i5XtyKy/mM20cfEve1Ijy0GahRca4jGF4Loc42Al6szoms/9MWjbQRPlHmaqUNY43D7UddLJlTkDC9mLBkfcMNWu2Y1aQPkBAVspLjrJfQ92sV8M7Xw8DmxxY9XyGrZ2nw1yAPE2JJbbGLvMaG390yMA6v2zTXF/sxyEPGZVGgozdjVyein/9Y3IKE9XhvNLbkHK/2fKeoPeQAEmwcQNRbtPVQK7Np1YZjU01WDy/Wufi2UXzjgbs6uEx3gvBch3JshN/c1qspfZ+kPQzH+OT6a8ZR/CmaR7sahuE3w/cEqw==
+sidebar_class_name: "post api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Link a phone number"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/api/2.0/crm/voip/numbers/link"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Links a new phone number with the ID specified in the request to the VoIP provider.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"id":{"description":"Phone number ID","type":"string"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Phone number","content":{"application/json":{"schema":{"type":"object","title":"VoipPhone"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      
