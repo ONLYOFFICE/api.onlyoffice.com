@@ -22,6 +22,8 @@ To install ONLYOFFICE Docs in the cloud:
 
    :::info
    Starting from version 8.1, it is recommended to add the [shardkey](/docs/docs-api/get-started/configuration/shard-key.md) parameter to the URL *QueryString* with the *key* value in it. For example, *?shardkey=Khirz6zTPdfd7*. This allows you to load balance requests.
+
+   Starting from version 9.0, you can [preload](/docs/docs-api/get-started/configuration/preload.md) static assets (HTML, CSS, JS, fonts) into the browser cache before opening a document to speed up the first-time loading of the document editor.
    :::
 
 3. Specify the page code containing the changeable parameters:
