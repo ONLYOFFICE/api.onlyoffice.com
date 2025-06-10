@@ -1,0 +1,63 @@
+---
+id: get-supported-cultures
+title: "Get supported languages"
+description: "Returns a list of all the available portal languages in the format of a two-letter or four-letter language code (e.g. 'de', 'en-US', etc.)."
+sidebar_label: "Get supported languages"
+hide_title: true
+hide_table_of_contents: true
+api: eJzNVktvGzcQ/iuDubgFNitXuenmOqnhNGgAS4YPthFT3Fkt4xXJkrN2VGH/ezHkyno1iI49LZec58dvZrhGVouIk3ucErOxiwgjuHTLpbMQhx18LNB5CoqNs9cVTnBBPO28d4Gpuuxa7gJFLDBQ9M5GijhZ4/j8XD4VRR2MF1Wc4GcTGVwNqm2BGwL1okyr5i2BGFMttMouOrVI5rSzTJbFivK+NToFMPoWxdQao25oqWTFK084QTf/RpqxQB8kXDY5kE1UO5IqBLXCAg3TMu7sRw7GLrDvxXmXXQ9HxjItKGCBtQtLxXnr/Rj7Altjn+MJ5n8QYBOo/o8gClQ6w3Ycn0QYWXEXTwwxC1+6ik5S6Atkw60ITWc3139dXUhKd0F5TyH574uDq70h7oKNoKA9+ZLB2CSR3Scd4Ff3riVmCuAC1K4Lm9+NGmhXEfxC5aKEB6zoAQt4QLLvbqeyJNblryUWuCRu3EBXAV1xgxMcKW9G4/J8tKH3SG8ZHCm8UJB6WGMXWpzgeq4i3Ya2x8OEp0kWtLO1WXS5OrDAFxWMJJtuZlDOhVCrrhWMjyx9yEdwe/NZsH2UOHQXDK+mwvFsSkX9VXXcfH2m1S7XvPmTVkcmbyPBpXPPhkCUyPJQPligVcukuWuwQCNqOqkIYX5X0egdPw2zP/Ly0cq9rFwXoIsUxDAoW4FXMb66UAmiKQOcCBRGJ8ukAoXTTJ9lYVh/upvBzD2T7c/2jGZbxbD4Y0PjT3czcXWRwDly+APMLvaAAhOhIqawNJYqmK8SU89EyAXzT5I5g4ZUlQIYQN3zOIA6yPQFfhHt8W5HUGnjMJIsB3XrXuHVcAN7XiGVcYFynKmxe7qp8b3NxMEEdJyMRslr6Wy7cnVtNJXaLfPmeLRREwcsgJ+umsTT7Ti/ab2qSq1BVaC0phiBHfjgmDRTBYGi64JOpfcaDAskd/L9iXTuP188pXG0RTNtXDprc5s9AFVOP8BwfFwWe9qnZy3EN7Z2cr/f30WzsEq6yc/pJpR+E5f6qaQPHsRVwqwhSMjCsosMcwI3Z5U4+WJUIuXTtqXltrF3I09AtvLOWC7hmoXWUp5UgZJmnSs+s0xspRp+2knkqdyyeze/g47Ry3/tUtrD5LjwRvohhZgTfl/+Vp4LTN5FXqo02AbDV8QQNy+KvUfAHmbr7Zvgfzhvhutm+s4j3ypjJdcud/88fO6FC1jguDxPw2Z4XxX4NoIeC2xcZBFdv42eXrb/7iiscHL/uB0x8tcXm/4iMyvNBrzQmjynWdR2mYEHzyeZMW/j8erjDPv+X59teYg=
+sidebar_class_name: "get api-method"
+info_path: site/docspace/api-backend/usage-api/api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get supported languages"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/settings/cultures"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns a list of all the available portal languages in the format of a two-letter or four-letter language code (e.g. "de", "en-US", etc.).
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"List of all the available portal languages","content":{"application/json":{"schema":{"type":"object","properties":{"response":{"type":"array","items":{"type":"string"}},"count":{"type":"integer","format":"int32"},"links":{"type":"array","items":{"type":"object","properties":{"href":{"type":"string"},"action":{"type":"string"}}}},"status":{"type":"integer","format":"int32"},"statusCode":{"type":"integer","format":"int32"}},"title":"STRINGArrayWrapper"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

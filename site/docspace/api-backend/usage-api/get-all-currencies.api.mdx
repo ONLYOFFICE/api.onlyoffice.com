@@ -1,0 +1,63 @@
+---
+id: get-all-currencies
+title: "Get list of currencies"
+description: "Returns the list of currencies from accounting service."
+sidebar_label: "Get list of currencies"
+hide_title: true
+hide_table_of_contents: true
+api: eJylVt1v2zYQ/1eIe8mLZrlOMWx689KuaDesQZsgD4HR0NLJYiORHHlK4gn634cjZVuyUyTYXvxB3vf97nfsgOTGQ3YLl8aRrEUqLuW2QU2wSsBYdJKU0R8LyGCDtKzri9Y51LlCDwk49NZojx6yDhbzOX8V6HOnLKtBBlcVilp5EqYU+Vg1N5rYTdaBtLZWeXCUfves1oHPK2wk/6KtRcjArL9jTpCAdRwWqeh0F8FIUjont5CAImz8yxZUMZJRmnCDDhIojWskxaPzBSSAT7KxNUL26y9vf+45gWLs1ZNTegMJ6Lau5ZoFybU40gNvGhSETwR9n4AsCsUpy/pyFE8pa48JkKKgMlR7GzRy08aCvRRsn0Ct9L3/70WpHJanyXHUeWzsyVXPEXqS1PpXhhiFL6Zl/LFCf1qVJSd146S16IYI3s7fnILwWsuWKuPUP1hAEDo/FfrLCIuuUd4ro72g8JeDEFQpL4bEQ5aYt07RFrLbDqTPv7H1b/fIB+BQFpDAo1OEsOqTDn5D6dBBdhv+La36A7f7s+fkpVf5TvzzsqVq8bzgZ4thMm9X/So5yuYLUus4jWfnT5TONELmAVFKb4RH96BynEECDVJlhnlnXEiqIINUWpUuZvPUBp5IbWSJ9GAjnYw3G0TnQ4laV0MG3Vp6vHZ1D8exfg2yIje6VJs2Mg4k8CCd4kEKeBqUY9tK2daMjBNL7+KVuP7yJ+NhdejVV+aTaGrascOEhMacmLz2KC6MuVcoWAk1DVTFoy6boDk2mIBitTyoMNiGdu79VET2xMt7TejE1rROtB4dGxZSF8JK7x+N48YHRmQD62CQLQ8geo3psygsuk83V+LK3KPuzyZGo61k+PH7bvg+3VyxqylqX6rZclIoobwokHi2NBZivQ2gPFsOIxlkzkSFsggBDEWdeByKOsj0yX4sDjwmw8FxJFFOlLV5FI+KKjHxKgL5JMDXERrj2x0zTQ4DBkOhfZamwevM6HprypLnJzdNPFyke8qBBIgL/nrVIB66Y+xuzckiTLUseGzRR4JyhjAnLIRDb1qXh9GLDJHBDX+/IB1Jc0ckh2qGgwujdVwOR0Xl23diuD4di4n267Nm4CtdGu7v009ebbSk1uHLcGNI78V5fgpRGncU10zwUyRUVjStJ7FGYdYkAyYflAygvNux3I42Jh25E6gLa5SmmfhIDGseTyyE9EKKOPERZWwrzPDdKJG72QHd4/yOGKPn/6UJaQ/7bmkV8yE6HxM+n72ZzblM1nhqZFjHg+EPSM+/tyYl6w7Pr/+xKYau8IsmtbVUmkNqI0nHtXHLLYMEFrM5r5KwOsJOiU9Mfk7sDPOT8BDvKoHKeGIL3X5x9Hz8d4uOF+3qsCDirtyxA2+cwOywzHO0FDZJ3Ub8HD00eUPs992H91ccUcuBjyEXWX34wdZ3V3o7tj1dAjEC/uRN/axG10U89/1ePl79UGPPkVGaC77q+/5fnPARQA==
+sidebar_class_name: "get api-method"
+info_path: site/docspace/api-backend/usage-api/api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get list of currencies"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/portal/payment/accounting/currencies"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns the list of currencies from accounting service.
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"The list of currencies","content":{"application/json":{"schema":{"type":"object","properties":{"response":{"type":"array","items":{"type":"object","properties":{"id":{"type":"integer","format":"int32","example":9846},"code":{"type":"string","nullable":true,"example":"some text"}},"additionalProperties":false,"title":"Currency"}},"count":{"type":"integer","format":"int32"},"links":{"type":"array","items":{"type":"object","properties":{"href":{"type":"string"},"action":{"type":"string"}}}},"status":{"type":"integer","format":"int32"},"statusCode":{"type":"integer","format":"int32"}},"title":"CurrencyArrayWrapper"}}}},"401":{"description":"Unauthorized"},"403":{"description":"No permissions to perform this action"}}}
+>
+  
+</StatusCodes>
+
+
+      

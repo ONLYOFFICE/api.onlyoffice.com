@@ -1,0 +1,63 @@
+---
+id: get-recently-updated-topics
+title: "Get recently updated topics"
+description: "Returns a list of all the recently updated topics in the portal forums with the topic titles, dates of creation and update, post texts, and authors."
+sidebar_label: "Get recently updated topics"
+hide_title: true
+hide_table_of_contents: true
+api: eJzNVt9v2zYQ/leIe6ZjWVm3VcBQZFnWBVuLoHZQoKkfGOlssaFIjTylUQX978ORSmKv+dFiL/ODo/DuO3333fHOA5DaBiguoHRN01lN/fx357smwFpCwLLzmnooLgY46qh2Xn9RpJ39A1WFnnEeVQUSPntNCOtxLaHCUHrdshsU8A6p8zYIJYwOJNxGKGME1Sg8lmjJ9KJrK0VYCXKtLoPQNppb50kZsYlsxGdNdTyOToI0GQxSMDBw0NJjJCaUraaAUrQukCC8oSDjuYophAOQ4DG0zgYMUAyQZxn/2Sf+10T3EZogoXSW0BJDVdsaXUYG80+B8QOEssZG8RP1LUIBynvVgwRN2ISdc3f5CUsCCa13LXrSidVpteOjLeEWPUjYON8oSkeHOUjAG9W0hp0WGYwSVqzNDjSQ13a757iMDykThhyzelg9DcqzPJst8ln202pxWLz4scjyg8P8xct8kX/gIOdJn/8WZIU39HSEVa2D0EGElAPXeOftv/bfKezdG+507Tpd7b0xmz6zB75uP0zhNx1ao/q3qnlG/jf6CsUHZXtF4Up/Y83eKKu4A0YJR9eKlF82ypinMZ03gpwI7ClURDH+zLuNNnjun4F//Dg/867qSgr8iK41mM4YfqBCe/OqC+h/UVWjrQ7kFTkP4yiBUkJw0rTG9YjvvWoT+VXNI2OlST+Xse2MYcSSFHXhGy+D7RoeS2/ZYEDCsXEBuZ5L0uVVD18NqItMzERyl2IhZiIhpMjFTCTQer8dYhaRyfcwOrXJpJ2NxM6cMY+w2XNNpNj7IRpxej87YR66Rmq7kCu1zWHcrVcc/iueC1yxWLIxOvyQLb6ekedWTVsBq1j2Bql2FRSwxXjvFNVQwFy1ep4fZPP7JRPH+jwOoHmasMD7xl+jD3HddNycUBO1oZjPh9oFGouBl8IIEq6V1+rSpPvMtsRtozrD2htXKlNPk4Ex++afs5cx7Z0Vt+RhncI9uOjuJW71nxg1ZgHqZJZg46Xfx0ZFtN24CJ8EPr6VQCxjtuLdyXIljs5OOSv0IQlreK9N7AM1Ki6U6R2vkZ5YSnsFGu531P91EU+ysnHeGqUtJ92lyZTa54I1Bwn5QRaX7qRfumtdwzHiHuOlHhtpLaeWuIBhuFSBB9048vHfHXr+NbO+7yD+b5S3heTOu8KeK1mW2FJsNdOlwv9rxXP73PX765MVSOC89nvlKvbK9MDRb02234m93zZyosDfo3wEMgypE8fxzj+ZHkXc9WryZqXX4zj+AxIRW5E=
+sidebar_class_name: "get api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get recently updated topics"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/community/forum/topic/recent"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns a list of all the recently updated topics in the portal forums with the topic titles, dates of creation and update, post texts, and authors.
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"List of recently updated topics","content":{"application/json":{"schema":{"type":"array","items":{"type":"object","properties":{"Id":{"type":"integer","format":"int32","example":"10"},"Title":{"type":"string","example":"Sample topic"},"Created":{"type":"string","example":"2020-12-07T13:56:02.3259212Z"},"Updated":{"type":"string","example":"2020-12-07T13:56:02.3259212Z"},"Text":{"type":"string","example":"This is sample post"},"UpdatedBy":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"},"ThreadTitile":{"type":"string","example":"null"},"Status":{"type":"integer","format":"int32","enum":["Normal","Closed","Sticky"],"description":"[0 - Normal, 1 - Closed, 2 - Sticky]","example":"0"},"Type":{"type":"integer","format":"int32","enum":["Informational","Poll"],"description":"[0 - Informational, 1 - Poll]","example":"0"},"Tags":{"type":"array","items":{"type":"string","example":"Tag1,Tag2"}}},"title":"ForumTopicWrapper"}}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

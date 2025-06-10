@@ -14,7 +14,7 @@ expression.SetBold(isBold);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| isBold | Required | boolean |  | Specifies that the contents of the run are displayed bold. |
+| isBold | Required | boolean |  | Specifies that the contents of the current run are displayed bold. |
 
 ## Returns
 
@@ -24,10 +24,14 @@ expression.SetBold(isBold);
 
 This example sets the bold property to the text character.
 
-```javascript
+```javascript editor-docx
 let doc = Api.GetDocument();
-let textPr = doc.GetDefaultTextPr();
-textPr.SetBold(true);
 let paragraph = doc.GetElement(0);
-paragraph.AddText("A sample text with the font weight set to bold using the text properties.");
+let run = Api.CreateRun();
+run.AddText("This is just a sample text. ");
+paragraph.AddElement(run);
+run = Api.CreateRun();
+run.SetBold(true);
+run.AddText("This is a text run with the font set to bold.");
+paragraph.AddElement(run);
 ```

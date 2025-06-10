@@ -1,10 +1,15 @@
+---
+sidebar_custom_props:
+  icon: /assets/images/editor/connectors/plone.svg
+---
+
 # Plone integration
 
 This [plugin](https://github.com/ONLYOFFICE/onlyoffice-plone) allows users to edit office documents within [Plone](https://plone.org/) using ONLYOFFICE Docs.
 
 ## Features
 
-- Currently, the following document formats can be edited: DOCX, XLSX, PPTX, DOCXF, OFORM.
+- Currently, the following document formats can be edited: DOCX, XLSX, PPTX.
 - The following formats are available for viewing only: PDF, ODT, ODS, ODP, DOC, XLS, PPT.
 - The plugin will create a new **ONLYOFFICE Edit** menu option within the document library for Office documents. This allows multiple users to collaborate in real time and to save back those changes to Plone.
 

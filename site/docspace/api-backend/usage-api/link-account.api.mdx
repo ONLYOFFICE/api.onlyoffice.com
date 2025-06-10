@@ -1,0 +1,71 @@
+---
+id: link-account
+title: "Link a third-pary account"
+description: "Links a third-party account specified in the request to the user profile."
+sidebar_label: "Link a third-pary account"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVk1v2zgQ/SvEXHJRLDe7e9HNTbJAuwUSpA5yCIxmLI0tNhLJklQcr6H/Xgwpy5KdRXLYSyKT88WZN/NmBx7XDrJHuCVtKhKpmJfSFucGrd8KzHPdKO9gkYA2ZNFLrb4UkEEl1fMs3kICln415PxnXWwh20GulSfl+RONqWQe9NKfTis+c3lJNfKX3xqCDPTyJ+Vsx1j24iW5IEdWYiX/peLW6pWsaKDivJVqDQkU5HIrDTuADOYlCT94gImKQirhSxIHi2KlbY1+Agmopqpwyda9bSgBesXaVMGJrkl4evXQtglgUUh2g9XtIMwVVo7eCqPLiTBosSZP1rFPwYmTat2nliPw0gd/3w5JvYvaV15D27J3S85o5WJmLqZT/jd2evMMbQJ/Tj+dXt0rbHypLb88Cv11KnRtrbZCaS+wqvSGCqHjFbt3lDdW+i1kjztAl/9ggz+eiQ/AEhaQwMZKT7Bokx18JrRkIXsMv2ZG/kPb/uwteXQy34vfzBpfXrwteGMoAPBx0S6Os87pcwJHAOjSLJyhXK4kFXso7MvjdfjZOLJ7tHBJavKlZqCbJgATfQkZpGhkejGZpiZ0Sxo8BUcp1xX7hnBkX8i6kK3GVpDBbomO7m3VnmD2e5AVuVYruW5ij0ECL2glwzIUvFOORVthU3nI4MTSVbwS93ffGDWLQ9m+c8tFU+Pi9Q2FoUYnJu8diUutnyUJViLlu27mxsE6aA4NJiBZLQ8qDLWusr2f0ntz4uVaebJiqxsbCsGGBapCGHRuoy1jIAwNNrAMBtlyh6ePmD6LwmL39WEu5vqZVHs2MhptJd3H32E4QAZfH+bsagzg93I2GyVKSCcK7v9aKirEchvwdjbrGjLInImSsAgBdEkdeeyS2sm0Sd8hhwmK4eA4kignVpXeiI30pRh5FZe6IEiAryM0hrfh8vgwYDAk2mVpGrxOtKq2erWSOU1yXcfDi7QfODzfOOEfVw3ioTraRMyGOZDBHWHBHU3Ocd8aqz3lngphyenG5uT6YZHBA/9/RzqO1v1MOWQzHFxqpSItHSWVb69Ed33aFiPtj7+agS/VSnN9X8+dXCv0jaX34caQ7sW5fwK5HcU1EYEaObOibpwXSxJ66TFg8kViAOXTfrztx8aoIk+CVGG0VH4ivniGNbcnFQJ56MaOjyhjW6GHnwYPeZoc0D1839HEaBPgPeHusFFc7/n4zY1gSNJsaqVDxjpGnRnJo5Ssi7n6Y/JpMmVBo52vMawjXUzMHkPy6LnjOOGD/eZ/pZyuyvyU1FQoFcfZxKEf+eeRIQAJXEymzEmBg1ixZyFIYMhDiwRK7Twr7nr+afn4V0OWqXtx4JnIvvshw8QVCAIu42PP5xwei1dNBOPRYsd007Pm7f2ch2m3D9ZhlIDFDe+KuIncFbeL2N98toMK1brBNctGk2HtavjpwyaIPNN9cKD7K7UdBjimpfgY/strxJsau13ssLbt5ePVf2r0UztKc8kWbdv+Bvj18d8=
+sidebar_class_name: "put api-method"
+info_path: site/docspace/api-backend/usage-api/api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Link a third-pary account"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"put"}
+  path={"/api/2.0/people/thirdparty/linkaccount"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Links a third-party account specified in the request to the user profile.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"serializedProfile":{"type":"string","description":"The third-party profile in the serialized format.","nullable":true,"example":"some text"}},"additionalProperties":false,"description":"The request parameters for linking accounts.","title":"LinkAccountRequestDto"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Ok"},"401":{"description":"Unauthorized"},"405":{"description":"Error not allowed option"}}}
+>
+  
+</StatusCodes>
+
+
+      

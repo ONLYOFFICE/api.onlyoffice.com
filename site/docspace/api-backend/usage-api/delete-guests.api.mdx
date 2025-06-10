@@ -1,0 +1,71 @@
+---
+id: delete-guests
+title: "Delete guests"
+description: "Deletes guests from the list and excludes them from rooms to which they were invited."
+sidebar_label: "Delete guests"
+hide_title: true
+hide_table_of_contents: true
+api: eJy1VsFy2zgM/RUMLrkotusmm6xuaZLdSbe77aTJ9JDxNLQIWWwlUiWpOK5H/74DUpYtOzvNZS+JTIAACDw8YI1eLBymD/iJTF0SjOHPhpx3OEvQ1GSFV0bfSExRUkmeOmmCln7w5zsjV5iuMTPak/b8Keq6VFm4OP7mjOYzlxVUCf7yq5owRTP/RpnHBGvLbrwix9LGkb2RbkdRWCtWmKDyVO2eO2+VXmCCubGV8Jhi0yiJbYKSXGZVzf4xxbuCoFTOg8mBrcPNlRthgropSzEvCVNvG0qQnkVV888HPDsVp/nZyelx/tvvZ8cnJ2/Oj+dvz+XxJKeJnJ6d0fT0HGct58CRlhdluRPX3JiShMb9OD7XlKlckYNlQb4gC95ANABKPykfEgYleU/WsVCUJfiCQtQOjAVtPEfeR8qBt22CQkrFl0X5aSeZuSgdvZSNrnJQCysqCt5yY6GppfBKL3qfoHTMrTKa/Xrl2SvesyL9TdWcrLuNxq68wbZtY05qo10s53Qy4X/DGG5f9h/wxf4XEWJtgieTN4fX77VofGGs+kkyKr09VPrHQE22Us4po0M2a7L8GvCFciCyoMfxOsoaq/wK04c1Cpd9ZetfvxMfoCUhMcGlVZ644mt8R8KSxfQh/Lqo1V+06s9e0hdOZRv1jxeNL6YvK36sKfTZw6yd7VftKrSe6zIDuTVVqFLAtdAS6DkrG0mOT6sot8ZU4eHLQmUFC1awJEsRbCS5ohX5wmx7m7tR+AJTHItajaejybgOrDBebLrekX0i60KyGltiiuu5cHRvy/YQ8UEXMqNztWgik2CCT8IqbrwAkO5yLGAumpIb+cDSVRTB/e0HRtlsW7XPzCvR1LB2W/4IJTowee8ILo35rgj4EmnfURZTg6jCzV2DCSq+loUrDLuusL2fwvv6wMu19mRhZRobOooNh3rVwrmlsQyBwIyBOIJBttzB6TWmj6IyrN9/uYM78510ezQwGm0l3ccfG658/+WOXQ3x+6ucXQwSBcqB5PatlCYJ81WA5NFF15xB5wgKEjIE0CV14LFLaqfTJn2DbMeECAf7kUQ9yEuzhKXyBQy8wqWRDGYWR2jsSoNw/zBgMCTapeNx8DoyulyZPFcZjTJTxcPpuCcfZkRO+OuvBvVQHVNHzAYaYEYUEkSWkYtUZY2nzJPk+WAam5HruSLFL/z/F9qRijeUss1mOLg0WsfZu5dUll5BJz5si8Ht17+agc+ThOv7fOzUQgvfWPo13BjSvTr3jwxzYhjXCHikhcxC1TgPcwIz9yJg8kmJAMrHDZ1taGNQkUcgLWujtB/BjWdYc3uSBOFAQOz4iDK2FXr4cechj6Mtunfft8cYbYK8DN1u16brzRzfWXteu3wMdo+wB7C73ISsdnP6olZMt2RdzOfb0ZvRhKtQG+crEfayLu44YKCn+UEhdpa7/20SdUjw9OzHdSmU5jibOBjiTHpgmGCC09GE51SYS5jgot9WC+M8q637idTy8Y+GLM/y2XbyxHG8oR0eZWFk4GV85vEdB8PqZRPhubfP8gDqR+fV9Yfru2tm2G4TrgK/oBVL3pLFMg40E5IZm57P1lgKvWjEgnWj1bDKNfzW3c6Iw6f74Fg3Ir3ajXE4q+J7+C+vFi/eWK9j27Vtrx9F/3mjp/KozTWatW37L069O8I=
+sidebar_class_name: "delete api-method"
+info_path: site/docspace/api-backend/usage-api/api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Delete guests"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"delete"}
+  path={"/api/2.0/people/guests"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Deletes guests from the list and excludes them from rooms to which they were invited.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"userIds":{"type":"array","items":{"type":"string","format":"uuid"},"description":"The list of user IDs.","nullable":true,"example":["75a5f745-f697-4418-b38d-0fe0d277e258"]},"resendAll":{"type":"boolean","description":"Specifies whether to resend invitation letters to all the users or not.","example":true}},"additionalProperties":false,"description":"The request parameters for updating the user information.","title":"UpdateMembersRequestDto"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Request parameters for deleting guests"},"401":{"description":"Unauthorized"},"403":{"description":"No permissions to perform this action"}}}
+>
+  
+</StatusCodes>
+
+
+      

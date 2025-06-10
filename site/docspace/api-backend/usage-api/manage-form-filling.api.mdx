@@ -1,0 +1,71 @@
+---
+id: manage-form-filling
+title: "Perform form filling action"
+description: "Performs the specified form filling action."
+sidebar_label: "Perform form filling action"
+hide_title: true
+hide_table_of_contents: true
+api: eJyVV9tu4zgM/RWBL90F1CRN58lvnXYKdHYHLXpBsSiCqWLTsaa25NGladbwvy8o2c61aPcltiXqUDqkDpkGnFhYSJ7gUpZo2ZiFJ8w46BqNcFKrqwwSqIQSC7zUprqUZSnVAjjUwogKHRoCaECJCiGBXJZ4lQEHqSCBWrgCOBj87aXBDBJnPHKwaYGVgKQBt6pplXWGQNt2Fo3Ruq86W5FFqpVD5ehV1HUp07Cr8S+rFY3tQen5L0wd7c/QGZxES7O5NhUdZbCTyuECDXDI0KZG1gQLCdwXyK4umM6ZK5DRMuY0iwSMgAcg4SLA6RQ44Juo6hIhOZmefmk5iDQiNaAVXueBHFS+IprvnK6Bwy1aXyHRvH3+3b08kT07ZvTgLK5ix93LbNN3RG754GrCT9bw7531aTKAnxzGnXB4OybI41dhKMT24DE6mw30Q3YU3X2yI19Eco0m8E1fHffEuJMuHHEj/X6EcJxFplsiPcskfYjyZiPsuSgtHvK5zl3yEqMr1SKGO48+Nl3/2M3/C6evOlLbljZg0NZa2Zhs08mEHtt+73yaorW5L8sVq42mD8zWWda57fiAlsOXyck+zIMS3hXayH8xi0an+0b/aM8yzZR2rBCvyFBpvyiI4EpaS+HZ5NsV0g5uWw4WU2+kW4XUFTb9SR5/viANgEFB13tppKOQ8ga+ojBoIHkKX2e1/AtXw9ghe2Fl2ptfn3lXTA8bXtcY5OfpQObcxL3bwJ+tMZW5xOwQkxTHCl2hSchqH6SBZCmBsajleDqajEm0bPgdN1HA2nG88YSXD5Jn0bz2eudNCQk0c2HxwZTt3t26C7Ys1SqXCx+1FDi8CiPFvIx50i2O8cuFL0lX9pAu4hR7uP2bkm22DtAdiV+E2g7ToHIiRGMP8sEiO9f6RSKjRahcp6vAeyHfAuzkPA1LKOu6GA5+CufqPS/flEPDVtob5i0G+WBCZawW1i61oWgH+SaAeQAk5C5zPgN9FI1Z8/3xnt3rF1Tt0RZoxOLdy2Uv3d8f78nVdqp+xNnZFlFMWpaRglRSYcbmq5CIR2fd3Qw2R6xAkYUNdKRueexI7WxaPtyFdS0TYWB3J9GO5aVesqV0Bdvyys51hlSoSr2MqbE5GyZ3B0MOBqJtMh4HryOtypXOc5niKNVVHJyOB+0hcSTCP780mIfo6DrmbLjxCdyiyJgI4hhUyWiHqcOMGbTamxTtIAsJPNLzA+uoyL16rNkMA+daqdgg7JBKsxesm96/FlurP39qSnypck3xfTu2cqGE8wY/TjdK6cGc7k8Qt519jRhVs8Asq7x1bI5Mz50IOfkqRUjK517metnYisgzQ5XVWio3YleO0pquJ2ZMWCZYvPExywgr3OHnjYM8j9bZvXm+HcVoOVDHdrvu7b71Lca6N6MGat0/9S0NBPqIr64Yn9WShBSNjXano5PRhAxrbV0lQuvV7airEgcL7A7hG53m/ywuXRwdvrlxXQoZarePsh4rzRMFGThMRxO6mKHHjk/gkAwt837JmXEotHWE0AylpqXh3x4N1ePZuqSEspRJS+/Z4eZn85B/3HZd+Z/svUP0GapWoXKVHmN9CjWmb/XbWct7EaMdxMnz6Of4niDWi/daeCpnQ3W+ebgnse46/ypIFRixpL8QYhl96769bOJYA6VQCy8WZBshQ0PoifjNSxbrWPdCGz14up2yFw9Dv9SQHFzRNPEGt+1gH6feXTFUhWhNXM/atv0PGyWpfA==
+sidebar_class_name: "put api-method"
+info_path: site/docspace/api-backend/usage-api/api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Perform form filling action"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"put"}
+  path={"/api/2.0/files/file/{fileId}/manageformfilling"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Performs the specified form filling action.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"fileId","in":"path","required":true,"schema":{"type":"string"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"formId":{"type":"integer","description":"The ID of the form to manage.","format":"int32","example":1234},"action":{"oneOf":[{"enum":["Stop","Resume"],"type":"string","description":"[Stop - Stop, Resume - Resume]","example":"Stop"},{"enum":[0,1],"type":"integer","description":"[0 - Stop, 1 - Resume]","example":0,"x-enum-varnames":["Stop","Resume"],"x-enum-descriptions":["Stop","Resume"]}],"description":"The action to perform on the form.","title":"FormFillingManageAction"}},"additionalProperties":false,"description":"The parameters for managing form filling.","title":"ManageFormFillingDtoInteger"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Successfully processed the form filling action"},"401":{"description":"Unauthorized"},"403":{"description":"You do not have enough permissions to perform this action"}}}
+>
+  
+</StatusCodes>
+
+
+      

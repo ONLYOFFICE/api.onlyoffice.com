@@ -1,0 +1,71 @@
+---
+id: create-a-template
+title: "Create a template"
+description: "Creates a new template with the title and description specified in the request."
+sidebar_label: "Create a template"
+hide_title: true
+hide_table_of_contents: true
+api: eJy1VlFv2zYQ/ivEPbOxm23AJmAY0i7AuqFJELsYsNgPF+lss5ZEljzFcQX99+FIWZGTtOmAVQ8CRd5H3n338U4tMK4DZDfgvP1IOU/mVLkSmQIsNQTKG294D9lNC2cNb6w3n5GNrf8gLMgL0BMWoGHnDRMsu6WGgkLujRMzyOCtJ9lOoappp7jfXu0MbxRvSLHhkhTWhRrhVHCUm5WhQpk6mnn61FDgE9DQD9/YYg9ZC7mtmWqWITpXmjw6OPkY5PgWQr6hCmXEe0eQgb2VQEFLyI48GwpxVfyQwbH7Bz6Sn6APuwT2pl5D9yjcx/A/Z5cXD0EH9k3OjadDVCtblnZn6rVaWV8hZ6pdAGPYhgVk6kY+5Fj5WMAcwzbyZhtWlSkpsK1pAd1SqwUMEwJ9hBzWVD8pgKLxkakFZNOTn2TmcPCX0Ri2cl637J4yER/JTnC2DonU0+n0KScXtCv3Ko+6KAZyQP9fmXxXjGxMzbQmDxoSw2nqh1PQQPdYOck5vJ5KIucHBRwHNjacxYFKlp2G349z/yJwTESnYcbITfiv3kZnrxPN5vbI5W9hZPBuOKJpTHF8Qv+8euZ1eGL4JrgS9xdYvcDbe7Ml9Q/We+SwNd9I9nusUcjoNJzdIaOfVViWX8c0vlRsVRBLhREl+CtvV6akD/4F+GIxufK2aHIOMiTrSkpzAj/B4O5/awL5X7GoTG0Ce2TrQXTf1w84r1xp90R/e3TJ+VGqvk8iRqdfRgHI2Y78GwwE6Vb+OH399CJ+qLGv6VTEXSrijS0gA2dDVBHyBjKYoDOT05Pp5NAkRnc2kL8jH2KHaIRe2DC7kE0m7cYG7rLWWc9SLu7QG7wtkyJlLTm0wqaU2EubYxmnOw2COV7+efrLqcQy6kozqQdpu2d700A0OvMX7UGDkag3aVlDHWV7jI00SMG5fmgy54d0DE3iIXXHhD40BVOv7Bjw1lZVUxveq1kkTF2fz+bq7OqdEEM+JHxsvD0BgSuMRaV3M/VRheOC+aj1DPXzOzTdnkqme564Ek2sX026T0kmN8IzaDg9maYC1Jeiwd+l7tN+A217i0GuY9fJ9KeGvPxkLB9UIl+dPiRL1LWlfSQyxvhqLv6IedmkFD/qF50+IM7ynBx/1XY5kv7V5WwOGm77v4vKFoLxuJM/D9xBBqDBRsKi9OJcCyXW6wbXYpv2FCHJ9TrW4TbqsB9IVIelej/y8FiSug9E3hLWs5C2TSrvusE+LX0RMdyDZC0ZXXZd9y/MNG1u
+sidebar_class_name: "post api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Create a template"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/api/2.0/project/template"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Creates a new template with the title and description specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"title":{"description":"Template title","type":"string"},"description":{"description":"JSON template structure in the following format: {\"tasks\": [{\"title\": \"Task without milestone\"}], \"milestones\":[{\"title\": \"milestone title\", \"duration\":0.5, \"tasks\":[{\"title\": \"milestone task\"}]}]}","type":"string"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Newly created template","content":{"application/json":{"schema":{"type":"object","properties":{"Id":{"type":"integer","format":"int32","example":"10"},"Title":{"type":"string","example":"Sample Title"},"Description":{"type":"string","example":"Sample description"},"Status":{"type":"integer","format":"int32","example":"0"},"Responsible":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"},"ResponsibleId":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"}},"title":"ObjectWrapperBase"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

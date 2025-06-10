@@ -1,0 +1,63 @@
+---
+id: get-the-smtp-test-process-status
+title: "Get the SMTP test process status"
+description: "Returns the SMTP test process status."
+sidebar_label: "Get the SMTP test process status"
+hide_title: true
+hide_table_of_contents: true
+api: eJyNVMFO3DAQ/ZVozoak2x7a3BBCFFVVEQun1R68ybAxJLY7nlC2kf+9GicsG1qgl8TxzBvPvPecAVhvA5QrCMhs7Dbky+/Xl7BWELDqyfAOytUAJz03jsxvzcbZr6hrJAER6hoU/CLDCOu4VlBjqMh4SYMSrpB7siHjBjOpmzEGzjy5CkPIAmvuwzEoIAze2YABygEWRSGveaWEdh4pdTBBQUHlLKNlAWjvW1OleH4XBDVAqBrstKx45xFKcJs7rBgUeJJqbMYzT13nW2SsD1I3zrWoLSjARy1hKIGpR4gKLg4TA5Ox21neEFyHR6Rt7bqjbW/qKKjl2PWbSMk7I3L0ftolUoWWDwsay7hFAgW3jjrN49bHxQxbpF5cTxW+d0hUwIbTx7Jj/+NJgGmSGCXjU/Hhb8FurJ48g3Wq0yE3roYStpj419xACbn2Jl8cF/nef6Fjn4tP8r3IAekBKSQn9tRCCQ2zD2WeD40LHMvBO+IICh40Gb1pR1ElNjZ2q/tWuGhdpdu0HRUIZh7+XHxZyEwH7l+KgcZy/7wDe/q0N99wBwqMTN+MYQVWdxKdYRMdxt66BJ/oPXVd11vDu2yZps2uzpbX2cnlhUyFFEZWWy3MjN0H7nQy+XTGOfKbFw1e3M7h+fL890WdhmV85Ny32lhpJUkyTIquhAlQsDguknKjqrLs2EsF6V/B1NJaTSqtYBg2OuANtTHK9s8eSf4962dR5SuqJ27FDPe4E3KrCj0n9dt+1OLFn0AU3fvv/OwaFIg75/LdJ/mmhVR/CtndQe25kmpqQZ5RvQIZhtEcMe7zx9CriL19xmyheR1j/AMJO+6G
+sidebar_class_name: "get api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get the SMTP test process status"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/settings/smtp/test/status"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns the SMTP test process status.
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"SMTP operation status","content":{"application/json":{"schema":{"type":"object","properties":{"Completed":{"type":"boolean","example":"true"},"Id":{"type":"string","example":"{some-random-guid}"},"Status":{"type":"string","example":""},"Error":{"type":"string","example":""},"Percents":{"type":"integer","format":"int32","example":"0"},"Source":{"type":"string","example":""}},"title":"SmtpOperationStatus"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

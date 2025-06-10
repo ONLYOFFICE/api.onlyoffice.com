@@ -1,0 +1,71 @@
+---
+id: save-file-edits
+title: "Save file edits"
+description: "Saves edits to a file with the ID specified in the request."
+sidebar_label: "Save file edits"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVttO40gQ/RWrng0OgV1mLK1GzMBqo70IEdBKQ/JQ2BXcg+32dJcDXsv/vqpuOxfigYddP3Sc7jrVp+5ugfHRQnwPK5WTjX6VFZYhWEpqo7iB+L6Fi5ozbdQ/yEqXvxGmZARiCFMI4dkoJlh2yxBSsolRlYhBDHNckw0oVWwD1gEGckfwrDgLOKNgdhnYihK1UpQGqnR7hr7XZPkYQqjQYEFMxjoOJRYEsaM5k1uV3FAhZ/D6WrEhmF1CCDbJqECIW+CmErRlo8pH6IRrf9VnnTYikeiSqWR5xarKVeKMjb5Z0dkeqtIP3yhh4Wl0RYYVWTkVflcvTKVVHjjCjTbn4WtiIaT6ucw1pndGHcLvbmbiyUGmd+mYGsuGsDjUcOOt9qHohcJXNjkWySF2nqGhNGD9RKPUV9okZHFNI9A+0DZ4zogzMmKGkw8EMOSGNkGpeav7QeucsITOPRIzW+nSeldPJ5ORi3BN6eCV/ymmf7nUe51EIdALFlVOQ1hdhnYh3FUpMqWfm/c1z9IxvSttCmSIoa5VunfPpH+ORpbhEQqXylY5Nu8T/1M9UfAVywbZPimB3irO3wNhiY9kRPpijYxmXmCev42pTS4htyIZoEMJ/tpoidWdeQe+WETXRqd1wlZeSVc5+T2BH6OtXj7VlswvmBaqVJYNsjYgOcPeILgqqlw3RH8brDz5PlBv3zydTCdHJ9OjyYfbk/P49DyenB6fnk3PPv50/lWU/KF9Vr2t5WyxWCzOfpZ1J1d22MmuMHPUXK6fTU5GGkCJfS+m1OEL4kyn0gprl17SEGOIsFLR9HgS+a4ua9T61tlFUnDSlD1HS2Y99NhawgAZc2XjKGozbbmL20ob7iCENRqFD7nPXDnz9FZY55KsuU4wd9tdCILZP/4w+TgVy3Zmy1zqz6sbnTAbh2KlfqdmaPqZPw6HkbCHdU6RAr/ZtverIQwH7Xkbqr22u93etNGhJ+5V6dDt2NTUCbuVdqz7mH7RRVGXiptg7pwc3FzNb4OL65k4k0xPIUemwWmWC3SZ1Jsm3cx3RjdFX4+6nan1H4dt72imF46qHFUpfGpflT6n7iUKEML0eCLGu+8E/wshxJuxvJtcy7BPk3to2we0UuZdJ9vfazLyabHcZpVLwFRZeU8hXmFu6Q1zt0N+lPqQOGXjEjev5R+E8ETN9iOiW3bhkE1yuz/84u84uhUVW/DBAOnCAXGRJFTxm7LLnUq9vruFEB76745CpwIx+AyhWx1P7Ux2peH2WsixfKzxUWS9Skl0aQb7dfLk6qR/EaNGPbFfMoNbZBWrRiFt66uw6zby/uiHiE2demkJzLLrun8Bit+J8A==
+sidebar_class_name: "put api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Save file edits"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"put"}
+  path={"/api/2.0/files/file/{fileId}/saveediting"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Saves edits to a file with the ID specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"fileId","in":"path","description":"File ID","schema":{"type":"string"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"fileExtension":{"description":"File extension","type":"string"},"downloadUri":{"description":"URI to download a file","type":"string"},"stream":{"description":"Request file stream","type":"object"},"doc":{"description":"Shared token","type":"string"},"forcesave":{"description":"Specifies whether to force save a file or not","type":"boolean"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Saved file","content":{"application/json":{"schema":{"type":"object","properties":{"Name":{"type":"string","example":"File name"},"UpdatedBy":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"},"Updated":{"type":"string","example":"2020-12-08T17:37:03.3424957Z"},"Location":{"type":"string","example":"4\\\\46\\\\File name"}},"title":"FileWrapper"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

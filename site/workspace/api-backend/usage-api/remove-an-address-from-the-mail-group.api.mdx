@@ -1,0 +1,71 @@
+---
+id: remove-an-address-from-the-mail-group
+title: "Remove an address from the mail group"
+description: "Removes an address with the ID specified in the request from the mail group."
+sidebar_label: "Remove an address from the mail group"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVE1v2zAM/SsGz1rtZTtsvmVrgBXbgKEfpyAoGJuJ1cqWKslNPUP/faDspE6bbRiwHByZHybf46N68Lh1kC+hRqkc2Uey6XeUKtla3RoHKwGOitZK30G+7GHe+kpb+RO91M0XwpIsZ1vCEgTsrPQEq7ASUJIrrDQcBjlcUq0fySXYJFiWlpxLdtJXia8ouThPnKFCbiSViWyizdJDS84nG6vraKgPPZ2BgNH9SZcd5D0UuvHUeD6iMUoWsbv0znHtHlxRUY188p0hyEGv76jwIMBYbch6SY69XCOWuJUlvx9DeGYluTgHsf+WbDxtyUIQMCI7mT0fUZ9MjT9G5Yxu3NDMLMv+3sO/At9XFLDRtkY/mN7NYGjgffb2dc2bBseZUwkcVZOvdAk5lKTIE9OIvoIcUjQynZ1l6URLsdmRmHT8J5faqAdgcXGYi9pqrYIcKu+Ny9O0r7TzIe+Ntj6AgEe0EtdqYId9Q6sbbBXjULpAFc1BAOccuz9kHyPKiZ6vmJ3hcydVfWANjfxKHQiQzEc1uAU0WLP3KDcSxPRfPit08YS1UfRaYdmxZLLAFTY6VpaeM+Czruu2kb5LriJRyeXi6jqZ/7hgQsi6YUQKPe2BO19jHP7Y3rB508U7sVPwYl8nK/W/V3fk1NOTT41C2XDbcfL9qKMlEw4CZmcZiMm9BAKmaoIDe+TilRAVtRKjNpbQ92t0dGNVCGx+aMnyHbZ6lhK/BbGfKEvwnrrIegT/5pp75XDVDjp4sWJB7DPmRUHG/zF2Ndmc88W3xfUCBKzHG6zWJWdZ3DEU3EEOIEDHcUSFRlsPCptti1uOHb7KeuP9PJbrfZTreGBce1fTTXo8Vq4YofCTgZ1M6fthGUI4xA+u32Yc1mWI5nmvQgi/AGXkOxI=
+sidebar_class_name: "delete api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Remove an address from the mail group"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"delete"}
+  path={"/api/2.0/mailserver/groupaddress/addresses/remove"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Removes an address with the ID specified in the request from the mail group.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"mailgroup_id":{"description":"Mail group ID","type":"integer"},"address_id":{"description":"Address ID","type":"integer"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Mail group ID","content":{"application/json":{"schema":{"type":"integer","format":"int32"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

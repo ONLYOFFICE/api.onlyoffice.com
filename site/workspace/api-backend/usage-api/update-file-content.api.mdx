@@ -1,0 +1,71 @@
+---
+id: update-file-content
+title: "Update file content"
+description: "Updates the content of a file with the ID specified in the request."
+sidebar_label: "Update file content"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVttO5DgQ/ZWong3dNOwyE2k1YgZWi/YixEUrDd0PRVJNPCSxx64A2Sj/vio76Qv0wMvkwZ2263Kq6lQ5HTDee0hvYalL8pPfZYWFAk9Z4zS3kN52cNJwYZz+D1mb+g/CnJyoOMIcFDw5zQSLfqEgJ585bUUMUrixOTL5hAtKMlMz1ZyYZYKJ+EqeNBfh6Pw08ZYyvdSUJ7oOe46+N+R5HxRYdFgRk/MBS40VQRrgnot3LZ4scgEv3UssyfkpKPBZQRVC2gG3VrQ9O13fQy+YB1efTd6KxABUXtHaUmch6Mk3Lza716bM3TfKWHA6Y8mxJi+ngk9+tyFdRl+Jrm3DiWdHWIF6YapXQfvsman2OrrdERmtztXLsBRQnbnWMuWvla+GXPvkqSAuyCVskkF+rI1xSW14bfjOmJKwDtCMy8jj447odloO8okovGs8PFIQb03tYx5n0+lrR5FYeTAH6meV7J/ArJccUUDPWFmpZsx7IGCvRhCf2/ctn+e77C6Nq5AhhabR+Zaf6fDs7VjGRyCcam9LbN8H/rd+oOQr1i2yf9Cieq25fE8Ja7wnJ9Inj8joriosy7d1GldK0b1IJhi0RP/CGanVjXtHfT6fXDiTNxl7eSVjS4p7or6P3j5/ajy53zCvdK09O2TjQFjDMSA4q2xpWqJ/HdoIfijU255n09l072C2N/1wfXCcHh6n08P9w6PZ0cdfjr+Kkb9MZNXbVo7m8/n86FdZN7iygU52BVmAFth+ND3YQfAah5FLedCviAuTy6RrAr1k3qUwQasns/3pJA7vLg7FftKEiGXwkXscB2cjyYeC2fp0MukK47lPO2sc96DgEZ3GuzLyVc4iqCU2pVC0NBmWYbtXIDrbxx+mH2cSz8bFcSVdF83tvD5WaUSr/6R2nORFPFbjnN/SDamQtr5cz+yzMfmrmft6fm6Uaj0X2TW0Nc5koxcYSxPgDSX7YqqqqTW3yVXIZnJ5dnWdnFycS9bIDR5KuemG7HiuMBBliCESMA6/cVa9uKw27p2fdG0O2WV65oktUYfh3cQGjPS5ldSDgtn+FGLKPChIVzfrwKKFGvhwC113h166uO9l+3tDTj4QFmv6BKbl2st7DukSS09vhLq+onfCHRlSt4GhZSP/QMEDtetPgH7Rq5E24j0efok+9q7FxFr51f3Qq1HjJMvI8puyi41GvLi5BgV3w1dDZXJRcfgEKqwBpwkhhx4Iex2UWN83eC+y0aQwWnp9uyEeQkMMLxLUzkxs98aYFlklqp0qXRfbre9X8vHohxqrhozSUphF3/f/AyDGeAg=
+sidebar_class_name: "put api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Update file content"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"put"}
+  path={"/api/2.0/files/{fileId}/update"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Updates the content of a file with the ID specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"fileId","in":"path","description":"File ID","schema":{"type":"string"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"file":{"description":"Request input stream","type":"object"},"fileExtension":{"description":"File extension","type":"string"},"encrypted":{"description":"Specifies whether to encrypt a file or not","type":"boolean"},"forcesave":{"description":"Specifies whether to force save a file or not","type":"boolean"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Updated file","content":{"application/json":{"schema":{"type":"object","properties":{"Name":{"type":"string","example":"File name"},"UpdatedBy":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"},"Updated":{"type":"string","example":"2020-12-08T17:37:03.3424957Z"},"Location":{"type":"string","example":"4\\\\46\\\\File name"}},"title":"FileWrapper"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

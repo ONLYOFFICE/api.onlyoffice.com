@@ -1,6 +1,6 @@
 # SetDoubleStrikeout
 
-Specifies that the contents of the run are displayed with two horizontal lines through each character displayed on the line.
+Specifies that the contents of the current run are displayed with two horizontal lines through each character displayed on the line.
 
 ## Syntax
 
@@ -22,9 +22,9 @@ expression.SetDoubleStrikeout(isDoubleStrikeout);
 
 ## Example
 
-This example specifies that the contents of the run are displayed with two horizontal lines through each character displayed on the line.
+This example specifies that the contents of the current run are displayed with two horizontal lines through each character displayed on the line.
 
-```javascript
+```javascript editor-pptx
 var oPresentation = Api.GetPresentation();
 var oSlide = oPresentation.GetSlideByIndex(0);
 oSlide.RemoveAllObjects();
@@ -35,11 +35,11 @@ oShape.SetPosition(608400, 1267200);
 var oDocContent = oShape.GetDocContent();
 var oParagraph = oDocContent.GetElement(0);
 var oRun = Api.CreateRun();
-var oTextPr = oRun.GetTextPr();
-oTextPr.SetFontSize(50);
-oTextPr.SetDoubleStrikeout(true);
-oParagraph.SetJc("left");
-oRun.AddText("This is a sample text inside the shape struck out with two lines using the text properties.");
+oRun.AddText("This is just a sample text. ");
+oParagraph.AddElement(oRun);
+oRun = Api.CreateRun();
+oRun.SetDoubleStrikeout(true);
+oRun.AddText("This is a text run with the text struck out with two lines.");
 oParagraph.AddElement(oRun);
 oSlide.AddObject(oShape);
 ```

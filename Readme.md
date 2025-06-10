@@ -12,16 +12,6 @@ To build the site from the source, ensure you're using the most recent versions 
 
 ## Generating OpenAPI Docs
 
-### Merging OenAPI Docs for docspace backend
-
-To generate OpenAPI docs for docspace backend, you need to prepare a single file:
-
-```bash
-cd openapi/docspace
-npm i
-npx openapi-merge-cli
-```
-
 ### Generating All files
 
 To generate all OpenAPI docs, run the following command from the root directory of your project:

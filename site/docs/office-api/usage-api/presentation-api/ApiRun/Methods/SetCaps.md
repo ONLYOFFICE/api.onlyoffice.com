@@ -1,6 +1,6 @@
 # SetCaps
 
-Specifies that any lowercase characters in the text run are formatted for display only as their capital letter character equivalents.
+Specifies that any lowercase characters in the current text run are formatted for display only as their capital letter character equivalents.
 
 ## Syntax
 
@@ -22,9 +22,9 @@ expression.SetCaps(isCaps);
 
 ## Example
 
-This example specifies that any lowercase characters in the text run are formatted for display only as their capital letter character equivalents.
+This example specifies that any lowercase characters in the current text run are formatted for display only as their capital letter character equivalents.
 
-```javascript
+```javascript editor-pptx
 var oPresentation = Api.GetPresentation();
 var oSlide = oPresentation.GetSlideByIndex(0);
 oSlide.RemoveAllObjects();
@@ -35,11 +35,11 @@ oShape.SetPosition(608400, 1267200);
 var oDocContent = oShape.GetDocContent();
 var oParagraph = oDocContent.GetElement(0);
 var oRun = Api.CreateRun();
-var oTextPr = oRun.GetTextPr();
-oTextPr.SetFontSize(50);
-oTextPr.SetCaps(true);
-oParagraph.SetJc("left");
-oRun.AddText("This is a sample text inside the shape set to capital letters using the text properties.");
+oRun.AddText("This is just a sample text. ");
+oParagraph.AddElement(oRun);
+oRun = Api.CreateRun();
+oRun.SetCaps(true);
+oRun.AddText("This is a text run with the font set to capitalized letters.");
 oParagraph.AddElement(oRun);
 oSlide.AddObject(oShape);
 ```

@@ -1,0 +1,71 @@
+---
+id: remove-a-comment
+title: "Remove a comment"
+description: "Removes a comment with the ID specified in the request."
+sidebar_label: "Remove a comment"
+hide_title: true
+hide_table_of_contents: true
+api: eJylU8lu2zAQ/RVhzkTkGj20vAWNgRjtociCHgwdGGkcsaYohhwldQn+ezGUZMfZLr1IJGd/700EUvcB5AbqvusGq2lf/tI7DZWAgPXgNe1BbiKcD9T2Xv9VpHt7iapBz1EeVQMCnrwmhCpVAhoMtdeO3UDCFXb9I4ZCFZwfLRVPmtqCWizWF0VwWOutxqbQNr95fBgw0BkIcMqrDgl9yPWt6hAkTFk0F9VcwClq4WXVb1Ot9QUICHWLnQIZgfaOcwTy2t5D4m49BtfbgIHty8WCfx/kqntLaIm9lHNG1xmO8ndg1/hBqZQEfF58ep3+1qoJWWyAvTqktm9AQoMGCTMS1IKEUjldLs8W5ZGpJ73T5QRJGQ/YJJ4a/eOM3eANSGiJXJBlGds+UJLR9Z7Y81F5re7MCAHbxia3ajAEEkxfK5OfkwCOOTV/WXxd8nzP9HLNKIzp3lTNAR3l9Hfcz0y2o1nMVJ/EZmi03fY5XJPBiZoMRHGdpy2uVtc3xfnPNU+FPowIG0U4dx+oU5mpqcYoz6M6XyopHhn/DylP4xL+odIZpS03k0mJE7kbxgIELM8WWWXTXLxZvIwCjv3J4wpUYuJrAzHeqYC33qTEzw8Det7b6khvVkKjA58bkFtlAn4w7Yns3xxgJtHus4jMwDcQsMP9yaKmKomZXO5htJ/XNTp6Fvlqn1hSh2W4WP1Y3axAAG/LqYR2WULTgQu82dipmuYu+ZvEOyExjgJN6eA/mt6NOEh49GacqpTSPzMF1vI=
+sidebar_class_name: "delete api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Remove a comment"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"delete"}
+  path={"/api/2.0/community/wiki/comment/{commentid}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Removes a comment with the ID specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"commentid","in":"path","description":"Comment ID","schema":{"type":"string"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Comment ID","content":{"application/json":{"schema":{"type":"string"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

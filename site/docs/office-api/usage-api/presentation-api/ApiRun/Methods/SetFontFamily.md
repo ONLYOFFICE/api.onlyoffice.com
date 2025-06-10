@@ -24,7 +24,7 @@ expression.SetFontFamily(sFontFamily);
 
 This example sets all 4 font slots with the specified font family.
 
-```javascript
+```javascript editor-pptx
 var oPresentation = Api.GetPresentation();
 var oSlide = oPresentation.GetSlideByIndex(0);
 oSlide.RemoveAllObjects();
@@ -35,11 +35,11 @@ oShape.SetPosition(608400, 1267200);
 var oDocContent = oShape.GetDocContent();
 var oParagraph = oDocContent.GetElement(0);
 var oRun = Api.CreateRun();
-var oTextPr = oRun.GetTextPr();
-oTextPr.SetFontSize(50);
-oTextPr.SetFontFamily("Comic Sans MS");
-oParagraph.SetJc("left");
-oRun.AddText("This is a sample text inside the shape with the font family set to 'Comic Sans MS' using the text properties.");
+oRun.AddText("This is just a sample text. ");
+oParagraph.AddElement(oRun);
+oRun = Api.CreateRun();
+oRun.SetFontFamily("Comic Sans MS");
+oRun.AddText("This is a text run with the font family set to 'Comic Sans MS'.");
 oParagraph.AddElement(oRun);
 oSlide.AddObject(oShape);
 ```

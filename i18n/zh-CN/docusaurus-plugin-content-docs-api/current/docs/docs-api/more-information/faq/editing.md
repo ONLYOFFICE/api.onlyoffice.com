@@ -2,7 +2,7 @@
 sidebar_position: -5
 ---
 
-# Editing
+# 编辑问题
 
 ## 什么是'回调处理程序'，我为什么需要它？
 
@@ -18,7 +18,7 @@ sidebar_position: -5
 
 这里的 `https://example.com/url-to-callback.ashx` 是特殊处理程序的地址，它可以处理来自**文档编辑服务**的响应和带有*错误的响应：0* 状态代码。此处理程序可以用您选择的编程语言编写。
 
-所有可以发送到回调处理程序的参数及其描述都可以在 [这个页面](../../usage-api/callback-handler.md)找到。
+所有可以发送到回调处理程序的参数及其描述都可以在[这个页面](../../usage-api/callback-handler.md)找到。
 
 关于如何实现此处理程序，下列编程语言有示例：[.Net (C#)](../../usage-api/callback-handler.md#net-c-document-save-example), [Java](../../usage-api/callback-handler.md#java-document-save-example), [Node.js](../../usage-api/callback-handler.md#nodejs-document-save-example), [PHP](../../usage-api/callback-handler.md#php-document-save-example), [Ruby](../../usage-api/callback-handler.md#ruby-document-save-example)。
 

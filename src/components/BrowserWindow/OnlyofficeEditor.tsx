@@ -1,10 +1,22 @@
 import React, { useEffect } from "react";
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
+import {useColorMode} from '@docusaurus/theme-common';
+import { code } from "@site/src/components/Modal/TryNowCodeModal/CodeBlock/types";
 
 interface OnlyOfficeEditorProps {
   fileType: string; // e.g., "docx", "xlsx", "pptx", "pdf"
   code: string;
   height?: string;
+  templateUrl?: string;
+  zoom?: number;
+  config?: code;
+  isDemo?: boolean;
+  isForm?: boolean;
+  externalScript?: {
+    beforeDocumentReady: string;
+    onDocumentReady: string;
+    otherFunctional: string;
+  };
 }
 
 async function createJWT(json: object, secret: string): Promise<string | null> {
@@ -53,8 +65,14 @@ async function createJWT(json: object, secret: string): Promise<string | null> {
 const getDocumentType = (fileType: string): string => {
   switch (fileType) {
     case "xlsx":
+    case "xls":
+    case "ods":
+    case "csv":
       return "cell";
     case "pptx":
+    case "ppsx":
+    case "ppt":
+    case "odp":
       return "slide";
     case "pdf":
       return "pdf";
@@ -64,26 +82,74 @@ const getDocumentType = (fileType: string): string => {
   }
 };
 
-const createDocumentConfig = (fileType: string): object => {
+const getDocumentName = (isDemo: boolean = false, isForm: boolean = false): string => {
+  return isDemo ? (isForm ? "demo-invoice" : "demo") : "new";
+};
+
+const createDocumentConfig = (fileType: string, templateUrl: string, title?: string, isDemo: boolean = false, isForm: boolean = false): object => {
   return {
     fileType,
     key: `doc-${Date.now()}`,
-    title: `Example Document.${fileType}`,
-    url: `https://static.onlyoffice.com/assets/docs/samples/new.${fileType}`,
+    title: title || `Example Document.${fileType}`,
+    url: templateUrl ? templateUrl : `https://static.onlyoffice.com/assets/docs/samples/${getDocumentName(isDemo, isForm)}.${fileType}`
   };
 };
 
-const addScript = async (secret: string, fileType: string, code: string): Promise<void> => {
+function deepMergePreferFirst(a: any, b: any): any {
+  if (typeof a !== "object" || a === null) return a;
+  if (typeof b !== "object" || b === null) return a;
+
+  const result: any = Array.isArray(a) ? [...a] : { ...b, ...a };
+
+  for (const key in b) {
+    if (a.hasOwnProperty(key)) {
+      if (typeof a[key] === "object" && typeof b[key] === "object" && a[key] !== null && b[key] !== null) {
+        result[key] = deepMergePreferFirst(a[key], b[key]);
+      } else {
+        result[key] = a[key];
+      }
+    } else {
+      result[key] = b[key];
+    }
+  }
+
+  return result;
+}
+
+const scriptId: string = "editorScript";
+
+const addScript = async (server: string, secret: string, fileType: string, code: string, theme: string, templateUrl: string, zoom: number,
+                         externalConfig?: code, externalScript?: OnlyOfficeEditorProps["externalScript"], isDemo: boolean = false, isForm: boolean = false): Promise<void> => {
   const scriptConfig = document.createElement("script");
+  scriptConfig.id = scriptId;
   scriptConfig.type = "text/javascript";
 
-  const documentConfig = createDocumentConfig(fileType);
+  const documentConfig = createDocumentConfig(fileType, templateUrl, externalConfig?.document?.title, isDemo, isForm);
 
-  const config = {
-    document: documentConfig,
-    documentType: getDocumentType(fileType),
-    editorConfig: { callbackUrl: "", customization: { anonymous: {request: false} }}
-  };
+  if (externalConfig?.editorConfig?.customization?.logo?.image) {
+    externalConfig.editorConfig.customization.logo.image = new URL("/assets/images/try-docs/example-logo.png", window.location.origin).href;
+  }
+
+  if (externalConfig?.editorConfig?.customization?.customer?.logo) {
+    externalConfig.editorConfig.customization.customer.logo = new URL("/assets/images/try-docs/example-logo-big.png", window.location.origin).href;
+  }
+
+  const config = deepMergePreferFirst(
+    {
+      document: documentConfig,
+      documentType: getDocumentType(fileType),
+      editorConfig: {
+        callbackUrl: server + "dummyCallback",
+        customization: {
+          anonymous: { request: false },
+          uiTheme: theme === "dark" ? "theme-dark" : "theme-light",
+          features: { featuresTips: false },
+          zoom: zoom,
+        },
+      },
+    },
+    externalConfig
+  );
 
   const token = await createJWT(config, secret);
 
@@ -93,12 +159,14 @@ const addScript = async (secret: string, fileType: string, code: string): Promis
       window.docEditor = null;
     }
 
+    ${externalScript?.beforeDocumentReady}
     window.onDocumentReady = function() {
       window.connector = docEditor.createConnector();
       connector.callCommand(() => {
         ${code}
       }, () => {
       });
+      ${externalScript?.onDocumentReady}
     };
 
     var config = ${JSON.stringify(config)};
@@ -108,6 +176,7 @@ const addScript = async (secret: string, fileType: string, code: string): Promis
     };
 
     window.docEditor = new DocsAPI.DocEditor("placeholder", config);
+    ${externalScript?.otherFunctional}
   `;
 
   document.body.appendChild(scriptConfig);
@@ -117,11 +186,22 @@ const OnlyOfficeEditor: React.FC<OnlyOfficeEditorProps> = ({
   fileType,
   code,
   height = "700px",
+  templateUrl,
+  zoom,
+  config,
+  isDemo = false,
+  isForm = false,
+  externalScript = { 
+    beforeDocumentReady:"",
+    onDocumentReady:"",
+    otherFunctional:"" 
+  }
 }) => {
   const {
     siteConfig: {customFields},
   } = useDocusaurusContext();
 
+  const {colorMode} = useColorMode();
   const documentServer = customFields.documentServer as string;
   const documentServerSecret = customFields.documentServerSecret as string;
 
@@ -138,17 +218,18 @@ const OnlyOfficeEditor: React.FC<OnlyOfficeEditorProps> = ({
         };
         scriptApi.onload = () => {
           document.documentElement.setAttribute("data-script-api-state", "2");
-          addScript(documentServerSecret, fileType, code);
+          addScript(documentServer, documentServerSecret, fileType, code, colorMode, templateUrl, zoom, config, externalScript, isDemo, isForm);
         };
-  
+
         document.documentElement.setAttribute("data-script-api-state", "1");
         document.body.appendChild(scriptApi);
       } else {
-        addScript(documentServerSecret, fileType, code);
+        addScript(documentServer, documentServerSecret, fileType, code, colorMode, templateUrl, zoom, config, externalScript, isDemo, isForm);
       }
     }
 
     return () => {
+      document.getElementById(scriptId).remove();
     };
   }, []);
 

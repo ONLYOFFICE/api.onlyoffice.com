@@ -27,6 +27,7 @@ The complete *config* with all the additional parameters looks the following way
 const config = {
   document: {
     fileType: "docx",
+    isForm: true,
     info: {
       favorite: true,
       folder: "Example Files",
@@ -109,6 +110,7 @@ const config = {
         www: "example.com",
       },
       features: {
+        featuresTips: true,
         roles: true,
         spellcheck: {
           mode: true,
@@ -211,6 +213,8 @@ const config = {
         trackChanges: true,
         hoverMode: false,
       },
+      showHorizontalScroll: true,
+      showVerticalScroll: true,
       slidePlayerBackground: "#000000",
       submitForm: {
         visible: true,

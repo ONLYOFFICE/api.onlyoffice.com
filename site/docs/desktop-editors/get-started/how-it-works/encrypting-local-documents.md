@@ -2,6 +2,9 @@
 sidebar_position: -2
 ---
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 # Encrypting local documents
 
 To protect your local documents, spreadsheets and presentations, encrypt them with a simple symmetric encryption plugin. The steps below explain how to do it.
@@ -55,27 +58,27 @@ After the config file is ready, create the plugin code file with the following c
 const globalPassword = "{my-super-long-password}"
 window.Asc.plugin.init = function init(obj) {
   if (!obj) {
-    return
+    return;
   }
   switch (obj.type) {
   case "generatePassword":
-    this.executeMethod("OnEncryption", [{type: "generatePassword", password: globalPassword}])
-    break
+    this.executeMethod("OnEncryption", [{type: "generatePassword", password: globalPassword}]);
+    break;
   case "getPasswordByFile":
-    this.executeMethod("OnEncryption", [{type: "getPasswordByFile", password: globalPassword}])
-    break
+    this.executeMethod("OnEncryption", [{type: "getPasswordByFile", password: globalPassword}]);
+    break;
   case "setPasswordByFile":
-    this.executeMethod("StartAction", ["Info", "Save"])
-    this.executeMethod("EndAction", ["Info", "Save"])
-    break
+    this.executeMethod("StartAction", ["Info", "Save"]);
+    this.executeMethod("EndAction", ["Info", "Save"]);
+    break;
   case "encryptData":
-    this.executeMethod("OnEncryption", [{type: "encryptData", data: obj.data, check: true}])
-    break
+    this.executeMethod("OnEncryption", [{type: "encryptData", data: obj.data, check: true}]);
+    break;
   case "decryptData":
-    this.executeMethod("OnEncryption", [{type: "decryptData", data: obj.data, check: true}])
-    break
+    this.executeMethod("OnEncryption", [{type: "decryptData", data: obj.data, check: true}]);
+    break;
   default:
-    break
+    break;
   }
 }
 ```
@@ -94,7 +97,6 @@ This plugin can’t access the editing features but has almost the same config:
 {
   "name": "Encryption",
   "nameLocale": { 
-    "ru": "Шифрование",
     "it": "Crittografia",
     "fr": "Chiffrement",
     "es": "Encriptación",
@@ -140,26 +142,26 @@ Enable encryption by ticking the checkbox:
 
 ``` ts
 window.addEventListener("load", () => {
-  const ASC_DESKTOP_EDITOR_DEFAULT_MODE = 0
-  const ASC_DESKTOP_EDITOR_CRYPTO_MODE = 2
+  const ASC_DESKTOP_EDITOR_DEFAULT_MODE = 0;
+  const ASC_DESKTOP_EDITOR_CRYPTO_MODE = 2;
 
   document.querySelector("#check").addEventListener("change", function changeListener() {
-    let mode
+    let mode;
     if (this.checked) {
-      mode = ASC_DESKTOP_EDITOR_CRYPTO_MODE
+      mode = ASC_DESKTOP_EDITOR_CRYPTO_MODE;
     } else {
-      mode = ASC_DESKTOP_EDITOR_DEFAULT_MODE
+      mode = ASC_DESKTOP_EDITOR_DEFAULT_MODE;
     }
     AscDesktopEditor.SetCryptoMode("", mode, (retCode) => {
       switch (retCode) {
       case 0:
-        console.log("OK")
-        break
+        console.log("OK");
+        break;
       case 1:
-        console.log("Please, close all open files!")
-        break
+        console.log("Please, close all open files!");
+        break;
       default:
-        break
+        break;
       }
     })
   })
@@ -170,8 +172,18 @@ window.addEventListener("load", () => {
 
 Copy the folders with plugins to the *sdkjs-plugins* directory. The path to the folder depends on the operating system you use:
 
-- For Linux - */opt/onlyoffice/desktopeditors/editors/sdkjs-plugins/*
-- For Windows - *%ProgramFiles%\ONLYOFFICE\DesktopEditors\sdkjs-plugins\\*
+<Tabs>
+  <TabItem value="windows" label="Windows">
+      ``` bash
+      %ProgramFiles%\ONLYOFFICE\DesktopEditors\sdkjs-plugins\
+      ```
+  </TabItem>
+  <TabItem value="linux" label="Linux">
+      ``` bash
+      /opt/onlyoffice/desktopeditors/editors/sdkjs-plugins/
+      ```
+  </TabItem>
+</Tabs>
 
 It is important that you use plugins GUID as a folder name.
 

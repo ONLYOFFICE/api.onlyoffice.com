@@ -15,6 +15,26 @@ def GetVersion(self);
 ### Python
 
 ``` py
+import os
+import docbuilder
+
 builder = docbuilder.CDocBuilder()
+builder.CreateFile("docx")
+
+context = builder.GetContext()
+globalObj = context.GetGlobal()
+api = globalObj["Api"]
+
 version = builder.GetVersion()
+
+document = api.Call("GetDocument")
+paragraph = api.Call("CreateParagraph")
+paragraph.Call("AddText", "ONLYOFFICE Document Builder Version - " + version.decode("utf-8"))
+content = context.CreateArray(1)
+content[0] = paragraph
+document.Call("InsertContent", content)
+
+dstPath = os.getcwd() + "/result.docx"
+builder.SaveFile("docx", dstPath)
+builder.CloseFile()
 ```

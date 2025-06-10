@@ -1,6 +1,6 @@
 # GetClassType
 
-Returns a type of the ApiTextPr class.
+Returns a type of the ApiRun class.
 
 ## Syntax
 
@@ -16,23 +16,20 @@ This method doesn't have any parameters.
 
 ## Returns
 
-"textPr"
+"run"
 
 ## Example
 
-This example gets a class type and pastes it into the presentation.
+This example gets a class type and inserts it into the document.
 
-```javascript
+```javascript editor-docx
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
-paragraph.AddText("This is a sample text with the font size set to 30 and the font weight set to bold.");
-let textPr = Api.CreateTextPr();
-textPr.SetFontSize(32);
-textPr.SetBold(true);
-paragraph.SetTextPr(textPr);
-textPr = paragraph.GetTextPr();
-let classType = textPr.GetClassType();
+let run = Api.CreateRun();
+run.AddText("This is just a sample text. Nothing special.");
+paragraph.AddElement(run);
+let classType = run.GetClassType();
 paragraph = Api.CreateParagraph();
-paragraph.AddText("Class type: " + classType);
+paragraph.AddText("Class Type = " + classType);
 doc.Push(paragraph);
 ```

@@ -8,13 +8,13 @@ In this section, we will look at the integration process via [WKWebView](https:/
 
 ## Integration based on the ONLYOFFICE test sample
 
-This example demonstrates how to integrate ONLYOFFICE mobile web editors with the ONLYOFFICE [test or DMS sample](../../language-specific-examples/language-specific-examples.md).
+This example demonstrates how to integrate ONLYOFFICE mobile web editors with the ONLYOFFICE [test or DMS sample](../../../samples/language-specific-examples/language-specific-examples.md).
 
 ![iOS integration via test sample](/assets/images/editor/ios-test-sample.png)
 
 ### Opening ONLYOFFICE editors
 
-1. Download and install ONLYOFFICE Docs [Enterprise](https://www.onlyoffice.com/docs-enterprise.aspx) or [Developer](https://www.onlyoffice.com/developer-edition.aspx) edition.
+1. Download and install ONLYOFFICE Docs [Enterprise](https://www.onlyoffice.com/docs-enterprise.aspx) or [Developer](https://www.onlyoffice.com/developer-edition.aspx).
 
 2. Download the mobile demo sample for iOS from [GitHub](https://github.com/ONLYOFFICE/editors-webview-ios).
 
@@ -90,7 +90,7 @@ This example demonstrates how to integrate ONLYOFFICE mobile web editors with th
 
 7. For easy interaction with the editor, define the **Activity Indicator** and **Progress View** UI components.
 
-   The full code for **DocumentServerViewController** can be found [here](https://github.com/ONLYOFFICE/editors-webview-ios/blob/ad146259742d0cecb7b10e67e19b4594730663e0/editorWebViewDemo/PresentationLayer/UserStories/documentServerDemo/documentServerViewController.swift).
+   The full code for **DocumentServerViewController** can be found [here](https://github.com/ONLYOFFICE/editors-webview-ios/blob/main/EditorWebViewDemo/PresentationLayer/UserStories/DocumentServerDemo/DocumentServerViewController.swift).
 
    <img alt="Activity indicator" src="/assets/images/editor/activity-indicator.png" width="260px" />
 
@@ -155,7 +155,7 @@ func webView(_ webView: WKWebView,
 
 <img alt="Go back" src="/assets/images/editor/exit-button.png" width="260px" />
 
-The full code for **DocumentServerEditorViewController** can be found [here](https://github.com/ONLYOFFICE/editors-webview-ios/blob/ad146259742d0cecb7b10e67e19b4594730663e0/editorWebViewDemo/PresentationLayer/UserStories/documentServerEditor/documentServerEditorViewController.swift).
+The full code for **DocumentServerEditorViewController** can be found [here](https://github.com/ONLYOFFICE/editors-webview-ios/blob/main/EditorWebViewDemo/PresentationLayer/UserStories/DocumentServerEditor/DocumentServerEditorViewController.swift).
 
 ## Integration based on the ONLYOFFICE Docs API
 
@@ -165,13 +165,13 @@ This example demonstrates how to open the ONLYOFFICE editors via WKWebView using
 
 ### Opening ONLYOFFICE editors
 
-1. Download and install ONLYOFFICE Docs [Enterprise](https://www.onlyoffice.com/docs-enterprise.aspx) or [Developer](https://www.onlyoffice.com/developer-edition.aspx) edition.
+1. Download and install ONLYOFFICE Docs [Enterprise](https://www.onlyoffice.com/docs-enterprise.aspx) or [Developer](https://www.onlyoffice.com/developer-edition.aspx).
 
 2. Download the mobile demo sample for iOS from [GitHub](https://github.com/ONLYOFFICE/editors-webview-ios).
 
 3. Open the *EditorWebViewDemo.xcodeproj* project with [Xcode](https://developer.apple.com/xcode/) to modify code fragments of this example for your DMS to work correctly.
 
-4. Create an empty *html* file. The demo project [editor.html](https://github.com/ONLYOFFICE/editors-webview-ios/blob/ad146259742d0cecb7b10e67e19b4594730663e0/editorWebViewDemo/Resources/editor.html) resource is used as a template.
+4. Create an empty *html* file. The demo project [editor.html](https://github.com/ONLYOFFICE/editors-webview-ios/blob/main/EditorWebViewDemo/Resources/editor.html) resource is used as a template.
 
 5. Add the *div* element as shown below:
 
@@ -191,7 +191,7 @@ This example demonstrates how to open the ONLYOFFICE editors via WKWebView using
 
    <!-- eslint-skip -->
    ``` ts
-   window.docEditor = new DocsAPI.DocEditor("placeholder", {
+   const config = {
      {external_config},
      type: "mobile",
      events: {
@@ -205,7 +205,9 @@ This example demonstrates how to open the ONLYOFFICE editors via WKWebView using
        onRequestUsers,
        onWarning,
      },
-   })
+   };
+
+   window.docEditor = new DocsAPI.DocEditor("placeholder", config);
    ```
 
 8. To start working with documents, display the ONLYOFFICE editor on your mobile device via the WKWebView component. To do this, specify the **EditorViewController** controller. Request the URL to the *editor.html* file, get its contents and replace the *"\{external\_config\}"* parameter with a config from the *samples.plist* file where all the sample configurations are categorized according to [API documentation Try page](../../try-docs/try-docs.md):
@@ -231,7 +233,7 @@ This example demonstrates how to open the ONLYOFFICE editors via WKWebView using
 
    <img alt="Editor samples" src="/assets/images/editor/editor-samples.png" width="260px" />
 
-   The full code for **EditorViewController** can be found [here](https://github.com/ONLYOFFICE/editors-webview-ios/blob/ad146259742d0cecb7b10e67e19b4594730663e0/editorWebViewDemo/PresentationLayer/UserStories/editor/editorViewController.swift).
+   The full code for **EditorViewController** can be found [here](https://github.com/ONLYOFFICE/editors-webview-ios/blob/main/EditorWebViewDemo/PresentationLayer/UserStories/Editor/EditorViewController.swift).
 
 9. In the Xcode toolbar, select a build scheme and a device where the app will be run. After that, choose **Product -> Run**, or click the **Run** button in the project toolbar to build and run your code.
 
@@ -308,7 +310,7 @@ To work with documents (open, download, insert images, mention other users, etc.
    }
    ```
 
-   The full code for **EditorEventsHandler** can be found [here](https://github.com/ONLYOFFICE/editors-webview-ios/blob/ad146259742d0cecb7b10e67e19b4594730663e0/editorWebViewDemo/PresentationLayer/UserStories/editor/editorEventsHandler.swift).
+   The full code for **EditorEventsHandler** can be found [here](https://github.com/ONLYOFFICE/editors-webview-ios/blob/main/EditorWebViewDemo/PresentationLayer/UserStories/Editor/EditorEventsHandler.swift).
 
 3. To display the result of downloading and printing a document, use the **PreviewController** controller. This controller is based on **QLPreviewController**. Download a document by its URL and set the *dataSource* and *delegate* properties to **QLPreviewController**:
 
@@ -337,4 +339,4 @@ To work with documents (open, download, insert images, mention other users, etc.
    }
    ```
 
-   The full code for **PreviewController** can be found [here](https://github.com/ONLYOFFICE/editors-webview-ios/blob/ad146259742d0cecb7b10e67e19b4594730663e0/editorWebViewDemo/PresentationLayer/UserStories/editor/PreviewController.swift).
+   The full code for **PreviewController** can be found [here](https://github.com/ONLYOFFICE/editors-webview-ios/blob/main/EditorWebViewDemo/PresentationLayer/UserStories/Editor/PreviewController.swift).

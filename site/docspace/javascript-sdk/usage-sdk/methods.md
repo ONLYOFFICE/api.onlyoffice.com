@@ -158,7 +158,7 @@ Returns the information about rooms according to the specified filter parameters
 
 | Parameter | Type   | Presence | Description                                                                                                                       |
 | --------- | ------ | -------- | --------------------------------------------------------------------------------------------------------------------------------- |
-| filter    | object | required | The room [filter parameters](https://github.com/ONLYOFFICE/DocSpace-client/blob/master/packages/shared/api/rooms/filter.js#L183). |
+| filter    | object | required | The room [filter parameters](https://github.com/ONLYOFFICE/DocSpace-client/blob/master/packages/shared/api/rooms/filter.ts#L90). |
 
 ## getSelection
 

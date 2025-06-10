@@ -1,0 +1,71 @@
+---
+id: start-the-data-deletion
+title: "Start the data deletion"
+description: "Starts the data deletion for the user with the ID specified in the request."
+sidebar_label: "Start the data deletion"
+hide_title: true
+hide_table_of_contents: true
+api: eJytlE1v2zAMhv+KwbNWZ8EOm2/dWmDBDiua9hT4wNhMrFa2VIlu6hn+7wNl56vtdhiWQyCLHyZfPnQPjNsA2QocWWcovQ/kkxIZIVcQqGi95g6yVQ+XLVfW61/I2jbfCUvyEucJS1Cw85oJ8iFXUFIovHbiBhksGT2HhCuKaZOSDIkp2Vgfb1t5405zFZ8WV0lwVOiNpjLRTbzz9NRS4AtQMB2/2rKDrIfCNkwNyxGdM7qIxaUPQV7dQygqqlFO3DmCDOz6gQoGBc5bR541BbFKCYtSTue1RzEWV6D28YG9brYwxJ9UE5xtwphkPpu9zXC179Z5u/UUAqh/L5o1G7m4pdo+082UccFUw1jPp9nHd5pocJoclSBeNXFlS8jA2RC1QK4ggxSdTucXs3Qiwce3pEHmB8KCfyYfIgqtN5BBxexClqZ9ZQMPWe+s5wEUPKPXuDajKmIba9pgaxgyMLZAE68HBRJzbv48+zKXdk7wW4oiY7p3ITwohU7/oA4UaGm8Gs0KGqzFehYblRDJb49EXb9g7UThIxGHiUvOjY3vmqbwzdZ122jukmWUJrm9Xt4llzcLkYB8GNU3yLRvNXCNccRTQXE13m4GvFqhE8z/8zZNsjG9cOoM6kbqjMPtJypWoikomF/MhJRIRlxDYUOoiHTkaprzCvp+jYHuvRkGuX5qycvnIz9iIU+D2k9HcHqkLuoZm/xwJ0WJu2nHmb5akUHtIy6Lghz/1Tc/wf3m5/IOFKynb0dtS4nxuJOGcAcZgAIbRY+sxbseDDbbFrfiO+YUcmSlzsF7jOBNB+lqb2q6kwrPGVRTI/Ivbb0b0vcj1sNw8B9Nf4w4gD96y1jzYRh+A8IHCTM=
+sidebar_class_name: "post api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Start the data deletion"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/api/2.0/people/remove/start"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Starts the data deletion for the user with the ID specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"userId":{"description":"User ID","type":"string"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Deletion progress","content":{"application/json":{"schema":{"type":"object","title":"RemoveProgressItem"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

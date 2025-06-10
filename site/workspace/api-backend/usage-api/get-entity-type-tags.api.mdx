@@ -1,0 +1,71 @@
+---
+id: get-entity-type-tags
+title: "Get entity type tags"
+description: "Returns a list of all the tags associated with the entity type specified in the request."
+sidebar_label: "Get entity type tags"
+hide_title: true
+hide_table_of_contents: true
+api: eJyVU0tr3DAQ/itiTi2I2FlCaX1Lw0JLoZTdLT2EHCbyrK1gS6o0Trp1/N/LyE432xRKfRprHvoeoxEYmwTVNZjYFzuJbzQkMkO0fIDqeoTLgVsf7U9k690Hwpqi1EfCGjQ8RMsEN9ONhpqSiTZIGVSwIR6iSwpVZxMrv1fYdYpbUnKjwpS8schUqwfLbU6QY8sHxYdAKgUydm+pVtblZKTvAyU+Aw1L+N7XB6hGMN4xOZYQQ+isyUiLuyQ4RkimpR4lksFQgb+9I8OgIUQfKLKlJNn59l2uGf8gsz4iA/00J3G0roEpf4IqBe/SPGxVli+n7LAB/d9wMUY8gAbL1Kd/0/iMPT2rWkBqoB/Yh06OtjkQG2DScOWHGczSYB1TQxE07H3skeejNxcnI85LEMpsOf/usPkWMQSKsIhxUZ6/5P/V4bJLVOf+nrj1NVTQUCaC3EIFBQZbrM7KQlZyPNpSvRLp0PCjD8FHHpzlw6PBRK+ngrO2ieI9xZT3dogdVNAyh1QVxdj6xFM1SuMEGu4xWrztZs0kN8Pd49AJ5c4b7PLxpEF6TtNvy3crofrsrWzFt3ncX1/M0c9gP1E2VDRp57QGl3077c0iyWJsjhu/fjLhdGN/b6PM3ft83+LOle/7rJXaZnnUZr3dqcsvH0UGimk2p0MmoTv9AoCMbHY=
+sidebar_class_name: "get api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get entity type tags"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/crm/{entityType:(contact|opportunity|case)}/tag"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns a list of all the tags associated with the entity type specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"entityType":{"description":"Entity type","type":"string"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Tag","content":{"application/json":{"schema":{"type":"array","items":{"type":"object","properties":{"Name":{"type":"string","example":"Sample tag"},"Count":{"type":"integer","format":"int64","example":"10"}},"title":"TagWrapper"}}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

@@ -402,7 +402,50 @@ main {
   transition: opacity .2s ease-out;
 }
 
-.clean-btn svg[class^='copyButtonSuccessIcon'], .clean-btn svg[class*=' copyButtonSuccessIcon'] {
+button svg[class*='copyButtonSuccessIcon'] {
   top: 50%;
   left: 50%;
+  opacity: 0;
+}
+
+button[class*='copyButtonCopied'] svg[class*='copyButtonSuccessIcon'] {
+  top: 50%;
+  left: 50%;
+}
+
+.conversion-table table {
+  font-size: var(--base-text-font-size-12);
+}
+
+.conversion-table table td {
+  padding: 0.3rem 0.5rem;
+  min-width: 40px;
+}
+
+.conversion-table table td:not(:first-child) {
+  opacity: 0.8;
+}
+
+.conversion-table table thead {
+  background-color: var(--ifm-table-background);
+  border: none;
+}
+
+.conversion-table table thead tr{
+  border: none;
+}
+
+.conversion-table table th {
+  border: none;
+  padding: 0.2rem 0;
+  white-space: break-spaces;
+}
+
+.conversion-table table tr:first-child td:first-child {
+  font-weight: bold;
+  line-height: normal;
+}
+
+.hidden {
+  display: none !important;
 }

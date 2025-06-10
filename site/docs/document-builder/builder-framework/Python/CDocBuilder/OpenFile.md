@@ -1,3 +1,6 @@
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 # OpenFile
 
 Opens the document file which will be edited and saved afterwards.
@@ -17,15 +20,18 @@ def OpenFile(self, str path, str | None params);
 
 ## Example
 
-### Python
+<Tabs>
+    <TabItem value="python" label="Python">
+        ``` py
+        import docbuilder
 
-``` py
-builder = docbuilder.CDocBuilder()
-builder.OpenFile(L"text-document.csv", "<m_nCsvTxtEncoding>46</m_nCsvTxtEncoding><m_nCsvDelimiter>4</m_nCsvDelimiter>")
-```
-
-### .docbuilder
-
-```ts
-builder.OpenFile("text-document.csv", "<m_nCsvTxtEncoding>46</m_nCsvTxtEncoding><m_nCsvDelimiter>4</m_nCsvDelimiter>")
-```
+        builder = docbuilder.CDocBuilder()
+        builder.OpenFile(L"text-document.csv", "<m_nCsvTxtEncoding>46</m_nCsvTxtEncoding><m_nCsvDelimiter>4</m_nCsvDelimiter>")
+        ```
+    </TabItem>
+    <TabItem value="builder" label=".docbuilder">
+        ```ts
+        builder.OpenFile("text-document.csv", "<m_nCsvTxtEncoding>46</m_nCsvTxtEncoding><m_nCsvDelimiter>4</m_nCsvDelimiter>");
+        ```
+    </TabItem>
+</Tabs>

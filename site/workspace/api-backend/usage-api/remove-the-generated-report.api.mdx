@@ -1,0 +1,71 @@
+---
+id: remove-the-generated-report
+title: "Remove the generated report"
+description: "Removes the generated report file with the ID specified in the request."
+sidebar_label: "Remove the generated report"
+hide_title: true
+hide_table_of_contents: true
+api: eJydUk1z0zAQ/SuavWJqk+FAdSu0QIYLk8Apk4NqbeLtyJKQ1inB4//OrJw2Le0JnXa0X++9fSOw2WfQG4gp3GHL9QpjSJxhW0HGdkjER9CbEa4G7kKiP4Yp+K9oLCZpS2gsVHCfiBG207YCi7lNFKUMNKywDwfMijtUe/SYDKNVqSxRO3Ko7om7kl5eqxyxpR2hVeTLX8JfA2a+gApO4cdgj6BHaINn9CyhidFRW4DVd1nWjpDbDnsjER8jgoZwK/SgEqIRExNmyQoEshL9i/uMcHkN1cMY8ox7TDCVJ6hyDD7PwxZN83LSl9dYQ/X/BJjY4SPEzzJtxvK+efdy/U9vTpdDC1LVI3fBggaLDlmQRMMdaKhNpHpx0dQPVpjx1oI31+OslN40by+3byYQe6QDplzcMSQHGjrmmHVdj13IPOlR2qXyYBKZWzeLJLkZ5s4MjkGDC61x5XuqQHqepz80lwth+MSRaxFnHveqLx9FM5G+4REqINGim9MVeNNL9llvEUfUX52NdvPb9FHEPhulmWTYLpQlp0t8Cn0/eOKjWhdN1Opm/UNdfV8Kd0x5voQzjMJx+gt7LTWX
+sidebar_class_name: "delete api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Remove the generated report"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"delete"}
+  path={"/api/2.0/project/report/files/{fileid:[0-9]+}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Removes the generated report file with the ID specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"fileid":{"description":"Report file ID","type":"integer"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Generated report file","content":{"application/json":{"schema":{"type":"object","title":"ReportFile"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

@@ -26,13 +26,15 @@ The reference figure and the steps below explain the process of renaming a docum
    ``` ts
    function onRequestRename(event) {
      const title = event.data
-   }
+   };
    
-   const docEditor = new DocsAPI.DocEditor("placeholder", {
+   const config = {
      events: {
        onRequestRename,
      },
-   })
+   };
+
+   const docEditor = new DocsAPI.DocEditor("placeholder", config);
    ```
 
 3. In order to update the name of the document for all collaborative editors, send the request to the [document command service](../../additional-api/command-service/command-service.md), using the [meta](../../additional-api/command-service/meta.md) value for the *c* parameter:
@@ -52,11 +54,13 @@ The reference figure and the steps below explain the process of renaming a docum
    ``` ts
    function onMetaChange(event) {
      const title = event.data.title
-   }
+   };
    
-   const docEditor = new DocsAPI.DocEditor("placeholder", {
+   const config = {
      events: {
        onMetaChange,
      },
-   })
+   };
+
+   const docEditor = new DocsAPI.DocEditor("placeholder", config);
    ```

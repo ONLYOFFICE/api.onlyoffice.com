@@ -1,6 +1,6 @@
 # SetDoubleStrikeout
 
-Specifies that the contents of the run are displayed with two horizontal lines through each character displayed on the line.
+Specifies that the contents of the current run are displayed with two horizontal lines through each character displayed on the line.
 
 ## Syntax
 
@@ -22,12 +22,16 @@ expression.SetDoubleStrikeout(isDoubleStrikeout);
 
 ## Example
 
-This example specifies that the contents of the run are displayed with two horizontal lines through each character displayed on the line.
+This example specifies that the contents of the current run are displayed with two horizontal lines through each character displayed on the line.
 
-```javascript
+```javascript editor-docx
 let doc = Api.GetDocument();
-let textPr = doc.GetDefaultTextPr();
-textPr.SetDoubleStrikeout(true);
 let paragraph = doc.GetElement(0);
-paragraph.AddText("A sample text struck out with two lines using the text properties.");
+let run = Api.CreateRun();
+run.AddText("This is just a sample text. ");
+paragraph.AddElement(run);
+run = Api.CreateRun();
+run.SetDoubleStrikeout(true);
+run.AddText("This is a text run with the text struck out with two lines.");
+paragraph.AddElement(run);
 ```

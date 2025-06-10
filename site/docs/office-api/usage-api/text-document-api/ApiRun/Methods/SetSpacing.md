@@ -24,10 +24,14 @@ expression.SetSpacing(nSpacing);
 
 This example sets the text spacing measured in twentieths of a point.
 
-```javascript
+```javascript editor-docx
 let doc = Api.GetDocument();
-let textPr = doc.GetDefaultTextPr();
-textPr.SetSpacing(80);
 let paragraph = doc.GetElement(0);
-paragraph.AddText("A sample text with the spacing set to 4 points (80 twentieths of a point).");
+let run = Api.CreateRun();
+run.AddText("This is just a sample text. ");
+paragraph.AddElement(run);
+run = Api.CreateRun();
+run.SetSpacing(80);
+run.AddText("This is a text run with the text spacing set to 4 points (20 twentieths of a point).");
+paragraph.AddElement(run);
 ```

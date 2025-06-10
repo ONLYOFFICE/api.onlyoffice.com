@@ -1,0 +1,71 @@
+---
+id: get-contact-tags
+title: "Get contact tags"
+description: "Returns a list of all the tags for the contact with the ID specified in the request."
+sidebar_label: "Get contact tags"
+hide_title: true
+hide_table_of_contents: true
+api: eJyVUj1v2zAQ/SvErWUj1ejQcEuTADXaobDTyfBwkU4WA4lkyVNSV9B/L46Sk7jpUk7H+3h89/hGYDwkMDuoYl/cSbzXkKgaouUjmN0IVwO3PtrfyNa7L4Q1RemPhDVoeIqWCfbTXkNNqYo2SBsY2BAP0SWFqrOJlW8Udp3ilpS8qBof86XyjrFi9WS5zYn1jUqBKttYqpV1ORfp50CJL0DDEn729RHMCDJOjiXEEDpbZZbFQxIOI6SqpR4l4mMgMODvH6hi0BCiDxTZUjrBYMW2lsv5HtcLwfUN6BOKdUwHijDlI6RS8C7NWKuyfIvybdHgtG5WXf83fYwRj6DBMvXpVT5xtO4AC52P5Ye3DH44XD6SapCunrj1NRg4UBYEuQUDBQZbrC7KQvywsC3GZ33Mrnx/uX83FYwHEKPER4op+2SIHRhomUMyRTG2PvFkxuAjT6DhEaPF+26WSGozwwaHjsFA5yvscnrSIDPn5U/l5Uq2e+XNrWgzw/3ToS+aBfuVsmgiQzuXNTjspXo2m3UR8TcvLrv9hX3o6C+XlJPgNT6/Y1nqcO37fnCWj2qbZVGb2+2duvq+lvUppvkfOmSSNac/05Y2eA==
+sidebar_class_name: "get api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get contact tags"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/crm/contact/{contactid:[0-9]+}/tag"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns a list of all the tags for the contact with the ID specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"contactid":{"description":"Contact ID","type":"integer"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"List of contact tags","content":{"application/json":{"schema":{"type":"array","items":{"type":"string"}}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

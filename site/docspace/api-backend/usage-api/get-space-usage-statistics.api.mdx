@@ -1,0 +1,71 @@
+---
+id: get-space-usage-statistics
+title: "Get the space usage statistics"
+description: "Returns the space usage statistics for the module with the ID specified in the request."
+sidebar_label: "Get the space usage statistics"
+hide_title: true
+hide_table_of_contents: true
+api: eJy1V21v2zYQ/ivEfckGKLbjtkCnb27TFek2dGgS5ENgNLR0sthIpEqemriG/vtwpGxJkde4A/bFL+LxXh7ePQ+1BZJrB/EtXCKR0msnpuKSJClHKnGwjMBUaCUpoy9SiGGNdFnJBK+dXGPPMIJKWlkioWV3W9CyRIhBpRCB0hBDJSmHCFJ0iVUVO4QYrnIUF+cCH8nKhDAVmTWloByFNTWh6JxOIAKLX2tlMYWYbI0RuCTHUkK8BdpUHM2RVXoNEWTGlpIghrr2GeCjLKuCTaTEMzybvThdJfLV6W+ZPDtdydfJ6cv57NXr1Uu5yuavoWmWHM1VRjt0HGA+m/HXMPu/TFoXKBwDImpGRLg+JInRhJp4o6yqQiUex+kXx7u34/TN6gsmxFhaRp1UiL1LpGcprZUbRpawdM97CIcxhml8GOxQsDnjreuikCuGLeDdoXixM4MmApWEeo70zuaCu+GIEHtbjpMqx6ZpL9bKmAKlHgW7rDBRmUInVObbKUR2YudDGCu0oUm/NzJZOGwicOr7z6BVO0xDD/y4oJl4syEPWG2Ln/B//enPI5Bin00TgUxTxR5k8XevBXxphyJ0AyZMQKrtY9/TXTf7VDgNUuSDBgJgK2YBTuGcjM8gMXXo+bY+pQnXaPtTqTS9mDMShdL37r/3dW4xGyPJKCShxtFSwxlyWbU7MsVg/NakeNSG5kcQLbi8GyurCm2by8vZ2ZhYrrWsKTdWfcfUu3SY1FbRxlOrdMlnXv98j/wALErmuAerCGHZRFt4g9KihfjW/1tU6g/c7J8dspdOJTvzj4ua8vlhw48Veh24XTJDDpP+hFRb7XwTHaZEkRnrl8tAnA+Kcv//4ly4dmJToXQQAPxao/MTWiLlplUfrzSUQwxTWanpfDKbula6pl2kqU/Ax59uVdoAQ2i/7cTJDyBsV9LhtS2aMX14W5EYnal1HeQPIvgmreIR9K3Tbg6Hl8m64CYYeToPSzzEfODL7igvmf2Dq+GBdsPgz23k8tqheGvMvULBm1BTKyxMEkF1Bw5b/U38Fu7o9rT3cXKiahTlnSa0YmNqywRn2bGQOhWVdO7BWO4Lr1+ehb1D9tz22DGuT4Kx2H64uRJX5h51czJwGnxF7Y/fd3P24eaKQw2b+jnMFgOgvBAw6ZVKYypWG99wJ4t25rzNichRpj6BFtRBxBbU1qaJ9lPTUZb0D55mEuxEVpiH0P+DqMLzTAS8HFqjv7ojocFD34MeaBdPpz7qxOhiY7JMJThJTBkezqd7TmEaZ8CP3+rN/emYancpkakfepkKmSTonCAjKmsI/UXOojO1TdDtCSSGG/5+xjqw4o5nOjT9g7dG66ADT0Dl1XPRLo/HYrD7+Kq58ZXODJ/v46lTay2ptvh8u3FL783DBYGpb5jXRLAAe2RFWTsSKxRmRdL35DclfVPedSQXaGNwIncCdVoZpWkiLojbmscTUyGdkCJMfMeyfobveoXcTbru7tf3hDH4iscocNmttC0qxXyI1oWCX0zOJjOGqTKOSqm7Sye8R/qBJDyFbttdmv9HQWlPj/CRplUhle7dyoK63PLRQgTzycxrR1AYCNeBfeqdykAEsUr5fSk3jnj/di8vDT/+WqNltV52MuKlqLvUHrqj9eH45VP7+vOr+LnXpoPV7hpYb7ywFTUG+fISxK9tzbKJdvzGiYaFRZJgRb0toxcb1ri9YL9/dwWR56vh0ARdan+w94PpPJGxkAF/8lXk4I7tNkxk0+ztw9K/7tizfFs4F9A0zT9jojTv
+sidebar_class_name: "get api-method"
+info_path: site/docspace/api-backend/usage-api/api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get the space usage statistics"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/settings/statistics/spaceusage/{id}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns the space usage statistics for the module with the ID specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"id","in":"path","description":"The ID extracted from the route parameters.","required":true,"schema":{"type":"string","format":"uuid","example":"aae1e103-bca5-9fa1-ba8c-42058b4abf28"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Module space usage statistics","content":{"application/json":{"schema":{"type":"object","properties":{"response":{"type":"array","items":{"type":"object","properties":{"name":{"type":"string","description":"The item name.","nullable":true,"example":"Item name"},"icon":{"type":"string","description":"The item icon path.","nullable":true,"example":"Item icon path"},"disabled":{"type":"boolean","description":"Specifies if the item is disabled or not.","example":false},"size":{"type":"string","description":"The item used space.","nullable":true,"example":"0 Byte"},"url":{"type":"string","description":"The item URL.","nullable":true,"example":"Item url"}},"additionalProperties":false,"description":"The parameters of the usage space statistics item.","title":"UsageSpaceStatItemDto"}},"count":{"type":"integer","format":"int32"},"links":{"type":"array","items":{"type":"object","properties":{"href":{"type":"string"},"action":{"type":"string"}}}},"status":{"type":"integer","format":"int32"},"statusCode":{"type":"integer","format":"int32"}},"title":"UsageSpaceStatItemArrayWrapper"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

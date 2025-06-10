@@ -1,10 +1,15 @@
+---
+sidebar_custom_props:
+  icon: /assets/images/editor/connectors/liferay.svg
+---
+
 # Liferay integration
 
 This [plugin](https://github.com/ONLYOFFICE/onlyoffice-liferay) enables users to edit office documents from [Liferay](https://www.liferay.com/) using ONLYOFFICE Docs.
 
 ## Features
 
-- Currently, the following document formats can be opened and edited with this plugin: DOCX, XLSX, PPTX, DOCXF, OFORM.
+- Currently, the following document formats can be opened and edited with this plugin: DOCX, XLSX, PPTX.
 - The following formats are available for viewing only: ODT, ODS, ODP, DOC, XLS, PPT, PDF.
 - The plugin will create a new **ONLYOFFICE Edit/View** menu option within the **Documents and Media** section for Office documents. This allows multiple users to collaborate in real time and to save back those changes to Liferay.
 

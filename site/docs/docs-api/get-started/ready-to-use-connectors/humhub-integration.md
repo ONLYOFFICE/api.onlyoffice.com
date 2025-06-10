@@ -1,3 +1,8 @@
+---
+sidebar_custom_props:
+  icon: /assets/images/editor/connectors/humhub.svg
+---
+
 # HumHub integration
 
 This [plugin](https://github.com/ONLYOFFICE/onlyoffice-humhub) enables users to edit office documents from [HumHub](https://www.humhub.com/) using ONLYOFFICE Docs.
@@ -6,7 +11,7 @@ The plugin is available in the official [HumHub Marketplace](https://marketplace
 
 ## Features
 
-- Currently, the following document formats can be opened and edited with this plugin: DOCX, XLSX, PPTX, DOCXF, OFORM.
+- Currently, the following document formats can be opened and edited with this plugin: DOCX, XLSX, PPTX.
 - The following formats are available for viewing only: ODT, ODS, ODP, DOC, XLS, PPT, TXT, PDF.
 - The following formats can be converted into OOXML: ODT, ODS, ODP, DOC, XLS, PPT, TXT, CSV.
 - The plugin will create a new **Edit/View** menu option for Office documents. This allows multiple users to collaborate in real time and to save back those changes to HumHub.

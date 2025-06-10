@@ -1,0 +1,10 @@
+.codeblock {
+  padding: 12px 24px;
+  border: 1px solid #d5d9de;
+  border-radius: 0.25em;
+  color: #00f;
+  background: #f9f9f9;
+
+  font-family: Monaco, Andale Mono, Courier New, monospace, sans-serif;
+  font-size: 0.75rem;
+}

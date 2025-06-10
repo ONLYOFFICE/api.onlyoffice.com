@@ -1,0 +1,71 @@
+---
+id: create-a-new-task
+title: "Create a new task"
+description: "Creates a new task in the selected calendar with the parameters specified in the request."
+sidebar_label: "Create a new task"
+hide_title: true
+hide_table_of_contents: true
+api: eJy1Vd9v2kgQ/leseV6CMQkhfssllS46qY0K9KRGPAz2ELbY3u3uOpRa/t+rWS+JadNwd9LxAMvOD898883nBhw+WkgfIMOCqhzNcI52a2EpwFJWG+n2kD40cF27jTLyOzqpqj8JczIcZQhzELAz0hEs26WAnGxmpGY3SOHGEDqyEUYV7SKHdhvJKnIbiiwVlDnKo8ODo510G2/SaLAkR8ZGVlMm15LyQ5ihrzVZdwYCwvEPle8hbSBTlaPK8RG1LmTmSx1+sVxIAzbbUIl8cntNkIJafaHMgQBtlCbjJFm2ysz/HLcx7xUub7CI1sqUyMEhmXVGVo/QCnAqVwuZ/ybH4u721yD/4X6sVpXtykji+PUUIP51p2gM7kGAdFTa0wjc5T2fUKMA+oalLvhqxG2GFt/wSsa7HNn1Jgz4VN4DEe5uOeo9lvS2/1zlKvJurYDbPlAno/rerYCZQ+PeDkviJB6MkkE8mseTdDxJR/HZdHJ+cT5NPvsmFTs6OtHjqTQfdhUv1n8bUSBlCnUt8+PHrvM1XVxeDsZZMhmcX44ng6t8fTVYXeBkOl6tphdJ/M9A/4QFmX30eb9VT8CsddJ5w8KSuefFtUfXDPffBrUmA4Hn5/HoV2ovKgwKQ7lPUJLbqBxS0Mp6ANBtIIUhajlMzuLhs17JzPLOAQuWeSJjvV7VpoAUNs5pmw6HzUZZ16aNVsa1IOAJjcRV0YHJtq6gNdYF41eoDAt/3QrgmGPzNL5KuJmeRs5457p0ryrlyy5q+Rf5ZeSuN51ZQOWBP471MPBSf3wRuneHQQShehnRs+70tEhWa+WfHYZxo8qyrqTbRzMPVfTx3WweXd/fMSRkbDeKghU7tG5diX6hQoGdnvfkHH5S/J4O/6/iH+B09M0NdYHS77EfehOo8sBYg4DkLGbNDA9i5ANhliKM/gGaZoWWFqZoW77+WpPh197yhSn8rxWHgTHDtrT3kPpuB3Ouh92LuhvzT7rcikPEdZaRdm/6Lnv0v/8wm4OAVXjLlSrnGIM7fgPiDlIAAcqj7+nn7xoosHqs8ZF9u5xMJl6xYy5uPRfDgbs6mKp9r8JjWorQCH9zW6+GNE3H9LZ99u9Mv4143oXOmye6bNv2B6eR5oY=
+sidebar_class_name: "post api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Create a new task"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/api/2.0/calendar/icstodo"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Creates a new task in the selected calendar with the parameters specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"ics":{"description":"Task in the iCal format","type":"string"},"todoUid":{"description":"Task UID","type":"string"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Task","content":{"application/json":{"schema":{"type":"array","items":{"type":"object","properties":{"Id":{"type":"string","example":"1"},"Uid":{"type":"string","example":"123wda"},"CalendarId":{"type":"string","example":"calendarID"},"Name":{"type":"string","example":"Todo Name"},"Description":{"type":"string","example":"Todo Description"},"Start":{"type":"string","example":"2020-12-01T06:36:10.8645482Z"},"Completed":{"type":"string","example":"2020-12-01T06:36:10.8645482Z"},"Owner":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"2fdfe577-3c26-4736-9df9-b5a683bb8520"},"Name":{"type":"string","example":"Valery Zykov"}},"title":"UserParams"}},"title":"TodoWrapper"}}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

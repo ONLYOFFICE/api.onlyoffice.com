@@ -1,0 +1,71 @@
+---
+id: get-an-invoice-item-by-id
+title: "Get an invoice item by ID"
+description: "Returns the detailed information about an invoice item with the ID specified in the request."
+sidebar_label: "Get an invoice item by ID"
+hide_title: true
+hide_table_of_contents: true
+api: eJztV8Fu20YQ/RVirqUlinLRhEBR2JKBCkFcx5JRJI4PI3IkbkzusrtDxazAz+mP9MuKXUo2CRuig6ZAD+JBIHbnzb6ZebPibIFxbSC6hVjnw5ncKBGTgTsfDMWlFlxBdLuFs5JTpcWfyELJXwkT0hajCRPw4asWTHBX3/mQkIm1KKwZRHBNXGppPE7JS4hRZJR4Qq6Uzp0nD5eqZA+lJ5qTPcGUe18Fpw4zm3qmoFishMO5NU1/lGR4AD7sXs9VUkG0hVhJJsn2FYsiE7E7Y/jFWC5bMHFKOdo3rgqCCNTyC8UMPhRaFaRZkLG7OyqWiUjsQjemWZvpbAr+3p2QTGvSULvHsjOFkqZxGgbBYVfgfy/+C8EZtcwMayHX4AM9YF7YrZ1J7cOcVXz/jqgQcn0jBR+GPbOufZi2IzoEbhvWPlxpEbdZyjJfkgYfGnFABIkqlxl1fIwGocVOSq1JxtV3ycUkFZIMeR9LdMTmVb5U2WHM339Zy7PlUtNGYH/sk8uPDe+MS02XmPdxurTmMzNRckOacdkJYqlURig7CNYlNZhzNCLusV5hZgisSLlJ0GNKZ3KlftdYFFbIO318KFGyuwm+rVphU62Fxvh+Jjckla5eG0bTGQt8GPUXuT+fzuJfiPUa+Zu16jC26JqQ6beeA8MgDE5G4cnodBGG0WgcnY4GP45/ehOOx5+evJy/QvKz5KWTHpmWpUg6Jwe75+SFn/3jcidMkWHVn+z34p68TygrZHMvnAL6u/A9Slw3mjvbIKOe55j1dGGpM4+VZ6ylhw7V3CxqJTK60T3wz5+HV1olZczGvpIqMmrWLHyApnj4pTSkf8YkF1IY1shKd7rmIi8yVRHZjmnIT1BeJJ179JDMJyinlBG/urunLcP9/02ruELyOOzemOH4tEP5qbNabf60GB7b7dhux3b7b9vtqNGjRv9/Gp0x5Y8idRPMaTB6PrTcSNwNg5Q4NzlxqhKIYE1OesgpRDDEQgzDQTC0c2VrpBpuO/NVdBucvL37oQY7cOoNaePmzdJWClLmwkTD4TZVhutoWyjN1nKDWthvYiduu9ewXGGZ2ZAzFWPmlmsfLKa7/SZ4G9oAWzPu3I5WjbsXJ93HBGMh3lEFPgibirTZ9kG6DuhiXW7s7Hb9NKVe7IvwbMoMautzpdxZ+29yleelFFx5c5ca7/pivvDOrmY2BaRNU48MmWyo9T9Wj0kL
+sidebar_class_name: "get api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get an invoice item by ID"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/crm/invoiceitem/{invoiceitemid:[0-9]+}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns the detailed information about an invoice item with the ID specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"invoiceitemid":{"description":"Invoice item ID","type":"integer"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Invoice item","content":{"application/json":{"schema":{"type":"object","properties":{"Title":{"type":"string","example":"Title"},"StockKeepingUnit":{"type":"string","example":"StockKeepingUnit"},"Description":{"type":"string","example":"Description"},"Price":{"type":"number","format":"double","example":"1.2"},"Currency":{"type":"object","properties":{"Title":{"type":"string","example":"Chinese Yuan"},"Symbol":{"type":"string","example":"¥"},"Abbreviation":{"type":"string","example":"CNY"},"CultureName":{"type":"string","example":"CN"},"IsConvertable":{"type":"boolean","example":"true"},"IsBasic":{"type":"boolean","example":"false"}},"title":"CurrencyInfoWrapper"},"StockQuantity":{"type":"number","format":"double","example":"2.2"},"TrackInvenory":{"type":"boolean","example":"true"},"InvoiceTax1":{"type":"object","properties":{"Name":{"type":"string","example":"Name"},"Description":{"type":"string","example":"Description"},"Rate":{"type":"number","format":"double","example":"Rate"},"CreateOn":{"type":"string","example":"2020-12-14T22:13:41.5378233Z"},"CreateBy":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"},"CanEdit":{"type":"boolean","example":"true"},"CanDelete":{"type":"boolean","example":"true"},"ID":{"type":"integer","format":"int32","example":"1234"}},"title":"InvoiceTaxWrapper"},"InvoiceTax2":{"type":"object","properties":{"Name":{"type":"string","example":"Name"},"Description":{"type":"string","example":"Description"},"Rate":{"type":"number","format":"double","example":"Rate"},"CreateOn":{"type":"string","example":"2020-12-14T22:13:41.5378233Z"},"CreateBy":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"},"CanEdit":{"type":"boolean","example":"true"},"CanDelete":{"type":"boolean","example":"true"},"ID":{"type":"integer","format":"int32","example":"1234"}},"title":"InvoiceTaxWrapper"},"CreateOn":{"type":"string","example":"2020-12-14T22:13:41.5378233Z"},"CreateBy":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"},"CanEdit":{"type":"boolean","example":"true"},"CanDelete":{"type":"boolean","example":"true"},"ID":{"type":"integer","format":"int32","example":"1234"}},"title":"InvoiceItemWrapper"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

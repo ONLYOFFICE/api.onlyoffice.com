@@ -2,7 +2,7 @@
 sidebar_position: -5
 ---
 
-# Text Document API
+# Text document API
 
 Although a text document consists of various elements, most of them are nested in each other and three main elements can be outlined: *paragraph*, *table* and *block content control*. All the other elements are a part of these three larger ones.
 

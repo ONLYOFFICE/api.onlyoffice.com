@@ -1,0 +1,63 @@
+---
+id: get-all-storages
+title: "Get storages"
+description: "Returns a list of all the portal storages."
+sidebar_label: "Get storages"
+hide_title: true
+hide_table_of_contents: true
+api: eJytV0tz2zYQ/iuYvfjCSrKSdFLd1DjN5DFNJ7bHB4/GhsiliBgEWGAZW9Xwv3cWoChRdGI57YkksO/Ht8sNkFx5mF3DORIps/JiLM7JOrlCWCRgK3SSlDXvM5jBCmmudXvtIQGHvrLGo4fZBqaTCT8y9KlTFTPBDD4pT8LmwrdM4l5RIahAkVut7b0yK1FJJ0skdCwytYbQEEuSVaVVGtSPv3oWtwGfFlhKfqN1hTADu/yKKUEClWNjSUVjtpbtUUrn5BoSUISlf1qCyvZoPDllVpAceHdR4NYz8f5sBAmYWmu51AgzcjUmgA+yrPgTfnv98ldoEiBFGp8nOrD8WLrGlUzXN6eT15PqxpdS65t7azM0N6WtPbLivns/FxQjyyNtlzUVaKjNn7jDtWDmH3txpUyuUGfisiJr2OhvUtdBYykfPqFZUQGz6atXCZTKbL8nyc/ZE2T/2CBvSxSED/TMzD2i7f9IYpOAzDLFMqX+ay8zudQejzRk125sTesUzGsqPuKa/RxK0f0ufkSqH3rWJJDWzrXN3MZsaa1GaQZBO68wVblCL1QuqFBeKB9gohUhKutI6s4C64SxxEq78LU6lT/Hn9O4lZ1KI5YoPNJ31Tw/EVvhyuTWlSFu++FvQfWMbMhyaute2JQhXKGDBCJ3PHox5XRpZe7+Q0sXDvNhUbODaTR/cNWwhZ4k1f5IEyPxG5vhUQzNIC5z9unKyapC1xrwcnI6HDeXhkvTOvUPZhCIXgyJ/rSiQlcq75U1XlD4ZBtiGbR+BycxrZ2iNcyuNyB9esPSb+6QD8ChzCCBe6cIYdEkG/gdpUMHs+vwNa/UR1x3Z4/RS6/SLfln7sDp44SfKwwT+HrRLA6L6wtS7YwXsutSqXVonX7LhA4tkQrbjnKuBMn4CWNZqfF0NBn7dgkYtzzAIXDfeDJzBGqnYQabpfR46XQzbKlAK1JrcrWq4+IAjOFOMSyEammZY1ZyWWvO+0DSWbwSl18+cboXu1Sc8wIQRfUTsqv/EPeByEuP4o21d+oQvhi4wljrC0xAMVsaWLiW2mx1egqiaqDlrSF0Ym1rJ2qPjgULaTJRSe/vreO8hhUmIFMQyJLbGjlG9EkkFpsPVxfiwt6haU56QqOspH35Y9taH64uWFW/KJ+K2byP88qLjAdHqQxmYrkOVXYybzsu0JyIAmUWDGiD2tPYBrWlaZKu6ncoJcPBoSWRTuTa3scVsqdVBGhJgK9jaezfbnGndxhqMATaz8bjoHVkjV7bPFcpjlJbxsPpuEMUhmsO+PGsgTxkx1bbvVRmoWllJmSaoo/44yxhSpgJh97WLg3bdQSAGVzx8wnqiIlbnNhFMxy8scZE6D8IKt+eifZ62BY97uO95sLnMcf5ffjFq5WRVDt8uty4pDty7p9M5NYd2DUSPE5DZEVZe+JRbZckQ01+UzIU5e0O0SJs9DJyK9BklVWGRuI9cVlze2ImJMNo7Pjdj0ro4ds9R25Hu+re9+8AMXgX4Siw29slq1KMh+h8dPjF6HQ0Cbu59VRKs1ux4R1Sh9yHgdrs/pKeB/9t+HmhHVdaqrBi1xGN4yy45txAAtPRJIB/nAf8uvspLKwnptx0k6Dh479rdDwYFzvEj7Nt2+48QgJUwzxNsSLo1vvhrx5Dfjes3r29gCS0b7+GIky3Lyx9e2XW+7L7qB4tuAur7nc4NptYoE3T0cer73J0oBepObCLpmn+BRRWVTQ=
+sidebar_class_name: "get api-method"
+info_path: site/docspace/api-backend/usage-api/api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get storages"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/settings/storage"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns a list of all the portal storages.
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"List of storages with the following parameters","content":{"application/json":{"schema":{"type":"object","properties":{"response":{"type":"array","items":{"type":"object","properties":{"id":{"type":"string","description":"The storage ID.","nullable":true,"example":"9846"},"title":{"type":"string","description":"The storage title.","nullable":true,"example":"legacy_1080p_small_wooden_mouse"},"properties":{"type":"array","items":{"type":"object","properties":{"name":{"type":"string","description":"The authentication key name.","nullable":true,"example":"Winfield Upton"},"value":{"maxLength":255,"minLength":0,"type":"string","description":"The authentication key value.","nullable":true,"example":"some text"},"title":{"type":"string","description":"The authentication key title.","nullable":true,"example":"legacy_1080p_small_wooden_mouse"}},"additionalProperties":false,"description":"The authentication key parameters.","title":"AuthKey"},"description":"The list of storage authentication keys.","nullable":true},"current":{"type":"boolean","description":"Specifies if this is the current portal storage or not.","example":true},"isSet":{"type":"boolean","description":"Specifies if this storage can be set or not.","example":true}},"additionalProperties":false,"description":"The storage information.","title":"StorageDto"}},"count":{"type":"integer","format":"int32"},"links":{"type":"array","items":{"type":"object","properties":{"href":{"type":"string"},"action":{"type":"string"}}}},"status":{"type":"integer","format":"int32"},"statusCode":{"type":"integer","format":"int32"}},"title":"StorageArrayWrapper"}}}},"401":{"description":"Unauthorized"},"403":{"description":"No permissions to perform this action"}}}
+>
+  
+</StatusCodes>
+
+
+      

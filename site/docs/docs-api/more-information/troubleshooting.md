@@ -18,7 +18,7 @@ When closing the editor after the editing, the file is unchanged in the **docume
 
 The **document editing service** could not send the data to the **document storage service**.
 
-Check if the [editorConfig.callbackUrl](../usage-api/config/editor/editor.md#callbackurl) link is correct. The saving in the **document manager** must be implemented through the [Callback handler](../usage-api/callback-handler.md#net-c-document-save-example)
+Check if the [editorConfig.callbackUrl](../usage-api/config/editor/editor.md#callbackurl) link is correct. The saving in the **document manager** must be implemented through the [Callback handler](../usage-api/callback-handler.md#document-save-examples)
 
 ## Could not be saved
 
@@ -28,7 +28,7 @@ The editor is loaded with the "The document could not be saved" message.
 
 The **document editing service** cannot connect to the **document storage service** at the [editorConfig.callbackUrl](../usage-api/config/editor/editor.md#callbackurl) address.
 
-Check if the [Callback handler](../usage-api/callback-handler.md#net-c-document-save-example) is working correctly. The **document storage service** must return [\{"error": 0\}](../usage-api/callback-handler.md#response-from-the-document-storage-service) in response.
+Check if the [Callback handler](../usage-api/callback-handler.md#document-save-examples) is working correctly. The **document storage service** must return [\{"error": 0\}](../usage-api/callback-handler.md#response-from-the-document-storage-service) in response.
 
 ## The file version has been changed
 

@@ -1,0 +1,71 @@
+---
+id: start-the-data-reassignment
+title: "Start the data reassignment"
+description: "Starts the data reassignment for the user with the ID specified in the request."
+sidebar_label: "Start the data reassignment"
+hide_title: true
+hide_table_of_contents: true
+api: eJy1VE1v2zAM/SsCz1qdBTtsvnVrgQU7LGjaU5GDYjOxWllSJbppZvi/D5TtfLTpBgxYDoEsiuTj4yNbILWJkN+DR+cNZncRgygVKVhKiFg0QdMO8vsWLhuqXNC/FGlnv6MqMbBfQFWChG3QhLDslhJKjEXQnp9BDgtSgaKgClNYEVDFqDe2Rkti7UKyNJx1q6lKX7MrET0Weq2xFNqmu4BPDUa6AAnD8asrd5C3UDhLaImPynujiwQwe4icvoVYVFgrPtHOI+TgVg9YEEjwwXkMpDGydR1czcXPSv46rSGRMrsS28rFoYytNkascF8OloKcUNZRhSHVA3LMGClou4FOArm/pSDHWWqhjDlw9jbZueAlGiScB7fWBt9mWAyURrGtMKEkJ3ofoYTv3dhm32nWiGKtrY4VlsIFYR0doKycM6gsdOnHjYre2djzO51M3mK6OY7vg9sEjBHkv/eUNHHt+8DzIeaMsIYe1afJxzP0WzXIG0vgVzVS5UrIwbuYxKKoghwy5XU2vZhkw7iMBGWRZQ48MuEZQ0wT0wQDOVREPuZZ1lYuUpe33gXqQMKzClqtTM8O23pUa9UYghyMK5RJ150E9jk1f558mXJBR1O6YFb6cGdndc+W8voH7kCC5tKr3izBqpqtJ76JC6b95jB01y+q9r3CjodmVOKxyg93r8RJocGOAaxdAja07Zur68Zq2olF4lHcXC9uxeV8xnxhiH2zjCIceYlUq6SJAX1aN+cFDK9W09Hq+A9bauCa8IUyb5S2jDcpoh3EdM+NAAnTiwkLLAkqrbc+NYspiWopB3ncQ9uuVMS7YLqOr58aDLyclwc18Vcnx6ayCh9xl5hNpX64ZVj83DS9FF5NVydHj8uiQE9/fLs8mpP5z8UtSFgNW7l2JfsEteWS1BZyAAkuUZ8kmu5aMMpuGrXht31MFhzP4qleH5NehwNXNZrs7gjhqXTlUAj/c1lnXdq2n4au27/vTe967Oelf82NXXZd9xu8J4ec
+sidebar_class_name: "post api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Start the data reassignment"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/api/2.0/people/reassign/start"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Starts the data reassignment for the user with the ID specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"fromUserId":{"description":"User ID whose data will be reassigned to another user","type":"string"},"toUserId":{"description":"User ID to whom all the data will be reassigned","type":"string"},"deleteProfile":{"description":"Specifies whether to delete a profile when the data reassignment will be finished or not","type":"boolean"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Reassignment progress","content":{"application/json":{"schema":{"type":"object","title":"ReassignProgressItem"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

@@ -1,0 +1,63 @@
+---
+id: get-portal-capabilities
+title: "Get portal capabilities"
+description: "Returns the information about portal capabilities."
+sidebar_label: "Get portal capabilities"
+hide_title: true
+hide_table_of_contents: true
+api: eJydV01T4zgQ/StdunDxJmzm5hsL7BSzVEENUBwoaujY7USDLWmlNkw25f++1ZIDTsxAilMSuz+fXr9W1opxEVR+p47R4VzXmjUFdZ8p68gja2vOSpWrBfGl9Yz1llmmPAVnTaCg8rWaHR7KR0mh8NqJr8pVcoNi26+whsmwmKNztS5iqunPID5rFYolNSjfeOVI5crOf1LBKlPOS2ExSr5+Sf+xZV2iOzU4r6kcGM+trQmNynaKvnJU6EpTAF0BLwnOT44uIRCzNosA6AkoBQPrwVieqEzRL2xcTSqvsA7UZTHniW1Qm0HKwF6bxSjj9SZJGR0knmnrWnKonH1Lg/gq2IaA6RerLvb5pEvyYZAEvceVypRmasI4efdW9loHBlvBS7x3a7gbFHHfZSoEe45zqvfr9OoSarvQBmrxeb9ZqdZiy8tPHt/FUctL0OG9E5OcqYkbv28LVxdw8/18AmfCEB3AoceGmHzM1TheZUIdE/kj1lv0KXWI1UgZlfUNsspV6/WHUOiSDGteXZF/Iv9JTDZBIMQoY3RG4HSZwrLUEgzry8FoRbK/BdBw4l/BiaxizbGfoZicsJX2CtsmWejb0YZpQX6Ikjb8ZSa2tTaP+7D+N5Kw9FS9ORtYpDZGrzqBITByG/YsMRkf25L2cujexubWo3PkYwGj2f1O3HoTIs20SRG1NYBz2zK4sfzKCTTES9sLuwCDvFS5mqLT09nkcLqj1oklsibWqpUBUes5BrrxdTfmWWJUYU2lF21aISpTT+i1ECwC1zunZVFhWwsEo0gn6ZVMmXR+L3UUrRfuy3pIoTAUP0QcfjzSakgFp/+h1SjkTSA4tvZRE4iTDEGxqdBgEz2HATMl2q2K6CLn+RcGXQzyLJndKMupERVY2dZDG8hLYEBTgsMQnq0vBdHYgYxrDCiRCT35/UIfJGNYf7u9hmv7SKY72AqaYmX9l783LPt2ey2pjiI4o4S/wexoCyiRilIGudGGSpivIu8OxMh6/V+0OYAlYRkL6EHdytiD2tt0mYoKPRsOLMYHu5UkO6hq+wzPmpewlRXilGVKXidqDN9uRnDrYeRgBDrk02nMOrGmXtmq0gVNCtukh7Ppxk0SsAC+v2s0j6dj3ebWgmUcXCwBi4JCALayd5kKphI8Bdv6Io7es9cskNzK5wfWSR0uHMU72yua8cGxNSap4A6o8vYE+tfjsdjy3r9rIb6okZzvrz+CXhjk1tPHdBNKv5jL/JRQWb9T1wRkw0RkoWkDw5zAzhkjJ580RlI+bNRsIxtbJ/IAZEpnteEJnDHEBR4kGwZASBOfWCax4gw/DBp5mLyye9jfjmLIwhYUpO1e2I+cLHnR09Twl8mfk8N4kbOBG4x7pw/8ld4U8F3M1q/X6c9tg/5E5DI3dbXcV7ssCf26Xw13clwqU7PJodzed/4rLG1gsVm/rIVOHv/bkl+p/O7+Vf7lV5dtZl/2SdRtdVQU5DjuibpN7Nj5VyD6/7K1vp5eq677H3rmbnQ=
+sidebar_class_name: "get api-method"
+info_path: site/docspace/api-backend/usage-api/api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get portal capabilities"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/capabilities"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns the information about portal capabilities.
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Portal capabilities","content":{"application/json":{"schema":{"type":"object","properties":{"response":{"type":"object","properties":{"ldapEnabled":{"type":"boolean","description":"Specifies if the LDAP settings are enabled or not.","example":false},"ldapDomain":{"type":"string","description":"The LDAP domain.","nullable":true,"example":"some text"},"providers":{"type":"array","items":{"type":"string"},"description":"The list of providers.","nullable":true,"example":["some text"]},"ssoLabel":{"type":"string","description":"The SP login label.","nullable":true,"example":""},"oauthEnabled":{"type":"boolean","description":"Specifies if OAuth is enabled or not.","example":true},"ssoUrl":{"type":"string","description":"The SSO URL. If this parameter is empty, then the SSO settings are disabled.","format":"uri","nullable":true,"example":""},"identityServerEnabled":{"type":"boolean","description":"Specifies if identity server is enabled or not","example":true}},"additionalProperties":false,"description":"The capabilities parameters.","title":"CapabilitiesDto"},"count":{"type":"integer","format":"int32"},"links":{"type":"array","items":{"type":"object","properties":{"href":{"type":"string"},"action":{"type":"string"}}}},"status":{"type":"integer","format":"int32"},"statusCode":{"type":"integer","format":"int32"}},"title":"CapabilitiesWrapper"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

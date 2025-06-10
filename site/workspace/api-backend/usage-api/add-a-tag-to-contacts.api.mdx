@@ -1,0 +1,71 @@
+---
+id: add-a-tag-to-contacts
+title: "Add a tag to contacts"
+description: "Adds the selected tag to the group of contacts with the parameters specified in the request."
+sidebar_label: "Add a tag to contacts"
+hide_title: true
+hide_table_of_contents: true
+api: eJy1VU2P0zAQ/SvWnEAym7DiALktsBIIBIgWLlUPs8k0MSSxsSe7lCj/HY2TbLOlReJAD5HrmXmZj/cmPTCWAbIN5L5J1nLeagiUd97wHrJND1cdV9abX8jGtm8IC/Li7wkL0HDnDRNsh62GgkLujRM3yOCqKILiilSgmnKmQjGWim28K73tnLI7lduWMeeg7gxX0eTQY0NMPqjgKDc7Q4UybbR5+tFR4AvQMB1f2mIPWQ+CQy3LEZ2rTR6zTb4FyaWHkFfUoJx47wgysDffKGfQ4Lx15NlQiNbYjP6olFdjkipa9QyB3uMeNBimJiygA3vTljAMGqbqVowlnYcNYlZvX6tHd+gbrh4f3mFappI8HLDW0XA2w70TpL8BvDeBvxq6Ow9Sm8DqVlxOwey8bV4jn0hixehZFWLTx83QwPZ01HVbnI/B8gM2J4LWWKpWLH8ExZ/QIzjbhnGql2l6EgL0P/Nm8RoNz9Knf+J+aXESDBWRBA1xZQvIwNkQGYdcQQYJOpNcXqSJCG+aTbIzNZNPGEsZAogS/S35EIXY+RoyqJhdyJKkr2zgIeud9TyAhlv0Bm/qsWKxjantsKsZMqhtjnW8HjRIzEPz8/TFpVS1EP9Kah/hTq6A+56gM+8oKkHqr0azhjif7GFsbIg09/NBvtc/sXE1HeS3mbu8PVZQeiSD9ASr0yVFZ6QD/RY3M7kWhDPtzsZEDEtG8Mo2Tdca3qtVHIT6fL1aq6tPb6Xh5MM48hqZ5sYGbjBSZy6/KBTOq2/ednC0LBf763/vzWlmTD85cTWaVtKOzOonZm5koKDh8iIVgfgG7rsMGkaGju2LHN3qiW0b6PsbDPTF18Mg1z868vIJ2R7IKf8GPXNESP2d9tPqoZafxLGKe92NzDqS5KDniKs8J8d/9d0utPfp42oNGm6mz0VjC4nxKDtOnhmABhvHERkf73qosS27SD0YMYW/ou+H9P8e6T8dpKrZ1O4XGT5Ugp4KkaeUdTKk70dxDcO9/2g6G3Evv9Fb5rsdhuE3b8y3pA==
+sidebar_class_name: "post api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Add a tag to contacts"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/api/2.0/crm/contact/filter/taglist"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Adds the selected tag to the group of contacts with the parameters specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"tags":{"description":"Contact tags","type":"array","items":{"type":"string"}},"contactStage":{"description":"Contact stage ID (warmth)","type":"integer"},"contactType":{"description":"Contact type ID","type":"integer"},"contactListView":{"description":"Contact list view","type":"integer"},"fromDate":{"description":"Start date","type":"string"},"toDate":{"description":"End date","type":"string"},"tagName":{"description":"Tag name","type":"string"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Tag","content":{"application/json":{"schema":{"type":"string"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

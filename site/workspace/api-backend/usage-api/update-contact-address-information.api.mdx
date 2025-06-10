@@ -1,0 +1,71 @@
+---
+id: update-contact-address-information
+title: "Update contact address information"
+description: "Updates the contact address information with the parameter specified in the request."
+sidebar_label: "Update contact address information"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVVFv2zYQ/iuHe90plpxsa/RUN8lWN3WQ1mmLIfADLZ0jNpLIkVRSz/B/H46SnbrZig6YHwyBvPv4fd/xjhsM6s5jfouFa0Znpg2qCB4XhJ6Lzumwxvx2g5MuVMbpv1TQpn3NqmQnOY5ViYSPTgfGxXZBWLIvnLYShjl+sKUK7CFUDEWPDaosHXsPul0Z10RAeNShikFWOdVwYAfecqFXmkvQbdxy/GfHPhwh4fD5ypRrzDcoyNwG+VTW1rqIoKPPXjhs0BcVN0q+wtoy5miWn7kISGidseyCZi+7upT/QwGDIQdkHRfGlTA9R9oh6jbwHTvcEg4yvwf2L5mDMc/zrvhx71qpgsJt/IkP3prW9/THafpj/Pdmd7E65Q4b6f9yctquzE2M2Hyrk7An0i8dj5GQ266Ry3RdmZaR8KJRukbCT7z0cq8I5/cCQnjzqEOIIG91e8/ltEXC31TBS2PukXCyF/JWP/Ab07lWCdJsPbeqEITfZz32q9rc9XT+UJUxEjO/QsLp2TskfKOWy7g5mc6Q8OMlPrvZtykkEBkTZJBAJE0whgQG3gTHkECkTnACCQzsCX6GBHYCCH6BBHYaCH6FBAYZBC9i4F4JwSkkMIghyIRCFESQCYdBFEEmNKIwgkxYzOZXBJmQmJ69I8iEQS+SIBMCk+mMIJPDP14upCZfVGNrKVwmV/NMBb4zbv2DBd0np5J8Llf2KdEHp9u7gzDfWWtceGnaem1WK13wUWGarw++Ug1/H+O1aVgypv7a6UYdcF0aU7NqD+KD6/r48/8qKhsfn6C0X9AhLgxNJrf+k1PWSjvH/jxJs+ct+aFVwzDlMsI0HCpTYo62i62kQoU5jpTVo/FROpK5PAyV0WY/XfLbNDld/LQdDc0rc2G0eVpHGeDugZ2P87tzNeZYhWB9PhptKuPDNt+I6RL5oJxWy7pvXtnrWa9UV4sFtSlUHZe3hJJzuP0iPR2L4K/ejLkMih7uH1+OveHK6kteI6EWa6p+m7CN5T7MjV7JJHr/NP0vdkXpp3d6MH7TrcCuTDxuX6qm6Vod1jCP7sD7i/kNTK6n4gI735eolkcr4Hb7N5zyXNA=
+sidebar_class_name: "put api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Update contact address information"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"put"}
+  path={"/api/2.0/crm/contact/{contactid:[0-9]+}/addressdata/{id:[0-9]+}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Updates the contact address information with the parameter specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"id":{"description":"Contact information record ID","type":"integer"},"contactid":{"description":"Contact ID","type":"integer"},"address":{"description":"New address data"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Contact information with the updated address","content":{"application/json":{"schema":{"type":"object","properties":{"InfoType":{"type":"integer","format":"int32","enum":["Phone","Email","Website","Skype","Twitter","LinkedIn","Facebook","Address","LiveJournal","MySpace","GMail","Blogger","Yahoo","MSN","ICQ","Jabber","AIM","VK"],"description":"[0 - Phone, 1 - Email, 2 - Website, 3 - Skype, 4 - Twitter, 5 - LinkedIn, 6 - Facebook, 7 - Address, 8 - LiveJournal, 9 - MySpace, 10 - GMail, 11 - Blogger, 12 - Yahoo, 13 - MSN, 14 - ICQ, 15 - Jabber, 16 - AIM, 17 - VK]","example":"1"},"Category":{"type":"integer","format":"int32","example":"0"},"Data":{"type":"string","example":"support@onlyoffice.com"},"CategoryName":{"type":"string","example":"Home"},"IsPrimary":{"type":"boolean","example":"true"},"ID":{"type":"integer","format":"int32","example":"1234"}},"title":"ContactInfoWrapper"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

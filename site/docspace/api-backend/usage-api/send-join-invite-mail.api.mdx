@@ -1,0 +1,71 @@
+---
+id: send-join-invite-mail
+title: "Sends an invitation email"
+description: "Sends an invitation email with a link to the DocSpace."
+sidebar_label: "Sends an invitation email"
+hide_title: true
+hide_table_of_contents: true
+api: eJydV0tv2zgQ/ivEXHJR7azbHlanTZMukG67LeIUOQRBMybHNhuJVMlREtfwf18MKcVynKbB+mJZnMfHeXwzXgPjIkJ5CVNitm4R1Vh9ohhxQRGuCvANBWTr3amBEiI588Fbd+puLdMntBUUEOhHS5HfebOCcg3aOybH8ohNU1md1Mffo3fyLuol1ShPomcDGfFOtdi6KoBXDUEJfvadNEMBTRAEbCmKShYr11Dj/UdyC15COXn7toDauv734YORyMG6BRRgKOpgG8EBJZwvSSVDCo0JFKNqIxk190HJ/axbKDS1dTZyQPZB1V08RlDA3IcaGcoOSgGurSqcVQQlh5YKoHusG/kJ05VxtPp25mcUOL75a+lZdEba17ApQLcVt4HkNr/HW3mNFSlryLGdWwoJbgcsn9qfKdCjZzFFX5NiumfYbApAY6zoYPVlEOY5VpGeAtElWjUYsCamEBMKXtLTAVPau7ldtOEBGFtOMI5EvCuzdxipL76z7CGesIfNRiAGio13Mad/cngoX7vIOjMKZ77lbQZVZd2NYp9BhFp999bJicA98XraoCYoXl6uz1dmj3M/nZJq32YP3Yl1TAsKw3Kyjl9PRFZgx4EshoArKMAy1fH3OJaB5k9iQJ3jtXeUwhwZuY0vhJiFj72hFylstnmfJp8XAZuGQuf6zVNJPXXah0Cau071oW/ZKhCalaJ7GzlC0n+9r/+vVw2F2sZovYtSBg0FAaZ4aaPqgiHakz/3tbsyVJWtLSsbFd1rIkMmXWZXdkrORIVOWeHEVDwd1DvLy0EdDutOeqEmXnoh1cbHlEcU9oIxNnY8GR2OY9cTYynpXLxCulBApHBLQVh7DW2ooIT1DCN9DdVmjzymSXa3E6GAWwxWGCKlvFPOcZhjW0ny9iyd5CP19eyjZO5KcOg2WF5NpUeyKYz6G7a8/HZDq2ERN/YfWu2Z/BpJHXt/Y0mJknCb7hE6rJPm0GABVtR0UpHsvcNo9cDPkrnZ8/LeMQW18m0Qog9iWKEzqsEY73wwEtF0AyglFFYny4SBwstMH2Rhtf5wca7O/Q25zcGO0Wyr6B7+7vvjw8W5uDpKwdlz+IuYHe0ESorTCBXX1pFRs1UqswMR8qGbCAdqSWgSgC6oOx67oHYymwI+i/ZkSDWYXjxGkuXUvPJ3udZ3vKrEDwXIcS6N4WlPHjsvUw2mQMdyPE5eR95VKz+fW00yN/PLybhXEwcsAX+5ahJP2fFNT91oUtOjUai1LATCF8EzaSajAkXfBk0RCrgL0oIlXMj3b6QzvX1uKO1O22imF8feuczfj4IqpyeqO95vix3tl99aCt+6uZf83r+KduHw0fLxi3KTkn4Q3y5Ku7hGStaDFFlVt5HVjJSfMaaavLWYivJ6S2yZNnYycq3ImcZbxyN1mjhX2pOMwqhQ5Y7PVSa2Ug9fDy5yPdpW9/B+jxhjU4AM9rPtxvq+X40elstn97bB2jbcpcTN3Kdo9htOY4VmKcQcx9ejP0aHIihsX2MaxB3eX06Qx8kY7Nb/f+x06Rbc46ZCm6Zgm9k/j6BLqQUoYDI6TMMmj6H0uDOIrgpYyugqL2H9MIA28vpHS2EF5eXVdtDIr03Rs4xMrjQh4Djf6NW5wBLxqs3V+GgV2xS9xpHW1PCzsleD6frl8/RcqLf7d1In4oGAd/LPBe/ypPMpwpkN5N0aKnSLFhcim23K5z+OEJry
+sidebar_class_name: "post api-method"
+info_path: site/docspace/api-backend/usage-api/api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Sends an invitation email"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/api/2.0/settings/sendjoininvite"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Sends an invitation email with a link to the DocSpace.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"required":["email"],"type":"object","properties":{"email":{"maxLength":255,"minLength":0,"type":"string","description":"The email address used for sending administrator messages.","format":"email","nullable":true,"example":"Sydney_Roberts4@hotmail.com"},"culture":{"type":"string","description":"The locale identifier for message localization.","nullable":true,"example":"some text"}},"additionalProperties":false,"description":"The request parameters for the administrator message configuration.","title":"AdminMessageBaseSettingsRequestsDto"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Message about sending a link to confirm joining the DocSpace","content":{"application/json":{"schema":{"type":"object","properties":{"response":{"type":"string"},"count":{"type":"integer","format":"int32"},"links":{"type":"array","items":{"type":"object","properties":{"href":{"type":"string"},"action":{"type":"string"}}}},"status":{"type":"integer","format":"int32"},"statusCode":{"type":"integer","format":"int32"}},"title":"StringWrapper"}}}},"400":{"description":"Incorrect email or email already exists"},"403":{"description":"No permissions to perform this action"},"429":{"description":"Request limit is exceeded"}}}
+>
+  
+</StatusCodes>
+
+
+      

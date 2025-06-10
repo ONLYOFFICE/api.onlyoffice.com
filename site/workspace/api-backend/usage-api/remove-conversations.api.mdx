@@ -1,0 +1,71 @@
+---
+id: remove-conversations
+title: "Remove conversations"
+description: "Removes conversations with the IDs specified in the request from the folders."
+sidebar_label: "Remove conversations"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVE1v2zAM/SsGz1rtZTtsvnVdgRXboejHKfBBselYrW2pEt3UM/TfB0pOGnftgA3LIVH4Ib5HPmoCklsH+Ro6qdr0TPePaJ0kpXsHhQCH5WAVjZCvJzgdqNFW/QzubygrtJxpUVYgYGcVIRS+EFChK60yHAY5XGGnH9El5fHlyU5Rk1CDycVXlziDpaoVVonqg9Hiw4COktrqLhhq3VZo3QkImH1fdDVCPkGpe8Ke+CiNaVUZCqR3jotP4MoGO8knGg1CDnpzhyWBAGO1QUsKHXtVFX6W0H8oR4muF9AZMIj9bdJaOYIARdi5oyqqJ9yiBQG1tp2kaPqwAh8/TMMZ3btYfZVlb1e3oYHVayj+lvy/wRXwMXv/O77bXs6KwAo4qkNqdAU5mCE0WFIDOaTSqHR1kqVBYgsVpJEasNAsm4POBttCDg2RcXmaTo125PPJaEseBDxKq+SmjX1jXwRWy6Fl2K0uZRvMXgDnLN2fss+B1JG2r7lJ8bpXFf7cPKO+Y+ges2+iW0AvO/YuckM7eApXz2I9f5KdafEgtnVWeL6r1qGGIvbBme66oVc0JtehJcnV+fVNcnp5wdTRutj6VhLuKTrqZJj2DCTu23Ld4MVSHq3Nf9/PuVuET5SaVqqeYYaZTrMk1txKELA6yUCElydKeYF3lkYh5iGvYZo20uGtbb1n88OAlh+m4lkT/M+L/WhYS/c4hqYGsu9uGBqHt0Mc6IuV8WKfcVqWaOiPscWR4C9vb0DAZn6SOl1xipU75iF3kAMI0CZSy6dom6CV/XaQW46NV7JqeKeWorsPopsPTGrv6scjgEv9iZkHfzOrV1OmKUra+0N8dL2ZcRB9jObZFt77XzAxKlc=
+sidebar_class_name: "put api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Remove conversations"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"put"}
+  path={"/api/2.0/mail/conversations/remove"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Removes conversations with the IDs specified in the request from the folders.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"ids":{"description":"List of conversation IDs","type":"array","items":{"type":"integer","format":"int32"}}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"List of removed conversation IDs","content":{"application/json":{"schema":{"type":"array","items":{"type":"integer","format":"int32"}}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

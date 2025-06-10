@@ -1,0 +1,71 @@
+---
+id: get-payment-url
+title: "Get the payment page URL"
+description: "Returns the URL to the payment page."
+sidebar_label: "Get the payment page URL"
+hide_title: true
+hide_table_of_contents: true
+api: eJytV0tz2zgM/iscXHJR7cTpSbc06e60u7PN5DE5eDwNLcEWG4lkSCqO16P/vgNQsqzYaXzYS+yQePED8AHeQJBLD+kUro0LshRjcS3XFeoAswSMRSeDMvpbDiksMbR3966EBBw+1+jDF5OvId1AZnQgvXQD0tpSZaw5/uWNpjOfFVhJ+hbWFiEFM/+FWYAErCM/QaGn27nMnsh+L+iDU3oJCeToM6csmYUU7goU9zd/i1WBDkUoUNQenVipshRzFA5z5TALmAu5COiEjbEL60yG3iu9HEECui5LOS8R0uBqTABfZWVLdmsqFAFfAzQJPNdSBxXWh+KXea4oJlleD17SyikdcIkOElgYV8kQj84nZHb/RZ0jYRZdxL+LcrqBJ1wPok3gRZY1Qno2Of/czJrmvQgXsvR4KIY2scJKJysM6LxYGMcQdyAS8JnRC7WsY4WIlQpFH73S8bHKaEI5qMCY9vVzE334q2CgaShIh94a7SN2k9NT+jic8WAGsVi5REj+r/rrwtgvwIZ81NHDEbktlX7arQPpnFxDAipg5T+Oo3C4OBiDzCIce1eMog8y1MeWXxS+NDkepdD0ibxlnw9OWouudf359Gw/Z/da1qEwTv2LObDQ+b7QP0ZYdJXyXhntKb8WHXkXoVBetC/m52FWO+7D6Qakz36S9Z/cAlNwKHNIYOVUQJg1yQa+oHToIJ3yfxdW/YXr7dkheelV1on/uKhDMTks+MMik+J01szettANhtrRM94vV+qJCkNhiFdtzdmXoYAUxtKq8WR0OrbMx+NWa1wz5Xp0L+g8v55OUtjMpcd7VzZ7/HjLssMuZXJwiqikJVtWjhlZyLqkbO9ZuopX9BhK9axPwy01VTQ1TEZf9Yz5nsl7j+LSmCeFgpRQh7ZfiexkxZq7BhNQpJaxCtVRm6mtnyIEu+flqybiX5va8Wwgw0LqXFjp/co4yinTAhmYs0Gy3NbHMaZPorDYfH+4E3fmCXVzMjAabSXtlz+6hvr+cEeuhgX5EWYXA6CE8iIncq6UxlzM11xkJxdtt7HMiShQ5hxAC+rAYwtqK9Mk24rvuUnywdtIopxYlGYVeX/gVTChJEDXsTR2bzu2GRxyDTLQPh2P2evI6HJtFguV4SgzVTycjLdsQlOFAD9elcU5O8Z2XC9zbliZC5nRVsDc40yIi4NDb2qXod82fwoP9PmBdOTDjiN6NPng0mgdCf8NqHR7Jdrr/bYYaB//aip8msaU39dPXi21DLXDj8uNSnorTv2T8xYwjGskaCgzsqKqfaDNy8yD5Jp8UZKL8rHjtI42Bhl5FKhza5QOI/EtUFlTe9La5oUUseNjlZEt7uHHnYc8jvrq3n3fG8ZoEqBN4KbfWb92O9TOzjlYo/qd74gti9wtDKPajsgLq0gKnY94no/ORqeUBWt8qCRP8DbuPzHsjQhm2zc52Vmyj50ybY4p5rEtpdIUQR0pP46cKRUAJDAZndIY4rHD86hbPkl6lkBhfCDpzXbkNHT8XKMjiGb9aIkDtOOVHr3LGPynO4ppC+D+tkYDNmpcZBna8FvZ2c4kvb6/I65tf5BUzDTg5Ip+rMhVHG2GsYztT2cbKKVe1rRDphBN8spcEza7PRLHUPuFHtVd6fVugMOpFZ9Bf+lRBzU2m9iATbOVj1fvamxJPUpTTmdN0/wHjW3FZQ==
+sidebar_class_name: "put api-method"
+info_path: site/docspace/api-backend/usage-api/api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get the payment page URL"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"put"}
+  path={"/api/2.0/portal/payment/url"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns the URL to the payment page.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"backUrl":{"type":"string","description":"The URL where the user will be redirected after payment processing.","nullable":true,"example":"some text"},"quantity":{"type":"object","additionalProperties":{"type":"integer","format":"int32"},"description":"The quantity of payment","nullable":true,"example":[{"key":"some text","value":1234}]}},"additionalProperties":false,"description":"The request parameters for the payment URL configuration with quantity information.","title":"PaymentUrlRequestsDto"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"The URL to the payment page","content":{"application/json":{"schema":{"type":"object","properties":{"response":{"type":"string"},"count":{"type":"integer","format":"int32"},"links":{"type":"array","items":{"type":"object","properties":{"href":{"type":"string"},"action":{"type":"string"}}}},"status":{"type":"integer","format":"int32"},"statusCode":{"type":"integer","format":"int32"}},"title":"StringWrapper"}}}},"401":{"description":"Unauthorized"},"403":{"description":"No permissions to perform this action"}}}
+>
+  
+</StatusCodes>
+
+
+      

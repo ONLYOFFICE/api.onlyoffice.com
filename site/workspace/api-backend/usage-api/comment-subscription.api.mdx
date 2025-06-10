@@ -1,0 +1,71 @@
+---
+id: comment-subscription
+title: "Comment subscription"
+description: "Subscribes to or unsubscribes from the comments of the event with the ID specified in the request."
+sidebar_label: "Comment subscription"
+hide_title: true
+hide_table_of_contents: true
+api: eJy9VMFu2zAM/RWBZ63Ogh0237q2w4odVjTtqfBBsZlYrW25Ep02M/TvAyU7Tpq0wC7LIbAkUnx8fE89kFo7SB8gN3XdNZq2ydUGG3KQSXCYd1bTFtKHHs47Ko3VfxRp0/xEVaDlPIuqAAkvVhNC5jMJBbrc6pbDIIVFt+TlEp0gI4wVXeOmrZU1taASBZfnssKswhoZhHjRVIbl9aVwLeZ6pbEQugl7Fp87dHQGElplVY2E1gWojaoRUlghFprBaQbSKirhLbofiIW4vgQJLi+xVpD2QNuWsx1Z3azBc0tDqe+m2HJEbhrChvhTtW2l88BJ8uj4zv74KrN8xJwYpzUtWtLo+FS7HTm8/Ii3iZKJqHeorEGOdZfGVKga8OHHbbjWNC5Wn89mx1W/xwyxUVWHqSDboahRNU5QqSjA6BxaoZ3YlS5OAwT5zzzt45XwZfb5GOB9owYdYgEcVSOVpuD5Ghco5jGnkKhWJ/OzWTLpOsBL+qgKn+zw8/DRbkbxdLaCFEqi1qVJ0pfGkU/71ljyIGGjrFbLKlLIZxHiSnUVQQqVyVUVtr0Ezjk8/jr7Nufu9ry1YBLidScdtiNHtfoXbkc1l/FYjlo/yA3EMMu3k26vXlXdVnikOx6x50tXJhTTxEFwMdImFoEbcXu1uBPnN9fMAVoXp1EpwrFXR7UKYx0QXUQdjDqJA3zjvz0r/Z+HYuCS8JWStlK6Yexh4v2gnAcmGiTMz2ZBwQMNICFUAgnp7l2ZJJTJQQwP0PdL5fDeVt7z9nOHlh/QbNJOkFmhHX8XkK5U5fADYqY36iT6UR7NNsiz6ngFEp5wO72BPvNy1AxXj4cXscanO75iSj7yqpdjxnmeY0sfxmZ7nrz5vbgDCcvh3axNwTlWvYAM/wGoCT0HB4S9HirVrDu15th4J+uZfX9oh6dgh+GDuzpJxaEzRl74n9s6mdL30Wze7+Lj0bsZOzvGaJ5M5r3/C+y8jaY=
+sidebar_class_name: "post api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Comment subscription"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/api/2.0/community/event/{feedid}/subscribe"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Subscribes to or unsubscribes from the comments of the event with the ID specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"feedid","in":"path","description":"Feed ID","schema":{"type":"string"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"isSubscribe":{"description":"Subscribes to the event comments or unsubscribes from them","type":"boolean"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Boolean value: true means that the user is subscribed to the event comments","content":{"application/json":{"schema":{"type":"boolean"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

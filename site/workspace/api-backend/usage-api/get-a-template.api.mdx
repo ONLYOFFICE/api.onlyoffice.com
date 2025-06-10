@@ -1,0 +1,71 @@
+---
+id: get-a-template
+title: "Get a template"
+description: "Returns the detailed information about a template with the ID specified in the request."
+sidebar_label: "Get a template"
+hide_title: true
+hide_table_of_contents: true
+api: eJy1Vd9v0zAQ/lese8VbssIDi4TQxiZRocG0bkJi68M1uTbenNjYl41Q5X9HttvSisGGBH6ILvZ99+Pz5csSGBceimuwztxSydklNVYjk4epBE9l5xT3UFwv4ajj2jj1HVmZ9j1hRS4AHWEFEh6cYoLpMJVQkS+dssENCrgg7lzrBdckKmJUmiqh2rlxTYwkcGY6Fih4lVk8KK6j+/hEeEulmqsIiXuOvnbkeR8krMxjU/VQLKE0LVPLwURrtSpj+OzWhzKW4MuaGgwW95agADMLDYMMrVtyrMiHU1WF524Pa1LE+ATkGq9apgU5GOIK5XhrWp+ijPL892FA/qtix9WWz7ogCYnctPVyBBLoGzZWB6eDHAYJl4rD2wbq2al2seM4iYZInoOEk+1WngHcbn2QMGHkzv9ttbHYi0Ssmu2U/BxGNtVtUnSdqnYzrNbeI4/1iu0rbzX2H7F5grczdUfiC7Y9sr9TzyT7DFuMsyTh6B4Z3aRBrf+M6ZwWbIQPngIjKuDPnZkrTVfuCfjNTXbuTNWV7INJxmpKewG+j95+e9t5cm+walSrPDtkE6ZdAqeG4LSx2vREnx3aVPzWVf2fi9jK/ikOQMhtyR2jJ0jf4av84NdP76rFlXxRFaM0xLWpoIAFxSFCrqGADK3KRvt5tpbDtShlS1UV1/ne4fTFAEEY3T05H3WxC0xDzWx9kWXL2ngeiqU1joPnPTqFM52GM5yl2ubY6UCDNiXquD1ICJjd49f54Si0taXFkyANKdyjirzhHK36QD1IUIGAOh1LaOME72IjI0F7Ln5K6un6ZpIk5kMINDcxweoG3pmm6VrFvZhEPsTF6eRSHJ2PQ9/kfKI+/k0YhuEH+iIsow==
+sidebar_class_name: "get api-method"
+info_path: site/workspace/api-backend/usage-api/community-server-rest-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get a template"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/project/template/{id:[0-9]+}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns the detailed information about a template with the ID specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"id":{"description":"Template ID","type":"integer"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Template","content":{"application/json":{"schema":{"type":"object","properties":{"Id":{"type":"integer","format":"int32","example":"10"},"Title":{"type":"string","example":"Sample Title"},"Description":{"type":"string","example":"Sample description"},"Status":{"type":"integer","format":"int32","example":"0"},"Responsible":{"type":"object","properties":{"Id":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"},"DisplayName":{"type":"string","example":"Mike Zanyatski"},"Title":{"type":"string","example":"Manager"},"AvatarSmall":{"type":"string","example":"url to small avatar"},"ProfileUrl":{"type":"string","example":"\\/Products\\/People\\/Profile.aspx?user=administrator"}},"title":"EmployeeWraper"},"ResponsibleId":{"type":"string","format":"uuid","example":"00000000-0000-0000-0000-000000000000"}},"title":"ObjectWrapperBase"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      
