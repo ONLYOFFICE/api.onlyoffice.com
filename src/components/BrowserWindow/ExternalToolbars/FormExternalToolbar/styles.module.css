@@ -25,12 +25,12 @@
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
-  color: #333333;
+  color: var(--filling-out-the-form-option-color);
   margin-bottom: 25px;
 }
 
 #persons option:disabled {
-  color: #cccccc;
+  color: var(--filling-out-the-form-option-disabled-color);
 }
 
 #controlsBlock {
@@ -45,7 +45,7 @@
 
 .docbuilder-script {
   outline: none;
-  background: rgb(249, 249, 249);
+  background-color: var(--filling-out-the-form-form-bg-color);
   border-radius: 3px;
   padding: 15px 24px;
   width: 95%;
@@ -56,6 +56,7 @@
 
 .left-half input,
 .right-half input {
+  color: var(--filling-out-the-form-input-color);
   border: 1px solid #d0d5da;
   border-radius: 2px;
   box-sizing: border-box;
@@ -75,11 +76,29 @@
 .left-half label,
 .right-half label {
   display: inline-block;
-  color: #666666;
+  color: var(--filling-out-the-form-label-color);
   width: 33%;
 }
 
 .label-radio {
   margin-right: 30px;
   width: auto !important;
+}
+
+:root {
+  --filling-out-the-form-input-color: black;
+  --filling-out-the-form-input-bg-color: white;
+  --filling-out-the-form-label-color: #666666;
+  --filling-out-the-form-form-bg-color: #f9f9f9;
+  --filling-out-the-form-option-color: #333333;
+  --filling-out-the-form-option-disabled-color: #cccccc;
+}
+
+html[data-theme="dark"] {  
+  --filling-out-the-form-input-color: white;
+  --filling-out-the-form-input-bg-color: #111111;
+  --filling-out-the-form-label-color: #c9c9c9;
+  --filling-out-the-form-form-bg-color: #0f0f0f;
+  --filling-out-the-form-option-color: #cccccc;
+  --filling-out-the-form-option-disabled-color: #929292;
 }

@@ -12,7 +12,7 @@ Connects the [LanguageTool](https://languagetool.org/) assistant, multilingual g
 
 ## Installation
 
-Download this plugin from [GitHub](https://github.com/ONLYOFFICE/onlyoffice.github.io/tree/master/sdkjs-plugins/content/languagetool) and install it following the [desktop](../../tutorials/installing/onlyoffice-desktop-editors.md), [on-premises](../../tutorials/installing/onlyoffice-docs-on-premises.md), or [cloud](../../tutorials/installing/onlyoffice-cloud.md) installation instructions.
+Download this plugin from [GitHub](https://github.com/ONLYOFFICE/onlyoffice.github.io/tree/master/sdkjs-plugins/content/languagetool) and install it following the [desktop](/docs/plugin-and-macros/tutorials/installing/onlyoffice-desktop-editors.md), [on-premises](/docs/plugin-and-macros/tutorials/installing/onlyoffice-docs-on-premises.md), or [cloud](/docs/plugin-and-macros/tutorials/installing/onlyoffice-cloud.md) installation instructions.
 
 ## Usage
 
@@ -179,14 +179,14 @@ Repository on GitHub: [languagetool](https://github.com/ONLYOFFICE/onlyoffice.gi
 - init
 - onExternalMouseUp
 - onTranslate
-- [callCommand](../../interacting-with-editors/overview/how-to-call-commands.md#callcommand)
-- [executeMethod ("GetSelectedText")](../../interacting-with-editors/methods/text-document-api/Api/Methods/GetSelectedText.md)
-- [executeMethod ("GetSelectionType")](../../interacting-with-editors/methods/text-document-api/Api/Methods/GetSelectionType.md)
-- [executeMethod ("GetVersion")](../../interacting-with-editors/methods/text-document-api/Api/Methods/GetVersion.md)
-- [executeMethod ("PasteText")](../../interacting-with-editors/methods/text-document-api/Api/Methods/PasteText.md)
-- [Asc.scope](../../interacting-with-editors/overview/how-to-call-commands.md#ascscope-object) object
-- [info.editorType](../../interacting-with-editors/overview/how-to-call-commands.md#editorType)
-- [info.recalculate](../../interacting-with-editors/overview/how-to-call-commands.md#recalculate)
+- [callCommand](/docs/plugin-and-macros/interacting-with-editors/overview/how-to-call-commands.md#callcommand)
+- [executeMethod ("GetSelectedText")](/docs/plugin-and-macros/interacting-with-editors/methods/text-document-api/Api/Methods/GetSelectedText.md)
+- [executeMethod ("GetSelectionType")](/docs/plugin-and-macros/interacting-with-editors/methods/text-document-api/Api/Methods/GetSelectionType.md)
+- [executeMethod ("GetVersion")](/docs/plugin-and-macros/interacting-with-editors/methods/text-document-api/Api/Methods/GetVersion.md)
+- [executeMethod ("PasteText")](/docs/plugin-and-macros/interacting-with-editors/methods/text-document-api/Api/Methods/PasteText.md)
+- [Asc.scope](/docs/plugin-and-macros/interacting-with-editors/overview/how-to-call-commands.md#ascscope-object) object
+- [info.editorType](/docs/plugin-and-macros/interacting-with-editors/overview/how-to-call-commands.md#editorType)
+- [info.recalculate](/docs/plugin-and-macros/interacting-with-editors/overview/how-to-call-commands.md#recalculate)
 
 ## Support
 

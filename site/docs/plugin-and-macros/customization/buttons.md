@@ -18,11 +18,11 @@ To process [buttons](../structure/manifest/manifest.md#variationsbuttons) which 
 ``` ts
 Asc.plugin.button = (id, windowId) => {
   if (!windowId) {
-    return
+    return;
   }
 
   if (windowId === newWindow.id) {
-    console.log("Plugin button")
+    console.log("Plugin button");
   }
-}
+};
 ```

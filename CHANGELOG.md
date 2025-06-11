@@ -1,5 +1,48 @@
 # Change log
 
+## 5.4.0
+
+### New features
+
+#### Samples
+
+* Added Samples section
+
+#### Docs
+
+* Updated Office API documentation
+* Added Playground page to the Office API, Plugins and macros sections
+
+#### Docs API
+
+* Updated the main page for the Automation API samples
+* Updated documentation in Chinese
+
+### Fixes
+
+#### Docs
+
+* Fixed examples for Automation API
+
+## 5.3.0
+
+### New features
+
+#### Docspace
+
+* Added DocSpace version 3.2
+* Added the MCP server
+
+#### Docs
+
+* Added new Macro samples
+
+### Fixes
+
+#### Document Builder
+
+* Updated C++ samples
+
 ## 5.2.0
 
 ### New features
