@@ -199,7 +199,7 @@ Don't forget to create the *index_about.html* file for the **About** window [lik
      </TabItem>
      <TabItem value="mac" label="macOS">
         ``` bash
-        Users/<username>/Library/Application Support/asc.onlyoffice.ONLYOFFICE/sdkjs-plugins
+        ~/Library/Application\ Support/asc.onlyoffice.ONLYOFFICE/data/sdkjs-plugins/
         ```
      </TabItem>
      <TabItem value="lin" label="Linux">
