@@ -61,10 +61,12 @@ The complete translations in the [config.json](./manifest/manifest.md) for the [
 Find all the strings you want to be localized from the [index.html](./entry-point.md) and the [pluginCode.js](../interacting-with-editors/overview/overview.md) files and create their list. Then create the *translations* folder in the plugin directory, so that the structure looked like this:
 
 ``` ini
-[translations]
-config.json
-index.html
-pluginCode.js
+highlightcode/
+├── translations/
+├── scripts/
+    ├── pluginCode.js
+├── config.json
+├── index.html
 ```
 
 Create the language *.json* files for each language you want to add the translations for with the language four-letter code for its name (e.g. *de-DE.json*). These files will contain the objects with the source (English) language words and phrases as keys and translations into the selected language as values. This is an example of the German translation:
@@ -93,14 +95,16 @@ First, the *langs.json* file will be requested and a full match of the language 
 Once all the localization files are added, the plugin file structure will look like this:
 
 ``` ini
-[translations]
-    de-DE.json
-    es-ES.json
-    fr-FR.json
-    langs.json
-config.json
-index.html
-pluginCode.js
+highlightcode/
+├── translations/
+    ├── de-DE.json
+    ├── es-ES.json
+    ├── fr-FR.json
+    ├── langs.json
+├── scripts/
+    ├── pluginCode.js
+├── config.json
+├── index.html
 ```
 
 You can now replace the strings in the files with their translated values.
