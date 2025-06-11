@@ -1,4 +1,4 @@
-# Generate Table with AI
+# Generate table with AI
 
 This script uses the ONLYOFFICE Document API and OpenAI to generate a structured table from a user-defined topic. If no OpenAI API key is provided, a sample JSON table is used. The table is styled and inserted into the document using a reusable function.
 
@@ -147,6 +147,28 @@ This step handles both sandbox mode and live GPT execution. If the API key is mi
   <summary>Getting data script</summary>
 
     ```ts
+let topic = "Revenue comparison by region for 2023 and 2024";
+let token = "sk-proj..."; // Replace with your real OpenAI API key
+
+let prompt = `Generate a structured JSON table on the topic "${topic}".
+Return ONLY this JSON format:
+
+{
+  "headers": ["Column1", "Column2", "..."],
+  "rows": [
+    ["Value1", "Value2", "..."],
+    ...
+  ]
+}
+
+Use concise, clear text. No markdown formatting or commentary.`;
+
+let body = {
+  model: "gpt-4o",
+  messages: [{ role: "user", content: prompt }],
+  temperature: 0.4
+};
+
 if (token === "sk-proj...") {
   insertTableFromJson({
     headers: ["Region", "2023 Revenue", "2024 Revenue", "Change %"],
@@ -195,11 +217,11 @@ fetch("https://api.openai.com/v1/chat/completions", {
 
 This step renders the table in the document using the ONLYOFFICE API. It applies column widths, zebra striping, padding, and styles percentage values with color.
 
-- Use [SetWidth("percent", 100)](../../usage-api/text-document-api/ApiTable/Methods/SetWidth.md) to fill the page
-- Use [SetCellMarginTop()](../../usage-api/text-document-api/ApiTableCell/Methods/SetCellMarginTop.md) and [SetCellMarginBottom()](../../usage-api/text-document-api/ApiTableCell/Methods/SetCellMarginTop.md) to apply padding
-- Loop with [GetRow()](../../usage-api/text-document-api/ApiTable/Methods/GetRow.md) and [GetCell()](../../usage-api/text-document-api/ApiTable/Methods/GetCell.md) to populate header and data rows
-- Use [SetBold()](../../usage-api/text-document-api/ApiParagraph/Methods/SetBold.md), [SetColor()](../../usage-api/text-document-api/ApiParagraph/Methods/SetColor.md), [SetJc()](../../usage-api/text-document-api/ApiParagraph/Methods/SetJc.md), [SetVerticalAlign()](../../usage-api/text-document-api/ApiTableCell/Methods/SetVerticalAlign.md) to format text
-- Use [SetBackgroundColor()](../../usage-api/text-document-api/ApiTableRow/Methods/SetBackgroundColor.md) for zebra styling
+- Use [SetWidth](../../usage-api/text-document-api/ApiTable/Methods/SetWidth.md) to fill the page
+- Use [SetCellMarginTop](../../usage-api/text-document-api/ApiTableCell/Methods/SetCellMarginTop.md) and [SetCellMarginBottom](../../usage-api/text-document-api/ApiTableCell/Methods/SetCellMarginTop.md) to apply padding
+- Loop with [GetRow](../../usage-api/text-document-api/ApiTable/Methods/GetRow.md) and [GetCell](../../usage-api/text-document-api/ApiTable/Methods/GetCell.md) to populate header and data rows
+- Use [SetBold](../../usage-api/text-document-api/ApiParagraph/Methods/SetBold.md), [SetColor](../../usage-api/text-document-api/ApiParagraph/Methods/SetColor.md), [SetJc](../../usage-api/text-document-api/ApiParagraph/Methods/SetJc.md), [SetVerticalAlign](../../usage-api/text-document-api/ApiTableCell/Methods/SetVerticalAlign.md) to format text
+- Use [SetBackgroundColor](../../usage-api/text-document-api/ApiTableRow/Methods/SetBackgroundColor.md) for zebra styling
 
 <details>
   <summary>Generate table script</summary>
