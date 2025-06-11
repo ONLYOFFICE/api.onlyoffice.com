@@ -51,9 +51,15 @@ let body = {
 // Sandbox fallback (works even if document is empty)
 if (token === "sk-proj...") {
   let sample = [
-    { text: "Sample title", fontSize: 20, bold: true, indent: 0 },
-    { text: "Sample body paragraph explaining some topic.", fontSize: 14, bold: false, indent: 1440 },
-    { text: "Another paragraph with different formatting.", fontSize: 13, bold: false, indent: 1440 }
+  { text: "Quarterly Financial Overview", fontSize: 26, bold: true, indent: 0 },
+  { text: "Summary of Q1 performance across all departments.", fontSize: 14, bold: false, indent: 0 },
+  { text: "Sales Department", fontSize: 20, bold: true, indent: 0 },
+  { text: "Sales increased by 12% compared to the previous quarter. Key factors include expanded outreach and promotional campaigns.", fontSize: 14, bold: false, indent: 0 },
+  { text: "Marketing Department", fontSize: 20, bold: true, indent: 0 },
+  { text: "Marketing spend grew by 8%, yielding a 15% increase in lead generation. Social media engagement reached new highs.", fontSize: 14, bold: false, indent: 0 },
+  { text: "Recommendations", fontSize: 18, bold: true, indent: 0 },
+  { text: "Continue investing in high-performing digital channels. Consider reallocating underused budget from offline campaigns.", fontSize: 13, bold: false, indent: 0 },
+  { text: "Prepared by: Finance Team", fontSize: 12, bold: false, indent: 0 }
   ];
 
   if (paragraphMap.length === 0) {
@@ -192,9 +198,15 @@ let body = {
 // Sandbox fallback (works even if document is empty)
 if (token === "sk-proj...") {
   let sample = [
-    { text: "Sample title", fontSize: 20, bold: true, indent: 1440 },
-    { text: "Sample body paragraph explaining some topic.", fontSize: 14, bold: false, indent: 1440 },
-    { text: "Another paragraph with different formatting.", fontSize: 13, bold: false, indent: 1440 }
+  { text: "Quarterly Financial Overview", fontSize: 26, bold: true, indent: 0 },
+  { text: "Summary of Q1 performance across all departments.", fontSize: 14, bold: false, indent: 1440 },
+  { text: "Sales Department", fontSize: 20, bold: true, indent: 0 },
+  { text: "Sales increased by 12% compared to the previous quarter. Key factors include expanded outreach and promotional campaigns.", fontSize: 14, bold: false, indent: 1440 },
+  { text: "Marketing Department", fontSize: 20, bold: true, indent: 0 },
+  { text: "Marketing spend grew by 8%, yielding a 15% increase in lead generation. Social media engagement reached new highs.", fontSize: 14, bold: false, indent: 1440 },
+  { text: "Recommendations", fontSize: 18, bold: true, indent: 0 },
+  { text: "Continue investing in high-performing digital channels. Consider reallocating underused budget from offline campaigns.", fontSize: 13, bold: false, indent: 1440 },
+  { text: "Prepared by: Finance Team", fontSize: 12, bold: false, indent: 2880 }
   ];
 
   if (paragraphMap.length === 0) {
