@@ -1,0 +1,42 @@
+# Style textforms
+
+Applies style formatting and custom text to every TextForm.
+
+```ts
+// PDF style and custom text applier: This macro applies style formatting to every TextForm in the PDF editor as well as a custom text
+
+(function () {
+  let doc = Api.GetDocument();
+  let allParagraphs = doc.GetAllParagraphs();
+
+  //Set the desired text below
+  let text = "Set the text in here";
+
+  for (let i = 0; i < allParagraphs.length; i++) {
+    for (let j = 0; j < allParagraphs[i].GetElementsCount(); j++) {
+      let element = allParagraphs[i].GetElement(j);
+      let isTextForm = element.GetFormType
+        ? element.GetFormType()
+        : "Not a text form";
+
+      if (isTextForm == "textForm") {
+        let textProp = Api.CreateTextPr();
+        textProp.SetFontSize(35);
+        textProp.SetColor(90, 175, 225);
+        textProp.SetFontFamily("Times New Roman");
+        textProp.SetBold(true);
+        element.SetComb(false);
+        element.SetText(text);
+        element.SetTextPr(textProp);
+      }
+    }
+  }
+})();
+```
+
+Methods used: [GetDocument](../../../../office-api/usage-api/text-document-api/Api/Methods/GetDocument.md), [GetAllParagraphs](../../../../office-api/usage-api/text-document-api/ApiDocument/Methods/GetAllParagraphs.md), [GetElementsCount](../../../../office-api/usage-api/text-document-api/ApiParagraph/Methods/GetElementsCount.md), [GetElement](../../../../office-api/usage-api/text-document-api/ApiParagraph/Methods/GetElement.md), [GetFormType](../../../../office-api/usage-api/form-api/ApiFormBase/Methods/GetFormType.md), [CreateTextPr](../../../../office-api/usage-api/text-document-api/Api/Methods/CreateTextPr.md), [SetFontSize](../../../../office-api/usage-api/text-document-api/ApiTextPr/Methods/SetFontSize.md), [SetColor](../../../../office-api/usage-api/text-document-api/ApiTextPr/Methods/SetColor.md), [SetFontFamily](../../../../office-api/usage-api/text-document-api/ApiTextPr/Methods/SetFontFamily.md), [SetBold](../../../../office-api/usage-api/text-document-api/ApiTextPr/Methods/SetBold.md), [SetComb](../../../../office-api/usage-api/form-api/ApiTextForm/Methods/SetComb.md), [SetText](../../../../office-api/usage-api/form-api/ApiTextForm/Methods/SetText.md), [SetTextPr](../../../../office-api/usage-api/form-api/ApiTextForm/Methods/SetTextPr.md)
+
+## Result
+
+![StyleTextforms](/assets/images/plugins/style-textforms.png#gh-light-mode-only)
+![StyleTextforms](/assets/images/plugins/style-textforms.dark.png#gh-dark-mode-only)
