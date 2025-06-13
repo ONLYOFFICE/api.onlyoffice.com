@@ -34,10 +34,10 @@ To create a modal window / panel for the plugin:
 
    ``` ts
    function getFullUrl(name) {
-     const location = window.location
-     const start = location.pathname.lastIndexOf("/") + 1
-     const file = location.pathname.slice(start)
-     return location.href.replace(file, name)
+     const location = window.location;
+     const start = location.pathname.lastIndexOf("/") + 1;
+     const file = location.pathname.slice(start);
+     return location.href.replace(file, name);
    }
 
    const variation = {
@@ -58,13 +58,13 @@ To create a modal window / panel for the plugin:
          },
        },
      ],
-   }
+   };
    ```
 
 2. Define a new plugin window / panel in the plugin code file:
 
    ```ts
-   const newWindow = new window.Asc.PluginWindow()
+   const newWindow = new window.Asc.PluginWindow();
    ```
 
 3. Specify the window / panel appearance in the [index.html](../structure/entry-point.md) file.
@@ -84,7 +84,7 @@ Returns: This method doesn't return any data.
 Example:
 
 ``` ts
-newWindow.show(variation)
+newWindow.show(variation);
 ```
 
 You can also use the **ShowWindow** method of *window.Asc.plugin.executeMethod*.
@@ -118,8 +118,8 @@ const variation = {
       primary: false,
     },
   ],
-}
-window.Asc.plugin.executeMethod("ShowWindow", ["iframe_asc.{BE5CBF95-C0AD-4842-B157-AC40FEDD9841}", variation])
+};
+window.Asc.plugin.executeMethod("ShowWindow", ["iframe_asc.{BE5CBF95-C0AD-4842-B157-AC40FEDD9841}", variation]);
 ```
 
 ## Activating a window
@@ -137,7 +137,7 @@ Returns: This method doesn't return any data.
 Example:
 
 ``` ts
-window.Asc.plugin.executeMethod("ActivateWindow", ["iframe_asc.{BE5CBF95-C0AD-4842-B157-AC40FEDD9841}"])
+window.Asc.plugin.executeMethod("ActivateWindow", ["iframe_asc.{BE5CBF95-C0AD-4842-B157-AC40FEDD9841}"]);
 ```
 
 ## Interacting with a window
@@ -157,7 +157,7 @@ Returns: This method doesn't return any data.
 Example:
 
 ``` ts
-window.Asc.plugin.executeMethod("MouseMoveWindow", ["iframe_asc.{BE5CBF95-C0AD-4842-B157-AC40FEDD9841}", 70, 40])
+window.Asc.plugin.executeMethod("MouseMoveWindow", ["iframe_asc.{BE5CBF95-C0AD-4842-B157-AC40FEDD9841}", 70, 40]);
 ```
 
 - You can send an event to the plugin when the mouse button is released inside the plugin iframe by using the **MouseUpWindow** method of *window.Asc.plugin.executeMethod*.
@@ -175,7 +175,7 @@ Returns: This method doesn't return any data.
 Example:
 
 ``` ts
-window.Asc.plugin.executeMethod("MouseUpWindow", ["iframe_asc.{BE5CBF95-C0AD-4842-B157-AC40FEDD9841}", 70, 40])
+window.Asc.plugin.executeMethod("MouseUpWindow", ["iframe_asc.{BE5CBF95-C0AD-4842-B157-AC40FEDD9841}", 70, 40]);
 ```
 
 - You can resize the plugin modal window by using the **ResizeWindow** method of *window.Asc.plugin.executeMethod*.
@@ -194,7 +194,7 @@ Returns: This method doesn't return any data.
 Example:
 
 ``` ts
-window.Asc.plugin.executeMethod("ResizeWindow", ["iframe_asc.{BE5CBF95-C0AD-4842-B157-AC40FEDD9841}", 392, 392, 392])
+window.Asc.plugin.executeMethod("ResizeWindow", ["iframe_asc.{BE5CBF95-C0AD-4842-B157-AC40FEDD9841}", 392, 392, 392]);
 ```
 
 You can also use the **resizeWindow** method to change the window size updating the minimum / maximum sizes.
@@ -216,8 +216,8 @@ Example:
 
 ``` ts
 window.Asc.plugin.init = () => {
-  this.resizeWindow(392, 147, 392, 147, 392, 147)
-}
+  window.Asc.plugin.resizeWindow(392, 147, 392, 147, 392, 147);
+};
 ```
 
 - You can send a message to the modal window / panel by using the **command** method.
@@ -234,7 +234,7 @@ Returns: This method doesn't return any data.
 Example:
 
 ``` ts
-newWindow.command("messageName", "data")
+newWindow.command("messageName", "data");
 ```
 
 - You can send a message to the plugin from the modal window / panel by using the **sendToPlugin** method in the window / panel code.
@@ -251,7 +251,7 @@ Returns: Type boolean
 Example:
 
 ``` ts
-Asc.plugin.sendToPlugin("onWindowMessage", {type: "onWindowReady"})
+Asc.plugin.sendToPlugin("onWindowMessage", {type: "onWindowReady"});
 ```
 
 - You can send a message to the plugin modal window / panel by using the **SendToWindow** method of *window.Asc.plugin.executeMethod*.
@@ -269,7 +269,7 @@ Returns: This method doesn't return any data.
 Example:
 
 ``` ts
-window.Asc.plugin.executeMethod("SendToWindow", ["iframe_asc.{BE5CBF95-C0AD-4842-B157-AC40FEDD9841}", "onWindowMessage", {config: oConfig}])
+window.Asc.plugin.executeMethod("SendToWindow", ["iframe_asc.{BE5CBF95-C0AD-4842-B157-AC40FEDD9841}", "onWindowMessage", {config: oConfig}]);
 ```
 
 - You can subscribe to the messages from the plugin by using the **attachEvent** method in the window / panel code.
@@ -287,8 +287,8 @@ Example:
 
 ``` ts
 Asc.plugin.attachEvent("messageName", (message) => {
-  console.log(message)
-})
+  console.log(message);
+});
 ```
 
 ## Closing a window
@@ -308,14 +308,14 @@ Example:
 ``` ts
 window.Asc.plugin.button = (id, windowId) => {
   if (!modalWindow) {
-    return
+    return;
   }
 
   if (windowId) {
     switch (id) {
     default:
-      window.Asc.plugin.executeMethod("CloseWindow", [windowId])
+      window.Asc.plugin.executeMethod("CloseWindow", [windowId]);
     }
   }
-}
+};
 ```

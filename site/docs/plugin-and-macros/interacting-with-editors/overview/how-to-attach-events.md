@@ -19,7 +19,7 @@ There are two options to attach events from the editor.
 2. In the plugin code, define the **attachEvent** method to add an event listener, a function that will be called whenever the specified event is delivered to the target:
 
    ``` ts
-   Asc.plugin.attachEvent(id, action)
+   Asc.plugin.attachEvent(id, action);
    ```
 
    ### Parameters:
@@ -37,16 +37,16 @@ There are two options to attach events from the editor.
 
    ``` ts
    Asc.plugin.attachEvent("onAddComment", (data) => {
-     console.log(data)
-   })
+     console.log(data);
+   });
    ```
 
    You can also use the **event_\{event-name\}** method, where *event_* is a prefix used for each event method, and *\{event-name\}* is a name of any event. For example:
 
    ``` ts
    Asc.plugin.event_onAddComment = (data) => {
-     console.log(data)
-   }
+     console.log(data);
+   };
    ```
 
    Such methods work the same way as the *attachEvent* method.
@@ -70,6 +70,6 @@ This method doesn't return any data.
 
 ``` ts
 Asc.plugin.attachEditorEvent("onAddComment", (data) => {
-  console.log(data)
-})
+  console.log(data);
+});
 ```

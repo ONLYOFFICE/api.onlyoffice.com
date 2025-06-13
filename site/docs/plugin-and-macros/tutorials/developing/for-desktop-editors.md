@@ -25,7 +25,7 @@ To develop a plugin for ONLYOFFICE desktop editors, follow the instructions belo
       </TabItem>
       <TabItem value="mac" label="macOS">
             ``` bash
-            Users/<username>/Library/Application Support/asc.onlyoffice.ONLYOFFICE/sdkjs-plugins/
+            ~/Library/Application\ Support/asc.onlyoffice.ONLYOFFICE/data/sdkjs-plugins/
             ```
       </TabItem>
       <TabItem value="lin" label="Linux">

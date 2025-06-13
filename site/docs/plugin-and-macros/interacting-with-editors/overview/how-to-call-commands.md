@@ -8,7 +8,9 @@ To call commands and send the data back to the editor, define the **callCommand*
 
 *The callback is* the result that the command returns. It is an optional parameter. In case it is missing, the *window.Asc.plugin.onCommandCallback* function will be used to return the result of the command execution.
 
-> **Office JavaScript API** commands can be only used to create content and insert it to the document editor (using the *Api.GetDocument().InsertContent(...)*). This limitation exists due to the co-editing feature in the online editors. If it is necessary to create a plugin for desktop editors to work with local files, no such limitation is applied.
+:::note
+**Office JavaScript API** commands can be only used to create content and insert it to the document editor (using the *Api.GetDocument().InsertContent(...)*). This limitation exists due to the co-editing feature in the online editors. If it is necessary to create a plugin for desktop editors to work with local files, no such limitation is applied.
+:::
 
 ## callCommand
 
@@ -39,11 +41,11 @@ This method doesn't return any data.
 
 ``` ts
 Asc.plugin.callCommand(() => {
-  const oDocument = Api.GetDocument()
-  const oParagraph = Api.CreateParagraph()
-  oParagraph.AddText("Hello world")
-  oDocument.InsertContent([oParagraph])
-}, true, true, (returnValue) => {})
+  const oDocument = Api.GetDocument();
+  const oParagraph = Api.CreateParagraph();
+  oParagraph.AddText("Hello world");
+  oDocument.InsertContent([oParagraph]);
+}, true, true, (returnValue) => {});
 ```
 
 ## Asc.scope object
@@ -55,13 +57,13 @@ This method is executed in its own context isolated from other JavaScript data. 
 ### Example:
 
 ``` ts
-Asc.scope.text = text
+Asc.scope.text = text;
 Asc.plugin.callCommand(() => {
-  const oDocument = Api.GetDocument()
-  const oParagraph = Api.CreateParagraph()
-  oParagraph.AddText(Asc.scope.text)
-  oDocument.InsertContent([oParagraph])
-}, true, true, (returnValue) => {})
+  const oDocument = Api.GetDocument();
+  const oParagraph = Api.CreateParagraph();
+  oParagraph.AddText(Asc.scope.text);
+  oDocument.InsertContent([oParagraph]);
+}, true, true, (returnValue) => {});
 ```
 
 ## info object
@@ -99,38 +101,38 @@ See the available *window.Asc.plugin.info* object parameters below to find out
 
 ``` ts
 window.Asc.plugin.button = (id) => {
-  const info = window.Asc.plugin.info
+  const info = window.Asc.plugin.info;
 
   if (info.objectId === undefined) {
-    const method = "asc_addOleObject"
+    const method = "asc_addOleObject";
   } else {
-    const method = "asc_editOleObject"
+    const method = "asc_editOleObject";
   }
 
   if (info.width) {
-    continue
+    continue;
   } else {
-    info.width = 70
+    info.width = 70;
   }
 
   if (info.height) {
-    continue
+    continue;
   } else {
-    info.height = 70
+    info.height = 70;
   }
 
   if (info.height) {
-    continue
+    continue;
   } else {
-    info.height = 70
+    info.height = 70;
   }
 
-  info.widthPix = Math.trunc(info.mmToPx * info.width)
-  info.heightPix = Math.trunc(info.mmToPx * info.height)
-  info.imgSrc = window.g_board.getResult(info.widthPix, info.heightPix).image
-  info.data = window.g_board.getData()
+  info.widthPix = Math.trunc(info.mmToPx * info.width);
+  info.heightPix = Math.trunc(info.mmToPx * info.height);
+  info.imgSrc = window.g_board.getResult(info.widthPix, info.heightPix).image;
+  info.data = window.g_board.getData();
   const code = `Api.${method}(${JSON.stringify(info)});`
-  this.callCommand("close", code)
+  window.Asc.plugin.callCommand("close", code);
 }
 ```
 
@@ -140,16 +142,16 @@ window.Asc.plugin.button = (id) => {
 function createScriptFromArray(aSelected) {
   if (aSelected.length !== 0) {
     switch (window.Asc.plugin.info.editorType) {
-    case "word": {
-      let sScript = "var oDocument = Api.GetDocument();"
-      sScript = `${sScript}\noDocument.CreateNewHistoryPoint();`
-      sScript = `${sScript}\nvar oParagraph, oRun, arrInsertResult = [], oImage;`
-      sScript = `${sScript}\noDocument.InsertContent(arrInsertResult);`
-      break
-    }
+      case "word": {
+        let sScript = "var oDocument = Api.GetDocument();";
+        sScript = `${sScript}\noDocument.CreateNewHistoryPoint();`;
+        sScript = `${sScript}\nvar oParagraph, oRun, arrInsertResult = [], oImage;`;
+        sScript = `${sScript}\noDocument.InsertContent(arrInsertResult);`;
+        break;
+      }
     }
   }
-  return sScript
+  return sScript;
 }
 ```
 
@@ -157,28 +159,28 @@ function createScriptFromArray(aSelected) {
 
 ``` ts
 window.Asc.plugin.init = () => {
-  const plugin_uuid = window.Asc.plugin.info.guid
-}
+  const plugin_uuid = window.Asc.plugin.info.guid;
+};
 ```
 
 ### Example for the recalculate parameter
 
 ``` ts
 window.Asc.plugin.init = () => {
-  let sScript = "var oDocument = Api.GetDocument();"
-  sScript = `${sScript}\noDocument.CreateNewHistoryPoint();`
-  sScript = `${sScript}\noParagraph = Api.CreateParagraph();`
-  sScript = `${sScript}\noParagraph.AddText('Hello word!');`
-  sScript = `${sScript}\noDocument.InsertContent([oParagraph]);`
-  window.Asc.plugin.info.recalculate = true
-  this.callCommand("close", sScript)
-}
+  let sScript = "var oDocument = Api.GetDocument();";
+  sScript = `${sScript}\noDocument.CreateNewHistoryPoint();`;
+  sScript = `${sScript}\noParagraph = Api.CreateParagraph();`;
+  sScript = `${sScript}\noParagraph.AddText('Hello word!');`;
+  sScript = `${sScript}\noDocument.InsertContent([oParagraph]);`;
+  window.Asc.plugin.info.recalculate = true;
+  window.Asc.plugin.callCommand("close", sScript);
+};
 ```
 
 ### Example for the resize parameter
 
 ``` ts
 if (window.Asc.plugin.info.resize === true) {
-  window.Asc.plugin.button(0)
+  window.Asc.plugin.button(0);
 }
 ```

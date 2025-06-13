@@ -43,7 +43,7 @@ Plugins can be placed on the toolbar: create their own tabs and fill them, add b
          ],
        },
      ],
-   }])
+   }]);
    ```
 
    ### ToolbarMenuMainItem
@@ -65,7 +65,7 @@ Plugins can be placed on the toolbar: create their own tabs and fill them, add b
    const oToolbarMenuMainItem = {
      guid: "asc.{9DC93CDB-B576-4F0C-B55E-FCC9C48DD007}",
      tabs: [oToolbarMenuTab],
-   }
+   };
    ```
 
    ### ToolbarMenuTab
@@ -89,7 +89,7 @@ Plugins can be placed on the toolbar: create their own tabs and fill them, add b
      id: "ChatGPT",
      text: "AI Assistant",
      items: [oToolbarMenuItem],
-   }
+   };
    ```
 
    ### ToolbarMenuItem
@@ -146,7 +146,7 @@ Plugins can be placed on the toolbar: create their own tabs and fill them, add b
          text: "Make shorter",
        },
      ],
-   }
+   };
    ```
 
    ### ToolbarMenuItemType
@@ -299,8 +299,8 @@ Plugins can be placed on the toolbar: create their own tabs and fill them, add b
    
    ``` ts
    window.Asc.plugin.event_onToolbarMenuClick = (id) => {
-     this._onCustomMenuClick("toolbarMenuEvents", id)
-   }
+     console.log("Toolbar menu item clicked: " + id);
+   };
    ```
 
 ## Clicking a toolbar item
@@ -320,6 +320,6 @@ Example:
 
 ``` ts
 plugin.attachToolbarMenuClickEvent("my_tab", (data) => {
-  console.log(data)
-})
+  console.log(data);
+});
 ```

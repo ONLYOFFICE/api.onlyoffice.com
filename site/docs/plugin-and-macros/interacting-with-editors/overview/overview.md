@@ -26,14 +26,14 @@ Let's see how this is done in the *helloworld.js* plugin:
 
 ``` ts
 window.Asc.plugin.init = function init() {
-  this.callCommand(() => {
-    const oDocument = Api.GetDocument()
-    const oParagraph = Api.CreateParagraph()
-    oParagraph.AddText("Hello world!")
-    oDocument.InsertContent([oParagraph])
-  }, true)
-}
-window.Asc.plugin.button = function button(id) {}
+  window.Asc.plugin.callCommand(() => {
+    const oDocument = Api.GetDocument();
+    const oParagraph = Api.CreateParagraph();
+    oParagraph.AddText("Hello world!");
+    oDocument.InsertContent([oParagraph]);
+  }, true);
+};
+window.Asc.plugin.button = function button(id) {};
 ```
 
 When the plugin object is being initialized (*window.Asc.plugin.init = function () \{...\}*), the editor forms a paragraph with the *Hello World* phrase and then uses [Office JavaScript API](../../../office-api/get-started/overview.md) to create the document with this text in it (with the help of the [window.Asc.plugin.callCommand](how-to-call-commands.md#callcommand) method - *this.callCommand(function() \{...\})*).
