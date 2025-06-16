@@ -49,4 +49,4 @@ Methods used: [GetActiveSheet](/docs/office-api/usage-api/spreadsheet-api/Api/Me
  
 ## Result
 
-
+![Normalize phone numbers](/assets/images/plugins/normalize-phone-numbers.png#gh-light-mode-only)![Normalize phone numbers](/assets/images/plugins/normalize-phone-numbers.dark.png#gh-dark-mode-only)

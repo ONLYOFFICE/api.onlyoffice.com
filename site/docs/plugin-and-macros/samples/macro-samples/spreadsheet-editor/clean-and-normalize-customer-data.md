@@ -129,3 +129,4 @@ Methods used: [GetActiveSheet](/docs/office-api/usage-api/spreadsheet-api/Api/Me
 ## Result
 
 
+![Clean and normalize customer data](/assets/images/plugins/clean-and-normalize-customer-data.png#gh-light-mode-only)![Clean and normalize customer data](/assets/images/plugins/clean-and-normalize-customer-data.dark.png#gh-dark-mode-only)

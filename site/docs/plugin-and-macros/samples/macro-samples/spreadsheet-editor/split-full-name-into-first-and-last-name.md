@@ -52,4 +52,4 @@ Methods used: [GetActiveSheet](/docs/office-api/usage-api/spreadsheet-api/Api/Me
  
 ## Result
 
-
+![Split full name into first and last name](/assets/images/plugins/split-full-name-into-first-and-last-name.png#gh-light-mode-only)![Split full name into first and last name](/assets/images/plugins/split-full-name-into-first-and-last-name.dark.png#gh-dark-mode-only)

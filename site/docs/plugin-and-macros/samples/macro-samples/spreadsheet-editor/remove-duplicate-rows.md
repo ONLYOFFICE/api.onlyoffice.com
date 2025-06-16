@@ -52,4 +52,4 @@ Methods used: [GetActiveSheet](/docs/office-api/usage-api/spreadsheet-api/Api/Me
  
 ## Result
 
-
+![Remove duplicate rows](/assets/images/plugins/remove-duplicate-rows.png#gh-light-mode-only)![Remove duplicate rows](/assets/images/plugins/remove-duplicate-rows.dark.png#gh-dark-mode-only)

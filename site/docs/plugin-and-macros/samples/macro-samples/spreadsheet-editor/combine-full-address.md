@@ -55,4 +55,4 @@ Methods used: [GetActiveSheet](/docs/office-api/usage-api/spreadsheet-api/Api/Me
  
 ## Result
 
-
+![Combine city, street, and building into full address](/assets/images/plugins/combine-full-address.png#gh-light-mode-only)![Combine city, street, and building into full address](/assets/images/plugins/combine-full-address.dark.png#gh-dark-mode-only)

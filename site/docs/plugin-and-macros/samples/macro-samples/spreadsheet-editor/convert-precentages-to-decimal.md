@@ -25,9 +25,9 @@ Scans the worksheet and converts all percentage-formatted cells (e.g., `20%`) in
 
       // Check if the number format includes a percent sign
       if (/%/.test(format)) {
-        // Remove percentage formatting and store the raw decimal value
-        range.SetValue(val);
-        range.SetNumberFormat("0.00##"); // e.g. show as "0.20" instead of "20%"
+        const targetCell = sheet.GetRangeByNumber(r, c + 1);
+        targetCell.SetValue(val); // val is already decimal (e.g., 0.2)
+        targetCell.SetNumberFormat("0.00##");
       }
     }
   }
@@ -38,4 +38,4 @@ Methods used: [GetActiveSheet](/docs/office-api/usage-api/spreadsheet-api/Api/Me
  
 ## Result
 
-
+![Convert percentages to decimal values](/assets/images/plugins/convert-precentages-to-decimal.png#gh-light-mode-only)![Convert percentages to decimal values](/assets/images/plugins/convert-precentages-to-decimal.dark.png#gh-dark-mode-only)

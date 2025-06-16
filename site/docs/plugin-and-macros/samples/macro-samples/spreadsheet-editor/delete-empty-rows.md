@@ -34,4 +34,4 @@ Methods used: [GetActiveSheet](/docs/office-api/usage-api/spreadsheet-api/Api/Me
  
 ## Result
 
-
+![Delete empty rows](/assets/images/plugins/delete-empty-rows.png#gh-light-mode-only)![Delete empty rows](/assets/images/plugins/delete-empty-rows.dark.png#gh-dark-mode-only)

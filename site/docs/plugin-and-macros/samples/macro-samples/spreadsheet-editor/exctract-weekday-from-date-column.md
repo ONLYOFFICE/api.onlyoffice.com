@@ -88,4 +88,4 @@ Methods used: [GetActiveSheet](/docs/office-api/usage-api/spreadsheet-api/Api/Me
  
 ## Result
 
-
+![Extract weekday from date column](/assets/images/plugins/exctract-weekday-from-date-column.png#gh-light-mode-only)![Extract weekday from date column](/assets/images/plugins/exctract-weekday-from-date-column.dark.png#gh-dark-mode-only)

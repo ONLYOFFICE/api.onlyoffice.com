@@ -79,4 +79,5 @@ Methods used: [GetActiveSheet](/docs/office-api/usage-api/spreadsheet-api/Api/Me
  
 ## Result
 
+![Calculate age from birthdate](/assets/images/plugins/calculate-age-from-birthdate.png#gh-light-mode-only)![Calculate age from birthdate](/assets/images/plugins/calculate-age-from-birthdate.dark.png#gh-dark-mode-only)
 

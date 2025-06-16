@@ -1,4 +1,4 @@
-# Generate multiple date formats 
+# Generate multiple date formats
 
 This macro processes a "Date" column and generates multiple adjacent columns with various formats and breakdowns, including:
 - Different date/time formats: short date, US date, long date, time only, combined date-time
@@ -161,4 +161,4 @@ Methods used: [GetActiveSheet](/docs/office-api/usage-api/spreadsheet-api/Api/Me
  
 ## Result
 
-
+![Generate multiple date formats](/assets/images/plugins/generate-multiple-date-formats.png#gh-light-mode-only)![Generate multiple date formats](/assets/images/plugins/generate-multiple-date-formats.dark.png#gh-dark-mode-only)

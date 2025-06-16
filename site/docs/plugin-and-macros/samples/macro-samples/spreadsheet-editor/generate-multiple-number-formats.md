@@ -171,4 +171,5 @@ Methods used: [GetActiveSheet](/docs/office-api/usage-api/spreadsheet-api/Api/Me
  
 ## Result
 
+![Format amount values in multiple number styles](/assets/images/plugins/generate-multiple-number-formats.png#gh-light-mode-only)![Format amount values in multiple number styles](/assets/images/plugins/generate-multiple-number-formats.dark.png#gh-dark-mode-only)
 

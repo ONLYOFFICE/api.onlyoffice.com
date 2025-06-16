@@ -28,7 +28,8 @@ It operates row by row, starting from row 1, and stops at the first empty cell i
       const text = range.GetText();
       const cleaned = trimExtraSpaces(text);
       if (text !== cleaned) {
-        range.SetValue(cleaned);
+        const target = sheet.GetRangeByNumber(r, c+1);
+        target.SetValue(cleaned);
       }
     }
   }
@@ -44,4 +45,4 @@ Methods used: [GetActiveSheet](/docs/office-api/usage-api/spreadsheet-api/Api/Me
  
 ## Result
 
-
+![Split full name into first and last name](/assets/images/plugins/trim-extra-spaces.png#gh-light-mode-only)![Split full name into first and last name](/assets/images/plugins/trim-extra-spaces.dark.png#gh-dark-mode-only)
