@@ -5,87 +5,81 @@ run-name: "ReBuild office-js-api"
 on:
   workflow_dispatch:
 
-env:
-  REF: ${{ github.ref_name }}
-
 jobs:
-  publish:
+  build:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Set up Python
-      uses: actions/setup-python@v5
-      with:
-        python-version: '3.10'
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
     
-    - name: Set up Node.js
-      uses: actions/setup-node@v4
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
 
-    - name: Checkout api.onlyoffice.com repository
-      uses: actions/checkout@v4
-      with:
-        path: api.onlyoffice.com
+      - name: Checkout api.onlyoffice.com repository
+        uses: actions/checkout@v4
+        with:
+          path: api.onlyoffice.com
     
-    - name: Checkout office-js-api repository
-      uses: actions/checkout@v4
-      id: checkout-office-js-api
-      continue-on-error: true
-      with:
-        repository: ONLYOFFICE/office-js-api
-        token: ${{ secrets.READ_PAT }}
-        ref: ${{ github.ref_name }}
-        path: office-js-api
+      - name: Check if branch exists and set checkout branch
+        run: |
+          BRANCH_EXISTS=$(git ls-remote --heads https://github.com/ONLYOFFICE/office-js-api ${{ github.ref_name }} | wc -l)
+          BRANCH=$([ "$BRANCH_EXISTS" == "1" ] && echo "${{ github.ref_name }}" || echo "")
+          echo "BRANCH=$BRANCH" >> $GITHUB_ENV
+          echo "Using branch: ${BRANCH:-default branch}"
     
-    - name: Checkout office-js-api repository from master
-      if: steps.checkout-office-js-api.outcome == 'failure'
-      uses: actions/checkout@v4
-      with:
-        repository: ONLYOFFICE/office-js-api
-        token: ${{ secrets.READ_PAT }}
-        path: office-js-api
+      - name: Checkout office-js-api repository
+        uses: actions/checkout@v4
+        with:
+          repository: ONLYOFFICE/office-js-api
+          token: ${{ secrets.READ_PAT }}
+          ref: ${{ env.BRANCH }}
+          path: office-js-api
+      
+      - name: Checkout build_tools repository
+        uses: actions/checkout@v4
+        with:
+          repository: ONLYOFFICE/build_tools
+          token: ${{ secrets.READ_PAT }}
+#         ref: ${{ env.BRANCH }}
+          ref: release/v9.0.0
+          path: build_tools
     
-    - name: Checkout build_tools repository
-      uses: actions/checkout@v4
-      with:
-        repository: ONLYOFFICE/build_tools
-        token: ${{ secrets.READ_PAT }}
-#        ref: ${{ github.ref_name }}
-        ref: release/v9.0.0
-        path: build_tools
-    
-    - name: Checkout sdkjs repository
-      uses: actions/checkout@v4
-      with:
-        repository: ONLYOFFICE/sdkjs
-        token: ${{ secrets.READ_PAT }}
-        ref: ${{ github.ref_name }}
-        path: sdkjs
+      - name: Checkout sdkjs repository
+        uses: actions/checkout@v4
+        with:
+          repository: ONLYOFFICE/sdkjs
+          token: ${{ secrets.READ_PAT }}
+          ref: ${{ env.BRANCH }}
+          path: sdkjs
 
-    - name: Checkout sdkjs-forms repository
-      uses: actions/checkout@v4
-      with:
-        repository: ONLYOFFICE/sdkjs-forms
-        token: ${{ secrets.READ_PAT }}
-        ref: ${{ github.ref_name }}
-        path: sdkjs-forms
-    
-    - name: Set up Git
-      run: |
-        git config --global user.name "github-actions[bot]"
-        git config --global user.email "github-actions[bot]@users.noreply.github.com"
-    
-    - name: Build office-js-api
-      run: |
-        cd build_tools/scripts/sdkjs_common/jsdoc
-        npm install
-        python generate_docs_md_site.py
-        python generate_docs_plugins_md_site.py
-        cd ../../../../api.onlyoffice.com
+      - name: Checkout sdkjs-forms repository
+        uses: actions/checkout@v4
+        with:
+          repository: ONLYOFFICE/sdkjs-forms
+          token: ${{ secrets.READ_PAT }}
+          ref: ${{ env.BRANCH }}
+          path: sdkjs-forms
+      
+      - name: Set up Git
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+      
+      - name: Build office-js-api
+        run: |
+          cd build_tools/scripts/sdkjs_common/jsdoc
+          npm install
+          python generate_docs_md_site.py
+          python generate_docs_plugins_md_site.py
+          cd ../../../../api.onlyoffice.com
 
-        if ! git diff --exit-code; then
-            git add .
-            git commit -m "Add office-js-api documentation update from GitHub Actions"
-            git push origin ${REF}
-          else
-            echo "Nothing to commit"
-          fi
+          if ! git diff --exit-code; then
+              git add .
+              git commit -m "Add office-js-api documentation update from GitHub Actions"
+              git push origin ${{ github.ref_name }}
+            else
+              echo "Nothing to commit"
+            fi

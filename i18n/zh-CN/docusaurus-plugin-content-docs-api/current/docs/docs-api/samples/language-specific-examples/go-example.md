@@ -25,7 +25,7 @@ sidebar_position: -3
 
 [获取 ONLYOFFICE 文档](https://www.onlyoffice.com/zh/download-docs.aspx?from=api#docs-developer)
 
-请参阅详细指南，了解如何为 [Windows](https://helpcenter.onlyoffice.com/zh/docs/installation/docs-developer-install-windows.aspx) 安装文档服务器。
+请参阅详细指南，了解如何为 [Windows](https://helpcenter.onlyoffice.com/docs/installation/docs-developer-install-windows.aspx) 安装文档服务器。
 
 ## 步骤 2. 下载用于编辑器集成的 Go 代码​
 
@@ -74,7 +74,7 @@ export PATH=$PATH:/usr/local/go/bin
 }
 ```
 
-另外，指定与 ONLYOFFICE 文档中使用的[相同的密钥](https://helpcenter.onlyoffice.com/zh/installation/docs-configure-jwt.aspx)：
+另外，指定与 ONLYOFFICE 文档中使用的[相同的密钥](https://helpcenter.onlyoffice.com/installation/docs-configure-jwt.aspx)：
 
 ``` json
 {

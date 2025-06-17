@@ -59,7 +59,7 @@ The plugin will be added to the opened editors and all the editors you will open
   </TabItem>
   <TabItem value="mac" label="macOS">
       ``` bash
-      ~/Library/Application Support/asc.onlyoffice.ONLYOFFICE/data/sdkjs-plugins/
+      ~/Library/Application\ Support/asc.onlyoffice.ONLYOFFICE/data/sdkjs-plugins/
       ```
   </TabItem>
   <TabItem value="lin" label="Linux">
