@@ -1,6 +1,6 @@
 # Remove slides
 
-Remove slides from your presentation based on the slide title.
+Removes slides from your presentation based on the slide title.
 
 ```ts
 (function () {
@@ -31,21 +31,21 @@ Remove slides from your presentation based on the slide title.
 
             for (let paragraph of paragraphs) {
                 let headingText = paragraph.GetText();
-                // If a heading text contains or equals to a keyword delete the current slide
+                // If a heading text contains or equals to a keyword, delete the current slide
                 if (regex.test(headingText)) {
                     slide.Delete();
                     wasSlideDeleted = true;
                     break;
                 }
             }
-            // If the slide was deleted continue, do not iterate through all shapes
+            // If the slide was deleted, do not iterate through all shapes
             if (wasSlideDeleted) return;
         });
     });
 })();
 ```
 
-Methods used: [GetPresentation](../../../../office-api/usage-api/presentation-api/Api/Methods/GetPresentation.md), [GetAllSlides](../../../../office-api/usage-api/presentation-api/ApiPresentation/Methods/GetAllSlides.md), [GetDrawingsByPlaceholderType](../../../../office-api/usage-api/presentation-api/ApiMaster/Methods/GetDrawingsByPlaceholderType.md), [GetDocContent](../../../../office-api/usage-api/presentation-api/ApiShape/Methods/GetDocContent.md), [GetText](../../../../office-api/usage-api/presentation-api/ApiComment/Methods/GetText.md), [Delete](../../../../office-api/usage-api/presentation-api/ApiDrawing/Methods/Delete.md)
+Methods used: [GetPresentation](/docs/office-api/usage-api/presentation-api/Api/Methods/GetPresentation.md), [GetAllSlides](/docs/office-api/usage-api/presentation-api/ApiPresentation/Methods/GetAllSlides.md), [GetDrawingsByPlaceholderType](/docs/office-api/usage-api/presentation-api/ApiSlide/Methods/GetDrawingsByPlaceholderType.md), [GetDocContent](/docs/office-api/usage-api/presentation-api/ApiShape/Methods/GetDocContent.md), [Delete](/docs/office-api/usage-api/presentation-api/ApiSlide/Methods/Delete.md)
 
 ## Result
 

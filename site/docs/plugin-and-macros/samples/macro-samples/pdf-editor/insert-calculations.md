@@ -1,12 +1,12 @@
 # Insert calculations
 
-Perform automatic calculations on specified fields within the form and insert the result.
+Performs automatic calculations on the specified fields within the form and inserts the result.
 
 ```ts
 (function () {
     // Get all forms from the document
     let doc = Api.GetDocument();
-    let forms = document.GetAllForms();
+    let forms = doc.GetAllForms();
     // Keys of input forms
     let formkey1 = "Form1";
     let formkey2 = "Form2";
@@ -53,7 +53,7 @@ Perform automatic calculations on specified fields within the form and insert th
 })();
 ```
 
-Methods used: [GetDocument](../../../../office-api/usage-api/text-document-api/Api/Methods/GetDocument.md), [GetAllForms](../../../../office-api/usage-api/form-api/ApiDocument/Methods/GetAllForms.md), [GetFormKey](../../../../office-api/usage-api/form-api/ApiComplexForm/Methods/GetFormKey.md), [GetText](../../../../office-api/usage-api/form-api/ApiComplexForm/Methods/GetText.md), [SetText](../../../../office-api/usage-api/form-api/ApiComboBoxForm/Methods/SetText.md)
+Methods used: [GetDocument](/docs/office-api/usage-api/text-document-api/Api/Methods/GetDocument.md), [GetAllForms](/docs/office-api/usage-api/form-api/ApiDocument/Methods/GetAllForms.md), [GetFormKey](/docs/office-api/usage-api/form-api/ApiFormBase/Methods/GetFormKey.md), [GetText](/docs/office-api/usage-api/form-api/ApiTextForm/Methods/GetText.md), [SetText](/docs/office-api/usage-api/form-api/ApiTextForm/Methods/SetText.md)
 
 ## Result
 
