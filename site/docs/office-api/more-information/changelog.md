@@ -35,8 +35,10 @@ The list of changes for Office JavaScript API.
 - Added the [ApiInlineLvlSdt/GetBorderColor](../usage-api/text-document-api/ApiInlineLvlSdt/Methods/GetBorderColor.md) method to Text document API.
 - Added the [ApiInlineLvlSdt/GetDataBinding](../usage-api/text-document-api/ApiInlineLvlSdt/Methods/GetDataBinding.md) method to Text document API.
 - Added the [ApiInlineLvlSdt/GetDataForXmlMapping](../usage-api/text-document-api/ApiInlineLvlSdt/Methods/GetDataForXmlMapping.md) method to Text document API.
+- Added the [ApiInlineLvlSdt/GetDate](../usage-api/text-document-api/ApiInlineLvlSdt/Methods/GetDate.md) method to Text document API.
 - Added the [ApiInlineLvlSdt/GetId](../usage-api/text-document-api/ApiInlineLvlSdt/Methods/GetId.md) method to Text document API.
 - Added the [ApiInlineLvlSdt/IsCheckBox](../usage-api/text-document-api/ApiInlineLvlSdt/Methods/IsCheckBox.md) method to Text document API.
+- Added the [ApiInlineLvlSdt/IsCheckBoxChecked](../usage-api/text-document-api/ApiInlineLvlSdt/Methods/IsCheckBoxChecked.md) method to Text document API.
 - Added the [ApiInlineLvlSdt/IsComboBox](../usage-api/text-document-api/ApiInlineLvlSdt/Methods/IsComboBox.md) method to Text document API.
 - Added the [ApiInlineLvlSdt/IsDatePicker](../usage-api/text-document-api/ApiInlineLvlSdt/Methods/IsDatePicker.md) method to Text document API.
 - Added the [ApiInlineLvlSdt/IsDropDownList](../usage-api/text-document-api/ApiInlineLvlSdt/Methods/IsDropDownList.md) method to Text document API.
@@ -108,6 +110,9 @@ The list of changes for Office JavaScript API.
 
 - Added the [ApiCheckBoxForm/GetChoiceName](../usage-api/text-document-api/ApiCheckBoxForm/Methods/GetChoiceName.md) method to Text document API.
 - Added the [ApiCheckBoxForm/SetChoiceName](../usage-api/text-document-api/ApiCheckBoxForm/Methods/SetChoiceName.md) method to Text document API.
+- Added the [ApiComplexForm/Add](../usage-api/text-document-api/ApiComplexForm/Methods/Add.md) method to Text document API.
+- Added the [ApiComplexForm/ClearContent](../usage-api/text-document-api/ApiComplexForm/Methods/ClearContent.md) method to Text document API.
+- Added the [ApiComplexForm/GetSubForms](../usage-api/text-document-api/ApiComplexForm/Methods/GetSubForms.md) method to Text document API.
 - Added the [ApiDateForm/GetDate](../usage-api/text-document-api/ApiDateForm/Methods/GetDate.md) method to Text document API.
 - Added the [ApiDateForm/SetDate](../usage-api/text-document-api/ApiDateForm/Methods/SetDate.md) method to Text document API.
 - Added the [ApiDocument/GetFormsByKey](../usage-api/text-document-api/ApiDocument/Methods/GetFormsByKey.md) method to Text document API.
@@ -118,6 +123,7 @@ The list of changes for Office JavaScript API.
 - Added the [ApiFormBase/GetTag](../usage-api/text-document-api/ApiFormBase/Methods/GetTag.md) method to Text document API.
 - Added the [ApiFormBase/SetRole](../usage-api/text-document-api/ApiFormBase/Methods/SetRole.md) method to Text document API.
 - Added the [ApiFormBase/SetTag](../usage-api/text-document-api/ApiFormBase/Methods/SetTag.md) method to Text document API.
+- Added the [Api/CreateComplexForm](../usage-api/text-document-api/Api/Methods/CreateComplexForm.md) method to Form API.
 - Added the [ApiDocument/GetFormRoles](../usage-api/text-document-api/ApiDocument/Methods/GetFormRoles.md) method to Form API.
 - Added the [ApiFormRoles](../usage-api/text-document-api/ApiFormRoles/ApiFormRoles.md) class to Form API.
 - Added the [ApiFormRoles/Add](../usage-api/text-document-api/ApiFormBase/Methods/Add.md) method to Form API.
@@ -296,6 +302,7 @@ The list of changes for Office JavaScript API.
 - Added the [ApiTablePr/SetTableBorderAll](../usage-api/text-document-api/ApiTablePr/Methods/SetTableBorderAll.md) method to Text document API.
 - Added the *fontSlot* parameter to the [ApiTextPr/GetFontFamily](../usage-api/text-document-api/ApiTextPr/Methods/GetFontFamily.md) method of Text document API.
 - Added the [ApiMaster/GetAllLayouts](../usage-api/presentation-api/ApiMaster/Methods/GetAllLayouts.md) method to Presentation API.
+- Added the [ApiSlide/AddComment](../usage-api/presentation-api/ApiSlide/Methods/AddComment.md) method to Presentation API.
 - Added the [Base64Img](../usage-api/text-document-api/Enumeration/Base64Img.md) type to the simple type definitions.
 
 ## Version 8.3
