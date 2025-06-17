@@ -6,6 +6,8 @@
 
 * Added the editorConfig.customization.forceWesternFontSize parameter for the Chinese (Simplified) UI
 * Added the editorConfig.customization.layout.header.user parameter
+* Added conversion from vsdm, vsdx, vssm, vssx, vstm, vstx formats
+* Added the diagram document type to the documentType parameter
 
 ## 5.4.0
 
