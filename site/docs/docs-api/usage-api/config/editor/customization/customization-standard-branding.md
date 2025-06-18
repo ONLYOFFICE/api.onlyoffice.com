@@ -418,6 +418,14 @@ In case this setting is changed in the editor interface, it will be stored in th
 
 **Example**: `false`
 
+## forceWesternFontSize
+
+Defines if the Western (**true**) or Chinese (**false**) font size is used in the Chinese (Simplified) UI. The default value is **false**.
+
+Type: boolean
+
+Example: false
+
 ## goback
 
 `Type: object`
@@ -1054,6 +1062,7 @@ const config = {
         visible: true,
       },
       forcesave: false,
+      forceWesternFontSize: false,
       goback: {
         blank: true,
         text: "Open file location",
