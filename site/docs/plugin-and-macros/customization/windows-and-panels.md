@@ -16,7 +16,7 @@ You can run multiple panel plugins at the same time. For each plugin, a separate
 
 To create a modal window / panel for the plugin:
 
-1. In the [plugin code](../interacting-with-editors/overview/overview.md) file, specify the modal window / panel settings that are similar to [variations](../structure/manifest/manifest.md#variations) in the plugin config.
+1. In the [plugin code](../interacting-with-editors/overview/overview.md) file, specify the modal window / panel settings that are similar to [variations](../structure/configuration/configuration.md#variations) in the plugin config.
 
    Parameters:
 
@@ -25,7 +25,7 @@ To create a modal window / panel for the plugin:
    | *variations*             | object          |                                                                                                                    | The modal window / panel settings.                                                                                                                                                                                                                                        |
    | *variations.url*         | string          | "settings.html"                                                                                                    | The modal window / panel entry point, i.e. an HTML file which connects the *plugin.js* file (the base file needed for work with plugins) and launches the plugin code. See the [index.html](../structure/entry-point.md) section for the detailed information. |
    | *variations.description* | string          | "Description"                                                                                                      | The description for the modal window / panel.                                                                                                                                                                                                                             |
-   | *variations.type*        | string          | "window"                                                                                                           | The plugin [type](../structure/manifest/manifest.md#variationstype). Use the **"window"** value for modal windows, **"panel"** for left panels and **"panelRight"** for right panels.                                                                                     |
+   | *variations.type*        | string          | "window"                                                                                                           | The plugin [type](../structure/configuration/configuration.md#variationstype). Use the **"window"** value for modal windows, **"panel"** for left panels and **"panelRight"** for right panels.                                                                                     |
    | *variations.size*        | Array.\<number> | [343, 122]                                                                                                         | The modal window size. This parameter is used only for modal windows.                                                                                                                                                                                                     |
    | *variations.buttons*     | Array.\<Button> | [ \{ "text": "Cancel", "primary": false, "isviewer": false, "textLocale": \{ "fr": "Annuler", "es": "Cancelar" \} \} ] | The list of skinnable plugin buttons used in the modal windows. This parameter is used only for modal windows.                                                                                                                                                            |
    | *variations.isActivated* | boolean         | false                                                                                                              | Specifies whether the created panel will be collapsed (**false**) or expanded (**true**). The default value is **true**. This parameter is only available since version 8.3 and if the `variations.type` parameter is *"panel"* or *"panelRight"*.                        |
@@ -34,10 +34,10 @@ To create a modal window / panel for the plugin:
 
    ``` ts
    function getFullUrl(name) {
-     const location = window.location
-     const start = location.pathname.lastIndexOf("/") + 1
-     const file = location.pathname.slice(start)
-     return location.href.replace(file, name)
+     const location = window.location;
+     const start = location.pathname.lastIndexOf("/") + 1;
+     const file = location.pathname.slice(start);
+     return location.href.replace(file, name);
    }
 
    const variation = {
@@ -58,13 +58,13 @@ To create a modal window / panel for the plugin:
          },
        },
      ],
-   }
+   };
    ```
 
 2. Define a new plugin window / panel in the plugin code file:
 
    ```ts
-   const newWindow = new window.Asc.PluginWindow()
+   const newWindow = new window.Asc.PluginWindow();
    ```
 
 3. Specify the window / panel appearance in the [index.html](../structure/entry-point.md) file.
@@ -84,7 +84,7 @@ Returns: This method doesn't return any data.
 Example:
 
 ``` ts
-newWindow.show(variation)
+newWindow.show(variation);
 ```
 
 You can also use the **ShowWindow** method of *window.Asc.plugin.executeMethod*.
@@ -118,8 +118,8 @@ const variation = {
       primary: false,
     },
   ],
-}
-window.Asc.plugin.executeMethod("ShowWindow", ["iframe_asc.{BE5CBF95-C0AD-4842-B157-AC40FEDD9841}", variation])
+};
+window.Asc.plugin.executeMethod("ShowWindow", ["iframe_asc.{BE5CBF95-C0AD-4842-B157-AC40FEDD9841}", variation]);
 ```
 
 ## Activating a window
@@ -137,7 +137,7 @@ Returns: This method doesn't return any data.
 Example:
 
 ``` ts
-window.Asc.plugin.executeMethod("ActivateWindow", ["iframe_asc.{BE5CBF95-C0AD-4842-B157-AC40FEDD9841}"])
+window.Asc.plugin.executeMethod("ActivateWindow", ["iframe_asc.{BE5CBF95-C0AD-4842-B157-AC40FEDD9841}"]);
 ```
 
 ## Interacting with a window
@@ -157,7 +157,7 @@ Returns: This method doesn't return any data.
 Example:
 
 ``` ts
-window.Asc.plugin.executeMethod("MouseMoveWindow", ["iframe_asc.{BE5CBF95-C0AD-4842-B157-AC40FEDD9841}", 70, 40])
+window.Asc.plugin.executeMethod("MouseMoveWindow", ["iframe_asc.{BE5CBF95-C0AD-4842-B157-AC40FEDD9841}", 70, 40]);
 ```
 
 - You can send an event to the plugin when the mouse button is released inside the plugin iframe by using the **MouseUpWindow** method of *window.Asc.plugin.executeMethod*.
@@ -175,7 +175,7 @@ Returns: This method doesn't return any data.
 Example:
 
 ``` ts
-window.Asc.plugin.executeMethod("MouseUpWindow", ["iframe_asc.{BE5CBF95-C0AD-4842-B157-AC40FEDD9841}", 70, 40])
+window.Asc.plugin.executeMethod("MouseUpWindow", ["iframe_asc.{BE5CBF95-C0AD-4842-B157-AC40FEDD9841}", 70, 40]);
 ```
 
 - You can resize the plugin modal window by using the **ResizeWindow** method of *window.Asc.plugin.executeMethod*.
@@ -194,7 +194,7 @@ Returns: This method doesn't return any data.
 Example:
 
 ``` ts
-window.Asc.plugin.executeMethod("ResizeWindow", ["iframe_asc.{BE5CBF95-C0AD-4842-B157-AC40FEDD9841}", 392, 392, 392])
+window.Asc.plugin.executeMethod("ResizeWindow", ["iframe_asc.{BE5CBF95-C0AD-4842-B157-AC40FEDD9841}", 392, 392, 392]);
 ```
 
 You can also use the **resizeWindow** method to change the window size updating the minimum / maximum sizes.
@@ -216,8 +216,8 @@ Example:
 
 ``` ts
 window.Asc.plugin.init = () => {
-  this.resizeWindow(392, 147, 392, 147, 392, 147)
-}
+  window.Asc.plugin.resizeWindow(392, 147, 392, 147, 392, 147);
+};
 ```
 
 - You can send a message to the modal window / panel by using the **command** method.
@@ -234,7 +234,7 @@ Returns: This method doesn't return any data.
 Example:
 
 ``` ts
-newWindow.command("messageName", "data")
+newWindow.command("messageName", "data");
 ```
 
 - You can send a message to the plugin from the modal window / panel by using the **sendToPlugin** method in the window / panel code.
@@ -251,7 +251,7 @@ Returns: Type boolean
 Example:
 
 ``` ts
-Asc.plugin.sendToPlugin("onWindowMessage", {type: "onWindowReady"})
+Asc.plugin.sendToPlugin("onWindowMessage", {type: "onWindowReady"});
 ```
 
 - You can send a message to the plugin modal window / panel by using the **SendToWindow** method of *window.Asc.plugin.executeMethod*.
@@ -269,7 +269,7 @@ Returns: This method doesn't return any data.
 Example:
 
 ``` ts
-window.Asc.plugin.executeMethod("SendToWindow", ["iframe_asc.{BE5CBF95-C0AD-4842-B157-AC40FEDD9841}", "onWindowMessage", {config: oConfig}])
+window.Asc.plugin.executeMethod("SendToWindow", ["iframe_asc.{BE5CBF95-C0AD-4842-B157-AC40FEDD9841}", "onWindowMessage", {config: oConfig}]);
 ```
 
 - You can subscribe to the messages from the plugin by using the **attachEvent** method in the window / panel code.
@@ -287,8 +287,8 @@ Example:
 
 ``` ts
 Asc.plugin.attachEvent("messageName", (message) => {
-  console.log(message)
-})
+  console.log(message);
+});
 ```
 
 ## Closing a window
@@ -308,14 +308,14 @@ Example:
 ``` ts
 window.Asc.plugin.button = (id, windowId) => {
   if (!modalWindow) {
-    return
+    return;
   }
 
   if (windowId) {
     switch (id) {
     default:
-      window.Asc.plugin.executeMethod("CloseWindow", [windowId])
+      window.Asc.plugin.executeMethod("CloseWindow", [windowId]);
     }
   }
-}
+};
 ```

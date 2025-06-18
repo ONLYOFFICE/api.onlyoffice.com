@@ -2,7 +2,7 @@
 sidebar_position: -5
 ---
 
-# Manifest
+# Configuration
 
 The *config.json* file is plugin configuration file containing the information about the main plugin data needed to register the plugin in the editors.
 
@@ -645,7 +645,7 @@ Example: `["resources/store/screenshots/screen\_1.png"]`
 
 ### variations.type
 
-Plugin [type](../manifest/types.md). The following values are available:
+Plugin [type](../configuration/types.md). The following values are available:
 
 - **"system"**. The system plugin is not displayed in the editor interface and is started in the background with the server (or desktop editors start) not interfering with other plugins, so that they can work simultaneously. Such a plugin cannot be disabled in the editor window.
 - **"background"**. The background plugin runs continuously once started. Its state (enabled / disabled) persists between sessions. To access background plugins, click the **Background Plugins** button on the top toolbar.

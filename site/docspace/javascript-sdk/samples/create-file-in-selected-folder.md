@@ -128,29 +128,29 @@ Add a script to initialize the [Manager](/docspace/javascript-sdk/usage-sdk/init
 
 1. Add an event handler for [onAppReady](/docspace/javascript-sdk/usage-sdk/events.md#onappready), which fires when initialization is successful:
 
-``` ts
-function onAppReady() {
-  const frame = DocSpace.SDK.frames["ds-frame"]
-}
-```
+    ``` ts
+    function onAppReady() {
+      const frame = DocSpace.SDK.frames["ds-frame"]
+    }
+    ```
 
 2. Create a configuration for the **Manager** mode. In the [rootPath](/docspace/javascript-sdk/usage-sdk/config.md#rootpath) field, specify the section whose directories you want to display:
 
-``` ts
-const config = {
-  events: {
-    onAppReady,
-  },
-  rootPath: "/rooms/personal/",
-  height: "700px",
-}
-```
+    ``` ts
+    const config = {
+      events: {
+        onAppReady,
+      },
+      rootPath: "/rooms/personal/",
+      height: "700px",
+    }
+    ```
 
 3. Initialize the **Manager** mode with the [initManager](/docspace/javascript-sdk/usage-sdk/methods.md#initmanager) method:
 
-``` ts
-const docSpace = DocSpace.SDK.initManager(config)
-```
+    ``` ts
+    const docSpace = DocSpace.SDK.initManager(config)
+    ```
 
 ## Step 3. Upload a list of folders to the combo box
 

@@ -418,14 +418,6 @@ In case this setting is changed in the editor interface, it will be stored in th
 
 **Example**: `false`
 
-## forceWesternFontSize
-
-Defines if the Western (**true**) or Chinese (**false**) font size is used in the Chinese (Simplified) UI. The default value is **false**.
-
-Type: boolean
-
-Example: false
-
 ## goback
 
 `Type: object`
@@ -725,7 +717,7 @@ Starting from version 8.2, please use the [mobile](#mobile) parameter instead.
 
 `Type: boolean`
 
-Defines if [plugins](../../../../../plugin-and-macros/get-started/overview.md) will be launched and available. The default value is **true**.
+Defines if [plugins](../../../../../plugin-and-macros/get-started/get-started.md) will be launched and available. The default value is **true**.
 
 **Example**: `true`
 
@@ -1062,7 +1054,6 @@ const config = {
         visible: true,
       },
       forcesave: false,
-      forceWesternFontSize: false,
       goback: {
         blank: true,
         text: "Open file location",

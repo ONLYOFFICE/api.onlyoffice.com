@@ -134,21 +134,25 @@ cd document-builder-samples
 <Tabs>
     <TabItem value="python" label="Python">
         1. Execute `configure.py` with `--test python`:
-        ```shell
-        python3 configure.py --test python
-        ```
-        Provide the directory to Document Builder with `--dir` if necessary.
-        It is needed for generating auxiliary module containing the path to Document Builder.
+
+            ```shell
+            python3 configure.py --test python
+            ```
+
+            Provide the directory to Document Builder with `--dir` if necessary.
+            It is needed for generating auxiliary module containing the path to Document Builder.
 
         2. Go to the test directory:
-        ```shell
-        cd python/creating_basic_form
-        ```
+
+            ```shell
+            cd python/creating_basic_form
+            ```
 
         3. Run the script:
-        ```shell
-        python3 main.py
-        ```
+
+            ```shell
+            python3 main.py
+            ```
 
         Documents will be created in the test directory.
     </TabItem>

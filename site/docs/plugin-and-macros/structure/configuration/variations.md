@@ -13,6 +13,6 @@ Let’s have a look at the **Speech** plugin. The plugin itself does not need a 
 ![Insisible plugin](/assets/images/plugins/invisible-plugin.png#gh-light-mode-only)![Insisible plugin](/assets/images/plugins/invisible-plugin.dark.png#gh-dark-mode-only)
 ![Speech settings](/assets/images/plugins/speech-settings.png#gh-light-mode-only)![Speech settings](/assets/images/plugins/speech-settings.dark.png#gh-dark-mode-only)
 
-To create plugin variations, you need to specify its parameters in the [config.json](./manifest.md#variations) file and build the [index.html](../entry-point.md) files for each variation.
+To create plugin variations, you need to specify its parameters in the [config.json](./configuration.md#variations) file and build the [index.html](../entry-point.md) files for each variation.
 
 > The *.html* files for **all** variations must be placed to the plugin root folder together with the *config.json* configuration file for the plugin to work correctly.
