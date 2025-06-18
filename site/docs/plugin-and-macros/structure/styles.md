@@ -10,7 +10,9 @@ ONLYOFFICE provides a style sheet for different interface elements. To adjust yo
 <link rel="stylesheet" href="https://onlyoffice.github.io/sdkjs-plugins/v1/plugins.css">
 ```
 
-All the available controls are displayed within the [**Controls example**](https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/example_controls) plugin:
+To maintain a consistent plugin user interface, you can use a set of prebuilt base components designed specifically for plugin UI creation. You can explore and interact with these components in our [storybook](https://onlyoffice.github.io/storybook/static/).
+
+All the available controls are also displayed within the [**Controls example**](https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/example_controls) plugin:
 
 ![Controls example](/assets/images/plugins/controls.png)
 
