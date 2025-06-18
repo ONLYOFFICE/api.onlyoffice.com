@@ -1,5 +1,21 @@
 # Change log
 
+### New features
+
+#### Docs
+
+* Added Plugins version 9.0
+
+#### Docs API
+
+* Added opening for odg format
+* Added opening for md format
+* Added the ability to preload the editor static resources
+* Added the editorConfig.customization.forceWesternFontSize parameter for the Chinese (Simplified) UI
+* Added the editorConfig.customization.layout.header.user parameter
+* Added conversion from vsdm, vsdx, vssm, vssx, vstm, vstx formats
+* Added the diagram document type to the documentType parameter
+
 ## 5.4.0
 
 ### New features

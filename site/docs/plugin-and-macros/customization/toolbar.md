@@ -1,5 +1,5 @@
 ---
-sidebar_position: -4
+sidebar_position: -5
 ---
 
 # Toolbar
@@ -14,8 +14,8 @@ Plugins can be placed on the toolbar: create their own tabs and fill them, add b
 
    Parameters:
 
-   | Name    | Type                                                | Description                                      |
-   | ------- | --------------------------------------------------- | ------------------------------------------------ |
+   | Name    | Type                                                  | Description                                      |
+   |---------|-------------------------------------------------------|--------------------------------------------------|
    | *items* | Array.\<[ToolbarMenuMainItem](#toolbarmenumainitem)\> | An array containing the main toolbar menu items. |
 
    Returns: This method doesn't return any data.
@@ -54,9 +54,9 @@ Plugins can be placed on the toolbar: create their own tabs and fill them, add b
 
    Properties:
 
-   | Name   | Type                                      | Description                                                     |
-   | ------ | ----------------------------------------- | --------------------------------------------------------------- |
-   | *guid* | string                                    | The plugin guid.                                                |
+   | Name   | Type                                        | Description                                                     |
+   |--------|---------------------------------------------|-----------------------------------------------------------------|
+   | *guid* | string                                      | The plugin guid.                                                |
    | *tabs* | Array.\<[ToolbarMenuTab](#toolbarmenutab)\> | An array containing the toolbar menu tabs for the current item. |
 
    Example:
@@ -76,10 +76,10 @@ Plugins can be placed on the toolbar: create their own tabs and fill them, add b
 
    Properties:
 
-   | Name    | Type                                        | Description                                                                                  |
-   | ------- | ------------------------------------------- | -------------------------------------------------------------------------------------------- |
-   | *id*    | string                                      | The tab ID. The list of standard toolbar IDs is provided [below](#standard-toolbar-tab-ids). |
-   | *text*  | string                                      | The tab text.                                                                                |
+   | Name    | Type                                          | Description                                                                                  |
+   |---------|-----------------------------------------------|----------------------------------------------------------------------------------------------|
+   | *id*    | string                                        | The tab ID. The list of standard toolbar IDs is provided [below](#standard-toolbar-tab-ids). |
+   | *text*  | string                                        | The tab text.                                                                                |
    | *items* | Array.\<[ToolbarMenuItem](#toolbarmenuitem)\> | An array containing the toolbar menu items for the current tab.                              |
 
    Example:
@@ -101,7 +101,7 @@ Plugins can be placed on the toolbar: create their own tabs and fill them, add b
    Properties:
 
    | Name             | Type                                        | Description                                                                                                                              |
-   | ---------------- | ------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
+   |------------------|---------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------|
    | *id*             | string                                      | The item ID.                                                                                                                             |
    | *type*           | [ToolbarMenuItemType](#toolbarmenuitemtype) | The item type.                                                                                                                           |
    | *text*           | string                                      | The item caption. If this field is "", the toolbar button is displayed only with an icon, without a caption.                             |
@@ -160,7 +160,7 @@ Plugins can be placed on the toolbar: create their own tabs and fill them, add b
    #### Document editor
 
    | Tab ID  | Tab name                   |
-   | ------- | -------------------------- |
+   |---------|----------------------------|
    | home    | Home                       |
    | ins     | Insert                     |
    | draw    | Draw                       |
@@ -175,7 +175,7 @@ Plugins can be placed on the toolbar: create their own tabs and fill them, add b
    #### Spreadsheet editor
 
    | Tab ID  | Tab name                                          |
-   | ------- | ------------------------------------------------- |
+   |---------|---------------------------------------------------|
    | home    | Home                                              |
    | ins     | Insert                                            |
    | draw    | Draw                                              |
@@ -191,7 +191,7 @@ Plugins can be placed on the toolbar: create their own tabs and fill them, add b
    #### Presentation editor
 
    | Tab ID  | Tab name      |
-   | ------- | ------------- |
+   |---------|---------------|
    | home    | Home          |
    | ins     | Insert        |
    | draw    | Draw          |
@@ -203,7 +203,7 @@ Plugins can be placed on the toolbar: create their own tabs and fill them, add b
    #### PDF editor
 
    | Tab ID  | Tab name |
-   | ------- | -------- |
+   |---------|----------|
    | home    | Home     |
    | ins     | Insert   |
    | comment | Comment  |
@@ -290,7 +290,7 @@ Plugins can be placed on the toolbar: create their own tabs and fill them, add b
    Parameters:
 
    | Name | Type   | Description  |
-   | ---- | ------ | ------------ |
+   |------|--------|--------------|
    | *id* | string | The item ID. |
 
    Example:
@@ -303,6 +303,42 @@ Plugins can be placed on the toolbar: create their own tabs and fill them, add b
    };
    ```
 
+## Updating a toolbar menu item
+
+To update the toolbar menu item, specify the **UpdateToolbarMenuItem** method.
+
+Parameters:
+
+| Name    | Type                                                  | Description                                      |
+|---------|-------------------------------------------------------|--------------------------------------------------|
+| *items* | Array.\<[ToolbarMenuMainItem](#toolbarmenumainitem)\> | An array containing the main toolbar menu items. |
+
+Returns: This method doesn't return any data.
+
+Example:
+
+``` ts
+Asc.Buttons.updateToolbarMenu = function(id, name, buttons)
+  {
+    let buttonMainToolbar = new Asc.ButtonToolbar(null, id);
+    buttonMainToolbar.text = name;
+
+    let items = {
+      guid : window.Asc.plugin.guid,
+      tabs : []
+    };
+
+    buttonMainToolbar.childs = buttons;
+    for (let i = 0, len = buttons.length; i < len; i++)
+      buttons[i].parent = buttonMainToolbar;
+
+    buttonMainToolbar.toToolbar(items);
+
+    if (items.tabs.length > 0)
+      window.Asc.plugin.executeMethod("UpdateToolbarMenuItem", [items]);
+  };
+```
+
 ## Clicking a toolbar item
 
 Specify the **attachToolbarMenuClickEvent** to add an event listener, a function that will be called whenever the specified button is clicked in the toolbar menu and triggers  an event. For each toolbar menu button, you can specify a separate event listener by its ID.
@@ -310,7 +346,7 @@ Specify the **attachToolbarMenuClickEvent** to add an event listener, a function
 Parameters:
 
 | Name     | Type     | Description         |
-| -------- | -------- | ------------------- |
+|----------|----------|---------------------|
 | *id*     | string   | The event name.     |
 | *action* | function | The event listener. |
 
