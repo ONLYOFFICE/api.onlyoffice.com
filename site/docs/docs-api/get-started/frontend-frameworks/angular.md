@@ -309,40 +309,40 @@ To deploy the application to a production environment, create the build-specific
 
    You can add additional configurations. For example, to add a *staging* environment, copy the *src/environments/environment.ts* file with the *src/environments/environment.staging.ts* title, then add a *staging* configuration to *angular.json*:
 
-  ``` json
-  {
-    "configurations": {
-      "production": {},
-      "staging": {
-        "fileReplacements": [
-          {
-            "replace": "src/environments/environment.ts",
-            "with": "src/environments/environment.staging.ts"
-          }
-        ]
-      }
-    }
-  }
-  ```
-
-4. Configure the *serve* command to use the targeted build configuration by adding it to the *serve.configurations* section of *angular.json*:
-
-  ``` json
-  {
-    "serve": {
-      "builder": "@angular-devkit/build-angular:dev-server",
+    ``` json
+    {
       "configurations": {
-        "production": {
-          "browserTarget": "document-editor-angular-workspace:build:production"
-        },
-        "development": {
-          "browserTarget": "document-editor-angular-workspace:build:development"
+        "production": {},
+        "staging": {
+          "fileReplacements": [
+            {
+              "replace": "src/environments/environment.ts",
+              "with": "src/environments/environment.staging.ts"
+            }
+          ]
         }
       }
     }
-  }
-   
-  ```
+    ```
+
+4. Configure the *serve* command to use the targeted build configuration by adding it to the *serve.configurations* section of *angular.json*:
+
+    ``` json
+    {
+      "serve": {
+        "builder": "@angular-devkit/build-angular:dev-server",
+        "configurations": {
+          "production": {
+            "browserTarget": "document-editor-angular-workspace:build:production"
+          },
+          "development": {
+            "browserTarget": "document-editor-angular-workspace:build:development"
+          }
+        }
+      }
+    }
+    
+    ```
 
 Now you can deploy the application to the created server:
 

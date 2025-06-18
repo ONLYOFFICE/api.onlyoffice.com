@@ -87,27 +87,27 @@ Add a script to initialize the [System](/docspace/javascript-sdk/usage-sdk/initi
 
 1. Add an event handler for [onAppReady](/docspace/javascript-sdk/usage-sdk/events.md#onappready), which fires when initialization is successful:
 
-``` ts
-function onAppReady() {
-  const frame = DocSpace.SDK.frames["ds-frame"]
-}
-```
+    ``` ts
+    function onAppReady() {
+      const frame = DocSpace.SDK.frames["ds-frame"]
+    }
+    ```
 
 2. Create a configuration for the **System** mode:
 
-``` ts
-const config = {
-  events: {
-    onAppReady,
-  },
-}
-```
+    ``` ts
+    const config = {
+      events: {
+        onAppReady,
+      },
+    }
+    ```
 
 3. Initialize the **System** mode with the [initSystem](/docspace/javascript-sdk/usage-sdk/methods.md#initsystem) method:
 
-``` ts
-const docSpace = DocSpace.SDK.initSystem(config)
-```
+    ``` ts
+    const docSpace = DocSpace.SDK.initSystem(config)
+    ```
 
 ## Step 3. Add a method to log in
 
