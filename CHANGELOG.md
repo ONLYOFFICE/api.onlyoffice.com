@@ -1,13 +1,5 @@
 # Change log
 
-### New features
-
-#### Docs API
-
-* Added opening for odg format
-* Added the editorConfig.customization.forceWesternFontSize parameter for the Chinese (Simplified) UI
-* Added the editorConfig.customization.layout.header.user parameter
-
 ## 5.4.0
 
 ### New features
