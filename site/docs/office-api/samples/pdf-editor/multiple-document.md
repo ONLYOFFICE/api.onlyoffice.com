@@ -3,37 +3,37 @@
 This example demonstrates how to generate multiple personalized NDA documents in a single file using the ONLYOFFICE Office API. Each section is generated for a different user using inline text form fields prefilled with custom data, followed by a manual signature line and separated by page breaks.
 
 ```ts editor-pdf zoom=60
-let doc = Api.GetDocument();
-let section = doc.GetFinalSection();
+const doc = Api.GetDocument();
+const section = doc.GetFinalSection();
 section.SetPageSize(11900, 16840); // A4
 section.SetPageMargins(1000, 1000, 1000, 1000);
 
-// === User Data ===
-let users = [
+// Step 1: Define user data
+const users = [
   {
-    "FullName": "Alice Johnson",
-    "Email": "alice@example.com",
-    "Country": "USA",
-    "Date": "01.01.2025"
+    FullName: "Alice Johnson",
+    Email: "alice@example.com",
+    Country: "USA",
+    Date: "01.01.2025"
   },
   {
-    "FullName": "Bob Lee",
-    "Email": "bob@example.com",
-    "Country": "Canada",
-    "Date": "02.01.2025"
+    FullName: "Bob Lee",
+    Email: "bob@example.com",
+    Country: "Canada",
+    Date: "02.01.2025"
   },
   {
-    "FullName": "Clara Schmidt",
-    "Email": "clara@example.de",
-    "Country": "Germany",
-    "Date": "03.01.2025"
+    FullName: "Clara Schmidt",
+    Email: "clara@example.de",
+    Country: "Germany",
+    Date: "03.01.2025"
   }
 ];
 
-// === Utility: Inline Field Generator ===
-function createInlineField(key, placeholder, maxChars) {
-  let field = Api.CreateTextForm({
-    key,
+// Step 2: Utility to create inline text form field
+function createInlineField(fieldKey, placeholder, maxChars) {
+  const field = Api.CreateTextForm({
+    key: fieldKey,
     placeholder,
     required: true,
     maxCharacters: maxChars,
@@ -44,31 +44,31 @@ function createInlineField(key, placeholder, maxChars) {
   return field;
 }
 
-// === NDA Generator Function ===
-function addNDADocument(userIndex, data) {
-  const prefix = "user" + userIndex;
+// Step 3: Generate NDA document section per user
+function addNDADocument(userIndex, userData) {
+  const fieldPrefix = `user${userIndex}`;
 
-  let title = Api.CreateParagraph();
-  title.AddText("NON-DISCLOSURE AGREEMENT (NDA)");
-  title.SetFontSize(26);
-  title.SetBold(true);
-  title.SetJc("center");
-  title.SetSpacingAfter(300);
-  doc.Push(title);
+  const headingParagraph = Api.CreateParagraph();
+  headingParagraph.AddText("NON-DISCLOSURE AGREEMENT (NDA)");
+  headingParagraph.SetFontSize(26);
+  headingParagraph.SetBold(true);
+  headingParagraph.SetJc("center");
+  headingParagraph.SetSpacingAfter(300);
+  doc.Push(headingParagraph);
 
-  let intro = Api.CreateParagraph();
-  intro.SetSpacingAfter(200);
-  intro.AddText("This Non-Disclosure Agreement (\"Agreement\") is made on ");
-  intro.AddElement(createInlineField(`${prefix}_Date`, "Date", 12));
-  intro.AddText(" by and between ");
-  intro.AddElement(createInlineField(`${prefix}_FullName`, "Full Name", 40));
-  intro.AddText(" from ");
-  intro.AddElement(createInlineField(`${prefix}_Country`, "Country", 30));
-  intro.AddText(" (\"Receiving Party\") with contact email ");
-  intro.AddElement(createInlineField(`${prefix}_Email`, "Email", 40));
-  intro.AddText(", and the Disclosing Party.");
-  intro.SetFontSize(24);
-  doc.Push(intro);
+  const introParagraph = Api.CreateParagraph();
+  introParagraph.SetSpacingAfter(200);
+  introParagraph.SetFontSize(24);
+  introParagraph.AddText('This Non-Disclosure Agreement ("Agreement") is made on ');
+  introParagraph.AddElement(createInlineField(`${fieldPrefix}_Date`, "Date", 12));
+  introParagraph.AddText(" by and between ");
+  introParagraph.AddElement(createInlineField(`${fieldPrefix}_FullName`, "Full Name", 40));
+  introParagraph.AddText(" from ");
+  introParagraph.AddElement(createInlineField(`${fieldPrefix}_Country`, "Country", 30));
+  introParagraph.AddText(' ("Receiving Party") with contact email ');
+  introParagraph.AddElement(createInlineField(`${fieldPrefix}_Email`, "Email", 40));
+  introParagraph.AddText(", and the Disclosing Party.");
+  doc.Push(introParagraph);
 
   const clauses = [
     "1. Confidential Information: The Receiving Party agrees to maintain the confidentiality of information disclosed by the Disclosing Party, whether written or oral.",
@@ -80,43 +80,50 @@ function addNDADocument(userIndex, data) {
   ];
 
   clauses.forEach(text => {
-    let clause = Api.CreateParagraph();
-    clause.AddText(text);
-    clause.SetFontSize(18);
-    clause.SetSpacingBefore(100);
-    doc.Push(clause);
+    const clauseParagraph = Api.CreateParagraph();
+    clauseParagraph.AddText(text);
+    clauseParagraph.SetFontSize(18);
+    clauseParagraph.SetSpacingBefore(100);
+    doc.Push(clauseParagraph);
   });
 
-  let signName = Api.CreateParagraph();
-  signName.SetSpacingBefore(400);
-  signName.SetFontSize(18);
-  signName.AddText("Full Name: ");
-  signName.AddElement(createInlineField(`${prefix}_FullName`, "Full Name", 40));
-  doc.Push(signName);
+  const signatureName = Api.CreateParagraph();
+  signatureName.SetSpacingBefore(400);
+  signatureName.SetFontSize(18);
+  signatureName.AddText("Full Name: ");
+  signatureName.AddElement(createInlineField(`${fieldPrefix}_FullName`, "Full Name", 40));
+  doc.Push(signatureName);
 
-  let signLine = Api.CreateParagraph();
-  signLine.SetFontSize(18);
-  signLine.AddText("Signature: ____________________________");
-  doc.Push(signLine);
+  const signatureLine = Api.CreateParagraph();
+  signatureLine.SetFontSize(18);
+  signatureLine.AddText("Signature: ____________________________");
+  doc.Push(signatureLine);
 
+  // Add page break for next user
   if (userIndex < users.length - 1) {
-    let br = Api.CreateParagraph();
-    br.AddPageBreak();
-    doc.Push(br);
+    const pageBreak = Api.CreateParagraph();
+    pageBreak.AddPageBreak();
+    doc.Push(pageBreak);
   }
 
+  // Prefill values
   doc.GetAllForms().forEach(form => {
-    const key = form.GetFormKey();
-    if (!key.startsWith(prefix + "_")) return;
-    const shortKey = key.replace(prefix + "_", "");
-    if (form.GetFormType() === "textForm" && data[shortKey]) {
-      form.SetText(data[shortKey]);
+    const fullKey = form.GetFormKey();
+    if (!fullKey.startsWith(fieldPrefix + "_")) return;
+
+    const fieldName = fullKey.replace(`${fieldPrefix}_`, "");
+    const type = form.GetFormType();
+
+    if (type === "textForm" && userData[fieldName]) {
+      form.SetText(userData[fieldName]);
     }
   });
 }
 
-// === Render for all users ===
-users.forEach((user, i) => addNDADocument(i, user));
+// Step 4: Generate NDA for each user
+users.forEach((userData, index) => {
+  addNDADocument(index, userData);
+});
 ```
 
 ## Script execution steps
@@ -128,24 +135,24 @@ Prepare an array of user profiles with the necessary fields for personalization.
 - Pass this array later to the rendering logic
 
 ```ts
-let users = [
+const users = [
   {
-    "FullName": "Alice Johnson",
-    "Email": "alice@example.com",
-    "Country": "USA",
-    "Date": "01.01.2025"
+    FullName: "Alice Johnson",
+    Email: "alice@example.com",
+    Country: "USA",
+    Date: "01.01.2025"
   },
   {
-    "FullName": "Bob Lee",
-    "Email": "bob@example.com",
-    "Country": "Canada",
-    "Date": "02.01.2025"
+    FullName: "Bob Lee",
+    Email: "bob@example.com",
+    Country: "Canada",
+    Date: "02.01.2025"
   },
   {
-    "FullName": "Clara Schmidt",
-    "Email": "clara@example.de",
-    "Country": "Germany",
-    "Date": "03.01.2025"
+    FullName: "Clara Schmidt",
+    Email: "clara@example.de",
+    Country: "Germany",
+    Date: "03.01.2025"
   }
 ];
 ```
@@ -157,9 +164,13 @@ This step creates a utility to generate text form fields with pre-styled design 
 - Set background, border, placeholder, and max character options
 
 ```ts
-function createInlineField(key, placeholder, maxChars) {
-  let field = Api.CreateTextForm({
-    key, placeholder, required: true, maxCharacters: maxChars, autoFit: true
+function createInlineField(fieldKey, placeholder, maxChars) {
+  const field = Api.CreateTextForm({
+    key: fieldKey,
+    placeholder,
+    required: true,
+    maxCharacters: maxChars,
+    autoFit: true
   });
   field.SetBorderColor(180, 180, 180);
   field.SetBackgroundColor(247, 250, 254, false);
@@ -179,30 +190,30 @@ This step defines a function to generate a single NDA page per user, including t
   <summary>Add NDA script</summary>
 
 ```ts
-function addNDADocument(userIndex, data) {
-  const prefix = "user" + userIndex;
+function addNDADocument(userIndex, userData) {
+  const fieldPrefix = `user${userIndex}`;
 
-  let title = Api.CreateParagraph();
-  title.AddText("NON-DISCLOSURE AGREEMENT (NDA)");
-  title.SetFontSize(26);
-  title.SetBold(true);
-  title.SetJc("center");
-  title.SetSpacingAfter(300);
-  doc.Push(title);
+  const headingParagraph = Api.CreateParagraph();
+  headingParagraph.AddText("NON-DISCLOSURE AGREEMENT (NDA)");
+  headingParagraph.SetFontSize(26);
+  headingParagraph.SetBold(true);
+  headingParagraph.SetJc("center");
+  headingParagraph.SetSpacingAfter(300);
+  doc.Push(headingParagraph);
 
-  let intro = Api.CreateParagraph();
-  intro.SetSpacingAfter(200);
-  intro.AddText("This Non-Disclosure Agreement (\"Agreement\") is made on ");
-  intro.AddElement(createInlineField(`${prefix}_Date`, "Date", 12));
-  intro.AddText(" by and between ");
-  intro.AddElement(createInlineField(`${prefix}_FullName`, "Full Name", 40));
-  intro.AddText(" from ");
-  intro.AddElement(createInlineField(`${prefix}_Country`, "Country", 30));
-  intro.AddText(" (\"Receiving Party\") with contact email ");
-  intro.AddElement(createInlineField(`${prefix}_Email`, "Email", 40));
-  intro.AddText(", and the Disclosing Party.");
-  intro.SetFontSize(24);
-  doc.Push(intro);
+  const introParagraph = Api.CreateParagraph();
+  introParagraph.SetSpacingAfter(200);
+  introParagraph.SetFontSize(24);
+  introParagraph.AddText('This Non-Disclosure Agreement ("Agreement") is made on ');
+  introParagraph.AddElement(createInlineField(`${fieldPrefix}_Date`, "Date", 12));
+  introParagraph.AddText(" by and between ");
+  introParagraph.AddElement(createInlineField(`${fieldPrefix}_FullName`, "Full Name", 40));
+  introParagraph.AddText(" from ");
+  introParagraph.AddElement(createInlineField(`${fieldPrefix}_Country`, "Country", 30));
+  introParagraph.AddText(' ("Receiving Party") with contact email ');
+  introParagraph.AddElement(createInlineField(`${fieldPrefix}_Email`, "Email", 40));
+  introParagraph.AddText(", and the Disclosing Party.");
+  doc.Push(introParagraph);
 
   const clauses = [
     "1. Confidential Information: The Receiving Party agrees to maintain the confidentiality of information disclosed by the Disclosing Party, whether written or oral.",
@@ -214,37 +225,42 @@ function addNDADocument(userIndex, data) {
   ];
 
   clauses.forEach(text => {
-    let clause = Api.CreateParagraph();
-    clause.AddText(text);
-    clause.SetFontSize(18);
-    clause.SetSpacingBefore(100);
-    doc.Push(clause);
+    const clauseParagraph = Api.CreateParagraph();
+    clauseParagraph.AddText(text);
+    clauseParagraph.SetFontSize(18);
+    clauseParagraph.SetSpacingBefore(100);
+    doc.Push(clauseParagraph);
   });
 
-  let signName = Api.CreateParagraph();
-  signName.SetSpacingBefore(400);
-  signName.SetFontSize(18);
-  signName.AddText("Full Name: ");
-  signName.AddElement(createInlineField(`${prefix}_FullName`, "Full Name", 40));
-  doc.Push(signName);
+  const signatureName = Api.CreateParagraph();
+  signatureName.SetSpacingBefore(400);
+  signatureName.SetFontSize(18);
+  signatureName.AddText("Full Name: ");
+  signatureName.AddElement(createInlineField(`${fieldPrefix}_FullName`, "Full Name", 40));
+  doc.Push(signatureName);
 
-  let signLine = Api.CreateParagraph();
-  signLine.SetFontSize(18);
-  signLine.AddText("Signature: ____________________________");
-  doc.Push(signLine);
+  const signatureLine = Api.CreateParagraph();
+  signatureLine.SetFontSize(18);
+  signatureLine.AddText("Signature: ____________________________");
+  doc.Push(signatureLine);
 
+  // Add page break for next user
   if (userIndex < users.length - 1) {
-    let br = Api.CreateParagraph();
-    br.AddPageBreak();
-    doc.Push(br);
+    const pageBreak = Api.CreateParagraph();
+    pageBreak.AddPageBreak();
+    doc.Push(pageBreak);
   }
 
+  // Prefill values
   doc.GetAllForms().forEach(form => {
-    const key = form.GetFormKey();
-    if (!key.startsWith(prefix + "_")) return;
-    const shortKey = key.replace(prefix + "_", "");
-    if (form.GetFormType() === "textForm" && data[shortKey]) {
-      form.SetText(data[shortKey]);
+    const fullKey = form.GetFormKey();
+    if (!fullKey.startsWith(fieldPrefix + "_")) return;
+
+    const fieldName = fullKey.replace(`${fieldPrefix}_`, "");
+    const type = form.GetFormType();
+
+    if (type === "textForm" && userData[fieldName]) {
+      form.SetText(userData[fieldName]);
     }
   });
 }
@@ -259,5 +275,7 @@ Finally, loop through the user array and render each document using the function
 - Match keys by prefix and populate inputs
 
 ```ts
-users.forEach((user, i) => addNDADocument(i, user));
+users.forEach((userData, index) => {
+  addNDADocument(index, userData);
+});
 ```

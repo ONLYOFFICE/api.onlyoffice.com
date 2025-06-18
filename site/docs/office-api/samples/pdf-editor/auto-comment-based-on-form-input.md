@@ -5,23 +5,23 @@ This example demonstrates how to add contextual comments in a document using the
 ```ts editor-pdf zoom=60
 let doc = Api.GetDocument();
 
-// Step 1: Add title
-let title = Api.CreateParagraph();
-title.AddText("Job Satisfaction Survey");
-title.SetFontSize(26);
-title.SetBold(true);
-title.SetJc("center");
-doc.Push(title);
+// Step 1: Add heading
+let headingParagraph = Api.CreateParagraph();
+headingParagraph.AddText("Job Satisfaction Survey");
+headingParagraph.SetFontSize(26);
+headingParagraph.SetBold(true);
+headingParagraph.SetJc("center");
+doc.Push(headingParagraph);
 
-// Step 2: Add question
-let question = Api.CreateParagraph();
-question.SetSpacingBefore(400);
-question.AddText("How satisfied are you with your current role?");
-question.SetFontSize(18);
-doc.Push(question);
+// Step 2: Add question paragraph
+let questionParagraph = Api.CreateParagraph();
+questionParagraph.SetSpacingBefore(400);
+questionParagraph.AddText("How satisfied are you with your current role?");
+questionParagraph.SetFontSize(18);
+doc.Push(questionParagraph);
 
-// Step 3: Add radio options
-let levels = [
+// Step 3: Define radio options
+const satisfactionLevels = [
   "Very satisfied",
   "Satisfied",
   "Neutral",
@@ -29,40 +29,41 @@ let levels = [
   "Very dissatisfied"
 ];
 
-let selectedKey = "Satisfaction_4";
-let formParas = [];
+// Use level values directly as form keys for clarity
+const preselectedLevel = "Very dissatisfied";
+const formElementsByLevel = {};
 
-levels.forEach((level, i) => {
-  let key = "Satisfaction_" + i;
-  let radio = Api.CreateCheckBoxForm({
-    key: key,
+// Step 4: Add radio buttons
+satisfactionLevels.forEach(level => {
+  const formKey = level;
+  const radioButton = Api.CreateCheckBoxForm({
+    key: formKey,
     tip: "Select your satisfaction level",
     required: true,
     radio: true
   });
 
-  let p = Api.CreateParagraph();
-  p.AddElement(radio);
-  p.AddText(" " + level);
-  p.SetFontSize(16);
-  doc.Push(p);
+  const optionParagraph = Api.CreateParagraph();
+  optionParagraph.AddElement(radioButton);
+  optionParagraph.AddText(" " + level);
+  optionParagraph.SetFontSize(16);
+  doc.Push(optionParagraph);
 
-  formParas.push({ key, paragraph: p });
+  formElementsByLevel[formKey] = optionParagraph;
 });
 
-// Step 4: Preselect a value
-doc.GetAllForms().forEach(form => {
-  if (form.GetFormKey() === selectedKey) {
-    form.SetChecked(true);
-  }
-});
+// Step 5: Preselect default level
+const targetForm = doc.GetAllForms().find(f => f.GetFormKey() === preselectedLevel);
+if (targetForm) {
+  targetForm.SetChecked(true);
+}
 
-// Step 5: Add contextual comment
-let dissatisfiedPara = formParas.find(item => item.key === selectedKey)?.paragraph;
-if (dissatisfiedPara) {
+// Step 6: Add contextual comment
+const targetParagraph = formElementsByLevel[preselectedLevel];
+if (targetParagraph) {
   Api.AddComment(
-    dissatisfiedPara,
-    "Please elaborate on your dissatisfaction.",
+    targetParagraph,
+    "Please leave a detailed description of your dissatisfaction.",
     "System"
   );
 }
@@ -70,20 +71,20 @@ if (dissatisfiedPara) {
 
 ## Script execution steps
 
-### Step 1. Define question rendering function
-This step creates a title paragraph to label the form.
+### Step 1. Add heading
+This step creates a heading paragraph to label the form.
 
 - Create a paragraph using [ApiParagraph](../../usage-api/text-document-api/ApiParagraph/ApiParagraph.md)
-- Add the title text using [AddText](../../usage-api/text-document-api/ApiParagraph/Methods/AddText.md)
+- Add the heading text using [AddText](../../usage-api/text-document-api/ApiParagraph/Methods/AddText.md)
 - Set font size, bold style, and center alignment with [SetFontSize](../../usage-api/text-document-api/ApiParagraph/Methods/SetFontSize.md), [SetBold](../../usage-api/text-document-api/ApiParagraph/Methods/SetBold.md), and [SetJc](../../usage-api/text-document-api/ApiParagraph/Methods/SetJc.md)
 
 ```ts
-let title = Api.CreateParagraph();
-title.AddText("Job Satisfaction Survey");
-title.SetFontSize(26);
-title.SetBold(true);
-title.SetJc("center");
-doc.Push(title);
+let headingParagraph = Api.CreateParagraph();
+headingParagraph.AddText("Job Satisfaction Survey");
+headingParagraph.SetFontSize(26);
+headingParagraph.SetBold(true);
+headingParagraph.SetJc("center");
+doc.Push(headingParagraph);
 ```
 
 ### Step 2. Insert survey question
@@ -93,11 +94,11 @@ This step inserts the main survey question.
 - Set font size for the question line
 
 ```ts
-let question = Api.CreateParagraph();
-question.SetSpacingBefore(400);
-question.AddText("How satisfied are you with your current role?");
-question.SetFontSize(18);
-doc.Push(question);
+let questionParagraph = Api.CreateParagraph();
+questionParagraph.SetSpacingBefore(400);
+questionParagraph.AddText("How satisfied are you with your current role?");
+questionParagraph.SetFontSize(18);
+doc.Push(questionParagraph);
 ```
 
 ### Step 3. Create radio buttons for answer options
@@ -108,21 +109,22 @@ This step defines satisfaction levels as radio button options.
 - Add each to its own paragraph and store the paragraph for later reference
 
 ```ts
-levels.forEach((level, i) => {
-  let key = "Satisfaction_" + i;
-  let radio = Api.CreateCheckBoxForm({
-    key: key,
+satisfactionLevels.forEach(level => {
+  const formKey = level;
+  const radioButton = Api.CreateCheckBoxForm({
+    key: formKey,
     tip: "Select your satisfaction level",
     required: true,
     radio: true
   });
 
-  let p = Api.CreateParagraph();
-  p.AddElement(radio);
-  p.AddText(" " + level);
-  doc.Push(p);
+  const optionParagraph = Api.CreateParagraph();
+  optionParagraph.AddElement(radioButton);
+  optionParagraph.AddText(" " + level);
+  optionParagraph.SetFontSize(16);
+  doc.Push(optionParagraph);
 
-  formParas.push({ key, paragraph: p });
+  formElementsByLevel[formKey] = optionParagraph;
 });
 ```
 
@@ -133,11 +135,10 @@ This step demonstrates how to programmatically check a specific radio option. Th
 - Match the key and call .SetChecked(true)
 
 ```ts
-doc.GetAllForms().forEach(form => {
-  if (form.GetFormKey() === selectedKey) {
-    form.SetChecked(true);
-  }
-});
+const targetForm = doc.GetAllForms().find(f => f.GetFormKey() === preselectedLevel);
+if (targetForm) {
+  targetForm.SetChecked(true);
+}
 ```
 
 ### Step 5. Add contextual comment based on input
@@ -147,11 +148,11 @@ This step adds a comment if the selected option matches a specific value.
 - Use [AddComment](../../usage-api/text-document-api/Api/Methods/AddComment.md) to attach the comment beside the paragraph
 
 ```ts
-let dissatisfiedPara = formParas.find(item => item.key === selectedKey)?.paragraph;
-if (dissatisfiedPara) {
+const targetParagraph = formElementsByLevel[preselectedLevel];
+if (targetParagraph) {
   Api.AddComment(
-    dissatisfiedPara,
-    "Please elaborate on your dissatisfaction.",
+    targetParagraph,
+    "Please leave a detailed description of your dissatisfaction.",
     "System"
   );
 }

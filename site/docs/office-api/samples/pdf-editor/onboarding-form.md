@@ -2,19 +2,22 @@
 
 This example demonstrates how to create an onboarding checklist form using the ONLYOFFICE Office API. The script generates a document with text fields, a date field, and checkboxes for signed documents using structured tables.
 
-```ts editor-pdf
-function addTextFormToParagraph(paragraph, fontSize, key, placeholder, maxCharacters, jc, comb, border) {
-  let textForm = Api.CreateTextForm({
+```ts editor-pdf zoom=60
+const doc = Api.GetDocument();
+
+// Step 1: Utilities
+function addTextFormToParagraph(paragraph, fontSize, key, placeholder, maxCharacters, jc, comb, showBorder) {
+  const textForm = Api.CreateTextForm({
     key,
     required: false,
     comb,
     placeholder,
     maxCharacters,
     multiLine: false,
-    autoFit: true,
+    autoFit: true
   });
 
-  if (border) {
+  if (showBorder) {
     textForm.SetBorderColor(200, 200, 200);
   }
 
@@ -23,14 +26,14 @@ function addTextFormToParagraph(paragraph, fontSize, key, placeholder, maxCharac
   paragraph.SetJc(jc);
 }
 
-function addTextToParagraph(paragraph, text, fontSize, isBold, jc) {
+function addTextToParagraph(paragraph, text, fontSize, isBold = false, jc = "left") {
   paragraph.AddText(text);
   paragraph.SetFontSize(fontSize);
   paragraph.SetBold(isBold);
   paragraph.SetJc(jc);
 }
 
-function setBorders(table, color) {
+function setTableBorders(table, color) {
   table.SetTableBorderTop("single", 4, 0, color, color, color);
   table.SetTableBorderBottom("single", 4, 0, color, color, color);
   table.SetTableBorderLeft("single", 4, 0, color, color, color);
@@ -39,67 +42,85 @@ function setBorders(table, color) {
   table.SetTableBorderInsideH("single", 4, 0, color, color, color);
 }
 
-function getTableCellParagraph(table, row, col, width) {
-  let cell = table.GetCell(row, col);
-  cell.SetWidth("twips", width);
+function getCellParagraph(table, row, col, widthTwips) {
+  const cell = table.GetCell(row, col);
+  cell.SetWidth("twips", widthTwips);
   return cell.GetContent().GetElement(0);
 }
 
-let doc = Api.GetDocument();
+// Step 2: Heading
+const heading = Api.CreateParagraph();
+addTextToParagraph(heading, "Onboarding Checklist", 32, true, "center");
+heading.SetSpacingAfter(600);
+doc.Push(heading);
 
-let paragraph = doc.GetElement(0);
-paragraph.AddText("Onboarding Checklist");
-paragraph.SetFontSize(32);
-
-let table = Api.CreateTable(2, 3);
+// Step 3: Table with employee data
+const table = Api.CreateTable(2, 3); // 3 rows: Name, Department, Start Date
 table.SetWidth("percent", 100);
-setBorders(table, 255);
 table.SetTableCellMarginTop(25);
+setTableBorders(table, 255);
 
-paragraph = getTableCellParagraph(table, 0, 0, 300);
-addTextToParagraph(paragraph, "Employee:", 24, true);
-paragraph = getTableCellParagraph(table, 0, 1, 500);
-addTextFormToParagraph(paragraph, 24, "Employee name", "Employee name", 25, "left", true);
+// Row 1: Employee
+let cellPara = getCellParagraph(table, 0, 0, 3000);
+addTextToParagraph(cellPara, "Employee:", 24, true);
 
-paragraph = getTableCellParagraph(table, 1, 0, 300);
-addTextToParagraph(paragraph, "Department:", 24, true);
-paragraph = getTableCellParagraph(table, 1, 1, 500);
-addTextFormToParagraph(paragraph, 24, "Department name", "Department name", 25, "left", true);
+cellPara = getCellParagraph(table, 0, 1, 7000);
+addTextFormToParagraph(cellPara, 24, "EmployeeName", "Employee name", 25, "left", true, true);
 
-paragraph = getTableCellParagraph(table, 2, 0, 300);
-addTextToParagraph(paragraph, "Start date:", 24, true);
+// Row 2: Department
+cellPara = getCellParagraph(table, 1, 0, 3000);
+addTextToParagraph(cellPara, "Department:", 24, true);
 
-paragraph = getTableCellParagraph(table, 2, 1, 500);
-let dateForm = Api.CreateDateForm({"key": "Date", "tip": "Enter current date", "required": true, "placeholder": "Your date here", "format": "mm.dd.yyyy", "lang": "en-US"});
-paragraph.AddElement(dateForm);
-dateForm.SetFormat("dddd, dd MMMM yyyy");
+cellPara = getCellParagraph(table, 1, 1, 7000);
+addTextFormToParagraph(cellPara, 24, "DepartmentName", "Department name", 25, "left", true, true);
+
+// Row 3: Start Date
+cellPara = getCellParagraph(table, 2, 0, 3000);
+addTextToParagraph(cellPara, "Start date:", 24, true);
+
+cellPara = getCellParagraph(table, 2, 1, 7000);
+const dateField = Api.CreateDateForm({
+  key: "StartDate",
+  tip: "Enter current date",
+  required: true,
+  placeholder: "Your date here",
+  format: "mm.dd.yyyy",
+  lang: "en-US"
+});
+dateField.SetFormat("dddd, dd MMMM yyyy");
+cellPara.AddElement(dateField);
 
 doc.Push(table);
 
-paragraph = Api.CreateParagraph();
-addTextToParagraph(paragraph, "Signed documents", 28, false);
-doc.Push(paragraph);
+// Step 4: Signed documents checklist
+const signedHeader = Api.CreateParagraph();
+addTextToParagraph(signedHeader, "Signed documents", 28, false);
+signedHeader.SetSpacingBefore(600);
+doc.Push(signedHeader);
 
-const signed_documents = [
-    "Tax Form", "NDA", "Contract"
-];
-paragraph = Api.CreateParagraph();
-
-signed_documents.forEach(sd => {
-    let checkBoxForm = Api.CreateCheckBoxForm({"key": sd, "tip": "", "required": false, "placeholder": "", "radio": false});
-    paragraph.AddElement(checkBoxForm);
-    paragraph.AddText(` ${sd}`);
-    paragraph.AddLineBreak();
+const signedList = Api.CreateParagraph();
+["Tax Form", "NDA", "Contract"].forEach(item => {
+  const checkBox = Api.CreateCheckBoxForm({
+    key: item,
+    required: false,
+    placeholder: "",
+    radio: false
+  });
+  signedList.AddElement(checkBox);
+  signedList.AddText(` ${item}`);
+  signedList.AddLineBreak();
 });
-doc.Push(paragraph);
+doc.Push(signedList);
 
-paragraph = Api.CreateParagraph();
-addTextToParagraph(paragraph, "Hiring Manager", 28, false);
-doc.Push(paragraph);
+// Step 5: Hiring Manager block
+const managerHeader = Api.CreateParagraph();
+addTextToParagraph(managerHeader, "Hiring Manager", 28, false);
+managerHeader.SetSpacingBefore(400);
+doc.Push(managerHeader);
 
-paragraph = Api.CreateParagraph();
-addTextFormToParagraph(paragraph, 24, "HR manager name", "HR manager name", 25, "left", true);
-doc.Push(paragraph);
+const managerField = Api.CreateParagraph();
+addTextFormToParagraph(managerField, 24, "HRManagerName", "HR manager name", 25, "left", true, true);
+doc.Push(managerField);
 ```
 
 ## Script execution steps
@@ -117,18 +138,18 @@ This step defines helper functions to add text, borders, and text fields inside 
   <summary>Reusable functions script</summary>
 
   ```ts
-  function addTextFormToParagraph(paragraph, fontSize, key, placeholder, maxCharacters, jc, comb, border) {
-    let textForm = Api.CreateTextForm({
+  function addTextFormToParagraph(paragraph, fontSize, key, placeholder, maxCharacters, jc, comb, showBorder) {
+    const textForm = Api.CreateTextForm({
       key,
       required: false,
       comb,
       placeholder,
       maxCharacters,
       multiLine: false,
-      autoFit: true,
+      autoFit: true
     });
 
-    if (border) {
+    if (showBorder) {
       textForm.SetBorderColor(200, 200, 200);
     }
 
@@ -137,14 +158,14 @@ This step defines helper functions to add text, borders, and text fields inside 
     paragraph.SetJc(jc);
   }
 
-  function addTextToParagraph(paragraph, text, fontSize, isBold, jc) {
+  function addTextToParagraph(paragraph, text, fontSize, isBold = false, jc = "left") {
     paragraph.AddText(text);
     paragraph.SetFontSize(fontSize);
     paragraph.SetBold(isBold);
     paragraph.SetJc(jc);
   }
 
-  function setBorders(table, color) {
+  function setTableBorders(table, color) {
     table.SetTableBorderTop("single", 4, 0, color, color, color);
     table.SetTableBorderBottom("single", 4, 0, color, color, color);
     table.SetTableBorderLeft("single", 4, 0, color, color, color);
@@ -153,13 +174,13 @@ This step defines helper functions to add text, borders, and text fields inside 
     table.SetTableBorderInsideH("single", 4, 0, color, color, color);
   }
 
-  function getTableCellParagraph(table, row, col, width) {
-    let cell = table.GetCell(row, col);
-    cell.SetWidth("twips", width);
+  function getCellParagraph(table, row, col, widthTwips) {
+    const cell = table.GetCell(row, col);
+    cell.SetWidth("twips", widthTwips);
     return cell.GetContent().GetElement(0);
   }
   ```
-
+  
 </details>
 
 ### Step 2. Create header and employee details table
@@ -176,34 +197,42 @@ This step initializes the document, inserts the main heading, and creates a stru
   <summary>Employee details script</summary>
 
   ```ts
-  let doc = Api.GetDocument();
+  const heading = Api.CreateParagraph();
+  addTextToParagraph(heading, "Onboarding Checklist", 32, true, "center");
+  heading.SetSpacingAfter(600);
+  doc.Push(heading);
 
-  let paragraph = doc.GetElement(0);
-  paragraph.AddText("Onboarding Checklist");
-  paragraph.SetFontSize(32);
-
-  let table = Api.CreateTable(2, 3);
+  const table = Api.CreateTable(2, 3);
   table.SetWidth("percent", 100);
-  setBorders(table, 255);
   table.SetTableCellMarginTop(25);
+  setTableBorders(table, 255);
 
-  paragraph = getTableCellParagraph(table, 0, 0, 300);
-  addTextToParagraph(paragraph, "Employee:", 24, true);
-  paragraph = getTableCellParagraph(table, 0, 1, 500);
-  addTextFormToParagraph(paragraph, 24, "Employee name", "Employee name", 25, "left", true);
+  let cellPara = getCellParagraph(table, 0, 0, 3000);
+  addTextToParagraph(cellPara, "Employee:", 24, true);
 
-  paragraph = getTableCellParagraph(table, 1, 0, 300);
-  addTextToParagraph(paragraph, "Department:", 24, true);
-  paragraph = getTableCellParagraph(table, 1, 1, 500);
-  addTextFormToParagraph(paragraph, 24, "Department name", "Department name", 25, "left", true);
+  cellPara = getCellParagraph(table, 0, 1, 7000);
+  addTextFormToParagraph(cellPara, 24, "EmployeeName", "Employee name", 25, "left", true, true);
 
-  paragraph = getTableCellParagraph(table, 2, 0, 300);
-  addTextToParagraph(paragraph, "Start date:", 24, true);
+  cellPara = getCellParagraph(table, 1, 0, 3000);
+  addTextToParagraph(cellPara, "Department:", 24, true);
 
-  paragraph = getTableCellParagraph(table, 2, 1, 500);
-  let dateForm = Api.CreateDateForm({"key": "Date", "tip": "Enter current date", "required": true, "placeholder": "Your date here", "format": "mm.dd.yyyy", "lang": "en-US"});
-  paragraph.AddElement(dateForm);
-  dateForm.SetFormat("dddd, dd MMMM yyyy");
+  cellPara = getCellParagraph(table, 1, 1, 7000);
+  addTextFormToParagraph(cellPara, 24, "DepartmentName", "Department name", 25, "left", true, true);
+
+  cellPara = getCellParagraph(table, 2, 0, 3000);
+  addTextToParagraph(cellPara, "Start date:", 24, true);
+
+  cellPara = getCellParagraph(table, 2, 1, 7000);
+  const dateField = Api.CreateDateForm({
+    key: "StartDate",
+    tip: "Enter current date",
+    required: true,
+    placeholder: "Your date here",
+    format: "mm.dd.yyyy",
+    lang: "en-US"
+  });
+  dateField.SetFormat("dddd, dd MMMM yyyy");
+  cellPara.AddElement(dateField);
 
   doc.Push(table);
   ```
@@ -223,30 +252,33 @@ This step appends a checkbox list of required signed documents and adds a final 
   <summary>Checklist and hiring manager script</summary>
 
   ```ts
-  paragraph = Api.CreateParagraph();
-  addTextToParagraph(paragraph, "Signed documents", 28, false);
-  doc.Push(paragraph);
+  const signedHeader = Api.CreateParagraph();
+  addTextToParagraph(signedHeader, "Signed documents", 28, false);
+  signedHeader.SetSpacingBefore(600);
+  doc.Push(signedHeader);
 
-  const signed_documents = [
-      "Tax Form", "NDA", "Contract"
-  ];
-  paragraph = Api.CreateParagraph();
+  const signedList = Api.CreateParagraph();
+  ["Tax Form", "NDA", "Contract"].forEach(item => {
+    const checkBox = Api.CreateCheckBoxForm({
+      key: item,
+      required: false,
+      placeholder: "",
+      radio: false
+    });
+    signedList.AddElement(checkBox);
+    signedList.AddText(` ${item}`);
+    signedList.AddLineBreak();
+  });
+  doc.Push(signedList);
 
-  signed_documents.forEach(sd => {
-      let checkBoxForm = Api.CreateCheckBoxForm({"key": sd, "tip": "", "required": false, "placeholder": "", "radio": false});
-      paragraph.AddElement(checkBoxForm);
-      paragraph.AddText(` ${sd}`);
-      paragraph.AddLineBreak();
-  });\
-  doc.Push(paragraph);
+  const managerHeader = Api.CreateParagraph();
+  addTextToParagraph(managerHeader, "Hiring Manager", 28, false);
+  managerHeader.SetSpacingBefore(400);
+  doc.Push(managerHeader);
 
-  paragraph = Api.CreateParagraph();
-  addTextToParagraph(paragraph, "Hiring Manager", 28, false);
-  doc.Push(paragraph);
-
-  paragraph = Api.CreateParagraph();
-  addTextFormToParagraph(paragraph, 24, "HR manager name", "HR manager name", 25, "left", true);
-  doc.Push(paragraph);
+  const managerField = Api.CreateParagraph();
+  addTextFormToParagraph(managerField, 24, "HRManagerName", "HR manager name", 25, "left", true, true);
+  doc.Push(managerField);
   ```
 
 </details>

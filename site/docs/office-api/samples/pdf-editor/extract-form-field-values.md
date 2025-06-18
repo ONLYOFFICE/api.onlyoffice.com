@@ -9,46 +9,53 @@ section.SetPageSize(11900, 16840); // A4
 section.SetPageMargins(1000, 1000, 1000, 1000);
 
 // === Utility: Add title or field label ===
-function addTextParagraph(ind, text, fontSize, bold = false, jc = "left") {
-  let paragraph = Api.CreateParagraph();
+function addTextParagraph(indent, text, fontSize, bold = false, alignment = "left") {
+  const paragraph = Api.CreateParagraph();
   paragraph.AddText(text);
-  paragraph.SetIndLeft(ind);
+  paragraph.SetIndLeft(indent);
   paragraph.SetFontSize(fontSize);
   paragraph.SetBold(bold);
-  paragraph.SetJc(jc);
+  paragraph.SetJc(alignment);
   paragraph.SetColor(51, 51, 51); // #333333
   doc.Push(paragraph);
 }
 
 // === Utility: Add text field ===
-function addTextField(ind, key, placeholder, maxChars) {
-  let p = Api.CreateParagraph();
-  p.SetIndLeft(ind);
-  let field = Api.CreateTextForm({
+function addTextField(indent, key, placeholder, maxChars) {
+  const paragraph = Api.CreateParagraph();
+  paragraph.SetIndLeft(indent);
+
+  const textField = Api.CreateTextForm({
     key,
     placeholder,
     required: true,
     maxCharacters: maxChars,
     autoFit: true
   });
-  field.SetBorderColor(180, 180, 180);
-  field.SetBackgroundColor(247, 250, 254, false);
-  p.AddElement(field);
-  p.SetSpacingBefore(20);
-  doc.Push(p);
+
+  textField.SetBorderColor(180, 180, 180);
+  textField.SetBackgroundColor(247, 250, 254, false);
+  paragraph.AddElement(textField);
+  paragraph.SetSpacingBefore(20);
+  doc.Push(paragraph);
 }
 
 // === Utility: Add radio group ===
-function addRadioGroup(ind, label, key, options) {
-  addTextParagraph(ind, label, 18, true);
-  let p = Api.CreateParagraph();
-  p.SetIndLeft(ind);
-  options.forEach(opt => {
-    let cb = Api.CreateCheckBoxForm({ key: `${key}_${opt}` });
-    p.AddElement(cb);
-    p.AddText(" " + opt + "    ");
+function addRadioGroup(indent, label, groupKey, options) {
+  addTextParagraph(indent, label, 18, true);
+
+  const radioGroupParagraph = Api.CreateParagraph();
+  radioGroupParagraph.SetIndLeft(indent);
+
+  options.forEach(option => {
+    const checkbox = Api.CreateCheckBoxForm({ key: `${groupKey}_${option}`, radio: true });
+    checkbox.SetRadioGroup(groupKey);
+
+    radioGroupParagraph.AddElement(checkbox);
+    radioGroupParagraph.AddText(" " + option + "    ");
   });
-  doc.Push(p);
+
+  doc.Push(radioGroupParagraph);
 }
 
 // === Title ===
@@ -56,6 +63,7 @@ addTextParagraph(0, "REGISTRATION FORM", 32, true, "center");
 
 // === Block: Personal Info ===
 addTextParagraph(800, "Personal information", 24, true);
+
 addTextParagraph(800, "Full Name:", 18, true);
 addTextField(800, "FullName", "e.g. John Smith", 50);
 
@@ -65,35 +73,44 @@ addTextField(800, "Email", "you@example.com", 40);
 addTextParagraph(800, "Country:", 18, true);
 addTextField(800, "Country", "e.g. Germany", 30);
 
-// === Replace Sex with Entity Type ===
+// === Entity Type Block ===
 addRadioGroup(800, "Entity Type:", "Entity", ["Individual", "Legal Entity"]);
 
-// === Optional: Sample form data ===
-let testData = {
-  "FullName": "Anna Müller",
-  "Email": "anna.mueller@example.com",
-  "Country": "Germany",
+// === Optional: Sample form data (pre-fill) ===
+const sampleFormData = {
+  FullName: "Anna Müller",
+  Email: "anna.mueller@example.com",
+  Country: "Germany",
   "Entity_Individual": true,
   "Entity_Legal Entity": false
 };
 
 doc.GetAllForms().forEach(form => {
-  let key = form.GetFormKey();
-  if (form.GetFormType() === "textForm" && testData[key]) {
-    form.SetText(testData[key]);
+  const key = form.GetFormKey();
+  const type = form.GetFormType();
+
+  if (type === "textForm" && sampleFormData[key]) {
+    form.SetText(sampleFormData[key]);
   }
-  if (form.GetFormType() === "checkBoxForm" && testData[key] !== undefined) {
-    form.SetChecked(testData[key]);
+  if (type === "checkBoxForm" && sampleFormData[key] !== undefined) {
+    form.SetChecked(sampleFormData[key]);
   }
 });
 
-// === Get filled data ===
-let result = {};
+// === Extract filled values into result object ===
+const result = {};
 doc.GetAllForms().forEach(form => {
-  let key = form.GetFormKey();
-  if (form.GetFormType() === "textForm") result[key] = form.GetText();
-  if (form.GetFormType() === "checkBoxForm") result[key] = form.IsChecked();
+  const key = form.GetFormKey();
+  const type = form.GetFormType();
+
+  if (type === "textForm") {
+    result[key] = form.GetText();
+  }
+  if (type === "checkBoxForm") {
+    result[key] = form.IsChecked();
+  }
 });
+
 console.log(JSON.stringify(result, null, 2));
 ```
 
@@ -110,66 +127,84 @@ This step creates helper functions to render text paragraphs and fields in the d
   <summary>Text rendering script</summary>
 
 ```ts
-function addTextParagraph(ind, text, fontSize, bold = false, jc = "left") {
-  let paragraph = Api.CreateParagraph();
+// === Utility: Add title or field label ===
+function addTextParagraph(indent, text, fontSize, bold = false, alignment = "left") {
+  const paragraph = Api.CreateParagraph();
   paragraph.AddText(text);
-  paragraph.SetIndLeft(ind);
+  paragraph.SetIndLeft(indent);
   paragraph.SetFontSize(fontSize);
   paragraph.SetBold(bold);
-  paragraph.SetJc(jc);
+  paragraph.SetJc(alignment);
   paragraph.SetColor(51, 51, 51); // #333333
   doc.Push(paragraph);
 }
 
-function addTextField(ind, key, placeholder, maxChars) {
-  let p = Api.CreateParagraph();
-  p.SetIndLeft(ind);
-  let field = Api.CreateTextForm({
+// === Utility: Add text field ===
+function addTextField(indent, key, placeholder, maxChars) {
+  const paragraph = Api.CreateParagraph();
+  paragraph.SetIndLeft(indent);
+
+  const textField = Api.CreateTextForm({
     key,
     placeholder,
     required: true,
     maxCharacters: maxChars,
     autoFit: true
   });
-  field.SetBorderColor(180, 180, 180);
-  field.SetBackgroundColor(247, 250, 254, false);
-  p.AddElement(field);
-  p.SetSpacingBefore(20);
-  doc.Push(p);
+
+  textField.SetBorderColor(180, 180, 180);
+  textField.SetBackgroundColor(247, 250, 254, false);
+  paragraph.AddElement(textField);
+  paragraph.SetSpacingBefore(20);
+  doc.Push(paragraph);
 }
 
-function addRadioGroup(ind, label, key, options) {
-  addTextParagraph(ind, label, 18, true);
-  let p = Api.CreateParagraph();
-  p.SetIndLeft(ind);
-  options.forEach(opt => {
-    let cb = Api.CreateCheckBoxForm({ key: `${key}_${opt}` });
-    p.AddElement(cb);
-    p.AddText(" " + opt + "    ");
+// === Utility: Add radio group ===
+function addRadioGroup(indent, label, groupKey, options) {
+  addTextParagraph(indent, label, 18, true);
+
+  const radioGroupParagraph = Api.CreateParagraph();
+  radioGroupParagraph.SetIndLeft(indent);
+
+  options.forEach(option => {
+    const checkbox = Api.CreateCheckBoxForm({ key: `${groupKey}_${option}`, radio: true });
+    checkbox.SetRadioGroup(groupKey);
+
+    radioGroupParagraph.AddElement(checkbox);
+    radioGroupParagraph.AddText(" " + option + "    ");
   });
-  doc.Push(p);
+
+  doc.Push(radioGroupParagraph);
 }
 ```
 
 </details>
 
 ### Step 2. Build the form structure
-This step initializes the form layout and renders the input blocks: name, email, country, and sex.
+This step initializes the form layout and renders the input blocks: name, email, country, and entity type.
 
 - Render form title and subtitles
 - Add three single-line text fields
 - Create a radio button group
 
 ```ts
+// === Title ===
 addTextParagraph(0, "REGISTRATION FORM", 32, true, "center");
+
+// === Block: Personal Info ===
 addTextParagraph(800, "Personal information", 24, true);
+
 addTextParagraph(800, "Full Name:", 18, true);
 addTextField(800, "FullName", "e.g. John Smith", 50);
+
 addTextParagraph(800, "E-mail:", 18, true);
 addTextField(800, "Email", "you@example.com", 40);
+
 addTextParagraph(800, "Country:", 18, true);
 addTextField(800, "Country", "e.g. Germany", 30);
-addRadioGroup(800, "Sex:", "Sex", ["Male", "Female"]);
+
+// === Entity Type Block ===
+addRadioGroup(800, "Entity Type:", "Entity", ["Individual", "Legal Entity"]);
 ```
 
 ### Step 3. (Optional) Pre-fill form values
@@ -179,13 +214,24 @@ This step assigns values to the form fields for demonstration purposes only. In 
 - Use [SetChecked](../../usage-api/form-api/ApiCheckBoxForm/Methods/SetChecked.md) for radio fields
 
 ```ts
+// === Optional: Sample form data (pre-fill) ===
+const sampleFormData = {
+  FullName: "Anna Müller",
+  Email: "anna.mueller@example.com",
+  Country: "Germany",
+  "Entity_Individual": true,
+  "Entity_Legal Entity": false
+};
+
 doc.GetAllForms().forEach(form => {
-  let key = form.GetFormKey();
-  if (form.GetFormType() === "textForm" && testData[key]) {
-    form.SetText(testData[key]);
+  const key = form.GetFormKey();
+  const type = form.GetFormType();
+
+  if (type === "textForm" && sampleFormData[key]) {
+    form.SetText(sampleFormData[key]);
   }
-  if (form.GetFormType() === "checkBoxForm" && testData[key] !== undefined) {
-    form.SetChecked(testData[key]);
+  if (type === "checkBoxForm" && sampleFormData[key] !== undefined) {
+    form.SetChecked(sampleFormData[key]);
   }
 });
 ```
@@ -198,11 +244,19 @@ This step iterates over all form elements and collects the submitted data into a
 - Output the values using console.log
 
 ```ts
-let result = {};
+// === Extract filled values into result object ===
+const result = {};
 doc.GetAllForms().forEach(form => {
-  let key = form.GetFormKey();
-  if (form.GetFormType() === "textForm") result[key] = form.GetText();
-  if (form.GetFormType() === "checkBoxForm") result[key] = form.IsChecked();
+  const key = form.GetFormKey();
+  const type = form.GetFormType();
+
+  if (type === "textForm") {
+    result[key] = form.GetText();
+  }
+  if (type === "checkBoxForm") {
+    result[key] = form.IsChecked();
+  }
 });
+
 console.log(JSON.stringify(result, null, 2));
 ```

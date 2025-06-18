@@ -4,42 +4,41 @@ This example demonstrates how to check user responses in a school exam form crea
 
 The script compares selected answers with predefined correct answers and calculates the final score.
 
-```ts editor-pdf
-let doc = Api.GetDocument();
+```ts editor-pdf zoom=60
+const doc = Api.GetDocument();
 
-// === Correct answers ===
+// Step 1: Define correct answers
 const correctAnswers = {
   "1. Which planet is known as the Red Planet?": "Mars",
   "2. What is the name of Earth's natural satellite?": "The Moon",
   "3. Which star is at the center of our solar system?": "The Sun"
 };
 
-let result = {};
+const totalQuestions = Object.keys(correctAnswers).length;
 let score = 0;
+const result = {};
 
-// === Extract selected answers ===
+// Step 2: Evaluate selected answers
 doc.GetAllForms().forEach(form => {
   if (form.GetFormType() === "radioButtonForm" && form.IsChecked()) {
-    
-    const question = form.GetFormKey();
-    const selected = form.GetTipText(); 
-    
-    const correct = correctAnswers[question];
-    const isCorrect = selected === correct;
+    const questionKey = form.GetFormKey();      // e.g., full question text
+    const selectedOption = form.GetTipText();   // label user selected
+    const correctAnswer = correctAnswers[questionKey];
+    const isCorrect = selectedOption === correctAnswer;
 
-    result[question] = {
-      selected,
-      correct,
-      result: isCorrect ? "Correct" : "Error"
+    result[questionKey] = {
+      selected: selectedOption,
+      correct: correctAnswer,
+      result: isCorrect ? "Correct" : "Incorrect"
     };
 
     if (isCorrect) score++;
   }
 });
 
-// === Output result ===
-console.log(`Score: ${score} out of ${Object.keys(correctAnswers).length}`);
-console.log("Details:", JSON.stringify(result, null, 2));
+// Step 3: Output result
+console.log(`Score: ${score} out of ${totalQuestions}`);
+console.log("Answer Details:", JSON.stringify(result, null, 2));
 ```
 
 ## Script execution steps
@@ -70,17 +69,15 @@ This step extracts selected options and compares them with the correct answers.
 ```ts
 doc.GetAllForms().forEach(form => {
   if (form.GetFormType() === "radioButtonForm" && form.IsChecked()) {
-    
-    const question = form.GetFormKey();
-    const selected = form.GetTipText(); 
-    
-    const correct = correctAnswers[question];
-    const isCorrect = selected === correct;
+    const questionKey = form.GetFormKey();      // e.g., full question text
+    const selectedOption = form.GetTipText();   // label user selected
+    const correctAnswer = correctAnswers[questionKey];
+    const isCorrect = selectedOption === correctAnswer;
 
-    result[question] = {
-      selected,
-      correct,
-      result: isCorrect ? "Correct" : "Error"
+    result[questionKey] = {
+      selected: selectedOption,
+      correct: correctAnswer,
+      result: isCorrect ? "Correct" : "Incorrect"
     };
 
     if (isCorrect) score++;
@@ -95,6 +92,6 @@ This step prints the user’s score and question-wise details.
 - Use `console.log()` to print a score summary and answer breakdown
 
 ```ts
-console.log(`Score: ${score} out of ${Object.keys(correctAnswers).length}`);
-console.log("Details:", JSON.stringify(result, null, 2));
+console.log(`Score: ${score} out of ${totalQuestions}`);
+console.log("Answer Details:", JSON.stringify(result, null, 2));
 ```

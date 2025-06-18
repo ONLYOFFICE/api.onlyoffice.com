@@ -7,10 +7,11 @@ This script creates a simple form layout for generating an employee pass card us
 - Create a picture form for user's photo using [Api/CreatePictureForm](../../usage-api/form-api/Api/Methods/CreatePictureForm.md), append picture form to a new paragraph
 - Create a text form for user's name using [CreateTextForm](../../usage-api/form-api/ApiTextForm/ApiTextForm.md)
 
-> This sample is available for the **C++ and .Net DocBuilder Frameworks**.
+:::info This sample is available for the **C++ and .Net DocBuilder Frameworks**.
 Download the sample and get more information on the [Builder framework samples](../../../document-builder/samples/samples.md) page.
+:::
 
-```ts editor-pdf
+```ts editor-pdf zoom=60
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 let headingStyle = doc.GetStyle("Heading 3");
