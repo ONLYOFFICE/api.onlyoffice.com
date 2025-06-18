@@ -2,6 +2,12 @@
 
 The list of changes of ONLYOFFICE Docs API.
 
+## Version 9.0
+
+- Added opening for [odg](../usage-api/config/document/document.md#filetype) format.
+- Added the [editorConfig.customization.forceWesternFontSize](../usage-api/config/editor/customization/customization-standard-branding.md#forcewesternfontsize) parameter for the Chinese (Simplified) UI.
+- Added the [editorConfig.customization.layout.header.user](../usage-api/config/editor/customization/customization-white-label.md#layoutheaderuser) parameter.
+
 ## Version 8.3
 
 <!--- Added conversion from [vsdm, vsdx, vssm, vssx, vstm, vstx](../additional-api/conversion-api/conversion-tables.md#diagram-document-file-formats) formats.
@@ -11,7 +17,7 @@ The list of changes of ONLYOFFICE Docs API.
 - Added the [editorConfig.customization.slidePlayerBackground](../usage-api/config/editor/customization/customization-standard-branding.md#slideplayerbackground) parameter.
 - Added the [editorConfig.customization.wordHeadingsColor](../usage-api/config/editor/customization/customization-standard-branding.md#wordheadingscolor) parameter.
 - Added the [editorConfig.customization.mobile.info](../usage-api/config/editor/customization/customization-standard-branding.md#mobileinfo) parameter.
-- Added opening for [pages, key, numbers, hwp, hwpx](../usage-api/config/config.md#documenttype) formats.
+- Added opening for [pages, key, numbers, hwp, hwpx](../usage-api/config/document/document.md#filetype) formats.
 - Added the [events.onUserActionRequired](../usage-api/config/events.md#onuseractionrequired) event.
 - Added the [refreshFile](../usage-api/methods.md#refreshfile) method.
 - Added the [events.onRequestRefreshFile](../usage-api/config/events.md#onrequestrefreshfile) event.
