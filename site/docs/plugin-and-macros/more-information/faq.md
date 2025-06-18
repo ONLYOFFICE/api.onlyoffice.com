@@ -24,7 +24,7 @@ Further information about the localization can be found [at this page](../struct
 
 ## How can I create an About window for my plugin?
 
-Use the [plugin variations](../structure/manifest/variations.md) or *subplugins* to create an **About** window for your plugin or add extra plugin settings. Have a look at the plugin example with two variations [here](https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/helloworld). In addition to two variations in the config, you also need to create an additional *index\_about.html* file.
+Use the [plugin variations](../structure/configuration/variations.md) or *subplugins* to create an **About** window for your plugin or add extra plugin settings. Have a look at the plugin example with two variations [here](https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/helloworld). In addition to two variations in the config, you also need to create an additional *index\_about.html* file.
 
 ## Where to find the existing plugins available for integration?
 
@@ -50,4 +50,4 @@ Macros use JavaScript language syntax and [Office JavaScript API](../../office-a
 
 ## Can I make a macro global?
 
-Macros are attached to the specific documents and there is no possibility to make them global. However, you can write a [plugin](../structure/manifest/manifest.md) that will be loaded for all the users.
+Macros are attached to the specific documents and there is no possibility to make them global. However, you can write a [plugin](../structure/configuration/configuration.md) that will be loaded for all the users.

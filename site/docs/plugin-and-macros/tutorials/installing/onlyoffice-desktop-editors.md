@@ -33,7 +33,7 @@ Follow the steps below to add the plugins to the editor using plugin manager:
 
 If you want to add your own plugin, you can do it manually, even if you are offline:
 
-1. Pack all the [plugin files](../../structure/manifest/manifest.md) within the plugin folder into a **zip** archive and change its extension to *.plugin* (all the plugin files and subfolders must be at the archive root).
+1. Pack all the [plugin files](../../structure/configuration/configuration.md) within the plugin folder into a **zip** archive and change its extension to *.plugin* (all the plugin files and subfolders must be at the archive root).
 
    > If you download a plugin from [GitHub](https://github.com/ONLYOFFICE/sdkjs-plugins), unpack the plugin folder first and then archive its elements only.
 

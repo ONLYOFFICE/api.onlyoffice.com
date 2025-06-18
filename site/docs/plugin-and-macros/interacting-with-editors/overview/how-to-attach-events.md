@@ -35,7 +35,7 @@ Asc.plugin.attachEditorEvent("onAddComment", (data) => {
 Starting from version 8.2, please use the [attachEditorEvent](#option-1-using-the-attacheditorevent-method) method instead.
 :::
 
-1. In the *config.json* file, add the [events](../../structure/manifest/manifest.md#variationsevents) parameter with the array of all the available events:
+1. In the *config.json* file, add the [events](../../structure/configuration/configuration.md#variationsevents) parameter with the array of all the available events:
 
    ``` json
    {
