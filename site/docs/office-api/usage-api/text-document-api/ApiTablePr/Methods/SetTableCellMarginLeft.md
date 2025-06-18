@@ -19,13 +19,17 @@ expression.SetTableCellMarginLeft(nValue);
 
 ## Returns
 
-This method doesn't return any data.
+boolean
 
 ## Example
 
 This example specifies an amount of space which will be left between the left extent of the cell contents and the left border of all table cells within the parent table.
 
 ```javascript editor-docx
+// How to add margin to the left of the cell.
+
+// Create a 3x3 table and add the left cell margin.
+
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 let tableStyle = doc.CreateStyle("CustomTableStyle", "table");

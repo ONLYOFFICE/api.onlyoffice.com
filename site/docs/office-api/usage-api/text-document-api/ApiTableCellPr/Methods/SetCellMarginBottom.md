@@ -19,13 +19,17 @@ expression.SetCellMarginBottom(nValue);
 
 ## Returns
 
-This method doesn't return any data.
+boolean
 
 ## Example
 
 This example specifies an amount of space which will be left between the bottom extent of the cell contents and the border of a specific table cell within a table.
 
 ```javascript editor-docx
+// How to add margin to the bottom of the cell.
+
+// Create a 3x3 table and add the bottom cell margin.
+
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 let tableStyle = doc.CreateStyle("CustomTableStyle", "table");

@@ -25,6 +25,10 @@ expression.GetSeries(nIdx);
 This example gets the first series of ApiChart class and inserts its type into the presentation.
 
 ```javascript editor-pptx
+// How to get a seria from a chart using its index.
+
+// Find a chart seria.
+
 var oPresentation = Api.GetPresentation();
 var oSlide = oPresentation.GetSlideByIndex(0);
 oSlide.RemoveAllObjects();

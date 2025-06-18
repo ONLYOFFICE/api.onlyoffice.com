@@ -25,6 +25,10 @@ expression.SetItalic(isItalic);
 This example sets the italic property to the text character.
 
 ```javascript editor-pptx
+// How to make text run italic.
+
+// Create a new text run and make its style italic.
+
 var oPresentation = Api.GetPresentation();
 var oSlide = oPresentation.GetSlideByIndex(0);
 oSlide.RemoveAllObjects();

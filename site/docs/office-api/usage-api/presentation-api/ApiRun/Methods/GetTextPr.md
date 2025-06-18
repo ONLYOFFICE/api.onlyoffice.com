@@ -23,6 +23,10 @@ This method doesn't have any parameters.
 This example shows how to get the text properties of the run.
 
 ```javascript editor-pptx
+// How to get the text properties of the current ApiRun object and change its font size.
+
+// Resize a font of a text run.
+
 var oPresentation = Api.GetPresentation();
 var oSlide = oPresentation.GetSlideByIndex(0);
 oSlide.RemoveAllObjects();

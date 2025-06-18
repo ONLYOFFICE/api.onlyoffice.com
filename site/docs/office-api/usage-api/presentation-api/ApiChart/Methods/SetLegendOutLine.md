@@ -25,6 +25,10 @@ boolean
 This example sets the outline to the chart legend.
 
 ```javascript editor-pptx
+// How to outline a chart legend.
+
+// Create a chart, set its properties and its legend's outline.
+
 var oPresentation = Api.GetPresentation();
 var oSlide = oPresentation.GetSlideByIndex(0);
 oSlide.RemoveAllObjects();

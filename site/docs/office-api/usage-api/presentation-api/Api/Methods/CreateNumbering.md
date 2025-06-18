@@ -26,6 +26,10 @@ expression.CreateNumbering(numType, startAt);
 This example creates a bullet for paragraphs.
 
 ```javascript editor-pptx
+// How to create a numbered paragraph specifying its numerical.
+
+// Add numbered paragraph to the slide.
+
 var oPresentation = Api.GetPresentation();
 var oSlide = oPresentation.GetSlideByIndex(0);
 oSlide.RemoveAllObjects();

@@ -18,13 +18,17 @@ expression.SetFooterDistance(nDistance);
 
 ## Returns
 
-This method doesn't return any data.
+boolean
 
 ## Example
 
 This example specifies the distance from the bottom edge of the page to the bottom edge of the footer.
 
 ```javascript editor-docx
+// How to set footer distance of the section.
+
+// Specify the distance between the page end and the footer.
+
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 paragraph.AddText("This is a page with a footer. ");

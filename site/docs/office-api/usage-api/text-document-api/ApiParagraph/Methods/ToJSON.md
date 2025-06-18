@@ -26,6 +26,10 @@ JSON
 This example converts the ApiParagraph object into the JSON object.
 
 ```javascript editor-docx
+// How to get a JSON from the inline text control.
+
+// Convert the inline text control to json and add it to the paragraph.
+
 let doc = Api.GetDocument();
 let paragraph = Api.CreateParagraph();
 paragraph.AddText("This is a new paragraph");

@@ -20,9 +20,13 @@ This method doesn't have any parameters.
 
 ## Example
 
-
+This example gets a type of ApiComment class and inserts it into the presentation.
 
 ```javascript editor-pptx
+// How to get a class type of ApiComment.
+
+// Retrieve class type of ApiComment object and insert it to the slide.
+
 var oPresentation = Api.GetPresentation();
 Api.pluginMethod_AddComment({"UserName": "John Smith", "Text": "Comment 1"});
 var arrComments = oPresentation.GetAllComments();

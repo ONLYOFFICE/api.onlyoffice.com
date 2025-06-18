@@ -25,6 +25,10 @@ expression.Duplicate(nPos);
 This example creates a duplicate of the specified slide object, adds the new slide to the slides collection.
 
 ```javascript editor-pptx
+// How to create a duplicate slide.
+
+// Get a slide by its index and create its copy.
+
 var oPresentation = Api.GetPresentation();
 var oSlide = oPresentation.GetSlideByIndex(0);
 var oGs1 = Api.CreateGradientStop(Api.CreateRGBColor(255, 213, 191), 0);

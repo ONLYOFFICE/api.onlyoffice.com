@@ -28,6 +28,10 @@ This method doesn't return any data.
 This example specifies the shading which shall be applied to the extents of the current table cell.
 
 ```javascript editor-pptx
+// How to set shading fill to the cell.
+
+// Create table and set its cell shading color.
+
 var oPresentation = Api.GetPresentation();
 var oTable = Api.CreateTable(2, 4);
 var oRow = oTable.GetRow(0);

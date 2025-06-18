@@ -23,6 +23,10 @@ string
 This example shows how to get the user ID of the comment reply author.
 
 ```javascript editor-xlsx
+// How to get a reply author's user ID.
+
+// Add a reply author's ID to a range of the worksheet.
+
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("A1").SetValue("1");
 let range = worksheet.GetRange("A1");

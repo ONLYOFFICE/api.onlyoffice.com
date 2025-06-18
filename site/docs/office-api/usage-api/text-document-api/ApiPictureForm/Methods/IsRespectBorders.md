@@ -23,6 +23,10 @@ boolean
 This example checks if the form border width is respected or not.
 
 ```javascript editor-docx
+// How to find out whether the borders of the image are respected.
+
+// Find out whether the borders of the first picture form in this document are respected when scaling the image.
+
 let doc = Api.GetDocument();
 let pictureForm = Api.CreatePictureForm({"key": "Personal information", "tip": "Upload your photo", "required": true, "placeholder": "Photo", "scaleFlag": "tooBig", "lockAspectRatio": true, "shiftX": 50, "shiftY": 50});
 let paragraph = doc.GetElement(0);

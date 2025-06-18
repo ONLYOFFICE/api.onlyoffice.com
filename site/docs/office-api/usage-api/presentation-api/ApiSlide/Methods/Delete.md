@@ -23,6 +23,10 @@ boolean
 This example deletes the current slide from the presentation.
 
 ```javascript editor-pptx
+// How to delete a slide.
+
+// Remove a slide from the presentation.
+
 var oPresentation = Api.GetPresentation();
 var oSlide = Api.CreateSlide();
 var oGs1 = Api.CreateGradientStop(Api.CreateRGBColor(255, 213, 191), 0);

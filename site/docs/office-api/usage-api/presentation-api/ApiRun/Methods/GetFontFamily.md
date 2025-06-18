@@ -1,6 +1,7 @@
 # GetFontFamily
 
-Gets the font family from the current text properties.
+Returns the font family from the current text properties.
+The method automatically calculates the font from the theme if the font was set via the theme.
 
 ## Syntax
 
@@ -20,9 +21,13 @@ string
 
 ## Example
 
-
+This example shows how to find out a text font family.
 
 ```javascript editor-pptx
+// How to know font name of a text run.
+
+// Get the text properties of the run and display its font family.
+
 var oPresentation = Api.GetPresentation();
 var oSlide = oPresentation.GetSlideByIndex(0);
 oSlide.RemoveAllObjects();

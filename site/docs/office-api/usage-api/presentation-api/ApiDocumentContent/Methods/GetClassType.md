@@ -23,6 +23,10 @@ This method doesn't have any parameters.
 This example gets a class type and pastes it into the presentation.
 
 ```javascript editor-pptx
+// How to get a class type of ApiDocumentContent.
+
+// Retrieve class type of ApiDocumentContent object and insert it to the slide.
+
 var oPresentation = Api.GetPresentation();
 var oSlide = oPresentation.GetSlideByIndex(0);
 oSlide.RemoveAllObjects();

@@ -25,6 +25,10 @@ boolean
 This example sets the format scheme to the current presentation theme.
 
 ```javascript editor-pptx
+// How to get a theme and set a new format scheme.
+
+// Create a new format scheme and apply it to the slide theme.
+
 var oPresentation = Api.GetPresentation();
 var oSlide = oPresentation.GetSlideByIndex(0);
 var oGs1 = Api.CreateGradientStop(Api.CreateRGBColor(255, 213, 191), 0);

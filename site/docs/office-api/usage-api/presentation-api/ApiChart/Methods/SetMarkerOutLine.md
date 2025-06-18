@@ -28,6 +28,10 @@ boolean
 This example sets the outline to the marker in the specified chart series.
 
 ```javascript editor-pptx
+// How to set an outline to the marker.
+
+// Create a chart, set its properties and its marker outline.
+
 var oPresentation = Api.GetPresentation();
 var oSlide = oPresentation.GetSlideByIndex(0);
 oSlide.RemoveAllObjects();

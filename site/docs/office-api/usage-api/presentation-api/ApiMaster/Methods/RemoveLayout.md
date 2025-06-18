@@ -26,6 +26,10 @@ boolean
 This example removes the layouts from the current slide master.
 
 ```javascript editor-pptx
+// How to delete layout from a master.
+
+// Delete a slide master layout.
+
 var oPresentation = Api.GetPresentation();
 var oSlide = oPresentation.GetSlideByIndex(0);
 var oMaster = oPresentation.GetMaster(0);

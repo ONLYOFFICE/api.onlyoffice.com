@@ -20,9 +20,13 @@ This method doesn't have any parameters.
 
 ## Example
 
-
+This example shows how to get an orientation of a data field.
 
 ```javascript editor-xlsx
+// How to get a table element orientation.
+
+// Create a pivot table, add data to it then display a custom data field's orientation.
+
 let worksheet = Api.GetActiveSheet();
 
 worksheet.GetRange('B1').SetValue('Region');

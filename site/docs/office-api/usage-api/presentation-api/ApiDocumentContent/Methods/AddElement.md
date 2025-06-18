@@ -19,13 +19,17 @@ expression.AddElement(nPos, oElement);
 
 ## Returns
 
-This method doesn't return any data.
+boolean
 
 ## Example
 
 This example adds a paragraph to presentation.
 
 ```javascript editor-pptx
+// How to create an element, add it to a shape and insert the shape to the slide.
+
+// Create a shape, insert a paragraph to it and then add the shape to the slide.
+
 var oPresentation = Api.GetPresentation();
 var oSlide = oPresentation.GetSlideByIndex(0);
 oSlide.RemoveAllObjects();

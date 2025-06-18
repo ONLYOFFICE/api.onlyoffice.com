@@ -21,13 +21,17 @@ expression.SetSpacingAfter(nAfter, isAfterAuto);
 
 ## Returns
 
-This method doesn't return any data.
+boolean
 
 ## Example
 
 This example sets the spacing after the current paragraph.
 
 ```javascript editor-pptx
+// How to set the size of a spacing after a text from a paragraph properties.
+
+// Change the size property of a spacing after a paragraph.
+
 var oPresentation = Api.GetPresentation();
 var oSlide = oPresentation.GetSlideByIndex(0);
 oSlide.RemoveAllObjects();

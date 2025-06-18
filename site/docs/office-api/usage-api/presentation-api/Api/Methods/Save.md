@@ -23,6 +23,10 @@ This method doesn't return any data.
 This example saves changes to the specified document.
 
 ```javascript editor-pptx
+// How to save all changes.
+
+// Add new elements like paragraphs, shapes and etc. to the slide and save all changes. 
+
 var oPresentation = Api.GetPresentation();
 var oSlide = oPresentation.GetSlideByIndex(0);
 oSlide.RemoveAllObjects();

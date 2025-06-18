@@ -24,9 +24,13 @@ number
 
 ## Example
 
-
+This example shows how to return the Student's t-distribution.
 
 ```javascript editor-xlsx
+// How to calculate a Student's t-distribution.
+
+// Use a function to estimate a Student's t-distribution.
+
 let worksheet = Api.GetActiveSheet();
 let func = Api.GetWorksheetFunction();
 let ans = func.TDIST(1.5, 10, 1);

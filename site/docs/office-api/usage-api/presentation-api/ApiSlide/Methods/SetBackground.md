@@ -22,9 +22,13 @@ boolean
 
 ## Example
 
-This example
+This example sets background color of the slide.
 
 ```javascript editor-pptx
+// How to change a background color of the slide.
+
+// Get a slide by its index, set its background and add it to the presentation.
+
 var oPresentation = Api.GetPresentation();
 var oSlide = Api.CreateSlide();
 var oGs1 = Api.CreateGradientStop(Api.CreateRGBColor(255, 213, 191), 0);

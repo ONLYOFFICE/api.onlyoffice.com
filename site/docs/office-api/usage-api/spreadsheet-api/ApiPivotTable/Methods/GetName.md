@@ -20,9 +20,13 @@ string
 
 ## Example
 
-
+This example shows how to get name of a pivot table.
 
 ```javascript editor-xlsx
+// How to get a table name.
+
+// Create a pivot table, add data to it then get its name.
+
 let worksheet = Api.GetActiveSheet();
 
 worksheet.GetRange('B1').SetValue('Region');
@@ -48,8 +52,8 @@ let dataRef = Api.GetRange("'Sheet1'!$B$1:$D$5");
 let pivotTable = Api.InsertPivotNewWorksheet(dataRef);
 
 pivotTable.AddFields({
-	rows: 'Region',
-	columns: 'Style',
+    rows: 'Region',
+    columns: 'Style',
 });
 
 pivotTable.AddDataField('Price');
@@ -57,5 +61,4 @@ pivotTable.AddDataField('Price');
 let pivotWorksheet = Api.GetActiveSheet();
 pivotWorksheet.GetRange('A9').SetValue('Pivot Table name');
 pivotWorksheet.GetRange('B9').SetValue(pivotTable.GetName());
-
 ```

@@ -23,6 +23,10 @@ This method doesn't have any parameters.
 This example shows how to get parent.
 
 ```javascript editor-pptx
+// How to get a parent of a slide shape.
+
+// Get a slide shape's parent object.
+
 var oPresentation = Api.GetPresentation();
 var oSlide = oPresentation.GetSlideByIndex(0);
 var oFill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));

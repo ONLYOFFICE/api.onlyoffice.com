@@ -23,6 +23,10 @@ JSON
 This example converts the ApiThemeFormatScheme object into the JSON object.
 
 ```javascript editor-pptx
+// How to convert a ApiThemeFormatScheme object to a JSON object.
+
+// Create a ApiThemeFormatScheme, convert it to JSON and create a new object from it.
+
 var oPresentation = Api.GetPresentation();
 var oSlide = oPresentation.GetSlideByIndex(0);
 oSlide.RemoveAllObjects();

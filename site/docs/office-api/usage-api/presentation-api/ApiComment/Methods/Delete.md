@@ -20,9 +20,13 @@ boolean
 
 ## Example
 
-
+This example shows how to delete a comment.
 
 ```javascript editor-pptx
+// How to remove a comment.
+
+// Get all comments from the presentation and remove the first one.
+
 var oPresentation = Api.GetPresentation();
 Api.pluginMethod_AddComment({"UserName": "John Smith", "Text": "Comment 1"});
 var arrComments = oPresentation.GetAllComments();

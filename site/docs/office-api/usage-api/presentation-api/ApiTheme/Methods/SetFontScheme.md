@@ -25,6 +25,10 @@ boolean
 This example sets the font scheme to the current presentation theme.
 
 ```javascript editor-pptx
+// How to get a theme and set a new font scheme.
+
+// Create a new font scheme and apply it to the slide theme.
+
 var oPresentation = Api.GetPresentation();
 var oSlide = oPresentation.GetSlideByIndex(0);
 var oFontScheme = Api.CreateThemeFontScheme("Arial", "Noto Sans Simplified Chinese", "Arabic", "Times New Roman", "Noto Serif Simplified Chinese", "Arabic", "New font scheme");

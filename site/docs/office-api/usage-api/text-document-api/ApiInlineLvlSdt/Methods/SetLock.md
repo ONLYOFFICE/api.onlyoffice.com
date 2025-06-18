@@ -21,13 +21,17 @@ expression.SetLock(sLockType);
 
 ## Returns
 
-This method doesn't return any data.
+boolean
 
 ## Example
 
 This example sets the lock to the inline text content control.
 
 ```javascript editor-docx
+// How to set lock type for the inline content control.
+
+// Display the lock type set for inline text element.
+
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 let inlineLvlSdt = Api.CreateInlineLvlSdt();

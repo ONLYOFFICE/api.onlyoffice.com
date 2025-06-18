@@ -23,6 +23,10 @@ This method doesn't have any parameters.
 This example shows how to get a theme of the current slide.
 
 ```javascript editor-pptx
+// How to return a theme of the slide.
+
+// Get a slide, get its theme and its properties.
+
 var oPresentation = Api.GetPresentation();
 var oSlide = oPresentation.GetSlideByIndex(0);
 var oTheme = oSlide.GetTheme();

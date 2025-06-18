@@ -26,6 +26,10 @@ boolean
 This example sets the specified numeric format to the chart series.
 
 ```javascript editor-pptx
+// How to set the "0.00" numeric format to the chart seria.
+
+// Create a chart, set its properties and its series numeric format.
+
 var oPresentation = Api.GetPresentation();
 var oSlide = oPresentation.GetSlideByIndex(0);
 oSlide.RemoveAllObjects();

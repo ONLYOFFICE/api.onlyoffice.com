@@ -23,6 +23,10 @@ boolean
 This example shows how to delete a drawing object.
 
 ```javascript editor-pptx
+// How to delete a slide drawing.
+
+// Get a slide drawing and delete it.
+
 var oPresentation = Api.GetPresentation();
 var oSlide = oPresentation.GetSlideByIndex(0);
 var oGs1 = Api.CreateGradientStop(Api.CreateRGBColor(255, 213, 191), 0);

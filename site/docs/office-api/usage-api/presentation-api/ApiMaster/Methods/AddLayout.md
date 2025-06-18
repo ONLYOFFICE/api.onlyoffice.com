@@ -26,6 +26,10 @@ boolean
 This example adds a layout to the specified slide master.
 
 ```javascript editor-pptx
+// Create a layout and add it to the slide master.
+
+// Add layout to the slide master.
+
 var oPresentation = Api.GetPresentation();
 var oSlide = oPresentation.GetSlideByIndex(0);
 var oMaster = oPresentation.GetMaster(0);

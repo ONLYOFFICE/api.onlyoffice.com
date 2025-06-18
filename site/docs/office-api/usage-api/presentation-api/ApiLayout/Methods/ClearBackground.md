@@ -23,6 +23,10 @@ boolean
 This example clears backgound for a slide.
 
 ```javascript editor-pptx
+// How to remove a background from a layout.
+
+// Clear background from a layout object.
+
 var oPresentation = Api.GetPresentation();
 var oSlide = oPresentation.GetSlideByIndex(0);
 var oMaster = oPresentation.GetMaster(0);

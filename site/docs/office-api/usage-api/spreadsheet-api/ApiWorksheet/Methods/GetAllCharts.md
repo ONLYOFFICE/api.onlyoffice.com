@@ -23,6 +23,10 @@ This method doesn't have any parameters.
 This example shows how to get all charts from the sheet.
 
 ```javascript editor-xlsx
+// How to get all charts.
+
+// Get all charts as an array.
+
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("B1").SetValue(2014);
 worksheet.GetRange("C1").SetValue(2015);

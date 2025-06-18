@@ -23,6 +23,10 @@ This method doesn't have any parameters.
 This example gets the first series of ApiChart class and inserts its type into the presentation.
 
 ```javascript editor-pptx
+// How to get a chart type and show it on the slide.
+
+// Change a chart type to the "area" type.
+
 var oPresentation = Api.GetPresentation();
 var oSlide = oPresentation.GetSlideByIndex(0);
 oSlide.RemoveAllObjects();

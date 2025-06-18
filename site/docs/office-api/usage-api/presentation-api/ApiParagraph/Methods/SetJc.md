@@ -18,13 +18,17 @@ expression.SetJc(sJc);
 
 ## Returns
 
-This method doesn't return any data.
+boolean
 
 ## Example
 
 This example sets the paragraph contents justification.
 
 ```javascript editor-pptx
+// How to set justification using a paragraph properties.
+
+// Create a paragraph setting its justification property.
+
 var oPresentation = Api.GetPresentation();
 var oSlide = oPresentation.GetSlideByIndex(0);
 oSlide.RemoveAllObjects();

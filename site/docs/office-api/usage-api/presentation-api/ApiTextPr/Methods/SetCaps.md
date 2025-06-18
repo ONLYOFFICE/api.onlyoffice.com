@@ -25,6 +25,10 @@ expression.SetCaps(isCaps);
 This example specifies that any lowercase characters in the text run are formatted for display only as their capital letter character equivalents.
 
 ```javascript editor-pptx
+// How to make a text capitalized.
+
+// Get the text properties of the run and set its letters uppercase.
+
 var oPresentation = Api.GetPresentation();
 var oSlide = oPresentation.GetSlideByIndex(0);
 oSlide.RemoveAllObjects();

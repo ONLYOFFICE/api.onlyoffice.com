@@ -23,6 +23,10 @@ string
 This example shows how to get the comment author's name.
 
 ```javascript editor-xlsx
+// How to remove a comment from a range.
+
+// Get a range, add a comment to it and then remove it.
+
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("A1").SetValue("1");
 let range = worksheet.GetRange("A1");

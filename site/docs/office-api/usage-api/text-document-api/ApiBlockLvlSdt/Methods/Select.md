@@ -16,13 +16,17 @@ This method doesn't have any parameters.
 
 ## Returns
 
-This method doesn't return any data.
+boolean
 
 ## Example
 
 This example selects the content control.
 
 ```javascript editor-docx
+// Creates a block content control and selects it.
+
+// How to select the ApiBlockLvlSdt object in the current document.
+
 let doc = Api.GetDocument();
 let blockLvlSdt = Api.CreateBlockLvlSdt();
 blockLvlSdt.GetContent().GetElement(0).AddText("The block text content control is selected.");

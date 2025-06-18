@@ -24,9 +24,13 @@ number
 
 ## Example
 
-
+This example shows how to return the negative binomial distribution, the probability that there will be the specified number of failures before the last success, with the specified probability of a success.
 
 ```javascript editor-xlsx
+// How to return the negative binomial distribution.
+
+// Use a function to get the probability of the specified number of failures before the last success (negative binomial distribution).
+
 const worksheet = Api.GetActiveSheet();
 
 let valueArr = [6, 32, 0.7];
@@ -45,5 +49,4 @@ let func = Api.GetWorksheetFunction();
 let ans = func.NEGBINOMDIST(numberF, numberS, probabilityS);
 
 worksheet.GetRange("C1").SetValue(ans);
-
 ```

@@ -26,6 +26,10 @@ This method doesn't return any data.
 This example adds a new column to the table.
 
 ```javascript editor-pptx
+// How to insert a column to the table.
+
+// Create a 2x4 table, set its position and then insert a column to it.
+
 var oPresentation = Api.GetPresentation();
 oPresentation.SetSizes(300 * 36000, 190 * 36000);
 var oTable = Api.CreateTable(2, 4);

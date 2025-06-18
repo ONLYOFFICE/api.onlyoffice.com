@@ -27,6 +27,10 @@ boolean
 This example sets the fill to the specified chart series.
 
 ```javascript editor-xlsx
+// How to color chart series.
+
+// Add background solid fill color for a chart seria.
+
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("B1").SetValue(2014);
 worksheet.GetRange("C1").SetValue(2015);

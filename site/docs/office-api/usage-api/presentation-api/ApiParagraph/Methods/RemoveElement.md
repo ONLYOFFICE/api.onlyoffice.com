@@ -21,13 +21,17 @@ expression.RemoveElement(nPos);
 
 ## Returns
 
-This method doesn't return any data.
+boolean
 
 ## Example
 
 This example removes an element using the position specified.
 
 ```javascript editor-pptx
+// How to remove an element from the paragraph using its position index.
+
+// Delete an element from the paragraph.
+
 var oPresentation = Api.GetPresentation();
 var oSlide = oPresentation.GetSlideByIndex(0);
 oSlide.RemoveAllObjects();

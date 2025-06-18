@@ -23,6 +23,10 @@ This method doesn't have any parameters.
 This example gets a type of ApiBullet class and inserts it into the document.
 
 ```javascript editor-pptx
+// How get a class type of ApiBullet.
+
+// Retrieve class type of ApiBullet object and insert it to the slide.
+
 var oPresentation = Api.GetPresentation();
 var oSlide = oPresentation.GetSlideByIndex(0);
 oSlide.RemoveAllObjects();

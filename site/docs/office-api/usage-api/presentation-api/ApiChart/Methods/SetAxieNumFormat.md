@@ -26,6 +26,10 @@ boolean
 This example sets the specified numeric format to the axis values.
 
 ```javascript editor-pptx
+// How to change a numeric format of left axis lables.
+
+// Create a chart then set its axis number format.
+
 var oPresentation = Api.GetPresentation();
 var oSlide = oPresentation.GetSlideByIndex(0);
 oSlide.RemoveAllObjects();

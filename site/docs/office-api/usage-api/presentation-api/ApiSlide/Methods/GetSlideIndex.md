@@ -23,6 +23,10 @@ number
 This example shows how to get a position of the current slide in the presentation.
 
 ```javascript editor-pptx
+// How to return a slide index.
+
+// Get a slide and return its index.
+
 var oPresentation = Api.GetPresentation();
 var oSlide = oPresentation.GetSlideByIndex(0);
 oSlide.RemoveAllObjects();

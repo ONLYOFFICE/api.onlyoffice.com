@@ -25,6 +25,10 @@ boolean
 This example sets the outline to the chart title.
 
 ```javascript editor-pptx
+// How to outline a chart title.
+
+// Create a chart, set its properties and its title outline.
+
 var oPresentation = Api.GetPresentation();
 var oSlide = oPresentation.GetSlideByIndex(0);
 oSlide.RemoveAllObjects();

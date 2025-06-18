@@ -28,6 +28,10 @@ boolean
 This example sets the background color to the table cell.
 
 ```javascript editor-docx
+// How to color the cell.
+
+// Get the first cell from the table and set its background color.
+
 let doc = Api.GetDocument();
 let tableStyle = doc.CreateStyle("CustomTableStyle", "table");
 tableStyle.SetBasedOn(doc.GetStyle("Bordered"));

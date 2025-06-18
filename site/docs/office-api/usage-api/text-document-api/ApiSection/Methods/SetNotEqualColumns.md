@@ -20,13 +20,17 @@ expression.SetNotEqualColumns(aWidths, aSpaces);
 
 ## Returns
 
-This method doesn't return any data.
+boolean
 
 ## Example
 
 This example specifies that all the columns in the current section have the different widths.
 
 ```javascript editor-docx
+// How to split the text into 3 columns with different sizes.
+
+// Get the final section and divide it to columns.
+
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 let section = doc.GetFinalSection();

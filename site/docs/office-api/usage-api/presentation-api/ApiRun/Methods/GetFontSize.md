@@ -20,9 +20,13 @@ This method doesn't have any parameters.
 
 ## Example
 
-
+This example shows how to find out a text font size.
 
 ```javascript editor-pptx
+// How to know font size of a text run.
+
+// Get the text properties of the run and display its font size.
+
 var oPresentation = Api.GetPresentation();
 var oSlide = oPresentation.GetSlideByIndex(0);
 oSlide.RemoveAllObjects();

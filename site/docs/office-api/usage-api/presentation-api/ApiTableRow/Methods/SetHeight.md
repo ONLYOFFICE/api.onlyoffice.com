@@ -25,6 +25,10 @@ This method doesn't return any data.
 This example sets the height to the table row.
 
 ```javascript editor-pptx
+// How to set a height of the row.
+
+// Create a table and change its rows height.
+
 var oPresentation = Api.GetPresentation();
 var oTable = Api.CreateTable(2, 4);
 var oRow = oTable.GetRow(0);

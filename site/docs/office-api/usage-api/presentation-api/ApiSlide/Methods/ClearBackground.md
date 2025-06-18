@@ -23,6 +23,10 @@ boolean
 This example clears the slide background.
 
 ```javascript editor-pptx
+// How to remove the background from the slide.
+
+// Create a duplicate slide and change its background.
+
 var oPresentation = Api.GetPresentation();
 var oSlide = oPresentation.GetSlideByIndex(0);
 var oGs1 = Api.CreateGradientStop(Api.CreateRGBColor(255, 213, 191), 0);

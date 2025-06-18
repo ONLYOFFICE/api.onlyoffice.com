@@ -14,7 +14,7 @@ expression.SetId(id);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| id | Required | number |  | The numerical id which will be specified to the current content control. |
+| id | Required | number |  | The numerical ID which will be specified for the current content control. |
 
 ## Returns
 

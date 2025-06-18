@@ -23,6 +23,10 @@ boolean
 This example shows how to delete the specified object from the parent slide master if it exists.
 
 ```javascript editor-pptx
+// How to delete a layout.
+
+// Remove a layout from a presentation master.
+
 var oPresentation = Api.GetPresentation();
 var oSlide = oPresentation.GetSlideByIndex(0);
 var oMaster = oPresentation.GetMaster(0);

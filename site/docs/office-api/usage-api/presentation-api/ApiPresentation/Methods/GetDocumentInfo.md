@@ -7,7 +7,7 @@ Returns the document information:
 -**LastModifiedRaw** - the date and time when the file was last modified.
 -**LastModified** - the parsed date and time when the file was last modified.
 -**LastModifiedBy** - the name of the user who has made the latest change to the document.
--**Autrors** - the persons who has created the file.
+-**Authors** - the persons who has created the file.
 -**Title** - this property allows you to simplify your documents classification.
 -**Tags** - this property allows you to simplify your documents classification.
 -**Subject** - this property allows you to simplify your documents classification.
@@ -34,6 +34,10 @@ object
 This example shows how to get the document info represented as an object and paste the application name into the document.
 
 ```javascript editor-pptx
+// How to get a document info from the presentation.
+
+// Get current document info.
+
 const oPresentation = Api.GetPresentation();
 const oSlide = oPresentation.GetSlideByIndex(0);
 oSlide.RemoveAllObjects();

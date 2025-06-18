@@ -11,6 +11,7 @@ Represents the ApiBlockLvlSdt class.
 | [AddComment](./Methods/AddComment.md) | [ApiComment](../ApiComment/ApiComment.md) | Adds a comment to the current block content control. 💡 Please note that the current block content control must be in the document. |
 | [AddElement](./Methods/AddElement.md) | boolean | Adds a paragraph or a table or a block content control to the current container. |
 | [AddText](./Methods/AddText.md) | boolean | Adds a text to the current content control. |
+| [ApiInlineLvlSdt#Select](./Methods/ApiInlineLvlSdt#Select.md) | boolean | Selects the current content control. |
 | [Copy](./Methods/Copy.md) | [ApiBlockLvlSdt](../ApiBlockLvlSdt/ApiBlockLvlSdt.md) | Creates a copy of an block content control. Ignores comments, footnote references, complex fields. |
 | [Delete](./Methods/Delete.md) | boolean | Removes a content control and its content. If keepContent is true, the content is not deleted. |
 | [GetAlias](./Methods/GetAlias.md) | string | Returns the alias attribute for the current container. |
@@ -20,8 +21,9 @@ Represents the ApiBlockLvlSdt class.
 | [GetAllTablesOnPage](./Methods/GetAllTablesOnPage.md) | [ApiTable](../ApiTable/ApiTable.md)[] | Returns a collection of tables on a given absolute page. 💡 This method can be a little bit slow, because it runs the document calculation process to arrange tables on the specified page. |
 | [GetClassType](./Methods/GetClassType.md) | "blockLvlSdt" | Returns a type of the ApiBlockLvlSdt class. |
 | [GetContent](./Methods/GetContent.md) | [ApiDocumentContent](../ApiDocumentContent/ApiDocumentContent.md) | Returns the content of the current container. |
-| [GetDropdownList](./Methods/GetDropdownList.md) | [ApiContentControlList](../ApiContentControlList/ApiContentControlList.md) | Returns a list of values of the combo box / dropdown list content control. |
-| [GetId](./Methods/GetId.md) | string | Gets a unique ID for the current content control. |
+| [GetDataBinding](./Methods/GetDataBinding.md) | [XmlMapping](../Enumeration/XmlMapping.md) | Retrieves the data binding of the content control. |
+| [GetDropdownList](./Methods/GetDropdownList.md) | [ApiContentControlList](../ApiContentControlList/ApiContentControlList.md) | Returns a list of values of the combo box / drop-down list content control. |
+| [GetId](./Methods/GetId.md) | string | Returns a unique ID for the current content control. |
 | [GetInternalId](./Methods/GetInternalId.md) | string | Returns an internal id of the current content control. |
 | [GetLabel](./Methods/GetLabel.md) | string | Returns the label attribute for the current container. |
 | [GetLock](./Methods/GetLock.md) | [SdtLock](../Enumeration/SdtLock.md) | Returns the lock type of the current container. |
@@ -32,16 +34,19 @@ Represents the ApiBlockLvlSdt class.
 | [GetPosInParent](./Methods/GetPosInParent.md) | Number | Returns the content control position within its parent element. |
 | [GetRange](./Methods/GetRange.md) | [ApiRange](../ApiRange/ApiRange.md) | Returns a Range object that represents the part of the document contained in the specified content control. |
 | [GetTag](./Methods/GetTag.md) | string | Returns the tag attribute for the current container. |
-| [MoveCursorOutside](./Methods/MoveCursorOutside.md) | None | Places a cursor before/after the current content control. |
+| [IsPicture](./Methods/IsPicture.md) | boolean | Checks whether the content control is a picture control. This method verifies if the content control is specifically a picture control. |
+| [MoveCursorOutside](./Methods/MoveCursorOutside.md) | boolean | Places a cursor before/after the current content control. |
 | [Push](./Methods/Push.md) | boolean | Pushes a paragraph or a table or a block content control to actually add it to the current container. |
 | [RemoveAllElements](./Methods/RemoveAllElements.md) | boolean | Clears the contents from the current content control. |
 | [ReplaceByElement](./Methods/ReplaceByElement.md) | boolean | Replaces the current content control with a new element. |
 | [Search](./Methods/Search.md) | [ApiRange](../ApiRange/ApiRange.md)[] | Searches for a scope of a content control object. The search results are a collection of ApiRange objects. |
-| [Select](./Methods/Select.md) | None | Selects the current content control. |
-| [SetAlias](./Methods/SetAlias.md) | None | Sets the alias attribute to the current container. |
-| [SetLabel](./Methods/SetLabel.md) | None | Sets the label attribute to the current container. |
-| [SetLock](./Methods/SetLock.md) | None | Sets the lock to the current block text content control: -**"contentLocked"** - content cannot be edited. -**"sdtContentLocked"** - content cannot be edited and the container cannot be deleted. -**"sdtLocked"** - the container cannot be deleted. |
+| [Select](./Methods/Select.md) | boolean | Selects the current content control. |
+| [SetAlias](./Methods/SetAlias.md) | boolean | Sets the alias attribute to the current container. |
+| [SetDataBinding](./Methods/SetDataBinding.md) | boolean | Sets the data binding for the content control. |
+| [SetLabel](./Methods/SetLabel.md) | boolean | Sets the label attribute to the current container. |
+| [SetLock](./Methods/SetLock.md) | boolean | Sets the lock to the current block text content control: -**"contentLocked"** - content cannot be edited. -**"sdtContentLocked"** - content cannot be edited and the container cannot be deleted. -**"sdtLocked"** - the container cannot be deleted. |
+| [SetPicture](./Methods/SetPicture.md) | boolean | Sets the content (image) for the picture content control. This method updates the picture inside a content control by setting an image from a provided URL. The URL should be an internet link to the image. |
 | [SetPlaceholderText](./Methods/SetPlaceholderText.md) | boolean | Sets the placeholder text to the current content control. |
-| [SetTag](./Methods/SetTag.md) | None | Sets the tag attribute to the current container. |
-| [SetTextPr](./Methods/SetTextPr.md) | None | Applies text settings to the content of the content control. |
+| [SetTag](./Methods/SetTag.md) | boolean | Sets the tag attribute to the current container. |
+| [SetTextPr](./Methods/SetTextPr.md) | boolean | Applies text settings to the content of the content control. |
 | [ToJSON](./Methods/ToJSON.md) | JSON | Converts the ApiBlockLvlSdt object into the JSON object. |

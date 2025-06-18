@@ -26,6 +26,10 @@ boolean
 This example adds a run to the paragraph.
 
 ```javascript editor-pptx
+// Insert a text run to the ApiParagraph object.
+
+// How to add the ApiRun object to the slide.
+
 var oPresentation = Api.GetPresentation();
 var oSlide = oPresentation.GetSlideByIndex(0);
 oSlide.RemoveAllObjects();

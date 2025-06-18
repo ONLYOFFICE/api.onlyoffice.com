@@ -25,6 +25,10 @@ This method doesn't return any data.
 This example specifies the vertical alignment for text within the current table cell.
 
 ```javascript editor-pptx
+// How to set the cell text vertical alignment.
+
+// Create a table and set the text alignment of its cell from the row.
+
 var oPresentation = Api.GetPresentation();
 var oTable = Api.CreateTable(2, 4);
 var oRow = oTable.GetRow(1);

@@ -23,9 +23,13 @@ number
 
 ## Example
 
-
+This example shows how to return the quartile of a data set, based on percentile values from 0..1, inclusive.
 
 ```javascript editor-xlsx
+// How to get the inclusive quartile of a data set.
+
+// Use a function to calculate an inclusive fourth part of a data set.
+
 const worksheet = Api.GetActiveSheet();
 
 let valueArr1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
@@ -43,5 +47,4 @@ let func = Api.GetWorksheetFunction();
 let ans = func.QUARTILE_INC(array, quart); //0...1 inclusive
 
 worksheet.GetRange("C1").SetValue(ans);
-
 ```

@@ -23,6 +23,10 @@ This method doesn't have any parameters.
 This example shows how to get the previous paragraph.
 
 ```javascript editor-pptx
+// How to get the previous paragraph of the current one.
+
+// Return the previous paragraph on the slide and make its text bold.
+
 var oPresentation = Api.GetPresentation();
 var oSlide = oPresentation.GetSlideByIndex(0);
 oSlide.RemoveAllObjects();

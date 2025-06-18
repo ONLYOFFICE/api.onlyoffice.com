@@ -23,6 +23,10 @@ This method doesn't return any data.
 This example removes all the objects from the current slide.
 
 ```javascript editor-pptx
+// How to remove all elements from the slide.
+
+// Get a current slide, remove all its objects and add a new one.
+
 var oPresentation = Api.GetPresentation();
 oPresentation.SetSizes(254 * 36000, 190 * 36000);
 var oSlide = oPresentation.GetCurrentSlide();

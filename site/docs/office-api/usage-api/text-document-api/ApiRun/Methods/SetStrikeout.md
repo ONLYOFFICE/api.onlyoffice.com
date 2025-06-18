@@ -25,6 +25,10 @@ expression.SetStrikeout(isStrikeout);
 This example specifies that the contents of the current run are displayed with a single horizontal line through the center of the line.
 
 ```javascript editor-docx
+// How to strike out a text run.
+
+// Create a new text run and set cross it out.
+
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 let run = Api.CreateRun();

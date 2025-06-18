@@ -25,6 +25,10 @@ boolean
 This example sets the background to the current slide layout.
 
 ```javascript editor-pptx
+// How to set a background of a layout.
+
+// Create a gradient fill and apply it as a background.
+
 var oPresentation = Api.GetPresentation();
 var oSlide = oPresentation.GetSlideByIndex(0);
 var oMaster = oPresentation.GetMaster(0);

@@ -25,6 +25,10 @@ expression.SetBold(isBold);
 This example sets the bold property to the text character.
 
 ```javascript editor-pptx
+// How to make a text bold.
+
+// Create a new text run and set it bold.
+
 var oPresentation = Api.GetPresentation();
 var oSlide = oPresentation.GetSlideByIndex(0);
 oSlide.RemoveAllObjects();

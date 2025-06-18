@@ -25,6 +25,10 @@ boolean
 This example sets a name to the current theme color scheme.
 
 ```javascript editor-pptx
+// How to set a scheme name.
+
+// Create new color scheme and set its name.
+
 var oPresentation = Api.GetPresentation();
 var oSlide = oPresentation.GetSlideByIndex(0);
 oSlide.RemoveAllObjects();

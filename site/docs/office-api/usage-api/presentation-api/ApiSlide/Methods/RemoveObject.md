@@ -26,6 +26,10 @@ boolean
 This example removes objects (image, shape or chart) from the current slide.
 
 ```javascript editor-pptx
+// How to remove a specific object from the slide.
+
+// Get a slide by its index, remove its object at the given index.
+
 var oPresentation = Api.GetPresentation();
 var oSlide = oPresentation.GetSlideByIndex(0);
 oSlide.RemoveAllObjects();

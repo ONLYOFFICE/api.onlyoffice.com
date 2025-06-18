@@ -26,6 +26,10 @@ JSON
 This example converts the ApiLayout object into the JSON object.
 
 ```javascript editor-pptx
+// How to convert a layout object to a JSON object.
+
+// Get a slide layout object from a slide and convert to JSON.
+
 var oPresentation = Api.GetPresentation();
 var oSlide = oPresentation.GetSlideByIndex(0);
 oSlide.RemoveAllObjects();

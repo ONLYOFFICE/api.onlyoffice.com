@@ -23,6 +23,10 @@ string
 This example shows how to get the comment reply author's name.
 
 ```javascript editor-docx
+// How to find out a comment's reply author.
+
+// Get all comments from the presentation and display the first one's reply author name.
+
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 paragraph.AddText("This is just a sample text");

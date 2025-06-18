@@ -20,9 +20,13 @@ This method doesn't have any parameters.
 
 ## Example
 
-
+This example shows how to get subtotals of a pivot field.
 
 ```javascript editor-xlsx
+// How to get a pivot field's subtotals.
+
+// Create a pivot table, add data to it then get subtotals of a specified pivot field as an array.
+
 let worksheet = Api.GetActiveSheet();
 
 worksheet.GetRange('B1').SetValue('Region');
@@ -48,8 +52,8 @@ let dataRef = Api.GetRange("'Sheet1'!$B$1:$D$5");
 let pivotTable = Api.InsertPivotNewWorksheet(dataRef);
 
 pivotTable.AddFields({
-	columns: ['Style'],
-	rows: 'Region',
+    columns: ['Style'],
+    rows: 'Region',
 });
 
 pivotTable.AddDataField('Price');
@@ -64,5 +68,4 @@ for (let i in subtotals) {
     pivotWorksheet.GetRangeByNumber(k, 0).SetValue(i);
     pivotWorksheet.GetRangeByNumber(k++, 1).SetValue(subtotals[i]);
 }
-
 ```

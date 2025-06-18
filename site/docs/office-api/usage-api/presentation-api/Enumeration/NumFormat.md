@@ -40,8 +40,12 @@ Enumeration
 
 ## Example
 
-This example shows how to specify that the range contents will be rotated upward.
+Set the "0.00" numeric format to the chart data point.
 
 ```javascript editor-pptx
-worksheet.GetRange("A1").SetOrientation("xlUpward");
+// How to use the specified numeric format for the ApiChart object.
+
+// Set the chart data point to the "0.00" numeric format.
+
+oChart.SetDataPointNumFormat("0.00", 0, 1, true);
 ```

@@ -20,13 +20,17 @@ expression.SetTitle(sTitle, nFontSize, bIsBold);
 
 ## Returns
 
-This method doesn't return any data.
+boolean
 
 ## Example
 
 This example specifies the chart title.
 
 ```javascript editor-pptx
+// How to rename a chart.
+
+// Create a chart, set its properties and its title.
+
 var oPresentation = Api.GetPresentation();
 var oSlide = oPresentation.GetSlideByIndex(0);
 oSlide.RemoveAllObjects();

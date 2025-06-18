@@ -21,13 +21,17 @@ expression.SetPaddings(nLeft, nTop, nRight, nBottom);
 
 ## Returns
 
-This method doesn't return any data.
+boolean
 
 ## Example
 
 This example sets the text paddings to the current shape.
 
 ```javascript editor-docx
+// How to update paddings of the drawing.
+
+// Create a shape and set its paddings.
+
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 let fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));

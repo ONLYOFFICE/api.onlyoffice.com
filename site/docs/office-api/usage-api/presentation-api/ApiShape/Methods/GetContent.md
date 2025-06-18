@@ -23,6 +23,10 @@ This method doesn't have any parameters.
 This example shows how to get the shape inner contents where a paragraph or text runs can be inserted.
 
 ```javascript editor-pptx
+// How to get a content of a shape.
+
+// Retrieve a slide content and insert a paragraph to it.
+
 var oPresentation = Api.GetPresentation();
 oPresentation.SetSizes(254 * 36000, 190 * 36000);
 var oSlide = oPresentation.GetCurrentSlide();

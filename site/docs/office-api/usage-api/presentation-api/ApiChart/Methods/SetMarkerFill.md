@@ -28,6 +28,10 @@ boolean
 This example sets the fill to the marker in the specified chart series.
 
 ```javascript editor-pptx
+// How to set a fill to the marker.
+
+// Create a chart, set its properties and its marker color.
+
 var oPresentation = Api.GetPresentation();
 var oSlide = oPresentation.GetSlideByIndex(0);
 oSlide.RemoveAllObjects();

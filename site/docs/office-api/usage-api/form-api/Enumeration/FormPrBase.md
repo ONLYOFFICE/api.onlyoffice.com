@@ -10,11 +10,12 @@ Object
 
 | Name | Type | Description |
 | ---- | ---- | ----------- |
-| key | string | Form key. |
-| placeholder | string | Form placeholder text. |
+| key | string | The form key. |
+| placeholder | string | The form placeholder text. |
 | required | boolean | Specifies if the form is required or not. |
-| tag | string | Form tag. |
-| tip | string | Form tip text. |
+| role | string | The role to fill out form. |
+| tag | string | The form tag. |
+| tip | string | The form tip text. |
 
 
 ## Example
@@ -22,6 +23,10 @@ Object
 This example creates a text form with the common form properties.
 
 ```javascript editor-pdf
+// How to create a text form using its base properties.
+
+// Create the base properties and apply them to the ApiTextForm object.
+
 let formPrBase = {"key": "Personal information", "tip": "Enter your first name", "required": true, "placeholder": "First name"};
 let textForm = Api.CreateTextForm(formPrBase);
 ```

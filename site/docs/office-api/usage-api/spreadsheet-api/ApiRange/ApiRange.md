@@ -71,6 +71,7 @@ Represents the ApiRange class.
 | [GetDefName](./Methods/GetDefName.md) | [ApiName](../ApiName/ApiName.md) | Returns the ApiName object of the current range. |
 | [GetFillColor](./Methods/GetFillColor.md) | [ApiColor](../ApiColor/ApiColor.md) \| 'No Fill' | Returns the background color for the current cell range. Returns 'No Fill' when the color of the background in the cell / cell range is null. |
 | [GetFormula](./Methods/GetFormula.md) | string \| string[][] | Returns a formula of the specified range. |
+| [GetFormulaArray](./Methods/GetFormulaArray.md) | string \| null | Returns an array formula from the current range. |
 | [GetHidden](./Methods/GetHidden.md) | boolean | Returns the value hiding property. The specified range must span an entire column or row. |
 | [GetNumberFormat](./Methods/GetNumberFormat.md) | string \| null | Returns a value that represents the format code for the current range. |
 | [GetOrientation](./Methods/GetOrientation.md) | [Angle](../Enumeration/Angle.md) | Returns the current range angle. |
@@ -99,6 +100,7 @@ Represents the ApiRange class.
 | [SetFontColor](./Methods/SetFontColor.md) | None | Sets the text color to the current cell range with the previously created color object. |
 | [SetFontName](./Methods/SetFontName.md) | None | Sets the specified font family as the font name for the current cell range. |
 | [SetFontSize](./Methods/SetFontSize.md) | None | Sets the font size to the characters of the current cell range. |
+| [SetFormulaArray](./Methods/SetFormulaArray.md) | boolean | Sets an array formula to the current range. |
 | [SetHidden](./Methods/SetHidden.md) | None | Sets the value hiding property. The specified range must span an entire column or row. |
 | [SetItalic](./Methods/SetItalic.md) | None | Sets the italic property to the text characters in the current cell or cell range. |
 | [SetNumberFormat](./Methods/SetNumberFormat.md) | None | Specifies whether a number in the cell should be treated like number, currency, date, time, etc. or just like text. |

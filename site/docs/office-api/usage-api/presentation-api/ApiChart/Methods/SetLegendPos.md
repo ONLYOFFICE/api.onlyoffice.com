@@ -18,13 +18,17 @@ expression.SetLegendPos(sLegendPos);
 
 ## Returns
 
-This method doesn't return any data.
+boolean
 
 ## Example
 
 This example specifies the chart legend position.
 
 ```javascript editor-pptx
+// How to place a chart legend.
+
+// Create a chart, set its properties and its legend's position.
+
 var oPresentation = Api.GetPresentation();
 var oSlide = oPresentation.GetSlideByIndex(0);
 oSlide.RemoveAllObjects();

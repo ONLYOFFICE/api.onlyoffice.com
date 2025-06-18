@@ -26,6 +26,10 @@ boolean
 This example adds a paragraph using its position in the cell.
 
 ```javascript editor-docx
+// Insert new paragraph into the current cell.
+
+// Get the cell, add an element to it.
+
 let doc = Api.GetDocument();
 let tableStyle = doc.CreateStyle("CustomTableStyle", "table");
 tableStyle.SetBasedOn(doc.GetStyle("Bordered"));

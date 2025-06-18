@@ -24,9 +24,13 @@ number
 
 ## Example
 
-
+This example shows how to return the left-tailed probability of the chi-squared distribution.
 
 ```javascript editor-xlsx
+// How to return the left-tailed probability of the chi-squared distribution.
+
+// Use function to return the left-tailed probability of the chi-squared distribution.
+
 let worksheet = Api.GetActiveSheet();
 let func = Api.GetWorksheetFunction();
 worksheet.GetRange("A1").SetValue(func.CHISQ_DIST(2, 3, false));

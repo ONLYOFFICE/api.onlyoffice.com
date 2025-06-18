@@ -28,6 +28,12 @@ boolean
 This example sets the fill to the marker in the specified chart series.
 
 ```javascript editor-xlsx
+// Create the "scatter" chart and apply an RGB color to its markers.
+
+// How to use the ApiFill object as a color of the chart markers.
+
+// How to fill the markers of the ApiChart object.
+
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("B1").SetValue(2014);
 worksheet.GetRange("C1").SetValue(2015);

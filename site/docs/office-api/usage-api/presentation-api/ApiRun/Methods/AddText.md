@@ -18,13 +18,17 @@ expression.AddText(sText);
 
 ## Returns
 
-This method doesn't return any data.
+boolean
 
 ## Example
 
 This example adds some text to the run.
 
 ```javascript editor-pptx
+// How to add a text to a text run object.
+
+// How to add a text to the slide.
+
 var oPresentation = Api.GetPresentation();
 var oSlide = oPresentation.GetSlideByIndex(0);
 oSlide.RemoveAllObjects();

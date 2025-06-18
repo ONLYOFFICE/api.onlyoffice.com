@@ -23,6 +23,10 @@ This method doesn't have any parameters.
 This example shows how to get a table cell that contains the table.
 
 ```javascript editor-docx
+// How to get the parent table cell.
+
+// Retrieve the parent table cell, apply the shading to it.
+
 let doc = Api.GetDocument();
 let tableStyle = doc.CreateStyle("CustomTableStyle", "table");
 tableStyle.SetBasedOn(doc.GetStyle("Bordered"));

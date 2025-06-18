@@ -18,13 +18,17 @@ expression.SetIndFirstLine(nValue);
 
 ## Returns
 
-This method doesn't return any data.
+boolean
 
 ## Example
 
 This example sets the paragraph first line indentation.
 
 ```javascript editor-pptx
+// How to set a size of the first line indentation using a paragraph properties.
+
+// Create a paragraph setting its first line indentation.
+
 var oPresentation = Api.GetPresentation();
 var oSlide = oPresentation.GetSlideByIndex(0);
 oSlide.RemoveAllObjects();

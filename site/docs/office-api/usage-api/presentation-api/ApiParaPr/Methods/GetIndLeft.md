@@ -23,6 +23,10 @@ This method doesn't have any parameters.
 This example shows how to get the paragraph left side indentation.
 
 ```javascript editor-pptx
+// How to return a left side identation of a paragraph property.
+
+// Return a left side indentation of a text property from the slide.
+
 var oPresentation = Api.GetPresentation();
 var oSlide = oPresentation.GetSlideByIndex(0);
 oSlide.RemoveAllObjects();

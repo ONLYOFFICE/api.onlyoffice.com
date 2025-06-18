@@ -23,6 +23,10 @@ This method doesn't have any parameters.
 This example shows how to get the presentation height in English measure units.
 
 ```javascript editor-pptx
+// How to get a height of the presentation.
+
+// Get a height of the ApiPresentation object.
+
 var oPresentation = Api.GetPresentation();
 var oSlide = oPresentation.GetSlideByIndex(0);
 oSlide.RemoveAllObjects();

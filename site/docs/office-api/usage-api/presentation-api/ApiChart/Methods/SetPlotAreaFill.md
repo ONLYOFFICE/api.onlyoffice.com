@@ -25,6 +25,10 @@ boolean
 This example sets the fill to the chart plot area.
 
 ```javascript editor-pptx
+// How to set a background color for the plot area.
+
+// Create a chart, set its properties and its plot area color.
+
 var oPresentation = Api.GetPresentation();
 var oSlide = oPresentation.GetSlideByIndex(0);
 oSlide.RemoveAllObjects();

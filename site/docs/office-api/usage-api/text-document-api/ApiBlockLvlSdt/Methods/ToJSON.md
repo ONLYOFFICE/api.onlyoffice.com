@@ -26,6 +26,10 @@ JSON
 This example converts the ApiBlockLvlSdt object into the JSON object.
 
 ```javascript editor-docx
+// Creates a block content control and converts it into the JSON object.
+
+// How to create the JSON object from the ApiBlockLvlSdt object.
+
 let doc = Api.GetDocument();
 let blockLvlSdt = Api.CreateBlockLvlSdt();
 blockLvlSdt.SetAlias("№1");

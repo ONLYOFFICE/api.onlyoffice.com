@@ -25,6 +25,10 @@ boolean
 This example sets a name to the current theme format scheme.
 
 ```javascript editor-pptx
+// How to set a format scheme name.
+
+// Create new format scheme and set its name.
+
 var oPresentation = Api.GetPresentation();
 var oSlide = oPresentation.GetSlideByIndex(0);
 oSlide.RemoveAllObjects();

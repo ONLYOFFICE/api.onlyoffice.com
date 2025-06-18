@@ -25,6 +25,10 @@ expression.SetSpacing(nSpacing);
 This example sets the text spacing measured in twentieths of a point.
 
 ```javascript editor-pptx
+// How to resize spacing between words in a text run.
+
+// Create a new text run and set its spacing size (point * 20).
+
 var oPresentation = Api.GetPresentation();
 var oSlide = oPresentation.GetSlideByIndex(0);
 oSlide.RemoveAllObjects();

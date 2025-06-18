@@ -23,6 +23,10 @@ This method doesn't have any parameters.
 This example creates a paragraph copy.
 
 ```javascript editor-pptx
+// How to add a duplicate paragraph.
+
+// Copy a paragraph and add it to the shape.
+
 var oPresentation = Api.GetPresentation();
 var oSlide = oPresentation.GetSlideByIndex(0);
 oSlide.RemoveAllObjects();

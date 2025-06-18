@@ -20,9 +20,13 @@ boolean
 
 ## Example
 
-
+This example gets a double strikeout property of a text.
 
 ```javascript editor-xlsx
+// How to find out whether a text is stroke out with double lines or not.
+
+// Get a text double cross out property.
+
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
 let stroke = Api.CreateStroke(0, Api.CreateNoFill());

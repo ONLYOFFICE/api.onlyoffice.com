@@ -15,9 +15,9 @@ expression.AddComment(element, text, author, userId);
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
 | element | Required | [ApiRun](../../ApiRun/ApiRun.md)[] \| [DocumentElement](../../Enumeration/DocumentElement.md) |  | The element where the comment will be added. It may be applied to any element which has the *AddComment* method. |
-| text | Required | string |  | The comment text (required). |
-| author | Required | string |  | The author's name (optional). |
-| userId | Required | string |  | The user ID of the comment author (optional). |
+| text | Required | string |  | The comment text. |
+| author | Optional | string |  | The author's name. |
+| userId | Optional | string |  | The user ID of the comment author. |
 
 ## Returns
 
@@ -28,6 +28,12 @@ expression.AddComment(element, text, author, userId);
 This example adds text and comment to the first paragraph.
 
 ```javascript editor-docx
+// How to add a comment to the ApiParagraph class.
+
+// How to comment on text.
+
+// Adds a paragraph to the document and comments on it.
+
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 paragraph.AddText("ONLYOFFICE Document Builder");

@@ -20,9 +20,13 @@ boolean
 
 ## Example
 
-
+This example shows how to find out whether a text is underlined.
 
 ```javascript editor-pptx
+// How to know whether a text is underlined or not.
+
+// Get the text properties of the run and find whether it is underlined or not.
+
 var oPresentation = Api.GetPresentation();
 var oSlide = oPresentation.GetSlideByIndex(0);
 oSlide.RemoveAllObjects();

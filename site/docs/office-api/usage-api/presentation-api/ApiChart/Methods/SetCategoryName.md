@@ -26,6 +26,10 @@ boolean
 This example sets a category name for chart.
 
 ```javascript editor-pptx
+// How to rename a chart category.
+
+// Create a chart then name its category.
+
 var oPresentation = Api.GetPresentation();
 var oSlide = oPresentation.GetSlideByIndex(0);
 oSlide.RemoveAllObjects();

@@ -23,6 +23,10 @@ number
 This example shows how to get the level index.
 
 ```javascript editor-docx
+// How to retrieve the index of the numbering level.
+
+// Get the number of the level.
+
 let doc = Api.GetDocument();
 let numbering = doc.CreateNumbering("numbered");
 let numLvl = numbering.GetLevel(0);

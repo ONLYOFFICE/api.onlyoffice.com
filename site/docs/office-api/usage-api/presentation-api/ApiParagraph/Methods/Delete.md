@@ -23,6 +23,10 @@ boolean
 This example deletes the paragraph.
 
 ```javascript editor-pptx
+// How to remove a paragraph from the slide.
+
+// Delete a text.
+
 var oPresentation = Api.GetPresentation();
 var oSlide = oPresentation.GetSlideByIndex(0);
 oSlide.RemoveAllObjects();

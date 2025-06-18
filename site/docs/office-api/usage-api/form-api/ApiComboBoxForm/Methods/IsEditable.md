@@ -1,6 +1,6 @@
 # IsEditable
 
-Checks if the combo box text can be edited. If it is not editable, then this form is a dropdown list.
+Checks if the combo box text can be edited. If it is not editable, then this form is a drop-down list.
 
 ## Syntax
 
@@ -23,6 +23,10 @@ boolean
 This example checks if the combo box text can be edited.
 
 ```javascript editor-pdf
+// How to know whether a combobox form is editable.
+
+// Display a boolean representing editability of a combobox.
+
 let doc = Api.GetDocument();
 let comboBoxForm = Api.CreateComboBoxForm({"key": "Personal information", "tip": "Choose your country", "required": true, "placeholder": "Country", "editable": false, "autoFit": false, "items": ["Latvia", "USA", "UK"]});
 let paragraph = doc.GetElement(0);

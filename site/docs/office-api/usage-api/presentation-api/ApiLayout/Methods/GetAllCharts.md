@@ -23,6 +23,10 @@ This method doesn't have any parameters.
 This example shows how to get an array with all the chart objects from the slide layout.
 
 ```javascript editor-pptx
+// How to get all charts from the layout of presentation.
+
+// Get all charts from the presentation as an array.
+
 var oPresentation = Api.GetPresentation();
 var oSlide = oPresentation.GetSlideByIndex(0);
 oSlide.RemoveAllObjects();

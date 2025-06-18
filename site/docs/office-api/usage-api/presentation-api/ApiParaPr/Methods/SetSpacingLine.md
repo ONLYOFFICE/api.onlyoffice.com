@@ -22,13 +22,17 @@ expression.SetSpacingLine(nLine, sLineRule);
 
 ## Returns
 
-This method doesn't return any data.
+boolean
 
 ## Example
 
 This example sets the paragraph line spacing.
 
 ```javascript editor-pptx
+// How to set the size of a spacing line from a paragraph properties.
+
+// Change a spacing line size property of a paragraph properties.
+
 var oPresentation = Api.GetPresentation();
 var oSlide = oPresentation.GetSlideByIndex(0);
 oSlide.RemoveAllObjects();

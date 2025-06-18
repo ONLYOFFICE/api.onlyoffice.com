@@ -23,6 +23,10 @@ This method doesn't have any parameters.
 This example gets a type of ApiChartSeries class and inserts it into the presentation.
 
 ```javascript editor-pptx
+// How get a class type of ApiChartSeries.
+
+// Retrieve class type of ApiChartSeries object and insert it to the slide.
+
 var oPresentation = Api.GetPresentation();
 var oSlide = oPresentation.GetSlideByIndex(0);
 oSlide.RemoveAllObjects();

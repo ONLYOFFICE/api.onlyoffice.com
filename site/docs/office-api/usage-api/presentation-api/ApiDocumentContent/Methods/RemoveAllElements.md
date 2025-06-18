@@ -18,13 +18,17 @@ This method doesn't have any parameters.
 
 ## Returns
 
-This method doesn't return any data.
+boolean
 
 ## Example
 
 This example shows how to remove all elements from a shape.
 
 ```javascript editor-pptx
+// How to remove all elements from the slide shape.
+
+// Get a slide shape's content and remove all elements from it.
+
 var oPresentation = Api.GetPresentation();
 var oSlide = oPresentation.GetSlideByIndex(0);
 oSlide.RemoveAllObjects();

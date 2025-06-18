@@ -18,13 +18,17 @@ expression.SetIndRight(nValue);
 
 ## Returns
 
-This method doesn't return any data.
+boolean
 
 ## Example
 
 This example sets the paragraph right side indentation.
 
 ```javascript editor-pptx
+// How to set a right side indentation using a paragraph properties.
+
+// Create a paragraph setting its right side indentation property.
+
 var oPresentation = Api.GetPresentation();
 var oSlide = oPresentation.GetSlideByIndex(0);
 oSlide.RemoveAllObjects();

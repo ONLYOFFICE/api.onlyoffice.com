@@ -1,6 +1,6 @@
 # GetBackgroundColor
 
-Gets the background color of the current content control.
+Returns the background color of the current content control.
 
 ## Syntax
 

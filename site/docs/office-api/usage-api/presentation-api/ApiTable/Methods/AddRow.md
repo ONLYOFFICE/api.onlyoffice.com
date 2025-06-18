@@ -26,6 +26,10 @@ expression.AddRow(oCell, isBefore);
 This example adds a new row to the table.
 
 ```javascript editor-pptx
+// How to insert a row to the table.
+
+// Create a 2x4 table, set its position and then insert a row to it.
+
 var oPresentation = Api.GetPresentation();
 var oTable = Api.CreateTable(2, 4);
 oTable.AddRow(1, true);

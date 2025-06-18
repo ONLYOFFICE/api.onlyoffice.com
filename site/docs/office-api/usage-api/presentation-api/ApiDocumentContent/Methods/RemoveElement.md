@@ -18,13 +18,17 @@ expression.RemoveElement(nPos);
 
 ## Returns
 
-This method doesn't return any data.
+boolean
 
 ## Example
 
 This example shows how to remove an element.
 
 ```javascript editor-pptx
+// How to remove an elements from the slide shape.
+
+// Get a slide shape's content and remove an element from it using its index.
+
 var oPresentation = Api.GetPresentation();
 var oSlide = oPresentation.GetSlideByIndex(0);
 oSlide.RemoveAllObjects();

@@ -25,6 +25,10 @@ boolean
 This example sets the outline to the chart plot area.
 
 ```javascript editor-pptx
+// How to set an outline color for the plot area.
+
+// Create a chart, set its properties and its plot area outline.
+
 var oPresentation = Api.GetPresentation();
 var oSlide = oPresentation.GetSlideByIndex(0);
 oSlide.RemoveAllObjects();

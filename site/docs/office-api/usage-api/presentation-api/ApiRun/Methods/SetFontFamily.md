@@ -25,6 +25,10 @@ expression.SetFontFamily(sFontFamily);
 This example sets all 4 font slots with the specified font family.
 
 ```javascript editor-pptx
+// How to set font family to the text run.
+
+// Create a new text run and change its font family.
+
 var oPresentation = Api.GetPresentation();
 var oSlide = oPresentation.GetSlideByIndex(0);
 oSlide.RemoveAllObjects();

@@ -32,6 +32,10 @@ String
 This example shows how to get a text from the specified range.
 
 ```javascript editor-docx
+// How to get a raw text from the characters.
+
+// Retrieve a text from the character collection.
+
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 paragraph.AddText("\tONLYOFFICE Document Builder");

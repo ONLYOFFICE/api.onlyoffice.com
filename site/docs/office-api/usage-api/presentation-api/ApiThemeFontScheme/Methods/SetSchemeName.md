@@ -25,6 +25,10 @@ boolean
 This example sets a name to the theme font scheme.
 
 ```javascript editor-pptx
+// How to set a font scheme name.
+
+// Create new font scheme and set its name.
+
 var oPresentation = Api.GetPresentation();
 var oSlide = oPresentation.GetSlideByIndex(0);
 var oMaster = oPresentation.GetMaster(0);

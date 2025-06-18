@@ -22,9 +22,13 @@ boolean
 
 ## Example
 
-This example shows how to apply a styhe for chart.
+This example shows how to apply a style for chart.
 
 ```javascript editor-pptx
+// How to change a style of a chart.
+
+// Update chart style.
+
 var oPresentation = Api.GetPresentation();
 var oSlide = oPresentation.GetSlideByIndex(0);
 oSlide.RemoveAllObjects();

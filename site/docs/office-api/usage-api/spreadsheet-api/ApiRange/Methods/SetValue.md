@@ -25,6 +25,10 @@ boolean
 This example sets a value to cells.
 
 ```javascript editor-xlsx
+// How to add underline to the cell value.
+
+// Get a range and add underline its text.
+
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("B1").SetValue("2");
 worksheet.GetRange("B2").SetValue("2");

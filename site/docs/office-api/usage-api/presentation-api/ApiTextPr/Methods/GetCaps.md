@@ -20,9 +20,13 @@ boolean
 
 ## Example
 
-
+This example shows how to find out whether a text is capitalized.
 
 ```javascript editor-pptx
+// How to know whether the text letters are uppercase or not.
+
+// Get the text properties of the run and find whether it is capitalized or not.
+
 var oPresentation = Api.GetPresentation();
 var oSlide = oPresentation.GetSlideByIndex(0);
 oSlide.RemoveAllObjects();

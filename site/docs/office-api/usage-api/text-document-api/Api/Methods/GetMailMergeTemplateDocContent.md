@@ -20,9 +20,13 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example gets mail merge template and paste some data of it into the document.
+This example gets the mail merge template and pastes its data into the document.
 
 ```javascript editor-docx
+// Wraps the text runs in the mail merge fields and returns the mail merge template document.
+
+// Returns the ApiDocumentContent object whith represents the mail merge template document.
+
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 let fields = ["Greeting line", "First name", "Last name"];

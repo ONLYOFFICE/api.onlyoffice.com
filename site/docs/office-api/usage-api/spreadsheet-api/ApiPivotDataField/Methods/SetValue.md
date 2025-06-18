@@ -22,9 +22,13 @@ This method doesn't return any data.
 
 ## Example
 
-
+This example shows how to set a value for data field.
 
 ```javascript editor-xlsx
+// How to change a value of a table element.
+
+// Create a pivot table, add data to it then set a custom data field's value.
+
 let worksheet = Api.GetActiveSheet();
 
 worksheet.GetRange('B1').SetValue('Region');
@@ -50,7 +54,7 @@ let dataRef = Api.GetRange("'Sheet1'!$B$1:$D$5");
 let pivotTable = Api.InsertPivotNewWorksheet(dataRef);
 
 pivotTable.AddFields({
-	rows: ['Region', 'Style'],
+    rows: ['Region', 'Style'],
 });
 
 pivotTable.AddDataField('Price');
@@ -64,5 +68,4 @@ pivotWorksheet.GetRange('B12').SetValue(dataField.GetValue());
 dataField.SetValue('My Sum of Price');
 pivotWorksheet.GetRange('A13').SetValue('New Data field value');
 pivotWorksheet.GetRange('B13').SetValue(dataField.GetValue());
-
 ```

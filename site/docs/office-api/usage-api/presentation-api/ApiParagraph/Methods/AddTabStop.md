@@ -23,6 +23,10 @@ This method doesn't have any parameters.
 This example adds a tab stop to the paragraph.
 
 ```javascript editor-pptx
+// How to add a tab after a sentence in a paragraph.
+
+// How to split a text string with a tab.
+
 var oPresentation = Api.GetPresentation();
 var oSlide = oPresentation.GetSlideByIndex(0);
 oSlide.RemoveAllObjects();

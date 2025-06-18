@@ -25,6 +25,10 @@ JSON
 This example converts the ApiMaster object into the JSON object.
 
 ```javascript editor-pptx
+// How to convert a slide master object to a JSON object.
+
+// Get a slide master object from a slide and convert to JSON.
+
 var oPresentation = Api.GetPresentation();
 var oSlide = oPresentation.GetSlideByIndex(0);
 var oMaster = oPresentation.GetMaster(0);

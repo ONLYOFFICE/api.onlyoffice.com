@@ -23,6 +23,10 @@ This method doesn't have any parameters.
 This example shows how to create a text properties and use it.
 
 ```javascript editor-pptx
+// How to change text style, size and font.
+
+// Change text properties.
+
 var oPresentation = Api.GetPresentation();
 var oSlide = oPresentation.GetSlideByIndex(0);
 oSlide.RemoveAllObjects();

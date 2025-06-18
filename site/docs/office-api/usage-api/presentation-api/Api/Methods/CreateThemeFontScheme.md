@@ -31,6 +31,10 @@ expression.CreateThemeFontScheme(mjLatin, mjEa, mjCs, mnLatin, mnEa, mnCs, sName
 This example shows how to create a new theme font scheme.
 
 ```javascript editor-pptx
+// How to change font scheme of the theme.
+
+// Add font scheme to the theme.
+
 var oPresentation = Api.GetPresentation();
 var oSlide = oPresentation.GetSlideByIndex(0);
 var oMaster = oPresentation.GetMaster(0);

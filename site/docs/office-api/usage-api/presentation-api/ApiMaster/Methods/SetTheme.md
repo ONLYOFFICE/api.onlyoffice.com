@@ -26,6 +26,10 @@ boolean
 This example sets a theme to the slide master. Sets a copy of the theme object.
 
 ```javascript editor-pptx
+// How to set a theme of a slide master.
+
+// Create a theme, set its properties and apply it to a slide master.
+
 var oPresentation = Api.GetPresentation();
 var oSlide = oPresentation.GetSlideByIndex(0);
 var oMaster = oPresentation.GetMaster(0);

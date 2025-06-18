@@ -18,13 +18,17 @@ expression.SetVertAxisMajorTickMark(sTickMark);
 
 ## Returns
 
-This method doesn't return any data.
+boolean
 
 ## Example
 
 This example specifies the major tick mark for the vertical axis.
 
 ```javascript editor-pptx
+// How to set a major tick mark using predefined symbols.
+
+// Create a chart, set its properties and major tick mark for vertical axis.
+
 var oPresentation = Api.GetPresentation();
 var oSlide = oPresentation.GetSlideByIndex(0);
 oSlide.RemoveAllObjects();

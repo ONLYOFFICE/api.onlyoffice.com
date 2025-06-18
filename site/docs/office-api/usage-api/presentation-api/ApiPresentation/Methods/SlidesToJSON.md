@@ -30,6 +30,10 @@ JSON[]
 This example shows how to convert the slides from the current ApiPresentation object into the JSON objects.
 
 ```javascript editor-pptx
+// How to convert slides to JSON objects.
+
+// Get JSON representations of each slide from the presentation.
+
 var oPresentation = Api.GetPresentation();
 var oSlide = oPresentation.GetSlideByIndex(0);
 oSlide.RemoveAllObjects();

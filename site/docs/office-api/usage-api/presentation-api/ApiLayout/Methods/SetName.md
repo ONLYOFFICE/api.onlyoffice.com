@@ -25,6 +25,10 @@ boolean
 This example sets a name to the current layout.
 
 ```javascript editor-pptx
+// How to set name for a layout.
+
+// Rename a slide layout.
+
 var oPresentation = Api.GetPresentation();
 var oSlide = oPresentation.GetSlideByIndex(0);
 var oMaster = oPresentation.GetMaster(0);

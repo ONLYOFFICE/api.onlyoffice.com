@@ -23,6 +23,10 @@ This method doesn't have any parameters.
 This example shows how to get the paragraph first line indentation.
 
 ```javascript editor-pptx
+// How to return the first line identation of a paragraph property.
+
+// Return the first line indentation of a text property from the slide.
+
 var oPresentation = Api.GetPresentation();
 var oSlide = oPresentation.GetSlideByIndex(0);
 oSlide.RemoveAllObjects();

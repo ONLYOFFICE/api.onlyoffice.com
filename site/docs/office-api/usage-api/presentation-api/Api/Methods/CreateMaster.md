@@ -25,6 +25,10 @@ expression.CreateMaster(oTheme);
 This example shows how to create a slide master.
 
 ```javascript editor-pptx
+// How to add master to the slide.
+
+// Create new slide master and apply it to the slide.
+
 var oPresentation = Api.GetPresentation();
 var oSlide = oPresentation.GetSlideByIndex(0);
 var oMaster = Api.CreateMaster();

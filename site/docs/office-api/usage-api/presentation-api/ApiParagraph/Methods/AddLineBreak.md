@@ -23,6 +23,10 @@ This method doesn't have any parameters.
 This example adds a line break to the current position and starts the next element from a new line.
 
 ```javascript editor-pptx
+// How to add a line break after a sentence in a paragraph.
+
+// How to split a text with a line break.
+
 var oPresentation = Api.GetPresentation();
 var oSlide = oPresentation.GetSlideByIndex(0);
 oSlide.RemoveAllObjects();

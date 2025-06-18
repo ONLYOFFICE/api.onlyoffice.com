@@ -18,13 +18,17 @@ expression.SetVertAxisTickLabelPosition(sTickLabelPosition);
 
 ## Returns
 
-This method doesn't return any data.
+boolean
 
 ## Example
 
 This example spicifies tick label position for the vertical axis.
 
 ```javascript editor-pptx
+// How to change a position of tick label.
+
+// Create a chart, set its properties and its vertical axis tick label position.
+
 var oPresentation = Api.GetPresentation();
 var oSlide = oPresentation.GetSlideByIndex(0);
 oSlide.RemoveAllObjects();

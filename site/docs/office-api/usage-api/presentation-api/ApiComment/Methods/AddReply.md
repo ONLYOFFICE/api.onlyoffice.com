@@ -25,9 +25,13 @@ expression.AddReply(sText, sAuthorName, sUserId, nPos);
 
 ## Example
 
-
+This example shows how to add a reply to the comment.
 
 ```javascript editor-pptx
+// How to reply to the comment.
+
+// Get all comments from the presentation and reply to the first one.
+
 var oPresentation = Api.GetPresentation();
 Api.pluginMethod_AddComment({"UserName": "John Smith", "Text": "Comment 1"});
 var arrComments = oPresentation.GetAllComments();

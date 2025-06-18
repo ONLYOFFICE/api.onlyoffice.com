@@ -23,6 +23,10 @@ This method doesn't have any parameters.
 This example shows how to get the paragraph line spacing value.
 
 ```javascript editor-docx
+// How to get the spacing line value of the paragraph and display it.
+
+// Get the paragraph spacing line value.
+
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 let paraPr = paragraph.GetParaPr();

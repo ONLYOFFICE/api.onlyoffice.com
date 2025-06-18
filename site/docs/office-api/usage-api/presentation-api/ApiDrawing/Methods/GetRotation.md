@@ -1,6 +1,6 @@
 # GetRotation
 
-Gets the rotation angle of the current drawing object.
+Returns the rotation angle of the current drawing object.
 
 ## Syntax
 

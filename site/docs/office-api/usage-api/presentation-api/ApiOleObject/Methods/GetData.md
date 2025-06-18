@@ -23,6 +23,10 @@ string
 This example shows how to get the string data from the current OLE object.
 
 ```javascript editor-pptx
+// How to get data from an OLE object.
+
+// Retrieve a content of an OLE object as a string.
+
 var oPresentation = Api.GetPresentation();
 var oSlide = oPresentation.GetSlideByIndex(0);
 oSlide.RemoveAllObjects();
