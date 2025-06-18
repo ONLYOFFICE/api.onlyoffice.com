@@ -1,0 +1,63 @@
+---
+id: get-tfa-app-codes
+title: "Get the TFA codes"
+description: "Returns the two-factor authentication application codes."
+sidebar_label: "Get the TFA codes"
+hide_title: true
+hide_table_of_contents: true
+api: eJylVktv2zgQ/ivEXHJhba+7e9HNmz7QboEAjYMcAqOhpZHFRia55CipV9B/Xwwp2ZadRQzsxZY4T858841aILUJkD3ALRJpswliKpafFiL0r7CSYB16RdqaLwVksEFalmrh3LUtMIAEj8FZEzBA1sJ8NuO/AkPutWMjyOCbDiRsGR0r52qdR3ci7z3k1hAaYsMj8fRnYOsWQl7hVvET7RxCBnb9E3MCCc5zbqRT7CGRI03lvdqBBE24Deceuo6DNyl0L9KGcIMeJJTWbxWlo/dz6CTU2jyFy92fJlh5LI+0AnltNuxX5alSZ6KOMwykqAkXppiUuTcXGXQSSFPNSjcx6QVf6d4r59D38X+f/Xbe0zujGqqs1/9gAVHpj3Ol04YPqBLKozCWhHpWulbrGmMmAfPGa9pB9tCCCvkPDvHjCfkAPKoCJLx4TQirTrbwJyqPHrKH+LZw+i/c7c9e01dB54P6zaKhav664o3DiPWHVbeSJ1f6jtR4EwRVKOjFvitVTtYLzhQNDRc9Q/kEJGyRKtuPEGNDUQUZTJXT0/lkNh2KM6VSKeeG4Qjon9GHWJPG15BBu1YB73zdwWlyt1FX5NaUetOkoQUJz8prLnLEUG+cmlWqpmY0nHn6kETi7vs3RsHq0Jxbnsbkatyiw1TETpy5vAsorq190nhSLZBg1DZaHjuUoNksjyYMsb5/+zgVkTuL8tEQerGzjRdNQM+OhTKFcCqEF+u505FP2ME6OmTPPWoucX2VlEX79X4plvYJTXc1cpp8yf7h0zBwX++XHGoM07dqthjDSgdRIKHfaoOFWO8iCq8W/SBGnStRoSpiAn1RRxH7ovY6ndzPwYG7VDw4zSTpibK2L+JFUyVGUUUkHAksTtA4lg5sNDqMGIyFDtl0GqNOrKl3tix1jpPcbtPhfLonGpBAXPDLTaN67I51w5JQRRxjVQiV5xiCICuct4Q5YSE8Btv4PI5eooQM7vn/De1ElQNzHKoZD66tMWkhnBSVpR9ELz4fi5H15bdm4GtTWu7vr3dBb4yixuPbcGNI79V5fgpRnpHbRCyZ+7iyYtsEEmsUdk0qYvJZqwjKxwOrJdoYdeRRoCmc1YYm4gsxrHk8sRAqCCXSxCeUsa84w49HF3mcHNB9fL8Txuj4vbTx2v2OWzjNfIg+pAu/n8wnMy6Ts4G2Kq7g3vFnpBidd9jAxaNqtYfvlv+zFfqOEP6iqauVNpxOkwg6rYgHbhdI4FSZh/svMwnHi2IlobKBWLvdL4iOj/9u0PMGXR0WQVqCAwvwZokMDos8R0dxY9RNwsnJ5xhvgv0e+/xxCTJO9Rhaib37B/Y+iMzu2PeY7FMG/Msr+FWLtk247bq9fhL9p8WeC5M2F3fVdd2/JzLI5Q==
+sidebar_class_name: "get api-method"
+info_path: site/docspace/api-backend/usage-api/api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get the TFA codes"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/settings/tfaappcodes"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns the two-factor authentication application codes.
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"List of TFA application codes","content":{"application/json":{"schema":{"type":"object","properties":{"response":{"type":"array","items":{"type":"object"}},"count":{"type":"integer","format":"int32"},"links":{"type":"array","items":{"type":"object","properties":{"href":{"type":"string"},"action":{"type":"string"}}}},"status":{"type":"integer","format":"int32"},"statusCode":{"type":"integer","format":"int32"}},"title":"ObjectArrayWrapper"}}}},"401":{"description":"Unauthorized"},"405":{"description":"TFA application settings are not available"}}}
+>
+  
+</StatusCodes>
+
+
+      

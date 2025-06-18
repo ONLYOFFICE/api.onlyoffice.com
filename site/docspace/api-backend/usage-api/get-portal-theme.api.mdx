@@ -1,0 +1,63 @@
+---
+id: get-portal-theme
+title: "Get the portal theme"
+description: "Returns a theme which is set to the current portal."
+sidebar_label: "Get the portal theme"
+hide_title: true
+hide_table_of_contents: true
+api: eJydVktv4zYQ/ivEXHKobCveRVHoln10sdsWu2gc5BAYG1oaWdxIJEuOkriG/nsxpCS/sknQHCKZnPd88422QHLtIbuBb2hsjWImFhU2CMsEjEUnSRn9uYAM1kjfjCNZx/sEHHprtEcP2RbmacqPAn3ulGUlyGCQzI0m1MQC0tpa5cHq7IdnqS34vMJG8httLEIGZvUDc4IErOMYSEUfg8OXJSk4zrZgNH4tIbvZAuq24TTfSc8hfZDuDhK43HjChpPtDXpySq8hOcrkhtXERPAjEawsJuGRiGhCTPqXJSSAj7KxNZsL3rpkdJ8m58l8501pwjW6U3fp6Ot8dDR/2keawOOEzU/updOyQf9cmr3onrtnxLvlcWCLCkUoruAMppAAKQqZsmro9yUSKb32C06xS6CWnv4yhSoVFnud+0mh2QFriKZXEYWk4Kg0rpEEGfDBhFRA1q7S8zT9bZK+nZyni/TX7E2apek0jX+/pG+zNIWuS0AWhWJPsv62B5hS1h5/nqqVTjZI6PyzCXOyuWkjzk8aPIavNL2Zh8Iofef3ZKVzcgMJKMLGv4zxymF5Wk/OMY8ZnFx1XAFPklr/yhCj8HtT4KsUumeqc+2ktej6KN6m56d0caVlS5Vx6l8sgjGPeesUbcIAS59/5/vvd8gH4FAWkMCDU4Sw5Bl7h9Khg+wm/Lqw6g/cjGdPyUuv8kH860VL1fxpwa8WAwfePDERfyO1Tnshe7A8VCqvhPLCIwkyfCry1jnUJGzgTwZRg1SZnlW5s5IqyGAmrZrNp+nMBi6eUc+fHt09Oh/K0LoaMtiupMcrV3cnA3QZZEVudKnWbeRvSOBeOiVXdYROrxw7UMq25h6eWPoQr8TV339y15a7flwyYUdTh13ZYTkU/8TklUfx3pg7hYKVUFO/CyABpi7W3DeYgGK1PKgwIPuWjX4qInvi5aMmdGJjWidaj4EThdSFsNL7B+O4uWHlsIFVMMiWe6C8xvRZFBbbL9cLsTB3qLuzA6PRVtK//D6MyZfrBbs6ROZLNbs4KBQjq2AuapTGQqw2AWBnF/3gBJkzUaEsQgB9UQ889kXtZbpkhP6OcWQ4OI4kyomyNg/iQVElDryKQBMJ8HWExv7twCEHhwGDodA+m82C16nR9caUpcpxmpsmHs5nIzEwAXPBX68axEN3jB2+I2QRJlcWQuY5es+Dap0hzAkL4dCb1uXoRxbI4JqfL0hHahvIYlfNcPDeaB1p/KiofPtB9NenY3Gg/fqsGfhKl4b7+zjxaq0ltQ5fhhtDehTn+SlEadxRXFMRtiNXVjStJ7FCYVYkAybvVeBCcTuw2UAbBx25FagLa5SmqfhMDGseTyyEZC6NEx9RxrbCDN/uJXI73aF7P78jxuj4d2lC2v1murCK+RCdjwm/mc6nKZfJGk+NDIuzN/yJKbzCnrfFQMcHBdvuvm7/5y7o+0H4SDNbS6U5mDbSc1wMN9wsSIADTSAuB1YcPtQr44mltuNa6Pj4nxYdr8rljv7jthtmn/dJ4G24yHO0FPZE3UZ0HH2nM/+PW+vTxwUkYZYPARU5u39h68OV3uzbPqT4GAH/5137pMZ2G9HadaN8vPqpxsiAUZqLuuy67j8hiWe/
+sidebar_class_name: "get api-method"
+info_path: site/docspace/api-backend/usage-api/api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get the portal theme"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/people/theme"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns a theme which is set to the current portal.
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Theme","content":{"application/json":{"schema":{"type":"object","properties":{"response":{"type":"object","properties":{"theme":{"oneOf":[{"enum":["Base","Dark","System"],"type":"string","description":"[Base - Base, Dark - Dark, System - System]","example":"Base"},{"enum":[0,1,2],"type":"integer","description":"[0 - Base, 1 - Dark, 2 - System]","example":0,"x-enum-varnames":["Base","Dark","System"],"x-enum-descriptions":["Base","Dark","System"]}],"description":"The theme type.","title":"DarkThemeSettingsType"},"lastModified":{"type":"string","description":"The last modified date.","format":"date-time","example":"2008-04-10T06:30:00.0000000+04:00"}},"additionalProperties":false,"description":"The theme parameters.","title":"DarkThemeSettings"},"count":{"type":"integer","format":"int32"},"links":{"type":"array","items":{"type":"object","properties":{"href":{"type":"string"},"action":{"type":"string"}}}},"status":{"type":"integer","format":"int32"},"statusCode":{"type":"integer","format":"int32"}},"title":"DarkThemeSettingsWrapper"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

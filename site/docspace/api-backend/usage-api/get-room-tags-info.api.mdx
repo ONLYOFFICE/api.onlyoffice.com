@@ -1,0 +1,71 @@
+---
+id: get-room-tags-info
+title: "Get tags"
+description: "Returns a list of custom tags."
+sidebar_label: "Get tags"
+hide_title: true
+hide_table_of_contents: true
+api: eJzlV01z2zYQ/SuYvfiCSoqSE29qkmacZiYzqVwfHE0MgUsRMQmgAGhb1fC/dxYgKdFSbbW9ZKYXfQC7i923i7eLHQSx8ZDdwBdjag8rDsaiE0EZfZlDBhsMtLMUG3+pCwMcrHCixoCO1HagRY2QgTSNDsBBacjgjwbdFjjk6KVTloxBBh8weGYc8/QdSmS6qdfomClYEBvm0DcV7RjmMDiF9zj56r7qZak8s47cClvmLUpVKEwWavGo6qZmoqbje0u5CILMrJEpLasmx5wpHRXSIeTCBDh4WWItINtBZwiyV7PZjEOtdPeXQ9haClDpgBt0wKEwrhYhLb2eAwd8FLWtELJX89dv2pYPoPggXLjUOT4+j8wXtA496g6XqKb0hilSZYUzNXsolSzjLiXsgimd3FBGswdVVRRsD1t+AjflWeMxJ1hyLJTGaMsUhcfACuOYFRulO3sl6t4YuSFYpXyPrp+wy8ByKoBaafR0FJmyRunQwxwzEC2Pfe+MCnJ3o7QfJ+E/IF2oKqD7XVQN/sMiDPgY2D0pJoCKuCmcLCn0GPBJNMPWKimqapvUhGeCJS86a09RpMo8yNrJ0H1wSm8OAwVv6uQktO2Kg0NvjfboSWs+m9HXOMJP+1wxQscDB2l0QB1IWFhbKRldmH73pLE79sOsv6Ok69xFrNJ5/eEHksI5QSirgLU/ttC2vKOGM/LbcqiUvvPnm3/qYOmwOIaz5SBkQudoqyUPfRCh8We6mITfmhzPUmg5BBViKj9HpxcU0rUT1qLrzn8ze3WcxystmlAap/7EPJrxKBunwjbSrvDyG+1/u0NaAIciBw4PTgWEFd2Mn1E4dJDdxH8Lq37F7bB2Sl54JXvxz4smlPPTgp8txt5ws6KCfMpkoXHaH1CGbHwwdbpIwKHGUJquscRmEkrIYCqsms4ns2mhKvTT2JMoYHfft5nGVZDBbi08XrmqPbrXv0VZJo0u1KZJDQw43AunxLpK1dEpJ6gL0VSUpiNL79IWu/ryidKz2gP/G12TZGoM/75cI8pHJq88srfG3ClkpIQ6dDcQeE9gI4Mdg8moQjXX5WY4pwzBHp3yXhP5bE3jiJIcGWZC58wK7x+My3vCIQPraJAsdxVxjumLJMx2H6+XbGnuULcXI6PJFu9+/NLfhI/XSzpqXIIvYbYYAUWMO/ScnK23kbsvFt0NiTIXrESRRwc6UEcndqB2Mi0fanxPKiIuPPUkybGiMg/sQYWSjU5lkQk40HYqjcPdniZGi7EGI9A+m07jqROjq60pCiVxIk2dFufTgQGAQyDAz1eN4jE7xvbsLfJ4RUXOhJTo46xlnQkoA+Y0G5nGydgw0nXP4Jq+X5BOHNazwh7NuPDWaJ2Y+gmotPuOddvH12KkfX7UVPjUZCm/jz95tdEiNA5fLjcq6UF8PwmM/ZqwJU0MhCyrGx9o6DLrIGJN3isRi/K257KeNkYZuWWo8zgrxTmKhgrhhwEi3fhUZXFCpjt8exDI7WRf3YfxPWGMlv4XJobdNZ+FVcSH6HwK+PVkPpkRTNb4UIvYGzvDHzCwjoJHIO32c8TLRN/BTZPL1FZCaTqrSeybWP+GcgEcyA8OkflJjw5ecSiNDySzGzi/peU01VFHyJUnZs8hK0Tl8Rlff7yHx0lwYisZHlJxiKT+RC33/Fj/10+JZ2AdPcX+JbY/1NvhmVjHj6F9sKv9PJTmvL4Z0nVKqgsp0R6W39FzgawMQ9yH90vgsbmNGTYNMd0Pst5v6e2h7fHMkzygT0rLSY3dLtF32w7yaetvNYaRIEkTTKu2bf8CA3voyQ==
+sidebar_class_name: "get api-method"
+info_path: site/docspace/api-backend/usage-api/api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get tags"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/files/tags"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns a list of custom tags.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"count","in":"query","description":"Gets or sets the number of tag results to retrieve.\r\nThis property specifies the maximum amount of tag data to be included in the result set.","schema":{"maximum":1000,"minimum":1,"type":"integer","format":"int32","example":1234}},{"name":"startIndex","in":"query","description":"Represents the starting index from which the tags' information will be retrieved.\r\nThis property is used to define the offset for pagination when retrieving a list of tags. It determines\r\nthe point in the data set from which the retrieval begins.","schema":{"type":"integer","format":"int32","example":1234}},{"name":"filterValue","in":"query","description":"Gets or sets the text value used for searching tags.\r\nThis property is typically used as a filter value when retrieving tag information.","schema":{"type":"string","example":"some text"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"List of tag names","content":{"application/json":{"schema":{"type":"object","properties":{"response":{"type":"array","items":{"type":"object"}},"count":{"type":"integer","format":"int32"},"links":{"type":"array","items":{"type":"object","properties":{"href":{"type":"string"},"action":{"type":"string"}}}},"status":{"type":"integer","format":"int32"},"statusCode":{"type":"integer","format":"int32"}},"title":"ObjectArrayWrapper"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

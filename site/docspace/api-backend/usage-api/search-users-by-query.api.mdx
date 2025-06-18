@@ -1,0 +1,71 @@
+---
+id: search-users-by-query
+title: "Search users (using query parameters)"
+description: "Returns a list of users matching the search query. This method uses the query parameters."
+sidebar_label: "Search users (using query parameters)"
+hide_title: true
+hide_table_of_contents: true
+api: eJy1V99v2zYQ/lcIvmQDVDtL9+Q3N+mGdu3aNQkCLAias3Sy2Egkxx9JXEP/+3Ak5UiWu9gt5ofYIe/uO94dvzuuuYOl5bNr/hGVrpFN2TmCySt+k3Gl0YATSr4p+IzbsH5p0dhXq788mhXPuAYDDTo0ZGPNJTTIZ/yftCtk758CbW6EJnt8xi8qZNEiCwITnnGbV9gAn625W2myY50Rcskzjo/Q6DosqQaZw0fH2/Ym4watVtKiJa2T42P6GgK9E9YxVTJPjvOM50o6lI4EQeta5OGE0y+WpNdjH9TiC+aOjmooHk5ErA64JwnGQDi1w8Y+b0EUu046jhI5zt6cUYBKZRpwfMa9F8UgLOvj9Hmx40/3aXmb8UJYXcPqz5CpvfGTFqMEkyfS1zUsCNoZj31P3os7ZH+DXIGzd4IQnXD1IVhB/hkQkLBEQ9bhHhyYA8xHhf+236uyDuGDEUshoT4ASSUVZsVX/F7c9/B4AGQDj6LxzY8hYiF8cwhoUPghzPMG6kNCa0l+f0RvauZU0koV04YLWYoaL80h0EmJXX56d8AxK7Dz7UpdKFUjyBHUucZclAItEyVzHW4FloFM3jNlmFRu0icBwm8zLuxcKima7wYShKPkqlHefhOHMlcUggxB/bFHbCXUFr8dvE2/IJOJGfjrRtdqhXjmFCfLufKRoZP/Qjqk695jQCHdyxMKbC3knf1+Fq4MluPk0+ny6PtoqyUPrQPn7Z4uRuFTVeBeCu04MHM61JUBrYn0gge/Hv8ybnaXEryrlBFfsQiGLObeCLcK3Rls/pn2P98hLXCDQF3kwQiH/KbN1vwVgkHDZ9fhv7kWf+Bqs7ZLHqzIO/EPc++qk92CHzSGKeL6hrr20OlP6LyRlgGr+72aNeDySshlqMzBrMAuKmFZg65SBQnbIBL2tiosyvAZX2LIPbiKz/gUtJieTI6nOgw902icJhA0990s44kV+HoBlgiiHV+eIMtyJUux9HFQ4hm/ByOID0JxJOWYqBJ8TWkeWTqLW8QolNybp7Sd0zQSTQ2T91TuIUcjk5cW2alSdwIZKaF0adAhxopD2sBgmtXyoEI1mzK7wamc0yOU19KhYSvlTUgZGWYgC6bB2gdlim6mCxwUDJLlVE/7mD6Kwmz99uqCXag7lO3RwGi0laUfv3U36e3VBUENC/i5mM0HgSIaLKiOGiGxYItVqLGjebpfQeaIVQhFcCAFdYCYgppk2mxzQ55ICcLCtidRjpW1emAPwlVsgMoCk2SctmNp9Hc7mhkshhoMgbaz6TSgTpSsV6osRY6TXDVx8WS64Q+iZwr4/qpBPGRH6W5IhiJccCgY5DlaS11YG+Uwd1gwg1Z5k6PdkMWMX9H3M9KRATtOeYpmWDhVUkam3woq7Z6xtD2+FgPt/U9NhS9kqSi/jy+sWEpw3uDz5UYlvRGn+1OwUpktv4jqkIXIssZbxxbI1MJBqMl7AaEobzs662hjkJFbhrLQSkg3YW8clTVdTywYzRMs3vhYZWQr3OHb3kFuJ0/V3T/fFmPQ4EFRoGOn5jXXgvgQjY0Hfjk5mRyHsUtZ10DorclwfHMm3v/JW2L9bTr/eTuC66e33P/aQ1IaaZKb6hqEpDP4yOqxoVxTjnnG6XwZj00ldJPuJV0p60hsvWknLS3HpzE1m0JYahrF7vmpf9JdD+edHoY+sXl930PtSYZTe+l6VOzcHUGRH1FpnueoXU9r9FImK5ve+vvrC54FwhlWfWws6QdZ77Zk36OtPhQ9oL80N+zUWK/jlWrbjXzc+qbGhqajNAXopm3bfwEFDtsX
+sidebar_class_name: "get api-method"
+info_path: site/docspace/api-backend/usage-api/api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Search users (using query parameters)"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/people/search"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns a list of users matching the search query. This method uses the query parameters.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"query","in":"query","description":"The search query.","schema":{"type":"string","example":"some text"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"List of users","content":{"application/json":{"schema":{"type":"object","properties":{"response":{"type":"array","items":{"type":"object","properties":{"id":{"type":"string","description":"The user ID.","format":"uuid","example":"{00000000-0000-0000-0000-000000000000}"},"displayName":{"type":"string","description":"The user display name.","nullable":true,"example":"Mike Zanyatski"},"title":{"type":"string","description":"The user title.","nullable":true,"example":"Manager"},"avatar":{"type":"string","description":"The user avatar.","nullable":true,"example":"some text"},"avatarOriginal":{"type":"string","description":"The user original size avatar.","nullable":true,"example":"some text"},"avatarMax":{"type":"string","description":"The user maximum size avatar.","nullable":true,"example":"some text"},"avatarMedium":{"type":"string","description":"The user medium size avatar.","nullable":true,"example":"some text"},"avatarSmall":{"type":"string","description":"The user small size avatar.","nullable":true,"example":"url to small avatar"},"profileUrl":{"type":"string","description":"The user profile URL.","nullable":true,"example":"some text"},"hasAvatar":{"type":"boolean","description":"Specifies if the user has an avatar or not.","example":true},"isAnonim":{"type":"boolean","description":"Specifies if the user is anonymous or not.","example":true}},"additionalProperties":false,"description":"The user parameters.","title":"EmployeeDto"}},"count":{"type":"integer","format":"int32"},"links":{"type":"array","items":{"type":"object","properties":{"href":{"type":"string"},"action":{"type":"string"}}}},"status":{"type":"integer","format":"int32"},"statusCode":{"type":"integer","format":"int32"}},"title":"EmployeeArrayWrapper"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

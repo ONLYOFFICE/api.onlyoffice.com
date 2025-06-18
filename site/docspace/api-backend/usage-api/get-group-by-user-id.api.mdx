@@ -1,0 +1,71 @@
+---
+id: get-group-by-user-id
+title: "Get user groups"
+description: "Returns a list of groups for the user with the ID specified in the request."
+sidebar_label: "Get user groups"
+hide_title: true
+hide_table_of_contents: true
+api: eJytV21v2zYQ/ivEfckGKLbjtkDnb27TFemKbWgTBFhgNGfpZLGRSJU8NXUN/ffhSMm2YnfJhvmDLZHHe33uOXoDjCsPsxt462xTwyIBW5ND1tZcZDCDFXHYebW+8uQuMkigRocVMTk5twGDFcEMGk9Oy7Y2MIMauYAEMvKp07VogxlcFqRETF2cjyABR18a7SiDGbuGEvBpQRXCbAO8rkWlZ6fNChLIrauQxUgTTNA3rOpSRBDpjM4mz06XKb44/SXHs9MlvkxPn08nL14un+Myn76Etl2INV9b48mLgelkIj9D995rz8rmaiXxekggtYbJsEhiXZc6DWkZf/Yivjn01y4/U8qSISdJZB2N9Zb3JNE5XEuumCr/uAadHcvKYXKD5112f5yzzaT7nB756j8ttElX2qdbFnmxbZqyxKUYi5Xd2Q5YUr+L3jaBCg2uyP0bE92Rf7byDu9o9Bd+LzT7Ow1tmwBmmRZlWP65l9ocS08/NuabqkK3VjvEi13WvIvlYxQ5ZxvMpLaJgOni0YZJItyrhzb8bCrRl9rc+f8OisJRfpg5CTWNgRxsteKhZ+TGP9HFKPzaZvSkA+3x5MwlsGuHdU2u8+L55OywAa8MNlxYp79TFpR5ShuneR14Bn36SfY/3ZEsgCMUXN87zQSLNtnAK0InaLoJb/Na/0br7doxefQ67cX/mDdcTI8L/lFTYMObhTDJ0OkPxI0zXqEqB/yhcusU94x3r7kIbxfnyteU6lxTprQJa0KE5FmwVREXtuPdQLVcwAzGWOvxdDQZB9Vj0TjeRMJtQdLkvvZs3LhSWnyJnq5c2R500scgq1Jrcr1qItFDAl/RaemlAIzucCxQjk0pJT7QdB631NWH91LUxa5cH4UYo6ph0XZQD7U5UHnlSb229k6TkkNkuONc6LloqLAbNmk4InjtKrq1UzDXB1beGCan1rZxoTaiWKHJVI3e31sntQ/ULgqWQaFo7nD0FNUnUVht3l1fqkt7R6Y9GSiNupLu4de+i95dX4qpIXAfy9l8kCilvcqEqSptKFPLdQDYybzrqyBzogrCLDjQJXVgsUtqJ9Mm287YERKGhYeeRDmVl/Y+4n1gVQUWSUC2IzT2d3uKGSwGDIZE+9l4HKyOrCnXNs91SqPUVnFxOt7yhtCzJPzpR4N4qI6t+3mNWWhszBSmKXmv2KraWaaUKVOOvG1cSn5LEjO4lt9HpCPz9Vyyy2ZYeG2NiSz/IKmye6667cO2GJx+etSBPExupb7fTr1eGeTG0eNwE0hvxaV/skB0Q79GSmZoyKyqGs9qScouGQMmv2oMoLztSa2njUFFbhWZrLba8EhdsMBa2pMyhUK1seN3rBp6+HYvkNvRDt378T1gjFbecxvC7gbXvNbCh+R8DPjZaDqaSJpq67nCMFc7xW+JI7tvb4yDXG12F8j/eUp0JWL6xuO6RG3EvyYydhwZN1I/SEB8TyDYgiTc0SGBWXdXXyRQWM8ivdlOjFaWvzTkZMgudpMhTJdMe3nOjt+c9gP+6UN3u/9ZPbj2H3W+B51Zh2FUNhRHThgb/X+LdtEmPS+JN3FznqZU896xg7u6zKbtYH375hKSwDNDsMd50j2I9qMuPRg/0QP5lmvC0RObTeyktt3Kx60fntiyc5SWBC3atv0bnoCrLQ==
+sidebar_class_name: "get api-method"
+info_path: site/docspace/api-backend/usage-api/api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get user groups"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/group/user/{userid}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns a list of groups for the user with the ID specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"userid","in":"path","description":"The user ID.","required":true,"schema":{"type":"string","format":"uuid","example":"aae1e103-bca5-9fa1-ba8c-42058b4abf28"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"List of groups","content":{"application/json":{"schema":{"type":"object","properties":{"response":{"type":"array","items":{"type":"object","properties":{"id":{"type":"string","description":"The group ID.","format":"uuid","example":"{00000000-0000-0000-0000-000000000000}"},"name":{"type":"string","description":"The group name.","nullable":true,"example":"Group Name"},"manager":{"type":"string","description":"The group manager.","nullable":true,"example":"Jake.Zazhitski"}},"additionalProperties":false,"description":"The group summary parameters.","title":"GroupSummaryDto"}},"count":{"type":"integer","format":"int32"},"links":{"type":"array","items":{"type":"object","properties":{"href":{"type":"string"},"action":{"type":"string"}}}},"status":{"type":"integer","format":"int32"},"statusCode":{"type":"integer","format":"int32"}},"title":"GroupSummaryArrayWrapper"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

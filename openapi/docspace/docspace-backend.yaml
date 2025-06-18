@@ -1,7 +1,7 @@
 openapi: 3.0.4
 info:
   title: Api
-  version: 3.1.0
+  version: 3.2.0
 servers:
   - url: '{baseUrl}'
     description: Server configuration
@@ -393,7 +393,7 @@ paths:
       tags:
         - Migration
       summary: Get migrations
-      operationId: list
+      operationId: listMigrations
       responses:
         '200':
           description: Ok
@@ -424,7 +424,7 @@ paths:
       tags:
         - Migration
       summary: Upload and initialize migration
-      operationId: uploadAndInit
+      operationId: uploadAndInitializeMigration
       parameters:
         - name: migratorName
           in: path
@@ -459,7 +459,7 @@ paths:
       tags:
         - Migration
       summary: Get migration status
-      operationId: status
+      operationId: getMigrationStatus
       responses:
         '200':
           description: Ok
@@ -490,7 +490,7 @@ paths:
       tags:
         - Migration
       summary: Cancel migration
-      operationId: cancel
+      operationId: cancelMigration
       responses:
         '200':
           description: Ok
@@ -517,7 +517,7 @@ paths:
       tags:
         - Migration
       summary: Clear migration
-      operationId: clear
+      operationId: clearMigration
       responses:
         '200':
           description: Ok
@@ -544,7 +544,7 @@ paths:
       tags:
         - Migration
       summary: Start migration
-      operationId: migrate
+      operationId: startMigration
       requestBody:
         content:
           application/json:
@@ -576,7 +576,7 @@ paths:
       tags:
         - Migration
       summary: Get migration logs
-      operationId: logs
+      operationId: getMigrationLogs
       responses:
         '200':
           description: Ok
@@ -603,7 +603,7 @@ paths:
       tags:
         - Migration
       summary: Finish migration
-      operationId: finish
+      operationId: finishMigration
       requestBody:
         content:
           application/json:
@@ -671,7 +671,7 @@ paths:
       tags:
         - Portal / Payment
       summary: Update the payment quantity
-      operationId: paymentUpdate
+      operationId: updatePayment
       requestBody:
         content:
           application/json:
@@ -707,7 +707,7 @@ paths:
       tags:
         - Portal / Payment
       summary: Update the wallet payment quantity
-      operationId: paymentUpdateWallet
+      operationId: updateWalletPayment
       requestBody:
         content:
           application/json:
@@ -738,6 +738,42 @@ paths:
             - write
         - OpenId: []
       description: Updates the wallet payment quantity with the parameters specified in the request.
+  /api/2.0/portal/payment/calculatewallet:
+    put:
+      tags:
+        - Portal / Payment
+      summary: Calculate amount of the wallet payment
+      operationId: calculateWalletPayment
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/WalletQuantityRequestDto'
+      responses:
+        '200':
+          description: Payment calculation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PaymentCalculationWrapper'
+        '401':
+          description: Unauthorized
+        '403':
+          description: No permissions to perform this action
+      security:
+        - asc_auth_key:
+            - read
+            - write
+        - Bearer: []
+        - ApiKeyBearer:
+            - read
+            - write
+        - Basic: []
+        - OAuth2:
+            - read
+            - write
+        - OpenId: []
+      description: Calculate amount of the wallet payment with the parameters specified in the request.
   /api/2.0/portal/payment/account:
     get:
       tags:
@@ -781,7 +817,7 @@ paths:
       tags:
         - Portal / Payment
       summary: Get prices
-      operationId: getPrices
+      operationId: getPortalPrices
       responses:
         '200':
           description: List of available portal prices
@@ -810,7 +846,7 @@ paths:
       tags:
         - Portal / Payment
       summary: Get currencies
-      operationId: getCurrencies
+      operationId: getPaymentCurrencies
       responses:
         '200':
           description: List of available portal currencies
@@ -839,7 +875,7 @@ paths:
       tags:
         - Portal / Payment
       summary: Get quotas
-      operationId: getQuotas
+      operationId: getPaymentQuotas
       parameters:
         - name: wallet
           in: query
@@ -875,7 +911,7 @@ paths:
       tags:
         - Portal / Payment
       summary: Get quota payment information
-      operationId: getQuotaInformation
+      operationId: getQuotaPaymentInformation
       parameters:
         - name: refresh
           in: query
@@ -913,7 +949,7 @@ paths:
       tags:
         - Portal / Payment
       summary: Send a payment request
-      operationId: sendSalesRequest
+      operationId: sendPaymentRequest
       requestBody:
         content:
           application/json:
@@ -946,8 +982,8 @@ paths:
     get:
       tags:
         - Portal / Payment
-      summary: Get the chechout setup page URL
-      operationId: getChechoutSetupUrl
+      summary: Get the checkout setup page URL
+      operationId: getCheckoutSetupUrl
       parameters:
         - name: BackUrl
           in: query
@@ -957,7 +993,7 @@ paths:
             example: some text
       responses:
         '200':
-          description: The URL to the chechout setup page
+          description: The URL to the checkout setup page
           content:
             application/json:
               schema:
@@ -979,7 +1015,7 @@ paths:
             - read
             - write
         - OpenId: []
-      description: Returns the URL to the chechout setup page.
+      description: Returns the URL to the checkout setup page.
   /api/2.0/portal/payment/customerinfo:
     get:
       tags:
@@ -1275,7 +1311,7 @@ paths:
       tags:
         - Portal / Payment
       summary: Get list of currencies
-      operationId: getAllCurrencies
+      operationId: getAccountingCurrencies
       responses:
         '200':
           description: The list of currencies
@@ -1372,7 +1408,7 @@ paths:
       tags:
         - Portal / Quota
       summary: Get the portal used space
-      operationId: getUsedSpace
+      operationId: getPortalUsedSpace
       responses:
         '200':
           description: Used portal space
@@ -1401,7 +1437,7 @@ paths:
       tags:
         - Portal / Quota
       summary: Get a portal tariff
-      operationId: getTariff
+      operationId: getPortalTariff
       parameters:
         - name: refresh
           in: query
@@ -1437,7 +1473,7 @@ paths:
       tags:
         - Portal / Quota
       summary: Get a portal quota
-      operationId: getQuota
+      operationId: getPortalQuota
       responses:
         '200':
           description: Current portal quota
@@ -1526,7 +1562,7 @@ paths:
       tags:
         - Portal / Settings
       summary: Get a path to the portal
-      operationId: getFullAbsolutePath
+      operationId: getPortalPath
       parameters:
         - name: virtualPath
           in: query
@@ -1689,7 +1725,7 @@ paths:
       tags:
         - Portal / Users
       summary: Get a user by ID
-      operationId: getUser
+      operationId: getUserById
       parameters:
         - name: userID
           in: path
@@ -1727,7 +1763,7 @@ paths:
       tags:
         - Portal / Users
       summary: Get an invitation link
-      operationId: geInviteLink
+      operationId: getInvitationLink
       parameters:
         - name: employeeType
           in: path
@@ -1763,7 +1799,7 @@ paths:
       tags:
         - Portal / Users
       summary: Get a number of portal users
-      operationId: getUsersCount
+      operationId: getPortalUsersCount
       responses:
         '200':
           description: Number of portal users
@@ -1792,7 +1828,7 @@ paths:
       tags:
         - Portal / Users
       summary: Mark a gift message as read
-      operationId: markPresentAsReaded
+      operationId: markGiftMessageAsRead
       responses:
         '200':
           description: OK
@@ -2149,6 +2185,22 @@ paths:
           description: The ending date and time for filtering audit events.
           schema:
             $ref: '#/components/schemas/ApiDateTime'
+        - name: count
+          in: query
+          description: The maximum number of audit event records to retrieve.
+          schema:
+            maximum: 1000
+            minimum: 1
+            type: integer
+            format: int32
+            example: 1234
+        - name: startIndex
+          in: query
+          description: The index of the first audit event record to retrieve in a paged query.
+          schema:
+            type: integer
+            format: int32
+            example: 1234
       responses:
         '200':
           description: List of filtered audit trail data
@@ -2179,7 +2231,7 @@ paths:
       tags:
         - Security / Audit trail data
       summary: Get audit trail types
-      operationId: getTypes
+      operationId: getAuditTrailTypes
       responses:
         '200':
           description: Audit trail types
@@ -2193,7 +2245,7 @@ paths:
       tags:
         - Security / Audit trail data
       summary: Get audit trail mappers
-      operationId: getMappers
+      operationId: getAuditTrailMappers
       parameters:
         - name: productType
           in: query
@@ -2319,7 +2371,7 @@ paths:
       tags:
         - Security / CSP
       summary: Configure CSP settings
-      operationId: csp
+      operationId: configureCsp
       requestBody:
         content:
           application/json:
@@ -2354,7 +2406,7 @@ paths:
       tags:
         - Security / CSP
       summary: Get CSP settings
-      operationId: getCsp
+      operationId: getCspSettings
       responses:
         '200':
           description: Ok
@@ -2491,6 +2543,22 @@ paths:
           description: The ending date and time for filtering login events.
           schema:
             $ref: '#/components/schemas/ApiDateTime'
+        - name: count
+          in: query
+          description: The number of login events to retrieve in the query.
+          schema:
+            maximum: 1000
+            minimum: 1
+            type: integer
+            format: int32
+            example: 1234
+        - name: startIndex
+          in: query
+          description: The starting index for fetching a subset of login events from the query results.
+          schema:
+            type: integer
+            format: int32
+            example: 1234
       responses:
         '200':
           description: List of filtered login events
@@ -2805,7 +2873,7 @@ paths:
       tags:
         - Settings / Common settings
       summary: Get the portal settings
-      operationId: getSettings
+      operationId: getPortalSettings
       parameters:
         - name: withpassword
           in: query
@@ -2860,7 +2928,7 @@ paths:
       tags:
         - Settings / Common settings
       summary: Configure the deep link settings
-      operationId: saveConfigureDeepLink
+      operationId: configureDeepLink
       requestBody:
         content:
           application/json:
@@ -2895,7 +2963,7 @@ paths:
       tags:
         - Settings / Common settings
       summary: Get the deep link settings
-      operationId: gettDeepLinkSettings
+      operationId: getDeepLinkSettings
       responses:
         '200':
           description: Ok
@@ -2938,7 +3006,7 @@ paths:
       tags:
         - Settings / Common settings
       summary: Get time zones
-      operationId: getTimeZonesAsync
+      operationId: getTimeZones
       responses:
         '200':
           description: List of all the available time zones with their IDs and display names
@@ -2967,7 +3035,7 @@ paths:
       tags:
         - Settings / Common settings
       summary: Get hostname
-      operationId: getMachineName
+      operationId: getPortalHostname
       responses:
         '200':
           description: Portal hostname
@@ -3036,7 +3104,7 @@ paths:
       tags:
         - Settings / Common settings
       summary: Get a portal logo
-      operationId: getLogo
+      operationId: getPortalLogo
       responses:
         '200':
           description: Portal logo image URL
@@ -3103,7 +3171,7 @@ paths:
       tags:
         - Settings / Common settings
       summary: Get a color theme
-      operationId: getColorTheme
+      operationId: getPortalColorTheme
       responses:
         '200':
           description: Settings of the portal themes
@@ -3116,7 +3184,7 @@ paths:
       tags:
         - Settings / Common settings
       summary: Save a color theme
-      operationId: saveColorTheme
+      operationId: savePortalColorTheme
       requestBody:
         content:
           application/json:
@@ -3149,7 +3217,7 @@ paths:
       tags:
         - Settings / Common settings
       summary: Delete a color theme
-      operationId: deleteColorTheme
+      operationId: deletePortalColorTheme
       parameters:
         - name: id
           in: query
@@ -3276,7 +3344,7 @@ paths:
       tags:
         - Settings / Common settings
       summary: Get the payment settings
-      operationId: paymentSettings
+      operationId: getPaymentSettings
       responses:
         '200':
           description: 'Payment settings: sales email, feedback and support URL, link to pay for a portal, Standalone or not, current license, maximum quota quantity'
@@ -3746,7 +3814,7 @@ paths:
       tags:
         - Settings / Greeting settings
       summary: Check the default greeting settings
-      operationId: isDefault
+      operationId: getIsDefaultGreetingSettings
       responses:
         '200':
           description: 'Boolean value: true if the greeting settings of the current portal are set to default'
@@ -3986,7 +4054,7 @@ paths:
       tags:
         - Settings / License
       summary: Request a license
-      operationId: requestLicense
+      operationId: getIsLicenseRequired
       responses:
         '200':
           description: 'Boolean value: true if the license is required'
@@ -4176,7 +4244,7 @@ paths:
       tags:
         - Settings / Messages
       summary: Send a message to the administrator
-      operationId: sendAdmMail
+      operationId: sendAdminMail
       requestBody:
         content:
           application/json:
@@ -4260,7 +4328,7 @@ paths:
       tags:
         - Settings / Notifications
       summary: Enable notifications
-      operationId: setSettings
+      operationId: setNotificationSettings
       requestBody:
         content:
           application/json:
@@ -4391,7 +4459,7 @@ paths:
       tags:
         - Settings / Owner
       summary: Update the portal owner
-      operationId: owner
+      operationId: updatePortalOwner
       requestBody:
         content:
           application/json:
@@ -5443,7 +5511,7 @@ paths:
       tags:
         - Settings / Security
       summary: Check a product administrator
-      operationId: isProductAdministrator
+      operationId: getIsProductAdministrator
       parameters:
         - name: productid
           in: query
@@ -5848,7 +5916,7 @@ paths:
       tags:
         - Settings / Storage
       summary: Update the CDN storage
-      operationId: updateCdn
+      operationId: updateCdnStorage
       requestBody:
         content:
           application/json:
@@ -6006,7 +6074,7 @@ paths:
       tags:
         - Settings / TFA settings
       summary: Update the TFA settings
-      operationId: tfaSettings
+      operationId: updateTfaSettings
       requestBody:
         content:
           application/json:
@@ -6076,7 +6144,7 @@ paths:
       tags:
         - Settings / TFA settings
       summary: Get confirmation email
-      operationId: tfaConfirmUrl
+      operationId: getTfaConfirmUrl
       responses:
         '200':
           description: Confirmation email URL
@@ -6105,7 +6173,7 @@ paths:
       tags:
         - Settings / TFA settings
       summary: Get confirmation email for updating TFA settings
-      operationId: tfaSettingsLink
+      operationId: updateTfaSettingsLink
       requestBody:
         content:
           application/json:
@@ -6170,7 +6238,7 @@ paths:
       tags:
         - Settings / TFA settings
       summary: Get the TFA codes
-      operationId: tfaAppGetCodes
+      operationId: getTfaAppCodes
       responses:
         '200':
           description: List of TFA application codes
@@ -6201,7 +6269,7 @@ paths:
       tags:
         - Settings / TFA settings
       summary: Update the TFA codes
-      operationId: tfaAppRequestNewCodes
+      operationId: updateTfaAppCodes
       responses:
         '200':
           description: New backup codes
@@ -6232,7 +6300,7 @@ paths:
       tags:
         - Settings / TFA settings
       summary: Unlink the TFA application
-      operationId: tfaAppNewApp
+      operationId: unlinkTfaApp
       requestBody:
         content:
           application/json:
@@ -6437,7 +6505,7 @@ paths:
       tags:
         - Settings / Webhooks
       summary: Get webhook logs
-      operationId: getJournal
+      operationId: getWebhooksLogs
       parameters:
         - name: deliveryFrom
           in: query
@@ -6490,6 +6558,22 @@ paths:
           description: The type of event that triggered the webhook.
           schema:
             $ref: '#/components/schemas/WebhookTrigger'
+        - name: count
+          in: query
+          description: The maximum number of webhook log records to return in the query response.
+          schema:
+            maximum: 1000
+            minimum: 1
+            type: integer
+            format: int32
+            example: 1234
+        - name: startIndex
+          in: query
+          description: "Specifies the starting index for retrieving webhook logs.\r\nUsed for pagination in the webhook delivery log queries."
+          schema:
+            type: integer
+            format: int32
+            example: 1234
       responses:
         '200':
           description: Logs of the webhook activities
@@ -6594,7 +6678,7 @@ paths:
       tags:
         - Settings / Webhooks
       summary: Get webhook triggers
-      operationId: triggers
+      operationId: getWebhookTriggers
       responses:
         '200':
           description: List of triggers for a webhook
@@ -6817,7 +6901,7 @@ paths:
         Returns a request to get the confirmation code from URL.
 
          **Note**: List of providers: Google, Dropbox, Docusign, Box, OneDrive, Wordpress.
-      operationId: get
+      operationId: getThirdPartyCode
       parameters:
         - name: provider
           in: path
@@ -7071,6 +7155,39 @@ paths:
           schema:
             type: boolean
             example: true
+        - name: count
+          in: query
+          description: The number of records to retrieve.
+          schema:
+            maximum: 1000
+            minimum: 1
+            type: integer
+            format: int32
+            example: 1234
+        - name: startIndex
+          in: query
+          description: The starting index for paginated results.
+          schema:
+            type: integer
+            format: int32
+            example: 1234
+        - name: sortBy
+          in: query
+          description: Specifies the property used to sort the query results.
+          schema:
+            type: string
+            example: some text
+        - name: sortOrder
+          in: query
+          description: The order in which the results are sorted.
+          schema:
+            $ref: '#/components/schemas/SortOrder'
+        - name: filterValue
+          in: query
+          description: The text used for filtering or searching group data.
+          schema:
+            type: string
+            example: some text
       responses:
         '200':
           description: List of groups
@@ -7264,7 +7381,7 @@ paths:
       tags:
         - Group
       summary: Get user groups
-      operationId: getByUserId
+      operationId: getGroupByUserId
       parameters:
         - name: userid
           in: path
@@ -7302,7 +7419,7 @@ paths:
       tags:
         - Group
       summary: Move group members
-      operationId: transferMembersTo
+      operationId: moveMembersTo
       parameters:
         - name: fromId
           in: path
@@ -7484,7 +7601,7 @@ paths:
       tags:
         - Group
       summary: Set a group manager
-      operationId: setManager
+      operationId: setGroupManager
       parameters:
         - name: id
           in: path
@@ -7546,6 +7663,28 @@ paths:
           schema:
             type: boolean
             example: true
+        - name: count
+          in: query
+          description: The number of groups to retrieve in the request.
+          schema:
+            maximum: 1000
+            minimum: 1
+            type: integer
+            format: int32
+            example: 1234
+        - name: startIndex
+          in: query
+          description: The starting index from which to begin retrieving groups with their sharing settings.
+          schema:
+            type: integer
+            format: int32
+            example: 1234
+        - name: filterValue
+          in: query
+          description: The text used as a filter for retrieving groups with their sharing settings.
+          schema:
+            type: string
+            example: some text
       responses:
         '200':
           description: Ok
@@ -8155,6 +8294,52 @@ paths:
         - People / Profiles
       summary: Get profiles
       operationId: getAllProfiles
+      parameters:
+        - name: count
+          in: query
+          description: The maximum number of items to be retrieved in the response.
+          schema:
+            maximum: 1000
+            minimum: 1
+            type: integer
+            format: int32
+            example: 1234
+        - name: startIndex
+          in: query
+          description: The zero-based index of the first item to be retrieved in a filtered result set.
+          schema:
+            type: integer
+            format: int32
+            example: 1234
+        - name: filterBy
+          in: query
+          description: Specifies the filter criteria for user-related queries.
+          schema:
+            type: string
+            example: some text
+        - name: sortBy
+          in: query
+          description: Specifies the property or field name by which the results should be sorted.
+          schema:
+            type: string
+            example: some text
+        - name: sortOrder
+          in: query
+          description: The order in which the results are sorted.
+          schema:
+            $ref: '#/components/schemas/SortOrder'
+        - name: filterSeparator
+          in: query
+          description: The character or string used to separate multiple filter values in a filtering query.
+          schema:
+            type: string
+            example: some text
+        - name: filterValue
+          in: query
+          description: The text value used as an additional filter criterion for profiles retrieval.
+          schema:
+            type: string
+            example: some text
       responses:
         '200':
           description: List of users with the detailed information
@@ -8296,7 +8481,7 @@ paths:
       tags:
         - People / Profiles
       summary: Get a profile by user name
-      operationId: getById
+      operationId: getProfileByUserId
       parameters:
         - name: userid
           in: path
@@ -8417,7 +8602,7 @@ paths:
       tags:
         - People / Profiles
       summary: Get my profile
-      operationId: self
+      operationId: getSelfProfile
       responses:
         '200':
           description: Detailed information about my profile
@@ -8446,7 +8631,7 @@ paths:
       tags:
         - People / Profiles
       summary: Get a profile by user email
-      operationId: getByEmail
+      operationId: getProfileByEmail
       parameters:
         - name: email
           in: query
@@ -8749,6 +8934,34 @@ paths:
             type: array
             items:
               $ref: '#/components/schemas/EmployeeType'
+        - name: count
+          in: query
+          description: The number of items to retrieve in a request.
+          schema:
+            maximum: 1000
+            minimum: 1
+            type: integer
+            format: int32
+            example: 1234
+        - name: startIndex
+          in: query
+          description: The starting index for the query results.
+          schema:
+            type: integer
+            format: int32
+            example: 1234
+        - name: filterSeparator
+          in: query
+          description: Specifies the separator used in filter expressions.
+          schema:
+            type: string
+            example: some text
+        - name: filterValue
+          in: query
+          description: The text filter applied to the accounts search query.
+          schema:
+            type: string
+            example: some text
       responses:
         '200':
           description: Ok
@@ -8779,7 +8992,7 @@ paths:
       tags:
         - People / Search
       summary: Search users by status filter
-      operationId: getAdvanced
+      operationId: searchUsersByStatus
       parameters:
         - name: status
           in: path
@@ -8790,6 +9003,18 @@ paths:
         - name: query
           in: query
           description: The advanced search query.
+          schema:
+            type: string
+            example: some text
+        - name: filterBy
+          in: query
+          description: Specifies the criteria used to filter search results in advanced queries.
+          schema:
+            type: string
+            example: some text
+        - name: filterValue
+          in: query
+          description: The value used to filter the search query.
           schema:
             type: string
             example: some text
@@ -8823,7 +9048,7 @@ paths:
       tags:
         - People / Search
       summary: Search users with detaailed information by extended filter
-      operationId: getFullByFilter
+      operationId: searchUsersByExtendedFilter
       parameters:
         - name: employeeStatus
           in: query
@@ -8936,6 +9161,45 @@ paths:
           description: The filter area.
           schema:
             $ref: '#/components/schemas/Area'
+        - name: count
+          in: query
+          description: The maximum number of items to be retrieved in the response.
+          schema:
+            maximum: 1000
+            minimum: 1
+            type: integer
+            format: int32
+            example: 1234
+        - name: startIndex
+          in: query
+          description: The zero-based index of the first item to be retrieved in a filtered result set.
+          schema:
+            type: integer
+            format: int32
+            example: 1234
+        - name: sortBy
+          in: query
+          description: Specifies the property or field name by which the results should be sorted.
+          schema:
+            type: string
+            example: some text
+        - name: sortOrder
+          in: query
+          description: The order in which the results are sorted.
+          schema:
+            $ref: '#/components/schemas/SortOrder'
+        - name: filterSeparator
+          in: query
+          description: Represents the separator used to split filter criteria in query parameters.
+          schema:
+            type: string
+            example: some text
+        - name: filterValue
+          in: query
+          description: The search text used to filter results based on user input.
+          schema:
+            type: string
+            example: some text
       responses:
         '200':
           description: List of users with the detailed information
@@ -8966,7 +9230,7 @@ paths:
       tags:
         - People / Search
       summary: Search users (using query parameters)
-      operationId: getPeopleSearch
+      operationId: searchUsersByQuery
       parameters:
         - name: query
           in: query
@@ -9008,6 +9272,18 @@ paths:
           in: path
           description: The search query.
           required: true
+          schema:
+            type: string
+            example: some text
+        - name: filterBy
+          in: query
+          description: Specifies a filter criteria for the user search query.
+          schema:
+            type: string
+            example: some text
+        - name: filterValue
+          in: query
+          description: The value used for filtering users, allowing additional constraints for the query.
           schema:
             type: string
             example: some text
@@ -9154,6 +9430,45 @@ paths:
           description: The filter area.
           schema:
             $ref: '#/components/schemas/Area'
+        - name: count
+          in: query
+          description: The maximum number of items to be retrieved in the response.
+          schema:
+            maximum: 1000
+            minimum: 1
+            type: integer
+            format: int32
+            example: 1234
+        - name: startIndex
+          in: query
+          description: The zero-based index of the first item to be retrieved in a filtered result set.
+          schema:
+            type: integer
+            format: int32
+            example: 1234
+        - name: sortBy
+          in: query
+          description: Specifies the property or field name by which the results should be sorted.
+          schema:
+            type: string
+            example: some text
+        - name: sortOrder
+          in: query
+          description: The order in which the results are sorted.
+          schema:
+            $ref: '#/components/schemas/SortOrder'
+        - name: filterSeparator
+          in: query
+          description: Represents the separator used to split filter criteria in query parameters.
+          schema:
+            type: string
+            example: some text
+        - name: filterValue
+          in: query
+          description: The search text used to filter results based on user input.
+          schema:
+            type: string
+            example: some text
       responses:
         '200':
           description: List of users
@@ -9242,6 +9557,34 @@ paths:
             type: array
             items:
               $ref: '#/components/schemas/EmployeeType'
+        - name: count
+          in: query
+          description: The maximum number of users to be retrieved in the request.
+          schema:
+            maximum: 1000
+            minimum: 1
+            type: integer
+            format: int32
+            example: 1234
+        - name: startIndex
+          in: query
+          description: The zero-based index of the first record to retrieve in a paged query.
+          schema:
+            type: integer
+            format: int32
+            example: 1234
+        - name: filterSeparator
+          in: query
+          description: The character or string used to separate multiple filter values in a filtering query.
+          schema:
+            type: string
+            example: some text
+        - name: filterValue
+          in: query
+          description: The filter text value used for searching or filtering user results.
+          schema:
+            type: string
+            example: some text
       responses:
         '200':
           description: Ok
@@ -9272,7 +9615,7 @@ paths:
       tags:
         - People / Theme
       summary: Get the portal theme
-      operationId: getTheme
+      operationId: getPortalTheme
       responses:
         '200':
           description: Theme
@@ -9300,7 +9643,7 @@ paths:
       tags:
         - People / Theme
       summary: Change the portal theme
-      operationId: changeTheme
+      operationId: changePortalTheme
       requestBody:
         content:
           application/json:
@@ -9334,7 +9677,7 @@ paths:
       tags:
         - People / Third-party accounts
       summary: Get third-party accounts
-      operationId: getAuthProviders
+      operationId: getThirdPartyAuthProviders
       parameters:
         - name: inviteView
           in: query
@@ -9373,7 +9716,7 @@ paths:
       tags:
         - People / Third-party accounts
       summary: Link a third-pary account
-      operationId: linkAccount
+      operationId: linkThirdPartyAccount
       requestBody:
         content:
           application/json:
@@ -9405,7 +9748,7 @@ paths:
       tags:
         - People / Third-party accounts
       summary: Create a third-pary account
-      operationId: signupAccount
+      operationId: signupThirdPartyAccount
       requestBody:
         content:
           application/json:
@@ -9424,7 +9767,7 @@ paths:
       tags:
         - People / Third-party accounts
       summary: Unlink a third-pary account
-      operationId: unlinkAccount
+      operationId: unlinkThirdPartyAccount
       parameters:
         - name: provider
           in: query
@@ -9813,6 +10156,51 @@ paths:
           required: true
           schema:
             $ref: '#/components/schemas/EmployeeStatus'
+        - name: filterBy
+          in: query
+          description: Specifies the criteria used to filter the profiles in the request.
+          schema:
+            type: string
+            example: some text
+        - name: count
+          in: query
+          description: The maximum number of user profiles to retrieve.
+          schema:
+            maximum: 1000
+            minimum: 1
+            type: integer
+            format: int32
+            example: 1234
+        - name: startIndex
+          in: query
+          description: The starting index for retrieving data in a paginated request.
+          schema:
+            type: integer
+            format: int32
+            example: 1234
+        - name: sortBy
+          in: query
+          description: Specifies the property or field name by which the results should be sorted.
+          schema:
+            type: string
+            example: some text
+        - name: sortOrder
+          in: query
+          description: The order in which the results are sorted.
+          schema:
+            $ref: '#/components/schemas/SortOrder'
+        - name: filterSeparator
+          in: query
+          description: Represents the separator used to split multiple filter criteria in a query string.
+          schema:
+            type: string
+            example: some text
+        - name: filterValue
+          in: query
+          description: A string value representing additional filter criteria used in query parameters.
+          schema:
+            type: string
+            example: some text
       responses:
         '200':
           description: List of users with the detailed information
@@ -9882,7 +10270,7 @@ paths:
       tags:
         - People / User status
       summary: Set an activation status to the users
-      operationId: updateEmployeeActivationStatus
+      operationId: updateUserActivationStatus
       parameters:
         - name: activationstatus
           in: path
@@ -9966,7 +10354,7 @@ paths:
       tags:
         - People / User type
       summary: Update user type
-      operationId: startUpdateUserType
+      operationId: starUserTypetUpdate
       requestBody:
         content:
           application/json:
@@ -10002,7 +10390,7 @@ paths:
       tags:
         - People / User type
       summary: Get the progress of updating user type
-      operationId: getChangeTypeProgress
+      operationId: getUserTypeUpdateProgress
       parameters:
         - name: userid
           in: path
@@ -10040,7 +10428,7 @@ paths:
       tags:
         - People / User type
       summary: Terminate update user type
-      operationId: terminateChangeType
+      operationId: terminateUserTypeUpdate
       requestBody:
         content:
           application/json:
@@ -10074,7 +10462,7 @@ paths:
       tags:
         - Portal / Guests
       summary: Get a guest sharing link
-      operationId: getGuestShareLink
+      operationId: getGuestSharingLink
       parameters:
         - name: userid
           in: path
@@ -10116,7 +10504,7 @@ paths:
       tags:
         - Files / Files
       summary: Save file edits
-      operationId: saveEditingFromForm
+      operationId: saveEditingFileFromForm
       parameters:
         - name: fileId
           in: path
@@ -10189,7 +10577,7 @@ paths:
       tags:
         - Files / Files
       summary: Start file editing
-      operationId: startEdit
+      operationId: startEditFile
       parameters:
         - name: fileId
           in: path
@@ -10220,7 +10608,7 @@ paths:
       tags:
         - Files / Files
       summary: Start file filling
-      operationId: startFilling
+      operationId: startFillingFile
       parameters:
         - name: fileId
           in: path
@@ -10304,7 +10692,7 @@ paths:
       tags:
         - Files / Files
       summary: Open a file configuration
-      operationId: openEdit
+      operationId: openEditFile
       parameters:
         - name: fileId
           in: path
@@ -10431,7 +10819,7 @@ paths:
       tags:
         - Files / Files
       summary: Get users access rights to the protected file
-      operationId: protectUsers
+      operationId: getProtectedFileUsers
       parameters:
         - name: fileId
           in: path
@@ -10489,6 +10877,22 @@ paths:
           description: The end date of the history.
           schema:
             $ref: '#/components/schemas/ApiDateTime'
+        - name: count
+          in: query
+          description: The number of history entries to retrieve for the file log.
+          schema:
+            maximum: 1000
+            minimum: 1
+            type: integer
+            format: int32
+            example: 1234
+        - name: startIndex
+          in: query
+          description: The starting index for retrieving a subset of file history entries.
+          schema:
+            type: integer
+            format: int32
+            example: 1234
       responses:
         '200':
           description: List of actions performed on the file
@@ -10521,7 +10925,7 @@ paths:
       tags:
         - Files / Files
       summary: Change version history
-      operationId: changeHistory
+      operationId: changeVersionHistory
       parameters:
         - name: fileId
           in: path
@@ -11118,7 +11522,7 @@ paths:
       tags:
         - Files / Files
       summary: Restore a file version
-      operationId: restoreVersion
+      operationId: restoreFileVersion
       parameters:
         - name: fileId
           in: path
@@ -11213,6 +11617,22 @@ paths:
             type: integer
             format: int32
             example: 9846
+        - name: count
+          in: query
+          description: The number of items to retrieve in the request.
+          schema:
+            maximum: 1000
+            minimum: 1
+            type: integer
+            format: int32
+            example: 1234
+        - name: startIndex
+          in: query
+          description: The starting index for the query results.
+          schema:
+            type: integer
+            format: int32
+            example: 1234
       responses:
         '200':
           description: File security information
@@ -11228,7 +11648,7 @@ paths:
       tags:
         - Files / Files
       summary: Set file order
-      operationId: setOrderFile
+      operationId: setFileOrder
       parameters:
         - name: fileId
           in: path
@@ -11310,7 +11730,7 @@ paths:
       tags:
         - Files / Files
       summary: Get file external links
-      operationId: getLinks
+      operationId: getFileLinks
       parameters:
         - name: id
           in: path
@@ -11320,6 +11740,22 @@ paths:
             type: integer
             format: int32
             example: 9846
+        - name: count
+          in: query
+          description: The number of items to retrieve in the request.
+          schema:
+            maximum: 1000
+            minimum: 1
+            type: integer
+            format: int32
+            example: 1234
+        - name: startIndex
+          in: query
+          description: The starting index for the query results.
+          schema:
+            type: integer
+            format: int32
+            example: 1234
       responses:
         '200':
           description: File security information
@@ -11391,7 +11827,7 @@ paths:
       tags:
         - Files / Files
       summary: Save a file as PDF
-      operationId: saveAsPdf
+      operationId: saveFileAsPdf
       parameters:
         - name: id
           in: path
@@ -11561,7 +11997,7 @@ paths:
         Creates a new file in the "My documents" section with the title specified in the request.
 
          **Note**: If a file extension is different from DOCX/XLSX/PPTX and refers to one of the known text, spreadsheet, or presentation formats, it will be changed to DOCX/XLSX/PPTX accordingly. If the file extension is not specified or is unknown, the DOCX extension will be added to the file title.
-      operationId: createFileMyDocuments
+      operationId: createFileInMyDocuments
       requestBody:
         content:
           application/json:
@@ -11594,7 +12030,7 @@ paths:
       tags:
         - Files / Files
       summary: Create an HTML file in the "My documents" section
-      operationId: createHtmlFileInMy
+      operationId: createHtmlFileInMyDocuments
       requestBody:
         content:
           application/json:
@@ -11630,7 +12066,7 @@ paths:
       tags:
         - Files / Files
       summary: Create a text file in the "My documents" section
-      operationId: createTextFileInMy
+      operationId: createTextFileInMyDocuments
       requestBody:
         content:
           application/json:
@@ -11889,6 +12325,22 @@ paths:
           description: The end date of the history request.
           schema:
             $ref: '#/components/schemas/ApiDateTime'
+        - name: count
+          in: query
+          description: The number of records to retrieve for the folder history.
+          schema:
+            maximum: 1000
+            minimum: 1
+            type: integer
+            format: int32
+            example: 1234
+        - name: startIndex
+          in: query
+          description: The starting index from which the history records are retrieved in the request.
+          schema:
+            type: integer
+            format: int32
+            example: 1234
       responses:
         '200':
           description: List of actions in the folder
@@ -12097,8 +12549,8 @@ paths:
     put:
       tags:
         - Files / Folders
-      summary: Set file order
-      operationId: setFileOrder
+      summary: Set folder order
+      operationId: setFolderOrder
       parameters:
         - name: folderId
           in: path
@@ -12205,6 +12657,39 @@ paths:
           schema:
             type: string
             example: some text
+        - name: count
+          in: query
+          description: The maximum number of items to retrieve in the request.
+          schema:
+            maximum: 1000
+            minimum: 1
+            type: integer
+            format: int32
+            example: 1234
+        - name: startIndex
+          in: query
+          description: The zero-based index of the first item to retrieve in a paginated request.
+          schema:
+            type: integer
+            format: int32
+            example: 1234
+        - name: sortBy
+          in: query
+          description: Specifies the property used for sorting the folder request results.
+          schema:
+            type: string
+            example: some text
+        - name: sortOrder
+          in: query
+          description: The order in which the results are sorted.
+          schema:
+            $ref: '#/components/schemas/SortOrder'
+        - name: filterValue
+          in: query
+          description: The text value used as a filter parameter for folder content queries.
+          schema:
+            type: string
+            example: some text
       responses:
         '200':
           description: Folder contents
@@ -12302,7 +12787,7 @@ paths:
       tags:
         - Files / Folders
       summary: Get new folder items
-      operationId: getNewItems
+      operationId: getNewFolderItems
       parameters:
         - name: folderId
           in: path
@@ -12415,6 +12900,39 @@ paths:
           description: Specifies whether to return only files, only folders or all elements.
           schema:
             $ref: '#/components/schemas/ApplyFilterOption'
+        - name: count
+          in: query
+          description: The maximum number of items to retrieve in the response.
+          schema:
+            maximum: 1000
+            minimum: 1
+            type: integer
+            format: int32
+            example: 1234
+        - name: startIndex
+          in: query
+          description: The starting position of the items to be retrieved.
+          schema:
+            type: integer
+            format: int32
+            example: 1234
+        - name: sortBy
+          in: query
+          description: The property used to specify the sorting criteria for folder contents.
+          schema:
+            type: string
+            example: some text
+        - name: sortOrder
+          in: query
+          description: The order in which the results are sorted.
+          schema:
+            $ref: '#/components/schemas/SortOrder'
+        - name: filterValue
+          in: query
+          description: The text used for filtering or searching folder contents.
+          schema:
+            type: string
+            example: some text
       responses:
         '200':
           description: The "My documents" section contents
@@ -12461,6 +12979,39 @@ paths:
           description: The filter type.
           schema:
             $ref: '#/components/schemas/FilterType'
+        - name: count
+          in: query
+          description: The maximum number of items to retrieve in the request.
+          schema:
+            maximum: 1000
+            minimum: 1
+            type: integer
+            format: int32
+            example: 1234
+        - name: startIndex
+          in: query
+          description: The zero-based index of the first item to retrieve in a paginated list.
+          schema:
+            type: integer
+            format: int32
+            example: 1234
+        - name: sortBy
+          in: query
+          description: Specifies the field by which the folder content should be sorted.
+          schema:
+            type: string
+            example: some text
+        - name: sortOrder
+          in: query
+          description: The order in which the results are sorted.
+          schema:
+            $ref: '#/components/schemas/SortOrder'
+        - name: filterValue
+          in: query
+          description: The text used as a filter or search criterion for folder content queries.
+          schema:
+            type: string
+            example: some text
       responses:
         '200':
           description: The "Private Room" section contents
@@ -12513,6 +13064,39 @@ paths:
           schema:
             type: boolean
             example: true
+        - name: count
+          in: query
+          description: The maximum number of items to retrieve in the response.
+          schema:
+            maximum: 1000
+            minimum: 1
+            type: integer
+            format: int32
+            example: 1234
+        - name: startIndex
+          in: query
+          description: The starting position of the items to be retrieved.
+          schema:
+            type: integer
+            format: int32
+            example: 1234
+        - name: sortBy
+          in: query
+          description: Specifies the field by which the folder content should be sorted.
+          schema:
+            type: string
+            example: some text
+        - name: sortOrder
+          in: query
+          description: The order in which the results are sorted.
+          schema:
+            $ref: '#/components/schemas/SortOrder'
+        - name: filterValue
+          in: query
+          description: The text used as a filter for searching or retrieving folder contents.
+          schema:
+            type: string
+            example: some text
       responses:
         '200':
           description: List of section contents with the following parameters
@@ -12564,6 +13148,39 @@ paths:
           description: Specifies whether to return only files, only folders or all elements.
           schema:
             $ref: '#/components/schemas/ApplyFilterOption'
+        - name: count
+          in: query
+          description: The maximum number of items to retrieve in the response.
+          schema:
+            maximum: 1000
+            minimum: 1
+            type: integer
+            format: int32
+            example: 1234
+        - name: startIndex
+          in: query
+          description: The starting position of the items to be retrieved.
+          schema:
+            type: integer
+            format: int32
+            example: 1234
+        - name: sortBy
+          in: query
+          description: The property used to specify the sorting criteria for folder contents.
+          schema:
+            type: string
+            example: some text
+        - name: sortOrder
+          in: query
+          description: The order in which the results are sorted.
+          schema:
+            $ref: '#/components/schemas/SortOrder'
+        - name: filterValue
+          in: query
+          description: The text used for filtering or searching folder contents.
+          schema:
+            type: string
+            example: some text
       responses:
         '200':
           description: The "Trash" section contents
@@ -12952,7 +13569,7 @@ paths:
       tags:
         - Files / Operations
       summary: Get conversion status
-      operationId: checkConversion
+      operationId: checkConversionStatus
       parameters:
         - name: fileId
           in: path
@@ -12995,7 +13612,7 @@ paths:
       tags:
         - Files / Operations
       summary: Start file conversion
-      operationId: startConversion
+      operationId: startFileConversion
       parameters:
         - name: fileId
           in: path
@@ -13039,7 +13656,7 @@ paths:
       tags:
         - Files / Operations
       summary: Update a comment
-      operationId: updateComment
+      operationId: updateFileComment
       parameters:
         - name: fileId
           in: path
@@ -13211,6 +13828,13 @@ paths:
         - Files / Operations
       summary: Empty the "Trash" folder
       operationId: emptyTrash
+      parameters:
+        - name: Single
+          in: query
+          description: Specifies whether to return only the current operation
+          schema:
+            type: boolean
+            example: true
       responses:
         '200':
           description: List of file operations
@@ -13240,6 +13864,13 @@ paths:
         - Files / Operations
       summary: Get active file operations
       operationId: getOperationStatuses
+      parameters:
+        - name: id
+          in: query
+          description: The ID of the file operation.
+          schema:
+            type: string
+            example: '9846'
       responses:
         '200':
           description: List of file operations
@@ -13261,6 +13892,12 @@ paths:
           required: true
           schema:
             $ref: '#/components/schemas/FileOperationType'
+        - name: id
+          in: query
+          description: The ID of the file operation.
+          schema:
+            type: string
+            example: '9846'
       responses:
         '200':
           description: List of file operations
@@ -13343,7 +13980,7 @@ paths:
       tags:
         - Files / Operations
       summary: Check and move or copy to a folder
-      operationId: moveOrCopyBatchCheck
+      operationId: checkMoveOrCopyBatchItems
       parameters:
         - name: inDto
           in: query
@@ -13416,7 +14053,7 @@ paths:
       tags:
         - Files / Operations
       summary: Check for moving or copying to a folder
-      operationId: moveOrCopyDestFolderCheck
+      operationId: checkMoveOrCopyDestFolder
       parameters:
         - name: inDto
           in: query
@@ -14213,7 +14850,7 @@ paths:
       tags:
         - Files / Settings
       summary: Update a file version if it exists
-      operationId: updateIfExist
+      operationId: updateFileIfExist
       requestBody:
         content:
           application/json:
@@ -14439,7 +15076,7 @@ paths:
       tags:
         - Files / Sharing
       summary: Get user access rights by file ID
-      operationId: sharedUsers
+      operationId: getSharedUsers
       parameters:
         - name: fileId
           in: path
@@ -14521,7 +15158,7 @@ paths:
       tags:
         - Files / Sharing
       summary: Change the file owner
-      operationId: changeOwner
+      operationId: changeFileOwner
       requestBody:
         content:
           application/json:
@@ -14617,7 +15254,7 @@ paths:
         Returns the list of the available providers.
 
          **Note**: Available provider keys: DropboxV2, Box, WebDav, Yandex, OneDrive, SharePoint, GoogleDrive, kDrive.
-      operationId: capabilities
+      operationId: getCapabilities
       responses:
         '200':
           description: List of provider keys
@@ -14809,7 +15446,7 @@ paths:
       tags:
         - Rooms
       summary: Start creating room template
-      operationId: createTemplate
+      operationId: createRoomTemplate
       requestBody:
         content:
           application/json:
@@ -14843,7 +15480,7 @@ paths:
       tags:
         - Rooms
       summary: Get status of room template creation
-      operationId: getTemplateCreatingStatus
+      operationId: getRoomTemplateCreatingStatus
       responses:
         '200':
           description: Status
@@ -14872,7 +15509,7 @@ paths:
       tags:
         - Rooms
       summary: Get public settings
-      operationId: isPublic
+      operationId: getPublicSettings
       parameters:
         - name: id
           in: path
@@ -14910,7 +15547,7 @@ paths:
       tags:
         - Rooms
       summary: Set public settings
-      operationId: setPublic
+      operationId: setPublicSettings
       requestBody:
         content:
           application/json:
@@ -15032,6 +15669,39 @@ paths:
           description: The filter by storage (None - 0, Internal - 1, ThirdParty - 2).
           schema:
             $ref: '#/components/schemas/StorageFilter'
+        - name: count
+          in: query
+          description: Specifies the maximum number of items to retrieve.
+          schema:
+            maximum: 1000
+            minimum: 1
+            type: integer
+            format: int32
+            example: 1234
+        - name: startIndex
+          in: query
+          description: The index from which to start retrieving the room content.
+          schema:
+            type: integer
+            format: int32
+            example: 1234
+        - name: sortBy
+          in: query
+          description: Specifies the field by which the room content should be sorted.
+          schema:
+            type: string
+            example: some text
+        - name: sortOrder
+          in: query
+          description: The order in which the results are sorted.
+          schema:
+            $ref: '#/components/schemas/SortOrder'
+        - name: filterValue
+          in: query
+          description: The text filter value used to refine search or query operations.
+          schema:
+            type: string
+            example: some text
       responses:
         '200':
           description: Returns the contents of the "Rooms" section
@@ -15380,6 +16050,28 @@ paths:
           description: The filter type of the access rights.
           schema:
             $ref: '#/components/schemas/ShareFilterType'
+        - name: count
+          in: query
+          description: The number of items to be retrieved or processed.
+          schema:
+            maximum: 1000
+            minimum: 1
+            type: integer
+            format: int32
+            example: 1234
+        - name: startIndex
+          in: query
+          description: The starting index of the items to retrieve in a paginated request.
+          schema:
+            type: integer
+            format: int32
+            example: 1234
+        - name: filterValue
+          in: query
+          description: The text filter value used for filtering room security information.
+          schema:
+            type: string
+            example: some text
       responses:
         '200':
           description: Security information of room files
@@ -15408,7 +16100,7 @@ paths:
       tags:
         - Rooms
       summary: Set the room external or invitation link
-      operationId: setLink
+      operationId: setRoomLink
       parameters:
         - name: id
           in: path
@@ -15534,7 +16226,7 @@ paths:
       tags:
         - Rooms
       summary: Add the room tags
-      operationId: addTags
+      operationId: addRoomTags
       parameters:
         - name: id
           in: path
@@ -15579,7 +16271,7 @@ paths:
       tags:
         - Rooms
       summary: Remove the room tags
-      operationId: deleteTags
+      operationId: deleteRoomTags
       parameters:
         - name: id
           in: path
@@ -15756,7 +16448,7 @@ paths:
       tags:
         - Rooms
       summary: Get covers
-      operationId: getCovers
+      operationId: getRoomCovers
       responses:
         '200':
           description: Gets room cover
@@ -15901,7 +16593,7 @@ paths:
       tags:
         - Rooms
       summary: Reorder the room
-      operationId: reorder
+      operationId: reorderRoom
       parameters:
         - name: id
           in: path
@@ -16020,7 +16712,7 @@ paths:
       tags:
         - Rooms
       summary: Create a tag
-      operationId: createTag
+      operationId: createRoomTag
       requestBody:
         content:
           application/json:
@@ -16055,7 +16747,30 @@ paths:
       tags:
         - Rooms
       summary: Get tags
-      operationId: getTagsInfo
+      operationId: getRoomTagsInfo
+      parameters:
+        - name: count
+          in: query
+          description: "Gets or sets the number of tag results to retrieve.\r\nThis property specifies the maximum amount of tag data to be included in the result set."
+          schema:
+            maximum: 1000
+            minimum: 1
+            type: integer
+            format: int32
+            example: 1234
+        - name: startIndex
+          in: query
+          description: "Represents the starting index from which the tags' information will be retrieved.\r\nThis property is used to define the offset for pagination when retrieving a list of tags. It determines\r\nthe point in the data set from which the retrieval begins."
+          schema:
+            type: integer
+            format: int32
+            example: 1234
+        - name: filterValue
+          in: query
+          description: "Gets or sets the text value used for searching tags.\r\nThis property is typically used as a filter value when retrieving tag information."
+          schema:
+            type: string
+            example: some text
       responses:
         '200':
           description: List of tag names
@@ -22288,6 +23003,49 @@ components:
         statusCode:
           type: integer
           format: int32
+    PaymentCalculation:
+      type: object
+      properties:
+        operationId:
+          type: integer
+          format: int64
+          example: 1234
+        amount:
+          type: number
+          format: double
+        currency:
+          type: string
+          nullable: true
+          example: some text
+        quantity:
+          type: integer
+          format: int32
+          example: 1234
+      additionalProperties: false
+      description: The payment calculation.
+    PaymentCalculationWrapper:
+      type: object
+      properties:
+        response:
+          $ref: '#/components/schemas/PaymentCalculation'
+        count:
+          type: integer
+          format: int32
+        links:
+          type: array
+          items:
+            type: object
+            properties:
+              href:
+                type: string
+              action:
+                type: string
+        status:
+          type: integer
+          format: int32
+        statusCode:
+          type: integer
+          format: int32
     PaymentMethodStatus:
       enum:
         - 0
@@ -22476,6 +23234,7 @@ components:
         - 2
         - 3
       type: integer
+      description: The product quantity type.
       format: int32
     ProductType:
       oneOf:
@@ -24954,12 +25713,15 @@ components:
       type: object
       properties:
         amount:
-          type: number
+          maximum: 999999
+          minimum: 1
+          type: integer
           description: Amount
-          format: double
+          format: int32
+          example: 1234
         currency:
           type: string
-          description: Currency
+          description: The three-character ISO 4217 currency symbol
           nullable: true
           example: some text
       additionalProperties: false
@@ -27234,6 +27996,12 @@ components:
           example: some text
       additionalProperties: false
       description: The request parameters for creating a third-party account.
+    SortOrder:
+      enum:
+        - 0
+        - 1
+      type: integer
+      format: int32
     StartReassignRequestDto:
       required:
         - fromUserId
@@ -27849,6 +28617,10 @@ components:
     BaseBatchRequestDto:
       type: object
       properties:
+        returnSingleOperation:
+          type: boolean
+          description: Specifies whether to return only the current operation
+          example: true
         folderIds:
           type: array
           items:
@@ -27874,6 +28646,10 @@ components:
     BatchRequestDto:
       type: object
       properties:
+        returnSingleOperation:
+          type: boolean
+          description: Specifies whether to return only the current operation
+          example: true
         folderIds:
           type: array
           items:
@@ -28885,6 +29661,10 @@ components:
     DeleteBatchRequestDto:
       type: object
       properties:
+        returnSingleOperation:
+          type: boolean
+          description: Specifies whether to return only the current operation
+          example: true
         folderIds:
           type: array
           items:
@@ -28943,6 +29723,10 @@ components:
         - versions
       type: object
       properties:
+        returnSingleOperation:
+          type: boolean
+          description: Specifies whether to return only the current operation
+          example: true
         deleteAfter:
           type: boolean
           description: Specifies whether to delete a file after the editing session is finished or not.
@@ -29166,6 +29950,10 @@ components:
     DownloadRequestDto:
       type: object
       properties:
+        returnSingleOperation:
+          type: boolean
+          description: Specifies whether to return only the current operation
+          example: true
         folderIds:
           type: array
           items:
@@ -29247,6 +30035,10 @@ components:
     DuplicateRequestDto:
       type: object
       properties:
+        returnSingleOperation:
+          type: boolean
+          description: Specifies whether to return only the current operation
+          example: true
         folderIds:
           type: array
           items:
@@ -31328,9 +32120,8 @@ components:
             - PublicRooms
             - Pdf
             - PdfForm
-            - AiRooms
           type: string
-          description: '[None - None, FilesOnly - Files  only, FoldersOnly - Folders only, DocumentsOnly - Documents only, PresentationsOnly - Presentations only, SpreadsheetsOnly - Spreadsheets only, ImagesOnly - Images only, ByUser - By user, ByDepartment - By department, ArchiveOnly - Archive only, ByExtension - By extension, MediaOnly - Media only, FillingFormsRooms - Filling forms rooms, EditingRooms - Editing rooms, CustomRooms - Custom rooms, PublicRooms - Public rooms, Pdf - Pdf, PdfForm - Pdf form, AiRooms - AI rooms]'
+          description: '[None - None, FilesOnly - Files  only, FoldersOnly - Folders only, DocumentsOnly - Documents only, PresentationsOnly - Presentations only, SpreadsheetsOnly - Spreadsheets only, ImagesOnly - Images only, ByUser - By user, ByDepartment - By department, ArchiveOnly - Archive only, ByExtension - By extension, MediaOnly - Media only, FillingFormsRooms - Filling forms rooms, EditingRooms - Editing rooms, CustomRooms - Custom rooms, PublicRooms - Public rooms, Pdf - Pdf, PdfForm - Pdf form]'
           example: None
         - enum:
             - 0
@@ -31351,9 +32142,8 @@ components:
             - 20
             - 22
             - 23
-            - 25
           type: integer
-          description: '[0 - None, 1 - Files  only, 2 - Folders only, 3 - Documents only, 4 - Presentations only, 5 - Spreadsheets only, 7 - Images only, 8 - By user, 9 - By department, 10 - Archive only, 11 - By extension, 12 - Media only, 13 - Filling forms rooms, 14 - Editing rooms, 17 - Custom rooms, 20 - Public rooms, 22 - Pdf, 23 - Pdf form, 25 - AI rooms]'
+          description: '[0 - None, 1 - Files  only, 2 - Folders only, 3 - Documents only, 4 - Presentations only, 5 - Spreadsheets only, 7 - Images only, 8 - By user, 9 - By department, 10 - Archive only, 11 - By extension, 12 - Media only, 13 - Filling forms rooms, 14 - Editing rooms, 17 - Custom rooms, 20 - Public rooms, 22 - Pdf, 23 - Pdf form]'
           example: 0
           x-enum-varnames:
             - None
@@ -31374,7 +32164,6 @@ components:
             - PublicRooms
             - Pdf
             - PdfForm
-            - AiRooms
           x-enum-descriptions:
             - None
             - Files  only
@@ -31394,7 +32183,6 @@ components:
             - Public rooms
             - Pdf
             - Pdf form
-            - AI rooms
       description: The file filter type.
     FolderContentDtoInteger:
       type: object
@@ -32172,9 +32960,8 @@ components:
             - FormFillingFolderInProgress
             - VirtualDataRoom
             - RoomTemplates
-            - AiRoom
           type: string
-          description: '[DEFAULT - Default, COMMON - Coomon, BUNCH - Bunch, TRASH - Trash, USER - User, SHARE - Share, Projects - Projects, Favorites - Favourites, Recent - Recent, Templates - Templates, Privacy - Privacy, VirtualRooms - Virtual rooms, FillingFormsRoom - Filling forms room, EditingRoom - Editing room, CustomRoom - Custom room, Archive - Archive, ThirdpartyBackup - Thirdparty backup, PublicRoom - Public room, ReadyFormFolder - Ready form folder, InProcessFormFolder - In process form folder, FormFillingFolderDone - Form filling folder done, FormFillingFolderInProgress - Form filling folder in progress, VirtualDataRoom - Virtual Data Room, RoomTemplates - Room templates folder, AiRoom - AI room]'
+          description: '[DEFAULT - Default, COMMON - Coomon, BUNCH - Bunch, TRASH - Trash, USER - User, SHARE - Share, Projects - Projects, Favorites - Favourites, Recent - Recent, Templates - Templates, Privacy - Privacy, VirtualRooms - Virtual rooms, FillingFormsRoom - Filling forms room, EditingRoom - Editing room, CustomRoom - Custom room, Archive - Archive, ThirdpartyBackup - Thirdparty backup, PublicRoom - Public room, ReadyFormFolder - Ready form folder, InProcessFormFolder - In process form folder, FormFillingFolderDone - Form filling folder done, FormFillingFolderInProgress - Form filling folder in progress, VirtualDataRoom - Virtual Data Room, RoomTemplates - Room templates folder]'
           example: DEFAULT
         - enum:
             - 0
@@ -32201,9 +32988,8 @@ components:
             - 28
             - 29
             - 30
-            - 31
           type: integer
-          description: '[0 - Default, 1 - Coomon, 2 - Bunch, 3 - Trash, 5 - User, 6 - Share, 8 - Projects, 10 - Favourites, 11 - Recent, 12 - Templates, 13 - Privacy, 14 - Virtual rooms, 15 - Filling forms room, 16 - Editing room, 19 - Custom room, 20 - Archive, 21 - Thirdparty backup, 22 - Public room, 25 - Ready form folder, 26 - In process form folder, 27 - Form filling folder done, 28 - Form filling folder in progress, 29 - Virtual Data Room, 30 - Room templates folder, 31 - AI room]'
+          description: '[0 - Default, 1 - Coomon, 2 - Bunch, 3 - Trash, 5 - User, 6 - Share, 8 - Projects, 10 - Favourites, 11 - Recent, 12 - Templates, 13 - Privacy, 14 - Virtual rooms, 15 - Filling forms room, 16 - Editing room, 19 - Custom room, 20 - Archive, 21 - Thirdparty backup, 22 - Public room, 25 - Ready form folder, 26 - In process form folder, 27 - Form filling folder done, 28 - Form filling folder in progress, 29 - Virtual Data Room, 30 - Room templates folder]'
           example: 0
           x-enum-varnames:
             - DEFAULT
@@ -32230,7 +33016,6 @@ components:
             - FormFillingFolderInProgress
             - VirtualDataRoom
             - RoomTemplates
-            - AiRoom
           x-enum-descriptions:
             - Default
             - Coomon
@@ -32256,7 +33041,6 @@ components:
             - Form filling folder in progress
             - Virtual Data Room
             - Room templates folder
-            - AI room
       description: The folder type.
     FormFillingManageAction:
       oneOf:
@@ -33713,9 +34497,8 @@ components:
             - CustomRoom
             - PublicRoom
             - VirtualDataRoom
-            - AiRoom
           type: string
-          description: '[FillingFormsRoom - Form filling room, EditingRoom - Collaboration room, CustomRoom - Custom room, PublicRoom - Public room, VirtualDataRoom - Virtual data room, AiRoom - AI room]'
+          description: '[FillingFormsRoom - Form filling room, EditingRoom - Collaboration room, CustomRoom - Custom room, PublicRoom - Public room, VirtualDataRoom - Virtual data room]'
           example: FillingFormsRoom
         - enum:
             - 1
@@ -33723,9 +34506,8 @@ components:
             - 5
             - 6
             - 8
-            - 9
           type: integer
-          description: '[1 - Form filling room, 2 - Collaboration room, 5 - Custom room, 6 - Public room, 8 - Virtual data room, 9 - AI room]'
+          description: '[1 - Form filling room, 2 - Collaboration room, 5 - Custom room, 6 - Public room, 8 - Virtual data room]'
           example: 1
           x-enum-varnames:
             - FillingFormsRoom
@@ -33733,14 +34515,12 @@ components:
             - CustomRoom
             - PublicRoom
             - VirtualDataRoom
-            - AiRoom
           x-enum-descriptions:
             - Form filling room
             - Collaboration room
             - Custom room
             - Public room
             - Virtual data room
-            - AI room
       description: The room type.
     Run:
       type: object

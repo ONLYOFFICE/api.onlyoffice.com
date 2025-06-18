@@ -1,0 +1,71 @@
+---
+id: update-file-if-exist
+title: "Update a file version if it exists"
+description: "Updates a file version if a file with such a name already exists."
+sidebar_label: "Update a file version if it exists"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVktz2zgM/iscXHJR7Wy6J93yaGfa3Zl28pgcMp4GliCLjUyyJBTH69F/3wEp2bKd3eTQS6yAHwDi9YEbYFwEyB/gs24oqKm6IWZtFgFmGVhHHllb86WEHFpXIpPgvlSfXnRgyMDTr5YCX9hyDfkGCmuYDMsnOtfoImpPfwZrRBaKmpYoX7x2BDnY+U8qxI7z4os1hYgjHoHm1jaEBjIoKRReO7EJOdw4KnSlKahVTVyTV2xVIFZckwr9YSmSGJCyXhnLE8iAXnDpGoKcfUtdlwGWpRar2HwfXaTCJtCh11sxPpjsw1cOPS6JyQcxz5rFOAypvE6oK7bQdeLOU3DWhBTs2emp/Ox7uUgxq2dsWsqV3FPpKka2LYrSQYW2KCiEqm0g+13ZH273Sgk6cdKacXW0YVqQhwwq65fISfTxTLCNNk9hhEXvcQ0ZaKZlePsitadqhArstVmIXSxSmo6OYnYDI7fhnVdM4Etb0rsUul11+xLde3SOfO/7z9M/jot5Z7Dl2nr9D5XRRKCi9ZrXkD9sAEPxQ85/PJEIwBOWkMHKayaYddkGLgg9ecgf4n/nTv9F663sNTwGXQzwb+ct12evA785iqP9MOtmh31+F6c9KFSVbkg9kw+x56pBstJcS//VCpXBJSlsxMNakXBDHIQlcW2FOlwbq4tcQw5TdHp6NjmdipkwTbSiK+opJZAXZzE3rW8gh80cA935pjumgIhVhTWVXrRpLCCDZ/Qa503qol45laXCtpFyHlm6Skfq7vpvKeVsV6QbGZtkar9Uu7aOFTkyeRdIXVr7pEmJEhnuJxIykISJ5thgBlrUiqgivdnXceunZnZHXj4ZJq/WtvWqDeRTJUypHIawsl4qHgc/jnE0KJb77nmP6ZMEVpuv97fq1j6R6U72jCZbWf/xeZiYr/e34mq/Xd/K2fleooThSqHVpTZUqvk6EuDJeT9NEXOiasIyXqBP6p7HPqk9psu287AjH4yCw5sknKoau0qtvudVRcbIQI5Ta4xPBzrZE8YejIkO+XQavU6sada2qnRBk8Iuk/BsumUL2SWS8PerRnisjnUDm6NM4DVhqTAuC1mTzlumgqlUnoJtfUFhSw053MvvG+jEdwOD7LIZBZfWmMToB0mV0yvVHx+PxZ72+6OWxtemslLflw9BLwxy6+ntdpOW3sJlfkpVWX9wr4mSnR8zq5ZtYDUnZeeMsSefNcamfBxIbaCNvYo8KjKls9rwRH1haWsZTyoVCsGmiU9dJrbiDD+OAnmc7Lp7HN8BY3QZyK6/3r3JPg0Pnf5NFd87olXZmJx+lZ07LayZKB5y+Dg5m5xKMp0NvMS4aXv3aS28shU098R/mOTRq/C3LJW+okwvPHUN6vgqaRPBpw3zIOWGDCSIDOKWgQz298wsg9oGFvBmu186Ef9qycsinu32SNqlA4nIYooLAC5TYB9u5UoCb9rUbAePL9m1SeO8KMjx/2Jno735/e5WiLV/XS8jrYDHlby8cZX2mI15TrMusg00aBYtLgSbTMYnbiupGQ9E2jn9hwQ1HJn1+IL7KyqFIX8lqFc1Nps0bV23xaej/9TYMnhCS0lnXdf9C8nKXzI=
+sidebar_class_name: "put api-method"
+info_path: site/docspace/api-backend/usage-api/api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Update a file version if it exists"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"put"}
+  path={"/api/2.0/files/updateifexist"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Updates a file version if a file with such a name already exists.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"set":{"type":"boolean","description":"Specifies whether to set the specified settings or not.","example":true}},"additionalProperties":false,"description":"The settings request parameters.","title":"SettingsRequestDto"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Boolean value: true if the operation is successful","content":{"application/json":{"schema":{"type":"object","properties":{"response":{"type":"boolean"},"count":{"type":"integer","format":"int32"},"links":{"type":"array","items":{"type":"object","properties":{"href":{"type":"string"},"action":{"type":"string"}}}},"status":{"type":"integer","format":"int32"},"statusCode":{"type":"integer","format":"int32"}},"title":"BooleanWrapper"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      
