@@ -84,10 +84,10 @@ This example demonstrates how to:
 
 ## Before you start
 1.	Replace `https://yourportal.onlyoffice.com` and `YOUR_API_KEY` with your actual DocSpace portal URL and API key. Ensure you have the necessary data and permissions to perform migration operations.
-2.	Before you can make requests to the API, you need to authenticate. Check out the [`authentication example`](../../../../docspace/api-backend/get-started/samples/authentication.md) to learn how to obtain and use access tokens.
+2.	Before you can make requests to the API, you need to authenticate. Check out the [`authentication example`](/docspace/api-backend/samples/authentication.md) to learn how to obtain and use access tokens.
 
 ## Step 1: Create a Room
-Use [`POST /api/2.0/files/rooms`](../../../../docspace/api-backend/usage-api/create-room.api.mdx) request to create a new room.
+Use [`POST /api/2.0/files/rooms`](/docspace/api-backend/usage-api/create-room.api.mdx) request to create a new room.
 
 <Tabs>
   <TabItem value="py" label="Python">
@@ -104,7 +104,7 @@ Use [`POST /api/2.0/files/rooms`](../../../../docspace/api-backend/usage-api/cre
 </Tabs>
 
 ## Step 2: Retrieve Room Details
-Use [`GET /api/2.0/files/rooms/{id}`](../../../../docspace/api-backend/usage-api/get-room-info.api.mdx) request to get room information.
+Use [`GET /api/2.0/files/rooms/{id}`](/docspace/api-backend/usage-api/get-room-info.api.mdx) request to get room information.
 
 <Tabs>
   <TabItem value="py" label="Python">
@@ -119,7 +119,7 @@ Use [`GET /api/2.0/files/rooms/{id}`](../../../../docspace/api-backend/usage-api
 </Tabs>
 
 ## Step 3: Rename a Room
-Use [`PUT /api/2.0/files/rooms/{id}`](../../../../docspace/api-backend/usage-api/update-room.api.mdx) request to rename a room.
+Use [`PUT /api/2.0/files/rooms/{id}`](/docspace/api-backend/usage-api/update-room.api.mdx) request to rename a room.
 
 <Tabs>
   <TabItem value="py" label="Python">
@@ -135,7 +135,7 @@ Use [`PUT /api/2.0/files/rooms/{id}`](../../../../docspace/api-backend/usage-api
 </Tabs>
 
 ## Step 4: Archive a Room
-Use [`PUT /api/2.0/files/rooms/{id}/archive`](../../../../docspace/api-backend/usage-api/archive-room.api.mdx) request to archive a room.
+Use [`PUT /api/2.0/files/rooms/{id}/archive`](/docspace/api-backend/usage-api/archive-room.api.mdx) request to archive a room.
 
 <Tabs>
   <TabItem value="py" label="Python">
@@ -148,7 +148,7 @@ Use [`PUT /api/2.0/files/rooms/{id}/archive`](../../../../docspace/api-backend/u
 </Tabs>
 
 ## Step 5: Delete a Room
-Use [`DELETE /api/2.0/files/rooms/{id}`](../../../../docspace/api-backend/usage-api/delete-room.api.mdx) request to remove a room.
+Use [`DELETE /api/2.0/files/rooms/{id}`](/docspace/api-backend/usage-api/delete-room.api.mdx) request to remove a room.
 
 <Tabs>
   <TabItem value="py" label="Python">

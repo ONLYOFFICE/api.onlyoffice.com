@@ -54,7 +54,7 @@ The script performs the following operations in sequence:
 Replace `https://yourportal.onlyoffice.com` with your actual DocSpace portal URL, replace `USER_CREDENTIALS` with your credentials.
 
 ## Step 1: Authenticate a User
-Use a [`POST /api/2.0/authentication`](../../../../docspace/api-backend/usage-api/authenticate-me.api.mdx) request to authenticate with `USER_CREDENTIALS`.
+Use a [`POST /api/2.0/authentication`](/docspace/api-backend/usage-api/authenticate-me.api.mdx) request to authenticate with `USER_CREDENTIALS`.
 
 <Tabs>
   <TabItem value="py" label="Python">
@@ -71,7 +71,7 @@ Use a [`POST /api/2.0/authentication`](../../../../docspace/api-backend/usage-ap
 </Tabs>
 
 ## Step 2: Check authentication
-Use a [`GET /api/2.0/authentication`](../../../../docspace/api-backend/usage-api/get-is-authentificated.api.mdx) request to check authentication success.
+Use a [`GET /api/2.0/authentication`](/docspace/api-backend/usage-api/get-is-authentificated.api.mdx) request to check authentication success.
 
 <Tabs>
   <TabItem value="py" label="Python">

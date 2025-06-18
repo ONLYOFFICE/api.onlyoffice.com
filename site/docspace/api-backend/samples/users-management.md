@@ -86,10 +86,10 @@ The script performs the following operations in sequence:
 
 ## Before you start
 1.	Replace `https://yourportal.onlyoffice.com` and `YOUR_API_KEY` with your actual DocSpace portal URL and API key. Ensure you have the necessary permissions to perform user operations.
-2.	Before you can make requests to the API, you need to authenticate. Check out the [`authentication example`](../../../../docspace/api-backend/get-started/samples/authentication.md) to learn how to obtain and use access tokens.
+2.	Before you can make requests to the API, you need to authenticate. Check out the [`authentication example`](/docspace/api-backend/samples/authentication.md) to learn how to obtain and use access tokens.
 
 ## Step 1: Add a User
-Use a [`POST /api/2.0/people`](../../../../docspace/api-backend/usage-api/delete-batch-items.api.mdx) request to add a user.
+Use a [`POST /api/2.0/people`](/docspace/api-backend/usage-api/delete-batch-items.api.mdx) request to add a user.
 
 <Tabs>
   <TabItem value="py" label="Python">
@@ -111,7 +111,7 @@ Use a [`POST /api/2.0/people`](../../../../docspace/api-backend/usage-api/delete
 </Tabs>
 
 ## Step 2: Retrieve a User by ID
-Use a [`GET /api/2.0/people/{userid}`](../../../../docspace/api-backend/usage-api/get-by-id.api.mdx) request to fetch user data.
+Use a [`GET /api/2.0/people/{userid}`](/docspace/api-backend/usage-api/get-by-id.api.mdx) request to fetch user data.
 
 <Tabs>
   <TabItem value="py" label="Python">
@@ -128,7 +128,7 @@ Use a [`GET /api/2.0/people/{userid}`](../../../../docspace/api-backend/usage-ap
 </Tabs>
 
 ## Step 3: Terminate a User
-Use a [`PUT /api/2.0/people/status/Terminated`](../../../../docspace/api-backend/usage-api/update-user-status.api.mdx) request to mark the user as terminated, meaning they cannot log in but are still present in the system.
+Use a [`PUT /api/2.0/people/status/Terminated`](/docspace/api-backend/usage-api/update-user-status.api.mdx) request to mark the user as terminated, meaning they cannot log in but are still present in the system.
 
 <Tabs>
   <TabItem value="py" label="Python">
@@ -146,7 +146,7 @@ Use a [`PUT /api/2.0/people/status/Terminated`](../../../../docspace/api-backend
 </Tabs>
 
 ## Step 4: Delete a User Profile
-Use a [`DELETE /api/2.0/people/{userid}`](../../../../docspace/api-backend/usage-api/delete-member.api.mdx) request to remove a user permanently.
+Use a [`DELETE /api/2.0/people/{userid}`](/docspace/api-backend/usage-api/delete-member.api.mdx) request to remove a user permanently.
 
 <Tabs>
   <TabItem value="py" label="Python">
