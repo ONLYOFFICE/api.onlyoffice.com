@@ -6,6 +6,7 @@
 
 * Added opening for odg format
 * Added opening for md format
+* Added the ability to preload the editor static resources
 * Added the editorConfig.customization.forceWesternFontSize parameter for the Chinese (Simplified) UI
 * Added the editorConfig.customization.layout.header.user parameter
 
