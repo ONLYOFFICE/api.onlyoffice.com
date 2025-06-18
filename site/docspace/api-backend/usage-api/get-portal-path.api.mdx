@@ -1,0 +1,71 @@
+---
+id: get-portal-path
+title: "Get a path to the portal"
+description: "Returns the full absolute path to the current portal."
+sidebar_label: "Get a path to the portal"
+hide_title: true
+hide_table_of_contents: true
+api: eJydVktz2zYQ/iuYvfjCSq7SE2+qk2aSdsaZ2B4fPJoYIpciYhJAgaUdVcP/3lkApETTrT256IH99oHdb3dxAJI7D/kdfDGOZCOW4gqJlN552GRgLDpJyuhPJeSwQ4qoL5JqyMBKJ1skdGzgAFq2CDk8KkfdiFEacvi7Q7eHDEr0hVOWDUIO1zWKBBZWUi0q4wTVKGwMxaE3nStQyKJA7xeQgS9qbCXkB6C9ZWeenNI7yAB/yNY24ci0KAh/EPT9JgOH3hrt0bPW6vycv6ZxpJvbGHBhNKEmhklrG1WE+y+/e8Ye5hGY7XcsiLPhOFukoqfB7RzZs48uekgSpQl36CCDyrhWUjx6t2Jso/SDP8FK5yTnUhG2/vU4aofVPF99BrKI15+J+r7PwJOkzr8xxAi+MCW+SaHPgBSFWl2GoG+dtBZdcv3b+a/zGt1o2VFtnPoHy2DBY9E5RfvAPOmLbyz/9oB8AA5lCRk8OUUImz47wO8oHTrI78K/tVV/4n48ewkvvSoG+OW6o3r1MvDSYmiOuw2TbRr0V6TOaR84XXVNI+TWm6YjjHQnEyRF5xxqSqxnlrdItUkNF9qMashhKa1arhbnywhcJr56dI9DB3augRwOW+nxxjX9rOOuAlYURldq18XOhgwepVNy20TCJOVYgkp2DVduZul9FImbr39x2TbHglxxg0RT07IcGRyyPzN541FcGPOgULASakq9B9kwWiYG02wpggrTMNVs9FMT2ZmXD5rQib3pnOg8OjYspC6Fld4/GVcOQ4YNbINBtpyY8hbTZxEsDp9vr8W1eUDdn02MRltZ+vHH0Byfb6/Z1ZSar+VsPUmUUF6UPI9bpbEU233g19k6dU7AnIkaZRkCSEmdeExJTZg+G7l/nDMyHDyPJOJE1Zgn8aSoFhOvIgyHDFgcqXEqHSbH5DBwMCTa58tl8LowutmbqlIFLgrTxsPVcpwMkAFxwt+uGuChOsYOc1uWoXVlmfYO96l1hrAgLMel5McxkMMtf7+CjrNtmBbHbIaDC6N1HN7PksrS9yKJ520x0X77rZn4SleG6/vjF692WlLn8HW6MaVHOPdPGXb2NK6F4MUeMivazpPYojBbkoGTj0oGUt4Pw2wYG5OK3AvUpTVK00J8IqY1tyeWQnohRez4yDK2FXr4/uQi94sju0/v92xi9Py/MuHaaR+treJ5iM7HC79brBbnnCZrPLUyrMtk+COSkJNBHufy86Qdji+Kn14IqSr8qFnaRirNIXVxSMftcMclgww4XI42RRKEmwxq44lBh3E39Hwc32W8OUrleQOUkFey8fg/d/iJV9uL4Yed8Oyx+CibjpHAC2XYSnELDyOJg42q66JASydas+caWxl36ccP15CFETPleVwl6QdbH0R6f2p7unliBPzJb4AXNQ6H2ER9P+Kj6D81xsEc0ZymTd/3/wLixgOc
+sidebar_class_name: "get api-method"
+info_path: site/docspace/api-backend/usage-api/api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get a path to the portal"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/portal/path"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns the full absolute path to the current portal.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"virtualPath","in":"query","description":"The virtual path for the portal resource access.","schema":{"type":"string","example":"some text"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Portal path","content":{"application/json":{"schema":{"type":"object","properties":{"response":{"type":"object"},"count":{"type":"integer","format":"int32"},"links":{"type":"array","items":{"type":"object","properties":{"href":{"type":"string"},"action":{"type":"string"}}}},"status":{"type":"integer","format":"int32"},"statusCode":{"type":"integer","format":"int32"}},"title":"ObjectWrapper"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

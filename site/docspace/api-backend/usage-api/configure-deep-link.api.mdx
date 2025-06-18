@@ -1,0 +1,71 @@
+---
+id: configure-deep-link
+title: "Configure the deep link settings"
+description: "Saves the deep link configuration settings for the portal."
+sidebar_label: "Configure the deep link settings"
+hide_title: true
+hide_table_of_contents: true
+api: eJztV0tv2zgQ/ivEXHJYxVadYrHQLU262HRbtEgc5GAYzVga22wkkiWppK6h/74YUrLlR5tgd4G9bA6JQs4M5/HNfOQaPC4cZBO4Ie+lWjgxFBe6qrQSrl2BaQLakEUvtboqIINcq7lc1JYuicx7qR4gAUtfa3L+jS5WkK1ZxJPy/InGlDIP2sMvTitec/mSKuQvvzIEGejZF8o9JGAsn+UlOd4t2gM6757XWKIqSqkWH3RB/D+puoJskiavktE06ZSl8rQgCwkU5HIrDXsHGYyXJPhMUUr1IDpbotIFDSCBubYV+qh/NoIEvPQl2+sS8Uf/9CaBEp3/oAs5l1T0fHfeSrXoGyzQ06mXFUEC9A0rE8yO0vS30/T16at0nP6anaVZmg7S+PNL+jpLU2iaBLAoJPuP5adeKuZYOvp5fF2FB71IxqRQ+cv9vP+Nc1pECIMWK/JknZhrKypUuOCk+h1fOkwFnAyOpPaiL3AdbbtLr6Fp2DlLzmjlIghGaRrR0/fp8vhZojac/AKSfwu0nSv/g/W/AiuXso6FPMjhXlo4bqke+pMFrcUVJCA9VS+ZOJbmh+niUPMYyMFWAKzz6Gv3Qhej8EULk2cVmudSdGfRGLKtK6+PtcuVesRSFj9qUQh6rw71bhXWfqmt/E5F8MRRXlvpV5BN1oAu/8z7nx+IF8AScuc9WekJpk2yhjeElixkk/DfuZF/0mqzdkwencw78Y/ntV+Ojgt+NBToazJtpvtQu8FHcj+bSBv4hRnGgkZbjyWjsSK/1MyLRrsAD/RLyGCIRg5Hg3TYqQ7Zdhnp0pF9JOtCTmpbQgbrGTq6tWVz0Oc3QXYv/Qk8opU4KyMIW+VYjjnWJaPhwNJl3BK31++59NNtcW54tkVTuyXadkWoxIHJW0fiQusHSYKVSPl2bEICCqug2TeYgFThCsEqDKK2fptzlt6bg1PeKk9WrHRtRe3IsmGBqhAGnXvSlisdpjMbmAWDbLlFzUtMn0RhsX53NxZj/UCqOdkxGm0l7cfvXcO9uxvzUbswfS5n5zuJEtKJgvmxkooKMVsFeJ2ct10UZE7EkrAIDrRJ3TmxTWor0ySbPtjOLgwL+55EOTEv9ZN4kn4pdk4VYeAkwNsRGv3dbhrtLAYMhkS7bDgMpw60Kld6Ppc5DXJdxcXRcDMleJ5zwl+uGsRDdbTpKBe5Aa8JC4F5Ts4Jr4Wx2lPuqRCWnK5tTm4zEjK447/PSMf52E2ObTbDwoVWKhLCXlJ591K024dtsaP98qgZ+FLNNdf326mTC4W+tvQ83BjSG3HunyIMsV2/BoLpNmRWVLXzYkZCzzwGTD5KDKC83460ODZ2KnIvSBVGS+UH4sozrLk9qRDoBIrY8RFlbCv08H0vkPvBFt39+PYmRpMAX8iut++Nt90V5Ph7YfeSle7fc154bwmZ51S3vHpuJM9gsi4m+WwwGqRcGiaBCgPtt8F0N1faI5jNA2uvYL3X0z8jphYWnr75oSlRBtKuI0tEkpowZiAB9p3JoOdQS1XTBJZMa9kE1huKanj5a02WOXy6paJIw90cYm4LHMIZ4HhOx+wQi5d1xOveJZtpOmqc5zkZ/1PZaY95P328GfNwbl+fVSg1WHzilyk+RS7UIb9xXvDaGkpUixoXLBtthhtqzZnpN1XkrfaDo+q21Krv4S7NxTj4N0d1VGO9jh3bNBv5uPVDjQ0LRGmu6LRpmr8AFh1rxA==
+sidebar_class_name: "post api-method"
+info_path: site/docspace/api-backend/usage-api/api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Configure the deep link settings"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/api/2.0/settings/deeplink"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Saves the deep link configuration settings for the portal.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"deepLinkSettings":{"type":"object","properties":{"handlingMode":{"enum":[0,1,2],"type":"integer","description":"The deep link handling mode.","format":"int32","title":"DeepLinkHandlingMode"},"lastModified":{"type":"string","format":"date-time","example":"2008-04-10T06:30:00.0000000+04:00"}},"additionalProperties":false,"description":"The deep link settings.","title":"TenantDeepLinkSettings"}},"additionalProperties":false,"description":"The request parameters for managing the deep link configuration.","title":"DeepLinkConfigurationRequestsDto"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Deep link configuration updated","content":{"application/json":{"schema":{"type":"object","properties":{"response":{"type":"object","properties":{"handlingMode":{"enum":[0,1,2],"type":"integer","description":"The deep link handling mode.","format":"int32","title":"DeepLinkHandlingMode"},"lastModified":{"type":"string","format":"date-time","example":"2008-04-10T06:30:00.0000000+04:00"}},"additionalProperties":false,"description":"The deep link settings.","title":"TenantDeepLinkSettings"},"count":{"type":"integer","format":"int32"},"links":{"type":"array","items":{"type":"object","properties":{"href":{"type":"string"},"action":{"type":"string"}}}},"status":{"type":"integer","format":"int32"},"statusCode":{"type":"integer","format":"int32"}},"title":"TenantDeepLinkSettingsWrapper"}}}},"400":{"description":"Invalid deep link configuration"},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

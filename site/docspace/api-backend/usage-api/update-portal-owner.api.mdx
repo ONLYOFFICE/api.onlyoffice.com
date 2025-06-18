@@ -1,0 +1,71 @@
+---
+id: update-portal-owner
+title: "Update the portal owner"
+description: "Updates the current portal owner with a new one specified in the request."
+sidebar_label: "Update the portal owner"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVktv4zgM/isEL704j8m0245vnXYW6OwCLdoEPRTBVLHoRFNH8khyM9nA/31ByXZeXbSHvTSuRFJ8fOTHDXoxd5g+4QN5r/TcwQBuV5osThM0JVnhldE3ElOsSik83RnrRRFFErT0qyLnvxq5xnSDmdGetOdPUZaFyoL24Kczms9ctqCl4C/WU5Ykv2zY1o3kB/26JEzRzH5S5jHB0rILXpFjpVYw3bSCzlul55igJJdZVfJrmOJ4QXBzDSYHvyAIarBaGEfg2iiFJZiR0nNYCi3mJPuYYG7sUngOtVISE6TfYlkW/ND5mTjLz0/PevkfX857p6efLnqzzxeyN8xpKEfn5zQ6u8C6TlBIqdgLUdzt+J6LwtFbXjb5g1JYsSRP1kFubPSJnev877mSMpWrrAuBHfbKB/duY2baGt5Hq9feYF2zV5ZcabSLaRwNh/yz78ztC9YJnr51xX5WjixkpiokaONhRpCbSsuo8+lYZ6JF5RfGqn+oEfpyLBQS5iirrPJrTJ82KFz2gxV/vBAfoCXBdVhZ5QmndbLBryQsWUyfwn+XpfqL1t3ZW/LCqawVv72s/GL0tuBtSQHmT9N6elipSUC+C9XIKmtJeyhDH7TgUn4BAjStwGiCplYkQemg1JSZS7YkvzDcTmUVEC78AlMciFINRv3hoK3uwDQd5si+knUhPZUtMMXNTDia2KI+wv1DkIXM6FzNq9i6mOCrsErMilj9RjlWIxdVwXg/snQdr2By/zdDaLqt0wP3cDS1X62uKUUoypHJiSO4MuZFEbASad+MB0xQi2XQ3DWYoGK1LKgwhppSdu8svC+PXvmmPVlYm8oGzLJhEFpCKZxbGctFD1OIDcyCQbbcAOgjpk+iMGy+P45hbF5I1yd7RqOtpPn4sx0p3x/H/NQ+Yt/L2eVeokA5kDwklkqThNk6YOvksum0IHMCCxIyONAkde/FJqmNTJ10LdF5YkQ4OPQkykFemFVE+96rcGUk8QAtzCpCY/c2XB4eBgyGRLt0MAiv9o0u1ibPVUb9zCzj4WjQTRIeeJzwj6sG8VAdU0bMhsZP8Z6EBJFl5Bx4A6U1njJPEiw5U9mMXDcdUnzk33ek45xth8g2m+HgymgdCe0gqXx7Dc31cVvsaX88aga+0rnh+v7uOTXXwleW3ocbQ7oT5/6RgY32/eoDE0LILCwrF8jAzLwImHxVIoDyeTvP4tjYq8gzkJalUdr34cYzrLk9SYJwICB2fEQZ2wo9/LwTyHN/i+7d+A4mRp0gLx732xXlW8vnO7vEB6mdbecmpLDh3MtS8Wwl62LyPvdH/SELlsb5pQgLT+Nk5I8QzC5tHOZ/Z3/6XymnKbqn335QFkJp9rKKHBD554kRgQlyBDzqIwcxAttVcGGcZ7lNxz41H/+qyDJTT7csE8m2HTFMW4Ee8CrG1huzNyxeVBGKB3sik01HkneTMY/SZr1chkGCVqx49RSryFwmpC92N59tsBB6Xok5y0aTYTOrONLdFogs03ywo+2VXu86uE9KMRj+y1vDmxqbTeyvuu7k49V/anQzO0pzhaZ1Xf8LMwT+oA==
+sidebar_class_name: "put api-method"
+info_path: site/docspace/api-backend/usage-api/api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Update the portal owner"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"put"}
+  path={"/api/2.0/settings/owner"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Updates the current portal owner with a new one specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"required":["ownerId"],"type":"object","properties":{"ownerId":{"type":"string","description":"The ID of the owner whose settings are being managed.","format":"uuid","example":"75a5f745-f697-4418-b38d-0fe0d277e258"}},"additionalProperties":false,"description":"The request parameters for managing the owner-specific settings.","title":"OwnerIdSettingsRequestDto"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Ok"},"400":{"description":"The user could not be found"},"401":{"description":"Unauthorized"},"409":{"description":""}}}
+>
+  
+</StatusCodes>
+
+
+      

@@ -1,0 +1,71 @@
+---
+id: delete-portal-color-theme
+title: "Delete a color theme"
+description: "Deletes the portal color theme with the ID specified in the request."
+sidebar_label: "Delete a color theme"
+hide_title: true
+hide_table_of_contents: true
+api: eJztWF9v2zYQ/yrE7SEvmp242dbqLYszIF2BFm2CPARBQ0vniI1EquQpiWfouw9HSrJlubWGFXvaiy2Rx/t/vztqDSQfHMS38AmJlH5wYirOTVEYLVyzAncRmBKtJGX0ZQoxpJgj4QdjSebnJjf2KsMCIYJSWlkgoWWWa9CyQIhBpRCB0hDD1wrtCiJI0SVWlcwQYrjKUFzOhVkKylCUni0/FijIiCBsAhG4JMNCQrwGWpWesSZ8QAsRLI0tJIWlVzOIAF9kUeYI8ZvXp7/W9V0EFl1ptEPHDGbHx/zX1+PDtuTW+lgklSNTiIQN3dmMhMMcE8JUGCu0oUjkqlAEESRGE2piKbIsc5V4902/OBa1HtpiFl8w4YOlZWeTCoq2Wh+m9Jq5LTpprWRnK8LCHT6v0r2eHYZqjz8u55PvBuGkjppk6CQ4sko/jBXAh1mErvJcLpgl2Qq3JMAirxDqCAqp9GFjZZI0wTmsTqAN6nxfh59Of3t9Mj9hNRYVkdFunIRAPErCL7M3by6Ooa4jkGmqmInMP2zZtpS5w5FeDc+bomXZpMhLOvfkm+p2LUD4pUvCgs0kfKH/vf3fePuHKNEi1yjhbZSHnHPlqAXsoRQ3dGsdQQuVI2DmU4mJWip04jlDytB+Q5BQrkPgAwg0e3VaRxDQeRzOFfJFFVUhdFUs0B6w9oDkHxE798+CNyfDsUtMpfdbvKOy945+/BcdJLO4HJYgm54EwwZbNTvGkaTKjVQxEJ+bFEcdqEc46sbKskTbaHN6fDKcDK61rCgzVv2FqWfqMKmsopUfc6RLPvP+50fkBbAoeeJ5tooQ7upoDb+jtGghvvVvZ6X6E1fd2j566VTSkr8/qyib7Sd8X6IfyW7veMTpKz33g5PbHqq2S+dZUeb3LufCNfWWCqX9msWvFTriRCuQMrOZ+vyURxnEMJWlms4mx9M2LaeePTWzoEP71A6Clc0hhvVCOry2eT2sd08rEqOX6qEKkyZE8CStYgjxydEcDsFZyirnMA84zcOWuP74jgN6twnVp6QbkPoB26S7j8uA5bVDcW7Mo0LBh1BTM8xBO9T0GTazbuKPcM420ezkZETlQMqFJrRiZSorKoeWGQupU1FK556NTdv51886niFzbnJoDOujQCzWb2+uxJV5RF0f9ZgGXlHz8EdbSW9vrlhUP2kP+eys5yiG6ZR7XqE0pmKx8jl2dNbUlKc5EhnK1CvQOLUnsXFqQ1NHXVVsQEn6hV1NAp1Y5uY5pHxPqvBIEgFvh9TY3m1hprfoc9A72sXTqZc6MTpfmeVSJThJTBEWZ9MOMxiu2eHjj3pyHx1TthcByUX4EWXqZyTn+HJUWkPh/mHRmcom6DqAiOGG/w9QB9RrcWTjTb9wbrQOSL/jVN6di2Z7WBa90+Ot5sRXeun71svPTj1oSZXFw+nGKd2Rc/2kYmnsjl4TwX3Ve1YUlSOxQGEWJH1OPinpk/J+A2oBNnoRuReo09IoTRNxSZzWXJ6YCumEFKHiN8Dqa/h+y5D7ySa7t+3bQYya35fGm900r7NSMR6idcHgV5PZ5JjdVBpHhfS9tWEcYN+r04H9rsPWm+vpj2oTTYD4QjAtc76E1VHA/XXTMG45ehABa86w3Hxd4BGlaxt3EWTGEROvu3ZR83L4dMDNJFWOm0K6f3jaNm3sh4W9uvveEL5dPEm+XMYA3E/aphTac4tIrFg4cZYkWNLWqcH1n7l0XXV+8e7i6gIiDzL9TA/NpHlgAe2WXm2z7/eeoAT/8nyw98R6Hcqorjv6sPXNEx00N05hG+q6/hs1u1Ah
+sidebar_class_name: "delete api-method"
+info_path: site/docspace/api-backend/usage-api/api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Delete a color theme"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"delete"}
+  path={"/api/2.0/settings/colortheme"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Deletes the portal color theme with the ID specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"id","in":"query","description":"The ID of the portal theme to delete.","schema":{"type":"integer","format":"int32","example":9846}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Portal theme settings: custom color theme settings, selected or not, limit","content":{"application/json":{"schema":{"type":"object","properties":{"response":{"type":"object","properties":{"themes":{"type":"array","items":{"type":"object","properties":{"id":{"type":"integer","description":"The custom color theme ID.","format":"int32","example":1},"name":{"type":"string","description":"The custom color theme name.","nullable":true,"example":"blue"},"main":{"type":"object","properties":{"accent":{"type":"string","description":"The accent color.","nullable":true,"example":"#4781D1"},"buttons":{"type":"string","description":"The button color.","nullable":true,"example":"#5299E0"}},"additionalProperties":false,"description":"The custom color theme color parameters.","title":"CustomColorThemesSettingsColorItem"},"text":{"type":"object","properties":{"accent":{"type":"string","description":"The accent color.","nullable":true,"example":"#4781D1"},"buttons":{"type":"string","description":"The button color.","nullable":true,"example":"#5299E0"}},"additionalProperties":false,"description":"The custom color theme color parameters.","title":"CustomColorThemesSettingsColorItem"}},"additionalProperties":false,"description":"The custom color theme settings.","title":"CustomColorThemesSettingsItem"},"description":"The list of the custom color themes.","nullable":true},"selected":{"type":"integer","description":"Specifies whether the custom color theme is selected.","format":"int32","example":1234},"limit":{"type":"integer","description":"The maximum number of the custom color themes.","format":"int32","example":1234}},"additionalProperties":false,"description":"The custom color themes settings.","title":"CustomColorThemesSettingsDto"},"count":{"type":"integer","format":"int32"},"links":{"type":"array","items":{"type":"object","properties":{"href":{"type":"string"},"action":{"type":"string"}}}},"status":{"type":"integer","format":"int32"},"statusCode":{"type":"integer","format":"int32"}},"title":"CustomColorThemesSettingsWrapper"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

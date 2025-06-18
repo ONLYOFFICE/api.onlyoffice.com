@@ -1,0 +1,71 @@
+---
+id: start-edit-file
+title: "Start file editing"
+description: "Informs about opening a file with the ID specified in the request for editing, locking it from being deleted or moved (this method is called by the mobile editors)."
+sidebar_label: "Start file editing"
+hide_title: true
+hide_table_of_contents: true
+api: eJzVV0tv20YQ/iuDuTgBGMmwg6LlzbEdwGmBBH7AKAwhHpFDcWNyl9ldSlEE/vdidkmLspzah17qgyXtzovffPPgBj0tHKZ3+FFV7GAK4RNnCZqGLXll9EWOKTpP1p/nyss9JtiQpZo9W1HeoKaaMcVCVXyRY4JKY4oN+RITzNllVjViClO8LhlEDC7OwBsIdoFz5ZVeTDBBy99bZTnH1NuWE3RZyTVhukG/bsSH0p4XbDHBwtiafDw6PsIE+QfVTcWY/vH7+9+6bhatsfMfTL4WE78IZfswz4aUGe1ZezFATVOpLMAy/ebEymY/QjP/xpkXkKyA6BU7ue0tnlRG80h6bkzFpPeAumo4U4ViB6uSfck2xFaSZfBD4CvlSzDhsnUSfmHsEDkYC9r4yRgXgbTrEqRcZIym6ssoxIIqx8/la4SPOAgAiYcQwwgor7x4wauBLNh14s6ya4x2EYajw8P9VAir4IHXwf6ZydqatYcrtkuV8X+XgiGQkaTzVukFduKjjR5eIlqXYKX0gxvJkrW0Ft57rt3LcZSWi2djoCwCsncVcHSefOteGWIUPjU5v0qhG6dPfN5aahq2vev3h8f7WfvbtJAbfeChpCUDa9MuSmjY1so5ZbQwdql49UjY4GbXxoWWSBzQ3LQeTMNamEUjfovyxRm4vh5yUDqc9bU95nwClckexIDyUFhTw5zlV84Ve86lJGqz5Bze+FI5qNmXJgflIKOq4hzm62C5NvOB2ca6t0LtKCpNzbiQT+ltKU6pUdOjyeFUwnXh/3QTu2A3DXUiRjBBx3Y5NMvWVpjiZk6Ob2zV7Vd+kIXM6EIt2tiEMcElWUXzKjKoV445KaitJJV7ls7iFdxc/iV5nEkcWWuVX19JxURT5LKv1Pry6wOvx5Ru1J+83jN54xhOjXlQDKLE2vfFiMkwBXYM9rMgCyrCyw/kVDbyU3rf7Hk5154trE0bG5sYBtI5NOTcylgZMaHmQwMNBsUyk2X7OtMHURg2n26v4do8sO4OdoxGW0n/5eNQLZ9ur8XVSQBnz+EvMDvZAUr4lks3rZXecu5AhIxVP4PMAZRMeQigB3XHYw9qL9Ml+Fm0j8aNh8LB00iiHBSVWcXi2vEKoVskKNeRGuPboZXsHAYOBqBdOp0GrxOjq7UpCpXxJDN1PDyaDmriwAvgr1cN4iE7phkaOUkxXjLlQFnGLkzuxhrPmRS6ZWdam7HDBFdWeYHkVj5fkI7N7nPDYevZohkOTo3WsZs/AVVuz6C/3i+LHe3XP7UQX+nCSH5/vHNqocm3ll+mm1D6UVzqJw89cjeuCchkD8hC3ToPcwYz9xQ4uVQUSHk/tLehbexk5B5Y541R2k/gwgutpTw5B3JAECt+28JDDd+PHuR+smX3+PmedIwuQRnzl9tN7nxYZ57uVGG9EfXCBJT6eXbSKGmfbF3E53hyNDkUVKWX1xTGbR9H2Fx29pqn6G62u8j/ZXb1bPH8w0+bipSWZ2/j8Ihz7E6ohAkKLknY4l3/iQmmj1v9dqDNEixlEKZ3uHkcZJ0cf2/ZrjG9m20HVhh6uXLyPX9+zRyj+uayfwV4Cy+9LDz7ZENx6HUYmlXLcTSG8Ta8onSzLhn6p4QXL09jEO+uxcRWeW/l7JJB4yTLuPH/KjsbbQ9fPl9dy1Dp30fq0FLR0krefGgVAzUBlNjn5GyDFelFSwuRjTbl7x/r0sSp
+sidebar_class_name: "post api-method"
+info_path: site/docspace/api-backend/usage-api/api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Start file editing"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/api/2.0/files/file/{fileId}/startedit"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Informs about opening a file with the ID specified in the request for editing, locking it from being deleted or moved (this method is called by the mobile editors).
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"fileId","in":"path","description":"The file ID to start editing.","required":true,"schema":{"type":"integer","format":"int32","example":9846}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"description":"The file parameters to start editing.","content":{"application/json":{"schema":{"type":"object","properties":{"editingAlone":{"type":"boolean","description":"Specifies whether to share the file with other users for editing or not.","example":true}},"additionalProperties":false,"description":"The parameters for starting file editing.","title":"StartEdit"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"File key for Document Service","content":{"application/json":{"schema":{"type":"object","properties":{"response":{"type":"string"},"count":{"type":"integer","format":"int32"},"links":{"type":"array","items":{"type":"object","properties":{"href":{"type":"string"},"action":{"type":"string"}}}},"status":{"type":"integer","format":"int32"},"statusCode":{"type":"integer","format":"int32"}},"title":"StringWrapper"}}}},"403":{"description":"You don't have enough permission to view the file"}}}
+>
+  
+</StatusCodes>
+
+
+      

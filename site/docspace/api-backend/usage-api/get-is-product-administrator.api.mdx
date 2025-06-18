@@ -1,0 +1,71 @@
+---
+id: get-is-product-administrator
+title: "Check a product administrator"
+description: "Checks if the selected user is an administrator of a product with the ID specified in the request."
+sidebar_label: "Check a product administrator"
+hide_title: true
+hide_table_of_contents: true
+api: eJzFV9tuGzcQ/RWCL35ZS7KSAOm+qXZaKC2QILbhB0OIKe6slvEuuSFnbavC/nsx5F4l11bQoH3xhRwO53LmHO6Oo9g4Ht/yS0BUeuPYlF2CrKzCLV9F3JRgBSqjlwmP+QZw6T5bk1QSF0mhtHJoBRrLI14KKwpAsORux7UogMe8DMYq4RFXmsf8ewV2yyOegJNWleSax/wqA7a8YCZlmAFrDjF4QiskQsJSawq/5Y+z/q4Jj7iTGRSCxzuO25IudWiV3vCIp8YWAnnMq8pHAE+iKHMyEQLO4Gz25nQtxbvTX1JxdroW7+Xp2/ns3fv1W7FO5+95XUddIpUDe0wWZEep/P+xryJuwZVGO3B0wXw2o1/jkD+tv4FE9qgw8zH68F0DAKZ0iEIZHXddWV5EbZYRE0MUMGOZNsgjLo1G0Ej3ibLMlfQ+pt8cXbo7zNr4MAhFlhCHKoTcxv+6ZRMcofSwlIdd6nOZ/IRSRx4dx97ta1dp9b0CphLQqFIF9ufEMWrHIJy1MTkIfRDPUifUG3DsMQPMwPYgyITb625p1YPKYQOOpcYOJ3UyDBZtBbWPJVF0jcg/D1qVitzBSy3Zu3M0LajQl+M5CrpAQxWQpgq4azJXGmEDdlhdpfHNnGxzpe/dwFZYK2iqFULhXsdcZiE9bDllLkNeB1s11cWhwModGWIwPjcJHHWgfrlGN1aUJdgmkLezs0NCuNaiwsxY9Rck3l9LBp7VhZNfaf/rPdACtyAIqI9WIfAV0eWvICxYHt/6/xal+gO23dpz9sIp2Zp/WlSYzZ83/FSCF6HbFTHbOOjzDOS9YyrIh4McPPN6HCvHhN7nqZSJDnAd9y0vmCtB0jgmTGm/ZuF7Bc4DvADMTKOCXu8w4zGfilJN55PZ1DUCOm0LNhV7CunAPrTyWNmcx3y3Fg6ubV4fDOalt2XS6FRtqiDBPOIPwiqxzgP+msOhh6mocgLCgaeLsMWuv/xJfV/1Hb0kFg6uxn3tB8K378DltQN2bsy9AkaHiMJkG2EjlyOHjWhKf4RQ3TS9uydDLA9u+aARLNuayvpGkmMmdMJK4dyjsUmrnp7fvEPy3EDtGNcnwZjtPt5csStzD7o+GTkNvqLmj9/aWft4c0VXjbH9Ws0Wo0IRKhOitUJpSNh668F2smhGz9ucsAxE4gNoijq6sSlqY1NH3fD0tCX8wn4kwY6luXkM2B/dyjzXRJy2AzSGuy0RjRY9Bn2hXTyd+lsnRudbk6ZKwkSaIizOpx21EJdTwY8/6s19d0zZPg4ETeMXEAkTUoJzDA1NNYbpt+BMZSW4jkdifkO/X7EO5NjSTV9Nv3ButA5asFdU2r1gzfbhWIxOH5+1f3Xq1Cvb06lTGy2wsvA63AjSnTnNT+I1exzXhJHw+sqyonLI1sDMGoXH5IMSHpR3PcE1vDbsyB0DnZRGaZywJRKsaTwhYfR6YGHie4b1M3w3SORu0qN7mN8eY9T0f2p82o28LUpFfAjWhYTfTOaTGZWpNA4L4dW3cezVYUD4+7w8qtyuf7v+N7LS9BHhCadlLpT278lA60FjbqnJPOKUILF30Bk+kOb9h98q4plxSEd3ncbUtBw+XEiBEuVISZLnn2TDMvyrj7Nn0/MqM/o2fBB5RXacpP7HQvvBL64XAuq+8fpoVr3mhkdKS7hUwnBqISWUODh18MVDXrrXw+8frqhfFXV2OMVBKJs/yHu7pbdD32NdDRHQT6rbsyd2u0ARdd3Zh61/PNHJTrCmCq3quv4bvWWUgg==
+sidebar_class_name: "get api-method"
+info_path: site/docspace/api-backend/usage-api/api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Check a product administrator"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/settings/security/administrator"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Checks if the selected user is an administrator of a product with the ID specified in the request.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"productid","in":"query","description":"The ID of the product extracted from the query parameters.","schema":{"type":"string","format":"uuid","example":"aae1e103-bca5-9fa1-ba8c-42058b4abf28"}},{"name":"userid","in":"query","description":"The user ID extracted from the query parameters.","schema":{"type":"string","format":"uuid","example":"aae1e103-bca5-9fa1-ba8c-42058b4abf28"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Object with the user security information: product ID, user ID, administrator or not","content":{"application/json":{"schema":{"type":"object","properties":{"response":{"type":"object","properties":{"productId":{"type":"string","description":"The product ID.","format":"uuid","example":"aae1e103-bca5-9fa1-ba8c-42058b4abf28"},"userId":{"type":"string","description":"The user unique identifier.","format":"uuid","example":"aae1e103-bca5-9fa1-ba8c-42058b4abf28"},"administrator":{"type":"boolean","description":"Indicates whether the user has administrator privileges for the product.","example":true}},"additionalProperties":false,"description":"The product administrator parameters.","title":"ProductAdministratorDto"},"count":{"type":"integer","format":"int32"},"links":{"type":"array","items":{"type":"object","properties":{"href":{"type":"string"},"action":{"type":"string"}}}},"status":{"type":"integer","format":"int32"},"statusCode":{"type":"integer","format":"int32"}},"title":"ProductAdministratorWrapper"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      
