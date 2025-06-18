@@ -98,19 +98,19 @@ In the [onlyoffice-docs-formats.json](https://github.com/ONLYOFFICE/document-for
 |        sxi        | &#x2B24; | &#x2B24; | &#x2B24; | &#x2B24; | &#x2B24; | &#x2B24; | &#x2B24; | &#x2B24; | &#x2B24; | &#x2B24; | &#x2B24; | &#x2B24; | &#x2B24; | &#x2B24; |
 
 </div>
-<!--
+
 ## Diagram document file formats
+
 <div className="conversion-table">
 
-|                   |          |          |Output&#x20;| format |          |          |
-|-------------------|:--------:|:--------:|:--------:|:--------:|:--------:|:--------:|
-| Input<br/>format  |   bmp    |   gif    |   jpg    |   pdf    |   pdfa   |   png    |
-| vsdm              | &#x2B24; | &#x2B24; |&#x2B24; | &#x2B24; | &#x2B24; | &#x2B24; |
-| vsdx              | &#x2B24; | &#x2B24; |&#x2B24; | &#x2B24; | &#x2B24; | &#x2B24; |
-| vssm              | &#x2B24; | &#x2B24; |&#x2B24; | &#x2B24; | &#x2B24; | &#x2B24; |
-| vssx              | &#x2B24; | &#x2B24; |&#x2B24;| &#x2B24; | &#x2B24; | &#x2B24; |
-| vstm              | &#x2B24; | &#x2B24; |&#x2B24;| &#x2B24; | &#x2B24; | &#x2B24; |
-| vstx              | &#x2B24; | &#x2B24; |&#x2B24;| &#x2B24; | &#x2B24; | &#x2B24; |
+|                  |          |          | Output&#x20; |  format  |          |          |
+|------------------|:--------:|:--------:|:------------:|:--------:|:--------:|:--------:|
+| Input<br/>format |   bmp    |   gif    |     jpg      |   pdf    |   pdfa   |   png    |
+| vsdm             | &#x2B24; | &#x2B24; |   &#x2B24;   | &#x2B24; | &#x2B24; | &#x2B24; |
+| vsdx             | &#x2B24; | &#x2B24; |   &#x2B24;   | &#x2B24; | &#x2B24; | &#x2B24; |
+| vssm             | &#x2B24; | &#x2B24; |   &#x2B24;   | &#x2B24; | &#x2B24; | &#x2B24; |
+| vssx             | &#x2B24; | &#x2B24; |   &#x2B24;   | &#x2B24; | &#x2B24; | &#x2B24; |
+| vstm             | &#x2B24; | &#x2B24; |   &#x2B24;   | &#x2B24; | &#x2B24; | &#x2B24; |
+| vstx             | &#x2B24; | &#x2B24; |   &#x2B24;   | &#x2B24; | &#x2B24; | &#x2B24; |
 
 </div>
--->
