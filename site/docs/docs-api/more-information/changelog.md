@@ -5,6 +5,7 @@ The list of changes of ONLYOFFICE Docs API.
 ## Version 9.0
 
 - Added opening for [odg](../usage-api/config/document/document.md#filetype) format.
+- Added opening for [md](../usage-api/config/document/document.md#filetype) format.
 - Added the [editorConfig.customization.forceWesternFontSize](../usage-api/config/editor/customization/customization-standard-branding.md#forcewesternfontsize) parameter for the Chinese (Simplified) UI.
 - Added the [editorConfig.customization.layout.header.user](../usage-api/config/editor/customization/customization-white-label.md#layoutheaderuser) parameter.
 
