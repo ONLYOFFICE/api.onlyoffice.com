@@ -2,25 +2,25 @@
 
 This example uses the ONLYOFFICE API and OpenAI to analyze document paragraphs and apply formatting recommendations (font size, bold, indent) from GPT. Paragraphs are joined and sent to GPT-4o, which returns a JSON array with formatting data for each block. In sandbox mode, sample values are used instead.
 
-```ts editor-docx
+```ts editor-docx zoom=60
 let doc = Api.GetDocument();
-let token = "sk-proj..."; // Replace with your OpenAI API key
+let OPENAI_API_KEY = "sk-proj..."; // Replace with your OpenAI API key
 
 let count = doc.GetElementsCount();
 let paragraphMap = [];
 
 // Step 1. Collect all paragraphs with text
 for (let i = 0; i < count; i++) {
-  let p = doc.GetElement(i);
-  if (p && typeof p.GetText === "function") {
-    let text = p.GetText().trim();
+  let paragraph = doc.GetElement(i);
+  if (paragraph && typeof paragraph.GetText === "function") {
+    let text = paragraph.GetText().trim();
     if (text.length > 0) {
       paragraphMap.push({ index: i, text: text });
     }
   }
 }
 
-let allText = paragraphMap.map(p => p.text).join("\n---\n");
+let allText = paragraphMap.map(paragraph => paragraph.text).join("\n---\n");
 
 let prompt = `
 You are a document formatting assistant.
@@ -49,7 +49,7 @@ let body = {
 };
 
 // Sandbox fallback (works even if document is empty)
-if (token === "sk-proj...") {
+if (OPENAI_API_KEY === "sk-proj...") {
   let sample = [
   { text: "Quarterly Financial Overview", fontSize: 26, bold: true, indent: 0 },
   { text: "Summary of Q1 performance across all departments.", fontSize: 14, bold: false, indent: 0 },
@@ -65,29 +65,27 @@ if (token === "sk-proj...") {
   if (paragraphMap.length === 0) {
     // No original content - create new paragraphs
     sample.forEach(item => {
-      let p = Api.CreateParagraph();
-      let t = p.AddText(item.text);
-      t.SetFontSize(item.fontSize);
-      t.SetBold(item.bold);
-      t.SetFontFamily("Arial");
+      let paragraph = Api.CreateParagraph();
+      paragraph.AddText(item.text);
+      paragraph.SetFontSize(item.fontSize);
+      paragraph.SetBold(item.bold);
+      paragraph.SetFontFamily("Arial");
       if (typeof item.indent === "number") {
-        p.SetIndLeft(item.indent);
+        paragraph.SetIndLeft(item.indent);
       }
-      doc.Push(p);
+      doc.Push(paragraph);
     });
   } else {
     // Use paragraphMap as target
     applyFormattingBlocks(sample);
   }
-
-  return;
 }
 
 // Request to GPT
 fetch("https://api.openai.com/v1/chat/completions", {
   method: "POST",
   headers: {
-    "Authorization": "Bearer " + token,
+    "Authorization": "Bearer " + OPENAI_API_KEY,
     "Content-Type": "application/json"
   },
   body: JSON.stringify(body)
@@ -115,10 +113,10 @@ fetch("https://api.openai.com/v1/chat/completions", {
 // Apply formatting to existing paragraphs
 function applyFormattingBlocks(formatted) {
   formatted.forEach((item, i) => {
-    let pIndex = paragraphMap[i]?.index;
-    if (pIndex === undefined) return;
+    let paragraphIndex = paragraphMap[i]?.index;
+    if (paragraphIndex === undefined) return;
 
-    let original = doc.GetElement(pIndex);
+    let original = doc.GetElement(paragraphIndex);
     if (original && typeof original.RemoveAllElements === "function") {
       original.RemoveAllElements();
 
@@ -144,32 +142,32 @@ This step collects all text paragraphs, sends them to GPT-4o for formatting inst
 - Use [GetElementsCount](../../usage-api/text-document-api/ApiDocument/Methods/GetElementsCount.md) and [GetElement](../../usage-api/text-document-api/ApiDocument/Methods/GetElement.md) to collect paragraphs
 - Use [GetText](../../usage-api/text-document-api/ApiParagraph/Methods/GetText.md) and .trim() to clean up input
 - Use `fetch()` to send prompt to OpenAI API
-- Use fallback `sample[]` object when token is not set
+- Use fallback `sample[]` object when OPENAI_API_KEY is not set
 - Parse result and call `applyFormattingBlocks()` to render
 
 <details>
   <summary>Translate paragraphs script</summary>
 
     ```ts
-let token = "sk-proj..."; // Replace with your OpenAI API key
+    let OPENAI_API_KEY = "sk-proj..."; // Replace with your OpenAI API key
 
-let count = doc.GetElementsCount();
-let paragraphMap = [];
+    let count = doc.GetElementsCount();
+    let paragraphMap = [];
 
-// Collect all paragraphs with text
-for (let i = 0; i < count; i++) {
-  let p = doc.GetElement(i);
-  if (p && typeof p.GetText === "function") {
-    let text = p.GetText().trim();
-    if (text.length > 0) {
-      paragraphMap.push({ index: i, text: text });
+    // Collect all paragraphs with text
+    for (let i = 0; i < count; i++) {
+      let paragraph = doc.GetElement(i);
+      if (paragraph && typeof paragraph.GetText === "function") {
+        let text = paragraph.GetText().trim();
+        if (text.length > 0) {
+          paragraphMap.push({ index: i, text: text });
+        }
+      }
     }
-  }
-}
 
-let allText = paragraphMap.map(p => p.text).join("\n---\n");
+    let allText = paragraphMap.map(paragraph => paragraph.text).join("\n---\n");
 
-let prompt = `
+    let prompt = `
 You are a document formatting assistant.
 
 The text is split into blocks using "---".
@@ -189,75 +187,75 @@ Text:
 ${allText}
 `;
 
-let body = {
-  model: "gpt-4o",
-  messages: [{ role: "user", content: prompt }],
-  temperature: 0.4
-};
+    let body = {
+      model: "gpt-4o",
+      messages: [{ role: "user", content: prompt }],
+      temperature: 0.4
+    };
 
-// Sandbox fallback (works even if document is empty)
-if (token === "sk-proj...") {
-  let sample = [
-  { text: "Quarterly Financial Overview", fontSize: 26, bold: true, indent: 0 },
-  { text: "Summary of Q1 performance across all departments.", fontSize: 14, bold: false, indent: 1440 },
-  { text: "Sales Department", fontSize: 20, bold: true, indent: 0 },
-  { text: "Sales increased by 12% compared to the previous quarter. Key factors include expanded outreach and promotional campaigns.", fontSize: 14, bold: false, indent: 1440 },
-  { text: "Marketing Department", fontSize: 20, bold: true, indent: 0 },
-  { text: "Marketing spend grew by 8%, yielding a 15% increase in lead generation. Social media engagement reached new highs.", fontSize: 14, bold: false, indent: 1440 },
-  { text: "Recommendations", fontSize: 18, bold: true, indent: 0 },
-  { text: "Continue investing in high-performing digital channels. Consider reallocating underused budget from offline campaigns.", fontSize: 13, bold: false, indent: 1440 },
-  { text: "Prepared by: Finance Team", fontSize: 12, bold: false, indent: 2880 }
-  ];
+    // Sandbox fallback (works even if document is empty)
+    if (OPENAI_API_KEY === "sk-proj...") {
+      let sample = [
+      { text: "Quarterly Financial Overview", fontSize: 26, bold: true, indent: 0 },
+      { text: "Summary of Q1 performance across all departments.", fontSize: 14, bold: false, indent: 1440 },
+      { text: "Sales Department", fontSize: 20, bold: true, indent: 0 },
+      { text: "Sales increased by 12% compared to the previous quarter. Key factors include expanded outreach and promotional campaigns.", fontSize: 14, bold: false, indent: 1440 },
+      { text: "Marketing Department", fontSize: 20, bold: true, indent: 0 },
+      { text: "Marketing spend grew by 8%, yielding a 15% increase in lead generation. Social media engagement reached new highs.", fontSize: 14, bold: false, indent: 1440 },
+      { text: "Recommendations", fontSize: 18, bold: true, indent: 0 },
+      { text: "Continue investing in high-performing digital channels. Consider reallocating underused budget from offline campaigns.", fontSize: 13, bold: false, indent: 1440 },
+      { text: "Prepared by: Finance Team", fontSize: 12, bold: false, indent: 2880 }
+      ];
 
-  if (paragraphMap.length === 0) {
-    // No original content - create new paragraphs
-    sample.forEach(item => {
-      let p = Api.CreateParagraph();
-      let t = p.AddText(item.text);
-      t.SetFontSize(item.fontSize);
-      t.SetBold(item.bold);
-      t.SetFontFamily("Arial");
-      if (typeof item.indent === "number") {
-        p.SetIndLeft(item.indent);
+      if (paragraphMap.length === 0) {
+        // No original content - create new paragraphs
+        sample.forEach(item => {
+          let paragraph = Api.CreateParagraph();
+          paragraph.AddText(item.text);
+          paragraph.SetFontSize(item.fontSize);
+          paragraph.SetBold(item.bold);
+          paragraph.SetFontFamily("Arial");
+          if (typeof item.indent === "number") {
+            paragraph.SetIndLeft(item.indent);
+          }
+          doc.Push(paragraph);
+        });
+      } else {
+        // Use paragraphMap as target
+        applyFormattingBlocks(sample);
       }
-      doc.Push(p);
+
+      return;
+    }
+
+    // Request to GPT
+    fetch("https://api.openai.com/v1/chat/completions", {
+      method: "POST",
+      headers: {
+        "Authorization": "Bearer " + OPENAI_API_KEY,
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(body)
+    })
+    .then(res => res.json())
+    .then(data => {
+      let raw = data.choices?.[0]?.message?.content || "[]";
+      raw = raw.replace(/```json|```/g, "").trim();
+
+      try {
+        let formatted = JSON.parse(raw);
+        applyFormattingBlocks(formatted);
+      } catch (e) {
+        let err = Api.CreateParagraph();
+        err.AddText("JSON parse error: " + e.message);
+        doc.Push(err);
+      }
+    })
+    .catch(error => {
+      let err = Api.CreateParagraph();
+      err.AddText("Fetch error: " + error.message);
+      doc.Push(err);
     });
-  } else {
-    // Use paragraphMap as target
-    applyFormattingBlocks(sample);
-  }
-
-  return;
-}
-
-// Request to GPT
-fetch("https://api.openai.com/v1/chat/completions", {
-  method: "POST",
-  headers: {
-    "Authorization": "Bearer " + token,
-    "Content-Type": "application/json"
-  },
-  body: JSON.stringify(body)
-})
-.then(res => res.json())
-.then(data => {
-  let raw = data.choices?.[0]?.message?.content || "[]";
-  raw = raw.replace(/```json|```/g, "").trim();
-
-  try {
-    let formatted = JSON.parse(raw);
-    applyFormattingBlocks(formatted);
-  } catch (e) {
-    let err = Api.CreateParagraph();
-    err.AddText("JSON parse error: " + e.message);
-    doc.Push(err);
-  }
-})
-.catch(error => {
-  let err = Api.CreateParagraph();
-  err.AddText("Fetch error: " + error.message);
-  doc.Push(err);
-});
     ```
 
 </details>
@@ -276,27 +274,27 @@ This step clears each paragraph's content and inserts a new text run with the re
   <summary>Apply formatting script</summary>
 
     ```ts
-// Apply formatting to paragraphs
-function applyFormattingBlocks(formatted) {
-  formatted.forEach((item, i) => {
-    let pIndex = paragraphMap[i]?.index;
-    if (pIndex === undefined) return;
+    // Apply formatting to paragraphs
+    function applyFormattingBlocks(formatted) {
+      formatted.forEach((item, i) => {
+        let paragraphIndex = paragraphMap[i]?.index;
+        if (paragraphIndex === undefined) return;
 
-    let original = doc.GetElement(pIndex);
-    if (original && typeof original.RemoveAllElements === "function") {
-      original.RemoveAllElements();
+        let original = doc.GetElement(paragraphIndex);
+        if (original && typeof original.RemoveAllElements === "function") {
+          original.RemoveAllElements();
 
-      let textObj = original.AddText(item.text);
-      textObj.SetFontSize(item.fontSize);
-      textObj.SetBold(item.bold);
-      textObj.SetFontFamily("Arial");
+          let textObj = original.AddText(item.text);
+          textObj.SetFontSize(item.fontSize);
+          textObj.SetBold(item.bold);
+          textObj.SetFontFamily("Arial");
 
-      if (typeof item.indent === "number") {
-        original.SetIndLeft(item.indent);
-      }
+          if (typeof item.indent === "number") {
+            original.SetIndLeft(item.indent);
+          }
+        }
+      });
     }
-  });
-}
     ```
 
 </details>

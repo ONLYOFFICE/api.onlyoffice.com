@@ -2,18 +2,18 @@
 
 This example demonstrates how to translate all paragraphs in a document into French using the ONLYOFFICE API and OpenAI. The script sends all paragraph text joined by delimiters, and re-inserts translated blocks in their original position. If no API key is provided, it uses a sample translation.
 
-```ts editor-docx
+```ts editor-docx zoom=60
 let doc = Api.GetDocument();
 let count = doc.GetElementsCount();
 let paragraphMap = [];
 
-let token = "sk-proj..."; // Replace with your OpenAI API key
+let OPENAI_API_KEY = "sk-proj..."; // Replace with your OpenAI API key
 
 // Collect all paragraphs with text
 for (let i = 0; i < count; i++) {
-  let p = doc.GetElement(i);
-  if (p && typeof p.GetText === "function") {
-    let text = p.GetText().trim();
+  let paragraph = doc.GetElement(i);
+  if (paragraph && typeof paragraph.GetText === "function") {
+    let text = paragraph.GetText().trim();
     if (text.length > 0) {
       paragraphMap.push({ index: i, text: text });
     }
@@ -43,7 +43,7 @@ if (paragraphMap.length === 0) {
 }
 
 // Prepare prompt
-let allText = paragraphMap.map(p => p.text).join("\n---\n");
+let allText = paragraphMap.map(paragraph => paragraph.text).join("\n---\n");
 
 let prompt = `Translate the following text into French. Preserve structure and meaning. Output must match the original paragraph breaks separated by "---":\n\n${allText}`;
 
@@ -54,7 +54,7 @@ let body = {
 };
 
 // Fallback for sandbox
-if (token === "sk-proj...") {
+if (OPENAI_API_KEY === "sk-proj...") {
   const fallbackTranslated = [
     "Ce document est confidentiel.",
     "Veuillez le lire attentivement.",
@@ -69,7 +69,7 @@ if (token === "sk-proj...") {
 fetch("https://api.openai.com/v1/chat/completions", {
   method: "POST",
   headers: {
-    "Authorization": "Bearer " + token,
+    "Authorization": "Bearer " + OPENAI_API_KEY,
     "Content-Type": "application/json"
   },
   body: JSON.stringify(body)
@@ -80,32 +80,26 @@ fetch("https://api.openai.com/v1/chat/completions", {
   insertTranslated(translated);
 })
 .catch(err => {
-  let errorP = Api.CreateParagraph();
-  errorP.AddText("Translation error: " + err.message);
-  doc.Push(errorP);
+  let errorParagraph = Api.CreateParagraph();
+  errorParagraph.AddText("Translation error: " + err.message);
+  doc.Push(errorParagraph);
 });
 
 // Apply translated content into existing paragraph blocks
 function insertTranslated(translated) {
   let lines = translated.split(/\n---\n/);
   for (let i = 0; i < lines.length; i++) {
-    let pIndex = paragraphMap[i]?.index;
-    let para = doc.GetElement(pIndex);
-    if (para && typeof para.GetElementsCount === "function") {
+    let paragraphIndex = paragraphMap[i]?.index;
+    let paragraph = doc.GetElement(paragraphIndex);
+    if (paragraph && typeof paragraph.GetElementsCount === "function") {
       let translatedText = lines[i].trim();
-
-      let innerCount = para.GetElementsCount();
-      for (let j = innerCount - 1; j >= 0; j--) {
-        para.RemoveElement(j);
-      }
-
+      paragraph.RemoveAllElements();
       let run = Api.CreateRun();
       run.AddText(translatedText);
-      para.AddElement(run);
+      paragraph.AddElement(run);
     }
   }
 }
-
 ```
 
 ## Script execution steps
@@ -123,86 +117,86 @@ This step loops through all document elements and processes paragraphs using GPT
   <summary>Translate paragraphs script</summary>
 
     ```ts
-let count = doc.GetElementsCount();
-let paragraphMap = [];
+    let count = doc.GetElementsCount();
+    let paragraphMap = [];
 
-let token = "sk-proj..."; // Replace with your OpenAI API key
+    let OPENAI_API_KEY = "sk-proj..."; // Replace with your OpenAI API key
 
-// Collect all paragraphs with text
-for (let i = 0; i < count; i++) {
-  let p = doc.GetElement(i);
-  if (p && typeof p.GetText === "function") {
-    let text = p.GetText().trim();
-    if (text.length > 0) {
-      paragraphMap.push({ index: i, text: text });
+    // Collect all paragraphs with text
+    for (let i = 0; i < count; i++) {
+      let paragraph = doc.GetElement(i);
+      if (paragraph && typeof paragraph.GetText === "function") {
+        let text = paragraph.GetText().trim();
+        if (text.length > 0) {
+          paragraphMap.push({ index: i, text: text });
+        }
+      }
     }
-  }
-}
 
-// If document is empty, insert demo content and rebuild paragraphMap
-if (paragraphMap.length === 0) {
-  let demo1 = Api.CreateParagraph();
-  demo1.AddText("This document is confidential.");
-  doc.Push(demo1);
+    // If document is empty, insert demo content and rebuild paragraphMap
+    if (paragraphMap.length === 0) {
+      let demo1 = Api.CreateParagraph();
+      demo1.AddText("This document is confidential.");
+      doc.Push(demo1);
 
-  let demo2 = Api.CreateParagraph();
-  demo2.AddText("Please read it carefully.");
-  doc.Push(demo2);
+      let demo2 = Api.CreateParagraph();
+      demo2.AddText("Please read it carefully.");
+      doc.Push(demo2);
 
-  let demo3 = Api.CreateParagraph();
-  demo3.AddText("Signatures are required below.");
-  doc.Push(demo3);
+      let demo3 = Api.CreateParagraph();
+      demo3.AddText("Signatures are required below.");
+      doc.Push(demo3);
 
-  // Rebuild paragraphMap with new demo paragraphs
-  paragraphMap = [
-    { index: count, text: "This document is confidential." },
-    { index: count + 1, text: "Please read it carefully." },
-    { index: count + 2, text: "Signatures are required below." }
-  ];
-}
+      // Rebuild paragraphMap with new demo paragraphs
+      paragraphMap = [
+        { index: count, text: "This document is confidential." },
+        { index: count + 1, text: "Please read it carefully." },
+        { index: count + 2, text: "Signatures are required below." }
+      ];
+    }
 
-// Prepare prompt
-let allText = paragraphMap.map(p => p.text).join("\n---\n");
+    // Prepare prompt
+    let allText = paragraphMap.map(paragraph => paragraph.text).join("\n---\n");
 
-let prompt = `Translate the following text into French. Preserve structure and meaning. Output must match the original paragraph breaks separated by "---":\n\n${allText}`;
+    let prompt = `Translate the following text into French. Preserve structure and meaning. Output must match the original paragraph breaks separated by "---":\n\n${allText}`;
 
-let body = {
-  model: "gpt-4o",
-  messages: [{ role: "user", content: prompt }],
-  temperature: 0.3
-};
+    let body = {
+      model: "gpt-4o",
+      messages: [{ role: "user", content: prompt }],
+      temperature: 0.3
+    };
 
-// Fallback for sandbox
-if (token === "sk-proj...") {
-  const fallbackTranslated = [
-    "Ce document est confidentiel.",
-    "Veuillez le lire attentivement.",
-    "Les signatures sont requises ci-dessous."
-  ];
-  const merged = paragraphMap.map((_, i) => fallbackTranslated[i] || "").join("\n---\n");
-  insertTranslated(merged);
-  return;
-}
+    // Fallback for sandbox
+    if (OPENAI_API_KEY === "sk-proj...") {
+      const fallbackTranslated = [
+        "Ce document est confidentiel.",
+        "Veuillez le lire attentivement.",
+        "Les signatures sont requises ci-dessous."
+      ];
+      const merged = paragraphMap.map((_, i) => fallbackTranslated[i] || "").join("\n---\n");
+      insertTranslated(merged);
+      return;
+    }
 
-// Send request to OpenAI
-fetch("https://api.openai.com/v1/chat/completions", {
-  method: "POST",
-  headers: {
-    "Authorization": "Bearer " + token,
-    "Content-Type": "application/json"
-  },
-  body: JSON.stringify(body)
-})
-.then(res => res.json())
-.then(data => {
-  let translated = data.choices?.[0]?.message?.content || "No translation returned.";
-  insertTranslated(translated);
-})
-.catch(err => {
-  let errorP = Api.CreateParagraph();
-  errorP.AddText("Translation error: " + err.message);
-  doc.Push(errorP);
-});
+    // Send request to OpenAI
+    fetch("https://api.openai.com/v1/chat/completions", {
+      method: "POST",
+      headers: {
+        "Authorization": "Bearer " + OPENAI_API_KEY,
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(body)
+    })
+    .then(res => res.json())
+    .then(data => {
+      let translated = data.choices?.[0]?.message?.content || "No translation returned.";
+      insertTranslated(translated);
+    })
+    .catch(err => {
+      let errorParagraph = Api.CreateParagraph();
+      errorParagraph.AddText("Translation error: " + err.message);
+      doc.Push(errorParagraph);
+    });
     ```
 
 </details>
@@ -220,25 +214,20 @@ This step loops through the translated result and replaces the original paragrap
   <summary>Insert translated paragraphs script</summary>
 
     ```ts
-function insertTranslated(translated) {
-  let lines = translated.split(/\n---\n/);
-  for (let i = 0; i < lines.length; i++) {
-    let pIndex = paragraphMap[i]?.index;
-    let para = doc.GetElement(pIndex);
-    if (para && typeof para.GetElementsCount === "function") {
-      let translatedText = lines[i].trim();
-
-      let innerCount = para.GetElementsCount();
-      for (let j = innerCount - 1; j >= 0; j--) {
-        para.RemoveElement(j);
+    function insertTranslated(translated) {
+      let lines = translated.split(/\n---\n/);
+      for (let i = 0; i < lines.length; i++) {
+        let paragraphIndex = paragraphMap[i]?.index;
+        let paragraph = doc.GetElement(pIndex);
+        if (paragraph && typeof paragraph.GetElementsCount === "function") {
+          let translatedText = lines[i].trim();
+          paragraph.RemoveAllElements();
+          let run = Api.CreateRun();
+          run.AddText(translatedText);
+          paragraph.AddElement(run);
+        }
       }
-
-      let run = Api.CreateRun();
-      run.AddText(translatedText);
-      para.AddElement(run);
     }
-  }
-}
     ```
 
 </details>

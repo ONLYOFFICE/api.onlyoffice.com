@@ -3,6 +3,8 @@
 This example demonstrates how to generate one-sentence summary comments for Olympic medal performance using the ONLYOFFICE spreadsheet API and OpenAI's GPT-4 model. The script loops through a dataset of countries and their gold, silver, and bronze medal counts, generates a short summary per row, and inserts it into the corresponding comment column.
 
 ```ts editor-xlsx zoom=80 templateUrl=https://static.onlyoffice.com/assets/docs/samples/demo.xlsx
+const worksheet = Api.GetActiveSheet();
+
 const OPENAI_API_KEY = "sk-proj..." // replace with your OpenAI API key
 
 function commentOnCountry(row, country, gold, silver, bronze, total) {
@@ -27,13 +29,12 @@ function commentOnCountry(row, country, gold, silver, bronze, total) {
     .then(json => {
         const result = json.choices?.[0]?.message?.content?.trim();
         if (!result) return;
-        const worksheet = Api.GetActiveSheet();
         const commentCell = worksheet.GetRangeByNumber(row, 7); // Column H
         commentCell.SetValue(`${result}`);
     });
 }
 
-const worksheet = Api.GetActiveSheet();
+
 worksheet.SetColumnWidth(7, 50);
 for (let i = 2; i < 27; i++) {
     worksheet.SetRowHeight(i, 50);
@@ -129,7 +130,6 @@ function commentOnCountry(row, country, gold, silver, bronze, total) {
     .then(json => {
         const result = json.choices?.[0]?.message?.content?.trim();
         if (!result) return;
-        const worksheet = Api.GetActiveSheet();
         const commentCell = worksheet.GetRangeByNumber(row, 7); // Column H
         commentCell.SetValue(`${result}`);
     });
@@ -152,7 +152,6 @@ This step configures formatting and loops over the rows of the spreadsheet.
   <summary>Row iteration script</summary>
 
 ```ts
-const worksheet = Api.GetActiveSheet();
 worksheet.SetColumnWidth(7, 50);
 for (let i = 2; i < 27; i++) {
     worksheet.SetRowHeight(i, 50);

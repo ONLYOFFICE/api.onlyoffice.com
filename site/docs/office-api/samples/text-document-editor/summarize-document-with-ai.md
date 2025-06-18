@@ -1,10 +1,10 @@
 # Summarize document with AI
 
-This example demonstrates how to summarize the entire content of a document using the ONLYOFFICE API and OpenAI. The script gathers all paragraphs, sends them as input to GPT-4o, and inserts a bullet-point summary at the top. If no content is found or the token is not set, a fallback is used.
+This example demonstrates how to summarize the entire content of a document using the ONLYOFFICE API and OpenAI. The script gathers all paragraphs, sends them as input to GPT-4o, and inserts a bullet-point summary at the top. If no content is found or the OPENAI_API_KEY is not set, a fallback is used.
 
-```ts editor-docx
+```ts editor-docx zoom=60
 let doc = Api.GetDocument();
-let token = "sk-proj..."; // Replace with your OpenAI API key
+let OPENAI_API_KEY = "sk-proj..."; // Replace with your OpenAI API key
 
 let fullText = "";
 let paragraphs = doc.GetAllParagraphs();
@@ -16,20 +16,20 @@ for (let i = 0; i < paragraphs.length; i++) {
 }
 
 // Fallback for sandbox
-if (token === "sk-proj...") {
+if (OPENAI_API_KEY === "sk-proj...") {
   // Insert sample content if document is empty
   if (!fullText.trim()) {
-    let p1 = Api.CreateParagraph();
-    p1.AddText("This Lease Agreement is made between the landlord and tenant regarding the rental of office space.");
-    doc.Push(p1);
+    let paragraph1 = Api.CreateParagraph();
+    paragraph1.AddText("This Lease Agreement is made between the landlord and tenant regarding the rental of office space.");
+    doc.Push(paragraph1);
 
-    let p2 = Api.CreateParagraph();
-    p2.AddText("The lease term shall begin on July 1st, 2025 and terminate on June 30th, 2026, with a monthly rent of $2,500.");
-    doc.Push(p2);
+    let paragraph2 = Api.CreateParagraph();
+    paragraph2.AddText("The lease term shall begin on July 1st, 2025 and terminate on June 30th, 2026, with a monthly rent of $2,500.");
+    doc.Push(paragraph2);
 
-    let p3 = Api.CreateParagraph();
-    p3.AddText("Late payment beyond 5 days will result in a $100 fee. The tenant is responsible for utilities and maintenance.");
-    doc.Push(p3);
+    let paragraph3 = Api.CreateParagraph();
+    paragraph3.AddText("Late payment beyond 5 days will result in a $100 fee. The tenant is responsible for utilities and maintenance.");
+    doc.Push(paragraph3);
   }
 
   // Insert sample summary
@@ -40,9 +40,9 @@ if (token === "sk-proj...") {
 
 // Normal GPT logic
 if (!fullText.trim()) {
-  let p = Api.CreateParagraph();
-  p.AddText("Document is empty. Nothing to summarize.");
-  doc.Push(p);
+  let paragraph = Api.CreateParagraph();
+  paragraph.AddText("Document is empty. Nothing to summarize.");
+  doc.Push(paragraph);
   return;
 }
 
@@ -51,7 +51,7 @@ let prompt = `Summarize the following document in 3-5 bullet points:\n\n${fullTe
 fetch("https://api.openai.com/v1/chat/completions", {
   method: "POST",
   headers: {
-    "Authorization": "Bearer " + token,
+    "Authorization": "Bearer " + OPENAI_API_KEY,
     "Content-Type": "application/json"
   },
   body: JSON.stringify({
@@ -66,9 +66,9 @@ fetch("https://api.openai.com/v1/chat/completions", {
   insertSummary(summary);
 })
 .catch(err => {
-  let p = Api.CreateParagraph();
-  p.AddText("Error: " + err.message);
-  doc.Push(p);
+  let paragraph = Api.CreateParagraph();
+  paragraph.AddText("Error: " + err.message);
+  doc.Push(paragraph);
 });
 
 // Function to insert formatted summary
@@ -105,72 +105,72 @@ This step extracts all paragraph content and sends it to GPT-4o. If the document
   <summary>Translate paragraphs script</summary>
 
     ```ts
-let token = "sk-proj..."; // Replace with your OpenAI API key
+    let OPENAI_API_KEY = "sk-proj..."; // Replace with your OpenAI API key
 
-let fullText = "";
-let paragraphs = doc.GetAllParagraphs();
+    let fullText = "";
+    let paragraphs = doc.GetAllParagraphs();
 
-// Collect all paragraph text
-for (let i = 0; i < paragraphs.length; i++) {
-  let p = paragraphs[i];
-  fullText += p.GetText().trim() + "\n";
-}
+    // Collect all paragraph text
+    for (let i = 0; i < paragraphs.length; i++) {
+      let paragraph = paragraphs[i];
+      fullText += paragraph.GetText().trim() + "\n";
+    }
 
-// Fallback for sandbox
-if (token === "sk-proj...") {
-  // Insert sample content if document is empty
-  if (!fullText.trim()) {
-    let p1 = Api.CreateParagraph();
-    p1.AddText("This Lease Agreement is made between the landlord and tenant regarding the rental of office space.");
-    doc.Push(p1);
+    // Fallback for sandbox
+    if (OPENAI_API_KEY === "sk-proj...") {
+      // Insert sample content if document is empty
+      if (!fullText.trim()) {
+        let paragraph1 = Api.CreateParagraph();
+        paragraph1.AddText("This Lease Agreement is made between the landlord and tenant regarding the rental of office space.");
+        doc.Push(paragraph1);
 
-    let p2 = Api.CreateParagraph();
-    p2.AddText("The lease term shall begin on July 1st, 2025 and terminate on June 30th, 2026, with a monthly rent of $2,500.");
-    doc.Push(p2);
+        let paragraph2 = Api.CreateParagraph();
+        paragraph2.AddText("The lease term shall begin on July 1st, 2025 and terminate on June 30th, 2026, with a monthly rent of $2,500.");
+        doc.Push(paragraph2);
 
-    let p3 = Api.CreateParagraph();
-    p3.AddText("Late payment beyond 5 days will result in a $100 fee. The tenant is responsible for utilities and maintenance.");
-    doc.Push(p3);
-  }
+        let paragraph3 = Api.CreateParagraph();
+        paragraph3.AddText("Late payment beyond 5 days will result in a $100 fee. The tenant is responsible for utilities and maintenance.");
+        doc.Push(paragraph3);
+      }
 
-  // Insert sample summary
-  let fallbackSummary = `• Lease agreement between landlord and tenant.\n• Covers rental terms, duration, and payment amount.\n• Includes late fee clause and responsibilities.`;
-  insertSummary(fallbackSummary);
-  return;
-}
+      // Insert sample summary
+      let fallbackSummary = `• Lease agreement between landlord and tenant.\n• Covers rental terms, duration, and payment amount.\n• Includes late fee clause and responsibilities.`;
+      insertSummary(fallbackSummary);
+      return;
+    }
 
-// Normal GPT logic
-if (!fullText.trim()) {
-  let p = Api.CreateParagraph();
-  p.AddText("Document is empty. Nothing to summarize.");
-  doc.Push(p);
-  return;
-}
+    // Normal GPT logic
+    if (!fullText.trim()) {
+      let paragraph = Api.CreateParagraph();
+      paragraph.AddText("Document is empty. Nothing to summarize.");
+      doc.Push(paragraph);
+      return;
+    }
 
-let prompt = `Summarize the following document in 3-5 bullet points:\n\n${fullText}`;
+    let prompt = `Summarize the following document in 3-5 bullet points:\n\n${fullText}`;
 
-fetch("https://api.openai.com/v1/chat/completions", {
-  method: "POST",
-  headers: {
-    "Authorization": "Bearer " + token,
-    "Content-Type": "application/json"
-  },
-  body: JSON.stringify({
-    model: "gpt-4o",
-    messages: [{ role: "user", content: prompt }],
-    temperature: 0.5
-  })
-})
-.then(res => res.json())
-.then(data => {
-  let summary = data.choices?.[0]?.message?.content || "Summary not available.";
-  insertSummary(summary);
-})
-.catch(err => {
-  let p = Api.CreateParagraph();
-  p.AddText("Error: " + err.message);
-  doc.Push(p);
-});
+    fetch("https://api.openai.com/v1/chat/completions", {
+      method: "POST",
+      headers: {
+        "Authorization": "Bearer " + OPENAI_API_KEY,
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        model: "gpt-4o",
+        messages: [{ role: "user", content: prompt }],
+        temperature: 0.5
+      })
+    })
+    .then(res => res.json())
+    .then(data => {
+      let summary = data.choices?.[0]?.message?.content || "Summary not available.";
+      insertSummary(summary);
+    })
+    .catch(err => {
+      let paragraph = Api.CreateParagraph();
+      paragraph.AddText("Error: " + err.message);
+      doc.Push(paragraph);
+    });
     ```
 
 </details>
@@ -188,25 +188,25 @@ This step creates a header and a content block for the summary and inserts both 
   <summary>Insert translated paragraphs script</summary>
 
     ```ts
-function insertTranslated(translated) {
-  let lines = translated.split(/\n---\n/);
-  for (let i = 0; i < lines.length; i++) {
-    let pIndex = paragraphMap[i]?.index;
-    let para = doc.GetElement(pIndex);
-    if (para && typeof para.GetElementsCount === "function") {
-      let translatedText = lines[i].trim();
+    function insertTranslated(translated) {
+      let lines = translated.split(/\n---\n/);
+      for (let i = 0; i < lines.length; i++) {
+        let paragraphIndex = paragraphMap[i]?.index;
+        let paragraph = doc.GetElement(pIndex);
+        if (paragraph && typeof paragraph.GetElementsCount === "function") {
+          let translatedText = lines[i].trim();
 
-      let innerCount = para.GetElementsCount();
-      for (let j = innerCount - 1; j >= 0; j--) {
-        para.RemoveElement(j);
+          let innerCount = paragraph.GetElementsCount();
+          for (let j = innerCount - 1; j >= 0; j--) {
+            paragraph.RemoveElement(j);
+          }
+
+          let run = Api.CreateRun();
+          run.AddText(translatedText);
+          paragraph.AddElement(run);
+        }
       }
-
-      let run = Api.CreateRun();
-      run.AddText(translatedText);
-      para.AddElement(run);
     }
-  }
-}
     ```
 
 </details>

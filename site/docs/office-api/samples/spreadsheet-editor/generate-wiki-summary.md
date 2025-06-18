@@ -5,11 +5,11 @@ This script fetches a summary from a Wikipedia article and uses OpenAI's GPT-4 t
 ```ts editor-xlsx
 const OPENAI_API_KEY = "sk-proj..."; // Replace with your OpenAI API key
 
-const responseSheet = Api.GetActiveSheet();
-responseSheet.GetRange("B1").SetColumnWidth(50);
-responseSheet.GetRange("A1:B1").SetBold(true);
+const worksheet = Api.GetActiveSheet();
+worksheet.GetRange("B1").SetColumnWidth(50);
+worksheet.GetRange("A1:B1").SetBold(true);
 
-const analysisRange = responseSheet.GetRange("A1:B4");
+const analysisRange = worksheet.GetRange("A1:B4");
 analysisRange.SetFontSize(11);
 analysisRange.SetWrap(true);
 analysisRange.SetAlignHorizontal("left");
@@ -19,14 +19,14 @@ analysisRange.SetColumnWidth(30);
 // If OpenAI API key is provided
 if (OPENAI_API_KEY != "sk-proj...") {
   const url = "https://en.wikipedia.org/wiki/Attack_on_Pearl_Harbor";
-const title = decodeURIComponent(url.split("/").pop());
-const wikiApi = `https://en.wikipedia.org/api/rest_v1/page/summary/${title}`;
+  const title = decodeURIComponent(url.split("/").pop());
+  const wikiApi = `https://en.wikipedia.org/api/rest_v1/page/summary/${title}`;
 
-fetch(wikiApi)
-  .then(res => res.json())
-  .then(data => {
-    const text = data.extract;
-    const prompt = `
+  fetch(wikiApi)
+    .then(res => res.json())
+    .then(data => {
+      const text = data.extract;
+      const prompt = `
 Extract the following structured information from the text below.
 
 Return a JSON object with:
@@ -68,8 +68,8 @@ Respond only with a JSON object. Do not include any formatting.
       ];
 
       output.forEach(([key, value], i) => {
-        responseSheet.GetRangeByNumber(i, 0).SetValue(key);
-        responseSheet.GetRangeByNumber(i, 1).SetValue(value);
+        worksheet.GetRangeByNumber(i, 0).SetValue(key);
+        worksheet.GetRangeByNumber(i, 1).SetValue(value);
       });
 
       console.log("Written structured info to columns A and B");
@@ -77,7 +77,7 @@ Respond only with a JSON object. Do not include any formatting.
   })
   .catch(err => {
     console.error("Error processing:", url, err);
-    responseSheet.GetRange("A1:B4").SetValue("(error)");
+    worksheet.GetRange("A1:B4").SetValue("(error)");
   });
 }
 else { // If OpenAI API key is not provided
@@ -95,8 +95,8 @@ else { // If OpenAI API key is not provided
     ["Time period", sampleData.timePeriod]
   ];
   output.forEach(([key, value], i) => {
-    responseSheet.GetRangeByNumber(i, 0).SetValue(key);
-    responseSheet.GetRangeByNumber(i, 1).SetValue(value);
+    worksheet.GetRangeByNumber(i, 0).SetValue(key);
+    worksheet.GetRangeByNumber(i, 1).SetValue(value);
   });
   console.log("Used sampleData (no real API key)");
   return;
@@ -117,11 +117,11 @@ This step prepares the active worksheet for displaying structured data.
   <summary>Layout script</summary>
 
 ```ts
-const responseSheet = Api.GetActiveSheet();
-responseSheet.GetRange("B1").SetColumnWidth(50);
-responseSheet.GetRange("A1:B1").SetBold(true);
+const worksheet = Api.GetActiveSheet();
+worksheet.GetRange("B1").SetColumnWidth(50);
+worksheet.GetRange("A1:B1").SetBold(true);
 
-const analysisRange = responseSheet.GetRange("A1:B4");
+const analysisRange = worksheet.GetRange("A1:B4");
 analysisRange.SetFontSize(11);
 analysisRange.SetWrap(true);
 analysisRange.SetAlignHorizontal("left");
@@ -196,8 +196,8 @@ Respond only with a JSON object. Do not include any formatting.
       ];
 
       output.forEach(([key, value], i) => {
-        responseSheet.GetRangeByNumber(i, 0).SetValue(key);
-        responseSheet.GetRangeByNumber(i, 1).SetValue(value);
+        worksheet.GetRangeByNumber(i, 0).SetValue(key);
+        worksheet.GetRangeByNumber(i, 1).SetValue(value);
       });
 
       console.log("Written structured info to columns A and B");
@@ -205,7 +205,7 @@ Respond only with a JSON object. Do not include any formatting.
   })
   .catch(err => {
     console.error("Error processing:", url, err);
-    responseSheet.GetRange("A1:B4").SetValue("(error)");
+    worksheet.GetRange("A1:B4").SetValue("(error)");
   });
 }
 ```
@@ -239,8 +239,8 @@ else { // If OpenAI API key is not provided
     ["Time period", sampleData.timePeriod]
   ];
   output.forEach(([key, value], i) => {
-    responseSheet.GetRangeByNumber(i, 0).SetValue(key);
-    responseSheet.GetRangeByNumber(i, 1).SetValue(value);
+    worksheet.GetRangeByNumber(i, 0).SetValue(key);
+    worksheet.GetRangeByNumber(i, 1).SetValue(value);
   });
   console.log("Used sampleData (no real API key)");
   return;
