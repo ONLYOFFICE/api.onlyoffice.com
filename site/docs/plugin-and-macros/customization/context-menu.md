@@ -33,10 +33,10 @@ The plugin can be accessed via the context menu.
            items: [],
          },
        ],
-     }
+     };
 
-     this.executeMethod("AddContextMenuItem", [items])
-   })
+     window.Asc.plugin.executeMethod("AddContextMenuItem", [items]);
+   });
    ```
 
    ### ContextMenuOptions
@@ -110,10 +110,10 @@ The plugin can be accessed via the context menu.
            items: [],
          },
        ],
-     }
+     };
 
-     this.executeMethod("AddContextMenuItem", [items])
-   })
+     window.Asc.plugin.executeMethod("AddContextMenuItem", [items]);
+   });
    ```
 
 ## Updating a context menu item
@@ -141,10 +141,10 @@ Asc.plugin.attachEvent("onContextMenuShow", (options) => {
         items: [],
       },
     ],
-  }
+  };
 
-  this.executeMethod("UpdateContextMenuItem", [items])
-})
+  window.Asc.plugin.executeMethod("UpdateContextMenuItem", [items]);
+});
 ```
 
 ## Clicking a context menu item
@@ -161,19 +161,19 @@ Asc.plugin.attachEvent("onContextMenuShow", (options) => {
 
    ``` ts
    window.Asc.plugin.event_onContextMenuClick = (id) => {
-     const pluginObj = window.Asc.plugin
-     const itemId = id
-     const itemData = undefined
-     const itemPos = itemId.indexOf("_oo_sep_")
+     const pluginObj = window.Asc.plugin;
+     const itemId = id;
+     const itemData = undefined;
+     const itemPos = itemId.indexOf("_oo_sep_");
      if (itemPos !== -1) {
-       const itemData = itemId.slice(itemPos + 8)
-       const itemId = itemId.slice(0, itemPos)
+       const itemData = itemId.slice(itemPos + 8);
+       const itemId = itemId.slice(0, itemPos);
      }
 
      if (pluginObj.contextMenuEvents && pluginObj.contextMenuEvents[itemId]) {
-       pluginObj.contextMenuEvents[itemId].call(pluginObj, itemData)
+       pluginObj.contextMenuEvents[itemId].call(pluginObj, itemData);
      }
-   }
+   };
    ```
 
 2. Specify the **attachContextMenuClickEvent** to add an event listener, a function that will be called whenever the specified button is clicked in the context menu and triggers an event. For each context menu button, you can specify a separate event listener by its ID.
@@ -191,8 +191,8 @@ Asc.plugin.attachEvent("onContextMenuShow", (options) => {
 
    ``` ts
    Asc.plugin.attachContextMenuClickEvent("onNameClick", (data) => {
-     console.log(data)
-   })
+     console.log(data);
+   });
    ```
 
 For example, you can create your own spellchecker. In this case, the context menu items with words will have the same ID and the same event listener. And the necessary word will be defined with the data from the **attachContextMenuClickEvent** method.

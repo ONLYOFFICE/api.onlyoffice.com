@@ -1,0 +1,176 @@
+.commentsExternalToolbar {
+  background-color: var(--working-with-comments-bg-color);
+  border-radius: 3px;
+  padding: 15px 24px;
+  margin-bottom: 16px;
+
+  font-family: inherit;
+
+  width: 95%;
+  width: -moz-available;
+  width: -webkit-fill-available;
+}
+
+.list-buttons {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 16px;
+
+  font: inherit;
+  margin-bottom: 16px;
+  padding: 0;
+
+  list-style: disc outside none;
+  list-style-type: none;
+}
+
+.list-buttons > * {
+  margin: 0 !important;
+}
+
+.list-buttons button {
+  cursor: pointer;
+  padding: 16px 20px;
+
+  text-decoration: none !important;
+  font: inherit;
+  font-weight: 600;
+  line-height: 1em;
+
+  color: var(--working-with-comments-button-color);
+  border: 1px solid var(--working-with-comments-button-border-color);
+  border-radius: 3px;
+  background-color: transparent;
+}
+
+.list-buttons button.active {
+  background-color: #ff6f3d;
+  border: 1px solid #ff6f3d;
+  color: #ffffff;
+}
+.list-buttons button.disabled {
+  color: var(--working-with-comments-button-disabled-color);
+  border-color: var(--working-with-comments-button-disabled-border-color);
+  pointer-events: none;
+}
+
+.comment-date,
+.comment-author {
+  font: inherit;
+  color: var(--working-with-comments-top-color);
+}
+
+.comment-message {
+  font: inherit;
+  font-style: italic;
+  color: var(--working-with-comments-bottom-color);
+  margin-top: 5px;
+}
+
+.comment {
+  font: inherit;
+  margin-bottom: 12px;
+}
+
+.comment > div:first-child {
+  display: inline-flex;
+  flex-wrap: wrap;
+  row-gap: 0;
+  column-gap: 20px;
+}
+
+.comment.reply {
+  background-image: url("@site/static/assets/images/working-with-comments/reply.svg");
+  background-repeat: no-repeat;
+  background-position-y: 4px;
+  padding-left: 38px;
+}
+
+.replies {
+  margin-left: 50px;
+}
+
+.commentsExternalToolbar textarea,
+.add-comment-area {
+  border: 1px solid var(--working-with-comments-comment-border-color);
+  color: var(--working-with-comments-comment-color);
+  background-color: var(--working-with-comments-comment-bg-color);
+  resize: none;
+  border-radius: 3px;
+  width: 95%;
+  width: -moz-available;
+  width: -webkit-fill-available;
+}
+
+.add-comment-area {
+  outline: none;
+  border-radius: 3px;
+  padding: 15px 24px;
+  margin-bottom: 16px;
+  width: 95%;
+  height: 100px;
+  width: -moz-available;
+  width: -webkit-fill-available;
+}
+
+.add-reply-area {
+  padding: 5px 10px;
+  margin-left: 50px;
+  height: 40px;
+}
+
+:root {
+  --working-with-comments-top-color: #666666;
+  --working-with-comments-bottom-color: #333333;
+  --working-with-comments-bg-color: #f9f9f9;
+  --working-with-comments-comment-color: #black;
+  --working-with-comments-comment-bg-color: #f9f9f9;
+  --working-with-comments-comment-border-color: #bfbfbf;
+  --working-with-comments-button-color: #444444;
+  --working-with-comments-button-border-color: #aaaaaa;
+  --working-with-comments-button-disabled-color: #cccccc;
+  --working-with-comments-button-disabled-border-color: #cccccc;
+}
+
+html[data-theme="dark"] {
+  --working-with-comments-top-color: #afafaf;
+  --working-with-comments-bottom-color: #d4d4d4;
+  --working-with-comments-bg-color: #1a1a1a;
+  --working-with-comments-comment-color: white;
+  --working-with-comments-comment-bg-color: #161616;
+  --working-with-comments-comment-border-color: #818181;
+  --working-with-comments-button-color: #d4d4d4;
+  --working-with-comments-button-border-color: #cecece;
+  --working-with-comments-button-disabled-color: #6b6b6b;
+  --working-with-comments-button-disabled-border-color: #747474;
+}
+
+@media (hover: hover) {
+  .list-buttons button:hover {
+    color: #ff6f3d;
+    border-color: #ff6f3d;
+  }
+
+  .list-buttons button.active:hover {
+    color: #ffffff;
+    background-color: #ff7a4b;
+    border-color: #ff6f3d;
+  }
+}
+
+@media (width <= 500px) {
+  .comment.reply {
+    padding-left: 22px;
+  }
+
+  .replies {
+    margin-left: 25px;
+  }
+}
+
+@media (width <= 300px) {
+  .replies {
+    margin-left: 0;
+  }
+}

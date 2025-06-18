@@ -45,9 +45,9 @@ HRESULT CreateInstance([in, optional] VARIANT value);
     </TabItem>
     <TabItem value="builder" label=".docbuilder">
         ```ts
-        const oDocument = Api.GetDocument()
-        const oParagraph = Api.CreateParagraph()
-        oParagraph.SetSpacingAfter(1000, false)
+        let doc = Api.GetDocument();
+        let paragraph = Api.CreateParagraph();
+        paragraph.SetSpacingAfter(1000, false);
         ```
     </TabItem>
 </Tabs>

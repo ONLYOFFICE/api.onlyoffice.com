@@ -6,6 +6,12 @@ Starting from version 8.1, it is recommended to add the [shardkey](../get-starte
 
 ## Request parameters and their description
 
+```mdx-code-block
+import APITable from '@site/src/components/APITable/APITable';
+
+<APITable>
+```
+
 | Parameter | Type    | Presence                  | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
 | --------- | ------- | ------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | argument  | object  | optional                  | Defines the arguments to pass to the created document.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
@@ -13,6 +19,10 @@ Starting from version 8.1, it is recommended to add the [shardkey](../get-starte
 | key       | string  | required                  | Defines the request identifier used to unambiguously identify the request. The key is formed on the **document builder service** side and is returned as the response to the first request. When the asynchronous request is used (the *async* parameter is set to **true**) the key is not present in the first request, but must be present in all the following requests which will be send before the generation is complete. When the synchronous request is used (the *async* parameter is set to **false**), this parameter is not required. |
 | token     | string  | required by configuration | Defines the encrypted signature added to the **ONLYOFFICE Docs** config in the form of a [token](./signature/request/token-in-body.md#request-to-document-builder-service).                                                                                                                                                                                                                                                                                                                                                                         |
 | url       | string  | required                  | Defines the absolute URL to the *.docbuilder* file.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+
+```mdx-code-block
+</APITable>
+```
 
 The *.docbuilder* file contains the script used to generate the output document file (text document, spreadsheet or presentation), specifies the output file format and name. Once the document generation is ready, the response with the absolute URL to the resulting file will be returned (see below).
 

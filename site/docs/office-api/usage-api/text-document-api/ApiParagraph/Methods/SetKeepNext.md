@@ -1,6 +1,6 @@
 # SetKeepNext
 
-Specifies that when rendering the document using a paginated view, the contents of the current paragraph are at least\
+Specifies that when rendering the document using a paginated view, the contents of the current paragraph are at least
 partly rendered on the same page as the following paragraph whenever possible.
 
 ## Syntax
@@ -15,7 +15,7 @@ expression.SetKeepNext(isKeepNext);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| isKeepNext | Required | boolean |  | The true value enables the option to keep lines of the paragraph on the same\ page as the following paragraph. |
+| isKeepNext | Required | boolean |  | The true value enables the option to keep lines of the paragraph on the same page as the following paragraph. |
 
 ## Returns
 

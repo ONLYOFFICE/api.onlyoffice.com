@@ -22,13 +22,21 @@ def SetTmpFolder(self, str folder);
 <Tabs>
     <TabItem value="python" label="Python">
         ``` py
+        import os
+        import docbuilder
+
         builder = docbuilder.CDocBuilder()
-        builder.SetTmpFolder(L"DocBuilderTemp")
+        builder.SetTmpFolder("DocBuilderTemp")
+        builder.CreateFile("docx")
+
+        dstPath = os.getcwd() + "/result.docx"
+        builder.SaveFile("docx", dstPath)
+        builder.CloseFile()
         ```
     </TabItem>
     <TabItem value="builder" label=".docbuilder">
         ```ts
-        builder.SetTmpFolder("DocBuilderTemp")
+        builder.SetTmpFolder("DocBuilderTemp");
         ```
     </TabItem>
 </Tabs>

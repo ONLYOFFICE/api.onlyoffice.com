@@ -3,11 +3,14 @@ sidebar_custom_props:
   icon: /assets/images/editor/connectors/alfresco.svg
 ---
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 # Alfresco 集成
 
 这个[插件](https://github.com/ONLYOFFICE/onlyoffice-alfresco)支持您在[Alfresco](https://www.alfresco.com/)Share中用ONLYOFFICE文档编辑办公文档。
 
-该插件在官方[Alfresco附加组件目录](https://community.alfresco.com/docs/DOC-7918-onlyoffice-connector-for-alfresco)获取。
+该插件在官方[Alfresco附加组件目录](https://connect.hyland.com/t5/alfresco-forum/onlyoffice-connector-for-alfresco/m-p/4606)获取。
 
 ## 功能特性
 
@@ -41,21 +44,22 @@ sidebar_custom_props:
 
 2. 使用**模块管理工具(MMT)**安装模块，运行以下命令：
 
-   **Alfresco**
-
-   ``` sh
-   java -jar /usr/local/tomcat/alfresco-mmt/alfresco-mmt.jar install /usr/local/tomcat/amps/onlyoffice-integration-repo.amp /usr/local/tomcat/webapps/alfresco
-   ```
-
-   **Share**
-
-   ``` sh
-   java -jar /usr/local/tomcat/alfresco-mmt/alfresco-mmt.jar install /usr/local/tomcat/amps_share/onlyoffice-integration-share.amp /usr/local/tomcat/webapps/share
-   ```
+   <Tabs>
+      <TabItem value="alfresco" label="Alfresco">
+         ``` sh
+         java -jar /usr/local/tomcat/alfresco-mmt/alfresco-mmt.jar install /usr/local/tomcat/amps/onlyoffice-integration-repo.amp /usr/local/tomcat/webapps/alfresco
+         ```
+      </TabItem>
+      <TabItem value="share" label="Share">
+         ``` sh
+         java -jar /usr/local/tomcat/alfresco-mmt/alfresco-mmt.jar install /usr/local/tomcat/amps_share/onlyoffice-integration-share.amp /usr/local/tomcat/webapps/share
+         ```
+      </TabItem>
+   </Tabs>
 
    有关使用MMT的更多详细信息，请访问以下地址：`https://docs.alfresco.com/content-services/latest/install/zip/amp/`。
 
-3. 确保ONLYOFFICE文档能够向Alfresco发送POST请求。
+1. 确保ONLYOFFICE文档能够向Alfresco发送POST请求。
 
    您可能需要在alfresco-global.properties中更改以下行，或者您可以使用**配置页面**进行设置：[配置页面](#configuring-onlyoffice-alfresco-module-package):
 
@@ -71,7 +75,7 @@ sidebar_custom_props:
 
    > 该文件可能位于 */usr/local/tomcat/shared/classes/alfresco-global.properties*。
 
-4. 重启Alfresco:
+2. 重启Alfresco:
 
    ``` sh
    sudo ./alfresco.sh stop

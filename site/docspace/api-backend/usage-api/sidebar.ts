@@ -4,6 +4,60 @@ const sidebar: SidebarsConfig = {
   apisidebar: [
     {
       type: "category",
+      label: "Api keys",
+      collapsible: true,
+      collapsed: true,
+      items: [
+        {
+          type: "doc",
+          id: "docspace/api-backend/usage-api/api",
+        },
+        {
+          type: "category",
+          label: "Api keys",
+          items: [
+            {
+              type: "doc",
+              id: "docspace/api-backend/usage-api/create-api-key",
+              label: "Create a user API key",
+              className: "api-method post",
+            },
+            {
+              type: "doc",
+              id: "docspace/api-backend/usage-api/get-api-keys",
+              label: "Get user API keys",
+              className: "api-method get",
+            },
+            {
+              type: "doc",
+              id: "docspace/api-backend/usage-api/get-all-permissions",
+              label: "Get API key permissions",
+              className: "api-method get",
+            },
+            {
+              type: "doc",
+              id: "docspace/api-backend/usage-api/get-api-key",
+              label: "Get user API key info",
+              className: "api-method get",
+            },
+            {
+              type: "doc",
+              id: "docspace/api-backend/usage-api/update-api-key",
+              label: "Update an API key",
+              className: "api-method put",
+            },
+            {
+              type: "doc",
+              id: "docspace/api-backend/usage-api/delete-api-key",
+              label: "Delete a user API key",
+              className: "api-method delete",
+            },
+          ],
+        },
+      ],
+    },
+    {
+      type: "category",
       label: "Authentication",
       collapsible: true,
       collapsed: true,
@@ -193,7 +247,7 @@ const sidebar: SidebarsConfig = {
             {
               type: "doc",
               id: "docspace/api-backend/usage-api/start-filling",
-              label: "Starts filling",
+              label: "Start file filling",
               className: "api-method put",
             },
             {
@@ -205,7 +259,7 @@ const sidebar: SidebarsConfig = {
             {
               type: "doc",
               id: "docspace/api-backend/usage-api/open-edit",
-              label: "Open a file",
+              label: "Open a file configuration",
               className: "api-method get",
             },
             {
@@ -223,7 +277,7 @@ const sidebar: SidebarsConfig = {
             {
               type: "doc",
               id: "docspace/api-backend/usage-api/protect-users",
-              label: "Get users with the access to the protected file",
+              label: "Get users access rights to the protected file",
               className: "api-method get",
             },
             {
@@ -277,7 +331,7 @@ const sidebar: SidebarsConfig = {
             {
               type: "doc",
               id: "docspace/api-backend/usage-api/create-text-file",
-              label: "Create a txt file",
+              label: "Create a text file",
               className: "api-method post",
             },
             {
@@ -301,7 +355,7 @@ const sidebar: SidebarsConfig = {
             {
               type: "doc",
               id: "docspace/api-backend/usage-api/get-fill-result",
-              label: "Gets fill result",
+              label: "Get form-filling result",
               className: "api-method get",
             },
             {
@@ -324,6 +378,12 @@ const sidebar: SidebarsConfig = {
             },
             {
               type: "doc",
+              id: "docspace/api-backend/usage-api/set-custom-filter-tag",
+              label: "Set the Custom Filter editing mode",
+              className: "api-method put",
+            },
+            {
+              type: "doc",
               id: "docspace/api-backend/usage-api/restore-version",
               label: "Restore a file version",
               className: "api-method get",
@@ -342,14 +402,14 @@ const sidebar: SidebarsConfig = {
             },
             {
               type: "doc",
-              id: "docspace/api-backend/usage-api/set-order",
-              label: "Sets order of a file with ID specified in the request",
+              id: "docspace/api-backend/usage-api/set-order-file",
+              label: "Set file order",
               className: "api-method put",
             },
             {
               type: "doc",
               id: "docspace/api-backend/usage-api/set-files-order",
-              label: "Sets order",
+              label: "Set order of files",
               className: "api-method put",
             },
             {
@@ -367,8 +427,26 @@ const sidebar: SidebarsConfig = {
             {
               type: "doc",
               id: "docspace/api-backend/usage-api/save-as-pdf",
-              label: "Save as pdf",
+              label: "Save a file as PDF",
               className: "api-method post",
+            },
+            {
+              type: "doc",
+              id: "docspace/api-backend/usage-api/save-form-role-mapping",
+              label: "Save form role mapping",
+              className: "api-method post",
+            },
+            {
+              type: "doc",
+              id: "docspace/api-backend/usage-api/get-all-form-roles",
+              label: "Get form roles",
+              className: "api-method get",
+            },
+            {
+              type: "doc",
+              id: "docspace/api-backend/usage-api/manage-form-filling",
+              label: "Perform form filling action",
+              className: "api-method put",
             },
             {
               type: "doc",
@@ -391,13 +469,13 @@ const sidebar: SidebarsConfig = {
             {
               type: "doc",
               id: "docspace/api-backend/usage-api/create-thumbnails",
-              label: "Create thumbnails",
+              label: "Create file thumbnails",
               className: "api-method post",
             },
             {
               type: "doc",
               id: "docspace/api-backend/usage-api/check-fill-form-draft",
-              label: "Check the form draft",
+              label: "Check the form draft filling",
               className: "api-method post",
             },
             {
@@ -438,6 +516,12 @@ const sidebar: SidebarsConfig = {
             },
             {
               type: "doc",
+              id: "docspace/api-backend/usage-api/get-folder",
+              label: "Get folder form filter",
+              className: "api-method get",
+            },
+            {
+              type: "doc",
               id: "docspace/api-backend/usage-api/create-folder",
               label: "Create a folder",
               className: "api-method post",
@@ -463,12 +547,12 @@ const sidebar: SidebarsConfig = {
             {
               type: "doc",
               id: "docspace/api-backend/usage-api/set-file-order",
-              label: "Sets file order in the folder with ID specified in the request",
+              label: "Set file order",
               className: "api-method put",
             },
             {
               type: "doc",
-              id: "docspace/api-backend/usage-api/get-folder",
+              id: "docspace/api-backend/usage-api/get-folder-by-folder-id",
               label: "Get a folder by ID",
               className: "api-method get",
             },
@@ -529,7 +613,7 @@ const sidebar: SidebarsConfig = {
             {
               type: "doc",
               id: "docspace/api-backend/usage-api/check-upload",
-              label: "Checks upload",
+              label: "Check file uploads",
               className: "api-method post",
             },
             {
@@ -589,13 +673,19 @@ const sidebar: SidebarsConfig = {
             {
               type: "doc",
               id: "docspace/api-backend/usage-api/copy-batch-items",
-              label: "Copy to a folder",
+              label: "Copy to the folder",
               className: "api-method put",
             },
             {
               type: "doc",
               id: "docspace/api-backend/usage-api/delete-batch-items",
               label: "Delete files and folders",
+              className: "api-method put",
+            },
+            {
+              type: "doc",
+              id: "docspace/api-backend/usage-api/delete-file-versions",
+              label: "Delete file versions",
               className: "api-method put",
             },
             {
@@ -607,7 +697,13 @@ const sidebar: SidebarsConfig = {
             {
               type: "doc",
               id: "docspace/api-backend/usage-api/get-operation-statuses",
-              label: "Get active operations",
+              label: "Get active file operations",
+              className: "api-method get",
+            },
+            {
+              type: "doc",
+              id: "docspace/api-backend/usage-api/get-operation-statuses-by-type",
+              label: "Get file operation statuses",
               className: "api-method get",
             },
             {
@@ -619,25 +715,25 @@ const sidebar: SidebarsConfig = {
             {
               type: "doc",
               id: "docspace/api-backend/usage-api/move-batch-items",
-              label: "Move to a folder",
+              label: "Move or copy to a folder",
               className: "api-method put",
             },
             {
               type: "doc",
               id: "docspace/api-backend/usage-api/move-or-copy-batch-check",
-              label: "Check files and folders for conflicts",
+              label: "Check and move or copy to a folder",
               className: "api-method get",
             },
             {
               type: "doc",
               id: "docspace/api-backend/usage-api/duplicate-batch-items",
-              label: "Duplicates all the selected files and folders",
+              label: "Duplicate files and folders",
               className: "api-method put",
             },
             {
               type: "doc",
               id: "docspace/api-backend/usage-api/move-or-copy-dest-folder-check",
-              label: "Moves or copies",
+              label: "Check for moving or copying to a folder",
               className: "api-method get",
             },
             {
@@ -661,212 +757,14 @@ const sidebar: SidebarsConfig = {
             {
               type: "doc",
               id: "docspace/api-backend/usage-api/update-rooms-quota",
-              label: "Change a room quota limit",
+              label: "Change the room quota limit",
               className: "api-method put",
             },
             {
               type: "doc",
               id: "docspace/api-backend/usage-api/reset-room-quota",
-              label: "Reset a room quota limit",
+              label: "Reset the room quota limit",
               className: "api-method put",
-            },
-          ],
-        },
-        {
-          type: "category",
-          label: "Rooms",
-          items: [
-            {
-              type: "doc",
-              id: "docspace/api-backend/usage-api/create-room",
-              label: "Create a room",
-              className: "api-method post",
-            },
-            {
-              type: "doc",
-              id: "docspace/api-backend/usage-api/get-rooms-folder",
-              label: "Get rooms",
-              className: "api-method get",
-            },
-            {
-              type: "doc",
-              id: "docspace/api-backend/usage-api/get-room-info",
-              label: "Get room information",
-              className: "api-method get",
-            },
-            {
-              type: "doc",
-              id: "docspace/api-backend/usage-api/update-room",
-              label: "Rename a room",
-              className: "api-method put",
-            },
-            {
-              type: "doc",
-              id: "docspace/api-backend/usage-api/delete-room",
-              label: "Remove a room",
-              className: "api-method delete",
-            },
-            {
-              type: "doc",
-              id: "docspace/api-backend/usage-api/archive-room",
-              label: "Archive a room",
-              className: "api-method put",
-            },
-            {
-              type: "doc",
-              id: "docspace/api-backend/usage-api/unarchive-room",
-              label: "Unarchive a room",
-              className: "api-method put",
-            },
-            {
-              type: "doc",
-              id: "docspace/api-backend/usage-api/set-room-security",
-              label: "Set room access rights",
-              className: "api-method put",
-            },
-            {
-              type: "doc",
-              id: "docspace/api-backend/usage-api/get-room-security-info",
-              label: "Get room access rights",
-              className: "api-method get",
-            },
-            {
-              type: "doc",
-              id: "docspace/api-backend/usage-api/set-link",
-              label: "Set an external or invitation link",
-              className: "api-method put",
-            },
-            {
-              type: "doc",
-              id: "docspace/api-backend/usage-api/get-room-links",
-              label: "Get room links",
-              className: "api-method get",
-            },
-            {
-              type: "doc",
-              id: "docspace/api-backend/usage-api/get-rooms-primary-external-link",
-              label: "Get primary external link",
-              className: "api-method get",
-            },
-            {
-              type: "doc",
-              id: "docspace/api-backend/usage-api/add-tags",
-              label: "Add room tags",
-              className: "api-method put",
-            },
-            {
-              type: "doc",
-              id: "docspace/api-backend/usage-api/delete-tags",
-              label: "Remove room tags",
-              className: "api-method delete",
-            },
-            {
-              type: "doc",
-              id: "docspace/api-backend/usage-api/create-room-logo",
-              label: "Create a room logo",
-              className: "api-method post",
-            },
-            {
-              type: "doc",
-              id: "docspace/api-backend/usage-api/delete-room-logo",
-              label: "Remove a room logo",
-              className: "api-method delete",
-            },
-            {
-              type: "doc",
-              id: "docspace/api-backend/usage-api/change-room-cover",
-              label: "Changes room cover",
-              className: "api-method post",
-            },
-            {
-              type: "doc",
-              id: "docspace/api-backend/usage-api/get-covers",
-              label: "Gets covers",
-              className: "api-method get",
-            },
-            {
-              type: "doc",
-              id: "docspace/api-backend/usage-api/pin-room",
-              label: "Pin a room",
-              className: "api-method put",
-            },
-            {
-              type: "doc",
-              id: "docspace/api-backend/usage-api/unpin-room",
-              label: "Unpin a room",
-              className: "api-method put",
-            },
-            {
-              type: "doc",
-              id: "docspace/api-backend/usage-api/resend-email-invitations",
-              label: "Resend room invitations",
-              className: "api-method post",
-            },
-            {
-              type: "doc",
-              id: "docspace/api-backend/usage-api/reorder",
-              label: "Reorders to a room with ID specified in the request",
-              className: "api-method put",
-            },
-            {
-              type: "doc",
-              id: "docspace/api-backend/usage-api/get-new-room-items",
-              label: "Get new room items",
-              className: "api-method get",
-            },
-            {
-              type: "doc",
-              id: "docspace/api-backend/usage-api/create-room-third-party",
-              label: "Create a third-party room",
-              className: "api-method post",
-            },
-            {
-              type: "doc",
-              id: "docspace/api-backend/usage-api/create-tag",
-              label: "Create a tag",
-              className: "api-method post",
-            },
-            {
-              type: "doc",
-              id: "docspace/api-backend/usage-api/get-tags-info",
-              label: "Get tags",
-              className: "api-method get",
-            },
-            {
-              type: "doc",
-              id: "docspace/api-backend/usage-api/delete-custom-tags",
-              label: "Delete tags",
-              className: "api-method delete",
-            },
-            {
-              type: "doc",
-              id: "docspace/api-backend/usage-api/upload-room-logo",
-              label: "Upload an image for room logo",
-              className: "api-method post",
-            },
-            {
-              type: "doc",
-              id: "docspace/api-backend/usage-api/start-room-index-export",
-              label: "Starts room index export",
-              className: "api-method post",
-            },
-            {
-              type: "doc",
-              id: "docspace/api-backend/usage-api/get-room-index-export",
-              label: "Gets room index export",
-              className: "api-method get",
-            },
-            {
-              type: "doc",
-              id: "docspace/api-backend/usage-api/terminate-room-index-export",
-              label: "Terminates room index export",
-              className: "api-method delete",
-            },
-            {
-              type: "doc",
-              id: "docspace/api-backend/usage-api/get-rooms-new-items",
-              label: "Gets room new items",
-              className: "api-method get",
             },
           ],
         },
@@ -879,6 +777,12 @@ const sidebar: SidebarsConfig = {
               id: "docspace/api-backend/usage-api/check-doc-service-url",
               label: "Check the document service URL",
               className: "api-method put",
+            },
+            {
+              type: "doc",
+              id: "docspace/api-backend/usage-api/get-doc-service-url",
+              label: "Get the document service URL",
+              className: "api-method get",
             },
             {
               type: "doc",
@@ -913,7 +817,7 @@ const sidebar: SidebarsConfig = {
             {
               type: "doc",
               id: "docspace/api-backend/usage-api/forcesave",
-              label: "Change the forcasaving ability",
+              label: "Change the forcesaving ability",
               className: "api-method put",
             },
             {
@@ -924,14 +828,32 @@ const sidebar: SidebarsConfig = {
             },
             {
               type: "doc",
-              id: "docspace/api-backend/usage-api/get-module",
-              label: "Get the Documents information",
+              id: "docspace/api-backend/usage-api/get-files-module",
+              label: "Get the 'Documents' information",
               className: "api-method get",
             },
             {
               type: "doc",
+              id: "docspace/api-backend/usage-api/hide-confirm-cancel-operation",
+              label: "Hide confirmation dialog when canceling operations",
+              className: "api-method put",
+            },
+            {
+              type: "doc",
+              id: "docspace/api-backend/usage-api/hide-confirm-convert",
+              label: "Hide the confirmation dialog when converting",
+              className: "api-method put",
+            },
+            {
+              type: "doc",
+              id: "docspace/api-backend/usage-api/hide-confirm-room-lifetime",
+              label: "Hide confirmation dialog when changing room lifetime settings",
+              className: "api-method put",
+            },
+            {
+              type: "doc",
               id: "docspace/api-backend/usage-api/is-available-privacy-room-settings",
-              label: "Check the Private Room availability",
+              label: "Check the 'Private Room' availability",
               className: "api-method get",
             },
             {
@@ -985,7 +907,7 @@ const sidebar: SidebarsConfig = {
             {
               type: "doc",
               id: "docspace/api-backend/usage-api/set-open-editor-in-same-tab",
-              label: "Open document in same browser tab",
+              label: "Open document in the same browser tab",
               className: "api-method put",
             },
           ],
@@ -997,7 +919,7 @@ const sidebar: SidebarsConfig = {
             {
               type: "doc",
               id: "docspace/api-backend/usage-api/get-third-party-accounts",
-              label: "Get third-party accounts",
+              label: "Get the third-party accounts",
               className: "api-method get",
             },
             {
@@ -1021,7 +943,7 @@ const sidebar: SidebarsConfig = {
             {
               type: "doc",
               id: "docspace/api-backend/usage-api/get-common-third-party-folders",
-              label: "Get common third-party services",
+              label: "Get the common third-party services",
               className: "api-method get",
             },
             {
@@ -1041,6 +963,42 @@ const sidebar: SidebarsConfig = {
               id: "docspace/api-backend/usage-api/get-all-providers",
               label: "Get all providers",
               className: "api-method get",
+            },
+          ],
+        },
+        {
+          type: "category",
+          label: "Sharing",
+          items: [
+            {
+              type: "doc",
+              id: "docspace/api-backend/usage-api/shared-users",
+              label: "Get user access rights by file ID",
+              className: "api-method get",
+            },
+            {
+              type: "doc",
+              id: "docspace/api-backend/usage-api/send-editor-notify",
+              label: "Send the mention message",
+              className: "api-method post",
+            },
+            {
+              type: "doc",
+              id: "docspace/api-backend/usage-api/change-owner",
+              label: "Change the file owner",
+              className: "api-method post",
+            },
+            {
+              type: "doc",
+              id: "docspace/api-backend/usage-api/get-external-share-data",
+              label: "Get the external data",
+              className: "api-method get",
+            },
+            {
+              type: "doc",
+              id: "docspace/api-backend/usage-api/apply-external-share-password",
+              label: "Apply external data password",
+              className: "api-method post",
             },
           ],
         },
@@ -1135,7 +1093,205 @@ const sidebar: SidebarsConfig = {
             {
               type: "doc",
               id: "docspace/api-backend/usage-api/get-groups-with-shared",
-              label: "Gets groups with shared",
+              label: "Get groups with sharing settings",
+              className: "api-method get",
+            },
+          ],
+        },
+      ],
+    },
+    {
+      type: "category",
+      label: "Migration",
+      collapsible: true,
+      collapsed: true,
+      items: [
+        {
+          type: "doc",
+          id: "docspace/api-backend/usage-api/api",
+        },
+        {
+          type: "category",
+          label: "Migration",
+          items: [
+            {
+              type: "doc",
+              id: "docspace/api-backend/usage-api/list",
+              label: "Get migrations",
+              className: "api-method get",
+            },
+            {
+              type: "doc",
+              id: "docspace/api-backend/usage-api/upload-and-init",
+              label: "Upload and initialize migration",
+              className: "api-method post",
+            },
+            {
+              type: "doc",
+              id: "docspace/api-backend/usage-api/status",
+              label: "Get migration status",
+              className: "api-method get",
+            },
+            {
+              type: "doc",
+              id: "docspace/api-backend/usage-api/cancel",
+              label: "Cancel migration",
+              className: "api-method post",
+            },
+            {
+              type: "doc",
+              id: "docspace/api-backend/usage-api/clear",
+              label: "Clear migration",
+              className: "api-method post",
+            },
+            {
+              type: "doc",
+              id: "docspace/api-backend/usage-api/migrate",
+              label: "Start migration",
+              className: "api-method post",
+            },
+            {
+              type: "doc",
+              id: "docspace/api-backend/usage-api/logs",
+              label: "Get migration logs",
+              className: "api-method get",
+            },
+            {
+              type: "doc",
+              id: "docspace/api-backend/usage-api/finish",
+              label: "Finish migration",
+              className: "api-method post",
+            },
+          ],
+        },
+      ],
+    },
+    {
+      type: "category",
+      label: "OAuth 2.0",
+      collapsible: true,
+      collapsed: true,
+      items: [
+        {
+          type: "doc",
+          id: "docspace/api-backend/usage-api/api",
+        },
+        {
+          type: "category",
+          label: "Authorization",
+          items: [
+            {
+              type: "doc",
+              id: "docspace/api-backend/usage-api/o-auth-2-authorization-endpoint",
+              label: "OAuth2 authorization endpoint",
+              className: "api-method get",
+            },
+            {
+              type: "doc",
+              id: "docspace/api-backend/usage-api/o-auth-2-consent-endpoint",
+              label: "OAuth2 consent endpoint",
+              className: "api-method post",
+            },
+            {
+              type: "doc",
+              id: "docspace/api-backend/usage-api/o-auth-2-token-endpoint",
+              label: "OAuth2 token endpoint",
+              className: "api-method post",
+            },
+          ],
+        },
+        {
+          type: "category",
+          label: "Client Management",
+          items: [
+            {
+              type: "doc",
+              id: "docspace/api-backend/usage-api/update-client",
+              label: "Update an existing OAuth2 client",
+              className: "api-method put",
+            },
+            {
+              type: "doc",
+              id: "docspace/api-backend/usage-api/delete-client",
+              label: "Delete an OAuth2 client",
+              className: "api-method delete",
+            },
+            {
+              type: "doc",
+              id: "docspace/api-backend/usage-api/create-client",
+              label: "Create a new OAuth2 client",
+              className: "api-method post",
+            },
+            {
+              type: "doc",
+              id: "docspace/api-backend/usage-api/regenerate-secret",
+              label: "Regenerate the client secret",
+              className: "api-method patch",
+            },
+            {
+              type: "doc",
+              id: "docspace/api-backend/usage-api/change-activation",
+              label: "Change the client activation status",
+              className: "api-method patch",
+            },
+            {
+              type: "doc",
+              id: "docspace/api-backend/usage-api/revoke-user-client",
+              label: "Revoke client consent",
+              className: "api-method delete",
+            },
+          ],
+        },
+        {
+          type: "category",
+          label: "Scope Management",
+          items: [
+            {
+              type: "doc",
+              id: "docspace/api-backend/usage-api/get-scopes",
+              label: "Get available OAuth2 scopes",
+              className: "api-method get",
+            },
+          ],
+        },
+        {
+          type: "category",
+          label: "Client Querying",
+          items: [
+            {
+              type: "doc",
+              id: "docspace/api-backend/usage-api/get-client",
+              label: "Get client details",
+              className: "api-method get",
+            },
+            {
+              type: "doc",
+              id: "docspace/api-backend/usage-api/get-clients",
+              label: "Get clients",
+              className: "api-method get",
+            },
+            {
+              type: "doc",
+              id: "docspace/api-backend/usage-api/get-public-client-info",
+              label: "Get public client information",
+              className: "api-method get",
+            },
+            {
+              type: "doc",
+              id: "docspace/api-backend/usage-api/get-client-info",
+              label: "Get detailed client information",
+              className: "api-method get",
+            },
+            {
+              type: "doc",
+              id: "docspace/api-backend/usage-api/get-clients-info",
+              label: "Get detailed information of clients",
+              className: "api-method get",
+            },
+            {
+              type: "doc",
+              id: "docspace/api-backend/usage-api/get-consents",
+              label: "Get user consents",
               className: "api-method get",
             },
           ],
@@ -1183,8 +1339,14 @@ const sidebar: SidebarsConfig = {
             {
               type: "doc",
               id: "docspace/api-backend/usage-api/delete-guests",
-              label: "Removes guests from the list and from rooms",
+              label: "Delete guests",
               className: "api-method delete",
+            },
+            {
+              type: "doc",
+              id: "docspace/api-backend/usage-api/approve-guest-share-link",
+              label: "Approve a guest sharing link",
+              className: "api-method post",
             },
           ],
         },
@@ -1249,7 +1411,7 @@ const sidebar: SidebarsConfig = {
             {
               type: "doc",
               id: "docspace/api-backend/usage-api/get-claims",
-              label: "Gets claims",
+              label: "Returns the user claims.",
               className: "api-method get",
             },
             {
@@ -1327,7 +1489,7 @@ const sidebar: SidebarsConfig = {
             {
               type: "doc",
               id: "docspace/api-backend/usage-api/update-member-culture",
-              label: "Update user language",
+              label: "Update a user culture code",
               className: "api-method put",
             },
           ],
@@ -1357,7 +1519,7 @@ const sidebar: SidebarsConfig = {
             {
               type: "doc",
               id: "docspace/api-backend/usage-api/get-accounts-entries-with-shared",
-              label: "Gets accounts entries with shared",
+              label: "Get account entries",
               className: "api-method get",
             },
             {
@@ -1369,7 +1531,7 @@ const sidebar: SidebarsConfig = {
             {
               type: "doc",
               id: "docspace/api-backend/usage-api/get-full-by-filter",
-              label: "Search users and their information by extended filter",
+              label: "Search users with detaailed information by extended filter",
               className: "api-method get",
             },
             {
@@ -1393,7 +1555,7 @@ const sidebar: SidebarsConfig = {
             {
               type: "doc",
               id: "docspace/api-backend/usage-api/get-users-with-room-shared",
-              label: "Gets users with shared in room ID specified in request",
+              label: "Get users with room sharing settings",
               className: "api-method get",
             },
           ],
@@ -1405,13 +1567,13 @@ const sidebar: SidebarsConfig = {
             {
               type: "doc",
               id: "docspace/api-backend/usage-api/get-theme",
-              label: "Get portal theme",
+              label: "Get the portal theme",
               className: "api-method get",
             },
             {
               type: "doc",
               id: "docspace/api-backend/usage-api/change-theme",
-              label: "Change portal theme",
+              label: "Change the portal theme",
               className: "api-method put",
             },
           ],
@@ -1470,6 +1632,12 @@ const sidebar: SidebarsConfig = {
             },
             {
               type: "doc",
+              id: "docspace/api-backend/usage-api/necessary-reassign",
+              label: "Check the data reassignment need",
+              className: "api-method get",
+            },
+            {
+              type: "doc",
               id: "docspace/api-backend/usage-api/get-remove-progress",
               label: "Get the deletion progress",
               className: "api-method get",
@@ -1491,6 +1659,18 @@ const sidebar: SidebarsConfig = {
               id: "docspace/api-backend/usage-api/terminate-remove",
               label: "Terminate the data deletion",
               className: "api-method put",
+            },
+            {
+              type: "doc",
+              id: "docspace/api-backend/usage-api/start-delete-personal-folder",
+              label: "Delete the personal folder",
+              className: "api-method post",
+            },
+            {
+              type: "doc",
+              id: "docspace/api-backend/usage-api/get-delete-personal-folder-progress",
+              label: "Get the progress of deleting the personal folder",
+              className: "api-method get",
             },
           ],
         },
@@ -1528,6 +1708,24 @@ const sidebar: SidebarsConfig = {
               label: "Change a user type",
               className: "api-method put",
             },
+            {
+              type: "doc",
+              id: "docspace/api-backend/usage-api/start-update-user-type",
+              label: "Update user type",
+              className: "api-method post",
+            },
+            {
+              type: "doc",
+              id: "docspace/api-backend/usage-api/get-change-type-progress",
+              label: "Get the progress of updating user type",
+              className: "api-method get",
+            },
+            {
+              type: "doc",
+              id: "docspace/api-backend/usage-api/terminate-change-type",
+              label: "Terminate update user type",
+              className: "api-method put",
+            },
           ],
         },
       ],
@@ -1544,12 +1742,138 @@ const sidebar: SidebarsConfig = {
         },
         {
           type: "category",
+          label: "Payment",
+          items: [
+            {
+              type: "doc",
+              id: "docspace/api-backend/usage-api/get-payment-url",
+              label: "Get the payment page URL",
+              className: "api-method put",
+            },
+            {
+              type: "doc",
+              id: "docspace/api-backend/usage-api/payment-update",
+              label: "Update the payment quantity",
+              className: "api-method put",
+            },
+            {
+              type: "doc",
+              id: "docspace/api-backend/usage-api/payment-update-wallet",
+              label: "Update the wallet payment quantity",
+              className: "api-method put",
+            },
+            {
+              type: "doc",
+              id: "docspace/api-backend/usage-api/get-payment-account",
+              label: "Get the payment account",
+              className: "api-method get",
+            },
+            {
+              type: "doc",
+              id: "docspace/api-backend/usage-api/get-prices",
+              label: "Get prices",
+              className: "api-method get",
+            },
+            {
+              type: "doc",
+              id: "docspace/api-backend/usage-api/get-currencies",
+              label: "Get currencies",
+              className: "api-method get",
+            },
+            {
+              type: "doc",
+              id: "docspace/api-backend/usage-api/get-quotas",
+              label: "Get quotas",
+              className: "api-method get",
+            },
+            {
+              type: "doc",
+              id: "docspace/api-backend/usage-api/get-quota-information",
+              label: "Get quota payment information",
+              className: "api-method get",
+            },
+            {
+              type: "doc",
+              id: "docspace/api-backend/usage-api/send-sales-request",
+              label: "Send a payment request",
+              className: "api-method post",
+            },
+            {
+              type: "doc",
+              id: "docspace/api-backend/usage-api/get-chechout-setup-url",
+              label: "Get the chechout setup page URL",
+              className: "api-method get",
+            },
+            {
+              type: "doc",
+              id: "docspace/api-backend/usage-api/get-customer-info",
+              label: "Get the customer info",
+              className: "api-method get",
+            },
+            {
+              type: "doc",
+              id: "docspace/api-backend/usage-api/top-up-deposit",
+              label: "Put money on deposit",
+              className: "api-method post",
+            },
+            {
+              type: "doc",
+              id: "docspace/api-backend/usage-api/get-customer-balance",
+              label: "Get the customer balance",
+              className: "api-method get",
+            },
+            {
+              type: "doc",
+              id: "docspace/api-backend/usage-api/open-customer-session",
+              label: "Open customer session",
+              className: "api-method post",
+            },
+            {
+              type: "doc",
+              id: "docspace/api-backend/usage-api/perform-customer-operation",
+              label: "Perform customer operation",
+              className: "api-method post",
+            },
+            {
+              type: "doc",
+              id: "docspace/api-backend/usage-api/get-customer-operations",
+              label: "Get the customer operations",
+              className: "api-method get",
+            },
+            {
+              type: "doc",
+              id: "docspace/api-backend/usage-api/create-customer-operations-report",
+              label: "Generate the customer operations report",
+              className: "api-method post",
+            },
+            {
+              type: "doc",
+              id: "docspace/api-backend/usage-api/get-all-currencies",
+              label: "Get list of currencies",
+              className: "api-method get",
+            },
+            {
+              type: "doc",
+              id: "docspace/api-backend/usage-api/get-tenant-wallet-settings",
+              label: "Get wallet auto top up settings",
+              className: "api-method get",
+            },
+            {
+              type: "doc",
+              id: "docspace/api-backend/usage-api/set-tenant-wallet-settings",
+              label: "Set wallet auto top up settings",
+              className: "api-method post",
+            },
+          ],
+        },
+        {
+          type: "category",
           label: "Quota",
           items: [
             {
               type: "doc",
               id: "docspace/api-backend/usage-api/get-used-space",
-              label: "Get the used portal space",
+              label: "Get the portal used space",
               className: "api-method get",
             },
             {
@@ -1578,15 +1902,9 @@ const sidebar: SidebarsConfig = {
           items: [
             {
               type: "doc",
-              id: "docspace/api-backend/usage-api/get",
+              id: "docspace/api-backend/usage-api/get-portal-information",
               label: "Get a portal",
               className: "api-method get",
-            },
-            {
-              type: "doc",
-              id: "docspace/api-backend/usage-api/get-shorten-link",
-              label: "Get a shortened link",
-              className: "api-method put",
             },
             {
               type: "doc",
@@ -1666,6 +1984,252 @@ const sidebar: SidebarsConfig = {
     },
     {
       type: "category",
+      label: "Rooms",
+      collapsible: true,
+      collapsed: true,
+      items: [
+        {
+          type: "doc",
+          id: "docspace/api-backend/usage-api/api",
+        },
+        {
+          type: "category",
+          label: "Rooms",
+          items: [
+            {
+              type: "doc",
+              id: "docspace/api-backend/usage-api/create-template",
+              label: "Start creating room template",
+              className: "api-method post",
+            },
+            {
+              type: "doc",
+              id: "docspace/api-backend/usage-api/get-template-creating-status",
+              label: "Get status of room template creation",
+              className: "api-method get",
+            },
+            {
+              type: "doc",
+              id: "docspace/api-backend/usage-api/is-public",
+              label: "Get public settings",
+              className: "api-method get",
+            },
+            {
+              type: "doc",
+              id: "docspace/api-backend/usage-api/set-public",
+              label: "Set public settings",
+              className: "api-method put",
+            },
+            {
+              type: "doc",
+              id: "docspace/api-backend/usage-api/create-room",
+              label: "Create a room",
+              className: "api-method post",
+            },
+            {
+              type: "doc",
+              id: "docspace/api-backend/usage-api/get-rooms-folder",
+              label: "Get rooms",
+              className: "api-method get",
+            },
+            {
+              type: "doc",
+              id: "docspace/api-backend/usage-api/create-room-from-template",
+              label: "Create a room from the template",
+              className: "api-method post",
+            },
+            {
+              type: "doc",
+              id: "docspace/api-backend/usage-api/get-room-creating-status",
+              label: "Get the room creation progress",
+              className: "api-method get",
+            },
+            {
+              type: "doc",
+              id: "docspace/api-backend/usage-api/get-room-info",
+              label: "Get room information",
+              className: "api-method get",
+            },
+            {
+              type: "doc",
+              id: "docspace/api-backend/usage-api/update-room",
+              label: "Update a room",
+              className: "api-method put",
+            },
+            {
+              type: "doc",
+              id: "docspace/api-backend/usage-api/delete-room",
+              label: "Remove a room",
+              className: "api-method delete",
+            },
+            {
+              type: "doc",
+              id: "docspace/api-backend/usage-api/archive-room",
+              label: "Archive a room",
+              className: "api-method put",
+            },
+            {
+              type: "doc",
+              id: "docspace/api-backend/usage-api/unarchive-room",
+              label: "Unarchive a room",
+              className: "api-method put",
+            },
+            {
+              type: "doc",
+              id: "docspace/api-backend/usage-api/set-room-security",
+              label: "Set the room access rights",
+              className: "api-method put",
+            },
+            {
+              type: "doc",
+              id: "docspace/api-backend/usage-api/get-room-security-info",
+              label: "Get the room access rights",
+              className: "api-method get",
+            },
+            {
+              type: "doc",
+              id: "docspace/api-backend/usage-api/set-link",
+              label: "Set the room external or invitation link",
+              className: "api-method put",
+            },
+            {
+              type: "doc",
+              id: "docspace/api-backend/usage-api/get-room-links",
+              label: "Get the room links",
+              className: "api-method get",
+            },
+            {
+              type: "doc",
+              id: "docspace/api-backend/usage-api/get-rooms-primary-external-link",
+              label: "Get the room primary external link",
+              className: "api-method get",
+            },
+            {
+              type: "doc",
+              id: "docspace/api-backend/usage-api/add-tags",
+              label: "Add the room tags",
+              className: "api-method put",
+            },
+            {
+              type: "doc",
+              id: "docspace/api-backend/usage-api/delete-tags",
+              label: "Remove the room tags",
+              className: "api-method delete",
+            },
+            {
+              type: "doc",
+              id: "docspace/api-backend/usage-api/create-room-logo",
+              label: "Create a room logo",
+              className: "api-method post",
+            },
+            {
+              type: "doc",
+              id: "docspace/api-backend/usage-api/delete-room-logo",
+              label: "Remove a room logo",
+              className: "api-method delete",
+            },
+            {
+              type: "doc",
+              id: "docspace/api-backend/usage-api/change-room-cover",
+              label: "Change the room cover",
+              className: "api-method post",
+            },
+            {
+              type: "doc",
+              id: "docspace/api-backend/usage-api/get-covers",
+              label: "Get covers",
+              className: "api-method get",
+            },
+            {
+              type: "doc",
+              id: "docspace/api-backend/usage-api/pin-room",
+              label: "Pin a room",
+              className: "api-method put",
+            },
+            {
+              type: "doc",
+              id: "docspace/api-backend/usage-api/unpin-room",
+              label: "Unpin a room",
+              className: "api-method put",
+            },
+            {
+              type: "doc",
+              id: "docspace/api-backend/usage-api/resend-email-invitations",
+              label: "Resend the room invitations",
+              className: "api-method post",
+            },
+            {
+              type: "doc",
+              id: "docspace/api-backend/usage-api/reorder",
+              label: "Reorder the room",
+              className: "api-method put",
+            },
+            {
+              type: "doc",
+              id: "docspace/api-backend/usage-api/get-new-room-items",
+              label: "Get the new room items",
+              className: "api-method get",
+            },
+            {
+              type: "doc",
+              id: "docspace/api-backend/usage-api/create-room-third-party",
+              label: "Create a third-party room",
+              className: "api-method post",
+            },
+            {
+              type: "doc",
+              id: "docspace/api-backend/usage-api/create-tag",
+              label: "Create a tag",
+              className: "api-method post",
+            },
+            {
+              type: "doc",
+              id: "docspace/api-backend/usage-api/get-tags-info",
+              label: "Get tags",
+              className: "api-method get",
+            },
+            {
+              type: "doc",
+              id: "docspace/api-backend/usage-api/delete-custom-tags",
+              label: "Delete tags",
+              className: "api-method delete",
+            },
+            {
+              type: "doc",
+              id: "docspace/api-backend/usage-api/upload-room-logo",
+              label: "Upload a room logo image",
+              className: "api-method post",
+            },
+            {
+              type: "doc",
+              id: "docspace/api-backend/usage-api/start-room-index-export",
+              label: "Start the room index export",
+              className: "api-method post",
+            },
+            {
+              type: "doc",
+              id: "docspace/api-backend/usage-api/get-room-index-export",
+              label: "Get the room index export",
+              className: "api-method get",
+            },
+            {
+              type: "doc",
+              id: "docspace/api-backend/usage-api/terminate-room-index-export",
+              label: "Terminate the room index export",
+              className: "api-method delete",
+            },
+            {
+              type: "doc",
+              id: "docspace/api-backend/usage-api/get-rooms-new-items",
+              label: "Get the room new items",
+              className: "api-method get",
+            },
+          ],
+        },
+      ],
+    },
+    {
+      type: "category",
       label: "Security",
       collapsible: true,
       collapsed: true,
@@ -1673,6 +2237,18 @@ const sidebar: SidebarsConfig = {
         {
           type: "doc",
           id: "docspace/api-backend/usage-api/api",
+        },
+        {
+          type: "category",
+          label: "Access to DevTools",
+          items: [
+            {
+              type: "doc",
+              id: "docspace/api-backend/usage-api/set-tenant-dev-tools-access-settings",
+              label: "Set the Developer Tools access settings",
+              className: "api-method post",
+            },
+          ],
         },
         {
           type: "category",
@@ -1699,7 +2275,7 @@ const sidebar: SidebarsConfig = {
             {
               type: "doc",
               id: "docspace/api-backend/usage-api/log-out-all-except-this-connection",
-              label: "Log out from all connections",
+              label: "Log out from all connections except the current one",
               className: "api-method put",
             },
             {
@@ -1765,13 +2341,13 @@ const sidebar: SidebarsConfig = {
             {
               type: "doc",
               id: "docspace/api-backend/usage-api/csp",
-              label: "Csp",
+              label: "Configure CSP settings",
               className: "api-method post",
             },
             {
               type: "doc",
               id: "docspace/api-backend/usage-api/get-csp",
-              label: "Gets csp",
+              label: "Get CSP settings",
               className: "api-method get",
             },
           ],
@@ -1820,6 +2396,18 @@ const sidebar: SidebarsConfig = {
         },
         {
           type: "category",
+          label: "OAuth2",
+          items: [
+            {
+              type: "doc",
+              id: "docspace/api-backend/usage-api/generate-jwt-token",
+              label: "Generate JWT token",
+              className: "api-method get",
+            },
+          ],
+        },
+        {
+          type: "category",
           label: "SMTP settings",
           items: [
             {
@@ -1849,7 +2437,7 @@ const sidebar: SidebarsConfig = {
             {
               type: "doc",
               id: "docspace/api-backend/usage-api/get-smtp-operation-status",
-              label: "Get the SMTP test process status",
+              label: "Get the SMTP testing process status",
               className: "api-method get",
             },
           ],
@@ -1865,6 +2453,18 @@ const sidebar: SidebarsConfig = {
         {
           type: "doc",
           id: "docspace/api-backend/usage-api/api",
+        },
+        {
+          type: "category",
+          label: "Access to DevTools",
+          items: [
+            {
+              type: "doc",
+              id: "docspace/api-backend/usage-api/get-tenant-access-dev-tools-settings",
+              label: "Get the Developer Tools access settings",
+              className: "api-method get",
+            },
+          ],
         },
         {
           type: "category",
@@ -1899,6 +2499,18 @@ const sidebar: SidebarsConfig = {
               id: "docspace/api-backend/usage-api/save-mail-domain-settings",
               label: "Save the mail domain settings",
               className: "api-method post",
+            },
+            {
+              type: "doc",
+              id: "docspace/api-backend/usage-api/save-configure-deep-link",
+              label: "Configure the deep link settings",
+              className: "api-method post",
+            },
+            {
+              type: "doc",
+              id: "docspace/api-backend/usage-api/gett-deep-link-settings",
+              label: "Get the deep link settings",
+              className: "api-method get",
             },
             {
               type: "doc",
@@ -1957,7 +2569,7 @@ const sidebar: SidebarsConfig = {
             {
               type: "doc",
               id: "docspace/api-backend/usage-api/close-admin-helper",
-              label: "Close the admin helper notification",
+              label: "Close the admin helper",
               className: "api-method put",
             },
             {
@@ -1977,6 +2589,18 @@ const sidebar: SidebarsConfig = {
               id: "docspace/api-backend/usage-api/payment-settings",
               label: "Get the payment settings",
               className: "api-method get",
+            },
+            {
+              type: "doc",
+              id: "docspace/api-backend/usage-api/get-tenant-user-invitation-settings",
+              label: "Get the user invitation settings",
+              className: "api-method get",
+            },
+            {
+              type: "doc",
+              id: "docspace/api-backend/usage-api/update-invitation-settings",
+              label: "Update user invitation settings",
+              className: "api-method put",
             },
           ],
         },
@@ -2046,6 +2670,12 @@ const sidebar: SidebarsConfig = {
             },
             {
               type: "doc",
+              id: "docspace/api-backend/usage-api/get-storage-encryption-settings",
+              label: "Get the storage encryption settings",
+              className: "api-method get",
+            },
+            {
+              type: "doc",
               id: "docspace/api-backend/usage-api/get-storage-encryption-progress",
               label: "Get the storage encryption progress",
               className: "api-method get",
@@ -2095,7 +2725,7 @@ const sidebar: SidebarsConfig = {
             {
               type: "doc",
               id: "docspace/api-backend/usage-api/save-ip-restrictions",
-              label: "Save the IP restriction settings",
+              label: "Update the IP restrictions",
               className: "api-method put",
             },
             {
@@ -2107,7 +2737,7 @@ const sidebar: SidebarsConfig = {
             {
               type: "doc",
               id: "docspace/api-backend/usage-api/update-ip-restrictions-settings",
-              label: "Save the IP restriction settings",
+              label: "Update the IP restriction settings",
               className: "api-method put",
             },
           ],
@@ -2149,19 +2779,19 @@ const sidebar: SidebarsConfig = {
             {
               type: "doc",
               id: "docspace/api-backend/usage-api/update-login-settings",
-              label: "Update login settings",
+              label: "Update the login settings",
               className: "api-method put",
             },
             {
               type: "doc",
               id: "docspace/api-backend/usage-api/get-login-settings",
-              label: "Get login settings",
+              label: "Get the login settings",
               className: "api-method get",
             },
             {
               type: "doc",
               id: "docspace/api-backend/usage-api/set-default-login-settings",
-              label: "Returns the portal login settings.",
+              label: "Reset the login settings",
               className: "api-method delete",
             },
           ],
@@ -2245,7 +2875,7 @@ const sidebar: SidebarsConfig = {
             {
               type: "doc",
               id: "docspace/api-backend/usage-api/get-user-quota-settings",
-              label: "Gets user quota",
+              label: "Get the user quota settings",
               className: "api-method get",
             },
             {
@@ -2269,13 +2899,13 @@ const sidebar: SidebarsConfig = {
             {
               type: "doc",
               id: "docspace/api-backend/usage-api/save-white-label-settings",
-              label: "Save the white label settings",
+              label: "Save the white label logos",
               className: "api-method post",
             },
             {
               type: "doc",
               id: "docspace/api-backend/usage-api/save-white-label-settings-from-files",
-              label: "Save the white label settings from files",
+              label: "Save the white label logos from files",
               className: "api-method post",
             },
             {
@@ -2292,14 +2922,32 @@ const sidebar: SidebarsConfig = {
             },
             {
               type: "doc",
+              id: "docspace/api-backend/usage-api/restore-white-label-logos",
+              label: "Restore the white label logos",
+              className: "api-method put",
+            },
+            {
+              type: "doc",
+              id: "docspace/api-backend/usage-api/save-white-label-logo-text",
+              label: "Save the white label logo text settings",
+              className: "api-method post",
+            },
+            {
+              type: "doc",
               id: "docspace/api-backend/usage-api/get-white-label-logo-text",
               label: "Get the white label logo text",
               className: "api-method get",
             },
             {
               type: "doc",
-              id: "docspace/api-backend/usage-api/restore-white-label-options",
-              label: "Restore the white label options",
+              id: "docspace/api-backend/usage-api/get-is-default-white-label-logo-text",
+              label: "Check the default white label logo text",
+              className: "api-method get",
+            },
+            {
+              type: "doc",
+              id: "docspace/api-backend/usage-api/restore-white-label-logo-text",
+              label: "Restore the white label logo text",
               className: "api-method put",
             },
             {
@@ -2395,7 +3043,7 @@ const sidebar: SidebarsConfig = {
             {
               type: "doc",
               id: "docspace/api-backend/usage-api/set-access-to-web-items",
-              label: "Set the access settings to products",
+              label: "Set the security settings to modules",
               className: "api-method put",
             },
             {
@@ -2610,15 +3258,15 @@ const sidebar: SidebarsConfig = {
             },
             {
               type: "doc",
-              id: "docspace/api-backend/usage-api/remove-webhook",
-              label: "Remove a webhook",
-              className: "api-method delete",
+              id: "docspace/api-backend/usage-api/enable-webhook",
+              label: "Enable a webhook",
+              className: "api-method put",
             },
             {
               type: "doc",
-              id: "docspace/api-backend/usage-api/disable-web-hook",
-              label: "Disable a webhook",
-              className: "api-method put",
+              id: "docspace/api-backend/usage-api/remove-webhook",
+              label: "Remove a webhook",
+              className: "api-method delete",
             },
             {
               type: "doc",
@@ -2640,8 +3288,8 @@ const sidebar: SidebarsConfig = {
             },
             {
               type: "doc",
-              id: "docspace/api-backend/usage-api/settings",
-              label: "Get webhook settings",
+              id: "docspace/api-backend/usage-api/triggers",
+              label: "Get webhook triggers",
               className: "api-method get",
             },
           ],
@@ -2653,32 +3301,56 @@ const sidebar: SidebarsConfig = {
             {
               type: "doc",
               id: "docspace/api-backend/usage-api/add-web-plugin-from-file",
-              label: "Adds web plugins from file",
+              label: "Add a web plugin",
               className: "api-method post",
             },
             {
               type: "doc",
               id: "docspace/api-backend/usage-api/get-web-plugins",
-              label: "Gets web plugins",
+              label: "Get web plugins",
               className: "api-method get",
             },
             {
               type: "doc",
               id: "docspace/api-backend/usage-api/get-web-plugin",
-              label: "Gets web plugins by name specified in request",
+              label: "Get a web plugin by name",
               className: "api-method get",
             },
             {
               type: "doc",
               id: "docspace/api-backend/usage-api/update-web-plugin",
-              label: "Updates web plugins",
+              label: "Update a web plugin",
               className: "api-method put",
             },
             {
               type: "doc",
               id: "docspace/api-backend/usage-api/delete-web-plugin",
-              label: "Deletes web plugins by name specified in request",
+              label: "Delete a web plugin",
               className: "api-method delete",
+            },
+          ],
+        },
+      ],
+    },
+    {
+      type: "category",
+      label: "ThirdParty",
+      collapsible: true,
+      collapsed: true,
+      items: [
+        {
+          type: "doc",
+          id: "docspace/api-backend/usage-api/api",
+        },
+        {
+          type: "category",
+          label: "ThirdParty",
+          items: [
+            {
+              type: "doc",
+              id: "docspace/api-backend/usage-api/get",
+              label: "Get the code request",
+              className: "api-method get",
             },
           ],
         },

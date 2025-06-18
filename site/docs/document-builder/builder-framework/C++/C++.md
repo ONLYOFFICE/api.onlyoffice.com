@@ -25,22 +25,23 @@ The current application version contains four main classes:
 <Tabs>
     <TabItem value="cpp" label="C++">
         ```cpp
-        #include "./../common_deploy.h"
-        #include "../docbuilder.h"
-        #include "./utils.cpp"
+        #include <string>
+        #include "common.h"
+        #include "docbuilder.h"
+
+        // Specify the path to the Document Builder work directory and the result path (where the generated file will be saved)
+        #define WORK_DIRECTORY L"builder/opt/onlyoffice/documentbuilder"
 
         using namespace NSDoctRenderer;
+
         int main(int argc, char *argv[])
         {
-            std::wstring sProcessDirectory = NSUtils::GetProcessDirectory();
-            std::wstring sWorkDirectory = NSUtils::GetBuilderDirectory();
-
-            CDocBuilder::Initialize(sWorkDirectory.c_str());
+            CDocBuilder::Initialize(WORK_DIRECTORY);
 
             CDocBuilder oBuilder;
-            oBuilder.SetProperty("--work-directory", sWorkDirectory.c_str());
+            oBuilder.SetProperty("--work-directory", WORK_DIRECTORY);
 
-            oBuilder.CreateFile("docx");
+            oBuilder.CreateFile(OFFICESTUDIO_FILE_DOCUMENT_DOCX);
 
             CContext oContext = oBuilder.GetContext();
             CContextScope oScope = oContext.CreateScope();
@@ -56,27 +57,27 @@ The current application version contains four main classes:
             oContent[0] = oParagraph;
             oDocument.Call("InsertContent", oContent);
 
-            std::wstring sDstPath = sProcessDirectory + L"/result.docx";
-            oBuilder.SaveFile("docx", sDstPath.c_str());
+            std::wstring sDstPath = L"result.docx";
+            oBuilder.SaveFile(OFFICESTUDIO_FILE_DOCUMENT_DOCX, sDstPath.c_str());
             oBuilder.CloseFile();
 
             CDocBuilder::Dispose();
 
             return 0;
-        }uilder::Dispose();
+        }
         ```
     </TabItem>
     <TabItem value="builder" label=".docbuilder">
         ```ts
-        builder.SetTmpFolder("DocBuilderTemp")
-        builder.CreateFile("docx")
-        const oDocument = Api.GetDocument()
-        const oParagraph = Api.CreateParagraph()
-        oParagraph.SetSpacingAfter(1000, false)
-        oParagraph.AddText("Hello, world!")
-        oDocument.InsertContent([oParagraph])
-        builder.SaveFile("docx", "result.docx")
-        builder.CloseFile()
+        builder.SetTmpFolder("DocBuilderTemp");
+        builder.CreateFile("docx");
+        let doc = Api.GetDocument();
+        let paragraph = Api.CreateParagraph();
+        paragraph.SetSpacingAfter(1000, false);
+        paragraph.AddText("Hello, world!");
+        doc.InsertContent([paragraph]);
+        builder.SaveFile("docx", "result.docx");
+        builder.CloseFile();
         ```
     </TabItem>
 </Tabs>

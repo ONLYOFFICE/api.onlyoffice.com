@@ -16,6 +16,7 @@ Represents the ApiMaster class.
 | [GetAllCharts](./Methods/GetAllCharts.md) | [ApiChart](../ApiChart/ApiChart.md)[] | Returns an array with all the chart objects from the slide master. |
 | [GetAllDrawings](./Methods/GetAllDrawings.md) | [Drawing](../Enumeration/Drawing.md)[] | Returns an array with all the drawing objects from the slide master. |
 | [GetAllImages](./Methods/GetAllImages.md) | [ApiImage](../ApiImage/ApiImage.md)[] | Returns an array with all the image objects from the slide master. |
+| [GetAllLayouts](./Methods/GetAllLayouts.md) | [ApiLayout](../ApiLayout/ApiLayout.md)[] | Returns all layouts from the slide master |
 | [GetAllOleObjects](./Methods/GetAllOleObjects.md) | [ApiOleObject](../ApiOleObject/ApiOleObject.md)[] | Returns an array with all the OLE objects from the slide master. |
 | [GetAllShapes](./Methods/GetAllShapes.md) | [ApiShape](../ApiShape/ApiShape.md)[] | Returns an array with all the shape objects from the slide master. |
 | [GetClassType](./Methods/GetClassType.md) | "master" | Returns the type of the ApiMaster class. |
@@ -27,5 +28,5 @@ Represents the ApiMaster class.
 | [RemoveLayout](./Methods/RemoveLayout.md) | boolean | Removes the layouts from the current slide master. |
 | [RemoveObject](./Methods/RemoveObject.md) | boolean | Removes objects (image, shape or chart) from the current slide master. |
 | [SetBackground](./Methods/SetBackground.md) | boolean | Sets the background to the current slide master. |
-| [SetTheme](./Methods/SetTheme.md) | boolean | Sets a theme to the slide master.\ Sets a copy of the theme object. |
+| [SetTheme](./Methods/SetTheme.md) | boolean | Sets a theme to the slide master. Sets a copy of the theme object. |
 | [ToJSON](./Methods/ToJSON.md) | JSON | Converts the ApiMaster object into the JSON object. |

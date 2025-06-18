@@ -5,7 +5,11 @@ sidebar_custom_props:
 
 # ownCloud 集成
 
-<iframe src="https://www.youtube.com/embed/IAjhUxBWKkQ?wmode=transparent" class="video-frame" width="700px" height="400px" frameborder="0" allowfullscreen></iframe>
+```mdx-code-block
+import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
+
+<YoutubeVideo videoId="IAjhUxBWKkQ"/>
+```
 
 这个[应用](https://github.com/ONLYOFFICE/onlyoffice-owncloud)允许用户借助ONLYOFFICE文档，在[ownCloud](https://owncloud.com)中编辑办公文档。
 

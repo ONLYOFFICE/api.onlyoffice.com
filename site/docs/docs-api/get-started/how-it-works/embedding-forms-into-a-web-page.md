@@ -168,13 +168,13 @@ To make an online form in the PDF format available for filling in, follow the st
    ``` ts
    const config = {
       document: {
-      fileType: "pdf",
-      permissions: {
-         edit: false,
-         fillForms: true,
-      },
-      title: "Form",
-      url,
+         fileType: "pdf",
+         permissions: {
+            edit: false,
+            fillForms: true,
+         },
+         title: "Form",
+         url,
       },
       documentType: "pdf",
    };

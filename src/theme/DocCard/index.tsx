@@ -86,7 +86,6 @@ function CardLayout({
 
 function CardCategory({item}: {item: PropSidebarItemCategory}): ReactNode {
   const href = findFirstSidebarItemLink(item);
-  const categoryItemsPlural = useCategoryItemsPlural();
 
   // Unexpected: categories that don't have a link have been filtered upfront
   if (!href) {
@@ -96,9 +95,9 @@ function CardCategory({item}: {item: PropSidebarItemCategory}): ReactNode {
   return (
     <CardLayout
       href={href}
-      icon="🗃️"
+      icon="📄"
       title={item.label}
-      description={item.description ?? categoryItemsPlural(item.items.length)}
+      description={item.description}
     />
   );
 }

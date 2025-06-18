@@ -48,7 +48,7 @@ The current application version contains four main classes:
                 CDocBuilderValue global = context.getGlobal();
 
                 CDocBuilderValue api = global.get("Api");
-                CDocBuilderValue document = api.call("GetDocument");
+                CDocBuilderValue doc = api.call("GetDocument");
                 CDocBuilderValue paragraph1 = api.call("CreateParagraph");
 
                 paragraph1.call("SetSpacingAfter", 1000, false);
@@ -60,7 +60,7 @@ The current application version contains four main classes:
                 CDocBuilderValue[] paragraphs = { paragraph1, paragraph2 };
                 CDocBuilderValue content = new CDocBuilderValue(paragraphs);
 
-                document.call("InsertContent", content);
+                doc.call("InsertContent", content);
 
                 builder.saveFile(FileTypes.Document.DOCX, resultPath);
                 builder.closeFile();
@@ -72,18 +72,18 @@ The current application version contains four main classes:
     </TabItem>
     <TabItem value="builder" label=".docbuilder">
         ```ts
-        builder.SetTmpFolder("DocBuilderTemp")
-        builder.CreateFile("docx")
-        const oDocument = Api.GetDocument()
-        const oParagraph1 = Api.CreateParagraph()
-        oParagraph1.SetSpacingAfter(1000, false)
-        oParagraph1.AddText("Hello from Java!")
-        const oParagraph2 = Api.CreateParagraph()
-        oParagraph2.AddText("Goodbye!")
-        const aParagraphs = [oParagraph1, oParagraph2]
-        oDocument.InsertContent(aParagraphs)
-        builder.SaveFile("docx", "result.docx")
-        builder.CloseFile()
+        builder.SetTmpFolder("DocBuilderTemp");
+        builder.CreateFile("docx");
+        let doc = Api.GetDocument();
+        let paragraph1 = Api.CreateParagraph();
+        paragraph1.SetSpacingAfter(1000, false);
+        paragraph1.AddText("Hello from Java!");
+        let paragraph2 = Api.CreateParagraph();
+        paragraph2.AddText("Goodbye!");
+        let paragraphs = [paragraph1, paragraph2];
+        doc.InsertContent(paragraphs);
+        builder.SaveFile("docx", "result.docx");
+        builder.CloseFile();
         ```
     </TabItem>
 </Tabs>

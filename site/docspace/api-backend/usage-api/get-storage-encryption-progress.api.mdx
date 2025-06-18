@@ -5,7 +5,7 @@ description: "Returns the storage encryption progress."
 sidebar_label: "Get the storage encryption progress"
 hide_title: true
 hide_table_of_contents: true
-api: eJyVk1Fr2zAUhf+KOc+izsL24rfCSinbYDTLUzFFsW9irY6kSXK6zOi/jyu5cZNSxl5sy7rn+Op81yOC3HlUD1hRCErvfFEWN7pxRxuU0agFjCUneXHXosKOwioYJ3c0V313ZufIewg48tZoTx7ViOViwbeWfONU9qswqQs6yQs76xujA+nAMmltr5r05fKnZ+0I33S0l/wUjpZQQQ/7DTkIbI3by4AKrRk2PSHGGAU+Lj687WCt5RA649QfapGKPr0t+kahM22hTShk35tnLo0CnprBqXBE9TBC+uaRrR6fiF/AkWwh8OxUINSxFhee9xQGp30ROir8+zFcQWCfPp/zhoCVoUOFUlpVLq8WpZ9glbO8fJWiJ3cg51OTg+tRYdxIT2vXR1w2tUq1RWP0Vu2GTBoCB+mU3PQZ5CTOKW3l0HPQb5w+561iff+V46/ntFaMLVudZ3biKK36QkcIaLlP69dlAor9G2OeFCUMSm9NUqvQc/m1VdwzOZ9bOSwZrDU+7GUanMn2lsK/0r881jjP5P8AnM4V6HcobS+V5oaGnGGm+cCHhsDyapGQZaIQmB2Z/EtbtUBnfGDdeKIZ+fWvgRzPXz1T41UU6Ei25NIYpLhx3TRkQ8LbDzn3i5+MsZ2G7/bmBwSYwzmqDGV6YPeXLX187X3OMHfA1yjeUYxjnoMYT/V5613FdMKXao65jjH+BV8RrFU=
+api: eJyVVsFy2zYQ/RXMXnxBRUVpL7yptptJ2k46sT0+aDQxRK5ExBTAAks7Kof/nlmAIkXJGakXiQTeLha7b9+yAVIbD+kC7pBIm40Xibg1mdtVpK2BpQRboVP88jGHFDZId2Sd2uCA+sfZjUPvQYJDX1nj0UPawGw65b8cfeZ09JdCZy2wNxfVYJ9ZQ2iIzVRVlToLJyffPNs24LMCt4qfaFchpGBX3zAjkFA5jpN0PHkfxgHS1NsVOmj5jDqe0O1oQ7hBBxLW1m0VxaX3M8aW2jz7A6xyTu1Agibc+vNxFA7XByhPTpsN+1VZTMfJVtu2Ejwpqv2FIUbwtc3xIoNWAmkqGXRj61WJj05VFWcmHP3r9N1pzR6MqqmwTv+HOQTQb6egv5EKmwtjSaiytK8M5fAwq52mHaSLBpTPvrKrr8/IC+BQ5SDh1WlCWLaygd9ROXSQLsLbvNJ/4q5fewuvvM728M/zmorZ28DPFQYGL5btUh6F/gWpdsYLKlD4n/NzAhK24ZaxEbjcigpIIVGVTmaTaeK7LkoG8+SA3h7dCzofclG7ElJoVsrjgytbOA7qLmBFZs1ab+rYgiDhRTmtVmXkV2cci7FWdcmFPvF0E7fEw5e/uMrLoSh33E/R1bg0A+FDBU5cPngU19Y+axRshIa6VgUJRm2D5aFDCZrNsmDCFOrq1p9TEFUnp9waQid2tnai9ujYsVAmF5Xy/tU6rnBQBHawCg7Zc8eWS1xfRbBoPj3ei3v7jKa9GjmNvmT38Me+lz493vNRY3qey9l8lCihvciR0G21wVysdoF9V/Ou0QLmShSo8hBAl9TRiV1SO0wre/4PsqTCwnEkESfWpX0Vr5oKMTpVBC2RwNuRGoe7e6EZLQYOhkT7NEnCqRNryp1dr3WGk8xu4+Is6YUEJBAn/HLTAA/VsdVe5lUe2lflQmUZei/IcrsSZoS5cOht7TL0vRSk8Mj/Z9BRCveKMWQzLFxbY6LWHyWVd29Et33aFiPry2/NxNdmbbm+33/xemMU1Q7P040p3cO5f3Kxtu4orom4L1CEzIpt7UmsUNgVqcDJF60CKZ8GdYuyMarIk0CTV1YbmoiPxLTm9sRcKC+UiB0fWca+Qg8/HVzkaTKw+/B+R4rR8vvahmt342teadZDdD5e+P3k3WTKaaqsp60K07Vz/AHpnLgf568ZvkX+z3zoakL4nZKqVNpwQHWU6DgsFlwwkDCbTMNEiAMDJAwe43dEDGspobCe2K7ph0XLy//W6HiKLoehEAfhXhF4ygQ1h3mWYUVhepR15MzRxxVPhX62fbi9Bxk6fEyzqOTdA3vfb5ndoe+x8McI+JfH8JsWTRM53LY9Pm791KLXxYjmNC/btv0BiBG/Jg==
 sidebar_class_name: "get api-method"
 info_path: site/docspace/api-backend/usage-api/api
 custom_edit_url: null
@@ -54,7 +54,7 @@ Returns the storage encryption progress.
 <StatusCodes
   id={undefined}
   label={undefined}
-  responses={{"200":{"description":"Storage encryption progress","content":{"application/json":{"schema":{"type":"number","format":"double"}}}},"401":{"description":"Unauthorized"},"405":{"description":"Method not allowed"}}}
+  responses={{"200":{"description":"Storage encryption progress","content":{"application/json":{"schema":{"type":"object","properties":{"response":{"type":"number"},"count":{"type":"integer","format":"int32"},"links":{"type":"array","items":{"type":"object","properties":{"href":{"type":"string"},"action":{"type":"string"}}}},"status":{"type":"integer","format":"int32"},"statusCode":{"type":"integer","format":"int32"}},"title":"DoubleWrapper"}}}},"401":{"description":"Unauthorized"},"405":{"description":"Method not allowed"}}}
 >
   
 </StatusCodes>

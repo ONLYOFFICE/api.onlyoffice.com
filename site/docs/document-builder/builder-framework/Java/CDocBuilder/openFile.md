@@ -32,7 +32,7 @@ int openFile(String path, String params);
     </TabItem>
     <TabItem value="builder" label=".docbuilder">
         ```ts
-        builder.OpenFile("text-document.csv", "<m_nCsvTxtEncoding>46</m_nCsvTxtEncoding><m_nCsvDelimiter>4</m_nCsvDelimiter>")
+        builder.OpenFile("text-document.csv", "<m_nCsvTxtEncoding>46</m_nCsvTxtEncoding><m_nCsvDelimiter>4</m_nCsvDelimiter>");
         ```
     </TabItem>
 </Tabs>

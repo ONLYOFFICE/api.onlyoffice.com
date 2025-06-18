@@ -16,13 +16,20 @@ def CloseFile(self);
 <Tabs>
     <TabItem value="python" label="Python">
         ``` py
+        import os
+        import docbuilder
+
         builder = docbuilder.CDocBuilder()
+        builder.CreateFile("docx")
+
+        dstPath = os.getcwd() + "/result.docx"
+        builder.SaveFile("docx", dstPath)
         builder.CloseFile()
         ```
     </TabItem>
     <TabItem value="builder" label=".docbuilder">
         ```ts
-        builder.CloseFile()
+        builder.CloseFile();
         ```
     </TabItem>
 </Tabs>

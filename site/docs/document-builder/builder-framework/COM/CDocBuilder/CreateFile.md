@@ -15,7 +15,7 @@ HRESULT CreateFile([in] BSTR type, [out, retval] VARIANT_BOOL* result);
 
 | **Name** | **Type**      | **Description**                                                                                                                                                                |
 | -------- | ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| type     | BSTR          | The file extension. The following values are possible: `docx`, `xlsx`, `pptx`, or `pdf` (see [OFFICESTUDIO_FILE_XXX](../../../builder-app/overview.md#format-types) values). |
+| type     | BSTR          | The file extension. The following values are possible: `docx`, `xlsx`, `pptx`, or `pdf` (see [OFFICESTUDIO_FILE_XXX](../../../get-started/supported-formats.md) values). |
 | result   | VARIANT_BOOL* | Specifies if the operation of creating a file is successful or not.                                                                                                            |
 
 ## Example
@@ -33,7 +33,7 @@ HRESULT CreateFile([in] BSTR type, [out, retval] VARIANT_BOOL* result);
     </TabItem>
     <TabItem value="builder" label=".docbuilder">
         ```ts
-        builder.CreateFile("docx")
+        builder.CreateFile("docx");
         ```
     </TabItem>
 </Tabs>

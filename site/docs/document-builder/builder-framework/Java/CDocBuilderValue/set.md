@@ -28,7 +28,7 @@ CDocBuilder builder = new CDocBuilder();
 CDocBuilderContext context = builder.getContext();
 CDocBuilderValue global = context.getGlobal();
 CDocBuilderValue api = global.get("Api");
-CDocBuilderValue document = api.call("GetDocument");
+CDocBuilderValue doc = api.call("GetDocument");
 CDocBuilderValue charts = api.call("GetAllCharts");
 CDocBuilderValue chart =  api.call("CreateChart", "bar3D", [
   [200, 240, 280],
@@ -54,7 +54,7 @@ CDocBuilder builder = new CDocBuilder();
 CDocBuilderContext context = builder.getContext();
 CDocBuilderValue global = context.getGlobal();
 CDocBuilderValue api = global.get("Api");
-CDocBuilderValue document = api.call("GetDocument");
+CDocBuilderValue doc = api.call("GetDocument");
 CDocBuilderValue charts = api.call("GetAllCharts");
 CDocBuilderValue chart =  api.call("CreateChart", "bar3D", [
   [200, 240, 280],

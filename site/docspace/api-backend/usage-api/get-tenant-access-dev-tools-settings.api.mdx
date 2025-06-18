@@ -1,0 +1,63 @@
+---
+id: get-tenant-access-dev-tools-settings
+title: "Get the Developer Tools access settings"
+description: "Returns the Developer Tools access settings for the portal."
+sidebar_label: "Get the Developer Tools access settings"
+hide_title: true
+hide_table_of_contents: true
+api: eJylVlFv4zYM/isCX/owN3HTYhj8lrV3h7ttuOGaog9BcFVsOtHVljyJbpsz/N8HSnYSJ+0aYHlIHIn8JJIfP7oBkisHyRxukUjplRNjMU1TdE6QETf4NDOmcLCIwFRoJSmjP2eQwApphlpqCsa9YY8CEVh0ldEOHSQNTOKYfzJ0qVUVo0ACN/iEBcMK7ytkONftMFKjCTWxq6yqQqX+AuMfjv0bcOkaS8lPtKkQEjDLH5gSRFBZxiUVTu+v8r5loUpFmIWgPhp759C6PbelMQVKDdFBKLcVpipX6ITKBa1RvBGbtCi6M0RurKgZXxgrtKERRIAvsqwKhIRsjW0EhXT0l8kYOtu7hiOr9AoiyI0tJUECmSQ8J1XiPgin/bfz+Or8Ip7FvyaXcRLHozh8fomvkjiGto1AZpniOGTx914yclk4PIxz9nZofdk4DFLkzw8U6ckRsrqlSMv1rUN1u7iUJlyh3Q9MabqcsG2h9ON+KaS1cgMRKMLSvV/ZtcX8OIMcfRpiO9pqOTeOJNXuxCsG42uT4UkO7WmJureyqtB2F7qKL4476U7LmtbGqp+YeVyHaW0VbSCZNyBd+p33vz8iL4BFmUEEz1YRwqKNGvgdpUULydz/m1bqD9xs116zl06lvfnXaU3ryeuGXyv0ejFftItDLn1Dqq12/9UuPad8r7BdZSzJgilWIq1Np0RcbElrSGAsKzWejOJx7znO8IkYMiACp8Y++aaeN1DbAhJoltLhnS3a47b2tiI1OlerOsgfRPAkrZLLIhCrcw5FyWVdcIWPkG7Clrj79icXcrEr0S2LWIAaFmrHdF+PI8g7h+LamEeFgp1QU6ePEIGWpffcB4xAsVvqXZiuXRW356yJqqNTPmhCKzamDmLFwELqTFTSuWdjud5ehr06ekBG7rhzCvRZMBbNl/uZmJlH1O3ZADRgRd3Dx76JvtzP+KghWd/L2XSQKKGcyJDQlkpjJpYbz7GzaddL3uZMrFFm/gJdUgcndkntbNpo2w07PZJ+4fAmwU7khXkWz4rWYnCq8CISAW8Hauzv9gozWPQc9Il2yXjsTx0ZXWxMnqsUR6kpw+JkvNUKVmpO+Omu3txXx1T9bJWZb2aZ9V1LRlTWEKY85Sw6U9sU3VYYErjn33esg9r1+rHLpl+4NloHkT9IKu/eiG77uC0G3qdHzcRXOjdc35dzp1ZaUm3xfboxpbfm3D9h6g/vNRI8VX1mRVk7EksUZknSc/JJSU/Kh52wBdkYVORBoM4qozSNxGdiWnN7YiakE1KEjg8sYyzfww97gTyMduzej+9AMVr+nxsfdje3ppViPUTrQsCXo4tRzGmqjKNS+rHaAX9COkXqD3PY7F4C/+fE6EpF+ELjqpBK8z3roNxhfMy5jhDBZBT7QbF3o8EQWUSwNo7YodkOj5aX/6nR8oxd7IZEGJO9QvDU8eoOPOQr8tOkqAOHDt5weUpsx9ynDzOIfMcPaReUvXtg9H5Lb/axh4Mg3IC/eUi/6tE0gdNtu7UPW296bHUyWHN+F23b/gvXkkor
+sidebar_class_name: "get api-method"
+info_path: site/docspace/api-backend/usage-api/api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get the Developer Tools access settings"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/2.0/settings/devtoolsaccess"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns the Developer Tools access settings for the portal.
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Developer Tools access settings","content":{"application/json":{"schema":{"type":"object","properties":{"response":{"type":"object","properties":{"limitedAccessForUsers":{"type":"boolean","description":"Specifies if the Developer Tools access are limited for users or not.","example":true},"lastModified":{"type":"string","format":"date-time","example":"2008-04-10T06:30:00.0000000+04:00"}},"additionalProperties":false,"description":"The Developer Tools access settings.","title":"TenantDevToolsAccessSettings"},"count":{"type":"integer","format":"int32"},"links":{"type":"array","items":{"type":"object","properties":{"href":{"type":"string"},"action":{"type":"string"}}}},"status":{"type":"integer","format":"int32"},"statusCode":{"type":"integer","format":"int32"}},"title":"TenantDevToolsAccessSettingsWrapper"}}}},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      
