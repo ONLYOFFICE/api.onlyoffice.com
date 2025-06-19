@@ -1,14 +1,14 @@
-# ApiBlockLvlSdt#GetAppearance
+# GetAppearance
 
 Gets the visualization of the content control.
 
 ## Syntax
 
 ```javascript
-expression.ApiBlockLvlSdt#GetAppearance();
+expression.GetAppearance();
 ```
 
-`expression` - A variable that represents a [ApiInlineLvlSdt](../ApiInlineLvlSdt.md) class.
+`expression` - A variable that represents a [ApiBlockLvlSdt](../ApiBlockLvlSdt.md) class.
 
 ## Parameters
 

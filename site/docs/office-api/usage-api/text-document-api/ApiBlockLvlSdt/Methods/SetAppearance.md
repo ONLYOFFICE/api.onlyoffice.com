@@ -1,14 +1,14 @@
-# ApiBlockLvlSdt#SetAppearance
+# SetAppearance
 
 Sets the visualization of the content control.
 
 ## Syntax
 
 ```javascript
-expression.ApiBlockLvlSdt#SetAppearance(type);
+expression.SetAppearance(type);
 ```
 
-`expression` - A variable that represents a [ApiInlineLvlSdt](../ApiInlineLvlSdt.md) class.
+`expression` - A variable that represents a [ApiBlockLvlSdt](../ApiBlockLvlSdt.md) class.
 
 ## Parameters
 

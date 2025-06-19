@@ -11,8 +11,6 @@ Represents the ApiInlineLvlSdt class.
 | [AddElement](./Methods/AddElement.md) | boolean | Adds an element to the inline text content control. |
 | [AddListItem](./Methods/AddListItem.md) | boolean | Adds an item to a combo box list or drop-down list. |
 | [AddText](./Methods/AddText.md) | boolean | Adds text to the current content control. |
-| [ApiBlockLvlSdt#GetAppearance](./Methods/ApiBlockLvlSdt#GetAppearance.md) | "boundingBox" \| "hidden" | Gets the visualization of the content control. |
-| [ApiBlockLvlSdt#SetAppearance](./Methods/ApiBlockLvlSdt#SetAppearance.md) | None | Sets the visualization of the content control. |
 | [Copy](./Methods/Copy.md) | [ApiInlineLvlSdt](../ApiInlineLvlSdt/ApiInlineLvlSdt.md) | Creates a copy of an inline content control. Ignores comments, footnote references, complex fields. |
 | [Delete](./Methods/Delete.md) | boolean | Removes a content control and its content. If keepContent is true, the content is not deleted. |
 | [GetAlias](./Methods/GetAlias.md) | string | Returns the alias attribute for the current container. |

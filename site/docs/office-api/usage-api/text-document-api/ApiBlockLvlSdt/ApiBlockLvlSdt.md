@@ -18,6 +18,7 @@ Represents the ApiBlockLvlSdt class.
 | [GetAllDrawingObjects](./Methods/GetAllDrawingObjects.md) | [Drawing](../Enumeration/Drawing.md)[] | Returns a collection of drawing objects in the current content control. |
 | [GetAllParagraphs](./Methods/GetAllParagraphs.md) | [ApiParagraph](../ApiParagraph/ApiParagraph.md)[] | Returns a collection of paragraph objects in the current content control. |
 | [GetAllTablesOnPage](./Methods/GetAllTablesOnPage.md) | [ApiTable](../ApiTable/ApiTable.md)[] | Returns a collection of tables on a given absolute page. 💡 This method can be a little bit slow, because it runs the document calculation process to arrange tables on the specified page. |
+| [GetAppearance](./Methods/GetAppearance.md) | "boundingBox" \| "hidden" | Gets the visualization of the content control. |
 | [GetBackgroundColor](./Methods/GetBackgroundColor.md) | null \| Object | Returns the background color of the current content control. |
 | [GetBorderColor](./Methods/GetBorderColor.md) | null \| Object | Returns the border color of the current content control. |
 | [GetClassType](./Methods/GetClassType.md) | "blockLvlSdt" | Returns a type of the ApiBlockLvlSdt class. |
@@ -44,6 +45,7 @@ Represents the ApiBlockLvlSdt class.
 | [Search](./Methods/Search.md) | [ApiRange](../ApiRange/ApiRange.md)[] | Searches for a scope of a content control object. The search results are a collection of ApiRange objects. |
 | [Select](./Methods/Select.md) | boolean | Selects the current content control. |
 | [SetAlias](./Methods/SetAlias.md) | boolean | Sets the alias attribute to the current container. |
+| [SetAppearance](./Methods/SetAppearance.md) | None | Sets the visualization of the content control. |
 | [SetBackgroundColor](./Methods/SetBackgroundColor.md) | boolean | Sets the background color to the current content control. |
 | [SetBorderColor](./Methods/SetBorderColor.md) | boolean | Sets the border color to the current content control. |
 | [SetDataBinding](./Methods/SetDataBinding.md) | boolean | Sets the data binding for the content control. |
