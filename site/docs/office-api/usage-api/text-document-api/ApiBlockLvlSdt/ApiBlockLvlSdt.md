@@ -18,9 +18,12 @@ Represents the ApiBlockLvlSdt class.
 | [GetAllDrawingObjects](./Methods/GetAllDrawingObjects.md) | [Drawing](../Enumeration/Drawing.md)[] | Returns a collection of drawing objects in the current content control. |
 | [GetAllParagraphs](./Methods/GetAllParagraphs.md) | [ApiParagraph](../ApiParagraph/ApiParagraph.md)[] | Returns a collection of paragraph objects in the current content control. |
 | [GetAllTablesOnPage](./Methods/GetAllTablesOnPage.md) | [ApiTable](../ApiTable/ApiTable.md)[] | Returns a collection of tables on a given absolute page. 💡 This method can be a little bit slow, because it runs the document calculation process to arrange tables on the specified page. |
+| [GetBackgroundColor](./Methods/GetBackgroundColor.md) | null \| Object | Returns the background color of the current content control. |
+| [GetBorderColor](./Methods/GetBorderColor.md) | null \| Object | Returns the border color of the current content control. |
 | [GetClassType](./Methods/GetClassType.md) | "blockLvlSdt" | Returns a type of the ApiBlockLvlSdt class. |
 | [GetContent](./Methods/GetContent.md) | [ApiDocumentContent](../ApiDocumentContent/ApiDocumentContent.md) | Returns the content of the current container. |
 | [GetDataBinding](./Methods/GetDataBinding.md) | [XmlMapping](../Enumeration/XmlMapping.md) | Retrieves the data binding of the content control. |
+| [GetDataForXmlMapping](./Methods/GetDataForXmlMapping.md) | string | Returns the content control data for the XML mapping. |
 | [GetDropdownList](./Methods/GetDropdownList.md) | [ApiContentControlList](../ApiContentControlList/ApiContentControlList.md) | Returns a list of values of the combo box / drop-down list content control. |
 | [GetId](./Methods/GetId.md) | string | Returns a unique ID for the current content control. |
 | [GetInternalId](./Methods/GetInternalId.md) | string | Returns an internal id of the current content control. |
@@ -41,7 +44,10 @@ Represents the ApiBlockLvlSdt class.
 | [Search](./Methods/Search.md) | [ApiRange](../ApiRange/ApiRange.md)[] | Searches for a scope of a content control object. The search results are a collection of ApiRange objects. |
 | [Select](./Methods/Select.md) | boolean | Selects the current content control. |
 | [SetAlias](./Methods/SetAlias.md) | boolean | Sets the alias attribute to the current container. |
+| [SetBackgroundColor](./Methods/SetBackgroundColor.md) | boolean | Sets the background color to the current content control. |
+| [SetBorderColor](./Methods/SetBorderColor.md) | boolean | Sets the border color to the current content control. |
 | [SetDataBinding](./Methods/SetDataBinding.md) | boolean | Sets the data binding for the content control. |
+| [SetId](./Methods/SetId.md) | None | Specifies a unique ID for the current content control. |
 | [SetLabel](./Methods/SetLabel.md) | boolean | Sets the label attribute to the current container. |
 | [SetLock](./Methods/SetLock.md) | boolean | Sets the lock to the current block text content control: -**"contentLocked"** - content cannot be edited. -**"sdtContentLocked"** - content cannot be edited and the container cannot be deleted. -**"sdtLocked"** - the container cannot be deleted. |
 | [SetPicture](./Methods/SetPicture.md) | boolean | Sets the content (image) for the picture content control. This method updates the picture inside a content control by setting an image from a provided URL. The URL should be an internet link to the image. |
@@ -49,3 +55,4 @@ Represents the ApiBlockLvlSdt class.
 | [SetTag](./Methods/SetTag.md) | boolean | Sets the tag attribute to the current container. |
 | [SetTextPr](./Methods/SetTextPr.md) | boolean | Applies text settings to the content of the content control. |
 | [ToJSON](./Methods/ToJSON.md) | JSON | Converts the ApiBlockLvlSdt object into the JSON object. |
+| [UpdateFromXmlMapping](./Methods/UpdateFromXmlMapping.md) | boolean | Updates the content control using the value from the XML mapping. |

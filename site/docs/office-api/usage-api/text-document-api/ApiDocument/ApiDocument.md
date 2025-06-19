@@ -8,6 +8,7 @@ Represents the ApiDocument class.
 | Method | Returns | Description |
 | ------ | ------- | ----------- |
 | [AcceptAllRevisionChanges](./Methods/AcceptAllRevisionChanges.md) | boolean | Accepts all changes made in review mode. |
+| [AddCheckBoxContentControl](./Methods/AddCheckBoxContentControl.md) | [ApiInlineLvlSdt](../ApiInlineLvlSdt/ApiInlineLvlSdt.md) | Adds a new checkbox content control to the document. |
 | [AddComboBoxContentControl](./Methods/AddComboBoxContentControl.md) | [ApiInlineLvlSdt](../ApiInlineLvlSdt/ApiInlineLvlSdt.md) | Adds a new combo box content control to the document. |
 | [AddComment](./Methods/AddComment.md) | [ApiComment](../ApiComment/ApiComment.md) | Adds a comment to the current document selection, or to the current word if no text is selected. |
 | [AddDatePickerContentControl](./Methods/AddDatePickerContentControl.md) | [ApiInlineLvlSdt](../ApiInlineLvlSdt/ApiInlineLvlSdt.md) | Adds a new date picker content control to the document. |
@@ -17,6 +18,7 @@ Represents the ApiDocument class.
 | [AddEndnote](./Methods/AddEndnote.md) | [ApiDocumentContent](../ApiDocumentContent/ApiDocumentContent.md) | Adds an endnote for the selected text (or the current position if the selection doesn't exist). |
 | [AddFootnote](./Methods/AddFootnote.md) | [ApiDocumentContent](../ApiDocumentContent/ApiDocumentContent.md) | Adds a footnote for the selected text (or the current position if the selection doesn't exist). |
 | [AddMathEquation](./Methods/AddMathEquation.md) | boolean | Adds a math equation to the current document. |
+| [AddPictureContentControl](./Methods/AddPictureContentControl.md) | [ApiInlineLvlSdt](../ApiInlineLvlSdt/ApiInlineLvlSdt.md) | Adds a new picture content control to the document. |
 | [AddTableOfContents](./Methods/AddTableOfContents.md) | boolean | Adds a table of content to the current document. 💡 Please note that the new table of contents replaces the existing table of contents. |
 | [AddTableOfFigures](./Methods/AddTableOfFigures.md) | boolean | Adds a table of figures to the current document. |
 | [ClearAllFields](./Methods/ClearAllFields.md) | boolean | Clears all forms in the document. |
@@ -57,6 +59,7 @@ Represents the ApiDocument class.
 | [GetCurrentVisiblePages](./Methods/GetCurrentVisiblePages.md) | number[] | Returns the indexes of the currently visible pages. |
 | [GetCurrentWord](./Methods/GetCurrentWord.md) | string | Returns the current word or part of the current word. |
 | [GetCustomProperties](./Methods/GetCustomProperties.md) | [ApiCustomProperties](../ApiCustomProperties/ApiCustomProperties.md) | Retrieves the custom properties from the document. |
+| [GetCustomXmlParts](./Methods/GetCustomXmlParts.md) | [ApiCustomXmlParts](../ApiCustomXmlParts/ApiCustomXmlParts.md) \| null | Retrieves the custom XML manager associated with the document. This manager allows manipulation and access to custom XML parts within the document. |
 | [GetDefaultParaPr](./Methods/GetDefaultParaPr.md) | [ApiParaPr](../ApiParaPr/ApiParaPr.md) | Returns a set of default paragraph properties in the current document. |
 | [GetDefaultStyle](./Methods/GetDefaultStyle.md) | [ApiStyle](../ApiStyle/ApiStyle.md) | Returns the default style parameters for the specified document element. |
 | [GetDefaultTextPr](./Methods/GetDefaultTextPr.md) | [ApiTextPr](../ApiTextPr/ApiTextPr.md) | Returns a set of default properties for the text run in the current document. |
