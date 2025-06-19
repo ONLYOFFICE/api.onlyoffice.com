@@ -124,6 +124,7 @@ Defines the editor header settings.
 const header = {
   editMode: true,
   save: true,
+  user: true,
   users: true,
 }
 ```
