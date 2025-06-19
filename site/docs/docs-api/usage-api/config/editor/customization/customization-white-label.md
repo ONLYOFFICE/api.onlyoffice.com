@@ -72,6 +72,7 @@ const layout = {
   header: {
     editMode: true,
     save: true,
+    user: true,
     users: true,
   },
   leftMenu: {
@@ -140,6 +141,14 @@ Defines if a button for switching editor modes will be displayed in the header o
 `Type: boolean`
 
 Defines if the **Save** button in the editor header is displayed or hidden. The default value is **true**. Please note that this setting is used when the [compactHeader](customization-standard-branding.md#compactheader) parameter is set to **false**.
+
+**Example**: `true`
+
+### layout.header.user
+
+`Type: boolean`
+
+Defines if the icon with the user's avatar/initials in the editor header is displayed or hidden. The default value is **true**.
 
 **Example**: `true`
 
@@ -526,6 +535,7 @@ const config = {
         header: {
           editMode: true,
           save: true,
+          user: true,
           users: true,
         },
         leftMenu: {

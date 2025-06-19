@@ -134,6 +134,7 @@ const config = {
         size: "11px",
       },
       forcesave: false,
+      forceWesternFontSize: false,
       goback: {
         blank: true,
         text: "Open file location",
@@ -148,6 +149,7 @@ const config = {
         header: {
           editMode: true,
           save: true,
+          user: true,
           users: true,
         },
         leftMenu: {
