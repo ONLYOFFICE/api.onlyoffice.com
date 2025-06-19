@@ -8,6 +8,7 @@
 
 #### Docs API
 
+* Added the theme-white and theme-night theme ids to the editorConfig.customization.uiTheme parameter
 * Added opening for odg format
 * Added opening for md format
 * Added the ability to preload the editor static resources

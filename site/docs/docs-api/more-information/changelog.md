@@ -4,6 +4,7 @@ The list of changes of ONLYOFFICE Docs API.
 
 ## Version 9.0
 
+- Added the *theme-white* and *theme-night* theme ids to the [editorConfig.customization.uiTheme](../usage-api/config/editor/customization/customization-standard-branding.md#uitheme) parameter.
 - Added opening for [odg](../usage-api/config/document/document.md#filetype) format.
 - Added opening for [md](../usage-api/config/document/document.md#filetype) format.
 - Added the ability to [preload](../get-started/configuration/preload.md) the editor static resources.

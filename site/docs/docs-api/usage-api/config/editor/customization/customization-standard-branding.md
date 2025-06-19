@@ -952,7 +952,7 @@ Starting from version 7.0, please use the [review.trackChanges](#reviewtrackchan
 
 Defines the editor theme settings. It can be set in two ways:
 
-- **theme id** - the user sets the theme parameter by its id (**theme-light**, **theme-classic-light**, **theme-dark**, **theme-contrast-dark**);
+- **theme id** - the user sets the theme parameter by its id (**theme-light**, **theme-classic-light**, **theme-dark**, **theme-contrast-dark**, **theme-white**, **theme-night**);
 - **default theme** - the default dark or light theme value will be set (**default-dark**, **default-light**). The default light theme is **theme-classic-light**.
 
 The first option has higher priority.
