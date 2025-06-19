@@ -47,6 +47,7 @@ Represents the ApiInlineLvlSdt class.
 | [RemoveAllElements](./Methods/RemoveAllElements.md) | boolean | Removes all the elements from the current inline text content control. |
 | [RemoveElement](./Methods/RemoveElement.md) | boolean | Removes an element using the position specified from the current inline text content control. |
 | [RemoveListItem](./Methods/RemoveListItem.md) | boolean | Removes an item from a combo box list or drop-down list. |
+| [Select](./Methods/Select.md) | boolean | Selects the current content control. |
 | [SelectListItem](./Methods/SelectListItem.md) | boolean | Sets the selected item for a combo box list or drop-down list. |
 | [SetAlias](./Methods/SetAlias.md) | boolean | Sets the alias attribute to the current container. |
 | [SetAppearance](./Methods/SetAppearance.md) | None | Sets the visualization type of the content control. |

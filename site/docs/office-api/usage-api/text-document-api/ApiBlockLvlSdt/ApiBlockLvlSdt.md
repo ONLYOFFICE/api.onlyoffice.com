@@ -11,7 +11,6 @@ Represents the ApiBlockLvlSdt class.
 | [AddComment](./Methods/AddComment.md) | [ApiComment](../ApiComment/ApiComment.md) | Adds a comment to the current block content control. 💡 Please note that the current block content control must be in the document. |
 | [AddElement](./Methods/AddElement.md) | boolean | Adds a paragraph or a table or a block content control to the current container. |
 | [AddText](./Methods/AddText.md) | boolean | Adds a text to the current content control. |
-| [ApiInlineLvlSdt#Select](./Methods/ApiInlineLvlSdt#Select.md) | boolean | Selects the current content control. |
 | [Copy](./Methods/Copy.md) | [ApiBlockLvlSdt](../ApiBlockLvlSdt/ApiBlockLvlSdt.md) | Creates a copy of an block content control. Ignores comments, footnote references, complex fields. |
 | [Delete](./Methods/Delete.md) | boolean | Removes a content control and its content. If keepContent is true, the content is not deleted. |
 | [GetAlias](./Methods/GetAlias.md) | string | Returns the alias attribute for the current container. |

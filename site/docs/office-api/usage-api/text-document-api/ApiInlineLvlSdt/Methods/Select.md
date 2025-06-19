@@ -1,14 +1,14 @@
-# ApiInlineLvlSdt#Select
+# Select
 
 Selects the current content control.
 
 ## Syntax
 
 ```javascript
-expression.ApiInlineLvlSdt#Select();
+expression.Select();
 ```
 
-`expression` - A variable that represents a [ApiBlockLvlSdt](../ApiBlockLvlSdt.md) class.
+`expression` - A variable that represents a [ApiInlineLvlSdt](../ApiInlineLvlSdt.md) class.
 
 ## Parameters
 
