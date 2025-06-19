@@ -123,21 +123,21 @@ The list of changes for Office JavaScript API.
 - Added the [ApiFormBase/GetTag](../usage-api/text-document-api/ApiFormBase/Methods/GetTag.md) method to Text document API.
 - Added the [ApiFormBase/SetRole](../usage-api/text-document-api/ApiFormBase/Methods/SetRole.md) method to Text document API.
 - Added the [ApiFormBase/SetTag](../usage-api/text-document-api/ApiFormBase/Methods/SetTag.md) method to Text document API.
-- Added the [Api/CreateComplexForm](../usage-api/text-document-api/Api/Methods/CreateComplexForm.md) method to Form API.
-- Added the [ApiDocument/GetFormRoles](../usage-api/text-document-api/ApiDocument/Methods/GetFormRoles.md) method to Form API.
-- Added the [ApiFormRoles](../usage-api/text-document-api/ApiFormRoles/ApiFormRoles.md) class to Form API.
-- Added the [ApiFormRoles/Add](../usage-api/text-document-api/ApiFormBase/Methods/Add.md) method to Form API.
-- Added the [ApiFormRoles/GetAllRoles](../usage-api/text-document-api/ApiFormBase/Methods/GetAllRoles.md) method to Form API.
-- Added the [ApiFormRoles/GetCount](../usage-api/text-document-api/ApiFormBase/Methods/GetCount.md) method to Form API.
-- Added the [ApiFormRoles/GetRoleColor](../usage-api/text-document-api/ApiFormBase/Methods/GetRoleColor.md) method to Form API.
-- Added the [ApiFormRoles/HaveRole](../usage-api/text-document-api/ApiFormBase/Methods/HaveRole.md) method to Form API.
-- Added the [ApiFormRoles/MoveDown](../usage-api/text-document-api/ApiFormBase/Methods/MoveDown.md) method to Form API.
-- Added the [ApiFormRoles/MoveUp](../usage-api/text-document-api/ApiFormBase/Methods/MoveUp.md) method to Form API.
-- Added the [ApiFormRoles/Remove](../usage-api/text-document-api/ApiFormBase/Methods/Remove.md) method to Form API.
-- Added the [ApiFormRoles/SetRoleColor](../usage-api/text-document-api/ApiFormBase/Methods/SetRoleColor.md) method to Form API.
+- Added the [Api/CreateComplexForm](../usage-api/form-api/Api/Methods/CreateComplexForm.md) method to Form API.
+- Added the [ApiDocument/GetFormRoles](../usage-api/form-api/ApiDocument/Methods/GetFormRoles.md) method to Form API.
+- Added the [ApiFormRoles](../usage-api/form-api/ApiFormRoles/ApiFormRoles.md) class to Form API.
+- Added the [ApiFormRoles/Add](../usage-api/form-api/ApiFormRoles/Methods/Add.md) method to Form API.
+- Added the [ApiFormRoles/GetAllRoles](../usage-api/form-api/ApiFormRoles/Methods/GetAllRoles.md) method to Form API.
+- Added the [ApiFormRoles/GetCount](../usage-api/form-api/ApiFormRoles/Methods/GetCount.md) method to Form API.
+- Added the [ApiFormRoles/GetRoleColor](../usage-api/form-api/ApiFormRoles/Methods/GetRoleColor.md) method to Form API.
+- Added the [ApiFormRoles/HaveRole](../usage-api/form-api/ApiFormRoles/Methods/HaveRole.md) method to Form API.
+- Added the [ApiFormRoles/MoveDown](../usage-api/form-api/ApiFormRoles/Methods/MoveDown.md) method to Form API.
+- Added the [ApiFormRoles/MoveUp](../usage-api/form-api/ApiFormRoles/Methods/MoveUp.md) method to Form API.
+- Added the [ApiFormRoles/Remove](../usage-api/form-api/ApiFormRoles/Methods/Remove.md) method to Form API.
+- Added the [ApiFormRoles/SetRoleColor](../usage-api/form-api/ApiFormRoles/Methods/SetRoleColor.md) method to Form API.
 - Added the *role* property to the [FormPrBase](../usage-api/form-api/Enumeration/FormPrBase.md) object.
-- Added the [DateFormPr](../usage-api/text-document-api/Enumeration/DateFormPr.md) type to the simple type definitions.
-- Added the [RoleProperties](../usage-api/text-document-api/Enumeration/RoleProperties.md) type to the simple type definitions.
+- Added the [DateFormPr](../usage-api/form-api/Enumeration/DateFormPr.md) type to the simple type definitions.
+- Added the [RoleProperties](../usage-api/form-api/Enumeration/RoleProperties.md) type to the simple type definitions.
 
 ### Custom properties methods
 
