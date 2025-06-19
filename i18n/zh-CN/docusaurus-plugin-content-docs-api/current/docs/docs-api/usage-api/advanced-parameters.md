@@ -17,7 +17,7 @@ ONLYOFFICE 文档可以更改的参数可以细分为以下主要部分：
 
   - [**customization**](./config/editor/customization/customization-standard-branding.md) - 允许自定义编辑器界面，使其看起来像您的其他产品（如果有），并更改附加按钮、链接、更改徽标和编辑器所有者详细信息的显示或不显示；
   - [**embedded**](./config/editor/embedded.md) - 仅用于嵌入式文档类型，并允许更改用于控制嵌入式模式的按钮的行为；
-  - [**plugins**](./config/editor/plugins.md)- 用于将必要的 [plugins](../../plugin-and-macros/get-started/overview.md) 连接到您的文档，以便它们对所有文档编辑器用户可见；
+  - [**plugins**](./config/editor/plugins.md)- 用于将必要的 [plugins](../../plugin-and-macros/get-started/get-started.md) 连接到您的文档，以便它们对所有文档编辑器用户可见；
 
 - [**events**](./config/events.md) - 是在对文档进行某些操作时调用的特殊事件列表，这些操作包括加载、修改等。
 
