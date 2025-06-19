@@ -1,0 +1,6 @@
+.textInput {
+  border-radius: 2px;
+  box-sizing: border-box;
+  padding: 4px 8px;
+  flex: 1;
+}

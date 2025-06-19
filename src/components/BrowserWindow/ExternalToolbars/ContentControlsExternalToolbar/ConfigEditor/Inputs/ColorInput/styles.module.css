@@ -1,0 +1,17 @@
+.colorInput {
+  padding: 3px;
+  width: 30px;
+  cursor: pointer;
+  border-radius: 100%;
+  appearance: none;
+}
+
+.colorInput::-webkit-color-swatch-wrapper {
+  padding: 0;
+  margin: 0;
+}
+
+.colorInput::-webkit-color-swatch {
+  border: none;
+  border-radius: 100%;
+}

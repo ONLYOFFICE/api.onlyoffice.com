@@ -99,12 +99,6 @@
   width: 300px;
 }
 
-.contentControlsDetails input[type="radio"] {
-  cursor: pointer;
-  width: 28px !important;
-  vertical-align: middle !important;
-}
-
 :root {
   --working-with-content-controls-bg-color: #f9f9f9;
   --working-with-content-controls-input-color: black;

@@ -1,16 +1,28 @@
+import { useState } from "react";
 import { OnlyofficeEditor } from "@site/src/components/BrowserWindow";
+import ConfigEditor from "./ConfigEditor/ConfigEditor";
+import { text, date, picture, combobox, checkbox } from "./ConfigEditor/types";
 import styles from "./styles.module.css";
 
 const ContentControlsExternalToolbar: React.FC<void> = () => {
+  const [currentConfig, setCurrentConfig] = useState<text | date | picture | combobox | checkbox>();
   return (
     <>
-      <select id="contentControlsSelect" className={styles.contentControlsSelect} name="persons" defaultValue="defaultValue" required disabled>
+      <select
+        id="contentControlsSelect"
+        className={styles.contentControlsSelect}
+        style={{ display: "none" }}
+        name="persons"
+        defaultValue="defaultValue"
+        required
+        disabled
+      >
         <option value="defaultValue" disabled>
           Choose content control
         </option>
       </select>
-      <div id="contentControlsExternalToolbar" className={styles.contentControlsExternalToolbar} style={{ display: "none" }}/>
-      <ul className={styles.buttons}>
+      <ConfigEditor controlIndex={0} />
+      <ul className={styles.buttons} style={{ display: "none" }}>
         <li>
           <button id="addContentControl" disabled>
             ADD CONTENT CONTROL
@@ -21,7 +33,6 @@ const ContentControlsExternalToolbar: React.FC<void> = () => {
         fileType={"docx"}
         code={""}
         height="550px"
-        templateUrl="https://static.onlyoffice.com/assets/docs/samples/withcomments.docx"
         externalScript={{
           beforeDocumentReady: `
             var contentControls = [];
@@ -68,14 +79,15 @@ const ContentControlsExternalToolbar: React.FC<void> = () => {
               type: 1,
             };
             
-            const contentControlsExternalToolbar = document.getElementById("contentControlsExternalToolbar");
+            const configEditor = document.getElementById("configEditor");
             const addContentControl = document.getElementById("addContentControl");
             const contentControlsSelect = document.getElementById("contentControlsSelect");
+            const buttons = document.querySelector(".${styles.buttons}");
 
-            [addContentControl, contentControlsSelect].forEach(element => element.disabled = false);
-
-            contentControlsExternalToolbar.style.display = "flex";
-            contentControlsExternalToolbar.appendChild(createFormByObject(placeholderPlainRich.commonPr));
+            [configEditor, addContentControl, contentControlsSelect, buttons].forEach(element => {
+              element.disabled = false;
+              element.removeAttribute('style');
+            });
                          
             addContentControl.onclick = () => {
               const newContentControl = { ...placeholderPlainRich.commonPr,  Id: Date.now() };

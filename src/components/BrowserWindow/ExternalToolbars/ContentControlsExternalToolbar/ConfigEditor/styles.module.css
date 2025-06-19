@@ -1,0 +1,122 @@
+.configEditor {
+  display: flex;
+
+  background-color: var(--working-with-content-controls-bg-color);
+  border-radius: 3px;
+  padding: 15px 24px;
+  margin-bottom: 16px;
+  gap: 50px;
+
+  font-family: inherit;
+
+  width: 95%;
+  width: -moz-available;
+  width: -webkit-fill-available;
+}
+
+.configEditor ul {
+  margin: 0;
+  list-style: none;
+}
+
+.controls {
+  padding: 0;
+}
+
+.control {
+  height: 40px;
+  width: 230px;
+}
+
+.selectButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+
+  font: inherit;
+
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  padding-left: 10px;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  background-color: transparent;
+
+  cursor: pointer;
+
+  transition-property: background-color;
+  transition-duration: 200ms;
+  transition-timing-function: ease;
+}
+
+.selected {
+  font-weight: 600;
+
+  color: white;
+  background-color: #ff6f3d;
+}
+
+.fields {
+  padding: 0;
+  width: 100%;
+  max-width: 400px;
+}
+
+.field {
+  display: flex;
+  align-items: center;
+  width: auto;
+}
+
+.field label {
+  text-transform: capitalize;
+  display: inline-block;
+  width: 100%;
+  max-width: 140px;
+  color: var(--working-with-content-controls-label-color);
+}
+
+.field input {
+  color: var(--working-with-content-controls-input-color);
+  background-color: var(--working-with-content-controls-input-bg-color);
+  border: 1px solid var(--working-with-content-controls-input-border-color);
+  margin: 4px;
+  height: 30px;
+}
+
+:root {
+  --working-with-content-controls-bg-color: #f9f9f9;
+
+  --working-with-content-controls-input-color: black;
+  --working-with-content-controls-input-bg-color: white;
+  --working-with-content-controls-input-border-color: #d6d6d6;
+  --working-with-content-controls-hover-input-border-color: #7a7a7a;
+
+  --working-with-content-controls-label-color: #666666;
+  --working-with-content-controls-form-bg-color: #f9f9f9;
+}
+
+html[data-theme="dark"] {
+  --working-with-content-controls-bg-color: #1a1a1a;
+
+  --working-with-content-controls-input-color: white;
+  --working-with-content-controls-input-bg-color: #111111;
+  --working-with-content-controls-input-border-color: #c4c4c4;
+  --working-with-content-controls-hover-input-border-color: #9c9c9c;
+
+  --working-with-content-controls-label-color: #ffffff;
+  --working-with-content-controls-form-bg-color: #0f0f0f;
+}
+
+@media (hover: hover) {
+  .selectButton:not(.selected):hover {
+    color: #ff6f3d;
+    border-color: #ff6f3d;
+  }
+
+  .field input:hover {
+    border-color: var(--working-with-content-controls-hover-input-border-color);
+  }
+}
