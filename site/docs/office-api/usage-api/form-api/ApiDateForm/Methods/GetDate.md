@@ -16,7 +16,7 @@ This method doesn't have any parameters.
 
 ## Returns
 
-[Date](../../../text-document-api/Date/Date.md)
+Date
 
 ## Example
 

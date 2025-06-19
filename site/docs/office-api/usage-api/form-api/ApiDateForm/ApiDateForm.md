@@ -10,7 +10,7 @@ Represents the ApiDateForm class.
 | [Clear](./Methods/Clear.md) | boolean | Clears the current form. |
 | [Copy](./Methods/Copy.md) | [ApiForm](../Enumeration/ApiForm.md) | Copies the current form (copies with the shape if it exists). |
 | [GetClassType](./Methods/GetClassType.md) | "form" | Returns a type of the ApiFormBase class. |
-| [GetDate](./Methods/GetDate.md) | [Date](../../text-document-api/Date/Date.md) | Returns the date of the current form. |
+| [GetDate](./Methods/GetDate.md) | Date | Returns the date of the current form. |
 | [GetFormKey](./Methods/GetFormKey.md) | string | Returns the current form key. |
 | [GetFormType](./Methods/GetFormType.md) | [FormType](../Enumeration/FormType.md) | Returns a type of the current form. |
 | [GetFormat](./Methods/GetFormat.md) | string | Gets the date format of the current form. |

@@ -14,7 +14,7 @@ expression.SetDate(date);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| date | Required | [Date](../../../text-document-api/Date/Date.md) \| string |  | The date object or the date in the string format. |
+| date | Required | Date \| string |  | The date object or the date in the string format. |
 
 ## Returns
 
