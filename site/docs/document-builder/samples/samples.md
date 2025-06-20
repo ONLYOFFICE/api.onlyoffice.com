@@ -68,7 +68,7 @@ See: [C++](https://github.com/ONLYOFFICE/document-builder-samples/blob/master/cp
 
 ## Generating personalized investment plan
 
-Creates an XLSX investment plan with projections and charts tailored to the client’s financial goals and input data.
+Creates an XLSX investment plan with projections and charts tailored to the client's financial goals and input data.
 
 See: [C++](https://github.com/ONLYOFFICE/document-builder-samples/blob/master/cpp/creating_investment_plan/main.cpp) / [.Net](https://github.com/ONLYOFFICE/document-builder-samples/blob/master/cs/creating_investment_plan/Program.cs) / [Python](https://github.com/ONLYOFFICE/document-builder-samples/blob/master/python/creating_investment_plan/main.py) / [Java](https://github.com/ONLYOFFICE/document-builder-samples/blob/master/java/creating_investment_plan/Program.java)
 
@@ -78,7 +78,7 @@ Creates an XLSX report with current stock items, including quantities and status
 
 See: [C++](https://github.com/ONLYOFFICE/document-builder-samples/blob/master/cpp/creating_inventory_report/main.cpp) / [.Net](https://github.com/ONLYOFFICE/document-builder-samples/blob/master/cs/creating_inventory_report/Program.cs) / [Python](https://github.com/ONLYOFFICE/document-builder-samples/blob/master/python/creating_inventory_report/main.py) / [Java](https://github.com/ONLYOFFICE/document-builder-samples/blob/master/java/creating_inventory_report/Program.java)
 
-## Creating startup market analysis deck
+## Creating startup market analysis presentation
 
 Generates a presentation with market trends, competition, and customer insights using integrated external data.
 
