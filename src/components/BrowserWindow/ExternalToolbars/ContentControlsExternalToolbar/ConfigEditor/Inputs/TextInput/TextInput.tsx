@@ -1,17 +1,14 @@
-import { useState } from "react";
 import styles from "./styles.module.css";
 
 type TextInputProps = {
-  id: string;
-  initialValue?: string;
+  value: string;
+  setValue: (newValue: string) => void;
 };
 
-const TextInput: React.FC<TextInputProps> = ({ id, initialValue = "" }) => {
-  const [value, setValue] = useState<string>(initialValue);
+const TextInput: React.FC<TextInputProps> = ({ value, setValue }) => {
   return (
     <input
       className={styles.textInput}
-      id={id}
       type="text"
       value={value}
       onChange={(e) => {

@@ -3,6 +3,7 @@
   height: 30px;
 
   padding: 3px;
+  margin: 0;
 
   border: 1px solid var(--working-with-content-controls-input-border-color);
   border-radius: 50%;

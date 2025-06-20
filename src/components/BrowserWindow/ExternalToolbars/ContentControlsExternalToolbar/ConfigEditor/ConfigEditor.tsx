@@ -1,14 +1,30 @@
-import { useState } from "react";
+import { useCallback, useState } from "react";
 import { text, date, picture, combobox, checkbox } from "./types";
 import { TextInput, ColorInput, CheckboxInput } from "./Inputs";
 import styles from "./styles.module.css";
+import ArrayInput from "./Inputs/ArrayInput/ArrayInput";
+
+type NonApiProps = {
+  name: string;
+};
+
+type InitialControls = [
+  text & NonApiProps,
+  date & NonApiProps,
+  picture & NonApiProps,
+  combobox &
+    NonApiProps & {
+      list: { key: number }[];
+    },
+  checkbox & NonApiProps
+];
 
 type ConfigEditorProps = {
   controlIndex: number;
 };
 
 const ConfigEditor: React.FC<ConfigEditorProps> = ({ controlIndex }) => {
-  const controls: [text, date, picture, combobox, checkbox] = [
+  const controls: InitialControls = [
     {
       name: "Plain text/Rich text",
       commonPr: {
@@ -60,8 +76,8 @@ const ConfigEditor: React.FC<ConfigEditorProps> = ({ controlIndex }) => {
         placeHolder: "Placeholder example",
       },
       list: [
-        { display: "Item1_D", value: "Item1_V" },
-        { display: "Item2_D", value: "Item2_V" },
+        { key: Date.now(), display: "Item2_D", value: "Item2_V" },
+        { key: Date.now() + 1, display: "Item1_D", value: "Item1_V" },
       ],
       type: "1",
     },
@@ -80,12 +96,19 @@ const ConfigEditor: React.FC<ConfigEditorProps> = ({ controlIndex }) => {
     },
   ];
 
-  const [currentControl, setCurrentControl] = useState<text | date | picture | combobox | checkbox>(controls[controlIndex]);
+  const [currentControl, setCurrentControl] = useState(controls[controlIndex]);
 
   const handleSelectControl = (control: typeof currentControl): void => {
     const newControl = { ...control };
     newControl.commonPr.id = Date.now().toString().slice(-5);
     setCurrentControl({ ...newControl });
+  };
+
+  const setCurrentControlProperty = (newPropertyValue: any, property: string, attribute?: string): void => {
+    setCurrentControl((prev) => ({
+      ...prev,
+      [property]: attribute ? { ...prev[property], [attribute]: newPropertyValue } : newPropertyValue,
+    }));
   };
 
   return (
@@ -104,17 +127,53 @@ const ConfigEditor: React.FC<ConfigEditorProps> = ({ controlIndex }) => {
         ))}
       </ul>
       <ul className={styles.fields}>
-        {Object.values(currentControl)
-          .filter((propertyValue) => typeof propertyValue === "object")
-          .map((propertyValue) =>
-            Object.entries(propertyValue).map(([attribute, attributeValue]) => (
-              <li key={attribute + attributeValue} className={styles.field}>
-                <label htmlFor={attribute}>{attribute.toLowerCase()}</label>
-                {(attribute === "color" && <ColorInput id={attribute} />) ||
-                  (typeof attributeValue === "boolean" && <CheckboxInput id={attribute} checked={attributeValue}/>) ||
-                  (typeof attributeValue === "string" && <TextInput id={attribute} initialValue={attributeValue} />)}
+        {Object.entries(currentControl)
+          .filter(([_, propertyValue]) => typeof propertyValue === "object")
+          .map(([property, propertyValue]) =>
+            property === "list" && Array.isArray(propertyValue) ? (
+              <li key={`${currentControl.name}-${property}`} className={styles.field}>
+                <label className={styles.listLabel} htmlFor={property}>{property.toLowerCase()}</label>
+                <ArrayInput
+                  value={propertyValue}
+                  setValue={(
+                    newPropertyValue: {
+                      display: string;
+                      value: string;
+                    }[]
+                  ) => setCurrentControlProperty(newPropertyValue, property)}
+                />
               </li>
-            ))
+            ) : (
+              Object.entries(propertyValue).map(([attribute, attributeValue]) => (
+                <li key={`${currentControl.name}-${property}-${attribute}`} className={styles.field}>
+                  <label htmlFor={attribute}>{attribute.toLowerCase()}</label>
+                  {(attribute === "color" && (
+                    <ColorInput
+                      value={
+                        attributeValue as {
+                          r: number;
+                          g: number;
+                          b: number;
+                        }
+                      }
+                      setValue={(newAttributeValue: typeof attributeValue) => setCurrentControlProperty(newAttributeValue, property, attribute)}
+                    />
+                  )) ||
+                    (typeof attributeValue === "boolean" && (
+                      <CheckboxInput
+                        value={attributeValue}
+                        setValue={(newAttributeValue: typeof attributeValue) => setCurrentControlProperty(newAttributeValue, property, attribute)}
+                      />
+                    )) ||
+                    (typeof attributeValue === "string" && (
+                      <TextInput
+                        value={attributeValue}
+                        setValue={(newAttributeValue: typeof attributeValue) => setCurrentControlProperty(newAttributeValue, property, attribute)}
+                      />
+                    ))}
+                </li>
+              ))
+            )
           )}
       </ul>
     </div>

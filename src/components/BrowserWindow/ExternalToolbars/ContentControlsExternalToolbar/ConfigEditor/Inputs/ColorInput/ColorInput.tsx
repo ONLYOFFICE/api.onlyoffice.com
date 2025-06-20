@@ -1,4 +1,3 @@
-import { useState } from "react";
 import styles from "./styles.module.css";
 
 type Color = {
@@ -8,13 +7,11 @@ type Color = {
 };
 
 type ColorInputProps = {
-  id: string;
-  color?: Color;
+  value: Color;
+  setValue: (newValue: Color) => void;
 };
 
-const ColorInput: React.FC<ColorInputProps> = ({ id, color = { r: 255, g: 0, b: 0 } }) => {
-  const [value, setValue] = useState<Color>(color);
-
+const ColorInput: React.FC<ColorInputProps> = ({ value, setValue }) => {
   const rgbToHex = ({ r, g, b }: Color) => {
     return `#${[r, g, b].map((v) => v.toString(16).padStart(2, "0")).join("")}`;
   };
@@ -28,7 +25,7 @@ const ColorInput: React.FC<ColorInputProps> = ({ id, color = { r: 255, g: 0, b: 
     });
   };
 
-  return <input className={styles.colorInput} id={id} type="color" value={rgbToHex({ r: value.r, g: value.g, b: value.b })} onChange={handleColorInputChange} />;
+  return <input className={styles.colorInput} type="color" value={rgbToHex(value)} onChange={handleColorInputChange} />;
 };
 
 export default ColorInput;

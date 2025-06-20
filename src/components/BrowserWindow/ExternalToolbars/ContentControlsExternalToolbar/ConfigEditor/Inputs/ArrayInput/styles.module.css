@@ -1,0 +1,48 @@
+.arrayInput {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  flex: 1;
+}
+
+.arrayInput ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  padding: 0;
+}
+
+.arrayInput button {
+  width: 30px;
+  height: 30px;
+
+  border: 1px solid var(--working-with-content-controls-input-border-color);
+  border-radius: 2px;
+
+  color: var(--working-with-content-controls-input-color);
+  background-color: var(--working-with-content-controls-input-bg-color);
+
+  cursor: pointer;
+}
+
+.elements {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  color: var(--working-with-content-controls-label-color);
+}
+
+:root {
+}
+
+html[data-theme="dark"] {
+}
+
+@media (hover: hover) {
+  .arrayInput button:hover {
+    border-color: var(--working-with-content-controls-hover-input-border-color);
+  }
+}

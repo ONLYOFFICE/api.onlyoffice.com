@@ -1,0 +1,26 @@
+.itemInput {
+  display: flex;
+  gap: 10px;
+  flex: 1;
+}
+
+.itemInput ul{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.inputs {  
+  flex: 1;
+}
+
+.inputs li {
+  display: flex;
+  flex: 1;
+}
+
+:root {
+}
+
+html[data-theme="dark"] {
+}
