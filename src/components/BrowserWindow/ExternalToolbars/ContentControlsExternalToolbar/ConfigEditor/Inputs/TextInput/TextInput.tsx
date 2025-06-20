@@ -1,15 +1,17 @@
 import styles from "./styles.module.css";
 
 type TextInputProps = {
+  placeholder?: string;
   value: string;
   setValue: (newValue: string) => void;
 };
 
-const TextInput: React.FC<TextInputProps> = ({ value, setValue }) => {
+const TextInput: React.FC<TextInputProps> = ({ placeholder, value, setValue }) => {
   return (
     <input
       className={styles.textInput}
       type="text"
+      placeholder={placeholder}
       value={value}
       onChange={(e) => {
         setValue(e.target.value);

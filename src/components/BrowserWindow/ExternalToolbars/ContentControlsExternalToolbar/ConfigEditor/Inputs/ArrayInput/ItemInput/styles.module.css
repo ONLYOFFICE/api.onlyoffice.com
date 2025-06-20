@@ -2,15 +2,20 @@
   display: flex;
   gap: 10px;
   flex: 1;
+
+  padding: 7px;
+
+  border: 1px solid var(--working-with-content-controls-input-border-color);
+  border-radius: 2px;
 }
 
-.itemInput ul{
+.itemInput ul {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
 
-.inputs {  
+.inputs {
   flex: 1;
 }
 

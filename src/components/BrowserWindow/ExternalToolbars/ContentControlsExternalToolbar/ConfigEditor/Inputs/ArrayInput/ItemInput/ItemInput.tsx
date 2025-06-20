@@ -19,10 +19,10 @@ const ItemInput: React.FC<ItemInputProps> = ({ item, setDisplay, setValue, remov
     <div className={styles.itemInput}>
       <ul className={styles.inputs}>
         <li>
-          <TextInput value={display} setValue={setDisplay} />
+          <TextInput placeholder="Display" value={display} setValue={setDisplay} />
         </li>
         <li>
-          <TextInput value={value} setValue={setValue} />
+          <TextInput placeholder="Value" value={value} setValue={setValue} />
         </li>
       </ul>
       <ul className={styles.controls}>
