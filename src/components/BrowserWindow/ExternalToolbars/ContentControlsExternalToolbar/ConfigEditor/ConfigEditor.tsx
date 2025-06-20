@@ -1,8 +1,7 @@
-import { useCallback, useState } from "react";
+import { useState } from "react";
 import { text, date, picture, combobox, checkbox } from "./types";
-import { TextInput, ColorInput, CheckboxInput } from "./Inputs";
+import { TextInput, ColorInput, ArrayInput, CheckboxInput } from "./Inputs";
 import styles from "./styles.module.css";
-import ArrayInput from "./Inputs/ArrayInput/ArrayInput";
 
 type NonApiProps = {
   name: string;
@@ -132,7 +131,9 @@ const ConfigEditor: React.FC<ConfigEditorProps> = ({ controlIndex }) => {
           .map(([property, propertyValue]) =>
             property === "list" && Array.isArray(propertyValue) ? (
               <li key={`${currentControl.name}-${property}`} className={styles.field}>
-                <label className={styles.listLabel} htmlFor={property}>{property.toLowerCase()}</label>
+                <label className={styles.listLabel} htmlFor={property}>
+                  {property.toLowerCase()}
+                </label>
                 <ArrayInput
                   value={propertyValue}
                   setValue={(
