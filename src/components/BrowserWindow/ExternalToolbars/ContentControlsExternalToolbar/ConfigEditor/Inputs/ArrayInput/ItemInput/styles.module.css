@@ -23,9 +23,3 @@
   display: flex;
   flex: 1;
 }
-
-:root {
-}
-
-html[data-theme="dark"] {
-}

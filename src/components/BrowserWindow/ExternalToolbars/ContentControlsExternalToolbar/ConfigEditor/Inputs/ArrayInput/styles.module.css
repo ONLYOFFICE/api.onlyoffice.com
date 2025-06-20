@@ -35,12 +35,6 @@
   color: var(--working-with-content-controls-label-color);
 }
 
-:root {
-}
-
-html[data-theme="dark"] {
-}
-
 @media (hover: hover) {
   .arrayInput button:hover {
     border-color: var(--working-with-content-controls-hover-input-border-color);
