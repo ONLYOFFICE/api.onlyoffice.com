@@ -9,18 +9,15 @@ type CheckboxInputProps = {
 const CheckboxInput: React.FC<CheckboxInputProps> = ({ id, checked = false }) => {
   const [value, setValue] = useState<boolean>(checked);
   return (
-    <>
-      <input
-        className={styles.checkboxInput}
-        id={id}
-        type="radio"
-        checked={value}
-        onChange={(e) => {
-          setValue(e.target.checked);
-        }}
-      />
-      <div className={styles.checkboxInputCustom} />
-    </>
+    <input
+      className={styles.checkboxInput}
+      id={id}
+      type="checkbox"
+      checked={value}
+      onChange={(e) => {
+        setValue(e.target.checked);
+      }}
+    />
   );
 };
 

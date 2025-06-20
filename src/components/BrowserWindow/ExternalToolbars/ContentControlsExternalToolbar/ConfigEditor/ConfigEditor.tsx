@@ -111,7 +111,7 @@ const ConfigEditor: React.FC<ConfigEditorProps> = ({ controlIndex }) => {
               <li key={attribute + attributeValue} className={styles.field}>
                 <label htmlFor={attribute}>{attribute.toLowerCase()}</label>
                 {(attribute === "color" && <ColorInput id={attribute} />) ||
-                  (typeof attributeValue === "boolean" && <CheckboxInput id={attribute} />) ||
+                  (typeof attributeValue === "boolean" && <CheckboxInput id={attribute} checked={attributeValue}/>) ||
                   (typeof attributeValue === "string" && <TextInput id={attribute} initialValue={attributeValue} />)}
               </li>
             ))

@@ -1,48 +1,39 @@
 .checkboxInput {
-  opacity: 0;
-  position: absolute;
-  z-index: 1;
-}
-
-.checkboxInputCustom {
-  cursor: pointer;
-  position: relative;
   width: 30px;
   height: 30px;
-  margin: 4px;
-  padding: 4px;
-  border-radius: 100%;
+
+  padding: 3px;
+
   border: 1px solid var(--working-with-content-controls-input-border-color);
-  background-color: var(--working-with-content-controls-input-bg-color);
+  border-radius: 50%;
+
+  cursor: pointer;
+
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
 }
 
-.checkboxInputCustom::after {
+.checkboxInput::after {
   content: "";
-  display: flex;
-  position: relative;
+
+  display: none;
+
   width: 100%;
   height: 100%;
-  border-radius: 100%;
-  background-color: transparent;
-  pointer-events: none;
+
+  border-radius: 50%;
+  background-color: var(--working-with-content-controls-checkbox-color);
 }
 
-.checkboxInput:checked + .checkboxInputCustom::after {
-  background-color: var(--working-with-content-controls-input-color);
+.checkboxInput:checked::after {
+  display: block;
 }
 
 :root {
-  --working-with-content-controls-input-border-color: #d6d6d6;
-  --working-with-content-controls-hover-input-border-color: #7a7a7a;
+  --working-with-content-controls-checkbox-color: rgb(48, 48, 48);
 }
 
 html[data-theme="dark"] {
-  --working-with-content-controls-input-border-color: #c4c4c4;
-  --working-with-content-controls-hover-input-border-color: #9c9c9c;
-}
-
-@media (hover: hover) {
-  .checkboxInputCustom:hover {
-    border-color: var(--working-with-content-controls-hover-input-border-color);
-  }
+  --working-with-content-controls-checkbox-color: rgb(192, 192, 192);
 }
