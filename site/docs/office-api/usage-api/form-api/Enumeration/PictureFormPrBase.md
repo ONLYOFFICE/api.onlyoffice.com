@@ -26,6 +26,7 @@ Create a picture form with the specific picture form properties.
 
 // Create the base properties and apply them to the ApiPictureForm object.
 
-var oPictureFormPrBase = {"scaleFlag": "tooBig", "lockAspectRatio": true, "respectBorders": false, "shiftX": 50, "shiftY": 50};
-var oPictureForm = Api.CreatePictureForm(oPictureFormPrBase);
+const pictureFormPrBase = {"scaleFlag": "tooBig", "lockAspectRatio": true, "respectBorders": false, "shiftX": 50, "shiftY": 50};
+const pictureForm = Api.CreatePictureForm(pictureFormPrBase);
+
 ```

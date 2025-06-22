@@ -29,13 +29,13 @@ This example gets drawings by placeholder type and removes it from layout.
 
 // Get drawings by their placeholder type.
 
-let oPresentation = Api.GetPresentation();
-let oSlide = oPresentation.GetSlideByIndex(0);
-let oMaster = oPresentation.GetMaster(0);
-let oLayout = oMaster.GetLayout(0);
-let aDrawingsWithPh = oLayout.GetDrawingsByPlaceholderType("ctrTitle");
-for (let i = 0; i < aDrawingsWithPh.length; i++) {
-    aDrawingsWithPh[i].Delete();
+const presentation = Api.GetPresentation();
+const master = presentation.GetMaster(0);
+const layout = master.GetLayout(0);
+
+let drawingsWithPh = layout.GetDrawingsByPlaceholderType("ctrTitle");
+for (let i = 0; i < drawingsWithPh.length; i++) {
+	drawingsWithPh[i].Delete();
 }
 
 ```

@@ -27,17 +27,20 @@ This example shows how to get an array with all the drawing objects from the sli
 
 // Get all drawings from the presentation as an array.
 
-var oPresentation = Api.GetPresentation();
-var oSlide = oPresentation.GetSlideByIndex(0);
-var oMaster = oPresentation.GetMaster(0);
-var oFill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
-var oStroke = Api.CreateStroke(0, Api.CreateNoFill());
-var oDrawing = Api.CreateShape("flowChartMagneticTape", 300 * 36000, 130 * 36000, oFill, oStroke);
-oDrawing.SetPosition(608400, 1267200);
-oDrawing.SetSize(300 * 36000, 130 * 36000);
-oSlide.RemoveAllObjects();
-oMaster.AddObject(oDrawing);
-var aDrawings = oMaster.GetAllDrawings();
-var oPlaceholder = Api.CreatePlaceholder("picture");
-aDrawings[0].SetPlaceholder(oPlaceholder);
+const presentation = Api.GetPresentation();
+const slide = presentation.GetSlideByIndex(0);
+const master = presentation.GetMaster(0);
+
+const fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
+const stroke = Api.CreateStroke(0, Api.CreateNoFill());
+const drawing = Api.CreateShape("flowChartMagneticTape", 300 * 36000, 130 * 36000, fill, stroke);
+drawing.SetPosition(608400, 1267200);
+drawing.SetSize(300 * 36000, 130 * 36000);
+slide.RemoveAllObjects();
+master.AddObject(drawing);
+
+const allDrawings = master.GetAllDrawings();
+const placeholder = Api.CreatePlaceholder("picture");
+allDrawings[0].SetPlaceholder(placeholder);
+
 ```

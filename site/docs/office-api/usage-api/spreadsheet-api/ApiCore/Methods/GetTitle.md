@@ -26,7 +26,7 @@ This example demonstrates how to get the title of the current workbook.
 const worksheet = Api.GetActiveSheet();
 const core = Api.GetCore();
 
-core.SetTitle("My Presentation Title");
+core.SetTitle("My Workbook Title");
 const title = core.GetTitle();
 
 let fill = Api.CreateSolidFill(Api.CreateRGBColor(100, 50, 200));

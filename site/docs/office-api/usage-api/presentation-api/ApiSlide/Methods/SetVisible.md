@@ -29,8 +29,9 @@ This example sets the visibility to the current presentation slide.
 
 // Create a slide and make it hidden.
 
-var oPresentation = Api.GetPresentation();
-var oSlide = Api.CreateSlide();
-oSlide.SetVisible(false);
-oPresentation.AddSlide(oSlide);
+const presentation = Api.GetPresentation();
+const slide = Api.CreateSlide();
+slide.SetVisible(false);
+presentation.AddSlide(slide);
+
 ```

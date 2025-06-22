@@ -27,10 +27,11 @@ This example shows how to get a layout of the current slide.
 
 // Get a slide layout and set its background color.
 
-var oPresentation = Api.GetPresentation();
-var oSlide = oPresentation.GetSlideByIndex(0);
-var oLayout = oSlide.GetLayout();
-var oFill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
-oLayout.SetBackground(oFill);
-oSlide.FollowLayoutBackground();
+const presentation = Api.GetPresentation();
+const slide = presentation.GetSlideByIndex(0);
+const layout = slide.GetLayout();
+const fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
+layout.SetBackground(fill);
+slide.FollowLayoutBackground();
+
 ```
